@@ -15,7 +15,7 @@
 	set desc = "Turns yourself almost invisible, as long as you move slowly."
 
 
-	if(istype(src,/mob/living/carbon/human))
+	if(ishuman(src))
 		var/mob/living/carbon/human/H = src
 
 		if(H.mind.changeling.cloaked)
@@ -30,7 +30,7 @@
 		changeling.chem_charges -= 10
 		var/old_regen_rate = H.mind.changeling.chem_recharge_rate
 
-		to_chat(H, "<span class='notice'>We vanish from sight, and will remain hidden, so long as we move carefully.</span>")
+		to_chat(H, span_notice("We vanish from sight, and will remain hidden, so long as we move carefully."))
 		H.mind.changeling.cloaked = 1
 		H.mind.changeling.chem_recharge_rate = 0
 		animate(src,alpha = 255, alpha = 10, time = 10)
@@ -38,16 +38,16 @@
 		var/must_walk = TRUE
 		if(src.mind.changeling.recursive_enhancement)
 			must_walk = FALSE
-			to_chat(src, "<span class='notice'>We may move at our normal speed while hidden.</span>")
+			to_chat(src, span_notice("We may move at our normal speed while hidden."))
 
 		if(must_walk)
-			H.set_m_intent("walk")
+			H.set_m_intent(I_WALK)
 
 		var/remain_cloaked = TRUE
 		while(remain_cloaked) //This loop will keep going until the player uncloaks.
 			sleep(1 SECOND) // Sleep at the start so that if something invalidates a cloak, it will drop immediately after the check and not in one second.
 
-			if(H.m_intent != "walk" && must_walk) // Moving too fast uncloaks you.
+			if(H.m_intent != I_WALK && must_walk) // Moving too fast uncloaks you.
 				remain_cloaked = 0
 			if(!H.mind.changeling.cloaked)
 				remain_cloaked = 0
@@ -63,9 +63,9 @@
 
 
 		H.invisibility = initial(invisibility)
-		visible_message("<span class='warning'>[src] suddenly fades in, seemingly from nowhere!</span>",
-		"<span class='notice'>We revert our camouflage, revealing ourselves.</span>")
-		H.set_m_intent("run")
+		visible_message(span_warning("[src] suddenly fades in, seemingly from nowhere!"),
+		span_notice("We revert our camouflage, revealing ourselves."))
+		H.set_m_intent(I_RUN)
 		H.mind.changeling.cloaked = 0
 		H.mind.changeling.chem_recharge_rate = old_regen_rate
 

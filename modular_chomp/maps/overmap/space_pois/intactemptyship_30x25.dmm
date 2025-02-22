@@ -12,8 +12,8 @@
 /turf/simulated/shuttle/plating,
 /area/submap/intactemptyship)
 "bU" = (
-/obj/item/weapon/paper,
-/obj/item/weapon/pen,
+/obj/item/paper,
+/obj/item/pen,
 /obj/structure/table/standard,
 /turf/simulated/shuttle/floor,
 /area/submap/intactemptyship)
@@ -40,15 +40,15 @@
 /obj/structure/bookcase{
 	name = "bookcase (Non-Fiction)"
 	},
-/obj/item/weapon/book/codex/lore/vir,
-/obj/item/weapon/book/manual/atmospipes,
-/obj/item/weapon/book/manual/chemistry_guide,
-/obj/item/weapon/book/manual/evaguide,
-/obj/item/weapon/book/manual/tesla_engine,
+/obj/item/book/codex/lore/vir,
+/obj/item/book/manual/atmospipes,
+/obj/item/book/manual/chemistry_guide,
+/obj/item/book/manual/evaguide,
+/obj/item/book/manual/tesla_engine,
 /turf/simulated/shuttle/floor,
 /area/submap/intactemptyship)
 "fh" = (
-/obj/item/device/gps/internal/poi{
+/obj/item/gps/internal/poi{
 	gps_tag = "Mech-Transport EJN-2955"
 	},
 /turf/simulated/shuttle/wall/hard_corner,
@@ -65,8 +65,7 @@
 	dir = 4
 	},
 /obj/structure/shuttle/engine/heater{
-	dir = 8;
-	tag = "icon-heater (WEST)"
+	dir = 8
 	},
 /turf/simulated/shuttle/plating,
 /area/submap/intactemptyship)
@@ -92,11 +91,11 @@
 /obj/structure/bookcase{
 	name = "bookcase (Reference)"
 	},
-/obj/item/weapon/book/tome/imbued,
-/obj/item/weapon/book/manual/anomaly_testing,
-/obj/item/weapon/book/manual/cook_guide,
-/obj/item/weapon/book/manual/resleeving,
-/obj/item/weapon/book/manual/virology,
+/obj/item/book/tome/imbued,
+/obj/item/book/manual/anomaly_testing,
+/obj/item/book/manual/cook_guide,
+/obj/item/book/manual/resleeving,
+/obj/item/book/manual/virology,
 /turf/simulated/shuttle/floor,
 /area/submap/intactemptyship)
 "jY" = (
@@ -220,7 +219,7 @@
 /area/submap/intactemptyship)
 "xl" = (
 /obj/structure/closet/crate,
-/obj/item/weapon/gun/energy/ionrifle,
+/obj/item/gun/energy/ionrifle,
 /turf/simulated/shuttle/floor,
 /area/submap/intactemptyship)
 "xG" = (
@@ -302,14 +301,14 @@
 /area/submap/intactemptyship)
 "GJ" = (
 /obj/structure/bed,
-/obj/item/weapon/bedsheet/hos,
+/obj/item/bedsheet/hos,
 /turf/simulated/shuttle/floor,
 /area/submap/intactemptyship)
 "HS" = (
 /obj/structure/closet/crate,
-/obj/item/weapon/circuitboard/mecha/phazon/main,
-/obj/item/weapon/circuitboard/mecha/phazon/peripherals,
-/obj/item/weapon/circuitboard/mecha/phazon/targeting,
+/obj/item/circuitboard/mecha/phazon/main,
+/obj/item/circuitboard/mecha/phazon/peripherals,
+/obj/item/circuitboard/mecha/phazon/targeting,
 /turf/simulated/shuttle/floor,
 /area/submap/intactemptyship)
 "HY" = (
@@ -330,10 +329,6 @@
 	},
 /turf/simulated/shuttle/wall,
 /area/submap/intactemptyship)
-"KL" = (
-/turf/simulated/shuttle/wall,
-/turf/space,
-/area/submap/intactemptyship)
 "KM" = (
 /obj/effect/decal/mecha_wreckage/durand,
 /obj/machinery/mech_recharger,
@@ -344,15 +339,14 @@
 /turf/simulated/shuttle/wall/hard_corner,
 /area/submap/intactemptyship)
 "LV" = (
-/obj/item/weapon/paper_bin,
-/obj/item/weapon/pen,
+/obj/item/paper_bin,
+/obj/item/pen,
 /obj/structure/table/standard,
 /turf/simulated/shuttle/floor,
 /area/submap/intactemptyship)
 "MK" = (
 /obj/structure/shuttle/engine/propulsion{
-	dir = 8;
-	tag = "icon-propulsion (EAST)"
+	dir = 8
 	},
 /turf/simulated/shuttle/plating,
 /area/submap/intactemptyship)
@@ -362,7 +356,7 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/submap/intactemptyship)
 "NL" = (
-/obj/item/weapon/stool/padded,
+/obj/item/stool/padded,
 /turf/simulated/shuttle/floor,
 /area/submap/intactemptyship)
 "OA" = (
@@ -377,10 +371,10 @@
 /obj/structure/bookcase{
 	name = "bookcase (Fiction)"
 	},
-/obj/item/weapon/book/tome/imbued,
-/obj/item/weapon/book/manual/bar_guide,
-/obj/item/weapon/book/manual/wiki/engineering_construction,
-/obj/item/weapon/book/manual/synthetic_life,
+/obj/item/book/tome/imbued,
+/obj/item/book/manual/bar_guide,
+/obj/item/book/manual/wiki/engineering_construction,
+/obj/item/book/manual/synthetic_life,
 /turf/simulated/shuttle/floor,
 /area/submap/intactemptyship)
 "RA" = (
@@ -389,7 +383,7 @@
 /area/submap/intactemptyship)
 "Sv" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/book/manual/wizzoffguide,
+/obj/item/book/manual/wizzoffguide,
 /turf/simulated/shuttle/floor,
 /area/submap/intactemptyship)
 "Tj" = (
@@ -418,9 +412,9 @@
 /area/submap/intactemptyship)
 "UW" = (
 /obj/structure/table/standard,
-/obj/item/weapon/cell/device/weapon,
-/obj/item/weapon/cell/device/weapon,
-/obj/item/weapon/cell/device/weapon,
+/obj/item/cell/device/weapon,
+/obj/item/cell/device/weapon,
+/obj/item/cell/device/weapon,
 /turf/simulated/shuttle/floor,
 /area/submap/intactemptyship)
 "Vr" = (
@@ -430,11 +424,11 @@
 /obj/structure/bookcase{
 	name = "bookcase (Religious)"
 	},
-/obj/item/weapon/book/codex/lore/robutt,
-/obj/item/weapon/book/manual/anomaly_spectroscopy,
-/obj/item/weapon/book/manual/barman_recipes,
-/obj/item/weapon/book/manual/wiki/engineering_guide,
-/obj/item/weapon/book/manual/rotary_electric_generator,
+/obj/item/book/codex/lore/robutt,
+/obj/item/book/manual/anomaly_spectroscopy,
+/obj/item/book/manual/barman_recipes,
+/obj/item/book/manual/wiki/engineering_guide,
+/obj/item/book/manual/rotary_electric_generator,
 /turf/simulated/shuttle/floor,
 /area/submap/intactemptyship)
 "VD" = (
@@ -461,7 +455,7 @@
 /area/submap/intactemptyship)
 "Xc" = (
 /obj/structure/table/standard,
-/obj/item/weapon/cell/device/weapon/empproof,
+/obj/item/cell/device/weapon/empproof,
 /turf/simulated/shuttle/floor,
 /area/submap/intactemptyship)
 "Xh" = (
@@ -965,11 +959,11 @@ IS
 TE
 TE
 TE
-KL
+Gp
 Gp
 VY
 JR
-KL
+Gp
 TE
 TE
 TE
@@ -1016,7 +1010,7 @@ IS
 IS
 IS
 IS
-KL
+Gp
 gT
 gT
 Aw
@@ -1026,7 +1020,7 @@ BS
 Aw
 gT
 gT
-KL
+Gp
 "}
 (21,1,1) = {"
 IS
@@ -1178,7 +1172,7 @@ IS
 IS
 IS
 IS
-KL
+Gp
 Gp
 Gp
 Aw
@@ -1188,7 +1182,7 @@ qg
 Aw
 Gp
 Gp
-KL
+Gp
 "}
 (27,1,1) = {"
 IS
@@ -1288,13 +1282,13 @@ IS
 IS
 TE
 TE
-KL
+Gp
 Gp
 pn
 pn
 pn
 Gp
-KL
+Gp
 TE
 TE
 "}

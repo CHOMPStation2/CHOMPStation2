@@ -1,23 +1,24 @@
 /obj/machinery/paradoxrift
 	name = "Paradoxical Rift Generator"
-	idle_power_usage = 50000000
+	idle_power_usage = 2500000
+	use_power = USE_POWER_OFF
 	icon = 'modular_chomp/icons/obj/machines/defense.dmi'
 	icon_state = "paradox"
-	circuit = /obj/item/weapon/circuitboard/paradoxrift
+	circuit = /obj/item/circuitboard/paradoxrift
 	var/build_eff = 1
 	var/loot_eff = 1
 	var/chaos_eff = 1
 
-/obj/item/weapon/circuitboard/paradoxrift
+/obj/item/circuitboard/paradoxrift
 	name = "paradox rift generator circuit"
 	build_path = /obj/machinery/paradoxrift
 	board_type = new /datum/frame/frame_types/machine
 	origin_tech = list(TECH_DATA = 8, TECH_PRECURSOR = 3)
 	req_components = list(
 							/obj/item/stack/cable_coil = 10,
-							/obj/item/weapon/stock_parts/capacitor = 4,
-							/obj/item/weapon/stock_parts/manipulator = 6,
-							/obj/item/weapon/stock_parts/scanning_module = 10)
+							/obj/item/stock_parts/capacitor = 4,
+							/obj/item/stock_parts/manipulator = 6,
+							/obj/item/stock_parts/scanning_module = 10)
 
 /obj/machinery/paradoxrift/RefreshParts()
 	..()
@@ -25,12 +26,12 @@
 	var/scan_rating = 0
 	var/cap_rating = 0
 
-	for(var/obj/item/weapon/stock_parts/P in component_parts)
-		if(istype(P, /obj/item/weapon/stock_parts/scanning_module))
+	for(var/obj/item/stock_parts/P in component_parts)
+		if(istype(P, /obj/item/stock_parts/scanning_module))
 			scan_rating += P.rating
-		if(istype(P, /obj/item/weapon/stock_parts/manipulator))
+		if(istype(P, /obj/item/stock_parts/manipulator))
 			man_rating += P.rating
-		if(istype(P, /obj/item/weapon/stock_parts/capacitor))
+		if(istype(P, /obj/item/stock_parts/capacitor))
 			cap_rating += P.rating
 
 	build_eff = man_rating
@@ -65,11 +66,11 @@
 	icon_state = "medicalkit"
 
 /obj/random/portalloot/item_to_spawn()
-	return pick(prob(6);/obj/item/weapon/stock_parts/capacitor/omni,
-				prob(6);/obj/item/weapon/stock_parts/manipulator/omni,
-				prob(6);/obj/item/weapon/stock_parts/scanning_module/omni,
-				prob(6);/obj/item/weapon/stock_parts/matter_bin/omni,
-				prob(6);/obj/item/weapon/stock_parts/micro_laser/omni,
+	return pick(prob(6);/obj/item/stock_parts/capacitor/omni,
+				prob(6);/obj/item/stock_parts/manipulator/omni,
+				prob(6);/obj/item/stock_parts/scanning_module/omni,
+				prob(6);/obj/item/stock_parts/matter_bin/omni,
+				prob(6);/obj/item/stock_parts/micro_laser/omni,
 				prob(6);/obj/item/stack/material/phoron,
 				prob(6);/obj/item/stack/material/deuterium,
 				prob(6);/obj/item/stack/material/tritium,
@@ -82,24 +83,26 @@
 	icon_state = "medicalkit"
 
 /obj/random/greaterportalloot/item_to_spawn()
-	return pick(prob(2);/obj/item/weapon/stock_parts/capacitor/omni,
-				prob(2);/obj/item/weapon/stock_parts/manipulator/omni,
-				prob(2);/obj/item/weapon/stock_parts/scanning_module/omni,
-				prob(2);/obj/item/weapon/stock_parts/matter_bin/omni,
-				prob(2);/obj/item/weapon/stock_parts/micro_laser/omni,
-				prob(2);/obj/item/stack/material/phoron,
-				prob(2);/obj/item/stack/material/deuterium,
-				prob(2);/obj/item/stack/material/tritium,
-				prob(2);/obj/item/stack/material/uranium,
-				prob(6);/obj/item/weapon/rcd,
-				prob(6);/obj/item/weapon/rcd/shipwright,
-				prob(6);/obj/item/weapon/rcd/advanced,
+	return pick(prob(6);/obj/item/stock_parts/capacitor/omni,
+				prob(6);/obj/item/stock_parts/manipulator/omni,
+				prob(6);/obj/item/stock_parts/scanning_module/omni,
+				prob(6);/obj/item/stock_parts/matter_bin/omni,
+				prob(6);/obj/item/stock_parts/micro_laser/omni,
+				prob(4);/obj/random/smes_coil,
+				prob(4);/obj/random/bomb_supply,
+				prob(4);/obj/random/powercell,
+				prob(4);/obj/random/tool/powermaint,
+				prob(1);/obj/item/rcd,
+				prob(4);/obj/item/rcd/advanced,
 				prob(1);/obj/vehicle/bike/random,
 				prob(1);/obj/vehicle/train/engine/quadbike/random,
-				prob(1);/obj/vehicle/bike/random,
-				prob(6);/obj/structure/closet/crate/secure/lootsafe/numberlock,
-				prob(6);/obj/structure/closet/crate/secure/loot
-
+				prob(4);/obj/random/material,
+				prob(4);/obj/random/material/refined,
+				prob(4);/obj/random/material/precious,
+				prob(1);/obj/random/bluespace,
+				prob(4);/obj/random/tool/alien,
+				prob(1);/obj/item/circuitboard/paradoxrift,
+				prob(4);/obj/item/prop/alien/junk
 				)
 
 /obj/random/mob/interspace
@@ -112,11 +115,12 @@
 	mob_wander_distance = 7
 
 /obj/random/mob/interspace/item_to_spawn()
-	return pick(prob(5);/mob/living/simple_mob/humanoid/starhunter/trader/miner,
-				prob(5);/mob/living/simple_mob/humanoid/starhunter/trader/reliccollecter,
-				prob(5);/mob/living/simple_mob/humanoid/starhunter/trader/farmer,
+	return pick(prob(5);/mob/living/simple_mob/vore/sonadile,
+				prob(5);/mob/living/simple_mob/vore/solargrub,
+				prob(5);/mob/living/simple_mob/vore/stalker,
 				prob(1);/mob/living/simple_mob/vore/bigdragon,
 				prob(1);/mob/living/simple_mob/humanoid/cultist/magus/rift,
+				prob(1);/mob/living/simple_mob/vore/cryptdrake,
 				prob(15);/mob/living/simple_mob/vore/demonAI,
 				prob(25);/mob/living/simple_mob/shadekin,
 				prob(25);/mob/living/simple_mob/vore/solargrub,

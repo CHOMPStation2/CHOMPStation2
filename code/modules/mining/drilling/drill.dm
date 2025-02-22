@@ -9,55 +9,55 @@
 	name = "mining drill head"
 	desc = "An enormous drill."
 	icon_state = "mining_drill"
-	circuit = /obj/item/weapon/circuitboard/miningdrill
+	circuit = /obj/item/circuitboard/miningdrill
 	var/braces_needed = 2
 	var/total_brace_tier = 0
 	var/list/obj/machinery/mining/brace/supports = list()
 	var/supported = 0
 	var/active = 0
 	var/list/resource_field = list()
-	var/obj/item/device/radio/intercom/faultreporter
+	var/obj/item/radio/intercom/faultreporter
 	var/drill_range = 5
 	var/offset = 2
 	var/current_capacity = 0
 
 	var/list/stored_ore = list(
-		"sand" = 0,
-		"hematite" = 0,
-		"carbon" = 0,
-		"raw copper" = 0,
-		"raw tin" = 0,
-		"void opal" = 0,
-		"painite" = 0,
-		"quartz" = 0,
-		"raw bauxite" = 0,
-		"phoron" = 0,
-		"silver" = 0,
-		"gold" = 0,
-		"marble" = 0,
-		"uranium" = 0,
-		"diamond" = 0,
-		"platinum" = 0,
-		"lead" = 0,
-		"mhydrogen" = 0,
-		"verdantium" = 0,
-		"rutile" = 0)
+		ORE_SAND = 0,
+		ORE_HEMATITE = 0,
+		ORE_CARBON = 0,
+		ORE_COPPER = 0,
+		ORE_TIN = 0,
+		ORE_VOPAL = 0,
+		ORE_PAINITE = 0,
+		ORE_QUARTZ = 0,
+		ORE_BAUXITE = 0,
+		ORE_PHORON = 0,
+		ORE_SILVER = 0,
+		ORE_GOLD = 0,
+		ORE_MARBLE = 0,
+		ORE_URANIUM = 0,
+		ORE_DIAMOND = 0,
+		ORE_PLATINUM = 0,
+		ORE_LEAD = 0,
+		ORE_MHYDROGEN = 0,
+		ORE_VERDANTIUM = 0,
+		ORE_RUTILE = 0)
 
 	var/list/ore_types = list(
-		"hematite" = /obj/item/weapon/ore/iron,
-		"uranium" = /obj/item/weapon/ore/uranium,
-		"gold" = /obj/item/weapon/ore/gold,
-		"silver" = /obj/item/weapon/ore/silver,
-		"diamond" = /obj/item/weapon/ore/diamond,
-		"phoron" = /obj/item/weapon/ore/phoron,
-		"platinum" = /obj/item/weapon/ore/osmium,
-		"mhydrogen" = /obj/item/weapon/ore/hydrogen,
-		"sand" = /obj/item/weapon/ore/glass,
-		"carbon" = /obj/item/weapon/ore/coal,
-	//	"copper" = /obj/item/weapon/ore/copper,
-	//	"tin" = /obj/item/weapon/ore/tin,
-	//	"bauxite" = /obj/item/weapon/ore/bauxite,
-		"rutile" = /obj/item/weapon/ore/rutile
+		ORE_HEMATITE = /obj/item/ore/iron,
+		ORE_URANIUM = /obj/item/ore/uranium,
+		ORE_GOLD = /obj/item/ore/gold,
+		ORE_SILVER = /obj/item/ore/silver,
+		ORE_DIAMOND = /obj/item/ore/diamond,
+		ORE_PHORON = /obj/item/ore/phoron,
+		ORE_PLATINUM = /obj/item/ore/osmium,
+		ORE_MHYDROGEN = /obj/item/ore/hydrogen,
+		ORE_SAND = /obj/item/ore/glass,
+		ORE_CARBON = /obj/item/ore/coal,
+	//	ORE_COPPER = /obj/item/ore/copper,
+	//	ORE_TIN = /obj/item/ore/tin,
+	//	ORE_BAUXITE = /obj/item/ore/bauxite,
+		ORE_RUTILE = /obj/item/ore/rutile
 		)
 
 	//Upgrades
@@ -65,20 +65,20 @@
 	var/capacity
 	var/charge_use
 	var/exotic_drilling
-	var/obj/item/weapon/cell/cell = null
+	var/obj/item/cell/cell = null
 
 	// Found with an advanced laser. exotic_drilling >= 1
 	var/list/ore_types_uncommon = list(
-		MAT_MARBLE = /obj/item/weapon/ore/marble,
-		//"painite" = /obj/item/weapon/ore/painite,
-		//"quartz" = /obj/item/weapon/ore/quartz,
-		MAT_LEAD = /obj/item/weapon/ore/lead
+		ORE_MARBLE = /obj/item/ore/marble,
+		//ORE_PAINITE = /obj/item/ore/painite,
+		//ORE_QUARTZ = /obj/item/ore/quartz,
+		ORE_LEAD = /obj/item/ore/lead
 		)
 
 	// Found with an ultra laser. exotic_drilling >= 2
 	var/list/ore_types_rare = list(
-		//"void opal" = /obj/item/weapon/ore/void_opal,
-		MAT_VERDANTIUM = /obj/item/weapon/ore/verdantium
+		//ORE_VOPAL = /obj/item/ore/void_opal,
+		ORE_VERDANTIUM = /obj/item/ore/verdantium
 		)
 
 	//Flags
@@ -109,7 +109,7 @@
 	if(ispath(cell))
 		cell = new cell(src)
 	default_apply_parts()
-	faultreporter = new /obj/item/device/radio/intercom{channels=list("Supply")}(null)
+	faultreporter = new /obj/item/radio/intercom{channels=list("Supply")}(null)
 
 /obj/machinery/mining/drill/Destroy()
 	qdel_null(faultreporter)
@@ -126,7 +126,7 @@
 	return cell
 
 /obj/machinery/mining/drill/loaded
-	cell = /obj/item/weapon/cell/high
+	cell = /obj/item/cell/high
 
 /obj/machinery/mining/drill/process()
 
@@ -223,14 +223,14 @@
 
 /obj/machinery/mining/drill/attackby(obj/item/O as obj, mob/user as mob)
 	if(!active)
-		if(istype(O, /obj/item/device/multitool))
+		if(istype(O, /obj/item/multitool))
 			var/newtag = text2num(sanitizeSafe(tgui_input_text(user, "Enter new ID number or leave empty to cancel.", "Assign ID number", null, 4), 4))
 			if(newtag)
 				name = "[initial(name)] #[newtag]"
-				to_chat(user, "<span class='notice'>You changed the drill ID to: [newtag]</span>")
+				to_chat(user, span_notice("You changed the drill ID to: [newtag]"))
 			else
 				name = "[initial(name)]"
-				to_chat(user, SPAN_NOTICE("You removed the drill's ID and any extraneous labels."))
+				to_chat(user, span_notice("You removed the drill's ID and any extraneous labels."))
 			return
 		if(default_deconstruction_screwdriver(user, O))
 			return
@@ -240,7 +240,7 @@
 			return
 	if(!panel_open || active) return ..()
 
-	if(istype(O, /obj/item/weapon/cell))
+	if(istype(O, /obj/item/cell))
 		if(cell)
 			// to_chat(user, "The drill already has a cell installed.")
 			balloon_alert(user, "The drill already has a cell installed.") // CHOMPEdit - Changed to balloon alert
@@ -277,16 +277,16 @@
 		if(use_cell_power())
 			active = !active
 			if(active)
-				visible_message("<b>\The [src]</b> lurches downwards, grinding noisily.")
+				visible_message(span_infoplain(span_bold("\The [src]") + " lurches downwards, grinding noisily."))
 				need_update_field = 1
 				harvest_speed *= total_brace_tier
 				charge_use *= total_brace_tier
 			else
-				visible_message("<b>\The [src]</b> shudders to a grinding halt.")
+				visible_message(span_infoplain(span_bold("\The [src]") + " shudders to a grinding halt."))
 		else
-			to_chat(user, "<span class='notice'>The drill is unpowered.</span>")
+			to_chat(user, span_notice("The drill is unpowered."))
 	else
-		to_chat(user, "<span class='notice'>Turning on a piece of industrial machinery without sufficient bracing or wires exposed is a bad idea.</span>")
+		to_chat(user, span_notice("Turning on a piece of industrial machinery without sufficient bracing or wires exposed is a bad idea."))
 
 	update_icon()
 
@@ -309,8 +309,8 @@
 	drill_range = 5
 	offset = 2
 
-	for(var/obj/item/weapon/stock_parts/P in component_parts)
-		if(istype(P, /obj/item/weapon/stock_parts/micro_laser))
+	for(var/obj/item/stock_parts/P in component_parts)
+		if(istype(P, /obj/item/stock_parts/micro_laser))
 			harvest_speed = P.rating ** 2 // 1, 4, 9, 16, 25
 			exotic_drilling = P.rating - 1
 			if(exotic_drilling >= 1)
@@ -328,11 +328,11 @@
 				else if(P.rating >= 4) // t4
 					drill_range = 7
 					offset = 3
-		if(istype(P, /obj/item/weapon/stock_parts/matter_bin))
+		if(istype(P, /obj/item/stock_parts/matter_bin))
 			capacity = 200 * P.rating
-		if(istype(P, /obj/item/weapon/stock_parts/capacitor))
+		if(istype(P, /obj/item/stock_parts/capacitor))
 			charge_use -= 10 * P.rating
-	cell = locate(/obj/item/weapon/cell) in src
+	cell = locate(/obj/item/cell) in src
 
 /obj/machinery/mining/drill/proc/check_supports()
 
@@ -360,7 +360,7 @@
 /obj/machinery/mining/drill/proc/system_error(var/error)
 
 	if(error)
-		src.visible_message("<b>\The [src]</b> flashes a '[error]' warning.")
+		src.visible_message(span_infoplain(span_bold("\The [src]") + " flashes a '[error]' warning."))
 		faultreporter.autosay(error, src.name, "Supply", using_map.get_map_levels(z))
 	need_player_check = 1
 	active = 0
@@ -409,10 +409,10 @@
 				B.stored_ore[ore] += ore_amount 	// Add the ore to the machine.
 				stored_ore[ore] = 0 				// Set the value of the ore in the satchel to 0.
 				current_capacity = 0				// Set the amount of ore in the drill to 0.
-		// to_chat(usr, "<span class='notice'>You unload the drill's storage cache into the ore box.</span>")
+		// to_chat(usr, span_notice("You unload the drill's storage cache into the ore box."))
 		balloon_alert(usr, "You onload the drill's storage cache into the ore box.") // CHOMPEdit - Changed to balloon alert
 	else
-		// to_chat(usr, "<span class='notice'>You must move an ore box up to the drill before you can unload it.</span>")
+		// to_chat(usr, span_notice("You must move an ore box up to the drill before you can unload it."))
 		balloon_alert(usr, "Move an ore box to the droll before unloading it.") // CHOMPEdit - Changed to balloon alert
 
 
@@ -420,14 +420,14 @@
 	name = "mining drill brace"
 	desc = "A machinery brace for an industrial drill. It looks easily two feet thick."
 	icon_state = "mining_brace"
-	circuit = /obj/item/weapon/circuitboard/miningdrillbrace
+	circuit = /obj/item/circuitboard/miningdrillbrace
 	var/brace_tier = 1
 	var/obj/machinery/mining/drill/connected
 
 /obj/machinery/mining/brace/examine(mob/user)
 	. = ..()
 	if(brace_tier >= 3)
-		. += SPAN_NOTICE("The internals of the brace look resilient enough to support a drill by itself.")
+		. += span_notice("The internals of the brace look resilient enough to support a drill by itself.")
 
 /obj/machinery/mining/brace/Initialize()
 	. = ..()
@@ -436,12 +436,12 @@
 /obj/machinery/mining/brace/RefreshParts()
 	..()
 	brace_tier = 0
-	for(var/obj/item/weapon/stock_parts/manipulator/M in component_parts)
+	for(var/obj/item/stock_parts/manipulator/M in component_parts)
 		brace_tier += M.rating
 
-/obj/machinery/mining/brace/attackby(obj/item/weapon/W as obj, mob/user as mob)
+/obj/machinery/mining/brace/attackby(obj/item/W as obj, mob/user as mob)
 	if(connected && connected.active)
-		// to_chat(user, "<span class='notice'>You can't work with the brace of a running drill!</span>")
+		// to_chat(user, span_notice("You can't work with the brace of a running drill!"))
 		balloon_alert(user, "You can't work with the brace of a running drill.") // CHOMPEdit - Changed to balloon alert
 		return
 
@@ -455,12 +455,12 @@
 	if(W.has_tool_quality(TOOL_WRENCH))
 
 		if(istype(get_turf(src), /turf/space))
-			// to_chat(user, "<span class='notice'>You can't anchor something to empty space. Idiot.</span>")
+			// to_chat(user, span_notice("You can't anchor something to empty space. Idiot."))
 			balloon_alert(user, "You can't anchor something to empty space. Idiot.") // CHOMPEdit - Changed to balloon alert
 			return
 
 		playsound(src, W.usesound, 100, 1)
-		// to_chat(user, "<span class='notice'>You [anchored ? "un" : ""]anchor the brace.</span>")
+		// to_chat(user, span_notice("You [anchored ? "un" : ""]anchor the brace."))
 		balloon_alert(user, "[anchored ? "Una" : "A"]nchored the brace") // CHOMPEdit - Changed to balloon alert
 
 		anchored = !anchored
@@ -514,4 +514,19 @@
 		return 0
 
 	src.set_dir(turn(src.dir, 270))
+	return 1
+
+//VOREstation edit: counter-clockwise rotation
+/obj/machinery/mining/brace/verb/rotate_counterclockwise()
+	set name = "Rotate Brace Counter-Clockwise"
+	set category = "Object"
+	set src in oview(1)
+
+	if(usr.stat) return
+
+	if (src.anchored)
+		to_chat(usr, "It is anchored in place!")
+		return 0
+
+	src.set_dir(turn(src.dir, 90))
 	return 1

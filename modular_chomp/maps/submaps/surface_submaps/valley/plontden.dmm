@@ -1,29 +1,27 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "aG" = (
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/plating,
 /area/submap/plontden)
 "bB" = (
 /obj/structure/bed/padded,
-/obj/item/weapon/bedsheet/cosmos,
+/obj/item/bedsheet/cosmos,
 /obj/item/toy/plushie/red_fox,
 /turf/simulated/floor/tiled/yellow,
 /area/submap/plontden)
 "cN" = (
 /obj/structure/table/sifwoodentable,
-/obj/item/weapon/gun/energy/xray/xenoarch,
+/obj/item/gun/energy/xray/xenoarch,
 /turf/simulated/floor/tiled/yellow,
 /area/submap/plontden)
 "dT" = (
 /obj/structure/sink/kitchen{
 	pixel_y = 28
 	},
-/obj/item/weapon/reagent_containers/glass/bucket,
-/obj/item/weapon/reagent_containers/glass/bucket,
+/obj/item/reagent_containers/glass/bucket,
+/obj/item/reagent_containers/glass/bucket,
 /turf/simulated/floor/tiled/white,
 /area/submap/plontden)
 "eF" = (
@@ -54,8 +52,6 @@
 "gA" = (
 /obj/machinery/light,
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/white,
@@ -94,8 +90,6 @@
 /area/submap/plontden)
 "iS" = (
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/tiled/white,
@@ -113,8 +107,6 @@
 /area/submap/plontden)
 "kp" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/white,
@@ -123,8 +115,6 @@
 /obj/effect/floor_decal/borderfloorwhite,
 /obj/effect/floor_decal/corner/green/border,
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/white,
@@ -161,8 +151,6 @@
 	dir = 10
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/hydro,
@@ -190,21 +178,17 @@
 /area/template_noop)
 "vg" = (
 /obj/structure/table/sifwoodentable,
-/obj/item/weapon/flame/candle/everburn,
+/obj/item/flame/candle/everburn,
 /turf/simulated/floor/tiled/yellow,
 /area/submap/plontden)
 "vj" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /turf/simulated/floor/plating,
 /area/submap/plontden)
 "vl" = (
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /turf/simulated/floor/tiled/white,
@@ -235,7 +219,6 @@
 "Aj" = (
 /obj/machinery/power/port_gen/pacman,
 /obj/structure/cable/cyan{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /turf/simulated/floor/plating,
@@ -289,8 +272,6 @@
 /area/submap/plontden)
 "Dp" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/hydro,
@@ -304,9 +285,9 @@
 /area/submap/plontden)
 "HB" = (
 /obj/structure/closet/cabinet,
-/obj/random/contraband/nofail,
-/obj/random/contraband/nofail,
-/obj/random/contraband/nofail,
+/obj/random/contraband,
+/obj/random/contraband,
+/obj/random/contraband,
 /turf/simulated/floor/tiled/yellow,
 /area/submap/plontden)
 "HD" = (
@@ -354,8 +335,6 @@
 /area/submap/plontden)
 "Mo" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/hydro,
@@ -367,11 +346,11 @@
 /area/submap/plontden)
 "OR" = (
 /obj/structure/table/glass,
-/obj/item/weapon/material/minihoe,
-/obj/item/weapon/material/minihoe,
-/obj/item/weapon/material/knife/machete/hatchet,
-/obj/item/weapon/material/knife/machete/hatchet,
-/obj/item/device/analyzer/plant_analyzer,
+/obj/item/material/minihoe,
+/obj/item/material/minihoe,
+/obj/item/material/knife/machete/hatchet,
+/obj/item/material/knife/machete/hatchet,
+/obj/item/analyzer/plant_analyzer,
 /turf/simulated/floor/tiled/white,
 /area/submap/plontden)
 "Pd" = (
@@ -379,13 +358,9 @@
 	dir = 4
 	},
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/door/airlock/glass_research{
@@ -407,7 +382,6 @@
 "Qm" = (
 /obj/machinery/power/terminal,
 /obj/structure/cable{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/structure/cable/cyan,
@@ -415,9 +389,6 @@
 /area/submap/plontden)
 "Rs" = (
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 4;
-	dir = 4;
 	icon_state = "2-4"
 	},
 /turf/simulated/floor/tiled/hydro,
@@ -439,8 +410,6 @@
 /area/submap/plontden)
 "RJ" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/effect/floor_decal/corner/green/border{
@@ -486,8 +455,6 @@
 /area/submap/plontden)
 "Wb" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/effect/floor_decal/borderfloorwhite{

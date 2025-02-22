@@ -1,19 +1,14 @@
- /**
-  * StonedMC
-  *
-  * Designed to properly split up a given tick among subsystems
-  * Note: if you read parts of this code and think "why is it doing it that way"
-  * Odds are, there is a reason
-  *
+/**
+ * StonedMC
+ *
+ * Designed to properly split up a given tick among subsystems
+ * Note: if you read parts of this code and think "why is it doing it that way"
+ * Odds are, there is a reason
+ *
  **/
 
-//This is the ABSOLUTE ONLY THING that should init globally like this
+// See initialization order in /code/game/world.dm
 GLOBAL_REAL(Master, /datum/controller/master) = new
-
-//THIS IS THE INIT ORDER
-//Master -> SSPreInit -> GLOB -> world -> config -> SSInit -> Failsafe
-//GOT IT MEMORIZED?
-
 /datum/controller/master
 	name = "Master"
 
@@ -59,11 +54,9 @@ GLOBAL_REAL(Master, /datum/controller/master) = new
 
 	var/current_runlevel //!for scheduling different subsystems for different stages of the round
 
-	// CHOMPEdit Start
 	/// During initialization, will be the instanced subsytem that is currently initializing.
 	/// Outside of initialization, returns null.
 	var/current_initializing_subsystem = null
-	// CHOMPEdit End
 
 	var/static/restart_clear = 0
 	var/static/restart_timeout = 0
@@ -79,7 +72,7 @@ GLOBAL_REAL(Master, /datum/controller/master) = new
 	// Highlander-style: there can only be one! Kill off the old and replace it with the new.
 
 	if(!random_seed)
-		#ifdef UNIT_TESTS
+		#ifdef UNIT_TEST
 		random_seed = 29051994 // How about 22475?
 		#else
 		random_seed = rand(1, 1e9)
@@ -169,7 +162,7 @@ GLOBAL_REAL(Master, /datum/controller/master) = new
 				BadBoy.critfail()
 		if(msg)
 			log_game(msg)
-			message_admins("<span class='boldannounce'>[msg]</span>")
+			message_admins(span_boldannounce("[msg]"))
 			log_world(msg)
 
 	if (istype(Master.subsystems))
@@ -180,7 +173,7 @@ GLOBAL_REAL(Master, /datum/controller/master) = new
 		current_runlevel = Master.current_runlevel
 		StartProcessing(10)
 	else
-		to_world("<span class='boldannounce'>The Master Controller is having some issues, we will need to re-initialize EVERYTHING</span>")
+		to_world(span_boldannounce("The Master Controller is having some issues, we will need to re-initialize EVERYTHING"))
 		Initialize(20, TRUE)
 
 
@@ -198,35 +191,35 @@ GLOBAL_REAL(Master, /datum/controller/master) = new
 	if(init_sss)
 		init_subtypes(/datum/controller/subsystem, subsystems)
 
-	to_chat(world, "<span class='boldannounce'>MC: Initializing subsystems...</span>")
+	to_chat(world, span_boldannounce("MC: Initializing subsystems..."))
 
 	// Sort subsystems by init_order, so they initialize in the correct order.
 	sortTim(subsystems, GLOBAL_PROC_REF(cmp_subsystem_init))
 
 	var/start_timeofday = REALTIMEOFDAY
 	// Initialize subsystems.
-	current_ticklimit = CONFIG_GET(number/tick_limit_mc_init) // CHOMPEdit
+	current_ticklimit = CONFIG_GET(number/tick_limit_mc_init)
 	for (var/datum/controller/subsystem/SS in subsystems)
 		if (SS.flags & SS_NO_INIT)
 			continue
-		//SS.Initialize(REALTIMEOFDAY) // CHOMPEdit
-		init_subsystem(SS) // CHOMPEdit
+		init_subsystem(SS)
 		CHECK_TICK
-	current_initializing_subsystem = null // CHOMPEdit
+	current_initializing_subsystem = null
 	current_ticklimit = TICK_LIMIT_RUNNING
 	var/time = (REALTIMEOFDAY - start_timeofday) / 10
 
 	var/msg = "MC: Initializations complete within [time] second[time == 1 ? "" : "s"]!"
-	to_chat(world, "<span class='boldannounce'>[msg]</span>")
+	to_chat(world, span_boldannounce("[msg]"))
 	log_world(msg)
 
 
-	send2chat("Server Initialization completed! - Took [time] second[time == 1 ? "" : "s"].", "bot announce")
+	// FIXME: TGS <-> Discord communication; sending message to a TGS chat channel
+	send2chat("Server Initialization completed! - Took [time] second[time == 1 ? "" : "s"].", "bot announce") // CHOMPEnable
 
 	if (!current_runlevel)
 		SetRunLevel(RUNLEVEL_LOBBY)
 
-	// GLOB.revdata = new // It can load revdata now, from tgs or .git or whatever // CHOMPEDIT
+	// GLOB.revdata = new // It can load revdata now, from tgs or .git or whatever
 
 	// Sort subsystems by display setting for easy access.
 	sortTim(subsystems, GLOBAL_PROC_REF(cmp_subsystem_display))
@@ -236,14 +229,13 @@ GLOBAL_REAL(Master, /datum/controller/master) = new
 	#else
 	world.sleep_offline = 1
 	#endif
-	world.change_fps(CONFIG_GET(number/fps)) // CHOMPEdit
+	world.change_fps(CONFIG_GET(number/fps))
 	var/initialized_tod = REALTIMEOFDAY
 	sleep(1)
 	initializations_finished_with_no_players_logged_in = initialized_tod < REALTIMEOFDAY - 10
 	// Loop.
 	Master.StartProcessing(0)
 
-// CHOMPEdit Start
 /**
  * Initialize a given subsystem and handle the results.
  *
@@ -317,7 +309,6 @@ GLOBAL_REAL(Master, /datum/controller/master) = new
 
 	to_chat(world, chat_message)
 	log_world(message)
-// CHOMPEdit End
 
 /datum/controller/master/proc/SetRunLevel(new_runlevel)
 	var/old_runlevel = isnull(current_runlevel) ? "NULL" : runlevel_flags[current_runlevel]
@@ -695,20 +686,20 @@ GLOBAL_REAL(Master, /datum/controller/master) = new
 
 
 
-/datum/controller/master/stat_entry(msg) //CHOMPEdit
+/datum/controller/master/stat_entry(msg)
 	if(!statclick)
 		statclick = new/obj/effect/statclick/debug(null, "Initializing...", src)
 
-	msg = "Byond: (FPS:[world.fps]) (TickCount:[world.time/world.tick_lag]) (TickDrift:[round(Master.tickdrift,1)]([round((Master.tickdrift/(world.time/world.tick_lag))*100,0.1)]%))" //CHOMPedit
-	msg += "Master Controller: [statclick.update("(TickRate:[Master.processing]) (Iteration:[Master.iteration])")]" //CHOMPEdit
+	msg = "Byond: (FPS:[world.fps]) (TickCount:[world.time/world.tick_lag]) (TickDrift:[round(Master.tickdrift,1)]([round((Master.tickdrift/(world.time/world.tick_lag))*100,0.1)]%))"
+	msg += "Master Controller: [statclick.update("(TickRate:[Master.processing]) (Iteration:[Master.iteration])")]"
 
 	return msg
 
 /datum/controller/master/StartLoadingMap(var/quiet = TRUE)
 	if(map_loading)
-		admin_notice("<span class='danger'>Another map is attempting to be loaded before first map released lock.  Delaying.</span>", R_DEBUG)
+		admin_notice(span_danger("Another map is attempting to be loaded before first map released lock.  Delaying."), R_DEBUG)
 	else if(!quiet)
-		admin_notice("<span class='danger'>Map is now being built.  Locking.</span>", R_DEBUG)
+		admin_notice(span_danger("Map is now being built.  Locking."), R_DEBUG)
 
 	//disallow more than one map to load at once, multithreading it will just cause race conditions
 	while(map_loading)
@@ -720,14 +711,12 @@ GLOBAL_REAL(Master, /datum/controller/master) = new
 
 /datum/controller/master/StopLoadingMap(var/quiet = TRUE)
 	if(!quiet)
-		admin_notice("<span class='danger'>Map is finished.  Unlocking.</span>", R_DEBUG)
+		admin_notice(span_danger("Map is finished.  Unlocking."), R_DEBUG)
 	map_loading = FALSE
 	for(var/datum/controller/subsystem/SS as anything in subsystems)
 		SS.StopLoadingMap()
 
-// CHOMPEdit Begin
 /datum/controller/master/proc/OnConfigLoad()
 	for (var/thing in subsystems)
 		var/datum/controller/subsystem/SS = thing
 		SS.OnConfigLoad()
-// CHOMPEdit End

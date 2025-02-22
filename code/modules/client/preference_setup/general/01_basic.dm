@@ -10,65 +10,29 @@
 	name = "Basic"
 	sort_order = 1
 
-/datum/category_item/player_setup_item/general/basic/load_character(var/savefile/S)
-	S["real_name"]				>> pref.real_name
-	S["nickname"]				>> pref.nickname
-	S["name_is_always_random"]	>> pref.be_random_name
-	S["gender"]					>> pref.biological_gender
-	S["id_gender"]				>> pref.identifying_gender
-	S["age"]					>> pref.age
-	S["bday_month"]				>> pref.bday_month
-	S["bday_day"]				>> pref.bday_day
-	S["last_bday_note"]			>> pref.last_birthday_notification
-	S["bday_announce"]			>> pref.bday_announce
-	S["spawnpoint"]				>> pref.spawnpoint
-	S["OOC_Notes"]				>> pref.metadata
-	S["OOC_Notes_Likes"]		>> pref.metadata_likes
-	S["OOC_Notes_Disikes"]		>> pref.metadata_dislikes
-	//CHOMPEdit Start
-	S["OOC_Notes_Maybes"]		>> pref.metadata_maybes
-	S["OOC_Notes_Favs"]			>> pref.metadata_favs
-	S["OOC_Notes_System"]		>> pref.matadata_ooc_style
-	//CHOMPEdit End
+/datum/category_item/player_setup_item/general/basic/load_character(list/save_data)
+	pref.real_name						= save_data["real_name"]
+	pref.nickname						= save_data["nickname"]
+	pref.biological_gender				= save_data["gender"]
+	pref.identifying_gender				= save_data["id_gender"]
 
-/datum/category_item/player_setup_item/general/basic/save_character(var/savefile/S)
-	S["real_name"]				<< pref.real_name
-	S["nickname"]				<< pref.nickname
-	S["name_is_always_random"]	<< pref.be_random_name
-	S["gender"]					<< pref.biological_gender
-	S["id_gender"]				<< pref.identifying_gender
-	S["age"]					<< pref.age
-	S["bday_month"]				<< pref.bday_month
-	S["bday_day"]				<< pref.bday_day
-	S["last_bday_note"]			<< pref.last_birthday_notification
-	S["bday_announce"]			<< pref.bday_announce
-	S["spawnpoint"]				<< pref.spawnpoint
-	S["OOC_Notes"]				<< pref.metadata
-	S["OOC_Notes_Likes"]		<< pref.metadata_likes
-	S["OOC_Notes_Disikes"]		<< pref.metadata_dislikes
-	//CHOMPEdit Start
-	S["OOC_Notes_Favs"]			<< pref.metadata_favs
-	S["OOC_Notes_Maybes"]		<< pref.metadata_maybes
-	S["OOC_Notes_System"]		<< pref.matadata_ooc_style
-	//CHOMPEdit End
+/datum/category_item/player_setup_item/general/basic/save_character(list/save_data)
+	save_data["real_name"]				= pref.real_name
+	save_data["nickname"]				= pref.nickname
+	save_data["gender"]					= pref.biological_gender
+	save_data["id_gender"]				= pref.identifying_gender
 
 /datum/category_item/player_setup_item/general/basic/sanitize_character()
-	pref.age                = sanitize_integer(pref.age, get_min_age(), get_max_age(), initial(pref.age))
-	pref.bday_month			= sanitize_integer(pref.bday_month, 0, 12, initial(pref.bday_month))
-	pref.bday_day			= sanitize_integer(pref.bday_day, 0, 31, initial(pref.bday_day))
-	pref.last_birthday_notification = sanitize_integer(pref.last_birthday_notification, 0, 9999, initial(pref.last_birthday_notification))
 	pref.biological_gender  = sanitize_inlist(pref.biological_gender, get_genders(), pick(get_genders()))
 	pref.identifying_gender = (pref.identifying_gender in all_genders_define_list) ? pref.identifying_gender : pref.biological_gender
 	pref.real_name		= sanitize_name(pref.real_name, pref.species, is_FBP())
 	if(!pref.real_name)
 		pref.real_name      = random_name(pref.identifying_gender, pref.species)
 	pref.nickname		= sanitize_name(pref.nickname)
-	pref.spawnpoint         = sanitize_inlist(pref.spawnpoint, spawntypes, initial(pref.spawnpoint))
-	pref.be_random_name     = sanitize_integer(pref.be_random_name, 0, 1, initial(pref.be_random_name))
 
 // Moved from /datum/preferences/proc/copy_to()
 /datum/category_item/player_setup_item/general/basic/copy_to_mob(var/mob/living/carbon/human/character)
-	if(CONFIG_GET(flag/humans_need_surnames)) // CHOMPEdit
+	if(CONFIG_GET(flag/humans_need_surnames))
 		var/firstspace = findtext(pref.real_name, " ")
 		var/name_length = length(pref.real_name)
 		if(!firstspace)	//we need a surname
@@ -85,28 +49,25 @@
 
 	character.gender = pref.biological_gender
 	character.identifying_gender = pref.identifying_gender
-	character.age = pref.age
-	character.bday_month = pref.bday_month
-	character.bday_day = pref.bday_day
 
 /datum/category_item/player_setup_item/general/basic/content()
 	. = list()
-	. += "<b>Name:</b> "
-	. += "<a href='?src=\ref[src];rename=1'><b>[pref.real_name]</b></a><br>"
-	. += "<a href='?src=\ref[src];random_name=1'>Randomize Name</A><br>"
-	. += "<a href='?src=\ref[src];always_random_name=1'>Always Random Name: [pref.be_random_name ? "Yes" : "No"]</a><br>"
-	. += "<b>Nickname:</b> "
-	. += "<a href='?src=\ref[src];nickname=1'><b>[pref.nickname]</b></a>"
-	. += "(<a href='?src=\ref[src];reset_nickname=1'>Clear</A>)"
+	. += span_bold("Name:") + " "
+	. += "<a href='byond://?src=\ref[src];rename=1'><b>[pref.real_name]</b></a><br>"
+	. += "<a href='byond://?src=\ref[src];random_name=1'>Randomize Name</A><br>"
+	. += "<a href='byond://?src=\ref[src];always_random_name=1'>Always Random Name: [pref.read_preference(/datum/preference/toggle/human/name_is_always_random) ? "Yes" : "No"]</a><br>"
+	. += span_bold("Nickname:") + " "
+	. += "<a href='byond://?src=\ref[src];nickname=1'><b>[pref.nickname]</b></a>"
+	. += "(<a href='byond://?src=\ref[src];reset_nickname=1'>Clear</A>)"
 	. += "<br>"
-	. += "<b>Biological Sex:</b> <a href='?src=\ref[src];bio_gender=1'><b>[gender2text(pref.biological_gender)]</b></a><br>"
-	. += "<b>Pronouns:</b> <a href='?src=\ref[src];id_gender=1'><b>[gender2text(pref.identifying_gender)]</b></a><br>"
-	. += "<b>Age:</b> <a href='?src=\ref[src];age=1'>[pref.age]</a> <b>Birthday:</b> <a href='?src=\ref[src];bday_month=1'>[pref.bday_month]</a><b>/</b><a href='?src=\ref[src];bday_day=1'>[pref.bday_day]</a> - <b>Announce?:</b> <a href='?src=\ref[src];bday_announce=1'>[pref.bday_announce ? "Yes" : "Disabled"]</a><br>" //ChompEDIT - DISABLE the announcement
-	. += "<b>Spawn Point</b>: <a href='?src=\ref[src];spawnpoint=1'>[pref.spawnpoint]</a><br>"
-	if(CONFIG_GET(flag/allow_metadata)) // CHOMPEdit
+	. += span_bold("Biological Sex:") + " <a href='byond://?src=\ref[src];bio_gender=1'><b>[gender2text(pref.biological_gender)]</b></a><br>"
+	. += span_bold("Pronouns:") + " <a href='byond://?src=\ref[src];id_gender=1'><b>[gender2text(pref.identifying_gender)]</b></a><br>"
+	. += span_bold("Age:") + " <a href='byond://?src=\ref[src];age=1'>[pref.read_preference(/datum/preference/numeric/human/age)]</a> <b>Birthday:</b> <a href='byond://?src=\ref[src];bday_month=1'>[pref.read_preference(/datum/preference/numeric/human/bday_month)]</a><b>/</b><a href='byond://?src=\ref[src];bday_day=1'>[pref.read_preference(/datum/preference/numeric/human/bday_day)]</a> - <b>Announce?:</b> <a href='byond://?src=\ref[src];bday_announce=1'>[pref.read_preference(/datum/preference/toggle/human/bday_announce) ? "Yes" : "Disabled"]</a><br>" //ChompEDIT - DISABLE the announcement
+	. += span_bold("Spawn Point:") + " <a href='byond://?src=\ref[src];spawnpoint=1'>[pref.read_preference(/datum/preference/choiced/living/spawnpoint)]</a><br>"
+	if(CONFIG_GET(flag/allow_metadata))
 		//CHOMPEdit Start
-		. += "<b>OOC Notes: <a href='?src=\ref[src];edit_ooc_notes=1'>Edit</a><a href='?src=\ref[src];edit_ooc_note_favs=1'>Favs</a><a href='?src=\ref[src];edit_ooc_note_likes=1'>Likes</a><a href='?src=\ref[src];edit_ooc_note_maybes=1'>Maybes</a><a href='?src=\ref[src];edit_ooc_note_dislikes=1'>Dislikes</a></b><br>"
-		. += "Detailed field or short list system? <a href='?src=\ref[src];edit_ooc_note_style=1'>[pref.matadata_ooc_style ? "Lists" : "Fields"]</a><br><br>"
+		. += span_bold("OOC Notes: <a href='byond://?src=\ref[src];edit_ooc_notes=1'>Edit</a><a href='byond://?src=\ref[src];edit_ooc_note_favs=1'>Favs</a><a href='byond://?src=\ref[src];edit_ooc_note_likes=1'>Likes</a><a href='byond://?src=\ref[src];edit_ooc_note_maybes=1'>Maybes</a><a href='byond://?src=\ref[src];edit_ooc_note_dislikes=1'>Dislikes</a>") + "<br>"
+		. += "Detailed field or short list system? <a href='byond://?src=\ref[src];edit_ooc_note_style=1'>[pref.matadata_ooc_style ? "Lists" : "Fields"]</a><br><br>"
 		//CHOMPEdit End
 	. = jointext(.,null)
 
@@ -119,7 +80,7 @@
 				pref.real_name = new_name
 				return TOPIC_REFRESH
 			else
-				to_chat(user, "<span class='warning'>Invalid name. Your name should be at least 2 and at most [MAX_NAME_LEN] characters long. It may only contain the characters A-Z, a-z, -, ' and .</span>")
+				to_chat(user, span_warning("Invalid name. Your name should be at least 2 and at most [MAX_NAME_LEN] characters long. It may only contain the characters A-Z, a-z, -, ' and ."))
 				return TOPIC_NOACTION
 
 	else if(href_list["random_name"])
@@ -127,7 +88,7 @@
 		return TOPIC_REFRESH
 
 	else if(href_list["always_random_name"])
-		pref.be_random_name = !pref.be_random_name
+		pref.update_preference_by_type(/datum/preference/toggle/human/name_is_always_random, !pref.read_preference(/datum/preference/toggle/human/name_is_always_random))
 		return TOPIC_REFRESH
 
 	else if(href_list["nickname"])
@@ -138,11 +99,11 @@
 				pref.nickname = new_nickname
 				return TOPIC_REFRESH
 			else
-				to_chat(user, "<span class='warning'>Invalid name. Your name should be at least 2 and at most [MAX_NAME_LEN] characters long. It may only contain the characters A-Z, a-z, -, ' and .</span>")
+				to_chat(user, span_warning("Invalid name. Your name should be at least 2 and at most [MAX_NAME_LEN] characters long. It may only contain the characters A-Z, a-z, -, ' and ."))
 				return TOPIC_NOACTION
 
 	else if(href_list["reset_nickname"])
-		var/nick_choice = tgui_alert(user, "Wipe your Nickname? This will completely remove any chosen nickname(s).","Wipe Nickname",list("Yes","No"))  //ChompEDIT - usr removal
+		var/nick_choice = tgui_alert(user, "Wipe your Nickname? This will completely remove any chosen nickname(s).","Wipe Nickname",list("Yes","No"))
 		if(nick_choice == "Yes")
 			pref.nickname = null
 		return TOPIC_REFRESH
@@ -162,26 +123,26 @@
 	else if(href_list["age"])
 		var/min_age = get_min_age()
 		var/max_age = get_max_age()
-		var/new_age = tgui_input_number(user, "Choose your character's age:\n([min_age]-[max_age])", "Character Preference", pref.age, max_age, min_age)
+		var/new_age = tgui_input_number(user, "Choose your character's age:\n([min_age]-[max_age])", "Character Preference", pref.read_preference(/datum/preference/numeric/human/age), max_age, min_age)
 		if(new_age && CanUseTopic(user))
-			pref.age = max(min(round(text2num(new_age)), max_age), min_age)
+			pref.update_preference_by_type(/datum/preference/numeric/human/age, max(min(round(text2num(new_age)), max_age), min_age))
 			return TOPIC_REFRESH
 
 	else if(href_list["bday_month"])
-		var/new_month = tgui_input_number(user, "Choose your character's birth month (number)", "Birthday Month", pref.bday_month, 12, 0)
+		var/new_month = tgui_input_number(user, "Choose your character's birth month (number)", "Birthday Month", pref.read_preference(/datum/preference/numeric/human/bday_month), 12, 0)
 		if(new_month && CanUseTopic(user))
-			pref.bday_month = new_month
+			pref.update_preference_by_type(/datum/preference/numeric/human/bday_month, new_month)
 		else if((tgui_alert(user, "Would you like to clear the birthday entry?","Clear?",list("No","Yes")) == "Yes") && CanUseTopic(user))
-			pref.bday_month = 0
-			pref.bday_day = 0
+			pref.update_preference_by_type(/datum/preference/numeric/human/bday_month, 0)
+			pref.update_preference_by_type(/datum/preference/numeric/human/bday_day, 0)
 		return TOPIC_REFRESH
 
 	else if(href_list["bday_day"])
-		if(!pref.bday_month)
+		if(!pref.read_preference(/datum/preference/numeric/human/bday_month))
 			tgui_alert(user,"You must set a birth month before you can set a day.", "Error", list("Okay"))
 			return
 		var/max_days
-		switch(pref.bday_month)
+		switch(pref.read_preference(/datum/preference/numeric/human/bday_month))
 			if(1)
 				max_days = 31
 			if(2)
@@ -207,16 +168,16 @@
 			if(12)
 				max_days = 31
 
-		var/new_day = tgui_input_number(user, "Choose your character's birth day (number, 1-[max_days])", "Birthday Day", pref.bday_day, max_days, 0)
+		var/new_day = tgui_input_number(user, "Choose your character's birth day (number, 1-[max_days])", "Birthday Day", pref.read_preference(/datum/preference/numeric/human/bday_day), max_days, 0)
 		if(new_day && CanUseTopic(user))
-			pref.bday_day = new_day
+			pref.update_preference_by_type(/datum/preference/numeric/human/bday_day, new_day)
 		else if((tgui_alert(user, "Would you like to clear the birthday entry?","Clear?",list("No","Yes")) == "Yes") && CanUseTopic(user))
-			pref.bday_month = 0
-			pref.bday_day = 0
+			pref.update_preference_by_type(/datum/preference/numeric/human/bday_month, 0)
+			pref.update_preference_by_type(/datum/preference/numeric/human/bday_day, 0)
 		return TOPIC_REFRESH
 
 	else if(href_list["bday_announce"])
-		pref.bday_announce = 0 //ChompEDIT - Disable this
+		pref.update_preference_by_type(/datum/preference/toggle/human/bday_announce, /*!pref.read_preference(/datum/preference/toggle/human/bday_announce)*/ FALSE) // CHOMPEdit
 		return TOPIC_REFRESH
 
 	else if(href_list["spawnpoint"])
@@ -225,40 +186,40 @@
 			spawnkeys += spawntype
 		var/choice = tgui_input_list(user, "Where would you like to spawn when late-joining?", "Late-Join Choice", spawnkeys)
 		if(!choice || !spawntypes[choice] || !CanUseTopic(user))	return TOPIC_NOACTION
-		pref.spawnpoint = choice
+		pref.update_preference_by_type(/datum/preference/choiced/living/spawnpoint, choice)
 		return TOPIC_REFRESH
 
 	else if(href_list["edit_ooc_notes"])
-		var/new_metadata = strip_html_simple(tgui_input_text(user, "Enter any information you'd like others to see, such as Roleplay-preferences. This will not be saved permanently unless you click save in the Character Setup panel!", "Game Preference" , html_decode(pref.metadata), multiline = TRUE,  prevent_enter = TRUE)) //ChompEDIT - usr removal
+		var/new_metadata = strip_html_simple(tgui_input_text(user, "Enter any information you'd like others to see, such as Roleplay-preferences. This will not be saved permanently unless you click save in the Character Setup panel!", "Game Preference" , html_decode(pref.read_preference(/datum/preference/text/living/ooc_notes)), multiline = TRUE,  prevent_enter = TRUE))
 		if(new_metadata && CanUseTopic(user))
-			pref.metadata = new_metadata
+			pref.update_preference_by_type(/datum/preference/text/living/ooc_notes, new_metadata)
 	else if(href_list["edit_ooc_note_likes"])
-		var/new_metadata = strip_html_simple(tgui_input_text(user, "Enter any information you'd like others to see relating to your LIKED roleplay preferences. This will not be saved permanently unless you click save in the Character Setup panel! Type \"!clear\" to empty.", "Game Preference" , html_decode(pref.metadata_likes), multiline = TRUE,  prevent_enter = TRUE)) //ChompEDIT - usr removal
+		var/new_metadata = strip_html_simple(tgui_input_text(user, "Enter any information you'd like others to see relating to your LIKED roleplay preferences. This will not be saved permanently unless you click save in the Character Setup panel! Type \"!clear\" to empty.", "Game Preference" , html_decode(pref.read_preference(/datum/preference/text/living/ooc_notes_likes)), multiline = TRUE,  prevent_enter = TRUE))
 		if(new_metadata && CanUseTopic(user))
 			if(new_metadata == "!clear")
 				new_metadata = ""
-			pref.metadata_likes = new_metadata
+			pref.update_preference_by_type(/datum/preference/text/living/ooc_notes_likes, new_metadata)
 	else if(href_list["edit_ooc_note_dislikes"])
-		var/new_metadata = strip_html_simple(tgui_input_text(user, "Enter any information you'd like others to see relating to your DISLIKED roleplay preferences. This will not be saved permanently unless you click save in the Character Setup panel! Type \"!clear\" to empty.", "Game Preference" , html_decode(pref.metadata_dislikes), multiline = TRUE,  prevent_enter = TRUE)) //ChompEDIT - usr removal
+		var/new_metadata = strip_html_simple(tgui_input_text(user, "Enter any information you'd like others to see relating to your DISLIKED roleplay preferences. This will not be saved permanently unless you click save in the Character Setup panel! Type \"!clear\" to empty.", "Game Preference" , html_decode(pref.read_preference(/datum/preference/text/living/ooc_notes_dislikes)), multiline = TRUE,  prevent_enter = TRUE))
 		if(new_metadata && CanUseTopic(user))
 			if(new_metadata == "!clear")
 				new_metadata = ""
-			pref.metadata_dislikes = new_metadata
+			pref.update_preference_by_type(/datum/preference/text/living/ooc_notes_dislikes, new_metadata)
 	//CHOMPEdit Start
 	else if(href_list["edit_ooc_note_favs"])
-		var/new_metadata = strip_html_simple(tgui_input_text(user, "Enter any information you'd like others to see relating to your FAVOURITE roleplay preferences. This will not be saved permanently unless you click save in the Character Setup panel! Type \"!clear\" to empty.", "Game Preference" , html_decode(pref.metadata_favs), multiline = TRUE,  prevent_enter = TRUE)) //ChompEDIT - usr removal
+		var/new_metadata = strip_html_simple(tgui_input_text(user, "Enter any information you'd like others to see relating to your FAVOURITE roleplay preferences. This will not be saved permanently unless you click save in the Character Setup panel! Type \"!clear\" to empty.", "Game Preference" , html_decode(pref.read_preference(/datum/preference/text/living/ooc_notes_favs)), multiline = TRUE,  prevent_enter = TRUE)) //ChompEDIT - usr removal
 		if(new_metadata && CanUseTopic(user))
 			if(new_metadata == "!clear")
 				new_metadata = ""
-			pref.metadata_favs = new_metadata
+			pref.update_preference_by_type(/datum/preference/text/living/ooc_notes_favs, new_metadata)
 	else if(href_list["edit_ooc_note_maybes"])
-		var/new_metadata = strip_html_simple(tgui_input_text(user, "Enter any information you'd like others to see relating to your MAYBE roleplay preferences. This will not be saved permanently unless you click save in the Character Setup panel! Type \"!clear\" to empty.", "Game Preference" , html_decode(pref.metadata_maybes), multiline = TRUE,  prevent_enter = TRUE)) //ChompEDIT - usr removal
+		var/new_metadata = strip_html_simple(tgui_input_text(user, "Enter any information you'd like others to see relating to your MAYBE roleplay preferences. This will not be saved permanently unless you click save in the Character Setup panel! Type \"!clear\" to empty.", "Game Preference" , html_decode(pref.read_preference(/datum/preference/text/living/ooc_notes_maybes)), multiline = TRUE,  prevent_enter = TRUE)) //ChompEDIT - usr removal
 		if(new_metadata && CanUseTopic(user))
 			if(new_metadata == "!clear")
 				new_metadata = ""
-			pref.metadata_maybes = new_metadata
+			pref.update_preference_by_type(/datum/preference/text/living/ooc_notes_maybes, new_metadata)
 	else if(href_list["edit_ooc_note_style"])
-		pref.matadata_ooc_style = !pref.matadata_ooc_style
+		pref.update_preference_by_type(/datum/preference/toggle/living/ooc_notes_style, !pref.read_preference(/datum/preference/toggle/living/ooc_notes_style))
 		return TOPIC_REFRESH
 	//CHOMPEdit End
 	return ..()

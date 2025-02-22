@@ -18,17 +18,17 @@
 /datum/disease2/effect/choreomania/activate(mob/living/carbon/mob, multiplier)
 
 	if(prob(25))
-		to_chat(mob, "<span class='notice'>You feel [pick("like dancing like a maniac, maniac...", "the need to chick chicky boom...")]</span>")
+		to_chat(mob, span_notice("You feel [pick("like dancing like a maniac, maniac...", "the need to chick chicky boom...")]"))
 
 	if(prob(60))
 		if(mob.buckled())
 			mob.emote("whistle")
-			to_chat(viewers(mob), "<span class='warning'>[mob.name] taps their foot rhythmically!</span>")
+			to_chat(viewers(mob), span_warning("[mob.name] taps their foot rhythmically!"))
 		else
-			to_chat(viewers(mob),"<span class='warning'>[mob.name] dances uncontrollably!</span>")
+			to_chat(viewers(mob),span_warning("[mob.name] dances uncontrollably!"))
 
 			if(prob(30))
-				to_chat(mob, "<span class='warning'>You feel like starting a conga line!</span>")
+				to_chat(mob, span_warning("You feel like starting a conga line!"))
 				for(var/mob/living/carbon/M in oview(2,mob))
 					mob.spread_disease_to(M)
 
@@ -48,10 +48,10 @@
 /datum/disease2/effect/pica/activate(mob/living/carbon/mob, multiplier)
 	if(prob(20))
 		var/list/nearby = oview(5, mob)
-		to_chat(mob, "<span class='warning'>You could go for a bite of [pick(nearby)]...</span>")
+		to_chat(mob, span_warning("You could go for a bite of [pick(nearby)]..."))
 	else if (prob(20))
 		var/list/item = mob.get_equipped_items()
-		to_chat(mob, "<span class='warning'>[pick(item)] looks oddly [pick("delicious", "tasty", "scrumptious", "inviting")]...</span>")
+		to_chat(mob, span_warning("[pick(item)] looks oddly [pick("delicious", "tasty", "scrumptious", "inviting")]..."))
 
 ///////////////////////////////////////////////
 /////////////////// Stage 2 ///////////////////
@@ -62,7 +62,7 @@
 	chance_maxm = 5
 
 /datum/disease2/effect/jellylegs/activate(var/mob/living/carbon/mob,var/multiplier)
-	to_chat(mob, "<span class='notice'>Your body seems to lose balance!</span>")
+	to_chat(mob, span_notice("Your body seems to lose balance!"))
 	mob.slip("yourself.")
 
 /datum/disease2/effect/morgellon
@@ -73,9 +73,9 @@
 /datum/disease2/effect/morgellon/activate(var/mob/living/carbon/mob,var/multiplier)
 	if(prob(65))
 		var/obj/item/organ/external/O = pick(mob.organs)
-		to_chat(mob, "<span class='warning'>Your [O.name] [pick(" itches slightly...", " stings!")]</span>")
+		to_chat(mob, span_warning("Your [O.name] [pick(" itches slightly...", " stings!")]"))
 	else if(prob(30))
-		to_chat(mob, "<span class='notice'>You feel [pick("something crawling under your skin.","little legs on you.")]</span>")
+		to_chat(mob, span_notice("You feel [pick("something crawling under your skin.","little legs on you.")]"))
 	else
 		var/obj/effect/spider/spiderling/S = new(get_turf(mob))
 		S.amount_grown = -1

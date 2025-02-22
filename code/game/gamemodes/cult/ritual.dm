@@ -6,7 +6,7 @@ var/global/list/engwords = list("travel", "blood", "join", "hell", "destroy", "t
 var/global/list/rnwords = list("ire","ego","nahlizet","certum","veri","jatkaa","mgar","balaq", "karazet", "geeri")
 
 /client/proc/check_words() // -- Urist
-	set category = "Special Verbs"
+	set category = "Admin.Secrets"
 	set name = "Check Rune Words"
 	set desc = "Check the rune-word meaning"
 	if(!cultwords["travel"])
@@ -90,12 +90,12 @@ var/global/list/rnwords = list("ire","ego","nahlizet","certum","veri","jatkaa","
 
 
 /obj/effect/rune/attackby(I as obj, user as mob)
-	if(istype(I, /obj/item/weapon/book/tome) && iscultist(user))
+	if(istype(I, /obj/item/book/tome) && iscultist(user))
 		to_chat(user, "You retrace your steps, carefully undoing the lines of the rune.")
 		qdel(src)
 		return
-	else if(istype(I, /obj/item/weapon/nullrod))
-		to_chat(user, "<span class='notice'>You disrupt the vile magic with the deadening field of the null rod!</span>")
+	else if(istype(I, /obj/item/nullrod))
+		to_chat(user, span_notice("You disrupt the vile magic with the deadening field of the null rod!"))
 		qdel(src)
 		return
 	return
@@ -170,13 +170,13 @@ var/global/list/rnwords = list("ire","ego","nahlizet","certum","veri","jatkaa","
 	else
 		usr.whisper(pick("Hakkrutju gopoenjim.", "Nherasai pivroiashan.", "Firjji prhiv mazenhor.", "Tanah eh wakantahe.", "Obliyae na oraie.", "Miyf hon vnor'c.", "Wakabai hij fen juswix."))
 	for (var/mob/V in viewers(src))
-		V.show_message("<span class='warning'>The markings pulse with a small burst of light, then fall dark.</span>", 3, "<span class='warning'>You hear a faint fizzle.</span>", 2)
+		V.show_message(span_warning("The markings pulse with a small burst of light, then fall dark."), 3, span_warning("You hear a faint fizzle."), 2)
 	return
 
 /obj/effect/rune/proc/check_icon()
 	icon = get_uristrune_cult(word1, word2, word3)
 
-/obj/item/weapon/book/tome
+/obj/item/book/tome
 	name = "arcane tome"
 	icon = 'icons/obj/weapons.dmi'
 	item_icons = list(
@@ -288,17 +288,17 @@ var/global/list/rnwords = list("ire","ego","nahlizet","certum","veri","jatkaa","
 				</html>
 				"}
 
-/obj/item/weapon/book/tome/Initialize()
+/obj/item/book/tome/Initialize()
 	. = ..()
 	if(!cultwords["travel"])
 		runerandom()
 	for(var/V in cultwords)
 		words[cultwords[V]] = V
 
-/obj/item/weapon/book/tome/attack(mob/living/M as mob, mob/living/user as mob)
+/obj/item/book/tome/attack(mob/living/M as mob, mob/living/user as mob)
 	add_attack_logs(user,M,"Hit with [name]")
 
-	if(istype(M,/mob/observer/dead))
+	if(isobserver(M))
 		var/mob/observer/dead/D = M
 		D.manifest(user)
 		return
@@ -310,13 +310,12 @@ var/global/list/rnwords = list("ire","ego","nahlizet","certum","veri","jatkaa","
 		return
 	M.take_organ_damage(0,rand(5,20)) //really lucky - 5 hits for a crit
 	for(var/mob/O in viewers(M, null))
-		O.show_message("<span class='warning'>\The [user] beats \the [M] with \the [src]!</span>", 1)
-	to_chat(M, "<span class='danger'>You feel searing heat inside!</span>")
+		O.show_message(span_warning("\The [user] beats \the [M] with \the [src]!"), 1)
+	to_chat(M, span_danger("You feel searing heat inside!"))
 
 
-/obj/item/weapon/book/tome/attack_self(mob/living/user as mob)
-	usr = user
-	if(!usr.canmove || usr.stat || usr.restrained())
+/obj/item/book/tome/attack_self(mob/living/user as mob)
+	if(!user.canmove || user.stat || user.restrained())
 		return
 
 	if(!cultwords["travel"])
@@ -326,7 +325,7 @@ var/global/list/rnwords = list("ire","ego","nahlizet","certum","veri","jatkaa","
 		for(var/obj/effect/rune/N in rune_list)
 			C++
 		if (!istype(user.loc,/turf))
-			to_chat(user, "<span class='warning'>You do not have enough space to write a proper rune.</span>")
+			to_chat(user, span_warning("You do not have enough space to write a proper rune."))
 			return
 
 		if (C>=26 + runedec + cult.current_antagonists.len) //including the useless rune at the secret room, shouldn't count against the limit of 25 runes - Urist
@@ -334,14 +333,14 @@ var/global/list/rnwords = list("ire","ego","nahlizet","certum","veri","jatkaa","
 			return
 		else
 			switch(tgui_alert(user, "You open the tome", "Tome", list("Read it","Scribe a rune","Cancel")))
-				if("Cancel")
+				if("Cancel", null)
 					return
 				if("Read it")
-					if(usr.get_active_hand() != src)
+					if(user.get_active_hand() != src)
 						return
 					user << browse("[tomedat]", "window=Arcane Tome")
 					return
-		if(usr.get_active_hand() != src)
+		if(user.get_active_hand() != src)
 			return
 
 		var/list/dictionary = list (
@@ -386,33 +385,33 @@ var/global/list/rnwords = list("ire","ego","nahlizet","certum","veri","jatkaa","
 
 		var/chosen_rune = null
 
-		if(usr)
+		if(user)
 			chosen_rune = input ("Choose a rune to scribe.") in scribewords
 			if (!chosen_rune)
 				return
 			if (chosen_rune == "none")
-				to_chat(user, "<span class='notice'>You decide against scribing a rune, perhaps you should take this time to study your notes.</span>")
+				to_chat(user, span_notice("You decide against scribing a rune, perhaps you should take this time to study your notes."))
 				return
 			if (chosen_rune == "teleport")
 				dictionary[chosen_rune] += input ("Choose a destination word") in english
 			if (chosen_rune == "teleport other")
 				dictionary[chosen_rune] += input ("Choose a destination word") in english
 
-		if(usr.get_active_hand() != src)
+		if(user.get_active_hand() != src)
 			return
 
 		for (var/mob/V in viewers(src))
-			V.show_message("<span class='danger'>\The [user] slices open a finger and begins to chant and paint symbols on the floor.</span>", 3, "<span class='danger'>You hear chanting.</span>", 2)
-		to_chat(user, "<span class='danger'>You slice open one of your fingers and begin drawing a rune on the floor whilst chanting the ritual that binds your life essence with the dark arcane energies flowing through the surrounding world.</span>")
+			V.show_message(span_danger("\The [user] slices open a finger and begins to chant and paint symbols on the floor."), 3, span_danger("You hear chanting."), 2)
+		to_chat(user, span_danger("You slice open one of your fingers and begin drawing a rune on the floor whilst chanting the ritual that binds your life essence with the dark arcane energies flowing through the surrounding world."))
 		user.take_overall_damage((rand(9)+1)/10) // 0.1 to 1.0 damage
 		if(do_after(user, 50))
 			var/area/A = get_area(user)
 			log_and_message_admins("created \an [chosen_rune] rune at \the [A.name] - [user.loc.x]-[user.loc.y]-[user.loc.z].")
-			if(usr.get_active_hand() != src)
+			if(user.get_active_hand() != src)
 				return
 			var/mob/living/carbon/human/H = user
 			var/obj/effect/rune/R = new /obj/effect/rune(user.loc)
-			to_chat(user, "<span class='notice'>You finish drawing the arcane markings of the Geometer.</span>")
+			to_chat(user, span_notice("You finish drawing the arcane markings of the Geometer."))
 			var/list/required = dictionary[chosen_rune]
 			R.word1 = english[required[1]]
 			R.word2 = english[required[2]]
@@ -425,32 +424,32 @@ var/global/list/rnwords = list("ire","ego","nahlizet","certum","veri","jatkaa","
 		to_chat(user, "The book seems full of illegible scribbles. Is this a joke?")
 		return
 
-/obj/item/weapon/book/tome/examine(mob/user)
+/obj/item/book/tome/examine(mob/user)
 	. = ..()
 	if(!iscultist(user))
 		. += "An old, dusty tome with frayed edges and a sinister looking cover."
 	else
 		. += "The scriptures of Nar-Sie, The One Who Sees, The Geometer of Blood. Contains the details of every ritual his followers could think of. Most of these are useless, though."
 
-/obj/item/weapon/book/tome/cultify()
+/obj/item/book/tome/cultify()
 	return
 
-/obj/item/weapon/book/tome/imbued //admin tome, spawns working runes without waiting
+/obj/item/book/tome/imbued //admin tome, spawns working runes without waiting
 	w_class = ITEMSIZE_SMALL
 	var/cultistsonly = 1
-/obj/item/weapon/book/tome/imbued/attack_self(mob/user as mob)
-	if(src.cultistsonly && !iscultist(usr))
+/obj/item/book/tome/imbued/attack_self(mob/user as mob)
+	if(src.cultistsonly && !iscultist(user))
 		return
 	if(!cultwords["travel"])
 		runerandom()
 	if(user)
 		var/r
 		if (!istype(user.loc,/turf))
-			to_chat(user, "<span class='notice'>You do not have enough space to write a proper rune.</span>")
+			to_chat(user, span_notice("You do not have enough space to write a proper rune."))
 		var/list/runes = list("teleport", "itemport", "tome", "armor", "convert", "tear in reality", "emp", "drain", "seer", "raise", "obscure", "reveal", "astral journey", "manifest", "imbue talisman", "sacrifice", "wall", "freedom", "cultsummon", "deafen", "blind", "bloodboil", "communicate", "stun")
-		r = input(usr, "Choose a rune to scribe", "Rune Scribing") in runes // Remains input() for extreme blocking
+		r = tgui_input_list(user, "Choose a rune to scribe", "Rune Scribing", runes, timeout=30 SECONDS)
 		var/obj/effect/rune/R = new /obj/effect/rune
-		if(istype(user, /mob/living/carbon/human))
+		if(ishuman(user))
 			var/mob/living/carbon/human/H = user
 			R.blood_DNA = list()
 			R.blood_DNA[H.dna.unique_enzymes] = H.dna.b_type
@@ -460,8 +459,8 @@ var/global/list/rnwords = list("ire","ego","nahlizet","certum","veri","jatkaa","
 			if("teleport")
 				var/list/words = list("ire", "ego", "nahlizet", "certum", "veri", "jatkaa", "balaq", "mgar", "karazet", "geeri")
 				var/beacon
-				if(usr)
-					beacon = input(usr, "Select the last rune", "Rune Scribing") in words // Remains input() for extreme blocking
+				if(user)
+					beacon = tgui_input_list(user, "Select the last rune", "Rune Scribing", words, timeout=30 SECONDS)
 				R.word1=cultwords["travel"]
 				R.word2=cultwords["self"]
 				R.word3=beacon
@@ -470,8 +469,8 @@ var/global/list/rnwords = list("ire","ego","nahlizet","certum","veri","jatkaa","
 			if("itemport")
 				var/list/words = list("ire", "ego", "nahlizet", "certum", "veri", "jatkaa", "balaq", "mgar", "karazet", "geeri")
 				var/beacon
-				if(usr)
-					beacon = input(usr, "Select the last rune", "Rune Scribing") in words // Remains input() for extreme blocking
+				if(user)
+					beacon = tgui_input_list(user, "Select the last rune", "Rune Scribing", words, timeout=30 SECONDS)
 				R.word1=cultwords["travel"]
 				R.word2=cultwords["other"]
 				R.word3=beacon

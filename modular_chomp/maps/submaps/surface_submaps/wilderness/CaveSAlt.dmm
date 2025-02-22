@@ -11,8 +11,6 @@
 "d" = (
 /obj/structure/closet/crate,
 /obj/random/contraband,
-/obj/random/contraband,
-/obj/random/energy,
 /obj/random/energy,
 /turf/simulated/floor,
 /area/submap/CaveS)
@@ -25,8 +23,6 @@
 /area/submap/CaveS)
 "g" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8";
 	pixel_x = 0
 	},
@@ -43,7 +39,9 @@
 /turf/simulated/wall,
 /area/submap/CaveS)
 "o" = (
-/mob/living/simple_mob/animal/giant_spider/phorogenic,
+/mob/living/simple_mob/animal/giant_spider/phorogenic{
+	loot_list = list(/obj/item/stock_parts/manipulator/omni = 50)
+	},
 /turf/simulated/floor/outdoors/dirt{
 	outdoors = 0
 	},
@@ -54,7 +52,6 @@
 /area/template_noop)
 "q" = (
 /obj/structure/cable{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/effect/decal/cleanable/ash,
@@ -68,14 +65,12 @@
 /area/submap/CaveS)
 "t" = (
 /obj/structure/closet/crate,
-/obj/random/firstaid,
-/obj/random/firstaid,
+/obj/random/contraband,
 /turf/simulated/floor,
 /area/submap/CaveS)
 "u" = (
 /obj/machinery/power/port_gen/pacman,
 /obj/structure/cable{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /turf/simulated/floor,
@@ -87,8 +82,24 @@
 "z" = (
 /turf/simulated/mineral/ignore_mapgen,
 /area/submap/CaveS)
+"C" = (
+/mob/living/simple_mob/animal/giant_spider/phorogenic{
+	loot_list = list(/obj/item/stock_parts/capacitor/omni = 50)
+	},
+/turf/simulated/floor/outdoors/dirt{
+	outdoors = 0
+	},
+/area/submap/CaveS)
 "D" = (
 /obj/effect/decal/cleanable/cobweb,
+/turf/simulated/floor/outdoors/dirt{
+	outdoors = 0
+	},
+/area/submap/CaveS)
+"F" = (
+/mob/living/simple_mob/animal/giant_spider/phorogenic{
+	loot_list = list(/obj/item/stock_parts/scanning_module/omni = 50)
+	},
 /turf/simulated/floor/outdoors/dirt{
 	outdoors = 0
 	},
@@ -97,14 +108,25 @@
 /turf/simulated/floor,
 /area/submap/CaveS)
 "I" = (
-/mob/living/simple_mob/animal/giant_spider/phorogenic,
 /obj/effect/spider/stickyweb,
+/mob/living/simple_mob/animal/giant_spider/phorogenic{
+	loot_list = list(/obj/item/stock_parts/manipulator/omni = 50)
+	},
 /turf/simulated/floor/outdoors/dirt{
 	outdoors = 0
 	},
 /area/submap/CaveS)
 "J" = (
 /turf/simulated/floor/outdoors/dirt,
+/area/submap/CaveS)
+"K" = (
+/obj/effect/spider/stickyweb,
+/mob/living/simple_mob/animal/giant_spider/phorogenic{
+	loot_list = list(/obj/item/stock_parts/scanning_module/omni = 50)
+	},
+/turf/simulated/floor/outdoors/dirt{
+	outdoors = 0
+	},
 /area/submap/CaveS)
 "M" = (
 /obj/effect/decal/cleanable/cobweb2,
@@ -117,9 +139,18 @@
 	outdoors = 0
 	},
 /area/submap/CaveS)
+"Q" = (
+/obj/effect/spider/stickyweb,
+/mob/living/simple_mob/animal/giant_spider/phorogenic{
+	loot_list = list(/obj/item/stock_parts/capacitor/omni = 50)
+	},
+/turf/simulated/floor/outdoors/dirt{
+	outdoors = 0
+	},
+/area/submap/CaveS)
 "S" = (
 /obj/structure/loot_pile/surface/bones,
-/obj/item/weapon/rig/industrial,
+/obj/item/rig/industrial,
 /turf/simulated/floor/outdoors/dirt{
 	outdoors = 0
 	},
@@ -132,22 +163,22 @@
 /area/submap/CaveS)
 "X" = (
 /obj/structure/closet/crate,
-/obj/item/weapon/reagent_containers/pill/healing_nanites,
-/obj/item/weapon/reagent_containers/pill/healing_nanites,
+/obj/item/reagent_containers/pill/healing_nanites,
+/obj/item/reagent_containers/pill/healing_nanites,
 /obj/item/stack/material/phoron{
 	amount = 25
 	},
-/obj/item/weapon/reagent_containers/chem_disp_cartridge/acidspit,
-/obj/item/weapon/reagent_containers/chem_disp_cartridge/cola,
-/obj/item/weapon/reagent_containers/chem_disp_cartridge/dexalin,
-/obj/item/weapon/reagent_containers/chem_disp_cartridge/hot_coco,
+/obj/item/reagent_containers/chem_disp_cartridge/acidspit,
+/obj/item/reagent_containers/chem_disp_cartridge/cola,
+/obj/item/reagent_containers/chem_disp_cartridge/dexalin,
+/obj/item/reagent_containers/chem_disp_cartridge/hot_coco,
 /turf/simulated/floor/outdoors/dirt{
 	outdoors = 0
 	},
 /area/submap/CaveS)
 "Y" = (
 /obj/structure/loot_pile/surface/bones,
-/obj/item/weapon/kinetic_crusher,
+/obj/item/kinetic_crusher,
 /turf/simulated/floor/outdoors/dirt{
 	outdoors = 0
 	},
@@ -394,7 +425,7 @@ P
 P
 P
 r
-I
+K
 z
 z
 z
@@ -512,7 +543,7 @@ z
 z
 z
 z
-I
+K
 P
 P
 r
@@ -1226,7 +1257,7 @@ P
 P
 c
 P
-o
+F
 z
 z
 z
@@ -1259,7 +1290,7 @@ z
 z
 z
 z
-o
+C
 P
 P
 H
@@ -1355,7 +1386,7 @@ H
 P
 z
 z
-I
+Q
 r
 P
 P

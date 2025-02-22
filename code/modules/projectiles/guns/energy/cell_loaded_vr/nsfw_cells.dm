@@ -2,8 +2,7 @@
 /obj/item/ammo_casing/microbattery/combat
 	name = "\'NSCW\' microbattery - UNKNOWN"
 	desc = "A miniature battery for an energy weapon."
-	catalogue_data = list(/datum/category_item/catalogue/information/organization/hephaestus)
-	origin_tech = list(TECH_COMBAT = 2, TECH_MATERIAL = 1, TECH_MAGNETS = 2)
+	origin_tech = list(TECH_COMBAT = 2, TECH_MATERIAL = 1, TECH_MAGNET = 2)
 
 /obj/item/ammo_casing/microbattery/combat/lethal
 	name = "\'NSCW\' microbattery - LETHAL"

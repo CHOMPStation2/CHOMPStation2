@@ -1,0 +1,818 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aO" = (
+/turf/simulated/floor/tiled/hydro,
+/area/survivalpod/superpose/XenoBotanySetup)
+"aV" = (
+/obj/structure/table/glass,
+/obj/item/gun/energy/floragun,
+/obj/item/stock_parts/micro_laser/hyper,
+/turf/simulated/floor/tiled/white,
+/area/survivalpod/superpose/XenoBotanySetup)
+"bo" = (
+/obj/machinery/atmospherics/portables_connector{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/hydro,
+/area/survivalpod/superpose/XenoBotanySetup)
+"bF" = (
+/obj/effect/floor_decal/borderfloorwhite{
+	dir = 2
+	},
+/obj/effect/floor_decal/corner/green/border,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/hydro,
+/area/survivalpod/superpose/XenoBotanySetup)
+"cE" = (
+/obj/machinery/seed_storage/xenobotany{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/white,
+/area/survivalpod/superpose/XenoBotanySetup)
+"cF" = (
+/obj/machinery/atmospherics/unary/heater{
+	dir = 2;
+	icon_state = "heater"
+	},
+/turf/simulated/floor/tiled/white,
+/area/survivalpod/superpose/XenoBotanySetup)
+"cN" = (
+/obj/machinery/botany/extractor,
+/turf/simulated/floor/tiled/white,
+/area/survivalpod/superpose/XenoBotanySetup)
+"dh" = (
+/obj/machinery/power/terminal{
+	dir = 1
+	},
+/obj/item/storage/toolbox/mechanical,
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/XenoBotanySetup)
+"ee" = (
+/obj/structure/grille,
+/obj/structure/window/titanium/full,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/XenoBotanySetup)
+"ek" = (
+/obj/structure/closet/crate/hydroponics/exotic,
+/obj/machinery/light{
+	dir = 2
+	},
+/obj/effect/floor_decal/borderfloorwhite{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/green/border{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/white,
+/area/survivalpod/superpose/XenoBotanySetup)
+"fk" = (
+/obj/item/gps,
+/obj/item/sticky_pad/random,
+/obj/item/starcaster_news,
+/obj/item/pen/blue,
+/obj/item/pda,
+/obj/item/card/id/external,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/reagent_containers/food/snacks/sosjerky,
+/obj/item/reagent_containers/food/snacks/sosjerky,
+/obj/item/gun/energy/locked/phasegun/pistol,
+/obj/item/material/knife/tacknife/survival,
+/obj/item/clothing/accessory/permit/gun,
+/obj/item/camera,
+/obj/item/binoculars,
+/obj/item/threadneedle,
+/obj/random/soap,
+/obj/item/towel/random,
+/obj/item/bodybag/cryobag,
+/obj/item/flashlight/flare,
+/obj/item/flashlight/flare,
+/obj/item/flashlight/color/yellow,
+/obj/item/radio,
+/obj/item/radio,
+/obj/item/flame/lighter/random,
+/obj/item/cell/device/hyper,
+/obj/item/cell/device/hyper,
+/obj/item/extinguisher/mini,
+/obj/item/reagent_containers/glass/beaker/vial/tricordrazine,
+/obj/item/reagent_containers/glass/beaker/vial/tricordrazine,
+/obj/item/reagent_containers/pill/spaceacillin,
+/obj/item/reagent_containers/pill/spaceacillin,
+/obj/item/fbp_backup_cell,
+/obj/item/fbp_backup_cell,
+/obj/item/suit_cooling_unit/emergency,
+/obj/item/stack/nanopaste,
+/obj/item/reagent_containers/hypospray/autoinjector/biginjector/clotting,
+/obj/item/storage/backpack/messenger,
+/obj/item/clothing/accessory/storage/black_drop_pouches,
+/obj/item/clothing/accessory/poncho/thermal,
+/obj/item/storage/box/survival/comp,
+/obj/item/storage/toolbox/brass,
+/obj/item/storage/box/khcrystal,
+/obj/structure/table/rack/shelf/steel,
+/obj/structure/closet/cabinet{
+	density = 0;
+	pixel_x = -28
+	},
+/turf/simulated/floor/wood/alt/panel,
+/area/survivalpod/superpose/XenoBotanySetup)
+"gj" = (
+/obj/effect/floor_decal/borderfloorwhite{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/green/border{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/hydro,
+/area/survivalpod/superpose/XenoBotanySetup)
+"hl" = (
+/obj/machinery/atmospherics/binary/pump{
+	name = "Isolation to Waste"
+	},
+/turf/simulated/floor/tiled/hydro,
+/area/survivalpod/superpose/XenoBotanySetup)
+"hN" = (
+/obj/structure/grille,
+/obj/structure/window/titanium/full,
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/XenoBotanySetup)
+"jx" = (
+/obj/machinery/chem_master,
+/turf/simulated/floor/tiled/white,
+/area/survivalpod/superpose/XenoBotanySetup)
+"kp" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/machinery/atmospherics/unary/freezer{
+	dir = 2;
+	icon_state = "freezer"
+	},
+/turf/simulated/floor/tiled/white,
+/area/survivalpod/superpose/XenoBotanySetup)
+"kR" = (
+/obj/effect/floor_decal/borderfloorwhite,
+/obj/effect/floor_decal/corner/green/border,
+/obj/structure/sink{
+	dir = 8;
+	pixel_x = -12;
+	pixel_y = 2
+	},
+/turf/simulated/floor/tiled/white,
+/area/survivalpod/superpose/XenoBotanySetup)
+"kW" = (
+/obj/effect/floor_decal/borderfloorwhite/corner{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/green/bordercorner{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/hydro,
+/area/survivalpod/superpose/XenoBotanySetup)
+"mm" = (
+/obj/effect/floor_decal/borderfloorwhite/corner,
+/obj/effect/floor_decal/corner/green/bordercorner{
+	dir = 2
+	},
+/turf/simulated/floor/tiled/hydro,
+/area/survivalpod/superpose/XenoBotanySetup)
+"mD" = (
+/obj/effect/floor_decal/borderfloorwhite/corner,
+/obj/effect/floor_decal/corner/green/bordercorner,
+/turf/simulated/floor/tiled/hydro,
+/area/survivalpod/superpose/XenoBotanySetup)
+"od" = (
+/obj/machinery/atmospherics/portables_connector,
+/obj/machinery/portable_atmospherics/hydroponics,
+/turf/simulated/floor/tiled/white,
+/area/survivalpod/superpose/XenoBotanySetup)
+"om" = (
+/obj/machinery/portable_atmospherics/hydroponics,
+/turf/simulated/floor/tiled/hydro,
+/area/survivalpod/superpose/XenoBotanySetup)
+"pG" = (
+/obj/structure/table/glass,
+/obj/item/material/minihoe,
+/obj/item/material/minihoe,
+/obj/item/analyzer/plant_analyzer,
+/obj/item/analyzer/plant_analyzer,
+/obj/item/shovel/spade,
+/obj/item/shovel/spade,
+/obj/item/material/knife/machete/hatchet,
+/obj/item/material/knife/machete/hatchet,
+/turf/simulated/floor/tiled/white,
+/area/survivalpod/superpose/XenoBotanySetup)
+"pU" = (
+/obj/structure/window/reinforced,
+/obj/structure/undies_wardrobe{
+	density = 0
+	},
+/obj/structure/curtain/bed{
+	name = "curtain"
+	},
+/turf/simulated/floor/wood/alt/panel,
+/area/survivalpod/superpose/XenoBotanySetup)
+"qf" = (
+/obj/item/shovel,
+/turf/simulated/floor/outdoors/dirt,
+/area/survivalpod/superpose/XenoBotanySetup)
+"uf" = (
+/obj/machinery/portable_atmospherics/canister/nitrogen,
+/turf/simulated/floor/tiled/white,
+/area/survivalpod/superpose/XenoBotanySetup)
+"up" = (
+/obj/structure/fireaxecabinet{
+	pixel_y = -30
+	},
+/turf/simulated/floor/tiled/white,
+/area/survivalpod/superpose/XenoBotanySetup)
+"uA" = (
+/obj/effect/floor_decal/borderfloorwhite{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/green/border{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/hydro,
+/area/survivalpod/superpose/XenoBotanySetup)
+"uD" = (
+/obj/machinery/light{
+	dir = 2
+	},
+/obj/effect/floor_decal/borderfloorwhite{
+	dir = 2
+	},
+/obj/effect/floor_decal/corner/green/border,
+/obj/structure/table/glass,
+/obj/item/storage/box/botanydisk,
+/turf/simulated/floor/tiled/hydro,
+/area/survivalpod/superpose/XenoBotanySetup)
+"wn" = (
+/obj/effect/floor_decal/borderfloorwhite,
+/obj/effect/floor_decal/corner/green/border,
+/obj/machinery/atmospherics/pipe/manifold/visible{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/white,
+/area/survivalpod/superpose/XenoBotanySetup)
+"wQ" = (
+/obj/machinery/door/airlock/research{
+	id_tag = "skibidirizz"
+	},
+/turf/simulated/floor/wood/alt/panel,
+/area/survivalpod/superpose/XenoBotanySetup)
+"ya" = (
+/obj/machinery/power/apc/alarms_hidden{
+	dir = 8;
+	pixel_y = 0;
+	pixel_x = -24;
+	req_access = null
+	},
+/obj/structure/cable/green,
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/effect/floor_decal/borderfloorwhite{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/green/border{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/white,
+/area/survivalpod/superpose/XenoBotanySetup)
+"Av" = (
+/obj/structure/bed/chair/office/light,
+/turf/simulated/floor/tiled/hydro,
+/area/survivalpod/superpose/XenoBotanySetup)
+"AA" = (
+/obj/machinery/biogenerator,
+/obj/machinery/light{
+	dir = 2
+	},
+/turf/simulated/floor/tiled/white,
+/area/survivalpod/superpose/XenoBotanySetup)
+"Cu" = (
+/obj/machinery/seed_extractor,
+/turf/simulated/floor/tiled/white,
+/area/survivalpod/superpose/XenoBotanySetup)
+"CE" = (
+/obj/effect/floor_decal/borderfloorwhite{
+	dir = 2
+	},
+/obj/effect/floor_decal/corner/green/border,
+/obj/structure/extinguisher_cabinet{
+	pixel_y = -30
+	},
+/obj/structure/table/glass,
+/obj/item/reagent_containers/glass/bucket,
+/obj/item/reagent_containers/glass/bucket,
+/obj/item/reagent_containers/glass/bucket,
+/turf/simulated/floor/tiled/hydro,
+/area/survivalpod/superpose/XenoBotanySetup)
+"Dd" = (
+/obj/structure/closet/crate/hydroponics/exotic,
+/obj/effect/floor_decal/borderfloorwhite{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/green/border{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/white,
+/area/survivalpod/superpose/XenoBotanySetup)
+"Dj" = (
+/obj/structure/window/reinforced,
+/obj/structure/table/woodentable,
+/obj/structure/curtain/bed{
+	name = "curtain"
+	},
+/turf/simulated/floor/wood/alt/panel,
+/area/survivalpod/superpose/XenoBotanySetup)
+"Dz" = (
+/obj/effect/floor_decal/borderfloorwhite{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/green/border{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/white,
+/area/survivalpod/superpose/XenoBotanySetup)
+"DL" = (
+/turf/simulated/floor/outdoors/dirt,
+/area/survivalpod/superpose/XenoBotanySetup)
+"Ez" = (
+/obj/machinery/door/airlock/research,
+/turf/simulated/floor/tiled/hydro,
+/area/survivalpod/superpose/XenoBotanySetup)
+"EE" = (
+/obj/machinery/portable_atmospherics/hydroponics,
+/obj/structure/cable/green{
+	icon_state = "2-8"
+	},
+/turf/simulated/floor/tiled/hydro,
+/area/survivalpod/superpose/XenoBotanySetup)
+"EQ" = (
+/obj/machinery/atmospherics/unary/outlet_injector{
+	dir = 8;
+	frequency = 1443;
+	id = "air_in";
+	use_power = 1
+	},
+/turf/simulated/floor/outdoors/dirt,
+/area/survivalpod/superpose/XenoBotanySetup)
+"ET" = (
+/obj/structure/toilet{
+	dir = 1
+	},
+/obj/machinery/light/small,
+/turf/simulated/floor/tiled/white,
+/area/survivalpod/superpose/XenoBotanySetup)
+"FA" = (
+/obj/structure/closet/crate/solar,
+/turf/simulated/floor/outdoors/dirt,
+/area/survivalpod/superpose/XenoBotanySetup)
+"If" = (
+/obj/effect/floor_decal/borderfloorwhite{
+	dir = 2
+	},
+/obj/effect/floor_decal/corner/green/border,
+/turf/simulated/floor/tiled/hydro,
+/area/survivalpod/superpose/XenoBotanySetup)
+"It" = (
+/obj/machinery/door/airlock/glass_research{
+	req_one_access = null
+	},
+/turf/simulated/floor/tiled/hydro,
+/area/survivalpod/superpose/XenoBotanySetup)
+"Iu" = (
+/obj/effect/floor_decal/borderfloorwhite{
+	dir = 2
+	},
+/obj/effect/floor_decal/corner/green/border,
+/obj/structure/table/glass,
+/obj/item/multitool,
+/turf/simulated/floor/tiled/hydro,
+/area/survivalpod/superpose/XenoBotanySetup)
+"IN" = (
+/obj/structure/closet/crate/hydroponics/prespawned,
+/obj/effect/floor_decal/borderfloorwhite{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/green/border{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/white,
+/area/survivalpod/superpose/XenoBotanySetup)
+"IR" = (
+/turf/simulated/floor/wood/alt/panel,
+/area/survivalpod/superpose/XenoBotanySetup)
+"Kj" = (
+/obj/effect/floor_decal/borderfloorwhite,
+/obj/effect/floor_decal/corner/green/border,
+/obj/machinery/atmospherics/pipe/manifold/visible{
+	dir = 2
+	},
+/turf/simulated/floor/tiled/white,
+/area/survivalpod/superpose/XenoBotanySetup)
+"Kp" = (
+/obj/machinery/portable_atmospherics/hydroponics,
+/turf/simulated/floor/tiled/white,
+/area/survivalpod/superpose/XenoBotanySetup)
+"Ku" = (
+/obj/machinery/button/remote/airlock{
+	id = "skibidirizz";
+	name = "Door Lock Control";
+	pixel_y = 25;
+	specialfunctions = 4;
+	dir = 4;
+	pixel_x = -7
+	},
+/obj/machinery/light/small{
+	dir = 1
+	},
+/turf/simulated/floor/wood/alt/panel,
+/area/survivalpod/superpose/XenoBotanySetup)
+"Ky" = (
+/obj/machinery/atmospherics/portables_connector{
+	dir = 2
+	},
+/obj/machinery/portable_atmospherics/canister,
+/turf/simulated/floor/tiled/white,
+/area/survivalpod/superpose/XenoBotanySetup)
+"Lz" = (
+/obj/machinery/power/smes/batteryrack/mapped,
+/obj/structure/cable/green,
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/XenoBotanySetup)
+"MG" = (
+/obj/effect/floor_decal/borderfloorwhite,
+/obj/effect/floor_decal/corner/green/border,
+/obj/machinery/atmospherics/pipe/simple/visible{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/white,
+/area/survivalpod/superpose/XenoBotanySetup)
+"MU" = (
+/obj/effect/floor_decal/borderfloorwhite,
+/obj/effect/floor_decal/corner/green/border,
+/turf/simulated/floor/tiled/white,
+/area/survivalpod/superpose/XenoBotanySetup)
+"NI" = (
+/obj/effect/floor_decal/borderfloorwhite,
+/obj/effect/floor_decal/corner/green/border,
+/obj/machinery/atmospherics/pipe/manifold/visible{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/white,
+/area/survivalpod/superpose/XenoBotanySetup)
+"NX" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/structure/reagent_dispensers/watertank/high,
+/turf/simulated/floor/tiled/white,
+/area/survivalpod/superpose/XenoBotanySetup)
+"Og" = (
+/obj/machinery/botany/editor,
+/turf/simulated/floor/tiled/white,
+/area/survivalpod/superpose/XenoBotanySetup)
+"Oj" = (
+/turf/simulated/floor/tiled/white,
+/area/survivalpod/superpose/XenoBotanySetup)
+"Ow" = (
+/turf/simulated/wall/titanium,
+/area/survivalpod/superpose/XenoBotanySetup)
+"OP" = (
+/obj/effect/floor_decal/borderfloorwhite/corner{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/green/bordercorner{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/white,
+/area/survivalpod/superpose/XenoBotanySetup)
+"OV" = (
+/obj/effect/floor_decal/borderfloorwhite{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/green/border{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/white,
+/area/survivalpod/superpose/XenoBotanySetup)
+"PA" = (
+/turf/template_noop,
+/area/survivalpod/superpose/XenoBotanySetup)
+"Qo" = (
+/obj/structure/bed/padded,
+/obj/item/bedsheet/purple,
+/turf/simulated/floor/wood/alt/panel,
+/area/survivalpod/superpose/XenoBotanySetup)
+"Qu" = (
+/obj/machinery/vending/hydronutrients{
+	categories = 3;
+	dir = 1
+	},
+/turf/simulated/floor/tiled/white,
+/area/survivalpod/superpose/XenoBotanySetup)
+"UP" = (
+/obj/machinery/portable_atmospherics/hydroponics,
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/white,
+/area/survivalpod/superpose/XenoBotanySetup)
+"VM" = (
+/obj/structure/closet/secure_closet/hydroponics{
+	req_access = null
+	},
+/turf/simulated/floor/tiled/white,
+/area/survivalpod/superpose/XenoBotanySetup)
+"Wx" = (
+/obj/machinery/chemical_dispenser/full{
+	density = 1;
+	pixel_y = 7
+	},
+/obj/structure/table/glass,
+/turf/simulated/floor/tiled/white,
+/area/survivalpod/superpose/XenoBotanySetup)
+"WI" = (
+/obj/structure/cable/green{
+	icon_state = "2-4"
+	},
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/XenoBotanySetup)
+"Yi" = (
+/obj/structure/table/woodentable,
+/obj/item/flash,
+/obj/item/flashlight/lamp/green{
+	pixel_y = 6;
+	pixel_x = 5
+	},
+/turf/simulated/floor/wood/alt/panel,
+/area/survivalpod/superpose/XenoBotanySetup)
+"ZV" = (
+/obj/structure/grille,
+/obj/structure/window/titanium/full,
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/XenoBotanySetup)
+"ZW" = (
+/obj/machinery/portable_atmospherics/canister/carbon_dioxide,
+/turf/simulated/floor/tiled/white,
+/area/survivalpod/superpose/XenoBotanySetup)
+
+(1,1,1) = {"
+PA
+PA
+PA
+PA
+PA
+PA
+WI
+Lz
+dh
+FA
+PA
+"}
+(2,1,1) = {"
+Ow
+Ow
+Ow
+Ow
+hN
+hN
+ZV
+Ow
+Ow
+Ow
+Ow
+"}
+(3,1,1) = {"
+PA
+hN
+UP
+kR
+om
+om
+EE
+ya
+VM
+hN
+PA
+"}
+(4,1,1) = {"
+PA
+hN
+Kp
+MU
+aO
+aO
+aO
+Dz
+VM
+hN
+PA
+"}
+(5,1,1) = {"
+PA
+hN
+Kp
+MU
+mm
+gj
+gj
+Dz
+Cu
+hN
+PA
+"}
+(6,1,1) = {"
+Ow
+Ow
+NX
+MU
+If
+aV
+pG
+Dz
+AA
+Ow
+Ow
+"}
+(7,1,1) = {"
+PA
+hN
+Kp
+MU
+If
+jx
+cN
+Dz
+Qu
+Ow
+DL
+"}
+(8,1,1) = {"
+PA
+hN
+Kp
+MU
+If
+Wx
+Og
+Dz
+cE
+Ow
+DL
+"}
+(9,1,1) = {"
+PA
+hN
+Kp
+MU
+kW
+uA
+OV
+OP
+up
+Ow
+DL
+"}
+(10,1,1) = {"
+Ow
+Ow
+NX
+MU
+aO
+aO
+aO
+aO
+aO
+It
+DL
+"}
+(11,1,1) = {"
+PA
+hN
+uf
+MU
+aO
+mD
+IN
+Dd
+ek
+Ow
+qf
+"}
+(12,1,1) = {"
+PA
+hN
+ZW
+MU
+aO
+CE
+Ow
+Ow
+Ow
+Ow
+DL
+"}
+(13,1,1) = {"
+PA
+hN
+cF
+MG
+Av
+Iu
+Ow
+Oj
+ET
+Ow
+DL
+"}
+(14,1,1) = {"
+Ow
+Ow
+kp
+Kj
+aO
+uD
+Ow
+Ez
+Ow
+Ow
+Ow
+"}
+(15,1,1) = {"
+PA
+hN
+Ky
+wn
+aO
+If
+wQ
+IR
+fk
+Ow
+PA
+"}
+(16,1,1) = {"
+PA
+hN
+od
+NI
+bo
+If
+Ow
+Ku
+IR
+Dj
+PA
+"}
+(17,1,1) = {"
+PA
+hN
+od
+wn
+hl
+bF
+Ow
+Qo
+Yi
+pU
+PA
+"}
+(18,1,1) = {"
+Ow
+Ow
+Ow
+Ow
+hN
+ee
+Ow
+Ow
+Ow
+Ow
+Ow
+"}
+(19,1,1) = {"
+PA
+PA
+PA
+DL
+DL
+EQ
+DL
+DL
+PA
+PA
+PA
+"}

@@ -1,12 +1,32 @@
 /proc/wormhole_event(var/set_duration = 5 MINUTES, var/wormhole_duration_modifier = 1)
 	spawn()
+	// CHOMPEdit Start - Only allowing these to go to the station
 		var/list/pick_turfs = list()
+		var/list/exits = list()
 		var/list/Z_choices = list()
+
 		Z_choices |= using_map.get_map_levels(1, FALSE)
+		Z_choices -= global.using_map.sealed_levels
+	// CHOMPEdit End
 		for(var/turf/simulated/floor/T in world)
+			var/area/A = T.loc
 			if(T.z in Z_choices)
 				if(!T.block_tele)
 					pick_turfs += T
+				if(A.flag_check(AREA_FORBID_EVENTS)) // CHOMPEdit - No spawning in dorms
+					continue
+		// CHOMPAdd Start - Chance to end up in a belly. Fun (:
+		for(var/mob/living/mob in player_list)
+			if(mob.can_be_drop_pred && isfloor(mob.loc))
+				var/turf/simulated/floor/T = get_turf(mob.loc)
+				if(!T.block_tele)
+					if(mob.vore_selected)
+						exits += mob.vore_selected
+					else if(mob.vore_organs.len)
+						exits += pick(mob.vore_organs)
+
+		exits |= pick_turfs
+		// CHOMPAdd End
 
 		if(pick_turfs.len)
 
@@ -47,7 +67,7 @@
 				pick_turfs -= enter							//remove it from pickable turfs list
 				if( !enter || !istype(enter) )	continue	//sanity
 
-				var/turf/simulated/floor/exit = pick(pick_turfs)
+				var/atom/exit = pick(exits) // CHOMPEdit
 //				pick_turfs -= exit
 				if( !exit || !istype(exit) )	continue	//sanity
 
@@ -57,14 +77,15 @@
 
 
 //maybe this proc can even be used as an admin tool for teleporting players without ruining immulsions?
-/proc/create_wormhole(var/turf/enter as turf, var/turf/exit as turf, var/min_duration = 30 SECONDS, var/max_duration = 60 SECONDS)
+/proc/create_wormhole(var/turf/enter as turf, var/atom/exit, var/min_duration = 30 SECONDS, var/max_duration = 60 SECONDS) // CHOMPEdit
 	set waitfor = FALSE
 	var/obj/effect/portal/P = new /obj/effect/portal( enter )
 	P.target = exit
 	P.creator = null
 	P.icon = 'icons/obj/objects.dmi'
 	P.failchance = 0
-	P.icon_state = "anom"
+	P.icon_state = "bhole3" // CHOMPEdit - Better icon as well
 	P.name = "wormhole"
+	P.event = TRUE // CHOMPAdd
 	spawn(rand(min_duration,max_duration))
 		qdel(P)

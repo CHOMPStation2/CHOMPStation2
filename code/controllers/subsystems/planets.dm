@@ -14,10 +14,10 @@ SUBSYSTEM_DEF(planets)
 	var/static/list/needs_sun_update = list()
 	var/static/list/needs_temp_update = list()
 
-/datum/controller/subsystem/planets/Initialize() // CHOMPEdit
-	admin_notice("<span class='danger'>Initializing planetary weather.</span>", R_DEBUG)
+/datum/controller/subsystem/planets/Initialize()
+	admin_notice(span_danger("Initializing planetary weather."), R_DEBUG)
 	createPlanets()
-	return SS_INIT_SUCCESS // CHOMPEdit
+	return SS_INIT_SUCCESS
 
 /datum/controller/subsystem/planets/proc/createPlanets()
 	var/list/planet_datums = using_map.planet_datums_to_make
@@ -28,7 +28,7 @@ SUBSYSTEM_DEF(planets)
 			if(Z > z_to_planet.len)
 				z_to_planet.len = Z
 			if(z_to_planet[Z])
-				admin_notice("<span class='danger'>Z[Z] is shared by more than one planet!</span>", R_DEBUG)
+				admin_notice(span_danger("Z[Z] is shared by more than one planet!"), R_DEBUG)
 				continue
 			z_to_planet[Z] = NP
 
@@ -45,7 +45,6 @@ SUBSYSTEM_DEF(planets)
 		else if(istype(T, /turf/simulated) && T.is_outdoors())
 			P.planet_floors += T
 			P.weather_holder.apply_to_turf(T)
-			//P.sun_holder.apply_to_turf(T) CHOMPEdit replaced planetary lighting
 
 /datum/controller/subsystem/planets/proc/removeTurf(var/turf/T,var/is_edge)
 	if(z_to_planet.len >= T.z)
@@ -72,7 +71,7 @@ SUBSYSTEM_DEF(planets)
 		if(MC_TICK_CHECK)
 			return
 
-	#if !(UNIT_TEST) // Don't be updating temperatures and such during unit tests // CHOMPedit: That's not how ifndef works!
+	#ifndef UNIT_TEST // Don't be updating temperatures and such during unit tests
 	var/list/needs_temp_update = src.needs_temp_update
 	while(needs_temp_update.len)
 		var/datum/planet/P = needs_temp_update[needs_temp_update.len]
@@ -108,7 +107,7 @@ SUBSYSTEM_DEF(planets)
 
 	var/new_color = P.sun["color"]
 	P.sun_holder.update_color(new_color)
-	SSlighting.update_sunlight(SSlighting.get_pshandler_planet(P)) //CHOMPEdit
+	SSlighting.update_sunlight(SSlighting.get_pshandler_planet(P))
 
 /datum/controller/subsystem/planets/proc/updateTemp(var/datum/planet/P)
 	//Set new temperatures

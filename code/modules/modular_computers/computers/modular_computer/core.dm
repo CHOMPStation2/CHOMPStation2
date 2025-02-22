@@ -55,7 +55,7 @@
 /obj/item/modular_computer/Destroy()
 	kill_program(1)
 	STOP_PROCESSING(SSobj, src)
-	for(var/obj/item/weapon/computer_hardware/CH in src.get_all_components())
+	for(var/obj/item/computer_hardware/CH in src.get_all_components())
 		uninstall_component(null, CH)
 		qdel(CH)
 	return ..()
@@ -191,7 +191,7 @@
 		P = hard_drive.find_file_by_name(prog)
 
 	if(!P || !istype(P)) // Program not found or it's not executable program.
-		to_chat(user, "<span class='danger'>\The [src]'s screen shows \"I/O ERROR - Unable to run [prog]\" warning.</span>")
+		to_chat(user, span_danger("\The [src]'s screen shows \"I/O ERROR - Unable to run [prog]\" warning."))
 		return
 
 	P.computer = src
@@ -206,11 +206,11 @@
 		return
 
 	if(idle_threads.len >= processor_unit.max_idle_programs+1)
-		to_chat(user, "<span class='notice'>\The [src] displays a \"Maximal CPU load reached. Unable to run another program.\" error</span>")
+		to_chat(user, span_notice("\The [src] displays a \"Maximal CPU load reached. Unable to run another program.\" error"))
 		return
 
 	if(P.requires_ntnet && !get_ntnet_status(P.requires_ntnet_feature)) // The program requires NTNet connection, but we are not connected to NTNet.
-		to_chat(user, "<span class='danger'>\The [src]'s screen shows \"NETWORK ERROR - Unable to connect to NTNet. Please retry. If problem persists contact your system administrator.\" warning.</span>")
+		to_chat(user, span_danger("\The [src]'s screen shows \"NETWORK ERROR - Unable to connect to NTNet. Please retry. If problem persists contact your system administrator.\" warning."))
 		return
 
 	if(active_program)

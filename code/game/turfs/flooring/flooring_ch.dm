@@ -1,5 +1,5 @@
 /decl/flooring
-	var/list/vorefootstep_sounds = list() // key=species name, value = list of sounds, used for reagent sloshing in vore belly
+	/* var/list/vorefootstep_sounds = list() // key=species name, value = list of sounds, used for reagent sloshing in vore belly
 
 	vorefootstep_sounds = list("human" = list(
 		'sound/vore/walkslosh1.ogg',
@@ -12,6 +12,7 @@
 		'sound/vore/walkslosh8.ogg',
 		'sound/vore/walkslosh9.ogg',
 		'sound/vore/walkslosh10.ogg'))
+		*/
 
 /turf/simulated/floor/boxing
 	name = "boxing mat"

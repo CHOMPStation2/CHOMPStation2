@@ -23,42 +23,51 @@
 // Give Random Bad Mutation to M
 /proc/randmutb(var/mob/living/M)
 	if(!M || !(M.dna)) return
+	// Traitgenes NO_SCAN and Synthetics cannot be mutated
+	if(M.isSynthetic())
+		return
+	if(ishuman(M))
+		var/mob/living/carbon/human/H = M
+		if(!H.species || H.species.flags & NO_SCAN)
+			return
 	M.dna.check_integrity()
-	//var/block = pick(GLASSESBLOCK,COUGHBLOCK,FAKEBLOCK,NERVOUSBLOCK,CLUMSYBLOCK,TWITCHBLOCK,HEADACHEBLOCK,BLINDBLOCK,DEAFBLOCK,HALLUCINATIONBLOCK) // Most of these are disabled anyway.
-	var/block = pick(FAKEBLOCK,CLUMSYBLOCK,BLINDBLOCK,DEAFBLOCK)
-	M.dna.SetSEState(block, 1)
+	// Traitgenes Pick from bad traitgenes
+	var/datum/gene/trait/T = pick(GLOB.dna_genes_bad + (prob(10) ? GLOB.dna_genes_neutral : list()) ) // Chance for neutrals as well
+	M.dna.SetSEState(T.block, TRUE)
 
 // Give Random Good Mutation to M
 /proc/randmutg(var/mob/living/M)
 	if(!M || !(M.dna)) return
+	// Traitgenes NO_SCAN and Synthetics cannot be mutated
+	if(M.isSynthetic())
+		return
+	if(ishuman(M))
+		var/mob/living/carbon/human/H = M
+		if(!H.species || H.species.flags & NO_SCAN)
+			return
 	M.dna.check_integrity()
-	//var/block = pick(HULKBLOCK,XRAYBLOCK,FIREBLOCK,TELEBLOCK,NOBREATHBLOCK,REMOTEVIEWBLOCK,REGENERATEBLOCK,INCREASERUNBLOCK,REMOTETALKBLOCK,MORPHBLOCK,BLENDBLOCK,NOPRINTSBLOCK,SHOCKIMMUNITYBLOCK,SMALLSIZEBLOCK) // Much like above, most of these blocks are disabled in code.
-	var/block = pick(HULKBLOCK,XRAYBLOCK,FIREBLOCK,TELEBLOCK,REGENERATEBLOCK,REMOTETALKBLOCK)
-	M.dna.SetSEState(block, 1)
-
-// Random Appearance Mutation
-/proc/randmuti(var/mob/living/M)
-	if(!M || !(M.dna)) return
-	M.dna.check_integrity()
-	M.dna.SetUIValue(rand(1,DNA_UI_LENGTH),rand(1,4095))
+	// Traitgenes Pick from good traitgenes
+	var/datum/gene/trait/T = pick(GLOB.dna_genes_good + (prob(10) ? GLOB.dna_genes_neutral : list()) ) // Chance for neutrals as well
+	M.dna.SetSEState(T.block, TRUE)
 
 // Scramble UI or SE.
 /proc/scramble(var/UI, var/mob/M, var/prob)
 	if(!M || !(M.dna))	return
+	// Traitgenes edit begin - NO_SCAN and Synthetics cannot be mutated
+	if(M.isSynthetic())
+		return
+	if(ishuman(M))
+		var/mob/living/carbon/human/H = M
+		if(!H.species || H.species.flags & NO_SCAN)
+			return
+	// Traitgenes edit end
 	M.dna.check_integrity()
-	if(UI)
-		for(var/i = 1, i <= DNA_UI_LENGTH-1, i++)
-			if(prob(prob))
-				M.dna.SetUIValue(i,rand(1,4095),1)
-		M.dna.UpdateUI()
-		M.UpdateAppearance()
-
-	else
-		for(var/i = 1, i <= DNA_SE_LENGTH-1, i++)
-			if(prob(prob))
-				M.dna.SetSEValue(i,rand(1,4095),1)
-		M.dna.UpdateSE()
-		domutcheck(M, null)
+	for(var/i = 1, i <= DNA_SE_LENGTH-1, i++)
+		if(prob(prob))
+			M.dna.SetSEValue(i,rand(1,4095),1)
+	M.dna.UpdateSE()
+	domutcheck(M, null)
+	M.UpdateAppearance()
 	return
 
 // I haven't yet figured out what the fuck this is supposed to do.
@@ -122,12 +131,11 @@
 
 	return output
 
-// /proc/updateappearance has changed behavior, so it's been removed
-// Use mob.UpdateAppearance() instead.
+// Use mob.UpdateAppearance()
 
 // Simpler. Don't specify UI in order for the mob to use its own.
 /mob/proc/UpdateAppearance(var/list/UI=null)
-	if(istype(src, /mob/living/carbon/human))
+	if(ishuman(src))
 		if(UI!=null)
 			src.dna.UI=UI
 			src.dna.UpdateUI()
@@ -175,14 +183,17 @@
 		if((0 < beard) && (beard <= facial_hair_styles_list.len))
 			H.f_style = facial_hair_styles_list[beard]
 
-		// VORE StationEdit Start
-
 		// Ears
 		var/ears = dna.GetUIValueRange(DNA_UI_EAR_STYLE, ear_styles_list.len + 1) - 1
 		if(ears < 1)
 			H.ear_style = null
 		else if((0 < ears) && (ears <= ear_styles_list.len))
 			H.ear_style = ear_styles_list[ear_styles_list[ears]]
+		var/ears_secondary = dna.GetUIValueRange(DNA_UI_EAR_SECONDARY_STYLE, ear_styles_list.len + 1) - 1
+		if(ears_secondary < 1)
+			H.ear_secondary_style = null
+		else if((0 < ears_secondary) && (ears_secondary <= ear_styles_list.len))
+			H.ear_secondary_style = ear_styles_list[ear_styles_list[ears_secondary]]
 
 		// Ear Color
 		H.r_ears  = dna.GetUIValueRange(DNA_UI_EARS_R,    255)
@@ -195,6 +206,15 @@
 		H.g_ears3 = dna.GetUIValueRange(DNA_UI_EARS3_G,   255)
 		H.b_ears3 = dna.GetUIValueRange(DNA_UI_EARS3_B,	  255)
 
+		LAZYINITLIST(H.ear_secondary_colors)
+		H.ear_secondary_colors.len = max(length(H.ear_secondary_colors), DNA_UI_EARS_SECONDARY_COLOR_CHANNEL_COUNT)
+		for(var/channel in 1 to DNA_UI_EARS_SECONDARY_COLOR_CHANNEL_COUNT)
+			var/offset = DNA_UI_EARS_SECONDARY_START + (channel - 1) * 3
+			H.ear_secondary_colors[channel] = rgb(
+				dna.GetUIValueRange(offset, 255),
+				dna.GetUIValueRange(offset + 1, 255),
+				dna.GetUIValueRange(offset + 2, 255),
+			)
 
 		//Tail
 		var/tail = dna.GetUIValueRange(DNA_UI_TAIL_STYLE, tail_styles_list.len + 1) - 1
@@ -244,11 +264,29 @@
 		H.custom_whisper = dna.custom_whisper
 		H.custom_exclaim = dna.custom_exclaim
 		H.species.blood_color = dna.blood_color
+		H.fuzzy = dna.scale_appearance
+		H.offset_override = dna.offset_override
+		H.synth_markings = dna.synth_markings
+		H.custom_speech_bubble = dna.custom_speech_bubble
+		H.grad_style = dna.grad_style
+		H.r_grad = dna.r_grad
+		H.g_grad = dna.g_grad
+		H.b_grad = dna.b_grad
 		H.custom_heat = dna.custom_heat
 		H.custom_cold = dna.custom_cold
 		var/datum/species/S = H.species
-		S.produceCopy(dna.species_traits, H, dna.base_species)
+		S.produceCopy(dna.species_traits, H, dna.base_species, FALSE) // Traitgenes edit - reset_dna flag required, or genes get reset on resleeve
+		H.dna.blood_reagents = dna.blood_reagents
+		H.dna.blood_color = dna.blood_color
+		H.species.blood_reagents = H.dna.blood_reagents
+		H.species.blood_color = H.dna.blood_color
 		// VOREStation Edit End
+		// CHOMPEnable Start
+		H.species.species_sounds = dna.species_sounds
+		H.species.gender_specific_species_sounds = dna.gender_specific_species_sounds
+		H.species.species_sounds_male = dna.species_sounds_male
+		H.species.species_sounds_female = dna.species_sounds_female
+		// CHOMPEnable ENd
 
 		H.force_update_organs() //VOREStation Add - Gotta do this too
 		H.force_update_limbs()

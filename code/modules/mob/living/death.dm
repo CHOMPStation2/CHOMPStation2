@@ -1,5 +1,6 @@
 /mob/living/death(gibbed)
 	clear_fullscreens()
+	update_mob_action_buttons()
 	if(ai_holder)
 		ai_holder.go_sleep()
 
@@ -19,7 +20,10 @@
 
 	if(isbelly(loc) && tf_mob_holder)
 		mind?.vore_death = TRUE
-		tf_mob_holder.mind?.vore_death = TRUE
+		//CHOMPEdit Start - Holder is used for OOC Escape now, make sure not to kill body swapped minds too
+		if(tf_mob_holder.loc == src)
+			tf_mob_holder.mind?.vore_death = TRUE
+		//CHOMPEdit End
 
 	for(var/datum/soul_link/S as anything in owned_soul_links)
 		S.owner_died(gibbed)
@@ -36,3 +40,9 @@
 	// CHOMPStation Add End
 
 	. = ..()
+
+/mob/living/proc/delayed_gib()
+	visible_message(span_danger(span_bold("[src]") + " starts convulsing violently!"), span_danger("You feel as if your body is tearing itself apart!"))
+	Weaken(30)
+	make_jittery(1000)
+	addtimer(CALLBACK(src, PROC_REF(gib)), rand(2 SECONDS, 10 SECONDS))

@@ -14,7 +14,7 @@
 		if((M.stat != 2) || (!M.client))
 			continue
 		//They need a brain!
-		if(istype(M, /mob/living/carbon/human))
+		if(ishuman(M))
 			var/mob/living/carbon/human/H = M
 			if(!H.has_brain())
 				continue
@@ -23,7 +23,6 @@
 			break
 	return selected
 
-#define CLONE_BIOMASS 30 //VOREstation Edit
 #define MINIMUM_HEAL_LEVEL 40
 
 /obj/machinery/clonepod
@@ -31,7 +30,7 @@
 	desc = "An electronically-lockable pod for growing organic tissue."
 	density = TRUE
 	anchored = TRUE
-	circuit = /obj/item/weapon/circuitboard/clonepod
+	circuit = /obj/item/circuitboard/clonepod
 	icon = 'icons/obj/cloning.dmi'
 	icon_state = "pod_0"
 	req_access = list(access_genetics) // For premature unlocking.
@@ -121,7 +120,8 @@
 
 	clonemind.transfer_to(H)
 	H.ckey = R.ckey
-	to_chat(H, "<span class='warning'><b>Consciousness slowly creeps over you as your body regenerates.</b><br><b><font size='3'>Your recent memories are fuzzy, and it's hard to remember anything from today...</font></b></span><br><span class='notice'><i>So this is what cloning feels like?</i></span>")
+	to_chat(H, span_warning(span_bold("Consciousness slowly creeps over you as your body regenerates.") + "<br>" + span_bold(span_large("Your recent memories are fuzzy, and it's hard to remember anything from today...")) + \
+		"<br>" + span_notice(span_italics("So this is what cloning feels like?"))))
 
 	// -- Mode/mind specific stuff goes here
 	callHook("clone", list(H))
@@ -130,15 +130,13 @@
 
 	if(!R.dna)
 		H.dna = new /datum/dna()
-		H.dna.real_name = H.real_name
+		qdel_swap(H.dna, new /datum/dna())
 	else
-		H.dna = R.dna
+		qdel_swap(H.dna, R.dna)
 	H.UpdateAppearance()
+	H.sync_dna_traits(FALSE) // Traitgenes Sync traits to genetics if needed
 	H.sync_organ_dna()
-	if(heal_level < 60)
-		randmutb(H) //Sometimes the clones come out wrong.
-		H.dna.UpdateSE()
-		H.dna.UpdateUI()
+	H.initialize_vessel()
 
 	H.set_cloned_appearance()
 	update_icon()
@@ -195,8 +193,8 @@
 			occupant.adjustBrainLoss(-(CEILING(0.5*heal_rate, 1)))
 
 			//So clones don't die of oxyloss in a running pod.
-			if(occupant.reagents.get_reagent_amount("inaprovaline") < 30)
-				occupant.reagents.add_reagent("inaprovaline", 60)
+			if(occupant.reagents.get_reagent_amount(REAGENT_ID_INAPROVALINE) < 30)
+				occupant.reagents.add_reagent(REAGENT_ID_INAPROVALINE, 60)
 			occupant.Sleeping(30)
 			//Also heal some oxyloss ourselves because inaprovaline is so bad at preventing it!!
 			occupant.adjustOxyLoss(-4)
@@ -221,7 +219,7 @@
 	return
 
 //Let's unlock this early I guess.  Might be too early, needs tweaking.
-/obj/machinery/clonepod/attackby(obj/item/weapon/W as obj, mob/user as mob)
+/obj/machinery/clonepod/attackby(obj/item/W as obj, mob/user as mob)
 	if(isnull(occupant))
 		if(default_deconstruction_screwdriver(user, W))
 			return
@@ -229,21 +227,21 @@
 			return
 		if(default_part_replacement(user, W))
 			return
-	if(istype(W, /obj/item/weapon/card/id)||istype(W, /obj/item/device/pda))
+	if(istype(W, /obj/item/card/id)||istype(W, /obj/item/pda))
 		if(!check_access(W))
-			to_chat(user, "<span class='warning'>Access Denied.</span>")
+			to_chat(user, span_warning("Access Denied."))
 			return
 		if((!locked) || (isnull(occupant)))
 			return
 		if((occupant.health < -20) && (occupant.stat != 2))
-			to_chat(user, "<span class='warning'>Access Refused.</span>")
+			to_chat(user, span_warning("Access Refused."))
 			return
 		else
 			locked = 0
 			to_chat(user, "System unlocked.")
-	else if(istype(W,/obj/item/weapon/reagent_containers/glass))
+	else if(istype(W,/obj/item/reagent_containers/glass))
 		if(LAZYLEN(containers) >= container_limit)
-			to_chat(user, "<span class='warning'>\The [src] has too many containers loaded!</span>")
+			to_chat(user, span_warning("\The [src] has too many containers loaded!"))
 		else if(do_after(user, 1 SECOND))
 			user.visible_message("[user] has loaded \the [W] into \the [src].", "You load \the [W] into \the [src].")
 			containers += W
@@ -252,7 +250,7 @@
 		return
 	else if(W.has_tool_quality(TOOL_WRENCH))
 		if(locked && (anchored || occupant))
-			to_chat(user, "<span class='warning'>Can not do that while [src] is in use.</span>")
+			to_chat(user, span_warning("Can not do that while [src] is in use."))
 		else
 			if(anchored)
 				anchored = FALSE
@@ -265,10 +263,10 @@
 				user.visible_message("[user] secures [src] to the floor.", "You secure [src] to the floor.")
 			else
 				user.visible_message("[user] unsecures [src] from the floor.", "You unsecure [src] from the floor.")
-	else if(istype(W, /obj/item/device/multitool))
-		var/obj/item/device/multitool/M = W
+	else if(istype(W, /obj/item/multitool))
+		var/obj/item/multitool/M = W
 		M.connecting = src
-		to_chat(user, "<span class='notice'>You load connection data from [src] to [M].</span>")
+		to_chat(user, span_notice("You load connection data from [src] to [M]."))
 		M.update_icon()
 		return
 	else
@@ -297,9 +295,9 @@
 	..()
 	speed_coeff = 0
 	efficiency = 0
-	for(var/obj/item/weapon/stock_parts/scanning_module/S in component_parts)
+	for(var/obj/item/stock_parts/scanning_module/S in component_parts)
 		efficiency += S.rating
-	for(var/obj/item/weapon/stock_parts/manipulator/P in component_parts)
+	for(var/obj/item/stock_parts/manipulator/P in component_parts)
 		speed_coeff += P.rating
 	heal_level = max(min((efficiency * 15) + 10, 100), MINIMUM_HEAL_LEVEL)
 
@@ -339,6 +337,7 @@
 		var/mob/living/carbon/human/patient = occupant
 		if(!(patient.species.flags & NO_SCAN)) //If, for some reason, someone makes a genetically-unalterable clone, let's not make them permanently disabled.
 			domutcheck(occupant) //Waiting until they're out before possible transforming.
+			occupant.UpdateAppearance()
 	occupant = null
 
 	update_icon()
@@ -348,9 +347,9 @@
 /obj/machinery/clonepod/proc/get_biomass()
 	var/biomass_count = 0
 	if(LAZYLEN(containers))
-		for(var/obj/item/weapon/reagent_containers/glass/G in containers)
+		for(var/obj/item/reagent_containers/glass/G in containers)
 			for(var/datum/reagent/R in G.reagents.reagent_list)
-				if(R.id == "biomass")
+				if(R.id == REAGENT_ID_BIOMASS)
 					biomass_count += R.volume
 
 	return biomass_count
@@ -359,10 +358,10 @@
 /obj/machinery/clonepod/proc/remove_biomass(var/amount = CLONE_BIOMASS)		//Just in case it doesn't get passed a new amount, assume one clone
 	var/to_remove = 0	// Tracks how much biomass has been found so far
 	if(LAZYLEN(containers))
-		for(var/obj/item/weapon/reagent_containers/glass/G in containers)
+		for(var/obj/item/reagent_containers/glass/G in containers)
 			if(to_remove < amount)	//If we have what we need, we can stop. Checked every time we switch beakers
 				for(var/datum/reagent/R in G.reagents.reagent_list)
-					if(R.id == "biomass")		// Finds Biomass
+					if(R.id == REAGENT_ID_BIOMASS)		// Finds Biomass
 						var/need_remove = max(0, amount - to_remove)	//Figures out how much biomass is in this container
 						if(R.volume >= need_remove)						//If we have more than enough in this beaker, only take what we need
 							R.remove_self(need_remove)
@@ -395,7 +394,7 @@
 	if(LAZYLEN(containers))
 		var/turf/T = get_turf(src)
 		if(T)
-			for(var/obj/item/weapon/reagent_containers/glass/G in containers)
+			for(var/obj/item/reagent_containers/glass/G in containers)
 				G.forceMove(T)
 				containers -= G
 		return	1
@@ -407,15 +406,12 @@
 		mess = 1
 		update_icon()
 		occupant.ghostize()
-		spawn(5)
-			qdel(occupant)
-	return
+		QDEL_IN(occupant, 0.5 SECONDS)
 
-/obj/machinery/clonepod/relaymove(mob/user as mob)
+/obj/machinery/clonepod/relaymove(mob/user)
 	if(user.stat)
 		return
 	go_out()
-	return
 
 /obj/machinery/clonepod/emp_act(severity)
 	if(prob(100/severity))
@@ -456,19 +452,19 @@
 		icon_state = "pod_g"
 
 
-/obj/machinery/clonepod/full/New()
-	..()
+/obj/machinery/clonepod/full/Initialize()
+	. = ..()
 	for(var/i = 1 to container_limit)
-		containers += new /obj/item/weapon/reagent_containers/glass/bottle/biomass(src)
+		containers += new /obj/item/reagent_containers/glass/bottle/biomass(src)
 
 //Health Tracker Implant
 
-/obj/item/weapon/implant/health
+/obj/item/implant/health
 	name = "health implant"
 	known_implant = TRUE
 	var/healthstring = ""
 
-/obj/item/weapon/implant/health/proc/sensehealth()
+/obj/item/implant/health/proc/sensehealth()
 	if(!implanted)
 		return "ERROR"
 	else
@@ -479,87 +475,31 @@
 			healthstring = "ERROR"
 		return healthstring
 
-//Disk stuff.
-//The return of data disks?? Just for transferring between genetics machine/cloning machine.
-//TO-DO: Make the genetics machine accept them.
-/obj/item/weapon/disk/data
-	name = "Cloning Data Disk"
-	icon = 'icons/obj/discs_vr.dmi' //VOREStation Edit
-	icon_state = "data-red" //VOREStation Edit
-	item_state = "card-id"
-	w_class = ITEMSIZE_SMALL
-	var/datum/dna2/record/buf = null
-	var/read_only = 0 //Well,it's still a floppy disk
-
-/obj/item/weapon/disk/data/proc/initializeDisk()
-	buf = new
-	buf.dna=new
-
-/obj/item/weapon/disk/data/demo
-	name = "data disk - 'God Emperor of Mankind'"
-	read_only = 1
-
-/obj/item/weapon/disk/data/demo/New()
-	initializeDisk()
-	buf.types=DNA2_BUF_UE|DNA2_BUF_UI
-	//data = "066000033000000000AF00330660FF4DB002690"
-	//data = "0C80C80C80C80C80C8000000000000161FBDDEF" - Farmer Jeff
-	buf.dna.real_name="God Emperor of Mankind"
-	buf.dna.unique_enzymes = md5(buf.dna.real_name)
-	buf.dna.UI=list(0x066,0x000,0x033,0x000,0x000,0x000,0xAF0,0x033,0x066,0x0FF,0x4DB,0x002,0x690)
-	//buf.dna.UI=list(0x0C8,0x0C8,0x0C8,0x0C8,0x0C8,0x0C8,0x000,0x000,0x000,0x000,0x161,0xFBD,0xDEF) // Farmer Jeff
-	buf.dna.UpdateUI()
-
-/obj/item/weapon/disk/data/monkey
-	name = "data disk - 'Mr. Muggles'"
-	read_only = 1
-
-/obj/item/weapon/disk/data/monkey/New()
-	..()
-	initializeDisk()
-	buf.types=DNA2_BUF_SE
-	var/list/new_SE=list(0x098,0x3E8,0x403,0x44C,0x39F,0x4B0,0x59D,0x514,0x5FC,0x578,0x5DC,0x640,0x6A4)
-	for(var/i=new_SE.len;i<=DNA_SE_LENGTH;i++)
-		new_SE += rand(1,1024)
-	buf.dna.SE=new_SE
-	buf.dna.SetSEValueRange(MONKEYBLOCK,0xDAC, 0xFFF)
-
-/obj/item/weapon/disk/data/New()
-	..()
-	var/diskcolor = pick(0,1,2)
-	icon_state = "datadisk[diskcolor]"
-
-/obj/item/weapon/disk/data/attack_self(mob/user as mob)
-	read_only = !read_only
-	to_chat(user, "You flip the write-protect tab to [read_only ? "protected" : "unprotected"].")
-
-/obj/item/weapon/disk/data/examine(mob/user)
-	. = ..()
-	. += "The write-protect tab is set to [read_only ? "protected" : "unprotected"]."
+#undef MINIMUM_HEAL_LEVEL
 
 /*
  *	Diskette Box
  */
 
-/obj/item/weapon/storage/box/disks
+/obj/item/storage/box/disks
 	name = "Diskette Box"
 	icon_state = "disk_kit"
 
-/obj/item/weapon/storage/box/disks/New()
-	..()
-	new /obj/item/weapon/disk/data(src)
-	new /obj/item/weapon/disk/data(src)
-	new /obj/item/weapon/disk/data(src)
-	new /obj/item/weapon/disk/data(src)
-	new /obj/item/weapon/disk/data(src)
-	new /obj/item/weapon/disk/data(src)
-	new /obj/item/weapon/disk/data(src)
+/obj/item/storage/box/disks/Initialize()
+	. = ..()
+	new /obj/item/disk/body_record(src)
+	new /obj/item/disk/body_record(src)
+	new /obj/item/disk/body_record(src)
+	new /obj/item/disk/body_record(src)
+	new /obj/item/disk/body_record(src)
+	new /obj/item/disk/body_record(src)
+	new /obj/item/disk/body_record(src)
 
 /*
  *	Manual -- A big ol' manual.
  */
 
-/obj/item/weapon/paper/Cloning
+/obj/item/paper/Cloning
 	name = "H-87 Cloning Apparatus Manual"
 	info = {"<h4>Getting Started</h4>
 	Congratulations, your station has purchased the H-87 industrial cloning device!<br>

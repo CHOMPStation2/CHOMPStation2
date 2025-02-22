@@ -10,7 +10,7 @@
 	var/list/datum/disease2/effectholder/effects = list()
 	var/antigen = list() // 16 bits describing the antigens, when one bit is set, a cure with that bit can dock here
 	var/max_stage = 4
-	var/list/affected_species = list(SPECIES_HUMAN,SPECIES_UNATHI,SPECIES_SKRELL,SPECIES_TAJ)
+	var/list/affected_species = list(SPECIES_HUMAN,SPECIES_UNATHI,SPECIES_SKRELL,SPECIES_TAJARAN)
 	var/resistance = 10 // % chance a disease will resist cure, up to 100
 	var/name // CHOMPEdit - For custom built diseases.
 
@@ -44,7 +44,7 @@
 		resistance += 10
 
 	if(GLOB.all_species.len)
-		affected_species = get_infectable_species()
+		affected_species = get_all_infectable_species() // CHOMPEdit
 
 /proc/get_infectable_species()
 	var/list/meat = list()

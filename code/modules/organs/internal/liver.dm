@@ -11,7 +11,7 @@
 	if(owner.life_tick % PROCESS_ACCURACY == 0)
 
 		//High toxins levels are dangerous
-		if(owner.getToxLoss() >= 50 && !owner.reagents.has_reagent("anti_toxin"))
+		if(owner.getToxLoss() >= 50 && !owner.reagents.has_reagent(REAGENT_ID_ANTITOXIN))
 			//Healthy liver suffers on its own
 			if (src.damage < min_broken_damage)
 				src.damage += 0.2 * PROCESS_ACCURACY
@@ -22,7 +22,7 @@
 					O.damage += 0.2  * PROCESS_ACCURACY
 
 		//Detox can heal small amounts of damage
-		if (src.damage && src.damage < src.min_bruised_damage && owner.reagents.has_reagent("anti_toxin"))
+		if (src.damage && src.damage < src.min_bruised_damage && owner.reagents.has_reagent(REAGENT_ID_ANTITOXIN))
 			src.damage -= 0.2 * PROCESS_ACCURACY
 
 		if(src.damage < 0)
@@ -59,10 +59,12 @@
 /obj/item/organ/internal/liver/grey
 	icon_state = "liver_grey"
 
-/obj/item/organ/internal/liver/grey/colormatch/New()
+/obj/item/organ/internal/liver/grey/colormatch/Initialize(mapload, internal)
 	..()
-	var/mob/living/carbon/human/H = null
-	spawn(15)
-		if(ishuman(owner))
-			H = owner
-			color = H.species.blood_color
+	return INITIALIZE_HINT_LATELOAD
+
+/obj/item/organ/internal/liver/grey/colormatch/LateInitialize()
+	. = ..()
+	if(ishuman(loc))
+		var/mob/living/carbon/human/H = loc
+		color = H.species.blood_color

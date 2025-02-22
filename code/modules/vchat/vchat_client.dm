@@ -132,7 +132,7 @@ GLOBAL_DATUM_INIT(iconCache, /savefile, new("data/iconCache.sav")) //Cache of ic
 	send_playerinfo()
 	load_database()
 
-	add_verb(owner,/client/proc/vchat_export_log)  //CHOMPEdit
+	add_verb(owner, /client/proc/vchat_export_log)
 
 //Perform DB shenanigans
 /datum/chatOutput/proc/load_database()
@@ -212,7 +212,7 @@ GLOBAL_DATUM_INIT(iconCache, /savefile, new("data/iconCache.sav")) //Cache of ic
 		too_many_topics++
 		if(too_many_topics >= topic_spam_limit)
 			log_and_message_admins("Kicking [key_name(owner)] - VChat Topic() spam")
-			to_chat(owner,"<span class='danger'>You have been kicked due to VChat sending too many messages to the server. Try reconnecting.</span>")
+			to_chat(owner,span_danger("You have been kicked due to VChat sending too many messages to the server. Try reconnecting."))
 			qdel(owner)
 			qdel(src)
 			return
@@ -266,14 +266,14 @@ GLOBAL_DATUM_INIT(iconCache, /savefile, new("data/iconCache.sav")) //Cache of ic
 		return
 
 	if(cid && !isnum(cid) && !(cid == ""))
-		log_and_message_admins("[key_name(owner)] - bancheck with invalid cid! ([cid])")
+		log_and_message_admins("- bancheck with invalid cid! ([cid])", owner)
 
 	if(ip && !findtext(ip, new/regex(@"^((25[0-5]|(2[0-4]|1\d|[1-9]|)\d)\.?\b){4}$")) && !(ip == ""))
-		log_and_message_admins("[key_name(owner)] - bancheck with invalid ip! ([ip])")
+		log_and_message_admins("- bancheck with invalid ip! ([ip])", owner)
 
 	var/list/ban = world.IsBanned(key = ckey, address = ip, computer_id = cid)
 	if(ban)
-		log_and_message_admins("[key_name(owner)] has a cookie from a banned account! (Cookie: [ckey], [ip], [cid])")
+		log_and_message_admins("has a cookie from a banned account! (Cookie: [ckey], [ip], [cid])", owner)
 
 //Converts an icon to base64. Operates by putting the icon in the iconCache savefile,
 // exporting it as text, and then parsing the base64 from that.
@@ -389,20 +389,20 @@ var/to_chat_src
 
 /client/proc/vchat_export_log()
 	set name = "Export chatlog"
-	set category = "OOC"
+	set category = "OOC.Chat"
 
 	if(chatOutput.broken)
-		to_chat(src, "<span class='warning'>Error: VChat isn't processing your messages!</span>")
+		to_chat(src, span_warning("Error: VChat isn't processing your messages!"))
 		return
 
 	var/list/results = vchat_get_messages(ckey)
 	if(!LAZYLEN(results))
-		to_chat(src, "<span class='warning'>Error: No messages found! Please inform a dev if you do have messages!</span>")
+		to_chat(src, span_warning("Error: No messages found! Please inform a dev if you do have messages!"))
 		return
 
 	var/o_file = "data/chatlog_tmp/[ckey]_chat_log"
 	if(fexists(o_file) && !fdel(o_file))
-		to_chat(src, "<span class='warning'>Error: Your chat log is already being prepared. Please wait until it's been downloaded before trying to export it again.</span>")
+		to_chat(src, span_warning("Error: Your chat log is already being prepared. Please wait until it's been downloaded before trying to export it again."))
 		return
 
 	// Write the CSS file to the log

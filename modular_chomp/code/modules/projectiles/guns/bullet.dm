@@ -1,6 +1,47 @@
 /obj/item/projectile/bullet
-	damage = 25 //seems many bullets use this vaule for some reason
+	damage = 25 //seems many bullets use this value for some reason
 
+/* Old balance stuff, check the modular_chomp/zBallisticPort folder for the new stuff
+
+//These are projectiles that do not have damage defined anywhere. Gonna follow laser weapons sorta with a extra kick, 25/35/60
+/obj/item/projectile/bullet/a38 //These projectiles are used but dont exist, revolvers were super underpowered forever
+	damage = 25 //.38 pretty bwoomp
+
+/obj/item/projectile/bullet/a10mm
+	damage = 20 //CR-20 do 20 lol
+
+/obj/item/projectile/bullet/rifle/a45lc
+	damage = 35 //.45 used by a one revolver
+
+/obj/item/projectile/bullet/rifle/a762/lmg
+	damage = 30
+
+/obj/item/projectile/bullet/a57 //P90s pack a punch?
+	damage = 30
+
+/obj/item/projectile/bullet/rifle/a545
+	fire_sound = 'sound/weapons/Gunshot_light.ogg'
+	damage = 30
+	hud_state = "rifle"
+
+/obj/item/projectile/bullet/rifle/a545/ap
+	damage = 25
+	armor_penetration = 50 // At 40 or more armor, this will do more damage than standard rounds.
+	hud_state = "rifle_ap"
+
+/obj/item/projectile/bullet/rifle/a545/hp
+	damage = 40
+	armor_penetration = -50
+	penetrating = 0
+	hud_state = "hivelo_iff"
+
+/obj/item/projectile/bullet/rifle/a545/hunter
+	damage = 15
+	SA_bonus_damage = 35 // 50 total on animals.
+	SA_vulnerability = SA_ANIMAL
+	hud_state = "rifle_heavy"
+
+/* Combat refactor walkback, default bullets do 60 damage I think so im keeping this, were not getting the CR20 incident again lol
 /obj/item/projectile/bullet/pistol
 	damage = 10
 
@@ -127,3 +168,5 @@
 
 /obj/item/projectile/bullet/pellet/fragment/strong
 	damage = 7
+*/
+*/

@@ -1,77 +1,10 @@
-/**
-* DNA 2: The Spaghetti Strikes Back
-*
-* @author N3X15 <nexisentertainment@gmail.com>
-*/
-
 // What each index means:
 #define DNA_OFF_LOWERBOUND 1
 #define DNA_OFF_UPPERBOUND 2
 #define DNA_ON_LOWERBOUND  3
 #define DNA_ON_UPPERBOUND  4
 
-// Define block bounds (off-low,off-high,on-low,on-high)
-// Used in setupgame.dm
-#define DNA_DEFAULT_BOUNDS list(1,2049,2050,4095)
-#define DNA_HARDER_BOUNDS  list(1,3049,3050,4095)
-#define DNA_HARD_BOUNDS    list(1,3490,3500,4095)
-
-// UI Indices (can change to mutblock style, if desired)
-#define DNA_UI_HAIR_R      1
-#define DNA_UI_HAIR_G      2
-#define DNA_UI_HAIR_B      3
-#define DNA_UI_BEARD_R     4
-#define DNA_UI_BEARD_G     5
-#define DNA_UI_BEARD_B     6
-#define DNA_UI_SKIN_TONE   7
-#define DNA_UI_SKIN_R      8
-#define DNA_UI_SKIN_G      9
-#define DNA_UI_SKIN_B      10
-#define DNA_UI_EYES_R      11
-#define DNA_UI_EYES_G      12
-#define DNA_UI_EYES_B      13
-#define DNA_UI_GENDER      14
-#define DNA_UI_BEARD_STYLE 15
-#define DNA_UI_HAIR_STYLE  16
-#define DNA_UI_EAR_STYLE   17 // VOREStation snippet.
-#define DNA_UI_TAIL_STYLE  18
-#define DNA_UI_PLAYERSCALE 19
-#define DNA_UI_TAIL_R      20
-#define DNA_UI_TAIL_G      21
-#define DNA_UI_TAIL_B      22
-#define DNA_UI_TAIL2_R     23
-#define DNA_UI_TAIL2_G     24
-#define DNA_UI_TAIL2_B     25
-#define DNA_UI_TAIL3_R     26
-#define DNA_UI_TAIL3_G     27
-#define DNA_UI_TAIL3_B     28
-#define DNA_UI_EARS_R      29
-#define DNA_UI_EARS_G      30
-#define DNA_UI_EARS_B      31
-#define DNA_UI_EARS2_R     32
-#define DNA_UI_EARS2_G     33
-#define DNA_UI_EARS2_B     34
-#define DNA_UI_EARS3_R     35
-#define DNA_UI_EARS3_G     36
-#define DNA_UI_EARS3_B     37
-#define DNA_UI_WING_STYLE  38
-#define DNA_UI_WING_R      39
-#define DNA_UI_WING_G      40
-#define DNA_UI_WING_B      41
-#define DNA_UI_WING2_R     42
-#define DNA_UI_WING2_G     43
-#define DNA_UI_WING2_B     44
-#define DNA_UI_WING3_R     45
-#define DNA_UI_WING3_G     46
-#define DNA_UI_WING3_B     47 // VOREStation snippet end.
-#define DNA_UI_LENGTH      47 // VOREStation Edit - Needs to match the highest number above.
-
-#define DNA_SE_LENGTH 49 // VOREStation Edit (original was UI+11)
-// For later:
-//#define DNA_SE_LENGTH 50 // Was STRUCDNASIZE, size 27. 15 new blocks added = 42, plus room to grow.
-
-
-// Defines which values mean "on" or "off".
+//  Defines which values mean "on" or "off".
 //  This is to make some of the more OP superpowers a larger PITA to activate,
 //  and to tell our new DNA datum which values to set in order to turn something
 //  on or off.
@@ -80,14 +13,21 @@ var/global/list/dna_activity_bounds[DNA_SE_LENGTH]
 // Used to determine what each block means (admin hax and species stuff on /vg/, mostly)
 var/global/list/assigned_blocks[DNA_SE_LENGTH]
 
-var/global/list/datum/dna/gene/dna_genes[0]
+// Traitgenes Genes accessible by global VV, and lists for good and bad mutations for quick randomized selection of traitgenes. Removed dna from gene's path
+GLOBAL_LIST_EMPTY_TYPED(dna_genes, /datum/gene)
+GLOBAL_LIST_EMPTY(trait_to_dna_genes) // Reverse lookup genes, use get_gene_from_trait(var/trait_path) to read this
+GLOBAL_LIST_EMPTY_TYPED(dna_genes_good, /datum/gene/trait)
+GLOBAL_LIST_EMPTY_TYPED(dna_genes_neutral, /datum/gene/trait)
+GLOBAL_LIST_EMPTY_TYPED(dna_genes_bad, /datum/gene/trait)
 
-/////////////////
-// GENE DEFINES
-/////////////////
-// Skip checking if it's already active.
-// Used for genes that check for value rather than a binary on/off.
-#define GENE_ALWAYS_ACTIVATE 1
+/proc/get_gene_from_trait(var/trait_path) // ALWAYS USE THIS
+	RETURN_TYPE(/datum/gene/trait)
+	var/G = GLOB.trait_to_dna_genes[trait_path]
+	#ifndef UNIT_TEST
+	if(!G) // This SHOULD NOT HAPPEN, be sure any viruses or injectors that give trait paths are actually traitgenes.
+		stack_trace("[trait_path] was used as a traitgene, without being flagged as one.")
+	#endif
+	return G
 
 /datum/dna
 	// READ-ONLY, GETS OVERWRITTEN
@@ -114,6 +54,19 @@ var/global/list/datum/dna/gene/dna_genes[0]
 	var/base_species = "Human"
 	var/list/species_traits = list()
 	var/blood_color = "#A10808"
+	var/blood_reagents = "iron"
+	var/scale_appearance = 0
+	var/offset_override = 0
+	var/synth_markings = 0
+	var/custom_speech_bubble = "default"
+	var/species_sounds = "None"
+	var/gender_specific_species_sounds = FALSE
+	var/species_sounds_male = "None"
+	var/species_sounds_female = "None"
+	var/grad_style = 0
+	var/r_grad = 0
+	var/g_grad = 0
+	var/b_grad = 0
 	var/custom_say
 	var/custom_ask
 	var/custom_whisper
@@ -121,7 +74,6 @@ var/global/list/datum/dna/gene/dna_genes[0]
 	var/list/custom_heat = list()
 	var/list/custom_cold = list()
 	var/digitigrade = 0 //0, Not FALSE, for future use as indicator for digitigrade types
-	// VOREStation
 
 	// New stuff
 	var/species = SPECIES_HUMAN
@@ -139,17 +91,30 @@ var/global/list/datum/dna/gene/dna_genes[0]
 	new_dna.real_name=real_name
 	new_dna.species=species
 	new_dna.body_markings=body_markings.Copy()
-	new_dna.base_species=base_species //VOREStation Edit
-	new_dna.custom_species=custom_species //VOREStaton Edit
-	new_dna.species_traits=species_traits.Copy() //VOREStation Edit
-	new_dna.blood_color=blood_color //VOREStation Edit
-	new_dna.custom_say=custom_say //VOREStaton Edit
-	new_dna.custom_ask=custom_ask //VOREStaton Edit
-	new_dna.custom_whisper=custom_whisper //VOREStaton Edit
-	new_dna.custom_exclaim=custom_exclaim //VOREStaton Edit
-	new_dna.custom_heat=custom_heat //VOREStation Edit
-	new_dna.custom_cold=custom_cold //VOREStation Edit
-	new_dna.digitigrade=src.digitigrade //VOREStation Edit
+	new_dna.base_species=base_species
+	new_dna.custom_species=custom_species
+	new_dna.species_traits=species_traits.Copy()
+	new_dna.blood_color=blood_color
+	new_dna.blood_reagents=blood_reagents
+	new_dna.scale_appearance = scale_appearance
+	new_dna.offset_override = offset_override
+	new_dna.synth_markings = synth_markings
+	new_dna.custom_speech_bubble = custom_speech_bubble
+	new_dna.species_sounds = species_sounds
+	new_dna.gender_specific_species_sounds = gender_specific_species_sounds
+	new_dna.species_sounds_male = species_sounds_male
+	new_dna.species_sounds_female = species_sounds_female
+	new_dna.grad_style = grad_style
+	new_dna.r_grad = r_grad
+	new_dna.g_grad = g_grad
+	new_dna.b_grad = b_grad
+	new_dna.custom_say=custom_say
+	new_dna.custom_ask=custom_ask
+	new_dna.custom_whisper=custom_whisper
+	new_dna.custom_exclaim=custom_exclaim
+	new_dna.custom_heat=custom_heat
+	new_dna.custom_cold=custom_cold
+	new_dna.digitigrade=src.digitigrade
 	var/list/body_markings_genetic = (body_markings - body_marking_nopersist_list)
 	new_dna.body_markings=body_markings_genetic.Copy()
 	for(var/b=1;b<=DNA_SE_LENGTH;b++)
@@ -196,6 +161,10 @@ var/global/list/datum/dna/gene/dna_genes[0]
 	if(character.ear_style)
 		ear_style = ear_styles_list.Find(character.ear_style.type)
 
+	var/ear_secondary_style = 0
+	if(character.ear_secondary_style)
+		ear_secondary_style = ear_styles_list.Find(character.ear_secondary_style.type)
+
 	// Demi Tails
 	var/tail_style = 0
 	if(character.tail_style)
@@ -217,6 +186,21 @@ var/global/list/datum/dna/gene/dna_genes[0]
 	src.custom_species = character.custom_species
 	src.base_species = character.species.base_species
 	src.blood_color = character.species.blood_color
+	src.blood_reagents = character.species.blood_reagents
+	src.scale_appearance = character.fuzzy
+	src.offset_override = character.offset_override
+	src.synth_markings = character.synth_markings
+	src.custom_speech_bubble = character.custom_speech_bubble
+	// CHOMPEnable Start
+	src.species_sounds = character.species.species_sounds
+	src.gender_specific_species_sounds = character.species.gender_specific_species_sounds
+	src.species_sounds_male = character.species.species_sounds_male
+	src.species_sounds_female = character.species.species_sounds_female
+	// CHOMPEnable End
+	src.grad_style = character.grad_style
+	src.r_grad = character.r_grad
+	src.g_grad = character.g_grad
+	src.b_grad = character.b_grad
 	src.species_traits = character.species.traits.Copy()
 	src.custom_say = character.custom_say
 	src.custom_ask = character.custom_ask
@@ -227,10 +211,11 @@ var/global/list/datum/dna/gene/dna_genes[0]
 	src.digitigrade = character.digitigrade
 
 	// +1 to account for the none-of-the-above possibility
-	SetUIValueRange(DNA_UI_EAR_STYLE,	ear_style + 1,     ear_styles_list.len  + 1,  1)
-	SetUIValueRange(DNA_UI_TAIL_STYLE,	tail_style + 1,    tail_styles_list.len + 1,  1)
-	SetUIValueRange(DNA_UI_PLAYERSCALE,	size_multiplier,   player_sizes_list.len,     1)
-	SetUIValueRange(DNA_UI_WING_STYLE,	wing_style + 1,    wing_styles_list.len + 1,  1)
+	SetUIValueRange(DNA_UI_EAR_STYLE,             ear_style + 1,               ear_styles_list.len  + 1,  1)
+	SetUIValueRange(DNA_UI_EAR_SECONDARY_STYLE,	  ear_secondary_style + 1,     ear_styles_list.len  + 1,  1)
+	SetUIValueRange(DNA_UI_TAIL_STYLE,	          tail_style + 1,              tail_styles_list.len + 1,  1)
+	SetUIValueRange(DNA_UI_PLAYERSCALE,           size_multiplier,             player_sizes_list.len,     1)
+	SetUIValueRange(DNA_UI_WING_STYLE,            wing_style + 1,              wing_styles_list.len + 1,  1)
 
 	SetUIValueRange(DNA_UI_TAIL_R,    character.r_tail,    255,    1)
 	SetUIValueRange(DNA_UI_TAIL_G,    character.g_tail,    255,    1)
@@ -268,7 +253,15 @@ var/global/list/datum/dna/gene/dna_genes[0]
 	SetUIValueRange(DNA_UI_EARS3_G,   character.g_ears3,   255,    1)
 	SetUIValueRange(DNA_UI_EARS3_B,   character.b_ears3,   255,    1)
 
-	// VORE Station Edit End
+	for(var/channel in 1 to DNA_UI_EARS_SECONDARY_COLOR_CHANNEL_COUNT)
+		var/offset = DNA_UI_EARS_SECONDARY_START + (channel - 1) * 3
+		var/list/read_rgb = ReadRGB(LAZYACCESS(character.ear_secondary_colors, channel) || "#ffffff")
+		var/red = read_rgb[1]
+		var/green = read_rgb[2]
+		var/blue = read_rgb[3]
+		SetUIValueRange(offset, red, 255, 1)
+		SetUIValueRange(offset + 1, green, 255, 1)
+		SetUIValueRange(offset + 2, blue, 255, 1)
 
 	SetUIValueRange(DNA_UI_HAIR_R,    character.r_hair,    255,    1)
 	SetUIValueRange(DNA_UI_HAIR_G,    character.g_hair,    255,    1)
@@ -321,7 +314,7 @@ var/global/list/datum/dna/gene/dna_genes[0]
 	if (block<=0) return
 	ASSERT(maxvalue<=4095)
 	var/range = (4095 / maxvalue)
-	if(value!=null)	//CHOMPEdit DO NOT PORT VIRGO'S FIX FOR RESLEEVING. IT IS BAD. Also fuck travis
+	if(value!=null)
 		SetUIValue(block,round(value * range),defer)
 
 // Getter version of above.
@@ -438,6 +431,19 @@ var/global/list/datum/dna/gene/dna_genes[0]
 /datum/dna/proc/GetSEBlock(var/block)
 	return EncodeDNABlock(GetSEValue(block))
 
+// Get activation intensity, returns 0 to 1, you MUST check if the gene is active first! This is used for future expansion where genetraits can have multiple levels of activation/intensity
+/datum/dna/proc/GetSEActivationIntensity(var/block)
+	if (block<=0) return 0
+	var/list/BOUNDS=GetDNABounds(block)
+	var/value=GetSEValue(block)
+	var/val = (value - BOUNDS[DNA_ON_LOWERBOUND]) / (BOUNDS[DNA_ON_UPPERBOUND] - BOUNDS[DNA_ON_LOWERBOUND])
+	return val
+
+// Gets the activation intensity index. ex: if a genetrait has 5 levels of activations, the gene will have 5 possible levels of activation. this is a future TODO.
+/datum/dna/proc/GetSEActivationLevel(var/block,var/number_of_levels)
+	var/raw_val = GetSEActivationIntensity(block)
+	return round(raw_val * number_of_levels) // TODO - If this should be round/floor/ceil
+
 // Do not use this unless you absolutely have to.
 // Set a block from a hex string.  This is inefficient.  If you can, use SetUIValue().
 // Used in DNA modifiers.
@@ -512,3 +518,8 @@ var/global/list/datum/dna/gene/dna_genes[0]
 
 	unique_enzymes = md5(character.real_name)
 	reg_dna[unique_enzymes] = character.real_name
+
+#undef DNA_OFF_LOWERBOUND
+#undef DNA_OFF_UPPERBOUND
+#undef DNA_ON_LOWERBOUND
+#undef DNA_ON_UPPERBOUND

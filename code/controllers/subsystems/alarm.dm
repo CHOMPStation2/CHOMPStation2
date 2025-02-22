@@ -18,7 +18,7 @@ SUBSYSTEM_DEF(alarm)
 
 /datum/controller/subsystem/alarm/Initialize()
 	all_handlers = list(atmosphere_alarm, camera_alarm, fire_alarm, motion_alarm, power_alarm)
-	return SS_INIT_SUCCESS // CHOMPEdit
+	return SS_INIT_SUCCESS
 
 /datum/controller/subsystem/alarm/fire(resumed = FALSE)
 	if(!resumed)
@@ -41,8 +41,6 @@ SUBSYSTEM_DEF(alarm)
 /datum/controller/subsystem/alarm/proc/number_of_active_alarms()
 	return active_alarm_cache.len
 
-//CHOMPEdit Begin
 /datum/controller/subsystem/alarm/stat_entry(msg)
 	msg = "[number_of_active_alarms()] alarm\s"
 	return ..()
-//CHOMPEdit End

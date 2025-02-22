@@ -11,7 +11,7 @@
 /turf/template_noop,
 /area/submap/debris3)
 "d" = (
-/obj/item/device/nif/bad,
+/obj/item/nif/bad,
 /turf/simulated/floor/airless,
 /area/submap/debris3)
 "e" = (
@@ -24,11 +24,11 @@
 /turf/template_noop,
 /area/submap/debris3)
 "g" = (
-/obj/item/weapon/paperplane,
+/obj/item/paperplane,
 /turf/template_noop,
 /area/submap/debris3)
 "h" = (
-/obj/item/device/nif/bad,
+/obj/item/nif/bad,
 /turf/template_noop,
 /area/submap/debris3)
 "i" = (
@@ -36,7 +36,7 @@
 /turf/template_noop,
 /area/submap/debris3)
 "k" = (
-/obj/item/weapon/material/shard,
+/obj/item/material/shard,
 /turf/template_noop,
 /area/submap/debris3)
 "l" = (
@@ -101,12 +101,12 @@
 /turf/simulated/wall,
 /area/submap/debris3)
 "B" = (
-/obj/item/weapon/paper,
+/obj/item/paper,
 /turf/template_noop,
 /area/submap/debris3)
 "D" = (
-/obj/item/weapon/paper,
-/obj/item/weapon/paper,
+/obj/item/paper,
+/obj/item/paper,
 /turf/template_noop,
 /area/submap/debris3)
 "F" = (
@@ -160,11 +160,11 @@
 /turf/simulated/floor/airless,
 /area/submap/debris3)
 "V" = (
-/obj/item/weapon/circuitboard/arcade,
+/obj/item/circuitboard/arcade,
 /turf/template_noop,
 /area/submap/debris3)
 "Z" = (
-/obj/item/weapon/paper,
+/obj/item/paper,
 /turf/simulated/floor/airless,
 /area/submap/debris3)
 

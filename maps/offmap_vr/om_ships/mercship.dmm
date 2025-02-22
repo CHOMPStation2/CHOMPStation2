@@ -96,8 +96,6 @@
 /area/ship/mercenary/northairlock)
 "al" = (
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -110,8 +108,6 @@
 /area/ship/mercenary/engine1)
 "am" = (
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/fuel{
@@ -135,7 +131,6 @@
 /obj/machinery/alarm{
 	breach_detection = 0;
 	dir = 8;
-	icon_state = "alarm0";
 	pixel_x = 25;
 	rcon_setting = 3;
 	report_danger_level = 0
@@ -357,7 +352,6 @@
 	icon_state = "term"
 	},
 /obj/structure/cable{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /turf/simulated/floor,
@@ -373,8 +367,6 @@
 	icon_state = "tube1"
 	},
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /turf/simulated/floor,
@@ -421,10 +413,10 @@
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 1
 	},
-/obj/item/device/flashlight/maglight,
-/obj/item/weapon/storage/belt/security/tactical,
-/obj/item/weapon/storage/backpack/dufflebag/syndie,
-/obj/item/weapon/gun/projectile/silenced,
+/obj/item/flashlight/maglight,
+/obj/item/storage/belt/security/tactical,
+/obj/item/storage/backpack/dufflebag/syndie,
+/obj/item/gun/projectile/silenced,
 /turf/simulated/floor/tiled/dark,
 /area/ship/mercenary/barracks)
 "aT" = (
@@ -482,7 +474,6 @@
 	icon_state = "term"
 	},
 /obj/structure/cable{
-	d2 = 2;
 	icon_state = "0-2";
 	pixel_y = 0
 	},
@@ -666,8 +657,6 @@
 /area/ship/mercenary/bridge)
 "bs" = (
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/tiled/dark,
@@ -745,7 +734,7 @@
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 9
 	},
-/obj/item/weapon/storage/toolbox/syndicate,
+/obj/item/storage/toolbox/syndicate,
 /turf/simulated/floor/tiled/dark,
 /area/ship/mercenary/med1)
 "bB" = (
@@ -842,10 +831,10 @@
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 1
 	},
-/obj/item/device/flashlight/maglight,
-/obj/item/weapon/storage/belt/security/tactical,
-/obj/item/weapon/storage/backpack/dufflebag/syndie,
-/obj/item/weapon/gun/projectile/silenced,
+/obj/item/flashlight/maglight,
+/obj/item/storage/belt/security/tactical,
+/obj/item/storage/backpack/dufflebag/syndie,
+/obj/item/gun/projectile/silenced,
 /turf/simulated/floor/tiled/dark,
 /area/ship/mercenary/barracks)
 "bJ" = (
@@ -941,10 +930,10 @@
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 5
 	},
-/obj/item/device/flashlight/maglight,
-/obj/item/weapon/storage/belt/security/tactical,
-/obj/item/weapon/storage/backpack/dufflebag/syndie,
-/obj/item/weapon/gun/projectile/silenced,
+/obj/item/flashlight/maglight,
+/obj/item/storage/belt/security/tactical,
+/obj/item/storage/backpack/dufflebag/syndie,
+/obj/item/gun/projectile/silenced,
 /turf/simulated/floor/tiled/dark,
 /area/ship/mercenary/barracks)
 "bR" = (
@@ -970,7 +959,6 @@
 	pixel_y = 24
 	},
 /obj/structure/cable{
-	d2 = 2;
 	icon_state = "0-2";
 	pixel_y = 0
 	},
@@ -1023,7 +1011,7 @@
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 1
 	},
-/obj/item/weapon/storage/secure/briefcase,
+/obj/item/storage/secure/briefcase,
 /obj/machinery/alarm{
 	pixel_y = 30
 	},
@@ -1041,13 +1029,9 @@
 /area/ship/mercenary/barracks)
 "bZ" = (
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
@@ -1104,8 +1088,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/effect/floor_decal/borderfloorblack{
@@ -1118,9 +1100,9 @@
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 1
 	},
-/obj/item/weapon/storage/belt/utility,
-/obj/item/weapon/storage/belt/utility,
-/obj/item/weapon/storage/belt/utility,
+/obj/item/storage/belt/utility,
+/obj/item/storage/belt/utility,
+/obj/item/storage/belt/utility,
 /turf/simulated/floor/tiled/dark,
 /area/ship/mercenary/med1)
 "cf" = (
@@ -1194,7 +1176,6 @@
 	icon_state = "term"
 	},
 /obj/structure/cable{
-	d2 = 2;
 	icon_state = "0-2";
 	pixel_y = 0
 	},
@@ -1254,7 +1235,6 @@
 	pixel_y = 24
 	},
 /obj/structure/cable{
-	d2 = 2;
 	icon_state = "0-2";
 	pixel_y = 0
 	},
@@ -1286,7 +1266,6 @@
 	dir = 8
 	},
 /obj/structure/cable{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/effect/floor_decal/borderfloorblack{
@@ -1358,8 +1337,6 @@
 "cy" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/aux,
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/effect/floor_decal/borderfloorblack{
@@ -1412,7 +1389,7 @@
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 5
 	},
-/obj/item/weapon/storage/secure/briefcase,
+/obj/item/storage/secure/briefcase,
 /turf/simulated/floor/tiled/dark,
 /area/ship/mercenary/med1)
 "cE" = (
@@ -1425,7 +1402,7 @@
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 8
 	},
-/obj/item/weapon/storage/toolbox/syndicate,
+/obj/item/storage/toolbox/syndicate,
 /turf/simulated/floor/tiled/dark,
 /area/ship/mercenary/med1)
 "cF" = (
@@ -1441,8 +1418,6 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/aux,
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/effect/floor_decal/borderfloorblack/corner,
@@ -1569,8 +1544,6 @@
 /area/ship/mercenary/med)
 "cQ" = (
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/structure/cable{
@@ -1674,7 +1647,6 @@
 	dir = 8
 	},
 /obj/structure/cable{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/effect/floor_decal/borderfloorblack{
@@ -1684,8 +1656,6 @@
 /area/ship/mercenary/hall1)
 "cY" = (
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/aux,
@@ -1721,7 +1691,6 @@
 	icon_state = "term"
 	},
 /obj/structure/cable{
-	d2 = 2;
 	icon_state = "0-2";
 	pixel_y = 0
 	},
@@ -2022,7 +1991,6 @@
 	pixel_x = -32
 	},
 /obj/structure/cable{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/effect/floor_decal/borderfloorblack{
@@ -2035,8 +2003,6 @@
 	dir = 6
 	},
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/effect/floor_decal/borderfloorblack{
@@ -2152,7 +2118,6 @@
 	icon_state = "term"
 	},
 /obj/structure/cable{
-	d2 = 2;
 	icon_state = "0-2";
 	pixel_y = 0
 	},
@@ -2183,8 +2148,6 @@
 /area/ship/mercenary/atmos)
 "dO" = (
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/effect/floor_decal/borderfloorblack{
@@ -2329,7 +2292,6 @@
 	dir = 8
 	},
 /obj/structure/cable{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/structure/table/reinforced,
@@ -2340,8 +2302,6 @@
 /area/ship/mercenary/engineering)
 "ef" = (
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/structure/table/reinforced,
@@ -2402,7 +2362,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d2 = 2;
 	icon_state = "0-2";
 	pixel_y = 0
 	},
@@ -2554,9 +2513,9 @@
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 5
 	},
-/obj/item/weapon/storage/firstaid/combat,
-/obj/item/weapon/storage/firstaid/combat,
-/obj/item/weapon/storage/firstaid/combat,
+/obj/item/storage/firstaid/combat,
+/obj/item/storage/firstaid/combat,
+/obj/item/storage/firstaid/combat,
 /turf/simulated/floor/tiled/white,
 /area/ship/mercenary/armoury)
 "eH" = (
@@ -2580,7 +2539,6 @@
 	icon_state = "term"
 	},
 /obj/structure/cable{
-	d2 = 2;
 	icon_state = "0-2";
 	pixel_y = 0
 	},
@@ -2598,7 +2556,7 @@
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 4
 	},
-/obj/item/weapon/storage/secure/briefcase,
+/obj/item/storage/secure/briefcase,
 /turf/simulated/floor/tiled/dark,
 /area/ship/mercenary/med1)
 "eL" = (
@@ -2723,8 +2681,6 @@
 	icon_state = "4-8"
 	},
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/structure/cable{
@@ -2752,13 +2708,9 @@
 /area/ship/mercenary/hall2)
 "eV" = (
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/structure/cable{
@@ -2841,8 +2793,8 @@
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 8
 	},
-/obj/item/weapon/storage/belt/medical,
-/obj/item/weapon/storage/belt/medical,
+/obj/item/storage/belt/medical,
+/obj/item/storage/belt/medical,
 /turf/simulated/floor/tiled/white,
 /area/ship/mercenary/fighter)
 "fc" = (
@@ -2936,7 +2888,6 @@
 	icon_state = "term"
 	},
 /obj/structure/cable{
-	d2 = 2;
 	icon_state = "0-2";
 	pixel_y = 0
 	},
@@ -3015,7 +2966,6 @@
 /obj/machinery/alarm{
 	breach_detection = 0;
 	dir = 8;
-	icon_state = "alarm0";
 	pixel_x = 25;
 	rcon_setting = 3;
 	report_danger_level = 0
@@ -3315,7 +3265,6 @@
 	icon_state = "term"
 	},
 /obj/structure/cable{
-	d2 = 2;
 	icon_state = "0-2";
 	pixel_y = 0
 	},
@@ -3330,8 +3279,6 @@
 /area/ship/mercenary/hangar)
 "fV" = (
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -3417,8 +3364,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/tiled/dark,
@@ -3462,8 +3407,6 @@
 /area/ship/mercenary/armoury)
 "gf" = (
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -3509,7 +3452,6 @@
 	icon_state = "term"
 	},
 /obj/structure/cable{
-	d2 = 2;
 	icon_state = "0-2";
 	pixel_y = 0
 	},
@@ -3646,7 +3588,6 @@
 	icon_state = "term"
 	},
 /obj/structure/cable{
-	d2 = 2;
 	icon_state = "0-2";
 	pixel_y = 0
 	},
@@ -3683,7 +3624,6 @@
 	alarm_id = "pen_nine";
 	breach_detection = 0;
 	dir = 1;
-	icon_state = "alarm0";
 	pixel_y = -22
 	},
 /turf/simulated/floor/tiled/dark,
@@ -3707,7 +3647,6 @@
 	alarm_id = "pen_nine";
 	breach_detection = 0;
 	dir = 1;
-	icon_state = "alarm0";
 	pixel_y = -22
 	},
 /turf/simulated/floor/tiled/dark,
@@ -3724,7 +3663,6 @@
 	alarm_id = "pen_nine";
 	breach_detection = 0;
 	dir = 1;
-	icon_state = "alarm0";
 	pixel_y = -22
 	},
 /turf/simulated/floor/tiled/dark,
@@ -3756,8 +3694,6 @@
 	icon_state = "tube1"
 	},
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/effect/floor_decal/borderfloorblack{
@@ -3835,7 +3771,7 @@
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 10
 	},
-/obj/item/weapon/storage/toolbox/syndicate,
+/obj/item/storage/toolbox/syndicate,
 /turf/simulated/floor/tiled/dark,
 /area/ship/mercenary/med1)
 "gL" = (
@@ -4114,7 +4050,7 @@
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 4
 	},
-/obj/item/weapon/storage/box/freezer,
+/obj/item/storage/box/freezer,
 /turf/simulated/floor/tiled/white,
 /area/ship/mercenary/fighter)
 "hk" = (
@@ -4228,7 +4164,6 @@
 	alarm_id = "pen_nine";
 	breach_detection = 0;
 	dir = 1;
-	icon_state = "alarm0";
 	pixel_y = -22
 	},
 /turf/simulated/floor/tiled/dark,
@@ -4332,7 +4267,7 @@
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 6
 	},
-/obj/item/weapon/storage/firstaid/surgery,
+/obj/item/storage/firstaid/surgery,
 /turf/simulated/floor/tiled/white,
 /area/ship/mercenary/fighter)
 "hH" = (
@@ -4340,7 +4275,7 @@
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 10
 	},
-/obj/item/weapon/storage/box/bodybags,
+/obj/item/storage/box/bodybags,
 /turf/simulated/floor/tiled/white,
 /area/ship/mercenary/fighter)
 "hI" = (

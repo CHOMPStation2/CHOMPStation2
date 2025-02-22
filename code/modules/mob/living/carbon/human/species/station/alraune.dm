@@ -22,9 +22,9 @@
 	wikilink="https://wiki.chompstation13.net/index.php?title=Alraune" //CHOMPedit: add wiki link
 
 	body_temperature = T20C
-	breath_type = "oxygen"
-	poison_type = "phoron"
-	exhale_type = "oxygen"
+	breath_type = GAS_O2
+	poison_type = GAS_PHORON
+	exhale_type = GAS_O2
 	water_breather = TRUE  //eh, why not? Aquatic plants are a thing.
 
 	// Heat and cold resistances are 20 degrees broader on the level 1 range, level 2 is default, level 3 is much weaker, halfway between L2 and normal L3.
@@ -140,7 +140,7 @@
 
 	if(!breath || (breath.total_moles == 0))
 		H.failed_last_breath = 1
-		if(H.health > CONFIG_GET(number/health_threshold_crit)) // CHOMPEdit
+		if(H.health > CONFIG_GET(number/health_threshold_crit))
 			H.adjustOxyLoss(ALRAUNE_MAX_OXYLOSS)
 		else
 			H.adjustOxyLoss(ALRAUNE_CRIT_MAX_OXYLOSS)
@@ -171,7 +171,7 @@
 	var/failed_inhale = 0
 	var/failed_exhale = 0
 
-	inhaling = breath.gas["carbon_dioxide"]
+	inhaling = breath.gas[GAS_CO2]
 	poison = breath.gas[poison_type]
 	exhaling = breath.gas[exhale_type]
 
@@ -195,7 +195,7 @@
 		H.clear_alert("oxy")
 
 	inhaled_gas_used = inhaling/6
-	breath.adjust_gas("carbon_dioxide", -inhaled_gas_used, update = 0) //update afterwards
+	breath.adjust_gas(GAS_CO2, -inhaled_gas_used, update = 0) //update afterwards
 	breath.adjust_gas_temp(exhale_type, inhaled_gas_used, H.bodytemperature, update = 0) //update afterwards
 
 	//Now we handle CO2.
@@ -223,7 +223,7 @@
 	if(toxins_pp > safe_toxins_max)
 		var/ratio = (poison/safe_toxins_max) * 10
 		if(H.reagents)
-			H.reagents.add_reagent("toxin", CLAMP(ratio, MIN_TOXIN_DAMAGE, MAX_TOXIN_DAMAGE))
+			H.reagents.add_reagent(REAGENT_ID_TOXIN, CLAMP(ratio, MIN_TOXIN_DAMAGE, MAX_TOXIN_DAMAGE))
 			breath.adjust_gas(poison_type, -poison/6, update = 0) //update after
 		H.throw_alert("tox_in_air", /obj/screen/alert/tox_in_air)
 	else
@@ -262,10 +262,10 @@
 
 		if(breath.temperature <= breath_cold_level_1)
 			if(prob(20))
-				to_chat(H, "<span class='danger'>You feel icicles forming on your skin!</span>")
+				to_chat(H, span_danger("You feel icicles forming on your skin!"))
 		else if(breath.temperature >= breath_heat_level_1)
 			if(prob(20))
-				to_chat(H, "<span class='danger'>You feel yourself smouldering in the heat!</span>")
+				to_chat(H, span_danger("You feel yourself smouldering in the heat!"))
 
 		var/bodypart = pick(BP_L_FOOT,BP_R_FOOT,BP_L_LEG,BP_R_LEG,BP_L_ARM,BP_R_ARM,BP_L_HAND,BP_R_HAND,BP_TORSO,BP_GROIN,BP_HEAD)
 		if(breath.temperature >= breath_heat_level_1)
@@ -340,7 +340,7 @@
 	name = "fruit gland"
 	desc = "A bulbous gourd-like structure."
 	organ_tag = A_FRUIT
-	var/generated_reagents = list("sugar" = 2) //This actually allows them. This could be anything, but sugar seems most fitting.
+	var/generated_reagents = list(REAGENT_ID_SUGAR = 2) //This actually allows them. This could be anything, but sugar seems most fitting.
 	var/usable_volume = 250 //Five fruit.
 	var/transfer_amount = 50
 	var/empty_message = list("Your have no fruit on you.", "You have a distinct lack of fruit..")
@@ -350,12 +350,12 @@
 	var/self_verb_descriptor = list("grab", "snatch", "pick")
 	var/short_emote_descriptor = list("picks", "grabs")
 	var/self_emote_descriptor = list("grab", "pick", "snatch")
-	var/fruit_type = "apple"
+	var/fruit_type = PLANT_APPLE
 	var/mob/living/organ_owner = null
 	var/gen_cost = 0.5
 
-/obj/item/organ/internal/fruitgland/New()
-	..()
+/obj/item/organ/internal/fruitgland/Initialize(mapload, internal)
+	. = ..()
 	create_reagents(usable_volume)
 
 
@@ -371,9 +371,9 @@
 
 	if(reagents)
 		if(reagents.total_volume == reagents.maximum_volume * 0.05)
-			to_chat(organ_owner, "<span class='notice'>[pick(empty_message)]</span>")
+			to_chat(organ_owner, span_notice("[pick(empty_message)]"))
 		else if(reagents.total_volume == reagents.maximum_volume && before_gen < reagents.maximum_volume)
-			to_chat(organ_owner, "<span class='warning'>[pick(full_message)]</span>")
+			to_chat(organ_owner, span_warning("[pick(full_message)]"))
 
 /obj/item/organ/internal/fruitgland/proc/do_generation()
 	organ_owner.adjust_nutrition(-gen_cost)
@@ -384,7 +384,7 @@
 /mob/living/carbon/human/proc/alraune_fruit_select() //So if someone doesn't want fruit/vegetables, they don't have to select one.
 	set name = "Select fruit"
 	set desc = "Select what fruit/vegetable you wish to grow."
-	set category = "Abilities"
+	set category = "Abilities.Alraune"
 	var/obj/item/organ/internal/fruitgland/fruit_gland
 	for(var/F in contents)
 		if(istype(F, /obj/item/organ/internal/fruitgland))
@@ -392,16 +392,16 @@
 			break
 
 	if(fruit_gland)
-		var/selection = tgui_input_list(src, "Choose your character's fruit type. Choosing nothing will result in a default of apples.", "Fruit Type", acceptable_fruit_types)
+		var/selection = tgui_input_list(src, "Choose your character's fruit type. Choosing nothing will result in a default of apples.", "Fruit Type", GLOB.acceptable_fruit_types)
 		if(selection)
 			fruit_gland.fruit_type = selection
-		add_verb(src,/mob/living/carbon/human/proc/alraune_fruit_pick) //CHOMPEdit TGPanel
-		//verbs -= /mob/living/carbon/human/proc/alraune_fruit_select // Chomp Edit
+		add_verb(src, /mob/living/carbon/human/proc/alraune_fruit_pick)
+		// remove_verb(src, /mob/living/carbon/human/proc/alraune_fruit_select) // CHOMPRemove
 		fruit_gland.organ_owner = src
 		fruit_gland.emote_descriptor = list("fruit right off of [fruit_gland.organ_owner]!", "a fruit from [fruit_gland.organ_owner]!")
 
 	else
-		to_chat(src, "<span class='notice'>You lack the organ required to produce fruit.</span>")
+		to_chat(src, span_notice("You lack the organ required to produce fruit."))
 		return
 
 /mob/living/carbon/human/proc/alraune_fruit_pick()
@@ -424,7 +424,7 @@
 			break
 	if (fruit_gland) //Do they have the gland?
 		if(fruit_gland.reagents.total_volume < fruit_gland.transfer_amount)
-			to_chat(src, "<span class='notice'>[pick(fruit_gland.empty_message)]</span>")
+			to_chat(src, span_notice("[pick(fruit_gland.empty_message)]"))
 			return
 
 		var/datum/seed/S = SSplants.seeds["[fruit_gland.fruit_type]"]
@@ -436,11 +436,11 @@
 			var/emote = fruit_gland.emote_descriptor[index]
 			var/verb_desc = fruit_gland.verb_descriptor[index]
 			var/self_verb_desc = fruit_gland.self_verb_descriptor[index]
-			usr.visible_message("<span class='notice'>[usr] [verb_desc] [emote]</span>",
-							"<span class='notice'>You [self_verb_desc] [emote]</span>")
+			usr.visible_message(span_notice("[usr] [verb_desc] [emote]"),
+							span_notice("You [self_verb_desc] [emote]"))
 		else
-			visible_message("<span class='notice'>[src] [pick(fruit_gland.short_emote_descriptor)] a fruit.</span>",
-								"<span class='notice'>You [pick(fruit_gland.self_emote_descriptor)] a fruit.</span>")
+			visible_message(span_notice("[src] [pick(fruit_gland.short_emote_descriptor)] a fruit."),
+								span_notice("You [pick(fruit_gland.self_emote_descriptor)] a fruit."))
 
 		fruit_gland.reagents.remove_any(fruit_gland.transfer_amount)
 

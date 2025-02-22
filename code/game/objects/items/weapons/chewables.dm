@@ -15,7 +15,7 @@
 /obj/item/clothing/mask/chewable/attack_self(mob/user)
 	if(wrapped)
 		wrapped = FALSE
-		to_chat(user, span("notice", "You unwrap \the [name]."))
+		to_chat(user, span_notice("You unwrap \the [name]."))
 		playsound(src.loc, 'sound/items/drop/wrapper.ogg', 50, 1)
 		slot_flags = SLOT_EARS | SLOT_MASK
 		update_icon()
@@ -41,9 +41,9 @@
 		if(C.check_has_mouth())
 			START_PROCESSING(SSprocessing, src)
 		else
-			to_chat(user, span("notice", "You don't have a mouth, and can't make much use of \the [src]."))
+			to_chat(user, span_notice("You don't have a mouth, and can't make much use of \the [src]."))
 
-/obj/item/clothing/mask/chewable/dropped()
+/obj/item/clothing/mask/chewable/dropped(mob/user)
 	STOP_PROCESSING(SSprocessing, src)
 	..()
 
@@ -90,7 +90,7 @@
 		if(ismob(loc))
 			var/mob/living/M = loc
 			if(!no_message)
-				to_chat(M, SPAN_NOTICE("The [name] runs out of flavor."))
+				to_chat(M, span_notice("The [name] runs out of flavor."))
 			if(M.wear_mask)
 				M.remove_from_mob(src) //un-equip it so the overlays can update
 				M.update_inv_wear_mask(0)
@@ -104,12 +104,12 @@
 /obj/item/clothing/mask/chewable/tobacco/cheap
 	name = "chewing tobacco"
 	desc = "A chewy wad of tobacco. Cut in long strands and treated with syrup so it tastes less like an ash-tray when you stuff it into your face."
-	filling = list("nicotine" = 2)
+	filling = list(REAGENT_ID_NICOTINE = 2)
 
 /obj/item/clothing/mask/chewable/tobacco/fine
 	name = "deluxe chewing tobacco"
 	desc = "A chewy wad of fine tobacco. Cut in long strands and treated with syrup so it doesn't taste like an ash-tray when you stuff it into your face."
-	filling = list("nicotine" = 3)
+	filling = list(REAGENT_ID_NICOTINE = 3)
 
 /obj/item/clothing/mask/chewable/tobacco/nico
 	name = "nicotine gum"
@@ -120,10 +120,10 @@
 
 /obj/item/clothing/mask/chewable/tobacco/nico/Initialize()
 	. = ..()
-	reagents.add_reagent("nicotine", 2)
+	reagents.add_reagent(REAGENT_ID_NICOTINE, 2)
 	color = reagents.get_color()
 
-/obj/item/weapon/storage/chewables
+/obj/item/storage/chewables
 	name = "box of chewing wads master"
 	desc = "A generic brand of Waffle Co Wads, unflavored chews. Why do these exist?"
 	icon = 'icons/obj/cigarettes.dmi'
@@ -136,13 +136,13 @@
 	slot_flags = SLOT_BELT
 	starts_with = list(/obj/item/clothing/mask/chewable/tobacco = 6)
 
-/obj/item/weapon/storage/chewables/Initialize()
+/obj/item/storage/chewables/Initialize()
 	. = ..()
 	make_exact_fit()
 
 //Tobacco Tins
 
-/obj/item/weapon/storage/chewables/tobacco
+/obj/item/storage/chewables/tobacco
 	name = "tin of Al Mamun Smooth chewing tobacco"
 	desc = "Packaged and shipped straight from Kishar, popularised by the biosphere farmers of Kanondaga."
 	icon_state = "chew_generic"
@@ -150,14 +150,14 @@
 	starts_with = list(/obj/item/clothing/mask/chewable/tobacco/cheap = 6)
 	storage_slots = 6
 
-/obj/item/weapon/storage/chewables/tobacco/fine
+/obj/item/storage/chewables/tobacco/fine
 	name = "tin of Suamalie chewing tobacco"
 	desc = "Once reserved for the first-class tourists of Oasis, this premium blend has been released for the public to enjoy."
 	icon_state = "chew_fine"
 	item_state = "Dpacket"
 	starts_with = list(/obj/item/clothing/mask/chewable/tobacco/fine = 6)
 
-/obj/item/weapon/storage/box/fancy/chewables/tobacco/nico
+/obj/item/storage/box/fancy/chewables/tobacco/nico
 	name = "box of Nico-Tine gum"
 	desc = "A government doctor approved brand of nicotine gum. Cut out the middleman for your addiction fix."
 	icon = 'icons/obj/cigarettes.dmi'
@@ -171,14 +171,14 @@
 	var/open_state
 	var/closed_state
 
-/obj/item/weapon/storage/box/fancy/chewables/tobacco/nico/New()
+/obj/item/storage/box/fancy/chewables/tobacco/nico/New()
 	if(!open_state)
 		open_state = "[initial(icon_state)]0"
 	if(!closed_state)
 		closed_state = "[initial(icon_state)]"
 	..()
 
-/obj/item/weapon/storage/box/fancy/chewables/tobacco/nico/update_icon()
+/obj/item/storage/box/fancy/chewables/tobacco/nico/update_icon()
 	cut_overlays()
 	if(open)
 		icon_state = open_state
@@ -187,7 +187,7 @@
 	else
 		icon_state = closed_state
 
-/obj/item/weapon/storage/box/fancy/chewables/tobacco/nico/open(mob/user as mob)
+/obj/item/storage/box/fancy/chewables/tobacco/nico/open(mob/user as mob)
 	if(open)
 		return
 	open = TRUE
@@ -197,7 +197,7 @@
 		update_icon()
 	..()
 
-/obj/item/weapon/storage/box/fancy/chewables/tobacco/nico/close(mob/user as mob)
+/obj/item/storage/box/fancy/chewables/tobacco/nico/close(mob/user as mob)
 	open = FALSE
 	if(contents.len == 0)
 		icon_state = "[initial(icon_state)]_empty"
@@ -215,7 +215,7 @@
 	slot_flags = SLOT_EARS | SLOT_MASK
 	chem_volume = 50
 	chewtime = 300
-	filling = list("sugar" = 2)
+	filling = list(REAGENT_ID_SUGAR = 2)
 
 /obj/item/clothing/mask/chewable/candy/gum
 	name = "chewing gum"
@@ -226,11 +226,11 @@
 
 /obj/item/clothing/mask/chewable/candy/gum/Initialize()
 	. = ..()
-	reagents.add_reagent(pick("banana","berryjuice","grapejuice","lemonjuice","limejuice","orangejuice","watermelonjuice"),10)
+	reagents.add_reagent(pick(REAGENT_ID_BANANA,REAGENT_ID_BERRYJUICE,REAGENT_ID_GRAPEJUICE,REAGENT_ID_LEMONJUICE,REAGENT_ID_LIMEJUICE,REAGENT_ID_ORANGEJUICE,REAGENT_ID_WATERMELONJUICE),10)
 	color = reagents.get_color()
 	update_icon()
 
-/obj/item/weapon/storage/box/gum
+/obj/item/storage/box/gum
 	name = "\improper Frooty-Choos flavored gum"
 	desc = "A small pack of chewing gum in various flavors."
 	description_fluff = "Frooty-Choos is NanoTrasen's top-selling brand of artificially flavoured fruit-adjacent non-swallowable chew-product. This extremely specific definition places sales figures safely away from competing 'gum' brands."
@@ -255,19 +255,91 @@
 	icon_state = "lollipop"
 	item_state = "lollipop"
 	wrapped = TRUE
+	var/list/victims = null // CHOMPAdd
 
 /obj/item/clothing/mask/chewable/candy/lolli/process()
 	chew()
 	if(chewtime < 1)
 		spitout(0)
 
+// CHOMPAdd Start
+
+/obj/item/clothing/mask/chewable/candy/lolli/container_resist(mob/living/M)
+	if(istype(M, /mob/living/voice)) return
+	if(victims)
+		victims -= M
+	to_chat(M, span_warning("You manage to pull yourself free of \the [src]."))
+	M.forceMove(get_turf(src))
+
+/obj/item/clothing/mask/chewable/candy/lolli/chew()
+	if(victims && victims.len && prob(2))
+		for(var/mob/living/F in victims)
+			var/message = pick(
+				"The tongue swishes you around and presses you against the candy!",
+				"You get tossed about in the mouth, between candy and tongue!",
+				"The sweet drool of your captor permeates you...",
+				"The candy sticks to you, not allowing you to leave the mouth at all!",
+				"You get squeezed under the candy, against the tongue!")
+			to_chat(F, span_notice(message))
+	return ..()
+
+/obj/item/clothing/mask/chewable/candy/lolli/spitout()
+	if(victims && victims.len)
+		var/mob/living/M = loc
+		if(M.can_be_drop_pred && M.food_vore && M.vore_selected)
+			for(var/mob/living/F in victims)
+				if(!F.can_be_drop_prey || !F.food_vore)
+					to_chat(F, span_warning("You manage to pull yourself free of \the [src] at the last second!"))
+					to_chat(M, span_notice("[F] barely escapes from your mouth!"))
+					F.forceMove(get_turf(src))
+				else
+					F.forceMove(M.vore_selected)
+				victims -= F
+	return ..()
+
+/obj/item/clothing/mask/chewable/candy/lolli/attackby(obj/item/W as obj, mob/user as mob)
+	if(istype(W, /obj/item/holder))
+		if(!(istype(W, /obj/item/holder/micro) || istype(W, /obj/item/holder/mouse)))
+			. = ..()
+			return
+
+		if(wrapped)
+			to_chat(user, span_warning("You cannot stick [W] to \the [src] without unwrapping it!"))
+			return
+
+		var/obj/item/holder/H = W
+
+		if(!victims)
+			victims = list()
+
+		var/mob/living/M = H.held_mob
+
+		M.forceMove(src)
+		H.held_mob = null
+		user.drop_from_inventory(H)
+		qdel(H)
+
+		victims += M
+
+		to_chat(user, span_notice("You stick [M] to \the [src]."))
+		to_chat(M, span_warning("[user] sticks you to \the [src]!"))
+		return
+
+/obj/item/clothing/mask/chewable/candy/lolli/examine(mob/user)
+	. = ..()
+	if(Adjacent(user))
+		if(victims && victims.len)
+			. += span_notice("It has [english_list(victims)] stuck on it.")
+
+// CHOMPAdd End
+
 /obj/item/clothing/mask/chewable/candy/lolli/Initialize()
 	. = ..()
-	reagents.add_reagent(pick("banana","berryjuice","grapejuice","lemonjuice","limejuice","orangejuice","watermelonjuice"),20)
+	reagents.add_reagent(pick(REAGENT_ID_BANANA,REAGENT_ID_BERRYJUICE,REAGENT_ID_GRAPEJUICE,REAGENT_ID_LEMONJUICE,REAGENT_ID_LIMEJUICE,REAGENT_ID_ORANGEJUICE,REAGENT_ID_WATERMELONJUICE),20)
 	color = reagents.get_color()
 	update_icon()
 
-/obj/item/weapon/storage/box/pocky
+/obj/item/storage/box/pocky
 	name = "\improper Totemo yoi Pocky"
 	desc = "A bundle of chocolate-coated bisquit sticks."
 	icon = 'icons/obj/food_snacks.dmi'
@@ -287,12 +359,12 @@
 	desc = "A chocolate-coated biscuit stick."
 	icon_state = "pockystick"
 	item_state = "pocky"
-	filling = list("sugar" = 2, "chocolate" = 5)
+	filling = list(REAGENT_ID_SUGAR = 2, REAGENT_ID_CHOCOLATE = 5)
 	type_butt = null
 
 /obj/item/clothing/mask/chewable/candy/pocky/process()
 	chew()
 	if(chewtime < 1)
 		if(ismob(loc))
-			to_chat(loc, "<span class='notice'>There's no more of \the [name] left!</span>")
+			to_chat(loc, span_notice("There's no more of \the [name] left!"))
 		spitout(0)

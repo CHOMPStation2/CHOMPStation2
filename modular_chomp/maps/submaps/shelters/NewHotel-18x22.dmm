@@ -1,0 +1,1254 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aa" = (
+/obj/structure/table/woodentable,
+/obj/item/cell/hyper,
+/obj/random/coin,
+/obj/random/cash/huge,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/NewHotel)
+"ab" = (
+/obj/structure/closet/crate,
+/obj/random/cash,
+/obj/random/cigarettes,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/NewHotel)
+"ai" = (
+/obj/structure/kitchenspike,
+/obj/machinery/power/apc/alarms_hidden{
+	dir = 4;
+	pixel_x = 24
+	},
+/obj/structure/cable/green,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/survivalpod/superpose/NewHotel)
+"aJ" = (
+/obj/item/towel/random,
+/obj/item/towel/random,
+/obj/structure/table/standard,
+/obj/item/storage/firstaid,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/survivalpod/superpose/NewHotel)
+"bb" = (
+/obj/structure/table/wooden_reinforced,
+/obj/item/material/knife/butch,
+/turf/simulated/floor/concrete{
+	outdoors = 1
+	},
+/area/survivalpod/superpose/NewHotel)
+"bQ" = (
+/obj/structure/cable/green{
+	icon_state = "2-8"
+	},
+/obj/structure/closet/crate/solar,
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/NewHotel)
+"cA" = (
+/obj/structure/closet/cabinet,
+/obj/item/binoculars/spyglass,
+/obj/random/contraband,
+/obj/random/contraband,
+/obj/random/maintenance/medical,
+/obj/random/cash,
+/obj/random/drinkbottle,
+/obj/random/maintenance,
+/obj/random/maintenance,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/NewHotel)
+"da" = (
+/obj/structure/bed/chair/oldsofa/right,
+/turf/simulated/floor/carpet/blue,
+/area/survivalpod/superpose/NewHotel)
+"dc" = (
+/obj/machinery/power/terminal{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/NewHotel)
+"dn" = (
+/obj/structure/table/woodentable,
+/obj/item/flame/candle/everburn,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/NewHotel)
+"dr" = (
+/obj/item/stack/material/plastic{
+	amount = 50
+	},
+/obj/item/stack/material/plastic{
+	amount = 50
+	},
+/obj/item/stack/material/plastic{
+	amount = 50
+	},
+/obj/item/stack/material/plastic{
+	amount = 50
+	},
+/obj/item/stack/material/steel{
+	amount = 50
+	},
+/obj/item/stack/material/steel{
+	amount = 50
+	},
+/obj/item/stack/material/steel{
+	amount = 50
+	},
+/obj/item/stack/material/steel{
+	amount = 50
+	},
+/obj/item/stack/material/glass{
+	amount = 50
+	},
+/obj/item/stack/material/glass{
+	amount = 50
+	},
+/obj/item/stack/material/glass{
+	amount = 50
+	},
+/obj/item/stack/material/glass{
+	amount = 50
+	},
+/obj/item/stack/rods{
+	amount = 50
+	},
+/obj/item/stack/rods{
+	amount = 50
+	},
+/obj/item/stack/rods{
+	amount = 50
+	},
+/obj/item/stack/rods{
+	amount = 50
+	},
+/obj/item/stack/cable_coil{
+	pixel_x = 3;
+	pixel_y = 3
+	},
+/obj/item/stack/cable_coil{
+	pixel_x = 3;
+	pixel_y = 3
+	},
+/obj/item/stack/cable_coil/green,
+/obj/item/stack/cable_coil/blue,
+/obj/item/storage/briefcase/inflatable,
+/obj/item/storage/briefcase/inflatable,
+/obj/item/storage/briefcase/inflatable,
+/obj/item/storage/briefcase/inflatable,
+/obj/structure/table/rack/shelf,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/survivalpod/superpose/NewHotel)
+"dz" = (
+/obj/structure/bed/double/padded,
+/obj/item/bedsheet/yellowdouble,
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/NewHotel)
+"dL" = (
+/obj/structure/window/reinforced/full,
+/obj/structure/grille/rustic,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/survivalpod/superpose/NewHotel)
+"ge" = (
+/obj/structure/table/marble,
+/obj/structure/window/plastitanium{
+	dir = 4
+	},
+/obj/item/reagent_containers/food/condiment/small/saltshaker,
+/obj/item/reagent_containers/food/condiment/small/peppermill{
+	pixel_y = 2;
+	pixel_x = -7
+	},
+/obj/item/reagent_containers/food/condiment/spacespice{
+	pixel_x = 5;
+	pixel_y = 9
+	},
+/obj/structure/window/plastitanium{
+	dir = 1
+	},
+/turf/simulated/floor/concrete{
+	outdoors = 1
+	},
+/area/survivalpod/superpose/NewHotel)
+"go" = (
+/obj/structure/simple_door/iron,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/NewHotel)
+"gA" = (
+/turf/simulated/floor/outdoors/grass/heavy,
+/area/survivalpod/superpose/NewHotel)
+"gP" = (
+/obj/machinery/appliance/cooker/oven,
+/obj/structure/window/plastitanium{
+	dir = 1
+	},
+/obj/structure/window/plastitanium{
+	dir = 8
+	},
+/turf/simulated/floor/concrete{
+	outdoors = 1
+	},
+/area/survivalpod/superpose/NewHotel)
+"hc" = (
+/obj/structure/table/woodentable,
+/turf/simulated/floor/carpet/blue,
+/area/survivalpod/superpose/NewHotel)
+"hO" = (
+/obj/machinery/light/small{
+	dir = 1
+	},
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/NewHotel)
+"hQ" = (
+/turf/simulated/wall/wood,
+/area/survivalpod/superpose/NewHotel)
+"if" = (
+/obj/structure/bed/chair/oldsofa/left{
+	dir = 8
+	},
+/turf/simulated/floor/carpet/blue,
+/area/survivalpod/superpose/NewHotel)
+"iU" = (
+/obj/structure/table/woodentable,
+/obj/random/cash,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/NewHotel)
+"ja" = (
+/obj/structure/table/woodentable,
+/obj/item/flame/candle/everburn,
+/obj/item/multitool,
+/obj/item/storage/toolbox/mechanical,
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/NewHotel)
+"jO" = (
+/obj/structure/bed/chair/oldsofa,
+/turf/simulated/floor/carpet/blue,
+/area/survivalpod/superpose/NewHotel)
+"kh" = (
+/turf/simulated/floor/carpet/blue,
+/area/survivalpod/superpose/NewHotel)
+"kw" = (
+/obj/structure/lightpost,
+/turf/template_noop,
+/area/survivalpod/superpose/NewHotel)
+"kI" = (
+/turf/simulated/floor/carpet/sblucarpet,
+/area/survivalpod/superpose/NewHotel)
+"kW" = (
+/obj/structure/table/woodentable,
+/obj/item/reagent_containers/food/condiment/small/saltshaker,
+/obj/item/reagent_containers/food/condiment/small/peppermill{
+	pixel_x = 3
+	},
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/NewHotel)
+"lI" = (
+/obj/item/stool{
+	dir = 8
+	},
+/turf/simulated/floor/outdoors/grass/heavy,
+/area/survivalpod/superpose/NewHotel)
+"mR" = (
+/turf/simulated/floor/tiled/asteroid_steel/turfpack/station,
+/area/survivalpod/superpose/NewHotel)
+"nD" = (
+/obj/structure/table/woodentable,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/NewHotel)
+"nG" = (
+/obj/machinery/power/smes/batteryrack/mapped,
+/obj/structure/cable/green,
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/NewHotel)
+"op" = (
+/obj/structure/table/woodentable,
+/obj/random/cigarettes,
+/turf/simulated/floor/carpet/blue,
+/area/survivalpod/superpose/NewHotel)
+"pn" = (
+/obj/structure/table/wooden_reinforced,
+/obj/item/material/kitchen/rollingpin,
+/turf/simulated/floor/concrete{
+	outdoors = 1
+	},
+/area/survivalpod/superpose/NewHotel)
+"qg" = (
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/NewHotel)
+"qY" = (
+/obj/structure/table/woodentable,
+/obj/item/tape,
+/obj/random/plushie,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/NewHotel)
+"rK" = (
+/obj/structure/table/woodentable,
+/obj/item/trash/candle,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/NewHotel)
+"sd" = (
+/obj/structure/toilet,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/survivalpod/superpose/NewHotel)
+"sV" = (
+/obj/structure/table/woodentable,
+/obj/random/contraband,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/NewHotel)
+"tn" = (
+/obj/structure/simple_door/wood,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/NewHotel)
+"tz" = (
+/obj/structure/table/wooden_reinforced,
+/obj/item/reagent_containers/glass/beaker,
+/obj/item/reagent_containers/food/condiment/enzyme,
+/turf/simulated/floor/concrete{
+	outdoors = 1
+	},
+/area/survivalpod/superpose/NewHotel)
+"tE" = (
+/obj/structure/table/woodentable,
+/obj/random/coin,
+/obj/item/reagent_containers/glass/rag,
+/turf/simulated/floor/carpet/blue,
+/area/survivalpod/superpose/NewHotel)
+"tV" = (
+/obj/structure/closet/secure_closet/freezer/kitchen{
+	locked = 0
+	},
+/turf/simulated/floor/concrete{
+	outdoors = 1
+	},
+/area/survivalpod/superpose/NewHotel)
+"vh" = (
+/obj/structure/bed/chair/oldsofa/corner,
+/turf/simulated/floor/carpet/blue,
+/area/survivalpod/superpose/NewHotel)
+"vA" = (
+/obj/structure/table/woodentable,
+/obj/item/telecube/randomized{
+	name = "Odd artifact"
+	},
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/NewHotel)
+"vM" = (
+/obj/structure/bed/chair/wood,
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/NewHotel)
+"vR" = (
+/obj/structure/table/woodentable,
+/obj/item/flame/candle/candelabra,
+/turf/simulated/floor/carpet/blue,
+/area/survivalpod/superpose/NewHotel)
+"wK" = (
+/obj/item/stool,
+/obj/machinery/light/small,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/NewHotel)
+"wX" = (
+/obj/structure/table/wooden_reinforced,
+/obj/machinery/microwave,
+/obj/machinery/light/small{
+	dir = 8
+	},
+/turf/simulated/floor/concrete{
+	outdoors = 1
+	},
+/area/survivalpod/superpose/NewHotel)
+"yM" = (
+/obj/item/stack/cable_coil,
+/turf/simulated/floor/carpet/purcarpet,
+/area/survivalpod/superpose/NewHotel)
+"zs" = (
+/obj/structure/closet/crate,
+/obj/fruitspawner/lettuce,
+/obj/fruitspawner/lettuce,
+/obj/fruitspawner/lettuce,
+/obj/fruitspawner/lettuce,
+/obj/fruitspawner/lettuce,
+/obj/fruitspawner/potato,
+/obj/fruitspawner/potato,
+/obj/fruitspawner/potato,
+/obj/fruitspawner/potato,
+/obj/fruitspawner/potato,
+/obj/fruitspawner/tomato,
+/obj/fruitspawner/tomato,
+/obj/fruitspawner/tomato,
+/obj/fruitspawner/tomato,
+/obj/fruitspawner/tomato,
+/obj/fruitspawner/tomato,
+/turf/simulated/floor/outdoors/grass/heavy,
+/area/survivalpod/superpose/NewHotel)
+"zt" = (
+/obj/structure/noticeboard,
+/turf/simulated/wall/wood,
+/area/survivalpod/superpose/NewHotel)
+"zE" = (
+/obj/structure/sink{
+	dir = 8;
+	pixel_x = -12;
+	pixel_y = 2
+	},
+/obj/structure/mirror{
+	dir = 4;
+	pixel_x = -28
+	},
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/survivalpod/superpose/NewHotel)
+"zP" = (
+/obj/structure/flora/ausbushes/grassybush,
+/turf/simulated/floor/outdoors/grass/heavy,
+/area/survivalpod/superpose/NewHotel)
+"Ac" = (
+/obj/structure/sink/kitchen{
+	pixel_y = 26
+	},
+/turf/simulated/floor/concrete{
+	outdoors = 1
+	},
+/area/survivalpod/superpose/NewHotel)
+"AO" = (
+/obj/machinery/light/small{
+	dir = 8
+	},
+/turf/simulated/floor/concrete{
+	outdoors = 1
+	},
+/area/survivalpod/superpose/NewHotel)
+"Bt" = (
+/obj/structure/closet/cabinet,
+/obj/random/ammo_all,
+/obj/random/cargopod,
+/obj/random/cargopod,
+/obj/random/cargopod,
+/obj/item/clothing/gloves/yellow,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/NewHotel)
+"Cx" = (
+/obj/structure/closet/crate,
+/obj/fruitspawner/apple,
+/obj/fruitspawner/apple,
+/obj/fruitspawner/eggplant,
+/obj/fruitspawner/eggplant,
+/obj/fruitspawner/corn,
+/obj/fruitspawner/corn,
+/obj/fruitspawner/corn,
+/obj/fruitspawner/corn,
+/obj/fruitspawner/corn,
+/obj/fruitspawner/corn,
+/obj/fruitspawner/lemon,
+/obj/fruitspawner/lemon,
+/obj/fruitspawner/lemon,
+/turf/simulated/floor/outdoors/grass/heavy,
+/area/survivalpod/superpose/NewHotel)
+"Dx" = (
+/obj/structure/closet/secure_closet/freezer/fridge{
+	locked = 0
+	},
+/obj/random/meat,
+/obj/random/meat,
+/obj/random/meat,
+/obj/random/meat,
+/obj/random/meat,
+/obj/random/meat,
+/obj/random/meat,
+/turf/simulated/floor/concrete{
+	outdoors = 1
+	},
+/area/survivalpod/superpose/NewHotel)
+"DN" = (
+/obj/structure/bed/chair/wood,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/NewHotel)
+"Es" = (
+/obj/structure/window/reinforced/full,
+/obj/structure/grille/rustic,
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/NewHotel)
+"Gk" = (
+/obj/structure/bed/chair/wood{
+	dir = 1
+	},
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/NewHotel)
+"Gz" = (
+/obj/structure/window/reinforced/tinted{
+	dir = 8
+	},
+/obj/machinery/shower{
+	dir = 1
+	},
+/obj/structure/curtain/open/shower/medical,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/survivalpod/superpose/NewHotel)
+"GC" = (
+/obj/structure/table/woodentable,
+/turf/simulated/floor/outdoors/grass/heavy,
+/area/survivalpod/superpose/NewHotel)
+"GN" = (
+/obj/machinery/appliance/cooker/grill,
+/obj/structure/window/plastitanium{
+	dir = 4
+	},
+/turf/simulated/floor/concrete{
+	outdoors = 1
+	},
+/area/survivalpod/superpose/NewHotel)
+"GV" = (
+/obj/structure/table/woodentable,
+/obj/item/storage/fancy/candle_box,
+/obj/item/storage/fancy/candle_box,
+/obj/item/storage/fancy/candle_box,
+/obj/item/flame/lighter/random,
+/obj/item/flame/lighter/random,
+/obj/item/melee/umbrella/random,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/NewHotel)
+"Ha" = (
+/obj/structure/table/woodentable,
+/obj/item/trash/candle,
+/obj/item/paper{
+	info = "This is a stupid tresure hunt task, that thing is not taking us anywhere. Go on and have fun finding a waste of time.";
+	name = "Wrinkled sheet of paper"
+	},
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/NewHotel)
+"Ik" = (
+/obj/structure/table/wooden_reinforced,
+/obj/random/medical,
+/obj/random/medical,
+/turf/simulated/floor/concrete{
+	outdoors = 1
+	},
+/area/survivalpod/superpose/NewHotel)
+"Jq" = (
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/survivalpod/superpose/NewHotel)
+"Mk" = (
+/obj/item/gps,
+/obj/item/sticky_pad/random,
+/obj/item/starcaster_news,
+/obj/item/pen/blue,
+/obj/item/pda,
+/obj/item/card/id/external,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/reagent_containers/food/snacks/sosjerky,
+/obj/item/reagent_containers/food/snacks/sosjerky,
+/obj/item/gun/energy/locked/phasegun/pistol,
+/obj/item/material/knife/tacknife/survival,
+/obj/item/clothing/accessory/permit/gun,
+/obj/item/camera,
+/obj/item/binoculars,
+/obj/item/threadneedle,
+/obj/random/soap,
+/obj/item/towel/random,
+/obj/item/bodybag/cryobag,
+/obj/item/flashlight/flare,
+/obj/item/flashlight/flare,
+/obj/item/flashlight/color/yellow,
+/obj/item/radio,
+/obj/item/radio,
+/obj/item/flame/lighter/random,
+/obj/item/cell/device/hyper,
+/obj/item/cell/device/hyper,
+/obj/item/extinguisher/mini,
+/obj/item/reagent_containers/glass/beaker/vial/tricordrazine,
+/obj/item/reagent_containers/glass/beaker/vial/tricordrazine,
+/obj/item/reagent_containers/pill/spaceacillin,
+/obj/item/reagent_containers/pill/spaceacillin,
+/obj/item/fbp_backup_cell,
+/obj/item/fbp_backup_cell,
+/obj/item/suit_cooling_unit/emergency,
+/obj/item/stack/nanopaste,
+/obj/item/reagent_containers/hypospray/autoinjector/biginjector/clotting,
+/obj/item/storage/backpack/messenger,
+/obj/item/clothing/accessory/storage/black_drop_pouches,
+/obj/item/clothing/accessory/poncho/thermal,
+/obj/item/storage/box/survival/comp,
+/obj/item/storage/toolbox/brass,
+/obj/item/storage/box/khcrystal,
+/obj/structure/closet/crate,
+/turf/simulated/floor/wood/broken,
+/area/survivalpod/superpose/NewHotel)
+"Mo" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/NewHotel)
+"Mq" = (
+/obj/structure/closet/crate,
+/obj/random/firstaid,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/NewHotel)
+"MU" = (
+/turf/template_noop,
+/area/survivalpod/superpose/NewHotel)
+"Nu" = (
+/obj/random/soap,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/survivalpod/superpose/NewHotel)
+"OH" = (
+/obj/structure/closet/crate/bin,
+/turf/simulated/floor/concrete{
+	outdoors = 1
+	},
+/area/survivalpod/superpose/NewHotel)
+"PO" = (
+/obj/machinery/space_heater,
+/turf/simulated/floor/wood/broken,
+/area/survivalpod/superpose/NewHotel)
+"Qa" = (
+/obj/structure/table/marble,
+/obj/structure/window/plastitanium{
+	dir = 4
+	},
+/turf/simulated/floor/concrete{
+	outdoors = 1
+	},
+/area/survivalpod/superpose/NewHotel)
+"Qv" = (
+/obj/structure/table/woodentable,
+/obj/item/paper_bin,
+/obj/item/pen,
+/obj/item/pen,
+/obj/item/pen,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/NewHotel)
+"QG" = (
+/obj/structure/bed/chair/oldsofa{
+	dir = 8
+	},
+/turf/simulated/floor/carpet/blue,
+/area/survivalpod/superpose/NewHotel)
+"RM" = (
+/obj/machinery/space_heater,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/NewHotel)
+"RQ" = (
+/obj/machinery/appliance/cooker/fryer,
+/turf/simulated/floor/concrete{
+	outdoors = 1
+	},
+/area/survivalpod/superpose/NewHotel)
+"Sf" = (
+/obj/structure/window/reinforced/full,
+/obj/structure/grille/rustic,
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/NewHotel)
+"Sy" = (
+/obj/item/stack/material/cardboard{
+	amount = 50
+	},
+/obj/item/stack/material/cardboard{
+	amount = 50
+	},
+/obj/item/stack/material/cardboard{
+	amount = 50
+	},
+/obj/item/stack/material/cardboard{
+	amount = 50
+	},
+/obj/fiftyspawner/blucarpet,
+/obj/fiftyspawner/oracarpet,
+/obj/fiftyspawner/purcarpet,
+/obj/fiftyspawner/sblucarpet,
+/obj/fiftyspawner/tealcarpet,
+/obj/fiftyspawner/turcarpet,
+/obj/item/stack/material/wood{
+	amount = 50;
+	color = "#824B28"
+	},
+/obj/item/stack/material/wood{
+	amount = 50;
+	color = "#824B28"
+	},
+/obj/item/stack/material/wood/hard{
+	amount = 50
+	},
+/obj/item/stack/material/wood/hard{
+	amount = 50
+	},
+/obj/item/stack/material/wood/sif{
+	amount = 50
+	},
+/obj/item/stack/material/wood/sif{
+	amount = 50
+	},
+/obj/item/stack/material/marble{
+	amount = 50
+	},
+/obj/item/stack/material/marble{
+	amount = 50
+	},
+/obj/item/stack/material/marble{
+	amount = 50
+	},
+/obj/item/stack/material/cloth{
+	amount = 50
+	},
+/obj/item/stack/material/cloth{
+	amount = 50
+	},
+/obj/item/stack/material/algae{
+	amount = 50
+	},
+/obj/item/stack/material/sandstone,
+/obj/item/stack/material/sandstone,
+/obj/item/stack/material/sandstone,
+/obj/item/stack/material/lead{
+	amount = 30
+	},
+/obj/item/stack/material/plasteel{
+	amount = 30;
+	pixel_y = 5
+	},
+/obj/item/stack/material/resin{
+	amount = 50
+	},
+/obj/item/stack/material/smolebricks{
+	amount = 50
+	},
+/obj/item/stack/material/smolebricks{
+	amount = 50
+	},
+/obj/structure/table/rack/shelf,
+/obj/structure/cable/green{
+	icon_state = "2-4"
+	},
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/survivalpod/superpose/NewHotel)
+"SG" = (
+/turf/simulated/floor/carpet/purcarpet,
+/area/survivalpod/superpose/NewHotel)
+"SZ" = (
+/obj/structure/bed/double/padded,
+/obj/item/bedsheet/rddouble,
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/NewHotel)
+"Ut" = (
+/obj/structure/closet/cabinet,
+/obj/random/maintenance/medical,
+/obj/random/carp_plushie,
+/obj/random/cigarettes,
+/obj/random/drinkbottle,
+/obj/random/maintenance,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/NewHotel)
+"UU" = (
+/obj/structure/table/woodentable,
+/obj/item/flame/lighter/zippo/royal,
+/obj/item/lipstick/random,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/NewHotel)
+"Vf" = (
+/obj/structure/window/reinforced/tinted{
+	dir = 4
+	},
+/obj/machinery/shower{
+	dir = 1
+	},
+/obj/structure/curtain/open/shower/medical,
+/obj/random/soap,
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/survivalpod/superpose/NewHotel)
+"Vj" = (
+/turf/simulated/floor/carpet/oracarpet,
+/area/survivalpod/superpose/NewHotel)
+"WD" = (
+/turf/simulated/floor/concrete{
+	outdoors = 1
+	},
+/area/survivalpod/superpose/NewHotel)
+"WH" = (
+/obj/structure/closet/cabinet,
+/obj/random/maintenance/medical,
+/obj/random/cash,
+/obj/random/cigarettes,
+/obj/random/firstaid,
+/obj/random/maintenance,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/NewHotel)
+"YG" = (
+/obj/structure/table/marble,
+/obj/structure/window/plastitanium{
+	dir = 4
+	},
+/obj/item/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/snacks/meat{
+	pixel_y = -2
+	},
+/obj/item/reagent_containers/food/snacks/meat{
+	pixel_y = -5
+	},
+/turf/simulated/floor/concrete{
+	outdoors = 1
+	},
+/area/survivalpod/superpose/NewHotel)
+"YI" = (
+/obj/structure/coatrack,
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/NewHotel)
+"YQ" = (
+/obj/structure/table/wooden_reinforced,
+/obj/item/book/manual/chef_recipes,
+/turf/simulated/floor/concrete{
+	outdoors = 1
+	},
+/area/survivalpod/superpose/NewHotel)
+"ZG" = (
+/obj/structure/bed/double/padded,
+/obj/item/bedsheet/piratedouble,
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/simulated/floor/wood,
+/area/survivalpod/superpose/NewHotel)
+
+(1,1,1) = {"
+MU
+kw
+hQ
+hQ
+hQ
+hQ
+hQ
+MU
+MU
+MU
+MU
+MU
+MU
+MU
+MU
+MU
+MU
+MU
+MU
+MU
+MU
+MU
+"}
+(2,1,1) = {"
+MU
+hQ
+hQ
+Bt
+YI
+GV
+hQ
+hQ
+zP
+zP
+hQ
+hQ
+hQ
+zP
+zP
+hQ
+hQ
+hQ
+zP
+zP
+hQ
+hQ
+"}
+(3,1,1) = {"
+gA
+gA
+go
+qg
+qg
+qg
+hQ
+hQ
+Es
+Es
+hQ
+hQ
+hQ
+Es
+Es
+hQ
+hQ
+hQ
+Es
+Es
+hQ
+hQ
+"}
+(4,1,1) = {"
+MU
+hQ
+zt
+qg
+Qv
+qg
+hQ
+DN
+sV
+Gk
+Mq
+hQ
+DN
+nD
+Gk
+ab
+hQ
+Mk
+DN
+vA
+Gk
+hQ
+"}
+(5,1,1) = {"
+MU
+zP
+Es
+qg
+iU
+wK
+hQ
+qg
+Vj
+Vj
+qg
+hQ
+RM
+SG
+SG
+qg
+hQ
+PO
+kI
+kI
+qg
+hQ
+"}
+(6,1,1) = {"
+MU
+zP
+Es
+qg
+UU
+qg
+hQ
+RM
+Vj
+Vj
+qg
+hQ
+qg
+SG
+yM
+qg
+hQ
+qg
+kI
+kI
+qg
+hQ
+"}
+(7,1,1) = {"
+MU
+zP
+Es
+qg
+qY
+qg
+hQ
+rK
+SZ
+Ut
+qg
+hQ
+rK
+dz
+WH
+qg
+hQ
+qg
+cA
+ZG
+Ha
+hQ
+"}
+(8,1,1) = {"
+MU
+hQ
+hQ
+qg
+qg
+qg
+hQ
+hQ
+hQ
+hQ
+tn
+hQ
+hQ
+hQ
+hQ
+tn
+hQ
+tn
+hQ
+hQ
+hQ
+hQ
+"}
+(9,1,1) = {"
+MU
+hQ
+hQ
+hO
+qg
+qg
+qg
+qg
+qg
+tn
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+qg
+Es
+gA
+"}
+(10,1,1) = {"
+MU
+zP
+Es
+qg
+da
+op
+hc
+kh
+qg
+tn
+qg
+vM
+dn
+kW
+Gk
+Mo
+DN
+kW
+ja
+Gk
+Es
+gA
+"}
+(11,1,1) = {"
+MU
+zP
+Es
+qg
+jO
+vR
+tE
+kh
+qg
+hQ
+hQ
+hQ
+hQ
+hQ
+dL
+dL
+dL
+hQ
+hQ
+hQ
+hQ
+hQ
+"}
+(12,1,1) = {"
+MU
+zP
+Es
+qg
+vh
+QG
+QG
+if
+qg
+go
+WD
+AO
+pn
+bb
+YQ
+Dx
+tz
+Ik
+wX
+RQ
+tV
+hQ
+"}
+(13,1,1) = {"
+MU
+hQ
+hQ
+aa
+qg
+qg
+Mo
+qg
+qg
+go
+WD
+WD
+WD
+WD
+WD
+WD
+WD
+WD
+WD
+WD
+WD
+Es
+"}
+(14,1,1) = {"
+MU
+hQ
+hQ
+hQ
+hQ
+tn
+hQ
+hQ
+hQ
+hQ
+hQ
+Ac
+WD
+WD
+gP
+WD
+WD
+WD
+WD
+WD
+WD
+Es
+"}
+(15,1,1) = {"
+MU
+hQ
+hQ
+aJ
+zE
+Jq
+Vf
+hQ
+dr
+Jq
+mR
+WD
+WD
+WD
+ge
+YG
+GN
+Qa
+OH
+WD
+WD
+hQ
+"}
+(16,1,1) = {"
+MU
+MU
+hQ
+sd
+Jq
+Nu
+Gz
+hQ
+Sy
+ai
+hQ
+Cx
+gA
+gA
+GC
+GC
+GC
+GC
+gA
+gA
+gA
+MU
+"}
+(17,1,1) = {"
+MU
+MU
+hQ
+hQ
+hQ
+hQ
+hQ
+hQ
+Sf
+hQ
+hQ
+zs
+gA
+gA
+lI
+lI
+lI
+lI
+gA
+gA
+gA
+MU
+"}
+(18,1,1) = {"
+MU
+MU
+MU
+MU
+MU
+MU
+MU
+MU
+bQ
+nG
+dc
+MU
+gA
+gA
+gA
+gA
+gA
+gA
+gA
+gA
+MU
+MU
+"}

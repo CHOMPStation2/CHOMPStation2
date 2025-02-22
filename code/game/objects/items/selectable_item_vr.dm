@@ -7,12 +7,12 @@
 	var/preface_title = "selectable item"
 	var/selection_string = "Select an item:"
 	var/selection_title = "Item Selection"
-	var/list/item_options = list("Gift" = /obj/item/weapon/a_gift,
-								 "Health Analyzer" = /obj/item/device/healthanalyzer)
+	var/list/item_options = list("Gift" = /obj/item/a_gift,
+								 "Health Analyzer" = /obj/item/healthanalyzer)
 
 /obj/item/selectable_item/attack_self(mob/user as mob)
 	tgui_alert(user, {"[preface_string]"}, preface_title)
-	var/chosen_item = tgui_input_list(usr, selection_string, selection_title, item_options)
+	var/chosen_item = tgui_input_list(user, selection_string, selection_title, item_options)
 	chosen_item = item_options[chosen_item]
 	if(!QDELETED(src) && chosen_item)
 		user.drop_item()
@@ -34,15 +34,15 @@
 	desc = "A pre-arranged home chemistry kit. This one is for rather specific set of size-altering chemicals."
 	preface_string = "This kit can be used to create a vial of a size-altering chemical, but there's only enough material for one."
 	preface_title = "Size Chemistry Kit"
-	item_options = list("Macrocillin" = /obj/item/weapon/reagent_containers/glass/beaker/vial/macrocillin,
-						"Microcillin" = /obj/item/weapon/reagent_containers/glass/beaker/vial/microcillin,
-						"Normalcillin" = /obj/item/weapon/reagent_containers/glass/beaker/vial/normalcillin)
+	item_options = list("Macrocillin" = /obj/item/reagent_containers/glass/beaker/vial/macrocillin,
+						"Microcillin" = /obj/item/reagent_containers/glass/beaker/vial/microcillin,
+						"Normalcillin" = /obj/item/reagent_containers/glass/beaker/vial/normalcillin)
 
 /obj/item/selectable_item/chemistrykit/gender
 	name = "gender chemistry kit"
 	desc = "A pre-arranged home chemistry kit. This one is for rather specific set of gender-altering chemicals."
 	preface_string = "This kit can be used to create a vial of a gender-altering chemical, but there's only enough material for one."
 	preface_title = "Gender Chemistry Kit"
-	item_options = list("Androrovir" = /obj/item/weapon/reagent_containers/glass/beaker/vial/androrovir,
-						"Gynorovir" = /obj/item/weapon/reagent_containers/glass/beaker/vial/gynorovir,
-						"Androgynorovir" = /obj/item/weapon/reagent_containers/glass/beaker/vial/androgynorovir)
+	item_options = list(REAGENT_ANDROROVIR = /obj/item/reagent_containers/glass/beaker/vial/androrovir,
+						REAGENT_GYNOROVIR = /obj/item/reagent_containers/glass/beaker/vial/gynorovir,
+						REAGENT_ANDROGYNOROVIR = /obj/item/reagent_containers/glass/beaker/vial/androgynorovir)

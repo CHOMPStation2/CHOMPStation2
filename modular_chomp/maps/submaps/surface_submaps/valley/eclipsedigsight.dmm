@@ -11,7 +11,7 @@
 	},
 /obj/effect/floor_decal/corner/grey/diagonal,
 /obj/structure/bed/double/padded,
-/obj/item/weapon/bedsheet/orangedouble,
+/obj/item/bedsheet/orangedouble,
 /turf/simulated/floor/tiled/monotile,
 /area/submap/eclipsedigsight)
 "cm" = (
@@ -21,8 +21,8 @@
 "cB" = (
 /obj/effect/floor_decal/corner/purple/diagonal,
 /obj/structure/table/reinforced,
-/obj/item/weapon/archaeological_find,
-/obj/item/weapon/archaeological_find,
+/obj/item/archaeological_find,
+/obj/item/archaeological_find,
 /obj/random/firstaid,
 /turf/simulated/floor/tiled/monotile,
 /area/submap/eclipsedigsight)
@@ -83,8 +83,8 @@
 	dir = 4
 	},
 /obj/structure/table/reinforced,
-/obj/item/weapon/anodevice,
-/obj/item/weapon/melee/baton/loaded,
+/obj/item/anodevice,
+/obj/item/melee/baton/loaded,
 /turf/simulated/floor/tiled/monotile,
 /area/submap/eclipsedigsight)
 "hU" = (
@@ -108,8 +108,8 @@
 "ly" = (
 /obj/effect/floor_decal/corner/purple/diagonal,
 /obj/machinery/cell_charger,
-/obj/item/weapon/melee/baton/loaded,
-/obj/item/device/geiger,
+/obj/item/melee/baton/loaded,
+/obj/item/geiger,
 /obj/structure/table/reinforced,
 /turf/simulated/floor/tiled/monotile,
 /area/submap/eclipsedigsight)
@@ -186,8 +186,8 @@
 "sE" = (
 /obj/effect/floor_decal/corner/purple/diagonal,
 /obj/structure/table/reinforced,
-/obj/item/weapon/archaeological_find,
-/obj/item/weapon/archaeological_find,
+/obj/item/archaeological_find,
+/obj/item/archaeological_find,
 /turf/simulated/floor/tiled/monotile,
 /area/submap/eclipsedigsight)
 "sH" = (
@@ -197,10 +197,10 @@
 "sQ" = (
 /obj/effect/floor_decal/corner/purple/diagonal,
 /obj/structure/table/reinforced,
-/obj/item/weapon/archaeological_find,
-/obj/item/weapon/archaeological_find,
+/obj/item/archaeological_find,
+/obj/item/archaeological_find,
 /obj/random/tool/alien,
-/obj/item/weapon/paper{
+/obj/item/paper{
 	info = "High volume of precursor artifacts have been located within the surrounding mountain range. Our scouting teams have even engaged with several living precursor remnants, and those armed with similar gear. Causalities have been kept to a minimum,  but this area is full of hostiles. We had a mass firefight with a group of invaders, several seeming to return from the death, just within the last week. We are making a request to the Head Admiral to gain access to one mecha unit.";
 	name = "Status Report"
 	},
@@ -243,7 +243,7 @@
 /obj/structure/table/reinforced,
 /obj/random/maintenance/foodstuff,
 /obj/random/maintenance/foodstuff,
-/obj/item/weapon/archaeological_find,
+/obj/item/archaeological_find,
 /turf/simulated/floor/tiled/monotile,
 /area/submap/eclipsedigsight)
 "wm" = (
@@ -259,13 +259,13 @@
 "wH" = (
 /obj/effect/floor_decal/corner/purple/diagonal,
 /obj/structure/table/reinforced,
-/obj/item/weapon/anodevice,
+/obj/item/anodevice,
 /turf/simulated/floor/tiled/monotile,
 /area/submap/eclipsedigsight)
 "xF" = (
 /obj/effect/floor_decal/corner/purple/diagonal,
 /obj/structure/table/reinforced,
-/obj/item/weapon/storage/box/monkeycubes,
+/obj/item/storage/box/monkeycubes,
 /turf/simulated/floor/tiled/monotile,
 /area/submap/eclipsedigsight)
 "zN" = (
@@ -278,8 +278,8 @@
 /obj/effect/floor_decal/corner/purple/diagonal,
 /obj/structure/table/reinforced,
 /obj/machinery/cell_charger,
-/obj/item/weapon/melee/baton/loaded,
-/obj/item/device/geiger,
+/obj/item/melee/baton/loaded,
+/obj/item/geiger,
 /turf/simulated/floor/tiled/monotile,
 /area/submap/eclipsedigsight)
 "CL" = (
@@ -287,16 +287,16 @@
 /area/submap/eclipsedigsight)
 "CQ" = (
 /obj/effect/floor_decal/corner/purple/diagonal,
-/obj/item/weapon/anodevice,
+/obj/item/anodevice,
 /obj/machinery/cell_charger,
-/obj/item/weapon/melee/baton/loaded,
+/obj/item/melee/baton/loaded,
 /obj/structure/table/reinforced,
 /turf/simulated/floor/tiled/monotile,
 /area/submap/eclipsedigsight)
 "Dp" = (
 /obj/effect/floor_decal/corner/purple/diagonal,
-/obj/item/weapon/anodevice,
-/obj/item/weapon/storage/box/monkeycubes,
+/obj/item/anodevice,
+/obj/item/storage/box/monkeycubes,
 /obj/structure/table/reinforced,
 /turf/simulated/floor/tiled/monotile,
 /area/submap/eclipsedigsight)
@@ -345,7 +345,7 @@
 "FS" = (
 /obj/effect/floor_decal/corner/grey/diagonal,
 /obj/structure/bed/double/padded,
-/obj/item/weapon/bedsheet/orangedouble,
+/obj/item/bedsheet/orangedouble,
 /turf/simulated/floor/tiled/monotile,
 /area/submap/eclipsedigsight)
 "Gg" = (
@@ -371,8 +371,8 @@
 "IA" = (
 /obj/effect/floor_decal/corner/purple/diagonal,
 /obj/structure/table/reinforced,
-/obj/item/weapon/archaeological_find,
-/obj/item/weapon/archaeological_find,
+/obj/item/archaeological_find,
+/obj/item/archaeological_find,
 /obj/random/rigsuit,
 /turf/simulated/floor/tiled/monotile,
 /area/submap/eclipsedigsight)
@@ -432,8 +432,8 @@
 "Mk" = (
 /obj/effect/floor_decal/corner/purple/diagonal,
 /obj/structure/table/reinforced,
-/obj/item/weapon/archaeological_find,
-/obj/item/weapon/archaeological_find,
+/obj/item/archaeological_find,
+/obj/item/archaeological_find,
 /obj/random/toolbox,
 /obj/machinery/light,
 /turf/simulated/floor/tiled/monotile,
@@ -550,12 +550,12 @@
 	},
 /obj/effect/floor_decal/corner/grey/diagonal,
 /obj/structure/bed/double/padded,
-/obj/item/weapon/bedsheet/orangedouble,
+/obj/item/bedsheet/orangedouble,
 /turf/simulated/floor/tiled/monotile,
 /area/submap/eclipsedigsight)
 "UV" = (
 /obj/effect/floor_decal/corner/purple/diagonal,
-/obj/item/weapon/storage/box/monkeycubes,
+/obj/item/storage/box/monkeycubes,
 /obj/structure/table/reinforced,
 /turf/simulated/floor/tiled/monotile,
 /area/submap/eclipsedigsight)
@@ -595,8 +595,8 @@
 	dir = 8
 	},
 /obj/structure/table/reinforced,
-/obj/item/weapon/anodevice,
-/obj/item/weapon/melee/baton/loaded,
+/obj/item/anodevice,
+/obj/item/melee/baton/loaded,
 /turf/simulated/floor/tiled/monotile,
 /area/submap/eclipsedigsight)
 "Xx" = (
@@ -658,8 +658,8 @@
 "Zv" = (
 /obj/effect/floor_decal/corner/purple/diagonal,
 /obj/structure/table/reinforced,
-/obj/item/weapon/archaeological_find,
-/obj/item/weapon/archaeological_find,
+/obj/item/archaeological_find,
+/obj/item/archaeological_find,
 /obj/random/tool/alien,
 /turf/simulated/floor/tiled/monotile,
 /area/submap/eclipsedigsight)

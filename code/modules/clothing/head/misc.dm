@@ -110,7 +110,7 @@
 	name = "redcoat's hat"
 	icon_state = "redcoat"
 	item_state_slots = list(slot_r_hand_str = "pirate", slot_l_hand_str = "pirate")
-	desc = "<i>'I guess it's a redhead.'</i>"
+	desc = span_italics("'I guess it's a redhead.'")
 	body_parts_covered = 0
 
 /obj/item/clothing/head/mailman
@@ -452,7 +452,7 @@
 /obj/item/clothing/head/fedora/brown
 	desc = "A brown fedora. Perfect for detectives or those trying to pilfer artifacts."
 	icon_state = "fedora_brown"
-	allowed = list(/obj/item/weapon/reagent_containers/food/snacks/candy_corn, /obj/item/weapon/pen)
+	allowed = list(/obj/item/reagent_containers/food/snacks/candy_corn, /obj/item/pen)
 
 /obj/item/clothing/head/fedora/white
 	desc = "A white fedora, really cool hat if you're a mobster. A really lame hat if you're not."
@@ -563,3 +563,26 @@
 	icon_state = "redtag"
 	flags_inv = HIDEEARS|BLOCKHEADHAIR
 	body_parts_covered = HEAD|EYES
+
+//hair bows
+
+/obj/item/clothing/head/bow
+	name = "large bow"
+	desc = "A large bow that you can place on top of your head."
+	icon_state = "large_bow"
+	body_parts_covered = 0
+
+/obj/item/clothing/head/bow/small
+	name = "small bow"
+	desc = "A small compact bow that you can place on the side of your hair."
+	icon_state = "small_bow"
+
+/obj/item/clothing/head/bow/back
+	name = "back bow"
+	desc = "A large bow that you can place on the back of your head."
+	icon_state = "back_bow"
+
+/obj/item/clothing/head/bow/sweet
+	name = "sweet bow"
+	desc = "A sweet bow that you can place on the back of your head."
+	icon_state = "sweet_bow"

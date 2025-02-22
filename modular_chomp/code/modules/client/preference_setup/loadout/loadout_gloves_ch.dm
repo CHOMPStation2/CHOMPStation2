@@ -9,10 +9,10 @@
 
 /datum/gear/gloves/ringworld1
 	display_name = "world gem ring"
-	path = /obj/item/clothing/gloves/ring/ringworld1
+	path = /obj/item/clothing/accessory/ring/ringworld1
 	cost = 1
 
 /datum/gear/gloves/ringworld2
 	display_name = "world ring"
-	path = /obj/item/clothing/gloves/ring/ringworld2
+	path = /obj/item/clothing/accessory/ring/ringworld2
 	cost = 1

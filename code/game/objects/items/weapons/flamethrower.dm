@@ -1,4 +1,4 @@
-/obj/item/weapon/flamethrower
+/obj/item/flamethrower
 	name = "flamethrower"
 	desc = "You are a firestarter!"
 	icon = 'icons/obj/flamethrower.dmi'
@@ -20,18 +20,18 @@
 	var/lit = 0	//on or off
 	var/operating = 0//cooldown
 	var/turf/previousturf = null
-	var/obj/item/weapon/weldingtool/weldtool = null
-	var/obj/item/device/assembly/igniter/igniter = null
-	var/obj/item/weapon/tank/phoron/ptank = null
+	var/obj/item/weldingtool/weldtool = null
+	var/obj/item/assembly/igniter/igniter = null
+	var/obj/item/tank/phoron/ptank = null
 
 
-/obj/item/weapon/flamethrower/Destroy()
+/obj/item/flamethrower/Destroy()
 	QDEL_NULL(weldtool)
 	QDEL_NULL(igniter)
 	QDEL_NULL(ptank)
 	. = ..()
 
-/obj/item/weapon/flamethrower/process()
+/obj/item/flamethrower/process()
 	if(!lit)
 		STOP_PROCESSING(SSobj, src)
 		return null
@@ -45,7 +45,7 @@
 	return
 
 
-/obj/item/weapon/flamethrower/update_icon()
+/obj/item/flamethrower/update_icon()
 	cut_overlays()
 	if(igniter)
 		add_overlay("+igniter[status]")
@@ -58,7 +58,7 @@
 		item_state = "flamethrower_0"
 	return
 
-/obj/item/weapon/flamethrower/afterattack(atom/target, mob/user, proximity)
+/obj/item/flamethrower/afterattack(atom/target, mob/user, proximity)
 	if(!proximity) return
 	// Make sure our user is still holding us
 	if(user && user.get_active_hand() == src)
@@ -67,7 +67,7 @@
 			var/turflist = getline(user, target_turf)
 			flame_turf(turflist)
 
-/obj/item/weapon/flamethrower/attackby(obj/item/W as obj, mob/user as mob)
+/obj/item/flamethrower/attackby(obj/item/W as obj, mob/user as mob)
 	if(user.stat || user.restrained() || user.lying)	return
 	if(W.has_tool_quality(TOOL_WRENCH) && !status)//Taking this apart
 		var/turf/T = get_turf(src)
@@ -86,12 +86,12 @@
 
 	if(W.has_tool_quality(TOOL_SCREWDRIVER) && igniter && !lit)
 		status = !status
-		to_chat(user, "<span class='notice'>[igniter] is now [status ? "secured" : "unsecured"]!</span>")
+		to_chat(user, span_notice("[igniter] is now [status ? "secured" : "unsecured"]!"))
 		update_icon()
 		return
 
 	if(isigniter(W))
-		var/obj/item/device/assembly/igniter/I = W
+		var/obj/item/assembly/igniter/I = W
 		if(I.secured)	return
 		if(igniter)		return
 		user.drop_item()
@@ -100,9 +100,9 @@
 		update_icon()
 		return
 
-	if(istype(W,/obj/item/weapon/tank/phoron))
+	if(istype(W,/obj/item/tank/phoron))
 		if(ptank)
-			to_chat(user, "<span class='notice'>There appears to already be a phoron tank loaded in [src]!</span>")
+			to_chat(user, span_notice("There appears to already be a phoron tank loaded in [src]!"))
 			return
 		user.drop_item()
 		ptank = W
@@ -114,19 +114,19 @@
 	return
 
 
-/obj/item/weapon/flamethrower/attack_self(mob/user as mob)
+/obj/item/flamethrower/attack_self(mob/user as mob)
 	if(user.stat || user.restrained() || user.lying)	return
 	user.set_machine(src)
 	if(!ptank)
-		to_chat(user, "<span class='notice'>Attach a phoron tank first!</span>")
+		to_chat(user, span_notice("Attach a phoron tank first!"))
 		return
-	var/dat = text("<TT><B>Flamethrower (<A HREF='?src=\ref[src];light=1'>[lit ? "<font color='red'>Lit</font>" : "Unlit"]</a>)</B><BR>\n Tank Pressure: [ptank.air_contents.return_pressure()]<BR>\nAmount to throw: <A HREF='?src=\ref[src];amount=-100'>-</A> <A HREF='?src=\ref[src];amount=-10'>-</A> <A HREF='?src=\ref[src];amount=-1'>-</A> [throw_amount] <A HREF='?src=\ref[src];amount=1'>+</A> <A HREF='?src=\ref[src];amount=10'>+</A> <A HREF='?src=\ref[src];amount=100'>+</A><BR>\n<A HREF='?src=\ref[src];remove=1'>Remove phorontank</A> - <A HREF='?src=\ref[src];close=1'>Close</A></TT>")
+	var/dat = text("<htmk><TT><B>Flamethrower (<A href='byond://?src=\ref[src];light=1'>[lit ? "<font color='red'>Lit</font>" : "Unlit"]</a>)</B><BR>\n Tank Pressure: [ptank.air_contents.return_pressure()]<BR>\nAmount to throw: <A href='byond://?src=\ref[src];amount=-100'>-</A> <A href='byond://?src=\ref[src];amount=-10'>-</A> <A href='byond://?src=\ref[src];amount=-1'>-</A> [throw_amount] <A href='byond://?src=\ref[src];amount=1'>+</A> <A href='byond://?src=\ref[src];amount=10'>+</A> <A href='byond://?src=\ref[src];amount=100'>+</A><BR>\n<A href='byond://?src=\ref[src];remove=1'>Remove phorontank</A> - <A href='byond://?src=\ref[src];close=1'>Close</A></TT></html>")
 	user << browse(dat, "window=flamethrower;size=600x300")
 	onclose(user, "flamethrower")
 	return
 
 
-/obj/item/weapon/flamethrower/Topic(href,href_list[])
+/obj/item/flamethrower/Topic(href,href_list[])
 	if(href_list["close"])
 		usr.unset_machine()
 		usr << browse(null, "window=flamethrower")
@@ -135,7 +135,7 @@
 	usr.set_machine(src)
 	if(href_list["light"])
 		if(!ptank)	return
-		if(ptank.air_contents.gas["phoron"] < 1)	return
+		if(ptank.air_contents.gas[GAS_PHORON] < 1)	return
 		if(!status)	return
 		lit = !lit
 		if(lit)
@@ -158,7 +158,7 @@
 
 
 //Called from turf.dm turf/dblclick
-/obj/item/weapon/flamethrower/proc/flame_turf(turflist)
+/obj/item/flamethrower/proc/flame_turf(turflist)
 	if(!lit || operating)	return
 	operating = 1
 	for(var/turf/T in turflist)
@@ -179,13 +179,13 @@
 	return
 
 
-/obj/item/weapon/flamethrower/proc/ignite_turf(turf/target)
+/obj/item/flamethrower/proc/ignite_turf(turf/target)
 	//TODO: DEFERRED Consider checking to make sure tank pressure is high enough before doing this...
 	//Transfer 5% of current tank air contents to turf
 	var/datum/gas_mixture/air_transfer = ptank.air_contents.remove_ratio(0.02*(throw_amount/100))
 	//air_transfer.toxins = air_transfer.toxins * 5 // This is me not comprehending the air system. I realize this is mischievious and I could probably make it work without fucking it up like this, but there you have it. -- TLE
-	new/obj/effect/decal/cleanable/liquid_fuel/flamethrower_fuel(target,air_transfer.gas["phoron"],get_dir(loc,target))
-	air_transfer.gas["phoron"] = 0
+	new/obj/effect/decal/cleanable/liquid_fuel/flamethrower_fuel(target,air_transfer.gas[GAS_PHORON],get_dir(loc,target))
+	air_transfer.gas[GAS_PHORON] = 0
 	target.assume_air(air_transfer)
 	//Burn it based on transfered gas
 	//target.hotspot_expose(part4.air_contents.temperature*2,300)
@@ -193,11 +193,11 @@
 	//location.hotspot_expose(1000,500,1)
 	return
 
-/obj/item/weapon/flamethrower/full/New(var/loc)
+/obj/item/flamethrower/full/New(var/loc)
 	..()
-	weldtool = new /obj/item/weapon/weldingtool(src)
+	weldtool = new /obj/item/weldingtool(src)
 	weldtool.status = 0
-	igniter = new /obj/item/device/assembly/igniter(src)
+	igniter = new /obj/item/assembly/igniter(src)
 	igniter.secured = 0
 	status = 1
 	update_icon()

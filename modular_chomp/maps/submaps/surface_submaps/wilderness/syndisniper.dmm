@@ -33,9 +33,9 @@
 /area/submap/SyndiSniper)
 "w" = (
 /obj/structure/table/sifwooden_reinforced,
-/obj/item/device/bluespaceradio/southerncross_prelinked,
-/obj/item/weapon/storage/mre/random,
-/obj/item/device/binoculars,
+/obj/item/bluespaceradio/southerncross_prelinked,
+/obj/item/storage/mre/random,
+/obj/item/binoculars,
 /turf/simulated/floor/outdoors/rocks,
 /area/submap/SyndiSniper)
 "B" = (

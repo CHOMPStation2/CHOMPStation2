@@ -22,6 +22,7 @@
 	var/show_examine = TRUE	// Does this pop up on a mob when the mob is examined?
 
 	var/redgate_allowed = TRUE	//can we be taken through the redgate, in either direction?
+	var/being_used = 0
 
 /obj/Destroy()
 	STOP_PROCESSING(SSobj, src)
@@ -36,19 +37,17 @@
 				m.forceMove(src.loc)
 			else
 				m.forceMove(get_turf(src.loc))
-			m.visible_message("<span class = 'notice'>\The [m] tumbles out of \the [src]!</span>")
+			m.visible_message(span_notice("\The [m] tumbles out of \the [src]!"))
 	//VOREStation Add End
 
-	//CHOMPAdd Start possessed item cleanup
 	if(istype(src, /obj/item))
 		var/obj/item/I = src
 		if(I.possessed_voice && I.possessed_voice.len)
 			for(var/mob/living/voice/V in I.possessed_voice)
 				if(!V.tf_mob_holder)
 					V.ghostize(0)
-					V.stat = DEAD //CHOMPAdd - Helps with autosleeving
-					V.Destroy()
-	//CHOMPAdd End
+					V.stat = DEAD
+					qdel(V)
 
 	return ..()
 
@@ -68,7 +67,7 @@
 /obj/CanUseTopic(var/mob/user, var/datum/tgui_state/state = GLOB.tgui_default_state)
 	if(user.CanUseObjTopic(src))
 		return ..()
-	to_chat(user, "<span class='danger'>[icon2html(src, user.client)]Access Denied!</span>")
+	to_chat(user, span_danger("[icon2html(src, user.client)]Access Denied!"))
 	return STATUS_CLOSE
 
 /mob/living/silicon/CanUseObjTopic(var/obj/O)
@@ -105,7 +104,7 @@
 	else
 		return null
 
-/obj/proc/updateUsrDialog()
+/obj/proc/updateUsrDialog(mob/user)
 	if(in_use)
 		var/is_in_use = 0
 		var/list/nearby = viewers(1, src)
@@ -113,16 +112,16 @@
 			if ((M.client && M.machine == src))
 				is_in_use = 1
 				src.attack_hand(M)
-		if (istype(usr, /mob/living/silicon/ai) || istype(usr, /mob/living/silicon/robot))
-			if (!(usr in nearby))
-				if (usr.client && usr.machine==src) // && M.machine == src is omitted because if we triggered this by using the dialog, it doesn't matter if our machine changed in between triggering it and this - the dialog is probably still supposed to refresh.
+		if (isAI(user) || isrobot(user))
+			if (!(user in nearby))
+				if (user.client && user.machine==src) // && M.machine == src is omitted because if we triggered this by using the dialog, it doesn't matter if our machine changed in between triggering it and this - the dialog is probably still supposed to refresh.
 					is_in_use = 1
-					src.attack_ai(usr)
+					src.attack_ai(user)
 
 		// check for TK users
 
-		if (istype(usr, /mob/living/carbon/human))
-			var/mob/living/carbon/human/H = usr
+		if (ishuman(user))
+			var/mob/living/carbon/human/H = user
 			if(H.get_type_in_hands(/obj/item/tk_grab))
 				if(!(H in nearby))
 					if(H.client && H.machine==src)
@@ -176,7 +175,7 @@
 /*
 	var/mob/mo = locate(/mob) in src
 	if(mo)
-		var/rendered = "<span class='game say'><span class='name'>[M.name]: </span> <span class='message'>[text]</span></span>"
+		var/rendered = span_game(span_say(span_name("[M.name]:") + " " + span_message("[text]"))))
 		mo.show_message(rendered, 2)
 		*/
 	return
@@ -218,3 +217,10 @@
 			if(src)
 				step(src, pick(NORTH,SOUTH,EAST,WEST))
 				sleep(rand(2,4))
+
+// Gives the object a shake animation.
+/obj/proc/animate_shake()
+	var/init_px = pixel_x
+	var/shake_dir = pick(-1, 1)
+	animate(src, transform=turn(matrix(), 8*shake_dir), pixel_x=init_px + 2*shake_dir, time=1)
+	animate(transform=null, pixel_x=init_px, time=6, easing=ELASTIC_EASING)

@@ -21,7 +21,7 @@
 	tt_desc = "S Hirudinea phorus"
 	catalogue_data = list(/datum/category_item/catalogue/fauna/iceleech)
 
-	faction = "leech"
+	faction = FACTION_LEECH
 
 	icon_state = "leech"
 	item_state = "brainslug"
@@ -49,16 +49,16 @@
 	var/list/bodypart_targets = list(BP_L_LEG,BP_R_LEG,BP_L_ARM,BP_R_ARM,BP_TORSO,BP_GROIN,BP_HEAD)
 	var/infest_target = BP_TORSO	// The currently chosen bodypart to infest.
 	var/mob/living/carbon/host		// Our humble host.
-	var/list/produceable_chemicals = list("inaprovaline","anti_toxin","alkysine","bicaridine","tramadol","kelotane","leporazine","iron","phoron","condensedcapsaicin_v","frostoil")
-	var/randomized_reagent = "iron"	// The reagent chosen at random to be produced, if there's no one piloting the worm.
-	var/passive_reagent = "paracetamol"	// Reagent passively produced by the leech. Should usually be a painkiller.
+	var/list/produceable_chemicals = list(REAGENT_ID_INAPROVALINE,REAGENT_ID_ANTITOXIN,REAGENT_ID_ALKYSINE,REAGENT_ID_BICARIDINE,REAGENT_ID_TRAMADOL,REAGENT_ID_KELOTANE,REAGENT_ID_LEPORAZINE,REAGENT_ID_IRON,REAGENT_ID_PHORON,REAGENT_ID_CONDENSEDCAPSAICINV,REAGENT_ID_FROSTOIL)
+	var/randomized_reagent = REAGENT_ID_IRON	// The reagent chosen at random to be produced, if there's no one piloting the worm.
+	var/passive_reagent = REAGENT_ID_PARACETAMOL	// Reagent passively produced by the leech. Should usually be a painkiller.
 
 	var/feeding_delay = 30 SECONDS	// How long do we have to wait to bite our host's organs?
 	var/last_feeding = 0
 
 	a_intent = I_HELP
 
-	holder_type = /obj/item/weapon/holder/leech
+	holder_type = /obj/item/holder/leech
 
 	movement_cooldown = -2
 	aquatic_movement = -2
@@ -119,18 +119,12 @@
 /mob/living/simple_mob/animal/sif/leech/Initialize()
 	. = ..()
 
-	add_verb(src,/mob/living/proc/ventcrawl) //CHOMPEdit TGPanel
-	add_verb(src,/mob/living/proc/hide) //CHOMPEdit TGPanel
+	add_verb(src, /mob/living/proc/ventcrawl)
+	add_verb(src, /mob/living/proc/hide)
 
-/mob/living/simple_mob/animal/sif/leech/Stat()
-	..()
-	if(client.statpanel == "Status")
-		statpanel("Status")
-		if(emergency_shuttle)
-			var/eta_status = emergency_shuttle.get_status_panel_eta()
-			if(eta_status)
-				stat(null, eta_status)
-		stat("Chemicals", chemicals)
+/mob/living/simple_mob/animal/sif/leech/get_status_tab_items()
+	. = ..()
+	. += "Chemicals: [chemicals]"
 
 /mob/living/simple_mob/animal/sif/leech/do_special_attack(atom/A)
 	. = TRUE
@@ -165,16 +159,16 @@
 			ai_holder.hostile = FALSE
 			ai_holder.lose_target()
 		alpha = 5
-		if(host.reagents.has_reagent("cordradaxon") && !docile)	// Overwhelms the leech with food.
+		if(host.reagents.has_reagent(REAGENT_ID_CORDRADAXON) && !docile)	// Overwhelms the leech with food.
 			var/message = "We feel the rush of cardiac pluripotent cells in your host's blood, lulling us into docility."
-			to_chat(src, span("warning", message))
+			to_chat(src, span_warning(message))
 			docile = TRUE
 			if(chemicals + 5 <= max_chemicals)
 				chemicals += 5
 
 		else if(docile)
 			var/message = "We shake off our lethargy as the pluripotent cell count declines in our host's blood."
-			to_chat(src, span("notice", message))
+			to_chat(src, span_notice(message))
 			docile = FALSE
 
 		if(!host.reagents.has_reagent(passive_reagent))
@@ -184,32 +178,32 @@
 		if(!docile && ishuman(host) && chemicals < max_chemicals)
 			var/mob/living/carbon/human/H = host
 			H.remove_blood(1)
-			if(!H.reagents.has_reagent("inaprovaline"))
-				H.reagents.add_reagent("inaprovaline", 1)
+			if(!H.reagents.has_reagent(REAGENT_ID_INAPROVALINE))
+				H.reagents.add_reagent(REAGENT_ID_INAPROVALINE, 1)
 			chemicals += 2
 
 		if(!client && !docile)	// Automatic 'AI' to manage damage levels.
 			if(host.getBruteLoss() >= 30 && chemicals > 50)
-				host.reagents.add_reagent("bicaridine", 5)
+				host.reagents.add_reagent(REAGENT_ID_BICARIDINE, 5)
 				chemicals -= 30
 
 			if(host.getToxLoss() >= 30 && chemicals > 50)
-				var/randomchem = pickweight(list("tramadol" = 7, "anti_toxin" = 15, "frostoil" = 3))
+				var/randomchem = pickweight(list(REAGENT_ID_TRAMADOL = 7, REAGENT_ID_ANTITOXIN = 15, REAGENT_ID_FROSTOIL = 3))
 				host.reagents.add_reagent(randomchem, 5)
 				chemicals -= 50
 
 			if(host.getFireLoss() >= 30 && chemicals > 50)
-				host.reagents.add_reagent("kelotane", 5)
-				host.reagents.add_reagent("leporazine", 2)
+				host.reagents.add_reagent(REAGENT_ID_KELOTANE, 5)
+				host.reagents.add_reagent(REAGENT_ID_LEPORAZINE, 2)
 				chemicals -= 50
 
 			if(host.getOxyLoss() >= 30 && chemicals > 50)
-				host.reagents.add_reagent("iron", 10)
+				host.reagents.add_reagent(REAGENT_ID_IRON, 10)
 				chemicals -= 40
 
 			if(host.getBrainLoss() >= 10 && chemicals > 100)
-				host.reagents.add_reagent("alkysine", 5)
-				host.reagents.add_reagent("tramadol", 3)
+				host.reagents.add_reagent(REAGENT_ID_ALKYSINE, 5)
+				host.reagents.add_reagent(REAGENT_ID_TRAMADOL, 3)
 				chemicals -= 100
 
 			if(prob(30) && chemicals > 50)
@@ -231,23 +225,23 @@
 		leave_host()
 
 /mob/living/simple_mob/animal/sif/leech/verb/infest()
-	set category = "Abilities"
+	set category = "Abilities.Leech"
 	set name = "Infest"
 	set desc = "Infest a suitable humanoid host."
 
 	if(docile)
-		to_chat(src, span("alium","We are too tired to do this..."))
+		to_chat(src, span_alium("We are too tired to do this..."))
 		return
 
-	do_infest(usr)
+	do_infest(src)
 
 /mob/living/simple_mob/animal/sif/leech/proc/do_infest(var/mob/living/user, var/mob/living/target = null)
 	if(host)
-		to_chat(user, span("alien", "We are already within a host."))
+		to_chat(user, span_alien("We are already within a host."))
 		return
 
 	if(stat)
-		to_chat(user, span("warning","We cannot infest a target in your current state."))
+		to_chat(user, span_warning("We cannot infest a target in your current state."))
 		return
 
 	var/mob/living/carbon/M = target
@@ -259,7 +253,7 @@
 				choices += C
 
 		if(!choices.len)
-			to_chat(user, span("warning","There are no viable hosts within range..."))
+			to_chat(user, span_warning("There are no viable hosts within range..."))
 			return
 
 		M = tgui_input_list(src, "Who do we wish to infest?", "Target Choice", choices)
@@ -272,7 +266,7 @@
 		to_chat(user, "\The [M] cannot be infested.")
 		return
 
-	if(istype(M,/mob/living/carbon/human))
+	if(ishuman(M))
 		var/mob/living/carbon/human/H = M
 
 		var/obj/item/organ/external/E = H.organs_by_name[infest_target]
@@ -282,24 +276,24 @@
 		var/list/covering_clothing = E.get_covering_clothing()
 		for(var/obj/item/clothing/C in covering_clothing)
 			if(C.armor["melee"] >= 20 + attack_armor_pen)
-				to_chat(user, span("notice","We cannot get through that host's protective gear."))
+				to_chat(user, span_notice("We cannot get through that host's protective gear."))
 				return
 
 	if(!do_after(src,2))
-		to_chat(user, span("notice", "As [M] moves away, we are dislodged and fall to the ground."))
+		to_chat(user, span_notice("As [M] moves away, we are dislodged and fall to the ground."))
 		return
 
 	if(!M || !src)
 		return
 
 	if(src.stat)
-		to_chat(user, span("warning","We cannot infest a target in your current state."))
+		to_chat(user, span_warning("We cannot infest a target in your current state."))
 		return
 
 	if(M in view(1, src))
-		to_chat(user,span("alien", "We burrow into [M]'s flesh."))
+		to_chat(user,span_alien("We burrow into [M]'s flesh."))
 		if(!M.stat)
-			to_chat(M, span("critical", "You feel a sharp pain as something digs into your flesh!"))
+			to_chat(M, span_critical("You feel a sharp pain as something digs into your flesh!"))
 
 		src.host = M
 		src.forceMove(M)
@@ -307,23 +301,23 @@
 			ai_holder.hostile = FALSE
 			ai_holder.lose_target()
 
-		if(istype(M,/mob/living/carbon/human))
+		if(ishuman(M))
 			var/mob/living/carbon/human/H = M
 			host_bodypart = H.get_organ(infest_target)
 			host_bodypart.implants |= src
 
 		return
 	else
-		to_chat(user, span("notice","They are no longer in range."))
+		to_chat(user, span_notice("They are no longer in range."))
 		return
 
 /mob/living/simple_mob/animal/sif/leech/verb/uninfest()
-	set category = "Abilities"
+	set category = "Abilities.Leech"
 	set name = "Uninfest"
 	set desc = "Leave your current host."
 
 	if(docile)
-		to_chat(src, span("alium","We are too tired to do this..."))
+		to_chat(src, span_alium("We are too tired to do this..."))
 		return
 
 	leave_host()
@@ -342,12 +336,12 @@
 	host = null
 
 /mob/living/simple_mob/animal/sif/leech/verb/inject_victim()
-	set category = "Abilities"
+	set category = "Abilities.Leech"
 	set name = "Incapacitate Potential Host"
 	set desc = "Inject an organic host with an incredibly painful mixture of chemicals."
 
 	if(docile)
-		to_chat(src, span("alium","We are too tired to do this..."))
+		to_chat(src, span_alium("We are too tired to do this..."))
 		return
 
 	var/mob/living/carbon/M
@@ -358,7 +352,7 @@
 				choices += C
 
 		if(!choices.len)
-			to_chat(src, span("warning","There are no viable hosts within range..."))
+			to_chat(src, span_warning("There are no viable hosts within range..."))
 			return
 
 		M = tgui_input_list(src, "Who do we wish to inject?", "Target Choice", choices)
@@ -366,7 +360,7 @@
 	if(!M || stat)
 		return
 
-	poison_inject(usr, M)
+	poison_inject(src, M)
 
 /mob/living/simple_mob/animal/sif/leech/proc/poison_inject(var/mob/living/user, var/mob/living/carbon/L)
 	if(!L || !Adjacent(L) || stat)
@@ -375,7 +369,7 @@
 	var/mob/living/carbon/human/H = L
 
 	if(!istype(H) || H.isSynthetic())
-		to_chat(user, span("warning","You cannot inject this target..."))
+		to_chat(user, span_warning("You cannot inject this target..."))
 
 	var/obj/item/organ/external/E = H.organs_by_name[infest_target]
 	if(!E || E.is_stump() || E.robotic >= ORGAN_ROBOT)
@@ -384,41 +378,41 @@
 	var/list/covering_clothing = E.get_covering_clothing()
 	for(var/obj/item/clothing/C in covering_clothing)
 		if(C.armor["melee"] >= 40 + attack_armor_pen)
-			to_chat(user, span("notice","You cannot get through that host's protective gear."))
+			to_chat(user, span_notice("You cannot get through that host's protective gear."))
 			return
 
 	H.add_modifier(/datum/modifier/poisoned/paralysis, 15 SECONDS)
 
 /mob/living/simple_mob/animal/sif/leech/verb/medicate_host()
-	set category = "Abilities"
+	set category = "Abilities.Leech"
 	set name = "Produce Chemicals (50)"
 	set desc = "Inject your host with possibly beneficial chemicals, to keep the blood flowing."
 
 	if(docile)
-		to_chat(src, span("alium","We are too tired to do this..."))
+		to_chat(src, span_alium("We are too tired to do this..."))
 		return
 
 	if(!host || chemicals <= 50)
-		to_chat(usr, span("alien","We cannot produce any chemicals right now."))
+		to_chat(src, span_alien("We cannot produce any chemicals right now."))
 		return
 
 	if(host)
-		var/chem = tgui_input_list(usr, "Select a chemical to produce.", "Chemicals", produceable_chemicals)
+		var/chem = tgui_input_list(src, "Select a chemical to produce.", "Chemicals", produceable_chemicals)
 		inject_meds(chem)
 
 /mob/living/simple_mob/animal/sif/leech/proc/inject_meds(var/chem)
 	if(host)
 		chemicals = max(1, chemicals - 50)
 		host.reagents.add_reagent(chem, 5)
-		to_chat(src, span("alien","We injected \the [host] with five units of [chem]."))
+		to_chat(src, span_alien("We injected \the [host] with five units of [chem]."))
 
 /mob/living/simple_mob/animal/sif/leech/verb/feed_on_organ()
-	set category = "Abilities"
+	set category = "Abilities.Leech"
 	set name = "Feed on Organ"
 	set desc = "Extend probosci to feed on a piece of your host's organs."
 
 	if(docile)
-		to_chat(src, span("alium","We are too tired to do this..."))
+		to_chat(src, span_alium("We are too tired to do this..."))
 		return
 
 	if(host && world.time >= last_feeding + feeding_delay)
@@ -430,9 +424,9 @@
 
 		var/target
 		if(client)
-			target = tgui_input_list(usr, "Select an organ to feed on.", "Organs", host_internal_organs)
+			target = tgui_input_list(src, "Select an organ to feed on.", "Organs", host_internal_organs)
 			if(!target)
-				to_chat(src, span("alien","We decide not to feed."))
+				to_chat(src, span_alien("We decide not to feed."))
 				return
 
 		if(!target)
@@ -442,13 +436,13 @@
 			bite_organ(target)
 
 	else
-		to_chat(src, span("warning","We cannot feed now."))
+		to_chat(src, span_warning("We cannot feed now."))
 
 /mob/living/simple_mob/animal/sif/leech/proc/bite_organ(var/obj/item/organ/internal/O)
 	last_feeding = world.time
 
 	if(O)
-		to_chat(src, span("alien","We feed on [O]."))
+		to_chat(src, span_alien("We feed on [O]."))
 		O.take_damage(2,silent=prob(10))
 		chemicals = min(max_chemicals, chemicals + 60)
 		host.add_modifier(/datum/modifier/grievous_wounds, 60 SECONDS)
@@ -495,7 +489,7 @@
 
 	else if(istype(A, /obj/item))
 		var/obj/item/I = A
-		if(istype(I, /obj/item/weapon/reagent_containers/food/snacks))
+		if(istype(I, /obj/item/reagent_containers/food/snacks))
 			holder.a_intent = I_HURT
 	else
 		holder.a_intent = I_HURT

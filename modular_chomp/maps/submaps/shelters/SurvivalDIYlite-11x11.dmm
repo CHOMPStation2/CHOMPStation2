@@ -1,0 +1,388 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/SurvivalDIY_11x11lite)
+"b" = (
+/obj/machinery/vending/engivend{
+	emagged = 1;
+	req_access = null;
+	req_log_access = null
+	},
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/SurvivalDIY_11x11lite)
+"l" = (
+/obj/structure/reagent_dispensers/fueltank/high,
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/SurvivalDIY_11x11lite)
+"m" = (
+/obj/structure/closet/crate,
+/obj/item/stack/material/cardboard{
+	amount = 50
+	},
+/obj/item/stack/material/cardboard{
+	amount = 50
+	},
+/obj/item/stack/material/cardboard{
+	amount = 50
+	},
+/obj/item/stack/material/cardboard{
+	amount = 50
+	},
+/obj/fiftyspawner/blucarpet,
+/obj/fiftyspawner/oracarpet,
+/obj/fiftyspawner/purcarpet,
+/obj/fiftyspawner/sblucarpet,
+/obj/fiftyspawner/tealcarpet,
+/obj/fiftyspawner/turcarpet,
+/obj/item/stack/material/wood{
+	amount = 50;
+	color = "#824B28"
+	},
+/obj/item/stack/material/wood{
+	amount = 50;
+	color = "#824B28"
+	},
+/obj/item/stack/material/wood/hard{
+	amount = 50
+	},
+/obj/item/stack/material/wood/hard{
+	amount = 50
+	},
+/obj/item/stack/material/wood/sif{
+	amount = 50
+	},
+/obj/item/stack/material/wood/sif{
+	amount = 50
+	},
+/obj/item/stack/material/marble{
+	amount = 50
+	},
+/obj/item/stack/material/marble{
+	amount = 50
+	},
+/obj/item/stack/material/marble{
+	amount = 50
+	},
+/obj/item/stack/material/cloth{
+	amount = 50
+	},
+/obj/item/stack/material/cloth{
+	amount = 50
+	},
+/obj/item/stack/material/algae{
+	amount = 50
+	},
+/obj/item/stack/material/sandstone,
+/obj/item/stack/material/sandstone,
+/obj/item/stack/material/sandstone,
+/obj/item/stack/material/lead{
+	amount = 30
+	},
+/obj/item/stack/material/plasteel{
+	amount = 30;
+	pixel_y = 5
+	},
+/obj/item/stack/material/resin{
+	amount = 50
+	},
+/obj/item/stack/material/smolebricks{
+	amount = 50
+	},
+/obj/item/stack/material/smolebricks{
+	amount = 50
+	},
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/SurvivalDIY_11x11lite)
+"n" = (
+/obj/structure/closet/crate,
+/obj/item/stack/material/plastic{
+	amount = 50
+	},
+/obj/item/stack/material/plastic{
+	amount = 50
+	},
+/obj/item/stack/material/plastic{
+	amount = 50
+	},
+/obj/item/stack/material/plastic{
+	amount = 50
+	},
+/obj/item/stack/material/steel{
+	amount = 50
+	},
+/obj/item/stack/material/steel{
+	amount = 50
+	},
+/obj/item/stack/material/steel{
+	amount = 50
+	},
+/obj/item/stack/material/steel{
+	amount = 50
+	},
+/obj/item/stack/material/glass{
+	amount = 50
+	},
+/obj/item/stack/material/glass{
+	amount = 50
+	},
+/obj/item/stack/material/glass{
+	amount = 50
+	},
+/obj/item/stack/material/glass{
+	amount = 50
+	},
+/obj/item/stack/rods{
+	amount = 50
+	},
+/obj/item/stack/rods{
+	amount = 50
+	},
+/obj/item/stack/rods{
+	amount = 50
+	},
+/obj/item/stack/rods{
+	amount = 50
+	},
+/obj/item/stack/cable_coil{
+	pixel_x = 3;
+	pixel_y = 3
+	},
+/obj/item/stack/cable_coil{
+	pixel_x = 3;
+	pixel_y = 3
+	},
+/obj/item/stack/cable_coil/green,
+/obj/item/stack/cable_coil/blue,
+/obj/item/storage/briefcase/inflatable,
+/obj/item/stack/material/steel{
+	amount = 50
+	},
+/obj/item/stack/material/steel{
+	amount = 50
+	},
+/obj/item/stack/material/steel{
+	amount = 50
+	},
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/SurvivalDIY_11x11lite)
+"v" = (
+/obj/machinery/autolathe,
+/obj/item/rcd/advanced/loaded{
+	pixel_x = -5;
+	pixel_y = 9
+	},
+/obj/item/rcd_ammo/large,
+/obj/item/rcd_ammo/large,
+/obj/item/areaeditor/blueprints/engineers,
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/SurvivalDIY_11x11lite)
+"w" = (
+/obj/machinery/power/port_gen/pacman,
+/obj/item/stack/material/phoron{
+	amount = 25
+	},
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/SurvivalDIY_11x11lite)
+"C" = (
+/turf/simulated/wall,
+/area/survivalpod/superpose/SurvivalDIY_11x11lite)
+"F" = (
+/obj/machinery/power/apc/alarms_hidden{
+	dir = 8;
+	pixel_y = 0;
+	pixel_x = -24;
+	req_access = null
+	},
+/obj/structure/cable{
+	icon_state = "0-4"
+	},
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/SurvivalDIY_11x11lite)
+"P" = (
+/obj/structure/closet/toolcloset,
+/obj/item/storage/firstaid/regular,
+/obj/item/storage/firstaid/fire,
+/obj/item/storage/firstaid/toxin,
+/obj/item/storage/firstaid/o2,
+/obj/item/module/id_auth,
+/obj/item/module/card_reader,
+/obj/item/module/cell_power,
+/obj/item/module/power_control,
+/obj/item/circuitboard/microwave,
+/obj/item/circuitboard/mass_driver,
+/obj/item/circuitboard/jukebox,
+/obj/item/circuitboard/intercom,
+/obj/item/circuitboard/firealarm,
+/obj/item/circuitboard/airalarm,
+/obj/item/cell/high,
+/obj/item/cell/high,
+/obj/item/flashlight,
+/obj/item/flashlight,
+/obj/item/tape_roll,
+/obj/item/tape_roll,
+/obj/item/reagent_containers/spray/cleaner,
+/obj/item/storage/box/lights/mixed,
+/obj/item/storage/box/lights/mixed,
+/obj/item/storage/belt/utility/full/multitool,
+/obj/item/storage/bag/trash,
+/obj/item/storage/bag/trash,
+/obj/item/storage/backpack/dufflebag/eng,
+/obj/item/geiger,
+/obj/item/mapping_unit,
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/SurvivalDIY_11x11lite)
+"U" = (
+/obj/structure/closet/crate/solar,
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/SurvivalDIY_11x11lite)
+"X" = (
+/obj/machinery/vending/tool{
+	emagged = 1;
+	req_log_access = null
+	},
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/SurvivalDIY_11x11lite)
+
+(1,1,1) = {"
+a
+a
+a
+a
+a
+a
+a
+a
+a
+C
+a
+"}
+(2,1,1) = {"
+a
+a
+a
+a
+a
+X
+b
+P
+v
+F
+a
+"}
+(3,1,1) = {"
+a
+a
+a
+a
+a
+a
+a
+a
+U
+w
+a
+"}
+(4,1,1) = {"
+a
+a
+a
+a
+a
+a
+a
+a
+l
+a
+a
+"}
+(5,1,1) = {"
+a
+a
+a
+a
+a
+a
+a
+a
+n
+a
+a
+"}
+(6,1,1) = {"
+a
+a
+a
+a
+a
+a
+a
+a
+m
+a
+a
+"}
+(7,1,1) = {"
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+"}
+(8,1,1) = {"
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+"}
+(9,1,1) = {"
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+"}
+(10,1,1) = {"
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+"}
+(11,1,1) = {"
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+"}

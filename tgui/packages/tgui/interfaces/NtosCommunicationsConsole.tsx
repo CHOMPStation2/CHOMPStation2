@@ -1,5 +1,6 @@
-import { NtosWindow } from '../layouts';
-import { CommunicationsConsoleContent } from './CommunicationsConsole';
+import { NtosWindow } from 'tgui/layouts';
+
+import { CommunicationsConsoleContent } from './CommunicationsConsole/CommunicationsConsoleContent';
 
 export const NtosCommunicationsConsole = () => {
   return (

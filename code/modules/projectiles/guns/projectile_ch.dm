@@ -1,14 +1,3 @@
-#define NO_AUTO_LOAD 0
-#define OPEN_BOLT 1
-#define CLOSED_BOLT 2
-#define LOCK_OPEN_EMPTY 4
-#define LOCK_MANUAL_LOCK 8
-#define LOCK_SLAPPABLE 16
-#define CHAMBER_ON_RELOAD 32
-
-#define INTERNAL_MAG_SEPARATE 1
-#define IS_PUMP_SHOTGUN 2
-
 #define BOLT_NOEVENT 0
 #define BOLT_CLOSED 1
 #define BOLT_OPENED 2
@@ -21,7 +10,7 @@
 ////////////// CADYN'S BALLISTICS ////////////////////////////////////////////////////////////////////////// ORIGINAL FROM CHOMPSTATION ////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-/obj/item/weapon/gun/projectile
+/obj/item/gun/projectile
 	var/manual_chamber = TRUE
 	var/only_open_load = FALSE
 	var/auto_loading_type = CLOSED_BOLT | LOCK_MANUAL_LOCK | LOCK_SLAPPABLE
@@ -35,7 +24,7 @@
 	var/sound_eject = 'sound/weapons/ballistics/pistol_eject.ogg'
 	var/sound_chamber = 'sound/weapons/ballistics/pistol_chamber.ogg'
 
-/obj/item/weapon/gun/projectile/handle_post_fire(mob/user, atom/target, var/pointblank=0, var/reflex=0)
+/obj/item/gun/projectile/handle_post_fire(mob/user, atom/target, var/pointblank=0, var/reflex=0)
 	if(fire_anim)
 		flick(fire_anim, src)
 
@@ -47,24 +36,24 @@
 			switch(one_handed_penalty)
 				if(1 to 15)
 					if(prob(50)) //don't need to tell them every single time
-						to_chat(user, "<span class='warning'>Your aim wavers slightly.</span>")
+						to_chat(user, span_warning("Your aim wavers slightly."))
 				if(16 to 30)
-					to_chat(user, "<span class='warning'>Your aim wavers as you fire \the [src] with just one hand.</span>")
+					to_chat(user, span_warning("Your aim wavers as you fire \the [src] with just one hand."))
 				if(31 to 45)
-					to_chat(user, "<span class='warning'>You have trouble keeping \the [src] on target with just one hand.</span>")
+					to_chat(user, span_warning("You have trouble keeping \the [src] on target with just one hand."))
 				if(46 to INFINITY)
-					to_chat(user, "<span class='warning'>You struggle to keep \the [src] on target with just one hand!</span>")
+					to_chat(user, span_warning("You struggle to keep \the [src] on target with just one hand!"))
 		else if(!user.can_wield_item(src))
 			switch(one_handed_penalty)
 				if(1 to 15)
 					if(prob(50)) //don't need to tell them every single time
-						to_chat(user, "<span class='warning'>Your aim wavers slightly.</span>")
+						to_chat(user, span_warning("Your aim wavers slightly."))
 				if(16 to 30)
-					to_chat(user, "<span class='warning'>Your aim wavers as you try to hold \the [src] steady.</span>")
+					to_chat(user, span_warning("Your aim wavers as you try to hold \the [src] steady."))
 				if(31 to 45)
-					to_chat(user, "<span class='warning'>You have trouble holding \the [src] steady.</span>")
+					to_chat(user, span_warning("You have trouble holding \the [src] steady."))
 				if(46 to INFINITY)
-					to_chat(user, "<span class='warning'>You struggle to hold \the [src] steady!</span>")
+					to_chat(user, span_warning("You struggle to hold \the [src] steady!"))
 
 	if(recoil)
 		spawn()
@@ -77,7 +66,7 @@
 	if(manual_chamber && auto_loading_type)
 		bolt_toggle()
 
-/obj/item/weapon/gun/projectile/attack_self(mob/user as mob)
+/obj/item/gun/projectile/attack_self(mob/user as mob)
 	if(manual_chamber)
 		if(do_after(user,4))
 			bolt_handle(user)
@@ -86,12 +75,12 @@
 	else
 		unload_ammo(user)
 
-/obj/item/weapon/gun/projectile/proc/bolt_handle(mob/user)
+/obj/item/gun/projectile/proc/bolt_handle(mob/user)
 	var/previous_chambered = chambered
 	var/result = bolt_toggle(TRUE)
 	update_icon()
 	if(!result)
-		to_chat(user,"<span class='notice'>Nothing happens.</span>")
+		to_chat(user,span_notice("Nothing happens."))
 	else
 		var/closed = CHECK_BITFIELD(result,BOLT_CLOSED)
 		var/opened = CHECK_BITFIELD(result,BOLT_OPENED)
@@ -104,41 +93,41 @@
 		var/casing_chambered = CHECK_BITFIELD(result,BOLT_CASING_CHAMBERED) ? ", chambering a new round" : ""
 		if(closed && opened)
 			playsound(src, sound_ejectchamber, 50, 0)
-			user.visible_message("<span class='notice'>[user] pulls back \the [bolt_name] before releasing it[close_open_ejected] causing it to slide forward again[casing_chambered].</span>", \
-			"<span class='notice'>You pull back \the [bolt_name] before releasing it[close_open_ejected] causing it to slide forward again[casing_chambered].</span>")
+			user.visible_message(span_notice("[user] pulls back \the [bolt_name] before releasing it[close_open_ejected] causing it to slide forward again[casing_chambered]."), \
+			span_notice("You pull back \the [bolt_name] before releasing it[close_open_ejected] causing it to slide forward again[casing_chambered]."))
 			user.hud_used.update_ammo_hud(user, src)
 		else if(opened)
 			playsound(src, sound_eject, 50, 0)
 			if(locked)
 				if(CHECK_BITFIELD(auto_loading_type,LOCK_MANUAL_LOCK))
 					playsound(src, sound_ejectchamber, 50, 0)
-					user.visible_message("<span class='notice'>[user] pulls back \the [bolt_name] and locks it in the open position[casing_chambered][other_ejected].</span>", \
-					"<span class='notice'>You pull back \the [bolt_name] and lock it in the open position[other_ejected][casing_chambered].</span>")
-				else 
-					user.visible_message("<span class='notice'>[user] pulls back \the [bolt_name] before releasing it, causing it to lock in the open position[casing_chambered][other_ejected].</span>", \
-					"<span class='notice'>You pull back \the [bolt_name] before releasing it, causing it to lock in the open position[casing_chambered][other_ejected].</span>")
+					user.visible_message(span_notice("[user] pulls back \the [bolt_name] and locks it in the open position[casing_chambered][other_ejected]."), \
+					span_notice("You pull back \the [bolt_name] and lock it in the open position[other_ejected][casing_chambered]."))
+				else
+					user.visible_message(span_notice("[user] pulls back \the [bolt_name] before releasing it, causing it to lock in the open position[casing_chambered][other_ejected]."), \
+					span_notice("You pull back \the [bolt_name] before releasing it, causing it to lock in the open position[casing_chambered][other_ejected]."))
 			else
-				user.visible_message("<span class='notice'>[user] opens \the [bolt_name][casing_chambered][other_ejected].</span>", \
-				"<span class='notice'>You pull back \the [bolt_name][casing_chambered][other_ejected].</span>")
+				user.visible_message(span_notice("[user] opens \the [bolt_name][casing_chambered][other_ejected]."), \
+				span_notice("You pull back \the [bolt_name][casing_chambered][other_ejected]."))
 		else if(closed)
 			playsound(src, sound_chamber, 50, 0)
 			if(unlocked)
 				if(bolt_release)
 					if(user.a_intent == I_HURT && CHECK_BITFIELD(auto_loading_type,LOCK_SLAPPABLE))
-						user.visible_message("<span class='notice'>[user] slaps the [bolt_release], causing \the [bolt_name] to slide forward[casing_chambered]!</span>", \
-						"<span class='notice'>You slap the [bolt_release], causing \the [bolt_name] to slide forward[casing_chambered]!</span>")
+						user.visible_message(span_notice("[user] slaps the [bolt_release], causing \the [bolt_name] to slide forward[casing_chambered]!"), \
+						span_notice("You slap the [bolt_release], causing \the [bolt_name] to slide forward[casing_chambered]!"))
 					else
-						user.visible_message("<span class='notice'>[user] presses the [bolt_release], causing \the [bolt_name] to slide forward[casing_chambered].</span>", \
-						"<span class='notice'>You press the [bolt_release], causing \the [bolt_name] to slide forward[casing_chambered].</span>")
+						user.visible_message(span_notice("[user] presses the [bolt_release], causing \the [bolt_name] to slide forward[casing_chambered]."), \
+						span_notice("You press the [bolt_release], causing \the [bolt_name] to slide forward[casing_chambered]."))
 				else
-					user.visible_message("<span class='notice'>[user] pulls \the [bolt_name] back the rest of the way, causing it to slide forward[casing_chambered].</span>", \
-					"<span class='notice'>You pull \the [bolt_name] back the rest of the way, causing it to slide forward[casing_chambered].</span>")
+					user.visible_message(span_notice("[user] pulls \the [bolt_name] back the rest of the way, causing it to slide forward[casing_chambered]."), \
+					span_notice("You pull \the [bolt_name] back the rest of the way, causing it to slide forward[casing_chambered]."))
 			else
-				user.visible_message("<span class='notice'>[user] closes \the [bolt_name][casing_chambered].</span>", \
-				"<span class='notice'>You close \the [bolt_name][casing_chambered].</span>")
+				user.visible_message(span_notice("[user] closes \the [bolt_name][casing_chambered]."), \
+				span_notice("You close \the [bolt_name][casing_chambered]."))
 		user.hud_used.update_ammo_hud(user, src)
 
-/obj/item/weapon/gun/projectile/proc/bolt_toggle(var/manual)
+/obj/item/gun/projectile/proc/bolt_toggle(var/manual)
 	if(!bolt_open)
 		if(auto_loading_type)
 			var/able_to_lock = (CHECK_BITFIELD(auto_loading_type,LOCK_OPEN_EMPTY) || (CHECK_BITFIELD(auto_loading_type,LOCK_MANUAL_LOCK) && manual))
@@ -157,7 +146,7 @@
 				return output
 			else
 				if(!manual)
-					visible_message(src,"<span class='notice'>The [src] fires its last round, causing the [bolt_name] to lock.</span>")
+					visible_message(src,span_notice("The [src] fires its last round, causing the [bolt_name] to lock."))
 				bolt_open = TRUE
 				bolt_locked = TRUE
 				var/ejected = process_chambered()
@@ -167,7 +156,7 @@
 		else
 			bolt_open = TRUE
 			var/ejected = process_chambered()
-			
+
 			var/output = BOLT_OPENED
 			if(ejected) output |= BOLT_CASING_EJECTED
 			//if(chambering) output |= BOLT_CASING_CHAMBERED
@@ -206,14 +195,14 @@
 			return output
 
 
-/obj/item/weapon/gun/projectile/process_chambered()
+/obj/item/gun/projectile/process_chambered()
 	if (!chambered) return 0
 
 	// Aurora forensics port, gunpowder residue.
 	if(chambered.leaves_residue)
 		var/mob/living/carbon/human/H = loc
 		if(istype(H))
-			if(!H.gloves)
+			if(!istype(H.gloves, /obj/item/clothing))
 				H.gunshot_residue = chambered.caliber
 			else
 				var/obj/item/clothing/G = H.gloves
@@ -242,7 +231,7 @@
 		chambered = null
 	return 0
 
-/obj/item/weapon/gun/projectile/consume_next_projectile()
+/obj/item/gun/projectile/consume_next_projectile()
 	if(!manual_chamber)
 		//get the next casing
 		if(loaded.len)
@@ -260,7 +249,7 @@
 		return chambered.BB
 	return null
 
-/obj/item/weapon/gun/projectile/proc/chamber_bullet()
+/obj/item/gun/projectile/proc/chamber_bullet()
 	if(chambered)
 		return 0
 	var/obj/item/ammo_casing/to_chamber
@@ -278,35 +267,37 @@
 	else
 		return 0
 
-/obj/item/weapon/gun/projectile/load_ammo(var/obj/item/A, mob/user)
+/obj/item/gun/projectile/load_ammo(var/obj/item/A, mob/user)
 	if(istype(A, /obj/item/ammo_magazine))
 		var/obj/item/ammo_magazine/AM = A
 		if(!(load_method & AM.mag_type) || caliber != AM.caliber || allowed_magazines && !is_type_in_list(A, allowed_magazines))
-			to_chat(user, "<span class='warning'>[AM] won't load into [src]!</span>")
+			to_chat(user, span_warning("[AM] won't load into [src]!"))
 			return
-		switch(AM.mag_type)
+		var/loading_method = AM.mag_type & load_method
+		if(loading_method == (MAGAZINE & SPEEDLOADER)) loading_method = MAGAZINE //Default to magazine if both are valid
+		switch(loading_method)
 			if(MAGAZINE)
 				if(ammo_magazine)
-					to_chat(user, "<span class='warning'>[src] already has a magazine loaded.</span>") //already a magazine here
+					to_chat(user, span_warning("[src] already has a magazine loaded.")) //already a magazine here
 					return
 				if(manual_chamber && CHECK_BITFIELD(auto_loading_type,OPEN_BOLT) && bolt_open)
-					to_chat(user, "<span class='warning'>This is an open bolt gun. Make sure you close the bolt before inserting a new magazine.</span>")
+					to_chat(user, span_warning("This is an open bolt gun. Make sure you close the bolt before inserting a new magazine."))
 					return
 				user.remove_from_mob(AM)
 				AM.loc = src
 				ammo_magazine = AM
-				user.visible_message("[user] inserts [AM] into [src].", "<span class='notice'>You insert [AM] into [src].</span>")
+				user.visible_message("[user] inserts [AM] into [src].", span_notice("You insert [AM] into [src]."))
 				if(manual_chamber && CHECK_BITFIELD(auto_loading_type,CHAMBER_ON_RELOAD) && bolt_open && !chambered)
 					chamber_bullet()
 					bolt_toggle()
 				playsound(src, 'sound/weapons/flipblade.ogg', 50, 1)
-				user.hud_used.update_ammo_hud(user, src) 
+				user.hud_used.update_ammo_hud(user, src)
 			if(SPEEDLOADER)
 				if(only_open_load && !bolt_open)
-					to_chat(user, "<span_class='warning'>[src] must have its bolt open to be loaded!</span>")
+					to_chat(user, span_warning("[src] must have its bolt open to be loaded!"))
 					return
 				if(loaded.len >= max_shells)
-					to_chat(user, "<span class='warning'>[src] is full!</span>")
+					to_chat(user, span_warning("[src] is full!"))
 					return
 				var/count = 0
 				for(var/obj/item/ammo_casing/C in AM.stored_ammo)
@@ -318,9 +309,9 @@
 						AM.stored_ammo -= C //should probably go inside an ammo_magazine proc, but I guess less proc calls this way...
 						count++
 				if(count)
-					user.visible_message("[user] reloads [src].", "<span class='notice'>You load [count] round\s into [src].</span>")
+					user.visible_message("[user] reloads [src].", span_notice("You load [count] round\s into [src]."))
 					playsound(src, 'sound/weapons/empty.ogg', 50, 1)
-					user.hud_used.update_ammo_hud(user, src) 
+					user.hud_used.update_ammo_hud(user, src)
 		AM.update_icon()
 	else if(istype(A, /obj/item/ammo_casing))
 		var/obj/item/ammo_casing/C = A
@@ -332,27 +323,27 @@
 					if(!chambered)
 						if(bolt_open)
 							if(do_after(user,5))
-								user.visible_message("<span class='notice'>[user] slides \the [C] into the [src]'s chamber.</span>","<span class='notice'>You slide \the [C] into the [src]'s chamber.</span>")
+								user.visible_message(span_notice("[user] slides \the [C] into the [src]'s chamber."),span_notice("You slide \the [C] into the [src]'s chamber."))
 								chambered = C
-								user.hud_used.update_ammo_hud(user, src) 
+								user.hud_used.update_ammo_hud(user, src)
 							else
 								return
 						else if(!(CHECK_BITFIELD(auto_loading_type,LOCK_OPEN_EMPTY) || (CHECK_BITFIELD(auto_loading_type,LOCK_MANUAL_LOCK))))
 							if(do_after(user,15))
-								user.visible_message("<span class='notice'>[user] holds open \the [src]'s [bolt_name] and slides [C] into the chamber before letting the bolt close again.</span>","<span class='notice'>You slide \the [C] into the [src]'s chamber.</span>")
-								
+								user.visible_message(span_notice("[user] holds open \the [src]'s [bolt_name] and slides [C] into the chamber before letting the bolt close again."),span_notice("You slide \the [C] into the [src]'s chamber."))
+
 								chambered = C
-								user.hud_used.update_ammo_hud(user, src) 
+								user.hud_used.update_ammo_hud(user, src)
 							else
 								return
 						else
-							to_chat(user,"<span class='warning'>Open the bolt first before chambering a round!</span>")
+							to_chat(user,span_warning("Open the bolt first before chambering a round!"))
 							return
 					else
-						to_chat(user,"<span class='warning'>Eject the current chambered round before trying to chamber a new one!</span>")
+						to_chat(user,span_warning("Eject the current chambered round before trying to chamber a new one!"))
 						return
 				else
-					to_chat(user,"<span class='warning'>You can't manually chamber rounds with an open bolt gun!</span>")
+					to_chat(user,span_warning("You can't manually chamber rounds with an open bolt gun!"))
 					return
 				user.remove_from_mob(C)
 				C.loc = src
@@ -361,47 +352,47 @@
 			else
 				return
 		if(only_open_load && !bolt_open)
-			to_chat(user, "<span_class='warning'>[src] must have its bolt open to be loaded!</span>")
+			to_chat(user, span_warning("[src] must have its bolt open to be loaded!"))
 			return
 		if(loaded.len >= max_shells)
-			to_chat(user, "<span class='warning'>[src] is full.</span>")
+			to_chat(user, span_warning("[src] is full."))
 			return
 
 		user.remove_from_mob(C)
 		C.loc = src
 		loaded.Insert(1, C) //add to the head of the list
-		user.visible_message("[user] inserts \a [C] into [src].", "<span class='notice'>You insert \a [C] into [src].</span>")
+		user.visible_message("[user] inserts \a [C] into [src].", span_notice("You insert \a [C] into [src]."))
 		playsound(src, 'sound/weapons/empty.ogg', 50, 1)
-		user.hud_used.update_ammo_hud(user, src) 
+		user.hud_used.update_ammo_hud(user, src)
 
-	else if(istype(A, /obj/item/weapon/storage))
-		var/obj/item/weapon/storage/storage = A
+	else if(istype(A, /obj/item/storage))
+		var/obj/item/storage/storage = A
 		if(!(load_method & SINGLE_CASING))
 			return //incompatible
 
-		to_chat(user, "<span class='notice'>You start loading \the [src].</span>")
+		to_chat(user, span_notice("You start loading \the [src]."))
 		sleep(1 SECOND)
 		for(var/obj/item/ammo_casing/ammo in storage.contents)
 			if(caliber != ammo.caliber)
 				continue
 
 			load_ammo(ammo, user)
-			user.hud_used.update_ammo_hud(user, src) 
+			user.hud_used.update_ammo_hud(user, src)
 
 			if(loaded.len >= max_shells)
-				to_chat(user, "<span class='warning'>[src] is full.</span>")
+				to_chat(user, span_warning("[src] is full."))
 				break
 			sleep(1 SECOND)
 
 	update_icon()
 
-/obj/item/weapon/gun/projectile/afterattack(atom/A, mob/living/user, adjacent, params)
+/obj/item/gun/projectile/afterattack(atom/A, mob/living/user, adjacent, params)
 	afteratt(A,user,adjacent,params)
 	if(auto_eject && ammo_magazine && ammo_magazine.stored_ammo && !ammo_magazine.stored_ammo.len && !(manual_chamber && chambered && chambered.BB != null))
 		ammo_magazine.loc = get_turf(src.loc)
 		user.visible_message(
 			"[ammo_magazine] falls out and clatters on the floor!",
-			"<span class='notice'>[ammo_magazine] falls out and clatters on the floor!</span>"
+			span_notice("[ammo_magazine] falls out and clatters on the floor!")
 			)
 		if(auto_eject_sound)
 			playsound(src, auto_eject_sound, 40, 1)
@@ -409,7 +400,7 @@
 		ammo_magazine = null
 		update_icon()
 
-/obj/item/weapon/gun/projectile/proc/afteratt(atom/A, mob/living/user, adjacent, params)
+/obj/item/gun/projectile/proc/afteratt(atom/A, mob/living/user, adjacent, params)
 	if(adjacent) return //A is adjacent, is the user, or is on the user's person
 
 	if(!user.aiming)
@@ -419,60 +410,60 @@
 		PreFire(A,user,params) //They're using the new gun system, locate what they're aiming at.
 		return
 
-	if(user && user.a_intent == I_HELP && user.is_preference_enabled(/datum/client_preference/safefiring)) //regardless of what happens, refuse to shoot if help intent is on
-		to_chat(user, "<span class='warning'>You refrain from firing your [src] as your intent is set to help.</span>")
+	if(user && user.a_intent == I_HELP && user.read_preference(/datum/preference/toggle/safefiring)) //regardless of what happens, refuse to shoot if help intent is on
+		to_chat(user, span_warning("You refrain from firing your [src] as your intent is set to help."))
 		return
 
 	else
 		Fire(A, user, params) //Otherwise, fire normally.
 		return
 
-/obj/item/weapon/gun/projectile/special_check(var/mob/user)
+/obj/item/gun/projectile/special_check(var/mob/user)
 	if(..())
 		if(manual_chamber)
 			if(CHECK_BITFIELD(auto_loading_type,OPEN_BOLT) && !bolt_open)
-				to_chat(user,"<span class='warning'>This is an open bolt gun! You need to open the bolt before firing it!</span>")
+				to_chat(user,span_warning("This is an open bolt gun! You need to open the bolt before firing it!"))
 				return 0
 			else if(CHECK_BITFIELD(auto_loading_type,CLOSED_BOLT) && bolt_open)
-				to_chat(user,"<span class='warning'>This is a closed bolt gun! You need to close the bolt before firing it!</span>")
+				to_chat(user,span_warning("This is a closed bolt gun! You need to close the bolt before firing it!"))
 				return 0
 			else if((!auto_loading_type) && bolt_open)
-				to_chat(user,"<span class='warning'>This is a manual action gun, the bolt or chamber must be closed before firing it!</span>")
+				to_chat(user,span_warning("This is a manual action gun, the bolt or chamber must be closed before firing it!"))
 				return 0
 			else
 				return 1
 		else
 			return 1
 
-/obj/item/weapon/gun/projectile/unload_ammo(mob/user, var/allow_dump=1)
+/obj/item/gun/projectile/unload_ammo(mob/user, var/allow_dump=1)
 	if(manual_chamber && only_open_load && !bolt_open)
-		to_chat(user,"<span class='warning'>You must open the bolt to load or unload this gun!</span>")
+		to_chat(user,span_warning("You must open the bolt to load or unload this gun!"))
 	else
 		return ..()
 
-/obj/item/weapon/gun/projectile/handle_click_empty(mob/user)
+/obj/item/gun/projectile/handle_click_empty(mob/user)
 	if (user)
-		user.visible_message("*click click*", "<span class='danger'>*click*</span>")
+		user.visible_message("*click click*", span_danger("*click*"))
 	else
 		src.visible_message("*click click*")
 	playsound(src, 'sound/weapons/empty.ogg', 100, 1)
 	if(!manual_chamber)
 		process_chambered()
 
-/obj/item/weapon/gun/projectile/New(loc, var/starts_loaded = 1)
+/obj/item/gun/projectile/New(loc, var/starts_loaded = 1)
 	..()
 	if(manual_chamber)
-		verbs |= /obj/item/weapon/gun/projectile/verb/change_firemode
+		verbs |= /obj/item/gun/projectile/verb/change_firemode
 	update_icon()
 
-/obj/item/weapon/gun/projectile/verb/change_firemode()
+/obj/item/gun/projectile/verb/change_firemode()
 	set name = "Switch firemode"
 	set category = "Object"
 	set src in view(1)
 
 	switch_firemodes(usr)
 
-/obj/item/weapon/gun/projectile/process_accuracy(obj/projectile, mob/living/user, atom/target, var/burst, var/held_twohanded)
+/obj/item/gun/projectile/process_accuracy(obj/projectile, mob/living/user, atom/target, var/burst, var/held_twohanded)
 	. = ..()
 	var/obj/item/projectile/bullet/P = projectile
 	if(!istype(P))
@@ -481,17 +472,25 @@
 
 //Special ammo handling bullshit
 
-/obj/item/weapon/gun/projectile/pirate/process_accuracy(obj/projectile, mob/living/user, atom/target, var/burst, var/held_twohanded)
+/obj/item/gun/projectile/pirate/process_accuracy(obj/projectile, mob/living/user, atom/target, var/burst, var/held_twohanded)
 	. = ..()
 	var/obj/item/projectile/bullet/P = projectile
 	if(!istype(P))
 		return
 	P.sub_velocity(P.velocity * 0.3)	//Yeah, a gun that supposedly shoots any bullet is gonna be pretty shit.
 
-/obj/item/weapon/gun/projectile/revolver/lemat/process_accuracy(obj/projectile, mob/living/user, atom/target, var/burst, var/held_twohanded)
+/obj/item/gun/projectile/revolver/lemat/process_accuracy(obj/projectile, mob/living/user, atom/target, var/burst, var/held_twohanded)
 	. = ..()
 	var/obj/item/projectile/bullet/P = projectile
 	P.velocity = initial(P.velocity)
 	if(!istype(P))
 		return
 	P.sub_velocity(P.velocity - 35)
+
+#undef BOLT_NOEVENT
+#undef BOLT_CLOSED
+#undef BOLT_OPENED
+#undef BOLT_LOCKED
+#undef BOLT_UNLOCKED
+#undef BOLT_CASING_EJECTED
+#undef BOLT_CASING_CHAMBERED

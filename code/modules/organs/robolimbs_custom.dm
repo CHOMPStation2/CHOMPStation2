@@ -15,7 +15,7 @@
 	includes_tail = 1
 	unavailable_to_build = 1
 
-/obj/item/weapon/disk/limb/eggnerdltd
+/obj/item/disk/limb/eggnerdltd
 	company = "Eggnerd Prototyping Ltd."
 //	icon = 'icons/obj/items_vr.dmi'
 //	icon_state = "verkdisk"
@@ -26,7 +26,7 @@
 	desc = "This metallic limb is sleek and featuresless apart from some exposed motors"
 	icon = 'icons/mob/human_races/cyberlimbs/talon/talon_main.dmi' //Sprited by: Viveret
 
-/obj/item/weapon/disk/limb/talon
+/obj/item/disk/limb/talon
 	company = "Talon LLC"
 
 /datum/robolimb/zenghu_taj //This wasn't indented. At all. It's a miracle this didn't break literally everything.
@@ -44,7 +44,7 @@
 	includes_tail = 1
 	unavailable_to_build = 1
 
-/obj/item/weapon/disk/limb/eggnerdltdred
+/obj/item/disk/limb/eggnerdltdred
 	company = "Eggnerd Prototyping Ltd. (Red)"
 	icon = 'icons/obj/items_vr.dmi'	//VOREStation add. Use the right sprites
 	icon_state = "verkdisk"			//VOREStation add. Use the right sprites
@@ -60,14 +60,14 @@
 	unavailable_to_build = 1
 	includes_tail = 1
 	skin_tone = 1
-	suggested_species = "Tajara"
+	suggested_species = SPECIES_TAJARAN
 
 /*/datum/robolimb/dsi_tajaran/New()
 	species_cannot_use = GLOB.all_species.Copy()
-	species_cannot_use -= SPECIES_TAJ
+	species_cannot_use -= SPECIES_TAJARAN
 VS Edit - anyone can select these. */
 
-/obj/item/weapon/disk/limb/dsi_tajaran
+/obj/item/disk/limb/dsi_tajaran
 	company = "DSI - Tajaran"
 
 /datum/robolimb/dsi_lizard
@@ -79,14 +79,14 @@ VS Edit - anyone can select these. */
 	unavailable_to_build = 1
 	includes_tail = 1
 	skin_tone = 1
-	suggested_species = "Unathi"
+	suggested_species = SPECIES_UNATHI
 
 /* /datum/robolimb/dsi_lizard/New() //
 	species_cannot_use = GLOB.all_species.Copy()
 	species_cannot_use -= SPECIES_UNATHI
 VS Edit - anyone can select these. */
 
-/obj/item/weapon/disk/limb/dsi_lizard
+/obj/item/disk/limb/dsi_lizard
 	company = "DSI - Lizard"
 
 /datum/robolimb/dsi_sergal
@@ -98,9 +98,9 @@ VS Edit - anyone can select these. */
 	unavailable_to_build = 1
 	includes_tail = 1
 	skin_tone = 1
-	suggested_species = "Sergal"
+	suggested_species = SPECIES_SERGAL
 
-/obj/item/weapon/disk/limb/dsi_sergal
+/obj/item/disk/limb/dsi_sergal
 	company = "DSI - Sergal"
 
 /datum/robolimb/dsi_nevrean
@@ -112,9 +112,9 @@ VS Edit - anyone can select these. */
 	unavailable_to_build = 1
 	includes_tail = 1
 	skin_tone = 1
-	suggested_species = "Nevrean"
+	suggested_species = SPECIES_NEVREAN
 
-/obj/item/weapon/disk/limb/dsi_nevrean
+/obj/item/disk/limb/dsi_nevrean
 	company = "DSI - Nevrean"
 
 /datum/robolimb/dsi_vulpkanin
@@ -126,9 +126,9 @@ VS Edit - anyone can select these. */
 	unavailable_to_build = 1
 	includes_tail = 1
 	skin_tone = 1
-	suggested_species = "Vulpkanin"
+	suggested_species = SPECIES_VULPKANIN
 
-/obj/item/weapon/disk/limb/dsi_vulpkanin
+/obj/item/disk/limb/dsi_vulpkanin
 	company = "DSI - Vulpkanin"
 
 /datum/robolimb/dsi_akula
@@ -140,9 +140,9 @@ VS Edit - anyone can select these. */
 	unavailable_to_build = 1
 	includes_tail = 1
 	skin_tone = 1
-	suggested_species = "Akula"
+	suggested_species = SPECIES_AKULA
 
-/obj/item/weapon/disk/limb/dsi_akula
+/obj/item/disk/limb/dsi_akula
 	company = "DSI - Akula"
 
 /datum/robolimb/dsi_spider
@@ -154,9 +154,9 @@ VS Edit - anyone can select these. */
 	unavailable_to_build = 1
 	includes_tail = 1
 	skin_tone = 1
-	suggested_species = "Vasilissan"
+	suggested_species = SPECIES_VASILISSAN
 
-/obj/item/weapon/disk/limb/dsi_spider
+/obj/item/disk/limb/dsi_spider
 	company = "DSI - Vasilissan"
 
 /datum/robolimb/dsi_teshari
@@ -174,7 +174,7 @@ VS Edit - anyone can select these. */
 	species_cannot_use -= SPECIES_PROTEAN //VOREStation add - let 'em be selected.
 	..()
 
-/obj/item/weapon/disk/limb/dsi_teshari
+/obj/item/disk/limb/dsi_teshari
 	company = "DSI - Teshari"
 
 /datum/robolimb/dsi_zorren
@@ -186,9 +186,9 @@ VS Edit - anyone can select these. */
 	unavailable_to_build = 1
 	includes_tail = 1
 	skin_tone = 1
-	suggested_species = "Zorren"
+	suggested_species = SPECIES_ZORREN_HIGH
 
-/obj/item/weapon/disk/limb/dsi_zorren
+/obj/item/disk/limb/dsi_zorren
 	company = "DSI - Zorren"
 
 /datum/robolimb/dsi_fennec
@@ -200,7 +200,7 @@ VS Edit - anyone can select these. */
 	unavailable_to_build = 1
 	includes_tail = 1
 	skin_tone = 1
-	suggested_species = "Fennec"
+	suggested_species = SPECIES_FENNEC
 
-/obj/item/weapon/disk/limb/dsi_fennec
+/obj/item/disk/limb/dsi_fennec
 	company = "DSI - Fennec"

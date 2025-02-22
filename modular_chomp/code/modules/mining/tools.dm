@@ -1,4 +1,4 @@
-/obj/item/weapon/kinetic_crusher/glaive
+/obj/item/kinetic_crusher/glaive
 	name = "kinetic glaive"
 	icon_state = "crusher-glaive"
 	force = 20
@@ -9,7 +9,7 @@
 	w_class = ITEMSIZE_NORMAL
 	requires_wield = FALSE
 
-/obj/item/weapon/pickaxe/anamolous
+/obj/item/pickaxe/anamolous
 	name = "strange pickaxe"
 	icon_state = "ppickaxe"
 	item_state = "ppickaxe"
@@ -19,5 +19,5 @@
 	desc = "This oddly lightweight pickaxe seems rather sturdy."
 
 
-/obj/item/weapon/kinetic_crusher
+/obj/item/kinetic_crusher
 	requires_wield = FALSE

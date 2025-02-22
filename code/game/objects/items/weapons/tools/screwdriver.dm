@@ -1,13 +1,14 @@
 /*
  * Screwdriver
  */
-/obj/item/weapon/tool/screwdriver
+/obj/item/tool/screwdriver
 	name = "screwdriver"
 	desc = "You can be totally screwwy with this."
 	//description_fluff = "This could be used to engrave messages on suitable surfaces if you really put your mind to it! Alt-click a floor or wall to engrave with it." //This way it's not a completely hidden, arcane art to engrave. //CHOMP Remove
 	icon = 'icons/obj/tools.dmi'
 	icon_state = "screwdriver"
-	center_of_mass = list("x" = 13,"y" = 7)
+	center_of_mass_x = 13
+	center_of_mass_y = 7
 	slot_flags = SLOT_BELT | SLOT_EARS
 	force = 6
 	w_class = ITEMSIZE_TINY
@@ -25,7 +26,7 @@
 	tool_qualities = list(TOOL_SCREWDRIVER)
 	var/random_color = TRUE
 
-/obj/item/weapon/tool/screwdriver/New()
+/obj/item/tool/screwdriver/New()
 	if(random_color)
 		switch(pick("red","blue","purple","brown","green","cyan","yellow"))
 			if ("red")
@@ -54,8 +55,8 @@
 		src.pixel_y = rand(0, 16)
 	..()
 
-/obj/item/weapon/tool/screwdriver/attack(mob/living/carbon/M as mob, mob/living/carbon/user as mob)
-	if(!istype(M) || user.a_intent == "help")
+/obj/item/tool/screwdriver/attack(mob/living/carbon/M as mob, mob/living/carbon/user as mob)
+	if(!istype(M) || user.a_intent == I_HELP)
 		return ..()
 	if(user.zone_sel.selecting != O_EYES && user.zone_sel.selecting != BP_HEAD)
 		return ..()
@@ -76,7 +77,7 @@
 	fastener, which includes the screws."
 	value = CATALOGUER_REWARD_EASY
 
-/obj/item/weapon/tool/screwdriver/alien
+/obj/item/tool/screwdriver/alien
 	name = "alien screwdriver"
 	desc = "An ultrasonic screwdriver."
 	catalogue_data = list(/datum/category_item/catalogue/anomalous/precursor_a/alien_screwdriver)
@@ -87,7 +88,7 @@
 	toolspeed = 0.1
 	random_color = FALSE
 
-/obj/item/weapon/tool/screwdriver/hybrid
+/obj/item/tool/screwdriver/hybrid
 	name = "strange screwdriver"
 	desc = "A strange conglomerate of a screwdriver."
 	icon_state = "hybscrewdriver"
@@ -99,13 +100,13 @@
 	random_color = FALSE
 	reach = 2
 
-/obj/item/weapon/tool/screwdriver/cyborg
+/obj/item/tool/screwdriver/cyborg
 	name = "powered screwdriver"
 	desc = "An electrical screwdriver, designed to be both precise and quick."
 	usesound = 'sound/items/drill_use.ogg'
 	toolspeed = 0.5
 
-/obj/item/weapon/tool/screwdriver/power
+/obj/item/tool/screwdriver/power
 	name = "power screwdriver"
 	desc = "You shouldn't see this."
 	force = 8

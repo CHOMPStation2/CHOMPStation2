@@ -11,13 +11,13 @@ GLOBAL_LIST_EMPTY(available_ai_shells)
 // Premade AI shell, for roundstart shells.
 /mob/living/silicon/robot/ai_shell/Initialize()
 	add_verb(src,/mob/living/silicon/robot/proc/transfer_shell_act) //CHOMPEdit TGPanel //CHOMPEDIT: add sideloader
-	mmi = new /obj/item/device/mmi/inert/ai_remote(src)
+	mmi = new /obj/item/mmi/inert/ai_remote(src)
 	post_mmi_setup()
 	return ..()
 
 // Call after inserting or instantiating an MMI.
 /mob/living/silicon/robot/proc/post_mmi_setup()
-	if(istype(mmi, /obj/item/device/mmi/inert/ai_remote))
+	if(istype(mmi, /obj/item/mmi/inert/ai_remote))
 		make_shell()
 		playsound(src, 'sound/machines/twobeep.ogg', 50, 0)
 	else
@@ -29,7 +29,7 @@ GLOBAL_LIST_EMPTY(available_ai_shells)
 	shell = TRUE
 	braintype = "AI Shell"
 	SetName("[modtype] AI Shell [num2text(ident)]")
-	rbPDA = new /obj/item/device/pda/ai/shell(src)
+	rbPDA = new /obj/item/pda/ai/shell(src)
 	setup_PDA()
 	GLOB.available_ai_shells |= src
 	if(!QDELETED(camera))
@@ -48,19 +48,19 @@ GLOBAL_LIST_EMPTY(available_ai_shells)
 	var/mob/living/silicon/ai/AI = mainframe
 	//relay AI
 	if(!CONFIG_GET(flag/allow_ai_shells)) // CHOMPEdit
-		to_chat(src, span("warning", "AI Shells are not allowed on this server. You shouldn't have this verb because of it, so consider making a bug report."))
+		to_chat(src, span_warning("AI Shells are not allowed on this server. You shouldn't have this verb because of it, so consider making a bug report."))
 		return
 
 	if(incapacitated())
-		to_chat(src, span("warning", "You are incapacitated!"))
+		to_chat(src, span_warning("You are incapacitated!"))
 		return
 
 	if(AI.lacks_power())
-		to_chat(src, span("warning", "Your core lacks power, wireless is disabled."))
+		to_chat(src, span_warning("Your core lacks power, wireless is disabled."))
 		return
 
 	if(AI.control_disabled)
-		to_chat(src, span("warning", "Wireless networking module is offline."))
+		to_chat(src, span_warning("Wireless networking module is offline."))
 		return
 
 	var/list/possible = list()
@@ -80,7 +80,7 @@ GLOBAL_LIST_EMPTY(available_ai_shells)
 				possible += R
 
 	if(!LAZYLEN(possible))
-		to_chat(src, span("warning", "No usable AI shell beacons detected."))
+		to_chat(src, span_warning("No usable AI shell beacons detected."))
 
 	if(LAZYLEN(possible) < 2)
 		target = possible[1]
@@ -91,13 +91,13 @@ GLOBAL_LIST_EMPTY(available_ai_shells)
 
 	if(!target || target.stat == DEAD || target.deployed || !(!target.connected_ai || (target.connected_ai == AI) ) )
 		if(target)
-			to_chat(src, span("warning", "It is no longer possible to deploy to \the [target]."))
+			to_chat(src, span_warning("It is no longer possible to deploy to \the [target]."))
 		else
-			to_chat(src, span("notice", "Deployment aborted."))
+			to_chat(src, span_notice("Deployment aborted."))
 		return
 
 	else if(mind)
-		to_chat(src, span("notice", "Transferring Shell"))
+		to_chat(src, span_notice("Transferring Shell"))
 		deployed = FALSE
 		update_icon()
 		mainframe.teleop = null
@@ -154,11 +154,18 @@ GLOBAL_LIST_EMPTY(available_ai_shells)
 	// Laws.
 	connected_ai = mainframe // So they share laws.
 	mainframe.connected_robots |= src
+
+	// CHOMPEdit Start - Outpost 21 upport: force the law sync when an AI enters this shell, unless emagged
+	var/org_lu = lawupdate
+	if(!emagged)
+		lawupdate = TRUE // not emagged, so the AI shell should have law priority. Prevents confusion when you suddenly have two different ion laws. One in shell one in core.
 	lawsync()
+	lawupdate = org_lu
+	// CHOMPEdit End
 
 	// Give button to leave.
-	add_verb(src,/mob/living/silicon/robot/proc/undeploy_act) //CHOMPEdit TGPanel
-	to_chat(AI, span("notice", "You have connected to an AI Shell remotely, and are now in control of it.<br>\
+	add_verb(src, /mob/living/silicon/robot/proc/undeploy_act)
+	to_chat(AI, span_notice("You have connected to an AI Shell remotely, and are now in control of it.<br>\
 	To return to your core, use the <b>Release Control</b> verb."))
 
 	// Languages and comms.
@@ -180,7 +187,7 @@ GLOBAL_LIST_EMPTY(available_ai_shells)
 //	mainframe.redeploy_action.Grant(mainframe)
 //	mainframe.redeploy_action.last_used_shell = src
 	if(message)
-		to_chat(src, span("notice", message))
+		to_chat(src, span_notice(message))
 	mind.transfer_to(mainframe)
 	src.copy_vore_prefs_to_mob(mainframe)
 	deployed = FALSE
@@ -202,12 +209,12 @@ GLOBAL_LIST_EMPTY(available_ai_shells)
 /mob/living/silicon/robot/proc/undeploy_act()
 	set name = "Release Control"
 	set desc = "Release control of a remote drone."
-	set category = "Abilities.Silicon" //ChompEDIT - TGPanel
+	set category = "Abilities.Silicon"
 
 	undeploy("Remote session terminated.")
 
 /mob/living/silicon/robot/attack_ai(mob/user)
-	if(shell && CONFIG_GET(flag/allow_ai_shells) && (!connected_ai || connected_ai == user)) // CHOMPEdit
+	if(shell && CONFIG_GET(flag/allow_ai_shells) && (!connected_ai || connected_ai == user))
 		var/mob/living/silicon/ai/AI = user
 		if(istype(AI))		// Just in case we're clicked by a borg
 			AI.deploy_to_shell(src)
@@ -224,6 +231,6 @@ GLOBAL_LIST_EMPTY(available_ai_shells)
 	delete_me = TRUE
 
 /obj/effect/landmark/free_ai_shell/Initialize()
-	if(CONFIG_GET(flag/allow_ai_shells) && CONFIG_GET(flag/give_free_ai_shell)) // CHOMPEdit
+	if(CONFIG_GET(flag/allow_ai_shells) && CONFIG_GET(flag/give_free_ai_shell))
 		new /mob/living/silicon/robot/ai_shell(get_turf(src))
 	return ..()

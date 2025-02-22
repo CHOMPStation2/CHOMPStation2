@@ -13,8 +13,8 @@
 	var/datum/material/material = null
 	var/riding_datum_type = /datum/riding/boat/small
 
-/obj/vehicle/boat/sifwood/New(newloc, material_name)
-	..(newloc, MAT_SIFWOOD)
+/obj/vehicle/boat/sifwood/Initialize(newloc, material_name)
+	. = ..(newloc, MAT_SIFWOOD)
 
 /obj/vehicle/boat/dragon
 	name = "dragon boat"
@@ -27,16 +27,16 @@
 	max_buckled_mobs = 5
 	riding_datum_type = /datum/riding/boat/big
 
-/obj/vehicle/boat/dragon/New(newloc, material_name)
-	..(newloc, material_name)
+/obj/vehicle/boat/dragon/Initialize(newloc, material_name)
+	. = ..(newloc, material_name)
 	var/image/I = image(icon, src, "dragon_boat_underlay", BELOW_MOB_LAYER)
 	underlays += I
 
-/obj/vehicle/boat/dragon/sifwood/New(newloc, material_name)
-	..(newloc, MAT_SIFWOOD)
+/obj/vehicle/boat/dragon/sifwood/Initialize(newloc, material_name)
+	. = ..(newloc, MAT_SIFWOOD)
 
 // Oars, which must be held inhand while in a boat to move it.
-/obj/item/weapon/oar
+/obj/item/oar
 	name = "oar"
 	icon = 'icons/obj/vehicles.dmi'
 	desc = "Used to provide propulsion to a boat."
@@ -45,29 +45,29 @@
 	force = 12
 	var/datum/material/material = null
 
-/obj/item/weapon/oar/sifwood/New(newloc, material_name)
-	..(newloc, MAT_SIFWOOD)
+/obj/item/oar/sifwood/Initialize(newloc, material_name)
+	. = ..(newloc, MAT_SIFWOOD)
 
-/obj/item/weapon/oar/New(newloc, material_name)
+/obj/item/oar/Initialize(newloc, material_name)
 	..(newloc)
 	if(!material_name)
-		material_name = "wood"
+		material_name = MAT_WOOD
 	material = get_material_by_name("[material_name]")
 	if(!material)
-		qdel(src)
-		return
+		return INITIALIZE_HINT_QDEL
 	color = material.icon_colour
+	return INITIALIZE_HINT_NORMAL
 
-/obj/vehicle/boat/New(newloc, material_name)
+/obj/vehicle/boat/Initialize(newloc, material_name)
 	..(newloc)
 	if(!material_name)
-		material_name = "wood"
+		material_name = MAT_WOOD
 	material = get_material_by_name("[material_name]")
 	if(!material)
-		qdel(src)
-		return
+		return INITIALIZE_HINT_QDEL
 	color = material.icon_colour
 	riding_datum = new riding_datum_type(src)
+	return INITIALIZE_HINT_NORMAL
 
 // Boarding.
 /obj/vehicle/boat/MouseDrop_T(var/atom/movable/C, mob/user)

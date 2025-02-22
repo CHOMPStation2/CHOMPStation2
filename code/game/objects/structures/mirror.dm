@@ -11,25 +11,31 @@
 	var/glass = 1
 	var/datum/tgui_module/appearance_changer/mirror/M
 
-/obj/structure/mirror/Initialize(mapload, var/dir, var/building = 0, mob/user as mob)
+/obj/structure/mirror/Initialize(mapload, var/dir, var/building = 0)
+	. = ..()
 	M = new(src, null)
 	if(building)
 		glass = 0
 		icon_state = "mirror_frame"
 		pixel_x = (dir & 3)? 0 : (dir == 4 ? -28 : 28)
 		pixel_y = (dir & 3)? (dir == 1 ? -30 : 30) : 0
-	return
 
 /obj/structure/mirror/Destroy()
 	QDEL_NULL(M)
 	. = ..()
 
-/obj/structure/mirror/attack_hand(mob/user as mob)
+/obj/structure/mirror/attack_hand(mob/user)
 	if(!glass) return
 	if(shattered)	return
 
-	if(ishuman(user))
-		M.tgui_interact(user)
+	M.tgui_interact(user)
+
+/obj/structure/mirror/attack_ai(mob/user)
+	if(!glass) return
+	if(shattered)	return
+	if(!Adjacent(user)) return
+
+	M.tgui_interact(user)
 
 /obj/structure/mirror/proc/shatter()
 	if(!glass) return
@@ -54,20 +60,20 @@
 		if(!glass)
 			playsound(src, I.usesound, 50, 1)
 			if(do_after(user, 20 * I.toolspeed))
-				to_chat(user, "<span class='notice'>You unfasten the frame.</span>")
+				to_chat(user, span_notice("You unfasten the frame."))
 				new /obj/item/frame/mirror( src.loc )
 				qdel(src)
 		return
 	if(I.has_tool_quality(TOOL_WRENCH))
 		if(shattered && glass)
-			to_chat(user, "<span class='notice'>The broken glass falls out.</span>")
+			to_chat(user, span_notice("The broken glass falls out."))
 			icon_state = "mirror_frame"
 			glass = !glass
-			new /obj/item/weapon/material/shard( src.loc )
+			new /obj/item/material/shard( src.loc )
 			return
 		if(!shattered && glass)
 			playsound(src, I.usesound, 50, 1)
-			to_chat(user, "<span class='notice'>You remove the glass.</span>")
+			to_chat(user, span_notice("You remove the glass."))
 			glass = !glass
 			icon_state = "mirror_frame"
 			new /obj/item/stack/material/glass( src.loc, 2 )
@@ -77,15 +83,15 @@
 		if(!glass)
 			var/obj/item/stack/material/glass/G = I
 			if (G.get_amount() < 2)
-				to_chat(user, "<span class='warning'>You need two sheets of glass to add them to the frame.</span>")
+				to_chat(user, span_warning("You need two sheets of glass to add them to the frame."))
 				return
-			to_chat(user, "<span class='notice'>You start to add the glass to the frame.</span>")
+			to_chat(user, span_notice("You start to add the glass to the frame."))
 			if(do_after(user, 20))
 				if (G.use(2))
 					shattered = 0
 					glass = 1
 					icon_state = "mirror"
-					to_chat(user, "<span class='notice'>You add the glass to the frame.</span>")
+					to_chat(user, span_notice("You add the glass to the frame."))
 			return
 
 	if(shattered && glass)
@@ -93,11 +99,11 @@
 		return
 
 	if(prob(I.force * 2))
-		visible_message("<span class='warning'>[user] smashes [src] with [I]!</span>")
+		visible_message(span_warning("[user] smashes [src] with [I]!"))
 		if(glass)
 			shatter()
 	else
-		visible_message("<span class='warning'>[user] hits [src] with [I]!</span>")
+		visible_message(span_warning("[user] hits [src] with [I]!"))
 		playsound(src, 'sound/effects/Glasshit.ogg', 70, 1)
 
 /obj/structure/mirror/attack_generic(var/mob/user, var/damage)
@@ -108,11 +114,11 @@
 		return 0
 
 	if(damage)
-		user.visible_message("<span class='danger'>[user] smashes [src]!</span>")
+		user.visible_message(span_danger("[user] smashes [src]!"))
 		if(glass)
 			shatter()
 	else
-		user.visible_message("<span class='danger'>[user] hits [src] and bounces off!</span>")
+		user.visible_message(span_danger("[user] hits [src] and bounces off!"))
 	return 1
 
 // The following mirror is ~special~.
@@ -125,7 +131,7 @@
 /obj/structure/mirror/raider/attack_hand(var/mob/living/carbon/human/user)
 	if(istype(get_area(src),/area/syndicate_mothership))
 		if(istype(user) && user.mind && user.mind.special_role == "Raider" && user.species.name != SPECIES_VOX && is_alien_whitelisted(user, SPECIES_VOX))
-			var/choice = tgui_alert(usr, "Do you wish to become a true Vox of the Shoal? This is not reversible.", "Become Vox?", list("No","Yes"))
+			var/choice = tgui_alert(user, "Do you wish to become a true Vox of the Shoal? This is not reversible.", "Become Vox?", list("No","Yes"))
 			if(choice && choice == "Yes")
 				var/mob/living/carbon/human/vox/vox = new(get_turf(src),SPECIES_VOX)
 				vox.gender = user.gender

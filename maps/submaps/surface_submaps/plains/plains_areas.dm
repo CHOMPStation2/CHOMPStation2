@@ -1,146 +1,136 @@
-/area/submap/boathouse
-	name = "POI Plains - Boathouse"
+/area/submap/farm1
+	name = "POI - Farm"
 
-/area/submap/bonfire
-	name = "POI Plains - Abandoned Bonfire"
-
-/area/submap/buriedtreasure
-	name = "POI Plains - Buried Treasure"
-	ambience = AMBIENCE_FOREBODING
-
-/area/submap/camp
-	name = "POI Plains - Camp Site"
-	ambience = AMBIENCE_SIF
-
-/area/submap/chemspill
-	name = "POI Plains - Ruptured Canister"
-	ambience = AMBIENCE_TECH_RUINS
-
-/area/submap/construction
-	name = "POI Plains - Construction Site"
+/area/submap/construction1
+	name = "POI - Construction Site"
 	ambience = AMBIENCE_RUINS
 
-/area/submap/diner
-	name = "POI Plains - Diner"
+/area/submap/camp1
+	name = "POI - Camp Site"
 	ambience = AMBIENCE_SIF
 
-/area/submap/dragon
-	name = "POI Plains - Dragon Den"
+/area/submap/house1
+	name = "POI - Empty Explorer's Home"
 
-/area/submap/epod
-	name = "POI Plains - Crashed Escape Pod"
+/area/submap/beacons
+	name = "POI - Lost Beacons"
+
+/area/submap/Epod1
+	name = "POI - Crashed Escape Pod"
 	ambience = AMBIENCE_FOREBODING
 
-/area/submap/epod2
-	name = "POI Plains - Wrecked Escape Pod"
+/area/submap/Epod2
+	name = "POI - Wrecked Escape Pod"
 	ambience = AMBIENCE_FOREBODING
 
-/area/submap/explorerhouse
-	name = "POI Plains - Empty Explorer's Home"
+/area/submap/Rocky2
+	name = "POI - Horseshoe Rock"
 
-/area/submap/farm
-	name = "POI Plains - Farm"
+/area/submap/Peninsula
+	name = "POI - Peninsula"
 
-/area/submap/field
-	name = "POI Plains - Field"
-
-/area/submap/hotspring
-	name = "POI Plains - Hot Spring"
-	ambience = AMBIENCE_SIF
-
-/area/submap/kururak
-	name = "POI Plains - Lone Kururak Den"
-
-/area/submap/lonehome
-	name = "POI Plains - Lone Home"
+/area/submap/PascalB
+	name = "POI - PascalB"
 	ambience = AMBIENCE_FOREBODING
 
-/area/submap/mechpit
-	name = "POI Plains - Mech Pit"
+/area/submap/bonfire
+	name = "POI - Abandoned Bonfire"
 
-/area/submap/merchantstand
-	name = "POI Plains - Merchant's Stand"
-
-/area/submap/methlab
-	name = "POI Plains - Meth Lab"
-	ambience = AMBIENCE_TECH_RUINS
-
-/area/submap/oldhotel
-	name = "POI Plains - Old Hotel"
-	ambience = AMBIENCE_SIF
-
-/area/submap/oldlibrary
-	name = "POI Plains - Old Library"
-	ambience = AMBIENCE_FOREBODING
-
-/area/submap/pascalb
-	name = "POI Plains - Irradiated Manhole Cover"
-	ambience = AMBIENCE_FOREBODING
-
-/area/submap/pooledrocks
-	name = "POI Plains - Pooled Rocks"
-	ambience = AMBIENCE_SIF
-
-/area/submap/priderock
-	name = "POI Plains - Pride Rock"
-	ambience = AMBIENCE_SIF
-
-/area/submap/rationcache
-	name = "POI Plains - Ration Cache"
-
-/area/submap/Rocky2a
-	name = "POI Plains - Rocky Crevice"
-	ambience = AMBIENCE_SIF
-
-/area/submap/rockyoutcrop
-	name = "POI Plains - Rocky Outcrop"
+/area/submap/Rocky5
+	name = "POI - Rocky Outcrop"
 
 /area/submap/Shakden
-	name = "POI Plains - Shantak Den"
+	name = "POI - Shantak den"
+
+/area/submap/Field1
+	name = "POI - Field 1"
+
+/area/submap/Thiefc
+	name = "POI - Thieves' Cave"
+	ambience = AMBIENCE_FOREBODING
+
+/area/submap/smol2
+	name = "POI - Broken Lean-to"
+
+/area/submap/Mechpt
+	name = "POI - Mech Pit"
+
+/area/submap/Boathouse
+	name = "POI - Boathouse"
+
+/area/submap/Smol3
+	name = "POI - Merchant's Stand"
+
+/area/submap/PlainsKururak
+	name = "POI - Lone Kururak"
+
+/area/submap/PooledR
+	name = "POI - Pooled Rocks"
+	ambience = AMBIENCE_SIF
+
+/area/submap/Diner
+	name = "POI - Diner"
+	ambience = AMBIENCE_SIF
 
 /area/submap/snow1
-	name = "POI Plains - Snow"
+	name = "Snow"
 	ambience = AMBIENCE_SIF
 
 /area/submap/snow2
-	name = "POI Plains - Snow Spot"
+	name = "Snow Spot"
 	ambience = AMBIENCE_SIF
 
 /area/submap/snow3
-	name = "POI Plains - Snow Patch"
+	name = "Snow Patch"
 	ambience = AMBIENCE_SIF
 
 /area/submap/snow4
-	name = "POI Plains - Snow Drift"
+	name = "Snow Drift"
 	ambience = AMBIENCE_SIF
 
 /area/submap/snow5
-	name = "POI Plains - Snowy Patch"
+	name = "Snowy Patch"
 	ambience = AMBIENCE_SIF
 
-/area/submap/supplydrop
-	name = "POI Plains - Old Supply Drop"
+/area/submap/SupplyDrop2
+	name = "POI - Old Supply Drop"
 	ambience = AMBIENCE_TECH_RUINS
 
-/area/submap/thiefcave
-	name = "POI Plains - Thieves' Cave"
+/area/submap/RationCache
+	name = "POI - Ration Cache"
+
+/area/submap/Oldhouse
+	name = "POI - Old House"
 	ambience = AMBIENCE_FOREBODING
 
-/area/submap/vrden
-	name = "POI Plains - VR Den"
+/area/submap/ChemSpill1
+	name = "POI - Ruptured Canister"
 	ambience = AMBIENCE_TECH_RUINS
 
-/area/submap/wreckedshelter
-	name = "POI Plains - Wrecked Shelter"
+/area/submap/BuriedTreasure
+	name = "POI - Buried Treasure"
+	ambience = AMBIENCE_FOREBODING
 
+/area/submap/oldhotel
+	name = "POI - Old Hotel"
+	ambience = AMBIENCE_SIF
 
-/*Unused*/
+/area/submap/priderock
+	name = "POI - Pride Rock"
+	ambience = AMBIENCE_SIF
 
-/area/submap/beacons
-	name = "POI Plains - Lost Beacons"
+/area/submap/lonehome
+	name = "POI - Lone Home"
+	ambience = AMBIENCE_FOREBODING
 
-/area/submap/rockycrevice
-	name = "POI Plains - Rocky Crevice"
+/area/submap/hotspring
+	name = "POI - Hot Spring"
+	ambience = AMBIENCE_SIF
 
-/area/submap/peninsula
-	name = "POI Plains - Peninsula"
+/area/submap/methlab
+	name = "POI - Meth Lab"
+	ambience = AMBIENCE_TECH_RUINS
+
+/area/submap/VRDen
+	name = "POI - VR Den"
+	ambience = AMBIENCE_TECH_RUINS

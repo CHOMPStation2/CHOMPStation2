@@ -102,8 +102,8 @@
 /turf/simulated/floor/beach/sand,
 /area/tether_away/beach)
 "az" = (
-/obj/item/weapon/reagent_containers/food/drinks/bottle/wine,
-/obj/item/weapon/reagent_containers/food/drinks/bottle/rum,
+/obj/item/reagent_containers/food/drinks/bottle/wine,
+/obj/item/reagent_containers/food/drinks/bottle/rum,
 /obj/structure/table/woodentable,
 /turf/simulated/floor/wood,
 /area/tether_away/beach)
@@ -118,7 +118,7 @@
 	pixel_y = 0;
 	specialfunctions = 4
 	},
-/obj/item/weapon/bedsheet/rainbow,
+/obj/item/bedsheet/rainbow,
 /obj/structure/bed,
 /turf/simulated/floor/wood,
 /area/tether_away/beach)
@@ -214,23 +214,23 @@
 /area/tether_away/beach)
 "aQ" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/book/manual/barman_recipes,
+/obj/item/book/manual/barman_recipes,
 /turf/simulated/floor/wood,
 /area/tether_away/beach)
 "aR" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/reagent_containers/food/drinks/shaker,
+/obj/item/reagent_containers/food/drinks/shaker,
 /turf/simulated/floor/wood,
 /area/tether_away/beach)
 "aS" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/reagent_containers/food/drinks/bottle/small/beer,
+/obj/item/reagent_containers/food/drinks/bottle/small/beer,
 /turf/simulated/floor/wood,
 /area/tether_away/beach)
 "aT" = (
 /obj/structure/table/woodentable,
 /obj/item/clothing/glasses/sunglasses,
-/obj/item/weapon/reagent_containers/food/drinks/bottle/small/beer,
+/obj/item/reagent_containers/food/drinks/bottle/small/beer,
 /turf/simulated/floor/wood,
 /area/tether_away/beach)
 "aU" = (
@@ -254,7 +254,7 @@
 /area/tether_away/beach)
 "aY" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/reagent_containers/food/drinks/bottle/small/ale,
+/obj/item/reagent_containers/food/drinks/bottle/small/ale,
 /turf/simulated/floor/wood,
 /area/tether_away/beach)
 "aZ" = (
@@ -263,16 +263,16 @@
 /area/tether_away/beach)
 "ba" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/reagent_containers/food/drinks/cans/waterbottle,
 /turf/simulated/floor/wood,
 /area/tether_away/beach)
 "bb" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/cell/apc,
+/obj/item/cell/apc,
 /turf/simulated/floor/wood,
 /area/tether_away/beach)
 "bc" = (
-/obj/item/weapon/stool/padded,
+/obj/item/stool/padded,
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/tether_away/beach)
 "bd" = (
@@ -291,11 +291,11 @@
 /turf/simulated/floor/beach/sand,
 /area/tether_away/beach)
 "bh" = (
-/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/reagent_containers/food/drinks/cans/waterbottle,
 /turf/simulated/floor/beach/sand,
 /area/tether_away/beach)
 "bi" = (
-/obj/item/weapon/beach_ball,
+/obj/item/beach_ball,
 /turf/simulated/floor/beach/sand,
 /area/tether_away/beach)
 "bj" = (

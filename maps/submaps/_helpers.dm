@@ -54,7 +54,7 @@
 	var/obj/structure/fake_stairs/target //Don't set this manually, let it do it!
 	var/stepoff_dir
 
-/obj/structure/fake_stairs/Initialize(var/mapload)
+/obj/structure/fake_stairs/Initialize(mapload)
 	. = ..()
 
 	for(var/obj/structure/fake_stairs/FS in world)
@@ -63,7 +63,7 @@
 		if(FS._stair_tag == _stair_tag)
 			target = FS
 	if(!target && mapload)
-		to_world("<span class='danger'>Fake stairs at [x],[y],[z] couldn't get a target!</span>")
+		to_world(span_danger("Fake stairs at [x],[y],[z] couldn't get a target!"))
 
 /obj/structure/fake_stairs/Destroy()
 	if(target)

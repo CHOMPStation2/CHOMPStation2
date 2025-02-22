@@ -1,24 +1,16 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "aj" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8";
-	dir = 1
+	icon_state = "4-8"
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor,
 /area/survivalpod/superpose/LargeAlienShip)
 "ao" = (
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 4;
-	icon_state = "2-4";
-	dir = 4
+	icon_state = "1-4"
 	},
 /turf/simulated/floor,
 /area/survivalpod/superpose/LargeAlienShip)
@@ -39,8 +31,6 @@
 /area/survivalpod/superpose/LargeAlienShip)
 "aA" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -78,10 +68,7 @@
 "bc" = (
 /obj/machinery/power/grounding_rod/pre_mapped,
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8";
-	dir = 1
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/survivalpod/superpose/LargeAlienShip)
@@ -106,10 +93,7 @@
 	dir = 8
 	},
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8";
-	dir = 1
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/survivalpod/superpose/LargeAlienShip)
@@ -127,8 +111,8 @@
 /obj/structure/window/reinforced/survival_pod{
 	dir = 1
 	},
-/obj/item/weapon/hand_labeler,
-/obj/item/device/tape/random,
+/obj/item/hand_labeler,
+/obj/item/tape,
 /turf/simulated/shuttle/floor/voidcraft,
 /area/survivalpod/superpose/LargeAlienShip)
 "bO" = (
@@ -218,8 +202,6 @@
 /area/survivalpod/superpose/LargeAlienShip)
 "dz" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -244,10 +226,7 @@
 	dir = 4
 	},
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8";
-	dir = 1
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/survivalpod/superpose/LargeAlienShip)
@@ -329,8 +308,6 @@
 /area/survivalpod/superpose/LargeAlienShip)
 "fr" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor,
@@ -350,12 +327,9 @@
 "fK" = (
 /obj/machinery/power/tesla_coil,
 /obj/structure/cable/yellow{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -384,22 +358,15 @@
 /area/survivalpod/superpose/LargeAlienShip)
 "gA" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8";
-	dir = 1
+	icon_state = "4-8"
 	},
 /turf/simulated/floor,
 /area/survivalpod/superpose/LargeAlienShip)
 "gS" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor,
@@ -442,7 +409,7 @@
 /obj/structure/window/reinforced/survival_pod{
 	dir = 1
 	},
-/obj/item/device/sleevemate,
+/obj/item/sleevemate,
 /turf/simulated/shuttle/floor/voidcraft,
 /area/survivalpod/superpose/LargeAlienShip)
 "iM" = (
@@ -454,14 +421,10 @@
 "iP" = (
 /obj/machinery/power/tesla_coil,
 /obj/structure/cable/yellow{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8";
-	dir = 1
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/survivalpod/superpose/LargeAlienShip)
@@ -473,10 +436,7 @@
 	dir = 8
 	},
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8";
-	dir = 1
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/survivalpod/superpose/LargeAlienShip)
@@ -501,7 +461,7 @@
 	name = "Laser Armor"
 	},
 /obj/structure/table/rack/shelf/steel,
-/obj/item/weapon/gun/energy/hooklauncher,
+/obj/item/gun/energy/hooklauncher,
 /turf/simulated/shuttle/floor/darkred,
 /area/survivalpod/superpose/LargeAlienShip)
 "ji" = (
@@ -509,12 +469,12 @@
 /obj/random/toolbox,
 /obj/random/toolbox,
 /obj/random/toolbox,
-/obj/item/weapon/storage/toolbox/syndicate/powertools,
-/obj/item/weapon/storage/toolbox/syndicate,
+/obj/item/storage/toolbox/syndicate/powertools,
+/obj/item/storage/toolbox/syndicate,
 /obj/fiftyspawner/phoronrglass,
 /obj/fiftyspawner/phoronrglass,
-/obj/item/weapon/storage/briefcase/inflatable,
-/obj/item/weapon/storage/briefcase/inflatable,
+/obj/item/storage/briefcase/inflatable,
+/obj/item/storage/briefcase/inflatable,
 /turf/simulated/shuttle/floor/yellow,
 /area/survivalpod/superpose/LargeAlienShip)
 "jm" = (
@@ -608,13 +568,9 @@
 "lJ" = (
 /obj/machinery/power/tesla_coil,
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8";
-	dir = 1
+	icon_state = "4-8"
 	},
 /obj/structure/cable/yellow{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -623,8 +579,6 @@
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/effect/floor_decal/industrial/warning,
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor,
@@ -638,7 +592,7 @@
 	name = "Combat Armor"
 	},
 /obj/structure/table/rack/shelf/steel,
-/obj/item/weapon/rig/hazard/equipped,
+/obj/item/rig/hazard/equipped,
 /turf/simulated/shuttle/floor/darkred,
 /area/survivalpod/superpose/LargeAlienShip)
 "my" = (
@@ -646,51 +600,51 @@
 /turf/simulated/shuttle/wall/alien/blue/hard_corner,
 /area/survivalpod/superpose/LargeAlienShip)
 "mG" = (
-/obj/item/device/gps,
+/obj/item/gps,
 /obj/item/sticky_pad/random,
-/obj/item/device/starcaster_news,
-/obj/item/weapon/pen/blue,
-/obj/item/device/pda,
-/obj/item/weapon/card/id/external,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
-/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
-/obj/item/weapon/reagent_containers/food/snacks/sosjerky,
-/obj/item/weapon/reagent_containers/food/snacks/sosjerky,
-/obj/item/weapon/gun/energy/locked/phasegun/pistol,
-/obj/item/weapon/material/knife/tacknife/survival,
+/obj/item/starcaster_news,
+/obj/item/pen/blue,
+/obj/item/pda,
+/obj/item/card/id/external,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/reagent_containers/food/snacks/sosjerky,
+/obj/item/reagent_containers/food/snacks/sosjerky,
+/obj/item/gun/energy/locked/phasegun/pistol,
+/obj/item/material/knife/tacknife/survival,
 /obj/item/clothing/accessory/permit/gun,
-/obj/item/device/camera,
-/obj/item/device/binoculars,
-/obj/item/device/threadneedle,
+/obj/item/camera,
+/obj/item/binoculars,
+/obj/item/threadneedle,
 /obj/random/soap,
-/obj/item/weapon/towel/random,
+/obj/item/towel/random,
 /obj/item/bodybag/cryobag,
-/obj/item/device/flashlight/flare,
-/obj/item/device/flashlight/flare,
-/obj/item/device/flashlight/color/yellow,
-/obj/item/device/radio,
-/obj/item/device/radio,
-/obj/item/weapon/flame/lighter/random,
-/obj/item/weapon/cell/device/hyper,
-/obj/item/weapon/cell/device/hyper,
-/obj/item/weapon/extinguisher/mini,
-/obj/item/weapon/reagent_containers/glass/beaker/vial/tricordrazine,
-/obj/item/weapon/reagent_containers/glass/beaker/vial/tricordrazine,
-/obj/item/weapon/reagent_containers/pill/spaceacillin,
-/obj/item/weapon/reagent_containers/pill/spaceacillin,
-/obj/item/device/fbp_backup_cell,
-/obj/item/device/fbp_backup_cell,
-/obj/item/device/suit_cooling_unit/emergency,
+/obj/item/flashlight/flare,
+/obj/item/flashlight/flare,
+/obj/item/flashlight/color/yellow,
+/obj/item/radio,
+/obj/item/radio,
+/obj/item/flame/lighter/random,
+/obj/item/cell/device/hyper,
+/obj/item/cell/device/hyper,
+/obj/item/extinguisher/mini,
+/obj/item/reagent_containers/glass/beaker/vial/tricordrazine,
+/obj/item/reagent_containers/glass/beaker/vial/tricordrazine,
+/obj/item/reagent_containers/pill/spaceacillin,
+/obj/item/reagent_containers/pill/spaceacillin,
+/obj/item/fbp_backup_cell,
+/obj/item/fbp_backup_cell,
+/obj/item/suit_cooling_unit/emergency,
 /obj/item/stack/nanopaste,
-/obj/item/weapon/reagent_containers/hypospray/autoinjector/biginjector/clotting,
-/obj/item/weapon/storage/backpack/messenger,
+/obj/item/reagent_containers/hypospray/autoinjector/biginjector/clotting,
+/obj/item/storage/backpack/messenger,
 /obj/item/clothing/accessory/storage/black_drop_pouches,
 /obj/item/clothing/accessory/poncho/thermal,
-/obj/item/weapon/storage/box/survival/comp,
-/obj/item/weapon/storage/toolbox/brass,
-/obj/item/weapon/storage/box/khcrystal,
+/obj/item/storage/box/survival/comp,
+/obj/item/storage/toolbox/brass,
+/obj/item/storage/box/khcrystal,
 /obj/structure/closet/walllocker_double/west,
 /turf/simulated/shuttle/floor/alienplating,
 /area/survivalpod/superpose/LargeAlienShip)
@@ -712,10 +666,7 @@
 	dir = 8
 	},
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8";
-	dir = 1
+	icon_state = "4-8"
 	},
 /turf/simulated/shuttle/floor/voidcraft,
 /area/survivalpod/superpose/LargeAlienShip)
@@ -723,9 +674,9 @@
 /obj/structure/closet/alien,
 /obj/item/clothing/suit/space/void/autolok,
 /obj/item/clothing/suit/space/void/autolok,
-/obj/item/weapon/tank/emergency/oxygen/double,
-/obj/item/weapon/tank/emergency/oxygen/double,
-/obj/item/weapon/storage/toolbox/emergency,
+/obj/item/tank/emergency/oxygen/double,
+/obj/item/tank/emergency/oxygen/double,
+/obj/item/storage/toolbox/emergency,
 /turf/simulated/shuttle/floor/yellow,
 /area/survivalpod/superpose/LargeAlienShip)
 "mT" = (
@@ -738,10 +689,10 @@
 /area/survivalpod/superpose/LargeAlienShip)
 "nj" = (
 /obj/structure/table/alien,
-/obj/item/weapon/soap/deluxe,
-/obj/item/weapon/soap/deluxe,
-/obj/item/weapon/towel/random,
-/obj/item/weapon/towel/random,
+/obj/item/soap/deluxe,
+/obj/item/soap/deluxe,
+/obj/item/towel/random,
+/obj/item/towel/random,
 /turf/simulated/floor/tiled/freezer,
 /area/survivalpod/superpose/LargeAlienShip)
 "nt" = (
@@ -778,12 +729,12 @@
 /obj/random/toolbox,
 /obj/random/toolbox,
 /obj/random/toolbox,
-/obj/item/weapon/storage/toolbox/syndicate,
-/obj/item/weapon/storage/toolbox/syndicate,
+/obj/item/storage/toolbox/syndicate,
+/obj/item/storage/toolbox/syndicate,
 /obj/fiftyspawner/plasteel,
 /obj/fiftyspawner/plasteel,
-/obj/item/weapon/storage/briefcase/inflatable,
-/obj/item/weapon/storage/briefcase/inflatable,
+/obj/item/storage/briefcase/inflatable,
+/obj/item/storage/briefcase/inflatable,
 /turf/simulated/shuttle/floor/yellow,
 /area/survivalpod/superpose/LargeAlienShip)
 "nC" = (
@@ -791,9 +742,7 @@
 	dir = 8
 	},
 /obj/structure/cable/yellow{
-	d2 = 8;
-	icon_state = "0-8";
-	dir = 2
+	icon_state = "0-8"
 	},
 /obj/machinery/power/terminal{
 	dir = 4
@@ -842,13 +791,9 @@
 /area/survivalpod/superpose/LargeAlienShip)
 "ph" = (
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -921,7 +866,6 @@
 "qH" = (
 /obj/machinery/power/tesla_coil,
 /obj/structure/cable/yellow{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -999,9 +943,9 @@
 	dir = 1
 	},
 /obj/structure/table/alien/blue,
-/obj/item/weapon/paper_bin,
-/obj/item/weapon/folder/yellow,
-/obj/item/weapon/pen/reagent/paralysis,
+/obj/item/paper_bin,
+/obj/item/folder/yellow,
+/obj/item/pen/reagent/paralysis,
 /turf/simulated/floor/tiled/techmaint,
 /area/survivalpod/superpose/LargeAlienShip)
 "uI" = (
@@ -1028,22 +972,18 @@
 "uU" = (
 /obj/machinery/power/smes/buildable/point_of_interest,
 /obj/structure/cable/yellow{
-	d2 = 8;
-	icon_state = "0-8";
-	dir = 2
+	icon_state = "0-8"
 	},
 /obj/structure/cable/yellow{
-	d2 = 8;
-	icon_state = "0-8";
-	dir = 2
+	icon_state = "0-8"
 	},
 /turf/simulated/floor,
 /area/survivalpod/superpose/LargeAlienShip)
 "ve" = (
 /obj/structure/table/alien/blue,
 /obj/structure/window/reinforced/survival_pod,
-/obj/item/weapon/hand_labeler,
-/obj/item/device/tape/random,
+/obj/item/hand_labeler,
+/obj/item/tape,
 /turf/simulated/shuttle/floor/voidcraft,
 /area/survivalpod/superpose/LargeAlienShip)
 "vg" = (
@@ -1053,14 +993,10 @@
 "vH" = (
 /obj/machinery/power/tesla_coil,
 /obj/structure/cable/yellow{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8";
-	dir = 1
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/survivalpod/superpose/LargeAlienShip)
@@ -1089,10 +1025,7 @@
 	dir = 8
 	},
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 4;
-	icon_state = "2-4";
-	dir = 4
+	icon_state = "1-4"
 	},
 /turf/simulated/floor,
 /area/survivalpod/superpose/LargeAlienShip)
@@ -1101,8 +1034,6 @@
 	dir = 1
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/shuttle/floor/alienplating,
@@ -1218,10 +1149,7 @@
 	name = "Alien Royal Capacitor";
 	output_level = 950000
 	},
-/obj/structure/cable{
-	d2 = 2;
-	icon_state = "0-2"
-	},
+/obj/structure/cable,
 /turf/simulated/floor/tiled/techmaint,
 /area/survivalpod/superpose/LargeAlienShip)
 "xC" = (
@@ -1253,8 +1181,6 @@
 /area/survivalpod/superpose/LargeAlienShip)
 "xU" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /turf/simulated/floor,
@@ -1318,8 +1244,6 @@
 	dir = 8
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor,
@@ -1339,10 +1263,7 @@
 	dir = 4
 	},
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8";
-	dir = 1
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/survivalpod/superpose/LargeAlienShip)
@@ -1363,7 +1284,7 @@
 	name = "Combat Armor"
 	},
 /obj/structure/table/rack/shelf/steel,
-/obj/item/device/slow_sizegun,
+/obj/item/slow_sizegun,
 /turf/simulated/shuttle/floor/darkred,
 /area/survivalpod/superpose/LargeAlienShip)
 "AO" = (
@@ -1437,8 +1358,6 @@
 /area/survivalpod/superpose/LargeAlienShip)
 "Cp" = (
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /turf/simulated/floor,
@@ -1474,15 +1393,13 @@
 	dir = 8
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/shuttle/floor/voidcraft,
 /area/survivalpod/superpose/LargeAlienShip)
 "Dn" = (
 /obj/structure/table/alien/blue,
-/obj/item/weapon/storage/firstaid/surgery,
+/obj/item/storage/firstaid/surgery,
 /turf/simulated/shuttle/floor/white,
 /area/survivalpod/superpose/LargeAlienShip)
 "DA" = (
@@ -1524,100 +1441,100 @@
 "DK" = (
 /obj/structure/table/alien/blue,
 /obj/structure/window/reinforced/survival_pod,
-/obj/item/weapon/tape_roll,
+/obj/item/tape_roll,
 /turf/simulated/shuttle/floor/voidcraft,
 /area/survivalpod/superpose/LargeAlienShip)
 "DX" = (
-/obj/item/weapon/tape_roll,
+/obj/item/tape_roll,
 /obj/item/sticky_pad/random,
-/obj/item/weapon/pen/blue,
-/obj/item/weapon/pen/blue,
+/obj/item/pen/blue,
+/obj/item/pen/blue,
 /obj/item/fulton_core,
 /obj/item/fulton_core,
 /obj/item/extraction_pack,
 /obj/item/extraction_pack,
 /obj/item/modular_computer/laptop/preset/custom_loadout/standard,
-/obj/item/weapon/pickaxe/hand,
-/obj/item/device/flashlight/color/yellow,
-/obj/item/device/flashlight/color/orange,
-/obj/item/device/threadneedle,
-/obj/item/device/radio,
-/obj/item/device/radio,
-/obj/item/device/radio,
-/obj/item/weapon/extinguisher/mini,
-/obj/item/weapon/extinguisher/mini,
-/obj/item/weapon/flame/lighter/zippo,
-/obj/item/weapon/flame/lighter/zippo,
-/obj/item/device/flashlight/lantern,
+/obj/item/pickaxe/hand,
+/obj/item/flashlight/color/yellow,
+/obj/item/flashlight/color/orange,
+/obj/item/threadneedle,
+/obj/item/radio,
+/obj/item/radio,
+/obj/item/radio,
+/obj/item/extinguisher/mini,
+/obj/item/extinguisher/mini,
+/obj/item/flame/lighter/zippo,
+/obj/item/flame/lighter/zippo,
+/obj/item/flashlight/lantern,
 /obj/random/soap,
 /obj/random/soap,
-/obj/item/weapon/towel/random,
-/obj/item/weapon/towel/random,
+/obj/item/towel/random,
+/obj/item/towel/random,
 /obj/item/bodybag/cryobag,
 /obj/item/bodybag/cryobag,
-/obj/item/weapon/storage/pill_bottle/spaceacillin,
-/obj/item/weapon/storage/pill_bottle/antitox,
-/obj/item/device/healthanalyzer,
-/obj/item/weapon/storage/firstaid/regular,
-/obj/item/weapon/storage/firstaid/o2,
-/obj/item/device/fbp_backup_cell,
-/obj/item/device/fbp_backup_cell,
+/obj/item/storage/pill_bottle/spaceacillin,
+/obj/item/storage/pill_bottle/antitox,
+/obj/item/healthanalyzer,
+/obj/item/storage/firstaid/regular,
+/obj/item/storage/firstaid/o2,
+/obj/item/fbp_backup_cell,
+/obj/item/fbp_backup_cell,
 /obj/item/stack/nanopaste,
-/obj/item/device/suit_cooling_unit/emergency,
-/obj/item/device/suit_cooling_unit/emergency,
-/obj/item/weapon/reagent_containers/hypospray/autoinjector/biginjector/clotting,
-/obj/item/weapon/reagent_containers/hypospray/autoinjector/biginjector/clotting,
-/obj/item/weapon/storage/toolbox/brass,
-/obj/item/weapon/storage/box/survival/space,
-/obj/item/weapon/storage/box/survival/space,
-/obj/item/weapon/storage/box/survival/space,
-/obj/item/weapon/storage/pill_bottle/dice_nerd,
-/obj/item/weapon/storage/box/flare,
-/obj/item/weapon/storage/box/khcrystal,
-/obj/item/weapon/storage/box/khcrystal,
-/obj/item/weapon/storage/briefcase/inflatable,
+/obj/item/suit_cooling_unit/emergency,
+/obj/item/suit_cooling_unit/emergency,
+/obj/item/reagent_containers/hypospray/autoinjector/biginjector/clotting,
+/obj/item/reagent_containers/hypospray/autoinjector/biginjector/clotting,
+/obj/item/storage/toolbox/brass,
+/obj/item/storage/box/survival/space,
+/obj/item/storage/box/survival/space,
+/obj/item/storage/box/survival/space,
+/obj/item/storage/pill_bottle/dice_nerd,
+/obj/item/storage/box/flare,
+/obj/item/storage/box/khcrystal,
+/obj/item/storage/box/khcrystal,
+/obj/item/storage/briefcase/inflatable,
 /obj/item/stack/marker_beacon/ten,
-/obj/item/device/starcaster_news,
-/obj/item/device/mapping_unit,
-/obj/item/weapon/storage/box/dosimeter,
-/obj/item/device/gps,
-/obj/item/device/gps,
-/obj/item/weapon/cell/device/hyper,
-/obj/item/weapon/cell/device/hyper,
-/obj/item/weapon/cell/device/hyper,
-/obj/item/device/pda,
-/obj/item/device/pda,
-/obj/item/weapon/card/id/external,
-/obj/item/weapon/card/id/external,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
-/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
-/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
-/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
-/obj/item/weapon/gun/energy/locked/phasegun/pistol,
-/obj/item/weapon/gun/energy/locked/phasegun,
-/obj/item/weapon/cell/device/weapon{
+/obj/item/starcaster_news,
+/obj/item/mapping_unit,
+/obj/item/storage/box/dosimeter,
+/obj/item/gps,
+/obj/item/gps,
+/obj/item/cell/device/hyper,
+/obj/item/cell/device/hyper,
+/obj/item/cell/device/hyper,
+/obj/item/pda,
+/obj/item/pda,
+/obj/item/card/id/external,
+/obj/item/card/id/external,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/gun/energy/locked/phasegun/pistol,
+/obj/item/gun/energy/locked/phasegun,
+/obj/item/cell/device/weapon{
 	pixel_x = -2;
 	pixel_y = -2
 	},
-/obj/item/weapon/cell/device/weapon{
+/obj/item/cell/device/weapon{
 	pixel_x = -2;
 	pixel_y = -2
 	},
 /obj/item/clothing/accessory/permit/gun,
 /obj/item/clothing/accessory/permit/gun,
-/obj/item/weapon/material/knife/machete,
-/obj/item/weapon/material/fishing_net,
-/obj/item/weapon/storage/backpack/sport,
-/obj/item/weapon/storage/backpack/sport,
+/obj/item/material/knife/machete,
+/obj/item/material/fishing_net,
+/obj/item/storage/backpack/sport,
+/obj/item/storage/backpack/sport,
 /obj/item/clothing/accessory/storage/black_drop_pouches,
 /obj/item/clothing/accessory/storage/black_drop_pouches,
-/obj/item/weapon/storage/belt,
+/obj/item/storage/belt,
 /obj/item/clothing/accessory/poncho/thermal,
 /obj/machinery/smartfridge/survival_pod{
 	desc = "A mysterious machine which can fabricate many tools for acquiring test subjects.";
@@ -1650,15 +1567,10 @@
 /area/survivalpod/superpose/LargeAlienShip)
 "Fd" = (
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8";
-	dir = 1
+	icon_state = "4-8"
 	},
 /turf/simulated/floor,
 /area/survivalpod/superpose/LargeAlienShip)
@@ -1716,8 +1628,6 @@
 /area/survivalpod/superpose/LargeAlienShip)
 "HW" = (
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -1726,9 +1636,9 @@
 /obj/structure/closet/alien,
 /obj/item/clothing/suit/space/void/autolok,
 /obj/item/clothing/suit/space/void/autolok,
-/obj/item/weapon/tank/emergency/oxygen/double,
-/obj/item/weapon/tank/emergency/oxygen/double,
-/obj/item/weapon/storage/toolbox/emergency,
+/obj/item/tank/emergency/oxygen/double,
+/obj/item/tank/emergency/oxygen/double,
+/obj/item/storage/toolbox/emergency,
 /turf/simulated/shuttle/floor/alien,
 /area/survivalpod/superpose/LargeAlienShip)
 "Ib" = (
@@ -1739,14 +1649,9 @@
 /area/survivalpod/superpose/LargeAlienShip)
 "Ip" = (
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 4;
-	icon_state = "2-4";
-	dir = 8
+	icon_state = "2-8"
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -1756,9 +1661,9 @@
 /obj/structure/window/reinforced/survival_pod{
 	dir = 1
 	},
-/obj/item/weapon/paper_bin,
-/obj/item/weapon/folder/yellow,
-/obj/item/weapon/pen/reagent/paralysis,
+/obj/item/paper_bin,
+/obj/item/folder/yellow,
+/obj/item/pen/reagent/paralysis,
 /turf/simulated/shuttle/floor/voidcraft,
 /area/survivalpod/superpose/LargeAlienShip)
 "Iy" = (
@@ -1780,7 +1685,6 @@
 	dir = 4
 	},
 /obj/structure/cable/yellow{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /turf/simulated/floor,
@@ -1851,9 +1755,7 @@
 "KT" = (
 /obj/machinery/power/terminal,
 /obj/structure/cable/yellow{
-	d2 = 8;
-	icon_state = "0-8";
-	dir = 2
+	icon_state = "0-8"
 	},
 /turf/simulated/floor,
 /area/survivalpod/superpose/LargeAlienShip)
@@ -1886,8 +1788,7 @@
 	id = "reactorblastalien";
 	name = "Reactor Blast Doors";
 	pixel_x = -25;
-	pixel_y = 6;
-	req_access = null
+	pixel_y = 6
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/survivalpod/superpose/LargeAlienShip)
@@ -1897,8 +1798,6 @@
 	dir = 1
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor,
@@ -1927,7 +1826,7 @@
 "NI" = (
 /obj/structure/table/alien/blue,
 /obj/structure/window/reinforced/survival_pod,
-/obj/item/weapon/clipboard,
+/obj/item/clipboard,
 /turf/simulated/shuttle/floor/voidcraft,
 /area/survivalpod/superpose/LargeAlienShip)
 "NP" = (
@@ -1951,8 +1850,6 @@
 	dir = 4
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor,
@@ -2052,8 +1949,6 @@
 /area/survivalpod/superpose/LargeAlienShip)
 "SK" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -2106,13 +2001,9 @@
 /area/survivalpod/superpose/LargeAlienShip)
 "Um" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -2121,9 +2012,9 @@
 /obj/structure/closet/alien,
 /obj/item/clothing/suit/space/void/autolok,
 /obj/item/clothing/suit/space/void/autolok,
-/obj/item/weapon/tank/emergency/oxygen/double,
-/obj/item/weapon/tank/emergency/oxygen/double,
-/obj/item/weapon/storage/toolbox/emergency,
+/obj/item/tank/emergency/oxygen/double,
+/obj/item/tank/emergency/oxygen/double,
+/obj/item/storage/toolbox/emergency,
 /obj/effect/floor_decal/techfloor,
 /turf/simulated/floor/tiled/techmaint,
 /area/survivalpod/superpose/LargeAlienShip)
@@ -2151,51 +2042,51 @@
 /turf/simulated/floor/wood/sif,
 /area/survivalpod/superpose/LargeAlienShip)
 "Vt" = (
-/obj/item/device/gps,
+/obj/item/gps,
 /obj/item/sticky_pad/random,
-/obj/item/device/starcaster_news,
-/obj/item/weapon/pen/blue,
-/obj/item/device/pda,
-/obj/item/weapon/card/id/external,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
-/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
-/obj/item/weapon/reagent_containers/food/snacks/sosjerky,
-/obj/item/weapon/reagent_containers/food/snacks/sosjerky,
-/obj/item/weapon/gun/energy/locked/phasegun/pistol,
-/obj/item/weapon/material/knife/tacknife/survival,
+/obj/item/starcaster_news,
+/obj/item/pen/blue,
+/obj/item/pda,
+/obj/item/card/id/external,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/reagent_containers/food/snacks/sosjerky,
+/obj/item/reagent_containers/food/snacks/sosjerky,
+/obj/item/gun/energy/locked/phasegun/pistol,
+/obj/item/material/knife/tacknife/survival,
 /obj/item/clothing/accessory/permit/gun,
-/obj/item/device/camera,
-/obj/item/device/binoculars,
-/obj/item/device/threadneedle,
+/obj/item/camera,
+/obj/item/binoculars,
+/obj/item/threadneedle,
 /obj/random/soap,
-/obj/item/weapon/towel/random,
+/obj/item/towel/random,
 /obj/item/bodybag/cryobag,
-/obj/item/device/flashlight/flare,
-/obj/item/device/flashlight/flare,
-/obj/item/device/flashlight/color/yellow,
-/obj/item/device/radio,
-/obj/item/device/radio,
-/obj/item/weapon/flame/lighter/random,
-/obj/item/weapon/cell/device/hyper,
-/obj/item/weapon/cell/device/hyper,
-/obj/item/weapon/extinguisher/mini,
-/obj/item/weapon/reagent_containers/glass/beaker/vial/tricordrazine,
-/obj/item/weapon/reagent_containers/glass/beaker/vial/tricordrazine,
-/obj/item/weapon/reagent_containers/pill/spaceacillin,
-/obj/item/weapon/reagent_containers/pill/spaceacillin,
-/obj/item/device/fbp_backup_cell,
-/obj/item/device/fbp_backup_cell,
-/obj/item/device/suit_cooling_unit/emergency,
+/obj/item/flashlight/flare,
+/obj/item/flashlight/flare,
+/obj/item/flashlight/color/yellow,
+/obj/item/radio,
+/obj/item/radio,
+/obj/item/flame/lighter/random,
+/obj/item/cell/device/hyper,
+/obj/item/cell/device/hyper,
+/obj/item/extinguisher/mini,
+/obj/item/reagent_containers/glass/beaker/vial/tricordrazine,
+/obj/item/reagent_containers/glass/beaker/vial/tricordrazine,
+/obj/item/reagent_containers/pill/spaceacillin,
+/obj/item/reagent_containers/pill/spaceacillin,
+/obj/item/fbp_backup_cell,
+/obj/item/fbp_backup_cell,
+/obj/item/suit_cooling_unit/emergency,
 /obj/item/stack/nanopaste,
-/obj/item/weapon/reagent_containers/hypospray/autoinjector/biginjector/clotting,
-/obj/item/weapon/storage/backpack/messenger,
+/obj/item/reagent_containers/hypospray/autoinjector/biginjector/clotting,
+/obj/item/storage/backpack/messenger,
 /obj/item/clothing/accessory/storage/black_drop_pouches,
 /obj/item/clothing/accessory/poncho/thermal,
-/obj/item/weapon/storage/box/survival/comp,
-/obj/item/weapon/storage/toolbox/brass,
-/obj/item/weapon/storage/box/khcrystal,
+/obj/item/storage/box/survival/comp,
+/obj/item/storage/toolbox/brass,
+/obj/item/storage/box/khcrystal,
 /obj/structure/closet/walllocker_double/west,
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/LargeAlienShip)
@@ -2212,13 +2103,9 @@
 "VD" = (
 /obj/machinery/power/tesla_coil,
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8";
-	dir = 1
+	icon_state = "4-8"
 	},
 /obj/structure/cable/yellow{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -2226,7 +2113,6 @@
 "VF" = (
 /obj/machinery/power/smes/buildable/point_of_interest,
 /obj/structure/cable/yellow{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /turf/simulated/floor,
@@ -2252,7 +2138,6 @@
 /area/survivalpod/superpose/LargeAlienShip)
 "Wv" = (
 /obj/structure/cable{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/machinery/power/apc/hyper{
@@ -2289,10 +2174,7 @@
 /area/survivalpod/superpose/LargeAlienShip)
 "Xc" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8";
-	dir = 1
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/survivalpod/superpose/LargeAlienShip)
@@ -2363,10 +2245,10 @@
 	},
 /obj/item/stack/cable_coil/green,
 /obj/item/stack/cable_coil/blue,
-/obj/item/weapon/storage/briefcase/inflatable,
-/obj/item/weapon/storage/briefcase/inflatable,
-/obj/item/weapon/storage/briefcase/inflatable,
-/obj/item/weapon/storage/briefcase/inflatable,
+/obj/item/storage/briefcase/inflatable,
+/obj/item/storage/briefcase/inflatable,
+/obj/item/storage/briefcase/inflatable,
+/obj/item/storage/briefcase/inflatable,
 /obj/structure/closet/alien,
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/LargeAlienShip)
@@ -2378,10 +2260,7 @@
 	dir = 8
 	},
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8";
-	dir = 1
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/survivalpod/superpose/LargeAlienShip)
@@ -2396,7 +2275,7 @@
 	name = "Laser Armor"
 	},
 /obj/structure/table/rack/shelf/steel,
-/obj/item/weapon/gun/energy/crossbow/largecrossbow,
+/obj/item/gun/energy/crossbow/largecrossbow,
 /turf/simulated/shuttle/floor/darkred,
 /area/survivalpod/superpose/LargeAlienShip)
 "XY" = (
@@ -2431,9 +2310,9 @@
 /obj/structure/closet/alien,
 /obj/item/clothing/suit/space/void/autolok,
 /obj/item/clothing/suit/space/void/autolok,
-/obj/item/weapon/tank/emergency/oxygen/double,
-/obj/item/weapon/tank/emergency/oxygen/double,
-/obj/item/weapon/storage/toolbox/emergency,
+/obj/item/tank/emergency/oxygen/double,
+/obj/item/tank/emergency/oxygen/double,
+/obj/item/storage/toolbox/emergency,
 /turf/simulated/floor/tiled/techfloor,
 /area/survivalpod/superpose/LargeAlienShip)
 "YP" = (
@@ -2471,7 +2350,6 @@
 	dir = 1
 	},
 /obj/structure/cable/yellow{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /turf/simulated/floor,
@@ -2479,8 +2357,6 @@
 "ZN" = (
 /obj/effect/floor_decal/techfloor,
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/shuttle/floor/alienplating,

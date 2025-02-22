@@ -1,17 +1,16 @@
-import { BooleanLike } from 'common/react';
 import { useState } from 'react';
-
-import { useBackend } from '../backend';
+import { useBackend } from 'tgui/backend';
+import { Window } from 'tgui/layouts';
 import {
   Box,
   Button,
   Divider,
-  Flex,
   Section,
+  Stack,
   Tabs,
   TextArea,
-} from '../components';
-import { Window } from '../layouts';
+} from 'tgui-core/components';
+import type { BooleanLike } from 'tgui-core/react';
 
 type data = {
   mode_select: BooleanLike; // Data for emote/talk. 0 for talk, 1 for emote
@@ -31,35 +30,35 @@ export const EntityNarrate = (props) => {
     <Window width={800} height={470} theme="abstract">
       <Window.Content scrollable>
         <Section>
-          <Flex>
-            <Flex.Item scrollable grow={2} fill>
+          <Stack>
+            <Stack.Item grow={2}>
               <Section scrollable>
                 <EntitySelection />
               </Section>
-            </Flex.Item>
-            <Flex.Item grow={0.25} fill>
+            </Stack.Item>
+            <Stack.Item grow={0.25}>
               <Divider vertical />
-            </Flex.Item>
-            <Flex.Item grow={6.75} fill>
+            </Stack.Item>
+            <Stack.Item grow={6.75}>
               <Section>
-                <Flex direction="column" justify="space-between">
-                  <Flex.Item Flex>
+                <Stack direction="column" justify="space-between">
+                  <Stack.Item>
                     <Section title="Details">
                       <DisplayDetails />
                     </Section>
-                  </Flex.Item>
-                  <Flex.Item Flex>
+                  </Stack.Item>
+                  <Stack.Item>
                     <Section title="Select Behaviour">
                       <ModeSelector />
                     </Section>
-                  </Flex.Item>
-                  <Flex.Item Flex>
+                  </Stack.Item>
+                  <Stack.Item>
                     <NarrationInput />
-                  </Flex.Item>
-                </Flex>
+                  </Stack.Item>
+                </Stack>
               </Section>
-            </Flex.Item>
-          </Flex>
+            </Stack.Item>
+          </Stack>
         </Section>
       </Window.Content>
     </Window>
@@ -72,17 +71,17 @@ export const EntitySelection = (props) => {
   const { act, data } = useBackend<data>();
   const { selection_mode, multi_id_selection, entity_names } = data;
   return (
-    <Flex direction="column" grow>
-      <Flex.Item>
+    <Stack direction="column">
+      <Stack.Item>
         <Section
           title="Choose!"
           buttons={
             <Button
               selected={selection_mode}
-              fill
-              content="Multi-Selection"
               onClick={() => act('change_mode_multi')}
-            />
+            >
+              Multi-Selection
+            </Button>
           }
         >
           <Tabs vertical>
@@ -97,8 +96,8 @@ export const EntitySelection = (props) => {
             ))}
           </Tabs>
         </Section>
-      </Flex.Item>
-    </Flex>
+      </Stack.Item>
+    </Stack>
   );
 };
 
@@ -133,8 +132,8 @@ export const ModeSelector = (props) => {
   const { privacy_select, mode_select } = data;
 
   return (
-    <Flex direction="row">
-      <Flex.Item grow>
+    <Stack direction="row">
+      <Stack.Item grow>
         <Button
           onClick={() => act('change_mode_privacy')}
           selected={privacy_select}
@@ -146,10 +145,11 @@ export const ModeSelector = (props) => {
               ? 'Click here to disable subtle mode'
               : 'Click here to enable subtle mode')
           }
-          content={privacy_select ? 'Currently: Subtle' : 'Currently: Loud'}
-        />
-      </Flex.Item>
-      <Flex.Item grow>
+        >
+          {privacy_select ? 'Currently: Subtle' : 'Currently: Loud'}
+        </Button>
+      </Stack.Item>
+      <Stack.Item grow>
         <Button
           onClick={() => act('change_mode_narration')}
           selected={mode_select}
@@ -161,10 +161,11 @@ export const ModeSelector = (props) => {
               ? 'Click here to emote visibly.'
               : 'Click here to talk audiably.')
           }
-          content={mode_select ? 'Currently: Emoting' : 'Currently: Talking'}
-        />
-      </Flex.Item>
-    </Flex>
+        >
+          {mode_select ? 'Currently: Emoting' : 'Currently: Talking'}
+        </Button>
+      </Stack.Item>
+    </Stack>
   );
 };
 
@@ -175,21 +176,20 @@ export const NarrationInput = (props) => {
     <Section
       title="Narration Text"
       buttons={
-        <Button
-          onClick={() => act('narrate', { message: narration })}
-          content="Send Narration"
-        />
+        <Button onClick={() => act('narrate', { message: narration })}>
+          Send Narration
+        </Button>
       }
     >
-      <Flex>
-        <Flex.Item width="85%">
+      <Stack>
+        <Stack.Item width="85%">
           <TextArea
             height={'18rem'}
             onChange={(e, val) => setNarration(val)}
             value={narration || ''}
           />
-        </Flex.Item>
-      </Flex>
+        </Stack.Item>
+      </Stack>
     </Section>
   );
 };

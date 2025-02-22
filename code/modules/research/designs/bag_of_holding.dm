@@ -10,8 +10,9 @@
 	id = "ore_holding"
 	req_tech = list(TECH_BLUESPACE = 2, TECH_MATERIAL = 3)
 	materials = list(MAT_GOLD = 1000, MAT_DIAMOND = 500, MAT_URANIUM = 250) // Less expensive since it can only hold ores
-	build_path = /obj/item/weapon/storage/bag/ore/holding
+	build_path = /obj/item/storage/bag/ore/holding
 	sort_string = "QAAAA"
+	department = LATHE_ALL | LATHE_CARGO // CHOMPAdd
 
 /datum/design/item/boh/bag_holding
 	name = "Bag of Holding"
@@ -19,7 +20,7 @@
 	id = "bag_holding"
 	req_tech = list(TECH_BLUESPACE = 4, TECH_MATERIAL = 6)
 	materials = list(MAT_GOLD = 3000, MAT_DIAMOND = 1500, MAT_URANIUM = 250)
-	build_path = /obj/item/weapon/storage/backpack/holding
+	build_path = /obj/item/storage/backpack/holding
 	sort_string = "QAAAA"
 
 /datum/design/item/boh/dufflebag_holding
@@ -28,7 +29,7 @@
 	id = "dufflebag_holding"
 	req_tech = list(TECH_BLUESPACE = 4, TECH_MATERIAL = 6)
 	materials = list(MAT_GOLD = 3000, MAT_DIAMOND = 1500, MAT_URANIUM = 250)
-	build_path = /obj/item/weapon/storage/backpack/holding/duffle
+	build_path = /obj/item/storage/backpack/holding/duffle
 	sort_string = "QAAAB"
 
 /datum/design/item/boh/trashbag_holding
@@ -36,35 +37,37 @@
 	desc = "Considerably more utilitarian than the Bag of Holding, the Trashbag of Holding is a janitor's best friend."
 	id = "trashbag_holding"
 	req_tech = list(TECH_BLUESPACE = 3, TECH_MATERIAL = 5)
-	materials = list("gold" = 2000, "diamond" = 1000, "uranium" = 250)
-	build_path = /obj/item/weapon/storage/bag/trash/holding
+	materials = list(MAT_GOLD = 2000, MAT_DIAMOND = 1000, MAT_URANIUM = 250)
+	build_path = /obj/item/storage/bag/trash/holding
 	sort_string = "QAAAC"
+	department = LATHE_ALL | LATHE_SERVICE // CHOMPAdd
 
 /datum/design/item/boh/pouch_holding
 	name = "Pouch of Holding"
 	desc = "Somehow compresses the storage of a backpack into a pouch-sized container!"
 	id = "pouch_holding"
 	req_tech = list(TECH_BLUESPACE = 3, TECH_MATERIAL = 5)
-	materials = list("gold" = 3000, "diamond" = 2000, "uranium" = 250)
-	build_path = /obj/item/weapon/storage/pouch/holding
+	materials = list(MAT_GOLD = 3000, MAT_DIAMOND = 2000, MAT_URANIUM = 250)
+	build_path = /obj/item/storage/pouch/holding
 	sort_string = "QAAAD"
-	
+
 
 /datum/design/item/boh/belt_holding_med
 	name = "Medical Belt of Holding"
 	desc = "A belt that uses localized bluespace pockets to hold more items than expected!"
 	id = "belt_holding_med"
 	req_tech = list(TECH_BLUESPACE = 4, TECH_MATERIAL = 6)
-	materials = list("gold" = 3000, "diamond" = 2000, "titanium" = 500)
-	build_path = /obj/item/weapon/storage/belt/medical/holding
+	materials = list(MAT_GOLD = 3000, MAT_DIAMOND = 2000, MAT_TITANIUM = 500)
+	build_path = /obj/item/storage/belt/medical/holding
 	sort_string = "QAAAE"
+	department = LATHE_ALL | LATHE_MEDICAL // CHOMPAdd
 
 /datum/design/item/boh/belt_holding_utility
 	name = "Tool-Belt of Holding"
 	desc = "A belt that uses localized bluespace pockets to hold more items than expected!"
 	id = "belt_holding_utility"
 	req_tech = list(TECH_BLUESPACE = 4, TECH_MATERIAL = 6)
-	materials = list("gold" = 3000, "diamond" = 2000, "titanium" = 500)
-	build_path = /obj/item/weapon/storage/belt/utility/holding
+	materials = list(MAT_GOLD = 3000, MAT_DIAMOND = 2000, MAT_TITANIUM = 500)
+	build_path = /obj/item/storage/belt/utility/holding
 	sort_string = "QAAAF"
-	
+	department = LATHE_ALL | LATHE_ENGINEERING // CHOMPAdd

@@ -21,11 +21,6 @@
 	name = "WolfTG (Taur)"
 	icon_state = "wolf2_s"
 
-/datum/sprite_accessory/tail/taur/wolf/wolf_2fat
-	icon = 'icons/mob/vore/taurs_yw.dmi' //CHOMP Fix
-	name = "Fat Wolf (Taur)"
-	icon_state = "wolf2f_s"
-
 /datum/sprite_accessory/tail/taur/long_lizard
 	name = "Large Dragon Tail"
 	icon_state = "big_liz"

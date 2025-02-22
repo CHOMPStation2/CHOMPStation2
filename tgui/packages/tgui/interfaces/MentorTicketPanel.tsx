@@ -1,7 +1,8 @@
 /* eslint react/no-danger: "off" */
-import { useBackend } from '../backend';
-import { Box, Button, LabeledList, Section } from '../components';
-import { Window } from '../layouts';
+import { useBackend } from 'tgui/backend';
+import { Window } from 'tgui/layouts';
+import { Box, Button, LabeledList, Section } from 'tgui-core/components';
+import { round, toFixed } from 'tgui-core/math';
 
 const State = {
   open: 'Open',
@@ -26,7 +27,6 @@ export const MentorTicketPanel = (props) => {
   const { act, data } = useBackend<Data>();
   const {
     id,
-    title,
     name,
     state,
     opened_at,
@@ -43,12 +43,10 @@ export const MentorTicketPanel = (props) => {
           title={'Ticket #' + id}
           buttons={
             <Box nowrap>
-              <Button
-                icon="arrow-up"
-                content="Escalate"
-                onClick={() => act('escalate')}
-              />{' '}
-              <Button content="Legacy UI" onClick={() => act('legacy')} />
+              <Button icon="arrow-up" onClick={() => act('escalate')}>
+                Escalate
+              </Button>
+              <Button onClick={() => act('legacy')}>Legacy UI</Button>
             </Box>
           }
         >
@@ -59,14 +57,18 @@ export const MentorTicketPanel = (props) => {
             <LabeledList.Item label="State">{State[state]}</LabeledList.Item>
             {State[state] === State.open ? (
               <LabeledList.Item label="Opened At">
-                {opened_at_date} ({Math.round((opened_at / 600) * 10) / 10}{' '}
-                minutes ago.)
+                {opened_at_date +
+                  ' (' +
+                  toFixed(round((opened_at / 600) * 10, 0) / 10, 1) +
+                  ' minutes ago.)'}
               </LabeledList.Item>
             ) : (
               <LabeledList.Item label="Closed At">
-                {closed_at_date} ({Math.round((closed_at / 600) * 10) / 10}{' '}
-                minutes ago.){' '}
-                <Button content="Reopen" onClick={() => act('reopen')} />
+                {closed_at_date +
+                  ' (' +
+                  toFixed(round((closed_at / 600) * 10, 0) / 10, 1) +
+                  ' minutes ago.)'}
+                <Button onClick={() => act('reopen')}>Reopen</Button>
               </LabeledList.Item>
             )}
             <LabeledList.Item label="Actions">

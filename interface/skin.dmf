@@ -124,10 +124,10 @@ macro "borghotkeymode"
 		command = "a-intent left"
 	elem
 		name = "5"
-		command = ".me"
+		command = "Me-verb"
 	elem
 		name = "6"
-		command = ".Subtle"
+		command = "Subtle-verb"
 	elem
 		name = "A"
 		command = "KeyDown A"
@@ -178,7 +178,7 @@ macro "borghotkeymode"
 		command = "KeyUp S"
 	elem
 		name = "T"
-		command = ".say"
+		command = "Say-verb"
 	elem "w_key"
 		name = "W"
 		command = "KeyDown W"
@@ -193,10 +193,10 @@ macro "borghotkeymode"
 		command = ".northeast"
 	elem
 		name = "Y"
-		command = ".Whisper"
+		command = "Whisper-verb"
 	elem
 		name = "CTRL+Y"
-		command = ".Whisper"
+		command = "Whisper-verb"
 	elem
 		name = "Z"
 		command = "Activate-Held-Object"
@@ -244,10 +244,10 @@ macro "borghotkeymode"
 		command = ".screenshot"
 	elem
 		name = "F3"
-		command = ".say"
+		command = "Say-verb"
 	elem
 		name = "F4"
-		command = ".me"
+		command = "Me-verb"
 	elem
 		name = "F5"
 		command = "asay"
@@ -474,10 +474,10 @@ macro "macro"
 		command = ".screenshot"
 	elem
 		name = "F3"
-		command = ".say"
+		command = "Say-verb"
 	elem
 		name = "F4"
-		command = ".me"
+		command = "Me-verb"
 	elem
 		name = "F5"
 		command = "asay"
@@ -626,10 +626,10 @@ macro "hotkeymode"
 		command = "a-intent harm"
 	elem
 		name = "5"
-		command = ".me"
+		command = "Me-verb"
 	elem
 		name = "6"
-		command = ".Subtle"
+		command = "Subtle-verb"
 	elem
 		name = "A"
 		command = "KeyDown A"
@@ -692,7 +692,7 @@ macro "hotkeymode"
 		command = "KeyUp S"
 	elem
 		name = "T"
-		command = ".say"
+		command = "Say-verb"
 	elem "w_key"
 		name = "W"
 		command = "KeyDown W"
@@ -707,10 +707,10 @@ macro "hotkeymode"
 		command = ".northeast"
 	elem
 		name = "Y"
-		command = ".Whisper"
+		command = "Whisper-verb"
 	elem
 		name = "CTRL+Y"
-		command = ".Whisper"
+		command = "Whisper-verb"
 	elem
 		name = "Z"
 		command = "Activate-Held-Object"
@@ -720,6 +720,12 @@ macro "hotkeymode"
 	elem
 		name = "U"
 		command = "Rest"
+	elem
+		name = "SHIFT+U"
+		command = "Rest-Left"
+	elem
+		name = "CTRL+U"
+		command = "Rest-Right"
 	elem
 		name = "B"
 		command = "Resist"
@@ -761,10 +767,10 @@ macro "hotkeymode"
 		command = ".screenshot"
 	elem
 		name = "F3"
-		command = ".say"
+		command = "Say-verb"
 	elem
 		name = "F4"
-		command = ".me"
+		command = "Me-verb"
 	elem
 		name = "F5"
 		command = "asay"
@@ -786,7 +792,12 @@ macro "hotkeymode"
 	elem
 		name = "CTRL+SHIFT+SUBTRACT"
 		command = "planedown"
-
+//	elem	// CHOMPREMOVE Start
+//		name = "Space"
+//		command = ".throwon"
+//	elem
+//		name = "Space+UP"
+//		command = ".throwoff" // CHOMPREMOVE End
 macro "borgmacro"
 	elem
 		name = "TAB"
@@ -985,10 +996,10 @@ macro "borgmacro"
 		command = ".screenshot"
 	elem
 		name = "F3"
-		command = ".say"
+		command = "Say-verb"
 	elem
 		name = "F4"
-		command = ".me"
+		command = "Me-verb"
 	elem
 		name = "F5"
 		command = "asay"
@@ -1143,6 +1154,20 @@ menu "menu"
 		command = "hotkeys-help"
 		category = "&Help"
 		saved-params = "is-checked"
+	elem
+		name = "&Preferences"
+		command = ""
+		saved-params = "is-checked"
+	elem
+		name = "&Character Setup"
+		command = "character-setup"
+		category = "&Preferences"
+		saved-params = "is-checked"
+	elem
+		name = "&Game Options"
+		command = "game-options"
+		category = "&Preferences"
+		saved-params = "is-checked"
 
 window "mainwindow"
 	elem "mainwindow"
@@ -1224,6 +1249,15 @@ window "mainwindow"
 		anchor2 = -1,-1
 		is-visible = false
 		saved-params = ""
+	elem "commandbar_spy"
+		type = BROWSER
+		is-default = false
+		pos = 0,0
+		size = 200x200
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		is-visible = false
+		saved-params = ""
 
 window "mapwindow"
 	elem "mapwindow"
@@ -1253,7 +1287,48 @@ window "mapwindow"
 window "outputwindow"
 	elem "outputwindow"
 		type = MAIN
-		pos = 281,0
+		pos = 0,0
+		size = 640x480
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		background-color = none
+		saved-params = "pos;size;is-minimized;is-maximized"
+		is-pane = true
+	elem "legacy_output_selector"
+		type = CHILD
+		pos = 0,0
+		size = 640x480
+		anchor1 = 0,0
+		anchor2 = 100,100
+		saved-params = "splitter"
+		left = "output_legacy"
+		is-vert = false
+
+window "output_legacy"
+	elem "output_legacy"
+		type = MAIN
+		pos = 0,0
+		size = 640x480
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		background-color = none
+		saved-params = "pos;size;is-minimized;is-maximized"
+		is-pane = true
+	elem "output"
+		type = OUTPUT
+		pos = 0,0
+		size = 640x480
+		anchor1 = 0,0
+		anchor2 = 100,100
+		is-default = true
+		saved-params = "max-lines"
+		style = ".system {color:#FF0000;}"
+		enable-http-images = true
+
+window "output_browser"
+	elem "output_browser"
+		type = MAIN
+		pos = 0,0
 		size = 640x480
 		anchor1 = -1,-1
 		anchor2 = -1,-1
@@ -1268,19 +1343,8 @@ window "outputwindow"
 		size = 640x480
 		anchor1 = 0,0
 		anchor2 = 100,100
-		is-visible = false
-		is-disabled = true
+		background-color = none
 		saved-params = ""
-	elem "output"
-		type = OUTPUT
-		pos = 0,0
-		size = 640x480
-		anchor1 = 0,0
-		anchor2 = 100,100
-		is-default = true
-		saved-params = ""
-		style = ".system {color:#FF0000;}"
-		enable-http-images = true
 
 window "prefs_markings_subwindow"
 	elem "prefs_markings_subwindow"
@@ -1428,7 +1492,7 @@ window "rpane"
 		is-visible = false
 		saved-params = "is-checked"
 		text = "Info"
-		command = ".winset \"rpanewindow.left=infowindow\""
+		command = ".winset \"rpanewindow.left=statwindow\""
 		group = "rpanemode"
 		button-type = pushbox
 	elem "mediapanel"
@@ -1485,28 +1549,6 @@ window "ooc_notes"
 		anchor2 = 80,100
 		saved-params = ""
 
-window "infowindow"
-	elem "infowindow"
-		type = MAIN
-		pos = 281,0
-		size = 640x480
-		anchor1 = -1,-1
-		anchor2 = -1,-1
-		saved-params = "pos;size;is-minimized;is-maximized"
-		title = "Info"
-		is-pane = true
-	elem "statbrowser"
-		type = BROWSER
-		pos = 0,0
-		size = 638x477
-		anchor1 = 0,0
-		anchor2 = 100,100
-		is-default = false
-		saved-params = ""
-		highlight-color = #00aa00
-		//on-show = ".winset\"rpane.infob.is-visible=true;rpane.browseb.is-visible=true?rpane.infob.pos=130,0:rpane.infob.pos=65,0 rpane.textb.is-visible=true rpane.infob.is-checked=true rpane.rpanewindow.pos=0,30 rpane.rpanewindow.size=0x0 rpane.rpanewindow.left=infowindow\""
-		//on-hide = ".winset\"rpane.infob.is-visible=false;rpane.browseb.is-visible=true?rpane.browseb.is-checked=true rpane.rpanewindow.left=browserwindow:rpane.textb.is-visible=true rpane.rpanewindow.pos=0,30 rpane.rpanewindow.size=0x0 rpane.rpanewindow.left=\""
-
 window "text_editor"
 	elem "text_editor"
 		type = MAIN
@@ -1556,6 +1598,42 @@ window "text_editor"
 		border = line
 		saved-params = ""
 		multi-line = true
+
+window "statwindow"
+	elem "statwindow"
+		type = MAIN
+		pos = 281,0
+		size = 640x480
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		saved-params = "pos;size;is-minimized;is-maximized"
+		is-pane = true
+	elem "statbrowser"
+		type = BROWSER
+		pos = 0,0
+		size = 638x477
+		anchor1 = 0,0
+		anchor2 = 100,100
+		is-visible = false
+
+window "tgui_say"
+	elem "tgui_say"
+		type = MAIN
+		pos = 410,400
+		size = 360x30
+		anchor1 = 50,50
+		anchor2 = 50,50
+		is-visible = false
+		saved-params = ""
+		statusbar = false
+		can-minimize = false
+	elem "browser"
+		type = BROWSER
+		pos = 0,0
+		size = 360x30
+		anchor1 = 0,0
+		anchor2 = 0,0
+		saved-params = ""
 
 window "statwindow"
 	elem "statwindow"

@@ -8,10 +8,10 @@
  * tgui_interact() is the proc that opens the UI. It doesn't really do anything else, unlike NanoV1.
  * We add an extra argument, custom_state, for the things that want a custom state for their UI.
  */
-/obj/item/weapon/rig/tgui_interact(mob/user, datum/tgui/ui, datum/tgui/parent_ui, datum/tgui_state/custom_state)
+/obj/item/rig/tgui_interact(mob/user, datum/tgui/ui, datum/tgui/parent_ui, datum/tgui_state/custom_state)
 	ui = SStgui.try_update_ui(user, src, ui)
 	if(!ui)
-		ui = new(user, src, (loc != usr ? ai_interface_path : interface_path), interface_title)
+		ui = new(user, src, (loc != user ? ai_interface_path : interface_path), interface_title)
 		ui.open()
 	if(custom_state)
 		ui.set_state(custom_state)
@@ -19,7 +19,7 @@
 /*
  * tgui_state() gives the UI the state to use by default.
  */
-/obj/item/weapon/rig/tgui_state()
+/obj/item/rig/tgui_state()
 	return GLOB.tgui_inventory_state
 
 /*
@@ -28,7 +28,7 @@
  * not authorized to do so.
  * This saves us two lines of code in tgui_act().
  */
-/obj/item/weapon/rig/tgui_status(mob/user, datum/tgui_state/state)
+/obj/item/rig/tgui_status(mob/user, datum/tgui_state/state)
 	. = ..()
 	if(!check_suit_access(user, FALSE)) // don't send a message to the user, this is a UI thing
 		// Forces the UI to never go interactive,
@@ -38,7 +38,7 @@
 /*
  * tgui_data() is the heavy lifter, it gives the UI it's relevant datastructure every SStgui tick.
  */
-/obj/item/weapon/rig/tgui_data(mob/user)
+/obj/item/rig/tgui_data(mob/user)
 	var/list/data = list()
 
 	if(selected_module)
@@ -120,19 +120,19 @@
 /*
  * tgui_act() is the TGUI equivelent of Topic(). It's responsible for all of the "actions" you can take in the UI.
  */
-/obj/item/weapon/rig/tgui_act(action, params)
+/obj/item/rig/tgui_act(action, params, datum/tgui/ui)
 	// This parent call is very important, as it's responsible for invoking tgui_status and checking our state's rules.
 	if(..())
 		return TRUE
 
-	add_fingerprint(usr)
+	add_fingerprint(ui.user)
 
 	switch(action)
 		if("toggle_seals")
-			toggle_seals(usr)
+			toggle_seals(ui.user)
 			. = TRUE
 		if("toggle_cooling")
-			toggle_cooling(usr) // cooling toggles have its own to_chats, tbf
+			toggle_cooling(ui.user) // cooling toggles have its own to_chats, tbf
 			. = TRUE
 		if("toggle_ai_control")
 			ai_override_enabled = !ai_override_enabled
@@ -142,9 +142,9 @@
 			locked = !locked
 			. = TRUE
 		if("toggle_piece")
-			if(ishuman(usr) && (usr.stat || usr.stunned || usr.lying))
+			if(ishuman(ui.user) && (ui.user.stat || ui.user.stunned || ui.user.lying))
 				return FALSE
-			toggle_piece(params["piece"], usr)
+			toggle_piece(params["piece"], ui.user)
 			. = TRUE
 		if("interact_module")
 			var/module_index = text2num(params["module"])
@@ -167,3 +167,6 @@
 					if("select_charge_type")
 						module.charge_selected = params["charge_type"]
 						. = TRUE
+		if("tank_settings")
+			air_supply?.attack_self(ui.user)
+			. = TRUE

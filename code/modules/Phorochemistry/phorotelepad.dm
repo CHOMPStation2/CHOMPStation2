@@ -24,25 +24,25 @@
 			//if(!M.restrained())
 			M.loc = dest.loc
 
-/obj/machinery/telepad_phoronics/attackby(obj/item/weapon/W as obj, mob/user as mob)
-	if(istype(W, /obj/item/weapon/reagent_containers))
+/obj/machinery/telepad_phoronics/attackby(obj/item/W as obj, mob/user as mob)
+	if(istype(W, /obj/item/reagent_containers))
 		user.drop_item()
 		W.loc = src.loc
-	else if(istype(W, /obj/item/weapon/tool/wrench))
+	else if(istype(W, /obj/item/tool/wrench))
 		var/word = "tighten"
 		src.anchored = !src.anchored
 		if(!src.anchored)
 			word = "undo"
 		user << "You [word] the telepad anchor bolts."
 		playsound(src.loc, 'sound/items/Ratchet.ogg', 75, 1)
-	else if(istype(W, /obj/item/weapon/tool/screwdriver) && !src.anchored)
+	else if(istype(W, /obj/item/tool/screwdriver) && !src.anchored)
 		user << "You fold the telepad."
-		new /obj/item/weapon/phoronics_telepad(src.loc)
+		new /obj/item/phoronics_telepad(src.loc)
 		del(src)
 	else
 		return ..()
 
-/obj/item/weapon/phoronics_telepad
+/obj/item/phoronics_telepad
 	name = "telepad"
 	desc = "A bluespace telepad used for teleporting objects to and from a location."
 	icon = 'icons/phoronics.dmi'
@@ -59,4 +59,4 @@
 	id = "phoronics_telepad"
 	req_tech = list("bluespace" = 2, "materials" = 3)
 	materials = list(DEFAULT_WALL_MATERIAL = 1000)
-	build_path = /obj/item/weapon/phoronics_telepad */
+	build_path = /obj/item/phoronics_telepad */

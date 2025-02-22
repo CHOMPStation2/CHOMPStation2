@@ -4,7 +4,7 @@
 /area/submap/clockwork)
 "b" = (
 /obj/structure/table/fancyblack,
-/obj/item/weapon/flame/candle/candelabra/everburn,
+/obj/item/flame/candle/candelabra/everburn,
 /turf/simulated/floor/bronze,
 /area/submap/clockwork)
 "d" = (
@@ -13,7 +13,7 @@
 "h" = (
 /obj/structure/closet/coffin,
 /obj/structure/loot_pile/surface/bones,
-/obj/item/weapon/storage/toolbox/brass,
+/obj/item/storage/toolbox/brass,
 /obj/item/clothing/suit/storage/hooded/wintercoat/ratvar,
 /turf/simulated/floor/bronze,
 /area/submap/clockwork)
@@ -35,9 +35,9 @@
 "t" = (
 /obj/structure/closet/coffin,
 /obj/structure/loot_pile/surface/bones,
-/obj/item/weapon/ratvarian_spear,
+/obj/item/ratvarian_spear,
 /obj/item/clothing/suit/storage/hooded/wintercoat/ratvar,
-/obj/item/weapon/storage/toolbox/brass,
+/obj/item/storage/toolbox/brass,
 /turf/simulated/floor/bronze,
 /area/submap/clockwork)
 "u" = (

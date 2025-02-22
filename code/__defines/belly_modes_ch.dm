@@ -8,12 +8,6 @@
 #define DM_FLAG_REAGENTSABSORB	0x4
 #define DM_FLAG_REAGENTSDRAIN	0x8
 
-//Vore Sprite Flags
-#define DM_FLAG_VORESPRITE_BELLY    0x1
-#define DM_FLAG_VORESPRITE_TAIL     0x2
-#define DM_FLAG_VORESPRITE_MARKING  0x4
-#define DM_FLAG_VORESPRITE_ARTICLE	0x8
-
 //For belly fullscreen shennanigans outside of bellies, due to Life() clearing belly fullscreens outside of bellies.
 #define ATOM_BELLY_FULLSCREEN "belly_atom_vfx"
 
@@ -40,3 +34,7 @@
 #define AT_FLAG_ORES			0x40
 #define AT_FLAG_CLOTHES			0x80
 #define AT_FLAG_FOOD			0x100
+
+//Vorespawn flags
+#define VS_FLAG_ABSORB_YES		0x1
+#define VS_FLAG_ABSORB_PREY		0x2

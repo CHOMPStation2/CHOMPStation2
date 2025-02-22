@@ -1,3 +1,5 @@
+//CHOMPEdit this file is unticked.
+
 /datum/category_item/autolathe/arms/speedloader_357_flash
 	name = "speedloader (.357 flash)"
 	path =/obj/item/ammo_magazine/s357/flash

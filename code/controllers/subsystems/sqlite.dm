@@ -7,14 +7,14 @@ SUBSYSTEM_DEF(sqlite)
 	flags = SS_NO_FIRE
 	var/database/sqlite_db = null
 
-/datum/controller/subsystem/sqlite/Initialize() // CHOMPEdit
+/datum/controller/subsystem/sqlite/Initialize()
 	connect()
 	if(sqlite_db)
 		init_schema(sqlite_db)
-	return SS_INIT_SUCCESS // CHOMPEdit
+	return SS_INIT_SUCCESS
 
 /datum/controller/subsystem/sqlite/proc/connect()
-	if(!CONFIG_GET(flag/sqlite_enabled)) // CHOMPEdit
+	if(!CONFIG_GET(flag/sqlite_enabled))
 		return
 
 	if(!sqlite_db)
@@ -104,17 +104,17 @@ SUBSYSTEM_DEF(sqlite)
 	return !sqlite_check_for_errors(query, "Insert Feedback")
 
 /datum/controller/subsystem/sqlite/proc/can_submit_feedback(client/C)
-	if(!CONFIG_GET(flag/sqlite_enabled)) // CHOMPEdit
+	if(!CONFIG_GET(flag/sqlite_enabled))
 		return FALSE
-	if(CONFIG_GET(number/sqlite_feedback_min_age) && !is_old_enough(C)) // CHOMPEdit
+	if(CONFIG_GET(number/sqlite_feedback_min_age) && !is_old_enough(C))
 		return FALSE
-	if(CONFIG_GET(number/sqlite_feedback_cooldown) > 0 && get_feedback_cooldown(C.key, CONFIG_GET(number/sqlite_feedback_cooldown), sqlite_db) > 0) // CHOMPEdit
+	if(CONFIG_GET(number/sqlite_feedback_cooldown) > 0 && get_feedback_cooldown(C.key, CONFIG_GET(number/sqlite_feedback_cooldown), sqlite_db) > 0)
 		return FALSE
 	return TRUE
 
 // Returns TRUE if the player is 'old' enough, according to the config.
 /datum/controller/subsystem/sqlite/proc/is_old_enough(client/C)
-	if(get_player_age(C.key) < CONFIG_GET(number/sqlite_feedback_min_age)) // CHOMPEdit
+	if(get_player_age(C.key) < CONFIG_GET(number/sqlite_feedback_min_age))
 		return FALSE
 	return TRUE
 

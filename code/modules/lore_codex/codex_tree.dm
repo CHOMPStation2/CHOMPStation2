@@ -71,9 +71,9 @@
 	var/datum/lore/codex/checked = current_page["[user]"]
 	if(istype(checked))
 		var/output = ""
-		output = "<b>[checked.name]</b>"
+		output = span_bold("[checked.name]")
 		while(checked.parent)
-			output = "<a href='?src=\ref[src];target=\ref[checked.parent]'>[checked.parent.name]</a> \> [output]"
+			output = "<a href='byond://?src=\ref[src];target=\ref[checked.parent]'>[checked.parent.name]</a> \> [output]"
 			checked = checked.parent
 		return output
 
@@ -129,18 +129,18 @@
 		dat += "<div class='button-group'>"
 		var/datum/lore/codex/category/C = D
 		for(var/datum/lore/codex/child in C.children)
-			dat += "<a href='?src=\ref[src];target=\ref[child]' class='button'>[child.name]</a>"
+			dat += "<a href='byond://?src=\ref[src];target=\ref[child]' class='button'>[child.name]</a>"
 		dat += "</div>"
 	dat += "<hr>"
 	var/list/H = history["[user]"]
 	if(LAZYLEN(H))
-		dat += "<br><a href='?src=\ref[src];go_back=1'>\[Go Back\]</a>"
+		dat += "<br><a href='byond://?src=\ref[src];go_back=1'>\[Go Back\]</a>"
 	if(D.parent)
-		dat += "<br><a href='?src=\ref[src];go_to_parent=1'>\[Go Up\]</a>"
+		dat += "<br><a href='byond://?src=\ref[src];go_to_parent=1'>\[Go Up\]</a>"
 	if(D != home)
-		dat += "<br><a href='?src=\ref[src];go_to_home=1'>\[Go To Home\]</a>"
+		dat += "<br><a href='byond://?src=\ref[src];go_to_home=1'>\[Go To Home\]</a>"
 	dat += "</center></body>"
-	user << browse(dat, "window=the_empress_protects;size=600x550")
+	user << browse("<html>[dat]</html>", "window=the_empress_protects;size=600x550")
 	onclose(user, "the_empress_protects", src)
 
 /datum/codex_tree/Topic(href, href_list)
@@ -164,7 +164,7 @@
 		quick_link(href_list["quick_link"], usr)
 	else if(href_list["close"])
 		// Close the book, if our holder is actually a book.
-		//if(istype(holder, /obj/item/weapon/book/codex))
+		//if(istype(holder, /obj/item/book/codex))
 			//holder.icon_state = initial(holder.icon_state)
 		usr << browse(null, "window=the_empress_protects")
 		return

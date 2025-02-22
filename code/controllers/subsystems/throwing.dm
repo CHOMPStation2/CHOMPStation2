@@ -8,11 +8,11 @@ SUBSYSTEM_DEF(throwing)
 
 	var/list/currentrun
 	var/list/processing = list()
-//CHOMPEdit Begin
+
 /datum/controller/subsystem/throwing/stat_entry(msg)
-	msg = "P:[length(processing)]"
+	msg = "P:[processing.len]"
 	return ..()
-//CHOMPEdit End
+
 /datum/controller/subsystem/throwing/fire(resumed = 0)
 	if (!resumed)
 		src.currentrun = processing.Copy()
@@ -122,7 +122,7 @@ SUBSYSTEM_DEF(throwing)
 	//calculate how many tiles to move, making up for any missed ticks.
 	var/tilestomove = CEILING(min(((((world.time+world.tick_lag) - start_time + delayed_time) * speed) - (dist_travelled ? dist_travelled : -1)), speed*MAX_TICKS_TO_MAKE_UP) * (world.tick_lag * SSthrowing.wait), 1)
 	while (tilestomove-- > 0)
-		if ((dist_travelled >= maxrange || AM.loc == target_turf) && (A && A.has_gravity()))
+		if ((dist_travelled >= maxrange || AM.loc == target_turf) && (A && A.get_gravity()))
 			finalize()
 			return
 
@@ -209,3 +209,6 @@ SUBSYSTEM_DEF(throwing)
 	if(hit_thing)
 		finalize(hit=TRUE, t_target=hit_thing)
 		return TRUE
+
+#undef MAX_THROWING_DIST
+#undef MAX_TICKS_TO_MAKE_UP

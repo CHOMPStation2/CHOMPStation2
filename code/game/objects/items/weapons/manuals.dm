@@ -1,42 +1,18 @@
 /*********************MANUALS (BOOKS)***********************/
 
-/obj/item/weapon/book/manual
+/obj/item/book/manual
 	icon = 'icons/obj/library.dmi'
 	due_date = 0 // Game time in 1/10th seconds
 	unique = 1   // 0 - Normal book, 1 - Should not be treated as normal book, unable to be copied, unable to be modified
 
-/* CHOMPEdit Start
-/obj/item/weapon/book/manual/engineering_construction
-	name = "Station Repairs and Construction"
-	icon_state ="bookEngineering"
-	item_state = "book3"
-	author = "Engineering Encyclopedia"		 // Who wrote the thing, can be changed by pen or PC. It is not automatically assigned
-	title = "Station Repairs and Construction"
-
-/obj/item/weapon/book/manual/engineering_construction/New()
-	..()
-	dat = {"
-
-		<html><head>
-		</head>
-
-		<body>
-		<iframe width='100%' height='97%' src="[CONFIG_GET(string/wikiurl)]Guide_to_Construction&printable=yes&remove_links=1" frameborder="0" id="main_frame"></iframe>
-		</body>
-
-		</html>
-
-		"}
-*/ // CHOMPEdit End
-
-/obj/item/weapon/book/manual/engineering_particle_accelerator
+/obj/item/book/manual/engineering_particle_accelerator
 	name = "Particle Accelerator User's Guide"
 	icon_state ="bookParticleAccelerator"
 	item_state = "book15"
 	author = "Engineering Encyclopedia"		 // Who wrote the thing, can be changed by pen or PC. It is not automatically assigned
 	title = "Particle Accelerator User's Guide"
 
-/obj/item/weapon/book/manual/engineering_particle_accelerator/New()
+/obj/item/book/manual/engineering_particle_accelerator/New()
 	..()
 	dat = {"<html>
 				<head>
@@ -77,14 +53,14 @@
 			"}
 
 
-/obj/item/weapon/book/manual/supermatter_engine
+/obj/item/book/manual/supermatter_engine
 	name = "Supermatter Engine Operating Manual"
 	icon_state = "bookSupermatter"
 	item_state = "book15"
 	author = "Central Engineering Division"
 	title = "Supermatter Engine Operating Manual"
 
-/obj/item/weapon/book/manual/supermatter_engine/New()
+/obj/item/book/manual/supermatter_engine/New()
 	..()			//CHOMPEdit Start - Updated Supermatter Engine Manual
 	dat = {"<html>
 				<head>
@@ -163,7 +139,7 @@
 
 // TESLA Engine
 
-/obj/item/weapon/book/manual/tesla_engine
+/obj/item/book/manual/tesla_engine
 	name = "Tesla Operating Manual"
 	icon_state ="bookTesla"
 	item_state = "book15"
@@ -233,7 +209,7 @@
 			</html>"}
 
 //R-UST port
-/obj/item/weapon/book/manual/rust_engine	// CHOMPedit START : Updating the R-UST manual
+/obj/item/book/manual/rust_engine	// CHOMPedit START : Updating the R-UST manual
 	name = "R-UST Operating Manual"
 	icon = 'icons/obj/library_ch.dmi'
 	icon_state = "bookRusty" 				// Chompedit : Changed this to a new unique R-UST manual icon rather than just re-using the Supermatter book cover sprite
@@ -242,7 +218,7 @@
 	title = "R-UST Operating Manual"
 
 //R-UST guide Re-Writen by Gozulio to reflect how the R-UST actually operates. (CHOMPedit, re-written again :3 By Foxglove)
-/obj/item/weapon/book/manual/rust_engine/New()
+/obj/item/book/manual/rust_engine/New()
 	..()
 	dat = {"<html>
 				<head>
@@ -320,31 +296,7 @@
 				</body>
 			</html>"}			// CHOMPedit END : Updating the R-UST manual
 
-/* CHOMPEdit Start
-/obj/item/weapon/book/manual/engineering_hacking
-	name = "Hacking"
-	icon_state ="bookHacking"
-	item_state = "book2"
-	author = "Engineering Encyclopedia"		 // Who wrote the thing, can be changed by pen or PC. It is not automatically assigned
-	title = "Hacking"
-
-/obj/item/weapon/book/manual/engineering_hacking/New()
-	..()
-	dat = {"
-
-		<html><head>
-		</head>
-
-		<body>
-		<iframe width='100%' height='97%' src="[CONFIG_GET(string/wikiurl)]Hacking&printable=yes&remove_links=1" frameborder="0" id="main_frame"></iframe>
-		</body>
-
-		</html>
-
-		"}
-*/ // CHOMPEdit End
-
-/obj/item/weapon/book/manual/engineering_singularity_safety
+/obj/item/book/manual/engineering_singularity_safety
 	name = "Singularity Safety in Special Circumstances"
 	icon_state ="bookEngineeringSingularitySafety"
 	item_state = "book15"
@@ -397,7 +349,7 @@
 			"}
 
 
-/obj/item/weapon/book/manual/hydroponics_pod_people
+/obj/item/book/manual/hydroponics_pod_people
 	name = "The Diona Harvest - From Seed to Market"
 	icon_state ="bookHydroponicsPodPeople"
 	item_state = "book5"
@@ -436,7 +388,7 @@
 				"}
 
 
-/obj/item/weapon/book/manual/medical_cloning
+/obj/item/book/manual/medical_cloning
 	name = "Cloning Techniques of the 26th Century"
 	icon_state ="bookCloning"
 	item_state = "book9"
@@ -530,7 +482,7 @@
 				"}
 
 
-/obj/item/weapon/book/manual/ripley_build_and_repair
+/obj/item/book/manual/ripley_build_and_repair
 	name = "APLU \"Ripley\" Construction and Operation Manual"
 	icon_state ="book"
 	item_state = "book"
@@ -608,7 +560,7 @@
 			"}
 
 
-/obj/item/weapon/book/manual/research_and_development
+/obj/item/book/manual/research_and_development
 	name = "Research and Development 101"
 	icon_state = "rdbook"
 	item_state = "book7"
@@ -677,32 +629,12 @@
 			</html>
 			"}
 
-/* CHOMPEdit Start
-/obj/item/weapon/book/manual/robotics_manual
-	name = "Guide to Robotics"
-	icon_state ="evabook"
-	item_state = "book3"
-	author = "Simple Robotics"		 // Who wrote the thing, can be changed by pen or PC. It is not automatically assigned
-	title = "Guide to Robotics"
-
-/obj/item/weapon/book/manual/robotics_manual/New()
-	..()
-	dat = {"
-		<html><head>
-		</head>
-		<body>
-		<iframe width='100%' height='97%' src="[CONFIG_GET(string/wikiurl)]Guide_to_Robotics&printable=yes&remove_links=1" frameborder="0" id="main_frame"></iframe>
-		</body>
-		</html>
-		"}
-*/ // CHOMPEdit End
-
-/obj/item/weapon/book/manual/robotics_cyborgs
-	name = "Cyborgs for Dummies"
+/obj/item/book/manual/robotics_cyborgs
+	name = JOB_CYBORG + "s for Dummies"
 	icon_state = "borgbook"
 	item_state = "book1"
 	author = "XISC"
-	title = "Cyborgs for Dummies"
+	title = JOB_CYBORG + "s for Dummies"
 
 	dat = {"<html>
 				<head>
@@ -902,110 +834,12 @@
 			</html>
 		"}
 
-
-/* CHOMPEdit Start
-/obj/item/weapon/book/manual/security_space_law
-	name = "Corporate Regulations"
-	desc = "A set of corporate guidelines for keeping law and order on privately-owned space stations."
-	icon_state = "bookSpaceLaw"
-	item_state = "book13"
-	author = "The Company"
-	title = "Corporate Regulations"
-
-/obj/item/weapon/book/manual/security_space_law/New()
-	..()
-	dat = {"
-
-		<html><head>
-		</head>
-
-		<body>
-		<iframe width='100%' height='97%' src="[CONFIG_GET(string/wikiurl)]Corporate_Regulations&printable=yes&remove_links=1" frameborder="0" id="main_frame"></iframe>
-		</body>
-
-		</html>
-
-		"}
-
-
-
-/obj/item/weapon/book/manual/medical_diagnostics_manual
-	name = "Medical Diagnostics Manual"
-	desc = "First, do no harm. A detailed medical practitioner's guide."
-	icon_state = "bookMedical"
-	item_state = "book12"
-	author = "Medical Department"
-	title = "Medical Diagnostics Manual"
-
-/obj/item/weapon/book/manual/medical_diagnostics_manual/New()
-	..()
-	dat = {"<html>
-				<head>
-				<style>
-				h1 {font-size: 18px; margin: 15px 0px 5px;}
-				h2 {font-size: 15px; margin: 15px 0px 5px;}
-				li {margin: 2px 0px 2px 15px;}
-				ul {margin: 5px; padding: 0px;}
-				ol {margin: 5px; padding: 0px 15px;}
-				body {font-size: 13px; font-family: Verdana;}
-				</style>
-				</head>
-				<body>
-				<br>
-				<h1>The Oath</h1>
-
-				<i>The Medical Oath sworn by recognised medical practitioners in the employ of [using_map.company_name]</i><br>
-
-				<ol>
-					<li>Now, as a new doctor, I solemnly promise that I will, to the best of my ability, serve humanity-caring for the sick, promoting good health, and alleviating pain and suffering.</li>
-					<li>I recognise that the practice of medicine is a privilege with which comes considerable responsibility and I will not abuse my position.</li>
-					<li>I will practise medicine with integrity, humility, honesty, and compassion-working with my fellow doctors and other colleagues to meet the needs of my patients.</li>
-					<li>I shall never intentionally do or administer anything to the overall harm of my patients.</li>
-					<li>I will not permit considerations of gender, race, religion, political affiliation, sexual orientation, nationality, or social standing to influence my duty of care.</li>
-					<li>I will oppose policies in breach of human rights and will not participate in them. I will strive to change laws that are contrary to my profession's ethics and will work towards a fairer distribution of health resources.</li>
-					<li>I will assist my patients to make informed decisions that coincide with their own values and beliefs and will uphold patient confidentiality.</li>
-					<li>I will recognise the limits of my knowledge and seek to maintain and increase my understanding and skills throughout my professional life. I will acknowledge and try to remedy my own mistakes and honestly assess and respond to those of others.</li>
-					<li>I will seek to promote the advancement of medical knowledge through teaching and research.</li>
-					<li>I make this declaration solemnly, freely, and upon my honour.</li>
-				</ol><br>
-
-				<HR COLOR="steelblue" WIDTH="60%" ALIGN="LEFT">
-
-				<iframe width='100%' height='100%' src="[CONFIG_GET(string/wikiurl)]Guide_to_Medicine&printable=yes&removelinks=1" frameborder="0" id="main_frame"></iframe>
-				</body>
-			</html>
-
-		"}
-
-
-/obj/item/weapon/book/manual/engineering_guide
-	name = "Engineering Textbook"
-	icon_state ="bookEngineering2"
-	item_state = "book3"
-	author = "Engineering Encyclopedia"
-	title = "Engineering Textbook"
-
-/obj/item/weapon/book/manual/engineering_guide/New()
-	..()
-	dat = {"
-
-		<html><head>
-		</head>
-
-		<body>
-		<iframe width='100%' height='100%' src="[CONFIG_GET(string/wikiurl)]Guide_to_Engineering&printable=yes&remove_links=1" frameborder="0" id="main_frame"></iframe>		</body>
-
-		</html>
-
-		"}
-*/ // CHOMPEdit End
-
-/obj/item/weapon/book/manual/chef_recipes
-	name = "Chef Recipes"
+/obj/item/book/manual/chef_recipes
+	name = JOB_CHEF + " Recipes"
 	icon_state = "cooked_book"
 	item_state = "book16"
 	author = "Victoria Ponsonby"
-	title = "Chef Recipes"
+	title = JOB_CHEF + " Recipes"
 
 	dat = {"<html>
 				<head>
@@ -1063,7 +897,7 @@
 			"}
 
 
-/obj/item/weapon/book/manual/barman_recipes
+/obj/item/book/manual/barman_recipes
 	name = "Barman Recipes"
 	desc = "For the enterprising drink server."
 	icon_state = "barbook"
@@ -1120,7 +954,7 @@
 			"}
 
 
-/obj/item/weapon/book/manual/detective
+/obj/item/book/manual/detective
 	name = "The Film Noir: Proper Procedures for Investigations"
 	icon_state ="bookDetective"
 	item_state = "book8"
@@ -1164,7 +998,7 @@
 				</body>
 			</html>"}
 
-/obj/item/weapon/book/manual/nuclear
+/obj/item/book/manual/nuclear
 	name = "Fission Mailed: Nuclear Sabotage 101"
 	icon_state ="bookNuclear"
 	item_state = "book8"
@@ -1216,7 +1050,7 @@
 			</html>
 			"}
 
-/obj/item/weapon/book/manual/atmospipes
+/obj/item/book/manual/atmospipes
 	name = "Pipes and You: Getting To Know Your Scary Tools"
 	icon_state = "pipingbook"
 	item_state = "book3"
@@ -1325,7 +1159,7 @@
 			</html>
 			"}
 
-/obj/item/weapon/book/manual/evaguide
+/obj/item/book/manual/evaguide
 	name = "EVA Gear and You: Not Spending All Day Inside, 2nd Edition"
 	icon_state = "evabook"
 	item_state = "book14"
@@ -1451,11 +1285,11 @@
 			</html>
 			"}
 
-/obj/item/weapon/book/manual/virology
+/obj/item/book/manual/virology
 	name = "Sneezes and Coughs: A Guide To Virology, 1st Edition"
 	icon_state = "bookvirology"
 	item_state = "book5"
-	author = "James Simpson, Chief Virologist"
+	author = "James Simpson, Chief " + JOB_ALT_VIROLOGIST
 	title = "Sneezes and Coughs: A Guide To Virology, 1st Edition"
 	dat = {"<html>
 				<head>

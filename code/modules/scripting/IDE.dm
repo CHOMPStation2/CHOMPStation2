@@ -11,7 +11,7 @@
 				var/tcscode=winget(src, "tcscode", "text")
 				var/msg="[mob.name] is adding script to server [Server]: [tcscode]"
 				log_misc(msg)
-				message_admins("[mob.name] has uploaded a NTLS script to [Machine.SelectedServer] ([mob.x],[mob.y],[mob.z] - <A HREF='?_src_=holder;[HrefToken()];adminplayerobservecoodjump=1;X=[mob.x];Y=[mob.y];Z=[mob.z]'>JMP</a>)",0,1)
+				message_admins("[mob.name] has uploaded a NTLS script to [Machine.SelectedServer] ([mob.x],[mob.y],[mob.z] - <A href='byond://?_src_=holder;[HrefToken()];adminplayerobservecoodjump=1;X=[mob.x];Y=[mob.y];Z=[mob.z]'>JMP</a>)",0,1)
 				Server.setcode( tcscode ) // this actually saves the code from input to the server
 				src << output(null, "tcserror") // clear the errors
 			else
@@ -42,7 +42,7 @@
 				src << output(null, "tcserror")
 
 				if(compileerrors.len)
-					src << output("<b>Compile Errors</b>", "tcserror")
+					src << output(span_bold("Compile Errors"), "tcserror")
 					for(var/scriptError/e in compileerrors)
 						src << output("<font color = red>\t>[e.message]</font>", "tcserror")
 					src << output("([compileerrors.len] errors)", "tcserror")
@@ -51,7 +51,7 @@
 					for(var/mob/M in Machine.viewingcode)
 						if(M.client)
 							M << output(null, "tcserror")
-							M << output("<b>Compile Errors</b>", "tcserror")
+							M << output(span_bold("Compile Errors"), "tcserror")
 							for(var/scriptError/e in compileerrors)
 								M << output("<font color = red>\t>[e.message]</font>", "tcserror")
 							M << output("([compileerrors.len] errors)", "tcserror")
@@ -93,7 +93,7 @@
 				src << output(null, "tcserror")
 
 				if(compileerrors.len)
-					src << output("<b>Compile Errors</b>", "tcserror")
+					src << output(span_bold("Compile Errors"), "tcserror")
 					for(var/scriptError/e in compileerrors)
 						src << output("<font color = red>\t>[e.message]</font>", "tcserror")
 					src << output("([compileerrors.len] errors)", "tcserror")
@@ -102,7 +102,7 @@
 					for(var/mob/M in Machine.viewingcode)
 						if(M.client)
 							M << output(null, "tcserror")
-							M << output("<b>Compile Errors</b>", "tcserror")
+							M << output(span_bold("Compile Errors"), "tcserror")
 							for(var/scriptError/e in compileerrors)
 								M << output("<font color = red>\t>[e.message]</font>", "tcserror")
 							M << output("([compileerrors.len] errors)", "tcserror")

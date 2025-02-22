@@ -15,12 +15,10 @@
 
 // Run all strings to be used in an SQL query through this proc first to properly escape out injection attempts.
 /proc/sanitizeSQL(var/t as text)
-	//var/sqltext = dbcon.Quote(t); //CHOMPEdit Begin
+	//var/sqltext = dbcon.Quote(t);
 	//return copytext(sqltext, 2, length(sqltext));//Quote() adds quotes around input, we already do that
 	return t
-	//CHOMPEdit End
 
-// CHOMPEdit - Adds format_table_name
 /proc/format_table_name(table as text)
 	//return CONFIG_GET(string/feedback_tableprefix) + table
 	return table // We don't implement tableprefix
@@ -29,7 +27,7 @@
  * Text sanitization
  */
 // Can be used almost the same way as normal input for text
-/proc/clean_input(Message, Title, Default, mob/user=usr)
+/proc/clean_input(Message, Title, Default, mob/user)
 	var/txt = input(user, Message, Title, Default) as text | null
 	if(txt)
 		return html_encode(txt)
@@ -59,8 +57,9 @@
 		input = copytext(input,1,max_length)
 
 	if(extra)
+		input = replacetext(input, new/regex("^\[\\n\]+|\[\\n\]+$", "g"), "")// strip leading and trailing new lines
 		var/temp_input = replace_characters(input, list("\n"="  ","\t"=" "))//one character is replaced by two
-		if(length(input) < (length(temp_input) - 6))//6 is the number of linebreaks allowed per message
+		if(length(input) < (length(temp_input) - 18))//18 is the number of linebreaks allowed per message
 			input = replace_characters(temp_input,list("  "=" "))//replace again, this time the double spaces with single ones
 
 	if(encode)
@@ -352,17 +351,17 @@
 GLOBAL_LIST_EMPTY(text_tag_cache)
 
 /proc/create_text_tag(var/tagname, var/tagdesc = tagname, var/client/C = null)
-	if(!(C && C.is_preference_enabled(/datum/client_preference/chat_tags)))
+	if(!(C && C.prefs?.read_preference(/datum/preference/toggle/chat_tags)))
 		return tagdesc
 	if(!GLOB.text_tag_cache[tagname])
-		var/datum/asset/spritesheet/chatassets = get_asset_datum(/datum/asset/spritesheet/chat)
+		var/datum/asset/spritesheet_batched/chatassets = get_asset_datum(/datum/asset/spritesheet_batched/chat)
 		GLOB.text_tag_cache[tagname] = chatassets.icon_tag(tagname)
 	if(!C.tgui_panel.is_ready() || C.tgui_panel.oldchat)
 		return "<IMG src='\ref[text_tag_icons]' class='text_tag' iconstate='[tagname]'" + (tagdesc ? " alt='[tagdesc]'" : "") + ">"
 	return GLOB.text_tag_cache[tagname]
 
 /proc/create_text_tag_old(var/tagname, var/tagdesc = tagname, var/client/C = null)
-	if(!(C && C.is_preference_enabled(/datum/client_preference/chat_tags)))
+	if(!(C && C.prefs?.read_preference(/datum/preference/toggle/chat_tags)))
 		return tagdesc
 	return "<IMG src='\ref[text_tag_icons]' class='text_tag' iconstate='[tagname]'" + (tagdesc ? " alt='[tagdesc]'" : "") + ">"
 
@@ -627,3 +626,8 @@ GLOBAL_LIST_EMPTY(text_tag_cache)
 		return json_decode(data)
 	catch
 		return null
+
+/// Removes all non-alphanumerics from the text, keep in mind this can lead to id conflicts
+/proc/sanitize_css_class_name(name)
+	var/static/regex/regex = new(@"[^a-zA-Z0-9]","g")
+	return replacetext(name, regex, "")

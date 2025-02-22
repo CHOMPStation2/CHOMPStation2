@@ -66,11 +66,11 @@
 		central_paint_mask.color = central_paint
 		add_overlay(central_paint_mask)
 
-/obj/mecha/working/hoverpod/shuttlecraft/attackby(obj/item/weapon/W as obj, mob/user as mob)
-	if(istype(W,/obj/item/device/multitool) && state == 1)
-		var/new_paint_location = tgui_input_list(usr, "Please select a target zone.", "Paint Zone", list("Central", "Engine", "Base", "Front", "CANCEL"))
+/obj/mecha/working/hoverpod/shuttlecraft/attackby(obj/item/W as obj, mob/user as mob)
+	if(istype(W,/obj/item/multitool) && state == 1)
+		var/new_paint_location = tgui_input_list(user, "Please select a target zone.", "Paint Zone", list("Central", "Engine", "Base", "Front", "CANCEL"))
 		if(new_paint_location && new_paint_location != "CANCEL")
-			var/new_paint_color = input(usr, "Please select a paint color.", "Paint Color", null) as color|null
+			var/new_paint_color = tgui_color_picker(user, "Please select a paint color.", "Paint Color", null)
 			if(new_paint_color)
 				switch(new_paint_location)
 					if("Central")

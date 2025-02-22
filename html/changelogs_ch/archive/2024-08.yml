@@ -1,0 +1,261 @@
+2024-08-02:
+  Asher-42:
+  - bugfix: dullahancargomodule class
+  - bugfix: second dullahan miner name -> v2
+  Fracshun:
+  - qol: Vorespawns with auto-accept on aren't affected by inactivity
+  - rscadd: Vorespawns into a belly with entrance logs disabled don't announce the
+      entrance to the pred
+  Kashargul:
+  - bugfix: Fixed a case in which belly signals could trigger too many soulcatcher
+      messages
+  TheCaramelion:
+  - qol: Added the ability to point at items in your inventory
+  - code_imp: Added COMSIG_MOB_POINTED
+  - refactor: Everything point related moved to the modular folder
+2024-08-04:
+  CHOMPStation2:
+  - rscadd: New wings, "Large speckled leather wings, tricolor"
+2024-08-06:
+  CHOMPStation2:
+  - qol: most ships start as known, except for wrecks and the mercenary manta
+  Fracshun:
+  - rscadd: Two new belly options for vorespawn. Whitelisting ckeys and whether the
+      belly absorbs prey on spawn.
+  - rscadd: Added a prompt for vorespawn preds to instantly absorb their chosen prey.
+  Kashargul:
+  - bugfix: showing borg name on the fax instead of just 1
+  tacoguy7765093:
+  - rscadd: Adds a new shadekin tail, Shadekin Fat Tail
+2024-08-07:
+  CHOMPStation2:
+  - bugfix: fixed missing 'vest' in 'cowboy selector' accessory
+  - bugfix: fixed corp press badge overwritten by freelance press badge
+  - qol: cowboy boots now use a selector because there's almost a dozen of them
+  - qol: added tan and green utility uniforms to General Jump vendors, and the entire
+      range of military jackets to Big D's Best
+  - qol: added black holsters to the holster selector and sec wardrobe vendor
+  - qol: removed KA holster, machete sheath, and sword sheathes from the holster selector
+  - qol: consolidated all the 5-slot item accessories into a webbing selector that
+      anyone can use, since it was already available to damn near half the jobs anyway
+      and I feel there's no real reason to restrict the vests/pouches by role so much
+      any more
+  - rscdel: removed accessories_vr.dm entirely, merging the files where appropriate
+      - shouldn't cause any lost items
+  - rscdel: purged some tracks from the jukebox that were no longer playing because
+      they relied on invalidated discord links
+  TheCaramelion:
+  - bugfix: Fixed not facing pointed atoms.
+2024-08-09:
+  Kashargul:
+  - bugfix: self transfer to mmis not working
+2024-08-10:
+  TheCaramelion:
+  - qol: 3 more slots for the mailbag
+  - bugfix: Fixed mailbag not able to pick up mail off the ground
+  Verkister:
+  - bugfix: Fixed bigdragon scaling issues.
+2024-08-11:
+  TheCaramelion:
+  - bugfix: Fixed various runtimes regarding balloon alerts
+2024-08-12:
+  CHOMPStation2:
+  - qol: an unarmoured version of the martian miner coat is now available in loadouts
+  - qol: electrical storms have a high chance to flicker the lights instead of obliterating
+      them
+  - rscdel: removed text notifs when prepping to throw/catch stuff
+  - bugfix: accidentally had patches on patchless tan jacket's inventory sprite
+  - rscadd: two variant landing markers on the space whale, to make landing at the
+      existing landing zones easier
+  - qol: emergency beacon behaviour tweaks; shorter activation, fixed deployment location,
+      and integrated micro-gps
+  - qol: added emergency beacons to pilot lockers
+  - qol: deployed emergency beacons can be disassembled with a wrench
+  - rscadd: added `isopenturf` helper, returns true if the checked turf is `space`
+      or `simulated/open`
+  - rscadd: added `isnonsolidturf` helper, returns true if the checked turf is `space`,
+      `simulated/open`, `simulated/floor/water`, or `simulated/floor/lava`
+  - bugfix: techmaint tiles are no longer destroyed when crowbarred up, and replacements
+      can be made using steel sheets
+  - bugfix: techfloor, steel hi-grip floor, and techgrid floor tiles can all be made
+      using steel as well
+  - rscadd: talon miners now have a job icon for AR HUDs
+  TheCaramelion:
+  - qol: Shorter autoresleeve time after steps mechanics are applied
+  - qol: Shoes muffle the death message
+2024-08-13:
+  RandoGuy999:
+  - bugfix: Souls caught in the vore soulcatcher will now actually have their prefs.
+2024-08-14:
+  Asher-42:
+  - rscadd: Added in smol raptor borgs from bubber station!
+  CHOMPStation2:
+  - bugfix: fixed tails layering weirdly under the character on character setup
+  - bugfix: Species blood color is used again
+  - qol: Blood color reset button now uses the species' default
+  - qol: Blood color button now has a colored dot
+  - rscadd: Reagent Dispensers now allow you to save a series of button presses as
+      a recipe/macro and replay it. This is per-dispenser per-shift.
+  - bugfix: random loot spawners delete properly
+  - qol: adds counter-clockwise rotation to pipes, grave markers, windoors, infrared
+      assemblies, vending machines, drill braces, floor tubes, chemical dispensers,
+      water coolers, disposal pipes, shield capacitors, and micro roads
+  - bugfix: prevents cortical borers from crashing VR pods
+  - qol: removes 0 tick blood dry timers from maploaded blood
+  - bugfix: prevents storing grabs in crates
+  - bugfix: fixes look-up verb when outdoors
+  - rscadd: vehicles obey gravity
+  - rscadd: cargo tug can dangerously traverse stairs
+  - bugfix: fixes incorrect "TECH_MAGNETS" defines
+  - bugfix: fixes med/sec bot runtimes
+  - bugfix: fixes injury/stumblevore proccing every step when buckled to borgs or
+      taurs
+  - bugfix: fixes item interactions with virus dishes
+  Kashargul:
+  - qol: reduces nutrition gain of trash for sleepers from 5 to 1, there's enough
+      ways to get nutrition and some units, like janitors can collect a lot of trash
+      into their sleeper
+  MeepleMuncher:
+  - rscadd: More emotes for mind-binded individuals
+  TheCaramelion:
+  - rscadd: Mail Scanner, a tool for mail carriers to verify mail delivery
+  - qol: Mailman > Mail Carrier
+  - qol: Mail Carriers start with their job stuff in their backpack now
+  tacoguy7765093:
+  - balance: Mob HP has been buffed back to normal values, mostly double the HP
+  - balance: Projectiles are notably more lethal now. Double the amount, damage breakpoints
+      are now 20/40/60 instead of 10/20/40,
+  - bugfix: Fixes revolvers using the wrong projectile path.
+  - balance: Laser weaponry now has less shots to compensate for higher damage.
+  - balance: 14.5mm ammo is now separate from big ammo.
+  - balance: Foam and riot foam darts are now printable
+  - balance: increased cost of 14.5mm ammo
+  - bugfix: Fixed autolathes printing the wrong bullet paths involving 14.5
+  - balance: Foam Riot Darts 50->20
+  - qol: Foam riot darts are now printable
+  - bugfix: Fixed weapons that fire medium/large bullets firing the wrong projectile.
+  - bugfix: Fixed rubbershot being as lethal as the real thing.
+  - sound: Added better sounds for the sniper rifles.
+  - balance: Rubbershot doesn't cause bleeding anymore.
+  - balance: Player controled zorgoia now can inject prey.
+  - image: Modified the zorgoia simplemob sprite majorly now with customisation.
+  - image: Removed Herobrine
+2024-08-15:
+  tacoguy7765093:
+  - balance: Fixed a bug that made phase weapons do improper amounts of damage.
+  - balance: Colt-Single-Action 25 -> 35
+  - balance: Most small caliber revolvers 10 -> 25
+  - bugfix: Fixed a bug that made half of the lower caliber revolvers doing the improper
+      amount of damage.
+2024-08-16:
+  Asher-42:
+  - rscadd: Dullahan Clownborg
+  - rscadd: panel covers to dullahan and smol raptors
+  - rscadd: dullahan syndicate sprite to only medic
+  tacoguy7765093:
+  - rscadd: Zorgoia now have the full poison catalog to inject people with.
+  - rscadd: Zorgoia are properly ridable.
+  - rscdel: Removed the otie subtype for zorgoia
+  - image: Sprite tweak with the zorgoia sprite
+2024-08-21:
+  TheCaramelion:
+  - bugfix: Fixed various proximity related runtimes
+  tacoguy7765093:
+  - bugfix: Fixed a oversight that prevents zorgoia from being grabbed.
+2024-08-23:
+  Asher-42:
+  - bugfix: dullahan syndies now show up in the drop down
+  CHOMPStation2:
+  - rscadd: Advanced TGUI Say modal
+  - qol: Verb panel say/me/whisper/subtle have been renamed to "Say verb"/etc - and
+      pop open the tgui say panel/tgui input/normal input instead of always using
+      the native dialog.
+  - rscadd: Every speech bubble now has an extra spinning/"thinking" state.
+  - qol: Added /tg/'s trait system, currently just used for indicating that you're
+      in the typing state.
+  - bugfix: TGUI dev server works again (keep_local_name = TRUE is really important,
+      both for that and reliability)
+  - qol: Subtle/Whisper now has typing indicators by default - you can turn indicators
+      off for these channels specifically with a new pref.
+  - qol: Typing indicators switched fully to /tg/'s system for them with traits and
+      client integration and... stuff.
+  Kashargul:
+  - bugfix: all objects picking up ALL visible messages, even those they shouldn't
+  - balance: limits item size of suitable vacuumable items to everything smaller than
+      huge size
+  TheCaramelion:
+  - rscadd: Teppi plushie
+  tacoguy7765093:
+  - balance: All AK type weapons 25 -> 35 (7.62 supreme)
+  - balance: AK-74s damage 25 -> 30 (They use 5.56)
+  - balance: SKS damage 25 -> 35 + hitscan
+  - balance: CR-20 damage 25 -> 20
+  - balance: SMG mercs damage 25 -> 20
+  - balance: Phase weapon capacity halved. 30 -> 15
+  - qol: Floragun capacity 10 -> 30
+  - bugfix: LMG projectile shoots properly, 30 damage now.
+  - bugfix: 7.62 weapons now point to the right projectile path.
+  - bugfix: The detectives .45 revolver now wont TF real bullets to rubber bullets
+      if loaded with such.
+2024-08-24:
+  FluffMedic:
+  - bugfix: Weather beasts have their stats adjusted
+  - qol: The heavy fog weather beast has more of a tell to their attacks.
+  TheCaramelion:
+  - rscadd: Teppi plushies are obtainable in the vending machines now
+  tacoguy7765093:
+  - bugfix: Fixed in-hand sprites for the m4 and m6
+  - sound: Modified all of the gun sounds.
+  - balance: Mech armor has been nerfed.
+2024-08-27:
+  CHOMPStation2:
+  - rscadd: added research samples, for research. collect them using special sample
+      containers, then analyze them or reduce them into useful resources! or just
+      put them on a table and use them as a conversation piece.
+  MeepleMuncher:
+  - rscadd: Alternate teppi plushie
+  TheCaramelion:
+  - rscadd: Departamental Lathes for each department
+  - rscdel: Removed night shift voice lines
+  - config: Night shift depends now on Sif
+  - bugfix: Fixed Protolathe consoles not syncing with the research server
+  - rscadd: Designs for all the departmental protolathes
+  - bugfix: Fixed departmental lathes changing to omni lathes
+  - bugfix: Engineering console has the right name now
+  - bugfix: Departamental lathes can sync with R&D's server.
+2024-08-28:
+  FluffMedic:
+  - rscadd: Frontier shotgun is added to the game, and exploration vendor.
+  - bugfix: Frontier Marksmen Rifle not starting with the correct firing speed
+  - bugfix: overide left on a projectile has been switched off.
+  - bugfix: Needing extra pumps on full power frontier shotgun mode to end the sequence.
+  - rscadd: Lesser lightweight
+  Kashargul:
+  - bugfix: security console not being linked to the RD server
+2024-08-29:
+  CHOMPStation2:
+  - rscadd: added "random corporate supply" and contraband "special corporate supply"
+      crates to cargo terminals; the former mostly has harmless stuff, whilst the
+      latter can spawn all sorts of stuff from the random pool but can also include
+      weapons (rarely).
+  - qol: refactored the supply spawning behaviour slightly, so crates are no longer
+      mandatory. imagine the manifest comes stickytaped to the item, or whatever
+  - qol: supply consoles start tracking orders at 0 (so the first order is order 1,
+      etc.) rather than a random number between 1 and 9000
+  - bugfix: the random pizza pack crate now comes with the pizza delivery outfit and
+      visor, deleting a duplicate pizza supply pack that was inaccessible anyway due
+      to not having a defined name or container
+  - rscdel: merged all _vr supplypacks into the main supplypack files
+  - rscadd: new "full lid" 'decal' option for crates
+  - qol: added desatti catering, nukies energy drinks, and coyote salvage corp suit
+      crates to random spawners
+  TheCaramelion:
+  - rscadd: You can now stick micros to lollipops
+  tacoguy7765093:
+  - rscadd: 'New outsider alt-title, space farer: Currently only 2 shuttles'
+  - maptweak: Added outsider shuttles, the pizzashuttle, and the cyber shuttle.
+2024-08-30:
+  Kashargul:
+  - code_imp: fix some dullahan borg sprites not showing
+  - bugfix: self transfer not allowing to jump into nearby soulcatchers
+  - bugfix: macro inputs not working for the SC's chat verbs

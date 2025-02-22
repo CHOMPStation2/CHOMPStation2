@@ -32,3 +32,21 @@
 /datum/spawnpoint/plainspath/New()
 	..()
 	turfs = GLOB.latejoin_plainspath
+
+/datum/spawnpoint/fueldepot
+	display_name = "Fuel Depot"
+	msg = "woke up in the fuel depot"
+	restrict_job = list(JOB_OUTSIDER)
+
+/datum/spawnpoint/fueldepot/New()
+	..()
+	turfs = GLOB.latejoin_fueldepot
+
+/datum/spawnpoint/tyrspawn
+	display_name = "Tyr Wreckage"
+	msg = "woke up in a ruined shuttle"
+	restrict_job = list(JOB_OUTSIDER)
+
+/datum/spawnpoint/tyrspawn/New()
+	..()
+	turfs = GLOB.latejoin_tyrvillage

@@ -1,5 +1,3 @@
-#define PROCESS_REACTION_ITER 5 //when processing a reaction, iterate this many times
-
 /datum/reagents
 	var/list/datum/reagent/reagent_list = list()
 	var/total_volume = 0
@@ -19,6 +17,8 @@
 		for(var/path in paths)
 			var/datum/reagent/D = new path()
 			if(!D.name)
+				continue
+			if(D.name == REAGENT_DEVELOPER_WARNING) //We remove reagents that don't have a name from being put in the list.
 				continue
 			SSchemistry.chemical_reagents[D.id] = D
 
@@ -111,7 +111,7 @@
 
 	for(var/datum/reagent/current in reagent_list)
 		if(current.id == id)
-			if(current.id == "blood")
+			if(current.id == REAGENT_ID_BLOOD)
 				if(LAZYLEN(data) && !isnull(data["species"]) && !isnull(current.data["species"]) && data["species"] != current.data["species"])	// Species bloodtypes are already incompatible, this just stops it from mixing into the one already in a container.
 					continue
 

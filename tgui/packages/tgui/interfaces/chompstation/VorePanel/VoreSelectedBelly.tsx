@@ -1,21 +1,29 @@
 import { useState } from 'react';
+import { Tabs } from 'tgui-core/components';
+import { BooleanLike } from 'tgui-core/react';
 
-import { Tabs } from '../../../components';
+import { hostMob, selectedData } from './types';
 import { VoreContentsPanel } from './VoreContentsPanel';
-import { VoreSelectedBellyControls } from './VoreSelectedBellyControls';
-import { VoreSelectedBellyDescriptions } from './VoreSelectedBellyDescriptions';
-import { VoreSelectedBellyInteractions } from './VoreSelectedBellyInteractions';
-import { VoreSelectedBellyLiquidMessages } from './VoreSelectedBellyLiquidMessages';
-import { VoreSelectedBellyLiquidOptions } from './VoreSelectedBellyLiquidOptions';
-import { VoreSelectedBellyOptions } from './VoreSelectedBellyOptions';
-import { VoreSelectedBellySounds } from './VoreSelectedBellySounds';
-import { VoreSelectedBellyVisuals } from './VoreSelectedBellyVisuals';
-
+import { VoreSelectedBellyControls } from './VoreSelectedBellyTabs/VoreSelectedBellyControls';
+import { VoreSelectedBellyDescriptions } from './VoreSelectedBellyTabs/VoreSelectedBellyDescriptions';
+import { VoreSelectedBellyInteractions } from './VoreSelectedBellyTabs/VoreSelectedBellyInteractions';
+import { VoreSelectedBellyLiquidMessages } from './VoreSelectedBellyTabs/VoreSelectedBellyLiquidMessages';
+import { VoreSelectedBellyLiquidOptions } from './VoreSelectedBellyTabs/VoreSelectedBellyLiquidOptions';
+import { VoreSelectedBellyOptions } from './VoreSelectedBellyTabs/VoreSelectedBellyOptions';
+import { VoreSelectedBellySounds } from './VoreSelectedBellyTabs/VoreSelectedBellySounds';
+import { VoreSelectedBellyVisuals } from './VoreSelectedBellyTabs/VoreSelectedBellyVisuals';
 /**
  * Subtemplate of VoreBellySelectionAndCustomization
  */
-export const VoreSelectedBelly = (props) => {
-  const { belly } = props;
+export const VoreSelectedBelly = (props: {
+  belly: selectedData;
+  show_pictures: BooleanLike;
+  host_mobtype: hostMob;
+  icon_overflow: BooleanLike;
+  vore_words: Record<string, string[]>;
+}) => {
+  const { belly, show_pictures, host_mobtype, icon_overflow, vore_words } =
+    props;
   const { contents } = belly;
 
   const [tabIndex, setTabIndex] = useState(0);
@@ -23,12 +31,23 @@ export const VoreSelectedBelly = (props) => {
   const tabs: React.JSX.Element[] = [];
 
   tabs[0] = <VoreSelectedBellyControls belly={belly} />;
-  tabs[1] = <VoreSelectedBellyDescriptions belly={belly} />;
-  tabs[2] = <VoreSelectedBellyOptions belly={belly} />;
+  tabs[1] = (
+    <VoreSelectedBellyDescriptions belly={belly} vore_words={vore_words} />
+  );
+  tabs[2] = (
+    <VoreSelectedBellyOptions belly={belly} host_mobtype={host_mobtype} />
+  );
   tabs[3] = <VoreSelectedBellySounds belly={belly} />;
   tabs[4] = <VoreSelectedBellyVisuals belly={belly} />;
   tabs[5] = <VoreSelectedBellyInteractions belly={belly} />;
-  tabs[6] = <VoreContentsPanel outside contents={contents} />;
+  tabs[6] = (
+    <VoreContentsPanel
+      outside
+      contents={contents}
+      show_pictures={show_pictures}
+      icon_overflow={icon_overflow}
+    />
+  );
   tabs[7] = <VoreSelectedBellyLiquidOptions belly={belly} />;
   tabs[8] = <VoreSelectedBellyLiquidMessages belly={belly} />;
 

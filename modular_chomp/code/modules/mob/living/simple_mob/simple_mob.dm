@@ -4,9 +4,6 @@
 	var/speech_chance = 75 //mobs can be a bit more emotive than carbon/humans
 	var/speech_sound_enabled = TRUE
 
-	//vars for vore_icons toggle control
-	var/vore_icons_cache = null // null by default. Going from ON to OFF should store vore_icons val here, OFF to ON reset as null
-
 	//spitting projectiles
 	var/spitting = 0
 	var/spit_projectile = null // what our spit projectile is. Can be anything
@@ -19,32 +16,13 @@
 		Spit(A)
 	. = ..()
 
-/mob/living/simple_mob/verb/toggle_vore_icons()
-
-	set name = "Toggle Vore Sprite"
-	set desc = "Toggle visibility of changed mob sprite when you have eaten other things."
-	set category = "Abilities"
-
-	if(!vore_icons && !vore_icons_cache)
-		to_chat(src,"<span class='warning'>This simplemob has no vore sprite.</span>")
-	else if(isnull(vore_icons_cache))
-		vore_icons_cache = vore_icons
-		vore_icons = 0
-		to_chat(src,"<span class='warning'>Vore sprite disabled.</span>")
-	else
-		vore_icons = vore_icons_cache
-		vore_icons_cache = null
-		to_chat(src,"<span class='warning'>Vore sprite enabled.</span>")
-
-	update_icon()
-
 /mob/living/simple_mob/verb/toggle_speech_sounds()
 	set name = "Toggle Species Speech Sounds"
 	set desc = "Toggle if your species defined speech sound has a chance of playing on a Say"
-	set category = "IC"
+	set category = "IC.Mob"
 
 	if(stat)
-		to_chat(src, "<span class='warning'>You must be awake and standing to perform this action!</span>")
+		to_chat(src, span_warning("You must be awake and standing to perform this action!"))
 		return
 
 	speech_sound_enabled = !speech_sound_enabled
@@ -104,22 +82,22 @@
 /mob/living/simple_mob/proc/use_headset()
 	set name = "Use Headset"
 	set desc = "Opens your headset's GUI, if you have one."
-	set category = "IC"
+	set category = "Abilities.Mob"
 
-	if(istype(mob_radio, /obj/item/device/radio/headset))
+	if(istype(mob_radio, /obj/item/radio/headset))
 		mob_radio.tgui_interact(src)
 	else
-		to_chat(src, "<span class='warning'>Your mob does not have a radio in its radio slot.</span>")
+		to_chat(src, span_warning("Your mob does not have a radio in its radio slot."))
 
 /mob/living/simple_mob/proc/use_pda()
 	set name = "Use PDA"
 	set desc = "Opens your PDA's GUI, if you have one."
-	set category = "IC"
+	set category = "Abilities.Mob"
 
-	if(istype(myid, /obj/item/device/pda))
+	if(istype(myid, /obj/item/pda))
 		myid.tgui_interact(src)
 	else
-		to_chat(src, "<span class='warning'>Your mob does not have a PDA in its ID slot.</span>")
+		to_chat(src, span_warning("Your mob does not have a PDA in its ID slot."))
 
 /mob/living/simple_mob/New(var/newloc)
 	..()
@@ -132,6 +110,3 @@
 		var/vs_fullness = vore_fullness_ex[belly_class]
 		if(vs_fullness > 0)
 			add_overlay("[icon_state]_[belly_class]-[vs_fullness]")
-
-/mob/living/simple_mob/proc/character_directory_species()
-	return "simplemob"

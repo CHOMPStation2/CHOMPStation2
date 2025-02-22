@@ -1,0 +1,398 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/turf/template_noop,
+/area/template_noop)
+"c" = (
+/obj/machinery/computer/ship/helm{
+	req_one_access = null
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/cybershuttle)
+"d" = (
+/obj/structure/table/survival_pod,
+/obj/fruitspawner/watermelon,
+/obj/item/gps/explorer,
+/obj/item/gps/explorer,
+/obj/structure/closet/walllocker_double/east,
+/obj/item/gun/projectile/garand,
+/obj/item/storage/firstaid/regular,
+/obj/item/ammo_magazine/clip/c762,
+/obj/item/ammo_magazine/clip/c762,
+/obj/item/ammo_magazine/clip/c762,
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/cybershuttle)
+"e" = (
+/obj/machinery/door/airlock/glass_external{
+	safe = 0
+	},
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/obj/effect/map_helper/airlock/door/ext_door,
+/obj/machinery/airlock_sensor/airlock_exterior/shuttle{
+	dir = 4;
+	pixel_y = 25
+	},
+/obj/effect/map_helper/airlock/sensor/ext_sensor,
+/turf/simulated/floor/plating,
+/area/shuttle/cybershuttle)
+"f" = (
+/obj/machinery/ion_engine{
+	dir = 1
+	},
+/obj/structure/window/plastitanium{
+	dir = 4
+	},
+/turf/simulated/shuttle/plating/airless/carry,
+/area/shuttle/cybershuttle)
+"g" = (
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/cybershuttle)
+"h" = (
+/obj/machinery/computer/ship/engines{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/cybershuttle)
+"j" = (
+/obj/machinery/ion_engine{
+	dir = 1
+	},
+/turf/simulated/shuttle/plating/airless/carry,
+/area/shuttle/cybershuttle)
+"k" = (
+/obj/machinery/light,
+/obj/machinery/atmospherics/portables_connector,
+/obj/machinery/portable_atmospherics/canister/air/airlock,
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/cybershuttle)
+"l" = (
+/turf/simulated/wall/rthull,
+/area/shuttle/cybershuttle)
+"m" = (
+/obj/structure/cable/yellow{
+	icon_state = "2-4"
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/cybershuttle)
+"o" = (
+/obj/structure/window/plastitanium,
+/obj/machinery/power/smes/buildable/point_of_interest,
+/obj/structure/cable/blue{
+	icon_state = "0-4"
+	},
+/turf/simulated/floor/plating,
+/area/shuttle/cybershuttle)
+"q" = (
+/obj/machinery/computer/shuttle_control/explore/cybershuttle,
+/obj/structure/cable/yellow{
+	icon_state = "0-4"
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/cybershuttle)
+"r" = (
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/cybershuttle)
+"w" = (
+/obj/machinery/door/airlock/glass_external{
+	safe = 0
+	},
+/obj/structure/cable/yellow{
+	icon_state = "1-8"
+	},
+/obj/effect/map_helper/airlock/door/int_door,
+/obj/machinery/airlock_sensor{
+	pixel_x = -11;
+	pixel_y = -23;
+	dir = 4
+	},
+/obj/effect/map_helper/airlock/sensor/int_sensor,
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/cybershuttle)
+"y" = (
+/obj/structure/hull_corner{
+	dir = 8
+	},
+/turf/simulated/shuttle/plating/airless/carry,
+/area/shuttle/cybershuttle)
+"z" = (
+/obj/structure/window/plastitanium,
+/obj/machinery/power/terminal{
+	dir = 4
+	},
+/obj/structure/cable/blue{
+	icon_state = "0-8"
+	},
+/obj/machinery/power/apc/alarms_hidden{
+	dir = 4;
+	pixel_x = 24;
+	locked = 0
+	},
+/turf/simulated/floor/plating,
+/area/shuttle/cybershuttle)
+"C" = (
+/obj/structure/table/survival_pod,
+/obj/item/glass_jar{
+	pixel_y = 13;
+	pixel_x = 6
+	},
+/obj/random/action_figure{
+	pixel_y = -4;
+	pixel_x = -9
+	},
+/obj/item/dice/d20,
+/obj/item/deck/tarot,
+/obj/item/material/sword/katana{
+	pixel_y = -4;
+	pixel_x = 5
+	},
+/obj/item/clothing/head/fedora{
+	pixel_x = -4;
+	pixel_y = 10
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/cybershuttle)
+"D" = (
+/obj/structure/window/plastitanium/full,
+/obj/structure/grille/rustic{
+	health = 25;
+	name = "reinforced grille"
+	},
+/turf/simulated/floor/plating,
+/area/shuttle/cybershuttle)
+"E" = (
+/obj/machinery/computer/ship/sensors,
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/cybershuttle)
+"F" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/cybershuttle)
+"G" = (
+/obj/structure/hull_corner,
+/turf/simulated/shuttle/plating/airless/carry,
+/area/shuttle/cybershuttle)
+"J" = (
+/obj/structure/bed/chair/bay/comfy/black{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/cybershuttle)
+"M" = (
+/obj/machinery/photocopier/faxmachine{
+	department = "CyberShuttle"
+	},
+/obj/structure/table/survival_pod,
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/cybershuttle)
+"Q" = (
+/obj/machinery/ion_engine{
+	dir = 1
+	},
+/obj/structure/window/plastitanium{
+	dir = 8
+	},
+/turf/simulated/shuttle/plating/airless/carry,
+/area/shuttle/cybershuttle)
+"R" = (
+/obj/effect/shuttle_landmark/shuttle_initializer/cybershuttle,
+/obj/structure/cable/yellow{
+	icon_state = "2-4"
+	},
+/obj/machinery/light/small{
+	dir = 1
+	},
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	dir = 1;
+	frequency = 1380;
+	id_tag = "expshuttle_vent"
+	},
+/obj/machinery/embedded_controller/radio/airlock/docking_port{
+	frequency = 1380;
+	id_tag = "cybershuttle_docker";
+	pixel_y = 28;
+	pixel_x = -5
+	},
+/obj/effect/map_helper/airlock/atmos/chamber_pump,
+/obj/effect/map_helper/airlock/sensor/chamber_sensor,
+/obj/machinery/airlock_sensor{
+	pixel_y = 27;
+	pixel_x = 7
+	},
+/obj/effect/overmap/visitable/ship/landable/cybershuttle,
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/cybershuttle)
+"S" = (
+/obj/structure/window/plastitanium{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/cybershuttle)
+"T" = (
+/obj/machinery/shipsensors/weak{
+	dir = 1
+	},
+/turf/simulated/floor/plating/external,
+/area/shuttle/cybershuttle)
+"V" = (
+/obj/machinery/atmospherics/pipe/simple/hidden,
+/turf/simulated/wall/rthull,
+/area/shuttle/cybershuttle)
+"W" = (
+/obj/machinery/door/airlock/voidcraft/vertical{
+	icon_state = "door_locked";
+	locked = 1;
+	name = "shuttle side hatch";
+	id_tag = "cybershuttle_hatch"
+	},
+/obj/machinery/button/remote/airlock{
+	desiredstate = 1;
+	dir = 4;
+	id = "cybershuttle_hatch";
+	name = "Side Hatch Control";
+	specialfunctions = 4;
+	pixel_y = 26
+	},
+/turf/simulated/floor/plating,
+/area/shuttle/cybershuttle)
+"Z" = (
+/obj/machinery/power/terminal,
+/obj/structure/cable/yellow,
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/cybershuttle)
+
+(1,1,1) = {"
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+"}
+(2,1,1) = {"
+a
+a
+a
+a
+a
+a
+a
+a
+T
+l
+Q
+"}
+(3,1,1) = {"
+a
+G
+l
+D
+D
+l
+W
+l
+l
+l
+j
+"}
+(4,1,1) = {"
+a
+D
+c
+J
+g
+F
+g
+C
+h
+l
+l
+"}
+(5,1,1) = {"
+a
+D
+q
+g
+g
+g
+g
+m
+Z
+o
+j
+"}
+(6,1,1) = {"
+a
+D
+E
+J
+g
+S
+S
+r
+g
+z
+j
+"}
+(7,1,1) = {"
+a
+D
+d
+M
+k
+V
+R
+w
+l
+l
+l
+"}
+(8,1,1) = {"
+a
+y
+l
+D
+D
+l
+e
+l
+l
+l
+j
+"}
+(9,1,1) = {"
+a
+a
+a
+a
+a
+a
+a
+a
+y
+l
+f
+"}
+(10,1,1) = {"
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+"}

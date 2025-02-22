@@ -53,3 +53,6 @@
 /datum/trait/positive/emp_resist_major/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..()
 	H.add_modifier(/datum/modifier/trait/empresistb)
+
+/datum/trait/positive/weaver
+	custom_only = FALSE //Let species use the webs for wierd stuff like metal webs, slime creations, etc.

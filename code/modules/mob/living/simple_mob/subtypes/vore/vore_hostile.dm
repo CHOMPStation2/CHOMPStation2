@@ -22,7 +22,7 @@
 	icon_rest = "abyss_lurker"
 	vis_height = 64
 
-	faction = "macrobacteria"
+	faction = FACTION_MACROBACTERIA
 	maxHealth = 600
 	health = 600
 	movement_cooldown = 3
@@ -32,7 +32,7 @@
 	melee_damage_upper = 1
 
 	meat_amount = 5
-	meat_type = /obj/item/weapon/reagent_containers/food/snacks/meat
+	meat_type = /obj/item/reagent_containers/food/snacks/meat
 	catalogue_data = list(/datum/category_item/catalogue/fauna/abyss_lurker)
 
 	see_in_dark = 8
@@ -71,9 +71,9 @@
 	unacidable = TRUE
 
 /mob/living/simple_mob/vore/vore_hostile/abyss_lurker/init_vore()
-	if(!voremob_loaded) //CHOMPAdd
-		return //CHOMPAdd
-	.=..() //CHOMPEdit
+	if(!voremob_loaded)
+		return
+	. = ..()
 	var/obj/belly/B = vore_selected
 	B.name = "interior"
 	B.desc = "It's hot and overwhelmingly tight! The interior of the pale creature groans with the effort of squeezing you. Everything is hot and churning and eager to grind and smother you in thick fluids. The weight of the creature's body pressing in at you makes it hard to move at all, while you are squeezed to the very core of the creature! There seems almost not to even be an organ for this so much as the creature has folded around you, trying to incorporate your matter into its body with vigor!"
@@ -131,7 +131,7 @@
 	icon_rest = "filter"
 	vis_height = 64
 
-	faction = "macrobacteria"
+	faction = FACTION_MACROBACTERIA
 	maxHealth = 600
 	health = 600
 
@@ -141,7 +141,7 @@
 
 	movement_cooldown = 1
 	meat_amount = 5
-	meat_type = /obj/item/weapon/reagent_containers/food/snacks/meat
+	meat_type = /obj/item/reagent_containers/food/snacks/meat
 	catalogue_data = list(/datum/category_item/catalogue/fauna/leaper)
 
 	see_in_dark = 8
@@ -191,9 +191,9 @@
 	var/leap_sound = 'sound/weapons/spiderlunge.ogg'
 
 /mob/living/simple_mob/vore/vore_hostile/leaper/init_vore()
-	if(!voremob_loaded) //CHOMPAdd
-		return //CHOMPAdd
-	.=..() //CHOMPEdit
+	if(!voremob_loaded)
+		return
+	. = ..()
 	var/obj/belly/B = vore_selected
 	B.name = "stomach"
 	B.desc = "The flesh of the tall creature's stomach folds over you in doughy waves, squeezing you into the tightest shape it can manage with idle flexes churning down on you. Your limbs often find themselves lost between folds and tugged this way or that, held in a skin tight press that is not painful, but is hard to pull away from. You can see a strange, glittering pink and purple light glimmering through the flesh of the monster all around you, like your very own sea of stars. The walls rush in to fill all the space, squeezing you from head to toe no matter how you might wiggle, the weight of the semi-transparent interior flesh keeping you neatly secured deep inside while wringing the fight out of you."
@@ -218,8 +218,8 @@
 		return FALSE
 
 	set_AI_busy(TRUE)
-	visible_message(span("warning","\The [src]'s eyes flash ominously!"))
-	to_chat(L, span("danger","\The [src] focuses on you!"))
+	visible_message(span_warning("\The [src]'s eyes flash ominously!"))
+	to_chat(L, span_danger("\The [src] focuses on you!"))
 	// Telegraph, since getting stunned suddenly feels bad.
 	do_windup_animation(A, leap_warmup)
 	sleep(leap_warmup) // For the telegraphing.
@@ -230,7 +230,7 @@
 
 	// Do the actual leap.
 	status_flags |= LEAPING // Lets us pass over everything.
-	visible_message(span("critical","\The [src] leaps at \the [L]!"))
+	visible_message(span_critical("\The [src] leaps at \the [L]!"))
 	throw_at(get_step(L, get_turf(src)), special_attack_max_range+1, 1, src)
 	playsound(src, leap_sound, 75, 1)
 
@@ -261,7 +261,7 @@
 	icon_rest = "cube"
 	vis_height = 64
 
-	faction = "macrobacteria"
+	faction = FACTION_MACROBACTERIA
 	maxHealth = 500
 	health = 500
 
@@ -309,9 +309,9 @@
 	unacidable = TRUE
 
 /mob/living/simple_mob/vore/vore_hostile/gelatinous_cube/init_vore()
-	if(!voremob_loaded) //CHOMPAdd
-		return //CHOMPAdd
-	.=..() //CHOMPEdit
+	if(!voremob_loaded)
+		return
+	. = ..()
 	var/obj/belly/B = vore_selected
 	B.name = "interior"
 	B.desc = "An incredibly thick oozing slime surrounds you, filling in all the space around your form! It's hard to catch a breath here as the jiggling gel that makes up the body of the creature swiftly fills in the hole you made in its surface by entering. The gel is semi-transparent, and you can see your surroundings though its surface, and similarly you can be seen floating in the gel from the outside. When the cube moves, your whole body is wobbled along with it. There are clouds of still processing material floating all around you as the corrosive substance works on breaking everything down."

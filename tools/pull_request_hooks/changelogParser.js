@@ -40,9 +40,9 @@ function parseChangelogBody(lines, openTag) {
 		if (match) {
 			const [_, type, description] = match;
 
-			const entry = CHANGELOG_KEYS_TO_ENTRY[type];
+			const entry = CHANGELOG_KEYS_TO_ENTRY[type] || CHANGELOG_KEYS_TO_ENTRY["rscadd"];
 
-			if (entry.placeholders.includes(description)) {
+			if (!entry || entry.placeholders.includes(description)) {
 				continue;
 			}
 
@@ -64,6 +64,9 @@ function parseChangelogBody(lines, openTag) {
 }
 
 export function parseChangelog(text) {
+	if(text == null) {
+		return undefined;
+	}
 	const lines = text.split("\n").map((line) => line.trim());
 
 	for (let index = 0; index < lines.length; index++) {

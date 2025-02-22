@@ -45,7 +45,7 @@
 			src.state = STATE_DEFAULT
 		if("login")
 			var/mob/M = usr
-			var/obj/item/weapon/card/id/I = M.get_active_hand()
+			var/obj/item/card/id/I = M.get_active_hand()
 			if (I && istype(I))
 				if(src.check_access(I))
 					authenticated = 1
@@ -54,7 +54,7 @@
 		if("logout")
 			authenticated = 0
 
-	src.updateUsrDialog()
+	src.updateUsrDialog(usr)
 
 /obj/machinery/computer/am_engine/attack_ai(var/mob/user as mob)
 	return src.attack_hand(user)
@@ -70,11 +70,11 @@
 	switch(src.state)
 		if(STATE_DEFAULT)
 			if (src.authenticated)
-				dat += "<BR>\[ <A HREF='?src=\ref[src];operation=logout'>Log Out</A> \]<br>"
-				dat += "<BR>\[ <A HREF='?src=\ref[src];operation=engine'>Engine Menu</A> \]"
-				dat += "<BR>\[ <A HREF='?src=\ref[src];operation=injector'>Injector Menu</A> \]"
+				dat += "<BR>\[ <A href='byond://?src=\ref[src];operation=logout'>Log Out</A> \]<br>"
+				dat += "<BR>\[ <A href='byond://?src=\ref[src];operation=engine'>Engine Menu</A> \]"
+				dat += "<BR>\[ <A href='byond://?src=\ref[src];operation=injector'>Injector Menu</A> \]"
 			else
-				dat += "<BR>\[ <A HREF='?src=\ref[src];operation=login'>Log In</A> \]"
+				dat += "<BR>\[ <A href='byond://?src=\ref[src];operation=login'>Log In</A> \]"
 		if(STATE_INJECTOR)
 			if(src.connected_I.injecting)
 				dat += "<BR>\[ Injecting \]<br>"
@@ -84,12 +84,15 @@
 			if(src.connected_E.stopping)
 				dat += "<BR>\[ STOPPING \]"
 			else if(src.connected_E.operating && !src.connected_E.stopping)
-				dat += "<BR>\[ <A HREF='?src=\ref[src];operation=deactivate'>Emergency Stop</A> \]"
+				dat += "<BR>\[ <A href='byond://?src=\ref[src];operation=deactivate'>Emergency Stop</A> \]"
 			else
-				dat += "<BR>\[ <A HREF='?src=\ref[src];operation=activate'>Activate Engine</A> \]"
+				dat += "<BR>\[ <A href='byond://?src=\ref[src];operation=activate'>Activate Engine</A> \]"
 			dat += "<BR>Contents:<br>[src.connected_E.H_fuel]kg of Hydrogen<br>[src.connected_E.antiH_fuel]kg of Anti-Hydrogen<br>"
 
-	dat += "<BR>\[ [(src.state != STATE_DEFAULT) ? "<A HREF='?src=\ref[src];operation=main'>Main Menu</A> | " : ""]<A HREF='?src=\ref[user];mach_close=communications'>Close</A> \]"
-	user << browse(dat, "window=communications;size=400x500")
+	dat += "<BR>\[ [(src.state != STATE_DEFAULT) ? "<A href='byond://?src=\ref[src];operation=main'>Main Menu</A> | " : ""]<A href='byond://?src=\ref[user];mach_close=communications'>Close</A> \]"
+	user << browse("<html>[dat]</html>", "window=communications;size=400x500")
 	onclose(user, "communications")
 
+#undef STATE_DEFAULT
+#undef STATE_INJECTOR
+#undef STATE_ENGINE

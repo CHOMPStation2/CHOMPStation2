@@ -3,6 +3,7 @@
 /mob/living
 	var/meat_amount = 0					// How much meat to drop from this mob when butchered
 	var/obj/meat_type					// The meat object to drop
+	var/name_the_meat = TRUE
 
 	var/gib_on_butchery = FALSE
 	var/butchery_drops_organs = TRUE	// Do we spawn and/or drop organs when butchered?
@@ -17,7 +18,8 @@
 		being_butchered = TRUE
 		while(meat_amount > 0 && do_after(user, 0.5 SECONDS * (mob_size / 10), src))
 			var/obj/item/meat = new meat_type(get_turf(src))
-			meat.name = "[src.name] [meat.name]"
+			if(name_the_meat)
+				meat.name = "[src.name] [meat.name]"
 			new /obj/effect/decal/cleanable/blood/splatter(get_turf(src))
 			meat_amount--
 		being_butchered = FALSE
@@ -56,7 +58,7 @@
 					neworg.name = "[name] [neworg.name]"
 					neworg.meat_type = meat_type
 
-					if(istype(src, /mob/living/simple_mob))
+					if(isanimal(src))
 						var/mob/living/simple_mob/SM = src
 						if(SM.limb_icon)
 							neworg.force_icon = SM.limb_icon
@@ -86,11 +88,11 @@
 
 		if(!ckey)
 			if(issmall(src))
-				user?.visible_message("<span class='danger'>[user] chops up \the [src]!</span>")
+				user?.visible_message(span_danger("[user] chops up \the [src]!"))
 				new /obj/effect/decal/cleanable/blood/splatter(get_turf(src))
 				if(gib_on_butchery)
 					qdel(src)
 			else
-				user?.visible_message("<span class='danger'>[user] butchers \the [src] messily!</span>")
+				user?.visible_message(span_danger("[user] butchers \the [src] messily!"))
 				if(gib_on_butchery)
 					gib()

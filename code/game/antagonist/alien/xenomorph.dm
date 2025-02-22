@@ -3,8 +3,8 @@ var/datum/antagonist/xenos/xenomorphs
 /datum/antagonist/xenos
 	id = MODE_XENOMORPH
 	role_type = BE_ALIEN
-	role_text = "Genaprawn" //CHOMPedit
-	role_text_plural = "Genaprawns" //CHOMPedit
+	role_text = "Genaprawn"
+	role_text_plural = "Genaprawns"
 	mob_path = /mob/living/carbon/alien/larva
 	bantype = "Xenomorph"
 	flags = ANTAG_OVERRIDE_MOB | ANTAG_RANDSPAWN | ANTAG_OVERRIDE_JOB | ANTAG_VOTABLE
@@ -27,7 +27,7 @@ var/datum/antagonist/xenos/xenomorphs
 		xenomorphs = src
 
 /datum/antagonist/xenos/attempt_random_spawn()
-	if(CONFIG_GET(flag/aliens_allowed)) ..() // CHOMPEdit
+	if(CONFIG_GET(flag/aliens_allowed)) ..()
 
 /datum/antagonist/xenos/proc/get_vents()
 	var/list/vents = list()

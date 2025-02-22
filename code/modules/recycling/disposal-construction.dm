@@ -136,6 +136,23 @@
 	src.set_dir(turn(src.dir, 270))
 	update()
 
+//VOREstation edit: counter-clockwise rotation
+/obj/structure/disposalconstruct/verb/rotate_counterclockwise()
+	set category = "Object"
+	set name = "Rotate Pipe Counter-Clockwise"
+	set src in view(1)
+
+	if(usr.stat)
+		return
+
+	if(anchored)
+		to_chat(usr, "You must unfasten the pipe before rotating it.")
+		return
+
+	src.set_dir(turn(src.dir, 90))
+	update()
+//VOREstation edit end
+
 /obj/structure/disposalconstruct/verb/flip()
 	set category = "Object"
 	set name = "Flip Pipe"
@@ -287,7 +304,7 @@
 	// weldingtool: convert to real pipe
 	else if(I.has_tool_quality(TOOL_WELDER))
 		if(anchored)
-			var/obj/item/weapon/weldingtool/W = I.get_welder()
+			var/obj/item/weldingtool/W = I.get_welder()
 			if(W.remove_fuel(0,user))
 				playsound(src, W.usesound, 100, 1)
 				to_chat(user, "Welding the [nicetype] in place.")

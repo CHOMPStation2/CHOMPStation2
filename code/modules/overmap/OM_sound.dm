@@ -4,3 +4,10 @@
 		for(var/mob/potential_mob as anything in player_list)
 			if(potential_mob.z in enterer.map_z)
 				SEND_SOUND(potential_mob, 'sound/ambience/approaching_planet.ogg')
+
+/obj/effect/overmap/visitable/planet/Crossed(var/obj/effect/overmap/visitable/ship/enterer) //CHOMPedit, lazy copy-paste
+	. = ..()
+	if(istype(enterer))
+		for(var/mob/potential_mob as anything in player_list)
+			if(potential_mob.z in enterer.map_z)
+				SEND_SOUND(potential_mob, 'sound/ambience/approaching_planet.ogg')

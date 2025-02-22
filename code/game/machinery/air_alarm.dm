@@ -1,6 +1,6 @@
 #define DECLARE_TLV_VALUES var/red_min; var/yel_min; var/yel_max; var/red_max; var/tlv_comparitor;
 #define LOAD_TLV_VALUES(x, y) red_min = x[1]; yel_min = x[2]; yel_max = x[3]; red_max = x[4]; tlv_comparitor = y;
-#define TEST_TLV_VALUES (((tlv_comparitor >= red_max && red_max > 0) || tlv_comparitor <= red_min) ? 2 : ((tlv_comparitor >= yel_max && yel_max > 0) || tlv_comparitor <= yel_min) ? 1 : 0)
+#define TEST_TLV_VALUES (((tlv_comparitor > red_max && red_max > 0) || tlv_comparitor < red_min) ? 2 : ((tlv_comparitor > yel_max && yel_max > 0) || tlv_comparitor < yel_min) ? 1 : 0)
 
 #define AALARM_MODE_SCRUBBING	1
 #define AALARM_MODE_REPLACEMENT	2 //like scrubbing, but faster.
@@ -58,7 +58,7 @@
 	panel_open = FALSE // If it's been screwdrivered open.
 	var/aidisabled = 0
 	var/shorted = 0
-	circuit = /obj/item/weapon/circuitboard/airalarm
+	circuit = /obj/item/circuitboard/airalarm
 
 	var/datum/wires/alarm/wires
 
@@ -76,7 +76,7 @@
 	/// red warning minimum value, yellow warning minimum value, yellow warning maximum value, red warning maximum value
 	/// Use code\defines\gases.dm as reference for id/name. Please keep it consistent
 	var/list/TLV = list()
-	var/list/trace_gas = list("nitrous_oxide", "volatile_fuel") //list of other gases that this air alarm is able to detect
+	var/list/trace_gas = list(GAS_N2O, GAS_VOLATILE_FUEL) //list of other gases that this air alarm is able to detect
 
 	var/danger_level = 0
 	var/pressure_dangerlevel = 0
@@ -111,9 +111,9 @@
 /obj/machinery/alarm/server/Initialize(mapload)
 	. = ..()
 	req_access = list(access_rd, access_atmospherics, access_engine_equip)
-	TLV["oxygen"] =			list(-1.0, -1.0,-1.0,-1.0) // Partial pressure, kpa
-	TLV["carbon_dioxide"] = list(-1.0, -1.0,   5,  10) // Partial pressure, kpa
-	TLV["phoron"] =			list(-1.0, -1.0, 0, 0.5) // Partial pressure, kpa
+	TLV[GAS_O2] =			list(-1.0, -1.0,-1.0,-1.0) // Partial pressure, kpa
+	TLV[GAS_CO2] = list(-1.0, -1.0,   5,  10) // Partial pressure, kpa
+	TLV[GAS_PHORON] =			list(-1.0, -1.0, 0, 0.5) // Partial pressure, kpa
 	TLV["other"] =			list(-1.0, -1.0, 0.5, 1.0) // Partial pressure, kpa
 	TLV["pressure"] =		list(0,ONE_ATMOSPHERE*0.10,ONE_ATMOSPHERE*1.40,ONE_ATMOSPHERE*1.60) /* kpa */
 	TLV["temperature"] =	list(20, 40, 140, 160) // K
@@ -149,10 +149,10 @@
 		wires = new(src)
 
 	// breathable air according to human/Life()
-	TLV["oxygen"] =			list(16, 19, 135, 140) // Partial pressure, kpa
-	TLV["nitrogen"] =		list(0, 0, 135, 140) // Partial pressure, kpa
-	TLV["carbon_dioxide"] = list(-1.0, -1.0, 5, 10) // Partial pressure, kpa
-	TLV["phoron"] =			list(-1.0, -1.0, 0, 0.5) // Partial pressure, kpa
+	TLV[GAS_O2] =			list(16, 19, 135, 140) // Partial pressure, kpa
+	TLV[GAS_N2] =		list(0, 0, 135, 140) // Partial pressure, kpa
+	TLV[GAS_CO2] = list(-1.0, -1.0, 5, 10) // Partial pressure, kpa
+	TLV[GAS_PHORON] =			list(-1.0, -1.0, 0, 0.5) // Partial pressure, kpa
 	TLV["other"] =			list(-1.0, -1.0, 0.5, 1.0) // Partial pressure, kpa
 	TLV["pressure"] =		list(ONE_ATMOSPHERE * 0.80, ONE_ATMOSPHERE * 0.90, ONE_ATMOSPHERE * 1.10, ONE_ATMOSPHERE * 1.20) /* kpa */
 	TLV["temperature"] =	list(T0C - 26, T0C, T0C + 40, T0C + 66) // K
@@ -228,17 +228,17 @@
 		//check for when we should start adjusting temperature
 		if(!TEST_TLV_VALUES && abs(environment.temperature - target_temperature) > 2.0 && environment.return_pressure() >= 1)
 			update_use_power(USE_POWER_ACTIVE)
-			regulating_temperature = 1
-			audible_message("\The [src] clicks as it starts [environment.temperature > target_temperature ? "cooling" : "heating"] the room.",\
+			regulating_temperature = (environment.temperature > target_temperature ? 1 : 2)
+			audible_message("\The [src] clicks as it starts [regulating_temperature == 1 ? "cooling" : "heating"] the room.",\
 			"You hear a click and a faint electronic hum.", runemessage = "* click *")
 			playsound(src, 'sound/machines/click.ogg', 50, 1)
 	else
 		//check for when we should stop adjusting temperature
 		if(TEST_TLV_VALUES || abs(environment.temperature - target_temperature) <= 0.5 || environment.return_pressure() < 1)
 			update_use_power(USE_POWER_IDLE)
-			regulating_temperature = 0
-			audible_message("\The [src] clicks quietly as it stops [environment.temperature > target_temperature ? "cooling" : "heating"] the room.",\
+			audible_message("\The [src] clicks quietly as it stops [regulating_temperature == 1 ? "cooling" : "heating"] the room.",\
 			"You hear a click as a faint electronic humming stops.", runemessage = "* click *")
+			regulating_temperature = 0
 			playsound(src, 'sound/machines/click.ogg', 50, 1)
 
 	if(regulating_temperature)
@@ -284,11 +284,11 @@
 	DECLARE_TLV_VALUES
 	LOAD_TLV_VALUES(TLV["pressure"], environment_pressure)
 	pressure_dangerlevel = TEST_TLV_VALUES // not local because it's used in process()
-	LOAD_TLV_VALUES(TLV["oxygen"], environment.gas["oxygen"]*partial_pressure)
+	LOAD_TLV_VALUES(TLV[GAS_O2], environment.gas[GAS_O2]*partial_pressure)
 	var/oxygen_dangerlevel = TEST_TLV_VALUES
-	LOAD_TLV_VALUES(TLV["carbon_dioxide"], environment.gas["carbon_dioxide"]*partial_pressure)
+	LOAD_TLV_VALUES(TLV[GAS_CO2], environment.gas[GAS_CO2]*partial_pressure)
 	var/co2_dangerlevel = TEST_TLV_VALUES
-	LOAD_TLV_VALUES(TLV["phoron"], environment.gas["phoron"]*partial_pressure)
+	LOAD_TLV_VALUES(TLV[GAS_PHORON], environment.gas[GAS_PHORON]*partial_pressure)
 	var/phoron_dangerlevel = TEST_TLV_VALUES
 	LOAD_TLV_VALUES(TLV["temperature"], environment.temperature)
 	var/temperature_dangerlevel = TEST_TLV_VALUES
@@ -654,7 +654,7 @@
 		var/list/selected
 		var/list/thresholds = list()
 
-		var/list/gas_names = list("oxygen", "carbon_dioxide", "phoron", "other")	//Gas ids made to match code\defines\gases.dm
+		var/list/gas_names = list(GAS_O2, GAS_CO2, GAS_PHORON, "other")	//Gas ids made to match code\defines\gases.dm
 		for(var/g in gas_names)
 			thresholds[++thresholds.len] = list("name" = g, "settings" = list())
 			selected = TLV[g]
@@ -694,10 +694,10 @@
 		var/list/selected = TLV["temperature"]
 		var/max_temperature = min(selected[3] - T0C, MAX_TEMPERATURE)
 		var/min_temperature = max(selected[2] - T0C, MIN_TEMPERATURE)
-		var/input_temperature = tgui_input_number(usr, "What temperature would you like the system to mantain? (Capped between [min_temperature] and [max_temperature]C)", "Thermostat Controls", target_temperature - T0C, max_temperature, min_temperature, round_value = FALSE)
+		var/input_temperature = tgui_input_number(ui.user, "What temperature would you like the system to mantain? (Capped between [min_temperature] and [max_temperature]C)", "Thermostat Controls", target_temperature - T0C, max_temperature, min_temperature, round_value = FALSE)
 		if(isnum(input_temperature))
 			if(input_temperature > max_temperature || input_temperature < min_temperature)
-				to_chat(usr, "Temperature must be between [min_temperature]C and [max_temperature]C")
+				to_chat(ui.user, "Temperature must be between [min_temperature]C and [max_temperature]C")
 			else
 				target_temperature = input_temperature + T0C
 		return TRUE
@@ -706,13 +706,13 @@
 	// Yes, this is kinda snowflaky; however, I would argue it would be far more snowflakey
 	// to include "custom hrefs" and all the other bullshit that nano states have just for the
 	// like, two UIs, that want remote access to other UIs.
-	if((locked && !(siliconaccess(usr) || (isobserver(usr) && is_admin(usr))) && !istype(state, /datum/tgui_state/air_alarm_remote)) || (issilicon(usr) && aidisabled)) //CHOMPedit borg access
+	if((locked && !(siliconaccess(ui.user) || (isobserver(ui.user) && is_admin(ui.user))) && !istype(state, /datum/tgui_state/air_alarm_remote)) || (issilicon(ui.user) && aidisabled)) //CHOMPedit borg access
 		return
 
 	var/device_id = params["id_tag"]
 	switch(action)
 		if("lock")
-			if((siliconaccess(usr) && !wires.is_cut(WIRE_IDSCAN)) || (isobserver(usr) && is_admin(usr))) //CHOMPEdit borg access + admin acces
+			if((siliconaccess(ui.user) && !wires.is_cut(WIRE_IDSCAN)) || (isobserver(ui.user) && is_admin(ui.user))) //CHOMPEdit borg access + admin acces
 				locked = !locked
 				. = TRUE
 		if( "power",
@@ -725,42 +725,42 @@
 			"panic_siphon",
 			"scrubbing",
 			"direction")
-			send_signal(device_id, list("[action]" = text2num(params["val"])), usr)
+			send_signal(device_id, list("[action]" = text2num(params["val"])), ui.user)
 			. = TRUE
 		if("excheck")
-			send_signal(device_id, list("checks" = text2num(params["val"])^1), usr)
+			send_signal(device_id, list("checks" = text2num(params["val"])^1), ui.user)
 			. = TRUE
 		if("incheck")
-			send_signal(device_id, list("checks" = text2num(params["val"])^2), usr)
+			send_signal(device_id, list("checks" = text2num(params["val"])^2), ui.user)
 			. = TRUE
 		if("set_external_pressure", "set_internal_pressure")
 			var/target = params["value"]
 			if(!isnull(target))
-				send_signal(device_id, list("[action]" = target), usr)
+				send_signal(device_id, list("[action]" = target), ui.user)
 				. = TRUE
 		if("reset_external_pressure")
-			send_signal(device_id, list("reset_external_pressure"), usr)
+			send_signal(device_id, list("reset_external_pressure"), ui.user)
 			. = TRUE
 		if("reset_internal_pressure")
-			send_signal(device_id, list("reset_internal_pressure"), usr)
+			send_signal(device_id, list("reset_internal_pressure"), ui.user)
 			. = TRUE
 		if("threshold")
 			var/env = params["env"]
 
 			var/name = params["var"]
-			var/value = tgui_input_number(usr, "New [name] for [env]:", name, TLV[env][name], min_value=-1, round_value = FALSE)
+			var/value = tgui_input_number(ui.user, "New [name] for [env]:", name, TLV[env][name], min_value=-1, round_value = FALSE)
 			if(!isnull(value) && !..())
 				if(value < 0)
 					TLV[env][name] = -1
 				else
 					TLV[env][name] = round(value, 0.01)
 				clamp_tlv_values(env, name)
-				// investigate_log(" treshold value for [env]:[name] was set to [value] by [key_name(usr)]",INVESTIGATE_ATMOS)
+				// investigate_log(" treshold value for [env]:[name] was set to [value] by [key_name(ui.user)]",INVESTIGATE_ATMOS)
 				. = TRUE
 		if("mode")
 			mode = text2num(params["mode"])
-			// investigate_log("was turned to [get_mode_name(mode)] mode by [key_name(usr)]",INVESTIGATE_ATMOS)
-			apply_mode(usr)
+			// investigate_log("was turned to [get_mode_name(mode)] mode by [key_name(ui.user)]",INVESTIGATE_ATMOS)
+			apply_mode(ui.user)
 			. = TRUE
 		if("alarm")
 			if(alarm_area.atmosalert(2, src))
@@ -813,32 +813,32 @@
 		apply_danger_level(0)
 	update_icon()
 
-/obj/machinery/alarm/attackby(obj/item/W as obj, mob/user as mob)
+/obj/machinery/alarm/attackby(obj/item/W as obj, mob/user)
 	add_fingerprint(user)
 	if(alarm_deconstruction_screwdriver(user, W))
 		return
 	if(alarm_deconstruction_wirecutters(user, W))
 		return
 
-	if(istype(W, /obj/item/weapon/card/id) || istype(W, /obj/item/device/pda))// trying to unlock the interface with an ID card
-		togglelock()
+	if(istype(W, /obj/item/card/id) || istype(W, /obj/item/pda))// trying to unlock the interface with an ID card
+		togglelock(user)
 	return ..()
 
-/obj/machinery/alarm/verb/togglelock(mob/user as mob)
+/obj/machinery/alarm/proc/togglelock(mob/user)
 	if(stat & (NOPOWER|BROKEN))
 		to_chat(user, "It does nothing.")
 		return
 	else
-		if(allowed(usr) && !wires.is_cut(WIRE_IDSCAN))
+		if(allowed(user) && !wires.is_cut(WIRE_IDSCAN))
 			locked = !locked
-			to_chat(user, "<span class='notice'>You [locked ? "lock" : "unlock"] the Air Alarm interface.</span>")
+			to_chat(user, span_notice("You [locked ? "lock" : "unlock"] the Air Alarm interface."))
 		else
-			to_chat(user, "<span class='warning'>Access denied.</span>")
+			to_chat(user, span_warning("Access denied."))
 		return
 
-/obj/machinery/alarm/AltClick()
+/obj/machinery/alarm/AltClick(mob/user)
 	..()
-	togglelock()
+	togglelock(user)
 
 /obj/machinery/alarm/power_change()
 	..()
@@ -877,3 +877,21 @@
 #undef LOAD_TLV_VALUES
 #undef TEST_TLV_VALUES
 #undef DECLARE_TLV_VALUES
+
+#undef AALARM_MODE_SCRUBBING
+#undef AALARM_MODE_REPLACEMENT
+#undef AALARM_MODE_PANIC
+#undef AALARM_MODE_CYCLE
+#undef AALARM_MODE_FILL
+#undef AALARM_MODE_OFF
+
+#undef AALARM_SCREEN_MAIN
+#undef AALARM_SCREEN_VENT
+#undef AALARM_SCREEN_SCRUB
+#undef AALARM_SCREEN_MODE
+#undef AALARM_SCREEN_SENSORS
+
+#undef AALARM_REPORT_TIMEOUT
+
+#undef MAX_TEMPERATURE
+#undef MIN_TEMPERATURE

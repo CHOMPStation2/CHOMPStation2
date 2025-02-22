@@ -12,7 +12,7 @@
 	density = TRUE
 	anchored = TRUE
 
-	var/obj/item/weapon/card/id/inserted_id	// Inserted ID card, for points
+	var/obj/item/card/id/inserted_id	// Inserted ID card, for points
 
 	var/obj/machinery/mineral/processing_unit/machine = null
 	var/show_all_ores = FALSE
@@ -35,15 +35,15 @@
 	if(..())
 		return
 	if(!allowed(user))
-		to_chat(user, "<span class='warning'>Access denied.</span>")
+		to_chat(user, span_warning("Access denied."))
 		return
 	tgui_interact(user)
 
 /obj/machinery/mineral/processing_unit_console/attackby(var/obj/item/I, var/mob/user)
-	if(istype(I, /obj/item/weapon/card/id))
+	if(istype(I, /obj/item/card/id))
 		if(!powered())
 			return
-		if(!inserted_id && user.unEquip(I))
+		if(!inserted_id && (user.unEquip(I) || isrobot(user)))
 			I.forceMove(src)
 			inserted_id = I
 			SStgui.update_uis(src)
@@ -90,17 +90,17 @@
 
 	return data
 
-/obj/machinery/mineral/processing_unit_console/tgui_act(action, list/params)
+/obj/machinery/mineral/processing_unit_console/tgui_act(action, list/params, datum/tgui/ui)
 	if(..())
 		return TRUE
 
-	add_fingerprint(usr)
+	add_fingerprint(ui.user)
 	switch(action)
 		if("toggleSmelting")
 			var/ore = params["ore"]
 			var/new_setting = params["set"]
 			if(new_setting == null)
-				new_setting = tgui_input_list(usr, "What setting do you wish to use for processing [ore]]?", "Process Setting", list("Smelting","Compressing","Alloying","Nothing"))
+				new_setting = tgui_input_list(ui.user, "What setting do you wish to use for processing [ore]]?", "Process Setting", list("Smelting","Compressing","Alloying","Nothing"))
 				if(!new_setting)
 					return
 				switch(new_setting)
@@ -119,25 +119,25 @@
 		if("logoff")
 			if(!inserted_id)
 				return
-			usr.put_in_hands(inserted_id)
+			ui.user.put_in_hands(inserted_id)
 			inserted_id = null
 			. = TRUE
 		if("claim")
 			if(istype(inserted_id))
-				if(access_mining_station in inserted_id.access)
-					inserted_id.mining_points += machine.points
+				if(access_mining_station in inserted_id.GetAccess())
+					inserted_id.adjust_mining_points(machine.points)
 					machine.points = 0
 				else
-					to_chat(usr, "<span class='warning'>Required access not found.</span>")
+					to_chat(ui.user, span_warning("Required access not found."))
 			. = TRUE
 		if("insert")
-			var/obj/item/weapon/card/id/I = usr.get_active_hand()
+			var/obj/item/card/id/I = ui.user.get_active_hand()
 			if(istype(I))
-				usr.drop_item()
+				ui.user.drop_item()
 				I.forceMove(src)
 				inserted_id = I
 			else
-				to_chat(usr, "<span class='warning'>No valid ID.</span>")
+				to_chat(ui.user, span_warning("No valid ID."))
 			. = TRUE
 		if("speed_toggle")
 			machine.toggle_speed()
@@ -166,26 +166,26 @@
 	var/points = 0
 	var/points_mult = 1 //VOREStation Add - multiplier for points generated when ore hits the processors
 	var/static/list/ore_values = list(
-		"sand" = 1,
-		"hematite" = 1,
-		"carbon" = 1,
-		"raw copper" = 1,
-		"raw tin" = 1,
-		"void opal" = 3,
-		"painite" = 3,
-		"quartz" = 3,
-		"raw bauxite" = 5,
-		"phoron" = 15,
-		"silver" = 16,
-		"gold" = 18,
-		"marble" = 20,
-		"uranium" = 30,
-		"diamond" = 50,
-		"platinum" = 40,
-		"lead" = 40,
-		"mhydrogen" = 40,
-		"verdantium" = 60,
-		"rutile" = 40) //VOREStation Add
+		ORE_SAND = 1,
+		ORE_HEMATITE = 1,
+		ORE_CARBON = 1,
+		ORE_COPPER = 1,
+		ORE_TIN = 1,
+		ORE_VOPAL = 3,
+		ORE_PAINITE = 3,
+		ORE_QUARTZ= 3,
+		ORE_BAUXITE = 5,
+		ORE_PHORON = 15,
+		ORE_SILVER = 16,
+		ORE_GOLD = 18,
+		ORE_MARBLE = 20,
+		ORE_URANIUM = 30,
+		ORE_DIAMOND = 50,
+		ORE_PLATINUM = 40,
+		ORE_LEAD = 40,
+		ORE_MHYDROGEN = 40,
+		ORE_VERDANTIUM = 60,
+		ORE_RUTILE = 40) //VOREStation Add
 
 /obj/machinery/mineral/processing_unit/Initialize()
 	. = ..()
@@ -253,7 +253,7 @@
 				ore_chunk.stored_ore[ore] = 0
 			qdel(ore_chunk)
 
-	for(var/obj/item/weapon/ore/O in input.loc)
+	for(var/obj/item/ore/O in input.loc)
 		if(!isnull(ores_stored[O.material]))
 			ores_stored[O.material]++
 			points += (ore_values[O.material]*points_mult)
@@ -337,7 +337,7 @@
 			else
 				ores_stored[metal]--
 				sheets++
-				new /obj/item/weapon/ore/slag(output.loc)
+				new /obj/item/ore/slag(output.loc)
 		else
 			continue
 
@@ -347,4 +347,3 @@
 #undef PROCESS_SMELT
 #undef PROCESS_COMPRESS
 #undef PROCESS_ALLOY
-

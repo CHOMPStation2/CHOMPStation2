@@ -309,7 +309,7 @@
 	},
 /obj/machinery/power/apc{
 	alarms_hidden = 1;
-	cell_type = /obj/item/weapon/cell/high/empty;
+	cell_type = /obj/item/cell/high/empty;
 	dir = 4;
 	name = "east bump";
 	pixel_x = 28;
@@ -1082,7 +1082,6 @@
 /area/tether_away/aerostat/inside)
 "di" = (
 /obj/structure/cable/heavyduty{
-	dir = 2;
 	icon_state = "0-4"
 	},
 /obj/structure/cable/yellow,
@@ -1342,7 +1341,6 @@
 	dir = 8
 	},
 /obj/structure/cable/heavyduty{
-	dir = 2;
 	icon_state = "0-4"
 	},
 /obj/structure/cable{
@@ -1563,7 +1561,7 @@
 /area/tether_away/aerostat/inside)
 "uU" = (
 /obj/structure/table/standard,
-/obj/item/weapon/gun/energy/taser/xeno,
+/obj/item/gun/energy/taser/xeno,
 /obj/random/cigarettes,
 /turf/simulated/floor/tiled/techfloor/virgo2,
 /area/tether_away/aerostat/inside)
@@ -1697,7 +1695,7 @@
 /area/tether_away/aerostat)
 "Ym" = (
 /obj/structure/table/standard,
-/obj/item/weapon/gun/energy/taser/xeno,
+/obj/item/gun/energy/taser/xeno,
 /turf/simulated/floor/tiled/techfloor/virgo2,
 /area/tether_away/aerostat/inside)
 "ZK" = (

@@ -44,7 +44,7 @@
 			if(!seed.growth_stages)
 				seed.update_growth_stages()
 			if(!seed.growth_stages)
-				log_debug("<span class='danger'>Seed type [seed.get_trait(TRAIT_PLANT_ICON)] cannot find a growth stage value.</span>")
+				log_debug(span_danger("Seed type [seed.get_trait(TRAIT_PLANT_ICON)] cannot find a growth stage value.")) //CHOMPEdit
 				return
 			var/overlay_stage = 1
 			if(age >= seed.get_trait(TRAIT_MATURATION))

@@ -16,7 +16,7 @@
 	anchored = TRUE
 
 /obj/effect/decal/cleanable/ash/attack_hand(mob/user as mob)
-	to_chat(user, "<span class='notice'>[src] sifts through your fingers.</span>")
+	to_chat(user, span_notice("[src] sifts through your fingers."))
 	var/turf/simulated/floor/F = get_turf(src)
 	if (istype(F))
 		F.dirt += 4
@@ -38,7 +38,7 @@
 	icon_state = "dirt"
 	mouse_opacity = 0
 
-/obj/effect/decal/cleanable/dirt/Initialize(var/mapload, var/_age, var/dirt)
+/obj/effect/decal/cleanable/dirt/Initialize(mapload, var/_age, var/dirt)
 	.=..()
 	var/turf/simulated/our_turf = src.loc
 	if(our_turf && istype(our_turf) && our_turf.can_dirty)
@@ -113,7 +113,7 @@
 	icon = 'icons/effects/blood.dmi'
 	icon_state = "vomit_1"
 	random_icon_states = list("vomit_1", "vomit_2", "vomit_3", "vomit_4")
-	var/list/datum/disease2/disease/virus2 = list()
+	var/list/datum/disease/viruses = list()
 
 /obj/effect/decal/cleanable/tomato_smudge
 	name = "tomato smudge"
@@ -121,6 +121,7 @@
 	density = FALSE
 	anchored = TRUE
 	icon = 'icons/effects/tomatodecal.dmi'
+	icon_state = "tomato_floor1"
 	random_icon_states = list("tomato_floor1", "tomato_floor2", "tomato_floor3")
 
 /obj/effect/decal/cleanable/egg_smudge
@@ -129,6 +130,7 @@
 	density = FALSE
 	anchored = TRUE
 	icon = 'icons/effects/tomatodecal.dmi'
+	icon_state = "smashed_egg1"
 	random_icon_states = list("smashed_egg1", "smashed_egg2", "smashed_egg3")
 
 /obj/effect/decal/cleanable/pie_smudge //honk
@@ -137,6 +139,7 @@
 	density = FALSE
 	anchored = TRUE
 	icon = 'icons/effects/tomatodecal.dmi'
+	icon_state = "smashed_pie"
 	random_icon_states = list("smashed_pie")
 
 /obj/effect/decal/cleanable/fruit_smudge
@@ -158,6 +161,6 @@
 	icon_state = "confetti"
 
 /obj/effect/decal/cleanable/confetti/attack_hand(mob/user)
-	to_chat(user, "<span class='notice'>You start to meticulously pick up the confetti.</span>")
+	to_chat(user, span_notice("You start to meticulously pick up the confetti."))
 	if(do_after(user, 60))
 		qdel(src)

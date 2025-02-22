@@ -3,11 +3,11 @@
 var/obj/effect/lobby_image = new /obj/effect/lobby_image
 
 /obj/effect/lobby_image
-	name = "CHOMPStation"
+	name = "CHOMPStation" // CHOMPEdit
 	desc = "How are you reading this?"
 	screen_loc = "1,1"
-	icon = 'icons/misc/loading.dmi' //VOREStation Add - Loading Screen
-	icon_state = "loading(old)" //VOREStation Add - Loading Screen //CHOMPedit: let's keep the old one since the new one references vorestation
+	icon = 'icons/misc/loading.dmi'
+	icon_state = "loading(old)" // CHOMPEdit
 
 /obj/effect/lobby_image/Initialize()
 	icon = using_map.lobby_icon
@@ -29,11 +29,11 @@ var/obj/effect/lobby_image = new /obj/effect/lobby_image
 /mob/new_player/Login()
 	update_Login_details()	//handles setting lastKnownIP and computer_id for use by the ban systems as well as checking for multikeying
 	if(join_motd)
-		join_motd = GLOB.is_valid_url.Replace(join_motd,"<span class='linkify'>$1</span>")
-		to_chat(src, "<div class=\"motd\">[join_motd]</div>")
+		join_motd = GLOB.is_valid_url.Replace(join_motd,span_linkify("$1"))
+		to_chat(src, examine_block("<div class=\"motd\">[join_motd]</div>"))
 
 	if(has_respawned)
-		to_chat(usr, CONFIG_GET(string/respawn_message)) // CHOMPEdit
+		to_chat(src, CONFIG_GET(string/respawn_message))
 		has_respawned = FALSE
 
 	if(!mind)
@@ -50,7 +50,7 @@ var/obj/effect/lobby_image = new /obj/effect/lobby_image
 	created_for = ckey
 
 	new_player_panel()
-	client.init_verbs() //ChompEDIT - TGPanel
+	client.init_verbs()
 	spawn(40)
 		if(client)
 			handle_privacy_poll()
@@ -82,18 +82,20 @@ var/obj/effect/lobby_image = new /obj/effect/lobby_image
 			if(world.byond_build == 1569)
 				problems = "frequent crashes, usually when transitioning between z-levels"
 
+		if(1652 to 1654)
+			problems = "various webview graphics issues and client hanging (1652 to 1654 are all affected). 516.1651 is known to be safe from these issues if a newer version than 1654 is not available."
+
 	if(problems)
 		// To get attention
 		var/message = "Your BYOND client version ([client.byond_version].[client.byond_build]) has known issues: [problems]. See the chat window for other version options."
 		tgui_alert_async(src, message, "BYOND Client Version Warning")
 
 		// So we can be more wordy and give links.
-		to_chat(src, "<span class='danger'>Your client version has known issues.</span> Please consider using a different version: <a href='https://www.byond.com/download/build/'>https://www.byond.com/download/build/</a>.")
-		var/chat_message = ""
-		if(CONFIG_GET(number/suggested_byond_version)) // CHOMPEdit
-			chat_message += "We suggest using version [CONFIG_GET(number/suggested_byond_version)]." // CHOMPEdit
-			if(CONFIG_GET(number/suggested_byond_build)) // CHOMPEdit
-				chat_message += "[CONFIG_GET(number/suggested_byond_build)]." // CHOMPEdit
+		to_chat(src, span_userdanger("Your client version has known issues.") + " Please consider using a different version: <a href='https://www.byond.com/download/build/'>https://www.byond.com/download/build/</a>.")
+		if(CONFIG_GET(number/suggested_byond_version))
+			var/chat_message = "We suggest using version [CONFIG_GET(number/suggested_byond_version)]."
+			if(CONFIG_GET(number/suggested_byond_build))
+				chat_message += "[CONFIG_GET(number/suggested_byond_build)]."
 			chat_message += " If you find this version doesn't work for you, let us know."
-		to_chat(src, chat_message)
+			to_chat(src, chat_message)
 		to_chat(src, "Tip: You can always use the '.zip' versions of BYOND and keep multiple versions in folders wherever you want, rather than uninstalling/reinstalling. Just make sure BYOND is *really* closed (check your system tray for the icon) before starting a different version.")

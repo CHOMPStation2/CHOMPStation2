@@ -1,14 +1,14 @@
 /* eslint-disable react/no-danger */
-import { useBackend } from '../backend';
-import { Box, Section, Stack, Tabs } from '../components';
-import { Window } from '../layouts';
+import { useBackend } from 'tgui/backend';
+import { Window } from 'tgui/layouts';
+import { Box, Section, Stack, Tabs } from 'tgui-core/components';
 
 type data = {
   namae: string;
   names: string[];
-  descriptions: { key: string; val: string }[];
-  categories: { key: string; val: string }[];
-  tutorials: { key: string; val: string }[];
+  descriptions: Record<string, string>[];
+  categories: Record<string, string>[];
+  tutorials: Record<string, string>[];
   selection: string;
 };
 

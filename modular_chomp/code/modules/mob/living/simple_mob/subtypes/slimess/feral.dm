@@ -1,6 +1,6 @@
 /mob/living/simple_mob/slime/feral
 	cores = 3 // Xenobio will love getting their hands on these.
-	maxHealth = 75
+	maxHealth = 150 //Old 75
 	movement_cooldown = 0
 	melee_damage_lower = 15
 	melee_damage_upper = 15
@@ -18,7 +18,7 @@
 	color = "#CC23FF"
 	slime_color = "purple"
 	coretype = /obj/item/slime_extract/purple
-	reagent_injected = "toxin"
+	reagent_injected = REAGENT_ID_TOXIN
 
 /mob/living/simple_mob/slime/feral/orange
 	desc = "This slime is known to be flammable and can ignite enemies."
@@ -40,7 +40,7 @@
 	color = "#19FFFF"
 	slime_color = "blue"
 	coretype = /obj/item/slime_extract/blue
-	reagent_injected = "cryotoxin"
+	reagent_injected = REAGENT_ID_CRYOTOXIN
 	cold_resist = 0.50
 
 /mob/living/simple_mob/slime/feral/metal
@@ -87,20 +87,20 @@
 	if(isliving(A))
 		var/mob/living/L = A
 		L.inflict_shock_damage(10)
-		to_chat(src, span("span", "You shock \the [L]."))
-		to_chat(L, span("danger", "You've been shocked by \the [src]!"))
+		to_chat(src, span_warning("You shock \the [L]."))
+		to_chat(L, span_danger("You've been shocked by \the [src]!"))
 
 /mob/living/simple_mob/slime/feral/dark_purple
 	desc = "This slime produces ever-coveted phoron.  Risky to handle but very much worth it."
 	color = "#660088"
 	slime_color = "dark purple"
 	coretype = /obj/item/slime_extract/dark_purple
-	reagent_injected = "phoron"
+	reagent_injected = REAGENT_ID_PHORON
 
 /mob/living/simple_mob/slime/feral/dark_purple/proc/ignite()
-	visible_message(span("critical", "\The [src] erupts in an inferno!"))
+	visible_message(span_critical("\The [src] erupts in an inferno!"))
 	for(var/turf/simulated/target_turf in view(2, src))
-		target_turf.assume_gas("phoron", 30, 1500+T0C)
+		target_turf.assume_gas(GAS_PHORON, 30, 1500+T0C)
 		spawn(0)
 			target_turf.hotspot_expose(1500+T0C, 400)
 	qdel(src)
@@ -120,7 +120,7 @@
 	else
 		..()
 
-/mob/living/simple_mob/slime/feral/dark_purple/attackby(var/obj/item/weapon/W, var/mob/user)
+/mob/living/simple_mob/slime/feral/dark_purple/attackby(var/obj/item/W, var/mob/user)
 	if(istype(W) && W.force && W.damtype == BURN)
 		log_and_message_admins("[src] ignited due to being hit with a burning weapon ([W]) by [key_name(user)].")
 		ignite()
@@ -136,7 +136,7 @@
 
 /mob/living/simple_mob/slime/feral/silver/bullet_act(var/obj/item/projectile/P, var/def_zone)
 	if(istype(P,/obj/item/projectile/beam) || istype(P, /obj/item/projectile/energy))
-		visible_message(span("danger", "\The [src] reflects \the [P]!"))
+		visible_message(span_danger("\The [src] reflects \the [P]!"))
 
 		// Find a turf near or on the original location to bounce to
 		var/new_x = P.starting.x + pick(0, 0, 0, -1, 1, -2, 2)
@@ -164,7 +164,7 @@
 /mob/living/simple_mob/slime/feral/bluespace/do_special_attack(atom/A)
 	// Teleport attack.
 	if(!A)
-		to_chat(src, span("warning", "There's nothing to teleport to."))
+		to_chat(src, span_warning("There's nothing to teleport to."))
 		return FALSE
 
 	var/list/nearby_things = range(1, A)
@@ -182,7 +182,7 @@
 			valid_turfs.Add(potential_turf)
 
 	if(!(valid_turfs.len))
-		to_chat(src, span("warning", "There wasn't an unoccupied spot to teleport to."))
+		to_chat(src, span_warning("There wasn't an unoccupied spot to teleport to."))
 		return FALSE
 
 	var/turf/target_turf = pick(valid_turfs)
@@ -194,14 +194,14 @@
 	s2.set_up(5, 1, target_turf)
 
 
-	T.visible_message(span("notice", "\The [src] vanishes!"))
+	T.visible_message(span_notice("\The [src] vanishes!"))
 	s1.start()
 
 	forceMove(target_turf)
 	playsound(target_turf, 'sound/effects/phasein.ogg', 50, 1)
-	to_chat(src, span("notice", "You teleport to \the [target_turf]."))
+	to_chat(src, span_notice("You teleport to \the [target_turf]."))
 
-	target_turf.visible_message(span("warning", "\The [src] appears!"))
+	target_turf.visible_message(span_warning("\The [src] appears!"))
 	s2.start()
 
 	if(Adjacent(A))
@@ -227,14 +227,14 @@
 	if(isliving(A) && a_intent == I_HURT)
 		var/mob/living/L = A
 		if(L.mob_size <= MOB_MEDIUM)
-			visible_message(span("danger", "\The [src] sends \the [L] flying with the impact!"))
+			visible_message(span_danger("\The [src] sends \the [L] flying with the impact!"))
 			playsound(src, "punch", 50, 1)
 			L.Weaken(1)
 			var/throwdir = get_dir(src, L)
 			L.throw_at(get_edge_target_turf(L, throwdir), 3, 1, src)
 		else
-			to_chat(L, span("warning", "\The [src] hits you with incredible force, but you remain in place."))
-			visible_message(span("danger", "\The [src] hits \the [L] with incredible force, to no visible effect!")) // CHOMPEdit: Visible/audible feedback for *resisting* the slam.
+			to_chat(L, span_warning("\The [src] hits you with incredible force, but you remain in place."))
+			visible_message(span_danger("\The [src] hits \the [L] with incredible force, to no visible effect!")) // CHOMPEdit: Visible/audible feedback for *resisting* the slam.
 			playsound(src, "punch", 50, 1) // CHOMPEdit: Visible/audible feedback for *resisting* the slam.
 
 /mob/living/simple_mob/slime/feral/red
@@ -250,7 +250,7 @@
 	slime_color = "green"
 	coretype = /obj/item/slime_extract/green
 	glow_toggle = TRUE
-	reagent_injected = "radium"
+	reagent_injected = REAGENT_ID_RADIUM
 	var/rads = 25
 
 /mob/living/simple_mob/slime/feral/green/handle_special()

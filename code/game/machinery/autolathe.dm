@@ -10,7 +10,7 @@
 	clicksound = "keyboard"
 	clickvol = 30
 
-	circuit = /obj/item/weapon/circuitboard/autolathe
+	circuit = /obj/item/circuitboard/autolathe
 
 	var/static/datum/category_collection/autolathe/autolathe_recipes
 
@@ -90,7 +90,7 @@
 	var/list/data = ..()
 	data["busy"] = busy
 	var/datum/component/material_container/materials = GetComponent(/datum/component/material_container)
-	data["materials"] = materials.tgui_data()
+	data["materials"] = materials.tgui_data(user, TRUE)
 	data["mat_efficiency"] = mat_efficiency
 	return data
 
@@ -99,7 +99,7 @@
 		return wires.Interact(user)
 
 	if(disabled)
-		to_chat(user, "<span class='danger'>\The [src] is disabled!</span>")
+		to_chat(user, span_danger("\The [src] is disabled!"))
 		return
 
 	if(shocked)
@@ -109,7 +109,7 @@
 
 /obj/machinery/autolathe/attackby(var/obj/item/O as obj, var/mob/user as mob)
 	if(busy)
-		to_chat(user, "<span class='notice'>\The [src] is busy. Please wait for completion of previous operation.</span>")
+		to_chat(user, span_notice("\The [src] is busy. Please wait for completion of previous operation."))
 		return
 
 	if(default_deconstruction_screwdriver(user, O))
@@ -146,11 +146,11 @@
 	if(..())
 		return TRUE
 
-	usr.set_machine(src)
-	add_fingerprint(usr)
+	ui.user.set_machine(src)
+	add_fingerprint(ui.user)
 
 	if(busy)
-		to_chat(usr, "<span class='notice'>The autolathe is busy. Please wait for completion of previous operation.</span>")
+		to_chat(ui.user, span_notice("The autolathe is busy. Please wait for completion of previous operation."))
 		return
 	switch(action)
 		if("make")
@@ -176,8 +176,8 @@
 					if(!isnull(materials.get_material_amount(material)) && materials.get_material_amount(material) < round(making.resources[material] * coeff))
 						max_sheets = 0
 				//Build list of multipliers for sheets.
-				multiplier = tgui_input_number(usr, "How many do you want to print? (0-[max_sheets])", null, null, max_sheets, 0)
-				if(!multiplier || multiplier <= 0 || (multiplier != round(multiplier)) || multiplier > max_sheets || tgui_status(usr, state) != STATUS_INTERACTIVE)
+				multiplier = tgui_input_number(ui.user, "How many do you want to print? (0-[max_sheets])", null, null, max_sheets, 0)
+				if(!multiplier || multiplier <= 0 || (multiplier != round(multiplier)) || multiplier > max_sheets || tgui_status(ui.user, state) != STATUS_INTERACTIVE)
 					return FALSE
 
 			//Check if we still have the materials.
@@ -256,9 +256,9 @@
 	..()
 	mb_rating = 0
 	man_rating = 0
-	for(var/obj/item/weapon/stock_parts/matter_bin/MB in component_parts)
+	for(var/obj/item/stock_parts/matter_bin/MB in component_parts)
 		mb_rating += MB.rating
-	for(var/obj/item/weapon/stock_parts/manipulator/M in component_parts)
+	for(var/obj/item/stock_parts/manipulator/M in component_parts)
 		man_rating += M.rating
 
 	var/datum/component/material_container/materials = GetComponent(/datum/component/material_container)
@@ -282,4 +282,4 @@
 	. = ..()
 	var/datum/component/material_container/materials = GetComponent(/datum/component/material_container)
 	if(in_range(user, src) || isobserver(user))
-		. += "<span class='notice'>The status display reads: Storing up to <b>[materials.max_amount]</b> material units.<br>Material consumption at <b>[mat_efficiency*100]%</b>.</span>"
+		. += span_notice("The status display reads: Storing up to <b>[materials.max_amount]</b> material units.<br>Material consumption at <b>[mat_efficiency*100]%</b>.")

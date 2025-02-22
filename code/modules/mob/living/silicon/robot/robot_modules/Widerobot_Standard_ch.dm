@@ -6,11 +6,11 @@
 
 //Add ourselves to the borg list
 /hook/startup/proc/Modular_Borg_init_standardhound()
-	//robot_modules["Honk-Hound"] = /obj/item/weapon/robot_module/robot/clerical/honkborg - done in station_vr modular chomp for ordering reasons
+	//robot_modules["Honk-Hound"] = /obj/item/robot_module/robot/clerical/honkborg - done in station_vr modular chomp for ordering reasons
 	robot_module_types += "Standard-Hound" //Add ourselves to global
 	return 1
 
-/obj/item/weapon/robot_module/robot/standard/hound
+/obj/item/robot_module/robot/standard/hound
 	name = "Standard-Hound"
 	sprites = list(
 					"MEKA" = 		list(SKIN_ICON_STATE = "mekastandard", SKIN_ICON = 'modular_chomp/icons/mob/tallborg/tallrobots.dmi', SKIN_OFFSET = 0, SKIN_HEIGHT = 64),
@@ -21,12 +21,12 @@
 
 	can_be_pushed = 0
 
-/obj/item/weapon/robot_module/robot/standard/hound/New(var/mob/living/silicon/robot/R)
+/obj/item/robot_module/robot/standard/hound/New(var/mob/living/silicon/robot/R)
 	..()
-	src.modules += new /obj/item/weapon/melee/baton/loaded(src)
-	src.modules += new /obj/item/weapon/tool/wrench/cyborg(src)
-	src.modules += new /obj/item/device/healthanalyzer(src)
-	src.emag += new /obj/item/weapon/melee/energy/sword(src)
+	src.modules += new /obj/item/melee/baton/loaded(src)
+	src.modules += new /obj/item/tool/wrench/cyborg(src)
+	src.modules += new /obj/item/healthanalyzer(src)
+	src.emag += new /obj/item/melee/energy/sword(src)
 
 	var/datum/matter_synth/water = new /datum/matter_synth(500)
 	water.name = "Water reserves"
@@ -35,7 +35,7 @@
 	R.water_res = water
 	synths += water
 
-	var/obj/item/device/dogborg/tongue/T = new /obj/item/device/dogborg/tongue(src)
+	var/obj/item/dogborg/tongue/T = new /obj/item/dogborg/tongue(src)
 	T.water = water
 	src.modules += T
 

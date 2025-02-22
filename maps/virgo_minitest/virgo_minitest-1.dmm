@@ -15,8 +15,8 @@
 /area/tcommsat/computer)
 "ae" = (
 /obj/structure/table/standard,
-/obj/item/weapon/folder/yellow,
-/obj/item/weapon/folder/yellow,
+/obj/item/folder/yellow,
+/obj/item/folder/yellow,
 /obj/machinery/light{
 	dir = 1
 	},
@@ -31,8 +31,8 @@
 /area/tcommsat/computer)
 "af" = (
 /obj/structure/table/standard,
-/obj/item/weapon/paper_bin,
-/obj/item/weapon/pen/blue{
+/obj/item/paper_bin,
+/obj/item/pen/blue{
 	pixel_x = -3;
 	pixel_y = 2
 	},
@@ -47,11 +47,11 @@
 /area/tcommsat/computer)
 "ah" = (
 /obj/structure/table/standard,
-/obj/item/device/flashlight/lamp,
+/obj/item/flashlight/lamp,
 /turf/simulated/floor/tiled/dark,
 /area/tcommsat/computer)
 "ai" = (
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	dir = 8;
 	name = "Station Intercom (General)";
 	pixel_x = -28
@@ -71,7 +71,7 @@
 /obj/machinery/computer/telecomms/monitor{
 	network = "tcommsat"
 	},
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	name = "General Listening Channel";
 	pixel_x = 28
 	},
@@ -187,7 +187,7 @@
 	dir = 8
 	},
 /obj/structure/table/standard,
-/obj/item/device/multitool,
+/obj/item/multitool,
 /turf/simulated/floor/tiled/dark,
 /area/tcommsat/computer)
 "aD" = (
@@ -520,7 +520,7 @@
 	},
 /area/tcommsat/chamber)
 "bi" = (
-/obj/item/device/geiger/wall/west{
+/obj/item/geiger/wall/west{
 	dir = 4;
 	pixel_x = -36
 	},
@@ -1030,7 +1030,6 @@
 	},
 /obj/machinery/alarm{
 	dir = 8;
-	icon_state = "alarm0";
 	pixel_x = 24
 	},
 /turf/simulated/floor/tiled,
@@ -1310,11 +1309,14 @@
 /turf/simulated/floor/tiled,
 /area/medical/medbay)
 "cP" = (
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
+/obj/item/stack/material/phoron,
+/obj/item/stack/material/phoron,
+/obj/item/stack/material/phoron,
+/obj/item/stack/material/phoron,
+/obj/item/stack/material/phoron,
+/obj/structure/table/reinforced,
 /turf/simulated/floor/tiled,
-/area/medical/medbay)
+/area/bridge)
 "cQ" = (
 /obj/machinery/alarm{
 	pixel_y = 22
@@ -1415,17 +1417,16 @@
 /turf/simulated/floor/tiled,
 /area/medical/medbay)
 "df" = (
-/obj/structure/cable{
-	icon_state = "1-2"
+/obj/machinery/light{
+	dir = 1
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
+/obj/structure/table/reinforced,
+/obj/item/reagent_containers/glass/beaker/large,
+/obj/item/reagent_containers/glass/beaker/large,
+/obj/item/reagent_containers/glass/beaker/large,
+/obj/item/reagent_containers/dropper,
 /turf/simulated/floor/tiled,
-/area/medical/medbay)
+/area/bridge)
 "dg" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -1947,6 +1948,12 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled,
 /area/crew_quarters/bar)
+"et" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled,
+/area/medical/medbay)
 "eu" = (
 /obj/machinery/door/airlock/multi_tile/glass{
 	dir = 2;
@@ -1992,6 +1999,18 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 6
+	},
+/turf/simulated/floor/tiled,
+/area/medical/medbay)
+"eA" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/medical/medbay)
@@ -2245,7 +2264,6 @@
 "fg" = (
 /obj/machinery/alarm{
 	dir = 8;
-	icon_state = "alarm0";
 	pixel_x = 24
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -2628,7 +2646,7 @@
 	icon_state = "4-8"
 	},
 /obj/structure/table/steel,
-/obj/item/weapon/storage/toolbox/electrical,
+/obj/item/storage/toolbox/electrical,
 /turf/simulated/floor/tiled/techmaint,
 /area/engineering/engine_monitoring)
 "fX" = (
@@ -2722,6 +2740,8 @@
 	layer = 3.3;
 	pixel_y = 32
 	},
+/obj/machinery/chemical_dispenser/full,
+/obj/structure/table/reinforced,
 /turf/simulated/floor/tiled,
 /area/bridge)
 "gj" = (
@@ -2733,6 +2753,8 @@
 /obj/structure/cable{
 	icon_state = "0-4"
 	},
+/obj/structure/table/reinforced,
+/obj/machinery/reagentgrinder,
 /turf/simulated/floor/tiled,
 /area/bridge)
 "gk" = (
@@ -3346,12 +3368,9 @@
 /area/engineering/workshop)
 "kr" = (
 /obj/structure/table/steel,
-/obj/item/weapon/storage/box/lights/mixed,
-/obj/item/weapon/cell/high{
-	charge = 100;
-	maxcharge = 15000
-	},
-/obj/item/weapon/paper{
+/obj/item/storage/box/lights/mixed,
+/obj/item/cell/high,
+/obj/item/paper{
 	info = "The big blue box recently installed in here is a 'grid checker' which will shut off the power if a dangerous power spike from the engine erupts into the powernet.  Shutting everything down protects everything from electrical damage, however the outages can be disruptive to colony operations, so it is designed to restore power after a somewhat significant delay, up to ten minutes or so.  The grid checker can be manually hacked in order to end the outage sooner.  To do that, you must cut three specific wires which do not cause a red light to shine, then pulse a fourth wire.  Electrical protection is highly recommended when doing maintenance on the grid checker.";
 	name = "grid checker info"
 	},
@@ -3585,6 +3604,12 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/engineering/engine_monitoring)
+"ni" = (
+/obj/structure/table/reinforced,
+/obj/item/storage/box/syringes,
+/obj/item/reagent_containers/dropper,
+/turf/simulated/floor/tiled,
+/area/bridge)
 "nk" = (
 /obj/structure/cable/cyan{
 	icon_state = "4-8"
@@ -3612,7 +3637,7 @@
 /obj/machinery/camera/network/civilian{
 	dir = 9
 	},
-/obj/item/weapon/storage/part_replacer/adv/discount_bluespace,
+/obj/item/storage/part_replacer/adv/discount_bluespace,
 /obj/structure/table/steel,
 /turf/simulated/floor/tiled/techmaint,
 /area/engineering/engine_monitoring)
@@ -4053,8 +4078,8 @@
 	dir = 1
 	},
 /obj/structure/table/standard,
-/obj/item/weapon/circuitboard/tesla_coil,
-/obj/item/weapon/circuitboard/tesla_coil,
+/obj/item/circuitboard/tesla_coil,
+/obj/item/circuitboard/tesla_coil,
 /turf/simulated/floor,
 /area/engineering/engine_room)
 "rY" = (
@@ -4261,7 +4286,6 @@
 "uq" = (
 /obj/machinery/alarm{
 	dir = 1;
-	icon_state = "alarm0";
 	pixel_y = -22
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/cyan{
@@ -4756,10 +4780,7 @@
 	pixel_x = 3;
 	pixel_y = 3
 	},
-/obj/item/weapon/cell/high{
-	charge = 100;
-	maxcharge = 15000
-	},
+/obj/item/cell/high,
 /turf/simulated/floor/tiled/techmaint,
 /area/engineering/engine_monitoring)
 "zf" = (
@@ -5230,7 +5251,7 @@
 	dir = 4
 	},
 /obj/machinery/light,
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	pixel_y = -24
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -5258,6 +5279,12 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/engineering/engine_room)
+"Fg" = (
+/obj/structure/bed/chair/office/light{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/bridge)
 "FA" = (
 /obj/machinery/atmospherics/unary/heat_exchanger{
 	dir = 8
@@ -5349,6 +5376,8 @@
 /area/space)
 "GC" = (
 /obj/machinery/camera/network/civilian,
+/obj/machinery/chemical_dispenser/biochemistry/full,
+/obj/structure/table/reinforced,
 /turf/simulated/floor/tiled,
 /area/bridge)
 "GM" = (
@@ -5384,7 +5413,7 @@
 	pixel_y = -5;
 	req_access = list(10)
 	},
-/obj/item/device/geiger/wall/west{
+/obj/item/geiger/wall/west{
 	dir = 4;
 	pixel_x = 36
 	},
@@ -5446,7 +5475,7 @@
 	dir = 8;
 	layer = 2.6
 	},
-/obj/item/weapon/tank/jetpack/carbondioxide,
+/obj/item/tank/jetpack/carbondioxide,
 /turf/simulated/floor/tiled/techmaint,
 /area/engineering/engine_monitoring)
 "HQ" = (
@@ -5740,6 +5769,13 @@
 	},
 /turf/simulated/floor,
 /area/engineering/workshop)
+"Lu" = (
+/obj/effect/landmark{
+	name = "Observer-Start"
+	},
+/obj/effect/landmark/start/new_player,
+/turf/simulated/floor/tiled,
+/area/bridge)
 "Lz" = (
 /obj/machinery/computer/power_monitor{
 	dir = 4;
@@ -5840,10 +5876,10 @@
 	icon_state = "2-8"
 	},
 /obj/structure/table/reinforced,
-/obj/item/device/suit_cooling_unit,
-/obj/item/device/suit_cooling_unit,
-/obj/item/device/suit_cooling_unit,
-/obj/item/device/suit_cooling_unit,
+/obj/item/suit_cooling_unit,
+/obj/item/suit_cooling_unit,
+/obj/item/suit_cooling_unit,
+/obj/item/suit_cooling_unit,
 /turf/simulated/floor/tiled/techmaint,
 /area/engineering/engine_monitoring)
 "MW" = (
@@ -5926,7 +5962,6 @@
 	},
 /obj/machinery/alarm{
 	dir = 1;
-	icon_state = "alarm0";
 	pixel_y = -22
 	},
 /obj/effect/floor_decal/borderfloor,
@@ -5983,7 +6018,7 @@
 "Oj" = (
 /obj/structure/table/steel,
 /obj/item/clothing/gloves/yellow,
-/obj/item/device/multitool{
+/obj/item/multitool{
 	pixel_x = 5
 	},
 /obj/item/stack/cable_coil{
@@ -6170,12 +6205,12 @@
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals8,
 /obj/structure/table/standard,
-/obj/item/weapon/book/manual/tesla_engine,
-/obj/item/weapon/book/manual/engineering_particle_accelerator{
+/obj/item/book/manual/tesla_engine,
+/obj/item/book/manual/engineering_particle_accelerator{
 	pixel_x = 5;
 	pixel_y = 5
 	},
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	pixel_y = -24
 	},
 /turf/simulated/floor/tiled,
@@ -6214,7 +6249,7 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/engine_gas)
 "QC" = (
-/obj/item/device/geiger/wall/west{
+/obj/item/geiger/wall/west{
 	dir = 4;
 	pixel_x = -36
 	},
@@ -6238,16 +6273,16 @@
 /obj/structure/closet/crate/engineering{
 	name = "spare SMES coils"
 	},
-/obj/item/weapon/smes_coil,
-/obj/item/weapon/smes_coil,
-/obj/item/weapon/smes_coil,
-/obj/item/weapon/smes_coil/super_capacity,
-/obj/item/weapon/smes_coil/super_capacity,
-/obj/item/weapon/smes_coil/super_capacity,
-/obj/item/weapon/smes_coil/super_io,
-/obj/item/weapon/smes_coil/super_io,
-/obj/item/weapon/smes_coil/super_io,
-/obj/item/device/geiger/wall/west{
+/obj/item/smes_coil,
+/obj/item/smes_coil,
+/obj/item/smes_coil,
+/obj/item/smes_coil/super_capacity,
+/obj/item/smes_coil/super_capacity,
+/obj/item/smes_coil/super_capacity,
+/obj/item/smes_coil/super_io,
+/obj/item/smes_coil/super_io,
+/obj/item/smes_coil/super_io,
+/obj/item/geiger/wall/west{
 	dir = 4;
 	pixel_x = 36
 	},
@@ -6293,7 +6328,7 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/obj/item/device/geiger/wall/west{
+/obj/item/geiger/wall/west{
 	dir = 4;
 	pixel_x = 36
 	},
@@ -6400,38 +6435,38 @@
 /obj/structure/closet/crate/engineering{
 	name = "capacitor storage"
 	},
-/obj/item/weapon/stock_parts/capacitor/adv,
-/obj/item/weapon/stock_parts/capacitor/adv,
-/obj/item/weapon/stock_parts/capacitor/adv,
-/obj/item/weapon/stock_parts/capacitor/adv,
-/obj/item/weapon/stock_parts/capacitor/adv,
-/obj/item/weapon/stock_parts/capacitor/adv,
-/obj/item/weapon/stock_parts/capacitor/adv,
-/obj/item/weapon/stock_parts/capacitor/adv,
-/obj/item/weapon/stock_parts/capacitor/hyper,
-/obj/item/weapon/stock_parts/capacitor/hyper,
-/obj/item/weapon/stock_parts/capacitor/hyper,
-/obj/item/weapon/stock_parts/capacitor/hyper,
-/obj/item/weapon/stock_parts/capacitor/hyper,
-/obj/item/weapon/stock_parts/capacitor/hyper,
-/obj/item/weapon/stock_parts/capacitor/hyper,
-/obj/item/weapon/stock_parts/capacitor/hyper,
-/obj/item/weapon/stock_parts/capacitor/omni,
-/obj/item/weapon/stock_parts/capacitor/omni,
-/obj/item/weapon/stock_parts/capacitor/omni,
-/obj/item/weapon/stock_parts/capacitor/omni,
-/obj/item/weapon/stock_parts/capacitor/omni,
-/obj/item/weapon/stock_parts/capacitor/omni,
-/obj/item/weapon/stock_parts/capacitor/omni,
-/obj/item/weapon/stock_parts/capacitor/omni,
-/obj/item/weapon/stock_parts/capacitor/super,
-/obj/item/weapon/stock_parts/capacitor/super,
-/obj/item/weapon/stock_parts/capacitor/super,
-/obj/item/weapon/stock_parts/capacitor/super,
-/obj/item/weapon/stock_parts/capacitor/super,
-/obj/item/weapon/stock_parts/capacitor/super,
-/obj/item/weapon/stock_parts/capacitor/super,
-/obj/item/weapon/stock_parts/capacitor/super,
+/obj/item/stock_parts/capacitor/adv,
+/obj/item/stock_parts/capacitor/adv,
+/obj/item/stock_parts/capacitor/adv,
+/obj/item/stock_parts/capacitor/adv,
+/obj/item/stock_parts/capacitor/adv,
+/obj/item/stock_parts/capacitor/adv,
+/obj/item/stock_parts/capacitor/adv,
+/obj/item/stock_parts/capacitor/adv,
+/obj/item/stock_parts/capacitor/hyper,
+/obj/item/stock_parts/capacitor/hyper,
+/obj/item/stock_parts/capacitor/hyper,
+/obj/item/stock_parts/capacitor/hyper,
+/obj/item/stock_parts/capacitor/hyper,
+/obj/item/stock_parts/capacitor/hyper,
+/obj/item/stock_parts/capacitor/hyper,
+/obj/item/stock_parts/capacitor/hyper,
+/obj/item/stock_parts/capacitor/omni,
+/obj/item/stock_parts/capacitor/omni,
+/obj/item/stock_parts/capacitor/omni,
+/obj/item/stock_parts/capacitor/omni,
+/obj/item/stock_parts/capacitor/omni,
+/obj/item/stock_parts/capacitor/omni,
+/obj/item/stock_parts/capacitor/omni,
+/obj/item/stock_parts/capacitor/omni,
+/obj/item/stock_parts/capacitor/super,
+/obj/item/stock_parts/capacitor/super,
+/obj/item/stock_parts/capacitor/super,
+/obj/item/stock_parts/capacitor/super,
+/obj/item/stock_parts/capacitor/super,
+/obj/item/stock_parts/capacitor/super,
+/obj/item/stock_parts/capacitor/super,
+/obj/item/stock_parts/capacitor/super,
 /turf/simulated/floor/tiled/techmaint,
 /area/engineering/engine_monitoring)
 "SN" = (
@@ -6456,7 +6491,7 @@
 /obj/machinery/light{
 	dir = 8
 	},
-/obj/item/device/geiger/wall/west{
+/obj/item/geiger/wall/west{
 	dir = 4;
 	pixel_x = -36
 	},
@@ -6513,7 +6548,7 @@
 /turf/simulated/floor/airless,
 /area/space)
 "TL" = (
-/obj/item/device/geiger/wall/west{
+/obj/item/geiger/wall/west{
 	dir = 4;
 	pixel_x = 36
 	},
@@ -6790,13 +6825,12 @@
 "XA" = (
 /obj/machinery/alarm{
 	dir = 8;
-	icon_state = "alarm0";
 	pixel_x = 24
 	},
 /obj/structure/table/standard,
 /obj/item/stack/cable_coil/random,
-/obj/item/weapon/tool/wrench,
-/obj/item/weapon/tool/screwdriver,
+/obj/item/tool/wrench,
+/obj/item/tool/screwdriver,
 /turf/simulated/floor,
 /area/engineering/engine_room)
 "XH" = (
@@ -6822,7 +6856,7 @@
 /area/engineering/engine_monitoring)
 "XJ" = (
 /obj/machinery/light/small,
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	pixel_y = -24
 	},
 /obj/structure/closet/radiation,
@@ -6919,7 +6953,7 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/engineering/engine_monitoring)
 "YN" = (
-/obj/item/device/geiger/wall/west{
+/obj/item/geiger/wall/west{
 	dir = 4;
 	pixel_x = 36
 	},
@@ -6990,7 +7024,7 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/engine_gas)
 "ZI" = (
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	pixel_y = -24
 	},
 /turf/simulated/floor,
@@ -8705,7 +8739,7 @@ gY
 aa
 aa
 fY
-gf
+cP
 gf
 gf
 gf
@@ -8807,7 +8841,7 @@ gY
 aa
 aa
 fY
-gh
+df
 gf
 gq
 gf
@@ -8910,7 +8944,7 @@ aa
 aa
 fY
 gi
-gf
+Fg
 gr
 gf
 gf
@@ -9114,11 +9148,11 @@ aa
 aa
 fY
 gj
-gf
+ni
 gr
 gf
 gf
-gz
+Lu
 gf
 gf
 gN
@@ -10718,7 +10752,7 @@ cO
 de
 dr
 dF
-cP
+et
 eb
 du
 cM
@@ -10814,19 +10848,19 @@ cz
 cA
 cc
 cH
-cP
-cP
-cP
-df
+et
+et
+et
+eA
 ds
 du
 cM
 ec
 ek
-cP
-cP
-df
-cP
+et
+et
+eA
+et
 eG
 eO
 eO
@@ -11433,7 +11467,7 @@ dh
 cM
 dG
 dF
-cP
+et
 en
 cM
 cM

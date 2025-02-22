@@ -173,7 +173,7 @@
 
 		if(ismob(I))
 			if(!sight_check || isInSight(I, O))
-				L |= recursive_content_check(I, L, recursion_limit - 1, client_check, sight_check, include_mobs, include_objects)
+				L |= recursive_content_check(I, L, recursion_limit - 1, client_check, sight_check, include_mobs, include_objects, ignore_show_messages)
 				if(include_mobs)
 					if(client_check)
 						var/mob/M = I
@@ -186,7 +186,7 @@
 			var/obj/check_obj = I
 			if(ignore_show_messages || check_obj.show_messages)
 				if(!sight_check || isInSight(I, O))
-					L |= recursive_content_check(I, L, recursion_limit - 1, client_check, sight_check, include_mobs, include_objects)
+					L |= recursive_content_check(I, L, recursion_limit - 1, client_check, sight_check, include_mobs, include_objects, ignore_show_messages)
 					if(include_objects)
 						L |= I
 
@@ -220,12 +220,11 @@
 	return hear
 
 //CHOMPEdit - entire proc changed basically to use recursive listening
-/proc/get_mobs_in_radio_ranges(var/list/obj/item/device/radio/radios)
+/proc/get_mobs_in_radio_ranges(var/list/obj/item/radio/radios)
 
-	//set background = 1 //CHOMPEdit
 	. = list()
 	// Returns a list of mobs who can hear any of the radios given in @radios
-	for(var/obj/item/device/radio/R as anything in radios)
+	for(var/obj/item/radio/R as anything in radios)
 		if(get_turf(R))
 			for(var/turf/T in R.can_broadcast_to())	//CHOMPEdit
 				for (var/atom/movable/hearing in T)
@@ -246,7 +245,7 @@
 
 /mob/living/silicon/robot/can_hear_radio(var/list/hearturfs)
 	var/turf/T = get_turf(src)
-	var/obj/item/device/radio/borg/R = hearturfs[T] // this should be an assoc list of turf-to-radio
+	var/obj/item/radio/borg/R = hearturfs[T] // this should be an assoc list of turf-to-radio
 
 	// We heard it on our own radio? We use power for that.
 	if(istype(R) && R.myborg == src)
@@ -257,7 +256,7 @@
 	return R // radio, true, false, what's the difference
 
 /mob/observer/dead/can_hear_radio(var/list/hearturfs)
-	return is_preference_enabled(/datum/client_preference/ghost_radio)
+	return client?.prefs?.read_preference(/datum/preference/toggle/ghost_radio)
 
 
 //Uses dview to quickly return mobs and objects in view,
@@ -311,10 +310,10 @@
 		if(M && M.stat == DEAD && remote_ghosts && !M.forbid_seeing_deadchat)
 			switch(type)
 				if(1) //Audio messages use ghost_ears
-					if(M.is_preference_enabled(/datum/client_preference/ghost_ears))
+					if(M.client?.prefs?.read_preference(/datum/preference/toggle/ghost_ears))
 						mobs |= M
 				if(2) //Visual messages use ghost_sight
-					if(M.is_preference_enabled(/datum/client_preference/ghost_sight))
+					if(M.client?.prefs?.read_preference(/datum/preference/toggle/ghost_sight))
 						mobs |= M
 
 	//For objects below the top level who still want to hear

@@ -17,7 +17,7 @@
 	icon_living = "space_mouse"
 	icon_dead = "space_mouse_dead"
 
-	faction = "space mouse"
+	faction = FACTION_SPACE_MOUSE
 	maxHealth = 20
 	health = 20
 	movement_cooldown = -1
@@ -65,9 +65,9 @@
 	vore_default_item_mode = IM_DIGEST
 
 /mob/living/simple_mob/vore/alienanimals/dustjumper/init_vore()
-	if(!voremob_loaded) //CHOMPAdd
-		return //CHOMPAdd
-	.=..() //CHOMPEdit
+	if(!voremob_loaded)
+		return
+	. = ..()
 	var/obj/belly/B = vore_selected
 	B.name = "stomach"
 	B.desc = "You've been packed into the impossibly tight stomach of the dust jumper!!! The broiling heat seeps into you while the walls churn in powerfully, forcing you to curl up in the darkness."

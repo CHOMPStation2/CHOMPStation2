@@ -1,48 +1,3 @@
-#define BULLET_AP_DIVISOR 200
-#define AP_DIVISOR 4152
-#define ARMOR_Y_INTERCEPT 0.2
-#define ARMOR_SLOPE 0.017
-#define PENETRATION_PROBABILITY_EXP_BASE 2
-#define PENETRATION_PROBABILITY_EXP_MULT 30
-
-#define BULLET_DEFLECTED_PAIN_DIVISOR 5000
-#define BULLET_DEFLECTED_BULLET_DIVISOR 70
-#define BULLET_DEFLECTED_MELEE_DIVISOR 280
-#define BULLET_DEFLECTED_PAIN_EXPONENT 1.5
-#define BULLET_DEFLECTED_BRUISE_SUBTRACT 5
-
-GLOBAL_VAR_INIT(SKIN_LOSS_COEFFICIENT,16)
-GLOBAL_VAR_INIT(ARMOR_LOSS_COEFFICIENT,150)
-GLOBAL_VAR_INIT(ARMOR_LOSS_MIN_MULT,0.5)
-GLOBAL_VAR_INIT(ARMOR_LOSS_MIN_ARMOR,20)
-GLOBAL_VAR_INIT(INTERNAL_LOSS_COEFFICIENT,195)
-#define ORGAN_LOSS_COEFFICIENT 350
-#define HIT_VITAL_ORGAN_CHANCE 35
-
-#define BONE_HIT_CHANCE_UNENCASED 45
-#define BONE_HIT_CHANCE_ENCASED 80
-GLOBAL_VAR_INIT(BONE_JOULES_PERHP_AVG,2)
-GLOBAL_VAR_INIT(BONE_JOULES_PERHP_DEV,1)
-GLOBAL_VAR_INIT(BONE_JOULES_MIN,100)
-#define BONE_HP_AVG 25
-
-GLOBAL_VAR_INIT(HOLLOW_POINT_VELLOSS_BONUS,1.45)
-GLOBAL_VAR_INIT(HOLLOW_POINT_CONVERSION_EFF,1.85)
-
-#define PROB_LEAVE_EARLY_FIRST 20
-#define PROB_LEAVE_EARLY_SECOND 40
-
-GLOBAL_VAR_INIT(ENERGY_DAMAGE_FLESH_FACTOR,0.025)
-GLOBAL_VAR_INIT(ENERGY_DAMAGE_ORGAN_FACTOR,0.035)
-#define ENERGY_DAMAGE_EXPONENT 0.6
-#define ENERGY_DAMAGE_COEFFICIENT 0.05
-#define ENERGY_DAMAGE_FLESH_FALLOFF_POINT 10
-#define ENERGY_DAMAGE_ORGAN_FALLOFF_POINT 7
-
-#ifndef GAUSSIAN_RANDOM
-#define GAUSSIAN_RANDOM(vars...)	((-2*log(rand()))**0.5 * cos(6.28318530718*rand()))
-#endif
-
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////// CADYN'S BALLISTICS ////////////////////////////////////////////////////////////////////////// ORIGINAL FROM CHOMPSTATION ////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -75,7 +30,7 @@ GLOBAL_VAR_INIT(ENERGY_DAMAGE_ORGAN_FACTOR,0.035)
 
 		var/absorber = ballistic_armor ? "armor" : "body"	//There is a super tiny chance that small rounds can get deflected without armor, so this is just incase.
 
-		to_chat(src,"<span class='warning'>You feel the energy of the bullet painfully transfered [pain_hit] as your [absorber] deflects it!</span>")
+		to_chat(src,span_warning("You feel the energy of the bullet painfully transfered [pain_hit] as your [absorber] deflects it!"))
 		apply_damage(hurt_value_pain,HALLOSS,def_zone)
 		if(hurt_value_bruise)
 			apply_damage(hurt_value_bruise,BRUTE,def_zone)
@@ -281,7 +236,7 @@ GLOBAL_VAR_INIT(ENERGY_DAMAGE_ORGAN_FACTOR,0.035)
 
 /mob/living/proc/armor_penetration_probability(var/armor, var/obj/item/projectile/bullet/P)
 	var/bullet_ap_value = (1+((P.armor_penetration)/BULLET_AP_DIVISOR))
-	var/ap_value = P.velocity * bullet_ap_value * (P.grains / P.diam)**(2/3) / AP_DIVISOR 
+	var/ap_value = P.velocity * bullet_ap_value * (P.grains / P.diam)**(2/3) / AP_DIVISOR
 	var/armor_value = ARMOR_Y_INTERCEPT + ARMOR_SLOPE * armor
 	var/penetration_chance = 100 / (1 + PENETRATION_PROBABILITY_EXP_BASE**(-PENETRATION_PROBABILITY_EXP_MULT*(ap_value - armor_value)))
 	return penetration_chance

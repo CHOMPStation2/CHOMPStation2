@@ -1,6 +1,4 @@
-/*
-Player tips procs and lists are defined under /code/modules/player_tips_vr
-*/
+/// Player tips procs and lists are defined under /code/modules/player_tips_vr
 SUBSYSTEM_DEF(player_tips)
 	name = "Periodic Player Tips"
 	priority = FIRE_PRIORITY_PLAYERTIPS

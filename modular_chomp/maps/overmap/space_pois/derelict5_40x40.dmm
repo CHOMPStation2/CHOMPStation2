@@ -26,7 +26,7 @@
 /area/submap/derelict5)
 "k" = (
 /obj/structure/table,
-/obj/item/weapon/storage/toolbox/electrical,
+/obj/item/storage/toolbox/electrical,
 /turf/simulated/floor/plating,
 /area/submap/derelict5)
 "l" = (
@@ -35,7 +35,7 @@
 /area/submap/derelict5)
 "m" = (
 /obj/structure/table,
-/obj/item/weapon/storage/toolbox/syndicate,
+/obj/item/storage/toolbox/syndicate,
 /turf/simulated/floor/plating,
 /area/submap/derelict5)
 "n" = (

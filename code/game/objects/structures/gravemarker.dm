@@ -22,7 +22,7 @@
 /obj/structure/gravemarker/New(var/newloc, var/material_name)
 	..(newloc)
 	if(!material_name)
-		material_name = "wood"
+		material_name = MAT_WOOD
 	material = get_material_by_name("[material_name]")
 	if(!material)
 		qdel(src)
@@ -50,7 +50,7 @@
 		return !density
 	return TRUE
 
-/obj/structure/gravemarker/attackby(obj/item/weapon/W, mob/user as mob)
+/obj/structure/gravemarker/attackby(obj/item/W, mob/user as mob)
 	if(W.has_tool_quality(TOOL_SCREWDRIVER))
 		var/carving_1 = sanitizeSafe(tgui_input_text(user, "Who is \the [src.name] for?", "Gravestone Naming", null, MAX_NAME_LEN), MAX_NAME_LEN)
 		if(carving_1)
@@ -87,11 +87,11 @@
 /obj/structure/gravemarker/ex_act(severity)
 	switch(severity)
 		if(1.0)
-			visible_message("<span class='danger'>\The [src] is blown apart!</span>")
+			visible_message(span_danger("\The [src] is blown apart!"))
 			qdel(src)
 			return
 		if(2.0)
-			visible_message("<span class='danger'>\The [src] is blown apart!</span>")
+			visible_message(span_danger("\The [src] is blown apart!"))
 			if(prob(50))
 				dismantle()
 			else
@@ -101,7 +101,7 @@
 /obj/structure/gravemarker/proc/damage(var/damage)
 	health -= damage
 	if(health <= 0)
-		visible_message("<span class='danger'>\The [src] falls apart!</span>")
+		visible_message(span_danger("\The [src] falls apart!"))
 		dismantle()
 
 /obj/structure/gravemarker/proc/dismantle()
@@ -122,8 +122,27 @@
 		return
 	if(usr.stat || usr.restrained())
 		return
-	if(ismouse(usr) || (isobserver(usr) && !CONFIG_GET(flag/ghost_interaction))) // CHOMPEdit
+	if(ismouse(usr) || (isobserver(usr) && !CONFIG_GET(flag/ghost_interaction)))
 		return
 
 	src.set_dir(turn(src.dir, 270))
+	return
+
+//VOREstation edit: counter-clockwise rotation
+/obj/structure/gravemarker/verb/rotate_counterclockwise()
+	set name = "Rotate Grave Marker Counter-Clockwise"
+	set category = "Object"
+	set src in oview(1)
+
+	if(anchored)
+		return
+
+	if(!usr || !isturf(usr.loc))
+		return
+	if(usr.stat || usr.restrained())
+		return
+	if(ismouse(usr) || (isobserver(usr) && !CONFIG_GET(flag/ghost_interaction)))
+		return
+
+	src.set_dir(turn(src.dir, 90))
 	return

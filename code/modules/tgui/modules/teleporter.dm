@@ -20,13 +20,13 @@
 /datum/tgui_module/teleport_control/tgui_act(action, params, datum/tgui/ui, datum/tgui_state/state)
 	if(..())
 		return TRUE
-	
+
 	switch(action)
 		if("select_target")
 			var/list/L = list()
 			var/list/areaindex = list()
 
-			for(var/obj/item/device/radio/beacon/R in GLOB.all_beacons)
+			for(var/obj/item/radio/beacon/R in GLOB.all_beacons)
 				var/turf/T = get_turf(R)
 				if(!T)
 					continue
@@ -39,7 +39,7 @@
 					areaindex[tmpname] = 1
 				L[tmpname] = R
 
-			for(var/obj/item/weapon/implant/tracking/I in GLOB.all_tracking_implants)
+			for(var/obj/item/implant/tracking/I in GLOB.all_tracking_implants)
 				if(!I.implanted || !ismob(I.loc))
 					continue
 				else
@@ -59,10 +59,10 @@
 						areaindex[tmpname] = 1
 					L[tmpname] = I
 
-			var/desc = tgui_input_list(usr, "Please select a location to lock in.", "Locking Menu", L)
+			var/desc = tgui_input_list(ui.user, "Please select a location to lock in.", "Locking Menu", L)
 			if(!desc)
 				return FALSE
-			if(tgui_status(usr, state) != STATUS_INTERACTIVE)
+			if(tgui_status(ui.user, state) != STATUS_INTERACTIVE)
 				return FALSE
 
 			locked = L[desc]
@@ -76,10 +76,10 @@
 		if("toggle_on")
 			if(!station)
 				return FALSE
-			
+
 			if(station.engaged)
 				station.disengage()
 			else
 				station.engage()
-			
+
 			return TRUE

@@ -40,7 +40,7 @@
 
 	catalogue_data = list(/datum/category_item/catalogue/fauna/sergal)
 
-	primitive_form = "Saru"
+	primitive_form = SPECIES_MONKEY_SERGAL
 
 	spawn_flags = SPECIES_CAN_JOIN
 	appearance_flags = HAS_HAIR_COLOR | HAS_LIPS | HAS_UNDERWEAR | HAS_SKIN_COLOR | HAS_EYE_COLOR
@@ -110,7 +110,7 @@
 
 	catalogue_data = list(/datum/category_item/catalogue/fauna/akula)
 
-	primitive_form = "Sobaka"
+	primitive_form = SPECIES_MONKEY_AKULA
 
 	genders = list(MALE, FEMALE, PLURAL, NEUTER)
 
@@ -119,6 +119,7 @@
 
 	water_breather = TRUE
 	water_movement = -4 //Negates shallow. Halves deep.
+	swim_mult = 0.5
 
 	flesh_color = "#AFA59E"
 	base_color = "#777777"
@@ -166,7 +167,7 @@
 
 	catalogue_data = list(/datum/category_item/catalogue/fauna/nevrean)
 
-	primitive_form = "Sparra"
+	primitive_form = SPECIES_MONKEY_NEVREAN
 
 	genders = list(MALE, FEMALE, PLURAL, NEUTER)
 
@@ -224,7 +225,7 @@
 	flesh_color = "#AFA59E"
 	base_color = "#333333"
 	blood_color = "#240bc4"
-	blood_reagents = "copper"
+	blood_reagents = REAGENT_ID_COPPER
 	reagent_tag = IS_ZORREN
 	color_mult = 1
 
@@ -251,7 +252,7 @@
 	secondary_langs = list(LANGUAGE_CANILUNZT)
 	name_language = LANGUAGE_CANILUNZT
 	species_language = LANGUAGE_CANILUNZT
-	primitive_form = "Wolpin"
+	primitive_form = SPECIES_MONKEY_VULPKANIN
 	tail = "vulptail"
 	tail_animation = 'icons/mob/species/vulpkanin/tail.dmi' // probably need more than just one of each, but w/e
 	unarmed_types = list(/datum/unarmed_attack/stomp, /datum/unarmed_attack/kick, /datum/unarmed_attack/claws, /datum/unarmed_attack/bite/sharp)
@@ -299,7 +300,7 @@
 	breath_heat_level_2 = 445	//Default 450
 	breath_heat_level_3 = 1125	//Default 1250
 
-	primitive_form = "Wolpin"
+	primitive_form = SPECIES_MONKEY_VULPKANIN
 
 	spawn_flags = SPECIES_CAN_JOIN
 	appearance_flags = HAS_HAIR_COLOR | HAS_LIPS | HAS_UNDERWEAR | HAS_SKIN_COLOR | HAS_EYE_COLOR
@@ -325,7 +326,7 @@
 	deform = 'icons/mob/human_races/r_def_lizard_vr.dmi'
 	tail_animation = 'icons/mob/species/unathi/tail_vr.dmi'
 	color_mult = 1
-	min_age = 18
+	min_age = 40 //ChompEDIT - Unathi lore minimal adult age. 
 	inherent_verbs = list(/mob/living/carbon/human/proc/tie_hair)
 	gluttonous = 0
 	inherent_verbs = list(/mob/living/proc/shred_limb)
@@ -360,7 +361,7 @@
 	icobase = 'icons/mob/human_races/r_skrell_vr.dmi'
 	deform = 'icons/mob/human_races/r_def_skrell_vr.dmi'
 	color_mult = 1
-	min_age = 18
+	min_age = 19 //ChompEDIT Lore-based adulthood age for this species is greater than 18.
 	inherent_verbs = list(/mob/living/carbon/human/proc/tie_hair, /mob/living/carbon/human/proc/water_stealth, /mob/living/carbon/human/proc/underwater_devour)
 	reagent_tag = null
 	allergens = null
@@ -386,7 +387,7 @@
 
 /datum/species/zaddat/equip_survival_gear(var/mob/living/carbon/human/H)
 	.=..()
-	var/obj/item/weapon/storage/toolbox/lunchbox/survival/zaddat/L = new(get_turf(H))
+	var/obj/item/storage/toolbox/lunchbox/survival/zaddat/L = new(get_turf(H))
 	if(H.backbag == 1)
 		H.equip_to_slot_or_del(L, slot_r_hand)
 	else

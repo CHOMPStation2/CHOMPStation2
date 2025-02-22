@@ -21,7 +21,7 @@
 	tt_desc = "S Carabidae glacios"
 	catalogue_data = list(/datum/category_item/catalogue/fauna/frostfly)
 
-	faction = "diyaab"
+	faction = FACTION_DIYAAB
 
 	icon_state = "firefly"
 	icon_living = "firefly"
@@ -87,8 +87,8 @@
 /mob/living/simple_mob/animal/sif/frostfly/Initialize()
 	. = ..()
 	smoke_special = new
-	add_verb(src,/mob/living/proc/ventcrawl) //CHOMPEdit TGPanel
-	add_verb(src,/mob/living/proc/hide) //CHOMPEdit TGPanel
+	add_verb(src, /mob/living/proc/ventcrawl)
+	add_verb(src, /mob/living/proc/hide)
 
 /datum/say_list/frostfly
 	speak = list("Zzzz.", "Kss.", "Zzt?")
@@ -112,15 +112,9 @@
 	if(energy < max_energy)
 		energy++
 
-/mob/living/simple_mob/animal/sif/frostfly/Stat()
-	..()
-	if(client.statpanel == "Status")
-		statpanel("Status")
-		if(emergency_shuttle)
-			var/eta_status = emergency_shuttle.get_status_panel_eta()
-			if(eta_status)
-				stat(null, eta_status)
-		stat("Energy", energy)
+/mob/living/simple_mob/animal/sif/frostfly/get_status_tab_items()
+	. = ..()
+	. += "Energy: [energy]"
 
 /mob/living/simple_mob/animal/sif/frostfly/should_special_attack(atom/A)
 	if(energy >= 20)
@@ -163,7 +157,7 @@
 
 /datum/ai_holder/simple_mob/ranged/kiting/threatening/frostfly/post_ranged_attack(atom/A)
 	var/mob/living/simple_mob/animal/sif/frostfly/F = holder
-	if(istype(A,/mob/living))
+	if(isliving(A))
 		var/new_dir = turn(F.dir, -90)
 		if(prob(50))
 			new_dir = turn(F.dir, 90)

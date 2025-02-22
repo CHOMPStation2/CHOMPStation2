@@ -70,10 +70,9 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 
 /area/shuttle
 	requires_power = 0
-	flags = RAD_SHIELDED | AREA_FLAG_IS_NOT_PERSISTENT
+	flags = RAD_SHIELDED | AREA_FLAG_IS_NOT_PERSISTENT | AREA_FORBID_EVENTS
 	sound_env = SMALL_ENCLOSED
 	base_turf = /turf/space
-	forbid_events = TRUE
 
 /area/shuttle/arrival
 	name = "\improper Arrival Shuttle"
@@ -784,7 +783,7 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	icon_state = "construction"
 
 /area/hallway/secondary/entry
-	forbid_events = TRUE
+	flags = AREA_FORBID_EVENTS
 
 /area/hallway/secondary/entry/fore
 	name = "\improper Shuttle Dock Hallway - Mid"
@@ -806,13 +805,13 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	name = "\improper Shuttle Dock Hallway - Dock One"
 	icon_state = "entry_D1"
 	base_turf = /turf/space
-	forbid_events = TRUE
+	flags = AREA_FORBID_EVENTS
 
 /area/hallway/secondary/entry/D2
 	name = "\improper Shuttle Dock Hallway - Dock Two"
 	icon_state = "entry_D2"
 	base_turf = /turf/space
-	forbid_events = TRUE
+	flags = AREA_FORBID_EVENTS
 
 /area/hallway/secondary/entry/D2/arrivals
 	name = "\improper Shuttle Dock Hallway - Dock Two"
@@ -824,7 +823,7 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	name = "\improper Shuttle Dock Hallway - Dock Three"
 	icon_state = "entry_D3"
 	base_turf = /turf/space
-	forbid_events = TRUE
+	flags = AREA_FORBID_EVENTS
 
 /area/hallway/secondary/entry/D4
 	name = "\improper Shuttle Dock Hallway - Dock Four"
@@ -964,9 +963,8 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 /area/crew_quarters
 	name = "\improper Dormitories"
 	icon_state = "Sleep"
+	flags = RAD_SHIELDED | AREA_FORBID_EVENTS | AREA_FORBID_SINGULO
 	ambience = AMBIENCE_GENERIC
-	forbid_events = TRUE
-	forbid_singulo = TRUE
 
 /area/crew_quarters/toilet
 	name = "\improper Dormitory Toilets"
@@ -976,7 +974,6 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 /area/crew_quarters/sleep
 	name = "\improper Dormitories"
 	icon_state = "Sleep"
-	flags = RAD_SHIELDED
 
 /area/crew_quarters/sleep/Apartment_A1
 	name = "\improper Apartment A1"
@@ -1282,8 +1279,7 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	icon_state = "Holodeck"
 	dynamic_lighting = 0
 	sound_env = LARGE_ENCLOSED
-	forbid_events = TRUE
-	flags = AREA_FLAG_IS_NOT_PERSISTENT
+	flags = AREA_FLAG_IS_NOT_PERSISTENT | AREA_FORBID_EVENTS
 
 /area/holodeck/alphadeck
 	name = "\improper Holodeck Alpha"
@@ -1388,7 +1384,7 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	name = "\improper Engine Room"
 	icon_state = "engine"
 	sound_env = LARGE_ENCLOSED
-	forbid_events = TRUE
+	flags = AREA_FORBID_EVENTS
 
 /area/engineering/engine_airlock
 	name = "\improper Engine Room Airlock"
@@ -2145,6 +2141,10 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	name = "Derelict EVA Storage"
 	icon_state = "eva"
 
+/area/derelict/eva/annex
+	name = "Derelict Annex"
+	icon_state = "eva"
+
 /area/derelict/ship
 	name = "\improper Abandoned Ship"
 	icon_state = "yellow"
@@ -2642,6 +2642,10 @@ var/list/the_station_areas = list (
 /area/hangar/lockerroomthree
 	name = "\improper Exploration Locker Room Three"
 	icon_state = "hangarcontrol"
+
+/area/engineering/gravgen
+	name = "Gravity Generator"
+	icon_state = "engineering"
 
 //CHOMPedit KSC = overmap exploration shuttles
 

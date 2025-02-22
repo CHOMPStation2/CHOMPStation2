@@ -1,4 +1,4 @@
-/obj/item/device/communicator/proc/analyze_air()
+/obj/item/communicator/proc/analyze_air()
 	var/list/results = list()
 	var/turf/T = get_turf(src.loc)
 	if(!isnull(T))
@@ -6,10 +6,10 @@
 		var/pressure = environment.return_pressure()
 		var/total_moles = environment.total_moles
 		if (total_moles)
-			var/o2_level = environment.gas["oxygen"]/total_moles
-			var/n2_level = environment.gas["nitrogen"]/total_moles
-			var/co2_level = environment.gas["carbon_dioxide"]/total_moles
-			var/phoron_level = environment.gas["phoron"]/total_moles
+			var/o2_level = environment.gas[GAS_O2]/total_moles
+			var/n2_level = environment.gas[GAS_N2]/total_moles
+			var/co2_level = environment.gas[GAS_CO2]/total_moles
+			var/phoron_level = environment.gas[GAS_PHORON]/total_moles
 			var/unknown_level =  1-(o2_level+n2_level+co2_level+phoron_level)
 
 			// Label is what the entry is describing
@@ -36,7 +36,7 @@
 // Proc - compile_news()
 // Parameters - none
 // Description - Returns the list of newsfeeds, compiled for template processing
-/obj/item/device/communicator/proc/compile_news()
+/obj/item/communicator/proc/compile_news()
 	var/list/feeds = list()
 	for(var/datum/feed_channel/channel in news_network.network_channels)
 		var/list/messages = list()
@@ -70,7 +70,7 @@
 // Proc - get_recent_news()
 // Parameters - none
 // Description - Returns the latest three newscasts, compiled for template processing
-/obj/item/device/communicator/proc/get_recent_news()
+/obj/item/communicator/proc/get_recent_news()
 	var/list/news = list()
 
 	// Compile all the newscasts
@@ -106,7 +106,7 @@
 
 
 // Medical records
-/obj/item/weapon/commcard/proc/get_med_records()
+/obj/item/commcard/proc/get_med_records()
 	var/med_records[0]
 	for(var/datum/data/record/M in sortRecord(data_core.medical))
 		var/record[0]
@@ -127,7 +127,7 @@
 
 
 // Employment records
-/obj/item/weapon/commcard/proc/get_emp_records()
+/obj/item/commcard/proc/get_emp_records()
 	var/emp_records[0]
 	for(var/datum/data/record/G in sortRecord(data_core.general))
 		var/record[0]
@@ -146,7 +146,7 @@
 
 
 // Security records
-/obj/item/weapon/commcard/proc/get_sec_records()
+/obj/item/commcard/proc/get_sec_records()
 	var/sec_records[0]
 	for(var/datum/data/record/G in sortRecord(data_core.general))
 		var/record[0]
@@ -169,7 +169,7 @@
 
 // Status of all secbots
 // Weaker than what PDAs appear to do, but as of 7/1/2018 PDA secbot access is nonfunctional
-/obj/item/weapon/commcard/proc/get_sec_bot_access()
+/obj/item/commcard/proc/get_sec_bot_access()
 	var/sec_bots[0]
 	for(var/mob/living/bot/secbot/S in mob_list)
 		// Get new bot
@@ -178,21 +178,21 @@
 
 		// If it's turned off, then it shouldn't be broadcasting any further info
 		if(!S.on)
-			status[++status.len] = list("tab" = "Power", "val" = "<span class='bad'>Off</span>") // Encoding the span classes here so I don't have to do complicated switches in the ui template
+			status[++status.len] = list("tab" = "Power", "val" = span_red("Off")) // Encoding the span classes here so I don't have to do complicated switches in the ui template
 			continue
-		status[++status.len] = list("tab" = "Power", "val" = "<span class='good'>On</span>")
+		status[++status.len] = list("tab" = "Power", "val" = span_green("On"))
 
 		// -- What it's doing
 		// If it's engaged, then say who it thinks it's engaging
 		if(S.target)
-			status[++status.len] = list("tab" = "Status", "val" = "<span class='bad'>Apprehending Target</span>")
+			status[++status.len] = list("tab" = "Status", "val" = span_red("Apprehending Target"))
 			status[++status.len] = list("tab" = "Target", "val" = S.target_name(S.target))
 		// Else if it's patrolling
 		else if(S.will_patrol)
-			status[++status.len] = list("tab" = "Status", "val" = "<span class='good'>Patrolling</span>")
+			status[++status.len] = list("tab" = "Status", "val" = span_green("Patrolling"))
 		// Otherwise we don't know what it's doing
 		else
-			status[++status.len] = list("tab" = "Status", "val" = "<span class='average'>Idle</span>")
+			status[++status.len] = list("tab" = "Status", "val" = span_yellow("Idle"))
 
 		// Where it is
 		status[++status.len] = list("tab" = "Location", "val" = sanitize("[get_area(S.loc)]"))
@@ -204,9 +204,9 @@
 
 // Code and frequency of stored signalers
 // Supports multiple signalers within the device
-/obj/item/weapon/commcard/proc/get_int_signalers()
+/obj/item/commcard/proc/get_int_signalers()
 	var/signalers[0]
-	for(var/obj/item/device/assembly/signaler/S in internal_devices)
+	for(var/obj/item/assembly/signaler/S in internal_devices)
 		var/unit[0]
 		unit[++unit.len] = list("tab" = "Code", "val" = S.code)
 		unit[++unit.len] = list("tab" = "Frequency", "val" = S.frequency)
@@ -216,7 +216,7 @@
 	return signalers
 
 // Returns list of all powernet sensors currently visible to the commcard
-/obj/item/weapon/commcard/proc/find_powernet_sensors()
+/obj/item/commcard/proc/find_powernet_sensors()
 	var/grid_sensors[0]
 
 	// Find all the powernet sensors we need to pull data from
@@ -235,7 +235,7 @@
 	return grid_sensors
 
 // List of powernets
-/obj/item/weapon/commcard/proc/get_powernet_monitoring_list()
+/obj/item/commcard/proc/get_powernet_monitoring_list()
 	// Fetch power monitor data
 	var/sensors[0]
 
@@ -250,7 +250,7 @@
 	return sensors
 
 // Information about the targeted powernet
-/obj/item/weapon/commcard/proc/get_powernet_target(var/target_sensor)
+/obj/item/commcard/proc/get_powernet_target(var/target_sensor)
 	if(!target_sensor)
 		return
 
@@ -260,13 +260,13 @@
 		var/list/focus = S.return_reading_data()
 
 		// Packages the span class here so it doesn't need to be interpreted w/in the for loop in the ui template
-		var/load_stat = "<span class='good'>Optimal</span>"
+		var/load_stat = span_green("Optimal")
 		if(focus["load_percentage"] >= 95)
-			load_stat = "<span class='bad'>DANGER: Overload</span>"
+			load_stat = span_red("DANGER: Overload")
 		else if(focus["load_percentage"] >= 85)
-			load_stat = "<span class='average'>WARNING: High Load</span>"
+			load_stat = span_yellow("WARNING: High Load")
 
-		var/alarm_stat = focus["alarm"] ? "<span class='bad'>WARNING: Abnormal activity detected!</span>" : "<span class='good'>Secure</span>"
+		var/alarm_stat = focus["alarm"] ? span_red("WARNING: Abnormal activity detected!") : span_green("Secure")
 
 		if(target_sensor == S.name_tag)
 			powernet_target = list(
@@ -288,7 +288,7 @@
 	return powernet_target
 
 // Compiles the locations of all janitorial paraphernalia, as used by janitorialLocator.tmpl
-/obj/item/weapon/commcard/proc/get_janitorial_locations()
+/obj/item/commcard/proc/get_janitorial_locations()
 	// Fetch janitorial locator
 	var/janidata[0]
 	var/list/cleaningList = list()
@@ -297,9 +297,9 @@
 	// User's location
 	var/turf/userloc = get_turf(src)
 	if(isturf(userloc))
-		janidata[++janidata.len] = list("field" = "Current Location", "val" = "<span class='good'>[userloc.x], [userloc.y], [using_map.get_zlevel_name(userloc.z)]</span>")
+		janidata[++janidata.len] = list("field" = "Current Location", "val" = span_green("[userloc.x], [userloc.y], [using_map.get_zlevel_name(userloc.z)]"))
 	else
-		janidata[++janidata.len] = list("field" = "Current Location", "val" = "<span class='bad'>Unknown</span>")
+		janidata[++janidata.len] = list("field" = "Current Location", "val" = span_red("Unknown"))
 		return janidata // If the user isn't on a valid turf, then it shouldn't be able to find anything anyways
 
 	// Mops, mop buckets, janitorial carts.
@@ -307,9 +307,9 @@
 		var/turf/T = get_turf(C)
 		if(isturf(T) )//&& T.z in using_map.get_map_levels(userloc, FALSE))
 			if(T.z == userloc.z)
-				janidata[++janidata.len] = list("field" = apply_text_macros("\proper [C.name]"), "val" = "<span class='good'>[T.x], [T.y], [using_map.get_zlevel_name(T.z)]</span>")
+				janidata[++janidata.len] = list("field" = apply_text_macros("\proper [C.name]"), "val" = span_green("[T.x], [T.y], [using_map.get_zlevel_name(T.z)]"))
 			else
-				janidata[++janidata.len] = list("field" = apply_text_macros("\proper [C.name]"), "val" = "<span class='average'>[T.x], [T.y], [using_map.get_zlevel_name(T.z)]</span>")
+				janidata[++janidata.len] = list("field" = apply_text_macros("\proper [C.name]"), "val" = span_yellow("[T.x], [T.y], [using_map.get_zlevel_name(T.z)]"))
 
 	// Cleanbots
 	for(var/mob/living/bot/cleanbot/B in living_mob_list)
@@ -319,9 +319,9 @@
 			if(B.on)
 				textout += "Status: <span class='good'>Online</span><br>"
 				if(T.z == userloc.z)
-					textout += "<span class='good'>[T.x], [T.y], [using_map.get_zlevel_name(T.z)]</span>"
+					textout += span_green("[T.x], [T.y], [using_map.get_zlevel_name(T.z)]")
 				else
-					textout += "<span class='average'>[T.x], [T.y], [using_map.get_zlevel_name(T.z)]</span>"
+					textout += span_yellow("[T.x], [T.y], [using_map.get_zlevel_name(T.z)]")
 			else
 				textout += "Status: <span class='bad'>Offline</span>"
 
@@ -331,18 +331,18 @@
 
 // Compiles the three lists used by GPS_access.tmpl
 // The contents of the three lists are inherently related, so separating them into different procs would be largely redundant
-/obj/item/weapon/commcard/proc/get_GPS_lists()
+/obj/item/commcard/proc/get_GPS_lists()
 	// GPS Access
 	var/intgps[0] // Gps devices within the commcard -- Allow tag edits, turning on/off, etc
 	var/extgps[0] // Gps devices not inside the commcard -- Print locations if a gps is on
 	var/stagps[0] // Gps net status, location, whether it's on, if it's got long range
-	var/obj/item/device/gps/cumulative = new(src)
+	var/obj/item/gps/cumulative = new(src)
 	cumulative.tracking = FALSE
 	cumulative.local_mode = TRUE // Won't detect long-range signals automatically
 	cumulative.long_range = FALSE
 	var/list/toggled_gps = list() // List of GPS units that are turned off before display_list() is called
 
-	for(var/obj/item/device/gps/G in internal_devices)
+	for(var/obj/item/gps/G in internal_devices)
 		var/gpsdata[0]
 		if(G.tracking && !G.emped)
 			cumulative.tracking = TRUE // Turn it on
@@ -367,7 +367,7 @@
 
 	var/list/remote_gps = cumulative.display_list() // Fetch information for all units except the ones inside of this device
 
-	for(var/obj/item/device/gps/G in toggled_gps) // Reenable any internal GPS units
+	for(var/obj/item/gps/G in toggled_gps) // Reenable any internal GPS units
 		G.tracking = TRUE
 
 	stagps["enabled"] = cumulative.tracking
@@ -392,7 +392,7 @@
 // Collects the current status of the supply shuttle
 // Copied from /obj/machinery/computer/supplycomp/ui_interact(),
 // code\game\machinery\computer\supply.dm, starting at line 55
-/obj/item/weapon/commcard/proc/get_supply_shuttle_status()
+/obj/item/commcard/proc/get_supply_shuttle_status()
 	var/shuttle_status[0]
 	var/datum/shuttle/autodock/ferry/supply/shuttle = SSsupply.shuttle
 	if(shuttle)
@@ -452,7 +452,7 @@
 // Compiles the list of supply orders
 // Copied from /obj/machinery/computer/supplycomp/ui_interact(),
 // code\game\machinery\computer\supply.dm, starting at line 130
-/obj/item/weapon/commcard/proc/get_supply_orders()
+/obj/item/commcard/proc/get_supply_orders()
 	var/orders[0]
 	for(var/datum/supply_order/S in SSsupply.order_history)
 		orders[++orders.len] = list(
@@ -475,7 +475,7 @@
 // Compiles the list of supply export receipts
 // Copied from /obj/machinery/computer/supplycomp/ui_interact(),
 // code\game\machinery\computer\supply.dm, starting at line 147
-/obj/item/weapon/commcard/proc/get_supply_receipts()
+/obj/item/commcard/proc/get_supply_receipts()
 	var/receipts[0]
 	for(var/datum/exported_crate/E in SSsupply.exported_crates)
 		receipts[++receipts.len] = list(
@@ -493,7 +493,7 @@
 // Compiles the list of supply packs for the category currently stored in internal_data["supply_category"]
 // Copied from /obj/machinery/computer/supplycomp/ui_interact(),
 // code\game\machinery\computer\supply.dm, starting at line 147
-/obj/item/weapon/commcard/proc/get_supply_pack_list()
+/obj/item/commcard/proc/get_supply_pack_list()
 	var/supply_packs[0]
 	for(var/pack_name in SSsupply.supply_pack)
 		var/datum/supply_pack/P = SSsupply.supply_pack[pack_name]
@@ -517,7 +517,7 @@
 
 
 // Compiles miscellaneous data and permissions used by the supply template
-/obj/item/weapon/commcard/proc/get_misc_supply_data()
+/obj/item/commcard/proc/get_misc_supply_data()
 	return list(
 			"shuttle_auth" = (internal_data["supply_controls"] & SUP_SEND_SHUTTLE),
 			"order_auth" = (internal_data["supply_controls"] & SUP_ACCEPT_ORDERS),
@@ -525,7 +525,7 @@
 			"supply_categories" = all_supply_groups
 		)
 
-/obj/item/weapon/commcard/proc/get_status_display()
+/obj/item/commcard/proc/get_status_display()
 	return list(
 			"line1" = internal_data["stat_display_line1"],
 			"line2" = internal_data["stat_display_line2"],
@@ -534,7 +534,7 @@
 			"active" = internal_data["stat_display_special"]
 		)
 
-/obj/item/weapon/commcard/proc/find_blast_doors()
+/obj/item/commcard/proc/find_blast_doors()
 	var/target_doors[0]
 	for(var/obj/machinery/door/blast/B in machines)
 		if(B.id == internal_data["shuttle_door_code"])

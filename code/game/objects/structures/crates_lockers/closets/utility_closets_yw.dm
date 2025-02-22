@@ -9,11 +9,11 @@
 	wall_mounted = 1
 
 	starts_with = list(
-		/obj/item/weapon/module/power_control,
-		/obj/item/weapon/storage/toolbox/mechanical ,
-		/obj/item/device/flashlight,
-		/obj/item/weapon/tank/oxygen/red,
-		/obj/item/weapon/storage/briefcase/inflatable,
+		/obj/item/module/power_control,
+		/obj/item/storage/toolbox/mechanical ,
+		/obj/item/flashlight,
+		/obj/item/tank/oxygen/red,
+		/obj/item/storage/briefcase/inflatable,
 		/obj/item/clothing/head/helmet/space/emergency,
 		/obj/item/clothing/suit/space/emergency)
 

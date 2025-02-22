@@ -4,9 +4,10 @@
  * @license MIT
  */
 
-import { resolveAsset } from '../assets';
-import { useBackend } from '../backend';
-import { Box, Button } from '../components';
+import { resolveAsset } from 'tgui/assets';
+import { useBackend } from 'tgui/backend';
+import { Box, Button, Image } from 'tgui-core/components';
+
 import { Window } from './Window';
 
 export const NtosWindow = (props) => {
@@ -47,7 +48,7 @@ export const NtosWindow = (props) => {
           <div className="NtosHeader__right">
             {PC_programheaders.map((header) => (
               <Box key={header.icon} inline mr={1}>
-                <img
+                <Image
                   className="NtosHeader__icon"
                   src={resolveAsset(header.icon)}
                 />
@@ -55,7 +56,7 @@ export const NtosWindow = (props) => {
             ))}
             <Box inline>
               {PC_ntneticon && (
-                <img
+                <Image
                   className="NtosHeader__icon"
                   src={resolveAsset(PC_ntneticon)}
                 />
@@ -63,7 +64,7 @@ export const NtosWindow = (props) => {
             </Box>
             {!!(PC_showbatteryicon && PC_batteryicon) && (
               <Box inline mr={1}>
-                <img
+                <Image
                   className="NtosHeader__icon"
                   src={resolveAsset(PC_batteryicon)}
                 />

@@ -7,7 +7,7 @@
 	icon_state = "jelly"
 	icon = 'icons/mob/vore.dmi'
 
-	faction = "virgo2"
+	faction = FACTION_VIRGO2
 	maxHealth = 50
 	health = 50
 
@@ -18,7 +18,6 @@
 	ai_holder_type = /datum/ai_holder/simple_mob/retaliate/jelly
 
 	can_be_drop_prey = FALSE //CHOMP Add
-	allow_mind_transfer = TRUE //CHOMPAdd
 
 	min_oxy = 0
 	max_oxy = 0
@@ -29,6 +28,8 @@
 	min_n2 = 0
 	max_n2 = 0
 	minbodytemp = 0
+
+	allow_mind_transfer = TRUE
 
 // Activate Noms!
 	vore_active = 1

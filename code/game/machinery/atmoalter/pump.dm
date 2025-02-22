@@ -21,12 +21,14 @@
 /obj/machinery/portable_atmospherics/powered/pump/filled
 	start_pressure = 90 * ONE_ATMOSPHERE
 
-/obj/machinery/portable_atmospherics/powered/pump/New()
-	..()
-	cell = new/obj/item/weapon/cell/apc(src)
+/obj/machinery/portable_atmospherics/powered/pump/Initialize(mapload, skip_cell)
+	. = ..()
+
+	if(!skip_cell)
+		cell = new/obj/item/cell/apc(src)
 
 	var/list/air_mix = StandardAirMix()
-	src.air_contents.adjust_multi("oxygen", air_mix["oxygen"], "nitrogen", air_mix["nitrogen"])
+	src.air_contents.adjust_multi(GAS_O2, air_mix[GAS_O2], GAS_N2, air_mix[GAS_N2])
 
 /obj/machinery/portable_atmospherics/powered/pump/update_icon()
 	cut_overlays()
@@ -141,7 +143,7 @@
 	data["default_pressure"] = round(initial(target_pressure))
 	data["min_pressure"] = round(pressuremin)
 	data["max_pressure"] = round(pressuremax)
-	
+
 	data["powerDraw"] = round(last_power_draw)
 	data["cellCharge"] = cell ? cell.charge : 0
 	data["cellMaxCharge"] = cell ? cell.maxcharge : 1
@@ -152,7 +154,7 @@
 		data["holding"]["pressure"] = round(holding.air_contents.return_pressure() > 0 ? holding.air_contents.return_pressure() : 0)
 	else
 		data["holding"] = null
-	
+
 	return data
 
 /obj/machinery/portable_atmospherics/powered/pump/tgui_act(action, params)

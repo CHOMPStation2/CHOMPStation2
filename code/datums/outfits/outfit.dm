@@ -52,12 +52,16 @@ var/list/outfits_decls_by_type_
 
 	var/id_pda_assignment
 
-	var/backpack = /obj/item/weapon/storage/backpack
-	var/satchel_one  = /obj/item/weapon/storage/backpack/satchel/norm
-	var/satchel_two  = /obj/item/weapon/storage/backpack/satchel
-	var/messenger_bag = /obj/item/weapon/storage/backpack/messenger
-	var/sports_bag = /obj/item/weapon/storage/backpack/sport
-	var/satchel_three = /obj/item/weapon/storage/backpack/satchel/strapless
+	var/headset = /obj/item/radio/headset
+	var/headset_alt = /obj/item/radio/headset/alt
+	var/headset_earbud = /obj/item/radio/headset/earbud
+
+	var/backpack = /obj/item/storage/backpack
+	var/satchel_one  = /obj/item/storage/backpack/satchel/norm
+	var/satchel_two  = /obj/item/storage/backpack/satchel
+	var/messenger_bag = /obj/item/storage/backpack/messenger
+	var/sports_bag = /obj/item/storage/backpack/sport
+	var/satchel_three = /obj/item/storage/backpack/satchel/strapless
 
 	var/flags // Specific flags
 
@@ -72,7 +76,11 @@ var/list/outfits_decls_by_type_
 	dd_insertObjectList(outfits_decls_, src)
 
 /decl/hierarchy/outfit/proc/pre_equip(mob/living/carbon/human/H)
-	if(flags & OUTFIT_HAS_BACKPACK)
+	switch(H.headset)
+		if(1) l_ear = headset
+		if(2) l_ear = headset_alt
+		if(3) l_ear = headset_earbud
+	if(flags && OUTFIT_HAS_BACKPACK)
 		switch(H.backbag)
 			if(2) back = backpack
 			if(3) back = satchel_one
@@ -84,7 +92,7 @@ var/list/outfits_decls_by_type_
 
 /decl/hierarchy/outfit/proc/post_equip(mob/living/carbon/human/H)
 	if(flags & OUTFIT_HAS_JETPACK)
-		var/obj/item/weapon/tank/jetpack/J = locate(/obj/item/weapon/tank/jetpack) in H
+		var/obj/item/tank/jetpack/J = locate(/obj/item/tank/jetpack) in H
 		if(!J)
 			return
 		J.toggle()
@@ -95,7 +103,7 @@ var/list/outfits_decls_by_type_
 
 	rank = rank || id_pda_assignment
 	assignment = id_pda_assignment || assignment || rank
-	var/obj/item/weapon/card/id/W = equip_id(H, rank, assignment)
+	var/obj/item/card/id/W = equip_id(H, rank, assignment)
 	if(W)
 		rank = W.rank
 		assignment = W.assignment
@@ -119,7 +127,8 @@ var/list/outfits_decls_by_type_
 	if(uniform)
 		H.equip_to_slot_or_del(new uniform(H),slot_w_uniform)
 	if(suit)
-		H.equip_to_slot_or_del(new suit(H),slot_wear_suit)
+		if(!(H.client?.prefs?.no_jacket))
+			H.equip_to_slot_or_del(new suit(H),slot_wear_suit)
 	if(back)
 		H.equip_to_slot_or_del(new back(H),slot_back)
 	if(belt)
@@ -127,7 +136,10 @@ var/list/outfits_decls_by_type_
 	if(gloves)
 		H.equip_to_slot_or_del(new gloves(H),slot_gloves)
 	if(shoes)
+	//CHOMPEdit Start, remove RS No shoes
+	//	if(!(H.client?.prefs?.shoe_hater))	//RS ADD
 		H.equip_to_slot_or_del(new shoes(H),slot_shoes)
+	//CHOMPEdit End, remove RS No Shoes
 	if(mask)
 		H.equip_to_slot_or_del(new mask(H),slot_wear_mask)
 	if(head)
@@ -163,7 +175,7 @@ var/list/outfits_decls_by_type_
 /decl/hierarchy/outfit/proc/equip_id(mob/living/carbon/human/H, rank, assignment)
 	if(!id_slot || !id_type)
 		return
-	var/obj/item/weapon/card/id/W = new id_type(H)
+	var/obj/item/card/id/W = new id_type(H)
 	if(id_desc)
 		W.desc = id_desc
 	if(rank)
@@ -176,13 +188,13 @@ var/list/outfits_decls_by_type_
 /decl/hierarchy/outfit/proc/equip_pda(mob/living/carbon/human/H, rank, assignment)
 	if(!pda_slot || !pda_type)
 		return
-	var/obj/item/device/pda/pda = new pda_type(H)
+	var/obj/item/pda/pda = new pda_type(H)
 	if(H.equip_to_slot_or_del(pda, pda_slot))
 		pda.owner = H.real_name
 		pda.ownjob = assignment
 		pda.ownrank = rank
 		pda.name = "PDA-[H.real_name] ([assignment])"
-		if(H.client.prefs.ringtone) // if null we use the job default
+		if(H.client?.prefs.ringtone) // if null we use the job default
 			pda.ttone = H.client.prefs.ringtone
 		return pda
 

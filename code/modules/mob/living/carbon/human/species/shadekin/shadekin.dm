@@ -139,7 +139,7 @@
 	if(respite_activating)
 		return TRUE
 	var/area/current_area = get_area(H)
-	if((H.ability_flags & AB_DARK_RESPITE) || H.has_modifier_of_type(/datum/modifier/dark_respite) || current_area.limit_dark_respite)
+	if((H.ability_flags & AB_DARK_RESPITE) || H.has_modifier_of_type(/datum/modifier/dark_respite) || current_area.flag_check(AREA_LIMIT_DARK_RESPITE))
 		return
 	var/list/floors = list()
 	for(var/turf/unsimulated/floor/dark/floor in get_area_turfs(/area/shadekin))
@@ -165,7 +165,7 @@
 	H.adjustToxLoss(-(H.getToxLoss() * 0.75))
 	H.adjustCloneLoss(-(H.getCloneLoss() * 0.75))
 	H.germ_level = 0 // CHOMPAdd - Take away the germs, or we'll die AGAIN
-	H.vessel.add_reagent("blood",blood_volume-H.vessel.total_volume)
+	H.vessel.add_reagent(REAGENT_ID_BLOOD,blood_volume-H.vessel.total_volume)
 	for(var/obj/item/organ/external/bp in H.organs)
 		bp.bandage()
 		bp.disinfect()
@@ -179,7 +179,7 @@
 		//Yay digestion... presumably...
 		var/obj/belly/belly = H.loc
 		add_attack_logs(belly.owner, H, "Digested in [lowertext(belly.name)]")
-		to_chat(belly.owner, "<span class='notice'>\The [H.name] suddenly vanishes within your [belly.name]</span>")
+		to_chat(belly.owner, span_notice("\The [H.name] suddenly vanishes within your [belly.name]"))
 		H.forceMove(pick(floors))
 		if(H.ability_flags & AB_PHASE_SHIFTED)
 			H.phase_shift()
@@ -188,7 +188,7 @@
 			phaseanim.dir = H.dir
 		H.invisibility = initial(H.invisibility)
 		respite_activating = FALSE
-		belly.owner.update_fullness()
+		belly.owner.handle_belly_update() // CHOMPEdit
 		H.clear_fullscreen("belly")
 		if(H.hud_used)
 			if(!H.hud_used.hud_shown)
@@ -201,7 +201,7 @@
 
 		spawn(5 MINUTES)
 			H.ability_flags &= ~AB_DARK_RESPITE
-			to_chat(H, "<span class='notice'>You feel like you can leave the Dark again</span>")
+			to_chat(H, span_notice("You feel like you can leave the Dark again"))
 	else
 		H.add_modifier(/datum/modifier/dark_respite, 25 MINUTES)
 
@@ -217,7 +217,7 @@
 
 		spawn(15 MINUTES)
 			H.ability_flags &= ~AB_DARK_RESPITE
-			to_chat(H, "<span class='notice'>You feel like you can leave the Dark again</span>")
+			to_chat(H, span_notice("You feel like you can leave the Dark again"))
 
 	return TRUE
 
@@ -240,7 +240,7 @@
 			H.adjustBruteLoss((-0.25))
 			H.adjustToxLoss((-0.25))
 			H.heal_organ_damage(3, 0)
-			H.add_chemical_effect(CE_ANTIBIOTIC, ANTIBIO_NORM)
+			H.add_chemical_effect(CE_ANTIBIOTIC, ANTIBIO_SUPER) //CHOMP Edit - increased ANTIBIO from Normal to Super
 			for(var/obj/item/organ/I in H.internal_organs)
 				if(I.robotic >= ORGAN_ROBOT)
 					continue
@@ -263,7 +263,7 @@
 		else
 			var/datum/species/shadekin/SK = H.species
 			if(SK.manual_respite)
-				to_chat(H, "<span class='notice'>As you leave the Dark, you stop focusing the Dark on healing yourself.</span>")
+				to_chat(H, span_notice("As you leave the Dark, you stop focusing the Dark on healing yourself."))
 				SK.manual_respite = FALSE
 				src.expire()
 			if(src.pain_immunity)
@@ -289,7 +289,7 @@
 		H.ability_master = new /obj/screen/movable/ability_master/shadekin(H)
 	for(var/datum/power/shadekin/P in shadekin_ability_datums)
 		if(!(P.verbpath in H.verbs))
-			add_verb(H,P.verbpath)  //CHOMPEdit
+			add_verb(H, P.verbpath)
 			H.ability_master.add_shadekin_ability(
 					object_given = H,
 					verb_given = P.verbpath,
@@ -480,7 +480,7 @@
 		if(RED_EYES)
 			total_health = 150 //ChompEDIT - balance tweaks
 			energy_light = -1
-			energy_dark = 0.1
+			energy_dark = 0.5 //ChompEDIT
 			nutrition_conversion_scaling = 2 //CHOMPEdit - Add nutrition <-> dark energy conversion
 		if(PURPLE_EYES)
 			total_health = 100 //ChompEDIT - balance tweaks
@@ -500,14 +500,14 @@
 		if(ORANGE_EYES)
 			total_health = 125 //ChompEDIT - balance tweaks
 			energy_light = -0.5
-			energy_dark = 0.25
+			energy_dark = 0.5 //ChompEDIT
 			nutrition_conversion_scaling = 1.5 //CHOMPEdit - Add nutrition <-> dark energy conversion
 
 	H.maxHealth = total_health
 
 	H.health = H.maxHealth
 
-/datum/species/shadekin/produceCopy(var/list/traits, var/mob/living/carbon/human/H, var/custom_base)
+/datum/species/shadekin/produceCopy(var/list/traits, var/mob/living/carbon/human/H, var/custom_base, var/reset_dna = TRUE) // Traitgenes reset_dna flag required, or genes get reset on resleeve
 
 	var/datum/species/shadekin/new_copy = ..()
 

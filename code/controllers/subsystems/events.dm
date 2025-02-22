@@ -21,7 +21,7 @@ SUBSYSTEM_DEF(events)
 		)
 	if(global.using_map.use_overmap)
 		GLOB.overmap_event_handler.create_events(global.using_map.overmap_z, global.using_map.overmap_size, global.using_map.overmap_event_areas)
-	return SS_INIT_SUCCESS // CHOMPEdit
+	return SS_INIT_SUCCESS
 
 /datum/controller/subsystem/events/fire(resumed)
 	if (!resumed)
@@ -41,11 +41,9 @@ SUBSYSTEM_DEF(events)
 		var/datum/event_container/EC = event_containers[i]
 		EC.process()
 
-//CHOMPEdit Begin
 /datum/controller/subsystem/events/stat_entry(msg)
 	msg = "E:[active_events.len]"
 	return ..()
-//CHOMPEdit End
 
 /datum/controller/subsystem/events/Recover()
 	if(SSevents.active_events)

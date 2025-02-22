@@ -17,7 +17,7 @@
 	},
 /area/submap/camp1)
 "e" = (
-/obj/item/device/flashlight/lantern,
+/obj/item/flashlight/lantern,
 /turf/simulated/floor/outdoors/dirt{
 	outdoors = 0
 	},
@@ -41,7 +41,7 @@
 /area/submap/camp1)
 "i" = (
 /obj/structure/table/rack,
-/obj/item/weapon/gun/launcher/crossbow,
+/obj/item/gun/launcher/crossbow,
 /obj/item/stack/rods{
 	amount = 17
 	},
@@ -63,7 +63,7 @@
 /turf/simulated/floor/outdoors/dirt,
 /area/submap/camp1)
 "m" = (
-/obj/item/weapon/material/knife/machete/hatchet,
+/obj/item/material/knife/machete/hatchet,
 /turf/template_noop,
 /area/template_noop)
 "n" = (
@@ -71,7 +71,7 @@
 /turf/simulated/floor/outdoors/dirt,
 /area/submap/camp1)
 "o" = (
-/obj/item/weapon/flame/lighter,
+/obj/item/flame/lighter,
 /turf/simulated/floor/outdoors/dirt,
 /area/submap/camp1)
 

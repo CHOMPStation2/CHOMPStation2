@@ -13,14 +13,14 @@
 	var/gut2
 
 // The following code defines the Flipper as a Personal AI (PAI) card, as it is the most complex part of the system.
-/obj/item/device/paicard/flipper
+/obj/item/paicard/flipper
 	name 				= "Vix"
 	icon 				= 'icons/obj/paicard_ch.dmi'
 	var/systems_list 	= list("MultiTool","Emag","PAI","Signaler")
 	var/selected 		= "" //Currently selected SubSystem
 	origin_tech 		= list(TECH_DATA = 2, TECH_ILLEGAL = 2) //Added illegal Tech
-	var/obj/item/device/multitool/MultiTool
-	var/obj/item/device/assembly/signaler/Signal
+	var/obj/item/multitool/MultiTool
+	var/obj/item/assembly/signaler/Signal
 
 /*
 *
@@ -28,23 +28,23 @@
 * This is how we further proxy the systems
 *
 */
-/obj/item/device/paicard/flipper/attack_self(mob/user)
+/obj/item/paicard/flipper/attack_self(mob/user)
 	if(selected && selected != "Emag")
 		var/obj/item/module = selected
 		return module.attack_self(user)
 	..()
 
-/obj/item/device/paicard/flipper/Initialize() //ChompEDIT New --> Initialize
+/obj/item/paicard/flipper/Initialize() //ChompEDIT New --> Initialize
 	..()
 	desc 		= "The [name] is a versatile security device designed to protect and empower users in a variety of contexts. With features such as wireless hacking, radio analysis, signal jamming, and physical lock picking, the [name] is the ultimate tool for security professionals, hobbyists, and anyone seeking to better understand and defend against modern threats. Whether you're investigating a security breach, testing your own defenses, or simply curious about the workings of wireless technology, the [name] has you covered."
-	MultiTool 	= new /obj/item/device/multitool(src)
-	Signal 	= new /obj/item/device/assembly/signaler(src)
+	MultiTool 	= new /obj/item/multitool(src)
+	Signal 	= new /obj/item/assembly/signaler(src)
 
 /*
  * This function is called before an attack is executed. If a system is selected, it will use the selected system to attack.
  * Returns true to prevent the attackby function on the source object from being executed.
  */
-/obj/item/device/paicard/flipper/pre_attack(atom/A, mob/user, params)
+/obj/item/paicard/flipper/pre_attack(atom/A, mob/user, params)
 	if(selected)
 		if(selected=="Emag")
 			if(istype(A,/obj/machinery/door))
@@ -57,13 +57,13 @@
 /*
  * This function is used to call the attackby function on the intercepted object.
  */
-/obj/item/device/paicard/flipper/proc/proxy_attackby(atom/A,atom/B, mob/user, var/click_parameters)
+/obj/item/paicard/flipper/proc/proxy_attackby(atom/A,atom/B, mob/user, var/click_parameters)
 	A.attackby(B,user) //Directly call attackby on the intercepted object
 
 /*
  * This function allows the user to select which subsystem to use for an attack
  */
-/obj/item/device/paicard/flipper/proc/system_select(mob/user)
+/obj/item/paicard/flipper/proc/system_select(mob/user)
 	var/selected = tgui_input_list(user, "Which System to Use?", "Systems", systems_list)
 	if(selected=="PAI")
 		selected = ""
@@ -75,7 +75,7 @@
 /*
  * This function is called when the user Alt-clicks the Flipper. It calls the system_select function to allow the user to select a subsystem.
  */
-/obj/item/device/paicard/flipper/AltClick(mob/living/user)
+/obj/item/paicard/flipper/AltClick(mob/living/user)
 	system_select(user)
 
 //Vore
@@ -172,29 +172,29 @@
 
 //Custom pai handler since we need to access a child class
 //and i dont wanna inflate the original one even more with if checks
-/obj/item/device/paicard/flipper/attack_ghost(mob/user as mob)
+/obj/item/paicard/flipper/attack_ghost(mob/user as mob)
 	if(pai != null) //Have a person in them already?
 		return ..()
 	if(is_damage_critical())
-		to_chat(usr, "<span class='warning'>That card is too damaged to activate!</span>")
+		to_chat(usr, span_warning("That card is too damaged to activate!"))
 		return
 	var/time_till_respawn = user.time_till_respawn()
 	if(time_till_respawn == -1) // Special case, never allowed to respawn
-		to_chat(usr, "<span class='warning'>Respawning is not allowed!</span>")
+		to_chat(usr, span_warning("Respawning is not allowed!"))
 	else if(time_till_respawn) // Nonzero time to respawn
-		to_chat(usr, "<span class='warning'>You can't do that yet! You died too recently. You need to wait another [round(time_till_respawn/10/60, 0.1)] minutes.</span>")
+		to_chat(usr, span_warning("You can't do that yet! You died too recently. You need to wait another [round(time_till_respawn/10/60, 0.1)] minutes."))
 		return
 	if(jobban_isbanned(usr, "pAI"))
-		to_chat(usr,"<span class='warning'>You cannot join a pAI card when you are banned from playing as a pAI.</span>")
+		to_chat(usr,span_warning("You cannot join a pAI card when you are banned from playing as a pAI."))
 		return
 
 	for(var/ourkey in paikeys)
 		if(ourkey == user.ckey)
-			to_chat(usr, "<span class='warning'>You can't just rejoin any old pAI card!!! Your card still exists.</span>")
+			to_chat(usr, span_warning("You can't just rejoin any old pAI card!!! Your card still exists."))
 			return
 
 	var/choice = tgui_alert(user, "You sure you want to inhabit this PAI, or submit yourself to being recruited?", "Confirmation", list("Inhabit", "Recruit", "Cancel"))
-	if(choice == "Cancel")
+	if(!choice || choice == "Cancel")
 		return ..()
 	if(choice == "Recruit")
 		paiController.recruitWindow(user)
@@ -207,7 +207,7 @@
 		actual_pai_name = sanitize_name(pai_name, ,1)
 		if(isnull(actual_pai_name))
 			return ..()
-		var/obj/item/device/paicard/flipper/card = new(location)
+		var/obj/item/paicard/flipper/card = new(location)
 		var/mob/living/silicon/pai/flipper/new_pai = new(card)
 		new_pai.key = user.key
 		paikeys |= new_pai.ckey
@@ -215,7 +215,7 @@
 		new_pai.SetName(actual_pai_name)
 
 	if(choice == "Yes")
-		var/obj/item/device/paicard/flipper/card = new(location)
+		var/obj/item/paicard/flipper/card = new(location)
 		var/mob/living/silicon/pai/flipper/new_pai = new(card)
 		new_pai.key = user.key
 		paikeys |= new_pai.ckey

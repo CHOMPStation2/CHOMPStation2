@@ -60,7 +60,7 @@
 		spawn(2)
 			SaySomething(pick(seperate))
 
-/*/obj/item/weapon/talkingcrystal/proc/debug()
+/*/obj/item/talkingcrystal/proc/debug()
 	//set src in view()
 	for(var/v in heard_words)
 		to_world("[uppertext(v)]")
@@ -111,5 +111,5 @@
 	var/list/listening = viewers(holder_atom)
 
 	for(var/mob/M in listening)
-		to_chat(M, "[icon2html(holder_atom,M.client)] <b>[holder_atom]</b> reverberates, \"[span_blue(msg)]\"")
+		to_chat(M, "[icon2html(holder_atom,M.client)] " + span_bold("[holder_atom] reverberates") +" , \"[span_blue(msg)]\"")
 	last_talk_time = world.time

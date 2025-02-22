@@ -1,8 +1,6 @@
-import { sortBy } from 'common/collections';
-
-import { useBackend } from '../backend';
-import { Button, Section, Table } from '../components';
-import { Window } from '../layouts';
+import { useBackend } from 'tgui/backend';
+import { Window } from 'tgui/layouts';
+import { Button, Section, Table } from 'tgui-core/components';
 
 type Data = {
   shuttles: Shuttle[];
@@ -12,8 +10,8 @@ type Data = {
 type Shuttle = {
   ref: string;
   name: string;
-  current_location;
-  status;
+  current_location: string;
+  status: number;
 };
 
 type OvermapShip = {
@@ -36,25 +34,36 @@ export const ShuttleList = (props) => {
 
   const { shuttles, overmap_ships } = data;
 
+  shuttles.sort((a, b) => a.name.localeCompare(b.name));
+
+  overmap_ships.sort((a, b) => {
+    let a_cmp = a.name?.toLowerCase() || a.name || a.ref;
+    let b_cmp = a.name?.toLowerCase() || a.name || a.ref;
+
+    return a_cmp.localeCompare(b_cmp);
+  });
+
   return (
     <Section noTopPadding>
       <Section title="Classic Shuttles">
         <Table>
-          {sortBy((f: Shuttle) => f.name)(shuttles).map((shuttle) => (
+          {shuttles.map((shuttle) => (
             <Table.Row key={shuttle.ref}>
               <Table.Cell collapsing>
                 <Button
                   m={0}
-                  content="JMP"
                   onClick={() => act('adminobserve', { ref: shuttle.ref })}
-                />
+                >
+                  JMP
+                </Button>
               </Table.Cell>
               <Table.Cell collapsing>
                 <Button
                   m={0}
-                  content="Fly"
                   onClick={() => act('classicmove', { ref: shuttle.ref })}
-                />
+                >
+                  Fly
+                </Button>
               </Table.Cell>
               <Table.Cell>{shuttle.name}</Table.Cell>
               <Table.Cell>{shuttle.current_location}</Table.Cell>
@@ -65,21 +74,19 @@ export const ShuttleList = (props) => {
       </Section>
       <Section title="Overmap Ships">
         <Table>
-          {sortBy((f: OvermapShip) => f.name?.toLowerCase() || f.name || f.ref)(
-            overmap_ships,
-          ).map((ship) => (
+          {overmap_ships.map((ship) => (
             <Table.Row key={ship.ref}>
               <Table.Cell collapsing>
-                <Button
-                  content="JMP"
-                  onClick={() => act('adminobserve', { ref: ship.ref })}
-                />
+                <Button onClick={() => act('adminobserve', { ref: ship.ref })}>
+                  JMP
+                </Button>
               </Table.Cell>
               <Table.Cell collapsing>
                 <Button
-                  content="Control"
                   onClick={() => act('overmap_control', { ref: ship.ref })}
-                />
+                >
+                  Control
+                </Button>
               </Table.Cell>
               <Table.Cell>{ship.name}</Table.Cell>
             </Table.Row>

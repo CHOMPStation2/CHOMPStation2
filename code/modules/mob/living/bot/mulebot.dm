@@ -36,8 +36,8 @@
 
 	var/global/amount = 0
 
-/mob/living/bot/mulebot/New()
-	..()
+/mob/living/bot/mulebot/Initialize()
+	. = ..()
 
 	var/turf/T = get_turf(loc)
 	var/obj/machinery/navbeacon/N = locate() in T
@@ -82,43 +82,43 @@
 	data["safety"] = safety
 	return data
 
-/mob/living/bot/mulebot/tgui_act(action, params)
+/mob/living/bot/mulebot/tgui_act(action, params, datum/tgui/ui)
 	if(..())
 		return TRUE
 
-	add_fingerprint(usr)
+	add_fingerprint(ui.user)
 	switch(action)
 		if("power")
 			if(on)
 				turn_off()
 			else
 				turn_on()
-			visible_message("[usr] switches [on ? "on" : "off"] [src].")
+			visible_message("[ui.user] switches [on ? "on" : "off"] [src].")
 			. = TRUE
 
 		if("stop")
-			obeyCommand("Stop")
+			obeyCommand(ui.user, "Stop")
 			. = TRUE
 
 		if("go")
-			obeyCommand("GoTD")
+			obeyCommand(ui.user, "GoTD")
 			. = TRUE
 
 		if("home")
-			obeyCommand("Home")
+			obeyCommand(ui.user, "Home")
 			. = TRUE
 
 		if("destination")
-			obeyCommand("SetD")
+			obeyCommand(ui.user, "SetD")
 			. = TRUE
 
 		if("sethome")
 			var/new_dest
 			var/list/beaconlist = GetBeaconList()
 			if(beaconlist.len)
-				new_dest = tgui_input_list(usr, "Select new home tag", "Mulebot [suffix ? "([suffix])" : ""]", beaconlist)
+				new_dest = tgui_input_list(ui.user, "Select new home tag", "Mulebot [suffix ? "([suffix])" : ""]", beaconlist)
 			else
-				tgui_alert_async(usr, "No destination beacons available.")
+				tgui_alert_async(ui.user, "No destination beacons available.")
 			if(new_dest)
 				home = get_turf(beaconlist[new_dest])
 				homeName = new_dest
@@ -144,7 +144,7 @@
 	..()
 	update_icons()
 
-/mob/living/bot/mulebot/proc/obeyCommand(var/command)
+/mob/living/bot/mulebot/proc/obeyCommand(mob/user, var/command)
 	switch(command)
 		if("Home")
 			resetTarget()
@@ -154,9 +154,9 @@
 			var/new_dest
 			var/list/beaconlist = GetBeaconList()
 			if(beaconlist.len)
-				new_dest = tgui_input_list(usr, "Select new destination tag", "Mulebot [suffix ? "([suffix])" : ""]", beaconlist)
+				new_dest = tgui_input_list(user, "Select new destination tag", "Mulebot [suffix ? "([suffix])" : ""]", beaconlist)
 			else
-				tgui_alert_async(usr, "No destination beacons available.")
+				tgui_alert_async(user, "No destination beacons available.")
 			if(new_dest)
 				resetTarget()
 				target = get_turf(beaconlist[new_dest])
@@ -168,7 +168,7 @@
 
 /mob/living/bot/mulebot/emag_act(var/remaining_charges, var/user)
 	locked = !locked
-	to_chat(user, "<span class='notice'>You [locked ? "lock" : "unlock"] the mulebot's controls!</span>")
+	to_chat(user, span_notice("You [locked ? "lock" : "unlock"] the mulebot's controls!"))
 	flick("mulebot-emagged", src)
 	playsound(src, 'sound/effects/sparks1.ogg', 100, 0)
 	return 1
@@ -223,14 +223,14 @@
 
 /mob/living/bot/mulebot/Bump(var/mob/living/M)
 	if(!safety && istype(M))
-		visible_message("<span class='warning'>[src] knocks over [M]!</span>")
+		visible_message(span_warning("[src] knocks over [M]!"))
 		M.Stun(8)
 		M.Weaken(5)
 	..()
 
 /mob/living/bot/mulebot/proc/runOver(var/mob/living/M)
 	if(istype(M)) // At this point, MULEBot has somehow crossed over onto your tile with you still on it. CRRRNCH.
-		visible_message("<span class='warning'>[src] drives over [M]!</span>")
+		visible_message(span_warning("[src] drives over [M]!"))
 		playsound(src, 'sound/effects/splat.ogg', 50, 1)
 
 		var/damage = rand(5, 7)
@@ -250,10 +250,10 @@
 /mob/living/bot/mulebot/explode()
 	unload(pick(0, 1, 2, 4, 8))
 
-	visible_message("<span class='danger'>[src] blows apart!</span>")
+	visible_message(span_danger("[src] blows apart!"))
 
 	var/turf/Tsec = get_turf(src)
-	new /obj/item/device/assembly/prox_sensor(Tsec)
+	new /obj/item/assembly/prox_sensor(Tsec)
 	new /obj/item/stack/rods(Tsec)
 	new /obj/item/stack/rods(Tsec)
 	new /obj/item/stack/cable_coil/cut(Tsec)
@@ -331,3 +331,11 @@
 		AM.layer = initial(AM.layer)
 		AM.pixel_y = initial(AM.pixel_y)
 	busy = 0
+
+#undef MULE_IDLE
+#undef MULE_MOVING
+#undef MULE_UNLOAD
+#undef MULE_LOST
+#undef MULE_CALC_MIN
+#undef MULE_CALC_MAX
+#undef MULE_PATH_DONE

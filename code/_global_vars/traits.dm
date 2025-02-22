@@ -5,6 +5,7 @@
 */
 GLOBAL_LIST_INIT(traits_by_type, list(
 	/mob = list(
+		"TRAIT_THINKING_IN_CHARACTER" = TRAIT_THINKING_IN_CHARACTER,
 		/*
 		"TRAIT_BLIND" = TRAIT_BLIND,
 	*/

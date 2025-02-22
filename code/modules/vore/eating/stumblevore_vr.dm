@@ -1,6 +1,10 @@
 /mob/living/proc/CanStumbleVore(mob/living/target)
 	if(!can_be_drop_pred)
 		return FALSE
+	// CHOMPAdd Start
+	if(is_incorporeal() || target.is_incorporeal())
+		return FALSE
+	// CHOMPAdd End
 	if(!is_vore_predator(src))
 		return FALSE
 	if(!target.devourable)
@@ -13,15 +17,19 @@
 
 /mob/living/Bump(atom/movable/AM)
 	//. = ..()
-	if(istype(AM, /mob/living))
-		if(((confused || is_blind()) && stat == CONSCIOUS && prob(50) && m_intent=="run") || flying && flight_vore)
-			AM.stumble_into(src)
+	if(isliving(AM))
+		// CHOMPEdit Start
+		var/mob/living/L = AM
+		if(!L.is_incorporeal())
+			if(buckled != AM && (((confused || is_blind()) && stat == CONSCIOUS && prob(50) && m_intent==I_RUN) || flying && flight_vore))
+				AM.stumble_into(src)
+		// CHOMPEdit End
 	return ..()
 // Because flips toggle density
 /mob/living/Crossed(var/atom/movable/AM)
-	if(istype(AM, /mob/living) && isturf(loc) && AM != src)
+	if(isliving(AM) && isturf(loc) && AM != src)
 		var/mob/living/AMV = AM
-		if(((AMV.confused || AMV.is_blind()) && AMV.stat == CONSCIOUS && prob(50) && AMV.m_intent=="run") || AMV.flying && AMV.flight_vore)
+		if(AMV.buckled != src && (((AMV.confused || AMV.is_blind()) && AMV.stat == CONSCIOUS && prob(50) && AMV.m_intent==I_RUN) || AMV.flying && AMV.flight_vore))
 			stumble_into(AMV)
 	..()
 
@@ -32,13 +40,13 @@
 	M.Weaken(4)
 	M.stop_flying()
 	if(CanStumbleVore(M))
-		visible_message("<span class='vwarning'>[M] flops carelessly into [src]!</span>")
+		visible_message(span_vwarning("[M] flops carelessly into [src]!"))
 		perform_the_nom(src,M,src,src.vore_selected,1)
 	else if(M.CanStumbleVore(src))
-		visible_message("<span class='vwarning'>[M] flops carelessly into [src]!</span>")
+		visible_message(span_vwarning("[M] flops carelessly into [src]!"))
 		perform_the_nom(M,src,M,M.vore_selected,1)
 	else if(istype(S) && S.species.lightweight == 1)
-		visible_message("<span class='vwarning'>[M] carelessly bowls [src] over!</span>")
+		visible_message(span_vwarning("[M] carelessly bowls [src] over!"))
 		M.forceMove(get_turf(src))
 		M.apply_damage(0.5, BRUTE)
 		Weaken(4)
@@ -46,9 +54,9 @@
 		apply_damage(0.5, BRUTE)
 	else if(round(weight) > 474)
 		var/throwtarget = get_edge_target_turf(M, reverse_direction(M.dir))
-		visible_message("<span class='vwarning'>[M] bounces backwards off of [src]'s plush body!</span>")
+		visible_message(span_vwarning("[M] bounces backwards off of [src]'s plush body!"))
 		M.throw_at(throwtarget, 2, 1)
 	else
-		visible_message("<span class='vwarning'>[M] trips over [src]!</span>")
+		visible_message(span_vwarning("[M] trips over [src]!"))
 		M.forceMove(get_turf(src))
 		M.apply_damage(1, BRUTE)

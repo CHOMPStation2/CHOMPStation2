@@ -58,7 +58,7 @@
 	},
 /area/submap/syndiedepotinner)
 "ay" = (
-/obj/item/weapon/reagent_containers/food/drinks/flask/barflask,
+/obj/item/reagent_containers/food/drinks/flask/barflask,
 /obj/structure/table/standard,
 /turf/simulated/floor/tiled/asteroid_steel{
 	icon_state = "dark";
@@ -86,7 +86,7 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/syndiedepotinner)
 "aN" = (
-/obj/item/weapon/storage/backpack/holding/duffle,
+/obj/item/storage/backpack/holding/duffle,
 /turf/simulated/floor/greengrid/nitrogen,
 /area/submap/syndiedepotinner)
 "aO" = (
@@ -161,7 +161,7 @@
 	},
 /area/submap/syndiedepotoutter)
 "bw" = (
-/obj/item/weapon/storage/box/donkpockets,
+/obj/item/storage/box/donkpockets,
 /obj/structure/table/standard,
 /turf/simulated/floor/tiled/asteroid_steel{
 	icon_state = "dark";
@@ -194,8 +194,6 @@
 /area/submap/syndiedepotoutter)
 "bL" = (
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /turf/simulated/floor/tiled/asteroid_steel{
@@ -205,7 +203,6 @@
 /area/submap/syndiedepotinner)
 "bM" = (
 /obj/structure/cable{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/machinery/power/apc/high{
@@ -218,7 +215,7 @@
 	},
 /area/submap/syndiedepotinner)
 "bO" = (
-/obj/item/weapon/reagent_containers/food/snacks/syndicake,
+/obj/item/reagent_containers/food/snacks/syndicake,
 /obj/structure/table/standard,
 /turf/simulated/floor/tiled/asteroid_steel{
 	icon_state = "dark";
@@ -243,8 +240,8 @@
 	},
 /area/submap/syndiedepotoutter)
 "bV" = (
-/obj/item/weapon/folder,
-/obj/item/weapon/pen,
+/obj/item/folder,
+/obj/item/pen,
 /obj/structure/table/standard,
 /turf/simulated/floor/tiled/asteroid_steel{
 	icon_state = "dark";
@@ -255,8 +252,6 @@
 /obj/structure/cable,
 /obj/machinery/power/terminal,
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/asteroid_steel{
@@ -274,20 +269,16 @@
 /area/submap/syndiedepotinner)
 "ce" = (
 /obj/machinery/light/small{
-	dir = 4;
-	tag = "icon-bulb1 (EAST)"
+	dir = 4
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/submap/syndiedepotinner)
 "ci" = (
 /obj/structure/cable{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/machinery/power/smes/buildable/hybrid,
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/asteroid_steel{
@@ -335,8 +326,6 @@
 /area/submap/syndiedepotinner)
 "cv" = (
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden{
@@ -349,13 +338,9 @@
 /area/submap/syndiedepotinner)
 "cw" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden{
@@ -398,7 +383,7 @@
 /area/submap/syndiedepotinner)
 "cF" = (
 /obj/structure/table/standard,
-/obj/item/weapon/flame/candle/everburn,
+/obj/item/flame/candle/everburn,
 /turf/simulated/mineral/floor/vacuum,
 /area/submap/syndiedepotoutter)
 "cG" = (
@@ -416,8 +401,6 @@
 /area/submap/syndiedepotinner)
 "cI" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/asteroid_steel{
@@ -441,8 +424,6 @@
 /area/submap/syndiedepotoutter)
 "cO" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/wall/iron,
@@ -453,8 +434,6 @@
 	on = 1
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/asteroid_steel{
@@ -506,8 +485,6 @@
 /area/submap/syndiedepotoutter)
 "db" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/light/small,
@@ -663,18 +640,18 @@
 /area/submap/syndiedepotinner)
 "vC" = (
 /obj/structure/table/standard,
-/obj/item/weapon/storage/box/syndicate,
+/obj/item/storage/box/syndicate,
 /turf/simulated/floor/tiled/asteroid_steel{
 	icon_state = "dark";
 	temperature = 293.15
 	},
 /area/submap/syndiedepotinner)
 "vH" = (
-/obj/item/weapon/storage/belt/holding,
+/obj/item/storage/belt/holding,
 /turf/simulated/floor/greengrid/nitrogen,
 /area/submap/syndiedepotinner)
 "wv" = (
-/obj/item/weapon/inducer/syndicate,
+/obj/item/inducer/syndicate,
 /turf/simulated/floor/tiled/asteroid_steel{
 	icon_state = "dark";
 	temperature = 293.15
@@ -682,7 +659,7 @@
 /area/submap/syndiedepotinner)
 "xv" = (
 /obj/machinery/atmospherics/pipe/simple/hidden,
-/obj/item/weapon/storage/toolbox/syndicate/powertools,
+/obj/item/storage/toolbox/syndicate/powertools,
 /turf/simulated/floor/greengrid/nitrogen,
 /area/submap/syndiedepotinner)
 "xV" = (
@@ -774,13 +751,13 @@
 /area/submap/syndiedepotinner)
 "Hc" = (
 /obj/structure/table/standard,
-/obj/item/weapon/card/id/syndicate,
-/obj/item/weapon/card/id/syndicate,
-/obj/item/weapon/card/id/syndicate,
-/obj/item/weapon/card/id/syndicate,
-/obj/item/weapon/card/id/syndicate,
-/obj/item/weapon/card/id/syndicate,
-/obj/item/weapon/card/id/syndicate,
+/obj/item/card/id/syndicate,
+/obj/item/card/id/syndicate,
+/obj/item/card/id/syndicate,
+/obj/item/card/id/syndicate,
+/obj/item/card/id/syndicate,
+/obj/item/card/id/syndicate,
+/obj/item/card/id/syndicate,
 /turf/simulated/floor/tiled/asteroid_steel{
 	icon_state = "dark";
 	temperature = 293.15

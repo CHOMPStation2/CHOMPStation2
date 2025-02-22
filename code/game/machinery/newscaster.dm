@@ -71,7 +71,7 @@
 		newChannel.announcement = "Breaking news from [channel_name]!"
 	network_channels += newChannel
 
-/datum/feed_network/proc/SubmitArticle(var/msg, var/author, var/channel_name, var/obj/item/weapon/photo/photo, var/adminMessage = 0, var/message_type = "", var/title)
+/datum/feed_network/proc/SubmitArticle(var/msg, var/author, var/channel_name, var/obj/item/photo/photo, var/adminMessage = 0, var/message_type = "", var/title)
 	var/datum/feed_message/newMsg = new /datum/feed_message
 	newMsg.author = author
 	newMsg.body = msg
@@ -104,7 +104,7 @@
 		NEWSCASTER.update_icon()
 
 	// var/list/receiving_pdas = new
-	// for (var/obj/item/device/pda/P in PDAs)
+	// for (var/obj/item/pda/P in PDAs)
 	// 	if(!P.owner)
 	// 		continue
 	// 	if(P.toff)
@@ -114,7 +114,7 @@
 	// spawn(0)	// get_receptions sleeps further down the line, spawn of elsewhere
 	// 	var/datum/receptions/receptions = get_receptions(null, receiving_pdas) // datums are not atoms, thus we have to assume the newscast network always has reception
 
-	// 	for(var/obj/item/device/pda/PDA in receiving_pdas)
+	// 	for(var/obj/item/pda/PDA in receiving_pdas)
 	// 		if(!(receptions.receiver_reception[PDA] & TELECOMMS_RECEPTION_RECEIVER))
 	// 			continue
 
@@ -163,7 +163,7 @@ GLOBAL_LIST_BOILERPLATE(allCasters, /obj/machinery/newscaster)
 	light_range = 0
 	anchored = TRUE
 	var/obj/machinery/exonet_node/node = null
-	circuit = /obj/item/weapon/circuitboard/newscaster
+	circuit = /obj/item/circuitboard/newscaster
 	// TGUI
 	var/list/temp = null
 
@@ -211,7 +211,7 @@ GLOBAL_LIST_BOILERPLATE(allCasters, /obj/machinery/newscaster)
 
 	if(hitstaken > 0) //Cosmetic damage overlay
 		add_overlay("crack[hitstaken]")
-	
+
 	icon_state = "newscaster_normal"
 	add_overlay(emissive_appearance(icon, "newscaster_normal_ov"))
 	add_overlay(mutable_appearance(icon, "newscaster_normal_ov"))
@@ -266,13 +266,13 @@ GLOBAL_LIST_BOILERPLATE(allCasters, /obj/machinery/newscaster)
 		node = get_exonet_node()
 
 	if(!node || !node.on || !node.allow_external_newscasters)
-		to_chat(user, "<span class='danger'>Error: Cannot connect to external content.  Please try again in a few minutes.  If this error persists, please \
-		contact the system administrator.</span>")
+		to_chat(user, span_danger("Error: Cannot connect to external content.  Please try again in a few minutes.  If this error persists, please \
+		contact the system administrator."))
 		return 0
 
 	if(!user.IsAdvancedToolUser())
 		return 0
-	
+
 	tgui_interact(user)
 
 /**
@@ -286,7 +286,7 @@ GLOBAL_LIST_BOILERPLATE(allCasters, /obj/machinery/newscaster)
 	temp = list(text = text, style = style)
 	if(update_now)
 		SStgui.update_uis(src)
-	
+
 /obj/machinery/newscaster/tgui_interact(mob/user, datum/tgui/ui, datum/tgui/parent_ui)
 	ui = SStgui.try_update_ui(user, src, ui)
 	if(!ui)
@@ -316,7 +316,7 @@ GLOBAL_LIST_BOILERPLATE(allCasters, /obj/machinery/newscaster)
 	data["wanted_issue"] = wanted_issue
 
 	data["securityCaster"] = !!securityCaster
-	
+
 	var/list/network_channels = list()
 	for(var/datum/feed_channel/FC in news_network.network_channels)
 		network_channels.Add(list(list(
@@ -365,6 +365,7 @@ GLOBAL_LIST_BOILERPLATE(allCasters, /obj/machinery/newscaster)
 		if(!viewing_channel.censored)
 			for(var/datum/feed_message/M in viewing_channel.messages)
 				var/list/msgdata = list(
+					"title" = M.title,
 					"body" = M.body,
 					"img" = null,
 					"type" = M.message_type,
@@ -415,7 +416,7 @@ GLOBAL_LIST_BOILERPLATE(allCasters, /obj/machinery/newscaster)
 				if(FC.channel_name == channel_name)
 					check = 1
 					break
-			var/our_user = tgui_user_name(usr)
+			var/our_user = tgui_user_name(ui.user)
 			if(channel_name == "" || channel_name == "\[REDACTED\]")
 				set_temp("Error: Could not submit feed channel to network: Invalid Channel Name.", "danger", FALSE)
 				return TRUE
@@ -429,7 +430,7 @@ GLOBAL_LIST_BOILERPLATE(allCasters, /obj/machinery/newscaster)
 				set_temp("Error: Could not submit feed channel to network: A feed channel already exists under your name.", "danger", FALSE)
 				return TRUE
 
-			var/choice = tgui_alert(usr, "Please confirm Feed channel creation","Network Channel Handler",list("Confirm","Cancel"))
+			var/choice = tgui_alert(ui.user, "Please confirm Feed channel creation","Network Channel Handler",list("Confirm","Cancel"))
 			if(choice == "Confirm")
 				news_network.CreateFeedChannel(channel_name, our_user, c_locked)
 				set_temp("Feed channel [channel_name] created successfully.", "success", FALSE)
@@ -441,25 +442,25 @@ GLOBAL_LIST_BOILERPLATE(allCasters, /obj/machinery/newscaster)
 			for(var/datum/feed_channel/F in news_network.network_channels)
 				if((!F.locked || F.author == scanned_user) && !F.censored)
 					available_channels += F.channel_name
-			var/new_channel_name = tgui_input_list(usr, "Choose receiving Feed Channel", "Network Channel Handler", available_channels)
+			var/new_channel_name = tgui_input_list(ui.user, "Choose receiving Feed Channel", "Network Channel Handler", available_channels)
 			if(new_channel_name)
 				channel_name = new_channel_name
 			return TRUE
 
 		if("set_new_message")
-			msg = sanitize(tgui_input_text(usr, "Write your Feed story", "Network Channel Handler", multiline = TRUE, prevent_enter = TRUE))
+			msg = sanitize(tgui_input_text(ui.user, "Write your Feed story", "Network Channel Handler", multiline = TRUE, prevent_enter = TRUE))
 			return TRUE
 
 		if("set_new_title")
-			title = sanitize(tgui_input_text(usr, "Enter your Feed title", "Network Channel Handler"))
+			title = sanitize(tgui_input_text(ui.user, "Enter your Feed title", "Network Channel Handler"))
 			return TRUE
 
 		if("set_attachment")
-			AttachPhoto(usr)
+			AttachPhoto(ui.user)
 			return TRUE
 
 		if("submit_new_message")
-			var/our_user = tgui_user_name(usr)
+			var/our_user = tgui_user_name(ui.user)
 			if(msg == "" || msg == "\[REDACTED\]")
 				set_temp("Error: Could not submit feed message to network: Invalid Message.", "danger", FALSE)
 				return TRUE
@@ -483,7 +484,7 @@ GLOBAL_LIST_BOILERPLATE(allCasters, /obj/machinery/newscaster)
 			if(!paper_remaining)
 				set_temp("Unable to print newspaper. Insufficient paper. Please notify maintenance personnel to refill machine storage.", "danger", FALSE)
 				return TRUE
-			
+
 			print_paper()
 			set_temp("Printing successful. Please receive your newspaper from the bottom of the machine.", "success", FALSE)
 			return TRUE
@@ -495,7 +496,7 @@ GLOBAL_LIST_BOILERPLATE(allCasters, /obj/machinery/newscaster)
 		if("submit_wanted")
 			if(!securityCaster)
 				return FALSE
-			var/our_user = tgui_user_name(usr)
+			var/our_user = tgui_user_name(ui.user)
 			if(channel_name == "")
 				set_temp("Error: Could not submit wanted issue to network: Invalid Criminal Name.", "danger", FALSE)
 				return TRUE
@@ -506,11 +507,11 @@ GLOBAL_LIST_BOILERPLATE(allCasters, /obj/machinery/newscaster)
 				set_temp("Error: Could not submit wanted issue to network: Author unverified.", "danger", FALSE)
 				return TRUE
 
-			var/choice = tgui_alert(usr, "Please confirm Wanted Issue change.", "Network Security Handler", list("Confirm", "Cancel"))
+			var/choice = tgui_alert(ui.user, "Please confirm Wanted Issue change.", "Network Security Handler", list("Confirm", "Cancel"))
 			if(choice == "Confirm")
 				if(news_network.wanted_issue)
 					if(news_network.wanted_issue.is_admin_message)
-						tgui_alert_async(usr, "The wanted issue has been distributed by a [using_map.company_name] higherup. You cannot edit it.")
+						tgui_alert_async(ui.user, "The wanted issue has been distributed by a [using_map.company_name] higherup. You cannot edit it.")
 						return
 					news_network.wanted_issue.author = channel_name
 					news_network.wanted_issue.body = msg
@@ -535,9 +536,9 @@ GLOBAL_LIST_BOILERPLATE(allCasters, /obj/machinery/newscaster)
 			if(!securityCaster)
 				return FALSE
 			if(news_network.wanted_issue.is_admin_message)
-				tgui_alert_async(usr, "The wanted issue has been distributed by a [using_map.company_name] higherup. You cannot take it down.")
+				tgui_alert_async(ui.user, "The wanted issue has been distributed by a [using_map.company_name] higherup. You cannot take it down.")
 				return
-			var/choice = tgui_alert(usr, "Please confirm Wanted Issue removal","Network Security Handler",list("Confirm","Cancel"))
+			var/choice = tgui_alert(ui.user, "Please confirm Wanted Issue removal","Network Security Handler",list("Confirm","Cancel"))
 			if(choice=="Confirm")
 				news_network.wanted_issue = null
 				for(var/obj/machinery/newscaster/NEWSCASTER in GLOB.allCasters)
@@ -550,7 +551,7 @@ GLOBAL_LIST_BOILERPLATE(allCasters, /obj/machinery/newscaster)
 				return FALSE
 			var/datum/feed_channel/FC = locate(params["ref"])
 			if(FC.is_admin_channel)
-				tgui_alert_async(usr, "This channel was created by a [using_map.company_name] Officer. You cannot censor it.")
+				tgui_alert_async(ui.user, "This channel was created by a [using_map.company_name] Officer. You cannot censor it.")
 				return
 			if(FC.author != "\[REDACTED\]")
 				FC.backup_author = FC.author
@@ -565,7 +566,7 @@ GLOBAL_LIST_BOILERPLATE(allCasters, /obj/machinery/newscaster)
 				return FALSE
 			var/datum/feed_message/MSG = locate(params["ref"])
 			if(MSG.is_admin_message)
-				tgui_alert_async(usr, "This message was created by a [using_map.company_name] Officer. You cannot censor its author.")
+				tgui_alert_async(ui.user, "This message was created by a [using_map.company_name] Officer. You cannot censor its author.")
 				return
 			if(MSG.author != "\[REDACTED\]")
 				MSG.backup_author = MSG.author
@@ -580,7 +581,7 @@ GLOBAL_LIST_BOILERPLATE(allCasters, /obj/machinery/newscaster)
 				return FALSE
 			var/datum/feed_message/MSG = locate(params["ref"])
 			if(MSG.is_admin_message)
-				tgui_alert_async(usr, "This channel was created by a [using_map.company_name] Officer. You cannot censor it.")
+				tgui_alert_async(ui.user, "This channel was created by a [using_map.company_name] Officer. You cannot censor it.")
 				return
 			if(MSG.body != "\[REDACTED\]")
 				MSG.backup_body = MSG.body
@@ -602,7 +603,7 @@ GLOBAL_LIST_BOILERPLATE(allCasters, /obj/machinery/newscaster)
 				return FALSE
 			var/datum/feed_channel/FC = locate(params["ref"])
 			if(FC.is_admin_channel)
-				tgui_alert_async(usr, "This channel was created by a [using_map.company_name] Officer. You cannot place a D-Notice upon it.")
+				tgui_alert_async(ui.user, "This channel was created by a [using_map.company_name] Officer. You cannot place a D-Notice upon it.")
 				return
 			FC.censored = !FC.censored
 			FC.update()
@@ -625,9 +626,9 @@ GLOBAL_LIST_BOILERPLATE(allCasters, /obj/machinery/newscaster)
 
 /datum/news_photo
 	var/is_synth = 0
-	var/obj/item/weapon/photo/photo = null
+	var/obj/item/photo/photo = null
 
-/datum/news_photo/New(var/obj/item/weapon/photo/p, var/synth)
+/datum/news_photo/New(var/obj/item/photo/p, var/synth)
 	is_synth = synth
 	photo = p
 
@@ -639,14 +640,14 @@ GLOBAL_LIST_BOILERPLATE(allCasters, /obj/machinery/newscaster)
 				user.put_in_inactive_hand(photo_data.photo)
 		qdel(photo_data)
 
-	if(istype(user.get_active_hand(), /obj/item/weapon/photo))
+	if(istype(user.get_active_hand(), /obj/item/photo))
 		var/obj/item/photo = user.get_active_hand()
 		user.drop_item()
 		photo.loc = src
 		photo_data = new(photo, 0)
 	else if(istype(user,/mob/living/silicon))
 		var/mob/living/silicon/tempAI = user
-		var/obj/item/weapon/photo/selection = tempAI.GetPicture()
+		var/obj/item/photo/selection = tempAI.GetPicture()
 		if(!selection)
 			return
 
@@ -656,7 +657,7 @@ GLOBAL_LIST_BOILERPLATE(allCasters, /obj/machinery/newscaster)
 /obj/machinery/newscaster/proc/tgui_user_name(mob/user)
 	if(ishuman(user))
 		var/mob/living/carbon/human/H = user
-		var/obj/item/weapon/card/id/I = H.GetIdCard()
+		var/obj/item/card/id/I = H.GetIdCard()
 		if(I)
 			return GetNameAndAssignmentFromId(I)
 
@@ -667,9 +668,9 @@ GLOBAL_LIST_BOILERPLATE(allCasters, /obj/machinery/newscaster)
 	return "Unknown"
 
 /obj/machinery/newscaster/proc/scan_user(mob/living/user)
-	if(istype(user,/mob/living/carbon/human))                       //User is a human
+	if(ishuman(user))                       //User is a human
 		var/mob/living/carbon/human/human_user = user
-		var/obj/item/weapon/card/id/I = human_user.GetIdCard()
+		var/obj/item/card/id/I = human_user.GetIdCard()
 		if(I)
 			scanned_user = GetNameAndAssignmentFromId(I)
 		else
@@ -680,7 +681,7 @@ GLOBAL_LIST_BOILERPLATE(allCasters, /obj/machinery/newscaster)
 
 /obj/machinery/newscaster/proc/print_paper()
 	feedback_inc("newscaster_newspapers_printed",1)
-	var/obj/item/weapon/newspaper/NEWSPAPER = new /obj/item/weapon/newspaper
+	var/obj/item/newspaper/NEWSPAPER = new /obj/item/newspaper
 	for(var/datum/feed_channel/FC in news_network.network_channels)
 		NEWSPAPER.news_content += FC
 	if(news_network.wanted_issue)
@@ -695,7 +696,7 @@ GLOBAL_LIST_BOILERPLATE(allCasters, /obj/machinery/newscaster)
 	var/turf/T = get_turf(src)
 	if(news_call)
 		for(var/mob/O in hearers(world.view-1, T))
-			O.show_message("<span class='newscaster'><EM>[name]</EM> beeps, \"[news_call]\"</span>",2)
+			O.show_message(span_newscaster("<EM>[name]</EM> beeps, \"[news_call]\""),2)
 		alert = 1
 		update_icon()
 		spawn(300)
@@ -704,6 +705,6 @@ GLOBAL_LIST_BOILERPLATE(allCasters, /obj/machinery/newscaster)
 //		playsound(src.loc, 'sound/machines/twobeep.ogg', 75, 1) //CHOMPEdit less peeps pls
 	else
 		for(var/mob/O in hearers(world.view-1, T))
-			O.show_message("<span class='newscaster'><EM>[name]</EM> beeps, \"Attention! Wanted issue distributed!\"</span>",2)
+			O.show_message(span_newscaster("<EM>[name]</EM> beeps, \"Attention! Wanted issue distributed!\""),2)
 		playsound(src, 'sound/machines/warning-buzzer.ogg', 75, 1)
 	return

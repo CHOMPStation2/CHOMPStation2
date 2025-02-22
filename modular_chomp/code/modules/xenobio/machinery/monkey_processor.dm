@@ -6,7 +6,7 @@
 	desc = "An industrial grinder used to automate the process of monkey recycling."
 	description_info = "Clickdrag dead monkeys to it to insert them. It will make a new monkey cube for every monkey it processes."
 
-/obj/item/weapon/circuitboard/processor/monkey
+/obj/item/circuitboard/processor/monkey
 	name = T_BOARD("monkey processor")
 	build_path = /obj/machinery/processor/monkey
 	origin_tech = list(TECH_DATA = 2, TECH_BIO = 2)
@@ -21,7 +21,7 @@
 		sleep(1 SECONDS)
 
 	while(monkeys_recycled >= 1)
-		new /obj/item/weapon/reagent_containers/food/snacks/monkeycube(get_turf(src))
+		new /obj/item/reagent_containers/food/snacks/monkeycube(get_turf(src))
 		playsound(src, 'sound/effects/splat.ogg', 50, 1)
 		monkeys_recycled -= 1
 		sleep(1 SECOND)

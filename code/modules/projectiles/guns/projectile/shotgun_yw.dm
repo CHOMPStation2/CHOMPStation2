@@ -1,4 +1,4 @@
-/obj/item/weapon/gun/projectile/revolvershotgun
+/obj/item/gun/projectile/revolvershotgun
 	name = "Jackhammer"
 	desc = "Uses 12g rounds."
 	icon = 'icons/obj/gun_yw.dmi'
@@ -15,7 +15,7 @@
 	allowed_magazines = list(/obj/item/ammo_magazine/m12gdrumjack)
 	projectile_type = /obj/item/projectile/bullet/shotgun
 
-/obj/item/weapon/gun/projectile/revolvershotgun/update_icon()
+/obj/item/gun/projectile/revolvershotgun/update_icon()
 	..()
 	if(ammo_magazine)
 		icon_state = "revolvshot"
@@ -77,7 +77,7 @@
 	fire_sound = 'sound/weapons/Gunshot_shotgun.ogg'
 	damage = 13
 
-/obj/item/weapon/storage/box/scattershot
+/obj/item/storage/box/scattershot
 	name = "box of shotgun scatter shells"
 	desc = "It has a picture of a shell and several warning symbols on the front.<br>WARNING: Live ammunition. Misuse may result in serious injury or death. High spread factor, just shoot and pray."
 	icon = 'icons/obj/ammo_yw.dmi'
@@ -85,5 +85,5 @@
 	item_state_slots = list(slot_r_hand_str = "syringe_kit", slot_l_hand_str = "syringe_kit")
 	starts_with = list(/obj/item/ammo_casing/a12g/scatter = 8)
 
-/obj/item/weapon/storage/box/scattershot/large
+/obj/item/storage/box/scattershot/large
 	starts_with = list(/obj/item/ammo_casing/a12g/scatter = 16)

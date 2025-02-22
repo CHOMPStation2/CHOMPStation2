@@ -123,7 +123,7 @@
 /turf/simulated/shuttle/wall/no_join,
 /area/submap/raidedpod)
 "C" = (
-/obj/item/weapon/rcd,
+/obj/item/rcd,
 /turf/simulated/shuttle/floor,
 /area/submap/raidedpod)
 "D" = (
@@ -139,7 +139,7 @@
 /turf/simulated/shuttle/wall/hard_corner,
 /area/submap/raidedpod)
 "H" = (
-/obj/item/device/radio/intercom/department/medbay{
+/obj/item/radio/intercom/department/medbay{
 	dir = 1;
 	pixel_y = 21
 	},
@@ -147,13 +147,13 @@
 /area/submap/raidedpod)
 "I" = (
 /obj/structure/table/standard,
-/obj/item/weapon/storage/firstaid/fire,
-/obj/item/weapon/storage/firstaid/regular{
+/obj/item/storage/firstaid/fire,
+/obj/item/storage/firstaid/regular{
 	pixel_x = 2;
 	pixel_y = 3
 	},
-/obj/item/weapon/extinguisher,
-/obj/item/weapon/tool/crowbar,
+/obj/item/extinguisher,
+/obj/item/tool/crowbar,
 /obj/random/medical/lite,
 /turf/simulated/shuttle/floor/white,
 /area/submap/raidedpod)
@@ -164,7 +164,7 @@
 /obj/structure/closet/walllocker/emerglocker{
 	pixel_y = -32
 	},
-/obj/item/weapon/rcd/shipwright,
+/obj/item/rcd/shipwright,
 /turf/simulated/shuttle/floor/white,
 /area/submap/raidedpod)
 "M" = (
@@ -181,7 +181,7 @@
 /area/submap/raidedpod)
 "Q" = (
 /obj/structure/bed/chair,
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	dir = 1;
 	name = "Station Intercom (General)";
 	pixel_y = 21

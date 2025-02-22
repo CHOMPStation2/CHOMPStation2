@@ -21,6 +21,11 @@
 	if(istype(below))
 		below.update_icon() // To add or remove the 'ceiling-less' overlay.
 
+/proc/has_valid_ZAS_zone(turf/simulated/T)
+	if(!istype(T))
+		return FALSE
+	return HAS_VALID_ZONE(T)
+
 //Creates a new turf
 /turf/proc/ChangeTurf(var/turf/N, var/tell_universe=1, var/force_lighting_update = 0, var/preserve_outdoors = FALSE)
 	if (!N)
@@ -28,7 +33,8 @@
 
 	if(N == /turf/space)
 		var/turf/below = GetBelow(src)
-		if(istype(below) && (air_master.has_valid_zone(below) || air_master.has_valid_zone(src)) && !(src.z in using_map.below_blocked_levels) && (!istype(below, /turf/unsimulated/wall) && !istype(below, /turf/simulated/sky)))	// VOREStation Edit: Weird open space
+		var/zones_present = has_valid_ZAS_zone(below) || has_valid_ZAS_zone(src)
+		if(istype(below) && zones_present && !(src.z in using_map.below_blocked_levels) && (!istype(below, /turf/unsimulated/wall) && !istype(below, /turf/simulated/sky)))	// VOREStation Edit: Weird open space
 			N = /turf/simulated/open
 
 	var/obj/fire/old_fire = fire
@@ -43,15 +49,13 @@
 	var/old_outdoors = outdoors
 	var/old_dangerous_objects = dangerous_objects
 	var/old_dynamic_lumcount = dynamic_lumcount
-	var/oldtype = src.type	//CHOMPEdit
-	var/old_density = src.density //CHOMPEdit
-	var/was_open = istype(src,/turf/simulated/open) //CHOMPEdit
-	//CHOMPEdit Begin
+	var/oldtype = src.type
+	var/old_density = src.density
+	var/was_open = istype(src,/turf/simulated/open)
 	var/datum/sunlight_handler/old_shandler
 	var/turf/simulated/simself = src
 	if(istype(simself) && simself.shandler)
 		old_shandler = simself.shandler
-	//CHOMPEdit End
 
 	var/turf/Ab = GetAbove(src)
 	if(Ab)
@@ -71,70 +75,37 @@
 
 	cut_overlays(TRUE)
 	RemoveElement(/datum/element/turf_z_transparency)
+	changing_turf = TRUE
+	qdel(src)
 
-	var/turf/new_turf  //CHOMPEdit
+	var/turf/W = new N( locate(src.x, src.y, src.z) )
 	if(ispath(N, /turf/simulated/floor))
-		//CHOMPEdit Begin
-		var/turf/simulated/W = new N( locate(src.x, src.y, src.z), is_turfchange=TRUE )
-		W.lighting_corners_initialised = old_lighting_corners_initialized
-		if(old_shandler)
-			W.shandler = old_shandler
-			old_shandler.holder = W
-		else if((SSplanets && SSplanets.z_to_planet.len >= z && SSplanets.z_to_planet[z]) && has_dynamic_lighting())
-			W.shandler = new(src)
-			W.shandler.manualInit()
-		//CHOMPEdit End
 		if(old_fire)
-			fire = old_fire
+			W.fire = old_fire
+		W.RemoveLattice()
+	W.lighting_corners_initialised = old_lighting_corners_initialized
+	var/turf/simulated/W_sim = W
+	if(istype(W_sim) && old_shandler)
+		W_sim.shandler = old_shandler
+		old_shandler.holder = W
+	else if(istype(W_sim) && (SSplanets && SSplanets.z_to_planet.len >= z && SSplanets.z_to_planet[z]) && has_dynamic_lighting())
+		W_sim.shandler = new(src)
+		W_sim.shandler.manualInit()
+	if(old_fire)
+		old_fire.RemoveFire()
 
-		if (istype(W,/turf/simulated/floor))
-			W.RemoveLattice()
+	if(tell_universe)
+		universe.OnTurfChange(W)
 
-		if(tell_universe)
-			universe.OnTurfChange(W)
+	if(SSair)
+		SSair.mark_for_update(W)
 
-		if(air_master)
-			air_master.mark_for_update(src) //handle the addition of the new turf.
-
-		for(var/turf/space/S in range(W,1))
-			S.update_starlight()
-
-		W.levelupdate()
-		W.update_icon(1)
-		W.post_change()
-		new_turf = W //CHOMPEdit
-		. = W
-
-	else
-		//CHOMPEdit Begin
-		var/turf/W = new N( locate(src.x, src.y, src.z), is_turfchange=TRUE )
-		W.lighting_corners_initialised = old_lighting_corners_initialized
-		var/turf/simulated/W_sim = W
-		if(istype(W_sim) && old_shandler)
-			W_sim.shandler = old_shandler
-			old_shandler.holder = W
-		else if(istype(W_sim) && (SSplanets && SSplanets.z_to_planet.len >= z && SSplanets.z_to_planet[z]) && has_dynamic_lighting())
-			W_sim.shandler = new(src)
-			W_sim.shandler.manualInit()
-		//CHOMPEdit End
-		if(old_fire)
-			old_fire.RemoveFire()
-
-		if(tell_universe)
-			universe.OnTurfChange(W)
-
-		if(air_master)
-			air_master.mark_for_update(src)
-
-		for(var/turf/space/S in range(W,1))
-			S.update_starlight()
-
-		W.levelupdate()
-		W.update_icon(1)
-		W.post_change()
-		new_turf = W //CHOMPEdit
-		. =  W
-
+	for(var/turf/space/S in range(W, 1))
+		S.update_starlight()
+	W.levelupdate()
+	W.update_icon(1)
+	W.post_change()
+	. =  W
 
 	dangerous_objects = old_dangerous_objects
 
@@ -162,7 +133,6 @@
 		for(var/turf/space/space_tile in RANGE_TURFS(1, src))
 			space_tile.update_starlight()
 
-	//CHOMPEdit begin
 	var/turf/simulated/sim_self = src
 	if(lighting_object && istype(sim_self) && sim_self.shandler) //sanity check, but this should never be null for either of the switch cases (lighting_object will be null during initializations sometimes)
 		switch(lighting_object.sunlight_only)
@@ -171,28 +141,26 @@
 			if(SUNLIGHT_ONLY_SHADE)
 				vis_contents += sim_self.shandler.pshandler.vis_shade
 
-	var/is_open = istype(new_turf,/turf/simulated/open)
+	var/is_open = istype(W,/turf/simulated/open)
 
 
-	propogate_sunlight_changes(oldtype, old_density, new_turf)
+	propogate_sunlight_changes(oldtype, old_density, W)
 	var/turf/simulated/cur_turf = src
-	if(is_open != was_open)
+	if(istype(cur_turf) && is_open != was_open)
 		do
 			cur_turf = GetBelow(cur_turf)
 			if(is_open)
 				cur_turf.make_outdoors()
 			else
 				cur_turf.make_indoors()
-			cur_turf.propogate_sunlight_changes(oldtype, old_density, new_turf, above = TRUE)
+			cur_turf.propogate_sunlight_changes(oldtype, old_density, W, above = TRUE)
 		while(istype(cur_turf,/turf/simulated/open) && HasBelow(cur_turf.z))
 
-	//CHOMPEdit End
-	if(old_shandler) old_shandler.holder_change() //CHOMPEdit
+	if(old_shandler) old_shandler.holder_change()
 	if(preserve_outdoors)
 		outdoors = old_outdoors
 
 
-//CHOMPEdit begin
 /turf/proc/propogate_sunlight_changes(oldtype, old_density, new_turf, var/above = FALSE)
 	//SEND_SIGNAL(src, COMSIG_TURF_UPDATE, oldtype, old_density, W)
 	//Sends signals in a cross pattern to all tiles that may have their sunlight var affected including this tile.
@@ -221,4 +189,3 @@
 					T.shandler.turf_update(old_density, new_turf, above)
 			steps += 1
 			cur_turf = get_step(cur_turf,dir)
-//CHOMPEdit end

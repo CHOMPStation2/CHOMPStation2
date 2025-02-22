@@ -81,11 +81,11 @@
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/tether_away/beach/outpost)
 "aw" = (
-/obj/item/weapon/locator,
+/obj/item/locator,
 /turf/simulated/mineral/floor/ignore_mapgen,
 /area/tether_away/beach/jungle)
 "ax" = (
-/obj/item/weapon/dnainjector/regenerate,
+/obj/item/dnainjector/set_trait/regenerate,
 /turf/simulated/mineral/floor/ignore_mapgen,
 /area/tether_away/beach/jungle)
 "ay" = (
@@ -204,7 +204,7 @@
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/tether_away/beach/outpost)
 "aY" = (
-/obj/item/weapon/digestion_remains/skull,
+/obj/item/digestion_remains/skull,
 /obj/effect/decal/cleanable/blood/drip,
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/tether_away/beach/outpost)
@@ -610,8 +610,6 @@
 /area/tether_away/beach/jungle)
 "cv" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8";
 	pixel_x = 0
 	},
@@ -623,8 +621,6 @@
 	dir = 8
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8";
 	pixel_x = 0
 	},
@@ -632,8 +628,6 @@
 /area/tether_away/beach/jungle)
 "cx" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8";
 	pixel_x = 0
 	},
@@ -688,7 +682,7 @@
 	pixel_y = 28
 	},
 /obj/structure/table/standard,
-/obj/item/device/healthanalyzer/improved,
+/obj/item/healthanalyzer/improved,
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/tether_away/beach/outpost)
 "cJ" = (
@@ -731,7 +725,7 @@
 /turf/simulated/mineral/floor/ignore_mapgen/cave,
 /area/tether_away/beach/jungle)
 "cS" = (
-/obj/item/weapon/pickaxe/silver,
+/obj/item/pickaxe/silver,
 /turf/simulated/mineral/floor/ignore_mapgen/cave,
 /area/tether_away/beach/jungle)
 "cV" = (
@@ -788,7 +782,7 @@
 /turf/simulated/floor/beach/sand/desert,
 /area/tether_away/beach/jungle)
 "dg" = (
-/obj/item/device/gps/computer{
+/obj/item/gps/computer{
 	gps_tag = "Distress Signal"
 	},
 /turf/simulated/floor/tiled/asteroid_steel,
@@ -955,7 +949,7 @@
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/tether_away/beach/outpost)
 "dO" = (
-/obj/item/weapon/gun/energy/soapenergy/gauss,
+/obj/item/gun/energy/soapenergy/gauss,
 /obj/item/clothing/under/corp/hephaestus,
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/tether_away/beach/outpost)
@@ -986,7 +980,7 @@
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/tether_away/beach/jungle)
 "dV" = (
-/obj/item/weapon/paper/crumpled/bloody/whiskeystation,
+/obj/item/paper/crumpled/bloody/whiskeystation,
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/tether_away/beach/outpost)
 "dW" = (
@@ -998,7 +992,7 @@
 /area/tether_away/beach/jungle)
 "dX" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/paper/crumpled/whiskeyhermit,
+/obj/item/paper/crumpled/whiskeyhermit,
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/tether_away/beach/jungle)
 "dY" = (

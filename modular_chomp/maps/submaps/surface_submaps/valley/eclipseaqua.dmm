@@ -13,7 +13,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipseaqua)
 "aV" = (
-/obj/item/weapon/stool/padded,
+/obj/item/stool/padded,
 /obj/machinery/light{
 	dir = 8
 	},
@@ -25,14 +25,14 @@
 /area/submap/eclipseaqua)
 "ca" = (
 /obj/structure/table/rack,
-/obj/item/weapon/rig/combat/equipped,
+/obj/item/rig/combat/equipped,
 /obj/item/rig_module/vision/nvg,
 /obj/random/energy/highend,
 /obj/effect/floor_decal/corner/blue/diagonal,
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipseaqua)
 "cC" = (
-/obj/item/weapon/stool/padded,
+/obj/item/stool/padded,
 /obj/machinery/light,
 /obj/effect/floor_decal/corner/grey,
 /obj/effect/floor_decal/corner/black{
@@ -52,8 +52,6 @@
 /area/submap/eclipseaqua)
 "eb" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/effect/floor_decal/corner/grey,
@@ -71,7 +69,7 @@
 /obj/random/maintenance/foodstuff,
 /obj/random/maintenance/foodstuff,
 /obj/random/maintenance/foodstuff,
-/obj/item/weapon/paper{
+/obj/item/paper{
 	info = "Secured the old fortress. Attempts to set up mass stimm farms have been unfruitful. Supply drops continue to get intercepted by cultists, pirates or the various mercenary groups.  Lake reads to be much deeper then it appears to be. Please forward a suggestion to the Precursor Initiative to send a task force to investigate. For the possibility of precursor ruins or sunken technology.";
 	name = "Status Report"
 	},
@@ -109,8 +107,6 @@
 /area/submap/eclipseaqua)
 "iy" = (
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/effect/floor_decal/corner/grey,
@@ -132,7 +128,7 @@
 "jR" = (
 /obj/machinery/light,
 /obj/structure/bed/double/padded,
-/obj/item/weapon/bedsheet/bluedouble,
+/obj/item/bedsheet/bluedouble,
 /obj/effect/floor_decal/corner/grey,
 /obj/effect/floor_decal/corner/black{
 	dir = 1
@@ -150,7 +146,7 @@
 /area/submap/eclipseaqua)
 "lS" = (
 /obj/structure/table/steel,
-/obj/item/weapon/storage/box/ambrosiadeus,
+/obj/item/storage/box/ambrosiadeus,
 /obj/effect/floor_decal/corner/grey,
 /obj/effect/floor_decal/corner/black{
 	dir = 1
@@ -162,9 +158,6 @@
 /area/template_noop)
 "mL" = (
 /obj/structure/table/steel,
-/obj/random/ammo,
-/obj/random/ammo,
-/obj/random/projectile/random,
 /obj/effect/floor_decal/corner/grey,
 /obj/effect/floor_decal/corner/black{
 	dir = 1
@@ -278,7 +271,6 @@
 	icon_state = "term"
 	},
 /obj/structure/cable{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/effect/floor_decal/corner/grey,
@@ -380,25 +372,20 @@
 /obj/structure/table/rack,
 /obj/random/rigsuit,
 /obj/item/rig_module/mounted/egun,
-/obj/random/energy/highend,
 /obj/effect/floor_decal/corner/blue/diagonal,
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipseaqua)
 "Dw" = (
 /obj/structure/table/steel,
-/obj/random/ammo,
-/obj/random/ammo,
-/obj/random/energy/highend,
 /obj/effect/floor_decal/corner/grey,
 /obj/effect/floor_decal/corner/black{
 	dir = 1
 	},
+/obj/random/maintenance/foodstuff,
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipseaqua)
 "Ej" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/effect/floor_decal/corner/grey,
@@ -419,7 +406,6 @@
 /obj/structure/table/rack,
 /obj/random/rigsuit,
 /obj/item/rig_module/chem_dispenser/combat,
-/obj/random/energy/highend,
 /obj/effect/floor_decal/corner/blue/diagonal,
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipseaqua)
@@ -468,7 +454,7 @@
 /area/submap/eclipseaqua)
 "IY" = (
 /obj/structure/table/steel,
-/obj/item/weapon/reagent_containers/glass/bottle/left4zed,
+/obj/item/reagent_containers/glass/bottle/left4zed,
 /obj/machinery/light{
 	dir = 8
 	},
@@ -480,7 +466,7 @@
 /area/submap/eclipseaqua)
 "JQ" = (
 /obj/structure/bed/double/padded,
-/obj/item/weapon/bedsheet/bluedouble,
+/obj/item/bedsheet/bluedouble,
 /obj/effect/floor_decal/corner/grey,
 /obj/effect/floor_decal/corner/black{
 	dir = 1
@@ -493,7 +479,6 @@
 	icon_state = "term"
 	},
 /obj/structure/cable{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/effect/floor_decal/corner/grey,
@@ -527,7 +512,6 @@
 /area/submap/eclipseaqua)
 "KI" = (
 /obj/structure/table/steel,
-/obj/random/maintenance/foodstuff,
 /obj/random/maintenance/foodstuff,
 /obj/random/maintenance/foodstuff,
 /obj/effect/floor_decal/corner/grey,
@@ -592,8 +576,6 @@
 /area/submap/eclipseaqua)
 "Oo" = (
 /obj/structure/table/steel,
-/obj/random/ammo,
-/obj/random/ammo,
 /obj/random/grenade/lethal,
 /obj/effect/floor_decal/corner/grey,
 /obj/effect/floor_decal/corner/black{
@@ -660,9 +642,8 @@
 /area/submap/eclipseaqua)
 "TA" = (
 /obj/structure/table/rack,
-/obj/item/weapon/rig/breacher,
+/obj/item/rig/breacher,
 /obj/item/rig_module/pat_module,
-/obj/random/energy/highend,
 /obj/effect/floor_decal/corner/blue/diagonal,
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipseaqua)
@@ -676,9 +657,9 @@
 /area/submap/eclipseaqua)
 "UH" = (
 /obj/structure/table/steel,
-/obj/random/ammo,
-/obj/random/ammo,
-/obj/random/firstaid,
+/obj/random/maintenance/research,
+/obj/random/maintenance/research,
+/obj/random/maintenance/morestuff,
 /obj/effect/floor_decal/corner/grey,
 /obj/effect/floor_decal/corner/black{
 	dir = 1
@@ -733,7 +714,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipseaqua)
 "Vg" = (
-/obj/item/weapon/stool/padded,
+/obj/item/stool/padded,
 /obj/effect/floor_decal/corner/grey,
 /obj/effect/floor_decal/corner/black{
 	dir = 1
@@ -742,13 +723,11 @@
 /area/submap/eclipseaqua)
 "Vn" = (
 /obj/structure/table/steel,
-/obj/random/ammo,
-/obj/random/ammo,
-/obj/random/gun/random,
 /obj/effect/floor_decal/corner/grey,
 /obj/effect/floor_decal/corner/black{
 	dir = 1
 	},
+/obj/random/grenade/lethal,
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipseaqua)
 "Wc" = (
@@ -760,7 +739,7 @@
 /area/submap/eclipseaqua)
 "WG" = (
 /obj/structure/bed/double/padded,
-/obj/item/weapon/bedsheet/iandouble,
+/obj/item/bedsheet/iandouble,
 /obj/effect/floor_decal/corner/grey,
 /obj/effect/floor_decal/corner/black{
 	dir = 1
@@ -792,13 +771,9 @@
 /area/submap/eclipseaqua)
 "Zm" = (
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/effect/floor_decal/corner/grey,
@@ -1451,7 +1426,7 @@ Pf
 Pf
 Pf
 Qu
-Dw
+Xm
 sX
 gA
 Ry
@@ -1594,7 +1569,7 @@ Pf
 Qu
 Ry
 Vg
-KI
+Dw
 KI
 cC
 Qu
@@ -1642,7 +1617,7 @@ Qu
 nf
 Vg
 eK
-KI
+mL
 Vg
 On
 gA
@@ -2019,7 +1994,7 @@ Qu
 Ry
 jw
 JQ
-KH
+UH
 Qu
 Vn
 Xm
@@ -2291,13 +2266,13 @@ Ry
 jw
 gA
 Ry
-mL
+Xm
 Qu
 Pf
 Pf
 Pf
 Qu
-UH
+Xm
 Ry
 gA
 jw

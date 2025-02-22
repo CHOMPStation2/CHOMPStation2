@@ -17,10 +17,10 @@
 /area/survivalpod/superpose/MechFabShip)
 "at" = (
 /obj/structure/closet/walllocker_double/medical/west,
-/obj/item/weapon/storage/firstaid,
-/obj/item/weapon/storage/firstaid/fire,
-/obj/item/weapon/storage/firstaid/toxin,
-/obj/item/weapon/storage/firstaid/o2,
+/obj/item/storage/firstaid,
+/obj/item/storage/firstaid/fire,
+/obj/item/storage/firstaid/toxin,
+/obj/item/storage/firstaid/o2,
 /obj/item/roller,
 /turf/simulated/floor/tiled/red,
 /area/survivalpod/superpose/MechFabShip)
@@ -50,7 +50,7 @@
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/MechFabShip)
 "bk" = (
-/obj/item/device/gps/computer,
+/obj/item/gps/computer,
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/MechFabShip)
 "bI" = (
@@ -59,16 +59,19 @@
 /area/survivalpod/superpose/MechFabShip)
 "bL" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
-/obj/machinery/cryopod/robot/door/gateway/quiet,
 /obj/effect/floor_decal/techfloor{
 	dir = 1
 	},
 /obj/machinery/light/poi{
 	dir = 1
 	},
-/obj/machinery/computer/cryopod/gateway{
-	pixel_y = 32
-	},
+/obj/structure/table/rack/shelf/steel,
+/obj/item/mecha_parts/mecha_equipment/tool/rcd,
+/obj/item/mecha_parts/mecha_equipment/tool/sleeper,
+/obj/item/mecha_parts/mecha_equipment/tool/syringe_gun,
+/obj/item/mecha_parts/mecha_equipment/tool/hydraulic_clamp,
+/obj/item/mecha_parts/mecha_equipment/tool/drill/diamonddrill,
+/obj/item/mecha_parts/mecha_equipment/tool/jetpack,
 /turf/simulated/floor/tiled/techmaint,
 /area/survivalpod/superpose/MechFabShip)
 "bP" = (
@@ -76,10 +79,10 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/survivalpod/superpose/MechFabShip)
 "cM" = (
-/obj/item/weapon/weldingtool/largetank,
-/obj/item/weapon/tool/crowbar,
-/obj/item/weapon/tool/screwdriver,
-/obj/item/weapon/storage/firstaid/surgery,
+/obj/item/weldingtool/largetank,
+/obj/item/tool/crowbar,
+/obj/item/tool/screwdriver,
+/obj/item/storage/firstaid/surgery,
 /obj/structure/table/steel_reinforced,
 /obj/item/stack/nanopaste/advanced,
 /obj/item/stack/nanopaste/advanced,
@@ -94,6 +97,7 @@
 /obj/effect/floor_decal/techfloor/orange{
 	dir = 1
 	},
+/obj/machinery/recharge_station,
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/MechFabShip)
 "dz" = (
@@ -110,6 +114,12 @@
 	dir = 4
 	},
 /turf/simulated/floor/plating,
+/area/survivalpod/superpose/MechFabShip)
+"eB" = (
+/obj/item/stool/padded{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/techfloor,
 /area/survivalpod/superpose/MechFabShip)
 "eM" = (
 /obj/structure/window/reinforced/survival_pod{
@@ -155,29 +165,30 @@
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/MechFabShip)
 "gH" = (
-/obj/item/device/kit/paint/gygax/darkgygax,
-/obj/item/device/kit/paint/gygax/recitence,
-/obj/item/device/kit/paint/durand,
-/obj/item/device/kit/paint/durand/phazon,
-/obj/item/device/kit/paint/durand/seraph,
+/obj/item/kit/paint/gygax/darkgygax,
+/obj/item/kit/paint/gygax/recitence,
+/obj/item/kit/paint/durand,
+/obj/item/kit/paint/durand/phazon,
+/obj/item/kit/paint/durand/seraph,
 /obj/structure/table/rack/shelf/steel,
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/tiled/milspec,
 /area/survivalpod/superpose/MechFabShip)
 "hu" = (
-/obj/machinery/cryopod/robot{
-	base_icon_state = "borg_pod_closed";
-	dir = 4;
-	icon = 'icons/obj/structures.dmi';
-	icon_state = "borg_pod_closed";
-	occupied_icon_state = "borg_pod_opened"
-	},
 /obj/effect/floor_decal/techfloor{
 	dir = 1
 	},
 /obj/structure/sign/department/drones{
 	pixel_y = 32
 	},
+/obj/structure/table/rack/shelf/steel,
+/obj/item/mecha_parts/part/gygax_head,
+/obj/item/mecha_parts/part/gygax_left_arm,
+/obj/item/mecha_parts/part/gygax_left_leg,
+/obj/item/mecha_parts/part/gygax_right_arm,
+/obj/item/mecha_parts/part/gygax_right_leg,
+/obj/item/mecha_parts/part/gygax_torso,
+/obj/item/mecha_parts/part/gygax_armour,
 /turf/simulated/floor/tiled/techmaint,
 /area/survivalpod/superpose/MechFabShip)
 "hz" = (
@@ -216,10 +227,10 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/survivalpod/superpose/MechFabShip)
 "iw" = (
-/obj/item/device/kit/paint/ripley/death,
-/obj/item/device/kit/paint/ripley/flames_blue,
-/obj/item/device/kit/paint/ripley/flames_red,
-/obj/item/device/kit/paint/ripley,
+/obj/item/kit/paint/ripley/death,
+/obj/item/kit/paint/ripley/flames_blue,
+/obj/item/kit/paint/ripley/flames_red,
+/obj/item/kit/paint/ripley,
 /obj/structure/table/rack/shelf/steel,
 /obj/machinery/button/remote/airlock{
 	desiredstate = 1;
@@ -244,75 +255,73 @@
 	name = "Advanced storage";
 	pixel_y = 0
 	},
-/obj/item/weapon/stock_parts/micro_laser/ultra,
-/obj/item/weapon/stock_parts/micro_laser/ultra,
-/obj/item/weapon/stock_parts/micro_laser/ultra,
-/obj/item/weapon/stock_parts/micro_laser/ultra,
-/obj/item/weapon/stock_parts/micro_laser/ultra,
-/obj/item/weapon/stock_parts/matter_bin/super,
-/obj/item/weapon/stock_parts/matter_bin/super,
-/obj/item/weapon/stock_parts/matter_bin/super,
-/obj/item/weapon/stock_parts/matter_bin/super,
-/obj/item/weapon/stock_parts/matter_bin/super,
-/obj/item/weapon/stock_parts/manipulator/pico,
-/obj/item/weapon/stock_parts/manipulator/pico,
-/obj/item/weapon/stock_parts/manipulator/pico,
-/obj/item/weapon/stock_parts/manipulator/pico,
-/obj/item/weapon/stock_parts/manipulator/pico,
-/obj/item/weapon/stock_parts/console_screen,
-/obj/item/weapon/stock_parts/console_screen,
-/obj/item/weapon/stock_parts/console_screen,
-/obj/item/weapon/stock_parts/console_screen,
-/obj/item/weapon/stock_parts/console_screen,
-/obj/item/weapon/stock_parts/capacitor/super,
-/obj/item/weapon/stock_parts/capacitor/super,
-/obj/item/weapon/stock_parts/capacitor/super,
-/obj/item/weapon/stock_parts/capacitor/super,
-/obj/item/weapon/stock_parts/capacitor/super,
-/obj/item/weapon/stock_parts/motor,
-/obj/item/weapon/stock_parts/motor,
-/obj/item/weapon/stock_parts/motor,
-/obj/item/weapon/stock_parts/motor,
-/obj/item/weapon/stock_parts/motor,
-/obj/item/weapon/stock_parts/scanning_module/phasic,
-/obj/item/weapon/stock_parts/scanning_module/phasic,
-/obj/item/weapon/stock_parts/scanning_module/phasic,
-/obj/item/weapon/stock_parts/scanning_module/phasic,
-/obj/item/weapon/stock_parts/scanning_module/phasic,
-/obj/item/weapon/stock_parts/scanning_module/phasic,
-/obj/item/weapon/stock_parts/spring,
-/obj/item/weapon/stock_parts/spring,
-/obj/item/weapon/stock_parts/spring,
-/obj/item/weapon/stock_parts/spring,
-/obj/item/weapon/stock_parts/spring,
-/obj/item/weapon/stock_parts/spring,
-/obj/item/weapon/stock_parts/subspace/amplifier,
-/obj/item/weapon/stock_parts/subspace/amplifier,
-/obj/item/weapon/stock_parts/subspace/analyzer,
-/obj/item/weapon/stock_parts/subspace/analyzer,
-/obj/item/weapon/stock_parts/subspace/ansible,
-/obj/item/weapon/stock_parts/subspace/ansible,
-/obj/item/weapon/stock_parts/subspace/crystal,
-/obj/item/weapon/stock_parts/subspace/crystal,
-/obj/item/weapon/stock_parts/subspace/sub_filter,
-/obj/item/weapon/stock_parts/subspace/sub_filter,
-/obj/item/weapon/stock_parts/subspace/transmitter,
-/obj/item/weapon/stock_parts/subspace/transmitter,
-/obj/item/weapon/stock_parts/subspace/treatment,
-/obj/item/weapon/stock_parts/subspace/treatment,
+/obj/item/stock_parts/micro_laser/ultra,
+/obj/item/stock_parts/micro_laser/ultra,
+/obj/item/stock_parts/micro_laser/ultra,
+/obj/item/stock_parts/micro_laser/ultra,
+/obj/item/stock_parts/micro_laser/ultra,
+/obj/item/stock_parts/matter_bin/super,
+/obj/item/stock_parts/matter_bin/super,
+/obj/item/stock_parts/matter_bin/super,
+/obj/item/stock_parts/matter_bin/super,
+/obj/item/stock_parts/matter_bin/super,
+/obj/item/stock_parts/manipulator/pico,
+/obj/item/stock_parts/manipulator/pico,
+/obj/item/stock_parts/manipulator/pico,
+/obj/item/stock_parts/manipulator/pico,
+/obj/item/stock_parts/manipulator/pico,
+/obj/item/stock_parts/console_screen,
+/obj/item/stock_parts/console_screen,
+/obj/item/stock_parts/console_screen,
+/obj/item/stock_parts/console_screen,
+/obj/item/stock_parts/console_screen,
+/obj/item/stock_parts/capacitor/super,
+/obj/item/stock_parts/capacitor/super,
+/obj/item/stock_parts/capacitor/super,
+/obj/item/stock_parts/capacitor/super,
+/obj/item/stock_parts/capacitor/super,
+/obj/item/stock_parts/motor,
+/obj/item/stock_parts/motor,
+/obj/item/stock_parts/motor,
+/obj/item/stock_parts/motor,
+/obj/item/stock_parts/motor,
+/obj/item/stock_parts/scanning_module/phasic,
+/obj/item/stock_parts/scanning_module/phasic,
+/obj/item/stock_parts/scanning_module/phasic,
+/obj/item/stock_parts/scanning_module/phasic,
+/obj/item/stock_parts/scanning_module/phasic,
+/obj/item/stock_parts/scanning_module/phasic,
+/obj/item/stock_parts/spring,
+/obj/item/stock_parts/spring,
+/obj/item/stock_parts/spring,
+/obj/item/stock_parts/spring,
+/obj/item/stock_parts/spring,
+/obj/item/stock_parts/spring,
+/obj/item/stock_parts/subspace/amplifier,
+/obj/item/stock_parts/subspace/amplifier,
+/obj/item/stock_parts/subspace/analyzer,
+/obj/item/stock_parts/subspace/analyzer,
+/obj/item/stock_parts/subspace/ansible,
+/obj/item/stock_parts/subspace/ansible,
+/obj/item/stock_parts/subspace/crystal,
+/obj/item/stock_parts/subspace/crystal,
+/obj/item/stock_parts/subspace/sub_filter,
+/obj/item/stock_parts/subspace/sub_filter,
+/obj/item/stock_parts/subspace/transmitter,
+/obj/item/stock_parts/subspace/transmitter,
+/obj/item/stock_parts/subspace/treatment,
+/obj/item/stock_parts/subspace/treatment,
 /obj/item/stack/cable_coil,
 /obj/item/stack/cable_coil,
 /obj/item/clothing/glasses/welding,
 /obj/item/clothing/glasses/welding,
-/obj/item/device/bodysnatcher,
-/obj/item/weapon/card/emag,
-/obj/item/weapon/cell/super,
-/obj/item/weapon/cell/super,
-/obj/item/weapon/cell/device/super,
-/obj/item/weapon/cell/device/super,
+/obj/item/bodysnatcher,
+/obj/item/card/emag,
+/obj/item/cell/device/super,
+/obj/item/cell/device/super,
 /obj/effect/floor_decal/industrial/outline/yellow,
-/obj/item/weapon/storage/briefcase/inflatable,
-/obj/item/weapon/storage/briefcase/inflatable,
+/obj/item/storage/briefcase/inflatable,
+/obj/item/storage/briefcase/inflatable,
 /obj/effect/floor_decal/techfloor{
 	dir = 8
 	},
@@ -406,7 +415,10 @@
 	},
 /obj/machinery/door/blast/regular{
 	id = "kalipsoshutters";
-	name = "Kalipso Blast Shielding"
+	name = "Kalipso Blast Shielding";
+	opacity = 0;
+	density = 0;
+	icon_state = "pdoor0"
 	},
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/MechFabShip)
@@ -414,24 +426,24 @@
 /obj/structure/closet/walllocker_double/kitchen/east{
 	name = "Ration Cabinet"
 	},
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/device/radio{
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/radio{
 	pixel_x = -5;
 	pixel_y = 5
 	},
-/obj/item/device/radio{
+/obj/item/radio{
 	pixel_x = -5;
 	pixel_y = 5
 	},
-/obj/item/device/radio{
+/obj/item/radio{
 	pixel_x = 5;
 	pixel_y = 5
 	},
-/obj/item/device/radio{
+/obj/item/radio{
 	pixel_x = 5;
 	pixel_y = 5
 	},
@@ -456,12 +468,9 @@
 "lZ" = (
 /obj/effect/floor_decal/industrial/warning,
 /obj/structure/cable{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/power/rtg/advanced,
@@ -492,11 +501,11 @@
 /area/survivalpod/superpose/MechFabShip)
 "oS" = (
 /obj/structure/table/steel_reinforced,
-/obj/item/device/defib_kit/jumper_kit/loaded,
-/obj/item/device/defib_kit/jumper_kit/loaded,
-/obj/item/device/mmi,
-/obj/item/device/mmi,
-/obj/item/device/mmi,
+/obj/item/defib_kit/jumper_kit/loaded,
+/obj/item/defib_kit/jumper_kit/loaded,
+/obj/item/mmi,
+/obj/item/mmi,
+/obj/item/mmi,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/effect/floor_decal/techfloor{
 	dir = 4
@@ -511,7 +520,6 @@
 	pixel_x = 23
 	},
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /turf/simulated/floor/tiled/milspec/sterile,
@@ -524,35 +532,35 @@
 	pixel_y = 30
 	},
 /obj/structure/table/steel_reinforced,
-/obj/item/weapon/disk/limb/dsi_teshari{
+/obj/item/disk/limb/dsi_teshari{
 	pixel_y = -7;
 	pixel_x = -6
 	},
-/obj/item/weapon/disk/limb/dsi_vulpkanin{
+/obj/item/disk/limb/dsi_vulpkanin{
 	pixel_y = -3;
 	pixel_x = -6
 	},
-/obj/item/weapon/disk/tech_disk{
+/obj/item/disk/tech_disk{
 	pixel_y = -6;
 	pixel_x = 5
 	},
-/obj/item/weapon/disk/tech_disk{
+/obj/item/disk/tech_disk{
 	pixel_y = 2;
 	pixel_x = 5
 	},
-/obj/item/weapon/disk/tech_disk{
+/obj/item/disk/tech_disk{
 	pixel_y = -2;
 	pixel_x = 5
 	},
-/obj/item/weapon/disk/tech_disk{
+/obj/item/disk/tech_disk{
 	pixel_y = -6;
 	pixel_x = 5
 	},
-/obj/item/weapon/disk/design_disk{
+/obj/item/disk/design_disk{
 	pixel_y = 2;
 	pixel_x = -6
 	},
-/obj/item/weapon/disk/design_disk{
+/obj/item/disk/design_disk{
 	pixel_y = -2;
 	pixel_x = -6
 	},
@@ -574,7 +582,10 @@
 /obj/machinery/door/blast/regular{
 	dir = 4;
 	id = "kalipsoshutters";
-	name = "Kalipso Blast Shielding"
+	name = "Kalipso Blast Shielding";
+	density = 0;
+	icon_state = "pdoor0";
+	opacity = 0
 	},
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/MechFabShip)
@@ -605,14 +616,15 @@
 	amount = 25
 	},
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/MechFabShip)
 "qK" = (
-/obj/machinery/computer/rdconsole/public,
+/obj/machinery/vending/robotics{
+	emagged = 1;
+	req_access = null
+	},
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled/techmaint,
 /area/survivalpod/superpose/MechFabShip)
@@ -636,10 +648,7 @@
 /turf/simulated/floor/tiled/yellow,
 /area/survivalpod/superpose/MechFabShip)
 "qY" = (
-/obj/machinery/vending/robotics{
-	emagged = 1;
-	req_access = null
-	},
+/obj/machinery/computer/rdconsole/public,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/light/poi{
 	dir = 1
@@ -735,7 +744,6 @@
 	dir = 8
 	},
 /obj/structure/cable{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/effect/floor_decal/industrial/warning,
@@ -762,14 +770,12 @@
 /area/survivalpod/superpose/MechFabShip)
 "yh" = (
 /obj/structure/bed/pod,
-/obj/item/weapon/bedsheet/captain,
+/obj/item/bedsheet/captain,
 /turf/simulated/floor/tiled/techfloor,
 /area/survivalpod/superpose/MechFabShip)
 "yH" = (
 /obj/effect/floor_decal/techfloor/corner,
 /obj/structure/cable/green{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/plating,
@@ -792,7 +798,7 @@
 /area/template_noop)
 "zd" = (
 /obj/structure/bed/pod,
-/obj/item/weapon/bedsheet/ce,
+/obj/item/bedsheet/ce,
 /turf/simulated/floor/tiled/techfloor,
 /area/survivalpod/superpose/MechFabShip)
 "zj" = (
@@ -808,6 +814,10 @@
 	},
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/MechFabShip)
+"zz" = (
+/obj/machinery/door/blast/regular/open,
+/turf/template_noop,
+/area/template_noop)
 "zC" = (
 /obj/machinery/autolathe{
 	hacked = 1
@@ -833,6 +843,7 @@
 /obj/effect/floor_decal/techfloor/orange{
 	dir = 1
 	},
+/obj/machinery/recharge_station,
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/MechFabShip)
 "AK" = (
@@ -849,7 +860,6 @@
 /obj/structure/closet/walllocker/emerglocker/south,
 /obj/effect/floor_decal/industrial/warning,
 /obj/structure/cable{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/machinery/power/rtg/advanced,
@@ -863,7 +873,7 @@
 /area/survivalpod/superpose/MechFabShip)
 "Bz" = (
 /obj/effect/catwalk_plated/dark,
-/obj/item/weapon/banner/blue,
+/obj/item/banner/blue,
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/MechFabShip)
 "BA" = (
@@ -905,15 +915,16 @@
 /area/survivalpod/superpose/MechFabShip)
 "Cu" = (
 /obj/machinery/door/airlock/multi_tile/metal/mait{
-	icon_state = "door_locked";
 	id_tag = "kalipso_hatch";
-	locked = 1;
 	name = "Cargo Hold"
 	},
 /obj/machinery/door/blast/regular{
 	dir = 4;
 	id = "kalipsoshutters";
-	name = "Kalipso Blast Shielding"
+	name = "Kalipso Blast Shielding";
+	density = 0;
+	icon_state = "pdoor0";
+	opacity = 0
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/survivalpod/superpose/MechFabShip)
@@ -941,11 +952,11 @@
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/MechFabShip)
 "Dj" = (
-/obj/machinery/r_n_d/protolathe,
-/obj/effect/floor_decal/industrial/outline/yellow,
 /obj/effect/floor_decal/techfloor{
 	dir = 4
 	},
+/obj/structure/table/steel_reinforced,
+/obj/item/storage/part_replacer/adv/discount_bluespace,
 /turf/simulated/floor/tiled/techmaint,
 /area/survivalpod/superpose/MechFabShip)
 "Dm" = (
@@ -982,6 +993,11 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/survivalpod/superpose/MechFabShip)
+"Fc" = (
+/obj/machinery/mech_recharger,
+/obj/mecha/working/ripley,
+/turf/simulated/floor/tiled/milspec,
+/area/survivalpod/superpose/MechFabShip)
 "FC" = (
 /obj/structure/window/plastitanium/full,
 /obj/structure/window/reinforced/survival_pod{
@@ -998,7 +1014,10 @@
 /obj/machinery/door/blast/regular{
 	dir = 4;
 	id = "kalipsoshutters";
-	name = "Kalipso Blast Shielding"
+	name = "Kalipso Blast Shielding";
+	density = 0;
+	icon_state = "pdoor0";
+	opacity = 0
 	},
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/MechFabShip)
@@ -1013,13 +1032,15 @@
 /obj/machinery/door/airlock/hatch,
 /obj/machinery/door/blast/regular{
 	id = "kalipsoshutters";
-	name = "Kalipso Blast Shielding"
+	name = "Kalipso Blast Shielding";
+	opacity = 0;
+	density = 0;
+	icon_state = "pdoor0"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/survivalpod/superpose/MechFabShip)
 "Gr" = (
 /obj/structure/cable/green{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
@@ -1037,8 +1058,6 @@
 	dir = 8
 	},
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/plating,
@@ -1048,8 +1067,6 @@
 	name = "Starboard Wing Atmos"
 	},
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -1062,9 +1079,7 @@
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/MechFabShip)
 "HC" = (
-/obj/machinery/mecha_part_fabricator{
-	req_access = null
-	},
+/obj/machinery/mecha_part_fabricator/pros,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/effect/floor_decal/techfloor{
 	dir = 8
@@ -1072,7 +1087,7 @@
 /turf/simulated/floor/tiled/milspec/sterile,
 /area/survivalpod/superpose/MechFabShip)
 "HE" = (
-/obj/item/weapon/stool/padded,
+/obj/item/stool/padded,
 /turf/simulated/floor/tiled/milspec/sterile,
 /area/survivalpod/superpose/MechFabShip)
 "HS" = (
@@ -1110,8 +1125,20 @@
 /obj/structure/sign/electricshock{
 	pixel_y = 32
 	},
+/obj/machinery/cryopod/robot{
+	base_icon_state = "borg_pod_closed";
+	dir = 4;
+	icon = 'icons/obj/structures.dmi';
+	icon_state = "borg_pod_closed";
+	occupied_icon_state = "borg_pod_opened"
+	},
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/MechFabShip)
+"Jy" = (
+/obj/effect/spawner/parts/t2,
+/obj/effect/spawner/parts/t2,
+/turf/template_noop,
+/area/template_noop)
 "JW" = (
 /obj/structure/salvageable/console_os{
 	name = "Turret control console"
@@ -1130,16 +1157,29 @@
 	pixel_y = -30
 	},
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/milspec/sterile,
 /area/survivalpod/superpose/MechFabShip)
+"Ka" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 1
+	},
+/obj/structure/sign/department/drones{
+	pixel_y = 32
+	},
+/obj/structure/table/rack/shelf/steel,
+/obj/item/mecha_parts/chassis/odysseus,
+/obj/item/mecha_parts/part/odysseus_head,
+/obj/item/mecha_parts/part/odysseus_left_arm,
+/obj/item/mecha_parts/part/odysseus_left_leg,
+/obj/item/mecha_parts/part/odysseus_right_arm,
+/obj/item/mecha_parts/part/odysseus_right_leg,
+/obj/item/mecha_parts/part/odysseus_torso,
+/turf/simulated/floor/tiled/techmaint,
+/area/survivalpod/superpose/MechFabShip)
 "KC" = (
 /obj/structure/cable/green{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /turf/simulated/floor/tiled/milspec/sterile,
@@ -1172,96 +1212,96 @@
 /area/survivalpod/superpose/MechFabShip)
 "Ms" = (
 /obj/machinery/smartfridge/survival_pod,
-/obj/item/weapon/tape_roll,
+/obj/item/tape_roll,
 /obj/item/sticky_pad/random,
-/obj/item/weapon/pen/blue,
-/obj/item/weapon/pen/blue,
+/obj/item/pen/blue,
+/obj/item/pen/blue,
 /obj/item/fulton_core,
 /obj/item/fulton_core,
 /obj/item/extraction_pack,
 /obj/item/extraction_pack,
 /obj/item/modular_computer/laptop/preset/custom_loadout/standard,
-/obj/item/weapon/pickaxe/hand,
-/obj/item/device/flashlight/color/yellow,
-/obj/item/device/flashlight/color/orange,
-/obj/item/device/threadneedle,
-/obj/item/device/radio,
-/obj/item/device/radio,
-/obj/item/device/radio,
-/obj/item/weapon/extinguisher/mini,
-/obj/item/weapon/extinguisher/mini,
-/obj/item/weapon/flame/lighter/zippo,
-/obj/item/weapon/flame/lighter/zippo,
-/obj/item/device/flashlight/lantern,
+/obj/item/pickaxe/hand,
+/obj/item/flashlight/color/yellow,
+/obj/item/flashlight/color/orange,
+/obj/item/threadneedle,
+/obj/item/radio,
+/obj/item/radio,
+/obj/item/radio,
+/obj/item/extinguisher/mini,
+/obj/item/extinguisher/mini,
+/obj/item/flame/lighter/zippo,
+/obj/item/flame/lighter/zippo,
+/obj/item/flashlight/lantern,
 /obj/random/soap,
 /obj/random/soap,
-/obj/item/weapon/towel/random,
-/obj/item/weapon/towel/random,
+/obj/item/towel/random,
+/obj/item/towel/random,
 /obj/item/bodybag/cryobag,
 /obj/item/bodybag/cryobag,
-/obj/item/weapon/storage/pill_bottle/spaceacillin,
-/obj/item/weapon/storage/pill_bottle/antitox,
-/obj/item/device/healthanalyzer,
-/obj/item/weapon/storage/firstaid/regular,
-/obj/item/weapon/storage/firstaid/o2,
-/obj/item/device/fbp_backup_cell,
-/obj/item/device/fbp_backup_cell,
+/obj/item/storage/pill_bottle/spaceacillin,
+/obj/item/storage/pill_bottle/antitox,
+/obj/item/healthanalyzer,
+/obj/item/storage/firstaid/regular,
+/obj/item/storage/firstaid/o2,
+/obj/item/fbp_backup_cell,
+/obj/item/fbp_backup_cell,
 /obj/item/stack/nanopaste,
-/obj/item/device/suit_cooling_unit/emergency,
-/obj/item/device/suit_cooling_unit/emergency,
-/obj/item/weapon/reagent_containers/hypospray/autoinjector/biginjector/clotting,
-/obj/item/weapon/reagent_containers/hypospray/autoinjector/biginjector/clotting,
-/obj/item/weapon/storage/toolbox/brass,
-/obj/item/weapon/storage/box/survival/space,
-/obj/item/weapon/storage/box/survival/space,
-/obj/item/weapon/storage/box/survival/space,
-/obj/item/weapon/storage/pill_bottle/dice_nerd,
-/obj/item/weapon/storage/box/flare,
-/obj/item/weapon/storage/box/khcrystal,
-/obj/item/weapon/storage/box/khcrystal,
-/obj/item/weapon/storage/briefcase/inflatable,
+/obj/item/suit_cooling_unit/emergency,
+/obj/item/suit_cooling_unit/emergency,
+/obj/item/reagent_containers/hypospray/autoinjector/biginjector/clotting,
+/obj/item/reagent_containers/hypospray/autoinjector/biginjector/clotting,
+/obj/item/storage/toolbox/brass,
+/obj/item/storage/box/survival/space,
+/obj/item/storage/box/survival/space,
+/obj/item/storage/box/survival/space,
+/obj/item/storage/pill_bottle/dice_nerd,
+/obj/item/storage/box/flare,
+/obj/item/storage/box/khcrystal,
+/obj/item/storage/box/khcrystal,
+/obj/item/storage/briefcase/inflatable,
 /obj/item/stack/marker_beacon/ten,
-/obj/item/device/starcaster_news,
-/obj/item/device/mapping_unit,
-/obj/item/weapon/storage/box/dosimeter,
-/obj/item/device/gps,
-/obj/item/device/gps,
-/obj/item/weapon/cell/device/hyper,
-/obj/item/weapon/cell/device/hyper,
-/obj/item/weapon/cell/device/hyper,
-/obj/item/device/pda,
-/obj/item/device/pda,
-/obj/item/weapon/card/id/external,
-/obj/item/weapon/card/id/external,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
-/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
-/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
-/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
-/obj/item/weapon/gun/energy/locked/phasegun/pistol,
-/obj/item/weapon/gun/energy/locked/phasegun,
-/obj/item/weapon/cell/device/weapon{
+/obj/item/starcaster_news,
+/obj/item/mapping_unit,
+/obj/item/storage/box/dosimeter,
+/obj/item/gps,
+/obj/item/gps,
+/obj/item/cell/device/hyper,
+/obj/item/cell/device/hyper,
+/obj/item/cell/device/hyper,
+/obj/item/pda,
+/obj/item/pda,
+/obj/item/card/id/external,
+/obj/item/card/id/external,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/gun/energy/locked/phasegun/pistol,
+/obj/item/gun/energy/locked/phasegun,
+/obj/item/cell/device/weapon{
 	pixel_x = -2;
 	pixel_y = -2
 	},
-/obj/item/weapon/cell/device/weapon{
+/obj/item/cell/device/weapon{
 	pixel_x = -2;
 	pixel_y = -2
 	},
 /obj/item/clothing/accessory/permit/gun,
 /obj/item/clothing/accessory/permit/gun,
-/obj/item/weapon/material/knife/machete,
-/obj/item/weapon/material/fishing_net,
-/obj/item/weapon/storage/backpack/sport,
-/obj/item/weapon/storage/backpack/sport,
+/obj/item/material/knife/machete,
+/obj/item/material/fishing_net,
+/obj/item/storage/backpack/sport,
+/obj/item/storage/backpack/sport,
 /obj/item/clothing/accessory/storage/black_drop_pouches,
 /obj/item/clothing/accessory/storage/black_drop_pouches,
-/obj/item/weapon/storage/belt,
+/obj/item/storage/belt,
 /obj/item/clothing/accessory/poncho/thermal,
 /obj/machinery/light/poi{
 	dir = 1
@@ -1272,7 +1312,10 @@
 /obj/machinery/door/blast/regular{
 	dir = 4;
 	id = "kalipsoshutters";
-	name = "Kalipso Blast Shielding"
+	name = "Kalipso Blast Shielding";
+	density = 0;
+	icon_state = "pdoor0";
+	opacity = 0
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/survivalpod/superpose/MechFabShip)
@@ -1292,8 +1335,7 @@
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/MechFabShip)
 "Nr" = (
-/obj/structure/table/steel_reinforced,
-/obj/item/weapon/storage/part_replacer/adv/discount_bluespace,
+/obj/machinery/r_n_d/destructive_analyzer,
 /obj/effect/floor_decal/techfloor{
 	dir = 4
 	},
@@ -1304,9 +1346,9 @@
 /turf/simulated/wall/skipjack,
 /area/survivalpod/superpose/MechFabShip)
 "Oo" = (
-/obj/item/weapon/stool/padded,
-/turf/simulated/floor/tiled/yellow,
-/area/survivalpod/superpose/MechFabShip)
+/obj/machinery/door/blast/regular,
+/turf/template_noop,
+/area/template_noop)
 "Ov" = (
 /obj/machinery/optable{
 	name = "Robotics Operating Table"
@@ -1315,7 +1357,7 @@
 /area/survivalpod/superpose/MechFabShip)
 "OO" = (
 /obj/structure/bed/pod,
-/obj/item/weapon/bedsheet/hos,
+/obj/item/bedsheet/hos,
 /turf/simulated/floor/tiled/techfloor,
 /area/survivalpod/superpose/MechFabShip)
 "Py" = (
@@ -1372,24 +1414,24 @@
 /obj/item/stack/rods{
 	amount = 50
 	},
-/obj/item/weapon/storage/toolbox/syndicate/powertools,
-/obj/item/weapon/storage/toolbox/syndicate/powertools,
+/obj/item/storage/toolbox/syndicate/powertools,
+/obj/item/storage/toolbox/syndicate/powertools,
 /obj/item/clothing/head/welding/demon,
 /obj/item/clothing/head/welding/knight,
-/obj/item/weapon/storage/toolbox/electrical{
+/obj/item/storage/toolbox/electrical{
 	pixel_x = 1;
 	pixel_y = 6
 	},
-/obj/item/weapon/storage/toolbox/electrical{
+/obj/item/storage/toolbox/electrical{
 	pixel_x = 1;
 	pixel_y = 6
 	},
-/obj/item/device/robotanalyzer,
-/obj/item/device/robotanalyzer,
-/obj/item/weapon/cell/super,
-/obj/item/weapon/cell/super,
-/obj/item/weapon/cell/device/super,
-/obj/item/weapon/cell/device/super,
+/obj/item/robotanalyzer,
+/obj/item/robotanalyzer,
+/obj/item/cell/super,
+/obj/item/cell/super,
+/obj/item/cell/device/super,
+/obj/item/cell/device/super,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/item/stack/material/steel{
 	amount = 50
@@ -1466,7 +1508,10 @@
 /obj/machinery/door/blast/regular{
 	dir = 4;
 	id = "kalipsoshutters";
-	name = "Kalipso Blast Shielding"
+	name = "Kalipso Blast Shielding";
+	density = 0;
+	icon_state = "pdoor0";
+	opacity = 0
 	},
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/MechFabShip)
@@ -1507,10 +1552,13 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/survivalpod/superpose/MechFabShip)
 "RE" = (
-/obj/machinery/recharge_station,
 /obj/effect/floor_decal/techfloor/corner{
 	dir = 5
 	},
+/obj/structure/table/rack/shelf/steel,
+/obj/item/mecha_parts/mecha_equipment/weapon/phoron_bore,
+/obj/item/mecha_parts/mecha_equipment/weapon/energy/flamer,
+/obj/item/mecha_parts/mecha_equipment/weapon/energy/taser,
 /turf/simulated/floor/tiled/techmaint,
 /area/survivalpod/superpose/MechFabShip)
 "Sh" = (
@@ -1518,20 +1566,18 @@
 	name = "RnD and Fabrication"
 	},
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/survivalpod/superpose/MechFabShip)
 "SE" = (
-/obj/item/weapon/stool/padded,
+/obj/item/stool/padded,
 /turf/simulated/floor/tiled/techfloor,
 /area/survivalpod/superpose/MechFabShip)
 "SW" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/r_n_d/circuit_imprinter,
-/obj/item/weapon/reagent_containers/glass/beaker/large,
+/obj/item/reagent_containers/glass/beaker/large,
 /obj/structure/sign/department/robo{
 	pixel_y = 32
 	},
@@ -1561,8 +1607,6 @@
 	dir = 10
 	},
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/plating,
@@ -1583,8 +1627,6 @@
 /area/survivalpod/superpose/MechFabShip)
 "UL" = (
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/plating,
@@ -1619,7 +1661,16 @@
 /area/survivalpod/superpose/MechFabShip)
 "VZ" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
-/obj/structure/foodcart,
+/obj/structure/table/rack/shelf/steel,
+/obj/item/mecha_parts/component/electrical/high_current,
+/obj/item/mecha_parts/component/armor/military,
+/obj/item/mecha_parts/component/armor/lightweight,
+/obj/item/mecha_parts/component/hull/lightweight,
+/obj/item/mecha_parts/component/hull,
+/obj/item/mecha_parts/component/gas/reinforced,
+/obj/item/mecha_parts/component/actuator/hispeed,
+/obj/item/cell/super,
+/obj/item/cell/super,
 /turf/simulated/floor/tiled/milspec,
 /area/survivalpod/superpose/MechFabShip)
 "Wl" = (
@@ -1662,7 +1713,10 @@
 /obj/machinery/door/blast/regular{
 	dir = 4;
 	id = "kalipsoshutters";
-	name = "Kalipso Blast Shielding"
+	name = "Kalipso Blast Shielding";
+	density = 0;
+	icon_state = "pdoor0";
+	opacity = 0
 	},
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/MechFabShip)
@@ -1702,7 +1756,10 @@
 	},
 /obj/machinery/door/blast/regular{
 	id = "kalipsoshutters";
-	name = "Kalipso Blast Shielding"
+	name = "Kalipso Blast Shielding";
+	opacity = 0;
+	density = 0;
+	icon_state = "pdoor0"
 	},
 /obj/structure/window/reinforced/survival_pod{
 	dir = 1
@@ -1728,26 +1785,25 @@
 /area/survivalpod/superpose/MechFabShip)
 "Yo" = (
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/effect/floor_decal/industrial/warning,
 /obj/structure/cable{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/power/rtg/advanced,
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/MechFabShip)
 "Yt" = (
-/obj/machinery/r_n_d/destructive_analyzer,
 /obj/effect/floor_decal/industrial/outline/yellow,
+/obj/structure/table/rack/shelf/steel,
+/obj/effect/spawner/parts/t2,
+/obj/effect/spawner/parts/t2,
+/obj/effect/spawner/parts/t2,
 /turf/simulated/floor/tiled/techmaint,
 /area/survivalpod/superpose/MechFabShip)
 "YM" = (
@@ -1783,7 +1839,10 @@
 /obj/machinery/door/blast/regular{
 	dir = 4;
 	id = "kalipsoshutters";
-	name = "Kalipso Blast Shielding"
+	name = "Kalipso Blast Shielding";
+	density = 0;
+	icon_state = "pdoor0";
+	opacity = 0
 	},
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/MechFabShip)
@@ -1791,10 +1850,13 @@
 /turf/simulated/floor/tiled/red,
 /area/survivalpod/superpose/MechFabShip)
 "ZH" = (
-/obj/machinery/recharge_station,
 /obj/effect/floor_decal/techfloor/corner{
 	dir = 9
 	},
+/obj/structure/table/rack/shelf/steel,
+/obj/item/mecha_parts/mecha_equipment/weapon/energy/laser,
+/obj/item/mecha_parts/mecha_equipment/weapon/energy/medigun,
+/obj/item/mecha_parts/mecha_equipment/wormhole_generator,
 /turf/simulated/floor/tiled/techmaint,
 /area/survivalpod/superpose/MechFabShip)
 "ZY" = (
@@ -1812,7 +1874,10 @@
 	},
 /obj/machinery/door/blast/regular{
 	id = "kalipsoshutters";
-	name = "Kalipso Blast Shielding"
+	name = "Kalipso Blast Shielding";
+	opacity = 0;
+	density = 0;
+	icon_state = "pdoor0"
 	},
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/MechFabShip)
@@ -2069,7 +2134,7 @@ ph
 He
 yN
 qf
-tC
+Fc
 ph
 ph
 Bz
@@ -2114,7 +2179,7 @@ at
 ph
 qK
 DF
-Oo
+DF
 DF
 Yt
 ph
@@ -2144,7 +2209,7 @@ qX
 YM
 Dj
 ph
-hu
+Ka
 dz
 Zm
 VZ
@@ -2165,7 +2230,7 @@ LN
 Xm
 ph
 qY
-rZ
+eB
 rZ
 SE
 gv
@@ -2203,7 +2268,7 @@ gH
 ND
 Di
 Di
-iC
+Oo
 iC
 iC
 "}
@@ -2229,7 +2294,7 @@ ny
 Cu
 Di
 Di
-iC
+zz
 iC
 iC
 "}
@@ -2399,7 +2464,7 @@ iC
 iC
 iC
 iC
-iC
+Jy
 iC
 iC
 ph

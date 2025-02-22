@@ -1,12 +1,12 @@
 /datum/job/blueshield
-	title = "Blueshield Guard"
+	title = JOB_BLUESHIELD_GUARD
 	flag = BLUESHIELD //this may be used later.
 	departments = list(DEPARTMENT_COMMAND)
 	department_flag = ENGSEC
 	faction = "Station"
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "the Colony Director and Central Command" //Reports directly to CD, or failing that, CC
+	supervisors = "the " + JOB_ALT_COLONY_DIRECTOR + " and Central Command" //Reports directly to CD, or failing that, CC
 	selection_color = "#006cb3"
 	req_admin_notify = 1
 	minimum_character_age = 25

@@ -13,17 +13,17 @@
 /area/tether_away/debrisfield/explored)
 "e" = (
 /obj/structure/closet/secure_closet/freezer/meat,
-/obj/item/weapon/reagent_containers/food/snacks/carpmeat,
-/obj/item/weapon/reagent_containers/food/snacks/carpmeat,
-/obj/item/weapon/reagent_containers/food/snacks/carpmeat,
+/obj/item/reagent_containers/food/snacks/carpmeat,
+/obj/item/reagent_containers/food/snacks/carpmeat,
+/obj/item/reagent_containers/food/snacks/carpmeat,
 /turf/simulated/floor/wood,
 /area/tether_away/debrisfield/explored)
 "f" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/reagent_containers/food/condiment/coldsauce,
-/obj/item/weapon/reagent_containers/food/condiment/ketchup,
-/obj/item/weapon/reagent_containers/food/condiment/hotsauce,
-/obj/item/weapon/reagent_containers/food/condiment/soysauce,
+/obj/item/reagent_containers/food/condiment/coldsauce,
+/obj/item/reagent_containers/food/condiment/ketchup,
+/obj/item/reagent_containers/food/condiment/hotsauce,
+/obj/item/reagent_containers/food/condiment/soysauce,
 /turf/simulated/floor/wood,
 /area/tether_away/debrisfield/explored)
 "g" = (
@@ -40,13 +40,13 @@
 /area/tether_away/debrisfield/explored)
 "j" = (
 /obj/structure/closet/crate/freezer,
-/obj/item/weapon/reagent_containers/food/snacks/taco,
-/obj/item/weapon/reagent_containers/food/snacks/taco,
-/obj/item/weapon/reagent_containers/food/snacks/taco,
-/obj/item/weapon/reagent_containers/food/snacks/hotdog,
-/obj/item/weapon/reagent_containers/food/snacks/hotdog,
-/obj/item/weapon/reagent_containers/food/snacks/cheeseburrito,
-/obj/item/weapon/reagent_containers/food/snacks/cheeseburrito,
+/obj/item/reagent_containers/food/snacks/taco,
+/obj/item/reagent_containers/food/snacks/taco,
+/obj/item/reagent_containers/food/snacks/taco,
+/obj/item/reagent_containers/food/snacks/hotdog,
+/obj/item/reagent_containers/food/snacks/hotdog,
+/obj/item/reagent_containers/food/snacks/cheeseburrito,
+/obj/item/reagent_containers/food/snacks/cheeseburrito,
 /turf/simulated/floor/wood,
 /area/tether_away/debrisfield/explored)
 "k" = (
@@ -55,7 +55,7 @@
 /area/tether_away/debrisfield/explored)
 "l" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/reagent_containers/food/snacks/taco,
+/obj/item/reagent_containers/food/snacks/taco,
 /turf/simulated/floor/wood,
 /area/tether_away/debrisfield/explored)
 "m" = (

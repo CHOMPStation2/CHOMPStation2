@@ -69,32 +69,33 @@
 	return ..()
 
 /obj/structure/fence/attackby(obj/item/W, mob/user)
+	user.setClickCooldown(DEFAULT_ATTACK_COOLDOWN)
 	if(W.has_tool_quality(TOOL_WIRECUTTER))
 		if(!cuttable)
-			to_chat(user, span("warning", "This section of the fence can't be cut."))
+			to_chat(user, span_warning("This section of the fence can't be cut."))
 			return
 		if(invulnerable)
-			to_chat(user, span("warning", "This fence is too strong to cut through."))
+			to_chat(user, span_warning("This fence is too strong to cut through."))
 			return
 		var/current_stage = hole_size
 		if(current_stage >= MAX_HOLE_SIZE)
-			to_chat(user, span("notice", "This fence has too much cut out of it already."))
+			to_chat(user, span_notice("This fence has too much cut out of it already."))
 			return
 
-		user.visible_message(span("danger", "\The [user] starts cutting through \the [src] with \the [W]."),\
-		span("danger", "You start cutting through \the [src] with \the [W]."))
+		user.visible_message(span_danger("\The [user] starts cutting through \the [src] with \the [W]."),\
+		span_danger("You start cutting through \the [src] with \the [W]."))
 		playsound(src, W.usesound, 50, 1)
 
 		if(do_after(user, CUT_TIME * W.toolspeed, target = src))
 			if(current_stage == hole_size)
 				switch(++hole_size)
 					if(MEDIUM_HOLE)
-						visible_message(span("notice", "\The [user] cuts into \the [src] some more."))
-						to_chat(user, span("notice", "You could probably fit yourself through that hole now. Although climbing through would be much faster if you made it even bigger."))
+						visible_message(span_notice("\The [user] cuts into \the [src] some more."))
+						to_chat(user, span_notice("You could probably fit yourself through that hole now. Although climbing through would be much faster if you made it even bigger."))
 						climbable = TRUE
 					if(LARGE_HOLE)
-						visible_message(span("notice", "\The [user] completely cuts through \the [src]."))
-						to_chat(user, span("notice", "The hole in \the [src] is now big enough to walk through."))
+						visible_message(span_notice("\The [user] completely cuts through \the [src]."))
+						to_chat(user, span_notice("The hole in \the [src] is now big enough to walk through."))
 						climbable = FALSE
 				update_cut_status()
 	return TRUE
@@ -122,6 +123,11 @@
 	cuttable = FALSE
 	var/open = FALSE
 	var/locked = FALSE
+	var/lock_id = null	//does the door have an associated key?
+	var/lock_type = "simple"	//string matched to "pick_type" on /obj/item/lockpick
+	var/can_pick = TRUE	//can it be picked/bypassed?
+	var/lock_difficulty = 1	//multiplier to picking/bypassing time
+	var/keysound = 'sound/items/toolbelt_equip.ogg'
 
 /obj/structure/fence/door/Initialize()
 	update_door_status()
@@ -140,17 +146,34 @@
 	if(can_open(user))
 		toggle(user)
 	else
-		to_chat(user, span("warning", "\The [src] is [!open ? "locked" : "stuck open"]."))
+		to_chat(user, span_warning("\The [src] is [!open ? "locked" : "stuck open"]."))
 
 	return TRUE
+
+/obj/structure/fence/door/attackby(obj/item/W as obj, mob/user as mob)
+	user.setClickCooldown(DEFAULT_ATTACK_COOLDOWN)
+	if(istype(W,/obj/item/simple_key))
+		var/obj/item/simple_key/key = W
+		if(open)
+			to_chat(user,span_notice("\The [src] must be closed in order for you to lock it."))
+		else if(key.key_id != src.lock_id)
+			to_chat(user,span_warning("The [key] doesn't fit \the [src]'s lock!"))
+		else if(key.key_id == src.lock_id)
+			visible_message(span_notice("[user] [key.keyverb] \the [key] and [locked ? "unlocks" : "locks"] \the [src]."))
+			locked = !locked
+			playsound(src, keysound,100, 1)
+		return
+	else
+		attack_hand(user)
+	return
 
 /obj/structure/fence/door/proc/toggle(mob/user)
 	switch(open)
 		if(FALSE)
-			visible_message(span("notice", "\The [user] opens \the [src]."))
+			visible_message(span_notice("\The [user] opens \the [src]."))
 			open = TRUE
 		if(TRUE)
-			visible_message(span("notice", "\The [user] closes \the [src]."))
+			visible_message(span_notice("\The [user] closes \the [src]."))
 			open = FALSE
 
 	update_door_status()

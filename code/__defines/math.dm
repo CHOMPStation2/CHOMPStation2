@@ -4,8 +4,8 @@
 
 #define NUM_E 2.71828183
 
-#define SQRT_2 (1.41421356237) //CHOMPEDIT
-#define ONE_OVER_SQRT_2 (0.707106781188095) //CHOMPEDIT ADDITION - not 1/sqrt(2), instead it is 1/SQRT_2 (1/1.41421356237)
+#define SQRT_2 (1.41421356237)
+#define ONE_OVER_SQRT_2 (0.707106781188095) // not 1/sqrt(2), instead it is 1/SQRT_2 (1/1.41421356237)
 #define M_PI						(3.14159265)
 #define INFINITY				(1.#INF)	//closer then enough
 
@@ -27,9 +27,8 @@
 
 #define SIGN(x) ( (x)!=0 ? (x) / abs(x) : 0 )
 
+#define ROUND_UP(x) ( -round(-(x)))
 #define CEILING(x, y) ( -round(-(x) / (y)) * (y) )
-
-#define ROUND_UP(x) ( -round(-(x))) // CHOMPEdit
 
 // round() acts like floor(x, 1) by default but can't handle other values
 #define FLOOR(x, y) ( round((x) / (y)) * (y) )
@@ -223,3 +222,9 @@
 #define ROUNDUPTOPOWEROFTWO(x) (2 ** -round(-log(2,x)))
 
 #define DEFAULT(a, b) (a? a : b)
+
+// sqrt, but if you give it a negative number, you get 0 instead of a runtime
+/proc/sqrtor0(num)
+	if(num < 0)
+		return 0
+	return sqrt(num)

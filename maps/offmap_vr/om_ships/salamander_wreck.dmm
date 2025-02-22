@@ -69,7 +69,6 @@
 "bI" = (
 /obj/structure/handrail,
 /obj/structure/cable{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
@@ -138,8 +137,6 @@
 /area/shuttle/salamander_wreck_head)
 "bY" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -165,7 +162,6 @@
 	dir = 1
 	},
 /obj/structure/cable{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
@@ -237,8 +233,6 @@
 /area/shuttle/salamander_wreck_engineering)
 "dO" = (
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -310,8 +304,6 @@
 "eP" = (
 /obj/machinery/door/firedoor/glass,
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -352,8 +344,6 @@
 /area/shuttle/salamander_wreck_engineering)
 "fE" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/railing/grey{
@@ -416,8 +406,6 @@
 /area/shuttle/salamander_wreck)
 "gl" = (
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -433,7 +421,6 @@
 /area/shuttle/salamander_wreck_q1)
 "gv" = (
 /obj/structure/cable{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/structure/handrail,
@@ -514,7 +501,7 @@
 /obj/machinery/light{
 	dir = 1
 	},
-/obj/item/weapon/circuitboard/smes,
+/obj/item/circuitboard/smes,
 /obj/structure/closet/walllocker_double/north{
 	name = "Uniform Locker"
 	},
@@ -522,8 +509,6 @@
 /area/shuttle/salamander_wreck)
 "hp" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/supply,
@@ -551,8 +536,6 @@
 /area/shuttle/salamander_wreck_cockpit)
 "hO" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -585,8 +568,6 @@
 /area/shuttle/salamander_wreck_engineering)
 "im" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -599,13 +580,9 @@
 /area/shuttle/salamander_wreck_engineering)
 "is" = (
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -615,8 +592,6 @@
 /area/shuttle/salamander_wreck_engineering)
 "iC" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -626,8 +601,6 @@
 /area/shuttle/salamander_wreck)
 "iJ" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -658,8 +631,6 @@
 /area/shuttle/salamander_wreck)
 "iS" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -670,8 +641,6 @@
 /area/shuttle/salamander_wreck)
 "iW" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
@@ -706,18 +675,12 @@
 /area/shuttle/salamander_wreck)
 "jT" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/scrubbers,
@@ -737,8 +700,6 @@
 	dir = 1
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -761,8 +722,6 @@
 /area/shuttle/salamander_wreck_engineering)
 "kL" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/handrail{
@@ -822,8 +781,6 @@
 "ld" = (
 /obj/machinery/door/firedoor/glass,
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -910,7 +867,7 @@
 	name = "Spare Fuel";
 	pixel_y = -32
 	},
-/obj/item/weapon/tool/crowbar/red,
+/obj/item/tool/crowbar/red,
 /obj/machinery/light,
 /turf/simulated/floor/tiled/techfloor{
 	nitrogen = 0;
@@ -965,7 +922,7 @@
 	dir = 1
 	},
 /obj/random/empty_or_lootable_crate,
-/obj/item/weapon/smes_coil,
+/obj/item/smes_coil,
 /obj/structure/closet/walllocker_double/south{
 	name = "Storage Locker"
 	},
@@ -997,8 +954,6 @@
 /area/shuttle/salamander_wreck_cockpit)
 "nB" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -1048,8 +1003,8 @@
 /area/shuttle/salamander_wreck)
 "oi" = (
 /obj/structure/closet/secure_closet/freezer/fridge,
-/obj/item/weapon/storage/box/donkpockets,
-/obj/item/weapon/storage/box/donkpockets,
+/obj/item/storage/box/donkpockets,
+/obj/item/storage/box/donkpockets,
 /obj/random/snack,
 /obj/random/snack,
 /obj/random/snack,
@@ -1078,7 +1033,7 @@
 /area/shuttle/salamander_wreck_cockpit)
 "oF" = (
 /obj/structure/bed/pod,
-/obj/item/weapon/bedsheet/blue,
+/obj/item/bedsheet/blue,
 /obj/machinery/light_switch{
 	dir = 4;
 	pixel_x = 22
@@ -1145,13 +1100,9 @@
 /area/shuttle/salamander_wreck)
 "qg" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -1171,7 +1122,6 @@
 "qn" = (
 /obj/structure/handrail,
 /obj/structure/cable{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
@@ -1251,8 +1201,6 @@
 /area/shuttle/salamander_wreck)
 "rw" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/scrubbers,
@@ -1268,8 +1216,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techmaint/airless,
@@ -1318,7 +1264,7 @@
 /area/shuttle/salamander_wreck_galley)
 "vt" = (
 /obj/structure/bed/pod,
-/obj/item/weapon/bedsheet/blue,
+/obj/item/bedsheet/blue,
 /obj/machinery/alarm/alarms_hidden{
 	dir = 8;
 	pixel_x = 26
@@ -1330,8 +1276,6 @@
 /area/shuttle/salamander_wreck_q1)
 "vI" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -1348,14 +1292,12 @@
 /area/shuttle/salamander_wreck)
 "xL" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/obj/item/weapon/tank/phoron/pressurized,
+/obj/item/tank/phoron/pressurized,
 /obj/structure/closet/walllocker_double/south{
 	name = "Uniform Locker"
 	},
@@ -1363,8 +1305,6 @@
 /area/shuttle/salamander_wreck)
 "yv" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -1384,8 +1324,6 @@
 /area/shuttle/salamander_wreck_head)
 "zO" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -1415,7 +1353,7 @@
 /area/shuttle/salamander_wreck_engineering)
 "AK" = (
 /obj/structure/bed/pod,
-/obj/item/weapon/bedsheet/blue,
+/obj/item/bedsheet/blue,
 /obj/machinery/light_switch{
 	dir = 4;
 	pixel_x = 22
@@ -1430,7 +1368,6 @@
 	dir = 1
 	},
 /obj/structure/cable{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
@@ -1552,8 +1489,6 @@
 "Gr" = (
 /obj/machinery/door/firedoor/glass,
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -1568,8 +1503,6 @@
 /area/shuttle/salamander_wreck_q1)
 "HG" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/handrail{
@@ -1616,8 +1549,6 @@
 /area/shuttle/salamander_wreck)
 "IQ" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -1700,8 +1631,6 @@
 /area/shuttle/salamander_wreck_engineering)
 "No" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -1802,8 +1731,6 @@
 "Qq" = (
 /obj/machinery/door/firedoor/glass,
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -1830,7 +1757,7 @@
 	},
 /obj/structure/handrail,
 /obj/random/empty_or_lootable_crate,
-/obj/item/weapon/smes_coil,
+/obj/item/smes_coil,
 /obj/structure/closet/walllocker_double/north{
 	name = "Storage Locker"
 	},
@@ -1841,7 +1768,7 @@
 /area/shuttle/salamander_wreck)
 "RO" = (
 /obj/structure/bed/pod,
-/obj/item/weapon/bedsheet/blue,
+/obj/item/bedsheet/blue,
 /obj/machinery/alarm/alarms_hidden{
 	dir = 8;
 	pixel_x = 26
@@ -1886,7 +1813,7 @@
 "Sp" = (
 /obj/structure/table/steel,
 /obj/machinery/light,
-/obj/item/weapon/paper/unity_notice,
+/obj/item/paper/unity_notice,
 /turf/simulated/floor/tiled/techfloor{
 	nitrogen = 0;
 	oxygen = 0
@@ -1894,8 +1821,6 @@
 /area/shuttle/salamander_wreck_q2)
 "Td" = (
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/structure/railing/grey{
@@ -1908,7 +1833,7 @@
 /obj/machinery/light/flicker{
 	dir = 1
 	},
-/obj/item/weapon/smes_coil,
+/obj/item/smes_coil,
 /turf/simulated/floor/tiled/techfloor{
 	nitrogen = 0;
 	oxygen = 0
@@ -1969,7 +1894,6 @@
 /area/shuttle/salamander_wreck)
 "Vh" = (
 /obj/structure/cable{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/structure/handrail{
@@ -2025,8 +1949,6 @@
 /area/shuttle/salamander_wreck_engineering)
 "WN" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/door/airlock/multi_tile/metal{
@@ -2099,7 +2021,6 @@
 	anchored = 1
 	},
 /obj/structure/cable{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/machinery/alarm/alarms_hidden{

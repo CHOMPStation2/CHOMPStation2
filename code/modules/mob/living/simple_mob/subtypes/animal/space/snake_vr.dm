@@ -38,7 +38,7 @@
 	response_harm   = "kicks"
 
 	meat_amount = 2
-	meat_type = /obj/item/weapon/reagent_containers/food/snacks/meat
+	meat_type = /obj/item/reagent_containers/food/snacks/meat
 
 	melee_damage_lower = 2
 	melee_damage_upper = 3
@@ -59,11 +59,12 @@
 	icon_dead = "snek_dead"
 	icon_rest = "snek_rest"
 	icon = 'modular_chomp/icons/mob/animal_ch.dmi'
+	// CHOMPEdit End
 
 	vore_active = 1
 	vore_capacity = 1
 	vore_default_mode = DM_DIGEST
-	vore_icons = SA_ICON_LIVING | SA_ICON_REST
+	vore_icons = SA_ICON_LIVING | SA_ICON_REST // CHOMPEdit
 	vore_escape_chance = 20
 	swallowTime = 50
 	vore_bump_chance = 10
@@ -76,7 +77,7 @@
 /mob/living/simple_mob/animal/passive/snake/init_vore()
 	if(!voremob_loaded)
 		return
-	.=..()
+	. = ..()
 	var/obj/belly/B = vore_selected
 	B.name = "stomach"
 	B.desc = "The snake coils its tail around you, pushing you to the ground and pinning you with its weight. It flicks its tongue at you, before pouncing onto your head, engulfing the upper half of your body with ease as it unhinges its jaw. With greedy swallows, it pulls you deeper, and deeper. The tight walls undulate rhythmically as the danger noodle rumbles contentedly at this new meal. The snake sends the last of you down with a deep swallow, hissing softly and closing its eyes as it enjoys its new meal, tucked away nicely under those beautiful, green scales."
@@ -108,7 +109,6 @@
 		"\the [name]'s tail lurches with the struggles of a live meal.")
 	B.examine_messages = list(
 		"\the [name]'s tail is swollen fat with a lump of prey it swallowed whole.")
-// CHOMPEdit End
 
 /datum/say_list/snake
 	emote_hear = list("hisses")
@@ -144,7 +144,7 @@
 
 	makes_dirt = FALSE
 
-	vore_default_mode = DM_HOLD // CHOMPEdit because Noodle isn't a meanie! Unless you struggle. Honestly I'm happy leaving it as digestion, but since he can bump nom now, maybe don't have gurgles on by default. -Ace
+	vore_default_mode = DM_HOLD
 
 	var/turns_since_scan = 0
 	var/obj/movement_target
@@ -163,7 +163,7 @@
 				movement_target = null
 			if( !movement_target || !(movement_target.loc in oview(src, 3)) )
 				movement_target = null
-				for(var/obj/item/weapon/reagent_containers/food/snacks/snakesnack/S in oview(src,3))
+				for(var/obj/item/reagent_containers/food/snacks/snakesnack/S in oview(src,3))
 					if(isturf(S.loc) || ishuman(S.loc))
 						movement_target = S
 						visible_emote("turns towards \the [movement_target] and slithers towards it.")
@@ -202,8 +202,8 @@
 		..()
 
 /mob/living/simple_mob/animal/passive/snake/python/noodle/attackby(var/obj/item/O, var/mob/user)
-	if(istype(O, /obj/item/weapon/reagent_containers/food/snacks/snakesnack))
-		visible_message("<span class='notice'>[user] feeds \the [O] to [src].</span>")
+	if(istype(O, /obj/item/reagent_containers/food/snacks/snakesnack))
+		visible_message(span_notice("[user] feeds \the [O] to [src]."))
 		qdel(O)
 	else
 		return ..()
@@ -211,36 +211,36 @@
 /*
  * Special snek-snax for Noodle!
  */
-/obj/item/weapon/reagent_containers/food/snacks/snakesnack
+/obj/item/reagent_containers/food/snacks/snakesnack
 	name = "sugar mouse"
 	desc = "A little mouse treat made of coloured sugar. Noodle loves these!"
 	var/snack_colour
 	icon = 'icons/mob/snake_vr.dmi'
 	icon_state = "snack_yellow"
 	nutriment_amt = 1
-	nutriment_desc = list("sugar" = 1)
+	nutriment_desc = list(REAGENT_ID_SUGAR = 1)
 
-/obj/item/weapon/reagent_containers/food/snacks/snakesnack/Initialize()
+/obj/item/reagent_containers/food/snacks/snakesnack/Initialize()
 	. = ..()
 	if(!snack_colour)
 		snack_colour = pick( list("yellow","green","pink","blue") )
 	icon_state = "snack_[snack_colour]"
 	desc = "A little mouse treat made of coloured sugar. Noodle loves these! This one is [snack_colour]."
-	reagents.add_reagent("sugar", 2)
+	reagents.add_reagent(REAGENT_ID_SUGAR, 2)
 
-/obj/item/weapon/storage/box/snakesnackbox
+/obj/item/storage/box/snakesnackbox
 	name = "box of Snake Snax"
 	desc = "A box containing Noodle's special sugermouse treats."
 	icon = 'icons/mob/snake_vr.dmi'
 	icon_state = "sneksnakbox"
 	storage_slots = 7
 
-/obj/item/weapon/storage/box/snakesnackbox/New()
-	new /obj/item/weapon/reagent_containers/food/snacks/snakesnack(src)
-	new /obj/item/weapon/reagent_containers/food/snacks/snakesnack(src)
-	new /obj/item/weapon/reagent_containers/food/snacks/snakesnack(src)
-	new /obj/item/weapon/reagent_containers/food/snacks/snakesnack(src)
-	new /obj/item/weapon/reagent_containers/food/snacks/snakesnack(src)
-	new /obj/item/weapon/reagent_containers/food/snacks/snakesnack(src)
-	new /obj/item/weapon/reagent_containers/food/snacks/snakesnack(src)
+/obj/item/storage/box/snakesnackbox/New()
+	new /obj/item/reagent_containers/food/snacks/snakesnack(src)
+	new /obj/item/reagent_containers/food/snacks/snakesnack(src)
+	new /obj/item/reagent_containers/food/snacks/snakesnack(src)
+	new /obj/item/reagent_containers/food/snacks/snakesnack(src)
+	new /obj/item/reagent_containers/food/snacks/snakesnack(src)
+	new /obj/item/reagent_containers/food/snacks/snakesnack(src)
+	new /obj/item/reagent_containers/food/snacks/snakesnack(src)
 	..()

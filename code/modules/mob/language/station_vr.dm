@@ -103,18 +103,19 @@
 	machine_understands = FALSE
 	flags = RESTRICTED | HIVEMIND //CHOMPstation Edit: Changining from WHITELISTED to RESTRICTED | Empathy should be shadekin exclusive. This probably breaks carbon shadekins ability to use emptathy, we dont use them and if it does it should be implemented like DIONA root talk. -shark
 
-/datum/language/marish // CHOMPedit
+//CHOMPAdd Start
+/datum/language/marish
 	name = LANGUAGE_MARISH
 	desc = "Where shadekin have a language rooted in empathy, there are still subtle tones and syllables that are as delicate as the emotions that shadekin normally communicate with."
 	speech_verb = "mars"
 	ask_verb = "mars"
 	exclaim_verb = "MARS"
-	colour = "shadekin"
 	key = "9"
+	colour = "marish"
+	syllables = list("mar", "mwrrr", "maaAr", "'aarrr", "wrurrl", "mmar")
 	machine_understands = FALSE
-	syllables = list("mar", "mwrrr", "maaAr", "'aarrr", "wrurrl", "mmar")  // Placeholder syllables until someone else has a better idea!
 
-/datum/language/slavic //CHOMP reAdd this language
+/datum/language/slavic
 	name = LANGUAGE_SLAVIC
 	desc = "The official language of the Independent Colonial Confederation of Gilgamesh, originally established in 2122 by the short-lived United Slavic Confederation on Earth."
 	speech_verb = "govorit" // All Russian for "says" "asks" and "shouts". Mostly here as a joke.
@@ -129,6 +130,7 @@
 		"ko", "ne", "en", "po", "tro", "ra", "li", "on", "byl", "cto", "eni", "ost", "ol", "ego",
 		"ver", "stv", "pro", "ski"
 	)
+//CHOMPAdd End
 
 /datum/language/drudakar
 	name = LANGUAGE_DRUDAKAR
@@ -178,6 +180,21 @@
 
 /datum/language/echosong/scramble(var/input, var/list/known_languages)
 	return stars(input)
+
+/datum/language/lleill
+	name = LANGUAGE_LLEILL
+	desc = "An ancient, gutteral language involving a lot of spitting."
+	speech_verb = "speaks"
+	ask_verb = "ponders"
+	exclaim_verb = "calls"
+	colour = "echosong"
+	key = "L"
+	syllables = list(
+		"llyn", "bren", "gwyn", "gwyr", "ddys", "dath", "llio", "cym", "ddrai", "ffyr", "lle", "dy", "eto", "uno", "dydno", "llego", "bryth", "ffair",
+		"ynys", "ed", "fore", "oe", "hen", "wladd", "ty", "nha", "dwy", "mae", "dros", "pob", "ia", "wyll", "gwdd", "fi"
+	)
+	machine_understands = FALSE
+	flags = WHITELISTED
 
 /datum/language/echosong/broadcast(var/mob/living/speaker, var/message, var/speaker_mask)
 	log_say("(INAUDIBLE) [message]", speaker)

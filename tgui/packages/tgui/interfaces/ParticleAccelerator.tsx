@@ -1,8 +1,7 @@
-import { BooleanLike } from 'common/react';
-
-import { useBackend } from '../backend';
-import { Box, Button, LabeledList, Section } from '../components';
-import { Window } from '../layouts';
+import { useBackend } from 'tgui/backend';
+import { Window } from 'tgui/layouts';
+import { Box, Button, LabeledList, Section } from 'tgui-core/components';
+import type { BooleanLike } from 'tgui-core/react';
 
 type Data = {
   assembled: BooleanLike;
@@ -21,11 +20,9 @@ export const ParticleAccelerator = (props) => {
             <LabeledList.Item
               label="Status"
               buttons={
-                <Button
-                  icon={'sync'}
-                  content={'Run Scan'}
-                  onClick={() => act('scan')}
-                />
+                <Button icon={'sync'} onClick={() => act('scan')}>
+                  Run Scan
+                </Button>
               }
             >
               <Box color={assembled ? 'good' : 'bad'}>
@@ -41,11 +38,12 @@ export const ParticleAccelerator = (props) => {
             <LabeledList.Item label="Power">
               <Button
                 icon={power ? 'power-off' : 'times'}
-                content={power ? 'On' : 'Off'}
                 selected={power}
                 disabled={!assembled}
                 onClick={() => act('power')}
-              />
+              >
+                {power ? 'On' : 'Off'}
+              </Button>
             </LabeledList.Item>
             <LabeledList.Item label="Particle Strength">
               <Button

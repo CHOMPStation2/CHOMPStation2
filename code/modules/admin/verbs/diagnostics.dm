@@ -1,13 +1,13 @@
 /client/proc/air_report()
-	set category = "Debug"
+	set category = "Debug.Investigate"
 	set name = "Show Air Report"
 
-	if(!master_controller || !air_master)
-		tgui_alert_async(usr,"Master_controller or air_master not found.","Air Report")
+	if(!master_controller || !SSair)
+		tgui_alert_async(usr,"Master_controller or SSair not found.","Air Report")
 		return
 
-	var/active_groups = air_master.active_zones
-	var/inactive_groups = air_master.zones.len - active_groups
+	var/active_groups = SSair.active_zones
+	var/inactive_groups = SSair.zones.len - active_groups
 
 	var/hotspots = 0
 	for(var/obj/fire/hotspot in world)
@@ -15,7 +15,7 @@
 
 	var/active_on_main_station = 0
 	var/inactive_on_main_station = 0
-	for(var/zone/zone in air_master.zones)
+	for(var/zone/zone in SSair.zones)
 		var/turf/simulated/turf = locate() in zone.contents
 		if(turf?.z in using_map.station_levels)
 			if(zone.needs_update)
@@ -23,10 +23,10 @@
 			else
 				inactive_on_main_station++
 
-	var/output = {"<B>AIR SYSTEMS REPORT</B><HR>
+	var/output = {"<html><B>AIR SYSTEMS REPORT</B><HR>
 <B>General Processing Data</B><BR>
-	Cycle: [air_master.current_cycle]<br>
-	Groups: [air_master.zones.len]<BR>
+	Cycle: [SSair.current_cycle]<br>
+	Groups: [SSair.zones.len]<BR>
 ---- <I>Active:</I> [active_groups]<BR>
 ---- <I>Inactive:</I> [inactive_groups]<BR><br>
 ---- <I>Active on station:</i> [active_on_main_station]<br>
@@ -36,13 +36,13 @@
 	Hotspot Processing: [hotspots]<BR>
 <br>
 <B>Geometry Processing Data</B><BR>
-	Tile Update: [air_master.tiles_to_update.len]<BR>
+	Tile Update: [SSair.tiles_to_update.len]<BR></html>
 "}
 
 	usr << browse(output,"window=airreport")
 
 /client/proc/fix_next_move()
-	set category = "Debug"
+	set category = "Debug.Game"
 	set name = "Unfreeze Everyone"
 	var/largest_move_time = 0
 	var/largest_click_time = 0
@@ -73,7 +73,7 @@
 	return
 
 /client/proc/radio_report()
-	set category = "Debug"
+	set category = "Debug.Game"
 	set name = "Radio report"
 
 	var/output = "<b>Radio Report</b><hr>"
@@ -95,12 +95,12 @@
 				else
 					output += "&nbsp;&nbsp;&nbsp;&nbsp;[device]<br>"
 
-	usr << browse(output,"window=radioreport")
+	usr << browse("<html>[output]</html>","window=radioreport")
 	feedback_add_details("admin_verb","RR") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/proc/reload_admins()
 	set name = "Reload Admins"
-	set category = "Debug"
+	set category = "Debug.Server"
 
 	if(!check_rights(R_SERVER))	return
 
@@ -110,7 +110,7 @@
 
 /client/proc/reload_eventMs()
 	set name = "Reload Event Managers"
-	set category = "Debug"
+	set category = "Debug.Server"
 
 	if(!check_rights(R_SERVER)) return
 
@@ -121,17 +121,17 @@
 //todo:
 /client/proc/jump_to_dead_group()
 	set name = "Jump to dead group"
-	set category = "Debug"
+	set category = "Debug.Game"
 		/*
 	if(!holder)
 		to_chat(src, "Only administrators may use this command.")
 		return
 
-	if(!air_master)
+	if(!SSair)
 		to_chat(usr, "Cannot find air_system")
 		return
 	var/datum/air_group/dead_groups = list()
-	for(var/datum/air_group/group in air_master.air_groups)
+	for(var/datum/air_group/group in SSair.air_groups)
 		if (!group.group_processing)
 			dead_groups += group
 	var/datum/air_group/dest_group = pick(dead_groups)
@@ -143,13 +143,13 @@
 /client/proc/kill_airgroup()
 	set name = "Kill Local Airgroup"
 	set desc = "Use this to allow manual manupliation of atmospherics."
-	set category = "Debug"
+	set category = "Debug.Dangerous"
 	/*
 	if(!holder)
 		to_chat(src, "Only administrators may use this command.")
 		return
 
-	if(!air_master)
+	if(!SSair)
 		to_chat(usr, "Cannot find air_system")
 		return
 
@@ -166,22 +166,22 @@
 /client/proc/print_jobban_old()
 	set name = "Print Jobban Log"
 	set desc = "This spams all the active jobban entries for the current round to standard output."
-	set category = "Debug"
+	set category = "Debug.Investigate"
 
-	to_chat(usr, "<b>Jobbans active in this round.</b>")
+	to_chat(usr, span_bold("Jobbans active in this round."))
 	for(var/t in jobban_keylist)
 		to_chat(usr, "[t]")
 
 /client/proc/print_jobban_old_filter()
 	set name = "Search Jobban Log"
 	set desc = "This searches all the active jobban entries for the current round and outputs the results to standard output."
-	set category = "Debug"
+	set category = "Debug.Investigate"
 
 	var/job_filter = tgui_input_text(usr, "Contains what?","Job Filter")
 	if(!job_filter)
 		return
 
-	to_chat(usr, "<b>Jobbans active in this round.</b>")
+	to_chat(usr, span_bold("Jobbans active in this round."))
 	for(var/t in jobban_keylist)
 		if(findtext(t, job_filter))
 			to_chat(usr, "[t]")

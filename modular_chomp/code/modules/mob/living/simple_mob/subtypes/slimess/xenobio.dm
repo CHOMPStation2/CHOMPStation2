@@ -6,7 +6,7 @@
 	color = "#968473"
 	slime_color = "sepia"
 	coretype = /obj/item/slime_extract/sepia
-	reagent_injected = "stoxin"
+	reagent_injected = REAGENT_ID_STOXIN
 
 	mutation_chance = 100
 
@@ -26,8 +26,8 @@
 /decl/chemical_reaction/instant/slime/senseenhancer
 	name = "Slime Sense Enhancer"
 	id = "sepia_sh"
-	result = "senseenhancer"
-	required_reagents = list("phoron" = 5)
+	result = REAGENT_ID_SENSEENHANCER
+	required_reagents = list(REAGENT_ID_PHORON = 5)
 	result_amount = 30
 	required = /obj/item/slime_extract/sepia
 
@@ -35,12 +35,12 @@
 	name = "Secert Slime "
 	id = "sepia_swapm"
 	result = "change_secert"
-	required_reagents = list("blood" = 5, "water" = 5)
+	required_reagents = list(REAGENT_ID_BLOOD = 5, REAGENT_ID_WATER = 5)
 	result_amount = 1
 	required = /obj/item/slime_extract/sepia
 
 /decl/chemical_reaction/instant/slime/secertslime/on_reaction(var/datum/reagents/holder)
-	holder.my_atom.visible_message("<span class='warning'>Infused with the mixture, the core begins to quiver and grow, and soon a new baby slime emerges from it!</span>")
+	holder.my_atom.visible_message(span_warning("Infused with the mixture, the core begins to quiver and grow, and soon a new baby slime emerges from it!"))
 	new /mob/living/simple_mob/slime/xenobio/redspace(get_turf(holder.my_atom))
 	..()
 
@@ -48,12 +48,12 @@
 	name = "Slime Spawn"
 	id = "m_sepia_spawn"
 	result = null
-	required_reagents = list("slimejelly" = 5)
+	required_reagents = list(REAGENT_ID_SLIMEJELLY = 5)
 	result_amount = 1
 	required = /obj/item/slime_extract/sepia
 
 /decl/chemical_reaction/instant/slime/sepia_new_slime/on_reaction(var/datum/reagents/holder)
-	holder.my_atom.visible_message("<span class='warning'>Infused with slime jelly, the core begins to quiver and grow, and soon a new baby slime emerges from it!</span>")
+	holder.my_atom.visible_message(span_warning("Infused with slime jelly, the core begins to quiver and grow, and soon a new baby slime emerges from it!"))
 	new /mob/living/simple_mob/slime/xenobio/sepia(get_turf(holder.my_atom))
 	..()
 
@@ -64,7 +64,7 @@
 	color = "#A50021"
 	slime_color = "redspace"
 	coretype = /obj/item/slime_extract/redspace
-	reagent_injected = "mindbreaker"
+	reagent_injected = REAGENT_ID_MINDBREAKER
 
 	mutation_chance = 0
 
@@ -85,26 +85,26 @@
 /decl/chemical_reaction/instant/slime/redspace_fire
 	name = "Slime Living Fire"
 	id = "m_liquid_fire"
-	result = "neoliquidfire"
-	required_reagents = list("phoron" = 5)
+	result = REAGENT_ID_NEOLIQUIDFIRE
+	required_reagents = list(REAGENT_ID_PHORON = 5)
 	result_amount = 30
 	required = /obj/item/slime_extract/redspace
 
 /decl/chemical_reaction/instant/slime/soulstone
 	name = "Slime Soulstone"
 	id = "m_redspace_soulstone"
-	required_reagents = list("blood" = 5)
+	required_reagents = list(REAGENT_ID_BLOOD = 5)
 	result_amount = 1
 	required = /obj/item/slime_extract/redspace
 
 /decl/chemical_reaction/instant/slime/soulstone/on_reaction(var/datum/reagents/holder)
-	new /obj/item/device/soulstone(get_turf(holder.my_atom))
+	new /obj/item/soulstone(get_turf(holder.my_atom))
 	..()
 
 /decl/chemical_reaction/instant/slime/obj/item/slime_extract/redspace_smoke
 	name = "Slime Smoke"
 	id = "m_redspace_smoke"
-	required_reagents = list("water" = 5)
+	required_reagents = list(REAGENT_ID_WATER = 5)
 	result_amount = 1
 	required = /obj/item/slime_extract/redspace
 
@@ -122,8 +122,8 @@
 /decl/chemical_reaction/instant/slime/slime_mindbreaker
 	name = "Slime Pyrotoxin"
 	id = "m_redspace_mindbreaker"
-	result = "mindbreaker"
-	required_reagents = list("slimejelly" = 5)
+	result = REAGENT_ID_MINDBREAKER
+	required_reagents = list(REAGENT_ID_SLIMEJELLY = 5)
 	result_amount = 30
 	required = /obj/item/slime_extract/redspace
 
@@ -153,15 +153,15 @@
 /decl/chemical_reaction/instant/slime/dark_neofire
 	name = "Slime Healing Liquid"
 	id = "m_liquid_healing"
-	result = "healing_nanites"
-	required_reagents = list("neoliquidfire" = 5)
+	result = REAGENT_ID_HEALINGNANITES
+	required_reagents = list(REAGENT_ID_NEOLIQUIDFIRE = 5)
 	result_amount = 30
 	required = /obj/item/slime_extract/dark
 
 /decl/chemical_reaction/instant/slime/dark_liquidfire
 	name = "Slime Secert Guard"
 	id = "m_slime_guardian"
-	required_reagents = list("liquidfire" = 5)
+	required_reagents = list(REAGENT_ID_LIQUIDFIRE = 5)
 	result_amount = 1
 	required = /obj/item/slime_extract/dark
 
@@ -174,7 +174,7 @@
 /decl/chemical_reaction/instant/slime/dark_deathblood
 	name = "Slime Secert Painite"
 	id = "m_slime_painite"
-	required_reagents = list("deathblood" = 5)
+	required_reagents = list(REAGENT_ID_DEATHBLOOD = 5)
 	result_amount = 1
 	required = /obj/item/slime_extract/dark
 
@@ -185,7 +185,7 @@
 /decl/chemical_reaction/instant/slime/dark_liquidlife
 	name = "Slime Secert Overcharge"
 	id = "m_slime_darkspeed"
-	required_reagents = list("liquidlife" = 5)
+	required_reagents = list(REAGENT_ID_LIQUIDLIFE = 5)
 	result_amount = 1
 	required = /obj/item/slime_extract/dark
 
@@ -198,19 +198,19 @@
 /decl/chemical_reaction/instant/slime/dark_carpotoxin
 	name = "Slime Dark Secert "
 	id = "m_fish_slime"
-	required_reagents = list("carpotoxin" = 5)
+	required_reagents = list(REAGENT_ID_CARPOTOXIN = 5)
 	result_amount = 1
 	required = /obj/item/slime_extract/dark
 
 /decl/chemical_reaction/instant/slime/dark_carpotoxin/on_reaction(var/datum/reagents/holder)
-	holder.my_atom.visible_message("<span class='warning'>Infused with slime jelly, the core begins to quiver and grow, and soon a new baby slime emerges from it!</span>")
+	holder.my_atom.visible_message(span_warning("Infused with slime jelly, the core begins to quiver and grow, and soon a new baby slime emerges from it!"))
 	new /mob/living/simple_mob/slime/xenobio/oceanic(get_turf(holder.my_atom))
 	..()
 
 /decl/chemical_reaction/instant/slime/dark_spidertoxin
 	name = "Slime Secert Dark Spooder"
 	id = "m_slime_darkspooder"
-	required_reagents = list("spidertoxin" = 5)
+	required_reagents = list(REAGENT_ID_SPIDERTOXIN = 5)
 	result_amount = 1
 	required = /obj/item/slime_extract/dark
 
@@ -221,7 +221,7 @@
 /decl/chemical_reaction/instant/slime/dark_blood
 	name = "Slime Secert Void Opal"
 	id = "m_slime_voidopal"
-	required_reagents = list("blood" = 5)
+	required_reagents = list(REAGENT_ID_BLOOD = 5)
 	result_amount = 1
 	required = /obj/item/slime_extract/dark
 
@@ -253,8 +253,8 @@
 /decl/chemical_reaction/instant/slime/plague_toxin
 	name = "Slime Living Fire"
 	id = "m_plague_toxin"
-	result = "neurophage_nanites"
-	required_reagents = list("phoron" = 5)
+	result = REAGENT_ID_NEUROPHAGENANITES
+	required_reagents = list(REAGENT_ID_PHORON = 5)
 	result_amount = 30
 	required = /obj/item/slime_extract/plague
 
@@ -262,19 +262,19 @@
 /decl/chemical_reaction/instant/slime/virusdish
 	name = "Virus dish"
 	id = "m_plague_dish"
-	required_reagents = list("blood" = 5)
+	required_reagents = list(REAGENT_ID_BLOOD = 5)
 	result_amount = 1
 	required = /obj/item/slime_extract/plague
 
 /decl/chemical_reaction/instant/slime/virusdish/on_reaction(var/datum/reagents/holder)
-	new /obj/item/weapon/virusdish(get_turf(holder.my_atom))
+	// new /obj/item/virusdish(get_turf(holder.my_atom))
 	..()
 
 /decl/chemical_reaction/instant/slime/obj/item/slime_extract/plague_jelly
 	name = "Slime Smoke"
 	id = "m_slimejelly_alt"
-	result = "slimejelly"
-	required_reagents = list("water" = 5)
+	result = REAGENT_ID_SLIMEJELLY
+	required_reagents = list(REAGENT_ID_WATER = 5)
 	result_amount = 30
 	required = /obj/item/slime_extract/plague
 
@@ -287,7 +287,7 @@
 	rainbow_core_candidate = FALSE //For health and safety
 	mutation_chance = 0
 
-	reagent_injected = "carpotoxin"
+	reagent_injected = REAGENT_ID_CARPOTOXIN
 
 	slime_mutation = list(
 			/mob/living/simple_mob/slime/xenobio/sepia,
@@ -313,8 +313,8 @@
 	name = "Aura Healing Tide"
 	desc = "You are filled with an overwhelming energy."
 
-	on_created_text = "<span class='critical'>Your body begins to focus on recovering!</span>"
-	on_expired_text = "<span class='notice'>The healing subsides.</span>"
+	on_created_text = span_critical("Your body begins to focus on recovering!")
+	on_expired_text = span_notice("The healing subsides.")
 	stacks = MODIFIER_STACK_FORBID
 	aura_max_distance = 4
 
@@ -330,7 +330,7 @@
 /decl/chemical_reaction/instant/slime/carpfren
 	name = "Carp Friend"
 	id = "m_carp_friends"
-	required_reagents = list("blood" = 5)
+	required_reagents = list(REAGENT_ID_BLOOD = 5)
 	result_amount = 1
 	required = /obj/item/slime_extract/oceanic
 
@@ -341,23 +341,23 @@
 /decl/chemical_reaction/instant/slime/oceancarp
 	name = "Slime Carptoxi"
 	id = "m_slime_carptox"
-	required_reagents = list("slimejelly" = 5)
-	result = "carpotoxin"
+	required_reagents = list(REAGENT_ID_SLIMEJELLY = 5)
+	result = REAGENT_ID_CARPOTOXIN
 	result_amount = 30
 	required = /obj/item/slime_extract/oceanic
 
 /decl/chemical_reaction/instant/slime/waterdupe
 	name = "Water Duplication"
 	id = "m_slime_water"
-	required_reagents = list("water" = 5)
-	result = "water"
+	required_reagents = list(REAGENT_ID_WATER = 5)
+	result = REAGENT_ID_WATER
 	result_amount = 30
 	required = /obj/item/slime_extract/oceanic
 
 /decl/chemical_reaction/instant/slime/oceanboon
 	name = "Carp Boon"
 	id = "m_carp_boon"
-	required_reagents = list("phoron" = 5)
+	required_reagents = list(REAGENT_ID_PHORON = 5)
 	result_amount = 1
 	required = /obj/item/slime_extract/oceanic
 
@@ -369,12 +369,12 @@
 /decl/chemical_reaction/instant/slime/warplague
 	name = "Nuclear Slime Summon"
 	id = "m_nuclear_slime"
-	required_reagents = list("mindbreaker" = 5)
+	required_reagents = list(REAGENT_ID_MINDBREAKER = 5)
 	result_amount = 1
 	required = /obj/item/slime_extract/plague
 
 /decl/chemical_reaction/instant/slime/warplague/on_reaction(var/datum/reagents/holder)
-	holder.my_atom.visible_message("<span class='warning'>Infused with slime jelly, the core begins to quiver and grow, and soon a new baby slime emerges from it!</span>")
+	holder.my_atom.visible_message(span_warning("Infused with slime jelly, the core begins to quiver and grow, and soon a new baby slime emerges from it!"))
 	new /mob/living/simple_mob/slime/xenobio/nuclear(get_turf(holder.my_atom))
 	..()
 
@@ -408,8 +408,8 @@
 	name = "Radiation Hide"
 	desc = "Your body defensivly warps."
 
-	on_created_text = "<span class='critical'>Your body strangly mutates!</span>"
-	on_expired_text = "<span class='notice'>Your body returns to normal.</span>"
+	on_created_text = span_critical("Your body strangly mutates!")
+	on_expired_text = span_notice("Your body returns to normal.")
 	stacks = MODIFIER_STACK_FORBID
 	aura_max_distance = 4
 
@@ -428,14 +428,14 @@
 /decl/chemical_reaction/instant/slime/nuclear_radpulse
 	name = "Slime Radiation Pulse"
 	id = "m_green_radpulse"
-	required_reagents = list("phoron" = 5)
+	required_reagents = list(REAGENT_ID_PHORON = 5)
 	result_amount = 1
 	required = /obj/item/slime_extract/nuclear
 
 /decl/chemical_reaction/instant/slime/nuclear_radpulse/on_reaction(var/datum/reagents/holder)
 	log_and_message_admins("Green extract reaction (radiation pulse) has been activated in [get_area(holder.my_atom)].  Last fingerprints: [holder.my_atom.fingerprintslast]")
 	playsound(holder.my_atom, 'sound/effects/phasein.ogg', 75, 1)
-	holder.my_atom.visible_message("<span class='danger'>\The [holder.my_atom] begins to vibrate violently!</span>")
+	holder.my_atom.visible_message(span_danger("\The [holder.my_atom] begins to vibrate violently!"))
 	spawn(5 SECONDS)
 		SSradiation.flat_radiate(src, 30, 7, TRUE)
 	..()
@@ -444,7 +444,7 @@
 /decl/chemical_reaction/instant/slime/nuclear_emitter
 	name = "Slime Radiation Emitter"
 	id = "m_green_emitter"
-	required_reagents = list("blood" = 5)
+	required_reagents = list(REAGENT_ID_BLOOD = 5)
 	result_amount = 1
 	required = /obj/item/slime_extract/green
 
@@ -457,8 +457,8 @@
 /decl/chemical_reaction/instant/slime/nuclear_radium
 	name = "Slime Radium"
 	id = "m_green_radium"
-	result = "radium"
-	required_reagents = list("water" = 5)
+	result = REAGENT_ID_RADIUM
+	required_reagents = list(REAGENT_ID_WATER = 5)
 	result_amount = 30
 	required = /obj/item/slime_extract/green
 
@@ -466,7 +466,7 @@
 /decl/chemical_reaction/instant/slime/nuclear_uranium
 	name = "Slime Uranium"
 	id = "m_green_uranium"
-	required_reagents = list("slimejelly" = 5)
+	required_reagents = list(REAGENT_ID_SLIMEJELLY = 5)
 	result_amount = 1
 	required = /obj/item/slime_extract/green
 
@@ -497,23 +497,23 @@
 /decl/chemical_reaction/instant/slime/dreamscale
 	name = "dream scale creation "
 	id = "m_dreamscale_slime"
-	required_reagents = list("water" = 5)
+	required_reagents = list(REAGENT_ID_WATER = 5)
 	result_amount = 1
 	required = /obj/item/slime_extract/dream
 
 /decl/chemical_reaction/instant/slime/dreamscale/on_reaction(var/datum/reagents/holder)
-	new /obj/item/stack/material/uranium(get_turf(holder.my_atom), 10)
+	new /obj/item/stack/material/dreamscale(get_turf(holder.my_atom), 10)
 	..()
 
 /decl/chemical_reaction/instant/slime/nightmareslime
 	name = "Nightmare Slime Summon "
 	id = "m_nightmare_slime"
-	required_reagents = list("blood" = 5, "phoron" = 5, "slimejelly" = 5)
+	required_reagents = list(REAGENT_ID_BLOOD = 5, REAGENT_ID_PHORON = 5, REAGENT_ID_SLIMEJELLY = 5)
 	result_amount = 1
 	required = /obj/item/slime_extract/dream
 
 /decl/chemical_reaction/instant/slime/nightmareslime/on_reaction(var/datum/reagents/holder)
-	holder.my_atom.visible_message("<span class='warning'>Infused with slime jelly, the core begins to quiver and grow, and soon a new baby slime emerges from it!</span>")
+	holder.my_atom.visible_message(span_warning("Infused with slime jelly, the core begins to quiver and grow, and soon a new baby slime emerges from it!"))
 	new /mob/living/simple_mob/slime/xenobio/nightmare(get_turf(holder.my_atom))
 	..()
 
@@ -542,16 +542,28 @@
 	for(var/mob/living/carbon/L in view(src, 3))
 		if(L.stat == DEAD)
 			continue
-		L.add_modifier(/datum/modifier/doomed, null, src)
-		L.add_modifier(/datum/modifier/dreamarmor, null, src)
+		L.add_modifier(/datum/modifier/aura/dreamarmor, null, src)
 
-/datum/modifier/dreamarmor
+/datum/modifier/aura/dreamarmor
 	name = "dream armor"
 	desc = "You are highly resistant to damage."
 	stacks = MODIFIER_STACK_FORBID
 
 	mob_overlay_state = "cult_aura"
-	incoming_damage_percent = 0.3
+	incoming_damage_percent = 0.5
+
+/datum/modifier/aura/dreamarmor/tick()
+	if(holder.stat == DEAD)
+		expire()
+
+	if(ishuman(holder)) // Robolimbs need this code sadly.
+		var/mob/living/carbon/human/H = holder
+		for(var/obj/item/organ/external/E in H.organs)
+			var/obj/item/organ/external/O = E
+			O.heal_damage(-2, -2, 0, -1)
+	else
+		holder.adjustBruteLoss(5)
+		holder.adjustFireLoss(5)
 
 /obj/item/slime_extract/nightmare
 	name = "nightmare slime extract"
@@ -562,7 +574,7 @@
 /decl/chemical_reaction/instant/slime/nightmarewater
 	name = "nightmare water"
 	id = "m_nightmare_water"
-	required_reagents = list("water" = 5)
+	required_reagents = list(REAGENT_ID_WATER = 5)
 	result_amount = 1
 	required = /obj/item/slime_extract/nightmare
 
@@ -575,7 +587,7 @@
 /decl/chemical_reaction/instant/slime/nightmarejelly
 	name = "nightmare jelly"
 	id = "m_nightmare_jelly"
-	required_reagents = list("slimejelly" = 5)
+	required_reagents = list(REAGENT_ID_SLIMEJELLY = 5)
 	result_amount = 1
 	required = /obj/item/slime_extract/nightmare
 
@@ -587,7 +599,7 @@
 /decl/chemical_reaction/instant/slime/nightmareblood
 	name = "nightmare blood"
 	id = "m_nightmare_blood"
-	required_reagents = list("blood" = 5)
+	required_reagents = list(REAGENT_ID_BLOOD = 5)
 	result_amount = 1
 	required = /obj/item/slime_extract/nightmare
 
@@ -598,7 +610,7 @@
 /decl/chemical_reaction/instant/slime/nightmarephoron
 	name = "nightmare phoron"
 	id = "m_nightmare_phoron"
-	required_reagents = list("phoron" = 5)
+	required_reagents = list(REAGENT_ID_PHORON = 5)
 	result_amount = 1
 	required = /obj/item/slime_extract/nightmare
 
@@ -613,12 +625,12 @@
 /decl/chemical_reaction/instant/slime/redspace_sound
 	name = "Slime Sound Creation"
 	id = "m_make_sound"
-	required_reagents = list("mindbreaker" = 5)
+	required_reagents = list(REAGENT_ID_MINDBREAKER = 5)
 	result_amount = 1
 	required = /obj/item/slime_extract/redspace
 
 /decl/chemical_reaction/instant/slime/redspace_sound/on_reaction(var/datum/reagents/holder)
-	holder.my_atom.visible_message("<span class='warning'>Infused with the mixture, the core begins to quiver and grow, and soon a new baby slime emerges from it!</span>")
+	holder.my_atom.visible_message(span_warning("Infused with the mixture, the core begins to quiver and grow, and soon a new baby slime emerges from it!"))
 	new /mob/living/simple_mob/slime/xenobio/sound(get_turf(holder.my_atom))
 	..()
 
@@ -652,8 +664,8 @@
 	name = "Soothing Song"
 	desc = "Your body is soothed."
 
-	on_created_text = "<span class='critical'>Your mind is put to rest!</span>"
-	on_expired_text = "<span class='notice'>Your mind functions normally.</span>"
+	on_created_text = span_critical("Your mind is put to rest!")
+	on_expired_text = span_notice("Your mind functions normally.")
 	stacks = MODIFIER_STACK_FORBID
 	aura_max_distance = 4
 
@@ -669,7 +681,7 @@
 /decl/chemical_reaction/instant/slime/soundblood
 	name = "sound blood"
 	id = "m_sound_blood"
-	required_reagents = list("blood" = 5)
+	required_reagents = list(REAGENT_ID_BLOOD = 5)
 	result_amount = 1
 	required = /obj/item/slime_extract/sound
 
@@ -680,7 +692,7 @@
 /decl/chemical_reaction/instant/slime/soundphoron
 	name = "sound blood"
 	id = "m_sound_blood"
-	required_reagents = list("phoron" = 5)
+	required_reagents = list(REAGENT_ID_PHORON = 5)
 	result_amount = 1
 	required = /obj/item/slime_extract/sound
 
@@ -692,19 +704,19 @@
 /decl/chemical_reaction/instant/slime/soundwater
 	name = "sound water"
 	id = "m_sound_water"
-	required_reagents = list("water" = 5)
+	required_reagents = list(REAGENT_ID_WATER = 5)
 	result_amount = 1
 	required = /obj/item/slime_extract/sound
 
 /decl/chemical_reaction/instant/slime/soundwater/on_reaction(var/datum/reagents/holder)
-	holder.my_atom.visible_message("<span class='warning'>Infused with the mixture, the core begins to quiver and grow, and soon a new baby slime emerges from it!</span>")
+	holder.my_atom.visible_message(span_warning("Infused with the mixture, the core begins to quiver and grow, and soon a new baby slime emerges from it!"))
 	new /mob/living/simple_mob/slime/xenobio/sound(get_turf(holder.my_atom))
 	..()
 
 /decl/chemical_reaction/instant/slime/soundjelly
 	name = "sound slimejelly"
 	id = "m_sound_slimejelly"
-	required_reagents = list("slimejelly" = 5)
+	required_reagents = list(REAGENT_ID_SLIMEJELLY = 5)
 	result_amount = 1
 	required = /obj/item/slime_extract/sound
 

@@ -1,0 +1,2766 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aQ" = (
+/obj/effect/floor_decal/corner/red/diagonal,
+/obj/structure/table/standard,
+/obj/item/reagent_containers/food/drinks/bottle/vermouth{
+	pixel_x = -9;
+	pixel_y = 1
+	},
+/obj/item/reagent_containers/food/drinks/bottle/rum{
+	pixel_x = 10;
+	pixel_y = 0
+	},
+/obj/item/reagent_containers/food/drinks/bottle/wine{
+	pixel_x = 0;
+	pixel_y = 12
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/neutral,
+/area/shuttle/metawhiteship/food)
+"aS" = (
+/obj/machinery/door/airlock/glass_external/public,
+/obj/machinery/airlock_sensor/airlock_exterior/shuttle{
+	dir = 2;
+	pixel_x = 25;
+	pixel_y = -9
+	},
+/obj/effect/map_helper/airlock/door/ext_door,
+/obj/effect/map_helper/airlock/sensor/ext_sensor,
+/turf/simulated/floor/plating,
+/area/shuttle/metawhiteship/food)
+"ca" = (
+/obj/effect/floor_decal/industrial/outline,
+/obj/structure/table/rack,
+/obj/item/reagent_containers/glass/bucket,
+/obj/item/mop,
+/obj/item/storage/bag/trash,
+/turf/simulated/floor/tiled,
+/area/shuttle/metawhiteship/cargo)
+"cQ" = (
+/obj/structure/fans/tiny,
+/obj/machinery/door/blast/regular{
+	pixel_y = 0;
+	dir = 4;
+	id = "aftmetawhiteship"
+	},
+/turf/simulated/floor/plating,
+/area/shuttle/metawhiteship/cargo)
+"cU" = (
+/obj/effect/floor_decal/industrial/arrows{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 1
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled,
+/area/shuttle/metawhiteship/cargo)
+"dk" = (
+/obj/effect/floor_decal/corner/blue/full,
+/obj/machinery/computer/ship/sensors{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/dark,
+/area/shuttle/metawhiteship/bridge)
+"dx" = (
+/obj/machinery/door/airlock/glass,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled,
+/area/shuttle/metawhiteship/food)
+"dF" = (
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/structure/closet/emcloset,
+/turf/simulated/floor/plating,
+/area/shuttle/metawhiteship/eng)
+"et" = (
+/obj/structure/table/rack,
+/obj/item/storage/belt/utility/full/multitool,
+/obj/item/radio/off,
+/obj/item/radio/off{
+	pixel_x = -4;
+	pixel_y = 4
+	},
+/obj/effect/floor_decal/industrial/outline,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled,
+/area/shuttle/metawhiteship/food)
+"eE" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel,
+/turf/simulated/wall/thull,
+/area/shuttle/metawhiteship/eng)
+"eQ" = (
+/obj/structure/closet/crate/freezer/rations,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/dark,
+/area/shuttle/metawhiteship/cargo)
+"eS" = (
+/turf/template_noop,
+/area/template_noop)
+"fr" = (
+/obj/machinery/atmospherics/portables_connector/fuel{
+	dir = 1
+	},
+/obj/machinery/portable_atmospherics/canister/phoron,
+/obj/machinery/light/small{
+	dir = 2
+	},
+/turf/simulated/floor/plating,
+/area/shuttle/metawhiteship/eng)
+"fy" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 4
+	},
+/obj/structure/cable{
+	icon_state = "1-8"
+	},
+/obj/structure/cable{
+	icon_state = "2-8"
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/plating,
+/area/shuttle/metawhiteship/eng)
+"fJ" = (
+/obj/effect/floor_decal/corner/grey/diagonal,
+/obj/structure/table/standard,
+/obj/item/reagent_containers/glass/beaker/measuring_cup{
+	pixel_x = 6;
+	pixel_y = 10
+	},
+/obj/item/reagent_containers/food/condiment/small/peppermill{
+	pixel_x = -9;
+	pixel_y = 8
+	},
+/obj/item/reagent_containers/food/condiment/small/saltshaker{
+	pixel_x = -9;
+	pixel_y = 0
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/white,
+/area/shuttle/metawhiteship/food)
+"fZ" = (
+/obj/effect/floor_decal/industrial/warning/color{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 1
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/structure/cable{
+	icon_state = "2-8"
+	},
+/obj/machinery/light/small{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/alarm{
+	pixel_y = 22;
+	locked = 0
+	},
+/turf/simulated/floor/tiled,
+/area/shuttle/metawhiteship/food)
+"gb" = (
+/obj/machinery/atmospherics/unary/vent_pump/on,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled,
+/area/shuttle/metawhiteship/cargo)
+"gi" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/blood,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled,
+/area/shuttle/metawhiteship/bridge)
+"gq" = (
+/obj/effect/floor_decal/corner/grey/diagonal,
+/obj/machinery/atmospherics/unary/vent_pump/on,
+/obj/machinery/light/small{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/white,
+/area/shuttle/metawhiteship/food)
+"gs" = (
+/obj/effect/floor_decal/industrial/bot_outline/corner{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/blood/oil,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/dark,
+/area/shuttle/metawhiteship/cargo)
+"hF" = (
+/obj/effect/floor_decal/industrial/warning/color{
+	dir = 5
+	},
+/obj/machinery/atmospherics/pipe/manifold4w/hidden/supply,
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/structure/cable{
+	icon_state = "1-8"
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled,
+/area/shuttle/metawhiteship/food)
+"im" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel{
+	dir = 10
+	},
+/turf/simulated/wall/thull,
+/area/shuttle/metawhiteship/eng)
+"io" = (
+/obj/effect/floor_decal/industrial/arrows{
+	dir = 2
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled,
+/area/shuttle/metawhiteship/cargo)
+"iu" = (
+/obj/effect/floor_decal/industrial/outline,
+/obj/structure/reagent_dispensers/fueltank,
+/turf/simulated/floor/tiled,
+/area/shuttle/metawhiteship/cargo)
+"iC" = (
+/obj/machinery/space_heater,
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/dark,
+/area/shuttle/metawhiteship/eng)
+"iS" = (
+/obj/effect/floor_decal/industrial/bot_outline/corner{
+	dir = 1
+	},
+/obj/machinery/button/remote/blast_door{
+	id = "foremetawhiteship";
+	pixel_y = 0;
+	pixel_x = -24
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/dark,
+/area/shuttle/metawhiteship/cargo)
+"jn" = (
+/obj/effect/floor_decal/corner/green,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/hydro,
+/area/shuttle/metawhiteship/food)
+"jI" = (
+/obj/machinery/door/airlock/glass_external/public,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/plating,
+/area/shuttle/metawhiteship/eng)
+"jK" = (
+/obj/structure/grille,
+/obj/structure/window/titanium/full,
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel,
+/obj/machinery/door/blast/regular/open{
+	id = "metawhiteshiplockdown"
+	},
+/turf/simulated/floor/plating,
+/area/shuttle/metawhiteship/eng)
+"jQ" = (
+/obj/structure/fuel_port/heavy{
+	pixel_y = -30
+	},
+/obj/machinery/atmospherics/portables_connector/fuel{
+	dir = 1
+	},
+/obj/machinery/portable_atmospherics/canister/phoron,
+/turf/simulated/floor/plating,
+/area/shuttle/metawhiteship/eng)
+"jW" = (
+/obj/machinery/embedded_controller/radio/docking_port_multi{
+	child_names_txt = "Port Airlock Control;Starboard Airlock Control;Aft Airlock Control";
+	child_tags_txt = "whiteship_docking_port;whiteship_docking_star";
+	dir = 8;
+	id_tag = "metawhiteship_docker";
+	name = "Whiteship Master Docking Controller";
+	pixel_y = -15;
+	pixel_x = 21;
+	frequency = 1380
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/firealarm{
+	dir = 4;
+	pixel_x = 24
+	},
+/turf/simulated/floor/tiled/neutral,
+/area/shuttle/metawhiteship/food)
+"kd" = (
+/obj/machinery/door/airlock/command{
+	req_one_access = null
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled,
+/area/shuttle/metawhiteship/bridge)
+"kj" = (
+/obj/machinery/atmospherics/pipe/simple/hidden,
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel{
+	dir = 10
+	},
+/turf/simulated/wall/thull,
+/area/shuttle/metawhiteship/eng)
+"kp" = (
+/obj/effect/floor_decal/industrial/outline,
+/obj/structure/table/rack,
+/obj/item/analyzer,
+/obj/item/clothing/mask/breath{
+	pixel_x = 6;
+	pixel_y = -5
+	},
+/obj/item/clothing/mask/breath{
+	pixel_y = 2;
+	pixel_x = -1
+	},
+/obj/item/clothing/mask/breath{
+	pixel_y = -2;
+	pixel_x = 3
+	},
+/obj/item/tool/wrench,
+/turf/simulated/floor/tiled,
+/area/shuttle/metawhiteship/cargo)
+"kv" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled,
+/area/shuttle/metawhiteship/food)
+"kx" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled,
+/area/shuttle/metawhiteship/cargo)
+"kH" = (
+/obj/structure/closet/crate/medical,
+/obj/item/storage/firstaid/regular,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/dark,
+/area/shuttle/metawhiteship/cargo)
+"kX" = (
+/obj/structure/cable{
+	icon_state = "0-2"
+	},
+/obj/machinery/power/apc{
+	dir = 8;
+	pixel_x = -26;
+	locked = 0
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/dark,
+/area/shuttle/metawhiteship/cargo)
+"ld" = (
+/obj/structure/table/steel,
+/obj/machinery/cell_charger,
+/obj/item/cell/high{
+	pixel_y = 1;
+	pixel_x = 3
+	},
+/obj/item/cell/high{
+	pixel_x = -4;
+	pixel_y = -2
+	},
+/obj/item/stack/cable_coil/yellow,
+/turf/simulated/floor/tiled/dark,
+/area/shuttle/metawhiteship/eng)
+"lf" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/universal{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/plating,
+/area/shuttle/metawhiteship/eng)
+"lg" = (
+/obj/effect/floor_decal/industrial/bot_outline/corner{
+	dir = 4
+	},
+/obj/structure/closet/crate,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/dark,
+/area/shuttle/metawhiteship/cargo)
+"lC" = (
+/obj/structure/closet/emcloset,
+/obj/effect/floor_decal/industrial/outline,
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel,
+/turf/simulated/floor/tiled/dark,
+/area/shuttle/metawhiteship/eng)
+"lM" = (
+/obj/machinery/door/airlock/glass_external/public,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled,
+/area/shuttle/metawhiteship/food)
+"lW" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 1
+	},
+/obj/structure/cable{
+	icon_state = "2-4"
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/plating,
+/area/shuttle/metawhiteship/eng)
+"mf" = (
+/obj/effect/floor_decal/corner/red/diagonal,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/neutral,
+/area/shuttle/metawhiteship/food)
+"mi" = (
+/obj/structure/dispenser/oxygen,
+/turf/simulated/floor/tiled,
+/area/shuttle/metawhiteship/cargo)
+"na" = (
+/obj/effect/floor_decal/industrial/bot_outline/corner{
+	dir = 1
+	},
+/obj/structure/closet/crate/internals,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/dark,
+/area/shuttle/metawhiteship/cargo)
+"nd" = (
+/obj/effect/floor_decal/industrial/bot_outline/corner{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/blood,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/dark,
+/area/shuttle/metawhiteship/cargo)
+"nh" = (
+/obj/structure/closet/wardrobe/black,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/neutral,
+/area/shuttle/metawhiteship/gen)
+"nm" = (
+/obj/effect/floor_decal/corner/red/diagonal,
+/obj/structure/bed/chair,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/neutral,
+/area/shuttle/metawhiteship/food)
+"nF" = (
+/obj/machinery/portable_atmospherics/powered/scrubber,
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/plating,
+/area/shuttle/metawhiteship/eng)
+"nG" = (
+/obj/machinery/door/airlock/glass,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled,
+/area/shuttle/metawhiteship/food)
+"nS" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel{
+	dir = 9
+	},
+/turf/simulated/floor/plating,
+/area/shuttle/metawhiteship/eng)
+"ou" = (
+/obj/effect/floor_decal/corner/red/diagonal,
+/obj/structure/table/standard,
+/obj/machinery/light/small{
+	dir = 8
+	},
+/obj/item/reagent_containers/food/drinks/bottle/absinthe{
+	pixel_x = -7;
+	pixel_y = 1
+	},
+/obj/item/reagent_containers/food/drinks/bottle/whiskey{
+	pixel_x = 17;
+	pixel_y = 13
+	},
+/obj/item/reagent_containers/food/drinks/bottle/vodka{
+	pixel_x = 1;
+	pixel_y = 12
+	},
+/obj/item/reagent_containers/food/drinks/bottle/cognac{
+	pixel_x = 8;
+	pixel_y = 1
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/neutral,
+/area/shuttle/metawhiteship/food)
+"oA" = (
+/obj/structure/grille,
+/obj/structure/window/titanium/full,
+/obj/machinery/door/blast/regular/open{
+	id = "metawhiteshiplockdown"
+	},
+/turf/simulated/floor/plating,
+/area/shuttle/metawhiteship/food)
+"oP" = (
+/obj/effect/floor_decal/corner/green{
+	dir = 10
+	},
+/obj/machinery/botany,
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/alarm{
+	dir = 8;
+	pixel_x = 26;
+	locked = 0
+	},
+/turf/simulated/floor/tiled/hydro,
+/area/shuttle/metawhiteship/food)
+"oQ" = (
+/obj/structure/cable{
+	icon_state = "1-8"
+	},
+/obj/machinery/computer/ship/engines{
+	dir = 1;
+	req_one_access = null
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/plating,
+/area/shuttle/metawhiteship/eng)
+"oZ" = (
+/obj/effect/floor_decal/corner/red/diagonal,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/cable{
+	icon_state = "1-8"
+	},
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/neutral,
+/area/shuttle/metawhiteship/food)
+"pE" = (
+/obj/structure/toilet{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/old_tile,
+/area/shuttle/metawhiteship/gen)
+"pS" = (
+/obj/effect/floor_decal/corner/grey/diagonal,
+/obj/machinery/gibber{
+	emagged = 1;
+	req_access = null
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/alarm{
+	pixel_y = 0;
+	dir = 4;
+	pixel_x = -24;
+	locked = 0
+	},
+/turf/simulated/floor/tiled/white,
+/area/shuttle/metawhiteship/food)
+"ql" = (
+/obj/effect/floor_decal/industrial/outline,
+/obj/machinery/light/small{
+	dir = 8
+	},
+/obj/structure/table/rack,
+/obj/item/clothing/head/welding,
+/obj/item/multitool,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled,
+/area/shuttle/metawhiteship/food)
+"qp" = (
+/obj/structure/table/rack,
+/obj/item/storage/belt/utility/full/multitool,
+/obj/item/radio/off,
+/obj/item/radio/off{
+	pixel_x = -4;
+	pixel_y = 4
+	},
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/dark,
+/area/shuttle/metawhiteship/eng)
+"qz" = (
+/obj/machinery/door/airlock/glass_external/public,
+/obj/machinery/airlock_sensor/airlock_exterior{
+	pixel_y = 25;
+	dir = 8;
+	pixel_x = -4
+	},
+/obj/effect/map_helper/airlock/door/ext_door,
+/obj/effect/map_helper/airlock/sensor/ext_sensor,
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/plating,
+/area/shuttle/metawhiteship/eng)
+"qH" = (
+/obj/machinery/door/airlock/glass_external/public,
+/obj/machinery/airlock_sensor/airlock_exterior/shuttle{
+	dir = 1;
+	pixel_x = 24;
+	pixel_y = 11
+	},
+/obj/effect/map_helper/airlock/door/ext_door,
+/obj/effect/map_helper/airlock/sensor/ext_sensor,
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/plating,
+/area/shuttle/metawhiteship/food)
+"qN" = (
+/obj/effect/floor_decal/industrial/bot_outline/corner{
+	dir = 8
+	},
+/obj/machinery/button/remote/blast_door{
+	id = "aftmetawhiteship";
+	pixel_y = 0;
+	pixel_x = -24
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/dark,
+/area/shuttle/metawhiteship/cargo)
+"qU" = (
+/obj/structure/cable{
+	icon_state = "0-2"
+	},
+/obj/machinery/power/apc{
+	dir = 1;
+	pixel_y = 26;
+	locked = 0
+	},
+/obj/structure/table/standard,
+/obj/machinery/light/small{
+	dir = 8
+	},
+/obj/item/paper_bin,
+/obj/item/pen,
+/obj/item/camera,
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/photocopier/faxmachine{
+	department = "Metamaterial White Ship"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/shuttle/metawhiteship/bridge)
+"qX" = (
+/obj/machinery/power/smes/buildable/point_of_interest,
+/obj/structure/cable{
+	icon_state = "0-4"
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/plating,
+/area/shuttle/metawhiteship/eng)
+"rf" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/machinery/light/small{
+	dir = 1
+	},
+/obj/machinery/alarm{
+	pixel_y = 22;
+	locked = 0
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/fuel{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/shuttle/metawhiteship/eng)
+"rH" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 5
+	},
+/obj/structure/cable{
+	icon_state = "1-4"
+	},
+/obj/structure/cable{
+	icon_state = "2-4"
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/plating,
+/area/shuttle/metawhiteship/eng)
+"rN" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled,
+/area/shuttle/metawhiteship/eng)
+"so" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/machinery/light/small{
+	dir = 2
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/firealarm{
+	pixel_y = 24
+	},
+/turf/simulated/floor/tiled/neutral,
+/area/shuttle/metawhiteship/gen)
+"sG" = (
+/obj/structure/fans/tiny,
+/obj/machinery/door/blast/regular{
+	pixel_y = 0;
+	dir = 4;
+	id = "foremetawhiteship"
+	},
+/turf/simulated/floor/plating,
+/area/shuttle/metawhiteship/cargo)
+"sX" = (
+/obj/structure/grille,
+/obj/structure/window/titanium/full,
+/obj/machinery/door/blast/regular/open{
+	id = "metawhiteshipbridge"
+	},
+/turf/simulated/floor/plating,
+/area/shuttle/metawhiteship/bridge)
+"tw" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/neutral,
+/area/shuttle/metawhiteship/food)
+"tx" = (
+/obj/effect/floor_decal/industrial/warning/color{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 8
+	},
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/structure/cable{
+	icon_state = "2-8"
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled,
+/area/shuttle/metawhiteship/eng)
+"tI" = (
+/obj/effect/floor_decal/industrial/arrows{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/blood,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled,
+/area/shuttle/metawhiteship/cargo)
+"uk" = (
+/obj/machinery/door/airlock/glass,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled,
+/area/shuttle/metawhiteship/food)
+"uX" = (
+/obj/machinery/atmospherics/unary/vent_pump/on,
+/obj/machinery/light/small{
+	dir = 8
+	},
+/obj/structure/bed/padded,
+/obj/item/bedsheet/brown,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/dark,
+/area/shuttle/metawhiteship/gen)
+"vo" = (
+/obj/effect/floor_decal/industrial/warning/color{
+	dir = 6
+	},
+/obj/machinery/atmospherics/pipe/manifold4w/hidden/supply,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled,
+/area/shuttle/metawhiteship/food)
+"vE" = (
+/obj/effect/floor_decal/industrial/bot_outline/corner{
+	dir = 8
+	},
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/dark,
+/area/shuttle/metawhiteship/cargo)
+"vW" = (
+/obj/effect/floor_decal/industrial/warning/color/corner{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/alarm{
+	pixel_y = 0;
+	dir = 4;
+	pixel_x = -24;
+	locked = 0
+	},
+/turf/simulated/floor/tiled,
+/area/shuttle/metawhiteship/eng)
+"vZ" = (
+/obj/effect/floor_decal/industrial/hatch,
+/obj/machinery/suit_storage_unit/standard_unit,
+/turf/simulated/floor/tiled,
+/area/shuttle/metawhiteship/food)
+"ws" = (
+/obj/structure/closet/crate,
+/obj/random/maintenance/clean,
+/obj/random/maintenance/clean,
+/obj/random/maintenance/clean,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/dark,
+/area/shuttle/metawhiteship/cargo)
+"wG" = (
+/obj/effect/floor_decal/corner/green{
+	dir = 5
+	},
+/obj/machinery/light/small{
+	dir = 8
+	},
+/obj/machinery/botany,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/hydro,
+/area/shuttle/metawhiteship/food)
+"xk" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled,
+/area/shuttle/metawhiteship/cargo)
+"xA" = (
+/obj/effect/floor_decal/corner/red/diagonal,
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 8
+	},
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/neutral,
+/area/shuttle/metawhiteship/food)
+"xM" = (
+/obj/machinery/door/airlock/engineering{
+	req_one_access = null
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled,
+/area/shuttle/metawhiteship/eng)
+"yd" = (
+/obj/effect/floor_decal/corner/red/diagonal,
+/obj/structure/table/standard,
+/obj/item/reagent_containers/food/drinks/drinkingglass{
+	pixel_x = -2;
+	pixel_y = 5
+	},
+/obj/item/reagent_containers/food/drinks/cans/cola{
+	pixel_x = 6;
+	pixel_y = 0
+	},
+/obj/item/reagent_containers/food/condiment/small/saltshaker{
+	pixel_x = -9;
+	pixel_y = 0
+	},
+/obj/item/reagent_containers/food/condiment/small/peppermill{
+	pixel_x = -9;
+	pixel_y = 8
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/neutral,
+/area/shuttle/metawhiteship/food)
+"yQ" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled,
+/area/shuttle/metawhiteship/food)
+"yT" = (
+/obj/machinery/atmospherics/portables_connector,
+/obj/machinery/portable_atmospherics/canister/air/airlock,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/plating,
+/area/shuttle/metawhiteship/eng)
+"zJ" = (
+/obj/effect/floor_decal/industrial/bot_outline/corner{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/dark,
+/area/shuttle/metawhiteship/cargo)
+"zX" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
+	},
+/obj/machinery/light/small,
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/alarm{
+	pixel_y = -25;
+	dir = 1;
+	locked = 0
+	},
+/turf/simulated/floor/plating,
+/area/shuttle/metawhiteship/eng)
+"Az" = (
+/obj/structure/table/steel,
+/obj/machinery/cell_charger,
+/obj/item/cell/high{
+	pixel_x = -3;
+	pixel_y = -2
+	},
+/obj/item/stack/cable_coil/yellow{
+	pixel_x = 6;
+	pixel_y = 4
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/machinery/firealarm{
+	pixel_y = 24
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel{
+	dir = 6
+	},
+/turf/simulated/floor/plating,
+/area/shuttle/metawhiteship/eng)
+"Bo" = (
+/obj/structure/table/steel,
+/obj/item/storage/toolbox/mechanical,
+/obj/item/flashlight,
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/firealarm{
+	dir = 1;
+	pixel_y = -24
+	},
+/turf/simulated/floor/plating,
+/area/shuttle/metawhiteship/eng)
+"BD" = (
+/obj/structure/closet/secure_closet/personal,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/dark,
+/area/shuttle/metawhiteship/gen)
+"CD" = (
+/obj/machinery/atmospherics/pipe/tank/air/full{
+	start_pressure = 10000
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/plating,
+/area/shuttle/metawhiteship/eng)
+"Da" = (
+/obj/machinery/power/terminal{
+	dir = 1
+	},
+/obj/structure/cable/yellow{
+	icon_state = "0-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/shuttle/metawhiteship/eng)
+"Db" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/firealarm{
+	dir = 4;
+	pixel_x = 24
+	},
+/turf/simulated/floor/tiled/dark,
+/area/shuttle/metawhiteship/cargo)
+"Dn" = (
+/obj/effect/floor_decal/industrial/warning/color{
+	dir = 10
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled,
+/area/shuttle/metawhiteship/food)
+"DF" = (
+/obj/effect/floor_decal/industrial/outline,
+/obj/structure/table/rack,
+/obj/item/clothing/head/welding,
+/obj/item/storage/belt/utility/full/multitool,
+/obj/item/weldingtool,
+/turf/simulated/floor/tiled,
+/area/shuttle/metawhiteship/cargo)
+"DH" = (
+/obj/effect/floor_decal/corner/red/diagonal,
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 8
+	},
+/obj/structure/cable{
+	icon_state = "1-4"
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/neutral,
+/area/shuttle/metawhiteship/food)
+"DM" = (
+/obj/effect/floor_decal/corner/green{
+	dir = 9
+	},
+/obj/structure/table/standard,
+/obj/item/shovel/spade,
+/obj/item/material/minihoe,
+/obj/item/reagent_containers/glass/bucket,
+/obj/item/analyzer/plant_analyzer,
+/obj/item/storage/bag/plants,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/hydro,
+/area/shuttle/metawhiteship/food)
+"DQ" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 8
+	},
+/obj/machinery/light/small{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/neutral,
+/area/shuttle/metawhiteship/gen)
+"DZ" = (
+/obj/effect/floor_decal/corner/red/diagonal,
+/obj/structure/bed/chair{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/neutral,
+/area/shuttle/metawhiteship/food)
+"Ek" = (
+/obj/machinery/door/airlock,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/dark,
+/area/shuttle/metawhiteship/gen)
+"Eq" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/alarm{
+	dir = 8;
+	pixel_x = 26;
+	locked = 0
+	},
+/turf/simulated/floor/tiled/dark,
+/area/shuttle/metawhiteship/cargo)
+"Er" = (
+/obj/effect/floor_decal/industrial/hatch,
+/obj/machinery/suit_storage_unit/standard_unit,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled,
+/area/shuttle/metawhiteship/food)
+"Es" = (
+/obj/effect/floor_decal/corner/grey/diagonal,
+/obj/structure/closet/secure_closet/freezer/fridge,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/white,
+/area/shuttle/metawhiteship/food)
+"EC" = (
+/obj/machinery/airlock_sensor{
+	pixel_y = 24
+	},
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	dir = 4
+	},
+/obj/effect/map_helper/airlock/atmos/chamber_pump,
+/obj/effect/map_helper/airlock/sensor/chamber_sensor,
+/obj/machinery/embedded_controller/radio/airlock/docking_port_multi{
+	dir = 1;
+	id_tag = "whiteship_docking_aft";
+	name = "Aft Airlock Control";
+	frequency = 1380;
+	pixel_y = -23
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/plating,
+/area/shuttle/metawhiteship/eng)
+"ED" = (
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 9
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/plating,
+/area/shuttle/metawhiteship/eng)
+"EN" = (
+/obj/effect/floor_decal/industrial/warning/color,
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply,
+/obj/machinery/light/small{
+	dir = 2
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/alarm{
+	pixel_y = -25;
+	dir = 1;
+	locked = 0
+	},
+/turf/simulated/floor/tiled,
+/area/shuttle/metawhiteship/food)
+"ER" = (
+/obj/effect/decal/cleanable/blood/gibs{
+	color = "red";
+	icon_state = "gib2_flesh"
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled,
+/area/shuttle/metawhiteship/cargo)
+"Fa" = (
+/obj/machinery/atmospherics/unary/vent_pump/on,
+/obj/machinery/light/small{
+	dir = 4
+	},
+/obj/structure/bed/padded,
+/obj/item/bedsheet/brown,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/dark,
+/area/shuttle/metawhiteship/gen)
+"Fm" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 2
+	},
+/obj/structure/cable{
+	icon_state = "2-8"
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/neutral,
+/area/shuttle/metawhiteship/gen)
+"Fq" = (
+/obj/effect/floor_decal/corner/blue,
+/obj/structure/bed/chair/bay/comfy/green{
+	dir = 4
+	},
+/obj/machinery/button/remote/blast_door{
+	id = "metawhiteshiplockdown";
+	pixel_y = -25;
+	pixel_x = -9;
+	name = "ship lockdown";
+	dir = 4
+	},
+/obj/machinery/button/remote/blast_door{
+	id = "metawhiteshipbridge";
+	pixel_y = -25;
+	pixel_x = 3;
+	name = "ship lockdown";
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/dark,
+/area/shuttle/metawhiteship/bridge)
+"Ft" = (
+/obj/effect/floor_decal/corner/grey/diagonal,
+/obj/machinery/appliance/cooker/fryer,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/white,
+/area/shuttle/metawhiteship/food)
+"FE" = (
+/obj/effect/floor_decal/corner/blue/diagonal,
+/obj/machinery/washing_machine,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/white,
+/area/shuttle/metawhiteship/gen)
+"Gd" = (
+/obj/structure/cable/yellow,
+/obj/item/tool/wrench,
+/obj/machinery/power/port_gen/pacman/super,
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel{
+	dir = 6
+	},
+/turf/simulated/floor/plating,
+/area/shuttle/metawhiteship/eng)
+"Gn" = (
+/obj/machinery/airlock_sensor/airlock_interior{
+	dir = 4;
+	pixel_x = 6;
+	pixel_y = 25
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 9
+	},
+/obj/machinery/door/airlock/glass_external/public,
+/obj/effect/map_helper/airlock/door/int_door,
+/obj/effect/map_helper/airlock/sensor/int_sensor,
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel,
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/plating,
+/area/shuttle/metawhiteship/eng)
+"GN" = (
+/obj/structure/grille,
+/obj/structure/window/titanium/full,
+/obj/machinery/door/blast/regular/open{
+	id = "metawhiteshiplockdown"
+	},
+/turf/simulated/floor/plating,
+/area/shuttle/metawhiteship/eng)
+"Hf" = (
+/obj/machinery/embedded_controller/radio/airlock/docking_port_multi{
+	dir = 4;
+	id_tag = "whiteship_docking_star";
+	name = "Starboard Airlock Control";
+	pixel_x = -22;
+	frequency = 1380
+	},
+/obj/machinery/airlock_sensor{
+	dir = 8;
+	pixel_x = 24;
+	req_one_access = null
+	},
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	dir = 1;
+	frequency = 1380
+	},
+/obj/effect/map_helper/airlock/sensor/chamber_sensor,
+/obj/effect/map_helper/airlock/atmos/chamber_pump,
+/turf/simulated/floor/plating,
+/area/shuttle/metawhiteship/food)
+"Hr" = (
+/obj/effect/floor_decal/corner/blue/diagonal,
+/obj/structure/cable,
+/obj/machinery/power/apc{
+	pixel_y = -26;
+	locked = 0
+	},
+/obj/structure/table/standard,
+/obj/structure/bedsheetbin,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/white,
+/area/shuttle/metawhiteship/gen)
+"Hz" = (
+/obj/effect/floor_decal/industrial/outline,
+/obj/machinery/atmospherics/unary/vent_pump/on,
+/obj/structure/closet/emcloset,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled,
+/area/shuttle/metawhiteship/food)
+"HE" = (
+/turf/simulated/wall/thull,
+/area/shuttle/metawhiteship/eng)
+"HM" = (
+/obj/machinery/atmospherics/binary/pump/fuel{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/shuttle/metawhiteship/eng)
+"HS" = (
+/obj/structure/grille,
+/obj/structure/window/titanium/full,
+/obj/machinery/door/blast/regular/open{
+	id = "metawhiteshiplockdown"
+	},
+/turf/simulated/floor/plating,
+/area/shuttle/metawhiteship/gen)
+"Iu" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden{
+	dir = 8
+	},
+/obj/machinery/space_heater,
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel{
+	dir = 10
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/plating,
+/area/shuttle/metawhiteship/eng)
+"ID" = (
+/obj/machinery/door/airlock/glass_external/public,
+/obj/effect/map_helper/airlock/door/int_door,
+/obj/effect/map_helper/airlock/sensor/int_sensor,
+/obj/machinery/atmospherics/pipe/simple/hidden/universal,
+/obj/machinery/airlock_sensor/airlock_interior{
+	dir = 1;
+	pixel_x = -26;
+	pixel_y = 9
+	},
+/turf/simulated/floor/plating,
+/area/shuttle/metawhiteship/food)
+"IL" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/door/airlock/glass,
+/turf/simulated/floor/tiled/neutral,
+/area/shuttle/metawhiteship/gen)
+"IT" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/alarm{
+	dir = 8;
+	pixel_x = 26;
+	locked = 0
+	},
+/turf/simulated/floor/tiled/neutral,
+/area/shuttle/metawhiteship/food)
+"Jj" = (
+/obj/effect/floor_decal/industrial/bot_outline/corner,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/dark,
+/area/shuttle/metawhiteship/cargo)
+"JP" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 4
+	},
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/plating,
+/area/shuttle/metawhiteship/eng)
+"Kf" = (
+/obj/structure/table/standard,
+/obj/item/storage/toolbox,
+/obj/item/cell/high,
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/firealarm{
+	dir = 1;
+	pixel_y = -24
+	},
+/turf/simulated/floor/tiled/dark,
+/area/shuttle/metawhiteship/bridge)
+"KF" = (
+/obj/machinery/portable_atmospherics/canister/air/airlock,
+/obj/effect/floor_decal/industrial/outline,
+/obj/machinery/atmospherics/portables_connector,
+/turf/simulated/floor/tiled/dark,
+/area/shuttle/metawhiteship/eng)
+"KR" = (
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/plating,
+/area/shuttle/metawhiteship/eng)
+"KZ" = (
+/obj/effect/floor_decal/corner/blue{
+	dir = 4
+	},
+/obj/structure/bed/chair/bay/comfy/green{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/dark,
+/area/shuttle/metawhiteship/bridge)
+"Lb" = (
+/obj/structure/table/standard,
+/obj/machinery/light/small{
+	dir = 8
+	},
+/obj/item/megaphone,
+/obj/item/radio,
+/obj/item/tool/wrench{
+	pixel_x = 11;
+	pixel_y = -1
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/dark,
+/area/shuttle/metawhiteship/bridge)
+"Lz" = (
+/turf/simulated/wall/thull,
+/area/shuttle/metawhiteship/gen)
+"LQ" = (
+/obj/effect/floor_decal/corner/grey/diagonal,
+/obj/structure/table/standard,
+/obj/machinery/reagentgrinder,
+/obj/item/reagent_containers/food/condiment/enzyme{
+	pixel_x = -10;
+	pixel_y = 0
+	},
+/obj/item/reagent_containers/food/condiment/carton/flour{
+	pixel_x = -8;
+	pixel_y = 15
+	},
+/obj/item/material/kitchen/rollingpin,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/white,
+/area/shuttle/metawhiteship/food)
+"Ml" = (
+/obj/structure/grille,
+/obj/structure/window/titanium/full,
+/turf/simulated/floor/plating,
+/area/shuttle/metawhiteship/cargo)
+"Mn" = (
+/obj/effect/floor_decal/corner/red/diagonal,
+/obj/structure/table/standard,
+/obj/machinery/light/small{
+	dir = 8
+	},
+/obj/structure/sign/poster/nanotrasen{
+	dir = 1
+	},
+/obj/machinery/microwave,
+/obj/random/donkpocketbox,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/neutral,
+/area/shuttle/metawhiteship/food)
+"Mw" = (
+/obj/effect/floor_decal/corner/green{
+	dir = 4
+	},
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/hydro,
+/area/shuttle/metawhiteship/food)
+"MD" = (
+/obj/structure/cable{
+	icon_state = "0-4"
+	},
+/obj/machinery/power/apc{
+	pixel_y = -26;
+	locked = 0
+	},
+/obj/structure/closet/crate,
+/obj/item/tank/phoron,
+/obj/item/tank/phoron,
+/obj/item/tank/phoron,
+/obj/item/stack/material/phoron{
+	amount = 25
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel{
+	dir = 9
+	},
+/obj/item/stack/material/uranium{
+	amount = 25
+	},
+/turf/simulated/floor/plating,
+/area/shuttle/metawhiteship/eng)
+"MQ" = (
+/obj/effect/floor_decal/corner/green{
+	dir = 9
+	},
+/obj/machinery/vending/hydroseeds,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/hydro,
+/area/shuttle/metawhiteship/food)
+"MR" = (
+/obj/machinery/door/airlock/glass_external/public,
+/obj/machinery/airlock_sensor{
+	dir = 2;
+	pixel_x = 24;
+	req_one_access = null;
+	pixel_y = 0
+	},
+/obj/effect/map_helper/airlock/door/int_door,
+/obj/effect/map_helper/airlock/sensor/int_sensor,
+/obj/machinery/atmospherics/pipe/simple/hidden/universal,
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/plating,
+/area/shuttle/metawhiteship/food)
+"MU" = (
+/obj/structure/window/titanium{
+	dir = 4
+	},
+/obj/structure/shuttle/engine/heater{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/shuttle/metawhiteship/eng)
+"Nm" = (
+/obj/effect/floor_decal/corner/red/diagonal,
+/obj/structure/table/standard,
+/obj/item/storage/box/donut{
+	pixel_x = -10;
+	pixel_y = 0
+	},
+/obj/item/reagent_containers/food/snacks/chocolatebar{
+	pixel_x = 7;
+	pixel_y = -3
+	},
+/obj/item/reagent_containers/food/drinks/bottle/small/beer{
+	pixel_x = 5;
+	pixel_y = 13
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/neutral,
+/area/shuttle/metawhiteship/food)
+"Nw" = (
+/obj/effect/floor_decal/industrial/bot_outline/corner{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/dark,
+/area/shuttle/metawhiteship/cargo)
+"NE" = (
+/obj/structure/table/rack,
+/obj/item/storage/toolbox/electrical{
+	pixel_x = 2;
+	pixel_y = 7
+	},
+/obj/item/storage/toolbox/mechanical,
+/obj/item/clothing/head/welding,
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/dark,
+/area/shuttle/metawhiteship/eng)
+"NF" = (
+/obj/machinery/door/airlock/glass_external/public,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled,
+/area/shuttle/metawhiteship/food)
+"NH" = (
+/obj/effect/floor_decal/industrial/warning/color/corner{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/firealarm{
+	dir = 8;
+	pixel_x = -24
+	},
+/turf/simulated/floor/tiled,
+/area/shuttle/metawhiteship/eng)
+"Om" = (
+/obj/structure/table/steel,
+/obj/fiftyspawner/steel,
+/obj/fiftyspawner/glass,
+/obj/fiftyspawner/rods,
+/turf/simulated/floor/tiled/dark,
+/area/shuttle/metawhiteship/eng)
+"OH" = (
+/obj/machinery/shipsensors{
+	dir = 8
+	},
+/turf/simulated/floor/plating/external,
+/area/shuttle/metawhiteship/eng)
+"Pk" = (
+/obj/effect/floor_decal/industrial/outline,
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 1
+	},
+/obj/structure/closet/emcloset,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled,
+/area/shuttle/metawhiteship/food)
+"Pp" = (
+/obj/machinery/atmospherics/unary/engine{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/shuttle/metawhiteship/eng)
+"Pr" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/obj/machinery/vending/cigarette{
+	dir = 4;
+	pixel_x = 7
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/neutral,
+/area/shuttle/metawhiteship/food)
+"PE" = (
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/structure/closet/firecloset/full,
+/turf/simulated/floor/plating,
+/area/shuttle/metawhiteship/eng)
+"PJ" = (
+/obj/effect/floor_decal/industrial/outline,
+/obj/structure/reagent_dispensers/watertank,
+/turf/simulated/floor/tiled,
+/area/shuttle/metawhiteship/cargo)
+"PL" = (
+/obj/machinery/computer/shuttle_control/explore/metawhiteship{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/blue/full{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/dark,
+/area/shuttle/metawhiteship/bridge)
+"PS" = (
+/obj/effect/floor_decal/corner/red/diagonal,
+/obj/structure/table/standard,
+/obj/structure/cable{
+	icon_state = "0-4"
+	},
+/obj/machinery/power/apc{
+	dir = 1;
+	name = "north bump";
+	pixel_y = 28;
+	locked = 0
+	},
+/obj/item/trash/plate{
+	pixel_x = -5;
+	pixel_y = 8
+	},
+/obj/item/trash/plate{
+	pixel_x = -5;
+	pixel_y = -4
+	},
+/obj/item/trash/plate{
+	pixel_x = -5;
+	pixel_y = 0
+	},
+/obj/item/trash/plate{
+	pixel_x = -5;
+	pixel_y = 4
+	},
+/obj/item/material/kitchen/utensil/fork,
+/obj/item/material/kitchen/utensil/fork{
+	pixel_x = 6
+	},
+/obj/item/material/kitchen/utensil/fork{
+	pixel_x = 2
+	},
+/obj/item/material/kitchen/utensil/fork{
+	pixel_x = 4
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/neutral,
+/area/shuttle/metawhiteship/food)
+"Qn" = (
+/obj/effect/floor_decal/corner/green{
+	dir = 5
+	},
+/obj/machinery/botany,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/hydro,
+/area/shuttle/metawhiteship/food)
+"Qt" = (
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 5
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/fuel{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/plating,
+/area/shuttle/metawhiteship/eng)
+"QF" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled,
+/area/shuttle/metawhiteship/cargo)
+"Re" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/fuel{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/shuttle/metawhiteship/eng)
+"Rt" = (
+/turf/simulated/wall/thull,
+/area/shuttle/metawhiteship/bridge)
+"RN" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/obj/machinery/vending/coffee,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/neutral,
+/area/shuttle/metawhiteship/food)
+"Sa" = (
+/obj/structure/window/titanium{
+	dir = 4
+	},
+/obj/structure/shuttle/engine/heater{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/fuel{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/shuttle/metawhiteship/eng)
+"Se" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/alarm{
+	pixel_y = 0;
+	dir = 4;
+	pixel_x = -24;
+	locked = 0
+	},
+/turf/simulated/floor/tiled/dark,
+/area/shuttle/metawhiteship/cargo)
+"Si" = (
+/obj/structure/closet/crate/internals,
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/firealarm{
+	dir = 8;
+	pixel_x = -24
+	},
+/turf/simulated/floor/tiled/dark,
+/area/shuttle/metawhiteship/cargo)
+"Sr" = (
+/obj/effect/floor_decal/corner/grey/diagonal,
+/obj/structure/sink{
+	dir = 4;
+	pixel_x = 11
+	},
+/obj/effect/decal/cleanable/flour,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/white,
+/area/shuttle/metawhiteship/food)
+"Sy" = (
+/obj/structure/window/titanium{
+	dir = 4
+	},
+/obj/structure/shuttle/engine/heater{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel{
+	dir = 9
+	},
+/turf/simulated/floor/plating,
+/area/shuttle/metawhiteship/eng)
+"SB" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/obj/structure/cable{
+	icon_state = "1-8"
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled,
+/area/shuttle/metawhiteship/cargo)
+"SI" = (
+/obj/structure/sink{
+	dir = 8;
+	pixel_x = -12;
+	pixel_y = 2
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/hydro,
+/area/shuttle/metawhiteship/food)
+"ST" = (
+/obj/effect/floor_decal/industrial/bot_outline/corner{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/dark,
+/area/shuttle/metawhiteship/cargo)
+"SW" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/alarm{
+	pixel_y = 22;
+	locked = 0
+	},
+/turf/simulated/floor/tiled/neutral,
+/area/shuttle/metawhiteship/gen)
+"SY" = (
+/obj/effect/floor_decal/industrial/outline,
+/obj/structure/table/rack,
+/obj/item/storage/box/lights/mixed,
+/obj/item/storage/box/lights/bulbs,
+/obj/item/stack/cable_coil/yellow,
+/turf/simulated/floor/tiled,
+/area/shuttle/metawhiteship/cargo)
+"Tf" = (
+/obj/effect/floor_decal/industrial/outline,
+/obj/structure/closet/firecloset/full,
+/turf/simulated/floor/tiled,
+/area/shuttle/metawhiteship/cargo)
+"Tq" = (
+/obj/effect/floor_decal/industrial/bot_outline/corner,
+/obj/structure/closet/crate/internals,
+/obj/random/maintenance/clean,
+/obj/random/maintenance/clean,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/dark,
+/area/shuttle/metawhiteship/cargo)
+"Ts" = (
+/obj/structure/closet/crate/weapon,
+/obj/item/gun/energy/retro,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/dark,
+/area/shuttle/metawhiteship/cargo)
+"Tt" = (
+/turf/simulated/wall/thull,
+/area/shuttle/metawhiteship/cargo)
+"TG" = (
+/obj/effect/floor_decal/industrial/arrows{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled,
+/area/shuttle/metawhiteship/cargo)
+"TI" = (
+/obj/effect/floor_decal/corner/green{
+	dir = 10
+	},
+/obj/machinery/light/small{
+	dir = 8
+	},
+/obj/machinery/botany,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/hydro,
+/area/shuttle/metawhiteship/food)
+"TS" = (
+/obj/machinery/door/airlock,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/old_tile,
+/area/shuttle/metawhiteship/gen)
+"Ut" = (
+/obj/effect/floor_decal/industrial/warning/color{
+	dir = 9
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled,
+/area/shuttle/metawhiteship/food)
+"UL" = (
+/obj/effect/floor_decal/corner/grey/diagonal,
+/obj/machinery/light/small{
+	dir = 4
+	},
+/obj/structure/table/standard,
+/obj/machinery/microwave,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/white,
+/area/shuttle/metawhiteship/food)
+"UR" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled,
+/area/shuttle/metawhiteship/cargo)
+"UX" = (
+/obj/effect/shuttle_landmark/shuttle_initializer/metawhiteship,
+/obj/machinery/airlock_sensor{
+	dir = 8;
+	pixel_x = 24;
+	req_one_access = null
+	},
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	frequency = 1380
+	},
+/obj/effect/map_helper/airlock/sensor/chamber_sensor,
+/obj/effect/map_helper/airlock/atmos/chamber_pump,
+/obj/effect/overmap/visitable/ship/landable/metawhiteship,
+/obj/machinery/embedded_controller/radio/airlock/docking_port{
+	id_tag = "metawhiteship_docker";
+	pixel_x = -24;
+	dir = 4
+	},
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/plating,
+/area/shuttle/metawhiteship/food)
+"VM" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/hydro,
+/area/shuttle/metawhiteship/food)
+"Wb" = (
+/obj/effect/floor_decal/corner/grey/diagonal,
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply,
+/obj/effect/decal/cleanable/blood,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/white,
+/area/shuttle/metawhiteship/food)
+"We" = (
+/obj/structure/bed/chair/bay/comfy/green{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled,
+/area/shuttle/metawhiteship/bridge)
+"Wg" = (
+/obj/effect/floor_decal/industrial/arrows{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled,
+/area/shuttle/metawhiteship/cargo)
+"Wn" = (
+/obj/effect/floor_decal/corner/blue{
+	dir = 9
+	},
+/obj/machinery/computer/ship/helm{
+	req_one_access = null;
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/dark,
+/area/shuttle/metawhiteship/bridge)
+"Wu" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/obj/structure/cable{
+	icon_state = "1-8"
+	},
+/obj/effect/decal/remains,
+/obj/effect/decal/cleanable/blood,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled,
+/area/shuttle/metawhiteship/bridge)
+"WB" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/dark,
+/area/shuttle/metawhiteship/cargo)
+"WH" = (
+/obj/effect/floor_decal/corner/grey/diagonal,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/white,
+/area/shuttle/metawhiteship/food)
+"Xf" = (
+/obj/machinery/light/small{
+	dir = 2
+	},
+/obj/machinery/shower,
+/obj/structure/curtain/open/shower,
+/obj/item/soap,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/old_tile,
+/area/shuttle/metawhiteship/gen)
+"Xz" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled,
+/area/shuttle/metawhiteship/cargo)
+"XF" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 2
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/neutral,
+/area/shuttle/metawhiteship/gen)
+"XO" = (
+/obj/structure/closet,
+/obj/random/maintenance/clean,
+/obj/random/maintenance/clean,
+/obj/item/storage/firstaid/fire,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/dark,
+/area/shuttle/metawhiteship/cargo)
+"Yi" = (
+/obj/effect/decal/cleanable/blood,
+/obj/effect/decal/remains,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled,
+/area/shuttle/metawhiteship/cargo)
+"Yv" = (
+/turf/simulated/wall/thull,
+/area/shuttle/metawhiteship/food)
+"YL" = (
+/obj/machinery/smartfridge/produce,
+/turf/simulated/wall/thull,
+/area/shuttle/metawhiteship/food)
+"YS" = (
+/obj/structure/table/standard,
+/obj/item/storage/photo_album{
+	pixel_x = -16;
+	pixel_y = 0
+	},
+/obj/item/folder/blue{
+	pixel_x = 7;
+	pixel_y = 8
+	},
+/obj/machinery/recharger,
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/alarm{
+	pixel_y = 22;
+	locked = 0
+	},
+/turf/simulated/floor/tiled/dark,
+/area/shuttle/metawhiteship/bridge)
+"Zz" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel{
+	dir = 5
+	},
+/turf/simulated/wall/thull,
+/area/shuttle/metawhiteship/eng)
+"ZP" = (
+/obj/effect/floor_decal/industrial/bot_outline/corner{
+	dir = 1
+	},
+/obj/structure/closet/crate,
+/obj/random/maintenance/clean,
+/obj/random/maintenance/clean,
+/obj/random/maintenance/clean,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/dark,
+/area/shuttle/metawhiteship/cargo)
+"ZV" = (
+/obj/machinery/door/airlock/glass,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/hydro,
+/area/shuttle/metawhiteship/food)
+
+(1,1,1) = {"
+eS
+eS
+eS
+eS
+eS
+eS
+eS
+eS
+eS
+eS
+eS
+eS
+eS
+eS
+eS
+eS
+eS
+eS
+eS
+eS
+eS
+"}
+(2,1,1) = {"
+eS
+eS
+eS
+eS
+eS
+eS
+eS
+eS
+eS
+eS
+eS
+eS
+eS
+eS
+eS
+eS
+eS
+eS
+eS
+eS
+eS
+"}
+(3,1,1) = {"
+eS
+eS
+eS
+HE
+Pp
+Pp
+HE
+eS
+eS
+eS
+eS
+eS
+eS
+eS
+HE
+Pp
+Pp
+HE
+eS
+eS
+eS
+"}
+(4,1,1) = {"
+eS
+eS
+HE
+HE
+MU
+MU
+HE
+HE
+eS
+eS
+eS
+eS
+eS
+HE
+HE
+Sa
+Sy
+HE
+HE
+eS
+eS
+"}
+(5,1,1) = {"
+eS
+eS
+HE
+CD
+Iu
+Qt
+nF
+Zz
+OH
+HE
+qz
+HE
+eS
+HE
+qX
+Da
+Gd
+fr
+HE
+eS
+eS
+"}
+(6,1,1) = {"
+eS
+eS
+GN
+yT
+ED
+KR
+Bo
+im
+jK
+Zz
+EC
+HE
+GN
+HE
+Az
+nS
+Re
+jQ
+HE
+eS
+eS
+"}
+(7,1,1) = {"
+eS
+eS
+HE
+HE
+PE
+lf
+zX
+HE
+KF
+kj
+Gn
+eE
+lC
+eE
+rf
+HM
+MD
+HE
+HE
+eS
+eS
+"}
+(8,1,1) = {"
+eS
+eS
+eS
+HE
+dF
+lW
+JP
+xM
+rN
+NH
+tx
+vW
+rN
+xM
+fy
+rH
+oQ
+GN
+eS
+eS
+eS
+"}
+(9,1,1) = {"
+eS
+eS
+eS
+HE
+HE
+jI
+HE
+HE
+qp
+Om
+iC
+ld
+NE
+HE
+HE
+jI
+HE
+HE
+eS
+eS
+eS
+"}
+(10,1,1) = {"
+eS
+eS
+Tt
+Tt
+iu
+xk
+DF
+Tt
+Tt
+Ml
+Ml
+Ml
+Tt
+Tt
+ca
+Xz
+PJ
+Tt
+Tt
+eS
+eS
+"}
+(11,1,1) = {"
+eS
+eS
+sG
+iS
+ZP
+Xz
+Nw
+Si
+eQ
+ST
+UR
+na
+kX
+Se
+vE
+SB
+Nw
+qN
+cQ
+eS
+eS
+"}
+(12,1,1) = {"
+eS
+eS
+sG
+WB
+WB
+Xz
+zJ
+WB
+WB
+Jj
+UR
+zJ
+WB
+Ts
+Jj
+QF
+WB
+WB
+cQ
+eS
+eS
+"}
+(13,1,1) = {"
+eS
+eS
+sG
+ws
+WB
+cU
+kx
+TG
+Wg
+UR
+UR
+Yi
+tI
+Wg
+gb
+io
+WB
+WB
+cQ
+eS
+eS
+"}
+(14,1,1) = {"
+eS
+eS
+sG
+ws
+WB
+Xz
+Nw
+WB
+WB
+gs
+UR
+nd
+WB
+WB
+ST
+QF
+WB
+kH
+cQ
+eS
+eS
+"}
+(15,1,1) = {"
+eS
+eS
+sG
+zJ
+Jj
+Xz
+zJ
+Eq
+WB
+Tq
+ER
+zJ
+XO
+Db
+Jj
+QF
+lg
+Jj
+cQ
+eS
+eS
+"}
+(16,1,1) = {"
+eS
+eS
+Tt
+Tt
+Tf
+xk
+SY
+Tt
+Tt
+Ml
+Ml
+Ml
+Tt
+Tt
+kp
+QF
+mi
+Tt
+Tt
+eS
+eS
+"}
+(17,1,1) = {"
+eS
+eS
+eS
+Yv
+Yv
+lM
+Yv
+Yv
+Mn
+nm
+yd
+DZ
+ou
+Yv
+Yv
+NF
+Yv
+Yv
+eS
+eS
+eS
+"}
+(18,1,1) = {"
+eS
+eS
+eS
+oA
+vZ
+Ut
+et
+Yv
+PS
+nm
+Nm
+DZ
+aQ
+Yv
+ql
+Dn
+Er
+oA
+eS
+eS
+eS
+"}
+(19,1,1) = {"
+eS
+eS
+Yv
+Yv
+Yv
+fZ
+yQ
+uk
+oZ
+xA
+DH
+mf
+mf
+dx
+kv
+EN
+Yv
+Yv
+Yv
+eS
+eS
+"}
+(20,1,1) = {"
+eS
+eS
+qH
+UX
+MR
+hF
+Pk
+Yv
+RN
+IT
+tw
+jW
+Pr
+Yv
+Hz
+vo
+ID
+Hf
+aS
+eS
+eS
+"}
+(21,1,1) = {"
+eS
+eS
+Lz
+Lz
+Lz
+IL
+Lz
+Lz
+Rt
+Rt
+kd
+Rt
+Rt
+Yv
+Yv
+nG
+Yv
+Yv
+Yv
+eS
+eS
+"}
+(22,1,1) = {"
+eS
+eS
+Lz
+BD
+Lz
+so
+Lz
+Xf
+Rt
+qU
+Wu
+Lb
+Rt
+pS
+Es
+WH
+fJ
+LQ
+Yv
+eS
+eS
+"}
+(23,1,1) = {"
+eS
+eS
+HS
+Fa
+Ek
+XF
+TS
+pE
+Rt
+YS
+gi
+Kf
+Rt
+Ft
+gq
+Wb
+Sr
+UL
+oA
+eS
+eS
+"}
+(24,1,1) = {"
+eS
+eS
+Lz
+Lz
+Lz
+SW
+Lz
+Lz
+Rt
+KZ
+We
+Fq
+Rt
+Yv
+Yv
+ZV
+YL
+Yv
+Yv
+eS
+eS
+"}
+(25,1,1) = {"
+eS
+eS
+HS
+uX
+Ek
+Fm
+Hr
+Lz
+sX
+PL
+Wn
+dk
+sX
+Yv
+TI
+VM
+SI
+wG
+oA
+eS
+eS
+"}
+(26,1,1) = {"
+eS
+eS
+Lz
+BD
+Lz
+DQ
+FE
+Lz
+sX
+sX
+sX
+sX
+sX
+Yv
+oP
+Mw
+jn
+Qn
+Yv
+eS
+eS
+"}
+(27,1,1) = {"
+eS
+eS
+Lz
+Lz
+Lz
+nh
+Lz
+Lz
+eS
+eS
+eS
+eS
+eS
+Yv
+Yv
+MQ
+DM
+Yv
+Yv
+eS
+eS
+"}
+(28,1,1) = {"
+eS
+eS
+eS
+Lz
+Lz
+Lz
+Lz
+eS
+eS
+eS
+eS
+eS
+eS
+eS
+Yv
+Yv
+Yv
+Yv
+eS
+eS
+eS
+"}
+(29,1,1) = {"
+eS
+eS
+eS
+eS
+eS
+eS
+eS
+eS
+eS
+eS
+eS
+eS
+eS
+eS
+eS
+eS
+eS
+eS
+eS
+eS
+eS
+"}
+(30,1,1) = {"
+eS
+eS
+eS
+eS
+eS
+eS
+eS
+eS
+eS
+eS
+eS
+eS
+eS
+eS
+eS
+eS
+eS
+eS
+eS
+eS
+eS
+"}

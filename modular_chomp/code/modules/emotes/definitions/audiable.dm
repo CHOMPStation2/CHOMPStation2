@@ -11,20 +11,21 @@
 
 /decl/emote/audible/gasp/get_emote_sound(var/atom/user)
 	..()
-	var/mob/living/carbon/human/H = user
-	// CHOMPEdit: Standardize Species Sounds Getters
-	var/vol = H.species.gasp_volume
-	var/s = get_species_sound(get_gendered_sound(H))["gasp"]
-	if(!s && !(get_species_sound(H.species.species_sounds) == "None")) // Failsafe, so we always use the default gasp/etc sounds. None will cancel out anyways.
-		if(H.identifying_gender == FEMALE)
-			s = get_species_sound("Human Female")["gasp"]
-		else // Update this if we ever get herm/etc sounds.
-			s = get_species_sound("Human Male")["gasp"]
-	return list(
-			"sound" = s,
-			"vol" = vol,
-			"volchannel" = VOLUME_CHANNEL_SPECIES_SOUNDS
-		)
+	if(ishuman(user))
+		var/mob/living/carbon/human/H = user
+		// CHOMPEdit: Standardize Species Sounds Getters
+		var/vol = H.species.gasp_volume
+		var/s = get_species_sound(get_gendered_sound(H))["gasp"]
+		if(!s && !(get_species_sound(H.species.species_sounds) == "None")) // Failsafe, so we always use the default gasp/etc sounds. None will cancel out anyways.
+			if(H.identifying_gender == FEMALE)
+				s = get_species_sound("Human Female")["gasp"]
+			else // Update this if we ever get herm/etc sounds.
+				s = get_species_sound("Human Male")["gasp"]
+		return list(
+				"sound" = s,
+				"vol" = vol,
+				"volchannel" = VOLUME_CHANNEL_SPECIES_SOUNDS
+			)
 
 /decl/emote/audible/mgeow
 	key = "mgeow"
@@ -65,6 +66,14 @@
 	emote_message_1p_target = "You gwah at TARGET."
 	emote_message_3p_target = "gwahs at TARGET."
 	emote_sound = 'modular_chomp/sound/voice/emotes/gwah.ogg'
+
+/decl/emote/audible/caw
+	key = "caw"
+	emote_message_1p = "You caw!"
+	emote_message_3p = "caws!"
+	emote_message_1p_target = "You caw at TARGET."
+	emote_message_3p_target = "caws at TARGET."
+	emote_sound = 'modular_chomp/sound/voice/emotes/caw.ogg' // Copyright Sampling+ 1.0 Vixuxx (freesound.org) for the source audio.
 
 /decl/emote/audible/wawa
 	key = "wawa"
@@ -107,3 +116,31 @@
 /decl/emote/audible/scientist/get_emote_sound(var/atom/user)
 	. = ..()
 	.["vol"] *= 0.4 //these boys are pretty loud on their own lol
+
+/decl/emote/audible/yip // sounds sourced from: https://introdile.itch.io/kobold-generator with permission from the creator
+	key = "yip"
+	emote_message_1p = "You yip."
+	emote_message_3p = "yips!"
+	emote_message_1p_target = "You yip at TARGET!"
+	emote_message_3p_target = "yips at TARGET!"
+	emote_sound = list (
+		'modular_chomp/sound/voice/emotes/yip1.ogg',
+		'modular_chomp/sound/voice/emotes/yip2.ogg',
+		'modular_chomp/sound/voice/emotes/yip3.ogg',
+	)
+
+/decl/emote/audible/squeal // Sound sourced from: https://github.com/Baystation12/Baystation12/blob/bd2f0bd5e38cf2bb0888e3ae879708bed20243b4/sound/voice/LizardSqueal.ogg, licensed Creative Commons 3.0 BY-SA.
+	key = "squeal"
+	emote_message_1p = "You squeal."
+	emote_message_3p = "squeals."
+	emote_message_1p_target = "You squeal at TARGET."
+	emote_message_3p_target = "squeals at TARGET."
+	emote_sound = 'modular_chomp/sound/voice/emotes/squealemote.ogg'
+
+/decl/emote/audible/tailthump // Sound sourced from https://freesound.org/s/389665/ Licensed Creative Commons 0
+	key = "tailthump"
+	emote_message_1p = "You thump your tail."
+	emote_message_3p = "thumps their tail."
+	emote_message_1p_target = "You thump your tail at TARGET."
+	emote_message_3p_target = "thumps their tail at TARGET."
+	emote_sound = 'modular_chomp/sound/voice/emotes/tailthumpemote.ogg'

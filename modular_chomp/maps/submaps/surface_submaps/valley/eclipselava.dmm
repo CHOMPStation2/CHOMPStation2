@@ -18,15 +18,12 @@
 "aQ" = (
 /obj/machinery/power/terminal,
 /obj/structure/cable/green{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipselava)
 "aY" = (
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/wall/rplastihull,
@@ -42,18 +39,16 @@
 /area/submap/eclipselava)
 "bB" = (
 /obj/structure/table/rack/shelf,
-/obj/item/weapon/gun/projectile/automatic/sol,
-/obj/random/contraband,
-/obj/random/contraband,
+/obj/item/gun/projectile/automatic/sol,
 /obj/random/contraband,
 /obj/machinery/light{
 	dir = 8
 	},
+/obj/random/contraband/nofail,
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipselava)
 "bI" = (
 /obj/structure/table/steel,
-/obj/random/maintenance/medical,
 /obj/machinery/light{
 	dir = 1
 	},
@@ -71,8 +66,6 @@
 /area/submap/eclipselava)
 "dj" = (
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/dark,
@@ -95,13 +88,10 @@
 /area/submap/eclipselava)
 "dB" = (
 /obj/structure/table/rack/shelf,
-/obj/item/weapon/gun/energy/gun/rifle,
-/obj/random/contraband,
-/obj/random/contraband,
-/obj/random/contraband,
 /obj/machinery/light{
 	dir = 4
 	},
+/obj/random/contraband/nofail,
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipselava)
 "dE" = (
@@ -126,8 +116,6 @@
 /area/submap/eclipselava)
 "fG" = (
 /obj/structure/cable/green{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /turf/simulated/floor/reinforced{
@@ -143,7 +131,9 @@
 /turf/simulated/mineral/floor/ignore_mapgen/sif,
 /area/submap/eclipselava)
 "ge" = (
-/mob/living/simple_mob/humanoid/eclipse/lunar/shotgunner,
+/mob/living/simple_mob/humanoid/eclipse/lunar/shotgunner{
+	loot_list = list(/obj/item/slime_extract/sepia = 1, /obj/item/bone/skull = 100, /obj/item/prop/alien/junk = 50)
+	},
 /turf/simulated/floor/tiled/dark{
 	temperature = 243.15;
 	oxygen = 20.7263;
@@ -152,7 +142,7 @@
 /area/submap/eclipselava)
 "gt" = (
 /mob/living/simple_mob/humanoid/eclipse/solar/guardian,
-/obj/item/weapon/stool/padded,
+/obj/item/stool/padded,
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipselava)
 "gu" = (
@@ -185,8 +175,6 @@
 /obj/structure/table/hardwoodtable,
 /obj/random/ammo,
 /obj/random/ammo,
-/obj/random/ammo,
-/obj/random/medical/pillbottle,
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipselava)
 "hm" = (
@@ -205,15 +193,12 @@
 	},
 /area/submap/eclipselava)
 "il" = (
-/obj/structure/table/steel,
-/obj/random/energy/sec,
-/obj/random/maintenance/foodstuff,
+/obj/structure/table/rack/shelf,
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipselava)
 "iq" = (
 /obj/structure/table/steel,
 /obj/random/rigsuit,
-/obj/random/maintenance/medical,
 /obj/machinery/light{
 	dir = 4
 	},
@@ -235,9 +220,7 @@
 "jS" = (
 /obj/structure/table/rack/shelf,
 /obj/item/slime_extract/emerald,
-/obj/random/contraband,
-/obj/random/contraband,
-/obj/random/contraband,
+/obj/random/contraband/nofail,
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipselava)
 "jU" = (
@@ -247,31 +230,25 @@
 /turf/simulated/mineral/floor/ignore_mapgen/sif,
 /area/submap/eclipselava)
 "la" = (
-/mob/living/simple_mob/humanoid/eclipse/lunar/shotgunner,
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
+	},
+/mob/living/simple_mob/humanoid/eclipse/lunar/shotgunner{
+	loot_list = list(/obj/item/slime_extract/sepia = 1, /obj/item/bone/skull = 100, /obj/item/prop/alien/junk = 50)
 	},
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipselava)
 "mn" = (
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipselava)
 "mz" = (
 /obj/structure/cable/green{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/reinforced{
@@ -329,8 +306,6 @@
 "nC" = (
 /obj/structure/table/steel,
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/dark,
@@ -351,18 +326,14 @@
 /area/submap/eclipselava)
 "oc" = (
 /mob/living/simple_mob/humanoid/eclipse/lunar/ravanger,
-/obj/item/weapon/stool/padded,
+/obj/item/stool/padded,
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipselava)
 "pb" = (
 /obj/structure/cable/green{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/reinforced{
@@ -385,8 +356,6 @@
 /obj/structure/window/phoronreinforced,
 /obj/structure/cable/green,
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/dark,
@@ -404,7 +373,7 @@
 /area/submap/eclipselava)
 "pX" = (
 /obj/structure/bed/double/padded,
-/obj/item/weapon/bedsheet/orangedouble,
+/obj/item/bedsheet/orangedouble,
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipselava)
 "qb" = (
@@ -419,7 +388,7 @@
 	},
 /area/submap/eclipselava)
 "qq" = (
-/obj/item/weapon/stool/padded,
+/obj/item/stool/padded,
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipselava)
 "qy" = (
@@ -455,8 +424,6 @@
 "rP" = (
 /obj/machinery/door/airlock/silver,
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/dark,
@@ -464,8 +431,6 @@
 "sj" = (
 /mob/living/simple_mob/humanoid/eclipse/lunar/wheel,
 /obj/structure/cable/green{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /turf/simulated/floor/reinforced{
@@ -529,18 +494,12 @@
 /area/submap/eclipselava)
 "vX" = (
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /turf/simulated/floor/reinforced{
@@ -560,14 +519,12 @@
 /turf/simulated/mineral/floor/ignore_mapgen/sif,
 /area/submap/eclipselava)
 "wt" = (
-/obj/item/weapon/material/barbedwire{
+/obj/item/material/barbedwire{
 	anchored = 1;
 	icon_state = "barbedwire-out"
 	},
 /obj/structure/cable/green,
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/reinforced{
@@ -582,8 +539,6 @@
 /area/submap/eclipselava)
 "wU" = (
 /obj/structure/cable/green{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/tiled/dark,
@@ -594,8 +549,6 @@
 /area/submap/eclipselava)
 "xr" = (
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/machinery/light,
@@ -622,8 +575,6 @@
 "yc" = (
 /obj/structure/table/steel,
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/random/maintenance/foodstuff,
@@ -632,7 +583,7 @@
 "yr" = (
 /mob/living/simple_mob/humanoid/eclipse/lunar/silvernoodle,
 /obj/structure/bed/double/padded,
-/obj/item/weapon/bedsheet/orangedouble,
+/obj/item/bedsheet/orangedouble,
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipselava)
 "yt" = (
@@ -649,8 +600,6 @@
 "yX" = (
 /obj/machinery/door/airlock/silver,
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/reinforced,
@@ -690,8 +639,6 @@
 /area/template_noop)
 "BJ" = (
 /obj/structure/cable/green{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /turf/simulated/floor/tiled/dark,
@@ -719,8 +666,6 @@
 /area/submap/eclipselava)
 "Dc" = (
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/reinforced{
@@ -733,8 +678,6 @@
 /obj/structure/table/hardwoodtable,
 /obj/random/ammo,
 /obj/random/ammo,
-/obj/random/ammo,
-/obj/random/medical/pillbottle,
 /obj/machinery/light{
 	dir = 1
 	},
@@ -743,45 +686,38 @@
 "Du" = (
 /mob/living/simple_mob/humanoid/eclipse/solar/teslanoodle,
 /obj/structure/bed/double/padded,
-/obj/item/weapon/bedsheet/orangedouble,
+/obj/item/bedsheet/orangedouble,
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipselava)
 "DS" = (
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipselava)
 "Ed" = (
-/obj/structure/table/steel,
-/obj/random/energy,
-/obj/random/maintenance/medical,
+/obj/structure/table/hardwoodtable,
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipselava)
 "Ej" = (
 /obj/structure/table/steel,
-/obj/random/contraband,
 /obj/random/maintenance/research,
+/obj/machinery/light{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipselava)
 "El" = (
 /obj/structure/table/rack/shelf,
-/obj/item/weapon/cell/device/weapon/recharge/alien,
-/obj/random/contraband,
-/obj/random/contraband,
-/obj/random/contraband,
+/obj/item/cell/device/weapon/recharge/alien,
+/obj/random/contraband/nofail,
+/obj/random/contraband/nofail,
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipselava)
 "En" = (
@@ -795,13 +731,9 @@
 /area/submap/eclipselava)
 "Ev" = (
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /turf/simulated/floor/reinforced{
@@ -869,26 +801,19 @@
 "GK" = (
 /obj/structure/table/steel,
 /obj/random/firstaid,
-/obj/random/maintenance/medical,
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipselava)
 "GM" = (
 /obj/structure/table/rack/shelf,
 /obj/item/slime_extract/ruby,
-/obj/random/contraband,
-/obj/random/contraband,
-/obj/random/contraband,
+/obj/random/contraband/nofail,
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipselava)
 "GS" = (
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/reinforced{
@@ -920,7 +845,6 @@
 "Ii" = (
 /obj/machinery/power/terminal,
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /turf/simulated/floor/tiled/dark,
@@ -962,7 +886,7 @@
 	},
 /area/submap/eclipselava)
 "Js" = (
-/obj/item/weapon/material/barbedwire{
+/obj/item/material/barbedwire{
 	anchored = 1;
 	icon_state = "barbedwire-out"
 	},
@@ -976,7 +900,6 @@
 	state = 1
 	},
 /obj/structure/cable/green{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /turf/simulated/floor/tiled/dark,
@@ -996,7 +919,7 @@
 /turf/simulated/floor/lava,
 /area/submap/eclipselava)
 "Kr" = (
-/obj/item/weapon/material/barbedwire{
+/obj/item/material/barbedwire{
 	anchored = 1;
 	icon_state = "barbedwire-out"
 	},
@@ -1009,8 +932,6 @@
 /area/submap/eclipselava)
 "Ku" = (
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /turf/simulated/floor/reinforced{
@@ -1030,10 +951,8 @@
 	},
 /area/submap/eclipselava)
 "LC" = (
-/obj/item/weapon/stool/padded,
+/obj/item/stool/padded,
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/dark,
@@ -1043,14 +962,12 @@
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipselava)
 "Me" = (
-/obj/item/weapon/material/barbedwire{
+/obj/item/material/barbedwire{
 	anchored = 1;
 	icon_state = "barbedwire-out"
 	},
 /obj/structure/cable/green,
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/dark,
@@ -1067,18 +984,16 @@
 /area/submap/eclipselava)
 "Ov" = (
 /obj/structure/table/rack,
-/obj/item/weapon/cell/slime,
-/obj/item/weapon/cell/slime,
-/obj/item/weapon/cell/slime,
-/obj/item/weapon/cell/slime,
+/obj/item/cell/slime,
+/obj/item/cell/slime,
+/obj/item/cell/slime,
+/obj/item/cell/slime,
 /turf/simulated/floor/reinforced/carbon_dioxide{
 	carbon_dioxide = 100
 	},
 /area/submap/eclipselava)
 "Ox" = (
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /turf/simulated/floor/reinforced{
@@ -1090,13 +1005,6 @@
 "Pm" = (
 /mob/living/simple_mob/humanoid/eclipse/solar/snipertesh,
 /obj/structure/bed/chair/office/light,
-/turf/simulated/floor/tiled/dark,
-/area/submap/eclipselava)
-"Pq" = (
-/obj/structure/table/steel,
-/obj/random/contraband,
-/obj/random/medical/pillbottle,
-/obj/random/maintenance/research,
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipselava)
 "PP" = (
@@ -1114,27 +1022,21 @@
 /area/submap/eclipselava)
 "Qr" = (
 /obj/structure/table/steel,
-/obj/random/firstaid,
 /obj/random/maintenance/research,
+/obj/random/contraband,
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipselava)
 "QN" = (
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipselava)
 "Rz" = (
 /obj/structure/cable/green{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/dark,
@@ -1156,21 +1058,15 @@
 /area/submap/eclipselava)
 "RT" = (
 /obj/structure/cable/green{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/structure/cable/green{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/structure/cable/green{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/power/apc{
@@ -1186,8 +1082,6 @@
 "Sn" = (
 /mob/living/simple_mob/humanoid/eclipse/solar/hellhound,
 /obj/structure/cable/green{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/reinforced{
@@ -1203,13 +1097,9 @@
 /area/submap/eclipselava)
 "SR" = (
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/reinforced{
@@ -1220,12 +1110,12 @@
 /area/submap/eclipselava)
 "Tb" = (
 /obj/structure/closet/crate,
-/obj/item/weapon/grenade/chem_grenade/incendiary,
-/obj/item/weapon/grenade/chem_grenade/incendiary,
-/obj/item/weapon/grenade/chem_grenade/incendiary,
-/obj/item/weapon/grenade/explosive,
-/obj/item/weapon/grenade/explosive,
-/obj/item/weapon/grenade/explosive,
+/obj/item/grenade/chem_grenade/incendiary,
+/obj/item/grenade/chem_grenade/incendiary,
+/obj/item/grenade/chem_grenade/incendiary,
+/obj/item/grenade/explosive,
+/obj/item/grenade/explosive,
+/obj/item/grenade/explosive,
 /obj/random/grenade/lethal,
 /obj/random/grenade/lethal,
 /obj/random/grenade/lethal,
@@ -1235,26 +1125,20 @@
 /obj/random/grenade/box,
 /obj/random/grenade/box,
 /obj/random/grenade/box,
-/obj/item/weapon/grenade/spawnergrenade/spider/briefcase,
+/obj/item/grenade/spawnergrenade/spider/briefcase,
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipselava)
 "Tc" = (
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/wall/rplastihull,
 /area/submap/eclipselava)
 "Tf" = (
 /obj/structure/cable/green{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/reinforced{
@@ -1283,7 +1167,6 @@
 	icon_state = "term"
 	},
 /obj/structure/cable/green{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /turf/simulated/floor/reinforced{
@@ -1301,13 +1184,10 @@
 "Ux" = (
 /obj/structure/table/steel,
 /obj/random/maintenance/medical,
-/obj/random/maintenance/medical,
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipselava)
 "UF" = (
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/reinforced{
@@ -1330,9 +1210,8 @@
 /area/submap/eclipselava)
 "VR" = (
 /obj/structure/table/steel,
-/obj/random/contraband,
 /obj/random/maintenance/research,
-/obj/item/weapon/paper{
+/obj/item/paper{
 	info = "The extreme heat of the lava and dragons, along side of the energy of the emitter still are unable to replicate the effects of the solar flare project. The dragons have been gorging themselves on wild life, and bandits seem highly keen for the slime core. Stealth is no longer an option, although our position is heavily fortified. We highly recommend for the Head Admiral to relocate resources and attempts for recreation of the solar project off planet.";
 	name = "Status Report"
 	},
@@ -1349,8 +1228,6 @@
 "WP" = (
 /obj/machinery/door/airlock/silver,
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/dark,
@@ -1363,19 +1240,19 @@
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipselava)
 "XX" = (
-/mob/living/simple_mob/humanoid/eclipse/solar/firemoff,
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
+	},
+/mob/living/simple_mob/humanoid/eclipse/solar/firemoff{
+	loot_list = list(/obj/item/slime_extract/sepia = 1, /obj/item/bone/skull = 100, /obj/item/prop/alien/junk = 50)
 	},
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipselava)
 "Yf" = (
-/mob/living/simple_mob/humanoid/eclipse/solar/hellhound,
+/mob/living/simple_mob/humanoid/eclipse/solar/hellhound{
+	loot_list = list(/obj/item/slime_extract/sepia = 1, /obj/item/bone/skull = 100, /obj/item/cell/device/weapon/recharge/alien/hybrid = 50)
+	},
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/dark,
@@ -2223,7 +2100,7 @@ vN
 oc
 dj
 bp
-Ed
+LV
 MO
 MO
 wA
@@ -2410,7 +2287,7 @@ ZS
 bp
 GM
 bB
-El
+il
 bp
 ZS
 ZS
@@ -3204,8 +3081,8 @@ ZS
 Ad
 bp
 ZK
-Pq
-Ej
+ZK
+ZK
 ZK
 bp
 MO
@@ -3264,7 +3141,7 @@ MO
 LC
 RA
 qq
-il
+RA
 qq
 MO
 bp
@@ -3316,7 +3193,7 @@ MO
 XX
 RA
 qq
-RA
+LV
 qq
 MO
 wA
@@ -3359,7 +3236,7 @@ ZS
 ZS
 Ad
 bp
-En
+Ej
 MO
 MO
 qP
@@ -3837,7 +3714,7 @@ MO
 pX
 Oj
 Du
-hg
+Ed
 pX
 bp
 dw

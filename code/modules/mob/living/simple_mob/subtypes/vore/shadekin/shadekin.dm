@@ -5,7 +5,7 @@
 	icon = 'icons/mob/vore_shadekin.dmi'
 	icon_state = "map_example"
 	icon_living = "map_example"
-	faction = "shadekin"
+	faction = FACTION_SHADEKIN
 	ui_icons = 'icons/mob/shadekin_hud.dmi'
 	mob_class = MOB_CLASS_HUMANOID
 	mob_bump_flag = HUMAN
@@ -97,7 +97,7 @@
 		var/new_type = pickweight(sk_types)
 
 		new new_type(loc)
-		initialized = TRUE
+		flags |= ATOM_INITIALIZED
 		return INITIALIZE_HINT_QDEL
 
 	if(icon_state == "map_example")
@@ -134,7 +134,7 @@
 
 	update_icon()
 
-	add_verb(src,/mob/proc/adjust_hive_range) //CHOMPEdit TGPanel
+	add_verb(src, /mob/proc/adjust_hive_range)
 
 	return ..()
 
@@ -143,15 +143,15 @@
 	. = ..()
 
 /mob/living/simple_mob/shadekin/init_vore()
-	if(!voremob_loaded) //CHOMPAdd
-		return //CHOMPAdd
+	if(!voremob_loaded)
+		return
 	if(LAZYLEN(vore_organs))
 		return
 
 	var/obj/belly/B = new /obj/belly(src)
 	vore_selected = B
 	B.immutable = 1
-	B.affects_vore_sprites = TRUE //CHOMPEdit - vore sprites enabled for simplemobs!
+	B.affects_vore_sprites = TRUE
 	B.name = vore_stomach_name ? vore_stomach_name : "stomach"
 	B.desc = vore_stomach_flavor ? vore_stomach_flavor : "Your surroundings are warm, soft, and slimy. Makes sense, considering you're inside \the [name]."
 	B.digest_mode = vore_default_mode
@@ -213,7 +213,7 @@
 		check_timer = 0
 		var/non_kin_count = 0
 		for(var/mob/living/M in view(6,src))
-			if(!istype(M, /mob/living/simple_mob/shadekin))
+			if(!issimplekin(M))
 				non_kin_count ++
 		// Technically can be combined with ||, they call the same function, but readability is poor
 		if(!non_kin_count && (ability_flags & AB_PHASE_SHIFTED))
@@ -231,7 +231,6 @@
 	add_overlay(tailimage)
 	add_overlay(eye_icon_state)
 
-//ChompEDIT START - TGPanel
 /mob/living/simple_mob/shadekin/update_misc_tabs()
 	..()
 	var/list/L = list()
@@ -247,7 +246,6 @@
 
 		L[++L.len] = list("[A.ability_name]", A.ability_name, img, A.atom_button_text(), REF(A))
 	misc_tabs["Shadekin"] = L
-//ChompEDIT END
 
 //They phase back to the dark when killed
 /mob/living/simple_mob/shadekin/death(gibbed, deathmessage = "phases to somewhere far away!")
@@ -260,7 +258,7 @@
 
 	//CHOMPEdit Begin - Actually phase to the dark on death
 	var/area/current_area = get_area(src)
-	if((ability_flags & AB_DARK_RESPITE) || current_area.limit_dark_respite)
+	if((ability_flags & AB_DARK_RESPITE) || current_area.flag_check(AREA_LIMIT_DARK_RESPITE))
 		icon_state = ""
 		spawn(1 SECOND)
 			qdel(src) //Back from whence you came!
@@ -300,11 +298,11 @@
 		//Yay digestion... presumably...
 		var/obj/belly/belly = src.loc
 		add_attack_logs(belly.owner, src, "Digested in [lowertext(belly.name)]")
-		to_chat(belly.owner, "<span class='notice'>\The [src.name] suddenly vanishes within your [belly.name]</span>")
+		to_chat(belly.owner, span_notice("\The [src.name] suddenly vanishes within your [belly.name]"))
 		forceMove(pick(floors))
 		flick("tp_in",src)
 		respite_activating = FALSE
-		belly.owner.update_fullness()
+		belly.owner.handle_belly_update() // CHOMPEdit
 		clear_fullscreen("belly")
 		if(hud_used)
 			if(!hud_used.hud_shown)
@@ -315,7 +313,7 @@
 		spawn(10 MINUTES)
 			ability_flags &= ~AB_DARK_RESPITE
 			movement_cooldown = initial(movement_cooldown)
-			to_chat(src, "<span class='notice'>You feel like you can leave the Dark again</span>")
+			to_chat(src, span_notice("You feel like you can leave the Dark again"))
 	else
 		spawn(1 SECOND)
 			respite_activating = FALSE
@@ -328,7 +326,7 @@
 		spawn(15 MINUTES)
 			ability_flags &= ~AB_DARK_RESPITE
 			movement_cooldown = initial(movement_cooldown)
-			to_chat(src, "<span class='notice'>You feel like you can leave the Dark again</span>")
+			to_chat(src, span_notice("You feel like you can leave the Dark again"))
 	//CHOMPEdit End
 
 /* //VOREStation AI Temporary Removal
@@ -472,7 +470,7 @@
 						if((get_dist(src,henlo_human) <= 1))
 							dir = moving_to
 							if(prob(speak_chance))
-								visible_message("<span class='notice'>\The [src] [pick(friendly)] \the [henlo_human].</span>")
+								visible_message(span_notice("\The [src] [pick(friendly)] \the [henlo_human]."))
 								shy_approach = FALSE //ACCLIMATED
 							lifes_since_move = 0
 							return //No need to move

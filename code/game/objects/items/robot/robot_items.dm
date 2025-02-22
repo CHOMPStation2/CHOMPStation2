@@ -5,7 +5,7 @@
 ***********************************************************************/
 //Might want to move this into several files later but for now it works here
 
-/obj/item/weapon/melee/baton/robot/arm
+/obj/item/melee/baton/robot/arm
 	name = "electrified arm"
 	icon = 'icons/obj/decals.dmi'
 	icon_state = "shock"
@@ -13,7 +13,7 @@
 	hitcost = 750
 	agonyforce = 70
 
-/obj/item/weapon/melee/baton/robot/arm/update_icon()
+/obj/item/melee/baton/robot/arm/update_icon()
 	if(status)
 		set_light(1.5, 1, lightcolor)
 	else
@@ -57,6 +57,12 @@
 	name = "\proper material scanner vision"
 	sight_mode = BORGMATERIAL
 	icon_state = "material"
+	icon = 'icons/inventory/eyes/item.dmi'
+
+/obj/item/borg/sight/janitor
+	name = "\proper contaminant detector vision"
+	sight_mode = BORGJAN
+	icon_state = "janhud"
 	icon = 'icons/inventory/eyes/item.dmi'
 
 /* //ChompEDIT START - disable for now

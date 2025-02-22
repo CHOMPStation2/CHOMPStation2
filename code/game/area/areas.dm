@@ -1,5 +1,7 @@
 // Areas.dm
 
+GLOBAL_LIST_EMPTY(areas_by_type)
+
 /area
 	var/fire = null
 	var/atmos = 1
@@ -37,8 +39,7 @@
 	var/static_environ = 0
 
 	var/music = null
-	var/has_gravity = 1
-	var/secret_name = FALSE // This tells certain things that display areas' names that they shouldn't display this area's name.
+	var/has_gravity = 1 // Don't check this var directly; use get_gravity() instead
 	var/obj/machinery/power/apc/apc = null
 	var/no_air = null
 //	var/list/lights				// list of all lights on this area
@@ -50,10 +51,11 @@
 	var/list/forced_ambience = null
 	var/sound_env = STANDARD_STATION
 	var/turf/base_turf //The base turf type of the area, which can be used to override the z-level's base turf
-	var/forbid_events = FALSE // If true, random events will not start inside this area.
-	var/forbid_singulo = FALSE // If true singulo will not move in.
-	var/no_spoilers = FALSE // If true, makes it much more difficult to see what is inside an area with things like mesons.
-	var/soundproofed = FALSE // If true, blocks sounds from other areas and prevents hearers on other areas from hearing the sounds within.
+
+/area/New()
+	// Used by the maploader, this must be done in New, not init
+	GLOB.areas_by_type[type] = src
+	return ..()
 
 /area/Initialize()
 	. = ..()
@@ -67,7 +69,7 @@
 		power_equip = 0
 		power_environ = 0
 	power_change()		// all machines set to current power level, also updates lighting icon
-	if(no_spoilers)
+	if(flag_check(AREA_NO_SPOILERS))
 		set_spoiler_obfuscation(TRUE)
 
 // Changes the area of T to A. Do not do this manually.
@@ -254,13 +256,6 @@
 	//	new lighting behaviour with obj lights
 		icon_state = null
 
-
-/*
-#define EQUIP 1
-#define LIGHT 2
-#define ENVIRON 3
-*/
-
 /area/proc/powered(var/chan)		// return true if the area has power to given channel
 
 	if(!requires_power)
@@ -389,19 +384,20 @@ var/list/mob/living/forced_ambiance_list = new
 	if(!L.lastarea)
 		L.lastarea = src
 	var/area/oldarea = L.lastarea
-	if((oldarea.has_gravity == 0) && (has_gravity == 1) && (L.m_intent == "run")) // Being ready when you change areas gives you a chance to avoid falling all together.
+	if((oldarea.get_gravity() == 0) && (get_gravity() == 1) && (L.m_intent == I_RUN)) // Being ready when you change areas gives you a chance to avoid falling all together.
 		thunk(L)
 		L.update_floating( L.Check_Dense_Object() )
 
 	L.lastarea = src
 	L.lastareachange = world.time
 	play_ambience(L, initial = TRUE)
-	if(no_spoilers)
+	if(flag_check(AREA_NO_SPOILERS))
 		L.disable_spoiler_vision()
+	check_phase_shift(M)	//RS Port #658
 
 /area/proc/play_ambience(var/mob/living/L, initial = TRUE)
 	// Ambience goes down here -- make sure to list each area seperately for ease of adding things in later, thanks! Note: areas adjacent to each other should have the same sounds to prevent cutoff when possible.- LastyScratch
-	if(!(L && L.is_preference_enabled(/datum/client_preference/play_ambiance)))
+	if(!L?.read_preference(/datum/preference/toggle/play_ambience))
 		return
 
 	var/volume_mod = L.get_preference_volume_channel(VOLUME_CHANNEL_AMBIENCE)
@@ -424,7 +420,7 @@ var/list/mob/living/forced_ambiance_list = new
 		else
 			L << sound(null, channel = CHANNEL_AMBIENCE_FORCED)
 	else if(src.ambience && src.ambience.len)
-		var/ambience_odds = L?.client.prefs.ambience_chance
+		var/ambience_odds = L.read_preference(/datum/preference/numeric/ambience_chance)
 		if(prob(ambience_odds) && (world.time >= L.client.time_last_ambience_played + 1 MINUTE))
 			var/sound = pick(ambience)
 			L << sound(sound, repeat = 0, wait = 0, volume = 50 * volume_mod, channel = CHANNEL_AMBIENCE)
@@ -434,10 +430,10 @@ var/list/mob/living/forced_ambiance_list = new
 	src.has_gravity = gravitystate
 
 	for(var/mob/M in src)
-		if(has_gravity)
+		if(get_gravity())
 			thunk(M)
 		M.update_floating( M.Check_Dense_Object() )
-		M.update_gravity(has_gravity)
+		M.update_gravity(get_gravity())
 
 /area/proc/thunk(mob)
 	if(istype(get_turf(mob), /turf/space)) // Can't fall onto nothing.
@@ -454,13 +450,13 @@ var/list/mob/living/forced_ambiance_list = new
 		if(H.species.can_zero_g_move || H.species.can_space_freemove)
 			return
 
-		if(H.m_intent == "run")
+		if(H.m_intent == I_RUN)
 			H.AdjustStunned(1) // CHOMPedit: No longer a supermassive long stun.
 //			H.AdjustWeakened(6) // CHOMPedit: No longer weakens.
 		else
 			H.AdjustStunned(1) // CHOMPedit: No longer a supermassive long stun.
 //			H.AdjustWeakened(3) // CHOMPedit: No longer weakens.
-		to_chat(mob, "<span class='notice'>The sudden appearance of gravity makes you fall to the floor!</span>")
+		to_chat(mob, span_notice("The sudden appearance of gravity makes you fall to the floor!"))
 		playsound(mob, "bodyfall", 50, 1)
 
 /area/proc/prison_break(break_lights = TRUE, open_doors = TRUE, open_blast_doors = FALSE) //CHOMP Edit set blast doors to FALSE
@@ -478,17 +474,17 @@ var/list/mob/living/forced_ambiance_list = new
 			for(var/obj/machinery/door/blast/temp_blast in src)
 				temp_blast.open()
 
-/area/has_gravity()
+/area/get_gravity()
 	return has_gravity
 
-/area/space/has_gravity()
+/area/space/get_gravity()
 	return 0
 
-/proc/has_gravity(atom/AT, turf/T)
+/proc/get_gravity(atom/AT, turf/T)
 	if(!T)
 		T = get_turf(AT)
 	var/area/A = get_area(T)
-	if(A && A.has_gravity())
+	if(A && A.get_gravity())
 		return 1
 	return 0
 
@@ -539,7 +535,7 @@ var/list/ghostteleportlocs = list()
 	return 1
 
 /area/proc/get_name()
-	if(secret_name)
+	if(flag_check(AREA_SECRET_NAME))
 		return "Unknown Area"
 	return name
 
@@ -554,3 +550,26 @@ GLOBAL_DATUM(spoiler_obfuscation_image, /image)
 		add_overlay(GLOB.spoiler_obfuscation_image)
 	else
 		cut_overlay(GLOB.spoiler_obfuscation_image)
+
+/area/proc/flag_check(var/flag, var/match_all = FALSE)
+    if(match_all)
+        return (flags & flag) == flag
+    return flags & flag
+
+// RS Port #658 Start
+/area/proc/check_phase_shift(var/mob/ourmob)
+	if(!flag_check(AREA_BLOCK_PHASE_SHIFT) || !ourmob.incorporeal_move)
+		return
+	if(!isliving(ourmob))
+		return
+	if(ourmob.client?.holder)
+		return
+	if(issimplekin(ourmob))
+		var/mob/living/simple_mob/shadekin/SK = ourmob
+		if(SK.ability_flags & AB_PHASE_SHIFTED)
+			SK.phase_in(SK.loc)
+	if(ishuman(ourmob))
+		var/mob/living/carbon/human/SK = ourmob
+		if(SK.ability_flags & AB_PHASE_SHIFTED)
+			SK.phase_in(SK.loc)
+// RS Port #658 End

@@ -24,7 +24,7 @@
 /datum/ai_holder/simple_mob/ranged/kiting/threatening/drone_aerostat
 	threaten_delay = 10 SECOND
 	threaten_timeout = 30 SECONDS
-
+/* Combat refactor walkback
 /mob/living/simple_mob/mechanical/combat_drone
 	maxHealth = 25
 	health = 25
@@ -37,7 +37,7 @@
 /mob/living/simple_mob/mechanical/viscerator
 	maxHealth = 7
 	health = 7
-
+*/
 /obj/item/shield_projector/rectangle/automatic/drone
 	shield_health = 75
 	max_shield_health = 75

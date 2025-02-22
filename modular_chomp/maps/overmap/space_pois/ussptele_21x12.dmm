@@ -13,12 +13,12 @@
 /turf/template_noop,
 /area/submap/ussp_tele)
 "d" = (
-/obj/item/weapon/material/shard,
+/obj/item/material/shard,
 /turf/template_noop,
 /area/submap/ussp_tele)
 "e" = (
 /obj/structure/lattice,
-/obj/item/weapon/material/shard{
+/obj/item/material/shard{
 	icon_state = "small"
 	},
 /turf/template_noop,
@@ -55,7 +55,7 @@
 /turf/simulated/floor/airless,
 /area/submap/ussp_tele)
 "n" = (
-/obj/item/weapon/material/shard{
+/obj/item/material/shard{
 	icon_state = "small"
 	},
 /turf/simulated/floor/tiled/asteroid_steel/airless{
@@ -81,7 +81,7 @@
 	},
 /area/submap/ussp_tele)
 "q" = (
-/obj/item/weapon/clipboard,
+/obj/item/clipboard,
 /obj/structure/table/standard,
 /turf/simulated/floor/tiled/asteroid_steel/airless{
 	icon_state = "dark"
@@ -124,7 +124,7 @@
 /area/submap/ussp_tele)
 "x" = (
 /obj/structure/table/standard,
-/obj/item/weapon/cell/super,
+/obj/item/cell/super,
 /turf/simulated/floor/tiled/asteroid_steel/airless{
 	icon_state = "dark"
 	},

@@ -46,7 +46,7 @@
 	emote_sound = 'sound/voice/biamthelaw.ogg'
 
 /decl/emote/audible/synth/security/mob_can_use(var/mob/living/silicon/robot/user)
-	return ..() && (istype(user) && (istype(user.module, /obj/item/weapon/robot_module/robot/security)))
+	return ..() && (istype(user) && (istype(user.module, /obj/item/robot_module/robot/security)))
 
 /decl/emote/audible/synth/security/halt
 	key = "halt"
@@ -77,4 +77,22 @@
 	emote_message_3p_target = "chirps at TARGET!"
 	emote_message_3p = "chirps."
 	emote_sound = 'sound/voice/robochirp.ogg'
+	sound_vary = TRUE
+
+/decl/emote/audible/synth/ding
+	key = "ding"
+	emote_message_1p = "You ding at TARGET!"
+	emote_message_1p = "You ding."
+	emote_message_3p_target = "dings at TARGET!"
+	emote_message_3p = "dings."
+	emote_sound = 'sound/machines/ding.ogg'
+	sound_vary = TRUE
+
+/decl/emote/audible/synth/microwave
+	key = "microwave"
+	emote_message_1p = "You make microwave noises at TARGET!"
+	emote_message_1p = "You make microwave noises."
+	emote_message_3p_target = "makes microwave noises at TARGET!"
+	emote_message_3p = "makes microwave noises."
+	emote_sound = 'sound/machines/kitchen/microwave/microwave-mid2.ogg'
 	sound_vary = TRUE

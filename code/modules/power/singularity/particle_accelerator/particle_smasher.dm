@@ -21,8 +21,8 @@
 	var/energy = 0				// How many 'energy' units does this have? Acquired by a Particle Accelerator like a Singularity.
 	var/max_energy = 600
 	var/obj/item/stack/material/target	// The material being bombarded.
-	var/obj/item/weapon/reagent_containers/reagent_container		// Holds the beaker. The process will consume ALL reagents inside it.
-	var/beaker_type = /obj/item/weapon/reagent_containers/glass/beaker
+	var/obj/item/reagent_containers/reagent_container		// Holds the beaker. The process will consume ALL reagents inside it.
+	var/beaker_type = /obj/item/reagent_containers/glass/beaker
 	var/list/storage		// Holds references to items allowed to be used in the fabrication phase.
 	var/max_storage = 3	// How many items can be jammed into it?
 	var/list/recipes	// The list containing the Particle Smasher's recipes.
@@ -42,36 +42,36 @@
 /obj/machinery/particle_smasher/examine(mob/user)
 	. = ..()
 	if(Adjacent(user))
-		. += "<span class='notice'>\The [src] contains:</span>"
+		. += span_notice("\The [src] contains:")
 		for(var/obj/item/I in contents)
-			. += "<span class='notice'>\the [I]</span>"
+			. += span_notice("\the [I]")
 
 /obj/machinery/particle_smasher/atmosanalyze(var/mob/user)
-	return list("<span class='notice'>\The [src] reads an energy level of [energy].</span>")
+	return list(span_notice("\The [src] reads an energy level of [energy]."))
 
 /obj/machinery/particle_smasher/attackby(obj/item/W as obj, mob/user as mob)
-	if(W.type == /obj/item/device/analyzer)
+	if(W.type == /obj/item/analyzer)
 		return
 	else if(istype(W, /obj/item/stack/material))
 		var/obj/item/stack/material/M = W
 		if(M.uses_charge)
-			to_chat(user, "<span class='notice'>You cannot fill \the [src] with a synthesizer!</span>")
+			to_chat(user, span_notice("You cannot fill \the [src] with a synthesizer!"))
 			return
 		target = M.split(1)
 		target.forceMove(src)
 		update_icon()
 	else if(istype(W, beaker_type))
 		if(reagent_container)
-			to_chat(user, "<span class='notice'>\The [src] already has a container attached.</span>")
+			to_chat(user, span_notice("\The [src] already has a container attached."))
 			return
-		if(isrobot(user) && istype(W.loc, /obj/item/weapon/gripper))
-			var/obj/item/weapon/gripper/G = W.loc
+		if(isrobot(user) && istype(W.loc, /obj/item/gripper))
+			var/obj/item/gripper/G = W.loc
 			G.drop_item()
 		else
 			user.drop_from_inventory(W)
 		reagent_container = W
 		reagent_container.forceMove(src)
-		to_chat(user, "<span class='notice'>You add \the [reagent_container] to \the [src].</span>")
+		to_chat(user, span_notice("You add \the [reagent_container] to \the [src]."))
 		update_icon()
 		return
 	else if(W.has_tool_quality(TOOL_WRENCH))
@@ -87,12 +87,12 @@
 				"You hear a ratchet.")
 		update_icon()
 		return
-	else if(istype(W, /obj/item/weapon/card/id))
-		to_chat(user, "<span class='notice'>Swiping \the [W] on \the [src] doesn't seem to do anything...</span>")
+	else if(istype(W, /obj/item/card/id))
+		to_chat(user, span_notice("Swiping \the [W] on \the [src] doesn't seem to do anything..."))
 		return ..()
-	else if(((isrobot(user) && istype(W.loc, /obj/item/weapon/gripper)) || (!isrobot(user) && W.canremove)) && storage.len < max_storage)
-		if(isrobot(user) && istype(W.loc, /obj/item/weapon/gripper))
-			var/obj/item/weapon/gripper/G = W.loc
+	else if(((isrobot(user) && istype(W.loc, /obj/item/gripper)) || (!isrobot(user) && W.canremove)) && storage.len < max_storage)
+		if(isrobot(user) && istype(W.loc, /obj/item/gripper))
+			var/obj/item/gripper/G = W.loc
 			G.drop_item()
 		else
 			user.drop_from_inventory(W)
@@ -177,12 +177,12 @@
 		recipes = typesof(/datum/particle_smasher_recipe)
 
 	if(!target)	// You are just blasting an empty machine.
-		visible_message("<b>\The [src]</b> shudders.")
+		visible_message(span_infoplain(span_bold("\The [src]") + " shudders."))
 		update_icon()
 		return
 
 	if(successful_craft)
-		visible_message("<span class='warning'>\The [src] fizzles.</span>")
+		visible_message(span_warning("\The [src] fizzles."))
 		if(prob(33))	// Why are you blasting it after it's already done!
 			SSradiation.radiate(src, 10 + round(src.energy / 60, 1))
 			energy = max(0, energy - 30)
@@ -231,7 +231,7 @@
 	if(recipe.items && recipe.items.len)
 		for(var/obj/item/I in storage)
 			for(var/item_type in recipe.items)
-				if(istype(I, item_type))
+				if(istype(I, item_type) && prob(recipe.item_consume_chance))
 					storage -= I
 					qdel(I)
 					break
@@ -270,8 +270,8 @@
  */
 
 /datum/particle_smasher_recipe
-	var/list/reagents	// example: = list("pacid" = 5)
-	var/list/items		// example: = list(/obj/item/weapon/tool/crowbar, /obj/item/weapon/welder) Place /foo/bar before /foo. Do not include fruit. Maximum of 3 items.
+	var/list/reagents	// example: = list(REAGENT_ID_PACID = 5)
+	var/list/items		// example: = list(/obj/item/tool/crowbar, /obj/item/welder) Place /foo/bar before /foo. Do not include fruit. Maximum of 3 items.
 	var/recipe_type = PS_RESULT_STACK			// Are we producing a stack or an item?
 
 	var/result = /obj/item/stack/material/iron		// The sheet this will produce.
@@ -281,6 +281,7 @@
 	var/required_atmos_temp_min = 0		// The minimum ambient atmospheric temperature required, in kelvin.
 	var/required_atmos_temp_max = 600	// The maximum ambient atmospheric temperature required, in kelvin.
 	var/probability = 0					// The probability for the recipe to be produced. 0 will make it impossible.
+	var/item_consume_chance = 100		// The probability for the items (not materials) used in the recipe to be consume.
 
 /datum/particle_smasher_recipe/proc/check_items(var/obj/container as obj)
 	. = 1
@@ -290,7 +291,7 @@
 		if(istype(container, /obj/machinery/particle_smasher))
 			var/obj/machinery/particle_smasher/machine = container
 			for(var/obj/O in machine.storage)
-				if(istype(O,/obj/item/weapon/reagent_containers/food/snacks/grown))
+				if(istype(O,/obj/item/reagent_containers/food/snacks/grown))
 					continue // Fruit is handled in check_fruit().
 				var/found = 0
 				for(var/i = 1; i < checklist.len+1; i++)
@@ -319,7 +320,7 @@
 	return .
 
 /datum/particle_smasher_recipe/deuterium_tritium
-	reagents = list("hydrogen" = 15)
+	reagents = list(REAGENT_ID_HYDROGEN = 15)
 
 	result = /obj/item/stack/material/tritium
 	required_material = /obj/item/stack/material/deuterium
@@ -349,7 +350,7 @@
 	probability = 10
 
 /datum/particle_smasher_recipe/osmium_lead
-	reagents = list("tungsten" = 10)
+	reagents = list(REAGENT_ID_TUNGSTEN = 10)
 
 	result = /obj/item/stack/material/lead
 	required_material = /obj/item/stack/material/osmium
@@ -362,7 +363,7 @@
 	probability = 50
 
 /datum/particle_smasher_recipe/phoron_valhollide
-	reagents = list("phoron" = 10, "pacid" = 10)
+	reagents = list(REAGENT_ID_PHORON = 10, REAGENT_ID_PACID = 10)
 
 	result = /obj/item/stack/material/valhollide
 	required_material = /obj/item/stack/material/phoron
@@ -375,7 +376,7 @@
 	probability = 10
 
 /datum/particle_smasher_recipe/valhollide_supermatter
-	reagents = list("phoron" = 300)
+	reagents = list(REAGENT_ID_PHORON = 300)
 
 	result = /obj/item/stack/material/supermatter
 	required_material = /obj/item/stack/material/valhollide
@@ -388,11 +389,11 @@
 	probability = 1
 
 /datum/particle_smasher_recipe/donkpockets_coal
-	items = list(/obj/item/weapon/reagent_containers/food/snacks/donkpocket)
+	items = list(/obj/item/reagent_containers/food/snacks/donkpocket)
 
 	recipe_type = PS_RESULT_ITEM
 
-	result = /obj/item/weapon/ore/coal
+	result = /obj/item/ore/coal
 	required_material = null
 
 	required_energy_min = 1
@@ -403,12 +404,12 @@
 	probability = 90
 
 /datum/particle_smasher_recipe/donkpockets_ascend
-	items = list(/obj/item/weapon/reagent_containers/food/snacks/donkpocket)
-	reagents = list("phoron" = 120)
+	items = list(/obj/item/reagent_containers/food/snacks/donkpocket)
+	reagents = list(REAGENT_ID_PHORON = 120)
 
 	recipe_type = PS_RESULT_ITEM
 
-	result = /obj/item/weapon/reagent_containers/food/snacks/donkpocket/ascended
+	result = /obj/item/reagent_containers/food/snacks/donkpocket/ascended
 	required_material = /obj/item/stack/material/uranium
 
 	required_energy_min = 501
@@ -417,3 +418,20 @@
 	required_atmos_temp_min = 400
 	required_atmos_temp_max = 20000
 	probability = 20
+
+/datum/particle_smasher_recipe/glamour
+	items = list(/obj/item/glamour_unstable)
+
+	result = /obj/item/stack/material/glamour
+	required_material = /obj/item/stack/material/phoron
+
+	required_energy_min = 500
+	required_energy_max = 600
+
+	required_atmos_temp_min = 0
+	required_atmos_temp_max = 50
+	probability = 100
+	item_consume_chance = 10 //Allows only a few unstable glamour to be given out to get lots of stable ones.
+
+#undef PS_RESULT_STACK
+#undef PS_RESULT_ITEM

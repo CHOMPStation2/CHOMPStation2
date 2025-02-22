@@ -149,7 +149,7 @@
 			drop.forceMove(T)
 
 /datum/admins/proc/call_drop_pod()
-	set category = "Fun"
+	set category = "Fun.Drop Pod"
 	set desc = "Call an immediate drop pod on your location."
 	set name = "Call Drop Pod"
 
@@ -163,7 +163,10 @@
 	if(!spawn_path)
 		return
 
-	if(tgui_alert(usr, "Do you wish the mob to have a player?","Assign Player?",list("No","Yes")) == "No")
+	var/input = tgui_alert(usr, "Do you wish the mob to have a player?","Assign Player?",list("No","Yes"))
+	if(!input)
+		return
+	if(input == "No")
 		var/spawn_count = tgui_input_number(usr, "How many mobs do you wish the pod to contain?", "Drop Pod Selection", null, min_value=1)
 		if(spawn_count <= 0)
 			return
@@ -174,7 +177,7 @@
 	else
 		var/list/candidates = list()
 		for(var/client/player in GLOB.clients)
-			if(player.mob && istype(player.mob, /mob/observer/dead))
+			if(player.mob && isobserver(player.mob))
 				candidates |= player
 
 		if(!candidates.len)
@@ -191,13 +194,13 @@
 		spawned_mob.tag = "awaiting drop"
 
 		// Equip them, if they are human and it is desirable.
-		if(istype(spawned_mob, /mob/living/carbon/human))
+		if(ishuman(spawned_mob))
 			var/antag_type = tgui_input_list(usr, "Select an equipment template to use or cancel for nude.", all_antag_types)
 			if(antag_type)
 				var/datum/antagonist/A = all_antag_types[antag_type]
 				A.equip(spawned_mob)
 
-	if(tgui_alert(usr, "Are you SURE you wish to deploy this drop pod? It will cause a sizable explosion and gib anyone underneath it.","Danger!",list("No","Yes")) == "No")
+	if(tgui_alert(usr, "Are you SURE you wish to deploy this drop pod? It will cause a sizable explosion and gib anyone underneath it.","Danger!",list("No","Yes")) != "Yes")
 		if(spawned_mob)
 			qdel(spawned_mob)
 		if(spawned_mobs.len)
@@ -226,3 +229,9 @@
 		return
 
 	new /datum/random_map/droppod(null, usr.x-1, usr.y-1, usr.z, supplied_drops = spawned_mobs, automated = automatic_pod)
+
+#undef SD_FLOOR_TILE
+#undef SD_WALL_TILE
+#undef SD_DOOR_TILE
+#undef SD_EMPTY_TILE
+#undef SD_SUPPLY_TILE

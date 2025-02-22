@@ -1,19 +1,5 @@
 #define RECOMMENDED_VERSION 513
-// CHOMPedit Start - Tracy
-/proc/prof_init()
-	var/lib
-
-	switch(world.system_type)
-		if(MS_WINDOWS) lib = "prof.dll"
-		if(UNIX) lib = "libprof.so"
-		else CRASH("unsupported platform")
-
-	var/init = call_ext(lib, "init")()
-	if("0" != init) CRASH("[lib] init error: [init]")
-// CHOMPedit End
-
 /world/New()
-	//prof_init() // CHOMPedit - Uncomment to enable Tracy. Requires https://github.com/mafemergency/byond-tracy/
 	world_startup_time = world.timeofday
 	rollover_safety_date = world.realtime - world.timeofday // 00:00 today (ish, since floating point error with world.realtime) of today
 	to_world_log("Map Loading Complete")
@@ -23,14 +9,16 @@
 	diary = start_log("[log_path].log")
 	href_logfile = start_log("[log_path]-hrefs.htm")
 	error_log = start_log("[log_path]-error.log")
+	sql_error_log = start_log("[log_path]-sql-error.log")
+	query_debug_log = start_log("[log_path]-query-debug.log")
 	debug_log = start_log("[log_path]-debug.log")
 	//VOREStation Edit End
 
-	//changelog_hash = md5('html/changelog.html') //used for telling if the changelog has changed recently //Chomp REMOVE
-	//ChompADD Start - Better Changelogs
-	var/latest_changelog = file("html/changelogs_ch/archive/" + time2text(world.timeofday, "YYYY-MM") + ".yml")
-	changelog_hash = fexists(latest_changelog) ? md5(latest_changelog) : 0 //for telling if the changelog has changed recently
-	//Newsfile
+	var/latest_changelog = file("[global.config.directory]/../html/changelogs_ch/archive/" + time2text(world.timeofday, "YYYY-MM") + ".yml") // CHOMPEdit - changelogs_ch
+	GLOB.changelog_hash = fexists(latest_changelog) ? md5(latest_changelog) : "" //for telling if the changelog has changed recently
+	to_world_log("Changelog Hash: '[GLOB.changelog_hash]' ([latest_changelog])")
+
+	//ChompADD Start - Newsfile
 	var/savefile/F = new(NEWSFILE)
 	if(F)
 		var/title
@@ -45,22 +33,21 @@
 		to_world_log("Your server's byond version does not meet the recommended requirements for this server. Please update BYOND")
 
 	TgsNew(new /datum/tgs_event_handler/impl, TGS_SECURITY_TRUSTED) // CHOMPEdit - tgs event handler
-	// VgsNew() // VOREStation Edit - VGS // CHOMPEdit - Has to be initialized after config was loaded
 
-	config.Load(params[OVERRIDE_CONFIG_DIRECTORY_PARAMETER]) // CHOMPEdit
+	config.Load(params[OVERRIDE_CONFIG_DIRECTORY_PARAMETER])
 
-	ConfigLoaded() // CHOMPEdit
-	makeDatumRefLists() // CHOMPEdit
-	VgsNew() // CHOMPEdit
+	ConfigLoaded()
+	makeDatumRefLists()
+	VgsNew()
 
-	var/servername = CONFIG_GET(string/servername) // CHOMPEdit
-	if(config && servername != null && CONFIG_GET(flag/server_suffix) && world.port > 0) // CHOMPEdit
+	var servername = CONFIG_GET(string/servername)
+	if(config && servername != null && CONFIG_GET(flag/server_suffix) && world.port > 0)
 		// dumb and hardcoded but I don't care~
-		servername += " #[(world.port % 1000) / 100]" // CHOMPEdit
-		CONFIG_SET(string/servername, servername) // CHOMPEdit
+		servername += " #[(world.port % 1000) / 100]"
+		CONFIG_SET(string/servername, servername)
 
 	// TODO - Figure out what this is. Can you assign to world.log?
-	// if(config && CONFIG_GET(flag/log_runtime)) // CHOMPEdit
+	// if(config && CONFIG_FLAG(flag/log_runtime))
 	// 	log = file("data/logs/runtime/[time2text(world.realtime,"YYYY-MM-DD-(hh-mm-ss)")]-runtime.log")
 
 	GLOB.timezoneOffset = world.timezone * 36000
@@ -73,16 +60,14 @@
 	src.update_status()
 	setup_season()	//VOREStation Addition
 
-	// CHOMPStation Addition: Spaceman DMM Debugging
 	var/debug_server = world.GetConfig("env", "AUXTOOLS_DEBUG_DLL")
 	if (debug_server)
 		call_ext(debug_server, "auxtools_init")()
 		enable_debugging()
-	// CHOMPStation Add End
 
 	. = ..()
 
-#if UNIT_TEST
+#ifdef UNIT_TEST
 	log_unit_test("Unit Tests Enabled.  This will destroy the world when testing is complete.")
 	log_unit_test("If you did not intend to enable this please check code/__defines/unit_testing.dm")
 #endif
@@ -104,19 +89,18 @@
 
 	spawn(1)
 		master_controller.setup()
-#if UNIT_TEST
+#ifdef UNIT_TEST
 		initialize_unit_tests()
 #endif
 
 	spawn(3000)		//so we aren't adding to the round-start lag
-		if(CONFIG_GET(flag/ToRban)) // CHOMPEdit
+		if(CONFIG_GET(flag/ToRban))
 			ToRban_autoupdate()
 
 #undef RECOMMENDED_VERSION
 
 	return
 
-// CHOMPEdit Start
 /// Runs after config is loaded but before Master is initialized
 /world/proc/ConfigLoaded()
 	// Everything in here is prioritized in a very specific way.
@@ -127,12 +111,11 @@
 	SSdbcore.InitializeRound()
 
 	//apply a default value to config.python_path, if needed
-	if (!CONFIG_GET(string/python_path)) // CHOMPEdit
+	if (!CONFIG_GET(string/python_path))
 		if(world.system_type == UNIX)
-			CONFIG_SET(string/python_path, "/usr/bin/env python2") // CHOMPEdit
+			CONFIG_SET(string/python_path, "/usr/bin/env python2")
 		else //probably windows, if not this should work anyway
-			CONFIG_SET(string/python_path, "python") // CHOMPEdit
-// CHOMPEdit End
+			CONFIG_SET(string/python_path, "python")
 
 var/world_topic_spam_protect_ip = "0.0.0.0"
 var/world_topic_spam_protect_time = world.timeofday
@@ -160,11 +143,11 @@ var/world_topic_spam_protect_time = world.timeofday
 		var/list/s = list()
 		s["version"] = game_version
 		s["mode"] = master_mode
-		s["respawn"] = CONFIG_GET(flag/abandon_allowed) // CHOMPEdit
-		s["persistance"] = CONFIG_GET(flag/persistence_disabled) // CHOMPEdit
-		s["enter"] = CONFIG_GET(flag/enter_allowed) // CHOMPEdit
-		s["vote"] = CONFIG_GET(flag/allow_vote_mode) // CHOMPEdit
-		s["ai"] = CONFIG_GET(flag/allow_ai) // CHOMPEdit
+		s["respawn"] = CONFIG_GET(flag/abandon_allowed)
+		s["persistance"] = CONFIG_GET(flag/persistence_disabled)
+		s["enter"] = CONFIG_GET(flag/enter_allowed)
+		s["vote"] = CONFIG_GET(flag/allow_vote_mode)
+		s["ai"] = CONFIG_GET(flag/allow_ai)
 		s["host"] = host ? host : null
 
 		// This is dumb, but spacestation13.com's banners break if player count isn't the 8th field of the reply, so... this has to go here.
@@ -184,7 +167,7 @@ var/world_topic_spam_protect_time = world.timeofday
 						continue
 					admins[C.key] = C.holder.rank
 				players += C.key
-				if(istype(C.mob, /mob/living))
+				if(isliving(C.mob))
 					active++
 
 			s["players"] = players.len
@@ -297,7 +280,8 @@ var/world_topic_spam_protect_time = world.timeofday
 
 	else if(copytext(T,1,5) == "info")
 		var/input[] = params2list(T)
-		if(input["key"] != CONFIG_GET(string/comms_password)) // CHOMPEdit
+		var/password = CONFIG_GET(string/comms_password)
+		if(!password || input["key"] != password)
 			if(world_topic_spam_protect_ip == addr && abs(world_topic_spam_protect_time - world.time) < 50)
 
 				spawn(50)
@@ -352,7 +336,7 @@ var/world_topic_spam_protect_time = world.timeofday
 			info["hasbeenrev"] = M.mind ? M.mind.has_been_rev : "No mind"
 			info["stat"] = M.stat
 			info["type"] = M.type
-			if(istype(M, /mob/living))
+			if(isliving(M))
 				var/mob/living/L = M
 				info["damage"] = list2params(list(
 							oxy = L.getOxyLoss(),
@@ -384,7 +368,8 @@ var/world_topic_spam_protect_time = world.timeofday
 
 
 		var/input[] = params2list(T)
-		if(input["key"] != CONFIG_GET(string/comms_password)) // CHOMPEdit
+		var/password = CONFIG_GET(string/comms_password)
+		if(!password || input["key"] != password)
 			if(world_topic_spam_protect_ip == addr && abs(world_topic_spam_protect_time - world.time) < 50)
 
 				spawn(50)
@@ -410,8 +395,8 @@ var/world_topic_spam_protect_time = world.timeofday
 		if(!rank)
 			rank = "Admin"
 
-		var/message =	span_red("IRC-[rank] PM from <b><a href='?irc_msg=[input["sender"]]'>IRC-[input["sender"]]</a></b>: [input["msg"]]")
-		var/amessage =  span_blue("IRC-[rank] PM from <a href='?irc_msg=[input["sender"]]'>IRC-[input["sender"]]</a> to <b>[key_name(C)]</b> : [input["msg"]]")
+		var/message =	span_red("IRC-[rank] PM from <b><a href='byond://?irc_msg=[input["sender"]]'>IRC-[input["sender"]]</a></b>: [input["msg"]]")
+		var/amessage =  span_blue("IRC-[rank] PM from <a href='byond://?irc_msg=[input["sender"]]'>IRC-[input["sender"]]</a> to <b>[key_name(C)]</b> : [input["msg"]]")
 
 		C.received_irc_pm = world.time
 		C.irc_admin = input["sender"]
@@ -434,7 +419,8 @@ var/world_topic_spam_protect_time = world.timeofday
 				2. validationkey = the key the bot has, it should match the gameservers commspassword in it's configuration.
 		*/
 		var/input[] = params2list(T)
-		if(input["key"] != CONFIG_GET(string/comms_password)) // CHOMPEdit
+		var/password = CONFIG_GET(string/comms_password)
+		if(!password || input["key"] != password)
 			if(world_topic_spam_protect_ip == addr && abs(world_topic_spam_protect_time - world.time) < 50)
 
 				spawn(50)
@@ -449,7 +435,8 @@ var/world_topic_spam_protect_time = world.timeofday
 
 	else if(copytext(T,1,4) == "age")
 		var/input[] = params2list(T)
-		if(input["key"] != CONFIG_GET(string/comms_password)) // CHOMPEdit
+		var/password = CONFIG_GET(string/comms_password)
+		if(!password || input["key"] != password)
 			if(world_topic_spam_protect_ip == addr && abs(world_topic_spam_protect_time - world.time) < 50)
 				spawn(50)
 					world_topic_spam_protect_time = world.time
@@ -478,15 +465,15 @@ var/world_topic_spam_protect_time = world.timeofday
 		if (usr)
 			log_admin("[key_name(usr)] Has requested an immediate world restart via client side debugging tools")
 			message_admins("[key_name_admin(usr)] Has requested an immediate world restart via client side debugging tools")
-			to_world("<span class='boldannounce'>[key_name_admin(usr)] has requested an immediate world restart via client side debugging tools</span>")
+			to_world(span_boldannounce("[key_name_admin(usr)] has requested an immediate world restart via client side debugging tools"))
 
 		else
-			to_world("<span class='boldannounce'>Rebooting world immediately due to host request</span>")
+			to_world(span_boldannounce("Rebooting world immediately due to host request"))
 	else
 		Master.Shutdown()	//run SS shutdowns
 		for(var/client/C in GLOB.clients)
-			if(CONFIG_GET(string/server))	//if you set a server location in config.txt, it sends you there instead of trying to reconnect to the same world address. -- NeoFite // CHOMPEdit
-				C << link("byond://[CONFIG_GET(string/server)]") // CHOMPEdit
+			if(CONFIG_GET(string/server))	//if you set a server location in config.txt, it sends you there instead of trying to reconnect to the same world address. -- NeoFite
+				C << link("byond://[CONFIG_GET(string/server)]")
 
 	TgsReboot()
 	log_world("World rebooted at [time_stamp()]")
@@ -520,14 +507,14 @@ var/world_topic_spam_protect_time = world.timeofday
 /world/proc/load_motd()
 	join_motd = file2text("config/motd.txt")
 
-/* CHOMPEdit Start
+/* Replaced with configuration controller
 /proc/load_configuration()
 	config = new /datum/configuration()
 	config.load("config/config.txt")
 	config.load("config/game_options.txt","game_options")
 	config.loadsql("config/dbconfig.txt")
 	config.loadforumsql("config/forumdbconfig.txt")
-*/ // CHOMPEdit End
+*/
 
 /hook/startup/proc/loadMods()
 	world.load_mods()
@@ -535,7 +522,7 @@ var/world_topic_spam_protect_time = world.timeofday
 	return 1
 
 /world/proc/load_mods()
-	if(CONFIG_GET(flag/admin_legacy_system)) // CHOMPEdit
+	if(CONFIG_GET(flag/admin_legacy_system))
 		var/text = file2text("config/moderators.txt")
 		if (!text)
 			error("Failed to load config/mods.txt")
@@ -556,7 +543,7 @@ var/world_topic_spam_protect_time = world.timeofday
 				D.associate(GLOB.directory[ckey])
 
 /world/proc/load_mentors()
-	if(CONFIG_GET(flag/admin_legacy_system)) // CHOMPEdit
+	if(CONFIG_GET(flag/admin_legacy_system))
 		var/text = file2text("config/mentors.txt")
 		if (!text)
 			error("Failed to load config/mentors.txt")
@@ -571,14 +558,14 @@ var/world_topic_spam_protect_time = world.timeofday
 				var/ckey = copytext(line, 1, length(line)+1)
 				var/datum/mentor/M = new /datum/mentor(ckey)
 				M.associate(GLOB.directory[ckey])
-	else // CHOMPedit Start - Implementing loading mentors from database
+	else
 		establish_db_connection()
 		if(!SSdbcore.IsConnected())
 			error("Failed to connect to database in load_mentors().")
 			log_misc("Failed to connect to database in load_mentors().")
 			return
 
-		var/datum/db_query/query = SSdbcore.NewQuery("SELECT ckey, mentor FROM erro_mentor") //CHOMPEdit TGSQL
+		var/datum/db_query/query = SSdbcore.NewQuery("SELECT ckey, mentor FROM erro_mentor")
 		query.Execute()
 		while(query.NextRow())
 			var/ckey = query.item[1]
@@ -588,15 +575,14 @@ var/world_topic_spam_protect_time = world.timeofday
 				var/datum/mentor/M = new /datum/mentor(ckey)
 				M.associate(GLOB.directory[ckey])
 		qdel(query)
-	// COMPedit End
 
 /world/proc/update_status()
 	var/s = ""
 
-	if (config && CONFIG_GET(string/servername)) // CHOMPEdit
-		s += "<b>[CONFIG_GET(string/servername)]</b> &#8212; " // CHOMPEdit
+	if (config && CONFIG_GET(string/servername))
+		s += span_bold("[CONFIG_GET(string/servername)]") + " &#8212; "
 
-	s += "<b>[station_name()]</b>";
+	s += span_bold("[station_name()]");
 	s += " ("
 	s += "<a href=\"https://\">" //Change this to wherever you want the hub to link to.
 //	s += "[game_version]"
@@ -610,21 +596,21 @@ var/world_topic_spam_protect_time = world.timeofday
 		if(master_mode)
 			features += master_mode
 	else
-		features += "<b>STARTING</b>"
+		features += span_bold("STARTING")
 
 	if (!CONFIG_GET(flag/enter_allowed))
 		features += "closed"
 
-	features += CONFIG_GET(flag/abandon_allowed) ? "respawn" : "no respawn" // CHOMPEdit
+	features += CONFIG_GET(flag/abandon_allowed) ? "respawn" : "no respawn"
 
-	features += CONFIG_GET(flag/persistence_disabled) ? "persistence disabled" : "persistence enabled" // CHOMPEdit
+	features += CONFIG_GET(flag/persistence_disabled) ? "persistence disabled" : "persistence enabled"
 
-	features += CONFIG_GET(flag/persistence_ignore_mapload) ? "persistence mapload disabled" : "persistence mapload enabled" // CHOMPEdit
+	features += CONFIG_GET(flag/persistence_ignore_mapload) ? "persistence mapload disabled" : "persistence mapload enabled"
 
-	if (config && CONFIG_GET(flag/allow_vote_mode)) // CHOMPEdit
+	if (config && CONFIG_GET(flag/allow_vote_mode))
 		features += "vote"
 
-	if (config && CONFIG_GET(flag/allow_ai)) // CHOMPEdit
+	if (config && CONFIG_GET(flag/allow_ai))
 		features += "AI allowed"
 
 	var/n = 0
@@ -638,8 +624,8 @@ var/world_topic_spam_protect_time = world.timeofday
 		features += "~[n] player"
 
 
-	if (config && CONFIG_GET(string/hostedby)) // CHOMPEdit
-		features += "hosted by <b>[CONFIG_GET(string/hostedby)]</b>" // CHOMPEdit
+	if (config && CONFIG_GET(string/hostedby))
+		features += "hosted by <b>[CONFIG_GET(string/hostedby)]</b>"
 
 	if (features)
 		s += ": [jointext(features, ", ")]"
@@ -653,10 +639,13 @@ var/failed_db_connections = 0
 var/failed_old_db_connections = 0
 
 /hook/startup/proc/connectDB()
-	if(!CONFIG_GET(flag/sql_enabled)) //CHOMPEdit
+	if(!CONFIG_GET(flag/sql_enabled))
 		to_world_log("SQL connection disabled in config.")
-	else if(establish_db_connection())//CHOMPEdit Begin
+	else if(!setup_database_connection())
+		to_world_log("Your server failed to establish a connection with the feedback database.")
+	else
 		to_world_log("Feedback database connection established.")
+		// CHOMPEdit Begin - Truncating the temporary dialog/attacklog tables
 		var/datum/db_query/query_truncate = SSdbcore.NewQuery("TRUNCATE erro_dialog")
 		var/num_tries = 0
 		while(!query_truncate.Execute() && num_tries<5)
@@ -673,103 +662,56 @@ var/failed_old_db_connections = 0
 		if(num_tries==5)
 			log_admin("ERROR TRYING TO CLEAR erro_attacklog")
 		qdel(query_truncate2)
-	else
-		to_world_log("Feedback database connection failed.")
-	//CHOMPEdit End
+		// CHOMPEdit End
 	return 1
 
-/*/proc/setup_database_connection() CHOMPEdit TGSQL
+/proc/setup_database_connection()
+	if(!CONFIG_GET(flag/sql_enabled))
+		return 0
 	if(failed_db_connections > FAILED_DB_CONNECTION_CUTOFF)	//If it failed to establish a connection more than 5 times in a row, don't bother attempting to conenct anymore.
 		return 0
 
-	if(!dbcon)
-		dbcon = new()
+	if(!SSdbcore)
+		SSdbcore = new()
 
-	var/user = sqlfdbklogin
-	var/pass = sqlfdbkpass
-	var/db = sqlfdbkdb
-	var/address = sqladdress
-	var/port = sqlport
+	var/user = CONFIG_GET(string/feedback_login)
+	var/pass = CONFIG_GET(string/feedback_password)
+	var/db = CONFIG_GET(string/feedback_database)
+	var/address = CONFIG_GET(string/address)
+	var/port = CONFIG_GET(number/port)
 
-	dbcon.Connect("dbi:mysql:[db]:[address]:[port]","[user]","[pass]")
-	. = dbcon.IsConnected()
+	SSdbcore.Connect("dbi:mysql:[db]:[address]:[port]","[user]","[pass]")
+	. = SSdbcore.IsConnected()
 	if ( . )
 		failed_db_connections = 0	//If this connection succeeded, reset the failed connections counter.
-		//CHOMPEdit Begin
-		var/datum/db_query/query_truncate = dbcon.NewQuery("TRUNCATE erro_dialog")
-		var/num_tries = 0
-		while(!query_truncate.Execute() && num_tries<5)
-			num_tries++
-
-		if(num_tries==5)
-			log_admin("ERROR TRYING TO CLEAR erro_dialog")
-		//CHOMPEdit End
 	else
 		failed_db_connections++		//If it failed, increase the failed connections counter.
-		to_world_log(dbcon.ErrorMsg())
+		to_world_log(SSdbcore.ErrorMsg())
 
-	return .*/
+	return .
 
 //This proc ensures that the connection to the feedback database (global variable dbcon) is established
-/proc/establish_db_connection() //CHOMPEdit TGSQL
-	return SSdbcore.Connect()
-
-
-/hook/startup/proc/connectOldDB()
-	if(!CONFIG_GET(flag/sql_enabled)) // CHOMPEdit
-		to_world_log("SQL connection disabled in config.")
-	else if(establish_old_db_connection()) //CHOMPEdit Begin
-		to_world_log("SQL database connection established.")
-	else
-		to_world_log("SQL database connection failed")
-	//CHOMPEdit End
-	return 1
-
-//These two procs are for the old database, while it's being phased out. See the tgstation.sql file in the SQL folder for more information.
-/*/proc/setup_old_database_connection() //CHOMPStation TGSQL
-
-	if(failed_old_db_connections > FAILED_DB_CONNECTION_CUTOFF)	//If it failed to establish a connection more than 5 times in a row, don't bother attempting to conenct anymore.
+/proc/establish_db_connection()
+	if(failed_db_connections > FAILED_DB_CONNECTION_CUTOFF)
 		return 0
 
-	if(!dbcon_old)
-		dbcon_old = new()
-
-	var/user = sqllogin
-	var/pass = sqlpass
-	var/db = sqldb
-	var/address = sqladdress
-	var/port = sqlport
-
-	dbcon_old.Connect("dbi:mysql:[db]:[address]:[port]","[user]","[pass]")
-	. = dbcon_old.IsConnected()
-	if ( . )
-		failed_old_db_connections = 0	//If this connection succeeded, reset the failed connections counter.
+	if(!SSdbcore || !SSdbcore.IsConnected())
+		return setup_database_connection()
 	else
-		failed_old_db_connections++		//If it failed, increase the failed connections counter.
-		to_world_log(dbcon.ErrorMsg())
+		return 1
 
-	return .*/
-
-//This proc ensures that the connection to the feedback database (global variable dbcon) is established
-/proc/establish_old_db_connection()
-	return SSdbcore.Connect()
-
-/* CHOMPedit
 // Cleans up DB connections and recreates them
 /proc/reset_database_connections()
 	var/list/results = list("-- Resetting DB connections --")
 	failed_db_connections = 0
 
-	if(dbcon?.IsConnected())
-		dbcon.Disconnect()
-		results += "dbcon was connected and asked to disconnect"
+	if(SSdbcore?.IsConnected())
+		SSdbcore.Disconnect()
+		results += "SSdbcore was connected and asked to disconnect"
 	else
-		results += "dbcon was not connected"
+		results += "SSdbcore was not connected"
 
-	if(dbcon_old?.IsConnected())
-		results += "WARNING: dbcon_old is connected, not touching it, but is this intentional?"
-
-	if(!config.sql_enabled)
+	if(!CONFIG_GET(flag/sql_enabled))
 		results += "stopping because config.sql_enabled = false"
 	else
 		. = setup_database_connection()
@@ -780,7 +722,6 @@ var/failed_old_db_connections = 0
 
 	results += "-- DB Reset End --"
 	to_world_log(results.Join("\n"))
-*/
 
 // Things to do when a new z-level was just made.
 /world/proc/max_z_changed()
@@ -818,10 +759,10 @@ var/failed_old_db_connections = 0
 
 /proc/get_world_url()
 	. = "byond://"
-	if(CONFIG_GET(string/serverurl)) // CHOMPEdit
-		. += CONFIG_GET(string/serverurl) // CHOMPEdit
-	else if(CONFIG_GET(string/server)) // CHOMPEdit
-		. += CONFIG_GET(string/server) // CHOMPEdit
+	if(CONFIG_GET(string/serverurl))
+		. += CONFIG_GET(string/serverurl)
+	else if(CONFIG_GET(string/server))
+		. += CONFIG_GET(string/server)
 	else
 		. += "[world.address]:[world.port]"
 
@@ -852,7 +793,6 @@ var/global/game_id = null
 		t = round(t / l)
 	return 1
 
-// CHOMPStation Add: Spaceman DMM Debugger
 /proc/auxtools_stack_trace(msg)
 	CRASH(msg)
 
@@ -867,5 +807,3 @@ var/global/game_id = null
 	if (debug_server)
 		call_ext(debug_server, "auxtools_shutdown")()
 	. = ..()
-
-// CHOMPStation Add End: Spaceman DMM Debugger

@@ -1,6 +1,6 @@
 //Contains the Energy Net Gun code and information/lore
 
-/obj/item/weapon/gun/energy/netgun
+/obj/item/gun/energy/netgun
 	name = "energy net gun"
 	desc = "A Hephaestus-designed, usually dubbed 'non-lethal capture device' energy net launcher, \
 			for when you wanna capture feracious predators." //YW edit - small change to description
@@ -15,7 +15,7 @@
 	charge_cost = 800
 	fire_delay = 50
 
-/obj/item/weapon/gun/energy/netgun/update_icon()
+/obj/item/gun/energy/netgun/update_icon()
 	if(power_supply == null)
 		if(modifystate)
 			icon_state = "[modifystate]_open"

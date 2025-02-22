@@ -70,3 +70,62 @@
 	has_eye_light_sprites = TRUE
 	has_vore_belly_sprites = FALSE
 	rest_sprite_options = list("Default", "Bellyup")
+
+/datum/robot_sprite/dogborg/tall/mining/dullahan
+	sprite_icon = 'modular_chomp/icons/mob/dullahanborg/dullahan_mine.dmi'
+	pixel_x = 0
+
+/datum/robot_sprite/dogborg/tall/mining/dullahan/miner
+	name = "Dullahan Mining unit"
+	sprite_icon_state = "dullahanmine"
+	has_eye_light_sprites = TRUE
+	has_custom_open_sprites = TRUE
+	has_vore_belly_sprites = TRUE
+	rest_sprite_options = list("Default", "Sit")
+
+/datum/robot_sprite/dogborg/tall/mining/dullahan/mineralt
+	name = "Dullahan Mining unit v2"
+	sprite_icon_state = "dullahanmine_alt"
+	has_eye_light_sprites = TRUE
+	has_custom_open_sprites = TRUE
+	has_vore_belly_sprites = TRUE
+	rest_sprite_options = list("Default", "Sit")
+
+/datum/robot_sprite/dogborg/tall/mining/dullahancarg
+	sprite_icon = 'modular_chomp/icons/mob/dullahanborg/dullahan_cargo.dmi'
+	pixel_x = 0
+
+/datum/robot_sprite/dogborg/tall/mining/dullahancarg/cargo
+	name = "Dullahan Cargo"
+	sprite_icon_state = "dullahancargo"
+	has_eye_light_sprites = TRUE
+	has_vore_belly_sprites = TRUE
+	rest_sprite_options = list("Default", "Sit")
+
+/datum/robot_sprite/dogborg/tall/mining/dullahancarg/cargoalt
+	name = "Dullahan Cargo v2"
+	sprite_icon_state = "dullahancargo_alt"
+	has_eye_light_sprites = TRUE
+	has_vore_belly_sprites = TRUE
+	rest_sprite_options = list("Default", "Sit")
+
+/datum/robot_sprite/dogborg/mining/smolraptorminer
+	sprite_icon = 'modular_chomp/icons/mob/smallraptors/smolraptor_min.dmi'
+
+/datum/robot_sprite/dogborg/mining/smolraptorcargo
+	sprite_icon = 'modular_chomp/icons/mob/smallraptors/smolraptor_car.dmi'
+
+
+/datum/robot_sprite/dogborg/mining/smolraptorminer/miner
+	name = "Small Raptor Miner"
+	sprite_icon_state = "smolraptor"
+	has_eye_light_sprites = TRUE
+	has_vore_belly_sprites = TRUE
+	rest_sprite_options = list("Default", "Sit")
+
+/datum/robot_sprite/dogborg/mining/smolraptorcargo/cargo
+	name = "Small Raptor Cargo"
+	sprite_icon_state = "smolraptor"
+	has_eye_light_sprites = TRUE
+	has_vore_belly_sprites = TRUE
+	rest_sprite_options = list("Default", "Sit")

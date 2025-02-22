@@ -32,7 +32,7 @@
 /obj/effect/floor_decal/corner/white/diagonal,
 /obj/random/maintenance/medical,
 /obj/random/maintenance/medical,
-/obj/item/weapon/reagent_containers/glass/beaker/bluespace,
+/obj/item/reagent_containers/glass/beaker/bluespace,
 /turf/simulated/floor/tiled/freezer,
 /area/submap/xenobioeclipse)
 "fJ" = (
@@ -58,7 +58,7 @@
 /obj/effect/floor_decal/corner/white/diagonal,
 /obj/random/maintenance/medical,
 /obj/random/maintenance/medical,
-/obj/item/weapon/paper{
+/obj/item/paper{
 	info = "All experimentation involving shadekin and the slime units are to cease effective immediately. An attempt to forcefully meld a bluespace hunter unit and a shadekin resulted in mass damage to the carrier ship it was upon, along greatly reducing the number and effectiveness of other slime units aboard. If shadekin are to be spotted, they are to be contained and captured under normal methods. Extermination must be directly approved by Admiral Virrzzur Vazzeck.";
 	name = "Command Report"
 	},
@@ -135,7 +135,7 @@
 /area/submap/xenobioeclipse)
 "nH" = (
 /obj/effect/floor_decal/corner/white/diagonal,
-/obj/item/weapon/storage/firstaid/surgery,
+/obj/item/storage/firstaid/surgery,
 /obj/structure/table/reinforced,
 /turf/simulated/floor/tiled/freezer,
 /area/submap/xenobioeclipse)

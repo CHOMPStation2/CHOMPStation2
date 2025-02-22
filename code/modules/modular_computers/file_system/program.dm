@@ -74,7 +74,7 @@
 /datum/computer_file/program/proc/is_supported_by_hardware(var/hardware_flag = 0, var/loud = 0, var/mob/user = null)
 	if(!(hardware_flag & usage_flags))
 		if(loud && computer && user)
-			to_chat(user, "<span class='warning'>\The [computer] flashes: \"Hardware Error - Incompatible software\".</span>")
+			to_chat(user, span_warning("\The [computer] flashes: \"Hardware Error - Incompatible software\"."))
 		return 0
 	return 1
 
@@ -109,22 +109,22 @@
 		return 1
 
 	// Admin override - allows operation of any computer as aghosted admin, as if you had any required access.
-	if(istype(user, /mob/observer/dead) && check_rights(R_ADMIN|R_EVENT, 0, user))
+	if(isobserver(user) && check_rights(R_ADMIN|R_EVENT, 0, user))
 		return 1
 
 	if(!istype(user))
 		return 0
 
-	var/obj/item/weapon/card/id/I = user.GetIdCard()
+	var/obj/item/card/id/I = user.GetIdCard()
 	if(!I)
 		if(loud)
-			to_chat(user, "<span class='notice'>\The [computer] flashes an \"RFID Error - Unable to scan ID\" warning.</span>")
+			to_chat(user, span_notice("\The [computer] flashes an \"RFID Error - Unable to scan ID\" warning."))
 		return 0
 
-	if(access_to_check in I.access)
+	if(access_to_check in I.GetAccess())
 		return 1
 	else if(loud)
-		to_chat(user, "<span class='notice'>\The [computer] flashes an \"Access Denied\" warning.</span>")
+		to_chat(user, span_notice("\The [computer] flashes an \"Access Denied\" warning."))
 
 // This attempts to retrieve header data for NanoUIs. If implementing completely new device of different type than existing ones
 // always include the device here in this proc. This proc basically relays the request to whatever is running the program.
@@ -206,7 +206,6 @@
 				ui.close()
 				return 1
 			if("PC_minimize")
-				var/mob/user = usr
 				if(!computer.active_program)
 					return
 
@@ -217,8 +216,8 @@
 				computer.update_icon()
 				ui.close()
 
-				if(user && istype(user))
-					computer.tgui_interact(user) // Re-open the UI on this computer. It should show the main screen now.
+				if(ui.user && istype(ui.user))
+					computer.tgui_interact(ui.user) // Re-open the UI on this computer. It should show the main screen now.
 
 
 

@@ -14,12 +14,12 @@
 	flags = OPENCONTAINER
 /*
 /obj/item/slime_extract/attackby(obj/item/O as obj, mob/user as mob)
-	if(istype(O, /obj/item/weapon/slimesteroid2))
+	if(istype(O, /obj/item/slimesteroid2))
 		if(enhanced == 1)
-			to_chat(user, "<span class='warning'> This extract has already been enhanced!</span>")
+			to_chat(user, span_warning(" This extract has already been enhanced!"))
 			return ..()
 		if(Uses == 0)
-			to_chat(user, "<span class='warning'> You can't enhance a used extract!</span>")
+			to_chat(user, span_warning(" You can't enhance a used extract!"))
 			return ..()
 		to_chat(user, "You apply the enhancer. It now has triple the amount of uses.")
 		Uses = 3
@@ -29,7 +29,7 @@
 /obj/item/slime_extract/New()
 	..()
 	create_reagents(5)
-//	reagents.add_reagent("slimejelly", 30)
+//	reagents.add_reagent(REAGENT_ID_SLIMEJELLY, 30)
 
 /obj/item/slime_extract/grey
 	name = "grey slime extract"
@@ -131,16 +131,16 @@
 
 /obj/item/slimepotion/docility/attack(mob/living/carbon/slime/M as mob, mob/user as mob)
 	if(!istype(M, /mob/living/carbon/slime))//If target is not a slime.
-		to_chat(user, "<span class='warning'> The potion only works on slimes!</span>")
+		to_chat(user, span_warning(" The potion only works on slimes!"))
 		return ..()
 //	if(M.is_adult) //Can't tame adults
-//		to_chat(user, "<span class='warning'> Only baby slimes can be tamed!</span>")
+//		to_chat(user, span_warning(" Only baby slimes can be tamed!"))
 //		return..()
 	if(M.stat)
-		to_chat(user, "<span class='warning'> The slime is dead!</span>")
+		to_chat(user, span_warning(" The slime is dead!"))
 		return..()
 	if(M.mind)
-		to_chat(user, "<span class='warning'> The slime resists!</span>")
+		to_chat(user, span_warning(" The slime resists!"))
 		return ..()
 	var/mob/living/simple_mob/slime/pet = new /mob/living/simple_mob/slime(M.loc)
 	pet.icon_state = "[M.colour] [M.is_adult ? "adult" : "baby"] slime"
@@ -151,7 +151,7 @@
 
 	qdel(M)
 
-	var/newname = sanitize(input(user, "Would you like to give the slime a name?", "Name your new pet", "pet slime") as null|text, MAX_NAME_LEN)
+	var/newname = sanitize(tgui_input_text(user, "Would you like to give the slime a name?", "Name your new pet", "pet slime", MAX_NAME_LEN))
 
 	if (!newname)
 		newname = "pet slime"
@@ -166,21 +166,21 @@
 
 /obj/item/slimepotion/stabilizer/attack(mob/living/carbon/slime/M, mob/user)
 	if(!isslime(M))
-		to_chat(user, "<span class='warning'>The stabilizer only works on slimes!</span>")
+		to_chat(user, span_warning("The stabilizer only works on slimes!"))
 		return ..()
 	if(M.stat)
-		to_chat(user, "<span class='warning'>The slime is dead!</span>")
+		to_chat(user, span_warning("The slime is dead!"))
 		return ..()
 	if(M.mutation_chance == 0)
-		to_chat(user, "<span class='warning'>The slime already has no chance of mutating!</span>")
+		to_chat(user, span_warning("The slime already has no chance of mutating!"))
 		return ..()
 
-	to_chat(user, "<span class='notice'>You feed the slime the stabilizer. It is now less likely to mutate.</span>")
+	to_chat(user, span_notice("You feed the slime the stabilizer. It is now less likely to mutate."))
 	M.mutation_chance = Clamp(M.mutation_chance-15,0,100)
 	qdel(src)
 
 
-/obj/item/weapon/slimepotion2
+/obj/item/slimepotion2
 	name = "advanced docility potion"
 	desc = "A potent chemical mix that will nullify a slime's powers, causing it to become docile and tame. This one is meant for adult slimes"
 	icon = 'icons/obj/chemical.dmi'
@@ -188,13 +188,13 @@
 
 	attack(mob/living/carbon/slime/M as mob, mob/user as mob)
 		if(!istype(M, /mob/living/carbon/slime/))//If target is not a slime.
-			to_chat(user, "<span class='warning'> The potion only works on slimes!</span>")
+			to_chat(user, span_warning(" The potion only works on slimes!"))
 			return ..()
 		if(M.stat)
-			to_chat(user, "<span class='warning'> The slime is dead!</span>")
+			to_chat(user, span_warning(" The slime is dead!"))
 			return..()
 		if(M.mind)
-			to_chat(user, "<span class='warning'> The slime resists!</span>")
+			to_chat(user, span_warning(" The slime resists!"))
 			return ..()
 		var/mob/living/simple_mob/adultslime/pet = new /mob/living/simple_mob/adultslime(M.loc)
 		pet.icon_state = "[M.colour] adult slime"
@@ -203,7 +203,7 @@
 		pet.colour = "[M.colour]"
 		to_chat(user, "You feed the slime the potion, removing it's powers and calming it.")
 		qdel(M)
-		var/newname = sanitize(input(user, "Would you like to give the slime a name?", "Name your new pet", "pet slime") as null|text, MAX_NAME_LEN)
+		var/newname = sanitize(tgui_input_text(user, "Would you like to give the slime a name?", "Name your new pet", "pet slime", MAX_NAME_LEN))
 
 		if (!newname)
 			newname = "pet slime"
@@ -220,16 +220,16 @@
 
 	attack(mob/living/carbon/slime/M as mob, mob/user as mob)
 		if(!istype(M, /mob/living/carbon/slime))//If target is not a slime.
-			to_chat(user, "<span class='warning'> The steroid only works on baby slimes!</span>")
+			to_chat(user, span_warning(" The steroid only works on baby slimes!"))
 			return ..()
 		if(M.is_adult) //Can't tame adults
-			to_chat(user, "<span class='warning'> Only baby slimes can use the steroid!</span>")
+			to_chat(user, span_warning(" Only baby slimes can use the steroid!"))
 			return..()
 		if(M.stat)
-			to_chat(user, "<span class='warning'> The slime is dead!</span>")
+			to_chat(user, span_warning(" The slime is dead!"))
 			return..()
 		if(M.cores == 3)
-			to_chat(user, "<span class='warning'> The slime already has the maximum amount of extract!</span>")
+			to_chat(user, span_warning(" The slime already has the maximum amount of extract!"))
 			return..()
 
 		to_chat(user, "You feed the slime the steroid. It now has triple the amount of extract.")
@@ -245,10 +245,10 @@
 	/*afterattack(obj/target, mob/user , flag)
 		if(istype(target, /obj/item/slime_extract))
 			if(target.enhanced == 1)
-				to_chat(user, "<span class='warning'> This extract has already been enhanced!</span>")
+				to_chat(user, span_warning(" This extract has already been enhanced!"))
 				return ..()
 			if(target.Uses == 0)
-				to_chat(user, "<span class='warning'> You can't enhance a used extract!</span>")
+				to_chat(user, span_warning(" You can't enhance a used extract!"))
 				return ..()
 			to_chat(user, "You apply the enhancer. It now has triple the amount of uses.")
 			target.Uses = 3
@@ -347,7 +347,7 @@
 
 
 
-/obj/item/weapon/reagent_containers/food/snacks/egg/slime
+/obj/item/reagent_containers/food/snacks/egg/slime
 	name = "slime egg"
 	desc = "A small, gelatinous egg."
 	icon = 'icons/mob/mob.dmi'
@@ -356,36 +356,36 @@
 	origin_tech = list(TECH_BIO = 4)
 	var/grown = 0
 
-/obj/item/weapon/reagent_containers/food/snacks/egg/slime/Initialize()
+/obj/item/reagent_containers/food/snacks/egg/slime/Initialize()
 	. = ..()
-	reagents.add_reagent("nutriment", 4)
-	reagents.add_reagent("slimejelly", 1)
+	reagents.add_reagent(REAGENT_ID_NUTRIMENT, 4)
+	reagents.add_reagent(REAGENT_ID_SLIMEJELLY, 1)
 	addtimer(CALLBACK(src, PROC_REF(Grow)), rand(120 SECONDS, 150 SECONDS))
 
-/obj/item/weapon/reagent_containers/food/snacks/egg/slime/proc/Grow()
+/obj/item/reagent_containers/food/snacks/egg/slime/proc/Grow()
 	grown = 1
 	icon_state = "slime egg-grown"
 	START_PROCESSING(SSobj, src)
 	return
 
-/obj/item/weapon/reagent_containers/food/snacks/egg/slime/proc/Hatch()
+/obj/item/reagent_containers/food/snacks/egg/slime/proc/Hatch()
 	STOP_PROCESSING(SSobj, src)
 	var/turf/T = get_turf(src)
-	src.visible_message("<span class='warning'> The [name] pulsates and quivers!</span>")
+	src.visible_message(span_warning(" The [name] pulsates and quivers!"))
 	spawn(rand(50,100))
-		src.visible_message("<span class='warning'> The [name] bursts open!</span>")
+		src.visible_message(span_warning(" The [name] bursts open!"))
 		new/mob/living/carbon/slime(T)
 		qdel(src)
 
 
-/obj/item/weapon/reagent_containers/food/snacks/egg/slime/process()
+/obj/item/reagent_containers/food/snacks/egg/slime/process()
 	var/turf/location = get_turf(src)
 	var/datum/gas_mixture/environment = location.return_air()
 	if (environment.phoron > MOLES_PHORON_VISIBLE)//phoron exposure causes the egg to hatch
 		src.Hatch()
 
-/obj/item/weapon/reagent_containers/food/snacks/egg/slime/attackby(obj/item/weapon/W as obj, mob/user as mob)
-	if(istype( W, /obj/item/weapon/pen/crayon ))
+/obj/item/reagent_containers/food/snacks/egg/slime/attackby(obj/item/W as obj, mob/user as mob)
+	if(istype( W, /obj/item/pen/crayon ))
 		return
 	else
 		..()

@@ -2,10 +2,8 @@
 /area/submap
 	name = "Submap Area"
 	icon_state = "submap"
-	flags = RAD_SHIELDED | AREA_FLAG_IS_NOT_PERSISTENT
+	flags = RAD_SHIELDED | AREA_FLAG_IS_NOT_PERSISTENT | AREA_SECRET_NAME | AREA_FORBID_EVENTS
 	ambience = AMBIENCE_RUINS
-	secret_name = TRUE
-	forbid_events = TRUE
 
 /area/submap/event //To be used for Events not for regular PoIs
 	name = "Unknown"
@@ -14,6 +12,7 @@
 /area/submap/AbandonedLab
 	name = "POI - Abandoned Lab"
 	ambience = AMBIENCE_HIGHSEC
+	requires_power = FALSE
 
 /area/submap/Blackshuttledown
 	name = "POI Wilderness - Black-Operative Shuttle"
@@ -180,6 +179,10 @@
 	name = "POI Wilderness - Otie Shelter"
 	ambience = AMBIENCE_HIGHSEC
 
+/area/submap/PirateLake
+	name = "POI Wilderness - Pirate Lake"
+	ambience = AMBIENCE_HIGHSEC
+
 /area/submap/Rocky1
 	name = "POI Wilderness - Rocky Demise"
 	ambience = AMBIENCE_SIF
@@ -230,4 +233,8 @@
 
 /area/submap/XenoHive
 	name = "POI Wilderness - Xeno Hive"
+	ambience = AMBIENCE_RUINS
+
+/area/submap/VolcanicFissure
+	name = "POI Wilderness - Volcanic Fissure"
 	ambience = AMBIENCE_RUINS

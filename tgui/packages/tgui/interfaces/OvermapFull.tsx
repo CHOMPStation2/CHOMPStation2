@@ -1,13 +1,13 @@
 import { useState } from 'react';
+import { Window } from 'tgui/layouts';
+import { Tabs } from 'tgui-core/components';
 
-import { Tabs } from '../components';
-import { Window } from '../layouts';
 import { OvermapEnginesContent } from './OvermapEngines';
 import { OvermapHelmContent } from './OvermapHelm';
 import { OvermapShipSensorsContent } from './OvermapShipSensors';
 
 export const OvermapFull = (props) => {
-  const [tab, setTab] = useState(0);
+  const [tab, setTab] = useState<number>(0);
 
   return (
     <Window width={800} height={800}>

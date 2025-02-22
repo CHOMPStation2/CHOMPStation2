@@ -59,7 +59,7 @@ I think I covered everything.
 	icon_living = "dragon_maneNone"
 	player_msg = "You can perform a charge attack by disarm intent clicking somewhere. Grab intent clicking will perform a tail sweep and fling any nearby mobs. You can fire breath with harm intent. Your attacks have cooldowns associated with them. You can heal slowly by resting. Check your abilities tab for other functions!"
 	meat_amount = 40
-	meat_type = /obj/item/weapon/reagent_containers/food/snacks/meat
+	meat_type = /obj/item/reagent_containers/food/snacks/meat
 	old_x = -48
 	old_y = 0
 	melee_damage_lower = 35
@@ -93,7 +93,7 @@ I think I covered everything.
 	vore_pounce_maxhealth = 125
 	vore_bump_emote = "tries to snap up"
 	icon_dead = "dragon-dead"
-	faction = "dragon"
+	faction = FACTION_DRAGON
 	glow_range = 7
 	glow_intensity = 3
 	glow_color = "#ED9200"
@@ -124,7 +124,7 @@ I think I covered everything.
 	var/flames
 
 	tame_items = list(
-	/obj/item/weapon/coin/gold = 100,
+	/obj/item/coin/gold = 100,
 	/obj/item/stack/material/gold = 100
 	)
 
@@ -187,7 +187,7 @@ I think I covered everything.
 /mob/living/simple_mob/vore/bigdragon/friendly
 	ai_holder_type = /datum/ai_holder/simple_mob/healbelly/retaliate/dragon
 	desc = "A large, intimidating creature reminiscent of the traditional idea of medieval fire breathing lizards. This one seems particularly relaxed and jovial."
-	faction = "neutral"
+	faction = FACTION_NEUTRAL
 	player_msg = "You're a variant of the large dragon stripped of its firebreath attack (harm intent). You can still charge (disarm) and tail sweep (grab). Rest to heal slowly. Check your abilities tab for functions."
 	norange = 1
 	noenrage = 1
@@ -247,7 +247,7 @@ I think I covered everything.
 	add_verb(src,/mob/living/simple_mob/vore/bigdragon/proc/special_toggle)
 	//verbs |= /mob/living/simple_mob/vore/bigdragon/proc/set_name //Implemented upstream
 	//verbs |= /mob/living/simple_mob/vore/bigdragon/proc/set_desc //Implemented upstream
-	faction = "neutral"
+	faction = FACTION_NEUTRAL
 
 /mob/living/simple_mob/vore/bigdragon/Initialize()
 	..()
@@ -256,7 +256,7 @@ I think I covered everything.
 	voremob_loaded = 1
 	add_language(LANGUAGE_DRUDAKAR)
 	add_language(LANGUAGE_UNATHI)
-	mob_radio = new /obj/item/device/radio/headset/mob_headset(src)	//We always give radios to spawned mobs anyway
+	mob_radio = new /obj/item/radio/headset/mob_headset(src)	//We always give radios to spawned mobs anyway
 
 /mob/living/simple_mob/vore/bigdragon/MouseDrop_T(mob/living/M, mob/living/user)
 	return
@@ -271,14 +271,14 @@ I think I covered everything.
 /mob/living/simple_mob/vore/bigdragon/proc/toggle_glow()
 	set name = "Toggle Glow"
 	set desc = "Switch between glowing and not glowing."
-	set category = "Abilities"
+	set category = "Abilities.Settings"
 
 	glow_toggle = !glow_toggle
 
 /mob/living/simple_mob/vore/bigdragon/proc/sprite_toggle()
 	set name = "Toggle Small Sprite"
 	set desc = "Switches your sprite to a smaller variant so you can see what you're doing. Others will always see your standard sprite instead. "
-	set category = "Abilities"
+	set category = "Abilities.Settings"
 
 	if(!small)
 		var/image/I = image(icon = small_icon, icon_state = small_icon_state, loc = src)
@@ -293,37 +293,37 @@ I think I covered everything.
 /mob/living/simple_mob/vore/bigdragon/proc/flame_toggle()
 	set name = "Toggle breath attack"
 	set desc = "Toggles whether you will breath attack on harm intent (If you have one)."
-	set category = "Abilities"
+	set category = "Abilities.Settings"
 
 	if(norange)
-		to_chat(src, "<span class='userdanger'>You don't have a breath attack!</span>")
+		to_chat(src, span_userdanger("You don't have a breath attack!"))
 		return
 
 	flametoggle = !flametoggle
-	to_chat(src, "<span class='notice'>You will [flametoggle?"now breath":"no longer breath"] attack on harm intent.</span>")
+	to_chat(src, span_notice("You will [flametoggle?"now breath":"no longer breath"] attack on harm intent."))
 
 /mob/living/simple_mob/vore/bigdragon/proc/special_toggle()
 	set name = "Toggle special attacks"
 	set desc = "Toggles whether you will tail spin and charge (If you have them)."
-	set category = "Abilities"
+	set category = "Abilities.Settings"
 
 	if(nospecial)
-		to_chat(src, "<span class='userdanger'>You don't have special attacks!</span>")
+		to_chat(src, span_userdanger("You don't have special attacks!"))
 		return
 
 	specialtoggle = !specialtoggle
-	to_chat(src, "<span class='notice'>You will [specialtoggle?"now special":"no longer special"] attack on grab/disarm intent.</span>")
+	to_chat(src, span_notice("You will [specialtoggle?"now special":"no longer special"] attack on grab/disarm intent."))
 
 /* //Implemented upstream
 /mob/living/simple_mob/vore/bigdragon/proc/set_name()
 	set name = "Set Name"
 	set desc = "Sets your mobs name. You only get to do this once."
-	set category = "Abilities"
+	set category = "Abilities.Settings"
 	if(nameset)
-		to_chat(src, "<span class='userdanger'>You've already set your name. Ask an admin to toggle \"nameset\" to 0 if you really must.</span>")
+		to_chat(src, span_userdanger("You've already set your name. Ask an admin to toggle \"nameset\" to 0 if you really must."))
 		return
 	var/newname
-	newname = sanitizeSafe(input(src,"Set your name. You only get to do this once. Max 52 chars.", "Name set","") as text, MAX_NAME_LEN)
+	newname = sanitizeSafe(tgui_input_text(src,"Set your name. You only get to do this once. Max 52 chars.", "Name set","", MAX_NAME_LEN), MAX_NAME_LEN)
 	if (newname)
 		name = newname
 		voice_name = newname
@@ -332,9 +332,9 @@ I think I covered everything.
 /mob/living/simple_mob/vore/bigdragon/proc/set_desc()
 	set name = "Set Description"
 	set desc = "Set your description."
-	set category = "Abilities"
+	set category = "Abilities.Settings"
 	var/newdesc
-	newdesc = sanitizeSafe(input(src,"Set your description. Max 4096 chars.", "Description set","") as text, MAX_MESSAGE_LEN)
+	newdesc = sanitizeSafe(tgui_input_text(src,"Set your description. Max 4096 chars.", "Description set",""))
 	if(newdesc)
 		desc = newdesc
 */
@@ -344,6 +344,7 @@ I think I covered everything.
 ///
 
 /mob/living/simple_mob/vore/bigdragon/update_icon()
+	..()
 	update_fullness()
 	build_icons()
 
@@ -362,9 +363,10 @@ I think I covered everything.
 /mob/living/simple_mob/vore/bigdragon/proc/build_icons(var/random)
 	cut_overlays()
 	if(stat == DEAD)
-		icon_state = "dragon-dead"
 		plane = MOB_LAYER
 		return
+	else
+		plane = ABOVE_MOB_PLANE
 	if(random)
 		var/list/bodycolors = list("#1E1E1E","#3F3F3F","#545454","#969696","#DBDBDB","#ABBBD8","#3D0B00","#3A221D","#77554F","#281D1B","#631F00","#964421","#936B24","#381313","#380000","#682121","#700E00","#44525B","#283035","#29353D","#353E44","#281000","#38261A","#302F3D","#322E3A","#262738")
 		under = pick(underbelly_styles)
@@ -372,14 +374,14 @@ I think I covered everything.
 		body = pick(body_styles)
 		overlay_colors["Body"] = pick(bodycolors)
 		ears = pick(ear_styles)
-		overlay_colors["Ears"] = "#[get_random_colour(0, 100, 150)]"
+		overlay_colors["Ears"] = get_random_colour(0, 100, 150)
 		mane = pick(mane_styles)
 		overlay_colors["Mane"] = pick(bodycolors)
 		horns = pick(horn_styles)
 		var/list/horncolors = list("#000000","#151515","#303030","#606060","#808080","#AAAAAA","#CCCCCC","#EEEEEE","#FFFFFF")
 		overlay_colors["Horns"] = pick(horncolors)
 		eyes = pick(eye_styles)
-		overlay_colors["Eyes"] = "#[get_random_colour(1)]"
+		overlay_colors["Eyes"] = get_random_colour(1)
 
 	var/image/I = image(icon, "dragon_under[under][resting? "-rest" : (vore_fullness? "-[vore_fullness]" : null)]", pixel_x = -48)
 	I.color = overlay_colors["Underbelly"]
@@ -437,7 +439,7 @@ I think I covered everything.
 /mob/living/simple_mob/vore/bigdragon/proc/set_style()
 	set name = "Set Dragon Style"
 	set desc = "Customise your icons."
-	set category = "Abilities"
+	set category = "Abilities.Settings"
 
 	var/list/options = list("Underbelly","Body","Ears","Mane","Horns","Eyes")
 	for(var/option in options)
@@ -455,7 +457,7 @@ I think I covered everything.
 			choice = show_radial_menu(src, src, options, radius = 90)
 			if(!choice || QDELETED(src) || src.incapacitated())
 				return 0
-			var/new_color = input("Pick underbelly color:","Underbelly Color", overlay_colors["Underbelly"]) as null|color
+			var/new_color = tgui_color_picker(src, "Pick underbelly color:","Underbelly Color", overlay_colors["Underbelly"])
 			if(!new_color)
 				return 0
 			under = choice
@@ -468,7 +470,7 @@ I think I covered everything.
 			choice = show_radial_menu(src, src, options, radius = 90)
 			if(!choice || QDELETED(src) || src.incapacitated())
 				return 0
-			var/new_color = input("Pick body color:","Body Color", overlay_colors["Body"]) as null|color
+			var/new_color = tgui_color_picker(src, "Pick body color:","Body Color", overlay_colors["Body"])
 			if(!new_color)
 				return 0
 			body = choice
@@ -481,7 +483,7 @@ I think I covered everything.
 			choice = show_radial_menu(src, src, options, radius = 90)
 			if(!choice || QDELETED(src) || src.incapacitated())
 				return 0
-			var/new_color = input("Pick ear color:","Ear Color", overlay_colors["Ears"]) as null|color
+			var/new_color = tgui_color_picker(src, "Pick ear color:","Ear Color", overlay_colors["Ears"])
 			if(!new_color)
 				return 0
 			ears = choice
@@ -494,7 +496,7 @@ I think I covered everything.
 			choice = show_radial_menu(src, src, options, radius = 90)
 			if(!choice || QDELETED(src) || src.incapacitated())
 				return 0
-			var/new_color = input("Pick mane color:","Mane Color", overlay_colors["Mane"]) as null|color
+			var/new_color = tgui_color_picker(src, "Pick mane color:","Mane Color", overlay_colors["Mane"])
 			if(!new_color)
 				return 0
 			mane = choice
@@ -507,7 +509,7 @@ I think I covered everything.
 			choice = show_radial_menu(src, src, options, radius = 90)
 			if(!choice || QDELETED(src) || src.incapacitated())
 				return 0
-			var/new_color = input("Pick horn color:","Horn Color", overlay_colors["Horns"]) as null|color
+			var/new_color = tgui_color_picker(src, "Pick horn color:","Horn Color", overlay_colors["Horns"])
 			if(!new_color)
 				return 0
 			horns = choice
@@ -520,7 +522,7 @@ I think I covered everything.
 			choice = show_radial_menu(src, src, options, radius = 90)
 			if(!choice || QDELETED(src) || src.incapacitated())
 				return 0
-			var/new_color = input("Pick eye color:","Eye Color", overlay_colors["Eyes"]) as null|color
+			var/new_color = tgui_color_picker(src, "Pick eye color:","Eye Color", overlay_colors["Eyes"])
 			if(!new_color)
 				return 0
 			eyes = choice
@@ -782,14 +784,14 @@ I think I covered everything.
 			M.Weaken(5)
 			if(!gentle)
 				M.adjustBruteLoss(50)	//A dragon just slammed ontop of you
-			to_chat(M, "<span class='userdanger'>You're slammed into the floor by [src]!</span>")
+			to_chat(M, span_userdanger("You're slammed into the floor by [src]!"))
 	else
 		if(isliving(AM))
 			var/mob/living/M = AM
 			M.Weaken(1.5)
 			if(!gentle)
 				M.adjustBruteLoss(20)
-			to_chat(M, "<span class='userdanger'>You're thrown back by [src]!</span>")
+			to_chat(M, span_userdanger("You're thrown back by [src]!"))
 			playsound(src, get_sfx("punch"), 50, 1)
 		AM.throw_at(throwtarget, maxthrow, 3, src)
 
@@ -806,7 +808,7 @@ I think I covered everything.
 	status_flags |= LEAPING
 	flying  = 1		//So we can thunk into things
 	hovering = 1	// So we don't hurt ourselves running off cliffs
-	visible_message(span("danger","\The [src] charges at \the [A]!"))
+	visible_message(span_danger("\The [src] charges at \the [A]!"))
 	throw_at(A, 7, 2)
 	playsound(src, charge_sound, 75, 1)
 	if(status_flags & LEAPING)
@@ -842,7 +844,7 @@ I think I covered everything.
 
 /mob/living/simple_mob/vore/bigdragon/proc/firebreathend(var/atom/A)
 	var/obj/item/projectile/P = new /obj/item/projectile/bullet/dragon(get_turf(src))
-	src.visible_message("<span class='danger'>\The [src] spews fire at \the [A]!</span>")
+	src.visible_message(span_danger("\The [src] spews fire at \the [A]!"))
 	playsound(src, "sound/weapons/Flamer.ogg", 50, 1)
 	P.launch_projectile(A, BP_TORSO, src)
 	set_AI_busy(FALSE)
@@ -910,7 +912,7 @@ I think I covered everything.
 /mob/living/simple_mob/vore/bigdragon/do_tame(var/obj/O, var/mob/user)
 	if(!user)
 		return
-	if(faction == "neutral")
+	if(faction == FACTION_NEUTRAL)
 		return	//We're already friendly
 	if(enraged || notame)
 		say("NO FORGIVENESS")
@@ -919,7 +921,7 @@ I think I covered everything.
 	handle_tame_item(O, user)
 
 	qdel(ai_holder)	//Dragon goes to therapy
-	faction = "neutral"
+	faction = FACTION_NEUTRAL
 	norange = 1		//Don't start fires while friendly
 	vore_selected = gut2 //Just incase it eats someone right after being tamed
 	ai_holder = new /datum/ai_holder/simple_mob/healbelly/retaliate/dragon(src)
@@ -1010,7 +1012,7 @@ I think I covered everything.
 				//Alternatively bully a coder (me) to make a unique digest_mode for mob healbellies that prevents death, or something.
 				if(istype(A, /mob/living/carbon/human))
 					var/mob/living/carbon/human/P = L
-					var/list/to_inject = list("myelamine","osteodaxon","spaceacillin","peridaxon", "iron", "hyronalin")
+					var/list/to_inject = list(REAGENT_ID_MYELAMINE,REAGENT_ID_OSTEODAXON,REAGENT_ID_SPACEACILLIN,REAGENT_ID_PERIDAXON, REAGENT_ID_IRON, REAGENT_ID_HYRONALIN)
 					//Lets not OD them...
 					for(var/RG in to_inject)
 						if(!P.reagents.has_reagent(RG))
@@ -1050,7 +1052,7 @@ I think I covered everything.
 /mob/living/simple_mob/vore/bigdragon/proc/enrage(var/atom/movable/attacker)
 	enraged = 1
 	norange = 0
-	faction = "dragon"
+	faction = FACTION_DRAGON
 	say("HAVE IT YOUR WAY THEN")
 	qdel(ai_holder)
 	var/datum/ai_holder/simple_mob/intentional/dragon/D = new /datum/ai_holder/simple_mob/intentional/dragon(src)

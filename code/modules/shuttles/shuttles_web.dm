@@ -118,7 +118,7 @@
 			continue
 		if(!H.shuttle_comp || !(get_area(H) in shuttle_area))
 			H.shuttle_comp = null
-			H.audible_message("<span class='warning'>\The [H] pings as it loses it's connection with the ship.</span>", runemessage = "ping")
+			H.audible_message(span_warning("\The [H] pings as it loses it's connection with the ship."), runemessage = "ping")
 			H.update_hud("discon")
 			helmets -= H
 		else
@@ -142,22 +142,22 @@
 			process_state = initial(process_state)
 
 /datum/shuttle/autodock/web_shuttle/proc/autopilot_say(message) // Makes the autopilot 'talk' to the passengers.
-	var/padded_message = "<span class='game say'><span class='name'>shuttle autopilot</span> states, \"[message]\"</span>"
+	var/padded_message = span_game(span_say(span_name("shuttle autopilot") + " states, \"[message]\""))
 	message_passengers(padded_message)
 
 /datum/shuttle/autodock/web_shuttle/proc/rename_shuttle(mob/user)
 	if(!can_rename)
-		to_chat(user, "<span class='warning'>You can't rename this vessel.</span>")
+		to_chat(user, span_warning("You can't rename this vessel."))
 		return
 	var/new_name = tgui_input_text(user, "Please enter a new name for this vessel. Note that you can only set its name once, so choose wisely.", "Rename Shuttle", visible_name)
 	var/sanitized_name = sanitizeName(new_name, MAX_NAME_LEN, TRUE)
 	if(sanitized_name)
 		//can_rename = FALSE //VOREStation Removal
-		to_chat(user, "<span class='notice'>You've renamed the vessel to '[sanitized_name]'.</span>")
+		to_chat(user, span_notice("You've renamed the vessel to '[sanitized_name]'."))
 		message_admins("[key_name_admin(user)] renamed shuttle '[visible_name]' to '[sanitized_name]'.")
 		visible_name = sanitized_name
 	else
-		to_chat(user, "<span class='warning'>The name you supplied was invalid. Try another name.</span>")
+		to_chat(user, span_warning("The name you supplied was invalid. Try another name."))
 
 /obj/machinery/computer/shuttle_control/web
 	name = "flight computer"
@@ -200,7 +200,7 @@
 		var/obj/item/clothing/head/pilot/H = I
 		H.shuttle_comp = src
 		shuttle.helmets |= I
-		to_chat(user, "<span class='notice'>You register the helmet with the ship's console.</span>")
+		to_chat(user, span_notice("You register the helmet with the ship's console."))
 		shuttle.update_helmets()
 		return
 
@@ -212,7 +212,7 @@
 	var/list/routes[0]
 	var/datum/shuttle/autodock/web_shuttle/shuttle = SSshuttles.shuttles[shuttle_tag]
 	if(!istype(shuttle))
-		to_chat(user, "<span class='warning'>Unable to establish link with the shuttle.</span>")
+		to_chat(user, span_warning("Unable to establish link with the shuttle."))
 		return
 
 	var/list/R = shuttle.web_master.get_available_routes()
@@ -290,7 +290,7 @@
 
 	return data
 
-/obj/machinery/computer/shuttle_control/web/tgui_act(action, list/params)
+/obj/machinery/computer/shuttle_control/web/tgui_act(action, list/params, datum/tgui/ui)
 	if(..())
 		return TRUE
 
@@ -300,22 +300,22 @@
 		return
 
 	if(WS.moving_status != SHUTTLE_IDLE)
-		to_chat(usr, span_blue("[WS.visible_name] is busy moving."))
+		to_chat(ui.user, span_blue("[WS.visible_name] is busy moving."))
 		return
 
 	switch(action)
 		if("rename_command")
-			WS.rename_shuttle(usr)
+			WS.rename_shuttle(ui.user)
 
 		if("dock_command")
 			if(WS.autopilot)
-				to_chat(usr, "<span class='warning'>The autopilot must be disabled before you can control the vessel manually.</span>")
+				to_chat(ui.user, span_warning("The autopilot must be disabled before you can control the vessel manually."))
 				return
 			WS.dock()
 
 		if("undock_command")
 			if(WS.autopilot)
-				to_chat(usr, "<span class='warning'>The autopilot must be disabled before you can control the vessel manually.</span>")
+				to_chat(ui.user, span_warning("The autopilot must be disabled before you can control the vessel manually."))
 				return
 			WS.undock()
 
@@ -324,20 +324,20 @@
 				return
 			WS.cloaked = !WS.cloaked
 			if(WS.cloaked)
-				to_chat(usr, "<span class='danger'>Ship stealth systems have been activated. The station will not be warned of our arrival.</span>")
+				to_chat(ui.user, span_danger("Ship stealth systems have been activated. The station will not be warned of our arrival."))
 			else
-				to_chat(usr, "<span class='danger'>Ship stealth systems have been deactivated. The station will be warned of our arrival.</span>")
+				to_chat(ui.user, span_danger("Ship stealth systems have been deactivated. The station will be warned of our arrival."))
 
 		if("toggle_autopilot")
 			WS.adjust_autopilot(!WS.autopilot)
 
 		if("traverse")
 			if(WS.autopilot)
-				to_chat(usr, "<span class='warning'>The autopilot must be disabled before you can control the vessel manually.</span>")
+				to_chat(ui.user, span_warning("The autopilot must be disabled before you can control the vessel manually."))
 				return
 
 			if((WS.last_move + WS.cooldown) > world.time)
-				to_chat(usr, span_red("The ship's drive is inoperable while the engines are charging."))
+				to_chat(ui.user, span_red("The ship's drive is inoperable while the engines are charging."))
 				return
 
 			var/index = text2num(params["traverse"])
@@ -346,7 +346,7 @@
 				message_admins("ERROR: Shuttle computer was asked to traverse a nonexistant route.")
 				return
 
-			if(!check_docking(WS))
+			if(!check_docking(, ui.user, WS))
 				return TRUE
 
 			var/datum/shuttle_destination/target_destination = new_route.get_other_side(WS.web_master.current_destination)
@@ -355,11 +355,11 @@
 				return
 
 			WS.next_location = target_destination.my_landmark
-			if(!can_move(WS, usr))
+			if(!can_move(WS, ui.user))
 				return
 
 			WS.web_master.future_destination = target_destination
-			to_chat(usr, "<span class='notice'>[WS.visible_name] flight computer received command.</span>")
+			to_chat(ui.user, span_notice("[WS.visible_name] flight computer received command."))
 			WS.web_master.reset_autopath() // Deviating from the path will almost certainly confuse the autopilot, so lets just reset its memory.
 
 			var/travel_time = new_route.travel_time * WS.flight_time_modifier
@@ -370,16 +370,16 @@
 				WS.short_jump(target_destination.my_landmark)
 
 //check if we're undocked, give option to force launch
-/obj/machinery/computer/shuttle_control/web/proc/check_docking(datum/shuttle/autodock/MS)
+/obj/machinery/computer/shuttle_control/web/proc/check_docking(mob/user, datum/shuttle/autodock/MS)
 	if(MS.skip_docking_checks() || MS.check_undocked())
 		return 1
 
-	var/choice = tgui_alert(usr, "The shuttle is currently docked! Please undock before continuing.","Error",list("Cancel","Force Launch"))
-	if(choice == "Cancel")
+	var/choice = tgui_alert(user, "The shuttle is currently docked! Please undock before continuing.","Error",list("Cancel","Force Launch"))
+	if(!choice || choice == "Cancel")
 		return 0
 
-	choice = tgui_alert(usr, "Forcing a shuttle launch while docked may result in severe injury, death and/or damage to property. Are you sure you wish to continue?", "Force Launch", list("Force Launch", "Cancel"))
-	if(choice == "Cancel")
+	choice = tgui_alert(user, "Forcing a shuttle launch while docked may result in severe injury, death and/or damage to property. Are you sure you wish to continue?", "Force Launch", list("Force Launch", "Cancel"))
+	if(choice || choice == "Cancel")
 		return 0
 
 	return 1
@@ -458,17 +458,17 @@
 	var/total_moles = environment.total_moles
 
 	if(total_moles)
-		var/o2_level = environment.gas["oxygen"]/total_moles
-		var/n2_level = environment.gas["nitrogen"]/total_moles
-		var/co2_level = environment.gas["carbon_dioxide"]/total_moles
-		var/phoron_level = environment.gas["phoron"]/total_moles
+		var/o2_level = environment.gas[GAS_O2]/total_moles
+		var/n2_level = environment.gas[GAS_N2]/total_moles
+		var/co2_level = environment.gas[GAS_CO2]/total_moles
+		var/phoron_level = environment.gas[GAS_PHORON]/total_moles
 		var/unknown_level =  1-(o2_level+n2_level+co2_level+phoron_level)
 		aircontents = list(\
 			"pressure" = "[round(pressure,0.1)]",\
-			"nitrogen" = "[round(n2_level*100,0.1)]",\
-			"oxygen" = "[round(o2_level*100,0.1)]",\
-			"carbon_dioxide" = "[round(co2_level*100,0.1)]",\
-			"phoron" = "[round(phoron_level*100,0.01)]",\
+			GAS_N2 = "[round(n2_level*100,0.1)]",\
+			GAS_O2 = "[round(o2_level*100,0.1)]",\
+			GAS_CO2 = "[round(co2_level*100,0.1)]",\
+			GAS_PHORON = "[round(phoron_level*100,0.01)]",\
 			"other" = "[round(unknown_level, 0.01)]",\
 			"temp" = "[round(environment.temperature-T0C,0.1)]",\
 			"reading" = TRUE\

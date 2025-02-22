@@ -1,4 +1,4 @@
-#define DEFAULT_SEED "glowshroom"
+#define DEFAULT_SEED PLANT_GLOWSHROOM
 #define VINE_GROWTH_STAGES 5
 
 /proc/spacevine_infestation(var/potency_min=70, var/potency_max=100, var/maturation_min=5, var/maturation_max=15)
@@ -24,9 +24,9 @@
 			vine.mature_time = 0
 			vine.process()
 
-			message_admins("<span class='notice'>Event: Spacevines spawned at [T.loc] ([T.x],[T.y],[T.z])</span>")
+			message_admins(span_notice("Event: Spacevines spawned at [T.loc] ([T.x],[T.y],[T.z])"))
 			return
-		message_admins("<span class='notice'>Event: Spacevines failed to find a viable turf.</span>")
+		message_admins(span_notice("Event: Spacevines failed to find a viable turf."))
 
 /obj/effect/dead_plant
 	anchored = TRUE
@@ -98,7 +98,7 @@
 	if(!SSplants)
 		sleep(250) // ugly hack, should mean roundstart plants are fine. TODO initialize perhaps?
 	if(!SSplants)
-		to_world("<span class='danger'>Plant controller does not exist and [src] requires it. Aborting.</span>")
+		to_world(span_danger("Plant controller does not exist and [src] requires it. Aborting."))
 		qdel(src)
 		return
 
@@ -112,7 +112,7 @@
 	name = seed.display_name
 	max_health = round(seed.get_trait(TRAIT_ENDURANCE)/2)
 	if(seed.get_trait(TRAIT_SPREAD)==2)
-		sense_proximity(callback = /atom/proc/HasProximity) // Grabby
+		sense_proximity(callback = TYPE_PROC_REF(/atom,HasProximity)) // Grabby - CHOMPEdit
 		max_growth = VINE_GROWTH_STAGES
 		growth_threshold = max_health/VINE_GROWTH_STAGES
 		icon = 'icons/obj/hydroponics_vines.dmi'
@@ -142,7 +142,7 @@
 	update_icon()
 	SSplants.add_plant(src)
 	//Some plants eat through plating.
-	if(islist(seed.chems) && !isnull(seed.chems["pacid"]))
+	if(islist(seed.chems) && !isnull(seed.chems[REAGENT_ID_PACID]))
 		var/turf/T = get_turf(src)
 		T.ex_act(prob(80) ? 3 : 2)
 
@@ -205,14 +205,13 @@
 	if(growth>2 && growth == max_growth)
 		plane = ABOVE_PLANE
 		set_opacity(1)
-		if(!isnull(seed.chems["woodpulp"]))
+		if(!isnull(seed.chems[REAGENT_ID_WOODPULP]))
 			density = TRUE
 	else
 		reset_plane_and_layer()
 		density = FALSE
 
 /obj/effect/plant/proc/calc_dir()
-	//set background = 1 //CHOMPEdit
 	var/turf/T = get_turf(src)
 	if(!istype(T)) return
 
@@ -247,23 +246,23 @@
 	floor = 1
 	return 1
 
-/obj/effect/plant/attackby(var/obj/item/weapon/W, var/mob/user)
+/obj/effect/plant/attackby(var/obj/item/W, var/mob/user)
 
 	user.setClickCooldown(user.get_attack_speed(W))
 	SSplants.add_plant(src)
 
-	if(W.has_tool_quality(TOOL_WIRECUTTER) || istype(W, /obj/item/weapon/surgical/scalpel))
+	if(W.has_tool_quality(TOOL_WIRECUTTER) || istype(W, /obj/item/surgical/scalpel))
 		if(sampled)
-			to_chat(user, "<span class='warning'>\The [src] has already been sampled recently.</span>")
+			to_chat(user, span_warning("\The [src] has already been sampled recently."))
 			return
 		if(!is_mature())
-			to_chat(user, "<span class='warning'>\The [src] is not mature enough to yield a sample yet.</span>")
+			to_chat(user, span_warning("\The [src] is not mature enough to yield a sample yet."))
 			return
 		if(!seed)
-			to_chat(user, "<span class='warning'>There is nothing to take a sample from.</span>")
+			to_chat(user, span_warning("There is nothing to take a sample from."))
 			return
 		if(sampled)
-			to_chat(user, "<span class='danger'>You cannot take another sample from \the [src].</span>")
+			to_chat(user, span_danger("You cannot take another sample from \the [src]."))
 			return
 		if(prob(70))
 			sampled = 1
@@ -324,3 +323,6 @@
 
 /obj/effect/plant/proc/is_mature()
 	return (health >= (max_health/3) && world.time > mature_time)
+
+#undef DEFAULT_SEED
+#undef VINE_GROWTH_STAGES

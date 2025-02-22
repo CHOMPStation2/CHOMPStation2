@@ -1,0 +1,3055 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"ae" = (
+/obj/structure/window/reinforced/survival_pod{
+	dir = 8
+	},
+/obj/structure/window/reinforced/survival_pod,
+/obj/machinery/shower{
+	pixel_y = 20
+	},
+/obj/structure/curtain/open/shower,
+/obj/random/soap,
+/turf/simulated/floor/tiled/freezer,
+/area/shuttle/whiteshipOM)
+"ap" = (
+/obj/structure/sign/science{
+	pixel_y = -32
+	},
+/turf/template_noop,
+/area/template_noop)
+"bc" = (
+/obj/structure/sign/science{
+	pixel_y = 32
+	},
+/turf/template_noop,
+/area/template_noop)
+"be" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/yellow{
+	dir = 8
+	},
+/obj/effect/wingrille_spawn/reinforced_phoron,
+/turf/simulated/floor/plating,
+/area/shuttle/whiteshipOM)
+"bP" = (
+/obj/effect/wingrille_spawn/reinforced_phoron,
+/obj/structure/curtain/black{
+	icon_state = "open";
+	layer = 2;
+	name = "privacy curtain";
+	opacity = 0
+	},
+/obj/machinery/door/firedoor/border_only,
+/obj/machinery/door/blast/regular/open{
+	id = "estrella_blast";
+	name = "window blast shield"
+	},
+/turf/simulated/floor/plating,
+/area/shuttle/whiteshipOM)
+"ch" = (
+/obj/machinery/door/airlock/maintenance/common,
+/obj/item/tape/engineering,
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
+/obj/machinery/door/firedoor/glass,
+/turf/simulated/floor/tiled/steel_grid,
+/area/shuttle/whiteshipOM)
+"cm" = (
+/obj/machinery/atmospherics/unary/engine{
+	dir = 8
+	},
+/turf/simulated/shuttle/plating/airless/carry,
+/area/shuttle/whiteshipOM)
+"cu" = (
+/obj/item/towel/random,
+/obj/item/towel/random,
+/turf/simulated/floor/wood,
+/area/shuttle/whiteshipOM)
+"cw" = (
+/obj/structure/closet/walllocker/emerglocker{
+	dir = 1;
+	pixel_y = -32
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
+/turf/simulated/shuttle/floor/voidcraft/light,
+/area/shuttle/whiteshipOM)
+"da" = (
+/obj/machinery/atmospherics/pipe/simple/visible,
+/obj/machinery/access_button{
+	command = "cycle_interior";
+	frequency = 1380;
+	master_tag = "estrella";
+	name = "interior access button";
+	pixel_y = 26
+	},
+/obj/machinery/door/firedoor/border_only,
+/turf/simulated/floor/plating,
+/area/shuttle/whiteshipOM)
+"df" = (
+/obj/structure/closet/walllocker_double/medical/west,
+/obj/item/storage/firstaid,
+/obj/item/storage/firstaid/fire,
+/obj/item/storage/firstaid/toxin,
+/obj/item/storage/firstaid/o2,
+/obj/item/roller,
+/obj/item/defib_kit/loaded,
+/turf/simulated/shuttle/floor/white,
+/area/shuttle/whiteshipOM)
+"dh" = (
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 5
+	},
+/obj/structure/table/bench/standard,
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/shuttle/floor/white,
+/area/shuttle/whiteshipOM)
+"dp" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/yellow{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/shuttle/whiteshipOM)
+"dB" = (
+/obj/structure/closet/secure_closet/engineering_electrical{
+	req_access = null
+	},
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/item/storage/belt/utility,
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/whiteshipOM)
+"dS" = (
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
+/turf/simulated/floor/bluegrid{
+	name = "Server Base";
+	nitrogen = 500;
+	oxygen = 0;
+	temperature = 80
+	},
+/area/shuttle/whiteshipOM)
+"eu" = (
+/turf/simulated/floor/carpet,
+/area/shuttle/whiteshipOM)
+"ez" = (
+/turf/simulated/shuttle/floor/purple,
+/area/shuttle/whiteshipOM)
+"fe" = (
+/obj/structure/shuttle/engine/router,
+/turf/simulated/wall/thull,
+/area/shuttle/whiteshipOM)
+"fg" = (
+/obj/screen/alert/highpressure,
+/turf/simulated/wall/thull,
+/area/shuttle/whiteshipOM)
+"fs" = (
+/obj/machinery/door/airlock/maintenance/common,
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
+/obj/machinery/door/firedoor/glass,
+/turf/simulated/floor/tiled/steel_grid,
+/area/shuttle/whiteshipOM)
+"fD" = (
+/obj/machinery/door/window/survival_pod{
+	dir = 8
+	},
+/turf/simulated/floor/wood,
+/area/shuttle/whiteshipOM)
+"ge" = (
+/obj/machinery/atmospherics/pipe/tank/phoron{
+	dir = 4
+	},
+/obj/effect/floor_decal/industrial/outline/red,
+/turf/simulated/floor/plating,
+/area/shuttle/whiteshipOM)
+"gf" = (
+/obj/structure/table/rack/shelf/steel,
+/obj/fiftyspawner/glass,
+/obj/fiftyspawner/glass,
+/obj/fiftyspawner/steel,
+/obj/fiftyspawner/steel,
+/obj/machinery/atmospherics/pipe/manifold/hidden/yellow{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/shuttle/whiteshipOM)
+"hb" = (
+/obj/machinery/r_n_d/protolathe,
+/obj/screen/alert/highpressure,
+/turf/simulated/shuttle/floor/purple,
+/area/shuttle/whiteshipOM)
+"hB" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 10
+	},
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	dir = 1;
+	frequency = 1380;
+	id_tag = "estrella_pump"
+	},
+/obj/effect/map_helper/airlock/atmos/chamber_pump,
+/turf/simulated/floor/plating,
+/area/shuttle/whiteshipOM)
+"hQ" = (
+/obj/machinery/firealarm{
+	dir = 1;
+	pixel_y = -24
+	},
+/obj/structure/bed/chair/wood{
+	dir = 8
+	},
+/turf/simulated/floor/wood,
+/area/shuttle/whiteshipOM)
+"hR" = (
+/obj/structure/extinguisher_cabinet{
+	pixel_y = -30
+	},
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
+/turf/simulated/shuttle/floor/voidcraft/light,
+/area/shuttle/whiteshipOM)
+"iv" = (
+/obj/structure/bed/chair/office/dark{
+	dir = 1
+	},
+/turf/simulated/shuttle/floor/purple,
+/area/shuttle/whiteshipOM)
+"iQ" = (
+/obj/structure/table/wooden_reinforced,
+/obj/structure/flora/pottedplant/smallcactus{
+	pixel_y = 13
+	},
+/turf/simulated/floor/wood,
+/area/shuttle/whiteshipOM)
+"je" = (
+/obj/machinery/atmospherics/unary/vent_pump{
+	dir = 1;
+	icon_state = "map_vent_out";
+	use_power = 1
+	},
+/obj/structure/cryofeed,
+/turf/simulated/floor/bluegrid{
+	name = "Server Base";
+	nitrogen = 500;
+	oxygen = 0;
+	temperature = 80
+	},
+/area/shuttle/whiteshipOM)
+"ju" = (
+/obj/structure/closet/walllocker/emerglocker{
+	pixel_y = 32
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
+/turf/simulated/shuttle/floor/voidcraft/light,
+/area/shuttle/whiteshipOM)
+"kl" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/yellow,
+/turf/simulated/wall/thull,
+/area/shuttle/whiteshipOM)
+"kw" = (
+/obj/structure/table,
+/obj/machinery/light{
+	layer = 3
+	},
+/obj/item/gun/projectile/revolver/toy/crossbow,
+/turf/simulated/floor/wood,
+/area/shuttle/whiteshipOM)
+"kV" = (
+/obj/structure/table/rack/shelf/steel,
+/obj/fiftyspawner/rods,
+/obj/fiftyspawner/rods,
+/obj/item/stack/material/plasteel{
+	amount = 30
+	},
+/obj/item/stack/material/plasteel{
+	amount = 30
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/yellow{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/shuttle/whiteshipOM)
+"ll" = (
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	frequency = 1380;
+	id_tag = "estrella_pump"
+	},
+/obj/machinery/embedded_controller/radio/airlock/docking_port{
+	id_tag = "whiteship_docker";
+	pixel_y = 25
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 5
+	},
+/obj/effect/map_helper/airlock/atmos/chamber_pump,
+/turf/simulated/floor/plating,
+/area/shuttle/whiteshipOM)
+"lu" = (
+/obj/machinery/r_n_d/circuit_imprinter,
+/obj/item/reagent_containers/glass/beaker{
+	pixel_x = 9;
+	pixel_y = 8
+	},
+/obj/machinery/light,
+/turf/simulated/shuttle/floor/purple,
+/area/shuttle/whiteshipOM)
+"lB" = (
+/obj/machinery/alarm/alarms_hidden{
+	dir = 8;
+	pixel_x = 22
+	},
+/obj/structure/sink{
+	dir = 4;
+	pixel_x = 11
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 9
+	},
+/turf/simulated/shuttle/floor/white,
+/area/shuttle/whiteshipOM)
+"lH" = (
+/obj/machinery/door/airlock/maintenance/command{
+	req_one_access = null
+	},
+/obj/machinery/door/firedoor/glass,
+/obj/machinery/atmospherics/pipe/simple/hidden,
+/turf/simulated/floor/tiled/steel_grid,
+/area/shuttle/whiteshipOM)
+"lK" = (
+/obj/item/gun/projectile/colt,
+/obj/item/gun/projectile/garand,
+/obj/item/ammo_magazine/m45,
+/obj/item/ammo_magazine/m45,
+/obj/structure/closet/secure_closet/guncabinet{
+	req_one_access = null
+	},
+/obj/item/ammo_magazine/ammo_box/b12g/beanbag,
+/obj/item/ammo_magazine/ammo_box/b12g/beanbag,
+/obj/item/ammo_magazine/ammo_box/b12g/flechette,
+/obj/item/ammo_magazine/ammo_box/b12g/flechette,
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/whiteshipOM)
+"lM" = (
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/whiteshipOM)
+"lW" = (
+/obj/effect/wingrille_spawn/reinforced_phoron,
+/obj/machinery/door/firedoor/glass,
+/turf/simulated/floor/plating,
+/area/shuttle/whiteshipOM)
+"mg" = (
+/obj/effect/wingrille_spawn/reinforced_phoron,
+/obj/structure/curtain/black{
+	icon_state = "open";
+	layer = 2;
+	name = "privacy curtain";
+	opacity = 0
+	},
+/turf/simulated/floor/plating,
+/area/shuttle/whiteshipOM)
+"nb" = (
+/obj/structure/bed/chair/office/dark{
+	dir = 8
+	},
+/turf/simulated/shuttle/floor/purple,
+/area/shuttle/whiteshipOM)
+"nq" = (
+/obj/structure/fuel_port{
+	pixel_x = -32
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/yellow,
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/whiteshipOM)
+"nM" = (
+/obj/structure/closet/walllocker_double/kitchen/north{
+	dir = 8;
+	name = "Ration Cabinet";
+	pixel_x = -32;
+	pixel_y = 0
+	},
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/radio{
+	pixel_x = -5;
+	pixel_y = 5
+	},
+/obj/item/radio{
+	pixel_x = 5;
+	pixel_y = 5
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/yellow,
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/whiteshipOM)
+"nQ" = (
+/obj/machinery/atmospherics/unary/vent_pump/on,
+/turf/simulated/floor/wood,
+/area/shuttle/whiteshipOM)
+"nV" = (
+/obj/machinery/alarm/alarms_hidden{
+	dir = 8;
+	pixel_x = 22
+	},
+/obj/machinery/atmospherics/unary/vent_pump/on,
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/whiteshipOM)
+"os" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden{
+	dir = 8
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = -27
+	},
+/turf/simulated/shuttle/floor/voidcraft/light,
+/area/shuttle/whiteshipOM)
+"oJ" = (
+/obj/structure/window/reinforced/survival_pod{
+	dir = 8
+	},
+/obj/structure/bed/chair/wood{
+	dir = 4
+	},
+/turf/simulated/floor/wood,
+/area/shuttle/whiteshipOM)
+"oS" = (
+/obj/structure/table/rack/shelf/steel,
+/obj/item/storage/toolbox/electrical,
+/obj/item/storage/toolbox/mechanical{
+	pixel_y = 5
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/yellow{
+	dir = 6
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/shuttle/whiteshipOM)
+"oX" = (
+/turf/template_noop,
+/area/shuttle/whiteshipOM)
+"pk" = (
+/obj/machinery/atmospherics/binary/pump,
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/whiteshipOM)
+"pm" = (
+/obj/machinery/atmospherics/unary/cryo_cell,
+/turf/simulated/shuttle/floor/white,
+/area/shuttle/whiteshipOM)
+"pG" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/whiteshipOM)
+"pL" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/item/radio/intercom{
+	desc = "Talk... listen through this.";
+	name = "Station Intercom (Brig Radio)";
+	pixel_y = -21;
+	wires = 7
+	},
+/obj/machinery/computer/ship/helm{
+	req_one_access = newlist();
+	dir = 4
+	},
+/turf/simulated/shuttle/floor/voidcraft,
+/area/shuttle/whiteshipOM)
+"qb" = (
+/obj/machinery/door/window/northright{
+	name = "Server Room";
+	req_access = null
+	},
+/obj/machinery/door/window/southleft{
+	name = "Server Room";
+	req_access = null
+	},
+/obj/effect/floor_decal/industrial/warning/full,
+/obj/machinery/door/firedoor/glass,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/shuttle/whiteshipOM)
+"qe" = (
+/obj/structure/table/rack/shelf/steel,
+/obj/item/stack/material/phoron{
+	amount = 25
+	},
+/obj/item/stack/material/phoron{
+	amount = 25
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/yellow{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/shuttle/whiteshipOM)
+"qh" = (
+/obj/structure/sign/science{
+	pixel_x = 32
+	},
+/turf/template_noop,
+/area/template_noop)
+"ql" = (
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/shuttle/whiteshipOM)
+"ri" = (
+/obj/machinery/portable_atmospherics/canister/phoron,
+/obj/machinery/atmospherics/portables_connector{
+	dir = 4
+	},
+/obj/effect/floor_decal/industrial/outline/red,
+/turf/simulated/floor/plating,
+/area/shuttle/whiteshipOM)
+"rs" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden,
+/turf/simulated/shuttle/floor/white,
+/area/shuttle/whiteshipOM)
+"rP" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden,
+/turf/simulated/shuttle/floor/voidcraft/light,
+/area/shuttle/whiteshipOM)
+"se" = (
+/obj/machinery/atmospherics/pipe/simple/hidden,
+/obj/effect/wingrille_spawn/reinforced_phoron,
+/obj/machinery/door/firedoor/glass,
+/turf/simulated/floor/plating,
+/area/shuttle/whiteshipOM)
+"sv" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/whiteshipOM)
+"sz" = (
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
+/obj/machinery/door/airlock/maintenance/engi{
+	req_one_access = null
+	},
+/obj/machinery/door/firedoor/glass,
+/turf/simulated/floor/tiled/steel_grid,
+/area/shuttle/whiteshipOM)
+"sH" = (
+/turf/simulated/wall/thull,
+/area/shuttle/whiteshipOM)
+"sI" = (
+/obj/machinery/computer/ship/sensors{
+	dir = 1
+	},
+/turf/simulated/shuttle/floor/voidcraft,
+/area/shuttle/whiteshipOM)
+"sJ" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/yellow{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden,
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/whiteshipOM)
+"sK" = (
+/obj/machinery/door/airlock/maintenance/engi{
+	req_one_access = null
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
+/obj/machinery/door/firedoor/glass,
+/turf/simulated/floor/tiled/steel_grid,
+/area/shuttle/whiteshipOM)
+"sT" = (
+/obj/machinery/door/airlock/maintenance/rnd{
+	req_one_access = null
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
+/obj/machinery/door/firedoor/glass,
+/turf/simulated/floor/tiled/steel_grid,
+/area/shuttle/whiteshipOM)
+"sY" = (
+/obj/structure/table/rack/shelf/steel,
+/obj/item/clothing/suit/bio_suit/anomaly,
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/head/bio_hood/anomaly,
+/obj/item/clothing/gloves/sterile/latex,
+/obj/item/storage/excavation,
+/obj/item/stack/flag/yellow,
+/obj/item/measuring_tape,
+/obj/item/pickaxe/drill,
+/obj/machinery/atmospherics/pipe/manifold/hidden/yellow{
+	dir = 8
+	},
+/obj/item/material/knife/machete/hatchet,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/shuttle/whiteshipOM)
+"tb" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/yellow{
+	dir = 8
+	},
+/obj/machinery/space_heater,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/shuttle/whiteshipOM)
+"te" = (
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/whiteshipOM)
+"tg" = (
+/obj/machinery/light/small,
+/obj/structure/prop/fake_ai{
+	name = "C0n71nu17y"
+	},
+/turf/simulated/floor/bluegrid{
+	name = "Server Base";
+	nitrogen = 500;
+	oxygen = 0;
+	temperature = 80
+	},
+/area/shuttle/whiteshipOM)
+"tu" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/yellow,
+/obj/structure/table/rack/shelf/steel,
+/obj/item/stack/material/glass/phoronrglass{
+	amount = 20
+	},
+/obj/item/stack/material/glass/phoronrglass{
+	amount = 20
+	},
+/obj/fiftyspawner/rods,
+/obj/fiftyspawner/rods,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/shuttle/whiteshipOM)
+"tN" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden{
+	dir = 8
+	},
+/turf/simulated/floor/bluegrid{
+	name = "Server Base";
+	nitrogen = 500;
+	oxygen = 0;
+	temperature = 80
+	},
+/area/shuttle/whiteshipOM)
+"tR" = (
+/obj/machinery/door/firedoor/glass,
+/obj/structure/table/reinforced,
+/obj/machinery/door/window/northright{
+	dir = 4;
+	name = "Medical booth"
+	},
+/obj/structure/curtain/black{
+	icon_state = "open";
+	layer = 2;
+	name = "privacy curtain";
+	opacity = 0
+	},
+/turf/simulated/shuttle/floor/white,
+/area/shuttle/whiteshipOM)
+"um" = (
+/obj/structure/closet/cabinet{
+	pixel_y = 20
+	},
+/obj/item/toy/plushie/kitten,
+/obj/item/toy/plushie/grey_cat,
+/obj/item/toy/plushie/orange_cat,
+/obj/item/toy/plushie/borgplushie/scrubpuppy,
+/obj/item/toy/plushie/black_fox,
+/obj/item/toy/plushie,
+/obj/item/toy/plushie/corgi,
+/obj/item/toy/plushie/crimson_fox,
+/obj/item/clothing/shoes/sandal,
+/obj/item/clothing/shoes/sandal,
+/obj/machinery/computer/security/telescreen/entertainment{
+	pixel_x = -32
+	},
+/obj/item/towel/random,
+/obj/item/towel/random,
+/turf/simulated/floor/carpet/turcarpet,
+/area/shuttle/whiteshipOM)
+"uu" = (
+/obj/machinery/door/airlock/multi_tile/metal/mait,
+/obj/machinery/atmospherics/pipe/simple/hidden/yellow,
+/obj/machinery/door/firedoor/glass,
+/turf/simulated/floor/tiled/steel_grid,
+/area/shuttle/whiteshipOM)
+"uX" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/yellow{
+	dir = 10
+	},
+/obj/structure/closet/walllocker/emerglocker{
+	pixel_x = -25;
+	pixel_y = 32
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/whiteshipOM)
+"vl" = (
+/obj/structure/closet/cabinet{
+	pixel_y = 20
+	},
+/obj/item/ore/diamond,
+/obj/item/ore/gold,
+/obj/item/ore/osmium,
+/obj/item/ore/silver,
+/obj/item/ore/uranium,
+/obj/item/bluespace_crystal,
+/obj/item/clothing/head/sombrero,
+/obj/item/clothing/head/sombrero,
+/obj/item/clothing/suit/poncho,
+/obj/item/clothing/accessory/poncho/thermal/red,
+/obj/item/clothing/accessory/poncho/thermal/security,
+/obj/item/clothing/accessory/poncho/thermal/green,
+/obj/item/clothing/shoes/footwraps,
+/obj/item/clothing/shoes/footwraps,
+/obj/item/clothing/shoes/footwraps,
+/obj/item/clothing/shoes/footwraps,
+/obj/item/toy/bosunwhistle/fluff/strix,
+/obj/item/blobcore_chunk,
+/obj/item/towel/random,
+/obj/item/towel/random,
+/turf/simulated/floor/wood,
+/area/shuttle/whiteshipOM)
+"wp" = (
+/obj/machinery/atmospherics/pipe/simple/hidden,
+/obj/machinery/door/firedoor/glass,
+/turf/simulated/floor/tiled/steel_grid,
+/area/shuttle/whiteshipOM)
+"xk" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 8
+	},
+/turf/simulated/floor/wood,
+/area/shuttle/whiteshipOM)
+"xw" = (
+/obj/machinery/atmospherics/pipe/simple/hidden,
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/whiteshipOM)
+"xy" = (
+/turf/simulated/shuttle/floor/voidcraft,
+/area/shuttle/whiteshipOM)
+"xF" = (
+/obj/effect/floor_decal/industrial/outline/blue,
+/obj/structure/closet/jcloset,
+/obj/item/mop,
+/obj/structure/mopbucket,
+/obj/item/reagent_containers/glass/bucket,
+/obj/item/reagent_containers/spray/cleaner,
+/obj/item/reagent_containers/spray/cleaner,
+/turf/simulated/floor/plating,
+/area/shuttle/whiteshipOM)
+"yb" = (
+/obj/machinery/vending/wallmed1{
+	name = "NanoMed Wall";
+	pixel_x = 25
+	},
+/obj/structure/table/reinforced,
+/obj/item/storage/quickdraw/syringe_case,
+/obj/item/storage/quickdraw/syringe_case,
+/turf/simulated/shuttle/floor/white,
+/area/shuttle/whiteshipOM)
+"yn" = (
+/obj/machinery/power/terminal{
+	dir = 8
+	},
+/obj/structure/cable{
+	icon_state = "0-2"
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/whiteshipOM)
+"yt" = (
+/obj/machinery/smartfridge/survival_pod{
+	name = "food storage"
+	},
+/obj/item/reagent_containers/food/snacks/burrito_spicy,
+/obj/item/reagent_containers/food/snacks/burrito_spicy,
+/obj/item/reagent_containers/food/snacks/burrito_spicy,
+/obj/item/reagent_containers/food/snacks/burrito_vegan,
+/obj/item/reagent_containers/food/snacks/burrito_vegan,
+/obj/item/reagent_containers/food/snacks/burrito_vegan,
+/obj/item/reagent_containers/food/snacks/burrito_mystery,
+/obj/item/reagent_containers/food/snacks/burrito_mystery,
+/obj/item/reagent_containers/food/snacks/burrito_mystery,
+/obj/item/reagent_containers/food/snacks/burrito_hell,
+/obj/item/reagent_containers/food/snacks/burrito_hell,
+/obj/item/reagent_containers/food/snacks/burrito_hell,
+/obj/item/reagent_containers/food/snacks/burrito_hell,
+/obj/item/reagent_containers/food/snacks/burrito_cheese,
+/obj/item/reagent_containers/food/snacks/burrito_cheese,
+/obj/item/reagent_containers/food/snacks/burrito_cheese,
+/obj/item/reagent_containers/food/snacks/burrito,
+/obj/item/reagent_containers/food/snacks/burrito,
+/obj/item/reagent_containers/food/snacks/burrito,
+/obj/item/reagent_containers/food/snacks/slice/bigbeanburrito,
+/obj/item/reagent_containers/food/snacks/slice/bigbeanburrito,
+/obj/item/reagent_containers/food/snacks/slice/bigbeanburrito,
+/obj/item/reagent_containers/food/snacks/slice/bigbeanburrito/filled,
+/obj/item/reagent_containers/food/snacks/slice/bigbeanburrito/filled,
+/obj/item/reagent_containers/food/snacks/slice/bigbeanburrito/filled,
+/obj/item/reagent_containers/food/snacks/sliceable/supremoburrito,
+/obj/item/reagent_containers/food/snacks/enchiladas,
+/obj/item/reagent_containers/food/snacks/enchiladas,
+/obj/item/reagent_containers/food/snacks/enchiladas,
+/obj/item/reagent_containers/food/snacks/cheesenachos,
+/obj/item/reagent_containers/food/snacks/cheesenachos,
+/obj/item/reagent_containers/food/snacks/cheesenachos,
+/obj/item/reagent_containers/food/snacks/chipplate/nachos,
+/obj/item/reagent_containers/food/snacks/chipplate/nachos,
+/obj/item/reagent_containers/food/snacks/chipplate/nachos,
+/obj/item/reagent_containers/food/snacks/cubannachos,
+/obj/item/reagent_containers/food/snacks/cubannachos,
+/obj/item/reagent_containers/food/snacks/cubannachos,
+/obj/item/reagent_containers/food/snacks/cubannachos,
+/obj/item/reagent_containers/food/snacks/nachos,
+/obj/item/reagent_containers/food/snacks/nachos,
+/obj/item/reagent_containers/food/snacks/nachos,
+/obj/item/reagent_containers/food/snacks/nachos,
+/obj/item/reagent_containers/food/snacks/pandenata,
+/obj/item/reagent_containers/food/snacks/pandenata,
+/obj/item/reagent_containers/food/snacks/pandenata,
+/obj/item/reagent_containers/food/snacks/tocino,
+/obj/item/reagent_containers/food/snacks/tocino,
+/obj/item/reagent_containers/food/snacks/tocino,
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/whiteshipOM)
+"yy" = (
+/obj/machinery/recharger/wallcharger{
+	pixel_x = 4;
+	pixel_y = 26
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/whiteshipOM)
+"yB" = (
+/obj/machinery/alarm/alarms_hidden{
+	dir = 8;
+	pixel_x = 22
+	},
+/turf/simulated/floor/wood,
+/area/shuttle/whiteshipOM)
+"yJ" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/yellow,
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/machinery/firealarm{
+	dir = 8;
+	pixel_x = -24
+	},
+/obj/machinery/mech_recharger,
+/turf/simulated/floor/plating,
+/area/shuttle/whiteshipOM)
+"zp" = (
+/obj/machinery/atmospherics/unary/vent_pump/on,
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/whiteshipOM)
+"zV" = (
+/obj/structure/table/rack/shelf/steel,
+/obj/item/stack/material/uranium,
+/obj/item/stack/material/phoron{
+	amount = 5;
+	pixel_x = -1;
+	pixel_y = -3
+	},
+/obj/item/stack/material/silver{
+	amount = 5;
+	pixel_x = 2;
+	pixel_y = 4
+	},
+/obj/item/stack/material/copper{
+	amount = 25
+	},
+/turf/simulated/shuttle/floor/purple,
+/area/shuttle/whiteshipOM)
+"Az" = (
+/obj/machinery/door/airlock/maintenance/medical{
+	req_one_access = null
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
+/obj/machinery/door/firedoor/glass,
+/turf/simulated/floor/tiled/steel_grid,
+/area/shuttle/whiteshipOM)
+"AN" = (
+/obj/structure/bed/chair/wood,
+/turf/simulated/floor/wood,
+/area/shuttle/whiteshipOM)
+"AO" = (
+/obj/structure/closet/walllocker/emerglocker{
+	pixel_x = -25;
+	pixel_y = 32
+	},
+/turf/simulated/shuttle/floor/purple,
+/area/shuttle/whiteshipOM)
+"AP" = (
+/obj/machinery/atmospherics/pipe/simple/visible{
+	dir = 6
+	},
+/turf/simulated/wall/thull,
+/area/shuttle/whiteshipOM)
+"AQ" = (
+/obj/structure/bed/double/padded,
+/obj/structure/closet/walllocker/emerglocker{
+	pixel_y = 32
+	},
+/obj/item/bedsheet/rainbowdouble,
+/turf/simulated/floor/carpet/turcarpet,
+/area/shuttle/whiteshipOM)
+"Bn" = (
+/obj/effect/wingrille_spawn/reinforced_phoron,
+/obj/machinery/door/firedoor/border_only,
+/obj/machinery/door/blast/regular/open{
+	dir = 4;
+	id = "estrella_blast";
+	name = "window blast shield"
+	},
+/turf/simulated/floor/plating,
+/area/shuttle/whiteshipOM)
+"Bz" = (
+/obj/structure/toilet{
+	dir = 8;
+	pixel_x = 9
+	},
+/obj/machinery/door/window/survival_pod{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/freezer,
+/area/shuttle/whiteshipOM)
+"BR" = (
+/obj/machinery/computer/shuttle_control/explore/whiteship,
+/turf/simulated/shuttle/floor/voidcraft,
+/area/shuttle/whiteshipOM)
+"BS" = (
+/obj/effect/catwalk_plated/white,
+/obj/machinery/light/small{
+	dir = 1
+	},
+/turf/template_noop,
+/area/shuttle/whiteshipOM)
+"Cm" = (
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/whiteshipOM)
+"Cn" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden{
+	dir = 4
+	},
+/obj/machinery/firealarm{
+	dir = 4;
+	pixel_x = 24
+	},
+/turf/simulated/shuttle/floor/voidcraft/light,
+/area/shuttle/whiteshipOM)
+"Cq" = (
+/obj/machinery/portable_atmospherics/canister/air,
+/obj/machinery/atmospherics/portables_connector{
+	dir = 4
+	},
+/obj/effect/floor_decal/industrial/outline/blue,
+/obj/machinery/firealarm{
+	dir = 8;
+	pixel_x = -24
+	},
+/turf/simulated/floor/plating,
+/area/shuttle/whiteshipOM)
+"Cz" = (
+/obj/screen/alert/highpressure,
+/obj/machinery/r_n_d/destructive_analyzer,
+/turf/simulated/shuttle/floor/purple,
+/area/shuttle/whiteshipOM)
+"CW" = (
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 10
+	},
+/turf/simulated/floor/bluegrid{
+	name = "Server Base";
+	nitrogen = 500;
+	oxygen = 0;
+	temperature = 80
+	},
+/area/shuttle/whiteshipOM)
+"CX" = (
+/obj/machinery/atmospherics/portables_connector{
+	dir = 8
+	},
+/obj/machinery/portable_atmospherics/canister/air/airlock,
+/obj/machinery/light/small{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/shuttle/whiteshipOM)
+"Ds" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
+	},
+/turf/simulated/shuttle/floor/white,
+/area/shuttle/whiteshipOM)
+"DK" = (
+/obj/structure/closet/crate,
+/obj/item/stack/material/cardboard{
+	amount = 50
+	},
+/obj/item/stack/material/cardboard{
+	amount = 50
+	},
+/obj/item/stack/material/cardboard{
+	amount = 50
+	},
+/obj/item/stack/material/cardboard{
+	amount = 50
+	},
+/obj/fiftyspawner/blucarpet,
+/obj/fiftyspawner/oracarpet,
+/obj/fiftyspawner/purcarpet,
+/obj/fiftyspawner/sblucarpet,
+/obj/fiftyspawner/tealcarpet,
+/obj/fiftyspawner/turcarpet,
+/obj/item/stack/material/wood{
+	amount = 50;
+	color = "#824B28"
+	},
+/obj/item/stack/material/wood{
+	amount = 50;
+	color = "#824B28"
+	},
+/obj/item/stack/material/wood/hard{
+	amount = 50
+	},
+/obj/item/stack/material/wood/hard{
+	amount = 50
+	},
+/obj/item/stack/material/wood/sif{
+	amount = 50
+	},
+/obj/item/stack/material/wood/sif{
+	amount = 50
+	},
+/obj/item/stack/material/marble{
+	amount = 50
+	},
+/obj/item/stack/material/marble{
+	amount = 50
+	},
+/obj/item/stack/material/marble{
+	amount = 50
+	},
+/obj/item/stack/material/cloth{
+	amount = 50
+	},
+/obj/item/stack/material/cloth{
+	amount = 50
+	},
+/obj/item/stack/material/algae{
+	amount = 50
+	},
+/obj/item/stack/material/sandstone,
+/obj/item/stack/material/sandstone,
+/obj/item/stack/material/sandstone,
+/obj/item/stack/material/lead{
+	amount = 30
+	},
+/obj/item/stack/material/plasteel{
+	amount = 30;
+	pixel_y = 5
+	},
+/obj/item/stack/material/resin{
+	amount = 50
+	},
+/obj/item/stack/material/smolebricks{
+	amount = 50
+	},
+/obj/item/stack/material/smolebricks{
+	amount = 50
+	},
+/obj/machinery/light{
+	layer = 3
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/whiteshipOM)
+"DM" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/yellow{
+	dir = 1
+	},
+/obj/structure/reagent_dispensers/fueltank/high,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/shuttle/whiteshipOM)
+"DV" = (
+/obj/machinery/alarm/alarms_hidden{
+	dir = 8;
+	pixel_x = 22
+	},
+/obj/structure/bed/chair/office/dark,
+/turf/simulated/shuttle/floor/purple,
+/area/shuttle/whiteshipOM)
+"DW" = (
+/obj/machinery/shipsensors{
+	dir = 8
+	},
+/obj/structure/sign/science{
+	pixel_x = 32
+	},
+/turf/simulated/floor/plating,
+/area/shuttle/whiteshipOM)
+"Eg" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden{
+	dir = 8
+	},
+/turf/simulated/shuttle/floor/voidcraft/light,
+/area/shuttle/whiteshipOM)
+"Eq" = (
+/turf/template_noop,
+/area/template_noop)
+"Ew" = (
+/obj/machinery/sleeper{
+	dir = 4
+	},
+/turf/simulated/shuttle/floor/white,
+/area/shuttle/whiteshipOM)
+"EH" = (
+/obj/machinery/recharger/wallcharger{
+	pixel_x = 4;
+	pixel_y = -34
+	},
+/obj/machinery/space_heater,
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/whiteshipOM)
+"EN" = (
+/obj/structure/cable/green{
+	icon_state = "1-8"
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/whiteshipOM)
+"ER" = (
+/obj/structure/bed/chair/bay/comfy/red{
+	dir = 8
+	},
+/obj/structure/closet/walllocker/emerglocker{
+	pixel_x = -25;
+	pixel_y = 32
+	},
+/turf/simulated/shuttle/floor/voidcraft,
+/area/shuttle/whiteshipOM)
+"Fb" = (
+/obj/structure/table/reinforced,
+/obj/item/reagent_containers/glass/beaker/large,
+/obj/item/reagent_containers/dropper,
+/obj/item/reagent_containers/glass/beaker,
+/obj/item/reagent_containers/glass/beaker,
+/obj/machinery/reagentgrinder,
+/obj/machinery/firealarm{
+	dir = 4;
+	pixel_x = 24
+	},
+/obj/item/reagent_containers/spray/cleaner{
+	desc = "Someone has crossed out the 'Space' from Space Cleaner and written in Chemistry. Scrawled on the back is, 'Okay, whoever filled this with polytrinic acid, it was only funny the first time. It was hard enough replacing the CMO's first cat!'";
+	name = "Chemistry Cleaner"
+	},
+/turf/simulated/shuttle/floor/white,
+/area/shuttle/whiteshipOM)
+"Fe" = (
+/obj/structure/table/wooden_reinforced,
+/obj/item/coin/diamond,
+/obj/machinery/light{
+	layer = 3
+	},
+/turf/simulated/floor/wood,
+/area/shuttle/whiteshipOM)
+"Ft" = (
+/obj/machinery/access_button{
+	command = "cycle_exterior";
+	frequency = 1380;
+	master_tag = "estrella";
+	name = "exterior access button";
+	pixel_y = 26
+	},
+/obj/machinery/door/firedoor/border_only,
+/obj/machinery/door/blast/regular/open{
+	dir = 4;
+	id = "estrella_blast";
+	layer = 2;
+	name = "window blast shield";
+	open_layer = 2
+	},
+/turf/simulated/floor/plating,
+/area/shuttle/whiteshipOM)
+"FR" = (
+/obj/machinery/door/airlock/hatch{
+	icon_state = "door_locked";
+	id_tag = "estrella_side_hatch";
+	locked = 1;
+	req_access = null;
+	req_one_access = null
+	},
+/obj/machinery/button/remote/airlock{
+	dir = 8;
+	id = "estrella_side_hatch";
+	name = "Side Hatch Control";
+	pixel_x = -27;
+	specialfunctions = 4
+	},
+/obj/machinery/door/firedoor/border_only,
+/obj/machinery/door/blast/regular/open{
+	id = "estrella_blast";
+	layer = 2;
+	name = "window blast shield";
+	open_layer = 2
+	},
+/turf/simulated/floor/plating,
+/area/shuttle/whiteshipOM)
+"FV" = (
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/structure/closet/crate/engineering,
+/obj/fiftyspawner/steel,
+/obj/fiftyspawner/glass,
+/obj/item/tank/phoron,
+/obj/item/tank/phoron,
+/obj/item/storage/toolbox/mechanical,
+/obj/item/storage/toolbox/electrical,
+/obj/item/multitool,
+/obj/item/geiger,
+/obj/item/clothing/glasses/goggles,
+/obj/item/clothing/glasses/goggles,
+/obj/item/t_scanner,
+/obj/item/clothing/glasses/welding,
+/obj/item/storage/briefcase/inflatable,
+/obj/item/storage/briefcase/inflatable,
+/obj/item/storage/briefcase/inflatable,
+/turf/simulated/floor/plating,
+/area/shuttle/whiteshipOM)
+"Gi" = (
+/obj/effect/catwalk_plated/white,
+/turf/template_noop,
+/area/shuttle/whiteshipOM)
+"Gl" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 9
+	},
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	frequency = 1380;
+	id_tag = "estrella_pump"
+	},
+/obj/effect/map_helper/airlock/atmos/chamber_pump,
+/turf/simulated/floor/plating,
+/area/shuttle/whiteshipOM)
+"GM" = (
+/obj/structure/table/bench/wooden,
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/machinery/alarm/alarms_hidden{
+	dir = 8;
+	pixel_x = 22
+	},
+/obj/item/flash,
+/turf/simulated/floor/wood,
+/area/shuttle/whiteshipOM)
+"GP" = (
+/obj/machinery/atmospherics/pipe/simple/hidden,
+/turf/simulated/shuttle/floor/voidcraft/light,
+/area/shuttle/whiteshipOM)
+"GU" = (
+/obj/machinery/sleep_console{
+	dir = 4
+	},
+/turf/simulated/shuttle/floor/white,
+/area/shuttle/whiteshipOM)
+"HX" = (
+/obj/machinery/chem_master{
+	pixel_x = -7
+	},
+/turf/simulated/shuttle/floor/white,
+/area/shuttle/whiteshipOM)
+"Ij" = (
+/obj/machinery/power/smes/buildable/point_of_interest,
+/obj/machinery/atmospherics/pipe/simple/hidden/yellow,
+/obj/structure/cable/green,
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/effect/floor_decal/industrial/outline/yellow,
+/turf/simulated/floor/plating,
+/area/shuttle/whiteshipOM)
+"In" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/yellow{
+	dir = 8
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = -27
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/whiteshipOM)
+"Io" = (
+/obj/machinery/atmospherics/unary/freezer{
+	icon_state = "freezer"
+	},
+/turf/simulated/shuttle/floor/white,
+/area/shuttle/whiteshipOM)
+"Ip" = (
+/obj/structure/bed/chair/office/dark{
+	dir = 8
+	},
+/turf/simulated/shuttle/floor/white,
+/area/shuttle/whiteshipOM)
+"Iz" = (
+/obj/structure/table/reinforced,
+/obj/item/folder/blue,
+/obj/item/paper_bin,
+/obj/item/pen/blue{
+	pixel_x = -5;
+	pixel_y = -1
+	},
+/obj/item/pen/red,
+/obj/item/pen{
+	pixel_x = 4;
+	pixel_y = 4
+	},
+/turf/simulated/shuttle/floor/purple,
+/area/shuttle/whiteshipOM)
+"IB" = (
+/obj/structure/window/reinforced/survival_pod{
+	dir = 1
+	},
+/obj/machinery/shower{
+	dir = 1
+	},
+/obj/structure/curtain/open/shower,
+/obj/random/soap,
+/turf/simulated/floor/tiled/freezer,
+/area/shuttle/whiteshipOM)
+"IE" = (
+/obj/structure/closet/walllocker/emerglocker{
+	dir = 1;
+	pixel_x = -24;
+	pixel_y = -32
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/whiteshipOM)
+"II" = (
+/obj/machinery/power/port_gen/pacman/mrs,
+/obj/machinery/atmospherics/pipe/simple/hidden/yellow,
+/obj/structure/cable{
+	icon_state = "0-4"
+	},
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/fiftyspawner/tritium,
+/turf/simulated/floor/plating,
+/area/shuttle/whiteshipOM)
+"IM" = (
+/obj/machinery/portable_atmospherics/canister/phoron,
+/obj/machinery/atmospherics/portables_connector{
+	dir = 4
+	},
+/obj/effect/floor_decal/industrial/outline/red,
+/obj/machinery/firealarm{
+	dir = 8;
+	pixel_x = -24
+	},
+/turf/simulated/floor/plating,
+/area/shuttle/whiteshipOM)
+"IQ" = (
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
+/turf/simulated/shuttle/floor/voidcraft/light,
+/area/shuttle/whiteshipOM)
+"Jd" = (
+/obj/machinery/atmospherics/pipe/manifold/visible{
+	dir = 4
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4
+	},
+/obj/effect/shuttle_landmark/shuttle_initializer/whiteship,
+/obj/effect/overmap/visitable/ship/landable/whiteship,
+/turf/simulated/floor/plating,
+/area/shuttle/whiteshipOM)
+"Jm" = (
+/obj/machinery/door/airlock/multi_tile/metal/mait{
+	dir = 1
+	},
+/obj/machinery/door/firedoor/border_only,
+/obj/machinery/door/blast/regular/open{
+	dir = 4;
+	id = "estrella_blast";
+	layer = 2;
+	name = "window blast shield";
+	open_layer = 2
+	},
+/obj/effect/map_helper/airlock/door/ext_door,
+/turf/simulated/floor/plating,
+/area/shuttle/whiteshipOM)
+"JG" = (
+/obj/structure/reagent_dispensers/acid{
+	density = 0;
+	pixel_x = -30
+	},
+/turf/simulated/shuttle/floor/purple,
+/area/shuttle/whiteshipOM)
+"JJ" = (
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
+/obj/structure/closet/walllocker/emerglocker{
+	dir = 1;
+	pixel_y = -32
+	},
+/obj/machinery/alarm/alarms_hidden{
+	pixel_y = 22
+	},
+/turf/simulated/shuttle/floor/voidcraft/light,
+/area/shuttle/whiteshipOM)
+"Kh" = (
+/turf/simulated/floor/wood,
+/area/shuttle/whiteshipOM)
+"Kq" = (
+/obj/structure/window/reinforced/survival_pod{
+	dir = 1
+	},
+/obj/machinery/shower{
+	dir = 1
+	},
+/obj/structure/curtain/open/shower,
+/obj/random/soap,
+/turf/simulated/floor/plating,
+/area/shuttle/whiteshipOM)
+"Kx" = (
+/obj/screen/alert/highpressure,
+/turf/template_noop,
+/area/template_noop)
+"KD" = (
+/obj/machinery/atmospherics/unary/vent_pump{
+	dir = 1;
+	external_pressure_bound = 0;
+	external_pressure_bound_default = 0;
+	icon_state = "map_vent_in";
+	initialize_directions = 1;
+	internal_pressure_bound = 4000;
+	internal_pressure_bound_default = 4000;
+	pressure_checks = 2;
+	pressure_checks_default = 2;
+	pump_direction = 0;
+	use_power = 1
+	},
+/obj/structure/cryofeed{
+	dir = 4
+	},
+/turf/simulated/floor/bluegrid{
+	name = "Server Base";
+	nitrogen = 500;
+	oxygen = 0;
+	temperature = 80
+	},
+/area/shuttle/whiteshipOM)
+"Lj" = (
+/obj/structure/closet/walllocker_double/kitchen/north{
+	dir = 8;
+	name = "Ration Cabinet";
+	pixel_x = -32;
+	pixel_y = 0
+	},
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/radio{
+	pixel_x = -5;
+	pixel_y = 5
+	},
+/obj/item/radio{
+	pixel_x = 5;
+	pixel_y = 5
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/yellow,
+/obj/structure/cable/green{
+	icon_state = "2-4"
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/whiteshipOM)
+"Lx" = (
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 28
+	},
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden{
+	dir = 4
+	},
+/turf/simulated/shuttle/floor/voidcraft/light,
+/area/shuttle/whiteshipOM)
+"LC" = (
+/obj/machinery/door/firedoor/glass,
+/obj/effect/wingrille_spawn/reinforced_phoron,
+/obj/structure/curtain/black{
+	icon_state = "open";
+	layer = 2;
+	name = "privacy curtain";
+	opacity = 0
+	},
+/turf/simulated/floor/plating,
+/area/shuttle/whiteshipOM)
+"LP" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/yellow{
+	dir = 5
+	},
+/obj/structure/closet/secure_closet/guncabinet{
+	req_one_access = null
+	},
+/obj/item/clothing/head/helmet/combat/USDF,
+/obj/item/clothing/head/helmet/combat/USDF,
+/obj/item/clothing/suit/armor/combat/USDF,
+/obj/item/clothing/suit/armor/combat/USDF,
+/obj/item/flash,
+/obj/item/flash,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/shuttle/whiteshipOM)
+"Mc" = (
+/obj/machinery/atmospherics/pipe/simple/hidden,
+/obj/structure/fireaxecabinet{
+	pixel_x = 32
+	},
+/turf/simulated/shuttle/floor/voidcraft/light,
+/area/shuttle/whiteshipOM)
+"Mg" = (
+/obj/machinery/atmospherics/pipe/manifold4w/visible,
+/obj/machinery/meter,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/shuttle/whiteshipOM)
+"MR" = (
+/obj/machinery/shuttle_sensor,
+/turf/simulated/wall/thull,
+/area/shuttle/whiteshipOM)
+"Ng" = (
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
+/obj/machinery/alarm/alarms_hidden{
+	pixel_y = 22
+	},
+/turf/simulated/shuttle/floor/voidcraft/light,
+/area/shuttle/whiteshipOM)
+"Nm" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/yellow,
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/structure/cable/green{
+	icon_state = "0-4"
+	},
+/obj/machinery/power/shield_generator/charged{
+	field_radius = 8;
+	initial_shield_modes = 2153;
+	target_radius = 8
+	},
+/turf/simulated/floor/plating,
+/area/shuttle/whiteshipOM)
+"NV" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
+	},
+/turf/simulated/shuttle/floor/purple,
+/area/shuttle/whiteshipOM)
+"Oi" = (
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/whiteshipOM)
+"Ou" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/whiteshipOM)
+"OG" = (
+/turf/simulated/shuttle/floor/white,
+/area/shuttle/whiteshipOM)
+"Pk" = (
+/obj/structure/closet/walllocker/emerglocker{
+	pixel_y = 32
+	},
+/turf/simulated/floor/plating,
+/area/shuttle/whiteshipOM)
+"Pv" = (
+/obj/machinery/atmospherics/unary/freezer{
+	icon_state = "freezer_1";
+	power_setting = 20;
+	set_temperature = 73;
+	use_power = 1
+	},
+/obj/item/radio/intercom{
+	dir = 1;
+	name = "Station Intercom (General)";
+	pixel_y = 21
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/shuttle/whiteshipOM)
+"Pz" = (
+/obj/structure/cable/green{
+	icon_state = "2-8"
+	},
+/obj/effect/floor_decal/industrial/warning/corner,
+/obj/machinery/gear_dispenser/suit/ert{
+	req_one_access = null
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/whiteshipOM)
+"PB" = (
+/turf/simulated/floor/wood/broken,
+/area/shuttle/whiteshipOM)
+"PS" = (
+/obj/structure/cable{
+	icon_state = "1-8"
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/whiteshipOM)
+"Qp" = (
+/obj/item/radio/intercom{
+	dir = 4;
+	name = "Station Intercom (General)";
+	pixel_x = 21
+	},
+/obj/structure/table/reinforced,
+/obj/item/stock_parts/console_screen,
+/obj/item/stock_parts/console_screen,
+/obj/item/stack/cable_coil,
+/obj/item/stack/cable_coil,
+/turf/simulated/shuttle/floor/purple,
+/area/shuttle/whiteshipOM)
+"QA" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/yellow{
+	dir = 8
+	},
+/obj/machinery/suspension_gen,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/shuttle/whiteshipOM)
+"QC" = (
+/obj/structure/table/wooden_reinforced,
+/obj/item/paper_bin,
+/obj/item/pen/fountain,
+/obj/item/pen/chameleon,
+/obj/item/gps/advanced/science,
+/obj/machinery/button/remote/blast_door{
+	id = "estrella_blast";
+	name = "remote blast shielding control";
+	pixel_x = -1;
+	pixel_y = -26
+	},
+/turf/simulated/floor/wood,
+/area/shuttle/whiteshipOM)
+"QH" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/yellow,
+/obj/item/radio/intercom{
+	dir = 8;
+	name = "Station Intercom (General)";
+	pixel_x = -21
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/whiteshipOM)
+"QR" = (
+/obj/machinery/meter,
+/obj/structure/closet/walllocker/emerglocker{
+	pixel_x = -25;
+	pixel_y = 32
+	},
+/obj/machinery/alarm/alarms_hidden{
+	dir = 4;
+	pixel_x = -22
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/shuttle/whiteshipOM)
+"QT" = (
+/obj/structure/bed/chair/office/dark{
+	dir = 4
+	},
+/turf/simulated/shuttle/floor/white,
+/area/shuttle/whiteshipOM)
+"Ro" = (
+/obj/structure/extinguisher_cabinet{
+	pixel_y = 30
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/whiteshipOM)
+"Rp" = (
+/obj/machinery/alarm/alarms_hidden{
+	dir = 8;
+	pixel_x = 22
+	},
+/turf/simulated/floor/wood/broken,
+/area/shuttle/whiteshipOM)
+"RI" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/yellow,
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/machinery/recharge_station,
+/turf/simulated/floor/plating,
+/area/shuttle/whiteshipOM)
+"RU" = (
+/obj/structure/closet/cabinet{
+	pixel_y = 20
+	},
+/obj/machinery/computer/security/telescreen/entertainment{
+	pixel_x = -32
+	},
+/obj/item/handcuffs/legcuffs/fuzzy,
+/obj/item/handcuffs/fuzzy,
+/obj/item/clothing/mask/muzzle/ballgag,
+/obj/item/clothing/suit/iasexy,
+/obj/item/clothing/under/sexybunny_white/sexybunny_black,
+/obj/item/clothing/under/dress/maid/sexy,
+/obj/item/clothing/head/collectable/rabbitears,
+/turf/simulated/floor/wood/broken,
+/area/shuttle/whiteshipOM)
+"RV" = (
+/obj/structure/table/steel_reinforced,
+/obj/machinery/power/apc/alarms_hidden{
+	dir = 4;
+	pixel_x = 24
+	},
+/obj/structure/cable/green,
+/obj/random/maintenance,
+/obj/random/maintenance,
+/obj/random/maintenance,
+/obj/random/maintenance/research,
+/obj/random/maintenance/research,
+/obj/random/maintenance/research,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/structure/cable/green,
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/whiteshipOM)
+"St" = (
+/obj/effect/floor_decal/industrial/warning,
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 5
+	},
+/turf/simulated/shuttle/floor/voidcraft/light,
+/area/shuttle/whiteshipOM)
+"SC" = (
+/obj/machinery/atmospherics/valve,
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/whiteshipOM)
+"SE" = (
+/obj/structure/closet/emcloset,
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/whiteshipOM)
+"SU" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/yellow{
+	dir = 8
+	},
+/obj/structure/reagent_dispensers/watertank/high,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/shuttle/whiteshipOM)
+"Te" = (
+/obj/structure/bed/chair/office/dark{
+	dir = 4
+	},
+/turf/simulated/shuttle/floor/purple,
+/area/shuttle/whiteshipOM)
+"Tp" = (
+/obj/structure/bed/double/padded,
+/obj/structure/curtain/bed,
+/obj/item/bedsheet/hosdouble,
+/obj/machinery/computer/security/telescreen/entertainment{
+	pixel_y = 32
+	},
+/turf/simulated/floor/wood,
+/area/shuttle/whiteshipOM)
+"Tr" = (
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
+/obj/machinery/door/airlock/maintenance/rnd{
+	req_one_access = null
+	},
+/obj/machinery/door/firedoor/glass,
+/turf/simulated/floor/tiled/steel_grid,
+/area/shuttle/whiteshipOM)
+"TB" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/shuttle/whiteshipOM)
+"TF" = (
+/obj/screen/alert/highpressure,
+/obj/machinery/computer/rdconsole/public{
+	dir = 4
+	},
+/turf/simulated/shuttle/floor/purple,
+/area/shuttle/whiteshipOM)
+"Ug" = (
+/obj/machinery/atmospherics/pipe/simple/hidden,
+/obj/structure/extinguisher_cabinet{
+	pixel_x = -27
+	},
+/turf/simulated/shuttle/floor/voidcraft/light,
+/area/shuttle/whiteshipOM)
+"Ul" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/machinery/door/blast/regular/open{
+	id = "estrella_blast";
+	name = "window blast shield"
+	},
+/obj/effect/wingrille_spawn/reinforced_phoron,
+/turf/simulated/floor/plating,
+/area/shuttle/whiteshipOM)
+"Ur" = (
+/obj/machinery/atmospherics/pipe/tank/air{
+	dir = 4
+	},
+/obj/effect/floor_decal/industrial/outline/blue,
+/turf/simulated/floor/plating,
+/area/shuttle/whiteshipOM)
+"Uz" = (
+/obj/machinery/computer/ship/engines{
+	dir = 2
+	},
+/turf/simulated/shuttle/floor/voidcraft,
+/area/shuttle/whiteshipOM)
+"UG" = (
+/obj/structure/table/reinforced,
+/obj/item/gps/advanced/science,
+/obj/item/reagent_containers/spray/cleaner{
+	desc = "Someone has crossed out the 'Space' from Space Cleaner and written in Chemistry. Scrawled on the back is, 'Okay, whoever filled this with polytrinic acid, it was only funny the first time. It was hard enough replacing the CMO's first cat!'";
+	name = "Chemistry Cleaner"
+	},
+/turf/simulated/shuttle/floor/purple,
+/area/shuttle/whiteshipOM)
+"UN" = (
+/obj/structure/table/reinforced,
+/obj/fiftyspawner/steel,
+/obj/fiftyspawner/glass,
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/shuttle/floor/purple,
+/area/shuttle/whiteshipOM)
+"UP" = (
+/obj/machinery/firealarm{
+	dir = 4;
+	pixel_x = 24
+	},
+/obj/structure/table/reinforced,
+/obj/item/disk/design_disk,
+/obj/item/disk/design_disk,
+/obj/item/disk/tech_disk,
+/obj/item/disk/tech_disk,
+/turf/simulated/shuttle/floor/purple,
+/area/shuttle/whiteshipOM)
+"UZ" = (
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	dir = 1;
+	frequency = 1380;
+	id_tag = "estrella_pump"
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 6
+	},
+/obj/machinery/airlock_sensor{
+	frequency = 1380;
+	id_tag = "estrella_sensor";
+	pixel_y = -28
+	},
+/obj/effect/map_helper/airlock/atmos/chamber_pump,
+/obj/effect/map_helper/airlock/sensor/chamber_sensor,
+/turf/simulated/floor/plating,
+/area/shuttle/whiteshipOM)
+"VB" = (
+/obj/item/radio/intercom{
+	dir = 4;
+	name = "Station Intercom (General)";
+	pixel_x = 21
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/whiteshipOM)
+"VE" = (
+/obj/machinery/atmospherics/portables_connector,
+/obj/machinery/portable_atmospherics/canister/nitrogen,
+/obj/machinery/light/small{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/shuttle/whiteshipOM)
+"VH" = (
+/obj/machinery/firealarm{
+	dir = 4;
+	pixel_x = 24
+	},
+/obj/machinery/computer/crew,
+/turf/simulated/floor/tiled/techmaint,
+/area/shuttle/whiteshipOM)
+"VJ" = (
+/obj/structure/table/steel_reinforced,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/random/maintenance,
+/obj/random/maintenance,
+/obj/random/maintenance,
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 4
+	},
+/obj/random/maintenance/research,
+/obj/random/maintenance/research,
+/obj/random/maintenance/research,
+/obj/machinery/alarm/alarms_hidden{
+	dir = 8;
+	pixel_x = 22
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/whiteshipOM)
+"VS" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/machinery/atmospherics/binary/passive_gate{
+	dir = 1;
+	regulate_mode = 0;
+	unlocked = 1
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/whiteshipOM)
+"VT" = (
+/obj/machinery/door/airlock/multi_tile/metal/mait{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/visible{
+	dir = 5
+	},
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/map_helper/airlock/door/int_door,
+/turf/simulated/floor/plating,
+/area/shuttle/whiteshipOM)
+"VY" = (
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/whiteshipOM)
+"Wc" = (
+/obj/structure/table/reinforced,
+/obj/machinery/chemical_dispenser/full{
+	pixel_y = 5
+	},
+/obj/item/radio/intercom{
+	desc = "Talk... listen through this.";
+	name = "Station Intercom (Brig Radio)";
+	pixel_y = -21;
+	wires = 7
+	},
+/turf/simulated/shuttle/floor/white,
+/area/shuttle/whiteshipOM)
+"Wj" = (
+/obj/effect/wingrille_spawn/reinforced_phoron,
+/obj/machinery/door/firedoor/border_only,
+/obj/machinery/door/blast/regular/open{
+	id = "estrella_blast";
+	name = "window blast shield"
+	},
+/turf/simulated/floor/plating,
+/area/shuttle/whiteshipOM)
+"Wu" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/shuttle/whiteshipOM)
+"WL" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/whiteshipOM)
+"Xh" = (
+/obj/structure/toilet{
+	pixel_y = 12
+	},
+/obj/structure/window/reinforced/survival_pod{
+	dir = 4
+	},
+/obj/machinery/door/window/survival_pod{
+	dir = 2;
+	req_one_access = null
+	},
+/turf/simulated/floor/tiled/freezer,
+/area/shuttle/whiteshipOM)
+"Xz" = (
+/obj/machinery/door/airlock/hatch{
+	icon_state = "door_locked";
+	id_tag = "estrella_back_hatch";
+	locked = 1;
+	req_one_access = null
+	},
+/obj/machinery/button/remote/airlock{
+	desiredstate = 1;
+	id = "estrella_back_hatch";
+	name = "Rear Hatch Control";
+	pixel_y = 27;
+	req_access = null;
+	specialfunctions = 4
+	},
+/obj/machinery/door/firedoor/border_only,
+/obj/machinery/door/blast/regular/open{
+	dir = 4;
+	id = "estrella_blast";
+	layer = 2;
+	name = "window blast shield";
+	open_layer = 2
+	},
+/turf/simulated/floor/plating,
+/area/shuttle/whiteshipOM)
+"XQ" = (
+/obj/structure/closet/cabinet{
+	pixel_y = 20
+	},
+/obj/item/implanter/sizecontrol,
+/obj/item/ore/uranium,
+/obj/item/ore/uranium,
+/obj/item/ore/phoron,
+/obj/item/ore/phoron,
+/obj/item/ore/osmium,
+/obj/item/ore/osmium,
+/obj/item/ore/gold,
+/obj/item/ore/diamond,
+/obj/item/ore/marble,
+/obj/item/ore/osmium,
+/obj/item/ore/rutile,
+/obj/item/toy/bosunwhistle/fluff/strix,
+/obj/item/toy/character/wizard,
+/obj/item/reagent_containers/hypospray/autoinjector/biginjector/mindbreaker/unidentified,
+/obj/item/reagent_containers/hypospray/autoinjector/biginjector/mindbreaker/unidentified,
+/obj/item/fluff/squeezetoy,
+/obj/item/fluff/zekewatch,
+/obj/item/fluff/fidgetspinner/red,
+/obj/item/storage/pill_bottle/dice_nerd,
+/turf/simulated/floor/wood,
+/area/shuttle/whiteshipOM)
+"Yi" = (
+/obj/structure/closet/secure_closet/engineering_welding{
+	req_access = null
+	},
+/obj/item/storage/belt/utility,
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/whiteshipOM)
+"YH" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/yellow{
+	dir = 5
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = -27
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/whiteshipOM)
+"YN" = (
+/obj/machinery/atmospherics/portables_connector,
+/obj/machinery/portable_atmospherics/canister/oxygen,
+/turf/simulated/shuttle/floor/white,
+/area/shuttle/whiteshipOM)
+"YX" = (
+/obj/machinery/autolathe{
+	hacked = 1
+	},
+/turf/simulated/shuttle/floor/purple,
+/area/shuttle/whiteshipOM)
+"Za" = (
+/obj/structure/table/reinforced,
+/obj/item/stock_parts/scanning_module/adv{
+	pixel_x = 5;
+	pixel_y = 6
+	},
+/obj/item/stock_parts/scanning_module/adv{
+	pixel_x = 5;
+	pixel_y = 6
+	},
+/obj/item/stock_parts/micro_laser/high,
+/obj/item/stock_parts/micro_laser/high,
+/obj/item/stock_parts/matter_bin/adv,
+/obj/item/stock_parts/matter_bin/adv,
+/obj/item/stock_parts/manipulator/hyper,
+/obj/item/stock_parts/manipulator/hyper,
+/obj/item/stock_parts/capacitor/adv,
+/obj/item/stock_parts/capacitor/adv,
+/turf/simulated/shuttle/floor/purple,
+/area/shuttle/whiteshipOM)
+"Zc" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/yellow{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/whiteshipOM)
+"Zd" = (
+/turf/simulated/floor/plating,
+/area/shuttle/whiteshipOM)
+"Zg" = (
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
+/obj/machinery/alarm/alarms_hidden{
+	dir = 1;
+	pixel_y = -22
+	},
+/turf/simulated/shuttle/floor/voidcraft/light,
+/area/shuttle/whiteshipOM)
+"ZJ" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 1
+	},
+/obj/machinery/alarm/alarms_hidden{
+	dir = 8;
+	pixel_x = 22
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/whiteshipOM)
+
+(1,1,1) = {"
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+"}
+(2,1,1) = {"
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Kx
+fg
+Bn
+Bn
+Bn
+fg
+Kx
+Kx
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+"}
+(3,1,1) = {"
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+sH
+Bn
+fg
+hb
+Cz
+TF
+fg
+Bn
+fg
+Kx
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+"}
+(4,1,1) = {"
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+sH
+UN
+iv
+AO
+nb
+ez
+JG
+lu
+sH
+Kx
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+"}
+(5,1,1) = {"
+Eq
+Eq
+Eq
+Eq
+Eq
+sH
+Bn
+sH
+Eq
+Eq
+Eq
+Eq
+Ul
+YX
+ez
+ez
+ez
+ez
+Te
+UG
+Wj
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+"}
+(6,1,1) = {"
+Eq
+Eq
+Eq
+Eq
+sH
+sH
+pL
+sH
+sH
+DW
+sH
+Bn
+sH
+zV
+DV
+Iz
+NV
+Qp
+UP
+Za
+sH
+sH
+sH
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+"}
+(7,1,1) = {"
+Eq
+Eq
+Eq
+Eq
+Wj
+BR
+ER
+sI
+sH
+sH
+sH
+Wc
+sH
+sH
+sH
+sH
+sT
+sH
+sH
+sH
+sH
+sH
+sH
+sH
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+"}
+(8,1,1) = {"
+Eq
+Eq
+Eq
+Eq
+Wj
+Uz
+xy
+xy
+sH
+YN
+dh
+Ip
+HX
+df
+GU
+sH
+IQ
+sH
+Pv
+QR
+se
+tN
+je
+sH
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+"}
+(9,1,1) = {"
+Eq
+Eq
+Eq
+Eq
+sH
+ae
+fD
+oJ
+sH
+pm
+rs
+OG
+OG
+OG
+Ew
+sH
+JJ
+sH
+VE
+ql
+qb
+dS
+tg
+sH
+sH
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+"}
+(10,1,1) = {"
+Eq
+Eq
+Eq
+ap
+sH
+Xh
+eu
+QC
+sH
+Io
+lB
+QT
+yb
+Ds
+Fb
+sH
+IQ
+sH
+VH
+TB
+lW
+CW
+KD
+sH
+sH
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+"}
+(11,1,1) = {"
+Eq
+Eq
+Eq
+Eq
+sH
+XQ
+eu
+hQ
+sH
+sH
+sH
+tR
+sH
+Az
+sH
+sH
+IQ
+sH
+sH
+Tr
+sH
+sH
+sH
+sH
+sH
+BS
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+"}
+(12,1,1) = {"
+Eq
+Eq
+Eq
+Eq
+sH
+vl
+eu
+nQ
+lH
+Eg
+rP
+GP
+os
+Cn
+GP
+Mc
+Lx
+GP
+Eg
+Cn
+Ug
+GP
+rP
+St
+FR
+Gi
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+"}
+(13,1,1) = {"
+Eq
+Eq
+Eq
+Eq
+bP
+Kh
+eu
+Kh
+mg
+IQ
+sH
+sH
+fs
+sH
+LC
+sH
+sH
+sH
+ch
+sH
+LC
+sH
+sH
+hR
+sH
+sH
+qh
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+"}
+(14,1,1) = {"
+Eq
+Eq
+Eq
+Eq
+sH
+Tp
+GM
+iQ
+sH
+ju
+sH
+um
+xk
+AN
+Fe
+IB
+sH
+RU
+Wu
+PB
+kw
+Kq
+sH
+cw
+sH
+sH
+sH
+sH
+sH
+Eq
+Eq
+Eq
+Eq
+"}
+(15,1,1) = {"
+Eq
+Eq
+Eq
+sH
+sH
+sH
+sH
+sH
+sH
+Ng
+sH
+AQ
+yB
+Kh
+Kh
+Bz
+sH
+Pk
+Rp
+cu
+Zd
+Bz
+sH
+Zg
+sH
+xF
+Cq
+Ur
+sH
+sH
+Eq
+Eq
+Eq
+"}
+(16,1,1) = {"
+Eq
+Eq
+sH
+sH
+ri
+IM
+ge
+ge
+sH
+sK
+sH
+sH
+sH
+sH
+sH
+sH
+sH
+sH
+sH
+sH
+sH
+sH
+sH
+sz
+sH
+yy
+Ou
+IE
+EH
+sH
+sH
+Eq
+Eq
+"}
+(17,1,1) = {"
+Eq
+Eq
+sH
+dB
+uX
+Zc
+Zc
+Zc
+nq
+pk
+In
+uu
+QH
+Lj
+Ij
+II
+yJ
+RI
+Nm
+nM
+QH
+uu
+YH
+Ou
+VS
+SC
+lM
+Oi
+Oi
+DK
+sH
+Eq
+Eq
+"}
+(18,1,1) = {"
+Eq
+ap
+sH
+Yi
+Oi
+VB
+Oi
+Oi
+nV
+pG
+sJ
+wp
+xw
+VY
+yn
+PS
+Oi
+Oi
+te
+zp
+xw
+wp
+sJ
+pG
+ZJ
+Oi
+Oi
+Oi
+Oi
+lK
+sH
+bc
+Eq
+"}
+(19,1,1) = {"
+Eq
+sH
+sH
+oS
+tb
+kl
+gf
+kV
+kl
+qe
+tu
+sH
+yt
+Pz
+Cm
+Cm
+VJ
+RV
+EN
+Oi
+FV
+sH
+DM
+SU
+kl
+sY
+QA
+kl
+dp
+LP
+sH
+sH
+Eq
+"}
+(20,1,1) = {"
+Eq
+sH
+sH
+be
+be
+fe
+be
+be
+fe
+be
+be
+sH
+sH
+AP
+da
+VT
+sH
+sH
+sv
+Oi
+SE
+sH
+be
+be
+fe
+be
+be
+fe
+be
+be
+sH
+sH
+Eq
+"}
+(21,1,1) = {"
+Eq
+sH
+sH
+cm
+cm
+sH
+cm
+cm
+sH
+cm
+cm
+sH
+sH
+CX
+Gl
+Mg
+hB
+sH
+Ro
+SE
+sH
+sH
+cm
+cm
+sH
+cm
+cm
+sH
+cm
+cm
+sH
+sH
+Eq
+"}
+(22,1,1) = {"
+Eq
+sH
+oX
+oX
+oX
+oX
+oX
+oX
+oX
+oX
+oX
+oX
+sH
+sH
+ll
+Jd
+UZ
+sH
+WL
+sH
+sH
+oX
+oX
+oX
+oX
+oX
+oX
+oX
+oX
+oX
+oX
+sH
+Eq
+"}
+(23,1,1) = {"
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+sH
+Ft
+Jm
+MR
+sH
+Xz
+sH
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+"}
+(24,1,1) = {"
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+"}
+(25,1,1) = {"
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+"}
+(26,1,1) = {"
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+"}

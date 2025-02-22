@@ -16,7 +16,7 @@
 	speed_mod = 0.45
 	car_limit = 1	//It gets a trailer. That's about it.
 	active_engines = 1
-	key_type = /obj/item/weapon/key/quadbike
+	key_type = /obj/item/key/quadbike
 
 	var/frame_state = "quad" //Custom-item proofing!
 	var/paint_base = 'icons/obj/vehicles_64x64.dmi'
@@ -27,27 +27,27 @@
 
 	var/outdoors_speed_mod = 0.7 //The general 'outdoors' speed. I.E., the general difference you'll be at when driving outside.
 
-/obj/vehicle/train/engine/quadbike/New()
-	cell = new /obj/item/weapon/cell/high(src)
-	key = new key_type(src)
-	soundloop = new(list(src), FALSE)
+/obj/vehicle/train/engine/quadbike/Initialize(mapload, assembly)
 	. = ..()
+	if(!assembly)
+		cell = new /obj/item/cell/high(src)
+		soundloop = new(list(src), FALSE)
+	key = new key_type(src)
 	turn_off()
 	update_icon()
 
-/obj/vehicle/train/engine/quadbike/built/New()
-	key = new key_type(src)
-	turn_off()
+/obj/vehicle/train/engine/quadbike/built/Initialize(mapload)
+	. = ..(mapload, TRUE)
 
-/obj/vehicle/train/engine/quadbike/random/New()
+/obj/vehicle/train/engine/quadbike/random/Initialize(mapload)
 	paint_color = rgb(rand(1,255),rand(1,255),rand(1,255))
-	..()
+	. = ..()
 
 /obj/vehicle/train/engine/quadbike/Destroy()
 	QDEL_NULL(soundloop)
 	return ..()
 
-/obj/item/weapon/key/quadbike
+/obj/item/key/quadbike
 	name = "key"
 	desc = "A keyring with a small steel key, and a blue fob reading \"ZOOM!\"."
 	icon = 'icons/obj/vehicles.dmi'
@@ -88,9 +88,9 @@
 		if(8)
 			pixel_y = 0
 
-/obj/vehicle/train/engine/quadbike/attackby(obj/item/weapon/W as obj, mob/user as mob)
-	if(istype(W, /obj/item/device/multitool) && open)
-		var/new_paint = input(usr, "Please select paint color.", "Paint Color", paint_color) as color|null
+/obj/vehicle/train/engine/quadbike/attackby(obj/item/W, mob/user)
+	if(istype(W, /obj/item/multitool) && open)
+		var/new_paint = tgui_color_picker(user, "Please select paint color.", "Paint Color", paint_color)
 		if(new_paint)
 			paint_color = new_paint
 			update_icon()
@@ -138,9 +138,9 @@
 		if(isturf(T))
 			A.Move(T)	//bump things away when hit
 
-	if(istype(A, /mob/living))
+	if(isliving(A))
 		var/mob/living/M = A
-		visible_message("<span class='danger'>[src] knocks over [M]!</span>")
+		visible_message(span_danger("[src] knocks over [M]!"))
 		M.apply_effects(2, 2)				// Knock people down for a short moment
 		M.apply_damages(8 / move_delay)		// Smaller amount of damage than a tug, since this will always be possible because Quads don't have safeties.
 		var/list/throw_dirs = list(1, 2, 4, 8, 5, 6, 9, 10)
@@ -152,9 +152,9 @@
 			health -= round(M.mob_size / 4) // Less damage if they actually put the point in to emag it.
 		var/turf/T2 = get_step(A, pick(throw_dirs))
 		M.throw_at(T2, 1, 1, src)
-		if(istype(load, /mob/living/carbon/human))
+		if(ishuman(load))
 			var/mob/living/D = load
-			to_chat(D, "<span class='danger'>You hit [M]!</span>")
+			to_chat(D, span_danger("You hit [M]!"))
 			add_attack_logs(D,M,"Ran over with [src.name]")
 
 
@@ -202,22 +202,22 @@
 
 	paint_color = "#ffffff"
 
-/obj/vehicle/train/trolley/trailer/random/New()
+/obj/vehicle/train/trolley/trailer/random/Initialize(mapload)
 	paint_color = rgb(rand(1,255),rand(1,255),rand(1,255))
-	..()
+	. = ..()
 
 /obj/vehicle/train/trolley/trailer/proc/update_load()
 	if(load)
 		var/y_offset = load_offset_y
-		if(istype(load, /mob/living))
+		if(isliving(load))
 			y_offset = mob_offset_y
 		load.pixel_x = (initial(load.pixel_x) + 16 + load_offset_x + pixel_x) //Base location for the sprite, plus 16 to center it on the 'base' sprite of the trailer, plus the x shift of the trailer, then shift it by the same pixel_x as the trailer to track it.
 		load.pixel_y = (initial(load.pixel_y) + y_offset + pixel_y) //Same as the above.
 		return 1
 	return 0
 
-/obj/vehicle/train/trolley/trailer/New()
-	..()
+/obj/vehicle/train/trolley/trailer/Initialize()
+	. = ..()
 	update_icon()
 
 /obj/vehicle/train/trolley/trailer/Moved(atom/old_loc, direction, forced = FALSE)
@@ -251,9 +251,9 @@
 		if(isturf(T))
 			A.Move(T)	//bump things away when hit
 
-	if(istype(A, /mob/living))
+	if(isliving(A))
 		var/mob/living/M = A
-		visible_message("<span class='danger'>[src] knocks over [M]!</span>")
+		visible_message(span_danger("[src] knocks over [M]!"))
 		M.apply_effects(1, 1)
 		M.apply_damages(8 / move_delay)
 		if(load)
@@ -263,9 +263,9 @@
 			throw_dirs -= dir
 		var/turf/T2 = get_step(A, pick(throw_dirs))
 		M.throw_at(T2, 1, 1, src)
-		if(istype(load, /mob/living/carbon/human))
+		if(ishuman(load))
 			var/mob/living/D = load
-			to_chat(D, "<span class='danger'>You hit [M]!</span>")
+			to_chat(D, span_danger("You hit [M]!"))
 			add_attack_logs(D,M,"Ran over with [src.name]")
 
 /obj/vehicle/train/trolley/trailer/update_icon()
@@ -276,9 +276,9 @@
 	Bodypaint.color = paint_color
 	add_overlay(Bodypaint)
 
-/obj/vehicle/train/trolley/trailer/attackby(obj/item/weapon/W as obj, mob/user as mob)
-	if(istype(W, /obj/item/device/multitool) && open)
-		var/new_paint = input(usr, "Please select paint color.", "Paint Color", paint_color) as color|null
+/obj/vehicle/train/trolley/trailer/attackby(obj/item/W, mob/user)
+	if(istype(W, /obj/item/multitool) && open)
+		var/new_paint = tgui_color_picker(user, "Please select paint color.", "Paint Color", paint_color)
 		if(new_paint)
 			paint_color = new_paint
 			update_icon()

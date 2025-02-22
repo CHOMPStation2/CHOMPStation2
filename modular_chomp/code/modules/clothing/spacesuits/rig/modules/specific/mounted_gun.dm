@@ -5,4 +5,4 @@
 	usable = 0
 	interface_name = "mounted phase rifle"
 	interface_desc = "A forearm-mounted suit-powered phase rifle."
-	gun_type = /obj/item/weapon/gun/energy/locked/phasegun/rifle/unlocked/mounted
+	gun_type = /obj/item/gun/energy/locked/phasegun/rifle/unlocked/mounted

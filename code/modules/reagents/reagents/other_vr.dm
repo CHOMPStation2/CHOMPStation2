@@ -1,6 +1,6 @@
 /datum/reagent/advmutationtoxin
-	name = "Advanced Mutation Toxin"
-	id = "advmutationtoxin"
+	name = REAGENT_ADVMUTATIONTOXIN
+	id = REAGENT_ID_ADVMUTATIONTOXIN
 	description = "A corruptive toxin produced by slimes. Turns the subject of the chemical into a Promethean."
 	reagent_state = LIQUID
 	color = "#13BC5E"
@@ -11,14 +11,14 @@
 	if(ishuman(M))
 		var/mob/living/carbon/human/H = M
 		if(H.species.name != "Promethean")
-			to_chat(M, "<span class='danger'>Your flesh rapidly mutates!</span>")
+			to_chat(M, span_danger("Your flesh rapidly mutates!"))
 
 			var/list/backup_implants = list()
 			for(var/obj/item/organ/I in H.organs)
-				for(var/obj/item/weapon/implant/backup/BI in I.contents)
+				for(var/obj/item/implant/backup/BI in I.contents)
 					backup_implants += BI
 			if(backup_implants.len)
-				for(var/obj/item/weapon/implant/backup/BI in backup_implants)
+				for(var/obj/item/implant/backup/BI in backup_implants)
 					BI.forceMove(src)
 
 			H.set_species("Promethean")
@@ -26,13 +26,13 @@
 
 			if(backup_implants.len)
 				var/obj/item/organ/external/torso = H.get_organ(BP_TORSO)
-				for(var/obj/item/weapon/implant/backup/BI in backup_implants)
+				for(var/obj/item/implant/backup/BI in backup_implants)
 					BI.forceMove(torso)
 					torso.implants += BI
 
 /datum/reagent/nif_repair_nanites
-	name = "Programmed Nanomachines"
-	id = "nifrepairnanites"
+	name = REAGENT_NIFREPAIRNANITES
+	id = REAGENT_ID_NIFREPAIRNANITES
 	description = "A thick grey slurry of NIF repair nanomachines."
 	taste_description = "metallic"
 	reagent_state = LIQUID
@@ -44,14 +44,14 @@
 	if(ishuman(M))
 		var/mob/living/carbon/human/H = M
 		if(H.nif)
-			var/obj/item/device/nif/nif = H.nif //L o c a l
+			var/obj/item/nif/nif = H.nif //L o c a l
 			if(nif.stat == NIF_TEMPFAIL)
 				nif.stat = NIF_INSTALLING
 			nif.repair(removed)
 
 /datum/reagent/firefighting_foam
-	name = "Firefighting Foam"
-	id = "firefoam"
+	name = REAGENT_FIREFOAM
+	id = REAGENT_ID_FIREFOAM
 	description = "A historical fire suppressant. Originally believed to simply displace oxygen to starve fires, it actually interferes with the combustion reaction itself. Vastly superior to the cheap water-based extinguishers found on most NT vessels."
 	reagent_state = LIQUID
 	color = "#A6FAFF"
@@ -80,7 +80,9 @@
 		var/removed_heat = between(0, volume * 19000, -environment.get_thermal_energy_change(min_temperature))
 		environment.add_thermal_energy(-removed_heat)
 		if(prob(5))
-			T.visible_message("<span class='warning'>The foam sizzles as it lands on \the [T]!</span>")
+			T.visible_message(span_warning("The foam sizzles as it lands on \the [T]!"))
+
+	T.apply_fire_protection() // CHOMPEdit - Apply fire protection to the turf
 
 /datum/reagent/firefighting_foam/touch_obj(var/obj/O, reac_volume)
 	O.water_act(reac_volume / 5)
@@ -89,14 +91,14 @@
 	if(istype(M, /mob/living/simple_mob/slime)) //I'm sure foam is water-based!
 		var/mob/living/simple_mob/slime/S = M
 		S.adjustToxLoss(15 * reac_volume)
-		S.visible_message("<span class='warning'>[S]'s flesh sizzles where the foam touches it!</span>", "<span class='danger'>Your flesh burns in the foam!</span>")
-
-	M.adjust_fire_stacks(-reac_volume)
-	M.ExtinguishMob()
+		S.visible_message(span_warning("[S]'s flesh sizzles where the foam touches it!"), span_danger("Your flesh burns in the foam!"))
+	if(istype(M))
+		M.adjust_fire_stacks(-reac_volume)
+		M.ExtinguishMob()
 
 /datum/reagent/liquid_protean
-	name = "Liquid protean"
-	id = "liquid_protean"
+	name = REAGENT_LIQUIDPROTEAN
+	id = REAGENT_ID_LIQUIDPROTEAN
 	description = "This seems to be a small portion of a Protean creature, still slightly wiggling."
 	taste_description = "wiggly peanutbutter"
 	reagent_state = LIQUID
@@ -117,15 +119,15 @@
 	if(ishuman(M))
 		var/mob/living/carbon/human/H = M
 		if(H.nif)
-			var/obj/item/device/nif/nif = H.nif //L o c a l
+			var/obj/item/nif/nif = H.nif //L o c a l
 			if(nif.stat == NIF_TEMPFAIL)
 				nif.stat = NIF_INSTALLING
 			nif.repair(removed*0.1)
 
 //Special toxins for solargrubs
 /datum/reagent/grubshock
-	name = "200 V" //in other words a painful shock
-	id = "shockchem"
+	name = REAGENT_SHOCKCHEM //in other words a painful shock
+	id = REAGENT_ID_SHOCKCHEM
 	description = "A liquid that quickly dissapates to deliver a painful shock."
 	reagent_state = LIQUID
 	color = "#E4EC2F"

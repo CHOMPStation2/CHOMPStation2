@@ -39,11 +39,11 @@
 /mob/living/simple_mob/shadekin/proc/phase_strength_toggle()
 	set name = "Toggle Phase Strength"
 	set desc = "Toggle strength of phase. Gentle but slower, or faster but destructive to lights."
-	set category = "Abilities"
+	set category = "Abilities.Shadekin"
 
 	if(phase_gentle)
-		to_chat(src, "<span class='notice'>Phasing toggled to Normal. You may damage lights.</span>")
+		to_chat(src, span_notice("Phasing toggled to Normal. You may damage lights."))
 		phase_gentle = 0
 	else
-		to_chat(src, "<span class='notice'>Phasing toggled to Gentle. You won't damage lights, but concentrating on that incurs a short stun.</span>")
+		to_chat(src, span_notice("Phasing toggled to Gentle. You won't damage lights, but concentrating on that incurs a short stun."))
 		phase_gentle = 1

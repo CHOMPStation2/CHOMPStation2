@@ -4,7 +4,7 @@
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 4
 	},
-/obj/item/device/starcaster_news,
+/obj/item/starcaster_news,
 /turf/simulated/floor/carpet/bcarpet,
 /area/survivalpod/superpose/SurvivalLuxuryBar)
 "bg" = (
@@ -12,9 +12,9 @@
 	pixel_y = 22
 	},
 /obj/structure/table/marble,
-/obj/item/weapon/book/manual/barman_recipes,
-/obj/item/weapon/reagent_containers/food/drinks/shaker,
-/obj/item/weapon/reagent_containers/glass/rag,
+/obj/item/book/manual/barman_recipes,
+/obj/item/reagent_containers/food/drinks/shaker,
+/obj/item/reagent_containers/glass/rag,
 /turf/simulated/shuttle/floor/voidcraft/light,
 /area/survivalpod/superpose/SurvivalLuxuryBar)
 "ce" = (
@@ -50,7 +50,7 @@
 /turf/simulated/shuttle/plating,
 /area/survivalpod/superpose/SurvivalLuxuryBar)
 "eI" = (
-/obj/item/weapon/stool/baystool/padded,
+/obj/item/stool/baystool/padded,
 /obj/effect/floor_decal/spline/fancy/wood,
 /turf/simulated/floor/carpet/bcarpet,
 /area/survivalpod/superpose/SurvivalLuxuryBar)
@@ -141,10 +141,10 @@
 	pixel_y = 22
 	},
 /obj/structure/table/marble,
-/obj/item/weapon/clipboard,
+/obj/item/clipboard,
 /obj/item/toy/figure/bartender,
-/obj/item/weapon/storage/fancy/cigar/havana,
-/obj/item/weapon/storage/fancy/cigar/cohiba,
+/obj/item/storage/fancy/cigar/havana,
+/obj/item/storage/fancy/cigar/cohiba,
 /turf/simulated/shuttle/floor/voidcraft/light,
 /area/survivalpod/superpose/SurvivalLuxuryBar)
 "pj" = (
@@ -161,10 +161,10 @@
 /area/survivalpod/superpose/SurvivalLuxuryBar)
 "rc" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/paper_bin,
-/obj/item/weapon/pen,
-/obj/item/weapon/pen,
-/obj/item/weapon/packageWrap,
+/obj/item/paper_bin,
+/obj/item/pen,
+/obj/item/pen,
+/obj/item/packageWrap,
 /obj/machinery/light{
 	dir = 4
 	},
@@ -315,8 +315,8 @@
 /area/survivalpod/superpose/SurvivalLuxuryBar)
 "GB" = (
 /obj/structure/table/bench/glass,
-/obj/item/weapon/handcuffs/legcuffs/fuzzy,
-/obj/item/weapon/handcuffs/fuzzy,
+/obj/item/handcuffs/legcuffs/fuzzy,
+/obj/item/handcuffs/fuzzy,
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/SurvivalLuxuryBar)
 "GF" = (
@@ -346,7 +346,7 @@
 /area/survivalpod/superpose/SurvivalLuxuryBar)
 "HS" = (
 /obj/structure/table/fancyblack,
-/obj/item/device/paicard,
+/obj/item/paicard,
 /turf/simulated/floor/carpet/bcarpet,
 /area/survivalpod/superpose/SurvivalLuxuryBar)
 "Ij" = (
@@ -379,11 +379,11 @@
 /area/survivalpod/superpose/SurvivalLuxuryBar)
 "JT" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/flame/lighter/random{
+/obj/item/flame/lighter/random{
 	pixel_x = -4;
 	pixel_y = 4
 	},
-/obj/item/weapon/flame/lighter/random,
+/obj/item/flame/lighter/random,
 /obj/machinery/light{
 	dir = 8
 	},
@@ -406,7 +406,7 @@
 /turf/simulated/shuttle/wall/voidcraft/green,
 /area/survivalpod/superpose/SurvivalLuxuryBar)
 "Lt" = (
-/obj/item/weapon/stool/baystool/padded,
+/obj/item/stool/baystool/padded,
 /obj/effect/floor_decal/spline/fancy/wood,
 /obj/machinery/vending/wallmed1{
 	dir = 4;
@@ -440,11 +440,11 @@
 /area/survivalpod/superpose/SurvivalLuxuryBar)
 "NJ" = (
 /obj/structure/table/fancyblack,
-/obj/item/weapon/reagent_containers/food/condiment/small/saltshaker{
+/obj/item/reagent_containers/food/condiment/small/saltshaker{
 	pixel_x = 4;
 	pixel_y = 4
 	},
-/obj/item/weapon/reagent_containers/food/condiment/small/peppermill{
+/obj/item/reagent_containers/food/condiment/small/peppermill{
 	pixel_x = -4;
 	pixel_y = 12
 	},
@@ -525,11 +525,11 @@
 /area/survivalpod/superpose/SurvivalLuxuryBar)
 "Uu" = (
 /obj/structure/table/fancyblack,
-/obj/item/weapon/deck/cah{
+/obj/item/deck/cah{
 	pixel_x = 2;
 	pixel_y = 2
 	},
-/obj/item/weapon/deck/cah/black{
+/obj/item/deck/cah/black{
 	pixel_x = -2;
 	pixel_y = -2
 	},
@@ -540,111 +540,111 @@
 /turf/simulated/shuttle/wall/voidcraft/green,
 /area/survivalpod/superpose/SurvivalLuxuryBar)
 "WL" = (
-/obj/item/device/gps/computer,
+/obj/item/gps/computer,
 /turf/simulated/shuttle/floor/voidcraft/light,
 /area/survivalpod/superpose/SurvivalLuxuryBar)
 "XG" = (
 /obj/machinery/smartfridge/survival_pod,
-/obj/item/weapon/tape_roll,
+/obj/item/tape_roll,
 /obj/item/sticky_pad/random,
-/obj/item/weapon/pen/blue,
-/obj/item/weapon/pen/blue,
+/obj/item/pen/blue,
+/obj/item/pen/blue,
 /obj/item/fulton_core,
 /obj/item/fulton_core,
 /obj/item/extraction_pack,
 /obj/item/extraction_pack,
 /obj/item/modular_computer/laptop/preset/custom_loadout/standard,
-/obj/item/weapon/pickaxe/hand,
-/obj/item/device/flashlight/color/yellow,
-/obj/item/device/flashlight/color/orange,
-/obj/item/device/threadneedle,
-/obj/item/device/radio,
-/obj/item/device/radio,
-/obj/item/device/radio,
-/obj/item/weapon/extinguisher/mini,
-/obj/item/weapon/extinguisher/mini,
-/obj/item/weapon/flame/lighter/zippo,
-/obj/item/weapon/flame/lighter/zippo,
-/obj/item/device/flashlight/lantern,
+/obj/item/pickaxe/hand,
+/obj/item/flashlight/color/yellow,
+/obj/item/flashlight/color/orange,
+/obj/item/threadneedle,
+/obj/item/radio,
+/obj/item/radio,
+/obj/item/radio,
+/obj/item/extinguisher/mini,
+/obj/item/extinguisher/mini,
+/obj/item/flame/lighter/zippo,
+/obj/item/flame/lighter/zippo,
+/obj/item/flashlight/lantern,
 /obj/random/soap,
 /obj/random/soap,
-/obj/item/weapon/towel/random,
-/obj/item/weapon/towel/random,
+/obj/item/towel/random,
+/obj/item/towel/random,
 /obj/item/bodybag/cryobag,
 /obj/item/bodybag/cryobag,
-/obj/item/weapon/storage/pill_bottle/spaceacillin,
-/obj/item/weapon/storage/pill_bottle/antitox,
-/obj/item/device/healthanalyzer,
-/obj/item/weapon/storage/firstaid/regular,
-/obj/item/weapon/storage/firstaid/o2,
-/obj/item/device/fbp_backup_cell,
-/obj/item/device/fbp_backup_cell,
+/obj/item/storage/pill_bottle/spaceacillin,
+/obj/item/storage/pill_bottle/antitox,
+/obj/item/healthanalyzer,
+/obj/item/storage/firstaid/regular,
+/obj/item/storage/firstaid/o2,
+/obj/item/fbp_backup_cell,
+/obj/item/fbp_backup_cell,
 /obj/item/stack/nanopaste,
-/obj/item/device/suit_cooling_unit/emergency,
-/obj/item/device/suit_cooling_unit/emergency,
-/obj/item/weapon/reagent_containers/hypospray/autoinjector/biginjector/clotting,
-/obj/item/weapon/reagent_containers/hypospray/autoinjector/biginjector/clotting,
-/obj/item/weapon/storage/toolbox/brass,
-/obj/item/weapon/storage/box/survival/space,
-/obj/item/weapon/storage/box/survival/space,
-/obj/item/weapon/storage/box/survival/space,
-/obj/item/weapon/storage/pill_bottle/dice_nerd,
-/obj/item/weapon/storage/box/flare,
-/obj/item/weapon/storage/box/khcrystal,
-/obj/item/weapon/storage/box/khcrystal,
-/obj/item/weapon/storage/briefcase/inflatable,
+/obj/item/suit_cooling_unit/emergency,
+/obj/item/suit_cooling_unit/emergency,
+/obj/item/reagent_containers/hypospray/autoinjector/biginjector/clotting,
+/obj/item/reagent_containers/hypospray/autoinjector/biginjector/clotting,
+/obj/item/storage/toolbox/brass,
+/obj/item/storage/box/survival/space,
+/obj/item/storage/box/survival/space,
+/obj/item/storage/box/survival/space,
+/obj/item/storage/pill_bottle/dice_nerd,
+/obj/item/storage/box/flare,
+/obj/item/storage/box/khcrystal,
+/obj/item/storage/box/khcrystal,
+/obj/item/storage/briefcase/inflatable,
 /obj/item/stack/marker_beacon/ten,
-/obj/item/device/starcaster_news,
-/obj/item/device/mapping_unit,
-/obj/item/weapon/storage/box/dosimeter,
-/obj/item/device/gps,
-/obj/item/device/gps,
-/obj/item/weapon/cell/device/hyper,
-/obj/item/weapon/cell/device/hyper,
-/obj/item/weapon/cell/device/hyper,
-/obj/item/device/pda,
-/obj/item/device/pda,
-/obj/item/weapon/card/id/external,
-/obj/item/weapon/card/id/external,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
-/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
-/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
-/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
-/obj/item/weapon/gun/energy/locked/phasegun/pistol,
-/obj/item/weapon/gun/energy/locked/phasegun,
-/obj/item/weapon/cell/device/weapon{
+/obj/item/starcaster_news,
+/obj/item/mapping_unit,
+/obj/item/storage/box/dosimeter,
+/obj/item/gps,
+/obj/item/gps,
+/obj/item/cell/device/hyper,
+/obj/item/cell/device/hyper,
+/obj/item/cell/device/hyper,
+/obj/item/pda,
+/obj/item/pda,
+/obj/item/card/id/external,
+/obj/item/card/id/external,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/gun/energy/locked/phasegun/pistol,
+/obj/item/gun/energy/locked/phasegun,
+/obj/item/cell/device/weapon{
 	pixel_x = -2;
 	pixel_y = -2
 	},
-/obj/item/weapon/cell/device/weapon{
+/obj/item/cell/device/weapon{
 	pixel_x = -2;
 	pixel_y = -2
 	},
 /obj/item/clothing/accessory/permit/gun,
 /obj/item/clothing/accessory/permit/gun,
-/obj/item/weapon/material/knife/machete,
-/obj/item/weapon/material/fishing_net,
-/obj/item/weapon/storage/backpack/sport,
-/obj/item/weapon/storage/backpack/sport,
+/obj/item/material/knife/machete,
+/obj/item/material/fishing_net,
+/obj/item/storage/backpack/sport,
+/obj/item/storage/backpack/sport,
 /obj/item/clothing/accessory/storage/black_drop_pouches,
 /obj/item/clothing/accessory/storage/black_drop_pouches,
-/obj/item/weapon/storage/belt,
+/obj/item/storage/belt,
 /obj/item/clothing/accessory/poncho/thermal,
 /turf/simulated/shuttle/floor/voidcraft/light,
 /area/survivalpod/superpose/SurvivalLuxuryBar)
 "Ym" = (
 /obj/structure/table/fancyblack,
-/obj/item/weapon/reagent_containers/food/condiment/small/saltshaker{
+/obj/item/reagent_containers/food/condiment/small/saltshaker{
 	pixel_x = 4;
 	pixel_y = 4
 	},
-/obj/item/weapon/reagent_containers/food/condiment/small/peppermill{
+/obj/item/reagent_containers/food/condiment/small/peppermill{
 	pixel_x = -4;
 	pixel_y = 12
 	},

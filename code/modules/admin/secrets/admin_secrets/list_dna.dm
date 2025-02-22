@@ -5,10 +5,10 @@
 	. = ..()
 	if(!.)
 		return
-	var/dat = "<B>Showing DNA from blood.</B><HR>"
+	var/dat = span_bold("Showing DNA from blood.") + "<HR>"
 	dat += "<table cellspacing=5><tr><th>Name</th><th>DNA</th><th>Blood Type</th></tr>"
 	for(var/mob/living/carbon/human/H in mob_list)
 		if(H.dna && H.ckey)
 			dat += "<tr><td>[H]</td><td>[H.dna.unique_enzymes]</td><td>[H.b_type]</td></tr>"
 	dat += "</table>"
-	user << browse(dat, "window=DNA;size=440x410")
+	user << browse("<html>[dat]</html>", "window=DNA;size=440x410")

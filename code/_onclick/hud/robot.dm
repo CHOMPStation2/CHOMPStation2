@@ -85,7 +85,7 @@ var/obj/screen/robot_inventory
 	using = new /obj/screen()
 	using.name = "mov_intent"
 	using.icon = HUD.ui_style
-	using.icon_state = (m_intent == "run" ? "running" : "walking")
+	using.icon_state = (m_intent == I_RUN ? "running" : "walking")
 	using.screen_loc = ui_movi
 	using.color = HUD.ui_color
 	using.alpha = HUD.ui_alpha
@@ -216,6 +216,23 @@ var/obj/screen/robot_inventory
 		client.screen += list( throw_icon, zone_sel, hands, healths, pullin, robot_inventory, gun_setting_icon)
 		client.screen += HUD.adding + HUD.other
 		client.screen += client.void
+		if(vtec_active)
+			using = new /obj/screen()
+			using.name = "control_vtec"
+			using.icon = HUD.ui_style
+			using.screen_loc = ui_vtec_control
+			using.color = HUD.ui_color
+			using.alpha = HUD.ui_alpha
+			if(speed == 0)
+				using.icon_state = "speed_0"
+			else if(speed == -0.5)
+				using.icon_state = "speed_1"
+			else if(speed == -1)
+				using.icon_state = "speed_2"
+			HUD.control_vtec = using
+			m_intent = I_RUN
+			HUD.move_intent.icon_state = "running"
+			client.screen += HUD.control_vtec
 
 /datum/hud/proc/toggle_vtec_control()
 	if(!isrobot(mymob))
@@ -237,11 +254,11 @@ var/obj/screen/robot_inventory
 			control_vtec.icon_state = "speed_1"
 		else if(R.speed == -1)
 			control_vtec.icon_state = "speed_2"
-		R.m_intent = "run"
+		R.m_intent = I_RUN
 		R.hud_used.move_intent.icon_state = "running"
-		R.client.screen += control_vtec
+		R.client?.screen += control_vtec
 	else
-		R.client.screen -= control_vtec
+		R.client?.screen -= control_vtec
 		R.speed = 0
 
 /datum/hud/proc/toggle_show_robot_modules()
@@ -265,11 +282,11 @@ var/obj/screen/robot_inventory
 		//r.client.screen += robot_inventory	//"store" icon
 
 		if(!r.module)
-			to_chat(usr, "<span class='danger'>No module selected</span>")
+			to_chat(r, span_danger("No module selected"))
 			return
 
 		if(!r.module.modules)
-			to_chat(usr, "<span class='danger'>Selected module has no modules to select</span>")
+			to_chat(r, span_danger("Selected module has no modules to select"))
 			return
 
 		if(!r.robot_modules_background)
@@ -289,11 +306,11 @@ var/obj/screen/robot_inventory
 		if(r.emagged || r.emag_items)
 			for(var/obj/O in r.module.emag)
 				if(!(O in r.module.modules))
-					r.module.modules.Add(r.module.emag)
+					r.module.modules.Add(O)
 		else
 			for(var/obj/O in r.module.emag)
 				if(O in r.module.modules)
-					r.module.modules.Remove(r.module.emag)
+					r.module.modules.Remove(O)
 
 		for(var/atom/movable/A in r.module.modules)
 			if(r.client && (A != r.module_state_1) && (A != r.module_state_2) && (A != r.module_state_3) )

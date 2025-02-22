@@ -1,2 +1,2 @@
-/obj/item/weapon/rig/ert/janitor
+/obj/item/rig/ert/janitor
 	req_access = null

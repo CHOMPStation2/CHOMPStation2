@@ -26,7 +26,7 @@
 			continue
 
 		if(floor.density)
-			if(!isnull(seed.chems["pacid"]))
+			if(!isnull(seed.chems[REAGENT_ID_PACID]))
 				spawn(rand(5,25)) floor.ex_act(3)
 			continue
 
@@ -51,7 +51,7 @@
 		return 0
 
 	for(var/obj/effect/effect/smoke/chem/smoke in view(1, src))
-		if(smoke.reagents.has_reagent("plantbgone"))
+		if(smoke.reagents.has_reagent(REAGENT_ID_PLANTBGONE))
 			die_off()
 			return
 
@@ -99,7 +99,7 @@
 						entangle(M)
 
 		if(seed.get_trait(TRAIT_SPORING) && prob(1))
-			visible_message(SPAN_WARNING("\The [src] hisses, releasing a cloud of spores!"), SPAN_WARNING("Something nearby hisses loudly!"))
+			visible_message(span_warning("\The [src] hisses, releasing a cloud of spores!"), span_warning("Something nearby hisses loudly!"))
 			seed.create_spores(get_turf(src))
 
 		if(length(neighbors) && prob(spread_chance))
@@ -123,7 +123,7 @@
 /obj/effect/plant/proc/spread_to(turf/target_turf)
 	//VOREStation Edit Start - Vines can go up/down stairs, but don't register that they have done this, so do so infinitely, which is annoying and laggy.
 	if(istype(target_turf, /turf/simulated/open))
-		return			
+		return
 	//VOREStation Edit End
 	var/obj/effect/plant/child = new(get_turf(src),seed,parent)
 

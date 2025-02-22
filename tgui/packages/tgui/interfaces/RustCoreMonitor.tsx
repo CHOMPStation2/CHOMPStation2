@@ -1,8 +1,7 @@
-import { BooleanLike } from 'common/react';
-
-import { useBackend } from '../backend';
-import { Button, Knob, Section, Table } from '../components';
-import { Window } from '../layouts';
+import { useBackend } from 'tgui/backend';
+import { Window } from 'tgui/layouts';
+import { Button, Knob, Section, Table } from 'tgui-core/components';
+import type { BooleanLike } from 'tgui-core/react';
 
 export const RustCoreMonitor = () => (
   <Window width={627} height={700}>
@@ -15,16 +14,16 @@ export const RustCoreMonitor = () => (
 type Data = {
   cores: {
     name: string;
-    x;
-    y;
-    z;
+    x: number;
+    y: number;
+    z: number;
     has_field: BooleanLike;
     core_operational: BooleanLike;
     ref: string;
     reactant_dump: BooleanLike;
-    field_instability;
-    field_temperature;
-    target_field_strength;
+    field_instability: number;
+    field_temperature: number;
+    target_field_strength: number;
   }[];
 };
 
@@ -37,11 +36,9 @@ export const RustCoreMonitorContent = (props) => {
     <Section
       title="Cores"
       buttons={
-        <Button
-          icon="pencil-alt"
-          content={'Set Tag'}
-          onClick={() => act('set_tag')}
-        />
+        <Button icon="pencil-alt" onClick={() => act('set_tag')}>
+          Set Tag
+        </Button>
       }
     >
       <Table>
@@ -52,7 +49,9 @@ export const RustCoreMonitorContent = (props) => {
           <Table.Cell>Reactant Mode</Table.Cell>
           <Table.Cell>Field Instability</Table.Cell>
           <Table.Cell>Field Temperature</Table.Cell>
-          <Table.Cell>Field Strength</Table.Cell>
+          <Table.Cell style={{ textAlign: 'center' }}>
+            Field Strength
+          </Table.Cell>
           <Table.Cell>Plasma Content</Table.Cell>
         </Table.Row>
         {cores.map((core) => (
@@ -64,7 +63,6 @@ export const RustCoreMonitorContent = (props) => {
             <Table.Cell>
               <Button
                 icon="power-off"
-                content={core.has_field ? 'Online' : 'Offline'}
                 selected={core.has_field}
                 disabled={!core.core_operational}
                 onClick={() =>
@@ -72,12 +70,13 @@ export const RustCoreMonitorContent = (props) => {
                     core: core.ref,
                   })
                 }
-              />
+              >
+                {core.has_field ? 'Online' : 'Offline'}
+              </Button>
             </Table.Cell>
             <Table.Cell>
               <Button
                 icon="power-off"
-                content={core.reactant_dump ? 'Dump' : 'Maintain'}
                 selected={core.has_field}
                 disabled={!core.core_operational}
                 onClick={() =>
@@ -85,13 +84,14 @@ export const RustCoreMonitorContent = (props) => {
                     core: core.ref,
                   })
                 }
-              />
+              >
+                {core.reactant_dump ? 'Dump' : 'Maintain'}
+              </Button>
             </Table.Cell>
             <Table.Cell>{core.field_instability}</Table.Cell>
             <Table.Cell>{core.field_temperature}</Table.Cell>
             <Table.Cell>
               <Knob
-                forcedInputWidth="60px"
                 size={1.25}
                 color={!!core.has_field && 'yellow'}
                 value={core.target_field_strength}

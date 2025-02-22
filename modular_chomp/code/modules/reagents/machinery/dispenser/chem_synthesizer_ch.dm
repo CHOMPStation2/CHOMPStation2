@@ -26,7 +26,7 @@
 	var/stalled = FALSE  // Required for emergency stop to interrupt on-going recipes.
 	var/drug_substance = 1 // Controls which form medicine takes (bottle, pill, etc). 1 for bottle, 2 for pill, 3 for patch.
 	var/delay_modifier = 4 // This is multiplied by the volume of a step to determine how long each step takes. Bigger volume = slower.
-	var/obj/item/weapon/reagent_containers/glass/catalyst = null // This is where the user adds catalyst. Usually phoron.
+	var/obj/item/reagent_containers/glass/catalyst = null // This is where the user adds catalyst. Usually phoron.
 
 	var/bottle_icon = 4 // Determines icon states of bottles, pills, and patches.
 	var/pill_icon = 2
@@ -38,51 +38,51 @@
 	var/list/cartridges = list() // Associative, label -> cartridge
 
 	var/list/spawn_cartridges = list(
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/hydrogen,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/lithium,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/carbon,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/nitrogen,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/oxygen,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/fluorine,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/sodium,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/aluminum,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/silicon,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/phosphorus,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/sulfur,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/chlorine,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/potassium,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/iron,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/copper,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/mercury,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/radium,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/water,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/ethanol,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/sugar,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/sacid,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/tungsten,
-			/obj/item/weapon/reagent_containers/chem_disp_cartridge/calcium
+			/obj/item/reagent_containers/chem_disp_cartridge/hydrogen,
+			/obj/item/reagent_containers/chem_disp_cartridge/lithium,
+			/obj/item/reagent_containers/chem_disp_cartridge/carbon,
+			/obj/item/reagent_containers/chem_disp_cartridge/nitrogen,
+			/obj/item/reagent_containers/chem_disp_cartridge/oxygen,
+			/obj/item/reagent_containers/chem_disp_cartridge/fluorine,
+			/obj/item/reagent_containers/chem_disp_cartridge/sodium,
+			/obj/item/reagent_containers/chem_disp_cartridge/aluminum,
+			/obj/item/reagent_containers/chem_disp_cartridge/silicon,
+			/obj/item/reagent_containers/chem_disp_cartridge/phosphorus,
+			/obj/item/reagent_containers/chem_disp_cartridge/sulfur,
+			/obj/item/reagent_containers/chem_disp_cartridge/chlorine,
+			/obj/item/reagent_containers/chem_disp_cartridge/potassium,
+			/obj/item/reagent_containers/chem_disp_cartridge/iron,
+			/obj/item/reagent_containers/chem_disp_cartridge/copper,
+			/obj/item/reagent_containers/chem_disp_cartridge/mercury,
+			/obj/item/reagent_containers/chem_disp_cartridge/radium,
+			/obj/item/reagent_containers/chem_disp_cartridge/water,
+			/obj/item/reagent_containers/chem_disp_cartridge/ethanol,
+			/obj/item/reagent_containers/chem_disp_cartridge/sugar,
+			/obj/item/reagent_containers/chem_disp_cartridge/sacid,
+			/obj/item/reagent_containers/chem_disp_cartridge/tungsten,
+			/obj/item/reagent_containers/chem_disp_cartridge/calcium
 		)
 
 	var/_recharge_reagents = TRUE
 	var/process_tick = 0
 	var/list/dispense_reagents = list(
-		"hydrogen", "lithium", "carbon", "nitrogen", "oxygen", "fluorine", "sodium",
-		"aluminum", "silicon", "phosphorus", "sulfur", "chlorine", "potassium", "iron",
-		"copper", "mercury", "radium", "water", "ethanol", "sugar", "sacid", "tungsten", "calcium"
+		REAGENT_ID_HYDROGEN, REAGENT_ID_LITHIUM, REAGENT_ID_CARBON, REAGENT_ID_NITROGEN, REAGENT_ID_OXYGEN, REAGENT_ID_FLUORINE, REAGENT_ID_SODIUM,
+		REAGENT_ID_ALUMINIUM, REAGENT_ID_SILICON, REAGENT_ID_PHOSPHORUS, REAGENT_ID_SULFUR, REAGENT_ID_CHLORINE, REAGENT_ID_POTASSIUM, REAGENT_ID_IRON,
+		REAGENT_ID_COPPER, REAGENT_ID_MERCURY, REAGENT_ID_RADIUM, REAGENT_ID_WATER, REAGENT_ID_ETHANOL, REAGENT_ID_SUGAR, REAGENT_ID_SACID, REAGENT_ID_TUNGSTEN, REAGENT_ID_CALCIUM
 		)
 
 /obj/machinery/chemical_synthesizer/Initialize()
 	. = ..()
 	// Create the reagents datum which will act as the machine's reaction vessel.
 	create_reagents(600)
-	catalyst = new /obj/item/weapon/reagent_containers/glass/beaker(src)
+	catalyst = new /obj/item/reagent_containers/glass/beaker(src)
 
 	if(spawn_cartridges)
 		for(var/type in spawn_cartridges)
 			add_cartridge(new type(src))
 		panel_open = FALSE
 
-	var/obj/item/weapon/paper/P = new /obj/item/weapon/paper(get_turf(src))
+	var/obj/item/paper/P = new /obj/item/paper(get_turf(src))
 	P.name = "Synthesizer Instructions"
 	P.desc = "A photocopy of a handwritten note."
 	P.info = {"Hello there! This device is a new NanoTrasen product currently being shipped to select facilities \
@@ -148,35 +148,35 @@
 			ves_filling.color = src.reagents.get_color()
 			underlays += ves_filling
 
-/obj/machinery/chemical_synthesizer/proc/add_cartridge(obj/item/weapon/reagent_containers/chem_disp_cartridge/C, mob/user)
+/obj/machinery/chemical_synthesizer/proc/add_cartridge(obj/item/reagent_containers/chem_disp_cartridge/C, mob/user)
 	if(!panel_open)
 		if(user)
-			to_chat(user, "<span class='warning'>\The panel is locked!</span>")
+			to_chat(user, span_warning("\The panel is locked!"))
 		return
 
 	if(!istype(C))
 		if(user)
-			to_chat(user, "<span class='warning'>\The [C] will not fit in \the [src]!</span>")
+			to_chat(user, span_warning("\The [C] will not fit in \the [src]!"))
 		return
 
 	if(cartridges.len >= SYNTHESIZER_MAX_CARTRIDGES)
 		if(user)
-			to_chat(user, "<span class='warning'>\The [src] does not have any slots open for \the [C] to fit into!</span>")
+			to_chat(user, span_warning("\The [src] does not have any slots open for \the [C] to fit into!"))
 		return
 
 	if(!C.label)
 		if(user)
-			to_chat(user, "<span class='warning'>\The [C] does not have a label!</span>")
+			to_chat(user, span_warning("\The [C] does not have a label!"))
 		return
 
 	if(cartridges[C.label])
 		if(user)
-			to_chat(user, "<span class='warning'>\The [src] already contains a cartridge with that label!</span>")
+			to_chat(user, span_warning("\The [src] already contains a cartridge with that label!"))
 		return
 
 	if(user)
 		user.drop_from_inventory(C)
-		to_chat(user, "<span class='notice'>You add \the [C] to \the [src].</span>")
+		to_chat(user, span_notice("You add \the [C] to \the [src]."))
 
 	C.loc = src
 	cartridges[C.label] = C
@@ -188,12 +188,12 @@
 	cartridges -= label
 	SStgui.update_uis(src)
 
-/obj/machinery/chemical_synthesizer/attackby(obj/item/weapon/W, mob/user)
+/obj/machinery/chemical_synthesizer/attackby(obj/item/W, mob/user)
 	// Why do so many people code in wrenching when there's already a proc for it?
 	if(!busy && default_unfasten_wrench(user, W, 40))
 		return
 
-	if(istype(W, /obj/item/weapon/reagent_containers/chem_disp_cartridge))
+	if(istype(W, /obj/item/reagent_containers/chem_disp_cartridge))
 		add_cartridge(W, user)
 		return
 
@@ -202,32 +202,32 @@
 		var/label = tgui_input_list(user, "Which cartridge would you like to remove?", "Chemical Synthesizer", cartridges)
 		if(!label)
 			return
-		var/obj/item/weapon/reagent_containers/chem_disp_cartridge/C = remove_cartridge(label)
+		var/obj/item/reagent_containers/chem_disp_cartridge/C = remove_cartridge(label)
 		if(C)
-			to_chat(user, "<span class='notice'>You remove \the [C] from \the [src].</span>")
+			to_chat(user, span_notice("You remove \the [C] from \the [src]."))
 			C.loc = loc
 			playsound(src, W.usesound, 50, 1)
 			return
 
 	// We don't need a busy check here as the catalyst slot must be occupied for the machine to function.
-	if(istype(W, /obj/item/weapon/reagent_containers/glass))
+	if(istype(W, /obj/item/reagent_containers/glass))
 		if(catalyst)
-			to_chat(user, "<span class='warning'>There is already \a [catalyst] in \the [src] catalyst slot!</span>")
+			to_chat(user, span_warning("There is already \a [catalyst] in \the [src] catalyst slot!"))
 			return
 		if(stat & (BROKEN|NOPOWER))
-			to_chat(user, "<span class='warning'>The clamp will not secure the catalyst while the machine is down!</span>")
+			to_chat(user, span_warning("The clamp will not secure the catalyst while the machine is down!"))
 			return
 
-		var/obj/item/weapon/reagent_containers/RC = W
+		var/obj/item/reagent_containers/RC = W
 
 		if(!RC.is_open_container())
-			to_chat(user, "<span class='warning'>You don't see how \the [src] could extract reagents from \the [RC].</span>")
+			to_chat(user, span_warning("You don't see how \the [src] could extract reagents from \the [RC]."))
 			return
 
 		catalyst =  RC
 		user.drop_from_inventory(RC)
 		RC.loc = src
-		to_chat(user, "<span class='notice'>You set \the [RC] on \the [src].</span>")
+		to_chat(user, span_notice("You set \the [RC] on \the [src]."))
 		update_icon()
 		return
 
@@ -248,7 +248,7 @@
 				stack_trace("[src] at [x],[y],[z] failed to find reagent '[id]'!")
 				dispense_reagents -= id
 				continue
-			var/obj/item/weapon/reagent_containers/chem_disp_cartridge/C = cartridges[R.name]
+			var/obj/item/reagent_containers/chem_disp_cartridge/C = cartridges[R.name]
 			if(C && C.reagents.total_volume < C.reagents.maximum_volume)
 				var/to_restore = min(C.reagents.maximum_volume - C.reagents.total_volume, 5)
 				use_power(to_restore * 500)
@@ -310,7 +310,7 @@
 
 	var/chemicals[0]
 	for(var/label in cartridges)
-		var/obj/item/weapon/reagent_containers/chem_disp_cartridge/C = cartridges[label]
+		var/obj/item/reagent_containers/chem_disp_cartridge/C = cartridges[label]
 		chemicals.Add(list(list("title" = label, "id" = label, "amount" = C.reagents.total_volume))) // list in a list because Byond merges the first list
 	data["chemicals"] = chemicals
 
@@ -341,7 +341,7 @@
 			queue -= queue[index]
 		if("clear_queue")
 			// Remove all entries from the queue except the currently processing recipe.
-			var/confirm = alert(usr, "Are you sure you want to clear the running queue?", "Confirm", "No", "Yes")
+			var/confirm = tgui_alert(usr, "Are you sure you want to clear the running queue?", "Confirm", list("No", "Yes"))
 			if(confirm == "Yes")
 				if(busy)
 					// Oh no, I've broken code convention to remove all entries but the first.
@@ -362,7 +362,7 @@
 		if("emergency_stop")
 			// Stops everything if that's desirable for some reason.
 			if(busy)
-				var/confirm = alert(usr, "Are you sure you want to stall the machine?", "Confirm", "Yes", "No")
+				var/confirm = tgui_alert(usr, "Are you sure you want to stall the machine?", "Confirm", list("Yes", "No"))
 				if(confirm == "Yes")
 					stalled = TRUE
 		if("bottle_product")
@@ -379,7 +379,7 @@
 		if("add_recipe")
 			// Allows the user to add a recipe. Kinda vital for this machine to do anything useful.
 			if(recipes.len >= SYNTHESIZER_MAX_RECIPES)
-				to_chat(usr, "<span class='warning'>Maximum recipes exceeded!</span>")
+				to_chat(usr, span_warning("Maximum recipes exceeded!"))
 				return
 			if(!production_mode)
 				babystep_recipe(usr)
@@ -388,13 +388,13 @@
 		if("rem_recipe")
 			// Allows the user to remove recipes while the machine is idle.
 			if(!busy)
-				var/confirm = alert(usr, "Are you sure you want to remove this recipe?", "Confirm", "No", "Yes")
+				var/confirm = tgui_alert(usr, "Are you sure you want to remove this recipe?", "Confirm", list("No", "Yes"))
 				if(confirm == "Yes")
 					var/index = params["rm_index"]
 					if(index in recipes)
 						recipes.Remove(list(index)) // Fuck off Byond.
 			else
-				to_chat(usr, "<span class='warning'>You cannot remove recipes while the machine is running!</span>")
+				to_chat(usr, span_warning("You cannot remove recipes while the machine is running!"))
 		if("exp_recipe")
 			// Allows the user to export recipes to chat formatted for easy importing.
 			var/index = params["exp_index"]
@@ -402,7 +402,7 @@
 		if("add_queue")
 			// Adds recipes to the queue.
 			if(queue.len >= SYNTHESIZER_MAX_QUEUE)
-				to_chat(usr, "<span class='warning'>Synthesizer queue full!</span>")
+				to_chat(usr, span_warning("Synthesizer queue full!"))
 				return
 			var/index = params["qa_index"]
 			// If you forgot, this is a string returned by the user pressing the "add to queue" button on a recipe.
@@ -479,12 +479,12 @@
 
 // This proc is lets users create recipes step-by-step and exports a comma delineated list to chat. It's intended to teach how to use the machine.
 /obj/machinery/chemical_synthesizer/proc/babystep_recipe(mob/user)
-	var/rec_name = sanitizeSafe(input(user, "Name your recipe. Consider including the output volume.", "Recipe naming", null) as text, MAX_NAME_LEN)
+	var/rec_name = sanitizeSafe(tgui_input_text(user, "Name your recipe. Consider including the output volume.", "Recipe naming"))
 	if(!rec_name || (rec_name in recipes)) // Code requires each recipe to have a unique name.
 		to_chat(user, "Please provide a unique recipe name!")
 		return
 
-	var/steps = 2 * CLAMP(round(input(user, "How many steps does your recipe contain (16 max)?", "Steps", null) as num), 0, RECIPE_MAX_STEPS) // Round to get a whole integer, clamp to ensure proper range.
+	var/steps = 2 * tgui_input_number(user, "How many steps does your recipe contain (16 max)?", "Steps", 1, RECIPE_MAX_STEPS, 1) // Round to get a whole integer, clamp to ensure proper range.
 	if(!steps)
 		to_chat(user, "Please input a valid number of steps!")
 		return
@@ -496,7 +496,7 @@
 			to_chat(user, "Please select a chemical!")
 			return
 		new_rec[++new_rec.len] = label // Add the reagent ID.
-		var/amount = CLAMP(round(input(user, "How much of the chemical would you like to add?", "Volume", null) as num), 0, src.reagents.maximum_volume)
+		var/amount = tgui_input_number(user, "How much of the chemical would you like to add?", "Volume", 1, src.reagents.maximum_volume, 1)
 		if(!amount)
 			to_chat(user, "Please select a volume!")
 			return
@@ -509,12 +509,12 @@
 
 // This proc allows users to copy-paste a comma delineated list to create a recipe. The recipe will cause a stall() if formatted incorrectly.
 /obj/machinery/chemical_synthesizer/proc/import_recipe(mob/user)
-	var/rec_name = sanitizeSafe(input(user, "Name your recipe. Consider including the output volume.", "Recipe naming", null) as text, MAX_NAME_LEN)
+	var/rec_name = sanitizeSafe(tgui_input_text(user, "Name your recipe. Consider including the output volume.", "Recipe naming", max_length=MAX_NAME_LEN), MAX_NAME_LEN)
 	if(!rec_name || (rec_name in recipes)) // Code requires each recipe to have a unique name.
 		to_chat(user, "Please provide a unique recipe name!")
 		return
 
-	var/rec_input = input(user, "Input your recipe as 'Chem1,vol1,Chem2,vol2,...'", "Import recipe", null)
+	var/rec_input = tgui_input_text(user, "Input your recipe as 'Chem1,vol1,Chem2,vol2,...'", "Import recipe")
 	if(!rec_input || (length(rec_input) > RECIPE_MAX_STRING) || !findtext(rec_input, ",")) // The smallest possible recipe will contain 1 comma.
 		to_chat(user, "Invalid input or recipe max length exceeded!")
 		return
@@ -623,21 +623,21 @@
 
 	// If we're missing a cartridge somehow or lack space for the next step, stall. It's now up to the chemist to fix this.
 	if(!cartridges[label])
-		visible_message("<span class='warning'>The [src] beeps loudly, flashing a 'cartridge missing' error!</span>", "You hear loud beeping!")
+		visible_message(span_warning("The [src] beeps loudly, flashing a 'cartridge missing' error!"), "You hear loud beeping!")
 		playsound(src, 'sound/weapons/smg_empty_alarm.ogg', 40)
 		stall()
 		return
 
 	if(quantity > reagents.get_free_space())
-		visible_message("<span class='warning'>The [src] beeps loudly, flashing a 'maximum volume exceeded' error!</span>", "You hear loud beeping!")
+		visible_message(span_warning("The [src] beeps loudly, flashing a 'maximum volume exceeded' error!"), "You hear loud beeping!")
 		playsound(src, 'sound/weapons/smg_empty_alarm.ogg', 40)
 		stall()
 		return
 
 	// If there isn't enough reagent left for this step, try again in a minute.
-	var/obj/item/weapon/reagent_containers/chem_disp_cartridge/C = cartridges[label]
+	var/obj/item/reagent_containers/chem_disp_cartridge/C = cartridges[label]
 	if(quantity > C.reagents.total_volume)
-		visible_message("<span class='notice'>The [src] flashes an 'insufficient reagents' warning.</span>")
+		visible_message(span_notice("The [src] flashes an 'insufficient reagents' warning."))
 		addtimer(CALLBACK(src, PROC_REF(perform_reaction), r_id, step), 1 MINUTE)
 		return
 
@@ -680,7 +680,7 @@
 	switch(drug_substance)
 		if(2) // Pills
 			while(reagents.total_volume)
-				var/obj/item/weapon/reagent_containers/pill/P= new(src.loc)
+				var/obj/item/reagent_containers/pill/P= new(src.loc)
 				P.name = "[r_id]"
 				P.pixel_x = rand(-7, 7) // random position
 				P.pixel_y = rand(-7, 7)
@@ -692,7 +692,7 @@
 
 		if(3) // Patches
 			while(reagents.total_volume)
-				var/obj/item/weapon/reagent_containers/pill/patch/P= new(src.loc)
+				var/obj/item/reagent_containers/pill/patch/P= new(src.loc)
 				P.name = "[r_id]"
 				P.pixel_x = rand(-7, 7) // random position
 				P.pixel_y = rand(-7, 7)
@@ -704,7 +704,7 @@
 
 		else // Bottles. Official value is 1, but this works as a sanity check.
 			while(reagents.total_volume)
-				var/obj/item/weapon/reagent_containers/glass/bottle/B = new(src.loc)
+				var/obj/item/reagent_containers/glass/bottle/B = new(src.loc)
 				B.name = "[r_id] bottle"
 				B.pixel_x = rand(-7, 7) // random position
 				B.pixel_y = rand(-7, 7)

@@ -2,14 +2,14 @@
 
 /mob/living/verb/look_up()
 	set name = "Look Up"
-	set category = "IC"
+	set category = "IC.Game"
 	set desc = "Look above you, and hope there's no ceiling spiders."
 
 	to_chat(usr, "You look upwards...")
 
 	var/turf/T = get_turf(usr)
 	if(!T) // In null space.
-		to_chat(usr, span("warning", "You appear to be in a place without any sort of concept of direction. You have bigger problems to worry about."))
+		to_chat(usr, span_warning("You appear to be in a place without any sort of concept of direction. You have bigger problems to worry about."))
 		return
 
 	if(!T.is_outdoors()) // They're inside.
@@ -17,8 +17,8 @@
 		return
 
 	else // They're outside and hopefully on a planet.
-		if(!(T.z in SSplanets.z_to_planet) || !(SSplanets.z_to_planet[T.z]))
-			to_chat(usr, span("warning", "You appear to be outside, but not on a planet... Something is wrong."))
+		if(T.z <= 0 || SSplanets.z_to_planet.len < T.z || !(SSplanets.z_to_planet[T.z])) //VOREstation edit - removed broken in list check; use length limit instead.
+			to_chat(usr, span_warning("You appear to be outside, but not on a planet... Something is wrong."))
 			return
 		var/datum/planet/P = SSplanets.z_to_planet[T.z]
 
@@ -62,4 +62,3 @@
 					to_chat(usr, "[P.moon_name] is not visible. It must be a new moon.")
 				else
 					to_chat(usr, "[P.moon_name] appears to currently be a [P.moon_phase].")
-

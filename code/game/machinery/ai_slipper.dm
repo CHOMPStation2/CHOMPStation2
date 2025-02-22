@@ -14,8 +14,8 @@
 	var/cooldown_on = 0
 	req_access = list(access_ai_upload)
 
-/obj/machinery/ai_slipper/New()
-	..()
+/obj/machinery/ai_slipper/Initialize(mapload)
+	. = ..()
 	update_icon()
 
 /obj/machinery/ai_slipper/power_change()
@@ -33,13 +33,13 @@
 	uses = uses
 	power_change()
 
-/obj/machinery/ai_slipper/attackby(obj/item/weapon/W, mob/user)
+/obj/machinery/ai_slipper/attackby(obj/item/W, mob/user)
 	if(stat & (NOPOWER|BROKEN))
 		return
 	if(istype(user, /mob/living/silicon))
 		return attack_hand(user)
 	else // trying to unlock the interface
-		if(allowed(usr))
+		if(allowed(user))
 			locked = !locked
 			to_chat(user, "You [ locked ? "lock" : "unlock"] the device.")
 			if(locked)
@@ -48,9 +48,9 @@
 					user << browse(null, "window=ai_slipper")
 			else
 				if(user.machine==src)
-					attack_hand(usr)
+					attack_hand(user)
 		else
-			to_chat(user, "<span class='warning'>Access denied.</span>")
+			to_chat(user, span_warning("Access denied."))
 			return
 	return
 
@@ -80,10 +80,10 @@
 	if(locked && (!istype(user, /mob/living/silicon)))
 		t += "<I>(Swipe ID card to unlock control panel.)</I><BR>"
 	else
-		t += text("Dispenser [] - <A href='?src=\ref[];toggleOn=1'>[]?</a><br>\n", disabled?"deactivated":"activated", src, disabled?"Enable":"Disable")
-		t += text("Uses Left: [uses]. <A href='?src=\ref[src];toggleUse=1'>Activate the dispenser?</A><br>\n")
+		t += text("Dispenser [] - <A href='byond://?src=\ref[];toggleOn=1'>[]?</a><br>\n", disabled?"deactivated":"activated", src, disabled?"Enable":"Disable")
+		t += text("Uses Left: [uses]. <A href='byond://?src=\ref[src];toggleUse=1'>Activate the dispenser?</A><br>\n")
 
-	user << browse(t, "window=computer;size=575x450")
+	user << browse("<html>[t]</html>", "window=computer;size=575x450")
 	onclose(user, "computer")
 	return
 

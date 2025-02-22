@@ -1,10 +1,6 @@
 // Body weight limits on a character.
-#define WEIGHT_MIN 70
-#define WEIGHT_MAX 500
 #define WEIGHT_CHANGE_MIN 0
 #define WEIGHT_CHANGE_MAX 100
-#define MAX_VOICE_FREQ 70000
-#define MIN_VOICE_FREQ 15000
 
 // Define a place to save in character setup
 /datum/preferences
@@ -18,6 +14,7 @@
 	var/voice_freq = 42500	//CHOMPEdit - Why was the default 0
 	var/voice_sound = "goon speak 1"	//CHOMPEdit - Changed the default voice to one less jarring
 	var/custom_speech_bubble = "default"
+	var/custom_footstep = "Default"
 	var/species_sound = "Unset"		// CHOMPEdit: Use default species pain/scream sounds based off icon base if none set, override otherwise
 
 // Definition of the stuff for Sizing
@@ -25,30 +22,35 @@
 	name = "Size"
 	sort_order = 2
 
-/datum/category_item/player_setup_item/vore/size/load_character(var/savefile/S)
-	S["size_multiplier"]	>> pref.size_multiplier
-	S["weight_vr"]			>> pref.weight_vr
-	S["weight_gain"]		>> pref.weight_gain
-	S["weight_loss"]		>> pref.weight_loss
-	S["fuzzy"]				>> pref.fuzzy
-	S["offset_override"]	>> pref.offset_override
-	S["voice_freq"]			>> pref.voice_freq
-	S["voice_sound"]		>> pref.voice_sound
-	S["custom_speech_bubble"]		>> pref.custom_speech_bubble
-	S["species_sound"]		>> pref.species_sound  // CHOMPEdit
+/datum/category_item/player_setup_item/vore/size/load_character(list/save_data)
+	pref.size_multiplier	= save_data["size_multiplier"]
+	pref.weight_vr			= save_data["weight_vr"]
+	pref.weight_gain		= save_data["weight_gain"]
+	pref.weight_loss		= save_data["weight_loss"]
+	pref.fuzzy				= save_data["fuzzy"]
+	pref.offset_override	= save_data["offset_override"]
+	pref.voice_freq			= save_data["voice_freq"]
+	pref.voice_sound		= save_data["voice_sound"]
+	pref.custom_speech_bubble	= save_data["custom_speech_bubble"]
+	pref.custom_footstep	= save_data["custom_footstep"]
+	//CHOMPAdd Start
+	pref.species_sound		= save_data["species_sound"]
+	//CHOMPAdd End
 
-/datum/category_item/player_setup_item/vore/size/save_character(var/savefile/S)
-	S["size_multiplier"]	<< pref.size_multiplier
-	S["weight_vr"]			<< pref.weight_vr
-	S["weight_gain"]		<< pref.weight_gain
-	S["weight_loss"]		<< pref.weight_loss
-	S["fuzzy"]				<< pref.fuzzy
-	S["offset_override"]	<< pref.offset_override
-	S["voice_freq"]			<< pref.voice_freq
-	S["voice_sound"]		<< pref.voice_sound
-	S["custom_speech_bubble"]		<< pref.custom_speech_bubble
-	S["species_sound"]		<< pref.species_sound // CHOMPEdit
-
+/datum/category_item/player_setup_item/vore/size/save_character(list/save_data)
+	save_data["size_multiplier"]	= pref.size_multiplier
+	save_data["weight_vr"]			= pref.weight_vr
+	save_data["weight_gain"]		= pref.weight_gain
+	save_data["weight_loss"]		= pref.weight_loss
+	save_data["fuzzy"]				= pref.fuzzy
+	save_data["offset_override"]	= pref.offset_override
+	save_data["voice_freq"]			= pref.voice_freq
+	save_data["voice_sound"]		= pref.voice_sound
+	save_data["custom_speech_bubble"]		= pref.custom_speech_bubble
+	save_data["custom_footstep"]	= pref.custom_footstep
+	//CHOMPAdd Start
+	save_data["species_sound"]		= pref.species_sound
+	//CHOMPAdd End
 
 /datum/category_item/player_setup_item/vore/size/sanitize_character()
 	pref.weight_vr			= sanitize_integer(pref.weight_vr, WEIGHT_MIN, WEIGHT_MAX, initial(pref.weight_vr))
@@ -62,6 +64,8 @@
 		pref.size_multiplier = initial(pref.size_multiplier)
 	if(!(pref.custom_speech_bubble in selectable_speech_bubbles))
 		pref.custom_speech_bubble = "default"
+	if(!(pref.custom_footstep))
+		pref.custom_footstep = "Default"
 	// var/datum/species/selected_species = GLOB.all_species[pref.species] // CHOMPEdit
 	if(!(pref.species_sound)) // CHOMPEdit // && selected_species.selects_bodytype
 		pref.species_sound = "Unset" // CHOMPEdit - otherwise, we leave this as null or w/e the default is
@@ -80,76 +84,45 @@
 		character.voice_sounds_list = talk_sound
 	else
 		character.voice_sounds_list = get_talk_sound(pref.voice_sound)
-	/*if(!pref.voice_sound)
-		character.voice_sounds_list = talk_sound
-	else
-		switch(pref.voice_sound)
-			if("beep-boop")
-				character.voice_sounds_list = talk_sound
-			if("goon speak 1")
-				character.voice_sounds_list = goon_speak_one_sound
-			if("goon speak 2")
-				character.voice_sounds_list = goon_speak_two_sound
-			if("goon speak 3")
-				character.voice_sounds_list = goon_speak_three_sound
-			if("goon speak 4")
-				character.voice_sounds_list = goon_speak_four_sound
-			if("goon speak blub")
-				character.voice_sounds_list = goon_speak_blub_sound
-			if("goon speak bottalk")
-				character.voice_sounds_list = goon_speak_bottalk_sound
-			if("goon speak buwoo")
-				character.voice_sounds_list = goon_speak_buwoo_sound
-			if("goon speak cow")
-				character.voice_sounds_list = goon_speak_cow_sound
-			if("goon speak lizard")
-				character.voice_sounds_list = goon_speak_lizard_sound
-			if("goon speak pug")
-				character.voice_sounds_list = goon_speak_pug_sound
-			if("goon speak pugg")
-				character.voice_sounds_list = goon_speak_pugg_sound
-			if("goon speak roach")
-				character.voice_sounds_list = goon_speak_roach_sound
-			if("goon speak skelly")
-				character.voice_sounds_list = goon_speak_skelly_sound
-				*/ //CHOMPEDIT Global voice lookup
 	character.custom_speech_bubble = pref.custom_speech_bubble
+	character.custom_footstep = pref.custom_footstep
 
 /datum/category_item/player_setup_item/vore/size/content(var/mob/user)
 	. += "<br>"
-	. += "<b>Scale:</b> <a href='?src=\ref[src];size_multiplier=1'>[round(pref.size_multiplier*100)]%</a><br>"
-	. += "<b>Scaled Appearance:</b> <a [pref.fuzzy ? "" : ""] href='?src=\ref[src];toggle_fuzzy=1'><b>[pref.fuzzy ? "Fuzzy" : "Sharp"]</b></a><br>"
-	. += "<b>Scaling Center:</b> <a [pref.offset_override ? "" : ""] href='?src=\ref[src];toggle_offset_override=1'><b>[pref.offset_override ? "Odd" : "Even"]</b></a><br>"
+	. += span_bold("Scale:") + " <a href='byond://?src=\ref[src];size_multiplier=1'>[round(pref.size_multiplier*100)]%</a><br>"
+	. += span_bold("Scaled Appearance:") + " <a [pref.fuzzy ? "" : ""] href='byond://?src=\ref[src];toggle_fuzzy=1'><b>[pref.fuzzy ? "Fuzzy" : "Sharp"]</b></a><br>"
+	. += span_bold("Scaling Center:") + " <a [pref.offset_override ? "" : ""] href='byond://?src=\ref[src];toggle_offset_override=1'><b>[pref.offset_override ? "Odd" : "Even"]</b></a><br>"
 	. += "<br>" // CHOMPEdit: Fancy:tm:
-	. += "<b>Mob Speech/Noise Customization</b>" // CHOMPEdit: Fancy:tm:
+	. += span_bold("Mob Speech/Noise Customization") + "" // CHOMPEdit: Fancy:tm:
 	. += "<br>"  // CHOMPEdit
-	. += "<b>Voice Frequency:</b> <a href='?src=\ref[src];voice_freq=1'>[pref.voice_freq]</a><br>"
-	. += "<b>Voice Sounds:</b> <a href='?src=\ref[src];voice_sounds_list=1'>[pref.voice_sound]</a><br>"
-	. += "<a href='?src=\ref[src];voice_test=1'><b>Test Selected Voice</b></a><br>"
-	. += "<b>Custom Speech Bubble:</b> <a href='?src=\ref[src];customize_speech_bubble=1'>[pref.custom_speech_bubble]</a><br>"
+	. += span_bold("Voice Frequency:") + " <a href='byond://?src=\ref[src];voice_freq=1'>[pref.voice_freq]</a><br>"
+	. += span_bold("Voice Sounds:") + " <a href='byond://?src=\ref[src];voice_sounds_list=1'>[pref.voice_sound]</a><br>"
+	. += "<a href='byond://?src=\ref[src];voice_test=1'><b>Test Selected Voice</b></a><br>"
+	. += span_bold("Custom Speech Bubble:") + " <a href='byond://?src=\ref[src];customize_speech_bubble=1'>[pref.custom_speech_bubble]</a><br>"
+	. += span_bold("Custom Footstep Sounds:") + "<a href='byond://?src=\ref[src];customize_footsteps=1'>[pref.custom_footstep]</a><br>"
 	// CHOMPEdit Start: Pain/Scream/Death Custom Sounds
 	// var/datum/species/selected_species = GLOB.all_species[pref.species]
 	// if(selected_species.selects_bodytype)
 	. += "<br>"
-	. += "<b>Species Sounds:</b> <a href='?src=\ref[src];species_sound_options=1'>[pref.species_sound]</a><br>"
-	. += "<a href='?src=\ref[src];cough_test=1'><b>Test Cough Sounds</b></a><br>"
-	. += "<a href='?src=\ref[src];sneeze_test=1'><b>Test Sneeze Sounds</b></a><br>"
-	. += "<a href='?src=\ref[src];scream_test=1'><b>Test Scream Sounds</b></a><br>"
-	. += "<a href='?src=\ref[src];pain_test=1'><b>Test Pain Sounds</b></a><br>"
-	. += "<a href='?src=\ref[src];gasp_test=1'><b>Test Gasp Sounds</b></a><br>"
-	. += "<a href='?src=\ref[src];death_test=1'><b>Test Death Sounds</b></a><br>"
+	. += span_bold("Species Sounds:") + " <a href='byond://?src=\ref[src];species_sound_options=1'>[pref.species_sound]</a><br>"
+	. += "<a href='byond://?src=\ref[src];cough_test=1'><b>Test Cough Sounds</b></a><br>"
+	. += "<a href='byond://?src=\ref[src];sneeze_test=1'><b>Test Sneeze Sounds</b></a><br>"
+	. += "<a href='byond://?src=\ref[src];scream_test=1'><b>Test Scream Sounds</b></a><br>"
+	. += "<a href='byond://?src=\ref[src];pain_test=1'><b>Test Pain Sounds</b></a><br>"
+	. += "<a href='byond://?src=\ref[src];gasp_test=1'><b>Test Gasp Sounds</b></a><br>"
+	. += "<a href='byond://?src=\ref[src];death_test=1'><b>Test Death Sounds</b></a><br>"
 	// CHOMPEdit End: Pain/Scream/Death Custom Sounds
 	. += "<br>"
-	. += "<b>Relative Weight:</b>  <a href='?src=\ref[src];weight=1'>[pref.weight_vr]</a><br>"
-	. += "<b>Weight Gain Rate:</b> <a href='?src=\ref[src];weight_gain=1'>[pref.weight_gain]</a><br>"
-	. += "<b>Weight Loss Rate:</b> <a href='?src=\ref[src];weight_loss=1'>[pref.weight_loss]</a><br>"
+	. += span_bold("Relative Weight:") + " <a href='byond://?src=\ref[src];weight=1'>[pref.weight_vr]</a><br>"
+	. += span_bold("Weight Gain Rate:") + " <a href='byond://?src=\ref[src];weight_gain=1'>[pref.weight_gain]</a><br>"
+	. += span_bold("Weight Loss Rate:") + " <a href='byond://?src=\ref[src];weight_loss=1'>[pref.weight_loss]</a><br>"
 
 /datum/category_item/player_setup_item/vore/size/OnTopic(var/href, var/list/href_list, var/mob/user)
 	if(href_list["size_multiplier"])
 		var/new_size = tgui_input_number(user, "Choose your character's size, ranging from 25% to 200%", "Set Size", null, 200, 25)
 		if (!ISINRANGE(new_size,25,200))
 			pref.size_multiplier = 1
-			to_chat(user, "<span class='notice'>Invalid size.</span>")
+			to_chat(user, span_notice("Invalid size."))
 			return TOPIC_REFRESH_UPDATE_PREVIEW
 		else if(new_size)
 			pref.size_multiplier = (new_size/100)
@@ -171,6 +144,8 @@
 			([WEIGHT_MIN]-[WEIGHT_MAX])", "Character Preference", null, WEIGHT_MAX, WEIGHT_MIN, round_value=FALSE)
 		if(new_weight)
 			var/unit_of_measurement = tgui_alert(user, "Is that number in pounds (lb) or kilograms (kg)?", "Confirmation", list("Pounds", "Kilograms"))
+			if(!unit_of_measurement)
+				return TOPIC_NOACTION
 			if(unit_of_measurement == "Pounds")
 				new_weight = round(text2num(new_weight),4)
 			if(unit_of_measurement == "Kilograms")
@@ -198,7 +173,7 @@
 
 	else if(href_list["voice_freq"])
 		var/list/preset_voice_freqs = list("high" = MAX_VOICE_FREQ, "middle-high" = 56250, "middle" = 42500, "middle-low"= 28750, "low" = MIN_VOICE_FREQ, "custom" = 1, "random" = 0)
-		var/choice = tgui_input_list(user, "What would you like to set your voice frequency to? ([MIN_VOICE_FREQ] - [MAX_VOICE_FREQ])", "Voice Frequency", preset_voice_freqs) //ChompEDIT - usr removal
+		var/choice = tgui_input_list(user, "What would you like to set your voice frequency to? ([MIN_VOICE_FREQ] - [MAX_VOICE_FREQ])", "Voice Frequency", preset_voice_freqs)
 		if(!choice)
 			return
 		choice = preset_voice_freqs[choice]
@@ -246,6 +221,13 @@
 		else
 			pref.custom_speech_bubble = choice
 		return TOPIC_REFRESH
+
+	else if(href_list["customize_footsteps"])
+		var/list/footstep_choice = selectable_footstep
+		var/choice = tgui_input_list(user, "What footstep sounds would your character make?", "Custom Foostep Sounds", footstep_choice)
+		if(choice)
+			pref.custom_footstep = footstep_choice[choice]
+			return TOPIC_REFRESH
 
 	else if(href_list["voice_test"])
 		var/sound/S
@@ -304,7 +286,7 @@
 			oursound = get_species_sound(select_default_species_sound(pref))["cough"]
 			S = sound(pick(oursound))
 		if(pref.species_sound == "None" || oursound == null)
-			to_chat(user, "<span class='warning'>This set does not have cough sounds!</span>")
+			to_chat(user, span_warning("This set does not have cough sounds!"))
 			return TOPIC_REFRESH
 		S.frequency = pick(pref.voice_freq)
 		S.volume = 20
@@ -319,7 +301,7 @@
 			oursound = get_species_sound(select_default_species_sound(pref))["sneeze"]
 			S = sound(pick(oursound))
 		if(pref.species_sound == "None" || oursound == null)
-			to_chat(user, "<span class='warning'>This set does not have sneeze sounds!</span>")
+			to_chat(user, span_warning("This set does not have sneeze sounds!"))
 			return TOPIC_REFRESH
 		S.frequency = pick(pref.voice_freq)
 		S.volume = 20
@@ -334,7 +316,7 @@
 			oursound = get_species_sound(select_default_species_sound(pref))["scream"]
 			S = sound(pick(oursound))
 		if(pref.species_sound == "None" || oursound == null)
-			to_chat(user, "<span class='warning'>This set does not have scream sounds!</span>")
+			to_chat(user, span_warning("This set does not have scream sounds!"))
 			return TOPIC_REFRESH
 		S.frequency = pick(pref.voice_freq)
 		S.volume = 20
@@ -349,7 +331,7 @@
 			oursound = get_species_sound(select_default_species_sound(pref))["pain"]
 			S = sound(pick(oursound))
 		if(pref.species_sound == "None" || oursound == null)
-			to_chat(user, "<span class='warning'>This set does not have pain sounds!</span>")
+			to_chat(user, span_warning("This set does not have pain sounds!"))
 			return TOPIC_REFRESH
 		S.frequency = pick(pref.voice_freq)
 		S.volume = 20
@@ -364,7 +346,7 @@
 			oursound = get_species_sound(select_default_species_sound(pref))["gasp"]
 			S = sound(pick(oursound))
 		if(pref.species_sound == "None" || oursound == null)
-			to_chat(user, "<span class='warning'>This set does not have gasp sounds!</span>")
+			to_chat(user, span_warning("This set does not have gasp sounds!"))
 			return TOPIC_REFRESH
 		S.frequency = pick(pref.voice_freq)
 		S.volume = 20
@@ -379,7 +361,7 @@
 			oursound = get_species_sound(select_default_species_sound(pref))["death"]
 			S = sound(pick(oursound))
 		if(pref.species_sound == "None" || oursound == null)
-			to_chat(user, "<span class='warning'>This set does not have death sounds!</span>")
+			to_chat(user, span_warning("This set does not have death sounds!"))
 			return TOPIC_REFRESH
 		S.frequency = pick(pref.voice_freq)
 		S.volume = 20
@@ -387,3 +369,6 @@
 		return TOPIC_REFRESH
 	// CHOMPEdit End
 	return ..();
+
+#undef WEIGHT_CHANGE_MIN
+#undef WEIGHT_CHANGE_MAX

@@ -1,4 +1,4 @@
-/obj/item/weapon/book/codex/chef_recipes
+/obj/item/book/codex/chef_recipes
 	name = "Chef Recipes Ultramatus Edition"
 	color = "#585a5e"
 	icon = 'icons/obj/library_ch.dmi'

@@ -1,4 +1,5 @@
 #define FIRE_PRIORITY_REFLECTOR 20
+
 SUBSYSTEM_DEF(reflector)
 	name = "Reflectors"
 	priority = FIRE_PRIORITY_REFLECTOR
@@ -44,3 +45,5 @@ SUBSYSTEM_DEF(reflector)
 			return
 
 	current_thing = null
+
+#undef FIRE_PRIORITY_REFLECTOR

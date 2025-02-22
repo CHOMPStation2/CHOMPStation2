@@ -6,8 +6,8 @@
 	name = "Pacman II"
 	desc = "P.A.C.M.A.N. type II portable generator. Uses liquid phoron as a fuel source."
 	power_gen = 4500
-	circuit = /obj/item/weapon/circuitboard/pacman2
-	var/obj/item/weapon/tank/phoron/P = null
+	circuit = /obj/item/circuitboard/pacman2
+	var/obj/item/tank/phoron/P = null
 	var/emagged = 0
 	var/heat = 0
 /*
@@ -36,16 +36,16 @@
 
 	RefreshParts()
 		var/temp_rating = 0
-		for(var/obj/item/weapon/stock_parts/SP in component_parts)
-			if(istype(SP, /obj/item/weapon/stock_parts/matter_bin))
+		for(var/obj/item/stock_parts/SP in component_parts)
+			if(istype(SP, /obj/item/stock_parts/matter_bin))
 				//max_coins = SP.rating * SP.rating * 1000
-			else if(istype(SP, /obj/item/weapon/stock_parts/micro_laser) || istype(SP, /obj/item/weapon/stock_parts/capacitor))
+			else if(istype(SP, /obj/item/stock_parts/micro_laser) || istype(SP, /obj/item/stock_parts/capacitor))
 				temp_rating += SP.rating
 		power_gen = round(initial(power_gen) * (max(2, temp_rating) / 2))
 
 	examine(mob/user)
 		. = ..()
-		. += "<span class='notice'>The generator has [P.air_contents.phoron] units of fuel left, producing [power_gen] per cycle.</span>"
+		. += span_notice("The generator has [P.air_contents.phoron] units of fuel left, producing [power_gen] per cycle.")
 
 	handleInactive()
 		heat -= 2
@@ -54,14 +54,14 @@
 		else
 			for(var/mob/M in viewers(1, src))
 				if (M.client && M.machine == src)
-					src.updateUsrDialog()
+					src.updateUsrDialog(M)
 
 	proc
 		overheat()
 			explosion(get_turf(src), 2, 5, 2, -1)
 
 	attackby(var/obj/item/O as obj, var/mob/user as mob)
-		if(istype(O, /obj/item/weapon/tank/phoron))
+		if(istype(O, /obj/item/tank/phoron))
 			if(P)
 				to_chat(user, span_red("The generator already has a phoron tank loaded!"))
 				return
@@ -110,26 +110,26 @@
 	proc
 		interact(mob/user)
 			if (get_dist(src, user) > 1 )
-				if (!istype(user, /mob/living/silicon/ai))
+				if (!isAI(user))
 					user.machine = null
 					user << browse(null, "window=port_gen")
 					return
 
 			user.machine = src
 
-			var/dat = text("<b>[name]</b><br>")
+			var/dat = text(span_bold("[name]") + "<br>")
 			if (active)
-				dat += text("Generator: <A href='?src=\ref[src];action=disable'>On</A><br>")
+				dat += text("Generator: <A href='byond://?src=\ref[src];action=disable'>On</A><br>")
 			else
-				dat += text("Generator: <A href='?src=\ref[src];action=enable'>Off</A><br>")
+				dat += text("Generator: <A href='byond://?src=\ref[src];action=enable'>Off</A><br>")
 			if(P)
 				dat += text("Currently loaded phoron tank: [P.air_contents.phoron]<br>")
 			else
 				dat += text("No phoron tank currently loaded.<br>")
-			dat += text("Power output: <A href='?src=\ref[src];action=lower_power'>-</A> [power_gen * power_output] <A href='?src=\ref[src];action=higher_power'>+</A><br>")
+			dat += text("Power output: <A href='byond://?src=\ref[src];action=lower_power'>-</A> [power_gen * power_output] <A href='byond://?src=\ref[src];action=higher_power'>+</A><br>")
 			dat += text("Heat: [heat]<br>")
-			dat += "<br><A href='?src=\ref[src];action=close'>Close</A>"
-			user << browse("[dat]", "window=port_gen")
+			dat += "<br><A href='byond://?src=\ref[src];action=close'>Close</A>"
+			user << browse("<html>[dat]</html>", "window=port_gen")
 
 	Topic(href, href_list)
 		if(..())
@@ -141,20 +141,20 @@
 				if(!active && HasFuel())
 					active = 1
 					icon_state = "portgen1"
-					src.updateUsrDialog()
+					src.updateUsrDialog(usr)
 			if(href_list["action"] == "disable")
 				if (active)
 					active = 0
 					icon_state = "portgen0"
-					src.updateUsrDialog()
+					src.updateUsrDialog(usr)
 			if(href_list["action"] == "lower_power")
 				if (power_output > 1)
 					power_output--
-					src.updateUsrDialog()
+					src.updateUsrDialog(usr)
 			if (href_list["action"] == "higher_power")
 				if (power_output < 4 || emagged)
 					power_output++
-					src.updateUsrDialog()
+					src.updateUsrDialog(usr)
 			if (href_list["action"] == "close")
 				usr << browse(null, "window=port_gen")
 				usr.machine = null

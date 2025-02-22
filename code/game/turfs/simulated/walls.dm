@@ -80,7 +80,7 @@
 			damage = new_damage
 			Proj.damage = outgoing_damage
 
-			visible_message("<span class='danger'>\The [src] reflects \the [Proj]!</span>")
+			visible_message(span_danger("\The [src] reflects \the [Proj]!"))
 
 			// Find a turf near or on the original location to bounce to
 			var/new_x = Proj.starting.x + pick(0, 0, 0, -1, 1, -2, 2)
@@ -120,25 +120,25 @@
 
 /turf/simulated/wall/ChangeTurf(var/turf/N, var/tell_universe, var/force_lighting_update, var/preserve_outdoors)
 	clear_plants()
-	..(N, tell_universe, force_lighting_update, preserve_outdoors)
+	. = ..(N, tell_universe, force_lighting_update, preserve_outdoors)
 
 //Appearance
 /turf/simulated/wall/examine(mob/user)
 	. = ..()
 
 	if(!damage)
-		. += "<span class='notice'>It looks fully intact.</span>"
+		. += span_notice("It looks fully intact.")
 	else
 		var/dam = damage / material.integrity
 		if(dam <= 0.3)
-			. += "<span class='warning'>It looks slightly damaged.</span>"
+			. += span_warning("It looks slightly damaged.")
 		else if(dam <= 0.6)
-			. += "<span class='warning'>It looks moderately damaged.</span>"
+			. += span_warning("It looks moderately damaged.")
 		else
-			. += "<span class='danger'>It looks heavily damaged.</span>"
+			. += span_danger("It looks heavily damaged.")
 
 	if(locate(/obj/effect/overlay/wallrot) in src)
-		. += "<span class='warning'>There is fungus growing on [src].</span>"
+		. += span_warning("There is fungus growing on [src].")
 
 //Damage
 
@@ -154,7 +154,7 @@
 		return
 	F.burn_tile()
 	F.icon_state = "wall_thermite"
-	visible_message("<span class='danger'>\The [src] spontaneously combusts!.</span>") //!!OH SHIT!!
+	visible_message(span_danger("\The [src] spontaneously combusts!.")) //!!OH SHIT!!
 	return
 
 /turf/simulated/wall/take_damage(dam)
@@ -281,7 +281,7 @@
 	var/turf/simulated/floor/F = src
 	F.burn_tile()
 	F.icon_state = "dmg[rand(1,4)]"
-	to_chat(user, "<span class='warning'>The thermite starts melting through the wall.</span>")
+	to_chat(user, span_warning("The thermite starts melting through the wall."))
 
 	spawn(100)
 		if(O)
@@ -311,7 +311,7 @@
 	return (material && material.hardness >= 10 && material.hardness <= 100)
 
 /* CHOMPEdit - moved this block to modular_chomp\code\game\objects\items\weapons\rcd.dm
-/turf/simulated/wall/rcd_values(mob/living/user, obj/item/weapon/rcd/the_rcd, passed_mode)
+/turf/simulated/wall/rcd_values(mob/living/user, obj/item/rcd/the_rcd, passed_mode)
 	if(material.integrity > 1000) // Don't decon things like elevatorium.
 		return FALSE
 	if(reinf_material && !the_rcd.can_remove_rwalls) // Gotta do it the old fashioned way if your RCD can't.
@@ -328,13 +328,18 @@
 			)
 	return FALSE
 
-/turf/simulated/wall/rcd_act(mob/living/user, obj/item/weapon/rcd/the_rcd, passed_mode)
+/turf/simulated/wall/rcd_act(mob/living/user, obj/item/rcd/the_rcd, passed_mode)
 	if(passed_mode == RCD_DECONSTRUCT)
-		to_chat(user, span("notice", "You deconstruct \the [src]."))
+		to_chat(user, span_notice("You deconstruct \the [src]."))
 		ChangeTurf(/turf/simulated/floor/airless, preserve_outdoors = TRUE)
 		return TRUE
 	return FALSE
 */
+
+/turf/simulated/wall/occult_act(mob/living/user)
+	to_chat(user, span_cult("You consecrate the wall."))
+	ChangeTurf(/turf/simulated/wall/cult, preserve_outdoors = TRUE)
+	return TRUE
 
 /turf/simulated/wall/AltClick(mob/user)
 	if(isliving(user))

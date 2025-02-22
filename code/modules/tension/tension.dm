@@ -180,9 +180,9 @@
 			if(!isnull(M.outgoing_melee_damage_percent))
 				weapon_damage *= M.outgoing_melee_damage_percent
 
-		if(istype(I, /obj/item/weapon/gun))
+		if(istype(I, /obj/item/gun))
 			will_point_blank = TRUE
-			var/obj/item/weapon/gun/G = I
+			var/obj/item/gun/G = I
 			var/obj/item/projectile/P
 
 			P = new G.projectile_type()
@@ -193,7 +193,8 @@
 					weapon_damage *= 1.5
 				weapon_attack_speed = G.fire_delay / (1 SECOND)
 				qdel(P)
-
+			if(weapon_attack_speed == 0)
+				CRASH("[G.type], using [G.projectile_type] has a 0 fire delay!")
 		var/average_damage = weapon_damage / weapon_attack_speed
 
 		threat_guess += average_damage

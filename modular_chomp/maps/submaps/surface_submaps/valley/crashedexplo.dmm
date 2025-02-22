@@ -13,11 +13,9 @@
 /area/submap/crashedexplo)
 "am" = (
 /obj/structure/table/glass,
-/obj/item/device/defib_kit/loaded,
+/obj/item/defib_kit/loaded,
 /obj/structure/closet/walllocker_double/medical/south,
-/obj/item/weapon/storage/firstaid/regular,
-/obj/item/weapon/storage/firstaid/surgery,
-/obj/item/weapon/storage/firstaid/adv,
+/obj/item/storage/firstaid/regular,
 /obj/item/selectable_item/chemistrykit/gender,
 /obj/item/selectable_item/chemistrykit/size,
 /turf/simulated/shuttle/floor/white,
@@ -47,8 +45,6 @@
 /area/submap/crashedexplo)
 "bG" = (
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
@@ -56,24 +52,20 @@
 	},
 /obj/effect/floor_decal/industrial/warning,
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
-/obj/item/weapon/stock_parts/manipulator/omni,
+/obj/item/stock_parts/manipulator/omni,
 /turf/simulated/shuttle/floor/black,
 /area/submap/crashedexplo)
 "cI" = (
 /obj/structure/window/reinforced/survival_pod,
 /obj/structure/grille/broken,
-/obj/item/weapon/material/shard/titaniumglass,
-/obj/item/weapon/material/shard/titaniumglass,
+/obj/item/material/shard/titaniumglass,
+/obj/item/material/shard/titaniumglass,
 /turf/simulated/shuttle/plating,
 /area/submap/crashedexplo)
 "dv" = (
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/shuttle/floor/black,
@@ -82,7 +74,9 @@
 /obj/structure/bed/chair/bay/comfy/blue{
 	dir = 1
 	},
-/mob/living/simple_mob/animal/giant_spider/phorogenic,
+/mob/living/simple_mob/animal/giant_spider/phorogenic{
+	loot_list = list(/obj/item/stock_parts/scanning_module/omni = 50)
+	},
 /turf/simulated/shuttle/floor/black,
 /area/submap/crashedexplo)
 "ey" = (
@@ -90,23 +84,19 @@
 	dir = 1
 	},
 /obj/structure/bed/chair/bay/shuttle,
-/obj/random/rigsuit/chancetofail,
 /turf/simulated/shuttle/floor/black,
 /area/submap/crashedexplo)
 "eQ" = (
 /turf/simulated/shuttle/wall/voidcraft/lightblue,
 /area/submap/crashedexplo)
 "fv" = (
-/obj/random/energy/highend,
 /turf/simulated/shuttle/floor/black,
 /area/submap/crashedexplo)
 "go" = (
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/item/weapon/circuitboard/pacman/mrs,
+/obj/item/circuitboard/pacman/mrs,
 /turf/simulated/shuttle/floor/black,
 /area/submap/crashedexplo)
 "hi" = (
@@ -140,8 +130,6 @@
 /area/submap/crashedexplo)
 "iG" = (
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/binary/pump{
@@ -151,13 +139,14 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
 	},
-/obj/item/weapon/stock_parts/micro_laser/omni,
 /turf/simulated/shuttle/floor/black,
 /area/submap/crashedexplo)
 "jc" = (
 /obj/structure/bed/chair/bay/shuttle,
 /obj/effect/decal/cleanable/blood,
-/mob/living/simple_mob/animal/giant_spider/lurker,
+/mob/living/simple_mob/animal/giant_spider/lurker{
+	loot_list = list(/obj/item/stock_parts/capacitor/omni = 50)
+	},
 /turf/simulated/shuttle/floor/black,
 /area/submap/crashedexplo)
 "ke" = (
@@ -181,16 +170,16 @@
 /obj/structure/closet/crate/engineering,
 /obj/fiftyspawner/steel,
 /obj/fiftyspawner/glass,
-/obj/item/weapon/tank/phoron,
-/obj/item/weapon/tank/phoron,
-/obj/item/weapon/storage/toolbox/mechanical,
-/obj/item/weapon/storage/toolbox/electrical,
-/obj/item/device/multitool,
-/obj/item/weapon/storage/briefcase/inflatable,
-/obj/item/device/geiger,
+/obj/item/tank/phoron,
+/obj/item/tank/phoron,
+/obj/item/storage/toolbox/mechanical,
+/obj/item/storage/toolbox/electrical,
+/obj/item/multitool,
+/obj/item/storage/briefcase/inflatable,
+/obj/item/geiger,
 /obj/item/clothing/glasses/goggles,
 /obj/item/clothing/glasses/goggles,
-/obj/item/device/t_scanner,
+/obj/item/t_scanner,
 /obj/item/clothing/glasses/welding,
 /obj/item/clothing/gloves/yellow,
 /obj/item/stack/material/tritium{
@@ -216,15 +205,19 @@
 /obj/machinery/light{
 	dir = 8
 	},
-/mob/living/simple_mob/animal/giant_spider/phorogenic,
-/obj/item/weapon/circuitboard/sleeper,
+/mob/living/simple_mob/animal/giant_spider/phorogenic{
+	loot_list = list(/obj/item/stock_parts/manipulator/omni = 50)
+	},
+/obj/item/circuitboard/sleeper,
 /turf/simulated/shuttle/floor/white,
 /area/submap/crashedexplo)
 "nS" = (
 /turf/simulated/shuttle/wall/voidcraft/hard_corner,
 /area/submap/crashedexplo)
 "nV" = (
-/mob/living/simple_mob/animal/giant_spider/phorogenic,
+/mob/living/simple_mob/animal/giant_spider/phorogenic{
+	loot_list = list(/obj/item/stock_parts/capacitor/omni = 50)
+	},
 /turf/simulated/shuttle/floor/black,
 /area/submap/crashedexplo)
 "pd" = (
@@ -273,7 +266,9 @@
 	dir = 1;
 	pixel_y = -32
 	},
-/mob/living/simple_mob/animal/giant_spider/carrier,
+/mob/living/simple_mob/animal/giant_spider/carrier{
+	loot_list = list(/obj/item/stock_parts/matter_bin/omni = 50)
+	},
 /turf/simulated/shuttle/floor/black,
 /area/submap/crashedexplo)
 "sR" = (
@@ -297,16 +292,13 @@
 /area/submap/crashedexplo)
 "tP" = (
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/item/weapon/circuitboard/recharge_station,
+/obj/item/circuitboard/recharge_station,
 /turf/simulated/shuttle/floor/black,
 /area/submap/crashedexplo)
 "up" = (
 /obj/structure/cable/green{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/structure/railing{
@@ -323,19 +315,19 @@
 	dir = 4
 	},
 /obj/machinery/space_heater,
-/obj/item/device/radio{
+/obj/item/radio{
 	pixel_x = 5;
 	pixel_y = 5
 	},
-/obj/item/device/radio{
+/obj/item/radio{
 	pixel_x = 5;
 	pixel_y = 5
 	},
-/obj/item/device/radio{
+/obj/item/radio{
 	pixel_x = -5;
 	pixel_y = 5
 	},
-/obj/item/device/radio{
+/obj/item/radio{
 	pixel_x = -5;
 	pixel_y = 5
 	},
@@ -350,8 +342,10 @@
 /turf/simulated/shuttle/wall/voidcraft/lightblue,
 /area/submap/crashedexplo)
 "vH" = (
-/obj/item/weapon/stock_parts/capacitor/omni,
-/mob/living/simple_mob/animal/giant_spider/lurker,
+/obj/item/stock_parts/capacitor/omni,
+/mob/living/simple_mob/animal/giant_spider/lurker{
+	loot_list = list(/obj/item/stock_parts/manipulator/omni = 50)
+	},
 /turf/simulated/shuttle/floor/white,
 /area/submap/crashedexplo)
 "wv" = (
@@ -372,8 +366,6 @@
 	name = "Internal Access"
 	},
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/door/blast/regular,
@@ -381,7 +373,6 @@
 /area/submap/crashedexplo)
 "wU" = (
 /obj/structure/cable/green{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/structure/frame,
@@ -399,7 +390,6 @@
 	pixel_y = -24
 	},
 /obj/structure/cable/green{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/effect/decal/cleanable/blood,
@@ -413,8 +403,6 @@
 	dir = 4
 	},
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/shuttle/plating,
@@ -460,8 +448,6 @@
 	name = "window blast shield"
 	},
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/door/blast/regular,
@@ -475,8 +461,6 @@
 	name = "shuttle side hatch"
 	},
 /obj/structure/cable/blue{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/button/remote/airlock{
@@ -518,7 +502,9 @@
 /turf/simulated/shuttle/plating,
 /area/submap/crashedexplo)
 "Cc" = (
-/mob/living/simple_mob/animal/giant_spider/carrier,
+/mob/living/simple_mob/animal/giant_spider/carrier{
+	loot_list = list(/obj/item/stock_parts/matter_bin/omni = 50)
+	},
 /turf/simulated/shuttle/floor/black,
 /area/submap/crashedexplo)
 "CY" = (
@@ -526,29 +512,19 @@
 /obj/effect/catwalk_plated/dark,
 /turf/simulated/shuttle/plating,
 /area/submap/crashedexplo)
-"DH" = (
-/obj/item/weapon/stock_parts/matter_bin/omni,
-/turf/simulated/shuttle/floor/black,
-/area/submap/crashedexplo)
 "DJ" = (
 /obj/structure/salvageable/console_broken_os,
 /turf/simulated/shuttle/floor/black,
 /area/submap/crashedexplo)
 "DQ" = (
 /obj/structure/table/reinforced,
-/obj/item/device/gps{
+/obj/item/gps{
 	pixel_x = 3;
 	pixel_y = 3
 	},
-/obj/item/device/gps,
+/obj/item/gps,
 /obj/structure/closet/walllocker_double/kitchen/east,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
+/obj/item/storage/mre/random,
 /turf/simulated/shuttle/floor/black,
 /area/submap/crashedexplo)
 "Ft" = (
@@ -578,8 +554,6 @@
 	dir = 8
 	},
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/shuttle/plating,
@@ -598,7 +572,6 @@
 /area/submap/crashedexplo)
 "KT" = (
 /obj/structure/table/glass,
-/obj/machinery/chemical_dispenser/full,
 /turf/simulated/shuttle/floor/white,
 /area/submap/crashedexplo)
 "KV" = (
@@ -624,16 +597,12 @@
 /obj/structure/bed/chair/bay/shuttle{
 	dir = 1
 	},
-/obj/item/weapon/stock_parts/capacitor/omni,
 /turf/simulated/shuttle/floor/black,
 /area/submap/crashedexplo)
 "LY" = (
 /obj/structure/cable/green{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
-/obj/item/weapon/stock_parts/scanning_module/omni,
 /turf/simulated/shuttle/floor/black,
 /area/submap/crashedexplo)
 "MU" = (
@@ -725,8 +694,8 @@
 /area/submap/crashedexplo)
 "RE" = (
 /obj/structure/grille/broken,
-/obj/item/weapon/material/shard/titaniumglass,
-/obj/item/weapon/material/shard/titaniumglass,
+/obj/item/material/shard/titaniumglass,
+/obj/item/material/shard/titaniumglass,
 /obj/structure/window/reinforced/survival_pod{
 	dir = 1
 	},
@@ -738,12 +707,9 @@
 	dir = 1
 	},
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /turf/simulated/shuttle/plating,
@@ -758,24 +724,25 @@
 	},
 /obj/machinery/power/terminal,
 /obj/structure/cable/blue{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/structure/closet/walllocker/emerglocker{
 	pixel_x = -25;
 	pixel_y = 32
 	},
-/mob/living/simple_mob/animal/giant_spider/phorogenic,
+/mob/living/simple_mob/animal/giant_spider/phorogenic{
+	loot_list = list(/obj/item/stock_parts/scanning_module/omni = 50)
+	},
 /turf/simulated/shuttle/floor/yellow,
 /area/submap/crashedexplo)
 "SV" = (
 /obj/effect/floor_decal/industrial/warning,
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
-/mob/living/simple_mob/animal/giant_spider/carrier,
+/mob/living/simple_mob/animal/giant_spider/carrier{
+	loot_list = list(/obj/item/stock_parts/micro_laser/omni = 50)
+	},
 /turf/simulated/shuttle/floor/black,
 /area/submap/crashedexplo)
 "Tb" = (
@@ -846,16 +813,12 @@
 	pixel_y = -28
 	},
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
 	dir = 8
 	},
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/random/energy/highend,
@@ -864,12 +827,9 @@
 "UY" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/yellow,
 /obj/structure/cable/green{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/effect/decal/cleanable/blood,
-/obj/item/weapon/stock_parts/scanning_module/omni,
 /turf/simulated/shuttle/floor/yellow,
 /area/submap/crashedexplo)
 "VE" = (
@@ -880,8 +840,6 @@
 /area/submap/crashedexplo)
 "Wn" = (
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/effect/decal/cleanable/blood,
@@ -911,7 +869,6 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
 	},
-/obj/item/weapon/stock_parts/manipulator/omni,
 /turf/simulated/shuttle/floor/black,
 /area/submap/crashedexplo)
 "Yq" = (
@@ -920,10 +877,6 @@
 	id_tag = "shuttle4sens_exp"
 	},
 /turf/simulated/shuttle/wall/voidcraft/lightblue,
-/area/submap/crashedexplo)
-"Yr" = (
-/obj/item/weapon/stock_parts/capacitor/omni,
-/turf/simulated/shuttle/floor/black,
 /area/submap/crashedexplo)
 "YK" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/yellow{
@@ -1060,7 +1013,7 @@ UG
 UG
 bF
 DJ
-DH
+fv
 LY
 go
 dv
@@ -1082,7 +1035,7 @@ hn
 Cc
 RE
 jc
-Yr
+fv
 Ft
 cI
 lL

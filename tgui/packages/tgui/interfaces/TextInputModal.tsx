@@ -1,9 +1,9 @@
-import { KEY } from 'common/keys';
 import { KeyboardEvent, useState } from 'react';
+import { useBackend } from 'tgui/backend';
+import { Window } from 'tgui/layouts';
+import { Box, Section, Stack, TextArea } from 'tgui-core/components';
+import { isEscape, KEY } from 'tgui-core/keys';
 
-import { useBackend } from '../backend';
-import { Box, Section, Stack, TextArea } from '../components';
-import { Window } from '../layouts';
 import { InputButtons } from './common/InputButtons';
 import { Loader } from './common/Loader';
 
@@ -22,7 +22,7 @@ export const sanitizeMultiline = (toSanitize: string) => {
 };
 
 export const removeAllSkiplines = (toSanitize: string) => {
-  return toSanitize.replace(/[\r\n]+/, '');
+  return toSanitize.replace(/[\r\n]+/, ' ');
 };
 
 export const TextInputModal = (props) => {
@@ -67,7 +67,7 @@ export const TextInputModal = (props) => {
           ) {
             act('submit', { entry: input });
           }
-          if (event.key === KEY.Escape) {
+          if (isEscape(event.key)) {
             act('cancel');
           }
         }}
@@ -107,6 +107,7 @@ const InputArea = (props: {
   return (
     <TextArea
       autoFocus
+      // userMarkup={{ u: '_', i: '|', b: '+' }}   needs tgui core 1.8.x
       autoSelect
       height={multiline || input.length >= 30 ? '100%' : '1.8rem'}
       maxLength={max_length}

@@ -13,8 +13,8 @@
 	var/min_mob_buckle_size = MOB_SMALL
 	var/max_mob_buckle_size = MOB_LARGE
 
-/obj/structure/bed/chair/wheelchair/New(var/newloc, var/new_material, var/new_padding_material)
-	..()
+/obj/structure/bed/chair/wheelchair/Initialize(mapload, var/new_material, var/new_padding_material)
+	. = ..()
 	update_icon()
 
 /obj/structure/bed/chair/wheelchair/motor
@@ -35,10 +35,10 @@
 	. = ..()
 	if(.)
 		if(M.mob_size < min_mob_buckle_size)
-			to_chat(M, SPAN_WARNING("You are too small to use \the [src]."))
+			to_chat(M, span_warning("You are too small to use \the [src]."))
 			. = FALSE
 		else if(M.mob_size >= max_mob_buckle_size)
-			to_chat(M, SPAN_WARNING("You are too large to use \the [src]."))
+			to_chat(M, span_warning("You are too large to use \the [src]."))
 			. = FALSE
 
 /obj/structure/bed/chair/wheelchair/update_icon()
@@ -54,7 +54,7 @@
 			for(var/mob/living/L as anything in buckled_mobs)
 				L.set_dir(dir)
 
-/obj/structure/bed/chair/wheelchair/attackby(obj/item/weapon/W as obj, mob/user as mob)
+/obj/structure/bed/chair/wheelchair/attackby(obj/item/W as obj, mob/user as mob)
 	if(W.has_tool_quality(TOOL_WRENCH) || W.has_tool_quality(TOOL_WIRECUTTER) || istype(W,/obj/item/stack))
 		return
 	..()
@@ -65,7 +65,7 @@
 		if(user==pulling)
 			pulling = null
 			user.pulledby = null
-			to_chat(user, "<span class='warning'>You lost your grip!</span>")
+			to_chat(user, span_warning("You lost your grip!"))
 		return
 	if(has_buckled_mobs() && pulling && (user in buckled_mobs))
 		if(pulling.stat || pulling.stunned || pulling.weakened || pulling.paralysis || pulling.lying || pulling.restrained())
@@ -83,10 +83,10 @@
 		if(user==pulling)
 			return
 	if(pulling && (get_dir(src.loc, pulling.loc) == direction))
-		to_chat(user, "<span class='warning'>You cannot go there.</span>")
+		to_chat(user, span_warning("You cannot go there."))
 		return
 	if(pulling && has_buckled_mobs() && (user in buckled_mobs))
-		to_chat(user, "<span class='warning'>You cannot drive while being pushed.</span>")
+		to_chat(user, span_warning("You cannot drive while being pushed."))
 		return
 
 	// Let's roll
@@ -140,7 +140,7 @@
 						unbuckle_mob()
 				if (pulling && (get_dist(src, pulling) > 1))
 					pulling.pulledby = null
-					to_chat(pulling, "<span class='warning'>You lost your grip!</span>")
+					to_chat(pulling, span_warning("You lost your grip!"))
 					pulling = null
 			else
 				if (occupant && (src.loc != occupant.loc))
@@ -148,7 +148,7 @@
 
 /obj/structure/bed/chair/wheelchair/attack_hand(mob/living/user as mob)
 	if (pulling)
-		MouseDrop(usr)
+		MouseDrop(user)
 	else
 		if(has_buckled_mobs())
 			for(var/A in buckled_mobs)
@@ -159,7 +159,7 @@
 	if(in_range(src, user))
 		if(!ishuman(user))	return
 		if(has_buckled_mobs() && (user in buckled_mobs))
-			to_chat(user, "<span class='warning'>You realize you are unable to push the wheelchair you sit in.</span>")
+			to_chat(user, span_warning("You realize you are unable to push the wheelchair you sit in."))
 			return
 		if(!pulling)
 			pulling = user
@@ -169,7 +169,7 @@
 			user.set_dir(get_dir(user, src))
 			to_chat(user, "You grip \the [name]'s handles.")
 		else
-			to_chat(usr, "You let go of \the [name]'s handles.")
+			to_chat(user, "You let go of \the [name]'s handles.")
 			pulling.pulledby = null
 			pulling = null
 		return
@@ -195,7 +195,7 @@
 		occupant.apply_effect(6, STUTTER, blocked)
 		occupant.apply_damage(10, BRUTE, def_zone, soaked)
 		playsound(src, 'sound/weapons/punch1.ogg', 50, 1, -1)
-		if(istype(A, /mob/living))
+		if(isliving(A))
 			var/mob/living/victim = A
 			def_zone = ran_zone()
 			blocked = victim.run_armor_check(def_zone, "melee")
@@ -205,11 +205,11 @@
 			victim.apply_effect(6, STUTTER, blocked)
 			victim.apply_damage(10, BRUTE, def_zone, soaked)
 		if(pulling)
-			occupant.visible_message("<span class='danger'>[pulling] has thrusted \the [name] into \the [A], throwing \the [occupant] out of it!</span>")
+			occupant.visible_message(span_danger("[pulling] has thrusted \the [name] into \the [A], throwing \the [occupant] out of it!"))
 
 			add_attack_logs(pulling,occupant,"Crashed their [name] into [A]")
 		else
-			occupant.visible_message("<span class='danger'>[occupant] crashed into \the [A]!</span>")
+			occupant.visible_message(span_danger("[occupant] crashed into \the [A]!"))
 
 /obj/structure/bed/chair/wheelchair/proc/create_track()
 	var/obj/effect/decal/cleanable/blood/tracks/B = new(loc)
@@ -228,7 +228,7 @@
 /obj/structure/bed/chair/wheelchair/buckle_mob(mob/M as mob, mob/user as mob)
 	if(M == pulling)
 		pulling = null
-		usr.pulledby = null
+		user.pulledby = null
 	..()
 
 /obj/structure/bed/chair/wheelchair/MouseDrop(over_object, src_location, over_location)

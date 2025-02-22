@@ -1,4 +1,4 @@
-/obj/item/weapon/rig/ch/clockwork
+/obj/item/rig/ch/clockwork
 	name = "brass box"
 	suit_type = "clockwork"
 	desc = "A subtly vibrating box made out of brass. It has some buttons and switches on one side, and what looks like vents on another."
@@ -18,12 +18,12 @@
 	helm_type = /obj/item/clothing/head/helmet/space/rig/ch/clockwork
 	glove_type = /obj/item/clothing/gloves/gauntlets/rig/ch/clockwork
 	boot_type = /obj/item/clothing/shoes/magboots/rig/ch/clockwork
-	cell_type =  /obj/item/weapon/cell/clockwork
+	cell_type =  /obj/item/cell/clockwork
 
-	allowed = list(/obj/item/device/flashlight,
-	/obj/item/weapon/tank,/obj/item/device/suit_cooling_unit,/obj/item/weapon/storage/bag/ore,
-	/obj/item/device/t_scanner,/obj/item/weapon/pickaxe, /obj/item/weapon/rcd,/obj/item/weapon/storage/backpack,
-	/obj/item/device/bluespaceradio, /obj/item/device/defib_kit, /obj/item/weapon/ratvarian_spear
+	allowed = list(/obj/item/flashlight,
+	/obj/item/tank,/obj/item/suit_cooling_unit,/obj/item/storage/bag/ore,
+	/obj/item/t_scanner,/obj/item/pickaxe, /obj/item/rcd,/obj/item/storage/backpack,
+	/obj/item/bluespaceradio, /obj/item/defib_kit, /obj/item/ratvarian_spear
 		)
 
 	initial_modules = list(
@@ -56,7 +56,7 @@
 	icon = 'icons/obj/clothing/shoes_ch.dmi'
 	desc = "Industrial boots made of brass. They're very heavy."
 
-/obj/item/weapon/cell/clockwork //using the stats of a precursor void cell until someone's motivated to port and make the suit use clockcult global power
+/obj/item/cell/clockwork //using the stats of a precursor void cell until someone's motivated to port and make the suit use clockcult global power
 	name = "hierophant ansible"
 	desc = "A curiously cold brass doodad. It seems as though it really doesn't appreciate being held. Due to it's size and the apparent electrical arc, it might be useful as a battery?"
 	origin_tech = list(TECH_POWER = 8, TECH_ENGINEERING = 6)

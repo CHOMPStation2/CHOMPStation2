@@ -1,4 +1,4 @@
-/obj/item/weapon/melee/cullingcane
+/obj/item/melee/cullingcane
 	name = "culling cane"
 	defend_chance = 15	// The base chance for the weapon to parry.
 	projectile_parry_chance = 15

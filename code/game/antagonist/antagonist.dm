@@ -48,13 +48,13 @@
 	var/landmark_id                         // Spawn point identifier.
 	var/mob_path = /mob/living/carbon/human // Mobtype this antag will use if none is provided.
 	var/feedback_tag = "traitor_objective"  // End of round
-	var/bantype = "Syndicate"               // Ban to check when spawning this antag.
+	var/bantype = JOB_SYNDICATE             // Ban to check when spawning this antag.
 	var/minimum_player_age = 7            	// Players need to be at least minimum_player_age days old before they are eligable for auto-spawning
 	var/suspicion_chance = 50               // Prob of being on the initial Command report
 	var/flags = 0                           // Various runtime options.
 
 	// Used for setting appearance.
-	var/list/valid_species =       list(SPECIES_UNATHI,SPECIES_TAJ,SPECIES_SKRELL,SPECIES_HUMAN,SPECIES_DIONA,SPECIES_TESHARI)
+	var/list/valid_species =       list(SPECIES_UNATHI,SPECIES_TAJARAN,SPECIES_SKRELL,SPECIES_HUMAN,SPECIES_DIONA,SPECIES_TESHARI)
 
 	// Runtime vars.
 	var/datum/mind/leader                   // Current leader, if any.
@@ -72,11 +72,11 @@
 
 	// ID card stuff.
 	var/default_access = list()
-	var/id_type = /obj/item/weapon/card/id
+	var/id_type = /obj/item/card/id
 
 	var/antag_text = "You are an antagonist! Within the rules, \
 		try to act as an opposing force to the crew. Further RP and try to make sure \
-		other players have <i>fun</i>! If you are confused or at a loss, always adminhelp, \
+		other players have " + span_italics("fun") + "! If you are confused or at a loss, always adminhelp, \
 		and before taking extreme actions, please try to also contact the administration! \
 		Think through your actions and make the roleplay immersive! <b>Please remember all \
 		rules aside from those without explicit exceptions apply to antagonists.</b>"
@@ -91,7 +91,7 @@
 	get_starting_locations()
 	if(!role_text_plural)
 		role_text_plural = role_text
-	if(CONFIG_GET(flag/protect_roles_from_antagonist)) // CHOMPEdit
+	if(CONFIG_GET(flag/protect_roles_from_antagonist))
 		restricted_jobs |= protected_jobs
 	if(antaghud_indicator)
 		if(!hud_icon_reference)
@@ -109,10 +109,10 @@
 	// Note that this is done before jobs are handed out.
 	candidates = ticker.mode.get_players_for_role(role_type, id, ghosts_only)
 	for(var/datum/mind/player in candidates)
-		if(ghosts_only && !istype(player.current, /mob/observer/dead))
+		if(ghosts_only && !isobserver(player.current))
 			candidates -= player
 			log_debug("[key_name(player)] is not eligible to become a [role_text]: Only ghosts may join as this role! They have been removed from the draft.")
-		else if(CONFIG_GET(flag/use_age_restriction_for_antags) && player.current.client.player_age < minimum_player_age) // CHOMPEdit
+		else if(CONFIG_GET(flag/use_age_restriction_for_antags) && player.current.client.player_age < minimum_player_age)
 			candidates -= player
 			log_debug("[key_name(player)] is not eligible to become a [role_text]: Is only [player.current.client.player_age] day\s old, has to be [minimum_player_age] day\s!")
 		else if(player.special_role)
@@ -145,9 +145,9 @@
 	if(!istype(player))
 		message_admins("[uppertext(ticker.mode.name)]: Failed to find a candidate for [role_text].")
 		return 0
-	to_chat(player.current, "<span class='danger'><i>You have been selected this round as an antagonist!</i></span>")
+	to_chat(player.current, span_danger(span_italics("You have been selected this round as an antagonist!")))
 	message_admins("[uppertext(ticker.mode.name)]: Selected [player] as a [role_text].")
-	if(istype(player.current, /mob/observer/dead))
+	if(isobserver(player.current))
 		create_default(player.current)
 	else
 		add_antagonist(player,0,0,0,1,1)
@@ -185,7 +185,7 @@
 	if(player.special_role)
 		log_debug("[player.key] was selected for [role_text] by lottery, but they already have a special role.")
 		return 0
-	if(!(flags & ANTAG_OVERRIDE_JOB) && (!player.current || istype(player.current, /mob/new_player)))
+	if(!(flags & ANTAG_OVERRIDE_JOB) && (!player.current || isnewplayer(player.current)))
 		log_debug("[player.key] was selected for [role_text] by lottery, but they have not joined the game.")
 		return 0
 

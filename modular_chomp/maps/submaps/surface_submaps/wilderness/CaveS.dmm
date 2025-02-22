@@ -14,7 +14,7 @@
 /area/submap/CaveS)
 "e" = (
 /obj/item/ammo_casing/a45,
-/obj/item/weapon/reagent_containers/food/snacks/xenomeat/spidermeat,
+/obj/item/reagent_containers/food/snacks/xenomeat/spidermeat,
 /turf/template_noop,
 /area/submap/CaveS)
 "f" = (
@@ -49,7 +49,7 @@
 	},
 /area/submap/CaveS)
 "l" = (
-/obj/item/weapon/reagent_containers/food/snacks/xenomeat/spidermeat,
+/obj/item/reagent_containers/food/snacks/xenomeat/spidermeat,
 /turf/template_noop,
 /area/submap/CaveS)
 "m" = (
@@ -58,7 +58,7 @@
 /area/submap/CaveS)
 "n" = (
 /obj/item/clothing/accessory/storage/webbing,
-/obj/item/weapon/material/knife/tacknife/combatknife,
+/obj/item/material/knife/tacknife/combatknife,
 /turf/simulated/floor/outdoors/dirt{
 	outdoors = 0
 	},
@@ -82,7 +82,9 @@
 	},
 /area/submap/CaveS)
 "r" = (
-/mob/living/simple_mob/animal/giant_spider/lurker,
+/mob/living/simple_mob/animal/giant_spider/lurker{
+	loot_list = list(/obj/item/stock_parts/manipulator/omni = 50)
+	},
 /turf/simulated/floor/outdoors/dirt{
 	outdoors = 0
 	},
@@ -116,7 +118,9 @@
 	},
 /area/submap/CaveS)
 "x" = (
-/mob/living/simple_mob/animal/giant_spider/lurker,
+/mob/living/simple_mob/animal/giant_spider/lurker{
+	loot_list = list(/obj/item/stock_parts/manipulator/omni = 50)
+	},
 /turf/simulated/floor/outdoors/dirt,
 /area/submap/CaveS)
 "y" = (
@@ -134,7 +138,7 @@
 /obj/structure/closet/crate,
 /obj/item/stack/cable_coil,
 /obj/item/stack/cable_coil,
-/obj/item/weapon/storage/toolbox,
+/obj/item/storage/toolbox,
 /obj/random/toolbox,
 /turf/simulated/floor,
 /area/submap/CaveS)
@@ -149,7 +153,6 @@
 "E" = (
 /obj/machinery/power/port_gen/pacman,
 /obj/structure/cable{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /turf/simulated/floor,
@@ -159,20 +162,17 @@
 /area/submap/CaveS)
 "G" = (
 /obj/structure/closet/crate,
-/obj/item/weapon/reagent_containers/hypospray,
-/obj/item/weapon/reagent_containers/glass/bottle/stoxin,
-/obj/item/weapon/reagent_containers/glass/bottle/antitoxin,
-/obj/item/weapon/reagent_containers/pill/antitox,
-/obj/item/weapon/reagent_containers/pill/antitox,
-/obj/item/weapon/reagent_containers/pill/antitox,
-/obj/item/weapon/reagent_containers/pill/paracetamol,
-/obj/random/firstaid,
+/obj/item/reagent_containers/hypospray,
+/obj/item/reagent_containers/glass/bottle/stoxin,
+/obj/item/reagent_containers/glass/bottle/antitoxin,
+/obj/item/reagent_containers/pill/antitox,
+/obj/item/reagent_containers/pill/antitox,
+/obj/item/reagent_containers/pill/antitox,
+/obj/item/reagent_containers/pill/paracetamol,
 /turf/simulated/floor,
 /area/submap/CaveS)
 "H" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2";
 	pixel_y = 0
 	},
@@ -183,12 +183,11 @@
 /obj/random/contraband,
 /obj/random/contraband,
 /obj/random/contraband,
-/obj/random/energy,
-/obj/item/weapon/material/star,
-/obj/item/weapon/material/star,
-/obj/item/weapon/material/star,
-/obj/item/weapon/material/star,
-/obj/item/weapon/material/star,
+/obj/item/material/star,
+/obj/item/material/star,
+/obj/item/material/star,
+/obj/item/material/star,
+/obj/item/material/star,
 /turf/simulated/floor,
 /area/submap/CaveS)
 "J" = (
@@ -200,16 +199,12 @@
 /area/submap/CaveS)
 "K" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /turf/simulated/floor,
 /area/submap/CaveS)
 "L" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8";
 	pixel_x = 0
 	},
@@ -218,7 +213,6 @@
 "M" = (
 /obj/machinery/computer/communications,
 /obj/structure/cable{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /turf/simulated/floor,
@@ -226,6 +220,20 @@
 "N" = (
 /obj/structure/loot_pile/maint/boxfort,
 /turf/simulated/floor,
+/area/submap/CaveS)
+"W" = (
+/mob/living/simple_mob/animal/giant_spider/lurker{
+	loot_list = list(/obj/item/stock_parts/capacitor/omni = 50)
+	},
+/turf/simulated/floor/outdoors/dirt{
+	outdoors = 0
+	},
+/area/submap/CaveS)
+"Z" = (
+/mob/living/simple_mob/animal/giant_spider/lurker{
+	loot_list = list(/obj/item/stock_parts/capacitor/omni = 50)
+	},
+/turf/simulated/floor/outdoors/dirt,
 /area/submap/CaveS)
 
 (1,1,1) = {"
@@ -763,7 +771,7 @@ d
 k
 k
 d
-x
+Z
 d
 d
 d
@@ -925,7 +933,7 @@ k
 k
 d
 d
-r
+W
 k
 k
 k
@@ -1356,7 +1364,7 @@ A
 A
 k
 k
-r
+W
 d
 d
 d
@@ -1430,7 +1438,7 @@ d
 k
 k
 d
-r
+W
 k
 A
 A

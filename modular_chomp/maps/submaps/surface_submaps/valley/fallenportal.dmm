@@ -4,7 +4,7 @@
 /area/submap/fallenportal)
 "b" = (
 /obj/structure/table/borosilicate,
-/obj/item/weapon/spellbook/oneuse/charge,
+/obj/item/spellbook/oneuse/charge,
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/submap/fallenportal)
 "c" = (
@@ -50,7 +50,7 @@
 /area/submap/fallenportal)
 "k" = (
 /obj/structure/table/borosilicate,
-/obj/item/weapon/flame/candle/everburn,
+/obj/item/flame/candle/everburn,
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/submap/fallenportal)
 "l" = (
@@ -65,36 +65,36 @@
 /obj/item/clothing/suit/space/cult,
 /obj/item/clothing/head/helmet/space/cult,
 /obj/item/clothing/shoes/cult,
-/obj/item/weapon/storage/backpack/cultpack,
-/obj/item/weapon/melee/cultblade,
-/obj/item/weapon/archaeological_find,
-/obj/item/weapon/archaeological_find,
-/obj/item/weapon/archaeological_find,
+/obj/item/storage/backpack/cultpack,
+/obj/item/melee/cultblade,
+/obj/item/archaeological_find,
+/obj/item/archaeological_find,
+/obj/item/archaeological_find,
 /turf/simulated/floor/gorefloor2,
 /area/submap/fallenportal)
 "o" = (
 /obj/structure/closet/crate,
-/obj/item/device/soulstone,
-/obj/item/device/soulstone,
-/obj/item/device/soulstone,
-/obj/item/weapon/material/knife/ritual,
-/obj/item/weapon/storage/backpack/cultpack,
+/obj/item/soulstone,
+/obj/item/soulstone,
+/obj/item/soulstone,
+/obj/item/material/knife/ritual,
+/obj/item/storage/backpack/cultpack,
 /obj/item/clothing/suit/space/cult,
 /obj/item/clothing/shoes/cult,
 /obj/item/clothing/head/helmet/space/cult,
-/obj/item/weapon/archaeological_find,
-/obj/item/weapon/archaeological_find,
-/obj/item/weapon/archaeological_find,
+/obj/item/archaeological_find,
+/obj/item/archaeological_find,
+/obj/item/archaeological_find,
 /turf/simulated/floor/cult,
 /area/submap/fallenportal)
 "p" = (
 /obj/structure/closet/crate/secure/loot,
-/obj/item/weapon/twohanded/fireaxe/fluff/mjollnir,
+/obj/item/twohanded/fireaxe/fluff/mjollnir,
 /turf/simulated/floor/cult,
 /area/submap/fallenportal)
 "q" = (
 /obj/structure/table/borosilicate,
-/obj/item/weapon/flame/candle/candelabra/everburn,
+/obj/item/flame/candle/candelabra/everburn,
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/submap/fallenportal)
 "r" = (
@@ -105,8 +105,8 @@
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/submap/fallenportal)
 "u" = (
-/obj/item/weapon/deadringer,
-/obj/item/weapon/vampiric,
+/obj/item/deadringer,
+/obj/item/vampiric,
 /obj/item/clothing/suit/armor/pcarrier/bulletproof/full,
 /turf/simulated/floor/gorefloor2,
 /area/submap/fallenportal)
@@ -117,7 +117,7 @@
 /area/submap/fallenportal)
 "w" = (
 /obj/structure/table/borosilicate,
-/obj/item/weapon/telecube/randomized,
+/obj/item/telecube/randomized,
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/submap/fallenportal)
 "x" = (
@@ -135,18 +135,18 @@
 /area/submap/fallenportal)
 "z" = (
 /obj/structure/closet/crate,
-/obj/item/device/soulstone,
-/obj/item/device/soulstone,
-/obj/item/device/soulstone,
-/obj/item/weapon/material/knife/ritual,
-/obj/item/weapon/material/knife/ritual,
-/obj/item/weapon/storage/backpack/cultpack,
+/obj/item/soulstone,
+/obj/item/soulstone,
+/obj/item/soulstone,
+/obj/item/material/knife/ritual,
+/obj/item/material/knife/ritual,
+/obj/item/storage/backpack/cultpack,
 /obj/item/clothing/suit/space/cult,
 /obj/item/clothing/shoes/cult,
 /obj/item/clothing/head/helmet/space/cult,
-/obj/item/weapon/storage/belt/bandolier,
-/obj/item/weapon/storage/pill_bottle/dice_nerd,
-/obj/item/weapon/shield/riot/tele,
+/obj/item/storage/belt/bandolier,
+/obj/item/storage/pill_bottle/dice_nerd,
+/obj/item/shield/riot/tele,
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/submap/fallenportal)
 "A" = (
@@ -191,7 +191,7 @@
 /area/submap/fallenportal)
 "K" = (
 /obj/structure/table/borosilicate,
-/obj/item/weapon/melee/cultblade,
+/obj/item/melee/cultblade,
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/submap/fallenportal)
 "L" = (
@@ -203,11 +203,11 @@
 /obj/item/clothing/suit/space/cult,
 /obj/item/clothing/head/helmet/space/cult,
 /obj/item/clothing/shoes/cult,
-/obj/item/weapon/storage/backpack/cultpack,
-/obj/item/weapon/melee/cultblade,
-/obj/item/weapon/archaeological_find,
-/obj/item/weapon/archaeological_find,
-/obj/item/weapon/archaeological_find,
+/obj/item/storage/backpack/cultpack,
+/obj/item/melee/cultblade,
+/obj/item/archaeological_find,
+/obj/item/archaeological_find,
+/obj/item/archaeological_find,
 /turf/simulated/floor/gorefloor,
 /area/submap/fallenportal)
 "O" = (
@@ -230,18 +230,18 @@
 /area/submap/fallenportal)
 "T" = (
 /obj/structure/closet/crate,
-/obj/item/device/soulstone,
-/obj/item/device/soulstone,
-/obj/item/device/soulstone,
-/obj/item/weapon/material/knife/ritual,
-/obj/item/weapon/material/knife/ritual,
-/obj/item/weapon/storage/backpack/cultpack,
+/obj/item/soulstone,
+/obj/item/soulstone,
+/obj/item/soulstone,
+/obj/item/material/knife/ritual,
+/obj/item/material/knife/ritual,
+/obj/item/storage/backpack/cultpack,
 /obj/item/clothing/suit/space/cult,
 /obj/item/clothing/shoes/cult,
 /obj/item/clothing/head/helmet/space/cult,
-/obj/item/weapon/storage/bagoplanets,
-/obj/item/weapon/storage/pill_bottle/peridaxon,
-/obj/item/weapon/shield/primitive,
+/obj/item/storage/bagoplanets,
+/obj/item/storage/pill_bottle/peridaxon,
+/obj/item/shield/primitive,
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/submap/fallenportal)
 "U" = (

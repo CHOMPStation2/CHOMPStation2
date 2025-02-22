@@ -16,16 +16,6 @@
 	color_blend_mode = ICON_MULTIPLY
 	extra_overlay = "snaketail_stripes"
 
-/datum/sprite_accessory/tail/zorgoia
-	name = "Zorgoia tail, dual-color"
-	desc = ""
-	icon = 'icons/mob/vore/tails_ch.dmi'
-	icon_state = "zorgoia"
-	extra_overlay = "zorgoia_fluff"
-	extra_overlay2 = "zorgoia_fluff_top"
-	do_colouration = 1
-	color_blend_mode = ICON_MULTIPLY
-
 /datum/sprite_accessory/tail/leopard
 	name = "Leopard tail, dual-color (vwag)"
 	icon = 'icons/mob/vore/tails_ch.dmi'
@@ -141,35 +131,6 @@
 	color_blend_mode = ICON_MULTIPLY
 	extra_overlay = "teshfatfirefly_markings"
 
-/datum/sprite_accessory/tail/longtail/longflufftail
-	name = "Long fluffy tail"
-	icon = 'icons/mob/vore/taurs_ch.dmi'
-	icon_state = "longflufftail"
-
-/datum/sprite_accessory/tail/longtail/ringtailbig
-	name = "Long ring tail"
-	icon = 'icons/mob/vore/taurs_ch.dmi'
-	icon_state = "bigringtail"
-	do_colouration = 1
-	color_blend_mode = ICON_MULTIPLY
-	extra_overlay = "bigringtail_markings"
-
-/datum/sprite_accessory/tail/longtail/desert_nightstalker
-	name = "Desert Nightstalker Tail (vwag)"
-	icon = 'icons/mob/vore/taurs_ch.dmi'
-	icon_state = "nightstalker_desert"
-	ani_state = "nightstalker_desert_w"
-	do_colouration = 0 // We're not coloring this, these are pre-colored
-	color_blend_mode = ICON_ADD
-
-/datum/sprite_accessory/tail/longtail/diamondback_nightstalker
-	name = "Diamondback Nightstalker Tail (dual-color, vwag)"
-	icon = 'icons/mob/vore/taurs_ch.dmi'
-	icon_state = "nightstalker_diamondback"
-	ani_state = "nightstalker_diamondback_w"
-	extra_overlay = "nightstalker_diamondback_markings"
-	extra_overlay_w = "nightstalker_diamondback_markings_w"
-
 /datum/sprite_accessory/tail/orca_f
 	name = "Orca tail (Female)"
 	icon = 'icons/mob/vore/tails_ch.dmi'
@@ -177,3 +138,27 @@
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 	extra_overlay = "orca_tail_markings"
+
+/datum/sprite_accessory/tail/small_bugbum
+	name = "Bug Abdomen, Alt, Small (Dual-Color)"
+	icon = 'modular_chomp/icons/mob/vore/tails.dmi'
+	icon_state = "smallbug1"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+	extra_overlay = "smallbug2"
+
+/datum/sprite_accessory/tail/mid_bugbum
+	name = "Bug Abdomen, Alt, Medium (Dual-Color)"
+	icon = 'modular_chomp/icons/mob/vore/tails.dmi'
+	icon_state = "midbug1"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+	extra_overlay = "midbug2"
+
+/datum/sprite_accessory/tail/big_bugbum
+	name = "Bug Abdomen, Alt, Big (Dual-Color)"
+	icon = 'modular_chomp/icons/mob/vore/tails.dmi'
+	icon_state = "bigbug1"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+	extra_overlay = "bigbug2"

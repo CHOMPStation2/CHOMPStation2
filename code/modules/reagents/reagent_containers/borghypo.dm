@@ -1,4 +1,4 @@
-/obj/item/weapon/reagent_containers/borghypo
+/obj/item/reagent_containers/borghypo
 	name = "cyborg hypospray"
 	desc = "An advanced chemical synthesizer and injection system, designed for heavy-duty medical equipment."
 	icon = 'icons/obj/syringe.dmi'
@@ -14,27 +14,27 @@
 	var/recharge_time = 5 //Time it takes for shots to recharge (in seconds)
 	var/bypass_protection = FALSE // If true, can inject through things like spacesuits and armor.
 
-	var/list/reagent_ids = list("tricordrazine", "inaprovaline", "bicaridine", "anti_toxin", "kelotane", "tramadol", "dexalin" ,"spaceacillin")
+	var/list/reagent_ids = list(REAGENT_ID_TRICORDRAZINE, REAGENT_ID_INAPROVALINE, REAGENT_ID_BICARIDINE, REAGENT_ID_ANTITOXIN, REAGENT_ID_KELOTANE, REAGENT_ID_TRAMADOL, REAGENT_ID_DEXALIN, REAGENT_ID_SPACEACILLIN) // CHOMPEdit
 	var/list/reagent_volumes = list()
 	var/list/reagent_names = list()
 
-/obj/item/weapon/reagent_containers/borghypo/surgeon
-	reagent_ids = list("inaprovaline", "dexalin", "tricordrazine", "spaceacillin", "oxycodone")
+/obj/item/reagent_containers/borghypo/surgeon
+	reagent_ids = list(REAGENT_ID_INAPROVALINE, REAGENT_ID_DEXALIN, REAGENT_ID_TRICORDRAZINE, REAGENT_ID_SPACEACILLIN, REAGENT_ID_OXYCODONE)
 
-/obj/item/weapon/reagent_containers/borghypo/crisis
-	reagent_ids = list("inaprovaline", "tricordrazine", "dexalin", "bicaridine", "kelotane", "anti_toxin", "spaceacillin", "tramadol", "adranol") // CHOMPedit: Unifying chems with dogborg equivalent.
+/obj/item/reagent_containers/borghypo/crisis
+	reagent_ids = list(REAGENT_ID_INAPROVALINE, REAGENT_ID_TRICORDRAZINE, REAGENT_ID_DEXALIN, REAGENT_ID_BICARIDINE, REAGENT_ID_KELOTANE, REAGENT_ID_ANTITOXIN, REAGENT_ID_SPACEACILLIN, REAGENT_ID_TRAMADOL, REAGENT_ID_ADRANOL) // CHOMPedit: Unifying chems with dogborg equivalent.
 
-/obj/item/weapon/reagent_containers/borghypo/lost
-	reagent_ids = list("tricordrazine", "bicaridine", "dexalin", "anti_toxin", "tramadol", "spaceacillin")
+/obj/item/reagent_containers/borghypo/lost
+	reagent_ids = list(REAGENT_ID_TRICORDRAZINE, REAGENT_ID_BICARIDINE, REAGENT_ID_DEXALIN, REAGENT_ID_ANTITOXIN, REAGENT_ID_TRAMADOL, REAGENT_ID_SPACEACILLIN)
 
-/obj/item/weapon/reagent_containers/borghypo/merc
+/obj/item/reagent_containers/borghypo/merc
 	name = "advanced cyborg hypospray"
 	desc = "An advanced nanite and chemical synthesizer and injection system, designed for heavy-duty medical equipment.  This type is capable of safely bypassing \
 	thick materials that other hyposprays would struggle with."
 	bypass_protection = TRUE // Because mercs tend to be in spacesuits.
-	reagent_ids = list("healing_nanites", "hyperzine", "tramadol", "oxycodone", "spaceacillin", "peridaxon", "osteodaxon", "myelamine", "synthblood")
+	reagent_ids = list(REAGENT_ID_HEALINGNANITES, REAGENT_ID_HYPERZINE, REAGENT_ID_TRAMADOL, REAGENT_ID_OXYCODONE, REAGENT_ID_SPACEACILLIN, REAGENT_ID_PERIDAXON, REAGENT_ID_OSTEODAXON, REAGENT_ID_MYELAMINE, REAGENT_ID_SYNTHBLOOD)
 
-/obj/item/weapon/reagent_containers/borghypo/Initialize()
+/obj/item/reagent_containers/borghypo/Initialize()
 	. = ..()
 
 	for(var/T in reagent_ids)
@@ -44,11 +44,11 @@
 
 	START_PROCESSING(SSobj, src)
 
-/obj/item/weapon/reagent_containers/borghypo/Destroy()
+/obj/item/reagent_containers/borghypo/Destroy()
 	STOP_PROCESSING(SSobj, src)
 	return ..()
 
-/obj/item/weapon/reagent_containers/borghypo/process() //Every [recharge_time] seconds, recharge some reagents for the cyborg+
+/obj/item/reagent_containers/borghypo/process() //Every [recharge_time] seconds, recharge some reagents for the cyborg+
 	if(++charge_tick < recharge_time)
 		return 0
 	charge_tick = 0
@@ -65,12 +65,12 @@
 						reagent_volumes[T] = min(reagent_volumes[T] + 5, volume)
 	return 1
 
-/obj/item/weapon/reagent_containers/borghypo/attack(var/mob/living/M, var/mob/user)
+/obj/item/reagent_containers/borghypo/attack(var/mob/living/M, var/mob/user)
 	if(!istype(M))
 		return
 
 	if(!reagent_volumes[reagent_ids[mode]])
-		// to_chat(user, "<span class='warning'>The injector is empty.</span>")
+		// to_chat(user, span_warning("The injector is empty."))
 		balloon_alert(user, "The injector is empty.") // CHOMPEdit - Changed to balloon alert
 		return
 
@@ -78,19 +78,19 @@
 	if(istype(H))
 		var/obj/item/organ/external/affected = H.get_organ(user.zone_sel.selecting)
 		if(!affected)
-			// to_chat(user, "<span class='danger'>\The [H] is missing that limb!</span>")
+			// to_chat(user, span_danger("\The [H] is missing that limb!"))
 			balloon_alert("\The [H] is missing that limb.") // CHOMPEdit - Changed to balloon alert
 			return
 		/* since synths have oil/coolant streams now, it only makes sense that you should be able to inject stuff. preserved for posterity.
 		else if(affected.robotic >= ORGAN_ROBOT)
-			to_chat(user, "<span class='danger'>You cannot inject a robotic limb.</span>")
+			to_chat(user, span_danger("You cannot inject a robotic limb."))
 			return
 		*/
 
 	if(M.can_inject(user, 1, ignore_thickness = bypass_protection))
 		// CHOMPEdit - Changed to balloon alert
-		// to_chat(user, "<span class='notice'>You inject [M] with the injector.</span>")
-		// to_chat(M, "<span class='notice'>You feel a tiny prick!</span>")
+		// to_chat(user, span_notice("You inject [M] with the injector."))
+		// to_chat(M, span_notice("You feel a tiny prick!"))
 		balloon_alert(user, "You inject [M] with the injector.")
 		balloon_alert(user, "You feel a tiny prick!")
 
@@ -99,40 +99,40 @@
 			M.reagents.add_reagent(reagent_ids[mode], t)
 			reagent_volumes[reagent_ids[mode]] -= t
 			add_attack_logs(user, M, "Borg injected with [reagent_ids[mode]]")
-			to_chat(user, "<span class='notice'>[t] units injected. [reagent_volumes[reagent_ids[mode]]] units remaining.</span>")
+			to_chat(user, span_notice("[t] units injected. [reagent_volumes[reagent_ids[mode]]] units remaining."))
 	return
 
-/obj/item/weapon/reagent_containers/borghypo/attack_self(mob/user as mob) //Change the mode
-	var/t = "<span class='infoplain'>"
+/obj/item/reagent_containers/borghypo/attack_self(mob/user as mob) //Change the mode
+	var/t
 	for(var/i = 1 to reagent_ids.len)
 		if(t)
 			t += ", "
 		if(mode == i)
-			t += "<b>[reagent_names[i]]</b>"
+			t += span_bold("[reagent_names[i]]")
 		else
-			t += "<a href='?src=\ref[src];reagent=[reagent_ids[i]]'>[reagent_names[i]]</a>"
-	t = "Available reagents: [t].</span>"
-	to_chat(user,t)
+			t += "<a href='byond://?src=\ref[src];reagent=[reagent_ids[i]]'>[reagent_names[i]]</a>"
+	t = "Available reagents: [t]."
+	to_chat(user,span_infoplain(t))
 
 	return
 
-/obj/item/weapon/reagent_containers/borghypo/Topic(var/href, var/list/href_list)
+/obj/item/reagent_containers/borghypo/Topic(var/href, var/list/href_list)
 	if(href_list["reagent"])
 		var/t = reagent_ids.Find(href_list["reagent"])
 		if(t)
 			playsound(src, 'sound/effects/pop.ogg', 50, 0)
 			mode = t
 			var/datum/reagent/R = SSchemistry.chemical_reagents[reagent_ids[mode]]
-			// to_chat(usr, "<span class='notice'>Synthesizer is now producing '[R.name]'.</span>")
-			balloon_alert(usr, "Synthesizer producing is now producing '[R.name]'")
+			// to_chat(usr, span_notice("Synthesizer is now producing '[R.name]'."))
+			balloon_alert(usr, "Synthesizer is now producing '[R.name]'") // CHOMPAdd
 
-/obj/item/weapon/reagent_containers/borghypo/examine(mob/user)
+/obj/item/reagent_containers/borghypo/examine(mob/user)
 	. = ..()
 	if(get_dist(user, src) <= 2)
 		var/datum/reagent/R = SSchemistry.chemical_reagents[reagent_ids[mode]]
-		. += "<span class='notice'>It is currently producing [R.name] and has [reagent_volumes[reagent_ids[mode]]] out of [volume] units left.</span>"
+		. += span_notice("It is currently producing [R.name] and has [reagent_volumes[reagent_ids[mode]]] out of [volume] units left.")
 
-/obj/item/weapon/reagent_containers/borghypo/service
+/obj/item/reagent_containers/borghypo/service
 	name = "cyborg drink synthesizer"
 	desc = "A portable drink dispencer."
 	icon = 'icons/obj/drinks.dmi'
@@ -141,55 +141,55 @@
 	recharge_time = 3
 	volume = 60
 	possible_transfer_amounts = list(5, 10, 20, 30)
-	reagent_ids = list("ale",
-		"applejuice", //CHOMPADD it has literally every other type of juice..
-		"beer",
-		"berryjuice",
-		"bitters",
-		"cider",
-		"coffee",
-		"cognac",
-		"cola",
-		"cream",
-		"dr_gibb",
-		"egg",
-		"gin",
-		"gingerale",
-		"hot_coco",
-		"ice",
-		"icetea",
-		"kahlua",
-		"lemonjuice",
-		"lemon_lime",
-		"limejuice",
-		"mead",
-		"milk",
-		"mint",
-		"orangejuice",
-		"redwine",
-		"rum",
-		"sake",
-		"sodawater",
-		"soymilk",
-		"space_up",
-		"spacemountainwind",
-		"spacespice",
-		"specialwhiskey",
-		"sugar",
-		"tea",
-		"tequilla",
-		"tomatojuice",
-		"tonic",
-		"vermouth",
-		"vodka",
-		"water",
-		"watermelonjuice",
-		"whiskey")
+	reagent_ids = list(REAGENT_ID_ALE,
+		REAGENT_ID_APPLEJUICE, //CHOMPADD it has literally every other type of juice..
+		REAGENT_ID_BEER,
+		REAGENT_ID_BERRYJUICE,
+		REAGENT_ID_BITTERS,
+		REAGENT_ID_CIDER,
+		REAGENT_ID_COFFEE,
+		REAGENT_ID_COGNAC,
+		REAGENT_ID_COLA,
+		REAGENT_ID_CREAM,
+		REAGENT_ID_DRGIBB,
+		REAGENT_ID_EGG,
+		REAGENT_ID_GIN,
+		REAGENT_ID_GINGERALE,
+		REAGENT_ID_HOTCOCO,
+		REAGENT_ID_ICE,
+		REAGENT_ID_ICETEA,
+		REAGENT_ID_KAHLUA,
+		REAGENT_ID_LEMONJUICE,
+		REAGENT_ID_LEMONLIME,
+		REAGENT_ID_LIMEJUICE,
+		REAGENT_ID_MEAD,
+		REAGENT_ID_MILK,
+		REAGENT_ID_MINT,
+		REAGENT_ID_ORANGEJUICE,
+		REAGENT_ID_REDWINE,
+		REAGENT_ID_RUM,
+		REAGENT_ID_SAKE,
+		REAGENT_ID_SODAWATER,
+		REAGENT_ID_SOYMILK,
+		REAGENT_ID_SPACEUP,
+		REAGENT_ID_SPACEMOUNTAINWIND,
+		REAGENT_ID_SPACESPICE,
+		REAGENT_ID_SPECIALWHISKEY,
+		REAGENT_ID_SUGAR,
+		REAGENT_ID_TEA,
+		REAGENT_ID_TEQUILA,
+		REAGENT_ID_TOMATOJUICE,
+		REAGENT_ID_TONIC,
+		REAGENT_ID_VERMOUTH,
+		REAGENT_ID_VODKA,
+		REAGENT_ID_WATER,
+		REAGENT_ID_WATERMELONJUICE,
+		REAGENT_ID_WHISKEY)
 
-/obj/item/weapon/reagent_containers/borghypo/service/attack(var/mob/M, var/mob/user)
+/obj/item/reagent_containers/borghypo/service/attack(var/mob/M, var/mob/user)
 	return
 
-/obj/item/weapon/reagent_containers/borghypo/service/afterattack(var/obj/target, var/mob/user, var/proximity)
+/obj/item/reagent_containers/borghypo/service/afterattack(var/obj/target, var/mob/user, var/proximity)
 	if(!proximity)
 		return
 
@@ -197,17 +197,17 @@
 		return
 
 	if(!reagent_volumes[reagent_ids[mode]])
-		to_chat(user, "<span class='notice'>[src] is out of this reagent, give it some time to refill.</span>")
+		to_chat(user, span_notice("[src] is out of this reagent, give it some time to refill."))
 		return
 
 	if(!target.reagents.get_free_space())
-		// to_chat(user, "<span class='notice'>[target] is full.</span>")
+		// to_chat(user, span_notice("[target] is full."))
 		balloon_alert(user, "[target] is full.") // CHOMPEdit - Changed to balloon alert
 		return
 
 	var/t = min(amount_per_transfer_from_this, reagent_volumes[reagent_ids[mode]])
 	target.reagents.add_reagent(reagent_ids[mode], t)
 	reagent_volumes[reagent_ids[mode]] -= t
-	// to_chat(user, "<span class='notice'>You transfer [t] units of the solution to [target].</span>")
+	// to_chat(user, span_notice("You transfer [t] units of the solution to [target]."))
 	balloon_alert(user, "Transfered [t] units to [target].") // CHOMPEdit - Changed to balloon alert
 	return

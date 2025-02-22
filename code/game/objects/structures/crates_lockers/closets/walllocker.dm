@@ -19,7 +19,7 @@
 /obj/structure/closet/walllocker/emerglocker
 	name = "emergency locker"
 	desc = "A wall mounted locker with emergency supplies."
-	var/list/spawnitems = list(/obj/item/weapon/tank/emergency/oxygen,/obj/item/clothing/mask/breath,/obj/item/weapon/tool/crowbar/red,/obj/item/device/flashlight/flare,)
+	var/list/spawnitems = list(/obj/item/tank/emergency/oxygen,/obj/item/clothing/mask/breath,/obj/item/tool/crowbar/red,/obj/item/flashlight/flare,)
 	var/amount = 2 // spawns each items X times.
 	closet_appearance = /decl/closet_appearance/wall/emergency
 
@@ -27,17 +27,17 @@
 	src.attack_hand(user)
 	return
 
-/obj/structure/closet/walllocker/emerglocker/attackby(obj/item/weapon/W as obj, mob/user as mob)
+/obj/structure/closet/walllocker/emerglocker/attackby(obj/item/W as obj, mob/user as mob)
 	return
 
 /obj/structure/closet/walllocker/emerglocker/attack_hand(mob/user as mob)
-	if (istype(user, /mob/living/silicon/ai))	//Added by Strumpetplaya - AI shouldn't be able to
+	if (isAI(user))	//Added by Strumpetplaya - AI shouldn't be able to
 		return									//activate emergency lockers.  This fixes that.  (Does this make sense, the AI can't call attack_hand, can it? --Mloc)
 	if(!amount)
-		to_chat(usr, "<spawn class='notice'>It's empty..")
+		to_chat(user, "<spawn class='notice'>It's empty..")
 		return
 	if(amount)
-		to_chat(usr, "<spawn class='notice'>You take out some items from \the [src].")
+		to_chat(user, "<spawn class='notice'>You take out some items from \the [src].")
 		for(var/path in spawnitems)
 			new path(src.loc)
 		amount--
@@ -187,9 +187,9 @@
 
 	starts_with = list(
 		/obj/item/clothing/mask/breath = 2,
-		/obj/item/weapon/tank/emergency/oxygen/engi = 2,
-		/obj/item/weapon/storage/briefcase/inflatable,
-		/obj/item/device/radio = 3)
+		/obj/item/tank/emergency/oxygen/engi = 2,
+		/obj/item/storage/briefcase/inflatable,
+		/obj/item/radio = 3)
 
 /obj/structure/closet/walllocker_double/emergency_engi/north
 	pixel_y = 32
@@ -215,9 +215,9 @@
 	starts_with = list(
 		/obj/item/clothing/suit/fire,
 		/obj/item/clothing/mask/gas,
-		/obj/item/device/flashlight,
-		/obj/item/weapon/tank/oxygen/red,
-		/obj/item/weapon/extinguisher,
+		/obj/item/flashlight,
+		/obj/item/tank/oxygen/red,
+		/obj/item/extinguisher,
 		/obj/item/clothing/head/hardhat/red)
 
 /obj/structure/closet/walllocker_double/hydrant/north
@@ -252,14 +252,14 @@
 		/obj/item/clothing/suit/space/emergency,
 		/obj/item/clothing/head/helmet/space/emergency,
 		/obj/item/clothing/mask/breath,
-		/obj/item/weapon/tank/oxygen,
-		/obj/item/device/suit_cooling_unit/emergency,
-		/obj/item/device/gps,
-		/obj/item/weapon/material/knife/tacknife/survival,
+		/obj/item/tank/oxygen,
+		/obj/item/suit_cooling_unit/emergency,
+		/obj/item/gps,
+		/obj/item/material/knife/tacknife/survival,
 		/obj/random/mre,
-		/obj/item/device/flashlight/color/yellow,
-		/obj/item/device/flashlight/flare,
-		/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle)
+		/obj/item/flashlight/color/yellow,
+		/obj/item/flashlight/flare,
+		/obj/item/reagent_containers/food/drinks/cans/waterbottle)
 
 /obj/structure/closet/walllocker_double/survival/north
 	pixel_y = 32

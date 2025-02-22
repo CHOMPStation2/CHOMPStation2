@@ -20,7 +20,7 @@
 /turf/simulated/floor/outdoors/dirt,
 /area/submap/field)
 "g" = (
-/obj/item/device/radio,
+/obj/item/radio,
 /turf/simulated/floor/outdoors/dirt,
 /area/submap/field)
 "h" = (
@@ -32,7 +32,7 @@
 /turf/simulated/floor/outdoors/dirt,
 /area/submap/field)
 "j" = (
-/obj/item/device/flashlight,
+/obj/item/flashlight,
 /turf/simulated/floor/outdoors/dirt,
 /area/submap/field)
 

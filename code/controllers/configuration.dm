@@ -72,7 +72,7 @@ var/list/gamemode_cache = list()
 
 	var/static/respawn = 1
 	var/static/respawn_time = 3000			// time before a dead player is allowed to respawn (in ds, though the config file asks for minutes, and it's converted below)
-	var/static/respawn_message = "<span class='notice'><B>Make sure to play a different character, and please roleplay correctly!</B></span>"
+	var/static/respawn_message = span_boldnotice("Make sure to play a different character, and please roleplay correctly!")
 
 	var/static/guest_jobban = 1
 	var/static/usewhitelist = 0
@@ -267,7 +267,6 @@ var/list/gamemode_cache = list()
 	var/static/radiation_material_resistance_divisor = 1
 	var/static/radiation_lower_limit = 0.35 //If the radiation level for a turf would be below this, ignore it.
 
-	var/static/random_submap_orientation = FALSE // If true, submaps loaded automatically can be rotated.
 	var/static/autostart_solars = FALSE // If true, specifically mapped in solar control computers will set themselves up when the round starts.
 
 	// New shiny SQLite stuff.
@@ -532,7 +531,7 @@ var/list/gamemode_cache = list()
 					config.respawn_time = raw_minutes MINUTES
 
 				if ("respawn_message")
-					config.respawn_message = "<span class='notice'><B>[value]</B></span>"
+					config.respawn_message = span_boldnotice("[value]")
 
 				if ("servername")
 					config.server_name = value
@@ -950,9 +949,6 @@ var/list/gamemode_cache = list()
 				if("ipr_minimum_age")
 					config.ipr_minimum_age = text2num(value)
 
-				if("random_submap_orientation")
-					config.random_submap_orientation = 1
-
 				if("autostart_solars")
 					config.autostart_solars = TRUE
 
@@ -1022,12 +1018,11 @@ var/list/gamemode_cache = list()
 				if("asset_cdn_url")
 					config.asset_cdn_url = value
 
-//ChompEDIT - these belong here
 				if("allow_robot_recolor")
-					config.allow_robot_recolor = 1
+					config.allow_robot_recolor = TRUE
+
 				if("allow_simple_mob_recolor")
-					config.allow_simple_mob_recolor = 1
-//ChompEDIT End
+					config.allow_simple_mob_recolor = TRUE
 
 				else
 					log_misc("Unknown setting in configuration: '[name]'")
@@ -1097,12 +1092,6 @@ var/list/gamemode_cache = list()
 
 				if("loadout_whitelist")
 					config.loadout_whitelist = text2num(value)
-/* //ChompEDIT - wrong place
-				if("allow_robot_recolor")
-					config.allow_robot_recolor = 1
-				if("allow_simple_mob_recolor")
-					config.allow_simple_mob_recolor = 1
-*/
 
 				else
 					log_misc("Unknown setting in configuration: '[name]'")

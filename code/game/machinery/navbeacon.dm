@@ -18,8 +18,8 @@ var/global/list/navbeacons = list()	// no I don't like putting this in, but it w
 	var/list/codes = list()	// assoc. list of transponder codes
 	req_access = list(access_engine)
 
-/obj/machinery/navbeacon/New()
-	..()
+/obj/machinery/navbeacon/Initialize(mapload)
+	. = ..()
 	set_codes_from_txt(codes_txt)
 	if(freq)
 		warning("[src] at [x],[y],[z] has deprecated var freq=[freq].  Replace it with proper type.")
@@ -85,7 +85,7 @@ var/global/list/navbeacons = list()	// no I don't like putting this in, but it w
 				locked = !locked
 				to_chat(user, "Controls are now [locked ? "locked." : "unlocked."]")
 			else
-				to_chat(user, "<span class='warning'>Access denied.</span>")
+				to_chat(user, span_warning("Access denied."))
 			updateDialog()
 		else
 			to_chat(user, "You must open the cover first!")
@@ -137,7 +137,7 @@ Transponder Codes:<UL>"}
 		t += "<small><A href='byond://?src=\ref[src];add=1;'>(add new)</A></small><BR>"
 		t+= "<UL></TT>"
 
-	user << browse(t, "window=navbeacon")
+	user << browse("<html>[t]</html>", "window=navbeacon")
 	onclose(user, "navbeacon")
 	return
 
@@ -237,6 +237,6 @@ Transponder Codes:<UL>"}
 /obj/machinery/navbeacon/patrol
 	var/next_patrol
 
-/obj/machinery/navbeacon/patrol/New()
+/obj/machinery/navbeacon/patrol/Initialize(mapload)
 	codes = list("patrol" = 1, "next_patrol" = next_patrol)
-	..()
+	. = ..()

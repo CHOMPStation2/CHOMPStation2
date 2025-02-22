@@ -7,9 +7,9 @@
 	icon_screen = "id"
 	light_color = "#0099ff"
 	req_access = list(access_change_ids)
-	circuit = /obj/item/weapon/circuitboard/card
-	var/obj/item/weapon/card/id/scan = null
-	var/obj/item/weapon/card/id/modify = null
+	circuit = /obj/item/circuitboard/card
+	var/obj/item/card/id/scan = null
+	var/obj/item/card/id/modify = null
 	var/mode = 0.0
 	var/printing = null
 
@@ -42,24 +42,24 @@
 	if(scan)
 		to_chat(usr, "You remove \the [scan] from \the [src].")
 		scan.forceMove(get_turf(src))
-		if(!usr.get_active_hand() && istype(usr,/mob/living/carbon/human))
+		if(!usr.get_active_hand() && ishuman(usr))
 			usr.put_in_hands(scan)
 		scan = null
 	else if(modify)
 		to_chat(usr, "You remove \the [modify] from \the [src].")
 		modify.forceMove(get_turf(src))
-		if(!usr.get_active_hand() && istype(usr,/mob/living/carbon/human))
+		if(!usr.get_active_hand() && ishuman(usr))
 			usr.put_in_hands(modify)
 		modify = null
 	else
 		to_chat(usr, "There is nothing to remove from the console.")
 	return
 
-/obj/machinery/computer/card/attackby(obj/item/weapon/card/id/id_card, mob/user)
+/obj/machinery/computer/card/attackby(obj/item/card/id/id_card, mob/user)
 	if(!istype(id_card))
 		return ..()
 
-	if(!scan && (access_change_ids in id_card.access) && (user.unEquip(id_card) || (id_card.loc == user && istype(user,/mob/living/silicon/robot)))) //Grippers. Again. ~Mechoid
+	if(!scan && (access_change_ids in id_card.GetAccess()) && (user.unEquip(id_card) || (id_card.loc == user && istype(user,/mob/living/silicon/robot)))) //Grippers. Again. ~Mechoid
 		user.drop_item()
 		id_card.forceMove(src)
 		scan = id_card
@@ -129,7 +129,7 @@
 			all_centcom_access.Add(list(list(
 				"desc" = replacetext(get_centcom_access_desc(access), " ", "&nbsp;"),
 				"ref" = access,
-				"allowed" = (access in modify.access) ? 1 : 0)))
+				"allowed" = (access in modify.GetAccess()) ? 1 : 0)))
 	else if(modify)
 		for(var/i in ACCESS_REGION_SECURITY to ACCESS_REGION_SUPPLY)
 			var/list/accesses = list()
@@ -138,7 +138,7 @@
 					accesses.Add(list(list(
 						"desc" = replacetext(get_access_desc(access), " ", "&nbsp;"),
 						"ref" = access,
-						"allowed" = (access in modify.access) ? 1 : 0)))
+						"allowed" = (access in modify.GetAccess()) ? 1 : 0)))
 
 			regions.Add(list(list(
 				"name" = get_region_accesses_name(i),
@@ -158,35 +158,35 @@
 			if(modify)
 				data_core.manifest_modify(modify.registered_name, modify.assignment, modify.rank)
 				modify.name = "[modify.registered_name]'s ID Card ([modify.assignment])"
-				if(ishuman(usr))
+				if(ishuman(ui.user))
 					modify.forceMove(get_turf(src))
-					if(!usr.get_active_hand())
-						usr.put_in_hands(modify)
+					if(!ui.user.get_active_hand())
+						ui.user.put_in_hands(modify)
 					modify = null
 				else
 					modify.forceMove(get_turf(src))
 					modify = null
 			else
-				var/obj/item/I = usr.get_active_hand()
-				if(istype(I, /obj/item/weapon/card/id) && usr.unEquip(I))
+				var/obj/item/I = ui.user.get_active_hand()
+				if(istype(I, /obj/item/card/id) && ui.user.unEquip(I))
 					I.forceMove(src)
 					modify = I
 			. = TRUE
 
 		if("scan")
 			if(scan)
-				if(ishuman(usr))
+				if(ishuman(ui.user))
 					scan.forceMove(get_turf(src))
-					if(!usr.get_active_hand())
-						usr.put_in_hands(scan)
+					if(!ui.user.get_active_hand())
+						ui.user.put_in_hands(scan)
 					scan = null
 				else
 					scan.forceMove(get_turf(src))
 					scan = null
 			else
-				var/obj/item/I = usr.get_active_hand()
-				if(istype(I, /obj/item/weapon/card/id))
-					usr.drop_item()
+				var/obj/item/I = ui.user.get_active_hand()
+				if(istype(I, /obj/item/card/id))
+					ui.user.drop_item()
 					I.forceMove(src)
 					scan = I
 			. = TRUE
@@ -205,7 +205,7 @@
 			if(is_authenticated() && modify)
 				var/t1 = params["assign_target"]
 				if(t1 == "Custom")
-					var/temp_t = sanitize(tgui_input_text(usr, "Enter a custom job assignment.","Assignment"), 45)
+					var/temp_t = sanitize(tgui_input_text(ui.user, "Enter a custom job assignment.","Assignment"), 45)
 					//let custom jobs function as an impromptu alt title, mainly for sechuds
 					if(temp_t && modify)
 						modify.assignment = temp_t
@@ -216,7 +216,7 @@
 					else
 						var/datum/job/jobdatum = SSjob.get_job(t1)
 						if(!jobdatum)
-							to_chat(usr, "<span class='warning'>No log exists for this job: [t1]</span>")
+							to_chat(ui.user, span_warning("No log exists for this job: [t1]"))
 							return
 						access = jobdatum.get_access()
 
@@ -233,7 +233,7 @@
 				if(temp_name)
 					modify.registered_name = temp_name
 				else
-					visible_message("<span class='notice'>[src] buzzes rudely.</span>")
+					visible_message(span_notice("[src] buzzes rudely."))
 			. = TRUE
 
 		if("account")
@@ -253,7 +253,7 @@
 					printing = null
 					SStgui.update_uis(src)
 
-					var/obj/item/weapon/paper/P = new(loc)
+					var/obj/item/paper/P = new(loc)
 					if(mode)
 						P.name = text("crew manifest ([])", stationtime2text())
 						P.info = {"<h4>Crew Manifest</h4>
@@ -290,7 +290,7 @@
 
 /obj/machinery/computer/card/centcom
 	name = "\improper CentCom ID card modification console"
-	circuit = /obj/item/weapon/circuitboard/card/centcom
+	circuit = /obj/item/circuitboard/card/centcom
 	req_access = list(access_cent_captain)
 
 

@@ -151,7 +151,7 @@
 	wind_speed = new_wind_speed
 	wind_dir = pick(alldirs)
 	var/message = "You feel the wind blowing [wind_speed > 2 ? "strongly ": ""]towards the <b>[dir2text(wind_dir)]</b>."
-	message_all_outdoor_players(span("warning", message))
+	message_all_outdoor_players(span_warning(message))
 
 /datum/weather_holder/proc/message_all_outdoor_players(message)
 	for(var/mob/M in player_list) // Don't need to care about clientless mobs.
@@ -173,7 +173,7 @@
 
 /datum/weather
 	var/name = "weather base"
-	var/icon = 'icons/effects/weather.dmi'
+	var/icon = 'modular_chomp/icons/effects/weather.dmi' //ChompEDIT: I am making custom weather and I am not touching upstream.
 	var/icon_state = null // Icon to apply to turf undergoing weather.
 	var/temp_high = T20C // Temperature to apply when at noon.
 	var/temp_low = T0C // Temperature to apply when at midnight.

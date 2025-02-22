@@ -142,15 +142,15 @@ var/global/list/all_objectives = list()
 	return target
 
 /datum/objective/anti_revolution/demote/check_completion()
-	if(target && target.current && istype(target,/mob/living/carbon/human))
-		var/obj/item/weapon/card/id/I = target.current:wear_id
-		if(istype(I, /obj/item/device/pda))
-			var/obj/item/device/pda/P = I
+	if(target && target.current && ishuman(target))
+		var/obj/item/card/id/I = target.current:wear_id
+		if(istype(I, /obj/item/pda))
+			var/obj/item/pda/P = I
 			I = P.id
 
 		if(!istype(I)) return 1
 
-		if(I.assignment == USELESS_JOB) //VOREStation Edit - Visitor not Assistant
+		if(I.assignment == JOB_ALT_VISITOR) //VOREStation Edit - Visitor not Assistant
 			return 1
 		else
 			return 0
@@ -389,7 +389,7 @@ var/global/list/all_objectives = list()
 	if(already_completed)
 		return 1
 
-	if(target && target.current && istype(target.current, /mob/living/carbon/human))
+	if(target && target.current && ishuman(target.current))
 		if(target.current.stat == DEAD)
 			return 0
 
@@ -424,34 +424,34 @@ var/global/list/all_objectives = list()
 	var/target_name
 
 	var/global/possible_items[] = list(
-		"the Site Manager's antique laser gun" = /obj/item/weapon/gun/energy/captain,
-		"a hand teleporter" = /obj/item/weapon/hand_tele,
-		"an RCD" = /obj/item/weapon/rcd,
-		"a jetpack" = /obj/item/weapon/tank/jetpack,
+		"the Site Manager's antique laser gun" = /obj/item/gun/energy/captain,
+		"a hand teleporter" = /obj/item/hand_tele,
+		"an RCD" = /obj/item/rcd,
+		"a jetpack" = /obj/item/tank/jetpack,
 		"a site manager's jumpsuit" = /obj/item/clothing/under/rank/captain,
-		"a functional AI" = /obj/item/device/aicard,
+		"a functional AI" = /obj/item/aicard,
 		"a pair of magboots" = /obj/item/clothing/shoes/magboots,
 		"the station blueprints" = /obj/item/areaeditor/blueprints,
 		"a nasa voidsuit" = /obj/item/clothing/suit/space/void,
-		"28 moles of phoron (full tank)" = /obj/item/weapon/tank,
+		"28 moles of phoron (full tank)" = /obj/item/tank,
 		"a sample of slime extract" = /obj/item/slime_extract,
-		"a piece of corgi meat" = /obj/item/weapon/reagent_containers/food/snacks/meat/corgi,
+		"a piece of corgi meat" = /obj/item/reagent_containers/food/snacks/meat/corgi,
 		"a research director's jumpsuit" = /obj/item/clothing/under/rank/research_director,
 		"a chief engineer's jumpsuit" = /obj/item/clothing/under/rank/chief_engineer,
 		"a chief medical officer's jumpsuit" = /obj/item/clothing/under/rank/chief_medical_officer,
 		"a head of security's jumpsuit" = /obj/item/clothing/under/rank/head_of_security,
 		"a head of personnel's jumpsuit" = /obj/item/clothing/under/rank/head_of_personnel,
-		"the hypospray" = /obj/item/weapon/reagent_containers/hypospray/vial,
-		"the site manager's pinpointer" = /obj/item/weapon/pinpointer,
+		"the hypospray" = /obj/item/reagent_containers/hypospray/vial,
+		"the site manager's pinpointer" = /obj/item/pinpointer,
 		"an ablative armor vest" = /obj/item/clothing/suit/armor/laserproof,
 	)
 
 	var/global/possible_items_special[] = list(
-		/*"nuclear authentication disk" = /obj/item/weapon/disk/nuclear,*///Broken with the change to nuke disk making it respawn on z level change.
-		"nuclear gun" = /obj/item/weapon/gun/energy/gun/nuclear,
-		"diamond drill" = /obj/item/weapon/pickaxe/diamonddrill,
-		"bag of holding" = /obj/item/weapon/storage/backpack/holding,
-		"hyper-capacity cell" = /obj/item/weapon/cell/hyper,
+		/*"nuclear authentication disk" = /obj/item/disk/nuclear,*///Broken with the change to nuke disk making it respawn on z level change.
+		"nuclear gun" = /obj/item/gun/energy/gun/nuclear,
+		"diamond drill" = /obj/item/pickaxe/diamonddrill,
+		"bag of holding" = /obj/item/storage/backpack/holding,
+		"hyper-capacity cell" = /obj/item/cell/hyper,
 		"10 diamonds" = /obj/item/stack/material/diamond,
 		"50 gold bars" = /obj/item/stack/material/gold,
 		"25 refined uranium bars" = /obj/item/stack/material/uranium,
@@ -501,24 +501,24 @@ var/global/list/all_objectives = list()
 
 			for(var/obj/item/I in all_items) //Check for phoron tanks
 				if(istype(I, steal_target))
-					found_amount += (target_name=="28 moles of phoron (full tank)" ? (I:air_contents:gas["phoron"]) : (I:amount))
+					found_amount += (target_name=="28 moles of phoron (full tank)" ? (I:air_contents:gas[GAS_PHORON]) : (I:amount))
 			return found_amount>=target_amount
 
 		if("50 coins (in bag)")
-			var/obj/item/weapon/moneybag/B = locate() in all_items
+			var/obj/item/moneybag/B = locate() in all_items
 
 			if(B)
 				var/target = text2num(target_name)
 				var/found_amount = 0.0
-				for(var/obj/item/weapon/coin/C in B)
+				for(var/obj/item/coin/C in B)
 					found_amount++
 				return found_amount>=target
 
 		if("a functional AI")
 
-			for(var/obj/item/device/aicard/C in all_items) //Check for ai card
+			for(var/obj/item/aicard/C in all_items) //Check for ai card
 				for(var/mob/living/silicon/ai/M in C)
-					if(istype(M, /mob/living/silicon/ai) && M.stat != 2) //See if any AI's are alive inside that card.
+					if(isAI(M) && M.stat != 2) //See if any AI's are alive inside that card.
 						return 1
 
 			for(var/mob/living/silicon/ai/ai in mob_list)
@@ -557,8 +557,8 @@ var/global/list/all_objectives = list()
 		return 0
 
 	var/current_amount
-	var/obj/item/weapon/rig/S
-	if(istype(owner.current,/mob/living/carbon/human))
+	var/obj/item/rig/S
+	if(ishuman(owner.current))
 		var/mob/living/carbon/human/H = owner.current
 		S = H.back
 
@@ -638,7 +638,7 @@ var/global/list/all_objectives = list()
 	return
 
 /datum/objective/heist/kidnap/choose_target()
-	var/list/roles = list("Chief Engineer","Research Director","Roboticist","Chemist","Engineer")
+	var/list/roles = list(JOB_CHIEF_ENGINEER,JOB_RESEARCH_DIRECTOR,JOB_ROBOTICIST,JOB_CHEMIST,JOB_ENGINEER)
 	var/list/possible_targets = list()
 	var/list/priority_targets = list()
 
@@ -695,19 +695,19 @@ var/global/list/all_objectives = list()
 			target_amount = 1
 			loot = "a nuclear bomb"
 		if(5)
-			target = /obj/item/weapon/gun
+			target = /obj/item/gun
 			target_amount = 6
 			loot = "six guns"
 		if(6)
-			target = /obj/item/weapon/gun/energy
+			target = /obj/item/gun/energy
 			target_amount = 4
 			loot = "four energy guns"
 		if(7)
-			target = /obj/item/weapon/gun/energy/laser
+			target = /obj/item/gun/energy/laser
 			target_amount = 2
 			loot = "two laser guns"
 		if(8)
-			target = /obj/item/weapon/gun/energy/ionrifle
+			target = /obj/item/gun/energy/ionrifle
 			target_amount = 1
 			loot = "an ion gun"
 

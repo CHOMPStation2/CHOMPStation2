@@ -24,8 +24,7 @@
 /area/submap/derelict4)
 "i" = (
 /obj/structure/window/reinforced{
-	dir = 8;
-	tag = "icon-rwindow (WEST)"
+	dir = 8
 	},
 /obj/structure/bed/chair/bay/comfy/lime,
 /turf/simulated/shuttle/floor,
@@ -40,13 +39,12 @@
 /area/submap/derelict4)
 "l" = (
 /obj/structure/shuttle/engine/propulsion{
-	dir = 4;
-	tag = "icon-propulsion (WEST)"
+	dir = 4
 	},
 /turf/simulated/shuttle/plating,
 /area/submap/derelict4)
 "m" = (
-/obj/item/weapon/material/shard,
+/obj/item/material/shard,
 /turf/simulated/floor/airless,
 /area/submap/derelict4)
 "n" = (
@@ -64,7 +62,7 @@
 /turf/simulated/shuttle/floor,
 /area/submap/derelict4)
 "q" = (
-/obj/item/weapon/material/shard,
+/obj/item/material/shard,
 /obj/structure/bed/chair/bay/comfy/captain{
 	dir = 8
 	},
@@ -72,8 +70,7 @@
 /area/submap/derelict4)
 "r" = (
 /obj/structure/window/reinforced{
-	dir = 8;
-	tag = "icon-rwindow (WEST)"
+	dir = 8
 	},
 /obj/structure/bed/chair/bay/comfy/lime{
 	dir = 1
@@ -124,7 +121,7 @@
 /turf/simulated/floor/airless,
 /area/submap/derelict4)
 "X" = (
-/obj/item/weapon/storage/backpack/holding,
+/obj/item/storage/backpack/holding,
 /turf/simulated/shuttle/floor,
 /area/submap/derelict4)
 "Z" = (

@@ -58,7 +58,7 @@
 	},
 /area/survivalpod)
 "bL" = (
-/obj/item/weapon/bone/ribs,
+/obj/item/bone/ribs,
 /turf/simulated/floor/gorefloor2,
 /area/survivalpod)
 "bX" = (
@@ -271,7 +271,7 @@
 	},
 /area/survivalpod)
 "lQ" = (
-/obj/item/weapon/bone/skull/unknown,
+/obj/item/bone/skull/unknown,
 /turf/simulated/floor/lava,
 /area/survivalpod)
 "nc" = (
@@ -715,7 +715,7 @@
 /turf/simulated/floor/gorefloor2,
 /area/survivalpod)
 "Fz" = (
-/obj/item/weapon/bone/ribs,
+/obj/item/bone/ribs,
 /turf/simulated/floor/lava,
 /area/survivalpod)
 "FX" = (
@@ -1169,7 +1169,7 @@
 	},
 /area/survivalpod)
 "UO" = (
-/obj/item/weapon/bone/arm,
+/obj/item/bone/arm,
 /turf/simulated/floor/lava,
 /area/survivalpod)
 "Vm" = (

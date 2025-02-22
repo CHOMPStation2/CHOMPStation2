@@ -25,7 +25,7 @@
 /obj/effect/landmark/engine_loader_pickable/proc/annihilate_bounds()
 	var/deleted_atoms = 0
 	var/killed_mobs = 0
-	admin_notice("<span class='danger'>Annihilating objects in engine loading location.</span>", R_DEBUG)
+	admin_notice(span_danger("Annihilating objects in engine loading location."), R_DEBUG)
 	var/list/turfs_to_clean = get_turfs_to_clean()
 	if(turfs_to_clean.len)
 		for(var/x in 1 to 2) // Delete things that shouldn't be players.
@@ -41,15 +41,15 @@
 		for(var/turf/T in turfs_to_clean) //now deal with those pesky players.
 			for(var/mob/living/LH in T)
 				if(istype(LH, /mob/living))
-					to_chat(LH, "<span class='danger'>It feels like you're being torn apart!</span>")
+					to_chat(LH, span_danger("It feels like you're being torn apart!"))
 					LH.apply_effect(20, AGONY, 0, 0)
-					LH.visible_message("<span class='danger'>[LH.name] is ripped apart by something you can't see!</span>")
+					LH.visible_message(span_danger("[LH.name] is ripped apart by something you can't see!"))
 					LH.gib() //Murder them horribly!
 					message_admins("[key_name(LH, LH.client)] was just killed by the engine loader!", R_DEBUG)
 					++killed_mobs
 
-	admin_notice("<span class='danger'>Annihilated [deleted_atoms] objects.</span>", R_DEBUG)
-	admin_notice("<span class='danger'>Annihilated [killed_mobs] Living Mobs.</span>", R_DEBUG)
+	admin_notice(span_danger("Annihilated [deleted_atoms] objects."), R_DEBUG)
+	admin_notice(span_danger("Annihilated [killed_mobs] Living Mobs."), R_DEBUG)
 
 //Basically, initialise all of the Atmos machines, as if we just wrenched them down.
 /obj/effect/landmark/engine_loader_pickable/proc/lateload_init()
@@ -79,7 +79,7 @@
 				if(AM.node2)
 					AM.node2.build_network()
 
-	admin_notice("<span class='danger'>Initialised [init_machines] Atmos machines and [init_nodes] Atmos network nodes..</span>", R_DEBUG)
+	admin_notice(span_danger("Initialised [init_machines] Atmos machines and [init_nodes] Atmos network nodes.."), R_DEBUG)
 
 /obj/machinery/computer/pickengine
 	name = "Engine Selector."
@@ -101,13 +101,13 @@
 	if(istype(user, /mob/living/silicon/robot))
 		return attack_hand(user)
 	else
-		user << "<span class='warning'>The network data sent by this machine is encrypted!</span>"
+		user << span_warning("The network data sent by this machine is encrypted!")
 		return
 
 /obj/machinery/computer/pickengine/attack_hand(var/mob/user as mob)
 
 	if(!allowed(user))
-		user << "<span class='warning'>Access Denied.</span>"
+		user << span_warning("Access Denied.")
 		return
 
 	if(..())
@@ -117,19 +117,19 @@
 	user.set_machine(src)
 	var/dat
 
-	dat += "<B>Engine Select console</B><BR>"
+	dat += span_bold("Engine Select console") + "<BR>"
 	dat += "Please select an engine for construction.<BR><HR>"
 //	dat += "Engine autoselect in [time2text(src.lifetime SECONDS, "mm:ss")].<BR>"
 	dat += "WARNING: Selecting an engine will deploy nanobots to construct it. These nanobots will attempt to disassemble anything in their way, including curious engineers!.<BR>"
 
-	dat += "<A href='?src=\ref[src];TESLA=1'>Build Tesla engine</A><BR>"
-	dat += "<A href='?src=\ref[src];SM=1'>Build Supermatter Engine</A><BR>"
-//	dat += "<A href='?src=\ref[src];SINGULO=1'>Build Singularity Engine</A><BR>" //Not enabled because of stability issues.
-	dat += "<A href='?src=\ref[src];RUSTEngine=1'>Build R-UST</A><BR>"
-	dat += "<BR><A href='?src=\ref[src];RANDOM=1'>Build Random Engine</A><BR>"
+	dat += "<A href='byond://?src=\ref[src];TESLA=1'>Build Tesla engine</A><BR>"
+	dat += "<A href='byond://?src=\ref[src];SM=1'>Build Supermatter Engine</A><BR>"
+//	dat += "<A href='byond://?src=\ref[src];SINGULO=1'>Build Singularity Engine</A><BR>" //Not enabled because of stability issues.
+	dat += "<A href='byond://?src=\ref[src];RUSTEngine=1'>Build R-UST</A><BR>"
+	dat += "<BR><A href='byond://?src=\ref[src];RANDOM=1'>Build Random Engine</A><BR>"
 
-	dat += "<A href='?src=\ref[user];mach_close=computer'>Close</A>"
-	user << browse(dat, "window=computer;size=575x450")
+	dat += "<A href='byond://?src=\ref[user];mach_close=computer'>Close</A>"
+	user << browse("<html>[dat]</html>", "window=computer;size=575x450")
 	onclose(user, "computer")
 	return
 
@@ -160,7 +160,7 @@
 		usr.unset_machine()
 
 	add_fingerprint(usr)
-	updateUsrDialog()
+	updateUsrDialog(usr)
 	return
 
 //Take the engine tpe we're building, warn engineering, and pass it to the engine loader.

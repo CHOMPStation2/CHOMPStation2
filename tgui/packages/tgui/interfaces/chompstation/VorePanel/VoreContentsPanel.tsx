@@ -1,20 +1,30 @@
-import { BooleanLike } from 'common/react';
+import { useBackend } from 'tgui/backend';
+import { Button, Image, LabeledList, Stack } from 'tgui-core/components';
+import { BooleanLike } from 'tgui-core/react';
 
-import { useBackend } from '../../../backend';
-import { Button, Flex, LabeledList } from '../../../components';
 import { stats } from './constants';
+import { contentData } from './types';
 
-export const VoreContentsPanel = (props) => {
-  const { act, data } = useBackend<{
-    show_pictures: BooleanLike;
-    icon_overflow: BooleanLike;
-  }>();
-  const { show_pictures, icon_overflow } = data;
-  const { contents, belly, outside = false } = props;
+export const VoreContentsPanel = (props: {
+  contents: contentData[];
+  belly?: string;
+  outside?: BooleanLike;
+  show_pictures: BooleanLike;
+  icon_overflow: BooleanLike;
+}) => {
+  const { act } = useBackend();
+
+  const {
+    contents,
+    belly,
+    outside = false,
+    show_pictures,
+    icon_overflow,
+  } = props;
 
   return (
     <>
-      {(outside && (
+      {outside ? (
         <Button
           textAlign="center"
           fluid
@@ -23,19 +33,20 @@ export const VoreContentsPanel = (props) => {
         >
           All
         </Button>
-      )) ||
-        null}
+      ) : (
+        ''
+      )}
       {(show_pictures && !icon_overflow && (
-        <Flex wrap="wrap" justify="center" align="center">
+        <Stack wrap="wrap" justify="center" align="center">
           {contents.map((thing) => (
-            <Flex.Item key={thing} basis="33%">
+            <Stack.Item key={thing.name} basis="32%">
               <Button
                 width="64px"
                 color={thing.absorbed ? 'purple' : stats[thing.stat]}
                 style={{
-                  'vertical-align': 'middle',
-                  'margin-right': '5px',
-                  'border-radius': '20px',
+                  verticalAlign: 'middle',
+                  marginRight: '5px',
+                  borderRadius: '20px',
                 }}
                 onClick={() =>
                   act(
@@ -47,25 +58,23 @@ export const VoreContentsPanel = (props) => {
                   )
                 }
               >
-                <img
+                <Image
                   src={'data:image/jpeg;base64, ' + thing.icon}
                   width="64px"
                   height="64px"
                   style={{
-                    // This style property has been made obsolete since Internet Explorer 9
-                    // '-ms-interpolation-mode': 'nearest-neighbor',
                     marginLeft: '-5px',
                   }}
                 />
               </Button>
               {thing.name}
-            </Flex.Item>
+            </Stack.Item>
           ))}
-        </Flex>
+        </Stack>
       )) || (
         <LabeledList>
-          {contents.map((thing) => (
-            <LabeledList.Item key={thing} label={thing.name}>
+          {contents.map((thing, i) => (
+            <LabeledList.Item key={i} label={thing.name}>
               <Button
                 fluid
                 mt={-1}

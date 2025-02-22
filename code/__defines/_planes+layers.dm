@@ -71,6 +71,7 @@ What is the naming convention for planes or layers?
 	#define UNDERWATER_LAYER	2.5 // Anything on this layer will render under the water layer.
 	#define WATER_LAYER			3.0 // Layer for water overlays.
 	#define ABOVE_TURF_LAYER	3.1	// Snow and wallmounted/floormounted equipment
+	#define GASFIRE_LAYER		5.05 // Any fires that occur use this layer. CHOMPADD
 #define DECAL_PLANE				-44 // Permanent decals
 	#define DECAL_LAYER			10
 #define DIRTY_PLANE				-43 // Nonpermanent decals
@@ -104,6 +105,8 @@ What is the naming convention for planes or layers?
 
 // Invisible things plane
 #define CLOAKED_PLANE			-15
+
+#define PLANE_CH_STOMACH		-11 //Stomach Plane
 
 // Top plane (in the sense that it's the highest in 'the world' and not a UI element)
 #define ABOVE_PLANE				-10
@@ -160,11 +163,21 @@ What is the naming convention for planes or layers?
 #define PLANE_CH_SPECIAL		23 //Special role icon (revhead or w/e)
 #define PLANE_CH_STATUS_OOC		24 //OOC status hud for spooks
 
+// "Character HUDs", aka HUDs, but not the game's UI. Things like medhuds.
+#define PLANE_CH_HEALTH_VR		26 //Hidden healthbar when at full health
+#define PLANE_CH_STATUS_R		27 //Right-side status icon
+#define PLANE_CH_BACKUP			28 //Backup implant
+#define PLANE_CH_VANTAG			29 //Vore Antag hud
+
 #define PLANE_MESONS			30 //Stuff seen with mesons, like open ceilings. This is 30 for downstreams.
+#define PLANE_JANHUD			31 //Stuff seen with janiHUD. Mostly highlight of dirt.
 
 #define PLANE_ADMIN2			33 //Purely for shenanigans (above lighting)
 
 #define PLANE_BUILDMODE			39 //Things that only show up when you have buildmode on
+
+#define PLANE_AUGMENTED			40 //Augmented-reality plane
+#define PLANE_SOULCATCHER		41 //Soulcatcher
 
 //Fullscreen overlays under inventory
 #define PLANE_FULLSCREEN		90 //Blindness, mesons, druggy, etc
@@ -186,6 +199,10 @@ What is the naming convention for planes or layers?
 #define PLANE_PLAYER_HUD_ITEMS	96 //Separate layer with which to apply colorblindness
 #define PLANE_PLAYER_HUD_ABOVE	97 //Things above the player hud
 #define PLANE_PLAYER_SPLASH		98 //Splash screen //CHOMPEdit
+
+#define RADIAL_BACKGROUND_LAYER 0
+///1000 is an unimportant number, it's just to normalize copied layers
+#define RADIAL_CONTENT_LAYER 1000
 
 #define PLANE_ADMIN3			99 //Purely for shenanigans (above HUD)
 

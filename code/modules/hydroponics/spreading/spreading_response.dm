@@ -1,5 +1,13 @@
-/obj/effect/plant/HasProximity(turf/T, atom/movable/AM, old_loc)
-
+// CHOMPEdit Start
+/obj/effect/plant/HasProximity(turf/T, datum/weakref/WF, old_loc)
+	SIGNAL_HANDLER
+	if(isnull(WF))
+		return
+	var/atom/movable/AM = WF.resolve()
+	if(isnull(AM))
+		log_debug("DEBUG: HasProximity called without reference on [src].")
+		return
+// CHOMPEdit End
 	if(!is_mature() || seed.get_trait(TRAIT_SPREAD) != 2)
 		return
 
@@ -20,9 +28,9 @@
 	. = ..()
 	if(seed.get_trait(TRAIT_SPREAD)==2)
 		if(isturf(old_loc))
-			unsense_proximity(callback = /atom/proc/HasProximity, center = old_loc)
+			unsense_proximity(callback = TYPE_PROC_REF(/atom,HasProximity), center = old_loc) // CHOMPEdit
 		if(isturf(loc))
-			sense_proximity(callback = /atom/proc/HasProximity)
+			sense_proximity(callback = TYPE_PROC_REF(/atom,HasProximity)) // CHOMPEdit
 
 /obj/effect/plant/attack_hand(var/mob/user)
 	manual_unbuckle(user)
@@ -69,23 +77,23 @@
 			for(var/mob/living/L as anything in buckled_mobs)
 				if(!(user in buckled_mobs))
 					L.visible_message(\
-					"<b>\The [user]</b> frees \the [L] from \the [src].",\
-					"<b>\The [user]</b> frees you from \the [src].",\
-					"<span class='warning'>You hear shredding and ripping.</span>")
+					span_infoplain(span_bold("\The [user]") + " frees \the [L] from \the [src]."),\
+					span_infoplain(span_bold("\The [user]") + " frees you from \the [src]."),\
+					span_warning("You hear shredding and ripping."))
 				else
 					L.visible_message(\
-					"<b>\The [L]</b> struggles free of \the [src].",\
-					"<span class='notice'>You untangle \the [src] from around yourself.</span>",\
-					"<span class='warning'>You hear shredding and ripping.</span>")
+					span_infoplain(span_bold("\The [L]") + " struggles free of \the [src]."),\
+					span_notice("You untangle \the [src] from around yourself."),\
+					span_warning("You hear shredding and ripping."))
 				unbuckle()
 		else
 			user.setClickCooldown(user.get_attack_speed())
 			health -= rand(1,5)
 			var/text = pick("rip","tear","pull", "bite", "tug")
 			user.visible_message(\
-			"<span class='warning'>\The [user] [text]s at \the [src].</span>",\
-			"<span class='warning'>You [text] at \the [src].</span>",\
-			"<span class='warning'>You hear shredding and ripping.</span>")
+			span_warning("\The [user] [text]s at \the [src]."),\
+			span_warning("You [text] at \the [src]."),\
+			span_warning("You hear shredding and ripping."))
 			check_health()
 			return
 
@@ -100,15 +108,15 @@
 	//grabbing people
 	if(!victim.anchored && Adjacent(victim) && victim.loc != src.loc)
 		var/can_grab = 1
-		if(istype(victim, /mob/living/carbon/human))
+		if(ishuman(victim))
 			var/mob/living/carbon/human/H = victim
 			if(istype(H.shoes, /obj/item/clothing/shoes/magboots) && (H.shoes.item_flags & NOSLIP))
 				can_grab = 0
 		if(can_grab)
-			src.visible_message("<span class='danger'>Tendrils lash out from \the [src] and drag \the [victim] in!</span>")
+			src.visible_message(span_danger("Tendrils lash out from \the [src] and drag \the [victim] in!"))
 			victim.forceMove(src.loc)
 			buckle_mob(victim)
 			victim.set_dir(pick(cardinal))
-			to_chat(victim, "<span class='danger'>Tendrils [pick("wind", "tangle", "tighten")] around you!</span>")
+			to_chat(victim, span_danger("Tendrils [pick("wind", "tangle", "tighten")] around you!"))
 			victim.Weaken(0.5)
 			seed.do_thorns(victim,src)

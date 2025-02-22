@@ -8,7 +8,7 @@
 	sort_category = "Xenowear"
 	whitelisted = SPECIES_ZADDAT
 	path = /obj/item/clothing/suit/space/void/zaddat/security
-	allowed_roles = list("Head of Security","Detective","Warden","Security Officer")
+	allowed_roles = list(JOB_HEAD_OF_SECURITY,JOB_DETECTIV,JOB_WARDEN,JOB_SECURITY_OFFICER)
 
 /datum/gear/suit/zaddat/engineer
 	display_name = "Zaddat engineer shroud"
@@ -16,7 +16,7 @@
 	path = /obj/item/clothing/suit/space/void/zaddat/engineer
 	sort_category = "Xenowear"
 	whitelisted = SPECIES_ZADDAT
-	allowed_roles = list("Chief Engineer", "Atmospheric Technician", "Station Engineer")
+	allowed_roles = list(JOB_CHIEF_ENGINEER,JOB_ATMOSPHERIC_TECHNICIAN, JOB_ENGINEER)
 
 
 //Added from CHOMP
@@ -65,17 +65,17 @@
 /datum/gear/suit/dept/beltcloak/wrdn
 	display_name = "warden belted cloak (Teshari)"
 	path = /obj/item/clothing/suit/storage/teshari/beltcloak/jobs/wrdn
-	allowed_roles = list("Head of Security","Warden")
+	allowed_roles = list(JOB_HEAD_OF_SECURITY,JOB_WARDEN)
 
 /datum/gear/suit/dept/beltcloak/hos
 	display_name = "Chief of Security belted cloak (Teshari)"
 	path = /obj/item/clothing/suit/storage/teshari/beltcloak/jobs/hos
-	allowed_roles = list("Head of Security")
+	allowed_roles = list(JOB_HEAD_OF_SECURITY)
 
 /datum/gear/suit/dept/beltcloak/jani
 	display_name = "janitor belted cloak (Teshari)"
 	path = /obj/item/clothing/suit/storage/teshari/beltcloak/jobs/jani
-	allowed_roles = list("Janitor")
+	allowed_roles = list(JOB_JANITOR)
 
 /datum/gear/suit/dept/cloak/command/New()
 	..()

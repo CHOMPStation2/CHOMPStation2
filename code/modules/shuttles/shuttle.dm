@@ -295,9 +295,9 @@
 		var/new_grav = 1
 		if(destination.flags & SLANDMARK_FLAG_ZERO_G)
 			var/area/new_area = get_area(destination)
-			new_grav = new_area.has_gravity
+			new_grav = new_area.get_gravity()
 		for(var/area/our_area in shuttle_area)
-			if(our_area.has_gravity != new_grav)
+			if(our_area.get_gravity() != new_grav)
 				our_area.gravitychange(new_grav)
 
 	// TODO - Old code used to throw stuff out of the way instead of squashing.  Should we?
@@ -330,27 +330,26 @@
 					TA.ChangeTurf(get_base_turf_by_area(TA), 1, 1)
 		if(knockdown)
 			for(var/mob/living/M in A)
-				spawn(0)
-					if(M.buckled)
-						to_chat(M, span_red("Sudden acceleration presses you into \the [M.buckled]!"))
-						shake_camera(M, 3, 1)
-					else
-						to_chat(M, span_red("The floor lurches beneath you!"))
-						shake_camera(M, 10, 1)
-						// TODO - tossing?
-						//M.visible_message("<span class='warning'>[M.name] is tossed around by the sudden acceleration!</span>")
-						//M.throw_at_random(FALSE, 4, 1)
-						if(istype(M, /mob/living/carbon))
-							M.Weaken(3)
-							//VOREStation Add
-							if(move_direction)
-								throw_a_mob(M,move_direction)
-							//VOREStation Add End
+				if(M.buckled)
+					to_chat(M, span_red("Sudden acceleration presses you into \the [M.buckled]!"))
+					shake_camera(M, 3, 1)
+				else
+					to_chat(M, span_red("The floor lurches beneath you!"))
+					shake_camera(M, 10, 1)
+					// TODO - tossing?
+					//M.visible_message(span_warning("[M.name] is tossed around by the sudden acceleration!"))
+					//M.throw_at_random(FALSE, 4, 1)
+					if(istype(M, /mob/living/carbon))
+						M.Weaken(3)
+						//VOREStation Add
+						if(move_direction)
+							throw_a_mob(M,move_direction)
+						//VOREStation Add End
 		// We only need to rebuild powernets for our cables.  No need to check machines because they are on top of cables.
 		for(var/obj/structure/cable/C in A)
 			powernets |= C.powernet
 		//CHOMPEdit Begin
-		for(var/obj/item/device/radio/intercom/I in A)
+		for(var/obj/item/radio/intercom/I in A)
 			radios |= I
 		//CHOMPEdit End
 
@@ -382,7 +381,7 @@
 		qdel(P)
 	SSmachines.setup_powernets_for_cables(cables)
 	//CHOMPEdit Begin
-	for(var/obj/item/device/radio/intercom/I in radios)
+	for(var/obj/item/radio/intercom/I in radios)
 		if(istype(I))
 			I.update_broadcast_tiles()
 	//CHOMPEdit End

@@ -49,7 +49,7 @@
 "am" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/spider,
-/obj/item/weapon/material/shard,
+/obj/item/material/shard,
 /turf/simulated/floor/tiled/techfloor/bor4,
 /area/submap/virgo2/BoomBase)
 "an" = (
@@ -65,7 +65,7 @@
 /area/submap/virgo2/BoomBase)
 "aq" = (
 /obj/machinery/portable_atmospherics/canister/empty/phoron,
-/obj/item/weapon/material/shard,
+/obj/item/material/shard,
 /turf/simulated/floor/tiled/techfloor/bor4,
 /area/submap/virgo2/BoomBase)
 "ar" = (
@@ -73,7 +73,7 @@
 /turf/simulated/floor/tiled/techfloor/bor4,
 /area/submap/virgo2/BoomBase)
 "as" = (
-/obj/item/weapon/material/shard,
+/obj/item/material/shard,
 /turf/simulated/floor/plating/bor4,
 /area/submap/virgo2/BoomBase)
 "at" = (
@@ -105,8 +105,8 @@
 "az" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/table/standard,
-/obj/item/weapon/tank/phoron,
-/obj/item/weapon/fuel_assembly/phoron,
+/obj/item/tank/phoron,
+/obj/item/fuel_assembly/phoron,
 /turf/simulated/floor/tiled/techfloor/bor4,
 /area/submap/virgo2/BoomBase)
 "aA" = (
@@ -119,7 +119,7 @@
 /turf/space,
 /area/submap/virgo2/BoomBase)
 "aC" = (
-/obj/item/weapon/material/shard,
+/obj/item/material/shard,
 /turf/simulated/floor/tiled/techfloor/bor4,
 /area/submap/virgo2/BoomBase)
 "aD" = (
@@ -153,16 +153,16 @@
 /turf/simulated/floor/plating/bor4,
 /area/submap/virgo2/BoomBase)
 "aK" = (
-/obj/item/device/transfer_valve,
+/obj/item/transfer_valve,
 /turf/space,
 /area/submap/virgo2/BoomBase)
 "aL" = (
-/obj/item/weapon/material/shard,
+/obj/item/material/shard,
 /turf/space,
 /area/submap/virgo2/BoomBase)
 "aM" = (
 /obj/effect/spider/stickyweb,
-/obj/item/weapon/material/shard,
+/obj/item/material/shard,
 /turf/space,
 /area/submap/virgo2/BoomBase)
 "aY" = (

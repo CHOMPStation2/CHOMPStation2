@@ -8,10 +8,7 @@
 
 var/global/datum/controller/game_controller/master_controller //Set in world.New()
 
-var/global/controller_iteration = 0
 var/global/last_tick_duration = 0
-
-var/global/pipe_processing_killed = 0
 
 /datum/controller/game_controller
 	var/list/shuttle_list	                    // For debugging and VV
@@ -28,7 +25,7 @@ var/global/pipe_processing_killed = 0
 		job_master = new /datum/controller/occupations()
 		job_master.SetupOccupations()
 		job_master.LoadJobs("config/jobs.txt")
-		admin_notice("<span class='danger'>Job setup complete</span>", R_DEBUG)
+		admin_notice(span_danger("Job setup complete"), R_DEBUG)
 
 	if(!syndicate_code_phrase)		syndicate_code_phrase	= generate_code_phrase()
 	if(!syndicate_code_response)	syndicate_code_response	= generate_code_phrase()
@@ -40,12 +37,12 @@ var/global/pipe_processing_killed = 0
 	// SetupXenoarch() - Moved to SSxenoarch
 
 	transfer_controller = new
-	admin_notice("<span class='danger'>Initializations complete.</span>", R_DEBUG)
+	admin_notice(span_danger("Initializations complete."), R_DEBUG)
 
 // #if UNIT_TEST
-// #define CHECK_SLEEP_MASTER // For unit tests we don't care about a smooth lobby screen experience. We care about speed.
+// # define CHECK_SLEEP_MASTER // For unit tests we don't care about a smooth lobby screen experience. We care about speed.
 // #else
-// #define CHECK_SLEEP_MASTER if(++initialized_objects > 500) { initialized_objects=0;sleep(world.tick_lag); }
+// # define CHECK_SLEEP_MASTER if(++initialized_objects > 500) { initialized_objects=0;sleep(world.tick_lag); }
 // #endif
 
 /datum/controller/game_controller/proc/setup_objects()

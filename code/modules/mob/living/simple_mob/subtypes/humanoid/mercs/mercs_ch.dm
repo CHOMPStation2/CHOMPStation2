@@ -69,6 +69,10 @@
 	icon = 'modular_chomp/icons/mob/animal_ch.dmi'
 	catalogue_data = list(/datum/category_item/catalogue/fauna/mercenary/human)
 
+/mob/living/simple_mob/humanoid/merc/Initialize()
+	. = ..()
+	loot_list += list(/obj/item/salvage/loot/syndicate = 10)
+
 /mob/living/simple_mob/humanoid/merc/ranged
 	desc = "A tough looking individual armed with an pistol."
 
@@ -96,7 +100,7 @@
 	icon_living = "syndicateranged_veteran"
 	projectiletype = /obj/item/projectile/bullet/rifle/a762
 	projectilesound = 'sound/weapons/Gunshot_heavy.ogg'
-	loot_list = list(/obj/item/weapon/gun/projectile/garand = 100)
+	loot_list = list(/obj/item/gun/projectile/garand = 100)
 	reload_max = 8
 	reload_time = 2 // It takes a bit to jam a stripper clip into the rifle.
 
@@ -108,7 +112,7 @@
 	icon_living = "syndicate_handcannon"
 	projectiletype = /obj/item/projectile/bullet/pistol/strong
 	projectilesound = 'sound/weapons/Gunshot_deagle.ogg'
-	loot_list = list(/obj/item/weapon/gun/projectile/deagle = 100)
+	loot_list = list(/obj/item/gun/projectile/deagle = 100)
 	needs_reload = TRUE
 	reload_max = 7		// Deagle Reload
 
@@ -132,7 +136,7 @@
 	armor = list(melee = 60, bullet = 50, laser = 30, energy = 15, bomb = 35, bio = 100, rad = 100)	// Same armor as their voidsuit.
 	base_attack_cooldown = 5 // Two attacks a second or so.
 	reload_max = 20
-	loot_list = list(/obj/item/weapon/gun/projectile/automatic/c20r = 100)
+	loot_list = list(/obj/item/gun/projectile/automatic/c20r = 100)
 
 //Combat Shotgun Merc
 /mob/living/simple_mob/humanoid/merc/ranged/space/shotgun
@@ -145,7 +149,7 @@
 	reload_time = 2 SECONDS //Takes a While to load all those shells.
 	projectiletype = /obj/item/projectile/bullet/pellet/shotgun		// Buckshot
 	projectilesound = 'sound/weapons/Gunshot_shotgun.ogg'
-	loot_list = list(/obj/item/weapon/gun/projectile/shotgun/pump/combat = 100)
+	loot_list = list(/obj/item/gun/projectile/shotgun/pump/combat = 100)
 
 //Auto-Shotgun Space Merc
 /mob/living/simple_mob/humanoid/merc/ranged/space/shotgun/auto
@@ -157,7 +161,7 @@
 	reload_max = 24
 	projectiletype = /obj/item/projectile/bullet/pellet/shotgun		// Buckshot
 	projectilesound = 'sound/weapons/Gunshot_shotgun.ogg'
-	loot_list = list(/obj/item/weapon/gun/projectile/automatic/as24 = 100)
+	loot_list = list(/obj/item/gun/projectile/automatic/as24 = 100)
 	ai_holder_type = /datum/ai_holder/simple_mob/merc/ranged/suppressor
 
 //Machine Gun Merc
@@ -170,7 +174,7 @@
 	reload_max = 50
 	projectiletype = /obj/item/projectile/bullet/rifle/a545
 	projectilesound = 'sound/weapons/Gunshot_light.ogg'
-	loot_list = list(/obj/item/weapon/gun/projectile/automatic/l6_saw = 100)
+	loot_list = list(/obj/item/gun/projectile/automatic/l6_saw = 100)
 	ai_holder_type = /datum/ai_holder/simple_mob/merc/ranged/suppressor
 
 //Tommy-Las Merc
@@ -184,7 +188,7 @@
 	reload_time = 0.5  // Meant to Simulate controlled Supressive Bursts
 	projectiletype = /obj/item/projectile/beam/weaklaser
 	projectilesound = 'sound/weapons/Laser.ogg'
-	loot_list = list(/obj/item/weapon/gun/energy/tommylaser = 100)
+	loot_list = list(/obj/item/gun/energy/tommylaser = 100)
 	ai_holder_type = /datum/ai_holder/simple_mob/merc/ranged/suppressor
 
 /mob/living/simple_mob/humanoid/merc/ranged/space/fal
@@ -194,7 +198,7 @@
 	icon_living = "syndicatespace-commando"
 	projectiletype = /obj/item/projectile/bullet/rifle/a762
 	projectilesound = 'sound/weapons/Gunshot_heavy.ogg'
-	loot_list = list(/obj/item/weapon/gun/projectile/automatic/fal = 100)
+	loot_list = list(/obj/item/gun/projectile/automatic/fal = 100)
 	reload_max = 20
 
 // suppressors are just assholes and are intended to be a piss poor experience for everyone on both sides
@@ -245,25 +249,25 @@
 	icon_living = "syndi-ranged-space-sup-elite"
 	armor = list(melee = 80, bullet = 70, laser = 55, energy = 15, bomb = 80, bio = 100, rad = 100) // see code for military hardsuit
 	projectiletype = /obj/item/projectile/bullet/pistol/medium/ap/suppressor/turbo // fuck it, fast bullets
-	grenade_type = /obj/item/weapon/grenade/shooter/rubber // don't group up
+	grenade_type = /obj/item/grenade/shooter/rubber // don't group up
 	grenade_timer = 30 // well, look what you've done, you've grouped up
 // 	deathnade_path = /obj/item/grenade/flashbang/stingbang/shredbang // REALLY don't group up
 // being Actual Professionals, they have better (read: player-level) blocking chances
 /mob/living/simple_mob/humanoid/merc/ranged/space/suppressor/attackby(var/obj/item/O, var/mob/user)
 	if(O.force)
 		if(prob(50))
-			visible_message("<span class='danger'>\The [src] blocks \the [O] with its shield!</span>")
+			visible_message(span_danger("\The [src] blocks \the [O] with its shield!"))
 			if(user)
 				ai_holder.react_to_attack(user)
 			return
 		else
 			..()
 	else
-		visible_message("<span class='warning'>\The [user] gently taps [src] with \the [O].</span>")
+		visible_message(span_warning("\The [user] gently taps [src] with \the [O]."))
 /mob/living/simple_mob/humanoid/merc/ranged/space/suppressor/bullet_act(var/obj/item/projectile/Proj)
 	if(!Proj)	return
 	if(prob(50))
-		visible_message("<span class='warning'>[src] blocks [Proj] with its shield!</span>")
+		visible_message(span_warning("[src] blocks [Proj] with its shield!"))
 		if(Proj.firer)
 			ai_holder.react_to_attack(Proj.firer)
 		return
@@ -325,7 +329,7 @@
 	minbodytemp = 0
 
 	corpse = /obj/effect/landmark/mobcorpse/vox/pirate
-	loot_list = list(/obj/item/weapon/gun/projectile/shotgun/pump/rifle/vox_hunting = 100,
+	loot_list = list(/obj/item/gun/projectile/shotgun/pump/rifle/vox_hunting = 100,
 					/obj/item/ammo_magazine/clip/c762 = 30,
 					/obj/item/ammo_magazine/clip/c762 = 30
 					)
@@ -369,26 +373,26 @@
 
 	ai_holder_type = /datum/ai_holder/simple_mob/melee/evasive
 	corpse = /obj/effect/landmark/mobcorpse/vox/boarder_m
-	loot_list = list(/obj/item/weapon/melee/energy/sword = 100)
+	loot_list = list(/obj/item/melee/energy/sword = 100)
 
 // They're good with the swords? I dunno. I like the idea they can deflect.
 /mob/living/simple_mob/humanoid/merc/voxpirate/boarder/attackby(var/obj/item/O, var/mob/user)
 	if(O.force)
 		if(prob(20))
-			visible_message("<span class='danger'>\The [src] blocks \the [O] with its sword!</span>")
+			visible_message(span_danger("\The [src] blocks \the [O] with its sword!"))
 			if(user)
 				ai_holder.react_to_attack(user)
 			return
 		else
 			..()
 	else
-		to_chat(user, "<span class='warning'>This weapon is ineffective, it does no damage.</span>")
-		visible_message("<span class='warning'>\The [user] gently taps [src] with \the [O].</span>")
+		to_chat(user, span_warning("This weapon is ineffective, it does no damage."))
+		visible_message(span_warning("\The [user] gently taps [src] with \the [O]."))
 
 /mob/living/simple_mob/humanoid/merc/voxpirate/boarder/bullet_act(var/obj/item/projectile/Proj)
 	if(!Proj)	return
 	if(prob(35))
-		visible_message("<span class='warning'>[src] blocks [Proj] with its sword!</span>")
+		visible_message(span_warning("[src] blocks [Proj] with its sword!"))
 		if(Proj.firer)
 			ai_holder.react_to_attack(Proj.firer)
 		return
@@ -412,7 +416,7 @@
 
 	ai_holder_type = /datum/ai_holder/simple_mob/ranged/aggressive
 	corpse = /obj/effect/landmark/mobcorpse/vox/boarder_r
-	loot_list = list(/obj/item/weapon/gun/projectile/shotgun/pump/combat = 100,
+	loot_list = list(/obj/item/gun/projectile/shotgun/pump/combat = 100,
 					/obj/item/ammo_magazine/m12gdrum = 30,
 					/obj/item/ammo_magazine/m12gdrum = 30
 					)
@@ -443,7 +447,7 @@
 
 	ai_holder_type = /datum/ai_holder/simple_mob/ranged/kiting
 	corpse = /obj/effect/landmark/mobcorpse/vox/boarder_t
-	loot_list = list(/obj/item/weapon/gun/energy/ionrifle)
+	loot_list = list(/obj/item/gun/energy/ionrifle)
 
 	needs_reload = TRUE
 	reload_max = 25 //Suppressive tech weapon.
@@ -475,7 +479,7 @@
 
 	ai_holder_type = /datum/ai_holder/simple_mob/destructive
 	corpse = /obj/effect/landmark/mobcorpse/vox/suppressor
-	loot_list = list(/obj/item/weapon/gun/energy/sonic = 100)
+	loot_list = list(/obj/item/gun/energy/sonic = 100)
 
 	base_attack_cooldown = 5 // Two attacks a second or so.
 	needs_reload = TRUE
@@ -507,7 +511,7 @@
 
 	ai_holder_type = /datum/ai_holder/simple_mob/destructive
 	corpse = /obj/effect/landmark/mobcorpse/vox/captain
-	loot_list = list(/obj/item/weapon/gun/energy/darkmatter = 100)
+	loot_list = list(/obj/item/gun/energy/darkmatter = 100)
 
 	needs_reload = TRUE
 	reload_max = 15 //Other Vox should be carrying ammo.

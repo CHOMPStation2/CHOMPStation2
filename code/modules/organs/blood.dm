@@ -35,17 +35,17 @@ var/const/CE_STABLE_THRESHOLD = 0.5
 		return
 
 	if(!amt)
-		vessel.add_reagent("blood",species.blood_volume)
+		vessel.add_reagent(REAGENT_ID_BLOOD,species.blood_volume)
 	else
-		vessel.add_reagent("blood", clamp(amt, 1, species.blood_volume))
+		vessel.add_reagent(REAGENT_ID_BLOOD, clamp(amt, 1, species.blood_volume))
 
 
 //Resets blood data
 /mob/living/carbon/human/proc/fixblood()
 	for(var/datum/reagent/blood/B in vessel.reagent_list)
-		if(B.id == "blood")
+		if(B.id == REAGENT_ID_BLOOD)
 			B.data = list(	"donor"=src,"viruses"=null,"species"=species.name,"blood_DNA"=dna.unique_enzymes,"blood_colour"= species.get_blood_colour(src),"blood_type"=dna.b_type,	\
-							"resistances"=null,"trace_chem"=null, "virus2" = null, "antibodies" = list(), "blood_name" = species.get_blood_name(src))
+							"resistances"=null,"trace_chem"=null, "virus2" = null, REAGENT_ID_ANTIBODIES = list(), "blood_name" = species.get_blood_name(src))
 
 			if(isSynthetic())
 				B.data["species"] = "synthetic"
@@ -63,7 +63,7 @@ var/const/CE_STABLE_THRESHOLD = 0.5
 
 	if(stat != DEAD && bodytemperature >= 170)	//Dead or cryosleep people do not pump the blood.
 
-		var/blood_volume_raw = vessel.get_reagent_amount("blood")
+		var/blood_volume_raw = vessel.get_reagent_amount(REAGENT_ID_BLOOD)
 		var/blood_volume = round((blood_volume_raw/species.blood_volume)*100) // Percentage.
 
 		//Blood regeneration if there is some space
@@ -85,7 +85,10 @@ var/const/CE_STABLE_THRESHOLD = 0.5
 		if(species && should_have_organ(O_HEART))
 			var/obj/item/organ/internal/heart/heart = internal_organs_by_name[O_HEART]
 
-			if(!heart)
+			if(has_modifier_of_type(/datum/modifier/bloodpump))
+				blood_volume_raw *= 1
+				blood_volume *= 1
+			else if(!heart)
 				blood_volume_raw = 0
 				blood_volume = 0
 			else if(heart.is_broken())
@@ -221,21 +224,26 @@ var/const/CE_STABLE_THRESHOLD = 0.5
 	if(!amt)
 		return 0
 
-	var/current_blood = vessel.get_reagent_amount("blood")
+	//CHOMNPAdd Start, deathbringers for example delete those before the fire damage is calculated
+	if(!vessel)
+		return 0
+	//CHOMPAdd End
+
+	var/current_blood = vessel.get_reagent_amount(REAGENT_ID_BLOOD)
 	if(current_blood < BLOOD_MINIMUM_STOP_PROCESS)
 		return 0 //We stop processing under 3 units of blood because apparently weird shit can make it overflowrandomly.
 
 	if(amt > current_blood)
 		amt = current_blood - 2	// Bit of a safety net; it's impossible to add blood if there's not blood already in the vessel.
 
-	return vessel.remove_reagent("blood",amt)
+	return vessel.remove_reagent(REAGENT_ID_BLOOD,amt)
 
 /****************************************************
 				BLOOD TRANSFERS
 ****************************************************/
 
 //Gets blood from mob to the container, preserving all data in it.
-/mob/living/carbon/proc/take_blood(obj/item/weapon/reagent_containers/container, var/amount)
+/mob/living/carbon/proc/take_blood(obj/item/reagent_containers/container, var/amount)
 
 	var/datum/reagent/B = get_blood(container.reagents)
 	if(!B)
@@ -245,15 +253,24 @@ var/const/CE_STABLE_THRESHOLD = 0.5
 
 	//set reagent data
 	B.data["donor"] = src
-	if (!B.data["virus2"])
-		B.data["virus2"] = list()
-	B.data["virus2"] |= virus_copylist(src.virus2)
-	B.data["antibodies"] = src.antibodies
+	if(!B.data["viruses"])
+		B.data["viruses"] = list()
+
+	for(var/datum/disease/D in GetViruses())
+		if(D.spread_flags & SPECIAL)
+			continue
+		B.data["viruses"] |= D.Copy()
+
+	if(!B.data["resistances"])
+		B.data["resistances"] = list()
+
+	if(B.data["resistances"])
+		B.data["resistances"] |= GetResistances()
 	B.data["blood_DNA"] = copytext(src.dna.unique_enzymes,1,0)
 	B.data["blood_type"] = copytext(src.dna.b_type,1,0)
 
 	// Putting this here due to return shenanigans.
-	if(istype(src,/mob/living/carbon/human))
+	if(ishuman(src))
 		var/mob/living/carbon/human/H = src
 		B.data["blood_colour"] = H.species.get_blood_colour(H)
 		B.color = B.data["blood_colour"]
@@ -266,12 +283,12 @@ var/const/CE_STABLE_THRESHOLD = 0.5
 	return B
 
 //For humans, blood does not appear from blue, it comes from vessels.
-/mob/living/carbon/human/take_blood(obj/item/weapon/reagent_containers/container, var/amount)
+/mob/living/carbon/human/take_blood(obj/item/reagent_containers/container, var/amount)
 
 	if(!should_have_organ(O_HEART))
 		return null
 
-	if(vessel.get_reagent_amount("blood") < max(amount, BLOOD_MINIMUM_STOP_PROCESS))
+	if(vessel.get_reagent_amount(REAGENT_ID_BLOOD) < max(amount, BLOOD_MINIMUM_STOP_PROCESS))
 		return null
 
 	. = ..()
@@ -281,12 +298,16 @@ var/const/CE_STABLE_THRESHOLD = 0.5
 /mob/living/carbon/proc/inject_blood(var/datum/reagent/blood/injected, var/amount)
 	if (!injected || !istype(injected))
 		return
-	var/list/sniffles = virus_copylist(injected.data["virus2"])
+	var/list/sniffles = injected.data["viruses"]
 	for(var/ID in sniffles)
-		var/datum/disease2/disease/sniffle = sniffles[ID]
-		infect_virus2(src,sniffle,1)
-	if (injected.data["antibodies"] && prob(5))
-		antibodies |= injected.data["antibodies"]
+		var/datum/disease/D = ID
+		if((D.spread_flags & SPECIAL) || (D.spread_flags & NON_CONTAGIOUS)) // You can't put non-contagius diseases in blood, but just in case
+			continue
+		ContractDisease(D)
+	if (injected.data["resistances"] && prob(5))
+		antibodies |= injected.data["resistances"]
+	if (injected.data[REAGENT_ID_ANTIBODIES] && prob(5))
+		antibodies |= injected.data[REAGENT_ID_ANTIBODIES]
 	var/list/chems = list()
 	chems = params2list(injected.data["trace_chem"])
 	for(var/C in chems)
@@ -297,7 +318,7 @@ var/const/CE_STABLE_THRESHOLD = 0.5
 /mob/living/carbon/human/inject_blood(var/datum/reagent/blood/injected, var/amount)
 
 	if(!should_have_organ(O_HEART))
-		reagents.add_reagent("blood", amount, injected.data)
+		reagents.add_reagent(REAGENT_ID_BLOOD, amount, injected.data)
 		reagents.update_total()
 		return
 
@@ -315,7 +336,7 @@ var/const/CE_STABLE_THRESHOLD = 0.5
 			log_debug("Failed to re-initialize blood datums on [src]!")
 			return
 		if(vessel.total_volume < species.blood_volume)
-			vessel.add_reagent("blood", species.blood_volume - vessel.total_volume)
+			vessel.add_reagent(REAGENT_ID_BLOOD, species.blood_volume - vessel.total_volume)
 		else if(vessel.total_volume > species.blood_volume)
 			vessel.maximum_volume = species.blood_volume
 		fixblood()
@@ -326,10 +347,10 @@ var/const/CE_STABLE_THRESHOLD = 0.5
 
 
 	if(blood_incompatible(injected.data["blood_type"],our.data["blood_type"],injected.data["species"],our.data["species"]) )
-		reagents.add_reagent("toxin",amount * 0.5)
+		reagents.add_reagent(REAGENT_ID_TOXIN,amount * 0.5)
 		reagents.update_total()
 	else
-		vessel.add_reagent("blood", amount, injected.data)
+		vessel.add_reagent(REAGENT_ID_BLOOD, amount, injected.data)
 		vessel.update_total()
 	..()
 
@@ -379,7 +400,7 @@ var/const/CE_STABLE_THRESHOLD = 0.5
 	var/turf/T = get_turf(target)
 	var/synth = 0
 
-	if(istype(source,/mob/living/carbon/human))
+	if(ishuman(source))
 		var/mob/living/carbon/human/M = source
 		if(M.isSynthetic()) synth = 1
 		source = M.get_blood(M.vessel)
@@ -425,9 +446,11 @@ var/const/CE_STABLE_THRESHOLD = 0.5
 			B.blood_DNA[source.data["blood_DNA"]] = "O+"
 
 	// Update virus information.
-	if(source.data["virus2"])
-		B.virus2 = virus_copylist(source.data["virus2"])
+	if(source.data["viruses"])
+		B.viruses = source.data["viruses"]
 
 	B.fluorescent  = 0
 	B.invisibility = 0
 	return B
+
+#undef BLOOD_MINIMUM_STOP_PROCESS

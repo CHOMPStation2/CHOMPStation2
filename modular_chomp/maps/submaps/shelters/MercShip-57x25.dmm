@@ -122,8 +122,7 @@
 	id = "reactorblastalien";
 	name = "Reactor Blast Doors";
 	pixel_x = -25;
-	pixel_y = 6;
-	req_access = null
+	pixel_y = 6
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/survivalpod/superpose/MercShip)
@@ -138,10 +137,7 @@
 	dir = 8
 	},
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8";
-	dir = 1
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/survivalpod/superpose/MercShip)
@@ -161,7 +157,7 @@
 /area/survivalpod/superpose/MercShip)
 "bw" = (
 /obj/structure/window/reinforced/survival_pod,
-/obj/item/weapon/clipboard,
+/obj/item/clipboard,
 /obj/structure/table/hardwoodtable,
 /turf/simulated/shuttle/floor/voidcraft,
 /area/survivalpod/superpose/MercShip)
@@ -447,8 +443,6 @@
 	pixel_x = 23
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -470,7 +464,7 @@
 /area/survivalpod/superpose/MercShip)
 "gt" = (
 /obj/structure/bed/double/padded,
-/obj/item/weapon/bedsheet/rddouble,
+/obj/item/bedsheet/rddouble,
 /turf/simulated/floor/carpet,
 /area/survivalpod/superpose/MercShip)
 "gz" = (
@@ -478,7 +472,6 @@
 	dir = 4
 	},
 /obj/structure/cable/yellow{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /turf/simulated/floor,
@@ -528,13 +521,9 @@
 /area/survivalpod/superpose/MercShip)
 "hu" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor,
@@ -593,7 +582,7 @@
 /area/survivalpod/superpose/MercShip)
 "iw" = (
 /obj/structure/bed/double/padded,
-/obj/item/weapon/bedsheet/rddouble,
+/obj/item/bedsheet/rddouble,
 /turf/simulated/floor/carpet/blue,
 /area/survivalpod/superpose/MercShip)
 "iy" = (
@@ -739,12 +728,12 @@
 /obj/random/toolbox,
 /obj/random/toolbox,
 /obj/random/toolbox,
-/obj/item/weapon/storage/toolbox/syndicate/powertools,
-/obj/item/weapon/storage/toolbox/syndicate,
+/obj/item/storage/toolbox/syndicate/powertools,
+/obj/item/storage/toolbox/syndicate,
 /obj/fiftyspawner/phoronrglass,
 /obj/fiftyspawner/phoronrglass,
-/obj/item/weapon/storage/briefcase/inflatable,
-/obj/item/weapon/storage/briefcase/inflatable,
+/obj/item/storage/briefcase/inflatable,
+/obj/item/storage/briefcase/inflatable,
 /turf/simulated/shuttle/floor/yellow,
 /area/survivalpod/superpose/MercShip)
 "jm" = (
@@ -777,10 +766,7 @@
 	dir = 4
 	},
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8";
-	dir = 1
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/survivalpod/superpose/MercShip)
@@ -914,10 +900,10 @@
 	},
 /obj/item/stack/cable_coil/green,
 /obj/item/stack/cable_coil/blue,
-/obj/item/weapon/storage/briefcase/inflatable,
-/obj/item/weapon/storage/briefcase/inflatable,
-/obj/item/weapon/storage/briefcase/inflatable,
-/obj/item/weapon/storage/briefcase/inflatable,
+/obj/item/storage/briefcase/inflatable,
+/obj/item/storage/briefcase/inflatable,
+/obj/item/storage/briefcase/inflatable,
+/obj/item/storage/briefcase/inflatable,
 /obj/structure/closet/alien,
 /turf/simulated/floor/tiled/techfloor,
 /area/survivalpod/superpose/MercShip)
@@ -947,10 +933,7 @@
 	dir = 8
 	},
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8";
-	dir = 1
+	icon_state = "4-8"
 	},
 /turf/simulated/shuttle/floor/voidcraft,
 /area/survivalpod/superpose/MercShip)
@@ -958,23 +941,21 @@
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/effect/floor_decal/industrial/warning,
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor,
 /area/survivalpod/superpose/MercShip)
 "mv" = (
 /obj/structure/table/darkglass,
-/obj/item/weapon/reagent_containers/glass/beaker/bluespace,
-/obj/item/weapon/reagent_containers/glass/beaker/bluespace{
+/obj/item/reagent_containers/glass/beaker/bluespace,
+/obj/item/reagent_containers/glass/beaker/bluespace{
 	pixel_x = -7
 	},
-/obj/item/weapon/storage/belt/medical/alien,
-/obj/item/weapon/storage/belt/medical/alien{
+/obj/item/storage/belt/medical/alien,
+/obj/item/storage/belt/medical/alien{
 	pixel_y = 6
 	},
-/obj/item/weapon/storage/firstaid/surgery,
+/obj/item/storage/firstaid/surgery,
 /turf/simulated/shuttle/floor/white,
 /area/survivalpod/superpose/MercShip)
 "my" = (
@@ -991,9 +972,9 @@
 /obj/structure/closet/alien,
 /obj/item/clothing/suit/space/void/autolok,
 /obj/item/clothing/suit/space/void/autolok,
-/obj/item/weapon/tank/emergency/oxygen/double,
-/obj/item/weapon/tank/emergency/oxygen/double,
-/obj/item/weapon/storage/toolbox/emergency,
+/obj/item/tank/emergency/oxygen/double,
+/obj/item/tank/emergency/oxygen/double,
+/obj/item/storage/toolbox/emergency,
 /turf/simulated/shuttle/floor/yellow,
 /area/survivalpod/superpose/MercShip)
 "mT" = (
@@ -1005,96 +986,96 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/survivalpod/superpose/MercShip)
 "nj" = (
-/obj/item/weapon/tape_roll,
+/obj/item/tape_roll,
 /obj/item/sticky_pad/random,
-/obj/item/weapon/pen/blue,
-/obj/item/weapon/pen/blue,
+/obj/item/pen/blue,
+/obj/item/pen/blue,
 /obj/item/fulton_core,
 /obj/item/fulton_core,
 /obj/item/extraction_pack,
 /obj/item/extraction_pack,
 /obj/item/modular_computer/laptop/preset/custom_loadout/standard,
-/obj/item/weapon/pickaxe/hand,
-/obj/item/device/flashlight/color/yellow,
-/obj/item/device/flashlight/color/orange,
-/obj/item/device/threadneedle,
-/obj/item/device/radio,
-/obj/item/device/radio,
-/obj/item/device/radio,
-/obj/item/weapon/extinguisher/mini,
-/obj/item/weapon/extinguisher/mini,
-/obj/item/weapon/flame/lighter/zippo,
-/obj/item/weapon/flame/lighter/zippo,
-/obj/item/device/flashlight/lantern,
+/obj/item/pickaxe/hand,
+/obj/item/flashlight/color/yellow,
+/obj/item/flashlight/color/orange,
+/obj/item/threadneedle,
+/obj/item/radio,
+/obj/item/radio,
+/obj/item/radio,
+/obj/item/extinguisher/mini,
+/obj/item/extinguisher/mini,
+/obj/item/flame/lighter/zippo,
+/obj/item/flame/lighter/zippo,
+/obj/item/flashlight/lantern,
 /obj/random/soap,
 /obj/random/soap,
-/obj/item/weapon/towel/random,
-/obj/item/weapon/towel/random,
+/obj/item/towel/random,
+/obj/item/towel/random,
 /obj/item/bodybag/cryobag,
 /obj/item/bodybag/cryobag,
-/obj/item/weapon/storage/pill_bottle/spaceacillin,
-/obj/item/weapon/storage/pill_bottle/antitox,
-/obj/item/device/healthanalyzer,
-/obj/item/weapon/storage/firstaid/regular,
-/obj/item/weapon/storage/firstaid/o2,
-/obj/item/device/fbp_backup_cell,
-/obj/item/device/fbp_backup_cell,
+/obj/item/storage/pill_bottle/spaceacillin,
+/obj/item/storage/pill_bottle/antitox,
+/obj/item/healthanalyzer,
+/obj/item/storage/firstaid/regular,
+/obj/item/storage/firstaid/o2,
+/obj/item/fbp_backup_cell,
+/obj/item/fbp_backup_cell,
 /obj/item/stack/nanopaste,
-/obj/item/device/suit_cooling_unit/emergency,
-/obj/item/device/suit_cooling_unit/emergency,
-/obj/item/weapon/reagent_containers/hypospray/autoinjector/biginjector/clotting,
-/obj/item/weapon/reagent_containers/hypospray/autoinjector/biginjector/clotting,
-/obj/item/weapon/storage/toolbox/brass,
-/obj/item/weapon/storage/box/survival/space,
-/obj/item/weapon/storage/box/survival/space,
-/obj/item/weapon/storage/box/survival/space,
-/obj/item/weapon/storage/pill_bottle/dice_nerd,
-/obj/item/weapon/storage/box/flare,
-/obj/item/weapon/storage/box/khcrystal,
-/obj/item/weapon/storage/box/khcrystal,
-/obj/item/weapon/storage/briefcase/inflatable,
+/obj/item/suit_cooling_unit/emergency,
+/obj/item/suit_cooling_unit/emergency,
+/obj/item/reagent_containers/hypospray/autoinjector/biginjector/clotting,
+/obj/item/reagent_containers/hypospray/autoinjector/biginjector/clotting,
+/obj/item/storage/toolbox/brass,
+/obj/item/storage/box/survival/space,
+/obj/item/storage/box/survival/space,
+/obj/item/storage/box/survival/space,
+/obj/item/storage/pill_bottle/dice_nerd,
+/obj/item/storage/box/flare,
+/obj/item/storage/box/khcrystal,
+/obj/item/storage/box/khcrystal,
+/obj/item/storage/briefcase/inflatable,
 /obj/item/stack/marker_beacon/ten,
-/obj/item/device/starcaster_news,
-/obj/item/device/mapping_unit,
-/obj/item/weapon/storage/box/dosimeter,
-/obj/item/device/gps,
-/obj/item/device/gps,
-/obj/item/weapon/cell/device/hyper,
-/obj/item/weapon/cell/device/hyper,
-/obj/item/weapon/cell/device/hyper,
-/obj/item/device/pda,
-/obj/item/device/pda,
-/obj/item/weapon/card/id/external,
-/obj/item/weapon/card/id/external,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
-/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
-/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
-/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
-/obj/item/weapon/gun/energy/locked/phasegun/pistol,
-/obj/item/weapon/gun/energy/locked/phasegun,
-/obj/item/weapon/cell/device/weapon{
+/obj/item/starcaster_news,
+/obj/item/mapping_unit,
+/obj/item/storage/box/dosimeter,
+/obj/item/gps,
+/obj/item/gps,
+/obj/item/cell/device/hyper,
+/obj/item/cell/device/hyper,
+/obj/item/cell/device/hyper,
+/obj/item/pda,
+/obj/item/pda,
+/obj/item/card/id/external,
+/obj/item/card/id/external,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/gun/energy/locked/phasegun/pistol,
+/obj/item/gun/energy/locked/phasegun,
+/obj/item/cell/device/weapon{
 	pixel_x = -2;
 	pixel_y = -2
 	},
-/obj/item/weapon/cell/device/weapon{
+/obj/item/cell/device/weapon{
 	pixel_x = -2;
 	pixel_y = -2
 	},
 /obj/item/clothing/accessory/permit/gun,
 /obj/item/clothing/accessory/permit/gun,
-/obj/item/weapon/material/knife/machete,
-/obj/item/weapon/material/fishing_net,
-/obj/item/weapon/storage/backpack/sport,
-/obj/item/weapon/storage/backpack/sport,
+/obj/item/material/knife/machete,
+/obj/item/material/fishing_net,
+/obj/item/storage/backpack/sport,
+/obj/item/storage/backpack/sport,
 /obj/item/clothing/accessory/storage/black_drop_pouches,
 /obj/item/clothing/accessory/storage/black_drop_pouches,
-/obj/item/weapon/storage/belt,
+/obj/item/storage/belt,
 /obj/item/clothing/accessory/poncho/thermal,
 /obj/machinery/smartfridge/survival_pod{
 	icon = 'icons/obj/vending.dmi';
@@ -1135,10 +1116,10 @@
 /turf/simulated/floor,
 /area/survivalpod/superpose/MercShip)
 "nv" = (
-/obj/item/weapon/soap/deluxe,
-/obj/item/weapon/soap/deluxe,
-/obj/item/weapon/towel/random,
-/obj/item/weapon/towel/random,
+/obj/item/soap/deluxe,
+/obj/item/soap/deluxe,
+/obj/item/towel/random,
+/obj/item/towel/random,
 /obj/structure/table/hardwoodtable,
 /turf/simulated/floor/tiled/freezer,
 /area/survivalpod/superpose/MercShip)
@@ -1161,12 +1142,12 @@
 /obj/random/toolbox,
 /obj/random/toolbox,
 /obj/random/toolbox,
-/obj/item/weapon/storage/toolbox/syndicate/powertools,
-/obj/item/weapon/storage/toolbox/syndicate,
+/obj/item/storage/toolbox/syndicate/powertools,
+/obj/item/storage/toolbox/syndicate,
 /obj/fiftyspawner/plasteel,
 /obj/fiftyspawner/plasteel,
-/obj/item/weapon/storage/briefcase/inflatable,
-/obj/item/weapon/storage/briefcase/inflatable,
+/obj/item/storage/briefcase/inflatable,
+/obj/item/storage/briefcase/inflatable,
 /obj/machinery/light/poi{
 	dir = 1
 	},
@@ -1196,7 +1177,7 @@
 	name = "Laser Armor"
 	},
 /obj/structure/table/rack/shelf/steel,
-/obj/item/weapon/gun/energy/netgun,
+/obj/item/gun/energy/netgun,
 /turf/simulated/floor/tiled/red,
 /area/survivalpod/superpose/MercShip)
 "op" = (
@@ -1208,8 +1189,6 @@
 /area/survivalpod/superpose/MercShip)
 "ou" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -1246,8 +1225,6 @@
 /area/survivalpod/superpose/MercShip)
 "ph" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -1297,10 +1274,7 @@
 	dir = 8
 	},
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8";
-	dir = 1
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/survivalpod/superpose/MercShip)
@@ -1343,8 +1317,6 @@
 /area/survivalpod/superpose/MercShip)
 "qQ" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -1368,7 +1340,7 @@
 /area/survivalpod/superpose/MercShip)
 "rI" = (
 /obj/structure/bed/double/padded,
-/obj/item/weapon/bedsheet/rddouble,
+/obj/item/bedsheet/rddouble,
 /turf/simulated/floor/carpet/tealcarpet,
 /area/survivalpod/superpose/MercShip)
 "rL" = (
@@ -1380,14 +1352,10 @@
 "sc" = (
 /obj/machinery/power/tesla_coil,
 /obj/structure/cable/yellow{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8";
-	dir = 1
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/survivalpod/superpose/MercShip)
@@ -1406,19 +1374,15 @@
 	name = "Combat Armor"
 	},
 /obj/structure/table/rack/shelf/steel,
-/obj/item/device/soulstone,
+/obj/item/soulstone,
 /turf/simulated/floor/tiled/red,
 /area/survivalpod/superpose/MercShip)
 "sO" = (
 /obj/machinery/power/tesla_coil,
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8";
-	dir = 1
+	icon_state = "4-8"
 	},
 /obj/structure/cable/yellow{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -1441,7 +1405,6 @@
 	pixel_x = 23
 	},
 /obj/structure/cable{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /turf/simulated/shuttle/floor/yellow,
@@ -1521,10 +1484,7 @@
 /area/survivalpod/superpose/MercShip)
 "vH" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8";
-	dir = 1
+	icon_state = "4-8"
 	},
 /turf/simulated/floor,
 /area/survivalpod/superpose/MercShip)
@@ -1533,8 +1493,6 @@
 	dir = 1
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/yellow,
@@ -1546,7 +1504,7 @@
 /turf/simulated/floor/wood/sif,
 /area/survivalpod/superpose/MercShip)
 "vU" = (
-/obj/item/device/gps/internal/poi{
+/obj/item/gps/internal/poi{
 	name = "#$(@@%$#"
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -1579,22 +1537,15 @@
 	dir = 8
 	},
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 4;
-	icon_state = "2-4";
-	dir = 4
+	icon_state = "1-4"
 	},
 /turf/simulated/floor,
 /area/survivalpod/superpose/MercShip)
 "wz" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -1665,7 +1616,7 @@
 /area/survivalpod/superpose/MercShip)
 "ya" = (
 /obj/structure/window/reinforced/survival_pod,
-/obj/item/weapon/tape_roll,
+/obj/item/tape_roll,
 /obj/structure/table/hardwoodtable,
 /turf/simulated/shuttle/floor/voidcraft,
 /area/survivalpod/superpose/MercShip)
@@ -1687,8 +1638,6 @@
 /area/survivalpod/superpose/MercShip)
 "yD" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -1725,8 +1674,6 @@
 	dir = 8
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor,
@@ -1739,7 +1686,7 @@
 /area/survivalpod/superpose/MercShip)
 "Af" = (
 /obj/structure/bed/double/padded,
-/obj/item/weapon/bedsheet/rddouble,
+/obj/item/bedsheet/rddouble,
 /obj/machinery/light/poi{
 	dir = 4
 	},
@@ -1752,14 +1699,10 @@
 "AB" = (
 /obj/machinery/power/smes/buildable/point_of_interest,
 /obj/structure/cable/yellow{
-	d2 = 8;
-	icon_state = "0-8";
-	dir = 2
+	icon_state = "0-8"
 	},
 /obj/structure/cable/yellow{
-	d2 = 8;
-	icon_state = "0-8";
-	dir = 2
+	icon_state = "0-8"
 	},
 /turf/simulated/floor,
 /area/survivalpod/superpose/MercShip)
@@ -1770,8 +1713,6 @@
 	},
 /obj/structure/table/hardwoodtable,
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/shuttle/floor/voidcraft,
@@ -1806,8 +1747,8 @@
 /area/survivalpod/superpose/MercShip)
 "Bh" = (
 /obj/structure/window/reinforced/survival_pod,
-/obj/item/weapon/hand_labeler,
-/obj/item/device/tape/random,
+/obj/item/hand_labeler,
+/obj/item/tape,
 /obj/structure/table/hardwoodtable,
 /turf/simulated/shuttle/floor/voidcraft,
 /area/survivalpod/superpose/MercShip)
@@ -1819,8 +1760,6 @@
 /area/survivalpod/superpose/MercShip)
 "Bs" = (
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /turf/simulated/shuttle/floor/yellow,
@@ -1839,15 +1778,10 @@
 /area/survivalpod/superpose/MercShip)
 "BM" = (
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8";
-	dir = 1
+	icon_state = "4-8"
 	},
 /turf/simulated/floor,
 /area/survivalpod/superpose/MercShip)
@@ -1894,8 +1828,6 @@
 "CS" = (
 /obj/effect/floor_decal/techfloor,
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/yellow,
@@ -1916,8 +1848,6 @@
 	dir = 8
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/shuttle/floor/voidcraft,
@@ -1966,10 +1896,7 @@
 /area/survivalpod/superpose/MercShip)
 "DM" = (
 /obj/machinery/power/smes/buildable,
-/obj/structure/cable{
-	d2 = 2;
-	icon_state = "0-2"
-	},
+/obj/structure/cable,
 /turf/simulated/floor/tiled/techmaint,
 /area/survivalpod/superpose/MercShip)
 "DX" = (
@@ -2000,7 +1927,6 @@
 "EF" = (
 /obj/machinery/power/tesla_coil,
 /obj/structure/cable/yellow{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -2013,13 +1939,9 @@
 /area/survivalpod/superpose/MercShip)
 "Fq" = (
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -2030,14 +1952,9 @@
 /area/survivalpod/superpose/MercShip)
 "FL" = (
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 4;
-	icon_state = "2-4";
-	dir = 8
+	icon_state = "2-8"
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -2060,24 +1977,17 @@
 	dir = 8
 	},
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8";
-	dir = 1
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/survivalpod/superpose/MercShip)
 "Gn" = (
 /obj/machinery/power/tesla_coil,
 /obj/structure/cable/yellow{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8";
-	dir = 1
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/survivalpod/superpose/MercShip)
@@ -2091,9 +2001,9 @@
 /obj/effect/floor_decal/techfloor{
 	dir = 1
 	},
-/obj/item/weapon/paper_bin,
-/obj/item/weapon/folder/yellow,
-/obj/item/weapon/pen/reagent/paralysis,
+/obj/item/paper_bin,
+/obj/item/folder/yellow,
+/obj/item/pen/reagent/paralysis,
 /obj/structure/table/hardwoodtable,
 /turf/simulated/floor/tiled/techmaint,
 /area/survivalpod/superpose/MercShip)
@@ -2134,9 +2044,9 @@
 /obj/structure/closet/alien,
 /obj/item/clothing/suit/space/void/autolok,
 /obj/item/clothing/suit/space/void/autolok,
-/obj/item/weapon/tank/emergency/oxygen/double,
-/obj/item/weapon/tank/emergency/oxygen/double,
-/obj/item/weapon/storage/toolbox/emergency,
+/obj/item/tank/emergency/oxygen/double,
+/obj/item/tank/emergency/oxygen/double,
+/obj/item/storage/toolbox/emergency,
 /turf/simulated/floor/tiled/techmaint,
 /area/survivalpod/superpose/MercShip)
 "Ib" = (
@@ -2156,37 +2066,30 @@
 /area/survivalpod/superpose/MercShip)
 "Ir" = (
 /obj/structure/table/rack/shelf/steel,
-/obj/item/weapon/storage/briefcase/inflatable,
-/obj/item/weapon/storage/briefcase/inflatable,
-/obj/item/weapon/storage/briefcase/inflatable,
-/obj/item/weapon/storage/briefcase/inflatable,
+/obj/item/storage/briefcase/inflatable,
+/obj/item/storage/briefcase/inflatable,
+/obj/item/storage/briefcase/inflatable,
+/obj/item/storage/briefcase/inflatable,
 /turf/simulated/floor/tiled/techmaint,
 /area/survivalpod/superpose/MercShip)
 "Iz" = (
 /obj/machinery/power/tesla_coil,
 /obj/structure/cable/yellow{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/survivalpod/superpose/MercShip)
 "Jt" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor,
 /area/survivalpod/superpose/MercShip)
 "Jv" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/shuttle/floor/yellow,
@@ -2269,8 +2172,6 @@
 	dir = 1
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor,
@@ -2281,8 +2182,6 @@
 	},
 /obj/structure/bed/chair/bay/comfy/teal,
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -2308,9 +2207,7 @@
 /area/survivalpod/superpose/MercShip)
 "KT" = (
 /obj/structure/cable/yellow{
-	d2 = 8;
-	icon_state = "0-8";
-	dir = 2
+	icon_state = "0-8"
 	},
 /obj/machinery/power/terminal{
 	dir = 4
@@ -2337,9 +2234,9 @@
 /obj/structure/window/reinforced/survival_pod{
 	dir = 1
 	},
-/obj/item/weapon/paper_bin,
-/obj/item/weapon/folder/yellow,
-/obj/item/weapon/pen/reagent/paralysis,
+/obj/item/paper_bin,
+/obj/item/folder/yellow,
+/obj/item/pen/reagent/paralysis,
 /obj/structure/table/hardwoodtable,
 /turf/simulated/shuttle/floor/voidcraft,
 /area/survivalpod/superpose/MercShip)
@@ -2355,10 +2252,7 @@
 /area/survivalpod/superpose/MercShip)
 "Mz" = (
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 4;
-	icon_state = "2-4";
-	dir = 4
+	icon_state = "1-4"
 	},
 /turf/simulated/floor,
 /area/survivalpod/superpose/MercShip)
@@ -2390,8 +2284,6 @@
 /area/survivalpod/superpose/MercShip)
 "NI" = (
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -2402,10 +2294,7 @@
 "NV" = (
 /obj/machinery/power/grounding_rod/pre_mapped,
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8";
-	dir = 1
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/survivalpod/superpose/MercShip)
@@ -2424,7 +2313,7 @@
 	name = "Laser Armor"
 	},
 /obj/structure/table/rack/shelf/steel,
-/obj/item/weapon/gun/energy/hooklauncher/ring,
+/obj/item/gun/energy/hooklauncher/ring,
 /turf/simulated/floor/tiled/red,
 /area/survivalpod/superpose/MercShip)
 "Pq" = (
@@ -2432,8 +2321,6 @@
 	dir = 4
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor,
@@ -2497,10 +2384,7 @@
 /area/survivalpod/superpose/MercShip)
 "Qu" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8";
-	dir = 1
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/survivalpod/superpose/MercShip)
@@ -2533,7 +2417,6 @@
 "SK" = (
 /obj/machinery/power/smes/buildable/point_of_interest,
 /obj/structure/cable/yellow{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /turf/simulated/floor,
@@ -2548,8 +2431,6 @@
 "SU" = (
 /obj/effect/floor_decal/techfloor,
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/red,
@@ -2622,7 +2503,7 @@
 	name = "Combat Armor"
 	},
 /obj/structure/table/rack/shelf/steel,
-/obj/item/weapon/rig/focalpoint,
+/obj/item/rig/focalpoint,
 /turf/simulated/floor/tiled/red,
 /area/survivalpod/superpose/MercShip)
 "Tx" = (
@@ -2656,9 +2537,9 @@
 /obj/structure/closet/alien,
 /obj/item/clothing/suit/space/void/autolok,
 /obj/item/clothing/suit/space/void/autolok,
-/obj/item/weapon/tank/emergency/oxygen/double,
-/obj/item/weapon/tank/emergency/oxygen/double,
-/obj/item/weapon/storage/toolbox/emergency,
+/obj/item/tank/emergency/oxygen/double,
+/obj/item/tank/emergency/oxygen/double,
+/obj/item/storage/toolbox/emergency,
 /obj/effect/floor_decal/techfloor,
 /turf/simulated/floor/tiled/techmaint,
 /area/survivalpod/superpose/MercShip)
@@ -2683,14 +2564,9 @@
 /area/survivalpod/superpose/MercShip)
 "UR" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8";
-	dir = 1
+	icon_state = "4-8"
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor,
@@ -2730,19 +2606,14 @@
 	dir = 4
 	},
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8";
-	dir = 1
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/survivalpod/superpose/MercShip)
 "VF" = (
 /obj/machinery/power/terminal,
 /obj/structure/cable/yellow{
-	d2 = 8;
-	icon_state = "0-8";
-	dir = 2
+	icon_state = "0-8"
 	},
 /turf/simulated/floor,
 /area/survivalpod/superpose/MercShip)
@@ -2760,7 +2631,6 @@
 	dir = 1
 	},
 /obj/structure/cable/yellow{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /turf/simulated/floor,
@@ -2781,7 +2651,7 @@
 /obj/structure/window/reinforced/survival_pod{
 	dir = 1
 	},
-/obj/item/device/sleevemate,
+/obj/item/sleevemate,
 /obj/structure/table/hardwoodtable,
 /turf/simulated/shuttle/floor/voidcraft,
 /area/survivalpod/superpose/MercShip)
@@ -2794,8 +2664,6 @@
 /area/survivalpod/superpose/MercShip)
 "WH" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /turf/simulated/floor,
@@ -2814,7 +2682,7 @@
 /area/survivalpod/superpose/MercShip)
 "WQ" = (
 /obj/structure/bed/double/padded,
-/obj/item/weapon/bedsheet/rddouble,
+/obj/item/bedsheet/rddouble,
 /turf/simulated/floor/carpet/gaycarpet,
 /area/survivalpod/superpose/MercShip)
 "WT" = (
@@ -2830,8 +2698,6 @@
 /area/survivalpod/superpose/MercShip)
 "WZ" = (
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /turf/simulated/floor,
@@ -2839,13 +2705,9 @@
 "Xc" = (
 /obj/machinery/power/tesla_coil,
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8";
-	dir = 1
+	icon_state = "4-8"
 	},
 /obj/structure/cable/yellow{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -2871,8 +2733,8 @@
 /obj/structure/window/reinforced/survival_pod{
 	dir = 1
 	},
-/obj/item/weapon/hand_labeler,
-/obj/item/device/tape/random,
+/obj/item/hand_labeler,
+/obj/item/tape,
 /obj/structure/table/hardwoodtable,
 /turf/simulated/shuttle/floor/voidcraft,
 /area/survivalpod/superpose/MercShip)
@@ -2899,9 +2761,9 @@
 /obj/structure/closet/alien,
 /obj/item/clothing/suit/space/void/autolok,
 /obj/item/clothing/suit/space/void/autolok,
-/obj/item/weapon/tank/emergency/oxygen/double,
-/obj/item/weapon/tank/emergency/oxygen/double,
-/obj/item/weapon/storage/toolbox/emergency,
+/obj/item/tank/emergency/oxygen/double,
+/obj/item/tank/emergency/oxygen/double,
+/obj/item/storage/toolbox/emergency,
 /turf/simulated/floor/tiled/techfloor,
 /area/survivalpod/superpose/MercShip)
 "YI" = (

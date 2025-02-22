@@ -1,13 +1,13 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "aS" = (
-/obj/item/weapon/gun/energy/sizegun,
-/obj/item/device/bodysnatcher,
-/obj/item/weapon/handcuffs/fuzzy,
-/obj/item/weapon/handcuffs/legcuffs/fuzzy,
+/obj/item/gun/energy/sizegun,
+/obj/item/bodysnatcher,
+/obj/item/handcuffs/fuzzy,
+/obj/item/handcuffs/legcuffs/fuzzy,
 /obj/item/clothing/accessory/collar,
-/obj/item/weapon/tape_roll,
-/obj/item/device/perfect_tele/one_beacon,
-/obj/item/weapon/disk/nifsoft/compliance,
+/obj/item/tape_roll,
+/obj/item/perfect_tele/one_beacon,
+/obj/item/disk/nifsoft/compliance,
 /obj/item/selectable_item/chemistrykit,
 /obj/item/selectable_item/chemistrykit,
 /obj/item/selectable_item/chemistrykit,
@@ -31,7 +31,7 @@
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 9
 	},
-/obj/item/weapon/stool/padded,
+/obj/item/stool/padded,
 /turf/simulated/floor/carpet/bcarpet,
 /area/survivalpod/superpose/RestaurationBar)
 "bm" = (
@@ -47,7 +47,7 @@
 /area/survivalpod/superpose/RestaurationBar)
 "br" = (
 /obj/structure/table/marble,
-/obj/item/weapon/reagent_containers/food/drinks/drinkingglass,
+/obj/item/reagent_containers/food/drinks/drinkingglass,
 /turf/simulated/floor/lino,
 /area/survivalpod/superpose/RestaurationBar)
 "bB" = (
@@ -61,8 +61,8 @@
 /area/survivalpod/superpose/RestaurationBar)
 "bH" = (
 /obj/structure/bookcase,
-/obj/item/weapon/book/bundle/custom_library/reference/ThermodynamicReactionsandResearch,
-/obj/item/weapon/book/bundle/custom_library/fiction/ghostship,
+/obj/item/book/bundle/custom_library/reference/ThermodynamicReactionsandResearch,
+/obj/item/book/bundle/custom_library/fiction/ghostship,
 /turf/simulated/floor/carpet/purcarpet,
 /area/survivalpod/superpose/RestaurationBar)
 "bJ" = (
@@ -98,11 +98,11 @@
 /area/survivalpod/superpose/RestaurationBar)
 "cB" = (
 /obj/structure/bookcase,
-/obj/item/weapon/book/codex/lore/robutt,
-/obj/item/weapon/book/bundle/custom_library/fiction/metalglen,
-/obj/item/weapon/book/bundle/custom_library/fiction/silence,
-/obj/item/weapon/book/bundle/custom_library/fiction/taleoftherainbowcat,
-/obj/item/weapon/book/bundle/custom_library/religious/zoroastrianism,
+/obj/item/book/codex/lore/robutt,
+/obj/item/book/bundle/custom_library/fiction/metalglen,
+/obj/item/book/bundle/custom_library/fiction/silence,
+/obj/item/book/bundle/custom_library/fiction/taleoftherainbowcat,
+/obj/item/book/bundle/custom_library/religious/zoroastrianism,
 /obj/machinery/light{
 	dir = 1;
 	layer = 3
@@ -111,7 +111,7 @@
 /area/survivalpod/superpose/RestaurationBar)
 "cK" = (
 /obj/structure/bed/double/padded,
-/obj/item/weapon/bedsheet/orangedouble,
+/obj/item/bedsheet/orangedouble,
 /turf/simulated/floor/carpet/oracarpet,
 /area/survivalpod/superpose/RestaurationBar)
 "cL" = (
@@ -145,7 +145,7 @@
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 10
 	},
-/obj/item/weapon/stool/padded,
+/obj/item/stool/padded,
 /turf/simulated/floor/carpet/bcarpet,
 /area/survivalpod/superpose/RestaurationBar)
 "ds" = (
@@ -184,20 +184,20 @@
 /obj/machinery/computer/security/telescreen/entertainment{
 	pixel_x = 32
 	},
-/obj/item/weapon/material/ashtray/glass,
+/obj/item/material/ashtray/glass,
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 8
 	},
-/obj/item/weapon/flame/lighter/random,
-/obj/item/weapon/storage/fancy/cigarettes/professionals,
-/obj/item/weapon/storage/fancy/cigar/havana,
+/obj/item/flame/lighter/random,
+/obj/item/storage/fancy/cigarettes/professionals,
+/obj/item/storage/fancy/cigar/havana,
 /obj/structure/table/hardwoodtable,
 /turf/simulated/floor/carpet/bcarpet,
 /area/survivalpod/superpose/RestaurationBar)
 "ei" = (
 /obj/structure/table/gamblingtable,
-/obj/item/weapon/paper_bin,
-/obj/item/weapon/pen,
+/obj/item/paper_bin,
+/obj/item/pen,
 /turf/simulated/floor/carpet/purcarpet,
 /area/survivalpod/superpose/RestaurationBar)
 "el" = (
@@ -223,7 +223,7 @@
 /area/survivalpod/superpose/RestaurationBar)
 "eD" = (
 /obj/structure/table/gamblingtable,
-/obj/item/weapon/storage/pill_bottle/dice,
+/obj/item/storage/pill_bottle/dice,
 /turf/simulated/floor/carpet/purcarpet,
 /area/survivalpod/superpose/RestaurationBar)
 "eE" = (
@@ -231,8 +231,8 @@
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 1
 	},
-/obj/item/weapon/flame/candle,
-/obj/item/device/taperecorder,
+/obj/item/flame/candle,
+/obj/item/taperecorder,
 /obj/random/instrument,
 /turf/simulated/floor/carpet/bcarpet,
 /area/survivalpod/superpose/RestaurationBar)
@@ -241,8 +241,8 @@
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 1
 	},
-/obj/item/weapon/cane,
-/obj/item/device/radio/subspace{
+/obj/item/cane,
+/obj/item/radio/subspace{
 	desc = "A heavy duty radio that can pick up all manor of shortwave and subspace frequencies. It's a bit bulkier than a normal radio thanks to the extra hardware. An engraving on the frame reads: IF FOUND, RETURN TO THE BAR!";
 	name = "Bar subspace radio";
 	pixel_y = 5
@@ -315,9 +315,9 @@
 /obj/effect/floor_decal/corner/grey/diagonal{
 	dir = 4
 	},
-/obj/item/weapon/reagent_containers/food/snacks/mint,
-/obj/item/weapon/reagent_containers/dropper,
-/obj/item/weapon/whetstone,
+/obj/item/reagent_containers/food/snacks/mint,
+/obj/item/reagent_containers/dropper,
+/obj/item/whetstone,
 /turf/simulated/floor/tiled/white,
 /area/survivalpod/superpose/RestaurationBar)
 "fZ" = (
@@ -366,44 +366,44 @@
 /obj/structure/closet/walllocker_double/north{
 	name = "Survival Cabinet"
 	},
-/obj/item/weapon/storage/backpack/messenger,
-/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
-/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
-/obj/item/weapon/material/knife/tacknife/survival,
-/obj/item/weapon/reagent_containers/food/snacks/sosjerky,
-/obj/item/weapon/cell/device/hyper,
-/obj/item/weapon/reagent_containers/hypospray/autoinjector/trauma,
-/obj/item/weapon/reagent_containers/hypospray/autoinjector/oxy,
-/obj/item/weapon/storage/box/survival/space,
-/obj/item/device/radio,
+/obj/item/storage/backpack/messenger,
+/obj/item/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/material/knife/tacknife/survival,
+/obj/item/reagent_containers/food/snacks/sosjerky,
+/obj/item/cell/device/hyper,
+/obj/item/reagent_containers/hypospray/autoinjector/trauma,
+/obj/item/reagent_containers/hypospray/autoinjector/oxy,
+/obj/item/storage/box/survival/space,
+/obj/item/radio,
 /obj/item/clothing/accessory/storage/black_drop_pouches,
-/obj/item/weapon/reagent_containers/pill/dylovene,
-/obj/item/device/flashlight/maglight,
-/obj/item/device/flashlight/flare,
-/obj/item/device/flashlight/flare,
+/obj/item/reagent_containers/pill/dylovene,
+/obj/item/flashlight/maglight,
+/obj/item/flashlight/flare,
+/obj/item/flashlight/flare,
 /obj/random/soap,
-/obj/item/weapon/gun/energy/locked/phasegun/pistol,
-/obj/item/device/fbp_backup_cell,
-/obj/item/device/pda,
-/obj/item/device/starcaster_news,
-/obj/item/device/suit_cooling_unit/emergency,
-/obj/item/device/gps,
-/obj/item/weapon/flame/lighter/zippo/royal,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
+/obj/item/gun/energy/locked/phasegun/pistol,
+/obj/item/fbp_backup_cell,
+/obj/item/pda,
+/obj/item/starcaster_news,
+/obj/item/suit_cooling_unit/emergency,
+/obj/item/gps,
+/obj/item/flame/lighter/zippo/royal,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
 /obj/item/clothing/accessory/permit/gun,
-/obj/item/device/binoculars,
+/obj/item/binoculars,
 /obj/item/bodybag/cryobag,
-/obj/item/weapon/cell/device/hyper,
+/obj/item/cell/device/hyper,
 /obj/item/sticky_pad/random,
-/obj/item/weapon/card/id/external,
-/obj/item/weapon/pen/multi,
-/obj/item/weapon/storage/box/khcrystal,
-/obj/item/weapon/storage/box/survival/comp,
-/obj/item/weapon/reagent_containers/hypospray/autoinjector/biginjector/clotting,
+/obj/item/card/id/external,
+/obj/item/pen/multi,
+/obj/item/storage/box/khcrystal,
+/obj/item/storage/box/survival/comp,
+/obj/item/reagent_containers/hypospray/autoinjector/biginjector/clotting,
 /obj/item/stack/nanopaste,
-/obj/item/weapon/extinguisher/mini,
-/obj/item/weapon/reagent_containers/glass/beaker/vial/tricordrazine,
+/obj/item/extinguisher/mini,
+/obj/item/reagent_containers/glass/beaker/vial/tricordrazine,
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/RestaurationBar)
 "hE" = (
@@ -462,10 +462,10 @@
 /area/survivalpod/superpose/RestaurationBar)
 "jL" = (
 /obj/structure/table/marble,
-/obj/item/weapon/reagent_containers/food/condiment/small/saltshaker{
+/obj/item/reagent_containers/food/condiment/small/saltshaker{
 	pixel_x = -3
 	},
-/obj/item/weapon/reagent_containers/food/condiment/small/peppermill{
+/obj/item/reagent_containers/food/condiment/small/peppermill{
 	pixel_x = 3
 	},
 /turf/simulated/floor/lino,
@@ -519,7 +519,7 @@
 /area/survivalpod/superpose/RestaurationBar)
 "ld" = (
 /obj/structure/bed,
-/obj/item/weapon/bedsheet/purple,
+/obj/item/bedsheet/purple,
 /obj/structure/curtain/open/bed,
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/RestaurationBar)
@@ -572,8 +572,8 @@
 /area/survivalpod/superpose/RestaurationBar)
 "lT" = (
 /obj/structure/table/gamblingtable,
-/obj/item/weapon/pen,
-/obj/item/weapon/paper_bin,
+/obj/item/pen,
+/obj/item/paper_bin,
 /turf/simulated/floor/carpet/purcarpet,
 /area/survivalpod/superpose/RestaurationBar)
 "lZ" = (
@@ -690,7 +690,7 @@
 /area/survivalpod/superpose/RestaurationBar)
 "po" = (
 /obj/structure/casino_table/blackjack_m,
-/obj/item/weapon/deck/cards,
+/obj/item/deck/cards,
 /obj/machinery/light/floortube,
 /turf/simulated/floor/carpet/purcarpet,
 /area/survivalpod/superpose/RestaurationBar)
@@ -745,7 +745,7 @@
 /area/survivalpod/superpose/RestaurationBar)
 "qy" = (
 /obj/structure/bed,
-/obj/item/weapon/bedsheet/blue,
+/obj/item/bedsheet/blue,
 /obj/structure/curtain/open/bed,
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/RestaurationBar)
@@ -782,14 +782,14 @@
 /area/survivalpod/superpose/RestaurationBar)
 "rd" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/deskbell,
+/obj/item/deskbell,
 /turf/simulated/floor/wood/broken,
 /area/survivalpod/superpose/RestaurationBar)
 "rg" = (
 /obj/structure/table/rack/shelf,
 /obj/random/soap,
-/obj/item/weapon/towel/random,
-/obj/item/weapon/makeover,
+/obj/item/towel/random,
+/obj/item/makeover,
 /obj/effect/floor_decal/corner/yellow/diagonal,
 /turf/simulated/floor/tiled/freezer,
 /area/survivalpod/superpose/RestaurationBar)
@@ -844,7 +844,7 @@
 /area/survivalpod/superpose/RestaurationBar)
 "sA" = (
 /obj/structure/bed/double/padded,
-/obj/item/weapon/bedsheet/purpledouble,
+/obj/item/bedsheet/purpledouble,
 /turf/simulated/floor/carpet/purple,
 /area/survivalpod/superpose/RestaurationBar)
 "sC" = (
@@ -856,7 +856,7 @@
 /area/survivalpod/superpose/RestaurationBar)
 "sI" = (
 /obj/structure/table/marble,
-/obj/item/weapon/reagent_containers/glass/rag,
+/obj/item/reagent_containers/glass/rag,
 /turf/simulated/floor/lino,
 /area/survivalpod/superpose/RestaurationBar)
 "sJ" = (
@@ -865,7 +865,7 @@
 /area/survivalpod/superpose/RestaurationBar)
 "sP" = (
 /obj/structure/table/marble,
-/obj/item/weapon/storage/box/glasses/meta/metapint,
+/obj/item/storage/box/glasses/meta/metapint,
 /turf/simulated/floor/lino,
 /area/survivalpod/superpose/RestaurationBar)
 "sY" = (
@@ -903,7 +903,7 @@
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/RestaurationBar)
 "tj" = (
-/obj/item/weapon/deck/cards,
+/obj/item/deck/cards,
 /obj/structure/table/fancyblack,
 /turf/simulated/floor/carpet/bcarpet,
 /area/survivalpod/superpose/RestaurationBar)
@@ -951,51 +951,51 @@
 /area/survivalpod/superpose/RestaurationBar)
 "uw" = (
 /obj/structure/table/standard,
-/obj/item/device/flashlight/lamp,
+/obj/item/flashlight/lamp,
 /turf/simulated/floor/carpet/purple,
 /area/survivalpod/superpose/RestaurationBar)
 "uJ" = (
 /obj/structure/closet/walllocker_double/north{
 	name = "Survival Cabinet"
 	},
-/obj/item/weapon/storage/backpack/messenger,
-/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
-/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
-/obj/item/weapon/material/knife/tacknife/survival,
-/obj/item/weapon/reagent_containers/food/snacks/sosjerky,
-/obj/item/weapon/cell/device/hyper,
-/obj/item/weapon/reagent_containers/hypospray/autoinjector/trauma,
-/obj/item/weapon/reagent_containers/hypospray/autoinjector/oxy,
-/obj/item/weapon/storage/box/survival/space,
-/obj/item/device/radio,
+/obj/item/storage/backpack/messenger,
+/obj/item/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/material/knife/tacknife/survival,
+/obj/item/reagent_containers/food/snacks/sosjerky,
+/obj/item/cell/device/hyper,
+/obj/item/reagent_containers/hypospray/autoinjector/trauma,
+/obj/item/reagent_containers/hypospray/autoinjector/oxy,
+/obj/item/storage/box/survival/space,
+/obj/item/radio,
 /obj/item/clothing/accessory/storage/black_drop_pouches,
-/obj/item/weapon/reagent_containers/pill/dylovene,
-/obj/item/device/flashlight/maglight,
-/obj/item/device/flashlight/flare,
-/obj/item/device/flashlight/flare,
+/obj/item/reagent_containers/pill/dylovene,
+/obj/item/flashlight/maglight,
+/obj/item/flashlight/flare,
+/obj/item/flashlight/flare,
 /obj/random/soap,
-/obj/item/weapon/gun/energy/locked/phasegun/rifle,
-/obj/item/device/fbp_backup_cell,
-/obj/item/device/pda,
-/obj/item/device/starcaster_news,
-/obj/item/device/suit_cooling_unit/emergency,
-/obj/item/device/gps,
-/obj/item/weapon/flame/lighter/zippo/black,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
+/obj/item/gun/energy/locked/phasegun/rifle,
+/obj/item/fbp_backup_cell,
+/obj/item/pda,
+/obj/item/starcaster_news,
+/obj/item/suit_cooling_unit/emergency,
+/obj/item/gps,
+/obj/item/flame/lighter/zippo/black,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
 /obj/item/clothing/accessory/permit/gun,
-/obj/item/device/binoculars,
+/obj/item/binoculars,
 /obj/item/bodybag/cryobag,
-/obj/item/weapon/cell/device/hyper,
+/obj/item/cell/device/hyper,
 /obj/item/sticky_pad/random,
-/obj/item/weapon/card/id/external,
-/obj/item/weapon/pen/multi,
-/obj/item/weapon/storage/box/khcrystal,
-/obj/item/weapon/storage/box/survival/comp,
-/obj/item/weapon/reagent_containers/hypospray/autoinjector/biginjector/clotting,
+/obj/item/card/id/external,
+/obj/item/pen/multi,
+/obj/item/storage/box/khcrystal,
+/obj/item/storage/box/survival/comp,
+/obj/item/reagent_containers/hypospray/autoinjector/biginjector/clotting,
 /obj/item/stack/nanopaste,
-/obj/item/weapon/extinguisher/mini,
-/obj/item/weapon/reagent_containers/glass/beaker/vial/tricordrazine,
+/obj/item/extinguisher/mini,
+/obj/item/reagent_containers/glass/beaker/vial/tricordrazine,
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/RestaurationBar)
 "uM" = (
@@ -1004,7 +1004,7 @@
 /area/survivalpod/superpose/RestaurationBar)
 "uO" = (
 /obj/structure/table/marble,
-/obj/item/weapon/reagent_containers/food/drinks/shaker,
+/obj/item/reagent_containers/food/drinks/shaker,
 /turf/simulated/floor/lino,
 /area/survivalpod/superpose/RestaurationBar)
 "uX" = (
@@ -1019,7 +1019,7 @@
 /area/survivalpod/superpose/RestaurationBar)
 "vq" = (
 /obj/structure/table/gamblingtable,
-/obj/item/weapon/storage/dicecup/loaded,
+/obj/item/storage/dicecup/loaded,
 /turf/simulated/floor/carpet/purcarpet,
 /area/survivalpod/superpose/RestaurationBar)
 "vs" = (
@@ -1071,35 +1071,35 @@
 /area/survivalpod/superpose/RestaurationBar)
 "wm" = (
 /obj/structure/closet/toolcloset,
-/obj/item/weapon/storage/firstaid/regular,
-/obj/item/weapon/storage/firstaid/fire,
-/obj/item/weapon/storage/firstaid/toxin,
-/obj/item/weapon/storage/firstaid/o2,
-/obj/item/weapon/module/id_auth,
-/obj/item/weapon/module/card_reader,
-/obj/item/weapon/module/cell_power,
-/obj/item/weapon/module/power_control,
-/obj/item/weapon/circuitboard/microwave,
-/obj/item/weapon/circuitboard/mass_driver,
-/obj/item/weapon/circuitboard/jukebox,
-/obj/item/weapon/circuitboard/intercom,
-/obj/item/weapon/circuitboard/firealarm,
-/obj/item/weapon/circuitboard/airalarm,
-/obj/item/weapon/cell/high,
-/obj/item/weapon/cell/high,
-/obj/item/device/flashlight,
-/obj/item/device/flashlight,
-/obj/item/weapon/tape_roll,
-/obj/item/weapon/tape_roll,
-/obj/item/weapon/reagent_containers/spray/cleaner,
-/obj/item/weapon/storage/box/lights/mixed,
-/obj/item/weapon/storage/box/lights/mixed,
-/obj/item/weapon/storage/belt/utility/full/multitool,
-/obj/item/weapon/storage/bag/trash,
-/obj/item/weapon/storage/bag/trash,
-/obj/item/weapon/storage/backpack/dufflebag/eng,
-/obj/item/device/geiger,
-/obj/item/device/mapping_unit,
+/obj/item/storage/firstaid/regular,
+/obj/item/storage/firstaid/fire,
+/obj/item/storage/firstaid/toxin,
+/obj/item/storage/firstaid/o2,
+/obj/item/module/id_auth,
+/obj/item/module/card_reader,
+/obj/item/module/cell_power,
+/obj/item/module/power_control,
+/obj/item/circuitboard/microwave,
+/obj/item/circuitboard/mass_driver,
+/obj/item/circuitboard/jukebox,
+/obj/item/circuitboard/intercom,
+/obj/item/circuitboard/firealarm,
+/obj/item/circuitboard/airalarm,
+/obj/item/cell/high,
+/obj/item/cell/high,
+/obj/item/flashlight,
+/obj/item/flashlight,
+/obj/item/tape_roll,
+/obj/item/tape_roll,
+/obj/item/reagent_containers/spray/cleaner,
+/obj/item/storage/box/lights/mixed,
+/obj/item/storage/box/lights/mixed,
+/obj/item/storage/belt/utility/full/multitool,
+/obj/item/storage/bag/trash,
+/obj/item/storage/bag/trash,
+/obj/item/storage/backpack/dufflebag/eng,
+/obj/item/geiger,
+/obj/item/mapping_unit,
 /obj/item/clothing/under/waiter,
 /obj/item/clothing/under/waiter,
 /obj/item/clothing/shoes/dress,
@@ -1142,7 +1142,7 @@
 "xq" = (
 /obj/structure/table/fancyblack,
 /obj/item/trash/plate,
-/obj/item/weapon/material/kitchen/utensil/spoon,
+/obj/item/material/kitchen/utensil/spoon,
 /obj/effect/map_effect/perma_light,
 /turf/simulated/floor/carpet/bcarpet,
 /area/survivalpod/superpose/RestaurationBar)
@@ -1190,7 +1190,7 @@
 /obj/machinery/chemical_dispenser/bar_soft/full{
 	dir = 1
 	},
-/obj/item/weapon/reagent_containers/chem_disp_cartridge/gelatin,
+/obj/item/reagent_containers/chem_disp_cartridge/gelatin,
 /turf/simulated/floor/lino,
 /area/survivalpod/superpose/RestaurationBar)
 "yL" = (
@@ -1205,7 +1205,7 @@
 /area/survivalpod/superpose/RestaurationBar)
 "yT" = (
 /obj/structure/table/fancyblack,
-/obj/item/weapon/reagent_containers/food/drinks/drinkingglass,
+/obj/item/reagent_containers/food/drinks/drinkingglass,
 /obj/random/drinkbottle,
 /turf/simulated/floor/carpet/bcarpet,
 /area/survivalpod/superpose/RestaurationBar)
@@ -1237,7 +1237,7 @@
 /area/survivalpod/superpose/RestaurationBar)
 "Af" = (
 /obj/structure/table/marble,
-/obj/item/weapon/material/ashtray/glass,
+/obj/item/material/ashtray/glass,
 /obj/machinery/recharger,
 /turf/simulated/floor/lino,
 /area/survivalpod/superpose/RestaurationBar)
@@ -1278,12 +1278,12 @@
 /area/survivalpod/superpose/RestaurationBar)
 "AR" = (
 /obj/structure/table/gamblingtable,
-/obj/item/weapon/deck/holder,
+/obj/item/deck/holder,
 /obj/random/drinksoft,
 /turf/simulated/floor/carpet/purcarpet,
 /area/survivalpod/superpose/RestaurationBar)
 "AT" = (
-/obj/item/weapon/stool/padded,
+/obj/item/stool/padded,
 /turf/simulated/floor/lino,
 /area/survivalpod/superpose/RestaurationBar)
 "AW" = (
@@ -1427,7 +1427,7 @@
 /area/survivalpod/superpose/RestaurationBar)
 "Dc" = (
 /obj/structure/table/fancyblack,
-/obj/item/weapon/newspaper,
+/obj/item/newspaper,
 /turf/simulated/floor/carpet/bcarpet,
 /area/survivalpod/superpose/RestaurationBar)
 "Di" = (
@@ -1486,16 +1486,16 @@
 /area/survivalpod/superpose/RestaurationBar)
 "Ee" = (
 /obj/structure/closet/secure_closet/freezer/fridge,
-/obj/item/weapon/storage/fancy/egg_box,
-/obj/item/weapon/storage/fancy/egg_box,
-/obj/item/weapon/reagent_containers/food/drinks/bottle/milk,
-/obj/item/weapon/reagent_containers/food/drinks/bottle/milk,
-/obj/item/weapon/reagent_containers/food/drinks/bottle/milk,
-/obj/item/weapon/reagent_containers/food/drinks/bottle/cream,
-/obj/item/weapon/reagent_containers/food/drinks/bottle/cream,
-/obj/item/weapon/reagent_containers/food/drinks/bottle/cream,
-/obj/item/weapon/reagent_containers/food/drinks/bottle/cream,
-/obj/item/weapon/reagent_containers/food/condiment/carton/sugar,
+/obj/item/storage/fancy/egg_box,
+/obj/item/storage/fancy/egg_box,
+/obj/item/reagent_containers/food/drinks/bottle/milk,
+/obj/item/reagent_containers/food/drinks/bottle/milk,
+/obj/item/reagent_containers/food/drinks/bottle/milk,
+/obj/item/reagent_containers/food/drinks/bottle/cream,
+/obj/item/reagent_containers/food/drinks/bottle/cream,
+/obj/item/reagent_containers/food/drinks/bottle/cream,
+/obj/item/reagent_containers/food/drinks/bottle/cream,
+/obj/item/reagent_containers/food/condiment/carton/sugar,
 /obj/effect/floor_decal/corner/grey/diagonal{
 	dir = 4
 	},
@@ -1538,7 +1538,7 @@
 "Ff" = (
 /obj/structure/table/standard,
 /obj/random/donkpocketbox,
-/obj/item/device/starcaster_news,
+/obj/item/starcaster_news,
 /turf/simulated/floor/carpet/oracarpet,
 /area/survivalpod/superpose/RestaurationBar)
 "Fi" = (
@@ -1546,21 +1546,21 @@
 	dir = 4
 	},
 /obj/structure/table/marble,
-/obj/item/weapon/material/kitchen/utensil/fork,
-/obj/item/weapon/material/kitchen/utensil/fork,
-/obj/item/weapon/material/kitchen/utensil/fork,
-/obj/item/weapon/material/kitchen/utensil/fork,
-/obj/item/weapon/material/kitchen/utensil/fork,
-/obj/item/weapon/material/kitchen/utensil/fork,
-/obj/item/weapon/material/kitchen/utensil/fork,
-/obj/item/weapon/material/kitchen/utensil/fork,
-/obj/item/weapon/material/kitchen/utensil/spoon,
-/obj/item/weapon/material/kitchen/utensil/spoon,
-/obj/item/weapon/material/kitchen/utensil/spoon,
-/obj/item/weapon/material/kitchen/utensil/spoon,
-/obj/item/weapon/material/kitchen/utensil/spoon,
-/obj/item/weapon/material/kitchen/utensil/spoon,
-/obj/item/weapon/material/kitchen/utensil/spoon,
+/obj/item/material/kitchen/utensil/fork,
+/obj/item/material/kitchen/utensil/fork,
+/obj/item/material/kitchen/utensil/fork,
+/obj/item/material/kitchen/utensil/fork,
+/obj/item/material/kitchen/utensil/fork,
+/obj/item/material/kitchen/utensil/fork,
+/obj/item/material/kitchen/utensil/fork,
+/obj/item/material/kitchen/utensil/fork,
+/obj/item/material/kitchen/utensil/spoon,
+/obj/item/material/kitchen/utensil/spoon,
+/obj/item/material/kitchen/utensil/spoon,
+/obj/item/material/kitchen/utensil/spoon,
+/obj/item/material/kitchen/utensil/spoon,
+/obj/item/material/kitchen/utensil/spoon,
+/obj/item/material/kitchen/utensil/spoon,
 /turf/simulated/floor/tiled/white,
 /area/survivalpod/superpose/RestaurationBar)
 "Fk" = (
@@ -1590,9 +1590,9 @@
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 10
 	},
-/obj/item/weapon/pen,
-/obj/item/device/taperecorder,
-/obj/item/weapon/paper_bin,
+/obj/item/pen,
+/obj/item/taperecorder,
+/obj/item/paper_bin,
 /obj/effect/map_effect/perma_light,
 /turf/simulated/floor/carpet/bcarpet,
 /area/survivalpod/superpose/RestaurationBar)
@@ -1629,7 +1629,7 @@
 /area/survivalpod/superpose/RestaurationBar)
 "GB" = (
 /obj/structure/table/marble,
-/obj/item/weapon/reagent_containers/food/snacks/pancakes,
+/obj/item/reagent_containers/food/snacks/pancakes,
 /turf/simulated/floor/lino,
 /area/survivalpod/superpose/RestaurationBar)
 "GC" = (
@@ -1680,7 +1680,7 @@
 /turf/simulated/floor,
 /area/survivalpod/superpose/RestaurationBar)
 "GU" = (
-/obj/item/weapon/stool/padded,
+/obj/item/stool/padded,
 /obj/effect/floor_decal/spline/fancy/wood,
 /turf/simulated/floor/carpet/bcarpet,
 /area/survivalpod/superpose/RestaurationBar)
@@ -1744,19 +1744,19 @@
 	},
 /obj/item/stack/cable_coil/green,
 /obj/item/stack/cable_coil/blue,
-/obj/item/weapon/storage/briefcase/inflatable,
-/obj/item/weapon/storage/briefcase/inflatable,
-/obj/item/weapon/storage/briefcase/inflatable,
-/obj/item/weapon/storage/briefcase/inflatable,
-/obj/item/weapon/storage/toolbox/syndicate/powertools{
+/obj/item/storage/briefcase/inflatable,
+/obj/item/storage/briefcase/inflatable,
+/obj/item/storage/briefcase/inflatable,
+/obj/item/storage/briefcase/inflatable,
+/obj/item/storage/toolbox/syndicate/powertools{
 	pixel_y = 9
 	},
-/obj/item/weapon/storage/toolbox/mechanical{
+/obj/item/storage/toolbox/mechanical{
 	pixel_y = 5
 	},
-/obj/item/weapon/storage/toolbox/electrical,
-/obj/item/weapon/storage/belt/utility/full/multitool,
-/obj/item/weapon/storage/belt/utility/full/multitool,
+/obj/item/storage/toolbox/electrical,
+/obj/item/storage/belt/utility/full/multitool,
+/obj/item/storage/belt/utility/full/multitool,
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/RestaurationBar)
 "HH" = (
@@ -1828,7 +1828,7 @@
 /area/survivalpod/superpose/RestaurationBar)
 "Jf" = (
 /obj/structure/table/standard,
-/obj/item/device/flashlight/lamp,
+/obj/item/flashlight/lamp,
 /turf/simulated/floor/carpet/oracarpet,
 /area/survivalpod/superpose/RestaurationBar)
 "Jg" = (
@@ -1848,7 +1848,7 @@
 /area/survivalpod/superpose/RestaurationBar)
 "Jo" = (
 /obj/structure/table/fancyblack,
-/obj/item/weapon/reagent_containers/food/drinks/drinkingglass,
+/obj/item/reagent_containers/food/drinks/drinkingglass,
 /turf/simulated/floor/carpet/bcarpet,
 /area/survivalpod/superpose/RestaurationBar)
 "JH" = (
@@ -1881,7 +1881,7 @@
 	dir = 9
 	},
 /obj/random/mug,
-/obj/item/weapon/reagent_containers/food/snacks/croissant,
+/obj/item/reagent_containers/food/snacks/croissant,
 /turf/simulated/floor/carpet/bcarpet,
 /area/survivalpod/superpose/RestaurationBar)
 "Kc" = (
@@ -1907,13 +1907,13 @@
 /obj/machinery/chemical_dispenser/bar_coffee/full{
 	dir = 1
 	},
-/obj/item/weapon/reagent_containers/chem_disp_cartridge/nothing,
+/obj/item/reagent_containers/chem_disp_cartridge/nothing,
 /turf/simulated/floor/lino,
 /area/survivalpod/superpose/RestaurationBar)
 "Ko" = (
 /obj/structure/table/marble,
-/obj/item/weapon/paper_bin,
-/obj/item/weapon/pen/multi,
+/obj/item/paper_bin,
+/obj/item/pen/multi,
 /turf/simulated/floor/lino,
 /area/survivalpod/superpose/RestaurationBar)
 "Kw" = (
@@ -2029,8 +2029,8 @@
 "LY" = (
 /obj/structure/table/rack/shelf,
 /obj/random/soap,
-/obj/item/weapon/towel/random,
-/obj/item/weapon/makeover,
+/obj/item/towel/random,
+/obj/item/makeover,
 /obj/effect/floor_decal/corner/purple/diagonal,
 /turf/simulated/floor/tiled/freezer,
 /area/survivalpod/superpose/RestaurationBar)
@@ -2083,19 +2083,19 @@
 "MY" = (
 /obj/structure/table/standard,
 /obj/random/soap,
-/obj/item/weapon/towel/random,
-/obj/item/weapon/towel/random,
+/obj/item/towel/random,
+/obj/item/towel/random,
 /obj/random/soap,
 /obj/random/soap,
-/obj/item/weapon/towel/random,
+/obj/item/towel/random,
 /turf/simulated/floor/tiled/freezer,
 /area/survivalpod/superpose/RestaurationBar)
 "Nb" = (
 /obj/structure/table/gamblingtable,
-/obj/item/weapon/storage/pill_bottle/dice,
-/obj/item/device/communicator,
-/obj/item/weapon/lipstick/random,
-/obj/item/weapon/material/ashtray/glass,
+/obj/item/storage/pill_bottle/dice,
+/obj/item/communicator,
+/obj/item/lipstick/random,
+/obj/item/material/ashtray/glass,
 /turf/simulated/floor/carpet/purcarpet,
 /area/survivalpod/superpose/RestaurationBar)
 "Nd" = (
@@ -2121,7 +2121,7 @@
 /turf/simulated/floor/carpet/brown,
 /area/survivalpod/superpose/RestaurationBar)
 "NE" = (
-/obj/item/weapon/stool/padded,
+/obj/item/stool/padded,
 /turf/simulated/floor/carpet/purcarpet,
 /area/survivalpod/superpose/RestaurationBar)
 "NR" = (
@@ -2150,7 +2150,7 @@
 /area/survivalpod/superpose/RestaurationBar)
 "OA" = (
 /obj/structure/table/marble,
-/obj/item/weapon/storage/box/donut,
+/obj/item/storage/box/donut,
 /turf/simulated/floor/lino,
 /area/survivalpod/superpose/RestaurationBar)
 "OI" = (
@@ -2161,8 +2161,8 @@
 /obj/machinery/light{
 	dir = 4
 	},
-/obj/item/weapon/melee/umbrella/random,
-/obj/item/weapon/melee/umbrella/random,
+/obj/item/melee/umbrella/random,
+/obj/item/melee/umbrella/random,
 /obj/structure/table/rack,
 /turf/simulated/floor/carpet,
 /area/survivalpod/superpose/RestaurationBar)
@@ -2280,7 +2280,7 @@
 /turf/simulated/floor/outdoors/dirt,
 /area/template_noop)
 "Rx" = (
-/obj/item/weapon/stool/padded,
+/obj/item/stool/padded,
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 4
 	},
@@ -2291,8 +2291,8 @@
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 8
 	},
-/obj/item/weapon/reagent_containers/food/snacks/berrymuffin,
-/obj/item/weapon/reagent_containers/food/drinks/cup{
+/obj/item/reagent_containers/food/snacks/berrymuffin,
+/obj/item/reagent_containers/food/drinks/cup{
 	pixel_x = 8
 	},
 /obj/effect/map_effect/perma_light,
@@ -2335,7 +2335,7 @@
 /area/survivalpod/superpose/RestaurationBar)
 "Tf" = (
 /obj/structure/table/woodentable,
-/obj/item/device/flashlight/lamp/green,
+/obj/item/flashlight/lamp/green,
 /turf/simulated/floor/carpet/oracarpet,
 /area/survivalpod/superpose/RestaurationBar)
 "Ti" = (
@@ -2383,7 +2383,7 @@
 	dir = 4
 	},
 /obj/item/trash/plate,
-/obj/item/weapon/reagent_containers/food/snacks/hotdog,
+/obj/item/reagent_containers/food/snacks/hotdog,
 /turf/simulated/floor/carpet/bcarpet,
 /area/survivalpod/superpose/RestaurationBar)
 "UV" = (
@@ -2416,8 +2416,8 @@
 /area/survivalpod/superpose/RestaurationBar)
 "VD" = (
 /obj/structure/table/standard,
-/obj/item/device/starcaster_news,
-/obj/item/weapon/reagent_containers/food/snacks/meatsteak,
+/obj/item/starcaster_news,
+/obj/item/reagent_containers/food/snacks/meatsteak,
 /turf/simulated/floor/carpet/purple,
 /area/survivalpod/superpose/RestaurationBar)
 "VF" = (
@@ -2432,13 +2432,13 @@
 /obj/effect/floor_decal/corner/grey/diagonal{
 	dir = 4
 	},
-/obj/item/weapon/reagent_containers/food/condiment/small/saltshaker{
+/obj/item/reagent_containers/food/condiment/small/saltshaker{
 	pixel_x = -3
 	},
-/obj/item/weapon/reagent_containers/food/condiment/small/peppermill{
+/obj/item/reagent_containers/food/condiment/small/peppermill{
 	pixel_x = 3
 	},
-/obj/item/weapon/reagent_containers/food/condiment/enzyme,
+/obj/item/reagent_containers/food/condiment/enzyme,
 /turf/simulated/floor/tiled/white,
 /area/survivalpod/superpose/RestaurationBar)
 "VK" = (
@@ -2455,7 +2455,7 @@
 /obj/item/honey_frame,
 /obj/item/honey_frame,
 /obj/item/honey_frame,
-/obj/item/weapon/tool/crowbar,
+/obj/item/tool/crowbar,
 /obj/item/honey_frame,
 /obj/item/honey_frame,
 /obj/item/bee_pack,
@@ -2489,7 +2489,7 @@
 /area/survivalpod/superpose/RestaurationBar)
 "Wt" = (
 /obj/structure/table/gamblingtable,
-/obj/item/weapon/deck/holder,
+/obj/item/deck/holder,
 /turf/simulated/floor/carpet/purcarpet,
 /area/survivalpod/superpose/RestaurationBar)
 "WA" = (
@@ -2512,13 +2512,13 @@
 /area/survivalpod/superpose/RestaurationBar)
 "Xp" = (
 /obj/structure/table/marble,
-/obj/item/weapon/storage/box/glasses/meta,
-/obj/item/weapon/storage/box/glasses/meta,
-/obj/item/weapon/storage/box/glasses/coffeemug{
+/obj/item/storage/box/glasses/meta,
+/obj/item/storage/box/glasses/meta,
+/obj/item/storage/box/glasses/coffeemug{
 	pixel_x = -6;
 	pixel_y = 12
 	},
-/obj/item/weapon/storage/box/glasses/coffeecup{
+/obj/item/storage/box/glasses/coffeecup{
 	pixel_x = -6;
 	pixel_y = 1
 	},
@@ -2528,8 +2528,8 @@
 /obj/machinery/light{
 	dir = 8
 	},
-/obj/item/weapon/melee/umbrella/random,
-/obj/item/weapon/melee/umbrella/random,
+/obj/item/melee/umbrella/random,
+/obj/item/melee/umbrella/random,
 /obj/structure/table/rack,
 /turf/simulated/floor/carpet,
 /area/survivalpod/superpose/RestaurationBar)
@@ -2580,7 +2580,7 @@
 	dir = 1;
 	dispense_reagents = list("iron","radium","lemon_lime","sugar","orangejuice","limejuice","sodawater","tonic","beer","kahlua","whiskey","redwine","whitewine","vodka","cider","gin","rum","tequilla","vermouth","cognac","ale","mead","bitters")
 	},
-/obj/item/weapon/reagent_containers/chem_disp_cartridge/ethanol,
+/obj/item/reagent_containers/chem_disp_cartridge/ethanol,
 /turf/simulated/floor/lino,
 /area/survivalpod/superpose/RestaurationBar)
 "Yf" = (
@@ -2588,15 +2588,15 @@
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 4
 	},
-/obj/item/device/communicator,
+/obj/item/communicator,
 /obj/item/trash/plate,
 /turf/simulated/floor/carpet/bcarpet,
 /area/survivalpod/superpose/RestaurationBar)
 "Yg" = (
 /obj/structure/table/marble,
-/obj/item/weapon/book/manual/chef_recipes,
-/obj/item/weapon/material/knife/butch,
-/obj/item/weapon/material/kitchen/rollingpin,
+/obj/item/book/manual/chef_recipes,
+/obj/item/material/knife/butch,
+/obj/item/material/kitchen/rollingpin,
 /obj/effect/floor_decal/corner/grey/diagonal{
 	dir = 4
 	},
@@ -2635,14 +2635,14 @@
 /turf/simulated/floor/tiled/hydro,
 /area/survivalpod/superpose/RestaurationBar)
 "YX" = (
-/obj/item/weapon/gun/energy/sizegun,
-/obj/item/device/bodysnatcher,
-/obj/item/weapon/handcuffs/fuzzy,
-/obj/item/weapon/handcuffs/legcuffs/fuzzy,
+/obj/item/gun/energy/sizegun,
+/obj/item/bodysnatcher,
+/obj/item/handcuffs/fuzzy,
+/obj/item/handcuffs/legcuffs/fuzzy,
 /obj/item/clothing/accessory/collar,
-/obj/item/weapon/tape_roll,
-/obj/item/device/perfect_tele/one_beacon,
-/obj/item/weapon/disk/nifsoft/compliance,
+/obj/item/tape_roll,
+/obj/item/perfect_tele/one_beacon,
+/obj/item/disk/nifsoft/compliance,
 /obj/item/selectable_item/chemistrykit,
 /obj/item/selectable_item/chemistrykit,
 /obj/item/selectable_item/chemistrykit,
@@ -2679,7 +2679,7 @@
 /area/survivalpod/superpose/RestaurationBar)
 "ZR" = (
 /obj/structure/table/woodentable,
-/obj/item/device/flashlight/lamp/green,
+/obj/item/flashlight/lamp/green,
 /turf/simulated/floor/carpet/purple,
 /area/survivalpod/superpose/RestaurationBar)
 "ZS" = (

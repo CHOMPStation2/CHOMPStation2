@@ -33,14 +33,17 @@ won't update every console in existence) but it's more of a hassle to do. Also, 
 	icon_keyboard = "rd_key"
 	icon_screen = "rdcomp"
 	light_color = "#a97faa"
-	circuit = /obj/item/weapon/circuitboard/rdconsole
+	circuit = /obj/item/circuitboard/rdconsole
 	var/datum/research/files							//Stores all the collected research data.
-	var/obj/item/weapon/disk/tech_disk/t_disk = null	//Stores the technology disk.
-	var/obj/item/weapon/disk/design_disk/d_disk = null	//Stores the design disk.
+	var/obj/item/disk/tech_disk/t_disk = null	//Stores the technology disk.
+	var/obj/item/disk/design_disk/d_disk = null	//Stores the design disk.
 
 	var/obj/machinery/r_n_d/destructive_analyzer/linked_destroy = null	//Linked Destructive Analyzer
 	var/obj/machinery/r_n_d/protolathe/linked_lathe = null				//Linked Protolathe
 	var/obj/machinery/r_n_d/circuit_imprinter/linked_imprinter = null	//Linked Circuit Imprinter
+
+	var/list/LockedLatheDesigns = list() //CHOMPADDITION: FOR VR mainly.
+	var/list/LockedPrinterDesigns = list() //CHOMPADDITION: FOR VR mainly.
 
 	var/id = 0			//ID of the computer (for server restrictions).
 	var/sync = 1		//If sync = 0, it doesn't show up on Server Control Console
@@ -90,10 +93,14 @@ won't update every console in existence) but it's more of a hassle to do. Also, 
 			if(linked_lathe == null)
 				linked_lathe = D
 				D.linked_console = src
+				linked_lathe.LockedDesigns.Cut()
+				linked_lathe.LockedDesigns = LockedLatheDesigns.Copy();
 		else if(istype(D, /obj/machinery/r_n_d/circuit_imprinter))
 			if(linked_imprinter == null)
 				linked_imprinter = D
 				D.linked_console = src
+				linked_imprinter.LockedDesigns.Cut()
+				linked_imprinter.LockedDesigns = LockedPrinterDesigns.Copy();
 	return
 
 /obj/machinery/computer/rdconsole/proc/griefProtection() //Have it automatically push research to the CentCom server so wild griffins can't fuck up R&D's work
@@ -116,23 +123,23 @@ won't update every console in existence) but it's more of a hassle to do. Also, 
 	SyncRDevices()
 	. = ..()
 
-/obj/machinery/computer/rdconsole/attackby(var/obj/item/weapon/D as obj, var/mob/user as mob)
+/obj/machinery/computer/rdconsole/attackby(var/obj/item/D as obj, var/mob/user as mob)
 	//Loading a disk into it.
-	if(istype(D, /obj/item/weapon/disk))
+	if(istype(D, /obj/item/disk))
 		if(t_disk || d_disk)
-			to_chat(user, "<span class='filter_notice'>A disk is already loaded into the machine.</span>")
+			to_chat(user, span_filter_notice("A disk is already loaded into the machine."))
 			return
 
-		if(istype(D, /obj/item/weapon/disk/tech_disk))
+		if(istype(D, /obj/item/disk/tech_disk))
 			t_disk = D
-		else if (istype(D, /obj/item/weapon/disk/design_disk))
+		else if (istype(D, /obj/item/disk/design_disk))
 			d_disk = D
 		else
-			to_chat(user, "<span class='notice'>Machine cannot accept disks in that format.</span>")
+			to_chat(user, span_notice("Machine cannot accept disks in that format."))
 			return
 		user.drop_item()
 		D.loc = src
-		to_chat(user, "<span class='notice'>You add \the [D] to the machine.</span>")
+		to_chat(user, span_notice("You add \the [D] to the machine."))
 	else
 		//The construction/deconstruction of the console code.
 		..()
@@ -140,11 +147,20 @@ won't update every console in existence) but it's more of a hassle to do. Also, 
 	SStgui.update_uis(src)
 	return
 
+/obj/machinery/computer/rdconsole/dismantle()
+	if(linked_destroy)
+		linked_destroy.linked_console = null
+	if(linked_lathe)
+		linked_lathe.linked_console = null
+	if(linked_imprinter)
+		linked_imprinter.linked_console = null
+	..()
+
 /obj/machinery/computer/rdconsole/emp_act(var/remaining_charges, var/mob/user)
 	if(!emagged)
 		playsound(src, 'sound/effects/sparks4.ogg', 75, 1)
 		emagged = 1
-		to_chat(user, "<span class='notice'>You disable the security protocols.</span>")
+		to_chat(user, span_notice("You disable the security protocols."))
 		return 1
 
 /obj/machinery/computer/rdconsole/proc/GetResearchLevelsInfo()
@@ -184,3 +200,32 @@ won't update every console in existence) but it's more of a hassle to do. Also, 
 /obj/machinery/computer/rdconsole/core
 	name = "Core R&D Console"
 	id = 1
+
+// CHOMPAdd Start - Departmental lathes
+
+/obj/machinery/computer/rdconsole/engineering
+	name = "Engineering Protolathe Console"
+	id = 3
+	req_access = list(access_engine)
+
+/obj/machinery/computer/rdconsole/medical
+	name = "Medical Protolathe Console"
+	id = 4
+	req_access = list(access_medical)
+
+/obj/machinery/computer/rdconsole/cargo
+	name = "Cargo Protolathe Console"
+	id = 5
+	req_access = list(access_cargo)
+
+/obj/machinery/computer/rdconsole/service
+	name = "Service Protolathe Console"
+	id = 6
+	req_access = list(access_bar, access_janitor, access_library)
+
+/obj/machinery/computer/rdconsole/security
+	name = "Security Protolathe Console"
+	id = 7
+	req_access = list(access_security)
+
+// CHOMPEnd

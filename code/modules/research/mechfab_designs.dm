@@ -440,7 +440,7 @@
 	id = "mech_laser_gamma"
 	req_tech = list(TECH_MATERIAL = 5, TECH_COMBAT = 5, TECH_PHORON = 4, TECH_POWER = 5, TECH_ILLEGAL = 3)
 	build_path = /obj/item/mecha_parts/mecha_equipment/weapon/energy/laser/gamma
-	materials = list(DEFAULT_WALL_MATERIAL = 6000, "glass" = 4000, "phoron" = 2500, "silver" = 1000, "gold" = 500, "uranium" = 3000) //CHOMPedit end
+	materials = list(DEFAULT_WALL_MATERIAL = 6000, MAT_GLASS = 4000, MAT_PHORON = 2500, MAT_SILVER = 1000, MAT_GOLD = 500, MAT_URANIUM = 3000) //CHOMPedit end
 
 /datum/design/item/mecha/weapon/rigged_laser_xray
 	name = "Jury-Rigged Xray Rifle"
@@ -545,7 +545,7 @@
 	req_tech = list(TECH_BLUESPACE = 10, TECH_MAGNET = 5)
 	build_path = /obj/item/mecha_parts/mecha_equipment/teleporter
 
-/datum/design/item/mecha/teleporter
+/datum/design/item/mecha/cloak
 	name = "Cloaking Device"
 	desc = "A device that renders the exosuit invisible to the naked eye, though not to thermal detection. Uses large amounts of energy."
 	id = "mech_cloaking"
@@ -792,7 +792,7 @@
 	req_tech = list(TECH_MAGNET = 3, TECH_COMBAT = 2)
 	build_type = MECHFAB
 	materials = list(MAT_STEEL = 562, MAT_GLASS = 562)
-	build_path = /obj/item/device/flash/synthetic
+	build_path = /obj/item/flash/synthetic
 	category = list("Misc")
 
 /*
@@ -810,7 +810,7 @@
 	id = "vehicle_chassis_spacebike"
 	req_tech = list(TECH_MATERIAL = 5, TECH_ENGINEERING = 6, TECH_BLUESPACE = 3, TECH_PHORON = 3)
 	materials = list(MAT_STEEL = 12000, MAT_SILVER = 3000, MAT_PHORON = 3000, MAT_OSMIUM = 1000)
-	build_path = /obj/item/weapon/vehicle_assembly/spacebike
+	build_path = /obj/item/vehicle_assembly/spacebike
 
 /datum/design/item/mechfab/vehicle/quadbike_chassis
 	name = "Quad bike Chassis"
@@ -818,7 +818,7 @@
 	id = "vehicle_chassis_quadbike"
 	req_tech = list(TECH_MATERIAL = 5, TECH_ENGINEERING = 6, TECH_MAGNET = 3, TECH_POWER = 2)
 	materials = list(MAT_STEEL = 15000, MAT_SILVER = 3000, MAT_PLASTIC = 3000, MAT_OSMIUM = 1000)
-	build_path = /obj/item/weapon/vehicle_assembly/quadbike
+	build_path = /obj/item/vehicle_assembly/quadbike
 
 /datum/design/item/mechfab/vehicle/snowmobile_chassis
 	name = "Snowmobile Chassis"
@@ -826,7 +826,7 @@
 	id = "vehicle_chassis_snowmobile"
 	req_tech = list(TECH_MATERIAL = 5, TECH_ENGINEERING = 6, TECH_MAGNET = 3, TECH_POWER = 2)
 	materials = list(MAT_STEEL = 12000, MAT_SILVER = 3000, MAT_PLASTIC = 3000, MAT_OSMIUM = 1000)
-	build_path = /obj/item/weapon/vehicle_assembly/snowmobile
+	build_path = /obj/item/vehicle_assembly/snowmobile
 
 /*
  * Rigsuits
@@ -841,7 +841,7 @@
 	desc = "A belt holding a compressed space-suit."
 	id = "rigmodule_belt_basic"
 	materials = list(MAT_PLASTEEL = 12000, MAT_GOLD = 3000, MAT_GRAPHITE = 3000, MAT_OSMIUM = 1000, MAT_PLASTIC = 5000)
-	build_path = /obj/item/weapon/rig/robotics
+	build_path = /obj/item/rig/robotics
 
 /datum/design/item/mechfab/rigsuit/jetpack
 	name = "hardsuit maneuvering jets"
@@ -1101,7 +1101,7 @@
 /datum/design/item/mechfab/uav/basic
 	name = "UAV - Recon Skimmer"
 	id = "recon_skimmer"
-	build_path = /obj/item/device/uav
+	build_path = /obj/item/uav
 	time = 20
 	req_tech = list(TECH_MATERIAL = 6, TECH_ENGINEERING = 5, TECH_PHORON = 3, TECH_MAGNET = 4, TECH_POWER = 6)
 	materials = list(MAT_STEEL = 10000, MAT_GLASS = 6000, MAT_SILVER = 4000)
@@ -1253,3 +1253,129 @@
 	req_tech = list(TECH_MATERIAL = 5, TECH_ENGINEERING = 4, TECH_POWER = 4)
 	materials = list(MAT_PLASTEEL = 10000, MAT_OSMIUM = 3000, MAT_GOLD = 5000)
 	build_path = /obj/item/mecha_parts/component/actuator/hispeed
+
+///--------///
+///Fighters///
+///--------///
+
+///Pinnace///
+
+/datum/design/item/mechfab/fighter/pinnace
+	category = list("Pinnace")
+
+/datum/design/item/mechfab/fighter/pinnace/chassis
+	name = "Pinnace Chassis"
+	id = "pinnace_chassis"
+	build_path = /obj/item/mecha_parts/fighter/chassis/pinnace
+	time = 30
+	materials = list(MAT_STEEL = 25000, MAT_GLASS = 10000, MAT_PLASTEEL = 10000)
+
+/datum/design/item/mechfab/fighter/pinnace/core
+	name = "Pinnace Core"
+	id = "pinnace_core"
+	build_path = /obj/item/mecha_parts/fighter/part/pinnace_core
+	time = 60
+	materials = list(MAT_STEEL = 25000, MAT_GLASS = 7000, MAT_PLASTEEL = 7000)
+
+/datum/design/item/mechfab/fighter/pinnace/cockpit
+	name = "Pinnace Cockpit"
+	id = "pinnace_cockpit"
+	build_path = /obj/item/mecha_parts/fighter/part/pinnace_cockpit
+	time = 15
+	materials = list(MAT_STEEL = 2500, MAT_PLASTEEL = 2500, MAT_GLASS = 7500, MAT_PLASTIC = 2500)
+
+/datum/design/item/mechfab/fighter/pinnace/main_engine
+	name = "Pinnace Main Engine"
+	id = "pinnace_main_engine"
+	build_path = /obj/item/mecha_parts/fighter/part/pinnace_main_engine
+	time = 25
+	materials = list(MAT_STEEL = 15000, MAT_PLASTEEL = 5000)
+
+/datum/design/item/mechfab/fighter/pinnace/left_engine
+	name = "Pinnace Left Engine"
+	id = "pinnace_left_engine"
+	build_path = /obj/item/mecha_parts/fighter/part/pinnace_left_engine
+	time = 25
+	materials = list(MAT_STEEL = 10000, MAT_PLASTEEL = 2500)
+
+/datum/design/item/mechfab/fighter/pinnace/right_engine
+	name = "Pinnace Right Engine"
+	id = "pinnace_right_engine"
+	build_path = /obj/item/mecha_parts/fighter/part/pinnace_right_engine
+	time = 25
+	materials = list(MAT_STEEL = 10000, MAT_PLASTEEL = 2500)
+
+/datum/design/item/mechfab/fighter/pinnace/left_wing
+	name = "Pinnace Left Wing"
+	id = "pinnace_left_wing"
+	build_path = /obj/item/mecha_parts/fighter/part/pinnace_left_wing
+	time = 20
+	materials = list(MAT_STEEL = 7000, MAT_PLASTIC = 3000, MAT_PLASTEEL = 5000)
+
+/datum/design/item/mechfab/fighter/pinnace/right_wing
+	name = "Pinnace Right Wing"
+	id = "pinnace_right_wing"
+	build_path = /obj/item/mecha_parts/fighter/part/pinnace_right_wing
+	time = 20
+	materials = list(MAT_STEEL = 7000, MAT_PLASTIC = 3000, MAT_PLASTEEL = 5000)
+
+///Baron///
+
+/datum/design/item/mechfab/fighter/baron
+	category = list("Baron")
+
+/datum/design/item/mechfab/fighter/baron/chassis
+	name = "Baron Chassis"
+	id = "baron_chassis"
+	build_path = /obj/item/mecha_parts/fighter/chassis/baron
+	time = 30
+	materials = list(MAT_STEEL = 37500, MAT_GLASS = 15000, MAT_PLASTEEL = 15000)
+
+/datum/design/item/mechfab/fighter/baron/core
+	name = "Baron Core"
+	id = "baron_core"
+	build_path = /obj/item/mecha_parts/fighter/part/baron_core
+	time = 60
+	materials = list(MAT_STEEL = 37500, MAT_GLASS = 15000, MAT_PLASTEEL = 15000)
+
+/datum/design/item/mechfab/fighter/baron/cockpit
+	name = "Baron Cockpit"
+	id = "baron_cockpit"
+	build_path = /obj/item/mecha_parts/fighter/part/baron_cockpit
+	time = 15
+	materials = list(MAT_STEEL = 5000, MAT_PLASTEEL = 5000, MAT_GLASS = 10000, MAT_PLASTIC = 5000)
+
+/datum/design/item/mechfab/fighter/baron/main_engine
+	name = "Baron Main Engine"
+	id = "baron_main_engine"
+	build_path = /obj/item/mecha_parts/fighter/part/baron_main_engine
+	time = 25
+	materials = list(MAT_STEEL = 25000, MAT_PLASTEEL = 10000)
+
+/datum/design/item/mechfab/fighter/baron/left_engine
+	name = "Baron Left Engine"
+	id = "baron_left_engine"
+	build_path = /obj/item/mecha_parts/fighter/part/baron_left_engine
+	time = 25
+	materials = list(MAT_STEEL = 20000, MAT_PLASTEEL = 5000)
+
+/datum/design/item/mechfab/fighter/baron/right_engine
+	name = "Baron Right Engine"
+	id = "baron_right_engine"
+	build_path = /obj/item/mecha_parts/fighter/part/baron_right_engine
+	time = 25
+	materials = list(MAT_STEEL = 20000, MAT_PLASTEEL = 5000)
+
+/datum/design/item/mechfab/fighter/baron/left_wing
+	name = "Baron Left Wing"
+	id = "baron_left_wing"
+	build_path = /obj/item/mecha_parts/fighter/part/baron_left_wing
+	time = 20
+	materials = list(MAT_STEEL = 15000, MAT_PLASTIC = 6000, MAT_PLASTEEL = 10000)
+
+/datum/design/item/mechfab/fighter/baron/right_wing
+	name = "Baron Right Wing"
+	id = "baron_right_wing"
+	build_path = /obj/item/mecha_parts/fighter/part/baron_right_wing
+	time = 20
+	materials = list(MAT_STEEL = 15000, MAT_PLASTIC = 6000, MAT_PLASTEEL = 10000)

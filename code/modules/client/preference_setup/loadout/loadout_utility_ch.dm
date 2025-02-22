@@ -1,19 +1,19 @@
 
 /datum/gear/utility/news_ch
 	display_name = "starcaster"
-	path = /obj/item/device/starcaster_news
+	path = /obj/item/starcaster_news
 	cost = 0
 
 /datum/gear/utility/implant/egg
 	display_name = "Egg implant"
-	path = /obj/item/weapon/implant/reagent_generator/egg
+	path = /obj/item/implant/reagent_generator/egg
 	cost = 0
 
 /datum/gear/utility/implant/egg/New()
 	..()
 	var/list/implants = list()
-	for(var/implant in typesof(/obj/item/weapon/implant/reagent_generator/egg))
-		var/obj/item/weapon/implant/reagent_generator/egg/implant_type = implant
+	for(var/implant in typesof(/obj/item/implant/reagent_generator/egg))
+		var/obj/item/implant/reagent_generator/egg/implant_type = implant
 		implants[initial(implant_type.name)] = implant_type
 	gear_tweaks += new/datum/gear_tweak/path(sortAssoc(implants))
 
@@ -146,18 +146,18 @@
 
 /datum/gear/utility/saddlebag_common/lightweight
 	display_name = "saddle bag, common (Light)"
-	path = /obj/item/weapon/storage/backpack/saddlebag_common/lightweight
+	path = /obj/item/storage/backpack/saddlebag_common/lightweight
 	slot = slot_back
 	cost = 2
 
 /datum/gear/utility/saddlebag_common/robust/lightweight
 	display_name = "saddle bag, robust (Light)"
-	path = /obj/item/weapon/storage/backpack/saddlebag_common/robust/lightweight
+	path = /obj/item/storage/backpack/saddlebag_common/robust/lightweight
 	slot = slot_back
 	cost = 2
 
 /datum/gear/utility/saddlebag_common/vest/heavy
 	display_name = "taur duty vest (backpack) (Heavy)"
-	path = /obj/item/weapon/storage/backpack/saddlebag_common/vest/heavy
+	path = /obj/item/storage/backpack/saddlebag_common/vest/heavy
 	slot = slot_back
 	cost = 1

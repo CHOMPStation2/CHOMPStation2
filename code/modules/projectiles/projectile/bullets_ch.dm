@@ -31,6 +31,8 @@ only use the hollow_point and armor_penetration values.*/
 	energy = max(0,energy - amount)
 	velocity = sqrt(2*energy/(grains / GRAINS_PER_KG))
 
+#undef GRAINS_PER_KG
+
 //Pistol projectiles
 /obj/item/projectile/bullet/pistol	//9x19mm
 	fire_sound = 'sound/weapons/ballistics/a9mm.ogg'
@@ -398,6 +400,7 @@ only use the hollow_point and armor_penetration values.*/
 //beware of cadyn cope above ^^ - Ocelot
 
 /obj/item/projectile/bullet/rifle/a9x39 //We also have actual 9x39mm
+	damage = 30 //9mm pistol with 7.62 cartridge? idk russiain chambers.
 	fire_sound = 'sound/weapons/ballistics/a545.ogg'
 	diam = 9.25
 	grains = 259

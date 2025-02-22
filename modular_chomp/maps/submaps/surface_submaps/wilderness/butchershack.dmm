@@ -11,10 +11,10 @@
 "d" = (
 /obj/structure/closet,
 /obj/effect/decal/cleanable/cobweb,
-/obj/item/weapon/beartrap,
-/obj/item/weapon/beartrap,
-/obj/item/weapon/packageWrap,
-/obj/item/weapon/material/knife/hook,
+/obj/item/beartrap,
+/obj/item/beartrap,
+/obj/item/packageWrap,
+/obj/item/material/knife/hook,
 /turf/simulated/floor/wood/sif,
 /area/submap/ButcherShack)
 "e" = (
@@ -81,15 +81,15 @@
 "q" = (
 /obj/structure/table/standard,
 /obj/effect/decal/cleanable/blood,
-/obj/item/weapon/material/knife/butch,
+/obj/item/material/knife/butch,
 /turf/simulated/floor/wood/sif/broken,
 /area/submap/ButcherShack)
 "r" = (
 /obj/structure/table/standard,
-/obj/item/weapon/reagent_containers/food/snacks/cutlet,
-/obj/item/weapon/reagent_containers/food/snacks/cutlet,
-/obj/item/weapon/reagent_containers/food/snacks/cutlet,
-/obj/item/weapon/reagent_containers/food/snacks/sausage,
+/obj/item/reagent_containers/food/snacks/cutlet,
+/obj/item/reagent_containers/food/snacks/cutlet,
+/obj/item/reagent_containers/food/snacks/cutlet,
+/obj/item/reagent_containers/food/snacks/sausage,
 /turf/simulated/floor/wood/sif,
 /area/submap/ButcherShack)
 "s" = (
@@ -98,7 +98,7 @@
 /area/submap/ButcherShack)
 "t" = (
 /obj/structure/bed/padded,
-/obj/item/weapon/bedsheet/brown,
+/obj/item/bedsheet/brown,
 /turf/simulated/floor/wood/sif,
 /area/submap/ButcherShack)
 "u" = (

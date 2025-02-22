@@ -11,12 +11,15 @@ jobs:
   run_linters:
     if: ( !contains(github.event.head_commit.message, '[ci skip]') )
     name: Run Linters
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
     concurrency:
       group: run_linters-${{ github.head_ref || github.run_id }}
       cancel-in-progress: true
     steps:
       - uses: actions/checkout@v4
+        with:
+            fetch-depth: 0
+      # Caches
       - name: Ensure +x on CI directory
         run: |
           chmod -R +x ./tools/ci
@@ -24,7 +27,7 @@ jobs:
         uses: actions/cache@v4
         with:
           path: ~/SpacemanDMM
-          key: ${{ runner.os }}-spacemandmm-${{ hashFiles('_dependencies.sh') }}
+          key: ${{ runner.os }}-spacemandmm-${{ hashFiles('dependencies.sh') }}
           restore-keys: |
             ${{ runner.os }}-spacemandmm-
       - name: Restore Yarn cache
@@ -38,7 +41,7 @@ jobs:
         uses: actions/cache@v4
         with:
           path: ~/.nvm
-          key: ${{ runner.os }}-node-${{ hashFiles('_dependencies.sh') }}
+          key: ${{ runner.os }}-node-${{ hashFiles('dependencies.sh') }}
           restore-keys: |
             ${{ runner.os }}-node-
       - name: Restore Bootstrap cache
@@ -48,79 +51,122 @@ jobs:
           key: ${{ runner.os }}-bootstrap-${{ hashFiles('tools/requirements.txt') }}
           restore-keys: |
             ${{ runner.os }}-bootstrap-
+      - name: Restore Rust cache
+        uses: actions/cache@v4
+        with:
+          path: ~/.cargo
+          key: ${{ runner.os }}-rust-${{ hashFiles('tools/ci/ci_dependencies.sh')}}
+          restore-keys: |
+            ${{ runner.os }}-rust-
       - name: Restore Cutter cache
         uses: actions/cache@v4
         with:
           path: tools/icon_cutter/cache
-          key: ${{ runner.os }}-cutter-${{ hashFiles('_dependencies.sh') }}
+          key: ${{ runner.os }}-cutter-${{ hashFiles('dependencies.sh') }}
+      # End Caches
       - name: Install Tools
         run: |
           pip3 install setuptools
           bash tools/ci/install_build_deps.sh
+          bash tools/ci/install_ripgrep.sh
           bash tools/ci/install_spaceman_dmm.sh dreamchecker
+          bash tools/ci/install_spaceman_dmm.sh dmm-tools
           tools/bootstrap/python -c ''
-      - name: Run Tests
+      - name: Run Validation Tests
+        run: bash tools/ci/validate_files.sh
+      - name: Run Define Sanity Checks
+        run: tools/bootstrap/python -m define_sanity.check
+      - name: Run DMI Tests
+        run: tools/bootstrap/python -m dmi.test
+      - name: Run Map Checks
         run: |
-          tools/ci/validate_files.sh
-      - name: Run DreamChecker
-        shell: bash
-        run: ~/dreamchecker 2>&1 | bash tools/ci/annotate_dm.sh
+          tools/bootstrap/python -m tools.maplint.source
+          tools/bootstrap/python -m mapmerge2.dmm_test
       - name: Run TGUI Checks
         run: tools/build/build --ci lint tgui-test
+      - name: Run Nanomap Checks
+        run: tools/github-actions/nanomap-renderer-invoker.sh --testing
+
+  dreamchecker:
+    name: DreamChecker
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Restore SpacemanDMM Cache
+        uses: actions/cache@v4
+        with:
+          path: ~/SpacemanDMM
+          key: ${{ runner.os }}-dreamchecker-${{ hashFiles('dependencies.sh')}}
+          restore-keys: ${{ runner.os }}-dreamchecker
+
+      - name: Install Dependencies
+        run: |
+          tools/ci/install_spaceman_dmm.sh dreamchecker
+
+      - name: Run Linter
+        id: linter
+        run: |
+          ~/dreamchecker > ${GITHUB_WORKSPACE}/output-annotations.txt 2>&1
+
+      - name: Annotate Linter
+        uses: yogstation13/DreamAnnotate@v2
+        if: always()
+        with:
+          outputFile: output-annotations.txt
 
   unit_tests:
     timeout-minutes: 30
     if: ( !contains(github.event.head_commit.message, '[ci skip]') )
+    strategy:
+      matrix:
+        map: ['USE_MAP_SOUTHERN_CROSS', 'USE_MAP_SOLUNA_NEXUS', 'USE_MAP_RELIC_BASE']
+    # name: Integration Tests (${{ matrix.map }})
     name: Integration Tests
     # needs: ['run_linters', 'dreamchecker']
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
       - name: Ensure +x on CI directory
         run: |
           chmod -R +x ./tools/ci
-      - name: Setup Cache
+      - name: Restore BYOND Cache
         uses: actions/cache@v4
         with:
-          path: $HOME/BYOND
+          path: $HOME/byond
           key: ${{ runner.os }}-byond
       - name: Install RUST_G Dependencies
         run: |
           sudo dpkg --add-architecture i386
           sudo apt update || true
           sudo apt install gcc-multilib
-          sudo apt install zlib1g-dev:i386 libssl-dev:i386
+          sudo apt install zlib1g-dev:i386
           ldd librust_g.so
+          ldd libbapi_dmm_reader.so
+          ldd libverdigris.so
       - name: Unit Tests
         run: |
           tools/ci/install_byond.sh
           tools/ci/compile_and_run.sh
         env:
-          TEST_DEFINE: "UNIT_TEST"
-          TEST_FILE: "code/_unit_tests.dm"
+          EXTRA_ARGS: "-DUNIT_TEST -D${{ matrix.map }}"
           RUN: "1"
-      - name: Compile away missions
-        run: |
-          tools/ci/install_byond.sh
-          tools/ci/compile_and_run.sh
-        env:
-          TEST_DEFINE: "AWAY_MISSION_TEST"
-          TEST_FILE: "code/_away_mission_tests.dm"
-          RUN: "0"
       - name: Compile POIs
-        run: |
-          tools/ci/install_byond.sh
-          tools/ci/compile_and_run.sh
+        run: tools/ci/compile_and_run.sh
         env:
-          TEST_DEFINE: "MAP_TEST"
-          TEST_FILE: "code/_map_tests.dm"
+          EXTRA_ARGS: "-DMAP_TEST -D${{ matrix.map }}"
+          RUN: "0"
+      - name: Compile away missions
+        run: tools/ci/compile_and_run.sh
+        env:
+          EXTRA_ARGS: "-DAWAY_MISSION_TEST -D${{ matrix.map }}"
           RUN: "0"
 
   tests_successful:
     if: ( !contains(github.event.head_commit.message, '[ci skip]') )
     name: Integration Tests
-    needs: ['run_linters', 'unit_tests']
-    runs-on: ubuntu-20.04
+    needs: ['run_linters', 'dreamchecker', 'unit_tests']
+    runs-on: ubuntu-24.04
     steps:
       - name: Report Success
         run: |

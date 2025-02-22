@@ -1,12 +1,12 @@
 /turf/simulated/wall/diona/Initialize(mapload)
-	..(mapload, "biomass")
+	. = ..(mapload, MAT_BIOMASS)
 
 /turf/simulated/wall/diona/attack_generic(var/mob/user, var/damage, var/attack_message)
 	if(istype(user, /mob/living/carbon/alien/diona))
 		if(can_open == WALL_OPENING)
 			return
 		can_open = WALL_CAN_OPEN
-		user.visible_message("<span class='alium'>\The [user] strokes its feelers against \the [src] and the biomass [density ? "moves aside" : "closes up"].</span>")
+		user.visible_message(span_alium("\The [user] strokes its feelers against \the [src] and the biomass [density ? "moves aside" : "closes up"]."))
 		toggle_open(user)
 		sleep(15)
 		if(can_open == WALL_CAN_OPEN) can_open = 0

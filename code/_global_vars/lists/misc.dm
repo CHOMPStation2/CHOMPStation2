@@ -15,3 +15,5 @@ GLOBAL_LIST_INIT(char_directory_sexualitytags, list("Straight", "Bisexual", "Pan
 GLOBAL_LIST_INIT(char_directory_gendertags, list("Male", "Female", "Nonbinary", "Trans Man", "Trans Woman", "Other", "Ungendered", "Unset"))
 // CHOMPStation Edit End: Directory Update
 GLOBAL_LIST_EMPTY(crafting_recipes) //list of all table craft recipes
+
+GLOBAL_LIST_INIT(uplink_locations, list("PDA", "Headset", "None"))

@@ -34,7 +34,7 @@
 	response_help = "pets the"
 	response_disarm = "gently pushes aside the"
 	response_harm = "hits the"
-	faction = "vagrant"
+	faction = FACTION_VAGRANT
 	harm_intent_damage = 3
 	melee_damage_lower = 6
 	melee_damage_upper = 9
@@ -47,7 +47,7 @@
 
 	var/poison_chance = 100
 	var/poison_per_bite = 10
-	var/poison_type = "expired_medicine"
+	var/poison_type = REAGENT_ID_EXPIREDMEDICINE
 
 /datum/say_list/disbot
 	speak = list("ATTEMPTING TO CONTACT A.R.K, ATTEMPT 1e26+3","DIRT SAMPLE COLLECTED, DIRT QUOTA 124871/155 CONFIRMED.")
@@ -66,5 +66,5 @@
 // Does actual poison injection, after all checks passed.
 /mob/living/simple_mob/mechanical/infectionbot/proc/inject_poison(mob/living/L, target_zone)
 	if(prob(poison_chance))
-		to_chat(L, "<span class='warning'>You feel a tiny prick.</span>")
+		to_chat(L, span_warning("You feel a tiny prick."))
 		L.reagents.add_reagent(poison_type, poison_per_bite)

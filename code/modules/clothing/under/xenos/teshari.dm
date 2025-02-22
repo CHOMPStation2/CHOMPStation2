@@ -222,22 +222,22 @@
 //Job Undercoats
 /obj/item/clothing/under/teshari/undercoat/jobs/cap
 	name = "site manager undercoat"
-	desc = "A traditional Teshari garb made for the Site Manager"
+	desc = "A traditional Teshari garb made for the " + JOB_SITE_MANAGER
 	icon_state = "tesh_uniform_cap"
 
 /obj/item/clothing/under/teshari/undercoat/jobs/hop
 	name = "head of personnel undercoat"
-	desc = "A traditional Teshari garb made for the Head of Personnel"
+	desc = "A traditional Teshari garb made for the " + JOB_HEAD_OF_PERSONNEL
 	icon_state = "tesh_uniform_hop"
 
 /obj/item/clothing/under/teshari/undercoat/jobs/ce
 	name = "cheif engineer undercoat"
-	desc = "A traditional Teshari garb made for the Chief Engineer"
+	desc = "A traditional Teshari garb made for the " + JOB_CHIEF_ENGINEER
 	icon_state = "tesh_uniform_ce"
 
 /obj/item/clothing/under/teshari/undercoat/jobs/hos
 	name = "head of security undercoat"
-	desc = "A traditional Teshari garb made for the Head of Security. Made with slightly sturdier materials." //CHOMPedit
+	desc = "A traditional Teshari garb made for the " + JOB_HEAD_OF_SECURITY + ". Made with slightly sturdier materials." //CHOMPedit
 	icon_state = "tesh_uniform_hos"
 	armor = list(melee = 10, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 0, rad = 0) //CHOMPedit start
 	siemens_coefficient = 0.9
@@ -245,7 +245,7 @@
 
 /obj/item/clothing/under/teshari/undercoat/jobs/rd
 	name = "research director undercoat"
-	desc = "A traditional Teshari garb made for the Research Director"
+	desc = "A traditional Teshari garb made for the " + JOB_RESEARCH_DIRECTOR
 	icon_state = "tesh_uniform_rd"
 
 /obj/item/clothing/under/teshari/undercoat/jobs/engineer
@@ -255,7 +255,7 @@
 
 /obj/item/clothing/under/teshari/undercoat/jobs/atmos
 	name = "atmospherics undercoat"
-	desc = "A traditional Teshari garb made for the Atmospheric Technician"
+	desc = "A traditional Teshari garb made for the " + JOB_ATMOSPHERIC_TECHNICIAN
 	icon_state = "tesh_uniform_atmos"
 
 /obj/item/clothing/under/teshari/undercoat/jobs/cmo
@@ -265,7 +265,7 @@
 
 /obj/item/clothing/under/teshari/undercoat/jobs/qm
 	name = "quartermaster undercoat"
-	desc = "A traditional Teshari garb made for the Quartermaster"
+	desc = "A traditional Teshari garb made for the " + JOB_QUARTERMASTER
 	icon_state = "tesh_uniform_qm"
 
 /obj/item/clothing/under/teshari/undercoat/jobs/cargo
@@ -285,22 +285,22 @@
 
 /obj/item/clothing/under/teshari/undercoat/jobs/chemistry
 	name = "chemist undercoat"
-	desc = "A traditional Teshari garb made for the Chemist"
+	desc = "A traditional Teshari garb made for the " + JOB_CHEMIST
 	icon_state = "tesh_uniform_chem"
 
 /obj/item/clothing/under/teshari/undercoat/jobs/viro
 	name = "virologist undercoat"
-	desc = "A traditional Teshari garb made for the Virologist"
+	desc = "A traditional Teshari garb made for the " + JOB_ALT_VIROLOGIST
 	icon_state = "tesh_uniform_viro"
 
 /obj/item/clothing/under/teshari/undercoat/jobs/psych
 	name = "psychiatrist undercoat"
-	desc = "A traditional Teshari garb made for the Psychiatrist"
+	desc = "A traditional Teshari garb made for the " + JOB_PSYCHIATRIST
 	icon_state = "tesh_uniform_psych"
 
 /obj/item/clothing/under/teshari/undercoat/jobs/para
 	name = "paramedic undercoat"
-	desc = "A traditional Teshari garb made for the Paramedic"
+	desc = "A traditional Teshari garb made for the " + JOB_PARAMEDIC
 	icon_state = "tesh_uniform_para"
 
 /obj/item/clothing/under/teshari/undercoat/jobs/sci
@@ -310,7 +310,7 @@
 
 /obj/item/clothing/under/teshari/undercoat/jobs/robo
 	name = "roboticist undercoat"
-	desc = "A traditional Teshari garb made for the Roboticist"
+	desc = "A traditional Teshari garb made for the " + JOB_ROBOTICIST
 	icon_state = "tesh_uniform_robo"
 
 /obj/item/clothing/under/teshari/undercoat/jobs/sec
@@ -328,5 +328,5 @@
 
 /obj/item/clothing/under/teshari/undercoat/jobs/iaa
 	name = "internal affairs undercoat"
-	desc = "A traditional Teshari garb made for the Internal Affairs Agent"
+	desc = "A traditional Teshari garb made for the " + JOB_INTERNAL_AFFAIRS_AGENT
 	icon_state = "tesh_uniform_iaa"

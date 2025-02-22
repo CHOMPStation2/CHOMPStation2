@@ -74,7 +74,7 @@ GLOBAL_VAR_INIT(queen_amount, 0) //We only gonna want 1 queen in the world.
 	// playsound(src, 'sound/metroid/metroiddeath.ogg', 50, 1)
 	..()
 	if(prob(20))
-		visible_message("<span class='notice'>\The [src] dropped some toy!</span>")
+		visible_message(span_notice("\The [src] dropped some toy!"))
 		new /obj/item/toy/figure/bounty_hunter(loc, src)
 
 

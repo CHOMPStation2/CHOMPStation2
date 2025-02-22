@@ -112,7 +112,7 @@
 	if(style)
 		dat += {"<div class='row'><div class='column'>"}
 	if(favs || user == src)
-		dat += {"<div class="collapsible"><b><center>Favourites</center></b></div>"}
+		dat += "<div class=\"collapsible\">" + span_bold("<center>Favourites</center>") + "</div>"
 	if(user == src)
 		dat += {"
 				<table>
@@ -132,7 +132,7 @@
 		dat += {"</div>"}
 		dat += {"<div class='column'>"}
 	if(likes || user == src)
-		dat += {"<div class="collapsible_a"><b><center>Likes</center></b></div>"}
+		dat += "<div class=\"collapsible_a\">" + span_bold("<center>Likes</center>") + "</div>"
 	if(user == src)
 		dat += {"
 				<table>
@@ -152,7 +152,7 @@
 		dat += {"</div>"}
 		dat += {"<div class='column'>"}
 	if(maybes || user == src)
-		dat += {"<div class="collapsible_b"><b><center>Maybes</center></b></div>"}
+		dat += "<div class=\"collapsible_b\">" + span_bold("<center>Maybes</center>") + "</div>"
 	if(user == src)
 		dat += {"
 				<table>
@@ -174,7 +174,7 @@
 		dat += {"</div>"}
 		dat += {"<div class='column'>"}
 	if(dislikes || user == src)
-		dat += {"<div class="collapsible_c"><b><center>Dislikes</center></b></div>"}
+		dat += "<div class=\"collapsible_c\">" + span_bold("<center>Dislikes</center>") + "</div>"
 	if(user == src)
 		dat += {"
 				<table>

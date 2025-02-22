@@ -6,7 +6,7 @@
 
 	if (transforming)
 		return
-	handle_modifiers() //VOREStation Edit - Needs to be done even if in nullspace.
+	handle_modifiers() //Needs to be done even if in nullspace.
 	if(!loc)
 		return
 
@@ -15,8 +15,6 @@
 		environment = loc.return_air_for_internal_lifeform(src)
 	else
 		environment = loc.return_air()
-
-	//handle_modifiers() // Do this early since it might affect other things later. //VOREStation Edit
 
 	handle_light()
 
@@ -37,8 +35,23 @@
 
 		. = 1
 
+		if(client)
+			var/idle_limit = 10 MINUTES
+			if(client.inactivity >= idle_limit && !away_from_keyboard && client.prefs?.read_preference(/datum/preference/toggle/auto_afk))	//if we're not already afk and we've been idle too long, and we have automarking enabled... then automark it
+				add_status_indicator("afk")
+				to_chat(src, span_notice("You have been idle for too long, and automatically marked as AFK."))
+				away_from_keyboard = TRUE
+			else if(away_from_keyboard && client.inactivity < idle_limit && !manual_afk) //if we're afk but we do something AND we weren't manually flagged as afk, unmark it
+				remove_status_indicator("afk")
+				to_chat(src, span_notice("You have been automatically un-marked as AFK."))
+				away_from_keyboard = FALSE
+
 	//Chemicals in the body, this is moved over here so that blood can be added after death
 	handle_chemicals_in_body()
+
+	// Handle viruses - Dead or not!
+	if(LAZYLEN(viruses))
+		handle_diseases()
 
 	//Handle temperature/pressure differences between body and environment
 	if(environment)
@@ -47,24 +60,21 @@
 	//Check if we're on fire
 	handle_fire()
 
-	if(client && !(client.prefs.ambience_freq == 0))	// Handle re-running ambience to mobs if they've remained in an area, AND have an active client assigned to them, and do not have repeating ambience disabled.
+	if(client)	// Handle re-running ambience to mobs if they've remained in an area, AND have an active client assigned to them, and do not have repeating ambience disabled.
 		handle_ambience()
 
 	//stuff in the stomach
-	//handle_stomach() //VOREStation Code
 
-	update_gravity(mob_has_gravity())
+	update_gravity(mob_get_gravity())
 
 	update_pulling()
 
-	for(var/obj/item/weapon/grab/G in src)
+	for(var/obj/item/grab/G in src)
 		G.process()
 
 	if(handle_regular_status_updates()) // Status & health update, are we dead or alive etc.
 		handle_disabilities() // eye, ear, brain damages
 		handle_statuses() //all special effects, stunned, weakened, jitteryness, hallucination, sleeping, etc
-
-	handle_actions()
 
 	update_canmove()
 
@@ -72,7 +82,9 @@
 
 	handle_vision()
 
-	handle_tf_holder()	//VOREStation Addition
+	handle_tf_holder()
+
+	handle_dripping()
 
 	handle_vr_derez() // CHOMPedit
 
@@ -98,7 +110,11 @@
 	return
 
 /mob/living/proc/handle_ambience() // If you're in an ambient area and have not moved out of it for x time as configured per-client, and do not have it disabled, we're going to play ambience again to you, to help break up the silence.
-	if(world.time >= (lastareachange + client.prefs.ambience_freq MINUTES)) // Every 5 minutes (by default, set per-client), we're going to run a 35% chance (by default, also set per-client) to play ambience.
+	var/pref = read_preference(/datum/preference/numeric/ambience_freq)
+	if(!pref)
+		return
+
+	if(world.time >= (lastareachange + pref MINUTES)) // Every 5 minutes (by default, set per-client), we're going to run a 35% chance (by default, also set per-client) to play ambience.
 		var/area/A = get_area(src)
 		if(A)
 			lastareachange = world.time // This will refresh the last area change to prevent this call happening LITERALLY every life tick.
@@ -273,7 +289,7 @@
 	//Snowflake treatment of potential locations
 	else if(istype(loc,/obj/mecha)) //I imagine there's like displays and junk in there. Use the lights!
 		brightness = 1
-	else if(istype(loc,/obj/item/weapon/holder)) //Poor carried teshari and whatnot should adjust appropriately
+	else if(istype(loc,/obj/item/holder)) //Poor carried teshari and whatnot should adjust appropriately
 		var/turf/T = get_turf(src)
 		brightness = T.get_lumcount()
 
@@ -284,3 +300,19 @@
 
 	//to_world("[src] in B:[round(brightness,0.1)] C:[round(current,0.1)] A2:[round(adjust_to,0.1)] D:[round(distance,0.01)] T:[round(distance*10 SECONDS,0.1)]")
 	animate(dsoverlay, alpha = (adjust_to*255), time = (distance*10 SECONDS))
+
+/mob/living/proc/handle_sleeping()
+	if(stat != DEAD && toggled_sleeping)
+		Sleeping(2)
+	if(sleeping)
+		//CHOMPEdit Start
+		if(iscarbon(src))
+			var/mob/living/carbon/C = src
+			AdjustSleeping(-1 * C.species.waking_speed)
+		else
+			AdjustSleeping(-1)
+		//CHOMPEdit End
+		throw_alert("asleep", /obj/screen/alert/asleep)
+	else
+		clear_alert("asleep")
+	return sleeping

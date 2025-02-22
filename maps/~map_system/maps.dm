@@ -124,7 +124,7 @@ var/list/all_maps = list()
 	var/datum/skybox_settings/default_skybox // What skybox do we use if a zlevel doesn't have a custom one? Provide a type.
 
 	//CHOMPStation Edit Start TFF 24/12/19 - Chompers welcome screen message
-	var/lobby_icon = 'icons/misc/CHOMPSTATION.gif' // The icon which contains the lobby image(s)
+	var/lobby_icon = 'icons/misc/splash_screen.dmi' // The icon which contains the lobby image(s)
 	var/list/lobby_screens = list()                 // The list of lobby screen to pick() from. If left unset the first icon state is always selected.
 	//CHOMPStation Edit End
 
@@ -191,7 +191,7 @@ var/list/all_maps = list()
 
 // Boolean for if we should use SSnightshift night hours
 /datum/map/proc/get_nightshift()
-	return get_night(1) //Defaults to z1, customize however you want on your own maps
+	return get_night(5) //Defaults to z1, customize however you want on your own maps - CHOMPEdit - Sif is 5
 
 /datum/map/proc/setup_map()
 	return

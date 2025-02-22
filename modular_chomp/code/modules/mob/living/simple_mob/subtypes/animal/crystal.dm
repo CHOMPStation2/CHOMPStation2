@@ -33,7 +33,7 @@
 	melee_attack_delay = 8
 
 	movement_cooldown = 13
-	loot_list = list(/obj/item/weapon/rig/ch/crystal = 100,
+	loot_list = list(/obj/item/rig/ch/crystal = 100,
 			)
 
 //Note to self, make the angel here when energy is gained

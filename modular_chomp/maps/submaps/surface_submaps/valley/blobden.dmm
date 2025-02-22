@@ -77,7 +77,7 @@
 /area/submap/blobden)
 "iN" = (
 /obj/structure/table/borosilicate,
-/obj/item/weapon/storage/firstaid/bonemed,
+/obj/item/storage/firstaid/bonemed,
 /obj/random/medical,
 /obj/structure/blob/normal,
 /turf/simulated/floor/tiled/white,
@@ -220,10 +220,10 @@
 /area/submap/blobden)
 "AJ" = (
 /obj/structure/table/borosilicate,
-/obj/item/weapon/cell/device/weapon/recharge,
-/obj/item/weapon/cell/device/weapon/recharge,
-/obj/item/weapon/cell/device/weapon/recharge,
-/obj/item/weapon/cell/device/weapon/recharge,
+/obj/item/cell/device/weapon/recharge,
+/obj/item/cell/device/weapon/recharge,
+/obj/item/cell/device/weapon/recharge,
+/obj/item/cell/device/weapon/recharge,
 /obj/structure/blob/normal,
 /turf/simulated/floor/tiled/white,
 /area/submap/blobden)

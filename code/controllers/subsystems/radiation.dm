@@ -24,7 +24,7 @@ SUBSYSTEM_DEF(radiation)
 		if(QDELETED(S))
 			sources -= S
 		else if(S.decay)
-			S.update_rad_power(S.rad_power - CONFIG_GET(number/radiation_decay_rate)) // COMPEdit
+			S.update_rad_power(S.rad_power - CONFIG_GET(number/radiation_decay_rate))
 		if (MC_TICK_CHECK)
 			return
 
@@ -53,11 +53,11 @@ SUBSYSTEM_DEF(radiation)
 				A.rad_act(rads)
 		if (MC_TICK_CHECK)
 			return
-//CHOMPEdit Begin
+
 /datum/controller/subsystem/radiation/stat_entry(msg)
 	msg = "S:[sources.len], RC:[resistance_cache.len]"
 	return ..()
-//CHOMPEdit End
+
 // Ray trace from all active radiation sources to T and return the strongest effect.
 /datum/controller/subsystem/radiation/proc/get_rads_at_turf(var/turf/T)
 	. = 0
@@ -73,7 +73,7 @@ SUBSYSTEM_DEF(radiation)
 
 		if(source.respect_maint)
 			var/area/A = T.loc
-			if(A.flags & RAD_SHIELDED)
+			if(A.flag_check(RAD_SHIELDED))
 				continue // In shielded area
 
 		var/dist = get_dist(source.source_turf, T)
@@ -93,12 +93,12 @@ SUBSYSTEM_DEF(radiation)
 				origin.calc_rad_resistance()
 
 			if(origin.cached_rad_resistance)
-				if(CONFIG_GET(flag/radiation_resistance_calc_mode) == RAD_RESIST_CALC_DIV) // CHOMPEdit
-					working = round((working / (origin.cached_rad_resistance * CONFIG_GET(number/radiation_resistance_multiplier))), 0.01) // CHOMPEdit
-				else if(CONFIG_GET(flag/radiation_resistance_calc_mode) == RAD_RESIST_CALC_SUB) // CHOMPEdit
-					working = round((working - (origin.cached_rad_resistance * CONFIG_GET(number/radiation_resistance_multiplier))), 0.01) // CHOMPEdit
+				if(CONFIG_GET(flag/radiation_resistance_calc_mode) == RAD_RESIST_CALC_DIV)
+					working = round((working / (origin.cached_rad_resistance * CONFIG_GET(number/radiation_resistance_multiplier))), 0.01)
+				else if(CONFIG_GET(flag/radiation_resistance_calc_mode) == RAD_RESIST_CALC_SUB)
+					working = round((working - (origin.cached_rad_resistance * CONFIG_GET(number/radiation_resistance_multiplier))), 0.01)
 
-			if(working <= CONFIG_GET(number/radiation_lower_limit)) // Too far from this source // CHOMPEdit
+			if(working <= CONFIG_GET(number/radiation_lower_limit)) // Too far from this source
 				working = 0 // May as well be 0
 				break
 
@@ -106,7 +106,7 @@ SUBSYSTEM_DEF(radiation)
 		// Shouldn't really ever have practical uses, but standing in a room literally made from uranium is more dangerous than standing next to a single uranium vase
 		. += working / (dist ** 2)
 
-	if(. <= CONFIG_GET(number/radiation_lower_limit)) // CHOMPEdit
+	if(. <= CONFIG_GET(number/radiation_lower_limit))
 		. = 0
 
 // Add a radiation source instance to the repository.  It will override any existing source on the same turf.
@@ -146,10 +146,3 @@ SUBSYSTEM_DEF(radiation)
 		return
 	var/turf/epicentre = locate(round(world.maxx / 2), round(world.maxy / 2), source.z)
 	flat_radiate(epicentre, power, world.maxx, respect_maint)
-
-//CHOMPEdit Begin
-//Putting this here so it can be promptly nuked if I ever redo the radiation subsystem
-/mob/living/Destroy()
-	. = ..()
-	SSradiation.listeners -= src
-//CHOMPEdit End

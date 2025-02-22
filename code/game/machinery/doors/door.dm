@@ -1,10 +1,7 @@
-//This file was auto-corrected by findeclaration.exe on 25.5.2012 20:42:31
-#define DOOR_REPAIR_AMOUNT 50	//amount of health regained per stack amount used
-
 /obj/machinery/door
 	name = "Door"
 	desc = "It opens and closes."
-	icon = 'icons/obj/doors/Doorint.dmi'
+	icon = 'icons/obj/doors/doorint.dmi'
 	icon_state = "door1"
 	anchored = TRUE
 	opacity = 1
@@ -46,14 +43,14 @@
 	if(isanimal(user))
 		var/mob/living/simple_mob/S = user
 		if(damage >= STRUCTURE_MIN_DAMAGE_THRESHOLD)
-			visible_message("<span class='danger'>\The [user] smashes into [src]!</span>")
+			visible_message(span_danger("\The [user] smashes into [src]!"))
 			playsound(src, S.attack_sound, 75, 1)
 			take_damage(damage)
 		else
-			visible_message("<b>\The [user]</b> bonks \the [src] harmlessly.")
+			visible_message(span_infoplain(span_bold("\The [user]") + " bonks \the [src] harmlessly."))
 	user.do_attack_animation(src)
 
-/obj/machinery/door/New()
+/obj/machinery/door/Initialize(mapload)
 	. = ..()
 	if(density)
 		layer = closed_layer
@@ -76,12 +73,16 @@
 	update_icon()
 
 	update_nearby_tiles(need_rebuild=1)
-	return
 
 /obj/machinery/door/Destroy()
 	density = FALSE
 	update_nearby_tiles()
 	. = ..()
+	/*
+	var/obj/effect/step_trigger/claymore_laser/las = locate() in loc
+	if(las)
+		las.Trigger(src)
+	*/
 
 /obj/machinery/door/process()
 	if(close_door_at && world.time >= close_door_at)
@@ -123,13 +124,13 @@
 			return																		//VOREStation Edit: unable to open doors
 		else
 			bumpopen(M)
-	if(istype(AM, /obj/item/device/uav))
+	if(istype(AM, /obj/item/uav))
 		if(check_access(null))
 			open()
 		else
 			do_animate("deny")
 
-	if(istype(AM, /mob/living/bot))
+	if(isbot(AM))
 		var/mob/living/bot/bot = AM
 		if(src.check_access(bot.botcard))
 			if(density)
@@ -163,7 +164,7 @@
 	return !density // Block airflow unless density = FALSE
 
 /obj/machinery/door/proc/bumpopen(mob/user as mob)
-	if(!user)	return // CHOMPedit - Check if the mob is even valid before proceeding
+	if(!user)	return
 	if(operating)	return
 	if(user.last_airflow > world.time - vsc.airflow_delay) //Fakkit
 		return
@@ -182,7 +183,7 @@
 	if (damage > 90)
 		destroy_hits--
 		if (destroy_hits <= 0)
-			visible_message("<span class='danger'>\The [src.name] disintegrates!</span>")
+			visible_message(span_danger("\The [src.name] disintegrates!"))
 			switch (Proj.damage_type)
 				if(BRUTE)
 					new /obj/item/stack/material/steel(src.loc, 2)
@@ -200,7 +201,7 @@
 /obj/machinery/door/hitby(AM as mob|obj, var/speed=5)
 
 	..()
-	visible_message("<span class='danger'>[src.name] was hit by [AM].</span>")
+	visible_message(span_danger("[src.name] was hit by [AM]."))
 	var/tforce = 0
 	if(ismob(AM))
 		tforce = 15 * (speed/5)
@@ -229,29 +230,29 @@
 			return					//VOREStation begin: Fireproofing
 		if(health < maxhealth && I.has_tool_quality(TOOL_WELDER))
 			if(!density)
-				to_chat(user, "<span class='warning'>\The [src] must be closed before you can repair it.</span>")
+				to_chat(user, span_warning("\The [src] must be closed before you can repair it."))
 				return
 
-			var/obj/item/weapon/weldingtool/welder = I.get_welder()
+			var/obj/item/weldingtool/welder = I.get_welder()
 			if(welder.remove_fuel(0,user))
-				to_chat(user, "<span class='notice'>You start to fix dents and repair \the [src].</span>")
+				to_chat(user, span_notice("You start to fix dents and repair \the [src]."))
 				playsound(src, welder.usesound, 50, 1)
 				var/repairtime = maxhealth - health //Since we're not using materials anymore... We'll just calculate how much damage there is to repair.
 				if(do_after(user, repairtime * welder.toolspeed) && welder && welder.isOn())
-					to_chat(user, "<span class='notice'>You finish repairing the damage to \the [src].</span>")
+					to_chat(user, span_notice("You finish repairing the damage to \the [src]."))
 					health = maxhealth
 					update_icon()
 			return
 		//psa to whoever coded this, there are plenty of objects that need to call attack() on doors without bludgeoning them.
-		if(src.density && istype(I, /obj/item/weapon) && user.a_intent == I_HURT && !istype(I, /obj/item/weapon/card))
-			var/obj/item/weapon/W = I
+		if(src.density && istype(I, /obj/item) && user.a_intent == I_HURT && !istype(I, /obj/item/card))
+			var/obj/item/W = I
 			user.setClickCooldown(user.get_attack_speed(W))
 			if(W.damtype == BRUTE || W.damtype == BURN)
 				user.do_attack_animation(src)
 				if(W.force < min_force)
-					user.visible_message("<span class='danger'>\The [user] hits \the [src] with \the [W] with no visible effect.</span>")
+					user.visible_message(span_danger("\The [user] hits \the [src] with \the [W] with no visible effect."))
 				else
-					user.visible_message("<span class='danger'>\The [user] forcefully strikes \the [src] with \the [W]!</span>")
+					user.visible_message(span_danger("\The [user] forcefully strikes \the [src] with \the [W]!"))
 					playsound(src, hitsound, 100, 1)
 					take_damage(W.force)
 			return
@@ -380,7 +381,6 @@
 				playsound(src, 'sound/machines/buzz-two.ogg', 50, 0)
 	return
 
-
 /obj/machinery/door/proc/open(var/forced = 0)
 	if(!can_open(forced))
 		return
@@ -389,23 +389,52 @@
 	do_animate("opening")
 	icon_state = "door0"
 	set_opacity(0)
-	sleep(anim_length_before_density)
+	addtimer(CALLBACK(src, PROC_REF(open_internalsetdensity),forced), anim_length_before_density)
+
+/obj/machinery/door/proc/open_internalsetdensity(var/forced = 0)
+	PRIVATE_PROC(TRUE) //do not touch this or BYOND will devour you
+	SHOULD_NOT_OVERRIDE(TRUE)
 	src.density = FALSE
 	update_nearby_tiles()
-	sleep(anim_length_before_finalize)
+	addtimer(CALLBACK(src, PROC_REF(open_internalfinish),forced), anim_length_before_finalize)
+
+/obj/machinery/door/proc/open_internalfinish(var/forced = 0)
+	PRIVATE_PROC(TRUE) //do not touch this or BYOND will devour you
+	SHOULD_NOT_OVERRIDE(TRUE)
 	src.layer = open_layer
 	explosion_resistance = 0
 	update_icon()
 	set_opacity(0)
 	operating = 0
 
+	/*
+	var/obj/effect/step_trigger/claymore_laser/las = locate() in loc
+	if(las)
+		addtimer(CALLBACK(las, TYPE_PROC_REF(/obj/effect/step_trigger/claymore_laser,Trigger), src), 5)
+	*/
+
 	if(autoclose)
 		autoclose_in(next_close_wait())
 
 	return 1
-
 /obj/machinery/door/proc/next_close_wait()
-	return (normalspeed ? 150 : 5)
+	var/lowest_temp = T20C
+	var/highest_temp = T0C
+	for(var/D in cardinal)
+		var/turf/target = get_step(loc, D)
+		if(!target.density)
+			var/datum/gas_mixture/airmix = target.return_air()
+			if(!airmix)
+				continue
+			if(airmix.temperature < lowest_temp)
+				lowest_temp = airmix.temperature
+			if(airmix.temperature > highest_temp)
+				highest_temp = airmix.temperature
+	// Fast close to keep in the heat
+	var/open_speed = 150
+	if(abs(highest_temp - lowest_temp) >= 5)
+		open_speed = 15
+	return (normalspeed ? open_speed : 5)
 
 /obj/machinery/door/proc/close(var/forced = 0)
 	if(!can_close(forced))
@@ -414,12 +443,19 @@
 
 	close_door_at = 0
 	do_animate("closing")
-	sleep(anim_length_before_density)
+	addtimer(CALLBACK(src, PROC_REF(close_internalsetdensity),forced), anim_length_before_density)
+
+/obj/machinery/door/proc/close_internalsetdensity(var/forced = 0)
+	PRIVATE_PROC(TRUE) //do not touch this or BYOND will devour you
+	SHOULD_NOT_OVERRIDE(TRUE)
 	src.density = TRUE
 	explosion_resistance = initial(explosion_resistance)
 	src.layer = closed_layer
 	update_nearby_tiles()
-	sleep(anim_length_before_finalize)
+	addtimer(CALLBACK(src, PROC_REF(close_internalfinish),forced), anim_length_before_finalize)
+
+/obj/machinery/door/proc/close_internalfinish(var/forced = 0)
+	PROTECTED_PROC(TRUE) //do not touch this or BYOND will devour you
 	update_icon()
 	if(visible && !glass)
 		set_opacity(1)	//caaaaarn!
@@ -429,6 +465,12 @@
 	var/obj/fire/fire = locate() in loc
 	if(fire)
 		qdel(fire)
+
+	/*
+	var/obj/effect/step_trigger/claymore_laser/las = locate() in loc
+	if(las)
+		addtimer(CALLBACK(las, TYPE_PROC_REF(/obj/effect/step_trigger/claymore_laser,Trigger), src), 1)
+	*/
 
 	return 1
 
@@ -441,12 +483,12 @@
 	return ..(M)
 
 /obj/machinery/door/update_nearby_tiles(need_rebuild)
-	if(!air_master)
+	if(!SSair)
 		return 0
 
 	for(var/turf/simulated/turf in locs)
 		update_heat_protection(turf)
-		air_master.mark_for_update(turf)
+		SSair.mark_for_update(turf)
 
 	return 1
 

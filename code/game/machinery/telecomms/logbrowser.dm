@@ -10,7 +10,7 @@
 
 	var/list/servers = list()	// the servers located by the computer
 	var/obj/machinery/telecomms/server/SelectedServer
-	circuit = /obj/item/weapon/circuitboard/comm_server
+	circuit = /obj/item/circuitboard/comm_server
 
 	var/network = "NULL"		// the network to probe
 	var/list/temp = null				// temporary feedback messages
@@ -75,11 +75,11 @@
 		ui = new(user, src, "TelecommsLogBrowser", name)
 		ui.open()
 
-/obj/machinery/computer/telecomms/server/tgui_act(action, params)
+/obj/machinery/computer/telecomms/server/tgui_act(action, params, datum/tgui/ui)
 	if(..())
 		return TRUE
 
-	add_fingerprint(usr)
+	add_fingerprint(ui.user)
 
 	switch(action)
 		if("view")
@@ -114,8 +114,8 @@
 			. = TRUE
 
 		if("delete")
-			if(!allowed(usr) && !emagged)
-				to_chat(usr, "<span class='warning'>ACCESS DENIED.</span>")
+			if(!allowed(ui.user) && !emagged)
+				to_chat(ui.user, span_warning("ACCESS DENIED."))
 				return
 
 			if(SelectedServer)
@@ -128,10 +128,10 @@
 			. = TRUE
 
 		if("network")
-			var/newnet = tgui_input_text(usr, "Which network do you want to view?", "Comm Monitor", network, 15)
+			var/newnet = tgui_input_text(ui.user, "Which network do you want to view?", "Comm Monitor", network, 15)
 			newnet = sanitize(newnet,15)
 
-			if(newnet && ((usr in range(1, src) || issilicon(usr))))
+			if(newnet && ((ui.user in range(1, src) || issilicon(ui.user))))
 				if(length(newnet) > 15)
 					set_temp("FAILED: NETWORK TAG STRING TOO LENGTHY", "bad")
 					return TRUE
@@ -149,8 +149,8 @@
 	if(!emagged)
 		playsound(src, 'sound/effects/sparks4.ogg', 75, 1)
 		emagged = 1
-		to_chat(user, "<span class='notice'>You you disable the security protocols</span>")
-		src.updateUsrDialog()
+		to_chat(user, span_notice("You you disable the security protocols"))
+		updateUsrDialog(user)
 		return 1
 
 /obj/machinery/computer/telecomms/server/proc/set_temp(var/text, var/color = "average")

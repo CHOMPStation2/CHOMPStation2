@@ -1,4 +1,4 @@
-/obj/item/weapon/rig/attackby(obj/item/W as obj, mob/living/user as mob)
+/obj/item/rig/attackby(obj/item/W, mob/living/user)
 	if(!istype(user))
 		return 0
 
@@ -14,16 +14,16 @@
 	if(W.GetID())
 		if(subverted)
 			locked = 0
-			to_chat(user, "<span class='danger'>It looks like the locking system has been shorted out.</span>")
+			to_chat(user, span_danger("It looks like the locking system has been shorted out."))
 			return
 
 		if(!LAZYLEN(req_access) && !LAZYLEN(req_one_access))
 			locked = 0
-			to_chat(user, "<span class='danger'>\The [src] doesn't seem to have a locking mechanism.</span>")
+			to_chat(user, span_danger("\The [src] doesn't seem to have a locking mechanism."))
 			return
 
 		if(security_check_enabled && !src.allowed(user))
-			to_chat(user, "<span class='danger'>Access denied.</span>")
+			to_chat(user, span_danger("Access denied."))
 			return
 
 		locked = !locked
@@ -41,14 +41,14 @@
 
 	if(open)
 		// Hacking.
-		if(W.has_tool_quality(TOOL_WIRECUTTER) || istype(W, /obj/item/device/multitool))
+		if(W.has_tool_quality(TOOL_WIRECUTTER) || istype(W, /obj/item/multitool))
 			if(open)
 				wires.Interact(user)
 			else
 				to_chat(user, "You can't reach the wiring.")
 			return
 		// Air tank.
-		if(istype(W,/obj/item/weapon/tank)) //Todo, some kind of check for suits without integrated air supplies.
+		if(istype(W,/obj/item/tank)) //Todo, some kind of check for suits without integrated air supplies.
 
 			if(air_supply)
 				to_chat(user, "\The [src] already has a tank installed.")
@@ -64,10 +64,10 @@
 
 		// Check if this is a hardsuit upgrade or a modification.
 		else if(istype(W,/obj/item/rig_module))
-			if(istype(src.loc,/mob/living/carbon/human))
+			if(ishuman(src.loc))
 				var/mob/living/carbon/human/H = src.loc
 				if(H.back == src || H.belt == src)
-					to_chat(user, "<span class='danger'>You can't install a hardsuit module while the suit is being worn.</span>")
+					to_chat(user, span_danger("You can't install a hardsuit module while the suit is being worn."))
 					return 1
 
 			if(!installed_modules)
@@ -93,7 +93,7 @@
 			update_icon()
 			return 1
 
-		else if(!cell && istype(W,/obj/item/weapon/cell))
+		else if(!cell && istype(W,/obj/item/cell))
 
 			if(!user.unEquip(W))
 				return
@@ -122,11 +122,11 @@
 			if(cell) current_mounts   += "cell"
 			if(installed_modules && installed_modules.len) current_mounts += "system module"
 
-			var/to_remove = tgui_input_list(usr, "Which would you like to modify?", "Removal Choice", current_mounts)
+			var/to_remove = tgui_input_list(user, "Which would you like to modify?", "Removal Choice", current_mounts)
 			if(!to_remove)
 				return
 
-			if(istype(src.loc,/mob/living/carbon/human) && to_remove != "cell")
+			if(ishuman(src.loc) && to_remove != "cell")
 				var/mob/living/carbon/human/H = src.loc
 				if(H.back == src || H.belt == src)
 					to_chat(user, "You can't remove an installed device while the hardsuit is being worn.")
@@ -160,7 +160,7 @@
 						to_chat(user, "There are no installed modules to remove.")
 						return
 
-					var/removal_choice = tgui_input_list(usr, "Which module would you like to remove?", "Removal Choice", possible_removals)
+					var/removal_choice = tgui_input_list(user, "Which module would you like to remove?", "Removal Choice", possible_removals)
 					if(!removal_choice)
 						return
 
@@ -181,18 +181,18 @@
 	..()
 
 
-/obj/item/weapon/rig/attack_hand(var/mob/user)
+/obj/item/rig/attack_hand(var/mob/user)
 
 	if(electrified != 0)
 		if(shock(user)) //Handles removing charge from the cell, as well. No need to do that here.
 			return
 	..()
 
-/obj/item/weapon/rig/emag_act(var/remaining_charges, var/mob/user)
+/obj/item/rig/emag_act(var/remaining_charges, var/mob/user)
 	if(!subverted)
 		LAZYCLEARLIST(req_access)
 		LAZYCLEARLIST(req_one_access)
 		locked = 0
 		subverted = 1
-		to_chat(user, "<span class='danger'>You short out the access protocol for the suit.</span>")
+		to_chat(user, span_danger("You short out the access protocol for the suit."))
 		return 1

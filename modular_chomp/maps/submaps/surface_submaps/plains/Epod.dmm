@@ -6,7 +6,7 @@
 /turf/template_noop,
 /area/submap/epod)
 "c" = (
-/obj/item/weapon/airlock_electronics,
+/obj/item/airlock_electronics,
 /turf/template_noop,
 /area/submap/epod)
 "d" = (
@@ -31,7 +31,7 @@
 /area/submap/epod)
 "i" = (
 /obj/structure/bed/chair,
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	dir = 8;
 	name = "Station Intercom (General)";
 	pixel_x = -28
@@ -39,7 +39,7 @@
 /obj/structure/closet/walllocker/emerglocker{
 	pixel_x = 28
 	},
-/obj/item/weapon/weldingtool,
+/obj/item/weldingtool,
 /turf/simulated/shuttle/floor,
 /area/submap/epod)
 "j" = (
@@ -68,8 +68,8 @@
 	pixel_x = -32;
 	pixel_y = 0
 	},
-/obj/item/weapon/storage/backpack/satchel,
-/obj/item/weapon/spacecash/c100,
+/obj/item/storage/backpack/satchel,
+/obj/item/spacecash/c100,
 /turf/simulated/shuttle/floor,
 /area/submap/epod)
 "m" = (

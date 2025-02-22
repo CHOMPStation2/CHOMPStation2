@@ -11,7 +11,9 @@
 /turf/simulated/floor/tiled/yellow,
 /area/submap/redshuttledown)
 "bU" = (
-/mob/living/simple_mob/humanoid/merc/ranged/space/shotgun/auto,
+/mob/living/simple_mob/humanoid/merc/ranged/space/shotgun/auto{
+	loot_list = list(/obj/item/gun/projectile/automatic/as24 = 100, /obj/item/perfect_tele = 20)
+	},
 /obj/structure/bed/chair/office/dark{
 	dir = 1
 	},
@@ -19,9 +21,7 @@
 /area/submap/redshuttledown)
 "cH" = (
 /obj/machinery/light{
-	dir = 4;
-	icon_state = "tube1";
-	pixel_x = 0
+	dir = 4
 	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 6
@@ -42,13 +42,13 @@
 /area/submap/redshuttledown)
 "dG" = (
 /obj/structure/table/steel,
-/obj/item/weapon/paper_bin,
+/obj/item/paper_bin,
 /obj/effect/floor_decal/borderfloor,
 /turf/simulated/floor/tiled/steel,
 /area/submap/redshuttledown)
 "dL" = (
 /obj/structure/bed,
-/obj/item/weapon/bedsheet,
+/obj/item/bedsheet,
 /obj/effect/floor_decal/borderfloor,
 /turf/simulated/floor/tiled/steel,
 /area/submap/redshuttledown)
@@ -70,7 +70,6 @@
 /turf/simulated/floor/tiled/white,
 /area/submap/redshuttledown)
 "fV" = (
-/turf/simulated/floor/tiled/steel,
 /turf/simulated/shuttle/wall/dark{
 	icon_state = "dark10";
 	name = "Unknown Shuttle"
@@ -97,12 +96,10 @@
 /area/submap/redshuttledown)
 "iw" = (
 /obj/structure/table/standard,
-/obj/item/weapon/storage/box/masks,
+/obj/item/storage/box/masks,
 /obj/effect/floor_decal/corner/green/border{
-	dir = 6;
-	icon_state = "bordercolor"
+	dir = 6
 	},
-/obj/random/maintenance/medical,
 /turf/simulated/floor/tiled/white,
 /area/submap/redshuttledown)
 "ix" = (
@@ -120,8 +117,7 @@
 /area/submap/redshuttledown)
 "jh" = (
 /obj/effect/floor_decal/corner/green/border{
-	dir = 8;
-	icon_state = "bordercolor"
+	dir = 8
 	},
 /turf/simulated/floor/tiled/white,
 /area/submap/redshuttledown)
@@ -142,13 +138,6 @@
 /obj/machinery/door/blast/regular,
 /turf/simulated/floor/plating,
 /area/submap/redshuttledown)
-"kj" = (
-/obj/structure/bed,
-/obj/item/weapon/bedsheet,
-/obj/structure/bed,
-/obj/effect/floor_decal/borderfloor,
-/turf/simulated/floor/tiled/steel,
-/area/submap/redshuttledown)
 "km" = (
 /obj/structure/cliff/automatic{
 	dir = 6
@@ -161,8 +150,7 @@
 	dir = 9
 	},
 /obj/machinery/light{
-	dir = 8;
-	icon_state = "tube1"
+	dir = 8
 	},
 /turf/simulated/floor/tiled/steel,
 /area/submap/redshuttledown)
@@ -215,15 +203,14 @@
 "mj" = (
 /obj/machinery/atmospherics/pipe/tank/oxygen,
 /obj/machinery/light/small{
-	dir = 4;
-	pixel_y = 0
+	dir = 4
 	},
 /turf/simulated/floor/tiled/yellow,
 /area/submap/redshuttledown)
 "mp" = (
 /obj/structure/table/steel,
 /obj/item/mecha_parts/part/phazon_left_arm,
-/obj/item/weapon/circuitboard/mecha/phazon/targeting,
+/obj/item/circuitboard/mecha/phazon/targeting,
 /obj/random/tool,
 /obj/random/maintenance/research,
 /obj/random/maintenance/engineering,
@@ -239,9 +226,7 @@
 /area/submap/redshuttledown)
 "nk" = (
 /obj/machinery/light{
-	dir = 4;
-	icon_state = "tube1";
-	pixel_x = 0
+	dir = 4
 	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
@@ -257,7 +242,7 @@
 "nF" = (
 /obj/structure/table/steel,
 /obj/item/mecha_parts/part/phazon_left_leg,
-/obj/item/weapon/circuitboard/mecha/phazon/peripherals,
+/obj/item/circuitboard/mecha/phazon/peripherals,
 /obj/random/tool,
 /obj/random/maintenance/research,
 /obj/random/maintenance/engineering,
@@ -271,8 +256,8 @@
 /area/submap/redshuttledown)
 "nU" = (
 /obj/structure/table/standard,
-/obj/item/weapon/reagent_containers/spray/sterilizine,
-/obj/item/weapon/reagent_containers/spray/sterilizine,
+/obj/item/reagent_containers/spray/sterilizine,
+/obj/item/reagent_containers/spray/sterilizine,
 /obj/effect/floor_decal/corner/green/border,
 /obj/random/firstaid,
 /obj/item/mecha_parts/mecha_equipment/crisis_drone,
@@ -310,7 +295,6 @@
 /area/submap/redshuttledown)
 "qr" = (
 /obj/structure/table/steel,
-/obj/random/firstaid,
 /turf/simulated/floor/tiled/steel,
 /area/submap/redshuttledown)
 "qT" = (
@@ -340,25 +324,20 @@
 /area/submap/redshuttledown)
 "tn" = (
 /obj/machinery/light/small{
-	dir = 4;
-	pixel_y = 0
+	dir = 4
 	},
 /obj/structure/closet/crate,
 /obj/random/grenade/box,
 /obj/random/grenade/box,
 /obj/item/stolenpackage,
-/obj/item/stolenpackage,
-/obj/item/weapon/rig/merc,
-/obj/item/weapon/rig/internalaffairs,
-/obj/random/contraband/nofail,
-/obj/random/contraband/nofail,
+/obj/item/rig/merc,
+/obj/item/rig/internalaffairs,
 /obj/random/maintenance/medical,
 /obj/random/maintenance/morestuff,
 /obj/random/maintenance/misc,
-/obj/random/maintenance/security,
 /obj/random/maintenance/cargo,
 /obj/random/ammo,
-/obj/random/ammo,
+/obj/random/contraband,
 /turf/simulated/floor/tiled/yellow,
 /area/submap/redshuttledown)
 "tv" = (
@@ -369,7 +348,7 @@
 /turf/simulated/floor/tiled/steel,
 /area/submap/redshuttledown)
 "tB" = (
-/obj/item/weapon/stool,
+/obj/item/stool,
 /mob/living/simple_mob/humanoid/merc/ranged/sniper,
 /turf/simulated/floor/tiled/steel,
 /area/submap/redshuttledown)
@@ -385,7 +364,7 @@
 /turf/template_noop,
 /area/submap/redshuttledown)
 "uT" = (
-/obj/item/weapon/stool,
+/obj/item/stool,
 /obj/random/mob/merc/all,
 /turf/simulated/floor/tiled/steel,
 /area/submap/redshuttledown)
@@ -396,7 +375,9 @@
 /turf/template_noop,
 /area/submap/redshuttledown)
 "vX" = (
-/mob/living/simple_mob/humanoid/merc/ranged/deagle,
+/mob/living/simple_mob/humanoid/merc/ranged/deagle{
+	loot_list = list(/obj/item/gun/projectile/deagle = 100, /obj/item/perfect_tele = 20)
+	},
 /obj/structure/bed/chair/office/dark{
 	dir = 1
 	},
@@ -407,19 +388,18 @@
 /obj/effect/floor_decal/borderfloor/full,
 /obj/item/clothing/suit/space/void/chrono,
 /obj/item/clothing/head/helmet/space/void/chrono,
-/obj/item/weapon/gun/projectile/revolver/cappeacekeeper,
+/obj/item/gun/projectile/revolver/cappeacekeeper,
 /turf/simulated/floor/tiled/steel,
 /area/submap/redshuttledown)
 "wo" = (
 /obj/machinery/fusion_fuel_injector/mapped{
-	dir = 4;
-	icon_state = "injector0"
+	dir = 4
 	},
 /turf/simulated/floor/tiled/yellow,
 /area/submap/redshuttledown)
 "wp" = (
 /obj/structure/bed,
-/obj/item/weapon/bedsheet,
+/obj/item/bedsheet,
 /obj/effect/floor_decal/borderfloor{
 	dir = 6
 	},
@@ -449,7 +429,7 @@
 /area/submap/redshuttledown)
 "wN" = (
 /obj/structure/table/steel,
-/obj/item/weapon/paper{
+/obj/item/paper{
 	info = "We need to take a short stop. The engine's are in need of minor repairs due to turbulence, should be a week's time. We've got reserve food supplies but pleanty of locale fauna to subsist on too if need be. PCRC is keeping most of there assets near New Reykjavik and locale authorities are more mindful then most to travel in this kind of weather. Our outfit should be at the rendezvous point in less then ten days assuming the upper ecehelon hasn't dropped ties with us yet.";
 	name = "Operation Progress/M-53"
 	},
@@ -460,9 +440,7 @@
 /area/submap/redshuttledown)
 "wP" = (
 /obj/machinery/light{
-	dir = 4;
-	icon_state = "tube1";
-	pixel_x = 0
+	dir = 4
 	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 5
@@ -475,13 +453,6 @@
 	},
 /turf/simulated/floor/tiled/steel,
 /area/submap/redshuttledown)
-"wX" = (
-/turf/template_noop,
-/turf/simulated/shuttle/wall/dark{
-	icon_state = "dark10";
-	name = "Unknown Shuttle"
-	},
-/area/submap/redshuttledown)
 "xl" = (
 /obj/structure/table/steel,
 /obj/item/mecha_parts/mecha_equipment/weapon/honker,
@@ -493,15 +464,12 @@
 /turf/simulated/floor/tiled/steel,
 /area/submap/redshuttledown)
 "yf" = (
-/obj/item/weapon/stool,
+/obj/item/stool,
 /mob/living/simple_mob/humanoid/merc/ranged/deagle,
 /turf/simulated/floor/tiled/steel,
 /area/submap/redshuttledown)
 "yq" = (
 /obj/structure/table/steel,
-/obj/random/maintenance/foodstuff,
-/obj/random/maintenance/foodstuff,
-/obj/random/maintenance/foodstuff,
 /obj/random/maintenance/foodstuff,
 /obj/random/maintenance/foodstuff,
 /obj/effect/floor_decal/borderfloor{
@@ -510,16 +478,8 @@
 /turf/simulated/floor/tiled/steel,
 /area/submap/redshuttledown)
 "yv" = (
-/turf/template_noop,
 /turf/simulated/shuttle/wall/dark{
 	icon_state = "dark9";
-	name = "Unknown Shuttle"
-	},
-/area/submap/redshuttledown)
-"za" = (
-/turf/template_noop,
-/turf/simulated/shuttle/wall/dark{
-	icon_state = "dark6";
 	name = "Unknown Shuttle"
 	},
 /area/submap/redshuttledown)
@@ -531,10 +491,6 @@
 /obj/machinery/light,
 /obj/structure/table/steel,
 /obj/random/tool,
-/obj/random/maintenance/research,
-/obj/random/maintenance/engineering,
-/obj/random/material/refined,
-/obj/item/weapon/cell/device/weapon/recharge/alien/omni,
 /turf/simulated/floor/tiled/steel,
 /area/submap/redshuttledown)
 "zv" = (
@@ -558,8 +514,7 @@
 /area/submap/redshuttledown)
 "zU" = (
 /obj/machinery/light/small{
-	dir = 4;
-	pixel_y = 0
+	dir = 4
 	},
 /turf/simulated/floor/tiled/hydro,
 /area/submap/redshuttledown)
@@ -569,8 +524,7 @@
 	dir = 10
 	},
 /obj/machinery/light{
-	dir = 8;
-	icon_state = "tube1"
+	dir = 8
 	},
 /turf/simulated/floor/tiled/steel,
 /area/submap/redshuttledown)
@@ -592,17 +546,9 @@
 /area/submap/redshuttledown)
 "Ci" = (
 /obj/structure/table/standard,
-/obj/item/weapon/tank/anesthetic,
+/obj/item/tank/anesthetic,
 /obj/effect/floor_decal/corner/green/border,
-/obj/random/maintenance/medical,
 /turf/simulated/floor/tiled/white,
-/area/submap/redshuttledown)
-"Cu" = (
-/turf/simulated/floor/tiled/steel,
-/turf/simulated/shuttle/wall/dark{
-	icon_state = "dark9";
-	name = "Unknown Shuttle"
-	},
 /area/submap/redshuttledown)
 "Cv" = (
 /turf/template_noop,
@@ -610,8 +556,7 @@
 "Cz" = (
 /obj/machinery/organ_printer/flesh,
 /obj/effect/floor_decal/corner/green/border{
-	dir = 5;
-	icon_state = "bordercolor"
+	dir = 5
 	},
 /turf/simulated/floor/tiled/white,
 /area/submap/redshuttledown)
@@ -627,7 +572,7 @@
 /turf/simulated/floor/tiled/steel,
 /area/submap/redshuttledown)
 "Eg" = (
-/obj/item/weapon/stool,
+/obj/item/stool,
 /turf/simulated/floor/tiled/red,
 /area/submap/redshuttledown)
 "EC" = (
@@ -639,8 +584,7 @@
 "EM" = (
 /obj/machinery/body_scanconsole,
 /obj/effect/floor_decal/corner/green/border{
-	dir = 1;
-	icon_state = "bordercolor"
+	dir = 1
 	},
 /turf/simulated/floor/tiled/white,
 /area/submap/redshuttledown)
@@ -681,12 +625,10 @@
 /area/submap/redshuttledown)
 "GW" = (
 /obj/effect/floor_decal/corner/green/border{
-	dir = 8;
-	icon_state = "bordercolor"
+	dir = 8
 	},
 /obj/structure/table/standard,
-/obj/item/weapon/storage/pill_bottle/combat,
-/obj/random/maintenance/medical,
+/obj/item/storage/pill_bottle/combat,
 /turf/simulated/floor/tiled/white,
 /area/submap/redshuttledown)
 "GZ" = (
@@ -720,16 +662,14 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/corner/green/border{
-	dir = 1;
-	icon_state = "bordercolor"
+	dir = 1
 	},
 /turf/simulated/floor/tiled/white,
 /area/submap/redshuttledown)
 "JN" = (
 /obj/machinery/optable,
 /obj/effect/floor_decal/corner/green/border{
-	dir = 9;
-	icon_state = "bordercolor"
+	dir = 9
 	},
 /turf/simulated/floor/tiled/white,
 /area/submap/redshuttledown)
@@ -742,8 +682,7 @@
 /area/submap/redshuttledown)
 "KT" = (
 /obj/structure/shuttle/engine/heater{
-	dir = 4;
-	icon_state = "heater"
+	dir = 4
 	},
 /turf/simulated/shuttle/wall/dark{
 	icon_state = "dark0";
@@ -751,7 +690,6 @@
 	},
 /area/submap/redshuttledown)
 "KX" = (
-/turf/template_noop,
 /turf/simulated/shuttle/wall/dark{
 	icon_state = "dark5";
 	name = "Unknown Shuttle"
@@ -765,8 +703,7 @@
 /area/submap/redshuttledown)
 "LP" = (
 /obj/machinery/light{
-	dir = 8;
-	icon_state = "tube1"
+	dir = 8
 	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
@@ -774,19 +711,20 @@
 /turf/simulated/floor/tiled/steel,
 /area/submap/redshuttledown)
 "Mn" = (
-/mob/living/simple_mob/mechanical/mecha/combat/phazon,
+/mob/living/simple_mob/mechanical/mecha/combat/phazon{
+	loot_list = list(/obj/item/cell/device/weapon/recharge/alien/omni = 50)
+	},
 /turf/simulated/floor/tiled/steel,
 /area/submap/redshuttledown)
 "MX" = (
 /obj/structure/bed,
-/obj/item/weapon/bedsheet,
+/obj/item/bedsheet,
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
 	},
 /turf/simulated/floor/tiled/steel,
 /area/submap/redshuttledown)
 "Ni" = (
-/turf/simulated/floor/tiled/steel,
 /turf/simulated/shuttle/wall/dark{
 	icon_state = "dark6";
 	name = "Unknown Shuttle"
@@ -795,16 +733,13 @@
 "Ok" = (
 /obj/structure/table/steel,
 /obj/item/stack/cable_coil/alien/blood,
-/obj/item/weapon/circuitboard/mecha/phazon/main,
-/obj/random/tool/power,
-/obj/random/maintenance/research,
+/obj/item/circuitboard/mecha/phazon/main,
 /obj/random/maintenance/engineering,
-/obj/random/material/precious,
 /obj/item/mecha_parts/mecha_equipment/weapon/energy/taser/rigged,
 /turf/simulated/floor/tiled/steel,
 /area/submap/redshuttledown)
 "Ow" = (
-/obj/item/weapon/stool,
+/obj/item/stool,
 /mob/living/simple_mob/humanoid/merc/ranged/ionrifle,
 /turf/simulated/floor/tiled/red,
 /area/submap/redshuttledown)
@@ -833,7 +768,7 @@
 /obj/effect/floor_decal/borderfloor/full,
 /obj/item/clothing/head/helmet/space/void/refurb/marine/talon,
 /obj/item/clothing/suit/space/void/refurb/marine/talon,
-/obj/item/weapon/gun/energy/x01,
+/obj/item/gun/energy/x01,
 /turf/simulated/floor/tiled/steel,
 /area/submap/redshuttledown)
 "Qw" = (
@@ -846,8 +781,7 @@
 	dir = 8
 	},
 /obj/effect/floor_decal/corner/green/border{
-	dir = 1;
-	icon_state = "bordercolor"
+	dir = 1
 	},
 /turf/simulated/floor/tiled/white,
 /area/submap/redshuttledown)
@@ -873,13 +807,12 @@
 /obj/item/clothing/gloves/sterile,
 /obj/item/clothing/gloves/sterile,
 /obj/effect/floor_decal/corner/green/border,
-/obj/random/maintenance/medical,
 /turf/simulated/floor/tiled/white,
 /area/submap/redshuttledown)
 "Sz" = (
 /obj/machinery/shower,
 /obj/structure/curtain/open/shower,
-/obj/item/weapon/smes_coil/super_capacity,
+/obj/item/smes_coil/super_capacity,
 /turf/simulated/floor/tiled/hydro,
 /area/submap/redshuttledown)
 "SD" = (
@@ -897,13 +830,6 @@
 /mob/living/simple_mob/mechanical/viscerator/mercenary,
 /mob/living/simple_mob/mechanical/viscerator/piercing,
 /turf/simulated/floor/tiled/yellow,
-/area/submap/redshuttledown)
-"SH" = (
-/turf/simulated/floor/tiled/steel,
-/turf/simulated/shuttle/wall/dark{
-	icon_state = "dark5";
-	name = "Unknown Shuttle"
-	},
 /area/submap/redshuttledown)
 "To" = (
 /obj/effect/floor_decal/borderfloor{
@@ -925,15 +851,6 @@
 	dir = 10
 	},
 /turf/template_noop,
-/area/submap/redshuttledown)
-"Vk" = (
-/obj/structure/bed,
-/obj/item/weapon/bedsheet,
-/obj/structure/bed,
-/obj/effect/floor_decal/borderfloor{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/steel,
 /area/submap/redshuttledown)
 "VA" = (
 /obj/machinery/door/airlock/glass,
@@ -981,11 +898,8 @@
 /obj/random/gun/random,
 /obj/random/energy/highend,
 /obj/random/energy/highend,
-/obj/item/weapon/rig/pmc/commander/grey/equipped,
-/obj/item/weapon/rig/pmc/commander/grey/equipped,
-/obj/item/weapon/card/emag/used,
-/obj/random/contraband/nofail,
-/obj/random/contraband/nofail,
+/obj/item/rig/pmc/commander/grey/equipped,
+/obj/item/rig/pmc/commander/grey/equipped,
 /obj/random/maintenance/medical,
 /obj/random/maintenance/morestuff,
 /obj/random/maintenance/misc,
@@ -993,6 +907,7 @@
 /obj/random/maintenance/cargo,
 /obj/random/ammo,
 /obj/random/ammo,
+/obj/random/contraband,
 /turf/simulated/floor/tiled/yellow,
 /area/submap/redshuttledown)
 "Yv" = (
@@ -1008,17 +923,9 @@
 	},
 /turf/simulated/floor/tiled/yellow,
 /area/submap/redshuttledown)
-"YR" = (
-/obj/structure/table/steel,
-/obj/effect/floor_decal/borderfloor{
-	dir = 8
-	},
-/obj/item/device/perfect_tele,
-/turf/simulated/floor/tiled/steel,
-/area/submap/redshuttledown)
 "YZ" = (
 /obj/structure/table/steel,
-/obj/item/weapon/material/knife,
+/obj/item/material/knife,
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
 	},
@@ -1026,17 +933,14 @@
 /area/submap/redshuttledown)
 "ZC" = (
 /obj/structure/table/standard,
-/obj/item/weapon/storage/firstaid/surgery,
 /obj/effect/floor_decal/corner/green/border{
-	dir = 10;
-	icon_state = "bordercolor"
+	dir = 10
 	},
-/obj/random/maintenance/medical,
 /turf/simulated/floor/tiled/white,
 /area/submap/redshuttledown)
 "ZN" = (
 /obj/structure/bed,
-/obj/item/weapon/bedsheet,
+/obj/item/bedsheet,
 /obj/effect/floor_decal/borderfloor{
 	dir = 5
 	},
@@ -1286,7 +1190,7 @@ jM
 jM
 dd
 ss
-SH
+KX
 Cv
 Cv
 Cv
@@ -1319,12 +1223,12 @@ Ni
 ss
 kx
 GI
-YR
+BA
 BA
 Bx
 AD
 ss
-SH
+KX
 Cv
 Cv
 Cv
@@ -1347,10 +1251,10 @@ Cv
 Cv
 Cv
 Cv
-za
+Ni
 ss
 ss
-SH
+KX
 Ni
 ss
 ss
@@ -1362,7 +1266,7 @@ bU
 mR
 ss
 ss
-SH
+KX
 Ni
 ss
 ss
@@ -1495,7 +1399,7 @@ Cv
 Cv
 Cv
 Cv
-wX
+fV
 ss
 ss
 OO
@@ -1576,12 +1480,12 @@ ix
 Ru
 xZ
 ss
-Vk
+MX
 hH
 Eg
 Ow
 hH
-kj
+dL
 ss
 Ii
 Ru
@@ -1976,7 +1880,7 @@ Cv
 Cv
 Cv
 bm
-za
+Ni
 ss
 ss
 WZ
@@ -2091,7 +1995,7 @@ ss
 ss
 ss
 ss
-Cu
+yv
 Cv
 fV
 ss
@@ -2100,7 +2004,7 @@ wo
 wo
 WT
 ss
-Cu
+yv
 Cv
 fV
 ss
@@ -2127,7 +2031,7 @@ Cv
 ss
 ss
 ss
-Cu
+yv
 Cv
 Cv
 Cv
@@ -2136,7 +2040,7 @@ KT
 KT
 KT
 KT
-Cu
+yv
 Cv
 Cv
 Cv
@@ -2161,7 +2065,7 @@ aa
 aa
 rl
 Cv
-wX
+fV
 KT
 KT
 Cv

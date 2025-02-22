@@ -37,10 +37,13 @@ Thus, the two variables affect pump operation are set in New():
 	var/id = null
 	var/datum/radio_frequency/radio_connection
 
-/obj/machinery/atmospherics/binary/pump/New()
-	..()
+/obj/machinery/atmospherics/binary/pump/Initialize()
+	. = ..()
+
 	air1.volume = ATMOS_DEFAULT_VOLUME_PUMP
 	air2.volume = ATMOS_DEFAULT_VOLUME_PUMP
+	if(frequency)
+		set_frequency(frequency)
 
 /obj/machinery/atmospherics/binary/pump/Destroy()
 	unregister_radio(src, frequency)
@@ -166,11 +169,6 @@ Thus, the two variables affect pump operation are set in New():
 
 	return data
 
-/obj/machinery/atmospherics/binary/pump/Initialize()
-	. = ..()
-	if(frequency)
-		set_frequency(frequency)
-
 /obj/machinery/atmospherics/binary/pump/receive_signal(datum/signal/signal)
 	if(!signal.data["tag"] || (signal.data["tag"] != id) || (signal.data["sigtype"]!="command"))
 		return 0
@@ -203,13 +201,13 @@ Thus, the two variables affect pump operation are set in New():
 /obj/machinery/atmospherics/binary/pump/attack_hand(mob/user)
 	if(..())
 		return
-	add_fingerprint(usr)
+	add_fingerprint(user)
 	if(!allowed(user))
-		to_chat(user, "<span class='warning'>Access denied.</span>")
+		to_chat(user, span_warning("Access denied."))
 		return
 	tgui_interact(user)
 
-/obj/machinery/atmospherics/binary/pump/tgui_act(action, params)
+/obj/machinery/atmospherics/binary/pump/tgui_act(action, params, datum/tgui/ui)
 	if(..())
 		return TRUE
 
@@ -225,11 +223,11 @@ Thus, the two variables affect pump operation are set in New():
 				if("max")
 					target_pressure = max_pressure_setting
 				if("set")
-					var/new_pressure = tgui_input_number(usr,"Enter new output pressure (0-[max_pressure_setting]kPa)","Pressure control",src.target_pressure,max_pressure_setting,0)
+					var/new_pressure = tgui_input_number(ui.user,"Enter new output pressure (0-[max_pressure_setting]kPa)","Pressure control",src.target_pressure,max_pressure_setting,0)
 					src.target_pressure = between(0, new_pressure, max_pressure_setting)
 			. = TRUE
 
-	add_fingerprint(usr)
+	add_fingerprint(ui.user)
 	update_icon()
 
 /obj/machinery/atmospherics/binary/pump/power_change()
@@ -238,21 +236,48 @@ Thus, the two variables affect pump operation are set in New():
 	if(old_stat != stat)
 		update_icon()
 
-/obj/machinery/atmospherics/binary/pump/attackby(var/obj/item/weapon/W as obj, var/mob/user as mob)
+/obj/machinery/atmospherics/binary/pump/attackby(var/obj/item/W as obj, var/mob/user as mob)
 	if (!W.has_tool_quality(TOOL_WRENCH))
 		return ..()
 	if (!(stat & NOPOWER) && use_power)
-		to_chat(user, "<span class='warning'>You cannot unwrench this [src], turn it off first.</span>")
+		to_chat(user, span_warning("You cannot unwrench this [src], turn it off first."))
 		return 1
 	if(!can_unwrench())
-		to_chat(user, "<span class='warning'>You cannot unwrench this [src], it too exerted due to internal pressure.</span>")
+		to_chat(user, span_warning("You cannot unwrench this [src], it too exerted due to internal pressure."))
 		add_fingerprint(user)
 		return 1
 	playsound(src, W.usesound, 50, 1)
-	to_chat(user, "<span class='notice'>You begin to unfasten \the [src]...</span>")
+	to_chat(user, span_notice("You begin to unfasten \the [src]..."))
 	if (do_after(user, 40 * W.toolspeed))
 		user.visible_message( \
-			"<b>\The [user]</b> unfastens \the [src].", \
-			"<span class='notice'>You have unfastened \the [src].</span>", \
+			span_infoplain(span_bold("\The [user]") + " unfastens \the [src]."), \
+			span_notice("You have unfastened \the [src]."), \
 			"You hear ratchet.")
 		deconstruct()
+
+
+
+//CHOMPEdit Start - Adds TGStation keybinds to save our engineers some time.
+/obj/machinery/atmospherics/binary/pump/AltClick(mob/user)
+	user.setClickCooldown(DEFAULT_ATTACK_COOLDOWN)
+	if(allowed(user))
+		to_chat(user, span_notice("You set the [name] to max output"))
+		target_pressure = max_pressure_setting
+		add_fingerprint(user)
+	else
+		to_chat(user, span_warning("Access denied."))
+
+/obj/machinery/atmospherics/binary/pump/CtrlClick(mob/user)
+	user.setClickCooldown(DEFAULT_ATTACK_COOLDOWN)
+	if(allowed(user))
+		update_use_power(!use_power)
+		update_icon()
+		add_fingerprint(user)
+		if(use_power)
+			to_chat(user, span_notice("You toggle the [name] on."))
+		else
+			to_chat(user, span_notice("You toggle the [name] off."))
+
+	else
+		to_chat(user, span_warning("Access denied."))
+//CHOMPEdit End

@@ -7,7 +7,7 @@
 /datum/map_template/cryogaia_lateload/cryogaia_plains
 	name = "Snow plains"
 	desc = "The Borealis away mission."
-	mappath = 'cryogaia_plains/cryogaia_plains.dmm'
+	mappath = "maps/yw/submaps/cryogaia_plains/cryogaia_plains.dmm"
 	annihilate = TRUE
 	associated_map_datum = /datum/map_z_level/cryogaia_lateload/cryogaia_plains
 
@@ -23,7 +23,7 @@
 
 //////////////////////////////////////////////////////////////////////////////
 /// Away Missions
-#if AWAY_MISSION_TEST
+#ifdef AWAY_MISSION_TEST
 #include "cryogaia_plains/cryogaia_plains.dmm"
 #include "beach/beach.dmm"
 #include "beach/cave.dmm"
@@ -39,7 +39,7 @@
 /datum/map_template/cryogaia_lateload/away_beach
 	name = "Desert Planet - Z1 Beach"
 	desc = "The beach away mission."
-	mappath = 'beach/beach.dmm'
+	mappath = "maps/yw/submaps/beach/beach.dmm"
 	associated_map_datum = /datum/map_z_level/cryogaia_lateload/away_beach
 
 /datum/map_z_level/cryogaia_lateload/away_beach
@@ -49,7 +49,7 @@
 /datum/map_template/cryogaia_lateload/away_beach_cave
 	name = "Desert Planet - Z2 Cave"
 	desc = "The beach away mission's cave."
-	mappath = 'beach/cave.dmm'
+	mappath = "maps/yw/submaps/beach/cave.dmm"
 	associated_map_datum = /datum/map_z_level/cryogaia_lateload/away_beach_cave
 
 /datum/map_template/cryogaia_lateload/away_beach_cave/on_map_loaded(z)
@@ -72,7 +72,7 @@
 /datum/map_template/cryogaia_lateload/away_alienship
 	name = "Alien Ship - Z1 Ship"
 	desc = "The alien ship away mission."
-	mappath = 'alienship/alienship.dmm'
+	mappath = "maps/yw/submaps/alienship/alienship.dmm"
 	associated_map_datum = /datum/map_z_level/tether_lateload/away_alienship
 
 /datum/map_z_level/tether_lateload/away_alienship
@@ -82,7 +82,7 @@
 /datum/map_template/cryogaia_lateload/away_aerostat
 	name = "Remmi Aerostat - Z1 Aerostat"
 	desc = "The Virgo 2 Aerostat away mission."
-	mappath = 'aerostat/aerostat.dmm'
+	mappath = "maps/yw/submaps/aerostat/aerostat.dmm"
 	associated_map_datum = /datum/map_z_level/cryogaia_lateload/away_aerostat
 
 /datum/map_z_level/cryogaia_lateload/away_aerostat
@@ -92,7 +92,7 @@
 /datum/map_template/cryogaia_lateload/away_aerostat_surface
 	name = "Remmi Aerostat - Z2 Surface"
 	desc = "The surface from the Virgo 2 Aerostat."
-	mappath = 'aerostat/surface.dmm'
+	mappath = "maps/yw/submaps/aerostat/surface.dmm"
 	associated_map_datum = /datum/map_z_level/cryogaia_lateload/away_aerostat_surface
 
 /datum/map_template/cryogaia_lateload/away_aerostat_surface/on_map_loaded(z)
@@ -114,7 +114,7 @@
 /datum/map_template/cryogaia_lateload/away_debrisfield
 	name = "Debris Field - Z1 Space"
 	desc = "The Virgo 3 Debris Field away mission."
-	mappath = 'space/debrisfield.dmm'
+	mappath = "maps/yw/submaps/space/debrisfield.dmm"
 	associated_map_datum = /datum/map_z_level/cryogaia_lateload/away_debrisfield
 
 /datum/map_template/cryogaia_lateload/away_debrisfield/on_map_loaded(z)
@@ -129,7 +129,7 @@
 /datum/map_template/cryogaia_lateload/away_fueldepot
 	name = "Fuel Depot - Z1 Space"
 	desc = "An unmanned fuel depot floating in space."
-	mappath = 'space/fueldepot.dmm'
+	mappath = "maps/yw/submaps/space/fueldepot.dmm"
 	associated_map_datum = /datum/map_z_level/cryogaia_lateload/away_fueldepot
 
 /datum/map_z_level/cryogaia_lateload/away_fueldepot
@@ -139,7 +139,7 @@
 /datum/map_template/cryogaia_lateload/away_guttersite
 	name = "Gutter Site - Z1 Space"
 	desc = "The Virgo Erigone Space Away Site."
-	mappath = 'space/guttersite.dmm'
+	mappath = "maps/yw/submaps/space/guttersite.dmm"
 	associated_map_datum = /datum/map_z_level/cryogaia_lateload/away_guttersite
 
 /datum/map_z_level/cryogaia_lateload/away_guttersite
@@ -148,7 +148,7 @@
 
 //////////////////////////////////////////////////////////////////////////////////////
 // Admin-use z-levels for loading whenever an admin feels like
-#if AWAY_MISSION_TEST
+#ifdef AWAY_MISSION_TEST
 #include "admin_use/spa.dmm"
 #endif
 
@@ -156,7 +156,7 @@
 /datum/map_template/cryogaia_lateload/fun/spa
 	name = "Space Spa"
 	desc = "A pleasant spa located in a spaceship."
-	mappath = 'admin_use/spa.dmm'
+	mappath = "maps/yw/submaps/admin_use/spa.dmm"
 
 	associated_map_datum = /datum/map_z_level/cryogaia_lateload/fun/spa
 
@@ -290,14 +290,14 @@
 				my_mob.maxbodytemp = env.temperature * 1.2
 
 				var/list/gaslist = env.gas
-				my_mob.min_oxy = gaslist["oxygen"] * 0.8
-				my_mob.min_tox = gaslist["phoron"] * 0.8
-				my_mob.min_n2 = gaslist["nitrogen"] * 0.8
-				my_mob.min_co2 = gaslist["carbon_dioxide"] * 0.8
-				my_mob.max_oxy = gaslist["oxygen"] * 1.2
-				my_mob.max_tox = gaslist["phoron"] * 1.2
-				my_mob.max_n2 = gaslist["nitrogen"] * 1.2
-				my_mob.max_co2 = gaslist["carbon_dioxide"] * 1.2
+				my_mob.min_oxy = gaslist[GAS_O2] * 0.8
+				my_mob.min_tox = gaslist[GAS_PHORON] * 0.8
+				my_mob.min_n2 = gaslist[GAS_N2] * 0.8
+				my_mob.min_co2 = gaslist[GAS_CO2] * 0.8
+				my_mob.max_oxy = gaslist[GAS_O2] * 1.2
+				my_mob.max_tox = gaslist[GAS_PHORON] * 1.2
+				my_mob.max_n2 = gaslist[GAS_N2] * 1.2
+				my_mob.max_co2 = gaslist[GAS_CO2] * 1.2
 /* //VORESTATION AI TEMPORARY REMOVAL
 		if(guard)
 			my_mob.returns_home = TRUE
@@ -357,35 +357,35 @@
 /datum/map_template/cryogaia_lateload/gateway/snow_outpost
 	name = "Snow Outpost"
 	desc = "Big snowy area with various outposts."
-	mappath = 'gateway/snow_outpost.dmm'
+	mappath = "maps/yw/submaps/gateway/snow_outpost.dmm"
 	associated_map_datum = /datum/map_z_level/cryogaia_lateload/gateway_destination
 
 #include "gateway/zoo.dm"
 /datum/map_template/cryogaia_lateload/gateway/zoo
 	name = "Zoo"
 	desc = "Gigantic space zoo"
-	mappath = 'gateway/zoo.dmm'
+	mappath = "maps/yw/submaps/gateway/zoo.dmm"
 	associated_map_datum = /datum/map_z_level/cryogaia_lateload/gateway_destination
 
 #include "gateway/carpfarm.dm"
 /datum/map_template/cryogaia_lateload/gateway/carpfarm
 	name = "Carp Farm"
 	desc = "Asteroid base surrounded by carp"
-	mappath = 'gateway/carpfarm.dmm'
+	mappath = "maps/yw/submaps/gateway/carpfarm.dmm"
 	associated_map_datum = /datum/map_z_level/cryogaia_lateload/gateway_destination
 
 #include "gateway/snowfield.dm"
 /datum/map_template/cryogaia_lateload/gateway/snowfield
 	name = "Snow Field"
 	desc = "An old base in middle of snowy wasteland"
-	mappath = 'gateway/snowfield.dmm'
+	mappath = "maps/yw/submaps/gateway/snowfield.dmm"
 	associated_map_datum = /datum/map_z_level/cryogaia_lateload/gateway_destination
 
 #include "gateway/listeningpost.dm"
 /datum/map_template/cryogaia_lateload/gateway/listeningpost
 	name = "Listening Post"
 	desc = "Asteroid-bound mercenary listening post"
-	mappath = 'gateway/listeningpost.dmm'
+	mappath = "maps/yw/submaps/gateway/listeningpost.dmm"
 	associated_map_datum = /datum/map_z_level/cryogaia_lateload/gateway_destination
 
 //////////////////////////////////////////////////////////////////////////////
@@ -394,7 +394,7 @@
 /datum/map_template/cryogaia_lateload/cryogaia_roguemines1
 	name = "Asteroid Belt 1"
 	desc = "Mining, but rogue. Zone 1"
-	mappath = 'rogue_mines/rogue_mine1.dmm'
+	mappath = "maps/yw/submaps/rogue_mines/rogue_mine1.dmm"
 
 	associated_map_datum = /datum/map_z_level/cryogaia_lateload/roguemines1
 
@@ -406,7 +406,7 @@
 /datum/map_template/cryogaia_lateload/cryogaia_roguemines2
 	name = "Asteroid Belt 2"
 	desc = "Mining, but rogue. Zone 2"
-	mappath = 'rogue_mines/rogue_mine2.dmm'
+	mappath = "maps/yw/submaps/rogue_mines/rogue_mine2.dmm"
 
 	associated_map_datum = /datum/map_z_level/cryogaia_lateload/roguemines2
 
@@ -418,7 +418,7 @@
 /datum/map_template/cryogaia_lateload/cryogaia_roguemines3
 	name = "Asteroid Belt 3"
 	desc = "Mining, but rogue. Zone 3"
-	mappath = 'rogue_mines/rogue_mine3.dmm'
+	mappath = "maps/yw/submaps/rogue_mines/rogue_mine3.dmm"
 
 	associated_map_datum = /datum/map_z_level/cryogaia_lateload/roguemines3
 
@@ -430,7 +430,7 @@
 /datum/map_template/cryogaia_lateload/cryogaia_roguemines4
 	name = "Asteroid Belt 4"
 	desc = "Mining, but rogue. Zone 4"
-	mappath = 'rogue_mines/rogue_mine4.dmm'
+	mappath = "maps/yw/submaps/rogue_mines/rogue_mine4.dmm"
 
 	associated_map_datum = /datum/map_z_level/cryogaia_lateload/roguemines4
 

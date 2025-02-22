@@ -58,6 +58,7 @@
 
 	station_name  = "NRV Stellar Delight"
 	station_short = "Stellar Delight"
+	facility_type = "ship"
 	dock_name     = "Virgo-3B Colony"
 	dock_type     = "surface"
 	boss_name     = "Central Command"
@@ -70,7 +71,7 @@
 	shuttle_leaving_dock = "The shuttle has departed. Estimate %ETA% until arrival at %dock_name%."
 	shuttle_called_message = "A scheduled crew transfer to the %dock_name% is occuring. The shuttle will arrive shortly. Those departing should proceed to deck three, aft within %ETA%."
 	shuttle_recall_message = "The scheduled crew transfer has been cancelled."
-	shuttle_name = "Evacuation Shuttle"
+	shuttle_name = "Crew Transport"
 	emergency_shuttle_docked_message = "The evacuation shuttle has arrived. You have approximately %ETD% to board the shuttle."
 	emergency_shuttle_leaving_dock = "The emergency shuttle has departed. Estimate %ETA% until arrival at %dock_name%."
 	emergency_shuttle_called_message = "An emergency evacuation has begun, and an off-schedule shuttle has been called. It will arrive at deck three, aft in approximately %ETA%."
@@ -121,7 +122,15 @@
 	unit_test_exempt_areas = list(
 		/area/stellardelight/deck1/exterior,
 		/area/stellardelight/deck1/exploshuttle,
-		/area/stellardelight/deck1/miningshuttle
+		/area/stellardelight/deck1/miningshuttle,
+		/area/stellardelight/deck2/exterior,
+		/area/stellardelight/deck2/portescape,
+		/area/stellardelight/deck2/starboardescape,
+		/area/stellardelight/deck3/exterior,
+
+		/area/medical/cryo,
+		/area/holodeck_control,
+		/area/tcommsat/chamber
 		)
 
 	unit_test_exempt_from_atmos = list() //it maint
@@ -172,7 +181,8 @@
 		list("Redgate - Fantasy Dungeon", "Redgate - Fantasy Town"),
 		list("Redgate - Laserdome"),
 		list("Redgate - Cascading Falls"),
-		list("Redgate - Jungle Underground", "Redgate - Jungle")
+		list("Redgate - Jungle Underground", "Redgate - Jungle"),
+		list("Redgate - Facility")
 		)
 
 	ai_shell_restricted = TRUE
@@ -311,7 +321,7 @@
 /datum/map_template/ship_lateload/ship_centcom
 	name = "Ship - Central Command"
 	desc = "Central Command lives here!"
-	mappath = 'ship_centcom.dmm'
+	mappath = "maps/stellar_delight/ship_centcom.dmm"
 
 	associated_map_datum = /datum/map_z_level/ship_lateload/ship_centcom
 
@@ -327,7 +337,7 @@
 /datum/map_template/ship_lateload/ship_misc
 	name = "Ship - Misc"
 	desc = "Misc areas, like some transit areas, holodecks, merc area."
-	mappath = 'ship_misc.dmm'
+	mappath = "maps/stellar_delight/ship_misc.dmm"
 
 	associated_map_datum = /datum/map_z_level/ship_lateload/misc
 
@@ -340,7 +350,7 @@
 /datum/map_template/ship_lateload/space_rocks
 	name = "V3b Asteroid Field"
 	desc = "Space debris is common in V3b's orbit due to the proximity of Virgo 3"
-	mappath = 'maps/submaps/space_rocks/space_rocks.dmm'
+	mappath = "maps/submaps/space_rocks/space_rocks.dmm"
 
 	associated_map_datum = /datum/map_z_level/ship_lateload/space_rocks
 
@@ -356,12 +366,10 @@
 	base_turf = /turf/space
 	flags = MAP_LEVEL_PLAYER|MAP_LEVEL_CONTACT|MAP_LEVEL_CONSOLES
 
-
-
 /datum/map_template/ship_lateload/overmap
 	name = "Overmap"
 	desc = "Overmap lives here :3"
-	mappath = 'overmap.dmm'
+	mappath = "maps/stellar_delight/overmap.dmm"
 
 	associated_map_datum = /datum/map_z_level/ship_lateload/overmap
 
@@ -374,5 +382,5 @@
 /datum/map_template/common_lateload/away_aerostat
 	name = "Remmi Aerostat - Z1 Aerostat"
 	desc = "The Virgo 2 Aerostat away mission."
-	mappath = 'maps/expedition_vr/aerostat/aerostat_science_outpost.dmm'
+	mappath = "maps/expedition_vr/aerostat/aerostat_science_outpost.dmm"
 	associated_map_datum = /datum/map_z_level/common_lateload/away_aerostat

@@ -14,11 +14,6 @@
 	var/sound/S = sound(get_sfx(soundin))
 	var/maxdistance = (world.view + extrarange) * 2  //VOREStation Edit - 3 to 2
 	var/list/listeners = player_list.Copy()
-	/*if(!ignore_walls) //these sounds don't carry through walls CHOMP Removal, ripping this logic up because it's unreliable and unnecessary.
-		/*for(var/mob/listen in listeners) //This is beyond fucking horrible. Please do not repeatedly call hear.
-			if(!(get_turf(listen) in hear(maxdistance,source)))
-				listeners -= listen*/
-		listeners = listeners & hearers(maxdistance,turf_source)*/
 	for(var/mob/M as anything in listeners)
 		if(!M || !M.client)
 			continue
@@ -26,11 +21,9 @@
 		if(!T)
 			continue
 		var/area/A = T.loc
-		if((A.soundproofed || area_source.soundproofed) && (A != area_source))
+		if((A.flag_check(AREA_SOUNDPROOF) || area_source.flag_check(AREA_SOUNDPROOF)) && (A != area_source))
 			continue
 		//var/distance = get_dist(T, turf_source) Save get_dist for later because it's more expensive
-
-		//CHOMPEdit Begin
 
 		if(!T || T.z != turf_source.z) //^ +1
 			continue
@@ -41,10 +34,23 @@
 
 		M.playsound_local(turf_source, soundin, vol, vary, frequency, falloff, is_global, channel, pressure_affected, S, preference, volume_channel)
 
+/mob/proc/check_sound_preference(list/preference)
+	if(!islist(preference))
+		preference = list(preference)
+
+	for(var/p in preference)
+		// Ignore nulls
+		if(p)
+			if(!read_preference(p))
+				return FALSE
+
+	return TRUE
+
 /mob/proc/playsound_local(turf/turf_source, soundin, vol as num, vary, frequency, falloff, is_global, channel = 0, pressure_affected = TRUE, sound/S, preference, volume_channel = null)
 	if(!client || ear_deaf > 0)
 		return
-	if(preference && !client.is_preference_enabled(preference))
+
+	if(!check_sound_preference(preference))
 		return
 
 	if(!S)
@@ -59,7 +65,7 @@
 	vol *= client.get_preference_volume_channel(VOLUME_CHANNEL_MASTER)
 	S.volume = vol
 
-	if(vary || frequency) //CHOMPEdit
+	if(vary || frequency)
 		if(frequency)
 			S.frequency = frequency
 		else
@@ -130,10 +136,10 @@
 
 /client/proc/playtitlemusic()
 	if(!ticker || !SSmedia_tracks.lobby_tracks.len || !media)	return
-	if(is_preference_enabled(/datum/client_preference/play_lobby_music))
+	if(prefs?.read_preference(/datum/preference/toggle/play_lobby_music))
 		var/datum/track/T = pick(SSmedia_tracks.lobby_tracks)
-		media.push_music(T.url, world.time, 0.85)
-		to_chat(src,"<span class='notice'>Lobby music: <b>[T.title]</b> by <b>[T.artist]</b>.</span>")
+		media.push_music(T.url, world.time, 0.35)
+		to_chat(src,span_notice("Lobby music: " + span_bold("[T.title]") + " by " + span_bold("[T.artist]") + "."))
 
 /proc/get_sfx(soundin)
 	if(istext(soundin))
@@ -335,7 +341,7 @@ var/list/xeno_speak_sound = list('modular_chomp/sound/talksounds/xeno/xenotalk.o
 #define canine_sounds list("cough" = null, "sneeze" = null, "scream" = list('modular_chomp/sound/voice/scream/canine/wolf_scream.ogg', 'modular_chomp/sound/voice/scream/canine/wolf_scream2.ogg', 'modular_chomp/sound/voice/scream/canine/wolf_scream3.ogg', 'modular_chomp/sound/voice/scream/canine/wolf_scream4.ogg', 'modular_chomp/sound/voice/scream/canine/wolf_scream5.ogg', 'modular_chomp/sound/voice/scream/canine/wolf_scream6.ogg'), "pain" = list('modular_chomp/sound/voice/pain/canine/wolf_pain.ogg', 'modular_chomp/sound/voice/pain/canine/wolf_pain2.ogg', 'modular_chomp/sound/voice/pain/canine/wolf_pain3.ogg', 'modular_chomp/sound/voice/pain/canine/wolf_pain4.ogg'), "gasp" = list('modular_chomp/sound/voice/gasp/canine/wolf_gasp.ogg'), "death" = list('modular_chomp/sound/voice/death/canine/wolf_death1.ogg', 'modular_chomp/sound/voice/death/canine/wolf_death2.ogg', 'modular_chomp/sound/voice/death/canine/wolf_death3.ogg', 'modular_chomp/sound/voice/death/canine/wolf_death4.ogg', 'modular_chomp/sound/voice/death/canine/wolf_death5.ogg'))
 #define feline_sounds list("cough" = null, "sneeze" = null, "scream" = list('modular_chomp/sound/voice/scream/feline/feline_scream.ogg'), "pain" = list('modular_chomp/sound/voice/pain/feline/feline_pain.ogg'), "gasp" = list('modular_chomp/sound/voice/gasp/feline/feline_gasp.ogg'), "death" = list('modular_chomp/sound/voice/death/feline/feline_death.ogg'))
 #define cervine_sounds list("cough" = null, "sneeze" = null, "scream" = list('modular_chomp/sound/voice/scream/cervine/cervine_scream.ogg'), "pain" = null, "gasp" = null, "death" = list('modular_chomp/sound/voice/death/cervine/cervine_death.ogg'))
-#define robot_sounds list("cough" = list('sound/effects/mob_effects/m_machine_cougha.ogg', 'sound/effects/mob_effects/m_machine_coughb.ogg', 'sound/effects/mob_effects/m_machine_coughc.ogg'), "sneeze" = list('sound/effects/mob_effects/machine_sneeze.ogg'), "scream" = list('modular_chomp/sound/voice/scream_silicon.ogg', 'modular_chomp/sound/voice/android_scream.ogg', 'modular_chomp/sound/voice/scream/robotic/robot_scream1.ogg', 'modular_chomp/sound/voice/scream/robotic/robot_scream2.ogg', 'modular_chomp/sound/voice/scream/robotic/robot_scream3.ogg'), "pain" = list('modular_chomp/sound/voice/pain/robotic/robot_pain1.ogg', 'modular_chomp/sound/voice/pain/robotic/robot_pain2.ogg', 'modular_chomp/sound/voice/pain/robotic/robot_pain3.ogg'), "gasp" = null, "death" = list('modular_chomp/sound/voice/borg_deathsound.ogg'))
+#define robot_sounds list("cough" = list('sound/effects/mob_effects/m_machine_cougha.ogg', 'sound/effects/mob_effects/m_machine_coughb.ogg', 'sound/effects/mob_effects/m_machine_coughc.ogg'), "sneeze" = list('sound/effects/mob_effects/machine_sneeze.ogg'), "scream" = list('modular_chomp/sound/voice/scream_silicon.ogg', 'modular_chomp/sound/voice/android_scream.ogg', 'modular_chomp/sound/voice/scream/robotic/robot_scream1.ogg', 'modular_chomp/sound/voice/scream/robotic/robot_scream2.ogg', 'modular_chomp/sound/voice/scream/robotic/robot_scream3.ogg'), "pain" = list('modular_chomp/sound/voice/pain/robotic/robot_pain1.ogg', 'modular_chomp/sound/voice/pain/robotic/robot_pain2.ogg', 'modular_chomp/sound/voice/pain/robotic/robot_pain3.ogg'), "gasp" = null, "death" = list('sound/voice/borg_deathsound.ogg'))
 #define male_generic_sounds list("cough" = list('sound/effects/mob_effects/m_cougha.ogg','sound/effects/mob_effects/m_coughb.ogg', 'sound/effects/mob_effects/m_coughc.ogg'), "sneeze" = list('sound/effects/mob_effects/sneeze.ogg'), "scream" = list('modular_chomp/sound/voice/scream/generic/male/male_scream_1.ogg', 'modular_chomp/sound/voice/scream/generic/male/male_scream_2.ogg', 'modular_chomp/sound/voice/scream/generic/male/male_scream_3.ogg', 'modular_chomp/sound/voice/scream/generic/male/male_scream_4.ogg', 'modular_chomp/sound/voice/scream/generic/male/male_scream_5.ogg', 'modular_chomp/sound/voice/scream/generic/male/male_scream_6.ogg'), "pain" = list('modular_chomp/sound/voice/pain/generic/male/male_pain_1.ogg', 'modular_chomp/sound/voice/pain/generic/male/male_pain_2.ogg', 'modular_chomp/sound/voice/pain/generic/male/male_pain_3.ogg', 'modular_chomp/sound/voice/pain/generic/male/male_pain_4.ogg', 'modular_chomp/sound/voice/pain/generic/male/male_pain_5.ogg', 'modular_chomp/sound/voice/pain/generic/male/male_pain_6.ogg', 'modular_chomp/sound/voice/pain/generic/male/male_pain_7.ogg', 'modular_chomp/sound/voice/pain/generic/male/male_pain_8.ogg'), "gasp" = list('modular_chomp/sound/voice/gasp/generic/male/male_gasp1.ogg', 'modular_chomp/sound/voice/gasp/generic/male/male_gasp2.ogg', 'modular_chomp/sound/voice/gasp/generic/male/male_gasp3.ogg'), "death" = list('modular_chomp/sound/voice/death/generic/male/male_death_1.ogg', 'modular_chomp/sound/voice/death/generic/male/male_death_2.ogg', 'modular_chomp/sound/voice/death/generic/male/male_death_3.ogg', 'modular_chomp/sound/voice/death/generic/male/male_death_4.ogg', 'modular_chomp/sound/voice/death/generic/male/male_death_5.ogg', 'modular_chomp/sound/voice/death/generic/male/male_death_6.ogg', 'modular_chomp/sound/voice/death/generic/male/male_death_7.ogg'))
 #define female_generic_sounds list("cough" = list('sound/effects/mob_effects/f_cougha.ogg','sound/effects/mob_effects/f_coughb.ogg'), "sneeze" = list('sound/effects/mob_effects/f_sneeze.ogg'), "scream" = list('modular_chomp/sound/voice/scream/generic/female/female_scream_1.ogg', 'modular_chomp/sound/voice/scream/generic/female/female_scream_2.ogg', 'modular_chomp/sound/voice/scream/generic/female/female_scream_3.ogg', 'modular_chomp/sound/voice/scream/generic/female/female_scream_4.ogg', 'modular_chomp/sound/voice/scream/generic/female/female_scream_5.ogg'), "pain" = list('modular_chomp/sound/voice/pain/generic/female/female_pain_1.ogg', 'modular_chomp/sound/voice/pain/generic/female/female_pain_2.ogg', 'modular_chomp/sound/voice/pain/generic/female/female_pain_3.ogg'), "gasp" = list('modular_chomp/sound/voice/gasp/generic/female/female_gasp1.ogg', 'modular_chomp/sound/voice/gasp/generic/female/female_gasp2.ogg'), "death" = list('modular_chomp/sound/voice/death/generic/female/female_death_1.ogg', 'modular_chomp/sound/voice/death/generic/female/female_death_2.ogg', 'modular_chomp/sound/voice/death/generic/female/female_death_3.ogg', 'modular_chomp/sound/voice/death/generic/female/female_death_4.ogg', 'modular_chomp/sound/voice/death/generic/female/female_death_5.ogg', 'modular_chomp/sound/voice/death/generic/female/female_death_6.ogg'))
 #define spider_sounds list("cough" = null, "sneeze" = null, "scream" = list('sound/voice/spiderchitter.ogg'), "pain" = list('sound/voice/spiderchitter.ogg'), "gasp" = null, "death" = list('modular_chomp/sound/voice/death/spider/spider_death.ogg'))

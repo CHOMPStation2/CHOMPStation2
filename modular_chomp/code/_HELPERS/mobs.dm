@@ -8,7 +8,7 @@
 			continue
 		living += L
 		if(count_held)
-			for(var/obj/item/weapon/holder/H in L.contents)
+			for(var/obj/item/holder/H in L.contents)
 				if(istype(H.held_mob, /mob/living))
 					living += H.held_mob
 	return living

@@ -40,3 +40,6 @@ SUBSYSTEM_DEF(bellies)
 
 		if (MC_TICK_CHECK)
 			return
+
+#undef SSBELLIES_PROCESSED
+#undef SSBELLIES_IGNORED

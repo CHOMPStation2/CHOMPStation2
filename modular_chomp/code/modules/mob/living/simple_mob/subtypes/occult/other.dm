@@ -1,3 +1,5 @@
+//File has been unticked for combat refactor walkback
+
 /mob/living/simple_mob/creature
 	maxHealth = 40
 	health = 40

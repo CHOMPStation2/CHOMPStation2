@@ -101,7 +101,7 @@
 	if(CHECK_MOVE_LOOP_FLAGS(owner, MOVEMENT_LOOP_OUTSIDE_CONTROL))
 		return
 	*/
-	if(running == "walk")
+	if(running == I_WALK)
 		running = 0.25
 	else
 		running = 1
@@ -120,9 +120,9 @@
 		if(I.item_flags & ABSTRACT)
 			return
 	//Annoyingly, our flight code doesn't set the movement_type, nor do we have a define for it. So I'm not adding it yet.
-	//if(arrived.movement_type & (FLYING|FLOATING) || !arrived.has_gravity())
+	//if(arrived.movement_type & (FLYING|FLOATING) || !arrived.get_gravity())
 	*/
-	if(!arrived.has_gravity())
+	if(!arrived.get_gravity())
 		return
 	if(ismob(arrived) && !arrived.density) // Prevents 10 overlapping mice from making an unholy sound while moving
 		return

@@ -5,14 +5,15 @@
 	flags = PHORONGUARD
 	item_state_slots = list(slot_r_hand_str = "magboots", slot_l_hand_str = "magboots")
 	species_restricted = null
-	center_of_mass = list("x" = 17,"y" = 12)
+	center_of_mass_x = 17
+	center_of_mass_y = 12
 	force = 3
 	overshoes = 1
 	shoes_under_pants = -1	//These things are huge
 	preserve_item = 1
 	var/magpulse = 0
 	var/icon_base = "magboots"
-	action_button_name = "Toggle Magboots"
+	actions_types = list(/datum/action/item_action/toggle_magboots)
 	var/obj/item/clothing/shoes/shoes = null	//Undershoes
 	var/mob/living/carbon/human/wearer = null	//For shoe procs
 	step_volume_mod = 1.3
@@ -41,14 +42,14 @@
 		playsound(src, 'sound/effects/magnetclamp.ogg', 20)
 		to_chat(user, "You enable the mag-pulse traction system.")
 	user.update_inv_shoes()	//so our mob-overlays update
-	user.update_action_buttons()
+	user.update_mob_action_buttons()
 
 /obj/item/clothing/shoes/magboots/mob_can_equip(mob/user, slot, disable_warning = FALSE)
 	var/mob/living/carbon/human/H = user
 
 	if(H.shoes)
 		shoes = H.shoes
-		if(shoes.overshoes)
+		if(istype(shoes, /obj/item/clothing/shoes) && shoes.overshoes)
 			if(slot && slot == slot_shoes)
 				to_chat(user, "You are unable to wear \the [src] as \the [H.shoes] are in the way.")
 			shoes = null
@@ -69,7 +70,7 @@
 	wearer = H
 	return 1
 
-/obj/item/clothing/shoes/magboots/dropped()
+/obj/item/clothing/shoes/magboots/dropped(mob/user)
 	..()
 	var/mob/living/carbon/human/H = wearer
 	if(shoes)
@@ -91,8 +92,8 @@
 	flags = PHORONGUARD
 	species_restricted = list(SPECIES_VOX)
 	armor = list (melee = 40, bullet = 10, laser = 10, energy = 20, bomb = 20, bio = 10, rad = 20) //values of workboots and heavy duty engineering gloves, it's the only option that will ever be taken so may as well give the turkeys some protection //ChompEdit
-	
-	action_button_name = "Toggle the magclaws"
+
+	actions_types = list(/datum/action/item_action/toggle_magclaws)
 
 /obj/item/clothing/shoes/magboots/vox/attack_self(mob/user)
 	if(src.magpulse)
@@ -113,13 +114,13 @@
 		magpulse = 1
 		canremove = FALSE	//kinda hard to take off magclaws when you are gripping them tightly.
 		to_chat(user, "You dig your claws deeply into the flooring, bracing yourself.")
-	user.update_action_buttons()
+	user.update_mob_action_buttons()
 
 //In case they somehow come off while enabled.
-/obj/item/clothing/shoes/magboots/vox/dropped(mob/user as mob)
-	..()
+/obj/item/clothing/shoes/magboots/vox/dropped(mob/user)
+	..(user)
 	if(src.magpulse)
-		user.visible_message("The [src] go limp as they are removed from [usr]'s feet.", "The [src] go limp as they are removed from your feet.")
+		user.visible_message("The [src] go limp as they are removed from [user]'s feet.", "The [src] go limp as they are removed from your feet.")
 		item_flags &= ~NOSLIP
 		magpulse = 0
 		canremove = TRUE

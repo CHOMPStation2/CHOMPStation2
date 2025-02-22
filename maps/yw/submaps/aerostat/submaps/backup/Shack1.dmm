@@ -14,7 +14,7 @@
 "e" = (
 /obj/effect/decal/cleanable/cobweb,
 /turf/simulated/floor/holofloor/wood{
-	icon_state = "wood_broken1"
+	icon_state = "wood-broken1"
 	},
 /area/submap/virgo2/Shack1)
 "f" = (
@@ -36,13 +36,13 @@
 /area/submap/virgo2/Shack1)
 "j" = (
 /turf/simulated/floor/holofloor/wood{
-	icon_state = "wood_broken0"
+	icon_state = "wood-broken0"
 	},
 /area/submap/virgo2/Shack1)
 "k" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/holofloor/wood{
-	icon_state = "wood_broken5"
+	icon_state = "wood-broken5"
 	},
 /area/submap/virgo2/Shack1)
 "l" = (
@@ -57,7 +57,7 @@
 /area/submap/virgo2/Shack1)
 "n" = (
 /turf/simulated/floor/holofloor/wood{
-	icon_state = "wood_broken3"
+	icon_state = "wood-broken3"
 	},
 /area/submap/virgo2/Shack1)
 "o" = (
@@ -67,13 +67,13 @@
 "p" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/table/wooden_reinforced,
-/obj/item/weapon/storage/toolbox,
+/obj/item/storage/toolbox,
 /turf/simulated/floor/wood,
 /area/submap/virgo2/Shack1)
 "q" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/table/wooden_reinforced,
-/obj/item/weapon/material/twohanded/fireaxe/scythe,
+/obj/item/material/twohanded/fireaxe/scythe,
 /turf/simulated/floor/wood,
 /area/submap/virgo2/Shack1)
 "r" = (
@@ -82,13 +82,13 @@
 /area/submap/virgo2/Shack1)
 "s" = (
 /turf/simulated/floor/holofloor/wood{
-	icon_state = "wood_broken6"
+	icon_state = "wood-broken6"
 	},
 /area/submap/virgo2/Shack1)
 "t" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/table/wooden_reinforced,
-/obj/item/device/flashlight/lamp,
+/obj/item/flashlight/lamp,
 /turf/simulated/floor/wood,
 /area/submap/virgo2/Shack1)
 "v" = (

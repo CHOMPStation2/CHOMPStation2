@@ -14,8 +14,8 @@
 	icon_screen = "medcomp"
 	light_color = "#315ab4"
 	req_one_access = list(access_medical, access_forensics_lockers, access_robotics)
-	circuit = /obj/item/weapon/circuitboard/med_data
-	var/obj/item/weapon/card/id/scan = null
+	circuit = /obj/item/circuitboard/med_data
+	var/obj/item/card/id/scan = null
 	var/authenticated = null
 	var/rank = null
 	var/screen = null
@@ -78,7 +78,7 @@
 	if(scan)
 		to_chat(usr, "You remove \the [scan] from \the [src].")
 		scan.loc = get_turf(src)
-		if(!usr.get_active_hand() && istype(usr,/mob/living/carbon/human))
+		if(!usr.get_active_hand() && ishuman(usr))
 			usr.put_in_hands(scan)
 		scan = null
 	else
@@ -86,7 +86,7 @@
 	return
 
 /obj/machinery/computer/med_data/attackby(var/obj/item/O, var/mob/user)
-	if(istype(O, /obj/item/weapon/card/id) && !scan && user.unEquip(O))
+	if(istype(O, /obj/item/card/id) && !scan && user.unEquip(O))
 		O.loc = src
 		scan = O
 		to_chat(user, "You insert \the [O].")
@@ -172,8 +172,10 @@
 					medical["empty"] = 1
 			if(MED_DATA_V_DATA)
 				data["virus"] = list()
-				for(var/ID in virusDB)
-					var/datum/data/record/v = virusDB[ID]
+				for(var/datum/disease/D in active_diseases)
+					if(!D.discovered)
+						continue
+					var/datum/data/record/v = active_diseases[D]
 					data["virus"] += list(list("name" = v.fields["name"], "D" = "\ref[v]"))
 			if(MED_DATA_MEDBOT)
 				data["medbots"] = list()
@@ -200,7 +202,7 @@
 	data["modal"] = tgui_modal_data(src)
 	return data
 
-/obj/machinery/computer/med_data/tgui_act(action, params)
+/obj/machinery/computer/med_data/tgui_act(action, params, datum/tgui/ui)
 	if(..())
 		return TRUE
 
@@ -219,13 +221,13 @@
 		if("scan")
 			if(scan)
 				scan.forceMove(loc)
-				if(ishuman(usr) && !usr.get_active_hand())
-					usr.put_in_hands(scan)
+				if(ishuman(ui.user) && !ui.user.get_active_hand())
+					ui.user.put_in_hands(scan)
 				scan = null
 			else
-				var/obj/item/I = usr.get_active_hand()
-				if(istype(I, /obj/item/weapon/card/id))
-					usr.drop_item()
+				var/obj/item/I = ui.user.get_active_hand()
+				if(istype(I, /obj/item/card/id))
+					ui.user.drop_item()
 					I.forceMove(src)
 					scan = I
 		if("login")
@@ -234,12 +236,12 @@
 				if(check_access(scan))
 					authenticated = scan.registered_name
 					rank = scan.assignment
-			else if(login_type == LOGIN_TYPE_AI && isAI(usr))
-				authenticated = usr.name
-				rank = "AI"
-			else if(login_type == LOGIN_TYPE_ROBOT && isrobot(usr))
-				authenticated = usr.name
-				var/mob/living/silicon/robot/R = usr
+			else if(login_type == LOGIN_TYPE_AI && isAI(ui.user))
+				authenticated = ui.user.name
+				rank = JOB_AI
+			else if(login_type == LOGIN_TYPE_ROBOT && isrobot(ui.user))
+				authenticated = ui.user.name
+				var/mob/living/silicon/robot/R = ui.user
 				rank = "[R.modtype] [R.braintype]"
 			if(authenticated)
 				active1 = null
@@ -257,8 +259,8 @@
 			if("logout")
 				if(scan)
 					scan.forceMove(loc)
-					if(ishuman(usr) && !usr.get_active_hand())
-						usr.put_in_hands(scan)
+					if(ishuman(ui.user) && !ui.user.get_active_hand())
+						ui.user.put_in_hands(scan)
 					scan = null
 				authenticated = null
 				screen = null
@@ -296,6 +298,16 @@
 				active1 = general_record
 				active2 = medical_record
 				screen = MED_DATA_RECORD
+			if("sync_r")
+				if(active2)
+					set_temp(client_update_record(src,usr))
+			if("edit_notes")
+				// The modal input in tgui is busted for this sadly...
+				var/new_notes = strip_html_simple(tgui_input_text(usr,"Enter new information here.","Character Preference", html_decode(active2.fields["notes"]), MAX_RECORD_LENGTH, TRUE, prevent_enter = TRUE), MAX_RECORD_LENGTH)
+				if(usr.Adjacent(src))
+					if(new_notes != "" || tgui_alert(usr, "Are you sure you want to delete the current record's notes?", "Confirm Delete", list("Delete", "No")) == "Delete")
+						if(usr.Adjacent(src))
+							active2.fields["notes"] = new_notes
 			if("new")
 				if(istype(active1, /datum/data/record) && !istype(active2, /datum/data/record))
 					var/datum/data/record/R = new /datum/data/record()
@@ -418,8 +430,8 @@
   * Called when the print timer finishes
   */
 /obj/machinery/computer/med_data/proc/print_finish()
-	var/obj/item/weapon/paper/P = new(loc)
-	P.info = "<center><b>Medical Record</b></center><br>"
+	var/obj/item/paper/P = new(loc)
+	P.info = "<center>" + span_bold("Medical Record") + "</center><br>"
 	if(istype(active1, /datum/data/record) && data_core.general.Find(active1))
 		P.info += {"Name: [active1.fields["name"]] ID: [active1.fields["id"]]
 		<br>\nSex: [active1.fields["sex"]]
@@ -429,7 +441,7 @@
 		<br>\nPhysical Status: [active1.fields["p_stat"]]
 		<br>\nMental Status: [active1.fields["m_stat"]]<br>"}
 	else
-		P.info += "<b>General Record Lost!</b><br>"
+		P.info += span_bold("General Record Lost!") + "<br>"
 	if(istype(active2, /datum/data/record) && data_core.medical.Find(active2))
 		P.info += {"<br>\n<center><b>Medical Data</b></center>
 		<br>\nGender Identity: [active2.fields["id_gender"]]
@@ -451,7 +463,7 @@
 		for(var/c in active2.fields["comments"])
 			P.info += "[c["header"]]<br>[c["text"]]<br>"
 	else
-		P.info += "<b>Medical Record Lost!</b><br>"
+		P.info += span_bold("Medical Record Lost!") + "<br>"
 	P.info += "</tt>"
 	P.name = "paper - 'Medical Record: [active1.fields["name"]]'"
 	printing = FALSE
@@ -507,8 +519,14 @@
 	icon_state = "pcu_med"
 	icon_keyboard = "pcu_key"
 	light_color = "#5284e7"
-	circuit = /obj/item/weapon/circuitboard/med_data/pcu
+	circuit = /obj/item/circuitboard/med_data/pcu
 	density = FALSE
+
+#undef MED_DATA_R_LIST
+#undef MED_DATA_MAINT
+#undef MED_DATA_RECORD
+#undef MED_DATA_V_DATA
+#undef MED_DATA_MEDBOT
 
 #undef FIELD
 #undef MED_FIELD

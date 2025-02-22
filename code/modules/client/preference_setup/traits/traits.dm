@@ -35,11 +35,11 @@ var/list/trait_categories = list() // The categories available for the trait men
 	sort_order = 1
 	var/current_tab = "Physical"
 
-/datum/category_item/player_setup_item/traits/load_character(var/savefile/S)
-	S["traits"] >> pref.traits
+/datum/category_item/player_setup_item/traits/load_character(list/save_data)
+	pref.traits = save_data["traits"]
 
-/datum/category_item/player_setup_item/traits/save_character(var/savefile/S)
-	S["traits"] << pref.traits
+/datum/category_item/player_setup_item/traits/save_character(list/save_data)
+	save_data["traits"] = pref.traits
 
 
 /datum/category_item/player_setup_item/traits/content()
@@ -58,9 +58,9 @@ var/list/trait_categories = list() // The categories available for the trait men
 			. += " |"
 
 		if(category == current_tab)
-			. += " <span class='linkOn'>[category]</span> "
+			. += " " + span_linkOn("[category]") + " "
 		else
-			. += " <a href='?src=\ref[src];select_category=[category]'>[category]</a> "
+			. += " <a href='byond://?src=\ref[src];select_category=[category]'>[category]</a> "
 	. += "</center></td></tr>"
 
 
@@ -75,7 +75,7 @@ var/list/trait_categories = list() // The categories available for the trait men
 			style_class = "linkOff"
 		else if(ticked)
 			style_class = "linkOn"
-		. += "<tr style='vertical-align:top;'><td width=25%><div align='center'><a style='white-space:normal;' [style_class ? "class='[style_class]' " : ""]href='?src=\ref[src];toggle_trait=[html_encode(T.name)]'>[T.name]</a></div></td>"
+		. += "<tr style='vertical-align:top;'><td width=25%><div align='center'><a style='white-space:normal;' [style_class ? "class='[style_class]' " : ""]href='byond://?src=\ref[src];toggle_trait=[html_encode(T.name)]'>[T.name]</a></div></td>"
 //		. += "<td width = 10% style='vertical-align:top'>[G.cost]</td>"
 
 		var/invalidity = T.test_for_invalidity(src)
@@ -91,7 +91,7 @@ var/list/trait_categories = list() // The categories available for the trait men
 //		if(ticked)
 //			. += "<tr><td colspan=3>"
 //			for(var/datum/gear_tweak/tweak in G.gear_tweaks)
-//				. += " <a href='?src=\ref[src];gear=[G.display_name];tweak=\ref[tweak]'>[tweak.get_contents(get_tweak_metadata(G, tweak))]</a>"
+//				. += " <a href='byond://?src=\ref[src];gear=[G.display_name];tweak=\ref[tweak]'>[tweak.get_contents(get_tweak_metadata(G, tweak))]</a>"
 //			. += "</td></tr>"
 	. += "</table>"
 	. = jointext(., null)
@@ -107,19 +107,19 @@ var/list/trait_categories = list() // The categories available for the trait men
 
 	for(var/trait_name in pref.traits)
 		if(!trait_datums[trait_name])
-			to_chat(preference_mob, "<span class='warning'>You cannot have more than one of trait: [trait_name]</span>")
+			to_chat(preference_mob, span_warning("You cannot have more than one of trait: [trait_name]"))
 			pref.traits -= trait_name
 		else
 			var/datum/trait/T = trait_datums[trait_name]
 			var/invalidity = T.test_for_invalidity(src)
 			if(invalidity)
 				pref.traits -= trait_name
-				to_chat(preference_mob, "<span class='warning'>You cannot take the [trait_name] trait.  Reason: [invalidity]</span>")
+				to_chat(preference_mob, span_warning("You cannot take the [trait_name] trait.  Reason: [invalidity]"))
 
 			var/conflicts = T.test_for_trait_conflict(pref.traits)
 			if(conflicts)
 				pref.traits -= trait_name
-				to_chat(preference_mob, "<span class='warning'>The [trait_name] trait is mutually exclusive with [conflicts].</span>")
+				to_chat(preference_mob, span_warning("The [trait_name] trait is mutually exclusive with [conflicts]."))
 
 /datum/category_item/player_setup_item/traits/OnTopic(href, href_list, user)
 	if(href_list["toggle_trait"])
@@ -129,12 +129,12 @@ var/list/trait_categories = list() // The categories available for the trait men
 		else
 			var/invalidity = T.test_for_invalidity(src)
 			if(invalidity)
-				to_chat(user, "<span class='warning'>You cannot take the [T.name] trait.  Reason: [invalidity]</span>")
+				to_chat(user, span_warning("You cannot take the [T.name] trait.  Reason: [invalidity]"))
 				return TOPIC_NOACTION
 
 			var/conflicts = T.test_for_trait_conflict(pref.traits)
 			if(conflicts)
-				to_chat(user, "<span class='warning'>The [T.name] trait is mutually exclusive with [conflicts].</span>")
+				to_chat(user, span_warning("The [T.name] trait is mutually exclusive with [conflicts]."))
 				return TOPIC_NOACTION
 
 			pref.traits += T.name

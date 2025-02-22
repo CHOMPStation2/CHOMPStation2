@@ -4,7 +4,7 @@
 	icon = 'icons/obj/monitors.dmi'
 	icon_state = "auth_off"
 	layer = ABOVE_WINDOW_LAYER
-	circuit = /obj/item/weapon/circuitboard/keycard_auth
+	circuit = /obj/item/circuitboard/keycard_auth
 	var/active = 0 //This gets set to 1 on all devices except the one where the initial request was made.
 	var/event = ""
 	var/screen = 1
@@ -22,25 +22,25 @@
 	active_power_usage = 6
 	power_channel = ENVIRON
 
-/obj/machinery/keycard_auth/attack_ai(mob/user as mob)
-	to_chat (user, "<span class='warning'>A firewall prevents you from interfacing with this device!</span>")
+/obj/machinery/keycard_auth/attack_ai(mob/user)
+	to_chat (user, span_warning("A firewall prevents you from interfacing with this device!"))
 	return
 
-/obj/machinery/keycard_auth/attackby(obj/item/weapon/W as obj, mob/user as mob)
+/obj/machinery/keycard_auth/attackby(obj/item/W, mob/user)
 	if(stat & (NOPOWER|BROKEN))
 		to_chat(user, "This device is not powered.")
 		return
-	if(istype(W,/obj/item/weapon/card/id))
-		var/obj/item/weapon/card/id/ID = W
-		if(access_keycard_auth in ID.access)
+	if(istype(W,/obj/item/card/id))
+		var/obj/item/card/id/ID = W
+		if(access_keycard_auth in ID.GetAccess())
 			if(active == 1)
 				//This is not the device that made the initial request. It is the device confirming the request.
 				if(event_source)
 					event_source.confirmed = 1
-					event_source.event_confirmed_by = usr
+					event_source.event_confirmed_by = user
 			else if(screen == 2)
-				event_triggered_by = usr
-				broadcast_request() //This is the device making the initial event request. It needs to broadcast to other devices
+				event_triggered_by = user
+				broadcast_request(user) //This is the device making the initial event request. It needs to broadcast to other devices
 
 	if(W.has_tool_quality(TOOL_SCREWDRIVER))
 		to_chat(user, "You begin removing the faceplate from the [src]")
@@ -48,7 +48,7 @@
 		if(do_after(user, 10 * W.toolspeed))
 			to_chat(user, "You remove the faceplate from the [src]")
 			var/obj/structure/frame/A = new /obj/structure/frame(loc)
-			var/obj/item/weapon/circuitboard/M = new circuit(A)
+			var/obj/item/circuitboard/M = new circuit(A)
 			A.frame_type = M.board_type
 			A.need_circuit = 0
 			A.pixel_x = pixel_x
@@ -88,18 +88,18 @@
 
 	if(screen == 1)
 		dat += "Select an event to trigger:<ul>"
-		dat += "<li><A href='?src=\ref[src];triggerevent=Red alert'>Red alert</A></li>"
-		if(!CONFIG_GET(flag/ert_admin_call_only)) // CHOMPEdit
-			dat += "<li><A href='?src=\ref[src];triggerevent=Emergency Response Team'>Emergency Response Team</A></li>"
+		dat += "<li><A href='byond://?src=\ref[src];triggerevent=Red alert'>Red alert</A></li>"
+		if(!CONFIG_GET(flag/ert_admin_call_only))
+			dat += "<li><A href='byond://?src=\ref[src];triggerevent=Emergency Response Team'>Emergency Response Team</A></li>"
 
-		dat += "<li><A href='?src=\ref[src];triggerevent=Grant Emergency Maintenance Access'>Grant Emergency Maintenance Access</A></li>"
-		dat += "<li><A href='?src=\ref[src];triggerevent=Revoke Emergency Maintenance Access'>Revoke Emergency Maintenance Access</A></li>"
+		dat += "<li><A href='byond://?src=\ref[src];triggerevent=Grant Emergency Maintenance Access'>Grant Emergency Maintenance Access</A></li>"
+		dat += "<li><A href='byond://?src=\ref[src];triggerevent=Revoke Emergency Maintenance Access'>Revoke Emergency Maintenance Access</A></li>"
 		dat += "</ul>"
-		user << browse(dat, "window=keycard_auth;size=500x250")
+		user << browse("<html>[dat]</html>", "window=keycard_auth;size=500x250")
 	if(screen == 2)
 		dat += "Please swipe your card to authorize the following event: <b>[event]</b>"
-		dat += "<p><A href='?src=\ref[src];reset=1'>Back</A>"
-		user << browse(dat, "window=keycard_auth;size=500x250")
+		dat += "<p><A href='byond://?src=\ref[src];reset=1'>Back</A>"
+		user << browse("<html>[dat]</html>", "window=keycard_auth;size=500x250")
 	return
 
 
@@ -117,7 +117,7 @@
 	if(href_list["reset"])
 		reset()
 
-	updateUsrDialog()
+	updateUsrDialog(usr)
 	add_fingerprint(usr)
 	return
 
@@ -131,7 +131,7 @@
 	event_triggered_by = null
 	event_confirmed_by = null
 
-/obj/machinery/keycard_auth/proc/broadcast_request()
+/obj/machinery/keycard_auth/proc/broadcast_request(mob/user)
 	icon_state = "auth_on"
 	for(var/obj/machinery/keycard_auth/KA in machines)
 		if(KA == src) continue
@@ -142,7 +142,7 @@
 	sleep(confirm_delay)
 	if(confirmed)
 		confirmed = 0
-		trigger_event(event)
+		trigger_event(user)
 		log_game("[key_name(event_triggered_by)] triggered and [key_name(event_confirmed_by)] confirmed event [event]")
 		message_admins("[key_name(event_triggered_by)] triggered and [key_name(event_confirmed_by)] confirmed event [event]", 1)
 	reset()
@@ -162,7 +162,7 @@
 	active = 0
 	busy = 0
 
-/obj/machinery/keycard_auth/proc/trigger_event()
+/obj/machinery/keycard_auth/proc/trigger_event(mob/user)
 	switch(event)
 		if("Red alert")
 			set_security_level(SEC_LEVEL_RED)
@@ -175,27 +175,27 @@
 			feedback_inc("alert_keycard_auth_maintRevoke",1)
 		if("Emergency Response Team")
 			if(is_ert_blocked())
-				to_chat(usr, span_red("All emergency response teams are dispatched and can not be called at this time."))
+				to_chat(user, span_red("All emergency response teams are dispatched and can not be called at this time."))
 				return
 
 			trigger_armed_response_team(1)
 			feedback_inc("alert_keycard_auth_ert",1)
 
 /obj/machinery/keycard_auth/proc/is_ert_blocked()
-	if(CONFIG_GET(flag/ert_admin_call_only)) return 1 // CHOMPEdit
+	if(CONFIG_GET(flag/ert_admin_call_only)) return 1
 	return ticker.mode && ticker.mode.ert_disabled
 
 var/global/maint_all_access = 0
 
 /proc/make_maint_all_access()
 	maint_all_access = 1
-	to_world(span_red("<font size=4>Attention!</font>"))
-	to_world(span_red("The maintenance access requirement has been revoked on all airlocks."))
+	to_world(span_alert(span_red(span_huge("Attention!"))))
+	to_world(span_alert(span_red("The maintenance access requirement has been revoked on all airlocks.")))
 
 /proc/revoke_maint_all_access()
 	maint_all_access = 0
-	to_world(span_red("<font size=4>Attention!</font>"))
-	to_world(span_red("The maintenance access requirement has been readded on all maintenance airlocks."))
+	to_world(span_alert(span_red(span_huge("Attention!"))))
+	to_world(span_alert(span_red("The maintenance access requirement has been readded on all maintenance airlocks.")))
 
 /obj/machinery/door/airlock/allowed(mob/M)
 	if(maint_all_access && src.check_access_list(list(access_maint_tunnels)))

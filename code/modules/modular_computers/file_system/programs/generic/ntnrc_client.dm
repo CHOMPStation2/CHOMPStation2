@@ -26,7 +26,7 @@
 /datum/computer_file/program/chatclient/New()
 	username = "DefaultUser[rand(100, 999)]"
 
-/datum/computer_file/program/chatclient/tgui_act(action, params)
+/datum/computer_file/program/chatclient/tgui_act(action, params, datum/tgui/ui)
 	if(..())
 		return
 
@@ -47,8 +47,7 @@
 					return TRUE
 
 			channel.add_message(message, username)
-			// var/mob/living/user = usr
-			// user.log_talk(message, LOG_CHAT, tag="as [username] to channel [channel.title]")
+			// ui.user.log_talk(message, LOG_CHAT, tag="as [username] to channel [channel.title]")
 			return TRUE
 		if("PRG_joinchannel")
 			var/new_target = text2num(params["id"])
@@ -85,8 +84,7 @@
 				if(channel)
 					channel.remove_client(src) // We shouldn't be in channel's user list, but just in case...
 				return TRUE
-			var/mob/living/user = usr
-			if(can_run(user, TRUE, access_network))
+			if(isliving(ui.user) && can_run(ui.user, TRUE, access_network))
 				for(var/datum/ntnet_conversation/chan as anything in ntnet_global.chat_channels)
 					chan.remove_client(src)
 				netadmin_mode = TRUE
@@ -103,7 +101,7 @@
 		if("PRG_savelog")
 			if(!channel)
 				return
-			var/logname = stripped_input(params["log_name"])
+			var/logname = sanitize(params["log_name"])
 			if(!logname)
 				return
 			var/datum/computer_file/data/logfile = new /datum/computer_file/data/logfile()
@@ -119,9 +117,9 @@
 					// This program shouldn't even be runnable without computer.
 					CRASH("Var computer is null!")
 				if(!computer.hard_drive)
-					computer.visible_message("<span class='warning'>\The [computer] shows an \"I/O Error - Hard drive connection error\" warning.</span>")
+					computer.visible_message(span_warning("\The [computer] shows an \"I/O Error - Hard drive connection error\" warning."))
 				else	// In 99.9% cases this will mean our HDD is full
-					computer.visible_message("<span class='warning'>\The [computer] shows an \"I/O Error - Hard drive may be full. Please free some space and try again. Required space: [logfile.size]GQ\" warning.</span>")
+					computer.visible_message(span_warning("\The [computer] shows an \"I/O Error - Hard drive may be full. Please free some space and try again. Required space: [logfile.size]GQ\" warning."))
 			return TRUE
 		if("PRG_renamechannel")
 			if(!authed)

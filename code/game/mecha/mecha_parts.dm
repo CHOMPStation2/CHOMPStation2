@@ -30,8 +30,8 @@
 /obj/item/mecha_parts/chassis/ripley
 	name = "Ripley Chassis"
 
-/obj/item/mecha_parts/chassis/ripley/New()
-	..()
+/obj/item/mecha_parts/chassis/ripley/Initialize(mapload)
+	. = ..()
 	construct = new /datum/construction/mecha/ripley_chassis(src)
 
 /obj/item/mecha_parts/part/ripley_torso
@@ -69,8 +69,8 @@
 /obj/item/mecha_parts/chassis/gygax
 	name = "Gygax Chassis"
 
-/obj/item/mecha_parts/chassis/gygax/New()
-	..()
+/obj/item/mecha_parts/chassis/gygax/Initialize(mapload)
+	. = ..()
 	construct = new /datum/construction/mecha/gygax_chassis(src)
 
 /obj/item/mecha_parts/part/gygax_torso
@@ -117,8 +117,8 @@
 /obj/item/mecha_parts/chassis/serenity
 	name = "Serenity Chassis"
 
-/obj/item/mecha_parts/chassis/serenity/New()
-	..()
+/obj/item/mecha_parts/chassis/serenity/Initialize(mapload)
+	. = ..()
 	construct = new /datum/construction/mecha/serenity_chassis(src)
 
 //////////// Durand
@@ -126,8 +126,8 @@
 /obj/item/mecha_parts/chassis/durand
 	name = "Durand Chassis"
 
-/obj/item/mecha_parts/chassis/durand/New()
-	..()
+/obj/item/mecha_parts/chassis/durand/Initialize(mapload)
+	. = ..()
 	construct = new /datum/construction/mecha/durand_chassis(src)
 
 /obj/item/mecha_parts/part/durand_torso
@@ -172,8 +172,8 @@
 /obj/item/mecha_parts/chassis/firefighter
 	name = "Firefighter Chassis"
 
-/obj/item/mecha_parts/chassis/firefighter/New()
-	..()
+/obj/item/mecha_parts/chassis/firefighter/Initialize(mapload)
+	. = ..()
 	construct = new /datum/construction/mecha/firefighter_chassis(src)
 /*
 /obj/item/mecha_parts/part/firefighter_torso
@@ -203,50 +203,50 @@
 	name = "Phazon Chassis"
 	origin_tech = list(TECH_MATERIAL = 7)
 
-/obj/item/mecha_parts/chassis/phazon/New()
-	..()
+/obj/item/mecha_parts/chassis/phazon/Initialize(mapload)
+	. = ..()
 	construct = new /datum/construction/mecha/phazon_chassis(src)
 
 /obj/item/mecha_parts/part/phazon_torso
 	name="Phazon Torso"
 	icon_state = "phazon_harness"
 	//construction_time = 300
-	//construction_cost = list(MAT_STEEL=35000,"glass"=10000,"phoron"=20000)
+	//construction_cost = list(MAT_STEEL=35000,MAT_GLASS=10000,MAT_PHORON=20000)
 	origin_tech = list(TECH_DATA = 5, TECH_MATERIAL = 7, TECH_BLUESPACE = 6, TECH_POWER = 6)
 
 /obj/item/mecha_parts/part/phazon_head
 	name="Phazon Head"
 	icon_state = "phazon_head"
 	//construction_time = 200
-	//construction_cost = list(MAT_STEEL=15000,"glass"=5000,"phoron"=10000)
+	//construction_cost = list(MAT_STEEL=15000,MAT_GLASS=5000,MAT_PHORON=10000)
 	origin_tech = list(TECH_DATA = 4, TECH_MATERIAL = 5, TECH_MAGNET = 6)
 
 /obj/item/mecha_parts/part/phazon_left_arm
 	name="Phazon Left Arm"
 	icon_state = "phazon_l_arm"
 	//construction_time = 200
-	//construction_cost = list(MAT_STEEL=20000,"phoron"=10000)
+	//construction_cost = list(MAT_STEEL=20000,MAT_PHORON=10000)
 	origin_tech = list(TECH_MATERIAL = 5, TECH_BLUESPACE = 2, TECH_MAGNET = 2)
 
 /obj/item/mecha_parts/part/phazon_right_arm
 	name="Phazon Right Arm"
 	icon_state = "phazon_r_arm"
 	//construction_time = 200
-	//construction_cost = list(MAT_STEEL=20000,"phoron"=10000)
+	//construction_cost = list(MAT_STEEL=20000,MAT_PHORON=10000)
 	origin_tech = list(TECH_MATERIAL = 5, TECH_BLUESPACE = 2, TECH_MAGNET = 2)
 
 /obj/item/mecha_parts/part/phazon_left_leg
 	name="Phazon Left Leg"
 	icon_state = "phazon_l_leg"
 	//construction_time = 200
-	//construction_cost = list(MAT_STEEL=20000,"phoron"=10000)
+	//construction_cost = list(MAT_STEEL=20000,MAT_PHORON=10000)
 	origin_tech = list(TECH_MATERIAL = 5, TECH_BLUESPACE = 3, TECH_MAGNET = 3)
 
 /obj/item/mecha_parts/part/phazon_right_leg
 	name="Phazon Right Leg"
 	icon_state = "phazon_r_leg"
 	//construction_time = 200
-	//construction_cost = list(MAT_STEEL=20000,"phoron"=10000)
+	//construction_cost = list(MAT_STEEL=20000,MAT_PHORON=10000)
 	origin_tech = list(TECH_MATERIAL = 5, TECH_BLUESPACE = 3, TECH_MAGNET = 3)
 
 ///////// Odysseus
@@ -255,8 +255,8 @@
 /obj/item/mecha_parts/chassis/odysseus
 	name = "Odysseus Chassis"
 
-/obj/item/mecha_parts/chassis/odysseus/New()
-	..()
+/obj/item/mecha_parts/chassis/odysseus/Initialize(mapload)
+	. = ..()
 	construct = new /datum/construction/mecha/odysseus_chassis(src)
 
 /obj/item/mecha_parts/part/odysseus_head
@@ -307,8 +307,8 @@
 	name = "Janus Chassis"
 	origin_tech = list(TECH_MATERIAL = 7)
 
-/obj/item/mecha_parts/chassis/janus/New()
-	..()
+/obj/item/mecha_parts/chassis/janus/Initialize(mapload)
+	. = ..()
 	construct = new /datum/construction/mecha/janus_chassis(src)
 
 /obj/item/mecha_parts/part/janus_torso
@@ -340,3 +340,120 @@
 	name="Prototype Durand Right Leg"
 	icon_state = "janus_r_leg"
 	origin_tech = list(TECH_MATERIAL = 5, TECH_BLUESPACE = 3, TECH_MAGNET = 3, TECH_ARCANE = 1)
+
+
+///Fighters///
+
+
+/obj/item/mecha_parts/fighter
+	icon = 'icons/mecha/fighters_construct64x64.dmi'
+
+/obj/item/mecha_parts/fighter/chassis
+	name="Fighter Chassis"
+	icon_state = "backbone"
+	var/datum/construction/construct
+
+/obj/item/mecha_parts/fighter/chassis/attackby(obj/item/W, mob/user)
+	if(!construct || !construct.action(W, user))
+		..()
+	return
+
+/obj/item/mecha_parts/fighter/chassis/attack_hand(mob/user, list/params)
+	return
+
+
+//! Pinnace
+
+/obj/item/mecha_parts/fighter/chassis/pinnace
+	name = "\improper Pinnace Chassis"
+	icon_state = "pinnace_chassis"
+
+	origin_tech = list(TECH_MATERIAL = 2)
+
+/obj/item/mecha_parts/fighter/chassis/pinnace/Initialize(mapload)
+	. = ..()
+	construct = new /datum/construction/mecha/fighter/pinnace_chassis(src)
+
+
+/obj/item/mecha_parts/fighter/part/pinnace_core
+	name="\improper Pinnace Core"
+	icon_state = "pinnace_core"
+	origin_tech = list(TECH_DATA = 2, TECH_MATERIAL = 2, TECH_ENGINEERING = 2)
+
+/obj/item/mecha_parts/fighter/part/pinnace_cockpit
+	name="\improper Pinnace Cockpit"
+	icon_state = "pinnace_cockpit"
+	origin_tech = list(TECH_DATA = 2, TECH_MATERIAL = 2, TECH_ENGINEERING = 2)
+
+/obj/item/mecha_parts/fighter/part/pinnace_left_wing
+	name="\improper Pinnace Left Wing"
+	icon_state = "pinnace_l_wing"
+	origin_tech = list(TECH_DATA = 2, TECH_MATERIAL = 2, TECH_ENGINEERING = 2)
+
+/obj/item/mecha_parts/fighter/part/pinnace_right_wing
+	name="\improper Pinnace Right Wing"
+	icon_state = "pinnace_r_wing"
+	origin_tech = list(TECH_DATA = 2, TECH_MATERIAL = 2, TECH_ENGINEERING = 2)
+
+/obj/item/mecha_parts/fighter/part/pinnace_main_engine
+	name="\improper Pinnace Main Engine"
+	icon_state = "pinnace_m_engine"
+	origin_tech = list(TECH_DATA = 2, TECH_MATERIAL = 2, TECH_ENGINEERING = 2)
+
+/obj/item/mecha_parts/fighter/part/pinnace_left_engine
+	name="\improper Pinnace Left Engine"
+	icon_state = "pinnace_l_engine"
+	origin_tech = list(TECH_DATA = 2, TECH_MATERIAL = 2, TECH_ENGINEERING = 2)
+
+/obj/item/mecha_parts/fighter/part/pinnace_right_engine
+	name="\improper Pinnace Right Engine"
+	icon_state = "pinnace_r_engine"
+	origin_tech = list(TECH_DATA = 2, TECH_MATERIAL = 2, TECH_ENGINEERING = 2)
+
+//! Baron
+
+/obj/item/mecha_parts/fighter/chassis/baron
+	name = "\improper Baron Chassis"
+	icon_state = "baron_chassis"
+
+	origin_tech = list(TECH_MATERIAL = 2)
+
+/obj/item/mecha_parts/fighter/chassis/baron/Initialize(mapload)
+	. = ..()
+	construct = new /datum/construction/mecha/fighter/baron_chassis(src)
+
+
+/obj/item/mecha_parts/fighter/part/baron_core
+	name="\improper Baron Core"
+	icon_state = "baron_core"
+	origin_tech = list(TECH_DATA = 2, TECH_MATERIAL = 5, TECH_BIO = 2, TECH_ENGINEERING = 4)
+
+/obj/item/mecha_parts/fighter/part/baron_cockpit
+	name="\improper Baron Cockpit"
+	icon_state = "baron_cockpit"
+	origin_tech = list(TECH_DATA = 2, TECH_MATERIAL = 5, TECH_BIO = 2, TECH_ENGINEERING = 4)
+
+/obj/item/mecha_parts/fighter/part/baron_left_wing
+	name="\improper Baron Left Wing"
+	icon_state = "baron_l_wing"
+	origin_tech = list(TECH_DATA = 2, TECH_MATERIAL = 5, TECH_ENGINEERING = 4)
+
+/obj/item/mecha_parts/fighter/part/baron_right_wing
+	name="\improper Baron Right Wing"
+	icon_state = "baron_r_wing"
+	origin_tech = list(TECH_DATA = 2, TECH_MATERIAL = 5, TECH_ENGINEERING = 4)
+
+/obj/item/mecha_parts/fighter/part/baron_main_engine
+	name="\improper Baron Main Engine"
+	icon_state = "baron_m_engine"
+	origin_tech = list(TECH_DATA = 2, TECH_MATERIAL = 5, TECH_ENGINEERING = 4)
+
+/obj/item/mecha_parts/fighter/part/baron_left_engine
+	name="\improper Baron Left Engine"
+	icon_state = "baron_l_engine"
+	origin_tech = list(TECH_DATA = 2, TECH_MATERIAL = 5, TECH_ENGINEERING = 4)
+
+/obj/item/mecha_parts/fighter/part/baron_right_engine
+	name="\improper Baron Right Engine"
+	icon_state = "baron_r_engine"
+	origin_tech = list(TECH_DATA = 2, TECH_MATERIAL = 5, TECH_ENGINEERING = 4)

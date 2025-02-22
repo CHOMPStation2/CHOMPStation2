@@ -8,14 +8,14 @@
 	icon_dead = "sheep-dead"
 	icon = 'icons/mob/vore.dmi'
 
-	faction = "sheep"
+	faction = FACTION_SHEEP
 	maxHealth = 40
 	health = 40
 
 	see_in_dark = 2
 
 	meat_amount = 5
-	meat_type = /obj/item/weapon/reagent_containers/food/snacks/meat
+	meat_type = /obj/item/reagent_containers/food/snacks/meat
 
 	response_help  = "pets"
 	response_disarm = "gently pushes aside"
@@ -48,17 +48,17 @@
 	. = ..()
 	if(!riding_datum)
 		riding_datum = new /datum/riding/simple_mob(src)
-	add_verb(src,/mob/living/simple_mob/proc/animal_mount) //CHOMPEdit TGPanel
-	add_verb(src,/mob/living/proc/toggle_rider_reins) //CHOMPEdit TGPanel
+	add_verb(src, /mob/living/simple_mob/proc/animal_mount)
+	add_verb(src, /mob/living/proc/toggle_rider_reins)
 	movement_cooldown = -1
 
 /mob/living/simple_mob/vore/sheep/MouseDrop_T(mob/living/M, mob/living/user)
 	return
 
 /mob/living/simple_mob/vore/sheep/init_vore()
-	if(!voremob_loaded) //CHOMPEdit
+	if(!voremob_loaded)
 		return
-	.=..()
+	. = ..()
 	var/obj/belly/B = vore_selected
 	B.name = "stomach"
 	B.desc = "With a final few gulps, the sheep finishes swallowing you down into its hot, dark guts… The wool on the outside is doing you no favors with its insulation. The toasty organic flesh kneads and grinds around you with the stank of wet grass. The sheep seems to have already forgotten about you as it lets out a soft BAAH like belch and carries on doing nothing. "
@@ -89,13 +89,13 @@
 //Make sure you un-comment the variables above too.
 
 /mob/living/simple_mob/vore/sheep/attackby(var/obj/item/O as obj, var/mob/user as mob)
-	if(istype(O, /obj/item/weapon/material/knife) || istype(O, /obj/item/weapon/tool/wirecutters))
+	if(istype(O, /obj/item/material/knife) || istype(O, /obj/item/tool/wirecutters))
 		if(user.a_intent != I_HELP)
 			return ..()
 		if(!harvestable_wool)
 			return ..()
 		if(do_after(user, 3 SECONDS, exclusive = TASK_USER_EXCLUSIVE, target = src))
-			user.visible_message("<span class='notice'>\The [user] shears \the [src] with \the [O].</span>","<span class='notice'>You shear \the [src] with \the [O].</span>")
+			user.visible_message(span_notice("\The [user] shears \the [src] with \the [O]."),span_notice("You shear \the [src] with \the [O]."))
 			var/obj/item/stack/material/fur/wool/W = new(get_turf(user))
 			harvestable_wool = FALSE
 			update_icon()

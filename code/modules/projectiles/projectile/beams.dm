@@ -239,9 +239,9 @@
 		if(istype(M.wear_suit, /obj/item/clothing/suit/redtag))
 			M.Weaken(5)
 			// CHOMPEdit Start - The thing just to drop the ball if hit
-			if(istype(M.l_hand, /obj/item/weapon/laserdome_hyperball))
+			if(istype(M.l_hand, /obj/item/laserdome_hyperball))
 				M.unEquip(M.l_hand)
-			if(istype(M.r_hand, /obj/item/weapon/laserdome_hyperball))
+			if(istype(M.r_hand, /obj/item/laserdome_hyperball))
 				M.unEquip(M.r_hand)
 			// CHOMPEdit End
 	return 1
@@ -256,11 +256,11 @@
 			var/obj/item/clothing/suit/redtag/S = M.wear_suit
 			if (S.lasertag_health <= 1)
 				M.Weaken(5)
-				to_chat(M,"<span class='warning'>You have been defeated!</span>")
+				to_chat(M,span_warning("You have been defeated!"))
 				S.lasertag_health = initial(S.lasertag_health)
 			else
 				S.lasertag_health--
-				to_chat(M,"<span class='warning'>Danger! You have [num2text(S.lasertag_health)] hits remaining!</span>")
+				to_chat(M,span_warning("Danger! You have [num2text(S.lasertag_health)] hits remaining!"))
 	return 1
 
 /obj/item/projectile/beam/lasertag/red
@@ -274,9 +274,9 @@
 		if(istype(M.wear_suit, /obj/item/clothing/suit/bluetag))
 			M.Weaken(5)
 			// CHOMPEdit Start - The thing just to drop the ball if hit
-			if(istype(M.l_hand, /obj/item/weapon/laserdome_hyperball))
+			if(istype(M.l_hand, /obj/item/laserdome_hyperball))
 				M.unEquip(M.l_hand)
-			if(istype(M.r_hand, /obj/item/weapon/laserdome_hyperball))
+			if(istype(M.r_hand, /obj/item/laserdome_hyperball))
 				M.unEquip(M.r_hand)
 			// CHOMPEdit End
 	return 1
@@ -291,11 +291,11 @@
 			var/obj/item/clothing/suit/bluetag/S = M.wear_suit
 			if(S.lasertag_health <= 1)
 				M.Weaken(5)
-				to_chat(M,"<span class='warning'>You have been defeated!</span>")
+				to_chat(M,span_warning("You have been defeated!"))
 				S.lasertag_health = initial(S.lasertag_health)
 			else
 				S.lasertag_health--
-				to_chat(M,"<span class='warning'>Danger! You have [num2text(S.lasertag_health)] hits remaining!</span>")
+				to_chat(M,span_warning("Danger! You have [num2text(S.lasertag_health)] hits remaining!"))
 	return 1
 
 /obj/item/projectile/beam/lasertag/omni//A laser tag bolt that stuns EVERYONE
@@ -365,11 +365,11 @@
 /obj/item/projectile/beam/stun/disabler/on_hit(atom/target, blocked = 0, def_zone)
 	. = ..(target, blocked, def_zone)
 
-	if(. && istype(target, /mob/living/silicon/robot) && prob(agony))
+	if(. && isrobot(target) && prob(agony))
 		var/mob/living/silicon/robot/R = target
 		var/drainamt = agony * (rand(5, 15) / 10)
 		R.drain_power(0, 0, drainamt)
-		if(istype(firer, /mob/living/silicon/robot)) // Mischevious sappers, the swarm drones are.
+		if(isrobot(firer)) // Mischevious sappers, the swarm drones are.
 			var/mob/living/silicon/robot/A = firer
 			if(A.cell)
 				A.cell.give(drainamt * 2)
@@ -489,6 +489,17 @@
 	tracer_type = /obj/effect/projectile/tracer/darkmatter
 	impact_type = /obj/effect/projectile/impact/darkmatter
 	hud_state = "plasma_rifle_blast"
+
+/obj/item/projectile/beam/rainbow
+	name = "rainbow"
+	fire_sound = 'sound/weapons/sparkle.ogg'
+	icon_state = "rainbow"
+	light_color = "#ffffff"
+	muzzle_type = /obj/effect/projectile/muzzle/rainbow
+	tracer_type = /obj/effect/projectile/tracer/rainbow
+	impact_type = /obj/effect/projectile/impact/rainbow
+	hud_state = "laser"
+	damage = 20
 //
 // Projectile Beam Definitions
 //
@@ -528,7 +539,7 @@
 	..()
 
 /obj/item/projectile/beam/energy_net/proc/do_net(var/mob/M)
-	var/obj/item/weapon/energy_net/net = new (get_turf(M))
+	var/obj/item/energy_net/net = new (get_turf(M))
 	net.throw_impact(M)
 
 //
@@ -551,19 +562,23 @@
 	impact_type = /obj/effect/projectile/impact/medigun
 
 /obj/item/projectile/beam/medigun/on_hit(var/atom/target, var/blocked = 0)
-	if(istype(target, /mob/living/carbon/human))
+	if(ishuman(target))
 		var/mob/living/carbon/human/M = target
 		if(M.health < M.maxHealth)
 			var/obj/effect/overlay/pulse = new /obj/effect/overlay(get_turf(M))
 			pulse.icon = 'icons/effects/effects.dmi'
-			pulse.icon_state = "heal"
-			pulse.name = "heal"
+			pulse.icon_state = XENO_CHEM_HEAL
+			pulse.name = XENO_CHEM_HEAL
 			pulse.anchored = TRUE
 			spawn(20)
 				qdel(pulse)
-			to_chat(target, "<span class='notice'>As the beam strikes you, your injuries close up!</span>")
+			to_chat(target, span_notice("As the beam strikes you, your injuries close up!"))
 			M.adjustBruteLoss(-15)
 			M.adjustFireLoss(-15)
 			M.adjustToxLoss(-5)
 			M.adjustOxyLoss(-5)
 	return 1
+
+/obj/item/projectile/beam/laser_vision
+	name = "laser"
+	damage = 10

@@ -1,0 +1,833 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aa" = (
+/obj/structure/bed/double/padded{
+	pixel_x = 10;
+	pixel_y = -4
+	},
+/turf/simulated/floor/carpet/turcarpet,
+/area/survivalpod/superpose/logcabin)
+"aK" = (
+/obj/machinery/media/jukebox,
+/turf/simulated/wall/log_sif,
+/area/survivalpod/superpose/logcabin)
+"aT" = (
+/obj/structure/flora/pottedplant/crystal{
+	pixel_y = 10
+	},
+/obj/structure/table/bench/marble,
+/turf/simulated/floor/wood/sif/broken,
+/area/survivalpod/superpose/logcabin)
+"dm" = (
+/turf/simulated/floor/wood/sif,
+/area/survivalpod/superpose/logcabin)
+"eg" = (
+/turf/simulated/floor/outdoors/dirt{
+	can_atmos_pass = 0;
+	outdoors = 0;
+	temperature = 300
+	},
+/area/survivalpod/superpose/logcabin)
+"fP" = (
+/obj/item/gps,
+/obj/item/sticky_pad/random,
+/obj/item/starcaster_news,
+/obj/item/pen/blue,
+/obj/item/pda,
+/obj/item/card/id/external,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/reagent_containers/food/snacks/sosjerky,
+/obj/item/reagent_containers/food/snacks/sosjerky,
+/obj/item/gun/energy/locked/phasegun/pistol,
+/obj/item/material/knife/tacknife/survival,
+/obj/item/clothing/accessory/permit/gun,
+/obj/item/camera,
+/obj/item/binoculars,
+/obj/item/threadneedle,
+/obj/random/soap,
+/obj/item/towel/random,
+/obj/item/bodybag/cryobag,
+/obj/item/flashlight/flare,
+/obj/item/flashlight/flare,
+/obj/item/flashlight/color/yellow,
+/obj/item/radio,
+/obj/item/radio,
+/obj/item/flame/lighter/random,
+/obj/item/cell/device/hyper,
+/obj/item/cell/device/hyper,
+/obj/item/extinguisher/mini,
+/obj/item/reagent_containers/glass/beaker/vial/tricordrazine,
+/obj/item/reagent_containers/glass/beaker/vial/tricordrazine,
+/obj/item/reagent_containers/pill/spaceacillin,
+/obj/item/reagent_containers/pill/spaceacillin,
+/obj/item/fbp_backup_cell,
+/obj/item/fbp_backup_cell,
+/obj/item/suit_cooling_unit/emergency,
+/obj/item/stack/nanopaste,
+/obj/item/reagent_containers/hypospray/autoinjector/biginjector/clotting,
+/obj/item/storage/backpack/messenger,
+/obj/item/clothing/accessory/storage/black_drop_pouches,
+/obj/item/clothing/accessory/poncho/thermal,
+/obj/item/storage/box/survival/comp,
+/obj/item/storage/toolbox/brass,
+/obj/item/storage/box/khcrystal,
+/obj/structure/table/rack/shelf/steel,
+/obj/structure/closet/cabinet{
+	pixel_y = 28;
+	density = 0
+	},
+/obj/item/gun/magic/firestaff/vrwizard/frost,
+/obj/item/clothing/head/wizard/amp,
+/obj/item/clothing/suit/darkvrwizard,
+/obj/item/clothing/head/wizard/fake/realistic,
+/obj/item/clothing/suit/space/void/wizard,
+/turf/simulated/floor/carpet/turcarpet,
+/area/survivalpod/superpose/logcabin)
+"hl" = (
+/obj/structure/bed/chair/oldsofa/right{
+	dir = 8
+	},
+/turf/simulated/floor/carpet/turcarpet,
+/area/survivalpod/superpose/logcabin)
+"il" = (
+/obj/structure/simple_door/iron,
+/turf/simulated/floor/wood/sif,
+/area/survivalpod/superpose/logcabin)
+"jA" = (
+/obj/machinery/vending/hydroseeds{
+	dir = 8;
+	pixel_x = 4
+	},
+/turf/simulated/floor/outdoors/grass/sif/forest{
+	outdoors = 0
+	},
+/area/survivalpod/superpose/logcabin)
+"jF" = (
+/obj/structure/bed/chair/wood/wings{
+	dir = 8
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/wood/sif,
+/area/survivalpod/superpose/logcabin)
+"kx" = (
+/obj/item/flashlight/slime{
+	pixel_y = 7
+	},
+/turf/simulated/wall/log_sif,
+/area/survivalpod/superpose/logcabin)
+"kJ" = (
+/obj/machinery/chem_master/condimaster{
+	name = "CondiMaster Neo"
+	},
+/turf/simulated/floor/tiled/white,
+/area/survivalpod/superpose/logcabin)
+"la" = (
+/obj/structure/closet/crate/freezer,
+/turf/simulated/floor/tiled/freezer,
+/area/survivalpod/superpose/logcabin)
+"lu" = (
+/turf/simulated/wall/log_sif,
+/area/survivalpod/superpose/logcabin)
+"nA" = (
+/obj/structure/closet/secure_closet/freezer/meat,
+/turf/simulated/floor/tiled/freezer,
+/area/survivalpod/superpose/logcabin)
+"nP" = (
+/obj/structure/cable/green{
+	icon_state = "0-4"
+	},
+/obj/machinery/power/port_gen/pacman,
+/obj/fiftyspawner/phoron,
+/turf/simulated/floor/wood/sif,
+/area/survivalpod/superpose/logcabin)
+"pk" = (
+/obj/item/material/minihoe{
+	pixel_y = 1;
+	pixel_x = 4
+	},
+/obj/item/tool/wirecutters/clippers{
+	pixel_y = -3;
+	pixel_x = -5
+	},
+/obj/item/tool/wirecutters/clippers{
+	pixel_y = 2;
+	pixel_x = -5
+	},
+/obj/item/material/minihoe{
+	pixel_y = 6;
+	pixel_x = 4
+	},
+/obj/structure/table/sifwoodentable,
+/obj/item/analyzer/plant_analyzer{
+	pixel_y = -1;
+	pixel_x = -4
+	},
+/obj/item/material/knife/machete/hatchet{
+	pixel_x = 1;
+	pixel_y = 4
+	},
+/turf/simulated/floor/outdoors/grass/sif{
+	outdoors = 0
+	},
+/area/survivalpod/superpose/logcabin)
+"qC" = (
+/obj/item/trash/dipbowl{
+	pixel_y = -6
+	},
+/mob/living/simple_mob/animal/passive/fish/trout{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/wood/sif,
+/area/survivalpod/superpose/logcabin)
+"rm" = (
+/obj/structure/closet/crate,
+/obj/fiftyspawner/steel,
+/obj/fiftyspawner/glass,
+/obj/item/storage/toolbox/syndicate,
+/obj/item/storage/toolbox/electrical,
+/turf/simulated/floor/outdoors/dirt{
+	can_atmos_pass = 0;
+	outdoors = 0;
+	temperature = 300
+	},
+/area/survivalpod/superpose/logcabin)
+"sf" = (
+/obj/machinery/appliance/cooker/oven,
+/turf/simulated/floor/tiled/white,
+/area/survivalpod/superpose/logcabin)
+"sr" = (
+/obj/structure/bed/chair/oldsofa/left{
+	dir = 8
+	},
+/turf/simulated/floor/carpet/turcarpet,
+/area/survivalpod/superpose/logcabin)
+"sD" = (
+/obj/structure/bookcase,
+/obj/item/spellbook/oneuse/knock,
+/obj/item/book/tome{
+	pixel_y = -3
+	},
+/obj/item/book/manual/tesla_engine,
+/obj/item/book/manual/standard_operating_procedure{
+	pixel_y = 2;
+	pixel_x = 1
+	},
+/turf/simulated/floor/outdoors/rocks/caves{
+	icon_state = "ice_dark_smooth";
+	desc = "A smooth crystalline polish of black marble, so polished you can see your reflection!";
+	name = "black marble";
+	temperature = 293.15
+	},
+/area/survivalpod/superpose/logcabin)
+"te" = (
+/obj/machinery/portable_atmospherics/hydroponics/soil,
+/turf/simulated/floor/outdoors/dirt{
+	can_atmos_pass = 0;
+	outdoors = 0;
+	temperature = 300
+	},
+/area/survivalpod/superpose/logcabin)
+"tl" = (
+/obj/structure/bed/chair/wood/wings{
+	dir = 8
+	},
+/turf/simulated/floor/wood/sif,
+/area/survivalpod/superpose/logcabin)
+"uI" = (
+/obj/structure/lightpost/atoll{
+	pixel_y = 9;
+	pixel_x = 1
+	},
+/turf/simulated/floor/bronze,
+/area/survivalpod/superpose/logcabin)
+"uS" = (
+/obj/structure/table/bench/marble,
+/obj/item/flashlight/slime{
+	pixel_y = 3
+	},
+/turf/simulated/floor/tiled/white,
+/area/survivalpod/superpose/logcabin)
+"vc" = (
+/obj/structure/table/marble,
+/obj/machinery/chemical_dispenser/bar_alc/full{
+	pixel_x = -13;
+	pixel_y = 1;
+	dir = 4
+	},
+/turf/simulated/floor/tiled/white,
+/area/survivalpod/superpose/logcabin)
+"vr" = (
+/obj/structure/table/sifwoodentable,
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/wood/sif,
+/area/survivalpod/superpose/logcabin)
+"vF" = (
+/obj/structure/bed/chair/oldsofa{
+	dir = 4
+	},
+/turf/simulated/floor/carpet/turcarpet,
+/area/survivalpod/superpose/logcabin)
+"vM" = (
+/obj/machinery/gibber,
+/turf/simulated/floor/tiled/freezer,
+/area/survivalpod/superpose/logcabin)
+"wo" = (
+/obj/structure/bed/double/padded{
+	layer = 3.01
+	},
+/obj/item/bedsheet/rddouble{
+	pixel_x = -24
+	},
+/obj/item/bedsheet/rddouble{
+	pixel_x = -12
+	},
+/obj/item/bedsheet/rddouble,
+/turf/simulated/floor/carpet/turcarpet,
+/area/survivalpod/superpose/logcabin)
+"wp" = (
+/obj/item/stool{
+	color = "grey"
+	},
+/turf/simulated/floor/tiled/freezer,
+/area/survivalpod/superpose/logcabin)
+"xH" = (
+/obj/structure/bed/chair/oldsofa/left{
+	dir = 4
+	},
+/turf/simulated/floor/carpet/turcarpet,
+/area/survivalpod/superpose/logcabin)
+"yY" = (
+/obj/structure/window/phoronreinforced,
+/obj/structure/table/bench/marble,
+/obj/structure/curtain/bed{
+	name = "curtain"
+	},
+/turf/simulated/floor/wood/sif,
+/area/survivalpod/superpose/logcabin)
+"zs" = (
+/obj/structure/simple_door/iron,
+/turf/simulated/floor/tiled/white,
+/area/survivalpod/superpose/logcabin)
+"zT" = (
+/obj/structure/table/marble,
+/obj/structure/sink/countertop{
+	dir = 1;
+	pixel_x = 1;
+	pixel_y = 1
+	},
+/turf/simulated/floor/tiled/white,
+/area/survivalpod/superpose/logcabin)
+"Bj" = (
+/obj/machinery/appliance/cooker/grill,
+/turf/simulated/floor/tiled/white,
+/area/survivalpod/superpose/logcabin)
+"CV" = (
+/obj/structure/table/fancyblack,
+/obj/item/gun/energy/taser/magic,
+/turf/simulated/floor/carpet/turcarpet,
+/area/survivalpod/superpose/logcabin)
+"CZ" = (
+/obj/structure/table/sifwoodentable,
+/obj/item/flame/candle/candelabra/everburn{
+	pixel_y = -8;
+	pixel_x = 15
+	},
+/turf/simulated/floor/wood/sif/broken,
+/area/survivalpod/superpose/logcabin)
+"De" = (
+/obj/structure/bed/chair/wood/wings{
+	dir = 4
+	},
+/turf/simulated/floor/wood/sif,
+/area/survivalpod/superpose/logcabin)
+"Dt" = (
+/obj/structure/bed/chair/wood/wings{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/wood/sif,
+/area/survivalpod/superpose/logcabin)
+"EB" = (
+/obj/structure/dogbed,
+/mob/living/simple_mob/animal/passive/cat/bones{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/wood/sif,
+/area/survivalpod/superpose/logcabin)
+"EN" = (
+/obj/structure/bed/double/padded{
+	pixel_x = 10;
+	layer = 3.01
+	},
+/turf/simulated/floor/carpet/turcarpet,
+/area/survivalpod/superpose/logcabin)
+"FW" = (
+/obj/structure/flora/pottedplant/crystal{
+	pixel_y = 10
+	},
+/obj/structure/table/bench/marble,
+/turf/simulated/floor/wood/sif,
+/area/survivalpod/superpose/logcabin)
+"Gj" = (
+/obj/machinery/appliance/cooker/fryer,
+/turf/simulated/floor/tiled/white,
+/area/survivalpod/superpose/logcabin)
+"Ij" = (
+/obj/structure/prop/statue,
+/turf/simulated/floor/outdoors/rocks/caves{
+	icon_state = "ice_dark_smooth";
+	desc = "A smooth crystalline polish of black marble, so polished you can see your reflection!";
+	name = "black marble";
+	temperature = 293.15
+	},
+/area/survivalpod/superpose/logcabin)
+"Ir" = (
+/obj/structure/table/marble,
+/obj/machinery/microwave{
+	pixel_y = 18
+	},
+/turf/simulated/floor/tiled/white,
+/area/survivalpod/superpose/logcabin)
+"IB" = (
+/obj/structure/table/sifwoodentable,
+/turf/simulated/floor/wood/sif,
+/area/survivalpod/superpose/logcabin)
+"KI" = (
+/obj/structure/fireplace{
+	desc = "An old abandoned fireplace. With a pair of googly eyes glued on it?. . .";
+	pixel_x = -16
+	},
+/turf/simulated/floor/outdoors/rocks/caves{
+	icon_state = "ice_dark_smooth";
+	desc = "A smooth crystalline polish of black marble, so polished you can see your reflection!";
+	name = "black marble";
+	temperature = 293.15
+	},
+/area/survivalpod/superpose/logcabin)
+"KU" = (
+/obj/structure/table/marble,
+/obj/machinery/chemical_dispenser/bar_soft/full{
+	dir = 4;
+	pixel_x = -13
+	},
+/turf/simulated/floor/tiled/white,
+/area/survivalpod/superpose/logcabin)
+"LX" = (
+/turf/simulated/floor/tiled/white,
+/area/survivalpod/superpose/logcabin)
+"Mp" = (
+/obj/machinery/power/apc{
+	pixel_y = -26
+	},
+/obj/structure/cable/green{
+	icon_state = "0-8"
+	},
+/turf/simulated/floor/wood/sif,
+/area/survivalpod/superpose/logcabin)
+"Mt" = (
+/obj/item/perfect_tele/magic,
+/obj/structure/table/fancyblack,
+/turf/simulated/floor/carpet/turcarpet,
+/area/survivalpod/superpose/logcabin)
+"MN" = (
+/turf/simulated/floor/carpet/turcarpet,
+/area/survivalpod/superpose/logcabin)
+"Nc" = (
+/obj/structure/table/standard,
+/obj/item/material/knife/butch{
+	pixel_x = 3;
+	pixel_y = -2
+	},
+/obj/item/material/knife/hook{
+	pixel_x = -3;
+	pixel_y = 3
+	},
+/turf/simulated/floor/tiled/freezer,
+/area/survivalpod/superpose/logcabin)
+"NJ" = (
+/obj/structure/table/marble,
+/obj/item/reagent_containers/glass/rag{
+	pixel_x = 7;
+	pixel_y = 9
+	},
+/obj/item/reagent_containers/spray/cleaner,
+/turf/simulated/floor/tiled/white,
+/area/survivalpod/superpose/logcabin)
+"NP" = (
+/obj/structure/bed/double/padded{
+	pixel_y = -4
+	},
+/obj/item/bedsheet/rddouble{
+	pixel_x = -24;
+	pixel_y = -4
+	},
+/obj/item/bedsheet/rddouble{
+	pixel_x = -12;
+	pixel_y = -4
+	},
+/obj/item/bedsheet/rddouble{
+	pixel_y = -4
+	},
+/obj/item/reagent_containers/food/snacks/spellburger{
+	pixel_x = 8;
+	pixel_y = -5
+	},
+/turf/simulated/floor/carpet/turcarpet,
+/area/survivalpod/superpose/logcabin)
+"Of" = (
+/obj/item/flashlight/slime{
+	pixel_y = 3
+	},
+/obj/structure/table/bench/marble,
+/turf/simulated/floor/carpet/turcarpet,
+/area/survivalpod/superpose/logcabin)
+"OG" = (
+/turf/simulated/floor/wood/sif/broken,
+/area/survivalpod/superpose/logcabin)
+"OP" = (
+/turf/simulated/floor/tiled/freezer,
+/area/survivalpod/superpose/logcabin)
+"Pd" = (
+/obj/structure/sign/clock{
+	pixel_y = 30
+	},
+/turf/simulated/floor/carpet/turcarpet,
+/area/survivalpod/superpose/logcabin)
+"PG" = (
+/obj/structure/window/phoronreinforced{
+	dir = 1
+	},
+/obj/structure/table/bench/marble,
+/obj/structure/curtain/bed{
+	name = "curtain"
+	},
+/turf/simulated/floor/wood/sif,
+/area/survivalpod/superpose/logcabin)
+"RA" = (
+/obj/structure/table/fancyblack,
+/obj/item/deck/tarot,
+/turf/simulated/floor/carpet/turcarpet,
+/area/survivalpod/superpose/logcabin)
+"Tc" = (
+/obj/structure/sign/flag/blank,
+/turf/simulated/wall/log_sif,
+/area/survivalpod/superpose/logcabin)
+"Ty" = (
+/obj/structure/bookcase,
+/obj/item/spellbook/oneuse/forcewall,
+/obj/item/spellbook/oneuse/smoke{
+	pixel_y = -2;
+	pixel_x = 3
+	},
+/obj/item/book/manual/synthetic_life,
+/obj/item/book/manual/supermatter_engine{
+	pixel_y = -2;
+	pixel_x = 2
+	},
+/turf/simulated/floor/outdoors/rocks/caves{
+	icon_state = "ice_dark_smooth";
+	desc = "A smooth crystalline polish of black marble, so polished you can see your reflection!";
+	name = "black marble";
+	temperature = 293.15
+	},
+/area/survivalpod/superpose/logcabin)
+"TH" = (
+/obj/structure/closet/crate/solar,
+/turf/simulated/floor/outdoors/dirt{
+	can_atmos_pass = 0;
+	outdoors = 0;
+	temperature = 300
+	},
+/area/survivalpod/superpose/logcabin)
+"TN" = (
+/obj/item/flashlight/slime,
+/turf/simulated/wall/log_sif,
+/area/survivalpod/superpose/logcabin)
+"UT" = (
+/obj/structure/bed/chair/oldsofa/right{
+	dir = 4
+	},
+/turf/simulated/floor/carpet/turcarpet,
+/area/survivalpod/superpose/logcabin)
+"Vb" = (
+/obj/structure/window/phoronreinforced{
+	dir = 4
+	},
+/obj/structure/table/bench/marble,
+/obj/structure/curtain/bed{
+	name = "curtain"
+	},
+/turf/simulated/floor/wood/sif,
+/area/survivalpod/superpose/logcabin)
+"VY" = (
+/obj/structure/table/sifwoodentable,
+/obj/item/storage/box/wings/bucket,
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/wood/sif,
+/area/survivalpod/superpose/logcabin)
+"We" = (
+/obj/structure/grille/rustic,
+/obj/structure/window/phoronreinforced/full,
+/turf/simulated/floor/wood/sif,
+/area/survivalpod/superpose/logcabin)
+"WR" = (
+/obj/machinery/seed_storage/random{
+	dir = 8;
+	pixel_x = 4
+	},
+/turf/simulated/floor/outdoors/dirt{
+	can_atmos_pass = 0;
+	outdoors = 0;
+	temperature = 300
+	},
+/area/survivalpod/superpose/logcabin)
+"XT" = (
+/obj/structure/bed/chair/oldsofa{
+	dir = 8
+	},
+/turf/simulated/floor/carpet/turcarpet,
+/area/survivalpod/superpose/logcabin)
+"XX" = (
+/obj/structure/kitchenspike,
+/turf/simulated/floor/tiled/freezer,
+/area/survivalpod/superpose/logcabin)
+"YU" = (
+/obj/structure/curtain/bed,
+/turf/simulated/floor/carpet/turcarpet,
+/area/survivalpod/superpose/logcabin)
+"ZQ" = (
+/obj/structure/table/bench/marble,
+/obj/item/flashlight/slime{
+	pixel_y = 3
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/wood/sif,
+/area/survivalpod/superpose/logcabin)
+
+(1,1,1) = {"
+te
+te
+te
+eg
+eg
+eg
+eg
+eg
+eg
+"}
+(2,1,1) = {"
+te
+te
+te
+eg
+eg
+eg
+eg
+eg
+eg
+"}
+(3,1,1) = {"
+pk
+jA
+WR
+eg
+eg
+uI
+eg
+rm
+TH
+"}
+(4,1,1) = {"
+lu
+lu
+lu
+We
+We
+lu
+il
+Tc
+lu
+"}
+(5,1,1) = {"
+lu
+Ij
+xH
+vF
+UT
+FW
+dm
+aT
+lu
+"}
+(6,1,1) = {"
+lu
+Ty
+MN
+MN
+MN
+dm
+dm
+nP
+lu
+"}
+(7,1,1) = {"
+kx
+KI
+RA
+CV
+Mt
+dm
+dm
+EB
+lu
+"}
+(8,1,1) = {"
+lu
+sD
+MN
+MN
+MN
+OG
+dm
+qC
+lu
+"}
+(9,1,1) = {"
+lu
+Ij
+hl
+XT
+sr
+dm
+dm
+ZQ
+lu
+"}
+(10,1,1) = {"
+lu
+Ir
+vc
+KU
+dm
+dm
+De
+Dt
+lu
+"}
+(11,1,1) = {"
+lu
+kJ
+LX
+zT
+dm
+dm
+CZ
+vr
+yY
+"}
+(12,1,1) = {"
+PG
+sf
+LX
+NJ
+dm
+dm
+IB
+VY
+yY
+"}
+(13,1,1) = {"
+PG
+Bj
+LX
+LX
+dm
+dm
+tl
+jF
+lu
+"}
+(14,1,1) = {"
+lu
+Gj
+LX
+uS
+OG
+dm
+dm
+Mp
+lu
+"}
+(15,1,1) = {"
+lu
+lu
+zs
+lu
+aK
+YU
+YU
+YU
+lu
+"}
+(16,1,1) = {"
+lu
+la
+OP
+XX
+lu
+Pd
+MN
+MN
+lu
+"}
+(17,1,1) = {"
+TN
+Nc
+OP
+OP
+lu
+fP
+aa
+EN
+yY
+"}
+(18,1,1) = {"
+lu
+nA
+wp
+vM
+lu
+Of
+NP
+wo
+lu
+"}
+(19,1,1) = {"
+lu
+lu
+lu
+lu
+lu
+lu
+Vb
+lu
+lu
+"}

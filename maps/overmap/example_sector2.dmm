@@ -84,7 +84,7 @@
 /obj/structure/window/reinforced{
 	dir = 4
 	},
-/obj/item/weapon/shard{
+/obj/item/shard{
 	icon_state = "small"
 	},
 /turf/simulated/floor/plating,
@@ -132,7 +132,7 @@
 /turf/simulated/mineral,
 /area/mine/unexplored)
 "aw" = (
-/obj/item/weapon/shard{
+/obj/item/shard{
 	icon_state = "medium"
 	},
 /obj/effect/alien/weeds{
@@ -162,7 +162,7 @@
 /turf/simulated/mineral/random,
 /area/mine/unexplored)
 "aA" = (
-/obj/item/weapon/shard,
+/obj/item/shard,
 /turf/simulated/floor/airless{
 	icon_state = "floorscorched1"
 	},
@@ -175,7 +175,7 @@
 /obj/structure/window/reinforced{
 	dir = 4
 	},
-/obj/item/weapon/shard,
+/obj/item/shard,
 /turf/simulated/floor/plating,
 /area/mine/abandoned)
 "aD" = (
@@ -194,7 +194,7 @@
 /area/mine/abandoned)
 "aF" = (
 /obj/structure/lattice,
-/obj/item/weapon/shard{
+/obj/item/shard{
 	icon_state = "medium"
 	},
 /turf/space,
@@ -274,7 +274,7 @@
 /turf/space,
 /area)
 "aP" = (
-/obj/item/weapon/shard,
+/obj/item/shard,
 /obj/item/stack/rods,
 /turf/simulated/floor/plating/airless,
 /area/mine/abandoned)
@@ -334,7 +334,7 @@
 /turf/simulated/floor/plating/airless,
 /area/mine/abandoned)
 "aZ" = (
-/obj/item/weapon/shard{
+/obj/item/shard{
 	icon_state = "small"
 	},
 /obj/item/clothing/suit/space/syndicate,
@@ -393,12 +393,12 @@
 /turf/simulated/floor/plating,
 /area/mine/abandoned)
 "bh" = (
-/obj/item/weapon/shard,
+/obj/item/shard,
 /obj/structure/lattice,
 /turf/space,
 /area)
 "bi" = (
-/obj/item/weapon/shard{
+/obj/item/shard{
 	icon_state = "small"
 	},
 /turf/simulated/floor/plating/airless,
@@ -430,12 +430,12 @@
 /turf/simulated/floor/plating/airless,
 /area/mine/abandoned)
 "bn" = (
-/obj/item/weapon/shard,
+/obj/item/shard,
 /turf/simulated/floor/plating/airless,
 /area/mine/abandoned)
 "bo" = (
 /obj/structure/lattice,
-/obj/item/weapon/shard{
+/obj/item/shard{
 	icon_state = "small"
 	},
 /obj/item/clothing/mask/facehugger{
@@ -580,13 +580,13 @@
 	},
 /area/mine/abandoned)
 "bM" = (
-/obj/item/weapon/shard,
+/obj/item/shard,
 /turf/simulated/floor/airless{
 	icon_state = "floorscorched2"
 	},
 /area/mine/abandoned)
 "bN" = (
-/obj/item/weapon/shard{
+/obj/item/shard{
 	icon_state = "small"
 	},
 /turf/simulated/floor/airless,
@@ -605,7 +605,7 @@
 /area/mine/abandoned)
 "bQ" = (
 /obj/structure/table/standard,
-/obj/item/weapon/paper/crumpled,
+/obj/item/paper/crumpled,
 /turf/simulated/floor/airless{
 	icon_state = "floorscorched2"
 	},
@@ -624,7 +624,7 @@
 "bS" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced,
-/obj/item/weapon/shard{
+/obj/item/shard{
 	icon_state = "medium"
 	},
 /turf/simulated/floor/plating,
@@ -797,7 +797,7 @@
 /obj/structure/window/reinforced{
 	dir = 4
 	},
-/obj/item/weapon/shard,
+/obj/item/shard,
 /turf/simulated/floor/plating/airless{
 	icon_state = "asteroidplating"
 	},
@@ -855,7 +855,7 @@
 /turf/simulated/floor/plating/airless/asteroid,
 /area/mine/unexplored)
 "cv" = (
-/obj/item/weapon/rack_parts,
+/obj/item/rack_parts,
 /turf/simulated/floor/airless{
 	dir = 5;
 	icon_state = "asteroidfloor"
@@ -892,7 +892,7 @@
 	density = 0;
 	icon_state = "brokengrille"
 	},
-/obj/item/weapon/shard{
+/obj/item/shard{
 	icon_state = "small"
 	},
 /obj/item/stack/rods,
@@ -905,7 +905,7 @@
 	},
 /area/mine/abandoned)
 "cB" = (
-/obj/item/weapon/shard{
+/obj/item/shard{
 	icon_state = "medium"
 	},
 /turf/simulated/floor/airless{
@@ -925,7 +925,7 @@
 	icon_state = "brokengrille"
 	},
 /obj/item/stack/rods,
-/obj/item/weapon/shard,
+/obj/item/shard,
 /turf/simulated/floor/plating/airless{
 	icon_state = "asteroidplating"
 	},

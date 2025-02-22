@@ -29,7 +29,7 @@
 		chosen_type = pick(engine_types)
 	global_announcer.autosay("Engineering has selected [chosen_type.name] as todays engine.", "Engine Constructor")
 	to_world_log("Chose Engine Map: [chosen_type.name]")
-	admin_notice("<span class='danger'>Chose Engine Map: [chosen_type.name]</span>", R_DEBUG)
+	admin_notice(span_danger("Chose Engine Map: [chosen_type.name]"), R_DEBUG)
 
 	// Annihilate movable atoms
 	engine_loader_pickable.annihilate_bounds()

@@ -6,7 +6,7 @@
 	icon = 'icons/obj/computer.dmi'
 	icon_keyboard = "med_key"
 	icon_screen = "dna"
-	circuit = /obj/item/weapon/circuitboard/cloning
+	circuit = /obj/item/circuitboard/cloning
 	req_access = list(access_heads) //Only used for record deletion right now.
 	var/obj/machinery/dna_scannernew/scanner = null //Linked scanner. For scanning.
 	var/list/pods = null //Linked cloning pods.
@@ -15,7 +15,7 @@
 	var/menu = MENU_MAIN //Which menu screen to display
 	var/list/records = null
 	var/datum/dna2/record/active_record = null
-	var/obj/item/weapon/disk/data/diskette = null //Mostly so the geneticist can steal everything.
+	var/obj/item/disk/body_record/diskette = null // Traitgenes - Storing the entire body record
 	var/loading = 0 // Nice loading text
 	var/autoprocess = 0
 	var/obj/machinery/clonepod/selected_pod
@@ -34,6 +34,9 @@
 
 /obj/machinery/computer/cloning/Destroy()
 	releasecloner()
+	for(var/datum/dna2/record/R in records)
+		qdel(R.dna)
+		qdel(R)
 	return ..()
 
 /obj/machinery/computer/cloning/process()
@@ -91,7 +94,7 @@
 			P.name = "[initial(P.name)] #[num++]"
 
 /obj/machinery/computer/cloning/attackby(obj/item/W as obj, mob/user as mob, params)
-	if(istype(W, /obj/item/weapon/disk/data)) //INSERT SOME DISKETTES
+	if(istype(W, /obj/item/disk/body_record/)) //Traitgenes Storing the entire body record
 		if(!diskette)
 			user.drop_item()
 			W.loc = src
@@ -99,14 +102,14 @@
 			to_chat(user, "You insert [W].")
 			SStgui.update_uis(src)
 			return
-	else if(istype(W, /obj/item/device/multitool))
-		var/obj/item/device/multitool/M = W
+	else if(istype(W, /obj/item/multitool))
+		var/obj/item/multitool/M = W
 		var/obj/machinery/clonepod/P = M.connecting
 		if(P && !(P in pods))
 			pods += P
 			P.connected = src
 			P.name = "[initial(P.name)] #[pods.len]"
-			to_chat(user, "<span class='notice'>You connect [P] to [src].</span>")
+			to_chat(user, span_notice("You connect [P] to [src]."))
 	else
 		return ..()
 
@@ -196,7 +199,7 @@
 
 	return data
 
-/obj/machinery/computer/cloning/tgui_act(action, params)
+/obj/machinery/computer/cloning/tgui_act(action, params, datum/tgui/ui)
 	if(..())
 		return TRUE
 
@@ -204,12 +207,13 @@
 	switch(tgui_modal_act(src, action, params))
 		if(TGUI_MODAL_ANSWER)
 			if(params["id"] == "del_rec" && active_record)
-				var/obj/item/weapon/card/id/C = usr.get_active_hand()
-				if(!istype(C) && !istype(C, /obj/item/device/pda))
+				var/obj/item/card/id/C = ui.user.get_active_hand()
+				if(!istype(C) && !istype(C, /obj/item/pda))
 					set_temp("ID not in hand.", "danger")
 					return
 				if(check_access(C))
 					records.Remove(active_record)
+					qdel(active_record.dna)
 					qdel(active_record)
 					set_temp("Record deleted.", "success")
 					menu = MENU_RECORDS
@@ -247,7 +251,7 @@
 					qdel(active_record)
 					set_temp("Error: Record corrupt.", "danger")
 				else
-					var/obj/item/weapon/implant/health/H = null
+					var/obj/item/implant/health/H = null
 					if(active_record.implant)
 						H = locate(active_record.implant)
 					var/list/payload = list(
@@ -270,7 +274,7 @@
 				return
 			switch(params["option"])
 				if("load")
-					if(isnull(diskette) || isnull(diskette.buf))
+					if(isnull(diskette) || isnull(diskette.stored)) // Traitgenes Storing the entire body record
 						set_temp("Error: The disk's data could not be read.", "danger")
 						return
 					else if(isnull(active_record))
@@ -278,27 +282,14 @@
 						menu = MENU_MAIN
 						return
 
-					active_record = diskette.buf
+					active_record = diskette.stored.mydna // Traitgenes Storing the entire body record
 					set_temp("Successfully loaded from disk.", "success")
 				if("save")
-					if(isnull(diskette) || diskette.read_only || isnull(active_record))
+					if(isnull(diskette) || isnull(active_record)) // Traitgenes Removed readonly
 						set_temp("Error: The data could not be saved.", "danger")
 						return
 
-					// DNA2 makes things a little simpler.
-					var/types
-					switch(params["savetype"]) // Save as Ui/Ui+Ue/Se
-						if("ui")
-							types = DNA2_BUF_UI
-						if("ue")
-							types = DNA2_BUF_UI|DNA2_BUF_UE
-						if("se")
-							types = DNA2_BUF_SE
-						else
-							set_temp("Error: Invalid save format.", "danger")
-							return
-					diskette.buf = active_record
-					diskette.buf.types = types
+					diskette.stored.mydna = active_record // Traitgenes Storing the entire body record
 					diskette.name = "data disk - '[active_record.dna.real_name]'"
 					set_temp("Successfully saved to disk.", "success")
 				if("eject")
@@ -336,7 +327,7 @@
 						set_temp("Error: Not enough biomass.", "danger")
 					else if(pod.mess)
 						set_temp("Error: The cloning pod is malfunctioning.", "danger")
-					else if(!CONFIG_GET(flag/revival_cloning)) // CHOMPEdit
+					else if(!CONFIG_GET(flag/revival_cloning))
 						set_temp("Error: Unable to initiate cloning cycle.", "danger")
 					else
 						cloneresult = pod.growclone(C)
@@ -344,6 +335,7 @@
 							set_temp("Initiating cloning cycle...", "success")
 							playsound(src, 'sound/machines/medbayscanner1.ogg', 100, 1)
 							records.Remove(C)
+							qdel(C.dna)
 							qdel(C)
 							menu = MENU_MAIN
 						else
@@ -360,16 +352,16 @@
 			else
 				scan_mode = FALSE
 		if("eject")
-			if(usr.incapacitated() || !scanner || loading)
+			if(ui.user.incapacitated() || !scanner || loading)
 				return
-			scanner.eject_occupant(usr)
-			scanner.add_fingerprint(usr)
+			scanner.eject_occupant(ui.user)
+			scanner.add_fingerprint(ui.user)
 		if("cleartemp")
 			temp = null
 		else
 			return FALSE
 
-	add_fingerprint(usr)
+	add_fingerprint(ui.user)
 
 /obj/machinery/computer/cloning/proc/scan_mob(mob/living/carbon/human/subject as mob, var/scan_brain = 0)
 	if(stat & NOPOWER)
@@ -380,7 +372,7 @@
 		return
 	if(isnull(subject) || (!(ishuman(subject))) || (!subject.dna))
 		if(isalien(subject))
-			set_scan_temp("Genaprawns are not scannable.", "bad") //CHOMPedit
+			set_scan_temp("Genaprawns are not scannable.", "bad")
 			SStgui.update_uis(src)
 			return
 		// can add more conditions for specific non-human messages here
@@ -423,7 +415,7 @@
 	subject.dna.check_integrity()
 
 	var/datum/dna2/record/R = new /datum/dna2/record()
-	R.dna = subject.dna
+	qdel_swap(R.dna, subject.dna)
 	R.ckey = subject.ckey
 	R.id = copytext(md5(subject.real_name), 2, 6)
 	R.name = R.dna.real_name
@@ -437,9 +429,9 @@
 			R.genetic_modifiers.Add(mod.type)
 
 	//Add an implant if needed
-	var/obj/item/weapon/implant/health/imp = locate(/obj/item/weapon/implant/health, subject)
+	var/obj/item/implant/health/imp = locate(/obj/item/implant/health, subject)
 	if (isnull(imp))
-		imp = new /obj/item/weapon/implant/health(subject)
+		imp = new /obj/item/implant/health(subject)
 		imp.implanted = subject
 		R.implant = "\ref[imp]"
 	//Update it if needed

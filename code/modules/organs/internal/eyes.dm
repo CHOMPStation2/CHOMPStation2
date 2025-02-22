@@ -12,33 +12,37 @@
 	name = "optical sensor"
 	innate_flash_protection = FLASH_PROTECTION_MAJOR // CHOMPedit: So synths can repair brute damage on themselves without needing eye protection, like many other servers. QOL.
 	verbs |= /obj/item/organ/internal/eyes/proc/change_eye_color
+	organ_verbs = list(/obj/item/organ/internal/eyes/proc/change_eye_color) //CHOMPAdd
+	handle_organ_mod_special() //CHOMPAdd
 
 /obj/item/organ/internal/eyes/robot
 	name = "optical sensor"
 
-/obj/item/organ/internal/eyes/robot/New()
-	..()
+/obj/item/organ/internal/eyes/robot/Initialize(mapload, internal)
+	. = ..()
 	robotize()
 
 /obj/item/organ/internal/eyes/grey
 	icon_state = "eyes_grey"
 
-/obj/item/organ/internal/eyes/grey/colormatch/New()
+/obj/item/organ/internal/eyes/grey/colormatch/Initialize(mapload, internal)
 	..()
-	var/mob/living/carbon/human/H = null
-	spawn(15)
-		if(ishuman(owner))
-			H = owner
-			color = H.species.blood_color
+	return INITIALIZE_HINT_LATELOAD
+
+/obj/item/organ/internal/eyes/grey/colormatch/LateInitialize()
+	. = ..()
+	if(ishuman(loc))
+		var/mob/living/carbon/human/H = loc
+		color = H.species.blood_color
 
 /obj/item/organ/internal/eyes/proc/change_eye_color()
 	set name = "Change Eye Color"
 	set desc = "Changes your robotic eye color instantly."
-	set category = "IC"
+	set category = "IC.Settings"
 	set src in usr
 
 	var/current_color = rgb(eye_colour[1],eye_colour[2],eye_colour[3])
-	var/new_color = input(usr, "Pick a new color for your eyes.","Eye Color", current_color) as null|color
+	var/new_color = tgui_color_picker(src, "Pick a new color for your eyes.","Eye Color", current_color)
 	if(new_color && owner)
 		// input() supplies us with a hex color, which we can't use, so we convert it to rbg values.
 		var/list/new_color_rgb_list = hex2rgb(new_color)
@@ -74,7 +78,7 @@
 	var/oldbroken = is_broken()
 	..()
 	if(is_broken() && !oldbroken && owner && !owner.stat)
-		to_chat(owner, "<span class='danger'>You go blind!</span>")
+		to_chat(owner, span_danger("You go blind!"))
 
 /obj/item/organ/internal/eyes/process() //Eye damage replaces the old eye_stat var.
 	..()

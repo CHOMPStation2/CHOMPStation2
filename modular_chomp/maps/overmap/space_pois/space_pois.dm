@@ -23,7 +23,7 @@ Less important
 // This causes PoI maps to get 'checked' and compiled, when undergoing a unit test.
 // This is so CI can validate PoIs, and ensure future changes don't break PoIs, as PoIs are loaded at runtime and the compiler can't catch errors.
 // When adding a new PoI, please add it to this list.
-#if MAP_TEST
+#ifdef MAP_TEST
 //#include "abandonedtele_13x12.dmm"
 #include "abandonedzoo_50x50.dmm"
 #include "asteroid1_60x60.dmm"
@@ -94,7 +94,7 @@ Less important
 	block_size = 50
 
 /datum/map_template/dynamic_overmap/asteroid1_60x60
-	name = "Asteroid"
+	name = "Brown Asteroid"
 	mappath = "modular_chomp/maps/overmap/space_pois/asteroid1_60x60.dmm"
 	scanner_desc = "Large asteroid rich in minerals, faint GPS signal detected."
 	poi_icon = "asteroid1"
@@ -102,7 +102,7 @@ Less important
 	block_size = 60
 
 /datum/map_template/dynamic_overmap/asteroid2_60x60
-	name = "Asteroid"
+	name = "Frozen Asteroid"
 	mappath = "modular_chomp/maps/overmap/space_pois/asteroid2_60x60.dmm"
 	scanner_desc = "Frozen asteroids and comets. Signs of debris detected."
 	poi_icon = "asteroid2"
@@ -110,7 +110,7 @@ Less important
 	block_size = 60
 
 /datum/map_template/dynamic_overmap/asteroid3_60x60
-	name = "Asteroid"
+	name = "Spooky Asteroid"
 	mappath = "modular_chomp/maps/overmap/space_pois/asteroid3_60x60.dmm"
 	scanner_desc = "Large asteroid with strange exotic matter readings, high level of danger detected."
 	poi_icon = "asteroid3"
@@ -118,7 +118,7 @@ Less important
 	block_size = 60
 
 /datum/map_template/dynamic_overmap/asteroid4_60x60
-	name = "Asteroid"
+	name = "Hollow Asteroid"
 	mappath = "modular_chomp/maps/overmap/space_pois/asteroid4_60x60.dmm"
 	scanner_desc = "Large asteroid rich in materials. Asteroid scans return that it is hollow."
 	poi_icon = "asteroid2"
@@ -249,15 +249,15 @@ Less important
 	block_size = 40
 
 /datum/map_template/dynamic_overmap/starhuntersarena_70x70
-	name = "Starhunter Challenge"
-	mappath = "modular_chomp/maps/overmap/space_pos/starhuntersarena_70x70.dmm"
+	name = "Alien Ruins"
+	mappath = "modular_chomp/maps/overmap/space_pois/starhuntersarena_70x70.dmm"
 	block_size = 70
-
+/*
 /datum/map_template/dynamic_overmap/starhunterstraders_30x30
 	name = "Starhunter Traders"
-	mappath = "modular_chomp/maps/overmap/space_pos/starhunterstraders_30x30.dmm"
+	mappath = "modular_chomp/maps/overmap/space_pois/starhunterstraders_30x30.dmm"
 	block_size = 30
-
+*/
 /datum/map_template/dynamic_overmap/syndiecakesfactory_40x40
 	name = "Land o' Cakes Factory"
 	mappath = "modular_chomp/maps/overmap/space_pois/syndiecakesfactory_40x40.dmm"
@@ -300,7 +300,7 @@ Less important
 /datum/map_template/dynamic_overmap/wizardcrash_20x35
 	name = "Crashed Anomalous Ship "
 	mappath = "modular_chomp/maps/overmap/space_pois/wizardcrash_20x35.dmm"
-	scanner_desc = "A ship propelled by unknown forced, need more information."
+	scanner_desc = "A ship propelled by unknown forces, need more information."
 	block_size = 35
 
 /datum/map_template/dynamic_overmap/spaceseveneleven_45x45

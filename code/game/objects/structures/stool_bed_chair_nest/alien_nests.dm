@@ -7,6 +7,7 @@
 	icon_state = "nest"
 	var/health = 100
 	unacidable = TRUE
+	flippable = FALSE
 
 /obj/structure/bed/nest/update_icon()
 	return
@@ -16,9 +17,9 @@
 		if(buckled_mob.buckled == src)
 			if(buckled_mob != user)
 				buckled_mob.visible_message(\
-					"<span class='notice'>[user.name] pulls [buckled_mob.name] free from the sticky nest!</span>",\
-					"<span class='notice'>[user.name] pulls you free from the gelatinous resin.</span>",\
-					"<span class='notice'>You hear squelching...</span>")
+					span_notice("[user.name] pulls [buckled_mob.name] free from the sticky nest!"),\
+					span_notice("[user.name] pulls you free from the gelatinous resin."),\
+					span_notice("You hear squelching..."))
 				buckled_mob.pixel_y = 0
 				buckled_mob.old_y = 0
 				unbuckle_mob(buckled_mob)
@@ -27,9 +28,9 @@
 					return
 				buckled_mob.last_special = world.time
 				buckled_mob.visible_message(\
-					"<span class='warning'>[buckled_mob.name] struggles to break free of the gelatinous resin...</span>",\
-					"<span class='warning'>You struggle to break free from the gelatinous resin...</span>",\
-					"<span class='notice'>You hear squelching...</span>")
+					span_warning("[buckled_mob.name] struggles to break free of the gelatinous resin..."),\
+					span_warning("You struggle to break free from the gelatinous resin..."),\
+					span_notice("You hear squelching..."))
 				spawn(NEST_RESIST_TIME)
 					if(user && buckled_mob && user.buckled == src)
 						buckled_mob.last_special = world.time
@@ -39,8 +40,10 @@
 			src.add_fingerprint(user)
 	return
 
+#undef NEST_RESIST_TIME
+
 /obj/structure/bed/nest/user_buckle_mob(mob/M as mob, mob/user as mob)
-	if ( !ismob(M) || (get_dist(src, user) > 1) || (M.loc != src.loc) || user.restrained() || usr.stat || M.buckled || istype(user, /mob/living/silicon/pai) )
+	if ( !ismob(M) || (get_dist(src, user) > 1) || (M.loc != src.loc) || user.restrained() || user.stat || M.buckled || ispAI(user) )
 		return
 
 	unbuckle_mob()
@@ -54,13 +57,13 @@
 	if(istype(xenos) && !(locate(/obj/item/organ/internal/xenos/hivenode) in xenos.internal_organs))
 		return
 
-	if(M == usr)
+	if(M == user)
 		return
 	else
 		M.visible_message(\
-			"<span class='notice'>[user.name] secretes a thick vile goo, securing [M.name] into [src]!</span>",\
-			"<span class='warning'>[user.name] drenches you in a foul-smelling resin, trapping you in the [src]!</span>",\
-			"<span class='notice'>You hear squelching...</span>")
+			span_notice("[user.name] secretes a thick vile goo, securing [M.name] into [src]!"),\
+			span_warning("[user.name] drenches you in a foul-smelling resin, trapping you in the [src]!"),\
+			span_notice("You hear squelching..."))
 	M.buckled = src
 	M.loc = src.loc
 	M.set_dir(src.dir)
@@ -71,12 +74,12 @@
 	src.add_fingerprint(user)
 	return
 
-/obj/structure/bed/nest/attackby(obj/item/weapon/W as obj, mob/user as mob)
+/obj/structure/bed/nest/attackby(obj/item/W as obj, mob/user as mob)
 	var/aforce = W.force
 	health = max(0, health - aforce)
 	playsound(src, 'sound/effects/attackblob.ogg', 100, 1)
 	for(var/mob/M in viewers(src, 7))
-		M.show_message("<span class='warning'>[user] hits [src] with [W]!</span>", 1)
+		M.show_message(span_warning("[user] hits [src] with [W]!"), 1)
 	healthcheck()
 
 /obj/structure/bed/nest/proc/healthcheck()
@@ -89,7 +92,7 @@
 /obj/structure/bed/nest/attack_hand(mob/user as mob)
 	usr.setClickCooldown(DEFAULT_ATTACK_COOLDOWN)
 	if (HULK in usr.mutations)
-		visible_message("<span class='warning'>[usr] destroys the [name]!</span>")
+		visible_message(span_warning("[usr] destroys the [name]!"))
 		health = 0
 	else
 
@@ -98,7 +101,7 @@
 			if(user.a_intent == I_HURT)
 				var/mob/living/carbon/M = usr
 				if(locate(/obj/item/organ/internal/xenos/hivenode) in M.internal_organs)
-					visible_message ("<span class='warning'>[usr] strokes the [name] and it melts away!</span>", 1)
+					visible_message (span_warning("[usr] strokes the [name] and it melts away!"), 1)
 					health = 0
 					healthcheck()
 					return

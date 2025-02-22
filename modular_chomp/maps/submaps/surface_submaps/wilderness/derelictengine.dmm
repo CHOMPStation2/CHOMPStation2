@@ -3,7 +3,9 @@
 /obj/effect/floor_decal/techfloor{
 	dir = 1
 	},
-/mob/living/simple_mob/mechanical/hivebot/ranged_damage/siege/emp,
+/mob/living/simple_mob/mechanical/hivebot/ranged_damage/siege/emp{
+	loot_list = list(/obj/item/prop/alien/junk = 20, /obj/item/prop/alien/junk = 20)
+	},
 /turf/simulated/floor/tiled/techfloor{
 	temperature = 243.15;
 	oxygen = 20.7263;
@@ -43,12 +45,9 @@
 	dir = 10
 	},
 /obj/structure/cable{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/plating{
@@ -119,7 +118,7 @@
 /turf/simulated/shuttle/floor/alienplating/external,
 /area/submap/DerelictEngine)
 "bl" = (
-/obj/item/weapon/material/shard/phoron,
+/obj/item/material/shard/phoron,
 /turf/simulated/floor/outdoors/rocks/sif/planetuse,
 /area/template_noop)
 "bn" = (
@@ -138,8 +137,6 @@
 	dir = 5
 	},
 /obj/structure/cable/green{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/effect/decal/cleanable/generic,
@@ -150,7 +147,7 @@
 	},
 /area/submap/DerelictEngine)
 "bG" = (
-/obj/item/weapon/material/shard/phoron{
+/obj/item/material/shard/phoron{
 	pixel_x = -9;
 	pixel_y = -7
 	},
@@ -172,9 +169,11 @@
 /turf/template_noop,
 /area/template_noop)
 "cE" = (
-/mob/living/simple_mob/mechanical/hivebot/ranged_damage/laser,
 /obj/effect/floor_decal/techfloor{
 	dir = 8
+	},
+/mob/living/simple_mob/mechanical/hivebot/ranged_damage/laser{
+	loot_list = list(/obj/item/prop/alien/junk = 20)
 	},
 /turf/simulated/shuttle/floor/alienplating/external,
 /area/submap/DerelictEngine)
@@ -191,7 +190,7 @@
 /turf/simulated/shuttle/floor/alienplating/external,
 /area/submap/DerelictEngine)
 "cX" = (
-/obj/item/weapon/material/shard/phoron{
+/obj/item/material/shard/phoron{
 	pixel_x = 7;
 	pixel_y = 10
 	},
@@ -211,10 +210,10 @@
 /obj/structure/grille/cult{
 	name = "Alien grille"
 	},
-/obj/item/weapon/material/shard/phoron{
+/obj/item/material/shard/phoron{
 	pixel_x = 7
 	},
-/obj/item/weapon/material/shard/phoron{
+/obj/item/material/shard/phoron{
 	pixel_x = 7;
 	pixel_y = 10
 	},
@@ -268,7 +267,7 @@
 "dL" = (
 /obj/structure/closet/alien,
 /obj/item/prop/alien/junk,
-/obj/item/weapon/implanter/compressed,
+/obj/item/implanter/compressed,
 /obj/item/stack/material/phoron{
 	amount = 10
 	},
@@ -281,16 +280,16 @@
 "dO" = (
 /obj/structure/table/alien/blue,
 /obj/item/prop/alien/junk,
-/obj/item/weapon/paper/alien,
+/obj/item/paper/alien,
 /obj/item/clothing/head/helmet/alien,
 /turf/simulated/shuttle/floor/alienplating/external,
 /area/submap/DerelictEngine)
 "dX" = (
 /obj/structure/table/alien,
 /obj/effect/floor_decal/techfloor,
-/obj/item/weapon/storage/belt/medical/alien,
-/obj/item/weapon/telecube/precursor/mated/mirrorcolor,
-/obj/item/weapon/implantcase/sprinter,
+/obj/item/storage/belt/medical/alien,
+/obj/item/telecube/precursor/mated/mirrorcolor,
+/obj/item/implantcase/sprinter,
 /turf/simulated/floor/tiled/techfloor{
 	temperature = 243.15;
 	oxygen = 20.7263;
@@ -313,7 +312,7 @@
 /turf/simulated/shuttle/floor/alienplating/external,
 /area/submap/DerelictEngine)
 "ez" = (
-/obj/item/weapon/stock_parts/capacitor,
+/obj/item/stock_parts/capacitor,
 /turf/simulated/shuttle/floor/alien{
 	nitrogen = 93.7835;
 	oxygen = 20.7263;
@@ -348,7 +347,6 @@
 /area/submap/DerelictEngine)
 "fn" = (
 /obj/structure/table/alien/blue,
-/obj/item/weapon/storage/belt/utility/alien,
 /turf/simulated/shuttle/floor/alienplating/external,
 /area/submap/DerelictEngine)
 "fp" = (
@@ -367,7 +365,6 @@
 /area/submap/DerelictEngine)
 "fy" = (
 /obj/structure/cable/green{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/item/trash/material/metal,
@@ -382,8 +379,8 @@
 /obj/structure/grille/cult{
 	name = "Alien grille"
 	},
-/obj/item/weapon/material/shard/phoron,
-/obj/item/weapon/material/shard/phoron{
+/obj/item/material/shard/phoron,
+/obj/item/material/shard/phoron{
 	pixel_x = 7
 	},
 /turf/simulated/shuttle/floor/voidcraft{
@@ -442,8 +439,8 @@
 /obj/structure/grille/cult{
 	name = "Alien grille"
 	},
-/obj/item/weapon/material/shard/phoron,
-/obj/item/weapon/material/shard/phoron{
+/obj/item/material/shard/phoron,
+/obj/item/material/shard/phoron{
 	pixel_x = 7;
 	pixel_y = 10
 	},
@@ -455,7 +452,7 @@
 /area/submap/DerelictEngine)
 "go" = (
 /obj/effect/decal/cleanable/generic,
-/obj/item/weapon/gun/energy/toxgun,
+/obj/item/gun/energy/toxgun,
 /turf/simulated/floor/plating{
 	oxygen = 20.7263;
 	temperature = 243.15;
@@ -485,11 +482,9 @@
 "gZ" = (
 /obj/effect/floor_decal/techfloor/orange,
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
-/obj/item/weapon/material/shard/phoron{
+/obj/item/material/shard/phoron{
 	pixel_x = 7;
 	pixel_y = 10
 	},
@@ -527,8 +522,6 @@
 /area/submap/DerelictEngine)
 "hC" = (
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/effect/decal/cleanable/generic,
@@ -547,8 +540,8 @@
 /obj/structure/window/phoronreinforced{
 	dir = 4
 	},
-/obj/item/weapon/material/shard/phoron,
-/obj/item/weapon/material/shard/phoron{
+/obj/item/material/shard/phoron,
+/obj/item/material/shard/phoron{
 	pixel_x = -9;
 	pixel_y = -7
 	},
@@ -568,10 +561,10 @@
 	},
 /area/submap/DerelictEngine)
 "hY" = (
-/obj/item/weapon/material/shard/phoron{
+/obj/item/material/shard/phoron{
 	pixel_x = 7
 	},
-/obj/item/weapon/material/shard/phoron{
+/obj/item/material/shard/phoron{
 	pixel_x = -9;
 	pixel_y = -7
 	},
@@ -602,7 +595,7 @@
 /obj/effect/floor_decal/techfloor/orange{
 	dir = 9
 	},
-/obj/item/weapon/paper/alien{
+/obj/item/paper/alien{
 	icon_state = "alienpaper_words";
 	info = "\[i]This tablet has a large collection of symbols that you've never seen before outside this ship. You have no hope of figuring out what any of the mean...\[/i]"
 	},
@@ -614,15 +607,15 @@
 /area/submap/DerelictEngine)
 "il" = (
 /obj/structure/table/alien/blue,
-/obj/item/weapon/surgical/FixOVein/alien,
-/obj/item/weapon/paper/alien{
+/obj/item/surgical/FixOVein/alien,
+/obj/item/paper/alien{
 	icon_state = "alienpaper_words";
 	info = "\[i]This tablet has a large collection of symbols that you've never seen before outside this ship. You have no hope of figuring out what any of the mean...\[/i]"
 	},
 /obj/effect/floor_decal/techfloor{
 	dir = 4
 	},
-/obj/item/weapon/cell/device/weapon/recharge/alien,
+/obj/item/cell/device/weapon/recharge/alien,
 /obj/structure/prop/alien/dispenser{
 	pixel_x = -27
 	},
@@ -640,8 +633,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/random/mob/robotic/hivebot,
@@ -683,7 +674,7 @@
 "iP" = (
 /obj/structure/table/alien/blue,
 /obj/item/clothing/under/psysuit,
-/obj/item/weapon/cell/device/weapon/recharge/alien/hybrid,
+/obj/item/cell/device/weapon/recharge/alien/hybrid,
 /turf/simulated/shuttle/floor/alienplating/external,
 /area/submap/DerelictEngine)
 "iQ" = (
@@ -732,7 +723,7 @@
 /area/template_noop)
 "jD" = (
 /obj/structure/table/alien,
-/obj/item/weapon/gun/energy/alien,
+/obj/item/gun/energy/alien,
 /obj/item/prop/alien/phasecoil,
 /obj/item/clothing/suit/armor/alien/tank,
 /obj/item/stack/material/diamond{
@@ -816,7 +807,7 @@
 	},
 /area/submap/DerelictEngine)
 "kx" = (
-/obj/item/weapon/material/shard/phoron{
+/obj/item/material/shard/phoron{
 	pixel_x = -9;
 	pixel_y = -7
 	},
@@ -860,7 +851,7 @@
 	},
 /area/submap/DerelictEngine)
 "ls" = (
-/obj/item/weapon/surgical/circular_saw/alien,
+/obj/item/surgical/circular_saw/alien,
 /turf/simulated/shuttle/floor/alienplating/external,
 /area/submap/DerelictEngine)
 "lD" = (
@@ -874,7 +865,9 @@
 /obj/effect/floor_decal/techfloor{
 	dir = 8
 	},
-/mob/living/simple_mob/mechanical/hivebot/ranged_damage/siege/radiation,
+/mob/living/simple_mob/mechanical/hivebot/ranged_damage/siege/radiation{
+	loot_list = list(/obj/item/prop/alien/junk = 20)
+	},
 /turf/simulated/shuttle/floor/alienplating/external,
 /area/submap/DerelictEngine)
 "lV" = (
@@ -884,7 +877,7 @@
 /turf/simulated/shuttle/floor/alienplating/external,
 /area/submap/DerelictEngine)
 "lX" = (
-/obj/item/weapon/material/shard/phoron{
+/obj/item/material/shard/phoron{
 	pixel_x = -9;
 	pixel_y = -7
 	},
@@ -914,7 +907,7 @@
 /obj/item/prop/alien/junk,
 /obj/item/prop/alien/junk,
 /obj/item/prop/alien/junk,
-/obj/item/device/multitool/alien,
+/obj/item/multitool/alien,
 /obj/item/stack/material/phoron{
 	amount = 10
 	},
@@ -933,7 +926,7 @@
 	},
 /area/submap/DerelictEngine)
 "mD" = (
-/obj/item/weapon/material/shard/phoron{
+/obj/item/material/shard/phoron{
 	pixel_x = 7;
 	pixel_y = 10
 	},
@@ -947,7 +940,7 @@
 /obj/effect/floor_decal/techfloor{
 	dir = 4
 	},
-/obj/item/weapon/stock_parts/micro_laser,
+/obj/item/stock_parts/micro_laser,
 /turf/simulated/shuttle/floor/alienplating/external,
 /area/submap/DerelictEngine)
 "mI" = (
@@ -981,13 +974,9 @@
 /area/submap/DerelictEngine)
 "mR" = (
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/effect/decal/cleanable/molten_item,
@@ -998,7 +987,7 @@
 	},
 /area/submap/DerelictEngine)
 "nM" = (
-/obj/item/weapon/material/shard/phoron{
+/obj/item/material/shard/phoron{
 	pixel_x = 7
 	},
 /turf/simulated/floor/tiled/techfloor{
@@ -1079,13 +1068,9 @@
 	dir = 8
 	},
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/plating{
@@ -1099,7 +1084,6 @@
 	dir = 5
 	},
 /obj/structure/cable{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/effect/floor_decal/techfloor/hole/right{
@@ -1142,8 +1126,6 @@
 /area/submap/DerelictEngine)
 "pk" = (
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/effect/decal/cleanable/blood/gibs/robot,
@@ -1189,13 +1171,9 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /turf/simulated/floor/tiled/techfloor{
@@ -1245,7 +1223,7 @@
 /turf/simulated/floor/outdoors/rocks/sif/planetuse,
 /area/template_noop)
 "ql" = (
-/obj/item/device/gps/internal/poi,
+/obj/item/gps/internal/poi,
 /turf/simulated/shuttle/wall/alien,
 /area/submap/DerelictEngine)
 "qn" = (
@@ -1337,12 +1315,12 @@
 	dir = 1
 	},
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
-/mob/living/simple_mob/mechanical/hivebot/ranged_damage/laser,
-/obj/item/weapon/material/shard/phoron{
+/mob/living/simple_mob/mechanical/hivebot/ranged_damage/laser{
+	loot_list = list(/obj/item/prop/alien/junk = 20)
+	},
+/obj/item/material/shard/phoron{
 	pixel_x = 7;
 	pixel_y = 10
 	},
@@ -1396,7 +1374,7 @@
 /obj/effect/floor_decal/techfloor/orange{
 	dir = 8
 	},
-/obj/item/weapon/surgical/retractor/alien,
+/obj/item/surgical/retractor/alien,
 /turf/simulated/floor/tiled/techfloor{
 	temperature = 243.15;
 	oxygen = 20.7263;
@@ -1408,7 +1386,7 @@
 /obj/effect/floor_decal/techfloor/orange{
 	dir = 5
 	},
-/obj/item/weapon/paper/alien{
+/obj/item/paper/alien{
 	icon_state = "alienpaper_words";
 	info = "\[i]This tablet has a large collection of symbols that you've never seen before outside this ship. You have no hope of figuring out what any of the mean...\[/i]"
 	},
@@ -1436,7 +1414,6 @@
 	dir = 9
 	},
 /obj/structure/cable{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/structure/frame,
@@ -1461,7 +1438,7 @@
 /obj/effect/floor_decal/techfloor/hole/right{
 	dir = 8
 	},
-/obj/item/weapon/reagent_containers/glass/bucket,
+/obj/item/reagent_containers/glass/bucket,
 /turf/simulated/shuttle/floor/alien{
 	nitrogen = 93.7835;
 	oxygen = 20.7263;
@@ -1540,7 +1517,6 @@
 /obj/effect/decal/cleanable/blood/gibs/robot,
 /obj/effect/decal/cleanable/molten_item,
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /turf/simulated/floor/plating{
@@ -1571,7 +1547,6 @@
 /area/submap/DerelictEngine)
 "tP" = (
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/machinery/power/tesla_coil/pre_mapped,
@@ -1625,12 +1600,9 @@
 	dir = 9
 	},
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/structure/cable{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/machinery/power/emitter/gyrotron/anchored{
@@ -1647,8 +1619,6 @@
 	dir = 1
 	},
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/item/clothing/under/psysuit,
@@ -1663,10 +1633,7 @@
 	dir = 6
 	},
 /obj/structure/closet/alien,
-/obj/item/prop/alien/junk,
-/obj/item/prop/alien/junk,
-/obj/item/prop/alien/junk,
-/obj/item/weapon/implanter/adrenalin,
+/obj/item/implanter/adrenalin,
 /turf/simulated/floor/tiled/techfloor{
 	temperature = 243.15;
 	oxygen = 20.7263;
@@ -1675,8 +1642,6 @@
 /area/submap/DerelictEngine)
 "uP" = (
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/power/grounding_rod/pre_mapped{
@@ -1693,12 +1658,10 @@
 	dir = 10
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/table/alien/blue,
-/obj/item/weapon/paper/alien,
+/obj/item/paper/alien,
 /turf/simulated/floor/tiled/techfloor{
 	temperature = 243.15;
 	oxygen = 20.7263;
@@ -1721,7 +1684,7 @@
 /obj/effect/floor_decal/techfloor{
 	dir = 4
 	},
-/obj/item/weapon/surgical/FixOVein/alien,
+/obj/item/surgical/FixOVein/alien,
 /turf/simulated/shuttle/floor/alienplating/external,
 /area/submap/DerelictEngine)
 "vE" = (
@@ -1740,8 +1703,6 @@
 	dir = 1
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/techfloor{
@@ -1751,10 +1712,11 @@
 	},
 /area/submap/DerelictEngine)
 "vU" = (
-/obj/structure/table/alien/blue,
-/obj/item/prop/alien/junk,
-/turf/simulated/shuttle/floor/alienplating/external,
-/area/submap/DerelictEngine)
+/mob/living/simple_mob/mechanical/hivebot/swarm{
+	loot_list = list(/obj/item/prop/alien/junk = 20)
+	},
+/turf/template_noop,
+/area/template_noop)
 "wd" = (
 /obj/machinery/porta_turret/alien/destroyed,
 /turf/simulated/shuttle/floor/alienplating/external,
@@ -1775,13 +1737,9 @@
 	dir = 4
 	},
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/effect/decal/cleanable/generic,
@@ -1805,8 +1763,6 @@
 	dir = 1
 	},
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/effect/decal/remains/xeno,
@@ -1833,8 +1789,6 @@
 	},
 /obj/effect/floor_decal/techfloor/orange/corner,
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/techfloor{
@@ -1873,7 +1827,7 @@
 /area/submap/DerelictEngine)
 "wV" = (
 /obj/structure/table/alien/blue,
-/obj/item/weapon/paper/alien{
+/obj/item/paper/alien{
 	icon_state = "alienpaper_words";
 	info = "\[i]This tablet has a large collection of symbols that you've never seen before outside this ship. You have no hope of figuring out what any of the mean...\[/i]"
 	},
@@ -1884,8 +1838,6 @@
 	dir = 8
 	},
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /turf/simulated/floor/tiled/techfloor{
@@ -1908,7 +1860,7 @@
 /obj/structure/window/phoronreinforced{
 	dir = 1
 	},
-/obj/item/weapon/material/shard/phoron{
+/obj/item/material/shard/phoron{
 	pixel_x = 7;
 	pixel_y = 10
 	},
@@ -1974,8 +1926,6 @@
 	dir = 4
 	},
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/effect/decal/cleanable/ash,
@@ -2028,7 +1978,7 @@
 	dir = 10
 	},
 /obj/item/prop/alien/junk,
-/obj/item/device/perfect_tele/alien,
+/obj/item/perfect_tele/alien,
 /turf/simulated/floor/tiled/techfloor{
 	temperature = 243.15;
 	oxygen = 20.7263;
@@ -2038,8 +1988,8 @@
 "yB" = (
 /obj/structure/closet/alien,
 /obj/item/prop/alien/junk,
-/obj/item/weapon/tool/crowbar/alien,
-/obj/item/weapon/tool/wirecutters/alien,
+/obj/item/tool/crowbar/alien,
+/obj/item/tool/wirecutters/alien,
 /turf/simulated/floor/tiled/techfloor{
 	temperature = 243.15;
 	oxygen = 20.7263;
@@ -2051,8 +2001,6 @@
 	dir = 4
 	},
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/effect/decal/cleanable/generic,
@@ -2069,7 +2017,9 @@
 /obj/effect/floor_decal/techfloor/orange{
 	dir = 4
 	},
-/mob/living/simple_mob/mechanical/hivebot/ranged_damage/rapid,
+/mob/living/simple_mob/mechanical/hivebot/ranged_damage/rapid{
+	loot_list = list(/obj/item/prop/alien/junk = 20)
+	},
 /turf/simulated/floor/tiled/techfloor{
 	temperature = 243.15;
 	oxygen = 20.7263;
@@ -2108,7 +2058,6 @@
 /area/submap/DerelictEngine)
 "zf" = (
 /obj/structure/cable/green{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/power/tesla_coil/pre_mapped,
@@ -2136,10 +2085,10 @@
 /area/submap/DerelictEngine)
 "zr" = (
 /obj/structure/closet/alien,
-/obj/item/weapon/tool/wrench/alien,
-/obj/item/weapon/weldingtool/alien,
-/obj/item/weapon/cell/device/weapon/recharge/alien/hybrid,
-/obj/item/device/multitool/alien,
+/obj/item/tool/wrench/alien,
+/obj/item/weldingtool/alien,
+/obj/item/cell/device/weapon/recharge/alien/hybrid,
+/obj/item/multitool/alien,
 /obj/item/stack/material/phoron{
 	amount = 10
 	},
@@ -2169,8 +2118,6 @@
 	},
 /obj/structure/window/phoronreinforced,
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/shuttle/floor/voidcraft{
@@ -2200,8 +2147,8 @@
 /obj/effect/floor_decal/techfloor/orange{
 	dir = 8
 	},
-/obj/item/weapon/storage/belt/utility/alien/full,
-/obj/item/weapon/paper/alien{
+/obj/item/storage/belt/utility/alien/full,
+/obj/item/paper/alien{
 	icon_state = "alienpaper_words";
 	info = "\[i]This tablet has a large collection of symbols that you've never seen before outside this ship. You have no hope of figuring out what any of the mean...\[/i]"
 	},
@@ -2212,7 +2159,7 @@
 	},
 /area/submap/DerelictEngine)
 "Ao" = (
-/obj/item/weapon/material/shard/phoron,
+/obj/item/material/shard/phoron,
 /turf/simulated/floor/plating{
 	oxygen = 20.7263;
 	temperature = 243.15;
@@ -2255,8 +2202,6 @@
 /area/submap/DerelictEngine)
 "Bb" = (
 /obj/structure/cable/green{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/effect/decal/cleanable/blood/gibs/robot,
@@ -2282,8 +2227,6 @@
 	dir = 6
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/machinery/power/emitter/gyrotron/anchored{
@@ -2307,17 +2250,6 @@
 	temperature = 243.15;
 	oxygen = 20.7263;
 	nitrogen = 93.7835
-	},
-/area/submap/DerelictEngine)
-"Bo" = (
-/obj/effect/floor_decal/techfloor{
-	dir = 4
-	},
-/obj/item/weapon/gun/energy/sniperrifle,
-/turf/simulated/shuttle/floor/alien{
-	nitrogen = 93.7835;
-	oxygen = 20.7263;
-	temperature = 243.15
 	},
 /area/submap/DerelictEngine)
 "Bs" = (
@@ -2349,7 +2281,6 @@
 /area/submap/DerelictEngine)
 "BX" = (
 /obj/structure/cable/green{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/power/tesla_coil/pre_mapped,
@@ -2377,8 +2308,6 @@
 	dir = 8
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/techfloor{
@@ -2493,8 +2422,8 @@
 /obj/effect/floor_decal/techfloor/orange{
 	dir = 8
 	},
-/obj/item/weapon/paper/alien,
-/obj/item/weapon/cell/device/weapon/recharge/alien,
+/obj/item/paper/alien,
+/obj/item/cell/device/weapon/recharge/alien,
 /turf/simulated/floor/tiled/techfloor{
 	temperature = 243.15;
 	oxygen = 20.7263;
@@ -2502,7 +2431,9 @@
 	},
 /area/submap/DerelictEngine)
 "Ee" = (
-/mob/living/simple_mob/mechanical/hivebot/ranged_damage/backline,
+/mob/living/simple_mob/mechanical/hivebot/ranged_damage/backline{
+	loot_list = list(/obj/item/prop/alien/junk = 20)
+	},
 /obj/effect/floor_decal/techfloor{
 	dir = 1
 	},
@@ -2551,7 +2482,7 @@
 /obj/structure/window/phoronreinforced{
 	dir = 8
 	},
-/obj/item/weapon/material/shard/phoron,
+/obj/item/material/shard/phoron,
 /turf/simulated/shuttle/floor/voidcraft{
 	temperature = 243.15;
 	oxygen = 20.7263;
@@ -2577,11 +2508,8 @@
 /obj/effect/floor_decal/techfloor{
 	dir = 8
 	},
-/obj/item/prop/alien/junk,
-/obj/item/prop/alien/junk,
-/obj/item/weapon/surgical/bone_clamp/alien,
-/obj/item/weapon/surgical/hemostat/alien,
-/obj/item/weapon/surgical/scalpel/alien,
+/obj/item/surgical/hemostat/alien,
+/obj/item/surgical/scalpel/alien,
 /turf/simulated/shuttle/floor/alienplating/external,
 /area/submap/DerelictEngine)
 "EZ" = (
@@ -2592,8 +2520,6 @@
 	dir = 8
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /turf/simulated/floor/tiled/techfloor{
@@ -2612,8 +2538,8 @@
 /area/submap/DerelictEngine)
 "Fd" = (
 /obj/structure/table/alien/blue,
-/obj/item/weapon/surgical/bone_clamp/alien,
-/obj/item/device/healthanalyzer/phasic,
+/obj/item/surgical/bone_clamp/alien,
+/obj/item/healthanalyzer/phasic,
 /obj/effect/floor_decal/techfloor{
 	dir = 4
 	},
@@ -2639,8 +2565,6 @@
 	dir = 9
 	},
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /turf/simulated/floor/tiled/techfloor{
@@ -2665,12 +2589,9 @@
 	dir = 5
 	},
 /obj/structure/cable{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/plating{
@@ -2681,8 +2602,6 @@
 /area/submap/DerelictEngine)
 "FS" = (
 /obj/structure/closet/alien,
-/obj/item/prop/alien/junk,
-/obj/item/prop/alien/junk,
 /obj/item/shield_projector/line,
 /turf/simulated/floor/tiled/techfloor{
 	temperature = 243.15;
@@ -2772,8 +2691,6 @@
 	dir = 1
 	},
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/effect/floor_decal/techfloor/hole/right{
@@ -2842,8 +2759,6 @@
 	dir = 9
 	},
 /obj/structure/cable/green{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/effect/decal/cleanable/molten_item,
@@ -2869,8 +2784,6 @@
 /area/submap/DerelictEngine)
 "Ij" = (
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/effect/decal/cleanable/generic,
@@ -2911,8 +2824,6 @@
 	dir = 1
 	},
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/power/emitter{
@@ -2921,7 +2832,6 @@
 	state = 1
 	},
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /turf/simulated/floor/plating{
@@ -2933,8 +2843,6 @@
 "IS" = (
 /obj/effect/floor_decal/techfloor/orange,
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/plating{
@@ -2996,13 +2904,9 @@
 /area/submap/DerelictEngine)
 "Jm" = (
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/effect/decal/cleanable/ash,
@@ -3031,8 +2935,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/techfloor{
@@ -3049,7 +2951,6 @@
 /obj/effect/floor_decal/techfloor/orange{
 	dir = 4
 	},
-/obj/item/prop/alien/junk,
 /turf/simulated/floor/tiled/techfloor{
 	temperature = 243.15;
 	oxygen = 20.7263;
@@ -3085,8 +2986,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/effect/decal/cleanable/ash,
@@ -3160,8 +3059,6 @@
 /area/submap/DerelictEngine)
 "LO" = (
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/effect/decal/cleanable/generic,
@@ -3209,8 +3106,8 @@
 "MG" = (
 /obj/structure/table/alien/blue,
 /obj/item/clothing/under/psysuit,
-/obj/item/weapon/cell/device/weapon/recharge/alien/omni,
-/obj/item/weapon/circuitboard/mecha/imperion/peripherals,
+/obj/item/cell/device/weapon/recharge/alien/omni,
+/obj/item/circuitboard/mecha/imperion/peripherals,
 /turf/simulated/shuttle/floor/alienplating/external,
 /area/submap/DerelictEngine)
 "MO" = (
@@ -3218,13 +3115,9 @@
 	dir = 10
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /turf/simulated/floor/tiled/techfloor{
@@ -3254,7 +3147,7 @@
 /obj/item/stack/material/phoron{
 	amount = 10
 	},
-/obj/item/weapon/implantcase/surge,
+/obj/item/implantcase/surge,
 /turf/simulated/floor/tiled/techfloor{
 	temperature = 243.15;
 	oxygen = 20.7263;
@@ -3269,11 +3162,13 @@
 /obj/structure/closet/alien,
 /obj/item/prop/alien/junk,
 /obj/item/prop/alien/junk,
-/obj/item/weapon/tool/screwdriver/alien,
+/obj/item/tool/screwdriver/alien,
 /turf/simulated/shuttle/floor/alienplating/external,
 /area/submap/DerelictEngine)
 "Nr" = (
-/mob/living/simple_mob/mechanical/hivebot/swarm,
+/mob/living/simple_mob/mechanical/hivebot/swarm{
+	loot_list = list(/obj/item/prop/alien/junk = 20)
+	},
 /turf/simulated/floor/outdoors/dirt/sif/planetuse,
 /area/template_noop)
 "Ns" = (
@@ -3292,8 +3187,8 @@
 /obj/effect/floor_decal/techfloor/orange{
 	dir = 8
 	},
-/obj/item/weapon/cell/device/weapon/recharge/alien/omni/empty,
-/obj/item/weapon/circuitboard/mecha/imperion/phasing,
+/obj/item/cell/device/weapon/recharge/alien/omni/empty,
+/obj/item/circuitboard/mecha/imperion/phasing,
 /turf/simulated/floor/tiled/techfloor{
 	temperature = 243.15;
 	oxygen = 20.7263;
@@ -3329,7 +3224,7 @@
 /obj/effect/floor_decal/techfloor{
 	dir = 8
 	},
-/obj/item/weapon/paper/alien,
+/obj/item/paper/alien,
 /turf/simulated/shuttle/floor/alien{
 	nitrogen = 93.7835;
 	oxygen = 20.7263;
@@ -3343,7 +3238,9 @@
 /obj/effect/floor_decal/techfloor/orange{
 	dir = 8
 	},
-/mob/living/simple_mob/mechanical/hivebot/ranged_damage/rapid,
+/mob/living/simple_mob/mechanical/hivebot/ranged_damage/rapid{
+	loot_list = list(/obj/item/prop/alien/junk = 20)
+	},
 /obj/effect/decal/remains/xeno,
 /turf/simulated/floor/tiled/techfloor{
 	temperature = 243.15;
@@ -3359,8 +3256,8 @@
 /obj/effect/floor_decal/techfloor/orange{
 	dir = 8
 	},
-/obj/item/weapon/cell/device/weapon/recharge/alien/omni/empty,
-/obj/item/weapon/gun/energy/laser/sleek,
+/obj/item/cell/device/weapon/recharge/alien/omni/empty,
+/obj/item/gun/energy/laser/sleek,
 /turf/simulated/floor/tiled/techfloor{
 	temperature = 243.15;
 	oxygen = 20.7263;
@@ -3370,11 +3267,11 @@
 "Pe" = (
 /obj/effect/floor_decal/techfloor/orange,
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
-/mob/living/simple_mob/mechanical/hivebot/ranged_damage/laser,
+/mob/living/simple_mob/mechanical/hivebot/ranged_damage/laser{
+	loot_list = list(/obj/item/prop/alien/junk = 20)
+	},
 /turf/simulated/floor/plating{
 	oxygen = 20.7263;
 	temperature = 243.15;
@@ -3403,7 +3300,6 @@
 	dir = 1
 	},
 /obj/structure/cable/green{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /turf/simulated/floor/tiled/techfloor{
@@ -3435,7 +3331,7 @@
 /area/submap/DerelictEngine)
 "Pw" = (
 /obj/structure/mopbucket,
-/obj/item/weapon/mop,
+/obj/item/mop,
 /turf/simulated/shuttle/floor/alienplating/external,
 /area/submap/DerelictEngine)
 "PD" = (
@@ -3457,8 +3353,6 @@
 "PK" = (
 /obj/effect/floor_decal/techfloor/orange,
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /turf/simulated/floor/tiled/techfloor{
@@ -3480,13 +3374,9 @@
 	dir = 8
 	},
 /obj/structure/cable/green{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/effect/decal/cleanable/generic,
@@ -3500,8 +3390,6 @@
 "Qk" = (
 /obj/effect/floor_decal/techfloor/orange,
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techfloor{
@@ -3545,8 +3433,6 @@
 	},
 /obj/structure/window/phoronreinforced,
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/plating{
@@ -3591,7 +3477,6 @@
 	dir = 6
 	},
 /obj/structure/cable{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/machinery/power/smes/buildable{
@@ -3611,7 +3496,9 @@
 /obj/effect/floor_decal/techfloor{
 	dir = 4
 	},
-/mob/living/simple_mob/mechanical/hivebot/tank/armored/anti_bullet,
+/mob/living/simple_mob/mechanical/hivebot/tank/armored/anti_bullet{
+	loot_list = list(/obj/item/prop/alien/junk = 20)
+	},
 /turf/simulated/floor/tiled/techfloor{
 	temperature = 243.15;
 	oxygen = 20.7263;
@@ -3670,8 +3557,8 @@
 /area/submap/DerelictEngine)
 "RU" = (
 /obj/structure/closet/alien,
-/obj/item/weapon/weldingtool/alien,
-/obj/item/weapon/storage/belt/utility/alien,
+/obj/item/weldingtool/alien,
+/obj/item/storage/belt/utility/alien,
 /turf/simulated/floor/tiled/techfloor{
 	temperature = 243.15;
 	oxygen = 20.7263;
@@ -3699,7 +3586,9 @@
 /area/template_noop)
 "SJ" = (
 /obj/effect/decal/cleanable/generic,
-/mob/living/simple_mob/mechanical/hivebot/precusor/laser,
+/mob/living/simple_mob/mechanical/hivebot/precusor/laser{
+	loot_list = list(/obj/item/prop/alien/junk = 20, /obj/item/prop/alien/junk = 20, /obj/item/storage/belt/utility/alien = 50)
+	},
 /turf/simulated/floor/plating{
 	oxygen = 20.7263;
 	temperature = 243.15;
@@ -3714,8 +3603,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/table/alien/blue,
@@ -3727,9 +3614,11 @@
 	},
 /area/submap/DerelictEngine)
 "SV" = (
-/mob/living/simple_mob/mechanical/hivebot/ranged_damage/rapid,
 /obj/effect/floor_decal/techfloor{
 	dir = 4
+	},
+/mob/living/simple_mob/mechanical/hivebot/ranged_damage/rapid{
+	loot_list = list(/obj/item/prop/alien/junk = 20)
 	},
 /turf/simulated/shuttle/floor/alienplating/external,
 /area/submap/DerelictEngine)
@@ -3742,8 +3631,6 @@
 /area/template_noop)
 "Tz" = (
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/item/trash/material/metal,
@@ -3796,8 +3683,6 @@
 "TO" = (
 /obj/effect/floor_decal/techfloor/orange/corner,
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/effect/decal/cleanable/molten_item,
@@ -3812,8 +3697,6 @@
 	dir = 1
 	},
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/random/mob/robotic/hivebot,
@@ -3855,7 +3738,9 @@
 /obj/effect/floor_decal/techfloor{
 	dir = 1
 	},
-/mob/living/simple_mob/mechanical/hivebot/ranged_damage/siege/radiation,
+/mob/living/simple_mob/mechanical/hivebot/ranged_damage/siege/emp{
+	loot_list = list(/obj/item/prop/alien/junk = 20, /obj/item/prop/alien/junk = 20)
+	},
 /turf/simulated/shuttle/floor/alienplating/external,
 /area/submap/DerelictEngine)
 "Um" = (
@@ -3889,13 +3774,9 @@
 /area/submap/DerelictEngine)
 "UQ" = (
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/effect/decal/cleanable/generic,
@@ -3914,7 +3795,7 @@
 /obj/effect/floor_decal/techfloor/orange{
 	dir = 4
 	},
-/obj/item/weapon/gun/energy/alien,
+/obj/item/gun/energy/alien,
 /turf/simulated/floor/tiled/techfloor{
 	temperature = 243.15;
 	oxygen = 20.7263;
@@ -3926,13 +3807,9 @@
 	dir = 1
 	},
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /turf/simulated/floor/plating{
@@ -3946,7 +3823,7 @@
 	desc = "It vaguely like a star. It looks like something an alien admiral might've worn. Probably.";
 	name = "alien admiral's medal"
 	},
-/obj/item/weapon/telecube/precursor/mated/zone,
+/obj/item/telecube/precursor/mated/zone,
 /obj/item/clothing/head/helmet/alien/tank,
 /obj/structure/table/alien,
 /obj/item/stack/material/glass/plastitanium{
@@ -3954,7 +3831,7 @@
 	},
 /obj/item/clothing/suit/armor/alien,
 /obj/item/clothing/head/helmet/alien/tank,
-/obj/item/weapon/gun/energy/alien,
+/obj/item/gun/energy/alien,
 /turf/simulated/floor/greengrid{
 	nitrogen = 93.7835;
 	oxygen = 20.7263;
@@ -3976,7 +3853,7 @@
 	},
 /area/submap/DerelictEngine)
 "Vk" = (
-/obj/item/weapon/oar{
+/obj/item/oar{
 	desc = "Used to provide propulsion to a space ship.";
 	force = 50;
 	name = "Alien oar";
@@ -4059,11 +3936,11 @@
 /obj/effect/floor_decal/techfloor{
 	dir = 4
 	},
-/obj/item/weapon/paper/alien{
+/obj/item/paper/alien{
 	icon_state = "alienpaper_words";
 	info = "\[i]This tablet has a large collection of symbols that you've never seen before outside this ship. You have no hope of figuring out what any of the mean...\[/i]"
 	},
-/obj/item/weapon/stock_parts/matter_bin,
+/obj/item/stock_parts/matter_bin,
 /turf/simulated/shuttle/floor/alien{
 	nitrogen = 93.7835;
 	oxygen = 20.7263;
@@ -4125,9 +4002,12 @@
 	},
 /area/submap/DerelictEngine)
 "Xm" = (
-/obj/structure/table/alien/blue,
-/obj/item/prop/alien/junk,
-/obj/item/prop/alien/junk,
+/obj/effect/floor_decal/techfloor{
+	dir = 1
+	},
+/mob/living/simple_mob/mechanical/hivebot/ranged_damage/backline{
+	loot_list = list(/obj/item/prop/alien/junk = 20)
+	},
 /turf/simulated/shuttle/floor/alienplating/external,
 /area/submap/DerelictEngine)
 "Xp" = (
@@ -4176,8 +4056,6 @@
 /area/submap/DerelictEngine)
 "XW" = (
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techfloor{
@@ -4218,8 +4096,8 @@
 /obj/effect/floor_decal/techfloor/orange{
 	dir = 8
 	},
-/obj/item/weapon/circuitboard/pacman,
-/obj/item/weapon/telecube/precursor/mated/zone,
+/obj/item/circuitboard/pacman,
+/obj/item/telecube/precursor/mated/zone,
 /turf/simulated/floor/tiled/techfloor{
 	temperature = 243.15;
 	oxygen = 20.7263;
@@ -4253,13 +4131,9 @@
 /area/submap/DerelictEngine)
 "YG" = (
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/power/grounding_rod/pre_mapped{
@@ -4275,7 +4149,7 @@
 /obj/effect/floor_decal/techfloor/orange{
 	dir = 1
 	},
-/obj/item/weapon/material/shard/phoron{
+/obj/item/material/shard/phoron{
 	pixel_x = -9;
 	pixel_y = -7
 	},
@@ -4289,8 +4163,6 @@
 "YI" = (
 /obj/effect/floor_decal/techfloor/orange,
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/techfloor{
@@ -4328,8 +4200,6 @@
 	dir = 1
 	},
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/shuttle/floor/voidcraft{
@@ -4341,8 +4211,6 @@
 "ZH" = (
 /obj/effect/floor_decal/techfloor/orange,
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/effect/floor_decal/techfloor/hole/right,
@@ -4358,7 +4226,7 @@
 SF
 SF
 SF
-ap
+vU
 SF
 SF
 Qv
@@ -4502,7 +4370,7 @@ SF
 SF
 "}
 (4,1,1) = {"
-ap
+vU
 SF
 fJ
 jl
@@ -4760,7 +4628,7 @@ dG
 Vb
 Vb
 Ue
-Bo
+iW
 Vb
 HH
 sG
@@ -5147,7 +5015,7 @@ je
 je
 BR
 je
-Xm
+fn
 fO
 SB
 Ga
@@ -5245,7 +5113,7 @@ jO
 je
 BR
 je
-vU
+fn
 fO
 SB
 lV
@@ -5395,7 +5263,7 @@ mI
 CV
 fO
 DA
-Ee
+Xm
 by
 wh
 xR
@@ -5622,7 +5490,7 @@ Qv
 SF
 SF
 SF
-ap
+vU
 SF
 SF
 SF
@@ -5779,7 +5647,7 @@ SF
 SF
 SF
 SF
-ap
+vU
 SF
 SF
 SF
@@ -5814,7 +5682,7 @@ SF
 SF
 SF
 SF
-ap
+vU
 SF
 Qv
 KU
@@ -5903,7 +5771,7 @@ KU
 KU
 KU
 SF
-ap
+vU
 KU
 SF
 SF
@@ -5929,7 +5797,7 @@ SF
 SF
 SF
 SF
-ap
+vU
 SF
 SF
 SF

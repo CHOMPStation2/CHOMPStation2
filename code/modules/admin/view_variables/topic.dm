@@ -129,18 +129,6 @@
 
 		href_list["datumrefresh"] = href_list["give_wound_internal"]
 
-
-	else if(href_list["give_disease2"])
-		if(!check_rights(R_ADMIN|R_FUN|R_EVENT))	return
-
-		var/mob/M = locate(href_list["give_disease2"])
-		if(!istype(M))
-			to_chat(usr, "This can only be used on instances of type /mob")
-			return
-
-		src.give_disease2(M)
-		href_list["datumrefresh"] = href_list["give_spell"]
-
 	else if(href_list["godmode"])
 		if(!check_rights(R_REJUVINATE))	return
 
@@ -199,7 +187,7 @@
 		if(!check_rights(0))	return
 
 		var/mob/M = locate(href_list["give_ai"])
-		if(!istype(M, /mob/living))
+		if(!isliving(M))
 			to_chat(usr, span_notice("This can only be used on instances of type /mob/living"))
 			return
 		var/mob/living/L = M
@@ -261,7 +249,7 @@
 					to_chat(usr, "No objects of this type exist")
 					return
 				log_admin("[key_name(usr)] deleted all objects of type [O_type] ([i] objects deleted) ")
-				message_admins("<span class='notice'>[key_name(usr)] deleted all objects of type [O_type] ([i] objects deleted) </span>")
+				message_admins(span_notice("[key_name(usr)] deleted all objects of type [O_type] ([i] objects deleted) "))
 			if("Type and subtypes")
 				var/i = 0
 				for(var/obj/Obj in world)
@@ -273,11 +261,11 @@
 					to_chat(usr, "No objects of this type exist")
 					return
 				log_admin("[key_name(usr)] deleted all objects of type or subtype of [O_type] ([i] objects deleted) ")
-				message_admins("<span class='notice'>[key_name(usr)] deleted all objects of type or subtype of [O_type] ([i] objects deleted) </span>")
+				message_admins(span_notice("[key_name(usr)] deleted all objects of type or subtype of [O_type] ([i] objects deleted) "))
 	else if(href_list["fakepdapropconvo"])
 		if(!check_rights(R_FUN)) return
 
-		var/obj/item/device/pda/P = locate(href_list["fakepdapropconvo"])
+		var/obj/item/pda/P = locate(href_list["fakepdapropconvo"])
 		if(!istype(P))
 			to_chat(usr, span_warning("This can only be done to instances of type /pda"))
 			return
@@ -423,21 +411,25 @@
 	else if(href_list["addverb"])
 		if(!check_rights(R_DEBUG))      return
 
-		var/mob/living/H = locate(href_list["addverb"])
+		var/mob/H = locate(href_list["addverb"])
 
-		if(!istype(H))
-			to_chat(usr, "This can only be done to instances of type /mob/living")
+		if(!ismob(H))
+			to_chat(usr, "This can only be done to instances of type /mob")
 			return
 		var/list/possibleverbs = list()
 		possibleverbs += "Cancel" 								// One for the top...
-		possibleverbs += typesof(/mob/proc,/mob/verb,/mob/living/proc,/mob/living/verb)
-		if(istype(H,/mob/living/carbon/human))
+		possibleverbs += typesof(/mob/proc, /mob/verb)
+		if(isobserver(H))
+			possibleverbs += typesof(/mob/observer/dead/proc,/mob/observer/dead/verb)
+		if(isliving(H))
+			possibleverbs += typesof(/mob/living/proc,/mob/living/verb)
+		if(ishuman(H))
 			possibleverbs += typesof(/mob/living/carbon/proc,/mob/living/carbon/verb,/mob/living/carbon/human/verb,/mob/living/carbon/human/proc)
-		if(istype(H,/mob/living/silicon/robot))
+		if(isrobot(H))
 			possibleverbs += typesof(/mob/living/silicon/proc,/mob/living/silicon/robot/proc,/mob/living/silicon/robot/verb)
-		if(istype(H,/mob/living/silicon/ai))
+		if(isAI(H))
 			possibleverbs += typesof(/mob/living/silicon/proc,/mob/living/silicon/ai/proc,/mob/living/silicon/ai/verb)
-		if(istype(H,/mob/living/simple_mob))
+		if(isanimal(H))
 			possibleverbs += typesof(/mob/living/simple_mob/proc)
 		possibleverbs -= H.verbs
 		possibleverbs += "Cancel" 								// ...And one for the bottom
@@ -449,7 +441,7 @@
 		if(!verb || verb == "Cancel")
 			return
 		else
-			add_verb(H,verb) //CHOMPEdit
+			add_verb(H, verb)
 
 	else if(href_list["remverb"])
 		if(!check_rights(R_DEBUG))      return
@@ -466,7 +458,7 @@
 		if(!verb)
 			return
 		else
-			remove_verb(H,verb)  //CHOMPEdit
+			remove_verb(H, verb)
 
 	else if(href_list["addorgan"])
 		if(!check_rights(R_SPAWN))	return
@@ -564,7 +556,7 @@
 
 		if(amount != 0)
 			log_admin("[key_name(usr)] dealt [amount] amount of [Text] damage to [L]")
-			message_admins("<span class='notice'>[key_name(usr)] dealt [amount] amount of [Text] damage to [L]</span>")
+			message_admins(span_notice("[key_name(usr)] dealt [amount] amount of [Text] damage to [L]"))
 			href_list["datumrefresh"] = href_list["mobToDamage"]
 	else if(href_list["expose"])
 		if(!check_rights(R_ADMIN, FALSE))
@@ -582,9 +574,9 @@
 		if (prompt != "Yes")
 			return
 		if(!thing)
-			to_chat(usr, "<span class='warning'>The object you tried to expose to [C] no longer exists (GC'd)</span>")
+			to_chat(usr, span_warning("The object you tried to expose to [C] no longer exists (GC'd)"))
 			return
-		message_admins("[key_name_admin(usr)] Showed [key_name_admin(C)] a <a href='?_src_=vars;[HrefToken(TRUE)];datumrefresh=\ref[thing]'>VV window</a>")
+		message_admins("[key_name_admin(usr)] Showed [key_name_admin(C)] a <a href='byond://?_src_=vars;[HrefToken(TRUE)];datumrefresh=\ref[thing]'>VV window</a>")
 		log_admin("Admin [key_name(usr)] Showed [key_name(C)] a VV window of a [src]")
 		to_chat(C, "[holder.fakekey ? "an Administrator" : "[usr.client.key]"] has granted you access to view a View Variables window")
 		C.debug_variables(thing)

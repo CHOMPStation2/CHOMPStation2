@@ -17,6 +17,8 @@ var/list/hit_appends	= list("-OOF", "-ACK", "-UGH", "-HRNK", "-HURGH", "-GLORF")
 var/log_path			= "data/logs/" //See world.dm for the full calculated path
 var/diary				= null
 var/error_log			= null
+var/sql_error_log		= null
+var/query_debug_log		= null
 var/debug_log			= null
 var/href_logfile		= null
 //CHOMPStation Removal Start TFF 24/12/19 - Blep. Remove extra stuff. Where do these even come in?
@@ -34,7 +36,6 @@ var/const/starsys_name	= "Virgo-Erigone"
 */
 //CHOMPStation Removal End
 var/const/game_version	= "CHOMPStation"	//CHOMPStation Edit TFF 24/12/19 - Chompers
-var/changelog_hash		= ""
 var/servernews_hash		= "" //ChompADD - news hash gen
 var/game_year			= (text2num(time2text(world.realtime, "YYYY")) + 544) //YW EDIT
 var/round_progressing = 1
@@ -88,8 +89,6 @@ var/list/reverse_dir = list( // reverse_dir[dir] = reverse of dir
 )
 var/global/const/SQRT_TWO = 1.41421356237
 
-// var/datum/configuration/config      = null // CHOMPEdit
-
 var/list/combatlog = list()
 var/list/IClog     = list()
 var/list/OOClog    = list()
@@ -123,11 +122,6 @@ var/forum_authenticated_group = "10"
 var/fileaccess_timer = 0
 var/custom_event_msg = null
 
-// Database connections. A connection is established on world creation.
-// Ideally, the connection dies when the server restarts (After feedback logging.).
-//var/DBConnection/dbcon     = new() // Feedback    database (New database) //CHOMPEdit Switching to TG SQL
-//var/DBConnection/dbcon_old = new() // /tg/station database (Old database) -- see the files in the SQL folder for information on what goes where. //CHOMPEdit Switching to TG SQL
-
 // Added for Xenoarchaeology, might be useful for other stuff.
 var/global/list/alphabet_uppercase = list("A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z")
 
@@ -145,7 +139,8 @@ var/list/emergency_module_types = list(
 )
 // List of modules available to AI shells
 var/list/shell_module_types = list(
-	"Standard", "Service", "Clerical"
+	"Standard", "Engineering", "Surgeon", "Crisis",
+	"Miner", "Janitor", "Service", "Clerical", "Security", "Research"
 )
 // List of whitelisted modules
 var/list/whitelisted_module_types = list(
@@ -181,7 +176,7 @@ var/static/list/scarySounds = list(
 var/max_explosion_range = 14
 
 // Announcer intercom, because too much stuff creates an intercom for one message then hard del()s it.
-var/global/obj/item/device/radio/intercom/omni/global_announcer = new /obj/item/device/radio/intercom/omni(null)
+var/global/obj/item/radio/intercom/omni/global_announcer = new /obj/item/radio/intercom/omni(null)
 
 var/list/station_departments = list("Command", "Medical", "Engineering", "Research", "Security", "Cargo", "Exploration", "Civilian") //VOREStation Edit
 

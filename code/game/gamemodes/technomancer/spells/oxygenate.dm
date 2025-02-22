@@ -3,11 +3,11 @@
 	desc = "This function creates oxygen at a location of your chosing.  If used on a humanoid entity, it heals oxygen deprivation.  \
 	If casted on the envirnment, air (oxygen and nitrogen) is moved from a distant location to your target."
 	cost = 25
-	obj_path = /obj/item/weapon/spell/oxygenate
+	obj_path = /obj/item/spell/oxygenate
 	ability_icon_state = "tech_oxygenate"
 	category = SUPPORT_SPELLS
 
-/obj/item/weapon/spell/oxygenate
+/obj/item/spell/oxygenate
 	name = "oxygenate"
 	desc = "Atmospherics is obsolete."
 	icon_state = "darkness" //wip
@@ -15,7 +15,7 @@
 	aspect = ASPECT_AIR
 	cooldown = 30
 
-/obj/item/weapon/spell/oxygenate/on_ranged_cast(atom/hit_atom, mob/user)
+/obj/item/spell/oxygenate/on_ranged_cast(atom/hit_atom, mob/user)
 	if(!within_range(hit_atom))
 		return
 	if(ishuman(hit_atom))
@@ -27,7 +27,7 @@
 	else if(isturf(hit_atom))
 		var/turf/T = hit_atom
 		if(pay_energy(1500))
-			T.assume_gas("oxygen", 200)
-			T.assume_gas("nitrogen", 800)
+			T.assume_gas(GAS_O2, 200)
+			T.assume_gas(GAS_N2, 800)
 			playsound(src, 'sound/effects/spray.ogg', 50, 1, -3)
 			adjust_instability(10)

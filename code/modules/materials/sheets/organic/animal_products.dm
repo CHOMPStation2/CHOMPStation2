@@ -1,5 +1,5 @@
 /obj/item/stack/material/chitin
-	name = "chitin"
+	name = MAT_CHITIN
 	desc = "The by-product of mob grinding."
 	icon_state = "chitin"
 	default_type = MAT_CHITIN
@@ -11,7 +11,7 @@
 
 //don't see anywhere else to put these, maybe together they could be used to make the xenos suit?
 /obj/item/stack/xenochitin
-	name = "alien chitin"
+	name = MAT_ALIENCHITIN
 	desc = "A piece of the hide of a terrible creature."
 	singular_name = "alien chitin piece"
 	icon = 'icons/mob/alien.dmi'
@@ -19,13 +19,13 @@
 	stacktype = "hide-chitin"
 
 /obj/item/xenos_claw
-	name = "alien claw"
+	name = MAT_ALIENCLAW
 	desc = "The claw of a terrible creature."
 	icon = 'icons/mob/alien.dmi'
 	icon_state = "claw"
 
 /obj/item/weed_extract
-	name = "weed extract"
+	name = MAT_WEEDEXTRACT
 	desc = "A piece of slimy, purplish weed."
 	icon = 'icons/mob/alien.dmi'
 	icon_state = "weed_extract"
@@ -33,10 +33,10 @@
 /////FUR AND WOOL MATERIALS/////
 
 /datum/material/fur
-	name = "fur"
+	name = MAT_FUR
 	icon_colour = "#fff2d3"
 	stack_origin_tech = list(TECH_MATERIAL = 2)
-	display_name = "fur"
+	display_name = MAT_FUR
 	icon_base = "sheet-fabric"
 	stack_type = /obj/item/stack/material/fur
 	sheet_collective_name = "pile"
@@ -53,14 +53,14 @@
 	hardness = 5
 
 /datum/material/fur/wool
-	name = "wool"
-	display_name = "wool"
+	name = MAT_WOOL
+	display_name = MAT_WOOL
 	stack_type = /obj/item/stack/material/fur/wool
 
 /datum/material/fur/generate_recipes()
 	recipes = list(
 		new /datum/stack_recipe("duster", /obj/item/clothing/suit/storage/duster/craftable, 10, time = 15 SECONDS, pass_stack_color = TRUE, recycle_material = "[name]"),
-		new /datum/stack_recipe("bedsheet", /obj/item/weapon/bedsheet/craftable, 10, time = 30 SECONDS, pass_stack_color = TRUE, recycle_material = "[name]"),
+		new /datum/stack_recipe("bedsheet", /obj/item/bedsheet/craftable, 10, time = 30 SECONDS, pass_stack_color = TRUE, recycle_material = "[name]"),
 		new /datum/stack_recipe("jumpsuit", /obj/item/clothing/under/color/white/craftable, 8, time = 15 SECONDS, pass_stack_color = TRUE, recycle_material = "[name]"),
 		new /datum/stack_recipe("foot wraps", /obj/item/clothing/shoes/footwraps/craftable, 2, time = 5 SECONDS, pass_stack_color = TRUE, recycle_material = "[name]"),
 		new /datum/stack_recipe("gloves", /obj/item/clothing/gloves/white/craftable, 2, time = 5 SECONDS, pass_stack_color = TRUE, recycle_material = "[name]"),
@@ -72,18 +72,18 @@
 		new /datum/stack_recipe("kippa", /obj/item/clothing/head/kippa/craftable, 3, time = 6 SECONDS, pass_stack_color = TRUE, recycle_material = "[name]"),
 		new /datum/stack_recipe("scarf", /obj/item/clothing/accessory/scarf/white/craftable, 4, time = 5 SECONDS, pass_stack_color = TRUE, recycle_material = "[name]"),
 		new /datum/stack_recipe("baggy pants", /obj/item/clothing/under/pants/baggy/white/craftable, 8, time = 10 SECONDS, pass_stack_color = TRUE, recycle_material = "[name]"),
-		new /datum/stack_recipe("belt pouch", /obj/item/weapon/storage/belt/fannypack/white/craftable, 25, time = 1 MINUTE, pass_stack_color = TRUE, recycle_material = "[name]"),
-		new /datum/stack_recipe("pouch, small", /obj/item/weapon/storage/pouch/small, 10, time = 20 SECONDS, pass_stack_color = FALSE, recycle_material = "[name]"), //vorestation Add
-		new /datum/stack_recipe("pouch, ammo", /obj/item/weapon/storage/pouch/ammo, 10, time = 20 SECONDS, pass_stack_color = FALSE, recycle_material = "[name]"), //vorestation Add
-		new /datum/stack_recipe("pouch, tools", /obj/item/weapon/storage/pouch/eng_tool, 10, time = 20 SECONDS, pass_stack_color = FALSE, recycle_material = "[name]"), //vorestation Add
-		new /datum/stack_recipe("pouch, parts", /obj/item/weapon/storage/pouch/eng_parts, 10, time = 20 SECONDS, pass_stack_color = FALSE, recycle_material = "[name]"), //vorestation Add
-		new /datum/stack_recipe("pouch, supplies", /obj/item/weapon/storage/pouch/eng_supply, 10, time = 20 SECONDS, pass_stack_color = FALSE, recycle_material = "[name]"), //vorestation Add
-		new /datum/stack_recipe("pouch, medical", /obj/item/weapon/storage/pouch/medical, 10, time = 20 SECONDS, pass_stack_color = FALSE, recycle_material = "[name]"), //vorestation Add
-		new /datum/stack_recipe("pouch, flare", /obj/item/weapon/storage/pouch/flares, 10, time = 20 SECONDS, pass_stack_color = FALSE, recycle_material = "[name]"), //vorestation Add
+		new /datum/stack_recipe("belt pouch", /obj/item/storage/belt/fannypack/white/craftable, 25, time = 1 MINUTE, pass_stack_color = TRUE, recycle_material = "[name]"),
+		new /datum/stack_recipe("pouch, small", /obj/item/storage/pouch/small, 10, time = 20 SECONDS, pass_stack_color = FALSE, recycle_material = "[name]"), //vorestation Add
+		new /datum/stack_recipe("pouch, ammo", /obj/item/storage/pouch/ammo, 10, time = 20 SECONDS, pass_stack_color = FALSE, recycle_material = "[name]"), //vorestation Add
+		new /datum/stack_recipe("pouch, tools", /obj/item/storage/pouch/eng_tool, 10, time = 20 SECONDS, pass_stack_color = FALSE, recycle_material = "[name]"), //vorestation Add
+		new /datum/stack_recipe("pouch, parts", /obj/item/storage/pouch/eng_parts, 10, time = 20 SECONDS, pass_stack_color = FALSE, recycle_material = "[name]"), //vorestation Add
+		new /datum/stack_recipe("pouch, supplies", /obj/item/storage/pouch/eng_supply, 10, time = 20 SECONDS, pass_stack_color = FALSE, recycle_material = "[name]"), //vorestation Add
+		new /datum/stack_recipe("pouch, medical", /obj/item/storage/pouch/medical, 10, time = 20 SECONDS, pass_stack_color = FALSE, recycle_material = "[name]"), //vorestation Add
+		new /datum/stack_recipe("pouch, flare", /obj/item/storage/pouch/flares, 10, time = 20 SECONDS, pass_stack_color = FALSE, recycle_material = "[name]"), //vorestation Add
 		new /datum/stack_recipe("crude bandage", /obj/item/stack/medical/crude_pack, 1, time = 2 SECONDS, pass_stack_color = TRUE, recycle_material = "[name]"),
 		new /datum/stack_recipe("empty sandbag", /obj/item/stack/emptysandbag, 2, time = 2 SECONDS, pass_stack_color = TRUE, supplied_material = "[name]"),
-		new /datum/stack_recipe("satchel", /obj/item/weapon/storage/backpack/satchel/craftable, 30, time = 1 MINUTE, pass_stack_color = TRUE, recycle_material = "[name]"),
-		new /datum/stack_recipe("backpack", /obj/item/weapon/storage/backpack/craftable, 30, time = 1 MINUTE, pass_stack_color = TRUE, recycle_material = "[name]"),
+		new /datum/stack_recipe("satchel", /obj/item/storage/backpack/satchel/craftable, 30, time = 1 MINUTE, pass_stack_color = TRUE, recycle_material = "[name]"),
+		new /datum/stack_recipe("backpack", /obj/item/storage/backpack/craftable, 30, time = 1 MINUTE, pass_stack_color = TRUE, recycle_material = "[name]"),
 		new /datum/stack_recipe("cloak", /obj/item/clothing/accessory/poncho/roles/cloak/custom, 10, time = 15 SECONDS, pass_stack_color = TRUE, recycle_material = "[name]"),
 		new /datum/stack_recipe("teshari cloak", /obj/item/clothing/under/teshari/smock/white/craftable, 10, time = 15 SECONDS, pass_stack_color = TRUE, recycle_material = "[name]"),
 		new /datum/stack_recipe("teshari beltcloak", /obj/item/clothing/suit/storage/teshari/beltcloak/standard/black_white/craftable, 10, time = 15 SECONDS, pass_stack_color = TRUE, recycle_material = "[name]"),
@@ -94,7 +94,7 @@
 		new /datum/stack_recipe("blindfold", /obj/item/clothing/glasses/sunglasses/blindfold/whiteblindfold/craftable, 2, time = 5 SECONDS, pass_stack_color = TRUE, recycle_material = "[name]")
 	)
 /obj/item/stack/material/fur
-	name = "fur"
+	name = MAT_FUR
 	icon_state = "sheet-fabric"
 	default_type = MAT_FUR
 	strict_color_stacking = TRUE
@@ -106,12 +106,12 @@
 	apply_colour = TRUE
 
 /obj/item/stack/material/fur/wool
-	name = "wool"
-	default_type = "wool"
+	name = MAT_WOOL
+	default_type = MAT_WOOL
 
 /obj/item/clothing/suit/storage/duster/craftable
 	name = "handmade duster"
-/obj/item/weapon/bedsheet/craftable
+/obj/item/bedsheet/craftable
 	name = "handmade bedsheet"
 /obj/item/clothing/under/color/white/craftable
 	name = "handmade jumpsuit"
@@ -131,13 +131,13 @@
 	name = "handmade scarf"
 /obj/item/clothing/under/pants/baggy/white/craftable
 	name = "handmade pants"
-/obj/item/weapon/storage/belt/fannypack/white/craftable
+/obj/item/storage/belt/fannypack/white/craftable
 	name = "handmade fannypack"
-/obj/item/weapon/storage/backpack/satchel/craftable
+/obj/item/storage/backpack/satchel/craftable
 	name = "handmade satchel"
 	icon_state = "satchel_white"
 	desc = "A handmade satchel, made for holding your things!"
-/obj/item/weapon/storage/backpack/craftable
+/obj/item/storage/backpack/craftable
 	name = "handmade backpack"
 	icon_state = "backpack_white"
 /obj/item/clothing/under/teshari/smock/white/craftable
@@ -162,5 +162,5 @@
 	name = "handmade blindfold"
 	desc = "A handmade blindfold that covers the eyes, preventing sight."
 
-/obj/item/clothing/accessory/collar/craftable/attack_self(mob/living/user as mob)
-	given_name = sanitizeSafe(tgui_input_text(usr, "What would you like to label the collar?", "Collar Labelling", null, MAX_NAME_LEN), MAX_NAME_LEN)
+/obj/item/clothing/accessory/collar/craftable/attack_self(mob/living/user)
+	given_name = sanitizeSafe(tgui_input_text(user, "What would you like to label the collar?", "Collar Labelling", null, MAX_NAME_LEN), MAX_NAME_LEN)

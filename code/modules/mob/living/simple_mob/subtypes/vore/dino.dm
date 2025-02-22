@@ -26,7 +26,7 @@
 	unsuitable_atoms_damage = 10
 
 	meat_amount = 5
-	meat_type = /obj/item/weapon/reagent_containers/food/snacks/meat
+	meat_type = /obj/item/reagent_containers/food/snacks/meat
 
 	//Phoron dragons aren't affected by atmos.
 	min_oxy = 0
@@ -40,7 +40,7 @@
 	minbodytemp = 0
 
 	can_be_drop_prey = FALSE //CHOMP Add
-	allow_mind_transfer = TRUE //CHOMPAdd
+	allow_mind_transfer = TRUE
 
 // Activate Noms!
 /mob/living/simple_mob/vore/aggressive/dino
@@ -49,4 +49,4 @@
 	vore_icons = SA_ICON_LIVING
 
 /mob/living/simple_mob/vore/aggressive/dino/virgo3b
-	faction = "virgo3b"
+	faction = FACTION_VIRGO3B

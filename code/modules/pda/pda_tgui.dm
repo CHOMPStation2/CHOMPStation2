@@ -1,14 +1,14 @@
 // Self contained file for all things TGUI
-/obj/item/device/pda/tgui_state(mob/user)
+/obj/item/pda/tgui_state(mob/user)
 	return GLOB.tgui_inventory_state
 
-/obj/item/device/pda/tgui_interact(mob/user, datum/tgui/ui, datum/tgui/parent_ui)
+/obj/item/pda/tgui_interact(mob/user, datum/tgui/ui, datum/tgui/parent_ui)
 	ui = SStgui.try_update_ui(user, src, ui)
 	if(!ui)
 		ui = new(user, src, "Pda", "Personal Data Assistant", parent_ui)
 		ui.open()
 
-/obj/item/device/pda/tgui_data(mob/user, datum/tgui/ui, datum/tgui_state/state)
+/obj/item/pda/tgui_data(mob/user, datum/tgui/ui, datum/tgui_state/state)
 	var/list/data = ..()
 
 	data["owner"] = owner					// Who is your daddy...
@@ -59,12 +59,12 @@
 
 	return data
 
-/obj/item/device/pda/tgui_act(action, list/params, datum/tgui/ui, datum/tgui_state/state)
+/obj/item/pda/tgui_act(action, list/params, datum/tgui/ui, datum/tgui_state/state)
 	if(..())
 		return TRUE
 
-	add_fingerprint(usr)
-	usr.set_machine(src)
+	add_fingerprint(ui.user)
+	ui.user.set_machine(src)
 
 	if(!touch_silent)
 		playsound(src, 'sound/machines/pda_click.ogg', 20)
@@ -85,7 +85,7 @@
 				var/turf/T = loc
 				if(ismob(T))
 					T = T.loc
-				var/obj/item/weapon/cartridge/C = cartridge
+				var/obj/item/cartridge/C = cartridge
 				C.forceMove(T)
 				if(scanmode in C.programs)
 					scanmode = null
@@ -99,13 +99,13 @@
 				cartridge = null
 				update_shortcuts()
 		if("Authenticate")//Checks for ID
-			id_check(usr, 1)
+			id_check(ui.user, 1)
 		if("Retro")
 			retro_mode = !retro_mode
 		if("TouchSounds")
 			touch_silent = !touch_silent
 		if("Ringtone")
-			return set_ringtone()
+			return set_ringtone(ui.user)
 		else
 			if(current_app)
 				. = current_app.tgui_act(action, params, ui, state)

@@ -6,7 +6,7 @@
 /turf/simulated/mineral/floor/ignore_mapgen,
 /area/template_noop)
 "c" = (
-/obj/item/weapon/ore,
+/obj/item/ore,
 /turf/simulated/mineral/floor/ignore_mapgen,
 /area/submap/cave/ore_cliff)
 "d" = (

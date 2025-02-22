@@ -11,7 +11,7 @@
 				return
 			else
 				mobs += M
-		to_chat(M, "[message]")
+		to_chat(M, span_info("[message]"))
 	//CHOMPEdit end
 
 /obj/effect/step_trigger/teleport_fancy

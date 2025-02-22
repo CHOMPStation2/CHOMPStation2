@@ -1,8 +1,9 @@
 /datum/reagent/blood
-	data = new/list("donor" = null, "viruses" = null, "species" = SPECIES_HUMAN, "blood_DNA" = null, "blood_type" = null, "blood_colour" = "#A10808", "resistances" = null, "trace_chem" = null, "antibodies" = list())
-	name = "Blood"
-	id = "blood"
-	taste_description = "iron"
+	data = new/list("donor" = null, "viruses" = null, "species" = SPECIES_HUMAN, "blood_DNA" = null, "blood_type" = null, "blood_colour" = "#A10808", "resistances" = null, "trace_chem" = null, REAGENT_ID_ANTIBODIES = list())
+	name = REAGENT_BLOOD
+	id = REAGENT_ID_BLOOD
+	description = "Blood."
+	taste_description = REAGENT_ID_IRON
 	taste_mult = 1.3
 	reagent_state = LIQUID
 	metabolism = REM * 5
@@ -23,9 +24,9 @@
 
 /datum/reagent/blood/get_data() // Just in case you have a reagent that handles data differently.
 	var/t = data.Copy()
-	if(t["virus2"])
-		var/list/v = t["virus2"]
-		t["virus2"] = v.Copy()
+	if(t["viruses"])
+		var/list/v = t["viruses"]
+		t["viruses"] = v.Copy()
 	return t
 
 /datum/reagent/blood/touch_turf(var/turf/simulated/T)
@@ -34,7 +35,7 @@
 
 	..()
 
-	if(!data["donor"] || istype(data["donor"], /mob/living/carbon/human))
+	if(!data["donor"] || ishuman(data["donor"]))
 		blood_splatter(T, src, 1)
 	else if(istype(data["donor"], /mob/living/carbon/alien))
 		var/obj/effect/decal/cleanable/blood/B = blood_splatter(T, src, 1)
@@ -70,13 +71,16 @@
 	if(effective_dose > 15)
 		if(!is_vampire) //VOREStation Edit.
 			M.adjustToxLoss(removed) //VOREStation Edit.
-	if(data && data["virus2"])
-		var/list/vlist = data["virus2"]
+	if(data && data["viruses"])
+		var/list/vlist = data["viruses"]
 		if(vlist.len)
 			for(var/ID in vlist)
-				var/datum/disease2/disease/V = vlist[ID]
-				if(V.spreadtype == "Contact")
-					infect_virus2(M, V.getcopy())
+				if(!ID)
+					continue
+				var/datum/disease/D = ID
+				if((D.spread_flags & SPECIAL) || (D.spread_flags & NON_CONTAGIOUS))
+					continue
+				M.ContractDisease(D)
 
 /datum/reagent/blood/affect_touch(var/mob/living/carbon/M, var/alien, var/removed)
 	if(ishuman(M))
@@ -86,15 +90,59 @@
 	if(alien == IS_SLIME)
 		affect_ingest(M, alien, removed)
 		return
-	if(data && data["virus2"])
-		var/list/vlist = data["virus2"]
+	if(data && data["viruses"])
+		var/list/vlist = data["viruses"]
 		if(vlist.len)
 			for(var/ID in vlist)
-				var/datum/disease2/disease/V = vlist[ID]
-				if(V.spreadtype == "Contact")
-					infect_virus2(M, V.getcopy())
-	if(data && data["antibodies"])
-		M.antibodies |= data["antibodies"]
+				var/datum/disease/D = ID
+				if((D.spread_flags & SPECIAL) || (D.spread_flags & NON_CONTAGIOUS))
+					continue
+				M.ContractDisease(D)
+	if(data && data["resistances"])
+		M.resistances |= data["resistances"]
+
+/datum/reagent/blood/mix_data(newdata, newamount)
+	if(!data || !newdata)
+		return
+
+	if(data["viruses"] || newdata["viruses"])
+		var/list/mix1 = data["viruses"]
+		var/list/mix2 = newdata["viruses"]
+
+		var/list/to_mix = list()
+		var/list/preserve = list()
+
+		for(var/datum/disease/advance/AD in mix1)
+			to_mix += AD
+		for(var/datum/disease/advance/AD in mix2)
+			to_mix += AD
+
+		var/datum/disease/advance/mixed_AD = Advance_Mix(to_mix)
+
+		if(mixed_AD)
+			preserve += mixed_AD
+
+		for(var/datum/disease/D1 in mix1)
+			if(!istype(D1, /datum/disease/advance))
+				var/keep = TRUE
+				for(var/datum/disease/D2 in preserve)
+					if(D1.IsSame(D2))
+						keep = FALSE
+						break
+				if(keep)
+					preserve += D1
+
+		for(var/datum/disease/D1 in mix2)
+			if(!istype(D1, /datum/disease/advance))
+				var/keep = TRUE
+				for(var/datum/disease/D2 in preserve)
+					if(D1.IsSame(D2))
+						keep = FALSE
+						break
+				if(keep)
+					preserve += D1
+
+		data["viruses"] = preserve
 
 /datum/reagent/blood/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(alien == IS_SLIME)	//They don't have blood, so it seems weird that they would instantly 'process' the chemical like another species does.
@@ -113,7 +161,7 @@
 			H.inject_blood(src, removed * volume_mod)
 
 			if(!H.isSynthetic() && data["species"] == "synthetic")	// Remember not to inject oil into your veins, it's bad for you.
-				H.reagents.add_reagent("toxin", removed * 1.5)
+				H.reagents.add_reagent(REAGENT_ID_TOXIN, removed * 1.5)
 
 			return
 
@@ -121,8 +169,9 @@
 	remove_self(volume)
 
 /datum/reagent/blood/synthblood
-	name = "synthetic blood"
-	id = "synthblood"
+	name = REAGENT_SYNTHBLOOD
+	description = "Synthetic Blood"
+	id = REAGENT_ID_SYNTHBLOOD
 	color = "#999966"
 	volume_mod = 2
 
@@ -135,37 +184,39 @@
 	return
 
 /datum/reagent/blood/synthblood/dilute
-	name = "synthetic plasma"
-	id = "synthblood_dilute"
+	name = REAGENT_SYNTHBLOOD_DILUTE
+	id = REAGENT_ID_SYNTHBLOOD_DILUTE
 	color = "#cacaaf"
 	volume_mod = 1.2
 
 // pure concentrated antibodies
 /datum/reagent/antibodies
-	data = list("antibodies"=list())
-	name = "Antibodies"
+	data = list(REAGENT_ID_ANTIBODIES=list())
+	name = REAGENT_ANTIBODIES
+	description = "Antibodies against some type of virus."
 	taste_description = "slime"
-	id = "antibodies"
+	id = REAGENT_ID_ANTIBODIES
 	reagent_state = LIQUID
 	color = "#0050F0"
 	mrate_static = TRUE
 
 /datum/reagent/antibodies/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(src.data)
-		M.antibodies |= src.data["antibodies"]
+		M.antibodies |= src.data[REAGENT_ID_ANTIBODIES]
 	..()
 
 #define WATER_LATENT_HEAT 19000 // How much heat is removed when applied to a hot turf, in J/unit (19000 makes 120 u of water roughly equivalent to 4L)
+
 /datum/reagent/water
-	name = "Water"
-	id = "water"
-	taste_description = "water"
+	name = REAGENT_WATER
+	id = REAGENT_ID_WATER
+	taste_description = REAGENT_ID_WATER
 	description = "A ubiquitous chemical substance that is composed of hydrogen and oxygen."
 	reagent_state = LIQUID
 	color = "#0064C877"
 	metabolism = REM * 10
 
-	glass_name = "water"
+	glass_name = REAGENT_ID_WATER
 	glass_desc = "The father of all refreshments."
 
 /datum/reagent/water/touch_turf(var/turf/simulated/T)
@@ -189,19 +240,21 @@
 		var/removed_heat = between(0, volume * WATER_LATENT_HEAT, -environment.get_thermal_energy_change(min_temperature))
 		environment.add_thermal_energy(-removed_heat)
 		if (prob(5))
-			T.visible_message("<span class='warning'>The water sizzles as it lands on \the [T]!</span>")
+			T.visible_message(span_warning("The water sizzles as it lands on \the [T]!"))
 
 	else if(volume >= 10)
 		T.wet_floor(1)
 
+	T.apply_fire_protection() // CHOMPAdd - Apply fire protection so fires can actually be put out.
+
 /datum/reagent/water/touch_obj(var/obj/O, var/amount)
 	..()
-	if(istype(O, /obj/item/weapon/reagent_containers/food/snacks/monkeycube))
-		var/obj/item/weapon/reagent_containers/food/snacks/monkeycube/cube = O
+	if(istype(O, /obj/item/reagent_containers/food/snacks/monkeycube))
+		var/obj/item/reagent_containers/food/snacks/monkeycube/cube = O
 		if(!cube.wrapped)
 			cube.Expand()
-	else if(istype(O, /obj/item/weapon/reagent_containers/food/snacks/cube))
-		var/obj/item/weapon/reagent_containers/food/snacks/cube/cube = O
+	else if(istype(O, /obj/item/reagent_containers/food/snacks/cube))
+		var/obj/item/reagent_containers/food/snacks/cube/cube = O
 		cube.Expand()
 	else
 		O.water_act(amount / 5)
@@ -213,7 +266,7 @@
 		if(istype(L, /mob/living/simple_mob/slime))
 			var/mob/living/simple_mob/slime/S = L
 			S.adjustToxLoss(15 * amount)
-			S.visible_message("<span class='warning'>[S]'s flesh sizzles where the water touches it!</span>", "<span class='danger'>Your flesh burns in the water!</span>")
+			S.visible_message(span_warning("[S]'s flesh sizzles where the water touches it!"), span_danger("Your flesh burns in the water!"))
 
 		// Then extinguish people on fire.
 		var/needed = max(0,L.fire_stacks) * 5
@@ -222,14 +275,14 @@
 		L.water_act(amount / 25) // Div by 25, as water_act multiplies it by 5 in order to calculate firestack modification.
 		remove_self(needed)
 		// Put out cigarettes if splashed.
-		if(istype(L, /mob/living/carbon/human))
+		if(ishuman(L))
 			var/mob/living/carbon/human/H = L
 			if(H.wear_mask)
 				if(istype(H.wear_mask, /obj/item/clothing/mask/smokable))
 					var/obj/item/clothing/mask/smokable/S = H.wear_mask
 					if(S.lit)
 						S.quench()
-						H.visible_message("<span class='notice'>[H]\'s [S.name] is put out.</span>")
+						H.visible_message(span_notice("[H]\'s [S.name] is put out."))
 
 //YWedit start, readds promethean damage that was removed by vorestation.
 /datum/reagent/water/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
@@ -246,13 +299,15 @@
 
 /datum/reagent/water/affect_touch(var/mob/living/carbon/M, var/alien, var/removed)
 	if(alien == IS_SLIME && prob(10))
-		M.visible_message("<span class='warning'>[M]'s flesh sizzles where the water touches it!</span>", "<span class='danger'>Your flesh burns in the water!</span>")
+		M.visible_message(span_warning("[M]'s flesh sizzles where the water touches it!"), span_danger("Your flesh burns in the water!"))
 	..()
   //VOREStation Edit End,
 
+#undef WATER_LATENT_HEAT
+
 /datum/reagent/fuel
-	name = "Welding fuel"
-	id = "fuel"
+	name = REAGENT_FUEL
+	id = REAGENT_ID_FUEL
 	description = "Required for welders. Flamable."
 	taste_description = "gross metal"
 	reagent_state = LIQUID

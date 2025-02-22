@@ -75,15 +75,15 @@
 
 					body += "</td><td align='center'>";
 
-					body += "<a href='?src=\ref[src];[HrefToken()];adminplayeropts="+ref+"'>PP</a> - "
-					body += "<a href='?src=\ref[src];[HrefToken()];notes=show;mob="+ref+"'>N</a> - "
-					body += "<a href='?_src_=vars;Vars="+ref+"'>VV</a> - "
-					body += "<a href='?src=\ref[src];[HrefToken()];traitor="+ref+"'>TP</a> - "
-					body += "<a href='?src=\ref[usr];[HrefToken()];priv_msg=\ref"+ref+"'>PM</a> - "
-					body += "<a href='?src=\ref[src];[HrefToken()];subtlemessage="+ref+"'>SM</a> - "
-					body += "<a href='?src=\ref[src];[HrefToken()];adminplayerobservejump="+ref+"'>JMP</a><br>"
+					body += "<a href='byond://?src=\ref[src];[HrefToken()];adminplayeropts="+ref+"'>PP</a> - "
+					body += "<a href='byond://?src=\ref[src];[HrefToken()];notes=show;mob="+ref+"'>N</a> - "
+					body += "<a href='byond://?_src_=vars;Vars="+ref+"'>VV</a> - "
+					body += "<a href='byond://?src=\ref[src];[HrefToken()];traitor="+ref+"'>TP</a> - "
+					body += "<a href='byond://?src=\ref[usr];[HrefToken()];priv_msg=\ref"+ref+"'>PM</a> - "
+					body += "<a href='byond://?src=\ref[src];[HrefToken()];subtlemessage="+ref+"'>SM</a> - "
+					body += "<a href='byond://?src=\ref[src];[HrefToken()];adminplayerobservejump="+ref+"'>JMP</a><br>"
 					if(antagonist > 0)
-						body += "<font size='2'><a href='?src=\ref[src];[HrefToken()];check_antagonist=1'><font color='red'><b>Antagonist</b></font></a></font>";
+						body += "<font size='2'><a href='byond://?src=\ref[src];[HrefToken()];check_antagonist=1'><font color='red'><b>Antagonist</b></font></a></font>";
 
 					body += "</td></tr></table>";
 
@@ -194,7 +194,7 @@
 			<tr id='title_tr'>
 				<td align='center'>
 					<font size='5'><b>Player panel</b></font><br>
-					Hover over a line to see more information - <a href='?src=\ref[src];[HrefToken()];check_antagonist=1'>Check antagonists</a>
+					Hover over a line to see more information - <a href='byond://?src=\ref[src];[HrefToken()];check_antagonist=1'>Check antagonists</a>
 					<p>
 				</td>
 			</tr>
@@ -230,38 +230,38 @@
 					if(ishuman(M))
 						M_job = M.job
 					else if(isslime(M))
-						M_job = "slime"
+						M_job = JOB_SLIME
 					else if(issmall(M))
-						M_job = "Monkey"
+						M_job = JOB_MONKEY
 					else if(isalien(M))
-						M_job = "Alien"
+						M_job = JOB_ALIEN
 					else
-						M_job = "Carbon-based"
+						M_job = JOB_CARBON_BASED
 
 				else if(issilicon(M)) //silicon
 					if(isAI(M))
-						M_job = "AI"
+						M_job = JOB_AI
 					else if(ispAI(M))
-						M_job = "pAI"
+						M_job = JOB_PAI
 					else if(isrobot(M))
-						M_job = "Cyborg"
+						M_job = JOB_CYBORG
 					else
-						M_job = "Silicon-based"
+						M_job = JOB_SILICON_BASED
 
 				else if(isanimal(M)) //simple animals
 					if(iscorgi(M))
-						M_job = "Corgi"
+						M_job = JOB_CORGI
 					else
-						M_job = "Animal"
+						M_job = JOB_ANIMAL
 
 				else
-					M_job = "Living"
+					M_job = JOB_LIVING
 
-			else if(istype(M,/mob/new_player))
-				M_job = "New player"
+			else if(isnewplayer(M))
+				M_job = JOB_NEW_PLAYER
 
 			else if(isobserver(M))
-				M_job = "Ghost"
+				M_job = JOB_GHOST
 
 			M_job = replacetext(M_job, "'", "")
 			M_job = replacetext(M_job, "\"", "")
@@ -336,9 +336,9 @@
 			dat += "<td>Cyborg</td>"
 		else if(ishuman(M))
 			dat += "<td>[M.real_name]</td>"
-		else if(istype(M, /mob/living/silicon/pai))
+		else if(ispAI(M))
 			dat += "<td>pAI</td>"
-		else if(istype(M, /mob/new_player))
+		else if(isnewplayer(M))
 			dat += "<td>New Player</td>"
 		else if(isobserver(M))
 			dat += "<td>Ghost</td>"
@@ -350,7 +350,7 @@
 			dat += "<td>Unknown</td>"
 
 
-		if(istype(M,/mob/living/carbon/human))
+		if(ishuman(M))
 			var/mob/living/carbon/human/H = M
 			if(H.mind && H.mind.assigned_role)
 				dat += "<td>[H.mind.assigned_role]</td>"
@@ -359,18 +359,18 @@
 
 
 		dat += {"<td>[M.key ? (M.client ? M.key : "[M.key] (DC)") : "No key"]</td>
-		<td align=center><A HREF='?src=\ref[src];[HrefToken()];adminplayeropts=\ref[M]'>X</A></td>
-		<td align=center><A href='?src=\ref[usr];[HrefToken()];priv_msg=\ref[M]'>PM</A></td>
+		<td align=center><A href='byond://?src=\ref[src];[HrefToken()];adminplayeropts=\ref[M]'>X</A></td>
+		<td align=center><A href='byond://?src=\ref[usr];[HrefToken()];priv_msg=\ref[M]'>PM</A></td>
 		"}
 
 		if(usr.client)
 			switch(is_special_character(M))
 				if(0)
-					dat += {"<td align=center><A HREF='?src=\ref[src];[HrefToken()];traitor=\ref[M]'>Traitor?</A></td>"}
+					dat += {"<td align=center><A href='byond://?src=\ref[src];[HrefToken()];traitor=\ref[M]'>Traitor?</A></td>"}
 				if(1)
-					dat += {"<td align=center><A HREF='?src=\ref[src];[HrefToken()];traitor=\ref[M]'><font color=red>Traitor?</font></A></td>"}
+					dat += {"<td align=center><A href='byond://?src=\ref[src];[HrefToken()];traitor=\ref[M]'><font color=red>Traitor?</font></A></td>"}
 				if(2)
-					dat += {"<td align=center><A HREF='?src=\ref[src];[HrefToken()];traitor=\ref[M]'><font color=red><b>Traitor?</b></font></A></td>"}
+					dat += {"<td align=center><A href='byond://?src=\ref[src];[HrefToken()];traitor=\ref[M]'><font color=red><b>Traitor?</b></font></A></td>"}
 		else
 			dat += {"<td align=center> N/A </td>"}
 
@@ -387,23 +387,23 @@
 		var/dat = "<html><head><title>Round Status</title></head><body><h1><B>Round Status</B></h1>"
 		dat += "Current Game Mode: <B>[ticker.mode.name]</B><BR>"
 		dat += "Round Duration: <B>[roundduration2text()]</B><BR>"
-		dat += "<B>Emergency shuttle</B><BR>"
+		dat += span_bold("Emergency shuttle") + "<BR>"
 		if (!emergency_shuttle.online())
-			dat += "<a href='?src=\ref[src];[HrefToken()];call_shuttle=1'>Call Shuttle</a><br>"
+			dat += "<a href='byond://?src=\ref[src];[HrefToken()];call_shuttle=1'>Call Shuttle</a><br>"
 		else
 			if (emergency_shuttle.wait_for_launch)
 				var/timeleft = emergency_shuttle.estimate_launch_time()
-				dat += "ETL: <a href='?src=\ref[src];[HrefToken()];edit_shuttle_time=1'>[(timeleft / 60) % 60]:[add_zero(num2text(timeleft % 60), 2)]</a><BR>"
+				dat += "ETL: <a href='byond://?src=\ref[src];[HrefToken()];edit_shuttle_time=1'>[(timeleft / 60) % 60]:[add_zero(num2text(timeleft % 60), 2)]</a><BR>"
 
 			else if (emergency_shuttle.shuttle.has_arrive_time())
 				var/timeleft = emergency_shuttle.estimate_arrival_time()
-				dat += "ETA: <a href='?src=\ref[src];[HrefToken()];edit_shuttle_time=1'>[(timeleft / 60) % 60]:[add_zero(num2text(timeleft % 60), 2)]</a><BR>"
-				dat += "<a href='?src=\ref[src];[HrefToken()];call_shuttle=2'>Send Back</a><br>"
+				dat += "ETA: <a href='byond://?src=\ref[src];[HrefToken()];edit_shuttle_time=1'>[(timeleft / 60) % 60]:[add_zero(num2text(timeleft % 60), 2)]</a><BR>"
+				dat += "<a href='byond://?src=\ref[src];[HrefToken()];call_shuttle=2'>Send Back</a><br>"
 
 			if (emergency_shuttle.shuttle.moving_status == SHUTTLE_WARMUP)
 				dat += "Launching now..."
 
-		dat += "<a href='?src=\ref[src];[HrefToken()];delay_round_end=1'>[ticker.delay_end ? "End Round Normally" : "Delay Round End"]</a><br>"
+		dat += "<a href='byond://?src=\ref[src];[HrefToken()];delay_round_end=1'>[ticker.delay_end ? "End Round Normally" : "Delay Round End"]</a><br>"
 		dat += "<hr>"
 		for(var/antag_type in all_antag_types)
 			var/datum/antagonist/A = all_antag_types[antag_type]

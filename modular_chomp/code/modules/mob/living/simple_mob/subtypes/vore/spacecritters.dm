@@ -35,7 +35,7 @@
 	water_resist = 1.0
 	taser_kill = 0
 	var/evolve = "/mob/living/simple_mob/vore/solarray/galaxyray"
-	var/feed = "/obj/item/weapon/ore/phoron"
+	var/feed = "/obj/item/ore/phoron"
 	var/evolvekey = "/obj/item/stack/material/tritium"
 	var/copy = "/mob/living/simple_mob/vore/solarray"
 
@@ -57,11 +57,11 @@
 	L = new evolve(get_turf(src))
 	if(mind)
 		src.mind.transfer_to(L)
-	visible_message("<span class='warning'>\The [src] suddenly evolves!</span>")
+	visible_message(span_warning("\The [src] suddenly evolves!"))
 	qdel(src)
 
 /mob/living/simple_mob/vore/spacecritter/proc/duplicate()
-	visible_message("<span class='warning'>\The [src] splits into two!</span>")
+	visible_message(span_warning("\The [src] splits into two!"))
 	new copy (src.loc)
 
 
@@ -83,7 +83,7 @@
 	var/heating_power = 50000
 
 	evolve = "/mob/living/simple_mob/vore/solarray/galaxyray"
-	feed = "/obj/item/weapon/ore/phoron"
+	feed = "/obj/item/ore/phoron"
 	evolvekey = "/obj/item/stack/material/tritium"
 	copy = "/mob/living/simple_mob/vore/spacecritter/solarray"
 
@@ -96,20 +96,21 @@
 			var/datum/gas_mixture/env = moth_loc.return_air() //Gets all the information on the local air.
 			var/transfer_moles = 0.25 * env.total_moles //The bigger the room, the harder it is to heat the room.
 			var/datum/gas_mixture/removed = env.remove(transfer_moles)
-			var/heat_transfer = removed.get_thermal_energy_change(set_temperature)
-			if(heat_transfer > 0 && env.temperature < T0C + 200)	//This should start heating the room at a moderate pace up to 200 degrees celsius.
-				heat_transfer = min(heat_transfer , heating_power) //limit by the power rating of the heater
-				removed.add_thermal_energy(heat_transfer)
+			if(removed)
+				var/heat_transfer = removed.get_thermal_energy_change(set_temperature)
+				if(heat_transfer > 0 && env.temperature < T0C + 200)	//This should start heating the room at a moderate pace up to 200 degrees celsius.
+					heat_transfer = min(heat_transfer , heating_power) //limit by the power rating of the heater
+					removed.add_thermal_energy(heat_transfer)
 
-			else if(heat_transfer > 0 && env.temperature < set_temperature) //Set temperature is 10,000 degrees celsius. So this thing will start cooking crazy hot between the temperatures of 200C and 10,000C.
-				heating_power = original_temp*100 //Changed to work variable -shark //FLAME ON! This will make the moth heat up the room at an incredible rate.
-				heat_transfer = min(heat_transfer , heating_power) //limit by the power rating of the heater. Except it's hot, so yeah.
-				removed.add_thermal_energy(heat_transfer)
+				else if(heat_transfer > 0 && env.temperature < set_temperature) //Set temperature is 10,000 degrees celsius. So this thing will start cooking crazy hot between the temperatures of 200C and 10,000C.
+					heating_power = original_temp*100 //Changed to work variable -shark //FLAME ON! This will make the moth heat up the room at an incredible rate.
+					heat_transfer = min(heat_transfer , heating_power) //limit by the power rating of the heater. Except it's hot, so yeah.
+					removed.add_thermal_energy(heat_transfer)
 
-			else
-				return
+				else
+					return
 
-			env.merge(removed)
+				env.merge(removed)
 
 
 
@@ -141,7 +142,7 @@
 
 	evolve = "/mob/living/simple_mob/vore/spacecritter/livingice/iceberg"
 	feed = "/obj/item/stack/material/snow"
-	evolvekey = "/obj/item/weapon/reagent_containers/food/snacks/coldchili"
+	evolvekey = "/obj/item/reagent_containers/food/snacks/coldchili"
 	copy = "/mob/living/simple_mob/vore/spacecritter/livingice"
 
 	var/chilltemp = -20
@@ -152,7 +153,6 @@
 	..()
 
 /mob/living/simple_mob/vore/spacecritter/livingice/proc/cold_aura()
-	for(var/mob/living/L in view(2, src))
 	var/turf/T = get_turf(src)
 	var/datum/gas_mixture/env = T.return_air()
 	if(env)
@@ -184,7 +184,7 @@
 	attack_armor_pen = 100			// How much armor pen this attack has.
 	var/rads = 50
 	evolve = "/mob/living/simple_mob/vore/spacecritter/radcrab/supermattercrab"
-	feed = "/obj/item/weapon/ore/uranium"
+	feed = "/obj/item/ore/uranium"
 	evolvekey = "/obj/item/stack/material/uranium"
 	copy = "/mob/living/simple_mob/vore/spacecritter/radcrab"
 
@@ -217,13 +217,13 @@
 	attacktext = list("bitten") // "You are [attacktext] by the mob!"
 	var/artifact_master = /datum/component/artifact_master/dreameel
 	evolve = "/mob/living/simple_mob/vore/spacecritter/dreameel/nightmare"
-	feed = "/obj/item/weapon/reagent_containers/food/snacks/carpmeat"
+	feed = "/obj/item/reagent_containers/food/snacks/carpmeat"
 	evolvekey = "/obj/item/stack/material/phoron"
 	copy = "/mob/living/simple_mob/vore/spacecritter/dreameel"
 
 /datum/component/artifact_master/dreameel
 	make_effects = list(
-		/datum/artifact_effect/gassleeping
+		/datum/artifact_effect/gas/sleeping
 	)
 
 /mob/living/simple_mob/vore/spacecritter/dreameel/nightmare
@@ -239,7 +239,7 @@
 
 /datum/component/artifact_master/nightmare
 	make_effects = list(
-		/datum/artifact_effect/gasphoron
+		/datum/artifact_effect/gas/phoron
 	)
 
 /mob/living/simple_mob/vore/spacecritter/gravityshell
@@ -282,7 +282,7 @@
 
 /datum/component/artifact_master/gasoxy
 	make_effects = list(
-		/datum/artifact_effect/gasoxy
+		/datum/artifact_effect/gas/oxy
 	)
 
 
@@ -328,7 +328,7 @@
 
 
 /mob/living/simple_mob/vore/spacecritter/solarray
-	meat_type = /obj/item/weapon/reagent_containers/food/snacks/meat/raymeat
+	meat_type = /obj/item/reagent_containers/food/snacks/meat/raymeat
 	meat_amount = 8
 
 	tame_items = list(
@@ -339,7 +339,7 @@
 		/obj/item/stack/material/wisp = 3\
 		)
 
-	harvest_tool = /obj/item/weapon/weldingtool
+	harvest_tool = /obj/item/weldingtool
 	harvest_cooldown = 10 MINUTES
 	harvest_delay = 30 SECONDS
 	harvest_recent = 0
@@ -361,7 +361,7 @@
 		/obj/item/stack/material/frostscale = 3\
 		)
 
-	harvest_tool = /obj/item/weapon/tool/wirecutters
+	harvest_tool = /obj/item/tool/wirecutters
 	harvest_cooldown = 10 MINUTES
 	harvest_delay = 30 SECONDS
 	harvest_recent = 0
@@ -372,18 +372,18 @@
 		)
 
 /mob/living/simple_mob/vore/spacecritter/radcrab
-	meat_type = /obj/item/weapon/reagent_containers/food/snacks/crabmeat
+	meat_type = /obj/item/reagent_containers/food/snacks/crabmeat
 	meat_amount = 8
 
 	tame_items = list(
-	/obj/item/weapon/ore/uranium = 50
+	/obj/item/ore/uranium = 50
 	)
 
 	butchery_loot = list(\
 		/obj/item/stack/material/crystalscale = 3\
 		)
 
-	harvest_tool = /obj/item/weapon/tool/crowbar
+	harvest_tool = /obj/item/tool/crowbar
 	harvest_cooldown = 10 MINUTES
 	harvest_delay = 30 SECONDS
 	harvest_recent = 0
@@ -394,18 +394,18 @@
 		)
 
 /mob/living/simple_mob/vore/spacecritter/dreameel
-	meat_type = /obj/item/weapon/reagent_containers/food/snacks/meat/eelmeat
+	meat_type = /obj/item/reagent_containers/food/snacks/meat/eelmeat
 	meat_amount = 2
 
 	tame_items = list(
-		/obj/item/weapon/reagent_containers/food/snacks/meat/gravityshell = 40
+		/obj/item/reagent_containers/food/snacks/meat/gravityshell = 40
 	)
 
 	butchery_loot = list(\
 		/obj/item/stack/material/dreamscale = 3\
 		)
 
-	harvest_tool = /obj/item/weapon/tool/wirecutters
+	harvest_tool = /obj/item/tool/wirecutters
 	harvest_cooldown = 10 MINUTES
 	harvest_delay = 30 SECONDS
 	harvest_recent = 0
@@ -416,18 +416,18 @@
 		)
 
 /mob/living/simple_mob/vore/spacecritter/gravityshell
-	meat_type = /obj/item/weapon/reagent_containers/food/snacks/meat/gravityshell
+	meat_type = /obj/item/reagent_containers/food/snacks/meat/gravityshell
 	meat_amount = 8
 
 	tame_items = list(
-	/obj/item/weapon/reagent_containers/food/snacks/crabmeat = 50
+	/obj/item/reagent_containers/food/snacks/crabmeat = 50
 	)
 
 	butchery_loot = list(\
 		/obj/item/stack/material/shellchitin = 3\
 		)
 
-	harvest_tool = /obj/item/weapon/tool/crowbar
+	harvest_tool = /obj/item/tool/crowbar
 	harvest_cooldown = 10 MINUTES
 	harvest_delay = 30 SECONDS
 	harvest_recent = 0

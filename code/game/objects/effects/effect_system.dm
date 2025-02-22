@@ -38,6 +38,7 @@ would spawn and follow the beaker, even if it is carried or thrown.
 /datum/effect/effect/system/proc/start()
 
 /datum/effect/effect/system/Destroy()
+	location = null
 	holder = null
 	return ..()
 
@@ -178,12 +179,10 @@ steam.start() -- spawns the effect
 	pixel_x = -32
 	pixel_y = -32
 
-/obj/effect/effect/smoke/New()
-	..()
+/obj/effect/effect/smoke/Initialize()
+	. = ..()
 	if(time_to_live)
-		spawn (time_to_live)
-			if(!QDELETED(src))
-				qdel(src)
+		addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(qdel), src), time_to_live, TIMER_DELETE_ME)
 
 /obj/effect/effect/smoke/Crossed(mob/living/carbon/M as mob )
 	if(M.is_incorporeal())
@@ -197,7 +196,7 @@ steam.start() -- spawns the effect
 		return 0
 	if(M.wear_mask && (M.wear_mask.item_flags & AIRTIGHT))
 		return 0
-	if(istype(M,/mob/living/carbon/human))
+	if(ishuman(M))
 		var/mob/living/carbon/human/H = M
 		if(!M.get_organ(O_LUNGS)) // CHOMPedit - Making sure smoke doesn't affect lungless people
 			return 0
@@ -215,9 +214,9 @@ steam.start() -- spawns the effect
 	icon = 'icons/effects/effects.dmi'
 	icon_state = "sparks"
 
-/obj/effect/effect/smoke/illumination/New(var/newloc, var/lifetime=10, var/range=null, var/power=null, var/color=null)
+/obj/effect/effect/smoke/illumination/Initialize(mapload, var/lifetime=10, var/range=null, var/power=null, var/color=null)
 	time_to_live=lifetime
-	..()
+	. = ..()
 	set_light(range, power, color)
 
 /////////////////////////////////////////////
@@ -433,6 +432,10 @@ steam.start() -- spawns the effect
 	var/processing = 1
 	var/on = 1
 
+/datum/effect/effect/system/ion_trail_follow/Destroy()
+	oldposition = null
+	. = ..()
+
 /datum/effect/effect/system/ion_trail_follow/set_up(atom/atom)
 	attach(atom)
 	oldposition = get_turf(atom)
@@ -488,6 +491,10 @@ steam.start() -- spawns the effect
 	var/turf/oldposition
 	var/processing = 1
 	var/on = 1
+
+/datum/effect/effect/system/steam_trail_follow/Destroy()
+	oldposition = null
+	. = ..()
 
 /datum/effect/effect/system/steam_trail_follow/set_up(atom/atom)
 	attach(atom)
@@ -546,10 +553,10 @@ steam.start() -- spawns the effect
 		s.start()
 
 		for(var/mob/M in viewers(5, location))
-			to_chat(M, "<span class='warning'>The solution violently explodes.</span>")
+			to_chat(M, span_warning("The solution violently explodes."))
 		for(var/mob/M in viewers(1, location))
 			if (prob (50 * amount))
-				to_chat(M, "<span class='warning'>The explosion knocks you down.</span>")
+				to_chat(M, span_warning("The explosion knocks you down."))
 				M.Weaken(rand(1,5))
 		return
 	else
@@ -572,7 +579,7 @@ steam.start() -- spawns the effect
 			flash = (amount/4) * flashing_factor
 
 		for(var/mob/M in viewers(8, location))
-			to_chat(M, "<span class='warning'>The solution violently explodes.</span>")
+			to_chat(M, span_warning("The solution violently explodes."))
 
 		explosion(
 			location,

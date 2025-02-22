@@ -1,7 +1,7 @@
 ///If the machine is used/deleted in the crafting process
-#define CRAFTING_MACHINERY_CONSUME 1
+//# define CRAFTING_MACHINERY_CONSUME 1 Unused
 ///If the machine is only "used" i.e. it checks to see if it's nearby and allows crafting, but doesn't delete it
-#define CRAFTING_MACHINERY_USE 0
+//# define CRAFTING_MACHINERY_USE 0  Unused
 
 /datum/crafting_recipe
 	var/name = "" //in-game display name
@@ -48,7 +48,7 @@
 /datum/crafting_recipe/proc/on_craft_completion(mob/user, atom/result)
 	return
 
-// Computes the total reagents volume 
+// Computes the total reagents volume
 /datum/crafting_recipe/proc/get_parts_reagents_volume()
 	. = 0
 	for(var/list/L in parts)
@@ -58,9 +58,9 @@
 
 // Locate one of the things that set the material type, and update it from the default (glass)
 /datum/crafting_recipe/spear/on_craft_completion(mob/user, atom/result)
-	var/obj/item/weapon/material/M
+	var/obj/item/material/M
 	for(var/path in parts)
-		var/obj/item/weapon/material/N = locate(path) in result
+		var/obj/item/material/N = locate(path) in result
 		if(istype(N, path))
 			if(!istype(M))
 				M = N
@@ -69,6 +69,6 @@
 	if(!istype(M))
 		return
 
-	var/obj/item/weapon/material/twohanded/spear/S = result
+	var/obj/item/material/twohanded/spear/S = result
 	S.set_material(M.material.name)
 	qdel(M)

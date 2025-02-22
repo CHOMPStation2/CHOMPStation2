@@ -2,8 +2,8 @@
 ////////////   MEDICINE   /////////
 //////////////////////////////////
 /datum/reagent/claridyl
-	name = "Claridyl Natural Remedy"
-	id = "claridyl"
+	name = REAGENT_CLARIDYL
+	id = REAGENT_ID_CLARIDYL
 	description = "Claridyl is an advanced medicine that cures all of your problems. Notice: Clarydil does not claim to fix marriages, car loans, student debt or insomnia and may cause severe pain."
 	taste_description = "sugar"
 	reagent_state = LIQUID
@@ -48,16 +48,16 @@
 				R.remove_self(removed * 5)
 
 /datum/reagent/claridyl/bloodburn
-	name = "Bloodburn"
-	id = "bloodburn"
+	name = REAGENT_BLOODBURN
+	id = REAGENT_ID_BLOODBURN
 	description = "A chemical used to soak up any reagents inside someones stomach, injection is not advised, if you need to ask why please seek a new job."
 	taste_description = "liquid void"
 	color = "#000000"
 	metabolism = REM * 5
 
 /datum/reagent/eden
-	name = "Eden"
-	id = "eden"
+	name = REAGENT_EDEN
+	id = REAGENT_ID_EDEN
 	description = "The ultimate anti toxin unrivaled, it corrects impurities within the body but punishes those who attain them with a burning sensation"
 	taste_description = "peace"
 	color = "#00FFBE"
@@ -72,8 +72,8 @@
 		M.adjustToxLoss(-1)
 
 /datum/reagent/eden/snake
-	name = "Tainted Eden"
-	id = "eden_snake"
+	name = REAGENT_EDENSNAKE
+	id = REAGENT_ID_EDENSNAKE
 	metabolism = 0.1
 	description = "It used to be an anti toxin until it was tainted."
 	taste_description = "hellfire"
@@ -86,8 +86,8 @@
 	M.adjustToxLoss(1)
 
 /datum/reagent/tercozolam
-	name = "Tercozolam"
-	id = "tercozolam"
+	name = REAGENT_TERCOZOLAM
+	id = REAGENT_ID_TERCOZOLAM
 	color = "#afeb17"
 	metabolism = 0.05
 	description = "A well respected drug used for treatment of schizophrenia in specific."
@@ -97,8 +97,8 @@
 //This is all a direct port from aeiou.
 
 /datum/reagent/hannoa
-	name = "Hannoa"
-	id = "hannoa"
+	name = REAGENT_HANNOA
+	id = REAGENT_ID_HANNOA
 	description = "A powerful clotting agent that treats brute damage very quickly but takes a long time to be metabolised. Overdoses easily, reacts badly with other chemicals."
 	taste_description = "paint"
 	reagent_state = LIQUID
@@ -140,8 +140,8 @@
 
 
 /datum/reagent/bullvalene //This is for the third sap. It converts Brute Oxy and burn into slightly less toxins.
-	name = "bullvalene"
-	id = "bullvalene"
+	name = REAGENT_BULLVALENE
+	id = REAGENT_ID_BULLVALENE
 	description = "A catalytic chemical that can treat a wide variety of ailments at the cost of toxifying the host's body."
 	taste_description = "sulfur"
 	reagent_state = LIQUID
@@ -162,8 +162,8 @@
 /////SERAZINE REAGENTS///////
 
 /datum/reagent/serazine
-	name = "Serazine"
-	id = "serazine"
+	name = REAGENT_SERAZINE
+	id = REAGENT_ID_SERAZINE
 	description = "A sweet tasting flower extract, it has very mild anti toxic properties, help with hallucinations and drowsyness, and can be used to make potent drugs."
 	taste_description = "sweet nectar"
 	reagent_state = LIQUID
@@ -178,8 +178,8 @@
 		M.adjustToxLoss(-2 * removed * chem_effective)
 
 /datum/reagent/alizene
-	name = "Alizene"
-	id = "alizene"
+	name = REAGENT_ALIZENE
+	id = REAGENT_ID_ALIZENE
 	description = "A derivative from bicaridine enhanced by serazine to more effectively mend flesh, but is ineffective against internal hemorrhage."
 	taste_description = "bittersweet"
 	taste_mult = 3

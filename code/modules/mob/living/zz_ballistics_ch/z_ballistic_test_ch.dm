@@ -145,7 +145,7 @@
 
 		var/absorber = ballistic_armor ? "armor" : "body"	//There is a super tiny chance that small rounds can get deflected without armor, so this is just incase.
 
-		to_chat(src,"<span class='warning'>You feel the energy of the bullet painfully transfered [pain_hit] as your [absorber] deflects it!</span>")
+		to_chat(src,span_warning("You feel the energy of the bullet painfully transfered [pain_hit] as your [absorber] deflects it!"))
 		apply_damage(hurt_value_pain,HALLOSS,def_zone)
 		if(hurt_value_bruise)
 			apply_damage(hurt_value_bruise,BRUTE,def_zone)
@@ -234,3 +234,15 @@
 		energy_dumped_organic += P.energy / 3
 		P.sub_velocity(P.velocity)
 		return lazy_return_testing(chex,energy_dumped_organic)
+
+#undef BULLET_PENETRATED
+#undef BULLET_BONECHECK1_TRUE
+#undef BULLET_ORGANCHECK_TRUE
+#undef BULLET_BONECHECK2_TRUE
+#undef BULLET_PASSED_LEAVE_EARLY
+#undef BULLET_PASSED_BONECHECK1
+#undef BULLET_PASSED_ORGANCHECK
+#undef BULLET_PASSED_INTERNALCHECK2
+#undef BULLET_PASSED_BONECHECK2
+#undef BULLET_PASSED_INTERNALCHECK3
+#undef BULLET_TESTS

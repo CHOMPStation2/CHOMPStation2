@@ -12,7 +12,6 @@
 	var_changes = list("minimum_breath_pressure" = 18)
 	excludes = list(/datum/trait/positive/light_breather)
 
-
 /datum/trait/negative/thick_digits
 	name = "Thick Digits"
 	desc = "Your hands are not shaped in a way that allows useage of guns."
@@ -66,7 +65,6 @@
 	var_changes = list("flags" = NO_SCAN)
 	excludes = list(/datum/trait/negative/nodefib) //No, just, no
 
-
 /datum/trait/negative/meltable
 	name = "Water Weakness"
 	desc = "Due to your biology, water is harmful to you."
@@ -88,5 +86,18 @@
 	desc = "For whatever reason, once you dead, that is final."
 	cost = -2
 	custom_only = TRUE
-	var_changes = list("flags" = NO_SCAN, NO_DEFIB)
+	var_changes = list("flags" = NO_SCAN | NO_DEFIB)
 	excludes = list(/datum/trait/negative/nodefib, /datum/trait/negative/noresleeve)
+
+/datum/trait/negative/lightweight_light
+	name = "Lesser Lightweight"
+	desc = "Your light weight and poor balance make you very susceptible to unhelpful bumping if you are unprepared)"
+	cost = -1
+	var_changes = list("lightweight_light" = 1)
+	excludes = list(/datum/trait/negative/lightweight)
+	custom_only = FALSE
+
+/datum/trait/negative/breathes/carbon_dioxide
+	name = "Carbon Dioxide Breather"
+	desc = "You breathe carbon dioxide instead of oxygen, much like a plant. Oxygen is not poisonous to you."
+	var_changes = list("breath_type" = GAS_CO2, "exhale_type" = GAS_O2, "ideal_air_type" = /datum/gas_mixture/belly_air/carbon_dioxide_breather)

@@ -130,7 +130,7 @@
 
 	embed_chance = 0	//Base chance for a projectile to embed
 
-	var/fire_sound = 'sound/weapons/Gunshot_old.ogg' // Can be overriden in gun.dm's fire_sound var. It can also be null but I don't know why you'd ever want to do that. -Ace
+	var/fire_sound = 'sound/weapons/Gunshot1.ogg' // Can be overriden in gun.dm's fire_sound var. It can also be null but I don't know why you'd ever want to do that. -Ace
 
 	var/vacuum_traversal = TRUE //Determines if the projectile can exist in vacuum, if false, the projectile will be deleted if it enters vacuum.
 
@@ -336,6 +336,9 @@
 	if(isnum(angle))
 		setAngle(angle)
 	starting = get_turf(src)
+	if(!starting)
+		qdel(src)
+		return
 	if(isnull(Angle))	//Try to resolve through offsets if there's no angle set.
 		if(isnull(xo) || isnull(yo))
 			stack_trace("WARNING: Projectile [type] deleted due to being unable to resolve a target after angle was null!")
@@ -469,7 +472,7 @@
 			impacted_mobs.Cut()
 		impacted_mobs = null
 
-	QDEL_NULL(trajectory) //CHOMPEdit
+	QDEL_NULL(trajectory)
 	cleanup_beam_segments()
 
 	if(my_case)
@@ -574,21 +577,21 @@
 
 	if(ismob(A))
 		var/mob/M = A
-		if(istype(A, /mob/living))
+		if(isliving(A))
 			//if they have a neck grab on someone, that person gets hit instead
-			var/obj/item/weapon/grab/G = locate() in M
+			var/obj/item/grab/G = locate() in M
 			if(G && G.state >= GRAB_NECK)
 				if(G.affecting.stat == DEAD)
 					var/shield_chance = min(80, (30 * (M.mob_size / 10)))	//Small mobs have a harder time keeping a dead body as a shield than a human-sized one. Unathi would have an easier job, if they are made to be SIZE_LARGE in the future. -Mech
 					if(prob(shield_chance))
-						visible_message("<span class='danger'>\The [M] uses [G.affecting] as a shield!</span>")
+						visible_message(span_danger("\The [M] uses [G.affecting] as a shield!"))
 						if(bump_targets)
 							if(Bump(G.affecting))
 								return
 					else
-						visible_message("<span class='danger'>\The [M] tries to use [G.affecting] as a shield, but fails!</span>")
+						visible_message(span_danger("\The [M] tries to use [G.affecting] as a shield, but fails!"))
 				else
-					visible_message("<span class='danger'>\The [M] uses [G.affecting] as a shield!</span>")
+					visible_message(span_danger("\The [M] uses [G.affecting] as a shield!"))
 					if(bump_targets)
 						if(Bump(G.affecting))
 							return //If Bump() returns 0 (keep going) then we continue on to attack M.
@@ -705,12 +708,12 @@
 
 	if(result == PROJECTILE_FORCE_MISS)
 		if(!silenced)
-			target_mob.visible_message("<b>\The [src]</b> misses \the [target_mob] narrowly!")
+			target_mob.visible_message(span_infoplain(span_bold("\The [src]") + " misses \the [target_mob] narrowly!"))
 			playsound(target_mob, "bullet_miss", 75, 1)
 		return FALSE
 
 	var/impacted_organ = parse_zone(def_zone)
-	if(istype(target_mob, /mob/living/simple_mob))
+	if(isanimal(target_mob))
 		var/mob/living/simple_mob/SM = target_mob
 		var/decl/mob_organ_names/organ_plan = SM.organ_names
 		impacted_organ = pick(organ_plan.hit_zones)
@@ -718,14 +721,14 @@
 	//hit messages
 	if(silenced)
 		playsound(target_mob, hitsound, 5, 1, -1)
-		to_chat(target_mob, span("critical", "You've been hit in the [impacted_organ] by \the [src]!"))
+		to_chat(target_mob, span_critical("You've been hit in the [impacted_organ] by \the [src]!"))
 	else
 		var/volume = vol_by_damage()
 		playsound(target_mob, hitsound, volume, 1, -1)
 		// X has fired Y is now given by the guns so you cant tell who shot you if you could not see the shooter
 		target_mob.visible_message(
-			span("danger", "\The [target_mob] was hit in the [impacted_organ] by \the [src]!"),
-			span("critical", "You've been hit in the [impacted_organ] by \the [src]!")
+			span_danger("\The [target_mob] was hit in the [impacted_organ] by \the [src]!"),
+			span_critical("You've been hit in the [impacted_organ] by \the [src]!")
 		)
 
 	//admin logs
@@ -789,7 +792,7 @@
 	return fire(angle_override, direct_target)
 
 //called to launch a projectile from a gun
-/obj/item/projectile/proc/launch_from_gun(atom/target, target_zone, mob/user, params, angle_override, forced_spread, obj/item/weapon/gun/launcher)
+/obj/item/projectile/proc/launch_from_gun(atom/target, target_zone, mob/user, params, angle_override, forced_spread, obj/item/gun/launcher)
 
 	shot_from = launcher.name
 	silenced |= launcher.silenced // Silent bullets (e.g., BBs) are always silent
@@ -864,3 +867,6 @@
 		if(silenced)
 			volume = 5
 		playsound(A, hitsound_wall, volume, 1, -1)
+
+#undef MOVES_HITSCAN
+#undef MUZZLE_EFFECT_PIXEL_INCREMENT

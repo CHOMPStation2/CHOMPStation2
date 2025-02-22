@@ -32,7 +32,7 @@
 	can_be_drop_pred = 1 //They can tongue vore.
 
 	meat_amount = 4
-	meat_type = /obj/item/weapon/reagent_containers/food/snacks/meat
+	meat_type = /obj/item/reagent_containers/food/snacks/meat
 
 	harm_intent_damage = 5
 	melee_damage_lower = 5
@@ -45,7 +45,7 @@
 	special_attack_cooldown = 100
 
 	can_be_drop_prey = FALSE //CHOMP Add
-	allow_mind_transfer = TRUE //CHOMPAdd
+	allow_mind_transfer = TRUE
 
 // Pepe is love, not hate.
 /mob/living/simple_mob/vore/aggressive/frog/New()

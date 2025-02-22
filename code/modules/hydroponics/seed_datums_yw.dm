@@ -1,9 +1,9 @@
 /datum/seed/lustflower
-	name = "gardenia"
+	name = PLANT_GARDENIA
 	seed_name = "Gardenia"
 	display_name = "Gardenia Produce"
-	kitchen_tag = "gardenia"
-	chems = list("nutriment" = list(1), "phenethylamine" = list(12,24))
+	kitchen_tag = PLANT_GARDENIA
+	chems = list(REAGENT_ID_NUTRIMENT = list(1), REAGENT_ID_PHENETHYLAMINE = list(12,24))
 
 /datum/seed/lustflower/New()
 	..()

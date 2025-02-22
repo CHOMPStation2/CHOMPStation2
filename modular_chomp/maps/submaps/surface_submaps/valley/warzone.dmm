@@ -4,44 +4,17 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/warzone)
 "bt" = (
-/mob/living/simple_mob/humanoid/merc/ranged/smg,
-/turf/template_noop,
+/mob/living/carbon/human/ai_controlled/replicant,
+/mob/living/carbon/human/ai_controlled/replicant,
+/turf/simulated/floor/tiled/techfloor,
 /area/submap/warzone)
 "cV" = (
 /turf/simulated/wall/rpshull,
 /area/submap/warzone)
-"ea" = (
-/mob/living/simple_mob/humanoid/merc/ranged/rifle,
-/turf/template_noop,
-/area/submap/warzone)
-"fh" = (
-/mob/living/simple_mob/humanoid/pirate,
-/turf/template_noop,
-/area/submap/warzone)
-"fZ" = (
-/mob/living/simple_mob/humanoid/cultist/lizard,
-/turf/template_noop,
-/area/submap/warzone)
-"gx" = (
-/mob/living/simple_mob/humanoid/eclipse/solar/snipertesh,
-/turf/template_noop,
-/area/submap/warzone)
 "gL" = (
 /obj/structure/table/steel_reinforced,
-/obj/item/weapon/telecube/randomized/mated,
+/obj/item/telecube/randomized/mated,
 /turf/simulated/floor/tiled/techfloor,
-/area/submap/warzone)
-"hq" = (
-/mob/living/simple_mob/humanoid/eclipse/lunar/pummler,
-/turf/template_noop,
-/area/submap/warzone)
-"ht" = (
-/mob/living/simple_mob/humanoid/pirate/ranged,
-/turf/template_noop,
-/area/submap/warzone)
-"jD" = (
-/mob/living/simple_mob/humanoid/eclipse/lunar/shotgunner,
-/turf/template_noop,
 /area/submap/warzone)
 "jY" = (
 /obj/machinery/porta_turret/poi{
@@ -52,63 +25,27 @@
 	outdoors = 1
 	},
 /area/submap/warzone)
-"ku" = (
-/mob/living/simple_mob/humanoid/eclipse/solar/firemoff,
-/turf/template_noop,
-/area/submap/warzone)
 "mm" = (
 /obj/structure/table/steel_reinforced,
-/obj/random/contraband/nofail,
+/obj/random/contraband,
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/warzone)
 "nj" = (
 /obj/machinery/portable_atmospherics/hydroponics,
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/warzone)
-"oY" = (
-/mob/living/simple_mob/humanoid/eclipse/lunar/ravanger,
-/turf/template_noop,
-/area/submap/warzone)
 "sB" = (
 /obj/structure/table/bench/padded,
 /mob/living/carbon/human/ai_controlled/replicant,
 /turf/simulated/floor/tiled/techfloor,
-/area/submap/warzone)
-"tU" = (
-/mob/living/simple_mob/humanoid/eclipse/solar/teslanoodle,
-/turf/template_noop,
 /area/submap/warzone)
 "ut" = (
 /obj/structure/table/steel_reinforced,
 /obj/random/cash,
 /obj/random/maintenance,
 /obj/random/material,
-/obj/item/device/radio/headset/heads/captain/sfr,
+/obj/item/radio/headset/heads/captain/sfr,
 /turf/simulated/floor/tiled/techfloor,
-/area/submap/warzone)
-"vA" = (
-/mob/living/simple_mob/humanoid/merc/melee/sword,
-/turf/template_noop,
-/area/submap/warzone)
-"vN" = (
-/mob/living/simple_mob/humanoid/pirate/machete/armored,
-/turf/template_noop,
-/area/submap/warzone)
-"vO" = (
-/mob/living/simple_mob/humanoid/eclipse/lunar/silvernoodle,
-/turf/template_noop,
-/area/submap/warzone)
-"xF" = (
-/mob/living/simple_mob/humanoid/pirate/captain,
-/turf/template_noop,
-/area/submap/warzone)
-"yb" = (
-/mob/living/simple_mob/humanoid/pirate/ranged/handcannon/armored,
-/turf/template_noop,
-/area/submap/warzone)
-"yO" = (
-/mob/living/simple_mob/humanoid/cultist/human,
-/turf/template_noop,
 /area/submap/warzone)
 "yW" = (
 /obj/structure/table/steel_reinforced,
@@ -122,27 +59,11 @@
 /obj/machinery/seed_extractor,
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/warzone)
-"AC" = (
-/mob/living/simple_mob/humanoid/merc/ranged/laser,
-/turf/template_noop,
-/area/submap/warzone)
-"BS" = (
-/mob/living/simple_mob/humanoid/eclipse/solar/hellhound,
-/turf/template_noop,
-/area/submap/warzone)
-"BU" = (
-/mob/living/simple_mob/humanoid/eclipse/lunar/miner,
-/turf/template_noop,
-/area/submap/warzone)
 "CY" = (
 /turf/template_noop,
 /area/template_noop)
 "Dm" = (
 /turf/simulated/floor/tiled/techfloor,
-/area/submap/warzone)
-"Fb" = (
-/mob/living/simple_mob/humanoid/cultist/noodle,
-/turf/template_noop,
 /area/submap/warzone)
 "Fm" = (
 /obj/structure/table/steel_reinforced,
@@ -174,46 +95,14 @@
 /obj/item/seeds/replicapod,
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/warzone)
-"HI" = (
-/mob/living/simple_mob/humanoid/cultist/human/bloodjaunt/fireball,
-/turf/template_noop,
-/area/submap/warzone)
-"HW" = (
-/mob/living/simple_mob/humanoid/merc/ranged/garand,
-/turf/template_noop,
-/area/submap/warzone)
-"Jl" = (
-/mob/living/simple_mob/humanoid/cultist/hunter,
-/turf/template_noop,
-/area/submap/warzone)
-"LX" = (
-/mob/living/simple_mob/humanoid/eclipse/lunar/wheel,
-/turf/template_noop,
-/area/submap/warzone)
 "MX" = (
 /obj/machinery/telecomms/relay/preset/ruskie,
 /turf/simulated/floor/tiled/techfloor,
-/area/submap/warzone)
-"NH" = (
-/mob/living/simple_mob/humanoid/eclipse/solar/guardian,
-/turf/template_noop,
 /area/submap/warzone)
 "OT" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced/full,
 /turf/simulated/floor,
-/area/submap/warzone)
-"RV" = (
-/mob/living/simple_mob/humanoid/merc/ranged/deagle,
-/turf/template_noop,
-/area/submap/warzone)
-"SE" = (
-/mob/living/simple_mob/humanoid/merc/ranged/sniper,
-/turf/template_noop,
-/area/submap/warzone)
-"TJ" = (
-/mob/living/simple_mob/humanoid/pirate/ranged/armored,
-/turf/template_noop,
 /area/submap/warzone)
 "Uf" = (
 /obj/structure/loot_pile/maint/technical,
@@ -223,24 +112,12 @@
 /obj/structure/bookcase,
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/warzone)
-"Wc" = (
-/mob/living/simple_mob/humanoid/pirate/mate/ranged/shotgun,
-/turf/template_noop,
-/area/submap/warzone)
 "WC" = (
-/turf/template_noop,
-/area/submap/warzone)
-"WZ" = (
-/mob/living/simple_mob/humanoid/eclipse/lunar/aeroblaster,
 /turf/template_noop,
 /area/submap/warzone)
 "Xw" = (
 /obj/machinery/biogenerator,
 /turf/simulated/floor/tiled/techfloor,
-/area/submap/warzone)
-"Zz" = (
-/mob/living/simple_mob/humanoid/eclipse/solar/froststalker,
-/turf/template_noop,
 /area/submap/warzone)
 
 (1,1,1) = {"
@@ -372,14 +249,14 @@ WC
 WC
 WC
 WC
-vA
-WC
-oY
 WC
 WC
 WC
 WC
-jD
+WC
+WC
+WC
+WC
 WC
 WC
 WC
@@ -409,9 +286,6 @@ WC
 WC
 WC
 WC
-vA
-WC
-oY
 WC
 WC
 WC
@@ -420,7 +294,10 @@ WC
 WC
 WC
 WC
-ku
+WC
+WC
+WC
+WC
 WC
 WC
 WC
@@ -451,10 +328,10 @@ WC
 WC
 WC
 WC
-hq
-BU
-WZ
-LX
+WC
+WC
+WC
+WC
 WC
 WC
 WC
@@ -474,29 +351,29 @@ WC
 WC
 WC
 WC
-SE
-WC
-WC
-HW
-WC
-ea
-WC
-WC
-WC
-vA
-WC
-oY
 WC
 WC
 WC
 WC
 WC
 WC
-Zz
 WC
 WC
 WC
-ku
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
 WC
 CY
 CY
@@ -512,22 +389,22 @@ WC
 WC
 WC
 WC
-RV
-WC
-WC
-AC
-WC
-bt
-WC
-WC
-vA
-WC
-oY
 WC
 WC
 WC
 WC
-vO
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
 WC
 WC
 WC
@@ -568,7 +445,7 @@ OT
 cV
 cV
 WC
-Zz
+WC
 WC
 WC
 WC
@@ -585,7 +462,7 @@ WC
 WC
 WC
 WC
-HW
+WC
 WC
 cV
 MX
@@ -606,7 +483,7 @@ ut
 cV
 WC
 WC
-BS
+WC
 WC
 WC
 CY
@@ -623,7 +500,7 @@ WC
 WC
 WC
 WC
-AC
+WC
 OT
 mm
 az
@@ -641,11 +518,11 @@ Dm
 sB
 Fm
 OT
-tU
 WC
-gx
 WC
-ku
+WC
+WC
+WC
 CY
 CY
 CY
@@ -659,7 +536,7 @@ WC
 WC
 WC
 WC
-ea
+WC
 WC
 cV
 MX
@@ -680,7 +557,7 @@ Fm
 cV
 WC
 WC
-NH
+WC
 WC
 WC
 CY
@@ -697,7 +574,7 @@ WC
 WC
 WC
 WC
-bt
+WC
 OT
 mm
 az
@@ -717,7 +594,7 @@ yW
 OT
 WC
 WC
-Zz
+WC
 WC
 WC
 CY
@@ -778,11 +655,11 @@ cV
 cV
 cV
 Dm
-az
+bt
 cV
 FN
 cV
-az
+bt
 Dm
 cV
 cV
@@ -804,11 +681,11 @@ CY
 CY
 WC
 WC
-vA
-vA
 WC
-vA
-vA
+WC
+WC
+WC
+WC
 WC
 WC
 WC
@@ -826,11 +703,11 @@ jY
 WC
 WC
 WC
-oY
-oY
 WC
-oY
-oY
+WC
+WC
+WC
+WC
 CY
 CY
 CY
@@ -878,11 +755,11 @@ CY
 CY
 WC
 WC
-fh
-fh
 WC
-fh
-fh
+WC
+WC
+WC
+WC
 WC
 WC
 WC
@@ -900,11 +777,11 @@ jY
 WC
 WC
 WC
-yO
-yO
 WC
-yO
-yO
+WC
+WC
+WC
+WC
 CY
 CY
 CY
@@ -916,9 +793,9 @@ CY
 WC
 WC
 WC
-ht
 WC
-ht
+WC
+WC
 WC
 cV
 cV
@@ -926,11 +803,11 @@ cV
 cV
 cV
 Dm
-az
+bt
 cV
 FN
 cV
-az
+bt
 Dm
 cV
 cV
@@ -976,7 +853,7 @@ Dm
 cV
 WC
 WC
-fZ
+WC
 WC
 WC
 CY
@@ -993,7 +870,7 @@ WC
 WC
 WC
 WC
-vN
+WC
 OT
 az
 Dm
@@ -1011,11 +888,11 @@ Dm
 Vs
 az
 OT
-Jl
 WC
 WC
 WC
-Fb
+WC
+WC
 CY
 CY
 CY
@@ -1029,7 +906,7 @@ WC
 WC
 WC
 WC
-yb
+WC
 WC
 cV
 Dm
@@ -1067,7 +944,7 @@ WC
 WC
 WC
 WC
-vN
+WC
 OT
 az
 nj
@@ -1085,11 +962,11 @@ Dm
 Vs
 Dm
 OT
-Jl
 WC
 WC
 WC
-HI
+WC
+WC
 CY
 CY
 CY
@@ -1177,23 +1054,23 @@ WC
 WC
 WC
 WC
-TJ
-xF
 WC
 WC
-vN
-WC
-vN
 WC
 WC
-fh
-WC
-yO
 WC
 WC
-Jl
 WC
-Jl
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+WC
 WC
 WC
 WC
@@ -1214,18 +1091,18 @@ WC
 WC
 WC
 WC
-Wc
-TJ
 WC
 WC
 WC
-yb
 WC
 WC
-ht
-fh
 WC
-yO
+WC
+WC
+WC
+WC
+WC
+WC
 WC
 WC
 WC
@@ -1263,7 +1140,7 @@ WC
 WC
 WC
 WC
-fZ
+WC
 WC
 WC
 WC
@@ -1296,10 +1173,10 @@ WC
 WC
 WC
 WC
-ht
-fh
 WC
-yO
+WC
+WC
+WC
 WC
 WC
 WC
@@ -1334,14 +1211,14 @@ WC
 WC
 WC
 WC
-fh
-WC
-yO
 WC
 WC
-Fb
 WC
-HI
+WC
+WC
+WC
+WC
+WC
 WC
 WC
 WC

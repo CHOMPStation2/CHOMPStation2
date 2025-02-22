@@ -21,7 +21,6 @@
 "al" = (
 /obj/machinery/power/apc/hyper{
 	dir = 8;
-	pixel_y = 0;
 	pixel_x = -24
 	},
 /turf/simulated/floor/tiled/asteroid_steel{
@@ -70,8 +69,8 @@
 /area/submap/spacebar)
 "au" = (
 /obj/structure/table/standard,
-/obj/item/weapon/reagent_containers/food/drinks/shaker,
-/obj/item/weapon/gun/projectile/shotgun/doublebarrel,
+/obj/item/reagent_containers/food/drinks/shaker,
+/obj/item/gun/projectile/shotgun/doublebarrel,
 /turf/simulated/floor/wood,
 /area/submap/spacebar)
 "av" = (
@@ -144,7 +143,7 @@
 /turf/simulated/floor/wood,
 /area/submap/spacebar)
 "aL" = (
-/obj/item/weapon/reagent_containers/glass/rag,
+/obj/item/reagent_containers/glass/rag,
 /obj/structure/table/marble,
 /turf/simulated/floor/wood,
 /area/submap/spacebar)
@@ -172,8 +171,7 @@
 "aU" = (
 /obj/structure/bed/chair{
 	dir = 4;
-	icon_state = "chair";
-	tag = "icon-chair (EAST)"
+	icon_state = "chair"
 	},
 /turf/simulated/floor/tiled/asteroid_steel{
 	temperature = 295.15
@@ -190,8 +188,7 @@
 "aW" = (
 /obj/structure/bed/chair{
 	dir = 8;
-	icon_state = "chair";
-	tag = "icon-chair (WEST)"
+	icon_state = "chair"
 	},
 /turf/simulated/floor/tiled/asteroid_steel{
 	temperature = 295.15
@@ -260,7 +257,6 @@
 "bg" = (
 /obj/structure/urinal{
 	dir = 4;
-	pixel_y = 0;
 	pixel_x = -31
 	},
 /turf/simulated/floor/tiled/old_tile/white,
@@ -350,7 +346,6 @@
 "bs" = (
 /obj/structure/shuttle/engine/propulsion/burst,
 /turf/simulated/floor/plating,
-/turf/space,
 /area/submap/spacebar)
 "bt" = (
 /obj/effect/floor_decal/industrial/warning,
@@ -358,7 +353,7 @@
 /area/submap/spacebar)
 "bw" = (
 /obj/effect/floor_decal/rust,
-/obj/item/weapon/stool/padded{
+/obj/item/stool/padded{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/asteroid_steel{
@@ -398,8 +393,7 @@
 	icon_state = "door_locked";
 	id_tag = "spacebar_outer";
 	locked = 1;
-	name = "External Airlock Access";
-	req_access = null
+	name = "External Airlock Access"
 	},
 /obj/structure/fans/tiny,
 /turf/simulated/floor/plating,
@@ -424,8 +418,7 @@
 	icon_state = "door_locked";
 	id_tag = "spacebar_inner";
 	locked = 1;
-	name = "Internal Airlock Access";
-	req_access = null
+	name = "Internal Airlock Access"
 	},
 /turf/simulated/floor/plating,
 /area/submap/spacebar)
@@ -455,7 +448,6 @@
 /turf/simulated/floor/plating,
 /area/submap/spacebar)
 "jM" = (
-/obj/structure/table/woodentable,
 /obj/structure/table/woodentable,
 /turf/simulated/floor/tiled/asteroid_steel{
 	temperature = 295.15
@@ -495,7 +487,7 @@
 /area/submap/spacebar)
 "nU" = (
 /obj/structure/closet/crate,
-/obj/item/weapon/reagent_containers/food/snacks/sliceable/supremoburrito,
+/obj/item/reagent_containers/food/snacks/sliceable/supremoburrito,
 /turf/simulated/mineral/floor/ignore_mapgen/cave,
 /area/submap/spacebar)
 "pa" = (
@@ -504,25 +496,24 @@
 /area/submap/spacebar)
 "pb" = (
 /obj/structure/table/wooden_reinforced,
-/obj/item/weapon/reagent_containers/food/drinks/cans/beercan{
+/obj/item/reagent_containers/food/drinks/cans/beercan{
 	pixel_x = 10;
 	pixel_y = 11
 	},
-/obj/item/weapon/handcuffs{
+/obj/item/handcuffs{
 	pixel_y = 6;
 	pixel_x = -8
 	},
-/obj/item/weapon/gun/projectile/shotgun/pump{
+/obj/item/gun/projectile/shotgun/pump{
 	pixel_y = -17;
 	pixel_x = -17;
 	hud_enabled = 0
 	},
-/obj/item/weapon/material/butterfly/switchblade{
+/obj/item/material/butterfly/switchblade{
 	pixel_y = 3;
 	pixel_x = 5
 	},
-/obj/item/weapon/storage/fancy/cigarettes/killthroat{
-	pixel_y = 0;
+/obj/item/storage/fancy/cigarettes/killthroat{
 	pixel_x = -6
 	},
 /turf/simulated/floor/wood/broken,
@@ -581,7 +572,7 @@
 	},
 /area/submap/spacebar)
 "uK" = (
-/obj/item/device/defib_kit/compact/loaded,
+/obj/item/defib_kit/compact/loaded,
 /obj/item/stack/medical/advanced/bruise_pack{
 	amount = 2;
 	max_amount = 2;
@@ -618,7 +609,7 @@
 	},
 /area/submap/spacebar)
 "xN" = (
-/obj/item/weapon/stool/padded,
+/obj/item/stool/padded,
 /turf/simulated/floor/tiled/asteroid_steel{
 	temperature = 295.15
 	},
@@ -657,7 +648,7 @@
 /turf/simulated/floor/plating,
 /area/submap/spacebar)
 "AD" = (
-/obj/item/device/gps/internal/poi{
+/obj/item/gps/internal/poi{
 	gps_tag = "RockingCore Bar"
 	},
 /turf/simulated/wall,
@@ -688,7 +679,7 @@
 /area/submap/spacebar)
 "Ha" = (
 /obj/effect/floor_decal/rust,
-/obj/item/weapon/stool/padded{
+/obj/item/stool/padded{
 	dir = 1
 	},
 /turf/simulated/floor/tiled/asteroid_steel{
@@ -708,7 +699,7 @@
 /obj/machinery/light/spot{
 	dir = 1
 	},
-/obj/item/weapon/storage/secure/briefcase/money,
+/obj/item/storage/secure/briefcase/money,
 /turf/simulated/floor/wood,
 /area/submap/spacebar)
 "LH" = (
@@ -718,7 +709,7 @@
 /turf/simulated/floor/plating,
 /area/submap/spacebar)
 "LR" = (
-/obj/item/device/defib_kit/compact/loaded,
+/obj/item/defib_kit/compact/loaded,
 /obj/machinery/light/spot{
 	dir = 1
 	},
@@ -756,7 +747,6 @@
 /obj/effect/floor_decal/rust,
 /obj/structure/urinal{
 	dir = 4;
-	pixel_y = 0;
 	pixel_x = -31
 	},
 /turf/simulated/floor/tiled/old_tile/white,
@@ -769,7 +759,6 @@
 	},
 /obj/machinery/embedded_controller/radio/airlock/access_controller{
 	pixel_y = 23;
-	dir = 2;
 	id_tag = "spacebar_airlock";
 	tag_interior_door = "spacebar_inner";
 	tag_exterior_door = "spacebar_outer"
@@ -784,7 +773,7 @@
 /area/submap/spacebar)
 "Py" = (
 /obj/structure/table/rack/shelf/wood,
-/obj/item/device/radio/subspace,
+/obj/item/radio/subspace,
 /turf/simulated/floor/wood,
 /area/submap/spacebar)
 "PC" = (
@@ -845,17 +834,16 @@
 /area/submap/spacebar)
 "SR" = (
 /obj/structure/table/wooden_reinforced,
-/obj/item/weapon/reagent_containers/food/drinks/cans/beercan{
+/obj/item/reagent_containers/food/drinks/cans/beercan{
 	pixel_x = -8
 	},
-/obj/item/weapon/reagent_containers/food/drinks/cans/beercan{
+/obj/item/reagent_containers/food/drinks/cans/beercan{
 	pixel_x = -8
 	},
-/obj/item/weapon/storage/fancy/cigarettes/killthroat{
-	pixel_y = 0;
+/obj/item/storage/fancy/cigarettes/killthroat{
 	pixel_x = 8
 	},
-/obj/item/weapon/flame/lighter{
+/obj/item/flame/lighter{
 	pixel_x = 11;
 	pixel_y = -8
 	},

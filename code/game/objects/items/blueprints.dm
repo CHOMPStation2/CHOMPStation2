@@ -5,10 +5,6 @@
 	icon_state = "blueprints"
 	attack_verb = list("attacked", "bapped", "hit")
 	preserve_item = 1
-	var/const/AREA_ERRNONE = 0
-	var/const/AREA_STATION = 1
-	var/const/AREA_SPACE =   2
-	var/const/AREA_SPECIAL = 3
 
 	var/const/BORDER_ERROR = 0
 	var/const/BORDER_NONE = 1
@@ -48,7 +44,7 @@
 	var/can_rename_areas_in = AREA_STATION	// Only station areas can be reanamed
 
 /obj/item/blueprints/attack_self(mob/M as mob)
-	if (!istype(M,/mob/living/carbon/human))
+	if (!ishuman(M))
 		to_chat(M, "This stack of blue paper means nothing to you.") //monkeys cannot into projecting
 		return
 	interact()
@@ -63,19 +59,19 @@
 	switch(href_list["action"])
 		if ("create_area")
 			if (!(get_area_type() & can_create_areas_in))
-				to_chat(usr, "<span class='danger'>You can't make a new area here.</span>")
+				to_chat(usr, span_danger("You can't make a new area here."))
 				interact()
 				return
 			create_area()
 		if ("edit_area")
 			if (!(get_area_type() & can_rename_areas_in))
-				to_chat(usr, "<span class='danger'>You can't rename this area.</span>")
+				to_chat(usr, span_danger("You can't rename this area."))
 				interact()
 				return
 			edit_area()
 		if ("expand_area")
 			if (!(get_area_type() & can_expand_areas_in))
-				to_chat(usr, "<span class='danger'>You can't expand this area.</span>")
+				to_chat(usr, span_danger("You can't expand this area."))
 				interact()
 				return
 			expand_area()
@@ -103,11 +99,11 @@
 
 	// Offer links for what user is allowed to do based on current area
 	if(curAreaType & can_create_areas_in)
-		text += "<p>You can <a href='?src=\ref[src];action=create_area'>Mark this place as new area</a>.</p>"
+		text += "<p>You can <a href='byond://?src=\ref[src];action=create_area'>Mark this place as new area</a>.</p>"
 	if(curAreaType & can_expand_areas_in)
-		text += "<p>You can <a href='?src=\ref[src];action=expand_area'>expand the area</a>.</p>"
+		text += "<p>You can <a href='byond://?src=\ref[src];action=expand_area'>expand the area</a>.</p>"
 	if(curAreaType & can_rename_areas_in)
-		text += "<p>You can <a href='?src=\ref[src];action=edit_area'>rename the area</a>.</p>"
+		text += "<p>You can <a href='byond://?src=\ref[src];action=edit_area'>rename the area</a>.</p>"
 
 	text += "</BODY></HTML>"
 	usr << browse(text, "window=blueprints")
@@ -139,20 +135,20 @@
 	if(!istype(res,/list))
 		switch(res)
 			if(ROOM_ERR_SPACE)
-				to_chat(usr, "<span class='warning'>The new area must be completely airtight!</span>")
+				to_chat(usr, span_warning("The new area must be completely airtight!"))
 				return
 			if(ROOM_ERR_TOOLARGE)
-				to_chat(usr, "<span class='warning'>The new area too large!</span>")
+				to_chat(usr, span_warning("The new area too large!"))
 				return
 			else
-				to_chat(usr, "<span class='warning'>Error! Please notify administration!</span>")
+				to_chat(usr, span_warning("Error! Please notify administration!"))
 				return
 	var/list/turf/turfs = res
 	var/str = sanitizeSafe(tgui_input_text(usr, "New area name:","Blueprint Editing", "", MAX_NAME_LEN), MAX_NAME_LEN)
 	if(!str || !length(str)) //cancel
 		return
 	if(length(str) > 50)
-		to_chat(usr, "<span class='warning'>Name too long.</span>")
+		to_chat(usr, span_warning("Name too long."))
 		return
 	var/area/A = new
 	A.name = str
@@ -177,13 +173,13 @@
 	if(!istype(res,/list))
 		switch(res)
 			if(ROOM_ERR_SPACE)
-				to_chat(usr, "<span class='warning'>The new area must be completely airtight!</span>")
+				to_chat(usr, span_warning("The new area must be completely airtight!"))
 				return
 			if(ROOM_ERR_TOOLARGE)
-				to_chat(usr, "<span class='warning'>The new area too large!</span>")
+				to_chat(usr, span_warning("The new area too large!"))
 				return
 			else
-				to_chat(usr, "<span class='warning'>Error! Please notify administration!</span>")
+				to_chat(usr, span_warning("Error! Please notify administration!"))
 				return
 	var/list/turf/turfs = res
 
@@ -191,11 +187,11 @@
 	for(var/turf/T in A.contents)
 		turfs -= T // Don't add turfs already in A to A
 	if(turfs.len == 0)
-		to_chat(usr, "<span class='warning'>\The [A] already covers the entire room.</span>")
+		to_chat(usr, span_warning("\The [A] already covers the entire room."))
 		return
 
 	move_turfs_to_area(turfs, A)
-	to_chat(usr, "<span class='notice'>Expanded \the [A] by [turfs.len] turfs</span>")
+	to_chat(usr, span_notice("Expanded \the [A] by [turfs.len] turfs"))
 	spawn(5)
 		interact()
 	return
@@ -211,11 +207,11 @@
 	if(!str || !length(str) || str==prevname) //cancel
 		return
 	if(length(str) > 50)
-		to_chat(usr, "<span class='warning'>Text too long.</span>")
+		to_chat(usr, span_warning("Text too long."))
 		return
 	set_area_machinery_title(A,str,prevname)
 	A.name = str
-	to_chat(usr, "<span class='notice'>You set the area '[prevname]' title to '[str]'.</span>")
+	to_chat(usr, span_notice("You set the area '[prevname]' title to '[str]'."))
 	interact()
 	return
 
@@ -262,9 +258,9 @@
 			if (!isturf(NT) || (NT in found) || (NT in pending))
 				continue
 			// We ask ZAS to determine if its airtight.  Thats what matters anyway right?
-			if(air_master.air_blocked(T, NT))
+			if(SSair.air_blocked(T, NT))
 				// Okay thats the edge of the room
-				if(get_area_type(NT.loc) == AREA_SPACE && air_master.air_blocked(NT, NT))
+				if(get_area_type(NT.loc) == AREA_SPACE && SSair.air_blocked(NT, NT))
 					found += NT // So we include walls/doors not already in any area
 				continue
 			if (istype(NT, /turf/space))
@@ -291,7 +287,7 @@
 	// Remove any existing
 	seeAreaColors_remove()
 
-	to_chat(usr, "<span class='notice'>\The [src] shows nearby areas in different colors.</span>")
+	to_chat(usr, span_notice("\The [src] shows nearby areas in different colors."))
 	var/i = 0
 	for(var/area/A in range(usr))
 		if(get_area_type(A) == AREA_SPACE)
@@ -313,13 +309,13 @@
 	if(!istype(res, /list))
 		switch(res)
 			if(ROOM_ERR_SPACE)
-				to_chat(usr, "<span class='warning'>The new area must be completely airtight!</span>")
+				to_chat(usr, span_warning("The new area must be completely airtight!"))
 				return
 			if(ROOM_ERR_TOOLARGE)
-				to_chat(usr, "<span class='warning'>The new area too large!</span>")
+				to_chat(usr, span_warning("The new area too large!"))
 				return
 			else
-				to_chat(usr, "<span class='danger'>Error! Please notify administration!</span>")
+				to_chat(usr, span_danger("Error! Please notify administration!"))
 				return
 	// Okay we got a room, lets color it
 	seeAreaColors_remove()
@@ -327,7 +323,7 @@
 	for(var/turf/T in res)
 		usr << image(green, T, "blueprints", TURF_LAYER)
 		areaColor_turfs += T
-	to_chat(usr, "<span class='notice'>The space covered by the new area is highlighted in green.</span>")
+	to_chat(usr, span_notice("The space covered by the new area is highlighted in green."))
 
 /obj/item/blueprints/verb/seeAreaColors_remove()
 	set src in usr
@@ -341,7 +337,7 @@
 				usr.client.images.Remove(i)
 
 // Make sure to turn off the colors when we drop the blueprints.
-/obj/item/blueprints/dropped(mob/user as mob)
+/obj/item/blueprints/dropped(mob/user)
 	if(areaColor_turfs.len)
 		seeAreaColors_remove()
 	return ..()

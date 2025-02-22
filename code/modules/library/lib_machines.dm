@@ -31,29 +31,28 @@
 	var/category = "Any"
 	var/author
 	var/SQLquery
-	var/list/SQLargs //CHOMPEdit TGSQL
 
-/obj/machinery/librarypubliccomp/attack_hand(var/mob/user as mob)
-	usr.set_machine(src)
-	var/dat = "<HEAD><TITLE>Library Visitor</TITLE></HEAD><BODY>\n" // <META HTTP-EQUIV='Refresh' CONTENT='10'>
+/obj/machinery/librarypubliccomp/attack_hand(var/mob/user)
+	user.set_machine(src)
+	var/dat = "<html><HEAD><TITLE>Library Visitor</TITLE></HEAD><BODY>\n" // <META HTTP-EQUIV='Refresh' CONTENT='10'>
 	switch(screenstate)
 		if(0)
 			dat += {"<h2>Search Settings</h2><br>
-			<A href='?src=\ref[src];settitle=1'>Filter by Title: [title]</A><BR>
-			<A href='?src=\ref[src];setcategory=1'>Filter by Category: [category]</A><BR>
-			<A href='?src=\ref[src];setauthor=1'>Filter by Author: [author]</A><BR>
-			<A href='?src=\ref[src];search=1'>\[Start Search\]</A><BR>"}
+			<A href='byond://?src=\ref[src];settitle=1'>Filter by Title: [title]</A><BR>
+			<A href='byond://?src=\ref[src];setcategory=1'>Filter by Category: [category]</A><BR>
+			<A href='byond://?src=\ref[src];setauthor=1'>Filter by Author: [author]</A><BR>
+			<A href='byond://?src=\ref[src];search=1'>\[Start Search\]</A><BR>"}
 		if(1)
-			establish_old_db_connection()
-			if(!SSdbcore.IsConnected()) //CHOMPEdit TGSQL
-				dat += "<font color=red><b>ERROR</b>: Unable to contact External Archive. Please contact your system administrator for assistance.</font><BR>"
+			establish_db_connection()
+			if(!SSdbcore.IsConnected())
+				dat += span_red(span_bold("ERROR") + ": Unable to contact External Archive. Please contact your system administrator for assistance.") + "<BR>"
 			else if(!SQLquery)
-				dat += "<font color=red><b>ERROR</b>: Malformed search request. Please contact your system administrator for assistance.</font><BR>"
+				dat += span_red(span_bold("ERROR") + ": Malformed search request. Please contact your system administrator for assistance.") + "<BR>"
 			else
 				dat += {"<table>
 				<tr><td>AUTHOR</td><td>TITLE</td><td>CATEGORY</td><td>SS<sup>13</sup>BN</td></tr>"}
 
-				var/datum/db_query/query = SSdbcore.NewQuery(SQLquery, SQLargs) //CHOMPEdit TGSQL
+				var/datum/db_query/query = SSdbcore.NewQuery(SQLquery)
 				query.Execute()
 
 				while(query.NextRow())
@@ -64,7 +63,7 @@
 					dat += "<tr><td>[author]</td><td>[title]</td><td>[category]</td><td>[id]</td></tr>"
 				qdel(query)
 				dat += "</table><BR>"
-			dat += "<A href='?src=\ref[src];back=1'>\[Go Back\]</A><BR>"
+			dat += "<A href='byond://?src=\ref[src];back=1'>\[Go Back\]</A><BR></html>"
 	user << browse(dat, "window=publiclibrary")
 	onclose(user, "publiclibrary")
 
@@ -97,23 +96,17 @@
 		author = sanitizeSQL(author)
 	if(href_list["search"])
 		SQLquery = "SELECT author, title, category, id FROM library WHERE "
-		SQLargs = list() //CHOMPEdit begin
 		if(category == "Any")
-			SQLquery += "author LIKE '%:t_author%' AND title LIKE '%:t_title%'"
-			SQLargs["t_author"] = author
-			SQLargs["t_title"] = title
+			SQLquery += "author LIKE '%[author]%' AND title LIKE '%[title]%'"
 		else
-			SQLquery += "author LIKE CONCAT('%',:t_author,'%') AND title LIKE CONCAT('%',:t_title,'%') AND category=:t_category"
-			SQLargs["t_author"] = author
-			SQLargs["t_title"] = title
-			SQLargs["t_category"] = category //CHOMPEdit End
+			SQLquery += "author LIKE '%[author]%' AND title LIKE '%[title]%' AND category='[category]'"
 		screenstate = 1
 
 	if(href_list["back"])
 		screenstate = 0
 
 	src.add_fingerprint(usr)
-	src.updateUsrDialog()
+	src.updateUsrDialog(usr)
 	return
 
 
@@ -151,58 +144,58 @@
 
 	if(!base_genre_books || !base_genre_books.len)
 		base_genre_books = list(
-			/obj/item/weapon/book/custom_library/fiction,
-			/obj/item/weapon/book/custom_library/nonfiction,
-			/obj/item/weapon/book/custom_library/reference,
-			/obj/item/weapon/book/custom_library/religious,
-			/obj/item/weapon/book/bundle/custom_library/fiction,
-			/obj/item/weapon/book/bundle/custom_library/nonfiction,
-			/obj/item/weapon/book/bundle/custom_library/reference,
-			/obj/item/weapon/book/bundle/custom_library/religious
+			/obj/item/book/custom_library/fiction,
+			/obj/item/book/custom_library/nonfiction,
+			/obj/item/book/custom_library/reference,
+			/obj/item/book/custom_library/religious,
+			/obj/item/book/bundle/custom_library/fiction,
+			/obj/item/book/bundle/custom_library/nonfiction,
+			/obj/item/book/bundle/custom_library/reference,
+			/obj/item/book/bundle/custom_library/religious
 			)
 
 	if(!all_books || !all_books.len)
 		all_books = list()
 
-		for(var/path in subtypesof(/obj/item/weapon/book/codex/lore))
-			var/obj/item/weapon/book/C = new path(null)
+		for(var/path in subtypesof(/obj/item/book/codex/lore))
+			var/obj/item/book/C = new path(null)
 			all_books[C.name] = C
 
-		for(var/path in subtypesof(/obj/item/weapon/book/custom_library) - base_genre_books)
-			var/obj/item/weapon/book/B = new path(null)
+		for(var/path in subtypesof(/obj/item/book/custom_library) - base_genre_books)
+			var/obj/item/book/B = new path(null)
 			all_books[B.title] = B
 
-		for(var/path in subtypesof(/obj/item/weapon/book/bundle/custom_library) - base_genre_books)
-			var/obj/item/weapon/book/M = new path(null)
+		for(var/path in subtypesof(/obj/item/book/bundle/custom_library) - base_genre_books)
+			var/obj/item/book/M = new path(null)
 			all_books[M.title] = M
 
-/obj/machinery/librarycomp/attack_hand(var/mob/user as mob)
-	usr.set_machine(src)
+/obj/machinery/librarycomp/attack_hand(var/mob/user)
+	user.set_machine(src)
 	var/dat = "<HEAD><TITLE>Book Inventory Management</TITLE></HEAD><BODY>\n" // <META HTTP-EQUIV='Refresh' CONTENT='10'>
 	switch(screenstate)
 		if(0)
 			// Main Menu //VOREStation Edit start
-			dat += {"<A href='?src=\ref[src];switchscreen=1'>1. View General Inventory</A><BR>
-			<A href='?src=\ref[src];switchscreen=2'>2. View Checked Out Inventory</A><BR>
-			<A href='?src=\ref[src];switchscreen=3'>3. Check out a Book</A><BR>
-			<A href='?src=\ref[src];switchscreen=4'>4. Connect to Internal Archive</A><BR>
-			<A href='?src=\ref[src];switchscreen=5'>5. Upload New Title to Archive</A><BR>
-			<A href='?src=\ref[src];switchscreen=6'>6. Print a Bible</A><BR>
-			<A href='?src=\ref[src];switchscreen=8'>8. Access External Archive</A><BR>"} //VOREStation Edit end
+			dat += {"<A href='byond://?src=\ref[src];switchscreen=1'>1. View General Inventory</A><BR>
+			<A href='byond://?src=\ref[src];switchscreen=2'>2. View Checked Out Inventory</A><BR>
+			<A href='byond://?src=\ref[src];switchscreen=3'>3. Check out a Book</A><BR>
+			<A href='byond://?src=\ref[src];switchscreen=4'>4. Connect to Internal Archive</A><BR>
+			<A href='byond://?src=\ref[src];switchscreen=5'>5. Upload New Title to Archive</A><BR>
+			<A href='byond://?src=\ref[src];switchscreen=6'>6. Print a Bible</A><BR>
+			<A href='byond://?src=\ref[src];switchscreen=8'>8. Access External Archive</A><BR>"} //VOREStation Edit end
 			if(src.emagged)
-				dat += "<A href='?src=\ref[src];switchscreen=7'>7. Access the Forbidden Lore Vault</A><BR>"
+				dat += "<A href='byond://?src=\ref[src];switchscreen=7'>7. Access the Forbidden Lore Vault</A><BR>"
 			if(src.arcanecheckout)
-				new /obj/item/weapon/book/tome(src.loc)
+				new /obj/item/book/tome(src.loc)
 				var/datum/gender/T = gender_datums[user.get_visible_gender()]
-				to_chat(user, "<span class='warning'>Your sanity barely endures the seconds spent in the vault's browsing window. The only thing to remind you of this when you stop browsing is a dusty old tome sitting on the desk. You don't really remember printing it.</span>")
-				user.visible_message("<b>\The [user]</b> stares at the blank screen for a few moments, [T.his] expression frozen in fear. When [T.he] finally awakens from it, [T.he] looks a lot older.", 2)
+				to_chat(user, span_warning("Your sanity barely endures the seconds spent in the vault's browsing window. The only thing to remind you of this when you stop browsing is a dusty old tome sitting on the desk. You don't really remember printing it."))
+				user.visible_message(span_infoplain(span_bold("\The [user]") + " stares at the blank screen for a few moments, [T.his] expression frozen in fear. When [T.he] finally awakens from it, [T.he] looks a lot older."), 2)
 				src.arcanecheckout = 0
 		if(1)
 			// Inventory
 			dat += "<H3>Inventory</H3><BR>"
-			for(var/obj/item/weapon/book/b in inventory)
-				dat += "[b.name] <A href='?src=\ref[src];delbook=\ref[b]'>(Delete)</A><BR>"
-			dat += "<A href='?src=\ref[src];switchscreen=0'>(Return to main menu)</A><BR>"
+			for(var/obj/item/book/b in inventory)
+				dat += "[b.name] <A href='byond://?src=\ref[src];delbook=\ref[b]'>(Delete)</A><BR>"
+			dat += "<A href='byond://?src=\ref[src];switchscreen=0'>(Return to main menu)</A><BR>"
 		if(2)
 			// Checked Out
 			dat += "<h3>Checked Out Books</h3><BR>"
@@ -215,44 +208,44 @@
 				//timedue *= 10
 				timedue /= 600
 				if(timedue <= 0)
-					timedue = "<font color=red><b>(OVERDUE)</b> [timedue]</font>"
+					timedue = span_red(span_bold("(OVERDUE)") + " [timedue]")
 				else
 					timedue = round(timedue)
 				dat += {"\"[b.bookname]\", Checked out to: [b.mobname]<BR>--- Taken: [timetaken] minutes ago, Due: in [timedue] minutes<BR>
-				<A href='?src=\ref[src];checkin=\ref[b]'>(Check In)</A><BR><BR>"}
-			dat += "<A href='?src=\ref[src];switchscreen=0'>(Return to main menu)</A><BR>"
+				<A href='byond://?src=\ref[src];checkin=\ref[b]'>(Check In)</A><BR><BR>"}
+			dat += "<A href='byond://?src=\ref[src];switchscreen=0'>(Return to main menu)</A><BR>"
 		if(3)
 			// Check Out a Book
 			dat += {"<h3>Check Out a Book</h3><BR>
 			Book: [src.buffer_book]
-			<A href='?src=\ref[src];editbook=1'>\[Edit\]</A><BR>
+			<A href='byond://?src=\ref[src];editbook=1'>\[Edit\]</A><BR>
 			Recipient: [src.buffer_mob]
-			<A href='?src=\ref[src];editmob=1'>\[Edit\]</A><BR>
+			<A href='byond://?src=\ref[src];editmob=1'>\[Edit\]</A><BR>
 			Checkout Date : [world.time/600]<BR>
 			Due Date: [(world.time + checkoutperiod)/600]<BR>
-			(Checkout Period: [checkoutperiod] minutes) (<A href='?src=\ref[src];increasetime=1'>+</A>/<A href='?src=\ref[src];decreasetime=1'>-</A>)
-			<A href='?src=\ref[src];checkout=1'>(Commit Entry)</A><BR>
-			<A href='?src=\ref[src];switchscreen=0'>(Return to main menu)</A><BR>"}
+			(Checkout Period: [checkoutperiod] minutes) (<A href='byond://?src=\ref[src];increasetime=1'>+</A>/<A href='byond://?src=\ref[src];decreasetime=1'>-</A>)
+			<A href='byond://?src=\ref[src];checkout=1'>(Commit Entry)</A><BR>
+			<A href='byond://?src=\ref[src];switchscreen=0'>(Return to main menu)</A><BR>"}
 		if(4)
 			dat += "<h3>Internal Archive</h3>"
 			if(!all_books || !all_books.len)
-				dat +=	"<font color=red><b>ERROR</b> Something has gone seriously wrong. Contact System Administrator for more information.</font>"
+				dat +=	span_red(span_bold("ERROR") + " Something has gone seriously wrong. Contact System Administrator for more information.")
 			else
 				dat += {"<table>
-				<tr><td><A href='?src=\ref[src];sort=author>AUTHOR</A></td><td><A href='?src=\ref[src];sort=title>TITLE</A></td><td><A href='?src=\ref[src];sort=category>CATEGORY</A></td><td></td></tr>"}
+				<tr><td><A href='byond://?src=\ref[src];sort=author>AUTHOR</A></td><td><A href='byond://?src=\ref[src];sort=title>TITLE</A></td><td><A href='byond://?src=\ref[src];sort=category>CATEGORY</A></td><td></td></tr>"}
 
 				for(var/name in all_books)
-					var/obj/item/weapon/book/masterbook = all_books[name]
+					var/obj/item/book/masterbook = all_books[name]
 					var/id = masterbook.type
 					var/author = masterbook.author
 					var/title = masterbook.name
 					var/category = masterbook.libcategory
-					dat += "<tr><td>[author]</td><td>[title]</td><td>[category]</td><td><A href='?src=\ref[src];hardprint=[id]'>\[Order\]</A></td></tr>"
+					dat += "<tr><td>[author]</td><td>[title]</td><td>[category]</td><td><A href='byond://?src=\ref[src];hardprint=[id]'>\[Order\]</A></td></tr>"
 				dat += "</table>"
-			dat += "<BR><A href='?src=\ref[src];switchscreen=0'>(Return to main menu)</A><BR>"
+			dat += "<BR><A href='byond://?src=\ref[src];switchscreen=0'>(Return to main menu)</A><BR>"
 		if(5)
 			//dat += "<H3>ERROR</H3>" //VOREStation Removal
-			//dat+= "<FONT color=red>Library Database is in Secure Management Mode.</FONT><BR>\ //VOREStation Removal
+			//dat+= span_red("Library Database is in Secure Management Mode.") + "<BR>\ //VOREStation Removal
 			//Contact a System Administrator for more information.<BR>" //VOREStation Removal
 			//VOREstation Edit Start
 			dat += "<H3>Upload a New Title</H3>"
@@ -261,37 +254,37 @@
 					scanner = S
 					break
 			if(!scanner)
-				dat += "<FONT color=red>No scanner found within wireless network range.</FONT><BR>"
+				dat += span_red("No scanner found within wireless network range.") + "<BR>"
 			else if(!scanner.cache)
-				dat += "<FONT color=red>No data found in scanner memory.</FONT><BR>"
+				dat += span_red("No data found in scanner memory.") + "<BR>"
 			else
 				dat += {"<TT>Data marked for upload...</TT><BR>
 				<TT>Title: </TT>[scanner.cache.name]<BR>"}
 				if(!scanner.cache.author)
 					scanner.cache.author = "Anonymous"
-				dat += {"<TT>Author: </TT><A href='?src=\ref[src];setauthor=1'>[scanner.cache.author]</A><BR>
-				<TT>Category: </TT><A href='?src=\ref[src];setcategory=1'>[upload_category]</A><BR>
-				<A href='?src=\ref[src];upload=1'>\[Upload\]</A><BR>"}
+				dat += {"<TT>Author: </TT><A href='byond://?src=\ref[src];setauthor=1'>[scanner.cache.author]</A><BR>
+				<TT>Category: </TT><A href='byond://?src=\ref[src];setcategory=1'>[upload_category]</A><BR>
+				<A href='byond://?src=\ref[src];upload=1'>\[Upload\]</A><BR>"}
 			//VOREStation Edit End
-			dat += "<A href='?src=\ref[src];switchscreen=0'>(Return to main menu)</A><BR>"
+			dat += "<A href='byond://?src=\ref[src];switchscreen=0'>(Return to main menu)</A><BR>"
 		if(7)
 			dat += {"<h3>Accessing Forbidden Lore Vault v 1.3</h3>
 			Are you absolutely sure you want to proceed? EldritchTomes Inc. takes no responsibilities for loss of sanity resulting from this action.<p>
-			<A href='?src=\ref[src];arccheckout=1'>Yes.</A><BR>
-			<A href='?src=\ref[src];switchscreen=0'>No.</A><BR>"}
+			<A href='byond://?src=\ref[src];arccheckout=1'>Yes.</A><BR>
+			<A href='byond://?src=\ref[src];switchscreen=0'>No.</A><BR>"}
 		if(8)
 			dat += "<h3>External Archive</h3>" //VOREStation Edit
-			establish_old_db_connection()
+			establish_db_connection()
 
-			//dat += "<h3><font color=red>Warning: System Administrator has slated this archive for removal. Personal uploads should be taken to the NT board of internal literature.</font></h3>" //VOREStation Removal
+			//dat += "<h3>" + span_red("arning: System Administrator has slated this archive for removal. Personal uploads should be taken to the NT board of internal literature.") + "</h3>" //VOREStation Removal
 
-			if(!SSdbcore.IsConnected()) //CHOMPEdit TGSQL
-				dat += "<font color=red><b>ERROR</b>: Unable to contact External Archive. Please contact your system administrator for assistance.</font>"
+			if(!SSdbcore.IsConnected())
+				dat += span_red(span_bold("ERROR") + ": Unable to contact External Archive. Please contact your system administrator for assistance.")
 			else
-				dat += {"<A href='?src=\ref[src];orderbyid=1'>(Order book by SS<sup>13</sup>BN)</A><BR><BR>
+				dat += {"<A href='byond://?src=\ref[src];orderbyid=1'>(Order book by SS<sup>13</sup>BN)</A><BR><BR>
 				<table>
-				<tr><td><A href='?src=\ref[src];sort=author>AUTHOR</A></td><td><A href='?src=\ref[src];sort=title>TITLE</A></td><td><A href='?src=\ref[src];sort=category>CATEGORY</A></td><td></td></tr>"}
-				var/datum/db_query/query = SSdbcore.NewQuery("SELECT id, author, title, category FROM library ORDER BY :t_sortby", list("t_sortby" = sortby)) //CHOMPEdit TGSQL
+				<tr><td><A href='byond://?src=\ref[src];sort=author>AUTHOR</A></td><td><A href='byond://?src=\ref[src];sort=title>TITLE</A></td><td><A href='byond://?src=\ref[src];sort=category>CATEGORY</A></td><td></td></tr>"}
+				var/datum/db_query/query = SSdbcore.NewQuery("SELECT id, author, title, category FROM library ORDER BY [sortby]")
 				query.Execute()
 
 				while(query.NextRow())
@@ -299,13 +292,13 @@
 					var/author = query.item[2]
 					var/title = query.item[3]
 					var/category = query.item[4]
-					dat += "<tr><td>[author]</td><td>[title]</td><td>[category]</td><td><A href='?src=\ref[src];targetid=[id]'>\[Order\]</A></td></tr>"
-				qdel(query) //CHOMPEdit TGSQL
+					dat += "<tr><td>[author]</td><td>[title]</td><td>[category]</td><td><A href='byond://?src=\ref[src];targetid=[id]'>\[Order\]</A></td></tr>"
+				qdel(query)
 				dat += "</table>"
-			dat += "<BR><A href='?src=\ref[src];switchscreen=0'>(Return to main menu)</A><BR>"
+			dat += "<BR><A href='byond://?src=\ref[src];switchscreen=0'>(Return to main menu)</A><BR>"
 
-	//dat += "<A HREF='?src=\ref[user];mach_close=library'>Close</A><br><br>"
-	user << browse(dat, "window=library")
+	//dat += "<A href='byond://?src=\ref[user];mach_close=library'>Close</A><br><br>"
+	user << browse("<html>[dat]</html>", "window=library")
 	onclose(user, "library")
 
 //VOREStation Addition Start
@@ -316,18 +309,18 @@
 		. = ..()
 
 	else
-		usr.set_machine(src)
+		user.set_machine(src)
 		var/dat = "<HEAD><TITLE>Book Inventory Management</TITLE></HEAD><BODY>\n" // <META HTTP-EQUIV='Refresh' CONTENT='10'>
 
 		dat += "<h3>ADMINISTRATIVE MANAGEMENT</h3>"
-		establish_old_db_connection()
+		establish_db_connection()
 
 		if(!SSdbcore.IsConnected())
-			dat += "<font color=red><b>ERROR</b>: Unable to contact External Archive. Please contact your system administrator for assistance.</font>"
+			dat += span_red(span_bold("ERROR") + ": Unable to contact External Archive. Please contact your system administrator for assistance.")
 		else
-			dat += {"<A href='?src=\ref[src];orderbyid=1'>(Order book by SS<sup>13</sup>BN)</A><BR><BR>
+			dat += {"<A href='byond://?src=\ref[src];orderbyid=1'>(Order book by SS<sup>13</sup>BN)</A><BR><BR>
 			<table>
-			<tr><td><A href='?src=\ref[src];sort=author>AUTHOR</A></td><td><A href='?src=\ref[src];sort=title>TITLE</A></td><td><A href='?src=\ref[src];sort=category>CATEGORY</A></td><td></td></tr>"}
+			<tr><td><A href='byond://?src=\ref[src];sort=author>AUTHOR</A></td><td><A href='byond://?src=\ref[src];sort=title>TITLE</A></td><td><A href='byond://?src=\ref[src];sort=category>CATEGORY</A></td><td></td></tr>"}
 			var/datum/db_query/query = SSdbcore.NewQuery("SELECT id, author, title, category FROM library ORDER BY [sortby]")
 			query.Execute()
 
@@ -336,12 +329,13 @@
 				var/author = query.item[2]
 				var/title = query.item[3]
 				var/category = query.item[4]
-				dat += "<tr><td>[author]</td><td>[title]</td><td>[category]</td><td><A href='?src=\ref[src];delid=[id]'>\[Del\]</A>"
+				dat += "<tr><td>[author]</td><td>[title]</td><td>[category]</td><td><A href='byond://?src=\ref[src];delid=[id]'>\[Del\]</A>"
 				dat += "</td></tr>"
 			dat += "</table>"
-		dat += "<BR><A href='?src=\ref[src];switchscreen=0'>(Return to main menu)</A><BR>"
+			qdel(query)
+		dat += "<BR><A href='byond://?src=\ref[src];switchscreen=0'>(Return to main menu)</A><BR>"
 
-		user << browse(dat, "window=library")
+		user << browse("<html>[dat]</html>", "window=library")
 		onclose(user, "library")
 //VOREStation Addition End
 
@@ -350,9 +344,9 @@
 		src.emagged = 1
 		return 1
 
-/obj/machinery/librarycomp/attackby(obj/item/weapon/W as obj, mob/user as mob)
-	if(istype(W, /obj/item/weapon/barcodescanner))
-		var/obj/item/weapon/barcodescanner/scanner = W
+/obj/machinery/librarycomp/attackby(obj/item/W as obj, mob/user as mob)
+	if(istype(W, /obj/item/barcodescanner))
+		var/obj/item/barcodescanner/scanner = W
 		scanner.computer = src
 		to_chat(user, "[scanner]'s associated machine has been set to [src].")
 		for (var/mob/V in hearers(src))
@@ -382,14 +376,14 @@
 				screenstate = 5
 			if("6")
 				if(!bibledelay)
-					new /obj/item/weapon/storage/bible(src.loc)
+					new /obj/item/storage/bible(src.loc)
 					bibledelay = 1
 					spawn(60)
 						bibledelay = 0
 
 				else
 					for (var/mob/V in hearers(src))
-						V.show_message("<b>[src]</b>'s monitor flashes, \"Bible printer currently unavailable, please wait a moment.\"")
+						V.show_message(span_infoplain(span_bold("[src]") + "'s monitor flashes, \"Bible printer currently unavailable, please wait a moment.\""))
 
 			if("7")
 				screenstate = 7
@@ -420,7 +414,7 @@
 		var/datum/borrowbook/b = locate(href_list["checkin"])
 		checkouts.Remove(b)
 	if(href_list["delbook"])
-		var/obj/item/weapon/book/b = locate(href_list["delbook"])
+		var/obj/item/book/b = locate(href_list["delbook"])
 		inventory.Remove(b)
 	if(href_list["setauthor"])
 		var/newauthor = sanitize(tgui_input_text(usr, "Enter the author's name: "))
@@ -440,50 +434,49 @@
 					if(scanner.cache.unique)
 						tgui_alert_async(usr, "This book has been rejected from the database. Aborting!")
 					else
-						establish_old_db_connection()
-						if(!SSdbcore.IsConnected()) //CHOMPEdit TGSQL
+						establish_db_connection()
+						if(!SSdbcore.IsConnected())
 							tgui_alert_async(usr, "Connection to Archive has been severed. Aborting.")
 						else
 							/*
-							var/sqltitle = dbcon.Quote(scanner.cache.name)
-							var/sqlauthor = dbcon.Quote(scanner.cache.author)
-							var/sqlcontent = dbcon.Quote(scanner.cache.dat)
-							var/sqlcategory = dbcon.Quote(upload_category)
+							var/sqltitle = SSdbcore.Quote(scanner.cache.name)
+							var/sqlauthor = SSdbcore.Quote(scanner.cache.author)
+							var/sqlcontent = SSdbcore.Quote(scanner.cache.dat)
+							var/sqlcategory = SSdbcore.Quote(upload_category)
 							*/
-							var/list/sql_args = list("t_title" = scanner.cache.name, "t_author" = scanner.cache.author, "t_content" = scanner.cache.dat, "t_category" = upload_category) //CHOMPEdit TGSQL
-							/*var/sqltitle = sanitizeSQL(scanner.cache.name) CHOMPEdit TGSQL
+							var/sqltitle = sanitizeSQL(scanner.cache.name)
 							var/sqlauthor = sanitizeSQL(scanner.cache.author)
 							var/sqlcontent = sanitizeSQL(scanner.cache.dat)
-							var/sqlcategory = sanitizeSQL(upload_category)*/
-							var/datum/db_query/query = SSdbcore.NewQuery("INSERT INTO library (author, title, content, category) VALUES (:t_author, :t_title, :t_content, :t_category)", sql_args) //CHOMPEdit TGSQL
+							var/sqlcategory = sanitizeSQL(upload_category)
+							var/datum/db_query/query = SSdbcore.NewQuery("INSERT INTO library (author, title, content, category) VALUES ('[sqlauthor]', '[sqltitle]', '[sqlcontent]', '[sqlcategory]')")
 							if(!query.Execute())
 								to_chat(usr,query.ErrorMsg())
 							else
 								log_game("[usr.name]/[usr.key] has uploaded the book titled [scanner.cache.name], [length(scanner.cache.dat)] signs")
 								tgui_alert_async(usr, "Upload Complete.")
-							qdel(query) //CHOMPEdit TGSQL
+							qdel(query)
 	//VOREStation Edit End
 
 	if(href_list["targetid"])
 		var/sqlid = sanitizeSQL(href_list["targetid"])
-		establish_old_db_connection()
-		if(!SSdbcore.IsConnected()) //CHOMPEdit TGSQL
+		establish_db_connection()
+		if(!SSdbcore.IsConnected())
 			tgui_alert_async(usr, "Connection to Archive has been severed. Aborting.")
 		if(bibledelay)
 			for (var/mob/V in hearers(src))
-				V.show_message("<b>[src]</b>'s monitor flashes, \"Printer unavailable. Please allow a short time before attempting to print.\"")
+				V.show_message(span_infoplain(span_bold("[src]") + "'s monitor flashes, \"Printer unavailable. Please allow a short time before attempting to print.\""))
 		else
 			bibledelay = 1
 			spawn(6)
 				bibledelay = 0
-			var/datum/db_query/query = SSdbcore.NewQuery("SELECT * FROM library WHERE id=[sqlid]") //CHOMPEdit TGSQL
+			var/datum/db_query/query = SSdbcore.NewQuery("SELECT * FROM library WHERE id=[sqlid]")
 			query.Execute()
 
 			while(query.NextRow())
 				var/author = query.item[2]
 				var/title = query.item[3]
 				var/content = query.item[4]
-				var/obj/item/weapon/book/B = new(src.loc)
+				var/obj/item/book/B = new(src.loc)
 				B.name = "Book: [title]"
 				B.title = title
 				B.author = author
@@ -492,7 +485,20 @@
 				B.item_state = B.icon_state
 				src.visible_message("[src]'s printer hums as it produces a completely bound book. How did it do that?")
 				break
-			qdel(query) //CHOMPEdit TGSQL
+			qdel(query)
+
+	if(href_list["delid"])
+		if(!check_rights(R_ADMIN))
+			return
+		var/sqlid = sanitizeSQL(href_list["delid"])
+		establish_db_connection()
+		if(!SSdbcore.IsConnected())
+			tgui_alert_async(usr, "Connection to Archive has been severed. Aborting.")
+		else
+			var/datum/db_query/query = SSdbcore.NewQuery("DELETE FROM library WHERE id=[sqlid]")
+			query.Execute()
+			log_admin("[usr.key] has deleted the book [sqlid]")	//VOREStation Addition
+			qdel(query)
 
 	if(href_list["orderbyid"])
 		var/orderid = tgui_input_number(usr, "Enter your order:")
@@ -504,10 +510,10 @@
 		sortby = href_list["sort"]
 	if(href_list["hardprint"])
 		var/newpath = href_list["hardprint"]
-		var/obj/item/weapon/book/NewBook = new newpath(get_turf(src))
+		var/obj/item/book/NewBook = new newpath(get_turf(src))
 		NewBook.name = "Book: [NewBook.name]"
 	src.add_fingerprint(usr)
-	src.updateUsrDialog()
+	src.updateUsrDialog(usr)
 	return
 
 /*
@@ -520,26 +526,26 @@
 	icon_state = "bigscanner"
 	anchored = TRUE
 	density = TRUE
-	var/obj/item/weapon/book/cache		// Last scanned book
+	var/obj/item/book/cache		// Last scanned book
 
-/obj/machinery/libraryscanner/attackby(var/obj/O as obj, var/mob/user as mob)
-	if(istype(O, /obj/item/weapon/book))
+/obj/machinery/libraryscanner/attackby(var/obj/O, var/mob/user)
+	if(istype(O, /obj/item/book))
 		user.drop_item()
 		O.loc = src
 
-/obj/machinery/libraryscanner/attack_hand(var/mob/user as mob)
-	usr.set_machine(src)
+/obj/machinery/libraryscanner/attack_hand(var/mob/user)
+	user.set_machine(src)
 	var/dat = "<HEAD><TITLE>Scanner Control Interface</TITLE></HEAD><BODY>\n" // <META HTTP-EQUIV='Refresh' CONTENT='10'>
 	if(cache)
-		dat += "<FONT color=#005500>Data stored in memory.</FONT><BR>"
+		dat += span_darkgray("Data stored in memory.") + "<BR>"
 	else
 		dat += "No data stored in memory.<BR>"
-	dat += "<A href='?src=\ref[src];scan=1'>\[Scan\]</A>"
+	dat += "<A href='byond://?src=\ref[src];scan=1'>\[Scan\]</A>"
 	if(cache)
-		dat += "       <A href='?src=\ref[src];clear=1'>\[Clear Memory\]</A><BR><BR><A href='?src=\ref[src];eject=1'>\[Remove Book\]</A>"
+		dat += "       <A href='byond://?src=\ref[src];clear=1'>\[Clear Memory\]</A><BR><BR><A href='byond://?src=\ref[src];eject=1'>\[Remove Book\]</A>"
 	else
 		dat += "<BR>"
-	user << browse(dat, "window=scanner")
+	user << browse("<html>[dat]</html>", "window=scanner")
 	onclose(user, "scanner")
 
 /obj/machinery/libraryscanner/Topic(href, href_list)
@@ -549,16 +555,16 @@
 		return
 
 	if(href_list["scan"])
-		for(var/obj/item/weapon/book/B in contents)
+		for(var/obj/item/book/B in contents)
 			cache = B
 			break
 	if(href_list["clear"])
 		cache = null
 	if(href_list["eject"])
-		for(var/obj/item/weapon/book/B in contents)
+		for(var/obj/item/book/B in contents)
 			B.loc = src.loc
 	src.add_fingerprint(usr)
-	src.updateUsrDialog()
+	src.updateUsrDialog(usr)
 	return
 
 
@@ -574,15 +580,15 @@
 	density = TRUE
 
 /obj/machinery/bookbinder/attackby(var/obj/O as obj, var/mob/user as mob)
-	if(istype(O, /obj/item/weapon/paper) || istype(O, /obj/item/weapon/paper_bundle))
-		if(istype(O, /obj/item/weapon/paper))
+	if(istype(O, /obj/item/paper) || istype(O, /obj/item/paper_bundle))
+		if(istype(O, /obj/item/paper))
 			user.drop_item()
 			O.loc = src
 			user.visible_message("[user] loads some paper into [src].", "You load some paper into [src].")
 			src.visible_message("[src] begins to hum as it warms up its printing drums.")
 			sleep(rand(200,400))
 			src.visible_message("[src] whirs as it prints and binds a new book.")
-			var/obj/item/weapon/book/b = new(src.loc)
+			var/obj/item/book/b = new(src.loc)
 			b.dat = O:info
 			b.name = "Print Job #" + "[rand(100, 999)]"
 			b.icon_state = "book[rand(1,7)]"
@@ -594,11 +600,11 @@
 			src.visible_message("[src] begins to hum as it warms up its printing drums.")
 			sleep(rand(300,500))
 			src.visible_message("[src] whirs as it prints and binds a new book.")
-			var/obj/item/weapon/book/bundle/b = new(src.loc)
+			var/obj/item/book/bundle/b = new(src.loc)
 			b.pages = O:pages
-			for(var/obj/item/weapon/paper/P in O.contents)
+			for(var/obj/item/paper/P in O.contents)
 				P.forceMove(b)
-			for(var/obj/item/weapon/photo/P in O.contents)
+			for(var/obj/item/photo/P in O.contents)
 				P.forceMove(b)
 			b.name = "Print Job #" + "[rand(100, 999)]"
 			b.icon_state = "book[rand(1,7)]"

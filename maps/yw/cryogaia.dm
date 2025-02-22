@@ -16,7 +16,7 @@
 	#include "residential/_residential.dm"
 	#include "residential/residential_keys.dm"
 
-	#if !AWAY_MISSION_TEST //Don't include these for just testing away missions
+	#ifndef AWAY_MISSION_TEST //Don't include these for just testing away missions
 		#include "cryogaia-01-centcomm.dmm" //centcom
 		#include "cryogaia-02-mining.dmm" //mining
 		#include "cryogaia-03-transit.dmm" //transit level

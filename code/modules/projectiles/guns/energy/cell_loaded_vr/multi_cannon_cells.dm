@@ -39,8 +39,8 @@
 		BB = null
 		BB = new projectile_type
 		// TGMC Ammo HUD - Update the HUD every time we expend/fire, given the Curabitur's method of handling firing.
-		if(istype(loc, /obj/item/weapon/gun/projectile/multi_cannon))
-			var/obj/item/weapon/gun/projectile/multi_cannon = loc
+		if(istype(loc, /obj/item/gun/projectile/multi_cannon))
+			var/obj/item/gun/projectile/multi_cannon = loc
 			var/mob/living/user = multi_cannon.loc
 			if(istype(user))
 				user?.hud_used.update_ammo_hud(user, multi_cannon)
@@ -56,12 +56,12 @@
 			BB = new projectile_type
 	if(charge >= max_charge)
 		STOP_PROCESSING(SSobj, src)
-	if(istype(loc,/obj/item/weapon/gun/projectile/multi_cannon))
+	if(istype(loc,/obj/item/gun/projectile/multi_cannon))
 		loc.update_icon()
 
 	// TGMC Ammo HUD - Update the HUD every time we're called to recharge.
-	if(istype(loc, /obj/item/weapon/gun/projectile/multi_cannon))
-		var/obj/item/weapon/gun/projectile/multi_cannon = loc
+	if(istype(loc, /obj/item/gun/projectile/multi_cannon))
+		var/obj/item/gun/projectile/multi_cannon = loc
 		var/mob/living/user = multi_cannon.loc
 		if(istype(user))
 			user?.hud_used.update_ammo_hud(user, multi_cannon)
@@ -115,14 +115,14 @@
 	projectile_type = /obj/item/projectile/beam/medical_cell/phys_heal
 
 /obj/item/projectile/beam/medical_cell/phys_heal/on_hit(var/mob/living/carbon/human/target)
-	if(istype(target, /mob/living/carbon/human))
+	if(ishuman(target))
 		target.adjustBruteLoss(-20)
 		target.adjustFireLoss(-20)
 	else
 		return 1
 
 /obj/item/projectile/beam/medical_cell/detox/on_hit(var/mob/living/carbon/human/target)
-	if(istype(target, /mob/living/carbon/human))
+	if(ishuman(target))
 		target.adjustToxLoss(-15)
 		target.radiation = max(target.radiation - 75, 0) //worse than mlem for rad, better for tox.
 	else

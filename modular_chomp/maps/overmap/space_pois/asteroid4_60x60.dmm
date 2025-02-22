@@ -17,14 +17,14 @@
 "cc" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/table/standard,
-/obj/item/weapon/reagent_containers/food/snacks/cubancarp,
+/obj/item/reagent_containers/food/snacks/cubancarp,
 /turf/simulated/floor/tiled/white,
 /area/submap/asteroid4)
 "cF" = (
 /obj/structure/railing/grey{
 	dir = 1
 	},
-/obj/item/weapon/ore/uranium,
+/obj/item/ore/uranium,
 /turf/simulated/mineral/floor/vacuum,
 /area/submap/asteroid4)
 "db" = (
@@ -57,10 +57,7 @@
 	dir = 1
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8";
-	tag = ""
+	icon_state = "4-8"
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/white,
@@ -71,7 +68,6 @@
 /area/submap/asteroid4)
 "ec" = (
 /obj/structure/cable{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/power/apc{
@@ -167,13 +163,13 @@
 /area/submap/asteroid4)
 "mh" = (
 /obj/structure/table/standard,
-/obj/item/weapon/tool/transforming/jawsoflife,
+/obj/item/tool/transforming/jawsoflife,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/white,
 /area/submap/asteroid4)
 "mT" = (
 /obj/structure/table/standard,
-/obj/item/weapon/storage/toolbox/syndicate/powertools,
+/obj/item/storage/toolbox/syndicate/powertools,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/white,
 /area/submap/asteroid4)
@@ -184,16 +180,24 @@
 /area/submap/asteroid4)
 "nj" = (
 /obj/machinery/door/airlock/external{
-	frequency = 1479;
+	frequency = 1379;
 	icon_state = "door_locked";
-	id_tag = "ass4outer";
+	id_tag = "poitoxins_outer";
 	locked = 1;
+	name = "External Airlock Access";
 	req_access = null
+	},
+/obj/machinery/access_button{
+	command = "cycle_exterior";
+	frequency = 1379;
+	master_tag = "poitoxins_airlock";
+	name = "exterior access button";
+	pixel_x = 25
 	},
 /turf/simulated/floor/plating,
 /area/submap/asteroid4)
 "nn" = (
-/obj/structure/shuttle/window,
+/obj/structure/window/reinforced/full,
 /obj/structure/grille,
 /turf/simulated/floor/plating,
 /area/submap/asteroid4)
@@ -224,7 +228,7 @@
 /area/submap/asteroid4)
 "pS" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/item/weapon/cell/crap,
+/obj/item/cell/crap,
 /turf/simulated/floor/tiled/white,
 /area/submap/asteroid4)
 "qF" = (
@@ -272,14 +276,14 @@
 /area/submap/asteroid4)
 "tv" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/item/weapon/melee/baton/cattleprod,
+/obj/item/melee/baton/cattleprod,
 /turf/simulated/floor/tiled/white,
 /area/submap/asteroid4)
 "tJ" = (
 /obj/structure/table/standard,
 /obj/item/clothing/head/sombrero,
 /obj/effect/decal/cleanable/dirt,
-/obj/item/weapon/cell/high,
+/obj/item/cell/high,
 /turf/simulated/floor/tiled/white,
 /area/submap/asteroid4)
 "tK" = (
@@ -292,8 +296,7 @@
 /area/submap/asteroid4)
 "tQ" = (
 /obj/structure/window/reinforced{
-	dir = 8;
-	tag = "icon-rwindow (WEST)"
+	dir = 8
 	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
@@ -310,7 +313,7 @@
 /area/submap/asteroid4)
 "vo" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/item/weapon/cell/high,
+/obj/item/cell/high,
 /turf/simulated/floor/tiled/white,
 /area/submap/asteroid4)
 "vS" = (
@@ -422,10 +425,7 @@
 /area/submap/asteroid4)
 "AX" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8";
-	tag = ""
+	icon_state = "4-8"
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/white,
@@ -440,8 +440,7 @@
 /area/submap/asteroid4)
 "Dv" = (
 /obj/structure/window/reinforced{
-	dir = 8;
-	tag = "icon-rwindow (WEST)"
+	dir = 8
 	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
@@ -454,13 +453,21 @@
 /area/submap/asteroid4)
 "Ec" = (
 /obj/machinery/door/airlock/external{
-	frequency = 1479;
+	frequency = 1379;
 	icon_state = "door_locked";
-	id_tag = "ass4inner";
+	id_tag = "poitoxins_inner";
 	locked = 1;
+	name = "External Airlock Access";
 	req_access = null
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden,
+/obj/machinery/access_button{
+	command = "cycle_interior";
+	frequency = 1379;
+	master_tag = "poitoxins_airlock";
+	name = "interior access button";
+	pixel_x = -25
+	},
 /turf/simulated/floor/plating,
 /area/submap/asteroid4)
 "Ed" = (
@@ -499,19 +506,18 @@
 "FK" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/table/standard,
-/obj/item/weapon/reagent_containers/food/snacks/cubannachos,
+/obj/item/reagent_containers/food/snacks/cubannachos,
 /turf/simulated/floor/tiled/white,
 /area/submap/asteroid4)
 "Gb" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/item/weapon/melee/baton/cattleprod,
-/obj/item/weapon/cell/high,
+/obj/item/melee/baton/cattleprod,
+/obj/item/cell/high,
 /turf/simulated/floor/tiled/white,
 /area/submap/asteroid4)
 "GZ" = (
 /obj/structure/window/reinforced{
-	dir = 4;
-	tag = "icon-rwindow (EAST)"
+	dir = 4
 	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
@@ -521,11 +527,11 @@
 /area/submap/asteroid4)
 "He" = (
 /obj/structure/table/standard,
-/obj/item/device/transfer_valve,
-/obj/item/device/transfer_valve,
-/obj/item/device/transfer_valve,
-/obj/item/device/transfer_valve,
-/obj/item/device/transfer_valve,
+/obj/item/transfer_valve,
+/obj/item/transfer_valve,
+/obj/item/transfer_valve,
+/obj/item/transfer_valve,
+/obj/item/transfer_valve,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/white,
 /area/submap/asteroid4)
@@ -571,13 +577,12 @@
 /area/submap/asteroid4)
 "Ke" = (
 /obj/effect/decal/remains,
-/obj/item/weapon/material/shard/shrapnel,
+/obj/item/material/shard/shrapnel,
 /turf/simulated/mineral/floor/vacuum,
 /area/submap/asteroid4)
 "Ku" = (
 /obj/machinery/power/smes/buildable/hybrid,
 /obj/structure/cable{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -589,7 +594,7 @@
 /area/submap/asteroid4)
 "LO" = (
 /obj/structure/table/standard,
-/obj/item/weapon/tool/transforming/powerdrill,
+/obj/item/tool/transforming/powerdrill,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/white,
 /area/submap/asteroid4)
@@ -606,7 +611,7 @@
 /area/submap/asteroid4)
 "LV" = (
 /obj/structure/table/standard,
-/obj/item/device/multitool/alien{
+/obj/item/multitool/alien{
 	pixel_y = -14
 	},
 /obj/machinery/atmospherics/unary/vent_pump{
@@ -642,7 +647,7 @@
 /turf/simulated/floor/tiled/white,
 /area/submap/asteroid4)
 "Ns" = (
-/obj/item/weapon/pickaxe,
+/obj/item/pickaxe,
 /turf/simulated/mineral/floor/vacuum,
 /area/submap/asteroid4)
 "OU" = (
@@ -654,7 +659,7 @@
 /area/submap/asteroid4)
 "Pv" = (
 /obj/effect/catwalk_plated/techfloor,
-/obj/item/weapon/material/shard/shrapnel,
+/obj/item/material/shard/shrapnel,
 /turf/simulated/mineral/floor/vacuum,
 /area/submap/asteroid4)
 "PB" = (
@@ -672,24 +677,12 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/white,
 /area/submap/asteroid4)
-"Qr" = (
-/obj/machinery/access_button{
-	command = "cycle_exterior";
-	frequency = 1479;
-	master_tag = "ass4airlock";
-	name = "exterior access button";
-	pixel_x = 23;
-	pixel_y = 35
-	},
-/obj/effect/catwalk_plated/techfloor,
-/turf/simulated/mineral/floor/vacuum,
-/area/submap/asteroid4)
 "Rd" = (
 /turf/simulated/shuttle/floor,
 /area/submap/asteroid4)
 "RB" = (
 /obj/structure/table/standard,
-/obj/item/weapon/weldingtool/alien,
+/obj/item/weldingtool/alien,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/white,
 /area/submap/asteroid4)
@@ -699,7 +692,7 @@
 /turf/simulated/floor/tiled/white,
 /area/submap/asteroid4)
 "RW" = (
-/obj/structure/shuttle/window,
+/obj/structure/window/reinforced/full,
 /turf/simulated/shuttle/plating,
 /area/submap/asteroid4)
 "Sf" = (
@@ -725,28 +718,21 @@
 /turf/simulated/mineral/floor/vacuum,
 /area/submap/asteroid4)
 "Ui" = (
-/obj/machinery/embedded_controller/radio/airlock/airlock_controller{
-	frequency = 1479;
-	id_tag = "ass4airlock";
-	pixel_x = -25;
-	tag_airpump = "ass4pump";
-	tag_chamber_sensor = "ass4sensor";
-	tag_exterior_door = "ass4outer";
-	tag_interior_door = "ass4inner"
-	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 1;
 	frequency = 1479;
 	id_tag = "ass4pump"
 	},
-/obj/machinery/airlock_sensor{
-	frequency = 1479;
-	id_tag = "ass4sensor";
-	pixel_x = 25;
-	pixel_y = -5
-	},
 /obj/machinery/light/small{
 	dir = 4
+	},
+/obj/machinery/embedded_controller/radio/airlock/access_controller{
+	pixel_y = 3;
+	dir = 2;
+	id_tag = "poitoxins_airlock";
+	tag_interior_door = "poitoxins_inner";
+	tag_exterior_door = "poitoxins_outer";
+	pixel_x = 24
 	},
 /turf/simulated/floor/plating,
 /area/submap/asteroid4)
@@ -791,7 +777,7 @@
 /obj/structure/railing/grey{
 	dir = 4
 	},
-/obj/item/weapon/material/shard/shrapnel,
+/obj/item/material/shard/shrapnel,
 /turf/simulated/mineral/floor/vacuum,
 /area/submap/asteroid4)
 "XO" = (
@@ -817,12 +803,12 @@
 /area/submap/asteroid4)
 "YU" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/item/weapon/cell/high,
+/obj/item/cell/high,
 /obj/effect/decal/cleanable/liquid_fuel,
 /turf/simulated/floor/tiled/white,
 /area/submap/asteroid4)
 "Zf" = (
-/obj/item/weapon/material/shard/shrapnel,
+/obj/item/material/shard/shrapnel,
 /turf/simulated/mineral/floor/vacuum,
 /area/submap/asteroid4)
 "Zp" = (
@@ -836,7 +822,7 @@
 /turf/simulated/mineral/floor/vacuum,
 /area/submap/asteroid4)
 "ZB" = (
-/obj/structure/shuttle/window,
+/obj/structure/window/reinforced/full,
 /obj/structure/grille,
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
@@ -847,7 +833,7 @@
 /turf/simulated/floor/reinforced/airless,
 /area/submap/asteroid4)
 "ZP" = (
-/obj/item/weapon/ore/uranium,
+/obj/item/ore/uranium,
 /turf/simulated/mineral/floor/vacuum,
 /area/submap/asteroid4)
 "ZZ" = (
@@ -2864,7 +2850,7 @@ PB
 Ec
 Ui
 nj
-Qr
+TX
 TX
 TX
 TX

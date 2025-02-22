@@ -1,8 +1,7 @@
-import { BooleanLike } from 'common/react';
-
-import { useBackend } from '../backend';
-import { Button, LabeledList, Section } from '../components';
-import { Window } from '../layouts';
+import { useBackend } from 'tgui/backend';
+import { Window } from 'tgui/layouts';
+import { Button, LabeledList, Section } from 'tgui-core/components';
+import type { BooleanLike } from 'tgui-core/react';
 
 type Data = {
   locked_name: string;
@@ -33,8 +32,9 @@ export const Teleporter = (props) => {
                 fluid
                 icon="bullseye"
                 onClick={() => act('select_target')}
-                content={locked_name}
-              />
+              >
+                {locked_name}
+              </Button>
             </LabeledList.Item>
             <LabeledList.Item label="Calibrated">
               <Button.Checkbox
@@ -42,8 +42,9 @@ export const Teleporter = (props) => {
                 checked={calibrated}
                 color={calibrated ? 'good' : 'bad'}
                 onClick={() => act('test_fire')}
-                content={calibrated ? 'Accurate' : 'Test Fire'}
-              />
+              >
+                {calibrated ? 'Accurate' : 'Test Fire'}
+              </Button.Checkbox>
             </LabeledList.Item>
             <LabeledList.Item label="Teleporter">
               <Button.Checkbox
@@ -51,8 +52,9 @@ export const Teleporter = (props) => {
                 checked={teleporter_on}
                 color={teleporter_on ? 'good' : 'bad'}
                 onClick={() => act('toggle_on')}
-                content={teleporter_on ? 'Online' : 'OFFLINE'}
-              />
+              >
+                {teleporter_on ? 'Online' : 'OFFLINE'}
+              </Button.Checkbox>
             </LabeledList.Item>
             <LabeledList.Item label="Station">
               {station_connected ? 'Connected' : 'Not Connected'}

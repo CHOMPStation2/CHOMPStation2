@@ -1,3 +1,5 @@
+//File unticked for combat refactor walkback
+
 /mob/living/simple_mob/animal/sif/shantak
 	maxHealth = 37
 	armor_soak = list(

@@ -1,10 +1,10 @@
-#define PROCESS_ACCURACY 10
-
 /****************************************************
 				INTERNAL ORGANS DEFINES
 ****************************************************/
 /obj/item/organ/internal
 	var/dead_icon // Icon to use when the organ has died.
+
+	var/supply_conversion_value = 0 //CHOMPedit Selling Engineered Organs
 
 /obj/item/organ/internal/die()
 	..()
@@ -61,4 +61,3 @@
 	if(. >= 3 && antibiotics < ANTIBIO_OD)	//INFECTION_LEVEL_THREE
 		if (prob(50))
 			take_damage(1,silent=prob(15))
-

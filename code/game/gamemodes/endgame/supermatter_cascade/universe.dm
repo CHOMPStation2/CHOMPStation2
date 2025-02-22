@@ -9,7 +9,7 @@ var/global/universe_has_ended = 0
 
 /datum/universal_state/supermatter_cascade/OnShuttleCall(var/mob/user)
 	if(user)
-		to_chat(user, "<span class='sinister'>All you hear on the frequency is static and panicked screaming. There will be no shuttle call today.</span>")
+		to_chat(user, span_sinister("All you hear on the frequency is static and panicked screaming. There will be no shuttle call today."))
 	return 0
 
 /datum/universal_state/supermatter_cascade/OnTurfChange(var/turf/T)
@@ -37,7 +37,7 @@ var/global/universe_has_ended = 0
 // Apply changes when entering state
 /datum/universal_state/supermatter_cascade/OnEnter()
 	set background = 1
-	to_world("<span class='sinister' style='font-size:22pt'>You are blinded by a brilliant flash of energy.</span>")
+	to_world(span_sinister(span_cascade("You are blinded by a brilliant flash of energy.")))
 
 	world << sound('sound/effects/cascade.ogg')
 
@@ -119,7 +119,7 @@ The access requirements on the Asteroid Shuttles' consoles have now been revoked
 
 /datum/universal_state/supermatter_cascade/proc/PlayerSet()
 	for(var/datum/mind/M in player_list)
-		if(!istype(M.current,/mob/living))
+		if(!isliving(M.current))
 			continue
 		if(M.current.stat!=2)
 			M.current.Weaken(10)

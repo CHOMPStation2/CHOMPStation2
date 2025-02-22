@@ -91,7 +91,7 @@ world/New()
 
 // display only the reports that haven't been handled
 /client/proc/display_admin_reports()
-	set category = "Admin"
+	set category = "Admin.Moderation"
 	set name = "Display Admin Reports"
 	if(!src.holder) return
 
@@ -103,23 +103,23 @@ world/New()
 		for(var/datum/admin_report/N in reports)
 			if(N.done)
 				continue
-			output += "<b>Reported player:</b> [N.offender_key](CID: [N.offender_cid])<br>"
-			output += "<b>Offense:</b>[N.body]<br>"
+			output += span_bold("Reported player:") + " [N.offender_key](CID: [N.offender_cid])<br>"
+			output += span_bold("Offense:") + "[N.body]<br>"
 			output += "<small>Occurred at [time2text(N.date,"MM/DD hh:mm:ss")]</small><br>"
 			output += "<small>authored by <i>[N.author]</i></small><br>"
-			output += " <a href='?src=\ref[report_topic_handler];client=\ref[src];[HrefToken()];action=remove;ID=[N.ID]'>Flag as Handled</a>"
+			output += " <a href='byond://?src=\ref[report_topic_handler];client=\ref[src];[HrefToken()];action=remove;ID=[N.ID]'>Flag as Handled</a>"
 			if(src.key == N.author)
-				output += " <a href='?src=\ref[report_topic_handler];client=\ref[src];[HrefToken()];action=edit;ID=[N.ID]'>Edit</a>"
+				output += " <a href='byond://?src=\ref[report_topic_handler];client=\ref[src];[HrefToken()];action=edit;ID=[N.ID]'>Edit</a>"
 			output += "<br>"
 			output += "<br>"
 	else
 		output += "Whoops, no reports!"
 
-	usr << browse(output, "window=news;size=600x400")
+	usr << browse("<html>[output]</html>", "window=news;size=600x400")
 
 
 /client/proc/Report(mob/M as mob in world)
-	set category = "Admin"
+	set category = "Admin.Moderation"
 	if(!src.holder)
 		return
 
@@ -150,7 +150,7 @@ world/New()
 		if(N.ID == ID)
 			found = N
 	if(!found)
-		to_chat(src, "<b>* An error occurred, sorry.</b>")
+		to_chat(src, span_boldwarning("* An error occurred, sorry."))
 
 	found.done = 1
 
@@ -159,7 +159,7 @@ world/New()
 
 /client/proc/edit_report(ID as num)
 	if(!src.holder || src.holder.level < 0)
-		to_chat(src, "<b>You tried to modify the news, but you're not an admin!</b>")
+		to_chat(src, span_boldwarning("You tried to modify the news, but you're not an admin!"))
 		return
 
 	var/savefile/Reports = new("data/reports.sav")
@@ -172,7 +172,7 @@ world/New()
 		if(N.ID == ID)
 			found = N
 	if(!found)
-		to_chat(src, "<b>* An error occurred, sorry.</b>")
+		to_chat(src, span_boldwarning("* An error occurred, sorry."))
 
 	var/body = tgui_input_text(src.mob, "Enter a body for the news", "Body", multiline = TRUE, prevent_enter = TRUE)
 	if(!body) return

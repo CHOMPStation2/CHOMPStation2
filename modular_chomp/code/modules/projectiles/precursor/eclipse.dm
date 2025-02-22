@@ -1,4 +1,4 @@
-/obj/item/weapon/gun/energy/freezegun
+/obj/item/gun/energy/freezegun
 	name = "Pulse Froster Prototype"
 	desc = "A strange gun pulsing with energy, it's touch chilling you to the core."
 	icon = 'modular_chomp/icons/obj/guns/precursor/eclipse.dmi'
@@ -11,8 +11,8 @@
 
 	charge_cost = 80 //How much energy is needed to fire.
 
-	accept_cell_type = /obj/item/weapon/cell/device
-	cell_type = /obj/item/weapon/cell/device/weapon
+	accept_cell_type = /obj/item/cell/device
+	cell_type = /obj/item/cell/device/weapon
 	projectile_type = /obj/item/projectile/energy/frostsphere
 
 	recoil_mode = 0
@@ -27,7 +27,7 @@
 		list(mode_name="shotgun", fire_delay=15, projectile_type=/obj/item/projectile/bullet/frostshotgun, charge_cost = 240),
 		)
 
-/obj/item/weapon/gun/energy/flamegun
+/obj/item/gun/energy/flamegun
 	name = "Flame Crystal Projector"
 	desc = "A strange gun pulsing with energy, it's touch warming you up."
 	icon = 'modular_chomp/icons/obj/guns/precursor/eclipse.dmi'
@@ -37,8 +37,8 @@
 
 	w_class = ITEMSIZE_LARGE
 
-	accept_cell_type = /obj/item/weapon/cell/device
-	cell_type = /obj/item/weapon/cell/device/weapon
+	accept_cell_type = /obj/item/cell/device
+	cell_type = /obj/item/cell/device/weapon
 	projectile_type = /obj/item/projectile/energy/flamecrystal
 
 	matter = list(MAT_DURASTEEL = 1000, MAT_MORPHIUM = 500)
@@ -59,7 +59,7 @@
 		list(mode_name="explosive", fire_delay=10, projectile_type=/obj/item/projectile/energy/fireball, charge_cost = 160),
 		)
 
-/obj/item/weapon/gun/energy/elementalray
+/obj/item/gun/energy/elementalray
 	name = "Proto-type Weapon Avatar"
 	desc = "A strange gun vibrating with energy, lathered with diffrent buttons and switches."
 	icon = 'modular_chomp/icons/obj/guns/precursor/eclipse.dmi'
@@ -67,8 +67,8 @@
 	item_state = "avatar"
 	wielded_item_state = "avatar-wielded"
 
-	accept_cell_type = /obj/item/weapon/cell/device
-	cell_type = /obj/item/weapon/cell/device/weapon
+	accept_cell_type = /obj/item/cell/device
+	cell_type = /obj/item/cell/device/weapon
 	projectile_type = /obj/item/projectile/bullet/flamegun
 
 	matter = list(MAT_DURASTEEL = 1000, MAT_MORPHIUM = 500)
@@ -90,9 +90,9 @@
 		list(mode_name="acid", burst=1, fire_delay=0.5, projectile_type=/obj/item/projectile/energy/muckblob, charge_cost = 10, modifystate="avataracid"),
 		)
 
-/obj/item/weapon/gun/energy/elementalray/emag_act(var/remaining_charges, var/mob/user)
+/obj/item/gun/energy/elementalray/emag_act(var/remaining_charges, var/mob/user)
 	..()
-	to_chat(user, "<span class='notice'>You short circuit the internal locking mechanisms of \the [src]!</span>")
+	to_chat(user, span_notice("You short circuit the internal locking mechanisms of \the [src]!"))
 	firemodes = list(
 		list(mode_name="fire", burst=1, fire_delay=15, projectile_type=/obj/item/projectile/bullet/flamegun, charge_cost = 160),
 		list(mode_name="lighting", burst=1, fire_delay=20, projectile_type=/obj/item/projectile/beam/lightingsurge, charge_cost = 480),
@@ -132,14 +132,14 @@
 	desc = "You are covered in acid"
 	mob_overlay_state = "poisoned"
 
-	on_created_text = "<span class='warning'>You are covered in muck...</span>"
-	on_expired_text = "<span class='notice'>You are no longer covered in muck.</span>"
+	on_created_text = span_warning("You are covered in muck...")
+	on_expired_text = span_notice("You are no longer covered in muck.")
 	stacks = MODIFIER_STACK_ALLOWED
 
 	slowdown = 0.2
 
 
-/obj/item/weapon/gun/energy/pulseglove
+/obj/item/gun/energy/pulseglove
 	name = "Strange Glove"
 	desc = "A bulky glove cladded with strange tech. It hums with energy, and the battery port is inaccessiable"
 	icon = 'modular_chomp/icons/obj/guns/precursor/eclipse.dmi'
@@ -149,7 +149,7 @@
 	charge_cost = 380 // 13 shots
 
 	projectile_type = /obj/item/projectile/bullet/lightingburst
-	cell_type = /obj/item/weapon/cell/device/weapon/recharge/alien
+	cell_type = /obj/item/cell/device/weapon/recharge/alien
 	battery_lock = 1
 
 
@@ -188,3 +188,82 @@
 	submunition_spread_min = 200
 	submunitions = list(/obj/item/projectile/energy/redlighting = 3)
 	hud_state = "laser_sniper"
+
+
+
+/obj/item/projectile/energy/mechahack
+	name = "remote hack"
+	icon = 'modular_chomp/icons/obj/guns/precursor/eclipse.dmi'
+	icon_state = "databreach"
+	nodamage = 1
+	irradiate = 3
+	speed = 1 //a bit faster due to the source having a 3 second wind up
+
+/obj/item/projectile/energy/mechahack/on_hit(var/atom/target)
+	. = ..()
+	if(istype(target, /obj/mecha))
+		remote_eject(target)
+
+/obj/item/projectile/energy/mechahack/proc/remote_eject(obj/mecha/M)
+	if(!M)
+		return
+	visible_message(span_critical("\The [M] is remotly hacked and ejects [M.occupant]!"))
+	M.go_out()
+
+/obj/item/projectile/energy/lightingspark
+	name = "lighting spark"
+	icon_state = "spark"
+	nodamage = 1
+	damage_type = HALLOSS
+	speed = 2
+	var/power = 35				//How hard it will hit for with electrocute_act(), decreases with each bounce.
+
+/obj/item/projectile/energy/lightingspark/attack_mob(var/mob/living/target_mob, var/distance, var/miss_modifier=0)
+	//First we shock the guy we just hit.
+	if(ishuman(target_mob))
+		var/mob/living/carbon/human/H = target_mob
+		var/obj/item/organ/external/affected = H.get_organ(check_zone(BP_TORSO))
+		H.electrocute_act(power, src, H.get_siemens_coefficient_organ(affected), affected, 0)
+	else
+		target_mob.electrocute_act(power, src, 0.75, BP_TORSO)
+
+/obj/item/projectile/bullet/crystaline
+	name = "crystal bullet"
+	icon = 'modular_chomp/icons/obj/guns/precursor/eclipse.dmi'
+	icon_state = "crystal"
+	damage = 30
+	armor_penetration = 20
+	embed_chance = 0
+	speed = 2
+
+/obj/item/projectile/energy/eclipse
+	name = "experimental laser"
+	icon = 'modular_chomp/icons/obj/guns/precursor/eclipse.dmi'
+	icon_state = "laser"
+	check_armour = "laser"
+	damage = 30
+	armor_penetration = 20
+	speed = 2
+
+//The normal laser is easier to guard, but can chain screw ups easier
+/obj/item/projectile/energy/eclipse/lorge
+	damage = 50
+	armor_penetration = 20
+	eyeblur = 3
+	icon_state = "mega_laser"
+	speed = 15
+
+/obj/item/projectile/energy/eclipse/lorgealien
+	damage = 50
+	armor_penetration = 40
+	icon_state = "mega_laser_p"
+	speed = 15
+
+/obj/item/projectile/bullet/crystalineburst
+	use_submunitions = 1
+	range = 0
+	embed_chance = 0
+	spread_submunition_damage = FALSE
+	submunition_spread_max = 120
+	submunition_spread_min = 60
+	submunitions = list(/obj/item/projectile/bullet/crystaline = 5)

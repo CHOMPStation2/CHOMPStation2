@@ -8,7 +8,7 @@
 
 	density = TRUE
 	anchored = TRUE
-	circuit = /obj/item/weapon/circuitboard/vr_sleeper
+	circuit = /obj/item/circuitboard/vr_sleeper
 	var/mob/living/carbon/human/occupant = null
 	var/mob/living/carbon/human/avatar = null
 	var/datum/mind/vr_mind = null
@@ -42,10 +42,10 @@
 	if(stat & (NOPOWER|BROKEN))
 		if(occupant)
 			go_out()
-			visible_message("<b>\The [src]</b> emits a low droning sound, before the pod door clicks open.")
+			visible_message(span_infoplain(span_bold("\The [src]") + " emits a low droning sound, before the pod door clicks open."))
 		return
 	else if(eject_dead && occupant && occupant.stat == DEAD) // If someone dies somehow while inside, spit them out.
-		visible_message("<span class='warning'>\The [src] sounds an alarm, swinging its hatch open.</span>")
+		visible_message(span_warning("\The [src] sounds an alarm, swinging its hatch open."))
 		go_out()
 
 /obj/machinery/vr_sleeper/update_icon()
@@ -55,14 +55,14 @@
 /obj/machinery/vr_sleeper/examine(mob/user)
 	. = ..()
 	if(occupant)
-		. += "<span class='notice'>[occupant] is inside.</span>"
+		. += span_notice("[occupant] is inside.")
 
 /obj/machinery/vr_sleeper/Topic(href, href_list)
 	if(..())
 		return 1
 
 	if(usr == occupant)
-		to_chat(usr, "<span class='warning'>You can't reach the controls from the inside.</span>")
+		to_chat(usr, span_warning("You can't reach the controls from the inside."))
 		return
 
 	add_fingerprint(usr)
@@ -75,7 +75,7 @@
 /obj/machinery/vr_sleeper/attackby(var/obj/item/I, var/mob/user)
 	add_fingerprint(user)
 
-	if(occupant && (istype(I, /obj/item/device/healthanalyzer) || istype(I, /obj/item/device/robotanalyzer)))
+	if(occupant && (istype(I, /obj/item/healthanalyzer) || istype(I, /obj/item/robotanalyzer)))
 		I.attack(occupant, user)
 		return
 
@@ -115,7 +115,7 @@
 		if(prob(15 / ( severity / 4 )) && occupant.species.has_organ[O_BRAIN] && occupant.internal_organs_by_name[O_BRAIN])
 			var/obj/item/organ/O = occupant.internal_organs_by_name[O_BRAIN]
 			O.take_damage(severity * 2)
-			visible_message("<span class='danger'>\The [src]'s internal lighting flashes rapidly, before the hatch swings open with a cloud of smoke.</span>")
+			visible_message(span_danger("\The [src]'s internal lighting flashes rapidly, before the hatch swings open with a cloud of smoke."))
 			smoke.set_up(severity, 0, src)
 			smoke.start("#202020")
 		go_out()
@@ -159,9 +159,10 @@
 	if(stat & (BROKEN|NOPOWER))
 		return
 	if(!ishuman(M))
-		to_chat(user, "<span class='warning'>\The [src] rejects [M] with a sharp beep.</span>")
+		to_chat(user, span_warning("\The [src] rejects [M] with a sharp beep."))
+		return
 	if(occupant)
-		to_chat(user, "<span class='warning'>\The [src] is already occupied.</span>")
+		to_chat(user, span_warning("\The [src] is already occupied."))
 		return
 
 	if(M == user)
@@ -171,26 +172,32 @@
 
 	if(do_after(user, 20))
 		if(occupant)
-			to_chat(user, "<span class='warning'>\The [src] is already occupied.</span>")
+			to_chat(user, span_warning("\The [src] is already occupied."))
 			return
 		M.stop_pulling()
 		if(M.client)
 			M.client.perspective = EYE_PERSPECTIVE
 			M.client.eye = src
 		M.loc = src
-		update_use_power(USE_POWER_ACTIVE)
+		//update_use_power(USE_POWER_ACTIVE)
 		occupant = M
 
 		update_icon()
 
-		enter_vr()
+		//VOREstation edit - crashes borers
+		if(!M.has_brain_worms())
+			update_use_power(USE_POWER_ACTIVE)
+			enter_vr()
+		else
+			to_chat(user, span_warning("\The [src] rejects [M] with a sharp beep."))
+		//VOREstation edit end
 	return
 
 /obj/machinery/vr_sleeper/proc/go_out(var/forced = TRUE)
 	if(!occupant)
 		return
 
-	if(!forced && avatar && tgui_alert(avatar, "Someone wants to remove you from virtual reality. Do you want to leave?", "Leave VR?", list("Yes", "No")) == "No")
+	if(!forced && avatar && tgui_alert(avatar, "Someone wants to remove you from virtual reality. Do you want to leave?", "Leave VR?", list("Yes", "No")) != "Yes")
 		return
 
 	if(avatar)
@@ -227,7 +234,7 @@
 
 	avatar = occupant.vr_link
 	// If they've already enterred VR, and are reconnecting, prompt if they want a new body
-	if(avatar && tgui_alert(occupant, "You already have a [avatar.stat == DEAD ? "" : "deceased "]Virtual Reality avatar. Would you like to use it?", "New avatar", list("Yes", "No")) == "No")
+	if(avatar && tgui_alert(occupant, "You already have a [avatar.stat == DEAD ? "" : "deceased "]Virtual Reality avatar. Would you like to use it?", "New avatar", list("Yes", "No")) != "Yes")
 		// Delink the mob
 		occupant.vr_link = null
 		avatar = null
@@ -295,7 +302,7 @@
 // I am not making a new file just for vr-specific mob procs.
 /mob/living/carbon/human/proc/vr_transform_into_mob()
 	set name = "Transform Into Creature"
-	set category = "Abilities"
+	set category = "Abilities.VR"
 	set desc = "Become a different creature"
 
 	var/tf = null
@@ -311,14 +318,14 @@
 
 /mob/living/proc/vr_revert_mob_tf()
 	set name = "Revert Transformation"
-	set category = "Abilities"
+	set category = "Abilities.VR"
 
 	revert_mob_tf()
 
 // Exiting VR but for ghosts
 /mob/living/carbon/human/proc/fake_exit_vr()
 	set name = "Log Out Of Virtual Reality"
-	set category = "Abilities"
+	set category = "Abilities.VR"
 
 	if(tgui_alert(usr, "Would you like to log out of virtual reality?", "Log out?", list("Yes", "No")) == "Yes")
 		release_vore_contents(TRUE)

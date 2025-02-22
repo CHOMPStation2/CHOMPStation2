@@ -132,7 +132,7 @@
 		using = new /obj/screen()
 		using.name = "mov_intent"
 		using.icon = HUD.ui_style
-		using.icon_state = (m_intent == "run" ? "running" : "walking")
+		using.icon_state = (m_intent == I_RUN ? "running" : "walking")
 		using.screen_loc = ui_movi
 		using.color = HUD.ui_color
 		using.alpha = HUD.ui_alpha
@@ -250,7 +250,7 @@
 		internals = new /obj/screen()
 		internals.icon = HUD.ui_style
 		internals.icon_state = "internal0"
-		if(istype(internal, /obj/item/weapon/tank)) //Internals on already? Iight, prove it
+		if(istype(internal, /obj/item/tank)) //Internals on already? Iight, prove it
 			internals.icon_state = "internal1"
 		internals.name = "internal"
 		internals.screen_loc = ui_internal
@@ -331,6 +331,11 @@
 	xenochimera_danger_display.screen_loc = ui_xenochimera_danger_display
 	xenochimera_danger_display.icon_state = "danger00"
 	hud_elements |= xenochimera_danger_display
+
+	lleill_display = new /obj/screen/lleill()
+	lleill_display.screen_loc = ui_lleill_display
+	lleill_display.icon_state = "lleill"
+	hud_elements |= lleill_display
 	//VOREStation Addition end
 
 	ling_chem_display = new /obj/screen/ling/chems()
@@ -391,7 +396,7 @@
 	HUD.inventory_shown = 0
 
 /mob/living/carbon/human/verb/toggle_hotkey_verbs()
-	set category = "OOC"
+	set category = "OOC.Client Settings"
 	set name = "Toggle hotkey buttons"
 	set desc = "This disables or enables the user interface buttons which can be used with hotkeys."
 

@@ -1,3 +1,4 @@
+/*
 SUBSYSTEM_DEF(vote)
 	name = "Vote"
 	wait = 10
@@ -24,7 +25,7 @@ SUBSYSTEM_DEF(vote)
 	if(mode)
 		time_remaining = round((started_time + duration - world.time)/10)
 		if(mode == VOTE_GAMEMODE && ticker.current_state >= GAME_STATE_SETTING_UP)
-			to_chat(world, "<b>Gamemode vote aborted: Game has already started.</b>")
+			to_chat(world, span_bold("Gamemode vote aborted: Game has already started."))
 			reset()
 			return
 		if(time_remaining <= 0)
@@ -115,7 +116,7 @@ SUBSYSTEM_DEF(vote)
 					else
 						factor = 1.4
 				choices["Initiate Crew Transfer"] = round(choices["Initiate Crew Transfer"] * factor)
-				to_world(span_purple("Crew Transfer Factor: [factor]"))
+				to_world(span_filter_system(span_purple("Crew Transfer Factor: [factor]")))
 				greatest_votes = max(choices["Initiate Crew Transfer"], choices["Extend the Shift"]) //VOREStation Edit
 	//CHOMPEdit Begin
 	if(!(mode == VOTE_CREW_TRANSFER))
@@ -132,7 +133,7 @@ SUBSYSTEM_DEF(vote)
 	if(winners.len > 0)
 		if(winners.len > 1)
 			if(mode != VOTE_GAMEMODE || ticker.hide_mode == 0) // Here we are making sure we don't announce potential game modes
-				text = "<b>Vote Tied Between:</b>\n"
+				text = span_bold("Vote Tied Between:") + "\n"
 				for(var/option in winners)
 					text += "\t[option]\n"
 		. = pick(winners)
@@ -141,12 +142,12 @@ SUBSYSTEM_DEF(vote)
 			if(choices[current_votes[key]] == .)
 				round_voters += key // Keep track of who voted for the winning round.
 		if(mode != VOTE_GAMEMODE || . == "Extended" || ticker.hide_mode == 0) // Announce Extended gamemode, but not other gamemodes
-			text += "<b>Vote Result: [mode == VOTE_GAMEMODE ? gamemode_names[.] : .]</b>"
+			text += span_bold("Vote Result: [mode == VOTE_GAMEMODE ? gamemode_names[.] : .]")
 		else
-			text += "<b>The vote has ended.</b>"
+			text += span_bold("The vote has ended.")
 
 	else
-		text += "<b>Vote Result: Inconclusive - No Votes!</b>"
+		text += span_bold("Vote Result: Inconclusive - No Votes!")
 		if(mode == VOTE_ADD_ANTAGONIST)
 			antag_add_failed = 1
 	log_vote(text)
@@ -179,10 +180,10 @@ SUBSYSTEM_DEF(vote)
 	if(mode == VOTE_GAMEMODE) //fire this even if the vote fails.
 		if(!round_progressing)
 			round_progressing = 1
-			to_world(span_red("<b>The round will start soon.</b>"))
+			to_world(span_boldannounce("The round will start soon."))
 
 	if(restart)
-		to_world("World restarting due to vote...")
+		to_world(span_filter_system("World restarting due to vote..."))
 		feedback_set_details("end_error", "restart vote")
 		if(blackbox)
 			blackbox.save_all_data_to_sql()
@@ -265,14 +266,14 @@ SUBSYSTEM_DEF(vote)
 
 		log_vote(text)
 
-		to_world(span_purple("<b>[text]</b>\nType <b>vote</b> or click <a href='?src=\ref[src]'>here</a> to place your votes.\nYou have [CONFIG_GET(number/vote_period) / 10] seconds to vote.")) // CHOMPEdit
+		to_world(span_filter_system(span_purple(span_bold("[text]") + "\nType " + span_bold("vote") + " or click <a href='byond://?src=\ref[src]'>here</a> to place your votes.\nYou have [CONFIG_GET(number/vote_period) / 10] seconds to vote."))) // CHOMPEdit
 		if(vote_type == VOTE_CREW_TRANSFER || vote_type == VOTE_GAMEMODE || vote_type == VOTE_CUSTOM)
 			world << sound('sound/ambience/alarm4.ogg', repeat = 0, wait = 0, volume = 50, channel = 3) //CHOMPStation Edit TFF 10/5/20 - revert to old soundtrack contrary to YW
 
 		if(mode == VOTE_GAMEMODE && round_progressing)
 			gamemode_vote_called = TRUE
 			round_progressing = 0
-			to_world(span_red("<b>Round start has been delayed.</b>"))
+			to_world(span_boldannounce("Round start has been delayed."))
 
 		time_remaining = round(CONFIG_GET(number/vote_period) / 10) // CHOMPEdit
 		return 1
@@ -304,55 +305,55 @@ SUBSYSTEM_DEF(vote)
 			. += "<tr>"
 			var/thisVote = (current_votes[C.ckey] == i)
 			if(mode == VOTE_GAMEMODE)
-				. += "<td>[thisVote ? "<b>" : ""]<a href='?src=\ref[src];vote=[i]'>[gamemode_names[choices[i]]]</a>[thisVote ? "</b>" : ""]</td><td align = 'center'>[votes]</td>"
+				. += "<td>[thisVote ? "<b>" : ""]<a href='byond://?src=\ref[src];vote=[i]'>[gamemode_names[choices[i]]]</a>[thisVote ? "</b>" : ""]</td><td align = 'center'>[votes]</td>"
 			else
-				. += "<td>[thisVote ? "<b>" : ""]<a href='?src=\ref[src];vote=[i]'>[choices[i]]</a>[thisVote ? "</b>" : ""]</td><td align = 'center'>[votes]</td>"
+				. += "<td>[thisVote ? "<b>" : ""]<a href='byond://?src=\ref[src];vote=[i]'>[choices[i]]</a>[thisVote ? "</b>" : ""]</td><td align = 'center'>[votes]</td>"
 			if (additional_text.len >= i)
 				. += additional_text[i]
 			. += "</tr>"
 
-		. += "<tr><td><a href='?src=\ref[src];vote=unvote'>Unvote</a></td></tr>"
+		. += "<tr><td><a href='byond://?src=\ref[src];vote=unvote'>Unvote</a></td></tr>"
 
 		. += "</table><hr>"
 		if(admin)
-			. += "(<a href='?src=\ref[src];[HrefToken()];vote=cancel'>Cancel Vote</a>) "
+			. += "(<a href='byond://?src=\ref[src];[HrefToken()];vote=cancel'>Cancel Vote</a>) "
 	else
 		. += "<h2>Start a vote:</h2><hr><ul><li>"
 		if(admin || CONFIG_GET(flag/allow_vote_restart)) // CHOMPEdit
-			. += "<a href='?src=\ref[src];vote=restart'>Restart</a>"
+			. += "<a href='byond://?src=\ref[src];vote=restart'>Restart</a>"
 		else
 			. += span_gray("Restart (Disallowed)")
 		. += "</li><li>"
 
 		if(admin || CONFIG_GET(flag/allow_vote_restart)) // CHOMPEdit
-			. += "<a href='?src=\ref[src];vote=crew_transfer'>Crew Transfer</a>"
+			. += "<a href='byond://?src=\ref[src];vote=crew_transfer'>Crew Transfer</a>"
 		else
 			. += span_gray("Crew Transfer (Disallowed)")
 
 		if(admin)
-			. += "\t(<a href='?src=\ref[src];[HrefToken()];vote=toggle_restart'>[CONFIG_GET(flag/allow_vote_restart) ? "Allowed" : "Disallowed"]</a>)" // CHOMPEdit
+			. += "\t(<a href='byond://?src=\ref[src];[HrefToken()];vote=toggle_restart'>[CONFIG_GET(flag/allow_vote_restart) ? "Allowed" : "Disallowed"]</a>)" // CHOMPEdit
 		. += "</li><li>"
 
 		if(admin || CONFIG_GET(flag/allow_vote_mode)) // CHOMPEdit
-			. += "<a href='?src=\ref[src];vote=gamemode'>GameMode</a>"
+			. += "<a href='byond://?src=\ref[src];vote=gamemode'>GameMode</a>"
 		else
 			. += span_gray("GameMode (Disallowed)")
 
 		if(admin)
-			. += "\t(<a href='?src=\ref[src];[HrefToken()];vote=toggle_gamemode'>[CONFIG_GET(flag/allow_vote_mode) ? "Allowed" : "Disallowed"]</a>)" // CHOMPEdit
+			. += "\t(<a href='byond://?src=\ref[src];[HrefToken()];vote=toggle_gamemode'>[CONFIG_GET(flag/allow_vote_mode) ? "Allowed" : "Disallowed"]</a>)" // CHOMPEdit
 		. += "</li><li>"
 
 		if(!antag_add_failed && CONFIG_GET(flag/allow_extra_antags)) // CHOMPEdit
-			. += "<a href='?src=\ref[src];vote=add_antagonist'>Add Antagonist Type</a>"
+			. += "<a href='byond://?src=\ref[src];vote=add_antagonist'>Add Antagonist Type</a>"
 		else
 			. += span_gray("Add Antagonist (Disallowed)")
 		. += "</li>"
 
 		if(admin)
-			. += "<li><a href='?src=\ref[src];[HrefToken()];vote=custom'>Custom</a></li>"
+			. += "<li><a href='byond://?src=\ref[src];[HrefToken()];vote=custom'>Custom</a></li>"
 		. += "</ul><hr>"
 
-	. += "<a href='?src=\ref[src];vote=close' style='position:absolute;right:50px'>Close</a></body></html>"
+	. += "<a href='byond://?src=\ref[src];vote=close' style='position:absolute;right:50px'>Close</a></body></html>"
 
 /datum/controller/subsystem/vote/Topic(href, href_list[])
 	if(!usr || !usr.client)
@@ -399,8 +400,9 @@ SUBSYSTEM_DEF(vote)
 	usr.client.vote()
 
 /client/verb/vote()
-	set category = "OOC"
+	set category = "OOC.Game"
 	set name = "Vote"
 
 	if(SSvote)
 		src << browse(SSvote.interface(src), "window=vote;size=500x[300 + SSvote.choices.len * 25]")
+*/

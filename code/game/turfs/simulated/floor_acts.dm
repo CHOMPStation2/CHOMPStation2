@@ -31,6 +31,7 @@
 	else if(temp_destroy && exposed_temperature >= (temp_destroy + 100) && prob(1) && !is_plating())
 		make_plating() //destroy the tile, exposing plating
 		burn_tile(exposed_temperature)
+		feed_lingering_fire(0.35) // CHOMPAdd - Lingering fire, feeding fires
 	return
 
 //should be a little bit lower than the temperature required to destroy the material

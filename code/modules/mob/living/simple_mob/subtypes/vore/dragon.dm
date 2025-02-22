@@ -8,7 +8,7 @@
 	icon = 'icons/mob/vore64x64.dmi'
 	vis_height = 64
 
-	faction = "dragon"
+	faction = FACTION_DRAGON
 	maxHealth = 500 // Boss
 	health = 500
 	see_in_dark = 8
@@ -17,7 +17,7 @@
 	melee_damage_upper = 30
 
 	meat_amount = 15
-	meat_type = /obj/item/weapon/reagent_containers/food/snacks/meat
+	meat_type = /obj/item/reagent_containers/food/snacks/meat
 
 	//Space dragons aren't affected by atmos.
 	min_oxy = 0
@@ -107,7 +107,7 @@
 	catalogue_data = list(/datum/category_item/catalogue/fauna/phoron_dragon)
 	maxHealth = 300
 	health = 300
-	faction = "virgo3b"
+	faction = FACTION_VIRGO3B
 	icon_dead = "phoron_dragon_dead"
 	icon_living = "phoron_dragon"
 	icon_state = "phoron_dragon"
@@ -120,8 +120,8 @@
 	. = ..()
 	if(!riding_datum)
 		riding_datum = new /datum/riding/simple_mob(src)
-	add_verb(src,/mob/living/simple_mob/proc/animal_mount) //CHOMPEdit TGPanel
-	add_verb(src,/mob/living/proc/toggle_rider_reins) //CHOMPEdit TGPanel
+	add_verb(src, /mob/living/simple_mob/proc/animal_mount)
+	add_verb(src, /mob/living/proc/toggle_rider_reins)
 	movement_cooldown = 0
 
 /mob/living/simple_mob/vore/aggressive/dragon/MouseDrop_T(mob/living/M, mob/living/user)
@@ -135,7 +135,7 @@
 	tt_desc = "Astra Draconinae"
 	maxHealth = 300
 	health = 300
-	faction = "dragon"
+	faction = FACTION_DRAGON
 	icon_dead = "space_dragon_dead"
 	icon_living = "space_dragon"
 	icon_state = "space_dragon"
@@ -143,3 +143,27 @@
 	mount_offset_x = -9
 	has_eye_glow = TRUE
 	vore_eyes = TRUE
+
+// A fluff sprite for an event mob created by grayscaledrake
+
+/mob/living/simple_mob/vore/aggressive/dragon/gray_scaled
+	name = "gray scaled drake"
+	desc = "This is a big, scaly drake."
+
+	icon_dead = "drake_dead"
+	icon_living = "drake"
+	icon_state = "drake"
+	icon_rest = "drake_rest"
+	icon = 'icons/mob/vore_grayscale_drake.dmi'
+	vis_height = 115
+
+	old_x = -57
+	old_y = 0
+	default_pixel_x = -57
+	pixel_x = -57
+	pixel_y = 0
+
+	vore_active = 1
+	vore_capacity = 1
+	vore_pounce_chance = 0 // Beat them into crit before eating.
+	vore_icons = SA_ICON_LIVING

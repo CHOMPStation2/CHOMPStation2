@@ -56,3 +56,15 @@ VBO_maw14
 VBO_intestines9
 VBO_notbelly
 VBO_wriggly
+
+Hunter Dovetail:
+VBO_maw15
+VBO_maw16
+VBOanim_belly2
+VBOanim_gullet1
+VBOanim_gullet2
+VBOanim_intestine1
+VBOanim_belly3
+VBO_anim_intestine2
+
+

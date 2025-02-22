@@ -81,10 +81,7 @@
 
 /obj/machinery/atmospherics/unary/vent_pump/Initialize()
 	. = ..()
-	//soundloop = new(list(src), FALSE)
 
-/obj/machinery/atmospherics/unary/vent_pump/New()
-	..()
 	air_contents.volume = ATMOS_DEFAULT_VOLUME_PUMP
 
 	icon = null
@@ -119,8 +116,8 @@
 	icon_connect_type = "-aux"
 	connect_types = CONNECT_TYPE_AUX //connects to aux pipes
 
-/obj/machinery/atmospherics/unary/vent_pump/high_volume/New()
-	..()
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/Initialize()
+	. = ..()
 	air_contents.volume = ATMOS_DEFAULT_VOLUME_PUMP + 800
 
 // VOREStation Edit Start - Wall mounted vents
@@ -144,8 +141,8 @@
 	power_channel = ENVIRON
 	power_rating = 30000	//15 kW ~ 20 HP
 
-/obj/machinery/atmospherics/unary/vent_pump/engine/New()
-	..()
+/obj/machinery/atmospherics/unary/vent_pump/engine/Initialize()
+	. = ..()
 	air_contents.volume = ATMOS_DEFAULT_VOLUME_PUMP + 500 //meant to match air injector
 
 /obj/machinery/atmospherics/unary/vent_pump/update_icon(var/safety = 0)
@@ -165,14 +162,14 @@
 
 	if(welded)
 		vent_icon += "weld"
-		playsound(src, stop_sound, 25, ignore_walls = FALSE, preference = /datum/client_preference/air_pump_noise)
+		playsound(src, stop_sound, 25, ignore_walls = FALSE, preference = /datum/preference/toggle/air_pump_noise)
 
 	else if(!use_power || !node || (stat & (NOPOWER|BROKEN)))
 		vent_icon += "off"
-		playsound(src, stop_sound, 25, ignore_walls = FALSE, preference = /datum/client_preference/air_pump_noise)
+		playsound(src, stop_sound, 25, ignore_walls = FALSE, preference = /datum/preference/toggle/air_pump_noise)
 	else
 		vent_icon += "[pump_direction ? "out" : "in"]"
-		playsound(src, start_sound, 25, ignore_walls = FALSE, preference = /datum/client_preference/air_pump_noise)
+		playsound(src, start_sound, 25, ignore_walls = FALSE, preference = /datum/preference/toggle/air_pump_noise)
 
 
 	add_overlay(icon_manager.get_atmos_icon("device", , , vent_icon))
@@ -238,11 +235,10 @@
 		//If we're in an area that is fucking ideal, and we don't have to do anything, chances are we won't next tick either so why redo these calculations?
 		//JESUS FUCK.  THERE ARE LITERALLY 250 OF YOU MOTHERFUCKERS ON ZLEVEL ONE AND YOU DO THIS SHIT EVERY TICK WHEN VERY OFTEN THERE IS NO REASON TO
 
-		if(pump_direction && pressure_checks == PRESSURE_CHECK_EXTERNAL && controller_iteration > 10)	//99% of all vents
+		if(pump_direction && pressure_checks == PRESSURE_CHECK_EXTERNAL && Master.iteration > 10)	//99% of all vents
 			//Fucking hibernate because you ain't doing shit.
 			hibernate = 1
-			spawn(rand(100,200))	//hibernate for 10 or 20 seconds randomly
-				hibernate = 0
+			addtimer(VARSET_CALLBACK(src, hibernate, 0), rand(10 SECONDS,20 SECONDS), TIMER_DELETE_ME) //hibernate randomly
 
 
 	if (power_draw >= 0)
@@ -311,8 +307,12 @@
 	radio_filter_in = frequency==1439?(RADIO_FROM_AIRALARM):null
 	radio_filter_out = frequency==1439?(RADIO_TO_AIRALARM):null
 	if(frequency)
-		radio_connection = register_radio(src, frequency, frequency, radio_filter_in)
-		src.broadcast_status()
+		set_frequency(frequency)
+
+/obj/machinery/atmospherics/unary/vent_pump/proc/set_frequency(new_frequency)
+	radio_connection = register_radio(src, frequency, new_frequency, radio_filter_in)
+	frequency = new_frequency
+	broadcast_status()
 
 /obj/machinery/atmospherics/unary/vent_pump/receive_signal(datum/signal/signal)
 	if(stat & (NOPOWER|BROKEN))
@@ -379,37 +379,49 @@
 		return
 
 	if(signal.data["status"] != null)
-		spawn(2)
-			broadcast_status()
+		addtimer(CALLBACK(src, PROC_REF(broadcast_status)), 2, TIMER_DELETE_ME)
 		return //do not update_icon
 
 		//log_admin("DEBUG \[[world.timeofday]\]: vent_pump/receive_signal: unknown command \"[signal.data["command"]]\"\n[signal.debug_print()]")
-	spawn(2)
-		broadcast_status()
+	addtimer(CALLBACK(src, PROC_REF(broadcast_status)), 2, TIMER_DELETE_ME)
 	update_icon()
 	return
 
 /obj/machinery/atmospherics/unary/vent_pump/attackby(obj/item/W, mob/user)
 	if(W.has_tool_quality(TOOL_WELDER))
-		var/obj/item/weapon/weldingtool/WT = W.get_welder()
+		var/obj/item/weldingtool/WT = W.get_welder()
 		if (WT.remove_fuel(0,user))
-			to_chat(user, "<span class='notice'>Now welding the vent.</span>")
+			to_chat(user, span_notice("Now welding the vent."))
 			if(do_after(user, 20 * WT.toolspeed))
 				if(!src || !WT.isOn()) return
 				playsound(src, WT.usesound, 50, 1)
 				if(!welded)
-					user.visible_message("<b>\The [user]</b> welds the vent shut.", "<span class='notice'>You weld the vent shut.</span>", "You hear welding.")
+					user.visible_message(span_bold("\The [user]") + " welds the vent shut.", span_notice("You weld the vent shut."), "You hear welding.")
 					welded = 1
 					update_icon()
 				else
-					user.visible_message("<span class='notice'>[user] unwelds the vent.</span>", "<span class='notice'>You unweld the vent.</span>", "You hear welding.")
+					user.visible_message(span_notice("[user] unwelds the vent."), span_notice("You unweld the vent."), "You hear welding.")
 					welded = 0
 					update_icon()
 			else
-				to_chat(user, "<span class='notice'>The welding tool needs to be on to start this task.</span>")
+				to_chat(user, span_notice("The welding tool needs to be on to start this task."))
 		else
-			to_chat(user, "<span class='warning'>You need more welding fuel to complete this task.</span>")
+			to_chat(user, span_warning("You need more welding fuel to complete this task."))
 			return 1
+	if(W.has_tool_quality(TOOL_MULTITOOL))
+		var/choice = tgui_alert(user, "[src] has an ID of \"[id_tag]\" and a frequency of [frequency]. What would you like to change?", "[src] ID", list("ID Tag", "Frequency", "Nothing"))
+		switch(choice)
+			if("ID Tag")
+				var/new_id = tgui_input_text(user, "[src] has an ID of \"[id_tag]\". What would you like it to be?", "[src] ID", id_tag, 30, FALSE, TRUE)
+				if(new_id)
+					id_tag = new_id
+
+			if("Frequency")
+				var/new_frequency = tgui_input_number(user, "[src] has a frequency of [frequency]. What would you like it to be?", "[src] frequency", frequency, RADIO_HIGH_FREQ, RADIO_LOW_FREQ)
+				if(new_frequency)
+					new_frequency = sanitize_frequency(new_frequency, RADIO_LOW_FREQ, RADIO_HIGH_FREQ)
+					set_frequency(new_frequency)
+		return TRUE
 	else
 		..()
 
@@ -428,26 +440,26 @@
 	if(old_stat != stat)
 		update_icon()
 
-/obj/machinery/atmospherics/unary/vent_pump/attackby(var/obj/item/weapon/W as obj, var/mob/user as mob)
+/obj/machinery/atmospherics/unary/vent_pump/attackby(var/obj/item/W as obj, var/mob/user as mob)
 	if (!W.has_tool_quality(TOOL_WRENCH))
 		return ..()
 	if (!(stat & NOPOWER) && use_power)
-		to_chat(user, "<span class='warning'>You cannot unwrench \the [src], turn it off first.</span>")
+		to_chat(user, span_warning("You cannot unwrench \the [src], turn it off first."))
 		return 1
 	var/turf/T = src.loc
 	if (node && node.level==1 && isturf(T) && !T.is_plating())
-		to_chat(user, "<span class='warning'>You must remove the plating first.</span>")
+		to_chat(user, span_warning("You must remove the plating first."))
 		return 1
 	if(!can_unwrench())
-		to_chat(user, "<span class='warning'>You cannot unwrench \the [src], it is too exerted due to internal pressure.</span>")
+		to_chat(user, span_warning("You cannot unwrench \the [src], it is too exerted due to internal pressure."))
 		add_fingerprint(user)
 		return 1
 	playsound(src, W.usesound, 50, 1)
-	to_chat(user, "<span class='notice'>You begin to unfasten \the [src]...</span>")
+	to_chat(user, span_notice("You begin to unfasten \the [src]..."))
 	if (do_after(user, 40 * W.toolspeed))
 		user.visible_message( \
-			"<b>\The [user]</b> unfastens \the [src].", \
-			"<span class='notice'>You have unfastened \the [src].</span>", \
+			span_infoplain(span_bold("\The [user]") + " unfastens \the [src]."), \
+			span_notice("You have unfastened \the [src]."), \
 			"You hear a ratchet.")
 		deconstruct()
 

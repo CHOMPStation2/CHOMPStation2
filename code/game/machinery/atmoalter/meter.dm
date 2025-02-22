@@ -79,11 +79,11 @@
 /obj/machinery/meter/examine(mob/user)
 	. = ..()
 
-	if(get_dist(user, src) > 3 && !(istype(user, /mob/living/silicon/ai) || istype(user, /mob/observer/dead)))
-		. += "<span class='warning'>You are too far away to read it.</span>"
+	if(get_dist(user, src) > 3 && !(isAI(user) || isobserver(user)))
+		. += span_warning("You are too far away to read it.")
 
 	else if(stat & (NOPOWER|BROKEN))
-		. += "<span class='warning'>The display is off.</span>"
+		. += span_warning("The display is off.")
 
 	else if(target)
 		var/datum/gas_mixture/environment = target.return_air()
@@ -96,7 +96,7 @@
 
 /obj/machinery/meter/Click()
 
-	if(istype(usr, /mob/living/carbon/human) || istype(usr, /mob/living/silicon/ai)) // ghosts can call ..() for examine
+	if(ishuman(usr) || isAI(usr)) // ghosts can call ..() for examine
 		var/mob/living/L = usr
 		if(!L.get_active_hand() || !L.Adjacent(src))
 			usr.examinate(src)
@@ -107,17 +107,17 @@
 /obj/machinery/meter/attackby(var/obj/item/W, var/mob/user)
 	if(W.has_tool_quality(TOOL_WRENCH))
 		playsound(src, W.usesound, 50, 1)
-		to_chat(user, "<span class='notice'>You begin to unfasten \the [src]...</span>")
+		to_chat(user, span_notice("You begin to unfasten \the [src]..."))
 		if(do_after(user, 40 * W.toolspeed))
 			user.visible_message( \
-				"<b>\The [user]</b> unfastens \the [src].", \
-				"<span class='notice'>You have unfastened \the [src].</span>", \
+				span_infoplain(span_bold("\The [user]") + " unfastens \the [src]."), \
+				span_notice("You have unfastened \the [src]."), \
 				"You hear ratchet.")
 			new /obj/item/pipe_meter(get_turf(src))
 			qdel(src)
 			return
 
-	if(istype(W, /obj/item/device/multitool))
+	if(istype(W, /obj/item/multitool))
 		for(var/obj/machinery/atmospherics/pipe/P in loc)
 			pipes_on_turf |= P
 		if(!pipes_on_turf.len)
@@ -125,7 +125,7 @@
 		target = pipes_on_turf[1]
 		pipes_on_turf.Remove(target)
 		pipes_on_turf.Add(target)
-		to_chat(user, "<span class='notice'>Pipe meter set to moniter \the [target].</span>")
+		to_chat(user, span_notice("Pipe meter set to moniter \the [target]."))
 		return
 
 	return ..()
@@ -135,5 +135,5 @@
 /obj/machinery/meter/turf/select_target()
 	return loc
 
-/obj/machinery/meter/turf/attackby(var/obj/item/weapon/W as obj, var/mob/user as mob)
+/obj/machinery/meter/turf/attackby(var/obj/item/W as obj, var/mob/user as mob)
 	return

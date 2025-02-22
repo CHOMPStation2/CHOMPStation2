@@ -9,8 +9,7 @@
 /area/submap/clownmime)
 "c" = (
 /obj/structure/shuttle/engine/heater{
-	dir = 1;
-	tag = "icon-heater (NORTH)"
+	dir = 1
 	},
 /obj/structure/window/reinforced,
 /turf/simulated/shuttle/plating,
@@ -20,12 +19,12 @@
 /turf/simulated/shuttle/floor/white,
 /area/submap/clownmime)
 "f" = (
-/obj/item/weapon/broken_bottle,
+/obj/item/broken_bottle,
 /obj/structure/loot_pile/surface/bones,
 /turf/simulated/shuttle/floor/white,
 /area/submap/clownmime)
 "g" = (
-/obj/item/weapon/material/shard{
+/obj/item/material/shard{
 	icon_state = "medium"
 	},
 /obj/structure/loot_pile/surface/bones,
@@ -44,7 +43,7 @@
 /turf/simulated/mineral/floor/vacuum,
 /area/submap/clownmime)
 "p" = (
-/obj/item/weapon/material/shard{
+/obj/item/material/shard{
 	icon_state = "medium"
 	},
 /turf/simulated/mineral/floor/vacuum,
@@ -68,22 +67,21 @@
 /area/submap/clownmime)
 "y" = (
 /obj/structure/closet/crate,
-/obj/item/weapon/tool/wrench/fuelrod,
-/obj/item/weapon/fuel_assembly/tritium,
-/obj/item/weapon/fuel_assembly/tritium,
-/obj/item/weapon/fuel_assembly/tritium,
-/obj/item/weapon/fuel_assembly/tritium,
+/obj/item/tool/wrench/fuelrod,
+/obj/item/fuel_assembly/tritium,
+/obj/item/fuel_assembly/tritium,
+/obj/item/fuel_assembly/tritium,
+/obj/item/fuel_assembly/tritium,
 /turf/simulated/shuttle/floor/white,
 /area/submap/clownmime)
 "z" = (
 /obj/structure/closet/crate,
-/obj/item/weapon/grenade/supermatter,
+/obj/item/grenade/supermatter,
 /turf/simulated/shuttle/floor/white,
 /area/submap/clownmime)
 "A" = (
 /obj/structure/shuttle/engine/heater{
-	dir = 4;
-	tag = "icon-heater (EAST)"
+	dir = 4
 	},
 /obj/structure/window/reinforced{
 	dir = 8
@@ -93,13 +91,11 @@
 "B" = (
 /obj/structure/shuttle/engine/propulsion{
 	dir = 4;
-	icon_state = "propulsion_l";
-	tag = "icon-propulsion_l (WEST)"
+	icon_state = "propulsion_l"
 	},
 /obj/structure/shuttle/engine/propulsion{
 	dir = 4;
-	icon_state = "burst_r";
-	tag = "icon-burst_r (WEST)"
+	icon_state = "burst_r"
 	},
 /turf/simulated/shuttle/plating,
 /area/submap/clownmime)
@@ -110,13 +106,12 @@
 "E" = (
 /obj/structure/shuttle/engine/propulsion{
 	dir = 4;
-	icon_state = "propulsion_l";
-	tag = "icon-propulsion_l (WEST)"
+	icon_state = "propulsion_l"
 	},
 /turf/simulated/shuttle/plating,
 /area/submap/clownmime)
 "F" = (
-/obj/item/weapon/material/shard{
+/obj/item/material/shard{
 	pixel_x = 9
 	},
 /obj/machinery/computer/ship{
@@ -133,7 +128,7 @@
 /turf/simulated/shuttle/floor,
 /area/submap/clownmime)
 "I" = (
-/obj/item/weapon/material/shard{
+/obj/item/material/shard{
 	icon_state = "medium"
 	},
 /obj/random/trash,
@@ -157,60 +152,50 @@
 "L" = (
 /turf/simulated/shuttle/floor,
 /area/submap/clownmime)
-"M" = (
-/turf/simulated/shuttle/wall,
-/turf/space,
-/area/submap/clownmime)
-"N" = (
-/turf/space,
-/turf/simulated/shuttle/wall,
-/area/submap/clownmime)
 "O" = (
 /turf/simulated/shuttle/floor/white,
 /area/submap/clownmime)
 "P" = (
-/obj/item/weapon/pickaxe,
+/obj/item/pickaxe,
 /turf/simulated/shuttle/floor/white,
 /area/submap/clownmime)
 "Q" = (
 /obj/structure/closet/crate,
-/obj/item/weapon/fuel_assembly/phoron,
-/obj/item/weapon/fuel_assembly/phoron,
-/obj/item/weapon/fuel_assembly/phoron,
-/obj/item/weapon/fuel_assembly/phoron,
-/obj/item/weapon/fuel_assembly/phoron,
+/obj/item/fuel_assembly/phoron,
+/obj/item/fuel_assembly/phoron,
+/obj/item/fuel_assembly/phoron,
+/obj/item/fuel_assembly/phoron,
+/obj/item/fuel_assembly/phoron,
 /turf/simulated/shuttle/floor/white,
 /area/submap/clownmime)
 "R" = (
 /obj/structure/shuttle/engine/propulsion{
 	dir = 4;
-	icon_state = "propulsion_l";
-	tag = "icon-propulsion_l (WEST)"
+	icon_state = "propulsion_l"
 	},
 /obj/structure/shuttle/engine/propulsion{
 	dir = 4;
-	icon_state = "propulsion_l";
-	tag = "icon-propulsion_l (WEST)"
+	icon_state = "propulsion_l"
 	},
 /turf/simulated/shuttle/plating,
 /area/submap/clownmime)
 "S" = (
-/obj/item/weapon/material/shard{
+/obj/item/material/shard{
 	pixel_x = 9
 	},
 /turf/simulated/mineral/floor/vacuum,
 /area/submap/clownmime)
 "T" = (
 /obj/structure/closet/crate,
-/obj/item/weapon/fuel_assembly/deuterium,
-/obj/item/weapon/fuel_assembly/deuterium,
-/obj/item/weapon/fuel_assembly/deuterium,
-/obj/item/weapon/fuel_assembly/deuterium,
-/obj/item/weapon/fuel_assembly/deuterium,
+/obj/item/fuel_assembly/deuterium,
+/obj/item/fuel_assembly/deuterium,
+/obj/item/fuel_assembly/deuterium,
+/obj/item/fuel_assembly/deuterium,
+/obj/item/fuel_assembly/deuterium,
 /turf/simulated/shuttle/floor/white,
 /area/submap/clownmime)
 "U" = (
-/obj/item/weapon/material/shard{
+/obj/item/material/shard{
 	icon_state = "medium"
 	},
 /obj/random/trash,
@@ -225,17 +210,17 @@
 /area/submap/clownmime)
 "W" = (
 /obj/structure/closet/crate,
-/obj/item/weapon/gun/magnetic/fuelrod,
-/obj/item/weapon/fuel_assembly/blitz/shielded,
-/obj/item/weapon/fuel_assembly/blitz/shielded,
-/obj/item/weapon/fuel_assembly/blitz/shielded,
-/obj/item/weapon/fuel_assembly/blitz/shielded,
+/obj/item/gun/magnetic/fuelrod,
+/obj/item/fuel_assembly/blitz/shielded,
+/obj/item/fuel_assembly/blitz/shielded,
+/obj/item/fuel_assembly/blitz/shielded,
+/obj/item/fuel_assembly/blitz/shielded,
 /turf/simulated/shuttle/floor/white,
 /area/submap/clownmime)
 "Y" = (
 /obj/structure/closet/crate,
-/obj/item/weapon/fuel_assembly/supermatter,
-/obj/item/weapon/fuel_assembly/supermatter,
+/obj/item/fuel_assembly/supermatter,
+/obj/item/fuel_assembly/supermatter,
 /turf/simulated/shuttle/floor/white,
 /area/submap/clownmime)
 
@@ -418,8 +403,8 @@ a
 (9,1,1) = {"
 a
 a
-M
-M
+v
+v
 m
 m
 m
@@ -438,7 +423,7 @@ a
 a
 "}
 (10,1,1) = {"
-M
+v
 e
 v
 v
@@ -526,7 +511,7 @@ m
 a
 "}
 (14,1,1) = {"
-M
+v
 e
 v
 v
@@ -550,8 +535,8 @@ a
 (15,1,1) = {"
 a
 a
-M
-M
+v
+v
 m
 m
 m
@@ -578,11 +563,11 @@ m
 a
 a
 a
-M
+v
 m
 m
 J
-M
+v
 m
 m
 m
@@ -621,13 +606,13 @@ a
 a
 a
 a
-M
-N
+v
+v
 p
 G
 K
-N
-M
+v
+v
 m
 m
 m
@@ -819,13 +804,13 @@ a
 a
 a
 a
-M
+v
 A
 A
 A
 A
 A
-M
+v
 a
 a
 a

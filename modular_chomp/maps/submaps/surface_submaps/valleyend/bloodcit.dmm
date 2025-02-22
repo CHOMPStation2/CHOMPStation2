@@ -6,7 +6,7 @@
 /turf/simulated/wall/iron,
 /area/submap/bloodcitadel)
 "d" = (
-/obj/item/weapon/spellbook/oneuse/smoke,
+/obj/item/spellbook/oneuse/smoke,
 /obj/structure/closet/crate/secure/loot,
 /turf/simulated/floor/cult,
 /area/submap/bloodcitadel)
@@ -21,7 +21,7 @@
 /turf/simulated/wall/cult,
 /area/submap/bloodcitadel)
 "m" = (
-/obj/item/weapon/spellbook/oneuse/forcewall,
+/obj/item/spellbook/oneuse/forcewall,
 /obj/structure/closet/crate/secure/loot,
 /turf/simulated/floor/cult,
 /area/submap/bloodcitadel)
@@ -32,7 +32,7 @@
 /turf/simulated/floor/cult,
 /area/submap/bloodcitadel)
 "p" = (
-/obj/item/weapon/spellbook/oneuse/charge,
+/obj/item/spellbook/oneuse/charge,
 /obj/structure/closet/crate/secure/loot,
 /turf/simulated/floor/cult,
 /area/submap/bloodcitadel)
@@ -44,7 +44,7 @@
 /obj/item/clothing/suit/space/cult,
 /obj/item/clothing/head/helmet/space/cult,
 /obj/structure/table/marble,
-/obj/item/device/perfect_tele/frontier,
+/obj/item/perfect_tele/frontier,
 /turf/simulated/floor/cult,
 /area/submap/bloodcitadel)
 "v" = (
@@ -79,12 +79,12 @@
 /obj/item/clothing/suit/cultrobes/magusred,
 /obj/item/clothing/head/culthood/magus,
 /obj/structure/table/marble,
-/obj/item/weapon/melee/cursedblade,
+/obj/item/melee/cursedblade,
 /turf/simulated/floor/cult,
 /area/submap/bloodcitadel)
 "F" = (
-/obj/item/weapon/storage/backpack/cultpack,
-/obj/item/weapon/storage/backpack/cultpack,
+/obj/item/storage/backpack/cultpack,
+/obj/item/storage/backpack/cultpack,
 /obj/structure/table/marble,
 /turf/simulated/floor/cult,
 /area/submap/bloodcitadel)
@@ -124,13 +124,13 @@
 /turf/simulated/floor/cult,
 /area/submap/bloodcitadel)
 "W" = (
-/obj/item/weapon/telecube/randomized/mated,
+/obj/item/telecube/randomized/mated,
 /obj/structure/closet/crate/secure/loot,
 /turf/simulated/floor/cult,
 /area/submap/bloodcitadel)
 "Y" = (
-/obj/item/weapon/melee/cultblade,
-/obj/item/weapon/melee/cultblade,
+/obj/item/melee/cultblade,
+/obj/item/melee/cultblade,
 /obj/structure/table/marble,
 /turf/simulated/floor/cult,
 /area/submap/bloodcitadel)

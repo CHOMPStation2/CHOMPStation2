@@ -4,35 +4,35 @@
 /area/template_noop)
 "b" = (
 /turf/template_noop,
-/area/submap/peninsula)
+/area/submap/Peninsula)
 "c" = (
-/turf/simulated/floor/outdoors/rocks,
-/area/submap/peninsula)
+/turf/simulated/floor/outdoors/rocks/virgo3b,
+/area/submap/Peninsula)
 "d" = (
-/turf/simulated/floor/water,
-/area/submap/peninsula)
+/turf/simulated/floor/water/virgo3b,
+/area/submap/Peninsula)
 "e" = (
 /obj/structure/flora/tree/sif,
 /turf/template_noop,
-/area/submap/peninsula)
+/area/submap/Peninsula)
 "f" = (
 /turf/simulated/mineral/ignore_mapgen,
-/area/submap/peninsula)
+/area/submap/Peninsula)
 "g" = (
 /obj/structure/table/woodentable,
-/obj/item/device/flashlight,
+/obj/item/flashlight,
 /turf/template_noop,
-/area/submap/peninsula)
+/area/submap/Peninsula)
 "h" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/cell/device,
-/obj/item/weapon/cell/device,
+/obj/item/cell/device,
+/obj/item/cell/device,
 /turf/template_noop,
-/area/submap/peninsula)
+/area/submap/Peninsula)
 "i" = (
 /obj/structure/bonfire,
 /turf/template_noop,
-/area/submap/peninsula)
+/area/submap/Peninsula)
 "j" = (
 /obj/structure/flora/tree/sif,
 /turf/template_noop,

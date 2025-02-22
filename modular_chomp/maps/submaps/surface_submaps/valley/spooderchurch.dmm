@@ -33,13 +33,12 @@
 /area/submap/spooderchurch)
 "hn" = (
 /obj/structure/table/sifwoodentable,
-/obj/random/contraband/nofail,
+/obj/random/contraband,
 /turf/simulated/floor/wood/sif,
 /area/submap/spooderchurch)
 "hp" = (
 /obj/structure/closet/crate/plastic,
-/obj/random/cash/huge,
-/obj/random/cash/huge,
+/obj/random/cash,
 /turf/simulated/floor/wood/sif,
 /area/submap/spooderchurch)
 "ig" = (
@@ -64,10 +63,8 @@
 /area/submap/spooderchurch)
 "lF" = (
 /obj/structure/table/rack/shelf,
-/obj/random/energy/highend,
-/obj/random/energy/highend,
-/obj/item/clothing/glasses/night,
-/obj/item/clothing/glasses/night,
+/obj/random/toolbox,
+/obj/random/toolbox,
 /turf/simulated/floor/wood/sif,
 /area/submap/spooderchurch)
 "mY" = (
@@ -108,15 +105,7 @@
 /area/submap/spooderchurch)
 "uF" = (
 /obj/structure/table/sifwoodentable,
-/obj/random/firstaid,
-/turf/simulated/floor/wood/sif,
-/area/submap/spooderchurch)
-"vk" = (
-/obj/structure/table/rack/shelf,
-/obj/random/projectile,
-/obj/random/projectile,
-/obj/item/clothing/glasses/night,
-/obj/item/clothing/glasses/night,
+/obj/random/toolbox,
 /turf/simulated/floor/wood/sif,
 /area/submap/spooderchurch)
 "vA" = (
@@ -177,8 +166,7 @@
 /turf/simulated/floor/wood/sif,
 /area/submap/spooderchurch)
 "zY" = (
-/obj/structure/table/sifwoodentable,
-/obj/item/weapon/card/emag,
+/obj/structure/closet/crate/plastic,
 /turf/simulated/floor/wood/sif,
 /area/submap/spooderchurch)
 "Ah" = (
@@ -323,7 +311,9 @@
 /turf/simulated/floor/wood/sif,
 /area/submap/spooderchurch)
 "Wb" = (
-/mob/living/simple_mob/humanoid/merc/ranged/deagle,
+/mob/living/simple_mob/humanoid/merc/ranged/deagle{
+	loot_list = list(/obj/item/gun/projectile/deagle = 100, /obj/item/spellbook/oneuse/smoke = 100)
+	},
 /turf/simulated/floor/wood/sif,
 /area/submap/spooderchurch)
 "Xe" = (
@@ -345,12 +335,11 @@
 /area/submap/spooderchurch)
 "Zl" = (
 /obj/structure/table/sifwoodentable,
-/obj/item/weapon/flame/candle/candelabra/everburn,
+/obj/item/flame/candle/candelabra/everburn,
 /turf/simulated/floor/wood/sif,
 /area/submap/spooderchurch)
 "ZX" = (
 /obj/structure/table/rack/shelf,
-/obj/item/weapon/spellbook/oneuse/smoke,
 /turf/simulated/floor/wood/sif,
 /area/submap/spooderchurch)
 
@@ -549,11 +538,11 @@ Cm
 Cm
 JI
 Bw
-hn
+Cq
 xx
 hn
-Ah
-hn
+zY
+Cq
 FR
 hn
 Bw
@@ -819,7 +808,7 @@ YO
 YO
 Zl
 Bw
-xx
+YO
 YO
 YO
 Bw
@@ -857,7 +846,7 @@ YO
 YO
 lF
 Bw
-VU
+zY
 YO
 YO
 Bw
@@ -928,12 +917,12 @@ Cm
 JI
 Bw
 YO
-zY
+Cq
 YO
 YO
-vk
+lF
 Bw
-VU
+zY
 YO
 YO
 Bw
@@ -1233,13 +1222,13 @@ Cm
 Pd
 JI
 Bw
-hn
-xx
+Cq
+YO
 hn
 FR
 hn
-xx
-hn
+YO
+Cq
 Bw
 tI
 yY

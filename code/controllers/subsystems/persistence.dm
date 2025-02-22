@@ -10,7 +10,6 @@ SUBSYSTEM_DEF(persistence)
 	var/list/all_paintings = list()
 	var/list/unpicked_paintings = list()
 
-// CHOMPEdit Start
 /datum/controller/subsystem/persistence/Initialize()
 	for(var/datum/persistent/P as anything in subtypesof(/datum/persistent))
 		if(initial(P.name))
@@ -18,7 +17,6 @@ SUBSYSTEM_DEF(persistence)
 			persistence_datums[P.type] = P
 			P.Initialize()
 	return SS_INIT_SUCCESS
-// CHOMPEdit End
 
 /datum/controller/subsystem/persistence/Shutdown()
 	for(var/thing in persistence_datums)
@@ -27,7 +25,7 @@ SUBSYSTEM_DEF(persistence)
 
 /datum/controller/subsystem/persistence/proc/track_value(var/atom/value, var/track_type)
 
-	if(CONFIG_GET(flag/persistence_disabled)) //if the config is set to persistence disabled, nothing will save or load. // CHOMPEdit
+	if(CONFIG_GET(flag/persistence_disabled)) //if the config is set to persistence disabled, nothing will save or load.
 		return
 
 	var/turf/T = get_turf(value)
@@ -35,7 +33,7 @@ SUBSYSTEM_DEF(persistence)
 		return
 
 	var/area/A = get_area(T)
-	if(!A || (A.flags & AREA_FLAG_IS_NOT_PERSISTENT))
+	if(!A || (A.flag_check(AREA_FLAG_IS_NOT_PERSISTENT)))
 		return
 
 	if(!(T.z in using_map.persist_levels))

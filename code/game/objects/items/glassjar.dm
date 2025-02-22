@@ -17,8 +17,8 @@
 	drop_sound = 'sound/items/drop/glass.ogg'
 	pickup_sound = 'sound/items/pickup/glass.ogg'
 
-/obj/item/glass_jar/New()
-	..()
+/obj/item/glass_jar/Initialize(mapload)
+	. = ..()
 	update_icon()
 
 /obj/item/glass_jar/afterattack(var/atom/A, var/mob/user, var/proximity)
@@ -33,14 +33,14 @@
 			to_chat(user, "[A] doesn't fit into \the [src].")
 			return
 		var/mob/L = A
-		user.visible_message("<span class='notice'>[user] scoops [L] into \the [src].</span>", "<span class='notice'>You scoop [L] into \the [src].</span>")
+		user.visible_message(span_notice("[user] scoops [L] into \the [src]."), span_notice("You scoop [L] into \the [src]."))
 		L.loc = src
 		contains = JAR_ANIMAL
 		update_icon()
 		return
 	else if(istype(A, /obj/effect/spider/spiderling))
 		var/obj/effect/spider/spiderling/S = A
-		user.visible_message("<span class='notice'>[user] scoops [S] into \the [src].</span>", "<span class='notice'>You scoop [S] into \the [src].</span>")
+		user.visible_message(span_notice("[user] scoops [S] into \the [src]."), span_notice("You scoop [S] into \the [src]."))
 		S.loc = src
 		STOP_PROCESSING(SSobj, S) // No growing inside jars
 		contains = JAR_SPIDER
@@ -52,21 +52,21 @@
 		if(JAR_MONEY)
 			for(var/obj/O in src)
 				O.loc = user.loc
-			to_chat(user, "<span class='notice'>You take money out of \the [src].</span>")
+			to_chat(user, span_notice("You take money out of \the [src]."))
 			contains = JAR_NOTHING
 			update_icon()
 			return
 		if(JAR_ANIMAL)
 			for(var/mob/M in src)
 				M.loc = user.loc
-				user.visible_message("<span class='notice'>[user] releases [M] from \the [src].</span>", "<span class='notice'>You release [M] from \the [src].</span>")
+				user.visible_message(span_notice("[user] releases [M] from \the [src]."), span_notice("You release [M] from \the [src]."))
 			contains = JAR_NOTHING
 			update_icon()
 			return
 		if(JAR_SPIDER)
 			for(var/obj/effect/spider/spiderling/S in src)
 				S.loc = user.loc
-				user.visible_message("<span class='notice'>[user] releases [S] from \the [src].</span>", "<span class='notice'>You release [S] from \the [src].</span>")
+				user.visible_message(span_notice("[user] releases [S] from \the [src]."), span_notice("You release [S] from \the [src]."))
 				START_PROCESSING(SSobj, S) // They can grow after being let out though
 			contains = JAR_NOTHING
 			update_icon()
@@ -76,37 +76,37 @@
 		if(istype(M,/mob/living/voice)) //Don't knock voices out!
 			continue
 		M.forceMove(get_turf(user))
-		to_chat(M, "<span class='warning'>[user] shakes you out of \the [src]!</span>")
-		to_chat(user, "<span class='notice'>You shake [M] out of \the [src]!</span>")
+		to_chat(M, span_warning("[user] shakes you out of \the [src]!"))
+		to_chat(user, span_notice("You shake [M] out of \the [src]!"))
 //CHOMPADD END
 /obj/item/glass_jar/attackby(var/obj/item/W, var/mob/user)
-	if(istype(W, /obj/item/weapon/spacecash))
+	if(istype(W, /obj/item/spacecash))
 		if(contains == JAR_NOTHING)
 			contains = JAR_MONEY
 		if(contains != JAR_MONEY)
 			return
-		var/obj/item/weapon/spacecash/S = W
-		user.visible_message("<span class='notice'>[user] puts [S.worth] [S.worth > 1 ? "thalers" : "thaler"] into \the [src].</span>")
+		var/obj/item/spacecash/S = W
+		user.visible_message(span_notice("[user] puts [S.worth] [S.worth > 1 ? "thalers" : "thaler"] into \the [src]."))
 		user.drop_from_inventory(S)
 		S.loc = src
 		update_icon()
 	//CHOMPDDITION: your god can not help you
-	if(istype(W,/obj/item/weapon/holder/micro))
+	if(istype(W,/obj/item/holder/micro))
 		var/full = 0
 		for(var/mob/M in src)
 			if(istype(M,/mob/living/voice)) //Don't count voices as people!
 				continue
 			full++
 		if(full >= 2)
-			to_chat(user, "<span class='warning'>You can't fit anyone else into \the [src]!</span>")
+			to_chat(user, span_warning("You can't fit anyone else into \the [src]!"))
 		else
-			var/obj/item/weapon/holder/micro/holder = W
+			var/obj/item/holder/micro/holder = W
 			if(holder.held_mob && (holder.held_mob in holder))
 				var/mob/living/M = holder.held_mob
 				holder.dump_mob()
-				to_chat(M, "<span class='warning'>[user] stuffs you into \the [src]!</span>")
+				to_chat(M, span_warning("[user] stuffs you into \the [src]!"))
 				M.forceMove(src)
-				to_chat(user, "<span class='notice'>You stuff \the [M] into \the [src]!</span>")
+				to_chat(user, span_notice("You stuff \the [M] into \the [src]!"))
 //CHOMPADD END
 /obj/item/glass_jar/update_icon() // Also updates name and desc
 	underlays.Cut()
@@ -118,7 +118,7 @@
 		if(JAR_MONEY)
 			name = "tip jar"
 			desc = "A small jar with money inside."
-			for(var/obj/item/weapon/spacecash/S in src)
+			for(var/obj/item/spacecash/S in src)
 				var/image/money = image(S.icon, S.icon_state)
 				money.pixel_x = rand(-2, 3)
 				money.pixel_y = rand(-6, 6)
@@ -174,7 +174,7 @@
 		if(JAR_MONEY)
 			name = "tip tank"
 			desc = "A large [name] with money inside."
-			for(var/obj/item/weapon/spacecash/S in src)
+			for(var/obj/item/spacecash/S in src)
 				var/image/money = image(S.icon, S.icon_state)
 				money.pixel_x = rand(-2, 3)
 				money.pixel_y = rand(-6, 6)
@@ -207,11 +207,11 @@
 /obj/item/glass_jar/fish/afterattack(var/atom/A, var/mob/user, var/proximity)
 	if(!filled)
 		if(istype(A, /obj/structure/sink) || istype(A, /turf/simulated/floor/water))
-			if(contains && user.a_intent == "help")
-				to_chat(user, "<span class='warning'>That probably isn't the best idea.</span>")
+			if(contains && user.a_intent == I_HELP)
+				to_chat(user, span_warning("That probably isn't the best idea."))
 				return
 
-			to_chat(user, "<span class='notice'>You fill \the [src] with water!</span>")
+			to_chat(user, span_notice("You fill \the [src] with water!"))
 			filled = TRUE
 			update_icon()
 			return
@@ -221,18 +221,18 @@
 /obj/item/glass_jar/fish/attack_self(var/mob/user)
 	if(filled)
 		if(contains == JAR_ANIMAL)
-			if(user.a_intent == "help")
-				to_chat(user, "<span class='notice'>Maybe you shouldn't empty the water...</span>")
+			if(user.a_intent == I_HELP)
+				to_chat(user, span_notice("Maybe you shouldn't empty the water..."))
 				return
 
 			else
 				filled = FALSE
-				user.visible_message("<span class='warning'>[user] dumps out \the [src]'s water!</span>")
+				user.visible_message(span_warning("[user] dumps out \the [src]'s water!"))
 				update_icon()
 				return
 
 		else
-			user.visible_message("<span class='notice'>[user] dumps \the [src]'s water.</span>")
+			user.visible_message(span_notice("[user] dumps \the [src]'s water."))
 			filled = FALSE
 			update_icon()
 			return

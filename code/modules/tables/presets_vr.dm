@@ -7,15 +7,15 @@
 	can_reinforce = FALSE
 	can_plate = FALSE
 
-/obj/structure/table/darkglass/New()
-	material = get_material_by_name("darkglass")
+/obj/structure/table/darkglass/Initialize()
+	material = get_material_by_name(MAT_DARKGLASS)
 	verbs -= /obj/structure/table/verb/do_flip
 	verbs -= /obj/structure/table/proc/do_put
 
-	..()
+	. = ..()
 
-/obj/structure/table/darkglass/dismantle(obj/item/weapon/tool/wrench/W, mob/user)
-	to_chat(user, "<span class='warning'>You cannot dismantle \the [src].</span>")
+/obj/structure/table/darkglass/dismantle(obj/item/tool/wrench/W, mob/user)
+	to_chat(user, span_warning("You cannot dismantle \the [src]."))
 	return
 /obj/structure/table/alien/blue
 	icon = 'icons/turf/shuttle_alien_blue.dmi'
@@ -30,21 +30,21 @@
 	can_reinforce = FALSE
 	can_plate = FALSE
 
-/obj/structure/table/fancyblack/New()
-	material = get_material_by_name("fancyblack")
+/obj/structure/table/fancyblack/Initialize(mapload)
+	material = get_material_by_name(MAT_FANCYBLACK)
 	verbs -= /obj/structure/table/verb/do_flip
 	verbs -= /obj/structure/table/proc/do_put
 
-	..()
+	. = ..()
 
-/obj/structure/table/fancyblack/dismantle(obj/item/weapon/tool/wrench/W, mob/user)
-	to_chat(user, "<span class='warning'>You cannot dismantle \the [src].</span>")
+/obj/structure/table/fancyblack/dismantle(obj/item/tool/wrench/W, mob/user)
+	to_chat(user, span_warning("You cannot dismantle \the [src]."))
 	return
 
 /obj/structure/table/gold
 	icon_state = "plain_preview"
 	color = "#FFFF00"
 
-/obj/structure/table/gold/New()
+/obj/structure/table/gold/Initialize()
 	material = get_material_by_name(MAT_GOLD)
-	..()
+	. = ..()

@@ -59,7 +59,7 @@
 	special_attack_cooldown = 6 SECONDS
 	ai_holder_type = /datum/ai_holder/simple_mob/intentional/giant_spider_broodmother
 	poison_per_bite = 2
-	poison_type = "cyanide"
+	poison_type = REAGENT_ID_CYANIDE
 
 	loot_list = list(/obj/item/royal_spider_egg = 100)
 
@@ -96,7 +96,7 @@
 		step_away(broodling, src)
 		count++
 
-	visible_message(span("danger", "\The [src] releases brood from its birthing sack!"))
+	visible_message(span_danger("\The [src] releases brood from its birthing sack!"))
 
 /mob/living/simple_mob/animal/giant_spider/broodmother/proc/launch_brood(atom/A)
 	set waitfor = FALSE
@@ -110,7 +110,7 @@
 		broodling.throw_at(A, 10)
 		count++
 
-	visible_message(span("danger", "\The [src] launches brood from the distance!"))
+	visible_message(span_danger("\The [src] launches brood from the distance!"))
 
 /mob/living/simple_mob/animal/giant_spider/broodmother/proc/can_spawn_brood()
 	var/brood_amount = 0

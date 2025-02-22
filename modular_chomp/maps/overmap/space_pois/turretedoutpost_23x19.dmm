@@ -3,11 +3,11 @@
 /turf/simulated/floor/airless,
 /area/submap/turretedoutpost)
 "bT" = (
-/obj/item/weapon/reagent_containers/food/drinks/bottle/vodka{
+/obj/item/reagent_containers/food/drinks/bottle/vodka{
 	pixel_x = -4;
 	pixel_y = 4
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/vodka{
+/obj/item/reagent_containers/food/drinks/bottle/vodka{
 	pixel_x = 3
 	},
 /obj/structure/table/woodentable,
@@ -47,8 +47,6 @@
 /area/submap/turretedoutpost)
 "dL" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/asteroid_steel{
@@ -88,7 +86,6 @@
 /area/submap/turretedoutpost)
 "gL" = (
 /obj/structure/cable{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/machinery/power/smes/buildable/point_of_interest,
@@ -98,7 +95,7 @@
 /area/submap/turretedoutpost)
 "gQ" = (
 /obj/structure/bed,
-/obj/item/weapon/bedsheet/orange,
+/obj/item/bedsheet/orange,
 /turf/simulated/floor/tiled/asteroid_steel{
 	temperature = 293.15
 	},
@@ -109,11 +106,11 @@
 /area/submap/turretedoutpost)
 "hJ" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/clipboard,
+/obj/item/clipboard,
 /obj/machinery/light{
 	dir = 1
 	},
-/obj/item/device/radio,
+/obj/item/radio,
 /turf/simulated/floor/tiled/asteroid_steel{
 	icon_state = "dark"
 	},
@@ -170,7 +167,7 @@
 /obj/item/clothing/gloves/arm_guard/laserproof,
 /obj/item/clothing/shoes/leg_guard/laserproof,
 /obj/item/clothing/head/helmet/laserproof,
-/obj/item/weapon/gun/energy/gun/etommy,
+/obj/item/gun/energy/gun/etommy,
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/turretedoutpost)
 "lR" = (
@@ -196,7 +193,7 @@
 /area/submap/turretedoutpost)
 "nC" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/pen/blue,
+/obj/item/pen/blue,
 /turf/simulated/floor/tiled/asteroid_steel{
 	icon_state = "dark"
 	},
@@ -234,7 +231,7 @@
 /area/submap/turretedoutpost)
 "rp" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/paper/crumpled,
+/obj/item/paper/crumpled,
 /turf/simulated/floor/tiled/asteroid_steel{
 	icon_state = "dark"
 	},
@@ -285,7 +282,6 @@
 	pixel_y = 24
 	},
 /obj/structure/cable{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /turf/simulated/floor/tiled/asteroid_steel{
@@ -294,8 +290,6 @@
 /area/submap/turretedoutpost)
 "wu" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/asteroid_steel{
@@ -303,15 +297,15 @@
 	},
 /area/submap/turretedoutpost)
 "wx" = (
-/obj/item/weapon/grenade/chem_grenade/teargas,
+/obj/item/grenade/chem_grenade/teargas,
 /obj/structure/table/rack/shelf/steel,
-/obj/item/weapon/grenade/confetti,
-/obj/item/weapon/grenade/confetti,
-/obj/item/weapon/grenade/confetti,
-/obj/item/weapon/grenade/supermatter,
-/obj/item/weapon/grenade/supermatter,
-/obj/item/weapon/grenade/smokebomb,
-/obj/item/weapon/grenade/smokebomb,
+/obj/item/grenade/confetti,
+/obj/item/grenade/confetti,
+/obj/item/grenade/confetti,
+/obj/item/grenade/supermatter,
+/obj/item/grenade/supermatter,
+/obj/item/grenade/smokebomb,
+/obj/item/grenade/smokebomb,
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/turretedoutpost)
 "wy" = (
@@ -326,13 +320,13 @@
 /obj/item/clothing/suit/armor/bulletproof/alt,
 /obj/item/clothing/gloves/arm_guard/bulletproof,
 /obj/item/clothing/head/helmet/bulletproof,
-/obj/item/weapon/gun/projectile/automatic/bullpup,
+/obj/item/gun/projectile/automatic/bullpup,
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/turretedoutpost)
 "xx" = (
 /obj/structure/table/reinforced,
 /obj/machinery/light,
-/obj/item/weapon/storage/box/syndie_kit/spy,
+/obj/item/storage/box/syndie_kit/spy,
 /turf/simulated/floor/tiled/asteroid_steel{
 	icon_state = "dark"
 	},
@@ -372,8 +366,7 @@
 "Et" = (
 /obj/structure/bed/chair{
 	dir = 8;
-	icon_state = "chair";
-	tag = "icon-chair (WEST)"
+	icon_state = "chair"
 	},
 /mob/living/simple_mob/humanoid/merc/ranged/space/heavy,
 /turf/simulated/floor/tiled/asteroid_steel{
@@ -395,7 +388,7 @@
 /area/submap/turretedoutpost)
 "Ff" = (
 /obj/structure/bed,
-/obj/item/weapon/bedsheet/orange,
+/obj/item/bedsheet/orange,
 /obj/machinery/light{
 	dir = 4
 	},
@@ -409,14 +402,12 @@
 /obj/item/clothing/gloves/arm_guard/laserproof,
 /obj/item/clothing/shoes/leg_guard/laserproof,
 /obj/item/clothing/head/helmet/laserproof,
-/obj/item/weapon/gun/energy/lasershotgun,
+/obj/item/gun/energy/lasershotgun,
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/turretedoutpost)
 "GJ" = (
 /obj/machinery/door/airlock,
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/airless,
@@ -468,7 +459,7 @@
 	},
 /area/submap/turretedoutpost)
 "Ne" = (
-/obj/item/weapon/reagent_containers/food/snacks/beetsoup,
+/obj/item/reagent_containers/food/snacks/beetsoup,
 /obj/machinery/light{
 	dir = 8
 	},
@@ -498,8 +489,6 @@
 /area/submap/turretedoutpost)
 "QG" = (
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/tiled/asteroid_steel{
@@ -513,7 +502,7 @@
 /area/submap/turretedoutpost)
 "UE" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/paper_bin,
+/obj/item/paper_bin,
 /turf/simulated/floor/tiled/asteroid_steel{
 	icon_state = "dark"
 	},
@@ -560,8 +549,6 @@
 /area/submap/turretedoutpost)
 "Yg" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /turf/simulated/floor/tiled/asteroid_steel{
@@ -580,13 +567,13 @@
 /obj/item/clothing/suit/armor/bulletproof/alt,
 /obj/item/clothing/gloves/arm_guard/bulletproof,
 /obj/item/clothing/head/helmet/bulletproof,
-/obj/item/weapon/gun/projectile/shotgun/pump/USDF,
+/obj/item/gun/projectile/shotgun/pump/USDF,
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/turretedoutpost)
 "ZE" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/folder,
-/obj/item/device/radio,
+/obj/item/folder,
+/obj/item/radio,
 /turf/simulated/floor/tiled/asteroid_steel{
 	temperature = 293.15
 	},

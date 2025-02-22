@@ -1,5 +1,5 @@
 /// Away Missions
-#if AWAY_MISSION_TEST
+#ifdef AWAY_MISSION_TEST
 #include "../expedition_vr/beach/beach.dmm"
 #include "../expedition_vr/beach/cave.dmm"
 #include "../expedition_vr/alienship/alienship.dmm"
@@ -13,7 +13,7 @@
 /datum/map_template/common_lateload/away_beach
 	name = "Desert Planet - Z1 Beach"
 	desc = "The beach away mission."
-	mappath = 'maps/expedition_vr/beach/beach.dmm'
+	mappath = "maps/expedition_vr/beach/beach.dmm"
 	associated_map_datum = /datum/map_z_level/common_lateload/away_beach
 
 /datum/map_z_level/common_lateload/away_beach
@@ -24,7 +24,7 @@
 /datum/map_template/common_lateload/away_beach_cave
 	name = "Desert Planet - Z2 Cave"
 	desc = "The beach away mission's cave."
-	mappath = 'maps/expedition_vr/beach/cave.dmm'
+	mappath = "maps/expedition_vr/beach/cave.dmm"
 	associated_map_datum = /datum/map_z_level/common_lateload/away_beach_cave
 
 /datum/map_template/common_lateload/away_beach_cave/on_map_loaded(z)
@@ -49,7 +49,7 @@
 /datum/map_template/common_lateload/away_alienship
 	name = "Alien Ship - Z1 Ship"
 	desc = "The alien ship away mission."
-	mappath = 'maps/expedition_vr/alienship/alienship.dmm'
+	mappath = "maps/expedition_vr/alienship/alienship.dmm"
 	associated_map_datum = /datum/map_z_level/common_lateload/away_alienship
 
 /datum/map_z_level/common_lateload/away_alienship
@@ -63,7 +63,7 @@
 /datum/map_template/common_lateload/away_aerostat_surface
 	name = "Remmi Aerostat - Z2 Surface"
 	desc = "The surface from the Virgo 2 Aerostat."
-	mappath = 'maps/expedition_vr/aerostat/surface.dmm'
+	mappath = "maps/expedition_vr/aerostat/surface.dmm"
 	associated_map_datum = /datum/map_z_level/common_lateload/away_aerostat_surface
 
 /datum/map_template/common_lateload/away_aerostat_surface/on_map_loaded(z)
@@ -85,7 +85,7 @@
 /datum/map_template/common_lateload/away_debrisfield
 	name = "Debris Field - Z1 Space"
 	desc = "The Virgo 3 Debris Field away mission."
-	mappath = 'maps/expedition_vr/space/debrisfield.dmm'
+	mappath = "maps/expedition_vr/space/debrisfield.dmm"
 	associated_map_datum = /datum/map_z_level/common_lateload/away_debrisfield
 
 /datum/map_template/common_lateload/away_debrisfield/on_map_loaded(z)
@@ -100,7 +100,7 @@
 /datum/map_template/common_lateload/away_fueldepot
 	name = "Fuel Depot - Z1 Space"
 	desc = "An unmanned fuel depot floating in space."
-	mappath = 'maps/expedition_vr/space/fueldepot.dmm'
+	mappath = "maps/expedition_vr/space/fueldepot.dmm"
 	associated_map_datum = /datum/map_z_level/common_lateload/away_fueldepot
 
 /datum/map_z_level/common_lateload/away_fueldepot
@@ -130,71 +130,71 @@
 /datum/map_template/common_lateload/gateway/snow_outpost
 	name = "Snow Outpost"
 	desc = "Big snowy area with various outposts."
-	mappath = 'maps/gateway_vr/snow_outpost.dmm'
+	mappath = "maps/gateway_vr/snow_outpost.dmm"
 	associated_map_datum = /datum/map_z_level/common_lateload/gateway_destination
 */
 #include "../gateway_vr/zoo.dm"
 /datum/map_template/common_lateload/gateway/zoo
 	name = "Gateway - Zoo"
 	desc = "Gigantic space zoo"
-	mappath = 'maps/gateway_vr/zoo_b.dmm'
+	mappath = "maps/gateway_vr/zoo_b.dmm"
 
 #include "../gateway_vr/carpfarm.dm"
 /datum/map_template/common_lateload/gateway/carpfarm
 	name = "Gateway - Carp Farm"
 	desc = "Asteroid base surrounded by carp"
-	mappath = 'maps/gateway_vr/carpfarm.dmm'
+	mappath = "maps/gateway_vr/carpfarm.dmm"
 
 #include "../gateway_vr/snowfield.dm"
 /datum/map_template/common_lateload/gateway/snowfield
 	name = "Gateway - Snow Field"
 	desc = "An old base in middle of snowy wasteland"
-	mappath = 'maps/gateway_vr/snowfield.dmm'
+	mappath = "maps/gateway_vr/snowfield.dmm"
 
 #include "../gateway_vr/listeningpost.dm"
 /datum/map_template/common_lateload/gateway/listeningpost
 	name = "Gateway - Listening Post"
 	desc = "Asteroid-bound mercenary listening post"
-	mappath = 'maps/gateway_vr/listeningpost.dmm'
+	mappath = "maps/gateway_vr/listeningpost.dmm"
 
 #include "../gateway_vr/variable/honlethhighlands.dm"
 /datum/map_template/common_lateload/gateway/honlethhighlands_a
 	name = "Gateway - Honleth Highlands A"
 	desc = "The cold surface of some planet."
-	mappath = 'maps/gateway_vr/variable/honlethhighlands_a.dmm'
+	mappath = "maps/gateway_vr/variable/honlethhighlands_a.dmm"
 
 /datum/map_template/common_lateload/gateway/honlethhighlands_b
 	name = "Gateway - Honleth Highlands B"
 	desc = "The cold surface of some planet."
-	mappath = 'maps/gateway_vr/variable/honlethhighlands_b.dmm'
+	mappath = "maps/gateway_vr/variable/honlethhighlands_b.dmm"
 
 
 #include "../gateway_vr/variable/arynthilake.dm"
 /datum/map_template/common_lateload/gateway/arynthilake
 	name = "Gateway - Arynthi Lake A"
 	desc = "A grassy surface with some abandoned structures."
-	mappath = 'maps/gateway_vr/variable/arynthilake_a.dmm'
+	mappath = "maps/gateway_vr/variable/arynthilake_a.dmm"
 
 /datum/map_template/common_lateload/gateway/arynthilakeunderground
 	name = "Gateway - Arynthi Lake Underground A"
 	desc = "A grassy surface with some abandoned structures."
-	mappath = 'maps/gateway_vr/variable/arynthilakeunderground_a.dmm'
+	mappath = "maps/gateway_vr/variable/arynthilakeunderground_a.dmm"
 
 /datum/map_template/common_lateload/gateway/arynthilake_b
 	name = "Gateway - Arynthi Lake B"
 	desc = "A grassy surface with some abandoned structures."
-	mappath = 'maps/gateway_vr/variable/arynthilake_b.dmm'
+	mappath = "maps/gateway_vr/variable/arynthilake_b.dmm"
 
 /datum/map_template/common_lateload/gateway/arynthilakeunderground_b
 	name = "Gateway - Arynthi Lake Underground B"
 	desc = "A grassy surface with some abandoned structures."
-	mappath = 'maps/gateway_vr/variable/arynthilakeunderground_b.dmm'
+	mappath = "maps/gateway_vr/variable/arynthilakeunderground_b.dmm"
 
 #include "../gateway_vr/wildwest.dm"
 /datum/map_template/common_lateload/gateway/wildwest
 	name = "Gateway - Wild West"
 	desc = "A classic."
-	mappath = 'maps/gateway_vr/wildwest.dmm'
+	mappath = "maps/gateway_vr/wildwest.dmm"
 
 #include "../gateway_vr/lucky_7.dm"
 
@@ -214,7 +214,7 @@
 /datum/map_template/common_lateload/om_adventure/grasscave
 	name = "Grass Cave"
 	desc = "Looks like a cave with some grass in it."
-	mappath = 'maps/om_adventure/grasscave.dmm'
+	mappath = "maps/om_adventure/grasscave.dmm"
 	associated_map_datum = /datum/map_z_level/common_lateload/om_adventure_destination
 
 /datum/map_template/common_lateload/om_adventure/grasscave/on_map_loaded(z)
@@ -225,6 +225,29 @@
 	new /datum/random_map/noise/ore/grasscave(null, 1, 1, z, 64, 64)
 
 //////////////////////////////////////////////////////////////////////////////////////
+
+#ifdef AWAY_MISSION_TEST
+#include "../redgate/falls/falls.dmm"
+#include "../redgate/abandonedisland.dmm"
+#include "../redgate/cybercity.dmm"
+#include "../redgate/darkadventure.dmm"
+#include "../redgate/eggnogtown.dmm"
+#include "../redgate/eggnogtownunderground.dmm"
+#include "../redgate/facility.dmm"
+#include "../redgate/fantasy_dungeon.dmm"
+#include "../redgate/fantasy.dmm"
+#include "../redgate/hotsprings.dmm"
+#include "../redgate/innland.dmm"
+#include "../redgate/islands_underwater.dmm"
+#include "../redgate/islands.dmm"
+#include "../redgate/jungle_underground.dmm"
+#include "../redgate/jungle.dmm"
+#include "../redgate/laserdome.dmm"
+#include "../redgate/stardog.dmm"
+#include "../redgate/teppiranch.dmm"
+#include "../redgate/train_upper.dmm"
+#include "../redgate/train.dmm"
+#endif
 
 /datum/map_template/common_lateload/redgate
 	name = "Redgate Submap"
@@ -246,58 +269,58 @@
 /datum/map_template/common_lateload/redgate/teppi_ranch
 	name = "Redgate - Teppi Ranch"
 	desc = "An abandoned teppi ranch!"
-	mappath = 'maps/redgate/teppiranch.dmm'
+	mappath = "maps/redgate/teppiranch.dmm"
 
 /datum/map_template/common_lateload/redgate/innland
 	name = "Redgate - Innland"
 	desc = "Caves and grass and a tavern, woah!"
-	mappath = 'maps/redgate/innland.dmm'
+	mappath = "maps/redgate/innland.dmm"
 
 /datum/map_template/common_lateload/redgate/abandonedisland
 	name = "Redgate - Abandoned Island"
 	desc = "It seems like it used to be people here!"
-	mappath = 'maps/redgate/abandonedisland.dmm'
+	mappath = "maps/redgate/abandonedisland.dmm"
 
 /datum/map_template/common_lateload/redgate/darkadventure
 	name = "Redgate - Dark Adventure"
 	desc = "This place seems broken!"
-	mappath = 'maps/redgate/darkadventure.dmm'
+	mappath = "maps/redgate/darkadventure.dmm"
 
 /datum/map_template/common_lateload/redgate/stardog
 	name = "Redgate - Star Dog"
 	desc = "That's a big dog!"
-	mappath = 'maps/redgate/stardog.dmm'
+	mappath = "maps/redgate/stardog.dmm"
 
 #include "../redgate/eggnogtown.dm"
 /datum/map_template/common_lateload/redgate/eggnogtown
 	name = "Redgate - Eggnog Town"
 	desc = "A comfortable snowy town."
-	mappath = 'maps/redgate/eggnogtown.dmm'
+	mappath = "maps/redgate/eggnogtown.dmm"
 
 /datum/map_template/common_lateload/redgate/eggnogtownunderground
 	name = "Redgate - Eggnog Town Underground"
 	desc = "A comfortable snowy town."
-	mappath = 'maps/redgate/eggnogtownunderground.dmm'
+	mappath = "maps/redgate/eggnogtownunderground.dmm"
 
 /datum/map_template/common_lateload/redgate/hotsprings
 	name = "Redgate - Hotsprings"
 	desc = "This place is rather cosy for somewhere so abandoned!"
-	mappath = 'maps/redgate/hotsprings.dmm'
+	mappath = "maps/redgate/hotsprings.dmm"
 
 /datum/map_template/common_lateload/redgate/cybercity
 	name = "Redgate - Rain City"
 	desc = "A strange city on lockdown."
-	mappath = 'maps/redgate/cybercity.dmm'
+	mappath = "maps/redgate/cybercity.dmm"
 
 /datum/map_template/common_lateload/redgate/islands
 	name = "Redgate - Islands"
 	desc = "A series of islands out in the ocean."
-	mappath = 'maps/redgate/islands.dmm'
+	mappath = "maps/redgate/islands.dmm"
 
 /datum/map_template/common_lateload/redgate/islands_underwater
 	name = "Redgate - Islands Underwater"
 	desc = "A series of islands out in the ocean."
-	mappath = 'maps/redgate/islands_underwater.dmm'
+	mappath = "maps/redgate/islands_underwater.dmm"
 
 /obj/effect/landmark/map_data/islands
 	height = 2
@@ -305,12 +328,12 @@
 /datum/map_template/common_lateload/redgate/train
 	name = "Redgate - Moving Train"
 	desc = "A long train travelling to who-knows-where."
-	mappath = 'maps/redgate/train.dmm'
+	mappath = "maps/redgate/train.dmm"
 
 /datum/map_template/common_lateload/redgate/train_upper
 	name = "Redgate - Moving Train Upper Level"
 	desc = "A long train travelling to who-knows-where."
-	mappath = 'maps/redgate/train_upper.dmm'
+	mappath = "maps/redgate/train_upper.dmm"
 
 /obj/effect/landmark/map_data/train
 	height = 2
@@ -318,12 +341,12 @@
 /datum/map_template/common_lateload/redgate/fantasy
 	name = "Redgate - Fantasy Town"
 	desc = "A fantasy town full of low tech stuff."
-	mappath = 'maps/redgate/fantasy.dmm'
+	mappath = "maps/redgate/fantasy.dmm"
 
 /datum/map_template/common_lateload/redgate/fantasy_dungeon
 	name = "Redgate - Fantasy Dungeon"
 	desc = "A fantasy dungeon with lots of monsters and loot."
-	mappath = 'maps/redgate/fantasy_dungeon.dmm'
+	mappath = "maps/redgate/fantasy_dungeon.dmm"
 
 /obj/effect/landmark/map_data/fantasy
 	height = 2
@@ -331,36 +354,41 @@
 /datum/map_template/common_lateload/redgate/laserdome
 	name = "Redgate - Laserdome"
 	desc = "A large orbital station with recreational facilities, namely a pair of laser tag arenas."
-	mappath = 'maps/redgate/laserdome.dmm'
+	mappath = "maps/redgate/laserdome.dmm"
 
 /datum/map_template/common_lateload/redgate/falls
 	name = "Redgate - Cascading Falls"
 	desc = "A world made up almost entirely of water, sprinkled with obscure marble structures."
-	mappath = 'maps/redgate/falls/falls.dmm'
+	mappath = "maps/redgate/falls/falls.dmm"
 
 /datum/map_template/common_lateload/redgate/jungle
 	name = "Redgate - Jungle"
 	desc = "A fantasy town full of low tech stuff."
-	mappath = 'maps/redgate/jungle.dmm'
+	mappath = "maps/redgate/jungle.dmm"
 
 /datum/map_template/common_lateload/redgate/jungle_underground
 	name = "Redgate - Jungle Underground"
 	desc = "A fantasy dungeon with lots of monsters and loot."
-	mappath = 'maps/redgate/jungle_underground.dmm'
+	mappath = "maps/redgate/jungle_underground.dmm"
 
 /obj/effect/landmark/map_data/jungle
 	height = 2
 
+/datum/map_template/common_lateload/redgate/facility
+	name = "Redgate - Facility"
+	desc = "A facility full of unusual experiments."
+	mappath = "maps/redgate/facility.dmm"
+
 //////////////////////////////////////////////////////////////////////////////////////
 // Admin-use z-levels for loading whenever an admin feels like
-#if AWAY_MISSION_TEST
+#ifdef AWAY_MISSION_TEST
 #include "../submaps/admin_use_vr/spa.dmm"
 #endif
 #include "../submaps/admin_use_vr/fun.dm"
 /datum/map_template/common_lateload/fun/spa
 	name = "Space Spa"
 	desc = "A pleasant spa located in a spaceship."
-	mappath = 'maps/submaps/admin_use_vr/spa.dmm'
+	mappath = "maps/submaps/admin_use_vr/spa.dmm"
 
 	associated_map_datum = /datum/map_z_level/common_lateload/fun/spa
 
@@ -460,7 +488,7 @@
 
 	if(!LAZYLEN(mobs_to_pick_from))
 		error("Mob spawner at [x],[y],[z] ([get_area(src)]) had no mobs_to_pick_from set on it!")
-		initialized = TRUE
+		flags |= ATOM_INITIALIZED
 		return INITIALIZE_HINT_QDEL
 	START_PROCESSING(SSobj, src)
 
@@ -492,21 +520,21 @@
 
 				var/list/gaslist = env.gas
 				if(my_mob.min_oxy)
-					my_mob.min_oxy = gaslist["oxygen"] * 0.8
+					my_mob.min_oxy = gaslist[GAS_O2] * 0.8
 				if(my_mob.min_tox)
-					my_mob.min_tox = gaslist["phoron"] * 0.8
+					my_mob.min_tox = gaslist[GAS_PHORON] * 0.8
 				if(my_mob.min_n2)
-					my_mob.min_n2 = gaslist["nitrogen"] * 0.8
+					my_mob.min_n2 = gaslist[GAS_N2] * 0.8
 				if(my_mob.min_co2)
-					my_mob.min_co2 = gaslist["carbon_dioxide"] * 0.8
+					my_mob.min_co2 = gaslist[GAS_CO2] * 0.8
 				if(my_mob.max_oxy)
-					my_mob.max_oxy = gaslist["oxygen"] * 1.2
+					my_mob.max_oxy = gaslist[GAS_O2] * 1.2
 				if(my_mob.max_tox)
-					my_mob.max_tox = gaslist["phoron"] * 1.2
+					my_mob.max_tox = gaslist[GAS_PHORON] * 1.2
 				if(my_mob.max_n2)
-					my_mob.max_n2 = gaslist["nitrogen"] * 1.2
+					my_mob.max_n2 = gaslist[GAS_N2] * 1.2
 				if(my_mob.max_co2)
-					my_mob.max_co2 = gaslist["carbon_dioxide"] * 1.2
+					my_mob.max_co2 = gaslist[GAS_CO2] * 1.2
 /* //VORESTATION AI TEMPORARY REMOVAL
 		if(guard)
 			my_mob.returns_home = TRUE
@@ -525,7 +553,7 @@
 	icon = 'icons/mob/vore_shadekin.dmi'
 	icon_state = "spawner"
 
-	faction = "shadekin"
+	faction = FACTION_SHADEKIN
 	prob_spawn = 1
 	prob_fall = 1
 	//guard = 10 //Don't wander too far, to stay alive.
@@ -543,42 +571,42 @@
 /datum/map_template/admin_use/ert
 	name = "Special Area - ERT"
 	desc = "It's the ERT ship! Lorge."
-	mappath = 'maps/submaps/admin_use_vr/ert.dmm'
+	mappath = "maps/submaps/admin_use_vr/ert.dmm"
 
 /datum/map_template/admin_use/trader
 	name = "Special Area - Trader"
 	desc = "Big trader ship."
-	mappath = 'maps/submaps/admin_use_vr/tradeship.dmm'
+	mappath = "maps/submaps/admin_use_vr/tradeship.dmm"
 
 /datum/map_template/admin_use/salamander_trader
 	name = "Special Area - Salamander Trader"
 	desc = "Modest trader ship."
-	mappath = 'maps/submaps/admin_use_vr/salamander_trader.dmm'
+	mappath = "maps/submaps/admin_use_vr/salamander_trader.dmm"
 
 /datum/map_template/admin_use/mercenary
 	name = "Special Area - Merc Ship"
 	desc = "Prepare tae be boarded, arr!"
-	mappath = 'maps/submaps/admin_use_vr/kk_mercship.dmm'
+	mappath = "maps/submaps/admin_use_vr/kk_mercship.dmm"
 
 /datum/map_template/admin_use/skipjack
 	name = "Special Area - Skipjack Base"
 	desc = "Stinky!"
-	mappath = 'maps/submaps/admin_use_vr/skipjack.dmm'
+	mappath = "maps/submaps/admin_use_vr/skipjack.dmm"
 
 /datum/map_template/admin_use/thunderdome
 	name = "Special Area - Thunderdome"
 	desc = "Thunderrrrdomeee"
-	mappath = 'maps/submaps/admin_use_vr/thunderdome.dmm'
+	mappath = "maps/submaps/admin_use_vr/thunderdome.dmm"
 
 /datum/map_template/admin_use/wizardbase
 	name = "Special Area - Wizard Base"
 	desc = "Wingardium Levosia"
-	mappath = 'maps/submaps/admin_use_vr/wizard.dmm'
+	mappath = "maps/submaps/admin_use_vr/wizard.dmm"
 
 /datum/map_template/admin_use/dojo
 	name = "Special Area - Ninja Dojo"
 	desc = "Sneaky"
-	mappath = 'maps/submaps/admin_use_vr/dojo.dmm'
+	mappath = "maps/submaps/admin_use_vr/dojo.dmm"
 
 //////////////////////////////////////////////////////////////////////////////
 //Overmap ship spawns
@@ -589,7 +617,7 @@
 #include "../offmap_vr/om_ships/aro2.dm"
 #include "../offmap_vr/om_ships/aro3.dm"
 #include "../offmap_vr/om_ships/bearcat.dm"
-#include "../offmap_vr/om_ships/cruiser.dm"
+#include "../offmap_vr/om_ships/cruiser.dm" //CHOMPKeep
 #include "../offmap_vr/om_ships/vespa.dm"
 #include "../offmap_vr/om_ships/generic_shuttle.dm"
 #include "../offmap_vr/om_ships/salamander.dm"
@@ -606,21 +634,21 @@
 //////////////////////////////////////////////////////////////////////////////
 //Capsule deployed ships
 #include "../offmap_vr/om_ships/shelter_5.dm"
-#include "../offmap_vr/om_ships/shelter_6.dm"
+#include "../offmap_vr/om_ships/shelter_6.dm" //CHOMPKeep
 
 //////////////////////////////////////////////////////////////////////////////
 //Offmap Spawn Locations
 #include "../offmap_vr/talon/talon_v2.dm"
 #include "../offmap_vr/talon/talon_v2_areas.dm"
 
-#if MAP_TEST
+#ifdef MAP_TEST
 #include "../offmap_vr/talon/talon_v2.dmm"
 #endif
 
 /datum/map_template/common_lateload/offmap/talon_v2
 	name = "Offmap Ship - Talon V2"
 	desc = "Offmap spawn ship, the Talon."
-	mappath = 'maps/offmap_vr/talon/talon_v2.dmm'
+	mappath = "maps/offmap_vr/talon/talon_v2.dmm"
 	associated_map_datum = /datum/map_z_level/common_lateload/talon_v2
 
 /datum/map_z_level/common_lateload/talon_v2

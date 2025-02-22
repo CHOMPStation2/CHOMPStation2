@@ -2,7 +2,7 @@
 
 /datum/looping_sound/alarm
 	volume_chan = VOLUME_CHANNEL_ALARMS
-	pref_check = /datum/client_preference/looping_alarms
+	pref_check = /datum/preference/toggle/looping_alarms
 
 /datum/looping_sound/alarm/fire_alarm // Commented out start/end as I don't feel they're very fitting
 	// start_sound = 'sound/effects/alarms/fire_alarm/fire_alarm_start.ogg'

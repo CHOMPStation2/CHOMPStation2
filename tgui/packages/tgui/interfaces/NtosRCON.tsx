@@ -1,5 +1,6 @@
-import { NtosWindow } from '../layouts';
-import { RCONContent } from './RCON';
+import { NtosWindow } from 'tgui/layouts';
+
+import { RCONContent } from './RCON/RCONContent';
 
 export const NtosRCON = () => {
   return (

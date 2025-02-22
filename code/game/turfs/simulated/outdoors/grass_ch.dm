@@ -28,7 +28,7 @@ GLOBAL_LIST_INIT(grass_animals,list(
 		/obj/random/mob/multiple/sifmobs = 6,
 		/mob/living/simple_mob/humanoid/cultist/tesh = 2,
 		/mob/living/simple_mob/humanoid/eclipse/solar/froststalker = 2,
-		/mob/living/simple_mob/humanoid/eclipse/lunar/pummler = 1,
+		/mob/living/simple_mob/humanoid/eclipse/lunar = 1,
 		/mob/living/simple_mob/humanoid/merc/ranged/laser = 2,
 		/mob/living/simple_mob/humanoid/cultist/magus/rift = 0.05
 		),
@@ -49,7 +49,7 @@ GLOBAL_LIST_INIT(grass_animals,list(
 		/mob/living/simple_mob/animal/space/mouse_army/pyro = 6,
 		/mob/living/simple_mob/animal/space/mouse_army/ammo = 6,
 		/mob/living/simple_mob/mechanical/mecha/mouse_tank/livewire = 2,
-		/mob/living/simple_mob/humanoid/eclipse/lunar/miner = 6
+		/mob/living/simple_mob/humanoid/eclipse/lunar = 6
 		),
 	"seasonalspring" = list(
 		/mob/living/simple_mob/vore/alienanimals/teppi = 10, //CHOMP Edit
@@ -126,6 +126,20 @@ GLOBAL_LIST_INIT(grass_animals,list(
 	"smokestar" = list(
 		/mob/living/simple_mob/vore/smokestar/drider = 1
 		),
+	"thor_real" = list(
+		/mob/living/simple_mob/vore/aggressive/frog = 5,
+		/mob/living/simple_mob/animal/sif/glitterfly = 35,
+		/mob/living/simple_mob/vore/otie = 15,
+		/mob/living/simple_mob/vore/otie/feral = 5,
+		/mob/living/simple_mob/vore/fennec = 20,
+		/mob/living/simple_mob/animal/passive/lizard = 20,
+		/mob/living/simple_mob/animal/passive/armadillo = 10,
+		/mob/living/simple_mob/animal/passive/opossum = 10,
+		/mob/living/simple_mob/animal/passive/mouse/jerboa = 5,
+		/mob/living/simple_mob/vore/wolf/direwolf = 5,
+		/mob/living/simple_mob/vore/aggressive/rat = 5,
+		/mob/living/simple_mob/vore/horse/big = 10
+		),
 ))
 
 GLOBAL_LIST_INIT(grass_grass,list(
@@ -135,12 +149,14 @@ GLOBAL_LIST_INIT(grass_grass,list(
 		),
 	"sif" = list(
 		/obj/structure/flora/sif/eyes = 1,
-		/obj/structure/flora/sif/tendrils = 10
+		/obj/structure/flora/sif/tendrils = 5,
+		/obj/structure/flora/bush = 5
 		),
 	"sifforest" = list(
 		/obj/structure/flora/sif/frostbelle = 1,
 		/obj/structure/flora/sif/eyes = 5,
-		/obj/structure/flora/sif/tendrils = 30
+		/obj/structure/flora/sif/tendrils = 20,
+		/obj/structure/flora/bush = 10
 		),
 	"valley" = list(
 		/obj/structure/flora/sif/eyes = 20,
@@ -209,6 +225,20 @@ GLOBAL_LIST_INIT(grass_grass,list(
 		/obj/structure/flora/ausbushes/sparsegrass,
 		/obj/structure/flora/ausbushes/fullgrass
 		),
+	"thor_real" = list(
+		/obj/structure/flora/ausbushes/sparsegrass,
+		/obj/structure/flora/ausbushes/fullgrass,
+		/obj/structure/flora/ausbushes/lavendergrass,
+		/obj/structure/flora/ausbushes/genericbush,
+		/obj/structure/flora/ausbushes/grassybush,
+		/obj/structure/flora/ausbushes/sunnybush,
+		/obj/structure/flora/ausbushes/brflowers,
+		/obj/structure/flora/ausbushes/ppflowers,
+		/obj/structure/flora/ausbushes/ywflowers,
+		/obj/structure/flora/tree/jungle_small,
+		/obj/structure/flora/tree/jungle,
+		/obj/structure/flora/ausbushes/leafybush,
+		)
 ))
 
 GLOBAL_LIST_INIT(grass_trees, list(
@@ -222,7 +252,7 @@ GLOBAL_LIST_INIT(grass_trees, list(
 		/obj/structure/flora/tree/jungle_small,
 		/obj/structure/flora/tree/jungle
 		),
-	"seasonalfall" = list(
+	"seasonalautumn" = list(
 		/obj/structure/flora/tree/bigtree
 		),
 	"seasonalwinter" = list(

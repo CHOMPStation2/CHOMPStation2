@@ -4,7 +4,7 @@
 
 GLOBAL_VAR_INIT(dynamic_sector_master, null)
 // Also adjust find_z_levels() if you adjust increase dynamic levels, that part is hard-coded so you don't gloss over world.increment_max_z().
-#define MAX_DYNAMIC_LEVELS 3
+#define MAX_DYNAMIC_LEVELS 2
 #define MAX_DYNAMIC_POI_DIMENSIONS 200 // Keep this an even number if using even world.maxx/maxy. This value MUST
 // a large enough static border to fit OM ships. A 30x30 ship means max dimensions must be 60 less than the z-level max
 // to keep a 30 turf border on each side of the load/unload area.
@@ -37,7 +37,7 @@ GLOBAL_VAR_INIT(dynamic_sector_master, null)
 // This means extra_z_levels won't do anything, which is intentional.
 /obj/effect/overmap/visitable/dynamic/find_z_levels()
 	if(!generated_z && (GLOB.dynamic_sector_master == src)) // Ensure this only runs once per round.
-		for(var/i = 1; i <= 3; i++) // Hard-coding limit because this is dangerous.
+		for(var/i = 1; i <= 2; i++) // Hard-coding limit because this is dangerous.
 			world.increment_max_z()
 			map_z[i] = world.maxz
 			// Spawn shuttle_landmarks near the lower x border, aligned with the POI spawning turf. These move during POI generation.
@@ -186,14 +186,14 @@ GLOBAL_VAR_INIT(dynamic_sector_master, null)
 		desc = initial(desc)
 
 	if(loaded)
-		var/confirm = alert(user, "Sever bluespace link? This location will become permanently inaccessible.", "Are you sure?", "No", "Yes")
+		var/confirm = tgui_alert(user, "Sever bluespace link? This location will become permanently inaccessible.", "Are you sure?", list("No", "Yes"))
 		if(confirm == "Yes")
 			if(is_empty(1)) // Dynamic POI's should only ever have 1 entry in map_z
 				destroy_poi(user) // Delete POI from dynamic z-level
 			else
 				to_chat(user, "Unable to sever link. Location likely contains living realspace entities.")
 	else
-		var/confirm = alert(user, "Transient subspace anomaly detected. Tether object to realspace?", "Stabilize anomaly?", "Yes", "No")
+		var/confirm = tgui_alert(user, "Transient subspace anomaly detected. Tether object to realspace?", "Stabilize anomaly?", list("Yes", "No"))
 		if(confirm == "Yes")
 			create_poi(user) // Load POI to dynamic z-level
 
@@ -224,17 +224,16 @@ GLOBAL_VAR_INIT(dynamic_sector_master, null)
 			map_sectors["[parent.map_z[i]]"] = src // Pass ownership of z-level to child, probably hacky and terribad, also mandatory for using forceMove() on shuttle landmarks
 			break // Terminate loop
 	if(!my_index) // No z-levels available
-		var/confirm = alert(user, "\[REDACTED\] matrix at capacity; a bluespace link must be permanently severed to stabilize this anomaly. Continue?", "Are you sure?", "No", "Yes")
-		if(confirm == "Yes")
-			my_index = parent.cull_child(user)
-			if(my_index)
-				parent.active_pois[my_index] = src
-				map_z[1] = parent.map_z[my_index]
-				map_sectors["[parent.map_z[my_index]]"] = src
-			else // Something went wrong, ideally due to all relevant z-levels containing players.
-				to_chat(user, "Unable to sever any bluespace link. All links likely contain living realspace entities.")
-				return
-		else
+		var/confirm = tgui_alert(user, "\[REDACTED\] matrix at capacity; a bluespace link must be permanently severed to stabilize this anomaly. Continue?", "Are you sure?", list("No", "Yes"))
+		if(confirm != "Yes")
+			return
+		my_index = parent.cull_child(user)
+		if(my_index)
+			parent.active_pois[my_index] = src
+			map_z[1] = parent.map_z[my_index]
+			map_sectors["[parent.map_z[my_index]]"] = src
+		else // Something went wrong, ideally due to all relevant z-levels containing players.
+			to_chat(user, "Unable to sever any bluespace link. All links likely contain living realspace entities.")
 			return
 
 	var/turf/T = locate(round(world.maxx/2), round(world.maxy/2), map_z[1]) // Find center turf, or near center for even-dimension maps.

@@ -3,7 +3,7 @@
  */
 //uncomment when this is updated to match storage update
 /*
-/obj/item/weapon/seedbag
+/obj/item/seedbag
 	icon = 'icons/obj/hydroponics_machines.dmi'
 	icon_state = "seedbag"
 	name = "Seed Bag"
@@ -14,11 +14,11 @@
 	w_class = ITEMSIZE_TINY
 	var/list/item_quants = list()
 
-/obj/item/weapon/seedbag/attack_self(mob/user as mob)
+/obj/item/seedbag/attack_self(mob/user)
 	user.machine = src
 	interact(user)
 
-/obj/item/weapon/seedbag/verb/toggle_mode()
+/obj/item/seedbag/verb/toggle_mode()
 	set name = "Switch Bagging Method"
 	set category = "Object"
 
@@ -29,10 +29,10 @@
 		if(0)
 			to_chat(usr, "The bag now picks up one seed pouch at a time.")
 
-/obj/item/seeds/attackby(var/obj/item/O as obj, var/mob/user as mob)
+/obj/item/seeds/attackby(var/obj/item/O, var/mob/user)
 	..()
-	if (istype(O, /obj/item/weapon/seedbag))
-		var/obj/item/weapon/seedbag/S = O
+	if (istype(O, /obj/item/seedbag))
+		var/obj/item/seedbag/S = O
 		if (S.mode == 1)
 			for (var/obj/item/seeds/G in locate(src.x,src.y,src.z))
 				if (S.contents.len < S.capacity)
@@ -42,10 +42,10 @@
 					else
 						S.item_quants[G.name] = 1
 				else
-					to_chat(user, "<span class='warning'>The seed bag is full.</span>")
-					S.updateUsrDialog()
+					to_chat(user, span_warning("The seed bag is full."))
+					S.updateUsrDialog(user)
 					return
-			to_chat(user, "<span class='notice'>You pick up all the seeds.</span>")
+			to_chat(user, span_notice("You pick up all the seeds."))
 		else
 			if (S.contents.len < S.capacity)
 				S.contents += src;
@@ -54,11 +54,11 @@
 				else
 					S.item_quants[name] = 1
 			else
-				to_chat(user, "<span class='warning'>The seed bag is full.</span>")
-		S.updateUsrDialog()
+				to_chat(user, span_warning("The seed bag is full."))
+		S.updateUsrDialog(user)
 	return
 
-/obj/item/weapon/seedbag/interact(mob/user as mob)
+/obj/item/seedbag/interact(mob/user)
 
 	var/dat = "<TT><b>Select an item:</b><br>"
 
@@ -75,11 +75,11 @@
 
 		dat += "<br><a href='byond://?src=\ref[src];unload=1'>Unload All</A>"
 		dat += "</TT>"
-	user << browse("<HEAD><TITLE>Seedbag Supplies</TITLE></HEAD><TT>[dat]</TT>", "window=seedbag")
+	user << browse("<html><HEAD><TITLE>Seedbag Supplies</TITLE></HEAD><TT>[dat]</TT></html>", "window=seedbag")
 	onclose(user, "seedbag")
 	return
 
-/obj/item/weapon/seedbag/Topic(href, href_list)
+/obj/item/seedbag/Topic(href, href_list)
 	if(..())
 		return
 
@@ -102,10 +102,10 @@
 		for(var/obj/O in contents )
 			O.loc = get_turf(src)
 
-	src.updateUsrDialog()
+	src.updateUsrDialog(usr)
 	return
 
-/obj/item/weapon/seedbag/updateUsrDialog()
+/obj/item/seedbag/updateUsrDialog(mob/user)
 	var/list/nearby = range(1, src)
 	for(var/mob/M in nearby)
 		if ((M.client && M.machine == src))

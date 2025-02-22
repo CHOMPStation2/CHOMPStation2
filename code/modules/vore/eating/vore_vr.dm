@@ -53,6 +53,7 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 	var/permit_healbelly = TRUE
 	var/noisy = FALSE
 	var/eating_privacy_global = FALSE //Makes eating attempt/success messages only reach for subtle range if true, overwritten by belly-specific var
+	var/allow_mimicry = TRUE
 
 	// These are 'modifier' prefs, do nothing on their own but pair with drop_prey/drop_pred settings.
 	var/drop_vore = TRUE
@@ -61,13 +62,17 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 	var/throw_vore = TRUE
 	var/food_vore = TRUE
 
+	var/digest_pain = TRUE
+
 	var/resizable = TRUE
 	var/show_vore_fx = TRUE
 	var/step_mechanics_pref = FALSE
 	var/pickup_pref = TRUE
+	var/vore_sprite_color = list("stomach" = "#000", "taur belly" = "#000")
+	var/vore_sprite_multiply = list("stomach" = FALSE, "taur belly" = FALSE)
+	var/allow_mind_transfer = FALSE
 
 	//CHOMP stuff
-	var/allow_mind_transfer = FALSE
 	var/phase_vore = TRUE
 	var/noisy_full = FALSE
 	var/receive_reagents = FALSE
@@ -77,14 +82,15 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 	var/latejoin_prey = FALSE
 	var/autotransferable = TRUE
 	var/strip_pref = FALSE
-	var/vore_sprite_multiply = list("stomach" = FALSE, "taur belly" = FALSE)
-	var/vore_sprite_color = list("stomach" = "#000", "taur belly" = "#000")
 	var/no_latejoin_vore_warning = FALSE // Only load, when... no_latejoin_vore_warning_persists
 	var/no_latejoin_prey_warning = FALSE // Only load, when... no_latejoin_vore_warning_persists
 	var/no_latejoin_vore_warning_time = 15 // Only load, when... no_latejoin_vore_warning_persists
 	var/no_latejoin_prey_warning_time = 15 // Only load, when... no_latejoin_vore_warning_persists
 	var/no_latejoin_vore_warning_persists = FALSE
 	var/no_latejoin_prey_warning_persists = FALSE
+	var/belly_rub_target = null
+	var/soulcatcher_pref_flags = 0
+	var/list/soulcatcher_prefs = list()
 	//CHOMP stuff end
 
 	var/list/belly_prefs = list()
@@ -135,8 +141,8 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 //	Check if an object is capable of eating things, based on vore_organs
 //
 /proc/is_vore_predator(mob/living/O)
-	if(istype(O,/mob/living))
-		if(istype(O,/mob/living/simple_mob)) //CHOMPEdit: On-demand belly loading.
+	if(isliving(O))
+		if(isanimal(O)) //On-demand belly loading.
 			var/mob/living/simple_mob/SM = O
 			if(SM.vore_active && !SM.voremob_loaded)
 				SM.voremob_loaded = TRUE
@@ -209,15 +215,17 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 	food_vore = json_from_file["food_vore"]
 	throw_vore = json_from_file["throw_vore"]
 	stumble_vore = json_from_file["stumble_vore"]
+	digest_pain = json_from_file["digest_pain"]
 	nutrition_message_visible = json_from_file["nutrition_message_visible"]
 	nutrition_messages = json_from_file["nutrition_messages"]
 	weight_message_visible = json_from_file["weight_message_visible"]
 	weight_messages = json_from_file["weight_messages"]
 	eating_privacy_global = json_from_file["eating_privacy_global"]
-
+	allow_mimicry = json_from_file["allow_mimicry"]
+	vore_sprite_color = json_from_file["vore_sprite_color"]
+	allow_mind_transfer = json_from_file["allow_mind_transfer"]
 
 	//CHOMP stuff Start
-	allow_mind_transfer = json_from_file["allow_mind_transfer"]
 	phase_vore = json_from_file["phase_vore"]
 	latejoin_vore = json_from_file["latejoin_vore"]
 	latejoin_prey = json_from_file["latejoin_prey"]
@@ -226,7 +234,6 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 	give_reagents = json_from_file["give_reagents"]
 	apply_reagents = json_from_file["apply_reagents"]
 	autotransferable = json_from_file["autotransferable"]
-	vore_sprite_color = json_from_file["vore_sprite_color"]
 	vore_sprite_multiply = json_from_file["vore_sprite_multiply"]
 	strip_pref = json_from_file["strip_pref"]
 
@@ -238,8 +245,10 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 	if(no_latejoin_prey_warning_persists)
 		no_latejoin_prey_warning = json_from_file["no_latejoin_prey_warning"]
 		no_latejoin_prey_warning_time = json_from_file["no_latejoin_prey_warning_time"]
+	belly_rub_target = json_from_file["belly_rub_target"]
+	soulcatcher_pref_flags = json_from_file["soulcatcher_pref_flags"]
+	soulcatcher_prefs = json_from_file["soulcatcher_prefs"]
 	//CHOMP stuff End
-
 
 	//Quick sanitize
 	if(isnull(digestable))
@@ -286,12 +295,16 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 		stumble_vore = TRUE
 	if(isnull(food_vore))
 		food_vore = TRUE
+	if(isnull(digest_pain))
+		digest_pain = TRUE
 	if(isnull(nutrition_message_visible))
 		nutrition_message_visible = TRUE
 	if(isnull(weight_message_visible))
 		weight_message_visible = TRUE
 	if(isnull(eating_privacy_global))
 		eating_privacy_global = FALSE
+	if(isnull(allow_mimicry))
+		allow_mimicry = TRUE
 	if(isnull(nutrition_messages))
 		nutrition_messages = list(
 							"They are starving! You can hear their stomach snarling from across the room!",
@@ -322,10 +335,12 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 	else if(weight_messages.len < 10)
 		while(weight_messages.len < 10)
 			weight_messages.Add("")
-
-	//CHOMP stuff Start
+	if(isnull(vore_sprite_color))
+		vore_sprite_color = list("stomach" = "#000", "taur belly" = "#000")
 	if(isnull(allow_mind_transfer))
 		allow_mind_transfer = FALSE
+
+	//CHOMP stuff Start
 	if(isnull(phase_vore))
 		phase_vore = TRUE
 	if(isnull(latejoin_vore))
@@ -342,8 +357,6 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 		noisy_full = FALSE
 	if(isnull(autotransferable))
 		autotransferable = TRUE
-	if(isnull(vore_sprite_color))
-		vore_sprite_color = list("stomach" = "#000", "taur belly" = "#000")
 	if(isnull(vore_sprite_multiply))
 		vore_sprite_multiply = list("stomach" = FALSE, "taur belly" = FALSE)
 	if(isnull(strip_pref))
@@ -360,6 +373,10 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 		no_latejoin_vore_warning_persists = FALSE
 	if(isnull(no_latejoin_prey_warning_persists))
 		no_latejoin_prey_warning_persists = FALSE
+	if(isnull(soulcatcher_pref_flags))
+		soulcatcher_pref_flags = 0
+	if(isnull(soulcatcher_prefs))
+		soulcatcher_prefs = list()
 	//CHOMP stuff End
 
 	return TRUE
@@ -401,15 +418,17 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 			"slip_vore"				= slip_vore,
 			"stumble_vore"			= stumble_vore,
 			"throw_vore" 			= throw_vore,
-			"allow_mind_transfer"	= allow_mind_transfer, //CHOMPedit
+			"allow_mind_transfer"	= allow_mind_transfer,
 			"phase_vore" 			= phase_vore, //CHOMPedit
 			"food_vore" 			= food_vore,
+			"digest_pain"			= digest_pain,
 			"nutrition_message_visible"	= nutrition_message_visible,
 			"nutrition_messages"		= nutrition_messages,
 			"weight_message_visible"	= weight_message_visible,
 			"weight_messages"			= weight_messages,
 			"eating_privacy_global"		= eating_privacy_global,
-			"vore_sprite_color"			= vore_sprite_color, //CHOMPEdit
+			"vore_sprite_color"			= vore_sprite_color,
+			"allow_mimicry"				= allow_mimicry,
 			"vore_sprite_multiply"		= vore_sprite_multiply, //CHOMPEdit
 			"strip_pref" 			= strip_pref, //CHOMPEdit
 			"no_latejoin_vore_warning"		= no_latejoin_vore_warning, //CHOMPEdit
@@ -418,6 +437,9 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 			"no_latejoin_prey_warning_time"		= no_latejoin_prey_warning_time, //CHOMPEdit
 			"no_latejoin_vore_warning_persists"		= no_latejoin_vore_warning_persists, //CHOMPEdit
 			"no_latejoin_prey_warning_persists"		= no_latejoin_prey_warning_persists, //CHOMPEdit
+			"belly_rub_target" = belly_rub_target, //CHOMPEdit
+			"soulcatcher_pref_flags" = soulcatcher_pref_flags, //CHOMPAdd
+			"soulcatcher_prefs"			= soulcatcher_prefs //CHOMPAdd
 		)
 
 	//List to JSON

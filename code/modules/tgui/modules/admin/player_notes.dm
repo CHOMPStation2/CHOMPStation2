@@ -68,10 +68,10 @@
 		if("show_player_info")
 			var/datum/tgui_module/player_notes_info/A = new(src)
 			A.key = params["name"]
-			A.tgui_interact(usr)
+			A.tgui_interact(ui.user)
 
 		if("filter_player_notes")
-			var/input = tgui_input_text(usr, "Filter string (case-insensitive regex)", "Player notes filter")
+			var/input = tgui_input_text(ui.user, "Filter string (case-insensitive regex)", "Player notes filter")
 			current_filter = input
 
 		if("set_page")
@@ -123,10 +123,10 @@
 	switch(action)
 		if("add_player_info")
 			var/key = params["ckey"]
-			var/add = tgui_input_text(usr, "Write your comment below.", "Add Player Info", multiline = TRUE, prevent_enter = TRUE)
+			var/add = tgui_input_text(ui.user, "Write your comment below.", "Add Player Info", multiline = TRUE, prevent_enter = TRUE)
 			if(!add) return
 
-			notes_add(key,add,usr)
+			notes_add(key,add,ui.user)
 
 		if("remove_player_info")
 			var/key = params["ckey"]
@@ -191,11 +191,11 @@
 	if (!istype(src,/datum/admins))
 		to_chat(usr, "Error: you are not an admin!")
 		return
-	var/filter = input(usr, "Filter string (case-insensitive regex)", "Player notes filter")
+	var/filter = tgui_input_text(usr, "Filter string (case-insensitive regex)", "Player notes filter")
 	PlayerNotesPageLegacy(1, filter)
 
 /datum/admins/proc/PlayerNotesPageLegacy(page, filter)
-	var/dat = "<B>Player notes</B> - <a href='?src=\ref[src];[HrefToken()];notes_legacy=filter'>Apply Filter</a><HR>"
+	var/dat = span_bold("Player notes") + " - <a href='byond://?src=\ref[src];[HrefToken()];notes_legacy=filter'>Apply Filter</a><HR>"
 	var/savefile/S=new("data/player_notes.sav")
 	var/list/note_keys
 	S >> note_keys
@@ -228,19 +228,17 @@
 			upper_bound = min(upper_bound, note_keys.len)
 			for(var/index = lower_bound, index <= upper_bound, index++)
 				var/t = note_keys[index]
-				dat += "<tr><td><a href='?src=\ref[src];[HrefToken()];notes_legacy=show;ckey=[t]'>[t]</a></td></tr>"
+				dat += "<tr><td><a href='byond://?src=\ref[src];[HrefToken()];notes_legacy=show;ckey=[t]'>[t]</a></td></tr>"
 
 		dat += "</table><hr>"
 
 		// Display a footer to select different pages
 		for(var/index = 1, index <= number_pages, index++)
+			dat += "<a href='byond://?src=\ref[src];[HrefToken()];notes_legacy=list;index=[index];filter=[filter ? url_encode(filter) : 0]'>[index]</a> "
 			if(index == page)
-				dat += "<b>"
-			dat += "<a href='?src=\ref[src];[HrefToken()];notes_legacy=list;index=[index];filter=[filter ? url_encode(filter) : 0]'>[index]</a> "
-			if(index == page)
-				dat += "</b>"
+				dat = span_bold(dat)
 
-	usr << browse(dat, "window=player_notes;size=400x400")
+	usr << browse("<html>[dat]</html>", "window=player_notes;size=400x400")
 
 /datum/admins/proc/player_has_info_legacy(var/key as text)
 	var/savefile/info = new("data/player_saves/[copytext(key, 1, 2)]/[key]/info.sav")
@@ -263,7 +261,7 @@
 		if(C.ckey == key)
 			p_age = C.player_age
 			break
-	dat +="<span style='color:#000000; font-weight: bold'>Player age: [p_age]</span><br>"
+	dat += span_black(span_bold("Player age: [p_age]")) + "<br>"
 
 	var/savefile/info = new("data/player_saves/[copytext(key, 1, 2)]/[key]/info.sav")
 	var/list/infos
@@ -283,12 +281,12 @@
 				update_file = 1
 			dat += "<font color=#008800>[I.content]</font> <i>by [I.author] ([I.rank])</i> on <i><font color=blue>[I.timestamp]</i></font> "
 			if(I.author == usr.key || I.author == "Adminbot" || ishost(usr))
-				dat += "<A href='?src=\ref[src];[HrefToken()];remove_player_info_legacy=[key];remove_index=[i]'>Remove</A>"
+				dat += "<A href='byond://?src=\ref[src];[HrefToken()];remove_player_info_legacy=[key];remove_index=[i]'>Remove</A>"
 			dat += "<br><br>"
 		if(update_file) info << infos
 
 	dat += "<br>"
-	dat += "<A href='?src=\ref[src];[HrefToken()];add_player_info_legacy=[key]'>Add Comment</A><br>"
+	dat += "<A href='byond://?src=\ref[src];[HrefToken()];add_player_info_legacy=[key]'>Add Comment</A><br>"
 
 	dat += "</body></html>"
 	usr << browse(dat, "window=adminplayerinfo;size=480x480")
@@ -298,7 +296,7 @@
 
 	if(href_list["add_player_info_legacy"])
 		var/key = href_list["add_player_info_legacy"]
-		var/add = sanitize(input(usr, "Add Player Info (Legacy)"))
+		var/add = sanitize(tgui_input_text(usr, "Add Player Info (Legacy)", multiline=TRUE))
 		if(!add) return
 
 		notes_add(key,add,usr)
@@ -329,3 +327,5 @@
 			if("filter")
 				PlayerNotesFilterLegacy()
 		return
+
+#undef PLAYER_NOTES_ENTRIES_PER_PAGE

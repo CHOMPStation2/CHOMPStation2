@@ -11,7 +11,7 @@
 
 	var/ready = 1
 	var/malfunction = 0
-	var/list/obj/item/weapon/implant/loyalty/implant_list = list()
+	var/list/obj/item/implant/loyalty/implant_list = list()
 	var/max_implants = 5
 	var/injection_cooldown = 600
 	var/replenish_cooldown = 6000
@@ -24,7 +24,7 @@
 	add_implants()
 
 
-/obj/machinery/implantchair/attack_hand(mob/user as mob)
+/obj/machinery/implantchair/attack_hand(mob/user)
 	user.set_machine(src)
 	var/health_text = ""
 	if(src.occupant)
@@ -35,19 +35,19 @@
 		else
 			health_text = "[round(src.occupant.health,0.1)]"
 
-	var/dat ="<B>Implanter Status</B><BR>"
+	var/dat = span_bold("Implanter Status") + "<BR>"
 
-	dat +="<B>Current occupant:</B> [src.occupant ? "<BR>Name: [src.occupant]<BR>Health: [health_text]<BR>" : "<FONT color=red>None</FONT>"]<BR>"
-	dat += "<B>Implants:</B> [src.implant_list.len ? "[implant_list.len]" : "<A href='?src=\ref[src];replenish=1'>Replenish</A>"]<BR>"
+	dat += span_bold("Current occupant:") + " [src.occupant ? "<BR>Name: [src.occupant]<BR>Health: [health_text]<BR>" : "<FONT color=red>None</FONT>"]<BR>"
+	dat += span_bold("Implants:") + " [src.implant_list.len ? "[implant_list.len]" : "<A href='byond://?src=\ref[src];replenish=1'>Replenish</A>"]<BR>"
 	if(src.occupant)
-		dat += "[src.ready ? "<A href='?src=\ref[src];implant=1'>Implant</A>" : "Recharging"]<BR>"
+		dat += "[src.ready ? "<A href='byond://?src=\ref[src];implant=1'>Implant</A>" : "Recharging"]<BR>"
 	user.set_machine(src)
-	user << browse(dat, "window=implant")
+	user << browse("<html>[dat]</html>", "window=implant")
 	onclose(user, "implant")
 
 
 /obj/machinery/implantchair/Topic(href, href_list)
-	if((get_dist(src, usr) <= 1) || istype(usr, /mob/living/silicon/ai))
+	if((get_dist(src, usr) <= 1) || isAI(usr))
 		if(href_list["implant"])
 			if(src.occupant)
 				injecting = 1
@@ -62,23 +62,23 @@
 				add_implants()
 				ready = 1
 
-		src.updateUsrDialog()
+		src.updateUsrDialog(usr)
 		src.add_fingerprint(usr)
 		return
 
 
-/obj/machinery/implantchair/attackby(var/obj/item/weapon/G as obj, var/mob/user as mob)
-	if(istype(G, /obj/item/weapon/grab))
-		var/obj/item/weapon/grab/grab = G
+/obj/machinery/implantchair/attackby(var/obj/item/G, var/mob/user)
+	if(istype(G, /obj/item/grab))
+		var/obj/item/grab/grab = G
 		if(!ismob(grab.affecting))
 			return
 		if(grab.affecting.has_buckled_mobs())
-			to_chat(user, span("warning", "\The [grab.affecting] has other entities attached to them. Remove them first."))
+			to_chat(user, span_warning("\The [grab.affecting] has other entities attached to them. Remove them first."))
 			return
 		var/mob/M = grab.affecting
 		if(put_mob(M))
 			qdel(G)
-	src.updateUsrDialog()
+	src.updateUsrDialog(user)
 	return
 
 
@@ -99,12 +99,12 @@
 	return
 
 
-/obj/machinery/implantchair/proc/put_mob(mob/living/carbon/M as mob)
+/obj/machinery/implantchair/proc/put_mob(mob/living/carbon/M)
 	if(!iscarbon(M))
-		to_chat(usr, "<span class='warning'>\The [src] cannot hold this!</span>")
+		to_chat(usr, span_warning("\The [src] cannot hold this!"))
 		return
 	if(src.occupant)
-		to_chat(usr, "<span class='warning'>\The [src] is already occupied!</span>")
+		to_chat(usr, span_warning("\The [src] is already occupied!"))
 		return
 	if(M.client)
 		M.client.perspective = EYE_PERSPECTIVE
@@ -121,11 +121,11 @@
 	if (!istype(M, /mob/living/carbon))
 		return
 	if(!implant_list.len)	return
-	for(var/obj/item/weapon/implant/loyalty/imp in implant_list)
+	for(var/obj/item/implant/loyalty/imp in implant_list)
 		if(!imp)	continue
-		if(istype(imp, /obj/item/weapon/implant/loyalty))
+		if(istype(imp, /obj/item/implant/loyalty))
 			for (var/mob/O in viewers(M, null))
-				O.show_message("<span class='warning'>\The [M] has been implanted by \the [src].</span>", 1)
+				O.show_message(span_warning("\The [M] has been implanted by \the [src]."), 1)
 
 			if(imp.handle_implant(M, BP_TORSO))
 				imp.post_implant(M)
@@ -137,7 +137,7 @@
 
 /obj/machinery/implantchair/proc/add_implants()
 	for(var/i=0, i<src.max_implants, i++)
-		var/obj/item/weapon/implant/loyalty/I = new /obj/item/weapon/implant/loyalty(src)
+		var/obj/item/implant/loyalty/I = new /obj/item/implant/loyalty(src)
 		implant_list += I
 	return
 

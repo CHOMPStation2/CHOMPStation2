@@ -21,7 +21,7 @@
 			formatted_desc = replacetext(in_gut.desc, "%belly", lowertext(in_gut.name)) //replace with this belly's name
 			formatted_desc = replacetext(formatted_desc, "%pred", in_gut.owner) //replace with this belly's owner
 			formatted_desc = replacetext(formatted_desc, "%prey", contained) //replace with whatever mob entered into this belly
-			to_chat(contained, "<span class='notice'><B>[formatted_desc]</B></span>")
+			to_chat(contained, span_boldnotice("[formatted_desc]"))
 
 /obj/item/capture_crystal/exit_belly()
 	for(var/mob/living/contained in src.contents)
@@ -102,7 +102,7 @@
 			/* // Disabled (and untested) for now, left to make it easier if we want to enable this later.
 			if(in_gut.disable_hud)
 				if(contained?.hud_used?.hud_shown)
-					to_chat(contained, "<span class='notice'>((Your pred has disabled huds in their belly. Turn off vore FX and hit F12 to get it back; or relax, and enjoy the serenity.))</span>")
+					to_chat(contained, span_notice("((Your pred has disabled huds in their belly. Turn off vore FX and hit F12 to get it back; or relax, and enjoy the serenity.))"))
 					contained.toggle_hud_vis(TRUE) */
 
 // Inelegant copy-pasta since I can't steal the proc from bellies.
@@ -136,14 +136,14 @@
 
 /obj/item/capture_crystal/loadout/attack(mob/living/M, mob/living/user)
 	if(!bound_mob && M != user)
-		to_chat(user, "<span class='notice'>\The [src] emits an unpleasant tone...</span>")
+		to_chat(user, span_notice("\The [src] emits an unpleasant tone..."))
 		playsound(src, 'sound/effects/capture-crystal-negative.ogg', 75, 1, -1)
 		return
 	. = ..()
 
 /obj/item/capture_crystal/loadout/attack_self(mob/living/user)
 	if(!bound_mob)
-		to_chat(user, "<span class='notice'>\The [src] emits an unpleasant tone... It is not ready yet.</span>")
+		to_chat(user, span_notice("\The [src] emits an unpleasant tone... It is not ready yet."))
 		playsound(src, 'sound/effects/capture-crystal-problem.ogg', 75, 1, -1)
 		return
 	. = ..()
@@ -160,12 +160,12 @@
 //The basic capture command does most of the registration work.
 /obj/item/capture_crystal/cheap/capture(mob/living/M, mob/living/U)
 	if(!M.capture_crystal || M.capture_caught)
-		to_chat(U, "<span class='warning'>This creature is not suitable for capture with this crystal.</span>")
+		to_chat(U, span_warning("This creature is not suitable for capture with this crystal."))
 		playsound(src, 'sound/effects/capture-crystal-negative.ogg', 75, 1, -1)
 		return
 	knowyoursignals(M, U)
 	if(isanimal(M) || !M.client)
-		to_chat(U, "<span class='warning'>This creature is not suitable for capture.</span>")
+		to_chat(U, span_warning("This creature is not suitable for capture."))
 		playsound(src, 'sound/effects/capture-crystal-negative.ogg', 75, 1, -1)
 		return
 	owner = U
@@ -178,7 +178,7 @@
 
 /obj/item/capture_crystal/cheap/activate(mob/living/user, target)
 	if(!cooldown_check())		//Are we ready to do things yet?
-		to_chat(thrower, "<span class='notice'>\The [src] clicks unsatisfyingly... It is not ready yet.</span>")
+		to_chat(thrower, span_notice("\The [src] clicks unsatisfyingly... It is not ready yet."))
 		playsound(src, 'sound/effects/capture-crystal-negative.ogg', 75, 1, -1)
 		return
 	if(spawn_mob_type && !bound_mob)			//We don't already have a mob, but we know what kind of mob we want
@@ -201,31 +201,31 @@
 		last_activate = world.time
 		if(M.capture_caught)					//Can't capture things that were already caught.
 			playsound(src, 'sound/effects/capture-crystal-negative.ogg', 75, 1, -1)
-			to_chat(user, "<span class='notice'>\The [src] clicks unsatisfyingly... \The [M] is already under someone else's control.</span>")
+			to_chat(user, span_notice("\The [src] clicks unsatisfyingly... \The [M] is already under someone else's control."))
 			return
 		else if(M.stat == DEAD)						//Is it dead? We can't influence dead things.
 			playsound(src, 'sound/effects/capture-crystal-negative.ogg', 75, 1, -1)
-			to_chat(user, "<span class='notice'>\The [src] clicks unsatisfyingly... \The [M] is not in a state to be captured.</span>")
+			to_chat(user, span_notice("\The [src] clicks unsatisfyingly... \The [M] is not in a state to be captured."))
 			return
 		else if(M.client)							//Is it player controlled?
 			capture_player(M, user)				//We have to do things a little differently if so.
 			return
 		else if(!isanimal(M))						//So it's not player controlled, but it's also not a simplemob?
-			to_chat(user, "<span class='warning'>This creature is not suitable for capture.</span>")
+			to_chat(user, span_warning("This creature is not suitable for capture."))
 			playsound(src, 'sound/effects/capture-crystal-negative.ogg', 75, 1, -1)
 			return
 		var/mob/living/simple_mob/S = M
 		if(!S.ai_holder)						//We don't really want to capture simplemobs that don't have an AI
-			to_chat(user, "<span class='warning'>This creature is not suitable for capture.</span>")
+			to_chat(user, span_warning("This creature is not suitable for capture."))
 			playsound(src, 'sound/effects/capture-crystal-negative.ogg', 75, 1, -1)
 		else									//Shoot, it didn't work and now it's mad!!!
 			S.ai_holder.go_wake()
 			S.ai_holder.give_target(user, urgent = TRUE)
 			user.visible_message("\The [src] bonks into \the [S], angering it!")
 			playsound(src, 'sound/effects/capture-crystal-negative.ogg', 75, 1, -1)
-			to_chat(user, "<span class='notice'>\The [src] clicks unsatisfyingly.</span>")
+			to_chat(user, span_notice("\The [src] clicks unsatisfyingly."))
 		update_icon()
 		return
 	//The target is not a mob, so let's not do anything.
 	playsound(src, 'sound/effects/capture-crystal-negative.ogg', 75, 1, -1)
-	to_chat(user, "<span class='notice'>\The [src] clicks unsatisfyingly.</span>")
+	to_chat(user, span_notice("\The [src] clicks unsatisfyingly."))

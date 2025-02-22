@@ -34,8 +34,24 @@
 	path = /obj/item/clothing/shoes/boots/jackboots/knee
 
 /datum/gear/shoes/thighboots
-	display_name = "jackboots. thigh-length"
+	display_name = "jackboots, thigh-length"
 	path = /obj/item/clothing/shoes/boots/jackboots/thigh
+
+/datum/gear/shoes/colorboots
+	display_name = "jackboots, recolorable"
+	path = /obj/item/clothing/shoes/boots/jackboots/recolorable
+
+/datum/gear/shoes/colorboots/New()
+	..()
+	gear_tweaks += gear_tweak_free_color_choice
+
+/datum/gear/shoes/jackboots_white
+	display_name = "jackboots, white"
+	path = /obj/item/clothing/shoes/boots/jackboots/white
+
+/datum/gear/shoes/jackboots_silver
+	display_name = "jackboots, silver"
+	path = /obj/item/clothing/shoes/boots/jackboots/silver
 
 /datum/gear/shoes/workboots
 	display_name = "workboots"
@@ -142,40 +158,24 @@
 	gear_tweaks += gear_tweak_free_color_choice
 
 /datum/gear/shoes/cowboy
-	display_name = "cowboy boots"
+	display_name = "cowboy boots selection"
+	description = "Pick from a (free) range of rootin' tootin' cowboy boot(in'). Yee-haw!"
 	path = /obj/item/clothing/shoes/boots/cowboy
 
-/datum/gear/shoes/cowboy/classic
-	display_name = "cowboy boots, classic"
-	path = /obj/item/clothing/shoes/boots/cowboy/classic
-
-/datum/gear/shoes/cowboy/brown
-	display_name = "cowboy boots, brown"
-	path = /obj/item/clothing/shoes/boots/cowboy/brown
-
-/datum/gear/shoes/cowboy/black
-	display_name = "cowboy boots, black"
-	path = /obj/item/clothing/shoes/boots/cowboy/black
-
-/datum/gear/shoes/cowboy/white
-	display_name = "cowboy boots, white"
-	path = /obj/item/clothing/shoes/boots/cowboy/white
-
-/datum/gear/shoes/cowboy/fancy
-	display_name = "cowboy boots, fancy"
-	path = /obj/item/clothing/shoes/boots/cowboy/fancy
-
-/datum/gear/shoes/cowboy/snakeskin
-	display_name = "cowboy boots, snake skin"
-	path = /obj/item/clothing/shoes/boots/cowboy/snakeskin
-
-/datum/gear/shoes/cowboy/green
-	display_name = "cowboy boots, green"
-	path = /obj/item/clothing/shoes/boots/cowboy/green
-
-/datum/gear/shoes/cowboy/blue
-	display_name = "cowboy boots, blue"
-	path = /obj/item/clothing/shoes/boots/cowboy/blue
+/datum/gear/shoes/cowboy/New()
+	..()
+	var/list/selector_uniforms = list(
+		"cowboy boots"=/obj/item/clothing/shoes/boots/cowboy,
+		"cowboy boots, classic"=/obj/item/clothing/shoes/boots/cowboy/classic,
+		"cowboy boots, brown"=/obj/item/clothing/shoes/boots/cowboy/brown,
+		"cowboy boots, black"=/obj/item/clothing/shoes/boots/cowboy/black,
+		"cowboy boots, white"=/obj/item/clothing/shoes/boots/cowboy/white,
+		"cowboy boots, fancy"=/obj/item/clothing/shoes/boots/cowboy/fancy,
+		"cowboy boots, snakeskin"=/obj/item/clothing/shoes/boots/cowboy/snakeskin,
+		"cowboy boots, green"=/obj/item/clothing/shoes/boots/cowboy/green,
+		"cowboy boots, blue"=/obj/item/clothing/shoes/boots/cowboy/blue
+	)
+	gear_tweaks += new/datum/gear_tweak/path(sortAssoc(selector_uniforms))
 
 /datum/gear/shoes/jungle
 	display_name = "jungle boots"
@@ -214,7 +214,7 @@
 /datum/gear/shoes/boots/winter/security
 	display_name = "security winter boots"
 	path = /obj/item/clothing/shoes/boots/winter/security
-	allowed_roles = list("Security Officer", "Head of Security", "Warden", "Detective","Blueshield Guard","Security Pilot") //YW ADDITIONS
+	allowed_roles = list(JOB_SECURITY_OFFICER, JOB_HEAD_OF_SECURITY, JOB_WARDEN, JOB_DETECTIVE, JOB_BLUESHIELD_GUARD, JOB_SECURITY_PILOT) //YW ADDITIONS
 
 /datum/gear/shoes/boots/winter/science
 	display_name = "science winter boots"
@@ -223,7 +223,7 @@
 /datum/gear/shoes/boots/winter/command
 	display_name = "site manager's winter boots"
 	path = /obj/item/clothing/shoes/boots/winter/command
-	allowed_roles = list("Site Manager")
+	allowed_roles = list(JOB_SITE_MANAGER)
 
 /datum/gear/shoes/boots/winter/engineering
 	display_name = "engineering winter boots"
@@ -236,6 +236,7 @@
 /datum/gear/shoes/boots/winter/medical
 	display_name = "medical winter boots"
 	path = /obj/item/clothing/shoes/boots/winter/medical
+	allowed_roles = list(JOB_MEDICAL_DOCTOR,JOB_CHIEF_MEDICAL_OFFICER,JOB_CHEMIST,JOB_PARAMEDIC,JOB_GENETICIST, JOB_PSYCHIATRIST,JOB_FIELD_MEDIC) //CHOMP keep explo
 
 /datum/gear/shoes/boots/winter/mining
 	display_name = "mining winter boots"
@@ -264,3 +265,82 @@
 /datum/gear/shoes/halfmoon
 	display_name = "half moon boots"
 	path = /obj/item/clothing/shoes/boots/half_moon
+
+/datum/gear/shoes/sandals
+	display_name = "sandals, colorable"
+	path = /obj/item/clothing/shoes/sandals
+
+/datum/gear/shoes/sandals/New()
+	..()
+	gear_tweaks += gear_tweak_free_color_choice
+
+/datum/gear/shoes/black/cuffs
+	display_name = "legwraps, black"
+	path = /obj/item/clothing/shoes/black/cuffs
+
+/datum/gear/shoes/black/cuffs/blue
+	display_name = "legwraps, blue"
+	path = /obj/item/clothing/shoes/black/cuffs/blue
+
+/datum/gear/shoes/black/cuffs/red
+	display_name = "legwraps, red"
+	path = /obj/item/clothing/shoes/black/cuffs/red
+
+/datum/gear/shoes/siren
+	display_name = "boots, Siren"
+	path = /obj/item/clothing/shoes/boots/fluff/siren
+
+/datum/gear/shoes/toeless
+	display_name = "toe-less jackboots"
+	path = /obj/item/clothing/shoes/boots/jackboots/toeless
+
+/datum/gear/shoes/singer_blue
+	display_name = "blue performer's boots"
+	path = /obj/item/clothing/shoes/boots/singer
+
+/datum/gear/shoes/singer_yellow
+	display_name = "yellow performer's boots"
+	path = /obj/item/clothing/shoes/boots/singer/yellow
+
+/datum/gear/shoes/antediluvian
+	display_name = "legwraps, antediluvian"
+	path = /obj/item/clothing/shoes/antediluvian
+
+/datum/gear/shoes/flats/alt
+	display_name = "flats, alt"
+	path = /obj/item/clothing/shoes/flats/white/color/alt
+
+/datum/gear/shoes/sandals_elegant
+	display_name = "sandals, elegant"
+	path = /obj/item/clothing/shoes/sandals_elegant
+
+/datum/gear/shoes/sandals_elegant/New()
+	..()
+	gear_tweaks += gear_tweak_free_color_choice
+
+//CHOMP ADDITION, trying to make a no shoes shoe option
+/datum/gear/shoes/none
+	display_name = "Adjust - No Shoes"
+	path = /obj/item/clothing/shoes/none
+	cost = 0
+
+/obj/item/clothing/shoes/none
+	name = "No Shoes"
+	desc = "shoeless?"
+	icon_state = ""
+	species_restricted = null
+
+/obj/item/clothing/shoes/none/Initialize()
+	. = ..()
+	if(istype(loc, /mob)) // are we in a mob?
+		var/mob/m = loc
+		m.drop_from_inventory(src, get_turf(m))
+	if(contents.len) // spill out contents (e.g. microholders)
+		for(var/atom/movable/thing in contents)
+			thing.loc = get_turf(src)
+	moveToNullspace() // go to nullspace
+	spawn(1)
+		qdel(src) // die
+
+/obj/item/clothing/shoes/none/make_worn_icon(body_type, slot_name, inhands, default_icon, default_layer, icon/clip_mask) // override this to ensure that no worn icon is generated
+	return

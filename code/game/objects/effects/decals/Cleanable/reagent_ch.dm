@@ -38,7 +38,7 @@
 	START_PROCESSING(SSobj, src)
 
 /obj/effect/decal/cleanable/blood/reagent/update_icon()
-	if(custombasecolor == "rainbow") custombasecolor = "#[get_random_colour(1)]"
+	if(custombasecolor == "rainbow") custombasecolor = get_random_colour(1)
 
 	color = custombasecolor
 	name = custombasename

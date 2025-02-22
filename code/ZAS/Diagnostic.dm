@@ -1,5 +1,5 @@
 /client/proc/ZoneTick()
-	set category = "Debug"
+	set category = "Debug.Misc"
 	set name = "Process Atmos"
 	set desc = "Manually run a single tick of the air subsystem"
 
@@ -8,16 +8,16 @@
 	/*
 	if(!check_rights(R_DEBUG)) return
 
-	var/result = air_master.Tick()
+	var/result = SSair.Tick()
 	if(result)
 		to_chat(src, "Successfully Processed.")
 
 	else
-		to_chat(src, "Failed to process! ([air_master.tick_progress])")
+		to_chat(src, "Failed to process! ([SSair.tick_progress])")
 	*/
 
 /client/proc/Zone_Info(turf/T as null|turf)
-	set category = "Debug"
+	set category = "Debug.Misc"
 	if(T)
 		if(istype(T,/turf/simulated) && T:zone)
 			T:zone:dbg_data(src)
@@ -36,7 +36,7 @@
 /client/var/list/zone_debug_images
 
 /client/proc/Test_ZAS_Connection(var/turf/simulated/T as turf)
-	set category = "Debug"
+	set category = "Debug.Misc"
 	if(!istype(T))
 		return
 
@@ -95,6 +95,6 @@
 			to_chat(mob, "both turfs can merge.")
 
 /client/proc/ZASSettings()
-	set category = "Debug"
+	set category = "Debug.Dangerous"
 
 	vsc.SetDefault(mob)

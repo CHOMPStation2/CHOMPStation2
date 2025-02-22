@@ -1,6 +1,6 @@
 /mob/living/simple_mob/construct/artificer/caster
 	projectiletype = /obj/item/projectile/energy/inversion
-
+/* Combat refactor walkback
 /mob/living/simple_mob/construct/artificer
 	maxHealth = 50
 	health = 50
@@ -24,3 +24,4 @@
 	health = 50
 	melee_damage_lower = 20
 	melee_damage_upper = 25
+*/

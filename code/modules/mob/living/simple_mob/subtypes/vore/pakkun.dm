@@ -24,13 +24,13 @@
 	icon_rest = "pakkun-rest"
 	icon = 'icons/mob/vore.dmi'
 
-	faction = "pakkun"
+	faction = FACTION_PAKKUN
 
 	movement_cooldown = 2
 	can_be_drop_pred = 1 //They can tongue vore.
 
 	meat_amount = 5
-	meat_type = /obj/item/weapon/reagent_containers/food/snacks/meat
+	meat_type = /obj/item/reagent_containers/food/snacks/meat
 
 	vore_active = 1
 	vore_icons = SA_ICON_LIVING
@@ -58,7 +58,7 @@
 	maxHealth = 100
 	health = 100
 
-	allow_mind_transfer = TRUE //CHOMPAdd
+	allow_mind_transfer = TRUE
 
 /mob/living/simple_mob/vore/pakkun/Life()
 	. = ..()
@@ -81,13 +81,13 @@
 		return
 
 	if(resting)
-		if(isbelly(vore_selected)) //CHOMPEdit Start
+		if(isbelly(vore_selected))
 			vore_selected.digest_mode = DM_UNABSORB
 		ai_holder.go_sleep()
 
 	else
 		if(isbelly(vore_selected))
-			vore_selected.digest_mode = vore_default_mode //CHOMPEdit End
+			vore_selected.digest_mode = vore_default_mode
 		ai_holder.go_wake()
 
 /mob/living/simple_mob/vore/pakkun/attack_hand(mob/user)
@@ -97,7 +97,7 @@
 		return ..()
 	if(resting)
 		playsound(src, 'sound/weapons/thudswoosh.ogg', 50, 1, -1)
-		user.visible_message("<span class='notice'>\The [user] shakes \the [src] awake.</span>","<span class='notice'>You shake \the [src] awake!</span>")
+		user.visible_message(span_notice("\The [user] shakes \the [src] awake."),span_notice("You shake \the [src] awake!"))
 		lay_down()
 		return
 	else
@@ -123,7 +123,7 @@
 		if(abs(holder.x - L.x)>6 || abs(holder.y - L.y)>6) //finally, pakkuns on the very very edge of the screen won't target you
 			our_targets -= list_target
 			continue
-	if(istype(holder, /mob/living/simple_mob))
+	if(isanimal(holder))
 		var/mob/living/simple_mob/SM = holder
 		our_targets -= SM.prey_excludes // Lazylist, but subtracting a null from the list seems fine.
 	return our_targets
@@ -134,7 +134,7 @@
 		var/mob/living/L = the_target
 		if(!(L.can_be_drop_prey && L.throw_vore && L.allowmobvore))
 			return FALSE
-		if(istype(holder, /mob/living/simple_mob))
+		if(isanimal(holder))
 			var/mob/living/simple_mob/SM = holder
 			if(LAZYFIND(SM.prey_excludes, L))
 				return FALSE
@@ -149,9 +149,9 @@
 		ai_holder.remove_target()
 
 /mob/living/simple_mob/vore/pakkun/init_vore()
-	if(!voremob_loaded) //CHOMPAdd
-		return //CHOMPAdd
-	.=..() //CHOMPEdit
+	if(!voremob_loaded)
+		return
+	. = ..()
 	var/obj/belly/B = vore_selected
 	if(isbelly(B)) //ChompEDIT - fix a runtime
 		B.name = "stomach"
@@ -166,8 +166,8 @@
 		B.digest_mode = DM_SELECT
 
 /mob/living/simple_mob/vore/pakkun/attackby(var/obj/item/O, var/mob/user) //if they're newspapered, they'll spit out any junk they've eaten for whatever reason
-    if(istype(O, /obj/item/weapon/newspaper) && !ckey && isturf(user.loc))
-        user.visible_message("<span class='info'>[user] swats [src] with [O]!</span>")
+    if(istype(O, /obj/item/newspaper) && !ckey && isturf(user.loc))
+        user.visible_message(span_info("[user] swats [src] with [O]!"))
         release_vore_contents()
         for(var/mob/living/L in living_mobs(0))
             if(!(LAZYFIND(prey_excludes, L)))
@@ -266,7 +266,7 @@
 
 /mob/living/simple_mob/vore/pakkun/snapdragon/snappy/attack_hand(mob/living/carbon/human/M as mob)
 	if(M.a_intent == I_HELP && !(M in petters))
-		to_chat(M, "<span class='notice'>\The [src] gets a mischievous glint in her eye!!</span>")
+		to_chat(M, span_notice("\The [src] gets a mischievous glint in her eye!!"))
 		petters += M //YOU HAVE OFFERED YOURSELF TO THE LIZARD
 	return ..()
 
@@ -276,9 +276,9 @@
 	..()
 
 /mob/living/simple_mob/vore/pakkun/snapdragon/snappy/init_vore()
-	if(!voremob_loaded) //CHOMPAdd
-		return //CHOMPAdd
-	.=..() //CHOMPEdit
+	if(!voremob_loaded)
+		return
+	. = ..()
 	var/obj/belly/B = vore_selected
 	if(isbelly(B)) //ChompEDIT - fix a runtime
 		B.digest_mode = DM_HOLD

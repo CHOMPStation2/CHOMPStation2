@@ -67,10 +67,10 @@
 
 	return data
 
-/obj/machinery/pipedispenser/tgui_act(action, params)
+/obj/machinery/pipedispenser/tgui_act(action, params, datum/tgui/ui)
 	if(..())
 		return TRUE
-	if(unwrenched || !usr.canmove || usr.stat || usr.restrained() || !in_range(loc, usr))
+	if(unwrenched || !ui.user.canmove || ui.user.stat || ui.user.restrained() || !in_range(loc, ui.user))
 		return TRUE
 
 	. = TRUE
@@ -101,42 +101,42 @@
 				else if(istype(recipe, /datum/pipe_recipe/meter))
 					created_object = new recipe.pipe_type(loc)
 				else
-					log_runtime(EXCEPTION("Warning: [usr] attempted to spawn pipe recipe type by params [json_encode(params)] ([recipe] [recipe?.type]), but it was not allowed by this machine ([src] [type])"))
+					log_runtime(EXCEPTION("Warning: [ui.user] attempted to spawn pipe recipe type by params [json_encode(params)] ([recipe] [recipe?.type]), but it was not allowed by this machine ([src] [type])"))
 					return
 
-				created_object.add_fingerprint(usr)
+				created_object.add_fingerprint(ui.user)
 				wait = TRUE
 				VARSET_IN(src, wait, FALSE, 15)
 
 
 /obj/machinery/pipedispenser/attackby(var/obj/item/W as obj, var/mob/user as mob)
-	src.add_fingerprint(usr)
+	src.add_fingerprint(user)
 	if (istype(W, /obj/item/pipe) || istype(W, /obj/item/pipe_meter))
-		to_chat(usr, "<span class='notice'>You put [W] back in [src].</span>")
+		to_chat(user, span_notice("You put [W] back in [src]."))
 		user.drop_item()
 		qdel(W)
 		return
 	else if(W.has_tool_quality(TOOL_WRENCH))
 		if (unwrenched==0)
 			playsound(src, W.usesound, 50, 1)
-			to_chat(user, "<span class='notice'>You begin to unfasten \the [src] from the floor...</span>")
+			to_chat(user, span_notice("You begin to unfasten \the [src] from the floor..."))
 			if (do_after(user, 40 * W.toolspeed))
 				user.visible_message( \
-					"<span class='notice'>[user] unfastens \the [src].</span>", \
-					"<span class='notice'>You have unfastened \the [src]. Now it can be pulled somewhere else.</span>", \
+					span_notice("[user] unfastens \the [src]."), \
+					span_notice("You have unfastened \the [src]. Now it can be pulled somewhere else."), \
 					"You hear ratchet.")
 				src.anchored = FALSE
 				src.stat |= MAINT
 				src.unwrenched = 1
-				if (usr.machine==src)
-					usr << browse(null, "window=pipedispenser")
+				if (user.machine==src)
+					user << browse(null, "window=pipedispenser")
 		else /*if (unwrenched==1)*/
 			playsound(src, W.usesound, 50, 1)
-			to_chat(user, "<span class='notice'>You begin to fasten \the [src] to the floor...</span>")
+			to_chat(user, span_notice("You begin to fasten \the [src] to the floor..."))
 			if (do_after(user, 20 * W.toolspeed))
 				user.visible_message( \
-					"<span class='notice'>[user] fastens \the [src].</span>", \
-					"<span class='notice'>You have fastened \the [src]. Now it can dispense pipes.</span>", \
+					span_notice("[user] fastens \the [src]."), \
+					span_notice("You have fastened \the [src]. Now it can dispense pipes."), \
 					"You hear ratchet.")
 				src.anchored = TRUE
 				src.stat &= ~MAINT
@@ -155,17 +155,17 @@
 	disposals = TRUE
 
 //Allow you to drag-drop disposal pipes into it
-/obj/machinery/pipedispenser/disposal/MouseDrop_T(var/obj/structure/disposalconstruct/pipe as obj, mob/usr as mob)
-	if(!usr.canmove || usr.stat || usr.restrained())
+/obj/machinery/pipedispenser/disposal/MouseDrop_T(var/obj/structure/disposalconstruct/pipe as obj, mob/user as mob)
+	if(!user.canmove || user.stat || user.restrained())
 		return
 
-	if (!istype(pipe) || get_dist(usr, src) > 1 || get_dist(src,pipe) > 1 )
+	if (!istype(pipe) || get_dist(user, src) > 1 || get_dist(src,pipe) > 1 )
 		return
 
 	if (pipe.anchored)
 		return
 
-	to_chat(usr, "<span class='notice'>You shove [pipe] back in [src].</span>")
+	to_chat(user, span_notice("You shove [pipe] back in [src]."))
 	qdel(pipe)
 
 // adding a pipe dispensers that spawn unhooked from the ground

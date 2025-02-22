@@ -3,7 +3,6 @@
 #define BOOK_VERSION_MIN	1
 #define BOOK_VERSION_MAX	2
 #define BOOK_PATH			"data/books/"
-#define BOOKS_USE_SQL		0				// no guarentee for this branch to work right with sql
 
 var/global/datum/book_manager/book_mgr = new()
 
@@ -35,7 +34,7 @@ var/global/datum/book_manager/book_mgr = new()
 /client/proc/delbook()
 	set name = "Delete Book"
 	set desc = "Permamently deletes a book from the database."
-	set category = "Admin"
+	set category = "Admin.Moderation"
 	if(!src.holder)
 		to_chat(src, "Only administrators may use this command.")
 		return
@@ -47,23 +46,20 @@ var/global/datum/book_manager/book_mgr = new()
 			break
 
 	if(!our_comp)
-		to_chat(usr, "<span class = 'warning'>Unable to locate a library computer to use for book deleting.</span>")
+		to_chat(usr, span_warning("Unable to locate a library computer to use for book deleting."))
 		return
 
 	var/dat = "<HEAD><TITLE>Book Inventory Management</TITLE></HEAD><BODY>\n" // <META HTTP-EQUIV='Refresh' CONTENT='10'>
 		dat += "<h3>ADMINISTRATIVE MANAGEMENT</h3>"
 		establish_old_db_connection()
 
-		if(!SSdbcore.IsConnected()) //CHOMP Edit
+		if(!SSdbcore.IsConnected())
 			dat += "<font color=red><b>ERROR</b>: Unable to contact External Archive. Please contact your system administrator for assistance.</font>"
 		else
-			var/datum/db_query/query = dbcon.NewQuery("DELETE FROM library WHERE id=[isbn]")
-			if(!query.Execute())
-				to_chat(usr,query.ErrorMsg())
-			dbcon.Disconnect()
-	else
-		book_mgr.remove(isbn)
-	log_admin("[usr.key] has deleted the book [isbn]")
+			dat += {"<A href='byond://?our_comp=\ref[our_comp];[HrefToken()];orderbyid=1'>(Order book by SS<sup>13</sup>BN)</A><BR><BR>
+			<table>
+			<tr><td><A href='byond://?our_comp=\ref[our_comp];[HrefToken()];sort=author>AUTHOR</A></td><td><A href='byond://?our_comp=\ref[our_comp];[HrefToken()];sort=title>TITLE</A></td><td><A href='byond://?our_comp=\ref[our_comp];[HrefToken()];sort=category>CATEGORY</A></td><td></td></tr>"}
+			var/datum/db_query/query = SSdbcore.NewQuery("SELECT id, author, title, category FROM library ORDER BY [sortby]")
 			query.Execute()
 
 			var/show_admin_options = check_rights(R_ADMIN, show_msg = FALSE)
@@ -75,11 +71,12 @@ var/global/datum/book_manager/book_mgr = new()
 				var/category = query.item[4]
 				dat += "<tr><td>[author]</td><td>[title]</td><td>[category]</td><td>"
 				if(show_admin_options) // This isn't the only check, since you can just href-spoof press this button. Just to tidy things up.
-					dat += "<A href='?our_comp=\ref[our_comp];[HrefToken()];delid=[id]'>\[Del\]</A>"
+					dat += "<A href='byond://?our_comp=\ref[our_comp];[HrefToken()];delid=[id]'>\[Del\]</A>"
 				dat += "</td></tr>"
 			dat += "</table>"
+			qdel(query)
 
-	usr << browse(dat, "window=library")
+	usr << browse("<html>[dat]</html>", "window=library")
 	onclose(usr, "library")
 //VOREStation Edit End
 

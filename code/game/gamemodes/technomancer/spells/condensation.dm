@@ -5,10 +5,10 @@
 	enhancement_desc = "Floors affected by condensation will also freeze."
 	ability_icon_state = "tech_condensation"
 	cost = 50
-	obj_path = /obj/item/weapon/spell/condensation
+	obj_path = /obj/item/spell/condensation
 	category = UTILITY_SPELLS
 
-/obj/item/weapon/spell/condensation
+/obj/item/spell/condensation
 	name = "condensation"
 	desc = "Stronger than it appears."
 	icon_state = "condensation"
@@ -16,7 +16,7 @@
 	aspect = ASPECT_AIR
 	cooldown = 2 SECONDS
 
-/obj/item/weapon/spell/condensation/on_ranged_cast(atom/hit_atom, mob/user)
+/obj/item/spell/condensation/on_ranged_cast(atom/hit_atom, mob/user)
 	if(pay_energy(200))
 		if(istype(hit_atom, /turf/simulated) && within_range(hit_atom))
 			var/turf/simulated/T = hit_atom
@@ -27,7 +27,7 @@
 					if(desired_turf) // This shouldn't fail but...
 						var/obj/effect/effect/water/W = new /obj/effect/effect/water(get_turf(T))
 						W.create_reagents(60)
-						W.reagents.add_reagent(id = "water", amount = 60, data = null, safety = 0)
+						W.reagents.add_reagent(id = REAGENT_ID_WATER, amount = 60, data = null, safety = 0)
 						W.set_color()
 						W.set_up(desired_turf)
 						flick(initial(icon_state),W) // Otherwise pooling causes the animation to stay stuck at the end.
@@ -40,5 +40,5 @@
 			else
 				add_attack_logs(user,hit_atom,"Wetted the floor with [src] at [T.x],[T.y],[T.z]")
 		else if(hit_atom.reagents && !ismob(hit_atom))		//TODO: Something for the scepter
-			hit_atom.reagents.add_reagent(id = "water", amount = 60, data = null, safety = 0)
+			hit_atom.reagents.add_reagent(id = REAGENT_ID_WATER, amount = 60, data = null, safety = 0)
 		adjust_instability(5)

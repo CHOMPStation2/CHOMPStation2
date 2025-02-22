@@ -10,12 +10,12 @@ var/global/last_fax_role_request
  */
 /obj/machinery/photocopier/faxmachine/proc/export_fax(fax) //CHOMPEdit Begin
 	var faxid = "[num2text(world.realtime,12)]_[rand(9999)+1]"
-	if (istype(fax, /obj/item/weapon/paper))
-		var/obj/item/weapon/paper/P = fax
+	if (istype(fax, /obj/item/paper))
+		var/obj/item/paper/P = fax
 		var/text = "<HTML><HEAD><TITLE>[P.name]</TITLE></HEAD><BODY>[P.info][P.stamps]</BODY></HTML>";
 		rustg_file_write(text, "[config.fax_export_dir]/fax_[faxid].html")
-	else if (istype(fax, /obj/item/weapon/photo))
-		var/obj/item/weapon/photo/H = fax
+	else if (istype(fax, /obj/item/photo))
+		var/obj/item/photo/H = fax
 		fcopy(H.img, "[config.fax_export_dir]/photo_[faxid].png")
 		var/text = "<html><head><title>[H.name]</title></head>" \
 			+ "<body style='overflow:hidden;margin:0;text-align:center'>" \
@@ -23,10 +23,10 @@ var/global/last_fax_role_request
 			+ "[H.scribble ? "<br>Written on the back:<br><i>[H.scribble]</i>" : ""]"\
 			+ "</body></html>"
 		rustg_file_write(text, "[config.fax_export_dir]/fax_[faxid].html")
-	else if (istype(fax, /obj/item/weapon/paper_bundle))
+	else if (istype(fax, /obj/item/paper_bundle))
 		var/def_faxid = faxid
 		faxid += "_0"
-		var/obj/item/weapon/paper_bundle/B = fax
+		var/obj/item/paper_bundle/B = fax
 		var/data = ""
 		for (var/page = 1, page <= B.pages.len, page++)
 			var/obj/pageobj = B.pages[page]
@@ -37,12 +37,12 @@ var/global/last_fax_role_request
 	return faxid
 
 /obj/machinery/photocopier/faxmachine/proc/export_fax_id(fax,faxid)
-	if (istype(fax, /obj/item/weapon/paper))
-		var/obj/item/weapon/paper/P = fax
+	if (istype(fax, /obj/item/paper))
+		var/obj/item/paper/P = fax
 		var/text = "<HTML><HEAD><TITLE>[P.name]</TITLE></HEAD><BODY>[P.info][P.stamps]</BODY></HTML>";
 		rustg_file_write(text, "[config.fax_export_dir]/fax_[faxid].html")
-	else if (istype(fax, /obj/item/weapon/photo))
-		var/obj/item/weapon/photo/H = fax
+	else if (istype(fax, /obj/item/photo))
+		var/obj/item/photo/H = fax
 		fcopy(H.img, "[config.fax_export_dir]/photo_[faxid].png")
 		var/text = "<html><head><title>[H.name]</title></head>" \
 			+ "<body style='overflow:hidden;margin:0;text-align:center'>" \
@@ -70,8 +70,8 @@ var/global/last_fax_role_request
 			world.Export("[CONFIG_GET(string/chat_webhook_url)]?[query_string]") // CHOMPEdit
 	//YW EDIT //CHOMPEdit also
 	var/idlen = length(faxid) + 1
-	if (istype(sent, /obj/item/weapon/paper_bundle))
-		var/obj/item/weapon/paper_bundle/B = sent
+	if (istype(sent, /obj/item/paper_bundle))
+		var/obj/item/paper_bundle/B = sent
 		faxid = copytext(faxid,1,idlen-2)
 		var/faxids = "FAXMULTIID: [faxid]_0"
 		var/contents = ""
@@ -134,7 +134,7 @@ var/global/last_fax_role_request
 	if(L.stat || L.restrained())
 		return
 	if(last_fax_role_request && (world.time - last_fax_role_request < 5 MINUTES))
-		to_chat(L, "<span class='warning'>The global automated relays are still recalibrating. Try again later or relay your request in written form for processing.</span>")
+		to_chat(L, span_warning("The global automated relays are still recalibrating. Try again later or relay your request in written form for processing."))
 		return
 
 	var/confirmation = tgui_alert(L, "Are you sure you want to send automated crew request?", "Confirmation", list("Yes", "No", "Cancel"))
@@ -166,7 +166,7 @@ var/global/last_fax_role_request
 
 	var/datum/department/ping_dept = SSjob.get_ping_role(role)
 	if(!ping_dept)
-		to_chat(L, "<span class='warning'>Selected job cannot be requested for \[ERRORDEPTNOTFOUND] reason. Please report this to system administrator.</span>")
+		to_chat(L, span_warning("Selected job cannot be requested for \[ERRORDEPTNOTFOUND] reason. Please report this to system administrator."))
 		return
 	var/message_color = "#FFFFFF"
 	var/ping_name = null
@@ -192,10 +192,10 @@ var/global/last_fax_role_request
 		//if(DEPARTMENT_TALON)
 		//	ping_name = "Offmap"
 	if(!ping_name)
-		to_chat(L, "<span class='warning'>Selected job cannot be requested for \[ERRORUNKNOWNDEPT] reason. Please report this to system administrator.</span>")
+		to_chat(L, span_warning("Selected job cannot be requested for \[ERRORUNKNOWNDEPT] reason. Please report this to system administrator."))
 		return
 	message_color = ping_dept.color
 
 	message_chat_rolerequest(message_color, ping_name, reason, role)
 	last_fax_role_request = world.time
-	to_chat(L, "<span class='notice'>Your request was transmitted.</span>")
+	to_chat(L, span_notice("Your request was transmitted."))

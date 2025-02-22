@@ -38,7 +38,7 @@ Buildable meters
  * @param loc Location
  * @pipe_type
  */
-/obj/item/pipe/Initialize(var/mapload, var/_pipe_type, var/_dir, var/obj/machinery/atmospherics/make_from)
+/obj/item/pipe/Initialize(mapload, var/_pipe_type, var/_dir, var/obj/machinery/atmospherics/make_from)
 	if(make_from)
 		make_from_existing(make_from)
 	else
@@ -65,7 +65,7 @@ Buildable meters
 	if(make_from.mirrored)
 		do_a_flip()
 
-/obj/item/pipe/dropped()
+/obj/item/pipe/dropped(mob/user)
 	if(loc)
 		setPipingLayer(piping_layer)
 	return ..()
@@ -132,6 +132,19 @@ Buildable meters
 	src.set_dir(turn(src.dir, 270))
 	fixdir()
 
+//VOREstation edit: counter-clockwise rotation
+/obj/item/pipe/verb/rotate_counterclockwise()
+	set category = "Object"
+	set name = "Rotate Pipe Counter-Clockwise"
+	set src in view(1)
+
+	if ( usr.stat || usr.restrained() || !usr.canmove )
+		return
+
+	src.set_dir(turn(src.dir, 90))
+	fixdir()
+//VOREstation edit end
+
 // Don't let pulling a pipe straighten it out.
 /obj/item/pipe/binary/bendable/Move()
 	var/old_bent = !IS_CARDINAL(dir)
@@ -165,12 +178,12 @@ Buildable meters
 	else
 		return ..()
 
-/obj/item/pipe/attackby(var/obj/item/weapon/W as obj, var/mob/user as mob)
+/obj/item/pipe/attackby(var/obj/item/W as obj, var/mob/user as mob)
 	if(W.has_tool_quality(TOOL_WRENCH))
 		return wrench_act(user, W)
 	return ..()
 
-/obj/item/pipe/proc/wrench_act(var/mob/living/user, var/obj/item/weapon/tool/wrench/W)
+/obj/item/pipe/proc/wrench_act(var/mob/living/user, var/obj/item/tool/wrench/W)
 	if(!isturf(loc))
 		return TRUE
 
@@ -181,12 +194,12 @@ Buildable meters
 	var/flags = initial(fakeA.pipe_flags)
 	for(var/obj/machinery/atmospherics/M in loc)
 		if((M.pipe_flags & flags & PIPING_ONE_PER_TURF))	//Only one dense/requires density object per tile, eg connectors/cryo/heater/coolers.
-			to_chat(user, "<span class='warning'>Something is hogging the tile!</span>")
+			to_chat(user, span_warning("Something is hogging the tile!"))
 			return TRUE
 		if((M.piping_layer != piping_layer) && !((M.pipe_flags | flags) & PIPING_ALL_LAYER)) // Pipes on different layers can't block each other unless they are ALL_LAYER
 			continue
 		if(M.get_init_dirs() & SSmachines.get_init_dirs(pipe_type, dir))	// matches at least one direction on either type of pipe
-			to_chat(user, "<span class='warning'>There is already a pipe at that location!</span>")
+			to_chat(user, span_warning("There is already a pipe at that location!"))
 			return TRUE
 	// no conflicts found
 
@@ -195,15 +208,15 @@ Buildable meters
 	// TODO - Evaluate and remove the "need at least one thing to connect to" thing ~Leshana
 	// With how the pipe code works, at least one end needs to be connected to something, otherwise the game deletes the segment.
 	if (QDELETED(A))
-		to_chat(user, "<span class='warning'>There's nothing to connect this pipe section to!</span>")
+		to_chat(user, span_warning("There's nothing to connect this pipe section to!"))
 		return TRUE
 	transfer_fingerprints_to(A)
 
 	playsound(src, W.usesound, 50, 1)
 	user.visible_message( \
 		"[user] fastens \the [src].", \
-		"<span class='notice'>You fasten \the [src].</span>", \
-		"<span class='italics'>You hear ratcheting.</span>")
+		span_notice("You fasten \the [src]."), \
+		span_warningplain("You hear ratcheting."))
 
 	qdel(src)
 
@@ -254,26 +267,26 @@ Buildable meters
 	w_class = ITEMSIZE_LARGE
 	var/piping_layer = PIPING_LAYER_DEFAULT
 
-/obj/item/pipe_meter/attackby(var/obj/item/weapon/W as obj, var/mob/user as mob)
+/obj/item/pipe_meter/attackby(var/obj/item/W as obj, var/mob/user as mob)
 	if(W.has_tool_quality(TOOL_WRENCH))
 		return wrench_act(user, W)
 	return ..()
 
-/obj/item/pipe_meter/proc/wrench_act(var/mob/living/user, var/obj/item/weapon/tool/wrench/W)
+/obj/item/pipe_meter/proc/wrench_act(var/mob/living/user, var/obj/item/tool/wrench/W)
 	var/obj/machinery/atmospherics/pipe/pipe
 	for(var/obj/machinery/atmospherics/pipe/P in loc)
 		if(P.piping_layer == piping_layer)
 			pipe = P
 			break
 	if(!pipe)
-		to_chat(user, "<span class='warning'>You need to fasten it to a pipe!</span>")
+		to_chat(user, span_warning("You need to fasten it to a pipe!"))
 		return TRUE
 	new /obj/machinery/meter(loc, piping_layer)
 	playsound(src, W.usesound, 50, 1)
-	to_chat(user, "<span class='notice'>You fasten the meter to the pipe.</span>")
+	to_chat(user, span_notice("You fasten the meter to the pipe."))
 	qdel(src)
 
-/obj/item/pipe_meter/dropped()
+/obj/item/pipe_meter/dropped(mob/user)
 	. = ..()
 	if(loc)
 		setAttachLayer(piping_layer)

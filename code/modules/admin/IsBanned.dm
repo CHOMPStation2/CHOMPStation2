@@ -5,21 +5,21 @@
 		return ..()
 
 	//Guest Checking
-	if(!CONFIG_GET(flag/guests_allowed) && IsGuestKey(key)) // CHOMPEdit
+	if(!CONFIG_GET(flag/guests_allowed) && IsGuestKey(key))
 		log_adminwarn("Failed Login: [key] - Guests not allowed")
 		message_admins(span_blue("Failed Login: [key] - Guests not allowed"))
 		return list("reason"="guest", "desc"="\nReason: Guests not allowed. Please sign in with a byond account.")
 
 	//check if the IP address is a known TOR node
-	if(config && CONFIG_GET(flag/ToRban) && ToRban_isbanned(address)) // CHOMPEdit
+	if(config && CONFIG_GET(flag/ToRban) && ToRban_isbanned(address))
 		log_adminwarn("Failed Login: [src] - Banned: ToR")
 		message_admins(span_blue("Failed Login: [src] - Banned: ToR"))
 		//ban their computer_id and ckey for posterity
 		AddBan(ckey(key), computer_id, "Use of ToR", "Automated Ban", 0, 0)
-		return list("reason"="Using ToR", "desc"="\nReason: The network you are using to connect has been banned.\nIf you believe this is a mistake, please request help at [CONFIG_GET(string/banappeals)]") // CHOMPEdit
+		return list("reason"="Using ToR", "desc"="\nReason: The network you are using to connect has been banned.\nIf you believe this is a mistake, please request help at [CONFIG_GET(string/banappeals)]")
 
 
-	if(CONFIG_GET(flag/ban_legacy_system)) // CHOMPEdit
+	if(CONFIG_GET(flag/ban_legacy_system))
 
 		//Ban Checking
 		. = CheckBan( ckey(key), computer_id, address )
@@ -56,7 +56,7 @@
 				log_misc("Key [ckeytext] cid not checked. Non-Numeric: [computer_id]")
 				failedcid = 1
 
-		var/datum/db_query/query = SSdbcore.NewQuery("SELECT ckey, ip, computerid, a_ckey, reason, expiration_time, duration, bantime, bantype FROM erro_ban WHERE (ckey = :t_ckey [ipquery] [cidquery]) AND (bantype = 'PERMABAN'  OR (bantype = 'TEMPBAN' AND expiration_time > Now())) AND isnull(unbanned)", list("t_ckey" = ckeytext)) //CHOMPEdit TGSQL
+		var/datum/db_query/query = SSdbcore.NewQuery("SELECT ckey, ip, computerid, a_ckey, reason, expiration_time, duration, bantime, bantype FROM erro_ban WHERE (ckey = '[ckeytext]' [ipquery] [cidquery]) AND (bantype = 'PERMABAN'  OR (bantype = 'TEMPBAN' AND expiration_time > Now())) AND isnull(unbanned)")
 
 		query.Execute()
 
@@ -76,9 +76,9 @@
 				expires = " The ban is for [duration] minutes and expires on [expiration] (server time)."
 
 			var/desc = "\nReason: You, or another user of this computer or connection ([pckey]) is banned from playing here. The ban reason is:\n[reason]\nThis ban was applied by [ackey] on [bantime], [expires]"
-			qdel(query) //CHOMPEdit TGSQL
+			qdel(query)
 			return list("reason"="[bantype]", "desc"="[desc]")
-		qdel(query) //CHOMPEdit TGSQL
+		qdel(query)
 		if (failedcid)
 			message_admins("[key] has logged in with a blank computer id in the ban check.")
 		if (failedip)

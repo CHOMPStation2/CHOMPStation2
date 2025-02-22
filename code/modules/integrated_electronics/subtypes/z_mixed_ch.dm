@@ -48,28 +48,6 @@
 		activate_pin(2)
 	return push_data()
 
-//FIXES fr pads below because i dont want to edit the actual files, YES this removes checks for if user is close to the machine,, no they werent working anyway.
-/obj/item/integrated_circuit/input/textpad/ask_for_input(mob/user)
-	var/new_input = input(user, "Enter some words, please.","Number pad", get_pin_data(IC_OUTPUT, 1)) as null|text
-	if(istext(new_input))
-		set_pin_data(IC_OUTPUT, 1, new_input)
-		push_data()
-		activate_pin(1)
-
-/obj/item/integrated_circuit/input/numberpad/ask_for_input(mob/user)
-	var/new_input = input(user, "Enter a number, please.","Number pad", get_pin_data(IC_OUTPUT, 1)) as null|num
-	if(isnum(new_input))
-		set_pin_data(IC_OUTPUT, 1, new_input)
-		push_data()
-		activate_pin(1)
-
-/obj/item/integrated_circuit/input/colorpad/ask_for_input(mob/user)
-	var/new_color = input(user, "Enter a color, please.", "Color pad", get_pin_data(IC_OUTPUT, 1)) as color|null
-	if(new_color)
-		set_pin_data(IC_OUTPUT, 1, new_color)
-		push_data()
-		activate_pin(1)
-
 //Racial addition for medscanner circuitry.
 //Because if we die from water, probably shouldn't feed em protein shakes yknow or if you are an antag this can be useful info too
 
@@ -121,7 +99,7 @@
 	push_data()
 	activate_pin(2)
 
-/obj/item/device/electronic_assembly/drone
+/obj/item/electronic_assembly/drone
 	w_class = ITEMSIZE_NORMAL
 	max_components = IC_COMPONENTS_BASE * 6
 	max_complexity = IC_COMPLEXITY_BASE * 6

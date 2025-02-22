@@ -45,8 +45,6 @@
 	var/lip_style = null	//no lipstick by default- arguably misleading, as it could be used for general makeup
 
 	var/age = 30		//Player's age (pure fluff)
-	var/bday_month = 0	//Character birth month
-	var/bday_day = 0	//Character birthday day
 
 	var/b_type = "A+"	//Player's bloodtype
 	var/datum/robolimb/synthetic		//If they are a synthetic (aka synthetic torso). Also holds the datum for the type of robolimb.
@@ -54,6 +52,7 @@
 	var/list/all_underwear = list()
 	var/list/all_underwear_metadata = list()
 	var/list/hide_underwear = list()
+	var/headset = 1		//Which headset type the player has chosen.
 	var/backbag = 2		//Which backpack type the player has chosen.
 	var/pdachoice = 1	//Which PDA type the player has chosen.
 
@@ -80,10 +79,6 @@
 	var/obj/item/r_store = null
 	var/obj/item/l_store = null
 	var/obj/item/s_store = null
-
-	var/used_skillpoints = 0
-	var/skill_specialization = null
-	var/list/skills = list()
 
 	var/voice = ""	//Instead of new say code calling GetVoice() over and over and over, we're just going to ask this variable, which gets updated in Life()
 
@@ -135,6 +130,12 @@
 	var/r_ears3 = 30 //Trust me, we could always use more colour. No japes.
 	var/g_ears3 = 30
 	var/b_ears3 = 30
+
+	/// secondary ears sprite accessory reference
+	var/datum/sprite_accessory/ears/ear_secondary_style
+	/// secondary ears color channels; can be null, or a list of #aabbcc hexcolors
+	var/list/ear_secondary_colors
+
 	var/datum/sprite_accessory/tail/tail_style = null
 	var/r_tail = 30
 	var/g_tail = 30
@@ -161,3 +162,10 @@
 
 	// Custom Species Name
 	var/custom_species
+
+	var/block_hud
+
+	var/phobias		//For holding a list of phobias
+
+	var/loneliness_stage = 0
+	var/next_loneliness_time = 0

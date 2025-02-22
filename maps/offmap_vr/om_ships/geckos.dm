@@ -1,5 +1,5 @@
 // Compile in the map for CI testing if we're testing compileability of all the maps
-#if MAP_TEST
+#ifdef MAP_TEST
 #include "gecko_sh.dmm"
 #include "gecko_cr.dmm"
 #endif
@@ -8,23 +8,23 @@
 /datum/map_template/om_ships/gecko_stationhopper
 	name = "OM Ship - Gecko Stationhopper (new Z)"
 	desc = "A medium personnel transport shuttle."
-	mappath = 'gecko_sh.dmm'
+	mappath = "maps/offmap_vr/om_ships/gecko_sh.dmm"
 	annihilate = TRUE
 
 /datum/map_template/om_ships/gecko_cargohauler
 	name = "OM Ship - Gecko Cargo Hauler (new Z)"
 	desc = "A medium supply transport shuttle."
-	mappath = 'gecko_cr.dmm'
+	mappath = "maps/offmap_vr/om_ships/gecko_cr.dmm"
 	annihilate = TRUE
 
 /datum/map_template/om_ships/gecko_cargohauler_wreck
 	name = "OM Ship - Wrecked Gecko Cargo Hauler (new Z)"
 	desc = "A wrecked medium supply transport shuttle."
-	mappath = 'gecko_cr_wreck.dmm'
+	mappath = "maps/offmap_vr/om_ships/gecko_cr_wreck.dmm"
 	annihilate = TRUE
 
 // The shuttle's area(s)
-/area/shuttle/gecko_sh	
+/area/shuttle/gecko_sh
 	name = "\improper Gecko Stationhopper"
 	icon_state = "green"
 	requires_power = 1
@@ -42,7 +42,7 @@
 	requires_power = 1
 	has_gravity = 0
 
-/area/shuttle/gecko_cr	
+/area/shuttle/gecko_cr
 	name = "\improper Gecko Cargo Hauler Bay"
 	icon_state = "green"
 	requires_power = 1
@@ -60,7 +60,7 @@
 	requires_power = 1
 	has_gravity = 0
 
-/area/shuttle/gecko_cr_wreck	
+/area/shuttle/gecko_cr_wreck
 	name = "\improper Wrecked Gecko Cargo Hauler Bay"
 	icon_state = "green"
 	requires_power = 1
@@ -174,3 +174,4 @@
 	vessel_mass = 6500
 	vessel_size = SHIP_SIZE_LARGE
 	shuttle = "Wrecked Gecko Cargo Hauler"
+	known = FALSE

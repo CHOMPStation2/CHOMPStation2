@@ -25,7 +25,7 @@
 						/area/mine,
 						/area/vacant/vacant_shop,
 						/area/rnd/research_storage, // This should probably be fixed,
-						/area/security/riot_control // This should probably be fixed,
+						/area/security/riot_control, // This should probably be fixed,
 						)
 
 	var/list/exempt_from_apc = typesof(/area/construction,
@@ -108,6 +108,9 @@
 				if(combined_dir in dirs_checked)
 					bad_tests++
 					log_unit_test("[bad_msg] Contains multiple wires with same direction on top of each other.")
+				if(C.dir != SOUTH)
+					bad_tests++
+					log_unit_test("[bad_msg] Contains wire with dir set, wires MUST face south, use icon_states.")
 				dirs_checked.Add(combined_dir)
 
 		log_unit_test("[color] wires checked.")
@@ -119,15 +122,39 @@
 
 	return 1
 
+/datum/unit_test/template_noops
+	name = "MAP: Template no-ops (all maps)"
+
+/datum/unit_test/template_noops/start_test()
+
+	var/list/log = list()
+
+	var/turf_noop_count = 0
+	for(var/turf/template_noop/T in world)
+		turf_noop_count++
+		log += "+-- Template Turf @ [T.x], [T.y], [T.z] ([T.loc])"
+
+	var/area_noop_count = 0
+	for(var/area/template_noop/A in world)
+		area_noop_count++
+		log += "+-- Template Area"
+
+	if(turf_noop_count || area_noop_count)
+		fail("Map contained [turf_noop_count] template turfs and [area_noop_count] template areas at round-start.\n" + log.Join("\n"))
+	else
+		pass("No template turfs or areas.")
+
+	return 1
+
 /datum/unit_test/active_edges
 	name = "MAP: Active edges (all maps)"
 
 /datum/unit_test/active_edges/start_test()
 
-	var/active_edges = air_master.active_edges.len
+	var/active_edges = SSair.active_edges.len
 	var/list/edge_log = list()
 	if(active_edges)
-		for(var/connection_edge/E in air_master.active_edges)
+		for(var/connection_edge/E in SSair.active_edges)
 			var/a_temp = E.A.air.temperature
 			var/a_moles = E.A.air.total_moles
 			var/a_vol = E.A.air.volume

@@ -1,8 +1,8 @@
 //CHOMP Specific overrides
-/obj/item/weapon/material/whip
+/obj/item/material/whip
 	icon = 'icons/obj/weapons_ch.dmi'
 
-/obj/item/weapon/material/butterfly/saw //This Saw Cleaver is in here since I do not know where else to put it
+/obj/item/material/butterfly/saw //This Saw Cleaver is in here since I do not know where else to put it
 	name = "Saw Cleaver"
 	desc = "A weapon consisting of a long handle and a heavy serrated blade. Using centrifrical force the blade extends outword allowing it to slice it long cleaves. The smell of blood hangs in the air around it."
 	icon = 'icons/obj/weapons_ch.dmi'
@@ -22,7 +22,7 @@
 	thrown_force_divisor = 0.1 // 2 when thrown with weight 20 (steel) since frankly its too bulk to throw
 	//holy = 1
 
-/obj/item/weapon/material/butterfly/saw/update_force()
+/obj/item/material/butterfly/saw/update_force()
 	if(active)
 		w_class = ITEMSIZE_HUGE
 		can_cleave = 1

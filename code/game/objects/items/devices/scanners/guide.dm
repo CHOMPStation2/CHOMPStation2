@@ -1,28 +1,28 @@
-/obj/item/device/healthanalyzer/verb/toggle_guide()
+/obj/item/healthanalyzer/verb/toggle_guide()
 	set name = "Toggle Guidance"
 	set desc = "Toggles whether or not \the [src] will provide guidance and instruction in addition to scanning."
 	set category = "Object"
 	guide = !guide
-	to_chat(usr, "<span class='notice'>You toggle \the [src]'s guidance system [guide ? "on" : "off"].</span>")
+	to_chat(usr, span_notice("You toggle \the [src]'s guidance system [guide ? "on" : "off"]."))
 
 
-/obj/item/device/healthanalyzer/guide
+/obj/item/healthanalyzer/guide
 	name = "Instructional health analyzer"
 	desc = "A hand-held body scanner able to distinguish vital signs of the subject. It shows extra information to medical personnel!"
 	guide = TRUE
 	icon_state = "health-g"
 
-/obj/item/device/healthanalyzer/proc/guide(var/mob/living/carbon/human/M, mob/living/user)
+/obj/item/healthanalyzer/proc/guide(var/mob/living/carbon/human/M, mob/living/user)
 
 /* CHOMPedit remove: Anyone can get this info. *
 
-	var/obj/item/weapon/card/id/ourid = user?.GetIdCard()
+	var/obj/item/card/id/ourid = user?.GetIdCard()
 	if(!ourid)
 		return
-	if(access_change_ids in ourid.access)
+	if(access_change_ids in ourid.GetAccess())
 		playsound(src, 'sound/machines/defib_failed.ogg', 50, 0)
 		return
-	if(access_medical in ourid.access)
+	if(access_medical in ourid.GetAccess())
 		playsound(src, 'sound/effects/pop.ogg', 50, FALSE)
 	else
 		playsound(src, 'sound/machines/defib_failed.ogg', 50, 0)
@@ -71,47 +71,52 @@
 		if(org.damage >= 1 && !istype(org, /obj/item/organ/internal/brain))
 			organ = TRUE
 
-	var/blood_volume = M.vessel.get_reagent_amount("blood")
+	var/blood_volume = M.vessel.get_reagent_amount(REAGENT_ID_BLOOD)
 	if(blood_volume <= M.species.blood_volume*M.species.blood_level_safe)
 		bloodloss = TRUE
 
  //CHOMPedit start: Wording
 	if(bleeding_external)
-		dat += "<b>Surface Bleeding</b> - Apply bandages or administer Bicaridine.<br>"
+		dat += span_bold("Surface Bleeding") + " - Apply bandages or administer Bicaridine.<br>"
 	if(bleeding_internal)
-		dat += "<b>Internal Bleeding</b> - Commence an internal vein repair operation or administer coagulants, such as Myelamine.<br>"
+		dat += span_bold("Internal Bleeding") + " - Commence an internal vein repair operation or administer coagulants, such as Myelamine.<br>"
 	if(M.getOxyLoss())
-		dat += "<b>Suffocation</b> - Administer Dexalin or Dexalin Plus. Check for heart or lung damage.<br>"
+		dat += span_bold("Suffocation") + " - Administer Dexalin or Dexalin Plus. Check for heart or lung damage.<br>"
 	if(infection)
-		dat += "<b>Infection</b> - Administer Spaceacillin. If severe, use Corophizine or overdose on Spaceacillin and monitor until well.<br>"
+		dat += span_bold("Infection") + " - Administer Spaceacillin. If severe, use Corophizine or overdose on Spaceacillin and monitor until well.<br>"
 	if(M.getBrainLoss() >= 1)
-		dat += "<b>Traumatic Brain Injury</b> - Commence brain repair surgery Administer Alkysine or universal organ-repair chemicals such as Peridaxon.<br>"
+		dat += span_bold("Traumatic Brain Injury") + " - Commence brain repair surgery Administer Alkysine or universal organ-repair chemicals such as Peridaxon.<br>"
 	if(M.radiation || M.accumulated_rads)
-		dat += "<b>Radiation Exposure</b> - Administer Hyronalin or Arithrazine. Monitor for genetic damage.<br>"
+		dat += span_bold("Radiation Exposure") + " - Administer Hyronalin or Arithrazine. Monitor for genetic damage.<br>"
 	if(organ)
-		dat += "<b>Organ Damage</b> - Administer Peridaxon. Perform a full body scan for targeted organ repair surgery.<br>"
+		dat += span_bold("Organ Damage") + " - Administer Peridaxon. Perform a full body scan for targeted organ repair surgery.<br>"
 	if(bloodloss)
-		dat += "<b>Low blood volume</b> - Commence blood transfusion via IV drip or provide blood-restorative chemicals (e.g.: Copper for zorren and skrell, iron for the rest)."
+		dat += span_bold("Low blood volume") + " - Commence blood transfusion via IV drip or provide blood-restorative chemicals (e.g.: Copper for zorren and skrell, iron for the rest)."
 	if(M.getToxLoss())
-		dat += "<b>Toxin Buildup</b> - Inject Dylovene or Carthatoline. Monitor for damage to the liver or kidneys.<br>"
+		dat += span_bold("Toxin Buildup") + " - Inject Dylovene or Carthatoline. Monitor for damage to the liver or kidneys.<br>"
 	if(M.getBruteLoss())
-		dat += "<b>Physical Trauma</b> - Bandage the wounded body part. Administer Bicaridine or Vermicetol depending on the severity.<br>"
+		dat += span_bold("Physical Trauma") + " - Bandage the wounded body part. Administer Bicaridine or Vermicetol depending on the severity.<br>"
 	if(M.getFireLoss())
-		dat += "<b>Burn Wounds</b> - Salve the wounded body part in ointment. Administer Kelotane or Dermaline. Check for infections.<br>"
+		dat += span_bold("Burn Wounds") + " - Salve the wounded body part in ointment. Administer Kelotane or Dermaline. Check for infections.<br>"
 	if(M.getCloneLoss())
-		dat += "<b>Genetic Damage</b> - Utilize cryogenic pod with appropriate chemicals (i.e. Cryoxadone) and below 70 K, or give Rezadone.<br>"
+		dat += span_bold("Genetic Damage") + " - Utilize cryogenic pod with appropriate chemicals (i.e. Cryoxadone) and below 70 K, or give Rezadone.<br>"
 	if(bone)
-		dat += "<b>Bone Fracture</b> - Splint the fractured limb. Commence a bone repair operation or administer Osteodaxon after treating the physical trauma.<br>"
-	if(M.virus2.len)
-		dat += "<b>Viral Infection</b> - Inform a Virologist or the Chief Medical Officer and administer antiviral chemicals such as Corophizine and Spaceacilin. Limit exposure to other personnel.<br>"
+		dat += span_bold("Bone fracture") + " - Splint damaged area. Treat with bone repair surgery or Osteodaxon after treating brute damage.<br>"
+	if(M.viruses.len)
+		for(var/datum/disease/D in M.GetViruses())
+			if(D.visibility_flags & HIDDEN_SCANNER)
+				continue
+			else
+				dat += span_bold("Viral Infection") + " - Inform a Virologist or the Chief Medical Officer and administer antiviral chemicals such as Spaceacillin. Limit exposure to other personnel.<br>"
 	if(robotparts)
-		dat += "<b>Robotic Body Parts</b> - Inform the Robotics department."
+		dat += span_bold("Robotic Body Parts") + " - Inform the Robotics department."
 
 	var/peeb
 	if(dat)
-		peeb +="<span class='notice'><b>GUIDANCE SYSTEM BEGIN</b></span><br>"
+		peeb += span_notice(span_bold("GUIDANCE SYSTEM BEGIN"))
+		peeb += "<br>"
 		peeb += dat
-		peeb += "<span class='notice'>For more detailed information on the patient's condition, utilize a body scanner at the closest medical bay.</span>"
+		peeb += span_notice("For more detailed information on the patient's condition, utilize a body scanner at the closest medical bay.")
 
 	user.show_message(peeb, 1)
 //CHOMPedit end.

@@ -19,7 +19,7 @@
 /obj/item/prop/alien/junk,
 /obj/item/prop/alien/junk,
 /obj/item/prop/alien/junk,
-/obj/item/device/perfect_tele/alien,
+/obj/item/perfect_tele/alien,
 /obj/item/organ/internal/lungs/replicant/mending,
 /obj/structure/closet/coffin,
 /obj/item/organ/internal/heart/replicant/rage,

@@ -1,7 +1,7 @@
 /mob/living/simple_mob/xeno_ch/proc/xeno_build()
 	set name = "Build Resin Structure"
 	set desc = "Build a xenomorph resin structure."
-	set category = "Abilities"
+	set category = "Abilities.Xeno"
 
 	var/list/options = list("Resin Door","Resin Membrane","Nest","Resin Wall","Weed Node")
 	for(var/option in options)
@@ -36,7 +36,7 @@
 				O = new /obj/effect/alien/weeds/node(targetLoc)
 
 		if(O)
-			visible_message("<span class='warning'><B>[src] vomits up a thick purple substance and begins to shape it!</B></span>", "<span class='alium'>You shape a [choice].</span>")
+			visible_message(span_boldwarning("[src] vomits up a thick purple substance and begins to shape it!"), span_alium("You shape a [choice]."))
 			O.color = "#321D37"
 			playsound(src, 'sound/effects/blobattack.ogg', 40, 1)
 
@@ -51,7 +51,7 @@
 
 
 /datum/action/innate/xeno_ch
-	check_flags = AB_CHECK_RESTRAINED | AB_CHECK_STUNNED | AB_CHECK_ALIVE
+	check_flags = AB_CHECK_RESTRAINED | AB_CHECK_STUNNED | AB_CHECK_CONSCIOUS
 	button_icon = 'modular_chomp/icons/mob/xeno_screen.dmi'
 	var/mob/living/simple_mob/xeno_ch/parent_xeno
 

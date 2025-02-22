@@ -32,11 +32,11 @@
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipseprison)
 "du" = (
-/obj/item/weapon/stock_parts/capacitor/omni,
-/obj/item/weapon/stock_parts/capacitor/omni,
-/obj/item/weapon/stock_parts/capacitor/omni,
-/obj/item/weapon/stock_parts/capacitor/omni,
-/obj/item/weapon/stock_parts/scanning_module/omni,
+/obj/item/stock_parts/capacitor/omni,
+/obj/item/stock_parts/capacitor/omni,
+/obj/item/stock_parts/capacitor/omni,
+/obj/item/stock_parts/capacitor/omni,
+/obj/item/stock_parts/scanning_module/omni,
 /obj/structure/table/marble,
 /obj/effect/floor_decal/corner/paleblue/diagonal,
 /turf/simulated/floor/tiled/freezer{
@@ -82,7 +82,7 @@
 /obj/machinery/light{
 	dir = 4
 	},
-/obj/item/weapon/paper{
+/obj/item/paper{
 	info = "During transport, the sedative routine was interrupted by a meteor storm. The shadekin awoken as the doctor, and two guards entered the chamber. A fight ensued. Alvan Roggen attempted to restrain them, but was too forceful with their gear and ended up popping them. I have sent them to the Paradoxical fleet's training satellite XA7 in order to prevent future incidents. I have stationed myself here to monitor the dark site, in hopes of capturing a new specimen, and guard the delivery of goods until pick up is ready.";
 	name = "Status Report"
 	},
@@ -235,8 +235,8 @@
 /area/submap/eclipseprison)
 "nS" = (
 /obj/structure/closet,
-/obj/item/weapon/tool/screwdriver/diamonddrill,
-/obj/item/weapon/syndie/c4explosive/heavy,
+/obj/item/tool/screwdriver/diamonddrill,
+/obj/item/syndie/c4explosive/heavy,
 /obj/effect/floor_decal/corner/mauve/diagonal,
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipseprison)
@@ -275,8 +275,8 @@
 /area/submap/eclipseprison)
 "qr" = (
 /obj/structure/closet,
-/obj/item/weapon/gun/energy/mininglaser,
-/obj/item/weapon/syndie/c4explosive/heavy,
+/obj/item/gun/energy/mininglaser,
+/obj/item/syndie/c4explosive/heavy,
 /obj/effect/floor_decal/corner/mauve/diagonal,
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipseprison)
@@ -385,9 +385,9 @@
 /area/submap/eclipseprison)
 "yP" = (
 /obj/structure/table/steel,
-/obj/item/weapon/cell/device/weapon/recharge,
-/obj/item/weapon/cell/device/weapon/recharge,
-/obj/item/weapon/cell/device/weapon/recharge,
+/obj/item/cell/device/weapon/recharge,
+/obj/item/cell/device/weapon/recharge,
+/obj/item/cell/device/weapon/recharge,
 /obj/effect/floor_decal/corner/red/diagonal,
 /turf/simulated/floor/tiled/red,
 /area/submap/eclipseprison)
@@ -401,11 +401,11 @@
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipseprison)
 "zB" = (
-/obj/item/weapon/stock_parts/matter_bin/omni,
-/obj/item/weapon/stock_parts/matter_bin/omni,
-/obj/item/weapon/stock_parts/matter_bin/omni,
-/obj/item/weapon/stock_parts/matter_bin/omni,
-/obj/item/weapon/stock_parts/scanning_module/omni,
+/obj/item/stock_parts/matter_bin/omni,
+/obj/item/stock_parts/matter_bin/omni,
+/obj/item/stock_parts/matter_bin/omni,
+/obj/item/stock_parts/matter_bin/omni,
+/obj/item/stock_parts/scanning_module/omni,
 /obj/structure/table/marble,
 /obj/effect/floor_decal/corner/paleblue/diagonal,
 /turf/simulated/floor/tiled/freezer{
@@ -434,7 +434,7 @@
 "Ea" = (
 /obj/structure/table/steel,
 /obj/random/firstaid,
-/obj/item/weapon/gun/energy/hunter,
+/obj/item/gun/energy/hunter,
 /obj/effect/floor_decal/corner/red/diagonal,
 /turf/simulated/floor/tiled/red,
 /area/submap/eclipseprison)
@@ -448,11 +448,11 @@
 /turf/simulated/floor/tiled/red,
 /area/submap/eclipseprison)
 "Et" = (
-/obj/item/weapon/stock_parts/manipulator/omni,
-/obj/item/weapon/stock_parts/manipulator/omni,
-/obj/item/weapon/stock_parts/manipulator/omni,
-/obj/item/weapon/stock_parts/manipulator/omni,
-/obj/item/weapon/stock_parts/scanning_module/omni,
+/obj/item/stock_parts/manipulator/omni,
+/obj/item/stock_parts/manipulator/omni,
+/obj/item/stock_parts/manipulator/omni,
+/obj/item/stock_parts/manipulator/omni,
+/obj/item/stock_parts/scanning_module/omni,
 /obj/structure/table/marble,
 /obj/effect/floor_decal/corner/paleblue/diagonal,
 /turf/simulated/floor/tiled/freezer{
@@ -478,9 +478,9 @@
 /area/submap/eclipseprison)
 "Fj" = (
 /obj/structure/closet/crate/secure/lootsafe/numberlock,
-/obj/item/weapon/gun/energy/freezegun,
+/obj/item/gun/energy/freezegun,
 /obj/item/stack/material/void_opal,
-/obj/item/weapon/paper{
+/obj/item/paper{
 	info = "Due to health issues, and the desires of Admiral Virrzzur Vazzeck, I am being relocated. I leave our findings for who picks up in my place. The Paracausality has discovered several portals that lead to the home realm of the shadekin. Three have been lost due to natural disasters, whilst two remain within our grasp. The portals themselves have only activate upon a shadekin's touch, any outside tampering has proofed fruitless as of writing. Three guards are to be stationed at the portal all times, preferably one being a hellhound unit for quick sedation. The laws that bind the shadekin together dictate they cannot become ethereal with three watchers. What defines a watcher would require further testing, but due to our high demand for shadekin test subjects physically and the low supply, capture is required over testing the definitions of a watcher. At least half the guards in a shift are to have restraint training, do not use lethals on shadekin for once their body reaches critical conditions they vanish. Sif is a high point of interest for the Paracausality Initiative, and any such findings should be sent to Admiral Virrzzur Vazzeck effective immediately.";
 	name = "The Dark Expirmentation"
 	},
@@ -600,8 +600,8 @@
 /area/submap/eclipseprison)
 "LM" = (
 /obj/structure/closet,
-/obj/item/weapon/storage/backpack/dufflebag/syndie,
-/obj/item/weapon/syndie/c4explosive/heavy,
+/obj/item/storage/backpack/dufflebag/syndie,
+/obj/item/syndie/c4explosive/heavy,
 /obj/effect/floor_decal/corner/mauve/diagonal,
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipseprison)
@@ -622,11 +622,11 @@
 /turf/simulated/floor/tiled/dark,
 /area/submap/eclipseprison)
 "NK" = (
-/obj/item/weapon/stock_parts/micro_laser/omni,
-/obj/item/weapon/stock_parts/micro_laser/omni,
-/obj/item/weapon/stock_parts/micro_laser/omni,
-/obj/item/weapon/stock_parts/micro_laser/omni,
-/obj/item/weapon/stock_parts/scanning_module/omni,
+/obj/item/stock_parts/micro_laser/omni,
+/obj/item/stock_parts/micro_laser/omni,
+/obj/item/stock_parts/micro_laser/omni,
+/obj/item/stock_parts/micro_laser/omni,
+/obj/item/stock_parts/scanning_module/omni,
 /obj/structure/table/marble,
 /obj/effect/floor_decal/corner/paleblue/diagonal,
 /turf/simulated/floor/tiled/freezer{

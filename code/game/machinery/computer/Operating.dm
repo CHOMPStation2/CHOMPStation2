@@ -7,7 +7,7 @@
 	anchored = TRUE
 	icon_keyboard = "med_key"
 	icon_screen = "crew"
-	circuit = /obj/item/weapon/circuitboard/operating
+	circuit = /obj/item/circuitboard/operating
 	var/obj/machinery/optable/table = null
 	var/mob/living/carbon/human/victim = null
 	var/verbose = 1 //general speaker toggle
@@ -68,7 +68,7 @@
 		occupantData["stat"] = occupant.stat
 		occupantData["health"] = occupant.health
 		occupantData["maxHealth"] = occupant.maxHealth
-		occupantData["minHealth"] = CONFIG_GET(number/health_threshold_dead) // CHOMPEdit
+		occupantData["minHealth"] = CONFIG_GET(number/health_threshold_dead)
 		occupantData["bruteLoss"] = occupant.getBruteLoss()
 		occupantData["oxyLoss"] = occupant.getOxyLoss()
 		occupantData["toxLoss"] = occupant.getToxLoss()
@@ -108,10 +108,10 @@
 		if(ishuman(occupant) && !(NO_BLOOD in occupant.species.flags) && occupant.vessel)
 			occupantData["pulse"] = occupant.get_pulse(GETPULSE_TOOL)
 			occupantData["hasBlood"] = 1
-			var/blood_volume = round(occupant.vessel.get_reagent_amount("blood"))
+			var/blood_volume = round(occupant.vessel.get_reagent_amount(REAGENT_ID_BLOOD))
 			occupantData["bloodLevel"] = blood_volume
 			occupantData["bloodMax"] = occupant.species.blood_volume
-			occupantData["bloodPercent"] = round(100*(blood_volume/occupant.species.blood_volume), 0.01) //copy pasta ends here
+			occupantData["bloodPercent"] = occupant.species.blood_volume ? round(100*(blood_volume/occupant.species.blood_volume), 0.01) : 0 //copy pasta ends here, some species have no blood volume
 
 			occupantData["bloodType"] = occupant.dna.b_type
 			occupantData["surgery"] = build_surgery_list(user)
@@ -127,11 +127,11 @@
 
 	return data
 
-/obj/machinery/computer/operating/tgui_act(action, params)
+/obj/machinery/computer/operating/tgui_act(action, params, datum/tgui/ui)
 	if(..())
 		return TRUE
-	if((usr.contents.Find(src) || (in_range(src, usr) && istype(src.loc, /turf))) || (istype(usr, /mob/living/silicon)))
-		usr.set_machine(src)
+	if((ui.user.contents.Find(src) || (in_range(src, ui.user) && istype(src.loc, /turf))) || (istype(ui.user, /mob/living/silicon)))
+		ui.user.set_machine(src)
 
 	. = TRUE
 	switch(action)
@@ -310,3 +310,5 @@
 			// Please for the love of all that is holy, someone make surgery steps
 			// have names so I don't have to do this stupid pretty_type shit.
 			. += "[pretty_type(S)]: [english_list(allowed_tools_by_name)]"
+
+#undef OP_COMPUTER_COOLDOWN

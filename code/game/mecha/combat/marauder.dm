@@ -128,9 +128,9 @@
 	var/output = {"<div class='wr'>
 						<div class='header'>Special</div>
 						<div class='links'>
-						<a href='?src=\ref[src];toggle_thrusters=1'>Toggle thrusters</a><br>
-						<a href='?src=\ref[src];toggle_zoom=1'>Toggle zoom mode</a><br>
-						<a href='?src=\ref[src];smoke=1'>Smoke</a>
+						<a href='byond://?src=\ref[src];toggle_thrusters=1'>Toggle thrusters</a><br>
+						<a href='byond://?src=\ref[src];toggle_zoom=1'>Toggle zoom mode</a><br>
+						<a href='byond://?src=\ref[src];smoke=1'>Smoke</a>
 						</div>
 						</div>
 						"}
@@ -143,8 +143,8 @@
 
 	starting_equipment = null
 
-/obj/mecha/combat/marauder/old/New()
-	..()
+/obj/mecha/combat/marauder/old/Initialize(mapload)
+	. = ..()
 	health = 25
 	maxhealth = 300	//Just slightly worse.
 	cell.charge = rand(0, (cell.charge/2))

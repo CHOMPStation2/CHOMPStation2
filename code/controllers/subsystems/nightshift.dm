@@ -11,13 +11,13 @@ SUBSYSTEM_DEF(nightshift)
 	var/high_security_mode = FALSE
 
 /datum/controller/subsystem/nightshift/Initialize()
-	if(!CONFIG_GET(flag/enable_night_shifts)) // CHOMPEdit
+	if(!CONFIG_GET(flag/enable_night_shifts))
 		can_fire = FALSE
 	/*
 	if(config.randomize_shift_time)
 		GLOB.gametime_offset = rand(0, 23) HOURS
 	*/
-	return SS_INIT_SUCCESS // CHOMPEdit
+	return SS_INIT_SUCCESS
 
 /datum/controller/subsystem/nightshift/fire(resumed = FALSE)
 	if(round_duration_in_ds < nightshift_first_check)
@@ -28,6 +28,7 @@ SUBSYSTEM_DEF(nightshift)
 	var/announce_z
 	if(using_map.station_levels.len)
 		announce_z = pick(using_map.station_levels)
+	/* CHOMPEdit - TTSless
 	//VOREStation Edit - TTS
 	var/pickedsound
 	if(!high_security_mode)
@@ -35,7 +36,9 @@ SUBSYSTEM_DEF(nightshift)
 			pickedsound = 'sound/AI/dim_lights.ogg'
 		else
 			pickedsound = 'sound/AI/bright_lights.ogg'
-	priority_announcement.Announce(message, new_title = "Automated Lighting System Announcement", new_sound = pickedsound, zlevel = announce_z)
+	*/
+	priority_announcement.Announce(message, new_title = "Automated Lighting System Announcement", /* new_sound = pickedsound,*/ zlevel = announce_z)
+	// CHOMPEdit End
 	//VOREStation Edit End
 
 /datum/controller/subsystem/nightshift/proc/check_nightshift(check_canfire=FALSE) //This is called from elsewhere, like setting the alert levels

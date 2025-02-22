@@ -92,8 +92,8 @@
 				.["tool_qualities"] |= item.tool_qualities
 				.["other"][item.type] += 1
 			else
-				if(istype(item, /obj/item/weapon/reagent_containers))
-					var/obj/item/weapon/reagent_containers/container = item
+				if(istype(item, /obj/item/reagent_containers))
+					var/obj/item/reagent_containers/container = item
 					// if(container.is_drainable())
 					if(container.is_open_container()) // this isn't exactly the same
 						for(var/datum/reagent/reagent in container.reagents.reagent_list)
@@ -157,7 +157,7 @@
 
 	for(var/obj/item/contained_item in source.contents)
 		// if(contained_item.GetComponent(/datum/component/storage))
-		if(istype(contained_item, /obj/item/weapon/storage)) // cursed
+		if(istype(contained_item, /obj/item/storage)) // cursed
 			for(var/obj/item/subcontained_item in contained_item.contents)
 				available_tools[subcontained_item.type] = TRUE
 				for(var/behavior in subcontained_item.tool_qualities)
@@ -290,7 +290,7 @@
 			var/datum/reagent/reagent = path_key
 			var/id = initial(reagent.id)
 
-			for(var/obj/item/weapon/reagent_containers/RC in surroundings)
+			for(var/obj/item/reagent_containers/RC in surroundings)
 				// Found everything we need
 				if(amt <= 0 && amt_to_transfer <= 0)
 					break
@@ -338,8 +338,8 @@
 					continue
 
 				// Special case: the reagents may be needed for other recipes
-				if(istype(I, /obj/item/weapon/reagent_containers))
-					var/obj/item/weapon/reagent_containers/RC = I
+				if(istype(I, /obj/item/reagent_containers))
+					var/obj/item/reagent_containers/RC = I
 					if(RC.reagents.total_volume > 0)
 						continue
 
@@ -354,12 +354,12 @@
 
 				// Snowflake handling of reagent containers and storage atoms.
 				// If we consumed them in our crafting, we should dump their contents out before qdeling them.
-				if(istype(I, /obj/item/weapon/reagent_containers))
-					var/obj/item/weapon/reagent_containers/container = I
+				if(istype(I, /obj/item/reagent_containers))
+					var/obj/item/reagent_containers/container = I
 					container.reagents.clear_reagents()
 					// container.reagents.expose(container.loc, TOUCH)
-				else if(istype(I, /obj/item/weapon/storage))
-					var/obj/item/weapon/storage/container = I
+				else if(istype(I, /obj/item/storage))
+					var/obj/item/storage/container = I
 					container.spill()
 					container.close_all()
 				qdel(I)
@@ -452,27 +452,13 @@
 	data["crafting_recipes"] = crafting_recipes
 	return data
 
-/datum/component/personal_crafting/tgui_act(action, params)
+/datum/component/personal_crafting/tgui_act(action, params, datum/tgui/ui)
 	. = ..()
 	if(.)
 		return
 	switch(action)
 		if("make")
-			var/mob/user = usr
-			var/datum/crafting_recipe/TR = locate(params["recipe"]) in GLOB.crafting_recipes
-			busy = TRUE
-			tgui_interact(user)
-			var/atom/movable/result = construct_item(user, TR)
-			if(!istext(result)) //We made an item and didn't get a fail message
-				if(ismob(user) && isitem(result)) //In case the user is actually possessing a non mob like a machine
-					user.put_in_hands(result)
-				else
-					result.forceMove(user.drop_location())
-				to_chat(user, "<span class='notice'>[TR.name] constructed.</span>")
-				TR.on_craft_completion(user, result)
-			else
-				to_chat(user, "<span class='warning'>Construction failed[result]</span>")
-			busy = FALSE
+			do_make(ui.user, locate(params["recipe"]) in GLOB.crafting_recipes)
 		if("toggle_recipes")
 			display_craftable_only = !display_craftable_only
 			. = TRUE
@@ -483,6 +469,21 @@
 			cur_category = params["category"]
 			cur_subcategory = params["subcategory"] || ""
 			. = TRUE
+
+/datum/component/personal_crafting/proc/do_make(mob/user, datum/crafting_recipe/TR)
+	busy = TRUE
+	tgui_interact(user)
+	var/atom/movable/result = construct_item(user, TR)
+	if(!istext(result)) //We made an item and didn't get a fail message
+		if(ismob(user) && isitem(result)) //In case the user is actually possessing a non mob like a machine
+			user.put_in_hands(result)
+		else
+			result.forceMove(user.drop_location())
+		to_chat(user, span_notice("[TR.name] constructed."))
+		TR.on_craft_completion(user, result)
+	else
+		to_chat(user, span_warning("Construction failed[result]"))
+	busy = FALSE
 
 /datum/component/personal_crafting/proc/build_recipe_data(datum/crafting_recipe/R)
 	var/list/data = list()

@@ -8,7 +8,7 @@
 	icon_dead = "horse-dead"
 	icon = 'icons/mob/vore.dmi'
 
-	faction = "horse"
+	faction = FACTION_HORSE
 	maxHealth = 60
 	health = 60
 
@@ -24,7 +24,7 @@
 	attacktext = list("kicked")
 
 	meat_amount = 6
-	meat_type = /obj/item/weapon/reagent_containers/food/snacks/meat
+	meat_type = /obj/item/reagent_containers/food/snacks/meat
 
 	max_buckled_mobs = 1 //Yeehaw
 	can_buckle = TRUE
@@ -36,7 +36,7 @@
 	ai_holder_type = /datum/ai_holder/simple_mob/retaliate
 
 	can_be_drop_prey = FALSE //CHOMP Add
-	allow_mind_transfer = TRUE //CHOMPAdd
+	allow_mind_transfer = TRUE
 
 /mob/living/simple_mob/vore/horse/big
 	name = "horse"
@@ -73,8 +73,8 @@
 	. = ..()
 	if(!riding_datum)
 		riding_datum = new /datum/riding/simple_mob(src)
-	add_verb(src,/mob/living/simple_mob/proc/animal_mount) //CHOMPEdit TGPanel
-	add_verb(src,/mob/living/proc/toggle_rider_reins) //CHOMPEdit TGPanel
+	add_verb(src, /mob/living/simple_mob/proc/animal_mount)
+	add_verb(src, /mob/living/proc/toggle_rider_reins)
 	movement_cooldown = -2
 
 /mob/living/simple_mob/vore/horse/MouseDrop_T(mob/living/M, mob/living/user)
@@ -83,7 +83,7 @@
 /mob/living/simple_mob/vore/horse/init_vore()
 	if(!voremob_loaded)
 		return
-	.=..()
+	. = ..()
 	var/obj/belly/B = vore_selected
 	B.name = "stomach"
 	B.desc = "With a final few gulps, the horse finishes swallowing you down into its hot, dark gut... and with a slosh, your weight makes the equine's belly hang down slightly like some sort of organic hammock. The thick, humid air is tinged with the smell of half-digested grass, and the surrounding flesh wastes no time in clenching and massaging down over its newfound fodder."
@@ -140,7 +140,9 @@
 	vore_bump_emote	= "chomps down on"
 
 /mob/living/simple_mob/vore/horse/kelpie/init_vore()
-	..()
+	if(!voremob_loaded)
+		return
+	. = ..()
 	var/obj/belly/B = vore_selected
 	B.name = "stomach"
 	B.desc = "With a final few gulps, the kelpie finishes swallowing you down into its hot, humid gut... and with a slosh, your weight makes the equine's belly hang down slightly like some sort of organic hammock. The thick, damp air is tinged with the smell of seaweed, and the surrounding flesh wastes no time in clenching and massaging down over its newfound fodder."

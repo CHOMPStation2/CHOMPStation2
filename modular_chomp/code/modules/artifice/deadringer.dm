@@ -1,4 +1,4 @@
-/obj/item/weapon/deadringer/process()
+/obj/item/deadringer/process()
 	if(activated)
 		if (ismob(src.loc))
 			var/mob/living/carbon/human/H = src.loc

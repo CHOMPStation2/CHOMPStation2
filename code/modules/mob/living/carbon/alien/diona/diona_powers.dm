@@ -1,7 +1,7 @@
 //Verbs after this point.
 /mob/living/carbon/alien/diona/proc/merge()
 
-	set category = "Abilities"
+	set category = "Abilities.Diona"
 	set name = "Merge with gestalt"
 	set desc = "Merge with another diona."
 
@@ -9,7 +9,7 @@
 		return
 
 	if(istype(src.loc,/mob/living/carbon))
-		remove_verb(src,/mob/living/carbon/alien/diona/proc/merge)  //CHOMPEdit
+		remove_verb(src, /mob/living/carbon/alien/diona/proc/merge)
 		return
 
 	var/list/choices = list()
@@ -17,7 +17,7 @@
 
 		if(!(src.Adjacent(C)) || !(C.client)) continue
 
-		if(istype(C,/mob/living/carbon/human))
+		if(ishuman(C))
 			var/mob/living/carbon/human/D = C
 			if(D.species && D.species.name == SPECIES_DIONA)
 				choices += C
@@ -35,13 +35,13 @@
 	to_chat(H, "You feel your being twine with that of \the [src] as it merges with your biomass.")
 	to_chat(src, "You feel your being twine with that of \the [H] as you merge with its biomass.")
 	loc = H
-	add_verb(src,/mob/living/carbon/alien/diona/proc/split) //CHOMPEdit TGPanel
-	remove_verb(src,/mob/living/carbon/alien/diona/proc/merge) //CHOMPEdit TGPanel
+	add_verb(src, /mob/living/carbon/alien/diona/proc/split)
+	remove_verb(src, /mob/living/carbon/alien/diona/proc/merge)
 	return 1
 
 /mob/living/carbon/alien/diona/proc/split()
 
-	set category = "Abilities"
+	set category = "Abilities.Diona"
 	set name = "Split from gestalt"
 	set desc = "Split away from your gestalt as a lone nymph."
 
@@ -49,7 +49,7 @@
 		return
 
 	if(!(istype(src.loc,/mob/living/carbon)))
-		remove_verb(src,/mob/living/carbon/alien/diona/proc/split)  //CHOMPEdit
+		remove_verb(src, /mob/living/carbon/alien/diona/proc/split)
 		return
 
 	to_chat(src.loc, "You feel a pang of loss as [src] splits away from your biomass.")
@@ -58,10 +58,10 @@
 	var/mob/living/M = src.loc
 
 	src.loc = get_turf(src)
-	remove_verb(src,/mob/living/carbon/alien/diona/proc/split)  //CHOMPEdit
-	add_verb(src,/mob/living/carbon/alien/diona/proc/merge)  //CHOMPEdit
+	remove_verb(src, /mob/living/carbon/alien/diona/proc/split)
+	add_verb(src, /mob/living/carbon/alien/diona/proc/merge)
 
 	if(istype(M))
 		for(var/atom/A in M.contents)
-			if(istype(A,/mob/living/simple_mob/animal/borer) || istype(A,/obj/item/weapon/holder))
+			if(istype(A,/mob/living/simple_mob/animal/borer) || istype(A,/obj/item/holder))
 				return

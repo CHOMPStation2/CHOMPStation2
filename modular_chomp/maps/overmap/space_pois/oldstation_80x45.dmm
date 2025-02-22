@@ -2,8 +2,6 @@
 "ab" = (
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/supply,
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/asteroid_steel{
@@ -29,8 +27,6 @@
 /area/submap/oldstation_charlie)
 "ar" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/effect/floor_decal/rust,
@@ -40,7 +36,7 @@
 /area/submap/oldstation_charlie)
 "au" = (
 /obj/structure/table/standard,
-/obj/item/weapon/folder/red,
+/obj/item/folder/red,
 /turf/simulated/floor/tiled/asteroid_steel{
 	temperature = 293.15
 	},
@@ -71,9 +67,9 @@
 /area/submap/oldstation_charlie)
 "aR" = (
 /obj/structure/table/standard,
-/obj/item/weapon/tank/anesthetic,
+/obj/item/tank/anesthetic,
 /obj/item/clothing/mask/breath/medical,
-/obj/item/weapon/storage/firstaid/surgery,
+/obj/item/storage/firstaid/surgery,
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/tiled/old_tile/blue,
 /area/submap/oldstation_tox)
@@ -93,8 +89,6 @@
 /area/submap/oldstation_charlie)
 "bd" = (
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /turf/simulated/floor/tiled/asteroid_steel{
@@ -123,8 +117,6 @@
 /area/submap/oldstation_bridge)
 "bq" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/random/junk,
@@ -134,8 +126,6 @@
 /area/submap/oldstation_power)
 "bw" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /mob/living/simple_mob/mechanical/hivebot/tank/armored/anti_melee,
@@ -195,7 +185,7 @@
 /obj/machinery/light/small{
 	dir = 4
 	},
-/obj/item/weapon/paper{
+/obj/item/paper{
 	info = "<B>**WARNING**</B><BR><BR>Catastrophic damage sustained to station. Powernet exhausted to reawaken crew.<BR><BR>Immediate Objectives<br><br>1: Activate emergency power generator<br>2: Lift station lockdown on the bridge<br><br>Please locate the 'Damage Report' on the bridge for a detailed situation report.";
 	name = "Cryo Awakening Alert"
 	},
@@ -235,11 +225,9 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/structure/cable{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/structure/grille,
@@ -255,8 +243,6 @@
 /area/submap/oldstation_power)
 "ce" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/firealarm{
@@ -285,7 +271,6 @@
 	dir = 4
 	},
 /obj/structure/cable/yellow{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /turf/simulated/floor/plating,
@@ -296,18 +281,14 @@
 /area/submap/oldstation_charlie)
 "cC" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/rig/military/equipped,
+/obj/item/rig/military/equipped,
 /turf/simulated/floor/tiled/old_tile/red,
 /area/submap/oldstation_tox)
 "cF" = (
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /turf/simulated/floor/plating,
@@ -332,7 +313,6 @@
 /area/template_noop)
 "cN" = (
 /obj/structure/cable{
-	d2 = 2;
 	icon_state = "0-2";
 	pixel_y = 1
 	},
@@ -352,8 +332,8 @@
 /area/submap/oldstation_charlie)
 "da" = (
 /obj/structure/table/standard,
-/obj/item/weapon/reagent_containers/chem_disp_cartridge/oxygen,
-/obj/item/weapon/reagent_containers/chem_disp_cartridge/water,
+/obj/item/reagent_containers/chem_disp_cartridge/oxygen,
+/obj/item/reagent_containers/chem_disp_cartridge/water,
 /turf/simulated/floor/tiled/asteroid_steel{
 	temperature = 293.15
 	},
@@ -373,8 +353,6 @@
 /area/submap/oldstation_power)
 "ds" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /turf/simulated/floor/airless,
@@ -403,8 +381,6 @@
 	dir = 1
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/asteroid_steel{
@@ -422,13 +398,13 @@
 /obj/machinery/light/small{
 	dir = 8
 	},
-/obj/item/weapon/tool/crowbar,
+/obj/item/tool/crowbar,
 /obj/random/maintenance,
 /obj/random/maintenance,
 /obj/random/maintenance,
 /obj/random/maintenance,
 /obj/random/maintenance,
-/obj/item/device/flashlight,
+/obj/item/flashlight,
 /turf/simulated/floor/tiled/asteroid_steel{
 	temperature = 293.15
 	},
@@ -442,7 +418,7 @@
 /area/submap/oldstation_beta)
 "ef" = (
 /obj/structure/table/standard,
-/obj/item/weapon/book/manual/nuclear,
+/obj/item/book/manual/nuclear,
 /turf/simulated/floor/tiled/asteroid_steel{
 	temperature = 293.15
 	},
@@ -458,8 +434,6 @@
 /area/submap/oldstation_charlie)
 "eq" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/door/firedoor,
@@ -470,8 +444,6 @@
 /area/submap/oldstation_beta)
 "er" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /mob/living/simple_mob/mechanical/hivebot/ranged_damage/strong/guard,
@@ -525,8 +497,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/random/gun/random,
@@ -537,10 +507,7 @@
 /area/submap/oldstation_beta)
 "eY" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 4;
-	icon_state = "1-4";
-	tag = "90Curve"
+	icon_state = "1-4"
 	},
 /turf/simulated/floor/tiled/asteroid_steel{
 	temperature = 293.15
@@ -548,8 +515,6 @@
 /area/submap/oldstation_charlie)
 "fc" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/door/firedoor,
@@ -568,8 +533,6 @@
 /area/submap/oldstation_alpha)
 "fp" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /mob/living/simple_mob/mechanical/hivebot/swarm,
@@ -605,8 +568,6 @@
 /area/submap/oldstation_tox)
 "fK" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/effect/floor_decal/rust,
@@ -649,7 +610,6 @@
 /area/submap/oldstation_tox)
 "gu" = (
 /obj/structure/cable/yellow{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /turf/simulated/floor/airless{
@@ -658,8 +618,6 @@
 /area/submap/oldstation_power)
 "gy" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/asteroid_steel{
@@ -700,7 +658,7 @@
 /obj/machinery/power/solar_control{
 	name = "Station Solar Control Computer"
 	},
-/obj/item/weapon/paper/solar,
+/obj/item/paper/solar,
 /turf/simulated/floor/tiled/asteroid_steel{
 	temperature = 293.15
 	},
@@ -710,8 +668,6 @@
 /area/submap/oldstation_alpha)
 "gZ" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/door/firedoor,
@@ -731,8 +687,8 @@
 /area/submap/oldstation_beta)
 "hf" = (
 /obj/structure/table/standard,
-/obj/item/weapon/reagent_containers/chem_disp_cartridge/sodium,
-/obj/item/weapon/reagent_containers/chem_disp_cartridge/sugar,
+/obj/item/reagent_containers/chem_disp_cartridge/sodium,
+/obj/item/reagent_containers/chem_disp_cartridge/sugar,
 /turf/simulated/floor/tiled/asteroid_steel{
 	temperature = 293.15
 	},
@@ -817,7 +773,7 @@
 /area/submap/oldstation_hydro_sec)
 "hS" = (
 /obj/structure/table/standard,
-/obj/item/weapon/dice/d8,
+/obj/item/dice/d8,
 /turf/simulated/floor/tiled/asteroid_steel{
 	temperature = 293.15
 	},
@@ -839,7 +795,6 @@
 /area/submap/oldstation_charlie)
 "ih" = (
 /obj/structure/cable{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/door/firedoor,
@@ -876,8 +831,6 @@
 /area/submap/oldstation_bridge)
 "iD" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /mob/living/simple_mob/mechanical/hivebot/tank/armored/anti_melee,
@@ -890,8 +843,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/machinery/meter,
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/plating,
@@ -919,8 +870,6 @@
 /area/submap/oldstation_hydro_sec)
 "ji" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /turf/simulated/floor/tiled/asteroid_steel{
@@ -942,15 +891,12 @@
 	dir = 1
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/plating,
 /area/submap/oldstation_beta)
 "jO" = (
 /obj/structure/cable{
-	d2 = 2;
 	icon_state = "0-2";
 	pixel_y = 1
 	},
@@ -976,8 +922,6 @@
 /area/submap/oldstation_alpha)
 "jQ" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/door/firedoor,
@@ -1002,7 +946,7 @@
 /area/submap/oldstation_hydro_sec)
 "kh" = (
 /obj/structure/table/standard,
-/obj/item/weapon/reagent_containers/chem_disp_cartridge/radium,
+/obj/item/reagent_containers/chem_disp_cartridge/radium,
 /turf/simulated/floor/tiled/asteroid_steel{
 	temperature = 293.15
 	},
@@ -1020,8 +964,6 @@
 /area/submap/oldstation_bridge)
 "kn" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/asteroid_steel{
@@ -1033,8 +975,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/grille,
@@ -1079,8 +1019,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/effect/floor_decal/rust,
@@ -1103,8 +1041,6 @@
 /area/submap/oldstation_bridge)
 "li" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/plating,
@@ -1162,13 +1098,9 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /turf/simulated/floor/plating,
@@ -1178,7 +1110,7 @@
 /obj/machinery/light{
 	dir = 4
 	},
-/obj/item/weapon/paper{
+/obj/item/paper{
 	info = "<b>*Singularity Generator*</b><br><br>Modern power generation typically comes in two forms, a Fusion Generator or a Fission Generator. Fusion provides the best space to power ratio, and is typically seen on military or high security ships and stations, however Fission reactors require the usage of expensive, and rare, materials in its construction.. Fission generators are massive and bulky, and require a large reserve of uranium to power, however they are extremely cheap to operate and oft need little maintenance once operational.<br><br>The Singularity aims to alter this, a functional Singularity is essentially a controlled Black Hole, a Black Hole that generates far more power than Fusion or Fission generators can ever hope to produce. ";
 	name = "Singularity Generator"
 	},
@@ -1208,7 +1140,7 @@
 /area/submap/oldstation_hiveboat)
 "mu" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/gun/energy/gun/fluff/gunsword,
+/obj/item/gun/energy/gun/fluff/gunsword,
 /turf/simulated/floor/tiled/old_tile/red,
 /area/submap/oldstation_tox)
 "mw" = (
@@ -1228,8 +1160,6 @@
 "mP" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/tiled/asteroid_steel{
@@ -1238,8 +1168,6 @@
 /area/submap/oldstation_beta)
 "mQ" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/asteroid_steel{
@@ -1261,8 +1189,6 @@
 /area/submap/oldstation_beta)
 "ng" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/light/small{
@@ -1295,7 +1221,6 @@
 /area/submap/oldstation_tox)
 "nt" = (
 /obj/structure/cable/yellow{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/machinery/power/terminal{
@@ -1343,8 +1268,8 @@
 /area/submap/oldstation_alpha)
 "oe" = (
 /obj/structure/table/standard,
-/obj/item/weapon/reagent_containers/chem_disp_cartridge/dylovene,
-/obj/item/weapon/reagent_containers/chem_disp_cartridge/ethanol,
+/obj/item/reagent_containers/chem_disp_cartridge/dylovene,
+/obj/item/reagent_containers/chem_disp_cartridge/ethanol,
 /turf/simulated/floor/tiled/asteroid_steel{
 	temperature = 293.15
 	},
@@ -1378,8 +1303,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/door/airlock/maintenance_hatch,
@@ -1439,8 +1362,6 @@
 /area/submap/oldstation_beta)
 "pc" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/effect/decal/cleanable/generic,
@@ -1458,8 +1379,6 @@
 /area/submap/oldstation_tox)
 "pn" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/firealarm{
@@ -1478,8 +1397,6 @@
 /area/submap/oldstation_charlie)
 "pq" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /turf/simulated/floor/tiled/old_tile/red,
@@ -1494,8 +1411,6 @@
 	dir = 8
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/effect/decal/cleanable/blood/oil,
@@ -1512,8 +1427,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/light{
@@ -1531,7 +1444,7 @@
 /area/submap/oldstation_alpha)
 "qw" = (
 /obj/structure/table/standard,
-/obj/item/weapon/reagent_containers/chem_disp_cartridge/fluorine,
+/obj/item/reagent_containers/chem_disp_cartridge/fluorine,
 /turf/simulated/floor/tiled/asteroid_steel{
 	temperature = 293.15
 	},
@@ -1597,7 +1510,6 @@
 /area/submap/oldstation_charlie)
 "rb" = (
 /obj/structure/cable/yellow{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/power/solar,
@@ -1653,16 +1565,14 @@
 /area/submap/oldstation_beta)
 "rw" = (
 /obj/structure/table/standard,
-/obj/item/weapon/reagent_containers/chem_disp_cartridge/sacid,
-/obj/item/weapon/reagent_containers/chem_disp_cartridge/sulfur,
+/obj/item/reagent_containers/chem_disp_cartridge/sacid,
+/obj/item/reagent_containers/chem_disp_cartridge/sulfur,
 /turf/simulated/floor/tiled/asteroid_steel{
 	temperature = 293.15
 	},
 /area/submap/oldstation_tox)
 "rC" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /turf/simulated/floor/plating,
@@ -1680,8 +1590,6 @@
 /area/submap/oldstation_power)
 "rN" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/door/firedoor,
@@ -1710,7 +1618,6 @@
 /area/submap/oldstation_bridge)
 "se" = (
 /obj/structure/cable/yellow{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /turf/simulated/floor/airless{
@@ -1740,8 +1647,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/grille,
@@ -1768,7 +1673,7 @@
 /obj/machinery/light/small{
 	dir = 4
 	},
-/obj/item/weapon/reagent_containers/chem_disp_cartridge/phosphorus,
+/obj/item/reagent_containers/chem_disp_cartridge/phosphorus,
 /turf/simulated/floor/tiled/asteroid_steel{
 	temperature = 293.15
 	},
@@ -1815,7 +1720,6 @@
 "sJ" = (
 /obj/machinery/power/solar,
 /obj/structure/cable/yellow{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /turf/simulated/floor/airless{
@@ -1866,8 +1770,6 @@
 "to" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/universal,
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/door/airlock/maintenance_hatch,
@@ -1875,8 +1777,6 @@
 /area/submap/oldstation_beta)
 "tp" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/asteroid_steel{
@@ -1912,8 +1812,6 @@
 /area/submap/oldstation_charlie)
 "tP" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/firealarm{
@@ -1927,12 +1825,12 @@
 /area/submap/oldstation_charlie)
 "ub" = (
 /obj/structure/table/standard,
-/obj/item/weapon/tool/crowbar,
+/obj/item/tool/crowbar,
 /obj/random/maintenance,
 /obj/random/maintenance,
 /obj/random/maintenance,
 /obj/random/maintenance,
-/obj/item/device/flashlight,
+/obj/item/flashlight,
 /turf/simulated/floor/tiled/asteroid_steel{
 	temperature = 293.15
 	},
@@ -1971,7 +1869,7 @@
 /obj/machinery/light{
 	dir = 4
 	},
-/obj/item/weapon/paper{
+/obj/item/paper{
 	info = "<b>*K14-Multiphase Energy Gun*</b><br><br>The K14 Prototype Energy Gun is the first Energy Rifle that has been successfully been able to not only hold a larger ammo charge than other gun models, but is capable of swapping between different energy projectile types on command with no incidents.<br><br>The weapon still suffers several drawbacks, its alternative, non laser fire mode, can only fire one round before exhausting the energy cell, the weapon also remains prohibitively expensive, nonetheless NT Market Research fully believe this weapon will form the backbone of our Energy weapon catalogue.<br><br>The K14 is expected to undergo revision to fix the ammo issues, the K15 is expected to replace the 'stun' setting with a 'disable' setting in an attempt to bypass the ammo issues.";
 	name = "K14 Energy Gun Report"
 	},
@@ -1989,9 +1887,9 @@
 /obj/structure/table/rack/shelf/steel,
 /obj/item/clothing/head/helmet/material,
 /obj/item/clothing/head/helmet/material,
-/obj/item/weapon/gun/energy/gun/compact,
-/obj/item/weapon/gun/energy/gun/compact,
-/obj/item/weapon/gun/energy/gun/compact,
+/obj/item/gun/energy/gun/compact,
+/obj/item/gun/energy/gun/compact,
+/obj/item/gun/energy/gun/compact,
 /turf/simulated/floor/tiled/asteroid_steel{
 	temperature = 293.15
 	},
@@ -2006,8 +1904,6 @@
 /area/template_noop)
 "uM" = (
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/tiled/asteroid_steel{
@@ -2032,18 +1928,12 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/tiled/asteroid_steel{
@@ -2068,8 +1958,6 @@
 	dir = 4
 	},
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/door/airlock/external{
@@ -2085,7 +1973,6 @@
 /area/submap/oldstation_tox)
 "vy" = (
 /obj/structure/cable{
-	d2 = 2;
 	icon_state = "0-2";
 	pixel_y = 1
 	},
@@ -2102,8 +1989,6 @@
 	dir = 4
 	},
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/airless,
@@ -2111,8 +1996,8 @@
 "vA" = (
 /obj/structure/table/standard,
 /obj/item/clothing/mask/gas,
-/obj/item/weapon/handcuffs,
-/obj/item/weapon/handcuffs,
+/obj/item/handcuffs,
+/obj/item/handcuffs,
 /obj/machinery/recharger/wallcharger{
 	pixel_x = 4;
 	pixel_y = -32
@@ -2163,8 +2048,6 @@
 /area/submap/oldstation_tox)
 "wF" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/light/small{
@@ -2177,8 +2060,6 @@
 /area/submap/oldstation_beta)
 "wK" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /turf/simulated/floor/tiled/asteroid_steel{
@@ -2187,7 +2068,7 @@
 /area/submap/oldstation_beta)
 "wM" = (
 /obj/structure/table/standard,
-/obj/item/device/megaphone/super,
+/obj/item/megaphone/super,
 /turf/simulated/floor/tiled/asteroid_steel{
 	temperature = 293.15
 	},
@@ -2227,7 +2108,7 @@
 	dir = 4
 	},
 /obj/machinery/chem_master,
-/obj/item/weapon/reagent_containers/glass/beaker,
+/obj/item/reagent_containers/glass/beaker,
 /turf/simulated/floor/tiled/old_tile,
 /area/submap/oldstation_tox)
 "xj" = (
@@ -2258,12 +2139,12 @@
 /area/submap/oldstation_alpha)
 "xF" = (
 /obj/structure/table/standard,
-/obj/item/weapon/storage/firstaid/bonemed,
+/obj/item/storage/firstaid/bonemed,
 /turf/simulated/floor/tiled/old_tile,
 /area/submap/oldstation_alpha)
 "xG" = (
 /obj/structure/table/standard,
-/obj/item/weapon/soap/nanotrasen,
+/obj/item/soap/nanotrasen,
 /obj/effect/floor_decal/corner/blue/border{
 	dir = 4
 	},
@@ -2274,18 +2155,12 @@
 "xH" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/tiled/asteroid_steel{
@@ -2330,7 +2205,7 @@
 /area/submap/oldstation_charlie)
 "yc" = (
 /obj/structure/table/standard,
-/obj/item/weapon/folder/blue,
+/obj/item/folder/blue,
 /obj/effect/floor_decal/corner/blue/border{
 	dir = 1
 	},
@@ -2355,8 +2230,6 @@
 /area/submap/oldstation_beta)
 "yG" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/plating,
@@ -2415,16 +2288,14 @@
 /area/submap/oldstation_bridge)
 "zi" = (
 /obj/structure/table/standard,
-/obj/item/weapon/stock_parts/matter_bin,
-/obj/item/weapon/stock_parts/scanning_module,
+/obj/item/stock_parts/matter_bin,
+/obj/item/stock_parts/scanning_module,
 /turf/simulated/floor/tiled/asteroid_steel{
 	temperature = 293.15
 	},
 /area/submap/oldstation_tox)
 "zk" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/random/junk,
@@ -2434,7 +2305,7 @@
 /area/submap/oldstation_charlie)
 "zy" = (
 /obj/structure/table/standard,
-/obj/item/weapon/pen,
+/obj/item/pen,
 /obj/effect/floor_decal/corner/blue/border{
 	dir = 1
 	},
@@ -2566,8 +2437,6 @@
 /area/template_noop)
 "BB" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/effect/landmark/loot_spawn/low,
@@ -2594,8 +2463,6 @@
 /area/submap/oldstation_kitchen)
 "BG" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /mob/living/simple_mob/mechanical/hivebot/swarm,
@@ -2701,7 +2568,7 @@
 /area/submap/oldstation_hydro_sec)
 "CQ" = (
 /obj/structure/table/standard,
-/obj/item/weapon/pen,
+/obj/item/pen,
 /turf/simulated/floor/tiled/asteroid_steel{
 	temperature = 293.15
 	},
@@ -2729,18 +2596,12 @@
 	dir = 4
 	},
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /turf/simulated/floor/airless,
@@ -2818,8 +2679,6 @@
 /area/submap/oldstation_hiveboat)
 "Et" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/effect/floor_decal/rust,
@@ -2838,7 +2697,6 @@
 /area/submap/oldstation_hydro_sec)
 "Ev" = (
 /obj/structure/cable{
-	d2 = 2;
 	icon_state = "0-2";
 	pixel_y = 1
 	},
@@ -2847,7 +2705,7 @@
 /area/submap/oldstation_power)
 "Ez" = (
 /obj/structure/table/standard,
-/obj/item/weapon/reagent_containers/chem_disp_cartridge/potassium,
+/obj/item/reagent_containers/chem_disp_cartridge/potassium,
 /turf/simulated/floor/tiled/asteroid_steel{
 	temperature = 293.15
 	},
@@ -2860,8 +2718,6 @@
 /area/template_noop)
 "EM" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /mob/living/simple_mob/mechanical/hivebot/swarm,
@@ -2911,13 +2767,9 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /turf/simulated/floor/tiled/asteroid_steel{
@@ -2971,8 +2823,6 @@
 	dir = 4
 	},
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/plating,
@@ -3003,24 +2853,18 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/airless,
 /area/submap/oldstation_alpha)
 "Gw" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/airless,
 /area/submap/oldstation_power)
 "Gz" = (
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /turf/simulated/floor/tiled/asteroid_steel{
@@ -3060,18 +2904,12 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/effect/floor_decal/rust,
@@ -3089,7 +2927,7 @@
 "Hb" = (
 /obj/structure/table/standard,
 /obj/machinery/atmospherics/unary/vent_pump/on,
-/obj/item/weapon/coin,
+/obj/item/coin,
 /turf/simulated/floor/tiled/asteroid_steel{
 	temperature = 293.15
 	},
@@ -3125,8 +2963,8 @@
 /area/submap/oldstation_kitchen)
 "HF" = (
 /obj/structure/table/standard,
-/obj/item/device/flash,
-/obj/item/device/flash,
+/obj/item/flash,
+/obj/item/flash,
 /turf/simulated/floor/tiled/asteroid_steel{
 	temperature = 293.15
 	},
@@ -3185,8 +3023,6 @@
 /area/submap/oldstation_tox)
 "Iv" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/effect/floor_decal/rust,
@@ -3231,8 +3067,8 @@
 	dir = 4
 	},
 /obj/structure/table/standard,
-/obj/item/weapon/folder/white,
-/obj/item/weapon/reagent_containers/glass/beaker,
+/obj/item/folder/white,
+/obj/item/reagent_containers/glass/beaker,
 /turf/simulated/floor/tiled/asteroid_steel{
 	temperature = 293.15
 	},
@@ -3336,8 +3172,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/plating,
@@ -3347,8 +3181,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/effect/floor_decal/rust,
@@ -3395,8 +3227,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/airless,
@@ -3406,12 +3236,9 @@
 /area/submap/oldstation_tox)
 "Ll" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/cable{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/machinery/power/apc{
@@ -3423,7 +3250,6 @@
 /area/submap/oldstation_kitchen)
 "Ln" = (
 /obj/structure/cable{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/power/apc{
@@ -3477,7 +3303,7 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
 	},
-/obj/item/weapon/storage/backpack,
+/obj/item/storage/backpack,
 /turf/simulated/floor/tiled/asteroid_steel{
 	temperature = 293.15
 	},
@@ -3487,28 +3313,22 @@
 	dir = 4
 	},
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /turf/simulated/floor/airless,
 /area/submap/oldstation_power)
 "LS" = (
 /obj/structure/table/standard,
-/obj/item/weapon/book/manual/wiki/security_space_law,
+/obj/item/book/manual/wiki/security_space_law,
 /turf/simulated/floor/tiled/asteroid_steel{
 	temperature = 293.15
 	},
 /area/submap/oldstation_beta)
 "LT" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/light{
@@ -3534,7 +3354,7 @@
 /area/submap/oldstation_power)
 "Md" = (
 /obj/structure/table/standard,
-/obj/item/weapon/paper,
+/obj/item/paper,
 /turf/simulated/floor/tiled/asteroid_steel{
 	temperature = 293.15
 	},
@@ -3580,8 +3400,6 @@
 /area/submap/oldstation_beta)
 "MI" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/effect/floor_decal/rust,
@@ -3595,15 +3413,15 @@
 /area/submap/oldstation_charlie)
 "MM" = (
 /obj/structure/table/standard,
-/obj/item/weapon/reagent_containers/food/drinks/cans/cola,
+/obj/item/reagent_containers/food/drinks/cans/cola,
 /turf/simulated/floor/tiled/asteroid_steel{
 	temperature = 293.15
 	},
 /area/submap/oldstation_beta)
 "MN" = (
 /obj/structure/table/standard,
-/obj/item/weapon/broken_bottle,
-/obj/item/weapon/soap/deluxe,
+/obj/item/broken_bottle,
+/obj/item/soap/deluxe,
 /turf/simulated/floor/tiled/asteroid_steel{
 	temperature = 293.15
 	},
@@ -3675,10 +3493,10 @@
 /area/submap/oldstation_beta)
 "NJ" = (
 /obj/structure/table/standard,
-/obj/item/weapon/reagent_containers/food/condiment/small/peppermill{
+/obj/item/reagent_containers/food/condiment/small/peppermill{
 	pixel_x = 3
 	},
-/obj/item/weapon/reagent_containers/food/condiment/small/saltshaker{
+/obj/item/reagent_containers/food/condiment/small/saltshaker{
 	pixel_x = -3
 	},
 /obj/effect/floor_decal/corner/grey/diagonal,
@@ -3724,9 +3542,9 @@
 /area/submap/oldstation_bridge)
 "Op" = (
 /obj/structure/table/standard,
-/obj/item/weapon/stock_parts/manipulator,
-/obj/item/weapon/stock_parts/capacitor,
-/obj/item/weapon/stock_parts/micro_laser,
+/obj/item/stock_parts/manipulator,
+/obj/item/stock_parts/capacitor,
+/obj/item/stock_parts/micro_laser,
 /obj/item/stack/cable_coil,
 /turf/simulated/floor/tiled/asteroid_steel{
 	temperature = 293.15
@@ -3734,8 +3552,6 @@
 /area/submap/oldstation_tox)
 "Ov" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/airless,
@@ -3810,13 +3626,9 @@
 /area/submap/oldstation_kitchen)
 "PC" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/random/trash,
@@ -3840,7 +3652,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/machinery/power/apc{
@@ -3855,13 +3666,13 @@
 /area/submap/oldstation_charlie)
 "Qe" = (
 /obj/structure/table/standard,
-/obj/item/weapon/tool/crowbar,
+/obj/item/tool/crowbar,
 /obj/random/maintenance,
 /obj/random/maintenance,
 /obj/random/maintenance,
 /obj/random/maintenance,
 /obj/random/maintenance,
-/obj/item/device/flashlight,
+/obj/item/flashlight,
 /turf/simulated/floor/tiled/asteroid_steel{
 	temperature = 293.15
 	},
@@ -3881,7 +3692,6 @@
 "Qv" = (
 /obj/structure/table/standard,
 /obj/structure/cable{
-	d2 = 2;
 	icon_state = "0-2";
 	pixel_y = 1
 	},
@@ -3891,7 +3701,7 @@
 	pixel_x = -24;
 	start_charge = 0
 	},
-/obj/item/weapon/folder/red,
+/obj/item/folder/red,
 /turf/simulated/floor/tiled/asteroid_steel{
 	temperature = 293.15
 	},
@@ -3901,16 +3711,16 @@
 /area/submap/oldstation_bridge)
 "QB" = (
 /obj/structure/table/standard,
-/obj/item/weapon/reagent_containers/chem_disp_cartridge/ammonia,
-/obj/item/weapon/reagent_containers/chem_disp_cartridge/carbon,
-/obj/item/weapon/reagent_containers/chem_disp_cartridge/calcium,
+/obj/item/reagent_containers/chem_disp_cartridge/ammonia,
+/obj/item/reagent_containers/chem_disp_cartridge/carbon,
+/obj/item/reagent_containers/chem_disp_cartridge/calcium,
 /turf/simulated/floor/tiled/asteroid_steel{
 	temperature = 293.15
 	},
 /area/submap/oldstation_tox)
 "QE" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/paper{
+/obj/item/paper{
 	info = "<b>*Health Analyser*</b><br><br>The portable Health Analyser is essentially a handheld variant of a health analyser. Years of research have concluded with this device which is capable of diagnosing even the most critical, obscure or technical injuries any humanoid entity is suffering in an easy to understand format that even a non-trained health professional can understand.<br><br>The health analyser is expected to go into full production as standard issue medical kit.";
 	name = "Health Analyser Report"
 	},
@@ -3963,8 +3773,6 @@
 /area/submap/oldstation_kitchen)
 "Rw" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/effect/landmark/loot_spawn/low,
@@ -3972,8 +3780,6 @@
 /area/submap/oldstation_kitchen)
 "RH" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/door/airlock/maintenance_hatch,
@@ -3994,21 +3800,15 @@
 /area/submap/oldstation_tox)
 "RX" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /turf/simulated/floor/airless,
 /area/submap/oldstation_power)
 "RZ" = (
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/effect/floor_decal/rust,
@@ -4039,15 +3839,12 @@
 /area/submap/oldstation_bridge)
 "Sh" = (
 /obj/structure/cable/yellow{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /turf/simulated/floor/airless,
 /area/submap/oldstation_power)
 "Sn" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/asteroid_steel{
@@ -4063,16 +3860,12 @@
 	dir = 9
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/plating,
 /area/submap/oldstation_beta)
 "Sy" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/item/solar_assembly,
@@ -4083,8 +3876,6 @@
 	dir = 8
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/asteroid_steel{
@@ -4096,7 +3887,7 @@
 /obj/machinery/light{
 	dir = 8
 	},
-/obj/item/device/healthanalyzer/phasic,
+/obj/item/healthanalyzer/phasic,
 /turf/simulated/floor/tiled/old_tile/red,
 /area/submap/oldstation_tox)
 "SZ" = (
@@ -4115,8 +3906,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/door/airlock/maintenance_hatch,
@@ -4131,9 +3920,9 @@
 /area/submap/oldstation_charlie)
 "Tu" = (
 /obj/structure/table/standard,
-/obj/item/weapon/reagent_containers/chem_disp_cartridge/chlorine,
-/obj/item/weapon/reagent_containers/chem_disp_cartridge/copper,
-/obj/item/weapon/reagent_containers/chem_disp_cartridge/diethylamine,
+/obj/item/reagent_containers/chem_disp_cartridge/chlorine,
+/obj/item/reagent_containers/chem_disp_cartridge/copper,
+/obj/item/reagent_containers/chem_disp_cartridge/diethylamine,
 /turf/simulated/floor/tiled/asteroid_steel{
 	temperature = 293.15
 	},
@@ -4167,8 +3956,6 @@
 /area/submap/oldstation_hydro_sec)
 "TH" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/light/small{
@@ -4191,8 +3978,6 @@
 	dir = 4
 	},
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/door/airlock/external{
@@ -4212,8 +3997,8 @@
 /area/submap/oldstation_charlie)
 "TP" = (
 /obj/structure/table/rack/shelf/steel,
-/obj/item/weapon/gun/energy/laser,
-/obj/item/weapon/gun/energy/laser{
+/obj/item/gun/energy/laser,
+/obj/item/gun/energy/laser{
 	pixel_x = 4;
 	pixel_y = 2
 	},
@@ -4253,7 +4038,7 @@
 /area/submap/oldstation_alpha)
 "Up" = (
 /obj/structure/table/standard,
-/obj/item/weapon/flame/lighter/zippo/royal,
+/obj/item/flame/lighter/zippo/royal,
 /obj/effect/floor_decal/corner/blue/border{
 	dir = 8
 	},
@@ -4263,8 +4048,6 @@
 /area/submap/oldstation_bridge)
 "Us" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /turf/simulated/floor/plating,
@@ -4295,11 +4078,9 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/structure/cable{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/effect/wingrille_spawn/reinforced,
@@ -4323,8 +4104,6 @@
 /area/submap/oldstation_beta)
 "UR" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/light{
@@ -4369,8 +4148,6 @@
 /area/submap/oldstation_hiveboat)
 "Vp" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/airless,
@@ -4418,16 +4195,12 @@
 /area/submap/oldstation_hiveboat)
 "Wv" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/plating,
 /area/submap/oldstation_bridge)
 "WA" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/door/airlock/highsecurity{
@@ -4467,8 +4240,6 @@
 /area/submap/oldstation_beta)
 "WZ" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/door/airlock/maintenance_hatch,
@@ -4504,13 +4275,9 @@
 /area/submap/oldstation_tox)
 "Xu" = (
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/airless,
@@ -4548,8 +4315,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/asteroid_steel{
@@ -4561,8 +4326,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/light{
@@ -4577,8 +4340,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/asteroid_steel{
@@ -4592,8 +4353,6 @@
 /area/submap/oldstation_alpha)
 "Yj" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /mob/living/simple_mob/mechanical/hivebot/swarm,
@@ -4624,7 +4383,6 @@
 /area/submap/oldstation_kitchen)
 "Yt" = (
 /obj/structure/cable/yellow{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /turf/simulated/floor/airless,
@@ -4634,8 +4392,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/plating,
@@ -4656,13 +4412,9 @@
 	dir = 4
 	},
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/plating,
@@ -4672,7 +4424,7 @@
 /obj/machinery/light{
 	dir = 8
 	},
-/obj/item/weapon/paper{
+/obj/item/paper{
 	info = "<b>*Prototype Hardsuit*</b><br><br>The B01-RIG Hardsuit is a prototype powered exoskeleton. Based off of a recovered pre-void war era united Earth government powered military exosuit, the RIG Hardsuit is a breakthrough in Hardsuit technology, and is the first post-void war era Hardsuit that can be safely used by an operator.<br><br>The B01 however suffers a myriad of constraints. It is slow and bulky to move around, it lacks any significant armor plating against direct attacks and its internal heads up display is unfinished,  resulting in the user being unable to see long distances.<br><br>The B01 is unlikely to see any form of mass production, but will serve as a base for future Hardsuit developments.";
 	name = "B01-RIG Hardsuit Report"
 	},
@@ -4713,8 +4465,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/plating,
@@ -4724,12 +4474,9 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/power/apc{
@@ -4760,7 +4507,7 @@
 /area/submap/oldstation_tox)
 "ZS" = (
 /obj/structure/table/standard,
-/obj/item/weapon/material/kitchen/utensil/fork,
+/obj/item/material/kitchen/utensil/fork,
 /obj/effect/floor_decal/corner/grey/diagonal,
 /turf/simulated/floor/tiled/old_tile,
 /area/submap/oldstation_kitchen)

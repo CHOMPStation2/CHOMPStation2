@@ -1,9 +1,15 @@
-import { KEY } from 'common/keys';
 import { useState } from 'react';
+import { useBackend } from 'tgui/backend';
+import { Window } from 'tgui/layouts';
+import {
+  Box,
+  Button,
+  RestrictedInput,
+  Section,
+  Stack,
+} from 'tgui-core/components';
+import { isEscape, KEY } from 'tgui-core/keys';
 
-import { useBackend } from '../backend';
-import { Box, Button, RestrictedInput, Section, Stack } from '../components';
-import { Window } from '../layouts';
 import { InputButtons } from './common/InputButtons';
 import { Loader } from './common/Loader';
 
@@ -44,7 +50,7 @@ export const NumberInputModal = (props) => {
           if (event.key === KEY.Enter) {
             act('submit', { entry: input });
           }
-          if (event.key === KEY.Escape) {
+          if (isEscape(event.key)) {
             act('cancel');
           }
         }}

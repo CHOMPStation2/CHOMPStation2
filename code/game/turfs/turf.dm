@@ -41,13 +41,62 @@
 
 	var/movement_cost = 0       // How much the turf slows down movement, if any.
 
-	var/list/footstep_sounds = null
-	var/list/vorefootstep_sounds = null	//CHOMPstation edit
-
 	var/block_tele = FALSE      // If true, most forms of teleporting to or from this turf tile will fail.
 	var/can_build_into_floor = FALSE // Used for things like RCDs (and maybe lattices/floor tiles in the future), to see if a floor should replace it.
 	var/list/dangerous_objects // List of 'dangerous' objs that the turf holds that can cause something bad to happen when stepped on, used for AI mobs.
 	var/tmp/changing_turf
+
+	var/blocks_nonghost_incorporeal = FALSE
+	var/footstep
+	var/barefootstep
+	var/heavyfootstep
+	var/clawfootstep
+
+/turf/simulated/floor
+	footstep = FOOTSTEP_FLOOR
+	barefootstep = FOOTSTEP_HARD_BAREFOOT
+	heavyfootstep = FOOTSTEP_GENERIC_HEAVY
+	clawfootstep = FOOTSTEP_HARD_CLAW
+
+/turf/simulated/floor/wood
+	footstep = FOOTSTEP_WOOD
+	barefootstep = FOOTSTEP_WOOD_BAREFOOT
+	clawfootstep = FOOTSTEP_WOOD_CLAW
+
+/turf/simulated/floor/carpet
+	footstep = FOOTSTEP_CARPET
+	barefootstep = FOOTSTEP_CARPET_BAREFOOT
+	clawfootstep = FOOTSTEP_CARPET_BAREFOOT
+
+/turf/simulated/floor/plating
+	footstep = FOOTSTEP_PLATING
+	barefootstep = FOOTSTEP_HARD_BAREFOOT
+	clawfootstep = FOOTSTEP_HARD_CLAW
+
+/turf/simulated/mineral
+	footstep = FOOTSTEP_SAND
+	barefootstep = FOOTSTEP_SAND
+	clawfootstep = FOOTSTEP_SAND
+
+/turf/simulated/floor/outdoors
+	footstep = FOOTSTEP_SAND
+	barefootstep = FOOTSTEP_SAND
+	clawfootstep = FOOTSTEP_SAND
+
+/turf/simulated/floor/outdoors/grass
+	footstep = FOOTSTEP_GRASS
+	barefootstep = FOOTSTEP_GRASS
+	clawfootstep = FOOTSTEP_GRASS
+
+/turf/simulated/floor/water
+	footstep = FOOTSTEP_WATER
+	barefootstep = FOOTSTEP_WATER
+	clawfootstep = FOOTSTEP_WATER
+
+/turf/simulated/floor/lava
+	footstep = FOOTSTEP_LAVA
+	barefootstep = FOOTSTEP_LAVA
+	clawfootstep = FOOTSTEP_LAVA
 
 /turf/Initialize(mapload)
 	. = ..()
@@ -122,15 +171,15 @@
 		step(user.pulling, get_dir(user.pulling.loc, src))
 	return 1
 
-/turf/attackby(obj/item/weapon/W as obj, mob/user as mob)
-	if(istype(W, /obj/item/weapon/storage))
-		var/obj/item/weapon/storage/S = W
+/turf/attackby(obj/item/W as obj, mob/user as mob)
+	if(istype(W, /obj/item/storage))
+		var/obj/item/storage/S = W
 		if(S.use_to_pickup && S.collection_mode)
 			S.gather_all(src, user)
 	return ..()
 
 // Hits a mob on the tile.
-/turf/proc/attack_tile(obj/item/weapon/W, mob/living/user)
+/turf/proc/attack_tile(obj/item/W, mob/living/user)
 	if(!istype(W))
 		return FALSE
 
@@ -153,18 +202,18 @@
 	user.do_attack_animation(src, no_attack_icons = TRUE)
 
 	if(!success) // Nothing got hit.
-		user.visible_message("<span class='warning'>\The [user] swipes \the [W] over \the [src].</span>")
+		user.visible_message(span_warning("\The [user] swipes \the [W] over \the [src]."))
 		playsound(src, 'sound/weapons/punchmiss.ogg', 25, 1, -1)
 	return success
 
 /turf/MouseDrop_T(atom/movable/O as mob|obj, mob/user as mob)
 	var/turf/T = get_turf(user)
 	var/area/A = T.loc
-	if((istype(A) && !(A.has_gravity)) || (istype(T,/turf/space)))
+	if((istype(A) && !(A.get_gravity())) || (istype(T,/turf/space)))
 		return
 	if(istype(O, /obj/screen))
 		return
-	if(user.restrained() || user.stat || user.stunned || user.paralysis || (!user.lying && !istype(user, /mob/living/silicon/robot)))
+	if(user.restrained() || user.stat || user.stunned || user.paralysis || (!user.lying && !isrobot(user)))
 		return
 	if((!(istype(O, /atom/movable)) || O.anchored || !Adjacent(user) || !Adjacent(O) || !user.Adjacent(O)))
 		return
@@ -195,9 +244,6 @@
 
 //There's a lot of QDELETED() calls here if someone can figure out how to optimize this but not runtime when something gets deleted by a Bump/CanPass/Cross call, lemme know or go ahead and fix this mess - kevinz000
 /turf/Enter(atom/movable/mover, atom/oldloc)
-	if(movement_disabled && usr.ckey != movement_disabled_exception)
-		to_chat(usr, "<span class='warning'>Movement is admin-disabled.</span>") //This is to identify lag problems
-		return
 	// Do not call ..()
 	// Byond's default turf/Enter() doesn't have the behaviour we want with Bump()
 	// By default byond will call Bump() on the first dense object in contents
@@ -297,7 +343,7 @@
 
 //expects an atom containing the reagents used to clean the turf
 /turf/proc/clean(atom/source, mob/user)
-	if(source.reagents.has_reagent("water", 1) || source.reagents.has_reagent("cleaner", 1))
+	if(source.reagents.has_reagent(REAGENT_ID_WATER, 1) || source.reagents.has_reagent(REAGENT_ID_CLEANER, 1))
 		clean_blood()
 		if(istype(src, /turf/simulated))
 			var/turf/simulated/T = src
@@ -306,7 +352,7 @@
 			if(istype(O,/obj/effect/rune) || istype(O,/obj/effect/decal/cleanable) || istype(O,/obj/effect/overlay))
 				qdel(O)
 	else
-		to_chat(user, "<span class='warning'>\The [source] is too dry to wash that.</span>")
+		to_chat(user, span_warning("\The [source] is too dry to wash that."))
 	source.reagents.trans_to_turf(src, 1, 10)	//10 is the multiplier for the reaction effect. probably needed to wet the floor properly.
 
 /turf/proc/update_blood_overlays()
@@ -314,9 +360,10 @@
 
 // Called when turf is hit by a thrown object
 /turf/hitby(atom/movable/AM as mob|obj, var/speed)
-	if(src.density)
-		spawn(2)
-			step(AM, turn(AM.last_move, 180))
+	if(density)
+		if(!get_gravity(AM)) //Checked a different codebase for reference. Turns out it's only supposed to happen in no-gravity
+			spawn(2)
+				step(AM, turn(AM.last_move, 180)) //This makes it float away after hitting a wall in 0G
 		if(isliving(AM))
 			var/mob/living/M = AM
 			M.turf_collision(src, speed)
@@ -327,41 +374,55 @@
 /turf/proc/can_engrave()
 	return FALSE
 
-/turf/proc/try_graffiti(var/mob/vandal, var/obj/item/tool)
+/turf/proc/try_graffiti(var/mob/vandal, var/obj/item/tool, click_parameters) // CHOMPEdt - click_parameters
 
 	if(!tool || !tool.sharp || !can_engrave()) //CHOMP Edit
 		return FALSE
 
-	if(jobban_isbanned(vandal, "Graffiti"))
-		to_chat(vandal, SPAN_WARNING("You are banned from leaving persistent information across rounds."))
+	if(jobban_isbanned(vandal, JOB_GRAFFITI))
+		to_chat(vandal, span_warning("You are banned from leaving persistent information across rounds."))
 		return
 
 	var/too_much_graffiti = 0
 	for(var/obj/effect/decal/writing/W in src)
 		too_much_graffiti++
 	if(too_much_graffiti >= 5)
-		to_chat(vandal, "<span class='warning'>There's too much graffiti here to add more.</span>")
+		to_chat(vandal, span_warning("There's too much graffiti here to add more."))
 		return FALSE
 
-	var/message = sanitize(tgui_input_text(usr, "Enter a message to engrave.", "Graffiti"), trim = TRUE)
+	var/message = sanitize(tgui_input_text(vandal, "Enter a message to engrave.", "Graffiti"), trim = TRUE)
 	if(!message)
 		return FALSE
 
 	if(!vandal || vandal.incapacitated() || !Adjacent(vandal) || !tool.loc == vandal)
 		return FALSE
 
-	vandal.visible_message("<span class='warning'>\The [vandal] begins carving something into \the [src].</span>")
+	vandal.visible_message(span_warning("\The [vandal] begins carving something into \the [src]."))
 
 	if(!do_after(vandal, max(20, length(message)), src))
 		return FALSE
 
-	vandal.visible_message("<span class='danger'>\The [vandal] carves some graffiti into \the [src].</span>")
+	vandal.visible_message(span_danger("\The [vandal] carves some graffiti into \the [src]."))
 	var/obj/effect/decal/writing/graffiti = new(src)
 	graffiti.message = message
 	graffiti.author = vandal.ckey
 
+	// CHOMPAdd - Cooler graffitis
+	if(click_parameters)
+		var/list/mouse_control = params2list(click_parameters)
+		var/p_x = 0
+		var/p_y = 0
+		if(mouse_control["icon-x"])
+			p_x = text2num(mouse_control["icon-x"]) - 16
+		if(mouse_control["icon-y"])
+			p_y = text2num(mouse_control["icon-y"]) - 16
+
+		graffiti.pixel_x = p_x
+		graffiti.pixel_y = p_y
+	// CHOMPAdd End
+
 	if(lowertext(message) == "elbereth")
-		to_chat(vandal, "<span class='notice'>You feel much safer.</span>")
+		to_chat(vandal, span_notice("You feel much safer."))
 
 	return TRUE
 
@@ -393,7 +454,7 @@
 // This is all the way up here since its the common ancestor for things that need to get replaced with a floor when an RCD is used on them.
 // More specialized turfs like walls should instead override this.
 // The code for applying lattices/floor tiles onto lattices could also utilize something similar in the future.
-/turf/rcd_values(mob/living/user, obj/item/weapon/rcd/the_rcd, passed_mode)
+/turf/rcd_values(mob/living/user, obj/item/rcd/the_rcd, passed_mode)
 	if(density || !can_build_into_floor)
 		return FALSE
 	if(passed_mode == RCD_FLOORWALL)
@@ -408,13 +469,18 @@
 			)
 	return FALSE
 
-/turf/rcd_act(mob/living/user, obj/item/weapon/rcd/the_rcd, passed_mode)
+/turf/rcd_act(mob/living/user, obj/item/rcd/the_rcd, passed_mode)
 	if(passed_mode == RCD_FLOORWALL)
-		to_chat(user, span("notice", "You build a floor."))
+		to_chat(user, span_notice("You build a floor."))
 		ChangeTurf(/turf/simulated/floor/airless, preserve_outdoors = TRUE)
 		return TRUE
 	return FALSE
 */
+
+/turf/occult_act(mob/living/user)
+	to_chat(user, span_cult("You consecrate the floor."))
+	ChangeTurf(/turf/simulated/floor/cult, preserve_outdoors = TRUE)
+	return TRUE
 
 // We're about to be the A-side in a turf translation
 /turf/proc/pre_translate_A(var/turf/B)

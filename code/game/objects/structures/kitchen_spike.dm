@@ -12,27 +12,27 @@
 	var/meat_type
 	var/victim_name = "corpse"
 
-/obj/structure/kitchenspike/attackby(obj/item/weapon/grab/G as obj, mob/user as mob)
-	if(!istype(G, /obj/item/weapon/grab) || !ismob(G.affecting))
+/obj/structure/kitchenspike/attackby(obj/item/grab/G as obj, mob/user as mob)
+	if(!istype(G, /obj/item/grab) || !ismob(G.affecting))
 		return
 	if(occupied)
-		to_chat(user, "<span class = 'danger'>The spike already has something on it, finish collecting its meat first!</span>")
+		to_chat(user, span_danger("The spike already has something on it, finish collecting its meat first!"))
 	else
 		if(spike(G.affecting))
 			var/datum/gender/T = gender_datums[G.affecting.get_visible_gender()]
-			visible_message("<span class = 'danger'>[user] has forced [G.affecting] onto the spike, killing [T.him] instantly!</span>")
+			visible_message(span_danger("[user] has forced [G.affecting] onto the spike, killing [T.him] instantly!"))
 			var/mob/M = G.affecting
 			M.forceMove(src)
 			qdel(G)
 			qdel(M)
 		else
-			to_chat(user, "<span class='danger'>They are too big for the spike, try something smaller!</span>")
+			to_chat(user, span_danger("They are too big for the spike, try something smaller!"))
 
 /obj/structure/kitchenspike/proc/spike(var/mob/living/victim)
 	if(!istype(victim))
 		return
 
-	if(istype(victim, /mob/living/carbon/human))
+	if(ishuman(victim))
 		var/mob/living/carbon/human/H = victim
 		if(istype(H.species, /datum/species/monkey))
 			meat_type = H.species.meat_type
@@ -40,7 +40,7 @@
 		else
 			return 0
 	else if(istype(victim, /mob/living/carbon/alien))
-		meat_type = /obj/item/weapon/reagent_containers/food/snacks/xenomeat
+		meat_type = /obj/item/reagent_containers/food/snacks/xenomeat
 		icon_state = "spikebloodygreen"
 	else
 		return 0

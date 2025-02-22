@@ -90,7 +90,7 @@
  */
 /datum/proc/tgui_act(action, list/params, datum/tgui/ui, datum/tgui_state/state)
 	SHOULD_CALL_PARENT(TRUE)
-	SEND_SIGNAL(src, COMSIG_UI_ACT, usr, action)
+	SEND_SIGNAL(src, COMSIG_UI_ACT, ui.user, action)
 	// If UI is not interactive or usr calling Topic is not the UI user, bail.
 	if(!ui || ui.status != STATUS_INTERACTIVE)
 		return TRUE
@@ -183,7 +183,7 @@
 /client/verb/tgui_fix_white()
 	set desc = "Only use this if you have a broken TGUI window occupying your screen!"
 	set name = "Fix TGUI"
-	set category = "OOC"
+	set category = "OOC.Debug"
 
 	if(alert(src, "Only use this verb if you have a white TGUI window stuck on your screen.", "Fix TGUI", "Continue", "Nevermind") != "Continue") // Not tgui_alert since we're fixing tgui
 		return

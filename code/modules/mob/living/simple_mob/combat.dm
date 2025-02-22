@@ -41,7 +41,7 @@
 	if(missed) // Most likely we have a slow attack and they dodged it or we somehow got moved.
 		add_attack_logs(src, A, "Animal-attacked (dodged)", admin_notify = FALSE)
 		playsound(src, 'sound/weapons/punchmiss.ogg', 75, 1)
-		visible_message(span("warning", "\The [src] misses their attack."))
+		visible_message(span_warning("\The [src] misses their attack."))
 		return FALSE
 
 	var/damage_to_do = rand(melee_damage_lower, melee_damage_upper)
@@ -116,14 +116,14 @@
 	//CHOMP Addition: This section here is special snowflake code for metroids only, or for whatever else in the future that you want to have move and shoot at the same time. Basically, this is a non-stupid version of the above intended for ranged vore mobs i.e. metroids. ranged_attack_delay is stupid because it sleeps the entire mob. This new ranged_cooldown_time is smarter in the sense that it is an internalized timer. Try not to confuse the names.
 	if(ranged_cooldown_time) //If you have a non-zero number in a mob's variables, this pattern begins.
 		if(ranged_cooldown <= world.time) //Further down, a timer keeps adding to the ranged_cooldown variable automatically.
-			visible_message("<span class='danger'><b>\The [src]</b> fires at \the [A]!</span>") //Leave notice of shooting.
+			visible_message(span_danger(span_bold("\The [src]") + " fires at \the [A]!")) //Leave notice of shooting.
 			shoot(A) //Perform the shoot action
 			if(casingtype) //If the mob is designated to leave casings...
 				new casingtype(loc) //... leave the casing.
 			ranged_cooldown = world.time + ranged_cooldown_time + ((injury_level / 2) SECONDS) //Special addition here. This is a timer. Keeping updating the time after shooting. Add that ranged cooldown time specified in the mob to the world time.
 		return TRUE	//End these commands here.
 
-	visible_message("<span class='danger'><b>\The [src]</b> fires at \the [A]!</span>")
+	visible_message(span_danger(span_bold("\The [src]") + " fires at \the [A]!"))
 	shoot(A)
 	if(casingtype)
 		new casingtype(loc)

@@ -31,3 +31,51 @@
 	icon_state = "snaketailteshari"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
+
+/datum/sprite_accessory/tail/featheredraptor
+	name = "feathered Raptor"
+	icon = 'icons/mob/vore/tails_ch.dmi'
+	icon_state = "feathered_raptor"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+
+/datum/sprite_accessory/tail/featheredraptor/twotone
+	name = "feathered Raptor, duel colorable"
+	extra_overlay = "feather_raptor-overlay"
+
+/datum/sprite_accessory/tail/succubustail_ch
+	name = "Succubus Tail"
+	icon = 'modular_chomp/icons/mob/vore/tails.dmi'
+	icon_state = "Succubustail"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+
+/datum/sprite_accessory/tail/longtail/largeshark
+	name = "Large Shark"
+	icon = 'modular_chomp/icons/mob/vore/tails64x32.dmi'
+	icon_state = "large-shark"
+	extra_overlay = "large-shark-underbelly"
+	extra_overlay2 = "large-shark-tips"
+
+/datum/sprite_accessory/tail/longtail/largeshark/finless
+	name = "Large Shark (finless)"
+	icon_state = "large-shark-finless"
+	extra_overlay2 = "large-shark-tips-finless"
+
+/datum/sprite_accessory/tail/longtail/largeshark/stripes
+	name = "Large Shark (striped)"
+	extra_overlay = "large-shark-stripes"
+	extra_overlay2 = "large-shark-stripes-underbelly"
+
+/datum/sprite_accessory/tail/longtail/largeshark/stripes2
+	name = "Large Shark (striped, underbelly)"
+	extra_overlay = "large-shark-underbelly"
+	extra_overlay2 = "large-shark-stripes-underbelly"
+
+/datum/sprite_accessory/tail/longtail/largeshark/stripes/finless
+	name = "Large Shark (striped, finless)"
+	icon_state = "large-shark-finless"
+
+/datum/sprite_accessory/tail/longtail/largeshark/stripes2/finless
+	name = "Large Shark (striped, finless, underbelly)"
+	icon_state = "large-shark-finless"

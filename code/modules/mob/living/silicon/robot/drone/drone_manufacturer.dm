@@ -57,14 +57,14 @@
 
 	icon_state = "drone_fab_active"
 	var/elapsed = world.time - time_last_drone
-	drone_progress = round((elapsed / CONFIG_GET(number/drone_build_time)) * 100) // CHOMPEdit
+	drone_progress = round((elapsed / CONFIG_GET(number/drone_build_time)) * 100)
 
 	if(drone_progress >= 100)
 		visible_message("\The [src] voices a strident beep, indicating a drone chassis is prepared.")
 
 /obj/machinery/drone_fabricator/examine(mob/user)
 	. = ..()
-	if(produce_drones && drone_progress >= 100 && istype(user,/mob/observer/dead) && CONFIG_GET(flag/allow_drone_spawn) && count_drones() < CONFIG_GET(number/max_maint_drones)) // CHOMPEdit
+	if(produce_drones && drone_progress >= 100 && isobserver(user) && CONFIG_GET(flag/allow_drone_spawn) && count_drones() < CONFIG_GET(number/max_maint_drones))
 		. += "<br><B>A drone is prepared. Select 'Join As Drone' from the Ghost tab to spawn as a maintenance drone.</B>"
 
 /obj/machinery/drone_fabricator/proc/create_drone(var/client/player)
@@ -72,10 +72,10 @@
 	if(stat & NOPOWER)
 		return
 
-	if(!produce_drones || !CONFIG_GET(flag/allow_drone_spawn) || count_drones() >= CONFIG_GET(number/max_maint_drones)) // CHOMPEdit
+	if(!produce_drones || !CONFIG_GET(flag/allow_drone_spawn) || count_drones() >= CONFIG_GET(number/max_maint_drones))
 		return
 
-	if(player && !istype(player.mob,/mob/observer/dead))
+	if(player && !isobserver(player.mob))
 		return
 
 	visible_message("\The [src] churns and grinds as it lurches into motion, disgorging a shiny new drone after a few moments.")
@@ -94,16 +94,16 @@
 
 /mob/observer/dead/verb/join_as_drone()
 
-	set category = "Ghost"
+	set category = "Ghost.Join"
 	set name = "Join As Drone"
 	set desc = "If there is a powered, enabled fabricator in the game world with a prepared chassis, join as a maintenance drone."
 
 	if(ticker.current_state < GAME_STATE_PLAYING)
-		to_chat(src, "<span class='danger'>The game hasn't started yet!</span>")
+		to_chat(src, span_danger("The game hasn't started yet!"))
 		return
 
-	if(!CONFIG_GET(flag/allow_drone_spawn)) // CHOMPEdit
-		to_chat(src, "<span class='danger'>That verb is not currently permitted.</span>")
+	if(!CONFIG_GET(flag/allow_drone_spawn))
+		to_chat(src, span_danger("That verb is not currently permitted."))
 		return
 
 	if (!src.stat)
@@ -112,15 +112,15 @@
 	if (usr != src)
 		return 0 //something is terribly wrong
 
-	if(jobban_isbanned(src,"Cyborg"))
-		to_chat(usr, "<span class='danger'>You are banned from playing synthetics and cannot spawn as a drone.</span>")
+	if(jobban_isbanned(src,JOB_CYBORG))
+		to_chat(src, span_danger("You are banned from playing synthetics and cannot spawn as a drone."))
 		return
 
 	// VOREStation Addition Start
-	if(CONFIG_GET(flag/use_age_restriction_for_jobs) && isnum(src.client.player_age)) // CHOMPEdit
+	if(CONFIG_GET(flag/use_age_restriction_for_jobs) && isnum(src.client.player_age))
 		var/time_till_play = max(0, 3 - src.client.player_age)
 		if(time_till_play)
-			to_chat(usr, "<span class='danger'>You have not been playing on the server long enough to join as drone.</span>")
+			to_chat(src, span_danger("You have not been playing on the server long enough to join as drone."))
 			return
 	// VOREStation Addition End
 
@@ -139,8 +139,8 @@
 	var/deathtimeseconds = round((deathtime - deathtimeminutes * 1 MINUTE) / 10,1)
 
 	if (deathtime < 5 MINUTES)
-		to_chat(usr, "You have been dead for[pluralcheck] [deathtimeseconds] seconds.")
-		to_chat(usr, "You must wait 5 minutes to respawn as a drone!")
+		to_chat(src, "You have been dead for[pluralcheck] [deathtimeseconds] seconds.")
+		to_chat(src, "You must wait 5 minutes to respawn as a drone!")
 		return
 
 	var/list/all_fabricators = list()
@@ -151,7 +151,7 @@
 			all_fabricators[DF.fabricator_tag] = DF
 
 	if(!all_fabricators.len)
-		to_chat(src, "<span class='danger'>There are no available drone spawn points, sorry.</span>")
+		to_chat(src, span_danger("There are no available drone spawn points, sorry."))
 		return
 
 	var/choice = tgui_input_list(src, "Which fabricator do you wish to use?", "Fabricator Choice", all_fabricators)

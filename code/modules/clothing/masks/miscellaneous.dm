@@ -39,21 +39,21 @@
 	armor = list(melee = 0, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 60, rad = 0)
 	var/hanging = 0
 
-/obj/item/clothing/mask/surgical/proc/adjust_mask(mob_user)
-	if(usr.canmove && !usr.stat)
+/obj/item/clothing/mask/surgical/proc/adjust_mask(mob/user)
+	if(user.canmove && !user.stat)
 		src.hanging = !src.hanging
 		if (src.hanging)
 			gas_transfer_coefficient = 1
 			body_parts_covered = body_parts_covered & ~FACE
 			armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0)
 			icon_state = "steriledown"
-			to_chat(usr, "You pull the mask below your chin.")
+			to_chat(user, "You pull the mask below your chin.")
 		else
 			gas_transfer_coefficient = initial(gas_transfer_coefficient)
 			body_parts_covered = initial(body_parts_covered)
 			icon_state = initial(icon_state)
 			armor = initial(armor)
-			to_chat(usr, "You pull the mask up to cover your face.")
+			to_chat(user, "You pull the mask up to cover your face.")
 		update_clothing_icon()
 
 /obj/item/clothing/mask/surgical/verb/toggle()
@@ -244,7 +244,7 @@
 			c.remove(eye)
 		eye.setLoc(user)
 
-/obj/item/clothing/mask/ai/dropped(var/mob/user)
+/obj/item/clothing/mask/ai/dropped(mob/user)
 	..()
 	if(eye.owner == user)
 		for(var/datum/chunk/c in eye.visibleChunks)
@@ -320,8 +320,7 @@
 	w_class = ITEMSIZE_SMALL
 	body_parts_covered = FACE
 	icon_state = "papermask"
-	action_button_name = "Redraw Design"
-	action_button_is_hands_free = TRUE
+	actions_types = list(/datum/action/item_action/hands_free/redraw_design)
 	var/list/papermask_designs = list()
 
 /obj/item/clothing/mask/paper/Initialize(mapload)
@@ -374,8 +373,8 @@
 	if(src && choice && !user.incapacitated() && in_range(user,src))
 		icon_state = options[choice]
 		user.update_inv_wear_mask()
-		user.update_action_buttons()
-		to_chat(user, "<span class='notice'>Your paper mask now is now [choice].</span>")
+		user.update_mob_action_buttons()
+		to_chat(user, span_notice("Your paper mask now is now [choice]."))
 		return 1
 
 /obj/item/clothing/mask/emotions
@@ -384,8 +383,7 @@
 	w_class = ITEMSIZE_SMALL
 	body_parts_covered = FACE
 	icon_state = "joy"
-	action_button_name = "Redraw Design"
-	action_button_is_hands_free = TRUE
+	actions_types = list(/datum/action/item_action/hands_free/redraw_design)
 	var/static/list/joymask_designs = list()
 
 
@@ -410,8 +408,8 @@
 	if(src && choice && !user.incapacitated() && in_range(user,src))
 		icon_state = options[choice]
 		user.update_inv_wear_mask()
-		user.update_action_buttons()
-		to_chat(user, "<span class='notice'>Your [src] now displays a [choice] emotion.</span>")
+		user.update_mob_action_buttons()
+		to_chat(user, span_notice("Your [src] now displays a [choice] emotion."))
 		return 1
 
 /obj/item/clothing/mask/mouthwheat

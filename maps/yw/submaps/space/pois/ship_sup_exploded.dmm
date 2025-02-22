@@ -13,10 +13,10 @@
 /area/tether_away/debrisfield/explored)
 "ad" = (
 /obj/structure/closet/crate/secure/engineering,
-/obj/item/weapon/tool/screwdriver/power,
-/obj/item/weapon/tool/crowbar/power,
-/obj/item/weapon/tool/screwdriver/power,
-/obj/item/weapon/tool/crowbar/power,
+/obj/item/tool/screwdriver/power,
+/obj/item/tool/crowbar/power,
+/obj/item/tool/screwdriver/power,
+/obj/item/tool/crowbar/power,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/shuttle/plating/airless,
 /area/tether_away/debrisfield/explored)
@@ -45,7 +45,7 @@
 /area/tether_away/debrisfield/explored)
 "ak" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/item/weapon/material/shard/shrapnel,
+/obj/item/material/shard/shrapnel,
 /turf/simulated/shuttle/plating/airless,
 /area/tether_away/debrisfield/explored)
 "al" = (
@@ -104,7 +104,7 @@
 "ax" = (
 /obj/structure/lattice,
 /obj/item/stack/material/steel,
-/obj/item/weapon/material/shard/shrapnel,
+/obj/item/material/shard/shrapnel,
 /turf/template_noop,
 /area/tether_away/debrisfield/explored)
 "ay" = (
@@ -135,13 +135,13 @@
 /area/tether_away/debrisfield/explored)
 "aF" = (
 /obj/structure/closet/crate/secure/engineering,
-/obj/item/weapon/weldingtool/experimental,
-/obj/item/weapon/weldingtool/electric,
-/obj/item/weapon/weldingtool/electric,
+/obj/item/weldingtool/experimental,
+/obj/item/weldingtool/electric,
+/obj/item/weldingtool/electric,
 /turf/template_noop,
 /area/tether_away/debrisfield/explored)
 "aG" = (
-/obj/item/weapon/material/shard/shrapnel,
+/obj/item/material/shard/shrapnel,
 /turf/template_noop,
 /area/tether_away/debrisfield/explored)
 "aH" = (
@@ -152,12 +152,12 @@
 /area/tether_away/debrisfield/explored)
 "aJ" = (
 /obj/structure/grille,
-/obj/item/weapon/material/shard,
+/obj/item/material/shard,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/shuttle/plating/airless,
 /area/tether_away/debrisfield/explored)
 "aK" = (
-/obj/item/weapon/material/shard,
+/obj/item/material/shard,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/shuttle/plating/airless,
 /area/tether_away/debrisfield/explored)
@@ -249,13 +249,13 @@
 /area/tether_away/debrisfield/explored)
 "bb" = (
 /obj/structure/lattice,
-/obj/item/weapon/material/shard/shrapnel,
+/obj/item/material/shard/shrapnel,
 /turf/template_noop,
 /area/tether_away/debrisfield/explored)
 "bc" = (
 /obj/structure/lattice,
 /obj/effect/decal/cleanable/molten_item,
-/obj/item/weapon/material/shard/shrapnel,
+/obj/item/material/shard/shrapnel,
 /turf/template_noop,
 /area/tether_away/debrisfield/explored)
 "bd" = (

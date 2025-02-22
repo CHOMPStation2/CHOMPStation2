@@ -1,6 +1,6 @@
-import { useBackend } from '../backend';
-import { Box, Button, LabeledList, Section } from '../components';
-import { Window } from '../layouts';
+import { useBackend } from 'tgui/backend';
+import { Window } from 'tgui/layouts';
+import { Box, Button, LabeledList, Section } from 'tgui-core/components';
 
 type Data = {
   master: string;
@@ -23,11 +23,9 @@ export const pAIDirectives = (props) => {
               {(master && (
                 <Box>
                   {master} ({dna})
-                  <Button
-                    icon="syringe"
-                    content="Request Sample"
-                    onClick={() => act('getdna')}
-                  />
+                  <Button icon="syringe" onClick={() => act('getdna')}>
+                    Request Sample
+                  </Button>
                 </Box>
               )) || <Box>None</Box>}
             </LabeledList.Item>

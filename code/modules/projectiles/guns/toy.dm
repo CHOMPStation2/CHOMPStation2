@@ -18,7 +18,7 @@
 /*
  * Cap Gun
  */
-/obj/item/weapon/gun/projectile/revolver/capgun
+/obj/item/gun/projectile/revolver/capgun
 	name = "cap gun"
 	desc = "Looks almost like the real thing! Ages 8 and up."
 	icon = 'icons/obj/gun_toy.dmi'
@@ -35,7 +35,7 @@
 /*
  * Shotgun
  */
-/obj/item/weapon/gun/projectile/shotgun/pump/toy
+/obj/item/gun/projectile/shotgun/pump/toy
 	name = "\improper Donk-Soft shotgun"
 	desc = "Donk-Soft foam shotgun! It's Donk or Don't! Ages 8 and up."
 	icon = 'icons/obj/gun_toy.dmi'
@@ -53,11 +53,12 @@
 	matter = list(MAT_PLASTIC = 2000)
 	handle_casings = null
 	recoil = 0 //it's a toy //CHOMP Edit
+	fire_sound = 'sound/items/syringeproj.ogg' //CHOMPedit
 
 /*
  * Moist Nugget
  */
-/obj/item/weapon/gun/projectile/shotgun/pump/toy/moistnugget
+/obj/item/gun/projectile/shotgun/pump/toy/moistnugget
 	name = "\improper Donk-Soft mosin-nagant"
 	desc = "Donk-Soft foam mosin-nagant! It's Donk or Don't! Ages 8 and up."
 	description_fluff = "A special Donk-Soft rifle originally made to pair with a Soviet Soldier costume. It didn't catch on quite as well as other Donk-Soft products."
@@ -66,11 +67,12 @@
 	item_state = "moistnugget"
 	max_shells = 5
 	matter = list(MAT_PLASTIC = 2500)
+	fire_sound = 'sound/items/syringeproj.ogg' //CHOMPedit
 
 /*
  * Pistol
  */
-/obj/item/weapon/gun/projectile/pistol/toy
+/obj/item/gun/projectile/pistol/toy
 	name = "\improper Donk-Soft pistol"
 	desc = "Donk-Soft foam pistol! It's Donk or Don't! Ages 8 and up."
 	icon = 'icons/obj/gun_toy.dmi'
@@ -84,8 +86,9 @@
 	load_method = MAGAZINE
 	matter = list(MAT_PLASTIC = 1000)
 	recoil = 0 //it's a toy //CHOMP Edit
+	fire_sound = 'sound/items/syringeproj.ogg' //CHOMPedit
 
-/obj/item/weapon/gun/projectile/pistol/toy/update_icon()
+/obj/item/gun/projectile/pistol/toy/update_icon()
 	if(ammo_magazine)
 		icon_state = initial(icon_state)
 	else
@@ -94,13 +97,13 @@
 /*
  * N99 Pistol
  */
-/obj/item/weapon/gun/projectile/pistol/toy/n99
+/obj/item/gun/projectile/pistol/toy/n99
 	name = "\improper Donk-Soft commemorative pistol"
 	desc = "A special made Donk-Soft pistol to promote 'Radius: Legend of the Demon Core', a popular post-apocolyptic TV series."
 	icon_state = "n99"
 	item_state = "gun"
 
-/obj/item/weapon/gun/projectile/pistol/toy/n99/update_icon()
+/obj/item/gun/projectile/pistol/toy/n99/update_icon()
 	if(ammo_magazine)
 		icon_state = initial(icon_state)
 	else
@@ -109,18 +112,19 @@
 /*
  * Levergun
  */
-/obj/item/weapon/gun/projectile/shotgun/pump/toy/levergun
+/obj/item/gun/projectile/shotgun/pump/toy/levergun
 	name = "\improper Donk-Soft levergun"
 	desc = "Donk-Soft foam levergun! Time to cowboy up! Ages 8 and up."
 	icon_state = "leveraction"
 	item_state = "leveraction"
 	max_shells = 5
 	pump_animation = "leveraction-cycling"
+	fire_sound = 'sound/items/syringeproj.ogg' //CHOMPedit
 
 /*
  * Revolver
  */
-/obj/item/weapon/gun/projectile/revolver/toy
+/obj/item/gun/projectile/revolver/toy
 	name = "\improper Donk-Soft revolver"
 	desc = "Donk-Soft foam revolver! Time to cowboy up! Ages 8 and up."
 	icon = 'icons/obj/gun_toy.dmi'
@@ -135,11 +139,12 @@
 	matter = list(MAT_PLASTIC = 1000)
 	handle_casings = null
 	recoil = null //it's a toy
+	fire_sound = 'sound/items/syringeproj.ogg' //CHOMPedit
 
 /*
  * Big Iron
  */
-/obj/item/weapon/gun/projectile/revolver/toy/big_iron
+/obj/item/gun/projectile/revolver/toy/big_iron
 	name = "\improper Donk-Soft big iron"
 	desc = "A special made Donk-Soft pistol to promote 'A Fistful of Phoron', a popular frontier novel series."
 	icon_state = "big_iron"
@@ -148,7 +153,7 @@
 /*
  * Crossbow
  */
-/obj/item/weapon/gun/projectile/revolver/toy/crossbow
+/obj/item/gun/projectile/revolver/toy/crossbow
 	name = "\improper Donk-Soft crossbow"
 	desc = "Donk-Soft foam crossbow! It's Donk or Don't! Ages 8 and up."
 	icon = 'icons/obj/gun_toy.dmi'
@@ -159,7 +164,7 @@
 /*
  * Crossbow (Halloween)
  */
-/obj/item/weapon/gun/projectile/revolver/toy/crossbow/halloween
+/obj/item/gun/projectile/revolver/toy/crossbow/halloween
 	name = "\improper Donk-Soft special edition crossbow"
 	desc = "A special edition Donk-Soft crossbow! Made special for your Halloween cosplay. It's Donk or Don't! Ages 8 and up."
 	icon = 'icons/obj/gun_toy.dmi'
@@ -170,7 +175,7 @@
 /*
  * Sawn Off
  */
-/obj/item/weapon/gun/projectile/revolver/toy/sawnoff //revolver code just because it's easier
+/obj/item/gun/projectile/revolver/toy/sawnoff //revolver code just because it's easier
 	name = "\improper Donk-Soft sawn off shotgun"
 	desc = "Donk-Soft foam sawn off! It's Donk or Don't! Ages 8 and up."
 	icon = 'icons/obj/gun_toy.dmi'
@@ -183,7 +188,7 @@
 /*
  * SMG
  */
-/obj/item/weapon/gun/projectile/automatic/toy
+/obj/item/gun/projectile/automatic/toy
 	name = "\improper Donk-Soft SMG"
 	desc = "Donk-Soft foam SMG! It's Donk or Don't! Ages 8 and up."
 	icon = 'icons/obj/gun_toy.dmi'
@@ -198,16 +203,17 @@
 	projectile_type = /obj/item/projectile/bullet/foam_dart
 	matter = list(MAT_PLASTIC = 1500)
 	recoil = null //it's a toy
+	fire_sound = 'sound/items/syringeproj.ogg' //CHOMPedit
 
 	firemodes = list(
-		list(mode_name="semiauto",       burst=1, fire_delay=0,    move_delay=null, burst_accuracy=null, dispersion=null),
+		list(mode_name="semiauto",       burst=1, fire_delay=0.1,    move_delay=null, burst_accuracy=null, dispersion=null),
 		list(mode_name="3-round bursts", burst=3, fire_delay=null, move_delay=2,    burst_accuracy=list(0,-2,-2), dispersion=null)
 	)
 
-/obj/item/weapon/gun/projectile/automatic/toy/riot
+/obj/item/gun/projectile/automatic/toy/riot
 	magazine_type = /obj/item/ammo_magazine/mfoam_dart/smg/riot
 
-/obj/item/weapon/gun/projectile/automatic/toy/update_icon()
+/obj/item/gun/projectile/automatic/toy/update_icon()
 	if(ammo_magazine)
 		icon_state = initial(icon_state)
 	else
@@ -215,9 +221,9 @@
 /*
  * Cyborg
  */
-/obj/item/weapon/gun/projectile/cyborgtoy
-	name = "\improper Donk-Soft Cyborg Blaster"
-	desc = "Donk-Soft Cyborg Blaster! It's Donk or Don't! Adult supervision required. Use to toggle between battle and cleanup mode."
+/obj/item/gun/projectile/cyborgtoy
+	name = "\improper Donk-Soft " + JOB_CYBORG + " Blaster"
+	desc = "Donk-Soft " + JOB_CYBORG + " Blaster! It's Donk or Don't! Adult supervision required. Use to toggle between battle and cleanup mode."
 	icon = 'icons/obj/gun_toy.dmi'
 	icon_state = "smg"
 	caliber = "foam"
@@ -229,12 +235,13 @@
 	projectile_type = /obj/item/projectile/bullet/foam_dart
 	recoil = null
 	handle_casings = null
+	fire_sound = 'sound/items/syringeproj.ogg' //CHOMPedit
 
-/obj/item/weapon/gun/projectile/cyborgtoy/attack_self(var/mob/user)
+/obj/item/gun/projectile/cyborgtoy/attack_self(var/mob/user)
 	cleanup = !cleanup
 	to_chat(user, "The [src] is now on [cleanup ? "cleanup" : "battle"] mode.")
 
-/obj/item/weapon/gun/projectile/cyborgtoy/afterattack(atom/A, mob/living/user, adjacent, params)
+/obj/item/gun/projectile/cyborgtoy/afterattack(atom/A, mob/living/user, adjacent, params)
 	if(cleanup)
 		if(!adjacent)
 			return 0
@@ -242,7 +249,7 @@
 		return 0
 	..()
 
-/obj/item/weapon/gun/projectile/cyborgtoy/proc/collectammo(atom/A, user)
+/obj/item/gun/projectile/cyborgtoy/proc/collectammo(atom/A, user)
 	if(loaded.len >= max_shells)
 		to_chat(user, "The [src] is at max capacity.")
 		return
@@ -262,7 +269,7 @@
 /*
  * Laser Tag
  */
-/obj/item/weapon/gun/energy/lasertag
+/obj/item/gun/energy/lasertag
 	name = "laser tag gun"
 	desc = "Standard issue weapon of the Imperial Guard."
 	icon = 'icons/obj/gun_toy.dmi'
@@ -271,19 +278,19 @@
 	origin_tech = list(TECH_COMBAT = 1, TECH_MAGNET = 2)
 	matter = list(MAT_STEEL = 2000)
 	projectile_type = /obj/item/projectile/beam/lasertag/blue
-	cell_type = /obj/item/weapon/cell/device/weapon/recharge
+	cell_type = /obj/item/cell/device/weapon/recharge
 	battery_lock = 1
 	var/required_vest
 	recoil = 0 //it's a toy //CHOMP Edit
 
-/obj/item/weapon/gun/energy/lasertag/special_check(var/mob/living/carbon/human/M)
+/obj/item/gun/energy/lasertag/special_check(var/mob/living/carbon/human/M)
 	if(ishuman(M))
 		if(!istype(M.wear_suit, required_vest))
-			to_chat(M, "<span class='warning'>You need to be wearing your laser tag vest!</span>")
+			to_chat(M, span_warning("You need to be wearing your laser tag vest!"))
 			return 0
 	return ..()
 
-/obj/item/weapon/gun/energy/lasertag/blue
+/obj/item/gun/energy/lasertag/blue
 	icon_state = "bluetag"
 	item_state = "bluetag"
 	projectile_type = /obj/item/projectile/beam/lasertag/blue
@@ -295,13 +302,13 @@
 		list(mode_name="multi-hit rules", fire_delay=5, projectile_type=/obj/item/projectile/beam/lasertag/blue/multihit, charge_cost = 120),
 		)
 
-/obj/item/weapon/gun/energy/lasertag/blue/sub
+/obj/item/gun/energy/lasertag/blue/sub
 	name = "Brigader Sidearm"
 	desc = "A laser tag replica of the standard issue weapon for the Spacer Union Brigade from the hit series Spacer Trail (Blue Team)."
 	icon_state = "bluetwo"
 	item_state = "retro"
 
-/obj/item/weapon/gun/energy/lasertag/red
+/obj/item/gun/energy/lasertag/red
 	icon_state = "redtag"
 	item_state = "redtag"
 	projectile_type = /obj/item/projectile/beam/lasertag/red
@@ -313,11 +320,11 @@
 		list(mode_name="multi-hit rules", fire_delay=5, projectile_type=/obj/item/projectile/beam/lasertag/red/multihit, charge_cost = 120),
 		)
 
-/obj/item/weapon/gun/energy/lasertag/red/dom
+/obj/item/gun/energy/lasertag/red/dom
 	name = "Mu'tu'bi sidearm"
 	desc = "A laser tag replica of the Mu'tu'bi sidearm from the hit series Spacer Trail (Red Team)."
 	icon_state = "redtwo"
 	item_state = "retro"
 
-/obj/item/weapon/gun/energy/lasertag/omni
+/obj/item/gun/energy/lasertag/omni
 	projectile_type = /obj/item/projectile/beam/lasertag/omni

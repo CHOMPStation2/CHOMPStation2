@@ -54,7 +54,7 @@
 
 /obj/item/clothing/under/rank/mailman
 	name = "mailman's jumpsuit"
-	desc = "<i>'Special delivery!'</i>"
+	desc = span_italics("'Special delivery!'")
 	icon_state = "mailman"
 	item_state_slots = list(slot_r_hand_str = "blue", slot_l_hand_str = "blue")
 	rolled_sleeves = 0
@@ -420,7 +420,7 @@
 
 /obj/item/clothing/under/dress/dress_cap
 	name = "site manager's dress uniform"
-	desc = "Feminine fashion for the style conscious Site Manager."
+	desc = "Feminine fashion for the style conscious " + JOB_SITE_MANAGER + "."
 	icon_state = "dress_cap"
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|ARMS
 
@@ -757,7 +757,7 @@
 
 /obj/item/clothing/under/captainformal
 	name = "site manager's formal uniform"
-	desc = "A Site Manager's formal-wear, for special occasions."
+	desc = "A " + JOB_SITE_MANAGER + "'s formal-wear, for special occasions."
 	icon_state = "captain_formal"
 	item_state_slots = list(slot_r_hand_str = "lawyer_blue", slot_l_hand_str = "lawyer_blue")
 
@@ -1694,6 +1694,24 @@
     name = "feminine black baggy turtleneck"
     icon_state = "bb_turtleblk_fem"
 
+//more big sweaters
+
+/obj/item/clothing/under/bigsweater
+	name = "cableknit sweater"
+	desc = "Why trade style for comfort?"
+	icon_state = "cableknit"
+	body_parts_covered = UPPER_TORSO|LOWER_TORSO|ARMS
+
+/obj/item/clothing/under/bigsweater/keyhole
+	icon_state = "keyhole"
+
+/obj/item/clothing/under/keyhole
+	name = "cableknit sweater"
+	desc = "Why trade style for comfort?."
+	icon_state = "cableknit"
+	body_parts_covered = UPPER_TORSO|LOWER_TORSO|ARMS
+
+
 //half-moon outfit
 /obj/item/clothing/under/half_moon
     name = "half moon outfit"
@@ -1711,3 +1729,36 @@
     name = "fiendish dress"
     desc = "A red and black dress befitting someone from the dark pits themselves… Or someone way too edgy."
     icon_state = "fienddress"
+
+//bunny suits
+
+/obj/item/clothing/under/bunnysuit_maid
+	name = "bunny suit"
+	desc = "A black and white bunny suit, extremely skimpy. Tails and ears sold seperately."
+	icon_state = "bunnysuit_maid"
+
+/obj/item/clothing/under/bunnysuit
+	name = "bunny suit"
+	desc = "A bunny suit, extremely skimpy. Tails and ears sold seperately."
+	icon_state = "bunnysuit_colour"
+
+
+/obj/item/clothing/under/reverse_bunnysuit
+	name = "reverse bunny suit"
+	desc = "A reverse bunny suit, literally just covers everything except the bits you're supposed to. Tails and ears sold seperately."
+	icon_state = "reverse_bunnysuit_colour"
+
+/obj/item/clothing/under/reverse_bunnysuit_maid
+	name = "reverse bunny suit"
+	desc = "A maid themed reverse bunny suit, literally just covers everything except the bits you're supposed to. Tails and ears sold seperately."
+	icon_state = "reverse_bunnysuit_maid"
+
+/obj/item/clothing/under/reverse_bunnytop
+	name = "reverse bunny suit"
+	desc = "A reverse bunny suit, literally just covers everything except the bits you're supposed to. Tails and ears sold seperately."
+	icon_state = "reverse_bunnytop_colour"
+
+/obj/item/clothing/under/reverse_bunnytop_maid
+	name = "reverse bunny suit"
+	desc = "A maid themed reverse bunny suit, literally just covers everything except the bits you're supposed to. Tails and ears sold seperately."
+	icon_state = "reverse_bunnytop_maid"

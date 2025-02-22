@@ -30,7 +30,7 @@
 /obj/structure/closet/walllocker/emerglocker{
 	pixel_y = 28
 	},
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	pixel_y = -26
 	},
 /turf/simulated/shuttle/floor,
@@ -44,7 +44,7 @@
 	pixel_y = 28
 	},
 /obj/machinery/light,
-/obj/item/weapon/weldingtool/largetank,
+/obj/item/weldingtool/largetank,
 /turf/simulated/shuttle/floor,
 /area/submap/Epod3)
 "j" = (
@@ -110,6 +110,12 @@
 /obj/structure/shuttle/window,
 /obj/structure/grille,
 /turf/simulated/shuttle/plating,
+/area/submap/Epod3)
+"w" = (
+/obj/structure/ghost_pod/manual/lost_drone/dogborg{
+	activated = 1
+	},
+/turf/template_noop,
 /area/submap/Epod3)
 
 (1,1,1) = {"
@@ -271,7 +277,7 @@ a
 (14,1,1) = {"
 a
 b
-b
+w
 b
 b
 b

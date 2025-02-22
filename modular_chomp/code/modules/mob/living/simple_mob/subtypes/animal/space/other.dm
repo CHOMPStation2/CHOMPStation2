@@ -1,3 +1,5 @@
+//File unticked for combat refactor walkback
+
 /mob/living/simple_mob/animal/space/carp/large/huge
 	maxHealth = 115
 	health = 115

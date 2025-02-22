@@ -3,11 +3,11 @@
 	req_access = list(access_kitchen)
 
 	starts_with = list(
-		/obj/item/weapon/reagent_containers/food/condiment/carton/flour = 6,
-		/obj/item/weapon/reagent_containers/food/condiment/carton/sugar = 1,
-		/obj/item/weapon/reagent_containers/food/condiment/carton/flour/rustic = 1,
-		/obj/item/weapon/reagent_containers/food/condiment/carton/sugar/rustic = 1,
-		/obj/item/weapon/reagent_containers/food/condiment/spacespice = 2
+		/obj/item/reagent_containers/food/condiment/carton/flour = 6,
+		/obj/item/reagent_containers/food/condiment/carton/sugar = 1,
+		/obj/item/reagent_containers/food/condiment/carton/flour/rustic = 1,
+		/obj/item/reagent_containers/food/condiment/carton/sugar/rustic = 1,
+		/obj/item/reagent_containers/food/condiment/spacespice = 2
 		)
 
 	open_sound = 'sound/machines/kitchen/fridge/open_fridge.ogg' // CHOMPEdit: Fridge sounds~
@@ -20,38 +20,41 @@
 /obj/structure/closet/secure_closet/freezer/meat
 	name = "meat fridge"
 	icon = 'icons/obj/closets/fridge.dmi'
+	icon_state = ""
 	closet_appearance = null
 
 	open_sound = 'sound/machines/kitchen/fridge/open_fridge.ogg' // CHOMPEdit: Fridge sounds~
 	close_sound = 'sound/machines/kitchen/fridge/close_fridge.ogg' // CHOMPEdit: Fridge sounds~
 
 	starts_with = list(
-		/obj/item/weapon/reagent_containers/food/snacks/meat/monkey = 10)
+		/obj/item/reagent_containers/food/snacks/meat/monkey = 10)
 
 
 /obj/structure/closet/secure_closet/freezer/fridge
 	name = "refrigerator"
 	icon = 'icons/obj/closets/fridge.dmi'
+	icon_state = ""
 	closet_appearance = null
 
 	open_sound = 'sound/machines/kitchen/fridge/open_fridge.ogg' // CHOMPEdit: Fridge sounds~
 	close_sound = 'sound/machines/kitchen/fridge/close_fridge.ogg' // CHOMPEdit: Fridge sounds~
 
 	starts_with = list(
-		/obj/item/weapon/reagent_containers/food/drinks/milk = 6,
-		/obj/item/weapon/reagent_containers/food/drinks/soymilk = 4,
-		/obj/item/weapon/storage/fancy/egg_box = 4,
-		/obj/item/weapon/reagent_containers/hypospray/autoinjector/biginjector/glucose = 2)
+		/obj/item/reagent_containers/food/drinks/milk = 6,
+		/obj/item/reagent_containers/food/drinks/soymilk = 4,
+		/obj/item/storage/fancy/egg_box = 4,
+		/obj/item/reagent_containers/hypospray/autoinjector/biginjector/glucose = 2)
 
 
 /obj/structure/closet/secure_closet/freezer/money
 	name = "freezer"
 	icon = 'icons/obj/closets/fridge.dmi'
+	icon_state = ""
 	closet_appearance = null
 	req_access = list(access_heads_vault)
 
 
 	starts_with = list(
-		/obj/item/weapon/spacecash/c1000 = 3,
-		/obj/item/weapon/spacecash/c500 = 4,
-		/obj/item/weapon/spacecash/c200 = 5)
+		/obj/item/spacecash/c1000 = 3,
+		/obj/item/spacecash/c500 = 4,
+		/obj/item/spacecash/c200 = 5)

@@ -187,6 +187,9 @@
 	icon_state = "grass0"
 	can_dirty = FALSE //VOREStation Edit
 	initial_flooring = /decl/flooring/grass
+	footstep = FOOTSTEP_GRASS
+	barefootstep = FOOTSTEP_GRASS
+	clawfootstep = FOOTSTEP_GRASS
 
 /turf/simulated/floor/tiled
 	name = "floor"
@@ -336,7 +339,7 @@
 /turf/simulated/floor/reinforced/n20/Initialize()
 	. = ..()
 	if(!air) make_air()
-	air.adjust_gas("nitrous_oxide", ATMOSTANK_NITROUSOXIDE)
+	air.adjust_gas(GAS_N2O, ATMOSTANK_NITROUSOXIDE)
 
 /turf/simulated/floor/cult
 	name = "engraved floor"
@@ -515,7 +518,7 @@
 /turf/simulated/floor/snow/plating/drift
 	name = "snowy plating"
 	icon_state = "snowyplayingdrift"
-	initial_flooring = /decl/flooring/snow/plating/drift			  
+	initial_flooring = /decl/flooring/snow/plating/drift
 
 // TODO: Move foortprints to a datum-component signal so they can actually be applied to other turf types, like sand, or mud
 /turf/simulated/floor/snow/Entered(atom/A)

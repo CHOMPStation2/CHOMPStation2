@@ -15,12 +15,12 @@
 /area/submap/starhuntertraders)
 "q" = (
 /obj/structure/table/sifwoodentable,
-/obj/item/weapon/reagent_containers/food/snacks/berrymuffin/poison,
+/obj/item/reagent_containers/food/snacks/berrymuffin/poison,
 /turf/simulated/floor/grass,
 /area/submap/starhuntertraders)
 "A" = (
 /obj/structure/table/sifwoodentable,
-/obj/item/weapon/reagent_containers/food/snacks/berrymuffin/berry,
+/obj/item/reagent_containers/food/snacks/berrymuffin/berry,
 /turf/simulated/floor/grass,
 /area/submap/starhuntertraders)
 "C" = (
@@ -40,12 +40,12 @@
 /area/submap/starhuntertraders)
 "H" = (
 /obj/structure/table/sifwoodentable,
-/obj/item/weapon/reagent_containers/food/snacks/burrito_cheese_spicy,
+/obj/item/reagent_containers/food/snacks/burrito_cheese_spicy,
 /turf/simulated/floor/grass,
 /area/submap/starhuntertraders)
 "M" = (
 /obj/structure/table/sifwoodentable,
-/obj/item/weapon/reagent_containers/food/snacks/bacon_flatbread,
+/obj/item/reagent_containers/food/snacks/bacon_flatbread,
 /turf/simulated/floor/grass,
 /area/submap/starhuntertraders)
 "N" = (
@@ -53,17 +53,17 @@
 /area/submap/starhuntertraders)
 "R" = (
 /obj/structure/table/sifwoodentable,
-/obj/item/weapon/reagent_containers/food/snacks/burrito_mystery,
+/obj/item/reagent_containers/food/snacks/burrito_mystery,
 /turf/simulated/floor/grass,
 /area/submap/starhuntertraders)
 "S" = (
-/obj/item/weapon/bedsheet,
+/obj/item/bedsheet,
 /obj/structure/bed,
 /turf/simulated/floor/grass,
 /area/submap/starhuntertraders)
 "T" = (
 /obj/structure/table/sifwoodentable,
-/obj/item/weapon/reagent_containers/food/snacks/amanitajelly,
+/obj/item/reagent_containers/food/snacks/amanitajelly,
 /turf/simulated/floor/grass,
 /area/submap/starhuntertraders)
 "V" = (

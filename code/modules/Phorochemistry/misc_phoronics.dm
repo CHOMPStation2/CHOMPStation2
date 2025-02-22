@@ -1,53 +1,48 @@
-#define REM 0.2
-#define SOLID 1
-#define LIQUID 2
-#define GAS 3
-
 proc/gaseous_reagent_check(var/mob/living/carbon/human/H) //protective clothing check
 	return (istype(H.wear_suit, /obj/item/clothing/suit/space) && istype(H.head, /obj/item/clothing/head/helmet/space)) \
 		|| (istype(H.wear_suit, /obj/item/clothing/suit/bio_suit) && istype(H.head, /obj/item/clothing/head/bio_hood) && H.gloves) \
 		|| (H.isSynthetic())
 
 /datum/reagent/nitrate
-	id = "nitrate"
-	name = "Nitrate"
+	id = REAGENT_ID_NITRATE
+	name = REAGENT_NITRATE
 	description = "Nitrate, not that interesting."
 	reagent_state = LIQUID
 	color = "#D8DFE3"
 
 /datum/reagent/aluminum_nitrate
-	id = "aluminum_nitrate"
-	name = "Aluminum Nitrate"
+	id = REAGENT_ID_ALUMINUMNITRATE
+	name = REAGENT_ALUMINUMNITRATE
 	description = "Aluminum Nitrate, now that's interesting!"
 	reagent_state = LIQUID
 	color = "#E1CFE3"
 
 /datum/chemical_reaction/nitrate
-	name = "Nitrate"
-	id = "nitrate"
-	result = "nitrate"
-	required_reagents = list("nitrogen" = 1, "oxygen" = 3)
+	name = REAGENT_NITRATE
+	id = REAGENT_ID_NITRATE
+	result = REAGENT_ID_NITRATE
+	required_reagents = list(REAGENT_ID_NITROGEN = 1, REAGENT_ID_OXYGEN = 3)
 	result_amount = 4
 
 /datum/chemical_reaction/aluminum_nitrate
-	name = "Aluminum Nitrate"
-	id = "aluminum_nitrate"
-	result = "aluminum_nitrate"
-	required_reagents = list("aluminum" = 1, "nitrate" = 3)
+	name = REAGENT_ALUMINUMNITRATE
+	id = REAGENT_ID_ALUMINUMNITRATE
+	result = REAGENT_ID_ALUMINUMNITRATE
+	required_reagents = list(REAGENT_ID_ALUMINIUM = 1, REAGENT_ID_NITRATE = 3)
 	result_amount = 4
 
 /datum/chemical_reaction/brownies
 	name = "Brownies"
 	id = "brownies"
 	result = null
-	required_reagents = list("aluminum_nitrate" = 40, "tartrate" = 20)
+	required_reagents = list(REAGENT_ID_ALUMINUMNITRATE = 40, REAGENT_ID_TARTRATE = 20)
 	result_amount = 1
 	on_reaction(var/datum/reagents/holder, var/created_volume)
 		for(var/i = 0; i < 3; i++)
-			new /obj/item/weapon/reagent_containers/food/snacks/brownies(get_turf(holder.my_atom))
+			new /obj/item/reagent_containers/food/snacks/brownies(get_turf(holder.my_atom))
 		return
 
-/obj/item/weapon/reagent_containers/food/snacks/brownies
+/obj/item/reagent_containers/food/snacks/brownies
 	name = "Brownies"
 	icon_state = "waffles"
 	desc = "Ovenless Brownies!"
@@ -55,9 +50,9 @@ proc/gaseous_reagent_check(var/mob/living/carbon/human/H) //protective clothing 
 
 	New()
 		..()
-		reagents.add_reagent("nutriment", 6)
+		reagents.add_reagent(REAGENT_ID_NUTRIMENT, 6)
 
-/obj/item/weapon/induromol
+/obj/item/induromol
 	name = "Hardened Induromol"
 	icon = 'icons/obj/mining.dmi'
 	icon_state = "ore_platinum"

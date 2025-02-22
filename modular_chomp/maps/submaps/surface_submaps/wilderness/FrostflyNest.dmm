@@ -40,13 +40,6 @@
 	outdoors = 0
 	},
 /area/submap/FrostflyNest)
-"j" = (
-/obj/random/humanoidremains,
-/obj/random/gun/random,
-/turf/simulated/floor/outdoors/dirt{
-	outdoors = 0
-	},
-/area/submap/FrostflyNest)
 "k" = (
 /obj/random/medical/pillbottle,
 /turf/simulated/floor/outdoors/dirt{
@@ -101,7 +94,7 @@ d
 d
 d
 h
-j
+g
 e
 f
 d
@@ -112,7 +105,7 @@ d
 d
 d
 f
-i
+e
 e
 e
 h

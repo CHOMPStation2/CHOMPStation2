@@ -54,15 +54,15 @@
 
 /client/verb/change_volume()
 	set name = "Set Volume"
-	set category = "OOC"
+	set category = "OOC.Client Settings"
 	set desc = "Set jukebox volume"
 	set_new_volume(usr)
 
 /client/proc/set_new_volume(var/mob/user)
-	if(!QDELETED(src.media) || !istype(src.media))
-		to_chat(user, "<span class='warning'>You have no media datum to change, if you're not in the lobby tell an admin.</span>")
+	if(QDELETED(src.media) || !istype(src.media))
+		to_chat(user, span_warning("You have no media datum to change, if you're not in the lobby tell an admin."))
 		return
-	var/value = input(usr, "Choose your Jukebox volume.", "Jukebox volume", media.volume)
+	var/value = tgui_input_number(user, "Choose your Jukebox volume.", "Jukebox volume", media.volume, 100, 0)
 	value = round(max(0, min(100, value)))
 	media.update_volume(value)
 
@@ -137,11 +137,11 @@
 
 // Tell the player to play something via JS.
 /datum/media_manager/proc/send_update()
-	if(!(owner.prefs))
+	if(!owner.prefs)
 		return
-	if(!owner.is_preference_enabled(/datum/client_preference/play_jukebox) && url != "")
+	if(!owner.prefs.read_preference(/datum/preference/toggle/play_jukebox) && url != "")
 		return // Don't send anything other than a cancel to people with SOUND_STREAMING pref disabled
-	MP_DEBUG("<span class='good'>Sending update to mediapanel ([url], [(world.time - start_time) / 10], [volume * source_volume])...</span>")
+	MP_DEBUG(span_green("Sending update to mediapanel ([url], [(world.time - start_time) / 10], [volume * source_volume])..."))
 	owner << output(list2params(list(url, (world.time - start_time) / 10, volume * source_volume)), "[WINDOW_ID]:SetMusic")
 
 /datum/media_manager/proc/push_music(var/targetURL, var/targetStartTime, var/targetVolume)
@@ -179,3 +179,9 @@
 		targetVolume = M.volume
 		//MP_DEBUG("Found audio source: [M.media_url] @ [(world.time - start_time) / 10]s.")
 	push_music(targetURL, targetStartTime, targetVolume)
+
+
+#ifdef DEBUG_MEDIAPLAYER
+#undef DEBUG_MEDIAPLAYER
+#undef MP_DEBUG
+#endif

@@ -16,7 +16,7 @@
 /turf/simulated/floor,
 /area/submap/debris1)
 "bF" = (
-/obj/item/device/nif/bad,
+/obj/item/nif/bad,
 /turf/template_noop,
 /area/submap/debris1)
 "bK" = (
@@ -24,8 +24,8 @@
 /area/submap/debris1)
 "bP" = (
 /obj/structure/grille/broken,
-/obj/item/weapon/material/shard,
-/obj/item/weapon/material/shard,
+/obj/item/material/shard,
+/obj/item/material/shard,
 /turf/simulated/floor/plating,
 /area/submap/debris1)
 "bR" = (
@@ -37,7 +37,7 @@
 /turf/template_noop,
 /area/submap/debris1)
 "cp" = (
-/obj/item/weapon/paper,
+/obj/item/paper,
 /turf/simulated/floor/airless,
 /area/submap/debris1)
 "cs" = (
@@ -45,7 +45,7 @@
 /turf/template_noop,
 /area/submap/debris1)
 "cC" = (
-/obj/item/device/nif/bad,
+/obj/item/nif/bad,
 /turf/simulated/floor/airless,
 /area/submap/debris1)
 "cU" = (
@@ -74,10 +74,7 @@
 /area/submap/debris1)
 "fp" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8";
-	tag = ""
+	icon_state = "4-8"
 	},
 /turf/template_noop,
 /area/submap/debris1)
@@ -141,13 +138,13 @@
 /turf/simulated/floor/plating,
 /area/submap/debris1)
 "iQ" = (
-/obj/item/weapon/paper,
-/obj/item/weapon/paper,
+/obj/item/paper,
+/obj/item/paper,
 /turf/template_noop,
 /area/submap/debris1)
 "jc" = (
 /obj/structure/grille/broken,
-/obj/item/weapon/material/shard{
+/obj/item/material/shard{
 	icon_state = "medium"
 	},
 /turf/simulated/floor/plating,
@@ -158,16 +155,11 @@
 /area/submap/debris1)
 "jv" = (
 /obj/structure/door_assembly/door_assembly_sec,
-/obj/item/weapon/airlock_electronics,
+/obj/item/airlock_electronics,
 /turf/simulated/floor/plating,
 /area/submap/debris1)
 "jG" = (
 /turf/simulated/floor/plating,
-/area/submap/debris1)
-"kf" = (
-/obj/structure/lattice,
-/obj/structure/lattice,
-/turf/template_noop,
 /area/submap/debris1)
 "kg" = (
 /obj/structure/disposalpipe/segment{
@@ -207,7 +199,7 @@
 	color = "red";
 	icon_state = "gibdown1_flesh"
 	},
-/obj/item/weapon/digestion_remains/skull/teshari,
+/obj/item/digestion_remains/skull/teshari,
 /turf/simulated/floor/wood/broken,
 /area/submap/debris1)
 "ms" = (
@@ -221,9 +213,9 @@
 /area/submap/debris1)
 "nt" = (
 /obj/structure/safe,
-/obj/item/weapon/dnainjector/xraymut,
-/obj/item/weapon/dnainjector/runfast,
-/obj/item/weapon/dnainjector/antistutt,
+/obj/item/dnainjector/set_trait/xray,
+/obj/item/dnainjector/set_trait/haste,
+/obj/item/dnainjector/set_trait/anxiety/disable,
 /turf/simulated/floor/tiled/airless,
 /area/submap/debris1)
 "oh" = (
@@ -245,7 +237,7 @@
 /turf/simulated/floor/airless,
 /area/submap/debris1)
 "oD" = (
-/obj/item/weapon/reagent_containers/spray/cleaner,
+/obj/item/reagent_containers/spray/cleaner,
 /turf/template_noop,
 /area/submap/debris1)
 "oW" = (
@@ -331,7 +323,7 @@
 /area/submap/debris1)
 "tk" = (
 /obj/structure/table/steel,
-/obj/item/weapon/storage/toolbox/syndicate/powertools,
+/obj/item/storage/toolbox/syndicate/powertools,
 /turf/simulated/floor/tiled/airless,
 /area/submap/debris1)
 "tl" = (
@@ -342,7 +334,7 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
-/obj/item/weapon/material/shard,
+/obj/item/material/shard,
 /obj/structure/disposalpipe/broken{
 	dir = 4
 	},
@@ -373,7 +365,7 @@
 /obj/structure/window/reinforced{
 	dir = 1
 	},
-/obj/item/weapon/material/shard,
+/obj/item/material/shard,
 /turf/simulated/floor/plating,
 /area/submap/debris1)
 "wq" = (
@@ -397,7 +389,7 @@
 /turf/simulated/floor/tiled/airless,
 /area/submap/debris1)
 "wZ" = (
-/obj/item/weapon/material/shard,
+/obj/item/material/shard,
 /obj/structure/disposalpipe/junction,
 /turf/simulated/floor/plating,
 /area/submap/debris1)
@@ -436,7 +428,7 @@
 /obj/structure/window/reinforced{
 	dir = 4
 	},
-/obj/item/weapon/material/shard,
+/obj/item/material/shard,
 /turf/simulated/floor/plating,
 /area/submap/debris1)
 "AP" = (
@@ -447,7 +439,7 @@
 /turf/template_noop,
 /area/submap/debris1)
 "Cc" = (
-/obj/item/weapon/circuitboard/arcade,
+/obj/item/circuitboard/arcade,
 /turf/template_noop,
 /area/submap/debris1)
 "Cs" = (
@@ -483,7 +475,7 @@
 /area/submap/debris1)
 "Ek" = (
 /obj/structure/grille/broken,
-/obj/item/weapon/material/shard,
+/obj/item/material/shard,
 /turf/simulated/floor/plating,
 /area/submap/debris1)
 "Ep" = (
@@ -578,7 +570,7 @@
 	color = "red";
 	icon_state = "gib1_flesh"
 	},
-/obj/item/weapon/digestion_remains/skull/tajaran,
+/obj/item/digestion_remains/skull/tajaran,
 /turf/simulated/floor/wood/broken,
 /area/submap/debris1)
 "Lc" = (
@@ -608,7 +600,7 @@
 /turf/simulated/floor/plating,
 /area/submap/debris1)
 "My" = (
-/obj/item/weapon/material/shard,
+/obj/item/material/shard,
 /turf/template_noop,
 /area/submap/debris1)
 "ML" = (
@@ -648,7 +640,7 @@
 	color = "red";
 	icon_state = "gib2_flesh"
 	},
-/obj/item/weapon/digestion_remains/skull/skrell,
+/obj/item/digestion_remains/skull/skrell,
 /turf/simulated/floor/wood/broken,
 /area/submap/debris1)
 "Pk" = (
@@ -656,7 +648,7 @@
 /turf/simulated/floor/tiled/airless,
 /area/submap/debris1)
 "Px" = (
-/obj/item/weapon/paper,
+/obj/item/paper,
 /turf/template_noop,
 /area/submap/debris1)
 "PB" = (
@@ -708,8 +700,6 @@
 /area/submap/debris1)
 "TO" = (
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /turf/template_noop,
@@ -728,12 +718,12 @@
 /area/submap/debris1)
 "Vz" = (
 /obj/structure/closet/crate,
-/obj/item/weapon/reagent_containers/glass/beaker/bluespace,
+/obj/item/reagent_containers/glass/beaker/bluespace,
 /turf/simulated/floor/tiled/airless,
 /area/submap/debris1)
 "VB" = (
 /obj/structure/table,
-/obj/item/weapon/material/shard{
+/obj/item/material/shard{
 	icon_state = "medium"
 	},
 /turf/simulated/floor/tiled/airless,
@@ -746,7 +736,7 @@
 /turf/simulated/floor/tiled/airless,
 /area/submap/debris1)
 "WW" = (
-/obj/item/weapon/material/shard,
+/obj/item/material/shard,
 /turf/simulated/floor/plating,
 /area/submap/debris1)
 "Xa" = (
@@ -766,7 +756,7 @@
 /turf/simulated/floor/airless,
 /area/submap/debris1)
 "XC" = (
-/obj/item/weapon/paperplane,
+/obj/item/paperplane,
 /turf/template_noop,
 /area/submap/debris1)
 "XP" = (
@@ -782,7 +772,7 @@
 /turf/template_noop,
 /area/submap/debris1)
 "Yb" = (
-/obj/item/weapon/material/shard{
+/obj/item/material/shard{
 	icon_state = "small"
 	},
 /turf/template_noop,
@@ -806,7 +796,7 @@
 /turf/simulated/floor/plating,
 /area/submap/debris1)
 "ZA" = (
-/obj/item/stack/material/cyborg/steel{
+/obj/item/stack/material/steel{
 	amount = 18
 	},
 /turf/simulated/floor/tiled/airless,
@@ -2825,7 +2815,7 @@ wq
 ip
 wq
 ip
-kf
+ip
 Ma
 Ma
 WW
@@ -2913,7 +2903,7 @@ gO
 Pj
 mk
 gO
-kf
+ip
 de
 de
 de
@@ -4024,7 +4014,7 @@ yk
 Wx
 AP
 AP
-kf
+ip
 wq
 wq
 wq

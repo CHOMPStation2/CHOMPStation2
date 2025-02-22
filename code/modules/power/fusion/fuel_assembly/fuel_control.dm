@@ -1,7 +1,7 @@
 /obj/machinery/computer/fusion_fuel_control
 	name = "fuel injection control computer"
 	desc = "Displays information about the fuel rods."
-	circuit = /obj/item/weapon/circuitboard/fusion_fuel_control
+	circuit = /obj/item/circuitboard/fusion_fuel_control
 
 	icon_keyboard = "tech_key"
 	icon_screen = "fuel_screen"
@@ -47,10 +47,10 @@
 		return
 
 	if(!id_tag)
-		to_chat(user, "<span class='warning'>This console has not been assigned an ident tag. Please contact your system administrator or conduct a manual update with a standard multitool.</span>")
+		to_chat(user, span_warning("This console has not been assigned an ident tag. Please contact your system administrator or conduct a manual update with a standard multitool."))
 		return
 
-	var/dat = "<B>Reactor Core Fuel Control #[id_tag]</B><BR>"
+	var/dat = span_bold("Reactor Core Fuel Control #[id_tag]") + "<BR>"
 	dat += {"
 		<hr>
 		<table border=1 width='100%'>
@@ -67,13 +67,13 @@
 		dat += "<tr>"
 
 		if(I.stat & (BROKEN|NOPOWER))
-			dat += "<td><span class='danger'>ERROR</span></td>"
-			dat += "<td><span class='danger'>ERROR</span></td>"
-			dat += "<td><span class='danger'>ERROR</span></td>"
+			dat += "<td>" + span_danger("ERROR") + "</td>"
+			dat += "<td>" + span_danger("ERROR") + "</td>"
+			dat += "<td>" + span_danger("ERROR") + "</td>"
 		else
 			dat += "<td>[I.cur_assembly ? I.cur_assembly.fuel_type : "NONE"]</td>"
 			if(I.cur_assembly)
-				dat += "<td><a href='?src=\ref[src];toggle_injecting=\ref[I]'>\[[I.injecting ? "Halt injecting" : "Begin injecting"]\]</a></td>"
+				dat += "<td><a href='byond://?src=\ref[src];toggle_injecting=\ref[I]'>\[[I.injecting ? "Halt injecting" : "Begin injecting"]\]</a></td>"
 			else
 				dat += "<td>None</td>"
 			if(I.cur_assembly)
@@ -84,8 +84,8 @@
 		dat += "</tr>"
 
 	dat += {"</table><hr>
-		<A href='?src=\ref[src];refresh=1'>Refresh</A>
-		<A href='?src=\ref[src];close=1'>Close</A><BR>"}
+		<A href='byond://?src=\ref[src];refresh=1'>Refresh</A>
+		<A href='byond://?src=\ref[src];close=1'>Close</A><BR>"}
 
 	var/datum/browser/popup = new(user, "fuel_control", "Fusion Fuel Control Console", 800, 400, src)
 	popup.set_content(dat)
@@ -116,8 +116,8 @@
 
 /obj/machinery/computer/fusion_fuel_control/attackby(var/obj/item/W, var/mob/user)
 	..()
-	if(istype(W, /obj/item/device/multitool))
-		var/new_ident = tgui_input_text(usr, "Enter a new ident tag.", "Fuel Control", monitor.fuel_tag, MAX_NAME_LEN)
+	if(istype(W, /obj/item/multitool))
+		var/new_ident = tgui_input_text(user, "Enter a new ident tag.", "Fuel Control", monitor.fuel_tag, MAX_NAME_LEN)
 		new_ident = sanitize(new_ident,MAX_NAME_LEN)
 		if(new_ident && user.Adjacent(src))
 			monitor.fuel_tag = new_ident

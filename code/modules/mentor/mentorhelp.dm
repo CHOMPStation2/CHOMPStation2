@@ -53,10 +53,10 @@ GLOBAL_DATUM_INIT(mhelp_tickets, /datum/mentor_help_tickets, new)
 	if(!l2b)
 		return
 	var/list/dat = list("<html><head><title>[title]</title></head>")
-	dat += "<A HREF='?_src_=mentorholder;[HrefToken()];mhelp_tickets=[state]'>Refresh</A><br><br>"
+	dat += "<A href='byond://?_src_=mentorholder;[HrefToken()];mhelp_tickets=[state]'>Refresh</A><br><br>"
 	for(var/datum/mentor_help/MH as anything in l2b)
-		dat += "<span class='adminnotice'><span class='adminhelp'>Ticket #[MH.id]</span>: <A HREF='?_src_=mentorholder;mhelp=\ref[MH];[HrefToken()];mhelp_action=ticket'>[MH.initiator_ckey]: [MH.name]</A></span><br>"
-
+		dat += span_adminnotice(span_adminhelp("Ticket #[MH.id]") + " <A href='byond://?_src_=mentorholder;mhelp=\ref[MH];[HrefToken()];mhelp_action=ticket'>[MH.initiator_ckey]: [MH.name]</A>") + "<br>"
+	dat += "</html>"
 	usr << browse(dat.Join(), "window=mhelp_list[state];size=600x480")
 
 //Tickets statpanel
@@ -163,7 +163,7 @@ GLOBAL_DATUM_INIT(mhelp_tickets, /datum/mentor_help_tickets, new)
 	log_admin("Mentorhelp: [key_name(C)]: [msg]")
 	MessageNoRecipient(msg)
 	//show it to the person adminhelping too
-	to_chat(C, "<i><span class='mentor'>Mentor-PM to-<b>Mentors</b>: [name]</span></i>")
+	to_chat(C, span_mentor(span_italics("Mentor-PM to-" + span_bold("Mentors") + ": [name]")))
 
 	GLOB.mhelp_tickets.active_tickets += src
 
@@ -179,41 +179,41 @@ GLOBAL_DATUM_INIT(mhelp_tickets, /datum/mentor_help_tickets, new)
 /datum/mentor_help/proc/ClosureLinks(ref_src)
 	if(!ref_src)
 		ref_src = "\ref[src]"
-	. = " (<A HREF='?_src_=mentorholder;mhelp=[ref_src];[HrefToken()];mhelp_action=resolve'>RSLVE</A>)"
+	. = " (<A href='byond://?_src_=mentorholder;mhelp=[ref_src];[HrefToken()];mhelp_action=resolve'>RSLVE</A>)"
 
 //private
 /datum/mentor_help/proc/LinkedReplyName(ref_src)
 	if(!ref_src)
 		ref_src = "\ref[src]"
-	return "<A HREF='?_src_=mentorholder;mhelp=[ref_src];[HrefToken()];mhelp_action=reply'>[initiator_ckey]</A>"
+	return "<A href='byond://?_src_=mentorholder;mhelp=[ref_src];[HrefToken()];mhelp_action=reply'>[initiator_ckey]</A>"
 
 //private
 /datum/mentor_help/proc/TicketHref(msg, ref_src, action = "ticket")
 	if(!ref_src)
 		ref_src = "\ref[src]"
-	return "<A HREF='?_src_=mentorholder;mhelp=[ref_src];[HrefToken()];mhelp_action=[action]'>[msg]</A>"
+	return "<A href='byond://?_src_=mentorholder;mhelp=[ref_src];[HrefToken()];mhelp_action=[action]'>[msg]</A>"
 
 //message from the initiator without a target, all people with mentor powers will see this
 /datum/mentor_help/proc/MessageNoRecipient(msg)
 	var/ref_src = "\ref[src]"
-	var/chat_msg = "<span class='notice'>(<A HREF='?_src_=mentorholder;mhelp=[ref_src];[HrefToken()];mhelp_action=escalate'>ESCALATE</A>) Ticket [TicketHref("#[id]", ref_src)]<b>: [LinkedReplyName(ref_src)]:</b> [msg]</span>"
+	var/chat_msg = span_notice("(<A href='byond://?_src_=mentorholder;mhelp=[ref_src];[HrefToken()];mhelp_action=escalate'>ESCALATE</A>) Ticket [TicketHref("#[id]", ref_src)]<b>: [LinkedReplyName(ref_src)]:</b> [msg]")
 	AddInteraction("<font color='red'>[LinkedReplyName(ref_src)]: [msg]</font>")
 	for (var/client/C in GLOB.mentors)
-		if (C.is_preference_enabled(/datum/client_preference/play_mentorhelp_ping))
+		if (C.prefs?.read_preference(/datum/preference/toggle/play_mentorhelp_ping))
 			C << 'sound/effects/mentorhelp.mp3'
 	for (var/client/C in GLOB.admins)
-		if (C.is_preference_enabled(/datum/client_preference/play_mentorhelp_ping))
+		if (C.prefs?.read_preference(/datum/preference/toggle/play_mentorhelp_ping))
 			C << 'sound/effects/mentorhelp.mp3'
 	message_mentors(chat_msg)
 
 //Reopen a closed ticket
 /datum/mentor_help/proc/Reopen()
 	if(state == AHELP_ACTIVE)
-		to_chat(usr, "<span class='warning'>This ticket is already open.</span>")
+		to_chat(usr, span_warning("This ticket is already open."))
 		return
 
 	if(GLOB.mhelp_tickets.CKey2ActiveTicket(initiator_ckey))
-		to_chat(usr, "<span class='warning'>This user already has an active ticket, cannot reopen this one.</span>")
+		to_chat(usr, span_warning("This user already has an active ticket, cannot reopen this one."))
 		return
 
 	statclick = new(null, src)
@@ -229,8 +229,8 @@ GLOBAL_DATUM_INIT(mhelp_tickets, /datum/mentor_help_tickets, new)
 
 	AddInteraction("<font color='purple'>Reopened by [usr.ckey]</font>")
 	if(initiator)
-		to_chat(initiator, "<span class='filter_adminlog'>[span_purple("Ticket [TicketHref("#[id]")] was reopened by [usr.ckey].")]</span>")
-	var/msg = "<span class='adminhelp'>Ticket [TicketHref("#[id]")] reopened by [usr.ckey].</span>"
+		to_chat(initiator, span_filter_adminlog("[span_purple("Ticket [TicketHref("#[id]")] was reopened by [usr.ckey].")]"))
+	var/msg = span_adminhelp("Ticket [TicketHref("#[id]")] reopened by [usr.ckey].")
 	message_mentors(msg)
 	log_admin(msg)
 	feedback_inc("mhelp_reopen")
@@ -254,9 +254,9 @@ GLOBAL_DATUM_INIT(mhelp_tickets, /datum/mentor_help_tickets, new)
 	state = AHELP_RESOLVED
 	GLOB.mhelp_tickets.ListInsert(src)
 
-	AddInteraction("<span class='filter_adminlog'>[span_green("Resolved by [usr.ckey].")]</span>")
+	AddInteraction(span_filter_adminlog("[span_green("Resolved by [usr.ckey].")]"))
 	if(initiator)
-		to_chat(initiator, "<span class='filter_adminlog'>[span_green("Ticket [TicketHref("#[id]")] was marked resolved by [usr.ckey].")]</span>")
+		to_chat(initiator, span_filter_adminlog("[span_green("Ticket [TicketHref("#[id]")] was marked resolved by [usr.ckey].")]"))
 	if(!silent)
 		feedback_inc("mhelp_resolve")
 		var/msg = "Ticket [TicketHref("#[id]")] resolved by [usr.ckey]"
@@ -287,13 +287,13 @@ GLOBAL_DATUM_INIT(mhelp_tickets, /datum/mentor_help_tickets, new)
 		dat += "<br>Closed at: [gameTimestamp(wtime = closed_at)] (Approx [(world.time - closed_at) / 600] minutes ago)"
 	dat += "<br><br>"
 	if(initiator)
-		dat += "<b>Actions:</b> [Context(ref_src)]<br>"
+		dat += span_bold("Actions:") + " [Context(ref_src)]<br>"
 	else
-		dat += "<b>DISCONNECTED</b>[GLOB.TAB][ClosureLinks(ref_src)]<br>"
+		dat += span_bold("DISCONNECTED") + "[GLOB.TAB][ClosureLinks(ref_src)]<br>"
 	dat += "<br><b>Log:</b><br><br>"
 	for(var/I in _interactions)
 		dat += "[I]<br>"
-
+	dat += "</html>"
 	usr << browse(dat.Join(), "window=mhelp[id];size=620x480")
 
 /datum/mentor_help/tgui_fallback(payload)
@@ -358,12 +358,12 @@ GLOBAL_DATUM_INIT(mhelp_tickets, /datum/mentor_help_tickets, new)
 	if(tgui_alert(usr, "Really escalate this ticket to admins? No mentors will ever be able to interact with it again if you do.","Escalate",list("Yes","No")) != "Yes")
 		return
 	if (src.initiator == null) // You can't escalate a mentorhelp of someone who's logged out because it won't create the adminhelp properly
-		to_chat(usr, "<span class='pm warning'>Error: client not found, unable to escalate.</span>")
+		to_chat(usr, span_mentor_pm_warning("Error: client not found, unable to escalate."))
 		return
 	var/datum/admin_help/AH = new /datum/admin_help(src.name, src.initiator, FALSE)
 	message_mentors("[usr.ckey] escalated Ticket [TicketHref("#[id]")]")
 	log_admin("[key_name(usr)] escalated mentorhelp [src.name]")
-	to_chat(src.initiator, "<span class='mentor'>[usr.ckey] escalated your mentorhelp to admins.</span>")
+	to_chat(src.initiator, span_mentor("[usr.ckey] escalated your mentorhelp to admins."))
 	AH._interactions = src._interactions
 	GLOB.mhelp_tickets.active_tickets -= src
 	GLOB.mhelp_tickets.resolved_tickets -= src
@@ -375,7 +375,7 @@ GLOBAL_DATUM_INIT(mhelp_tickets, /datum/mentor_help_tickets, new)
 	if(state == AHELP_ACTIVE)
 		. += ClosureLinks(ref_src)
 	if(state != AHELP_RESOLVED)
-		. += " (<A HREF='?_src_=mentorholder;[HrefToken()];mhelp=[ref_src];mhelp_action=escalate'>ESCALATE</A>)"
+		. += " (<A href='byond://?_src_=mentorholder;[HrefToken()];mhelp=[ref_src];mhelp_action=escalate'>ESCALATE</A>)"
 
 //Forwarded action from admin/Topic OR mentor/Topic depending on which rank the caller has
 /datum/mentor_help/proc/Action(action)
@@ -420,13 +420,9 @@ GLOBAL_DATUM_INIT(mhelp_tickets, /datum/mentor_help_tickets, new)
 	set category = "Admin"
 	set name = "Mentorhelp"
 
-	if(say_disabled)	//This is here to try to identify lag problems
-		to_chat(usr, "<span class='danger'>Speech is currently admin-disabled.</span>")
-		return
-
 	//handle muting and automuting
 	if(prefs.muted & MUTE_ADMINHELP)
-		to_chat(src, "<span class='danger'>Error: Mentor-PM: You cannot send adminhelps (Muted).</span>")
+		to_chat(src, span_danger("Error: Mentor-PM: You cannot send adminhelps (Muted)."))
 		return
 	if(handle_spam_prevention(msg,MUTE_ADMINHELP))
 		return
@@ -444,30 +440,33 @@ GLOBAL_DATUM_INIT(mhelp_tickets, /datum/mentor_help_tickets, new)
 		"Send to discord?", list("Admin-help!", "Still mentorhelp!", "Cancel"))
 		if(choice == "Admin-help!")
 			usr.client.adminhelp(msg)
-			remove_verb(src,/client/verb/mentorhelp)  //CHOMPEdit
+			remove_verb(src, /client/verb/mentorhelp)
 			spawn(1200)
-				add_verb(src,/client/verb/mentorhelp ) // 2 minute cd to prevent abusing this to spam admins. //CHOMPEdit
+				add_verb(src, /client/verb/mentorhelp) // 2 minute cd to prevent abusing this to spam admins.
 			return
-		else if(choice == "Cancel")
+		else if(!choice || choice == "Cancel")
 			return
 
 
 
 	//remove out adminhelp verb temporarily to prevent spamming of admins.
-	remove_verb(src, /client/verb/mentorhelp) //CHOMPEdit
+	remove_verb(src, /client/verb/mentorhelp)
 	spawn(600)
-		add_verb(src, /client/verb/mentorhelp) //CHOMPEdit	// 1 minute cool-down for mentorhelps
+		add_verb(src, /client/verb/mentorhelp)	// 1 minute cool-down for mentorhelps
 
 	feedback_add_details("admin_verb","Mentorhelp") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 	if(current_mentorhelp)
-		if(tgui_alert(usr, "You already have a ticket open. Is this for the same issue?","Duplicate?",list("Yes","No")) != "No")
+		var/input = tgui_alert(usr, "You already have a ticket open. Is this for the same issue?","Duplicate?",list("Yes","No"))
+		if(!input)
+			return
+		if(input == "Yes")
 			if(current_mentorhelp)
 				log_admin("Mentorhelp: [key_name(src)]: [msg]")
 				current_mentorhelp.MessageNoRecipient(msg)
-				to_chat(usr, "<span class='adminnotice'><span class='mentor'>Mentor-PM to-<b>Mentors</b>: [msg]</span></span>")
+				to_chat(usr, span_mentor_pm_notice("Mentor-PM to-<b>Mentors</b>: [msg]"))
 				return
 			else
-				to_chat(usr, "<span class='warning'>Ticket not found, creating new one...</span>")
+				to_chat(usr, span_warning("Ticket not found, creating new one..."))
 		else
 			current_mentorhelp.AddInteraction("[usr.ckey] opened a new ticket.")
 			current_mentorhelp.Resolve()
@@ -477,7 +476,7 @@ GLOBAL_DATUM_INIT(mhelp_tickets, /datum/mentor_help_tickets, new)
 //admin proc
 /client/proc/cmd_mentor_ticket_panel()
 	set name = "Mentor Ticket List"
-	set category = "Admin"
+	set category = "Admin.Misc"
 
 	var/browse_to
 
@@ -492,7 +491,7 @@ GLOBAL_DATUM_INIT(mhelp_tickets, /datum/mentor_help_tickets, new)
 	GLOB.mhelp_tickets.BrowseTickets(browse_to)
 
 /proc/message_mentors(var/msg)
-	msg = "<span class='mentor_channel'><span class='prefix'>Mentor:</span> <span class=\"message\">[msg]</span></span>"
+	msg = span_mentor_channel(span_prefix("Mentor: " + span_message(msg)))
 
 	for(var/client/C in GLOB.mentors)
 		to_chat(C, msg)

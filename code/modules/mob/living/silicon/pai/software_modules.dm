@@ -22,7 +22,7 @@
 	return GLOB.tgui_always_state
 
 /datum/pai_software/tgui_status(mob/user)
-	if(!istype(user, /mob/living/silicon/pai))
+	if(!ispAI(user))
 		return STATUS_CLOSE
 	return ..()
 
@@ -50,7 +50,7 @@
 	return data
 
 /datum/pai_software/directives/tgui_act(action, list/params, datum/tgui/ui, datum/tgui_state/state)
-	var/mob/living/silicon/pai/P = usr
+	var/mob/living/silicon/pai/P = ui.user
 	if(!istype(P))
 		return TRUE
 	if(..())
@@ -61,10 +61,10 @@
 
 		var/count = 0
 		// Find the carrier
-		while(!istype(M, /mob/living))
+		while(!isliving(M))
 			if(!M || !M.loc || count > 6)
 				//For a runtime where M ends up in nullspace (similar to bluespace but less colourful)
-				to_chat(src, "You are not being carried by anyone!")
+				to_chat(src, span_infoplain("You are not being carried by anyone!"))
 				return 0
 			M = M.loc
 			count++
@@ -75,15 +75,15 @@
 		if(answer == "Yes")
 			var/turf/T = get_turf(P.loc)
 			for (var/mob/v in viewers(T))
-				v.show_message("<span class='notice'>[M] presses [TM.his] thumb against [P].</span>", 3, "<span class='notice'>[P] makes a sharp clicking sound as it extracts DNA material from [M].</span>", 2)
+				v.show_message(span_notice("[M] presses [TM.his] thumb against [P]."), 3, span_notice("[P] makes a sharp clicking sound as it extracts DNA material from [M]."), 2)
 			var/datum/dna/dna = M.dna
-			to_chat(P, span_red("<h3>[M]'s UE string : [dna.unique_enzymes]</h3>"))
+			to_chat(P, span_infoplain(span_red("<h3>[M]'s UE string : [dna.unique_enzymes]</h3>")))
 			if(dna.unique_enzymes == P.master_dna)
-				to_chat(P, "<b>DNA is a match to stored Master DNA.</b>")
+				to_chat(P, span_infoplain(span_bold("DNA is a match to stored Master DNA.")))
 			else
-				to_chat(P, "<b>DNA does not match stored Master DNA.</b>")
+				to_chat(P, span_infoplain(span_bold("DNA does not match stored Master DNA.")))
 		else
-			to_chat(P, "[M] does not seem like [TM.he] is going to provide a DNA sample willingly.")
+			to_chat(P, span_infoplain("[M] does not seem like [TM.he] is going to provide a DNA sample willingly."))
 		return TRUE
 
 /datum/pai_software/radio_config
@@ -160,7 +160,7 @@
 
 /datum/pai_software/med_records/tgui_act(action, list/params, datum/tgui/ui, datum/tgui_state/state)
 	. = ..()
-	var/mob/living/silicon/pai/P = usr
+	var/mob/living/silicon/pai/P = ui.user
 	if(!istype(P))
 		return
 
@@ -216,7 +216,7 @@
 
 /datum/pai_software/sec_records/tgui_act(action, list/params, datum/tgui/ui, datum/tgui_state/state)
 	. = ..()
-	var/mob/living/silicon/pai/P = usr
+	var/mob/living/silicon/pai/P = ui.user
 	if(!istype(P))
 		return
 
@@ -267,7 +267,7 @@
 	return data
 
 /datum/pai_software/door_jack/tgui_act(action, list/params, datum/tgui/ui, datum/tgui_state/state)
-	var/mob/living/silicon/pai/P = usr
+	var/mob/living/silicon/pai/P = ui.user
 	if(!istype(P) || ..())
 		return TRUE
 
@@ -283,19 +283,19 @@
 		if("cable")
 			var/turf/T = get_turf(P)
 			P.hack_aborted = 0
-			P.cable = new /obj/item/weapon/pai_cable(T)
+			P.cable = new /obj/item/pai_cable(T)
 			for(var/mob/M in viewers(T))
-				M.show_message("<span class='warning'>A port on [P] opens to reveal [P.cable], which promptly falls to the floor.</span>", 3,
-								"<span class='warning'>You hear the soft click of something light and hard falling to the ground.</span>", 2)
+				M.show_message(span_warning("A port on [P] opens to reveal [P.cable], which promptly falls to the floor."), 3,
+								span_warning("You hear the soft click of something light and hard falling to the ground."), 2)
 			return 1
 
 /mob/living/silicon/pai/proc/hackloop()
 	var/turf/T = get_turf(src)
 	for(var/mob/living/silicon/ai/AI in player_list)
 		if(T.loc)
-			to_chat(AI, span_red("<b>Network Alert: Brute-force encryption crack in progress in [T.loc].</b>"))
+			to_chat(AI, span_bolddanger("Network Alert: Brute-force encryption crack in progress in [T.loc]."))
 		else
-			to_chat(AI, span_red("<b>Network Alert: Brute-force encryption crack in progress. Unable to pinpoint location.</b>"))
+			to_chat(AI, span_bolddanger("Network Alert: Brute-force encryption crack in progress. Unable to pinpoint location."))
 	var/obj/machinery/door/D = cable.machine
 	if(!istype(D))
 		hack_aborted = 1
@@ -340,10 +340,10 @@
 		var/pressure = environment.return_pressure()
 		var/total_moles = environment.total_moles
 		if (total_moles)
-			var/o2_level = environment.gas["oxygen"]/total_moles
-			var/n2_level = environment.gas["nitrogen"]/total_moles
-			var/co2_level = environment.gas["carbon_dioxide"]/total_moles
-			var/phoron_level = environment.gas["phoron"]/total_moles
+			var/o2_level = environment.gas[GAS_O2]/total_moles
+			var/n2_level = environment.gas[GAS_N2]/total_moles
+			var/co2_level = environment.gas[GAS_CO2]/total_moles
+			var/phoron_level = environment.gas[GAS_PHORON]/total_moles
 			var/unknown_level =  1-(o2_level+n2_level+co2_level+phoron_level)
 
 			// entry is what the element is describing
@@ -421,9 +421,9 @@
 		user.add_language(LANGUAGE_ALAI)
 		user.add_language(LANGUAGE_PROMETHEAN)
 		user.add_language(LANGUAGE_GIBBERISH)
-		user.add_language("Mouse")
-		user.add_language("Animal")
-		user.add_language("Teppi")
+		user.add_language(LANGUAGE_MOUSE)
+		user.add_language(LANGUAGE_ANIMAL)
+		user.add_language(LANGUAGE_TEPPI)
 	else
 		user.remove_language(LANGUAGE_UNATHI)
 		user.remove_language(LANGUAGE_SIIK)
@@ -449,9 +449,9 @@
 		user.remove_language(LANGUAGE_ALAI)
 		user.remove_language(LANGUAGE_PROMETHEAN)
 		user.remove_language(LANGUAGE_GIBBERISH)
-		user.remove_language("Mouse")
-		user.remove_language("Animal")
-		user.remove_language("Teppi")
+		user.remove_language(LANGUAGE_MOUSE)
+		user.remove_language(LANGUAGE_ANIMAL)
+		user.remove_language(LANGUAGE_TEPPI)
 
 /datum/pai_software/translator/is_active(mob/living/silicon/pai/user)
 	return user.translator_on
@@ -484,7 +484,7 @@
 	if(..())
 		return TRUE
 
-	var/mob/living/silicon/pai/user = usr
+	var/mob/living/silicon/pai/user = ui.user
 	if(istype(user))
 		var/obj/item/radio/integrated/signal/R = user.sradio
 

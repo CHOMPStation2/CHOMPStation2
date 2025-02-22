@@ -33,11 +33,11 @@
 
 	loot_list = list(/obj/item/clothing/head/vrwizard = 60,
 			/obj/item/clothing/suit/vrwizard = 60,
-			/obj/item/weapon/gun/magic/firestaff/vrwizard/fire = 60,
-			/obj/item/weapon/gun/magic/firestaff/vrwizard/frost = 60,
-			/obj/item/weapon/gun/magic/firestaff/vrwizard/poison = 60,
-			/obj/item/weapon/gun/magic/firestaff/vrwizard/lighting = 60,
-			/obj/item/weapon/gun/magic/firestaff/vrwizard/nuclear = 100,
+			/obj/item/gun/magic/firestaff/vrwizard/fire = 60,
+			/obj/item/gun/magic/firestaff/vrwizard/frost = 60,
+			/obj/item/gun/magic/firestaff/vrwizard/poison = 60,
+			/obj/item/gun/magic/firestaff/vrwizard/lighting = 60,
+			/obj/item/gun/magic/firestaff/vrwizard/nuclear = 100,
 			/obj/item/clothing/head/darkvrwizard = 100,
 			/obj/item/clothing/suit/darkvrwizard = 100
 			)
@@ -87,8 +87,8 @@
 	desc = "Can you even see this in game?"
 	mob_overlay_state = "cult_aura"
 
-	on_created_text = "<span class='warning'>You feel incrediably vulnerable.</span>"
-	on_expired_text = "<span class='notice'>You feel better.</span>"
+	on_created_text = span_warning("You feel incrediably vulnerable.")
+	on_expired_text = span_notice("You feel better.")
 	stacks = MODIFIER_STACK_ALLOWED // Multiple instances will hurt a lot.
 	incoming_damage_percent = 2			// Adjusts all incoming damage.
 	incoming_brute_damage_percent = 2	// Only affects bruteloss.
@@ -184,29 +184,29 @@
 	set waitfor = FALSE
 
 	Beam(target, icon_state = "sat_beam", time = 1.5 SECONDS, maxdistance = INFINITY)
-	visible_message(span("warning", "\The [src] prepares a pouch of vials!"))
+	visible_message(span_warning("\The [src] prepares a pouch of vials!"))
 	sleep(0.5 SECONDS)
 
 	if(prob(25))
-		visible_message(span("warning", "\The [src] throws a blue vial!"))
+		visible_message(span_warning("\The [src] throws a blue vial!"))
 		var/obj/item/projectile/B = new /obj/item/projectile/arc/vial/frostvial(get_turf(src))
 		B.launch_projectile(target, BP_TORSO, src)
 
 	if(prob(25))
-		visible_message(span("warning", "\The [src] throws a green vial!"))
+		visible_message(span_warning("\The [src] throws a green vial!"))
 		var/obj/item/projectile/B = new /obj/item/projectile/arc/vial/poisonvial(get_turf(src))
 		B.launch_projectile(target, BP_TORSO, src)
 
 	if(prob(25))
-		visible_message(span("warning", "\The [src] throws a red vial!"))
+		visible_message(span_warning("\The [src] throws a red vial!"))
 		var/obj/item/projectile/B = new /obj/item/projectile/arc/vial/firevial(get_turf(src))
 		B.launch_projectile(target, BP_TORSO, src)
 	else
-		visible_message(span("warning", "\The [src] throws a strange vial"))
+		visible_message(span_warning("\The [src] throws a strange vial"))
 		var/obj/item/projectile/A = new /obj/item/projectile/arc/vial/lightingvial(get_turf(src))
 		A.launch_projectile(target, BP_TORSO, src)
 
-	visible_message(span("warning", "\The [src] puts them pouch away."))
+	visible_message(span_warning("\The [src] puts them pouch away."))
 
 
 /mob/living/simple_mob/vr/alchemistbee/proc/homingcluster(atom/target)
@@ -214,7 +214,7 @@
 	A.launch_projectile(target, BP_TORSO, src)
 
 /mob/living/simple_mob/vr/alchemistbee/proc/dangerbolt(atom/target)
-	visible_message(span("warning", "\The [src] prepares a powerful spell!"))
+	visible_message(span_warning("\The [src] prepares a powerful spell!"))
 	Beam(target, icon_state = "sat_beam", time = 2.0 SECONDS, maxdistance = INFINITY)
 	sleep(1.5 SECONDS)
 	var/obj/item/projectile/A = new /obj/item/projectile/energy/nuclearblast(get_turf(src))
@@ -236,7 +236,13 @@
 	icon_state = "blue_vial"
 	var/splatter = FALSE			// Will this make a cloud of reagents?
 	var/splatter_volume = 5			// The volume of its chemical container, for said cloud of reagents.
-	var/list/my_chems = list("mold")
+	var/list/my_chems = list(REAGENT_ID_MOLD)
+
+/obj/item/projectile/arc/vial/Initialize()
+	. = ..()
+	if(splatter)
+		create_reagents(splatter_volume)
+		ready_chemicals()
 
 /obj/item/projectile/arc/vial/on_impact(var/atom/A)
 	if(splatter)
@@ -261,7 +267,7 @@
 	armor_penetration = 0
 	damage_type = BRUTE
 	splatter_volume = 60
-	my_chems = list("frostoil")
+	my_chems = list(REAGENT_ID_FROSTOIL)
 	modifier_type_to_apply = /datum/modifier/wizpoison/frost
 	modifier_duration = 15 SECONDS
 	splatter = TRUE
@@ -272,7 +278,7 @@
 	armor_penetration = 0
 	damage_type = BRUTE
 	splatter_volume = 60
-	my_chems = list("toxin")
+	my_chems = list(REAGENT_ID_TOXIN)
 	modifier_type_to_apply = /datum/modifier/wizpoison
 	modifier_duration = 15 SECONDS
 	splatter = TRUE
@@ -283,7 +289,7 @@
 	armor_penetration = 0
 	damage_type = BRUTE
 	splatter_volume = 60
-	my_chems = list("sacid")
+	my_chems = list(REAGENT_ID_SACID)
 	modifier_type_to_apply = /datum/modifier/wizfire
 	modifier_duration = 15 SECONDS
 	splatter = TRUE
@@ -294,7 +300,7 @@
 	armor_penetration = 0
 	damage_type = BRUTE
 	splatter_volume = 60
-	my_chems = list("shredding_nanites")
+	my_chems = list(REAGENT_ID_SHREDDINGNANITES)
 	modifier_type_to_apply = /datum/modifier/wizfire/lighting
 	modifier_duration = 15 SECONDS
 	splatter = TRUE

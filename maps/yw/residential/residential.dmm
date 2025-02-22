@@ -17,32 +17,30 @@
 /area/residential/mroom2)
 "ai" = (
 /obj/structure/closet/secure_closet/freezer/fridge,
-/obj/item/weapon/reagent_containers/food/condiment/enzyme,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
-/obj/item/weapon/reagent_containers/food/condiment/small/saltshaker,
-/obj/item/weapon/reagent_containers/food/condiment/small/peppermill,
-/obj/item/weapon/storage/box/beakers,
+/obj/item/reagent_containers/food/condiment/enzyme,
+/obj/item/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/condiment/small/saltshaker,
+/obj/item/reagent_containers/food/condiment/small/peppermill,
+/obj/item/storage/box/beakers,
 /turf/simulated/floor/tiled/white,
 /area/residential/room8)
 "al" = (
 /obj/structure/table/marble,
-/obj/item/weapon/reagent_containers/food/condiment/enzyme,
-/obj/item/weapon/reagent_containers/food/condiment/coldsauce,
-/obj/item/weapon/reagent_containers/food/condiment/cornoil,
-/obj/item/weapon/reagent_containers/food/condiment/hotsauce,
-/obj/item/weapon/reagent_containers/food/condiment/ketchup,
-/obj/item/weapon/reagent_containers/food/condiment/sugar,
-/obj/item/weapon/reagent_containers/food/condiment/soysauce,
+/obj/item/reagent_containers/food/condiment/enzyme,
+/obj/item/reagent_containers/food/condiment/coldsauce,
+/obj/item/reagent_containers/food/condiment/cornoil,
+/obj/item/reagent_containers/food/condiment/hotsauce,
+/obj/item/reagent_containers/food/condiment/ketchup,
+/obj/item/reagent_containers/food/condiment/sugar,
+/obj/item/reagent_containers/food/condiment/soysauce,
 /turf/simulated/floor/lino,
 /area/residential/mansion)
 "an" = (
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/supply,
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/scrubbers,
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/cable{
@@ -91,8 +89,6 @@
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled,
@@ -116,7 +112,7 @@
 /turf/simulated/floor/tiled/white,
 /area/residential/room11)
 "ay" = (
-/obj/item/weapon/bedsheet/bluedouble,
+/obj/item/bedsheet/bluedouble,
 /obj/structure/bed/double/padded,
 /turf/simulated/floor/carpet/blue,
 /area/residential/mroom1)
@@ -126,12 +122,9 @@
 	dir = 1
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/cable{
-	dir = 4;
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/tiled,
@@ -148,8 +141,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/door/firedoor/glass,
@@ -164,8 +155,6 @@
 /area/residential/mroom1)
 "aH" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -215,7 +204,7 @@
 /turf/simulated/floor/plating,
 /area/residential/room14)
 "aT" = (
-/obj/item/weapon/stool/padded,
+/obj/item/stool/padded,
 /turf/simulated/shuttle/floor/black,
 /area/residential/ship_bay)
 "aU" = (
@@ -225,7 +214,7 @@
 /area/residential/ship_bay)
 "aW" = (
 /obj/structure/table/marble,
-/obj/item/weapon/reagent_containers/food/drinks/bottle/specialwhiskey,
+/obj/item/reagent_containers/food/drinks/bottle/specialwhiskey,
 /turf/simulated/floor/tiled/white,
 /area/residential/room3)
 "aZ" = (
@@ -376,8 +365,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/door/firedoor/glass,
@@ -415,19 +402,17 @@
 /area/residential/ship_bay)
 "ci" = (
 /obj/structure/closet/secure_closet/freezer/fridge,
-/obj/item/weapon/reagent_containers/food/condiment/enzyme,
-/obj/item/weapon/reagent_containers/food/condiment/flour,
-/obj/item/weapon/reagent_containers/food/condiment/flour,
-/obj/item/weapon/reagent_containers/food/condiment/flour,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/condiment/enzyme,
+/obj/item/reagent_containers/food/condiment/flour,
+/obj/item/reagent_containers/food/condiment/flour,
+/obj/item/reagent_containers/food/condiment/flour,
+/obj/item/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/snacks/meat,
 /turf/simulated/floor/lino,
 /area/residential/ship_bay)
 "ck" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/closet/crate/bin,
@@ -463,8 +448,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/plating,
@@ -486,7 +469,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/light/small,
@@ -503,7 +485,7 @@
 /area/residential/mroom2)
 "cC" = (
 /obj/structure/table/alien/blue,
-/obj/item/weapon/storage/box/glasses/coffeemug,
+/obj/item/storage/box/glasses/coffeemug,
 /turf/simulated/floor/tiled,
 /area/residential/room6)
 "cE" = (
@@ -512,7 +494,7 @@
 /area/residential/lobby)
 "cF" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/folder/yellow,
+/obj/item/folder/yellow,
 /turf/simulated/floor/carpet,
 /area/residential/mansion)
 "cI" = (
@@ -569,8 +551,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/door/firedoor/glass,
@@ -602,8 +582,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/plating,
@@ -653,7 +631,7 @@
 /turf/simulated/floor/tiled/eris/white,
 /area/residential/lobby)
 "ds" = (
-/obj/item/weapon/mop,
+/obj/item/mop,
 /obj/structure/mopbucket,
 /turf/simulated/floor/wood,
 /area/residential/mansion)
@@ -726,11 +704,11 @@
 "dN" = (
 /obj/structure/closet/secure_closet/freezer/fridge,
 /obj/machinery/light,
-/obj/item/weapon/reagent_containers/food/condiment/enzyme,
-/obj/item/weapon/reagent_containers/food/condiment/flour,
-/obj/item/weapon/reagent_containers/food/condiment/flour,
-/obj/item/weapon/reagent_containers/food/condiment/flour,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/condiment/enzyme,
+/obj/item/reagent_containers/food/condiment/flour,
+/obj/item/reagent_containers/food/condiment/flour,
+/obj/item/reagent_containers/food/condiment/flour,
+/obj/item/reagent_containers/food/snacks/meat,
 /turf/simulated/shuttle/floor/black,
 /area/residential/ship_bay)
 "dO" = (
@@ -749,8 +727,6 @@
 	name = "Thermal Regulator Vent"
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/door/airlock/external{
@@ -839,12 +815,10 @@
 /area/residential/ship_bay)
 "ev" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/mopbucket,
-/obj/item/weapon/mop,
+/obj/item/mop,
 /obj/machinery/light/small{
 	dir = 1
 	},
@@ -913,7 +887,7 @@
 /area/residential/room3)
 "eR" = (
 /obj/structure/table/marble,
-/obj/item/weapon/material/knife,
+/obj/item/material/knife,
 /turf/simulated/floor/tiled/white,
 /area/residential/room8)
 "eV" = (
@@ -928,8 +902,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/door/firedoor/glass,
@@ -937,8 +909,6 @@
 /area/residential/corridors)
 "fa" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -957,7 +927,6 @@
 	req_access = list(67)
 	},
 /obj/structure/cable{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /turf/simulated/floor/wood,
@@ -1038,8 +1007,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/plating,
@@ -1074,8 +1041,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled,
@@ -1095,8 +1060,6 @@
 /area/residential/ship_bay)
 "fP" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/vending/nifsoft_shop{
@@ -1163,16 +1126,12 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/plating,
 /area/residential/mroom2)
 "gj" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled,
@@ -1201,7 +1160,7 @@
 /turf/simulated/floor/wood,
 /area/residential/lobby)
 "gp" = (
-/obj/item/weapon/bedsheet/browndouble,
+/obj/item/bedsheet/browndouble,
 /obj/structure/bed/double/padded,
 /obj/machinery/light{
 	dir = 4
@@ -1235,15 +1194,15 @@
 /obj/machinery/light{
 	dir = 4
 	},
-/obj/item/weapon/reagent_containers/food/condiment/enzyme,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
-/obj/item/weapon/reagent_containers/food/condiment/small/saltshaker,
-/obj/item/weapon/reagent_containers/food/condiment/small/peppermill,
-/obj/item/weapon/storage/box/beakers,
-/obj/item/weapon/reagent_containers/food/snacks/chocolatebar,
-/obj/item/weapon/reagent_containers/food/snacks/chocolatebar,
+/obj/item/reagent_containers/food/condiment/enzyme,
+/obj/item/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/condiment/small/saltshaker,
+/obj/item/reagent_containers/food/condiment/small/peppermill,
+/obj/item/storage/box/beakers,
+/obj/item/reagent_containers/food/snacks/chocolatebar,
+/obj/item/reagent_containers/food/snacks/chocolatebar,
 /turf/simulated/floor/tiled/dark,
 /area/residential/room7)
 "gz" = (
@@ -1258,8 +1217,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/door/firedoor/glass,
@@ -1267,15 +1224,15 @@
 /area/residential/corridors)
 "gC" = (
 /obj/structure/table/steel_reinforced,
-/obj/item/weapon/material/kitchen/rollingpin,
-/obj/item/weapon/material/knife,
+/obj/item/material/kitchen/rollingpin,
+/obj/item/material/knife,
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
 	},
 /obj/machinery/light{
 	dir = 8
 	},
-/obj/item/weapon/reagent_containers/food/condiment/enzyme,
+/obj/item/reagent_containers/food/condiment/enzyme,
 /turf/simulated/floor/tiled/white,
 /area/residential/mroom1)
 "gG" = (
@@ -1293,7 +1250,7 @@
 /turf/simulated/floor/reinforced,
 /area/residential/ship_bay)
 "gJ" = (
-/obj/item/weapon/storage/laundry_basket,
+/obj/item/storage/laundry_basket,
 /obj/structure/table/reinforced,
 /turf/simulated/floor/wood,
 /area/residential/lobby)
@@ -1305,8 +1262,6 @@
 	dir = 1
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/plating,
@@ -1358,7 +1313,7 @@
 /turf/simulated/floor/wood,
 /area/residential/room1)
 "gQ" = (
-/obj/item/weapon/bedsheet/purpledouble,
+/obj/item/bedsheet/purpledouble,
 /obj/structure/bed/double/padded,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 9
@@ -1413,8 +1368,6 @@
 "ho" = (
 /obj/effect/floor_decal/industrial/warning,
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/reinforced,
@@ -1440,8 +1393,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/door/firedoor/glass,
@@ -1462,13 +1413,13 @@
 /obj/machinery/light{
 	dir = 1
 	},
-/obj/item/weapon/reagent_containers/food/condiment/enzyme,
-/obj/item/weapon/reagent_containers/food/condiment/flour,
-/obj/item/weapon/reagent_containers/food/condiment/flour,
-/obj/item/weapon/reagent_containers/food/condiment/flour,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/condiment/enzyme,
+/obj/item/reagent_containers/food/condiment/flour,
+/obj/item/reagent_containers/food/condiment/flour,
+/obj/item/reagent_containers/food/condiment/flour,
+/obj/item/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/snacks/meat,
 /turf/simulated/floor/wood,
 /area/residential/ship_bay)
 "hD" = (
@@ -1476,8 +1427,6 @@
 	dir = 6
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -1486,7 +1435,7 @@
 /turf/simulated/floor/tiled,
 /area/residential/docking_lobby)
 "hF" = (
-/obj/item/weapon/material/knife,
+/obj/item/material/knife,
 /obj/machinery/microwave,
 /obj/structure/table/leadreinforcedwood,
 /turf/simulated/floor/tiled/dark,
@@ -1504,7 +1453,7 @@
 /area/residential/mroom1)
 "hJ" = (
 /obj/structure/bed/double/padded,
-/obj/item/weapon/bedsheet/hopdouble,
+/obj/item/bedsheet/hopdouble,
 /obj/structure/curtain/black,
 /turf/simulated/floor/carpet,
 /area/residential/ship_bay)
@@ -1567,8 +1516,6 @@
 	dir = 8
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/cable{
@@ -1621,7 +1568,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/light/small,
@@ -1641,8 +1587,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled,
@@ -1651,7 +1595,7 @@
 /obj/structure/table/standard{
 	name = "plastic table frame"
 	},
-/obj/item/weapon/material/knife,
+/obj/item/material/knife,
 /turf/simulated/floor/lino,
 /area/residential/room1)
 "iv" = (
@@ -1772,8 +1716,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/door/firedoor/glass,
@@ -1863,8 +1805,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/plating,
@@ -1957,7 +1897,7 @@
 /area/residential/docking_lobby)
 "jR" = (
 /obj/structure/table/woodentable,
-/obj/item/device/flashlight/lamp,
+/obj/item/flashlight/lamp,
 /obj/machinery/power/thermoregulator/cryogaia{
 	desc = "A massive custom made Thermal regulator or CTR for short, intended to keep heat loss when going in our outside to a minimum, they are hardwired to minus fourty celsius";
 	dir = 8;
@@ -1966,13 +1906,12 @@
 	target_temp = 233.15
 	},
 /obj/structure/cable{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /turf/simulated/floor/carpet/oracarpet,
 /area/residential/ship_bay)
 "jS" = (
-/obj/item/weapon/bedsheet/hosdouble,
+/obj/item/bedsheet/hosdouble,
 /obj/structure/bed/double/padded,
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /obj/structure/curtain/black,
@@ -1995,7 +1934,7 @@
 /area/residential/mansion)
 "kb" = (
 /obj/structure/table/marble,
-/obj/item/weapon/storage/box/beakers,
+/obj/item/storage/box/beakers,
 /turf/simulated/floor/lino,
 /area/residential/mansion)
 "kf" = (
@@ -2026,7 +1965,7 @@
 /area/residential/room6)
 "kk" = (
 /obj/structure/table/steel_reinforced,
-/obj/item/weapon/storage/toolbox/emergency,
+/obj/item/storage/toolbox/emergency,
 /turf/simulated/floor/tiled/steel_ridged,
 /area/residential/ship_bay)
 "ko" = (
@@ -2067,8 +2006,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/door/firedoor/glass/hidden,
@@ -2076,8 +2013,6 @@
 /area/residential/corridors)
 "kC" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/door/firedoor/glass/hidden,
@@ -2085,13 +2020,13 @@
 /area/residential/corridors)
 "kD" = (
 /obj/structure/closet/secure_closet/freezer/fridge,
-/obj/item/weapon/reagent_containers/food/condiment/enzyme,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
-/obj/item/weapon/reagent_containers/food/condiment/small/saltshaker,
-/obj/item/weapon/reagent_containers/food/condiment/small/peppermill,
-/obj/item/weapon/storage/box/beakers,
+/obj/item/reagent_containers/food/condiment/enzyme,
+/obj/item/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/condiment/small/saltshaker,
+/obj/item/reagent_containers/food/condiment/small/peppermill,
+/obj/item/storage/box/beakers,
 /turf/simulated/floor/tiled/white,
 /area/residential/room11)
 "kF" = (
@@ -2128,7 +2063,7 @@
 /area/residential/mroom1)
 "kP" = (
 /obj/structure/bed/padded,
-/obj/item/weapon/bedsheet/green,
+/obj/item/bedsheet/green,
 /obj/structure/curtain/bed,
 /turf/simulated/floor/carpet,
 /area/residential/ship_bay)
@@ -2163,7 +2098,7 @@
 /turf/simulated/floor/wood,
 /area/residential/mansion)
 "kZ" = (
-/obj/item/device/flashlight/lamp,
+/obj/item/flashlight/lamp,
 /obj/structure/table/leadreinforcedwood,
 /turf/simulated/floor/wood,
 /area/residential/room7)
@@ -2185,8 +2120,6 @@
 	dir = 1
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/plating,
@@ -2213,7 +2146,6 @@
 	req_access = list(67)
 	},
 /obj/structure/cable{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /turf/simulated/floor/reinforced,
@@ -2230,8 +2162,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/plating,
@@ -2291,8 +2221,6 @@
 /area/residential/room10)
 "lJ" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -2327,8 +2255,6 @@
 /area/residential/mroom2)
 "lX" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/wall,
@@ -2374,8 +2300,6 @@
 "my" = (
 /obj/machinery/door/airlock/engineering,
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -2402,8 +2326,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/light,
@@ -2441,8 +2363,6 @@
 "mM" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
@@ -2465,7 +2385,6 @@
 	pixel_x = -28
 	},
 /obj/structure/cable{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /turf/simulated/floor/plating,
@@ -2514,7 +2433,7 @@
 /turf/simulated/floor/reinforced,
 /area/residential/ship_bay)
 "nd" = (
-/obj/item/weapon/bedsheet/cedouble,
+/obj/item/bedsheet/cedouble,
 /obj/structure/bed/double/padded,
 /turf/simulated/floor/carpet/bcarpet,
 /area/residential/room8)
@@ -2534,17 +2453,16 @@
 	pixel_y = -32
 	},
 /obj/structure/cable{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /turf/simulated/floor/tiled/white,
 /area/residential/medbay)
 "nk" = (
 /obj/structure/closet/secure_closet/freezer/fridge,
-/obj/item/weapon/reagent_containers/food/condiment/enzyme,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/condiment/enzyme,
+/obj/item/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/snacks/meat,
 /turf/simulated/floor/tiled/white,
 /area/residential/room3)
 "nl" = (
@@ -2581,8 +2499,6 @@
 /obj/machinery/door/airlock/engineering,
 /obj/machinery/door/blast/regular,
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -2605,8 +2521,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/door/firedoor/glass,
@@ -2639,16 +2553,12 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled,
 /area/residential/corridors)
 "nF" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/reinforced,
@@ -2677,16 +2587,12 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/tiled/white,
 /area/residential/medbay)
 "nS" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/light,
@@ -2704,13 +2610,13 @@
 /area/residential/ship_bay)
 "nX" = (
 /obj/structure/closet/secure_closet/freezer/fridge,
-/obj/item/weapon/reagent_containers/food/condiment/enzyme,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
-/obj/item/weapon/reagent_containers/food/condiment/small/saltshaker,
-/obj/item/weapon/reagent_containers/food/condiment/small/peppermill,
-/obj/item/weapon/storage/box/beakers,
+/obj/item/reagent_containers/food/condiment/enzyme,
+/obj/item/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/condiment/small/saltshaker,
+/obj/item/reagent_containers/food/condiment/small/peppermill,
+/obj/item/storage/box/beakers,
 /turf/simulated/floor/wood,
 /area/residential/room10)
 "ob" = (
@@ -2735,8 +2641,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/lino,
@@ -2783,8 +2687,8 @@
 /turf/simulated/floor/tiled/white,
 /area/residential/room10)
 "or" = (
-/obj/item/weapon/towel/random,
-/obj/item/weapon/towel/random,
+/obj/item/towel/random,
+/obj/item/towel/random,
 /obj/structure/table/marble,
 /turf/simulated/floor/tiled/white,
 /area/residential/mansion)
@@ -2819,8 +2723,6 @@
 	dir = 1
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/plating,
@@ -2927,7 +2829,7 @@
 /obj/machinery/light{
 	dir = 4
 	},
-/obj/item/weapon/material/kitchen/rollingpin,
+/obj/item/material/kitchen/rollingpin,
 /turf/simulated/floor/lino,
 /area/residential/room4)
 "pg" = (
@@ -2945,7 +2847,7 @@
 /area/residential/mroom2)
 "pl" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/material/knife,
+/obj/item/material/knife,
 /turf/simulated/floor/wood,
 /area/residential/room9)
 "pm" = (
@@ -2999,8 +2901,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/door/firedoor/glass,
@@ -3110,7 +3010,6 @@
 "qe" = (
 /obj/structure/table/marble,
 /obj/machinery/computer/security/telescreen/entertainment{
-	icon_state = "frame";
 	pixel_x = -30
 	},
 /turf/simulated/floor/carpet/oracarpet,
@@ -3125,7 +3024,7 @@
 /area/residential/ship_bay)
 "qi" = (
 /obj/structure/bed/double/padded,
-/obj/item/weapon/bedsheet/purpledouble,
+/obj/item/bedsheet/purpledouble,
 /turf/simulated/floor/carpet,
 /area/residential/room5)
 "qj" = (
@@ -3153,13 +3052,13 @@
 /area/residential/ship_bay)
 "qs" = (
 /obj/structure/closet/secure_closet/freezer/fridge,
-/obj/item/weapon/reagent_containers/food/condiment/enzyme,
-/obj/item/weapon/reagent_containers/food/condiment/flour,
-/obj/item/weapon/reagent_containers/food/condiment/flour,
-/obj/item/weapon/reagent_containers/food/condiment/flour,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/condiment/enzyme,
+/obj/item/reagent_containers/food/condiment/flour,
+/obj/item/reagent_containers/food/condiment/flour,
+/obj/item/reagent_containers/food/condiment/flour,
+/obj/item/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/snacks/meat,
 /turf/simulated/floor/lino,
 /area/residential/room1)
 "qt" = (
@@ -3186,15 +3085,13 @@
 /area/residential/powerroom)
 "qD" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/wall,
 /area/residential/mroom2)
 "qE" = (
 /obj/structure/bed/double/padded,
-/obj/item/weapon/bedsheet/bluedouble,
+/obj/item/bedsheet/bluedouble,
 /obj/machinery/light{
 	dir = 4
 	},
@@ -3230,7 +3127,7 @@
 /area/residential/mansion)
 "qT" = (
 /obj/structure/table/woodentable,
-/obj/item/device/flashlight/lamp/green,
+/obj/item/flashlight/lamp/green,
 /turf/simulated/floor/carpet,
 /area/residential/mansion)
 "qV" = (
@@ -3259,8 +3156,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled,
@@ -3391,7 +3286,7 @@
 /area/residential/room1)
 "rY" = (
 /obj/structure/table/woodentable,
-/obj/item/device/flashlight/lamp,
+/obj/item/flashlight/lamp,
 /turf/simulated/floor/holofloor/wood,
 /area/residential/mansion)
 "rZ" = (
@@ -3486,18 +3381,18 @@
 /turf/simulated/floor/tiled,
 /area/residential/corridors)
 "sI" = (
-/obj/item/weapon/reagent_containers/glass/bucket,
-/obj/item/weapon/material/minihoe,
-/obj/item/weapon/tool/wirecutters/clippers/trimmers,
-/obj/item/weapon/storage/bag/plants,
-/obj/item/device/analyzer/plant_analyzer,
-/obj/item/weapon/reagent_containers/spray/plantbgone,
+/obj/item/reagent_containers/glass/bucket,
+/obj/item/material/minihoe,
+/obj/item/tool/wirecutters/clippers/trimmers,
+/obj/item/storage/bag/plants,
+/obj/item/analyzer/plant_analyzer,
+/obj/item/reagent_containers/spray/plantbgone,
 /obj/machinery/light,
 /turf/simulated/floor/tiled/white,
 /area/residential/mroom1)
 "sJ" = (
 /obj/structure/bed/double/padded,
-/obj/item/weapon/bedsheet/bluedouble,
+/obj/item/bedsheet/bluedouble,
 /turf/simulated/floor/carpet,
 /area/residential/ship_bay)
 "sM" = (
@@ -3509,8 +3404,6 @@
 /area/residential/corridors)
 "sQ" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -3542,8 +3435,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/plating,
@@ -3566,8 +3457,6 @@
 	req_access = list(8102)
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/door/firedoor/glass,
@@ -3593,8 +3482,8 @@
 /area/residential/lobby)
 "tj" = (
 /obj/structure/table/rack,
-/obj/item/weapon/grenade/chem_grenade/cleaner,
-/obj/item/weapon/grenade/chem_grenade/cleaner,
+/obj/item/grenade/chem_grenade/cleaner,
+/obj/item/grenade/chem_grenade/cleaner,
 /turf/simulated/floor/wood,
 /area/residential/mansion)
 "tm" = (
@@ -3609,13 +3498,13 @@
 /area/residential/ship_bay)
 "tv" = (
 /obj/structure/table/marble,
-/obj/item/weapon/reagent_containers/food/drinks/bluespace_coffee,
-/obj/item/weapon/storage/box/beakers,
+/obj/item/reagent_containers/food/drinks/bluespace_coffee,
+/obj/item/storage/box/beakers,
 /turf/simulated/floor/lino,
 /area/residential/mansion)
 "tw" = (
 /obj/structure/table/steel,
-/obj/item/weapon/reagent_containers/food/condiment/enzyme,
+/obj/item/reagent_containers/food/condiment/enzyme,
 /turf/simulated/floor/lino,
 /area/residential/room4)
 "ty" = (
@@ -3709,7 +3598,7 @@
 /turf/simulated/floor/wood,
 /area/residential/room9)
 "tZ" = (
-/obj/item/weapon/bedsheet/double,
+/obj/item/bedsheet/double,
 /obj/structure/bed/double/padded,
 /turf/simulated/floor/carpet,
 /area/residential/room4)
@@ -3735,8 +3624,6 @@
 	dir = 1
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/plating,
@@ -3762,14 +3649,14 @@
 /area/residential/mansion)
 "uj" = (
 /obj/structure/closet/secure_closet/freezer/fridge,
-/obj/item/weapon/reagent_containers/food/condiment/enzyme,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
-/obj/item/weapon/reagent_containers/food/condiment/small/saltshaker,
-/obj/item/weapon/reagent_containers/food/condiment/small/peppermill,
-/obj/item/weapon/storage/box/beakers,
-/obj/item/weapon/storage/box/glasses/pint,
+/obj/item/reagent_containers/food/condiment/enzyme,
+/obj/item/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/condiment/small/saltshaker,
+/obj/item/reagent_containers/food/condiment/small/peppermill,
+/obj/item/storage/box/beakers,
+/obj/item/storage/box/glasses/pint,
 /obj/machinery/light{
 	dir = 8
 	},
@@ -3789,8 +3676,6 @@
 	dir = 1
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/plating,
@@ -3808,8 +3693,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/door/firedoor/glass,
@@ -3868,7 +3751,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/light/small,
@@ -3880,7 +3762,7 @@
 /area/residential/mroom2)
 "uR" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/flame/candle,
+/obj/item/flame/candle,
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
 	},
@@ -3903,7 +3785,6 @@
 	pixel_x = -28
 	},
 /obj/structure/cable{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /turf/simulated/floor/carpet,
@@ -3958,12 +3839,12 @@
 "vt" = (
 /obj/structure/closet/secure_closet/freezer/fridge,
 /obj/machinery/light,
-/obj/item/weapon/reagent_containers/food/condiment/enzyme,
-/obj/item/weapon/reagent_containers/food/condiment/flour,
-/obj/item/weapon/reagent_containers/food/condiment/flour,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/condiment/enzyme,
+/obj/item/reagent_containers/food/condiment/flour,
+/obj/item/reagent_containers/food/condiment/flour,
+/obj/item/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/snacks/meat,
 /turf/simulated/floor/carpet,
 /area/residential/ship_bay)
 "vu" = (
@@ -4044,8 +3925,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/light/small{
@@ -4069,7 +3948,7 @@
 /area/residential/ship_bay)
 "wk" = (
 /obj/structure/table/wooden_reinforced,
-/obj/item/weapon/flame/candle/candelabra/everburn,
+/obj/item/flame/candle/candelabra/everburn,
 /turf/simulated/floor/carpet,
 /area/residential/mansion)
 "wl" = (
@@ -4080,8 +3959,6 @@
 "wn" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled,
@@ -4122,7 +3999,7 @@
 "wy" = (
 /obj/structure/table/woodentable,
 /obj/item/clothing/gloves/boxing,
-/obj/item/weapon/towel/random,
+/obj/item/towel/random,
 /turf/simulated/floor/carpet,
 /area/residential/mansion)
 "wB" = (
@@ -4134,8 +4011,6 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/cable{
@@ -4182,8 +4057,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/light/small{
@@ -4221,7 +4094,7 @@
 /turf/simulated/floor/wood,
 /area/residential/lobby)
 "wZ" = (
-/obj/item/weapon/bedsheet/orangedouble,
+/obj/item/bedsheet/orangedouble,
 /obj/structure/bed/double/padded,
 /turf/simulated/floor/carpet,
 /area/residential/ship_bay)
@@ -4235,8 +4108,6 @@
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled,
@@ -4253,8 +4124,8 @@
 /area/residential/ship_bay)
 "xg" = (
 /obj/structure/closet/secure_closet/freezer/fridge,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/snacks/meat,
 /turf/simulated/shuttle/floor/black,
 /area/residential/ship_bay)
 "xh" = (
@@ -4385,7 +4256,6 @@
 /area/residential/mansion)
 "xS" = (
 /obj/machinery/computer/security/telescreen/entertainment{
-	icon_state = "frame";
 	pixel_x = 30
 	},
 /turf/simulated/floor/carpet,
@@ -4398,8 +4268,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/plating,
@@ -4411,7 +4279,6 @@
 	pixel_y = 24
 	},
 /obj/structure/cable{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /turf/simulated/floor/tiled,
@@ -4453,8 +4320,6 @@
 	req_access = list(8100)
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled,
@@ -4494,8 +4359,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -4511,8 +4374,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/plating,
@@ -4549,8 +4410,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/door/firedoor/glass,
@@ -4598,7 +4457,7 @@
 /area/residential/ship_bay)
 "zb" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/pen/fountain,
+/obj/item/pen/fountain,
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
 	},
@@ -4623,7 +4482,7 @@
 /turf/simulated/floor/plating,
 /area/residential/room2)
 "zl" = (
-/obj/item/weapon/stool/padded,
+/obj/item/stool/padded,
 /turf/simulated/floor/carpet,
 /area/residential/room5)
 "zr" = (
@@ -4645,8 +4504,6 @@
 	dir = 1
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/cable{
@@ -4713,7 +4570,7 @@
 	dir = 8;
 	pixel_x = -5
 	},
-/obj/item/weapon/soap/deluxe,
+/obj/item/soap/deluxe,
 /turf/simulated/floor/tiled/neutral,
 /area/residential/room3)
 "zT" = (
@@ -4739,8 +4596,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/door/firedoor/glass,
@@ -4858,8 +4713,6 @@
 /area/residential/medbay)
 "Ay" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/flora/pottedplant{
@@ -4869,7 +4722,6 @@
 /area/residential/mroom2)
 "AA" = (
 /obj/machinery/computer/security/telescreen/entertainment{
-	icon_state = "frame";
 	pixel_x = -32
 	},
 /turf/simulated/floor/carpet/blue,
@@ -4898,7 +4750,7 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 4
 	},
-/obj/item/weapon/towel/random,
+/obj/item/towel/random,
 /turf/simulated/floor/tiled/white,
 /area/residential/room1)
 "AO" = (
@@ -4918,8 +4770,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/plating,
@@ -5048,8 +4898,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/door/firedoor/glass,
@@ -5106,7 +4954,7 @@
 /area/residential/mroom1)
 "BV" = (
 /obj/structure/table/woodentable,
-/obj/item/device/flashlight/lamp/green,
+/obj/item/flashlight/lamp/green,
 /turf/simulated/floor/carpet,
 /area/residential/ship_bay)
 "BX" = (
@@ -5127,8 +4975,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/door/firedoor/glass,
@@ -5171,7 +5017,7 @@
 	dir = 1
 	},
 /obj/structure/curtain/open/shower,
-/obj/item/weapon/soap/nanotrasen,
+/obj/item/soap/nanotrasen,
 /turf/simulated/floor/tiled/eris/white,
 /area/residential/lobby)
 "Cq" = (
@@ -5217,7 +5063,7 @@
 /turf/simulated/floor/wood,
 /area/residential/room9)
 "CA" = (
-/obj/item/weapon/bedsheet/purpledouble,
+/obj/item/bedsheet/purpledouble,
 /obj/structure/bed/double/padded,
 /turf/simulated/floor/carpet/purcarpet,
 /area/residential/mroom1)
@@ -5270,7 +5116,7 @@
 /area/residential/room11)
 "CJ" = (
 /obj/structure/table/bench/marble,
-/obj/item/weapon/soap/deluxe,
+/obj/item/soap/deluxe,
 /turf/simulated/floor/tiled/white,
 /area/residential/mansion)
 "CK" = (
@@ -5281,7 +5127,7 @@
 /area/residential/room1)
 "CM" = (
 /obj/structure/table/marble,
-/obj/item/weapon/material/knife,
+/obj/item/material/knife,
 /turf/simulated/floor/lino,
 /area/residential/room5)
 "CN" = (
@@ -5292,8 +5138,6 @@
 	dir = 8
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled,
@@ -5326,7 +5170,7 @@
 /area/residential/mroom1)
 "CS" = (
 /obj/structure/table/woodentable,
-/obj/item/device/flashlight/lamp,
+/obj/item/flashlight/lamp,
 /turf/simulated/floor/wood,
 /area/residential/room1)
 "CT" = (
@@ -5396,8 +5240,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/light/small{
@@ -5449,8 +5291,6 @@
 /area/residential/mansion)
 "Ds" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
@@ -5460,8 +5300,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/tiled,
@@ -5496,20 +5334,20 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/obj/item/weapon/material/kitchen/utensil/fork,
-/obj/item/weapon/material/kitchen/utensil/spoon,
-/obj/item/weapon/material/knife/plastic,
+/obj/item/material/kitchen/utensil/fork,
+/obj/item/material/kitchen/utensil/spoon,
+/obj/item/material/knife/plastic,
 /turf/simulated/floor/wood,
 /area/residential/room4)
 "DA" = (
 /obj/structure/table/marble,
 /obj/item/roller,
-/obj/item/weapon/storage/firstaid,
+/obj/item/storage/firstaid,
 /turf/simulated/floor/carpet/oracarpet,
 /area/residential/ship_bay)
 "DB" = (
 /obj/structure/table/steel_reinforced,
-/obj/item/weapon/storage/box/glasses,
+/obj/item/storage/box/glasses,
 /turf/simulated/floor/tiled/white,
 /area/residential/mroom2)
 "DD" = (
@@ -5589,8 +5427,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/door/firedoor/glass/hidden,
@@ -5605,8 +5441,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled,
@@ -5637,15 +5471,13 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/supply,
 /turf/simulated/floor/tiled,
 /area/residential/docking_lobby)
 "Ee" = (
-/obj/item/weapon/stool/padded,
+/obj/item/stool/padded,
 /turf/simulated/floor/wood,
 /area/residential/mansion)
 "Ef" = (
@@ -5670,8 +5502,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/door/firedoor/glass,
@@ -5691,8 +5521,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/light/small{
@@ -5712,8 +5540,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/door/firedoor/glass,
@@ -5762,8 +5588,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled,
@@ -5803,8 +5627,8 @@
 /area/residential/room7)
 "EB" = (
 /obj/structure/table/marble,
-/obj/item/weapon/reagent_containers/dropper,
-/obj/item/weapon/material/knife/butch,
+/obj/item/reagent_containers/dropper,
+/obj/item/material/knife/butch,
 /turf/simulated/floor/lino,
 /area/residential/mansion)
 "EG" = (
@@ -5865,8 +5689,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/door/firedoor/glass,
@@ -5944,11 +5766,11 @@
 /area/residential/powerroom)
 "Fm" = (
 /obj/structure/closet/secure_closet/freezer/fridge,
-/obj/item/weapon/reagent_containers/food/condiment/flour,
-/obj/item/weapon/reagent_containers/food/condiment/flour,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/condiment/flour,
+/obj/item/reagent_containers/food/condiment/flour,
+/obj/item/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/snacks/meat,
 /turf/simulated/floor/tiled/white,
 /area/residential/mroom2)
 "Fq" = (
@@ -6034,13 +5856,11 @@
 "FP" = (
 /obj/structure/bed/double/padded,
 /obj/structure/curtain/black,
-/obj/item/weapon/bedsheet/browndouble,
+/obj/item/bedsheet/browndouble,
 /turf/simulated/floor/carpet,
 /area/residential/room10)
 "FR" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/door/airlock,
@@ -6048,7 +5868,7 @@
 /turf/simulated/floor/tiled,
 /area/residential/mroom1)
 "FS" = (
-/obj/item/weapon/bedsheet/blue,
+/obj/item/bedsheet/blue,
 /obj/structure/bed/padded,
 /turf/simulated/floor/carpet/bcarpet,
 /area/residential/ship_bay)
@@ -6096,8 +5916,6 @@
 	dir = 1
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/plating,
@@ -6138,8 +5956,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/light{
@@ -6155,8 +5971,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/plating,
@@ -6257,8 +6071,6 @@
 	dir = 1
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/plating,
@@ -6275,8 +6087,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/door/firedoor/glass,
@@ -6297,8 +6107,8 @@
 /area/residential/mansion)
 "GW" = (
 /obj/structure/table/glass,
-/obj/item/weapon/soap/deluxe,
-/obj/item/weapon/bikehorn/rubberducky,
+/obj/item/soap/deluxe,
+/obj/item/bikehorn/rubberducky,
 /turf/simulated/floor/wood,
 /area/residential/room7)
 "GX" = (
@@ -6315,8 +6125,6 @@
 /area/residential/room5)
 "GZ" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/plating,
@@ -6340,7 +6148,7 @@
 /turf/simulated/floor/tiled,
 /area/residential/corridors)
 "Hj" = (
-/obj/item/weapon/bedsheet/orangedouble,
+/obj/item/bedsheet/orangedouble,
 /obj/structure/bed/double/padded,
 /turf/simulated/floor/carpet,
 /area/residential/mansion)
@@ -6440,8 +6248,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/light/small{
@@ -6466,8 +6272,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/door/firedoor/glass,
@@ -6510,8 +6314,6 @@
 "Ib" = (
 /obj/machinery/light,
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/reinforced,
@@ -6525,8 +6327,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/door/firedoor/glass,
@@ -6549,7 +6349,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/light/small,
@@ -6563,8 +6362,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/plating,
@@ -6588,8 +6385,6 @@
 /area/residential/mansion)
 "Ir" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/lino,
@@ -6696,13 +6491,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /turf/simulated/floor/reinforced,
@@ -6722,8 +6513,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/reinforced,
@@ -6752,7 +6541,7 @@
 /area/residential/ship_bay)
 "Jn" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/paper_bin,
+/obj/item/paper_bin,
 /turf/simulated/floor/carpet,
 /area/residential/mroom2)
 "Jo" = (
@@ -6810,8 +6599,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/plating,
@@ -6837,8 +6624,6 @@
 /area/residential/docking_lobby)
 "JM" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/universal,
@@ -6867,8 +6652,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/door/firedoor/glass,
@@ -6881,8 +6664,8 @@
 "JT" = (
 /obj/structure/table/standard,
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
-/obj/item/weapon/storage/box/gloves,
-/obj/item/weapon/storage/box/masks,
+/obj/item/storage/box/gloves,
+/obj/item/storage/box/masks,
 /obj/machinery/light{
 	dir = 1
 	},
@@ -6907,7 +6690,7 @@
 /turf/simulated/floor/holofloor/wood,
 /area/residential/mansion)
 "Kd" = (
-/obj/item/weapon/soap/deluxe,
+/obj/item/soap/deluxe,
 /obj/structure/table/marble,
 /turf/simulated/floor/tiled/white,
 /area/residential/mansion)
@@ -7008,7 +6791,6 @@
 	pixel_y = 24
 	},
 /obj/structure/cable{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/door/airlock,
@@ -7088,8 +6870,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/door/airlock/multi_tile/glass{
@@ -7104,16 +6884,15 @@
 /area/residential/room5)
 "Lf" = (
 /obj/machinery/computer/security/telescreen/entertainment{
-	icon_state = "frame";
 	pixel_x = -32
 	},
 /turf/simulated/floor/wood,
 /area/residential/room8)
 "Lh" = (
 /obj/structure/closet/secure_closet/freezer/fridge,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/snacks/meat,
 /turf/simulated/floor/wood,
 /area/residential/room4)
 "Lk" = (
@@ -7125,7 +6904,7 @@
 /area/residential/room8)
 "Lo" = (
 /obj/structure/table/glass,
-/obj/item/weapon/material/knife,
+/obj/item/material/knife,
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
 	},
@@ -7219,8 +6998,6 @@
 /area/residential/corridors)
 "LQ" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/wood,
@@ -7249,8 +7026,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/door/firedoor/glass,
@@ -7258,15 +7033,15 @@
 /area/residential/corridors)
 "LY" = (
 /obj/structure/table/rack,
-/obj/item/weapon/towel/random,
-/obj/item/weapon/towel/random,
+/obj/item/towel/random,
+/obj/item/towel/random,
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /obj/random/soap,
 /turf/simulated/floor/tiled/kafel_full,
 /area/residential/room9)
 "Mb" = (
 /obj/structure/bed/double,
-/obj/item/weapon/bedsheet/browndouble,
+/obj/item/bedsheet/browndouble,
 /turf/simulated/floor/lino,
 /area/residential/room3)
 "Mc" = (
@@ -7291,8 +7066,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/plating,
@@ -7332,19 +7105,17 @@
 /obj/machinery/light{
 	dir = 4
 	},
-/obj/item/weapon/reagent_containers/food/condiment/enzyme,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
-/obj/item/weapon/reagent_containers/food/condiment/small/saltshaker,
-/obj/item/weapon/reagent_containers/food/condiment/small/peppermill,
-/obj/item/weapon/storage/box/beakers,
+/obj/item/reagent_containers/food/condiment/enzyme,
+/obj/item/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/condiment/small/saltshaker,
+/obj/item/reagent_containers/food/condiment/small/peppermill,
+/obj/item/storage/box/beakers,
 /turf/simulated/floor/carpet/bcarpet,
 /area/residential/ship_bay)
 "Mv" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/carpet/tealcarpet,
@@ -7424,12 +7195,12 @@
 /area/residential/mroom2)
 "MZ" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/flame/candle,
+/obj/item/flame/candle,
 /turf/simulated/floor/wood,
 /area/residential/room1)
 "Na" = (
 /obj/structure/table/steel_reinforced,
-/obj/item/weapon/storage/box/glasses,
+/obj/item/storage/box/glasses,
 /obj/machinery/light{
 	dir = 1
 	},
@@ -7498,8 +7269,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/door/firedoor/glass,
@@ -7612,8 +7381,8 @@
 /obj/structure/table/marble,
 /obj/item/clothing/under/pj/blue,
 /obj/item/clothing/under/pj/red,
-/obj/item/weapon/towel/random,
-/obj/item/weapon/towel/random,
+/obj/item/towel/random,
+/obj/item/towel/random,
 /obj/random/soap,
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
@@ -7628,8 +7397,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/light/small{
@@ -7638,7 +7405,7 @@
 /turf/simulated/floor/plating,
 /area/residential/mroom1)
 "NR" = (
-/obj/item/weapon/reagent_containers/glass/bucket,
+/obj/item/reagent_containers/glass/bucket,
 /mob/living/bot/cleanbot,
 /turf/simulated/floor/wood,
 /area/residential/mansion)
@@ -7651,7 +7418,7 @@
 /turf/simulated/floor/tiled,
 /area/residential/corridors)
 "NV" = (
-/obj/item/weapon/soap/syndie,
+/obj/item/soap/syndie,
 /obj/structure/table/marble,
 /turf/simulated/floor/tiled/white,
 /area/residential/mansion)
@@ -7674,8 +7441,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/door/firedoor/glass,
@@ -7694,8 +7459,8 @@
 /area/residential/room10)
 "Od" = (
 /obj/structure/table/standard,
-/obj/item/weapon/storage/firstaid/regular,
-/obj/item/weapon/storage/firstaid/regular,
+/obj/item/storage/firstaid/regular,
+/obj/item/storage/firstaid/regular,
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /obj/machinery/light{
 	dir = 1
@@ -7744,7 +7509,7 @@
 /turf/simulated/floor/reinforced,
 /area/residential/ship_bay)
 "Ot" = (
-/obj/item/weapon/storage/firstaid/surgery,
+/obj/item/storage/firstaid/surgery,
 /obj/structure/table/standard,
 /turf/simulated/floor/tiled/white,
 /area/residential/medbay)
@@ -7757,8 +7522,8 @@
 /area/residential/powerroom)
 "Ow" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/paper_bin,
-/obj/item/weapon/pen/fountain,
+/obj/item/paper_bin,
+/obj/item/pen/fountain,
 /turf/simulated/floor/carpet,
 /area/residential/mansion)
 "Ox" = (
@@ -7788,7 +7553,7 @@
 /turf/simulated/floor/wood,
 /area/residential/mansion)
 "OA" = (
-/obj/item/weapon/stool/padded,
+/obj/item/stool/padded,
 /turf/simulated/floor/wood,
 /area/residential/room4)
 "OB" = (
@@ -7803,8 +7568,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/cable{
@@ -7888,7 +7651,7 @@
 /area/residential/room7)
 "OP" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/deck/cards,
+/obj/item/deck/cards,
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
 	},
@@ -7902,8 +7665,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/plating,
@@ -7963,8 +7724,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/plating,
@@ -7992,8 +7751,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/wood,
@@ -8012,8 +7769,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/door/firedoor/glass/hidden,
@@ -8021,7 +7776,7 @@
 /area/residential/corridors)
 "Pt" = (
 /obj/structure/curtain/black,
-/obj/item/weapon/stool/padded,
+/obj/item/stool/padded,
 /obj/structure/window/reinforced{
 	dir = 8
 	},
@@ -8071,7 +7826,7 @@
 /turf/simulated/floor/carpet,
 /area/residential/mroom2)
 "PL" = (
-/obj/item/weapon/stool/padded,
+/obj/item/stool/padded,
 /turf/simulated/floor/carpet,
 /area/residential/mansion)
 "PM" = (
@@ -8118,13 +7873,11 @@
 /area/residential/lobby)
 "Qb" = (
 /obj/structure/closet/crate/bin,
-/obj/item/weapon/storage/bag/trash,
+/obj/item/storage/bag/trash,
 /turf/simulated/floor/tiled,
 /area/residential/room6)
 "Qc" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/carpet,
@@ -8180,8 +7933,6 @@
 	dir = 8
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled,
@@ -8206,7 +7957,7 @@
 /area/residential/room6)
 "QA" = (
 /obj/structure/closet/cabinet,
-/obj/item/device/instrument/guitar,
+/obj/item/instrument/guitar,
 /turf/simulated/floor/carpet,
 /area/residential/mroom2)
 "QB" = (
@@ -8249,8 +8000,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/plating,
@@ -8264,7 +8013,7 @@
 /area/residential/ship_bay)
 "QQ" = (
 /obj/structure/curtain/black,
-/obj/item/weapon/stool/padded,
+/obj/item/stool/padded,
 /obj/structure/window/reinforced{
 	dir = 8
 	},
@@ -8272,7 +8021,7 @@
 /turf/simulated/floor/reinforced,
 /area/residential/room7)
 "QR" = (
-/obj/item/weapon/bedsheet/hos,
+/obj/item/bedsheet/hos,
 /obj/structure/bed/padded,
 /turf/simulated/floor/carpet,
 /area/residential/mroom2)
@@ -8302,8 +8051,6 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled,
@@ -8317,7 +8064,7 @@
 /area/residential/lobby)
 "Rf" = (
 /obj/structure/bed/double/padded,
-/obj/item/weapon/bedsheet/hopdouble,
+/obj/item/bedsheet/hopdouble,
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
 	},
@@ -8460,8 +8207,6 @@
 /area/residential/room11)
 "RX" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled,
@@ -8477,12 +8222,12 @@
 	dir = 1
 	},
 /obj/structure/table/steel_reinforced,
-/obj/item/weapon/material/kitchen/utensil/fork,
-/obj/item/weapon/material/kitchen/utensil/fork,
-/obj/item/weapon/material/kitchen/utensil/spoon,
-/obj/item/weapon/material/kitchen/utensil/spoon,
-/obj/item/weapon/material/knife/plastic,
-/obj/item/weapon/material/knife/plastic,
+/obj/item/material/kitchen/utensil/fork,
+/obj/item/material/kitchen/utensil/fork,
+/obj/item/material/kitchen/utensil/spoon,
+/obj/item/material/kitchen/utensil/spoon,
+/obj/item/material/knife/plastic,
+/obj/item/material/knife/plastic,
 /turf/simulated/floor/lino,
 /area/residential/ship_bay)
 "Sa" = (
@@ -8491,7 +8236,7 @@
 "Sc" = (
 /obj/structure/closet/crate,
 /obj/item/clothing/accessory/medal/silver/valor,
-/obj/item/weapon/storage/photo_album,
+/obj/item/storage/photo_album,
 /obj/item/clothing/head/fez,
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
@@ -8511,8 +8256,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/light/small{
@@ -8561,8 +8304,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/door/firedoor/glass,
@@ -8636,7 +8377,7 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
 	},
-/obj/item/weapon/storage/box/glasses,
+/obj/item/storage/box/glasses,
 /turf/simulated/floor/wood,
 /area/residential/room4)
 "SG" = (
@@ -8653,13 +8394,13 @@
 /obj/machinery/light{
 	dir = 4
 	},
-/obj/item/weapon/reagent_containers/food/condiment/enzyme,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
-/obj/item/weapon/reagent_containers/food/condiment/small/saltshaker,
-/obj/item/weapon/reagent_containers/food/condiment/small/peppermill,
-/obj/item/weapon/storage/box/beakers,
+/obj/item/reagent_containers/food/condiment/enzyme,
+/obj/item/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/condiment/small/saltshaker,
+/obj/item/reagent_containers/food/condiment/small/peppermill,
+/obj/item/storage/box/beakers,
 /obj/machinery/light{
 	dir = 8
 	},
@@ -8678,8 +8419,6 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/light{
@@ -8737,7 +8476,6 @@
 	pixel_y = 24
 	},
 /obj/structure/cable{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /turf/simulated/floor/wood,
@@ -8767,7 +8505,7 @@
 /turf/simulated/floor/carpet,
 /area/residential/mroom1)
 "Tg" = (
-/obj/item/weapon/bedsheet/piratedouble,
+/obj/item/bedsheet/piratedouble,
 /obj/structure/bed/double/padded,
 /turf/simulated/floor/wood,
 /area/residential/room9)
@@ -8784,7 +8522,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/light/small,
@@ -8849,8 +8586,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/plating,
@@ -8861,8 +8596,6 @@
 /area/residential/lobby)
 "Tx" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/wood,
@@ -8884,15 +8617,13 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/plating,
 /area/residential/mroom3)
 "TG" = (
 /obj/structure/bed/padded,
-/obj/item/weapon/bedsheet/blue,
+/obj/item/bedsheet/blue,
 /obj/structure/curtain/bed,
 /turf/simulated/floor/carpet,
 /area/residential/ship_bay)
@@ -9021,7 +8752,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/light/small,
@@ -9050,8 +8780,6 @@
 	pixel_y = -25
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/reinforced,
@@ -9062,11 +8790,11 @@
 /area/residential/room5)
 "UD" = (
 /obj/structure/closet/secure_closet/freezer/fridge,
-/obj/item/weapon/reagent_containers/food/condiment/flour,
-/obj/item/weapon/reagent_containers/food/condiment/flour,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/condiment/flour,
+/obj/item/reagent_containers/food/condiment/flour,
+/obj/item/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/snacks/meat,
 /turf/simulated/floor/tiled/white,
 /area/residential/mroom1)
 "UE" = (
@@ -9074,7 +8802,7 @@
 	dir = 4
 	},
 /obj/structure/table/standard,
-/obj/item/weapon/storage/firstaid/adv,
+/obj/item/storage/firstaid/adv,
 /turf/simulated/floor/tiled/white,
 /area/residential/medbay)
 "UF" = (
@@ -9092,7 +8820,6 @@
 "UM" = (
 /obj/structure/table/woodentable,
 /obj/machinery/computer/security/telescreen/entertainment{
-	icon_state = "frame";
 	pixel_y = 30
 	},
 /turf/simulated/floor/wood,
@@ -9128,9 +8855,9 @@
 /area/residential/mroom2)
 "UW" = (
 /obj/structure/table/rack,
-/obj/item/weapon/reagent_containers/spray/cleaner,
-/obj/item/weapon/reagent_containers/spray/cleaner,
-/obj/item/weapon/storage/toolbox/syndicate/powertools,
+/obj/item/reagent_containers/spray/cleaner,
+/obj/item/reagent_containers/spray/cleaner,
+/obj/item/storage/toolbox/syndicate/powertools,
 /turf/simulated/floor/wood,
 /area/residential/mansion)
 "UY" = (
@@ -9160,9 +8887,9 @@
 /area/residential/room1)
 "Vh" = (
 /obj/structure/table/steel_reinforced,
-/obj/item/weapon/material/kitchen/rollingpin,
-/obj/item/weapon/material/knife,
-/obj/item/weapon/reagent_containers/food/condiment/enzyme,
+/obj/item/material/kitchen/rollingpin,
+/obj/item/material/knife,
+/obj/item/reagent_containers/food/condiment/enzyme,
 /turf/simulated/floor/tiled/white,
 /area/residential/mroom2)
 "Vi" = (
@@ -9176,16 +8903,16 @@
 /obj/item/trash/bowl,
 /obj/item/trash/bowl,
 /obj/item/trash/bowl,
-/obj/item/weapon/tray,
-/obj/item/weapon/tray,
-/obj/item/weapon/material/knife/plastic,
-/obj/item/weapon/material/knife/plastic,
-/obj/item/weapon/material/knife/plastic,
-/obj/item/weapon/material/kitchen/utensil/fork,
-/obj/item/weapon/material/kitchen/utensil/fork,
-/obj/item/weapon/material/kitchen/utensil/spoon,
-/obj/item/weapon/material/kitchen/utensil/spoon,
-/obj/item/weapon/material/kitchen/utensil/spoon,
+/obj/item/tray,
+/obj/item/tray,
+/obj/item/material/knife/plastic,
+/obj/item/material/knife/plastic,
+/obj/item/material/knife/plastic,
+/obj/item/material/kitchen/utensil/fork,
+/obj/item/material/kitchen/utensil/fork,
+/obj/item/material/kitchen/utensil/spoon,
+/obj/item/material/kitchen/utensil/spoon,
+/obj/item/material/kitchen/utensil/spoon,
 /turf/simulated/floor/tiled/white,
 /area/residential/mroom2)
 "Vl" = (
@@ -9244,7 +8971,7 @@
 /area/residential/mroom6)
 "VD" = (
 /obj/structure/bed/double/padded,
-/obj/item/weapon/bedsheet/bluedouble,
+/obj/item/bedsheet/bluedouble,
 /turf/simulated/floor/carpet/oracarpet,
 /area/residential/ship_bay)
 "VE" = (
@@ -9290,8 +9017,8 @@
 /area/residential/room9)
 "VP" = (
 /obj/structure/table/marble,
-/obj/item/weapon/reagent_containers/food/condiment/small/peppermill,
-/obj/item/weapon/reagent_containers/food/condiment/small/saltshaker,
+/obj/item/reagent_containers/food/condiment/small/peppermill,
+/obj/item/reagent_containers/food/condiment/small/saltshaker,
 /turf/simulated/floor/lino,
 /area/residential/mansion)
 "VQ" = (
@@ -9390,8 +9117,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/door/firedoor/glass,
@@ -9412,7 +9137,7 @@
 /area/residential/ship_bay)
 "WA" = (
 /obj/structure/table/glass,
-/obj/item/weapon/reagent_containers/food/drinks/glass2/mug,
+/obj/item/reagent_containers/food/drinks/glass2/mug,
 /obj/item/mecha_parts/micro/part/gopher_right_arm,
 /obj/item/robot_parts/r_arm,
 /turf/simulated/floor/tiled,
@@ -9448,11 +9173,11 @@
 /obj/structure/table/standard{
 	name = "plastic table frame"
 	},
-/obj/item/weapon/reagent_containers/food/condiment/small/saltshaker{
+/obj/item/reagent_containers/food/condiment/small/saltshaker{
 	pixel_x = 5;
 	pixel_y = 5
 	},
-/obj/item/weapon/reagent_containers/food/condiment/small/peppermill,
+/obj/item/reagent_containers/food/condiment/small/peppermill,
 /obj/structure/sink/kitchen{
 	pixel_x = -30
 	},
@@ -9497,8 +9222,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/door/firedoor/glass,
@@ -9509,9 +9232,9 @@
 	dir = 8
 	},
 /obj/structure/table/standard,
-/obj/item/weapon/storage/firstaid/toxin,
-/obj/item/weapon/storage/firstaid/o2,
-/obj/item/weapon/storage/firstaid/fire,
+/obj/item/storage/firstaid/toxin,
+/obj/item/storage/firstaid/o2,
+/obj/item/storage/firstaid/fire,
 /turf/simulated/floor/tiled/white,
 /area/residential/medbay)
 "Xn" = (
@@ -9530,9 +9253,9 @@
 /area/residential/room3)
 "Xs" = (
 /obj/structure/closet,
-/obj/item/weapon/storage/box/lights/mixed,
-/obj/item/weapon/storage/box/lights/mixed,
-/obj/item/weapon/storage/box/lights/mixed,
+/obj/item/storage/box/lights/mixed,
+/obj/item/storage/box/lights/mixed,
+/obj/item/storage/box/lights/mixed,
 /turf/simulated/floor/wood,
 /area/residential/lobby)
 "Xu" = (
@@ -9545,7 +9268,7 @@
 /turf/simulated/floor/tiled/white,
 /area/residential/room1)
 "Xv" = (
-/obj/item/weapon/soap/nanotrasen,
+/obj/item/soap/nanotrasen,
 /obj/structure/table/marble,
 /turf/simulated/floor/tiled/white,
 /area/residential/mansion)
@@ -9574,15 +9297,11 @@
 /area/residential/room11)
 "Xy" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /turf/simulated/floor/tiled,
@@ -9623,8 +9342,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/door/firedoor/glass,
@@ -9644,7 +9361,6 @@
 /area/residential/ship_bay)
 "Yb" = (
 /obj/machinery/computer/security/telescreen/entertainment{
-	icon_state = "frame";
 	pixel_y = 30
 	},
 /turf/simulated/floor/carpet,
@@ -9684,7 +9400,6 @@
 	pixel_y = 24
 	},
 /obj/structure/cable{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /turf/simulated/floor/tiled,
@@ -9714,8 +9429,6 @@
 	dir = 8
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled,
@@ -9726,7 +9439,7 @@
 /turf/simulated/floor/plating,
 /area/residential/docking_lobby)
 "YF" = (
-/obj/item/weapon/bedsheet/yellow,
+/obj/item/bedsheet/yellow,
 /obj/structure/bed/padded,
 /turf/simulated/floor/carpet,
 /area/residential/mroom2)
@@ -9741,13 +9454,13 @@
 /area/residential/corridors)
 "YL" = (
 /obj/structure/closet/secure_closet/freezer/fridge,
-/obj/item/weapon/reagent_containers/food/condiment/enzyme,
-/obj/item/weapon/reagent_containers/food/condiment/flour,
-/obj/item/weapon/reagent_containers/food/condiment/flour,
-/obj/item/weapon/reagent_containers/food/condiment/flour,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/condiment/enzyme,
+/obj/item/reagent_containers/food/condiment/flour,
+/obj/item/reagent_containers/food/condiment/flour,
+/obj/item/reagent_containers/food/condiment/flour,
+/obj/item/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/snacks/meat,
 /turf/simulated/floor/lino,
 /area/residential/room2)
 "YM" = (
@@ -9789,8 +9502,8 @@
 	pixel_y = 22
 	},
 /obj/structure/closet/cabinet,
-/obj/item/weapon/handcuffs/legcuffs/fuzzy,
-/obj/item/weapon/handcuffs/fuzzy,
+/obj/item/handcuffs/legcuffs/fuzzy,
+/obj/item/handcuffs/fuzzy,
 /obj/item/clothing/head/headband/maid,
 /obj/item/clothing/under/fluff/latexmaid,
 /obj/item/clothing/head/nursehat,
@@ -9816,13 +9529,13 @@
 /area/residential/room1)
 "Zd" = (
 /obj/structure/closet/secure_closet/freezer/fridge,
-/obj/item/weapon/reagent_containers/food/condiment/enzyme,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
-/obj/item/weapon/reagent_containers/food/snacks/meat,
-/obj/item/weapon/reagent_containers/food/condiment/small/saltshaker,
-/obj/item/weapon/reagent_containers/food/condiment/small/peppermill,
-/obj/item/weapon/storage/box/beakers,
+/obj/item/reagent_containers/food/condiment/enzyme,
+/obj/item/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/snacks/meat,
+/obj/item/reagent_containers/food/condiment/small/saltshaker,
+/obj/item/reagent_containers/food/condiment/small/peppermill,
+/obj/item/storage/box/beakers,
 /turf/simulated/floor/tiled,
 /area/residential/room6)
 "Ze" = (
@@ -9830,16 +9543,16 @@
 /obj/item/trash/bowl,
 /obj/item/trash/bowl,
 /obj/item/trash/bowl,
-/obj/item/weapon/tray,
-/obj/item/weapon/tray,
-/obj/item/weapon/material/knife/plastic,
-/obj/item/weapon/material/knife/plastic,
-/obj/item/weapon/material/knife/plastic,
-/obj/item/weapon/material/kitchen/utensil/fork,
-/obj/item/weapon/material/kitchen/utensil/fork,
-/obj/item/weapon/material/kitchen/utensil/spoon,
-/obj/item/weapon/material/kitchen/utensil/spoon,
-/obj/item/weapon/material/kitchen/utensil/spoon,
+/obj/item/tray,
+/obj/item/tray,
+/obj/item/material/knife/plastic,
+/obj/item/material/knife/plastic,
+/obj/item/material/knife/plastic,
+/obj/item/material/kitchen/utensil/fork,
+/obj/item/material/kitchen/utensil/fork,
+/obj/item/material/kitchen/utensil/spoon,
+/obj/item/material/kitchen/utensil/spoon,
+/obj/item/material/kitchen/utensil/spoon,
 /turf/simulated/floor/tiled/white,
 /area/residential/mroom1)
 "Zg" = (
@@ -9865,7 +9578,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/light/small,
@@ -9932,7 +9644,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/light/small,
@@ -9952,8 +9663,8 @@
 /area/residential/mroom1)
 "ZB" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/folder/red_hos,
-/obj/item/weapon/folder/red,
+/obj/item/folder/red_hos,
+/obj/item/folder/red,
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
 	},
@@ -9973,10 +9684,10 @@
 /area/residential/room4)
 "ZG" = (
 /obj/machinery/portable_atmospherics/hydroponics,
-/obj/item/weapon/reagent_containers/glass/bucket,
-/obj/item/weapon/tool/wirecutters/clippers/trimmers,
-/obj/item/weapon/reagent_containers/glass/bottle/eznutrient,
-/obj/item/weapon/material/minihoe,
+/obj/item/reagent_containers/glass/bucket,
+/obj/item/tool/wirecutters/clippers/trimmers,
+/obj/item/reagent_containers/glass/bottle/eznutrient,
+/obj/item/material/minihoe,
 /turf/simulated/floor/wood,
 /area/residential/room2)
 "ZH" = (
@@ -10018,8 +9729,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/door/firedoor/glass,
@@ -10028,8 +9737,6 @@
 "ZQ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{

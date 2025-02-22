@@ -1,7 +1,7 @@
 GLOBAL_VAR_INIT(global_vantag_hud, 0)
 
 /client/proc/toggle_vantag_hud_global(mob/target as mob)
-	set category = "Fun"
+	set category = "Fun.Event Kit"
 	set name = "Toggle Global Event HUD"
 	set desc = "Give everyone the Event HUD."
 
@@ -12,4 +12,4 @@ GLOBAL_VAR_INIT(global_vantag_hud, 0)
 				L.vantag_hud = TRUE
 				L.recalculate_vis()
 
-	to_chat(src, "<span class='warning'>Global Event HUD has been turned [GLOB.global_vantag_hud ? "on" : "off"].</span>")
+	to_chat(src, span_warning("Global Event HUD has been turned [GLOB.global_vantag_hud ? "on" : "off"]."))

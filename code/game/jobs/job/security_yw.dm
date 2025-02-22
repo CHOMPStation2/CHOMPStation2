@@ -15,7 +15,7 @@
 	minimal_access = list(access_security, access_eva, access_sec_doors, access_brig, access_armory, access_maint_tunnels, access_external_airlocks, access_secpilot)
 
 /datum/job/security/pilot
-	title = "Security Pilot"
+	title = JOB_SECURITY_PILOT
 	flag = SECPILOT
 	departments = list(DEPARTMENT_SECURITY)
 	department_flag = ENGSEC
@@ -32,7 +32,7 @@
 	pto_type = PTO_SECURITY
 
 	job_description = "Tasked with flying, operating, and sometimes even maintaining small spacecraft and personal exosuits such as the Durand or Gygax, \
-						Security Pilots are responsible for transporting criminals to more permanent holding facilities, and patrolling \
+						" + JOB_SECURITY_PILOT + "s are responsible for transporting criminals to more permanent holding facilities, and patrolling \
 						for potential threats to their workplace. They may also be expected to step in to standard Security duties if \
 						there's a shortage of regular officers."
 

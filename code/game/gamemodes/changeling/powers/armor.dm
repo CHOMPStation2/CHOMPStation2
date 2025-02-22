@@ -37,18 +37,19 @@
 	desc = "A huge, bulky mass of pressure and temperature-resistant organic tissue, evolved to facilitate space travel."
 	flags = 0	//Not THICKMATERIAL because it's organic tissue, so if somebody tries to inject something into it,
 				//it still ends up in your blood. (also balance but muh fluff)
-	allowed = list(/obj/item/device/flashlight, /obj/item/weapon/tank/emergency/oxygen, /obj/item/weapon/tank/oxygen)
+	allowed = list(/obj/item/flashlight, /obj/item/tank/emergency/oxygen, /obj/item/tank/oxygen)
 	armor = list(melee = 0, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 0, rad = 0) //No armor at all.
 	canremove = FALSE
 
-/obj/item/clothing/suit/space/changeling/New()
-	..()
+/obj/item/clothing/suit/space/changeling/Initialize()
+	. = ..()
 	if(ismob(loc))
-		loc.visible_message("<span class='warning'>[loc.name]\'s flesh rapidly inflates, forming a bloated mass around their body!</span>",
-		"<span class='warning'>We inflate our flesh, creating a spaceproof suit!</span>",
-		"<span class='italics'>You hear organic matter ripping and tearing!</span>")
+		loc.visible_message(span_warning("[loc.name]\'s flesh rapidly inflates, forming a bloated mass around their body!"),
+		span_warning("We inflate our flesh, creating a spaceproof suit!"),
+		span_warningplain("You hear organic matter ripping and tearing!"))
 
-/obj/item/clothing/suit/space/changeling/dropped()
+/obj/item/clothing/suit/space/changeling/dropped(mob/user)
+	..()
 	qdel(src)
 
 /obj/item/clothing/head/helmet/space/changeling
@@ -60,14 +61,15 @@
 	body_parts_covered = HEAD|FACE|EYES
 	canremove = FALSE
 
-/obj/item/clothing/head/helmet/space/changeling/dropped()
+/obj/item/clothing/head/helmet/space/changeling/dropped(mob/user)
+	..()
 	qdel(src)
 
 /obj/item/clothing/shoes/magboots/changeling
 	desc = "A suction cupped mass of flesh, shaped like a foot."
 	name = "fleshy grippers"
 	icon_state = "lingspacesuit"
-	action_button_name = "Toggle Grippers"
+	actions_types = list(/datum/action/item_action/toggle_grippers)
 	canremove = FALSE
 
 /obj/item/clothing/shoes/magboots/changeling/set_slowdown()
@@ -89,7 +91,7 @@
 		force = 5
 		to_chat(user, "We cling to the terrain below us.")
 
-/obj/item/clothing/shoes/magboots/changeling/dropped()
+/obj/item/clothing/shoes/magboots/changeling/dropped(mob/user)
 	..()
 	qdel(src)
 
@@ -105,12 +107,12 @@
 	max_heat_protection_temperature = FIRESUIT_MAX_HEAT_PROTECTION_TEMPERATURE
 	slowdown = 1.5
 
-/obj/item/clothing/suit/space/changeling/armored/New()
-	..()
+/obj/item/clothing/suit/space/changeling/armored/Initialize()
+	. = ..()
 	if(ismob(loc))
-		loc.visible_message("<span class='warning'>[loc.name]\'s flesh turns black, quickly transforming into a hard, chitinous mass!</span>",
-		"<span class='warning'>We harden our flesh, creating a suit of armor!</span>",
-		"<span class='italics'>You hear organic matter ripping and tearing!</span>")
+		loc.visible_message(span_warning("[loc.name]\'s flesh turns black, quickly transforming into a hard, chitinous mass!"),
+		span_warning("We harden our flesh, creating a suit of armor!"),
+		span_warningplain("You hear organic matter ripping and tearing!"))
 
 /obj/item/clothing/head/helmet/space/changeling/armored
 	name = "chitinous mass"
@@ -124,7 +126,7 @@
 	desc = "A tough, hard mass of chitin, with long talons for digging into terrain."
 	name = "chitinous talons"
 	icon_state = "lingarmor"
-	action_button_name = "Toggle Talons"
+	actions_types = list(/datum/action/item_action/toggle_talons)
 
 /obj/item/clothing/gloves/combat/changeling //Combined insulated/fireproof gloves
 	name = "chitinous gauntlets"

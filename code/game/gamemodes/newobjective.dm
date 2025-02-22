@@ -23,7 +23,7 @@
 	var/list/datum/objective/assassinate/missions = list()
 
 	for(var/datum/mind/target in ticker.minds)
-		if((target != traitor) && istype(target.current, /mob/living/carbon/human))
+		if((target != traitor) && ishuman(target.current))
 			if(target && target.current)
 				var/datum/objective/target_obj = new /datum/objective/assassinate(null,job,target)
 				missions += target_obj
@@ -34,7 +34,7 @@
 	var/list/datum/objective/frame/missions = list()
 
 	for(var/datum/mind/target in ticker.minds)
-		if((target != traitor) && istype(target.current, /mob/living/carbon/human))
+		if((target != traitor) && ishuman(target.current))
 			if(target && target.current)
 				var/datum/objective/target_obj = new /datum/objective/frame(null,job,target)
 				missions += target_obj
@@ -45,7 +45,7 @@
 	var/list/datum/objective/frame/missions = list()
 
 	for(var/datum/mind/target in ticker.minds)
-		if((target != traitor) && istype(target.current, /mob/living/carbon/human))
+		if((target != traitor) && ishuman(target.current))
 			if(target && target.current)
 				var/datum/objective/target_obj = new /datum/objective/protection(null,job,target)
 				missions += target_obj
@@ -388,7 +388,7 @@ datum
 
 			find_target_by_role(var/role)
 				for(var/datum/mind/possible_target in ticker.minds)
-					if((possible_target != owner) && istype(possible_target.current, /mob/living/carbon/human) && (possible_target.assigned_role == role))
+					if((possible_target != owner) && ishuman(possible_target.current) && (possible_target.assigned_role == role))
 						target = possible_target
 						break
 
@@ -404,7 +404,7 @@ datum
 				var/list/possible_targets = list()
 
 				for(var/datum/mind/possible_target in ticker.minds)
-					if((possible_target != owner) && istype(possible_target.current, /mob/living/carbon/human))
+					if((possible_target != owner) && ishuman(possible_target.current))
 						possible_targets += possible_target
 
 				if(possible_targets.len > 0)
@@ -439,7 +439,7 @@ datum
 
 			find_target_by_role(var/role)
 				for(var/datum/mind/possible_target in ticker.minds)
-					if((possible_target != owner) && istype(possible_target.current, /mob/living/carbon/human) && (possible_target.assigned_role == role))
+					if((possible_target != owner) && ishuman(possible_target.current) && (possible_target.assigned_role == role))
 						target = possible_target
 						break
 
@@ -563,7 +563,7 @@ datum
 
 
 			captainslaser
-				steal_target = /obj/item/weapon/gun/energy/captain
+				steal_target = /obj/item/gun/energy/captain
 				explanation_text = "Steal the Site Manager's antique laser gun."
 				weight = 20
 
@@ -588,7 +588,7 @@ datum
 
 
 			plasmatank
-				steal_target = /obj/item/weapon/tank/plasma
+				steal_target = /obj/item/tank/plasma
 				explanation_text = "Steal a small plasma tank."
 				weight = 20
 
@@ -630,7 +630,7 @@ datum
 
 
 			handtele
-				steal_target = /obj/item/weapon/hand_tele
+				steal_target = /obj/item/hand_tele
 				explanation_text = "Steal a hand teleporter."
 				weight = 20
 
@@ -655,7 +655,7 @@ datum
 
 
 			RCD
-				steal_target = /obj/item/weapon/rcd
+				steal_target = /obj/item/rcd
 				explanation_text = "Steal a rapid construction device."
 				weight = 20
 
@@ -680,7 +680,7 @@ datum
 
 
 			/*burger
-				steal_target = /obj/item/weapon/reagent_containers/food/snacks/human/burger
+				steal_target = /obj/item/reagent_containers/food/snacks/human/burger
 				explanation_text = "Steal a burger made out of human organs, this will be presented as proof of NanoTrasen's chronic lack of standards."
 				weight = 60
 
@@ -699,7 +699,7 @@ datum
 
 
 			jetpack
-				steal_target = /obj/item/weapon/tank/jetpack/oxygen
+				steal_target = /obj/item/tank/jetpack/oxygen
 				explanation_text = "Steal a blue oxygen jetpack."
 				weight = 20
 
@@ -796,7 +796,7 @@ datum
 
 
 			nuke_disk
-				steal_target = /obj/item/weapon/disk/nuclear
+				steal_target = /obj/item/disk/nuclear
 				explanation_text = "Steal the station's nuclear authentication disk."
 				weight = 20
 
@@ -820,7 +820,7 @@ datum
 						return 20
 
 			nuke_gun
-				steal_target = /obj/item/weapon/gun/energy/gun/nuclear
+				steal_target = /obj/item/gun/energy/gun/nuclear
 				explanation_text = "Steal a nuclear powered gun."
 				weight = 20
 
@@ -841,7 +841,7 @@ datum
 					return 2
 
 			diamond_drill
-				steal_target = /obj/item/weapon/pickaxe/diamonddrill
+				steal_target = /obj/item/pickaxe/diamonddrill
 				explanation_text = "Steal a diamond drill."
 				weight = 20
 
@@ -862,7 +862,7 @@ datum
 					return 2
 
 			boh
-				steal_target = /obj/item/weapon/storage/backpack/holding
+				steal_target = /obj/item/storage/backpack/holding
 				explanation_text = "Steal a \"bag of holding.\""
 				weight = 20
 
@@ -883,7 +883,7 @@ datum
 					return 2
 
 			hyper_cell
-				steal_target = /obj/item/weapon/cell/hyper
+				steal_target = /obj/item/cell/hyper
 				explanation_text = "Steal a hyper capacity power cell."
 				weight = 20
 
@@ -999,7 +999,7 @@ datum
 
 			/*Needs some work before it can be put in the game to differentiate ship implanters from syndicate implanters.
 			steal/implanter
-				steal_target = /obj/item/weapon/implanter
+				steal_target = /obj/item/implanter
 				explanation_text = "Steal an implanter"
 				weight = 50
 
@@ -1066,9 +1066,9 @@ datum
 
 				check_completion()
 					if(steal_target)
-						for(var/obj/item/device/aicard/C in owner.current.get_contents())
+						for(var/obj/item/aicard/C in owner.current.get_contents())
 							for(var/mob/living/silicon/ai/M in C)
-								if(istype(M, /mob/living/silicon/ai) && M.stat != 2)
+								if(isAI(M) && M.stat != 2)
 									return 1
 						for(var/mob/living/silicon/ai/M in world)
 							if(istype(M.loc, /turf))
@@ -1143,30 +1143,30 @@ datum
 				var/target_name
 				New(var/text,var/joba)
 					..()
-					var/list/items = list("Sulphuric acid", "Polytrinic acid", "Space Lube", "Unstable mutagen",\
-					 "Leporazine", "Cryptobiolin", "Lexorin ",\
-					  "Kelotane", "Dexalin", "Tricordrazine")
+					var/list/items = list(REAGENT_SACID, REAGENT_PACID, REAGENT_LUBE, REAGENT_MUTAGEN,\
+					 REAGENT_LEPORAZINE, REAGENT_CRYPTOBIOLIN, REAGENT_LEXORIN,\
+					  REAGENT_KELOTANE, REAGENT_DEXALIN, REAGENT_TRICORDRAZINE)
 					target_name = pick(items)
 					switch(target_name)
-						if("Sulphuric acid")
+						if(REAGENT_SACID)
 							steal_target = /datum/reagent/acid
-						if("Polytrinic acid")
+						if(REAGENT_PACID)
 							steal_target = /datum/reagent/pacid
-						if("Space Lube")
+						if(REAGENT_LUBE)
 							steal_target = /datum/reagent/lube
-						if("Unstable mutagen")
+						if(REAGENT_MUTAGEN)
 							steal_target = /datum/reagent/mutagen
-						if("Leporazine")
+						if(REAGENT_LEPORAZINE)
 							steal_target = /datum/reagent/leporazine
-						if("Cryptobiolin")
+						if(REAGENT_CRYPTOBIOLIN)
 							steal_target =/datum/reagent/cryptobiolin
-						if("Lexorin")
+						if(REAGENT_LEXORIN)
 							steal_target = /datum/reagent/lexorin
-						if("Kelotane")
+						if(REAGENT_KELOTANE)
 							steal_target = /datum/reagent/kelotane
-						if("Dexalin")
+						if(REAGENT_DEXALIN)
 							steal_target = /datum/reagent/dexalin
-						if("Tricordrazine")
+						if(REAGENT_TRICORDRAZINE)
 							steal_target = /datum/reagent/tricordrazine
 
 					explanation_text = "Steal a container filled with [target_name]."
@@ -1209,7 +1209,7 @@ datum
 
 				check_completion()
 					var/held_credits = 0
-					for(var/obj/item/weapon/spacecash/M in owner.current.get_contents())
+					for(var/obj/item/spacecash/M in owner.current.get_contents())
 						held_credits += M.worth
 					if(held_credits >= steal_amount)
 						return 1
@@ -1274,7 +1274,7 @@ datum
 					if(!owner.current||owner.current.stat==2)//If you're otherwise dead.
 						return 0
 					var/list/all_items = owner.current.get_contents()
-					for(var/obj/item/weapon/organ/head/mmi in all_items)
+					for(var/obj/item/organ/head/mmi in all_items)
 						if(mmi.brainmob&&mmi.brainmob.mind==target)
 							return 1
 					return 0
@@ -1335,8 +1335,8 @@ datum
 					return 0
 
 				var/current_amount
-				var/obj/item/weapon/rig/S
-				if(istype(owner.current,/mob/living/carbon/human))
+				var/obj/item/rig/S
+				if(ishuman(owner.current))
 					var/mob/living/carbon/human/H = owner.current
 					S = H.back
 				if(!S || !istype(S) || !S.stored_research.len)
@@ -1378,7 +1378,7 @@ datum
 				if(!owner.current||owner.current.stat==2)//If you're otherwise dead.
 					return 0
 				var/list/all_items = owner.current.get_contents()
-				for(var/obj/item/device/mmi/mmi in all_items)
+				for(var/obj/item/mmi/mmi in all_items)
 					if(mmi.brainmob&&mmi.brainmob.mind==target)	return 1
 				for(var/obj/item/organ/brain/brain in all_items)
 					if(brain.brainmob&&brain.brainmob.mind==target)	return 1

@@ -6,7 +6,7 @@
 		usr << "Not enough people have talked to you!"
 		return
 
-	var/choice = input("Choose the origin to review.", "Origin?", null) as anything in shipping_contacts
+	var/choice = tgui_input_list(usr, "Choose the origin to review.", "Origin?", shipping_contacts)
 	if (!choice || choice == "origin")
 		usr << "No selection sent, or origin selected."
 		return
@@ -18,7 +18,7 @@
 		return
 
 	choice = null
-	choice = input("Choose the RID to accept or deny.", "RID?", null) as anything in rids
+	choice = tgui_input_list(usr, "Choose the RID to accept or deny.", "RID?", rids)
 	if (!choice)
 		usr << "Cancelled."
 		return
@@ -29,7 +29,7 @@
 		usr << "Cannot find the ship! REE!"
 		return
 
-	choice = alert("Accept or deny?", "HRRRM?", "Accept", "Deny") == "Accept" ? TRUE : FALSE
+	choice = tgui_alert(usr, "Accept or deny?", "HRRRM?", list("Accept", "Deny")) == "Accept" ? TRUE : FALSE
 
 	if (choice)
 		ship.inbound_accepted()
@@ -49,7 +49,7 @@
 		usr << "No requests to be finalized."
 		return
 
-	var/choice = input("Choose a RID to finalize and send off!", "RID?", null) as anything in rids
+	var/choice = tgui_input_list(usr, "Choose a RID to finalize and send off!", "RID?", rids)
 	if (!choice)
 		usr << "Cancelled."
 		return
@@ -96,7 +96,7 @@
 
 	var/list/shit_to_send = list()
 	for (var/i = 0; i < count; i++)
-		var/obj/item/weapon/beach_ball/A = new(usr.loc)
+		var/obj/item/beach_ball/A = new(usr.loc)
 		shit_to_send += A
 
 	var/datum/shipping_request/ship

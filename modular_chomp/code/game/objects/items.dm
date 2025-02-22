@@ -56,4 +56,4 @@
 	set desc = "Toggle item's digestability."
 	digestable = !digestable
 	if(!digestable)
-		to_chat(usr, "<span class='notice'>[src] is now protected from digestion.</span>")
+		to_chat(usr, span_notice("[src] is now protected from digestion."))

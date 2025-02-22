@@ -173,14 +173,14 @@
 	check_dna()
 	dna.ready_dna(src)
 	for(var/obj/item/organ/O in organs)
-		O.dna = dna // Update all of those because apparently they're separate, and icons won't update properly
+		qdel_swap(O.dna, dna.Clone()) // Update all of those because apparently they're separate, and icons won't update properly
 
 /mob/living/carbon/human/proc/generate_valid_species(var/check_whitelist = 1, var/list/whitelist = list(), var/list/blacklist = list())
 	var/list/valid_species = new()
 	for(var/current_species_name in GLOB.all_species)
 		var/datum/species/current_species = GLOB.all_species[current_species_name]
 
-		if(check_whitelist && CONFIG_GET(flag/usealienwhitelist) && !check_rights(R_ADMIN|R_EVENT, 0, src)) //If we're using the whitelist, make sure to check it! // CHOMPEdit
+		if(check_whitelist && CONFIG_GET(flag/usealienwhitelist) && !check_rights(R_ADMIN|R_EVENT, 0, src)) //If we're using the whitelist, make sure to check it!
 			if(!(current_species.spawn_flags & SPECIES_CAN_JOIN))
 				continue
 			if(whitelist.len && !(current_species_name in whitelist))

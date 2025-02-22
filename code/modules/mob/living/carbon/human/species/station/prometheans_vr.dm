@@ -6,12 +6,12 @@
 	gluttonous = 0
 	//water_damage_mod = 0		YW Edit
 	valid_transform_species = list(
-		"Human", "Unathi", "Tajara", "Skrell",
-		"Diona", "Teshari", "Monkey","Sergal",
-		"Akula","Nevrean","Zorren",
-		"Fennec", "Vulpkanin", "Vasilissan",
-		"Rapala", "Neaera", "Stok", "Farwa", "Sobaka",
-		"Wolpin", "Saru", "Sparra")
+		SPECIES_HUMAN, SPECIES_UNATHI, SPECIES_TAJARAN, SPECIES_SKRELL,
+		SPECIES_DIONA, SPECIES_TESHARI, SPECIES_MONKEY, SPECIES_SERGAL,
+		SPECIES_AKULA, SPECIES_NEVREAN, SPECIES_ZORREN_HIGH,
+		SPECIES_FENNEC, SPECIES_VULPKANIN, SPECIES_VASILISSAN,
+		SPECIES_RAPALA, SPECIES_MONKEY_SKRELL, SPECIES_MONKEY_UNATHI, SPECIES_MONKEY_TAJ, SPECIES_MONKEY_AKULA,
+		SPECIES_MONKEY_VULPKANIN, SPECIES_MONKEY_SERGAL, SPECIES_MONKEY_NEVREAN)
 
 	spawn_flags = SPECIES_CAN_JOIN
 	wikilink="https://wiki.vore-station.net/Promethean"
@@ -31,6 +31,7 @@
 		/mob/living/carbon/human/proc/shapeshifter_select_wings,
 		/mob/living/carbon/human/proc/shapeshifter_select_tail,
 		/mob/living/carbon/human/proc/shapeshifter_select_ears,
+		/mob/living/carbon/human/proc/shapeshifter_select_secondary_ears,
 		/mob/living/carbon/human/proc/prommie_blobform,
 		/mob/living/proc/set_size,
 		/mob/living/carbon/human/proc/promethean_select_opaqueness,
@@ -40,24 +41,24 @@
 /mob/living/carbon/human/proc/prommie_blobform()
 	set name = "Toggle Blobform"
 	set desc = "Switch between amorphous and humanoid forms."
-	set category = "Abilities"
+	set category = "Abilities.Promethean"
 	set hidden = FALSE
 
 	var/atom/movable/to_locate = temporary_form || src
 	if(!isturf(to_locate.loc))
-		to_chat(to_locate,"<span class='warning'>You need more space to perform this action!</span>")
+		to_chat(to_locate,span_warning("You need more space to perform this action!"))
 		return
 	/*
 	//Blob form
 	if(temporary_form)
 		if(temporary_form.stat)
-			to_chat(temporary_form,"<span class='warning'>You can only do this while not stunned.</span>")
+			to_chat(temporary_form,span_warning("You can only do this while not stunned."))
 		else
 			prommie_outofblob(temporary_form)
 	*/
 	//Human form
 	else if(stat || paralysis || stunned || weakened || restrained())
-		to_chat(src,"<span class='warning'>You can only do this while not stunned.</span>")
+		to_chat(src,span_warning("You can only do this while not stunned."))
 		return
 	else
 		prommie_intoblob()

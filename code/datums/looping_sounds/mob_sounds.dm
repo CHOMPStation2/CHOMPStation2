@@ -26,7 +26,7 @@
 	mid_sounds = list('modular_chomp/sound/misc/cozy.ogg'=1)
 	mid_length = 21 SECONDS
 	volume = 40
-	pref_check = /datum/client_preference/sleep_music
+	pref_check = /datum/preference/toggle/sleep_music
 	direct = TRUE 		// We send this sound directly to the mob, bc they only hear it when they're asleep.
 	exclusive = TRUE	// This should only occur once, because we only want one music loop running while we snooze.
 	volume_chan = VOLUME_CHANNEL_HUD_WARNINGS

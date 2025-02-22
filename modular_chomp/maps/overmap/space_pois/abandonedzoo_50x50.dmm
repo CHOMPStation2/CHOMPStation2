@@ -1,10 +1,7 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "aa" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2";
-	tag = ""
+	icon_state = "1-2"
 	},
 /obj/machinery/door/firedoor/glass,
 /obj/structure/window/reinforced/full,
@@ -18,15 +15,12 @@
 	power = 1
 	},
 /obj/structure/cable{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /turf/simulated/floor/plating,
 /area/submap/abandonedzoo)
 "ac" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/grille,
@@ -41,12 +35,9 @@
 	power = 1
 	},
 /obj/structure/cable{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/plating,
@@ -58,13 +49,9 @@
 	power = 1
 	},
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 4;
-	icon_state = "2-4";
-	tag = ""
+	icon_state = "2-4"
 	},
 /obj/structure/cable{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /turf/simulated/floor/plating,
@@ -90,8 +77,6 @@
 /area/submap/abandonedzoo)
 "ak" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/grille,
@@ -147,7 +132,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/submap/abandonedzoo)
 "ay" = (
-/turf/simulated/floor/plating/external{
+/turf/simulated/floor/plating/turfpack/airless{
 	outdoors = 1
 	},
 /area/space)
@@ -174,8 +159,6 @@
 /area/submap/abandonedzoo)
 "aD" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/door/airlock/highsecurity{
@@ -190,31 +173,21 @@
 	power = 1
 	},
 /obj/structure/cable{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 4;
-	icon_state = "2-4";
-	tag = ""
+	icon_state = "2-4"
 	},
 /turf/simulated/floor/plating,
 /area/submap/abandonedzoo)
 "aF" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/wall/r_wall,
@@ -222,11 +195,9 @@
 "aG" = (
 /obj/structure/table/reinforced,
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
-/obj/item/weapon/gun/energy/floragun,
+/obj/item/gun/energy/floragun,
 /turf/simulated/floor/tiled/dark,
 /area/submap/abandonedzoo)
 "aH" = (
@@ -239,8 +210,6 @@
 /obj/structure/table/reinforced,
 /obj/machinery/computer/med_data/laptop,
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/dark,
@@ -252,18 +221,12 @@
 	power = 1
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 8;
-	icon_state = "1-8";
-	tag = ""
+	icon_state = "1-8"
 	},
 /obj/structure/cable{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /turf/simulated/floor/plating,
@@ -277,16 +240,14 @@
 /area/submap/abandonedzoo)
 "aM" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/wall/r_wall,
 /area/submap/abandonedzoo)
 "aN" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/folder/white_rd,
-/obj/item/weapon/pen/blade,
+/obj/item/folder/white_rd,
+/obj/item/pen/blade,
 /turf/simulated/floor/tiled/dark,
 /area/submap/abandonedzoo)
 "aO" = (
@@ -297,14 +258,15 @@
 "aP" = (
 /obj/structure/table/reinforced,
 /obj/item/slimepotion/enhancer,
-/obj/item/weapon/reagent_containers/dropper/industrial,
+/obj/item/reagent_containers/dropper/industrial,
 /turf/simulated/floor/tiled/dark,
 /area/submap/abandonedzoo)
 "aQ" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/concrete{
 	oxygen = 0;
-	nitrogen = 0
+	nitrogen = 0;
+	outdoors = 1
 	},
 /area/space)
 "aR" = (
@@ -319,18 +281,14 @@
 /area/submap/abandonedzoo)
 "aT" = (
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/table/rack/shelf/steel,
 /obj/item/clothing/suit/space/rig/military,
-/obj/item/weapon/tank/emergency/oxygen/double,
+/obj/item/tank/emergency/oxygen/double,
 /turf/simulated/floor/tiled/dark,
 /area/submap/abandonedzoo)
 "aU" = (
@@ -338,8 +296,8 @@
 	dir = 1
 	},
 /obj/structure/table/rack/shelf/steel,
-/obj/item/weapon/shield/riot,
-/obj/item/weapon/tool/crowbar/hybrid,
+/obj/item/shield/riot,
+/obj/item/tool/crowbar/hybrid,
 /turf/simulated/floor/tiled/dark,
 /area/submap/abandonedzoo)
 "aV" = (
@@ -348,28 +306,20 @@
 	},
 /turf/template_noop,
 /area/space)
-"aW" = (
-/obj/structure/window/reinforced{
-	dir = 8;
-	tag = "icon-rwindow (WEST)"
-	},
-/obj/structure/window/reinforced,
-/turf/template_noop,
-/area/submap/abandonedzoo)
 "aX" = (
 /obj/structure/table/reinforced,
 /obj/machinery/light{
 	dir = 1
 	},
-/obj/item/weapon/grenade/chem_grenade{
+/obj/item/grenade/chem_grenade{
 	pixel_x = 3;
 	pixel_y = 5
 	},
-/obj/item/weapon/grenade/chem_grenade{
+/obj/item/grenade/chem_grenade{
 	pixel_x = -4;
 	pixel_y = 5
 	},
-/obj/item/weapon/grenade/chem_grenade,
+/obj/item/grenade/chem_grenade,
 /turf/simulated/floor/tiled/dark,
 /area/submap/abandonedzoo)
 "aY" = (
@@ -377,13 +327,13 @@
 /obj/machinery/firealarm{
 	pixel_y = 24
 	},
-/obj/item/weapon/gun/energy/temperature,
+/obj/item/gun/energy/temperature,
 /turf/simulated/floor/tiled/dark,
 /area/submap/abandonedzoo)
 "aZ" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/shovel,
-/obj/item/weapon/material/minihoe,
+/obj/item/shovel,
+/obj/item/material/minihoe,
 /turf/simulated/floor/tiled/dark,
 /area/submap/abandonedzoo)
 "ba" = (
@@ -428,17 +378,17 @@
 /area/submap/abandonedzoo)
 "bi" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/reagent_containers/glass/bottle/mutagen,
-/obj/item/weapon/reagent_containers/dropper/industrial,
+/obj/item/reagent_containers/glass/bottle/mutagen,
+/obj/item/reagent_containers/dropper/industrial,
 /turf/simulated/floor/tiled/dark,
 /area/submap/abandonedzoo)
 "bj" = (
 /obj/structure/table/reinforced,
 /obj/machinery/light,
-/obj/item/weapon/surgical/circular_saw{
+/obj/item/surgical/circular_saw{
 	pixel_y = 8
 	},
-/obj/item/weapon/surgical/scalpel,
+/obj/item/surgical/scalpel,
 /turf/simulated/floor/tiled/dark,
 /area/submap/abandonedzoo)
 "bk" = (
@@ -455,7 +405,7 @@
 /area/submap/abandonedzoo)
 "bn" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/reagent_containers/food/snacks/slice/bigbeanburrito,
+/obj/item/reagent_containers/food/snacks/slice/bigbeanburrito,
 /turf/simulated/floor/tiled/dark,
 /area/submap/abandonedzoo)
 "bo" = (
@@ -465,20 +415,13 @@
 	power = 1
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 8;
-	icon_state = "1-8";
-	tag = ""
+	icon_state = "1-8"
 	},
 /obj/structure/cable,
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /turf/simulated/floor/plating,
@@ -494,8 +437,6 @@
 "br" = (
 /obj/structure/table/reinforced,
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/microwave,
@@ -503,17 +444,12 @@
 /area/submap/abandonedzoo)
 "bs" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/structure/cable{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/machinery/shieldwallgen,
@@ -522,7 +458,8 @@
 "bt" = (
 /turf/simulated/floor/concrete{
 	oxygen = 0;
-	nitrogen = 0
+	nitrogen = 0;
+	outdoors = 1
 	},
 /area/space)
 "bu" = (
@@ -579,8 +516,6 @@
 /area/submap/abandonedzoo)
 "bD" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/door/firedoor/glass,
@@ -620,18 +555,18 @@
 /turf/simulated/floor/outdoors/grass/sif,
 /area/submap/abandonedzoo)
 "bM" = (
-/turf/simulated/floor/plating/external{
+/turf/simulated/floor/plating/turfpack/airless{
 	outdoors = 1
 	},
 /area/submap/abandonedzoo)
 "bN" = (
 /obj/structure/grille/broken,
-/obj/item/weapon/material/shard,
+/obj/item/material/shard,
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/plating,
 /area/submap/abandonedzoo)
 "bO" = (
-/obj/item/weapon/material/shard{
+/obj/item/material/shard{
 	icon_state = "medium"
 	},
 /turf/simulated/floor/plating,
@@ -647,10 +582,7 @@
 	power = 1
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 8;
-	icon_state = "1-8";
-	tag = ""
+	icon_state = "1-8"
 	},
 /obj/structure/cable,
 /turf/simulated/floor/plating,
@@ -664,8 +596,6 @@
 /area/submap/abandonedzoo)
 "bS" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/structure/cable,
@@ -673,7 +603,7 @@
 /turf/simulated/floor/plating,
 /area/submap/abandonedzoo)
 "bT" = (
-/obj/item/weapon/material/shard{
+/obj/item/material/shard{
 	icon_state = "medium"
 	},
 /obj/machinery/door/firedoor/glass,
@@ -686,8 +616,6 @@
 /area/submap/abandonedzoo)
 "bV" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/door/firedoor/glass,
@@ -701,7 +629,7 @@
 /area/submap/abandonedzoo)
 "cI" = (
 /obj/machinery/portable_atmospherics/canister/phoron/cold,
-/turf/simulated/floor/plating/external{
+/turf/simulated/floor/plating/turfpack/airless{
 	outdoors = 1
 	},
 /area/space)
@@ -715,8 +643,7 @@
 /area/submap/abandonedzoo)
 "do" = (
 /obj/structure/window/reinforced{
-	dir = 1;
-	tag = "icon-rwindow (NORTH)"
+	dir = 1
 	},
 /turf/template_noop,
 /area/submap/abandonedzoo)
@@ -747,7 +674,6 @@
 /area/space)
 "gd" = (
 /obj/structure/cable{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/power/apc{
@@ -756,11 +682,11 @@
 	pixel_x = -24
 	},
 /obj/structure/table/rack/shelf/steel,
-/obj/item/weapon/weldingtool/experimental/hybrid,
-/obj/item/weapon/tool/wrench/hybrid,
-/obj/item/weapon/tool/wirecutters/hybrid,
-/obj/item/weapon/tool/screwdriver/hybrid,
-/obj/item/weapon/tool/crowbar/hybrid,
+/obj/item/weldingtool/experimental/hybrid,
+/obj/item/tool/wrench/hybrid,
+/obj/item/tool/wirecutters/hybrid,
+/obj/item/tool/screwdriver/hybrid,
+/obj/item/tool/crowbar/hybrid,
 /turf/simulated/floor/tiled/dark,
 /area/submap/abandonedzoo)
 "gE" = (
@@ -772,17 +698,8 @@
 	},
 /turf/template_noop,
 /area/space)
-"gF" = (
-/obj/structure/window/reinforced{
-	dir = 8;
-	tag = "icon-rwindow (WEST)"
-	},
-/turf/template_noop,
-/area/submap/abandonedzoo)
 "gY" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/plating,
@@ -799,7 +716,7 @@
 /area/submap/abandonedzoo)
 "hQ" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/item/weapon/card/emag,
+/obj/item/card/emag,
 /turf/simulated/floor/plating,
 /area/submap/abandonedzoo)
 "hU" = (
@@ -820,17 +737,16 @@
 	name = "Containment Equipment"
 	},
 /obj/item/rig_module/fabricator/energy_net,
-/obj/item/weapon/gun/energy/kinetic_accelerator,
-/obj/item/weapon/gun/energy/netgun,
-/obj/item/weapon/gun/energy/netgun,
-/obj/item/weapon/gun/energy/netgun,
+/obj/item/gun/energy/kinetic_accelerator,
+/obj/item/gun/energy/netgun,
+/obj/item/gun/energy/netgun,
+/obj/item/gun/energy/netgun,
 /turf/simulated/floor/tiled/dark,
 /area/submap/abandonedzoo)
 "iA" = (
 /obj/structure/closet/crate/freezer,
 /obj/machinery/light/small{
-	dir = 1;
-	tag = "icon-bulb1 (NORTH)"
+	dir = 1
 	},
 /turf/simulated/floor/tiled/dark,
 /area/submap/abandonedzoo)
@@ -845,17 +761,12 @@
 	power = 1
 	},
 /obj/structure/cable{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/plating,
@@ -889,7 +800,7 @@
 /area/submap/abandonedzoo)
 "li" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/item/weapon/gun/projectile/pistol,
+/obj/item/gun/projectile/pistol,
 /turf/simulated/floor/plating,
 /area/submap/abandonedzoo)
 "ly" = (
@@ -904,13 +815,13 @@
 /area/submap/abandonedzoo)
 "mc" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/plating/external{
+/turf/simulated/floor/plating/turfpack/airless{
 	outdoors = 1
 	},
 /area/space)
 "mf" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/storage/secure/briefcase/nerd_pack_med,
+/obj/item/storage/secure/briefcase/nerd_pack_med,
 /turf/simulated/floor/tiled/dark,
 /area/submap/abandonedzoo)
 "mp" = (
@@ -928,8 +839,6 @@
 "nf" = (
 /obj/machinery/power/terminal,
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/asteroid_steel{
@@ -946,8 +855,6 @@
 /area/submap/abandonedzoo)
 "oi" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/asteroid_steel{
@@ -960,7 +867,7 @@
 /area/submap/abandonedzoo)
 "oN" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/gun/launcher/syringe/rapid,
+/obj/item/gun/launcher/syringe/rapid,
 /turf/simulated/floor/tiled/dark,
 /area/submap/abandonedzoo)
 "oO" = (
@@ -972,16 +879,9 @@
 /area/submap/abandonedzoo)
 "pa" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/plating/external{
+/turf/simulated/floor/plating/turfpack/airless{
 	outdoors = 1
 	},
-/area/submap/abandonedzoo)
-"pc" = (
-/obj/structure/window/reinforced{
-	dir = 4;
-	tag = "icon-rwindow (EAST)"
-	},
-/turf/template_noop,
 /area/submap/abandonedzoo)
 "pv" = (
 /obj/structure/closet/crate/freezer/veymed,
@@ -1007,10 +907,7 @@
 /area/submap/abandonedzoo)
 "qg" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2";
-	tag = ""
+	icon_state = "1-2"
 	},
 /turf/simulated/floor/plating,
 /area/submap/abandonedzoo)
@@ -1037,22 +934,17 @@
 	power = 1
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 8;
-	icon_state = "1-8";
-	tag = ""
+	icon_state = "1-8"
 	},
 /obj/structure/cable,
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/plating,
 /area/submap/abandonedzoo)
 "tB" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/storage/firstaid/surgery,
+/obj/item/storage/firstaid/surgery,
 /turf/simulated/floor/tiled/dark,
 /area/submap/abandonedzoo)
 "uA" = (
@@ -1069,31 +961,12 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/submap/abandonedzoo)
-"vv" = (
-/obj/structure/window/reinforced{
-	dir = 4;
-	tag = "icon-rwindow (EAST)"
-	},
-/obj/structure/window/reinforced{
-	dir = 1;
-	tag = "icon-rwindow (NORTH)"
-	},
-/turf/template_noop,
-/area/submap/abandonedzoo)
 "xi" = (
 /obj/machinery/light/small{
 	dir = 4
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/plating,
-/area/submap/abandonedzoo)
-"yb" = (
-/obj/structure/window/reinforced{
-	dir = 4;
-	tag = "icon-rwindow (EAST)"
-	},
-/obj/structure/window/reinforced,
-/turf/template_noop,
 /area/submap/abandonedzoo)
 "zN" = (
 /obj/structure/window/reinforced{
@@ -1107,15 +980,13 @@
 	dir = 4
 	},
 /obj/structure/window/reinforced{
-	dir = 1;
-	tag = "icon-rwindow (NORTH)"
+	dir = 1
 	},
 /turf/template_noop,
 /area/submap/abandonedzoo)
 "Bn" = (
 /obj/structure/window/reinforced{
-	dir = 1;
-	tag = "icon-rwindow (NORTH)"
+	dir = 1
 	},
 /obj/structure/window/reinforced{
 	dir = 8
@@ -1129,15 +1000,10 @@
 	power = 1
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 8;
-	icon_state = "1-8";
-	tag = ""
+	icon_state = "1-8"
 	},
 /obj/structure/cable,
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/window/reinforced/tinted/frosted,
@@ -1165,13 +1031,6 @@
 	},
 /turf/template_noop,
 /area/space)
-"Dc" = (
-/obj/machinery/light/small{
-	dir = 1;
-	tag = "icon-bulb1 (NORTH)"
-	},
-/turf/simulated/floor/tiled/dark,
-/area/submap/abandonedzoo)
 "Dm" = (
 /obj/machinery/light{
 	dir = 1
@@ -1180,8 +1039,6 @@
 /area/submap/abandonedzoo)
 "Dv" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/asteroid_steel{
@@ -1189,7 +1046,7 @@
 	},
 /area/submap/abandonedzoo)
 "Ed" = (
-/obj/item/weapon/material/shard,
+/obj/item/material/shard,
 /turf/simulated/floor/plating,
 /area/submap/abandonedzoo)
 "ER" = (
@@ -1199,14 +1056,10 @@
 	power = 1
 	},
 /obj/structure/cable{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 4;
-	icon_state = "1-4";
-	tag = "90Curve"
+	icon_state = "1-4"
 	},
 /obj/structure/window/reinforced/tinted/frosted{
 	dir = 4
@@ -1238,11 +1091,11 @@
 /area/submap/abandonedzoo)
 "Fs" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/paper_bin,
+/obj/item/paper_bin,
 /turf/simulated/floor/tiled/dark,
 /area/submap/abandonedzoo)
 "Gm" = (
-/obj/item/weapon/tool/wirecutters,
+/obj/item/tool/wirecutters,
 /turf/simulated/floor/tiled/asteroid_steel{
 	temperature = 293.15
 	},
@@ -1279,7 +1132,7 @@
 /area/submap/abandonedzoo)
 "Ij" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/rig/medical/equipped,
+/obj/item/rig/medical/equipped,
 /turf/simulated/floor/tiled/dark,
 /area/submap/abandonedzoo)
 "Iq" = (
@@ -1305,7 +1158,7 @@
 /area/submap/abandonedzoo)
 "JH" = (
 /obj/machinery/pointdefense,
-/turf/simulated/floor/plating/external{
+/turf/simulated/floor/plating/turfpack/airless{
 	outdoors = 1
 	},
 /area/space)
@@ -1331,7 +1184,7 @@
 /area/submap/abandonedzoo)
 "Lu" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/storage/firstaid/adv,
+/obj/item/storage/firstaid/adv,
 /turf/simulated/floor/tiled/dark,
 /area/submap/abandonedzoo)
 "Lw" = (
@@ -1348,7 +1201,6 @@
 	power = 1
 	},
 /obj/structure/cable{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/structure/window/reinforced/tinted/frosted,
@@ -1381,8 +1233,7 @@
 /area/submap/abandonedzoo)
 "Mg" = (
 /obj/structure/window/reinforced{
-	dir = 1;
-	tag = "icon-rwindow (NORTH)"
+	dir = 1
 	},
 /obj/structure/window/reinforced{
 	dir = 4;
@@ -1437,8 +1288,7 @@
 	dir = 8
 	},
 /obj/structure/window/reinforced{
-	dir = 1;
-	tag = "icon-rwindow (NORTH)"
+	dir = 1
 	},
 /turf/template_noop,
 /area/submap/abandonedzoo)
@@ -1449,12 +1299,9 @@
 	power = 1
 	},
 /obj/structure/cable{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/plating,
@@ -1462,15 +1309,13 @@
 "Pt" = (
 /obj/structure/cable,
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/power/smes/buildable/point_of_interest,
 /turf/simulated/floor/tiled/dark,
 /area/submap/abandonedzoo)
 "PC" = (
-/obj/item/weapon/corncob,
+/obj/item/corncob,
 /turf/unsimulated/beach/sand,
 /area/submap/abandonedzoo)
 "PM" = (
@@ -1485,8 +1330,8 @@
 /area/submap/abandonedzoo)
 "Qg" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/folder/white,
-/obj/item/weapon/folder/white{
+/obj/item/folder/white,
+/obj/item/folder/white{
 	pixel_x = 4;
 	pixel_y = 3
 	},
@@ -1508,10 +1353,7 @@
 	name = "Bio Containment"
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2";
-	tag = ""
+	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/submap/abandonedzoo)
@@ -1526,8 +1368,6 @@
 /area/submap/abandonedzoo)
 "RF" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/door/airlock/highsecurity{
@@ -1577,7 +1417,7 @@
 /area/submap/abandonedzoo)
 "VY" = (
 /obj/structure/table/reinforced,
-/obj/item/device/flashlight/lamp/green,
+/obj/item/flashlight/lamp/green,
 /turf/simulated/floor/tiled/dark,
 /area/submap/abandonedzoo)
 "Xc" = (
@@ -1587,15 +1427,10 @@
 	power = 1
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 8;
-	icon_state = "1-8";
-	tag = ""
+	icon_state = "1-8"
 	},
 /obj/structure/cable,
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/window/reinforced/tinted/frosted{
@@ -1608,8 +1443,8 @@
 /area/submap/abandonedzoo)
 "Xv" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/item/weapon/gun/energy/crossbow,
-/obj/item/weapon/holo/esword,
+/obj/item/gun/energy/crossbow,
+/obj/item/holo/esword,
 /turf/simulated/floor/plating,
 /area/submap/abandonedzoo)
 "Xy" = (
@@ -1636,8 +1471,7 @@
 /area/submap/abandonedzoo)
 "Zg" = (
 /obj/structure/window/reinforced{
-	dir = 4;
-	tag = "icon-rwindow (EAST)"
+	dir = 4
 	},
 /obj/structure/window/reinforced{
 	health = 1e+006;
@@ -2793,10 +2627,10 @@ bc
 (23,1,1) = {"
 bc
 hU
-pc
-pc
-pc
-pc
+af
+af
+af
+af
 hU
 hU
 hU
@@ -2849,17 +2683,17 @@ VY
 Fs
 Or
 aL
-vv
-pc
-pc
+zU
+af
+af
 Zg
 aL
-vv
-pc
-pc
-pc
-pc
-yb
+zU
+af
+af
+af
+af
+QU
 aL
 qZ
 ax
@@ -3011,11 +2845,11 @@ OK
 PM
 aL
 OW
-gF
-gF
-gF
-gF
-aW
+OK
+OK
+OK
+OK
+RN
 aL
 qZ
 az
@@ -4113,7 +3947,7 @@ hU
 hU
 hU
 bd
-Dc
+SM
 aL
 aL
 aL

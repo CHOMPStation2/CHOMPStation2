@@ -8,9 +8,9 @@
 	var/max_cable = 100
 	var/on = 0
 
-/obj/machinery/cablelayer/New()
-	cable = new(src, 100)
-	..()
+/obj/machinery/cablelayer/Initialize()
+	cable = new(src, max_cable)
+	. = ..()
 
 /obj/machinery/cablelayer/Moved(atom/old_loc, direction, forced = FALSE)
 	. = ..()
@@ -18,7 +18,7 @@
 
 /obj/machinery/cablelayer/attack_hand(mob/user as mob)
 	if(!cable&&!on)
-		to_chat(user, "<span class='warning'>\The [src] doesn't have any cable loaded.</span>")
+		to_chat(user, span_warning("\The [src] doesn't have any cable loaded."))
 		return
 	on=!on
 	user.visible_message("\The [user] [!on?"dea":"a"]ctivates \the [src].", "You switch [src] [on? "on" : "off"]")
@@ -29,14 +29,14 @@
 
 		var/result = load_cable(O)
 		if(!result)
-			to_chat(user, "<span class='warning'>\The [src]'s cable reel is full.</span>")
+			to_chat(user, span_warning("\The [src]'s cable reel is full."))
 		else
 			to_chat(user, "You load [result] lengths of cable into [src].")
 		return
 
 	if(O.has_tool_quality(TOOL_WIRECUTTER))
 		if(cable && cable.get_amount())
-			var/m = round(input(usr, "Please specify the length of cable to cut", "Cut cable", min(cable.get_amount(), 30)) as num, 1)
+			var/m = tgui_input_number(user, "Please specify the length of cable to cut", "Cut cable", min(cable.get_amount(), 30))
 			m = min(m, cable.get_amount())
 			m = min(m, 30)
 			if(m)
@@ -45,7 +45,7 @@
 				var/obj/item/stack/cable_coil/CC = new (get_turf(src))
 				CC.set_amount(m)
 		else
-			to_chat(usr, "<span class='warning'>There's no more cable on the reel.</span>")
+			to_chat(user, span_warning("There's no more cable on the reel."))
 
 /obj/machinery/cablelayer/examine(mob/user)
 	. = ..()

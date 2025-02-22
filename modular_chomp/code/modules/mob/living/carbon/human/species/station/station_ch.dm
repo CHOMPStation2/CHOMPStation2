@@ -49,6 +49,8 @@
 	breath_heat_level_2 = 510	//Default 450
 	breath_heat_level_3 = 1200	//Default 1250
 
+/datum/species/diona
+	slowdown = 0.5
 
 /datum/species/xenomorph_hybrid
 	name = SPECIES_XENOMORPH_HYBRID
@@ -158,7 +160,7 @@
 	var/datum/gas_mixture/environment = T.return_air()
 	if(!environment) return
 
-	if(environment.gas["phoron"] > 0 || locate(/obj/effect/alien/weeds) in T)
+	if(environment.gas[GAS_PHORON] > 0 || locate(/obj/effect/alien/weeds) in T)
 		if(!regenerate(H))
 			var/obj/item/organ/internal/xenos/plasmavessel/P = H.internal_organs_by_name[O_PLASMA]
 			P.stored_plasma += weeds_plasma_rate
@@ -177,7 +179,7 @@
 		if(I.damage > 0)
 			I.damage = max(I.damage - heal_rate, 0)
 			if (prob(5))
-				to_chat(H, "<span class='alien'>We feel a soothing sensation within our [I.parent_organ]...</span>")
+				to_chat(H, span_alien("We feel a soothing sensation within our [I.parent_organ]..."))
 			return 1
 
 	// Next, heal external damage.
@@ -187,7 +189,7 @@
 		H.adjustOxyLoss(-heal_rate)
 		H.adjustToxLoss(-heal_rate)
 		if (prob(5))
-			to_chat(H, "<span class='alien'>A soothing sensation falls over us...</span>")
+			to_chat(H, span_alien("A soothing sensation falls over us..."))
 		return 1
 
 	// Lastly, mend broken bones. May remove this if it's abused.
@@ -195,7 +197,7 @@
 		if (E.status & ORGAN_BROKEN)
 			if (prob(mend_prob))
 				if (E.mend_fracture())
-					to_chat(H, "<span class='alien'>We feel something mend within our [E.name].</span>")
+					to_chat(H, span_alien("We feel something mend within our [E.name]."))
 			return 1
 
 	return 0
@@ -207,21 +209,21 @@
 /mob/living/carbon/human/proc/plant_weak()
 	set name = "Plant Weeds (150)"
 	set desc = "Plants some alien weeds."
-	set category = "Abilities"
+	set category = "Abilities.Alien"
 
 	if(check_alien_ability(150,1,O_RESIN))
-		visible_message("<span class='alium'><B>[src] has planted some alien weeds!</B></span>")
+		visible_message(span_alium(span_bold("[src] has planted some alien weeds!")))
 		new /obj/effect/alien/weeds/node/weak(get_turf(src), null, "#321D37")	// Aliens.dm for weed node origin.
 		playsound(src, 'sound/effects/blobattack.ogg', 40, 1)
 	return
 
 /mob/living/carbon/human/proc/check_plasma_amount(mob/living/carbon/human/M as mob)
 	set name = "Check Plasma Reserves"
-	set category = "Abilities"
+	set category = "Abilities.Alien"
 
 	var/obj/item/organ/internal/xenos/plasmavessel/I = M.internal_organs_by_name[O_PLASMA]
 	if(!istype(I))
-		to_chat(src, "<span class='alium'>Our plasma vessel is missing!</span>")
+		to_chat(src, span_alium("Our plasma vessel is missing!"))
 		return
 
 	to_chat(src, "Our plasma reserves are at [I.stored_plasma]/[I.max_plasma].")
@@ -230,7 +232,7 @@
 /mob/living/carbon/human/proc/resin_weak() // Technically stronger in some aspects.
 	set name = "Secrete Resin (25)"
 	set desc = "Secrete tough, malleable resin in front of us."
-	set category = "Abilities"
+	set category = "Abilities.Alien"
 
 	var/list/options = list("resin door","resin wall","resin membrane","nest","resin blob")
 	for(var/option in options)
@@ -271,7 +273,7 @@
 			else O = new /obj/item/stack/material/resin(targetLoc)
 
 	if(O)
-		visible_message("<span class='warning'><B>[src] vomits up a thick purple substance and begins to shape it!</B></span>", "<span class='alium'>You shape a [choice].</span>")
+		visible_message(span_warning(span_bold("[src] vomits up a thick purple substance and begins to shape it!")), span_alium("You shape a [choice]."))
 //		O.color = "#321D37" // Adding predefined colour icons.
 		playsound(src, 'sound/effects/blobattack.ogg', 40, 1)
 

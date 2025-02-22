@@ -9,7 +9,7 @@
  * Security
  */
 /obj/item/clothing/under/rank/warden
-	desc = "It's made of a slightly sturdier material than standard jumpsuits, to allow for more robust protection. It has the word \"Warden\" written on the shoulders."
+	desc = "It's made of a slightly sturdier material than standard jumpsuits, to allow for more robust protection. It has the word \"" + JOB_WARDEN+ "\" written on the shoulders."
 	name = "warden's jumpsuit"
 	icon_state = "warden"
 	item_state_slots = list(slot_r_hand_str = "red", slot_l_hand_str = "red")
@@ -25,6 +25,27 @@
 	armor = list(melee = 10, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 0, rad = 0)
 	siemens_coefficient = 0.9
 	rolled_sleeves = 0
+
+/obj/item/clothing/under/rank/security/aces
+	name = "ACE security undersuit"
+	desc = "A snug but comfortable undersuit with removable arm sleeves, originally developed for the ACE Security Group. Includes a wrist-mounted minicomp."
+	icon_state = "aces_undersuit"
+	item_state_slots = list(slot_r_hand_str = "black", slot_l_hand_str = "black")
+	armor = list(melee = 10, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0)
+	siemens_coefficient = 0.9
+	rolled_sleeves = 0	//sleeves can be removed, but this disables the minicomp
+	rolled_down = -1	//can't be rolled down
+
+/obj/item/clothing/under/rank/security/aces/examine(mob/user)
+	. = ..()
+
+	if(!rolled_sleeves && Adjacent(user))	//can't see the comp if you've taken the sleeves off, or if you're not adjacent
+		. += span_notice("The minicomp reports that the current station time is [stationtime2text()] and that it is [stationdate2text()].")
+		var/TB = src.loc.loc
+		if(istype(TB, /turf/simulated))	//no point returning atmospheric data from unsimulated tiles (they don't track pressure anyway, only temperature)
+			var/turf/simulated/T = TB
+			var/datum/gas_mixture/env = T.return_air()
+			. += span_notice("The minicomp reports the current atmospheric pressure: [env.return_pressure()]kPa, and temperature: [env.temperature]K")
 
 /obj/item/clothing/under/rank/security/modern
 	name = "modernized security officer's jumpsuit"
@@ -103,7 +124,7 @@
 	item_state_slots[slot_w_uniform_str] = unrolled ? "[worn_state]_r" : initial(worn_state)
 	var/mob/living/carbon/human/H = loc
 	H.update_inv_w_uniform(1)
-	to_chat(H, "<span class='notice'>You roll the sleeves of your shirt [unrolled ? "up" : "down"]</span>")
+	to_chat(H, span_notice("You roll the sleeves of your shirt [unrolled ? "up" : "down"]"))
 */
 
 /obj/item/clothing/under/det/grey
@@ -148,7 +169,7 @@
  * Head of Security
  */
 /obj/item/clothing/under/rank/head_of_security
-	desc = "It's a jumpsuit worn by those few with the dedication to achieve the position of \"Head of Security\". It has additional armor to protect the wearer."
+	desc = "It's a jumpsuit worn by those few with the dedication to achieve the position of \"" + JOB_HEAD_OF_SECURITY + "\". It has additional armor to protect the wearer."
 	name = "head of security's jumpsuit"
 	icon_state = "hos"
 	item_state_slots = list(slot_r_hand_str = "red", slot_l_hand_str = "red")
@@ -179,14 +200,14 @@
 	rolled_sleeves = 0
 
 /obj/item/clothing/under/rank/head_of_security/navyblue
-	desc = "The insignia on this uniform tells you that this uniform belongs to the Head of Security."
+	desc = "The insignia on this uniform tells you that this uniform belongs to the " + JOB_HEAD_OF_SECURITY + "."
 	name = "head of security's uniform"
 	icon_state = "hosblueclothes"
 	item_state_slots = list(slot_r_hand_str = "ba_suit", slot_l_hand_str = "ba_suit")
 	rolled_sleeves = 0
 
 /obj/item/clothing/under/rank/warden/navyblue
-	desc = "The insignia on this uniform tells you that this uniform belongs to the Warden."
+	desc = "The insignia on this uniform tells you that this uniform belongs to the " + JOB_WARDEN + "."
 	name = "warden's uniform"
 	icon_state = "wardenblueclothes"
 	item_state_slots = list(slot_r_hand_str = "ba_suit", slot_l_hand_str = "ba_suit")
@@ -203,16 +224,15 @@
 	rolled_sleeves = 0
 
 /obj/item/clothing/under/rank/head_of_security/tan
-	desc = "The insignia on this uniform tells you that this uniform belongs to the Head of Security."
+	desc = "The insignia on this uniform tells you that this uniform belongs to the " + JOB_HEAD_OF_SECURITY+ "."
 	name = "head of security's uniform"
 	icon_state = "hostanclothes"
 	item_state_slots = list(slot_r_hand_str = "ba_suit", slot_l_hand_str = "ba_suit")
 	rolled_sleeves = 0
 
 /obj/item/clothing/under/rank/warden/tan
-	desc = "The insignia on this uniform tells you that this uniform belongs to the Warden."
+	desc = "The insignia on this uniform tells you that this uniform belongs to the " + JOB_WARDEN + "."
 	name = "warden's uniform"
 	icon_state = "wardentanclothes"
 	item_state_slots = list(slot_r_hand_str = "ba_suit", slot_l_hand_str = "ba_suit")
 	rolled_sleeves = 0
-

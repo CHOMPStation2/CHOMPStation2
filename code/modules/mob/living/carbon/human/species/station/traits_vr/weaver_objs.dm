@@ -11,11 +11,11 @@
 	qdel(src)
 	return
 
-/obj/effect/weaversilk/attackby(var/obj/item/weapon/W, var/mob/user)
+/obj/effect/weaversilk/attackby(var/obj/item/W, var/mob/user)
 	user.setClickCooldown(user.get_attack_speed(W))
 
 	if(W.force)
-		visible_message("<span class='warning'>\The [src] has been [LAZYLEN(W.attack_verb) ? pick(W.attack_verb) : "attacked"] with \the [W][(user ? " by [user]." : ".")]</span>")
+		visible_message(span_warning("\The [src] has been [LAZYLEN(W.attack_verb) ? pick(W.attack_verb) : "attacked"] with \the [W][(user ? " by [user]." : ".")]"))
 		qdel(src)
 
 /obj/effect/weaversilk/bullet_act(var/obj/item/projectile/Proj)
@@ -24,6 +24,8 @@
 		qdel(src)
 
 /obj/effect/weaversilk/fire_act(datum/gas_mixture/air, exposed_temperature, exposed_volume)
+	var/turf/T = get_turf(src)
+	T?.feed_lingering_fire(0.1) // CHOMPAdd - Lingering fire, feeding fires
 	qdel(src)
 
 /obj/effect/weaversilk/attack_generic(mob/user as mob, var/damage)
@@ -33,7 +35,7 @@
 /obj/effect/weaversilk/attack_hand(mob/user as mob)
 	..()
 	if(user.a_intent == I_HURT)
-		to_chat(user,"<span class='warning'>You easily tear down [name].</span>")
+		to_chat(user,span_warning("You easily tear down [name]."))
 		qdel(src)
 
 /obj/effect/weaversilk/floor
@@ -42,7 +44,7 @@
 	layer = DIRTY_LAYER
 
 /obj/effect/weaversilk/floor/Initialize()
-	..()
+	. = ..()
 	icon_state = pick(possible_icon_states)
 
 /obj/effect/weaversilk/wall
@@ -53,11 +55,11 @@
 	density = TRUE
 
 /obj/effect/weaversilk/wall/Initialize()
-	..()
+	. = ..()
 	icon_state = pick(possible_icon_states)
 
 /obj/effect/weaversilk/wall/CanPass(atom/movable/mover, turf/target)
-	if(istype(mover, /mob/living/carbon/human))
+	if(ishuman(mover))
 		var/mob/living/carbon/human/H = mover
 		if(H.species.is_weaver)
 			return TRUE
@@ -73,7 +75,7 @@
 /obj/structure/bed/double/weaversilk_nest/update_icon()
 	return
 
-/obj/structure/bed/double/weaversilk_nest/attackby(obj/item/weapon/W as obj, mob/user as mob)
+/obj/structure/bed/double/weaversilk_nest/attackby(obj/item/W as obj, mob/user as mob)
 	if(W.has_tool_quality(TOOL_WRENCH) || istype(W,/obj/item/stack) || W.has_tool_quality(TOOL_WIRECUTTER))
 		return
 	..()
@@ -81,7 +83,7 @@
 /obj/structure/bed/double/weaversilk_nest/attack_hand(mob/user as mob)
 	..()
 	if(user.a_intent == I_HURT && !has_buckled_mobs())
-		to_chat(user,"<span class='warning'>You easily tear down [name].</span>")
+		to_chat(user,span_warning("You easily tear down [name]."))
 		qdel(src)
 
 /obj/effect/weaversilk/trap
@@ -94,22 +96,22 @@
 /obj/effect/weaversilk/trap/Crossed(atom/movable/AM as mob|obj)
 	if(AM.is_incorporeal())
 		return
-	if(istype(AM, /mob/living/carbon/human))
+	if(ishuman(AM))
 		var/mob/living/carbon/human/H = AM
 		if(H.species.is_weaver)
 			return
 	if(isliving(AM) && trap_active)
 		var/mob/living/L = AM
-		if(L.m_intent == "run")
+		if(L.m_intent == I_RUN)
 			L.visible_message(
-				"<span class='danger'>[L] steps on \the [src].</span>",
-				"<span class='danger'>You step on \the [src]!</span>",
-				"<b>You hear a squishy noise!</b>"
+				span_danger("[L] steps on \the [src]."),
+				span_danger("You step on \the [src]!"),
+				span_infoplain(span_bold("You hear a squishy noise!"))
 				)
 			set_dir(L.dir)
 			buckle_mob(L)
 			L.Stun(1)
-			to_chat(L, "<span class='danger'>The sticky fibers of \the [src] ensnare, trapping you in place!</span>")
+			to_chat(L, span_danger("The sticky fibers of \the [src] ensnare, trapping you in place!"))
 			trap_active = FALSE
 			desc += " Actually, it looks like it's been all spent."
 	..()

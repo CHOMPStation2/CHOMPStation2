@@ -36,7 +36,7 @@ var/datum/species/shapeshifter/promethean/prometheans
 	assisted_langs = list(LANGUAGE_ROOTGLOBAL, LANGUAGE_VOX)	// Prometheans are weird, let's just assume they can use basically any language.
 
 	blood_name = "gelatinous ooze"
-	blood_reagents = "slimejelly"
+	blood_reagents = REAGENT_ID_SLIMEJELLY
 
 	breath_type = null
 	poison_type = null
@@ -65,7 +65,7 @@ var/datum/species/shapeshifter/promethean/prometheans
 	item_slowdown_mod = 1.33
 	throwforce_absorb_threshold = 10
 
-	chem_strength_alcohol = 2
+	chem_strength_alcohol = 0.5
 
 	cloning_modifier = /datum/modifier/cloning_sickness/promethean
 
@@ -124,7 +124,7 @@ var/datum/species/shapeshifter/promethean/prometheans
 		/mob/living/carbon/human/proc/regenerate
 		)
 
-	valid_transform_species = list(SPECIES_HUMAN, SPECIES_HUMAN_VATBORN, SPECIES_UNATHI, SPECIES_TAJ, SPECIES_SKRELL, SPECIES_DIONA, SPECIES_TESHARI, SPECIES_MONKEY)
+	valid_transform_species = list(SPECIES_HUMAN, SPECIES_HUMAN_VATBORN, SPECIES_UNATHI, SPECIES_TAJARAN, SPECIES_SKRELL, SPECIES_DIONA, SPECIES_TESHARI, SPECIES_MONKEY)
 
 	var/heal_rate = 0.5 // Temp. Regen per tick.
 
@@ -137,22 +137,24 @@ var/datum/species/shapeshifter/promethean/prometheans
 		/decl/emote/visible/vibrate
 	)
 
+	footstep = FOOTSTEP_MOB_SLIME
+
 /datum/species/shapeshifter/promethean/New()
 	..()
 	prometheans = src
 
 /datum/species/shapeshifter/promethean/equip_survival_gear(var/mob/living/carbon/human/H)
-	var/boxtype = pick(list(/obj/item/weapon/storage/toolbox/lunchbox,
-							/obj/item/weapon/storage/toolbox/lunchbox/heart,
-							/obj/item/weapon/storage/toolbox/lunchbox/cat,
-							/obj/item/weapon/storage/toolbox/lunchbox/nt,
-							/obj/item/weapon/storage/toolbox/lunchbox/mars,
-							/obj/item/weapon/storage/toolbox/lunchbox/cti,
-							/obj/item/weapon/storage/toolbox/lunchbox/nymph,
-							/obj/item/weapon/storage/toolbox/lunchbox/syndicate))	//Only pick the empty types
-	var/obj/item/weapon/storage/toolbox/lunchbox/L = new boxtype(get_turf(H))
-	new /obj/item/weapon/reagent_containers/food/snacks/candy/proteinbar(L)
-	new /obj/item/weapon/tool/prybar/red(L) //VOREStation Add,
+	var/boxtype = pick(list(/obj/item/storage/toolbox/lunchbox,
+							/obj/item/storage/toolbox/lunchbox/heart,
+							/obj/item/storage/toolbox/lunchbox/cat,
+							/obj/item/storage/toolbox/lunchbox/nt,
+							/obj/item/storage/toolbox/lunchbox/mars,
+							/obj/item/storage/toolbox/lunchbox/cti,
+							/obj/item/storage/toolbox/lunchbox/nymph,
+							/obj/item/storage/toolbox/lunchbox/syndicate))	//Only pick the empty types
+	var/obj/item/storage/toolbox/lunchbox/L = new boxtype(get_turf(H))
+	new /obj/item/reagent_containers/food/snacks/candy/proteinbar(L)
+	new /obj/item/tool/prybar/red(L) //VOREStation Add,
 	if(H.backbag == 1)
 		H.equip_to_slot_or_del(L, slot_r_hand)
 	else
@@ -179,8 +181,8 @@ var/datum/species/shapeshifter/promethean/prometheans
 			if(FEMALE)
 				t_him = "her"
 
-	H.visible_message("<b>\The [H]</b> glomps [target] to make [t_him] feel better!", \
-					"<span class='notice'>You glomp [target] to make [t_him] feel better!</span>")
+	H.visible_message(span_infoplain(span_bold("\The [H]") + " glomps [target] to make [t_him] feel better!"), \
+					span_notice("You glomp [target] to make [t_him] feel better!"))
 	H.apply_stored_shock_to(target)
 
 /datum/species/shapeshifter/promethean/handle_death(var/mob/living/carbon/human/H)
@@ -366,6 +368,6 @@ var/datum/species/shapeshifter/promethean/prometheans
 		if(11 to 20)
 			return "[t_she] glowing gently with moderate levels of electrical activity.\n"
 		if(21 to 35)
-			return "<span class='warning'>[t_she] glowing brightly with high levels of electrical activity.</span>"
+			return span_warning("[t_she] glowing brightly with high levels of electrical activity.")
 		if(35 to INFINITY)
-			return "<span class='danger'>[t_she] radiating massive levels of electrical activity!</span>"
+			return span_danger("[t_she] radiating massive levels of electrical activity!")

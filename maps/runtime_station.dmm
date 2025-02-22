@@ -31,8 +31,6 @@
 	dir = 1
 	},
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled,
@@ -48,8 +46,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/effect/floor_decal/industrial/warning/corner{
@@ -76,8 +72,8 @@
 "cg" = (
 /obj/structure/closet/gmcloset,
 /obj/item/glass_jar,
-/obj/item/device/retail_scanner/civilian,
-/obj/item/device/retail_scanner/civilian,
+/obj/item/retail_scanner/civilian,
+/obj/item/retail_scanner/civilian,
 /obj/machinery/camera/network/civilian{
 	c_tag = "CIV - Bar Storage"
 	},
@@ -113,8 +109,6 @@
 /area/crew_quarters/kitchen)
 "cT" = (
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/wood,
@@ -135,14 +129,14 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 4
 	},
-/obj/item/weapon/storage/box/donkpockets{
+/obj/item/storage/box/donkpockets{
 	pixel_x = 3;
 	pixel_y = 3
 	},
-/obj/item/weapon/reagent_containers/glass/beaker{
+/obj/item/reagent_containers/glass/beaker{
 	pixel_x = 5
 	},
-/obj/item/weapon/reagent_containers/food/condiment/enzyme,
+/obj/item/reagent_containers/food/condiment/enzyme,
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/kitchen)
 "dw" = (
@@ -177,13 +171,9 @@
 /area/crew_quarters/bar)
 "en" = (
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/cable/green{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /turf/simulated/floor/wood,
@@ -199,7 +189,7 @@
 /turf/simulated/wall/r_wall,
 /area/crew_quarters/cafeteria)
 "eE" = (
-/obj/item/weapon/stool/padded,
+/obj/item/stool/padded,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
@@ -226,7 +216,7 @@
 /turf/simulated/floor/lino,
 /area/crew_quarters/bar)
 "fo" = (
-/obj/item/weapon/stool/padded,
+/obj/item/stool/padded,
 /obj/effect/landmark/start{
 	name = "Chemist"
 	},
@@ -243,8 +233,8 @@
 	dir = 5
 	},
 /obj/structure/table/marble,
-/obj/item/weapon/material/knife/butch,
-/obj/item/weapon/material/kitchen/rollingpin,
+/obj/item/material/knife/butch,
+/obj/item/material/kitchen/rollingpin,
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/kitchen)
 "fJ" = (
@@ -317,7 +307,7 @@
 /obj/machinery/vending/cola{
 	dir = 1
 	},
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	dir = 4;
 	name = "Station Intercom (General)";
 	pixel_x = 21
@@ -335,7 +325,7 @@
 /turf/simulated/floor/plating,
 /area/maintenance/bar)
 "hR" = (
-/obj/item/weapon/stool/padded,
+/obj/item/stool/padded,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/effect/landmark/start{
@@ -351,7 +341,7 @@
 	dir = 4
 	},
 /obj/structure/closet/crate,
-/obj/item/weapon/reagent_containers/food/drinks/flask/barflask,
+/obj/item/reagent_containers/food/drinks/flask/barflask,
 /obj/random/powercell,
 /obj/random/maintenance,
 /obj/random/maintenance/clean,
@@ -378,8 +368,6 @@
 "iQ" = (
 /obj/machinery/door/firedoor/glass,
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/disposalpipe/segment,
@@ -405,8 +393,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/effect/floor_decal/industrial/warning{
@@ -437,8 +423,6 @@
 	dir = 4
 	},
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/effect/landmark/start{
@@ -471,7 +455,7 @@
 /obj/effect/floor_decal/corner/grey/diagonal{
 	dir = 4
 	},
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	dir = 1;
 	name = "Station Intercom (General)";
 	pixel_y = 21
@@ -480,7 +464,7 @@
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/kitchen)
 "lF" = (
-/obj/item/weapon/stool/padded,
+/obj/item/stool/padded,
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /obj/effect/landmark/start{
 	name = "Chaplain"
@@ -488,7 +472,7 @@
 /turf/simulated/floor/wood,
 /area/crew_quarters/bar)
 "lQ" = (
-/obj/item/weapon/stool/padded,
+/obj/item/stool/padded,
 /obj/structure/disposalpipe/segment,
 /obj/effect/landmark/start{
 	name = "Bartender"
@@ -545,7 +529,7 @@
 /turf/simulated/floor/tiled/freezer,
 /area/crew_quarters/kitchen)
 "oT" = (
-/obj/item/weapon/card/id/gold/captain/spare,
+/obj/item/card/id/gold/captain/spare,
 /turf/simulated/floor/wood,
 /area/crew_quarters/cafeteria)
 "oU" = (
@@ -570,11 +554,9 @@
 /turf/simulated/floor/plating,
 /area/maintenance/bar)
 "pm" = (
-/obj/item/weapon/stool/padded,
+/obj/item/stool/padded,
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/effect/landmark/start{
@@ -589,8 +571,8 @@
 "pw" = (
 /obj/structure/table/woodentable,
 /obj/machinery/reagentgrinder,
-/obj/item/weapon/reagent_containers/food/drinks/shaker,
-/obj/item/weapon/packageWrap,
+/obj/item/reagent_containers/food/drinks/shaker,
+/obj/item/packageWrap,
 /obj/structure/cable/green,
 /turf/simulated/floor/wood,
 /area/crew_quarters/bar)
@@ -654,7 +636,7 @@
 /turf/simulated/floor/lino,
 /area/crew_quarters/bar)
 "sa" = (
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	dir = 1;
 	name = "Station Intercom (General)";
 	pixel_y = 21
@@ -667,7 +649,7 @@
 /area/crew_quarters/cafeteria)
 "sz" = (
 /obj/structure/table/marble,
-/obj/item/weapon/reagent_containers/food/snacks/pie,
+/obj/item/reagent_containers/food/snacks/pie,
 /obj/effect/floor_decal/corner/grey/diagonal{
 	dir = 4
 	},
@@ -695,18 +677,18 @@
 /area/crew_quarters/cafeteria)
 "te" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/deck/cah{
+/obj/item/deck/cah{
 	pixel_x = 2;
 	pixel_y = 2
 	},
-/obj/item/weapon/deck/cah/black{
+/obj/item/deck/cah/black{
 	pixel_x = -2;
 	pixel_y = -2
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/cafeteria)
 "tj" = (
-/obj/item/weapon/stool/padded,
+/obj/item/stool/padded,
 /obj/effect/landmark/start{
 	name = "Explorer"
 	},
@@ -729,7 +711,7 @@
 	dir = 4
 	},
 /obj/structure/disposalpipe/segment,
-/obj/item/device/starcaster_news{
+/obj/item/starcaster_news{
 	pixel_x = 8
 	},
 /turf/simulated/floor/tiled/white,
@@ -782,8 +764,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/effect/floor_decal/industrial/warning{
@@ -799,7 +779,7 @@
 	dir = 4
 	},
 /obj/structure/table/marble,
-/obj/item/weapon/book/manual/chef_recipes,
+/obj/item/book/manual/chef_recipes,
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/kitchen)
 "wW" = (
@@ -844,8 +824,6 @@
 	dir = 1
 	},
 /obj/structure/cable/green{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals4{
@@ -857,7 +835,7 @@
 /turf/simulated/floor/lino,
 /area/crew_quarters/bar)
 "xM" = (
-/obj/item/weapon/stool/padded,
+/obj/item/stool/padded,
 /obj/effect/floor_decal/corner/grey/diagonal{
 	dir = 4
 	},
@@ -875,10 +853,10 @@
 /obj/effect/floor_decal/corner/grey/diagonal{
 	dir = 4
 	},
-/obj/item/weapon/reagent_containers/food/condiment/small/saltshaker{
+/obj/item/reagent_containers/food/condiment/small/saltshaker{
 	pixel_x = -3
 	},
-/obj/item/weapon/reagent_containers/food/condiment/small/peppermill{
+/obj/item/reagent_containers/food/condiment/small/peppermill{
 	pixel_x = 3
 	},
 /turf/simulated/floor/tiled/white,
@@ -892,12 +870,12 @@
 /area/crew_quarters/kitchen)
 "yC" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/gun/projectile/shotgun/doublebarrel,
-/obj/item/weapon/tool/screwdriver,
+/obj/item/gun/projectile/shotgun/doublebarrel,
+/obj/item/tool/screwdriver,
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
 	},
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	desc = "Talk... lisssssten through this.";
 	name = "Station Intercom (Brig Radio)";
 	pixel_y = -21;
@@ -979,8 +957,6 @@
 /area/crew_quarters/bar)
 "zQ" = (
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/wood,
@@ -1036,7 +1012,6 @@
 	pixel_x = 24
 	},
 /obj/structure/cable/green{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/machinery/light_switch{
@@ -1120,7 +1095,7 @@
 /turf/simulated/floor/tiled,
 /area/crew_quarters/cafeteria)
 "CR" = (
-/obj/item/weapon/stool/padded,
+/obj/item/stool/padded,
 /obj/effect/landmark/start{
 	name = "AI"
 	},
@@ -1128,8 +1103,6 @@
 /area/crew_quarters/cafeteria)
 "CU" = (
 /obj/structure/cable/green{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/machinery/light{
@@ -1235,13 +1208,9 @@
 	dir = 4
 	},
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals4{
@@ -1258,8 +1227,6 @@
 	dir = 4
 	},
 /obj/structure/cable/green{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals4,
@@ -1271,10 +1238,10 @@
 /area/crew_quarters/kitchen)
 "Fq" = (
 /obj/structure/table/marble,
-/obj/item/weapon/reagent_containers/glass/rag,
-/obj/item/weapon/reagent_containers/food/drinks/flask/barflask,
-/obj/item/weapon/reagent_containers/food/drinks/flask/vacuumflask,
-/obj/item/weapon/flame/lighter/zippo,
+/obj/item/reagent_containers/glass/rag,
+/obj/item/reagent_containers/food/drinks/flask/barflask,
+/obj/item/reagent_containers/food/drinks/flask/vacuumflask,
+/obj/item/flame/lighter/zippo,
 /obj/item/clothing/head/that{
 	pixel_x = 4;
 	pixel_y = 6
@@ -1318,8 +1285,6 @@
 /area/crew_quarters/kitchen)
 "FV" = (
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/effect/landmark/start{
@@ -1345,8 +1310,8 @@
 /area/crew_quarters/cafeteria)
 "Gc" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/material/kitchen/utensil/fork,
-/obj/item/weapon/material/kitchen/utensil/spoon{
+/obj/item/material/kitchen/utensil/fork,
+/obj/item/material/kitchen/utensil/spoon{
 	pixel_x = 2
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -1360,9 +1325,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/obj/item/weapon/reagent_containers/food/snacks/mint,
-/obj/item/weapon/packageWrap,
-/obj/item/weapon/reagent_containers/dropper,
+/obj/item/reagent_containers/food/snacks/mint,
+/obj/item/packageWrap,
+/obj/item/reagent_containers/dropper,
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/kitchen)
 "Gf" = (
@@ -1384,7 +1349,7 @@
 /area/maintenance/bar)
 "GA" = (
 /obj/structure/table/marble,
-/obj/item/weapon/material/ashtray/glass,
+/obj/item/material/ashtray/glass,
 /obj/machinery/door/blast/shutters{
 	dir = 2;
 	id = "bar";
@@ -1392,8 +1357,6 @@
 	name = "Bar Shutters"
 	},
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/lino,
@@ -1406,8 +1369,6 @@
 	dir = 9
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /turf/simulated/floor/plating,
@@ -1500,7 +1461,7 @@
 /turf/simulated/floor/tiled/monotile,
 /area/crew_quarters/cafeteria)
 "KC" = (
-/obj/item/weapon/stool/padded,
+/obj/item/stool/padded,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/lino,
@@ -1516,7 +1477,7 @@
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/kitchen)
 "KS" = (
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	dir = 8;
 	name = "Station Intercom (General)";
 	pixel_x = -21
@@ -1525,8 +1486,6 @@
 	dir = 1
 	},
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/lino,
@@ -1563,8 +1522,6 @@
 	dir = 4
 	},
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/white,
@@ -1646,8 +1603,6 @@
 	dir = 4
 	},
 /obj/structure/cable/green{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals4{
@@ -1670,11 +1625,11 @@
 /obj/random/maintenance/cargo,
 /obj/random/maintenance/cargo,
 /obj/random/maintenance/cargo,
-/obj/item/weapon/material/knife,
+/obj/item/material/knife,
 /turf/simulated/floor/plating,
 /area/maintenance/bar)
 "NI" = (
-/obj/item/weapon/stool/padded,
+/obj/item/stool/padded,
 /obj/effect/landmark/start{
 	name = "Research Director"
 	},
@@ -1699,8 +1654,6 @@
 /area/crew_quarters/kitchen)
 "Oj" = (
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/effect/landmark/start{
@@ -1719,8 +1672,6 @@
 /area/crew_quarters/bar)
 "Ov" = (
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/hologram/holopad,
@@ -1783,8 +1734,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/plating,
@@ -1871,12 +1820,12 @@
 /area/crew_quarters/kitchen)
 "Tn" = (
 /obj/structure/table/woodentable,
-/obj/item/device/radio/subspace{
+/obj/item/radio/subspace{
 	desc = "A heavy duty radio that can pick up all manor of shortwave and subspace frequencies. It's a bit bulkier than a normal radio thanks to the extra hardware. An engraving on the frame reads: IF FOUND, RETURN TO THE BAR!";
 	name = "Bar subspace radio";
 	pixel_y = 5
 	},
-/obj/item/weapon/deck/cards{
+/obj/item/deck/cards{
 	pixel_x = -5;
 	pixel_y = -2
 	},
@@ -1887,7 +1836,6 @@
 	dir = 4
 	},
 /obj/structure/cable/green{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/structure/closet/secure_closet/freezer/kitchen,
@@ -1912,8 +1860,6 @@
 /area/crew_quarters/kitchen)
 "TD" = (
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals4{
@@ -1953,7 +1899,7 @@
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/kitchen)
 "Ux" = (
-/obj/item/weapon/stool/padded,
+/obj/item/stool/padded,
 /obj/effect/landmark/start{
 	name = "Cargo Technician"
 	},
@@ -1975,8 +1921,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/door/firedoor/border_only,
@@ -2006,8 +1950,8 @@
 /area/crew_quarters/cafeteria)
 "Xe" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/material/kitchen/utensil/fork,
-/obj/item/weapon/material/kitchen/utensil/spoon{
+/obj/item/material/kitchen/utensil/fork,
+/obj/item/material/kitchen/utensil/spoon{
 	pixel_x = 2
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -2023,8 +1967,6 @@
 /area/maintenance/bar)
 "XL" = (
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/effect/landmark/start{
@@ -2053,13 +1995,9 @@
 	req_access = list(28)
 	},
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/door/firedoor/border_only,
@@ -2072,15 +2010,15 @@
 	},
 /obj/structure/closet/chefcloset,
 /obj/item/glass_jar,
-/obj/item/device/retail_scanner/civilian,
-/obj/item/weapon/soap/nanotrasen,
-/obj/item/device/destTagger{
+/obj/item/retail_scanner/civilian,
+/obj/item/soap/nanotrasen,
+/obj/item/destTagger{
 	pixel_x = 4;
 	pixel_y = 3
 	},
-/obj/item/weapon/packageWrap,
-/obj/item/weapon/packageWrap,
-/obj/item/weapon/packageWrap,
+/obj/item/packageWrap,
+/obj/item/packageWrap,
+/obj/item/packageWrap,
 /obj/item/clothing/gloves/sterile/latex,
 /obj/item/clothing/gloves/sterile/latex,
 /turf/simulated/floor/tiled/freezer,
@@ -2102,13 +2040,9 @@
 /area/crew_quarters/kitchen)
 "YA" = (
 /obj/structure/cable/green{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/wood,
@@ -2133,8 +2067,6 @@
 	req_access = list(25)
 	},
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/steel_grid,
@@ -2147,13 +2079,13 @@
 /obj/effect/floor_decal/corner/grey/diagonal{
 	dir = 4
 	},
-/obj/item/weapon/reagent_containers/food/condiment/small/saltshaker{
+/obj/item/reagent_containers/food/condiment/small/saltshaker{
 	pixel_x = -3
 	},
-/obj/item/weapon/reagent_containers/food/condiment/small/peppermill{
+/obj/item/reagent_containers/food/condiment/small/peppermill{
 	pixel_x = 3
 	},
-/obj/item/weapon/reagent_containers/food/condiment/small/sugar,
+/obj/item/reagent_containers/food/condiment/small/sugar,
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/cafeteria)
 "ZR" = (

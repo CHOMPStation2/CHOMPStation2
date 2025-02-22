@@ -46,8 +46,8 @@
 "dO" = (
 /obj/structure/table/marble,
 /obj/effect/floor_decal/corner/green/diagonal,
-/obj/item/weapon/storage/pill_bottle/nutriment,
-/obj/item/weapon/reagent_containers/glass/bottle/mutagen,
+/obj/item/storage/pill_bottle/nutriment,
+/obj/item/reagent_containers/glass/bottle/mutagen,
 /obj/machinery/light/poi,
 /turf/simulated/shuttle/floor/yellow,
 /area/submap/piratevessel)
@@ -61,7 +61,14 @@
 "fJ" = (
 /obj/structure/table/marble,
 /obj/effect/floor_decal/corner/green/diagonal,
-/obj/item/weapon/reagent_containers/glass/bottle/left4zed,
+/obj/item/reagent_containers/glass/bottle/left4zed,
+/turf/simulated/shuttle/floor/yellow,
+/area/submap/piratevessel)
+"fK" = (
+/obj/structure/closet/crate/secure/loot,
+/obj/effect/floor_decal/corner/purple/diagonal,
+/obj/random/contraband,
+/obj/random/maintenance/morestuff,
 /turf/simulated/shuttle/floor/yellow,
 /area/submap/piratevessel)
 "fX" = (
@@ -89,8 +96,6 @@
 "hc" = (
 /obj/structure/closet/crate/medical,
 /obj/effect/floor_decal/corner/purple/diagonal,
-/obj/random/contraband,
-/obj/random/contraband,
 /obj/random/maintenance/morestuff,
 /turf/simulated/shuttle/floor/yellow,
 /area/submap/piratevessel)
@@ -111,7 +116,7 @@
 "hR" = (
 /obj/structure/table/gold,
 /obj/effect/floor_decal/corner/yellow/diagonal,
-/obj/item/weapon/card/emag,
+/obj/item/card/emag,
 /turf/simulated/shuttle/floor/yellow,
 /area/submap/piratevessel)
 "ib" = (
@@ -131,13 +136,12 @@
 /obj/effect/floor_decal/corner/purple/diagonal,
 /obj/machinery/light/poi,
 /obj/random/contraband,
-/obj/random/contraband,
 /obj/random/maintenance/morestuff,
 /turf/simulated/shuttle/floor/yellow,
 /area/submap/piratevessel)
 "iP" = (
-/obj/effect/floor_decal/corner/yellow/diagonal,
-/obj/random/contraband,
+/obj/structure/table/marble,
+/obj/effect/floor_decal/corner/purple/diagonal,
 /turf/simulated/shuttle/floor/yellow,
 /area/submap/piratevessel)
 "ka" = (
@@ -178,7 +182,7 @@
 "lZ" = (
 /obj/structure/table/marble,
 /obj/effect/floor_decal/corner/green/diagonal,
-/obj/item/weapon/reagent_containers/glass/bottle/robustharvest,
+/obj/item/reagent_containers/glass/bottle/robustharvest,
 /turf/simulated/shuttle/floor/yellow,
 /area/submap/piratevessel)
 "mq" = (
@@ -207,8 +211,8 @@
 "pR" = (
 /obj/structure/table/marble,
 /obj/effect/floor_decal/corner/green/diagonal,
-/obj/item/weapon/reagent_containers/glass/bottle/eznutrient,
-/obj/item/weapon/reagent_containers/glass/bottle/eznutrient,
+/obj/item/reagent_containers/glass/bottle/eznutrient,
+/obj/item/reagent_containers/glass/bottle/eznutrient,
 /turf/simulated/shuttle/floor/yellow,
 /area/submap/piratevessel)
 "qd" = (
@@ -247,8 +251,6 @@
 "rw" = (
 /obj/structure/table/gold,
 /obj/effect/floor_decal/corner/yellow/diagonal,
-/obj/item/rig_module/fabricator/energy_net,
-/obj/item/weapon/rig/pmc/security/grey/equipped,
 /turf/simulated/shuttle/floor/yellow,
 /area/submap/piratevessel)
 "st" = (
@@ -284,7 +286,6 @@
 /obj/effect/floor_decal/corner/purple/diagonal,
 /obj/random/contraband,
 /obj/random/contraband,
-/obj/random/maintenance/morestuff,
 /turf/simulated/shuttle/floor/yellow,
 /area/submap/piratevessel)
 "tX" = (
@@ -305,8 +306,8 @@
 "uL" = (
 /obj/effect/floor_decal/corner/purple/diagonal,
 /obj/structure/closet/jcloset,
-/obj/item/weapon/reagent_containers/spray/cleaner,
-/obj/item/weapon/grenade/chem_grenade/cleaner,
+/obj/item/reagent_containers/spray/cleaner,
+/obj/item/grenade/chem_grenade/cleaner,
 /turf/simulated/shuttle/floor/yellow,
 /area/submap/piratevessel)
 "vY" = (
@@ -343,7 +344,6 @@
 /obj/structure/closet/crate/mimic,
 /obj/effect/floor_decal/corner/purple/diagonal,
 /obj/random/contraband,
-/obj/random/contraband,
 /obj/random/maintenance/morestuff,
 /turf/simulated/shuttle/floor/yellow,
 /area/submap/piratevessel)
@@ -351,11 +351,10 @@
 /obj/effect/floor_decal/corner/yellow/diagonal,
 /obj/structure/table/rack/shelf/steel,
 /obj/random/gun/random,
-/obj/random/gun/random,
 /obj/machinery/light/poi{
 	dir = 1
 	},
-/obj/random/contraband,
+/obj/random/medical/pillbottle,
 /turf/simulated/shuttle/floor/yellow,
 /area/submap/piratevessel)
 "BJ" = (
@@ -368,10 +367,8 @@
 /turf/simulated/shuttle/floor/yellow,
 /area/submap/piratevessel)
 "Dr" = (
-/obj/effect/floor_decal/corner/yellow/diagonal,
-/obj/structure/table/rack/shelf/steel,
-/obj/random/contraband,
-/obj/item/weapon/gun/energy/lasershotgun,
+/obj/structure/table/marble,
+/obj/random/maintenance/foodstuff,
 /turf/simulated/shuttle/floor/yellow,
 /area/submap/piratevessel)
 "Dy" = (
@@ -406,8 +403,8 @@
 "Fc" = (
 /obj/structure/table/marble,
 /obj/effect/floor_decal/corner/green/diagonal,
-/obj/item/weapon/reagent_containers/glass/bucket,
-/obj/item/weapon/reagent_containers/glass/bucket,
+/obj/item/reagent_containers/glass/bucket,
+/obj/item/reagent_containers/glass/bucket,
 /obj/machinery/light/poi,
 /turf/simulated/shuttle/floor/yellow,
 /area/submap/piratevessel)
@@ -443,8 +440,7 @@
 "Fw" = (
 /obj/effect/floor_decal/corner/yellow/diagonal,
 /obj/structure/table/rack/shelf/steel,
-/obj/random/contraband,
-/obj/item/weapon/gun/energy/lasercannon,
+/obj/random/medical/pillbottle,
 /turf/simulated/shuttle/floor/yellow,
 /area/submap/piratevessel)
 "Gl" = (
@@ -463,15 +459,14 @@
 /obj/structure/closet/crate,
 /obj/effect/floor_decal/corner/purple/diagonal,
 /obj/random/contraband,
-/obj/random/contraband,
 /obj/random/maintenance/morestuff,
 /turf/simulated/shuttle/floor/yellow,
 /area/submap/piratevessel)
 "Gw" = (
 /obj/structure/table/marble,
 /obj/effect/floor_decal/corner/green/diagonal,
-/obj/item/weapon/storage/pill_bottle/nutriment,
-/obj/item/weapon/reagent_containers/glass/bottle/biomass,
+/obj/item/storage/pill_bottle/nutriment,
+/obj/item/reagent_containers/glass/bottle/biomass,
 /turf/simulated/shuttle/floor/yellow,
 /area/submap/piratevessel)
 "Hf" = (
@@ -500,14 +495,11 @@
 /obj/machinery/light/poi{
 	dir = 1
 	},
-/obj/random/contraband,
 /turf/simulated/shuttle/floor/yellow,
 /area/submap/piratevessel)
 "Jd" = (
 /obj/structure/closet/crate/freezer/nanotrasen,
 /obj/effect/floor_decal/corner/purple/diagonal,
-/obj/random/contraband,
-/obj/random/contraband,
 /obj/random/maintenance/morestuff,
 /turf/simulated/shuttle/floor/yellow,
 /area/submap/piratevessel)
@@ -530,8 +522,8 @@
 "JU" = (
 /obj/structure/table/marble,
 /obj/effect/floor_decal/corner/green/diagonal,
-/obj/item/weapon/reagent_containers/glass/bottle/eznutrient,
-/obj/item/weapon/reagent_containers/glass/bottle/eznutrient,
+/obj/item/reagent_containers/glass/bottle/eznutrient,
+/obj/item/reagent_containers/glass/bottle/eznutrient,
 /obj/machinery/light/poi{
 	dir = 1
 	},
@@ -556,7 +548,6 @@
 /obj/effect/floor_decal/corner/yellow/diagonal,
 /obj/structure/table/rack/shelf/steel,
 /obj/random/toolbox,
-/obj/random/contraband,
 /turf/simulated/shuttle/floor/yellow,
 /area/submap/piratevessel)
 "Mb" = (
@@ -598,8 +589,8 @@
 "NO" = (
 /obj/structure/table/marble,
 /obj/effect/floor_decal/corner/green/diagonal,
-/obj/item/weapon/material/minihoe,
-/obj/item/weapon/material/knife/machete/hatchet,
+/obj/item/material/minihoe,
+/obj/item/material/knife/machete/hatchet,
 /turf/simulated/shuttle/floor/yellow,
 /area/submap/piratevessel)
 "NZ" = (
@@ -620,18 +611,16 @@
 "Pd" = (
 /obj/effect/floor_decal/corner/yellow/diagonal,
 /obj/structure/table/rack/shelf/steel,
-/obj/random/gun/random,
-/obj/random/gun/random,
 /obj/machinery/light/poi,
-/obj/random/contraband,
+/obj/random/medical/pillbottle,
+/obj/item/rig_module/fabricator/energy_net,
 /turf/simulated/shuttle/floor/yellow,
 /area/submap/piratevessel)
 "PL" = (
 /obj/effect/floor_decal/corner/yellow/diagonal,
 /obj/structure/table/rack/shelf/steel,
-/obj/random/firstaid,
 /obj/machinery/light/poi,
-/obj/random/contraband,
+/obj/item/rig/pmc/security/grey/equipped,
 /turf/simulated/shuttle/floor/yellow,
 /area/submap/piratevessel)
 "PT" = (
@@ -656,20 +645,10 @@
 "RN" = (
 /obj/structure/closet/crate/carp,
 /obj/effect/floor_decal/corner/purple/diagonal,
-/obj/random/contraband,
-/obj/random/contraband,
-/obj/random/maintenance/morestuff,
 /turf/simulated/shuttle/floor/yellow,
 /area/submap/piratevessel)
 "Sb" = (
 /obj/effect/floor_decal/corner/yellow/border,
-/turf/simulated/shuttle/floor/yellow,
-/area/submap/piratevessel)
-"Sp" = (
-/obj/structure/table/marble,
-/obj/structure/table/marble,
-/obj/random/material/precious,
-/obj/effect/floor_decal/corner/purple/diagonal,
 /turf/simulated/shuttle/floor/yellow,
 /area/submap/piratevessel)
 "Tg" = (
@@ -686,30 +665,24 @@
 /obj/random/contraband/nofail,
 /obj/random/contraband/nofail,
 /obj/random/contraband,
-/obj/random/contraband,
 /obj/random/maintenance/morestuff,
 /turf/simulated/shuttle/floor/yellow,
 /area/submap/piratevessel)
 "Uc" = (
 /obj/structure/closet/crate/medical/blood,
 /obj/effect/floor_decal/corner/purple/diagonal,
-/obj/random/contraband,
-/obj/random/contraband,
 /obj/random/maintenance/morestuff,
 /turf/simulated/shuttle/floor/yellow,
 /area/submap/piratevessel)
 "Un" = (
 /obj/structure/table/marble,
-/obj/random/maintenance/foodstuff,
-/obj/random/maintenance/foodstuff,
-/obj/random/maintenance/foodstuff,
 /turf/simulated/shuttle/floor/yellow,
 /area/submap/piratevessel)
 "Vb" = (
 /obj/effect/floor_decal/corner/purple/diagonal,
 /obj/structure/mopbucket,
-/obj/item/weapon/mop/advanced,
-/obj/item/weapon/reagent_containers/glass/bucket,
+/obj/item/mop/advanced,
+/obj/item/reagent_containers/glass/bucket,
 /turf/simulated/shuttle/floor/yellow,
 /area/submap/piratevessel)
 "VB" = (
@@ -726,6 +699,12 @@
 /area/submap/piratevessel)
 "Wd" = (
 /obj/effect/floor_decal/corner/purple/diagonal,
+/turf/simulated/shuttle/floor/yellow,
+/area/submap/piratevessel)
+"Wj" = (
+/obj/structure/table/gold,
+/obj/effect/floor_decal/corner/yellow/diagonal,
+/obj/machinery/recharger,
 /turf/simulated/shuttle/floor/yellow,
 /area/submap/piratevessel)
 "Wy" = (
@@ -757,7 +736,9 @@
 /turf/simulated/shuttle/floor/yellow,
 /area/submap/piratevessel)
 "YG" = (
-/mob/living/simple_mob/humanoid/pirate/captain,
+/mob/living/simple_mob/humanoid/pirate/captain{
+	loot_list = list(/obj/item/gun/energy/zip = 100, /obj/item/gun/energy/zip = 100, /obj/item/gun/energy/zip = 100, /obj/item/gun/energy/zip = 100, /obj/item/card/emag = 50)
+	},
 /obj/effect/floor_decal/corner/yellow/diagonal,
 /turf/simulated/shuttle/floor/yellow,
 /area/submap/piratevessel)
@@ -1050,7 +1031,7 @@ EC
 mq
 xr
 Wd
-tX
+iP
 Wd
 Fh
 mq
@@ -1101,10 +1082,10 @@ Ev
 mq
 bh
 bT
+Dr
 Un
 Un
-Un
-Un
+Dr
 gO
 Nu
 mq
@@ -1131,9 +1112,9 @@ Ev
 MZ
 bh
 bT
+Dr
 Un
-Un
-Un
+Dr
 Un
 gO
 Nu
@@ -1170,7 +1151,7 @@ qW
 mq
 Wd
 Wd
-tX
+iP
 Wd
 Jd
 mq
@@ -1200,7 +1181,7 @@ LK
 mq
 xr
 Wd
-Sp
+tX
 qd
 ib
 mq
@@ -1232,7 +1213,7 @@ Wd
 Wd
 tX
 Wd
-DY
+fK
 mq
 dt
 dt
@@ -1309,7 +1290,7 @@ mq
 MZ
 mq
 mq
-Dr
+Fw
 BJ
 BJ
 BJ
@@ -1344,7 +1325,7 @@ BJ
 cn
 rw
 hR
-cn
+Wj
 BJ
 LZ
 mq
@@ -1375,7 +1356,7 @@ BJ
 YG
 BJ
 BJ
-iP
+BJ
 PL
 mq
 hO

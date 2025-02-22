@@ -1,6 +1,5 @@
-import { BooleanLike } from 'common/react';
-
-import { useBackend } from '../backend';
+import { useBackend } from 'tgui/backend';
+import { Window } from 'tgui/layouts';
 import {
   Box,
   Button,
@@ -8,18 +7,18 @@ import {
   NumberInput,
   ProgressBar,
   Section,
-} from '../components';
-import { Window } from '../layouts';
+} from 'tgui-core/components';
+import type { BooleanLike } from 'tgui-core/react';
 
 type Data = {
   inserted_battery: BooleanLike;
-  anomaly: string;
-  charge: number;
-  capacity: number;
-  timeleft: number;
+  anomaly: string | null;
+  charge: number | null;
+  capacity: number | null;
+  timeleft: number | null;
   activated: BooleanLike;
-  duration: number;
-  interval: number;
+  duration: number | null;
+  interval: number | null;
 };
 
 export const XenoarchHandheldPowerUtilizer = (props) => {
@@ -60,7 +59,7 @@ export const XenoarchHandheldPowerUtilizer = (props) => {
                 {anomaly || 'N/A'}
               </LabeledList.Item>
               <LabeledList.Item label="Charge">
-                <ProgressBar value={charge} maxValue={capacity}>
+                <ProgressBar value={charge!} maxValue={capacity!}>
                   {charge} / {capacity}
                 </ProgressBar>
               </LabeledList.Item>
@@ -76,11 +75,12 @@ export const XenoarchHandheldPowerUtilizer = (props) => {
                 <NumberInput
                   unit="s"
                   fluid
+                  step={1}
                   minValue={0}
-                  value={duration}
+                  value={duration!}
                   stepPixelSize={4}
                   maxValue={30}
-                  onDrag={(e, val) =>
+                  onDrag={(val: number) =>
                     act('changeduration', { duration: val * 10 })
                   }
                 />
@@ -89,11 +89,12 @@ export const XenoarchHandheldPowerUtilizer = (props) => {
                 <NumberInput
                   unit="s"
                   fluid
+                  step={1}
                   minValue={0}
-                  value={interval}
+                  value={interval!}
                   stepPixelSize={10}
                   maxValue={10}
-                  onDrag={(e, val) =>
+                  onDrag={(val: number) =>
                     act('changeinterval', { interval: val * 10 })
                   }
                 />

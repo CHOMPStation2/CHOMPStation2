@@ -10,7 +10,7 @@ var/list/overminds = list()
 	see_in_dark = 8
 	invisibility = INVISIBILITY_OBSERVER
 
-	faction = "blob"
+	faction = FACTION_BLOB
 	var/obj/structure/blob/core/blob_core = null // The blob overmind's core
 	var/blob_points = 0
 	var/max_blob_points = 200
@@ -70,7 +70,6 @@ var/list/overminds = list()
 	overminds -= src
 	return ..()
 
-// ChompEDIT START - tgpanel
 /mob/observer/blob/get_status_tab_items()
 	. = ..()
 	. += ""
@@ -79,7 +78,6 @@ var/list/overminds = list()
 		. += "Core Health: [blob_core.integrity]"
 	. += "Power Stored: [blob_points]/[max_blob_points]"
 	. += "Total Blobs: [GLOB.all_blobs.len]"
-//ChompEDIT END
 
 /mob/observer/blob/Move(var/atom/NewLoc, Dir = 0)
 	if(placed)
@@ -118,8 +116,8 @@ var/list/overminds = list()
 	if(client)
 		if(message)
 			client.handle_spam_prevention(MUTE_IC)
-			if((client.prefs.muted & MUTE_IC) || say_disabled)
-				to_chat(src, "<span class='warning'>You cannot speak in IC (Muted).</span>")
+			if((client.prefs.muted & MUTE_IC))
+				to_chat(src, span_warning("You cannot speak in IC (Muted)."))
 				return
 
 	//These will contain the main receivers of the message

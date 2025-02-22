@@ -6,7 +6,7 @@
 	desc = "Used to control a linked teleportation Hub and Station."
 	icon_keyboard = "teleport_key"
 	icon_screen = "teleport"
-	circuit = /obj/item/weapon/circuitboard/teleporter
+	circuit = /obj/item/circuitboard/teleporter
 	dir = 4
 	var/id = null
 	var/one_time_use = 0 //Used for one-time-use teleport cards (such as clown planet coordinates.)
@@ -48,8 +48,8 @@
 	return ..()
 
 /obj/machinery/computer/teleporter/attackby(I as obj, mob/living/user as mob)
-	if(istype(I, /obj/item/weapon/card/data/))
-		var/obj/item/weapon/card/data/C = I
+	if(istype(I, /obj/item/card/data/))
+		var/obj/item/card/data/C = I
 		if(stat & (NOPOWER|BROKEN) & (C.function != "teleporter"))
 			attack_hand()
 
@@ -65,15 +65,15 @@
 			L = locate("landmark*[C.data]") // use old stype
 
 		if(istype(L, /obj/effect/landmark/) && istype(L.loc, /turf))
-			to_chat(usr, "You insert the coordinates into the machine.")
-			to_chat(usr, "A message flashes across the screen, reminding the user that the nuclear authentication disk is not transportable via insecure means.")
+			to_chat(user, "You insert the coordinates into the machine.")
+			to_chat(user, "A message flashes across the screen, reminding the user that the nuclear authentication disk is not transportable via insecure means.")
 			user.drop_item()
 			qdel(I)
 
 			if(C.data == "Clown Land")
 				//whoops
 				for(var/mob/O in hearers(src, null))
-					O.show_message("<span class='warning'>Incoming bluespace portal detected, unable to lock in.</span>", 2)
+					O.show_message(span_warning("Incoming bluespace portal detected, unable to lock in."), 2)
 
 				for(var/obj/machinery/teleport/hub/H in range(1))
 					var/amount = rand(2,5)
@@ -82,11 +82,11 @@
 				//
 			else
 				for(var/mob/O in hearers(src, null))
-					O.show_message("<span class='notice'>Locked In</span>", 2)
+					O.show_message(span_notice("Locked In"), 2)
 				teleport_control.locked = L
 				one_time_use = 1
 
-			add_fingerprint(usr)
+			add_fingerprint(user)
 	else
 		..()
 
@@ -110,7 +110,7 @@
 	set src in oview(1)
 	set desc = "ID Tag:"
 
-	if(stat & (NOPOWER|BROKEN) || !istype(usr,/mob/living))
+	if(stat & (NOPOWER|BROKEN) || !isliving(usr))
 		return
 	if(t)
 		id = t
@@ -139,7 +139,7 @@
 	use_power = USE_POWER_IDLE
 	idle_power_usage = 10
 	active_power_usage = 2000
-	circuit = /obj/item/weapon/circuitboard/teleporter_hub
+	circuit = /obj/item/circuitboard/teleporter_hub
 	var/obj/machinery/computer/teleporter/com
 
 /obj/machinery/teleport/hub/Initialize()
@@ -164,11 +164,11 @@
 		return
 	if(!com.teleport_control.locked)
 		for(var/mob/O in hearers(src, null))
-			O.show_message("<span class='warning'>Failure: Cannot authenticate locked on coordinates. Please reinstate coordinate matrix.</span>")
+			O.show_message(span_warning("Failure: Cannot authenticate locked on coordinates. Please reinstate coordinate matrix."))
 		return
 	if(istype(M, /atom/movable))
 		//VOREStation Addition Start: Prevent taurriding abuse
-		if(istype(M, /mob/living))
+		if(isliving(M))
 			var/mob/living/L = M
 			if(LAZYLEN(L.buckled_mobs))
 				var/datum/riding/R = L.riding_datum
@@ -190,7 +190,7 @@
 		accurate = 1
 		spawn(3000)	accurate = 0 //Accurate teleporting for 5 minutes
 		for(var/mob/B in hearers(src, null))
-			B.show_message("<span class='notice'>Test fire completed.</span>")
+			B.show_message(span_notice("Test fire completed."))
 	return
 
 //////
@@ -207,7 +207,7 @@
 	use_power = USE_POWER_IDLE
 	idle_power_usage = 10
 	active_power_usage = 2000
-	circuit = /obj/item/weapon/circuitboard/teleporter_station
+	circuit = /obj/item/circuitboard/teleporter_station
 	var/obj/machinery/teleport/hub/com
 
 /obj/machinery/teleport/station/Initialize()
@@ -230,7 +230,7 @@
 		update_use_power(USE_POWER_ACTIVE)
 		com.update_use_power(USE_POWER_ACTIVE)
 		for(var/mob/O in hearers(src, null))
-			O.show_message("<span class='notice'>Teleporter engaged!</span>", 2)
+			O.show_message(span_notice("Teleporter engaged!"), 2)
 	add_fingerprint(usr)
 	engaged = 1
 	return
@@ -245,7 +245,7 @@
 		com.update_use_power(USE_POWER_IDLE)
 		update_use_power(USE_POWER_IDLE)
 		for(var/mob/O in hearers(src, null))
-			O.show_message("<span class='notice'>Teleporter disengaged!</span>", 2)
+			O.show_message(span_notice("Teleporter disengaged!"), 2)
 	add_fingerprint(usr)
 	engaged = 0
 	return
@@ -255,7 +255,7 @@
 		return
 
 	active = TRUE
-	visible_message("<span class='notice'>Test firing!</span>")
+	visible_message(span_notice("Test firing!"))
 	com.teleport()
 	use_power(5000)
 	flick(src, "controller-c") //VOREStation Add

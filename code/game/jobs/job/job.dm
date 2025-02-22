@@ -7,7 +7,7 @@
 	var/list/access = list()              // Useful for servers which either have fewer players, so each person needs to fill more than one role, or servers which like to give more access, so players can't hide forever in their super secure departments (I'm looking at you, chemistry!)
 	var/flag = 0 	                      // Bitflags for the job
 	var/department_flag = 0
-	var/faction = "None"	              // Players will be allowed to spawn in as jobs that are set to "Station"
+	var/faction = FACTION_NONE            // Players will be allowed to spawn in as jobs that are set to FACTION_STATION
 	var/total_positions = 0               // How many players can be this job
 	var/spawn_positions = 0               // How many players can spawn in as this job
 	var/current_positions = 0             // How many players have this job
@@ -38,6 +38,33 @@
 
 	// Description of the job's role and minimum responsibilities.
 	var/job_description = "This Job doesn't have a description! Please report it!"
+
+	var/camp_protection = FALSE				//CHOMPadd
+	var/list/restricted_keys = list()		//CHOMPadd
+	var/list/shift_keys = list()			//CHOMPadd
+
+	//Requires a ckey to be whitelisted in jobwhitelist.txt
+	var/whitelist_only = 0
+
+	//Does not display this job on the occupation setup screen
+	var/latejoin_only = 0
+
+	//Every hour playing this role gains this much time off. (Can be negative for off duty jobs!)
+	var/timeoff_factor = 3
+
+	//What type of PTO is that job earning?
+	var/pto_type
+
+	//Disallow joining as this job midround from off-duty position via going on-duty
+	var/disallow_jobhop = FALSE
+
+	//Time required in the department as other jobs before playing this one (in hours)
+	var/dept_time_required = 0
+
+	//Do we forbid ourselves from earning PTO?
+	var/playtime_only = FALSE
+
+	var/requestable = TRUE
 
 /datum/job/New()
 	. = ..()
@@ -77,18 +104,18 @@
 	var/datum/money_account/M = create_account(H.real_name, money_amount, null, offmap_spawn)
 	if(H.mind)
 		var/remembered_info = ""
-		remembered_info += "<b>Your account number is:</b> #[M.account_number]<br>"
-		remembered_info += "<b>Your account pin is:</b> [M.remote_access_pin]<br>"
-		remembered_info += "<b>Your account funds are:</b> $[M.money]<br>"
+		remembered_info += span_bold("Your account number is:") + " #[M.account_number]<br>"
+		remembered_info += span_bold("Your account pin is:") + " [M.remote_access_pin]<br>"
+		remembered_info += span_bold("Your account funds are:") + " $[M.money]<br>"
 
 		if(M.transaction_log.len)
 			var/datum/transaction/T = M.transaction_log[1]
-			remembered_info += "<b>Your account was created:</b> [T.time], [T.date] at [T.source_terminal]<br>"
+			remembered_info += span_bold("Your account was created:") + " [T.time], [T.date] at [T.source_terminal]<br>"
 		H.mind.store_memory(remembered_info)
 
 		H.mind.initial_account = M
 
-	to_chat(H, "<span class='notice'><b>Your account number is: [M.account_number], your account pin is: [M.remote_access_pin]</b></span>")
+	to_chat(H, span_boldnotice("Your account number is: [M.account_number], your account pin is: [M.remote_access_pin]"))
 
 // overrideable separately so AIs/borgs can have cardborg hats without unneccessary new()/qdel()
 /datum/job/proc/equip_preview(mob/living/carbon/human/H, var/alt_title)
@@ -98,7 +125,7 @@
 	. = outfit.equip_base(H, title, alt_title)
 
 /datum/job/proc/get_access()
-	if(!config || CONFIG_GET(flag/jobs_have_minimal_access)) // CHOMPEdit
+	if(!config || CONFIG_GET(flag/jobs_have_minimal_access))
 		return src.minimal_access.Copy()
 	else
 		return src.access.Copy()
@@ -108,7 +135,7 @@
 	return (available_in_days(C) == 0) //Available in 0 days = available right now = player is old enough to play.
 
 /datum/job/proc/available_in_days(client/C)
-	if(C && CONFIG_GET(flag/use_age_restriction_for_jobs) && isnum(C.player_age) && isnum(minimal_player_age)) // CHOMPEdit
+	if(C && CONFIG_GET(flag/use_age_restriction_for_jobs) && isnum(C.player_age) && isnum(minimal_player_age))
 		return max(0, minimal_player_age - C.player_age)
 	return 0
 
@@ -188,3 +215,58 @@
 	if(brain_type in banned_job_species)
 		return TRUE
 	*/
+
+//CHOMPadd start
+/datum/job/proc/register_shift_key(key)
+	if(key)
+		var/list/keylist = list(key)
+		SSjob.shift_keys[title] += keylist
+//CHOMPadd end
+
+//CHOMPAdd Start
+/datum/job/proc/update_limit(var/comperator)
+	return
+//CHOMPAdd End
+
+// Check client-specific availability rules.
+/datum/job/proc/player_has_enough_pto(client/C)
+	return timeoff_factor >= 0 || (C && LAZYACCESS(C.department_hours, pto_type) > 0)
+
+/datum/job/proc/player_has_enough_playtime(client/C)
+	return (available_in_playhours(C) == 0)
+
+/datum/job/proc/available_in_playhours(client/C)
+	if(C && CONFIG_GET(flag/use_playtime_restriction_for_jobs) && dept_time_required)
+		if(isnum(C.play_hours[pto_type])) // Has played that department before
+			return max(0, dept_time_required - C.play_hours[pto_type])
+		else // List doesn't have that entry, maybe never played, maybe invalid PTO type (you should fix that...)
+			return dept_time_required // Could be 0, too, which is fine! They can play that
+	return 0
+
+// Special treatment for some the more complicated heads
+
+// Captain gets every department combined
+/datum/job/captain/available_in_playhours(client/C)
+	if(C && CONFIG_GET(flag/use_playtime_restriction_for_jobs) && dept_time_required)
+		var/remaining_time_needed = dept_time_required
+		for(var/key in C.play_hours)
+			if(isnum(C.play_hours[key]) && !(key == PTO_TALON))
+				remaining_time_needed = max(0, remaining_time_needed - C.play_hours[key])
+		return remaining_time_needed
+	return 0
+
+// HoP gets civilian, cargo, and exploration combined
+/datum/job/hop/available_in_playhours(client/C)
+	if(C && CONFIG_GET(flag/use_playtime_restriction_for_jobs) && dept_time_required)
+		var/remaining_time_needed = dept_time_required
+		if(isnum(C.play_hours[PTO_CIVILIAN]))
+			remaining_time_needed = max(0, remaining_time_needed - C.play_hours[PTO_CIVILIAN])
+		if(isnum(C.play_hours[PTO_CARGO]))
+			remaining_time_needed = max(0, remaining_time_needed - C.play_hours[PTO_CARGO])
+		if(isnum(C.play_hours[PTO_EXPLORATION]))
+			remaining_time_needed = max(0, remaining_time_needed - C.play_hours[PTO_EXPLORATION])
+		return remaining_time_needed
+	return 0
+
+/datum/job/proc/get_request_reasons()
+	return list()

@@ -14,6 +14,6 @@
 		if(L.check_submerged() <= 0)
 			return
 		if(!istype(oldloc, /turf/simulated/floor/water/hotspring))
-			to_chat(L, "<span class='warning'>You feel an overwhelming wave of warmth from entering \the [src]!</span>")
+			to_chat(L, span_warning("You feel an overwhelming wave of warmth from entering \the [src]!"))
 	AM.water_act(5)
 	..()

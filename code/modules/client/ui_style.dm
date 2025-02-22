@@ -37,12 +37,12 @@ var/global/list/all_tooltip_styles = list(
 
 /client/verb/change_ui()
 	set name = "Change UI"
-	set category = "Preferences"
+	set category = "Preferences.Game"
 	set desc = "Configure your user interface"
 
 	if(!ishuman(usr))
 		if(!isrobot(usr))
-			to_chat(usr, "<span class='warning'>You must be a human or a robot to use this verb.</span>")
+			to_chat(usr, span_warning("You must be a human or a robot to use this verb."))
 			return
 
 	var/UI_style_new = tgui_input_list(usr, "Select a style. White is recommended for customization", "UI Style Choice", all_ui_styles)
@@ -51,31 +51,15 @@ var/global/list/all_tooltip_styles = list(
 	var/UI_style_alpha_new = tgui_input_number(usr, "Select a new alpha (transparency) parameter for your UI, between 50 and 255", null, null, 255, 50)
 	if(!UI_style_alpha_new || !(UI_style_alpha_new <= 255 && UI_style_alpha_new >= 50)) return
 
-	var/UI_style_color_new = input(usr, "Choose your UI color. Dark colors are not recommended!") as color|null
+	var/UI_style_color_new = tgui_color_picker(usr, "Choose your UI color. Dark colors are not recommended!")
 	if(!UI_style_color_new) return
 
 	//update UI
-	var/list/icons = usr.hud_used.adding + usr.hud_used.other + usr.hud_used.hotkeybuttons
-	icons.Add(usr.zone_sel)
-	icons.Add(usr.gun_setting_icon)
-	icons.Add(usr.item_use_icon)
-	icons.Add(usr.gun_move_icon)
-	icons.Add(usr.radio_use_icon)
-
-	var/icon/ic = all_ui_styles[UI_style_new]
-	if(isrobot(usr))
-		ic = all_ui_styles_robot[UI_style_new]
-
-	for(var/obj/screen/I in icons)
-		if(I.name in list(I_HELP, I_HURT, I_DISARM, I_GRAB)) continue
-		I.icon = ic
-		I.color = UI_style_color_new
-		I.alpha = UI_style_alpha_new
-
+	usr.update_ui_style(UI_style_new, UI_style_alpha_new, UI_style_color_new)
 
 	if(tgui_alert(usr, "Like it? Save changes?","Save?",list("Yes", "No")) == "Yes")
-		prefs.UI_style = UI_style_new
-		prefs.UI_style_alpha = UI_style_alpha_new
-		prefs.UI_style_color = UI_style_color_new
+		usr.write_preference_directly(/datum/preference/choiced/ui_style, UI_style_new)
+		usr.write_preference_directly(/datum/preference/numeric/ui_style_alpha, UI_style_alpha_new)
+		usr.write_preference_directly(/datum/preference/color/ui_style_color, UI_style_color_new)
 		SScharacter_setup.queue_preferences_save(prefs)
 		to_chat(usr, "UI was saved")

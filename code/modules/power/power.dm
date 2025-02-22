@@ -86,7 +86,7 @@
 
 // attach a wire to a power machine - leads from the turf you are standing on
 //almost never called, overwritten by all power machines but terminal and generator
-/obj/machinery/power/attackby(obj/item/weapon/W, mob/user)
+/obj/machinery/power/attackby(obj/item/W, mob/user)
 
 	if(istype(W, /obj/item/stack/cable_coil))
 
@@ -107,7 +107,7 @@
 	return
 
 // Power machinery should also connect/disconnect from the network.
-/obj/machinery/power/default_unfasten_wrench(var/mob/user, var/obj/item/weapon/W, var/time = 20)
+/obj/machinery/power/default_unfasten_wrench(var/mob/user, var/obj/item/W, var/time = 20)
 	if((. = ..()))
 		if(anchored)
 			connect_to_network()
@@ -282,11 +282,11 @@
 		power_source = Cable.powernet
 
 	var/datum/powernet/PN
-	var/obj/item/weapon/cell/cell
+	var/obj/item/cell/cell
 
 	if(istype(power_source,/datum/powernet))
 		PN = power_source
-	else if(istype(power_source,/obj/item/weapon/cell))
+	else if(istype(power_source,/obj/item/cell))
 		cell = power_source
 	else if(istype(power_source,/obj/machinery/power/apc))
 		var/obj/machinery/power/apc/apc = power_source
@@ -302,7 +302,7 @@
 	//If following checks determine user is protected we won't alarm for long.
 	if(PN)
 		PN.trigger_warning(5)
-	if(istype(M,/mob/living/carbon/human))
+	if(ishuman(M))
 		var/mob/living/carbon/human/H = M
 		if(H.species.siemens_coefficient <= 0)
 			return
@@ -312,8 +312,8 @@
 /*CHOMP Edit: Phorochem removed.
 //Phorochemistry DM: Allows chemicalresistant shocking -Radiantflash
 		for(var/datum/reagent/phororeagent/R in M.reagents.reagent_list)
-			if(R.id == "fulguracin")
-				to_chat(M, "<span class='notice'>Your hairs stand up, but you resist the shock for the most part</span>")
+			if(R.id == REAGENT_ID_FULGURACIN)
+				to_chat(M, span_notice("Your hairs stand up, but you resist the shock for the most part"))
 				return 0 //no shock for you
 */
 	//Checks again. If we are still here subject will be shocked, trigger standard 20 tick warning
@@ -344,6 +344,6 @@
 	else if (istype(power_source,/datum/powernet))
 		var/drained_power = drained_energy/CELLRATE
 		drained_power = PN.draw_power(drained_power)
-	else if (istype(power_source, /obj/item/weapon/cell))
+	else if (istype(power_source, /obj/item/cell))
 		cell.use(drained_energy)
 	return drained_energy

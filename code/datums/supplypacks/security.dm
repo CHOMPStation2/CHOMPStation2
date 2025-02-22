@@ -14,6 +14,7 @@
 
 /datum/supply_pack/randomised/security/armor
 	name = "Armor - Security armor"
+	desc = "A set of standard security armor vests, chosen at random. Requires Armory access."
 	num_contained = 5
 	contains = list(
 			/obj/item/clothing/suit/storage/vest,
@@ -31,9 +32,11 @@
 	cost = 40
 	containertype = /obj/structure/closet/crate/secure/gear
 	containername = "Armor crate"
+	access = access_armory
 
 /datum/supply_pack/security/carriersblack
 	name = "Armor - Black modular armor"
+	desc = "A set of modular black armor."
 	contains = list(
 			/obj/item/clothing/suit/armor/pcarrier,
 			/obj/item/clothing/accessory/armor/armguards,
@@ -46,6 +49,7 @@
 
 /datum/supply_pack/security/carriersblue
 	name = "Armor - Blue modular armor"
+	desc = "A set of modular blue armor."
 	contains = list(
 			/obj/item/clothing/suit/armor/pcarrier/blue,
 			/obj/item/clothing/accessory/armor/armguards/blue,
@@ -58,6 +62,7 @@
 
 /datum/supply_pack/security/carriersgreen
 	name = "Armor - Green modular armor"
+	desc = "A set of modular green armor."
 	contains = list(
 			/obj/item/clothing/suit/armor/pcarrier/green,
 			/obj/item/clothing/accessory/armor/armguards/green,
@@ -70,6 +75,7 @@
 
 /datum/supply_pack/security/carriersnavy
 	name = "Armor - Navy modular armor"
+	desc = "A set of modular navy blue armor."
 	contains = list(
 			/obj/item/clothing/suit/armor/pcarrier/navy,
 			/obj/item/clothing/accessory/armor/armguards/navy,
@@ -82,6 +88,7 @@
 
 /datum/supply_pack/security/carrierstan
 	name = "Armor - Tan modular armor"
+	desc = "A set of modular tan armor."
 	contains = list(
 			/obj/item/clothing/suit/armor/pcarrier/tan,
 			/obj/item/clothing/accessory/armor/armguards/tan,
@@ -94,6 +101,7 @@
 
 /datum/supply_pack/security/armorplate
 	name = "Armor - Security light armor plate"
+	desc = "A lightweight armor insert plate."
 	contains = list(
 			/obj/item/clothing/accessory/armor/armorplate,
 			)
@@ -103,6 +111,7 @@
 
 /datum/supply_pack/security/armorplatestab
 	name = "Armor - Security stab armor plate"
+	desc = "A lightweight stabproof armor insert plate."
 	contains = list(
 			/obj/item/clothing/accessory/armor/armorplate/stab,
 			)
@@ -112,6 +121,7 @@
 
 /datum/supply_pack/security/armorplatemedium
 	name = "Armor - Security armor plate"
+	desc = "A mediumweight armor insert plate."
 	contains = list(
 			/obj/item/clothing/accessory/armor/armorplate/medium,
 			)
@@ -121,6 +131,7 @@
 
 /datum/supply_pack/security/armorplatetac
 	name = "Armor - Security medium armor plate"
+	desc = "A tactical armor insert plate."
 	contains = list(
 			/obj/item/clothing/accessory/armor/armorplate/tactical,
 			)
@@ -130,6 +141,7 @@
 
 /datum/supply_pack/randomised/security/carriers
 	name = "Armor - Surplus plate carriers"
+	desc = "A selection of random plate carriers."
 	num_contained = 5
 	contains = list(
 			/obj/item/clothing/suit/armor/pcarrier,
@@ -145,6 +157,7 @@
 
 /datum/supply_pack/security/carriertags
 	name = "Armor - Plate carrier tags"
+	desc = "Various identifying tags for attachment to a plate carrier set."
 	contains = list(
 			/obj/item/clothing/accessory/armor/tag,
 			/obj/item/clothing/accessory/armor/tag/nt,
@@ -163,6 +176,7 @@
 
 /datum/supply_pack/security/helmcovers
 	name = "Armor - Helmet covers"
+	desc = "A set of helmet covers, for attachment to standard issue helmets."
 	contains = list(
 			/obj/item/clothing/accessory/armor/helmcover/blue,
 			/obj/item/clothing/accessory/armor/helmcover/blue,
@@ -179,6 +193,7 @@
 
 /datum/supply_pack/randomised/security/armorplates
 	name = "Armor - Surplus security armor plates"
+	desc = "A random selection of attachable armor insert plates."
 	num_contained = 5
 	contains = list(
 			/obj/item/clothing/accessory/armor/armorplate,
@@ -198,6 +213,7 @@
 
 /datum/supply_pack/randomised/security/carrierarms
 	name = "Armor - Surplus security armguard attachments"
+	desc = "A random selection of attachable armor arm guards."
 	num_contained = 5
 	contains = list(
 			/obj/item/clothing/accessory/armor/armguards,
@@ -215,6 +231,7 @@
 
 /datum/supply_pack/randomised/security/carrierlegs
 	name = "Armor - Surplus security legguard attachments"
+	desc = "A random selection of attachable armor leg guards."
 	num_contained = 5
 	contains = list(
 			/obj/item/clothing/accessory/armor/legguards,
@@ -251,13 +268,14 @@
 
 /datum/supply_pack/security/riot_gear
 	name = "Gear - Riot"
+	desc = "A pack of riot control gear: less-lethal weapons, batons, shields, and handcuffs. Requires Armory access."
 	contains = list(
-			/obj/item/weapon/melee/baton = 3,
-			/obj/item/weapon/shield/riot = 3,
-			/obj/item/weapon/handcuffs = 3,
-			/obj/item/weapon/storage/box/flashbangs,
+			/obj/item/melee/baton = 3,
+			/obj/item/shield/riot = 3,
+			/obj/item/handcuffs = 3,
+			/obj/item/storage/box/flashbangs,
 			/obj/item/ammo_magazine/ammo_box/b12g/beanbag,
-			/obj/item/weapon/storage/box/handcuffs
+			/obj/item/storage/box/handcuffs
 			)
 	cost = 40
 	containertype = /obj/structure/closet/crate/secure/lawson
@@ -266,6 +284,7 @@
 
 /datum/supply_pack/security/riot_armor
 	name = "Armor - Riot"
+	desc = "A pack of riot suppression armor. Requires Armory access."
 	contains = list(
 			/obj/item/clothing/head/helmet/riot,
 			/obj/item/clothing/suit/armor/riot,
@@ -279,6 +298,7 @@
 
 /datum/supply_pack/security/riot_plates
 	name = "Armor - Riot plates"
+	desc = "A fully-equipped modular riot suppression suit. Requires Armory access."
 	contains = list(
 			/obj/item/clothing/head/helmet/riot,
 			/obj/item/clothing/suit/armor/pcarrier/riot/full
@@ -291,7 +311,7 @@
 /datum/supply_pack/security/riot_sprayer
 	name = "Gear - Riot sprayer"
 	contains = list(
-			/obj/item/weapon/watertank/pepperspray
+			/obj/item/watertank/pepperspray
 			)
 	cost = 40
 	containertype = /obj/structure/closet/crate/secure/lawson
@@ -300,6 +320,7 @@
 
 /datum/supply_pack/security/ablative_armor
 	name = "Armor - Ablative"
+	desc = "A full set of laser-resistant armor. Requires Armory access."
 	contains = list(
 			/obj/item/clothing/head/helmet/laserproof,
 			/obj/item/clothing/suit/armor/laserproof,
@@ -313,6 +334,7 @@
 
 /datum/supply_pack/security/ablative_plates
 	name = "Armor - Ablative plates"
+	desc = "A fully-equipped modular laser-resistant armor suit. Requires Armory access."
 	contains = list(
 			/obj/item/clothing/head/helmet/laserproof,
 			/obj/item/clothing/suit/armor/pcarrier/laserproof/full
@@ -324,6 +346,7 @@
 
 /datum/supply_pack/security/bullet_resistant_armor
 	name = "Armor - Ballistic"
+	desc = "A full set of ballistic-resistant armor. Requires Armory access."
 	contains = list(
 			/obj/item/clothing/head/helmet/bulletproof,
 			/obj/item/clothing/suit/armor/bulletproof,
@@ -372,7 +395,7 @@
 			/obj/item/clothing/head/helmet/tactical,
 			/obj/item/clothing/mask/balaclava/tactical,
 			/obj/item/clothing/glasses/sunglasses/sechud/tactical,
-			/obj/item/weapon/storage/belt/security/tactical,
+			/obj/item/storage/belt/security/tactical,
 			/obj/item/clothing/shoes/boots/jackboots,
 			/obj/item/clothing/gloves/black,
 			/obj/item/clothing/under/tactical,
@@ -380,7 +403,7 @@
 			/obj/item/clothing/head/helmet/tactical,
 			/obj/item/clothing/mask/balaclava/tactical,
 			/obj/item/clothing/glasses/sunglasses/sechud/tactical,
-			/obj/item/weapon/storage/belt/security/tactical,
+			/obj/item/storage/belt/security/tactical,
 			/obj/item/clothing/shoes/boots/jackboots,
 			/obj/item/clothing/gloves/black
 			)
@@ -388,6 +411,7 @@
 
 /datum/supply_pack/security/flexitac
 	name = "Armor - Tactical Light"
+	desc = "A full set of light tactical armor. Requires Armory access."
 	containertype = /obj/structure/closet/crate/secure/saare
 	containername = "Tactical Light armor crate"
 	cost = 75
@@ -399,18 +423,19 @@
 				/obj/item/clothing/gloves/arm_guard/flexitac,
 				/obj/item/clothing/mask/balaclava/tactical,
 				/obj/item/clothing/glasses/sunglasses/sechud/tactical,
-				/obj/item/weapon/storage/belt/security/tactical,
+				/obj/item/storage/belt/security/tactical,
 				/obj/item/clothing/suit/storage/vest/heavy/flexitac,
 				/obj/item/clothing/head/helmet/flexitac,
 				/obj/item/clothing/shoes/leg_guard/flexitac,
 				/obj/item/clothing/gloves/arm_guard/flexitac,
 				/obj/item/clothing/mask/balaclava/tactical,
 				/obj/item/clothing/glasses/sunglasses/sechud/tactical,
-				/obj/item/weapon/storage/belt/security/tactical
+				/obj/item/storage/belt/security/tactical
 				)
 
 /datum/supply_pack/security/securitybarriers
 	name = "Misc - Security Barriers"
+	desc = "Four quick-deployment security barriers."
 	contains = list(/obj/machinery/deployable/barrier = 4)
 	cost = 20
 	containertype = /obj/structure/closet/crate/large/secure/heph
@@ -418,6 +443,7 @@
 
 /datum/supply_pack/security/securityshieldgen
 	name = "Misc - Wall shield generators"
+	desc = "Four portable wall shield generators. Requires Teleporter access."
 	contains = list(/obj/machinery/shieldwallgen = 4)
 	cost = 20
 	containertype = /obj/structure/closet/crate/secure/heph
@@ -426,6 +452,7 @@
 
 /datum/supply_pack/randomised/security/holster
 	name = "Gear - Holsters"
+	desc = "Four random holsters."
 	num_contained = 4
 	contains = list(
 			/obj/item/clothing/accessory/holster,
@@ -440,10 +467,11 @@
 
 /datum/supply_pack/security/extragear
 	name = "Gear - Security surplus equipment"
+	desc = "An assortment of surplus security equipment."
 	contains = list(
-			/obj/item/weapon/storage/belt/security = 3,
+			/obj/item/storage/belt/security = 3,
 			/obj/item/clothing/glasses/sunglasses/sechud = 3,
-			/obj/item/device/radio/headset/headset_sec/alt = 3,
+			/obj/item/radio/headset/alt/headset_sec = 3,
 			/obj/item/clothing/suit/storage/hooded/wintercoat/security = 3,
 			/obj/item/clothing/glasses/sunglasses/sechud/tactical_sec_vis = 3
 			)
@@ -453,26 +481,27 @@
 
 /datum/supply_pack/security/detectivegear
 	name = "Forensic - Investigation equipment"
+	desc = "Standard issue equipment for detectives and forensic investigators. Requires Forensics access."
 	contains = list(
-			/obj/item/weapon/storage/box/evidence = 2,
+			/obj/item/storage/box/evidence = 2,
 			/obj/item/clothing/suit/storage/vest/detective,
-			/obj/item/weapon/cartridge/detective,
-			/obj/item/device/radio/headset/headset_sec,
+			/obj/item/cartridge/detective,
+			/obj/item/radio/headset/headset_sec,
 			/obj/item/taperoll/police,
 			/obj/item/clothing/glasses/sunglasses,
-			/obj/item/device/camera,
-			/obj/item/weapon/folder/red,
-			/obj/item/weapon/folder/blue,
-			/obj/item/weapon/storage/belt/detective,
+			/obj/item/camera,
+			/obj/item/folder/red,
+			/obj/item/folder/blue,
+			/obj/item/storage/belt/detective,
 			/obj/item/clothing/gloves/black,
-			/obj/item/device/taperecorder,
-			/obj/item/device/mass_spectrometer,
-			/obj/item/device/camera_film = 2,
-			/obj/item/weapon/storage/photo_album,
-			/obj/item/device/reagent_scanner,
-			/obj/item/device/flashlight/maglight,
-			/obj/item/weapon/storage/briefcase/crimekit,
-			/obj/item/weapon/storage/bag/detective
+			/obj/item/taperecorder,
+			/obj/item/mass_spectrometer,
+			/obj/item/camera_film = 2,
+			/obj/item/storage/photo_album,
+			/obj/item/reagent_scanner,
+			/obj/item/flashlight/maglight,
+			/obj/item/storage/briefcase/crimekit,
+			/obj/item/storage/bag/detective
 			)
 	cost = 20
 	containertype = /obj/structure/closet/crate/secure/nanotrasen
@@ -481,11 +510,12 @@
 
 /datum/supply_pack/security/detectivescan
 	name = "Forensic - Scanning Equipment"
+	desc = "Additional specialist forensic equipment. Requires Forensics access."
 	contains = list(
-			/obj/item/device/mass_spectrometer,
-			/obj/item/device/reagent_scanner,
-			/obj/item/weapon/storage/briefcase/crimekit,
-			/obj/item/device/detective_scanner
+			/obj/item/mass_spectrometer,
+			/obj/item/reagent_scanner,
+			/obj/item/storage/briefcase/crimekit,
+			/obj/item/detective_scanner
 			)
 	cost = 60
 	containertype = /obj/structure/closet/crate/secure/ward
@@ -494,6 +524,7 @@
 
 /datum/supply_pack/security/detectiveclothes
 	name = "Forensic - Investigation apparel"
+	desc = "Apparel for the discerning detective (or forensics expert). Requires Forensics access."
 	contains = list(
 			/obj/item/clothing/under/det/black = 2,
 			/obj/item/clothing/under/det/grey = 2,
@@ -516,28 +547,29 @@
 
 /datum/supply_pack/security/officergear
 	name = "Gear - Officer equipment"
+	desc = "Standard issue equipment for security officers. Requires Brig access."
 	contains = list(
 			/obj/item/clothing/suit/storage/vest/officer,
 			/obj/item/clothing/head/helmet,
-			/obj/item/weapon/cartridge/security,
+			/obj/item/cartridge/security,
 			/obj/item/clothing/accessory/badge/holo,
 			/obj/item/clothing/accessory/badge/holo/cord,
-			/obj/item/device/radio/headset/headset_sec,
-			/obj/item/weapon/storage/belt/security,
-			/obj/item/device/flash,
-			/obj/item/weapon/reagent_containers/spray/pepper,
-			/obj/item/weapon/grenade/flashbang,
-			/obj/item/weapon/melee/baton/loaded,
+			/obj/item/radio/headset/headset_sec,
+			/obj/item/storage/belt/security,
+			/obj/item/flash,
+			/obj/item/reagent_containers/spray/pepper,
+			/obj/item/grenade/flashbang,
+			/obj/item/melee/baton/loaded,
 			/obj/item/clothing/glasses/sunglasses/sechud,
 			/obj/item/taperoll/police,
 			/obj/item/clothing/gloves/black,
-			/obj/item/device/hailer,
-			/obj/item/device/flashlight/flare,
+			/obj/item/hailer,
+			/obj/item/flashlight/flare,
 			/obj/item/clothing/accessory/storage/black_vest,
 			/obj/item/clothing/head/soft/sec/corp,
 			/obj/item/clothing/under/rank/security/corp,
-			/obj/item/weapon/gun/energy/taser,
-			/obj/item/device/flashlight/maglight
+			/obj/item/gun/energy/taser,
+			/obj/item/flashlight/maglight
 			)
 	cost = 20
 	containertype = /obj/structure/closet/crate/secure/nanotrasen
@@ -545,7 +577,8 @@
 	access = access_brig
 
 /datum/supply_pack/security/wardengear
-	name = "Gear - Warden equipment"
+	name = "Gear - " + JOB_WARDEN + " equipment"
+	desc = "Standard issue equipment for Wardens. Requires Armory access."
 	contains = list(
 			/obj/item/clothing/suit/storage/vest/warden,
 			/obj/item/clothing/under/rank/warden,
@@ -554,27 +587,28 @@
 			/obj/item/clothing/suit/storage/vest/wardencoat/alt,
 			/obj/item/clothing/suit/storage/vest/wardencoat/alt2, //VOREStation Add,
 			/obj/item/clothing/head/helmet/warden,
-			/obj/item/weapon/cartridge/security,
-			/obj/item/device/radio/headset/headset_sec,
+			/obj/item/cartridge/security,
+			/obj/item/radio/headset/headset_sec,
 			/obj/item/clothing/glasses/sunglasses/sechud,
 			/obj/item/taperoll/police,
-			/obj/item/device/hailer,
+			/obj/item/hailer,
 			/obj/item/clothing/accessory/badge/holo/warden,
-			/obj/item/weapon/storage/box/flashbangs,
-			/obj/item/weapon/storage/belt/security,
-			/obj/item/weapon/reagent_containers/spray/pepper,
-			/obj/item/weapon/melee/baton/loaded,
-			/obj/item/weapon/storage/box/holobadge,
+			/obj/item/storage/box/flashbangs,
+			/obj/item/storage/belt/security,
+			/obj/item/reagent_containers/spray/pepper,
+			/obj/item/melee/baton/loaded,
+			/obj/item/storage/box/holobadge,
 			/obj/item/clothing/head/beret/sec/corporate/warden,
-			/obj/item/device/flashlight/maglight
+			/obj/item/flashlight/maglight
 			)
 	cost = 20
 	containertype = /obj/structure/closet/crate/secure/nanotrasen
-	containername = "Warden equipment"
+	containername = JOB_WARDEN + " equipment"
 	access = access_armory
 
 /datum/supply_pack/security/headofsecgear
-	name = "Gear - Head of security equipment"
+	name = "Gear - " + JOB_HEAD_OF_SECURITY + " equipment"
+	desc = "Standard issue equipment for the Head of Security. Requires Head of Security access."
 	contains = list(
 			/obj/item/clothing/head/helmet/HoS,
 			/obj/item/clothing/suit/storage/vest/hos,
@@ -582,29 +616,30 @@
 			/obj/item/clothing/suit/storage/vest/hoscoat,
 			/obj/item/clothing/suit/storage/vest/hoscoat/jensen/alt, //VOREStation Add,
 			/obj/item/clothing/head/helmet/dermal,
-			/obj/item/weapon/cartridge/hos,
-			/obj/item/device/radio/headset/heads/hos,
+			/obj/item/cartridge/hos,
+			/obj/item/radio/headset/heads/hos,
 			/obj/item/clothing/glasses/sunglasses/sechud,
-			/obj/item/weapon/storage/belt/security,
-			/obj/item/device/flash,
-			/obj/item/device/hailer,
+			/obj/item/storage/belt/security,
+			/obj/item/flash,
+			/obj/item/hailer,
 			/obj/item/clothing/accessory/badge/holo/hos,
 			/obj/item/clothing/accessory/holster/waist,
-			/obj/item/weapon/melee/telebaton,
-			/obj/item/weapon/shield/riot/tele,
+			/obj/item/melee/telebaton,
+			/obj/item/shield/riot/tele,
 			/obj/item/clothing/head/beret/sec/corporate/hos,
-			/obj/item/device/flashlight/maglight
+			/obj/item/flashlight/maglight
 			)
 	cost = 50
 	containertype = /obj/structure/closet/crate/secure/nanotrasen
-	containername = "Head of security equipment"
+	containername = JOB_HEAD_OF_SECURITY + " equipment"
 	access = access_hos
 
 /datum/supply_pack/security/securityclothing
 	name = "Misc - Security uniform red"
+	desc = "A set of standard red security uniforms."
 	contains = list(
-			/obj/item/weapon/storage/backpack/satchel/sec = 2,
-			/obj/item/weapon/storage/backpack/security = 2,
+			/obj/item/storage/backpack/satchel/sec = 2,
+			/obj/item/storage/backpack/security = 2,
 			/obj/item/clothing/accessory/armband = 4,
 			/obj/item/clothing/under/rank/security = 4,
 			/obj/item/clothing/under/rank/security2 = 4,
@@ -612,7 +647,7 @@
 			/obj/item/clothing/under/rank/head_of_security,
 			/obj/item/clothing/head/soft/sec = 4,
 			/obj/item/clothing/gloves/black = 4,
-			/obj/item/weapon/storage/box/holobadge
+			/obj/item/storage/box/holobadge
 			)
 	cost = 10
 	containertype = /obj/structure/closet/crate/secure/nanotrasen
@@ -620,9 +655,10 @@
 
 /datum/supply_pack/security/navybluesecurityclothing
 	name = "Misc - Security uniform navy blue"
+	desc = "A set of alternative navy blue security uniforms."
 	contains = list(
-			/obj/item/weapon/storage/backpack/satchel/sec = 2,
-			/obj/item/weapon/storage/backpack/security = 2,
+			/obj/item/storage/backpack/satchel/sec = 2,
+			/obj/item/storage/backpack/security = 2,
 			/obj/item/clothing/under/rank/security/navyblue = 4,
 			/obj/item/clothing/suit/security/navyofficer = 4,
 			/obj/item/clothing/under/rank/warden/navyblue,
@@ -633,7 +669,7 @@
 			/obj/item/clothing/head/beret/sec/navy/warden,
 			/obj/item/clothing/head/beret/sec/navy/hos,
 			/obj/item/clothing/gloves/black = 4,
-			/obj/item/weapon/storage/box/holobadge
+			/obj/item/storage/box/holobadge
 			)
 	cost = 10
 	containertype = /obj/structure/closet/crate/secure/nanotrasen
@@ -641,9 +677,10 @@
 
 /datum/supply_pack/security/corporatesecurityclothing
 	name = "Misc - Security uniform corporate"
+	desc = "A set of alternative corporate black-and-red security uniforms."
 	contains = list(
-			/obj/item/weapon/storage/backpack/satchel/sec = 2,
-			/obj/item/weapon/storage/backpack/security = 2,
+			/obj/item/storage/backpack/satchel/sec = 2,
+			/obj/item/storage/backpack/security = 2,
 			/obj/item/clothing/under/rank/security/corp = 4,
 			/obj/item/clothing/head/soft/sec/corp = 4,
 			/obj/item/clothing/under/rank/warden/corp,
@@ -653,7 +690,7 @@
 			/obj/item/clothing/head/beret/sec/corporate/hos,
 			/obj/item/clothing/under/det/corporate = 2,
 			/obj/item/clothing/gloves/black = 4,
-			/obj/item/weapon/storage/box/holobadge
+			/obj/item/storage/box/holobadge
 			)
 	cost = 10
 	containertype = /obj/structure/closet/crate/secure/nanotrasen
@@ -661,15 +698,16 @@
 
 /datum/supply_pack/security/biosuit
 	name = "Gear - Security biohazard gear"
+	desc = "Three sets of security biohazard equipment. Requires Security access."
 	contains = list(
 			/obj/item/clothing/head/bio_hood/security = 3,
 			/obj/item/clothing/under/rank/security = 3,
 			/obj/item/clothing/suit/bio_suit/security = 3,
 			/obj/item/clothing/shoes/white = 3,
 			/obj/item/clothing/mask/gas/clear = 3, //Chompedit: implementation of clear gas masks
-			/obj/item/weapon/tank/oxygen = 3,
+			/obj/item/tank/oxygen = 3,
 			/obj/item/clothing/gloves/sterile/latex,
-			/obj/item/weapon/storage/box/gloves
+			/obj/item/storage/box/gloves
 			)
 	cost = 25
 	containertype = /obj/structure/closet/crate/secure/nanotrasen
@@ -678,6 +716,7 @@
 
 /datum/supply_pack/security/posters
 	name = "Gear - Morale Posters"
+	desc = "Six \'morale enhancement\' posters."
 	contains = list(
 			/obj/item/poster/nanotrasen = 6
 			)
@@ -685,3 +724,47 @@
 	containertype = /obj/structure/closet/crate/secure/nanotrasen
 	containername = "Morale Posters"
 	access = access_maint_tunnels
+
+//CHOMPEdit Start, enable this
+/datum/supply_pack/security/guardbeast
+	name = "VARMAcorp autoNOMous security solution"
+	cost = 150
+	containertype = /obj/structure/largecrate/animal/guardbeast
+	containername = "VARMAcorp autoNOMous security solution crate"
+	access = list(
+			access_security,
+			access_xenobiology)
+	one_access = TRUE
+
+/datum/supply_pack/security/guardmutant
+	name = "VARMAcorp autoNOMous security solution for hostile environments"
+	cost = 250
+	containertype = /obj/structure/largecrate/animal/guardmutant
+	containername = "VARMAcorp autoNOMous security phoron-proof solution crate"
+	access = list(
+			access_security,
+			access_xenobiology)
+	one_access = TRUE
+//CHOMPEdit End
+
+/datum/supply_pack/security/trackingimplant
+	name = "Implants - Tracking"
+	desc = "A set of tracking implants. Requires Security access."
+	contains = list(
+			/obj/item/storage/box/trackimp = 1
+			)
+	cost = 25
+	containertype = /obj/structure/closet/crate/secure
+	containername = "Tracking implants"
+	access = access_security
+
+/datum/supply_pack/security/chemicalimplant
+	name = "Implants - Chemical"
+	desc = "A set of chemical implants. Requires Security access."
+	contains = list(
+			/obj/item/storage/box/chemimp = 1
+			)
+	cost = 25
+	containertype = /obj/structure/closet/crate/secure
+	containername = "Chemical implants"
+	access = access_security

@@ -3,15 +3,15 @@
 	icon = 'icons/mob/animal_vg.dmi'
 	icon_state = "drone3"
 	icon_living = "drone3"
-	maxHealth = 25
-	health = 25
+	maxHealth = 50 //Old 25
+	health = 50
 	movement_cooldown = 0
 	unsuitable_atoms_damage = 0
 	projectiletype = /obj/item/projectile/energy/homing_bolt
 	melee_attack_delay = 4 SECOND
 
-	melee_damage_lower = 12
-	melee_damage_upper = 12
+	melee_damage_lower = 25
+	melee_damage_upper = 25
 	ai_holder_type = /datum/ai_holder/simple_mob/ranged/kiting
 
 	wreckage = null
@@ -26,17 +26,17 @@
 		var/armorcheck = run_armor_check(null, P.check_armour)
 		var/soakedcheck = get_armor_soak(null, P.check_armour)
 		if(!(istype(P, /obj/item/projectile/energy) || istype(P, /obj/item/projectile/beam)))
-			visible_message("<span class='danger'>The [P.name] bounces off of [src]'s shield!</span>", \
-						"<span class='userdanger'>The [P.name] bounces off of [src]'s shield!</span>")
-			new /obj/item/weapon/material/shard/shrapnel(src.loc)
+			visible_message(span_danger("The [P.name] bounces off of [src]'s shield!"), \
+						span_userdanger("The [P.name] bounces off of [src]'s shield!"))
+			new /obj/item/material/shard/shrapnel(src.loc)
 			if(!(P.damage_type == BRUTE || P.damage_type == BURN))
 				projectile_dam_type = BRUTE
 				incoming_damage = round(incoming_damage / 4) //Damage from strange sources is converted to brute for physical projectiles, though severely decreased.
 			apply_damage(incoming_damage, projectile_dam_type, null, armorcheck, soakedcheck, is_sharp(P), has_edge(P), P)
 			return -1 //Doesn't reflect non-beams or non-energy projectiles. They just smack and drop with little to no effect.
 		else
-			visible_message("<span class='danger'>The [P.name] gets reflected by [src]'s shield!</span>", \
-						"<span class='userdanger'>The [P.name] gets reflected by [src]'s shield!</span>")
+			visible_message(span_danger("The [P.name] gets reflected by [src]'s shield!"), \
+						span_userdanger("The [P.name] gets reflected by [src]'s shield!"))
 			damage_mod = rand(3,5)
 			incoming_damage = (round(P.damage / damage_mod) - (round((P.damage / damage_mod) * 0.3)))
 			if(!(P.damage_type == BRUTE || P.damage_type == BURN))
@@ -68,15 +68,15 @@
 
 	faction = "vistor"
 
-	maxHealth = 75
-	health = 75
+	maxHealth = 150 //Old 75
+	health = 150
 	movement_cooldown = 0
 	unsuitable_atoms_damage = 0
 	projectiletype = /obj/item/projectile/energy/homing_bolt
 	melee_attack_delay = 4 SECOND
 
-	melee_damage_lower = 12
-	melee_damage_upper = 12
+	melee_damage_lower = 25 //Old 12
+	melee_damage_upper = 25
 	ai_holder_type = /datum/ai_holder/simple_mob/intentional/adv_dark_gygax
 
 	armor = list(
@@ -92,7 +92,7 @@
 	wreckage = null
 	pilot_type = null
 
-	var/grenade_type = /obj/item/weapon/grenade/shooter/energy/homing
+	var/grenade_type = /obj/item/grenade/shooter/energy/homing
 	var/grenade_timer = 50	//CHOMPEdit
 	special_attack_cooldown = 45 SECONDS
 	special_attack_min_range = 2
@@ -120,7 +120,7 @@
 	set waitfor = FALSE
 	set_AI_busy(TRUE)
 
-	var/obj/item/weapon/grenade/G = new grenade_type(get_turf(src))
+	var/obj/item/grenade/G = new grenade_type(get_turf(src))
 	if(istype(G))
 		G.throw_at(A, G.throw_range, G.throw_speed, src)
 		G.det_time = grenade_timer	//CHOMPEdit
@@ -129,7 +129,7 @@
 
 	set_AI_busy(FALSE)
 
-/obj/item/weapon/grenade/shooter/energy/homing //This is a horrid idea
+/obj/item/grenade/shooter/energy/homing //This is a horrid idea
 	name = "homing grenade"
 	desc = "A horrifically dangerous rave in a can."
 	projectile_types = list(/obj/item/projectile/energy/homing_bolt)
@@ -139,8 +139,8 @@
 	icon = 'icons/mob/animal_vg.dmi'
 	icon_state = "mushroom"
 	icon_living = "mushroom"
-	maxHealth = 100
-	health = 100
+	maxHealth = 200 //Old 100
+	health = 200
 	movement_cooldown = 0
 	unsuitable_atoms_damage = 0
 	projectiletype = /obj/item/projectile/arc/spore
@@ -149,8 +149,8 @@
 	wreckage = null
 	pilot_type = null
 
-	melee_damage_lower = 12
-	melee_damage_upper = 12
+	melee_damage_lower = 25
+	melee_damage_upper = 25
 	ai_holder_type = /datum/ai_holder/hostile/ranged/robust
 
 	special_attack_cooldown = 2 SECONDS
@@ -170,8 +170,8 @@
 	icon = 'icons/mob/animal_vg.dmi'
 	icon_state = "scarybat"
 	icon_living = "scarybat"
-	maxHealth = 100
-	health = 100
+	maxHealth = 200 //Old 100
+	health = 200
 	movement_cooldown = 0
 	unsuitable_atoms_damage = 0
 	projectiletype = null
@@ -180,14 +180,14 @@
 	wreckage = null
 	pilot_type = null
 
-	melee_damage_lower = 12
-	melee_damage_upper = 12
+	melee_damage_lower = 25
+	melee_damage_upper = 25
 	alpha = 15
 
 	loot_list = list(/obj/item/clothing/suit/armor/tesla/vistor = 100
 			)
 
-/mob/living/simple_mob/mechanical/mecha/vistor/vistoryellow
+/mob/living/simple_mob/mechanical/mecha/vistor/vistoryellow //Combat refactor walkback: This one seems fine
 	name = "vistor yellow"
 	icon = 'icons/mob/animal.dmi'
 	icon_state = "chick"
@@ -214,8 +214,8 @@
 	icon = 'icons/mecha/mecha.dmi'
 	icon_state = "honker"
 	icon_living = "honker"
-	maxHealth = 150
-	health = 150
+	maxHealth = 300 //Old 150
+	health = 300
 	movement_cooldown = 0
 	unsuitable_atoms_damage = 0
 	projectiletype = /obj/item/projectile/energy/gaussrifle
@@ -269,8 +269,8 @@
 	icon = 'icons/mecha/mecha.dmi'
 	icon_state = "mime"
 	icon_living = "mime"
-	maxHealth = 150
-	health = 150
+	maxHealth = 300 //Old 150
+	health = 300
 	movement_cooldown = 0
 	damage_fatigue_mult = 0
 	alpha = 175

@@ -50,8 +50,8 @@
 /area/survivalpod/superpose/SurvivalDinner)
 "fP" = (
 /obj/structure/table/standard,
-/obj/item/weapon/material/kitchen/utensil/fork,
-/obj/item/weapon/material/kitchen/utensil/spoon{
+/obj/item/material/kitchen/utensil/fork,
+/obj/item/material/kitchen/utensil/spoon{
 	pixel_x = 2
 	},
 /turf/simulated/floor/wood,
@@ -91,7 +91,7 @@
 /area/survivalpod/superpose/SurvivalDinner)
 "lU" = (
 /obj/structure/bed/pod,
-/obj/item/weapon/bedsheet/green,
+/obj/item/bedsheet/green,
 /turf/simulated/shuttle/floor/voidcraft/light,
 /area/survivalpod/superpose/SurvivalDinner)
 "lY" = (
@@ -201,10 +201,10 @@
 /area/survivalpod/superpose/SurvivalDinner)
 "vK" = (
 /obj/structure/table/marble,
-/obj/item/weapon/reagent_containers/food/condiment/small/saltshaker{
+/obj/item/reagent_containers/food/condiment/small/saltshaker{
 	pixel_x = -3
 	},
-/obj/item/weapon/reagent_containers/food/condiment/small/peppermill{
+/obj/item/reagent_containers/food/condiment/small/peppermill{
 	pixel_x = 3
 	},
 /obj/machinery/chemical_dispenser/bar_coffee/full{
@@ -224,7 +224,7 @@
 	pixel_x = 1;
 	pixel_y = 17
 	},
-/obj/item/weapon/book/manual/chef_recipes,
+/obj/item/book/manual/chef_recipes,
 /turf/simulated/shuttle/floor/voidcraft/light,
 /area/survivalpod/superpose/SurvivalDinner)
 "xX" = (
@@ -259,10 +259,10 @@
 /area/survivalpod/superpose/SurvivalDinner)
 "Bw" = (
 /obj/structure/table/standard,
-/obj/item/device/starcaster_news{
+/obj/item/starcaster_news{
 	pixel_x = 8
 	},
-/obj/item/device/starcaster_news{
+/obj/item/starcaster_news{
 	pixel_x = -6;
 	pixel_y = 10
 	},
@@ -277,65 +277,65 @@
 	name = "Advanced storage";
 	pixel_y = -1
 	},
-/obj/item/weapon/reagent_containers/food/drinks/bottle/small/beer,
-/obj/item/weapon/reagent_containers/food/drinks/bottle/small/beer,
-/obj/item/weapon/reagent_containers/food/drinks/bottle/small/beer,
-/obj/item/weapon/reagent_containers/food/drinks/bottle/small/beer,
-/obj/item/weapon/reagent_containers/food/drinks/bottle/small/beer/meteor,
-/obj/item/weapon/reagent_containers/food/drinks/bottle/small/beer/meteor,
-/obj/item/weapon/reagent_containers/food/drinks/bottle/small/beer/meteor,
-/obj/item/weapon/reagent_containers/food/drinks/bottle/small/beer/meteor,
-/obj/item/weapon/reagent_containers/food/drinks/bottle/small/beer/silverdragon,
-/obj/item/weapon/reagent_containers/food/drinks/bottle/small/beer/silverdragon,
-/obj/item/weapon/reagent_containers/food/drinks/bottle/small/beer/silverdragon,
-/obj/item/weapon/reagent_containers/food/drinks/bottle/small/beer/silverdragon,
-/obj/item/weapon/reagent_containers/food/drinks/bottle/small/litebeer,
-/obj/item/weapon/reagent_containers/food/drinks/bottle/small/litebeer,
-/obj/item/weapon/reagent_containers/food/drinks/bottle/small/litebeer,
-/obj/item/weapon/reagent_containers/food/drinks/bottle/small/litebeer,
-/obj/item/weapon/reagent_containers/food/condiment/carton/flour,
-/obj/item/weapon/reagent_containers/food/condiment/carton/flour,
-/obj/item/weapon/reagent_containers/food/condiment/carton/flour,
-/obj/item/weapon/reagent_containers/food/condiment/carton/flour,
-/obj/item/weapon/reagent_containers/food/condiment/sugar,
-/obj/item/weapon/reagent_containers/food/condiment/sugar,
-/obj/item/weapon/reagent_containers/food/condiment/sugar,
-/obj/item/weapon/reagent_containers/food/condiment/sugar,
-/obj/item/weapon/reagent_containers/food/condiment/spacespice,
-/obj/item/weapon/reagent_containers/food/condiment/spacespice,
-/obj/item/weapon/reagent_containers/food/drinks/milk,
-/obj/item/weapon/reagent_containers/food/drinks/milk,
-/obj/item/weapon/reagent_containers/food/drinks/milk,
-/obj/item/weapon/reagent_containers/food/drinks/milk,
-/obj/item/weapon/reagent_containers/food/drinks/soymilk,
-/obj/item/weapon/reagent_containers/food/drinks/soymilk,
-/obj/item/weapon/reagent_containers/food/drinks/soymilk,
-/obj/item/weapon/reagent_containers/food/drinks/soymilk,
-/obj/item/weapon/storage/fancy/egg_box,
-/obj/item/weapon/storage/fancy/egg_box,
-/obj/item/weapon/storage/fancy/egg_box,
-/obj/item/weapon/storage/fancy/egg_box,
-/obj/item/weapon/reagent_containers/hypospray/autoinjector/biginjector/glucose,
-/obj/item/weapon/reagent_containers/hypospray/autoinjector/biginjector/glucose,
-/obj/item/weapon/reagent_containers/hypospray/autoinjector/biginjector/glucose,
-/obj/item/weapon/reagent_containers/hypospray/autoinjector/biginjector/glucose,
-/obj/item/weapon/reagent_containers/food/snacks/meat/syntiflesh,
-/obj/item/weapon/reagent_containers/food/snacks/meat/syntiflesh,
-/obj/item/weapon/reagent_containers/food/snacks/meat/syntiflesh,
-/obj/item/weapon/reagent_containers/food/snacks/meat/syntiflesh,
-/obj/item/weapon/reagent_containers/food/snacks/meat/syntiflesh,
-/obj/item/weapon/reagent_containers/food/snacks/meat/syntiflesh,
-/obj/item/weapon/reagent_containers/food/snacks/meat/syntiflesh,
-/obj/item/weapon/reagent_containers/food/snacks/meat/syntiflesh,
-/obj/item/weapon/reagent_containers/food/snacks/meat/syntiflesh,
-/obj/item/weapon/reagent_containers/food/snacks/meat/syntiflesh,
+/obj/item/reagent_containers/food/drinks/bottle/small/beer,
+/obj/item/reagent_containers/food/drinks/bottle/small/beer,
+/obj/item/reagent_containers/food/drinks/bottle/small/beer,
+/obj/item/reagent_containers/food/drinks/bottle/small/beer,
+/obj/item/reagent_containers/food/drinks/bottle/small/beer/meteor,
+/obj/item/reagent_containers/food/drinks/bottle/small/beer/meteor,
+/obj/item/reagent_containers/food/drinks/bottle/small/beer/meteor,
+/obj/item/reagent_containers/food/drinks/bottle/small/beer/meteor,
+/obj/item/reagent_containers/food/drinks/bottle/small/beer/silverdragon,
+/obj/item/reagent_containers/food/drinks/bottle/small/beer/silverdragon,
+/obj/item/reagent_containers/food/drinks/bottle/small/beer/silverdragon,
+/obj/item/reagent_containers/food/drinks/bottle/small/beer/silverdragon,
+/obj/item/reagent_containers/food/drinks/bottle/small/litebeer,
+/obj/item/reagent_containers/food/drinks/bottle/small/litebeer,
+/obj/item/reagent_containers/food/drinks/bottle/small/litebeer,
+/obj/item/reagent_containers/food/drinks/bottle/small/litebeer,
+/obj/item/reagent_containers/food/condiment/carton/flour,
+/obj/item/reagent_containers/food/condiment/carton/flour,
+/obj/item/reagent_containers/food/condiment/carton/flour,
+/obj/item/reagent_containers/food/condiment/carton/flour,
+/obj/item/reagent_containers/food/condiment/sugar,
+/obj/item/reagent_containers/food/condiment/sugar,
+/obj/item/reagent_containers/food/condiment/sugar,
+/obj/item/reagent_containers/food/condiment/sugar,
+/obj/item/reagent_containers/food/condiment/spacespice,
+/obj/item/reagent_containers/food/condiment/spacespice,
+/obj/item/reagent_containers/food/drinks/milk,
+/obj/item/reagent_containers/food/drinks/milk,
+/obj/item/reagent_containers/food/drinks/milk,
+/obj/item/reagent_containers/food/drinks/milk,
+/obj/item/reagent_containers/food/drinks/soymilk,
+/obj/item/reagent_containers/food/drinks/soymilk,
+/obj/item/reagent_containers/food/drinks/soymilk,
+/obj/item/reagent_containers/food/drinks/soymilk,
+/obj/item/storage/fancy/egg_box,
+/obj/item/storage/fancy/egg_box,
+/obj/item/storage/fancy/egg_box,
+/obj/item/storage/fancy/egg_box,
+/obj/item/reagent_containers/hypospray/autoinjector/biginjector/glucose,
+/obj/item/reagent_containers/hypospray/autoinjector/biginjector/glucose,
+/obj/item/reagent_containers/hypospray/autoinjector/biginjector/glucose,
+/obj/item/reagent_containers/hypospray/autoinjector/biginjector/glucose,
+/obj/item/reagent_containers/food/snacks/meat/syntiflesh,
+/obj/item/reagent_containers/food/snacks/meat/syntiflesh,
+/obj/item/reagent_containers/food/snacks/meat/syntiflesh,
+/obj/item/reagent_containers/food/snacks/meat/syntiflesh,
+/obj/item/reagent_containers/food/snacks/meat/syntiflesh,
+/obj/item/reagent_containers/food/snacks/meat/syntiflesh,
+/obj/item/reagent_containers/food/snacks/meat/syntiflesh,
+/obj/item/reagent_containers/food/snacks/meat/syntiflesh,
+/obj/item/reagent_containers/food/snacks/meat/syntiflesh,
+/obj/item/reagent_containers/food/snacks/meat/syntiflesh,
 /turf/simulated/shuttle/floor/voidcraft/light,
 /area/survivalpod/superpose/SurvivalDinner)
 "DC" = (
 /obj/structure/table/marble,
-/obj/item/weapon/reagent_containers/food/snacks/mint,
-/obj/item/weapon/packageWrap,
-/obj/item/weapon/reagent_containers/dropper,
+/obj/item/reagent_containers/food/snacks/mint,
+/obj/item/packageWrap,
+/obj/item/reagent_containers/dropper,
 /obj/machinery/chemical_dispenser/bar_alc/full{
 	pixel_x = -1;
 	pixel_y = 17
@@ -348,48 +348,48 @@
 /area/survivalpod/superpose/SurvivalDinner)
 "GB" = (
 /obj/machinery/smartfridge/survival_pod,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/random,
-/obj/item/weapon/storage/mre/menu9,
-/obj/item/weapon/storage/mre/menu9,
-/obj/item/weapon/storage/mre/menu10,
-/obj/item/weapon/storage/mre/menu10,
-/obj/item/weapon/storage/mre/menu11,
-/obj/item/weapon/storage/mre/menu11,
-/obj/item/device/fbp_backup_cell,
-/obj/item/device/fbp_backup_cell,
-/obj/item/device/fbp_backup_cell,
-/obj/item/device/fbp_backup_cell,
-/obj/item/device/fbp_backup_cell,
-/obj/item/weapon/storage/pill_bottle/antitox,
-/obj/item/weapon/storage/box/survival/space,
-/obj/item/device/healthanalyzer,
-/obj/item/weapon/storage/pill_bottle/dice_nerd,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/menu9,
+/obj/item/storage/mre/menu9,
+/obj/item/storage/mre/menu10,
+/obj/item/storage/mre/menu10,
+/obj/item/storage/mre/menu11,
+/obj/item/storage/mre/menu11,
+/obj/item/fbp_backup_cell,
+/obj/item/fbp_backup_cell,
+/obj/item/fbp_backup_cell,
+/obj/item/fbp_backup_cell,
+/obj/item/fbp_backup_cell,
+/obj/item/storage/pill_bottle/antitox,
+/obj/item/storage/box/survival/space,
+/obj/item/healthanalyzer,
+/obj/item/storage/pill_bottle/dice_nerd,
 /obj/machinery/light{
 	dir = 1
 	},
-/obj/item/weapon/storage/firstaid/regular,
-/obj/item/weapon/extinguisher/mini,
-/obj/item/weapon/extinguisher/mini,
-/obj/item/weapon/storage/box/survival/space,
-/obj/item/weapon/storage/box/survival/space,
-/obj/item/device/radio,
-/obj/item/device/radio,
-/obj/item/device/radio,
-/obj/item/device/starcaster_news,
-/obj/item/device/starcaster_news,
-/obj/item/device/threadneedle,
-/obj/item/device/flashlight,
-/obj/item/device/flashlight,
-/obj/item/weapon/storage/toolbox/emergency,
-/obj/item/weapon/storage/pill_bottle/spaceacillin,
+/obj/item/storage/firstaid/regular,
+/obj/item/extinguisher/mini,
+/obj/item/extinguisher/mini,
+/obj/item/storage/box/survival/space,
+/obj/item/storage/box/survival/space,
+/obj/item/radio,
+/obj/item/radio,
+/obj/item/radio,
+/obj/item/starcaster_news,
+/obj/item/starcaster_news,
+/obj/item/threadneedle,
+/obj/item/flashlight,
+/obj/item/flashlight,
+/obj/item/storage/toolbox/emergency,
+/obj/item/storage/pill_bottle/spaceacillin,
 /obj/random/soap,
-/obj/item/weapon/material/knife/machete/hatchet,
-/obj/item/weapon/storage/box/flare,
+/obj/item/material/knife/machete/hatchet,
+/obj/item/storage/box/flare,
 /turf/simulated/shuttle/floor/voidcraft/light,
 /area/survivalpod/superpose/SurvivalDinner)
 "GM" = (
@@ -409,14 +409,14 @@
 	pixel_x = 2;
 	pixel_y = 17
 	},
-/obj/item/weapon/storage/box/donkpockets{
+/obj/item/storage/box/donkpockets{
 	pixel_x = 3;
 	pixel_y = 3
 	},
-/obj/item/weapon/reagent_containers/glass/beaker{
+/obj/item/reagent_containers/glass/beaker{
 	pixel_x = 5
 	},
-/obj/item/weapon/reagent_containers/food/condiment/enzyme,
+/obj/item/reagent_containers/food/condiment/enzyme,
 /turf/simulated/shuttle/floor/voidcraft/light,
 /area/survivalpod/superpose/SurvivalDinner)
 "Ka" = (
@@ -474,7 +474,7 @@
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/SurvivalDinner)
 "QD" = (
-/obj/item/device/gps/computer,
+/obj/item/gps/computer,
 /turf/simulated/shuttle/floor/voidcraft/light,
 /area/survivalpod/superpose/SurvivalDinner)
 "QP" = (
@@ -512,8 +512,8 @@
 /area/survivalpod/superpose/SurvivalDinner)
 "SV" = (
 /obj/structure/table/standard,
-/obj/item/weapon/deck/cards,
-/obj/item/weapon/reagent_containers/food/drinks/smallchocmilk{
+/obj/item/deck/cards,
+/obj/item/reagent_containers/food/drinks/smallchocmilk{
 	pixel_y = 11
 	},
 /turf/simulated/floor/wood,
@@ -524,8 +524,8 @@
 	pixel_x = 10;
 	pixel_y = 19
 	},
-/obj/item/weapon/material/knife/butch,
-/obj/item/weapon/material/kitchen/rollingpin,
+/obj/item/material/knife/butch,
+/obj/item/material/kitchen/rollingpin,
 /turf/simulated/shuttle/floor/voidcraft/light,
 /area/survivalpod/superpose/SurvivalDinner)
 "Um" = (
@@ -539,15 +539,15 @@
 /area/survivalpod/superpose/SurvivalDinner)
 "Wc" = (
 /obj/structure/table/standard,
-/obj/item/weapon/deck/cah{
+/obj/item/deck/cah{
 	pixel_x = 2;
 	pixel_y = 2
 	},
-/obj/item/weapon/deck/cah/black{
+/obj/item/deck/cah/black{
 	pixel_x = -2;
 	pixel_y = -2
 	},
-/obj/item/weapon/reagent_containers/food/drinks/smallchocmilk{
+/obj/item/reagent_containers/food/drinks/smallchocmilk{
 	pixel_y = 11
 	},
 /turf/simulated/floor/wood,

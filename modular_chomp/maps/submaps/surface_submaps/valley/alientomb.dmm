@@ -1,63 +1,87 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "a" = (
-/turf/simulated/mineral/floor/ignore_mapgen/sif,
+/turf/simulated/floor/outdoors/grass/sif/cave,
 /area/submap/alientomb)
 "d" = (
 /obj/machinery/power/emitter,
-/turf/simulated/shuttle/plating,
+/obj/structure/cable/blue,
+/turf/simulated/floor/plating/sif/planetuse,
 /area/submap/alientomb)
 "f" = (
 /turf/simulated/mineral,
 /area/template_noop)
 "g" = (
 /mob/living/simple_mob/humanoid/merc/ranged/laser,
-/turf/simulated/mineral/floor/ignore_mapgen/sif,
+/turf/simulated/floor/plating/sif/planetuse,
 /area/submap/alientomb)
 "j" = (
 /turf/template_noop,
 /area/template_noop)
 "k" = (
-/obj/structure/table/alien/blue,
-/obj/item/device/multitool/alien,
-/turf/simulated/floor/flock,
+/obj/structure/reflector,
+/turf/simulated/floor/plating/sif/planetuse,
 /area/submap/alientomb)
 "m" = (
 /mob/living/simple_mob/humanoid/merc/ranged/grenadier,
-/turf/simulated/mineral/floor/ignore_mapgen/sif,
+/turf/simulated/floor/plating/sif/planetuse,
 /area/submap/alientomb)
 "n" = (
 /mob/living/simple_mob/humanoid/merc/ranged/smg/sol,
-/turf/simulated/mineral/floor/ignore_mapgen/sif,
+/turf/simulated/floor/plating/sif/planetuse,
 /area/submap/alientomb)
 "q" = (
 /obj/machinery/door/blast/puzzle,
 /turf/simulated/floor/flock,
 /area/submap/alientomb)
+"r" = (
+/obj/structure/prop/lock/projectile{
+	pixel_y = 6
+	},
+/turf/simulated/floor/flock,
+/area/submap/alientomb)
 "t" = (
+/turf/simulated/floor/plating/sif/planetuse,
+/area/submap/alientomb)
+"u" = (
 /obj/structure/table/alien/blue,
-/obj/item/weapon/storage/pill_bottle/healing_nanites,
+/obj/item/perfect_tele/alien,
 /turf/simulated/floor/flock,
 /area/submap/alientomb)
 "x" = (
 /turf/simulated/mineral,
 /area/submap/alientomb)
 "A" = (
-/turf/simulated/shuttle/plating,
+/obj/structure/cable/blue{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/plating/sif/planetuse,
+/area/submap/alientomb)
+"I" = (
+/obj/structure/table/alien/blue,
+/obj/item/multitool/alien,
+/turf/simulated/floor/flock,
 /area/submap/alientomb)
 "K" = (
 /turf/simulated/floor/flock,
 /area/submap/alientomb)
+"L" = (
+/obj/structure/table/alien/blue,
+/obj/item/storage/pill_bottle/healing_nanites,
+/turf/simulated/floor/flock,
+/area/submap/alientomb)
 "T" = (
 /mob/living/simple_mob/humanoid/merc/melee/sword/space,
-/turf/simulated/mineral/floor/ignore_mapgen/sif,
+/turf/simulated/floor/plating/sif/planetuse,
 /area/submap/alientomb)
 "W" = (
 /turf/simulated/shuttle/wall/flock,
 /area/submap/alientomb)
 "X" = (
-/obj/structure/table/alien/blue,
-/obj/item/device/perfect_tele/alien,
-/turf/simulated/floor/flock,
+/obj/machinery/power/port_gen/pacman,
+/obj/structure/cable/blue{
+	icon_state = "0-2"
+	},
+/turf/simulated/floor/plating/sif/planetuse,
 /area/submap/alientomb)
 
 (1,1,1) = {"
@@ -226,11 +250,11 @@ x
 x
 x
 x
-x
-x
-x
-x
-x
+W
+W
+W
+W
+W
 x
 f
 f
@@ -241,8 +265,8 @@ j
 a
 a
 a
-a
-a
+t
+t
 a
 a
 a
@@ -250,12 +274,12 @@ a
 x
 x
 x
-W
-W
-W
-W
-W
 x
+K
+K
+K
+K
+W
 x
 f
 f
@@ -265,10 +289,10 @@ j
 j
 a
 a
-a
-a
-a
-a
+t
+t
+t
+t
 a
 a
 a
@@ -276,10 +300,10 @@ x
 x
 W
 W
-K
-k
-K
 W
+W
+W
+K
 W
 x
 f
@@ -289,24 +313,24 @@ f
 j
 j
 a
-a
-a
-a
-a
-a
-a
+k
+t
+t
+t
+t
+t
 a
 a
 W
 W
 W
-K
-K
-K
-K
-K
+I
 W
 W
+W
+K
+W
+x
 f
 f
 "}
@@ -314,12 +338,12 @@ f
 j
 j
 a
-a
+t
 g
-A
-A
+t
+t
 T
-a
+t
 a
 a
 W
@@ -327,11 +351,11 @@ K
 K
 K
 K
-K
-K
-K
+W
+W
 K
 W
+x
 f
 f
 "}
@@ -339,12 +363,12 @@ f
 j
 j
 a
-a
+X
 A
 d
-A
-A
-a
+t
+t
+t
 a
 a
 q
@@ -352,11 +376,11 @@ K
 K
 K
 K
-K
-K
-K
-X
+u
 W
+r
+W
+x
 f
 f
 "}
@@ -364,12 +388,12 @@ f
 j
 j
 a
-a
+t
 m
-A
-A
+t
+t
 n
-a
+t
 a
 a
 W
@@ -377,11 +401,11 @@ K
 K
 K
 K
-K
-K
-K
+W
+W
 K
 W
+x
 f
 f
 "}
@@ -389,24 +413,24 @@ f
 j
 j
 a
-a
-a
-a
-a
-a
-a
+k
+t
+t
+t
+t
+t
 a
 a
 W
 W
 W
-K
-K
-K
-K
-K
+L
 W
 W
+W
+K
+W
+x
 f
 f
 "}
@@ -415,21 +439,21 @@ j
 j
 a
 a
-a
-a
-a
-a
-a
-a
-a
-x
-x
-W
-W
-K
 t
-K
+t
+t
+t
+a
+a
+a
+x
+x
 W
+W
+W
+W
+W
+K
 W
 x
 f
@@ -441,8 +465,8 @@ j
 a
 a
 a
-a
-a
+t
+t
 a
 a
 a
@@ -450,12 +474,12 @@ a
 x
 x
 x
-W
-W
-W
-W
-W
 x
+K
+K
+K
+K
+W
 x
 f
 f
@@ -476,11 +500,11 @@ x
 x
 x
 x
-x
-x
-x
-x
-x
+W
+W
+W
+W
+W
 x
 f
 f

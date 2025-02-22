@@ -10,8 +10,9 @@
 	id = "expwelder"
 	req_tech = list(TECH_ENGINEERING = 4, TECH_PHORON = 3, TECH_MATERIAL = 4)
 	materials = list(MAT_STEEL = 70, MAT_GLASS = 120, MAT_PHORON = 100)
-	build_path = /obj/item/weapon/weldingtool/experimental
+	build_path = /obj/item/weldingtool/experimental
 	sort_string = "NAAAA"
+	department = LATHE_ALL | LATHE_ENGINEERING // CHOMPAdd
 
 /datum/design/item/tool/hand_drill
 	name = "Hand drill"
@@ -19,8 +20,9 @@
 	id = "handdrill"
 	req_tech = list(TECH_ENGINEERING = 3, TECH_MATERIAL = 2)
 	materials = list(MAT_STEEL = 300, MAT_SILVER = 100)
-	build_path = /obj/item/weapon/tool/transforming/powerdrill
+	build_path = /obj/item/tool/transforming/powerdrill
 	sort_string = "NAAAB"
+	department = LATHE_ALL | LATHE_ENGINEERING // CHOMPAdd
 
 /datum/design/item/tool/jaws_life
 	name = "Jaws of life"
@@ -28,26 +30,19 @@
 	id = "jawslife"
 	req_tech = list(TECH_ENGINEERING = 3, TECH_MATERIAL = 2)
 	materials = list(MAT_STEEL = 300, MAT_SILVER = 100)
-	build_path = /obj/item/weapon/tool/transforming/jawsoflife
+	build_path = /obj/item/tool/transforming/jawsoflife
 	sort_string = "NAAAC"
+	department = LATHE_ALL | LATHE_ENGINEERING // CHOMPAdd
 // YW addition begins
-/datum/design/item/tool/rpd
-	name = "Rapid Piping Device (RPD)"
-	desc = "A device used to rapidly pipe things."
-	id = "RPD"
-	req_tech = list(TECH_ENGINEERING = 3, TECH_MATERIAL = 2, TECH_BLUESPACE = 2)
-	materials = list(DEFAULT_WALL_MATERIAL = 300, "silver" = 100, "diamond" = 500)
-	build_path = /obj/item/weapon/pipe_dispenser
-	sort_string = "NAAAB"
-
 /datum/design/item/tool/rms
 	name = "Rapid Material Synthesizer (RMS)"
 	desc = "A tool that converts battery charge to materials."
 	id = "RMS"
 	req_tech = list(TECH_ENGINEERING = 4, TECH_MATERIAL = 3, TECH_BLUESPACE = 3)
-	materials = list(DEFAULT_WALL_MATERIAL = 500, "glass" = 500, "silver" = 300, "phoron" = 300, "diamond" = 500) //Probably change the price in the future just put something for now
-	build_path = /obj/item/weapon/rms
+	materials = list(DEFAULT_WALL_MATERIAL = 500, MAT_GLASS = 500, MAT_SILVER = 300, MAT_PHORON = 300, MAT_DIAMOND = 500) //Probably change the price in the future just put something for now
+	build_path = /obj/item/rms
 	sort_string = "NAAAB"
+	department = LATHE_ALL | LATHE_ENGINEERING // CHOMPAdd
 // YW addition end
 
 /datum/design/item/tool/rpd
@@ -56,8 +51,9 @@
 	id = "rapidpipedispenser"
 	req_tech = list(TECH_ENGINEERING = 4, TECH_MATERIAL = 2)
 	materials = list(MAT_STEEL = 4000, MAT_GLASS = 2000)
-	build_path = /obj/item/weapon/pipe_dispenser
+	build_path = /obj/item/pipe_dispenser
 	sort_string = "NAAAD"
+	department = LATHE_ALL | LATHE_ENGINEERING // CHOMPAdd
 
 /datum/design/item/tool/qpad_booster
 	name = "Quantum Pad Particle Booster"
@@ -65,8 +61,9 @@
 	id = "qpad_booster"
 	req_tech = list(TECH_ENGINEERING = 7, TECH_MATERIAL = 7, TECH_BLUESPACE = 6)
 	materials = list(MAT_STEEL = 4000, MAT_GLASS = 2000, MAT_SILVER = 2000, MAT_GOLD = 2000, MAT_VERDANTIUM = 1000)
-	build_path = /obj/item/device/quantum_pad_booster
+	build_path = /obj/item/quantum_pad_booster
 	sort_string = "NAAAF"
+	department = LATHE_ALL | LATHE_ENGINEERING // CHOMPAdd
 
 // Other devices
 
@@ -80,7 +77,7 @@
 	id = "tscanner"
 	req_tech = list(TECH_MAGNET = 2, TECH_ENGINEERING = 2, TECH_MATERIAL = 2)
 	materials = list(MAT_STEEL = 200)
-	build_path = /obj/item/device/t_scanner
+	build_path = /obj/item/t_scanner
 	sort_string = "NBAAA"
 
 /datum/design/item/engineering/t_scanner_upg
@@ -89,8 +86,9 @@
 	id = "upgradedtscanner"
 	req_tech = list(TECH_MAGNET = 3, TECH_ENGINEERING = 4, TECH_MATERIAL = 2)
 	materials = list(MAT_STEEL = 500, MAT_PHORON = 150)
-	build_path = /obj/item/device/t_scanner/upgraded
+	build_path = /obj/item/t_scanner/upgraded
 	sort_string = "NBAAB"
+	department = LATHE_ALL | LATHE_ENGINEERING // CHOMPAdd
 
 /datum/design/item/engineering/t_scanner_adv
 	name = "Advanced T-ray Scanner"
@@ -98,8 +96,9 @@
 	id = "advancedtscanner"
 	req_tech = list(TECH_MAGNET = 6, TECH_ENGINEERING = 6, TECH_MATERIAL = 6)
 	materials = list(MAT_STEEL = 1250, MAT_PHORON = 500, MAT_SILVER = 50)
-	build_path = /obj/item/device/t_scanner/advanced
+	build_path = /obj/item/t_scanner/advanced
 	sort_string = "NBAAC"
+	department = LATHE_ALL | LATHE_ENGINEERING // CHOMPAdd
 
 /datum/design/item/engineering/atmosanalyzer
 	name = "Analyzer"
@@ -107,5 +106,6 @@
 	id = "atmosanalyzer"
 	req_tech = list(TECH_ENGINEERING = 2)
 	materials = list(MAT_STEEL = 200, MAT_GLASS = 100)
-	build_path = /obj/item/device/analyzer
+	build_path = /obj/item/analyzer
 	sort_string = "NBABA"
+	department = LATHE_ALL | LATHE_ENGINEERING // CHOMPAdd

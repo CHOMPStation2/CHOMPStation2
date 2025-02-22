@@ -17,13 +17,13 @@
 		return
 	//VOREStation Addition Start
 	if(!ai_control && issilicon(user))
-		to_chat(user, "<span class='warning'>Access Denied.</span>")
+		to_chat(user, span_warning("Access Denied."))
 		return TRUE
 	//VOREStation Addition End
 
 	//src.add_fingerprint(user)	//shouldn't need fingerprints just for looking at it.
 	if(!allowed(user))
-		to_chat(user, "<span class='warning'>Access Denied.</span>")
+		to_chat(user, span_warning("Access Denied."))
 		return 1
 
 	tgui_interact(user)
@@ -71,38 +71,38 @@
 /obj/machinery/computer/shuttle_control/proc/can_move(var/datum/shuttle/autodock/shuttle, var/user)
 	var/cannot_depart = shuttle.current_location.cannot_depart(shuttle)
 	if(cannot_depart)
-		to_chat(user, "<span class='warning'>[cannot_depart]</span>")
+		to_chat(user, span_warning("[cannot_depart]"))
 		if(shuttle.debug_logging)
 			log_shuttle("Shuttle [shuttle] cannot depart [shuttle.current_location] because: [cannot_depart].")
 		return FALSE
 	if(!shuttle.next_location.is_valid(shuttle))
-		to_chat(user, "<span class='warning'>Destination zone is invalid or obstructed.</span>")
+		to_chat(user, span_warning("Destination zone is invalid or obstructed."))
 		if(shuttle.debug_logging)
 			log_shuttle("Shuttle [shuttle] destination [shuttle.next_location] is invalid.")
 		return FALSE
 	return TRUE
 
-/obj/machinery/computer/shuttle_control/tgui_act(action, list/params)
+/obj/machinery/computer/shuttle_control/tgui_act(action, list/params, datum/tgui/ui)
 	if(..())
 		return TRUE
 	if(skip_act)
 		return
 
-	add_fingerprint(usr)
+	add_fingerprint(ui.user)
 
 	var/datum/shuttle/autodock/shuttle = SSshuttles.shuttles[shuttle_tag]
 	if(!istype(shuttle))
-		to_chat(usr, "<span class='warning'>Unable to establish link with the shuttle.</span>")
+		to_chat(ui.user, span_warning("Unable to establish link with the shuttle."))
 		return TRUE
 
 	switch(action)
 		if("move")
-			if(can_move(shuttle, usr))
+			if(can_move(shuttle, ui.user))
 				shuttle.launch(src)
 			return TRUE
 
 		if("force")
-			if(can_move(shuttle, usr))
+			if(can_move(shuttle, ui.user))
 				shuttle.force_launch(src)
 			return TRUE
 
@@ -111,7 +111,7 @@
 			return TRUE
 
 		if("set_codes")
-			var/newcode = tgui_input_text(usr, "Input new docking codes", "Docking codes", shuttle.docking_codes, MAX_NAME_LEN)
+			var/newcode = tgui_input_text(ui.user, "Input new docking codes", "Docking codes", shuttle.docking_codes, MAX_NAME_LEN)
 			newcode = sanitize(newcode,MAX_NAME_LEN)
 			if(newcode && !..())
 				shuttle.set_docking_codes(uppertext(newcode))
@@ -127,7 +127,7 @@
 /obj/machinery/computer/shuttle_control/tgui_data(mob/user)
 	var/datum/shuttle/autodock/shuttle = SSshuttles.shuttles[shuttle_tag]
 	if(!istype(shuttle))
-		to_chat(user, "<span class='warning'>Unable to establish link with the shuttle.</span>")
+		to_chat(user, span_warning("Unable to establish link with the shuttle."))
 		return
 
 	return shuttlerich_tgui_data(shuttle)
@@ -157,17 +157,17 @@
 	return
 
 
-GLOBAL_LIST_BOILERPLATE(papers_dockingcode, /obj/item/weapon/paper/dockingcodes)
+GLOBAL_LIST_BOILERPLATE(papers_dockingcode, /obj/item/paper/dockingcodes)
 /hook/roundstart/proc/populate_dockingcodes()
-	for(var/obj/item/weapon/paper/dockingcodes/dcp as anything in GLOB.papers_dockingcode)
+	for(var/obj/item/paper/dockingcodes/dcp as anything in GLOB.papers_dockingcode)
 		dcp.populate_info()
 	return TRUE
 
-/obj/item/weapon/paper/dockingcodes
+/obj/item/paper/dockingcodes
 	name = "Docking Codes"
 	var/codes_from_z = null //So you can put codes from the station other places to give to antags or whatever
 
-/obj/item/weapon/paper/dockingcodes/proc/populate_info()
+/obj/item/paper/dockingcodes/proc/populate_info()
 	var/dockingcodes = null
 	var/turf/T = get_turf(src)
 	var/our_z

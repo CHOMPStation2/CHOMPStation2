@@ -4,7 +4,7 @@
 	icon_keyboard = "atmos_key"
 	icon_screen = "area_atmos"
 	light_color = "#e6ffff"
-	circuit = /obj/item/weapon/circuitboard/area_atmos
+	circuit = /obj/item/circuitboard/area_atmos
 
 	var/list/connectedscrubbers = list()
 	var/status = ""
@@ -51,7 +51,7 @@
 
 	return list("scrubbers" = working)
 
-/obj/machinery/computer/area_atmos/tgui_act(action, params)
+/obj/machinery/computer/area_atmos/tgui_act(action, params, datum/tgui/ui)
 	if(..())
 		return TRUE
 
@@ -72,10 +72,10 @@
 			INVOKE_ASYNC(src, PROC_REF(toggle_all), FALSE)
 			. = TRUE
 		if("scan")
-			scanscrubbers()
+			scanscrubbers(ui.user)
 			. = TRUE
 
-	add_fingerprint(usr)
+	add_fingerprint(ui.user)
 
 /obj/machinery/computer/area_atmos/proc/toggle_all(on)
 	for(var/id in connectedscrubbers)
@@ -92,7 +92,7 @@
 		return FALSE
 	return TRUE
 
-/obj/machinery/computer/area_atmos/proc/scanscrubbers()
+/obj/machinery/computer/area_atmos/proc/scanscrubbers(mob/user)
 	connectedscrubbers = list()
 
 	var/found = 0
@@ -103,13 +103,13 @@
 	if(!found)
 		status = "ERROR: No scrubber found!"
 
-	updateUsrDialog()
+	updateUsrDialog(user)
 
 // The one that only works in the same map area
 /obj/machinery/computer/area_atmos/area
 	zone = "This computer is working in a wired network limited to this area."
 
-/obj/machinery/computer/area_atmos/area/scanscrubbers()
+/obj/machinery/computer/area_atmos/area/scanscrubbers(mob/user)
 	connectedscrubbers.Cut()
 
 	var/found = 0
@@ -121,7 +121,7 @@
 	if(!found)
 		status = "ERROR: No scrubber found!"
 
-	src.updateUsrDialog()
+	updateUsrDialog(user)
 
 /obj/machinery/computer/area_atmos/area/validscrubber(var/obj/machinery/portable_atmospherics/powered/scrubber/huge/scrubber)
 	if(!istype(scrubber))

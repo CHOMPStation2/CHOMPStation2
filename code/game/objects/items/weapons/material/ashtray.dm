@@ -1,26 +1,28 @@
 var/global/list/ashtray_cache = list()
 
-/obj/item/weapon/material/ashtray
+/obj/item/material/ashtray
 	name = "ashtray"
 	icon = 'icons/obj/objects.dmi'
-	icon_state = "blank"
+	icon_state = "ashtray"
 	randpixel = 5
 	force_divisor = 0.1
 	thrown_force_divisor = 0.1
+	w_class = ITEMSIZE_SMALL
 	var/image/base_image
 	var/max_butts = 10
 
-/obj/item/weapon/material/ashtray/New(var/newloc, var/material_name)
+/obj/item/material/ashtray/New(var/newloc, var/material_name)
 	..(newloc, material_name)
 	if(!material)
 		qdel(src)
 		return
+	icon_state = "blank"
 	max_butts = round(material.hardness/5) //This is arbitrary but whatever.
 	randpixel_xy()
 	update_icon()
 	return
 
-/obj/item/weapon/material/ashtray/update_icon()
+/obj/item/material/ashtray/update_icon()
 	color = null
 	cut_overlays()
 	var/cache_key = "base-[material.name]"
@@ -43,10 +45,10 @@ var/global/list/ashtray_cache = list()
 	else
 		desc = "An ashtray made of [material.display_name]."
 
-/obj/item/weapon/material/ashtray/attackby(obj/item/weapon/W as obj, mob/user as mob)
+/obj/item/material/ashtray/attackby(obj/item/W as obj, mob/user as mob)
 	if (health <= 0)
 		return
-	if (istype(W,/obj/item/trash/cigbutt) || istype(W,/obj/item/clothing/mask/smokable/cigarette) || istype(W, /obj/item/weapon/flame/match))
+	if (istype(W,/obj/item/trash/cigbutt) || istype(W,/obj/item/clothing/mask/smokable/cigarette) || istype(W, /obj/item/flame/match))
 		if (contents.len >= max_butts)
 			to_chat(user, "\The [src] is full.")
 			return
@@ -60,6 +62,12 @@ var/global/list/ashtray_cache = list()
 				STOP_PROCESSING(SSobj, cig)
 				var/obj/item/butt = new cig.type_butt(src)
 				cig.transfer_fingerprints_to(butt)
+				//CHOMPAdd Start - Turn mind bound cigs into butts
+				if(cig.possessed_voice && cig.possessed_voice.len)
+					var/mob/living/voice/V = src.possessed_voice[1]
+					butt.inhabit_item(V, null, V.tf_mob_holder, TRUE)
+					qdel(V)
+				//CHOMPAdd End
 				qdel(cig)
 				W = butt
 				//spawn(1)
@@ -79,12 +87,12 @@ var/global/list/ashtray_cache = list()
 			shatter()
 	return
 
-/obj/item/weapon/material/ashtray/throw_impact(atom/hit_atom)
+/obj/item/material/ashtray/throw_impact(atom/hit_atom)
 	if (health > 0)
 		health = max(0,health - 3)
 		if (contents.len)
-			src.visible_message("<span class='danger'>\The [src] slams into [hit_atom], spilling its contents!</span>")
-		for (var/obj/item/clothing/mask/smokable/cigarette/O in contents)
+			src.visible_message(span_danger("\The [src] slams into [hit_atom], spilling its contents!"))
+		for (var/obj/item/O in contents) //CHOMPEdit - Dump all items out, so it ejects butts too
 			O.loc = src.loc
 		if (health < 1)
 			shatter()
@@ -92,11 +100,11 @@ var/global/list/ashtray_cache = list()
 		update_icon()
 	return ..()
 
-/obj/item/weapon/material/ashtray/plastic/New(var/newloc)
-	..(newloc, "plastic")
+/obj/item/material/ashtray/plastic/New(var/newloc)
+	..(newloc, MAT_PLASTIC)
 
-/obj/item/weapon/material/ashtray/bronze/New(var/newloc)
-	..(newloc, "bronze")
+/obj/item/material/ashtray/bronze/New(var/newloc)
+	..(newloc, MAT_BRONZE)
 
-/obj/item/weapon/material/ashtray/glass/New(var/newloc)
-	..(newloc, "glass")
+/obj/item/material/ashtray/glass/New(var/newloc)
+	..(newloc,MAT_GLASS)

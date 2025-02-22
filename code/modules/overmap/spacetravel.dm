@@ -66,7 +66,7 @@
 
 	return TRUE
 
-/obj/item/device/uav/lost_in_space()
+/obj/item/uav/lost_in_space()
 	if(state == 1)
 		return FALSE
 	return ..()
@@ -102,7 +102,7 @@
 		return
 
 	// Don't let AI eyes yeet themselves off the map
-	if(istype(A, /mob/observer/eye))
+	if(isEye(A))
 		return
 
 	if(A.lost_in_space())

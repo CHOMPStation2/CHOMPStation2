@@ -186,8 +186,15 @@ var/list/global_huds = list(
 	var/list/miniobjs
 	var/list/obj/screen/hotkeybuttons
 
-	var/obj/screen/movable/action_button/hide_toggle/hide_actions_toggle
-	var/action_buttons_hidden = 0
+	var/obj/screen/button_palette/toggle_palette
+	var/obj/screen/palette_scroll/down/palette_down
+	var/obj/screen/palette_scroll/up/palette_up
+
+	var/datum/action_group/palette/palette_actions
+	var/datum/action_group/listed/listed_actions
+	var/list/floating_actions
+
+
 	var/list/slot_info
 
 	var/icon/ui_style
@@ -205,8 +212,19 @@ var/list/global_huds = list(
 	..()
 
 /datum/hud/Destroy()
-	. = ..()
+	if(mymob.hud_used == src)
+		mymob.hud_used = null
+
 	QDEL_NULL_LIST(minihuds)
+
+	// Actions
+	QDEL_NULL(toggle_palette)
+	QDEL_NULL(palette_down)
+	QDEL_NULL(palette_up)
+	QDEL_NULL(palette_actions)
+	QDEL_NULL(listed_actions)
+	QDEL_LIST(floating_actions)
+
 	grab_intent = null
 	hurt_intent = null
 	disarm_intent = null
@@ -230,6 +248,8 @@ var/list/global_huds = list(
 		remove_ammo_hud(mymob, x)
 	ammo_hud_list = null
 	mymob = null
+
+	return ..()
 
 /datum/hud/proc/hidden_inventory_update()
 	if(!mymob) return
@@ -323,18 +343,68 @@ var/list/global_huds = list(
 
 	mymob.create_mob_hud(src)
 
+	// Past this point, mymob.hud_used is set
+
+	toggle_palette = new()
+	toggle_palette.set_hud(src)
+	palette_down = new()
+	palette_down.set_hud(src)
+	palette_up = new()
+	palette_up.set_hud(src)
+
 	persistant_inventory_update()
 	mymob.reload_fullscreen() // Reload any fullscreen overlays this mob has.
-	mymob.update_action_buttons()
+	mymob.update_action_buttons(TRUE)
 	reorganize_alerts()
 
 /mob/proc/create_mob_hud(datum/hud/HUD, apply_to_client = TRUE)
 	if(!client)
 		return 0
 
-	HUD.ui_style = ui_style2icon(client?.prefs?.UI_style)
-	HUD.ui_color = client?.prefs?.UI_style_color
-	HUD.ui_alpha = client?.prefs?.UI_style_alpha
+	HUD.ui_style = ui_style2icon(read_preference(/datum/preference/choiced/ui_style))
+	HUD.ui_color = read_preference(/datum/preference/color/ui_style_color)
+	HUD.ui_alpha = read_preference(/datum/preference/numeric/ui_style_alpha)
+	set_hud_used(HUD)
+
+/mob/proc/set_hud_used(datum/hud/new_hud)
+	hud_used = new_hud
+	new_hud.build_action_groups()
+
+/mob/proc/update_ui_style(UI_style_new, UI_style_alpha_new, UI_style_color_new)
+	if(!hud_used)
+		return
+
+	if(!UI_style_alpha_new)
+		UI_style_alpha_new = hud_used.ui_alpha
+	hud_used.ui_alpha = UI_style_alpha_new
+	if(!UI_style_color_new)
+		UI_style_color_new = hud_used.ui_color
+	hud_used.ui_color = UI_style_color_new
+
+	var/list/icons = hud_used.adding + hud_used.other + hud_used.hotkeybuttons
+	icons.Add(zone_sel)
+	icons.Add(gun_setting_icon)
+	icons.Add(item_use_icon)
+	icons.Add(gun_move_icon)
+	icons.Add(radio_use_icon)
+
+	var/icon/ic
+
+	if(UI_style_new)
+		if(isrobot(src))
+			ic = all_ui_styles_robot[UI_style_new]
+		else
+			ic = all_ui_styles[UI_style_new]
+		hud_used.ui_style = ic
+	else
+		ic = hud_used.ui_style
+
+	for(var/obj/screen/I in icons)
+		if(I.name in list(I_HELP, I_HURT, I_DISARM, I_GRAB))
+			continue
+		I.icon = ic
+		I.color = UI_style_color_new
+		I.alpha = UI_style_alpha_new
 
 /datum/hud/proc/apply_minihud(var/datum/mini_hud/MH)
 	if(MH in minihuds)
@@ -362,7 +432,7 @@ var/list/global_huds = list(
 	set hidden = 1
 
 	if(!hud_used)
-		to_chat(usr, "<span class='warning'>This mob type does not use a HUD.</span>")
+		to_chat(src, span_warning("This mob type does not use a HUD."))
 		return FALSE
 	if(!client)
 		return FALSE
@@ -404,10 +474,11 @@ var/list/global_huds = list(
 
 		hud_used?.action_intent.screen_loc = ui_acti //Restore intent selection to the original position
 		client.screen += zone_sel				//This one is a special snowflake
+		client.screen += hud_used.toggle_palette
 
 	hud_used.hidden_inventory_update()
 	hud_used.persistant_inventory_update()
-	update_action_buttons()
+	update_action_buttons(TRUE)
 	hud_used.reorganize_alerts()
 	return TRUE
 
@@ -467,7 +538,7 @@ var/list/global_huds = list(
 
 	hud_used.hidden_inventory_update()
 	hud_used.persistant_inventory_update()
-	update_action_buttons()
+	update_action_buttons(TRUE)
 
 /mob/proc/add_click_catcher()
 	client.screen += client.void
@@ -480,7 +551,7 @@ var/list/global_huds = list(
  * All these do is manage the amount of huds on screen and set the HUD.
 */
 ///Add an ammo hud to the user informing of the ammo count of G
-/datum/hud/proc/add_ammo_hud(mob/living/user, obj/item/weapon/gun/G)
+/datum/hud/proc/add_ammo_hud(mob/living/user, obj/item/gun/G)
 	if(length(ammo_hud_list) >= MAX_AMMO_HUD_POSSIBLE)
 		return
 	var/obj/screen/ammo/ammo_hud = new
@@ -490,7 +561,7 @@ var/list/global_huds = list(
 	ammo_hud.update_hud(user, G)
 
 ///Remove the ammo hud related to the gun G from the user
-/datum/hud/proc/remove_ammo_hud(mob/living/user, obj/item/weapon/gun/G)
+/datum/hud/proc/remove_ammo_hud(mob/living/user, obj/item/gun/G)
 	var/obj/screen/ammo/ammo_hud = ammo_hud_list[G]
 	if(isnull(ammo_hud))
 		return
@@ -504,6 +575,8 @@ var/list/global_huds = list(
 		i++
 
 ///Update the ammo hud related to the gun G
-/datum/hud/proc/update_ammo_hud(mob/living/user, obj/item/weapon/gun/G)
+/datum/hud/proc/update_ammo_hud(mob/living/user, obj/item/gun/G)
 	var/obj/screen/ammo/ammo_hud = ammo_hud_list[G]
 	ammo_hud?.update_hud(user, G)
+
+#undef MAX_AMMO_HUD_POSSIBLE

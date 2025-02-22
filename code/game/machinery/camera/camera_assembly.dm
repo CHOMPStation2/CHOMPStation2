@@ -1,4 +1,4 @@
-/obj/item/weapon/camera_assembly
+/obj/item/camera_assembly
 	name = "camera assembly"
 	desc = "A pre-fabricated security camera kit, ready to be assembled and mounted to a surface."
 	icon = 'icons/obj/monitors_vr.dmi' //VOREStation Edit - New Icons
@@ -9,7 +9,7 @@
 	matter = list(MAT_STEEL = 700,MAT_GLASS = 300)
 
 	//	Motion, EMP-Proof, X-Ray
-	var/list/obj/item/possible_upgrades = list(/obj/item/device/assembly/prox_sensor, /obj/item/stack/material/osmium, /obj/item/weapon/stock_parts/scanning_module)
+	var/list/obj/item/possible_upgrades = list(/obj/item/assembly/prox_sensor, /obj/item/stack/material/osmium, /obj/item/stock_parts/scanning_module)
 	var/list/upgrades = list()
 	var/camera_name
 	var/camera_network
@@ -23,7 +23,7 @@
 				4 = Screwdriver panel closed and is fully built (you cannot attach upgrades)
 	*/
 
-/obj/item/weapon/camera_assembly/attackby(obj/item/W as obj, mob/living/user as mob)
+/obj/item/camera_assembly/attackby(obj/item/W as obj, mob/living/user as mob)
 
 	switch(state)
 
@@ -60,10 +60,10 @@
 			if(istype(W, /obj/item/stack/cable_coil))
 				var/obj/item/stack/cable_coil/C = W
 				if(C.use(2))
-					to_chat(user, "<span class='notice'>You add wires to the assembly.</span>")
+					to_chat(user, span_notice("You add wires to the assembly."))
 					state = 3
 				else
-					to_chat(user, "<span class='warning'>You need 2 coils of wire to wire the assembly.</span>")
+					to_chat(user, span_warning("You need 2 coils of wire to wire the assembly."))
 				return
 
 			else if(W.has_tool_quality(TOOL_WELDER))
@@ -80,19 +80,19 @@
 			if(W.has_tool_quality(TOOL_SCREWDRIVER))
 				playsound(src, W.usesound, 50, 1)
 
-				var/input = sanitize(tgui_input_text(usr, "Which networks would you like to connect this camera to? Separate networks with a comma. No Spaces!\nFor example: "+using_map.station_short+",Security,Secret ", "Set Network", camera_network ? camera_network : NETWORK_DEFAULT))
+				var/input = sanitize(tgui_input_text(user, "Which networks would you like to connect this camera to? Separate networks with a comma. No Spaces!\nFor example: "+using_map.station_short+",Security,Secret ", "Set Network", camera_network ? camera_network : NETWORK_DEFAULT))
 				if(!input)
-					to_chat(usr, "No input found please hang up and try your call again.")
+					to_chat(user, "No input found please hang up and try your call again.")
 					return
 
 				var/list/tempnetwork = splittext(input, ",")
 				if(tempnetwork.len < 1)
-					to_chat(usr, "No network found please hang up and try your call again.")
+					to_chat(user, "No network found please hang up and try your call again.")
 					return
 
 				var/area/camera_area = get_area(src)
 				var/temptag = "[sanitize(camera_area.name)] ([rand(1, 999)])"
-				input = sanitizeSafe(tgui_input_text(usr, "How would you like to name the camera?", "Set Camera Name", camera_name ? camera_name : temptag), MAX_NAME_LEN)
+				input = sanitizeSafe(tgui_input_text(user, "How would you like to name the camera?", "Set Camera Name", camera_name ? camera_name : temptag), MAX_NAME_LEN)
 
 				state = 4
 				var/obj/machinery/camera/C = new(src.loc)
@@ -143,17 +143,17 @@
 
 	..()
 
-/obj/item/weapon/camera_assembly/update_icon()
+/obj/item/camera_assembly/update_icon()
 	if(anchored)
 		icon_state = "camera1"
 	else
 		icon_state = "cameracase"
 
-/obj/item/weapon/camera_assembly/attack_hand(mob/user as mob)
+/obj/item/camera_assembly/attack_hand(mob/user as mob)
 	if(!anchored)
 		..()
 
-/obj/item/weapon/camera_assembly/proc/weld(var/obj/item/weapon/weldingtool/WT, var/mob/user)
+/obj/item/camera_assembly/proc/weld(var/obj/item/weldingtool/WT, var/mob/user)
 	WT = WT.get_welder()
 
 	if(busy)
@@ -161,7 +161,7 @@
 	if(!WT.isOn())
 		return 0
 
-	to_chat(user, "<span class='notice'>You start to weld the [src]..</span>")
+	to_chat(user, span_notice("You start to weld the [src].."))
 	playsound(src, WT.usesound, 50, 1)
 	WT.eyecheck(user)
 	busy = 1

@@ -55,7 +55,7 @@
 /obj/structure/cult/pylon/proc/pylonhit(var/damage)
 	if(!isbroken)
 		if(prob(1+ damage * 5))
-			visible_message("<span class='danger'>[shatter_message]</span>")
+			visible_message(span_danger("[shatter_message]"))
 			STOP_PROCESSING(SSobj, src)
 			playsound(src,shatter_sound, 75, 1)
 			isbroken = 1
@@ -67,8 +67,8 @@
 	if(!isbroken)
 		if(prob(1+ damage * 5))
 			user.visible_message(
-				"<span class='danger'>[user] smashed \the [src]!</span>",
-				"<span class='warning'>You hit \the [src], and its crystal breaks apart!</span>",
+				span_danger("[user] smashed \the [src]!"),
+				span_warning("You hit \the [src], and its crystal breaks apart!"),
 				"You hear a tinkle of crystal shards."
 				)
 			STOP_PROCESSING(SSobj, src)
@@ -154,6 +154,7 @@
 	return
 
 /obj/effect/gateway/active/Initialize()
+	. = ..()
 	addtimer(CALLBACK(src, PROC_REF(spawn_and_qdel)), rand(30, 60) SECONDS)
 
 /obj/effect/gateway/active/proc/spawn_and_qdel()
@@ -165,9 +166,9 @@
 /obj/effect/gateway/active/Crossed(var/atom/A)
 	if(A.is_incorporeal())
 		return
-	if(!istype(A, /mob/living))
+	if(!isliving(A))
 		return
 
 	var/mob/living/M = A
 
-	to_chat(M, "<span class='danger'>Walking into \the [src] is probably a bad idea, you think.</span>")
+	to_chat(M, span_danger("Walking into \the [src] is probably a bad idea, you think."))

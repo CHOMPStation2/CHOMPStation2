@@ -15,12 +15,11 @@
 
 	equip_type = EQUIP_HULL
 
-/obj/item/mecha_parts/mecha_equipment/combat_shield/New()
-	..()
+/obj/item/mecha_parts/mecha_equipment/combat_shield/Initialize(mapload)
+	. = ..()
 	my_shield = new my_shield_type
 	my_shield.shield_regen_delay = equip_cooldown
 	my_shield.my_tool = src
-	return
 
 /obj/item/mecha_parts/mecha_equipment/combat_shield/critfail()
 	..()
@@ -86,4 +85,4 @@
 
 /obj/item/mecha_parts/mecha_equipment/combat_shield/get_equip_info()
 	if(!chassis) return
-	return "<span style=\"color:[equip_ready?"#0f0":"#f00"];\">*</span>&nbsp;[src.name] - <a href='?src=\ref[src];toggle_shield=1'>[my_shield.active?"Dea":"A"]ctivate</a>"
+	return (equip_ready ? span_green("*") : span_red("*")) + "&nbsp;[src.name] - <a href='byond://?src=\ref[src];toggle_shield=1'>[my_shield.active?"Dea":"A"]ctivate</a>"

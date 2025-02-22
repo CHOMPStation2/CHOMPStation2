@@ -16,8 +16,10 @@
 #define LANGUAGE_ANIMAL "Animal"
 #define LANGUAGE_TEPPI "Teppi"
 #define LANGUAGE_MOUSE "Mouse"
+#define LANNGUAGE_DRAKE "Drake"
 
 #define LANGUAGE_SHADEKIN "Shadekin Empathy"
+#define LANGUAGE_LLEILL "Glamour Speak"
 #define LANGUAGE_MARISH "Marish" // CHOMPedit
 
 //CHOMPedit Start - Xeno languages selectable

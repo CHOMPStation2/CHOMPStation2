@@ -80,15 +80,22 @@
 			B.host_brain.name = "host brain"
 			B.host_brain.real_name = "host brain"
 
-		remove_verb(src,/mob/living/carbon/proc/release_control) //CHOMPEdit TGPanel
+		remove_verb(src, /mob/living/carbon/proc/release_control)
 
 	callHook("death", list(src, gibbed))
 
+	// CHOMPAdd - Shoe steppy. I was going to make a hook but- It isn't much.
+	if(istype(loc, /obj/item/clothing/shoes))
+		mind?.vore_death = TRUE
+	// CHOMPEdit End
+
 	if(mind)
-		// SSgame_master.adjust_danger(gibbed ? 40 : 20)  // VOREStation Edit - We don't use SSgame_master yet.
-		for(var/mob/observer/dead/O in mob_list)
-			if(O.client && O.client.is_preference_enabled(/datum/client_preference/show_dsay))
-				to_chat(O, "<span class='deadsay'><b>[src]</b> has died in <b>[get_area(src)]</b>. [ghost_follow_link(src, O)] </span>")
+		var/area/A = get_area(src)
+		if(!(A?.flag_check(AREA_BLOCK_SUIT_SENSORS)) && isbelly(loc))
+			// SSgame_master.adjust_danger(gibbed ? 40 : 20)  // VOREStation Edit - We don't use SSgame_master yet.
+			for(var/mob/observer/dead/O in mob_list)
+				if(O.client?.prefs?.read_preference(/datum/preference/toggle/show_dsay))
+					to_chat(O, span_deadsay(span_bold("[src]") + " has died in " + span_bold("[get_area(src)]")  + ". [ghost_follow_link(src, O)] "))
 
 	/* // CHOMPEdit Start: Replacing this with our own death sounds. :3
 	if(!gibbed && species.death_sound)
@@ -103,7 +110,7 @@
 		ticker.mode.check_win()
 
 	if(wearing_rig)
-		wearing_rig.notify_ai("<span class='danger'>Warning: user death event. Mobility control passed to integrated intelligence system.</span>")
+		wearing_rig.notify_ai(span_danger("Warning: user death event. Mobility control passed to integrated intelligence system."))
 
 	// If the body is in VR, move the mind back to the real world
 	if(vr_holder)
@@ -119,7 +126,7 @@
 		vr_link.exit_vr()
 		vr_link.vr_holder = null
 		vr_link = null
-		to_chat(src, "<span class='danger'>Everything abruptly stops.</span>")
+		to_chat(src, span_danger("Everything abruptly stops."))
 
 	return ..(gibbed,species.get_death_message(src))
 
@@ -134,6 +141,7 @@
 
 	mutations.Add(HUSK)
 	status_flags |= DISFIGURED	//makes them unknown without fucking up other stuff like admintools
+	remove_blood(560) //CHOMPedit
 	update_icons_body()
 	return
 

@@ -1,12 +1,12 @@
 // fun if you want to typecast humans/monkeys/etc without writing long path-filled lines.
 /proc/isxenomorph(A)
-	if(istype(A, /mob/living/carbon/human))
+	if(ishuman(A))
 		var/mob/living/carbon/human/H = A
 		return istype(H.species, /datum/species/xenos)
 	return 0
 
 /proc/issmall(A)
-	if(A && istype(A, /mob/living))
+	if(A && isliving(A))
 		var/mob/living/L = A
 		return L.mob_size <= MOB_SMALL
 	return 0
@@ -21,14 +21,14 @@
 	return TRUE
 
 /proc/istiny(A)
-	if(A && istype(A, /mob/living))
+	if(A && isliving(A))
 		var/mob/living/L = A
 		return L.mob_size <= MOB_TINY
 	return 0
 
 
 /proc/ismini(A)
-	if(A && istype(A, /mob/living))
+	if(A && isliving(A))
 		var/mob/living/L = A
 		return L.mob_size <= MOB_MINISCULE
 	return 0
@@ -142,7 +142,7 @@
 		if(target.buckled || target.lying)
 			return zone
 		// if your target is being grabbed aggressively by someone you cannot miss either
-		for(var/obj/item/weapon/grab/G in target.grabbed_by)
+		for(var/obj/item/grab/G in target.grabbed_by)
 			if(G.state >= GRAB_AGGRESSIVE)
 				return zone
 
@@ -215,7 +215,7 @@
 			//if(2,4,6,15)	newletter="[uppertext(newletter)]"
 			if(2,4,6,9)	newletter="[uppertext(newletter)]"
 			if(7)	newletter+="'"
-			//if(9,10)	newletter="<b>[newletter]</b>"
+			//if(9,10)	newletter=span_bold("[newletter]")
 			//if(11,12)	newletter="<big>[newletter]</big>"
 			//if(13)	newletter="<small>[newletter]</small>"
 		newphrase+="[newletter]";counter-=1
@@ -255,8 +255,11 @@
 			if(p >= 70)
 				letter = ""
 
+			var/rand_set = list("#","@","*","&","%","$","/", "<", ">", ";","*","*","*","*","*","*","*")
+			if(p >= 80)
+				rand_set += alphabet_uppercase
 			for(var/j = 1, j <= rand(0, 2), j++)
-				letter += pick("#","@","*","&","%","$","/", "<", ">", ";","*","*","*","*","*","*","*")
+				letter += pick(rand_set)
 
 		returntext += letter
 
@@ -293,28 +296,20 @@ It's fairly easy to fix if dealing with single letters but not so much with comp
 
 
 /proc/shake_camera(mob/M, duration, strength=1)
-	if(!M || !M.client || M.shakecamera || M.stat || isEye(M) || isAI(M))
+	if(!M || !M.client || duration < 1)
 		return
-	M.shakecamera = 1
-	spawn(1)
-		if(!M.client)
-			return
+	var/client/C = M.client
+	var/oldx = C.pixel_x
+	var/oldy = C.pixel_y
+	var/max = strength * world.icon_size
+	var/min = -(strength * world.icon_size)
 
-		var/atom/oldeye=M.client.eye
-		var/aiEyeFlag = 0
-		if(istype(oldeye, /mob/observer/eye/aiEye))
-			aiEyeFlag = 1
-
-		var/x
-		for(x=0; x<duration, x++)
-			if(aiEyeFlag)
-				M.client.eye = locate(dd_range(1,oldeye.loc.x+rand(-strength,strength),world.maxx),dd_range(1,oldeye.loc.y+rand(-strength,strength),world.maxy),oldeye.loc.z)
-			else
-				M.client.eye = locate(dd_range(1,M.loc.x+rand(-strength,strength),world.maxx),dd_range(1,M.loc.y+rand(-strength,strength),world.maxy),M.loc.z)
-			sleep(1)
-		M.client.eye=oldeye
-		M.shakecamera = 0
-
+	for(var/i in 0 to duration - 1)
+		if(i == 0)
+			animate(C, pixel_x = rand(min, max), pixel_y = rand(min, max), time = 1)
+		else
+			animate(pixel_x = rand(min, max), pixel_y = rand(min, max), time = 1)
+	animate(pixel_x = oldx, pixel_y = oldy, time = 1)
 
 /proc/findname(msg)
 	for(var/mob/M in mob_list)
@@ -342,7 +337,7 @@ var/list/intents = list(I_HELP,I_DISARM,I_GRAB,I_HURT)
 			if(2)			return I_GRAB
 			else			return I_HURT
 
-//change a mob's act-intent. Input the intent as a string such as "help" or use "right"/"left
+//change a mob's act-intent. Input the intent as a string such as I_HELP or use "right"/"left
 /mob/verb/a_intent_change(input as text)
 	set name = "a-intent"
 	set hidden = 1
@@ -411,7 +406,7 @@ var/list/intents = list(I_HELP,I_DISARM,I_GRAB,I_HURT)
 		return // Can't talk in deadchat if you can't see it.
 
 	for(var/mob/M in player_list)
-		if(M.client && ((!istype(M, /mob/new_player) && M.stat == DEAD) || (M.client.holder && M.client.holder.rights && M.is_preference_enabled(/datum/client_preference/holder/show_staff_dsay))) && M.is_preference_enabled(/datum/client_preference/show_dsay))
+		if(M.client && ((!isnewplayer(M) && M.stat == DEAD) || (M.client.holder && M.client.holder.rights && M.client?.prefs?.read_preference(/datum/preference/toggle/holder/show_staff_dsay))) && M.client?.prefs?.read_preference(/datum/preference/toggle/show_dsay))
 			var/follow
 			var/lname
 			if(M.forbid_seeing_deadchat && !M.client.holder)
@@ -425,7 +420,7 @@ var/list/intents = list(I_HELP,I_DISARM,I_GRAB,I_HURT)
 				if(M.stat != DEAD && M.client.holder)
 					follow = "([admin_jump_link(subject, M.client.holder)]) "
 				var/mob/observer/dead/DM
-				if(istype(subject, /mob/observer/dead))
+				if(isobserver(subject))
 					DM = subject
 				if(M.client.holder) 							// What admins see
 					lname = "[keyname][(DM && DM.anonsay) ? "*" : (DM ? "" : "^")] ([name])"
@@ -436,12 +431,12 @@ var/list/intents = list(I_HELP,I_DISARM,I_GRAB,I_HURT)
 						lname = "[keyname] ([name])"
 					else										// Everyone else (dead people who didn't ghost yet, etc.)
 						lname = name
-				lname = "<span class='name'>[lname]</span> "
-			to_chat(M, "<span class='deadsay'>" + create_text_tag("dead", "DEAD:", M.client) + " [lname][follow][message]</span>")
+				lname = span_name("[lname]") + " "
+			to_chat(M, span_deadsay("" + create_text_tag("dead", "DEAD:", M.client) + " [lname][follow][message]"))
 
 /proc/say_dead_object(var/message, var/obj/subject = null)
 	for(var/mob/M in player_list)
-		if(M.client && ((!istype(M, /mob/new_player) && M.stat == DEAD) || (M.client.holder && M.client.holder.rights && M.is_preference_enabled(/datum/client_preference/holder/show_staff_dsay))) && M.is_preference_enabled(/datum/client_preference/show_dsay))
+		if(M.client && ((!isnewplayer(M) && M.stat == DEAD) || (M.client.holder && M.client.holder.rights && M.client?.prefs?.read_preference(/datum/preference/toggle/holder/show_staff_dsay))) && M.client?.prefs?.read_preference(/datum/preference/toggle/show_dsay))
 			var/follow
 			var/lname = "Game Master"
 			if(M.forbid_seeing_deadchat && !M.client.holder)
@@ -450,8 +445,8 @@ var/list/intents = list(I_HELP,I_DISARM,I_GRAB,I_HURT)
 			if(subject)
 				lname = "[subject.name] ([subject.x],[subject.y],[subject.z])"
 
-			lname = "<span class='name'>[lname]</span> "
-			to_chat(M, "<span class='deadsay'>" + create_text_tag("event_dead", "EVENT:", M.client) + " [lname][follow][message]</span>")
+			lname = span_name("[lname]") + " "
+			to_chat(M, span_deadsay("" + create_text_tag("event_dead", "EVENT:", M.client) + " [lname][follow][message]"))
 
 //Announces that a ghost has joined/left, mainly for use with wizards
 /proc/announce_ghost_joinleave(O, var/joined_ghosts = 1, var/message = "")
@@ -484,11 +479,11 @@ var/list/intents = list(I_HELP,I_DISARM,I_GRAB,I_HURT)
 		if(!name)
 			name = (C.holder && C.holder.fakekey) ? C.holder.fakekey : C.key
 		if(joined_ghosts)
-			//say_dead_direct("The ghost of <span class='name'>[name]</span> now [pick("skulks","lurks","prowls","creeps","stalks")] among the dead. [message]") //ChompEDIT - Removed for ghost privacy
+			//say_dead_direct("The ghost of " + span_name("[name]") + " now [pick("skulks","lurks","prowls","creeps","stalks")] among the dead. [message]") //ChompEDIT - Removed for ghost privacy
 			log_and_message_admins("<span class='name'>[name]</span> entered ghost/observe mode. [message]") //ChompEDIT
 
 		else
-			//say_dead_direct("<span class='name'>[name]</span> no longer [pick("skulks","lurks","prowls","creeps","stalks")] in the realm of the dead. [message]") //ChompEDIT - Removed for ghost privacy
+			//say_dead_direct(span_name("[name]") + " no longer [pick("skulks","lurks","prowls","creeps","stalks")] in the realm of the dead. [message]") //ChompEDIT - Removed for ghost privacy
 			log_and_message_admins("<span class='name'>[name]</span> left ghost/observe mode. [message]") //ChompEDIT
 
 
@@ -534,24 +529,24 @@ var/list/intents = list(I_HELP,I_DISARM,I_GRAB,I_HURT)
 		return SAFE_PERP
 
 	//Agent cards lower threatlevel.
-	var/obj/item/weapon/card/id/id = GetIdCard()
-	if(id && istype(id, /obj/item/weapon/card/id/syndicate))
+	var/obj/item/card/id/id = GetIdCard()
+	if(id && istype(id, /obj/item/card/id/syndicate))
 		threatcount -= 2
 	// A proper	CentCom id is hard currency.
-	else if(id && istype(id, /obj/item/weapon/card/id/centcom))
+	else if(id && istype(id, /obj/item/card/id/centcom))
 		return SAFE_PERP
 
 	if(check_access && !access_obj.allowed(src))
 		threatcount += 4
 
 	if(auth_weapons && !access_obj.allowed(src))
-		if(istype(l_hand, /obj/item/weapon/gun) || istype(l_hand, /obj/item/weapon/melee) && !istype(l_hand, /obj/item/weapon/gun/energy/floragun) && !istype(l_hand, /obj/item/weapon/gun/energy/sizegun) && !istype(l_hand, /obj/item/weapon/gun/launcher/confetti_cannon) && !istype(l_hand, /obj/item/weapon/gun/energy/lasertag)) //CHOMP Edit: Specific guns to the exclusion list.
+		if(istype(l_hand, /obj/item/gun) || istype(l_hand, /obj/item/melee) && !istype(l_hand, /obj/item/gun/energy/floragun) && !istype(l_hand, /obj/item/gun/energy/sizegun) && !istype(l_hand, /obj/item/gun/launcher/confetti_cannon) && !istype(l_hand, /obj/item/gun/energy/lasertag)) //CHOMP Edit: Specific guns to the exclusion list.
 			threatcount += 4
 
-		if(istype(r_hand, /obj/item/weapon/gun) || istype(r_hand, /obj/item/weapon/melee))
+		if(istype(r_hand, /obj/item/gun) || istype(r_hand, /obj/item/melee))
 			threatcount += 4
 
-		if(istype(belt, /obj/item/weapon/gun) || istype(belt, /obj/item/weapon/melee))
+		if(istype(belt, /obj/item/gun) || istype(belt, /obj/item/melee))
 			threatcount += 2
 
 		if(species.name != SPECIES_HUMAN)
@@ -700,3 +695,42 @@ var/global/image/backplane
 
 /mob/proc/can_feed()
 	return TRUE
+
+/proc/censor_swears(t)
+	/* Bleeps our swearing */
+	var/static/swear_censoring_list = list("fuck",
+										"shit",
+										"damn",
+										"piss",
+										"whore",
+										"cunt",
+										"bitch",
+										"bastard",
+										"dick",
+										"cock",
+										"slut",
+										"dong",
+										"pussy",
+										"twat",
+										"snatch",
+										"schlong",
+										"damn",
+										"dammit",
+										"damnit",
+										"ass",
+										"tit",
+										"douch",
+										"prick",
+										"hell",
+										"crap")
+	var/haystack = t
+	for(var/filter in swear_censoring_list)
+		var/regex/needle = regex(filter, "i")
+		while(TRUE)
+			var/pos = needle.Find(haystack)
+			if(!pos)
+				break
+			var/partial_start = copytext(haystack,1,pos)
+			var/partial_end   = copytext(haystack,pos+length(filter),length(haystack)+1)
+			haystack = "[partial_start][pick("BEEP","BLEEP","BOINK","BEEEEEP")][partial_end]"
+	return haystack

@@ -20,7 +20,7 @@
 		last_fired = world.time
 	else
 		if (world.time % 3)
-			occupant_message("<span class='warning'>[src] is not ready to fire again!</span>")
+			occupant_message(span_warning("[src] is not ready to fire again!"))
 		return 0
 
 	switch(mode)
@@ -66,7 +66,7 @@
 	return
 
 /obj/item/mecha_parts/mecha_equipment/gravcatapult/get_equip_info()
-	return "[..()] [mode==1?"([locked||"Nothing"])":null] \[<a href='?src=\ref[src];mode=1'>S</a>|<a href='?src=\ref[src];mode=2'>P</a>\]"
+	return "[..()] [mode==1?"([locked||"Nothing"])":null] \[<a href='byond://?src=\ref[src];mode=1'>S</a>|<a href='byond://?src=\ref[src];mode=2'>P</a>\]"
 
 /obj/item/mecha_parts/mecha_equipment/gravcatapult/Topic(href, href_list)
 	..()

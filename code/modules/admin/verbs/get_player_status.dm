@@ -6,7 +6,7 @@
 /client/proc/getPlayerStatus()
 	set name = "Report Player Status"
 	set desc = "Get information on all active players in-game."
-	set category = "Fun.EventKit" //ChompEDIT
+	set category = "Fun.Event Kit"
 
 	if(!check_rights(R_FUN)) return
 
@@ -18,7 +18,7 @@
 	//Initializing our working list
 	for(var/player in player_list_local)
 
-		if(!istype(player, /mob/living)) continue //We only care for living players
+		if(!isliving(player)) continue //We only care for living players
 		var/mob/living/L = player
 		players += 1
 		if(L.client.inactivity > INACTIVITY_CAP)
@@ -41,4 +41,6 @@
 
 
 	message += "#### Over all, there are [players] eligible players, of which [inactives] were hidden due to inactivity.  ####"
-	to_chat(usr, SPAN_NOTICE(message))
+	to_chat(usr, span_notice(message))
+
+#undef INACTIVITY_CAP

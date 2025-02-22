@@ -12,11 +12,9 @@ SUBSYSTEM_DEF(ai)
 	var/slept_mobs = 0
 	var/list/process_z = list()
 
-//CHOMPEdit Begin
 /datum/controller/subsystem/ai/stat_entry(msg)
 	msg = "P: [processing.len] | S: [slept_mobs]"
 	return ..()
-//CHOMPEdit End
 
 /datum/controller/subsystem/ai/fire(resumed = 0)
 	if (!resumed)

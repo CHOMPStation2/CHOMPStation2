@@ -8,10 +8,10 @@
 	icon_living = "whitewolf"
 	icon_state = "whitewolf"
 	icon_rest = "whitewolf-rest"
-	faction = "sif"
+	faction = FACTION_SIF
 	has_eye_glow = TRUE
 	meat_amount = 40 //Big dog, lots of meat
-	meat_type = /obj/item/weapon/reagent_containers/food/snacks/meat
+	meat_type = /obj/item/reagent_containers/food/snacks/meat
 	old_x = -48
 	old_y = 0
 	vis_height = 92
@@ -99,8 +99,8 @@
 	. = ..()
 	if(!riding_datum)
 		riding_datum = new /datum/riding/simple_mob(src)
-	add_verb(src,/mob/living/simple_mob/proc/animal_mount) //CHOMPEdit TGPanel
-	add_verb(src,/mob/living/proc/toggle_rider_reins) //CHOMPEdit TGPanel
+	add_verb(src, /mob/living/simple_mob/proc/animal_mount)
+	add_verb(src, /mob/living/proc/toggle_rider_reins)
 	movement_cooldown = -1.5
 
 /mob/living/simple_mob/vore/greatwolf/MouseDrop_T(mob/living/M, mob/living/user)
@@ -108,30 +108,30 @@
 
 
 /mob/living/simple_mob/vore/greatwolf/attackby(var/obj/item/O, var/mob/user) // Trade food for people!
-	if(istype(O, /obj/item/weapon/reagent_containers/food))
+	if(istype(O, /obj/item/reagent_containers/food))
 		qdel(O)
 		playsound(src,'sound/vore/gulp.ogg', rand(10,50), 1)
 		if(!has_AI())//No autobarf on player control.
 			return
-		if(istype(O, /obj/item/weapon/reagent_containers/food/snacks/donut) && istype(src, /mob/living/simple_mob/vore/greatwolf/black))
-			to_chat(user,"<span class='notice'>The huge wolf begrudgingly accepts your offer in exchange for it's catch.</span>")
+		if(istype(O, /obj/item/reagent_containers/food/snacks/donut) && istype(src, /mob/living/simple_mob/vore/greatwolf/black))
+			to_chat(user,span_notice("The huge wolf begrudgingly accepts your offer in exchange for it's catch."))
 			release_vore_contents()
 		else if(prob(2)) //Small chance to get prey out from white doggos
-			to_chat(user,"<span class='notice'>The huge wolf accepts your offer for their catch.</span>")
+			to_chat(user,span_notice("The huge wolf accepts your offer for their catch."))
 			release_vore_contents()
 		return
 	. = ..()
 
 /mob/living/simple_mob/vore/greatwolf/init_vore()
-	if(!voremob_loaded) //CHOMP add to fix runtime
-		return //CHOMP Add
-	.=..() //CHOMP Add
+	if(!voremob_loaded)
+		return
+	. = ..()
 	var/obj/belly/B = vore_selected
 	B.name = "stomach"
 	B.desc = "The moment the wolf gets its jaws around you, it scoops you right up off of the ground, and greedily scarfs you down with a few swift gulps. Your small frame alone is hardly enough to make him look somewhat plump as you slop wetly into that dark, hot chamber, although the dense squish is rather comfortable. The thick, humid air is tinged with the smell of digested meat, and the surrounding flesh wastes no time in clenching and massaging down over its newfound fodder."
 	B.vore_sound = "Tauric Swallow"
 	B.release_sound = "Pred Escape"
-	B.mode_flags = list(DM_FLAG_NUMBING, DM_FLAG_THICKBELLY, DM_FLAG_AFFECTWORN)
+	B.mode_flags = DM_FLAG_NUMBING | DM_FLAG_THICKBELLY | DM_FLAG_AFFECTWORN
 	B.fancy_vore = 1
 	B.vore_verb = "slurp"
 	B.contamination_color = "grey"

@@ -5,7 +5,7 @@
 	if(!check_rights(R_MOD,0) && !check_rights(R_BAN))	return
 
 	establish_db_connection()
-	if(!SSdbcore.IsConnected()) //CHOMPEdit TGSQL
+	if(!SSdbcore.IsConnected())
 		return
 
 	var/serverip = "[world.internet_address]:[world.port]"
@@ -44,16 +44,16 @@
 		computerid = bancid
 		ip = banip
 
-	var/datum/db_query/query = SSdbcore.NewQuery("SELECT id FROM erro_player WHERE ckey = :t_ckey", list("t_ckey",ckey)) //CHOMPEdit TGSQL
+	var/datum/db_query/query = SSdbcore.NewQuery("SELECT id FROM erro_player WHERE ckey = '[ckey]'")
 	query.Execute()
 	var/validckey = 0
 	if(query.NextRow())
 		validckey = 1
-	qdel(query) //CHOMPEdit TGSQL
+	qdel(query)
 	if(!validckey)
 		if(!banned_mob || (banned_mob && !IsGuestKey(banned_mob.key))) //VOREStation Edit Start.
 			var/confirm = tgui_alert(usr, "This ckey hasn't been seen, are you sure?", "Confirm Badmin", list("Yes", "No"))
-			if(confirm == "No")
+			if(confirm != "Yes")
 				return //VOREStation Edit End
 
 	var/a_ckey
@@ -80,14 +80,13 @@
 			adminwho += ", [C]"
 
 	reason = sql_sanitize_text(reason)
-	var/list/sqlargs = list("t_bantype" = bantype_str, "t_reason" = reason, "t_job" = job, "t_ckey" = ckey, "t_a_ckey" = a_ckey, "t_who" = who, "t_adminwho" = adminwho) //CHOMPEdit TGSQL
-	var/sql = "INSERT INTO erro_ban (`id`,`bantime`,`serverip`,`bantype`,`reason`,`job`,`duration`,`rounds`,`expiration_time`,`ckey`,`computerid`,`ip`,`a_ckey`,`a_computerid`,`a_ip`,`who`,`adminwho`,`edits`,`unbanned`,`unbanned_datetime`,`unbanned_ckey`,`unbanned_computerid`,`unbanned_ip`) VALUES (null, Now(), '[serverip]', :t_bantype, :t_reason, :t_job, [(duration)?"[duration]":"0"], [(rounds)?"[rounds]":"0"], Now() + INTERVAL [(duration>0) ? duration : 0] MINUTE, :t_ckey, '[computerid]', '[ip]', :t_a_ckey, '[a_computerid]', '[a_ip]', :t_who, :t_adminwho, '', null, null, null, null, null)" //CHOMPEdit TGSQL
 
-	var/datum/db_query/query_insert = SSdbcore.NewQuery(sql,sqlargs) //CHOMPEdit TGSQL
+	var/sql = "INSERT INTO erro_ban (`id`,`bantime`,`serverip`,`bantype`,`reason`,`job`,`duration`,`rounds`,`expiration_time`,`ckey`,`computerid`,`ip`,`a_ckey`,`a_computerid`,`a_ip`,`who`,`adminwho`,`edits`,`unbanned`,`unbanned_datetime`,`unbanned_ckey`,`unbanned_computerid`,`unbanned_ip`) VALUES (null, Now(), '[serverip]', '[bantype_str]', '[reason]', '[job]', [(duration)?"[duration]":"0"], [(rounds)?"[rounds]":"0"], Now() + INTERVAL [(duration>0) ? duration : 0] MINUTE, '[ckey]', '[computerid]', '[ip]', '[a_ckey]', '[a_computerid]', '[a_ip]', '[who]', '[adminwho]', '', null, null, null, null, null)"
+	var/datum/db_query/query_insert = SSdbcore.NewQuery(sql)
 	query_insert.Execute()
-	to_chat(usr, "<span class='filter_adminlog'>[span_blue("Ban saved to database.")]</span>")
+	to_chat(usr, span_filter_adminlog("[span_blue("Ban saved to database.")]"))
 	message_admins("[key_name_admin(usr)] has added a [bantype_str] for [ckey] [(job)?"([job])":""] [(duration > 0)?"([duration] minutes)":""] with the reason: \"[reason]\" to the ban database.",1)
-	qdel(query_insert) //CHOMPEdit TGSQL
+	qdel(query_insert)
 
 
 /datum/admins/proc/DB_ban_unban(var/ckey, var/bantype, var/job = "")
@@ -121,35 +120,35 @@
 	else
 		bantype_sql = "bantype = '[bantype_str]'"
 
-	var/sql = "SELECT id FROM erro_ban WHERE ckey = :t_ckey AND [bantype_sql] AND (unbanned is null OR unbanned = false)" //CHOMPEdit TGSQL
+	var/sql = "SELECT id FROM erro_ban WHERE ckey = '[ckey]' AND [bantype_sql] AND (unbanned is null OR unbanned = false)"
 	if(job)
 		sql += " AND job = '[job]'"
 
 	establish_db_connection()
-	if(!SSdbcore.IsConnected()) //CHOMPEdit TGSQL
+	if(!SSdbcore.IsConnected())
 		return
 
 	var/ban_id
 	var/ban_number = 0 //failsafe
 
-	var/datum/db_query/query = SSdbcore.NewQuery(sql, list("t_ckey" = ckey)) //CHOMPEdit TGSQL
+	var/datum/db_query/query = SSdbcore.NewQuery(sql)
 	query.Execute()
 	while(query.NextRow())
 		ban_id = query.item[1]
 		ban_number++;
-	qdel(query) //CHOMPEdit TGSQL
+	qdel(query)
 	if(ban_number == 0)
-		to_chat(usr, "<span class='filter_adminlog'>[span_red("Database update failed due to no bans fitting the search criteria. If this is not a legacy ban you should contact the database admin.")]</span>")
+		to_chat(usr, span_filter_adminlog("[span_red("Database update failed due to no bans fitting the search criteria. If this is not a legacy ban you should contact the database admin.")]"))
 		return
 
 	if(ban_number > 1)
-		to_chat(usr, "<span class='filter_adminlog'>[span_red("Database update failed due to multiple bans fitting the search criteria. Note down the ckey, job and current time and contact the database admin.")]</span>")
+		to_chat(usr, span_filter_adminlog("[span_red("Database update failed due to multiple bans fitting the search criteria. Note down the ckey, job and current time and contact the database admin.")]"))
 		return
 
 	if(istext(ban_id))
 		ban_id = text2num(ban_id)
 	if(!isnum(ban_id))
-		to_chat(usr, "<span class='filter_adminlog'>[span_red("Database update failed due to a ban ID mismatch. Contact the database admin.")]</span>")
+		to_chat(usr, span_filter_adminlog("[span_red("Database update failed due to a ban ID mismatch. Contact the database admin.")]"))
 		return
 
 	DB_ban_unban_by_id(ban_id)
@@ -162,7 +161,7 @@
 		to_chat(usr, "Cancelled")
 		return
 
-	var/datum/db_query/query = SSdbcore.NewQuery("SELECT ckey, duration, reason FROM erro_ban WHERE id = [banid]") //CHOMPEdit TGSQL
+	var/datum/db_query/query = SSdbcore.NewQuery("SELECT ckey, duration, reason FROM erro_ban WHERE id = [banid]")
 	query.Execute()
 
 	var/eckey = usr.ckey	//Editing admin ckey
@@ -175,9 +174,11 @@
 		duration = query.item[2]
 		reason = query.item[3]
 	else
-		to_chat(usr, "<span class='filter_adminlog'>Invalid ban id. Contact the database admin</span>")
+		to_chat(usr, span_filter_adminlog("Invalid ban id. Contact the database admin"))
+		qdel(query)
 		return
-	qdel(query) //CHOMPEdit TGSQL
+
+	qdel(query)
 	reason = sql_sanitize_text(reason)
 	var/value
 
@@ -189,27 +190,27 @@
 				if(!value)
 					to_chat(usr, "Cancelled")
 					return
-			var/list/sqlargs = list("t_reason" = value, "t_edits" = "- [eckey] changed ban reason from <cite><b>\\\"[reason]\\\"</b></cite> to <cite><b>\\\"[value]\\\"</b></cite><BR>") //CHOMPEdit TGSQL
-			var/datum/db_query/update_query = SSdbcore.NewQuery("UPDATE erro_ban SET reason = '[value]', edits = CONCAT(edits,:t_edits) WHERE id = [banid]", sqlargs) //CHOMPEdit TGSQL
+
+			var/datum/db_query/update_query = SSdbcore.NewQuery("UPDATE erro_ban SET reason = '[value]', edits = CONCAT(edits,'- [eckey] changed ban reason from <cite><b>\\\"[reason]\\\"</b></cite> to <cite><b>\\\"[value]\\\"</b></cite><BR>') WHERE id = [banid]")
 			update_query.Execute()
 			message_admins("[key_name_admin(usr)] has edited a ban for [pckey]'s reason from [reason] to [value]",1)
-			qdel(update_query) //CHOMPEdit TGSQL
+			qdel(update_query)
 		if("duration")
 			if(!value)
 				value = tgui_input_number(usr, "Insert the new duration (in minutes) for [pckey]'s ban", "New Duration", "[duration]", null)
 				if(!isnum(value) || !value)
 					to_chat(usr, "Cancelled")
 					return
-			var/list/sqlargs = list("t_edits" = "- [eckey] changed ban duration from [duration] to [value]<br>") //CHOMPEdit TGSQL
-			var/datum/db_query/update_query = SSdbcore.NewQuery("UPDATE erro_ban SET duration = [value], edits = CONCAT(edits,:t_edits), expiration_time = DATE_ADD(bantime, INTERVAL [value] MINUTE) WHERE id = [banid]",sqlargs) //CHOMPEdit TGSQL
+
+			var/datum/db_query/update_query = SSdbcore.NewQuery("UPDATE erro_ban SET duration = [value], edits = CONCAT(edits,'- [eckey] changed ban duration from [duration] to [value]<br>'), expiration_time = DATE_ADD(bantime, INTERVAL [value] MINUTE) WHERE id = [banid]")
 			message_admins("[key_name_admin(usr)] has edited a ban for [pckey]'s duration from [duration] to [value]",1)
 			update_query.Execute()
-			qdel(update_query) //CHOMPEdit TGSQL
+			qdel(update_query)
 		if("unban")
 			if(tgui_alert(usr, "Unban [pckey]?", "Unban?", list("Yes", "No")) == "Yes")
 				DB_ban_unban_by_id(banid)
 				return
-	to_chat(usr, "<span class='filter_adminlog'>Cancelled</span>")
+	to_chat(usr, span_filter_adminlog("Cancelled"))
 	return
 
 /datum/admins/proc/DB_ban_unban_by_id(var/id)
@@ -219,24 +220,24 @@
 	var/sql = "SELECT ckey FROM erro_ban WHERE id = [id]"
 
 	establish_db_connection()
-	if(!SSdbcore.IsConnected()) //CHOMPEdit TGSQL
+	if(!SSdbcore.IsConnected())
 		return
 
 	var/ban_number = 0 //failsafe
 
 	var/pckey
-	var/datum/db_query/query = SSdbcore.NewQuery(sql) //CHOMPEdit TGSQL
+	var/datum/db_query/query = SSdbcore.NewQuery(sql)
 	query.Execute()
 	while(query.NextRow())
 		pckey = query.item[1]
 		ban_number++;
-	qdel(query) //CHOMPEdit TGSQL
+	qdel(query)
 	if(ban_number == 0)
-		to_chat(usr, "<span class='filter_adminlog'>[span_red("Database update failed due to a ban id not being present in the database.")]</span>")
+		to_chat(usr, span_filter_adminlog("[span_red("Database update failed due to a ban id not being present in the database.")]"))
 		return
 
 	if(ban_number > 1)
-		to_chat(usr, "<span class='filter_adminlog'>[span_red("Database update failed due to multiple bans having the same ID. Contact the database admin.")]</span>")
+		to_chat(usr, span_filter_adminlog("[span_red("Database update failed due to multiple bans having the same ID. Contact the database admin.")]"))
 		return
 
 	if(!src.owner || !istype(src.owner, /client))
@@ -245,16 +246,15 @@
 	var/unban_ckey = src.owner:ckey
 	var/unban_computerid = src.owner:computer_id
 	var/unban_ip = src.owner:address
-	var/list/sqlargs = list("t_ckey" = unban_ckey) //CHOMPEdit TGSQL
-	var/sql_update = "UPDATE erro_ban SET unbanned = 1, unbanned_datetime = Now(), unbanned_ckey = :t_ckey, unbanned_computerid = '[unban_computerid]', unbanned_ip = '[unban_ip]' WHERE id = [id]" //CHOMPEdit TGSQL
+	var/sql_update = "UPDATE erro_ban SET unbanned = 1, unbanned_datetime = Now(), unbanned_ckey = '[unban_ckey]', unbanned_computerid = '[unban_computerid]', unbanned_ip = '[unban_ip]' WHERE id = [id]"
 	message_admins("[key_name_admin(usr)] has lifted [pckey]'s ban.",1)
 
-	var/datum/db_query/query_update = SSdbcore.NewQuery(sql_update,sqlargs) //CHOMPEdit TGSQL
+	var/datum/db_query/query_update = SSdbcore.NewQuery(sql_update)
 	query_update.Execute()
-	qdel(query_update) //CHOMPEdit TGSQL
+	qdel(query_update)
 
 /client/proc/DB_ban_panel()
-	set category = "Admin"
+	set category = "Admin.Moderation"
 	set name = "Banning Panel"
 	set desc = "Edit admin permissions"
 
@@ -271,8 +271,8 @@
 	if(!check_rights(R_BAN))	return
 
 	establish_db_connection()
-	if(!SSdbcore.IsConnected()) //CHOMPEdit TGSQL
-		to_chat(usr, "<span class='filter_adminlog'>[span_red("Failed to establish database connection")]</span>")
+	if(!SSdbcore.IsConnected())
+		to_chat(usr, span_filter_adminlog("[span_red("Failed to establish database connection")]"))
 		return
 
 	var/output = "<div align='center'><table width='90%'><tr>"
@@ -284,7 +284,7 @@
 	output += "<td width='65%' align='center' bgcolor='#f9f9f9'>"
 
 	output += "<form method='GET' action='?src=\ref[src]'>[HrefTokenFormField()]"
-	output += "<b>Add custom ban:</b> (ONLY use this if you can't ban through any other method)"
+	output += span_bold("Add custom ban:") + " (ONLY use this if you can't ban through any other method)"
 	output += "<input type='hidden' name='src' value='\ref[src]'>"
 	output += "<table width='100%'><tr>"
 	output += "<td width='50%' align='right'><b>Ban type:</b><select name='dbbanaddtype'>"
@@ -311,7 +311,7 @@
 	for(var/j in bantypes)
 		output += "<option value='[j]'>[j]</option>"
 	output += "</select></td></tr></table>"
-	output += "<b>Reason:<br></b><textarea name='dbbanreason' cols='50'></textarea><br>"
+	output += span_bold("Reason:<br>") + "<textarea name='dbbanreason' cols='50'></textarea><br>"
 	output += "<input type='submit' value='Add ban'>"
 	output += "</form>"
 
@@ -369,26 +369,21 @@
 			var/ipsearch = ""
 			var/cidsearch = ""
 			var/bantypesearch = ""
-			//CHOMPEdit Begin
-			var/list/sqlargs = list()
+
 			if(!match)
 				if(adminckey)
-					adminsearch = "AND a_ckey = :t_adminckey "
-					sqlargs["t_adminckey"] = adminckey
+					adminsearch = "AND a_ckey = '[adminckey]' "
 				if(playerckey)
-					playersearch = "AND ckey = :t_playerckey "
-					sqlargs["t_playerckey"] = playerckey //CHOMPEdit End
+					playersearch = "AND ckey = '[playerckey]' "
 				if(playerip)
 					ipsearch  = "AND ip = '[playerip]' "
 				if(playercid)
 					cidsearch  = "AND computerid = '[playercid]' "
 			else
-				if(adminckey && length(adminckey) >= 3) //CHOMPEdit Begin
-					adminsearch = "AND a_ckey LIKE CONCAT(:t_adminckey,'%') "
-					sqlargs["t_adminckey"] = adminckey
+				if(adminckey && length(adminckey) >= 3)
+					adminsearch = "AND a_ckey LIKE '[adminckey]%' "
 				if(playerckey && length(playerckey) >= 3)
-					playersearch = "AND ckey LIKE CONCAT(:t_playerckey,'%') "
-					sqlargs["t_playerckey"] = playerckey //CHOMPEdit End
+					playersearch = "AND ckey LIKE '[playerckey]%' "
 				if(playerip && length(playerip) >= 3)
 					ipsearch  = "AND ip LIKE '[playerip]%' "
 				if(playercid && length(playercid) >= 7)
@@ -407,7 +402,7 @@
 					else
 						bantypesearch += "'PERMABAN' "
 
-			var/datum/db_query/select_query = SSdbcore.NewQuery("SELECT id, bantime, bantype, reason, job, duration, expiration_time, ckey, a_ckey, unbanned, unbanned_ckey, unbanned_datetime, edits, ip, computerid FROM erro_ban WHERE 1 [playersearch] [adminsearch] [ipsearch] [cidsearch] [bantypesearch] ORDER BY bantime DESC LIMIT 100", sqlargs) //CHOMPEdit TGSQL
+			var/datum/db_query/select_query = SSdbcore.NewQuery("SELECT id, bantime, bantype, reason, job, duration, expiration_time, ckey, a_ckey, unbanned, unbanned_ckey, unbanned_datetime, edits, ip, computerid FROM erro_ban WHERE 1 [playersearch] [adminsearch] [ipsearch] [cidsearch] [bantypesearch] ORDER BY bantime DESC LIMIT 100")
 			select_query.Execute()
 
 			var/now = time2text(world.realtime, "YYYY-MM-DD hh:mm:ss") // MUST BE the same format as SQL gives us the dates in, and MUST be least to most specific (i.e. year, month, day not day, month, year)
@@ -446,18 +441,18 @@
 					if("PERMABAN")
 						typedesc = "<font color='red'><b>PERMABAN</b></font>"
 					if("TEMPBAN")
-						typedesc = "<b>TEMPBAN</b><br><font size='2'>([duration] minutes) [(unbanned || auto) ? "" : "(<a href=\"byond://?src=\ref[src];[HrefToken()];dbbanedit=duration;dbbanid=[banid]\">Edit</a>)"]<br>Expires [expiration]</font>"
+						typedesc = span_bold("TEMPBAN") + "<br><font size='2'>([duration] minutes) [(unbanned || auto) ? "" : "(<a href=\"byond://?src=\ref[src];[HrefToken()];dbbanedit=duration;dbbanid=[banid]\">Edit</a>)"]<br>Expires [expiration]</font>"
 					if("JOB_PERMABAN")
-						typedesc = "<b>JOBBAN</b><br><font size='2'>([job])</font>"
+						typedesc = span_bold("JOBBAN") + "<br><font size='2'>([job])</font>"
 					if("JOB_TEMPBAN")
-						typedesc = "<b>TEMP JOBBAN</b><br><font size='2'>([job])<br>([duration] minutes<br>Expires [expiration]</font>"
+						typedesc = span_bold("TEMP JOBBAN") + "<br><font size='2'>([job])<br>([duration] minutes<br>Expires [expiration]</font>"
 
 				output += "<tr bgcolor='[dcolor]'>"
 				output += "<td align='center'>[typedesc]</td>"
 				output += "<td align='center'><b>[ckey]</b></td>"
 				output += "<td align='center'>[bantime]</td>"
 				output += "<td align='center'><b>[ackey]</b></td>"
-				output += "<td align='center'>[(unbanned || auto) ? "" : "<b><a href=\"byond://?src=\ref[src];[HrefToken()];dbbanedit=unban;dbbanid=[banid]\">Unban</a></b>"]</td>"
+				output += "<td align='center'>[(unbanned || auto) ? "" : span_bold("<a href=\"byond://?src=\ref[src];[HrefToken()];dbbanedit=unban;dbbanid=[banid]\">Unban</a>")]</td>"
 				output += "</tr>"
 				output += "<tr bgcolor='[dcolor]'>"
 				output += "<td align='center' colspan='2' bgcolor=''><b>IP:</b> [ip]</td>"
@@ -486,6 +481,6 @@
 				output += "</tr>"
 
 			output += "</table></div>"
-			qdel(select_query) //CHOMPEdit TGSQL
+			qdel(select_query)
 
-	usr << browse(output,"window=lookupbans;size=900x700")
+	usr << browse("<html>[output]</html>","window=lookupbans;size=900x700")

@@ -103,8 +103,8 @@ GLOBAL_DATUM_INIT(catalogue_data, /datum/category_collection/catalogue, new)
 						. += item
 
 /datum/category_item/catalogue/proc/display_in_chatlog(mob/user)
-	to_chat(user, "<br>")
-	to_chat(user, span("notice", "<b>[uppertext(name)]</b>"))
+	to_chat(user, span_infoplain("<br>"))
+	to_chat(user, span_boldnotice("[uppertext(name)]"))
 
 	// Some entries get very long so lets not totally flood the chatlog.
 	var/desc_length_limit = 750
@@ -113,9 +113,9 @@ GLOBAL_DATUM_INIT(catalogue_data, /datum/category_collection/catalogue, new)
 		displayed_desc = copytext(displayed_desc, 1, desc_length_limit + 1)
 		displayed_desc += "... (View databanks for full data)"
 
-	to_chat(user, span("notice", "<i>[displayed_desc]</i>"))
-	to_chat(user, span("notice", "Cataloguers : <b>[english_list(cataloguers)]</b>."))
-	to_chat(user, span("notice", "Contributes <b>[value]</b> points to personal exploration fund."))
+	to_chat(user, span_notice(span_italics("[displayed_desc]")))
+	to_chat(user, span_notice("Cataloguers : <b>[english_list(cataloguers)]</b>."))
+	to_chat(user, span_notice("Contributes <b>[value]</b> points to personal exploration fund."))
 
 /*
 		// Truncates text to limit if necessary.
@@ -289,7 +289,6 @@ GLOBAL_DATUM_INIT(catalogue_data, /datum/category_collection/catalogue, new)
 	for those who are still have more organic parts than just their brains, but for example have a \
 	full set of prosthetic limbs."
 	value = CATALOGUER_REWARD_TRIVIAL
-
 
 /datum/category_item/catalogue/information
 
