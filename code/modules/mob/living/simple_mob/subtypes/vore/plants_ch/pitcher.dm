@@ -178,12 +178,12 @@ GLOBAL_LIST_INIT(pitcher_plant_lure_messages, list(
 /mob/living/simple_mob/vore/pitcher_plant/attack_hand(mob/living/user)
 	if(user.a_intent == I_HELP)
 		if(fruit)
-			to_chat(user, span_notice("You pick a fruit from \the [src]."))
+			to_chat(user, span_infoplain("You pick a fruit from \the [src]."))
 			var/obj/F = new /obj/item/reagent_containers/food/snacks/pitcher_fruit(get_turf(user)) //Drops at the user's feet if put_in_hands fails
 			fruit = FALSE
 			user.put_in_hands(F)
 		else
-			to_chat(user, span_notice("The [src] hasn't grown any fruit yet!"))
+			to_chat(user, span_infoplain("The [src] hasn't grown any fruit yet!"))
 	else
 		..()
 
@@ -195,7 +195,7 @@ GLOBAL_LIST_INIT(pitcher_plant_lure_messages, list(
 /mob/living/simple_mob/vore/pitcher_plant/attackby(obj/item/O, mob/user)
 	if(istype(O, /obj/item/reagent_containers/food/snacks/meat))
 		if(meat > NUTRITION_FRUIT - NUTRITION_MEAT) //Can't exceed 250
-			to_chat(user, span_notice("The [src] is full!"))
+			to_chat(user, span_infoplain("The [src] is full!"))
 			return
 		else
 			meat += NUTRITION_MEAT
@@ -205,10 +205,10 @@ GLOBAL_LIST_INIT(pitcher_plant_lure_messages, list(
 		var/mob/living/carbon/human/H
 		var/N = 0
 		for(H in vore_selected.contents) //Only works for carbons, RIP mice. Should pick the first human the code finds.
-			user.visible_message("[user] uses a loop of wire to try fishing someone out of \the [src].", "You use a loop of wire to try snagging someone trapped in \the [src]...")
+			user.visible_message(span_infoplain("[user] uses a loop of wire to try fishing someone out of \the [src].", "You use a loop of wire to try snagging someone trapped in \the [src]..."))
 			if(do_after(user, rand(3 SECONDS, 7 SECONDS))) //You can just spam click to stack attempts if you feel like abusing it.
 				if(prob(15))
-					user.visible_message("[user] tugs a sticky [H] free from \the [src].", "You heft [H] free from \the [src].")
+					user.visible_message(span_notice("[user] tugs a sticky [H] free from \the [src].", "You heft [H] free from \the [src]."))
 					LAZYSET(prey_excludes, H, world.time)
 					vore_selected.release_specific_contents(H)
 					N = 1
@@ -219,9 +219,9 @@ GLOBAL_LIST_INIT(pitcher_plant_lure_messages, list(
 					N = 1
 					break //We need to terminate the loop after each outcome or this could loop through multiple bellies. Of course, there should only be one belly.
 		if(!N)
-			to_chat(user, span_notice("The pitcher is empty."))
+			to_chat(user, span_infoplain("The pitcher is empty."))
 		if(istype(O, /obj/item/newspaper))
-			user.visible_message("[user] baps \the [src]. It doesn't seem to do anything.", "You whap \the [src] with a rolled up newspaper.")
+			user.visible_message(span_notice("[user] baps \the [src]. It doesn't seem to do anything.", "You whap \the [src] with a rolled up newspaper."))
 			if(N)
 				to_chat(user, span_notice("Weird. That usually works. You'll have to fish out its victim with some string or wire or something."))
 			return // Can't newspaper people to freedom.
@@ -314,14 +314,14 @@ GLOBAL_LIST_INIT(pitcher_plant_lure_messages, list(
 		qdel(src)
 	if(!(proximity && O.is_open_container()))
 		return
-	to_chat(user, span_notice("You squeeze \the [src], juicing it into \the [O]."))
+	to_chat(user, span_infoplain("You squeeze \the [src], juicing it into \the [O]."))
 	reagents.trans_to(O, reagents.total_volume)
 	user.drop_from_inventory(src)
 	pit.loc = user.loc
 	qdel(src)
 
 /obj/item/reagent_containers/food/snacks/pitcher_fruit/attack_self(mob/user)
-	to_chat(user, span_notice("You plant the fruit."))
+	to_chat(user, span_infoplain("You plant the fruit."))
 	new /obj/machinery/portable_atmospherics/hydroponics/soil/invisible(get_turf(user),src.seed)
 	GLOB.seed_planted_shift_roundstat++
 	qdel(src)
