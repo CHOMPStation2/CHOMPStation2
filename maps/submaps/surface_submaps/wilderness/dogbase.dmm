@@ -246,10 +246,6 @@
 /obj/item/gun/projectile/pistol,
 /turf/simulated/floor/tiled/dark,
 /area/submap/DogBase)
-"oW" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/outdoors/dirt,
-/area/template_noop)
 "pR" = (
 /obj/structure/bed,
 /obj/item/bedsheet,
@@ -1071,11 +1067,11 @@ Ol
 Vy
 fI
 Am
-oW
-oW
-oW
-oW
-oW
+Xz
+Xz
+Xz
+Xz
+Xz
 hp
 SW
 hp
@@ -1103,10 +1099,10 @@ ae
 kl
 lk
 Am
-oW
-oW
+Xz
+Xz
 QB
-oW
+Xz
 hp
 hp
 hp
