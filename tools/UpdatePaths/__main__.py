@@ -195,7 +195,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(prog=prog, description=desc, formatter_class=argparse.RawTextHelpFormatter)
     parser.add_argument("update_source", help="update file path / line of update notation")
     parser.add_argument("--map", "-m", help="path to update, defaults to all maps in directory")
-    parser.add_argument("--directory", "-d", help="path to maps directory, defaults to modular_chomp/maps")
+    parser.add_argument("--directory", "-d", help="path to maps directory, defaults to modular_chomp/maps") # ChompEDIT
     parser.add_argument("--inline", "-i", help="treat update source as update string instead of path", action="store_true")
     parser.add_argument("--verbose", "-v", help="toggle detailed update information", action="store_true")
     main(parser.parse_args())

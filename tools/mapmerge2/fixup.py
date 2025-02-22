@@ -60,7 +60,7 @@ def main(repo : pygit2.Repository):
 
     # Set up upstream remote if needed
     try:
-        repo.remotes.create("upstream", "https://github.com/CHOMPStation2/CHOMPStation2.git")
+        repo.remotes.create("upstream", "https://github.com/CHOMPStation2/CHOMPStation2.git") # ChompEDIT
     except ValueError:
         pass
     else:
