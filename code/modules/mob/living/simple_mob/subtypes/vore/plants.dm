@@ -1,7 +1,7 @@
 /////////////////////////////////////Man-Trap/////////////////////////////////////////
 
 /mob/living/simple_mob/vore/mantrap
-	name = "Mantrap"
+	name = "mantrap"
 	desc = "This massive plant lays in wait in the brush, and can be very difficult to spot. When laying open on the ground, the trap mechanism resembles a massive saw-toothed maw."
 	catalogue_data = list(/datum/category_item/catalogue/fauna/mantrap)
 	tt_desc = "Dionaea Humanis"
@@ -55,6 +55,7 @@
 	B.escapechance = 10
 	B.selective_preference = DM_SELECT
 	B.escape_stun = 10
+	// Todo: Add belly overlay.
 
 /datum/category_item/catalogue/fauna/mantrap
 	name = "Extra-Realspace Flora - Mantrap"
@@ -84,7 +85,7 @@
 
 
 /mob/living/simple_mob/vore/pitcher
-	name = "Pitcher Plant"
+	name = "pitcher plant"
 	desc = "This large pitcher plant looks big enough to fit an entire person, with a little stretching. Long tendrils rest at the entrance."
 	catalogue_data = list(/datum/category_item/catalogue/fauna/pitcher)
 	tt_desc = "Nepenthes Titanis"
