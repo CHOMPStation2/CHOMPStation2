@@ -122,7 +122,7 @@
 	icon_state = "red"
 	icon_living = "red"
 	icon_dead = "red_dead"
-	icon = 'icons/mob/snake_vr.dmi' // CHOMP Comment: Whenever the red snake sprites, this needs to be changed. I swear someone made sprites for this.
+	icon = 'modular_chomp/icons/mob/animal_ch.dmi' // CHOMP Edit
 
 /*
  * Python
