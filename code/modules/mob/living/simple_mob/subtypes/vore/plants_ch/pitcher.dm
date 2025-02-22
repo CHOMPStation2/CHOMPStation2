@@ -205,10 +205,10 @@ GLOBAL_LIST_INIT(pitcher_plant_lure_messages, list(
 		var/mob/living/carbon/human/H
 		var/N = 0
 		for(H in vore_selected.contents) //Only works for carbons, RIP mice. Should pick the first human the code finds.
-			user.visible_message(span_infoplain("[user] uses a loop of wire to try fishing someone out of \the [src].", "You use a loop of wire to try snagging someone trapped in \the [src]..."))
+			user.visible_message(span_infoplain("[user] uses a loop of wire to try fishing someone out of \the [src]."), span_infoplain("You use a loop of wire to try snagging someone trapped in \the [src]..."))
 			if(do_after(user, rand(3 SECONDS, 7 SECONDS))) //You can just spam click to stack attempts if you feel like abusing it.
 				if(prob(15))
-					user.visible_message(span_notice("[user] tugs a sticky [H] free from \the [src].", "You heft [H] free from \the [src]."))
+					user.visible_message(span_notice("[user] tugs a sticky [H] free from \the [src]."), span_infoplain("You heft [H] free from \the [src]."))
 					LAZYSET(prey_excludes, H, world.time)
 					vore_selected.release_specific_contents(H)
 					N = 1
@@ -221,7 +221,7 @@ GLOBAL_LIST_INIT(pitcher_plant_lure_messages, list(
 		if(!N)
 			to_chat(user, span_infoplain("The pitcher is empty."))
 		if(istype(O, /obj/item/newspaper))
-			user.visible_message(span_notice("[user] baps \the [src]. It doesn't seem to do anything.", "You whap \the [src] with a rolled up newspaper."))
+			user.visible_message(span_notice("[user] baps \the [src]. It doesn't seem to do anything."), span_notice("You whap \the [src] with a rolled up newspaper."))
 			if(N)
 				to_chat(user, span_notice("Weird. That usually works. You'll have to fish out its victim with some string or wire or something."))
 			return // Can't newspaper people to freedom.
