@@ -34,12 +34,6 @@
 	name = "Unknown Shuttle"
 	},
 /area/submap/Blackshuttledown)
-"ak" = (
-/turf/simulated/shuttle/wall/dark{
-	icon_state = "dark10";
-	name = "Unknown Shuttle"
-	},
-/area/submap/Blackshuttledown)
 "al" = (
 /obj/structure/shuttle/engine/heater{
 	icon_state = "heater";
@@ -134,12 +128,6 @@
 	dir = 5
 	},
 /turf/simulated/floor/tiled/white,
-/area/submap/Blackshuttledown)
-"av" = (
-/turf/simulated/shuttle/wall/dark{
-	icon_state = "dark5";
-	name = "Unknown Shuttle"
-	},
 /area/submap/Blackshuttledown)
 "aw" = (
 /turf/simulated/floor/tiled/steel_grid,
@@ -349,6 +337,12 @@
 "be" = (
 /obj/machinery/door/airlock/glass,
 /turf/simulated/floor/tiled/white,
+/area/submap/Blackshuttledown)
+"bf" = (
+/turf/simulated/shuttle/wall/dark{
+	icon_state = "dark10";
+	name = "Unknown Shuttle"
+	},
 /area/submap/Blackshuttledown)
 "bg" = (
 /obj/machinery/computer/communications,
@@ -733,6 +727,12 @@
 /obj/item/toy/plushie/spider,
 /turf/simulated/floor/tiled/steel,
 /area/submap/Blackshuttledown)
+"cp" = (
+/turf/simulated/shuttle/wall/dark{
+	icon_state = "dark5";
+	name = "Unknown Shuttle"
+	},
+/area/submap/Blackshuttledown)
 "cq" = (
 /turf/simulated/shuttle/wall/dark{
 	icon_state = "dark9";
@@ -997,7 +997,7 @@ bx
 bx
 bG
 aj
-av
+cp
 ab
 ab
 ab
@@ -1035,7 +1035,7 @@ br
 br
 bJ
 aj
-av
+cp
 ab
 ab
 ab
@@ -1061,7 +1061,7 @@ ad
 aH
 aj
 aj
-av
+cp
 aH
 aj
 bb
@@ -1073,11 +1073,11 @@ bl
 bF
 bT
 aj
-av
+cp
 aH
 aj
 aj
-av
+cp
 ab
 ab
 ab
@@ -1206,7 +1206,7 @@ ab
 af
 ab
 ab
-ak
+bf
 aj
 aj
 ax
@@ -1669,7 +1669,7 @@ bY
 bY
 co
 aj
-av
+cp
 ab
 ab
 ad
@@ -1804,7 +1804,7 @@ aj
 aj
 cq
 ab
-ak
+bf
 aj
 bw
 bK
@@ -1813,7 +1813,7 @@ bI
 aj
 cq
 ab
-ak
+bf
 aj
 aj
 aj
@@ -1842,7 +1842,7 @@ cq
 ab
 ab
 ab
-ak
+bf
 al
 al
 al
@@ -1851,7 +1851,7 @@ cq
 ab
 ab
 ab
-ak
+bf
 al
 al
 cq
@@ -1872,7 +1872,7 @@ ad
 ad
 ad
 ab
-ak
+bf
 al
 al
 ab

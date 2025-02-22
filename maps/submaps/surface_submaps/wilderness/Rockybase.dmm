@@ -892,21 +892,9 @@
 /obj/machinery/vending/medical,
 /turf/simulated/floor/tiled,
 /area/submap/Rockybase)
-"cV" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/tiled,
-/area/submap/Rockybase)
-"cW" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor,
-/area/submap/Rockybase)
 "cX" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/item/material/shard,
-/turf/simulated/floor,
-/area/submap/Rockybase)
-"cY" = (
-/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/submap/Rockybase)
 "cZ" = (
@@ -2484,7 +2472,7 @@ bQ
 at
 ct
 bL
-cV
+bL
 di
 dp
 aN
@@ -2522,9 +2510,9 @@ bQ
 at
 cu
 cE
-cW
-cY
-cW
+cG
+cG
+cG
 aN
 at
 ai
@@ -2561,7 +2549,7 @@ at
 cv
 cF
 cX
-cY
+cG
 cG
 dA
 at
@@ -2598,8 +2586,8 @@ bQ
 at
 bL
 cG
-cY
-cW
+cG
+cG
 cG
 cI
 at
@@ -2636,7 +2624,7 @@ bQ
 at
 aN
 cH
-cW
+cG
 cH
 cG
 dA

@@ -2,12 +2,6 @@
 "aa" = (
 /turf/space,
 /area)
-"ab" = (
-/turf/simulated/shuttle/wall{
-	 icon_state = "swall_s";
-	dir = 2
-	},
-/area/shuttle/overmap_examples/outpost)
 "ac" = (
 /obj/structure/shuttle/window{
 	 icon_state = "3"
@@ -1879,7 +1873,7 @@ aa
 aa
 "}
 (23,1,1) = {"
-ab
+ad
 ae
 ae
 aj
