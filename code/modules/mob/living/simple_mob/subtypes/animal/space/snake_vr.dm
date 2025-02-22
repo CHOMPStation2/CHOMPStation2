@@ -109,6 +109,9 @@
 		"\the [name]'s tail lurches with the struggles of a live meal.")
 	B.examine_messages = list(
 		"\the [name]'s tail is swollen fat with a lump of prey it swallowed whole.")
+    B.belly_fullscreen = "VBOanim_snakebelly1" // Chomp edit
+    B.belly_fullscreen_color = "#823232" // Chomp edit
+    B.belly_fullscreen_color2 = "#232300" // Chomp edit
 
 /datum/say_list/snake
 	emote_hear = list("hisses")
