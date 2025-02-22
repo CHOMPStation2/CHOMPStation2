@@ -39,7 +39,7 @@ GLOBAL_LIST_INIT(pitcher_plant_lure_messages, list(
 	min_n2 = 0
 	max_n2 = 0
 	minbodytemp = 0
-	meat_type = /obj/item/weapon/reagent_containers/food/snacks/pitcher_fruit // Allows pitcher plants to be chopped up. Probably.
+	meat_type = /obj/item/reagent_containers/food/snacks/pitcher_fruit // Allows pitcher plants to be chopped up. Probably.
 	meat_amount = 1 // And allows you to replant them should you so please.
 
 	melee_damage_upper = 0 //This shouldn't attack people but if it does (admemes) no damage can be dealt.
@@ -220,11 +220,11 @@ GLOBAL_LIST_INIT(pitcher_plant_lure_messages, list(
 					break //We need to terminate the loop after each outcome or this could loop through multiple bellies. Of course, there should only be one belly.
 		if(!N)
 			to_chat(user, "The pitcher is empty.")
-	if(istype(O, /obj/item/newspaper))
-		user.visible_message("[user] baps \the [src]. It doesn't seem to do anything.", "You whap \the [src] with a rolled up newspaper.")
-		if(N)
-			to_chat(user, "Weird. That usually works. You'll have to fish out its victim with some string or wire or something.")
-		return // Can't newspaper people to freedom.
+		if(istype(O, /obj/item/newspaper))
+			user.visible_message("[user] baps \the [src]. It doesn't seem to do anything.", "You whap \the [src] with a rolled up newspaper.")
+			if(N)
+				to_chat(user, "Weird. That usually works. You'll have to fish out its victim with some string or wire or something.")
+			return // Can't newspaper people to freedom.
 	..()
 
 /mob/living/simple_mob/vore/pitcher_plant/proc/vore_checks()
