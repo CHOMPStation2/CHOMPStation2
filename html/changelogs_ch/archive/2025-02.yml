@@ -416,3 +416,24 @@
   - qol: prevents too long messages from being sent in tgui say
   tacoguy7765093:
   - bugfix: Mapping errors on relic_base and NS_mines
+2025-02-22:
+  Cameron-The-Raven:
+  - bugfix: Shooting a ghost with firefighting foam will no longer make the server
+      explode
+  - bugfix: Proteans will no longer runtime under certain circumstances
+  - image: The splash screen now is more vibrant and higher quality!
+  Drulikar:
+  - maptweak: Corrections in most chomp maps for the new lints
+  - code_imp: Ported maplints
+  - code_imp: Enabled dmi testing lint
+  - code_imp: DMM test now lints against maps not in TGM format (in modular_chomp/maps)
+      and lints against maps pending a mapmerge
+  - code_imp: Updated pillow dependency (Reinstall hooks to update bootstrap)
+  - code_imp: /turf/simulated/shuttle will now perform an underlay_update if it takes_underlays
+      (instead of only walls doing this)
+  - rscdel: Removed a corrupt dmi file
+  - rscdel: Removed duplicate dreamchecker lint in CI
+  - rscdel: Removed relic base map backups (just use github history)
+  Hunter-Dovetail:
+  - rscadd: scaled_belly-torso
+  - code_imp: adjusted code for scaled_belly to allow for digi-legs
