@@ -178,12 +178,12 @@ GLOBAL_LIST_INIT(pitcher_plant_lure_messages, list(
 /mob/living/simple_mob/vore/pitcher_plant/attack_hand(mob/living/user)
 	if(user.a_intent == I_HELP)
 		if(fruit)
-			to_chat(user, "You pick a fruit from \the [src].")
+			to_chat(user, span_notice("You pick a fruit from \the [src]."))
 			var/obj/F = new /obj/item/reagent_containers/food/snacks/pitcher_fruit(get_turf(user)) //Drops at the user's feet if put_in_hands fails
 			fruit = FALSE
 			user.put_in_hands(F)
 		else
-			to_chat(user, "The [src] hasn't grown any fruit yet!")
+			to_chat(user, span_notice("The [src] hasn't grown any fruit yet!"))
 	else
 		..()
 
@@ -195,7 +195,7 @@ GLOBAL_LIST_INIT(pitcher_plant_lure_messages, list(
 /mob/living/simple_mob/vore/pitcher_plant/attackby(obj/item/O, mob/user)
 	if(istype(O, /obj/item/reagent_containers/food/snacks/meat))
 		if(meat > NUTRITION_FRUIT - NUTRITION_MEAT) //Can't exceed 250
-			to_chat(user, "The [src] is full!")
+			to_chat(user, span_notice("The [src] is full!"))
 			return
 		else
 			meat += NUTRITION_MEAT
@@ -215,15 +215,15 @@ GLOBAL_LIST_INIT(pitcher_plant_lure_messages, list(
 					addtimer(CALLBACK(src, PROC_REF(removeMobFromPreyExcludes), WEAKREF(H)), 1 MINUTES)
 					break
 				else
-					to_chat(user, "The victim slips from your grasp!")
+					to_chat(user, span_notice("The victim slips from your grasp!"))
 					N = 1
 					break //We need to terminate the loop after each outcome or this could loop through multiple bellies. Of course, there should only be one belly.
 		if(!N)
-			to_chat(user, "The pitcher is empty.")
+			to_chat(user, span_notice("The pitcher is empty."))
 		if(istype(O, /obj/item/newspaper))
 			user.visible_message("[user] baps \the [src]. It doesn't seem to do anything.", "You whap \the [src] with a rolled up newspaper.")
 			if(N)
-				to_chat(user, "Weird. That usually works. You'll have to fish out its victim with some string or wire or something.")
+				to_chat(user, span_notice("Weird. That usually works. You'll have to fish out its victim with some string or wire or something."))
 			return // Can't newspaper people to freedom.
 	..()
 
