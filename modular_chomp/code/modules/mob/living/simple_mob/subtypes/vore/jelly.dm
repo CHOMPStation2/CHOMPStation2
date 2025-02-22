@@ -15,7 +15,7 @@
 		return
 	. = ..()
 	var/obj/belly/B = vore_selected
-	B.name = "stomach"
+	B.name = "gastric chamber"
 	B.desc = "The yawning flesh orifice leans over you from above. Its throat dribbles with oozing slick globs of saliva, or maybe it's more like mucus. Then you realize that's not its throat; that's its whole stomach! You're swallowed right into the fleshy sack, and the sphincter above seals you inside. The unthinking [name] goes back to jiggling about its own mindless business. Such a creature isn't even sentient enough to be aware of what it ate. You also realize that the chamber you're in only has one way in or out. Yet the simplicity of \the [name]'s gut won't mean you'll have it easy. If you stay here for long enough, you'll be broken down until there's nothing left but scraps."
 	B.mode_flags = DM_FLAG_THICKBELLY
 	B.digest_brute = 0.3
@@ -25,7 +25,7 @@
 	B.contamination_flavor = "Slimy"
 	B.contamination_color = "green"
 	B.item_digest_mode = IM_HOLD
-	B.belly_fullscreen = "anim_belly"
+	B.belly_fullscreen = "VBOanim_belly1"
 	B.belly_fullscreen_color = "#823232"
 	B.belly_fullscreen_color2 = "#823232"
 	B.fancy_vore = 1
@@ -37,7 +37,6 @@
 		"You're pummeled to the floor of \the [name]'s [B.name] and held in a pool of sizzling liquids.",
 		"You're being drenched in a viscous, slippery slime. It doesn't just burn you; it makes it impossible to hold onto anything.",
 		"Rippling flesh squeezes you over and over and over again. Your body burns all over as you are soaked in a corrosive mucus.",
-		"Somehow, all of your belongings are being stripped off one by one. If you're not already naked, you soon will be.",
 		"The continuing peristalsis has nowhere left to push you, so you're just squashed to the floor of the soupy wet chamber.")
 	B.emote_lists[DM_HOLD] = list(
 		"The constantly undulating walls of \the [name] work you over with a lubricating slime.",
@@ -45,7 +44,6 @@
 		"You're pummeled to the floor of \the [name]'s [B.name] and held in a pool of gooey liquids.",
 		"You're being drenched in a viscous, slippery slime that makes it impossible to hold onto anything.", // Stripping still works even if digestion is off.
 		"Rippling flesh squeezes you over and over and over again.",
-		"Somehow, all of your belongings are being stripped off one by one. If you're not already naked, you soon will be.",
 		"The continuing peristalsis has nowhere left to push you, so you're just squashed to the floor of the soupy wet chamber.")
 	B.struggle_messages_inside = list(
 		"You jam your limbs against the squashy thick walls in an effort to get some leverage.",
