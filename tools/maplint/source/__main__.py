@@ -109,10 +109,12 @@ def main(args):
     for map_filename in (args.maps or glob.glob("**/*.dmm", recursive = True)):
         print(map_filename, end = " ")
 
+        # ChompEDIT START
         if not args.maps:
             if "modular_chomp/maps/" not in map_filename:
                 print(yellow("SKIPPED"))
                 continue
+        # ChompEDIT END
 
         success = True
         all_failures: list[MaplintError] = []
