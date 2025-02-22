@@ -1,4 +1,6 @@
 /mob/living/simple_mob/vore/jelly
+	maxHealth = 5 // Makes them trivially weak so you can even punch them to death to get your stuff back.
+	health = 5
 	swallowTime = 1 SECONDS
 	vore_active = 1
 	vore_capacity = 3
