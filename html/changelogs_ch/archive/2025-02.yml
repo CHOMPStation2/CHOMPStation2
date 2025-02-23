@@ -437,3 +437,12 @@
   Hunter-Dovetail:
   - rscadd: scaled_belly-torso
   - code_imp: adjusted code for scaled_belly to allow for digi-legs
+2025-02-23:
+  CHOMPStation2StaffMirrorBot:
+  - rscadd: Reagent-removing 'Pruning mode' to the floral somatoray
+  - bugfix: no more crashing as a ghost
+  Drathek:
+  - code_imp: Cleanup CI and add chomp edit comments to tooling edits
+  Tost:
+  - qol: Changed nail polish's size to small
+  - code_imp: Added w_class = ITEMSIZE_SMALL to nail polish, which was missing originally.
