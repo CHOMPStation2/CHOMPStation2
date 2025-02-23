@@ -3408,6 +3408,7 @@
 	dir = 4
 	},
 /obj/machinery/portable_atmospherics/canister/empty,
+/obj/effect/floor_decal/industrial/outline,
 /turf/simulated/floor/plating,
 /area/surface/outpost/research/xenoarcheology/smes)
 "hh" = (
@@ -3736,6 +3737,7 @@
 	dir = 1
 	},
 /obj/machinery/portable_atmospherics/canister/empty,
+/obj/effect/floor_decal/industrial/outline,
 /turf/simulated/floor/plating,
 /area/surface/outpost/research/xenoarcheology/smes)
 "hT" = (
@@ -4328,6 +4330,7 @@
 	dir = 8
 	},
 /obj/machinery/portable_atmospherics/canister/empty,
+/obj/effect/floor_decal/industrial/outline,
 /turf/simulated/floor/plating,
 /area/surface/outpost/research/xenoarcheology/smes)
 "KX" = (

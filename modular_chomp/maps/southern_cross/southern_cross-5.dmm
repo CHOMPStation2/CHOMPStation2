@@ -10896,6 +10896,7 @@
 	},
 /obj/machinery/portable_atmospherics/canister/empty,
 /obj/machinery/atmospherics/pipe/simple/visible/yellow,
+/obj/effect/floor_decal/industrial/outline,
 /turf/simulated/floor/plating,
 /area/surface/outpost/engineering/atmos_room)
 "uQ" = (
@@ -26280,6 +26281,7 @@
 "Zi" = (
 /obj/machinery/atmospherics/portables_connector,
 /obj/machinery/portable_atmospherics/canister/empty,
+/obj/effect/floor_decal/industrial/outline,
 /turf/simulated/floor/plating,
 /area/surface/outpost/engineering/atmos_room)
 "Zj" = (

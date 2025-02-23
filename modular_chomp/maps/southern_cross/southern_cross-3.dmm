@@ -70845,13 +70845,6 @@
 /obj/machinery/atmospherics/pipe/simple/visible/yellow,
 /turf/simulated/floor,
 /area/engineering/engine_room)
-"thh" = (
-/obj/machinery/door/firedoor/border_only,
-/obj/machinery/door/airlock/maintenance{
-	name = "Central Maintenance Access"
-	},
-/turf/simulated/floor/plating,
-/area/maintenance/central)
 "thu" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -72712,6 +72705,13 @@
 /obj/effect/floor_decal/corner/white/border,
 /turf/simulated/floor/tiled,
 /area/hallway/primary/seconddeck/dockhallway)
+"uxi" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/machinery/door/airlock/maintenance{
+	name = "Central Maintenance Access"
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/central)
 "uxj" = (
 /obj/machinery/firealarm{
 	dir = 8;
@@ -111791,7 +111791,7 @@ dsj
 jEn
 kLo
 lJs
-thh
+uxi
 aZC
 owO
 pmd
