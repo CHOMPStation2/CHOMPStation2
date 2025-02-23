@@ -1761,6 +1761,10 @@
 	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/research/xenoarcheology/anomaly)
+"dI" = (
+/obj/machinery/light/small,
+/turf/simulated/floor/concrete,
+/area/surface/cave/explored/trader)
 "dJ" = (
 /obj/structure/table/steel,
 /obj/effect/floor_decal/industrial/warning/dust{
@@ -2437,6 +2441,19 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/surface/outpost/research/xenoarcheology)
+"fc" = (
+/obj/machinery/atmospherics/portables_connector{
+	dir = 8
+	},
+/obj/machinery/portable_atmospherics/canister/empty,
+/obj/effect/floor_decal/industrial/outline,
+/turf/simulated/floor/plating,
+/area/surface/outpost/research/xenoarcheology/smes)
+"fd" = (
+/obj/machinery/meter,
+/obj/machinery/atmospherics/pipe/manifold4w/visible/cyan,
+/turf/simulated/floor/plating,
+/area/surface/outpost/research/xenoarcheology/smes)
 "fe" = (
 /obj/item/anobattery{
 	pixel_x = -6;
@@ -3120,11 +3137,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/research/xenoarcheology/smes)
-"gy" = (
-/obj/machinery/meter,
-/obj/machinery/atmospherics/pipe/manifold4w/visible/cyan,
-/turf/simulated/floor/plating,
-/area/surface/outpost/research/xenoarcheology/smes)
 "gz" = (
 /obj/machinery/meter,
 /obj/machinery/atmospherics/pipe/manifold/visible/yellow{
@@ -3236,10 +3248,11 @@
 /turf/simulated/floor/plating,
 /area/surface/outpost/research/xenoarcheology/smes)
 "gO" = (
-/obj/machinery/space_heater,
-/obj/machinery/atmospherics/pipe/simple/visible/cyan{
-	dir = 6
+/obj/machinery/atmospherics/pipe/simple/visible/cyan,
+/obj/machinery/atmospherics/pipe/simple/visible/yellow{
+	dir = 4
 	},
+/obj/machinery/portable_atmospherics/canister/air,
 /turf/simulated/floor/plating,
 /area/surface/outpost/research/xenoarcheology/smes)
 "gP" = (
@@ -3416,12 +3429,6 @@
 	dir = 1
 	},
 /obj/machinery/portable_atmospherics/powered/pump/filled,
-/turf/simulated/floor/plating,
-/area/surface/outpost/research/xenoarcheology/smes)
-"hi" = (
-/obj/machinery/atmospherics/pipe/simple/visible/yellow{
-	dir = 4
-	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/research/xenoarcheology/smes)
 "hj" = (
@@ -3606,14 +3613,6 @@
 	tag_south = 2;
 	tag_west = 4
 	},
-/turf/simulated/floor/plating,
-/area/surface/outpost/research/xenoarcheology/smes)
-"hD" = (
-/obj/machinery/atmospherics/pipe/simple/visible/cyan,
-/obj/machinery/atmospherics/pipe/simple/visible/yellow{
-	dir = 4
-	},
-/obj/machinery/portable_atmospherics/canister/air,
 /turf/simulated/floor/plating,
 /area/surface/outpost/research/xenoarcheology/smes)
 "hE" = (
@@ -3965,6 +3964,18 @@
 	temperature = 243.15
 	},
 /area/surface/outpost/mining_main/cave)
+"iu" = (
+/obj/machinery/atmospherics/pipe/simple/visible/yellow{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/surface/outpost/research/xenoarcheology/smes)
+"iv" = (
+/obj/machinery/light/small{
+	dir = 8
+	},
+/turf/simulated/floor/concrete,
+/area/surface/cave/explored/trader)
 "iw" = (
 /obj/machinery/power/apc{
 	name = "south bump";
@@ -3985,6 +3996,12 @@
 	temperature = 243.15
 	},
 /area/surface/outpost/mining_main/cave)
+"iy" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/simulated/floor/concrete,
+/area/surface/cave/explored/trader)
 "iz" = (
 /obj/effect/floor_decal/industrial/warning/dust,
 /obj/structure/ore_box,
@@ -4005,6 +4022,32 @@
 	outdoors = 0
 	},
 /area/surface/outpost/wall)
+"iC" = (
+/obj/machinery/space_heater,
+/obj/machinery/atmospherics/pipe/simple/visible/cyan{
+	dir = 6
+	},
+/turf/simulated/floor/plating,
+/area/surface/outpost/research/xenoarcheology/smes)
+"iD" = (
+/obj/machinery/light/small{
+	dir = 1
+	},
+/turf/simulated/floor/concrete,
+/area/surface/cave/explored/trader)
+"iE" = (
+/obj/structure/cable/blue{
+	icon_state = "0-4"
+	},
+/obj/machinery/power/rtg/advanced,
+/turf/simulated/floor/plating,
+/area/surface/cave/explored/trader)
+"iF" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/surface/cave/explored/trader)
 "iH" = (
 /obj/effect/map_effect/portal/master/side_b/caves_to_plains/river{
 	dir = 1
@@ -4169,16 +4212,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/surface/cave/explored/trader)
-"vj" = (
-/obj/machinery/light/small,
-/turf/simulated/floor/concrete,
-/area/surface/cave/explored/trader)
-"vA" = (
-/obj/machinery/light/small{
-	dir = 1
-	},
-/turf/simulated/floor/concrete,
-/area/surface/cave/explored/trader)
 "xh" = (
 /obj/effect/zone_divider,
 /turf/simulated/floor/plating{
@@ -4225,13 +4258,6 @@
 /obj/item/bedsheet/cosmos,
 /mob/living/simple_mob/humanoid/starhunter/trader/farmer,
 /turf/simulated/floor/concrete,
-/area/surface/cave/explored/trader)
-"Ce" = (
-/obj/structure/cable/blue{
-	icon_state = "0-4"
-	},
-/obj/machinery/power/rtg/advanced,
-/turf/simulated/floor/plating,
 /area/surface/cave/explored/trader)
 "Co" = (
 /obj/machinery/light{
@@ -4295,12 +4321,6 @@
 	},
 /turf/simulated/mineral/floor/ignore_mapgen/sif,
 /area/surface/outpost/research/xenoarcheology/exterior)
-"Gr" = (
-/obj/machinery/light/small{
-	dir = 8
-	},
-/turf/simulated/floor/concrete,
-/area/surface/cave/explored/trader)
 "Hs" = (
 /obj/effect/map_effect/portal/master/side_b/caves_to_plains{
 	dir = 1
@@ -4315,30 +4335,10 @@
 "In" = (
 /turf/simulated/floor/plating,
 /area/surface/cave/explored/trader)
-"Jh" = (
-/obj/machinery/light/small{
-	dir = 4
-	},
-/turf/simulated/floor/plating,
-/area/surface/cave/explored/trader)
 "Jk" = (
 /obj/effect/map_effect/portal/line/side_a,
 /turf/simulated/wall/solidrock,
 /area/surface/outpost/wall/checkpoint)
-"Kt" = (
-/obj/machinery/atmospherics/portables_connector{
-	dir = 8
-	},
-/obj/machinery/portable_atmospherics/canister/empty,
-/obj/effect/floor_decal/industrial/outline,
-/turf/simulated/floor/plating,
-/area/surface/outpost/research/xenoarcheology/smes)
-"KX" = (
-/obj/machinery/light/small{
-	dir = 4
-	},
-/turf/simulated/floor/concrete,
-/area/surface/cave/explored/trader)
 "LO" = (
 /turf/simulated/wall/solidrock,
 /area/surface/cave/explored/trader)
@@ -38294,7 +38294,7 @@ fD
 fW
 gw
 gw
-hi
+iu
 io
 hP
 fD
@@ -38551,9 +38551,9 @@ am
 fD
 fX
 gw
+iC
 gO
-hD
-gy
+fd
 hQ
 fD
 il
@@ -39068,7 +39068,7 @@ fF
 fZ
 gw
 gQ
-hi
+iu
 hB
 hS
 fD
@@ -39586,7 +39586,7 @@ gA
 gS
 hk
 hU
-Kt
+fc
 fD
 eh
 eh
@@ -68480,7 +68480,7 @@ kx
 RM
 YU
 YU
-Gr
+iv
 YU
 YU
 YU
@@ -68732,7 +68732,7 @@ ae
 ae
 ae
 RM
-vA
+iD
 YU
 YU
 sH
@@ -69252,12 +69252,12 @@ RM
 RM
 RM
 RM
-vA
+iD
 YU
 kx
 kx
 YU
-vj
+dI
 RM
 nr
 nr
@@ -69507,7 +69507,7 @@ ae
 ae
 RM
 In
-Ce
+iE
 UB
 RM
 St
@@ -70023,12 +70023,12 @@ ae
 ae
 RM
 In
-Jh
+iF
 In
 sH
 YU
 YU
-KX
+iy
 YU
 YU
 YU
