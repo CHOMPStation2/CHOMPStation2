@@ -1,5 +1,0 @@
-author: "Hunter-Dovetail"
-delete-after: True
-changes:
-  - rscadd: "scaled_belly-torso"
-  - code_imp: "adjusted code for scaled_belly to allow for digi-legs"
