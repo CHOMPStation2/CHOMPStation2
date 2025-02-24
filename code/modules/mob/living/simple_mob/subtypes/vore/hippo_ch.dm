@@ -1,3 +1,3 @@
-/mob/living/simple_mob/vore/hippo //I don't know why it's in a seperate line but everyone does it so i do it
-	vore_bump_emote = "homf its jaws over" // SOMEONE was LAZY and COPYPASTED from gaslamps in the original file...
+/mob/living/simple_mob/vore/hippo
+	vore_bump_emote = "homfs its jaws over" // SOMEONE was LAZY and COPYPASTED from gaslamps on Vorestation!
 	// Todo: Add multi-chamber digestive system at some point in the future with auto-move mechanics. Could be a good prototype for eventually adding vore to cows and stuff.
