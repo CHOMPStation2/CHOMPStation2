@@ -584,7 +584,7 @@
 					/obj/item/seeds/reishimycelium = 2,
 					/obj/item/seeds/reishimycelium = 2,
 					/obj/item/seeds/shandseed = 2,
-					/obj/item/seeds/pitcherseed = 2) // Chomp edit
+					/obj/item/seeds/pitcherseed = 2) // CHOMPEdit
 	premium = list(/obj/item/reagent_containers/spray/waterflower = 1)
 
 /**
