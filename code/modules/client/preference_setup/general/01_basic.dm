@@ -67,7 +67,7 @@
 	if(CONFIG_GET(flag/allow_metadata))
 		//CHOMPEdit Start
 		. += span_bold("OOC Notes: <a href='byond://?src=\ref[src];edit_ooc_notes=1'>Edit</a><a href='byond://?src=\ref[src];edit_ooc_note_favs=1'>Favs</a><a href='byond://?src=\ref[src];edit_ooc_note_likes=1'>Likes</a><a href='byond://?src=\ref[src];edit_ooc_note_maybes=1'>Maybes</a><a href='byond://?src=\ref[src];edit_ooc_note_dislikes=1'>Dislikes</a>") + "<br>"
-		. += "Detailed field or short list system? <a href='byond://?src=\ref[src];edit_ooc_note_style=1'>[pref.matadata_ooc_style ? "Lists" : "Fields"]</a><br><br>"
+		. += "Detailed field or short list system? <a href='byond://?src=\ref[src];edit_ooc_note_style=1'>[pref.read_preference(/datum/preference/toggle/living/ooc_notes_style) ? "Lists" : "Fields"]</a><br><br>"
 		//CHOMPEdit End
 	. = jointext(.,null)
 
