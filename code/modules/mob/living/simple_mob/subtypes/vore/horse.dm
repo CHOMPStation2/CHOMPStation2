@@ -146,8 +146,8 @@
 	var/obj/belly/B = vore_selected
 	B.name = "stomach"
 	B.desc = "With a final few gulps, the kelpie finishes swallowing you down into its hot, humid gut... and with a slosh, your weight makes the equine's belly hang down slightly like some sort of organic hammock. The thick, damp air is tinged with the smell of seaweed, and the surrounding flesh wastes no time in clenching and massaging down over its newfound fodder."
-	B.digest_brute = 0.5
-	B.digest_burn = 0.5
+	B.digest_brute = 3
+	B.digest_burn = 3
 	B.digestchance = 40
 	B.absorbchance = 1
 	B.escapechance = 7
