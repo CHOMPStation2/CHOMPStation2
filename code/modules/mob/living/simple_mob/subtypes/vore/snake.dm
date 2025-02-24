@@ -87,6 +87,8 @@
 		"The snake's ample, kneading muscle gradually squeezes the strength and fight from your body with clench after clench!",
 		"A pleased hiss rattles out of the giant snake from somewhere behind you, the serpent clearly satisfied with its newest meal!",
 		"Your movements grow slower and less effective as the snake's stomach ooze clings to your entire body, working away at it!")
-	B.belly_fullscreen = "VBOanim_snakebelly1" // Chomp edit
-	B.belly_fullscreen_color = "#823232" // Chomp edit
-	B.belly_fullscreen_color2 = "#232300" // Chomp edit
+	// CHOMPAdd Start
+	B.belly_fullscreen = "VBOanim_snakebelly1"
+	B.belly_fullscreen_color = "#823232"
+	B.belly_fullscreen_color2 = "#232300"
+	// CHOMPAdd End
