@@ -50,11 +50,11 @@
 	if(silent) return FALSE
 	gem.use_emote(message,src,eyeobj)
 
-/mob/living/carbon/brain/caught_soul/me_verb_subtle(message as message)
+/mob/living/carbon/brain/caught_soul/vore/me_verb_subtle(message as message)
 	if(silent) return FALSE
 	gem.use_emote(message,src,eyeobj,TRUE)
 
-/mob/living/carbon/brain/caught_soul/whisper(message as text)
+/mob/living/carbon/brain/caught_soul/vore/whisper(message as text)
 	if(silent) return FALSE
 	gem.use_speech(message,src,eyeobj,TRUE)
 
