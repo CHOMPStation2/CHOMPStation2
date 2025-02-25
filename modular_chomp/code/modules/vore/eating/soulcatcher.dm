@@ -79,17 +79,22 @@
 
 	//AR Projecting
 	if(eyeobj)
-		var/range = world.view
+		var/speak_verb = "says"
+		message = span_game(span_say(span_bold("[sender_name]") + " [speak_verb], \"[message]\""))
 		if(whisper)
-			range = 1
-		sender.eyeobj.visible_message(span_game(span_say(span_bold("[sender_name]") + " says, \"[message]\"")), range = range)
+			var/speak_verb = "whispers"
+			sender.eyeobj.visible_message(span_italics(message), range = 1)
+		else
+			sender.eyeobj.visible_message(message)
 
 	//Not AR Projecting
 	else
-		message = span_nif(span_bold("\[SC\] [sender_name]") + " speaks, \"[message]\"")
+		var/speak_verb = "speaks"
+		message = span_nif(span_bold("\[SC\] [sender_name]") + " [speak_verb], \"[message]\"")
 		to_chat(owner, message)
 		if(whisper)
-			to_chat(sender, message)
+			speak_verb = "whispers"
+			to_chat(sender, span_italics(message))
 		else
 			for(var/mob/living/carbon/brain/caught_soul/CS as anything in brainmobs)
 				to_chat(CS, message)
@@ -102,17 +107,17 @@
 
 	//AR Projecting
 	if(eyeobj)
-		var/range = world.view
+		message = span_emote("[sender_name] [message]")
 		if(whisper)
-			range = 1
-		sender.eyeobj.visible_message(span_emote("[sender_name] [message]"), range = range)
-
+			sender.eyeobj.visible_message(span_italics(message), range = 1)
+		else
+			sender.eyeobj.visible_message(message)
 	//Not AR Projecting
 	else
 		message = span_nif(span_bold("[sender_name]") + " [message]")
 		to_chat(owner, message)
 		if(whisper)
-			to_chat(sender, message)
+			to_chat(sender, span_italics(message))
 		else
 			for(var/mob/living/carbon/brain/caught_soul/CS as anything in brainmobs)
 				to_chat(CS, message)

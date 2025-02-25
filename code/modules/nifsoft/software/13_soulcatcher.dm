@@ -91,21 +91,26 @@
 
 	//AR Projecting
 	if(eyeobj)
-		var/range = world.view
+		var/speak_verb = "says"
+		message = span_game(span_say(span_bold("[sender_name]") + " [speak_verb], \"[message]\""))
 		if(whisper)
-			range = 1
-		sender.eyeobj.visible_message(span_game(span_say(span_bold("[sender_name]") + " says, \"[message]\"")), range = range)
+			var/speak_verb = "whispers"
+			sender.eyeobj.visible_message(span_italics(message), range = 1)
+		else
+			sender.eyeobj.visible_message(message)
 
 	//Not AR Projecting
 	else
-		message = " " + span_bold("[sender_name]") + " speaks, \"[message]\""
+		var/speak_verb = "speaks"
+		message = " " + span_bold("[sender_name]") + " [speak_verb], \"[message]\""
 		to_chat(nif.human,
 				type = MESSAGE_TYPE_NIF,
 				html = span_nif(span_bold("\[[icon2html(nif.big_icon, nif.human.client)]NIF\]") + message))
 		if(whisper)
+			speak_verb = "whispers"
 				to_chat(sender,
 						type = MESSAGE_TYPE_NIF,
-						html = span_nif(span_bold("\[[icon2html(nif.big_icon, sender.client)]NIF\]") + message))
+						html = span_nif(span_bold("\[[icon2html(nif.big_icon, sender.client)]NIF\]") + span_italics(message)))
 		else
 			for(var/mob/living/carbon/brain/caught_soul/CS as anything in brainmobs)
 				to_chat(CS,
@@ -133,7 +138,7 @@
 		if(whisper)
 			to_chat(sender,
 					type = MESSAGE_TYPE_NIF,
-					html = span_nif(span_bold("\[[icon2html(nif.big_icon,sender.client)]NIF\]") + message))
+					html = span_nif(span_bold("\[[icon2html(nif.big_icon,sender.client)]NIF\]") + span_italics(message)))
 		else
 			for(var/mob/living/carbon/brain/caught_soul/CS as anything in brainmobs)
 				to_chat(CS,
