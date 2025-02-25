@@ -453,3 +453,9 @@
       facing south
   - bugfix: pizza vouchers will no longer land with such speed that they gib any user,
       even if not emagged.
+2025-02-25:
+  CHOMPStation2StaffMirrorBot:
+  - rscadd: Add a button to set gender of simplemobs
+  - qol: Adds text to art canvas descriptions indicating their size
+  Kashargul:
+  - bugfix: ooc style not being toggle able in character editor
