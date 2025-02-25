@@ -50,6 +50,14 @@
 	if(silent) return FALSE
 	gem.use_emote(message,src,eyeobj)
 
+/mob/living/carbon/brain/caught_soul/me_verb_subtle(message as message)
+	if(silent) return FALSE
+	gem.use_emote(message,src,eyeobj,TRUE)
+
+/mob/living/carbon/brain/caught_soul/whisper(message as text)
+	if(silent) return FALSE
+	gem.use_speech(message,src,eyeobj,TRUE)
+
 // Resist override, only returning a message that one is stuck for now
 /mob/living/carbon/brain/caught_soul/vore/resist()
 	set name = "Resist"
