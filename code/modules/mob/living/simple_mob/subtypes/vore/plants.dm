@@ -55,6 +55,7 @@
 	B.escapechance = 10
 	B.selective_preference = DM_SELECT
 	B.escape_stun = 10
+	// Todo: Add belly overlay.
 
 /datum/category_item/catalogue/fauna/mantrap
 	name = "Extra-Realspace Flora - Mantrap"
