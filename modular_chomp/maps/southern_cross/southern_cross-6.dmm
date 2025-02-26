@@ -1761,6 +1761,10 @@
 	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/research/xenoarcheology/anomaly)
+"dI" = (
+/obj/machinery/light/small,
+/turf/simulated/floor/concrete,
+/area/surface/cave/explored/trader)
 "dJ" = (
 /obj/structure/table/steel,
 /obj/effect/floor_decal/industrial/warning/dust{
@@ -2437,6 +2441,19 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/surface/outpost/research/xenoarcheology)
+"fc" = (
+/obj/machinery/atmospherics/portables_connector{
+	dir = 8
+	},
+/obj/machinery/portable_atmospherics/canister/empty,
+/obj/effect/floor_decal/industrial/outline,
+/turf/simulated/floor/plating,
+/area/surface/outpost/research/xenoarcheology/smes)
+"fd" = (
+/obj/machinery/meter,
+/obj/machinery/atmospherics/pipe/manifold4w/visible/cyan,
+/turf/simulated/floor/plating,
+/area/surface/outpost/research/xenoarcheology/smes)
 "fe" = (
 /obj/item/anobattery{
 	pixel_x = -6;
@@ -3120,15 +3137,11 @@
 	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/research/xenoarcheology/smes)
-"gy" = (
-/obj/machinery/atmospherics/pipe/simple/visible/yellow{
-	dir = 6
-	},
-/turf/simulated/floor/plating,
-/area/surface/outpost/research/xenoarcheology/smes)
 "gz" = (
 /obj/machinery/meter,
-/obj/machinery/atmospherics/pipe/manifold4w/visible/yellow,
+/obj/machinery/atmospherics/pipe/manifold/visible/yellow{
+	dir = 8
+	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/research/xenoarcheology/smes)
 "gA" = (
@@ -3235,23 +3248,32 @@
 /turf/simulated/floor/plating,
 /area/surface/outpost/research/xenoarcheology/smes)
 "gO" = (
-/obj/machinery/space_heater,
+/obj/machinery/atmospherics/pipe/simple/visible/cyan,
+/obj/machinery/atmospherics/pipe/simple/visible/yellow{
+	dir = 4
+	},
+/obj/machinery/portable_atmospherics/canister/air,
 /turf/simulated/floor/plating,
 /area/surface/outpost/research/xenoarcheology/smes)
 "gP" = (
-/obj/machinery/atmospherics/pipe/simple/visible/cyan,
+/obj/machinery/atmospherics/pipe/simple/visible/cyan{
+	dir = 9
+	},
 /obj/machinery/portable_atmospherics/powered/scrubber,
 /turf/simulated/floor/plating,
 /area/surface/outpost/research/xenoarcheology/smes)
 "gQ" = (
-/obj/machinery/atmospherics/binary/pump,
+/obj/machinery/atmospherics/pipe/tank/phoron{
+	dir = 4
+	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/research/xenoarcheology/smes)
 "gR" = (
 /obj/machinery/atmospherics/omni/atmos_filter{
 	tag_east = 7;
 	tag_north = 1;
-	tag_south = 2
+	tag_south = 2;
+	tag_west = 6
 	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/research/xenoarcheology/smes)
@@ -3302,10 +3324,7 @@
 /turf/simulated/floor/tiled/freezer,
 /area/surface/outpost/research/xenoarcheology/restroom)
 "gW" = (
-/obj/item/reagent_containers/glass/bottle/toxin,
-/obj/item/reagent_containers/glass/beaker/sulphuric{
-	name = "beaker 'sulphuric acid'"
-	},
+/obj/machinery/chemical_dispenser/full,
 /obj/structure/table/glass,
 /obj/effect/floor_decal/corner/beige{
 	dir = 9
@@ -3398,28 +3417,25 @@
 /turf/simulated/floor/plating,
 /area/surface/outpost/research/xenoarcheology/emergencystorage)
 "hg" = (
-/obj/structure/closet/crate,
-/obj/item/stack/material/phoron{
-	amount = 25
+/obj/machinery/atmospherics/portables_connector{
+	dir = 4
 	},
+/obj/machinery/portable_atmospherics/canister/empty,
+/obj/effect/floor_decal/industrial/outline,
 /turf/simulated/floor/plating,
 /area/surface/outpost/research/xenoarcheology/smes)
 "hh" = (
-/obj/machinery/atmospherics/pipe/simple/visible/cyan,
-/obj/machinery/portable_atmospherics/powered/pump/filled,
-/turf/simulated/floor/plating,
-/area/surface/outpost/research/xenoarcheology/smes)
-"hi" = (
-/obj/machinery/atmospherics/portables_connector{
+/obj/machinery/atmospherics/pipe/manifold/visible/yellow{
 	dir = 1
 	},
+/obj/machinery/portable_atmospherics/powered/pump/filled,
 /turf/simulated/floor/plating,
 /area/surface/outpost/research/xenoarcheology/smes)
 "hj" = (
 /obj/machinery/atmospherics/omni/atmos_filter{
-	tag_east = 5;
 	tag_north = 1;
-	tag_south = 2
+	tag_south = 2;
+	tag_west = 3
 	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/research/xenoarcheology/smes)
@@ -3548,12 +3564,13 @@
 /turf/simulated/floor/plating,
 /area/surface/outpost/research/xenoarcheology/emergencystorage)
 "hy" = (
-/obj/structure/closet/toolcloset,
-/obj/random/maintenance/clean,
-/obj/random/maintenance/clean,
 /obj/item/radio/intercom{
 	name = "Station Intercom (General)";
 	pixel_y = -21
+	},
+/obj/structure/closet/crate,
+/obj/item/stack/material/phoron{
+	amount = 25
 	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/research/xenoarcheology/smes)
@@ -3573,27 +3590,28 @@
 /turf/simulated/floor/tiled,
 /area/surface/outpost/research/xenoarcheology/anomaly)
 "hA" = (
-/obj/machinery/atmospherics/pipe/manifold4w/visible/cyan,
-/obj/machinery/meter,
+/obj/machinery/atmospherics/omni/mixer{
+	active_power_usage = 7500;
+	tag_east = 1;
+	tag_east_con = 0.79;
+	tag_north = 1;
+	tag_north_con = 0.21;
+	tag_south_con = null;
+	tag_west = 2
+	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/research/xenoarcheology/smes)
 "hB" = (
-/obj/machinery/atmospherics/pipe/manifold/visible/cyan{
+/obj/machinery/atmospherics/pipe/manifold/visible/yellow{
 	dir = 1
 	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/research/xenoarcheology/smes)
 "hC" = (
 /obj/machinery/atmospherics/omni/atmos_filter{
-	tag_east = 6;
 	tag_north = 1;
-	tag_west = 2
-	},
-/turf/simulated/floor/plating,
-/area/surface/outpost/research/xenoarcheology/smes)
-"hD" = (
-/obj/machinery/atmospherics/pipe/tank/phoron{
-	dir = 8
+	tag_south = 2;
+	tag_west = 4
 	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/research/xenoarcheology/smes)
@@ -3686,10 +3704,13 @@
 /turf/simulated/floor/plating,
 /area/surface/outpost/research/xenoarcheology/emergencystorage)
 "hP" = (
-/obj/machinery/portable_atmospherics/canister/air,
 /obj/machinery/firealarm{
 	dir = 1;
 	pixel_y = -24
+	},
+/obj/machinery/atmospherics/pipe/tank/air{
+	dir = 1;
+	start_pressure = 740
 	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/research/xenoarcheology/smes)
@@ -3704,23 +3725,26 @@
 /turf/simulated/floor/plating,
 /area/surface/outpost/research/xenoarcheology/smes)
 "hR" = (
-/obj/machinery/atmospherics/pipe/tank/air{
-	dir = 1;
-	start_pressure = 740
-	},
 /obj/machinery/light/small,
+/obj/structure/closet/toolcloset,
+/obj/random/maintenance/clean,
+/obj/random/maintenance/clean,
 /turf/simulated/floor/plating,
 /area/surface/outpost/research/xenoarcheology/smes)
 "hS" = (
-/obj/machinery/atmospherics/pipe/tank/air{
-	dir = 1;
-	start_pressure = 740
+/obj/machinery/atmospherics/portables_connector{
+	dir = 1
 	},
+/obj/machinery/portable_atmospherics/canister/empty,
+/obj/effect/floor_decal/industrial/outline,
 /turf/simulated/floor/plating,
 /area/surface/outpost/research/xenoarcheology/smes)
 "hT" = (
 /obj/machinery/status_display{
 	pixel_y = -32
+	},
+/obj/machinery/atmospherics/pipe/simple/visible/yellow{
+	dir = 5
 	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/research/xenoarcheology/smes)
@@ -3768,6 +3792,7 @@
 /obj/effect/floor_decal/corner/beige/full{
 	dir = 4
 	},
+/obj/item/reagent_containers/glass/bottle/toxin,
 /turf/simulated/floor/tiled/white,
 /area/surface/outpost/research/xenoarcheology/analysis)
 "hY" = (
@@ -3939,6 +3964,18 @@
 	temperature = 243.15
 	},
 /area/surface/outpost/mining_main/cave)
+"iu" = (
+/obj/machinery/atmospherics/pipe/simple/visible/yellow{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/surface/outpost/research/xenoarcheology/smes)
+"iv" = (
+/obj/machinery/light/small{
+	dir = 8
+	},
+/turf/simulated/floor/concrete,
+/area/surface/cave/explored/trader)
 "iw" = (
 /obj/machinery/power/apc{
 	name = "south bump";
@@ -3959,6 +3996,12 @@
 	temperature = 243.15
 	},
 /area/surface/outpost/mining_main/cave)
+"iy" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/simulated/floor/concrete,
+/area/surface/cave/explored/trader)
 "iz" = (
 /obj/effect/floor_decal/industrial/warning/dust,
 /obj/structure/ore_box,
@@ -3979,6 +4022,32 @@
 	outdoors = 0
 	},
 /area/surface/outpost/wall)
+"iC" = (
+/obj/machinery/space_heater,
+/obj/machinery/atmospherics/pipe/simple/visible/cyan{
+	dir = 6
+	},
+/turf/simulated/floor/plating,
+/area/surface/outpost/research/xenoarcheology/smes)
+"iD" = (
+/obj/machinery/light/small{
+	dir = 1
+	},
+/turf/simulated/floor/concrete,
+/area/surface/cave/explored/trader)
+"iE" = (
+/obj/structure/cable/blue{
+	icon_state = "0-4"
+	},
+/obj/machinery/power/rtg/advanced,
+/turf/simulated/floor/plating,
+/area/surface/cave/explored/trader)
+"iF" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/surface/cave/explored/trader)
 "iH" = (
 /obj/effect/map_effect/portal/master/side_b/caves_to_plains/river{
 	dir = 1
@@ -4410,6 +4479,9 @@
 "Xk" = (
 /obj/structure/cable/blue{
 	icon_state = "1-2"
+	},
+/obj/structure/cable/blue{
+	icon_state = "1-8"
 	},
 /turf/simulated/floor/plating,
 /area/surface/cave/explored/trader)
@@ -38222,8 +38294,8 @@ fD
 fW
 gw
 gw
-gw
-gw
+iu
+io
 hP
 fD
 il
@@ -38479,9 +38551,9 @@ am
 fD
 fX
 gw
+iC
 gO
-gO
-io
+fd
 hQ
 fD
 il
@@ -38994,9 +39066,9 @@ eV
 fn
 fF
 fZ
-gy
+gw
 gQ
-hi
+iu
 hB
 hS
 fD
@@ -39513,8 +39585,8 @@ gb
 gA
 gS
 hk
-hD
 hU
+fc
 fD
 eh
 eh
@@ -68408,7 +68480,7 @@ kx
 RM
 YU
 YU
-YU
+iv
 YU
 YU
 YU
@@ -68660,7 +68732,7 @@ ae
 ae
 ae
 RM
-YU
+iD
 YU
 YU
 sH
@@ -69180,12 +69252,12 @@ RM
 RM
 RM
 RM
-YU
+iD
 YU
 kx
 kx
 YU
-YU
+dI
 RM
 nr
 nr
@@ -69435,7 +69507,7 @@ ae
 ae
 RM
 In
-In
+iE
 UB
 RM
 St
@@ -69951,12 +70023,12 @@ ae
 ae
 RM
 In
-In
+iF
 In
 sH
 YU
 YU
-YU
+iy
 YU
 YU
 YU
