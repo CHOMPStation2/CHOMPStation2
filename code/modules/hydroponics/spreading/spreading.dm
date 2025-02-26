@@ -314,7 +314,6 @@
 			if (prob(5))
 				die_off()
 				return
-		else
 	return
 
 /obj/effect/plant/proc/check_health()
