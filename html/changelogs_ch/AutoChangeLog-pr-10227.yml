@@ -1,0 +1,4 @@
+author: "CHOMPStation2StaffMirrorBot"
+delete-after: True
+changes:
+  - bugfix: "fixed a few lines of code so that the code is compileable in OpenDream"
