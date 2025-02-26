@@ -48,12 +48,6 @@
 	ai_holder_type = /datum/ai_holder/simple_mob/passive
 
 	// CHOMPEdit Start - New sprites & Added vore
-	/*
-	icon_state = "python"
-	icon_living = "python"
-	icon_dead = "python_dead"
-	icon = 'icons/mob/snake_vr.dmi'
-	*/
 	icon_state = "snek"
 	icon_living = "snek"
 	icon_dead = "snek_dead"
@@ -123,11 +117,12 @@
  */
 /mob/living/simple_mob/animal/passive/snake/red
 	desc = "A cute little, red snake. Wiggle wiggle."
-
-	icon_state = "red"
-	icon_living = "red"
-	icon_dead = "red_dead"
-	icon = 'modular_chomp/icons/mob/animal_ch.dmi' // CHOMPEdit
+	// CHOMPEdit Start
+	icon_state = "red_snek"
+	icon_living = "red_snek"
+	icon_dead = "red_snek_dead"
+	icon = 'modular_chomp/icons/mob/animal_ch.dmi'
+	// CHOMPEdit End
 
 /*
  * Python
