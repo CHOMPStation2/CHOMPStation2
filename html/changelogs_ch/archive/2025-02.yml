@@ -475,3 +475,9 @@
       oriented. Power should flow now
   - maptweak: Tweaked security doors to have correct access levels. Main areas will
       now be Security instead of Security equipment.
+2025-02-26:
+  CHOMPStation2StaffMirrorBot:
+  - code_imp: disabled some testing logs by default (now require -DTESTING to be set
+      while compiling)
+  - rscadd: Vampiric crew now have a source of nutrition in the loadout under the
+      Utility tab!
