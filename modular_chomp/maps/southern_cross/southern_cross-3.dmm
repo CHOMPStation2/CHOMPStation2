@@ -1001,6 +1001,13 @@
 	desc = "An industrial sized storage unit for materials. B-Shift's agreement to retain materials doesn't extend to this storage device, so you should probably only stock this with sheets you need.";
 	name = "\improper Non-Persistent Industrial Sheet Storage"
 	},
+/obj/structure/window/reinforced{
+	dir = 4;
+	health = 1e+006
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
 /turf/simulated/floor/plating,
 /area/quartermaster/office)
 "abJ" = (
