@@ -27,16 +27,11 @@
 	icobase_tail = 1
 	inherent_verbs = list(
 		/mob/living/carbon/human/proc/reconstitute_form,
-<<<<<<< HEAD
-		/mob/living/carbon/human/proc/sonar_ping,
+		///mob/living/carbon/human/proc/sonar_ping,
 		/mob/living/carbon/human/proc/tie_hair,
 		/mob/living/carbon/human/proc/lick_wounds,
 		/mob/living/carbon/human/proc/shapeshifter_reassemble)		//Xenochimera get all the special verbs since they can't select traits.
 		// CHOMPEdit: Lick Wounds Verb, reform verb
-=======
-		///mob/living/carbon/human/proc/sonar_ping,
-		/mob/living/carbon/human/proc/tie_hair)
->>>>>>> 636dd0a3a6 (Motion tracker subsystem (#17215))
 
 	virus_immune = 1 // They practically ARE one.
 	min_age = 18

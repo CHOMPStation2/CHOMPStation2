@@ -58,14 +58,9 @@
 	burn_mod =  1.35
 	mob_size = MOB_SMALL
 	pass_flags = PASSTABLE
-<<<<<<< HEAD
 	holder_type = /obj/item/holder/micro //CHOMPEdit from holder/human to holder/micro
-//	short_sighted = 1 CHOMPEdit: We're fine without near-sightedness for now.
-=======
-	holder_type = /obj/item/holder/human
 //	short_sighted = 1
 	has_vibration_sense = TRUE
->>>>>>> 636dd0a3a6 (Motion tracker subsystem (#17215))
 	gluttonous = 1
 	blood_volume = 400
 	hunger_factor = 0.2

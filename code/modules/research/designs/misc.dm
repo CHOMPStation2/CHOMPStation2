@@ -185,9 +185,7 @@
 	materials = list(MAT_STEEL = 4000, MAT_GLASS = 4000, MAT_URANIUM = 2000)
 	build_path = /obj/item/juke_remote
 	sort_string = "TCVAE"
-<<<<<<< HEAD
 	department = LATHE_ALL | LATHE_SERVICE | LATHE_PUBLIC // CHOMPAdd
-=======
 
 /datum/design/item/general/motion_tracker
 	name = "Motion Tracker"
@@ -195,4 +193,4 @@
 	req_tech = list(TECH_MAGNET = 1, TECH_DATA = 2)
 	build_path = /obj/item/motiontracker
 	sort_string = "TAADC"
->>>>>>> 636dd0a3a6 (Motion tracker subsystem (#17215))
+	department = LATHE_ALL | LATHE_SECURITY // CHOMPAdd
