@@ -3,6 +3,7 @@
 	vore_bump_chance = 50
 	vore_bump_emote = "dazzles and HOMPHs"
 	vore_capacity = 2
+	vore_active = 1
 
 /mob/living/simple_mob/animal/sif/kururak/init_vore()
 	if(!voremob_loaded)
