@@ -1,7 +1,8 @@
 /mob/living/simple_mob/animal/sif/kururak
-	icon = 'modular_chomp/icons/mob/vore64x64_ch.dmi' // Set the correct file path!
+	icon = 'modular_chomp/icons/mob/vore64x64_ch.dmi' // New file path.
 	vore_bump_chance = 50
 	vore_bump_emote = "dazzles and HOMPHs"
+	vore_capacity = 2
 
 /mob/living/simple_mob/animal/sif/kururak/init_vore()
 	if(!voremob_loaded)
