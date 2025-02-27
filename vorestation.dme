@@ -184,6 +184,7 @@
 #include "code\__defines\dcs\signals.dm"
 #include "code\__defines\dcs\signals_ch.dm"
 #include "code\__defines\dcs\signals\signals_subsystem.dm"
+#include "code\__defines\dcs\signals\signals_mobs\signals_mob_main.dm"
 #include "code\__defines\dcs\signals\signals_turf.dm"
 #include "code\__defines\dcs\signals_ch\signals_mob\signals_mob_main_ch.dm"
 #include "code\__defines\traits\_traits.dm"
@@ -3993,6 +3994,11 @@
 #include "code\modules\planet\virgo4_vr.dm"
 #include "code\modules\planet\weather.dm"
 #include "code\modules\player_tips_vr\player_tips_controller_vr.dm"
+<<<<<<< HEAD
+=======
+#include "code\modules\player_tips_vr\player_tips_list_vr.dm"
+#include "code\modules\point\point.dm"
+>>>>>>> 16f01791e7 (Point Refactor (#17120))
 #include "code\modules\power\apc.dm"
 #include "code\modules\power\batteryrack.dm"
 #include "code\modules\power\batteryrack_vr.dm"
