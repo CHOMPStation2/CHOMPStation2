@@ -437,3 +437,54 @@
   Hunter-Dovetail:
   - rscadd: scaled_belly-torso
   - code_imp: adjusted code for scaled_belly to allow for digi-legs
+2025-02-23:
+  CHOMPStation2StaffMirrorBot:
+  - rscadd: Reagent-removing 'Pruning mode' to the floral somatoray
+  - bugfix: no more crashing as a ghost
+  Drathek:
+  - code_imp: Cleanup CI and add chomp edit comments to tooling edits
+  Tost:
+  - qol: Changed nail polish's size to small
+  - code_imp: Added w_class = ITEMSIZE_SMALL to nail polish, which was missing originally.
+2025-02-24:
+  CHOMPStation2StaffMirrorBot:
+  - refactor: moved one global var to a managed global (to test the workflow change)
+  - bugfix: Snake tail no longer has a stray white void pixel following you 24/7 when
+      facing south
+  - bugfix: pizza vouchers will no longer land with such speed that they gib any user,
+      even if not emagged.
+2025-02-25:
+  CHOMPStation2StaffMirrorBot:
+  - rscadd: Add a button to set gender of simplemobs
+  - qol: Adds text to art canvas descriptions indicating their size
+  Kashargul:
+  - bugfix: ooc style not being toggle able in character editor
+  Missile597:
+  - maptweak: Removed access requirement to main part of space disposals to muffin
+      monster can be accessed without ID to enable retrieval of flushed items
+  - maptweak: Chemical dispensers returned to xenobotany and to xenoarchaeology
+  - maptweak: Sif outpost and xenoarchaology outpost scrubber loops updated to filter
+      properly and also filter volatile fuel
+  - maptweak: Removed access requirement to the central maints tunnel. Any secure
+      exits to this tunnel are still access protected
+  - maptweak: Fixed medical bathrooms not being attached to station atmos. Removed
+      some excess piping and wiring going to no destination in maints
+  - maptweak: Added a bit more power and some lights to the starhunter base. The vending
+      machines should hopefully have enough power now
+  - maptweak: Fixes the heavy duty wire by the outpost R-UST that wasn't properly
+      oriented. Power should flow now
+  - maptweak: Tweaked security doors to have correct access levels. Main areas will
+      now be Security instead of Security equipment.
+2025-02-26:
+  CHOMPStation2StaffMirrorBot:
+  - code_imp: disabled some testing logs by default (now require -DTESTING to be set
+      while compiling)
+  - rscadd: Vampiric crew now have a source of nutrition in the loadout under the
+      Utility tab!
+2025-02-27:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: fixed a few lines of code so that the code is compileable in OpenDream
+  FluffMedic:
+  - maptweak: portal puzzle is a bit better, wierd plants are back, other minor things
+  Kashargul:
+  - bugfix: soul captured mobs can now use subtle and whisper
