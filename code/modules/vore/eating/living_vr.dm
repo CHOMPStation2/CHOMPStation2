@@ -998,6 +998,7 @@
 		to_chat(src, span_notice("You are not holding anything."))
 		return
 
+<<<<<<< HEAD
 	if(is_type_in_list(I,item_vore_blacklist) && !adminbus_trash) //If someone has adminbus, they can eat whatever they want.
 		to_chat(src, span_warning("You are not allowed to eat this."))
 		return
@@ -1023,46 +1024,16 @@
 		if(I.hidden_uplink)
 			to_chat(src, span_warning("You really should not be eating this."))
 			message_admins("[key_name(src)] has attempted to ingest an uplink item. ([src ? ADMIN_JMP(src) : "null"])")
+=======
+	if(is_type_in_list(I,edible_trash) | adminbus_trash)
+		if(!I.on_trash_eaten(src)) // shows object's rejection message itself
+>>>>>>> d9fc21d535 (trash eater refactor (#17223))
 			return
-		if(istype(I,/obj/item/pda))
-			var/obj/item/pda/P = I
-			if(P.owner)
-				var/watching = FALSE
-				for(var/mob/living/carbon/human/H in view(src))
-					if(H.real_name == P.owner && H.client)
-						watching = TRUE
-						break
-				if(!watching)
-					return
-				else
-					visible_message(span_warning("[src] is threatening to make [P] disappear!"))
-					if(P.id)
-						var/confirm = tgui_alert(src, "The PDA you're holding contains a vulnerable ID card. Will you risk it?", "Confirmation", list("Definitely", "Cancel"))
-						if(confirm != "Definitely")
-							return
-					if(!do_after(src, 100, P))
-						return
-					visible_message(span_warning("[src] successfully makes [P] disappear!"))
-			to_chat(src, span_notice("You can taste the sweet flavor of delicious technology."))
-			drop_item()
-			I.forceMove(vore_selected)
-			updateVRPanel()
-			return
-		if(istype(I,/obj/item/clothing/shoes))
-			var/obj/item/clothing/shoes/S = I
-			if(S.holding)
-				to_chat(src, span_warning("There's something inside!"))
-				return
-		if(iscapturecrystal(I))
-			var/obj/item/capture_crystal/C = I
-			if(!C.bound_mob.devourable)
-				to_chat(src, span_warning("That doesn't seem like a good idea. (\The [C.bound_mob]'s prefs don't allow it.)"))
-				return
 		drop_item()
 		I.forceMove(vore_selected)
 		updateVRPanel()
-
 		log_admin("VORE: [src] used Eat Trash to swallow [I].")
+<<<<<<< HEAD
 
 		if(istype(I,/obj/item/flashlight/flare) || istype(I,/obj/item/flame/match) || istype(I,/obj/item/storage/box/matches))
 			to_chat(src, span_notice("You can taste the flavor of spicy cardboard."))
@@ -1152,6 +1123,9 @@
 		else
 			to_chat(src, span_notice("You can taste the flavor of garbage. Delicious."))
 		visible_message(span_vwarning("[src] demonstrates the voracious capabilities of their [lowertext(vore_selected.name)] by making [I] disappear!")) //CHOMPedit
+=======
+		I.after_trash_eaten(src)
+>>>>>>> d9fc21d535 (trash eater refactor (#17223))
 		return
 	to_chat(src, span_notice("This snack is too powerful to go down that easily.")) //CHOMPEdit
 	return
