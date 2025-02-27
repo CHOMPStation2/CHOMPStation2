@@ -130,7 +130,11 @@
 		"dragon_hornsPointy" = "#FFFFFF",
 		"dragon_eyesNormal" = "#FFFFFF"
 	)
+<<<<<<< HEAD
 	// CHOMPEdit Start
+=======
+
+>>>>>>> e3409de8b9 (Robot Sprite Unit test, Robot Upports, Robot Sprite Fixes [MDB IGNORE] [IDB IGNORE] (#17139))
 	var/list/dullahan_overlays = list(
 		"dullahanbody" = "#FFFFFF",
 		"dullahanhead" = "#FFFFFF",
@@ -140,7 +144,10 @@
 		"dullahanextended" = "#FFFFFF"
 		// loads the icons from the DMI file in that order on spawn. they are overlay 1-6.
 	)
+<<<<<<< HEAD
 	// CHOMPEdit End
+=======
+>>>>>>> e3409de8b9 (Robot Sprite Unit test, Robot Upports, Robot Sprite Fixes [MDB IGNORE] [IDB IGNORE] (#17139))
 	var/pseudodead = 0
 
 /datum/species/protean/New()

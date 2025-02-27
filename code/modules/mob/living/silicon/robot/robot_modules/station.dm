@@ -2,12 +2,15 @@ var/global/list/robot_modules = list(
 	"Standard"		= /obj/item/robot_module/robot/standard,
 	"Service" 		= /obj/item/robot_module/robot/clerical/butler,
 	"Clerical" 		= /obj/item/robot_module/robot/clerical/general,
+	"Clown"			= /obj/item/robot_module/robot/clerical/honkborg,
+	"Command"		= /obj/item/robot_module/robot/chound,
 	"Research" 		= /obj/item/robot_module/robot/research,
 	"Miner" 		= /obj/item/robot_module/robot/miner,
 	"Crisis" 		= /obj/item/robot_module/robot/medical/crisis,
 //	"Surgeon" 		= /obj/item/robot_module/robot/medical/surgeon, // CHOMPedit: Surgeon module removal.
 	"Security" 		= /obj/item/robot_module/robot/security/general,
 	"Combat" 		= /obj/item/robot_module/robot/security/combat,
+	"Exploration"	= /obj/item/robot_module/robot/exploration,
 	"Engineering"	= /obj/item/robot_module/robot/engineering,
 	"Janitor" 		= /obj/item/robot_module/robot/janitor,
 	"Gravekeeper"	= /obj/item/robot_module/robot/gravekeeper,
@@ -251,8 +254,15 @@ var/global/list/robot_modules = list(
 	pto_type = PTO_MEDICAL
 	supported_upgrades = list(/obj/item/borg/upgrade/restricted/bellycapupgrade)
 
+<<<<<<< HEAD
 /* CHOMPedit start: Removal of Surgeon module. *
 
+=======
+//This is a constant back and forth debate. 11 years ago, the 'medical' borg was split into surgery and crisis.
+//Two years ago(?), they were combined into Crisis elsewhere and the idea seems to be well appreciated.
+//However, given this seems as though it will remain a hot topic for as long as SS13 exists, we are going to leave the surgeon module here in the event that we split them. Again.
+//This also goes for the sprite datums. It's be a lot of work to 'clear' them of having surgery in their path just to have to split them again in 2-3 years.
+>>>>>>> e3409de8b9 (Robot Sprite Unit test, Robot Upports, Robot Sprite Fixes [MDB IGNORE] [IDB IGNORE] (#17139))
 /obj/item/robot_module/robot/medical/surgeon
 	name = "surgeon robot module"
 
@@ -340,7 +350,11 @@ var/global/list/robot_modules = list(
 	src.modules += new /obj/item/gripper/no_use/organ(src)
 	src.modules += new /obj/item/gripper/medical(src)
 	src.modules += new /obj/item/shockpaddles/robot(src)
+<<<<<<< HEAD
 // CHOMPedit start: Combining Surgeon and Crisis.
+=======
+	//Surgeon Modules below
+>>>>>>> e3409de8b9 (Robot Sprite Unit test, Robot Upports, Robot Sprite Fixes [MDB IGNORE] [IDB IGNORE] (#17139))
 	src.modules += new /obj/item/autopsy_scanner(src)
 	src.modules += new /obj/item/surgical/scalpel/cyborg(src)
 	src.modules += new /obj/item/surgical/hemostat/cyborg(src)
@@ -352,14 +366,21 @@ var/global/list/robot_modules = list(
 	src.modules += new /obj/item/surgical/circular_saw/cyborg(src)
 	src.modules += new /obj/item/surgical/surgicaldrill/cyborg(src)
 	src.modules += new /obj/item/surgical/bioregen/cyborg(src)
+<<<<<<< HEAD
 // CHOMPedit end: Combining Surgeon and Crisis.
 	src.modules += new /obj/item/inflatable_dispenser/robot(src)
 	src.modules += new /obj/item/holosign_creator/medical(src) //CHOMPAdd
+=======
+	//Surgeon Modules End
+	src.modules += new /obj/item/inflatable_dispenser/robot(src)
+	//src.modules += new /obj/item/holosign_creator/medical(src) //Re-enable after Guti's PR.
+>>>>>>> e3409de8b9 (Robot Sprite Unit test, Robot Upports, Robot Sprite Fixes [MDB IGNORE] [IDB IGNORE] (#17139))
 	var/obj/item/reagent_containers/spray/PS = new /obj/item/reagent_containers/spray(src)
 	src.emag += PS
 	PS.reagents.add_reagent(REAGENT_ID_PACID, 250)
 	PS.name = "Polyacid spray"
 
+<<<<<<< HEAD
 	var/datum/matter_synth/medicine = new /datum/matter_synth/medicine(30000) // CHOMPedit: Increased capacity.
 	synths += medicine
 
@@ -372,6 +393,18 @@ var/global/list/robot_modules = list(
 	C.charge_costs = list(5000)
 	C.synths = list(medicine)
 // CHOMPedit end: Clotting kit from medhound.
+=======
+	var/datum/matter_synth/medicine = new /datum/matter_synth/medicine(30000)
+	synths += medicine
+
+	var/obj/item/stack/medical/advanced/clotting/C = new (src)
+	var/obj/item/stack/medical/advanced/ointment/O = new /obj/item/stack/medical/advanced/ointment(src)
+	var/obj/item/stack/medical/advanced/bruise_pack/B = new /obj/item/stack/medical/advanced/bruise_pack(src)
+	var/obj/item/stack/medical/splint/S = new /obj/item/stack/medical/splint(src)
+	C.uses_charge = 1
+	C.charge_costs = list(5000)
+	C.synths = list(medicine)
+>>>>>>> e3409de8b9 (Robot Sprite Unit test, Robot Upports, Robot Sprite Fixes [MDB IGNORE] [IDB IGNORE] (#17139))
 	O.uses_charge = 1
 	O.charge_costs = list(1000)
 	O.synths = list(medicine)
@@ -384,7 +417,11 @@ var/global/list/robot_modules = list(
 	src.modules += O
 	src.modules += B
 	src.modules += S
+<<<<<<< HEAD
 	src.modules += C //CHOMPEdit - AND ACTUALLY ADD IT TO THE MODULES LIST
+=======
+	src.modules += C
+>>>>>>> e3409de8b9 (Robot Sprite Unit test, Robot Upports, Robot Sprite Fixes [MDB IGNORE] [IDB IGNORE] (#17139))
 
 	src.modules += new /obj/item/dogborg/sleeper(src)
 	src.emag += new /obj/item/dogborg/pounce(src) //Pounce
@@ -696,6 +733,42 @@ var/global/list/robot_modules = list(
 	var/obj/item/reagent_containers/food/drinks/bottle/small/beer/PB = locate() in src.emag
 	if(PB)
 		PB.reagents.add_reagent(REAGENT_ID_BEER2, 2 * amount)
+
+/obj/item/robot_module/robot/clerical/honkborg
+	name = "clown robot module"
+	channels = list("Service" = 1,
+					"Entertainment" = 1)
+	pto_type = PTO_CIVILIAN
+	can_be_pushed = 0
+
+/obj/item/robot_module/robot/clerical/honkborg/create_equipment(var/mob/living/silicon/robot/R)
+	src.modules += new /obj/item/gripper/service(src)
+	src.modules += new /obj/item/reagent_containers/glass/bucket(src)
+	src.modules += new /obj/item/material/minihoe(src)
+	src.modules += new /obj/item/analyzer/plant_analyzer(src)
+	src.modules += new /obj/item/storage/bag/serviceborg(src)
+	src.modules += new /obj/item/robot_harvester(src)
+	src.modules += new /obj/item/multitool(src)
+	src.modules += new /obj/item/dogborg/pounce(src)
+	src.modules += new /obj/item/bikehorn(src)
+	src.modules += new /obj/item/gun/launcher/confetti_cannon/robot(src)
+
+	var/obj/item/rsf/M = new /obj/item/rsf(src)
+	M.stored_matter = 30
+	src.modules += M
+
+	src.modules += new /obj/item/reagent_containers/dropper/industrial(src)
+
+	var/obj/item/flame/lighter/zippo/L = new /obj/item/flame/lighter/zippo(src)
+	L.lit = 1
+	src.modules += L
+
+	src.modules += new /obj/item/tray/robotray(src)
+	src.modules += new /obj/item/reagent_containers/borghypo/service(src)
+
+	var/obj/item/dogborg/sleeper/compactor/honkborg/B = new /obj/item/dogborg/sleeper/compactor/honkborg(src)
+	src.modules += B
+	..()
 
 /obj/item/robot_module/robot/clerical/general
 	name = "clerical robot module"

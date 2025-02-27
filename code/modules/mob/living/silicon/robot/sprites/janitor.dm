@@ -96,11 +96,21 @@
 
 /datum/robot_sprite/janitor/worm
 	name = "W02M"
+<<<<<<< HEAD
 	sprite_icon_state = "worm-janitor" //CHOMPEdit
 	has_custom_open_sprites = TRUE
 	sprite_icon = 'modular_chomp/icons/mob/wormborg.dmi' //CHOMPEdit
 	has_vore_belly_sprites = TRUE //CHOMPEdit
 	has_dead_sprite = TRUE //CHOMPEdit
+=======
+	sprite_icon_state = "worm-janitor"
+	sprite_icon = 'icons/mob/robot/wormborg.dmi'
+	has_dead_sprite_overlay = FALSE
+	has_custom_open_sprites = FALSE
+	has_vore_belly_sprites = TRUE
+	has_dead_sprite = TRUE
+
+>>>>>>> e3409de8b9 (Robot Sprite Unit test, Robot Upports, Robot Sprite Fixes [MDB IGNORE] [IDB IGNORE] (#17139))
 
 /datum/robot_sprite/janitor/uptall
 	name = "Feminine Humanoid"
@@ -202,13 +212,48 @@
 	has_vore_belly_sprites = FALSE
 	rest_sprite_options = list("Default", "Bellyup")
 
-/datum/robot_sprite/dogborg/tall/janitor/dullahanv3
-	sprite_icon = 'icons/mob/tallborg/dullahans64x64.dmi'
-	//named v3 to avoid conflicts with downstream
-
-/datum/robot_sprite/dogborg/tall/janitor/dullahanv3/janitordully
-	name = "Dullahan janitor v3"
-	sprite_icon_state = "dullahanjanitor"
+/datum/robot_sprite/dogborg/tall/janitor/dullahan
+	name = "Dullahan v1"
+	sprite_icon_state = "dullahanjani"
+	module_type = "Janitor"
+	sprite_icon = 'icons/mob/robot/dullahan/v1/dullahan_jani.dmi'
+	has_eye_light_sprites = TRUE
 	has_vore_belly_sprites = TRUE
-	has_robotdecal_sprites = TRUE
-	rest_sprite_options = list("Default", "sit")
+	rest_sprite_options = list("Default", "Sit")
+	pixel_x = 0
+
+/datum/robot_sprite/dogborg/tall/janitor/dullahan/janitoralt
+	name = "Dullahan v2"
+	sprite_icon_state = "dullahanjani_alt"
+
+/datum/robot_sprite/dogborg/tall/janitor/dullahan/janitoralt2
+	name = "Dullahan v3"
+	sprite_icon = 'icons/mob/robot/dullahan/v3/janitor.dmi'
+	sprite_icon_state = "dullahanjanitor"
+	sprite_decals = list("decals")
+
+/datum/robot_sprite/dogborg/janitor/cat
+	name = "Cat"
+	sprite_icon = 'icons/mob/robot/catborg_variant.dmi'
+	sprite_icon_state = "vixjani"
+	has_vore_belly_resting_sprites = TRUE
+	has_eye_light_sprites = TRUE
+	has_dead_sprite_overlay = FALSE
+
+/datum/robot_sprite/dogborg/smolraptorjanitorsprite
+	sprite_icon = 'icons/mob/robot/smallraptors/smolraptor_jani.dmi'
+	module_type = "Janitor"
+	name = "Small Raptor"
+	sprite_icon_state = "smolraptor"
+	has_dead_sprite_overlay = FALSE
+	has_eye_light_sprites = TRUE
+	has_vore_belly_sprites = TRUE
+	rest_sprite_options = list("Default", "Sit")
+
+/datum/robot_sprite/dogborg/janitor/possum
+	name = "0-P0SSm"
+	sprite_icon = 'icons/mob/robot/possumborg.dmi'
+	sprite_icon_state = "possjani"
+	//has_vore_belly_resting_sprites = TRUE
+	has_eye_light_sprites = TRUE
+	has_dead_sprite_overlay = FALSE
