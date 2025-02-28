@@ -19,7 +19,7 @@
 
 /atom/movable/proc/create_point_bubble(atom/pointed_atom)
 	var/mutable_appearance/thought_bubble = mutable_appearance(
-		'modular_chomp/icons/effects/effects.dmi',
+		'icons/effects/effects.dmi',
 		"thought_bubble",
 		plane = PLANE_RUNECHAT,
 		appearance_flags = KEEP_APART,
