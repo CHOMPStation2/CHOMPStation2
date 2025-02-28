@@ -89,67 +89,7 @@
 			attack_hand_harm_intent(H, M, TT, has_hands)
 
 		if(I_DISARM)
-<<<<<<< HEAD
-			add_attack_logs(H,src,"Disarmed")
-
-			M.do_attack_animation(src)
-
-			if(w_uniform)
-				w_uniform.add_fingerprint(M)
-			var/obj/item/organ/external/affecting = get_organ(ran_zone(M.zone_sel.selecting))
-
-			var/list/holding = list(get_active_hand() = 40, get_inactive_hand = 20)
-
-			//See if they have any guns that might go off
-			for(var/obj/item/gun/W in holding)
-				if(W && prob(holding[W]))
-					var/list/turfs = list()
-					for(var/turf/T in view())
-						turfs += T
-					if(turfs.len)
-						var/turf/target = pick(turfs)
-						visible_message(span_danger("[src]'s [W] goes off during the struggle!"))
-						return W.afterattack(target,src)
-
-			if(last_push_time + 30 > world.time)
-				visible_message(span_warning("[M] has weakly pushed [src]!"))
-				return
-
-			var/randn = rand(1, 100)
-			last_push_time = world.time
-			// We ARE wearing shoes OR
-			// We as a species CAN be slipped when barefoot
-			// And also 1 in 4 because rngesus
-			if((shoes || !(species.flags & NO_SLIP)) && randn <= 25)
-				var/armor_check = run_armor_check(affecting, "melee")
-				apply_effect(3, WEAKEN, armor_check)
-				playsound(src, 'sound/weapons/thudswoosh.ogg', 50, 1, -1)
-				if(armor_check < 60)
-					drop_both_hands()	// CHOMPEdit - We've been pushed! Drop our stuff as well
-					visible_message(span_danger("[M] has pushed [src]!"))
-				else
-					visible_message(span_warning("[M] attempted to push [src]!"))
-				return
-
-			if(randn <= 60)
-				//See about breaking grips or pulls
-				if(break_all_grabs(M))
-					playsound(src, 'sound/weapons/thudswoosh.ogg', 50, 1, -1)
-					return
-
-				//Actually disarm them
-				for(var/obj/item/I in holding)
-					if(I)
-						drop_from_inventory(I)
-						visible_message(span_danger("[M] has disarmed [src]!"))
-						playsound(src, 'sound/weapons/thudswoosh.ogg', 50, 1, -1)
-						return
-
-			playsound(src, 'sound/weapons/punchmiss.ogg', 25, 1, -1)
-			visible_message(span_filter_combat("[span_red(span_bold("[M] attempted to disarm [src]!"))]"))
-=======
 			attack_hand_disarm_intent(H, M, TT, has_hands)
->>>>>>> e0c0c45a35 (Moree unarmed fixes (#17192))
 	return
 
 
@@ -244,6 +184,7 @@
 		apply_effect(3, WEAKEN, armor_check)
 		playsound(src, 'sound/weapons/thudswoosh.ogg', 50, 1, -1)
 		if(armor_check < 60)
+			drop_both_hands()	// CHOMPEdit - We've been pushed! Drop our stuff as well
 			visible_message(span_danger("[M] has pushed [src]!"))
 		else
 			visible_message(span_warning("[M] attempted to push [src]!"))
