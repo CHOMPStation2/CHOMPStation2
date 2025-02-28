@@ -99,7 +99,7 @@
 	desc = "Loose, rocky basalt. It crumbles to sand under the slightest bit of force."
 	icon = 'modular_chomp/icons/turf/thor.dmi'
 	icon_state = "basalt0"
-	temperature = 293.15
+	temperature = 393.15
 	density = FALSE
 	opacity = 0
 	blocks_air = 0
@@ -132,7 +132,7 @@
 	desc = "Dark black basalt. Packed impossibly tightly, no way to get past this."
 	icon_state = "deeprock-solid"
 	icon = 'modular_chomp/icons/turf/thor.dmi'
-	temperature = 293.15
+	temperature = 393.15
 
 /turf/simulated/mineral/thor/floor/ignore_mapgen/cave
 	name = "basalt"
