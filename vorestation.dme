@@ -5160,6 +5160,7 @@
 #include "modular_chomp\game\machinery\buttons.dm"
 #include "modular_chomp\game\machinery\traptiles.dm"
 #include "modular_chomp\game\machinery\turrets.dm"
+#include "modular_chomp\game\objects\trash_eating.dm"
 #include "modular_chomp\game\objects\effects\spiders.dm"
 #include "modular_chomp\game\objects\effects\step_triggers.dm"
 #include "modular_chomp\game\turfs\shuttlewall_types.dm"

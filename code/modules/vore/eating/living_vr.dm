@@ -998,45 +998,15 @@
 		to_chat(src, span_notice("You are not holding anything."))
 		return
 
-	if(is_type_in_list(I,edible_trash) | adminbus_trash || is_type_in_list(I,edible_tech) && isSynthetic()) //chompstation add synth check
+	if(is_type_in_list(I,edible_trash) || adminbus_trash || is_type_in_list(I,edible_tech) && isSynthetic()) // CHOMPEdit adds edible tech for synth
 		if(!I.on_trash_eaten(src)) // shows object's rejection message itself
 			return
 		drop_item()
 		I.forceMove(vore_selected)
 		updateVRPanel()
 		log_admin("VORE: [src] used Eat Trash to swallow [I].")
-<<<<<<< HEAD
-		// CHOMPedit begin
-		else if(istype(I,/obj/item/starcaster_news))
-			to_chat(src, span_notice("You can taste the dry flavor of digital garbage, oh wait its just the news."))
-		else if(istype(I,/obj/item/newspaper))
-			to_chat(src, span_notice("You can taste the dry flavor of garbage, oh wait its just the news."))
-		else if (istype(I,/obj/item/cell))
-			visible_message(span_warning("[src] sates their electric appetite with a [I]!"))
-			to_chat(src, span_notice("You can taste the spicy flavor of electrolytes, yum."))
-		else if (istype(I,/obj/item/walkpod))
-			visible_message(span_warning("[src] sates their musical appetite with a [I]!"))
-			to_chat(src, span_notice("You can taste the jazzy flavor of music."))
-		else if (istype(I,/obj/item/mail/junkmail))
-			visible_message(span_warning("[src] devours the [I]!"))
-			to_chat(src, span_notice("You can taste the flavor of the galactic postal service."))
-		else if (istype(I,/obj/item/gun/energy/sizegun))
-			visible_message(span_warning("[src] devours the [I]!"))
-			to_chat(src, span_notice("You didn't read the warning label, did you?"))
-		else if (istype(I,/obj/item/slow_sizegun))
-			visible_message(span_warning("[src] devours the [I]!"))
-			to_chat(src, span_notice("You taste the flavor of sunday driver bluespace."))
-		else if (istype(I,/obj/item/laser_pointer))
-			visible_message(span_warning("[src] devours the [I]!"))
-			to_chat(src, span_notice("You taste the flavor of a laser."))
-		else if (istype(I,/obj/item/canvas))
-			visible_message(span_warning("[src] devours the [I]!"))
-			to_chat(src, span_notice("You taste the flavor of priceless artwork."))
-		//CHOMPedit end
-=======
 		I.after_trash_eaten(src)
 		visible_message(span_vwarning("[src] demonstrates the voracious capabilities of their [lowertext(vore_selected.name)] by making [I] disappear!")) //CHOMPedit
->>>>>>> d9fc21d535 (trash eater refactor (#17223))
 		return
 	to_chat(src, span_notice("This snack is too powerful to go down that easily.")) //CHOMPEdit
 	return
