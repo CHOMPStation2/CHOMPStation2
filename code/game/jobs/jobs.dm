@@ -54,14 +54,11 @@ var/const/BRIDGE			=(1<<12)
 var/const/ENTERTAINER		=(1<<14)
 var/const/ENTREPRENEUR		=(1<<15)
 
-<<<<<<< HEAD
 var/const/OTHER				=(1<<10) //CHOMPStation Add
 var/const/NONCREW			=(1<<0) //CHOMPStation Add
 var/const/ANOMALY			=(1<<0) //CHOMPstation Add
 /* // CHOMPedit: Comment out Talon positions, we don't have that here.
 //VOREStation Add
-=======
->>>>>>> e3409de8b9 (Robot Sprite Unit test, Robot Upports, Robot Sprite Fixes [MDB IGNORE] [IDB IGNORE] (#17139))
 var/const/TALON				=(1<<3)
 
 var/const/TALCAP			=(1<<0)
@@ -70,7 +67,6 @@ var/const/TALDOC			=(1<<2)
 var/const/TALSEC			=(1<<3)
 var/const/TALENG			=(1<<4)
 var/const/TALMIN			=(1<<5)
-<<<<<<< HEAD
 //VOREStation Add End
 */
 
@@ -78,8 +74,6 @@ var/const/TALMIN			=(1<<5)
 var/list/assistant_occupations = list(
 )
 
-=======
->>>>>>> e3409de8b9 (Robot Sprite Unit test, Robot Upports, Robot Sprite Fixes [MDB IGNORE] [IDB IGNORE] (#17139))
 
 var/list/command_positions = list(
 	JOB_SITE_MANAGER,
@@ -88,7 +82,6 @@ var/list/command_positions = list(
 	JOB_CHIEF_ENGINEER,
 	JOB_RESEARCH_DIRECTOR,
 	JOB_CHIEF_MEDICAL_OFFICER,
-<<<<<<< HEAD
 	JOB_COMMAND_SECRETARY,
 	JOB_BLUESHIELD_GUARD // YW Edit
 )
@@ -172,11 +165,6 @@ var/list/whitelisted_positions = list(
 	JOB_INTERNAL_AFFAIRS_AGENT,
 	JOB_AI
 ) //CHOMPEdit: end
-=======
-	JOB_COMMAND_SECRETARY
-	//JOB_BLUESHIELD_GUARD
-)
->>>>>>> e3409de8b9 (Robot Sprite Unit test, Robot Upports, Robot Sprite Fixes [MDB IGNORE] [IDB IGNORE] (#17139))
 
 /proc/guest_jobbans(var/job)
 	return // ((job in whitelisted_positions)) // CHOMPedit: spaghetti that is our whitelist system means this prevents use of config/jobswhitelist.txt

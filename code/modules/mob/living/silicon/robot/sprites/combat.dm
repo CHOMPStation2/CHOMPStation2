@@ -49,14 +49,6 @@
 
 /datum/robot_sprite/combat/worm
 	name = "W02M"
-<<<<<<< HEAD
-	sprite_icon_state = "worm-combat" //CHOMPEdit
-	has_custom_open_sprites = TRUE
-	sprite_flags = ROBOT_HAS_SHIELD_SPRITE
-	sprite_icon = 'modular_chomp/icons/mob/wormborg.dmi' //CHOMPEdit
-	has_vore_belly_sprites = TRUE //CHOMPEdit
-	has_dead_sprite = TRUE //CHOMPEdit
-=======
 	sprite_icon_state = "worm-combat"
 	has_custom_open_sprites = TRUE
 	sprite_flags = ROBOT_HAS_SHIELD_SPRITE
@@ -66,7 +58,6 @@
 	has_vore_belly_sprites = TRUE
 	has_dead_sprite = TRUE
 
->>>>>>> e3409de8b9 (Robot Sprite Unit test, Robot Upports, Robot Sprite Fixes [MDB IGNORE] [IDB IGNORE] (#17139))
 
 /datum/robot_sprite/combat/uptall
 	name = "Feminine Humanoid"

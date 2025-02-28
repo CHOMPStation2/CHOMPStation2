@@ -531,18 +531,10 @@
 					S.dragon_overlays[6] = choice
 					S.dragon_overlays[S.dragon_overlays[6]] = new_color
 			S.blob_appearance = "dragon"
-<<<<<<< HEAD
-		// CHOMPEdit Start
-		if("dullahan")
-			var/list/options = list("Metalshell","Eyes","Decals","Import","Export")
-			for(var/option in options)
-				LAZYSET(options, option, image('modular_chomp/icons/mob/dullahanborg/dullahansigns.dmi', option))
-=======
 		if("dullahan") //START OF DULLAHAN PORT.
 			var/list/options = list("Metalshell","Eyes","Decals","Import","Export")
 			for(var/option in options)
 				LAZYSET(options, option, image('icons/mob/robot/dullahan/v1/dullahansigns.dmi', option))
->>>>>>> e3409de8b9 (Robot Sprite Unit test, Robot Upports, Robot Sprite Fixes [MDB IGNORE] [IDB IGNORE] (#17139))
 			var/choice = show_radial_menu(protie, protie, options, radius = 60)
 			if(!choice || QDELETED(protie) || protie.incapacitated())
 				return FALSE
@@ -577,11 +569,7 @@
 					var/extraoff = "dullahanextendedoff"
 					options = dullahanmetal_styles
 					for(var/option in options)
-<<<<<<< HEAD
-						var/image/I = image('modular_chomp/icons/mob/dullahanborg/Dullahanprotean64x64.dmi', option, dir = 2, pixel_x = -16)
-=======
 						var/image/I = image('icons/mob/robot/dullahan/v1/Dullahanprotean64x64.dmi', option, dir = 2, pixel_x = -16)
->>>>>>> e3409de8b9 (Robot Sprite Unit test, Robot Upports, Robot Sprite Fixes [MDB IGNORE] [IDB IGNORE] (#17139))
 						LAZYSET(options, option, I)
 					choice = show_radial_menu(protie, protie, options, radius = 90)
 					if(!choice || QDELETED(protie) || protie.incapacitated())
@@ -600,11 +588,7 @@
 				if("Eyes")
 					options = dullahaneyes_styles
 					for(var/option in options)
-<<<<<<< HEAD
-						var/image/I = image('modular_chomp/icons/mob/dullahanborg/Dullahanprotean64x64.dmi', option, dir = 2, pixel_x = -16)
-=======
 						var/image/I = image('icons/mob/robot/dullahan/v1/Dullahanprotean64x64.dmi', option, dir = 2, pixel_x = -16)
->>>>>>> e3409de8b9 (Robot Sprite Unit test, Robot Upports, Robot Sprite Fixes [MDB IGNORE] [IDB IGNORE] (#17139))
 						LAZYSET(options, option, I)
 					choice = show_radial_menu(protie, protie, options, radius = 90)
 					if(!choice || QDELETED(protie) || protie.incapacitated())
@@ -617,11 +601,7 @@
 				if("Decals")
 					options = dullahandecals_styles
 					for(var/option in options)
-<<<<<<< HEAD
-						var/image/I = image('modular_chomp/icons/mob/dullahanborg/Dullahanprotean64x64.dmi', option, dir = 2, pixel_x = -16, pixel_y = -16)
-=======
 						var/image/I = image('icons/mob/robot/dullahan/v1/Dullahanprotean64x64.dmi', option, dir = 2, pixel_x = -16, pixel_y = -16)
->>>>>>> e3409de8b9 (Robot Sprite Unit test, Robot Upports, Robot Sprite Fixes [MDB IGNORE] [IDB IGNORE] (#17139))
 						LAZYSET(options, option, I)
 					choice = show_radial_menu(protie, protie, options, radius = 90)
 					if(!choice || QDELETED(protie) || protie.incapacitated())
@@ -671,12 +651,7 @@
 					deyescolor = S.dullahan_overlays[S.dullahan_overlays[4]]
 					var/output_style = jointext(list(dmetal,dmetalcolor,ddecals,ddecalscolor,deyes,deyescolor), ";")
 					to_chat(protie, span_notice("Exported style string is \" [output_style] \". Use this to get the same style in the future with import style"))
-<<<<<<< HEAD
-			S.blob_appearance = "dullahan"
-			// CHOMPEdit End
-=======
 			S.blob_appearance = "dullahan" //END OF DULLAHAN PORT.
->>>>>>> e3409de8b9 (Robot Sprite Unit test, Robot Upports, Robot Sprite Fixes [MDB IGNORE] [IDB IGNORE] (#17139))
 		if("Primary")
 			var/new_color = tgui_color_picker(protie, "Pick primary color:","Protean Primary", "#FF0000")
 			if(!new_color)

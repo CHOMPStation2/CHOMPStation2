@@ -67,23 +67,6 @@
 	icon_state = disabled_icon
 	update_icon()
 
-/obj/item/self_repair_system/proc/self_repair(mob/living/silicon/robot/R, datum/robot_component/C, var/tick_delay, var/heal_per_tick)
-	if(!C || !R.cell)
-		return
-	if(C.brute_damage == 0 && C.electronics_damage == 0)
-		to_chat(R, span_notice("Repair of [C] completed."))
-		return
-	if(!R.use_direct_power(power_tick,  500)) //We don't want to drain ourselves too far down during exploration
-		to_chat(R, span_warning("Not enough power to initialize the repair system."))
-		return
-	if(do_after(R, tick_delay))
-		if(!C)
-			return
-		C.brute_damage -= min(C.brute_damage, heal_per_tick)
-		C.electronics_damage -= min(C.electronics_damage, heal_per_tick)
-		R.updatehealth()
-		src.self_repair(R, C, tick_delay, heal_per_tick)
-
 // To repair multiple modules
 /obj/item/self_repair_system/advanced
 	name = "self repair system"
