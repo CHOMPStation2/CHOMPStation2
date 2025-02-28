@@ -832,19 +832,6 @@
 		return
 	..() //CHOMPEdit End
 
-//CHOMPAdd START
-/obj/item/dogborg/sleeper/command //Command borg belly //CHOMP addition
-	name = "Bluespace Filing Belly"
-	desc = "A mounted bluespace storage unit for carrying paperwork"
-	icon = 'modular_chomp/icons/mob/dogborg_ch.dmi'
-	icon_state = "sleeperd"
-	injection_chems = null
-	compactor = TRUE
-	recycles = FALSE
-	max_item_count = 25
-	medsensor = FALSE
-//CHOMP addition end
-
 /obj/item/dogborg/sleeper/compactor/brewer
 	name = "Brew Belly"
 	desc = "A mounted drunk tank unit with fuel processor, for putting away particularly rowdy patrons."
@@ -875,13 +862,6 @@
 				drain(100) //-100 charge per injection
 			var/units = round(patient.reagents.get_reagent_amount(chem))
 			to_chat(hound, span_notice("Injecting [units] unit\s into occupant.")) //If they were immersed, the reagents wouldn't leave with them.
-
-/obj/item/dogborg/sleeper/compactor/honkborg
-	name = "Jiggles Von Hungertron"
-	desc = "You've heard of Giggles Von Honkerton for the back, now get ready for Jiggles Von Hungertron for the front."
-	icon = 'modular_chomp/icons/mob/dogborg_ch.dmi'
-	icon_state = "clowngut"
-	recycles = FALSE
 
 //CHOMP Addition end
 
