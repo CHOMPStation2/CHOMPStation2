@@ -998,100 +998,14 @@
 		to_chat(src, span_notice("You are not holding anything."))
 		return
 
-<<<<<<< HEAD
-	if(is_type_in_list(I,item_vore_blacklist) && !adminbus_trash) //If someone has adminbus, they can eat whatever they want.
-		to_chat(src, span_warning("You are not allowed to eat this."))
-		return
-
-	if(!I.trash_eatable) //OOC pref. This /IS/ respected, even if adminbus_trash is enabled
-		to_chat(src, span_warning("You can't eat that so casually!"))
-		return
-
-	if(istype(I, /obj/item/paicard))
-		var/obj/item/paicard/palcard = I
-		var/mob/living/silicon/pai/pocketpal = palcard.pai
-		if(pocketpal && (!pocketpal.devourable))
-			to_chat(src, span_warning("\The [pocketpal] doesn't allow you to eat it."))
-			return
-
-	if(istype(I, /obj/item/book))
-		var/obj/item/book/book = I
-		if(book.carved)
-			to_chat(src, span_warning("\The [book] is not worth eating without the filling."))
-			return
-
 	if(is_type_in_list(I,edible_trash) | adminbus_trash || is_type_in_list(I,edible_tech) && isSynthetic()) //chompstation add synth check
-		if(I.hidden_uplink)
-			to_chat(src, span_warning("You really should not be eating this."))
-			message_admins("[key_name(src)] has attempted to ingest an uplink item. ([src ? ADMIN_JMP(src) : "null"])")
-=======
-	if(is_type_in_list(I,edible_trash) | adminbus_trash)
 		if(!I.on_trash_eaten(src)) // shows object's rejection message itself
->>>>>>> d9fc21d535 (trash eater refactor (#17223))
 			return
 		drop_item()
 		I.forceMove(vore_selected)
 		updateVRPanel()
 		log_admin("VORE: [src] used Eat Trash to swallow [I].")
 <<<<<<< HEAD
-
-		if(istype(I,/obj/item/flashlight/flare) || istype(I,/obj/item/flame/match) || istype(I,/obj/item/storage/box/matches))
-			to_chat(src, span_notice("You can taste the flavor of spicy cardboard."))
-		else if(istype(I,/obj/item/flashlight/glowstick))
-			to_chat(src, span_notice("You found out the glowy juice only tastes like regret."))
-		else if(istype(I,/obj/item/trash/cigbutt))
-			to_chat(src, span_notice("You can taste the flavor of bitter ash. Classy."))
-		else if(istype(I,/obj/item/clothing/mask/smokable))
-			var/obj/item/clothing/mask/smokable/C = I
-			if(C.lit)
-				to_chat(src, span_notice("You can taste the flavor of burning ash. Spicy!"))
-			else
-				to_chat(src, span_notice("You can taste the flavor of aromatic rolling paper and funny looks."))
-		else if(istype(I,/obj/item/paper))
-			to_chat(src, span_notice("You can taste the dry flavor of bureaucracy."))
-		else if(istype(I,/obj/item/book))
-			to_chat(src, span_notice("You can taste the dry flavor of knowledge."))
-		else if(istype(I,/obj/item/dice)) //CHOMPedit: Removed roulette ball because that's not active here.
-			to_chat(src, span_notice("You can taste the bitter flavor of cheating."))
-		else if(istype(I,/obj/item/lipstick))
-			to_chat(src, span_notice("You can taste the flavor of couture and style. Toddler at the make-up bag style."))
-		else if(istype(I,/obj/item/soap))
-			to_chat(src, span_notice("You can taste the bitter flavor of verbal purification."))
-		else if(istype(I,/obj/item/spacecash) || istype(I,/obj/item/storage/wallet))
-			to_chat(src, span_notice("You can taste the flavor of wealth and reckless waste."))
-		else if(istype(I,/obj/item/broken_bottle) || istype(I,/obj/item/material/shard))
-			to_chat(src, span_notice("You can taste the flavor of pain. This can't possibly be healthy for your guts."))
-		else if(istype(I,/obj/item/light))
-			var/obj/item/light/L = I
-			if(L.status == LIGHT_BROKEN)
-				to_chat(src, span_notice("You can taste the flavor of pain. This can't possibly be healthy for your guts."))
-			else
-				to_chat(src, span_notice("You can taste the flavor of really bad ideas."))
-		else if(istype(I,/obj/item/bikehorn/tinytether))
-			to_chat(src, span_notice("You feel a rush of power swallowing such a large, err, tiny structure."))
-		else if(istype(I,/obj/item/mmi/digital/posibrain) || istype(I,/obj/item/aicard))
-			to_chat(src, span_notice("You can taste the sweet flavor of digital friendship. Or maybe it is something else."))
-		else if(istype(I,/obj/item/paicard))
-			to_chat(src, span_notice("You can taste the sweet flavor of digital friendship."))
-			var/obj/item/paicard/ourcard = I
-			if(ourcard.pai && ourcard.pai.client && isbelly(ourcard.loc))
-				var/obj/belly/B = ourcard.loc
-				to_chat(ourcard.pai, span_boldnotice("[B.desc]"))
-		else if(istype(I,/obj/item/reagent_containers/food))
-			var/obj/item/reagent_containers/food/F = I
-			if(!F.reagents.total_volume)
-				to_chat(src, span_notice("You can taste the flavor of garbage and leftovers. Delicious?"))
-			else
-				to_chat(src, span_notice("You can taste the flavor of gluttonous waste of food."))
-		else if (istype(I,/obj/item/clothing/accessory/collar))
-			to_chat(src, span_notice("You can taste the submissiveness in the wearer of [I]!"))
-		else if(iscapturecrystal(I))
-			var/obj/item/capture_crystal/C = I
-			if(C.bound_mob && (C.bound_mob in C.contents))
-				if(isbelly(C.loc))
-					//var/obj/belly/B = C.loc //CHOMPedit
-					//to_chat(C.bound_mob, span_notice("Outside of your crystal, you can see; " + span_notice("[B.desc]"))) //CHOMPedit: moved to modular_chomp capture_crystal.dm
-					to_chat(src, span_notice("You can taste the the power of command."))
 		// CHOMPedit begin
 		else if(istype(I,/obj/item/starcaster_news))
 			to_chat(src, span_notice("You can taste the dry flavor of digital garbage, oh wait its just the news."))
