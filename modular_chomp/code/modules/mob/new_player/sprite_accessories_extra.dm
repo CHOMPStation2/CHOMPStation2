@@ -217,8 +217,7 @@
 /datum/sprite_accessory/marking/ch/scaled_belly
 	name = "Scaled Belly"
 	icon_state = "scaled_belly"
-	hide_body_parts = list(BP_L_LEG,BP_R_LEG,BP_L_HAND,BP_R_HAND,BP_L_LEG,BP_R_LEG)
-	body_parts = list(BP_TORSO,BP_GROIN)
+	body_parts = list(BP_TORSO,BP_GROIN,BP_L_LEG,BP_R_LEG)
 	color_blend_mode = ICON_MULTIPLY
 	digitigrade_acceptance = MARKING_ALL_LEGS
 	digitigrade_icon = 'icons/mob/human_races/markings_ch.dmi'
