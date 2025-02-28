@@ -1033,12 +1033,9 @@
 			visible_message(span_warning("[src] devours the [I]!"))
 			to_chat(src, span_notice("You taste the flavor of priceless artwork."))
 		//CHOMPedit end
-
-		else
-			to_chat(src, span_notice("You can taste the flavor of garbage. Delicious."))
-		visible_message(span_vwarning("[src] demonstrates the voracious capabilities of their [lowertext(vore_selected.name)] by making [I] disappear!")) //CHOMPedit
 =======
 		I.after_trash_eaten(src)
+		visible_message(span_vwarning("[src] demonstrates the voracious capabilities of their [lowertext(vore_selected.name)] by making [I] disappear!")) //CHOMPedit
 >>>>>>> d9fc21d535 (trash eater refactor (#17223))
 		return
 	to_chat(src, span_notice("This snack is too powerful to go down that easily.")) //CHOMPEdit
