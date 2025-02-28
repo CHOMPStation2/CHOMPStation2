@@ -558,7 +558,7 @@
 		range = custom_range
 		to_chat(user, span_notice("Scanner will now look up to [range] tile(s) away."))
 
-/*
+//CHOMPEDIT Enable
 /obj/item/robot_tongue/examine(user)
 	. = ..()
 	if(Adjacent(user))
@@ -566,7 +566,7 @@
 			. += span_notice("[src] is wet. Just like it should be.")
 		if(water.energy < 5)
 			. += span_notice("[src] is dry.")
-*/
+//CHOMPEDIT Enable
 
 /obj/item/shield_projector/line/exploborg
 	name = "expirmental shield projector"
