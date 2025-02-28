@@ -114,18 +114,11 @@
 	return
 
 //mob verbs are faster than object verbs. See above.
-// CHOMPEdit Start - Point refactor
 /mob/living/pointed(atom/A as mob|obj|turf in view(client.view, src))
 	if(src.stat || src.restrained())
 		return FALSE
 	if(src.status_flags & FAKEDEATH)
 		return FALSE
-	/*
-	if(!..())
-		return 0
-
-	usr.visible_message(span_filter_notice(span_bold("[src]") + " points to [A]."))
-*/
 	return ..()
 
 /mob/living/_pointed(atom/pointing_at)
@@ -133,7 +126,6 @@
 		return FALSE
 
 	visible_message(span_info(span_bold("[src]") + " points at [pointing_at]."), span_info("You point at [pointing_at]."))
-// CHOMPEdit End
 
 /mob/living/verb/succumb()
 	set name = "Succumb to death"
