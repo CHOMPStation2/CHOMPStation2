@@ -88,12 +88,7 @@ GLOBAL_LIST_EMPTY(damage_icon_parts) //see UpdateDamageIcon()
 	appearance_flags |= PIXEL_SCALE
 	if(fuzzy)
 		appearance_flags &= ~PIXEL_SCALE
-<<<<<<< HEAD
-		center_offset = 0 //CHOMPEdit
-	//VOREStation Edit End
-=======
 		center_offset = 0
->>>>>>> 83831f2555 (Makes the game no longer try to see if your heart is vital before letting you rip it out of yourself (and a few others) (#17159))
 
 	// Regular stuff again.
 	var/matrix/M = matrix()
@@ -104,7 +99,6 @@ GLOBAL_LIST_EMPTY(damage_icon_parts) //see UpdateDamageIcon()
 		anim_time = 1 //Thud
 
 	if(lying && !species.prone_icon) //Only rotate them if we're not drawing a specific icon for being prone.
-		// CHOMPEdit Start Loafy Time
 		if(tail_style?.can_loaf && resting) // Only call these if we're resting?
 			update_tail_showing()
 			M.Scale(desired_scale_x, desired_scale_y)
@@ -119,10 +113,6 @@ GLOBAL_LIST_EMPTY(damage_icon_parts) //see UpdateDamageIcon()
 			else
 				M.Translate((1 / desired_scale_x * 4) - (desired_scale_x * cent_offset), 0)
 				M.Turn(90)
-<<<<<<< HEAD
-		// CHOMPEdit End
-=======
->>>>>>> 83831f2555 (Makes the game no longer try to see if your heart is vital before letting you rip it out of yourself (and a few others) (#17159))
 		layer = MOB_LAYER -0.01 // Fix for a byond bug where turf entry order no longer matters
 	else
 		M.Scale(desired_scale_x, desired_scale_y)
