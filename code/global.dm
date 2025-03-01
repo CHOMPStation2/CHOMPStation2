@@ -127,9 +127,9 @@ var/global/list/alphabet_uppercase = list("A","B","C","D","E","F","G","H","I","J
 
 // Used by robots and robot preferences for regular modules.
 var/list/robot_module_types = list(
-	"Standard", "Engineering",/* "Surgeon",*/  "Crisis", //CHOMPedit: Combining Surgeon and Crisis.
-	"Miner",    "Janitor",     "Service",      "Clerical", "Security",
-	"Research"
+	"Standard", "Engineering", /* "Surgeon",*/ "Crisis", "Miner",
+	"Janitor", "Service", "Clown", "Clerical", "Security",
+	"Research", "Command", "Exploration" //CHOMPedit: Enables Exploration borg.
 )
 // L
 // List of modules added during code red
@@ -138,8 +138,9 @@ var/list/emergency_module_types = list(
 )
 // List of modules available to AI shells
 var/list/shell_module_types = list(
-	"Standard", "Engineering", "Surgeon", "Crisis",
-	"Miner", "Janitor", "Service", "Clerical", "Security", "Research"
+	"Standard", "Engineering", "Surgeon", "Crisis", "Miner",
+	"Janitor", "Service", "Clown", "Clerical", "Security",
+	"Research", "Command", "Exploration"
 )
 // List of whitelisted modules
 var/list/whitelisted_module_types = list(
@@ -165,10 +166,10 @@ var/static/list/scarySounds = list(
 	'sound/machines/door/old_airlock.ogg',
 	'sound/effects/clownstep1.ogg',
 	'sound/effects/clownstep2.ogg',
-	'sound/voice/teppi/roar.ogg',	//VOREStation Add
-	'sound/voice/moth/scream_moth.ogg',	//VOREStation Add
-	'sound/voice/nya.ogg',	//VOREStation Add
-	'sound/voice/succlet_shriek.ogg'	//VOREStation Add
+	'sound/voice/teppi/roar.ogg',
+	'sound/voice/moth/scream_moth.ogg',
+	'sound/voice/nya.ogg',
+	'sound/voice/succlet_shriek.ogg'
 )
 
 // Bomb cap!

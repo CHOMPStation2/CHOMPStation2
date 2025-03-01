@@ -746,9 +746,8 @@
 			I.plane = PLANE_LIGHTING_ABOVE
 			add_overlay(I)
 			qdel(I)
-		// CHOMPEdit Start
 		if(S.blob_appearance == "dullahan")
-			icon = 'modular_chomp/icons/mob/dullahanborg/Dullahanprotean64x64.dmi'
+			icon = 'icons/mob/robot/dullahan/v1/Dullahanprotean64x64.dmi'
 			vis_height = 64
 			var/image/I = image(icon, "[S.dullahan_overlays[1]][resting? "-rest" : (vore_fullness? "-[vore_fullness]" : null)]", pixel_x = -16)
 			I.color = S.dullahan_overlays[S.dullahan_overlays[1]]
@@ -797,7 +796,7 @@
 			I.layer = MOB_LAYER
 			add_overlay(I)
 			qdel(I)
-			// CHOMPEdit End
+		//You know technically I could just put all the icons into the 128x64.dmi file and off-set them to fit..
 		if(S.blob_appearance in wide_icons)
 			icon = 'icons/mob/species/protean/protean64x32.dmi'
 			default_pixel_x = -16
