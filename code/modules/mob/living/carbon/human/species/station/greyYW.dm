@@ -8,7 +8,7 @@
 	blurb = "Greys are a species of aliens that are more weak than humans physically, but possesses\
 	the ability to talk telephatically with themselves and other species, Due to this, Grey have no\
 	naming scheme or language, having names only to make easier communication with other species.\
-	<br>\The Grey have unknown origin even to themselves, scientists believes they came from\
+	<br>The Grey have unknown origin even to themselves, scientists believes they came from\
 	another galaxy, greys have chosen mauna-b to act as their home planet due to high amount of grey\
 	residing in there."
 

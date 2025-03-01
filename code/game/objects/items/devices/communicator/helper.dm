@@ -393,8 +393,9 @@
 // Copied from /obj/machinery/computer/supplycomp/ui_interact(),
 // code\game\machinery\computer\supply.dm, starting at line 55
 /obj/item/commcard/proc/get_supply_shuttle_status()
-	var/shuttle_status[0]
+	var/list/shuttle_status = list()
 	var/datum/shuttle/autodock/ferry/supply/shuttle = SSsupply.shuttle
+
 	if(shuttle)
 		if(shuttle.has_arrive_time())
 			shuttle_status["location"] = "In transit"
@@ -445,7 +446,7 @@
 				shuttle_status["engine"] = "Engaged"
 
 	else
-		shuttle["mode"] = SUP_SHUTTLE_ERROR
+		shuttle_status["mode"] = SUP_SHUTTLE_ERROR
 
 	return shuttle_status
 

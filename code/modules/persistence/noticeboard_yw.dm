@@ -15,7 +15,7 @@
 	src.contents += P
 
 	P = new()
-	P.name = "Staff Notice: Breakroom \& Storage"
+	P.name = "Staff Notice: Breakroom & Storage"
 	P.info = "<br>Enjoy the view from the new breakroom. You've also got a storage room full of leftover supplies from the shift before yours."
 	P.stamped = list(/obj/item/stamp/cmo)
 	P.add_overlay("paper_stamped_cmo")

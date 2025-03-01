@@ -611,6 +611,7 @@
 			if(transformed)
 				//transformed bellysprites dont exist yet. Uncomment this when they do. -Reo
 				//add_overlay("[iconstate]-t_[belly_class]-[vs_fullness]")
+				pass()
 			else
 				add_overlay("[icon_state]_[belly_class]-[vs_fullness]")
 

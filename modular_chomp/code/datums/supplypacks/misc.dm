@@ -41,7 +41,7 @@
 			)
 	cost = 200
 	containertype = /obj/structure/closet/crate/nanotrasen
-	container name = "Bluespace Fulton kit crate"
+	containername = "Bluespace Fulton kit crate"
 
 /datum/supply_pack/misc/fulton_surplus
 	name = "Surplus Bluespace Fultons"
@@ -50,4 +50,4 @@
 			)
 	cost = 100
 	containertype = /obj/structure/closet/crate/nanotrasen
-	container name = "Surplus Bluespace Fultons crate"
+	containername = "Surplus Bluespace Fultons crate"
