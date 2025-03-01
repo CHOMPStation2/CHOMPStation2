@@ -587,3 +587,24 @@
 
 	for(var/obj/effect/abstract/dark_maw/dm in SK.active_dark_maws)
 		dm.dispel()
+
+/mob/living/carbon/human/proc/nutrition_conversion_toggle()
+	set name = "Toggle Energy <-> Nutrition conversions"
+	set desc = "Toggle dark energy and nutrition being converted into each other when full"
+	set category = "Abilities.Shadekin"
+
+	var/datum/species/shadekin/SK = species
+	if(!istype(SK))
+		to_chat(src, span_warning("Only a shadekin can use that!"))
+		return FALSE
+
+	if(SK.nutrition_energy_conversion)
+		to_chat(src, span_notice("Nutrition and dark energy conversions disabled."))
+		SK.nutrition_energy_conversion = 0
+	else
+		to_chat(src, span_notice("Nutrition and dark energy conversions enabled."))
+		SK.nutrition_energy_conversion = 1
+
+/datum/modifier/shadekin_phase
+	name = "Shadekin Phasing"
+	evasion = 100
