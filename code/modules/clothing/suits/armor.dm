@@ -1,12 +1,7 @@
 /obj/item/clothing/suit/armor
-<<<<<<< HEAD
-	allowed = list(/obj/item/gun/energy,/obj/item/reagent_containers/spray/pepper,/obj/item/gun/projectile,/obj/item/ammo_magazine,/obj/item/ammo_casing,/obj/item/melee/baton,/obj/item/handcuffs,/obj/item/flashlight/maglight,/obj/item/clothing/head/helmet,/obj/item/tank) //CHOMP Add tank
-	body_parts_covered = UPPER_TORSO|LOWER_TORSO
-=======
 	name = DEVELOPER_WARNING_NAME
-	allowed = list(/obj/item/gun/energy,/obj/item/reagent_containers/spray/pepper,/obj/item/gun/projectile,/obj/item/ammo_magazine,/obj/item/ammo_casing,/obj/item/melee/baton,/obj/item/handcuffs,/obj/item/flashlight/maglight,/obj/item/clothing/head/helmet)
+	allowed = list(/obj/item/gun/energy,/obj/item/reagent_containers/spray/pepper,/obj/item/gun/projectile,/obj/item/ammo_magazine,/obj/item/ammo_casing,/obj/item/melee/baton,/obj/item/handcuffs,/obj/item/flashlight/maglight,/obj/item/clothing/head/helmet,/obj/item/tank) //CHOMP Add tank
 	body_parts_covered = CHEST
->>>>>>> 6a157d8614 (Rig glovefix and Clothing protection fix (#17118))
 	item_flags = THICKMATERIAL
 
 	cold_protection = CHEST
