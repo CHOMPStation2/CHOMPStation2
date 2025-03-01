@@ -173,12 +173,8 @@
 					break
 				qdel(voted_query)
 
-<<<<<<< HEAD
-				var/output = "<div align='center'><B>Player poll</B>"
-=======
 
 				var/output = "<div align='center'>" + span_bold("Player poll")
->>>>>>> cb56adaa37 (more font tag replacements (#17123))
 				output +="<hr>"
 				output += span_bold("Question: [pollquestion]") + "<br>"
 				output += span_normal("Feedback gathering runs from " + span_bold("[pollstarttime]") + " until " + span_bold("[pollendtime]")) + "<p>"

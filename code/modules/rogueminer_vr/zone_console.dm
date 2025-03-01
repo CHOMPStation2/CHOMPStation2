@@ -162,14 +162,10 @@
 	<h4>Traveling to the belt</h4>
 	When a new zone has been scanned, your station's shuttle destination will be updated to direct it to the newly discovered area automatically.<br>
 	You can then travel to the new area to mine in that location.<br>
-<<<<<<< HEAD
 	<br>
-	<font size=1>This technology produced under license from Thinktronic Systems, LTD.</font>"}
+	<br> "} + span_small("This technology produced under license from Thinktronic Systems, LTD.")
 
 
 #undef OUTPOST_Z
 #undef TRANSIT_Z
 #undef BELT_Z
-=======
-	<br> "} + span_small("This technology produced under license from Thinktronic Systems, LTD.")
->>>>>>> cb56adaa37 (more font tag replacements (#17123))

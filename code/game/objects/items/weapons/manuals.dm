@@ -130,15 +130,9 @@
 				<h2>EJECTION PROCEDURE</h2>
 				<ol>
 				<li>Ensure the engine room has power. The blast doors and ejection platform are unresponsive without power.</li>
-<<<<<<< HEAD
 				<li>Press Engine Ventilatory Control button to open engine core blast door to space. (In CE Office and next to the reactor shroud)</li>
 				<li>Press Emergency Core Eject button to eject supermatter crystal. (In CE Office, only) NOTE: Attempting crystal ejection while engine core vent is closed will result in ejection failure.</li>
-				<li>In event of ejection failure, <i>good luck.</i></li>
-=======
-				<li>Press Engine Ventilatory Control button to open engine core blast door to space.</li>
-				<li>Press Emergency Core Eject button to eject supermatter crystal. NOTE: Attempting crystal ejection while engine core vent is closed will result in ejection failure.</li>
-				<li>In event of ejection failure, "} + span_italics("pending") + {"</li>
->>>>>>> cb56adaa37 (more font tag replacements (#17123))
+				<li>In event of ejection failure, "} + span_italics("good luck.") + {"</li>
 				</ol>
 				</body>
 			</html>"}			//CHOMPEdit End - Updated Supermatter Engine Manual
@@ -287,16 +281,12 @@
 				<li> Finally, using the gyrotron controller, step the fire delay to three (3) and the strength to one (1). Turn it on and close <b>the engine control room shroud</b> before leaving to reduce risks of radiation leakage.</li>
 				</ol>
 				<br>
-<<<<<<< HEAD
 				<h2>OPERATION AND MAINTENANCE</h2>
 				<li> Past this point you do not need to actively maintain the field. So long as the injectors and shield projectors are powered, the system is self-sustaining, even using the excess heat to power the TEG system <mark>north</mark> of the reactor shroud.</li>
 				<li> From here-on, understand that the room is now flooded with radiation, you will need to wear a full radiation-suit when going into either the engine control room, or the reactor chamber or core.</li>
 				<li> You will notice a jump in temperature. The pattern should be easy to spot, as the R-UST heats up slowly until a reaction happens. When that reaction happens, that is when you will notice the spike. Ensuring the room is constantly flooded with cycling a CO<sup>2</sup> coolant to ensure safe temperatures.</li>
 				<li> The majority of power created by this standard set-up is from the TEG, and not the actual R-UST itself. This means the R-UST can be left with lower reactives inside of it, while still ensuring the outpost is powered. Knowing this, you can also safely leave the outpost and acknowledge that periodic temperature checks are recommended. </li>
 				</li>
-=======
-				"} + span_bold("NOTES FOR NEWBIES") + {"
->>>>>>> cb56adaa37 (more font tag replacements (#17123))
 				<br>
 				<h2>ADDITIONAL INFORMATION</h2>
 				<ol>

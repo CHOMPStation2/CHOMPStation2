@@ -140,11 +140,7 @@ var/list/all_technomancer_assistance = subtypesof(/datum/technomancer/assistance
 				dat += span_bold("[spell.name]") + "<br>"
 				dat += span_italics("[spell.desc]") + "<br>"
 				if(spell.spell_power_desc)
-<<<<<<< HEAD
-					dat += "<font color='#AD5AAD'>Spell Power: [spell.spell_power_desc]</font><br>"
-=======
 					dat += span_purple("Spell Power: [spell.spell_power_desc]") + "<br>"
->>>>>>> cb56adaa37 (more font tag replacements (#17123))
 				if(spell.enhancement_desc)
 					dat += span_blue("Scepter Effect: [spell.enhancement_desc]") + "<br>"
 				if(spell.cost <= budget)
@@ -266,11 +262,7 @@ var/list/all_technomancer_assistance = subtypesof(/datum/technomancer/assistance
 			If a function is able to be boosted with it, it will be shown underneath the description of the function as \
 			" + span_blue(span_italics("'Scepter Effect:'")) + ".  Note that you must hold the scepter for it to work, so try to avoid losing it.<br>"
 			dat += "Functions can also be boosted with the core itself.  A function that is able to benefit \
-<<<<<<< HEAD
-			from this will have <font color='#AD5AAD'><i>'Spell Power:'</i></font> underneath.  Different Cores have different \
-=======
 			from this will have " + span_purple(span_italics("'Spell Power:'")) + " underneath.  Different Cores have different \
->>>>>>> cb56adaa37 (more font tag replacements (#17123))
 			amounts of spell power.<br>"
 			dat += "When a function refers to 'allies', it means you, your apprentices, currently controlled entities (with the \
 			Control function), and friendly simple-minded entities that you've summoned with the Scepter of Enhancement.<br>"
