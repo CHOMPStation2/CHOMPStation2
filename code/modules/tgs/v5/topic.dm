@@ -60,12 +60,6 @@
 			intercepted_message_queue = null
 			return result
 
-		// VOREStation Edit Start - GetChatCommands command
-		if(DMAPI5_TOPIC_COMMAND_GET_CHAT_COMMANDS)
-			var/topic_response = list(DMAPI5_PARAMETER_CUSTOM_COMMANDS = ListCustomCommands())
-			return json_encode(topic_response)
-		// VOREStation Edit - End
-
 		if(DMAPI5_TOPIC_COMMAND_EVENT_NOTIFICATION)
 			var/list/event_notification = topic_parameters[DMAPI5_TOPIC_PARAMETER_EVENT_NOTIFICATION]
 			if(!istype(event_notification))
