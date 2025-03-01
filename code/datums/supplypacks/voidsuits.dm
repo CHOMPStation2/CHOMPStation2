@@ -271,13 +271,6 @@
 	containername = "Authentic Unathi breacher chassis crate"
 	access = access_armory
 
-/datum/supply_pack/voidsuits/voxciv
-	name = "Vox Civilian Hardsuit"
-	contains = list(/obj/item/rig/vox/civilian)
-	cost = 80
-	containertype = /obj/structure/closet/crate/oculum
-	containername = "Vox Civilian Hardsuit"
-
 /datum/supply_pack/voidsuits/voxeng
 	name = "Vox Engineering Hardsuit"
 	contains = list (/obj/item/rig/vox/engineering)
