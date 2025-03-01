@@ -43,7 +43,7 @@
 	src.modules += new /obj/item/hand_labeler(src)
 	src.modules += new /obj/item/stamp(src)
 	src.modules += new /obj/item/stamp/denied(src)
-	//src.modules += new /obj/item/taskmanager(src) //Needs to be ported over.
+	src.modules += new /obj/item/taskmanager(src) //Needs to be ported over. //CHOMPEDIT ENABLE
 	src.emag += new /obj/item/stamp/chameleon(src)
 	src.emag += new /obj/item/pen/chameleon(src)
 

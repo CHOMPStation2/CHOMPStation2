@@ -96,13 +96,6 @@
 
 /datum/robot_sprite/janitor/worm
 	name = "W02M"
-<<<<<<< HEAD
-	sprite_icon_state = "worm-janitor" //CHOMPEdit
-	has_custom_open_sprites = TRUE
-	sprite_icon = 'modular_chomp/icons/mob/wormborg.dmi' //CHOMPEdit
-	has_vore_belly_sprites = TRUE //CHOMPEdit
-	has_dead_sprite = TRUE //CHOMPEdit
-=======
 	sprite_icon_state = "worm-janitor"
 	sprite_icon = 'icons/mob/robot/wormborg.dmi'
 	has_dead_sprite_overlay = FALSE
@@ -110,7 +103,6 @@
 	has_vore_belly_sprites = TRUE
 	has_dead_sprite = TRUE
 
->>>>>>> e3409de8b9 (Robot Sprite Unit test, Robot Upports, Robot Sprite Fixes [MDB IGNORE] [IDB IGNORE] (#17139))
 
 /datum/robot_sprite/janitor/uptall
 	name = "Feminine Humanoid"

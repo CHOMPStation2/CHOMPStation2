@@ -73,15 +73,6 @@
 	sprite_icon_state = "noble"
 	has_custom_open_sprites = TRUE
 
-<<<<<<< HEAD
-/datum/robot_sprite/medical/worm
-	name = "W02M - Crisis" //CHOMPEdit
-	sprite_icon_state = "worm-crisis" //CHOMPEdit
-	has_custom_open_sprites = TRUE
-	sprite_icon = 'modular_chomp/icons/mob/wormborg.dmi' //CHOMPEdit
-	has_vore_belly_sprites = TRUE //CHOMPEdit
-	has_dead_sprite = TRUE //CHOMPEdit
-=======
 /datum/robot_sprite/surgical/worm
 	name = "W02M - Surgical"
 	sprite_icon_state = "worm-surgeon"
@@ -90,7 +81,6 @@
 	has_custom_open_sprites = FALSE
 	has_vore_belly_sprites = TRUE
 	has_dead_sprite = TRUE
->>>>>>> e3409de8b9 (Robot Sprite Unit test, Robot Upports, Robot Sprite Fixes [MDB IGNORE] [IDB IGNORE] (#17139))
 
 // Wide/dogborg sprites
 /*
