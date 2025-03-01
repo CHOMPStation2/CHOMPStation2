@@ -127,9 +127,15 @@ var/global/list/alphabet_uppercase = list("A","B","C","D","E","F","G","H","I","J
 
 // Used by robots and robot preferences for regular modules.
 var/list/robot_module_types = list(
+<<<<<<< HEAD
 	"Standard", "Engineering",/* "Surgeon",*/  "Crisis", //CHOMPedit: Combining Surgeon and Crisis.
 	"Miner",    "Janitor",     "Service",      "Clerical", "Security",
 	"Research"
+=======
+	"Standard", "Engineering", /*"Surgeon",*/ "Crisis", "Miner",
+	"Janitor", "Service", "Clown", "Clerical", "Security",
+	"Research", "Command" //"Exploration"
+>>>>>>> 96f6663aae (forgot to do this (#17243))
 )
 // L
 // List of modules added during code red
