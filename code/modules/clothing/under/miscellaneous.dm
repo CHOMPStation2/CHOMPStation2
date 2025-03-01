@@ -265,12 +265,8 @@
 	desc = "Yarr."
 	icon_state = "pirate"
 	item_state_slots = list(slot_r_hand_str = "sl_suit", slot_l_hand_str = "sl_suit")
-<<<<<<< HEAD
-	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS
-	has_sensor = 0 // CHOMPEdit: Fixes sensors issue
-=======
 	body_parts_covered = CHEST|LEGS
->>>>>>> 6a157d8614 (Rig glovefix and Clothing protection fix (#17118))
+	has_sensor = 0 // CHOMPEdit: Fixes sensors issue
 
 /obj/item/clothing/under/soviet
 	name = "soviet uniform"

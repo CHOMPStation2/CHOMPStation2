@@ -141,11 +141,7 @@
 		)
 	body_parts_covered = HEAD|FACE|EYES
 	slot_flags = SLOT_MASK
-<<<<<<< HEAD
-	body_parts_covered = FACE|EYES
 	//Chompedit Start: Moving over to the modularity folder because virgo changed the name of upstream icons in their modular files. Epic.
-=======
->>>>>>> 6a157d8614 (Rig glovefix and Clothing protection fix (#17118))
 	item_icons = list(
 		slot_wear_mask_str = 'modular_chomp/icons/inventory/face/mob.dmi'
 		)
