@@ -129,12 +129,9 @@ var/list/admin_verbs_admin = list(
 	/client/proc/delbook,
 	/client/proc/toggle_spawning_with_recolour,
 	/client/proc/start_vote,
-<<<<<<< HEAD
+	/client/proc/hide_motion_tracker_feedback,
 	/client/proc/reload_jobwhitelist, //ChompADD
 	/client/proc/reload_alienwhitelist //ChompADD
-=======
-	/client/proc/hide_motion_tracker_feedback
->>>>>>> 9a77517bd3 (Hide and seek mode (#17233))
 	)
 
 var/list/admin_verbs_ban = list(
@@ -590,14 +587,11 @@ var/list/admin_verbs_event_manager = list(
 	/client/proc/ReleaseVirus,
 	/client/proc/add_hidden_area,
 	/client/proc/remove_hidden_area,
-<<<<<<< HEAD
+	/client/proc/hide_motion_tracker_feedback,
 	/datum/admins/proc/quick_nif, //CHOMPStation Add,
 	/datum/admins/proc/quick_authentic_nif, //CHOMPStation add
 	/client/proc/reload_jobwhitelist, //ChompADD
 	/client/proc/reload_alienwhitelist //ChompADD
-=======
-	/client/proc/hide_motion_tracker_feedback
->>>>>>> 9a77517bd3 (Hide and seek mode (#17233))
 )
 
 /client/proc/add_admin_verbs()
