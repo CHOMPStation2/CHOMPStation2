@@ -1,0 +1,5 @@
+author: "Hunter-Dovetail"
+delete-after: True
+changes:
+  - rscadd: "scaled_belly-l_leg, scaled_belly-r_leg, scaled_belly-groin"
+  - bugfix: "dragon_upperjaw-head"
