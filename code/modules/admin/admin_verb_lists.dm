@@ -112,7 +112,8 @@ var/list/admin_verbs_admin = list(
 	/datum/admins/proc/view_feedback,
 	/client/proc/admin_teleport,	//CHOMPEdit
 	/client/proc/setckey, //YW add - readds SetCkey proc
-	/client/proc/debug_global_variables
+	/client/proc/debug_global_variables,
+	/client/proc/hide_motion_tracker_feedback
 	)
 
 var/list/admin_verbs_ban = list(
@@ -517,7 +518,8 @@ var/list/admin_verbs_event_manager = list(
 	/client/proc/cmd_debug_del_all,
 	/client/proc/toggle_random_events,
 	/client/proc/modify_server_news,
-	/client/proc/debug_global_variables
+	/client/proc/debug_global_variables,
+	/client/proc/hide_motion_tracker_feedback
 )
 
 /client/proc/add_admin_verbs()
