@@ -238,7 +238,7 @@
 /obj/mecha/combat/fighter/Bump(atom/obstacle)
 	. = ..()
 	if(istype(obstacle, /obj) || istype(obstacle, /turf))
-		occupant_message("<B><FONT COLOR=red SIZE=+2>COLLISION ALERT!</B></FONT>")
+		occupant_message(span_bolddanger(span_large("COLLISION ALERT!")))
 		take_damage(20, "brute")
 		playsound(src, 'sound/mecha/fighter/fighter_collision.ogg', 50)
 

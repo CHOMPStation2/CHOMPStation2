@@ -97,15 +97,24 @@
 	set name = "hotkeys-help"
 	set category = "OOC.Resources"
 
+<<<<<<< HEAD
 	var/admin = {"<font color='AD5AAD'>
+=======
+	var/admin = {"
+>>>>>>> cb56adaa37 (more font tag replacements (#17123))
 Admin:
 \tF5 = Aghost (admin-ghost)
 \tF6 = player-panel-new
 \tF7 = admin-pm
 \tF8 = Invisimin
-</font>"}
+"}
+	admin = span_purple(admin)
 
+<<<<<<< HEAD
 	var/hotkey_mode = {"<font color='AD5AAD'>
+=======
+	var/hotkey_mode = {"
+>>>>>>> cb56adaa37 (more font tag replacements (#17123))
 Hotkey-Mode: (hotkey-mode must be on)
 \tTAB = toggle hotkey-mode
 \ta = left
@@ -130,9 +139,14 @@ Hotkey-Mode: (hotkey-mode must be on)
 \t4 = harm-intent
 \tCtrl+Click = pull
 \tShift+Click = examine
-</font>"}
+"}
+	hotkey_mode = span_purple(hotkey_mode)
 
+<<<<<<< HEAD
 	var/other = {"<font color='AD5AAD'>
+=======
+	var/other = {"
+>>>>>>> cb56adaa37 (more font tag replacements (#17123))
 Any-Mode: (hotkey doesn't need to be on)
 \tCtrl+a = left
 \tCtrl+s = down
@@ -161,9 +175,14 @@ Any-Mode: (hotkey doesn't need to be on)
 \tPGUP = swap-hand
 \tPGDN = activate held object
 \tEND = throw
-</font>"}
+"}
+	other = span_purple(other)
 
+<<<<<<< HEAD
 	var/robot_hotkey_mode = {"<font color='AD5AAD'>
+=======
+	var/robot_hotkey_mode = {"
+>>>>>>> cb56adaa37 (more font tag replacements (#17123))
 Hotkey-Mode: (hotkey-mode must be on)
 \tTAB = toggle hotkey-mode
 \ta = left
@@ -183,9 +202,14 @@ Hotkey-Mode: (hotkey-mode must be on)
 \t5 = emote
 \tCtrl+Click = pull
 \tShift+Click = examine
-</font>"}
+"}
+	robot_hotkey_mode = span_purple(robot_hotkey_mode)
 
+<<<<<<< HEAD
 	var/robot_other = {"<font color='AD5AAD'>
+=======
+	var/robot_other = {"
+>>>>>>> cb56adaa37 (more font tag replacements (#17123))
 Any-Mode: (hotkey doesn't need to be on)
 \tCtrl+a = left
 \tCtrl+s = down
@@ -208,7 +232,8 @@ Any-Mode: (hotkey doesn't need to be on)
 \tINS = toggle intents
 \tPGUP = cycle active modules
 \tPGDN = activate held object
-</font>"}
+"}
+	robot_other = span_purple(robot_other)
 
 	if(isrobot(src.mob))
 		to_chat(src,robot_hotkey_mode)
