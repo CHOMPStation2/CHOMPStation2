@@ -6297,7 +6297,6 @@
 	},
 /area/survivalpod)
 "bSW" = (
-/obj/item/clothing/head/justice/pink,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -29742,7 +29741,6 @@
 	},
 /area/survivalpod)
 "iJq" = (
-/obj/item/clothing/head/justice/yellow,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -64358,7 +64356,6 @@
 	},
 /area/survivalpod)
 "sTJ" = (
-/obj/item/clothing/head/justice/blue,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -65908,7 +65905,6 @@
 	},
 /area/survivalpod)
 "tpV" = (
-/obj/item/clothing/head/justice,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -72639,7 +72635,6 @@
 	},
 /area/survivalpod)
 "voT" = (
-/obj/item/clothing/head/justice/green,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
