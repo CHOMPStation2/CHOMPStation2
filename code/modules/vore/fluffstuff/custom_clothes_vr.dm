@@ -2225,13 +2225,10 @@ Departamental Swimsuits, for general use
 
 		add_attack_logs(user, target, "Teleported [target] with via \the [src]'s [translocator]!")
 	else ..()
-<<<<<<< HEAD
 /*CHOMP Removal
-=======
 
 /obj/item/clothing/suit/storage/hooded/fluff
 	name = DEVELOPER_WARNING_NAME
->>>>>>> 6a157d8614 (Rig glovefix and Clothing protection fix (#17118))
 //Vitoras: Verie
 /obj/item/clothing/suit/storage/hooded/fluff/verie
 	name = "distressingly cyan hoodie"

@@ -903,8 +903,6 @@
 	icon = 'icons/vore/custom_clothes_yw.dmi'
 	icon_override = 'icons/vore/custom_onmob_yw.dmi'
 
-	var/obj/item/clothing/head/hood
-	var/hoodtype = null //so the chaplain hoodie or other hoodies can override this
 	var/suittoggled = 0
 	var/hooded = 0
 	actions_types = list(/datum/action/item_action/toggle_hood)

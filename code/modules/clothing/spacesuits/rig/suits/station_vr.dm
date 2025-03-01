@@ -74,10 +74,7 @@
 	min_cold_protection_temperature = SPACE_SUIT_MIN_COLD_PROTECTION_TEMPERATURE
 	max_heat_protection_temperature = FIRESUIT_MAX_HEAT_PROTECTION_TEMPERATURE // so it's like a rig firesuit
 	armor = list("melee" = 40, "bullet" = 10, "laser" = 30, "energy" = 55, "bomb" = 70, "bio" = 100, "rad" = 100)
-<<<<<<< HEAD
-=======
 	allowed = list(/obj/item/flashlight,/obj/item/tank,/obj/item/suit_cooling_unit,/obj/item/storage/backpack)
->>>>>>> 6a157d8614 (Rig glovefix and Clothing protection fix (#17118))
 
 	chest_type = /obj/item/clothing/suit/space/rig/focalpoint
 	helm_type = /obj/item/clothing/head/helmet/space/rig/focalpoint
@@ -199,11 +196,8 @@
 	boot_type = null
 	glove_type = null
 
-<<<<<<< HEAD
-=======
 	allowed = list(/obj/item/gun,/obj/item/flashlight,/obj/item/tank,/obj/item/suit_cooling_unit,/obj/item/storage/backpack, /obj/item/bluespaceradio, /obj/item/defib_kit)
 
->>>>>>> 6a157d8614 (Rig glovefix and Clothing protection fix (#17118))
 	slowdown = 0
 	offline_slowdown = 1
 	offline_vision_restriction = 2
@@ -255,10 +249,6 @@
 	armor = list("melee" = 10, "bullet" = 5, "laser" = 10, "energy" = 5, "bomb" = 25, "bio" = 100, "rad" = 20)
 
 /obj/item/rig/baymed/equipped
-<<<<<<< HEAD
-	req_access = list(access_medical)
-=======
->>>>>>> 6a157d8614 (Rig glovefix and Clothing protection fix (#17118))
 
 	initial_modules = list(
 		/obj/item/rig_module/maneuvering_jets,

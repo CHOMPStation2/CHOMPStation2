@@ -32,17 +32,10 @@
 
 /obj/item/clothing/suit/space/rig
 	name = "chestpiece"
-<<<<<<< HEAD
 	allowed = list(/obj/item/flashlight,/obj/item/tank,/obj/item/suit_cooling_unit,/obj/item/storage) //ChompEdit: allows all suits to carry a backpack on their back unless otherwise specified.
-	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS|ARMS
-	heat_protection =	 UPPER_TORSO|LOWER_TORSO|LEGS|ARMS
-	cold_protection =	 UPPER_TORSO|LOWER_TORSO|LEGS|ARMS
-=======
-	allowed = list(/obj/item/flashlight,/obj/item/tank,/obj/item/suit_cooling_unit)
 	body_parts_covered = CHEST|LEGS|ARMS
 	heat_protection =	 CHEST|LEGS|ARMS
 	cold_protection =	 CHEST|LEGS|ARMS
->>>>>>> 6a157d8614 (Rig glovefix and Clothing protection fix (#17118))
 	flags_inv =			 HIDEJUMPSUIT|HIDETAIL
 	item_flags =		 THICKMATERIAL | AIRTIGHT
 	slowdown = 0
