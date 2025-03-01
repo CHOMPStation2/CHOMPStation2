@@ -272,9 +272,6 @@
 			goia_overlays["belly"] = choice
 			goia_overlays["zorgoia_belly"] = new_color
 			update_icon()
-		else
-
-
 
 /mob/living/simple_mob/vore/zorgoia/Initialize()
 	..()

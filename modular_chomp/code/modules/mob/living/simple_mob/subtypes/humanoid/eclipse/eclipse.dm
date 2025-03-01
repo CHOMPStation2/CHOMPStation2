@@ -50,7 +50,7 @@
 	minbodytemp = 0
 	heat_damage_per_tick = 0
 
-	projectiletype = /obj/item/projectile/bullet/pistol/medium.
+	projectiletype = /obj/item/projectile/bullet/pistol/medium
 	projectilesound = 'sound/weapons/Gunshot_light.ogg'
 
 	needs_reload = TRUE

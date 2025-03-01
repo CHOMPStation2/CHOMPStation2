@@ -1,5 +1,6 @@
 //1000-1999
-#pragma FileAlreadyIncluded error
+// CHOMPEdit - We have to currently set the FileAlreadyIncluded pragma to warning, because of how the turfpack generation works.
+#pragma FileAlreadyIncluded warning
 #pragma MissingIncludedFile error
 #pragma MisplacedDirective error
 #pragma UndefineMissingDirective error
