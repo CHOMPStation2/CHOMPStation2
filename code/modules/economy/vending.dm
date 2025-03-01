@@ -786,7 +786,11 @@ GLOBAL_LIST_EMPTY(vending_products)
 	if(!target)
 		return 0
 
+<<<<<<< HEAD
 	if(target.is_incorporeal()) // CHOMPADD - Don't shoot at things that aren't there.
+=======
+	if(target.is_incorporeal()) // Don't shoot at things that aren't there.
+>>>>>>> 55a61bc38f (up ports incorp and proximity handling (#17106))
 		return 0
 
 	for(var/datum/stored_item/vending_product/R in shuffle(product_records))

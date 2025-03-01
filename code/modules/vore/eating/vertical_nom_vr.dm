@@ -3,7 +3,11 @@
 	set desc = "Allows you to eat people who are below your tile or adjacent one. Requires passability."
 	set category = "Abilities.Vore"
 
+<<<<<<< HEAD
 	if(stat == DEAD || paralysis || weakened || stunned || is_incorporeal()) // CHOMPEdit
+=======
+	if(stat == DEAD || paralysis || weakened || stunned || is_incorporeal())
+>>>>>>> 55a61bc38f (up ports incorp and proximity handling (#17106))
 		to_chat(src, span_notice("You cannot do that while in your current state."))
 		return
 

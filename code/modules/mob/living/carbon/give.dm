@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 /mob/living/verb/give(var/mob/living/target in living_mobs_in_view(1)) // CHOMPEdit
+=======
+/mob/living/verb/give(var/mob/living/target in living_mobs_in_view(1))
+>>>>>>> 55a61bc38f (up ports incorp and proximity handling (#17106))
 	set category = "IC.Game"
 	set name = "Give"
 

@@ -422,10 +422,19 @@
 /atom/movable/proc/hit_check(var/speed)
 	if(src.throwing)
 		for(var/atom/A in get_turf(src))
-			if(A == src) continue
+			if(A == src)
+				continue
+			if(A.is_incorporeal())
+				continue
 			if(isliving(A))
+<<<<<<< HEAD
 				if(A:lying) continue
 				if(A.is_incorporeal()) continue // CHOMPEdit - For phased entities
+=======
+				var/mob/living/M = A
+				if(M.lying)
+					continue
+>>>>>>> 55a61bc38f (up ports incorp and proximity handling (#17106))
 				src.throw_impact(A,speed)
 			if(isobj(A))
 				if(!A.density || A.throwpass)

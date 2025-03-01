@@ -251,7 +251,11 @@ var/global/list/engineering_networks = list(
 	assembly.upgrades.Add(new /obj/item/assembly/prox_sensor(assembly))
 	setPowerUsage()
 	START_MACHINE_PROCESSING(src)
+<<<<<<< HEAD
 	sense_proximity(callback = TYPE_PROC_REF(/atom,HasProximity)) // CHOMPEdit
+=======
+	sense_proximity(callback = TYPE_PROC_REF(/atom,HasProximity))
+>>>>>>> 55a61bc38f (up ports incorp and proximity handling (#17106))
 	update_coverage()
 
 /obj/machinery/camera/proc/setPowerUsage()

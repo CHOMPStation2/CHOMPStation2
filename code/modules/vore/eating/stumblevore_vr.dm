@@ -1,10 +1,15 @@
 /mob/living/proc/CanStumbleVore(mob/living/target)
 	if(!can_be_drop_pred)
 		return FALSE
+<<<<<<< HEAD
 	// CHOMPAdd Start
 	if(is_incorporeal() || target.is_incorporeal())
 		return FALSE
 	// CHOMPAdd End
+=======
+	if(is_incorporeal() || target.is_incorporeal())
+		return FALSE
+>>>>>>> 55a61bc38f (up ports incorp and proximity handling (#17106))
 	if(!is_vore_predator(src))
 		return FALSE
 	if(!target.devourable)
@@ -18,12 +23,18 @@
 /mob/living/Bump(atom/movable/AM)
 	//. = ..()
 	if(isliving(AM))
+<<<<<<< HEAD
 		// CHOMPEdit Start
+=======
+>>>>>>> 55a61bc38f (up ports incorp and proximity handling (#17106))
 		var/mob/living/L = AM
 		if(!L.is_incorporeal())
 			if(buckled != AM && (((confused || is_blind()) && stat == CONSCIOUS && prob(50) && m_intent==I_RUN) || flying && flight_vore))
 				AM.stumble_into(src)
+<<<<<<< HEAD
 		// CHOMPEdit End
+=======
+>>>>>>> 55a61bc38f (up ports incorp and proximity handling (#17106))
 	return ..()
 // Because flips toggle density
 /mob/living/Crossed(var/atom/movable/AM)

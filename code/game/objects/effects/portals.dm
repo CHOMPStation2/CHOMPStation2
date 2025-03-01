@@ -11,7 +11,11 @@ GLOBAL_LIST_BOILERPLATE(all_portals, /obj/effect/portal)
 	var/obj/item/target = null
 	var/creator = null
 	anchored = TRUE
+<<<<<<< HEAD
 	var/event = FALSE // CHOMPAdd
+=======
+	var/event = FALSE
+>>>>>>> 55a61bc38f (up ports incorp and proximity handling (#17106))
 
 /obj/effect/portal/Bumped(mob/M as mob|obj)
 	if(ismob(M) && !(isliving(M)))
@@ -24,12 +28,20 @@ GLOBAL_LIST_BOILERPLATE(all_portals, /obj/effect/portal)
 /obj/effect/portal/Crossed(atom/movable/AM as mob|obj)
 	// CHOMPEdit Start - Dephase kins on crossed
 	if(AM.is_incorporeal())
+<<<<<<< HEAD
 		if(event)
 			if(iscarbon(AM))
 				var/mob/living/carbon/human/H = AM
 				H.attack_dephase()
 		else return
 	// CHOMPEdit End
+=======
+		if(!event)
+			return
+		if(iscarbon(AM))
+			var/mob/living/carbon/human/H = AM
+			H.attack_dephase(null, src)
+>>>>>>> 55a61bc38f (up ports incorp and proximity handling (#17106))
 	if(ismob(AM) && !(isliving(AM)))
 		return	//do not send ghosts, zshadows, ai eyes, etc
 	spawn(0)

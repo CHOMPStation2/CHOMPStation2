@@ -183,7 +183,11 @@
 // This handles the drag-open inventory panel.
 /mob/living/MouseDrop(atom/over_object)
 	var/mob/living/L = over_object
+<<<<<<< HEAD
 	if(istype(L) && L != src && L == usr && Adjacent(L) && !L.is_incorporeal()) // CHOMPEdit
+=======
+	if(istype(L) && L != src && L == usr && Adjacent(L) && !L.is_incorporeal())
+>>>>>>> 55a61bc38f (up ports incorp and proximity handling (#17106))
 		show_inventory_panel(L)
 	. = ..()
 

@@ -55,7 +55,11 @@
 		SStgui.update_uis(src) // update all UIs attached to src
 	return
 
+<<<<<<< HEAD
 // CHOMPEdit Start
+=======
+
+>>>>>>> 55a61bc38f (up ports incorp and proximity handling (#17106))
 /obj/item/transfer_valve/HasProximity(turf/T, datum/weakref/WF, old_loc)
 	SIGNAL_HANDLER
 	if(isnull(WF))
@@ -64,14 +68,23 @@
 	if(isnull(AM))
 		log_debug("DEBUG: HasProximity called without reference on [src].")
 	attached_device?.HasProximity(T, WEAKREF(AM), old_loc)
+<<<<<<< HEAD
 // CHOMPEdit End
+=======
+>>>>>>> 55a61bc38f (up ports incorp and proximity handling (#17106))
 
 /obj/item/transfer_valve/Moved(old_loc, direction, forced)
 	. = ..()
 	if(isturf(old_loc))
+<<<<<<< HEAD
 		unsense_proximity(callback = TYPE_PROC_REF(/atom,HasProximity), center = old_loc) // CHOMPEdit
 	if(isturf(loc))
 		sense_proximity(callback = TYPE_PROC_REF(/atom,HasProximity)) // CHOMPEdit
+=======
+		unsense_proximity(callback = TYPE_PROC_REF(/atom,HasProximity), center = old_loc)
+	if(isturf(loc))
+		sense_proximity(callback = TYPE_PROC_REF(/atom,HasProximity))
+>>>>>>> 55a61bc38f (up ports incorp and proximity handling (#17106))
 
 /obj/item/transfer_valve/attack_self(mob/user)
 	tgui_interact(user)

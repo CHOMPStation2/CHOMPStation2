@@ -66,11 +66,18 @@
 /obj/item/assembly_holder/Moved(atom/old_loc, direction, forced = FALSE)
 	. = ..()
 	if(isturf(old_loc))
+<<<<<<< HEAD
 		unsense_proximity(callback = TYPE_PROC_REF(/atom,HasProximity), center = old_loc) // CHOMPEdit
 	if(isturf(loc))
 		sense_proximity(callback = TYPE_PROC_REF(/atom,HasProximity)) // CHOMPEdit
 
 // CHOMPEdit Start
+=======
+		unsense_proximity(callback = TYPE_PROC_REF(/atom,HasProximity), center = old_loc)
+	if(isturf(loc))
+		sense_proximity(callback = TYPE_PROC_REF(/atom,HasProximity))
+
+>>>>>>> 55a61bc38f (up ports incorp and proximity handling (#17106))
 /obj/item/assembly_holder/HasProximity(turf/T, datum/weakref/WF, old_loc)
 	SIGNAL_HANDLER
 	if(isnull(WF))
@@ -79,7 +86,10 @@
 	if(isnull(AM))
 		log_debug("DEBUG: HasProximity called without reference on [src].")
 		return
+<<<<<<< HEAD
 // CHOMPEdit End
+=======
+>>>>>>> 55a61bc38f (up ports incorp and proximity handling (#17106))
 	if(a_left)
 		a_left.HasProximity(T, AM, old_loc)
 	if(a_right)

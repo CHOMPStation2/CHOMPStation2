@@ -263,7 +263,11 @@
 	to_chat(src, span_notice("You take a moment to listen in to your environment..."))
 	for(var/mob/living/L in range(client.view, src))
 		var/turf/T = get_turf(L)
+<<<<<<< HEAD
 		if(!T || L == src || L.stat == DEAD || is_below_sound_pressure(T) || L.is_incorporeal()) // CHOMPAdd - No bluespace ears.
+=======
+		if(!T || L == src || L.stat == DEAD || is_below_sound_pressure(T) || L.is_incorporeal())
+>>>>>>> 55a61bc38f (up ports incorp and proximity handling (#17106))
 			continue
 		heard_something = TRUE
 		var/feedback = list()

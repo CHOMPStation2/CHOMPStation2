@@ -17,7 +17,11 @@
 	user.face_atom(A)
 	if(ismob(A) && user.aiming)
 		user.aiming.aim_at(A, src)
+<<<<<<< HEAD
 		if(!isliving(A) || A.is_incorporeal()) // CHOMPEdit - Phase out can't be targetted when phased
+=======
+		if(!isliving(A) || A.is_incorporeal()) // Phase out can't be targetted when phased
+>>>>>>> 55a61bc38f (up ports incorp and proximity handling (#17106))
 			return 0
 		return 1
 	return 0

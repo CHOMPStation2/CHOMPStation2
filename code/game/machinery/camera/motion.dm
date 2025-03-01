@@ -54,7 +54,10 @@
 	detectTime = -1
 	return 1
 
+<<<<<<< HEAD
 // CHOMPEdit start
+=======
+>>>>>>> 55a61bc38f (up ports incorp and proximity handling (#17106))
 /obj/machinery/camera/HasProximity(turf/T, datum/weakref/WF, old_loc)
 	SIGNAL_HANDLER
 	if(isnull(WF))
@@ -63,7 +66,10 @@
 	if(isnull(AM))
 		log_debug("DEBUG: HasProximity called without reference on [src].")
 		return
+<<<<<<< HEAD
 	// CHOMPEdit End
+=======
+>>>>>>> 55a61bc38f (up ports incorp and proximity handling (#17106))
 	// Motion cameras outside of an "ai monitored" area will use this to detect stuff.
 	if (!area_motion)
 		if(isliving(AM))

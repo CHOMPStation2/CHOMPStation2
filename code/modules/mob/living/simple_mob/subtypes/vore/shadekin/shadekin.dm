@@ -78,6 +78,7 @@
 	var/list/shadekin_abilities
 	var/check_for_observer = FALSE
 	var/check_timer = 0
+	var/doing_phase = FALSE // Prevent bugs when spamming phase button
 
 	var/respite_activating = FALSE //CHOMPEdit - Dark Respite
 	var/list/active_dark_maws = list()

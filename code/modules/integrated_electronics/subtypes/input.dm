@@ -532,7 +532,11 @@
 	complexity = 8
 	inputs = list()
 	outputs = list(
+<<<<<<< HEAD
 	"speaker ref",//CHOMPADDITION: so we can target the speaker with an action
+=======
+	"speaker ref",
+>>>>>>> 55a61bc38f (up ports incorp and proximity handling (#17106))
 	"speaker" = IC_PINTYPE_STRING,
 	"message" = IC_PINTYPE_STRING
 	)
@@ -558,7 +562,11 @@
 			// as a translation, when it is not.
 			if(S.speaking && !istype(S.speaking, /datum/language/common))
 				translated = TRUE
+<<<<<<< HEAD
 		set_pin_data(IC_OUTPUT , 1, WEAKREF(M))//CHOMPADDITION: so we can target the speaker with an action
+=======
+		set_pin_data(IC_OUTPUT , 1, WEAKREF(M))
+>>>>>>> 55a61bc38f (up ports incorp and proximity handling (#17106))
 		set_pin_data(IC_OUTPUT, 2, M.GetVoice())
 		set_pin_data(IC_OUTPUT, 3, msg)
 
@@ -578,7 +586,11 @@
 	complexity = 12
 	inputs = list()
 	outputs = list(
+<<<<<<< HEAD
 	"speaker ref",//CHOMPADDITION: so we can target the speaker with an action
+=======
+	"speaker ref",
+>>>>>>> 55a61bc38f (up ports incorp and proximity handling (#17106))
 	"speaker" = IC_PINTYPE_STRING,
 	"message" = IC_PINTYPE_STRING
 	)
@@ -605,13 +617,21 @@
 /obj/item/integrated_circuit/input/microphone/sign/hear_talk(mob/M, list/message_pieces, verb)
 	var/msg = multilingual_to_message(message_pieces)
 
+<<<<<<< HEAD
 	var/translated = TRUE //CHOMPEDIT: There is no common signlanguage so its all translated, pin 1 is basically useless
 	//CHOMPEDIT:making the signlanguage translator actually useful
+=======
+	var/translated = TRUE
+>>>>>>> 55a61bc38f (up ports incorp and proximity handling (#17106))
 	if(M && msg)
 		for(var/datum/multilingual_say_piece/S in message_pieces)
 			if(!((S.speaking.flags & NONVERBAL) || (S.speaking.flags & SIGNLANG))||S.speaking.name == LANGUAGE_ECHOSONG) //Ignore verbal languages
 				return
+<<<<<<< HEAD
 		set_pin_data(IC_OUTPUT , 1, WEAKREF(M))//CHOMPADDITION: so we can target the speaker with an action
+=======
+		set_pin_data(IC_OUTPUT , 1, WEAKREF(M))
+>>>>>>> 55a61bc38f (up ports incorp and proximity handling (#17106))
 		set_pin_data(IC_OUTPUT, 2, M.GetVoice())
 		set_pin_data(IC_OUTPUT, 3, msg)
 
@@ -622,11 +642,19 @@
 		activate_pin(2)
 
 /obj/item/integrated_circuit/input/microphone/sign/hear_signlang(text, verb, datum/language/speaking, mob/M as mob)
+<<<<<<< HEAD
 	var/translated = TRUE //CHOMPEDIT: There is no common signlanguage so its all translated, pin 1 is basically useless
 	if(M && text)
 		if(speaking)
 			if(!((speaking.flags & NONVERBAL) || (speaking.flags & SIGNLANG))||speaking.name == LANGUAGE_ECHOSONG) //CHOMPEDIT: ignore echo song too
 				return //CHOMPEDIT: dont spam the chat with scrambled text
+=======
+	var/translated = TRUE
+	if(M && text)
+		if(speaking)
+			if(!((speaking.flags & NONVERBAL) || (speaking.flags & SIGNLANG))||speaking.name == LANGUAGE_ECHOSONG)
+				return
+>>>>>>> 55a61bc38f (up ports incorp and proximity handling (#17106))
 		set_pin_data(IC_OUTPUT, 1, M.GetVoice())
 		set_pin_data(IC_OUTPUT, 2, text)
 
