@@ -8405,7 +8405,6 @@
 /turf/simulated/floor/tiled/freezer,
 /area/crew_quarters/toilet)
 "gDa" = (
-/obj/item/clothing/suit/space/vox/civ/chef,
 /obj/structure/sign/poster{
 	dir = 4
 	},
@@ -9875,7 +9874,6 @@
 	dir = 4;
 	pixel_y = 0
 	},
-/obj/item/clothing/head/helmet/space/vox/civ/chef,
 /turf/simulated/floor/tiled/freezer,
 /area/maintenance/thirddeck/hiddenkitchen)
 "hZD" = (
