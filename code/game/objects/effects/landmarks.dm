@@ -23,46 +23,31 @@
 		if("JoinLate") // Bit difference, since we need the spawn point to move.
 			latejoin += src
 			simulated = TRUE
-<<<<<<< HEAD
 		//	delete_me = 1
-			return
 		//VOREStation Add end
 		if("Observer-Start") // Ghosts are the only thing that use the latejoin list afaik and it complains if there's nothing in the list.
 			latejoin += src
 			simulated = TRUE
-			return
 		//VOREStation Add end
 		if("JoinLateGateway")
 			latejoin_gateway += loc
 			// CHOMPEdit Start
-			delete_me = 1
+			delete_me = TRUE
 			// CHOMPEdit End
-			return
 		//CHOMPEdit Begin
 		if("JoinLateStationGateway")
 			GLOB.latejoin_gatewaystation += loc
-			delete_me = 1
-			return
+			delete_me = TRUE
 		if("JoinLateSifPlains")
 			GLOB.latejoin_plainspath += loc
-			delete_me = 1
-			return
+			delete_me = TRUE
 		if("JoinLateFuelDepot")
 			GLOB.latejoin_fueldepot += loc
-			delete_me = 1
-			return
+			delete_me = TRUE
 		if("JoinLateTyrVillage")
 			GLOB.latejoin_tyrvillage += loc
-			delete_me = 1
-			return
+			delete_me = TRUE
 		//CHOMPEdit End
-=======
-		//	delete_me = TRUE
-		if("JoinLateGateway")
-			latejoin_gateway += loc
-			latejoin += src				//VOREStation Addition
-			// delete_me = TRUE
->>>>>>> 4f8e9f7ef8 (some more new to init (#17231))
 		if("JoinLateElevator")
 			latejoin_elevator += loc
 			delete_me = TRUE

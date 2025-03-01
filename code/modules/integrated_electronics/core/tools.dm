@@ -278,18 +278,12 @@
 		/obj/item/integrated_electronics/detailer, //CHOMP Edit,
 		)
 
-<<<<<<< HEAD
 //CHOMPAdd, this whole proc. Emp'ing this one bag causes a recursion loop of over 700 emp_act's,
 //Which is enough to trigger byond's recursion level protection
 /obj/item/storage/bag/circuits/emp_act()
 	return	//No
 
 /obj/item/storage/bag/circuits/basic/Initialize()
-	//. = ..() CHOMPEdit
-=======
-/obj/item/storage/bag/circuits/basic/Initialize(mapload)
-	. = ..()
->>>>>>> 4f8e9f7ef8 (some more new to init (#17231))
 	new /obj/item/storage/bag/circuits/mini/arithmetic(src)
 	new /obj/item/storage/bag/circuits/mini/trig(src)
 	new /obj/item/storage/bag/circuits/mini/input(src)
@@ -311,10 +305,9 @@
 	new /obj/item/integrated_electronics/debugger(src) //CHOMPEdit
 	new /obj/item/integrated_electronics/detailer(src) //CHOMPEdit
 	make_exact_fit()
-	. = ..() //CHOMPEdit
+	. = ..()
 
 /obj/item/storage/bag/circuits/all/Initialize()
-	//. = ..() CHOMPEdit
 	new /obj/item/storage/bag/circuits/mini/arithmetic/all(src)
 	new /obj/item/storage/bag/circuits/mini/trig/all(src)
 	new /obj/item/storage/bag/circuits/mini/input/all(src)
@@ -338,7 +331,7 @@
 	new /obj/item/integrated_electronics/detailer(src) //CHOMPEdit
 	new /obj/item/tool/crowbar(src)
 	make_exact_fit()
-	. = ..() //CHOMPEdit
+	. = ..()
 
 /obj/item/storage/bag/circuits/mini
 	name = "circuit box"

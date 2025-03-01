@@ -139,7 +139,6 @@ var/global/list/obj/machinery/telecomms/telecomms_list = list()
 		else
 			for(var/obj/machinery/telecomms/T in telecomms_list)
 				add_link(T)
-<<<<<<< HEAD
 	// CHOMPAdd: TComms humming
 	soundloop = new(list(src), FALSE)
 	if(prob(60)) // 60% chance to change the midloop
@@ -154,9 +153,6 @@ var/global/list/obj/machinery/telecomms/telecomms_list = list()
 			soundloop.mid_length = 30
 	soundloop.start()
 	// CHOMPAdd End
-	. = ..()
-=======
->>>>>>> 4f8e9f7ef8 (some more new to init (#17231))
 
 /obj/machinery/telecomms/Destroy()
 	telecomms_list -= src

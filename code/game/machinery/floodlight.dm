@@ -13,12 +13,8 @@
 	var/open = 0
 	var/brightness_on = 8		//can't remember what the maxed out value is
 
-<<<<<<< HEAD
-/obj/machinery/floodlight/Initialize() //ChompEDIT New --> Initialize
-=======
 /obj/machinery/floodlight/Initialize(mapload)
 	. = ..()
->>>>>>> 4f8e9f7ef8 (some more new to init (#17231))
 	cell = new(src)
 
 /obj/machinery/floodlight/update_icon()

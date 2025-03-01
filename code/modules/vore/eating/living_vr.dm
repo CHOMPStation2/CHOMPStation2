@@ -998,11 +998,7 @@
 		to_chat(src, span_notice("You are not holding anything."))
 		return
 
-<<<<<<< HEAD
 	if(is_type_in_list(I,edible_trash) || adminbus_trash || is_type_in_list(I,edible_tech) && isSynthetic()) // CHOMPEdit adds edible tech for synth
-=======
-	if(is_type_in_list(I,edible_trash) || adminbus_trash)
->>>>>>> 4f8e9f7ef8 (some more new to init (#17231))
 		if(!I.on_trash_eaten(src)) // shows object's rejection message itself
 			return
 		drop_item()
@@ -1010,11 +1006,7 @@
 		updateVRPanel()
 		log_admin("VORE: [src] used Eat Trash to swallow [I].")
 		I.after_trash_eaten(src)
-<<<<<<< HEAD
 		visible_message(span_vwarning("[src] demonstrates the voracious capabilities of their [lowertext(vore_selected.name)] by making [I] disappear!")) //CHOMPedit
-=======
-		visible_message(span_warning("[src] demonstrates their voracious capabilities by swallowing [I] whole!"))
->>>>>>> 4f8e9f7ef8 (some more new to init (#17231))
 		return
 	to_chat(src, span_notice("This snack is too powerful to go down that easily.")) //CHOMPEdit
 	return

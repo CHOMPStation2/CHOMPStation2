@@ -71,13 +71,8 @@
 	update_icon()
 	..()
 
-<<<<<<< HEAD
-/obj/item/melee/shock_maul/Initialize() //CHOMPedit
-	..()
-=======
 /obj/item/melee/shock_maul/Initialize(mapload)
 	. = ..()
->>>>>>> 4f8e9f7ef8 (some more new to init (#17231))
 	update_held_icon()
 
 /obj/item/melee/shock_maul/get_cell()
