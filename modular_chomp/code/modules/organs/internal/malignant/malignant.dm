@@ -457,7 +457,7 @@
 	if(prob(2))
 		var/obj/item/organ/O = owner.organs_by_name[parent_organ]
 		if(thalers < 100)
-
+			pass()
 		else if(thalers < 500)
 			owner.custom_pain("<span class='warning'>You feel bloated.</span>",1,TRUE)
 			owner.custom_emote(VISIBLE_MESSAGE, "winces slightly.")
