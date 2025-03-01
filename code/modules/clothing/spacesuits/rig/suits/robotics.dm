@@ -32,7 +32,14 @@
 	name = "suit helmet"
 
 /obj/item/clothing/suit/space/rig/advsuit
+<<<<<<< HEAD
 	name = "Hardsuit" //CHOMPEDIT: Replcing Void with Hard to fit the naming convention. Specced down hardsuit for comfort
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS|ARMS|HANDS|FEET
 	heat_protection =	 UPPER_TORSO|LOWER_TORSO|LEGS|ARMS|HANDS|FEET
 	cold_protection =	 UPPER_TORSO|LOWER_TORSO|LEGS|ARMS|HANDS|FEET
+=======
+	name = "voidsuit"
+	body_parts_covered = CHEST|LEGS|ARMS|HANDS|FEET
+	heat_protection =	 CHEST|LEGS|ARMS|HANDS|FEET
+	cold_protection =	 CHEST|LEGS|ARMS|HANDS|FEET
+>>>>>>> 6a157d8614 (Rig glovefix and Clothing protection fix (#17118))

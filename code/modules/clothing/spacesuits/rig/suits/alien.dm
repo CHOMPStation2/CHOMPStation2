@@ -94,6 +94,7 @@
 	species_restricted = list(SPECIES_VOX)
 
 /obj/item/clothing/gloves/gauntlets/rig/vox
+	name = DEVELOPER_WARNING_NAME
 	siemens_coefficient = 0
 	species_restricted = list(SPECIES_VOX)
 	sprite_sheets = list(
@@ -137,6 +138,7 @@
 		/obj/item/rig_module/power_sink,
 		/obj/item/rig_module/self_destruct
 		)
+<<<<<<< HEAD
 
 /obj/item/rig/vox/civilian
 	name = "matte alien control module"
@@ -152,3 +154,5 @@
 
 	initial_modules = list(
 		)
+=======
+>>>>>>> 6a157d8614 (Rig glovefix and Clothing protection fix (#17118))

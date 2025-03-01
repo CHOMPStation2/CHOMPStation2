@@ -17,7 +17,6 @@
 	desc = "Seems like a wetsuit with reinforced plating seamlessly attached to it. Very chic."
 	armor = list(melee = 20, bullet = 20, laser = 20, energy = 50, bomb = 50, bio = 100, rad = 50)
 	allowed = list(/obj/item/flashlight,/obj/item/tank,/obj/item/storage/bag/ore,/obj/item/t_scanner,/obj/item/pickaxe, /obj/item/rcd)
-	heat_protection = UPPER_TORSO|LOWER_TORSO|LEGS|FEET|ARMS|HANDS
 	max_heat_protection_temperature = SPACE_SUIT_MAX_HEAT_PROTECTION_TEMPERATURE
 	species_restricted = list(SPECIES_SKRELL,SPECIES_HUMAN)
 
@@ -36,7 +35,6 @@
 	allowed = list(/obj/item/gun,/obj/item/ammo_magazine,/obj/item/ammo_casing,/obj/item/melee/baton,/obj/item/melee/energy/sword,/obj/item/handcuffs,/obj/item/tank)
 	armor = list(melee = 60, bullet = 50, laser = 40,energy = 15, bomb = 30, bio = 100, rad = 50)
 	siemens_coefficient = 0.2
-	heat_protection = UPPER_TORSO|LOWER_TORSO|LEGS|FEET|ARMS|HANDS
 	max_heat_protection_temperature = SPACE_SUIT_MAX_HEAT_PROTECTION_TEMPERATURE
 	species_restricted = list(SPECIES_VOX)
 
@@ -95,6 +93,7 @@
 /obj/item/clothing/suit/space/vox/medic
 	name = "alien armour"
 	icon_state = "vox-medic"
+<<<<<<< HEAD
 	item_state = "vox-medic"
 	desc = "An almost organic looking nonhuman pressure suit."
 
@@ -465,3 +464,6 @@
 	desc = "A very alien-looking helmet for Nanotrasen-hired Vox. This one is for security aligned vox."
 	pressure_resistance = 40 * ONE_ATMOSPHERE
 	flash_protection = FLASH_PROTECTION_MAJOR
+=======
+	desc = "An almost organic looking nonhuman pressure suit."
+>>>>>>> 6a157d8614 (Rig glovefix and Clothing protection fix (#17118))
