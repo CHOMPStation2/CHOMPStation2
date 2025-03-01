@@ -181,7 +181,7 @@ It also makes it so a ghost wont know where all the goodies/mobs are.
 
 
 /obj/structure/mob_spawner/scanner/proc/CheckProximity(atom/movable/AM,turf/new_loc)
-	if(AM in mobs_in_range && (!AM || get_dist(src,new_loc) > range))
+	if((AM in mobs_in_range) && (!AM || get_dist(src,new_loc) > range))
 		mobs_in_range -= AM
 
 //CHOMPEdit End

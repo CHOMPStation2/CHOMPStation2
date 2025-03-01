@@ -151,7 +151,7 @@
 /obj/machinery/chemical_synthesizer/proc/add_cartridge(obj/item/reagent_containers/chem_disp_cartridge/C, mob/user)
 	if(!panel_open)
 		if(user)
-			to_chat(user, span_warning("\The panel is locked!"))
+			to_chat(user, span_warning("The panel is locked!"))
 		return
 
 	if(!istype(C))

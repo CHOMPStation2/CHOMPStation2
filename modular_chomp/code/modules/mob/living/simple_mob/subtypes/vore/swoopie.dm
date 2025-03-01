@@ -302,7 +302,7 @@
 
 /mob/living/simple_mob/vore/aggressive/corrupthound/swoopie/verb/change_settings()
 	set name = "Change Settings"
-	set desc = "Change \the [src]'s settings"
+	set desc = "Change the swoopie's settings"
 	set category = "IC"
 	set src in oview(1)
 	if(!has_AI() || !IIsAlly(usr))

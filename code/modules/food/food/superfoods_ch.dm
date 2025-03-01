@@ -207,7 +207,7 @@
 		var/obj/item/thecake_layer/C = W
 		if(C.layer_stage == 5)
 			for(var/mob/O in view(src, null))
-				O.show_message(span_warning("It has been done! \The Infinity Cake has been assembled!"),1)
+				O.show_message(span_warning("It has been done! The Infinity Cake has been assembled!"),1)
 			qdel(W)
 			stage++
 			desc = desclist[stage]
