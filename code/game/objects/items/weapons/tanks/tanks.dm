@@ -661,10 +661,6 @@ var/list/global/tank_gauge_cache = list()
 		tank.update_icon()
 		tank.cut_overlay("bomb_assembly")
 
-<<<<<<< HEAD
-// CHOMPEdit Start
-=======
->>>>>>> 55a61bc38f (up ports incorp and proximity handling (#17106))
 /obj/item/tankassemblyproxy/HasProximity(turf/T, datum/weakref/WF, old_loc)
 	SIGNAL_HANDLER
 	if(isnull(WF))
@@ -674,20 +670,11 @@ var/list/global/tank_gauge_cache = list()
 		log_debug("DEBUG: HasProximity called without reference on [src].")
 		return
 	assembly?.HasProximity(T, WEAKREF(AM), old_loc)
-<<<<<<< HEAD
-// CHOMPEdit End
-/obj/item/tankassemblyproxy/Moved(old_loc, direction, forced)
-	if(isturf(old_loc))
-		unsense_proximity(callback = TYPE_PROC_REF(/atom,HasProximity), center = old_loc) // CHOMPEdit
-	if(isturf(loc))
-		sense_proximity(callback = TYPE_PROC_REF(/atom,HasProximity)) // CHOMPEdit
-=======
 
 /obj/item/tankassemblyproxy/Moved(old_loc, direction, forced)
 	if(isturf(old_loc))
 		unsense_proximity(callback = TYPE_PROC_REF(/atom,HasProximity), center = old_loc)
 	if(isturf(loc))
 		sense_proximity(callback = TYPE_PROC_REF(/atom,HasProximity))
->>>>>>> 55a61bc38f (up ports incorp and proximity handling (#17106))
 
 #undef TANK_IDEAL_PRESSURE

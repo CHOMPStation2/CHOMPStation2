@@ -32,15 +32,8 @@
 		return 0
 
 	var/mob/living/pred = hit_atom
-<<<<<<< HEAD
-	// CHOMPAdd Start
 	if(pred.is_incorporeal())
 		return
-	// CHOMPAdd End
-=======
-	if(pred.is_incorporeal())
-		return
->>>>>>> 55a61bc38f (up ports incorp and proximity handling (#17106))
 	var/safe_fall = FALSE
 	if(pred.softfall || (isanimal(pred) && pred.mob_size <= MOB_SMALL))		// TODO: add ability for mob below to be 'soft' and cushion fall
 		safe_fall = TRUE

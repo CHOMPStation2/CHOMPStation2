@@ -71,11 +71,6 @@ when portals are shortly lived, or when portals are made to be obvious with spec
 
 // Called when something touches the portal, and usually teleports them to the other side.
 /obj/effect/map_effect/portal/Crossed(atom/movable/AM)
-<<<<<<< HEAD
-	/*if(AM.is_incorporeal())
-		return CHOMPEdit: This is why phased critters couldn't enter z transits */
-=======
->>>>>>> 55a61bc38f (up ports incorp and proximity handling (#17106))
 	..()
 	if(!AM)
 		return

@@ -32,12 +32,6 @@
 	update_icon()
 	return secured
 
-<<<<<<< HEAD
-// CHOMPEdit Start
-/obj/item/assembly/prox_sensor/HasProximity(turf/T, datum/weakref/WF, old_loc)
-	SIGNAL_HANDLER
-	if(isnull(WF))
-=======
 /obj/item/assembly/prox_sensor/HasProximity(turf/T, datum/weakref/WF, old_loc)
 	SIGNAL_HANDLER
 	if(isnull(WF))
@@ -45,13 +39,7 @@
 	var/atom/movable/AM = WF.resolve()
 	if(isnull(AM))
 		log_debug("DEBUG: HasProximity called without reference on [src].")
->>>>>>> 55a61bc38f (up ports incorp and proximity handling (#17106))
 		return
-	var/atom/movable/AM = WF.resolve()
-	if(isnull(AM))
-		log_debug("DEBUG: HasProximity called without reference on [src].")
-		return
-// CHOMPEdit End
 	if (istype(AM, /obj/effect/beam))
 		return
 	if (!isobserver(AM) && AM.move_speed < 12)

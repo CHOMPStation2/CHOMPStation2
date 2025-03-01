@@ -155,11 +155,7 @@
 // Used to be for the PROXMOVE flag, but that was terrible, so instead it's just here as a stub for
 // all the atoms that still have the proc, but get events other ways.
 /atom/proc/HasProximity(turf/T, datum/weakref/WF, old_loc)
-<<<<<<< HEAD
-	SIGNAL_HANDLER // CHOMPAdd
-=======
 	SIGNAL_HANDLER
->>>>>>> 55a61bc38f (up ports incorp and proximity handling (#17106))
 	return
 
 //Register listeners on turfs in a certain range

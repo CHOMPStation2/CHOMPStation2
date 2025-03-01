@@ -21,11 +21,7 @@
 /obj/machinery/containment_field/Initialize()
 	. = ..()
 	shockdirs = list(turn(dir,90),turn(dir,-90))
-<<<<<<< HEAD
-	sense_proximity(callback = TYPE_PROC_REF(/atom,HasProximity)) // CHOMPEdit
-=======
 	sense_proximity(callback = TYPE_PROC_REF(/atom,HasProximity))
->>>>>>> 55a61bc38f (up ports incorp and proximity handling (#17106))
 
 /obj/machinery/containment_field/set_dir(new_dir)
 	. = ..()
@@ -56,10 +52,6 @@
 		return
 	shock(L)
 
-<<<<<<< HEAD
-// CHOMPEdit Start
-=======
->>>>>>> 55a61bc38f (up ports incorp and proximity handling (#17106))
 /obj/machinery/containment_field/HasProximity(turf/T, datum/weakref/WF, old_loc)
 	SIGNAL_HANDLER
 	if(isnull(WF))
@@ -68,12 +60,7 @@
 	if(isnull(AM))
 		log_debug("DEBUG: HasProximity called without reference on [src].")
 		return
-<<<<<<< HEAD
-// CHOMPEdit End
-	if(!isliving(AM) || AM:incorporeal_move)
-=======
 	if(!isliving(AM) || AM.is_incorporeal())
->>>>>>> 55a61bc38f (up ports incorp and proximity handling (#17106))
 		return 0
 	if(!(get_dir(src,AM) in shockdirs))
 		return 0

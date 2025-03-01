@@ -390,15 +390,8 @@ emp_act
 
 //this proc handles being hit by a thrown atom
 /mob/living/carbon/human/hitby(atom/movable/AM as mob|obj,var/speed = THROWFORCE_SPEED_DIVISOR)
-<<<<<<< HEAD
-	// CHOMPADD Start
 	if(src.is_incorporeal())
 		return
-	// CHOMPAdd End
-=======
-	if(src.is_incorporeal())
-		return
->>>>>>> 55a61bc38f (up ports incorp and proximity handling (#17106))
 //	if(buckled && buckled == AM)
 //		return // Don't get hit by the thing we're buckled to.
 
@@ -440,11 +433,7 @@ emp_act
 				I.forceMove(vore_selected)
 				return
 		if(in_throw_mode && speed <= THROWFORCE_SPEED_DIVISOR)	//empty active hand and we're in throw mode
-<<<<<<< HEAD
-			if(canmove && !restrained() && !src.is_incorporeal()) // CHOMPADD - No hands for the phased ones.
-=======
 			if(canmove && !restrained() && !src.is_incorporeal())
->>>>>>> 55a61bc38f (up ports incorp and proximity handling (#17106))
 				if(isturf(O.loc))
 					if(can_catch(O))
 						put_in_active_hand(O)

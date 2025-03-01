@@ -9,11 +9,7 @@
 	if(istype(mover, /obj/item/projectile))
 		var/obj/item/projectile/P = mover
 		return !P.can_hit_target(src, P.permutated, src == P.original, TRUE)
-<<<<<<< HEAD
-	return (!mover.density || !density || lying || is_incorporeal()) // CHOMPEdit
-=======
 	return (!mover.density || !density || lying || is_incorporeal())
->>>>>>> 55a61bc38f (up ports incorp and proximity handling (#17106))
 
 /mob/CanZASPass(turf/T, is_zone)
 	return ATMOS_PASS_YES

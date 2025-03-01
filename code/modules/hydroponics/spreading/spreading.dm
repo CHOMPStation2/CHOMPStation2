@@ -112,11 +112,7 @@
 	name = seed.display_name
 	max_health = round(seed.get_trait(TRAIT_ENDURANCE)/2)
 	if(seed.get_trait(TRAIT_SPREAD)==2)
-<<<<<<< HEAD
-		sense_proximity(callback = TYPE_PROC_REF(/atom,HasProximity)) // Grabby - CHOMPEdit
-=======
 		sense_proximity(callback = TYPE_PROC_REF(/atom,HasProximity)) // Grabby
->>>>>>> 55a61bc38f (up ports incorp and proximity handling (#17106))
 		max_growth = VINE_GROWTH_STAGES
 		growth_threshold = max_health/VINE_GROWTH_STAGES
 		icon = 'icons/obj/hydroponics_vines.dmi'

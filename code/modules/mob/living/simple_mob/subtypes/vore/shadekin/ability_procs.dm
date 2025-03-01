@@ -46,12 +46,7 @@
 
 		// change
 		ability_flags &= ~AB_PHASE_SHIFTED
-<<<<<<< HEAD
-		throwpass = FALSE // CHOMPAdd
-		mouse_opacity = 1
-=======
 		throwpass = FALSE
->>>>>>> 55a61bc38f (up ports incorp and proximity handling (#17106))
 		name = real_name
 		for(var/obj/belly/B as anything in vore_organs)
 			B.escapable = initial(B.escapable)
@@ -119,12 +114,7 @@
 
 		// change
 		ability_flags |= AB_PHASE_SHIFTED
-<<<<<<< HEAD
-		throwpass = TRUE // CHOMPAdd
-		mouse_opacity = 0
-=======
 		throwpass = TRUE
->>>>>>> 55a61bc38f (up ports incorp and proximity handling (#17106))
 		custom_emote(1,"phases out!")
 		real_name = name
 		name = "Something"

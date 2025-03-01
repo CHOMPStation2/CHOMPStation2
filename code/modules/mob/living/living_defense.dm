@@ -263,15 +263,8 @@
 
 //this proc handles being hit by a thrown atom
 /mob/living/hitby(atom/movable/AM as mob|obj,var/speed = THROWFORCE_SPEED_DIVISOR)//Standardization and logging -Sieve
-<<<<<<< HEAD
-	// CHOMPAdd Start
 	if(is_incorporeal())
 		return
-	// CHOMPAdd End
-=======
-	if(is_incorporeal())
-		return
->>>>>>> 55a61bc38f (up ports incorp and proximity handling (#17106))
 	if(istype(AM,/obj/))
 		var/obj/O = AM
 		if(stat != DEAD && istype(O,/obj/item) && trash_catching && vore_selected) //ported from chompstation

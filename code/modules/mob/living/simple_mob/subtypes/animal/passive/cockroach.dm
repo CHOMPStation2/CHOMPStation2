@@ -53,11 +53,7 @@
 	if(ismob(AM))
 		if(isliving(AM))
 			var/mob/living/A = AM
-<<<<<<< HEAD
-			if(A.is_incorporeal()) // CHOMPADD - Bad kin, no squishing the roach
-=======
 			if(A.is_incorporeal()) // Bad kin, no squishing the roach
->>>>>>> 55a61bc38f (up ports incorp and proximity handling (#17106))
 				return
 			if(A.mob_size > MOB_SMALL)
 				if(prob(squish_chance))

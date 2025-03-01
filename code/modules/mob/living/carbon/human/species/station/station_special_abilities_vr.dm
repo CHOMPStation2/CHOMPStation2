@@ -1263,11 +1263,7 @@
 	set category = "Abilities.Vore"
 	set desc = "Grab a target with any of your appendages!"
 
-<<<<<<< HEAD
-	if(stat || paralysis || weakened || stunned || world.time < last_special || is_incorporeal()) //No tongue flicking while stunned. // CHOMPEdit
-=======
 	if(stat || paralysis || weakened || stunned || world.time < last_special || is_incorporeal()) //No tongue flicking while stunned.
->>>>>>> 55a61bc38f (up ports incorp and proximity handling (#17106))
 		to_chat(src, span_warning("You can't do that in your current state."))
 		return
 
