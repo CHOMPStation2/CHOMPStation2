@@ -573,6 +573,7 @@
 
 		return TRUE
 	else
+		return FALSE
 
 /mob/living/carbon/human/proc/clear_dark_maws()
 	set name = "Dispel dark maws"
