@@ -77,20 +77,6 @@ GLOBAL_LIST_EMPTY(damage_icon_parts) //see UpdateDamageIcon()
 	update_icon_special()
 
 /mob/living/carbon/human/update_transform(var/instant = FALSE)
-	/* VOREStation Edit START
-	// First, get the correct size.
-	var/desired_scale_x = icon_scale_x
-	var/desired_scale_y = icon_scale_y
-
-	desired_scale_x *= species.icon_scale_x
-	desired_scale_y *= species.icon_scale_y
-
-	for(var/datum/modifier/M in modifiers)
-		if(!isnull(M.icon_scale_x_percent))
-			desired_scale_x *= M.icon_scale_x_percent
-		if(!isnull(M.icon_scale_y_percent))
-			desired_scale_y *= M.icon_scale_y_percent
-	*/
 	var/desired_scale_x = size_multiplier * icon_scale_x
 	var/desired_scale_y = size_multiplier * icon_scale_y
 	desired_scale_x *= species.icon_scale_x
@@ -102,8 +88,12 @@ GLOBAL_LIST_EMPTY(damage_icon_parts) //see UpdateDamageIcon()
 	appearance_flags |= PIXEL_SCALE
 	if(fuzzy)
 		appearance_flags &= ~PIXEL_SCALE
+<<<<<<< HEAD
 		center_offset = 0 //CHOMPEdit
 	//VOREStation Edit End
+=======
+		center_offset = 0
+>>>>>>> 83831f2555 (Makes the game no longer try to see if your heart is vital before letting you rip it out of yourself (and a few others) (#17159))
 
 	// Regular stuff again.
 	var/matrix/M = matrix()
@@ -129,13 +119,16 @@ GLOBAL_LIST_EMPTY(damage_icon_parts) //see UpdateDamageIcon()
 			else
 				M.Translate((1 / desired_scale_x * 4) - (desired_scale_x * cent_offset), 0)
 				M.Turn(90)
+<<<<<<< HEAD
 		// CHOMPEdit End
+=======
+>>>>>>> 83831f2555 (Makes the game no longer try to see if your heart is vital before letting you rip it out of yourself (and a few others) (#17159))
 		layer = MOB_LAYER -0.01 // Fix for a byond bug where turf entry order no longer matters
 	else
-		M.Scale(desired_scale_x, desired_scale_y)//VOREStation Edit
+		M.Scale(desired_scale_x, desired_scale_y)
 		M.Translate(cent_offset * desired_scale_x, (vis_height/2)*(desired_scale_y-1))
-		if(tail_style?.can_loaf) // VOREStation Edit: Taur Loafing
-			update_tail_showing() // VOREStation Edit: Taur Loafing
+		if(tail_style?.can_loaf)
+			update_tail_showing()
 		layer = MOB_LAYER // Fix for a byond bug where turf entry order no longer matters
 
 	if(instant)
