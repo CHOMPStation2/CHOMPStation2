@@ -278,6 +278,7 @@
 		/obj/item/integrated_electronics/detailer, //CHOMP Edit,
 		)
 
+<<<<<<< HEAD
 //CHOMPAdd, this whole proc. Emp'ing this one bag causes a recursion loop of over 700 emp_act's,
 //Which is enough to trigger byond's recursion level protection
 /obj/item/storage/bag/circuits/emp_act()
@@ -285,6 +286,10 @@
 
 /obj/item/storage/bag/circuits/basic/Initialize()
 	//. = ..() CHOMPEdit
+=======
+/obj/item/storage/bag/circuits/basic/Initialize(mapload)
+	. = ..()
+>>>>>>> 4f8e9f7ef8 (some more new to init (#17231))
 	new /obj/item/storage/bag/circuits/mini/arithmetic(src)
 	new /obj/item/storage/bag/circuits/mini/trig(src)
 	new /obj/item/storage/bag/circuits/mini/input(src)

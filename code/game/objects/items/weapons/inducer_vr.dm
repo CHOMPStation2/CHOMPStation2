@@ -257,12 +257,20 @@
 
 	var/mob/living/carbon/human/hume
 
+<<<<<<< HEAD
 /obj/item/cell/standin/New(newloc, var/mob/living/carbon/human/H)
 	..()
 	if(istype(H, /mob/living/carbon/human))//ChompEDIT - fix a runtime
 		hume = H
 		charge = H.nutrition
 		maxcharge = initial(H.nutrition)
+=======
+/obj/item/cell/standin/Initialize(mapload, var/mob/living/carbon/human/H)
+	. = ..()
+	hume = H
+	charge = H.nutrition
+	maxcharge = initial(H.nutrition)
+>>>>>>> 4f8e9f7ef8 (some more new to init (#17231))
 
 	QDEL_IN(src, 20 SECONDS)
 
