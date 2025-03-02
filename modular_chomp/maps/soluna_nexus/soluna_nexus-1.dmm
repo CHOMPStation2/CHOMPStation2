@@ -27673,7 +27673,6 @@
 /turf/simulated/floor/tiled/dark,
 /area/rnd/PA_Chamber)
 "hCr" = (
-/obj/item/clothing/head/helmet/space/vox/civ/chef,
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/tiled/white{
 	nitrogen = 101.3;
@@ -62801,7 +62800,6 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/quartermaster/Supply_Ship_Bay)
 "ucW" = (
-/obj/item/clothing/suit/space/vox/civ/chef,
 /turf/simulated/floor/plating{
 	nitrogen = 101.3;
 	oxygen = 0;
