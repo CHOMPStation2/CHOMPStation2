@@ -26,7 +26,7 @@
 	on_removed()
 	return ..()
 
-/obj/item/clothing/accessory/proc/get_inv_overlay()
+/obj/item/clothing/accessory/proc/get_inv_overlay() //Note: This is currently working. Good.
 	if(!inv_overlay)
 		var/tmp_icon_state = "[overlay_state? "[overlay_state]" : "[icon_state]"]"
 		if(icon_override)
@@ -44,10 +44,17 @@
 	if(!istype(loc,/obj/item/clothing/))	//don't need special handling if it's worn as normal item.
 		return
 	var/tmp_icon_state = "[overlay_state? "[overlay_state]" : "[icon_state]"]"
+	var/mob/living/carbon/human/H
 	if(ishuman(has_suit.loc))
+<<<<<<< HEAD
 		wearer = has_suit.loc
 	else
 		wearer = null
+=======
+		H = has_suit.loc
+	if(!H || !ishuman(H))
+		return
+>>>>>>> f577c148a2 (fixes accessories not showing (#17253))
 
 	if(istype(loc,/obj/item/clothing/under))
 		var/obj/item/clothing/under/C = loc
