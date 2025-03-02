@@ -284,7 +284,6 @@
 	return	//No
 
 /obj/item/storage/bag/circuits/basic/Initialize()
-	//. = ..() CHOMPEdit
 	new /obj/item/storage/bag/circuits/mini/arithmetic(src)
 	new /obj/item/storage/bag/circuits/mini/trig(src)
 	new /obj/item/storage/bag/circuits/mini/input(src)
@@ -306,10 +305,9 @@
 	new /obj/item/integrated_electronics/debugger(src) //CHOMPEdit
 	new /obj/item/integrated_electronics/detailer(src) //CHOMPEdit
 	make_exact_fit()
-	. = ..() //CHOMPEdit
+	. = ..()
 
 /obj/item/storage/bag/circuits/all/Initialize()
-	//. = ..() CHOMPEdit
 	new /obj/item/storage/bag/circuits/mini/arithmetic/all(src)
 	new /obj/item/storage/bag/circuits/mini/trig/all(src)
 	new /obj/item/storage/bag/circuits/mini/input/all(src)
@@ -333,7 +331,7 @@
 	new /obj/item/integrated_electronics/detailer(src) //CHOMPEdit
 	new /obj/item/tool/crowbar(src)
 	make_exact_fit()
-	. = ..() //CHOMPEdit
+	. = ..()
 
 /obj/item/storage/bag/circuits/mini
 	name = "circuit box"

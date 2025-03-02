@@ -28,14 +28,13 @@
 	var/drops_debris = 1
 	var/named_from_material = 1 //YW EDIT, Does it prepend the material's name to it's name?
 
-/obj/item/material/New(var/newloc, var/material_key)
-	..(newloc)
+/obj/item/material/Initialize(mapload, var/material_key)
+	. = ..()
 	if(!material_key)
 		material_key = default_material
 	set_material(material_key)
 	if(!material)
-		qdel(src)
-		return
+		return INITIALIZE_HINT_QDEL
 
 	matter = material.get_matter()
 	if(matter.len)
