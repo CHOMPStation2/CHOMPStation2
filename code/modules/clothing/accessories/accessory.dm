@@ -45,9 +45,20 @@
 		return
 	var/tmp_icon_state = "[overlay_state? "[overlay_state]" : "[icon_state]"]"
 	if(ishuman(has_suit.loc))
+<<<<<<< HEAD
 		wearer = has_suit.loc
 	else
 		wearer = null
+=======
+		wearer = WEAKREF(has_suit.loc)
+	else
+		wearer = null
+
+	wearer?.resolve()
+	var/mob/living/carbon/human/H = wearer
+	if(!ishuman(H))
+		return
+>>>>>>> efe9dd1dcf (Revert "fixes accessories not showing (#17253)" (#17254))
 
 	if(istype(loc,/obj/item/clothing/under))
 		var/obj/item/clothing/under/C = loc
