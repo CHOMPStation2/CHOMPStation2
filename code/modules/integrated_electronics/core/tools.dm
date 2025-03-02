@@ -283,7 +283,7 @@
 /obj/item/storage/bag/circuits/emp_act()
 	return	//No
 
-/obj/item/storage/bag/circuits/basic/Initialize()
+/obj/item/storage/bag/circuits/basic/Initialize(mapload)
 	new /obj/item/storage/bag/circuits/mini/arithmetic(src)
 	new /obj/item/storage/bag/circuits/mini/trig(src)
 	new /obj/item/storage/bag/circuits/mini/input(src)
