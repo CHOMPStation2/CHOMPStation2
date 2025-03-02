@@ -35,7 +35,6 @@
 		if(H.can_feel_pain())
 			to_chat(H, span_danger("You feel the hypodermic needles as you slide \the [src] off!"))
 			H.custom_pain("Your hands hurt like hell!",1)
-		wearer = null
 
 /obj/item/clothing/gloves/regen/Initialize(mapload)
 	. = ..()

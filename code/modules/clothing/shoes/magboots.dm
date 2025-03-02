@@ -71,14 +71,15 @@
 
 /obj/item/clothing/shoes/magboots/dropped(mob/user)
 	..()
-
-
-	if(ishuman(H) && shoes)
-		var/mob/living/carbon/human/H = user
-		if(!H.equip_to_slot_if_possible(shoes, slot_shoes))
-			shoes.forceMove(get_turf(src))
-		shoes = null
 	wearer = null
+
+	if(!ishuman(H) || !shoes)
+		return
+
+	var/mob/living/carbon/human/H = user
+	if(!H.equip_to_slot_if_possible(shoes, slot_shoes))
+		shoes.forceMove(get_turf(src))
+	shoes = null
 
 /obj/item/clothing/shoes/magboots/examine(mob/user)
 	. = ..()
