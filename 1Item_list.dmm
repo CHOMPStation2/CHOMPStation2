@@ -8706,7 +8706,6 @@
 	},
 /area/survivalpod)
 "cCu" = (
-/obj/item/clothing/head/helmet/space/vox/civ/chef,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -26360,7 +26359,6 @@
 	},
 /area/survivalpod)
 "hKA" = (
-/obj/item/clothing/suit/space/vox/civ/chef,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
