@@ -1,7 +1,11 @@
 /client/proc/modify_robot(var/mob/living/silicon/robot/target in silicon_mob_list)
 	set name = "Modify Robot"
 	set desc = "Allows to add or remove modules to/from robots."
+<<<<<<< HEAD
 	set category = "Admin.Silicon" //CHOMPEdit
+=======
+	set category = "Admin.Silicon"
+>>>>>>> 1a19de6ca3 (More compat (#17228))
 	if(!check_rights(R_ADMIN|R_FUN|R_VAREDIT|R_EVENT))
 		return
 
@@ -13,7 +17,7 @@
 /datum/eventkit/modify_robot
 	var/mob/living/silicon/robot/target
 	var/mob/living/silicon/robot/source
-	var/mob/living/silicon/ai/selected_ai
+	var/selected_ai
 	var/ion_law	= "IonLaw"
 	var/zeroth_law = "ZerothLaw"
 	var/inherent_law = "InherentLaw"
@@ -144,7 +148,7 @@
 			continue
 		active_ais += list(list("displayText" = "[ai]", "value" = "\ref[ai]"))
 	.["active_ais"] = active_ais
-	.["selected_ai"] = selected_ai ? selected_ai.name : null
+	.["selected_ai"] = selected_ai ? selected_ai : null
 
 	var/list/channels = list()
 	for(var/ch_name in target.law_channels())
@@ -785,4 +789,4 @@
 	return (is_admin(user) && !target.is_slaved()) || is_special_role(user)
 
 /datum/eventkit/modify_robot/proc/is_special_role(var/mob/user)
-	return user.mind.special_role ? TRUE : FALSE
+	return user.mind?.special_role ? TRUE : FALSE
