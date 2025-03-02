@@ -62799,13 +62799,6 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/quartermaster/Supply_Ship_Bay)
-"ucW" = (
-/turf/simulated/floor/plating{
-	nitrogen = 101.3;
-	oxygen = 0;
-	name = "Nitrogen plating"
-	},
-/area/maintenance/ab_Kitchen)
 "udg" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/floor_decal/industrial/arrows/yellow,
@@ -111631,7 +111624,7 @@ qTI
 lLo
 rBj
 pmy
-ucW
+mGQ
 mGQ
 fpP
 ggN
