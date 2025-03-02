@@ -291,7 +291,6 @@
 	has_items = list(
 		/obj/item/clothing/accessory/fluff/vasharr_armlets,
 		/obj/item/clothing/accessory/fluff/vasharr_pendant,
-		/obj/item/clothing/suit/storage/explorer/engineering/command/fluff/vasharr,
 		/obj/item/clothing/under/explorer/utility/command/engineering/fluff/vasharr)
 
 //FrenziedVorcha / Defcunt

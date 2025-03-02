@@ -54,7 +54,9 @@
 	sensor_mode = 3
 	icon = 'icons/vore/nullsuits.dmi'
 	icon_override = 'icons/vore/nullsuits.dmi'
-	icon_state = ""
+	icon_state = "nullsuit_civ" //Default
+	item_state = "nullsuit_civ"
+	worn_state = "nullsuit_civ"
 	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0)
 
 /obj/item/clothing/under/rank/nullsuit/civ

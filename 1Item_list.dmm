@@ -15213,7 +15213,6 @@
 	},
 /area/survivalpod)
 "ewW" = (
-/obj/item/clothing/suit/storage/explorer/supply,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -17410,7 +17409,6 @@
 	},
 /area/survivalpod)
 "fgv" = (
-/obj/item/clothing/suit/storage/explorer/security,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -27522,7 +27520,6 @@
 	},
 /area/survivalpod)
 "ibP" = (
-/obj/item/clothing/suit/storage/explorer/security/command,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -33295,7 +33292,6 @@
 	},
 /area/survivalpod)
 "jKv" = (
-/obj/item/clothing/suit/storage/explorer/medical/command,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -61006,7 +61002,6 @@
 	},
 /area/survivalpod)
 "rTs" = (
-/obj/item/clothing/suit/storage/explorer/command,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -63598,7 +63593,6 @@
 	},
 /area/survivalpod)
 "sHl" = (
-/obj/item/clothing/suit/storage/explorer/engineering/command/fluff/vasharr,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -64038,7 +64032,6 @@
 	},
 /area/survivalpod)
 "sOg" = (
-/obj/item/clothing/suit/storage/explorer/engineering,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -77338,7 +77331,6 @@
 	},
 /area/survivalpod)
 "wHQ" = (
-/obj/item/clothing/suit/storage/explorer/engineering/command,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},

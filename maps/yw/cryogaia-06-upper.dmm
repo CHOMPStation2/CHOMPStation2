@@ -3606,7 +3606,6 @@
 	dir = 6
 	},
 /obj/structure/closet,
-/obj/item/clothing/suit/storage/explorer/engineering,
 /obj/item/clothing/under/explorer/utility/engineering,
 /obj/item/clothing/under/explorer/utility/engineering,
 /obj/item/clothing/shoes/boots/winter/explorer,
@@ -3913,8 +3912,6 @@
 /area/cryogaia/station/explorer_prep)
 "iQ" = (
 /obj/structure/closet,
-/obj/item/clothing/suit/storage/explorer/security,
-/obj/item/clothing/suit/storage/explorer/security,
 /obj/item/clothing/under/explorer/utility/security,
 /obj/item/clothing/under/explorer/utility/security,
 /obj/item/clothing/shoes/boots/winter/explorer,

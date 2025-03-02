@@ -870,13 +870,6 @@
 	ckeywhitelist = list("radiantflash")
 	character_name = list("Vasharr Zahirn")
 
-/datum/gear/fluff/vasharr_coat
-	path = /obj/item/clothing/suit/storage/explorer/engineering/command/fluff/vasharr
-	display_name = "Cartographer Engineering Command Jacket"
-	description = "A Engineering Command Jacket from the Galactic Cartographers Society, A group of intrepid explorers. It has gold buttons and orange trim."
-	ckeywhitelist = list("radiantflash")
-	character_name = list("Vasharr Zahirn")
-
 //roguenoob
 //Basir Fahim
 /datum/gear/fluff/basir_1

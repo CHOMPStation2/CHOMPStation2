@@ -77,7 +77,7 @@
 	desc = "A skirted Brig Physician uniform. It has both security and medical protection."
 	name = "brig physician's jumpskirt"
 	icon = 'icons/mob/uniform_yw.dmi'
-	icon_state = "brigphysicianf_s"
+	icon_state = "brigphysicianf"
 	icon_override = 'icons/mob/uniform_yw.dmi'
 	item_state = "brigphysicianf"
 	permeability_coefficient = 0.50

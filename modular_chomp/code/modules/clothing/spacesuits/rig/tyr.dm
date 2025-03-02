@@ -18,6 +18,7 @@
 /obj/item/clothing/suit/space/rig/ch/tyrprecursor
 	name = "protective vest"
 	icon = 'icons/obj/clothing/spacesuits_ch.dmi'
+	icon_state = "tyrprecursor_rig"
 	desc = "Light weight but oddly protective plating."
 	var/shieldhealth = 75
 	var/cooldown = null // world.time of when this was last triggered.
@@ -57,6 +58,7 @@
 /obj/item/clothing/head/helmet/space/rig/ch/tyrprecursor
 	name = "helmet"
 	icon = 'icons/obj/clothing/hats_ch.dmi'
+	icon_state = "tyrprecursor_rig"
 	desc = "A protective dome for your head."
 
 	var/shieldhealth = 75
@@ -97,6 +99,7 @@
 /obj/item/clothing/gloves/gauntlets/rig/ch/tyrprecursor
 	name = "gloves"
 	icon = 'icons/obj/clothing/gloves_ch.dmi'
+	icon_state = "tyrprecursor_rig"
 	desc = "Gloves created with alien tech"
 	var/shieldhealth = 75
 	var/cooldown = null // world.time of when this was last triggered.
@@ -136,6 +139,7 @@
 /obj/item/clothing/shoes/magboots/rig/ch/tyrprecursor
 	name = "boots"
 	icon = 'icons/obj/clothing/shoes_ch.dmi'
+	icon_state = "tyrprecursor_rig"
 	desc = "A pair of grabby boots"
 	var/shieldhealth = 75
 	var/cooldown = null // world.time of when this was last triggered.
