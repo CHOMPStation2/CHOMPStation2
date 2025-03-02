@@ -73,10 +73,10 @@
 	..()
 	wearer = null
 
+	var/mob/living/carbon/human/H = user
 	if(!ishuman(H) || !shoes)
 		return
 
-	var/mob/living/carbon/human/H = user
 	if(!H.equip_to_slot_if_possible(shoes, slot_shoes))
 		shoes.forceMove(get_turf(src))
 	shoes = null
