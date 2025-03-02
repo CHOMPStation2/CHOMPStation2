@@ -29,3 +29,46 @@
       through walls
   - qol: Teshari's and Xenochimera's 'listen in' verb has been upgraded to the new
       listen-in trait
+2025-03-02:
+  CHOMPStation2StaffMirrorBot:
+  - admin: fix internet audio player
+  - qol: people can now hide entertainment radio messages separately
+  Diana:
+  - bugfix: You no longer check if you can remove your internal organs to throw them
+      at people
+  - bugfix: You can no longer become immortal via cocoon weaver
+  - bugfix: Cocoon weaver now properly makes a TGUI window and keeps it.
+  - qol: Replaces face-left and face-right with a 'change facing' verb from Chomp
+      for when you're laying down.
+  - bugfix: You can no longer change facing direction, toggle glow,
+  - bugfix: Spin cocoon can no longer be used while buckled which caused space time
+      reality to break
+  - code_imp: Upgrades update_icons to work better and support change-facing
+  - bugfix: You can no longer cause telecrystal inflation
+  - code_imp: Gets a few things standardized by having the base /proc/ have /var and
+      its children being normal.
+  Drathek:
+  - rscadd: Added OD pragma lints
+  - bugfix: Fixed various issues caught by errors e.g. icon_forge's apply method,
+      VV on a list, etc.
+  - bugfix: Fixed various issues with apply_damage where arguments were incorrect
+      for used_weapon
+  Kashargul, Nadyr:
+  - code_imp: replaces more font tags
+  Will:
+  - bugfix: motion tracking ability now lets you properly motion track
+  - qol: Motion tracker subsystem can be toggled off for hide and seek modes
+  - bugfix: Potentially fixes your organs exploding when you spawn in
+  - bugfix: no more randomly invisible marker beacons
+  Will, Diana, Kash.:
+  - code_imp: There is now a unit test that will ENSURE every borg sprite from this
+      point forwards in time will have proper sprites. - Will
+  - bugfix: Fixes a LOT of broken sprites. - Diana
+  - rscadd: Adds variant catborgs (old variant), Dullahan variants
+  - rscadd: A BUNCH of sprites
+  - rscadd: Up-ports the Stoat and Possum from Outpost
+  - rscadd: Worm Borgs now have better sprites
+  - rscadd: More than one decal can be added to borgs
+  - qol: Surgery and crisis combined
+  tacoguy7765093:
+  - rscadd: Simplemob zorgoia markings added. Stars, full head, tail fade
