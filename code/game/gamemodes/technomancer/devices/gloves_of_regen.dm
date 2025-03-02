@@ -30,11 +30,13 @@
 /obj/item/clothing/gloves/regen/dropped(var/mob/user)
 	..()
 
-	if(ishuman(user))
-		var/mob/living/carbon/human/H = user
-		if(H.can_feel_pain())
-			to_chat(H, span_danger("You feel the hypodermic needles as you slide \the [src] off!"))
-			H.custom_pain("Your hands hurt like hell!",1)
+	if(!ishuman(user))
+		return
+
+	var/mob/living/carbon/human/H = user
+	if(H.can_feel_pain())
+		to_chat(H, span_danger("You feel the hypodermic needles as you slide \the [src] off!"))
+		H.custom_pain("Your hands hurt like hell!",1)
 
 /obj/item/clothing/gloves/regen/Initialize(mapload)
 	. = ..()
