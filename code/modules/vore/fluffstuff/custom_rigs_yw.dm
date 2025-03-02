@@ -25,6 +25,7 @@
 /obj/item/clothing/suit/space/rig/fluff/sheri
     icon = 'icons/vore/rigs_taur_yw.dmi'
     icon_override = 'icons/vore/rigs_taur_yw.dmi'
+	icon_state = "sheririg"
     body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS|FEET|ARMS|HANDS
     flags_inv = HIDEGLOVES|HIDEJUMPSUIT|HIDETAIL|HIDETIE|HIDEHOLSTER|HIDESHOES
     species_restricted = null //Species restricted since all it cares about is a taur half
@@ -44,16 +45,17 @@
 /obj/item/clothing/head/helmet/space/rig/hazmat/fluff/sheri
     icon = 'icons/vore/rig_yw/rigs_head.dmi'
     icon_override = 'icons/vore/rig_yw/rigs_head_onmob.dmi'
+	icon_state = "sheririg"
 
 /obj/item/clothing/shoes/magboots/rig/fluff/sheri
     icon = 'icons/vore/rig_yw/rigs_shoes.dmi'
     icon_override = 'icons/vore/rig_yw/rigs_shoes_onmob.dmi'
-    item_state = null
+	icon_state = "sheririg"
 
 /obj/item/clothing/gloves/gauntlets/rig/fluff/sheri
     icon = 'icons/vore/rig_yw/rigs_gauntlets.dmi'
     icon_override = 'icons/vore/rig_yw/rigs_gauntlets_onmob.dmi'
-    item_state = null
+	icon_state = "sheririg"
 
 
 
@@ -74,15 +76,19 @@
 /obj/item/clothing/suit/space/rig/fluff/saur
 	icon = 'icons/vore/rig_yw/rigs_chest.dmi'
 	icon_override = 'icons/vore/rig_yw/rigs_chest_onmob.dmi'
+	icon_state = "saurrig"
 
 /obj/item/clothing/head/helmet/space/rig/medical/fluff/saur
 	icon = 'icons/vore/rig_yw/rigs_head.dmi'
 	icon_override = 'icons/vore/rig_yw/rigs_head_onmob.dmi'
+	icon_state = "saurrig"
 
 /obj/item/clothing/shoes/magboots/rig/fluff/saur
 	icon = 'icons/vore/rig_yw/rigs_shoes.dmi'
 	icon_override = 'icons/vore/rig_yw/rigs_shoes_onmob.dmi'
+	icon_state = "saurrig"
 
 /obj/item/clothing/gloves/gauntlets/rig/fluff/saur
 	icon = 'icons/vore/rig_yw/rigs_gauntlets.dmi'
 	icon_override = 'icons/vore/rig_yw/rigs_gauntlets_onmob.dmi'
+	icon_state = "saurrig"

@@ -18,21 +18,25 @@
 /obj/item/clothing/suit/space/rig/ch/crystal //to do, try and make this be able to heal you
 	name = "chassis"
 	icon = 'icons/obj/clothing/spacesuits_ch.dmi'
+	icon_state = "crystal_rig"
 	desc = "A heft chestplate, humming with energy."
 
 /obj/item/clothing/head/helmet/space/rig/ch/crystal
 	name = "helmet"
 	icon = 'icons/obj/clothing/hats_ch.dmi'
+	icon_state = "crystal_rig"
 	desc = "A protective dome for your head."
 
 /obj/item/clothing/gloves/gauntlets/rig/ch/crystal
 	name = "hardlight gloves"
 	icon = 'icons/obj/clothing/gloves_ch.dmi'
+	icon_state = "crystal_rig"
 	desc = "Gloves created with alien tech"
 	siemens_coefficient = 0
 
 /obj/item/clothing/shoes/magboots/rig/ch/crystal
 	name = "hardlight boots"
 	icon = 'icons/obj/clothing/shoes_ch.dmi'
+	icon_state = "crystal_rig"
 	desc = "A pair of grabby boots"
 	slowdown = -1
