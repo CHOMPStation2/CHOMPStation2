@@ -1,3 +1,6 @@
+// The sprites in this file were completely missing for all the actual clothes. They are NOT in the icon file they should be.
+// The only sprite is the actual rig module in rig_modules_ch.dmi. The others don't have any boots/chest/hands/helm sprites.
+// If the sprites are properly found somewhere, please add them to their appropraite files and reenable this file.
 /obj/item/rig/ch/tyrprecursor
 	name = "alien hardsuit control module"
 	desc = "A orange hardsuit gleaming with energy and alien metals."

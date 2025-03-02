@@ -88,7 +88,6 @@
 		/obj/random/tank,
 		/obj/random/tech_supply/component,
 		/obj/random/tech_supply/component,
-		/obj/item/clothing/head/helmet/eraticator,
 		/obj/effect/decal/remains/mouse,
 		/obj/item/stack/material/steel{amount = 20}
 		)
