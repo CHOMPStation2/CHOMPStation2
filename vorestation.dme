@@ -4779,7 +4779,6 @@
 #include "modular_chomp\code\__defines\text.dm"
 #include "modular_chomp\code\_global_vars\list\names.dm"
 #include "modular_chomp\code\_HELPERS\game.dm"
-#include "modular_chomp\code\_HELPERS\mobs.dm"
 #include "modular_chomp\code\_onclick\hud\alert.dm"
 #include "modular_chomp\code\ATMOSPHERICS\atmospherics.dm"
 #include "modular_chomp\code\datums\http.dm"

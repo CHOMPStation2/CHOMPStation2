@@ -217,7 +217,6 @@
  * @return false if normal code should continue, true to prevent normal code.
  */
 /mob/living/proc/handle_micro_bump_helping(mob/living/tmob)
-	// CHOMPAdd - Phased
 	if(is_incorporeal() || tmob.is_incorporeal())
 		return FALSE
 	//Riding and being moved to us or something similar
@@ -279,7 +278,6 @@
 	//We can't be stepping on anyone
 	if(!canmove || buckled)
 		return
-	// CHOMPAdd - Phased
 	if(is_incorporeal() || tmob.is_incorporeal())
 		return
 

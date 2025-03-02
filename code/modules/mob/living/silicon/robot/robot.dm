@@ -1337,7 +1337,7 @@
 
 	update_icon()
 
-/mob/living/silicon/robot/verb/robot_nom(var/mob/living/T in living_mobs_in_view(1)) //CHOMPEdit
+/mob/living/silicon/robot/verb/robot_nom(var/mob/living/T in living_mobs_in_view(1))
 	set name = "Robot Nom"
 	set category = "Abilities.Vore"
 	set desc = "Allows you to eat someone."

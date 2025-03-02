@@ -251,7 +251,7 @@ var/global/list/engineering_networks = list(
 	assembly.upgrades.Add(new /obj/item/assembly/prox_sensor(assembly))
 	setPowerUsage()
 	START_MACHINE_PROCESSING(src)
-	sense_proximity(callback = TYPE_PROC_REF(/atom,HasProximity)) // CHOMPEdit
+	sense_proximity(callback = TYPE_PROC_REF(/atom,HasProximity))
 	update_coverage()
 
 /obj/machinery/camera/proc/setPowerUsage()

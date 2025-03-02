@@ -1,4 +1,3 @@
-// CHOMPEdit Start
 /obj/effect/plant/HasProximity(turf/T, datum/weakref/WF, old_loc)
 	SIGNAL_HANDLER
 	if(isnull(WF))
@@ -7,7 +6,6 @@
 	if(isnull(AM))
 		log_debug("DEBUG: HasProximity called without reference on [src].")
 		return
-// CHOMPEdit End
 	if(!is_mature() || seed.get_trait(TRAIT_SPREAD) != 2)
 		return
 
@@ -15,7 +13,7 @@
 	if(!istype(M))
 		return
 
-	if(M.is_incorporeal()) // CHOMPEdit - Don't buckle phased entities.
+	if(M.is_incorporeal()) // Don't buckle phased entities.
 		return
 
 	if(!has_buckled_mobs() && !M.buckled && !M.anchored && (issmall(M) || prob(round(seed.get_trait(TRAIT_POTENCY)/3))))

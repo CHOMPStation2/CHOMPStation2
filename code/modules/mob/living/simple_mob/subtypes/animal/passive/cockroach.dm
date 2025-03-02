@@ -53,7 +53,7 @@
 	if(ismob(AM))
 		if(isliving(AM))
 			var/mob/living/A = AM
-			if(A.is_incorporeal()) // CHOMPADD - Bad kin, no squishing the roach
+			if(A.is_incorporeal()) // Bad kin, no squishing the roach
 				return
 			if(A.mob_size > MOB_SMALL)
 				if(prob(squish_chance))
