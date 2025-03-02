@@ -1,11 +1,7 @@
 /client/proc/modify_robot(var/mob/living/silicon/robot/target in silicon_mob_list)
 	set name = "Modify Robot"
 	set desc = "Allows to add or remove modules to/from robots."
-<<<<<<< HEAD
-	set category = "Admin.Silicon" //CHOMPEdit
-=======
 	set category = "Admin.Silicon"
->>>>>>> 1a19de6ca3 (More compat (#17228))
 	if(!check_rights(R_ADMIN|R_FUN|R_VAREDIT|R_EVENT))
 		return
 
