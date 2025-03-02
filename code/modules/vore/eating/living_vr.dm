@@ -616,7 +616,7 @@
 			s.undo_prey_takeover(TRUE)
 			return
 		var/obj/belly/B = loc
-		var/confirm = tgui_alert(src, "Please feel free to press use this button at any time you are uncomfortable and in a belly. Consent is important.", "Confirmation", list("Okay", "Cancel")) //CHOMPedit
+		var/confirm = tgui_alert(src, "Please feel free to use this button at any time you are uncomfortable and in a belly. Consent is important.", "Confirmation", list("Okay", "Cancel"))
 		if(confirm != "Okay" || loc != B)
 			return
 		//Actual escaping
