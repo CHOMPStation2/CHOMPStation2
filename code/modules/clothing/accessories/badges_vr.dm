@@ -58,7 +58,10 @@
 		return ..()
 
 /obj/item/clothing/accessory/dosimeter/proc/check_holder()
+<<<<<<< HEAD
 
+=======
+>>>>>>> cc4e7cae40 (Fixes accessories and a few others not showing properly (#17255))
 	var/mob/living/carbon/human/H = wearer?.resolve()
 	if(H)
 		if(current_film && (H.radiation >= 25) && (current_film.state == 0))
