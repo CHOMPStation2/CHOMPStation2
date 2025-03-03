@@ -111,7 +111,11 @@
 	#define JOB_ALT_CARGO_HANDLER "Cargo Handler"
 	#define JOB_ALT_SUPPLY_COURIER "Supply Courier"
 	#define JOB_ALT_DISPOSALS_SORTER "Disposals Sorter"
+<<<<<<< HEAD
 	#define JOB_ALT_MAILMAN "Mailman" // CHOMPAdd
+=======
+	#define JOB_ALT_MAILMAN "Mailman"
+>>>>>>> 4fe99bd865 (Various upports (#17061))
 
 #define JOB_SHAFT_MINER "Shaft Miner"
 	// Shaft Miner alt titles
