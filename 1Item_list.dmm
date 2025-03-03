@@ -47657,12 +47657,6 @@
 	icon_state = "vault"
 	},
 /area/survivalpod)
-"nRr" = (
-/obj/item/clothing/suit/storage/bomber/alt,
-/turf/simulated/fitness{
-	icon_state = "vault"
-	},
-/area/survivalpod)
 "nRt" = (
 /obj/machinery/smartfridge/produce/persistent,
 /turf/simulated/fitness{
@@ -103758,7 +103752,7 @@ cSL
 oLD
 lFY
 xcN
-nRr
+bSW
 kUw
 diJ
 bSW
