@@ -75,35 +75,35 @@
 	siemens_coefficient = 0
 	armor = list(melee = 70, bullet = 60, laser = 50, energy = 50, bomb = 0, bio = 0, rad = 0)
 
-/obj/item/clothing/gloves/stamina/equipped(var/mob/living/carbon/human/H)
+/obj/item/clothing/gloves/stamina/equipped(mob/user)
+	..()
+	var/mob/living/carbon/human/H = wearer?.resolve()
 	if(H && H.gloves == src)
-		wearer = H
-		if(wearer.can_feel_pain())
+		if(H.can_feel_pain())
 			to_chat(H, span_danger("You feel strange as hunger vanishes!"))
-			wearer.custom_pain("Your hands feel strange!",1)
-	..()
+			H.custom_pain("Your hands feel strange!",1)
 
-/obj/item/clothing/gloves/stamina/dropped(var/mob/living/carbon/human/H)
+/obj/item/clothing/gloves/stamina/dropped(mob/user)
+	var/mob/living/carbon/human/H = wearer?.resolve()
+	if(H)
+		if(H.can_feel_pain())
+			to_chat(H, span_danger("You feel hungry!"))
+			H.custom_pain("Your hands feel strange",1)
 	..()
-	if(wearer)
-		if(wearer.can_feel_pain())
-			to_chat(wearer, span_danger("You feel hungry!"))
-			wearer.custom_pain("Your hands feel strange",1)
-		wearer = null
 
 /obj/item/clothing/gloves/stamina/New()
 	START_PROCESSING(SSobj, src)
 	..()
 
 /obj/item/clothing/gloves/stamina/Destroy()
-	wearer = null
 	STOP_PROCESSING(SSobj, src)
 	return ..()
 
 /obj/item/clothing/gloves/stamina/process()
-	if(!wearer || wearer.isSynthetic() || wearer.stat == DEAD)
+	var/mob/living/carbon/human/H = wearer?.resolve()
+	if(!H || H.isSynthetic() || H.stat == DEAD)
 		return // Robots and dead people don't have a metabolism.
-	wearer.nutrition = max(wearer.nutrition + 8, 0)
+	H.nutrition = max(H.nutrition + 8, 0)
 
 /obj/item/clothing/suit/armor/buffvest
 	name = "candy armor"

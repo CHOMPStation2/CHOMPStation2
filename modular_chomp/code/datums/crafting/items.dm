@@ -267,21 +267,21 @@
 	heat_protection = HANDS
 	max_heat_protection_temperature = GLOVES_MAX_HEAT_PROTECTION_TEMPERATURE
 
-/obj/item/clothing/gloves/toxinregen/equipped(var/mob/living/carbon/human/H)
+/obj/item/clothing/gloves/toxinregen/equipped(mob/user, slot)
+	var/mob/living/carbon/human/H = wearer?.resolve()
 	if(H && H.gloves == src)
-		wearer = H
-		if(wearer.can_feel_pain())
+		if(H.can_feel_pain())
 			to_chat(H, span_danger("You feel a stabbing sensation in your hands as you slide \the [src] on!"))
-			wearer.custom_pain("You feel a sharp pain in your hands!",1)
+			H.custom_pain("You feel a sharp pain in your hands!",1)
 	..()
 
-/obj/item/clothing/gloves/toxinregen/dropped(var/mob/living/carbon/human/H)
+/obj/item/clothing/gloves/toxinregen/dropped(mob/user)
+	var/mob/living/carbon/human/H = wearer?.resolve()
+	if(H)
+		if(H.can_feel_pain())
+			to_chat(H, span_danger("You feel the hypodermic needles as you slide \the [src] off!"))
+			H.custom_pain("Your hands hurt like hell!",1)
 	..()
-	if(wearer)
-		if(wearer.can_feel_pain())
-			to_chat(wearer, span_danger("You feel the hypodermic needles as you slide \the [src] off!"))
-			wearer.custom_pain("Your hands hurt like hell!",1)
-		wearer = null
 
 /obj/item/clothing/gloves/toxinregen/New()
 	START_PROCESSING(SSobj, src)
@@ -293,7 +293,8 @@
 	return ..()
 
 /obj/item/clothing/gloves/toxinregen/process()
-	if(!wearer || wearer.isSynthetic() || wearer.stat == DEAD || wearer.nutrition <= 10)
+	var/mob/living/carbon/human/H = wearer?.resolve()
+	if(!H || H.isSynthetic() || H.stat == DEAD || H.nutrition <= 10)
 		return
-	if(wearer.getToxLoss())
-		wearer.adjustToxLoss(-0.5)
+	if(H.getToxLoss())
+		H.adjustToxLoss(-0.5)

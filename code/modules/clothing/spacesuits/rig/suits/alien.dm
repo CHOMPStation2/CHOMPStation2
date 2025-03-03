@@ -94,6 +94,7 @@
 	species_restricted = list(SPECIES_VOX)
 
 /obj/item/clothing/gloves/gauntlets/rig/vox
+	name = DEVELOPER_WARNING_NAME
 	siemens_coefficient = 0
 	species_restricted = list(SPECIES_VOX)
 	sprite_sheets = list(
@@ -136,19 +137,4 @@
 		/obj/item/rig_module/vision,
 		/obj/item/rig_module/power_sink,
 		/obj/item/rig_module/self_destruct
-		)
-
-/obj/item/rig/vox/civilian
-	name = "matte alien control module"
-	suit_type = "sinister alien"
-	icon_state = "voxstealth_rig"
-	desc = "A light alien rig for repairs and maintenance to the outside of habitats and vessels."
-	armor = list(melee = 30, bullet = 10, laser = 20, energy = 25, bomb = 20, bio = 100, rad = 100) //Standard Engineering Suit Values
-
-	req_access = list()
-	req_one_access = list()
-	allowed = list(/obj/item/flashlight,/obj/item/tank,/obj/item/suit_cooling_unit,/obj/item/storage) //CHOMP Edit
-	offline_vision_restriction = 1
-
-	initial_modules = list(
 		)

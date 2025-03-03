@@ -237,6 +237,7 @@
 
 /obj/item/clothing/shoes/magboots/rig/hazmat
 	icon = 'icons/vore/rig_yw/rigs_shoes.dmi'
+	icon_state = "science_rig"
 	icon_override = 'icons/vore/rig_yw/rigs_shoes_onmob.dmi'
 //ywadd end
 

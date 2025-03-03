@@ -893,18 +893,17 @@
 /obj/item/clothing/suit/storage/toggle/hoodiebuttoned
 	name = "labcoat"
 	desc = "A suit that protects against minor chemical spills."
-	icon_state = "labcoat"
+	icon_state = "jiao_labcoat"
 	item_state_slots = list(slot_r_hand_str = "labcoat", slot_l_hand_str = "labcoat")
 	blood_overlay_type = "coat"
 	body_parts_covered = UPPER_TORSO|ARMS
 	flags_inv = HIDEHOLSTER
 	allowed = list(/obj/item/analyzer,/obj/item/stack/medical,/obj/item/dnainjector,/obj/item/reagent_containers/dropper,/obj/item/reagent_containers/syringe,/obj/item/reagent_containers/hypospray,/obj/item/healthanalyzer,/obj/item/flashlight/pen,/obj/item/reagent_containers/glass/bottle,/obj/item/reagent_containers/glass/beaker,/obj/item/reagent_containers/pill,/obj/item/storage/pill_bottle,/obj/item/paper)
 	armor = list(melee = 0, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 50, rad = 0)
+	hoodtype = /obj/item/clothing/head/hood/hoodiebuttoned //Default hoodie.
 	icon = 'icons/vore/custom_clothes_yw.dmi'
 	icon_override = 'icons/vore/custom_onmob_yw.dmi'
 
-	var/obj/item/clothing/head/hood
-	var/hoodtype = null //so the chaplain hoodie or other hoodies can override this
 	var/suittoggled = 0
 	var/hooded = 0
 	actions_types = list(/datum/action/item_action/toggle_hood)
@@ -1094,11 +1093,6 @@
 /obj/item/clothing/under/explorer/utility/command/engineering/fluff/vasharr
 	name = "Cartographer Engineering Command Uniform"
 	desc = "A Engineering Command Uniform from the Galactic Cartographers Society, A group of intrepid explorers. This one has gold trim and organge blazes."
-
-/obj/item/clothing/suit/storage/explorer/engineering/command/fluff/vasharr
-	name = "Cartographer Engineering Command Jacket"
-	desc = "A Engineering Command Jacket from the Galactic Cartographers Society, A group of intrepid explorers. It has gold buttons and orange trim."
-
 // ********
 // Dwaggy90
 // ********
@@ -1722,7 +1716,7 @@
 	name = "white gear harness"
 	desc = "How... minimalist."
 	icon = 'icons/vore/custom_clothes_yw.dmi'
-	icon_state = "gear_harness_white"
+	icon_state = "gear_harness_white_s"
 	icon_override = 'icons/vore/custom_clothes_yw.dmi'
-	item_state = "gear_harness_white"
+	item_state = "gear_harness_white_s"
 	body_parts_covered = 0

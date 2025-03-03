@@ -65,7 +65,6 @@
 	item_state = "bearpelt_brown"
 
 /obj/item/clothing/head/pelt/black
-	icon=""
 	icon_state = "bearpelt_black"
 	item_state = "bearpelt_black"
 
