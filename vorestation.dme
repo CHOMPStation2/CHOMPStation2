@@ -399,7 +399,11 @@
 #include "code\controllers\subsystems\job.dm"
 #include "code\controllers\subsystems\lighting.dm"
 #include "code\controllers\subsystems\machines.dm"
+<<<<<<< HEAD
 #include "code\controllers\subsystems\mail_ch.dm"
+=======
+#include "code\controllers\subsystems\mail.dm"
+>>>>>>> 4fe99bd865 (Various upports (#17061))
 #include "code\controllers\subsystems\mapping.dm"
 #include "code\controllers\subsystems\media_tracks.dm"
 #include "code\controllers\subsystems\mobs.dm"
@@ -998,6 +1002,7 @@
 #include "code\game\jobs\job\engineering.dm"
 #include "code\game\jobs\job\exploration.dm"
 #include "code\game\jobs\job\job.dm"
+#include "code\game\jobs\job\job_goodies.dm"
 #include "code\game\jobs\job\medical.dm"
 #include "code\game\jobs\job\medical_ch.dm"
 #include "code\game\jobs\job\offduty.dm"
@@ -1305,7 +1310,11 @@
 #include "code\game\objects\explosion_recursive.dm"
 #include "code\game\objects\items.dm"
 #include "code\game\objects\items_vr.dm"
+<<<<<<< HEAD
 #include "code\game\objects\kasscbuttons_ch.dm"
+=======
+#include "code\game\objects\mail.dm"
+>>>>>>> 4fe99bd865 (Various upports (#17061))
 #include "code\game\objects\micro_event.dm"
 #include "code\game\objects\micro_structures.dm"
 #include "code\game\objects\mob_spawner_vr.dm"
@@ -1351,6 +1360,7 @@
 #include "code\game\objects\effects\chem\foam_vr.dm"
 #include "code\game\objects\effects\chem\water.dm"
 #include "code\game\objects\effects\decals\cleanable.dm"
+#include "code\game\objects\effects\decals\contraband.dm"
 #include "code\game\objects\effects\decals\crayon.dm"
 #include "code\game\objects\effects\decals\misc.dm"
 #include "code\game\objects\effects\decals\remains.dm"
@@ -1401,6 +1411,7 @@
 #include "code\game\objects\items\glassjar.dm"
 #include "code\game\objects\items\gunbox.dm"
 #include "code\game\objects\items\gunbox_vr.dm"
+#include "code\game\objects\items\holosign_creator.dm"
 #include "code\game\objects\items\latexballoon.dm"
 #include "code\game\objects\items\leash.dm"
 #include "code\game\objects\items\lockpicks.dm"
@@ -1514,6 +1525,7 @@
 #include "code\game\objects\items\toys\balls_vr.dm"
 #include "code\game\objects\items\toys\godfigures.dm"
 #include "code\game\objects\items\toys\mech_toys.dm"
+#include "code\game\objects\items\toys\target_toy.dm"
 #include "code\game\objects\items\toys\toys.dm"
 #include "code\game\objects\items\toys\toys_ch.dm"
 #include "code\game\objects\items\toys\toys_vr.dm"
@@ -1760,6 +1772,7 @@
 #include "code\game\objects\structures\grille.dm"
 #include "code\game\objects\structures\handrail.dm"
 #include "code\game\objects\structures\holoplant.dm"
+#include "code\game\objects\structures\holosign.dm"
 #include "code\game\objects\structures\inflatable.dm"
 #include "code\game\objects\structures\janicart.dm"
 #include "code\game\objects\structures\kitchen_foodcart_vr.dm"
@@ -4259,6 +4272,7 @@
 #include "code\modules\reagents\reagent_containers\_reagent_containers.dm"
 #include "code\modules\reagents\reagent_containers\blood_pack.dm"
 #include "code\modules\reagents\reagent_containers\blood_pack_vr.dm"
+#include "code\modules\reagents\reagent_containers\bluespacecoffee.dm"
 #include "code\modules\reagents\reagent_containers\borghypo.dm"
 #include "code\modules\reagents\reagent_containers\dropper.dm"
 #include "code\modules\reagents\reagent_containers\glass.dm"

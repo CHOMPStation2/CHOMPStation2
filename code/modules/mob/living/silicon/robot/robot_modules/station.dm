@@ -360,7 +360,11 @@ var/global/list/robot_modules = list(
 	src.modules += new /obj/item/surgical/bioregen/cyborg(src)
 	//Surgeon Modules End
 	src.modules += new /obj/item/inflatable_dispenser/robot(src)
+<<<<<<< HEAD
 	src.modules += new /obj/item/holosign_creator/medical(src) //Re-enable after Guti's PR.
+=======
+	src.modules += new /obj/item/holosign_creator/medical(src)
+>>>>>>> 4fe99bd865 (Various upports (#17061))
 	var/obj/item/reagent_containers/spray/PS = new /obj/item/reagent_containers/spray(src)
 	src.emag += PS
 	PS.reagents.add_reagent(REAGENT_ID_PACID, 250)
