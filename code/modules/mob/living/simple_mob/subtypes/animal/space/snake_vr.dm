@@ -48,12 +48,6 @@
 	ai_holder_type = /datum/ai_holder/simple_mob/passive
 
 	// CHOMPEdit Start - New sprites & Added vore
-	/*
-	icon_state = "python"
-	icon_living = "python"
-	icon_dead = "python_dead"
-	icon = 'icons/mob/snake_vr.dmi'
-	*/
 	icon_state = "snek"
 	icon_living = "snek"
 	icon_dead = "snek_dead"
@@ -109,6 +103,11 @@
 		"\the [name]'s tail lurches with the struggles of a live meal.")
 	B.examine_messages = list(
 		"\the [name]'s tail is swollen fat with a lump of prey it swallowed whole.")
+	// CHOMPAdd Start
+	B.belly_fullscreen = "VBOanim_snakebelly1"
+	B.belly_fullscreen_color = "#823232"
+	B.belly_fullscreen_color2 = "#232300"
+	// CHOMPAdd End
 
 /datum/say_list/snake
 	emote_hear = list("hisses")
@@ -118,11 +117,12 @@
  */
 /mob/living/simple_mob/animal/passive/snake/red
 	desc = "A cute little, red snake. Wiggle wiggle."
-
-	icon_state = "red"
-	icon_living = "red"
-	icon_dead = "red_dead"
-	icon = 'icons/mob/snake_vr.dmi' // CHOMP Comment: Whenever the red snake sprites, this needs to be changed. I swear someone made sprites for this.
+	// CHOMPEdit Start
+	icon_state = "red_snek"
+	icon_living = "red_snek"
+	icon_dead = "red_snek_dead"
+	icon = 'modular_chomp/icons/mob/animal_ch.dmi'
+	// CHOMPEdit End
 
 /*
  * Python
