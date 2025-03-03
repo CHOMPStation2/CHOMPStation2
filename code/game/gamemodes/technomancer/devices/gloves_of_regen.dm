@@ -33,7 +33,6 @@
 /obj/item/clothing/gloves/regen/dropped(var/mob/user)
 	..()
 
->>>>>>> cc4e7cae40 (Fixes accessories and a few others not showing properly (#17255))
 	if(!ishuman(user))
 		return
 
