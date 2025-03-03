@@ -58,7 +58,6 @@
 		return ..()
 
 /obj/item/clothing/accessory/dosimeter/proc/check_holder()
-
 	var/mob/living/carbon/human/H = wearer?.resolve()
 	if(H)
 		if(current_film && (H.radiation >= 25) && (current_film.state == 0))
