@@ -1408,7 +1408,6 @@
 #include "code\game\objects\items\leash.dm"
 #include "code\game\objects\items\lockpicks.dm"
 #include "code\game\objects\items\magazine.dm"
-#include "code\game\objects\items\mail_ch.dm"
 #include "code\game\objects\items\paintkit.dm"
 #include "code\game\objects\items\petrifier.dm"
 #include "code\game\objects\items\pizza_voucher_vr.dm"
