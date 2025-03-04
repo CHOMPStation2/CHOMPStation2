@@ -3,7 +3,7 @@
 
 /mob/living/simple_mob/shadekin/Login()
 	. = ..()
-	add_verb(src,/mob/living/simple_mob/shadekin/proc/phase_strength_toggle) //CHOMPEdit TGPanel
+	add_verb(src,/mob/living/simple_mob/shadekin/proc/phase_strength_toggle)
 
 /mob/living/simple_mob/shadekin/proc/dark_tunneling()
 	var/template_id = "dark_portal"
@@ -51,9 +51,7 @@
 		return TRUE
 	else
 		return FALSE
-//CHOMPEdit End
 
-//CHOMPEdit Begin - Add Dark Maw
 /mob/living/simple_mob/shadekin/proc/dark_maw()
 	var/turf/T = get_turf(src)
 	if(!istype(T))
