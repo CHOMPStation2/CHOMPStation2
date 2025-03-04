@@ -69,8 +69,9 @@
 
 //CHOMPAdd - Put this mask in loadout
 /datum/gear/mask/death
-	display_name = "white mask"
+	display_name = "cyborg visor" //This was named 'white mask' before when it's...Not. It's literally a cyborg visor gas mask.
 	path = /obj/item/clothing/mask/gas/cyborg
+	cost = 3 ///Because it functions as a gas mask, and therefore has a mechanical advantage.
 
 /datum/gear/mask/lace
 	display_name = "lace veil"
