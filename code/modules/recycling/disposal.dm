@@ -658,19 +658,11 @@
 		if(istype(AM, /mob/living/silicon/robot/drone))
 			var/mob/living/silicon/robot/drone/drone = AM
 			src.destinationTag = drone.mail_destination
-<<<<<<< HEAD
-		// CHOMPEdit Start -- Envelopes can be sent through as well!
-		if(istype(AM, /obj/item/mail) && !hasmob)
-			var/obj/item/mail/T = AM
-			src.destinationTag = T.sortTag
-		// CHOMPEdit End
-=======
 
 		if(istype(AM, /obj/item/mail) && !hasmob)
 			var/obj/item/mail/T = AM
 			src.destinationTag = T.sortTag
 
->>>>>>> 4fe99bd865 (Various upports (#17061))
 
 // start the movement process
 // argument is the disposal unit the holder started in

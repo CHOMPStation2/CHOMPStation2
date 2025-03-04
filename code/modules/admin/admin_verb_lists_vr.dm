@@ -187,11 +187,7 @@ var/list/admin_verbs_spawn = list(
 	/datum/admins/proc/check_custom_items,
 	/datum/admins/proc/spawn_plant,
 	/datum/admins/proc/spawn_atom,		//allows us to spawn instances,
-<<<<<<< HEAD
-	/datum/admins/proc/spawn_mail,	// CHOMPStation Add
-=======
 	/datum/admins/proc/spawn_mail,
->>>>>>> 4fe99bd865 (Various upports (#17061))
 	/client/proc/cmd_admin_droppod_spawn,
 	/client/proc/respawn_character,
 	/client/proc/spawn_character_mob,  //VOREStation Add,

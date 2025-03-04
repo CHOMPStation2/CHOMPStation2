@@ -38,11 +38,7 @@
 			return
 
 		if (!at_station())	//at centcom
-<<<<<<< HEAD
-			SSmail.create_mail() // CHOMPAdd -- Adds mail to the shuttle
-=======
 			SSmail.create_mail()
->>>>>>> 4fe99bd865 (Various upports (#17061))
 			SSsupply.buy()
 
 		//We pretend it's a long_jump by making the shuttle stay at centcom for the "in-transit" period.
