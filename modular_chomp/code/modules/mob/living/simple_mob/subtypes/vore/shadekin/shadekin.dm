@@ -30,8 +30,7 @@
 				continue
 
 			if(prob(destroy_lights))
-				spawn(rand(5,25))
-					L.broken()
+				addtimer(CALLBACK(L, TYPE_PROC_REF(/obj/machinery/light, broken)), rand(5,25), TIMER_DELETE_ME)
 			else
 				L.flicker(10)
 
