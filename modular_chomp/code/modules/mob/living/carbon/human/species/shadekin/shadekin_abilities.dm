@@ -1,3 +1,16 @@
+/mob/living/carbon/human/proc/shadekin_ability_check()
+	var/datum/species/shadekin/SK = species
+	if(!istype(SK))
+		to_chat(src, span_warning("Only a shadekin can use that!"))
+		return FALSE
+	else if(stat)
+		to_chat(src, span_warning("Can't use that ability in your state!"))
+		return FALSE
+	else if((ability_flags & AB_DARK_RESPITE || has_modifier_of_type(/datum/modifier/dark_respite)) && !(ability_flags & AB_PHASE_SHIFTED))
+		to_chat(src, span_warning("You can't use that so soon after an emergency warp!"))
+		return FALSE
+	return TRUE
+
 /mob/living/carbon/human/proc/phase_shift()
 	set name = "Phase Shift (100)"
 	set desc = "Shift yourself out of alignment with realspace to travel quickly to different areas."
@@ -87,173 +100,6 @@
 	else
 		phase_out(T)
 	SK.doing_phase = FALSE // Prevent bugs when spamming phase button
-
-
-
-/mob/living/carbon/human/proc/phase_in(var/turf/T)
-	if(ability_flags & AB_PHASE_SHIFTED)
-		var/datum/species/shadekin/SK = species
-
-		// pre-change
-		forceMove(T)
-		var/original_canmove = canmove
-		SetStunned(0)
-		SetWeakened(0)
-		if(buckled)
-			buckled.unbuckle_mob()
-		if(pulledby)
-			pulledby.stop_pulling()
-		stop_pulling()
-		canmove = FALSE
-
-		// change
-		ability_flags &= ~AB_PHASE_SHIFTED
-		ability_flags |= AB_PHASE_SHIFTING
-		throwpass = FALSE
-		name = get_visible_name()
-		for(var/obj/belly/B as anything in vore_organs)
-			B.escapable = initial(B.escapable)
-
-		//cut_overlays()
-		invisibility = initial(invisibility)
-		see_invisible = initial(see_invisible)
-		see_invisible_default = initial(see_invisible_default) // Allow seeing phased entities while phased.
-		incorporeal_move = initial(incorporeal_move)
-		density = initial(density)
-		force_max_speed = initial(force_max_speed)
-		// resetting pull ability after phasing back in
-		can_pull_size = initial(can_pull_size)
-		can_pull_mobs = initial(can_pull_mobs)
-		hovering = initial(hovering)
-		update_icon()
-
-		//Cosmetics mostly
-		var/obj/effect/temp_visual/shadekin/phase_in/phaseanim = new /obj/effect/temp_visual/shadekin/phase_in(src.loc)
-		phaseanim.pixel_y = (src.size_multiplier - 1) * 16 // Pixel shift for the animation placement
-		phaseanim.adjust_scale(src.size_multiplier, src.size_multiplier)
-		phaseanim.dir = dir
-		alpha = 0
-		custom_emote(1,"phases in!")
-		sleep(5) //The duration of the TP animation
-		canmove = original_canmove
-		alpha = initial(alpha)
-		remove_modifiers_of_type(/datum/modifier/shadekin_phase_vision)
-		remove_modifiers_of_type(/datum/modifier/shadekin_phase) // Shadekin probably shouldn't be hit while phasing
-
-		//Potential phase-in vore
-		if(can_be_drop_pred || can_be_drop_prey) //Toggleable in vore panel
-			var/list/potentials = living_mobs(0)
-			if(potentials.len)
-				var/mob/living/target = pick(potentials)
-				if(can_be_drop_pred && istype(target) && target.devourable && target.can_be_drop_prey && target.phase_vore && vore_selected && phase_vore)
-					target.forceMove(vore_selected)
-					to_chat(target, span_vwarning("\The [src] phases in around you, [vore_selected.vore_verb]ing you into their [vore_selected.name]!"))
-					to_chat(src, span_vwarning("You phase around [target], [vore_selected.vore_verb]ing them into your [vore_selected.name]!"))
-				else if(can_be_drop_prey && istype(target) && devourable && target.can_be_drop_pred && target.phase_vore && target.vore_selected && phase_vore)
-					forceMove(target.vore_selected)
-					to_chat(target, span_vwarning("\The [src] phases into you, [target.vore_selected.vore_verb]ing them into your [target.vore_selected.name]!"))
-					to_chat(src, span_vwarning("You phase into [target], having them [target.vore_selected.vore_verb] you into their [target.vore_selected.name]!"))
-
-		ability_flags &= ~AB_PHASE_SHIFTING
-
-		//Affect nearby lights
-		var/destroy_lights = 0
-
-		// Add back light destruction
-		if(SK.get_shadekin_eyecolor(src) == RED_EYES)
-			destroy_lights = 80
-		else if(SK.get_shadekin_eyecolor(src) == PURPLE_EYES)
-			destroy_lights = 25
-
-		// Add gentle phasing
-		if(SK.phase_gentle) // gentle case: No light destruction. Flicker in 4 tile radius once.
-			for(var/obj/machinery/light/L in machines)
-				if(L.z != z || get_dist(src,L) > 4)
-					continue
-				L.flicker(1)
-			src.Stun(1)
-		else
-			for(var/obj/machinery/light/L in machines)
-				if(L.z != z || get_dist(src,L) > 10)
-					continue
-
-				if(prob(destroy_lights))
-					spawn(rand(5,25))
-						L.broken()
-				else
-					L.flicker(10)
-
-/mob/living/carbon/human/proc/phase_out(var/turf/T)
-	if(!(ability_flags & AB_PHASE_SHIFTED))
-		// pre-change
-		forceMove(T)
-		var/original_canmove = canmove
-		SetStunned(0)
-		SetWeakened(0)
-		if(buckled)
-			buckled.unbuckle_mob()
-		if(pulledby)
-			pulledby.stop_pulling()
-		stop_pulling()
-		canmove = FALSE
-
-		var/list/allowed_implants = list(
-			/obj/item/implant/sizecontrol,
-			/obj/item/implant/compliance,
-		)
-		for(var/obj/item/organ/external/organ in organs)
-			for(var/obj/item/O in organ.implants)
-				if(is_type_in_list(O, allowed_implants))
-					continue
-				if(O == nif)
-					nif.unimplant(src)
-				O.forceMove(drop_location())
-				organ.implants -= O
-		if(!has_embedded_objects())
-			clear_alert("embeddedobject")
-
-		// change
-		ability_flags |= AB_PHASE_SHIFTED
-		ability_flags |= AB_PHASE_SHIFTING
-		throwpass = TRUE
-		custom_emote(1,"phases out!")
-		name = get_visible_name()
-
-		// Unequipping slots when phasing in, and preventing pulling stuff while phased.
-		if(l_hand)
-			unEquip(l_hand)
-		if(r_hand)
-			unEquip(r_hand)
-		if(back)
-			unEquip(back)
-
-		can_pull_size = 0
-		can_pull_mobs = MOB_PULL_NONE
-		hovering = TRUE
-
-		for(var/obj/belly/B as anything in vore_organs)
-			B.escapable = FALSE
-
-		var/obj/effect/temp_visual/shadekin/phase_out/phaseanim = new /obj/effect/temp_visual/shadekin/phase_out(src.loc)
-		phaseanim.pixel_y = (src.size_multiplier - 1) * 16 // Pixel shift for the animation placement
-		phaseanim.adjust_scale(src.size_multiplier, src.size_multiplier)
-		phaseanim.dir = dir
-		alpha = 0
-		add_modifier(/datum/modifier/shadekin_phase_vision)
-		add_modifier(/datum/modifier/shadekin_phase) //Shadekin probably shouldn't be hit while phasing
-		sleep(5)
-		invisibility = INVISIBILITY_SHADEKIN
-		see_invisible = INVISIBILITY_SHADEKIN
-		see_invisible_default = INVISIBILITY_SHADEKIN // Allow seeing phased entities while phased.
-		//cut_overlays()
-		update_icon()
-		alpha = 127
-
-		canmove = original_canmove
-		incorporeal_move = TRUE
-		density = FALSE
-		force_max_speed = TRUE
-		ability_flags &= ~AB_PHASE_SHIFTING
 
 //toggle proc for toggling gentle/normal phasing
 /mob/living/carbon/human/proc/phase_strength_toggle()
