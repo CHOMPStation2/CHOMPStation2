@@ -24041,11 +24041,11 @@
 	pixel_y = -1;
 	pixel_x = 3
 	},
-/obj/item/clothing/head/helmet/space/void/medical/veymed_static{
+/obj/item/clothing/head/helmet/space/void/medical/veymed{
 	pixel_y = 7;
 	pixel_x = 4
 	},
-/obj/item/clothing/head/helmet/space/void/medical/veymed_static{
+/obj/item/clothing/head/helmet/space/void/medical/veymed{
 	pixel_y = 7;
 	pixel_x = -1
 	},
