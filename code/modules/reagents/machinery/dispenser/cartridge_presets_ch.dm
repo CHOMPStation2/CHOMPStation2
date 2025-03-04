@@ -9,9 +9,6 @@
 /obj/item/reagent_containers/chem_disp_cartridge/doctorsdelight
 	spawn_reagent = REAGENT_ID_DOCTORSDELIGHT
 
-/obj/item/reagent_containers/chem_disp_cartridge/nothing
-	spawn_reagent = REAGENT_ID_NOTHING
-
 /obj/item/reagent_containers/chem_disp_cartridge/banana
 	spawn_reagent = REAGENT_ID_BANANA
 
@@ -56,9 +53,6 @@
 
 /obj/item/reagent_containers/chem_disp_cartridge/goldschlager
 	spawn_reagent = REAGENT_ID_GOLDSCHLAGER
-
-/obj/item/reagent_containers/chem_disp_cartridge/gelatin
-	spawn_reagent = REAGENT_GELATIN
 
 /obj/item/reagent_containers/chem_disp_cartridge/melonliquor
 	spawn_reagent = REAGENT_ID_MELONLIQUOR

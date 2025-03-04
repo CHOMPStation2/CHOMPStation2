@@ -1,24 +1,6 @@
-// Mail goodies
-/datum/job/
-	var/list/mail_goodies = list()		  // Goodies that can be received via the mail system
-	var/exclusive_mail_goodies = FALSE	  // If this job's mail goodies compete with generic goodies.
-	var/mail_color = "#FFF"
-
-/datum/alt_title/
-	var/list/mail_goodies = list()
-
 // Get mail goodies
-/datum/job/proc/get_mail_goodies(mob/recipient, var/alt_title)
-	var/list/goodies = list()
-	goodies |= mail_goodies
-
-	if(alt_titles && alt_titles)
-		var/typepath = alt_titles[alt_title]
-		if(typepath)
-			var/datum/alt_title/A = new typepath()
-			if(A.mail_goodies)
-				goodies |= A.mail_goodies
-	return goodies
+/datum/job/proc/get_mail_goodies(mob/recipient)
+	return mail_goodies
 
 // Get mail colour
 /datum/job/proc/get_mail_color(mob/recipient)
@@ -492,10 +474,12 @@
 		/obj/item/storage/pill_bottle/antitox = 125,
 		/obj/item/reagent_containers/blood/OMinus = 125,
 		/obj/item/healthanalyzer/improved = 150,
+		/* // These will stay uncommented until we see what to do about the chems
 		/obj/item/storage/pill_bottle/neotane = 10,
 		/obj/item/storage/pill_bottle/burncard = 10,
 		/obj/item/storage/pill_bottle/flamecure = 10,
 		/obj/item/storage/pill_bottle/purifyingagent = 10,
+		*/
 		/obj/item/reagent_containers/hypospray/autoinjector/biginjector/clotting = 10
 	)
 	mail_color = COMMS_COLOR_MEDICAL
@@ -562,10 +546,12 @@
 		/obj/item/stack/medical/advanced/ointment = 175,
 		/obj/item/reagent_containers/syringe/antiviral = 100,
 		/obj/item/storage/pill_bottle/tramadol = 100,
+	/* // Commented until we know what to do with the many chomp chems
 		/obj/item/storage/pill_bottle/neotane = 10,
 		/obj/item/storage/pill_bottle/burncard = 10,
 		/obj/item/storage/pill_bottle/flamecure = 10,
 		/obj/item/storage/pill_bottle/purifyingagent = 10,
+	*/
 		/obj/item/reagent_containers/pill/myelamine = 10
 	)
 	mail_color = COMMS_COLOR_MEDICAL

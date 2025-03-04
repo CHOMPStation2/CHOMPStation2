@@ -1,6 +1,6 @@
 /obj/structure/holosign
 	name = "holo sign"
-	icon = 'icons/effects/effects_ch.dmi'
+	icon = 'icons/effects/effects.dmi'
 	anchored = TRUE
 	var/obj/item/holosign_creator/projector
 	var/health = 10
@@ -70,8 +70,8 @@
 	update_nearby_tiles()
 
 /obj/structure/holosign/barrier/medical
-	name = "\improper PENLITE holobarrier"
-	desc = "A holobarrier that uses biometrics to detect human viruses. Denies passing to personnel with easily-detected, malicious viruses. Good for quarantines."
+	name = "\improper Vey-Med holobarrier"
+	desc = "A holobarrier that uses biometrics to detect viruses. Denies passing to personnel with easily-detected, malicious viruses. Good for quarantines."
 	icon_state = "holo_medical"
 	alpha = 125
 	var/buzzed = 0
@@ -95,14 +95,13 @@
 			buzzed = (world.time + 60)
 
 		icon_state = "holo_medical-deny"
-		sleep(10 SECONDS)
-		icon_state = "holo_medical"
+		addtimer(VARSET_CALLBACK(src, icon_state, "holo_medical"), 10 SECONDS, TIMER_DELETE_ME)
 
 /obj/structure/holosign/barrier/medical/proc/CheckHuman(mob/living/carbon/human/H)
-	if(istype(H.species, /datum/species/xenochimera))
+	if(istype(H.get_species(), SPECIES_XENOCHIMERA))
 		return FALSE
-	if(H.viruses)
-		for(var/datum/disease/D in H.viruses)
+	if(H.GetViruses())
+		for(var/datum/disease/D in H.GetViruses())
 			if(D.severity == NONTHREAT)
 				continue
 			return FALSE

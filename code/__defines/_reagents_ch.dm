@@ -66,8 +66,6 @@
 #define REAGENT_ID_BURBON "burbon"
 
 // Food & Drinks
-#define REAGENT_GELATIN "Gelatin"
-#define REAGENT_ID_GELATIN "gelatin"
 #define REAGENT_SNAPS "Akvavit"
 #define REAGENT_ID_SNAPS "snaps"
 #define REAGENT_MATCHALATTE "Matcha latte"
@@ -76,8 +74,6 @@
 #define REAGENT_ID_TEALEAVESGREEN "tealeavesgreen"
 #define REAGENT_BLONDIEMIX "Blondie Mix"
 #define REAGENT_ID_BLONDIEMIX "blondiemix"
-#define REAGENT_CINNAMONPOWDER "ground cinnamon"
-#define REAGENT_ID_CINNAMONPOWDER "cinnamonpowder"
 #define REAGENT_CHERRYTEA "Cherry Tea"
 #define REAGENT_ID_CHERRYTEA "cherrytea"
 #define REAGENT_WATERMELONTEA "Watermelon Tea"

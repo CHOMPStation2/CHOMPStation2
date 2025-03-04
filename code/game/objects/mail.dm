@@ -1,7 +1,7 @@
 /obj/item/mail
 	name = "mail"
-	desc = "An officially postmarked, tamper-evident parcel regulated by CentComm and made of high-quality materials."
-	icon = 'modular_chomp/icons/obj/bureaucracy.dmi'
+	desc = "An officially postmarked, tamper-evident parcel regulated by CentCom and made of high-quality materials."
+	icon = 'icons/obj/bureaucracy.dmi'
 	icon_state = "mail_small"
 	item_flags = NOBLUDGEON
 	w_class = ITEMSIZE_SMALL
@@ -80,7 +80,7 @@
 	var/set_recipient = FALSE
 	var/set_content = FALSE
 	var/sealed = FALSE
-	var/list/mail_recipients = list()
+	var/list/mail_recipients
 
 /obj/item/mail/blank/attackby(obj/item/W, mob/user)
 	..()
@@ -95,7 +95,7 @@
 			set_content = FALSE
 		user.drop_item()
 		W.forceMove(src)
-		balloon_alert(user, "Placed the [W] into the [src]")
+		to_chat(user, "Placed the [W] into the [src]")
 		set_content = TRUE
 		description_info = "Click with an empty hand to seal it, or Alt-Click to retrieve the object out."
 		return
@@ -134,7 +134,6 @@
 
 /obj/item/mail/blank/attack_self(mob/user)
 	if(!sealed)
-		balloon_alert(user, "Sealing the envelope...")
 		if(!do_after(user, 1.5 SECONDS, target = user))
 			sealed = FALSE
 		sealed = TRUE
@@ -177,14 +176,14 @@
 		var/obj/item/destTagger/O = W
 		if(O.currTag)
 			if(src.sortTag != O.currTag)
-				balloon_alert(user, "You have labeled the destination as [O.currTag].")
+				to_chat(user, span_notice("You have labeled the destination as [O.currTag]."))
 				src.sortTag = O.currTag
 				playsound(src, 'sound/machines/twobeep.ogg', 50, 1)
 				W.description_info = " It is labeled for [O.currTag]"
 			else
-				balloon_alert(user, "The mail is already labeled for [O.currTag].")
+				to_chat(user, span_notice("The mail is already labeled for [O.currTag]."))
 		else
-			balloon_alert(user, "You need to set a destination first!")
+			to_chat(user, span_danger("You need to set a destination first!"))
 		return
 
 /obj/item/mail/attack_self(mob/user)
@@ -194,15 +193,14 @@
 
 /obj/item/mail/proc/unwrap(mob/user)
 	if(recipient && user != recipient)
-		balloon_alert(user, "You can't open somebody's mail! That's <em>illegal</em>")
+		to_chat(user, span_danger("You can't open somebody's mail! That's <em>illegal</em>"))
 		return FALSE
 
 	if(opening)
-		balloon_alert(user, "You are already opening that!")
+		to_chat(user, span_danger("You are already opening that!"))
 		return FALSE
 
 	opening = TRUE
-	balloon_alert(user, "Unwrapping...")
 	if(!do_after(user, 1.5 SECONDS, target = user))
 		opening = FALSE
 		return FALSE
@@ -231,7 +229,7 @@
 		if(!preset_goodies)
 			var/list/job_goodies = this_job.get_mail_goodies(new_recipient, current_title)
 			if(LAZYLEN(job_goodies))
-				if(this_job.exclusive_mail_goodies)
+				if(this_job.get_mail_goodies())
 					goodies = job_goodies
 				else
 					goodies += job_goodies
@@ -299,12 +297,12 @@
 		new chosen(ground_mail)
 		log_and_message_admins("spawned [chosen] inside an envelope at ([usr.x],[usr.y],[usr.z])")
 
-	feedback_add_details("admin_verb","SE")
+	feedback_add_details("admin_verb","SM")
 
 // Mail Crate
 /obj/structure/closet/crate/mail
 	name = "mail crate"
-	desc = "An official mail crate from CentComm"
+	desc = "An official mail crate from CentCom"
 	points_per_crate = 0
 	closet_appearance = /decl/closet_appearance/crate/nanotrasen
 
@@ -331,7 +329,7 @@
 /obj/item/storage/bag/mail
 	name = "mail bag"
 	desc = "A bag for letters, envelopes and other postage."
-	icon = 'modular_chomp/icons/obj/bureaucracy.dmi'
+	icon = 'icons/obj/bureaucracy.dmi'
 	icon_state = "mailbag"
 	slot_flags = SLOT_BELT | SLOT_POCKET
 	w_class = ITEMSIZE_NORMAL
@@ -356,7 +354,7 @@
 	desc = "Sponsored by the Intergalactic Mail Service, this device logs mail deliveries in exchance for financial compensation."
 	force = 0
 	throwforce = 0
-	icon = 'modular_chomp/icons/obj/bureaucracy.dmi'
+	icon = 'icons/obj/bureaucracy.dmi'
 	icon_state = "mail_scanner"
 	slot_flags = SLOT_BELT
 	w_class = ITEMSIZE_SMALL
@@ -374,34 +372,34 @@
 	if(istype(A, /obj/item/mail))
 		var/obj/item/mail/saved_mail = A
 		if(saved_mail.scanned)
-			user.balloon_alert(user, "This letter has already been scanned!")
-			playsound(loc, 'modular_chomp/sound/items/mail/maildenied.ogg', 50, TRUE)
+			to_chat(user, span_danger("This letter has already been scanned!"))
+			playsound(loc, 'sound/items/mail/maildenied.ogg', 50, TRUE)
 			return
-		user.balloon_alert(user, "Mail added to database")
-		playsound(loc, 'modular_chomp/sound/items/mail/mailscanned.ogg', 50, TRUE)
+		to_chat(user, span_notice("Mail added to database"))
+		playsound(loc, 'sound/items/mail/mailscanned.ogg', 50, TRUE)
 		saved = A
 		return
 	if(isliving(A))
 		var/mob/living/M = A
 
 		if(!saved)
-			user.balloon_alert(user, "No logged mail!")
-			playsound(loc, 'modular_chomp/sound/items/mail/maildenied.ogg', 50, TRUE)
+			to_chat(user, span_danger("No logged mail!"))
+			playsound(loc, 'sound/items/mail/maildenied.ogg', 50, TRUE)
 			return
 
 		var/mob/living/recipient = saved.recipient
 
 		if(M.stat == DEAD)
 			to_chat(user, span_warning("Consent Verification failed: You can't deliver mail to a corpse!"))
-			playsound(loc, 'modular_chomp/sound/items/mail/maildenied.ogg', 50, TRUE)
+			playsound(loc, 'sound/items/mail/maildenied.ogg', 50, TRUE)
 			return
 		if(M.real_name != recipient.real_name)
 			to_chat(user, span_warning("Identity Verification failed: Target is not authorized recipient of this envelope!"))
-			playsound(loc, 'modular_chomp/sound/items/mail/maildenied.ogg', 50, TRUE)
+			playsound(loc, 'sound/items/mail/maildenied.ogg', 50, TRUE)
 			return
 		if(!M.client)
 			to_chat(user, span_warning("Consent Verification failed: The scanner does not accept orders from SSD crewmemmbers!"))
-			playsound(loc, 'modular_chomp/sound/items/mail/maildenied.ogg', 50, TRUE)
+			playsound(loc, 'sound/items/mail/maildenied.ogg', 50, TRUE)
 			return
 
 		saved.scanned = TRUE
@@ -409,7 +407,7 @@
 
 		cargo_points = rand(5, 10)
 		to_chat(user, span_notice("Succesful delivery acknowledged! [cargo_points] points added to Supply."))
-		playsound(loc, 'modular_chomp/sound/items/mail/mailapproved.ogg', 50, TRUE)
+		playsound(loc, 'sound/items/mail/mailapproved.ogg', 50, TRUE)
 		SSsupply.points += cargo_points
 
 // JUNK MAIL STUFF
@@ -440,7 +438,7 @@
 			/obj/item/reagent_containers/food/snacks/donkpocket/spicy,
 			/obj/item/reagent_containers/food/snacks/donkpocket/teriyaki,
 			/obj/item/toy/figure,
-			/obj/item/contraband,
+			/obj/item/contraband/package,
 			/obj/item/tool/screwdriver/sdriver,
 			/obj/item/storage/briefcase/target_toy
 		))
@@ -460,7 +458,7 @@
 		/obj/item/reagent_containers/food/snacks/donkpocket/spicy = "[initial(name)] with NEW SPICY-POCKET.",
 		/obj/item/reagent_containers/food/snacks/donkpocket/teriyaki = "[initial(name)] with NEW TERIYAKI-POCKET.",
 		/obj/item/toy/figure = "[initial(name)] from DoN**K*oC",
-		/obj/item/contraband = "[pick("oddly shaped", "strangely wrapped", "weird", "bulging")] [initial(name)]",
+		/obj/item/contraband/package = "[pick("oddly shaped", "strangely wrapped", "weird", "bulging")] [initial(name)]",
 		/obj/item/tool/screwdriver/sdriver = "[initial(name)] for Proffesor Who",
 		/obj/item/storage/briefcase/target_toy = "[initial(name)] for SIMPATHY, SUCCESS, MANHATTAN, BELIEFS"
 	)
