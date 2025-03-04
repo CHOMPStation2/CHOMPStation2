@@ -26,6 +26,107 @@
 	verbpath = /mob/living/carbon/human/proc/phase_shift
 	ability_icon_state = "tech_passwall"
 
+/mob/living/carbon/human/proc/phase_shift()
+	set name = "Phase Shift (100)"
+	set desc = "Shift yourself out of alignment with realspace to travel quickly to different areas."
+	set category = "Abilities.Shadekin"
+	/* //CHOMPEdit - Moved below //RS Port #658 Start
+	var/area/A = get_area(src)
+	if(!client?.holder && A.flag_check(AREA_BLOCK_PHASE_SHIFT))
+		to_chat(src, span_warning("You can't do that here!"))
+		return
+	//RS Port #658 End
+	*/ //CHOMPEdit End
+	var/ability_cost = 100
+
+	var/darkness = 1
+	var/turf/T = get_turf(src)
+	if(!T)
+		to_chat(src,span_warning("You can't use that here!"))
+		return FALSE
+	if((get_area(src).flags & PHASE_SHIELDED))	//CHOMPEdit Start - Mapping tools to control phasing
+		to_chat(src,span_warning("This area is preventing you from phasing!"))
+		return FALSE
+	//RS Port #658 Start
+	var/area/A = get_area(src)
+	if(!client?.holder && A.flag_check(AREA_BLOCK_PHASE_SHIFT))
+		to_chat(src, span_warning("You can't do that here!"))
+		return FALSE
+	//RS Port #658 End //CHOMPEdit End
+
+	if(ability_flags & AB_PHASE_SHIFTING)
+		return FALSE
+
+	var/brightness = T.get_lumcount() //Brightness in 0.0 to 1.0
+	darkness = 1-brightness //Invert
+
+	var/watcher = 0
+	//CHOMPEdit Start - Nerf to phasing
+	for(var/thing in orange(7, src))
+		if(istype(thing, /mob/living/carbon/human))
+			var/mob/living/carbon/human/watchers = thing
+			if((watchers in oviewers(7,src)) && watchers.species != SPECIES_SHADEKIN)	// And they can see us... (And aren't themselves a shadekin)
+				if(!(watchers.stat) && !isbelly(watchers.loc) && !istype(watchers.loc, /obj/item/holder))	// And they are alive and not being held by someone...
+					watcher++	// They are watching us!
+		else if(istype(thing, /mob/living/silicon/robot))
+			var/mob/living/silicon/robot/watchers = thing
+			if(watchers in oviewers(7,src))
+				if(!watchers.stat && !isbelly(watchers.loc))
+					watcher++	//The robot is watching us!
+		else if(istype(thing, /obj/machinery/camera))
+			var/obj/machinery/camera/watchers = thing
+			if(watchers.can_use())
+				if(src in watchers.can_see())
+					watcher++	//CHOMPEdit End - The camera is watching us!
+
+
+	ability_cost = CLAMP(ability_cost/(0.01+darkness*2),50, 80)//This allows for 1 watcher in full light
+	if(watcher>0)
+		ability_cost = ability_cost + ( 15 * watcher )
+	if(!(ability_flags & AB_PHASE_SHIFTED))
+		log_debug("[src] attempted to shift with [watcher] observers with a  cost of [ability_cost] in a darkness level of [darkness]") //CHOMPEdit Start - More clear phase info.
+	// inform about the observers affecting phasing
+	if(darkness<=0.4 && watcher>=2)
+		to_chat(src, span_warning("You have a few observers in a well-lit area! This may prevent phasing. (Working cameras count towards observers)"))
+	else if(watcher>=3)
+		to_chat(src, span_warning("You have a large number of observers! This may prevent phasing. (Working cameras count towards observers)")) //CHOMPEdit End
+
+
+	var/datum/species/shadekin/SK = species
+	/* if(!istype(SK)) //CHOMPEdit Removal - Moved to shadekin_ability_check
+		to_chat(src, span_warning("Only a shadekin can use that!"))
+		return FALSE
+	else if(stat)
+		to_chat(src, span_warning("Can't use that ability in your state!")) */ //CHOMPEdit End
+	if(!shadekin_ability_check())
+		return FALSE
+	// Prevent bugs when spamming phase button
+	else if(SK.doing_phase)
+		to_chat(src, span_warning("You are already trying to phase!"))
+		return FALSE
+
+	else if(shadekin_get_energy() < ability_cost && !(ability_flags & AB_PHASE_SHIFTED))
+		to_chat(src, span_warning("Not enough energy for that ability!"))
+		return FALSE
+
+	if(!(ability_flags & AB_PHASE_SHIFTED))
+		shadekin_adjust_energy(-ability_cost)
+	playsound(src, 'sound/effects/stealthoff.ogg', 75, 1)
+
+	if(!T.CanPass(src,T) || loc != T)
+		to_chat(src,span_warning("You can't use that here!"))
+		return FALSE
+
+	SK.doing_phase = TRUE // Prevent bugs when spamming phase button
+	//Shifting in
+	if(ability_flags & AB_PHASE_SHIFTED)
+		phase_in(T)
+	//Shifting out
+	else
+		phase_out(T)
+	SK.doing_phase = FALSE // Prevent bugs when spamming phase button
+
+
 /mob/living/carbon/human/proc/phase_in(var/turf/T)
 	if(ability_flags & AB_PHASE_SHIFTED)
 
