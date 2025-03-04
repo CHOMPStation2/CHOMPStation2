@@ -17309,7 +17309,7 @@
 	},
 /area/survivalpod)
 "feW" = (
-/obj/item/clothing/head/helmet/space/void/medical/veymed_static,
+/obj/item/clothing/head/helmet/space/void/medical/veymed,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
