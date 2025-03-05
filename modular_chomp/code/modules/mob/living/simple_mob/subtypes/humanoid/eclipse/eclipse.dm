@@ -435,6 +435,32 @@
 			continue
 		L.add_modifier(/datum/modifier/aura/slime_heal, null, src)
 
+/mob/living/simple_mob/humanoid/eclipse/solar/hellhound
+	name = "Solar Eclipse Hound"
+	desc = "A heavily armored creature, flames dancing around it's burn and energy proof armor."
+	health = 70
+	maxHealth = 70
+	ai_holder_type = /datum/ai_holder/simple_mob/intentional/adv_dark_gygax
+	projectiletype = null //Flashing was to much for this mob.
+	movement_cooldown = -1
+	melee_damage_lower = 20
+	melee_damage_upper = 20
+	attack_armor_pen = 20
+	icon_state = "eclipse_hound"
+	icon_living = "eclipse_hound"
+	size_multiplier = 1.25
+	var/poison_chance = 100
+	var/poison_per_bite = 4
+	var/poison_type = "stoxin"
+
+	melee_attack_delay = 4
+
+/mob/living/simple_mob/humanoid/eclipse/solar/hellhound/do_special_attack(atom/A)
+	var/datum/effect/effect/system/spark_spread/s1 = new /datum/effect/effect/system/smoke_spread
+	s1.set_up(5, 1, A)
+	var/obj/item/projectile/P = new /obj/item/projectile/energy/fireball(get_turf(src))
+	P.launch_projectile(A, BP_TORSO, src)
+
 //The lunar mobs, highly resistant to brute based damage.
 /mob/living/simple_mob/humanoid/eclipse/lunar
 	name = "Lunar Eclipse Initiate"
