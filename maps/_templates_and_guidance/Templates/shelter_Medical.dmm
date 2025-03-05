@@ -330,10 +330,6 @@
 /area/survivalpod)
 "S" = (
 /obj/machinery/iv_drip,
-<<<<<<< HEAD
-/obj/machinery/iv_drip,
-=======
->>>>>>> 53e95e0ece (Fixes more map issues (#17225))
 /obj/machinery/vending/wallmed1{
 	dir = 8;
 	pixel_x = 22;
