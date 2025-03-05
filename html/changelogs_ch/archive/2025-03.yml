@@ -95,3 +95,31 @@
   - code_imp: over 3600 missing sprite icons have been identified...
   tacoguy7765093:
   - admin: /proc/toggle_selfsurgery() works now.
+2025-03-05:
+  CHOMPStation2StaffMirrorBot:
+  - rscadd: Atmos and Medical holosigns
+  - rscadd: Super Matter lighters
+  - rscadd: Light painters
+  - rscadd: Mail System, blank envelopes, and mail scanner.
+  - rscadd: Blank envelopes
+  - rscadd: Mail scanner
+  - bugfix: changeTurf will no longer create outdoor turfs in turbolifts or shuttles
+  - rscadd: Adds Purple Robes and Tiara to loadout
+  - qol: lowers cost of suit clothing fluff (This helps you identify which ones have
+      armor and which ones don't, as some things are naturally priced higher due to
+      their innate armor)
+  - qol: Brings some loadout items to normal prices (increased is reserved for ones
+      that give armor)
+  - bugfix: Fixes neural implant always having 2 cost due to implant/language existing
+      and taking priority.
+  - qol: Neural implant only costs one loadout point, now.
+  - rscadd: Adds pirate coat and pirate hat to loadout. Yarr!
+  - qol: veymed autoadaptive suits can now handle teshari
+  - balance: veymed tesh suits changed to generic nonadaptive suits
+  - qol: '"streamlined" changed to "lightweight" in veymed suit names'
+  Diana. Tacoguy, Kash:
+  - rscadd: Tacoguy - Adds Combat Medic Catborg sprite.
+  - code_imp: Kash - Robot linter will now properly detect stomach states.
+  - code_imp: Diana - Fixes invisible robot sprites.
+  Will:
+  - code_imp: Vents work better
