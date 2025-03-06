@@ -10,15 +10,12 @@
 #define HUSKED_BODY 0x200
 #define INFECTION 0x400
 #define VIRUS 0x800
-<<<<<<< HEAD
-#define WEIRD_ORGANS 0x1000 //CHOMPedit malignant
-=======
 #define INTERNAL_DAMAGE 0x1000
 #define CLONE_DAMAGE 0x2000
 #define ORGAN_DISLOCATED 0x4000
 #define ALCOHOL_POISONING 0x8000
 #define BLOODLOSS 0x10000
->>>>>>> ae94adba25 (Various medical features and adjustments. Kiosk rework. (#17210))
+#define WEIRD_ORGANS 0x20000 //CHOMPedit malignant
 
 /obj/machinery/medical_kiosk
 	name = "medical kiosk"
@@ -157,15 +154,12 @@
 			problems |= INTERNAL_BLEEDING
 		if(I.germ_level >= INFECTION_LEVEL_ONE) //Do NOT check for the germ_level on the mob, it'll be innacurate.
 			problems |= INFECTION
-<<<<<<< HEAD
+		if(I.damage)
+			problems |= INTERNAL_DAMAGE
 		//CHOMPedit begin- malignants
 		if(istype(I,/obj/item/organ/internal/malignant))
 			problems |= WEIRD_ORGANS
 		//CHOMPedit end
-=======
-		if(I.damage)
-			problems |= INTERNAL_DAMAGE
->>>>>>> ae94adba25 (Various medical features and adjustments. Kiosk rework. (#17210))
 
 	if(HUSK in user.mutations)
 		problems |= HUSKED_BODY
@@ -304,15 +298,6 @@
 		problem_text += "<br>" + span_warning("SEVERITY: 'LOW' - Exposure to genetic damage detected - medical treatment recommended.")
 	//Nothing!
 	if(problems & TOXIN_DAMAGE)
-<<<<<<< HEAD
-		problem_text += "<br>" + span_warning("Exposure to toxic materials detected - induce vomiting if you have consumed anything recently.")
-	if(problems & OXY_DAMAGE)
-		problem_text += "<br>" + span_warning("Blood/air perfusion level is below acceptable norms - use concentrated oxygen if necessary.")
-	//CHOMPedit begin malignants
-	if(problems & WEIRD_ORGANS)
-		problem_text += "<br>" + span_warning("Anatomical irregularities detected - Please see a medical professional.")
-	//CHOMPedit end
-=======
 		problem_text += "<br>" + span_warning("SEVERITY: 'LOW' - Exposure to toxic materials detected - if severe, seek medical attention. If mild, drinking tea is suggested.") //Let people know about the secret 'drink tea to decrease toxins' technique.
 		if(able_to_dispense)
 			medication_dispensed = TRUE
@@ -323,7 +308,10 @@
 			medication_dispensed = TRUE
 			new /obj/item/reagent_containers/pill/small_inaprovaline(src.loc)
 			inaprovaline_given = TRUE
->>>>>>> ae94adba25 (Various medical features and adjustments. Kiosk rework. (#17210))
+	//CHOMPedit begin malignants
+	if(problems & WEIRD_ORGANS)
+		problem_text += "<br>" + span_warning("Anatomical irregularities detected - Please see a medical professional.")
+	//CHOMPedit end
 	if(problems & HUSKED_BODY)
 		problem_text += "<br>" + span_danger("SEVERITY: 'Minor' - Anatomical structure lost, resuscitation not possible!") //Only borers will ever see this.
 	//thoughts and prayers
@@ -367,12 +355,9 @@
 #undef HUSKED_BODY
 #undef INFECTION
 #undef VIRUS
-<<<<<<< HEAD
-#undef WEIRD_ORGANS // CHOMPedit - malignants
-=======
 #undef INTERNAL_DAMAGE
 #undef CLONE_DAMAGE
 #undef ORGAN_DISLOCATED
 #undef ALCOHOL_POISONING
 #undef BLOODLOSS
->>>>>>> ae94adba25 (Various medical features and adjustments. Kiosk rework. (#17210))
+#undef WEIRD_ORGANS // CHOMPedit - malignants

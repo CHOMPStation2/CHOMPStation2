@@ -991,16 +991,9 @@
 		M.bodytemperature = min(310, M.bodytemperature + (adj_temp * TEMPERATURE_DAMAGE_COEFFICIENT))
 	if(adj_temp < 0 && M.bodytemperature > 310)
 		M.bodytemperature = min(310, M.bodytemperature - (adj_temp * TEMPERATURE_DAMAGE_COEFFICIENT))
-<<<<<<< HEAD
 	if(issmall(M)) removed *= 2 //CHOMP Station addition Small bodymass, more effect from lower volume.
 	if(M.species.organic_food_coeff) //CHOMPStation addition. If this is set to 0, they don't get nutrition from food.
 		M.nutrition += nutriment_factor * removed //CHOMPStation addition For hunger and fatness
-	/* VOREStation Removal
-	if(alien == IS_SLIME && water_based)
-		M.adjustToxLoss(removed * 2)
-	*/ //VOREStation Removal End
-=======
->>>>>>> ae94adba25 (Various medical features and adjustments. Kiosk rework. (#17210))
 
 /datum/reagent/drink/overdose(var/mob/living/carbon/M, var/alien) //Add special interactions here in the future if desired.
 	..()
