@@ -54,7 +54,11 @@
 	ideal_air_type = /datum/gas_mixture/belly_air/vox
 	siemens_coefficient = 0.2
 
+<<<<<<< HEAD
 	flags = NO_SCAN // CHOMPEdit - Vox can now be defibbed
+=======
+	flags = NO_SCAN
+>>>>>>> ae94adba25 (Various medical features and adjustments. Kiosk rework. (#17210))
 	spawn_flags = SPECIES_IS_WHITELISTED
 	appearance_flags = HAS_EYE_COLOR | HAS_HAIR_COLOR | HAS_SKIN_COLOR
 
