@@ -30,8 +30,6 @@
 		return
 */
 
-* CHOMPedit end. */
-
 	var/dat = ""
 
 	var/bleeding_external = FALSE
