@@ -175,9 +175,15 @@ SUBSYSTEM_DEF(statpanels)
 /datum/controller/subsystem/statpanels/proc/set_tickets_tab(client/target)
 	/* CHOMPRemove Start, our tickets are handled differently
 	var/list/tickets = list()
+<<<<<<< HEAD
 	if(check_rights(R_ADMIN|R_SERVER|R_MOD,FALSE,target)) //Prevents non-staff from opening the list of ahelp tickets
 	*/// CHOMPRemove End
 	var/list/tickets = GLOB.tickets.stat_entry(target) // CHOMPEdit
+=======
+	if(check_rights_for(target, R_ADMIN|R_SERVER|R_MOD)) //Prevents non-staff from opening the list of ahelp tickets
+		tickets += GLOB.ahelp_tickets.stat_entry(target)
+	tickets += GLOB.mhelp_tickets.stat_entry(target)
+>>>>>>> 7a7ae89713 ([MAJOR CHANGE] Admin rank datum (#17133))
 	target.stat_panel.send_message("update_tickets", tickets)
 
 /datum/controller/subsystem/statpanels/proc/set_SDQL2_tab(client/target)

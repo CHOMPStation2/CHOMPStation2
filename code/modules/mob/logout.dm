@@ -5,9 +5,14 @@
 	update_client_z(null)
 	log_access_out(src)
 	unset_machine()
+<<<<<<< HEAD
 	if(admin_datums[src.ckey])
 		message_admins("Staff logout: [key_name(src)]") // CHOMPEdit: Admin logout notice displays no matter what//Edit2: STAFF
 		if(ticker && ticker.current_state == GAME_STATE_PLAYING) //Only report this stuff if we are currently playing.
+=======
+	if(GLOB.admin_datums[src.ckey])
+		if (ticker && ticker.current_state == GAME_STATE_PLAYING) //Only report this stuff if we are currently playing.
+>>>>>>> 7a7ae89713 ([MAJOR CHANGE] Admin rank datum (#17133))
 			var/admins_number = GLOB.admins.len
 
 			if(admins_number == 0) //Apparently the admin logging out is no longer an admin at this point, so we have to check this towards 0 and not towards 1. Awell.

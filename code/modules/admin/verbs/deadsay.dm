@@ -15,10 +15,14 @@
 		to_chat(src, span_warning("You have deadchat muted."))
 		return
 
+<<<<<<< HEAD
 	if (src.handle_spam_prevention(msg,MUTE_DEADCHAT))
 		return
 
 	var/stafftype = uppertext(holder.rank)
+=======
+	var/stafftype = uppertext(holder.rank_names())
+>>>>>>> 7a7ae89713 ([MAJOR CHANGE] Admin rank datum (#17133))
 
 	msg = sanitize(msg)
 	log_admin("DSAY: [key_name(src)] : [msg]")
