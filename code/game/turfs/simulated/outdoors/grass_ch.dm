@@ -127,18 +127,44 @@ GLOBAL_LIST_INIT(grass_animals,list(
 		/mob/living/simple_mob/vore/smokestar/drider = 1
 		),
 	"thor_real" = list(
-		/mob/living/simple_mob/vore/aggressive/frog = 5,
-		/mob/living/simple_mob/animal/sif/glitterfly = 35,
-		/mob/living/simple_mob/vore/otie = 15,
-		/mob/living/simple_mob/vore/otie/feral = 5,
-		/mob/living/simple_mob/vore/fennec = 20,
-		/mob/living/simple_mob/animal/passive/lizard = 20,
-		/mob/living/simple_mob/animal/passive/armadillo = 10,
-		/mob/living/simple_mob/animal/passive/opossum = 10,
-		/mob/living/simple_mob/animal/passive/mouse/jerboa = 5,
-		/mob/living/simple_mob/vore/wolf/direwolf = 5,
-		/mob/living/simple_mob/vore/aggressive/rat = 5,
-		/mob/living/simple_mob/vore/horse/big = 10
+		/mob/living/simple_mob/animal/passive/armadillo = 1, // These values are all 1 for now, kind of a placeholder. Change them later depending on player reactions.
+		/mob/living/simple_mob/animal/passive/chicken = 1, // Did you know chickens come from South-East Asia? In the jungle? Bet they'd thrive here as an invasive species.
+		/mob/living/simple_mob/animal/passive/yithian = 1,
+		/mob/living/simple_mob/animal/passive/mouse = 1,
+		/mob/living/simple_mob/animal/passive/lizard/large/defensive = 1, // If we ever get komodo dragons or tegu or something with a less shitty sprite, replace these.
+		/mob/living/simple_mob/animal/passive/crab = 1,
+		/mob/living/simple_mob/animal/passive/cockroach = 1,
+		/mob/living/simple_mob/animal/passive/snake/python = 1,
+		/mob/living/simple_mob/animal/passive/bird/parrot = 1,
+		/mob/living/simple_mob/animal/passive/bird/parrot/eclectus = 1,
+		/mob/living/simple_mob/animal/passive/bird/parrot/grey_parrot = 1,
+		/mob/living/simple_mob/animal/passive/bird/parrot/white_caique = 1,
+		/mob/living/simple_mob/animal/passive/bird/parrot/budgerigar = 1,
+		/mob/living/simple_mob/animal/passive/bird/parrot/cockatiel = 1,
+		/mob/living/simple_mob/animal/passive/bird/parrot/white_cockatoo = 1,
+		/mob/living/simple_mob/animal/passive/bird/parrot/pink_cockatoo = 1,
+		/mob/living/simple_mob/tomato = 1, // for funsies
+		/mob/living/simple_mob/vore/lamia = 1, // Sure I could just use the 'random' version, but I want them all to be naked in the wilderness.
+		/mob/living/simple_mob/vore/lamia/cobra = 1,
+		/mob/living/simple_mob/vore/lamia/copper = 1,
+		/mob/living/simple_mob/vore/lamia/green = 1,
+		/mob/living/simple_mob/vore/lamia/zebra = 1,
+		/mob/living/simple_mob/vore/lamia/albino = 1,
+		/mob/living/simple_mob/vore/rabbit = 1,
+		/mob/living/simple_mob/vore/gryphon = 1,
+		/mob/living/simple_mob/vore/meowl = 1,
+		/mob/living/simple_mob/vore/raptor = 1,
+		/mob/living/simple_mob/vore/seagull = 1,
+		/mob/living/simple_mob/vore/redpanda = 1,
+		/mob/living/simple_mob/vore/fennec = 1,
+		/mob/living/simple_mob/vore/mantrap = 1,
+		// /mob/living/simple_mob/vore/pitcher = 1, // Inactive until the jank is fixed by Virgo.
+		/mob/living/simple_mob/vore/pitcher_plant = 1,
+		/mob/living/simple_mob/vore/alienanimals/catslug = 1,
+		/mob/living/simple_mob/vore/aggressive/giant_snake = 1,
+		/mob/living/simple_mob/vore/aggressive/dino = 1,
+		/mob/living/simple_mob/vore/aggressive/rat = 1,
+		/mob/living/simple_mob/vore/aggressive/frog = 1
 		),
 ))
 
