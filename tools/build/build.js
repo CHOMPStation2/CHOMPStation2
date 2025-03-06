@@ -148,12 +148,34 @@ export const IconCutterTarget = new Juke.Target({
   dependsOn: () => [
     CutterTarget,
   ],
+<<<<<<< HEAD
   inputs: [
     'icons/**/*.png',
     `icons/**/*${CUTTER_SUFFIX}`,
     `cutter_templates/**/*${CUTTER_SUFFIX}`,
     cutter_path,
   ],
+=======
+  inputs: ({ get }) => {
+    const standard_inputs = [
+      `icons/**/*.png.toml`,
+      `icons/**/*.dmi.toml`,
+      `cutter_templates/**/*.toml`,
+      "tgui/public/tgui.html",
+      cutter_path,
+    ]
+    // Alright we're gonna search out any existing toml files and convert
+    // them to their matching .dmi or .png file
+    const existing_configs = [
+      ...Juke.glob(`icons/**/*.png.toml`),
+      ...Juke.glob(`icons/**/*.dmi.toml`),
+    ];
+    return [
+      ...standard_inputs,
+      ...existing_configs.map((file) => file.replace('.toml', '')),
+    ]
+  },
+>>>>>>> 5d1a3923aa (tgui say update (#17273))
   outputs: ({ get }) => {
     if(get(ForceRecutParameter))
       return [];
