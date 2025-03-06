@@ -43,20 +43,3 @@
 		if(unsafe_wrenching)
 			unsafe_pressure_release(user, internal_pressure)
 		deconstruct()
-
-// Throws the user when they unwrench a pipe with a major difference between the internal and environmental pressure.
-/obj/machinery/atmospherics/proc/unsafe_pressure_release(mob/user, pressures = null)
-	if(!user)
-		return
-	if(!pressures)
-		var/datum/gas_mixture/int_air = return_air()
-		var/datum/gas_mixture/env_air = loc.return_air()
-		pressures = int_air.return_pressure() - env_air.return_pressure()
-
-	user.visible_message(span_danger("[user] is sent flying by pressure!"),span_userdanger("The pressure sends you flying!"))
-
-	// if get_dir(src, user) is not 0, target is the edge_target_turf on that dir
-	// otherwise, edge_target_turf uses a random cardinal direction
-	// range is pressures / 250
-	// speed is pressures / 1250
-	user.throw_at(get_edge_target_turf(user, get_dir(src, user) || pick(GLOB.cardinal)), pressures / 250, pressures / 1250)
