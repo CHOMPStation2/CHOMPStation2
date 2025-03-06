@@ -1,3 +1,5 @@
+GLOBAL_LIST_EMPTY(simple_portals)
+
 /obj/effect/simple_portal
 	name = "Portal"
 	desc = "It looks like a portal that leads to somewhere, although you can't quite see through it."
@@ -8,6 +10,20 @@
 	anchored = TRUE
 	var/atom/destination
 	var/teleport_sound = 'sound/effects/portal_effect.ogg'
+
+/obj/effect/simple_portal/Initialize(mapload)
+	..()
+	GLOB.simple_portals += src
+	return INITIALIZE_HINT_LATELOAD
+
+/obj/effect/simple_portal/linked/LateInitialize()
+	. = ..()
+	if(portal_id)
+		link_portal()
+
+/obj/effect/simple_portal/Destroy()
+	. = ..()
+	GLOB.simple_portals -= src
 
 /obj/effect/simple_portal/Bumped(atom/movable/AM)
 	. = ..()
@@ -43,7 +59,7 @@
 	icon_state = "portal1"
 	var/obj/effect/simple_portal/linked/linked_portal
 	var/portal_id
-	
+
 /obj/effect/simple_portal/linked/handle_teleport(atom/movable/AM)
 	destination = null
 	update_icon()
@@ -69,7 +85,7 @@
 					if(valid_destination(destination))
 						break
 	. = ..()
-		
+
 /obj/effect/simple_portal/linked/proc/valid_destination(var/turf/dest,var/atom/movable/AM)
 	if(!dest)
 		return FALSE
@@ -98,8 +114,7 @@
 /obj/effect/simple_portal/linked/proc/link_portal()
 	if(!portal_id)
 		return "SET PORTAL ID FIRST"
-	var/list/candidates = get_all_of_type(/obj/effect/simple_portal/linked)
-	for(var/obj/effect/simple_portal/linked/candidate in candidates)
+	for(var/obj/effect/simple_portal/linked/candidate in GLOB.simple_portals)
 		if(istype(candidate) && portal_id == candidate.portal_id && candidate != src)
 			linked_portal = candidate
 			break
@@ -110,8 +125,3 @@
 		icon_state = "portal"
 	else
 		icon_state = "portal1"
-
-/obj/effect/simple_portal/linked/Initialize()
-	. = ..()
-	if(portal_id)
-		link_portal()
