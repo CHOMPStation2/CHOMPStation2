@@ -26,14 +26,9 @@
 	base_icon = "spear_mask"
 	icon_state = "spear_mask0"
 	unbreakable = 1
-<<<<<<< HEAD
-/obj/item/material/twohanded/spear/foam/New(var/newloc)
-	..(newloc,"foam")
-=======
 
 /obj/item/material/twohanded/spear/foam/Initialize(mapload)
 	. = ..(mapload, MAT_FOAM)
->>>>>>> 9d688b7a7c (Some more Init and Destroy issues (#17252))
 
 /obj/item/material/twohanded/fireaxe/foam
 	attack_verb = list("bonked","whacked")
