@@ -14,12 +14,7 @@
 
 /obj/item/healthanalyzer/proc/guide(var/mob/living/carbon/human/M, mob/living/user)
 
-<<<<<<< HEAD
-/* CHOMPedit remove: Anyone can get this info. *
-
-=======
 /* Enable this if you want non-medical users to be blocked from the guide. Kind of pointless, since the only ones that would really NEED the guide are non-medical users.
->>>>>>> ddc95236e0 (Fixes some runtimes [IDB IGNORE] (#17194))
 	var/obj/item/card/id/ourid = user?.GetIdCard()
 	if(!ourid)
 		return
@@ -90,11 +85,7 @@
 	if(infection)
 		dat += span_bold("Infection") + " - Administer Spaceacillin. If severe, use Corophizine or overdose on Spaceacillin and monitor until well.<br>"
 	if(M.getBrainLoss() >= 1)
-<<<<<<< HEAD
-		dat += span_bold("Traumatic Brain Injury") + " - Commence brain repair surgery Administer Alkysine or universal organ-repair chemicals such as Peridaxon.<br>"
-=======
 		dat += span_bold("Traumatic Brain Injury") + " - Commence brain repair surgery, administer Alkysine or universal organ-repair chemicals such as Peridaxon.<br>"
->>>>>>> ddc95236e0 (Fixes some runtimes [IDB IGNORE] (#17194))
 	if(M.radiation || M.accumulated_rads)
 		dat += span_bold("Radiation Exposure") + " - Administer Hyronalin or Arithrazine. Monitor for genetic damage.<br>"
 	if(organ)
