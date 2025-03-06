@@ -701,7 +701,7 @@ GLOBAL_DATUM_INIT(tickets, /datum/tickets, new)
 	. = list("total" = list(), "noflags" = list(), "afk" = list(), "stealth" = list(), "present" = list())
 	for(var/client/X in GLOB.admins)
 		.["total"] += X
-		if(requiredflags != 0 && !check_rights(requiredflags, FALSE, X))
+		if(requiredflags != 0 && !check_rights(X, requiredflags))
 			.["noflags"] += X
 		else if(X.is_afk())
 			.["afk"] += X
