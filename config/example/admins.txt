@@ -8,8 +8,4 @@
 # NOTE: syntax was changed to allow hyphenation of ranknames, since spaces are stripped.      #
 ###############################################################################################
 
-<<<<<<< HEAD
-# not_a_user - Admin
-=======
 # not_a_user = Admin
->>>>>>> 7a7ae89713 ([MAJOR CHANGE] Admin rank datum (#17133))

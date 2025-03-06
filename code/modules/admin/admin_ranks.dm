@@ -223,14 +223,6 @@ GLOBAL_PROTECT(protected_ranks)
 		C.remove_admin_verbs()
 		C.holder = null
 	GLOB.admins.Cut()
-<<<<<<< HEAD
-	load_admin_ranks() //CHOMP Edit: moved this from "f(config.admin_legacy_system)" and put it here instead, literally just moved it 3 lines.
-
-	if(CONFIG_GET(flag/admin_legacy_system)) // CHOMPEdit
-		//Clear profile access
-		for(var/A in world.GetConfig("admin"))
-			world.SetConfig("APP/admin", A, null)
-=======
 	GLOB.protected_admins.Cut()
 	GLOB.deadmins.Cut()
 	var/list/backup_file_json = load_admin_ranks(dbfail, no_update)
@@ -249,7 +241,6 @@ GLOBAL_PROTECT(protected_ranks)
 		var/admin_key = admins_regex.group[1]
 		var/admin_rank = admins_regex.group[2]
 		new /datum/admins(ranks_from_rank_name(admin_rank), ckey(admin_key), force_active = FALSE, protected = TRUE)
->>>>>>> 7a7ae89713 ([MAJOR CHANGE] Admin rank datum (#17133))
 
 	if(!CONFIG_GET(flag/admin_legacy_system) && !dbfail)
 		var/datum/db_query/query_load_admins = SSdbcore.NewQuery("SELECT ckey, `rank`, feedback FROM [format_table_name("admin")] ORDER BY `rank`")
@@ -264,74 +255,7 @@ GLOBAL_PROTECT(protected_ranks)
 				var/admin_feedback = query_load_admins.item[3]
 				var/skip
 
-<<<<<<< HEAD
-		//process each line seperately
-		for(var/line in Lines)
-			if(!length(line))				continue
-			if(copytext(line,1,2) == "#")	continue
-
-			//Split the line at every "-"
-			var/list/List = splittext(line, "-")
-			if(!List.len)					continue
-
-			//ckey is before the first "-"
-			var/ckey = ckey(List[1])
-			if(!ckey)						continue
-
-			//rank follows the first "-"
-			var/rank = ""
-			if(List.len >= 2)
-				rank = ckeyEx(List[2])
-
-			//load permissions associated with this rank
-			var/rights = admin_ranks[rank]
-
-			//create the admin datum and store it for later use
-			var/datum/admins/D = new /datum/admins(rank, rights, ckey)
-
-			if(D.rights & R_DEBUG) //grant profile access
-				world.SetConfig("APP/admin", ckey, "role=admin")
-
-			//find the client for a ckey if they are connected and associate them with the new admin datum
-			D.associate(GLOB.directory[ckey])
-
-	else
-		//The current admin system uses SQL
-
-		establish_db_connection()
-		if(!SSdbcore.IsConnected())
-			error("Failed to connect to database in load_admins(). Reverting to legacy system.")
-			log_misc("Failed to connect to database in load_admins(). Reverting to legacy system.")
-			CONFIG_SET(flag/admin_legacy_system, TRUE)
-			load_admins()
-			return
-
-		var/datum/db_query/query = SSdbcore.NewQuery("SELECT ckey, rank, level, flags FROM erro_admin")
-		query.Execute()
-		while(query.NextRow())
-			var/ckey = query.item[1]
-			var/rank = query.item[2]
-			if(rank == "Removed")	continue	//This person was de-adminned. They are only in the admin list for archive purposes.
-
-			var/rights = query.item[4]
-			if(istext(rights))	rights = text2num(rights)
-			var/datum/admins/D = new /datum/admins(rank, rights, ckey)
-
-			if(D.rights & R_DEBUG) //grant profile access
-				world.SetConfig("APP/admin", ckey, "role=admin")
-
-			//find the client for a ckey if they are connected and associate them with the new admin datum
-			D.associate(GLOB.directory[ckey])
-		qdel(query)
-		if(!admin_datums)
-			error("The database query in load_admins() resulted in no admins being added to the list. Reverting to legacy system.")
-			log_misc("The database query in load_admins() resulted in no admins being added to the list. Reverting to legacy system.")
-			CONFIG_SET(flag/admin_legacy_system, TRUE)
-			load_admins()
-			return
-=======
 				var/list/admin_ranks = ranks_from_rank_name(admin_rank)
->>>>>>> 7a7ae89713 ([MAJOR CHANGE] Admin rank datum (#17133))
 
 				if(admin_ranks.len == 0)
 					message_admins("[admin_ckey] loaded with invalid admin rank [admin_rank].")

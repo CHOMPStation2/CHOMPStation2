@@ -35,11 +35,8 @@
 #include "code\__defines\_tick.dm"
 #include "code\__defines\action.dm"
 #include "code\__defines\admin.dm"
-<<<<<<< HEAD
 #include "code\__defines\admin_ch.dm"
-=======
 #include "code\__defines\admin_verb.dm"
->>>>>>> 7a7ae89713 ([MAJOR CHANGE] Admin rank datum (#17133))
 #include "code\__defines\admin_vr.dm"
 #include "code\__defines\airlock_control.dm"
 #include "code\__defines\ammunition.dm"
@@ -189,11 +186,8 @@
 #include "code\__defines\dcs\flags.dm"
 #include "code\__defines\dcs\helpers.dm"
 #include "code\__defines\dcs\signals.dm"
-<<<<<<< HEAD
 #include "code\__defines\dcs\signals_ch.dm"
-=======
 #include "code\__defines\dcs\signals\signals_client.dm"
->>>>>>> 7a7ae89713 ([MAJOR CHANGE] Admin rank datum (#17133))
 #include "code\__defines\dcs\signals\signals_subsystem.dm"
 #include "code\__defines\dcs\signals\signals_mobs\signals_mob_main.dm"
 #include "code\__defines\dcs\signals\signals_turf.dm"
@@ -2035,13 +2029,8 @@
 #include "code\modules\admin\secrets\random_events\gravity.dm"
 #include "code\modules\admin\secrets\random_events\trigger_cordical_borer_infestation.dm"
 #include "code\modules\admin\secrets\random_events\trigger_xenomorph_infestation.dm"
-<<<<<<< HEAD
-#include "code\modules\admin\verbs\admin_ch.dm"
-=======
 #include "code\modules\admin\verb_datums\_admin_verb_datum.dm"
-#include "code\modules\admin\verbs\adminhelp.dm"
-#include "code\modules\admin\verbs\adminhelp_vr.dm"
->>>>>>> 7a7ae89713 ([MAJOR CHANGE] Admin rank datum (#17133))
+#include "code\modules\admin\verbs\admin_ch.dm"
 #include "code\modules\admin\verbs\adminjump.dm"
 #include "code\modules\admin\verbs\adminpm.dm"
 #include "code\modules\admin\verbs\adminsay.dm"

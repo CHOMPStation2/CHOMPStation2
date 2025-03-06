@@ -60,11 +60,7 @@ GLOBAL_LIST_EMPTY(alien_whitelist) // CHOMPEdit - Managed Globals
 		return TRUE
 
 	//Search the whitelist
-<<<<<<< HEAD
-	var/list/our_whitelists = GLOB.alien_whitelist[M.ckey] // CHOMPEdit - Managed Globals
-=======
-	var/list/our_whitelists = alien_whitelist[C.ckey]
->>>>>>> 7a7ae89713 ([MAJOR CHANGE] Admin rank datum (#17133))
+	var/list/our_whitelists = GLOB.alien_whitelist[C.ckey] // CHOMPEdit - Managed Globals
 	if("All" in our_whitelists)
 		return TRUE
 	if(species.name in our_whitelists)

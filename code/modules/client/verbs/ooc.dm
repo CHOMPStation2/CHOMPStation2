@@ -55,11 +55,7 @@
 			ooc_style = "event_manager"
 		if(check_rights(R_ADMIN) && !(check_rights(R_BAN))) //Game Masters
 			ooc_style = "moderator"
-<<<<<<< HEAD
-		if(holder.rights & R_DEBUG && !(holder.rights & R_BAN)) //Developers
-=======
 		if(check_rights(R_SERVER) && !(check_rights(R_BAN))) //Developers
->>>>>>> 7a7ae89713 ([MAJOR CHANGE] Admin rank datum (#17133))
 			ooc_style = "developer"
 		if(check_rights(R_ADMIN) && check_rights(R_BAN)) //Admins
 			ooc_style = "admin"
@@ -167,11 +163,7 @@
 	// Admins with RLOOC displayed who weren't already in
 	for(var/client/admin in GLOB.admins)
 		if(!(admin in receivers) && admin.prefs?.read_preference(/datum/preference/toggle/holder/show_rlooc))
-<<<<<<< HEAD
-			if(check_rights(R_ADMIN|R_SERVER, FALSE, admin)) //Stop rLOOC showing for retired staff //CHOMPEdit, admins should see LOOC
-=======
-			if(check_rights_for(admin, R_SERVER)) //Stop rLOOC showing for retired staff
->>>>>>> 7a7ae89713 ([MAJOR CHANGE] Admin rank datum (#17133))
+			if(check_rights_for(admin, R_ADMIN|R_SERVER)) //Stop rLOOC showing for retired staff //CHOMPEdit, admins should see LOOC
 				r_receivers |= admin
 
 	msg = GLOB.is_valid_url.Replace(msg,span_linkify("$1"))

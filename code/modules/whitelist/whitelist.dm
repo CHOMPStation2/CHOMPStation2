@@ -97,8 +97,4 @@
 
 
 /proc/whitelist_overrides(mob/M)
-<<<<<<< HEAD
-	return !CONFIG_GET(flag/usealienwhitelist) || check_rights(R_ADMIN|R_EVENT, 0, M) // CHOMPEdit
-=======
-	return !config.usealienwhitelist || check_rights_for(M.client, R_ADMIN|R_EVENT)
->>>>>>> 7a7ae89713 ([MAJOR CHANGE] Admin rank datum (#17133))
+	return !CONFIG_GET(flag/usealienwhitelist) || check_rights_for(M.client, R_ADMIN|R_EVENT) // CHOMPEdit
