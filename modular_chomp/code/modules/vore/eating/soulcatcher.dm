@@ -67,40 +67,60 @@
 
 // Sends messages to the owner of the soulcatcher
 /obj/soulgem/proc/notify_holder(var/message)
-	to_chat(owner, span_nif(span_bold("[name]") + " displays, \"" + span_notice("[message]") + "\""))
+	message = span_nif(span_bold("[name]") + " displays, \"" + span_notice("[message]") + "\"")
+	to_chat(owner, message)
 
 	for(var/mob/living/carbon/brain/caught_soul/CS as anything in brainmobs)
-		to_chat(CS, span_nif(span_bold("[name]") + " displays, \"" + span_notice("[message]") + "\""))
+		to_chat(CS, message)
 
 // Forwards the speech of captured souls
-/obj/soulgem/proc/use_speech(var/message, var/mob/living/sender, var/mob/eyeobj)
+/obj/soulgem/proc/use_speech(var/message, var/mob/living/sender, var/mob/eyeobj, var/whisper)
 	var/sender_name = eyeobj ? eyeobj.name : sender.name
 
 	//AR Projecting
 	if(eyeobj)
-		sender.eyeobj.visible_message(span_game(span_say(span_bold("[sender_name]") + " says, \"[message]\"")))
+		var/speak_verb = "says"
+		message = span_game(span_say(span_bold("[sender_name]") + " [speak_verb], \"[message]\""))
+		if(whisper)
+			speak_verb = "whispers"
+			sender.eyeobj.visible_message(span_italics(message), range = 1)
+		else
+			sender.eyeobj.visible_message(message)
 
 	//Not AR Projecting
 	else
-		to_chat(owner, span_nif(span_bold("\[SC\] [sender_name]") + " speaks, \"[message]\""))
-		for(var/mob/living/carbon/brain/caught_soul/CS as anything in brainmobs)
-			to_chat(CS, span_nif(span_bold("\[SC\] [sender_name]") + " speaks, \"[message]\""))
+		var/speak_verb = "speaks"
+		message = span_nif(span_bold("\[SC\] [sender_name]") + " [speak_verb], \"[message]\"")
+		to_chat(owner, message)
+		if(whisper)
+			speak_verb = "whispers"
+			to_chat(sender, span_italics(message))
+		else
+			for(var/mob/living/carbon/brain/caught_soul/CS as anything in brainmobs)
+				to_chat(CS, message)
 
 	log_nsay(message, owner.real_name, sender)
 
 // Forwards the emotes of captured souls
-/obj/soulgem/proc/use_emote(var/message, var/mob/living/sender, var/mob/eyeobj)
+/obj/soulgem/proc/use_emote(var/message, var/mob/living/sender, var/mob/eyeobj, var/whisper)
 	var/sender_name = eyeobj ? eyeobj.name : sender.name
 
 	//AR Projecting
 	if(eyeobj)
-		sender.eyeobj.visible_message(span_emote("[sender_name] [message]"))
-
+		message = span_emote("[sender_name] [message]")
+		if(whisper)
+			sender.eyeobj.visible_message(span_italics(message), range = 1)
+		else
+			sender.eyeobj.visible_message(message)
 	//Not AR Projecting
 	else
-		to_chat(owner, span_nif(span_bold("[sender_name]") + " [message]"))
-		for(var/mob/living/carbon/brain/caught_soul/CS as anything in brainmobs)
-			to_chat(CS, span_nif(span_bold("[sender_name]") + " [message]"))
+		message = span_nif(span_bold("[sender_name]") + " [message]")
+		to_chat(owner, message)
+		if(whisper)
+			to_chat(sender, span_italics(message))
+		else
+			for(var/mob/living/carbon/brain/caught_soul/CS as anything in brainmobs)
+				to_chat(CS, message)
 
 	log_nme(message, owner.real_name,sender)
 

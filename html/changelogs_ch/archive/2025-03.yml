@@ -1,0 +1,31 @@
+2025-03-01:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: Fixed mantraps eating the same person instantly on escape, they now do
+      not eat someone who has escaped them previously.
+  - bugfix: Fixed a few mob names being capitalised.
+  - code_imp: removes sleep from light flicker
+  - code_imp: enables the block spawn on runechat now where flicker is fixed
+  - rscadd: Added privacy switches to all dorm rooms, these buttons make an overlay
+      appear on the room for ghosts preventing them seeing inside. This does not currently
+      prevent them hearing emotes from inside the room, it's purely a visual block.
+  - bugfix: Fixed station maps for the map linter PR.
+  - bugfix: Fixed a missing air alarm in the tether atmos break room.
+  - bugfix: door controllers being instant triggerable
+  Diana:
+  - bugfix: Makes it so you can attack without hands
+  - bugfix: Fixes grabbing a buckled entity to cause you to be perma-slowed
+  - bugfix: You will no longer bleed to death from a headbutt
+  - code_imp: Removes attack_paw
+  - code_imp: Makes the attack_hand code less garbage
+  Hunter-Dovetail:
+  - rscadd: scaled_belly-l_leg, scaled_belly-r_leg, scaled_belly-groin
+  - bugfix: dragon_upperjaw-head
+  Will:
+  - code_imp: Trasheater is no longer an abomination to look at in the code
+  - rscadd: Adds a new motion tracker subsystem to the game to allow for tracking
+      entities through walls!
+  - rscadd: Adds a motion tracker item to R&D
+  - rscadd: Adds a vibration sense trait that allows users to hear entities moving
+      through walls
+  - qol: Teshari's and Xenochimera's 'listen in' verb has been upgraded to the new
+      listen-in trait

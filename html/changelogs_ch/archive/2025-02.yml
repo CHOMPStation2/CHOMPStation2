@@ -481,3 +481,10 @@
       while compiling)
   - rscadd: Vampiric crew now have a source of nutrition in the loadout under the
       Utility tab!
+2025-02-27:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: fixed a few lines of code so that the code is compileable in OpenDream
+  FluffMedic:
+  - maptweak: portal puzzle is a bit better, wierd plants are back, other minor things
+  Kashargul:
+  - bugfix: soul captured mobs can now use subtle and whisper
