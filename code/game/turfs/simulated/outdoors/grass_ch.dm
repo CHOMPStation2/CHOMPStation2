@@ -129,6 +129,7 @@ GLOBAL_LIST_INIT(grass_animals,list(
 	"thor_real" = list(
 		/mob/living/simple_mob/animal/passive/armadillo = 1, // These values are all 1 for now, kind of a placeholder. Change them later depending on player reactions.
 		/mob/living/simple_mob/animal/passive/chicken = 1, // Did you know chickens come from South-East Asia? In the jungle? Bet they'd thrive here as an invasive species.
+		/mob/living/simple_mob/animal/passive/tindalos = 1,
 		/mob/living/simple_mob/animal/passive/yithian = 1,
 		/mob/living/simple_mob/animal/passive/mouse = 1,
 		/mob/living/simple_mob/animal/passive/lizard/large/defensive = 1, // If we ever get komodo dragons or tegu or something with a less shitty sprite, replace these.
