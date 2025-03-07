@@ -148,7 +148,6 @@ export const IconCutterTarget = new Juke.Target({
   dependsOn: () => [
     CutterTarget,
   ],
-<<<<<<< HEAD
   inputs: [
     'icons/**/*.png',
     `icons/**/*${CUTTER_SUFFIX}`,
