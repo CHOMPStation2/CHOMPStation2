@@ -490,8 +490,6 @@
 /mob/living/simple_mob/vore/wolftaur/dark{
 	faction = "hostile"
 	},
-/obj/structure/bed/pillowpile/black,
-/obj/structure/bed/pillowpilefront/black,
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/surface/thor/caves)
 "bM" = (
@@ -4941,7 +4939,7 @@
 /turf/simulated/floor/wood,
 /area/surface/thor/bar)
 "VN" = (
-/turf/simulated/wall/log,
+/turf/simulated/wall/wood,
 /area/surface/outside/thor/beach)
 "VO" = (
 /turf/simulated/floor/water/beach{
