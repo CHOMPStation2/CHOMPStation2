@@ -30,17 +30,17 @@ By participating, you are expected to uphold this code.
 
 To work together with Virgo and make the lives of the devstaff easier for ourselves, our upstream and our downstreams, we enforce parity with upstream files.
 * What are upstream files?
-		* Upstream files are files that exist on Virgo's repo identically to here.
+    * Upstream files are files that exist on Virgo's repo identically to here.
 * What is upstream parity?
-		* Upstream parity means to keep files that exist identically both here and upstream, identical. 
+    * Upstream parity means to keep files that exist identically both here and upstream, identical. 
 * Why are we doing this?
-		* Cooperation between this codebase and upstream has taken significant upturns recently. There is much effort from coders both here and upstream to fix a great many issues with this shared codebase. To avoid the difficulty of trying to both fix a codebase and retain parity/maintainability, it is much preferred to fix core code on Virgo, whom is the primary upstream of this codebase (They disconnected from polaris) in a complete and clean manner and allow those fixes to trickle down to all downstreams. This helps us, it helps virgo, and it helps all the other downstreams too. 
+    * Cooperation between this codebase and upstream has taken significant upturns recently. There is much effort from coders both here and upstream to fix a great many issues with this shared codebase. To avoid the difficulty of trying to both fix a codebase and retain parity/maintainability, it is much preferred to fix core code on Virgo, whom is the primary upstream of this codebase (They disconnected from polaris) in a complete and clean manner and allow those fixes to trickle down to all downstreams. This helps us, it helps virgo, and it helps all the other downstreams too. 
 * I just want to code for Chomp though.
-		* This is fine, we do not want to prevent this. There will be greater emphasis on putting all chomp-only code in the /modular_chomp subdirectory from now on. For assistance on coding in a modular fashion, please ask for help in the CHOMP discord #ss13-development channel.
+    * This is fine, we do not want to prevent this. There will be greater emphasis on putting all chomp-only code in the /modular_chomp subdirectory from now on. For assistance on coding in a modular fashion, please ask for help in the CHOMP discord #ss13-development channel.
 * I want to edit a core mechanic / implement a feature that only works when editing upstream code.
-		* Please try your hardest to make this modular. If this isn't possible, your PR might be requested to be moved up to virgo, or denied. 
+    * Please try your hardest to make this modular. If this isn't possible, your PR might be requested to be moved up to virgo, or denied. 
 * I just want to add sprites / sounds / add a new type of mob / add clothing / add a map
-		* This is fine! This is easily made modular and done by adding code and resources to the modular_chomp directory. 
+    * This is fine! This is easily made modular and done by adding code and resources to the modular_chomp directory. 
 
 ## How Can I Contribute?
 
