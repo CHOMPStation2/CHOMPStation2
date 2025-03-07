@@ -21,7 +21,7 @@
 	response_help = "pats"
 	response_disarm = "tries to shove"
 	response_harm = "hits"
-	attacktext = list("scratches", "bites")
+	attacktext = list("scratched", "bitten")
 
 	friendly = list("beak-nudges", "purrs towards", "slobberlicks")
 	vore_bump_emote = "tries to quickly devour"
@@ -215,16 +215,16 @@
 	belly_fullscreen_color = "#711e1e"
 
 /obj/belly/gryphon/beak
-	name = "Beak"
+	name = "beak"
 	mode_flags = DM_FLAG_THICKBELLY
 	escapable = TRUE
-	escapechance = 5
+	escapechance = 20
 	desc = "Noticing you alone, the gryphon lunges forwards and wraps its beak around your head, forcing you to stare into the dark abyss at the back of the gryphon's throat. It quickly tries to swallow you down, beak closing around your torso and head tilting back, letting gravity help make you disappear before anyone sees."
 	struggle_messages_inside = list(
 		"You try to push the gryphon's tongue away, instead getting tossed around and savoured by the massive beast",
 		"Pressing against the beak around your body, you barely pry them off of your torso, trying to wiggle out-- only for the gryphon to clamp right back down around you and continue swallowing their meal",
 		"You try to shy away from the back of the gryphon's maw, desperately avoiding the massive beast's gullet. The gryphon easily counterracts your efforts, pushing you closer and closer towards the fate that throat promises")
-	autotransferlocation = "Throat"
+	autotransferlocation = "throat"
 	autotransfer_enabled = TRUE
 	autotransferchance = 30
 	autotransferwait = 5
@@ -232,16 +232,16 @@
 	vore_sound = "Insertion1"
 
 /obj/belly/gryphon/throat
-	name = "Throat"
+	name = "throat"
 	mode_flags = DM_FLAG_THICKBELLY
-	transferchance = 20
-	transferlocation = "Beak"
+	transferchance = 25
+	transferlocation = "beak"
 	escapechance = 0
 	desc = "After pushing you about its maw for a while the gryphon finally swallows its treat, the gullet squeezing around you and the creature's head lifting as it gulps you down. Your upper body gets shoved into its throat, the powerful muscles kneading down on your body and continuing to coax you deeper towards the gurgling stomach below."
 	struggle_messages_inside = list(
 		"You try to push yourself back with your hands, finding no purchase against those slick, spittle-coated muscles.",
 		"Your hands push those throat walls away from you, only for them to clench down around you in another powerful swallow.")
-	autotransferlocation = "Stomach"
+	autotransferlocation = "stomach"
 	autotransfer_enabled = TRUE
 	autotransferchance = 50
 	autotransferwait = 5
@@ -249,15 +249,15 @@
 	vore_sound = "Tauric Swallow"
 
 /obj/belly/gryphon/stomach
-	name = "Stomach"
+	name = "stomach"
 	mode_flags = DM_FLAG_THICKBELLY
 	escapechance = 0
 	transferchance = 10
-	transferlocation = "Throat"
+	transferlocation = "throat"
 	desc = "Finally, you get shoved into the beast's stomach, that hammock-like gut welcoming you into a pool of digestive acids. The heat is oppressive, the stomach walls kneading it against your skin, coaxing you to simply give in and become gryphon food. Other than the constant pleasure, the snug warmth is at least pleasant at the moment, rolling across your body in time with the creature's rhythmic breaths and heartbeats, the air stale and thick with the tinge of acid."
 	digest_mode = DM_DIGEST
 	digest_brute = 1
-	digest_burn = 3
+	digest_burn = 1
 	struggle_messages_inside = list(
 		"You press your hands out at the tight stomach muscles, feeling the stiff resistance give way for a second, only for the walls to squeeze back down around you even tighter.",
 		"The gryphon presses its talons down on its midsection as you struggle, forcing you to stay still in the depths of its guts and await whatever fate the beast plans for you"

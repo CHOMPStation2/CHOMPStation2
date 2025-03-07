@@ -1,7 +1,5 @@
-
 /obj/item/seeds/teaseed
 	seed_type = PLANT_TEA
-
 
 /obj/item/seeds/cinnamon
 	seed_type = PLANT_CINNAMON
