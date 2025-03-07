@@ -45,7 +45,7 @@
 			S = i
 			break
 
-	var/mob/living/carbon/human/avatar = new(get_turf(S), "Virtual Reality Avatar")
+	var/mob/living/carbon/human/avatar = new(get_turf(S), SPECIES_VR)
 	if(!avatar)
 		to_chat(src, "Something went wrong and spawning failed.")
 		return
@@ -67,6 +67,7 @@
 	add_verb(avatar,/mob/living/carbon/human/proc/vr_transform_into_mob)  //CHOMPEdit
 	add_verb(avatar,/mob/living/proc/set_size) //CHOMPEdit TGPanel // Introducing NeosVR
 	avatar.virtual_reality_mob = TRUE
+	avatar.species = GLOB.all_species[SPECIES_VR]
 	log_and_message_admins("[key_name_admin(avatar)] joined virtual reality from the ghost menu.")
 
 	var/newname = sanitize(tgui_input_text(avatar, "You are entering virtual reality. Your username is currently [src.name]. Would you like to change it to something else?", "Name change", null, MAX_NAME_LEN), MAX_NAME_LEN)
