@@ -45,7 +45,7 @@
 			S = i
 			break
 
-	var/mob/living/carbon/human/avatar = new(get_turf(S), C.prefs.species)
+	var/mob/living/carbon/human/avatar = new(get_turf(S), client.prefs.species)
 	if(!avatar)
 		to_chat(src, "Something went wrong and spawning failed.")
 		return
