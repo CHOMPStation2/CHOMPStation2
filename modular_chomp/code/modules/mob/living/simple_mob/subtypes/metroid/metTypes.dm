@@ -209,7 +209,7 @@ GLOBAL_VAR_INIT(queen_amount, 0) //We only gonna want 1 queen in the world.
 	is_juvenile = TRUE
 
 /mob/living/simple_mob/metroid/juvenile/super/Initialize(mapload)
-	. =	..()
+	. = ..()
 	playsound(src, 'sound/metroid/metroidsee.ogg', 100, 1)
 
 /mob/living/simple_mob/metroid/juvenile/super/death()
