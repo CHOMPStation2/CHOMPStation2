@@ -497,7 +497,7 @@
 "bM" = (
 /obj/structure/table/woodentable,
 /obj/item/reagent_containers/food/snacks/waffles{
-	step_y = 5
+	pixel_y = 5
 	},
 /turf/simulated/floor/wood,
 /area/surface/thor/bar)
@@ -645,8 +645,8 @@
 /obj/random/powercell/device,
 /obj/random/powercell/device,
 /obj/machinery/recharger/wallcharger{
-	step_x = 4;
-	step_y = 29
+	pixel_x = 4;
+	pixel_y = 29
 	},
 /turf/simulated/floor/plating,
 /area/surface/thor/engi)
@@ -804,15 +804,15 @@
 	},
 /obj/structure/table/marble,
 /obj/item/reagent_containers/food/snacks/pitcher_fruit{
-	step_x = -6
+	pixel_x = -6
 	},
 /obj/item/reagent_containers/food/snacks/pitcher_fruit{
-	step_x = 2;
-	step_y = 6
+	pixel_x = 2;
+	pixel_y = 6
 	},
 /obj/item/reagent_containers/food/snacks/pitcher_fruit{
-	step_x = 3;
-	step_y = -4
+	pixel_x = 3;
+	pixel_y = -4
 	},
 /turf/simulated/floor/tiled/white,
 /area/surface/thor/kitchen)
@@ -1084,11 +1084,11 @@
 /obj/item/reagent_containers/food/drinks/shaker,
 /obj/item/reagent_containers/glass/rag,
 /obj/item/book/manual/barman_recipes{
-	step_x = -2;
-	step_y = 8
+	pixel_x = -2;
+	pixel_y = 8
 	},
 /obj/machinery/alembic{
-	step_y = 5
+	pixel_y = 5
 	},
 /turf/simulated/floor/wood,
 /area/surface/thor/bar)
