@@ -135,12 +135,8 @@ GLOBAL_LIST_INIT(pitcher_plant_lure_messages, list(
 		vore_checks()
 		handle_hungry()
 
-/mob/living/simple_mob/vore/pitcher_plant/New()
-	..()
-	pitcher_plant_lure_messages = GLOB.pitcher_plant_lure_messages
-
-/mob/living/simple_mob/vore/pitcher_plant/Initialize()
-	..()
+/mob/living/simple_mob/vore/pitcher_plant/Initialize(mapload)
+	. = ..()
 	pitcher_plant_lure_messages = GLOB.pitcher_plant_lure_messages
 
 
@@ -294,7 +290,7 @@ GLOBAL_LIST_INIT(pitcher_plant_lure_messages, list(
 	var/datum/seed/seed = null
 	var/obj/item/seeds/pit = null
 
-/obj/item/reagent_containers/food/snacks/pitcher_fruit/Initialize()
+/obj/item/reagent_containers/food/snacks/pitcher_fruit/Initialize(mapload)
 	. = ..()
 	reagents.add_reagent(REAGENT_ID_PITCHERNECTAR, 5)
 	bitesize = 4
