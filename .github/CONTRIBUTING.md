@@ -41,6 +41,8 @@ To work together with Virgo and make the lives of the devstaff easier for oursel
     * Please try your hardest to make this modular. If this isn't possible, your PR might be requested to be moved up to virgo, or denied. 
 * I just want to add sprites / sounds / add a new type of mob / add clothing / add a map
     * This is fine! This is easily made modular and done by adding code and resources to the modular_chomp directory. 
+* What if Virgo deny a core change that was desired on Chomp?
+    * Hopefully this shouldn't happen. If you implement your feature with an "on/off" switch, then you can push it to virgo turned off, and we can turn it on here. If differences of development become too divisive in the future, then we will go back to the way things were with more freedom on this codebase. 
 
 ## How Can I Contribute?
 
