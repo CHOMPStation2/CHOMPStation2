@@ -18,7 +18,7 @@
 	if (src.handle_spam_prevention(msg,MUTE_DEADCHAT))
 		return
 
-	var/stafftype = uppertext(holder.rank)
+	var/stafftype = uppertext(holder.rank_names())
 
 	msg = sanitize(msg)
 	log_admin("DSAY: [key_name(src)] : [msg]")

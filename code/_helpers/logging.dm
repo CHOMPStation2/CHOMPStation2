@@ -352,7 +352,7 @@
 			. += "<a href='byond://?priv_msg=\ref[C]'>"
 
 		if(C && C.holder && C.holder.fakekey)
-			. += C.holder.rank // CHOMPEdit: Stealth mode displays staff rank in PM Messages
+			. += C.holder.rank_names() // CHOMPEdit: Stealth mode displays staff rank in PM Messages
 		else
 			. += key
 
