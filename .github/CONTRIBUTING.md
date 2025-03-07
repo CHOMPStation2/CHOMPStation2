@@ -75,6 +75,7 @@ Unsure where to begin contributing to Chomp Station? You can start by looking th
 ### Codewriting
 * Where possible, add changes to the modular_chomp/ subdirectory.
 * Avoid edits to upstream code. If upstream code MUST be edited to make a feature work, please make that change on [Virgo](https://github.com/VOREStation/VOREStation).
+    * Single line edits may still be okay (Tweaks, toggling functions, ect) and should have a //ChompEDIT comment on each line.
 * **DO NOT** edit upstream .dmi (icon) files. Add icon changes in a new file in the /modular_chomp folder and override the object's "icon" and "icon_state" variables. 
 * **DO NOT** edit anything in the upstream /maps folder 
 * Avoid the use of the 'usr' variable where possible. Use src or have the proc chain give the user's reference.
