@@ -8,7 +8,7 @@
 	},
 /area/surface/outside/thor/ocean)
 "ab" = (
-/mob/living/simple_mob/vore/lamia/cobra/bra,
+/obj/structure/simple_door/wood,
 /turf/simulated/floor/wood{
 	temperature = 313;
 	oxygen = 34.1451;
@@ -17,53 +17,85 @@
 	},
 /area/surface/outside/thor/beach)
 "ac" = (
-/turf/simulated/mineral/floor/cave/thor,
-/area/surface/outside/thor/jungle)
-"ad" = (
-/obj/effect/decal/remains/deer,
-/turf/simulated/mineral/floor/cave/thor,
-/area/surface/outside/thor/jungle)
-"af" = (
-/obj/effect/decal/remains,
-/turf/simulated/mineral/floor/cave/thor,
-/area/surface/outside/thor/jungle)
-"ag" = (
-/mob/living/simple_mob/vore/catgirl,
-/turf/simulated/floor/wood/alt,
-/area/surface/thor/kitchen)
-"ah" = (
-/obj/effect/decal/remains/ribcage,
-/turf/simulated/mineral/floor/cave/thor,
-/area/surface/outside/thor/jungle)
-"ai" = (
-/mob/living/simple_mob/vore/succubus,
-/turf/simulated/floor/wood,
-/area/surface/thor/bar)
-"aj" = (
-/mob/living/simple_mob/vore/wolftaur/syndicate/alt3{
-	name = "private securitaur";
-	faction = "wolftaur"
+/obj/structure/window/basic,
+/obj/structure/window/basic{
+	dir = 4
 	},
-/turf/simulated/floor/outdoors/grass/forest/thor{
-	tree_chance = 0;
-	grass_chance = 2
+/obj/structure/window/basic{
+	dir = 8
 	},
-/area/surface/outside/thor/outpost)
-"ak" = (
-/mob/living/simple_mob/vore/wolf/direwolf/andrews,
-/turf/simulated/mineral/floor/cave/thor,
-/area/surface/outside/thor/jungle)
-"an" = (
-/mob/living/simple_mob/vore/catgirl,
-/obj/item/stool/padded{
-	dir = 1
-	},
+/obj/structure/grille,
 /turf/simulated/floor/wood{
 	temperature = 313;
 	oxygen = 34.1451;
 	nitrogen = 63.4124;
-	outdoors = 1
+	outdoors = 0
 	},
+/area/surface/outside/thor/beach)
+"ad" = (
+/obj/structure/window/basic{
+	dir = 4
+	},
+/obj/structure/window/basic{
+	dir = 1
+	},
+/obj/structure/window/basic{
+	dir = 8
+	},
+/obj/structure/grille,
+/turf/simulated/floor/wood{
+	temperature = 313;
+	oxygen = 34.1451;
+	nitrogen = 63.4124;
+	outdoors = 0
+	},
+/area/surface/outside/thor/beach)
+"ae" = (
+/mob/living/simple_mob/vore/lamia/cobra/bra,
+/turf/simulated/floor/wood{
+	temperature = 313;
+	oxygen = 34.1451;
+	nitrogen = 63.4124;
+	outdoors = 0
+	},
+/area/surface/outside/thor/beach)
+"af" = (
+/turf/simulated/mineral/floor/cave/thor,
+/area/surface/outside/thor/jungle)
+"ag" = (
+/obj/effect/decal/remains/deer,
+/turf/simulated/mineral/floor/cave/thor,
+/area/surface/outside/thor/jungle)
+"ah" = (
+/obj/effect/floor_decal/stairs,
+/turf/simulated/floor/beach/sand/desert/outdoors/thor,
+/area/surface/outside/thor/beach)
+"ai" = (
+/obj/effect/floor_decal/stairs,
+/turf/simulated/floor/outdoors/desert_planet/gravel/thor,
+/area/surface/outside/thor/beach)
+"aj" = (
+/obj/structure/railing,
+/turf/simulated/floor/outdoors/desert_planet/gravel/thor,
+/area/surface/outside/thor/outpost)
+"ak" = (
+/obj/effect/decal/remains,
+/turf/simulated/mineral/floor/cave/thor,
+/area/surface/outside/thor/jungle)
+"al" = (
+/obj/item/picnic_blankets_carried,
+/obj/item/melee/umbrella/random,
+/turf/simulated/floor/outdoors/desert_planet/gravel/thor,
+/area/surface/outside/thor/outpost)
+"am" = (
+/mob/living/simple_mob/vore/wolftaur/dark{
+	faction = "hostile"
+	},
+/turf/simulated/floor/tiled/asteroid_steel,
+/area/surface/thor/caves)
+"an" = (
+/mob/living/simple_mob/vore/catgirl,
+/turf/simulated/floor/wood/alt,
 /area/surface/thor/kitchen)
 "ao" = (
 /obj/structure/bonfire,
@@ -80,6 +112,125 @@
 /turf/simulated/wall/iron,
 /area/shuttle/junker)
 "aq" = (
+/obj/effect/decal/remains/ribcage,
+/turf/simulated/mineral/floor/cave/thor,
+/area/surface/outside/thor/jungle)
+"ar" = (
+/mob/living/simple_mob/vore/succubus,
+/turf/simulated/floor/wood,
+/area/surface/thor/bar)
+"as" = (
+/obj/structure/table/woodentable,
+/obj/item/reagent_containers/food/snacks/waffles{
+	pixel_y = 5
+	},
+/turf/simulated/floor/wood,
+/area/surface/thor/bar)
+"at" = (
+/mob/living/simple_mob/vore/wolftaur/syndicate/alt3{
+	name = "private securitaur";
+	faction = "wolftaur"
+	},
+/turf/simulated/floor/outdoors/grass/forest/thor{
+	tree_chance = 0;
+	grass_chance = 2
+	},
+/area/surface/outside/thor/outpost)
+"au" = (
+/obj/structure/flora/ausbushes/palebush,
+/turf/simulated/floor/outdoors/grass/forest/thor{
+	tree_chance = 0;
+	grass_chance = 2
+	},
+/area/surface/outside/thor/outpost)
+"av" = (
+/mob/living/simple_mob/vore/wolf/direwolf/andrews,
+/turf/simulated/mineral/floor/cave/thor,
+/area/surface/outside/thor/jungle)
+"aw" = (
+/obj/machinery/light/small{
+	dir = 8;
+	brightness_range = 5;
+	brightness_power = 1;
+	brightness_color = "#DA0205";
+	nightshift_enabled = 1
+	},
+/turf/simulated/floor/tiled/asteroid_steel/outdoors/thor{
+	outdoors = 0
+	},
+/area/surface/outside/thor/pool)
+"ax" = (
+/mob/living/simple_mob/vore/wolftaur/brownclothed,
+/obj/effect/floor_decal/corner/grey/diagonal{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/white,
+/area/surface/thor/kitchen)
+"ay" = (
+/obj/structure/curtain/black{
+	name = "privacy curtain";
+	icon_state = "open";
+	opacity = 0;
+	layer = 2
+	},
+/turf/simulated/floor/tiled/asteroid_steel/outdoors/thor{
+	outdoors = 0
+	},
+/area/surface/outside/thor/pool)
+"az" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/plating/thor/planetuse{
+	outdoors = 0
+	},
+/area/surface/thor/commstower)
+"aA" = (
+/obj/structure/table/steel_reinforced,
+/obj/machinery/door/blast/shutters{
+	name = "Kitchen Shutters";
+	dir = 2;
+	layer = 3.3;
+	id = "junglekitchen"
+	},
+/obj/item/reagent_containers/food/snacks/sliceable/grilled_carp,
+/turf/simulated/floor/tiled/white,
+/area/surface/thor/kitchen)
+"aB" = (
+/obj/structure/table/steel_reinforced,
+/obj/machinery/door/blast/shutters{
+	name = "Kitchen Shutters";
+	dir = 2;
+	layer = 3.3;
+	id = "junglekitchen"
+	},
+/obj/item/reagent_containers/food/snacks/sliceable/tofubread,
+/turf/simulated/floor/tiled/white,
+/area/surface/thor/kitchen)
+"aC" = (
+/obj/structure/table/steel_reinforced,
+/obj/machinery/door/blast/shutters{
+	name = "Kitchen Shutters";
+	dir = 2;
+	layer = 3.3;
+	id = "junglekitchen"
+	},
+/obj/item/reagent_containers/food/snacks/sharkmeatcooked,
+/turf/simulated/floor/tiled/white,
+/area/surface/thor/kitchen)
+"aD" = (
+/mob/living/simple_mob/vore/catgirl,
+/obj/item/stool/padded{
+	dir = 1
+	},
+/turf/simulated/floor/wood{
+	temperature = 313;
+	oxygen = 34.1451;
+	nitrogen = 63.4124;
+	outdoors = 1
+	},
+/area/surface/thor/kitchen)
+"aE" = (
 /mob/living/simple_mob/vore/catgirl,
 /obj/item/stool/padded{
 	dir = 4
@@ -91,7 +242,7 @@
 	outdoors = 1
 	},
 /area/surface/thor/kitchen)
-"ar" = (
+"aF" = (
 /obj/item/stool/padded{
 	dir = 8
 	},
@@ -102,68 +253,28 @@
 	outdoors = 1
 	},
 /area/surface/thor/kitchen)
-"as" = (
-/mob/living/simple_mob/vore/wolftaur/syndicate/alt3{
-	name = "private securitaur";
-	faction = "wolftaur"
-	},
-/turf/simulated/floor/outdoors/grass/forest/thor{
-	tree_chance = 0;
-	grass_chance = 2
-	},
-/area/surface/outside/thor/jungle)
-"at" = (
-/mob/living/simple_mob/vore/pakkun/sand,
-/turf/simulated/floor/outdoors/desert_planet/sand/thor,
-/area/surface/outside/thor/jungle)
-"au" = (
-/obj/structure/flora/ausbushes/palebush,
-/turf/simulated/floor/outdoors/grass/forest/thor{
-	tree_chance = 0;
-	grass_chance = 2
-	},
-/area/surface/outside/thor/outpost)
-"ax" = (
-/obj/item/pickaxe,
-/turf/simulated/mineral/floor/cave/thor,
-/area/surface/thor/caves)
-"az" = (
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
-/turf/simulated/floor/plating/thor/planetuse{
-	outdoors = 0
-	},
-/area/surface/thor/commstower)
-"aA" = (
-/obj/structure/boulder,
-/turf/simulated/mineral/alt,
-/area/surface/thor/caves)
-"aD" = (
-/mob/living/simple_mob/vore/raptor,
-/turf/simulated/mineral/floor/cave/thor,
-/area/surface/thor/caves)
-"aE" = (
-/obj/item/contraband,
-/turf/simulated/floor/tiled/thor/planetuse,
-/area/surface/outside/thor/jungle)
 "aG" = (
-/mob/living/simple_mob/vore/retaliate/corrupthound/janihound/medihound,
-/turf/simulated/floor/plating/external/thor{
-	icon_state = "dmg2"
-	},
+/obj/structure/flora/ausbushes/ppflowers,
+/obj/item/bluespace_harpoon/wand,
+/turf/simulated/floor/outdoors/grass/heavy/thor,
+/area/surface/outside/thor/jungle)
+"aH" = (
+/mob/living/simple_mob/vore/horse/kelpie,
+/obj/structure/flora/ausbushes/ppflowers,
+/turf/simulated/floor/outdoors/grass/heavy/thor,
 /area/surface/outside/thor/jungle)
 "aI" = (
-/mob/living/simple_mob/vore/pitcher_plant,
-/turf/simulated/floor/outdoors/grass/heavy/thor{
-	tree_chance = 0;
-	grass_chance = 5
-	},
-/area/surface/outside/thor/jungle/deep)
+/turf/simulated/wall/wood,
+/area/surface/outside/thor/pool)
 "aJ" = (
-/mob/living/simple_mob/vore/sonadile,
-/turf/simulated/mineral/floor/cave/thor,
-/area/surface/thor/caves)
+/obj/structure/simple_door/wood,
+/turf/simulated/floor/wood{
+	temperature = 313;
+	oxygen = 34.1451;
+	nitrogen = 63.4124;
+	outdoors = 1
+	},
+/area/surface/outside/thor/pool)
 "aK" = (
 /obj/structure/cable{
 	icon_state = "2-8"
@@ -174,13 +285,24 @@
 /turf/simulated/floor/tiled/asteroid_steel/outdoors/thor,
 /area/surface/outside/thor/outpost)
 "aL" = (
-/mob/living/simple_mob/vore/pitcher_plant,
-/turf/simulated/floor/outdoors/grass/heavy/thor,
-/area/surface/outside/thor/jungle/deep)
+/mob/living/simple_mob/vore/wolftaur/syndicate/alt3{
+	name = "private securitaur";
+	faction = "wolftaur"
+	},
+/turf/simulated/floor/outdoors/grass/forest/thor{
+	tree_chance = 0;
+	grass_chance = 2
+	},
+/area/surface/outside/thor/jungle)
 "aM" = (
-/mob/living/simple_mob/vore/pitcher_plant,
-/turf/simulated/floor/outdoors/mud/thor/planetuse,
-/area/surface/outside/thor/jungle/deep)
+/obj/structure/toilet,
+/turf/simulated/floor/wood{
+	temperature = 313;
+	oxygen = 34.1451;
+	nitrogen = 63.4124;
+	outdoors = 1
+	},
+/area/surface/outside/thor/pool)
 "aN" = (
 /obj/effect/floor_decal/spline/plain{
 	dir = 4
@@ -213,12 +335,10 @@
 /turf/simulated/floor/outdoors/dirt/thor/planetuse,
 /area/surface/thor/abandonedhouse)
 "aQ" = (
-/mob/living/simple_mob/vore/pitcher_plant,
-/turf/simulated/floor/outdoors/grass/forest/thor{
-	tree_chance = 0;
-	grass_chance = 2
-	},
-/area/surface/outside/thor/jungle)
+/mob/living/simple_mob/vore/wolftaur/whiteclothed,
+/obj/effect/floor_decal/corner/paleblue/diagonal,
+/turf/simulated/floor/tiled/old_tile/white,
+/area/surface/thor/med)
 "aR" = (
 /obj/structure/flora/ausbushes/palebush,
 /turf/simulated/floor/outdoors/grass/forest/thor,
@@ -232,37 +352,30 @@
 	},
 /area/surface/outside/thor/ocean)
 "aT" = (
-/mob/living/simple_mob/vore/pitcher_plant,
-/turf/simulated/floor/outdoors/dirt/thor/planetuse,
-/area/surface/outside/thor/jungle/deep)
+/obj/effect/floor_decal/corner/paleblue/diagonal,
+/obj/random/pottedplant,
+/turf/simulated/floor/tiled/old_tile/white,
+/area/surface/thor/med)
 "aU" = (
-/mob/living/simple_mob/vore/pitcher_plant,
-/obj/structure/flora/ausbushes/grassybush,
-/turf/simulated/floor/outdoors/grass/forest/thor{
-	tree_chance = 0;
-	grass_chance = 2
-	},
+/mob/living/simple_mob/vore/pakkun/sand,
+/turf/simulated/floor/outdoors/desert_planet/sand/thor,
 /area/surface/outside/thor/jungle)
 "aV" = (
-/mob/living/simple_mob/vore/pitcher_plant,
-/obj/structure/flora/ausbushes/fernybush,
-/turf/simulated/floor/outdoors/grass/forest/thor{
-	tree_chance = 0;
-	grass_chance = 2
-	},
-/area/surface/outside/thor/jungle)
-"aX" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/closet/crate/mimic/cointoss,
-/obj/item/gun/projectile/shotgun/compact,
-/turf/simulated/floor/plating/thor/planetuse{
-	outdoors = 0
-	},
-/area/surface/thor/commstower)
-"aY" = (
-/mob/living/simple_mob/vore/stalker,
+/obj/item/pickaxe,
 /turf/simulated/mineral/floor/cave/thor,
 /area/surface/thor/caves)
+"aW" = (
+/obj/structure/boulder,
+/turf/simulated/mineral/alt,
+/area/surface/thor/caves)
+"aX" = (
+/mob/living/simple_mob/vore/raptor,
+/turf/simulated/mineral/floor/cave/thor,
+/area/surface/thor/caves)
+"aY" = (
+/obj/item/contraband,
+/turf/simulated/floor/tiled/thor/planetuse,
+/area/surface/outside/thor/jungle)
 "aZ" = (
 /turf/simulated/floor/water/ocean{
 	temperature = 313;
@@ -270,31 +383,41 @@
 	nitrogen = 63.4124
 	},
 /area/surface/outside/thor/jungle)
+"ba" = (
+/mob/living/simple_mob/vore/retaliate/corrupthound/janihound/medihound,
+/turf/simulated/floor/plating/external/thor{
+	icon_state = "dmg2"
+	},
+/area/surface/outside/thor/jungle)
 "bb" = (
-/obj/item/clothing/suit/space/void/refurb/marine,
-/turf/simulated/mineral/floor/cave/thor,
-/area/surface/thor/caves)
+/mob/living/simple_mob/vore/pitcher_plant,
+/turf/simulated/floor/outdoors/grass/heavy/thor{
+	tree_chance = 0;
+	grass_chance = 5
+	},
+/area/surface/outside/thor/jungle/deep)
 "bc" = (
 /turf/simulated/floor/outdoors/mud/thor/planetuse,
 /area/surface/outside/thor/jungle)
 "bd" = (
-/obj/item/gun/energy/netgun,
+/mob/living/simple_mob/vore/sonadile,
 /turf/simulated/mineral/floor/cave/thor,
 /area/surface/thor/caves)
 "be" = (
-/obj/effect/decal/remains/human,
-/turf/simulated/mineral/floor/cave/thor,
-/area/surface/thor/caves)
+/mob/living/simple_mob/vore/pitcher_plant,
+/turf/simulated/floor/outdoors/grass/heavy/thor,
+/area/surface/outside/thor/jungle/deep)
 "bf" = (
-/obj/effect/decal/cleanable/blood/gibs/body,
-/obj/effect/decal/cleanable/blood/splatter,
-/obj/effect/decal/remains/ribcage,
-/turf/simulated/mineral/floor/cave/thor,
-/area/surface/thor/caves)
+/mob/living/simple_mob/vore/pitcher_plant,
+/turf/simulated/floor/outdoors/dirt/thor/planetuse,
+/area/surface/outside/thor/jungle/deep)
 "bg" = (
-/obj/item/clothing/head/helmet/space/void/refurb/marine,
-/turf/simulated/mineral/floor/cave/thor,
-/area/surface/thor/caves)
+/mob/living/simple_mob/vore/pitcher_plant,
+/turf/simulated/floor/outdoors/grass/forest/thor{
+	tree_chance = 0;
+	grass_chance = 2
+	},
+/area/surface/outside/thor/jungle)
 "bh" = (
 /turf/simulated/floor/wood{
 	temperature = 313;
@@ -317,18 +440,25 @@
 	nitrogen = 63.4124
 	},
 /area/surface/outside/thor/jungle)
-"bl" = (
-/obj/structure/simple_door/wood,
-/turf/simulated/floor/wood{
-	temperature = 313;
-	oxygen = 34.1451;
-	nitrogen = 63.4124;
-	outdoors = 0
+"bk" = (
+/mob/living/simple_mob/vore/pitcher_plant,
+/obj/structure/flora/ausbushes/grassybush,
+/turf/simulated/floor/outdoors/grass/forest/thor{
+	tree_chance = 0;
+	grass_chance = 2
 	},
-/area/surface/outside/thor/beach)
+/area/surface/outside/thor/jungle)
+"bl" = (
+/mob/living/simple_mob/vore/pitcher_plant,
+/obj/structure/flora/ausbushes/fernybush,
+/turf/simulated/floor/outdoors/grass/forest/thor{
+	tree_chance = 0;
+	grass_chance = 2
+	},
+/area/surface/outside/thor/jungle)
 "bm" = (
-/mob/living/simple_mob/vore/aggressive/lizardman,
-/turf/simulated/floor/outdoors/grass/heavy/thor,
+/mob/living/simple_mob/vore/pitcher_plant,
+/turf/simulated/floor/outdoors/mud/thor/planetuse,
 /area/surface/outside/thor/jungle/deep)
 "bn" = (
 /turf/simulated/floor/wood{
@@ -339,16 +469,17 @@
 	},
 /area/surface/outside/thor/beach)
 "bo" = (
-/obj/structure/flora/ausbushes/grassybush,
-/turf/simulated/floor/outdoors/grass/heavy/thor{
-	tree_chance = 0;
-	grass_chance = 5
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/closet/crate/mimic/cointoss,
+/obj/item/gun/projectile/shotgun/compact,
+/turf/simulated/floor/plating/thor/planetuse{
+	outdoors = 0
 	},
-/area/surface/outside/thor/jungle/deep)
+/area/surface/thor/commstower)
 "bp" = (
-/mob/living/simple_mob/vore/aggressive/panther/thor,
-/turf/simulated/floor/outdoors/grass/heavy/thor,
-/area/surface/outside/thor/jungle/deep)
+/mob/living/simple_mob/vore/stalker,
+/turf/simulated/mineral/floor/cave/thor,
+/area/surface/thor/caves)
 "bq" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/lino,
@@ -364,6 +495,49 @@
 	},
 /area/surface/outside/thor/jungle)
 "bs" = (
+/obj/item/clothing/suit/space/void/refurb/marine,
+/turf/simulated/mineral/floor/cave/thor,
+/area/surface/thor/caves)
+"bt" = (
+/obj/item/gun/energy/netgun,
+/turf/simulated/mineral/floor/cave/thor,
+/area/surface/thor/caves)
+"bu" = (
+/obj/effect/decal/remains/human,
+/turf/simulated/mineral/floor/cave/thor,
+/area/surface/thor/caves)
+"bv" = (
+/obj/effect/decal/cleanable/blood/gibs/body,
+/obj/effect/decal/cleanable/blood/splatter,
+/obj/effect/decal/remains/ribcage,
+/turf/simulated/mineral/floor/cave/thor,
+/area/surface/thor/caves)
+"bw" = (
+/obj/item/clothing/head/helmet/space/void/refurb/marine,
+/turf/simulated/mineral/floor/cave/thor,
+/area/surface/thor/caves)
+"bx" = (
+/mob/living/simple_mob/vore/aggressive/lizardman,
+/turf/simulated/floor/outdoors/grass/heavy/thor,
+/area/surface/outside/thor/jungle/deep)
+"by" = (
+/turf/simulated/floor/outdoors/grass/forest/thor{
+	tree_chance = 0;
+	grass_chance = 2
+	},
+/area/surface/outside/thor/landingpad)
+"bz" = (
+/obj/structure/flora/ausbushes/grassybush,
+/turf/simulated/floor/outdoors/grass/heavy/thor{
+	tree_chance = 0;
+	grass_chance = 5
+	},
+/area/surface/outside/thor/jungle/deep)
+"bA" = (
+/mob/living/simple_mob/vore/aggressive/panther/thor,
+/turf/simulated/floor/outdoors/grass/heavy/thor,
+/area/surface/outside/thor/jungle/deep)
+"bB" = (
 /mob/living/simple_mob/vore/hippo{
 	faction_bump_vore = 1
 	},
@@ -373,68 +547,6 @@
 	nitrogen = 63.4124
 	},
 /area/surface/outside/thor/jungle/deep)
-"bt" = (
-/obj/structure/flora/ausbushes/sparsegrass,
-/turf/simulated/floor/outdoors/grass/heavy/thor{
-	tree_chance = 0;
-	grass_chance = 5
-	},
-/area/surface/outside/thor/jungle/deep)
-"bv" = (
-/obj/structure/flora/ausbushes/stalkybush,
-/turf/simulated/floor/outdoors/grass/heavy/thor{
-	tree_chance = 0;
-	grass_chance = 5
-	},
-/area/surface/outside/thor/jungle/deep)
-"bx" = (
-/mob/living/simple_mob/vore/oregrub/lava,
-/turf/simulated/mineral/floor/cave/thor,
-/area/surface/thor/caves)
-"by" = (
-/turf/simulated/floor/outdoors/grass/forest/thor{
-	tree_chance = 0;
-	grass_chance = 2
-	},
-/area/surface/outside/thor/landingpad)
-"bz" = (
-/mob/living/simple_mob/vore/pakkun/fire,
-/turf/simulated/mineral/floor/cave/thor,
-/area/surface/thor/caves)
-"bA" = (
-/obj/structure/window/basic,
-/obj/structure/window/basic{
-	dir = 4
-	},
-/obj/structure/window/basic{
-	dir = 8
-	},
-/obj/structure/grille,
-/turf/simulated/floor/wood{
-	temperature = 313;
-	oxygen = 34.1451;
-	nitrogen = 63.4124;
-	outdoors = 0
-	},
-/area/surface/outside/thor/beach)
-"bB" = (
-/obj/structure/window/basic{
-	dir = 4
-	},
-/obj/structure/window/basic{
-	dir = 1
-	},
-/obj/structure/window/basic{
-	dir = 8
-	},
-/obj/structure/grille,
-/turf/simulated/floor/wood{
-	temperature = 313;
-	oxygen = 34.1451;
-	nitrogen = 63.4124;
-	outdoors = 0
-	},
-/area/surface/outside/thor/beach)
 "bC" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
 	dir = 6
@@ -442,9 +554,12 @@
 /turf/simulated/wall/iron,
 /area/shuttle/junker)
 "bD" = (
-/obj/effect/floor_decal/stairs,
-/turf/simulated/floor/beach/sand/desert/outdoors/thor,
-/area/surface/outside/thor/beach)
+/obj/structure/flora/ausbushes/sparsegrass,
+/turf/simulated/floor/outdoors/grass/heavy/thor{
+	tree_chance = 0;
+	grass_chance = 5
+	},
+/area/surface/outside/thor/jungle/deep)
 "bE" = (
 /obj/structure/flora/ausbushes/leafybush,
 /turf/simulated/floor/outdoors/grass/forest/thor,
@@ -461,18 +576,20 @@
 /turf/simulated/floor/plating,
 /area/shuttle/junker)
 "bH" = (
-/obj/effect/floor_decal/stairs,
-/turf/simulated/floor/outdoors/desert_planet/gravel/thor,
-/area/surface/outside/thor/beach)
+/obj/structure/flora/ausbushes/stalkybush,
+/turf/simulated/floor/outdoors/grass/heavy/thor{
+	tree_chance = 0;
+	grass_chance = 5
+	},
+/area/surface/outside/thor/jungle/deep)
 "bI" = (
-/obj/structure/railing,
-/turf/simulated/floor/outdoors/desert_planet/gravel/thor,
-/area/surface/outside/thor/outpost)
+/mob/living/simple_mob/vore/oregrub/lava,
+/turf/simulated/mineral/floor/cave/thor,
+/area/surface/thor/caves)
 "bJ" = (
-/obj/item/picnic_blankets_carried,
-/obj/item/melee/umbrella/random,
-/turf/simulated/floor/outdoors/desert_planet/gravel/thor,
-/area/surface/outside/thor/outpost)
+/mob/living/simple_mob/vore/pakkun/fire,
+/turf/simulated/mineral/floor/cave/thor,
+/area/surface/thor/caves)
 "bK" = (
 /obj/structure/cable/blue{
 	icon_state = "4-8"
@@ -486,91 +603,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/shuttle/junker)
-"bL" = (
-/mob/living/simple_mob/vore/wolftaur/dark{
-	faction = "hostile"
-	},
-/turf/simulated/floor/tiled/asteroid_steel,
-/area/surface/thor/caves)
-"bM" = (
-/obj/structure/table/woodentable,
-/obj/item/reagent_containers/food/snacks/waffles{
-	pixel_y = 5
-	},
-/turf/simulated/floor/wood,
-/area/surface/thor/bar)
-"bN" = (
-/obj/random/pottedplant,
-/turf/simulated/floor/tiled/asteroid_steel/outdoors/thor,
-/area/surface/outside/thor/pool)
-"bO" = (
-/obj/machinery/light/small{
-	dir = 8;
-	brightness_range = 5;
-	brightness_power = 1;
-	brightness_color = "#DA0205";
-	nightshift_enabled = 1
-	},
-/turf/simulated/floor/tiled/asteroid_steel/outdoors/thor{
-	outdoors = 0
-	},
-/area/surface/outside/thor/pool)
-"bP" = (
-/mob/living/simple_mob/vore/wolftaur/brownclothed,
-/obj/effect/floor_decal/corner/grey/diagonal{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/white,
-/area/surface/thor/kitchen)
-"bQ" = (
-/obj/structure/curtain/black{
-	name = "privacy curtain";
-	icon_state = "open";
-	opacity = 0;
-	layer = 2
-	},
-/turf/simulated/floor/tiled/asteroid_steel/outdoors/thor{
-	outdoors = 0
-	},
-/area/surface/outside/thor/pool)
-"bR" = (
-/obj/structure/table/steel_reinforced,
-/obj/machinery/door/blast/shutters{
-	name = "Kitchen Shutters";
-	dir = 2;
-	layer = 3.3;
-	id = "junglekitchen"
-	},
-/obj/item/reagent_containers/food/snacks/sliceable/grilled_carp,
-/turf/simulated/floor/tiled/white,
-/area/surface/thor/kitchen)
-"bS" = (
-/obj/structure/table/steel_reinforced,
-/obj/machinery/door/blast/shutters{
-	name = "Kitchen Shutters";
-	dir = 2;
-	layer = 3.3;
-	id = "junglekitchen"
-	},
-/obj/item/reagent_containers/food/snacks/sliceable/tofubread,
-/turf/simulated/floor/tiled/white,
-/area/surface/thor/kitchen)
-"bT" = (
-/obj/structure/table/steel_reinforced,
-/obj/machinery/door/blast/shutters{
-	name = "Kitchen Shutters";
-	dir = 2;
-	layer = 3.3;
-	id = "junglekitchen"
-	},
-/obj/item/reagent_containers/food/snacks/sharkmeatcooked,
-/turf/simulated/floor/tiled/white,
-/area/surface/thor/kitchen)
-"bU" = (
-/obj/structure/flora/ausbushes/ppflowers,
-/obj/item/bluespace_harpoon/wand,
-/turf/simulated/floor/outdoors/grass/heavy/thor,
-/area/surface/outside/thor/jungle)
 "bV" = (
 /obj/structure/flora/tree/jungle_small,
 /turf/simulated/floor/outdoors/grass/forest/thor,
@@ -592,11 +624,6 @@
 	},
 /turf/simulated/floor/tiled/asteroid_steel/outdoors/thor,
 /area/surface/outside/thor/pool)
-"bY" = (
-/mob/living/simple_mob/vore/horse/kelpie,
-/obj/structure/flora/ausbushes/ppflowers,
-/turf/simulated/floor/outdoors/grass/heavy/thor,
-/area/surface/outside/thor/jungle)
 "bZ" = (
 /obj/structure/table/steel,
 /obj/item/material/knife/machete/hatchet,
@@ -607,37 +634,6 @@
 /obj/item/shovel,
 /turf/simulated/floor/tiled/asteroid_steel/outdoors/thor,
 /area/surface/outside/thor/landingpad)
-"ca" = (
-/turf/simulated/wall/wood,
-/area/surface/outside/thor/pool)
-"cb" = (
-/obj/structure/simple_door/wood,
-/turf/simulated/floor/wood{
-	temperature = 313;
-	oxygen = 34.1451;
-	nitrogen = 63.4124;
-	outdoors = 1
-	},
-/area/surface/outside/thor/pool)
-"cc" = (
-/obj/structure/toilet,
-/turf/simulated/floor/wood{
-	temperature = 313;
-	oxygen = 34.1451;
-	nitrogen = 63.4124;
-	outdoors = 1
-	},
-/area/surface/outside/thor/pool)
-"cd" = (
-/mob/living/simple_mob/vore/wolftaur/whiteclothed,
-/obj/effect/floor_decal/corner/paleblue/diagonal,
-/turf/simulated/floor/tiled/old_tile/white,
-/area/surface/thor/med)
-"ce" = (
-/obj/effect/floor_decal/corner/paleblue/diagonal,
-/obj/random/pottedplant,
-/turf/simulated/floor/tiled/old_tile/white,
-/area/surface/thor/med)
 "ci" = (
 /obj/structure/table/steel_reinforced,
 /obj/random/powercell/device,
@@ -1255,6 +1251,10 @@
 /obj/structure/flora/tree/desert_planet/palmtree,
 /turf/simulated/floor/outdoors/grass/forest/thor,
 /area/surface/outside/thor/jungle)
+"jd" = (
+/obj/random/pottedplant,
+/turf/simulated/floor/tiled/asteroid_steel/outdoors/thor,
+/area/surface/outside/thor/pool)
 "jj" = (
 /obj/structure/table/glass,
 /obj/item/reagent_containers/food/drinks/bottle/jager{
@@ -7736,7 +7736,7 @@ fY
 fY
 lc
 lc
-aL
+be
 fY
 fY
 fY
@@ -8253,7 +8253,7 @@ fY
 fY
 lc
 Dn
-aL
+be
 fY
 fY
 fY
@@ -9805,7 +9805,7 @@ JJ
 JJ
 JJ
 lc
-aI
+bb
 JJ
 fY
 fo
@@ -10025,7 +10025,7 @@ fY
 fY
 De
 nP
-bm
+bx
 KR
 De
 fY
@@ -10578,7 +10578,7 @@ fY
 fY
 fY
 JJ
-aI
+bb
 JJ
 JJ
 fY
@@ -18551,7 +18551,7 @@ fY
 fY
 fY
 fY
-aL
+be
 De
 De
 fY
@@ -18821,7 +18821,7 @@ LR
 LR
 LR
 LR
-aL
+be
 De
 fY
 fY
@@ -19322,7 +19322,7 @@ fY
 De
 De
 LR
-aT
+bf
 LR
 LR
 wq
@@ -19333,7 +19333,7 @@ lc
 lc
 wq
 wq
-aM
+bm
 wq
 wq
 LR
@@ -19848,7 +19848,7 @@ lc
 lc
 lc
 lc
-aM
+bm
 Es
 lc
 lc
@@ -20114,7 +20114,7 @@ lc
 wq
 LR
 LR
-aL
+be
 De
 fY
 HS
@@ -20358,7 +20358,7 @@ wq
 lc
 lc
 wq
-aM
+bm
 wq
 wq
 wq
@@ -20370,7 +20370,7 @@ lc
 lc
 wq
 wq
-aT
+bf
 LR
 fY
 fY
@@ -20877,7 +20877,7 @@ Es
 wq
 LR
 LR
-aM
+bm
 Es
 Es
 Es
@@ -21389,7 +21389,7 @@ LR
 wq
 wq
 wq
-aM
+bm
 wq
 LR
 LR
@@ -21644,7 +21644,7 @@ fY
 De
 LR
 LR
-aT
+bf
 wq
 wq
 wq
@@ -21659,7 +21659,7 @@ wq
 wq
 wq
 wq
-aT
+bf
 LR
 De
 fY
@@ -22164,18 +22164,18 @@ LR
 LR
 LR
 LR
-aL
+be
 HS
 De
 De
-aL
+be
 LR
 LR
 LR
 LR
 LR
 LR
-aL
+be
 fY
 fY
 fY
@@ -22262,7 +22262,7 @@ oq
 oq
 oq
 oq
-as
+aL
 qW
 oq
 oq
@@ -24724,7 +24724,7 @@ wq
 wq
 wq
 wq
-aI
+bb
 Il
 Il
 fY
@@ -25488,9 +25488,9 @@ fY
 fY
 JJ
 fY
-bt
-bt
-bt
+bD
+bD
+bD
 lc
 lc
 lc
@@ -25500,7 +25500,7 @@ lc
 lc
 lc
 lc
-aI
+bb
 JJ
 fY
 fY
@@ -26003,7 +26003,7 @@ fY
 fY
 fY
 JJ
-bt
+bD
 lc
 lc
 lc
@@ -26518,7 +26518,7 @@ fY
 fY
 fY
 JJ
-bt
+bD
 lc
 Es
 lc
@@ -26776,7 +26776,7 @@ fY
 fY
 fY
 JJ
-bt
+bD
 lc
 pw
 lc
@@ -26791,7 +26791,7 @@ lc
 lc
 lc
 lc
-bo
+bz
 JJ
 JJ
 fY
@@ -27034,7 +27034,7 @@ fY
 fY
 fY
 JJ
-bt
+bD
 lc
 lc
 lc
@@ -27049,7 +27049,7 @@ lc
 Es
 lc
 lc
-bo
+bz
 JJ
 JJ
 fY
@@ -27292,7 +27292,7 @@ fY
 fY
 fY
 JJ
-bt
+bD
 Es
 lc
 lc
@@ -27307,7 +27307,7 @@ lc
 lc
 lc
 lc
-bo
+bz
 JJ
 JJ
 fY
@@ -27550,7 +27550,7 @@ fY
 fY
 fY
 JJ
-bt
+bD
 Es
 lc
 lc
@@ -27565,7 +27565,7 @@ lc
 lc
 lc
 lc
-bo
+bz
 ih
 JJ
 fY
@@ -27808,7 +27808,7 @@ fY
 fY
 fY
 JJ
-bt
+bD
 lc
 lc
 lc
@@ -27823,8 +27823,8 @@ lc
 lc
 lc
 lc
-bo
-bo
+bz
+bz
 JJ
 fY
 fY
@@ -28081,8 +28081,8 @@ lc
 lc
 Es
 lc
-bo
-bo
+bz
+bz
 JJ
 fY
 fY
@@ -28324,7 +28324,7 @@ fY
 fY
 fY
 JJ
-bt
+bD
 lc
 lc
 lc
@@ -28582,7 +28582,7 @@ fY
 fY
 fY
 JJ
-bt
+bD
 Es
 lc
 lc
@@ -28590,7 +28590,7 @@ lc
 nE
 nE
 nE
-bs
+bB
 nE
 nE
 lc
@@ -28840,7 +28840,7 @@ fY
 fY
 fY
 JJ
-bt
+bD
 Es
 lc
 lc
@@ -29098,7 +29098,7 @@ fY
 fY
 fY
 JJ
-bt
+bD
 lc
 lc
 lc
@@ -29356,7 +29356,7 @@ fY
 fY
 fY
 JJ
-bv
+bH
 lc
 lc
 lc
@@ -32331,7 +32331,7 @@ BR
 DG
 oy
 oy
-ar
+aF
 Hc
 oy
 oy
@@ -32594,10 +32594,10 @@ VG
 oy
 oy
 oy
-bR
+aA
 hh
 Vo
-bP
+ax
 Vo
 Vo
 Vo
@@ -32849,10 +32849,10 @@ oy
 oy
 dL
 oL
-an
+aD
 oy
 oy
-bS
+aB
 hh
 Vo
 QJ
@@ -32862,7 +32862,7 @@ Vo
 ka
 MX
 It
-ag
+an
 NV
 qL
 ka
@@ -33106,11 +33106,11 @@ DG
 oy
 oy
 oy
-ar
+aF
 oy
 oy
 oy
-bT
+aC
 hh
 Vo
 PK
@@ -33613,7 +33613,7 @@ PA
 mA
 RS
 Me
-cd
+aQ
 Me
 QU
 mA
@@ -33878,10 +33878,10 @@ mA
 BR
 DG
 pJ
-ar
+aF
 oy
 oy
-aq
+aE
 oy
 oy
 rf
@@ -34129,7 +34129,7 @@ PA
 mA
 ky
 Me
-ce
+aT
 Me
 Ri
 mA
@@ -34413,7 +34413,7 @@ BR
 PA
 PA
 rz
-bI
+aj
 Jt
 ru
 ru
@@ -34670,8 +34670,8 @@ PA
 BR
 PA
 PA
-bJ
-bI
+al
+aj
 Jt
 ru
 ru
@@ -34930,8 +34930,8 @@ BR
 BR
 BR
 BR
-bH
-bD
+ai
+ah
 ru
 ru
 Kx
@@ -35161,9 +35161,9 @@ PA
 PA
 TV
 PA
-ca
-ca
-ca
+aI
+aI
+aI
 PA
 BR
 DG
@@ -35187,7 +35187,7 @@ PA
 PA
 PA
 rz
-bI
+aj
 Jt
 ru
 ru
@@ -35419,9 +35419,9 @@ PA
 PA
 PA
 PA
-ca
-cc
-cb
+aI
+aM
+aJ
 BR
 BR
 DG
@@ -35445,7 +35445,7 @@ PA
 PA
 PA
 rz
-bI
+aj
 Jt
 ru
 ru
@@ -35677,9 +35677,9 @@ PA
 PA
 PA
 PA
-ca
-ca
-ca
+aI
+aI
+aI
 PA
 BR
 DG
@@ -35703,7 +35703,7 @@ PA
 PA
 PA
 rz
-bI
+aj
 Jt
 ru
 ru
@@ -35961,7 +35961,7 @@ PA
 PA
 PA
 rz
-bI
+aj
 Jt
 ru
 ru
@@ -36219,7 +36219,7 @@ PA
 PA
 PA
 rz
-bI
+aj
 Jt
 ru
 ru
@@ -36477,7 +36477,7 @@ PA
 PA
 PA
 rz
-bI
+aj
 Jt
 ru
 ru
@@ -37246,7 +37246,7 @@ sZ
 sT
 wu
 SN
-bM
+as
 xu
 xu
 xu
@@ -37763,7 +37763,7 @@ sT
 wu
 SN
 IQ
-ai
+ar
 xu
 xu
 jj
@@ -38279,7 +38279,7 @@ sT
 wu
 SN
 BC
-ai
+ar
 xu
 xu
 VM
@@ -39819,9 +39819,9 @@ SD
 kd
 uP
 Qn
-bQ
+ay
 SD
-bQ
+ay
 Qn
 uP
 wu
@@ -40334,11 +40334,11 @@ zL
 kd
 fx
 uP
-bO
-bQ
+aw
+ay
 SD
-bQ
-bO
+ay
+aw
 uP
 wu
 wu
@@ -40583,7 +40583,7 @@ PA
 PA
 PA
 PA
-bN
+jd
 wu
 uP
 uP
@@ -40599,7 +40599,7 @@ uP
 uP
 uP
 wu
-bN
+jd
 PA
 PA
 PA
@@ -40858,7 +40858,7 @@ PA
 PA
 PA
 PA
-aj
+at
 PA
 PA
 PA
@@ -41098,7 +41098,7 @@ PA
 PA
 PA
 PA
-aj
+at
 PA
 XT
 PA
@@ -42487,7 +42487,7 @@ fY
 fY
 fY
 fY
-bp
+bA
 fY
 fY
 fY
@@ -45352,7 +45352,7 @@ Oo
 fY
 fY
 it
-bp
+bA
 Rg
 fY
 fY
@@ -47566,7 +47566,7 @@ wP
 wP
 wP
 wP
-ac
+af
 wP
 wP
 wP
@@ -47822,11 +47822,11 @@ wP
 wP
 wP
 wP
-ac
-ac
-ac
-ac
-ah
+af
+af
+af
+af
+aq
 wP
 wP
 wP
@@ -48080,11 +48080,11 @@ wP
 wP
 wP
 wP
-ak
-ac
-ac
-ac
-ac
+av
+af
+af
+af
+af
 wP
 wP
 wP
@@ -48256,7 +48256,7 @@ Na
 Af
 fI
 rI
-aE
+aY
 Wb
 eY
 fo
@@ -48339,11 +48339,11 @@ wP
 wP
 wP
 wP
-ac
+af
 wP
 wP
-ac
-ac
+af
+af
 wP
 wP
 wP
@@ -48513,7 +48513,7 @@ fo
 Wb
 fI
 VV
-aG
+ba
 rI
 Wb
 fo
@@ -48601,7 +48601,7 @@ wP
 wP
 wP
 wP
-ac
+af
 wP
 wP
 wP
@@ -48748,7 +48748,7 @@ fY
 fY
 fY
 lc
-aL
+be
 fY
 fY
 fY
@@ -48859,8 +48859,8 @@ wP
 wP
 wP
 wP
-ac
-ac
+af
+af
 wP
 wP
 wP
@@ -49003,7 +49003,7 @@ fY
 fY
 fY
 fY
-aL
+be
 lc
 lc
 lc
@@ -49118,8 +49118,8 @@ wP
 wP
 wP
 wP
-ac
-ac
+af
+af
 wP
 wP
 wP
@@ -49377,11 +49377,11 @@ wP
 wP
 wP
 wP
+ak
 af
-ac
-ac
-ac
-ac
+af
+af
+af
 wP
 wP
 wP
@@ -49639,8 +49639,8 @@ wP
 wP
 wP
 wP
-ac
-ac
+af
+af
 wP
 wP
 wP
@@ -49776,7 +49776,7 @@ fY
 fY
 fY
 fY
-aL
+be
 lc
 lc
 lc
@@ -49898,8 +49898,8 @@ wP
 wP
 wP
 wP
-ac
-ac
+af
+af
 wP
 wP
 wP
@@ -50038,7 +50038,7 @@ fY
 lc
 lc
 fY
-aL
+be
 fY
 fo
 fo
@@ -50157,10 +50157,10 @@ wP
 wP
 wP
 wP
-ac
-ac
-ac
-ac
+af
+af
+af
+af
 wP
 ru
 ru
@@ -50415,11 +50415,11 @@ wP
 wP
 wP
 wP
-ad
-ac
+ag
+af
 wP
-ac
-ac
+af
+af
 ru
 ru
 ru
@@ -53624,7 +53624,7 @@ Rg
 fY
 Wm
 fY
-bp
+bA
 Rg
 Rg
 fY
@@ -56838,7 +56838,7 @@ IW
 IW
 IW
 QM
-bU
+aG
 MJ
 IW
 IW
@@ -57096,7 +57096,7 @@ IW
 IW
 iy
 IW
-bY
+aH
 IW
 Re
 Re
@@ -58950,8 +58950,8 @@ ru
 ru
 VN
 VN
-bB
-bA
+ad
+ac
 VN
 VN
 ru
@@ -59466,7 +59466,7 @@ KU
 KU
 VN
 oW
-ab
+ae
 bn
 bn
 VN
@@ -59726,7 +59726,7 @@ VN
 VN
 VN
 VN
-bl
+ab
 VN
 ru
 uZ
@@ -61130,7 +61130,7 @@ aZ
 sH
 oq
 Ev
-aV
+bl
 Zd
 eY
 aZ
@@ -61390,7 +61390,7 @@ Dj
 fb
 fb
 fb
-aU
+bk
 pN
 fo
 fo
@@ -62674,7 +62674,7 @@ sX
 oq
 oq
 TJ
-aX
+bo
 ql
 nn
 uq
@@ -63198,7 +63198,7 @@ TJ
 oq
 oq
 Ev
-aQ
+bg
 fo
 fo
 fo
@@ -64597,7 +64597,7 @@ DJ
 rS
 tF
 tF
-bL
+am
 Rx
 CR
 CR
@@ -64992,7 +64992,7 @@ CR
 CR
 CR
 wy
-bd
+bt
 wy
 wy
 wy
@@ -65249,8 +65249,8 @@ CR
 CR
 CR
 CR
-bg
-be
+bw
+bu
 wy
 wy
 wy
@@ -65508,7 +65508,7 @@ CR
 CR
 CR
 CR
-bf
+bv
 wy
 wy
 wy
@@ -65767,7 +65767,7 @@ CR
 CR
 CR
 CR
-bb
+bs
 wy
 wy
 wy
@@ -66286,7 +66286,7 @@ CR
 CR
 wy
 wy
-aY
+bp
 CR
 CR
 CR
@@ -66544,7 +66544,7 @@ qz
 CR
 CR
 wy
-aY
+bp
 CR
 CR
 CR
@@ -67080,7 +67080,7 @@ EX
 Gh
 wy
 wy
-aJ
+bd
 wy
 wy
 wy
@@ -67660,7 +67660,7 @@ Ql
 Ql
 Ql
 Ql
-at
+aU
 Ql
 Ql
 Ql
@@ -68041,7 +68041,7 @@ wy
 wy
 wy
 wy
-bx
+bI
 wy
 wy
 wy
@@ -68809,7 +68809,7 @@ wy
 wy
 wy
 wy
-bz
+bJ
 wy
 wy
 wy
@@ -69075,7 +69075,7 @@ wy
 wy
 wy
 wy
-bx
+bI
 wy
 wy
 wy
@@ -69330,7 +69330,7 @@ wy
 wy
 wy
 wy
-bx
+bI
 wy
 wy
 wy
@@ -69433,9 +69433,9 @@ wy
 CR
 CR
 CR
-aA
-aA
-aA
+aW
+aW
+aW
 CR
 CR
 CR
@@ -69687,7 +69687,7 @@ wy
 wy
 wy
 wy
-aD
+aX
 wy
 CR
 CR
@@ -70223,7 +70223,7 @@ wy
 RX
 RX
 RX
-ax
+aV
 wy
 Gh
 Gh
@@ -70460,7 +70460,7 @@ CR
 wy
 wy
 wy
-aD
+aX
 wy
 wy
 wy
