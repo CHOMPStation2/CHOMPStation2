@@ -35,7 +35,7 @@
 	spawn_types = list(
 	/mob/living/simple_mob/animal/passive/mouse = 100,
     /mob/living/simple_mob/animal/passive/cockroach = 25,
-	/mob/living/simple_mob/animal/passive/mouse/rat = 10, // Because I'm a horrible person. <3
+	/mob/living/simple_mob/animal/passive/mouse/rat/strong = 10, // Because I'm a horrible person. <3
 	/obj/effect/spider/spiderling/non_growing = 5)
 
 /obj/structure/mob_spawner/mouse_nest/mousehole/New()
