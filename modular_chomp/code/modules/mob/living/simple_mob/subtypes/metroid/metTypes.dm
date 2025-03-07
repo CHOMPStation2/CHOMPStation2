@@ -135,9 +135,9 @@ GLOBAL_VAR_INIT(queen_amount, 0) //We only gonna want 1 queen in the world.
 
 	is_juvenile = TRUE
 
-/mob/living/simple_mob/metroid/juvenile/baby/Initialize()
+/mob/living/simple_mob/metroid/juvenile/baby/Initialize(mapload)
+	. = ..()
 	playsound(src, 'sound/metroid/metroidsee.ogg', 100, 1)
-	..()
 
 
 
@@ -208,9 +208,9 @@ GLOBAL_VAR_INIT(queen_amount, 0) //We only gonna want 1 queen in the world.
 
 	is_juvenile = TRUE
 
-/mob/living/simple_mob/metroid/juvenile/super/Initialize()
+/mob/living/simple_mob/metroid/juvenile/super/Initialize(mapload)
+	. =	..()
 	playsound(src, 'sound/metroid/metroidsee.ogg', 100, 1)
-	..()
 
 /mob/living/simple_mob/metroid/juvenile/super/death()
 	// playsound(src, 'sound/metroid/metroiddeath.ogg', 100, 1)
@@ -261,9 +261,9 @@ GLOBAL_VAR_INIT(queen_amount, 0) //We only gonna want 1 queen in the world.
 	evo_limit = 1500
 	next = "/mob/living/simple_mob/metroid/juvenile/gamma"
 
-/mob/living/simple_mob/metroid/juvenile/alpha/Initialize()
+/mob/living/simple_mob/metroid/juvenile/alpha/Initialize(mapload)
+	. = ..()
 	playsound(src, 'sound/metroid/metroidsee.ogg', 100, 1)
-	..()
 
 /mob/living/simple_mob/metroid/juvenile/alpha/death()
 	// playsound(src, 'sound/metroid/metroiddeath.ogg', 100, 1)
@@ -319,7 +319,7 @@ GLOBAL_VAR_INIT(queen_amount, 0) //We only gonna want 1 queen in the world.
 	nutrition = 0
 	ranged_cooldown_time = 5 SECOND
 	projectilesound = 'sound/weapons/taser2.ogg'
-	projectiletype = /obj/item/projectile/beam/stun/weak
+	projectiletype = /obj/item/projectile/energy/mob/electric_spider
 
 	//Not affected by atmos.
 	minbodytemp = 0
@@ -338,9 +338,9 @@ GLOBAL_VAR_INIT(queen_amount, 0) //We only gonna want 1 queen in the world.
 	evo_limit = 1500
 	next = "/mob/living/simple_mob/metroid/juvenile/zeta"
 
-/mob/living/simple_mob/metroid/juvenile/gamma/Initialize()
+/mob/living/simple_mob/metroid/juvenile/gamma/Initialize(mapload)
+	. = ..()
 	playsound(src, 'sound/metroid/metroidgamma.ogg', 100, 1)
-	..()
 
 /mob/living/simple_mob/metroid/juvenile/gamma/death()
 	// playsound(src, 'sound/metroid/metroiddeath.ogg', 100, 1)
@@ -436,9 +436,9 @@ GLOBAL_VAR_INIT(queen_amount, 0) //We only gonna want 1 queen in the world.
 	evo_limit = 1500
 	next = "/mob/living/simple_mob/metroid/juvenile/omega"
 
-/mob/living/simple_mob/metroid/juvenile/zeta/Initialize()
+/mob/living/simple_mob/metroid/juvenile/zeta/Initialize(mapload)
+	. = ..()
 	playsound(src, 'sound/metroid/metroidzeta.ogg', 100, 1)
-	..()
 
 /mob/living/simple_mob/metroid/juvenile/zeta/death()
 	// playsound(src, 'sound/metroid/metroiddeath.ogg', 100, 1)
@@ -507,7 +507,7 @@ GLOBAL_VAR_INIT(queen_amount, 0) //We only gonna want 1 queen in the world.
 	max_nutrition = 2200
 	nutrition = 0
 	makes_dirt = TRUE
-	projectiletype	= /obj/item/projectile/beam/smalllaser	// The projectiles I shoot
+	projectiletype	= /obj/item/projectile/energy/mob/smalllaser
 	projectilesound = 'sound/weapons/Flamer.ogg' // The sound I make when I do it
 
 	//Unaffected by atmos.
@@ -535,9 +535,9 @@ GLOBAL_VAR_INIT(queen_amount, 0) //We only gonna want 1 queen in the world.
 
 	death_sound_override = list('sound/metroid/metroidomegadeath.ogg') // We override the death sound to play our custom here
 
-/mob/living/simple_mob/metroid/juvenile/omega/Initialize()
+/mob/living/simple_mob/metroid/juvenile/omega/Initialize(mapload)
+	. = ..()
 	playsound(src, 'sound/metroid/metroidomega.ogg', 100, 1)
-	..()
 
 /mob/living/simple_mob/metroid/juvenile/omega/death()
 	// playsound(src, 'sound/metroid/metroidomegadeath.ogg', 100, 1)
@@ -632,10 +632,10 @@ GLOBAL_VAR_INIT(queen_amount, 0) //We only gonna want 1 queen in the world.
 
 	death_sound_override = list('sound/metroid/metroidqueendeath.ogg') // We override the death sound to play our custom here
 
-/mob/living/simple_mob/metroid/juvenile/queen/Initialize()
+/mob/living/simple_mob/metroid/juvenile/queen/Initialize(mapload)
+	. = ..()
 	playsound(src, 'sound/metroid/metroidqueen.ogg', 100, 1)
 	GLOB.queen_amount++
-	..()
 
 /mob/living/simple_mob/metroid/juvenile/queen/death()
 	// playsound(src, 'sound/metroid/metroidqueendeath.ogg', 100, 1)

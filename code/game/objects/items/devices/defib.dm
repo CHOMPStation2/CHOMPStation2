@@ -26,7 +26,7 @@
 	return bcell
 
 /obj/item/defib_kit/Initialize() //starts without a cell for rnd //ChompEDIT New --> Initialize
-	..()
+	. = ..()
 	if(ispath(paddles))
 		paddles = new paddles(src, src)
 	else

@@ -50,7 +50,7 @@ GLOBAL_VAR_INIT(dynamic_sector_master, null)
 				shuttle_landmarks[i] = spawn_directions
 		generated_z = TRUE
 
-/obj/effect/overmap/visitable/dynamic/Initialize()
+/obj/effect/overmap/visitable/dynamic/Initialize(mapload)
 	if(!GLOB.dynamic_sector_master)
 		GLOB.dynamic_sector_master = src
 	. = ..()
@@ -141,7 +141,7 @@ GLOBAL_VAR_INIT(dynamic_sector_master, null)
 	var/loaded = FALSE
 	var/my_index = 0 // Tracks which z-level we're using in the parent. Corresponds to index in parent's active_pois[]
 
-/obj/effect/overmap/visitable/dynamic/poi/Initialize()
+/obj/effect/overmap/visitable/dynamic/poi/Initialize(mapload)
 	if(!global.using_map.use_overmap)
 		return INITIALIZE_HINT_QDEL
 

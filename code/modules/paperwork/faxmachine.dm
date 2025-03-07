@@ -28,12 +28,12 @@ var/list/adminfaxes = list()	//cache for faxes that have been sent to admins
 	var/destination = null // the department we're sending to
 	var/talon = 0 // So that the talon can access their own crew roles for the request
 
-/obj/machinery/photocopier/faxmachine/Initialize() //CHOMPedit, so new fax machines can update its list mid-round
+/obj/machinery/photocopier/faxmachine/Initialize(mapload)
+	. = ..()
 	allfaxes += src
 	if(!destination) destination = "[using_map.boss_name]"
 	if( !(("[department]" in alldepartments) || ("[department]" in admin_departments)) )
 		alldepartments |= department
-	..()
 
 /obj/machinery/photocopier/faxmachine/attack_hand(mob/user as mob) // CH edit begins here; this allows borgs to use fax machines, meant for the Unity and Clerical modules.
 	user.set_machine(src)
