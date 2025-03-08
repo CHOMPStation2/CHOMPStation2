@@ -193,3 +193,12 @@
       the pipes on that pipeline being voided.
   Kashargul:
   - code_imp: cleans up some old code and moves the useful one to modular
+2025-03-08:
+  CHOMPStation2StaffMirrorBot:
+  - image: added missing sidewalk turf edge overlays
+  - bugfix: hair gradient selection arrows
+  - bugfix: wrong blood volumes on apply prefs
+  - bugfix: early spawns in nullspace
+  - rscadd: Strong rat variant
+  Kashargul:
+  - code_imp: cleans up some ini issues
