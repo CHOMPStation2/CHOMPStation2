@@ -331,7 +331,7 @@
 	icon_state = "nothing" // Horribly illegal and shouldn't be a thing, but whatever.
 	species_restricted = null
 
-/obj/item/clothing/shoes/none/Initialize()
+/obj/item/clothing/shoes/none/Initialize(mapload)
 	. = ..()
 	if(istype(loc, /mob)) // are we in a mob?
 		var/mob/m = loc
@@ -340,8 +340,7 @@
 		for(var/atom/movable/thing in contents)
 			thing.loc = get_turf(src)
 	moveToNullspace() // go to nullspace
-	spawn(1)
-		qdel(src) // die
+	QDEL_IN(src, 1)
 
 /obj/item/clothing/shoes/none/make_worn_icon(body_type, slot_name, inhands, default_icon, default_layer, icon/clip_mask) // override this to ensure that no worn icon is generated
 	return

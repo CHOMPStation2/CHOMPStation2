@@ -183,7 +183,7 @@ var/global/list/obj/item/pda/PDAs = list()
 	start_program(find_program(/datum/data/pda/app/main_menu))
 
 //ChompEDIT START - move icon ops to initialize
-/obj/item/pda/Initialize()
+/obj/item/pda/Initialize(mapload)
 	. = ..()
 	add_overlay("pda-pen")
 //ChompEDIT END

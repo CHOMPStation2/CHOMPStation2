@@ -764,7 +764,7 @@
 	icon_state = "bar_light"
 	initial_flooring = /decl/flooring/tiling/eris/steel/bar_light
 
-/turf/simulated/floor/tiled/eris/steel/bar_light/Initialize()
+/turf/simulated/floor/tiled/eris/steel/bar_light/Initialize(mapload)
 	. = ..()
 	set_light(3,4,"#00AAFF")
 

@@ -191,6 +191,8 @@
 #define REAGENT_ID_BENZILATE "benzilate"
 #define REAGENT_PHENETHYLAMINE "Phenethylamine"
 #define REAGENT_ID_PHENETHYLAMINE "phenethylamine"
+#define REAGENT_XEYAKIN_BLOOD "Xeyakin Blood"
+#define REAGENT_ID_XEYAKIN_BLOOD "xeyakinblood"
 
 
 // Phoronreagents

@@ -24,14 +24,14 @@
 		/obj/item/storage/pill_bottle/zoom = 2,
 		/obj/item/storage/pill_bottle/paracetamol = 1,
 	) //override pick list gamma
-	
-	var/gammaunique = 1
-	
 
-/obj/structure/trash_pile/sharkpile/Initialize()
-	..()
+	var/gammaunique = 1
+
+
+/obj/structure/trash_pile/sharkpile/Initialize(mapload)
+	. = ..()
 	if(prob(destroychance))
-		qdel(src)
+		return INITIALIZE_HINT_QDEL
 
 //^X% chance to use our own list, otherwise default pool.
 //Here we could also add a % chance to spawn a mob for trash pandas or such,

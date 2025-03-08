@@ -61,7 +61,7 @@
 //-------------------------------------------
 // Standard procs
 //-------------------------------------------
-/obj/vehicle/train/rover/engine/Initialize()
+/obj/vehicle/train/rover/engine/Initialize(mapload)
 	cell = new /obj/item/cell/high(src)
 	key = new(src)
 	. = ..()

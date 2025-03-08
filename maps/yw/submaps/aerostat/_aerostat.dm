@@ -125,7 +125,7 @@
 	color = "#eacd7c"
 	BOR4_SET_ATMOS
 
-/turf/unsimulated/floor/sky/bor4_sky/Initialize()
+/turf/unsimulated/floor/sky/bor4_sky/Initialize(mapload)
 	skyfall_levels = list(z+1)
 	. = ..()
 

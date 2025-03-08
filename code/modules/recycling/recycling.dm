@@ -8,7 +8,7 @@
 	var/negative_dir = null	//VOREStation Addition
 	var/hand_fed = TRUE //CHOMPAdd
 
-/obj/machinery/recycling/Initialize() //CHOMPAdd
+/obj/machinery/recycling/Initialize(mapload) //CHOMPAdd
 	. = ..()
 	default_apply_parts()
 

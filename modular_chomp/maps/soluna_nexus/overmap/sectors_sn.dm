@@ -86,6 +86,6 @@
 	else if(istype(AM, /obj/effect/overmap/visitable/ship))
 		atc.msg(message)
 
-/obj/effect/overmap/visitable/planet/Sif/Initialize()
+/obj/effect/overmap/visitable/planet/Sif/Initialize(mapload)
 	. = ..()
 	docking_codes = null

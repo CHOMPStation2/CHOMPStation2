@@ -79,8 +79,8 @@
 	plane_holder.set_vis(VIS_CH_STATUS_R, 1)
 	plane_holder.set_vis(VIS_CH_BACKUP, 1)	//Makes sense for player Leppy's to be able to see health.
 
-/mob/living/simple_mob/vore/leopardmander/Initialize()
-	..()
+/mob/living/simple_mob/vore/leopardmander/Initialize(mapload)
+	. = ..()
 	src.adjust_nutrition(src.max_nutrition)
 
 /mob/living/simple_mob/vore/leopardmander/init_vore()

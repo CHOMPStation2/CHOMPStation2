@@ -539,7 +539,7 @@
 	desc = "DAS A BIG COOKIE!!!"
 	bitesize = 100
 
-/obj/item/reagent_containers/food/snacks/cookie/mysterious/Initialize()
+/obj/item/reagent_containers/food/snacks/cookie/mysterious/Initialize(mapload)
 	. = ..()
 
 /obj/item/reagent_containers/food/snacks/cookie/mysterious/attack(mob/living/M as mob, mob/user as mob, def_zone)

@@ -30,7 +30,7 @@
 
 	var/global/list/allocated_gamma = list()
 
-/obj/structure/trash_pile/Initialize()
+/obj/structure/trash_pile/Initialize(mapload)
 	. = ..()
 	icon_state = pick(
 		"pile1",

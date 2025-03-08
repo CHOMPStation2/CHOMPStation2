@@ -9,7 +9,7 @@
 
 	circuit = /obj/item/circuitboard/fusion_fuel_compressor
 
-/obj/machinery/fusion_fuel_compressor/Initialize()
+/obj/machinery/fusion_fuel_compressor/Initialize(mapload)
 	. = ..()
 	default_apply_parts()
 	verbs -= /obj/machinery/fusion_fuel_compressor/verb/eject_sheet //CHOMPAdd

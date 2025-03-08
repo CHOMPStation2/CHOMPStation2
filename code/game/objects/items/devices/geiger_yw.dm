@@ -16,10 +16,10 @@
 	var/last_tick //used to delay the powercheck
 	var/wiresexposed = 0
 
-/obj/item/geiger/wall/Initialize()
+/obj/item/geiger/wall/Initialize(mapload)
+	. = ..()
 	START_PROCESSING(SSobj, src)
 	soundloop = new(list(src), FALSE)
-	return ..()
 
 /obj/item/geiger/wall/Destroy()
 	STOP_PROCESSING(SSobj, src)

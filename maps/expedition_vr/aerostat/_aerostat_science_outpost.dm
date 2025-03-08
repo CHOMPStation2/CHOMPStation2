@@ -20,7 +20,7 @@
 	skybox_pixel_x = 0
 	skybox_pixel_y = 0
 
-/obj/effect/overmap/visitable/sector/virgo2/Initialize()
+/obj/effect/overmap/visitable/sector/virgo2/Initialize(mapload)
 	for(var/obj/effect/overmap/visitable/ship/stellar_delight/sd in world)
 		docking_codes = sd.docking_codes
 	. = ..()
@@ -125,7 +125,7 @@
 	color = "#eacd7c"
 	VIRGO2_SET_ATMOS
 
-/turf/unsimulated/floor/sky/virgo2_sky/Initialize()
+/turf/unsimulated/floor/sky/virgo2_sky/Initialize(mapload)
 	skyfall_levels = list(z+1)
 	. = ..()
 

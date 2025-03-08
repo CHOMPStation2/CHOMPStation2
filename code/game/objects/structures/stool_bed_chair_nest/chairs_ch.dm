@@ -24,14 +24,14 @@
 	icon_state = "sofacornerOLD"
 	base_icon = "sofacornerOLD"
 
-/obj/structure/bed/chair/sofa/sif_ora/Initialize(var/newloc,var/newmaterial)
-	..(newloc,MAT_SIFWOOD,MAT_CARPET_ORANGE)
+/obj/structure/bed/chair/sofa/sif_ora/Initialize(mapload,var/newmaterial)
+	. = ..(mapload,MAT_SIFWOOD,MAT_CARPET_ORANGE)
 
-/obj/structure/bed/chair/sofa/left/sif_ora/Initialize(var/newloc,var/newmaterial)
-	..(newloc,MAT_SIFWOOD,MAT_CARPET_ORANGE)
+/obj/structure/bed/chair/sofa/left/sif_ora/Initialize(mapload,var/newmaterial)
+	. = ..(mapload,MAT_SIFWOOD,MAT_CARPET_ORANGE)
 
-/obj/structure/bed/chair/sofa/right/sif_ora/Initialize(var/newloc,var/newmaterial)
-	..(newloc,MAT_SIFWOOD,MAT_CARPET_ORANGE)
+/obj/structure/bed/chair/sofa/right/sif_ora/Initialize(mapload,var/newmaterial)
+	. = ..(mapload,MAT_SIFWOOD,MAT_CARPET_ORANGE)
 
-/obj/structure/bed/chair/sofa/corner/sif_ora/Initialize(var/newloc,var/newmaterial)
-	..(newloc,MAT_SIFWOOD,MAT_CARPET_ORANGE)
+/obj/structure/bed/chair/sofa/corner/sif_ora/Initialize(mapload,var/newmaterial)
+	. = ..(mapload,MAT_SIFWOOD,MAT_CARPET_ORANGE)

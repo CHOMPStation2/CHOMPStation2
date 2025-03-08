@@ -28,7 +28,7 @@
 	var/list/product_records = list()
 
 
-/mob/living/simple_mob/humanoid/starhunter/trader/Initialize()
+/mob/living/simple_mob/humanoid/starhunter/trader/Initialize(mapload)
 	. = ..()
 	build_inventory()
 

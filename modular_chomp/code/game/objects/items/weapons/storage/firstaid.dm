@@ -85,7 +85,7 @@
 
 	icon_state = "pill2"
 
-/obj/item/reagent_containers/pill/neotane/Initialize()
+/obj/item/reagent_containers/pill/neotane/Initialize(mapload)
 	. = ..()
 	reagents.add_reagent(REAGENT_ID_NEOTANE, 10)
 	color = reagents.get_color()
@@ -95,7 +95,7 @@
 	desc = "An experimental pill."
 	icon_state = "pill2"
 
-/obj/item/reagent_containers/pill/burncard/Initialize()
+/obj/item/reagent_containers/pill/burncard/Initialize(mapload)
 	. = ..()
 	reagents.add_reagent(REAGENT_ID_BURNCARD, 10)
 	color = reagents.get_color()
@@ -105,7 +105,7 @@
 	desc = "An experimental pill."
 	icon_state = "pill2"
 
-/obj/item/reagent_containers/pill/flamecure/Initialize()
+/obj/item/reagent_containers/pill/flamecure/Initialize(mapload)
 	. = ..()
 	reagents.add_reagent(REAGENT_ID_FLAMECURE, 5)
 	color = reagents.get_color()
@@ -115,7 +115,7 @@
 	desc = "An experimental pill."
 	icon_state = "pill2"
 
-/obj/item/reagent_containers/pill/juggernog/Initialize()
+/obj/item/reagent_containers/pill/juggernog/Initialize(mapload)
 	. = ..()
 	reagents.add_reagent(REAGENT_ID_JUGGERNOG, 5)
 	color = reagents.get_color()
@@ -125,7 +125,7 @@
 	desc = "An experimental pill."
 	icon_state = "pill2"
 
-/obj/item/reagent_containers/pill/curea/Initialize()
+/obj/item/reagent_containers/pill/curea/Initialize(mapload)
 	. = ..()
 	reagents.add_reagent(REAGENT_ID_CUREA, 10)
 	color = reagents.get_color()
@@ -135,7 +135,7 @@
 	desc = "An experimental pill."
 	icon_state = "pill2"
 
-/obj/item/reagent_containers/pill/souldew/Initialize()
+/obj/item/reagent_containers/pill/souldew/Initialize(mapload)
 	. = ..()
 	reagents.add_reagent(REAGENT_ID_SOULDEW, 10)
 	color = reagents.get_color()
@@ -146,8 +146,7 @@
 	desc = "An expirmental pill."
 	icon_state = "pill2"
 
-/obj/item/reagent_containers/pill/purifyingagent/Initialize()
-
+/obj/item/reagent_containers/pill/purifyingagent/Initialize(mapload)
 	. = ..()
 	reagents.add_reagent(REAGENT_ID_PURIFYINGAGENT, 10)
 
@@ -158,7 +157,7 @@
 	desc = "A pill to help you concentrate."
 	icon_state = "pill2"
 
-/obj/item/reagent_containers/pill/methylphenidate/Initialize()
+/obj/item/reagent_containers/pill/methylphenidate/Initialize(mapload)
 	. = ..()
 	reagents.add_reagent(REAGENT_ID_METHYLPHENIDATE, 10)
 	color = reagents.get_color()
@@ -168,7 +167,7 @@
 	desc = "A pill to help treat severe depression."
 	icon_state = "pill2"
 
-/obj/item/reagent_containers/pill/paroxetine/Initialize()
+/obj/item/reagent_containers/pill/paroxetine/Initialize(mapload)
 	. = ..()
 	reagents.add_reagent(REAGENT_ID_PAROXETINE, 10)
 	color = reagents.get_color()
@@ -178,7 +177,7 @@
 	desc = "A pill to help treat jitters, confusion, and blurred vision."
 	icon_state = "pill2"
 
-/obj/item/reagent_containers/pill/adranol/Initialize()
+/obj/item/reagent_containers/pill/adranol/Initialize(mapload)
 	. = ..()
 	reagents.add_reagent(REAGENT_ID_ADRANOL, 10)
 	color = reagents.get_color()
@@ -188,7 +187,7 @@
 	desc = "Just one couldn't hurt, right?"
 	icon_state = "pill2"
 
-/obj/item/reagent_containers/pill/aphrodisiac/Initialize()
+/obj/item/reagent_containers/pill/aphrodisiac/Initialize(mapload)
 	. = ..()
 	reagents.add_reagent(REAGENT_ID_APHRODISIAC, 20)
 	color = reagents.get_color()

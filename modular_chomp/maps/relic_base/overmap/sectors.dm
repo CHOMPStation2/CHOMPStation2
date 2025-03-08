@@ -29,7 +29,7 @@
 	icecaps = "icecaps"
 	icon_state = "lush" //yeet
 
-/obj/effect/overmap/visitable/planet/Thor/Initialize()
+/obj/effect/overmap/visitable/planet/Thor/Initialize(mapload)
 	atmosphere = new(CELL_VOLUME)
 	atmosphere.adjust_gas_temp(GAS_O2, MOLES_O2STANDARD, 273)
 	atmosphere.adjust_gas_temp(GAS_N2, MOLES_N2STANDARD, 273)
@@ -39,7 +39,7 @@
 /obj/effect/overmap/visitable/planet/Thor/get_space_zlevels()
 	return list(Z_LEVEL_CARRIER)
 
-/obj/effect/overmap/visitable/planet/Thor/Initialize()
+/obj/effect/overmap/visitable/planet/Thor/Initialize(mapload)
 	. = ..()
 	docking_codes = null
 

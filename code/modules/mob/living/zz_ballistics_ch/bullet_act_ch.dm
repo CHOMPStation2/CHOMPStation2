@@ -278,7 +278,7 @@
 		"organ_multiplier" = list(BP_HEAD = 2, BP_TORSO = 1.75, BP_GROIN = 1.25)/*Only used for simple mobs*/, \
 		"flesh_factors" = list("damage_mult" = 1,"velloss_mult" = 1))
 
-/mob/living/Initialize()
+/mob/living/Initialize(mapload)
 	. = ..()
 	if(islist(ballistic_variables))
 		ballistic_variables = widelist(ballistic_variables)

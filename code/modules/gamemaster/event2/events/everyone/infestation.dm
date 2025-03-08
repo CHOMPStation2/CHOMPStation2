@@ -37,7 +37,7 @@
 		/mob/living/simple_mob/animal/passive/mouse/brown,
 		/mob/living/simple_mob/animal/passive/mouse/black,
 		/mob/living/simple_mob/animal/passive/mouse/white,
-		/mob/living/simple_mob/animal/passive/mouse/rat
+		/mob/living/simple_mob/animal/passive/mouse/rat/strong // CHOMPEdit
 	)
 
 /datum/event2/event/infestation/lizards

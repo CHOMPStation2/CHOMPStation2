@@ -32,7 +32,7 @@
 	var/apply_colour //ChompEDIT
 
 
-/obj/item/stack/tile/Initialize()
+/obj/item/stack/tile/Initialize(mapload)
 	. = ..()
 	randpixel_xy()
 	if(craftable)
