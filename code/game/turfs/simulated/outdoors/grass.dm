@@ -65,8 +65,7 @@
 		new /obj/structure/flora/tree/sif(src)
 	. = ..()
 
-<<<<<<< HEAD
-/turf/simulated/floor/outdoors/grass/Initialize()
+/turf/simulated/floor/outdoors/grass/Initialize(mapload)
 	if(grass && grass_chance && prob(grass_chance) && !check_density()) //CHOMPEdit
 		var/grass_type = pickweight(GLOB.grass_grass[grass]) //CHOMPEdit
 		if(grass_type) //ChompEDIT - runtime
@@ -77,17 +76,6 @@
 		if(animal_type) //ChompEDIT - runtime
 			new animal_type(src)
 
-=======
-/turf/simulated/floor/outdoors/grass/Initialize(mapload)
-	if(grass_chance && prob(grass_chance) && !check_density())
-		var/grass_type = pickweight(grass_types)
-		new grass_type(src)
-/*
-	if(animal_chance && prob(animal_chance) && !check_density())
-		var/animal_type = pickweight(animal_types)
-		new animal_type(src)
-*/
->>>>>>> 46bea7cfa2 (Initialize fixing (#17279))
 	. = ..()
 
 /turf/simulated/floor/outdoors/grass/forest
@@ -112,7 +100,7 @@
 /turf/simulated/floor/outdoors/rocks/sif
 	var/animal_chance = 0.3 //Should spawn around... 0-7 per round? Tweak as needed.
 
-/turf/simulated/floor/outdoors/rocks/sif/Initialize()
+/turf/simulated/floor/outdoors/rocks/sif/Initialize(mapload)
 	if(animal_chance && prob(animal_chance) && !check_density())
 		new /mob/living/simple_mob/vore/slug(src)
 

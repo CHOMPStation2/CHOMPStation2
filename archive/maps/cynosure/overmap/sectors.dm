@@ -38,7 +38,7 @@
 
 	. = ..()
 
-/obj/effect/overmap/visitable/planet/Sif/Initialize()
+/obj/effect/overmap/visitable/planet/Sif/Initialize(mapload)
 	. = ..()
 	docking_codes = null
 

@@ -32,14 +32,10 @@
 
 	var/obj/item/roulette_ball/ball
 
-<<<<<<< HEAD
 	var/datum/effect/effect/system/confetti_spread //CHOMPAdd
 	var/confetti_strength = 5 //CHOMPAdd
 
-/obj/structure/casino_table/roulette_table/Initialize()
-=======
 /obj/structure/casino_table/roulette_table/Initialize(mapload)
->>>>>>> 46bea7cfa2 (Initialize fixing (#17279))
 	.=..()
 	ball = new(src)
 	return

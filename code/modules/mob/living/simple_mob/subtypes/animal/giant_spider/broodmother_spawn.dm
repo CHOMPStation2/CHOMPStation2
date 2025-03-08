@@ -181,13 +181,9 @@
 
 	movement_cooldown = 3
 
-<<<<<<< HEAD
 	var/deathtimer
 
-/mob/living/simple_mob/animal/giant_spider/broodling/Initialize()
-=======
 /mob/living/simple_mob/animal/giant_spider/broodling/Initialize(mapload)
->>>>>>> 46bea7cfa2 (Initialize fixing (#17279))
 	. = ..()
 	adjust_scale(0.75)
 	deathtimer = addtimer(CALLBACK(src, PROC_REF(death)), 2 MINUTES, TIMER_STOPPABLE)

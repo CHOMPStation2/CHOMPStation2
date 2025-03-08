@@ -45,7 +45,7 @@
 	tmp.pixel_y = skybox_offset_y
 	return tmp
 
-/obj/effect/overmap/visitable/planet/tyr/Initialize()
+/obj/effect/overmap/visitable/planet/tyr/Initialize(mapload)
 	atmosphere = new(CELL_VOLUME) // Necessary for the planet overmap icon to generate properly, but gas type does not seem to matter.
 	atmosphere.adjust_gas_temp(GAS_CO2, TYR_MOL_CO2, TYR_AVG_TEMP)
 	atmosphere.adjust_gas_temp(GAS_N2, TYR_MOL_N2, TYR_AVG_TEMP)

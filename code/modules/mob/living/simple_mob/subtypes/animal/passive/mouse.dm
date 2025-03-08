@@ -53,7 +53,7 @@
 	pain_emote_1p = list("squeaks", "squiks") // CHOMP Addition: Pain/etc sounds
 
 //CHOMPEdit Start
-/mob/living/simple_mob/animal/passive/mouse/Initialize()
+/mob/living/simple_mob/animal/passive/mouse/Initialize(mapload)
 	. = ..()
 	ghostjoin = 1
 	ghostjoin_icon()

@@ -384,8 +384,6 @@
 	desc = "The Virgo 2 Aerostat away mission."
 	mappath = "maps/expedition_vr/aerostat/aerostat_science_outpost.dmm"
 	associated_map_datum = /datum/map_z_level/common_lateload/away_aerostat
-<<<<<<< HEAD
-=======
 
 /////FOR CENTCOMM (at least)/////
 /obj/effect/overmap/visitable/sector/virgo3b
@@ -432,4 +430,3 @@
 
 /obj/effect/overmap/visitable/sector/virgo3b/get_space_zlevels()
 	return list(Z_LEVEL_SPACE_ROCKS)
->>>>>>> 46bea7cfa2 (Initialize fixing (#17279))

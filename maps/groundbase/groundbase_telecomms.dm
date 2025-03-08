@@ -76,16 +76,11 @@
 		num2text(EXP_FREQ) = list(access_explorer)
 	)
 
-<<<<<<< HEAD
 /obj/item/multitool/station_buffered
-=======
-/obj/item/multitool/station_buffered/Initialize(mapload)
-	. = ..()
->>>>>>> 46bea7cfa2 (Initialize fixing (#17279))
 	name = "pre-linked multitool (Rascal's Pass hub)"
 	desc = "This multitool has already been linked to the groundbase telecomms hub and can be used to configure one (1) relay."
 
-/obj/item/multitool/station_buffered/Initialize()
+/obj/item/multitool/station_buffered/Initialize(mapload)
 	. = ..()
 	buffer = locate(/obj/machinery/telecomms/hub/preset/groundbase)
 

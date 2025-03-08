@@ -125,7 +125,7 @@
 	desc = "You probably shouldn't swallow this."
 	icon_state = "pill2"
 
-/obj/item/reagent_containers/pill/benzilate/Initialize()
+/obj/item/reagent_containers/pill/benzilate/Initialize(mapload)
 	. = ..()
 	reagents.add_reagent(REAGENT_ID_BENZILATE, 50)
 	color = reagents.get_color()
@@ -136,7 +136,7 @@
 	desc = "Smells like... lilacs?"
 	icon_state = "pill5"
 
-/obj/item/reagent_containers/pill/phenethylamine/Initialize()
+/obj/item/reagent_containers/pill/phenethylamine/Initialize(mapload)
 	. = ..()
 	reagents.add_reagent(REAGENT_ID_PHENETHYLAMINE, 50)
 	color = reagents.get_color()

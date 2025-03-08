@@ -32,7 +32,7 @@
 		/obj/item/stack/cable_coil = 5,
 	)
 
-/obj/machinery/food_replicator/Initialize()
+/obj/machinery/food_replicator/Initialize(mapload)
 	. = ..()
 
 	default_apply_parts()

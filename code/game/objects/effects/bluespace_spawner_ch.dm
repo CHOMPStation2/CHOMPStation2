@@ -11,7 +11,7 @@
 	var/spawned_num = 0
 	var/init_time
 
-/obj/effect/bspawner/Initialize()
+/obj/effect/bspawner/Initialize(mapload)
 	. = ..()
 	START_PROCESSING(SSobj,src)
 	init_time = world.time

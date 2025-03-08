@@ -379,7 +379,8 @@
 	..()
 	internal_devices |= new /obj/item/halogen_counter(src)
 
-/obj/item/commcard/engineering/Initialize()
+/obj/item/commcard/engineering/Initialize(mapload)
+	. = ..()
 	internal_data["grid_sensors"] = find_powernet_sensors()
 	internal_data["powernet_target"] = ""
 
@@ -616,10 +617,10 @@
 	internal_data["stat_display_active2"] = null
 	internal_data["stat_display_special"] = null
 
-/obj/item/commcard/head/Initialize()
+/obj/item/commcard/head/Initialize(mapload)
 	// Have to register the commcard with the Radio controller to receive updates to the status displays
 	radio_controller.add_object(src, 1435)
-	..()
+	. = ..()
 
 /obj/item/commcard/head/Destroy()
 	// Have to unregister the commcard for proper bookkeeping
@@ -793,7 +794,8 @@
 	internal_devices |= new /obj.item/analyzer(src)
 	internal_devices |= new /obj/item/halogen_counter(src)
 
-/obj/item/commcard/head/ce/Initialize()
+/obj/item/commcard/head/ce/Initialize(mapload)
+	. = ..()
 	internal_data["grid_sensors"] = find_powernet_sensors()
 	internal_data["powernet_target"] = ""
 
@@ -904,7 +906,8 @@
 			list("name" = "Shuttle Blast Door Control", "template" = "merc_blast_door_control.tmpl")
 		)
 
-/obj/item/commcard/mercenary/Initialize()
+/obj/item/commcard/mercenary/Initialize(mapload)
+	. = ..()
 	internal_data["shuttle_door_code"] = "smindicate" // Copied from PDA code
 	internal_data["shuttle_doors"] = find_blast_doors()
 

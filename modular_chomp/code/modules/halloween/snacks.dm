@@ -2,7 +2,7 @@
 	name = "rotten egg"
 	desc = "A rotten egg. It stinks!"
 
-/obj/item/reagent_containers/food/snacks/egg/rotten/Initialize()
+/obj/item/reagent_containers/food/snacks/egg/rotten/Initialize(mapload)
 	. = ..()
 	reagents.add_reagent(REAGENT_ID_TOXIN, 3)
 

@@ -47,7 +47,7 @@
 	tmp.pixel_y = skybox_offset_y
 	return tmp
 
-/obj/effect/overmap/visitable/planet/kara/Initialize()
+/obj/effect/overmap/visitable/planet/kara/Initialize(mapload)
 	atmosphere = new(CELL_VOLUME) // Necessary for the planet overmap icon to generate properly, but gas type does not seem to matter.
 	atmosphere.adjust_gas_temp(GAS_CO2, KARA_MOL_CO2, KARA_AVG_TEMP)
 	atmosphere.adjust_gas_temp(GAS_N2, KARA_MOL_N2, KARA_AVG_TEMP)

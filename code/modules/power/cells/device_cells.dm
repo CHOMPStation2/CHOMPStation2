@@ -97,7 +97,7 @@
 	charge_amount = 20
 	origin_tech = list(TECH_POWER = 3)
 
-/obj/item/cell/device/super/empty/Initialize()
+/obj/item/cell/device/super/empty/Initialize(mapload)
 	. = ..()
 	charge = 0
 	update_icon()
@@ -110,7 +110,7 @@
 	charge_amount = 20
 	origin_tech = list(TECH_POWER = 4)
 
-/obj/item/cell/device/hyper/empty/Initialize()
+/obj/item/cell/device/hyper/empty/Initialize(mapload)
 	. = ..()
 	charge = 0
 	update_icon()
@@ -125,7 +125,7 @@
 	charge_amount = 20
 	origin_tech = list(TECH_POWER = 5, TECH_PRECURSOR = 1)
 
-/obj/item/cell/device/giga/empty/Initialize()
+/obj/item/cell/device/giga/empty/Initialize(mapload)
 	. = ..()
 	charge = 0
 	update_icon()

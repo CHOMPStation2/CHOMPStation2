@@ -1,4 +1,4 @@
-/mob/living/simple_mob/shadekin/Initialize()
+/mob/living/simple_mob/shadekin/Initialize(mapload)
 	var/list/ability_types = subtypesof(/obj/effect/shadekin_ability)
 	if(name == "Rakshasa")
 		ability_types += subtypesof(/obj/effect/rakshasa_ability)

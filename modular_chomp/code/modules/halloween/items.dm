@@ -136,7 +136,7 @@
 /obj/structure/candybowl/medical
 	name = "medical candy bowl"
 
-/obj/structure/candybowl/medical/Initialize()
+/obj/structure/candybowl/medical/Initialize(mapload)
 	. = ..()
 	candy += list(
 		/obj/item/clothing/mask/chewable/candy/lolli,
@@ -147,7 +147,7 @@
 /obj/structure/candybowl/engineering
 	name = "engineering candy bowl"
 
-/obj/structure/candybowl/engineering/Initialize()
+/obj/structure/candybowl/engineering/Initialize(mapload)
 	. = ..()
 	candy += list(
 		/obj/item/reagent_containers/food/snacks/welders_original,
@@ -158,7 +158,7 @@
 /obj/structure/candybowl/cargo
 	name = "cargo candy bowl"
 
-/obj/structure/candybowl/cargo/Initialize()
+/obj/structure/candybowl/cargo/Initialize(mapload)
 	. = ..()
 	candy += list(
 		/obj/item/reagent_containers/food/snacks/butterscotch,
@@ -169,7 +169,7 @@
 /obj/structure/candybowl/science
 	name = "science candy bowl"
 
-/obj/structure/candybowl/science/Initialize()
+/obj/structure/candybowl/science/Initialize(mapload)
 	. = ..()
 	candy += list(
 		/obj/item/reagent_containers/food/snacks/reishicup,
@@ -181,7 +181,7 @@
 /obj/structure/candybowl/security
 	name = "security candy bowl"
 
-/obj/structure/candybowl/security/Initialize()
+/obj/structure/candybowl/security/Initialize(mapload)
 	. = ..()
 	candy += list(
 		/obj/item/reagent_containers/food/snacks/spicy_boys,
@@ -200,7 +200,7 @@
 	var/list/ckeys_that_took = list()
 	var/list/costumes
 
-/obj/structure/boxpile/Initialize()
+/obj/structure/boxpile/Initialize(mapload)
 	. = ..()
 
 	costumes = typesof(/obj/item/storage/box/halloween/)

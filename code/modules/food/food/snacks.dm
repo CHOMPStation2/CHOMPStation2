@@ -1470,7 +1470,7 @@
 	bitesize = 2
 
 // CHOMPedit begin - honkwork infection
-/obj/item/reagent_containers/food/snacks/clownburger/Initialize()
+/obj/item/reagent_containers/food/snacks/clownburger/Initialize(mapload)
 	. = ..()
 	reagents.add_reagent("protein", 2) // needed to call On_Consume()... Is this actually an issue?
 

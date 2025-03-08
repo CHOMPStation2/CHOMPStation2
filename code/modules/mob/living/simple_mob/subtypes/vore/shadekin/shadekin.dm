@@ -80,14 +80,10 @@
 	var/check_timer = 0
 	var/doing_phase = FALSE // Prevent bugs when spamming phase button
 
-<<<<<<< HEAD
 	var/respite_activating = FALSE //CHOMPEdit - Dark Respite
 	var/list/active_dark_maws = list()
 
-/mob/living/simple_mob/shadekin/Initialize()
-=======
 /mob/living/simple_mob/shadekin/Initialize(mapload)
->>>>>>> 46bea7cfa2 (Initialize fixing (#17279))
 	//You spawned the prototype, and want a totally random one.
 	if(type == /mob/living/simple_mob/shadekin)
 

@@ -24,7 +24,7 @@
 		is_picked_up = FALSE
 	update_transform()
 
-/obj/item/gun/energy/laser/Initialize()
+/obj/item/gun/energy/laser/Initialize(mapload)
 	. = ..()
 	if((!(type == /obj/item/gun/energy/laser)) && !is64x32_override)
 		is64x32 = FALSE

@@ -1,20 +1,16 @@
-<<<<<<< HEAD
 /obj/effect/step_trigger/teleporter/to_mining
 	icon = 'icons/obj/structures/stairs_64x64.dmi'
 	icon_state = ""
 	invisibility = 0
 	plane = TURF_PLANE
 	layer = ABOVE_TURF_LAYER
-/obj/effect/step_trigger/teleporter/to_mining/Initialize()
-=======
+
 /obj/effect/step_trigger/teleporter/to_mining/Initialize(mapload)
->>>>>>> 46bea7cfa2 (Initialize fixing (#17279))
 	. = ..()
 	teleport_x = x
 	teleport_y = y ++
 	teleport_z = Z_LEVEL_MINING
 
-<<<<<<< HEAD
 /obj/effect/step_trigger/teleporter/from_mining
 	icon = 'icons/obj/structures/stairs_64x64.dmi'
 	icon_state = ""
@@ -22,10 +18,7 @@
 	plane = TURF_PLANE
 	layer = ABOVE_TURF_LAYER
 
-/obj/effect/step_trigger/teleporter/from_mining/Initialize()
-=======
 /obj/effect/step_trigger/teleporter/from_mining/Initialize(mapload)
->>>>>>> 46bea7cfa2 (Initialize fixing (#17279))
 	. = ..()
 	teleport_x = x
 	teleport_y = y --
@@ -88,7 +81,7 @@ VIRGO3B_TURF_CREATE(/turf/simulated/floor/outdoors/rocks)
 
 	var/area/shock_area = /area/centcom/terminal/tramfluff
 
-/turf/simulated/floor/maglev/Initialize()
+/turf/simulated/floor/maglev/Initialize(mapload)
 	. = ..()
 	shock_area = locate(shock_area)
 

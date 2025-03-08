@@ -207,7 +207,7 @@
 	icon_state = "emergency_double"
 	distribute_pressure = ONE_ATMOSPHERE*O2STANDARD
 
-/obj/item/tank/carbon_dioxide/Initialize()
+/obj/item/tank/carbon_dioxide/Initialize(mapload)
 	. = ..()
 	src.air_contents.adjust_gas(GAS_CO2, (10*ONE_ATMOSPHERE)*volume/(R_IDEAL_GAS_EQUATION*T20C))
 
@@ -218,7 +218,7 @@
 	slot_flags = SLOT_BELT
 	distribute_pressure = ONE_ATMOSPHERE*O2STANDARD
 
-/obj/item/tank/emergency/carbon_dioxide/Initialize()
+/obj/item/tank/emergency/carbon_dioxide/Initialize(mapload)
 	. = ..()
 	src.air_contents.adjust_gas(GAS_CO2, (10*ONE_ATMOSPHERE)*volume/(R_IDEAL_GAS_EQUATION*T20C))
 
@@ -228,7 +228,7 @@
 	icon_state = "emergency_double"
 	distribute_pressure = ONE_ATMOSPHERE*O2STANDARD
 
-/obj/item/tank/emergency/carbon_dioxide/double/Initialize()
+/obj/item/tank/emergency/carbon_dioxide/double/Initialize(mapload)
 	. = ..()
 	src.air_contents.adjust_gas(GAS_CO2, (10*ONE_ATMOSPHERE)*volume/(R_IDEAL_GAS_EQUATION*T20C))
 //CHOMPEdit End

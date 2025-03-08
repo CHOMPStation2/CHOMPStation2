@@ -83,7 +83,7 @@
 	var/muffin_mode = FALSE
 	var/mob/living/simple_mob/vore/aggressive/corrupthound/muffinmonster
 
-/obj/structure/biowaste_tank/Initialize()
+/obj/structure/biowaste_tank/Initialize(mapload)
 	muffinmonster = new /mob/living/simple_mob/vore/aggressive/corrupthound/muffinmonster(src)
 	muffinmonster.name = "Activate Muffin Monster"
 	muffinmonster.voremob_loaded = TRUE

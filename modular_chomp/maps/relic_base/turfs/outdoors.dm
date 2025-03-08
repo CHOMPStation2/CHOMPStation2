@@ -332,7 +332,7 @@
 
 #if defined(Z_LEVEL_SURFACE_MINES) || defined(Z_LEVEL_UNDERMINES)
 //Dealing with having mining POIs spawn on different Z levels
-/turf/simulated/mineral/Initialize()
+/turf/simulated/mineral/Initialize(mapload)
 	. = ..()
 	if(istype(src, /turf/simulated/mineral/thor) || istype(src, /turf/simulated/mineral/sif) || istype(src, /turf/simulated/mineral/floor/sif) || istype(src, /turf/simulated/mineral/ignore_mapgen/sif) || istype(src, /turf/simulated/mineral/floor/ignore_mapgen/sif))
 		return

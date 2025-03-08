@@ -38,14 +38,10 @@
 
 	hidden_materials = list(MAT_PLASTEEL, MAT_DURASTEEL, MAT_GRAPHITE, MAT_VERDANTIUM, MAT_MORPHIUM, MAT_METALHYDROGEN, MAT_SUPERMATTER)
 
-<<<<<<< HEAD
 	var/req_category = LATHE_ALL // CHOMPAdd - Departmental Lathes
 	var/dep_overlay = null // CHOMPAdd - Departmental Lathes
 
-/obj/machinery/r_n_d/protolathe/Initialize()
-=======
 /obj/machinery/r_n_d/protolathe/Initialize(mapload)
->>>>>>> 46bea7cfa2 (Initialize fixing (#17279))
 	. = ..()
 
 // Go through all materials, and add them to the possible storage, but hide them unless we contain them.

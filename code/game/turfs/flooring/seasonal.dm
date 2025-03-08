@@ -38,11 +38,7 @@ GLOBAL_VAR(world_time_day)
 	var/trees = null //CHOMPEdit
 	var/snow_chance = 10
 
-<<<<<<< HEAD
-/turf/simulated/floor/outdoors/grass/seasonal/Initialize() //There are A LOT of chompedits here, I guess.
-=======
 /turf/simulated/floor/outdoors/grass/seasonal/Initialize(mapload)
->>>>>>> 46bea7cfa2 (Initialize fixing (#17279))
 
 	switch(GLOB.world_time_season)
 		if("spring")

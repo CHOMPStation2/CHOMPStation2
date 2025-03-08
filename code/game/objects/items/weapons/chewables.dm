@@ -262,7 +262,6 @@
 	if(chewtime < 1)
 		spitout(0)
 
-<<<<<<< HEAD
 // CHOMPAdd Start
 
 /obj/item/clothing/mask/chewable/candy/lolli/container_resist(mob/living/M)
@@ -334,10 +333,7 @@
 
 // CHOMPAdd End
 
-/obj/item/clothing/mask/chewable/candy/lolli/Initialize()
-=======
 /obj/item/clothing/mask/chewable/candy/lolli/Initialize(mapload)
->>>>>>> 46bea7cfa2 (Initialize fixing (#17279))
 	. = ..()
 	reagents.add_reagent(pick(REAGENT_ID_BANANA,REAGENT_ID_BERRYJUICE,REAGENT_ID_GRAPEJUICE,REAGENT_ID_LEMONJUICE,REAGENT_ID_LIMEJUICE,REAGENT_ID_ORANGEJUICE,REAGENT_ID_WATERMELONJUICE),20)
 	color = reagents.get_color()

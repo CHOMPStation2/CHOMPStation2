@@ -49,7 +49,7 @@
 	..() //CHOMPEdit if you see this, it is a cry for help. Please tell people to stop putting ..() at the top of New() :(
 
 //CHOMPEdit Start
-/obj/item/gun/energy/Initialize()
+/obj/item/gun/energy/Initialize(mapload)
 	. = ..()
 	update_icon()
 //CHOMPEdit End

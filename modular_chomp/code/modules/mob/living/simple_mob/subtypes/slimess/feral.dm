@@ -217,7 +217,7 @@
 	coretype = /obj/item/slime_extract/ruby
 	melee_attack_delay = 1 SECOND
 
-/mob/living/simple_mob/slime/feral/ruby/Initialize()
+/mob/living/simple_mob/slime/feral/ruby/Initialize(mapload)
 	add_modifier(/datum/modifier/slime_strength, null, src) // Slime is always swole.
 	return ..()
 

@@ -6,12 +6,12 @@
     for(var/cand_x = max(0, T.x - canhear_range), cand_x <= T.x + canhear_range, cand_x++)
         for(var/cand_y = max(0, T.y - canhear_range), cand_y <= T.y + canhear_range, cand_y++)
             var/turf/cand_turf = locate(cand_x,cand_y,T.z)
-            if(!cand_turf) 
+            if(!cand_turf)
                 continue
             if((abs(T.x - cand_x) < dnumber) || (abs(T.y - cand_y) < dnumber))
                 output += cand_turf
                 continue
-            if(sqrt((T.x - cand_x)**2 + (T.y - cand_y)**2) <= canhear_range) 
+            if(sqrt((T.x - cand_x)**2 + (T.y - cand_y)**2) <= canhear_range)
                 output += cand_turf
                 continue
     return output
@@ -27,12 +27,12 @@
     for(var/cand_x = max(0, T.x - canhear_range), cand_x <= T.x + canhear_range, cand_x++)
         for(var/cand_y = max(0, T.y - canhear_range), cand_y <= T.y + canhear_range, cand_y++)
             var/turf/cand_turf = locate(cand_x,cand_y,T.z)
-            if(!cand_turf) 
+            if(!cand_turf)
                 continue
             if((abs(T.x - cand_x) < dnumber) || (abs(T.y - cand_y) < dnumber))
                 output += cand_turf
                 continue
-            if(sqrt((T.x - cand_x)**2 + (T.y - cand_y)**2) <= canhear_range) 
+            if(sqrt((T.x - cand_x)**2 + (T.y - cand_y)**2) <= canhear_range)
                 output += cand_turf
                 continue
     broadcast_tiles = output
@@ -41,7 +41,7 @@
     . = ..()
     update_broadcast_tiles()
 
-/obj/item/radio/intercom/Initialize()
+/obj/item/radio/intercom/Initialize(mapload)
     . = ..()
     update_broadcast_tiles()
 

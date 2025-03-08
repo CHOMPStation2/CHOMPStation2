@@ -41,7 +41,7 @@
 /obj/away_mission_init/debrisfield
 	name = "away mission initializer - debrisfield"
 
-/obj/away_mission_init/debrisfield/Initialize()
+/obj/away_mission_init/debrisfield/Initialize(mapload)
 	initialized = TRUE
 	return INITIALIZE_HINT_QDEL
 

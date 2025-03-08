@@ -6,6 +6,6 @@
 	amount_per_transfer_from_this = 60
 	anchored = 1
 
-/obj/structure/reagent_dispensers/space_cleaner/Initialize()
+/obj/structure/reagent_dispensers/space_cleaner/Initialize(mapload)
 	. = ..()
 	reagents.add_reagent(REAGENT_ID_CLEANER, 1000)

@@ -195,7 +195,7 @@
 	. += "Video feed is [bcamera.status ? "on" : "off"]"
 	. += "Audio feed is [bradio.broadcasting ? "on" : "off"]"
 
-/obj/item/clothing/accessory/bodycam/Initialize()
+/obj/item/clothing/accessory/bodycam/Initialize(mapload)
 	. = ..()
 	bcamera = new(src)
 	bcamera.c_tag = channel

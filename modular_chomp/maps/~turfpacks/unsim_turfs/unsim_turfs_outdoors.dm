@@ -140,7 +140,7 @@
 	icon = 'icons/turf/desert.dmi'
 	icon_state = "desert"
 
-/turf/unsimulated/floor/beach/sand/desert/Initialize()
+/turf/unsimulated/floor/beach/sand/desert/Initialize(mapload)
 	. = ..()
 	if(prob(5))
 		icon_state = "desert[rand(0,4)]"
@@ -159,7 +159,7 @@
 	icon_state = "seadeep"
 	movement_cost = 8 // Deep water should be difficult to wade through.
 
-/turf/unsimulated/floor/beach/water/Initialize()
+/turf/unsimulated/floor/beach/water/Initialize(mapload)
 	. = ..()
 	add_overlay(image("icon"='icons/misc/beach.dmi',"icon_state"="water5","layer"=MOB_LAYER+0.1))
 

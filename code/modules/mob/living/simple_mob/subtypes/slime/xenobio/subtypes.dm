@@ -797,7 +797,7 @@
 	rainbow_core_candidate = FALSE
 	ai_holder_type = /datum/ai_holder/simple_mob/xenobio_slime/passive
 
-/mob/living/simple_mob/slime/xenobio/pink/sana/Initialize()
+/mob/living/simple_mob/slime/xenobio/pink/sana/Initialize(mapload)
 	pacify() // So the physical mob also gets made harmless.
 	return ..()
 //ChompAdd End

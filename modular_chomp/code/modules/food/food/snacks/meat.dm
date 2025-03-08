@@ -8,7 +8,7 @@
 	nutriment_desc = list(REAGENT_ID_PROTEIN = 6, REAGENT_ID_DEATHBLOOD = 6)
 	bitesize = 6
 
-/obj/item/reagent_containers/food/snacks/deathclawmeat/Initialize()
+/obj/item/reagent_containers/food/snacks/deathclawmeat/Initialize(mapload)
 	. = ..()
 	reagents.add_reagent(REAGENT_ID_PROTEIN, 6)
 	reagents.add_reagent(REAGENT_ID_DEATHBLOOD, 6)
@@ -23,7 +23,7 @@
 	nutriment_desc = list(REAGENT_ID_PROTEIN = 6, REAGENT_ID_LIQUIDFIRE = 6)
 	bitesize = 6
 
-/obj/item/reagent_containers/food/snacks/dragonmeat/Initialize()
+/obj/item/reagent_containers/food/snacks/dragonmeat/Initialize(mapload)
 	. = ..()
 	reagents.add_reagent(REAGENT_ID_PROTEIN, 6)
 	reagents.add_reagent(REAGENT_ID_LIQUIDFIRE, 6)
@@ -38,7 +38,7 @@
 	nutriment_desc = list(REAGENT_ID_PROTEIN = 6, REAGENT_ID_NEOLIQUIDFIRE = 6, REAGENT_ID_PHORON = 3)
 	bitesize = 6
 
-/obj/item/reagent_containers/food/snacks/phorondragonmeat/Initialize()
+/obj/item/reagent_containers/food/snacks/phorondragonmeat/Initialize(mapload)
 	. = ..()
 	reagents.add_reagent(REAGENT_ID_PROTEIN, 6)
 	reagents.add_reagent(REAGENT_ID_NEOLIQUIDFIRE, 6)
@@ -54,7 +54,7 @@
 	nutriment_desc = list(REAGENT_ID_PROTEIN = 3, REAGENT_ID_LIQUIDLIFE = 3)
 	bitesize = 6
 
-/obj/item/reagent_containers/food/snacks/metroidmeat/Initialize()
+/obj/item/reagent_containers/food/snacks/metroidmeat/Initialize(mapload)
 	. = ..()
 	reagents.add_reagent(REAGENT_ID_PROTEIN, 3)
 	reagents.add_reagent(REAGENT_ID_LIQUIDLIFE, 3)

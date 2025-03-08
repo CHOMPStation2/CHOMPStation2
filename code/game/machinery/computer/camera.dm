@@ -198,7 +198,7 @@ GLOBAL_LIST_EMPTY(bodycamera_screens) // CHOMPEdit
 
 	var/enabled = TRUE // on or off
 
-/obj/machinery/computer/security/telescreen/bodycamera/Initialize()
+/obj/machinery/computer/security/telescreen/bodycamera/Initialize(mapload)
 	GLOB.bodycamera_screens += src
 
 	var/static/icon/mask = icon('icons/obj/entertainment_monitor.dmi', "mask")
