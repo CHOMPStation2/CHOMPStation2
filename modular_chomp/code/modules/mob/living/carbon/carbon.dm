@@ -3,7 +3,7 @@
 	var/slip_reflex = FALSE
 	var/synth_reag_processing = TRUE
 
-/mob/living/carbon/Initialize()
+/mob/living/carbon/Initialize(mapload)
 	. = ..()
 
 	cozyloop = new(list(src), FALSE)

@@ -51,7 +51,7 @@
 	var/open_sound = 'sound/machines/firelockopen.ogg' //CHOMPEdit firedoor sound variable.
 	var/close_sound = 'sound/machines/firelockclose.ogg' //CHOMPEdit firedoor sound variable.
 
-/obj/machinery/door/firedoor/Initialize()
+/obj/machinery/door/firedoor/Initialize(mapload)
 	. = ..()
 	//Delete ourselves if we find extra mapped in firedoors
 	for(var/obj/machinery/door/firedoor/F in loc)

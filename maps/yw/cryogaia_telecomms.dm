@@ -38,7 +38,7 @@
 
 /obj/machinery/telecomms/broadcaster/preset_right/cryogaia
 	id = "cryogaia_tx"
-	
+
 /obj/machinery/telecomms/bus/preset_two/cryogaia
 	freq_listening = list(SUP_FREQ, SRV_FREQ, EXP_FREQ)
 
@@ -70,6 +70,6 @@
 	name = "pre-linked multitool (tether hub)"
 	desc = "This multitool has already been linked to the Tether telecomms hub and can be used to configure one (1) relay."
 
-/obj/item/multitool/cryogaia_buffered/Initialize()
+/obj/item/multitool/cryogaia_buffered/Initialize(mapload)
 	. = ..()
 	buffer = locate(/obj/machinery/telecomms/hub/preset/cryogaia)

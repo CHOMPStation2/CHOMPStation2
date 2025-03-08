@@ -6,6 +6,6 @@
 	volume = 150
 	drop_sound = 'sound/items/drop/food.ogg'
 
-/obj/item/reagent_containers/food/drinks/cans/waterbottle/wataur/Initialize()
+/obj/item/reagent_containers/food/drinks/cans/waterbottle/wataur/Initialize(mapload)
 	. = ..()
 	reagents.add_reagent(REAGENT_ID_WATER, 120)

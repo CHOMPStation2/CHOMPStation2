@@ -49,7 +49,7 @@
 	ai_holder_type = /datum/ai_holder/simple_mob/merc
 	say_list_type = /datum/say_list/pirate
 
-/mob/living/simple_mob/humanoid/pirate/Initialize()
+/mob/living/simple_mob/humanoid/pirate/Initialize(mapload)
 	. = ..()
 	loot_list += list(/obj/item/salvage/loot/pirate = 35)
 

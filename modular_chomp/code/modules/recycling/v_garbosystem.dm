@@ -14,7 +14,7 @@
 	var/list/affecting
 	var/voracity = 5 //How much stuff is swallowed at once.
 
-/obj/machinery/v_garbosystem/Initialize()
+/obj/machinery/v_garbosystem/Initialize(mapload)
 	. = ..()
 	for(var/dir in cardinal)
 		src.crusher = locate(/obj/machinery/recycling/crusher, get_step(src, dir))

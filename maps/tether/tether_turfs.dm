@@ -168,7 +168,7 @@ VIRGO3B_TURF_CREATE(/turf/simulated/mineral/floor)
 	icon = 'icons/turf/space_vr.dmi'
 	icon_state = "bluespace"
 
-/turf/space/bluespace/Initialize()
+/turf/space/bluespace/Initialize(mapload)
 	. = ..()
 	icon = 'icons/turf/space_vr.dmi'
 	icon_state = "bluespace"
@@ -179,7 +179,7 @@ VIRGO3B_TURF_CREATE(/turf/simulated/mineral/floor)
 	icon = 'icons/turf/transit_vr.dmi'
 	icon_state = "desert_ns"
 
-/turf/space/sandyscroll/Initialize()
+/turf/space/sandyscroll/Initialize(mapload)
 	. = ..()
 	icon_state = "desert_ns"
 
@@ -188,7 +188,8 @@ VIRGO3B_TURF_CREATE(/turf/simulated/mineral/floor)
 /turf/simulated/sky/virgo3b
 	color = "#FFBBBB"
 
-/turf/simulated/sky/virgo3b/Initialize()
+/turf/simulated/sky/virgo3b/Initialize(mapload)
+	. = ..()
 	SSplanets.addTurf(src)
 	set_light(2, 2, "#FFBBBB")
 
@@ -226,7 +227,7 @@ VIRGO3B_TURF_CREATE(/turf/simulated/mineral/floor)
 	icon_state = "reinf_glass-0"
 	base_icon_state = "reinf_glass"
 
-/turf/simulated/floor/midpoint_glass/Initialize()
+/turf/simulated/floor/midpoint_glass/Initialize(mapload)
 	. = ..()
 	return INITIALIZE_HINT_LATELOAD
 
@@ -271,7 +272,7 @@ VIRGO3B_TURF_CREATE(/turf/simulated/mineral/floor)
 
 	add_vis_overlay('icons/effects/effects.dmi', "white", plane = SPACE_PLANE, add_vis_flags = VIS_INHERIT_ID|VIS_UNDERLAY)
 
-/turf/space/v3b_midpoint/Initialize()
+/turf/space/v3b_midpoint/Initialize(mapload)
 	. = ..()
 	new /obj/effect/step_trigger/teleporter/planetary_fall/virgo3b(src)
 

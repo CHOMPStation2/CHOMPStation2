@@ -6,7 +6,7 @@
 /obj/effect/map_helper
 	icon = 'icons/misc/map_helpers.dmi'
 
-/obj/effect/map_helper/Initialize()
+/obj/effect/map_helper/Initialize(mapload)
 	. = ..()
 	return INITIALIZE_HINT_LATELOAD
 

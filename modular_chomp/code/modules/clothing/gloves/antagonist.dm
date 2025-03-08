@@ -12,7 +12,7 @@
 /obj/item/clothing/gloves/ring/buzzer/get_cell()
 	return battery
 
-/obj/item/clothing/gloves/ring/buzzer/Initialize()
+/obj/item/clothing/gloves/ring/buzzer/Initialize(mapload)
 	. = ..()
 	if(!battery)
 		battery = new battery_type(src)

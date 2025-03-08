@@ -577,7 +577,7 @@
 
 	disable_duration_percent = 0
 
-/mob/living/simple_mob/mechanical/mecha/imperion/Initialize()
+/mob/living/simple_mob/mechanical/mecha/imperion/Initialize(mapload)
 	add_modifier(/datum/modifier/bossbuff, null, src) // Slime is always swole.
 	return ..()
 

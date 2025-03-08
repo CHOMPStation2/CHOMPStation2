@@ -194,8 +194,9 @@ CRYOGAIA_TURF_CREATE(/turf/simulated/mineral/floor)
 	name = "bluespace"
 	icon = 'icons/turf/space_vr.dmi'
 	icon_state = "bluespace"
-/turf/space/bluespace/Initialize()
-	..()
+
+/turf/space/bluespace/Initialize(mapload)
+	. = ..()
 	icon = 'icons/turf/space_vr.dmi'
 	icon_state = "bluespace"
 
@@ -213,7 +214,8 @@ CRYOGAIA_TURF_CREATE(/turf/simulated/mineral/floor)
 /turf/simulated/sky/borealis2
 	color = "#E0FFFF"
 
-/turf/simulated/sky/borealis2/Initialize()
+/turf/simulated/sky/borealis2/Initialize(mapload)
+	. = ..()
 	SSplanets.addTurf(src)
 	set_light(2, 2, "#E0FFFF")
 
@@ -243,6 +245,7 @@ CRYOGAIA_TURF_CREATE(/turf/simulated/mineral/floor)
 	icon_state = "snow_ns"
 
 
-/turf/simulated/sky/snowscroll/Initialize()
+/turf/simulated/sky/snowscroll/Initialize(mapload)
+	. = ..()
 	SSplanets.addTurf(src)
 	set_light(2, 2, "#E0FFFF")

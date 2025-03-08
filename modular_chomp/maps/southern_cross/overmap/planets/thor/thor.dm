@@ -50,7 +50,7 @@
 	tmp.pixel_y = skybox_offset_y
 	return tmp
 
-/obj/effect/overmap/visitable/planet/thor/Initialize()
+/obj/effect/overmap/visitable/planet/thor/Initialize(mapload)
 	atmosphere = new(CELL_VOLUME) // Necessary for the planet overmap icon to generate properly, but gas type does not seem to matter.
 	atmosphere.adjust_gas_temp(GAS_CO2, THOR_MOL_CO2, THOR_AVG_TEMP)
 	atmosphere.adjust_gas_temp(GAS_N2, THOR_MOL_N2, THOR_AVG_TEMP)
@@ -275,17 +275,17 @@
 	nitrogen	= THOR_MOL_N2
 	temperature	= THOR_AVG_TEMP
 
-/turf/simulated/floor/outdoors/grass/thor/Initialize()
+/turf/simulated/floor/outdoors/grass/thor/Initialize(mapload)
 	if(tree_chance && prob(tree_chance) && !check_density())
 		new /obj/structure/flora/tree/jungle(src)
 	. = ..()
 
-/turf/simulated/floor/outdoors/grass/heavy/thor/Initialize()
+/turf/simulated/floor/outdoors/grass/heavy/thor/Initialize(mapload)
 	if(tree_chance && prob(tree_chance) && !check_density())
 		new /obj/structure/flora/tree/jungle(src)
 	. = ..()
 
-/turf/simulated/floor/outdoors/grass/forest/thor/Initialize()
+/turf/simulated/floor/outdoors/grass/forest/thor/Initialize(mapload)
 	if(tree_chance && prob(tree_chance) && !check_density())
 		new /obj/structure/flora/tree/jungle(src)
 

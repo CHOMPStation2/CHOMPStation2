@@ -781,7 +781,7 @@ GLOBAL_LIST_INIT(obelisk_lure_messages, list(
 
 // hackified shitcode poached from the pitcher plant for ~~cool flavor text~~ when you're near either 'structure'
 
-/mob/living/simple_mob/vore/blackhole_obelisk/Initialize()
+/mob/living/simple_mob/vore/blackhole_obelisk/Initialize(mapload)
 	. = ..()
 	obelisk_lure_messages = GLOB.obelisk_lure_messages
 	loopy = new(list(src),FALSE)
@@ -851,21 +851,21 @@ GLOBAL_LIST_INIT(obelisk_lure_messages, list(
 ///size randomization!///
 ///-------------------------------------------------------------------------------------------------------------------------------------------------------------///
 
-/mob/living/simple_mob/vore/blackhole/Initialize()
+/mob/living/simple_mob/vore/blackhole/Initialize(mapload)
 	. = ..()
 	var/oursize = rand(90, 150) / 100
 	resize(oursize)
 
-/mob/living/simple_mob/vore/blackhole/bikers/Initialize()
+/mob/living/simple_mob/vore/blackhole/bikers/Initialize(mapload)
 	. = ..()
 	resize(1) // Scale them back down
 
-/mob/living/simple_mob/vore/otie/syndicate/blackhole/Initialize()
+/mob/living/simple_mob/vore/otie/syndicate/blackhole/Initialize(mapload)
 	. = ..()
 	var/oursize = rand(100, 180) / 100
 	resize(oursize)
 
-/mob/living/simple_mob/humanoid/merc/ranged/sniper/blackhole/Initialize()
+/mob/living/simple_mob/humanoid/merc/ranged/sniper/blackhole/Initialize(mapload)
 	. = ..()
 	var/oursize = rand(100, 180) / 100
 	resize(oursize)

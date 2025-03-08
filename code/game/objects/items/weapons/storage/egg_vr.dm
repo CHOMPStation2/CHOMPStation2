@@ -17,7 +17,7 @@
 	use_sound = 'sound/items/drop/flesh.ogg'
 	var/egg_name = null //CHOMPAdd
 
-/obj/item/storage/vore_egg/Initialize()
+/obj/item/storage/vore_egg/Initialize(mapload)
 	. = ..()
 	randpixel_xy()
 

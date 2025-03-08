@@ -171,7 +171,7 @@ GLOBAL_LIST_EMPTY(mapped_autostrips_mob)
 	var/obj/effect/landmark/the_landmark = null
 	var/landmark_id = null
 
-/obj/effect/step_trigger/teleporter/landmark/Initialize()
+/obj/effect/step_trigger/teleporter/landmark/Initialize(mapload)
 	. = ..()
 	for(var/obj/effect/landmark/teleport_mark/mark in GLOB.tele_landmarks)
 		if(mark.landmark_id == landmark_id)
@@ -188,7 +188,7 @@ GLOBAL_LIST_EMPTY(tele_landmarks)
 /obj/effect/landmark/teleport_mark
 	var/landmark_id = null
 
-/obj/effect/landmark/teleport_mark/Initialize()
+/obj/effect/landmark/teleport_mark/Initialize(mapload)
 	. = ..()
 	GLOB.tele_landmarks += src
 

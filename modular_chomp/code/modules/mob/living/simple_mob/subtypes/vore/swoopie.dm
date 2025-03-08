@@ -52,7 +52,7 @@
 											/mob/living/simple_mob/animal/passive/cockroach)
 	var/obj/item/vac_attachment/swoopie/Vac
 
-/mob/living/simple_mob/vore/aggressive/corrupthound/swoopie/Initialize()
+/mob/living/simple_mob/vore/aggressive/corrupthound/swoopie/Initialize(mapload)
 	. = ..()
 	if(!voremob_loaded)
 		voremob_loaded = TRUE

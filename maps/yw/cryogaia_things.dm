@@ -82,7 +82,7 @@
 
 	var/area/shock_area = /area/cryogaia/tram
 
-/turf/simulated/floor/maglev/Initialize()
+/turf/simulated/floor/maglev/Initialize(mapload)
 	. = ..()
 	shock_area = locate(shock_area)
 
@@ -122,7 +122,7 @@
 /obj/machinery/smartfridge/chemistry/chemvator/down
 	name = "\improper Smart Chemavator - Lower"
 
-/obj/machinery/smartfridge/chemistry/chemvator/down/Initialize()
+/obj/machinery/smartfridge/chemistry/chemvator/down/Initialize(mapload)
 	. = ..()
 	var/obj/machinery/smartfridge/chemistry/chemvator/above = locate(/obj/machinery/smartfridge/chemistry/chemvator,get_zstep(src,UP))
 	if(istype(above))
@@ -145,7 +145,7 @@
 /obj/machinery/smartfridge/plantvator/down
 	name = "\improper Smart Plantavator - Lower"
 
-/obj/machinery/smartfridge/plantvator/down/Initialize()
+/obj/machinery/smartfridge/plantvator/down/Initialize(mapload)
 	. = ..()
 	var/obj/machinery/smartfridge/plantvator/above = locate(/obj/machinery/smartfridge/plantvator,get_zstep(src,UP))
 	if(istype(above))
@@ -620,7 +620,7 @@ var/global/list/latejoin_tram   = list()
 	anchored = TRUE
 	catalogue_data = list(/datum/category_item/catalogue/material/trail_blazer)
 
-obj/machinery/trailblazer/Initialize()
+obj/machinery/trailblazer/Initialize(mapload)
 	randomize_color()
 	return ..()
 

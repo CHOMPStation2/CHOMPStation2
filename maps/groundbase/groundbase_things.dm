@@ -4,7 +4,8 @@
 	invisibility = 0
 	plane = TURF_PLANE
 	layer = ABOVE_TURF_LAYER
-/obj/effect/step_trigger/teleporter/to_mining/Initialize()
+
+/obj/effect/step_trigger/teleporter/to_mining/Initialize(mapload)
 	. = ..()
 	teleport_x = x
 	teleport_y = y ++
@@ -17,7 +18,7 @@
 	plane = TURF_PLANE
 	layer = ABOVE_TURF_LAYER
 
-/obj/effect/step_trigger/teleporter/from_mining/Initialize()
+/obj/effect/step_trigger/teleporter/from_mining/Initialize(mapload)
 	. = ..()
 	teleport_x = x
 	teleport_y = y --
@@ -80,7 +81,7 @@ VIRGO3B_TURF_CREATE(/turf/simulated/floor/outdoors/rocks)
 
 	var/area/shock_area = /area/centcom/terminal/tramfluff
 
-/turf/simulated/floor/maglev/Initialize()
+/turf/simulated/floor/maglev/Initialize(mapload)
 	. = ..()
 	shock_area = locate(shock_area)
 
