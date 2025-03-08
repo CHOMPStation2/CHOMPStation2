@@ -118,12 +118,12 @@
 			H.eye_blurry = max(5,H.eye_blurry)
 
 /obj/item/organ/internal/brain/xenochimera
-	var/laststress = 0
+	laststress = 0 //chompedit- move stress var to  basic brains to cure a runtime
 
 /datum/species/xenochimera/proc/handle_feralness(var/mob/living/carbon/human/H)
 	//first, calculate how stressed the chimera is
 	var/laststress = 0
-	var/obj/item/organ/internal/brain/xenochimera/B = H.internal_organs_by_name[O_BRAIN]
+	var/obj/item/organ/internal/brain/B = H.internal_organs_by_name[O_BRAIN]//chompedit- moves stress to basic brains to cure a runtime
 	if(B) //if you don't have a chimera brain in a chimera body somehow, you don't get the feraless protection
 		laststress = B.laststress
 
