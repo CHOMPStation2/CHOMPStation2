@@ -27,8 +27,13 @@
 /obj/effect/wingrille_spawn/CanPass(atom/movable/mover, turf/target)
 	return FALSE
 
+<<<<<<< HEAD
 /obj/effect/wingrille_spawn/Initialize()
 	if(win_path && ticker && ticker.current_state < GAME_STATE_FINISHED) // CHOMPedit: let's make these work after round start
+=======
+/obj/effect/wingrille_spawn/Initialize(mapload)
+	if(win_path && ticker && ticker.current_state < GAME_STATE_PLAYING)
+>>>>>>> 46bea7cfa2 (Initialize fixing (#17279))
 		activate()
 	..()
 	return INITIALIZE_HINT_QDEL

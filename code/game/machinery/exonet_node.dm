@@ -23,7 +23,11 @@
 // Proc: New()
 // Parameters: None
 // Description: Adds components to the machine for deconstruction.
+<<<<<<< HEAD
 /obj/machinery/exonet_node/Initialize() //CHOMPAdd Start
+=======
+/obj/machinery/exonet_node/map/Initialize(mapload)
+>>>>>>> 46bea7cfa2 (Initialize fixing (#17279))
 	. = ..()
 	default_apply_parts()
 	// CHOMPAdd: Exonet Machinery humming

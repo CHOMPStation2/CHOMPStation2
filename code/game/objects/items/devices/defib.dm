@@ -25,7 +25,11 @@
 /obj/item/defib_kit/get_cell()
 	return bcell
 
+<<<<<<< HEAD
 /obj/item/defib_kit/Initialize() //starts without a cell for rnd //ChompEDIT New --> Initialize
+=======
+/obj/item/defib_kit/Initialize(mapload) //starts without a cell for rnd
+>>>>>>> 46bea7cfa2 (Initialize fixing (#17279))
 	. = ..()
 	if(ispath(paddles))
 		paddles = new paddles(src, src)

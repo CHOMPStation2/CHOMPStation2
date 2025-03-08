@@ -30,7 +30,7 @@
 		/obj/item/ammo_magazine/clip/c762/hunter = 9,
 		/obj/item/gun/projectile/shotgun/pump/rifle = 2)
 
-/obj/structure/closet/secure_closet/guncabinet/rifle/Initialize()
+/obj/structure/closet/secure_closet/guncabinet/rifle/Initialize(mapload)
 	if(prob(85))
 		starts_with += /obj/item/gun/projectile/shotgun/pump/rifle
 	else
@@ -79,7 +79,7 @@
 		/obj/item/reagent_containers/food/snacks/liquidprotein,
 		/obj/item/cataloguer)
 
-/obj/structure/closet/secure_closet/explorer/Initialize()
+/obj/structure/closet/secure_closet/explorer/Initialize(mapload)
 	if(prob(50))
 		starts_with += /obj/item/storage/backpack/explorer
 	else
@@ -125,7 +125,7 @@
 		/obj/item/cataloguer/compact/pathfinder,
 		/obj/item/mapping_unit)
 
-/obj/structure/closet/secure_closet/pathfinder/Initialize()
+/obj/structure/closet/secure_closet/pathfinder/Initialize(mapload)
 	if(prob(50))
 		starts_with += /obj/item/storage/backpack/explorer //CHOMPEDIT
 	else
@@ -177,7 +177,7 @@
 		/obj/item/bodybag/cryobag,
 		/obj/item/cataloguer/compact)
 
-/obj/structure/closet/secure_closet/sar/Initialize()
+/obj/structure/closet/secure_closet/sar/Initialize(mapload)
 	if(prob(50))
 		starts_with += /obj/item/storage/backpack/medic
 	else
@@ -223,7 +223,7 @@
 		/obj/item/emergency_beacon
 		)
 
-/obj/structure/closet/secure_closet/pilot/Initialize()
+/obj/structure/closet/secure_closet/pilot/Initialize(mapload)
 	if(prob(50))
 		starts_with += /obj/item/storage/backpack
 	else

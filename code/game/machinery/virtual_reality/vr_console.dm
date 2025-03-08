@@ -25,12 +25,16 @@
 	active_power_usage = 200
 	light_color = "#FF0000"
 
+<<<<<<< HEAD
 
 /obj/machinery/vr_sleeper/Initialize()
+=======
+/obj/machinery/vr_sleeper/Initialize(mapload)
+>>>>>>> 46bea7cfa2 (Initialize fixing (#17279))
 	. = ..()
 	default_apply_parts()
 
-/obj/machinery/vr_sleeper/Initialize()
+/obj/machinery/vr_sleeper/Initialize(mapload)
 	. = ..()
 	smoke = new
 	update_icon()

@@ -31,7 +31,7 @@
 	icecaps = "icecaps"
 	icon_state = "frozen" //CHOMP comment: Not sure what this does at the moment, but we're doing it live.
 
-/obj/effect/overmap/visitable/planet/Sif/Initialize()
+/obj/effect/overmap/visitable/planet/Sif/Initialize(mapload)
 	atmosphere = new(CELL_VOLUME)
 	atmosphere.adjust_gas_temp(GAS_O2, MOLES_O2STANDARD, 273)
 	atmosphere.adjust_gas_temp(GAS_N2, MOLES_N2STANDARD, 273)

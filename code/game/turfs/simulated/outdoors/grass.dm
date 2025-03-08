@@ -60,11 +60,12 @@
 	catalogue_data = list(/datum/category_item/catalogue/flora/sif_grass)
 	catalogue_delay = 2 SECONDS
 
-/turf/simulated/floor/outdoors/grass/sif/Initialize()
+/turf/simulated/floor/outdoors/grass/sif/Initialize(mapload)
 	if(tree_chance && prob(tree_chance) && !check_density())
 		new /obj/structure/flora/tree/sif(src)
 	. = ..()
 
+<<<<<<< HEAD
 /turf/simulated/floor/outdoors/grass/Initialize()
 	if(grass && grass_chance && prob(grass_chance) && !check_density()) //CHOMPEdit
 		var/grass_type = pickweight(GLOB.grass_grass[grass]) //CHOMPEdit
@@ -76,6 +77,17 @@
 		if(animal_type) //ChompEDIT - runtime
 			new animal_type(src)
 
+=======
+/turf/simulated/floor/outdoors/grass/Initialize(mapload)
+	if(grass_chance && prob(grass_chance) && !check_density())
+		var/grass_type = pickweight(grass_types)
+		new grass_type(src)
+/*
+	if(animal_chance && prob(animal_chance) && !check_density())
+		var/animal_type = pickweight(animal_types)
+		new animal_type(src)
+*/
+>>>>>>> 46bea7cfa2 (Initialize fixing (#17279))
 	. = ..()
 
 /turf/simulated/floor/outdoors/grass/forest

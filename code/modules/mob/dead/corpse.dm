@@ -38,10 +38,17 @@
 	var/hair = null // CHOMPAdd
 	var/corpsesynthtype = 0			// 0 for organic, 1 for drone, 2 for posibrain
 	var/corpsesynthbrand = "Unbranded"
+<<<<<<< HEAD
 	var/corpsesensormode = 0	//CHOMPAdd - For setting the suit sensors of a corpse. Default to 0 so we don't annoy medbay.
 	delete_me = TRUE
 
 /obj/effect/landmark/mobcorpse/Initialize(mapload)
+=======
+	delete_me = TRUE
+
+/obj/effect/landmark/mobcorpse/Initialize(mapload)
+	. = ..()
+>>>>>>> 46bea7cfa2 (Initialize fixing (#17279))
 	createCorpse()
 	. = ..()
 

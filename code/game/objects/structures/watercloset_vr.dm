@@ -8,7 +8,7 @@
 	var/refill_cooldown = 200
 	var/refilling = FALSE //CHOMPAdd
 
-/obj/structure/toilet/Initialize()
+/obj/structure/toilet/Initialize(mapload)
 	if(z in global.using_map.map_levels)
 		teleplumbed = TRUE
 		exit_landmark = locate(/obj/effect/landmark/teleplumb_exit)

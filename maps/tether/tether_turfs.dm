@@ -127,6 +127,7 @@ VIRGO3B_TURF_CREATE(/turf/simulated/mineral/floor)
 		UpdateMineral()
 	update_icon()
 
+<<<<<<< HEAD
 //Unsimulated
 /turf/unsimulated/mineral/virgo3b
 	blocks_air = TRUE
@@ -272,6 +273,9 @@ VIRGO3B_TURF_CREATE(/turf/simulated/mineral/floor)
 	add_vis_overlay('icons/effects/effects.dmi', "white", plane = SPACE_PLANE, add_vis_flags = VIS_INHERIT_ID|VIS_UNDERLAY)
 
 /turf/space/v3b_midpoint/Initialize()
+=======
+/turf/space/v3b_midpoint/Initialize(mapload)
+>>>>>>> 46bea7cfa2 (Initialize fixing (#17279))
 	. = ..()
 	new /obj/effect/step_trigger/teleporter/planetary_fall/virgo3b(src)
 

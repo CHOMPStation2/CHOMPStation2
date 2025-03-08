@@ -384,3 +384,52 @@
 	desc = "The Virgo 2 Aerostat away mission."
 	mappath = "maps/expedition_vr/aerostat/aerostat_science_outpost.dmm"
 	associated_map_datum = /datum/map_z_level/common_lateload/away_aerostat
+<<<<<<< HEAD
+=======
+
+/////FOR CENTCOMM (at least)/////
+/obj/effect/overmap/visitable/sector/virgo3b
+	known = TRUE
+	in_space = TRUE
+
+	initial_generic_waypoints = list("sr-c","sr-n","sr-s")
+	initial_restricted_waypoints = list("Central Command Shuttlepad" = list("cc_shuttlepad"))
+
+	extra_z_levels = list(Z_LEVEL_SPACE_ROCKS)
+
+/////SD Starts at V3b to pick up crew refuel and repair (And to make sure it doesn't spawn on hazards)
+/obj/effect/overmap/visitable/sector/virgo3b/Initialize(mapload)
+	. = ..()
+	for(var/obj/effect/overmap/visitable/ship/stellar_delight/sd in world)
+		sd.forceMove(loc, SOUTH)
+		return
+
+/obj/effect/overmap/visitable/sector/virgo3b/Crossed(var/atom/movable/AM)
+	. = ..()
+	announce_atc(AM,going = FALSE)
+
+/obj/effect/overmap/visitable/sector/virgo3b/Uncrossed(var/atom/movable/AM)
+	. = ..()
+	announce_atc(AM,going = TRUE)
+
+/obj/effect/overmap/visitable/sector/virgo3b/proc/announce_atc(var/atom/movable/AM, var/going = FALSE)
+	if(istype(AM, /obj/effect/overmap/visitable/ship/simplemob))
+		if(world.time < mob_announce_cooldown)
+			return
+		else
+			mob_announce_cooldown = world.time + 5 MINUTES
+	var/message = "Sensor contact for vessel '[AM.name]' has [going ? "left" : "entered"] ATC control area."
+	//For landables, we need to see if their shuttle is cloaked
+	if(istype(AM, /obj/effect/overmap/visitable/ship/landable))
+		var/obj/effect/overmap/visitable/ship/landable/SL = AM //Phew
+		var/datum/shuttle/autodock/multi/shuttle = SSshuttles.shuttles[SL.shuttle]
+		if(!istype(shuttle) || !shuttle.cloaked) //Not a multishuttle (the only kind that can cloak) or not cloaked
+			atc.msg(message)
+
+	//For ships, it's safe to assume they're big enough to not be sneaky
+	else if(istype(AM, /obj/effect/overmap/visitable/ship))
+		atc.msg(message)
+
+/obj/effect/overmap/visitable/sector/virgo3b/get_space_zlevels()
+	return list(Z_LEVEL_SPACE_ROCKS)
+>>>>>>> 46bea7cfa2 (Initialize fixing (#17279))

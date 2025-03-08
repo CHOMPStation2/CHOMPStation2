@@ -164,6 +164,7 @@
 
 // -- Turfs -- //
 
+<<<<<<< HEAD
 //Atmosphere properties
 #define VIRGO2_ONE_ATMOSPHERE	312.1 //kPa
 #define VIRGO2_AVG_TEMP			612 //kelvin
@@ -193,6 +194,9 @@
 	VIRGO2_SET_ATMOS
 
 /turf/unsimulated/floor/sky/virgo2_sky/Initialize()
+=======
+/turf/unsimulated/floor/sky/virgo2_sky/Initialize(mapload)
+>>>>>>> 46bea7cfa2 (Initialize fixing (#17279))
 	skyfall_levels = list(z+1)
 	. = ..()
 
