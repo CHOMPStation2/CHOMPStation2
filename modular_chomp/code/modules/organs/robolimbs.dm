@@ -17,7 +17,7 @@ var/const/YR3_monitor_styles = "blank=YR3_blank;\
 	whitefoureyes=YR3_foureyes_white;\
 	whitebigeyes=YR3_bigeyes_white;\
 	whitemonoeye=YR3_monoeye_white;\
-	whitemonoeyenopupilwhitemonoeye=YR3_monoeye_white;\=YR3_blindeye_white;\
+	whitemonoeyenopupil=YR3_blindeye_white;\
 	bluescreen=YR3_bsod;\
 	interrogative=YR3_interrogative;\
 	alarm=YR3_danger;\
