@@ -349,4 +349,12 @@
 	trait_path = /datum/trait/positive/nonconductive_plus
 /obj/item/dnainjector/set_trait/nonconduct/disable
 	disabling = TRUE
+<<<<<<< HEAD
 // CHOMPEnable End
+=======
+*/
+/obj/item/dnainjector/set_trait/damagedspine // brokenspine
+	trait_path = /datum/trait/negative/disability_damagedspine
+/obj/item/dnainjector/set_trait/damagedspine/disable
+	disabling = TRUE
+>>>>>>> ac9d664953 (Disabled legs trait (#17271))
