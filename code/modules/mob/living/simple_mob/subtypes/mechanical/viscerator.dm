@@ -49,6 +49,13 @@
 
 	ai_holder_type = /datum/ai_holder/simple_mob/melee/evasive
 
+<<<<<<< HEAD
+=======
+/mob/living/simple_mob/mechanical/viscerator/Initialize(mapload)
+	. = ..()
+	AddComponent(/datum/component/swarming)
+
+>>>>>>> bf63b120b5 (Myelamine fixes and adjustments (#17297))
 /mob/living/simple_mob/mechanical/viscerator/death()
 	..(null,"is smashed into pieces!")
 	qdel(src)

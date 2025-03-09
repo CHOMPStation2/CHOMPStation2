@@ -60,7 +60,88 @@
 
 	var/knockdown_chance = 15
 
+<<<<<<< HEAD
 	can_be_drop_prey = FALSE //CHOMP Add
+=======
+	var/random_color = FALSE
+	var/rarechance = 1
+
+	var/static/list/carp_colors = list(\
+	"lightpurple" = "#c3b9f1", \
+	"lightpink" = "#da77a8", \
+	"green" = "#70ff25", \
+	"grape" = "#df0afb", \
+	"swamp" = "#e5e75a", \
+	"turquoise" = "#04e1ed", \
+	"brown" = "#ca805a", \
+	"teal" = "#20e28e", \
+	"lightblue" = "#4d88cc", \
+	"rusty" = "#dd5f34", \
+	"beige" = "#bbaeaf", \
+	"yellow" = "#f3ca4a", \
+	"blue" = "#09bae1", \
+	"palegreen" = "#7ef099", \
+	)
+	var/static/list/carp_colors_rare = list(\
+	"silver" = "#fdfbf3", \
+	)
+
+/mob/living/simple_mob/animal/space/carp/Initialize(mapload)
+	. = ..()
+	carp_randomify(rarechance)
+	update_icons()
+	AddComponent(/datum/component/swarming)
+
+// This is so carps can swarm
+/mob/living/simple_mob/animal/space/carp/CanPass(atom/movable/mover, turf/target)
+	if(isliving(mover) && !istype(mover, /mob/living/simple_mob/animal/space/carp) && mover.density == TRUE)
+		return FALSE
+	return ..()
+
+/mob/living/simple_mob/animal/space/carp/proc/carp_randomify(rarechance)
+	if(random_color)
+		var/our_color
+		if(prob(rarechance))
+			our_color = pick(carp_colors_rare)
+			add_atom_colour(carp_colors_rare[our_color], FIXED_COLOUR_PRIORITY)
+		else
+			our_color = pick(carp_colors)
+			add_atom_colour(carp_colors[our_color], FIXED_COLOUR_PRIORITY)
+		regenerate_icons()
+
+/mob/living/simple_mob/animal/space/carp/proc/add_carp_overlay()
+	if(!random_color)
+		return
+	var/mutable_appearance/base_overlay = mutable_appearance(icon, "base_mouth")
+	base_overlay.appearance_flags = RESET_COLOR
+	add_overlay(base_overlay)
+
+/mob/living/simple_mob/animal/space/carp/proc/add_dead_carp_overlay()
+	if(!random_color)
+		return
+	var/mutable_appearance/base_dead_overlay = mutable_appearance(icon, "base_dead_mouth")
+	base_dead_overlay.appearance_flags = RESET_COLOR
+	add_overlay(base_dead_overlay)
+
+/mob/living/simple_mob/animal/space/carp/death(gibbed)
+	. = ..()
+	if(!random_color || gibbed)
+		return
+	regenerate_icons()
+
+/mob/living/simple_mob/animal/space/carp/revive()
+	..()
+	regenerate_icons()
+
+/mob/living/simple_mob/animal/space/carp/regenerate_icons()
+	..()
+	if(!random_color)
+		return
+	if(stat != DEAD)
+		add_carp_overlay()
+	else
+		add_dead_carp_overlay()
+>>>>>>> bf63b120b5 (Myelamine fixes and adjustments (#17297))
 
 /mob/living/simple_mob/animal/space/carp/apply_melee_effects(var/atom/A)
 	if(isliving(A))

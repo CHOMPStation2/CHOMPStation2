@@ -46,6 +46,13 @@
 
 	allow_mind_transfer = TRUE
 
+<<<<<<< HEAD
+=======
+/mob/living/simple_mob/vore/bee/Initialize(mapload)
+	. = ..()
+	AddComponent(/datum/component/swarming)
+
+>>>>>>> bf63b120b5 (Myelamine fixes and adjustments (#17297))
 /mob/living/simple_mob/vore/bee/Process_Spacemove(var/check_drift = 0)
 	return 1	//No drifting in space for space bee!
 
