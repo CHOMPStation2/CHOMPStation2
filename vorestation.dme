@@ -502,7 +502,11 @@
 #include "code\datums\autolathe\tools.dm"
 #include "code\datums\autolathe\tools_vr.dm"
 #include "code\datums\components\_component.dm"
+<<<<<<< HEAD
 #include "code\datums\components\connect_containers_ch.dm"
+=======
+#include "code\datums\components\connect_loc_behalf.dm"
+>>>>>>> a5a3bd953c (Swarm Component + Pixel shift attack animation (#17179))
 #include "code\datums\components\connect_mob_behalf.dm"
 #include "code\datums\components\connect_range_ch.dm"
 #include "code\datums\components\gargoyle.dm"
@@ -511,6 +515,7 @@
 #include "code\datums\components\overlay_lighting.dm"
 #include "code\datums\components\recursive_move.dm"
 #include "code\datums\components\resize_guard.dm"
+#include "code\datums\components\swarm.dm"
 #include "code\datums\components\crafting\crafting.dm"
 #include "code\datums\components\crafting\crafting_external.dm"
 #include "code\datums\components\crafting\recipes.dm"
