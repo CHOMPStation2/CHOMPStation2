@@ -202,3 +202,10 @@
   - rscadd: Strong rat variant
   Kashargul:
   - code_imp: cleans up some ini issues
+2025-03-09:
+  CHOMPStation2StaffMirrorBot:
+  - code_imp: fix initialize for grep checks
+  - qol: Synthfabs no longer apply massive damage when unupgraded.
+  zeskorion:
+  - rscadd: YR3 Enviroshell prosthetic, which is usable for xenochimerae. a colorable
+      version is also added.
