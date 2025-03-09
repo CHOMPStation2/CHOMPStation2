@@ -64,9 +64,6 @@
 
 	var/knockdown_chance = 15
 
-<<<<<<< HEAD
-	can_be_drop_prey = FALSE //CHOMP Add
-=======
 	var/random_color = FALSE
 	var/rarechance = 1
 
@@ -90,7 +87,9 @@
 	"silver" = "#fdfbf3", \
 	)
 
-/mob/living/simple_mob/animal/space/carp/Initialize()
+	can_be_drop_prey = FALSE //CHOMP Add
+
+/mob/living/simple_mob/animal/space/carp/Initialize(mapload)
 	. = ..()
 	carp_randomify(rarechance)
 	update_icons()
@@ -145,7 +144,6 @@
 		add_carp_overlay()
 	else
 		add_dead_carp_overlay()
->>>>>>> a5a3bd953c (Swarm Component + Pixel shift attack animation (#17179))
 
 /mob/living/simple_mob/animal/space/carp/apply_melee_effects(var/atom/A)
 	if(isliving(A))

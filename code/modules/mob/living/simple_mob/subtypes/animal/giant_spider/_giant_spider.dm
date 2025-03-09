@@ -68,14 +68,9 @@
 	icon_living = "guard"
 	icon_dead = "guard_dead"
 	has_eye_glow = TRUE
-<<<<<<< HEAD
+	density = FALSE
 	minbodytemp = 175 //yw edit, Makes mobs survive cryogaia temps
 	faction = FACTION_AWAYMISSION //yw edit, Makes away mobs be on the same fuckin' side.
-=======
-	density = FALSE
-
-	faction = FACTION_SPIDERS
->>>>>>> a5a3bd953c (Swarm Component + Pixel shift attack animation (#17179))
 	maxHealth = 200
 	health = 200
 	pass_flags = PASSTABLE
@@ -129,7 +124,7 @@
 	pain_emote_1p = list("chitter", "click") //CHOMP Add
 	pain_emote_3p = list("chitters", "clicks") //CHOMP Add
 
-/mob/living/simple_mob/animal/giant_spider/Initialize()
+/mob/living/simple_mob/animal/giant_spider/Initialize(mapload)
 	. = ..()
 	AddComponent(/datum/component/swarming)
 
