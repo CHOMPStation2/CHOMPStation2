@@ -25,6 +25,7 @@ GLOBAL_VAR_INIT(jellyfish_count, 0)
 	icon_dead = "space_jellyfish_dead"
 	has_eye_glow = TRUE
 	hovering = TRUE
+	density = FALSE
 
 
 	faction = FACTION_JELLYFISH

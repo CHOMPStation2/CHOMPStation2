@@ -68,6 +68,7 @@
 	icon_living = "guard"
 	icon_dead = "guard_dead"
 	has_eye_glow = TRUE
+	density = FALSE
 	minbodytemp = 175 //yw edit, Makes mobs survive cryogaia temps
 	faction = FACTION_AWAYMISSION //yw edit, Makes away mobs be on the same fuckin' side.
 	maxHealth = 200
