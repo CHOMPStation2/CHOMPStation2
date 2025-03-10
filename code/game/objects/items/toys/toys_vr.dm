@@ -301,14 +301,10 @@
 		cooldown = TRUE
 		addtimer(VARSET_CALLBACK(src, cooldown, FALSE), 15 SECONDS, TIMER_DELETE_ME)
 	return ..()
-
-<<<<<<< HEAD
 /obj/item/toy/plushie/marketable_pip/proc/cooldownreset()
 	cooldown = 0
 */ //CHOMPedit end
 
-=======
->>>>>>> 34c7fc761e (Plushie Fixes & Additions (#17258))
 /obj/item/toy/plushie/moth
 	name = "moth plushie"
 	desc = "A cute plushie of cartoony moth. It's ultra fluffy but leaves dust everywhere."

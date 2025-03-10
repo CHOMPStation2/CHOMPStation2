@@ -780,7 +780,6 @@
 							/obj/item/toy/plushie/borgplushie/drake/jani,
 							/obj/item/toy/plushie/borgplushie/drake/eng,
 							/obj/item/toy/plushie/borgplushie/drake/mine,
-<<<<<<< HEAD
 							/obj/item/toy/plushie/borgplushie/drake/trauma)),
 				//VOREStation Add End
 				//YawnWider Add Start
@@ -800,9 +799,6 @@
 				/obj/item/toy/plushie/teppi,
 				/obj/item/toy/plushie/teppi/alt)
 				//CHOMPStation Add End
-=======
-							/obj/item/toy/plushie/borgplushie/drake/trauma)))
->>>>>>> 34c7fc761e (Plushie Fixes & Additions (#17258))
 
 /obj/random/plushielarge
 	name = "random large plushie"
