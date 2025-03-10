@@ -81,8 +81,6 @@ GLOBAL_VAR_INIT(jellyfish_count, 0)
 
 	var/reproduction_cooldown = 0
 
-<<<<<<< HEAD
-=======
 /mob/living/simple_mob/vore/alienanimals/space_jellyfish/Initialize(mapload)
 	. = ..()
 	AddComponent(/datum/component/swarming)
@@ -93,7 +91,6 @@ GLOBAL_VAR_INIT(jellyfish_count, 0)
 		return FALSE
 	return ..()
 
->>>>>>> bf63b120b5 (Myelamine fixes and adjustments (#17297))
 /datum/say_list/jellyfish
 	emote_see = list("flickers", "flashes", "looms","pulses","sways","shimmers hypnotically")
 

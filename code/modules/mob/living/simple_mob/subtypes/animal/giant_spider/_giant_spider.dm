@@ -118,12 +118,10 @@
 		)
 
 	allow_mind_transfer = TRUE
-<<<<<<< HEAD
 	can_be_drop_prey = FALSE //CHOMP Add
 	species_sounds = "Spider"
 	pain_emote_1p = list("chitter", "click") //CHOMP Add
 	pain_emote_3p = list("chitters", "clicks") //CHOMP Add
-=======
 
 /mob/living/simple_mob/animal/giant_spider/Initialize(mapload)
 	. = ..()
@@ -133,7 +131,6 @@
 	if(isliving(mover) && !istype(mover, /mob/living/simple_mob/animal/giant_spider) && mover.density == TRUE)
 		return FALSE
 	return ..()
->>>>>>> bf63b120b5 (Myelamine fixes and adjustments (#17297))
 
 /mob/living/simple_mob/animal/giant_spider/apply_melee_effects(var/atom/A)
 	if(isliving(A))

@@ -60,9 +60,7 @@
 
 	var/knockdown_chance = 15
 
-<<<<<<< HEAD
 	can_be_drop_prey = FALSE //CHOMP Add
-=======
 	var/random_color = FALSE
 	var/rarechance = 1
 
@@ -141,7 +139,6 @@
 		add_carp_overlay()
 	else
 		add_dead_carp_overlay()
->>>>>>> bf63b120b5 (Myelamine fixes and adjustments (#17297))
 
 /mob/living/simple_mob/animal/space/carp/apply_melee_effects(var/atom/A)
 	if(isliving(A))
