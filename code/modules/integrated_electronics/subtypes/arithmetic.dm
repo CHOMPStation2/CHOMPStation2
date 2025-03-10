@@ -311,6 +311,7 @@
 	set_pin_data(IC_OUTPUT, 1, result)
 	push_data()
 	activate_pin(2)
+<<<<<<< HEAD
 
 //CHOMPADDITION Math iterators
 /obj/item/integrated_circuit/arithmetic/iterator
@@ -339,3 +340,5 @@
 	set_pin_data(IC_OUTPUT, 1, result)
 	push_data()
 	activate_pin(2)
+=======
+>>>>>>> 1def015bad (end of file Fix (#17308))

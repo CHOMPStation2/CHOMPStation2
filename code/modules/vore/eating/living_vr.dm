@@ -1181,7 +1181,7 @@
 	if(custom_link)
 		. += "Custom link: " + span_linkify("[custom_link]")
 	if(ooc_notes)
-		. += "OOC Notes: <a href='byond://?src=\ref[src];ooc_notes=1'>\[View\]</a> - <a href='byond://?src=\ref[src];print_ooc_notes_to_chat=1'>\[Print\]</a>"
+		. += "OOC Notes: <a href='byond://?src=\ref[src];ooc_notes=1'>\[View\]</a> - <a href='byond://?src=\ref[src];print_ooc_notes_chat=1'>\[Print\]</a>"
 	. += "<a href='byond://?src=\ref[src];vore_prefs=1'>\[Mechanical Vore Preferences\]</a>"
 
 
@@ -1201,6 +1201,7 @@
 			set_metainfo_dislikes(usr) //ChompEDIT - usr arg
 	if(href_list["save_ooc_panel"])
 		if(usr == src)
+<<<<<<< HEAD
 			save_ooc_panel(usr) //ChompEDIT - usr arg
 	if(href_list["print_ooc_notes_to_chat"])
 		print_ooc_notes_to_chat(usr) //ChompEDIT - usr arg
@@ -1214,6 +1215,11 @@
 	if(href_list["set_metainfo_ooc_style"])
 		set_metainfo_ooc_style(usr) //ChompEDIT - usr arg
 	//CHOMPEdit End
+=======
+			save_ooc_panel(usr)
+	if(href_list["print_ooc_notes_chat"])
+		print_ooc_notes_chat(usr)
+>>>>>>> 1def015bad (end of file Fix (#17308))
 	if(href_list["save_private_notes"])
 		if(usr == src)
 			save_private_notes(usr)

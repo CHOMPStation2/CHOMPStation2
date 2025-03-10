@@ -20,5 +20,8 @@
 	icon_rest = null
 
 	vore_icons = null
+<<<<<<< HEAD
 
 */
+=======
+>>>>>>> 1def015bad (end of file Fix (#17308))

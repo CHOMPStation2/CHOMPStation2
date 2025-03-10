@@ -12,6 +12,7 @@
 			return list(
 				"sound" = H.species.male_scream_sound,
 				"vol" = emote_volume
+<<<<<<< HEAD
 		*/
 		var/vol = H.species.scream_volume
 		return list(
@@ -19,4 +20,6 @@
 				"vol" = vol,
 				"exr" = 20,
 				"volchannel" = VOLUME_CHANNEL_SPECIES_SOUNDS
+=======
+>>>>>>> 1def015bad (end of file Fix (#17308))
 			)

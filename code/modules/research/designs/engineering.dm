@@ -108,4 +108,7 @@
 	materials = list(MAT_STEEL = 200, MAT_GLASS = 100)
 	build_path = /obj/item/analyzer
 	sort_string = "NBABA"
+<<<<<<< HEAD
 	department = LATHE_ALL | LATHE_ENGINEERING // CHOMPAdd
+=======
+>>>>>>> 1def015bad (end of file Fix (#17308))

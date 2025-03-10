@@ -7,9 +7,15 @@
 	icon_state = "healcannon"
 	// CH edit - Changes ML-3 to NERD
 	description_info = "Created to fulfill the needs and wants of the Curabitur Scimed personell during rescue operations, the Healcannon is a marvel of reverse-engineering and utilization of unknown technologies. \
+<<<<<<< HEAD
 	It makes use of the Vey-Med NERD 'Medigun' microbattery technology, combining the effects of multiple 'microbatteries' into single 'macrobatteries' that are built around precursor void cores, \
 	allowing for the batteries to self-charge for prolonged field use. However, the weakened beams caused by the use of misunderstood technology created a need for a VERY strong focus, \
 	which lead to the Healcannon becoming a very bulky tool. Fortunately, it's not as heavy as it looks." // CHOMPedit: Spellcheck
+=======
+	It makes use of the Vey-Med ML-3 'Medigun' microbattery technology, combining the effects of multiple 'microbatteries' into single 'macrobatteries' that are built around precursor void cores, \
+	allowing for the batteries to self-charge for prolonged field use. However, the weakened beams caused by the use of ununderstood technology created a need for a VERY strong focus, \
+	which lead to the Healcannon becoming a very bulky tool. Fortunately, it's not as heavy as it looks."
+>>>>>>> 1def015bad (end of file Fix (#17308))
 
 	w_class = ITEMSIZE_LARGE
 	load_method = SINGLE_CASING

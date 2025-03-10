@@ -42,4 +42,9 @@
 	name = "\improper VirGov banner"
 	icon_state = "banner-virgov"
 	desc = "A banner with the symbol of the local government, the Vir Governmental Authority, also known as VirGov."
+<<<<<<< HEAD
 //	catalogue_data = list(/datum/category_item/catalogue/information/organization/virgov) //CHOMP Removal. We need to add our own code/game/busy_space/organizations.dm for lore
+=======
+	catalogue_data = list(/datum/category_item/catalogue/information/organization/virgov)
+*/
+>>>>>>> 1def015bad (end of file Fix (#17308))

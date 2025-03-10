@@ -21,4 +21,7 @@
 	materials = list(MAT_STEEL = 3000, MAT_PHORON = 3000, MAT_DIAMOND = 500)
 	build_path = /obj/item/reagent_containers/glass/beaker/bluespace
 	sort_string = "IAAAB"
+<<<<<<< HEAD
 	department = LATHE_ALL | LATHE_MEDICAL // CHOMPAdd
+=======
+>>>>>>> 1def015bad (end of file Fix (#17308))

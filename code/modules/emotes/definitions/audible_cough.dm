@@ -12,12 +12,37 @@
 	emote_volume_synthetic = 50
 
 	conscious = FALSE
+<<<<<<< HEAD
 // CHOMPEdit Start: Standardize Species Sounds
 	// emote_sound_synthetic = list()
+=======
+	emote_sound_synthetic = list(
+		FEMALE = list(
+			'sound/effects/mob_effects/f_machine_cougha.ogg',
+			'sound/effects/mob_effects/f_machine_coughb.ogg'
+		),
+		MALE = list(
+			'sound/effects/mob_effects/m_machine_cougha.ogg',
+			'sound/effects/mob_effects/m_machine_coughb.ogg',
+			'sound/effects/mob_effects/m_machine_coughc.ogg'
+		),
+		NEUTER = list(
+			'sound/effects/mob_effects/m_machine_cougha.ogg',
+			'sound/effects/mob_effects/m_machine_coughb.ogg',
+			'sound/effects/mob_effects/m_machine_coughc.ogg'
+		),
+		PLURAL = list(
+			'sound/effects/mob_effects/m_machine_cougha.ogg',
+			'sound/effects/mob_effects/m_machine_coughb.ogg',
+			'sound/effects/mob_effects/m_machine_coughc.ogg'
+		)
+	)
+>>>>>>> 1def015bad (end of file Fix (#17308))
 
 /decl/emote/audible/cough/get_emote_sound(var/atom/user)
 	if(ishuman(user) && !check_synthetic(user))
 		var/mob/living/carbon/human/H = user
+<<<<<<< HEAD
 		var/vol = H.species.cough_volume
 		var/s = get_species_sound(get_gendered_sound(H))["cough"]
 		if(!s && !(get_species_sound(H.species.species_sounds) == "None")) // Failsafe, so we always use the default cough/etc sounds. None will cancel out anyways.
@@ -37,4 +62,18 @@
 			"volchannel" = VOLUME_CHANNEL_SPECIES_SOUNDS
 		)
 // CHOMPEdit End
+=======
+		if(H.get_gender() == FEMALE)
+			if(length(H.species.female_cough_sounds))
+				return list(
+					"sound" = H.species.female_cough_sounds,
+					"vol" = emote_volume
+				)
+		else
+			if(length(H.species.male_cough_sounds))
+				return list(
+					"sound" = H.species.male_cough_sounds,
+					"vol" = emote_volume
+				)
+>>>>>>> 1def015bad (end of file Fix (#17308))
 	return ..()
