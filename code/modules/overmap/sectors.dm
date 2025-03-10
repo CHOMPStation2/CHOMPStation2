@@ -49,7 +49,7 @@
 
 	var/unique_identifier //Define this for objs that we want to be able to rename. Needed to avoid compiler errors if not included.
 
-/obj/effect/overmap/visitable/Initialize(mapload)
+/obj/effect/overmap/visitable/Initialize(mapload, dyn_poi) // CHOMPEdit
 	. = ..()
 	if(. == INITIALIZE_HINT_QDEL)
 		return
@@ -64,6 +64,22 @@
 	start_y = start_y || rand(OVERMAP_EDGE, global.using_map.overmap_size - OVERMAP_EDGE)
 
 	forceMove(locate(start_x, start_y, global.using_map.overmap_z))
+
+	// CHOMPAdd Start
+	if(dyn_poi)
+		for(var/obj/effect/overmap/visitable/dynamic/poi/P in loc.contents) // If we've spawned on another poi, we'll try again once.
+			if(P == src)
+				continue
+			start_x = start_x || rand(OVERMAP_EDGE, global.using_map.overmap_size - OVERMAP_EDGE)
+			start_y = start_y || rand(OVERMAP_EDGE, global.using_map.overmap_size - OVERMAP_EDGE)
+			forceMove(locate(start_x, start_y, global.using_map.overmap_z))
+			break
+		var/sanity = 0
+		for(var/obj/effect/overmap/visitable/dynamic/poi/P in loc.contents)
+			sanity++
+			if(sanity > 1)
+				return INITIALIZE_HINT_QDEL
+	// CHOMPAdd End
 
 	if(!docking_codes)
 		docking_codes = "[ascii2text(rand(65,90))][ascii2text(rand(65,90))][ascii2text(rand(65,90))][ascii2text(rand(65,90))]"
