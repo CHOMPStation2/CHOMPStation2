@@ -8,6 +8,7 @@ The following is a set of regulations for contributing to Chomp Station, which i
 
 [What should I know before I get started?](#what-should-i-know-before-i-get-started)
   * [Code of Conduct](#code-of-conduct)
+  * [Upstream Parity with Virgo](#upstream-parity-with-virgo)
 
 [How Can I Contribute?](#how-can-i-contribute)
   * [Your First Code Contribution](#your-first-code-contribution)
