@@ -227,10 +227,18 @@
   Will:
   - rscadd: Adds a new trait 'Lumbar Impairment' which makes you incapable of utilizing
       your legs.
+<<<<<<< HEAD:html/changelogs_ch/archive/2025-03.yml
 2025-03-11:
   CHOMPStation2StaffMirrorBot:
   - bugfix: Fixed jungle and fantasy redgates having cave walls generate where they
       shouldn't.
+=======
+  tacoguy7765093:
+  - qol: Synthfabs no longer apply massive damage when unupgraded.
+  - bugfix: Shield capacitors now only take power from wires when anchored to the
+      ground.
+2025-03-10:
+>>>>>>> 454f8fd9c9 (Merge pull request #17304 from VOREStation/master):html/changelogs/archive/2025-03.yml
   Diana:
   - bugfix: myelamine properly clots your external wounds
   - balance: myelamine now applies an up-front heal for bleeding wounds when clotting
@@ -243,6 +251,7 @@
   - spellcheck: myelamine now accurately tells you via the chemmaster that it clots
       MORE than just internal hemorrhages. It additionally tells you the ideal dose
       for wound healing.
+<<<<<<< HEAD:html/changelogs_ch/archive/2025-03.yml
   Kashargul:
   - bugfix: blood issues in VR
 2025-03-12:
@@ -269,3 +278,8 @@
   - bugfix: Fixes the toaster from having the sus plushie sound.
   - code_imp: Changed some timers that were calling a proc that just set a var to
       false. Instead, we now use a varset_callback timer there.
+=======
+  TeleTubby2:
+  - bugfix: fixed the "Print" options for OOC notes in examine text sending the notes
+      to the wrong person
+>>>>>>> 454f8fd9c9 (Merge pull request #17304 from VOREStation/master):html/changelogs/archive/2025-03.yml
