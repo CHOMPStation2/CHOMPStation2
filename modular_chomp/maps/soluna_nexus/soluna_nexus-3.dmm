@@ -31836,7 +31836,7 @@
 /turf/simulated/floor/reinforced/airless,
 /area/space)
 "kBS" = (
-/obj/item/toy/plushie/therapy/red,
+/obj/item/toy/plushie/therapy,
 /obj/item/beach_ball/dodgeball{
 	pixel_y = -2;
 	color = "white"

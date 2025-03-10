@@ -5879,7 +5879,7 @@
 	},
 /area/survivalpod)
 "bMh" = (
-/obj/item/toy/plushie/squid/green,
+/obj/item/toy/plushie/squid,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -8620,7 +8620,7 @@
 	},
 /area/survivalpod)
 "cBi" = (
-/obj/item/toy/plushie/therapy/red,
+/obj/item/toy/plushie/therapy,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},

@@ -359,7 +359,7 @@
 /turf/simulated/floor/lino,
 /area/awaymission/diescraper/indoors/floor10)
 "bd" = (
-/obj/item/toy/plushie/susred,
+/obj/item/toy/plushie/sus,
 /turf/simulated/floor/concrete,
 /area/awaymission/diescraper/outside)
 "be" = (
@@ -3977,7 +3977,7 @@
 /obj/random/mech_toy,
 /obj/random/mech_toy,
 /obj/random/mech_toy,
-/obj/item/toy/plushie/susred,
+/obj/item/toy/plushie/sus,
 /turf/simulated/floor/tiled/dark,
 /area/awaymission/diescraper/indoors/floor7)
 "lZ" = (

@@ -80,7 +80,7 @@
 	dir = 8
 	},
 /obj/effect/floor_decal/corner/purple/diagonal,
-/obj/item/toy/plushie/suswhite,
+/obj/item/toy/plushie/sus/white,
 /turf/simulated/floor/tiled/freezer,
 /area/survivalpod/superpose/RestaurationBar)
 "bU" = (

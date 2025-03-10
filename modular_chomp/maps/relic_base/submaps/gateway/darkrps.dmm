@@ -10233,7 +10233,7 @@
 /turf/simulated/floor/tiled/white,
 /area/awaymission/darkrp/ghettoeats)
 "nxS" = (
-/obj/item/toy/plushie/susred,
+/obj/item/toy/plushie/sus,
 /obj/machinery/atmospherics/unary/vent_pump{
 	dir = 4;
 	external_pressure_bound = 140;

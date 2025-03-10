@@ -419,7 +419,7 @@
 /area/shuttle/lonehomeship)
 "HD" = (
 /obj/structure/closet/secure_closet/personal/cabinet,
-/obj/item/toy/plushie/susred,
+/obj/item/toy/plushie/sus,
 /obj/machinery/button/windowtint{
 	id = "loneshuttledorms2";
 	pixel_x = 8;
