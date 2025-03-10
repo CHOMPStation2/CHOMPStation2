@@ -861,14 +861,11 @@
 
 	if(src && input && !M.stat && in_range(M,src))
 		name = input
-<<<<<<< HEAD
 		//CHOMPAdd Start - Rename possessed voices too
 		for(var/mob/living/voice/V in possessed_voice)
 			V.name = input
 		//CHOMPAdd End
-=======
 		adjusted_name = input
->>>>>>> 34c7fc761e (Plushie Fixes & Additions (#17258))
 		to_chat(M, "You name the plushie [input], giving it a hug for good luck.")
 		return 1
 

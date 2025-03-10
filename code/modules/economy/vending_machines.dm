@@ -828,7 +828,8 @@
 					/obj/item/toy/plushie/vox = 1,
 					/obj/item/toy/plushie/shark = 1,
 					/obj/item/toy/mistletoe = 1,
-<<<<<<< HEAD
+					/obj/item/toy/plushie/tinytin = 1,
+					/obj/item/toy/plushie/tinytin_sec = 1,
 					//VOREStation Add End
 					//YawnWider Add Start
 					/obj/item/toy/plushie/teshari/_yw = 1,
@@ -846,10 +847,6 @@
 					/obj/item/toy/plushie/teppi/alt = 1
 					//CHOMPStation Add End
 					)
-=======
-					/obj/item/toy/plushie/tinytin = 1,
-					/obj/item/toy/plushie/tinytin_sec = 1)
->>>>>>> 34c7fc761e (Plushie Fixes & Additions (#17258))
 	premium = list(/obj/item/reagent_containers/food/drinks/bottle/champagne = 1,
 					/obj/item/storage/trinketbox = 2)
 	prices = list(/obj/item/storage/fancy/heartbox = 15,
@@ -891,7 +888,8 @@
 					/obj/item/toy/plushie/vox = 50,
 					/obj/item/toy/plushie/shark = 50,
 					/obj/item/toy/mistletoe = 50,
-<<<<<<< HEAD
+					/obj/item/toy/plushie/tinytin = 35,
+					/obj/item/toy/plushie/tinytin_sec = 50,
 					//VOREStation Add End
 					//YawnWider Add Start
 					/obj/item/toy/plushie/teshari/_yw = 150,
@@ -909,11 +907,6 @@
 					/obj/item/toy/plushie/teppi/alt = 50
 					//CHOMPStation Add End
 					)
-=======
-					/obj/item/toy/plushie/tinytin = 35,
-					/obj/item/toy/plushie/tinytin_sec = 50)
-
->>>>>>> 34c7fc761e (Plushie Fixes & Additions (#17258))
 
 /obj/machinery/vending/fishing
 	name = "Loot Trawler"
