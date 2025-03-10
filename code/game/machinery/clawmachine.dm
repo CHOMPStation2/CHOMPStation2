@@ -67,6 +67,8 @@
 						/obj/item/toy/plushie/borgplushie/drake/trauma,
 						/obj/item/toy/plushie/otter,
 						/obj/item/toy/plushie/shark,
+						/obj/item/toy/plushie/tinytin,
+						/obj/item/toy/plushie/tinytin_sec
 						//CHOMPStation Add Start
 						/obj/item/toy/plushie/red_dragon,
 						/obj/item/toy/plushie/green_dragon,
@@ -77,8 +79,7 @@
 						/obj/item/toy/plushie/gold_eastdragon,
 						/obj/item/toy/plushie/teppi,
 						/obj/item/toy/plushie/teppi/alt
-						//CHOMPStation Add End
-						)
+						)//CHOMPStation Add End
 
 /obj/machinery/clawmachine/update_icon()
 	cut_overlays()
