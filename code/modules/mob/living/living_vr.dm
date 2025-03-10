@@ -96,6 +96,7 @@
 	if(!ooc_notes)
 		return
 	var/msg = ooc_notes
+<<<<<<< HEAD
 	//CHOMPEdit Start
 	if(ooc_notes_style && (ooc_notes_favs || ooc_notes_likes || ooc_notes_maybes || ooc_notes_dislikes) && !user.client?.prefs?.read_preference(/datum/preference/toggle/vchat_enable)) // Oldchat hates proper formatting
 		msg += "<br><br>"
@@ -142,6 +143,14 @@
 	to_chat(user, span_chatexport("<b>[src]'s Metainfo:</b><br>[msg]"))
 	//CHOMPEdit End
 //ChompEDIT END - Removal of usr
+=======
+	if(ooc_notes_likes)
+		msg += "<br><br><b>LIKES</b><br><br>[ooc_notes_likes]"
+	if(ooc_notes_dislikes)
+		msg += "<br><br><b>DISLIKES</b><br><br>[ooc_notes_dislikes]"
+	to_chat(user, span_chatexport("[src]'s Metainfo:<br>[msg]"))
+
+>>>>>>> df589b0b8a (Fix unintended OOC note print chatspam  (#17296))
 /mob/living/verb/set_custom_link()
 	set name = "Set Custom Link"
 	set desc = "Set a custom link to show up with your examine text."
