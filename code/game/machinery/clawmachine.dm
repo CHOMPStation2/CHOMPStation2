@@ -79,7 +79,7 @@
 						/obj/item/toy/plushie/gold_eastdragon,
 						/obj/item/toy/plushie/teppi,
 						/obj/item/toy/plushie/teppi/alt
-						//CHOMPStation Add End
+						)//CHOMPStation Add End
 
 /obj/machinery/clawmachine/update_icon()
 	cut_overlays()
