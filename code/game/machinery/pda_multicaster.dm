@@ -26,9 +26,6 @@
 		"cargo" = new /obj/item/pda/multicaster/cargo(src),
 		"civilian" = new /obj/item/pda/multicaster/civilian(src))
 
-/obj/machinery/pda_multicaster/Initialize()
-	. = ..()
-
 	// CHOMPAdd: PDA Multicaster Server humming
 	soundloop = new(list(src), FALSE)
 	if(prob(60)) // 60% chance to change the midloop
@@ -44,7 +41,7 @@
 	soundloop.start() // Have to do this here bc it starts on
 	// CHOMPAdd End
 
-/obj/machinery/pda_multicaster/prebuilt/Initialize()
+/obj/machinery/pda_multicaster/prebuilt/Initialize(mapload)
 	. = ..()
 	default_apply_parts()
 

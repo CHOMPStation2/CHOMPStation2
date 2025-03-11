@@ -48,7 +48,7 @@
 // Standard procs
 //-------------------------------------------
 //ChompADD START
-/obj/vehicle/Initialize()
+/obj/vehicle/Initialize(mapload)
 	. = ..()
 	soundloop = new(list(src), FALSE)
 //ChompADD END

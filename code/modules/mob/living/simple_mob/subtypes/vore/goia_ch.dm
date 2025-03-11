@@ -276,8 +276,8 @@
 			goia_overlays["zorgoia_belly"] = new_color
 			update_icon()
 
-/mob/living/simple_mob/vore/zorgoia/Initialize()
-	..()
+/mob/living/simple_mob/vore/zorgoia/Initialize(mapload)
+	. = ..()
 	add_verb(src,/mob/living/simple_mob/vore/zorgoia/proc/appearance_switch)
 	add_verb(src,/mob/living/simple_mob/vore/zorgoia/proc/recolor)
 	add_verb(src,/mob/living/proc/injection) //Poison sting c:

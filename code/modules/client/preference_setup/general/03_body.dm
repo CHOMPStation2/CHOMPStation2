@@ -134,7 +134,6 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 		pref.species = SPECIES_HUMAN
 	pref.s_tone			= sanitize_integer(pref.s_tone, -185, 34, initial(pref.s_tone))
 	pref.h_style		= sanitize_inlist(pref.h_style, hair_styles_list, initial(pref.h_style))
-	pref.grad_style		= sanitize_inlist(pref.grad_style, GLOB.hair_gradients, initial(pref.grad_style))
 	pref.f_style		= sanitize_inlist(pref.f_style, facial_hair_styles_list, initial(pref.f_style))
 	pref.grad_style		= sanitize_inlist(pref.grad_style, GLOB.hair_gradients, initial(pref.grad_style))
 	pref.b_type			= sanitize_text(pref.b_type, initial(pref.b_type))
@@ -168,7 +167,6 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	character.f_style	= pref.f_style
 	character.s_tone	= pref.s_tone
 	character.h_style	= pref.h_style
-	character.grad_style= pref.grad_style
 	character.f_style	= pref.f_style
 	character.grad_style= pref.grad_style
 	character.b_type	= pref.b_type
@@ -199,7 +197,6 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 
 	character.set_gender(pref.biological_gender)
 
-	// Destroy/cyborgize organs and limbs.
 	character.synthetic = pref.species == "Protean" ? all_robolimbs["protean"] : null //Clear the existing var. (unless protean, then switch it to the normal protean limb)
 	var/list/organs_to_edit = list()
 	for (var/name in list(BP_TORSO, BP_HEAD, BP_GROIN, BP_L_ARM, BP_R_ARM, BP_L_HAND, BP_R_HAND, BP_L_LEG, BP_R_LEG, BP_L_FOOT, BP_R_FOOT))
@@ -614,18 +611,32 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	else if(href_list["grad_style"])
 		var/list/valid_gradients = GLOB.hair_gradients
 
-		var/new_grad_style = tgui_input_list(user, "Choose a color pattern for your hair:", "Character Preference", pref.grad_style, valid_gradients)
-		if(new_grad_style && CanUseTopic(user))
-			pref.grad_style = new_grad_style
-			return TOPIC_REFRESH_UPDATE_PREVIEW
-
-	else if(href_list["grad_style"])
-		var/list/valid_gradients = GLOB.hair_gradients
-
 		var/new_grad_style = tgui_input_list(user, "Choose a color pattern for your hair:", "Character Preference", valid_gradients, pref.grad_style)
 		if(new_grad_style && CanUseTopic(user))
 			pref.grad_style = new_grad_style
 			return TOPIC_REFRESH_UPDATE_PREVIEW
+
+	else if(href_list["grad_style_left"])
+		var/H = href_list["grad_style_left"]
+		var/list/valid_gradients = GLOB.hair_gradients
+		var/start = valid_gradients.Find(H)
+
+		if(start != 1) //If we're not the beginning of the list, become the previous element.
+			pref.grad_style = valid_gradients[start-1]
+		else //But if we ARE, become the final element.
+			pref.grad_style = valid_gradients[valid_gradients.len]
+		return TOPIC_REFRESH_UPDATE_PREVIEW
+
+	else if(href_list["grad_style_right"])
+		var/H = href_list["grad_style_right"]
+		var/list/valid_gradients = GLOB.hair_gradients
+		var/start = valid_gradients.Find(H)
+
+		if(start != valid_gradients.len) //If we're not the end of the list, become the next element.
+			pref.grad_style = valid_gradients[start+1]
+		else //But if we ARE, become the first element.
+			pref.grad_style = valid_gradients[1]
+		return TOPIC_REFRESH_UPDATE_PREVIEW
 
 	else if(href_list["hair_style_left"])
 		var/H = href_list["hair_style_left"]

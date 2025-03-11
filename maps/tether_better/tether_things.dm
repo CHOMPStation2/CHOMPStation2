@@ -75,7 +75,8 @@
 	icon = 'icons/obj/structures/stairs_64x64.dmi'
 	icon_state = ""
 	invisibility = 0
-/obj/effect/step_trigger/teleporter/to_underdark/Initialize()
+
+/obj/effect/step_trigger/teleporter/to_underdark/Initialize(mapload)
 	. = ..()
 	teleport_x = x
 	teleport_y = y
@@ -88,7 +89,8 @@
 	icon = 'icons/obj/structures/stairs_64x64.dmi'
 	icon_state = ""
 	invisibility = 0
-/obj/effect/step_trigger/teleporter/from_underdark/Initialize()
+
+/obj/effect/step_trigger/teleporter/from_underdark/Initialize(mapload)
 	. = ..()
 	teleport_x = x
 	teleport_y = y
@@ -166,7 +168,7 @@
 
 	var/area/shock_area = /area/tether/surfacebase/tram
 
-/turf/simulated/floor/maglev/Initialize()
+/turf/simulated/floor/maglev/Initialize(mapload)
 	. = ..()
 	shock_area = locate(shock_area)
 
@@ -206,7 +208,7 @@
 /obj/machinery/smartfridge/chemistry/chemvator/down
 	name = "\improper Smart Chemavator - Lower"
 
-/obj/machinery/smartfridge/chemistry/chemvator/down/Initialize()
+/obj/machinery/smartfridge/chemistry/chemvator/down/Initialize(mapload)
 	. = ..()
 	var/obj/machinery/smartfridge/chemistry/chemvator/above = locate(/obj/machinery/smartfridge/chemistry/chemvator,get_zstep(src,UP))
 	if(istype(above))

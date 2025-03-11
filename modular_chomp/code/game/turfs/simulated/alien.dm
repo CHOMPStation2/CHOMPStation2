@@ -7,7 +7,7 @@
 	light_color = "#FF3300" // Orangeish?
 	light_on = TRUE
 
-/turf/simulated/shuttle/wall/alien/orange/Initialize()
+/turf/simulated/shuttle/wall/alien/orange/Initialize(mapload)
 	. = ..()
 	update_light()
 

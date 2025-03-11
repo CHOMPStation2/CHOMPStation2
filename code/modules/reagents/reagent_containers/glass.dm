@@ -55,7 +55,7 @@
 		)
 //CHOMP Addition for feeder in the above list. I am paranoid about comments within lists so this is outside.
 
-/obj/item/reagent_containers/glass/Initialize()
+/obj/item/reagent_containers/glass/Initialize(mapload)
 	. = ..()
 	if(LAZYLEN(prefill))
 		for(var/R in prefill)
@@ -203,7 +203,7 @@
 /obj/item/reagent_containers/glass/beaker/get_rating()
 	return rating
 
-/obj/item/reagent_containers/glass/beaker/Initialize()
+/obj/item/reagent_containers/glass/beaker/Initialize(mapload)
 	. = ..()
 	desc += " Can hold up to [volume] units."
 

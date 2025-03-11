@@ -6,7 +6,7 @@ GLOBAL_LIST_EMPTY(button_mob_spawner_landmark)
 	icon_state = "expirmentalaid"
 	var/link = "MOBSPAWN"
 
-/obj/effect/landmark/button_mob_spawner_landmark/Initialize()
+/obj/effect/landmark/button_mob_spawner_landmark/Initialize(mapload)
 	. = ..()
 	GLOB.button_mob_spawner_landmark[link] = src
 

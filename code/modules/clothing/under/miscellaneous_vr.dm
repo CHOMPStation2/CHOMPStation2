@@ -182,7 +182,7 @@
 /obj/item/clothing/gloves/bluespace/emagged
 	emagged = TRUE
 
-/obj/item/clothing/gloves/bluespace/emagged/Initialize()
+/obj/item/clothing/gloves/bluespace/emagged/Initialize(mapload)
 	. = ..()
 	target_size = (rand(25,200)) /100 //ChompEDIT - set to our rule cap
 	if(target_size < 0.25) //ChompEDIT - set to our rule cap

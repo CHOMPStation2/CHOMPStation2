@@ -428,7 +428,7 @@
 		icon_state = "mini-uzi-empty"
 
 // CHOMPEdit: Uzi tilting
-/obj/item/gun/projectile/automatic/mini_uzi/Initialize()
+/obj/item/gun/projectile/automatic/mini_uzi/Initialize(mapload)
 	. = ..()
 	if(is64x32)
 		update_transform()

@@ -14,7 +14,7 @@
 		"Cereal" = /obj/item/reagent_containers/food/snacks/variable/cereal
 	)
 
-/obj/machinery/appliance/mixer/cereal/Initialize()
+/obj/machinery/appliance/mixer/cereal/Initialize(mapload)
 	. = ..()
 
 	cerealmaker_loop = new(list(src), FALSE)

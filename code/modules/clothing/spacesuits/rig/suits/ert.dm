@@ -94,7 +94,7 @@
 	rigsuit_min_pressure = 0
 	max_heat_protection_temperature = FIRE_HELMET_MAX_HEAT_PROTECTION_TEMPERATURE
 	//CHOMPEdit End
-	
+
 	initial_modules = list(
 		/obj/item/rig_module/ai_container,
 		/obj/item/rig_module/maneuvering_jets,
@@ -106,7 +106,7 @@
 		/obj/item/rig_module/device/rcd,
 		/obj/item/rig_module/datajack
 		)
-		
+
 /obj/item/rig/ert/assetprotection/antiareli
 	name = "Heavy Asset Protection Special Agent control module"
 	desc = "A heavy suit worn by the highest level of the highest level of Asset Protection, don't mess with the person wearing this. Armoured and space ready and protected against almost fucking everything"

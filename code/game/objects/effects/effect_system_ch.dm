@@ -100,7 +100,7 @@
 	plane = MOB_PLANE
 	layer = ABOVE_MOB_LAYER
 
-/obj/effect/effect/teleport_greyscale/Initialize()
+/obj/effect/effect/teleport_greyscale/Initialize(mapload)
 	. = ..()
 	QDEL_IN(src, 2 SECONDS)
 

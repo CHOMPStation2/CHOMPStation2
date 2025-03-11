@@ -110,7 +110,7 @@
 		/obj/item/reagent_containers/food/snacks/liquidprotein,
 		/obj/item/cataloguer/compact/pathfinder)
 
-/obj/structure/closet/secure_closet/pathfinder/Initialize()
+/obj/structure/closet/secure_closet/pathfinder/Initialize(mapload)
 	if(prob(50))
 		starts_with += /obj/item/storage/backpack
 	else

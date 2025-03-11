@@ -17,7 +17,7 @@
 	desc = "It's a storage unit for emergency breathmasks and O2 tanks."
 	closet_appearance = /decl/closet_appearance/oxygen
 
-/obj/structure/closet/emcloset/Initialize()
+/obj/structure/closet/emcloset/Initialize(mapload)
 	switch (pickweight(list("small" = 55, "aid" = 25, "tank" = 10, "both" = 10)))
 	//CHOMPEdit Block Start - Modified List
 		if ("small")
@@ -116,7 +116,7 @@
 	desc = "It's a storage unit for tools."
 	closet_appearance = /decl/closet_appearance/secure_closet/engineering/tools
 
-/obj/structure/closet/toolcloset/Initialize()
+/obj/structure/closet/toolcloset/Initialize(mapload)
 	starts_with = list()
 	if(prob(40))
 		starts_with += /obj/item/clothing/suit/storage/hazardvest
