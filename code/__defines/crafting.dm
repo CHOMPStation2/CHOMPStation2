@@ -25,4 +25,4 @@
 #define CAT_ICE "Frozen"
 #define CAT_DRINK "Drinks"
 #define CAT_CHEMISTRY "Chemistry"
-#define CAT_TOOL "Tool" 
+#define CAT_TOOL "Tool"
