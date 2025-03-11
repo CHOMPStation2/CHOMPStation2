@@ -298,7 +298,4 @@
 	materials = list(MAT_STEEL = 30000, MAT_GLASS = 10000, MAT_SILVER = 5000, MAT_GOLD = 5000, MAT_DIAMOND = 1000)
 	build_path = /obj/item/storage/part_replacer/adv/discount_bluespace
 	sort_string = "ABAAB"
-<<<<<<< HEAD
 	department = LATHE_ALL | LATHE_ENGINEERING // CHOMPAdd
-=======
->>>>>>> 1def015bad (end of file Fix (#17308))

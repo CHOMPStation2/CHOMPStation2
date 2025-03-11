@@ -252,7 +252,4 @@
 	materials = list(MAT_STEEL = 5000, MAT_GLASS = 5000, MAT_PLASTIC = 2500, MAT_URANIUM = 2000)
 	build_path = /obj/item/ammo_casing/microbattery/medical/normalsize
 	sort_string = "KVCOC"
-<<<<<<< HEAD
 */
-=======
->>>>>>> 1def015bad (end of file Fix (#17308))

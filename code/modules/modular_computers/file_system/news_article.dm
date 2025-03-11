@@ -22,7 +22,6 @@
 	filename = "SPACE Magazine vol. 1"
 	server_file_path = 'news_articles/space_magazine_1.html'
 */
-<<<<<<< HEAD
 
 /* CHOMPedit: commenting out YW articles because they don't make sense here and adding our own.
 //YAWN ADDS - All from discord
@@ -50,5 +49,3 @@
 	server_file_path = 'news_articles/starfire_report_2565.html'
 
 //End CHOMPedit
-=======
->>>>>>> 1def015bad (end of file Fix (#17308))

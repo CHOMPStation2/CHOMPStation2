@@ -1192,34 +1192,28 @@
 		do_examine_ooc(usr)
 	if(href_list["edit_ooc_notes"])
 		if(usr == src)
-			set_metainfo_panel(usr) //ChompEDIT - usr arg
+			set_metainfo_panel(usr)
 	if(href_list["edit_ooc_note_likes"])
 		if(usr == src)
-			set_metainfo_likes(usr) //ChompEDIT - usr arg
+			set_metainfo_likes(usr)
 	if(href_list["edit_ooc_note_dislikes"])
 		if(usr == src)
-			set_metainfo_dislikes(usr) //ChompEDIT - usr arg
+			set_metainfo_dislikes(usr)
 	if(href_list["save_ooc_panel"])
 		if(usr == src)
-<<<<<<< HEAD
-			save_ooc_panel(usr) //ChompEDIT - usr arg
-	if(href_list["print_ooc_notes_to_chat"])
-		print_ooc_notes_to_chat(usr) //ChompEDIT - usr arg
-	//CHOMPEdit Start
-	if(href_list["edit_ooc_note_favs"])
-		if(usr == src)
-			set_metainfo_favs(usr) //ChompEDIT - usr arg
-	if(href_list["edit_ooc_note_maybes"])
-		if(usr == src)
-			set_metainfo_maybes(usr) //ChompEDIT - usr arg
-	if(href_list["set_metainfo_ooc_style"])
-		set_metainfo_ooc_style(usr) //ChompEDIT - usr arg
-	//CHOMPEdit End
-=======
 			save_ooc_panel(usr)
 	if(href_list["print_ooc_notes_chat"])
 		print_ooc_notes_chat(usr)
->>>>>>> 1def015bad (end of file Fix (#17308))
+	//CHOMPEdit Start
+	if(href_list["edit_ooc_note_favs"])
+		if(usr == src)
+			set_metainfo_favs(usr)
+	if(href_list["edit_ooc_note_maybes"])
+		if(usr == src)
+			set_metainfo_maybes(usr)
+	if(href_list["set_metainfo_ooc_style"])
+		set_metainfo_ooc_style(usr)
+	//CHOMPEdit End
 	if(href_list["save_private_notes"])
 		if(usr == src)
 			save_private_notes(usr)

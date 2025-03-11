@@ -49,8 +49,4 @@
 	name = "horn"
 	desc = "A hard conical structure made of bone or some other similar organic material. Traditionally seen affixed to helmets, hollowed out and filled with tasty drinks, or occasionally, attatched to the heads of animals."
 	icon = 'icons/obj/bones_vr.dmi'
-<<<<<<< HEAD
-	icon_state = "horn" 
-=======
 	icon_state = "horn"
->>>>>>> 1def015bad (end of file Fix (#17308))

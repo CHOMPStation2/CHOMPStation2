@@ -20,7 +20,4 @@
 /obj/effect/decal/mecha_wreckage/micro/utility/gopher
 	name = "Gopher wreckage"
 	icon_state = "gopher-broken"
-<<<<<<< HEAD
 */
-=======
->>>>>>> 1def015bad (end of file Fix (#17308))

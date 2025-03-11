@@ -57,7 +57,4 @@
 	materials = list(MAT_PLASTEEL = 2000, MAT_GLASS = 3000, MAT_PHORON = 1500) //CHOMP Edit
 	build_path = /obj/item/clothing/glasses/graviton
 	sort_string = "EAAAF"
-<<<<<<< HEAD
 	department = LATHE_ALL | LATHE_CARGO
-=======
->>>>>>> 1def015bad (end of file Fix (#17308))

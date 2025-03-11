@@ -61,7 +61,4 @@
 	materials = list(MAT_STEEL = 500, MAT_GLASS = 500)
 	build_path = /obj/item/analyzer/plant_analyzer
 	sort_string = "JAADA"
-<<<<<<< HEAD
 	department = LATHE_ALL | LATHE_SERVICE // CHOMPAdd
-=======
->>>>>>> 1def015bad (end of file Fix (#17308))

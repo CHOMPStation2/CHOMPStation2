@@ -20,11 +20,7 @@
 		return
 
 	new /obj/structure/ghost_pod/ghost_activated/morphspawn(get_turf(spawnspot))
-<<<<<<< HEAD
-
 
 //YW Addition: Adding named landmark for events
 /obj/effect/landmark/event_spawn/morphspawn
 	name = "morphspawn"
-=======
->>>>>>> 1def015bad (end of file Fix (#17308))

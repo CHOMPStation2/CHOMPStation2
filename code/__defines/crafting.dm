@@ -25,8 +25,4 @@
 #define CAT_ICE "Frozen"
 #define CAT_DRINK "Drinks"
 #define CAT_CHEMISTRY "Chemistry"
-<<<<<<< HEAD
-#define CAT_TOOL "Tool" 
-=======
 #define CAT_TOOL "Tool"
->>>>>>> 1def015bad (end of file Fix (#17308))

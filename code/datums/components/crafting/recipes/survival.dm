@@ -123,8 +123,4 @@
 	result = /obj/item/handcuffs/cable/plantfiber
 	reqs = list(list(/obj/item/stack/material/fiber = 3))
 	time = 60
-<<<<<<< HEAD
-	category = CAT_MISC 
-=======
 	category = CAT_MISC
->>>>>>> 1def015bad (end of file Fix (#17308))

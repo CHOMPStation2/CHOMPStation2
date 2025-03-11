@@ -206,22 +206,15 @@
 	'sound/ambience/vaporwave.ogg'\
 	)
 
-<<<<<<< HEAD
 //CHOMPedit: Exploration outpost ambience. Current tracks taken from Rainworld and Natural Selection 2.
 #define AMBIENCE_EXPOUTPOST list(\
-=======
-#define AMBIENCE_OUTPOST list(\
->>>>>>> 1def015bad (end of file Fix (#17308))
 	'sound/ambience/expoutpost/expoutpost1.ogg',\
 	'sound/ambience/expoutpost/expoutpost2.ogg',\
 	'sound/ambience/expoutpost/expoutpost3.ogg',\
 	'sound/ambience/expoutpost/expoutpost4.ogg'\
 	)
 
-<<<<<<< HEAD
 //CHOMP Edit Sounds for Substation rooms. Just electrical sounds, really.
-=======
->>>>>>> 1def015bad (end of file Fix (#17308))
 #define AMBIENCE_SUBSTATION list(\
 	'sound/ambience/substation/substation1.ogg',\
 	'sound/ambience/substation/substation2.ogg',\
@@ -248,7 +241,6 @@
 	'sound/ambience/engineering/engineering3.ogg',\
 	'sound/ambience/atmospherics/atmospherics1.ogg'\
 	)
-<<<<<<< HEAD
 
 // CHOMPEdit: New Planet Ambience
 #define AMBIENCE_THOR list(\
@@ -256,5 +248,3 @@
 	'modular_chomp/sound/ambience/thor/birds_stinger2.ogg',\
 	'modular_chomp/sound/ambience/thor/birds_stinger3.ogg'\
 )
-=======
->>>>>>> 1def015bad (end of file Fix (#17308))
