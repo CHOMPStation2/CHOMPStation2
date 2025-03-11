@@ -38,7 +38,7 @@
 		// engineered ones don't do all of the above
 		if(force_location)
 			parent_organ = force_location
-		return ..(mapload, internal)
+	return ..(mapload, internal)
 
 /mob/living/carbon/human/proc/random_malignant_organ( var/allowtumors = TRUE, var/allowparasites = TRUE, var/allowengineered = TRUE)
 	// get a list of valid malignant organs and spawn one

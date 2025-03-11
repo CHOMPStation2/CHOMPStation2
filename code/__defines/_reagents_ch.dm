@@ -281,3 +281,9 @@
 #define REAGENT_ID_NEOLIQUIDFIRE "neoliquidfire"
 #define REAGENT_LIQUIDLIFE "Liquid Life"
 #define REAGENT_ID_LIQUIDLIFE "liquidlife"
+
+#define REAGENT_NUMBING_FLUID "Numbing Fluid"
+#define REAGENT_ID_NUMBING_FLUID "succubi_numbing"
+#define REAGENT_PARALYZE_FLUID "Paralyzing Fluid"
+#define REAGENT_ID_PARALYZE_FLUID "succubi_paralize"
+#define REAGENT_ID_APHRODIAC_FLUID "succubi_aphrodisiac"

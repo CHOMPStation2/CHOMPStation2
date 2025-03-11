@@ -41,16 +41,16 @@
 		if(choice == REAGENT_APHRODISIAC)
 			src.show_message(span_warning("You sink your fangs into [T] and inject your aphrodisiac!"))
 			src.visible_message(span_red("[src] sinks their fangs into [T]!"))
-			T.bloodstr.add_reagent("succubi_aphrodisiac",100)
+			T.bloodstr.add_reagent(REAGENT_ID_APHRODIAC_FLUID,100)
 			return 0
 		else if(choice == "Numbing")
 			src.show_message(span_warning("You sink your fangs into [T] and inject your poison!"))
 			src.visible_message(span_red("[src] sinks their fangs into [T]!"))
-			T.bloodstr.add_reagent("numbing_enzyme",20) //Poisons should work when more units are injected
+			T.bloodstr.add_reagent(REAGENT_ID_NUMBING_FLUID,20) //Poisons should work when more units are injected
 		else if(choice == "Paralyzing")
 			src.show_message(span_warning("You sink your fangs into [T] and inject your poison!"))
 			src.visible_message(span_red("[src] sinks their fangs into [T]!"))
-			T.bloodstr.add_reagent("succubi_paralize",20) //Poisons should work when more units are injected
+			T.bloodstr.add_reagent(REAGENT_ID_PARALYZE_FLUID,20) //Poisons should work when more units are injected
 		else
 			return //Should never happen
 
@@ -65,7 +65,7 @@ mob/living/carbon/proc/charmed() //TODO
 
 /datum/reagent/succubi_aphrodisiac
 	name = REAGENT_APHRODISIAC
-	id = "succubi_aphrodisiac"
+	id = REAGENT_ID_APHRODIAC_FLUID
 	description = "A unknown liquid, it smells sweet"
 	metabolism = REM * 0.8
 	color = "#8A0829"
@@ -79,8 +79,8 @@ mob/living/carbon/proc/charmed() //TODO
 	return
 
 /datum/reagent/succubi_numbing //Using numbing_enzyme instead.
-	name = "Numbing Fluid"
-	id = "succubi_numbing"
+	name = REAGENT_NUMBING_FLUID
+	id = REAGENT_ID_NUMBING_FLUID
 	description = "A unknown liquid, it doesn't smell"
 	metabolism = REM * 0.5
 	color = "#41029B"
@@ -97,8 +97,8 @@ mob/living/carbon/proc/charmed() //TODO
 	return
 
 /datum/reagent/succubi_paralize
-	name = "Paralyzing Fluid"
-	id = "succubi_paralize"
+	name = REAGENT_PARALYZE_FLUID
+	id = REAGENT_ID_PARALYZE_FLUID
 	description = "A unknown liquid, it doesn't smell"
 	metabolism= REM * 0.5
 	color = "#41029B"
