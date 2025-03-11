@@ -296,7 +296,7 @@ GLOBAL_DATUM_INIT(ahelp_tickets, /datum/admin_help_tickets, new)
 	//send this msg to all admins
 
 	for(var/client/X in GLOB.admins)
-//		if(!check_rights(R_ADMIN, 0, X)) //CHOMP Remove let everyone hear the ahelp
+//		if(!check_rights_for(X, R_ADMIN)) //CHOMP Remove let everyone hear the ahelp
 //			continue //CHOMP Remove let everyone hear the ahelp
 		if(X.prefs?.read_preference(/datum/preference/toggle/holder/play_adminhelp_ping))
 			X << 'sound/effects/adminhelp.ogg'
@@ -723,7 +723,7 @@ GLOBAL_DATUM_INIT(ahelp_tickets, /datum/admin_help_tickets, new)
 	. = list("total" = list(), "noflags" = list(), "afk" = list(), "stealth" = list(), "present" = list())
 	for(var/client/X in GLOB.admins)
 		.["total"] += X
-		if(requiredflags != 0 && !check_rights(rights_required = requiredflags, show_msg = FALSE, C = X))
+		if(requiredflags != 0 && !check_rights_for(X, requiredflags))
 			.["noflags"] += X
 		else if(X.is_afk())
 			.["afk"] += X

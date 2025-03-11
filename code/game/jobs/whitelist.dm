@@ -46,13 +46,13 @@ GLOBAL_LIST_EMPTY(alien_whitelist) // CHOMPEdit - Managed Globals
 				GLOB.alien_whitelist[key] = our_whitelists // CHOMPEdit - Managed Globals
 			our_whitelists += left_and_right[2]
 
-/proc/is_alien_whitelisted(mob/M, var/datum/species/species)
+/proc/is_alien_whitelisted(client/C, var/datum/species/species)
 	//They are admin or the whitelist isn't in use
-	if(whitelist_overrides(M))
+	if(whitelist_overrides(C))
 		return TRUE
 
 	//You did something wrong
-	if(!M || !species)
+	if(!C || !species)
 		return FALSE
 
 	//The species isn't even whitelisted
@@ -60,7 +60,7 @@ GLOBAL_LIST_EMPTY(alien_whitelist) // CHOMPEdit - Managed Globals
 		return TRUE
 
 	//Search the whitelist
-	var/list/our_whitelists = GLOB.alien_whitelist[M.ckey] // CHOMPEdit - Managed Globals
+	var/list/our_whitelists = GLOB.alien_whitelist[C.ckey] // CHOMPEdit - Managed Globals
 	if("All" in our_whitelists)
 		return TRUE
 	if(species.name in our_whitelists)
@@ -112,10 +112,14 @@ GLOBAL_LIST_EMPTY(alien_whitelist) // CHOMPEdit - Managed Globals
 			if(findtext(s,"[M.ckey] - All"))
 				return 1
 
-/proc/whitelist_overrides(mob/M)
+/proc/whitelist_overrides(client/C)
 	if(!CONFIG_GET(flag/usealienwhitelist))
 		return TRUE
-	if(check_rights(R_ADMIN|R_EVENT, 0, M))
+	if(ismob(C)) //Someone fed a mob into this by mistake. Bad, but we planned ahead for these mistakes.
+		var/mob/mob = C
+		C = mob.client
+
+	if(check_rights_for(C, R_ADMIN|R_EVENT|R_DEBUG))
 		return TRUE
 
 	return FALSE
