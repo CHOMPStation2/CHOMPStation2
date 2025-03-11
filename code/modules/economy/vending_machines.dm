@@ -797,7 +797,7 @@
 					/obj/item/paper/card/cat = 3,
 					/obj/item/paper/card/flower = 3,
 					/obj/item/clothing/accessory/bracelet/friendship = 5,
-					/obj/item/toy/plushie/therapy/red = 2,
+					/obj/item/toy/plushie/therapy = 2,
 					/obj/item/toy/plushie/therapy/purple = 2,
 					/obj/item/toy/plushie/therapy/blue = 2,
 					/obj/item/toy/plushie/therapy/yellow = 2,
@@ -816,7 +816,6 @@
 					/obj/item/toy/plushie/deer = 1,
 					/obj/item/toy/plushie/tabby_cat = 1,
 					/obj/item/threadneedle = 3,
-					//VOREStation Add Start
 					/obj/item/toy/plushie/lizardplushie/kobold = 1,
 					/obj/item/toy/plushie/slimeplushie = 1,
 					/obj/item/toy/plushie/box = 1,
@@ -829,6 +828,8 @@
 					/obj/item/toy/plushie/vox = 1,
 					/obj/item/toy/plushie/shark = 1,
 					/obj/item/toy/mistletoe = 1,
+					/obj/item/toy/plushie/tinytin = 1,
+					/obj/item/toy/plushie/tinytin_sec = 1,
 					//VOREStation Add End
 					//YawnWider Add Start
 					/obj/item/toy/plushie/teshari/_yw = 1,
@@ -856,7 +857,7 @@
 					/obj/item/paper/card/cat = 1,
 					/obj/item/paper/card/flower = 1,
 					/obj/item/clothing/accessory/bracelet/friendship = 5,
-					/obj/item/toy/plushie/therapy/red = 20,
+					/obj/item/toy/plushie/therapy = 20,
 					/obj/item/toy/plushie/therapy/purple = 20,
 					/obj/item/toy/plushie/therapy/blue = 20,
 					/obj/item/toy/plushie/therapy/yellow = 20,
@@ -875,7 +876,6 @@
 					/obj/item/toy/plushie/deer = 50,
 					/obj/item/toy/plushie/tabby_cat = 50,
 					/obj/item/threadneedle = 2,
-					//VOREStation Add Start
 					/obj/item/toy/plushie/lizardplushie/kobold = 50,
 					/obj/item/toy/plushie/slimeplushie = 50,
 					/obj/item/toy/plushie/box = 50,
@@ -888,6 +888,8 @@
 					/obj/item/toy/plushie/vox = 50,
 					/obj/item/toy/plushie/shark = 50,
 					/obj/item/toy/mistletoe = 50,
+					/obj/item/toy/plushie/tinytin = 35,
+					/obj/item/toy/plushie/tinytin_sec = 50,
 					//VOREStation Add End
 					//YawnWider Add Start
 					/obj/item/toy/plushie/teshari/_yw = 150,
