@@ -46170,7 +46170,9 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/harbor/Star_3_Deck_Airlock_Access)
 "pqM" = (
-/obj/effect/floor_decal/steeldecal/steel_decals_central2,
+/obj/effect/floor_decal/steeldecal/steel_decals6{
+	dir = 1
+	},
 /turf/simulated/floor/glass,
 /area/crew_quarters/Public_Garden)
 "pqS" = (
@@ -56004,6 +56006,12 @@
 	},
 /turf/simulated/floor/airless,
 /area/engineering/Solar_Control_ForPort)
+"sCc" = (
+/obj/effect/floor_decal/steeldecal/steel_decals6{
+	dir = 4
+	},
+/turf/simulated/floor/glass,
+/area/crew_quarters/Public_Garden)
 "sCn" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -103100,7 +103108,7 @@ sND
 hwa
 fAa
 jHs
-pqM
+sCc
 smc
 fuK
 qkA
@@ -105422,7 +105430,7 @@ xcG
 ngL
 iYR
 jHs
-pqM
+sCc
 smc
 dnd
 cwd
