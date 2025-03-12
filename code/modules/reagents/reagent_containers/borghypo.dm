@@ -124,7 +124,7 @@
 			mode = t
 			var/datum/reagent/R = SSchemistry.chemical_reagents[reagent_ids[mode]]
 			// to_chat(usr, span_notice("Synthesizer is now producing '[R.name]'."))
-			balloon_alert(usr, "Synthesizer is now producing '[R.name]'") // CHOMPAdd
+			balloon_alert(usr, "synthesizer is now producing '[R.name]'") // CHOMPAdd
 
 /obj/item/reagent_containers/borghypo/examine(mob/user)
 	. = ..()

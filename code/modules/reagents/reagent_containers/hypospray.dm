@@ -81,7 +81,7 @@
 	// to_chat(user, span_notice("You inject \the [H] with \the [src]."))
 	// to_chat(H, span_warning("You feel a tiny prick!"))
 	balloon_alert(user, "injected \the [H] with \the [src]")
-	balloon_alert(H, "You feel a tiny prick!")
+	balloon_alert(H, "you feel a tiny prick!")
 
 	if(hyposound)
 		playsound(src, hyposound, 25)

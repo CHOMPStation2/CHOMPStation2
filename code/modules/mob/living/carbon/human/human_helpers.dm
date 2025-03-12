@@ -9,7 +9,7 @@
 	if(feedback)
 		if(status[1] == HUMAN_EATING_NO_MOUTH)
 			// to_chat(src, "Where do you intend to put [food]? You don't have a mouth!")
-			balloon_alert(src, "You don't have a mouth!") // CHOMPEdit - Changed to balloon alert
+			balloon_alert(src, "you don't have a mouth!") // CHOMPEdit - Changed to balloon alert
 		else if(status[1] == HUMAN_EATING_BLOCKED_MOUTH)
 			// to_chat(src, span_warning("\The [status[2]] is in the way!"))
 			balloon_alert(src, "\the [status[2]] is in the way!") // CHOMPEdit - Changed to balloon alert

@@ -95,7 +95,7 @@
 		return
 	if(isturf(usr.loc))
 		// to_chat(usr, span_notice("You empty \the [src] onto the floor."))
-		balloon_alert(usr, "Empted \the [src] onto the floor.") // CHOMPEdit - Changed to balloon alert
+		balloon_alert(usr, "empted \the [src] onto the floor.") // CHOMPEdit - Changed to balloon alert
 		reagents.splash(usr.loc, reagents.total_volume)
 
 //space cleaner

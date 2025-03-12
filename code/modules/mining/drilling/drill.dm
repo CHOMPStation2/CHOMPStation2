@@ -410,10 +410,10 @@
 				stored_ore[ore] = 0 				// Set the value of the ore in the satchel to 0.
 				current_capacity = 0				// Set the amount of ore in the drill to 0.
 		// to_chat(usr, span_notice("You unload the drill's storage cache into the ore box."))
-		balloon_alert(usr, "You onload the drill's storage cache into the ore box.") // CHOMPEdit - Changed to balloon alert
+		balloon_alert(usr, "you onload the drill's storage cache into the ore box.") // CHOMPEdit - Changed to balloon alert
 	else
 		// to_chat(usr, span_notice("You must move an ore box up to the drill before you can unload it."))
-		balloon_alert(usr, "Move an ore box to the droll before unloading it.") // CHOMPEdit - Changed to balloon alert
+		balloon_alert(usr, "move an ore box to the droll before unloading it.") // CHOMPEdit - Changed to balloon alert
 
 
 /obj/machinery/mining/brace
@@ -510,7 +510,7 @@
 
 	if (src.anchored)
 		// to_chat(usr, "It is anchored in place!")
-		balloon_alert(usr, "It is anchored in place!") // CHOMPEdit - Changed to balloon alert
+		balloon_alert(usr, "it is anchored in place!") // CHOMPEdit - Changed to balloon alert
 		return 0
 
 	src.set_dir(turn(src.dir, 270))
