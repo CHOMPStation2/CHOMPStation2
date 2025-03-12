@@ -220,6 +220,8 @@
 	oxygen		= THOR_MOL_O2
 	nitrogen	= THOR_MOL_N2
 	temperature	= THOR_AVG_TEMP
+	animals = "thor_real"
+	//grass = "base"
 	var/tree_chance = 5
 
 /turf/simulated/floor/outdoors/grass/heavy/thor
