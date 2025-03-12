@@ -21,7 +21,7 @@
 		return 1
 
 	if (!user.IsAdvancedToolUser())
-		balloon_alert(user, "You don't have the dexterity to do this!") // CHOMPEdit - Balloon Alerts
+		balloon_alert(user, "you don't have the dexterity to do this!") // CHOMPEdit - Balloon Alerts
 		return 1
 
 	var/available = get_amount()
