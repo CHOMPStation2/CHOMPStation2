@@ -229,6 +229,6 @@
 	melee_damage_upper = 5
 	ai_holder_type = /datum/ai_holder/simple_mob/retaliate
 	meat_amount = 1 // Scrawny little things! It's no wonder they don't want to fight you!
-/mob/living/simple_mob/animal/giant_spider/tunneler/cave/New()
-	..()
+/mob/living/simple_mob/animal/giant_spider/tunneler/cave/Initialize(mapload)
+	. = ..()
 	resize(50)
