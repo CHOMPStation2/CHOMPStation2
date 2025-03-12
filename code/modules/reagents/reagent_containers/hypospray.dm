@@ -154,7 +154,7 @@
 			playsound(src, 'sound/weapons/empty.ogg', 50, 1)
 		else
 			// to_chat(user, span_notice("\The [src] already has a vial."))
-			balloon_alert("\The [src] already has a vial.") // CHOMPEdit - Changed to balloon alert
+			balloon_alert(user, "\The [src] already has a vial.") // CHOMPEdit - Changed to balloon alert
 	else
 		..()
 

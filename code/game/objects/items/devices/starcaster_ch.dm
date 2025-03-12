@@ -27,7 +27,7 @@
 /obj/item/starcaster_news/tgui_interact(mob/user, datum/tgui/ui, datum/tgui/parent_ui)
 	ui = SStgui.try_update_ui(user, src, ui)
 	if(!ui)
-		ui = new(user, src, "StarcasterCh", name) 
+		ui = new(user, src, "StarcasterCh", name)
 		ui.open()
 
 /obj/item/starcaster_news/tgui_data(mob/user, datum/tgui/ui, datum/tgui_state/state) //Mostly ripped off from news_browser.dm

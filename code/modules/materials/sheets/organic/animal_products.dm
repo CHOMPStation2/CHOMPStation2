@@ -29,7 +29,7 @@
 	desc = "A piece of slimy, purplish weed."
 	icon = 'icons/mob/alien.dmi'
 	icon_state = "weed_extract"
-	
+
 /////FUR AND WOOL MATERIALS/////
 
 /datum/material/fur

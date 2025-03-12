@@ -79,7 +79,7 @@
 		var/obj/item/organ/external/affected = H.get_organ(user.zone_sel.selecting)
 		if(!affected)
 			// to_chat(user, span_danger("\The [H] is missing that limb!"))
-			balloon_alert("\The [H] is missing that limb.") // CHOMPEdit - Changed to balloon alert
+			balloon_alert(user, "\The [H] is missing that limb.") // CHOMPEdit - Changed to balloon alert
 			return
 		/* since synths have oil/coolant streams now, it only makes sense that you should be able to inject stuff. preserved for posterity.
 		else if(affected.robotic >= ORGAN_ROBOT)

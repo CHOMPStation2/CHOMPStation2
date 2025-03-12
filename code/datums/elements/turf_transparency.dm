@@ -82,5 +82,5 @@
 	var/mutable_appearance/underlay_appearance = mutable_appearance(initial(path.icon), do_state, layer = TURF_LAYER-0.02, plane = do_plane)
 	underlay_appearance.appearance_flags = RESET_ALPHA | RESET_COLOR
 	our_turf.underlays += underlay_appearance
-	
+
 	return TRUE

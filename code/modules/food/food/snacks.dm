@@ -279,11 +279,11 @@
 			belly_target = tgui_input_list(user, "Choose Belly", "Belly Choice", M.feedable_bellies())
 			if(!(M.feeding))
 				to_chat(user, "You can't feed [M] a whole [src] as they refuse to be fed whole things!")
-				balloon_alert("They refuse to be fed whole things!") // CHOMPEdit
+				balloon_alert(user, "They refuse to be fed whole things!") // CHOMPEdit
 				return
 			if(!belly_target)
 				to_chat(user, "You can't feed [M] a whole [src] as they don't appear to have a belly to fit it!")
-				balloon_alert("They don't have a belly to fit it!")// CHOMPEdit
+				balloon_alert(user, "They don't have a belly to fit it!")// CHOMPEdit
 				return
 			user.visible_message("[user] attempts to make [M] consume [src] whole into their [belly_target].")
 			user.balloon_alert_visible("Attempts to make [M] consume [src] whole into their [belly_target].")// CHOMPEdit

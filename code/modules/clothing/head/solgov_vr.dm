@@ -115,7 +115,7 @@
  */
 /obj/item/clothing/head/beret/solgov
 	name = "peacekeeper beret"
-	desc = "A beret in Solar Central Government colors. For peacekeepers that are more inclined towards style than safety." //YW EDIT: Terran Commonwealth to Solar Central Government 
+	desc = "A beret in Solar Central Government colors. For peacekeepers that are more inclined towards style than safety." //YW EDIT: Terran Commonwealth to Solar Central Government
 
 /obj/item/clothing/head/beret/solgov/homeguard
 	name = "home guard beret"

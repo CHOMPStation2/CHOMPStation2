@@ -31,11 +31,11 @@
 	soundloop = new(list(src), FALSE)
 	soundloop.start()
 	return ..()
-	
+
 /turf/simulated/floor/lava/Destroy()
 	soundloop.stop()
 	QDEL_NULL(soundloop)
-	
+
 	. = ..()
 
 /turf/simulated/floor/lava/make_outdoors()
