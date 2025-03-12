@@ -128,7 +128,7 @@
 	if(default_part_replacement(user, O))
 		return
 	if(istype(O, /obj/item/reagent_containers/food))
-		balloon_alert(user, "Scanning...")
+		balloon_alert(user, "scanning...")
 		if(!do_after(user, 10))
 			return
 		foodcheck(O)
@@ -141,7 +141,7 @@
 		user.drop_item()
 		O.loc = src
 		container = O
-		balloon_alert(user, "Placed \the [O] in \the [src]")
+		balloon_alert(user, "placed \the [O] in \the [src]")
 		return
 
 	return ..()

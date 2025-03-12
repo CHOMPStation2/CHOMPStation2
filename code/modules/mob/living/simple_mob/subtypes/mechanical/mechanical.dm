@@ -18,7 +18,7 @@
 	taser_kill = FALSE
 	poison_resist = 1.0
 	shock_resist = -0.5
-	
+
 	can_be_drop_prey = FALSE //CHOMP Add
 
 /mob/living/simple_mob/mechanical/isSynthetic()

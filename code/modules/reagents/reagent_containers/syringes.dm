@@ -282,7 +282,7 @@
 		var/obj/item/organ/external/affecting = H.get_organ(target_zone)
 
 		if (!affecting || affecting.is_stump())
-			balloon_alert(user, "They are missing that limb!") // CHOMPEdit - Changed to balloon_alert
+			balloon_alert(user, "they are missing that limb!") // CHOMPEdit - Changed to balloon_alert
 			return
 
 		var/hit_area = affecting.name
@@ -301,14 +301,14 @@
 			return
 
 		// user.visible_message(span_danger("[user] stabs [target] in \the [hit_area] with [src.name]!"))
-		balloon_alert_visible("Stabs [target] in \the [hit_area] with [src.name]!") // CHOMPEdit - Changed to balloon alert
+		balloon_alert_visible("stabs [target] in \the [hit_area] with [src.name]!") // CHOMPEdit - Changed to balloon alert
 
 		if(affecting.take_damage(3))
 			H.UpdateDamageIcon()
 
 	else
 		// user.visible_message(span_danger("[user] stabs [target] with [src.name]!"))
-		balloon_alert_visible("Stabs [user] in \the [target] with [src.name]!") // CHOMPEdit - Changed to balloon alert
+		balloon_alert_visible("stabs [user] in \the [target] with [src.name]!") // CHOMPEdit - Changed to balloon alert
 		target.take_organ_damage(3)// 7 is the same as crowbar punch
 
 

@@ -17,10 +17,10 @@
 		else
 			forced_psay = autowhisper
 			// to_chat(src, span_notice("Autowhisper has been [autowhisper ? "enabled. You will now automatically psay/pme when using say/me. As a note, this option will only work if you are in a situation where you can send psay/pme messages! Otherwise it will work as default whisper/subtle" : "disabled"].")) // CHOMPEdit - Balloon alerts
-			balloon_alert(src, "Autowhisper [autowhisper ? "enabled, using psay/pme" : "disabled"]")
+			balloon_alert(src, "autowhisper [autowhisper ? "enabled, using psay/pme" : "disabled"]")
 	else
 		// to_chat(src, span_notice("Autowhisper has been [autowhisper ? "enabled. You will now automatically whisper/subtle when using say/me" : "disabled"].")) // CHOMPEdit - Balloon alerts
-		balloon_alert(src, "Autowhisper [autowhisper ? "enabled" : "disabled"]")
+		balloon_alert(src, "autowhisper [autowhisper ? "enabled" : "disabled"]")
 
 /mob/living/verb/autowhisper_mode()
 	set name = "Autowhisper Mode"
@@ -32,7 +32,7 @@
 	if(!choice || choice == "Adjacent Turfs (Default)")
 		autowhisper_mode = null
 		// to_chat(src, span_notice("Your subtles have returned to the default setting."))
-		balloon_alert(src, "Subtles returned to default setting")
+		balloon_alert(src, "subtles returned to default setting")
 		return
 	if(choice == "Psay/Pme")
 		if(autowhisper)
@@ -45,4 +45,4 @@
 			to_chat(src, span_notice("As a note, this option will only work if you are in a situation where you can send psay/pme messages! Otherwise it will work as default whisper/subtle."))
 	autowhisper_mode = choice
 	// to_chat(src, span_notice("Your subtles have been set to <b>[autowhisper_mode]</b>.")) // CHOMPEdit - Balloon alerts
-	balloon_alert(src, "Subtles set to [autowhisper_mode]")
+	balloon_alert(src, "subtles set to [autowhisper_mode]")

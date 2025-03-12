@@ -22,7 +22,7 @@
 	var/amount = I.get_amount()
 	if(amount < 1)
 		return
-		
+
 	count = min(count, amount)
 
 	while(count > 0)

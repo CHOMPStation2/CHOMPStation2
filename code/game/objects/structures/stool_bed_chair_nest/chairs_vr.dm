@@ -16,7 +16,7 @@
 /obj/structure/bed/chair/sofa/corner
 	base_icon = "sofacorner"
 	icon_state = "sofacorner"	//CHOMPstation edit: preview in map maker
-	
+
 /obj/structure/bed/chair/modern_chair
 	name = "modern chair"
 	desc = "It's like sitting in an egg."

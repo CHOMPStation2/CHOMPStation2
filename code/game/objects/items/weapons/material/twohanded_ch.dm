@@ -97,4 +97,3 @@
 /obj/item/material/twohanded/sledgehammer/mjollnir/update_icon()  //Currently only here to fuck with the on-mob icons.
 	icon_state = "mjollnir[wielded]"
 	return
-
