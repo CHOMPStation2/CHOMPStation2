@@ -5018,9 +5018,6 @@
 	},
 /turf/simulated/floor/holofloor/tiled,
 /area/holodeck/source_thunderdomecourt)
-"yO" = (
-/turf/unsimulated/wall,
-/area)
 "yR" = (
 /obj/machinery/mech_recharger,
 /turf/unsimulated/floor{
@@ -10505,7 +10502,7 @@ sv
 sv
 sv
 sv
-yO
+sv
 zR
 Xn
 Xn

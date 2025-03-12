@@ -5738,21 +5738,6 @@
 /obj/machinery/meter,
 /turf/simulated/floor/tiled/white,
 /area/rnd/outpost/heating)
-"pf" = (
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/turf/simulated/floor/tiled,
-/area/gateway)
 "pg" = (
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled,
@@ -34652,7 +34637,7 @@ UK
 UK
 Mz
 TI
-pf
+bN
 hE
 Oc
 pr
@@ -34976,7 +34961,7 @@ tv
 UK
 aX
 aX
-pf
+bN
 kG
 jH
 Oz
@@ -35300,7 +35285,7 @@ UK
 UK
 aX
 aX
-pf
+bN
 kG
 oA
 Jn

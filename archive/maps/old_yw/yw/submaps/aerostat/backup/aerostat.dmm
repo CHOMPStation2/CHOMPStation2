@@ -26,7 +26,7 @@
 	},
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/plating/bor4,
-/area/cryogaia_away/aerostat)
+/area/cryogaia_away/aerostat/solars)
 "af" = (
 /obj/structure/cable/yellow{
 	icon_state = "0-8"
@@ -37,7 +37,7 @@
 /obj/machinery/power/solar,
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/plating/bor4,
-/area/cryogaia_away/aerostat)
+/area/cryogaia_away/aerostat/solars)
 "ag" = (
 /obj/structure/cable/yellow{
 	icon_state = "2-4"
@@ -47,7 +47,7 @@
 	},
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/plating/bor4,
-/area/cryogaia_away/aerostat)
+/area/cryogaia_away/aerostat/solars)
 "ah" = (
 /obj/effect/floor_decal/industrial/warning/dust/corner,
 /obj/effect/floor_decal/industrial/warning/dust{
@@ -122,7 +122,7 @@
 	},
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/plating/bor4,
-/area/cryogaia_away/aerostat)
+/area/cryogaia_away/aerostat/solars)
 "ar" = (
 /obj/machinery/light/small{
 	dir = 4
@@ -135,7 +135,7 @@
 	},
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/plating/bor4,
-/area/cryogaia_away/aerostat)
+/area/cryogaia_away/aerostat/solars)
 "at" = (
 /obj/structure/table/standard,
 /obj/fiftyspawner/osmium,
@@ -154,7 +154,7 @@
 	},
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/plating/bor4,
-/area/cryogaia_away/aerostat)
+/area/cryogaia_away/aerostat/solars)
 "aw" = (
 /turf/unsimulated/floor/sky/bor4_sky,
 /area/cryogaia_away/aerostat)
@@ -168,7 +168,7 @@
 	},
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/plating/bor4,
-/area/cryogaia_away/aerostat)
+/area/cryogaia_away/aerostat/solars)
 "ay" = (
 /obj/effect/floor_decal/industrial/warning/dust{
 	dir = 1
@@ -178,7 +178,7 @@
 	},
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/plating/bor4,
-/area/cryogaia_away/aerostat)
+/area/cryogaia_away/aerostat/solars)
 "az" = (
 /obj/machinery/atmospherics/binary/algae_farm,
 /obj/machinery/atmospherics/pipe/simple/hidden/black{
@@ -204,7 +204,7 @@
 	},
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/plating/bor4,
-/area/cryogaia_away/aerostat)
+/area/cryogaia_away/aerostat/solars)
 "aC" = (
 /obj/machinery/atmospherics/binary/algae_farm,
 /obj/machinery/atmospherics/pipe/simple/hidden/black{
@@ -220,7 +220,7 @@
 "aD" = (
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/plating/bor4,
-/area/cryogaia_away/aerostat)
+/area/cryogaia_away/aerostat/solars)
 "aE" = (
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
@@ -233,7 +233,7 @@
 	},
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/plating/bor4,
-/area/cryogaia_away/aerostat)
+/area/cryogaia_away/aerostat/solars)
 "aF" = (
 /obj/machinery/atmospherics/binary/algae_farm,
 /obj/machinery/atmospherics/pipe/simple/hidden/black{
@@ -249,7 +249,7 @@
 /obj/machinery/power/solar,
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/plating/bor4,
-/area/cryogaia_away/aerostat)
+/area/cryogaia_away/aerostat/solars)
 "aH" = (
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
@@ -259,7 +259,7 @@
 	},
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/plating/bor4,
-/area/cryogaia_away/aerostat)
+/area/cryogaia_away/aerostat/solars)
 "aI" = (
 /obj/machinery/atmospherics/binary/algae_farm,
 /obj/machinery/atmospherics/pipe/simple/hidden/black{
@@ -314,12 +314,6 @@
 	},
 /turf/simulated/floor/bluegrid/bor4,
 /area/cryogaia_away/aerostat/inside)
-"aQ" = (
-/obj/structure/cable{
-	icon_state = "2-4"
-	},
-/turf/simulated/floor/bluegrid/bor4,
-/area/cryogaia_away/aerostat/inside)
 "aR" = (
 /obj/machinery/light/small,
 /turf/simulated/floor/bluegrid/bor4,
@@ -330,14 +324,14 @@
 	},
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/plating/bor4,
-/area/cryogaia_away/aerostat)
+/area/cryogaia_away/aerostat/solars)
 "aT" = (
 /obj/effect/floor_decal/industrial/warning/dust{
 	dir = 8
 	},
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/plating/bor4,
-/area/cryogaia_away/aerostat)
+/area/cryogaia_away/aerostat/solars)
 "aU" = (
 /obj/machinery/power/solar,
 /obj/structure/cable/yellow{
@@ -345,7 +339,7 @@
 	},
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/plating/bor4,
-/area/cryogaia_away/aerostat)
+/area/cryogaia_away/aerostat/solars)
 "aV" = (
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
@@ -355,7 +349,7 @@
 	},
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/plating/bor4,
-/area/cryogaia_away/aerostat)
+/area/cryogaia_away/aerostat/solars)
 "aW" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "1-8"
@@ -383,14 +377,14 @@
 	},
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/plating/bor4,
-/area/cryogaia_away/aerostat)
+/area/cryogaia_away/aerostat/solars)
 "aZ" = (
 /obj/structure/cable/yellow{
 	icon_state = "2-4"
 	},
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/plating/bor4,
-/area/cryogaia_away/aerostat)
+/area/cryogaia_away/aerostat/solars)
 "ba" = (
 /obj/structure/cable/yellow{
 	icon_state = "2-4"
@@ -400,14 +394,14 @@
 	},
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/plating/bor4,
-/area/cryogaia_away/aerostat)
+/area/cryogaia_away/aerostat/solars)
 "bb" = (
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
 	},
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/plating/bor4,
-/area/cryogaia_away/aerostat)
+/area/cryogaia_away/aerostat/solars)
 "bc" = (
 /obj/structure/cable/yellow{
 	icon_state = "1-4"
@@ -420,7 +414,7 @@
 	},
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/plating/bor4,
-/area/cryogaia_away/aerostat)
+/area/cryogaia_away/aerostat/solars)
 "bd" = (
 /turf/simulated/shuttle/wall,
 /area/shuttle/aerostat)
@@ -508,7 +502,7 @@
 	},
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/plating/bor4,
-/area/cryogaia_away/aerostat)
+/area/cryogaia_away/aerostat/solars)
 "bu" = (
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
@@ -518,7 +512,7 @@
 	},
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/plating/bor4,
-/area/cryogaia_away/aerostat)
+/area/cryogaia_away/aerostat/solars)
 "bv" = (
 /turf/simulated/wall/bor4,
 /area/cryogaia_away/aerostat/inside)
@@ -725,10 +719,6 @@
 	icon_state = "void-hc"
 	},
 /area/cryogaia_away/aerostat/inside)
-"cf" = (
-/obj/effect/shuttle_landmark/premade/aerostat/aerostat_west,
-/turf/simulated/shuttle/floor/yellow,
-/area/shuttle/aerostat)
 "cg" = (
 /obj/machinery/door/airlock/multi_tile/metal{
 	icon_state = "door_closed";
@@ -756,10 +746,6 @@
 	},
 /turf/simulated/shuttle/floor/yellow,
 /area/shuttle/aerostat)
-"ck" = (
-/obj/effect/shuttle_landmark/premade/aerostat/aerostat_northwest,
-/turf/unsimulated/floor/sky/bor4_sky,
-/area/cryogaia_away/aerostat)
 "cl" = (
 /obj/machinery/light,
 /turf/simulated/shuttle/floor/yellow,
@@ -828,7 +814,12 @@
 /turf/simulated/floor/plating/bor4,
 /area/cryogaia_away/aerostat/inside)
 "cv" = (
-/obj/effect/shuttle_landmark/premade/aerostat/aerostat_northeast,
+/obj/effect/shuttle_landmark{
+	base_area = /area/cryogaia_away/aerostat;
+	base_turf = /turf/unsimulated/floor/sky/bor4_sky;
+	landmark_tag = "aerostat_west";
+	name = "Virgo 2 Aerostat (W)"
+	},
 /turf/unsimulated/floor/sky/bor4_sky,
 /area/cryogaia_away/aerostat)
 "cw" = (
@@ -841,13 +832,13 @@
 	},
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/plating/bor4,
-/area/cryogaia_away/aerostat)
+/area/cryogaia_away/aerostat/solars)
 "cy" = (
 /obj/effect/floor_decal/industrial/warning/dust{
 	dir = 4
 	},
 /turf/simulated/floor/plating/bor4,
-/area/cryogaia_away/aerostat)
+/area/cryogaia_away/aerostat/solars)
 "cz" = (
 /obj/effect/floor_decal/industrial/warning/dust,
 /turf/simulated/floor/tiled/techfloor/bor4,
@@ -1034,7 +1025,7 @@
 	},
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/plating/bor4,
-/area/cryogaia_away/aerostat)
+/area/cryogaia_away/aerostat/solars)
 "dc" = (
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
@@ -1044,7 +1035,7 @@
 	},
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/plating/bor4,
-/area/cryogaia_away/aerostat)
+/area/cryogaia_away/aerostat/solars)
 "dd" = (
 /obj/effect/floor_decal/industrial/warning/dust{
 	dir = 4
@@ -1057,7 +1048,7 @@
 	},
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/plating/bor4,
-/area/cryogaia_away/aerostat)
+/area/cryogaia_away/aerostat/solars)
 "de" = (
 /obj/structure/cable/yellow{
 	icon_state = "2-8"
@@ -1067,19 +1058,19 @@
 	},
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/plating/bor4,
-/area/cryogaia_away/aerostat)
+/area/cryogaia_away/aerostat/solars)
 "df" = (
 /obj/machinery/power/tracker,
 /obj/structure/cable/yellow,
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/plating/bor4,
-/area/cryogaia_away/aerostat)
+/area/cryogaia_away/aerostat/solars)
 "dg" = (
 /obj/machinery/power/solar_control,
 /obj/structure/cable/yellow,
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/plating/bor4,
-/area/cryogaia_away/aerostat)
+/area/cryogaia_away/aerostat/solars)
 "dh" = (
 /obj/structure/cable{
 	icon_state = "2-8"
@@ -1096,14 +1087,14 @@
 	},
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/plating/bor4,
-/area/cryogaia_away/aerostat)
+/area/cryogaia_away/aerostat/solars)
 "dj" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
 	},
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/plating/bor4,
-/area/cryogaia_away/aerostat)
+/area/cryogaia_away/aerostat/solars)
 "dk" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
@@ -1113,7 +1104,7 @@
 	},
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/plating/bor4,
-/area/cryogaia_away/aerostat)
+/area/cryogaia_away/aerostat/solars)
 "dl" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
@@ -1123,7 +1114,7 @@
 	},
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/plating/bor4,
-/area/cryogaia_away/aerostat)
+/area/cryogaia_away/aerostat/solars)
 "dm" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "0-8"
@@ -1134,7 +1125,7 @@
 	},
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/plating/bor4,
-/area/cryogaia_away/aerostat)
+/area/cryogaia_away/aerostat/solars)
 "dn" = (
 /obj/machinery/power/terminal{
 	dir = 4
@@ -1156,7 +1147,7 @@
 	},
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/plating/bor4,
-/area/cryogaia_away/aerostat)
+/area/cryogaia_away/aerostat/solars)
 "dp" = (
 /obj/effect/floor_decal/industrial/warning/dust{
 	dir = 4
@@ -1166,14 +1157,14 @@
 	},
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/plating/bor4,
-/area/cryogaia_away/aerostat)
+/area/cryogaia_away/aerostat/solars)
 "dq" = (
 /obj/structure/cable/yellow{
 	icon_state = "1-8"
 	},
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/plating/bor4,
-/area/cryogaia_away/aerostat)
+/area/cryogaia_away/aerostat/solars)
 "dr" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "2-4"
@@ -1196,7 +1187,7 @@
 	},
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/plating/bor4,
-/area/cryogaia_away/aerostat)
+/area/cryogaia_away/aerostat/solars)
 "du" = (
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
@@ -1206,7 +1197,7 @@
 	},
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/plating/bor4,
-/area/cryogaia_away/aerostat)
+/area/cryogaia_away/aerostat/solars)
 "dv" = (
 /obj/effect/floor_decal/industrial/warning/dust{
 	dir = 4
@@ -1216,11 +1207,11 @@
 	},
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/plating/bor4,
-/area/cryogaia_away/aerostat)
+/area/cryogaia_away/aerostat/solars)
 "dw" = (
-/obj/effect/shuttle_landmark/premade/aerostat/aerostat_east,
+/obj/structure/metal_edge,
 /turf/unsimulated/floor/sky/bor4_sky,
-/area/cryogaia_away/aerostat)
+/area/cryogaia_away/aerostat/solars)
 "dx" = (
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
@@ -1233,7 +1224,7 @@
 	},
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/plating/bor4,
-/area/cryogaia_away/aerostat)
+/area/cryogaia_away/aerostat/solars)
 "dy" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
@@ -1250,12 +1241,12 @@
 	},
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/plating/bor4,
-/area/cryogaia_away/aerostat)
+/area/cryogaia_away/aerostat/solars)
 "dA" = (
 /obj/effect/floor_decal/rust,
 /obj/effect/decal/cleanable/blood,
 /turf/simulated/floor/plating/bor4,
-/area/cryogaia_away/aerostat)
+/area/cryogaia_away/aerostat/solars)
 "dB" = (
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
@@ -1265,7 +1256,7 @@
 	},
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/plating/bor4,
-/area/cryogaia_away/aerostat)
+/area/cryogaia_away/aerostat/solars)
 "dC" = (
 /obj/effect/floor_decal/industrial/warning/dust{
 	dir = 4
@@ -1278,7 +1269,7 @@
 	},
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/plating/bor4,
-/area/cryogaia_away/aerostat)
+/area/cryogaia_away/aerostat/solars)
 "dD" = (
 /obj/effect/floor_decal/industrial/warning/dust{
 	dir = 4
@@ -1286,14 +1277,14 @@
 /obj/effect/floor_decal/rust,
 /obj/random/powercell,
 /turf/simulated/floor/plating/bor4,
-/area/cryogaia_away/aerostat)
+/area/cryogaia_away/aerostat/solars)
 "dE" = (
 /obj/effect/floor_decal/rust,
 /obj/structure/bed/chair{
 	dir = 8
 	},
 /turf/simulated/floor/plating/bor4,
-/area/cryogaia_away/aerostat)
+/area/cryogaia_away/aerostat/solars)
 "dF" = (
 /obj/structure/cable/yellow{
 	icon_state = "1-4"
@@ -1303,7 +1294,7 @@
 	},
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/plating/bor4,
-/area/cryogaia_away/aerostat)
+/area/cryogaia_away/aerostat/solars)
 "dG" = (
 /obj/structure/cable/yellow{
 	icon_state = "0-8"
@@ -1312,7 +1303,7 @@
 /obj/machinery/power/solar,
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/plating/bor4,
-/area/cryogaia_away/aerostat)
+/area/cryogaia_away/aerostat/solars)
 "dH" = (
 /obj/structure/cable/yellow{
 	icon_state = "1-4"
@@ -1320,7 +1311,7 @@
 /obj/effect/floor_decal/industrial/warning/dust,
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/plating/bor4,
-/area/cryogaia_away/aerostat)
+/area/cryogaia_away/aerostat/solars)
 "dI" = (
 /obj/structure/cable/yellow{
 	icon_state = "0-8"
@@ -1329,14 +1320,14 @@
 /obj/effect/floor_decal/industrial/warning/dust,
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/plating/bor4,
-/area/cryogaia_away/aerostat)
+/area/cryogaia_away/aerostat/solars)
 "dJ" = (
 /obj/effect/floor_decal/industrial/warning/dust{
 	dir = 6
 	},
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/plating/bor4,
-/area/cryogaia_away/aerostat)
+/area/cryogaia_away/aerostat/solars)
 "dK" = (
 /obj/machinery/power/smes/buildable,
 /obj/structure/cable,
@@ -1390,7 +1381,7 @@
 	},
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/plating/bor4,
-/area/cryogaia_away/aerostat)
+/area/cryogaia_away/aerostat/solars)
 "dR" = (
 /obj/machinery/power/solar,
 /obj/effect/floor_decal/industrial/warning/dust,
@@ -1399,7 +1390,7 @@
 	},
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/plating/bor4,
-/area/cryogaia_away/aerostat)
+/area/cryogaia_away/aerostat/solars)
 "dS" = (
 /obj/effect/floor_decal/industrial/warning/dust,
 /obj/structure/cable/yellow{
@@ -1407,7 +1398,7 @@
 	},
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/plating/bor4,
-/area/cryogaia_away/aerostat)
+/area/cryogaia_away/aerostat/solars)
 "dT" = (
 /obj/effect/floor_decal/industrial/warning/dust{
 	dir = 6
@@ -1417,12 +1408,12 @@
 	},
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/plating/bor4,
-/area/cryogaia_away/aerostat)
+/area/cryogaia_away/aerostat/solars)
 "dU" = (
 /obj/effect/floor_decal/rust,
 /obj/random/powercell,
 /turf/simulated/floor/plating/bor4,
-/area/cryogaia_away/aerostat)
+/area/cryogaia_away/aerostat/solars)
 "dV" = (
 /obj/machinery/access_button{
 	frequency = 1089;
@@ -1506,10 +1497,6 @@
 	},
 /turf/simulated/floor/plating/bor4,
 /area/cryogaia_away/aerostat/inside)
-"ed" = (
-/obj/effect/shuttle_landmark/premade/aerostat/aerostat_south,
-/turf/unsimulated/floor/sky/bor4_sky,
-/area/cryogaia_away/aerostat)
 "eE" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/random/toolbox,
@@ -1551,10 +1538,28 @@
 /obj/random/contraband,
 /turf/simulated/floor/tiled/techfloor/bor4,
 /area/cryogaia_away/aerostat/inside)
+"kD" = (
+/obj/effect/shuttle_landmark{
+	base_area = /area/cryogaia_away/aerostat;
+	base_turf = /turf/unsimulated/floor/sky/bor4_sky;
+	landmark_tag = "aerostat_northwest";
+	name = "Virgo 2 Aerostat (NW)"
+	},
+/turf/unsimulated/floor/sky/bor4_sky,
+/area/cryogaia_away/aerostat)
 "kF" = (
 /obj/random/action_figure,
 /turf/simulated/floor/tiled/techfloor/bor4,
 /area/cryogaia_away/aerostat/inside)
+"pd" = (
+/obj/effect/shuttle_landmark{
+	base_area = /area/cryogaia_away/aerostat;
+	base_turf = /turf/unsimulated/floor/sky/bor4_sky;
+	landmark_tag = "aerostat_east";
+	name = "Virgo 2 Aerostat (E)"
+	},
+/turf/simulated/shuttle/floor/yellow,
+/area/shuttle/aerostat)
 "tZ" = (
 /obj/structure/table/standard,
 /obj/random/powercell,
@@ -1575,6 +1580,15 @@
 /obj/structure/salvageable/autolathe,
 /turf/simulated/floor/tiled/techfloor/bor4,
 /area/cryogaia_away/aerostat/inside)
+"zX" = (
+/obj/effect/shuttle_landmark{
+	base_area = /area/cryogaia_away/aerostat;
+	base_turf = /turf/unsimulated/floor/sky/bor4_sky;
+	landmark_tag = "aerostat_south";
+	name = "Virgo 2 Aerostat (S)"
+	},
+/turf/unsimulated/floor/sky/bor4_sky,
+/area/cryogaia_away/aerostat)
 "AS" = (
 /obj/effect/floor_decal/industrial/warning/dust{
 	dir = 4
@@ -1582,6 +1596,15 @@
 /obj/random/toolbox,
 /turf/simulated/floor/tiled/techfloor/bor4,
 /area/cryogaia_away/aerostat/inside)
+"Dt" = (
+/obj/effect/shuttle_landmark{
+	base_area = /area/cryogaia_away/aerostat;
+	base_turf = /turf/unsimulated/floor/sky/bor4_sky;
+	landmark_tag = "aerostat_northeast";
+	name = "Virgo 2 Aerostat (NE)"
+	},
+/turf/unsimulated/floor/sky/bor4_sky,
+/area/cryogaia_away/aerostat)
 "Du" = (
 /obj/effect/floor_decal/industrial/warning/dust{
 	dir = 1
@@ -1645,7 +1668,7 @@
 /turf/simulated/floor/tiled/techfloor/bor4,
 /area/cryogaia_away/aerostat/inside)
 "Tq" = (
-/obj/effect/overmap/visitable/sector/borealis4,
+/obj/effect/overmap/visitable/sector/bor4,
 /turf/unsimulated/floor/sky/bor4_sky,
 /area/cryogaia_away/aerostat)
 "TR" = (
@@ -5125,7 +5148,7 @@ aw
 aT
 aT
 aT
-JG
+dw
 aw
 aw
 aw
@@ -5268,7 +5291,7 @@ aD
 aD
 aD
 aD
-JG
+dw
 aw
 aw
 aw
@@ -5337,7 +5360,7 @@ aw
 aT
 aT
 aT
-JG
+dw
 aw
 aw
 aw
@@ -5411,7 +5434,7 @@ df
 aD
 aD
 aD
-JG
+dw
 aw
 aw
 aw
@@ -5480,7 +5503,7 @@ aD
 aD
 aD
 aD
-JG
+dw
 aw
 aw
 aw
@@ -5554,7 +5577,7 @@ aD
 aD
 aD
 aD
-JG
+dw
 aw
 aw
 aw
@@ -5623,7 +5646,7 @@ df
 aD
 aD
 aD
-JG
+dw
 aw
 aw
 aw
@@ -5697,7 +5720,7 @@ aD
 aD
 aD
 aD
-JG
+dw
 aw
 aw
 aw
@@ -5766,7 +5789,7 @@ aD
 aD
 aD
 aD
-JG
+dw
 aw
 aw
 aw
@@ -5840,7 +5863,7 @@ dx
 dx
 dx
 dF
-JG
+dw
 aw
 aw
 aw
@@ -5909,7 +5932,7 @@ aD
 aD
 aD
 aD
-JG
+dw
 aw
 aw
 aw
@@ -5982,7 +6005,7 @@ aG
 aG
 aG
 dG
-JG
+dw
 aw
 aw
 aw
@@ -6052,7 +6075,7 @@ dx
 dx
 dx
 dF
-JG
+dw
 aw
 aw
 aw
@@ -6124,7 +6147,7 @@ dz
 dz
 dz
 dH
-JG
+dw
 aw
 aw
 aw
@@ -6146,17 +6169,17 @@ aw
 aw
 aw
 aw
-bd
-bd
-bd
-bd
-bd
-bd
-bd
-bd
-bd
-bd
-bd
+aw
+aw
+aw
+aw
+aw
+aw
+aw
+aw
+aw
+aw
+aw
 aw
 aw
 aw
@@ -6194,7 +6217,7 @@ aG
 aG
 aG
 dG
-JG
+dw
 aw
 aw
 aw
@@ -6266,7 +6289,7 @@ aG
 aG
 aG
 dG
-JG
+dw
 aw
 aw
 aw
@@ -6288,17 +6311,17 @@ aw
 aw
 aw
 aw
-bd
-bI
-br
-br
-br
-bg
-bg
-br
-br
-br
-bd
+aw
+aw
+aw
+aw
+aw
+aw
+aw
+aw
+aw
+aw
+aw
 aw
 aw
 aw
@@ -6336,7 +6359,7 @@ dz
 dz
 dz
 dH
-JG
+dw
 aw
 aw
 aw
@@ -6408,7 +6431,7 @@ dz
 dz
 dz
 dH
-JG
+dw
 aw
 aw
 aw
@@ -6430,17 +6453,17 @@ aw
 aw
 aw
 aw
-bd
-cj
-bg
-bg
-bg
-bg
-bg
-bg
-bg
-cl
-bd
+aw
+aw
+aw
+aw
+aw
+aw
+aw
+aw
+aw
+aw
+aw
 aw
 aw
 aw
@@ -6478,7 +6501,7 @@ aG
 aG
 aG
 dG
-JG
+dw
 aw
 aw
 aw
@@ -6550,7 +6573,7 @@ aG
 aG
 aG
 dG
-JG
+dw
 aw
 aw
 aw
@@ -6572,17 +6595,17 @@ aw
 aw
 aw
 aw
-bd
-bI
-bH
-bH
-bH
-cf
-bg
-bH
-bH
-bH
-bd
+aw
+aw
+aw
+aw
+aw
+cv
+aw
+aw
+aw
+aw
+aw
 aw
 aw
 aw
@@ -6620,7 +6643,7 @@ dz
 dz
 dz
 dH
-JG
+dw
 aw
 aw
 aw
@@ -6692,7 +6715,7 @@ dz
 dz
 dz
 dH
-JG
+dw
 aw
 aw
 aw
@@ -6714,17 +6737,17 @@ aw
 aw
 aw
 aw
-bd
-bd
-bd
-bd
-bd
-bh
-bh
-bd
-bd
-bd
-bd
+aw
+aw
+aw
+aw
+aw
+aw
+aw
+aw
+aw
+aw
+aw
 aw
 aw
 aw
@@ -6762,7 +6785,7 @@ aG
 aG
 aG
 dG
-JG
+dw
 aw
 aw
 aw
@@ -6834,7 +6857,7 @@ aG
 aG
 aG
 dG
-JG
+dw
 aw
 aw
 aw
@@ -6904,7 +6927,7 @@ dz
 dz
 dz
 dH
-JG
+dw
 aw
 aw
 aw
@@ -6976,7 +6999,7 @@ dz
 dz
 dz
 dH
-JG
+dw
 aw
 aw
 aw
@@ -7046,7 +7069,7 @@ aG
 aG
 aG
 dG
-JG
+dw
 aw
 aw
 aw
@@ -7118,7 +7141,7 @@ aG
 aG
 aG
 dG
-JG
+dw
 aw
 aw
 aw
@@ -7188,7 +7211,7 @@ dz
 dz
 dz
 dH
-JG
+dw
 aw
 aw
 aw
@@ -7260,7 +7283,7 @@ dz
 dz
 dz
 dH
-JG
+dw
 aw
 aw
 aw
@@ -7330,7 +7353,7 @@ aG
 aG
 aG
 dG
-JG
+dw
 aw
 aw
 aw
@@ -7402,7 +7425,7 @@ aG
 aG
 aG
 dG
-JG
+dw
 aw
 aw
 aw
@@ -7472,7 +7495,7 @@ dz
 dz
 dz
 dH
-JG
+dw
 aw
 aw
 aw
@@ -7544,7 +7567,7 @@ dz
 dz
 dz
 dH
-JG
+dw
 aw
 aw
 aw
@@ -7614,7 +7637,7 @@ aG
 aG
 aG
 dG
-JG
+dw
 aw
 aw
 aw
@@ -7686,7 +7709,7 @@ aG
 aG
 aG
 dG
-JG
+dw
 aw
 aw
 aw
@@ -7756,7 +7779,7 @@ dz
 dz
 dz
 dH
-JG
+dw
 aw
 aw
 aw
@@ -7828,7 +7851,7 @@ dz
 dz
 dz
 dH
-JG
+dw
 aw
 aw
 aw
@@ -7898,7 +7921,7 @@ aG
 aG
 aG
 dG
-JG
+dw
 aw
 aw
 aw
@@ -7970,7 +7993,7 @@ aG
 aG
 aG
 dI
-JG
+dw
 aw
 aw
 aw
@@ -8040,7 +8063,7 @@ dz
 dz
 dz
 dH
-JG
+dw
 aw
 aw
 aw
@@ -8112,7 +8135,7 @@ dD
 aS
 aS
 dJ
-JG
+dw
 aw
 aw
 aw
@@ -8182,7 +8205,7 @@ aG
 aG
 aG
 dI
-JG
+dw
 aw
 aw
 aw
@@ -8324,7 +8347,7 @@ aS
 aS
 aS
 dJ
-JG
+dw
 aw
 aw
 aw
@@ -8394,7 +8417,7 @@ bb
 aD
 aD
 aD
-JG
+dw
 aw
 aw
 aw
@@ -8465,7 +8488,7 @@ aD
 aD
 aD
 aD
-JG
+dw
 aw
 aw
 aw
@@ -8535,7 +8558,7 @@ di
 dq
 aD
 aD
-JG
+dw
 aw
 aw
 aw
@@ -8606,7 +8629,7 @@ bb
 aD
 aD
 aD
-JG
+dw
 aw
 aw
 aw
@@ -8676,7 +8699,7 @@ aD
 dj
 aD
 aD
-JG
+dw
 aw
 aw
 aw
@@ -8747,7 +8770,7 @@ di
 dq
 aD
 aD
-JG
+dw
 aw
 aw
 aw
@@ -8817,7 +8840,7 @@ aw
 cy
 dk
 cy
-JG
+dw
 aw
 aw
 aw
@@ -8888,7 +8911,7 @@ aD
 dj
 aD
 aD
-JG
+dw
 aw
 aw
 aw
@@ -9029,7 +9052,7 @@ aw
 aS
 dk
 aS
-JG
+dw
 aw
 aw
 aw
@@ -10792,7 +10815,7 @@ aw
 aw
 aw
 aw
-ck
+kD
 aw
 aw
 aw
@@ -11405,7 +11428,7 @@ cI
 be
 ac
 aK
-aQ
+aM
 dn
 dn
 dN
@@ -11589,7 +11612,7 @@ be
 be
 VR
 aw
-ed
+zX
 aw
 aw
 aw
@@ -12354,7 +12377,7 @@ aw
 aw
 aw
 aw
-cv
+Dt
 aw
 aw
 aw
@@ -14283,7 +14306,7 @@ aw
 aT
 dl
 aT
-JG
+dw
 aw
 aw
 aw
@@ -14355,7 +14378,7 @@ aw
 aT
 dl
 aT
-JG
+dw
 aw
 aw
 aw
@@ -14426,7 +14449,7 @@ aD
 dj
 aD
 aD
-JG
+dw
 aw
 aw
 aw
@@ -14498,7 +14521,7 @@ aD
 dj
 aD
 aD
-JG
+dw
 aw
 aw
 aw
@@ -14569,7 +14592,7 @@ dm
 dt
 aD
 aD
-JG
+dw
 aw
 aw
 aw
@@ -14641,7 +14664,7 @@ dm
 dt
 dA
 aD
-JG
+dw
 aw
 aw
 aw
@@ -14712,7 +14735,7 @@ bb
 aD
 aD
 aD
-JG
+dw
 aw
 aw
 aw
@@ -14784,7 +14807,7 @@ bb
 aD
 aD
 dE
-JG
+dw
 aw
 aw
 aw
@@ -14855,7 +14878,7 @@ aD
 aD
 aD
 aD
-JG
+dw
 aw
 aw
 aw
@@ -14927,7 +14950,7 @@ aD
 aD
 aD
 aD
-JG
+dw
 aw
 aw
 aw
@@ -14998,7 +15021,7 @@ aT
 aT
 aT
 dQ
-JG
+dw
 aw
 aw
 aw
@@ -15070,7 +15093,7 @@ aT
 aT
 aT
 dQ
-JG
+dw
 aw
 aw
 aw
@@ -15140,7 +15163,7 @@ aU
 aU
 aU
 dR
-JG
+dw
 aw
 aw
 aw
@@ -15212,7 +15235,7 @@ aU
 aU
 aU
 dR
-JG
+dw
 aw
 aw
 aw
@@ -15282,7 +15305,7 @@ dB
 dB
 dB
 dS
-JG
+dw
 aw
 aw
 aw
@@ -15354,7 +15377,7 @@ dB
 dB
 dB
 dS
-JG
+dw
 aw
 aw
 aw
@@ -15424,7 +15447,7 @@ aU
 aU
 aU
 dR
-JG
+dw
 aw
 aw
 aw
@@ -15496,7 +15519,7 @@ aU
 aU
 aU
 dR
-JG
+dw
 aw
 aw
 aw
@@ -15566,7 +15589,7 @@ dB
 dB
 dB
 dS
-JG
+dw
 aw
 aw
 aw
@@ -15638,7 +15661,7 @@ dB
 dB
 dB
 dS
-JG
+dw
 aw
 aw
 aw
@@ -15708,7 +15731,7 @@ aU
 aU
 aU
 dR
-JG
+dw
 aw
 aw
 aw
@@ -15780,7 +15803,7 @@ aU
 aU
 aU
 dR
-JG
+dw
 aw
 aw
 aw
@@ -15850,7 +15873,7 @@ dB
 dB
 dB
 dS
-JG
+dw
 aw
 aw
 aw
@@ -15922,7 +15945,7 @@ dB
 dB
 dB
 dS
-JG
+dw
 aw
 aw
 aw
@@ -15992,7 +16015,7 @@ aU
 aU
 aU
 dR
-JG
+dw
 aw
 aw
 aw
@@ -16064,7 +16087,7 @@ aU
 aU
 aU
 dR
-JG
+dw
 aw
 aw
 aw
@@ -16134,7 +16157,7 @@ dB
 dB
 dB
 dS
-JG
+dw
 aw
 aw
 aw
@@ -16206,7 +16229,7 @@ dB
 dB
 dB
 dS
-JG
+dw
 aw
 aw
 aw
@@ -16276,7 +16299,7 @@ aU
 aU
 aU
 dR
-JG
+dw
 aw
 aw
 aw
@@ -16348,7 +16371,7 @@ aU
 aU
 aU
 dR
-JG
+dw
 aw
 aw
 aw
@@ -16418,7 +16441,7 @@ dB
 dB
 dB
 dS
-JG
+dw
 aw
 aw
 aw
@@ -16490,7 +16513,7 @@ dB
 dB
 dB
 dS
-JG
+dw
 aw
 aw
 aw
@@ -16512,17 +16535,17 @@ aw
 aw
 aw
 aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
+bd
+bd
+bd
+bd
+bd
+bh
+bh
+bd
+bd
+bd
+bd
 aw
 aw
 aw
@@ -16560,7 +16583,7 @@ aU
 aU
 aU
 dR
-JG
+dw
 aw
 aw
 aw
@@ -16632,39 +16655,39 @@ aU
 aU
 aU
 dR
-JG
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
 dw
 aw
 aw
 aw
 aw
 aw
+aw
+aw
+aw
+aw
+aw
+aw
+aw
+aw
+aw
+aw
+aw
+aw
+aw
+aw
+aw
+aw
+bd
+bI
+br
+br
+br
+pd
+bg
+br
+br
+br
+bd
 aw
 aw
 aw
@@ -16702,7 +16725,7 @@ dB
 dB
 dB
 dS
-JG
+dw
 aw
 aw
 aw
@@ -16774,7 +16797,7 @@ dB
 dB
 dB
 dS
-JG
+dw
 aw
 aw
 aw
@@ -16796,17 +16819,17 @@ aw
 aw
 aw
 aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
+bd
+cj
+bg
+bg
+bg
+bg
+bg
+bg
+bg
+cl
+bd
 aw
 aw
 aw
@@ -16844,7 +16867,7 @@ aU
 aU
 aU
 dR
-JG
+dw
 aw
 aw
 aw
@@ -16916,7 +16939,7 @@ aU
 aU
 aU
 dR
-JG
+dw
 aw
 aw
 aw
@@ -16938,17 +16961,17 @@ aw
 aw
 aw
 aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
+bd
+bI
+bH
+bH
+bH
+bg
+bg
+bH
+bH
+bH
+bd
 aw
 aw
 aw
@@ -16986,7 +17009,7 @@ dB
 dB
 dB
 dS
-JG
+dw
 aw
 aw
 aw
@@ -17058,7 +17081,7 @@ dB
 dB
 dB
 dS
-JG
+dw
 aw
 aw
 aw
@@ -17080,17 +17103,17 @@ aw
 aw
 aw
 aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
+bd
+bd
+bd
+bd
+bd
+bd
+bd
+bd
+bd
+bd
+bd
 aw
 aw
 aw
@@ -17128,7 +17151,7 @@ aU
 aU
 aU
 dR
-JG
+dw
 aw
 aw
 aw
@@ -17200,7 +17223,7 @@ aU
 aU
 aU
 dR
-JG
+dw
 aw
 aw
 aw
@@ -17270,7 +17293,7 @@ dC
 dC
 dC
 dT
-JG
+dw
 aw
 aw
 aw
@@ -17342,7 +17365,7 @@ dC
 dC
 dC
 dT
-JG
+dw
 aw
 aw
 aw
@@ -17411,7 +17434,7 @@ aD
 aD
 aD
 aD
-JG
+dw
 aw
 aw
 aw
@@ -17483,7 +17506,7 @@ aD
 aD
 aD
 aD
-JG
+dw
 aw
 aw
 aw
@@ -17552,7 +17575,7 @@ aD
 aD
 aD
 aD
-JG
+dw
 aw
 aw
 aw
@@ -17624,7 +17647,7 @@ aD
 aD
 aD
 aD
-JG
+dw
 aw
 aw
 aw
@@ -17693,7 +17716,7 @@ df
 aD
 aD
 aD
-JG
+dw
 aw
 aw
 aw
@@ -17765,7 +17788,7 @@ df
 aD
 aD
 aD
-JG
+dw
 aw
 aw
 aw
@@ -17834,7 +17857,7 @@ aD
 aD
 aD
 aD
-JG
+dw
 aw
 aw
 aw
@@ -17906,7 +17929,7 @@ aD
 aD
 aD
 aD
-JG
+dw
 aw
 aw
 aw
@@ -17975,7 +17998,7 @@ aw
 aS
 aS
 aS
-JG
+dw
 aw
 aw
 aw
@@ -18047,7 +18070,7 @@ aw
 aS
 aS
 aS
-JG
+dw
 aw
 aw
 aw

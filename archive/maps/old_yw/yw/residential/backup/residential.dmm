@@ -2527,14 +2527,6 @@
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/tiled,
 /area/residential/medbay)
-"hH" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
-/turf/simulated/floor/tiled,
-/area/residential/corridors)
 "hI" = (
 /obj/machinery/power/apc{
 	dir = 8;
@@ -37708,9 +37700,9 @@ gg
 gG
 hh
 hr
-hH
-hH
-hH
+eQ
+eQ
+eQ
 hN
 eP
 aa

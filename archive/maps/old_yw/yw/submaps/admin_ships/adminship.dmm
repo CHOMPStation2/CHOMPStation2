@@ -190,6 +190,7 @@
 	frequency = 1380;
 	id_tag = "adminshuttle_docker";
 	pixel_x = -30;
+	
 	},
 /turf/simulated/shuttle/floor/voidcraft/light,
 /area/shuttle/adminshuttle)
@@ -2740,6 +2741,7 @@
 	frequency = 1380;
 	id_tag = "adminshuttle_bay";
 	pixel_x = 30;
+	
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/adminships/engine_bay)

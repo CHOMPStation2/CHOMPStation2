@@ -127,7 +127,6 @@ VIRGO3B_TURF_CREATE(/turf/simulated/mineral/floor)
 		UpdateMineral()
 	update_icon()
 
-<<<<<<< HEAD
 //Unsimulated
 /turf/unsimulated/mineral/virgo3b
 	blocks_air = TRUE
@@ -273,15 +272,6 @@ VIRGO3B_TURF_CREATE(/turf/simulated/mineral/floor)
 
 	add_vis_overlay('icons/effects/effects.dmi', "white", plane = SPACE_PLANE, add_vis_flags = VIS_INHERIT_ID|VIS_UNDERLAY)
 
-/turf/space/v3b_midpoint/Initialize(mapload)
-	. = ..()
-	new /obj/effect/step_trigger/teleporter/planetary_fall/virgo3b(src)
-
-/turf/space/v3b_midpoint/ChangeTurf(turf/N, tell_universe, force_lighting_update, preserve_outdoors)
-	. = ..()
-	for(var/obj/effect/step_trigger/teleporter/planetary_fall/virgo3b/F in src)
-		qdel(F)
-
 /turf/space/v3b_midpoint/CanZPass(atom, direction)
 	return 0			// We're not Space
 
@@ -289,9 +279,6 @@ VIRGO3B_TURF_CREATE(/turf/simulated/mineral/floor)
 /turf/simulated/floor/tiled/techfloor/grid/transit
 	icon = 'icons/turf/transit_vr.dmi'
 	initial_flooring = null
-=======
-/turf/space/v3b_midpoint/CanZPass(atom, direction)
-	return 0			// We're not Space
 
 // Virgo 3b trufs
 /turf/space/transit/south/virgo3b/planet_fall/find_planet()
@@ -305,4 +292,3 @@ VIRGO3B_TURF_CREATE(/turf/simulated/mineral/floor)
 
 /turf/space/v3b_midpoint/find_planet()
 	return planet_virgo3b
->>>>>>> 0bf3af4147 (Turfsuff (#17310))

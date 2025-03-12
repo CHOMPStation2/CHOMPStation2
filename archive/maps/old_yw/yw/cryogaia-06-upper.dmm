@@ -620,13 +620,6 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/excursion)
-"bC" = (
-/obj/structure/disposalpipe/segment,
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
-/turf/simulated/floor/tiled,
-/area/cryogaia/station/hallway/primary/upper/south)
 "bD" = (
 /obj/machinery/portable_atmospherics/canister/air,
 /obj/machinery/atmospherics/portables_connector{
@@ -12686,12 +12679,6 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/quartermaster/miningdock)
-"Zg" = (
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
-/turf/simulated/floor/plating,
-/area/borealis2/elevator/uppermining)
 "Zh" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
@@ -29808,7 +29795,7 @@ ae
 ae
 ae
 ah
-bC
+ae
 xy
 aS
 mD
@@ -30130,8 +30117,8 @@ mD
 eT
 eT
 Ep
-Zg
-Zg
+af
+af
 yB
 Ky
 bR

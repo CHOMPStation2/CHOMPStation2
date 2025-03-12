@@ -9597,13 +9597,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/lower/vacant_site)
-"aqP" = (
-/obj/structure/catwalk,
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
-/turf/simulated/floor/plating,
-/area/maintenance/lower/vacant_site)
 "aqQ" = (
 /obj/structure/catwalk,
 /obj/structure/cable{
@@ -50392,7 +50385,7 @@ ahx
 ahx
 apF
 apF
-aqP
+abR
 apF
 apF
 apF
@@ -50534,7 +50527,7 @@ cZL
 haw
 pKR
 apF
-aqP
+abR
 apF
 arL
 arO
@@ -50818,7 +50811,7 @@ xqZ
 qPs
 qhr
 apF
-aqP
+abR
 arl
 apF
 apF

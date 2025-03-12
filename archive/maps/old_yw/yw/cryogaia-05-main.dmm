@@ -8302,12 +8302,6 @@
 /obj/item/stamp/hop,
 /turf/simulated/floor/wood,
 /area/crew_quarters/heads/hop)
-"dsa" = (
-/obj/structure/cable{
-	icon_state = "2-4"
-	},
-/turf/simulated/floor/plating,
-/area/maintenance/bridge)
 "dsc" = (
 /obj/structure/janitorialcart,
 /obj/effect/floor_decal/corner/purple{
@@ -11330,21 +11324,6 @@
 "eHU" = (
 /turf/simulated/wall/titanium,
 /area/borealis2/outdoors/grounds/tower/northwest)
-"eHX" = (
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/turf/simulated/floor/plating,
-/area/maintenance/research_starboard)
 "eHZ" = (
 /obj/machinery/space_heater,
 /obj/effect/floor_decal/industrial/outline/yellow,
@@ -16298,12 +16277,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/security/security_processing)
-"gEY" = (
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
-/turf/simulated/floor/plating,
-/area/maintenance/bridge)
 "gFj" = (
 /turf/simulated/wall/r_wall,
 /area/engineering/engine_waste)
@@ -20486,12 +20459,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/research)
-"ixA" = (
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
-/turf/simulated/floor/tiled,
-/area/hallway/secondary/exit)
 "ixC" = (
 /turf/simulated/floor/reinforced,
 /area/security/hangar)
@@ -24986,15 +24953,6 @@
 "krl" = (
 /turf/simulated/floor/tiled/dark,
 /area/security/nuke_storage)
-"krm" = (
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
-/obj/machinery/light/small{
-	dir = 1
-	},
-/turf/simulated/floor/plating,
-/area/maintenance/bridge)
 "kru" = (
 /turf/simulated/wall/r_wall,
 /area/storage/tech)
@@ -35013,12 +34971,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/rdoffice)
-"ovG" = (
-/obj/structure/cable{
-	icon_state = "2-4"
-	},
-/turf/simulated/wall,
-/area/medical/equipstorage)
 "ovN" = (
 /obj/machinery/door/airlock/glass_external/freezable{
 	frequency = 1379;
@@ -35172,15 +35124,6 @@
 /obj/machinery/door/firedoor/border_only,
 /turf/simulated/floor/plating,
 /area/quartermaster/miningwing)
-"ozb" = (
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
-/obj/structure/cable{
-	icon_state = "1-8"
-	},
-/turf/simulated/floor/plating,
-/area/maintenance/medbay)
 "ozf" = (
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/white,
@@ -35695,15 +35638,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/surgery)
-"oLV" = (
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/turf/simulated/floor/plating,
-/area/maintenance/bridge)
 "oLX" = (
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay_emt_bay)
@@ -40684,12 +40618,6 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/security)
-"qPj" = (
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
-/turf/simulated/floor/tiled,
-/area/civilian/atrium/central)
 "qPq" = (
 /obj/structure/bed/chair/shuttle{
 	dir = 4;
@@ -45620,12 +45548,6 @@
 	},
 /turf/simulated/floor/outdoors/snow/snow/snow2/cryogaia,
 /area/borealis2/outdoors/grounds/power)
-"sUN" = (
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
-/turf/simulated/floor/tiled,
-/area/crew_quarters/locker)
 "sVw" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
@@ -45954,12 +45876,6 @@
 	},
 /turf/simulated/floor/tiled/red,
 /area/security/security_equiptment_storage)
-"tep" = (
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
-/turf/simulated/floor/plating,
-/area/maintenance/security)
 "tey" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -48892,12 +48808,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/exit)
-"uyE" = (
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
-/turf/simulated/floor/plating,
-/area/maintenance/medbay)
 "uyI" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced,
@@ -50124,12 +50034,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/entry/docking_lounge)
-"uZB" = (
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
-/turf/simulated/floor/plating,
-/area/maintenance/bridge)
 "vab" = (
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 5
@@ -54862,12 +54766,6 @@
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/captain)
-"wYu" = (
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
-/turf/simulated/floor/plating,
-/area/maintenance/security)
 "wYx" = (
 /obj/effect/floor_decal/spline/plain{
 	dir = 8
@@ -56579,12 +56477,6 @@
 	dir = 1
 	},
 /obj/machinery/light/small,
-/turf/simulated/floor/plating,
-/area/maintenance/medbay)
-"xJK" = (
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
 /turf/simulated/floor/plating,
 /area/maintenance/medbay)
 "xJV" = (
@@ -62862,17 +62754,17 @@ uDf
 uDf
 nnc
 hBo
-xJK
-xJK
+qBn
+qBn
 wXT
 coH
 uPk
-xJK
+qBn
 jCo
-xJK
-xJK
-xJK
-xJK
+qBn
+qBn
+qBn
+qBn
 xmg
 nnc
 aWW
@@ -63027,7 +62919,7 @@ eCm
 aWW
 aWW
 aWW
-uyE
+eCm
 nJA
 pZe
 pZe
@@ -63035,7 +62927,7 @@ pZe
 pZe
 nJA
 swQ
-uyE
+eCm
 nnc
 aWW
 aWW
@@ -63189,7 +63081,7 @@ eCm
 nnc
 ukZ
 aWW
-uyE
+eCm
 pZe
 jeE
 jeE
@@ -63197,7 +63089,7 @@ jeE
 jeE
 pZe
 aWW
-uyE
+eCm
 fjm
 aWW
 aWW
@@ -63347,7 +63239,7 @@ ugh
 eVf
 eVf
 oXO
-ozb
+cVL
 aWW
 fYt
 hSA
@@ -66133,7 +66025,7 @@ svV
 lLS
 svV
 mXx
-wYu
+vYp
 tTP
 tTP
 jGD
@@ -66263,7 +66155,7 @@ efL
 kFu
 xop
 qHn
-ovG
+jGa
 tUw
 qBU
 gYq
@@ -66295,7 +66187,7 @@ uRB
 hnB
 svV
 uiJ
-wYu
+vYp
 uVX
 chs
 uVX
@@ -66457,7 +66349,7 @@ uzj
 xpP
 svV
 poh
-wYu
+vYp
 uVX
 ebC
 knF
@@ -66619,7 +66511,7 @@ aSY
 cLY
 svV
 uiJ
-wYu
+vYp
 uVX
 bLq
 vOa
@@ -66781,7 +66673,7 @@ pVh
 dqu
 svV
 xiN
-wYu
+vYp
 uVX
 ahl
 atJ
@@ -66943,7 +66835,7 @@ vKG
 wBq
 svV
 svV
-wYu
+vYp
 uVX
 uVX
 qDD
@@ -67107,9 +66999,9 @@ lje
 svV
 ivn
 nqM
-tep
+pVO
 sNO
-tep
+pVO
 tIe
 dJS
 yiT
@@ -67267,7 +67159,7 @@ cha
 wBq
 cpF
 svV
-wYu
+vYp
 jkL
 jkL
 sDk
@@ -67429,7 +67321,7 @@ deu
 nQk
 mRg
 svV
-wYu
+vYp
 jkL
 pcr
 pOt
@@ -67591,7 +67483,7 @@ lVg
 fKI
 gpQ
 svV
-wYu
+vYp
 jkL
 gOL
 pOt
@@ -67753,7 +67645,7 @@ gqK
 xEv
 xNN
 svV
-wYu
+vYp
 jkL
 rHN
 aAM
@@ -67915,7 +67807,7 @@ uzd
 svV
 svV
 svV
-wYu
+vYp
 jkL
 aPh
 fSD
@@ -68841,7 +68733,7 @@ kqm
 pFD
 szR
 pFD
-ixA
+fGF
 jrL
 ndb
 odu
@@ -71325,7 +71217,7 @@ hfp
 wBK
 hfp
 wrO
-qPj
+pBB
 ddl
 qMh
 xBE
@@ -71627,7 +71519,7 @@ raN
 pWS
 rZJ
 wBj
-qPj
+pBB
 fVu
 ddl
 rZJ
@@ -73566,8 +73458,8 @@ uDf
 uDf
 xbv
 aRm
-uZB
-uZB
+dst
+dst
 erT
 wkW
 jdZ
@@ -73906,7 +73798,7 @@ ubC
 ubC
 ubC
 ubC
-dsa
+aRm
 fpL
 fSN
 wNP
@@ -74230,7 +74122,7 @@ ubC
 vvB
 wDh
 ubC
-gEY
+aOp
 xbv
 xbv
 xbv
@@ -74716,7 +74608,7 @@ iEL
 mYs
 pni
 ubC
-gEY
+aOp
 aQA
 aQA
 mAC
@@ -74864,7 +74756,7 @@ uDf
 uDf
 xbv
 xbv
-gEY
+aOp
 xbv
 ubC
 xtL
@@ -75026,7 +74918,7 @@ uDf
 uDf
 uDf
 xbv
-gEY
+aOp
 xbv
 rsl
 fQq
@@ -75040,7 +74932,7 @@ mrm
 bbe
 ubC
 ubC
-gEY
+aOp
 aQA
 cXR
 mAC
@@ -75095,7 +74987,7 @@ xNr
 qmv
 fUL
 lzM
-eHX
+bJU
 qzq
 kwz
 kwz
@@ -75188,7 +75080,7 @@ uDf
 uDf
 uDf
 xbv
-gEY
+aOp
 xbv
 ubC
 lJK
@@ -75513,7 +75405,7 @@ uDf
 uDf
 xbv
 xbv
-krm
+gKe
 ubC
 pSd
 mAX
@@ -75526,7 +75418,7 @@ kOm
 bql
 ubC
 mDL
-gEY
+aOp
 hGQ
 xBO
 utl
@@ -75688,7 +75580,7 @@ ubC
 ubC
 ubC
 xbv
-gEY
+aOp
 aQA
 saf
 rcM
@@ -76669,7 +76561,7 @@ aac
 aac
 qNF
 qNF
-oLV
+mFx
 wZI
 kaa
 mkQ
@@ -76877,7 +76769,7 @@ kgc
 gsc
 aKm
 clz
-sUN
+nLs
 mex
 aKm
 kwz

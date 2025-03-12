@@ -7409,14 +7409,6 @@
 /mob/living/bot/cleanbot,
 /turf/simulated/floor/wood,
 /area/residential/mansion)
-"NT" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
-/turf/simulated/floor/tiled,
-/area/residential/corridors)
 "NV" = (
 /obj/item/soap/syndie,
 /obj/structure/table/marble,
@@ -26977,9 +26969,9 @@ Av
 ap
 nQ
 nx
-NT
-NT
-NT
+Et
+Et
+Et
 Xy
 YI
 aZ
