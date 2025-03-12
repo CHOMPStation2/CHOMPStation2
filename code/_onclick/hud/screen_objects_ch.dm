@@ -28,4 +28,3 @@
 
 		object_overlays += item_overlay
 		add_overlay(object_overlays)
-		

@@ -27,7 +27,7 @@
 		"organ_multiplier" = list(BP_HEAD = 4, BP_TORSO = 3.5, BP_GROIN = 2.5)/*Only used for simple mobs*/, \
 		"flesh_factors" = list("damage_mult" = 1,"velloss_mult" = 1))
 
-/mob/living/simple_mob/animal/giant_spider 
+/mob/living/simple_mob/animal/giant_spider
 	//Spiders have an exoskeleton and no internal skeleton, so there'll be just 97% chance of hitting bone (3% for stuff like eyes and orifices), but the bone is much easier to punch through.
 	ballistic_variables = list(\
 		"bone_chance_unencased" = list(BP_HEAD = 97, BP_TORSO = 97, BP_GROIN = 97, BP_L_FOOT = 97, BP_R_FOOT = 97, BP_L_LEG = 97, BP_R_LEG = 97, BP_L_ARM = 97, BP_R_ARM = 97, BP_L_HAND = 97, BP_R_HAND = 97), \

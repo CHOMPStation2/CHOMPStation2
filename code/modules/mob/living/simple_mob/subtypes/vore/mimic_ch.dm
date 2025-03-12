@@ -70,7 +70,7 @@
 
 	melee_damage_lower = 8
 	melee_damage_upper = 8
-	attack_armor_pen = 0 
+	attack_armor_pen = 0
 
 	armor = list(
 				"melee" = 10,

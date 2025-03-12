@@ -11,7 +11,7 @@ GLOBAL_VAR_INIT(total_runtimes_skipped, 0)
 	if(!istype(e)) // Something threw an unusual exception
 		log_error("\[[time_stamp()]] Uncaught exception: [e]")
 		return ..()
-	
+
 	//CHOMP Edit Stealing this bit from TGStation to try to record OOM issues.
 	//this is snowflake because of a byond bug (ID:2306577), do not attempt to call non-builtin procs in this if
 	if(copytext(e.name,1,32) == "Maximum recursion level reached")
@@ -20,16 +20,16 @@ GLOBAL_VAR_INIT(total_runtimes_skipped, 0)
 		//if we got to here without silently ending, the byond bug has been fixed.
 		log_world("The bug with recursion runtimes has been fixed. Please remove the snowflake check from world/Error in [__FILE__]:[__LINE__]")
 		return //this will never happen.
-	
+
 	else if(copytext(e.name,1,18) == "Out of resources!")
 		log_world("BYOND out of memory.")
 		log_game("BYOND out of memory.")
 		return ..()
-	//CHOMP Edit end	
-	
+	//CHOMP Edit end
+
 	if(!GLOB.error_last_seen) // A runtime is occurring too early in start-up initialization
 		return ..()
-	
+
 
 	var/erroruid = "[e.file][e.line]"
 	var/last_seen = GLOB.error_last_seen[erroruid]

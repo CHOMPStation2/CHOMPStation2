@@ -346,4 +346,3 @@
 	name = "space carp information poster"
 	desc = "This poster showcases an old spacer saying on the dangers of migrant space carp."
 	listing_name = "Safety - Carp Information"
-

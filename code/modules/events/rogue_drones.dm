@@ -22,7 +22,7 @@
 /datum/event/rogue_drone/announce()
 	var/msg
 	var/rng = rand(1,5)
-	//CHOMPStation Edit Start 
+	//CHOMPStation Edit Start
 	switch(rng)
 		if(1)
 			msg = "A combat drone wing operating in close orbit above Sif has failed to return from a anti-piracy sweep.  If any are sighted, \

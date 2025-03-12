@@ -12,7 +12,7 @@
 
 	if(istype(I, /obj/item/reagent_containers/glass/beaker/vial) && virus2.len && !sampled)
 		var/obj/item/virusdish/sample
-		user.balloon_alert_visible("Takes a virus sample", "Taking a virus sample")
+		user.balloon_alert_visible("takes a virus sample", "taking a virus sample")
 		for(var/datum/disease2/disease/D in virus2)
 			sample = new /obj/item/virusdish(src.loc)
 			sample.take_sample(D)
