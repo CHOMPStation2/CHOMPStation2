@@ -2,6 +2,10 @@
 "aaa" = (
 /turf/space,
 /area/space)
+"aab" = (
+/obj/machinery/door/firedoor/glass/hidden/steel,
+/turf/simulated/floor/tiled/techmaint,
+/area/harbor/Dock5)
 "aac" = (
 /obj/machinery/telecomms/server/presets/security,
 /obj/effect/catwalk_plated/dark,
@@ -9175,7 +9179,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/techmaint,
-/area/hallway/Aft_1_Deck_Stairwell)
+/area/harbor/Dock5)
 "bxe" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/floor_decal/industrial/arrows/yellow,
@@ -35979,7 +35983,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/techmaint,
-/area/hallway/Aft_1_Deck_Stairwell)
+/area/harbor/Dock5)
 "kLl" = (
 /obj/structure/table/glass,
 /obj/structure/sign/poster/nanotrasen,
@@ -103812,7 +103816,7 @@ dZV
 kbL
 wPL
 doz
-eeZ
+aab
 bKR
 bKR
 bKR
