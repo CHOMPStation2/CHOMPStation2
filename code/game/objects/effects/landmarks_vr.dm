@@ -1,4 +1,4 @@
-  
+
 /obj/effect/landmark
 	var/abductor = 0
 

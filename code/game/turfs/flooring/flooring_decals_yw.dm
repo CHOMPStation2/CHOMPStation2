@@ -18,4 +18,3 @@
 
 /obj/effect/floor_decal/snow/floor/pointy
 	icon_state = "snowfloorpointy"
-

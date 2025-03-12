@@ -22,7 +22,7 @@
 	heat_protection = UPPER_TORSO|LOWER_TORSO|ARMS
 	flags_inv = HIDEHOLSTER
 	open = 1
-	
+
 /obj/item/clothing/suit/storage/toggle/yw/secjacket/toggle()
 	set name = "Toggle Coat Buttons"
 	set category = "Object"

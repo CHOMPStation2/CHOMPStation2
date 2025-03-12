@@ -187,7 +187,7 @@ var/list/flesh_overlay_cache = list()
 	icon_state = "sifwood"
 	icon = 'icons/turf/wall_masks_vr.dmi'
 
-//CHOMPEdit Start	
+//CHOMPEdit Start
 /turf/simulated/wall/rsifwood
 	icon_state = "sifwood"
 	icon = 'icons/turf/wall_masks_vr.dmi'

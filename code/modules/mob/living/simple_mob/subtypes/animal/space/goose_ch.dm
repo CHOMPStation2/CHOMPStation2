@@ -2,7 +2,7 @@
 	name = "domesticated goose"
 	desc = "It's a domesticated goose. It still looks pretty angry."
 	faction = "neutral" //Mess with this and the goose will eat anyones face, will eat other factions faces, appropiate considering its a hellbird - Jack
-	
+
 	can_be_drop_prey = TRUE //CHOMP Add
 
 /mob/living/simple_mob/animal/space/goose/domesticated/casino

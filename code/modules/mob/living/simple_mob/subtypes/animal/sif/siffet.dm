@@ -40,7 +40,7 @@
 
 	say_list_type = /datum/say_list/siffet
 	ai_holder_type = /datum/ai_holder/simple_mob/siffet
-	
+
 
 /datum/say_list/siffet
 	speak = list("Yap!", "Heh!", "Huff.")

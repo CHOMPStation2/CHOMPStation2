@@ -11,7 +11,7 @@
 	Any staff who would like to view these lights for themselves may proceed to the area nearest to them with viewing ports to open space. \
 	You will have approximately two minutes before the ions begin to reach the hull. \
 	We hope you enjoy the lights.", "Nanotrasen Meteorology Division") //VOREStation Edit //CHOMPedit: removes announcement .ogg
-	
+
 /datum/event/aurora_caelus/start()
 	affecting_z -= global.using_map.sealed_levels // Space levels only please!
 	for(var/mob/M in player_list)
@@ -31,6 +31,6 @@ Please return to your workplace and continue work as normal. \
 Have a pleasant shift, [station_name()], and thank you for watching with us.",
 "Nanotrasen Meteorology Division") //VOREStation Edit //CHOMPedit: removes announcement .ogg
 	..()
-	
+
 /datum/event/aurora_caelus/overmap/announce()
 	return

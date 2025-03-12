@@ -83,13 +83,13 @@
 	var/contained = reagentlist()
 	add_attack_logs(user,target,"Splashed with [src.name] containing [contained]")
 	// user.visible_message(span_danger("[target] has been splashed with something by [user]!"), span_notice("You splash the solution onto [target]."))
-	balloon_alert_visible("[target] has been splashed with something by [user]!", "Splashed the solution onto [target]") // CHOMPEdit - Changed to balloon_alert
+	balloon_alert_visible("[target] has been splashed with something by [user]!", "splashed the solution onto [target]") // CHOMPEdit - Changed to balloon_alert
 	reagents.splash(target, reagents.total_volume)
 	return 1
 
 /obj/item/reagent_containers/proc/self_feed_message(var/mob/user)
 	// to_chat(user, span_notice("You eat \the [src]"))
-	balloon_alert(user, "You eat \the [src]") // CHOMPEdit - Changed to balloon alert
+	balloon_alert(user, "you eat \the [src]") // CHOMPEdit - Changed to balloon alert
 
 /obj/item/reagent_containers/proc/other_feed_message_start(var/mob/user, var/mob/target)
 	// user.visible_message(span_warning("[user] is trying to feed [target] \the [src]!"))
@@ -108,19 +108,19 @@
 
 	if(!reagents || !reagents.total_volume)
 		// to_chat(user, span_notice("\The [src] is empty."))
-		balloon_alert(user, "\The [src] is empty.") // CHOMPEdit - Changed to balloon alert
+		balloon_alert(user, "\the [src] is empty.") // CHOMPEdit - Changed to balloon alert
 		return TRUE
 
 	if(ishuman(target))
 		var/mob/living/carbon/human/H = target
 		if(!H.check_has_mouth())
 			// to_chat(user, "Where do you intend to put \the [src]? [user == target ? "You don't" : "\The [H] doesn't"] have a mouth!")
-			balloon_alert(user, "[user == target ? "You don't" : "\The [H] doesn't"] have a mouth!")
+			balloon_alert(user, "[user == target ? "You don't" : "\the [H] doesn't"] have a mouth!")
 			return FALSE
 		var/obj/item/blocked = H.check_mouth_coverage()
 		if(blocked)
 			// to_chat(user, span_warning("\The [blocked] is in the way!"))
-			balloon_alert(user, "\The [blocked] is in the way!") // CHOMPEdit - Changed to balloon alert
+			balloon_alert(user, "\the [blocked] is in the way!") // CHOMPEdit - Changed to balloon alert
 			return FALSE
 
 	user.setClickCooldown(user.get_attack_speed(src)) //puts a limit on how fast people can eat/drink things
@@ -158,5 +158,5 @@
 
 	var/trans = reagents.trans_to(target, amount_per_transfer_from_this)
 	// to_chat(user, span_notice("You transfer [trans] units of the solution to [target]."))
-	balloon_alert(user, "Transfered [trans] units to [target]") // CHOMPEdit - Balloon alerts! They're the future, I tell you.
+	balloon_alert(user, "transfered [trans] units to [target]") // CHOMPEdit - Balloon alerts! They're the future, I tell you.
 	return 1

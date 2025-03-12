@@ -73,7 +73,7 @@
 
 		W.attack_self(src)
 		return
-	
+
 	// cyborgs are prohibited from using storage items so we can I think safely remove (A.loc in contents)
 	if(A == loc || (A in loc) || (A in contents))
 		// No adjacency checks
