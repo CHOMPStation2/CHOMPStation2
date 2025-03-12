@@ -174,6 +174,7 @@
 /obj/effect/step_trigger/teleporter/planetary_fall/sif/find_planet()
 	planet = planet_sif
 
+<<<<<<< HEAD
 //CHOMPedit: Changes to sif/planetuse snow to make it work properly as it does on Polaris, it was broken by YW edits.
 /turf/simulated/floor/outdoors/snow/sif/planetuse
 	name = "snow"
@@ -220,3 +221,13 @@
 		user.put_in_hands(S)
 		visible_message("[user] scoops up a pile of snow.", "You scoop up a pile of snow.")
 	return
+=======
+/turf/simulated/floor/concrete/sif/planetuse
+	oxygen		= MOLES_O2SIF
+	nitrogen	= MOLES_N2SIF
+	temperature	= TEMPERATURE_SIF
+	outdoors = OUTDOORS_YES
+
+/turf/simulated/sky/moving/north/sif/planet_fall/find_planet()
+	return planet_sif
+>>>>>>> 0bf3af4147 (Turfsuff (#17310))
