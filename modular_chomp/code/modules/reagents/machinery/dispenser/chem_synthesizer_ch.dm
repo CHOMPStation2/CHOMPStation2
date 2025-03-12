@@ -71,7 +71,7 @@
 		REAGENT_ID_COPPER, REAGENT_ID_MERCURY, REAGENT_ID_RADIUM, REAGENT_ID_WATER, REAGENT_ID_ETHANOL, REAGENT_ID_SUGAR, REAGENT_ID_SACID, REAGENT_ID_TUNGSTEN, REAGENT_ID_CALCIUM
 		)
 
-/obj/machinery/chemical_synthesizer/Initialize()
+/obj/machinery/chemical_synthesizer/Initialize(mapload)
 	. = ..()
 	// Create the reagents datum which will act as the machine's reaction vessel.
 	create_reagents(600)
@@ -151,7 +151,7 @@
 /obj/machinery/chemical_synthesizer/proc/add_cartridge(obj/item/reagent_containers/chem_disp_cartridge/C, mob/user)
 	if(!panel_open)
 		if(user)
-			to_chat(user, span_warning("\The panel is locked!"))
+			to_chat(user, span_warning("The panel is locked!"))
 		return
 
 	if(!istype(C))

@@ -28,16 +28,17 @@
 	var/list/datum/reagent/allowed_reagents = list() //compile the list of reagents we're allowed to splice in
 
 
-/obj/machinery/botany/precisioneditor/Initialize()
-  for(var/R in SSchemistry.chemical_reagents)
-    testlist.Add(R)
-    var/datum/reagent/current = SSchemistry.chemical_reagents[R]
+/obj/machinery/botany/precisioneditor/Initialize(mapload)
+	. = ..()
+	for(var/R in SSchemistry.chemical_reagents)
+	testlist.Add(R)
+	var/datum/reagent/current = SSchemistry.chemical_reagents[R]
 /*CHOMP Edit: Remove Phorochem code
     if(istype(current, /datum/reagent/phororeagent)) //phorochems are banned from this process, obviously
       continue
 */
-    allowed_reagents.Add(R)
-  allowed_reagents -= banlist //apparently outright checking if it's in the banlist before it's added doesn't work?
+	allowed_reagents.Add(R)
+	allowed_reagents -= banlist //apparently outright checking if it's in the banlist before it's added doesn't work?
 
 /obj/machinery/botany/precisioneditor/attack_hand(mob/user as mob)
 	tgui_interact(user)

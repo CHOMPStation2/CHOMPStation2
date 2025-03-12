@@ -1,5 +1,5 @@
-/obj/item/material/twohanded/baseballbat/foam/New(var/newloc)
-	..(newloc,"foam")
+/obj/item/material/twohanded/baseballbat/foam/Initialize(mapload)
+	. = ..(mapload, MAT_FOAM)
 
 /obj/item/material/sword/foam
 	attack_verb = list("bonked","whacked")
@@ -14,8 +14,8 @@
 	unbreakable = 1
 	damtype = HALLOSS
 
-/obj/item/material/sword/foam/New(var/newloc)
-	..(newloc,"foam")
+/obj/item/material/sword/foam/Initialize(mapload)
+	. = ..(mapload, MAT_FOAM)
 
 /obj/item/material/twohanded/spear/foam
 	attack_verb = list("bonked","whacked")
@@ -26,8 +26,9 @@
 	base_icon = "spear_mask"
 	icon_state = "spear_mask0"
 	unbreakable = 1
-/obj/item/material/twohanded/spear/foam/New(var/newloc)
-	..(newloc,"foam")
+
+/obj/item/material/twohanded/spear/foam/Initialize(mapload)
+	. = ..(mapload, MAT_FOAM)
 
 /obj/item/material/twohanded/fireaxe/foam
 	attack_verb = list("bonked","whacked")
@@ -39,8 +40,8 @@
 	icon_state = "fireaxe_mask0"
 	unbreakable = 1
 
-/obj/item/material/twohanded/fireaxe/foam/New(var/newloc)
-	..(newloc,"foam")
+/obj/item/material/twohanded/fireaxe/foam/Initialize(mapload)
+	. = ..(mapload, MAT_FOAM)
 
 /obj/item/material/twohanded/fireaxe/foam/afterattack()
 	return

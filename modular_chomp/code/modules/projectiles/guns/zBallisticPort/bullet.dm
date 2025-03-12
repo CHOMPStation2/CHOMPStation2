@@ -14,7 +14,7 @@
 	var/is_picked_up = FALSE
 	var/is_long = TRUE
 
-/obj/item/gun/projectile/automatic/serdy/Initialize()
+/obj/item/gun/projectile/automatic/serdy/Initialize(mapload)
 	. = ..()
 	update_transform()
 	update_icon()
@@ -1119,7 +1119,7 @@
 		icon_state = "c20r"
 	return
 
-/obj/item/gun/projectile/automatic/c20r/Initialize()
+/obj/item/gun/projectile/automatic/c20r/Initialize(mapload)
 	. = ..()
 	update_transform()
 
@@ -1137,7 +1137,7 @@
 	. = ..()
 	icon_state = ammo_magazine ? "[initial(icon_state)]" : "[initial(icon_state)]-e"
 
-/obj/item/gun/projectile/automatic/sts35/Initialize()
+/obj/item/gun/projectile/automatic/sts35/Initialize(mapload)
 	. = ..()
 	update_transform()
 
@@ -1156,7 +1156,7 @@
 	. = ..()
 	icon_state = ammo_magazine ? "[initial(icon_state)]" : "[initial(icon_state)]-e"
 */
-/obj/item/gun/projectile/automatic/wt550/Initialize()
+/obj/item/gun/projectile/automatic/wt550/Initialize(mapload)
 	. = ..()
 	update_transform()
 
@@ -1178,7 +1178,7 @@
 		icon_state = "carbine-e"
 	return
 
-/obj/item/gun/projectile/automatic/z8/Initialize()
+/obj/item/gun/projectile/automatic/z8/Initialize(mapload)
 	. = ..()
 	update_transform()
 
@@ -1201,7 +1201,7 @@
 	. = ..()
 	icon_state = ammo_magazine ? "[initial(icon_state)]" : "[initial(icon_state)]-empty"
 
-/obj/item/gun/projectile/automatic/mini_uzi/Initialize()
+/obj/item/gun/projectile/automatic/mini_uzi/Initialize(mapload)
 	. = ..()
 	update_transform()
 
@@ -1243,7 +1243,7 @@
 	icon = 'icons/obj/gun_ch.dmi'
 	icon_state = "m1911"
 
-/obj/item/gun/projectile/colt/Initialize()
+/obj/item/gun/projectile/colt/Initialize(mapload)
 	.=..()
 	update_icon()
 
@@ -1380,7 +1380,7 @@
 	var/is64x32 = TRUE
 	var/is_picked_up = FALSE
 
-/obj/item/gun/projectile/shotgun/pump/Initialize()
+/obj/item/gun/projectile/shotgun/pump/Initialize(mapload)
 	. = ..()
 	if(is64x32)
 		update_transform()
@@ -1475,7 +1475,7 @@
 /obj/item/gun/projectile/shotgun/doublebarrel/sawn //Default sawn shotgun needs it's old icon path back
 	icon = 'icons/obj/gun.dmi'
 
-/obj/item/gun/projectile/shotgun/doublebarrel/Initialize()
+/obj/item/gun/projectile/shotgun/doublebarrel/Initialize(mapload)
 	. = ..()
 	update_transform()
 	update_icon()

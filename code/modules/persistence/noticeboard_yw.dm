@@ -6,7 +6,7 @@
 	name = "medical notice board"
 	icon_state = "nboard02"
 
-/obj/structure/noticeboard/medical/Initialize()
+/obj/structure/noticeboard/medical/Initialize(mapload)
 	var/obj/item/paper/P = new()
 	P.name = "Staff Notice: Patient rooms"
 	P.info = "<br>No matter how many times I've said this, it doesn't seem to stick, so I'm leaving this reminder: Screwing patients in the patient rooms is a serious breach of professionality and your code of ethics. Take it to the dorms."
@@ -15,7 +15,7 @@
 	src.contents += P
 
 	P = new()
-	P.name = "Staff Notice: Breakroom \& Storage"
+	P.name = "Staff Notice: Breakroom & Storage"
 	P.info = "<br>Enjoy the view from the new breakroom. You've also got a storage room full of leftover supplies from the shift before yours."
 	P.stamped = list(/obj/item/stamp/cmo)
 	P.add_overlay("paper_stamped_cmo")
@@ -26,7 +26,7 @@
 	name = "toxins lab notice board"
 	icon_state = "nboard01"
 
-/obj/structure/noticeboard/toxins/Initialize()
+/obj/structure/noticeboard/toxins/Initialize(mapload)
 	var/obj/item/paper/P = new()
 	P.name = "Staff Notice: Toxins Mixing"
 	P.info = "<br>Toxins Mixing is currently shut down for the time being, due to damage requiring parts from off station to fix. Please do not use at this time, or risk setting the entire outpost on fire."
@@ -39,7 +39,7 @@
 	name = "nanite lab notice board"
 	icon_state = "nboard01"
 
-/obj/structure/noticeboard/nanite/Initialize()
+/obj/structure/noticeboard/nanite/Initialize(mapload)
 	var/obj/item/paper/P = new()
 	P.name = "Staff Notice: Nanite Laboratory"
 	P.info = "<br>The Nanite Laboratory is nearly complete. We're simply awaiting specialized machinery and equipment from central. The lab is currently shut down. Please do not use at this time."
@@ -52,7 +52,7 @@
 	name = "blueshield notice board"
 	icon_state = "nboard01"
 
-/obj/structure/noticeboard/blueshield/Initialize()
+/obj/structure/noticeboard/blueshield/Initialize(mapload)
 	var/obj/item/paper/P = new()
 	P.name = "Staff Notice: Blueshield Special Reserve"
 	P.info = "<br>This secure storage unit is intended to be used for special equipment specifically for the use of Blueshield Agents in the event of a Code Red threat to Heads of Staff. Heads of Staff found 'commandeering' this equipment can expect to be severely reprimanded.<br><br>(Underneath, there is a messy handwritten addition.)<br><i>Sorry, we haven't had time or spare funds to issue anything yet. You know how frontier budgets are! Sit tight, champ. -Z.V.</i>"
@@ -64,7 +64,7 @@
 /obj/structure/noticeboard/library
 	icon_state = "nboard02"
 
-/obj/structure/noticeboard/library/Initialize()
+/obj/structure/noticeboard/library/Initialize(mapload)
 	var/obj/item/paper/P = new()
 	P.name = "Library Warning: coffee stains"
 	P.info = "<br>I seem to tell you guys this daily, but please, stop bringing coffee to carpeted areas. It's hard enough to get the stains off wood,let alone carpet."
@@ -79,7 +79,7 @@
 /obj/structure/noticeboard/exploration
 	icon_state = "nboard03"
 
-/obj/structure/noticeboard/exploration/Initialize()
+/obj/structure/noticeboard/exploration/Initialize(mapload)
 	var/obj/item/paper/P = new()
 	P.name = "Memo: Prototype ship"
 	P.info = "<br> With the lost of our last Research installation and the damage sustained to the old exploration shuttle,We've decided to finally approve the construction of the Prototype Star-Runner class Exploration Vessel. Keep in mind it's a prototype, so try not to scratch it's paint. We don't have a second."
@@ -105,7 +105,7 @@
 /obj/structure/noticeboard/airlock
 	icon_state = "nboard01"
 
-/obj/structure/noticeboard/airlock/Initialize()
+/obj/structure/noticeboard/airlock/Initialize(mapload)
 	var/obj/item/paper/P = new()
 	P.name = "Staff Notice: Airlock Proceedure"
 	P.info = "<br>Due to the large amount of new staff unfamiliar with our proceedures we've left you some instructions. <br> To exit through an airlock, simply hit the button to open the interior, and then cycle to exterior once inside. To re-enter the station, enter the airlock, Close the exterior hatch, and look for the customized thermal regulators installed on the wall. <br>This should heat up the air in the airlock, allowing you to open the interior door with no issues."

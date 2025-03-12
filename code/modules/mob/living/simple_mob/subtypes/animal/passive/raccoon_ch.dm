@@ -37,7 +37,7 @@
 	pain_emote_1p = list("chitter")
 	pain_emote_3p = list("chitters")
 
-/mob/living/simple_mob/animal/passive/raccoon_ch/Initialize()
+/mob/living/simple_mob/animal/passive/raccoon_ch/Initialize(mapload)
 	. = ..()
 	ghostjoin = 1
 	ghostjoin_icon()

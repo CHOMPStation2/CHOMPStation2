@@ -43,7 +43,7 @@
 	plane = DIRTY_PLANE
 	layer = DIRTY_LAYER
 
-/obj/effect/weaversilk/floor/Initialize()
+/obj/effect/weaversilk/floor/Initialize(mapload)
 	. = ..()
 	icon_state = pick(possible_icon_states)
 
@@ -54,7 +54,7 @@
 	var/possible_icon_states = list("wallweb1", "wallweb2", "wallweb3")
 	density = TRUE
 
-/obj/effect/weaversilk/wall/Initialize()
+/obj/effect/weaversilk/wall/Initialize(mapload)
 	. = ..()
 	icon_state = pick(possible_icon_states)
 
@@ -132,7 +132,7 @@
 	desc = "A webbed cocoon that completely restrains the wearer."
 	icon_state = "web_bindings"
 	item_state = "web_bindings_mob"
-	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS|FEET|ARMS|HANDS
+	body_parts_covered = CHEST|LEGS|FEET|ARMS|HANDS
 	flags_inv = HIDEGLOVES|HIDESHOES|HIDEJUMPSUIT|HIDETAIL
 	//CHOMPedit - Teshari sprite, this was originally a YW edit of the old web bindings
 	sprite_sheets = list(

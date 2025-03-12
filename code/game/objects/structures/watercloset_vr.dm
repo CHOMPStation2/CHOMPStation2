@@ -8,7 +8,7 @@
 	var/refill_cooldown = 200
 	var/refilling = FALSE //CHOMPAdd
 
-/obj/structure/toilet/Initialize()
+/obj/structure/toilet/Initialize(mapload)
 	if(z in global.using_map.map_levels)
 		teleplumbed = TRUE
 		exit_landmark = locate(/obj/effect/landmark/teleplumb_exit)
@@ -83,7 +83,7 @@
 	var/muffin_mode = FALSE
 	var/mob/living/simple_mob/vore/aggressive/corrupthound/muffinmonster
 
-/obj/structure/biowaste_tank/Initialize()
+/obj/structure/biowaste_tank/Initialize(mapload)
 	muffinmonster = new /mob/living/simple_mob/vore/aggressive/corrupthound/muffinmonster(src)
 	muffinmonster.name = "Activate Muffin Monster"
 	muffinmonster.voremob_loaded = TRUE

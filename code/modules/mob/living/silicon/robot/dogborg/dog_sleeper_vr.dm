@@ -282,40 +282,40 @@
 	dat += "<div class='statusDisplay'>"
 
 	if(!delivery && compactor && length(contents))//garbage counter for trashpup
-		dat += "<font color='red'><B>Current load:</B> [length(contents)] / [max_item_count] objects.</font><BR>"
-		dat += "<font color='gray'>([contents.Join(", ")])</font><BR><BR>"
+		dat += span_red(span_bold("Current load:") + " [length(contents)] / [max_item_count] objects.") + "<BR>"
+		dat += span_gray("([contents.Join(", ")])") + "<BR><BR>"
 
 	if(ore_storage) //CHOMPAdd
 		dat += "<font color='red'><B>Current ore capacity:</B> [current_capacity] / [max_ore_storage].</font><BR>"
 
 	if(delivery && length(contents))
-		dat += "<font color='red'><B>Current load:</B> [length(contents)] / [max_item_count] objects.</font><BR>"
-		dat += "<font color='gray'>Cargo compartment slot: Cargo 1.</font><BR>"
+		dat += span_red(span_bold("Current load:") + " [length(contents)] / [max_item_count] objects.") + "<BR>"
+		dat += span_gray("Cargo compartment slot: Cargo 1.") + "<BR>"
 		if(length(deliveryslot_1))
-			dat += "<font color='gray'>([deliveryslot_1.Join(", ")])</font><BR>"
-		dat += "<font color='gray'>Cargo compartment slot: Cargo 2.</font><BR>"
+			dat += span_gray("([deliveryslot_1.Join(", ")])") + "<BR>"
+		dat += span_gray("Cargo compartment slot: Cargo 2.") + "<BR>"
 		if(length(deliveryslot_2))
-			dat += "<font color='gray'>([deliveryslot_2.Join(", ")])</font><BR>"
-		dat += "<font color='gray'>Cargo compartment slot: Cargo 3.</font><BR>"
+			dat += span_gray("([deliveryslot_2.Join(", ")])") + "<BR>"
+		dat += span_gray("Cargo compartment slot: Cargo 3.") + "<BR>"
 		if(length(deliveryslot_3))
-			dat += "<font color='gray'>([deliveryslot_3.Join(", ")])</font><BR>"
-		dat += "<font color='red'>Cargo compartment slot: Fuel.</font><BR>"
-		dat += "<font color='red'>([jointext(contents - (deliveryslot_1 + deliveryslot_2 + deliveryslot_3),", ")])</font><BR><BR>"
+			dat += span_gray("([deliveryslot_3.Join(", ")])") + "<BR>"
+		dat += span_red("Cargo compartment slot: Fuel.") + "<BR>"
+		dat += span_red("([jointext(contents - (deliveryslot_1 + deliveryslot_2 + deliveryslot_3),", ")])") + "<BR><BR>"
 
 	if(analyzer && !synced)
 		dat += "<A href='byond://?src=\ref[src];sync=1'>Sync Files</A><BR>"
 
 	//Cleaning and there are still un-preserved items
 	if(cleaning && length(contents - items_preserved))
-		dat += "<font color='red'><B>Self-cleaning mode.</B> [length(contents - items_preserved)] object(s) remaining.</font><BR>"
+		dat += span_red(span_bold("Self-cleaning mode.") + " [length(contents - items_preserved)] object(s) remaining.") + "<BR>"
 
 	//There are no items to be processed other than un-preserved items
 	else if(cleaning && length(items_preserved))
-		dat += "<font color='red'><B>Self-cleaning done. Eject remaining objects now.</B></font><BR>"
+		dat += span_red(span_bold("Self-cleaning done. Eject remaining objects now.")) + "<BR>"
 
 	//Preserved items count when the list is populated
 	if(length(items_preserved))
-		dat += "<font color='red'>[length(items_preserved)] uncleanable object(s).</font><BR>"
+		dat += span_red("[length(items_preserved)] uncleanable object(s).") + "<BR>"
 
 	if(!patient)
 		dat += "[src.name] Unoccupied"
@@ -469,7 +469,7 @@
 
 /obj/item/dogborg/sleeper/proc/inject_chem(mob/user, chem)
 	if(patient && patient.reagents)
-		if(chem in injection_chems + REAGENT_ID_INAPROVALINE)
+		if(chem in (injection_chems + REAGENT_ID_INAPROVALINE))
 			if(hound.cell.charge < 800) //This is so borgs don't kill themselves with it.
 				to_chat(hound, span_notice("You don't have enough power to synthesize fluids."))
 				return
@@ -832,19 +832,6 @@
 		return
 	..() //CHOMPEdit End
 
-//CHOMPAdd START
-/obj/item/dogborg/sleeper/command //Command borg belly //CHOMP addition
-	name = "Bluespace Filing Belly"
-	desc = "A mounted bluespace storage unit for carrying paperwork"
-	icon = 'modular_chomp/icons/mob/dogborg_ch.dmi'
-	icon_state = "sleeperd"
-	injection_chems = null
-	compactor = TRUE
-	recycles = FALSE
-	max_item_count = 25
-	medsensor = FALSE
-//CHOMP addition end
-
 /obj/item/dogborg/sleeper/compactor/brewer
 	name = "Brew Belly"
 	desc = "A mounted drunk tank unit with fuel processor, for putting away particularly rowdy patrons."
@@ -864,7 +851,7 @@
 
 /obj/item/dogborg/sleeper/compactor/brewer/inject_chem(mob/user, chem) //CHOMP Addition Start
 	if(patient && patient.reagents)
-		if(chem in injection_chems + REAGENT_ID_INAPROVALINE)
+		if((chem in injection_chems) + REAGENT_ID_INAPROVALINE)
 			if(hound.cell.charge < 200) //This is so borgs don't kill themselves with it.
 				to_chat(hound, span_notice("You don't have enough power to synthesize fluids."))
 				return
@@ -875,13 +862,6 @@
 				drain(100) //-100 charge per injection
 			var/units = round(patient.reagents.get_reagent_amount(chem))
 			to_chat(hound, span_notice("Injecting [units] unit\s into occupant.")) //If they were immersed, the reagents wouldn't leave with them.
-
-/obj/item/dogborg/sleeper/compactor/honkborg
-	name = "Jiggles Von Hungertron"
-	desc = "You've heard of Giggles Von Honkerton for the back, now get ready for Jiggles Von Hungertron for the front."
-	icon = 'modular_chomp/icons/mob/dogborg_ch.dmi'
-	icon_state = "clowngut"
-	recycles = FALSE
 
 //CHOMP Addition end
 
@@ -926,5 +906,31 @@
 	icon_state = "sleepersyndieeng"
 	max_item_count = 35
 	digest_multiplier = 3
+
+/obj/item/dogborg/sleeper/command //Command borg belly
+	name = "Bluespace Filing Belly"
+	desc = "A mounted bluespace storage unit for carrying paperwork"
+	icon_state = "sleeperd"
+	injection_chems = null
+	compactor = TRUE
+	recycles = FALSE
+	max_item_count = 25
+	medsensor = FALSE
+
+/obj/item/dogborg/sleeper/compactor/honkborg
+	name = "Jiggles Von Hungertron"
+	desc = "You've heard of Giggles Von Honkerton for the back, now get ready for Jiggles Von Hungertron for the front."
+	icon_state = "clowngut"
+	recycles = FALSE
+
+/obj/item/dogborg/sleeper/exploration
+	name = "Store-Belly"
+	desc = "Equipment for a ExploreHound unit. A mounted portable-storage device that holds supplies/person."
+	icon_state = "sleeperlost"
+	injection_chems = list(REAGENT_ID_INAPROVALINE) // Only to stabilize during extractions
+	compactor = TRUE
+	max_item_count = 4
+	medsensor = FALSE
+	recycles = TRUE
 
 #undef SLEEPER_INJECT_COST

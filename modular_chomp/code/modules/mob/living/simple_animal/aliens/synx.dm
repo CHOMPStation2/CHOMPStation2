@@ -110,8 +110,8 @@
 	attack_edge = 1
 	attack_armor_type = "melee" //Default is melee but I'm stating this explicitly to make it more obvious to anybody reading this
 
-/mob/living/simple_mob/animal/synx/Initialize()
-	..()
+/mob/living/simple_mob/animal/synx/Initialize(mapload)
+	. = ..()
 	src.adjust_nutrition(src.max_nutrition)
 	build_icons(1)
 	voremob_loaded = 1
@@ -611,6 +611,7 @@
 			if(transformed)
 				//transformed bellysprites dont exist yet. Uncomment this when they do. -Reo
 				//add_overlay("[iconstate]-t_[belly_class]-[vs_fullness]")
+				pass()
 			else
 				add_overlay("[icon_state]_[belly_class]-[vs_fullness]")
 

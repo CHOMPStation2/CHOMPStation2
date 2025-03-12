@@ -53,7 +53,7 @@
 	pain_emote_1p = list("squeaks", "squiks") // CHOMP Addition: Pain/etc sounds
 
 //CHOMPEdit Start
-/mob/living/simple_mob/animal/passive/mouse/Initialize()
+/mob/living/simple_mob/animal/passive/mouse/Initialize(mapload)
 	. = ..()
 	ghostjoin = 1
 	ghostjoin_icon()
@@ -170,10 +170,11 @@
 	icon_state = "mouse_rat"
 	icon_rest = "mouse_rat_sleep"
 	holder_type = /obj/item/holder/mouse/rat
+	ai_holder_type = /datum/ai_holder/simple_mob/melee/evasive
+
+/mob/living/simple_mob/animal/passive/mouse/rat/strong // In case you still want to be a jerk to your players for some reason.
 	maxHealth = 20
 	health = 20
-
-	ai_holder_type = /datum/ai_holder/simple_mob/melee/evasive
 
 /mob/living/simple_mob/animal/passive/mouse/operative
 	name = "mouse operative"

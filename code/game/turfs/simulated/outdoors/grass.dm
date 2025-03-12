@@ -60,12 +60,12 @@
 	catalogue_data = list(/datum/category_item/catalogue/flora/sif_grass)
 	catalogue_delay = 2 SECONDS
 
-/turf/simulated/floor/outdoors/grass/sif/Initialize()
+/turf/simulated/floor/outdoors/grass/sif/Initialize(mapload)
 	if(tree_chance && prob(tree_chance) && !check_density())
 		new /obj/structure/flora/tree/sif(src)
 	. = ..()
 
-/turf/simulated/floor/outdoors/grass/Initialize()
+/turf/simulated/floor/outdoors/grass/Initialize(mapload)
 	if(grass && grass_chance && prob(grass_chance) && !check_density()) //CHOMPEdit
 		var/grass_type = pickweight(GLOB.grass_grass[grass]) //CHOMPEdit
 		if(grass_type) //ChompEDIT - runtime
@@ -100,7 +100,7 @@
 /turf/simulated/floor/outdoors/rocks/sif
 	var/animal_chance = 0.3 //Should spawn around... 0-7 per round? Tweak as needed.
 
-/turf/simulated/floor/outdoors/rocks/sif/Initialize()
+/turf/simulated/floor/outdoors/rocks/sif/Initialize(mapload)
 	if(animal_chance && prob(animal_chance) && !check_density())
 		new /mob/living/simple_mob/vore/slug(src)
 

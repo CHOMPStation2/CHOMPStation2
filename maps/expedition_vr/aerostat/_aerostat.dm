@@ -44,7 +44,7 @@
 	for(var/i=0,i<chunk_size,i++)
 		for(var/j=0,j<chunk_size,j++)
 			var/turf/simulated/T = locate(tx+j, ty+i, origin_z)
-			if(!istype(T) || !T.has_resources)
+			if(!istype(T) || !(T.turf_resource_types & TURF_HAS_MINERALS))
 				continue
 			if(!priority_process) sleep(-1)
 			T.resources = list()
@@ -192,7 +192,7 @@
 	color = "#eacd7c"
 	VIRGO2_SET_ATMOS
 
-/turf/unsimulated/floor/sky/virgo2_sky/Initialize()
+/turf/unsimulated/floor/sky/virgo2_sky/Initialize(mapload)
 	skyfall_levels = list(z+1)
 	. = ..()
 

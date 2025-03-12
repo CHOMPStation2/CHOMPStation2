@@ -1,7 +1,7 @@
 //
 // Defines used for advanced performance profiling of subsystems.
 // Currently used only by SSoverlays (2018-02-24 ~Leshana)
-// 
+//
 #define STAT_ENTRY_TIME 1
 #define STAT_ENTRY_COUNT 2
 #define STAT_ENTRY_LENGTH 2
@@ -14,4 +14,4 @@
 	var/STAT_INCR_AMOUNT = min(1, 2**round((STAT_ENTRY[STAT_ENTRY_COUNT] || 0)/SHORT_REAL_LIMIT));\
 	if (STAT_INCR_AMOUNT == 1 || prob(100/STAT_INCR_AMOUNT)) {\
 		STAT_ENTRY[STAT_ENTRY_COUNT] += STAT_INCR_AMOUNT;\
-	};\
+	};

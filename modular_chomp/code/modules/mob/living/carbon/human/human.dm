@@ -12,15 +12,6 @@
 	hide_glasses = !hide_glasses
 	update_inv_glasses()
 
-/mob/living/carbon/human/verb/flip_lying()
-	set name = "Flip Resting Direction"
-	set category = "Abilities.General"
-	set desc = "Switch your horizontal direction while prone."
-	if(isnull(rest_dir))
-		rest_dir = FALSE
-	rest_dir = !rest_dir
-	update_transform(TRUE)
-
 /mob/living/carbon/human/proc/synth_reag_toggle()
 	set name = "Toggle Reagent Processing"
 	set category = "Abilities.Vore"

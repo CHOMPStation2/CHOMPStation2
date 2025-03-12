@@ -1,7 +1,7 @@
 /obj/item/taskmanager
 	name = "Task Manager"
 	desc = "A high-tech tool used to pull surplus items from offsite storage. Select a department to begin! Has a five minute cooldown between successful uses"
-	icon = 'modular_chomp/icons/mob/dogborg_ch.dmi'
+	icon = 'icons/mob/dogborg_vr.dmi'
 	icon_state = "taskmanager"
 	item_icons = list(
 			slot_l_hand_str = 'icons/mob/items/lefthand_vr.dmi',

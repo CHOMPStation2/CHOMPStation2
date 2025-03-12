@@ -14,7 +14,7 @@
 	idle_power_usage = 2
 	var/timerid
 
-/obj/machinery/bluespace_denier/Initialize()
+/obj/machinery/bluespace_denier/Initialize(mapload)
 	. = ..()
 	// if already anchored, setup the proxity check
 	timerid = addtimer(CALLBACK(src, PROC_REF(start_up)), 10 SECONDS, TIMER_STOPPABLE)

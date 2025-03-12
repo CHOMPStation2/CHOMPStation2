@@ -5,7 +5,7 @@
 "ab" = (
 /turf/simulated/shuttle/wall{
 	 icon_state = "swall_s";
-	dir = 14
+	dir = 2
 	},
 /area/shuttle/overmap_examples/outpost)
 "ac" = (

@@ -1,4 +1,4 @@
-/obj/effect/step_trigger/teleporter/deathfall/Initialize()
+/obj/effect/step_trigger/teleporter/deathfall/Initialize(mapload)
 	. = ..()
 	teleport_z = src.z //This is for use in gateways, so mappers can hard map the X and Y without worrying about going to brazil
 
@@ -33,6 +33,6 @@
 		message_admins("ERROR: planetary_fall step trigger lacks a planet to fall onto.")
 		return
 
-/obj/effect/step_trigger/teleporter/poi/Initialize() //This is for placing teleporters in gateways/POIS, where Z levels can be different and I cant be assed to make fake teleporter stairs
+/obj/effect/step_trigger/teleporter/poi/Initialize(mapload) //This is for placing teleporters in gateways/POIS, where Z levels can be different and I cant be assed to make fake teleporter stairs
 	. = ..()
 	teleport_z = src.z

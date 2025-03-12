@@ -57,7 +57,7 @@
 	icon_state = "leaves"
 	bitesize = 1
 
-/obj/item/reagent_containers/food/snacks/weatherlily/Initialize()
+/obj/item/reagent_containers/food/snacks/weatherlily/Initialize(mapload)
 	. = ..()
 	//reagents.add_reagent(REAGENT_ID_AMATOXIN, 1) I want this for lore of this being a strange bioenginered thing to mess with organic things buuuut it's one of two food sources
 	reagents.add_reagent(REAGENT_ID_LUMINOL,1)
@@ -124,7 +124,7 @@
 	nutriment_desc = list(REAGENT_ID_PROTEIN = 4)
 	bitesize = 2
 
-/obj/item/reagent_containers/food/snacks/mutatedmeat/Initialize()
+/obj/item/reagent_containers/food/snacks/mutatedmeat/Initialize(mapload)
 	. = ..()
 	reagents.add_reagent(REAGENT_ID_PROTEIN, 4)
 
@@ -138,7 +138,7 @@
 	var/static/list/possible_states = list("crystal", "generator","core", "hilt")
 	var/static/list/possible_tech = list(TECH_MATERIAL, TECH_ENGINEERING, TECH_PHORON, TECH_POWER, TECH_BIO, TECH_COMBAT, TECH_MAGNET, TECH_DATA)
 
-/obj/item/prop/alien/prototype/Initialize()
+/obj/item/prop/alien/prototype/Initialize(mapload)
 	. = ..()
 	icon_state = pick(possible_states)
 	var/list/techs = possible_tech.Copy()

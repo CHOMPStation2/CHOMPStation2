@@ -50,7 +50,7 @@
 	minbodytemp = 0
 	heat_damage_per_tick = 0
 
-	projectiletype = /obj/item/projectile/bullet/pistol/medium.
+	projectiletype = /obj/item/projectile/bullet/pistol/medium
 	projectilesound = 'sound/weapons/Gunshot_light.ogg'
 
 	needs_reload = TRUE
@@ -608,7 +608,7 @@
 	stage = 2
 	sealed = TRUE
 
-/obj/item/grenade/chem_grenade/frost/Initialize()
+/obj/item/grenade/chem_grenade/frost/Initialize(mapload)
 	. = ..()
 	var/obj/item/reagent_containers/glass/beaker/bluespace/B1 = new(src)
 	var/obj/item/reagent_containers/glass/beaker/bluespace/B2 = new(src)

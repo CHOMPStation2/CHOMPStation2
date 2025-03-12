@@ -143,7 +143,7 @@ GLOBAL_LIST_BOILERPLATE(pointdefense_turrets, /obj/machinery/pointdefense)
 	var/id_tag = null
 	var/fire_sounds = list('sound/weapons/frigate_turret/frigate_turret_fire1.ogg', 'sound/weapons/frigate_turret/frigate_turret_fire2.ogg', 'sound/weapons/frigate_turret/frigate_turret_fire3.ogg', 'sound/weapons/frigate_turret/frigate_turret_fire4.ogg') // CHOMPEdit: Pew
 
-/obj/machinery/pointdefense/Initialize()
+/obj/machinery/power/pointdefense/Initialize(mapload)
 	. = ..()
 	// TODO - Remove this bit once machines are converted to Initialize
 	if(ispath(circuit))

@@ -95,7 +95,7 @@
 	health = 250
 	instinct = 50
 
-/mob/living/simple_mob/animal/sif/kururak/Initialize()
+/mob/living/simple_mob/animal/sif/kururak/Initialize(mapload)
 	. = ..()
 	if(!instinct)
 		if(prob(20))
@@ -194,7 +194,7 @@
 							to_chat(H, span_alien("You are disoriented by \the [src]!"))
 							H.eye_blurry = max(H.eye_blurry, flash_strength + 5)
 							H.flash_eyes()
-							H.apply_damage(flash_strength * H.species.flash_burn/5, BURN, BP_HEAD, 0, 0, "Photon burns")
+							H.apply_damage(flash_strength * H.species.flash_burn/5, BURN, BP_HEAD, 0, 0)
 
 		else if(issilicon(L))
 			if(isrobot(L))
@@ -272,7 +272,7 @@
 		var/mob/living/L = A
 		if(ishuman(L))
 			var/mob/living/carbon/human/H = L
-			H.apply_damage(damage_to_apply, BRUTE, BP_TORSO, 0, 0, "Animal claws")
+			H.apply_damage(damage_to_apply, BRUTE, BP_TORSO, 0, 0)
 
 		else
 			L.adjustBruteLoss(damage_to_apply)
@@ -334,7 +334,7 @@
 	else
 		remove_modifiers_of_type(/datum/modifier/ace)
 
-/mob/living/simple_mob/animal/sif/kururak/hibernate/Initialize()
+/mob/living/simple_mob/animal/sif/kururak/hibernate/Initialize(mapload)
 	. = ..()
 	lay_down()
 	instinct = 0

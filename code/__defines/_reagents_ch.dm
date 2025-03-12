@@ -66,8 +66,6 @@
 #define REAGENT_ID_BURBON "burbon"
 
 // Food & Drinks
-#define REAGENT_GELATIN "Gelatin"
-#define REAGENT_ID_GELATIN "gelatin"
 #define REAGENT_SNAPS "Akvavit"
 #define REAGENT_ID_SNAPS "snaps"
 #define REAGENT_MATCHALATTE "Matcha latte"
@@ -76,8 +74,6 @@
 #define REAGENT_ID_TEALEAVESGREEN "tealeavesgreen"
 #define REAGENT_BLONDIEMIX "Blondie Mix"
 #define REAGENT_ID_BLONDIEMIX "blondiemix"
-#define REAGENT_CINNAMONPOWDER "ground cinnamon"
-#define REAGENT_ID_CINNAMONPOWDER "cinnamonpowder"
 #define REAGENT_CHERRYTEA "Cherry Tea"
 #define REAGENT_ID_CHERRYTEA "cherrytea"
 #define REAGENT_WATERMELONTEA "Watermelon Tea"
@@ -195,6 +191,8 @@
 #define REAGENT_ID_BENZILATE "benzilate"
 #define REAGENT_PHENETHYLAMINE "Phenethylamine"
 #define REAGENT_ID_PHENETHYLAMINE "phenethylamine"
+#define REAGENT_XEYAKIN_BLOOD "Xeyakin Blood"
+#define REAGENT_ID_XEYAKIN_BLOOD "xeyakinblood"
 
 
 // Phoronreagents
@@ -283,3 +281,9 @@
 #define REAGENT_ID_NEOLIQUIDFIRE "neoliquidfire"
 #define REAGENT_LIQUIDLIFE "Liquid Life"
 #define REAGENT_ID_LIQUIDLIFE "liquidlife"
+
+#define REAGENT_NUMBING_FLUID "Numbing Fluid"
+#define REAGENT_ID_NUMBING_FLUID "succubi_numbing"
+#define REAGENT_PARALYZE_FLUID "Paralyzing Fluid"
+#define REAGENT_ID_PARALYZE_FLUID "succubi_paralize"
+#define REAGENT_ID_APHRODIAC_FLUID "succubi_aphrodisiac"

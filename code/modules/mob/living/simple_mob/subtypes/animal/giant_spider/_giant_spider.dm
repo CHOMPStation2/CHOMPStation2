@@ -68,6 +68,7 @@
 	icon_living = "guard"
 	icon_dead = "guard_dead"
 	has_eye_glow = TRUE
+	density = FALSE
 	minbodytemp = 175 //yw edit, Makes mobs survive cryogaia temps
 	faction = FACTION_AWAYMISSION //yw edit, Makes away mobs be on the same fuckin' side.
 	maxHealth = 200
@@ -122,6 +123,15 @@
 	species_sounds = "Spider"
 	pain_emote_1p = list("chitter", "click") //CHOMP Add
 	pain_emote_3p = list("chitters", "clicks") //CHOMP Add
+
+/mob/living/simple_mob/animal/giant_spider/Initialize(mapload)
+	. = ..()
+	AddComponent(/datum/component/swarming)
+
+/mob/living/simple_mob/animal/giant_spider/CanPass(atom/movable/mover, turf/target)
+	if(isliving(mover) && !istype(mover, /mob/living/simple_mob/animal/giant_spider) && mover.density == TRUE && stat != DEAD)
+		return FALSE
+	return ..()
 
 /mob/living/simple_mob/animal/giant_spider/apply_melee_effects(var/atom/A)
 	if(isliving(A))

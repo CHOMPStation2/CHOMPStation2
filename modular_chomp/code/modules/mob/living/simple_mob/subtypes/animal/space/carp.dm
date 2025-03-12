@@ -7,7 +7,7 @@
 
 	var/body_color
 
-/mob/living/simple_mob/animal/space/carp/station/Initialize()
+/mob/living/simple_mob/animal/space/carp/station/Initialize(mapload)
 	.=..()
 
 	body_color = pick(list("green","red","orange","yellow","blue"))

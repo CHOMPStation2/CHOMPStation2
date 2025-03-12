@@ -18,10 +18,10 @@
 	var/list/shockdirs
 	var/hasShocked = 0 //Used to add a delay between shocks. In some cases this used to crash servers by spawning hundreds of sparks every second.
 
-/obj/machinery/containment_field/Initialize()
+/obj/machinery/containment_field/Initialize(mapload)
 	. = ..()
 	shockdirs = list(turn(dir,90),turn(dir,-90))
-	sense_proximity(callback = TYPE_PROC_REF(/atom,HasProximity)) // CHOMPEdit
+	sense_proximity(callback = TYPE_PROC_REF(/atom,HasProximity))
 
 /obj/machinery/containment_field/set_dir(new_dir)
 	. = ..()
@@ -48,11 +48,10 @@
 	return 0
 
 /obj/machinery/containment_field/Crossed(mob/living/L)
-	if(!istype(L) || L.incorporeal_move)
+	if(!istype(L) || L.is_incorporeal())
 		return
 	shock(L)
 
-// CHOMPEdit Start
 /obj/machinery/containment_field/HasProximity(turf/T, datum/weakref/WF, old_loc)
 	SIGNAL_HANDLER
 	if(isnull(WF))
@@ -61,8 +60,7 @@
 	if(isnull(AM))
 		log_debug("DEBUG: HasProximity called without reference on [src].")
 		return
-// CHOMPEdit End
-	if(!isliving(AM) || AM:incorporeal_move)
+	if(!isliving(AM) || AM.is_incorporeal())
 		return 0
 	if(!(get_dir(src,AM) in shockdirs))
 		return 0

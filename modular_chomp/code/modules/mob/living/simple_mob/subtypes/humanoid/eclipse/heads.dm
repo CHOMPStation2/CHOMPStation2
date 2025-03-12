@@ -191,7 +191,7 @@
 		/obj/item/rig_module/teleporter = 5
 			)
 
-/mob/living/simple_mob/humanoid/eclipse/head/engineer/Initialize()
+/mob/living/simple_mob/humanoid/eclipse/head/engineer/Initialize(mapload)
 	add_modifier(/datum/modifier/technomancer/haste, null, src) // tesh goes nyooooom
 	return ..()
 

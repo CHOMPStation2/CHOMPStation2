@@ -45,7 +45,7 @@
 	can_pain_emote = FALSE // CHOMPEdit: Sanity/safety, if bots ever get emotes later, undo this
 	allow_mind_transfer = TRUE
 
-/mob/living/bot/Initialize()
+/mob/living/bot/Initialize(mapload)
 	. = ..()
 
 	//default_language = GLOB.all_languages[LANGUAGE_GALCOM] //VOREstation edit: moved to Init

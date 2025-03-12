@@ -3265,7 +3265,6 @@
 /obj/item/clothing/head/collectable/beret,
 /obj/item/clothing/mask/smokable/cigarette/cigar,
 /obj/item/clothing/gloves/black,
-/obj/item/clothing/suit/storage/bomber/alt,
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/surface/thor/caves)
 "DL" = (

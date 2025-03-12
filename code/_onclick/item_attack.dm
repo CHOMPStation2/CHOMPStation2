@@ -96,7 +96,7 @@ avoid code duplication. This includes items that may sometimes act as a standard
 		return 0
 	if(M == user && user.a_intent != I_HURT)
 		return 0
-	if(M.is_incorporeal()) // CHOMPEdit - No attacking phased entities :)
+	if(M.is_incorporeal()) // No attacking phased entities :)
 		return 0
 
 	/////////////////////////

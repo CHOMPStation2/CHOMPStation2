@@ -195,7 +195,7 @@
 	icon_state = "em_light"
 	w_class = ITEMSIZE_TINY
 
-/obj/item/cell/emergency_light/Initialize()
+/obj/item/cell/emergency_light/Initialize(mapload)
 	. = ..()
 	var/area/A = get_area(src)
 	if(!A.lightswitch || !A.light_power)
@@ -215,7 +215,7 @@
 	var/amount = 100
 	var/used = FALSE
 
-/obj/item/fbp_backup_cell/Initialize()
+/obj/item/fbp_backup_cell/Initialize(mapload)
 	. = ..()
 	add_overlay("[icon_state]_100")
 

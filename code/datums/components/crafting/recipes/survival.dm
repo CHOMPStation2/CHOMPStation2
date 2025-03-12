@@ -123,4 +123,4 @@
 	result = /obj/item/handcuffs/cable/plantfiber
 	reqs = list(list(/obj/item/stack/material/fiber = 3))
 	time = 60
-	category = CAT_MISC 
+	category = CAT_MISC

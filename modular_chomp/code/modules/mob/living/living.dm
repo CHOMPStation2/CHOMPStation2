@@ -22,7 +22,7 @@
 	var/scream_emote = null
 	*/
 
-/mob/living/Initialize()
+/mob/living/Initialize(mapload)
 	. = ..()
 
 	deaf_loop = new(list(src), FALSE)

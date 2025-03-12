@@ -138,7 +138,7 @@
 			by_variable[variable] += 16
 
 /proc/list_memory_size(list/L,list/list_of_lists,list/recursed_from)
-	if(L in recursed_from || LAZYLEN(recursed_from) > 64 || (LAZYLEN(recursed_from) && (L in list_of_lists))) return 0
+	if((L in recursed_from) || LAZYLEN(recursed_from) > 64 || (LAZYLEN(recursed_from) && (L in list_of_lists))) return 0
 	if(LAZYLEN(recursed_from) && refcount(L) > 4)
 		if(L in list_of_lists) list_of_lists[L]++
 		else list_of_lists[L] = 1

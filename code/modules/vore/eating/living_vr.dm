@@ -516,7 +516,7 @@
 //
 // Clearly super important. Obviously.
 //
-/mob/living/proc/lick(mob/living/tasted in living_mobs_in_view(1, TRUE)) //CHOMPEdit
+/mob/living/proc/lick(mob/living/tasted in living_mobs_in_view(1, TRUE))
 	set name = "Lick"
 	set category = "IC.Game"
 	set desc = "Lick someone nearby!"
@@ -616,7 +616,7 @@
 			s.undo_prey_takeover(TRUE)
 			return
 		var/obj/belly/B = loc
-		var/confirm = tgui_alert(src, "Please feel free to press use this button at any time you are uncomfortable and in a belly. Consent is important.", "Confirmation", list("Okay", "Cancel")) //CHOMPedit
+		var/confirm = tgui_alert(src, "Please feel free to use this button at any time you are uncomfortable and in a belly. Consent is important.", "Confirmation", list("Okay", "Cancel"))
 		if(confirm != "Okay" || loc != B)
 			return
 		//Actual escaping
@@ -946,10 +946,8 @@
 //CHOMPEdit End
 
 /mob/living/proc/feed_grabbed_to_self_falling_nom(var/mob/living/user, var/mob/living/prey)
-	// CHOMPAdd Start
 	if(user.is_incorporeal())
 		return FALSE
-	// CHOMPAdd End
 	var/belly = user.vore_selected
 	return perform_the_nom(user, prey, user, belly, delay = 1) //1/10th of a second is probably fine.
 
@@ -957,6 +955,10 @@
 	set name = "Glow (Toggle)"
 	set category = "Abilities.General"
 	set desc = "Toggle your glowing on/off!"
+
+	if(stat || paralysis || weakened || stunned || world.time < last_special)
+		to_chat(src, span_warning("You can't do that in your current state."))
+		return
 
 	//I don't really see a point to any sort of checking here.
 	//If they're passed out, the light won't help them. Same with buckled. Really, I think it's fine to do this whenever.
@@ -988,6 +990,10 @@
 	set name = "Eat Trash"
 	set category = "Abilities.Vore"
 	set desc = "Consume held garbage."
+
+	if(stat || paralysis || weakened || stunned || world.time < last_special)
+		to_chat(src, span_warning("You can't do that in your current state."))
+		return
 
 	if(!vore_selected)
 		to_chat(src,span_warning("You either don't have a belly selected, or don't have a belly!"))
@@ -1175,7 +1181,7 @@
 	if(custom_link)
 		. += "Custom link: " + span_linkify("[custom_link]")
 	if(ooc_notes)
-		. += "OOC Notes: <a href='byond://?src=\ref[src];ooc_notes=1'>\[View\]</a> - <a href='byond://?src=\ref[src];print_ooc_notes_to_chat=1'>\[Print\]</a>"
+		. += "OOC Notes: <a href='byond://?src=\ref[src];ooc_notes=1'>\[View\]</a> - <a href='byond://?src=\ref[src];print_ooc_notes_chat=1'>\[Print\]</a>"
 	. += "<a href='byond://?src=\ref[src];vore_prefs=1'>\[Mechanical Vore Preferences\]</a>"
 
 
@@ -1186,27 +1192,27 @@
 		do_examine_ooc(usr)
 	if(href_list["edit_ooc_notes"])
 		if(usr == src)
-			set_metainfo_panel(usr) //ChompEDIT - usr arg
+			set_metainfo_panel(usr)
 	if(href_list["edit_ooc_note_likes"])
 		if(usr == src)
-			set_metainfo_likes(usr) //ChompEDIT - usr arg
+			set_metainfo_likes(usr)
 	if(href_list["edit_ooc_note_dislikes"])
 		if(usr == src)
-			set_metainfo_dislikes(usr) //ChompEDIT - usr arg
+			set_metainfo_dislikes(usr)
 	if(href_list["save_ooc_panel"])
 		if(usr == src)
-			save_ooc_panel(usr) //ChompEDIT - usr arg
-	if(href_list["print_ooc_notes_to_chat"])
-		print_ooc_notes_to_chat(usr) //ChompEDIT - usr arg
+			save_ooc_panel(usr)
+	if(href_list["print_ooc_notes_chat"])
+		print_ooc_notes_chat(usr)
 	//CHOMPEdit Start
 	if(href_list["edit_ooc_note_favs"])
 		if(usr == src)
-			set_metainfo_favs(usr) //ChompEDIT - usr arg
+			set_metainfo_favs(usr)
 	if(href_list["edit_ooc_note_maybes"])
 		if(usr == src)
-			set_metainfo_maybes(usr) //ChompEDIT - usr arg
+			set_metainfo_maybes(usr)
 	if(href_list["set_metainfo_ooc_style"])
-		set_metainfo_ooc_style(usr) //ChompEDIT - usr arg
+		set_metainfo_ooc_style(usr)
 	//CHOMPEdit End
 	if(href_list["save_private_notes"])
 		if(usr == src)

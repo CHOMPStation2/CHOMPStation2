@@ -83,13 +83,15 @@
 	name = "XI-GUS"
 	sprite_icon_state = "spider"
 
+
 /datum/robot_sprite/science/worm
 	name = "W02M"
-	sprite_icon_state = "worm-science" //CHOMPEdit
-	has_custom_open_sprites = TRUE
-	sprite_icon = 'modular_chomp/icons/mob/wormborg.dmi' //CHOMPEdit
-	has_vore_belly_sprites = TRUE //CHOMPEdit
-	has_dead_sprite = TRUE //CHOMPEdit
+	sprite_icon_state = "worm-science"
+	sprite_icon = 'icons/mob/robot/wormborg.dmi'
+	has_dead_sprite_overlay = FALSE
+	has_custom_open_sprites = FALSE
+	has_vore_belly_sprites = TRUE
+	has_dead_sprite = TRUE
 
 /datum/robot_sprite/science/uptall
 	name = "Feminine Humanoid"
@@ -208,13 +210,42 @@
 	has_vore_belly_sprites = FALSE
 	rest_sprite_options = list("Default", "Bellyup")
 
-/datum/robot_sprite/dogborg/tall/science/dullahanv3
-	sprite_icon = 'icons/mob/tallborg/dullahans64x64.dmi'
-	//named v3 to avoid conflicts with downstream
 
-/datum/robot_sprite/dogborg/tall/science/dullahanv3/sciencedully
-	name = "Dullahan science v3"
-	sprite_icon_state = "dullahanscience"
+/datum/robot_sprite/dogborg/tall/science/dullahan
+	name = "Dullahan"
+	sprite_icon_state = "dullahansci"
+	sprite_icon = 'icons/mob/robot/dullahan/v1/dullahan_sci.dmi'
 	has_vore_belly_sprites = TRUE
-	has_robotdecal_sprites = TRUE
-	rest_sprite_options = list("Default", "sit")
+	has_eye_light_sprites = TRUE
+	sprite_hud_icon_state = "sci-borg"
+	rest_sprite_options = list("Default", "Sit")
+	pixel_x = 0
+
+/datum/robot_sprite/dogborg/tall/science/dullahan/scialt
+	name = "Dullahan v2"
+	sprite_icon_state = "dullahansci_alt"
+
+/datum/robot_sprite/dogborg/tall/science/dullahan/scialt2
+	name = "Dullahan v3"
+	sprite_icon = 'icons/mob/robot/dullahan/v3/science.dmi'
+	sprite_icon_state = "dullahanscience"
+	sprite_decals = list("decals")
+
+/datum/robot_sprite/dogborg/science/cat
+	name = "Cat"
+	sprite_icon = 'icons/mob/robot/catborg_variant.dmi'
+	sprite_icon_state = "vixsci"
+	sprite_hud_icon_state = "sci-borg"
+	has_vore_belly_resting_sprites = TRUE
+	has_eye_light_sprites = TRUE
+	has_dead_sprite_overlay = FALSE
+
+
+/datum/robot_sprite/dogborg/science/smolraptor
+	sprite_icon = 'icons/mob/robot/smallraptors/smolraptor_sci.dmi'
+	name = "Small Raptor"
+	sprite_icon_state = "smolraptor"
+	has_dead_sprite_overlay = FALSE
+	has_eye_light_sprites = TRUE
+	has_vore_belly_sprites = TRUE
+	rest_sprite_options = list("Default", "Sit")

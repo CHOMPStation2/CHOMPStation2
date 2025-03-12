@@ -38,7 +38,7 @@
 		// engineered ones don't do all of the above
 		if(force_location)
 			parent_organ = force_location
-		return ..(mapload, internal)
+	return ..(mapload, internal)
 
 /mob/living/carbon/human/proc/random_malignant_organ( var/allowtumors = TRUE, var/allowparasites = TRUE, var/allowengineered = TRUE)
 	// get a list of valid malignant organs and spawn one
@@ -457,7 +457,7 @@
 	if(prob(2))
 		var/obj/item/organ/O = owner.organs_by_name[parent_organ]
 		if(thalers < 100)
-
+			pass()
 		else if(thalers < 500)
 			owner.custom_pain("<span class='warning'>You feel bloated.</span>",1,TRUE)
 			owner.custom_emote(VISIBLE_MESSAGE, "winces slightly.")

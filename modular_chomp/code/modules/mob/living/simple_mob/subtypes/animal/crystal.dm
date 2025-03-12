@@ -33,7 +33,9 @@
 	melee_attack_delay = 8
 
 	movement_cooldown = 13
+	/* //Commented out pending crystal rigsuit fix. Currently there are no sprites.
 	loot_list = list(/obj/item/rig/ch/crystal = 100,
 			)
+	*/
 
 //Note to self, make the angel here when energy is gained

@@ -31,7 +31,7 @@
 	return ..() + saving
 
 // Load the vars_to_save from the savefile
-/obj/soulgem/Initialize()
+/obj/soulgem/Initialize(mapload)
 	. = ..()
 	if(ismob(loc))
 		owner = loc

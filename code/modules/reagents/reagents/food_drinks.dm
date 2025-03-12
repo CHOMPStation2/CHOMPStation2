@@ -955,7 +955,6 @@
 		M.apply_effect(4, AGONY, 0)
 		if(prob(5))
 			M.visible_message(span_warning("[M] [pick("dry heaves!","coughs!","splutters!")]"), span_danger("You feel like your insides are burning!"))
-	// holder.remove_reagent(REAGENT_ID_FROSTOIL, 5) // VOREStation Edit: Nop, we don't instadelete spices for free.
 
 /* Drinks */
 
@@ -984,7 +983,7 @@
 /datum/reagent/drink/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
 	if(!(M.species.allergens & allergen_type))
 		var/bonus = M.food_preference(allergen_type)
-		M.adjust_nutrition((nutrition + bonus) * removed) //RS edit
+		M.adjust_nutrition((nutrition + bonus) * removed)
 	M.dizziness = max(0, M.dizziness + adj_dizzy)
 	M.drowsyness = max(0, M.drowsyness + adj_drowsy)
 	M.AdjustSleeping(adj_sleepy)
@@ -995,10 +994,6 @@
 	if(issmall(M)) removed *= 2 //CHOMP Station addition Small bodymass, more effect from lower volume.
 	if(M.species.organic_food_coeff) //CHOMPStation addition. If this is set to 0, they don't get nutrition from food.
 		M.nutrition += nutriment_factor * removed //CHOMPStation addition For hunger and fatness
-	/* VOREStation Removal
-	if(alien == IS_SLIME && water_based)
-		M.adjustToxLoss(removed * 2)
-	*/ //VOREStation Removal End
 
 /datum/reagent/drink/overdose(var/mob/living/carbon/M, var/alien) //Add special interactions here in the future if desired.
 	..()
@@ -1587,7 +1582,7 @@
 	adj_drowsy = -3
 	adj_sleepy = -2
 	adj_temp = 25
-	overdose = 45
+	overdose = REAGENTS_OVERDOSE *1.5
 
 	cup_icon_state = "cup_coffee"
 	cup_name = REAGENT_ID_COFFEE
@@ -2819,7 +2814,7 @@
 	glass_desc = "That is just way too much syrup to drink on its own."
 	allergen_type = ALLERGEN_SUGARS
 
-	overdose = 45
+	overdose = REAGENTS_OVERDOSE *1.5
 
 /datum/reagent/drink/syrup/overdose(var/mob/living/carbon/M, var/alien)
 	if(alien == IS_DIONA)
@@ -3134,7 +3129,7 @@
 /datum/reagent/ethanol/coffee
 	name = REAGENT_DEVELOPER_WARNING
 	id = REAGENT_ID_DEVELOPER_WARNING
-	overdose = 45
+	overdose = REAGENTS_OVERDOSE *1.5
 	allergen_type = ALLERGEN_COFFEE|ALLERGEN_STIMULANT //Contains coffee or is made from coffee
 
 /datum/reagent/ethanol/coffee/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
@@ -5029,3 +5024,23 @@
 	nutriment_factor = 2
 	glass_name = REAGENT_ID_KVASS
 	glass_desc = "A hearty glass of Slavic brew."
+
+/datum/reagent/cinnamonpowder
+	name = REAGENT_CINNAMONPOWDER
+	id = REAGENT_ID_CINNAMONPOWDER
+	description = "Cinnamon, a spice made from tree bark, ground into a fine powder. Probably not a good idea to eat on its own!"
+	taste_description= "sweet spice with a hint of wood"
+	color = "#a96622"
+
+	glass_name = REAGENT_ID_CINNAMONPOWDER
+	glass_desc = "A glass of ground cinnamon. Dare you take the challenge?"
+
+/datum/reagent/gelatin
+	name = REAGENT_GELATIN
+	id = REAGENT_ID_GELATIN
+	description = "It doesnt taste like anything."
+	taste_description = REAGENT_ID_NOTHING
+	color = "#aaabcf"
+
+	glass_name = REAGENT_GELATIN
+	glass_desc = "It's like flavourless slime."
