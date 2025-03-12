@@ -218,3 +218,17 @@
 	melee_damage_lower = 5
 	melee_damage_upper = 10
 	*/
+
+/mob/living/simple_mob/animal/giant_spider/tunneler/cave
+	name = "cave spider"
+	desc = "Sandy and brown, it makes you shudder to look at it. However, this one doesn't seem very interested in bothering you."
+	maxHealth = 25
+	health = 25
+	harm_intent_damage = 4
+	melee_damage_lower = 2
+	melee_damage_upper = 4
+	ai_holder_type = /datum/ai_holder/simple_mob/retaliate
+	meat_amount = 1
+/mob/living/simple_mob/animal/giant_spider/tunneler/cave/New()
+	..()
+	resize(50)
