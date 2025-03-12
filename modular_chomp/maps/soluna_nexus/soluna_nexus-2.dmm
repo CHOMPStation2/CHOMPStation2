@@ -2229,21 +2229,14 @@
 /turf/simulated/floor/wood/sif,
 /area/maintenance/ab_Chapel)
 "afk" = (
-/obj/structure/cable{
-	icon_state = "4-8"
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 9
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+/obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 4
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/effect/floor_decal/steeldecal/steel_decals6{
-	dir = 6;
-	pixel_x = -1
-	},
-/turf/simulated/floor/tiled,
-/area/hallway/Star_2_Deck_Stairwell)
+/turf/simulated/floor/glass,
+/area/hallway/For_2_Deck_Central_Corridor_2)
 "afm" = (
 /obj/machinery/firealarm{
 	dir = 8;
@@ -38798,6 +38791,15 @@
 /obj/effect/floor_decal/spline/fancy,
 /turf/simulated/floor/carpet/purcarpet,
 /area/hallway/Star_Transit_Foyer)
+"cMN" = (
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 8
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 5
+	},
+/turf/simulated/floor/glass,
+/area/security/Lobby)
 "cMP" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/floor_decal/industrial/hatch,
@@ -47428,6 +47430,21 @@
 /obj/random/trash,
 /turf/simulated/floor/plating,
 /area/maintenance/Deck2_Security_ForCorridor3)
+"eUt" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals6{
+	dir = 9
+	},
+/turf/simulated/floor/tiled,
+/area/hallway/Star_2_Deck_Stairwell)
 "eUA" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -48585,15 +48602,6 @@
 	},
 /turf/simulated/floor/wood/alt,
 /area/crew_quarters/Chomp_Dinner_1)
-"fjN" = (
-/obj/effect/floor_decal/steeldecal/steel_decals4{
-	dir = 8
-	},
-/obj/effect/floor_decal/steeldecal/steel_decals4{
-	dir = 5
-	},
-/turf/simulated/floor/glass,
-/area/security/Lobby)
 "fjT" = (
 /obj/structure/railing/grey{
 	color = "yellow"
@@ -80179,7 +80187,8 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals6{
-	dir = 9
+	dir = 6;
+	pixel_x = -1
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/Star_2_Deck_Stairwell)
@@ -88686,15 +88695,6 @@
 /obj/random/maintenance/engineering,
 /turf/simulated/floor/plating,
 /area/maintenance/Deck2_Civilian_ForPortCorridor2)
-"pLc" = (
-/obj/effect/floor_decal/steeldecal/steel_decals4{
-	dir = 9
-	},
-/obj/effect/floor_decal/steeldecal/steel_decals4{
-	dir = 4
-	},
-/turf/simulated/floor/glass,
-/area/hallway/For_2_Deck_Central_Corridor_2)
 "pLe" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -150071,9 +150071,9 @@ aRq
 aYo
 aJm
 aJm
-fjN
+cMN
 brQ
-pLc
+afk
 bye
 bye
 xcl
@@ -150587,9 +150587,9 @@ aRq
 aYt
 aJm
 aJm
-fjN
+cMN
 brQ
-pLc
+afk
 bye
 bye
 xcl
@@ -165328,15 +165328,15 @@ fZm
 npW
 jeI
 iUv
-afk
-ukV
-ixK
-ixK
-ixK
-ixK
-ixK
-ukV
 ntq
+ukV
+ixK
+ixK
+ixK
+ixK
+ixK
+ukV
+eUt
 ncm
 qLx
 xZu

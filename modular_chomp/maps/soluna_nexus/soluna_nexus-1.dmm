@@ -20975,8 +20975,8 @@
 /turf/simulated/floor/tiled,
 /area/hallway/AftPort_1_Deck_Observatory)
 "ffL" = (
-/obj/effect/floor_decal/steeldecal/steel_decals_central2{
-	dir = 4
+/obj/effect/floor_decal/steeldecal/steel_decals6{
+	dir = 9
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/Aft_1_Deck_Stairwell)
@@ -31464,8 +31464,8 @@
 /turf/simulated/floor/tiled/dark,
 /area/quartermaster/Mining_Ship_Bay)
 "jfj" = (
-/obj/effect/floor_decal/steeldecal/steel_decals_central2{
-	dir = 8
+/obj/effect/floor_decal/steeldecal/steel_decals6{
+	dir = 10
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/Aft_1_Deck_Stairwell)
@@ -44719,8 +44719,8 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/effect/floor_decal/steeldecal/steel_decals_central2{
-	dir = 8
+/obj/effect/floor_decal/steeldecal/steel_decals6{
+	dir = 5
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/Aft_1_Deck_Stairwell)
@@ -45257,8 +45257,9 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/effect/floor_decal/steeldecal/steel_decals_central2{
-	dir = 4
+/obj/effect/floor_decal/steeldecal/steel_decals6{
+	dir = 6;
+	pixel_x = -1
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/Aft_1_Deck_Stairwell)
