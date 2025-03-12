@@ -32,7 +32,11 @@
 
 /obj/item/clothing/suit/space/rig
 	name = "chestpiece"
+<<<<<<< HEAD
 	allowed = list(/obj/item/flashlight,/obj/item/tank,/obj/item/suit_cooling_unit,/obj/item/storage) //ChompEdit: allows all suits to carry a backpack on their back unless otherwise specified.
+=======
+	allowed = list(POCKET_GENERIC, POCKET_ALL_TANKS, POCKET_SUIT_REGULATORS)
+>>>>>>> b36e238cd1 ( Cleaned up every clothing item to use defined pocket lists #35  (#17235))
 	body_parts_covered = CHEST|LEGS|ARMS
 	heat_protection =	 CHEST|LEGS|ARMS
 	cold_protection =	 CHEST|LEGS|ARMS
@@ -111,7 +115,7 @@
 
 /obj/item/clothing/suit/lightrig
 	name = DEVELOPER_WARNING_NAME // "suit"
-	allowed = list(/obj/item/flashlight)
+	allowed = list(POCKET_GENERIC, POCKET_EMERGENCY)
 	flags_inv =          HIDEJUMPSUIT
 	flags =              THICKMATERIAL
 
