@@ -696,6 +696,17 @@
 	},
 /turf/simulated/floor,
 /area/shuttle/ursula)
+"aby" = (
+/obj/machinery/atmospherics/portables_connector,
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/structure/window/titanium{
+	dir = 1
+	},
+/obj/machinery/door/firedoor/glass/hidden{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/dark,
+/area/harbor/Fueling_Post)
 "abF" = (
 /turf/simulated/floor/glass/reinforced,
 /area/hallway/Central_1_Deck_Hall)
@@ -2429,7 +2440,7 @@
 /area/hallway/Central_1_Deck_Hall)
 "akQ" = (
 /turf/simulated/wall,
-/area/hallway/Aft_1_Deck_Stairwell)
+/area/harbor/Fueling_Post)
 "akR" = (
 /obj/effect/floor_decal/industrial/arrows/blue{
 	dir = 4
@@ -9884,7 +9895,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/dark,
-/area/hallway/Aft_1_Deck_Stairwell)
+/area/harbor/Fueling_Storage)
 "bJd" = (
 /obj/structure/sign/directions/teleporter{
 	pixel_y = 9;
@@ -15651,7 +15662,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/dark,
-/area/hallway/Aft_1_Deck_Stairwell)
+/area/harbor/Fueling_Storage)
 "dGO" = (
 /obj/structure/closet/radiation,
 /turf/simulated/floor/tiled/dark,
@@ -45079,7 +45090,7 @@
 	dir = 6
 	},
 /turf/simulated/wall,
-/area/hallway/Aft_1_Deck_Stairwell)
+/area/harbor/Fueling_Storage)
 "nWO" = (
 /obj/structure/table/standard,
 /obj/random/maintenance/security,
@@ -59797,7 +59808,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/dark,
-/area/hallway/Aft_1_Deck_Stairwell)
+/area/harbor/Fueling_Storage)
 "teW" = (
 /turf/simulated/floor/plating,
 /area/maintenance/ab_CardTrading)
@@ -62833,7 +62844,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/dark,
-/area/hallway/Aft_1_Deck_Stairwell)
+/area/harbor/Fueling_Post)
 "ujy" = (
 /turf/simulated/wall/r_wall,
 /area/maintenance/Deck1_AftPort_Corridor3)
@@ -102526,7 +102537,7 @@ uwl
 aeZ
 jzW
 hyp
-lcw
+aKi
 aKi
 wdj
 asG
@@ -104848,7 +104859,7 @@ lcw
 iij
 ldy
 ixE
-bJc
+aby
 qDy
 uAJ
 whr
@@ -105364,7 +105375,7 @@ baw
 ljF
 kaO
 ixE
-bJc
+aby
 gyr
 bSD
 vLC
@@ -105622,7 +105633,7 @@ uwl
 aDh
 mAs
 kAF
-lcw
+aVW
 aVW
 jMW
 fcU
