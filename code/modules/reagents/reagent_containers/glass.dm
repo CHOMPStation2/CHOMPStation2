@@ -79,11 +79,11 @@
 	..()
 	if(is_open_container())
 		// to_chat(user, span_notice("You put the lid on \the [src]."))
-		balloon_alert(user, "Lid put on \the [src]")
+		balloon_alert(user, "lid put on \the [src]")
 		flags ^= OPENCONTAINER
 	else
 		// to_chat(user, span_notice("You take the lid off \the [src]."))
-		balloon_alert(user, "Lid removed off \the [src]") // CHOMPEdit - Changed to ballopn alert
+		balloon_alert(user, "lid removed off \the [src]") // CHOMPEdit - Changed to ballopn alert
 		flags |= OPENCONTAINER
 	update_icon()
 
@@ -107,7 +107,7 @@
 
 /obj/item/reagent_containers/glass/self_feed_message(var/mob/user)
 	// to_chat(user, span_notice("You swallow a gulp from \the [src]."))
-	balloon_alert(user, "Swallowed from \the [src]") // CHOMPEdit - Changed to balloon alert
+	balloon_alert(user, "swallowed from \the [src]") // CHOMPEdit - Changed to balloon alert
 
 /obj/item/reagent_containers/glass/proc/attempt_snake_milking(mob/living/user, mob/living/target)
 	var/reagent
@@ -149,7 +149,7 @@
 			return 1
 		if(reagents && reagents.total_volume)
 			// to_chat(user, span_notice("You splash the solution onto [target].")) //They are on harm intent, aka wanting to spill it.
-			balloon_alert(user, "Splashed the solution onto [target]")
+			balloon_alert(user, "splashed the solution onto [target]")
 			reagents.splash(target, reagents.total_volume)
 			return 1
 	..()
@@ -161,12 +161,12 @@
 			to_chat(user, span_notice("The label can be at most 50 characters long."))
 		else if(length(tmp_label) > 10)
 			// to_chat(user, span_notice("You set the label."))
-			balloon_alert(user, "Label set.") // CHOMPEdit - Changed to balloon alert
+			balloon_alert(user, "label set.") // CHOMPEdit - Changed to balloon alert
 			label_text = tmp_label
 			update_name_label()
 		else
 			// to_chat(user, span_notice("You set the label to \"[tmp_label]\"."))
-			balloon_alert(user, "Label set to \"[tmp_label]\"") // CHOMPEdit - Changed to balloon alert
+			balloon_alert(user, "label set to \"[tmp_label]\"") // CHOMPEdit - Changed to balloon alert
 			label_text = tmp_label
 			update_name_label()
 	if(istype(W,/obj/item/storage/bag))
@@ -342,7 +342,7 @@
 		return
 	else if(D.has_tool_quality(TOOL_WIRECUTTER))
 		// to_chat(user, span_notice("You cut a big hole in \the [src] with \the [D].  It's kinda useless as a bucket now."))
-		balloon_alert(user, "You cut a big hole in \the [src] with \the [D]. It's kinda useless now.") // CHOMPEdit - Changed to balloon alert
+		balloon_alert(user, "you cut a big hole in \the [src] with \the [D]. It's kinda useless now.") // CHOMPEdit - Changed to balloon alert
 		user.put_in_hands(new /obj/item/clothing/head/helmet/bucket)
 		user.drop_from_inventory(src)
 		qdel(src)
@@ -353,18 +353,18 @@
 			var/obj/item/secbot_assembly/edCLN_assembly/B = new /obj/item/secbot_assembly/edCLN_assembly
 			B.loc = get_turf(src)
 			// to_chat(user, span_notice("You armed the robot frame."))
-			balloon_alert(user, "Armed the robot frame.")
+			balloon_alert(user, "armed the robot frame.")
 			if (user.get_inactive_hand()==src)
 				user.remove_from_mob(src)
 				user.put_in_inactive_hand(B)
 			qdel(src)
 		else
 			// to_chat(user, span_warning("You need one sheet of metal to arm the robot frame."))
-			balloon_alert(user, "One sheet of metal is needed to arm the robot frame.") // CHOMPEdit - Changed to balloon alert
+			balloon_alert(user, "one sheet of metal is needed to arm the robot frame.") // CHOMPEdit - Changed to balloon alert
 	else if(istype(D, /obj/item/mop) || istype(D, /obj/item/soap) || istype(D, /obj/item/reagent_containers/glass/rag))  //VOREStation Edit - "Allows soap and rags to be used on buckets"
 		if(reagents.total_volume < 1)
 			// to_chat(user, span_warning("\The [src] is empty!"))
-			balloon_alert(user, "\The [src] is empty!") // CHOMPEdit - Changed to balloon alert
+			balloon_alert(user, "\the [src] is empty!") // CHOMPEdit - Changed to balloon alert
 		else
 			reagents.trans_to_obj(D, 5)
 			to_chat(user, span_notice("You wet \the [D] in \the [src]."))

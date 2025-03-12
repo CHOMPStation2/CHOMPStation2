@@ -32,11 +32,11 @@
 			var/obj/item/blocked = H.check_mouth_coverage()
 			if(blocked)
 				// to_chat(user, span_warning("\The [blocked] is in the way!"))
-				balloon_alert(user, "\The [blocked] is in the way!") // CHOMPEdit - Changed to balloon alert
+				balloon_alert(user, "\the [blocked] is in the way!") // CHOMPEdit - Changed to balloon alert
 				return
 
 			// to_chat(M, span_notice("You swallow \the [src]."))
-			balloon_alert(user, "Swallowed \the [src]")	// CHOMPEdit - Changed to balloon alert
+			balloon_alert(user, "swallowed \the [src]")	// CHOMPEdit - Changed to balloon alert
 			M.drop_from_inventory(src) //icon update
 			if(reagents.total_volume)
 				reagents.trans_to_mob(M, reagents.total_volume, CHEM_INGEST)
@@ -48,12 +48,12 @@
 		var/mob/living/carbon/human/H = M
 		if(!H.check_has_mouth())
 			// to_chat(user, "Where do you intend to put \the [src]? \The [H] doesn't have a mouth!")
-			balloon_alert(user, "\The [H] doesn't have a mouth.") // CHOMPEdit - Changed to balloon alert
+			balloon_alert(user, "\the [H] doesn't have a mouth.") // CHOMPEdit - Changed to balloon alert
 			return
 		var/obj/item/blocked = H.check_mouth_coverage()
 		if(blocked)
 			// to_chat(user, span_warning("\The [blocked] is in the way!"))
-			balloon_alert(user, "\The [blocked] is in the way!") // CHOMPEdit - Changed to balloon alert
+			balloon_alert(user, "\the [blocked] is in the way!") // CHOMPEdit - Changed to balloon alert
 			return
 
 		// user.visible_message(span_warning("[user] attempts to force [M] to swallow \the [src]."))

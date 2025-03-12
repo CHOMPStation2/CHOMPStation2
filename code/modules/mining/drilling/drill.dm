@@ -243,14 +243,14 @@
 	if(istype(O, /obj/item/cell))
 		if(cell)
 			// to_chat(user, "The drill already has a cell installed.")
-			balloon_alert(user, "The drill already has a cell installed.") // CHOMPEdit - Changed to balloon alert
+			balloon_alert(user, "the drill already has a cell installed.") // CHOMPEdit - Changed to balloon alert
 		else
 			user.drop_item()
 			O.forceMove(src)
 			cell = O
 			component_parts += O
 			// to_chat(user, "You install \the [O].")
-			balloon_alert(user, "You install \the [O]") // CHOMPEdit - Changed to balloon alert
+			balloon_alert(user, "you install \the [O]") // CHOMPEdit - Changed to balloon alert
 		return
 	..()
 
@@ -260,14 +260,14 @@
 
 	if (panel_open && cell && user.Adjacent(src))
 		// to_chat(user, "You take out \the [cell].")
-		balloon_alert(user, "You take out \the [cell]") // CHOMPEdit - Changed to balloon alert
+		balloon_alert(user, "you take out \the [cell]") // CHOMPEdit - Changed to balloon alert
 		user.put_in_hands(cell)
 		component_parts -= cell
 		cell = null
 		return
 	else if(need_player_check)
 		// to_chat(user, "You hit the manual override and reset the drill's error checking.")
-		balloon_alert(user, "Manual override hit, the drill's error checking resets.") // CHOMPEdit - Changed to balloon alert
+		balloon_alert(user, "manual override hit, the drill's error checking resets.") // CHOMPEdit - Changed to balloon alert
 		need_player_check = 0
 		if(anchored)
 			get_resource_field()
@@ -442,7 +442,7 @@
 /obj/machinery/mining/brace/attackby(obj/item/W as obj, mob/user as mob)
 	if(connected && connected.active)
 		// to_chat(user, span_notice("You can't work with the brace of a running drill!"))
-		balloon_alert(user, "You can't work with the brace of a running drill.") // CHOMPEdit - Changed to balloon alert
+		balloon_alert(user, "you can't work with the brace of a running drill.") // CHOMPEdit - Changed to balloon alert
 		return
 
 	if(default_deconstruction_screwdriver(user, W))
@@ -456,7 +456,7 @@
 
 		if(istype(get_turf(src), /turf/space))
 			// to_chat(user, span_notice("You can't anchor something to empty space. Idiot."))
-			balloon_alert(user, "You can't anchor something to empty space. Idiot.") // CHOMPEdit - Changed to balloon alert
+			balloon_alert(user, "you can't anchor something to empty space. Idiot.") // CHOMPEdit - Changed to balloon alert
 			return
 
 		playsound(src, W.usesound, 100, 1)
