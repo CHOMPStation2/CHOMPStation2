@@ -145,7 +145,6 @@ GLOBAL_LIST_INIT(grass_animals,list(
 		/mob/living/simple_mob/animal/passive/bird/parrot/cockatiel = 6,
 		/mob/living/simple_mob/animal/passive/bird/parrot/white_cockatoo = 6,
 		/mob/living/simple_mob/animal/passive/bird/parrot/pink_cockatoo = 6,
-		/mob/living/simple_mob/animal/passive/armadillo = 6,
 		/mob/living/simple_mob/vore/seagull = 6,
 		/mob/living/simple_mob/animal/passive/snake/python = 6,
 		/mob/living/simple_mob/vore/mantrap = 6,
