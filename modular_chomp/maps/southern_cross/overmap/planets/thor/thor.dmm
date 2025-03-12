@@ -1037,12 +1037,6 @@
 	},
 /turf/simulated/floor/wood,
 /area/surface/thor/bar)
-"gR" = (
-/turf/simulated/floor/water/deep/ocean{
-	temperature = 313;
-	oxygen = 34.1451
-	},
-/area/surface/outside/thor/ocean)
 "gS" = (
 /obj/structure/cliff/automatic,
 /turf/simulated/floor/beach/sand/desert/outdoors/thor,
@@ -7105,7 +7099,7 @@ iq
 iq
 iq
 iq
-gR
+iq
 iq
 iq
 iq
