@@ -37,7 +37,7 @@
 
 	if(reagents.total_volume < amount_per_transfer_from_this)
 		// to_chat(user, span_notice("\The [src] is empty!"))
-		balloon_alert(user, "\The [src] is empty!") // CHOMPEdit - Changed to balloon alert
+		balloon_alert(user, "\the [src] is empty!") // CHOMPEdit - Changed to balloon alert
 		return
 
 	Spray_at(A, user, proximity)
@@ -78,7 +78,7 @@
 	amount_per_transfer_from_this = next_in_list(amount_per_transfer_from_this, possible_transfer_amounts)
 	spray_size = next_in_list(spray_size, spray_sizes)
 	// to_chat(user, span_notice("You adjusted the pressure nozzle. You'll now use [amount_per_transfer_from_this] units per spray."))
-	balloon_alert(user, "Pressure nozzle adjusted to [amount_per_transfer_from_this] units per spray.") // CHOMPEdit - Changed to balloon alert
+	balloon_alert(user, "pressure nozzle adjusted to [amount_per_transfer_from_this] units per spray.") // CHOMPEdit - Changed to balloon alert
 
 /obj/item/reagent_containers/spray/examine(mob/user)
 	. = ..()
@@ -95,7 +95,7 @@
 		return
 	if(isturf(usr.loc))
 		// to_chat(usr, span_notice("You empty \the [src] onto the floor."))
-		balloon_alert(usr, "Empted \the [src] onto the floor.") // CHOMPEdit - Changed to balloon alert
+		balloon_alert(usr, "empted \the [src] onto the floor.") // CHOMPEdit - Changed to balloon alert
 		reagents.splash(usr.loc, reagents.total_volume)
 
 //space cleaner
@@ -144,7 +144,7 @@
 /obj/item/reagent_containers/spray/pepper/attack_self(var/mob/user)
 	safety = !safety
 	// to_chat(user, span_notice("You switch the safety [safety ? "on" : "off"]."))
-	balloon_alert(user, "Safety [safety ? "on" : "off"].") // CHOMPEdit - Changed to balloon alert
+	balloon_alert(user, "safety [safety ? "on" : "off"].") // CHOMPEdit - Changed to balloon alert
 
 /obj/item/reagent_containers/spray/pepper/Spray_at(atom/A as mob|obj, mob/user)
 	if(safety)
@@ -254,7 +254,7 @@
 	if(++spray_particles > 3) spray_particles = 1
 
 	// to_chat(user, span_notice("You turn the dial on \the [src] to [spray_particles]."))
-	balloon_alert(user, "Dial turned to [spray_particles].")
+	balloon_alert(user, "dial turned to [spray_particles].")
 	return
 
 /obj/item/reagent_containers/spray/chemsprayer/hosed/CtrlClick(var/mob/user)
@@ -274,7 +274,7 @@
 
 	if(src.reagents.total_volume < 1)
 		// to_chat(user, span_notice("\The [src] is empty."))
-		balloon_alert(user, "\The [src] is empty.")
+		balloon_alert(user, "\the [src] is empty.")
 		return
 
 	if(!heavy_spray)

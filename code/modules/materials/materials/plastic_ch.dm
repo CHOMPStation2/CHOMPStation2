@@ -1,6 +1,6 @@
 /datum/material/plastic/generate_recipes()
 	. = ..()
-	
+
 	recipes += list(
 		new /datum/stack_recipe("Feeder", /obj/machinery/feeder, 4, time = 20, one_per_turf = 1, on_floor = 1, recycle_material = "[name]"),
 	)

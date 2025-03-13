@@ -13,7 +13,7 @@
 	containertype = /obj/structure/closet/crate/secure/weapon
 	containername = "Blueshield equipment"
 	access = access_blueshield_exclusive
-	
+
 /datum/supply_pack/misc/blueshieldweapons
 	name = "Blueshield Weapon Kits"
 	contains = list(

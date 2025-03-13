@@ -498,7 +498,7 @@
 /obj/item/gun/launcher/scopedrocket/examine(mob/user)
 	. = ..()
 	if(get_dist(user, src) <= 2)
-		. += "<font color='blue'>[rockets.len] / [max_rockets] rockets.</font>"
+		. += span_blue("[rockets.len] / [max_rockets] rockets.")
 
 /obj/item/gun/launcher/scopedrocket/attackby(obj/item/I as obj, mob/user as mob)
 	if(istype(I, /obj/item/ammo_casing/rocket))

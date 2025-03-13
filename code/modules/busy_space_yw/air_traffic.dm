@@ -96,7 +96,7 @@ var/datum/lore/atc_controller/atc = new/datum/lore/atc_controller
 	var/mission_noun = pick(source.flight_types)		//pull from a list of owner-specific flight ops, to allow an extra dash of flavor
 	if(source.complex_tasks)				//if our source has the complex_tasks flag, regenerate with a two-stage assignment
 		mission_noun = "[pick(source.task_types)] [pick(source.flight_types)]"
-	
+
 	//First response is 'yes', second is 'no'
 	var/requests = list(
 				"special flight rules" = list("authorizing special flight rules", "denying special flight rules, not allowed for your traffic class"),

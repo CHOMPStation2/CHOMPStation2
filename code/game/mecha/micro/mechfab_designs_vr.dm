@@ -185,5 +185,5 @@
 	name = "Weasel Head"
 	id = "weasel_head"
 	build_path = /obj/item/mecha_parts/micro/part/weasel_head
-	materials = list(MAT_STEEL = 7000, MAT_GLASS = 2500) 
+	materials = list(MAT_STEEL = 7000, MAT_GLASS = 2500)
 */

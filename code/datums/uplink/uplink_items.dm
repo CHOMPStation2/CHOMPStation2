@@ -8,7 +8,7 @@ var/datum/uplink/uplink = new()
 /datum/uplink/New(var/type)
 	items_assoc = list()
 	items = init_subtypes(/datum/uplink_item)
-	categories = init_subtypes(/datum/uplink_category) 
+	categories = init_subtypes(/datum/uplink_category)
 	categories = dd_sortedObjectList(categories)
 
 	for(var/datum/uplink_item/item in items)

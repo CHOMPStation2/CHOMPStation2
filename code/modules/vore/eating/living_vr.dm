@@ -531,10 +531,10 @@
 	setClickCooldown(DEFAULT_ATTACK_COOLDOWN)
 	if(tasted == src) //CHOMPEdit Start
 		visible_message(span_vwarning("[src] licks themself!"),span_notice("You lick yourself. You taste rather like [tasted.get_taste_message()]."),span_infoplain(span_bold("Slurp!")))
-		balloon_alert_visible("Licks themself!", "Tastes like [tasted.get_taste_message()]")
+		balloon_alert_visible("licks themself!", "tastes like [tasted.get_taste_message()]")
 	else
 		visible_message(span_vwarning("[src] licks [tasted]!"),span_notice("You lick [tasted]. They taste rather like [tasted.get_taste_message()]."),span_infoplain(span_bold("Slurp!")))
-		balloon_alert_visible("Licks [tasted]!", "Tastes like [tasted.get_taste_message()]")
+		balloon_alert_visible("licks [tasted]!", "tastes like [tasted.get_taste_message()]")
 		//CHOMPEdit End
 
 
@@ -576,10 +576,10 @@
 	setClickCooldown(DEFAULT_ATTACK_COOLDOWN)
 	if(smelled == src) //CHOMPEdit Start
 		visible_message(span_vwarning("[src] smells themself!"),span_notice("You smell yourself. You smell like [smelled.get_smell_message()]."),span_infoplain(span_bold("Sniff!")))
-		balloon_alert_visible("Smells themself!", "Smells like [smelled.get_smell_message()]")
+		balloon_alert_visible("smells themself!", "smells like [smelled.get_smell_message()]")
 	else
 		visible_message(span_vwarning("[src] smells [smelled]!"),span_notice("You smell [smelled]. They smell like [smelled.get_smell_message()]."),span_infoplain(span_bold("Sniff!")))
-		balloon_alert_visible("Smells [smelled]!", "Smells like [smelled.get_smell_message()]")
+		balloon_alert_visible("smells [smelled]!", "smells like [smelled.get_smell_message()]")
 		//CHOMPEdit End
 
 /mob/living/proc/get_smell_message(allow_generic = 1)

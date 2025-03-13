@@ -577,4 +577,3 @@ Talon pin
 /datum/gear/accessory/bunny_tail/New()
 	..()
 	gear_tweaks += gear_tweak_free_color_choice
-

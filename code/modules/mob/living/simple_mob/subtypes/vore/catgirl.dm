@@ -34,7 +34,7 @@
 		"catgirlblack",
 		"catgirlbrown"
 	)
-	
+
 	can_be_drop_prey = FALSE //CHOMP Add
 
 	faction = FACTION_CATGIRL
