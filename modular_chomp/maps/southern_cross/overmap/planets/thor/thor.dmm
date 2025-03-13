@@ -126,16 +126,6 @@
 	},
 /turf/simulated/floor/wood,
 /area/surface/thor/bar)
-"at" = (
-/mob/living/simple_mob/vore/wolftaur/syndicate/alt3{
-	name = "private securitaur";
-	faction = "wolftaur"
-	},
-/turf/simulated/floor/outdoors/grass/forest/thor{
-	tree_chance = 0;
-	grass_chance = 2
-	},
-/area/surface/outside/thor/outpost)
 "au" = (
 /obj/structure/flora/ausbushes/palebush,
 /turf/simulated/floor/outdoors/grass/forest/thor{
@@ -284,16 +274,6 @@
 	},
 /turf/simulated/floor/tiled/asteroid_steel/outdoors/thor,
 /area/surface/outside/thor/outpost)
-"aL" = (
-/mob/living/simple_mob/vore/wolftaur/syndicate/alt3{
-	name = "private securitaur";
-	faction = "wolftaur"
-	},
-/turf/simulated/floor/outdoors/grass/forest/thor{
-	tree_chance = 0;
-	grass_chance = 2
-	},
-/area/surface/outside/thor/jungle)
 "aM" = (
 /obj/structure/toilet,
 /turf/simulated/floor/wood{
@@ -22255,7 +22235,7 @@ oq
 oq
 oq
 oq
-aL
+oq
 qW
 oq
 oq
@@ -40851,7 +40831,7 @@ PA
 PA
 PA
 PA
-at
+PA
 PA
 PA
 PA
@@ -41091,7 +41071,7 @@ PA
 PA
 PA
 PA
-at
+PA
 PA
 XT
 PA
