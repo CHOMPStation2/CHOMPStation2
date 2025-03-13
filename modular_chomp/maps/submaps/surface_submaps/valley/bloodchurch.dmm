@@ -99,11 +99,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/wood/sif,
 /area/submap/bloodchurch)
-"mG" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/wood/sif,
-/area/submap/bloodchurch)
 "or" = (
 /obj/structure/loot_pile/surface/bones,
 /obj/effect/decal/cleanable/dirt,
@@ -117,8 +112,6 @@
 /area/submap/bloodchurch)
 "pJ" = (
 /obj/structure/table/bench/sifwooden/padded,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/wood/sif,
 /area/submap/bloodchurch)
@@ -149,14 +142,11 @@
 /obj/structure/table/bench/sifwooden/padded,
 /mob/living/simple_mob/humanoid/cultist/tesh,
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/wood/sif,
 /area/submap/bloodchurch)
 "tW" = (
 /obj/structure/table/bench/sifwooden/padded,
 /mob/living/simple_mob/humanoid/cultist/castertesh,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/wood/sif,
 /area/submap/bloodchurch)
@@ -187,7 +177,6 @@
 /obj/structure/table/bench/sifwooden/padded,
 /mob/living/simple_mob/humanoid/cultist/lizard,
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/wood/sif,
 /area/submap/bloodchurch)
 "yC" = (
@@ -213,12 +202,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/wood/sif,
 /area/submap/bloodchurch)
-"Ae" = (
-/obj/effect/decal/cleanable/blood/gibs,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/wood/sif,
-/area/submap/bloodchurch)
 "AL" = (
 /turf/template_noop,
 /area/template_noop)
@@ -229,13 +212,6 @@
 "Cf" = (
 /obj/structure/table/sifwoodentable,
 /obj/item/flame/candle/candelabra/everburn,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/wood/sif,
-/area/submap/bloodchurch)
-"Ch" = (
-/obj/structure/table/sifwoodentable,
-/obj/item/flame/candle/everburn,
-/obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/wood/sif,
 /area/submap/bloodchurch)
@@ -263,12 +239,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/wood/sif,
 /area/submap/bloodchurch)
-"GX" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/wood/sif,
-/area/submap/bloodchurch)
 "Hn" = (
 /obj/random/explorer_shield,
 /obj/random/contraband/nofail,
@@ -289,12 +259,6 @@
 "MC" = (
 /obj/item/flame/candle/candelabra/everburn,
 /obj/structure/table/sifwoodentable,
-/turf/simulated/floor/wood/sif,
-/area/submap/bloodchurch)
-"MH" = (
-/obj/structure/table/bench/sifwooden/padded,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/wood/sif,
 /area/submap/bloodchurch)
 "MK" = (
@@ -907,7 +871,7 @@ eT
 MQ
 gM
 rQ
-mG
+Nn
 Ac
 Nn
 Ac
@@ -946,11 +910,11 @@ rQ
 Nn
 Nn
 WM
-mG
+Nn
 yo
-mG
+Nn
 oI
-mG
+Nn
 MQ
 MQ
 sy
@@ -982,15 +946,15 @@ MQ
 Nn
 DJ
 Nn
-MH
-mG
 pJ
-GX
+Nn
+pJ
+Nn
 pJ
 Nn
 MQ
 MC
-mG
+Nn
 Nn
 MC
 MQ
@@ -1018,18 +982,18 @@ eT
 MQ
 wh
 fQ
-mG
-GX
-mG
-GX
-mG
-GX
+Nn
+Nn
+Nn
+Nn
+Nn
+Nn
 Nn
 OC
 pL
-GX
-GX
-mG
+Nn
+Nn
+Nn
 OC
 yC
 yC
@@ -1056,16 +1020,16 @@ MQ
 rQ
 DJ
 Nn
-MH
-GX
 pJ
-mG
-MH
-mG
+Nn
+pJ
+Nn
+pJ
+Nn
 MQ
 ke
-mG
-mG
+Nn
+Nn
 MC
 MQ
 yC
@@ -1092,11 +1056,11 @@ eT
 MQ
 rQ
 rQ
-mG
+Nn
 sA
-mG
+Nn
 yo
-mG
+Nn
 tW
 Nn
 MQ
@@ -1130,7 +1094,7 @@ MQ
 gM
 rQ
 Nn
-Ch
+Ac
 Nn
 Ac
 Nn
@@ -1241,7 +1205,7 @@ MQ
 Hn
 lt
 Nn
-mG
+Nn
 Nn
 Nn
 Gk
@@ -1278,10 +1242,10 @@ MQ
 rQ
 dF
 Nn
-mG
-Ae
-mG
-mG
+Nn
+Gk
+Nn
+Nn
 Vy
 lt
 gy

@@ -89,13 +89,6 @@
 "mh" = (
 /turf/simulated/floor/outdoors/dirt,
 /area/submap/FrostOasis)
-"mw" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/outdoors/dirt{
-	outdoors = 0
-	},
-/area/submap/FrostOasis)
 "mD" = (
 /obj/structure/flora/grass/both,
 /mob/living/simple_mob/vore/wolf/direwolf{
@@ -106,7 +99,6 @@
 "mH" = (
 /obj/random/obstruction,
 /obj/random/obstruction,
-/obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/outdoors/dirt{
 	outdoors = 0
@@ -122,14 +114,6 @@
 	faction = "diyaab"
 	},
 /turf/simulated/floor/outdoors/snow,
-/area/submap/FrostOasis)
-"oA" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/outdoors/dirt{
-	outdoors = 0
-	},
 /area/submap/FrostOasis)
 "oB" = (
 /turf/simulated/floor/outdoors/snow,
@@ -229,7 +213,6 @@
 /area/submap/FrostOasis)
 "It" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/outdoors/dirt,
 /area/template_noop)
 "IF" = (
@@ -240,14 +223,6 @@
 /obj/random/junk,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/wood,
-/area/submap/FrostOasis)
-"JY" = (
-/obj/random/obstruction,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/outdoors/dirt{
-	outdoors = 0
-	},
 /area/submap/FrostOasis)
 "Ka" = (
 /obj/random/obstruction,
@@ -278,11 +253,6 @@
 "Mr" = (
 /obj/effect/landmark/loot_spawn/low,
 /turf/simulated/floor/outdoors/snow,
-/area/submap/FrostOasis)
-"MA" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/outdoors/dirt,
 /area/submap/FrostOasis)
 "Nc" = (
 /obj/random/outcrop,
@@ -460,7 +430,7 @@ Nc
 xI
 xI
 Xf
-JY
+ll
 Ka
 co
 co
@@ -479,10 +449,10 @@ tT
 BF
 oB
 Xf
-mw
-oA
-mw
-mw
+Xf
+Xf
+Xf
+Xf
 co
 co
 co
@@ -689,8 +659,8 @@ Qn
 "}
 (16,1,1) = {"
 It
-MA
-JY
+cm
+ll
 mH
 Xf
 Xf

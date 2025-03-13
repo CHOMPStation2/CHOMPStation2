@@ -238,12 +238,6 @@
 /obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/floor/tiled/techfloor,
 /area/survivalpod/superpose/MethLab)
-"tL" = (
-/obj/effect/floor_decal/rust,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/tiled/steel_dirty,
-/area/survivalpod/superpose/MethLab)
 "tQ" = (
 /obj/structure/girder,
 /turf/simulated/floor,
@@ -348,11 +342,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/steel_dirty,
 /area/survivalpod/superpose/MethLab)
-"zu" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/tiled/old_tile/green,
-/area/survivalpod/superpose/MethLab)
 "zB" = (
 /obj/structure/bed/double/padded,
 /obj/item/bedsheet/browndouble,
@@ -385,12 +374,6 @@
 /area/survivalpod/superpose/MethLab)
 "AW" = (
 /obj/random/junk,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/tiled/steel_dirty,
-/area/survivalpod/superpose/MethLab)
-"BP" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/steel_dirty,
 /area/survivalpod/superpose/MethLab)
@@ -482,8 +465,6 @@
 /obj/machinery/light,
 /obj/effect/floor_decal/rust,
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/steel_dirty,
 /area/survivalpod/superpose/MethLab)
 "Ih" = (
@@ -540,12 +521,10 @@
 "LM" = (
 /obj/random/trash,
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/steel_dirty,
 /area/survivalpod/superpose/MethLab)
 "LX" = (
 /obj/item/stool,
-/obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/steel_dirty,
 /area/survivalpod/superpose/MethLab)
@@ -557,12 +536,6 @@
 /obj/effect/wingrille_spawn/reinforced,
 /obj/structure/barricade,
 /turf/simulated/floor/tiled/techfloor,
-/area/survivalpod/superpose/MethLab)
-"Ol" = (
-/obj/effect/floor_decal/rust,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/tiled/old_tile/green,
 /area/survivalpod/superpose/MethLab)
 "Oq" = (
 /obj/structure/fence{
@@ -600,8 +573,6 @@
 "Sn" = (
 /obj/structure/barricade,
 /obj/effect/floor_decal/steeldecal/steel_decals_central5,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/steel_dirty,
 /area/survivalpod/superpose/MethLab)
@@ -740,7 +711,6 @@
 /area/survivalpod/superpose/MethLab)
 "Vw" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
 /obj/random/maintenance,
 /turf/simulated/floor/tiled/steel_dirty,
 /area/survivalpod/superpose/MethLab)
@@ -864,7 +834,6 @@
 /turf/simulated/floor/tiled/old_tile/white,
 /area/survivalpod/superpose/MethLab)
 "Zh" = (
-/obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/random/maintenance/engineering,
 /turf/simulated/floor/tiled/old_tile/green,
@@ -1005,7 +974,7 @@ hQ
 uY
 xM
 kp
-Ol
+PZ
 Zh
 PH
 jo
@@ -1028,9 +997,9 @@ Xo
 Xi
 HA
 HA
-zu
-Ol
-zu
+IH
+PZ
+IH
 IH
 QW
 HA
@@ -1133,8 +1102,8 @@ rK
 AB
 EW
 PO
-tL
-BP
+yY
+AM
 UD
 Xi
 Wp

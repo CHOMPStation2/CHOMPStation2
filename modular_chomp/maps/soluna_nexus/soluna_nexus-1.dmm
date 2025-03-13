@@ -13585,9 +13585,6 @@
 /obj/effect/floor_decal/industrial/arrows/blue{
 	dir = 1
 	},
-/obj/structure/cable/green{
-	icon_state = "1-2"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/disposalpipe/segment,
@@ -13715,9 +13712,6 @@
 /turf/simulated/floor/tiled/yellow,
 /area/shuttle/spacebus)
 "daC" = (
-/obj/structure/cable/green{
-	icon_state = "1-2"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 4
@@ -37382,9 +37376,6 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/obj/structure/cable/green{
-	icon_state = "1-2"
-	},
 /obj/structure/disposalpipe/segment{
 	dir = 2;
 	icon_state = "pipe-c"
@@ -38786,9 +38777,6 @@
 /turf/simulated/floor/tiled,
 /area/hallway/Port_1Deck_Atrium)
 "lND" = (
-/obj/structure/cable/green{
-	icon_state = "1-2"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/disposalpipe/segment,
@@ -45354,9 +45342,6 @@
 /obj/structure/cable/green{
 	icon_state = "2-4"
 	},
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 1
 	},
@@ -47046,9 +47031,6 @@
 /turf/simulated/floor/plating,
 /area/maintenance/ab_SportsField)
 "oEW" = (
-/obj/structure/cable/green{
-	icon_state = "1-2"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/effect/floor_decal/borderfloor/corner{
@@ -51431,9 +51413,6 @@
 	dir = 10
 	},
 /obj/effect/catwalk_plated/techmaint,
-/obj/structure/cable/green{
-	icon_state = "1-8"
-	},
 /obj/structure/disposalpipe/segment{
 	dir = 2;
 	icon_state = "pipe-c"
@@ -57356,9 +57335,6 @@
 /turf/simulated/floor/tiled/eris/steel/bar_dance,
 /area/maintenance/ab_StripBar)
 "seO" = (
-/obj/structure/cable/green{
-	icon_state = "1-2"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
 	},
@@ -60293,17 +60269,6 @@
 "tpf" = (
 /turf/simulated/wall,
 /area/maintenance/Deck1_ForStar_Chamber1)
-"tph" = (
-/obj/machinery/power/apc{
-	dir = 1;
-	name = "north bump";
-	pixel_y = 24
-	},
-/obj/structure/cable/green{
-	icon_state = "0-2"
-	},
-/turf/simulated/floor/plating,
-/area/maintenance/Deck1_Security_StarCorridor2)
 "tpj" = (
 /obj/machinery/door/firedoor/glass/hidden/steel,
 /obj/machinery/status_display{
@@ -67624,9 +67589,6 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/quartermaster/Depot2)
 "vPN" = (
-/obj/structure/cable/green{
-	icon_state = "1-2"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/disposalpipe/segment,
@@ -67937,14 +67899,6 @@
 /turf/simulated/floor/tiled,
 /area/maintenance/Market_Stall_2)
 "vVr" = (
-/obj/machinery/power/apc{
-	dir = 8;
-	name = "west bump";
-	pixel_x = -24
-	},
-/obj/structure/cable/green{
-	icon_state = "0-2"
-	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 9
 	},
@@ -69797,9 +69751,6 @@
 /turf/simulated/floor/plating,
 /area/maintenance/Deck1_AftPort_Corridor3)
 "wFH" = (
-/obj/structure/cable/green{
-	icon_state = "1-2"
-	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 4
 	},
@@ -72734,9 +72685,6 @@
 /turf/simulated/floor/tiled/dark,
 /area/harbor/Dock1)
 "xMF" = (
-/obj/structure/cable/green{
-	icon_state = "1-4"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 5
 	},
@@ -105232,7 +105180,7 @@ jaH
 tgS
 pWf
 rjC
-tph
+tlt
 pYM
 dih
 dih
