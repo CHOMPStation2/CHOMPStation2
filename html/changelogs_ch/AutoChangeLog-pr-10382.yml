@@ -1,0 +1,4 @@
+author: "Ace"
+delete-after: True
+changes:
+  - bugfix: "Thor terrains did not actually use the randomized fauna made for it."
