@@ -180,10 +180,6 @@
 "aW" = (
 /turf/simulated/floor/outdoors/dirt/sif/planetuse,
 /area/surface/outside/path/wilderness)
-"aX" = (
-/obj/structure/ladder/up,
-/turf/simulated/floor/outdoors/dirt/sif/planetuse,
-/area/surface/outpost/shelter/exterior)
 "aY" = (
 /obj/effect/map_effect/portal/master/side_b/wilderness_to_caves/river{
 	dir = 1
@@ -40275,7 +40271,7 @@ bz
 bz
 bz
 aT
-aX
+aT
 ac
 ab
 "}

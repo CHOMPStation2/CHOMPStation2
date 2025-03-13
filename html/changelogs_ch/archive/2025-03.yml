@@ -269,3 +269,14 @@
   - bugfix: Fixes the toaster from having the sus plushie sound.
   - code_imp: Changed some timers that were calling a proc that just set a var to
       false. Instead, we now use a varset_callback timer there.
+2025-03-13:
+  Ace:
+  - maptweak: Thor map updated
+  - config: Thor terrain is now configured to spawn appropriate mobs instead of just
+      placeholder tindalos.
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: Fixed dullahans being in between two tiles
+  - code_imp: changes the falling turf effect to turfs directly
+  Hunter-Dovetail:
+  - rscadd: scaled_belly-r_leg, scaled_belly-l_leg, chubbybelly_small-r_leg, chubbybelly_small-l_leg
+  - bugfix: hippo_upperjaw-head, hippo_lowerjaw-head, scaled_belly-groin

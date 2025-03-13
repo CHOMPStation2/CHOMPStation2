@@ -25,7 +25,6 @@
 /obj/structure/dogbed,
 /obj/effect/decal/remains/deer,
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
 /obj/random/contraband,
 /turf/simulated/floor/outdoors/dirt/sif/planetuse,
 /area/submap/DogBase)
@@ -90,14 +89,12 @@
 	name = "trained giant spider"
 	},
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/outdoors/dirt/sif/planetuse,
 /area/submap/DogBase)
 "ew" = (
 /obj/structure/dogbed,
 /obj/effect/decal/remains/human,
 /obj/effect/decal/cleanable/filth,
-/obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/item/bone/ribs,
 /obj/random/maintenance/research,
@@ -141,7 +138,6 @@
 	name = "trained giant spider"
 	},
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/outdoors/dirt/sif/planetuse,
 /area/template_noop)
 "gx" = (
@@ -165,7 +161,6 @@
 /area/submap/DogBase)
 "hV" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
 /obj/item/bone/leg,
 /mob/living/simple_mob/animal/giant_spider/nurse{
 	faction = "syndicate";
@@ -174,7 +169,6 @@
 /turf/simulated/floor/outdoors/dirt/sif/planetuse,
 /area/submap/DogBase)
 "hW" = (
-/obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/outdoors/dirt/sif/planetuse,
 /area/submap/DogBase)
@@ -187,7 +181,6 @@
 /obj/structure/dogbed,
 /obj/effect/decal/remains/deer,
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/outdoors/dirt/sif/planetuse,
 /area/submap/DogBase)
 "ja" = (
@@ -195,7 +188,6 @@
 /area/submap/DogBase)
 "jH" = (
 /obj/structure/dogbed,
-/obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/random/maintenance/security,
 /turf/simulated/floor/outdoors/dirt/sif/planetuse,
@@ -264,7 +256,6 @@
 "nV" = (
 /obj/effect/decal/remains/unathi,
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/outdoors/dirt/sif/planetuse,
 /area/submap/DogBase)
 "oa" = (
@@ -304,7 +295,6 @@
 /obj/structure/dogbed,
 /obj/effect/decal/remains/tajaran,
 /obj/effect/decal/cleanable/filth,
-/obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/item/bone,
 /obj/random/maintenance/security,
@@ -375,7 +365,6 @@
 /area/submap/DogBase)
 "vt" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
 /obj/random/maintenance/cargo,
 /turf/simulated/floor/outdoors/dirt/sif/planetuse,
 /area/submap/DogBase)
@@ -394,7 +383,6 @@
 /area/submap/DogBase)
 "xC" = (
 /obj/structure/dogbed,
-/obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/item/bone,
 /obj/random/maintenance/security,
@@ -510,11 +498,6 @@
 "Ge" = (
 /turf/template_noop,
 /area/template_noop)
-"Gm" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/outdoors/dirt/sif/planetuse,
-/area/template_noop)
 "GP" = (
 /obj/item/storage/belt/janitor,
 /obj/effect/floor_decal/corner/purple/diagonal,
@@ -601,7 +584,6 @@
 "MF" = (
 /obj/structure/dogbed,
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
 /obj/item/bone,
 /obj/random/contraband,
 /turf/simulated/floor/outdoors/dirt/sif/planetuse,
@@ -609,7 +591,6 @@
 "MW" = (
 /obj/structure/dogbed,
 /obj/effect/decal/remains/unathi,
-/obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/random/maintenance/security,
 /turf/simulated/floor/outdoors/dirt/sif/planetuse,
@@ -638,7 +619,6 @@
 "Oj" = (
 /obj/structure/dogbed,
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/remains/tajaran,
 /obj/random/maintenance/medical,
 /turf/simulated/floor/outdoors/dirt/sif/planetuse,
@@ -659,7 +639,6 @@
 /area/submap/DogBase)
 "PW" = (
 /obj/structure/dogbed,
-/obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/remains/human,
 /obj/random/contraband,
@@ -702,7 +681,6 @@
 /obj/effect/decal/remains/human,
 /obj/effect/decal/cleanable/filth,
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
 /obj/random/maintenance/cargo,
 /turf/simulated/floor/outdoors/dirt/sif/planetuse,
 /area/submap/DogBase)
@@ -723,13 +701,11 @@
 "Sj" = (
 /obj/structure/dogbed,
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
 /obj/random/maintenance/research,
 /turf/simulated/floor/outdoors/dirt/sif/planetuse,
 /area/submap/DogBase)
 "Sn" = (
 /obj/effect/decal/remains/human,
-/obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/random/maintenance/cargo,
 /turf/simulated/floor/outdoors/dirt/sif/planetuse,
@@ -1077,11 +1053,11 @@ hV
 nV
 vt
 Ns
-Gm
-Gm
-Gm
-Gm
-Gm
+Ed
+Ed
+Ed
+Ed
+Ed
 Ge
 mF
 Ge
@@ -1109,10 +1085,10 @@ ec
 Sn
 hW
 Ns
-Gm
-Gm
+Ed
+Ed
 gi
-Gm
+Ed
 Ge
 Ge
 Ge

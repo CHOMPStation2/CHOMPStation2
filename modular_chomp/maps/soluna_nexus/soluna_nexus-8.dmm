@@ -6,8 +6,7 @@
 /turf/space/transit/west,
 /area/shuttle/escape_pod6/transit)
 "ag" = (
-/obj/effect/step_trigger/teleporter/planetary_fall/sif,
-/turf/simulated/sky/moving/north,
+/turf/simulated/sky/moving/north/sif/planet_fall,
 /area/space)
 "ah" = (
 /obj/effect/step_trigger/teleporter/random{

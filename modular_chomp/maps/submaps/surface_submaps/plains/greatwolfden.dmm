@@ -262,13 +262,10 @@
 /area/submap/GreatWolfDen)
 "zV" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
 /obj/structure/ledge/ledge_stairs,
 /turf/simulated/floor/outdoors/dirt/virgo3b,
 /area/template_noop)
 "AG" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/flora/rocks2,
 /obj/structure/ledge/ledge_stairs,
@@ -401,8 +398,6 @@
 /area/submap/GreatWolfDen)
 "LP" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
 /obj/structure/flora/rocks2,
 /obj/structure/ledge/ledge_stairs,
 /turf/simulated/floor/outdoors/dirt/virgo3b,
@@ -456,13 +451,6 @@
 /obj/structure/cliff/automatic/ramp,
 /turf/simulated/floor/outdoors/dirt/virgo3b,
 /area/template_noop)
-"Pf" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/outdoors/dirt/virgo3b{
-	outdoors = 0
-	},
-/area/submap/GreatWolfDen)
 "Pl" = (
 /obj/effect/decal/remains/lizard,
 /obj/effect/decal/cleanable/dirt,
@@ -481,8 +469,6 @@
 /turf/simulated/floor/outdoors/dirt/virgo3b,
 /area/submap/GreatWolfDen)
 "Qb" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/flora/rocks1,
 /obj/structure/ledge/ledge_stairs,
@@ -593,7 +579,6 @@
 /turf/simulated/floor/outdoors/dirt/virgo3b,
 /area/submap/GreatWolfDen)
 "WY" = (
-/obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/flora/rocks1,
 /turf/simulated/floor/outdoors/dirt/virgo3b,
@@ -1094,7 +1079,7 @@ Pa
 OV
 tm
 LJ
-Pf
+CR
 CR
 tm
 ju

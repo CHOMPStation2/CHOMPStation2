@@ -193,7 +193,6 @@
 "kX" = (
 /obj/item/stack/rods,
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled,
 /area/submap/Rockybase)
 "lN" = (
@@ -365,12 +364,6 @@
 /obj/machinery/light,
 /turf/simulated/floor/holofloor/lino,
 /area/submap/Rockybase)
-"tQ" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor,
-/area/submap/Rockybase)
 "uj" = (
 /obj/effect/floor_decal/corner/red/border,
 /turf/simulated/floor/tiled,
@@ -459,7 +452,6 @@
 /turf/simulated/floor/tiled/hydro,
 /area/submap/Rockybase)
 "xM" = (
-/obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/item/material/shard,
 /turf/simulated/floor,
@@ -690,7 +682,6 @@
 /area/submap/Rockybase)
 "Hz" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
 /mob/living/simple_mob/mechanical/mining_drone,
 /turf/simulated/floor/tiled,
 /area/submap/Rockybase)
@@ -907,11 +898,6 @@
 /obj/item/storage/bag/trash,
 /turf/simulated/floor/tiled,
 /area/submap/Rockybase)
-"RY" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor,
-/area/submap/Rockybase)
 "Sj" = (
 /obj/machinery/door/airlock/engineering,
 /turf/simulated/floor/tiled,
@@ -950,8 +936,6 @@
 /turf/simulated/floor/tiled/hydro,
 /area/submap/Rockybase)
 "TH" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/blood,
 /turf/simulated/floor,
@@ -1048,11 +1032,6 @@
 /obj/machinery/light,
 /obj/effect/floor_decal/industrial/danger,
 /turf/simulated/floor,
-/area/submap/Rockybase)
-"YG" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/tiled,
 /area/submap/Rockybase)
 "Zd" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
@@ -2436,7 +2415,7 @@ Hf
 pk
 JO
 dF
-YG
+dF
 TH
 Hz
 MW
@@ -2474,9 +2453,9 @@ Hf
 pk
 Ly
 kX
-RY
-tQ
-RY
+kb
+kb
+kb
 MW
 pk
 fp
@@ -2513,7 +2492,7 @@ pk
 Op
 NY
 xM
-tQ
+kb
 kb
 bQ
 pk
@@ -2550,8 +2529,8 @@ Hf
 pk
 dF
 kb
-tQ
-RY
+kb
+kb
 kb
 un
 pk
@@ -2588,7 +2567,7 @@ Hf
 pk
 MW
 TD
-RY
+kb
 TD
 kb
 bQ

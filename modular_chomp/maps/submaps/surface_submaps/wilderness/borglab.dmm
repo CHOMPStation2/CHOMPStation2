@@ -8,7 +8,6 @@
 	maxHealth = 15
 	},
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/plating,
 /area/submap/BorgLab)
 "ad" = (
@@ -134,8 +133,6 @@
 /obj/effect/floor_decal/rust,
 /obj/effect/gibspawner/robot,
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled,
 /area/submap/BorgLab)
 "ga" = (
@@ -228,8 +225,6 @@
 	},
 /obj/effect/floor_decal/rust,
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled,
 /area/submap/BorgLab)
 "ii" = (
@@ -293,7 +288,6 @@
 /obj/machinery/door/airlock/maintenance/rnd{
 	req_one_access = null
 	},
-/obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/techmaint,
 /area/submap/BorgLab)
@@ -416,7 +410,6 @@
 "nV" = (
 /obj/effect/floor_decal/industrial/warning,
 /obj/machinery/light/small/emergency/flicker,
-/obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled,
 /area/submap/BorgLab)
@@ -673,15 +666,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/submap/BorgLab)
-"As" = (
-/obj/effect/floor_decal/industrial/warning{
-	dir = 1
-	},
-/obj/effect/floor_decal/rust,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/tiled,
-/area/submap/BorgLab)
 "AI" = (
 /mob/living/simple_mob/vore/aggressive/corrupthound,
 /turf/simulated/floor/reinforced,
@@ -712,7 +696,6 @@
 /area/submap/BorgLab)
 "CA" = (
 /obj/effect/floor_decal/rust,
-/obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled,
 /area/submap/BorgLab)
@@ -768,7 +751,6 @@
 "Ft" = (
 /obj/effect/floor_decal/industrial/warning,
 /obj/random/junk,
-/obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled,
 /area/submap/BorgLab)
@@ -832,12 +814,6 @@
 /obj/item/material/shard,
 /obj/effect/floor_decal/rust/mono_rusted3,
 /obj/random/trash,
-/turf/simulated/floor/tiled,
-/area/submap/BorgLab)
-"Jm" = (
-/obj/effect/floor_decal/industrial/warning,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled,
 /area/submap/BorgLab)
 "Jo" = (
@@ -979,7 +955,6 @@
 /obj/effect/floor_decal/rust,
 /obj/item/material/shard,
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled,
 /area/submap/BorgLab)
 "Ns" = (
@@ -1002,8 +977,6 @@
 	dir = 4
 	},
 /obj/random/trash,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled,
 /area/submap/BorgLab)
@@ -1092,7 +1065,6 @@
 	maxHealth = 15
 	},
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled,
 /area/submap/BorgLab)
 "Qe" = (
@@ -1111,7 +1083,6 @@
 /obj/structure/window/reinforced/tinted/frosted{
 	dir = 4
 	},
-/obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled,
 /area/submap/BorgLab)
@@ -1173,7 +1144,6 @@
 	dir = 4
 	},
 /obj/random/trash,
-/obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/generic,
 /turf/simulated/floor/tiled,
@@ -1365,11 +1335,6 @@
 /obj/effect/decal/cleanable/generic,
 /turf/simulated/floor/tiled,
 /area/submap/BorgLab)
-"Yk" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/plating,
-/area/submap/BorgLab)
 "Yy" = (
 /obj/structure/table/steel,
 /obj/item/coin/phoron,
@@ -1392,7 +1357,6 @@
 /area/submap/BorgLab)
 "YZ" = (
 /obj/effect/floor_decal/rust,
-/obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/plating,
 /area/submap/BorgLab)
@@ -1432,13 +1396,11 @@
 /obj/effect/floor_decal/rust,
 /obj/random/junk,
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled,
 /area/submap/BorgLab)
 "ZO" = (
 /obj/effect/floor_decal/rust,
 /obj/random/trash,
-/obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled,
 /area/submap/BorgLab)
@@ -1566,7 +1528,7 @@ Ns
 Zt
 lU
 kj
-Yk
+Bl
 Fu
 bN
 WQ
@@ -1862,7 +1824,7 @@ Vc
 wt
 ra
 gS
-Jm
+dd
 ne
 RL
 Bq
@@ -1889,7 +1851,7 @@ UM
 yq
 rO
 Jh
-Yk
+Bl
 he
 op
 tx
@@ -1941,7 +1903,7 @@ TD
 TU
 Vc
 YD
-As
+GC
 ty
 dd
 UW
@@ -1968,7 +1930,7 @@ TD
 yB
 OD
 mB
-As
+GC
 CS
 oa
 dK
@@ -1995,7 +1957,7 @@ bY
 tx
 Vc
 YD
-As
+GC
 CX
 Nb
 OH
@@ -2104,7 +2066,7 @@ Nj
 Vc
 YD
 iS
-Yk
+Bl
 Vh
 tX
 Jd

@@ -1,5 +1,0 @@
-author: "Hunter-Dovetail"
-delete-after: True
-changes:
-  - rscadd: "scaled_belly-r_leg, scaled_belly-l_leg, chubbybelly_small-r_leg, chubbybelly_small-l_leg"
-  - bugfix: "hippo_upperjaw-head, hippo_lowerjaw-head, scaled_belly-groin"

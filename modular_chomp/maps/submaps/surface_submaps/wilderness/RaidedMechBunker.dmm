@@ -38,14 +38,6 @@
 "ha" = (
 /turf/simulated/wall/r_wall,
 /area/submap/MechHangar)
-"hg" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/outdoors/rocks{
-	outdoors = 0
-	},
-/area/submap/MechHangar)
 "hW" = (
 /obj/random/outcrop,
 /turf/simulated/floor/outdoors/dirt{
@@ -68,13 +60,6 @@
 	dir = 5
 	},
 /turf/simulated/floor/tiled/dark,
-/area/submap/MechHangar)
-"nV" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/outdoors/rocks{
-	outdoors = 0
-	},
 /area/submap/MechHangar)
 "ob" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
@@ -155,12 +140,6 @@
 	outdoors = 0
 	},
 /area/template_noop)
-"zs" = (
-/obj/effect/floor_decal/corner/black/diagonal,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/tiled,
-/area/submap/MechHangar)
 "Aj" = (
 /obj/structure/boulder,
 /obj/effect/decal/cleanable/dirt,
@@ -269,17 +248,8 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/dark,
 /area/submap/MechHangar)
-"Sk" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/outdoors/dirt{
-	outdoors = 0
-	},
-/area/submap/MechHangar)
 "So" = (
 /obj/random/outcrop,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/outdoors/dirt{
 	outdoors = 0
@@ -306,14 +276,6 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/structure/loot_pile/mecha/ripley/random_sprite,
 /turf/simulated/floor/tiled/red,
-/area/submap/MechHangar)
-"ZC" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/outdoors/dirt{
-	outdoors = 0
-	},
 /area/submap/MechHangar)
 
 (1,1,1) = {"
@@ -483,9 +445,9 @@ ha
 sD
 sD
 LE
-ZC
-Sk
-Sk
+LE
+LE
+LE
 LE
 LE
 vy
@@ -505,7 +467,7 @@ ha
 sD
 sD
 vP
-nV
+XS
 LE
 LE
 XS
@@ -572,7 +534,7 @@ sD
 sD
 sD
 sD
-Sk
+LE
 Kp
 sX
 sD
@@ -594,8 +556,8 @@ sD
 sD
 sD
 fB
-ZC
-Sk
+LE
+LE
 sD
 sD
 tF
@@ -637,7 +599,7 @@ ha
 sD
 BZ
 XS
-hg
+XS
 Aj
 LE
 Kp
@@ -658,9 +620,9 @@ Hz
 Hz
 Kp
 LE
-nV
-Sk
-Sk
+XS
+LE
+LE
 XS
 rF
 Kp
@@ -677,8 +639,8 @@ Hz
 vP
 Hz
 Le
-zs
-Sk
+Le
+LE
 LE
 So
 qr
@@ -727,7 +689,7 @@ sD
 sD
 sD
 sD
-Sk
+LE
 LE
 Kp
 uy

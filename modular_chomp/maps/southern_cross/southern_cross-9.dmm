@@ -3,8 +3,7 @@
 /turf/space,
 /area/space)
 "ag" = (
-/obj/effect/step_trigger/teleporter/planetary_fall/sif,
-/turf/simulated/sky/moving/north,
+/turf/simulated/sky/moving/north/sif/planet_fall,
 /area/space)
 "ah" = (
 /obj/effect/step_trigger/teleporter/random{

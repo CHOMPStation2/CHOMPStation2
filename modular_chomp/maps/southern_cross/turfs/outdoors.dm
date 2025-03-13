@@ -220,3 +220,6 @@
 		user.put_in_hands(S)
 		visible_message("[user] scoops up a pile of snow.", "You scoop up a pile of snow.")
 	return
+
+/turf/simulated/sky/moving/north/sif/planet_fall/find_planet()
+	return planet_sif
