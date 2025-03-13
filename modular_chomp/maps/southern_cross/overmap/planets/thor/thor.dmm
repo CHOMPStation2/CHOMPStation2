@@ -129,7 +129,8 @@
 "at" = (
 /mob/living/simple_mob/vore/wolftaur/syndicate/alt3{
 	name = "private securitaur";
-	faction = "wolftaur"
+	faction = "neutral";
+	faction_bump_vore = 1
 	},
 /turf/simulated/floor/outdoors/grass/forest/thor{
 	tree_chance = 0;
@@ -287,7 +288,8 @@
 "aL" = (
 /mob/living/simple_mob/vore/wolftaur/syndicate/alt3{
 	name = "private securitaur";
-	faction = "wolftaur"
+	faction = "neutral";
+	faction_bump_vore = 1
 	},
 /turf/simulated/floor/outdoors/grass/forest/thor{
 	tree_chance = 0;
