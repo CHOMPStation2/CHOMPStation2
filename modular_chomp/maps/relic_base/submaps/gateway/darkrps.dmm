@@ -3748,13 +3748,6 @@
 /obj/effect/floor_decal/corner/grey/diagonal{
 	dir = 4
 	},
-/obj/effect/decal/cleanable/blood{
-	pixel_y = 2;
-	pixel_x = -33
-	},
-/obj/effect/decal/cleanable/blood{
-	pixel_y = 32
-	},
 /obj/effect/decal/cleanable/blood,
 /obj/random/meat,
 /turf/simulated/floor/tiled/white,

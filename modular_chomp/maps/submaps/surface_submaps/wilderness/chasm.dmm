@@ -67,13 +67,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/submap/Chasm)
-"kn" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/outdoors/dirt{
-	outdoors = 0
-	},
-/area/submap/Chasm)
 "kH" = (
 /obj/random/junk,
 /turf/template_noop,
@@ -881,7 +874,7 @@ hR
 Sc
 Sc
 rI
-kn
+rI
 tg
 vV
 uf
