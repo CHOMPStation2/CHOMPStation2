@@ -8238,7 +8238,6 @@
 /obj/structure/table/marble,
 /obj/item/material/kitchen/rollingpin,
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/ghettohouse2)
 "laF" = (
@@ -18845,13 +18844,6 @@
 /obj/item/reagent_containers/food/drinks/cans/waterbottle,
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/ghettosouthwarehouse)
-"yen" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/outdoors/newdirt{
-	temperature = 293.15
-	},
-/area/awaymission/darkrp/outside)
 "yev" = (
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -44830,9 +44822,9 @@ fOb
 fOb
 dwh
 dwh
-yen
 oVr
-yen
+oVr
+oVr
 dwh
 oVr
 dwh
@@ -45156,9 +45148,9 @@ dwh
 dwh
 oVr
 dwh
-yen
 oVr
-yen
+oVr
+oVr
 dwh
 dwh
 dwh

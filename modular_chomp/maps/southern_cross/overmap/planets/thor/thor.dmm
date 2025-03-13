@@ -1070,11 +1070,6 @@
 /obj/structure/flora/ausbushes/leafybush,
 /turf/simulated/floor/outdoors/mud/thor/planetuse,
 /area/surface/outside/thor/jungle)
-"hv" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/tiled/yellow,
-/area/surface/thor/abandonedhouse)
 "hy" = (
 /obj/machinery/appliance/cooker/grill,
 /obj/effect/floor_decal/corner/grey/diagonal{
@@ -41218,7 +41213,7 @@ sB
 Ec
 Bt
 eV
-hv
+mK
 mK
 gl
 cp

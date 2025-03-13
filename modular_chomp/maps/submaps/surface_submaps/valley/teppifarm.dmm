@@ -34,7 +34,6 @@
 /area/submap/teppifarm)
 "j" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/outdoors/grass/sif,
 /area/submap/teppifarm)
 "k" = (
@@ -69,11 +68,6 @@
 /obj/item/flame/candle/candelabra,
 /turf/simulated/floor/wood/alt,
 /area/submap/teppifarm)
-"t" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/outdoors/dirt,
-/area/template_noop)
 "u" = (
 /turf/simulated/floor/outdoors/grass/sif,
 /area/submap/teppifarm)
@@ -81,12 +75,6 @@
 /obj/structure/window/basic,
 /obj/structure/curtain/black,
 /obj/structure/table/standard,
-/turf/simulated/floor/wood/alt,
-/area/submap/teppifarm)
-"y" = (
-/obj/effect/decal/cleanable/blood/oil/streak,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/wood/alt,
 /area/submap/teppifarm)
 "z" = (
@@ -119,12 +107,6 @@
 /obj/effect/landmark/loot_spawn,
 /turf/simulated/floor/wood/alt,
 /area/submap/teppifarm)
-"G" = (
-/obj/structure/simple_door/wood,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/wood/alt,
-/area/submap/teppifarm)
 "H" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/loot_pile/surface/bones,
@@ -135,12 +117,6 @@
 /obj/structure/closet/crate/hydroponics/exotic,
 /turf/simulated/floor/wood/alt,
 /area/submap/teppifarm)
-"L" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/outdoors/dirt,
-/area/template_noop)
 "M" = (
 /obj/structure/simple_door/wood,
 /obj/effect/decal/cleanable/dirt,
@@ -152,12 +128,6 @@
 /area/submap/teppifarm)
 "P" = (
 /obj/item/material/shard,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/wood/alt,
-/area/submap/teppifarm)
-"Q" = (
-/obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/wood/alt,
 /area/submap/teppifarm)
@@ -180,12 +150,6 @@
 	},
 /obj/structure/railing,
 /turf/simulated/floor/outdoors/grass/sif,
-/area/submap/teppifarm)
-"X" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/wood/alt,
 /area/submap/teppifarm)
 "Y" = (
 /obj/structure/bed/padded,
@@ -251,11 +215,11 @@ Z
 Z
 k
 r
-Q
+O
 k
-Q
+O
 H
-Q
+O
 P
 j
 u
@@ -271,8 +235,8 @@ s
 O
 k
 i
-Q
-Q
+O
+O
 O
 u
 u
@@ -288,7 +252,7 @@ h
 O
 k
 s
-Q
+O
 A
 k
 u
@@ -302,7 +266,7 @@ Z
 Z
 k
 k
-G
+M
 k
 k
 B
@@ -321,11 +285,11 @@ k
 s
 O
 O
-X
+O
 O
 B
-L
-t
+g
+g
 g
 g
 l
@@ -337,12 +301,12 @@ Z
 k
 s
 O
-X
-y
+O
+i
 O
 M
-L
-L
+g
+g
 g
 g
 l
@@ -360,7 +324,7 @@ k
 k
 g
 g
-t
+g
 l
 l
 Z
@@ -371,11 +335,11 @@ Z
 k
 I
 O
-Q
-X
+O
+O
 O
 z
-t
+g
 l
 l
 Z
@@ -390,7 +354,7 @@ S
 O
 O
 O
-Q
+O
 z
 g
 l

@@ -5872,7 +5872,6 @@
 /obj/item/storage/bible,
 /obj/structure/table/rack,
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
 /obj/random/maintenance/clean,
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/foreport)
