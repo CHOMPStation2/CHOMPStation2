@@ -12,11 +12,6 @@
 	temperature = 243.15
 	},
 /area/submap/cliffmanor)
-"bA" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/wood,
-/area/submap/cliffmanor)
 "cW" = (
 /obj/structure/cliff/automatic{
 	dir = 10
@@ -89,15 +84,6 @@
 	dir = 6
 	},
 /turf/simulated/floor/outdoors/dirt,
-/area/submap/cliffmanor)
-"nu" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/wood{
-	nitrogen = 93.7835;
-	oxygen = 20.7263;
-	temperature = 243.15
-	},
 /area/submap/cliffmanor)
 "pI" = (
 /mob/living/simple_mob/humanoid/cultist/hunter{
@@ -177,19 +163,12 @@
 	temperature = 243.15
 	},
 /area/submap/cliffmanor)
-"wg" = (
-/mob/living/simple_mob/humanoid/cultist/tesh,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/wood,
-/area/submap/cliffmanor)
 "xD" = (
 /obj/structure/cliff/automatic,
 /turf/simulated/floor/outdoors/dirt,
 /area/submap/cliffmanor)
 "yU" = (
 /mob/living/simple_mob/humanoid/cultist/noodle,
-/obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/wood{
 	nitrogen = 93.7835;
@@ -218,24 +197,6 @@
 	temperature = 243.15
 	},
 /area/submap/cliffmanor)
-"Dd" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/wood{
-	nitrogen = 93.7835;
-	oxygen = 20.7263;
-	temperature = 243.15
-	},
-/area/submap/cliffmanor)
-"DZ" = (
-/mob/living/simple_mob/humanoid/cultist/tesh,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/wood,
-/area/submap/cliffmanor)
 "Ed" = (
 /obj/structure/cliff/automatic{
 	dir = 5
@@ -259,31 +220,10 @@
 /obj/random/material,
 /turf/simulated/floor/wood,
 /area/submap/cliffmanor)
-"HS" = (
-/mob/living/simple_mob/humanoid/cultist/castertesh,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/wood{
-	nitrogen = 93.7835;
-	oxygen = 20.7263;
-	temperature = 243.15
-	},
-/area/submap/cliffmanor)
-"Ja" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/wood{
-	nitrogen = 93.7835;
-	oxygen = 20.7263;
-	temperature = 243.15
-	},
-/area/submap/cliffmanor)
 "Kj" = (
 /mob/living/simple_mob/humanoid/cultist/hunter{
 	loot_list = list(/obj/item/material/butterfly/saw = 100, /obj/item/gun/projectile/shotgun/doublebarrel/sawn/alt = 100, /obj/item/clothing/head/psy_crown/gluttony = 25)
 	},
-/obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/wood,
 /area/submap/cliffmanor)
@@ -295,12 +235,6 @@
 	oxygen = 20.7263;
 	temperature = 243.15
 	},
-/area/submap/cliffmanor)
-"LZ" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/wood,
 /area/submap/cliffmanor)
 "Me" = (
 /mob/living/simple_mob/humanoid/cultist/castertesh,
@@ -358,13 +292,6 @@
 /area/submap/cliffmanor)
 "Ra" = (
 /mob/living/simple_mob/humanoid/cultist/tesh,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/wood,
-/area/submap/cliffmanor)
-"Rh" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/wood,
 /area/submap/cliffmanor)
@@ -693,7 +620,7 @@ ei
 kW
 SZ
 Me
-nu
+SZ
 bi
 bi
 vb
@@ -715,17 +642,17 @@ lK
 bi
 bi
 SZ
-nu
+SZ
 SZ
 iR
 Rm
 Kj
-bA
+Rm
 iR
 SZ
 SZ
 SZ
-nu
+SZ
 SZ
 vb
 xD
@@ -744,19 +671,19 @@ Wh
 aJ
 lK
 Bl
-nu
-Ja
-Ja
+SZ
+SZ
+SZ
 gX
 kW
-bA
-Rh
-bA
+Rm
+Rm
+Rm
 kW
 gX
 SZ
 SZ
-nu
+SZ
 Eq
 vb
 xD
@@ -775,12 +702,12 @@ Wh
 aJ
 lK
 SZ
-nu
+SZ
 gX
 gX
 uS
 kW
-bA
+Rm
 Rm
 Rm
 kW
@@ -842,7 +769,7 @@ aJ
 kW
 vw
 Rm
-bA
+Rm
 SZ
 Rm
 Rm
@@ -874,8 +801,8 @@ kW
 Oz
 Ra
 Rm
-Ja
-bA
+SZ
+Rm
 Ra
 GU
 kW
@@ -904,8 +831,8 @@ aJ
 kW
 dU
 Rm
-bA
-nu
+Rm
+SZ
 Rm
 Rm
 dU
@@ -965,7 +892,7 @@ rT
 aJ
 PT
 bi
-nu
+SZ
 SZ
 SZ
 SZ
@@ -999,7 +926,7 @@ Qi
 SZ
 SZ
 yU
-nu
+SZ
 SZ
 Qi
 va
@@ -1029,7 +956,7 @@ Pk
 bi
 bi
 SZ
-nu
+SZ
 SZ
 SZ
 SZ
@@ -1090,10 +1017,10 @@ aJ
 kW
 dU
 Rm
-LZ
-Ja
-bA
-bA
+Rm
+SZ
+Rm
+Rm
 dU
 kW
 xD
@@ -1120,11 +1047,11 @@ rT
 aJ
 kW
 Zp
-wg
-Rh
-Dd
-LZ
-DZ
+Ra
+Rm
+SZ
+Rm
+Ra
 Um
 kW
 xD
@@ -1152,10 +1079,10 @@ aJ
 kW
 dU
 Rm
-bA
-nu
-LZ
-bA
+Rm
+SZ
+Rm
+Rm
 dU
 kW
 xD
@@ -1241,8 +1168,8 @@ aJ
 lK
 Bl
 SZ
-nu
-nu
+SZ
+SZ
 gX
 kW
 Rm
@@ -1251,8 +1178,8 @@ Rm
 kW
 gX
 SZ
-nu
-Ja
+SZ
+SZ
 Eq
 vb
 xD
@@ -1273,16 +1200,16 @@ lK
 bi
 bi
 SZ
-nu
-nu
+SZ
+SZ
 iR
 SZ
 pI
 SZ
 iR
 SZ
-Ja
-Ja
+SZ
+SZ
 SZ
 bi
 vb
@@ -1305,14 +1232,14 @@ bi
 bi
 bi
 Me
-nu
+SZ
 kW
 ei
 uv
 ND
 kW
-nu
-HS
+SZ
+Me
 SZ
 SZ
 bi
