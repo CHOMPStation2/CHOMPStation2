@@ -9144,12 +9144,6 @@
 /obj/structure/outcrop,
 /turf/simulated/floor/outdoors/rocks/caves,
 /area/awaymission/snowfield/outside)
-"imc" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/ash,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/outdoors/rocks/caves,
-/area/awaymission/snowfield/cavern)
 "imu" = (
 /turf/simulated/floor/tiled/freezer,
 /area/awaymission/snowfield/service/fridge)
@@ -53503,7 +53497,7 @@ cTa
 mEn
 xBm
 gwC
-imc
+nBY
 nse
 vDF
 vDF
