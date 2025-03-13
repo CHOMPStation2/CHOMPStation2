@@ -1,5 +1,0 @@
-author: "Ace"
-delete-after: True
-changes:
-  - maptweak: "Thor map updated"
-  - config: "Thor terrain is now configured to spawn appropriate mobs instead of just placeholder tindalos."
