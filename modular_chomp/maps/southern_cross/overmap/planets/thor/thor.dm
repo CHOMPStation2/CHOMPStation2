@@ -221,19 +221,23 @@
 	nitrogen	= THOR_MOL_N2
 	temperature	= THOR_AVG_TEMP
 	animals = "thor_real"
-	//grass = "base"
+	grass = "thor_real"
 	var/tree_chance = 5
 
 /turf/simulated/floor/outdoors/grass/heavy/thor
 	oxygen		= THOR_MOL_O2
 	nitrogen	= THOR_MOL_N2
 	temperature	= THOR_AVG_TEMP
+	animals = "thor_real"
+	grass = "thor_real"
 	var/tree_chance = 10
 
 /turf/simulated/floor/outdoors/grass/forest/thor
 	oxygen		= THOR_MOL_O2
 	nitrogen	= THOR_MOL_N2
 	temperature	= THOR_AVG_TEMP
+	animals = "thor_real"
+	grass = "thor_real"
 	var/tree_chance = 10
 
 /turf/simulated/floor/outdoors/dirt/thor/planetuse
@@ -291,5 +295,5 @@
 	if(tree_chance && prob(tree_chance) && !check_density())
 		new /obj/structure/flora/tree/jungle(src)
 
-	grass = "thor"
+	grass = "thor_real"
 	. = ..()
