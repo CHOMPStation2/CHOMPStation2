@@ -27,7 +27,6 @@
 	icon_state = "wooden_chair"
 	},
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
 /obj/effect/spider/stickyweb/dark,
 /obj/effect/spider/stickyweb/dark,
 /turf/simulated/floor/holofloor/wood,
@@ -323,12 +322,6 @@
 /obj/item/material/knife,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
-"lk" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/spider/stickyweb,
-/turf/simulated/floor/carpet/purcarpet,
-/area/submap/Manor1)
 "lq" = (
 /obj/item/material/minihoe,
 /turf/simulated/floor/carpet/blucarpet,
@@ -579,7 +572,6 @@
 "sW" = (
 /obj/structure/table/woodentable,
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
 /obj/effect/spider/stickyweb,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
@@ -649,16 +641,6 @@
 /area/submap/Manor1)
 "vc" = (
 /obj/structure/flora/pottedplant/drooping,
-/turf/simulated/floor/holofloor/wood,
-/area/submap/Manor1)
-"vl" = (
-/obj/structure/bed/chair/wood{
-	dir = 8;
-	icon_state = "wooden_chair"
-	},
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/spider/stickyweb/dark,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "vp" = (
@@ -819,11 +801,6 @@
 /obj/effect/spider/stickyweb,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
-"Be" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/carpet/bcarpet,
-/area/submap/Manor1)
 "Bf" = (
 /obj/effect/spider/stickyweb,
 /obj/effect/spider/stickyweb,
@@ -929,22 +906,9 @@
 /obj/item/material/sword,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
-"Fp" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/spider/stickyweb/dark,
-/mob/living/simple_mob/animal/passive/mouse/white,
-/turf/simulated/floor/carpet/purcarpet,
-/area/submap/Manor1)
 "FS" = (
 /obj/structure/flora/pottedplant/drooping,
 /obj/random/humanoidremains,
-/turf/simulated/floor/holofloor/wood,
-/area/submap/Manor1)
-"Gp" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/spider/stickyweb,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "Gq" = (
@@ -1264,16 +1228,6 @@
 /obj/item/reagent_containers/food/drinks/cans/waterbottle,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
-"QI" = (
-/obj/structure/bed/chair/wood{
-	dir = 4;
-	icon_state = "wooden_chair"
-	},
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/spider/stickyweb,
-/turf/simulated/floor/holofloor/wood,
-/area/submap/Manor1)
 "QM" = (
 /obj/structure/table/woodentable,
 /obj/item/flame/candle/everburn,
@@ -1346,12 +1300,6 @@
 /mob/living/simple_mob/animal/passive/mouse/white,
 /turf/simulated/floor/carpet/purcarpet,
 /area/submap/Manor1)
-"Sf" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/spider/stickyweb/dark,
-/turf/simulated/floor/carpet/purcarpet,
-/area/submap/Manor1)
 "Sl" = (
 /obj/structure/table/standard,
 /obj/item/material/knife/butch,
@@ -1365,7 +1313,6 @@
 "Sv" = (
 /obj/structure/bed,
 /obj/item/bedsheet,
-/obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
@@ -1422,7 +1369,6 @@
 "UP" = (
 /obj/structure/flora/pottedplant/dead,
 /obj/effect/decal/cleanable/cobweb,
-/obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
@@ -1536,11 +1482,6 @@
 /area/submap/Manor1)
 "Zg" = (
 /obj/structure/table/woodentable,
-/turf/simulated/floor/holofloor/wood,
-/area/submap/Manor1)
-"Zo" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "Zr" = (
@@ -2034,9 +1975,9 @@ UP
 gQ
 gQ
 gQ
-Zo
 gQ
-Zo
+gQ
+gQ
 yx
 yx
 yx
@@ -2072,7 +2013,7 @@ cl
 Pw
 Pw
 CY
-Zo
+gQ
 Rs
 Rs
 Rs
@@ -2115,7 +2056,7 @@ Pw
 Pw
 CY
 gQ
-Be
+Rs
 Yi
 rh
 rh
@@ -2628,7 +2569,7 @@ OD
 Mp
 Mp
 Mp
-vl
+LI
 ck
 LI
 LI
@@ -2670,11 +2611,11 @@ fk
 sR
 ml
 Yq
-lk
-Sf
-Sf
+Yq
+ez
+ez
 NW
-Fp
+kn
 RQ
 fa
 sR
@@ -2755,8 +2696,8 @@ DB
 QQ
 Gq
 QQ
-QI
-QI
+QQ
+QQ
 Wq
 BB
 Rc
@@ -3601,9 +3542,9 @@ rh
 Yo
 kD
 xk
-Gp
+xk
 xK
-Zo
+gQ
 gQ
 CY
 Zg

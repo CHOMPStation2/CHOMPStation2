@@ -50,7 +50,6 @@
 /obj/structure/flora/pottedplant/dead,
 /obj/effect/decal/cleanable/cobweb,
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "al" = (
@@ -768,12 +767,6 @@
 /obj/structure/flora/tree/sif,
 /turf/template_noop,
 /area/submap/Manor1)
-"cP" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/spider/stickyweb/dark,
-/turf/simulated/floor/carpet/purcarpet,
-/area/submap/Manor1)
 "dt" = (
 /obj/structure/bed/chair/wood{
 	dir = 8;
@@ -834,18 +827,11 @@
 "fx" = (
 /obj/structure/table/woodentable,
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
 /obj/effect/spider/stickyweb,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "fT" = (
 /obj/structure/loot_pile/surface/bones,
-/turf/simulated/floor/holofloor/wood,
-/area/submap/Manor1)
-"gc" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/spider/stickyweb,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "gf" = (
@@ -884,7 +870,6 @@
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "ie" = (
-/obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /mob/living/simple_mob/animal/giant_spider/carrier,
 /obj/effect/spider/stickyweb,
@@ -1017,16 +1002,6 @@
 	},
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
-"pI" = (
-/obj/structure/bed/chair/wood{
-	dir = 4;
-	icon_state = "wooden_chair"
-	},
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/spider/stickyweb,
-/turf/simulated/floor/holofloor/wood,
-/area/submap/Manor1)
 "pR" = (
 /obj/structure/bed/chair/wood{
 	dir = 8;
@@ -1046,11 +1021,6 @@
 "ro" = (
 /obj/item/bone/skull/unknown,
 /turf/simulated/floor/holofloor/wood,
-/area/submap/Manor1)
-"rS" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/carpet/bcarpet,
 /area/submap/Manor1)
 "sD" = (
 /obj/structure/table/woodentable,
@@ -1156,7 +1126,6 @@
 /obj/structure/bed,
 /obj/item/bedsheet,
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "AM" = (
@@ -1235,7 +1204,6 @@
 	dir = 4;
 	icon_state = "wooden_chair"
 	},
-/obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /mob/living/simple_mob/animal/giant_spider/carrier,
 /obj/effect/spider/stickyweb,
@@ -1320,11 +1288,6 @@
 	icon_state = "wooden_chair"
 	},
 /obj/random/humanoidremains,
-/turf/simulated/floor/holofloor/wood,
-/area/submap/Manor1)
-"KN" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "Lv" = (
@@ -1427,7 +1390,6 @@
 	dir = 8;
 	icon_state = "wooden_chair"
 	},
-/obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /mob/living/simple_mob/animal/giant_spider/carrier,
 /obj/effect/spider/stickyweb/dark,
@@ -1545,16 +1507,6 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/spider/stickyweb,
 /obj/random/humanoidremains,
-/turf/simulated/floor/holofloor/wood,
-/area/submap/Manor1)
-"ZG" = (
-/obj/structure/bed/chair/wood{
-	dir = 8;
-	icon_state = "wooden_chair"
-	},
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/spider/stickyweb/dark,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
 "ZK" = (
@@ -2044,9 +1996,9 @@ ak
 an
 an
 an
-KN
 an
-KN
+an
+an
 aK
 aK
 aK
@@ -2082,7 +2034,7 @@ cN
 aa
 aa
 ab
-KN
+an
 ar
 ar
 ar
@@ -2125,7 +2077,7 @@ aa
 aa
 ab
 an
-rS
+ar
 aq
 ag
 ag
@@ -2638,7 +2590,7 @@ fT
 af
 af
 af
-ZG
+ZK
 Qh
 ZK
 ZK
@@ -2681,10 +2633,10 @@ aQ
 bU
 BE
 ie
-cP
-cP
+ON
+ON
 MZ
-cP
+ON
 bU
 rj
 aQ
@@ -2766,7 +2718,7 @@ bt
 Za
 bt
 FU
-pI
+bt
 Xc
 FA
 Ig
@@ -3611,9 +3563,9 @@ ag
 bq
 Aq
 aA
-gc
+aA
 eA
-KN
+an
 an
 ab
 al

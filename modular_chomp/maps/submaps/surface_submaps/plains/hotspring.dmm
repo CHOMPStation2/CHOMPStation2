@@ -14,13 +14,6 @@
 /obj/random/trash_pile,
 /turf/simulated/floor/outdoors/grass/sif,
 /area/submap/hotspring)
-"f" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/wood/sif,
-/area/submap/hotspring)
 "g" = (
 /turf/simulated/floor/outdoors/mud,
 /area/submap/hotspring)
@@ -62,7 +55,6 @@
 /area/submap/hotspring)
 "n" = (
 /obj/item/clothing/accessory/medal/fluff/rindeimos,
-/obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/wood/sif,
 /area/submap/hotspring)
@@ -269,7 +261,7 @@ a
 (5,1,1) = {"
 Y
 j
-f
+T
 J
 g
 F

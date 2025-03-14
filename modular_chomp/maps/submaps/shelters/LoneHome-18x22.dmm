@@ -1,7 +1,6 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "aa" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/survivalpod/superpose/LoneHome)
 "ab" = (
@@ -84,12 +83,6 @@
 /obj/structure/girder,
 /turf/simulated/floor,
 /area/survivalpod/superpose/LoneHome)
-"ah" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/wood/broken,
-/area/survivalpod/superpose/LoneHome)
 "ai" = (
 /obj/structure/coatrack,
 /obj/machinery/button/windowtint{
@@ -144,11 +137,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/LoneHome)
-"ar" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/wood,
-/area/survivalpod/superpose/LoneHome)
 "as" = (
 /turf/simulated/floor/wood/broken,
 /area/survivalpod/superpose/LoneHome)
@@ -187,14 +175,8 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/white,
 /area/survivalpod/superpose/LoneHome)
-"ax" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/tiled/white,
-/area/survivalpod/superpose/LoneHome)
 "ay" = (
 /obj/item/clothing/suit/storage/apron/white,
-/obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/white,
 /area/survivalpod/superpose/LoneHome)
@@ -460,7 +442,6 @@
 	pixel_y = 10
 	},
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/LoneHome)
 "bm" = (
@@ -497,11 +478,6 @@
 	id = "h-kitchen"
 	},
 /turf/simulated/floor/wood,
-/area/survivalpod/superpose/LoneHome)
-"br" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/wood/broken,
 /area/survivalpod/superpose/LoneHome)
 "bs" = (
 /obj/item/pen,
@@ -683,12 +659,6 @@
 /obj/structure/table/wooden_reinforced,
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/LoneHome)
-"bH" = (
-/obj/random/trash,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/carpet/sblucarpet,
-/area/survivalpod/superpose/LoneHome)
 "bI" = (
 /obj/structure/closet/cabinet,
 /obj/item/storage/wallet/random,
@@ -732,8 +702,6 @@
 	dir = 8
 	},
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/LoneHome)
 "bO" = (
@@ -757,7 +725,6 @@
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/LoneHome)
 "bR" = (
-/obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/item/paper{
 	info = "Seems to be filled with odd runes drawn with blood";
@@ -854,13 +821,10 @@
 /area/survivalpod/superpose/LoneHome)
 "ce" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/carpet/bcarpet,
 /area/survivalpod/superpose/LoneHome)
 "cf" = (
 /obj/item/pack/cardemon,
-/obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/carpet/bcarpet,
 /area/survivalpod/superpose/LoneHome)
@@ -980,11 +944,6 @@
 	id = "h-master"
 	},
 /turf/simulated/floor/wood,
-/area/survivalpod/superpose/LoneHome)
-"cu" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/carpet/sblucarpet,
 /area/survivalpod/superpose/LoneHome)
 "cv" = (
 /obj/item/gps,
@@ -1135,14 +1094,12 @@
 	pixel_y = 2
 	},
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/survivalpod/superpose/LoneHome)
 "cO" = (
 /obj/machinery/light/small{
 	dir = 4
 	},
-/obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/item/circuitboard/batteryrack,
 /obj/item/stock_parts/matter_bin,
@@ -1162,7 +1119,6 @@
 /obj/random/junk,
 /obj/random/junk,
 /obj/random/junk,
-/obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/survivalpod/superpose/LoneHome)
@@ -1311,7 +1267,7 @@ ab
 ab
 ae
 aj
-ar
+aq
 aE
 bT
 bT
@@ -1343,7 +1299,7 @@ aJ
 ad
 bA
 bL
-bH
+bS
 bT
 aJ
 cs
@@ -1362,7 +1318,7 @@ ag
 aJ
 as
 aR
-cu
+aZ
 aq
 ag
 aq
@@ -1436,12 +1392,12 @@ ae
 aq
 aq
 bl
-ah
-br
+aj
+aj
 bN
-ar
-ar
-ar
+aq
+aq
+aq
 aj
 ae
 cR
@@ -1479,7 +1435,7 @@ aQ
 aQ
 ad
 al
-ax
+aw
 aG
 aJ
 bb
@@ -1488,7 +1444,7 @@ bs
 bD
 ad
 bV
-br
+aj
 ak
 by
 cC
@@ -1503,7 +1459,7 @@ aQ
 aQ
 ag
 am
-ax
+aw
 aH
 aq
 bc

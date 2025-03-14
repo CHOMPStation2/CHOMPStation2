@@ -111,6 +111,11 @@
 	tail.belly_sprite_to_affect = "tail"
 	tail.emote_lists[DM_HOLD] = B.emote_lists[DM_HOLD].Copy()
 	tail.emote_lists[DM_DIGEST] = B.emote_lists[DM_DIGEST].Copy()
+	// CHOMPEdit Start
+	tail.belly_fullscreen = "VBOanim_snakebelly1"
+	tail.belly_fullscreen_color = "#823232"
+	tail.belly_fullscreen_color2 = "#232300"
+	// CHOMPEdit End
 
 // FFTA Bra
 /mob/living/simple_mob/vore/lamia/bra

@@ -63,11 +63,6 @@
 	},
 /turf/simulated/floor/outdoors/dirt,
 /area/submap/priderock)
-"qP" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/outdoors/dirt,
-/area/submap/priderock)
 "qY" = (
 /obj/structure/cliff/automatic{
 	dir = 9
@@ -79,11 +74,6 @@
 	dir = 8
 	},
 /turf/simulated/floor/outdoors/dirt,
-/area/submap/priderock)
-"sr" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/outdoors/grass/sif,
 /area/submap/priderock)
 "uv" = (
 /obj/structure/cliff/automatic/ramp,
@@ -480,9 +470,9 @@ Zm
 Zm
 "}
 (5,1,1) = {"
-qP
-sr
-qP
+Oc
+ZJ
+Oc
 Fg
 ZJ
 Xd
@@ -506,7 +496,7 @@ Zm
 Wk
 ZJ
 Fg
-qP
+Oc
 LK
 YP
 Tb
@@ -616,7 +606,7 @@ Zm
 Zm
 Zm
 Lo
-qP
+Oc
 ZA
 Oc
 ZJ

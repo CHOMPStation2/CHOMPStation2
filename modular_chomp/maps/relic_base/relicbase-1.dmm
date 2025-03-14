@@ -455,7 +455,6 @@
 /obj/effect/floor_decal/rust,
 /obj/structure/mopbucket,
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/plating,
 /area/maintenance/underground/catacombs)
 "cT" = (
@@ -580,7 +579,6 @@
 /obj/random/junk,
 /obj/effect/gibspawner/robot,
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/plating,
 /area/maintenance/underground/catacombs)
 "dy" = (
@@ -655,13 +653,6 @@
 /obj/effect/floor_decal/rust,
 /obj/random/trash,
 /obj/random/trash_pile,
-/turf/simulated/floor/plating,
-/area/maintenance/underground/catacombs)
-"eq" = (
-/obj/effect/floor_decal/rust,
-/obj/random/junk,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/plating,
 /area/maintenance/underground/catacombs)
 "er" = (
@@ -958,14 +949,6 @@
 /obj/item/clothing/shoes/cult,
 /turf/simulated/floor/cult,
 /area/maintenance/underground/catacombs)
-"gg" = (
-/obj/random/maintenance,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1
-	},
-/area/maintenance/underground/catacombs)
 "gp" = (
 /obj/effect/floor_decal/rust,
 /obj/effect/zone_divider,
@@ -1007,7 +990,6 @@
 /area/maintenance/underground/catacombs)
 "gH" = (
 /obj/effect/decal/cleanable/blood,
-/obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/zone_divider,
 /turf/simulated/floor/outdoors/rocks/caves{
@@ -1210,7 +1192,6 @@
 "if" = (
 /obj/effect/floor_decal/rust,
 /obj/effect/floor_decal/rust,
-/obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/plating,
 /area/maintenance/underground/catacombs)
@@ -1539,13 +1520,6 @@
 /turf/simulated/floor/outdoors/rocks/caves{
 	outdoors = -1
 	},
-/area/maintenance/underground/catacombs)
-"kz" = (
-/obj/effect/floor_decal/rust,
-/obj/random/trash,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/plating,
 /area/maintenance/underground/catacombs)
 "kM" = (
 /obj/structure/sign/warning{
@@ -2031,13 +2005,6 @@
 	outdoors = -1
 	},
 /area/maintenance/underground/catacombs)
-"oJ" = (
-/obj/effect/floor_decal/rust,
-/obj/random/material,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/plating,
-/area/maintenance/underground/catacombs)
 "oQ" = (
 /obj/effect/floor_decal/rust,
 /obj/structure/railing,
@@ -2161,7 +2128,6 @@
 /area/maintenance/underground/catacombs)
 "pP" = (
 /obj/effect/floor_decal/rust,
-/obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/item/digestion_remains,
 /obj/effect/decal/cleanable/filth,
@@ -2661,7 +2627,6 @@
 	icon_state = "claw2"
 	},
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
 /mob/living/simple_mob/vore/otie/feral{
 	ai_holder_type = /datum/ai_holder/simple_mob/melee/thor_underground;
 	faction = "corrupt"
@@ -2876,8 +2841,6 @@
 	icon_state = "claw2"
 	},
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/outdoors/rocks/caves{
 	outdoors = -1
 	},
@@ -2930,13 +2893,6 @@
 /turf/simulated/floor/outdoors/mud{
 	outdoors = -1
 	},
-/area/maintenance/underground/catacombs)
-"uZ" = (
-/obj/effect/floor_decal/rust,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/item/extinguisher,
-/turf/simulated/floor/plating,
 /area/maintenance/underground/catacombs)
 "vc" = (
 /obj/effect/floor_decal/rust,
@@ -3094,13 +3050,6 @@
 	outdoors = -1
 	},
 /area/maintenance/underground/catacombs)
-"vY" = (
-/obj/effect/floor_decal/rust,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/random/trash,
-/turf/simulated/floor/plating,
-/area/maintenance/underground/catacombs)
 "vZ" = (
 /obj/random/trash_pile,
 /turf/simulated/floor/outdoors/mud{
@@ -3202,13 +3151,6 @@
 "wz" = (
 /obj/machinery/power/smes/buildable/point_of_interest,
 /turf/simulated/floor/plating,
-/area/maintenance/underground/catacombs)
-"wC" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1
-	},
 /area/maintenance/underground/catacombs)
 "wH" = (
 /turf/simulated/floor/water/indoors,
@@ -3699,20 +3641,6 @@
 /obj/random/trash,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/maintenance/underground/catacombs)
-"Az" = (
-/obj/effect/decal/cleanable/blood/tracks{
-	color = "#7F0000";
-	dir = 8;
-	icon_state = "claw2"
-	},
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1
-	},
-/area/maintenance/underground/catacombs)
 "AA" = (
 /obj/effect/floor_decal/rust,
 /obj/random/unidentified_medicine/old_medicine,
@@ -3737,13 +3665,6 @@
 /area/maintenance/underground/catacombs)
 "AC" = (
 /obj/machinery/bodyscanner,
-/turf/simulated/floor/plating,
-/area/maintenance/underground/catacombs)
-"AG" = (
-/obj/effect/floor_decal/rust,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/zone_divider,
 /turf/simulated/floor/plating,
 /area/maintenance/underground/catacombs)
 "AH" = (
@@ -3956,13 +3877,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/underground/catacombs)
-"Dd" = (
-/obj/effect/floor_decal/rust,
-/obj/random/trash_pile,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/plating,
-/area/maintenance/underground/catacombs)
 "De" = (
 /obj/effect/floor_decal/rust,
 /obj/random/junk,
@@ -4014,7 +3928,6 @@
 /area/maintenance/underground/catacombs)
 "Dw" = (
 /obj/effect/floor_decal/rust,
-/obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/reagent_dispensers/watertank,
 /turf/simulated/floor/plating,
@@ -4146,14 +4059,6 @@
 /obj/effect/zone_divider,
 /turf/simulated/floor/tiled/steel_dirty,
 /area/maintenance/underground/catacombs)
-"Ez" = (
-/obj/effect/floor_decal/rust,
-/obj/random/junk,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/zone_divider,
-/turf/simulated/floor/plating,
-/area/maintenance/underground/catacombs)
 "EA" = (
 /obj/random/trash,
 /obj/effect/floor_decal/rust,
@@ -4246,7 +4151,6 @@
 /area/maintenance/underground/catacombs)
 "Fl" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
 /mob/living/simple_mob/vore/otie/feral{
 	ai_holder_type = /datum/ai_holder/simple_mob/melee/thor_underground;
 	faction = "corrupt"
@@ -4308,15 +4212,6 @@
 	name = "giant rat"
 	},
 /turf/simulated/floor/plating,
-/area/maintenance/underground/catacombs)
-"Fz" = (
-/obj/random/humanoidremains,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1
-	},
 /area/maintenance/underground/catacombs)
 "FE" = (
 /obj/effect/floor_decal/rust,
@@ -4684,7 +4579,6 @@
 "Ip" = (
 /obj/effect/floor_decal/rust,
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
 /obj/random/contraband,
 /turf/simulated/floor/plating,
 /area/maintenance/underground/catacombs)
@@ -4895,7 +4789,6 @@
 /obj/effect/floor_decal/rust,
 /obj/effect/gibspawner/robot,
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/plating,
 /area/maintenance/underground/catacombs)
 "JN" = (
@@ -4968,25 +4861,6 @@
 "Kp" = (
 /obj/item/ammo_magazine/m762/empty,
 /obj/effect/zone_divider,
-/turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1
-	},
-/area/maintenance/underground/catacombs)
-"Kq" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/mob/living/simple_mob/vore/otie/feral/chubby{
-	ai_holder_type = /datum/ai_holder/simple_mob/melee/thor_underground;
-	attacktext = list("pounced on");
-	faction = "corrupt";
-	melee_damage_lower = 5;
-	melee_damage_upper = 10;
-	melee_miss_chance = 50;
-	vore_bump_chance = 100;
-	vore_pounce_chance = 50;
-	vore_pounce_maxhealth = 150
-	},
 /turf/simulated/floor/outdoors/rocks/caves{
 	outdoors = -1
 	},
@@ -5212,17 +5086,6 @@
 	},
 /turf/simulated/floor/tiled/steel_dirty,
 /area/maintenance/underground/catacombs)
-"Mw" = (
-/obj/machinery/door/blast/gate{
-	color = "#352209";
-	id = "maintgate5";
-	name = "old gate"
-	},
-/obj/effect/floor_decal/rust,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/plating,
-/area/maintenance/underground/catacombs)
 "Mx" = (
 /obj/effect/floor_decal/rust,
 /obj/structure/closet,
@@ -5356,17 +5219,6 @@
 /obj/structure/salvageable/console_broken_os,
 /turf/simulated/floor/plating,
 /area/maintenance/underground/catacombs)
-"Nq" = (
-/obj/effect/floor_decal/rust,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/machinery/door/blast/gate{
-	color = "#352209";
-	id = "maintgate10";
-	name = "old gate"
-	},
-/turf/simulated/floor/plating,
-/area/maintenance/underground/catacombs)
 "Nr" = (
 /obj/random/junk,
 /obj/random/contraband,
@@ -5425,24 +5277,12 @@
 /obj/structure/grille/cult,
 /turf/simulated/floor/cult,
 /area/maintenance/underground/catacombs)
-"NM" = (
-/obj/effect/floor_decal/rust,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/plating,
-/area/maintenance/underground/catacombs)
 "NW" = (
 /obj/structure/catwalk,
 /obj/effect/floor_decal/rust,
 /obj/structure/closet,
 /obj/item/gun/energy/locked/phasegun/unlocked,
 /turf/simulated/floor/plating,
-/area/maintenance/underground/catacombs)
-"Oa" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/floor_decal/rust,
-/turf/simulated/floor/tiled/steel_dirty,
 /area/maintenance/underground/catacombs)
 "Od" = (
 /obj/structure/hull_corner{
@@ -5655,15 +5495,6 @@
 /obj/effect/floor_decal/rust,
 /obj/random/junk,
 /turf/simulated/floor/plating,
-/area/maintenance/underground/catacombs)
-"Qb" = (
-/obj/random/trash,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1
-	},
 /area/maintenance/underground/catacombs)
 "Qf" = (
 /obj/structure/hull_corner{
@@ -6297,14 +6128,6 @@
 /obj/effect/floor_decal/rust,
 /obj/structure/closet,
 /turf/simulated/floor/plating,
-/area/maintenance/underground/catacombs)
-"UN" = (
-/obj/item/digestion_remains,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/outdoors/rocks/caves{
-	outdoors = -1
-	},
 /area/maintenance/underground/catacombs)
 "UO" = (
 /obj/effect/floor_decal/rust,
@@ -25575,7 +25398,7 @@ Tc
 ZY
 Ip
 BJ
-vY
+nv
 Bj
 vU
 sQ
@@ -27632,7 +27455,7 @@ Tc
 Tc
 Tc
 ZY
-NM
+cl
 kw
 OA
 Tc
@@ -27889,7 +27712,7 @@ Tc
 Tc
 Tc
 Tc
-NM
+cl
 BJ
 kw
 ZY
@@ -28146,8 +27969,8 @@ Tc
 Tc
 Tc
 Tc
-NM
-NM
+cl
+cl
 BJ
 Tc
 rs
@@ -28404,8 +28227,8 @@ Tc
 Tc
 Tc
 Tc
-NM
-NM
+cl
+cl
 GY
 rs
 Tc
@@ -28919,7 +28742,7 @@ Tc
 Tc
 ZY
 Tt
-NM
+cl
 WS
 ez
 Tc
@@ -29176,7 +28999,7 @@ Tc
 Tc
 ZY
 HZ
-Nq
+iW
 iW
 ez
 Tc
@@ -29433,7 +29256,7 @@ Tc
 Tc
 ZY
 kW
-NM
+cl
 cl
 ez
 Tc
@@ -29690,7 +29513,7 @@ GY
 Tc
 Tc
 iJ
-NM
+cl
 iV
 rs
 Tc
@@ -29947,7 +29770,7 @@ iJ
 Tc
 Tc
 Tc
-NM
+cl
 cl
 rs
 Tc
@@ -30204,7 +30027,7 @@ cl
 Tc
 Tc
 Tc
-NM
+cl
 cl
 rs
 Tc
@@ -30458,10 +30281,10 @@ wH
 Tc
 DK
 mf
-NM
+cl
 Tc
 Tc
-Dd
+PG
 cl
 rs
 Tc
@@ -34584,7 +34407,7 @@ Tc
 Tc
 DK
 cl
-wC
+Pj
 Pj
 Pj
 BJ
@@ -35572,7 +35395,7 @@ Tc
 Fa
 hu
 LI
-Kq
+Ig
 Fl
 Pj
 Pj
@@ -35829,8 +35652,8 @@ Tc
 BJ
 Ig
 gH
-UN
-Qb
+sz
+vm
 Pj
 kj
 Fa
@@ -36343,8 +36166,8 @@ Tc
 Tc
 Ch
 jH
-Fz
-Az
+Zh
+uC
 lE
 Fa
 Tc
@@ -36402,7 +36225,7 @@ Tc
 Tc
 Tc
 dE
-kz
+iV
 Pj
 Tc
 Tc
@@ -38177,10 +38000,10 @@ IK
 bg
 BJ
 Fa
-wC
-wC
-wC
-gg
+Pj
+Pj
+Pj
+Ds
 if
 cl
 mf
@@ -38438,7 +38261,7 @@ BJ
 Pj
 cl
 iV
-NM
+cl
 cl
 cl
 cl
@@ -40997,9 +40820,9 @@ ba
 ba
 WS
 cl
-eq
-NM
-oJ
+mf
+cl
+Vd
 xV
 iJ
 Uw
@@ -41257,8 +41080,8 @@ Tc
 Tc
 iJ
 iJ
-Ez
-NM
+nI
+cl
 fs
 mf
 Tn
@@ -42040,15 +41863,15 @@ Tc
 WS
 Tc
 iB
-NM
+cl
 JG
-Mw
+mb
 wx
 cl
-uZ
-NM
-NM
-NM
+Qy
+cl
+cl
+cl
 kr
 cl
 cl
@@ -44854,7 +44677,7 @@ BJ
 Pj
 Pj
 cl
-kz
+iV
 rs
 Tc
 BJ
@@ -45111,8 +44934,8 @@ MG
 Pj
 IP
 Pj
-NM
-AG
+cl
+xV
 iJ
 xX
 Tc
@@ -45369,7 +45192,7 @@ Pj
 Pj
 Pj
 Pj
-AG
+xV
 vA
 iJ
 Tc
@@ -46424,7 +46247,7 @@ BJ
 Tc
 iJ
 iV
-NM
+cl
 cl
 iV
 fs
@@ -49685,8 +49508,8 @@ Tc
 ZY
 iJ
 DK
-wC
-wC
+Pj
+Pj
 iJ
 ZY
 Tc
@@ -49942,8 +49765,8 @@ Tc
 ZY
 iJ
 DK
-NM
-NM
+cl
+cl
 iJ
 ZY
 Tc
@@ -50200,7 +50023,7 @@ ZY
 GY
 cl
 dw
-kz
+iV
 iJ
 ID
 iJ
@@ -50457,7 +50280,7 @@ ZY
 iJ
 cl
 mf
-NM
+cl
 iJ
 ZY
 Tc
@@ -52859,8 +52682,8 @@ Tc
 Ns
 Uq
 Vk
-Oa
-Oa
+kS
+kS
 Rl
 kS
 Wl
