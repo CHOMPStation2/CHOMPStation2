@@ -2,6 +2,11 @@
 "aaa" = (
 /turf/space,
 /area/space)
+"aab" = (
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/random/trash,
+/turf/simulated/floor/plating,
+/area/maintenance/Deck1_AftStar1_Corridor2)
 "aac" = (
 /obj/machinery/telecomms/server/presets/security,
 /obj/effect/catwalk_plated/dark,
@@ -624,23 +629,6 @@
 /obj/item/seeds/glowshroom,
 /turf/simulated/floor/grass2/turfpack/station,
 /area/hallway/Star_1Deck_Atrium)
-"abr" = (
-/obj/machinery/power/apc{
-	dir = 1;
-	name = "north bump";
-	pixel_y = 24
-	},
-/obj/structure/cable/green{
-	icon_state = "0-4"
-	},
-/obj/effect/floor_decal/borderfloor{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/white/border{
-	dir = 1
-	},
-/turf/simulated/floor/tiled,
-/area/hallway/Central_1_Deck_Hall)
 "abs" = (
 /turf/simulated/wall/r_wall,
 /area/engineering/GravGen_Room)
@@ -703,6 +691,47 @@
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/reinforced/airless,
 /area/maintenance/Deck1_Security_StarCorridor3)
+"abz" = (
+/obj/random/crate,
+/turf/simulated/floor/plating,
+/area/maintenance/Deck1_Cargo_Corridor1)
+"abA" = (
+/obj/machinery/alarm{
+	pixel_y = 22
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/Deck1_AftPort_Corridor1)
+"abB" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/cable{
+	icon_state = "1-4"
+	},
+/obj/effect/catwalk_plated/techmaint,
+/turf/simulated/floor/plating,
+/area/maintenance/Deck1_Cargo_Corridor1)
+"abC" = (
+/obj/machinery/alarm{
+	dir = 1;
+	pixel_y = -22
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/Deck1_Cargo_Corridor1)
+"abD" = (
+/obj/structure/bookcase,
+/obj/machinery/camera/network/security{
+	dir = 9;
+	c_tag = "D1-Sec-Cryo Foyer1"
+	},
+/turf/simulated/floor/carpet/purcarpet/turfpack/station,
+/area/hallway/Cryostorage_Lounge)
 "abF" = (
 /turf/simulated/floor/glass/reinforced,
 /area/hallway/Central_1_Deck_Hall)
@@ -1533,6 +1562,9 @@
 /obj/effect/floor_decal/steeldecal/steel_decals_central5{
 	dir = 4
 	},
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled,
 /area/hallway/Central_1_Deck_Hall)
 "agy" = (
@@ -2085,6 +2117,16 @@
 /area/maintenance/Deck1_Security_StarCorridor1)
 "aiM" = (
 /obj/structure/disposalpipe/segment,
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/green/border{
+	dir = 4
+	},
+/obj/machinery/alarm{
+	dir = 8;
+	pixel_x = 22
+	},
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/Public_Gateway)
 "aiN" = (
@@ -2584,6 +2626,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 9
 	},
+/obj/effect/catwalk_plated/techmaint,
 /turf/simulated/floor/plating,
 /area/maintenance/Deck1_Port_Corridor)
 "alC" = (
@@ -6775,6 +6818,12 @@
 	dir = 4
 	},
 /obj/structure/disposalpipe/segment,
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/green/border{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/Public_Gateway)
 "aQY" = (
@@ -8925,9 +8974,6 @@
 	icon_state = "pipe-j2"
 	},
 /obj/effect/catwalk_plated/techmaint,
-/obj/structure/cable{
-	icon_state = "1-4"
-	},
 /turf/simulated/floor/plating,
 /area/maintenance/Deck1_Cargo_Corridor1)
 "bsU" = (
@@ -20660,10 +20706,6 @@
 /turf/simulated/floor/tiled/dark,
 /area/harbor/Dock4)
 "eWa" = (
-/obj/machinery/alarm{
-	dir = 8;
-	pixel_x = 22
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/disposalpipe/segment,
 /obj/effect/floor_decal/borderfloor/corner,
@@ -23438,6 +23480,7 @@
 	desc = "Ladder for emergency use only";
 	pixel_y = -32
 	},
+/obj/effect/catwalk_plated/techmaint,
 /turf/simulated/floor/plating,
 /area/maintenance/Deck1_Star_Corridor)
 "fXa" = (
@@ -26243,6 +26286,7 @@
 /obj/structure/cable{
 	icon_state = "0-4"
 	},
+/obj/effect/catwalk_plated/techmaint,
 /turf/simulated/floor/plating,
 /area/maintenance/Deck1_Star_Corridor)
 "gXk" = (
@@ -28127,6 +28171,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
+/obj/effect/catwalk_plated/techmaint,
 /turf/simulated/floor/plating,
 /area/maintenance/Deck1_Port_Corridor)
 "hIf" = (
@@ -35021,6 +35066,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/effect/catwalk_plated/techmaint,
 /turf/simulated/floor/plating,
 /area/maintenance/Deck1_Port_Corridor)
 "kqY" = (
@@ -36249,6 +36295,7 @@
 	pixel_x = 27;
 	dir = 8
 	},
+/obj/random/crate,
 /turf/simulated/floor/plating,
 /area/maintenance/Deck1_Cargo_Corridor1)
 "kRt" = (
@@ -36459,14 +36506,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/Deck1_Transit_Hall)
-"kUE" = (
-/obj/machinery/alarm{
-	dir = 1;
-	pixel_y = -22
-	},
-/obj/random/trash,
-/turf/simulated/floor/plating,
-/area/maintenance/Deck1_Cargo_Corridor1)
 "kUS" = (
 /obj/random/trash,
 /obj/effect/landmark{
@@ -37764,18 +37803,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/rnd/Observation_Hall)
-"lrJ" = (
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
-/obj/effect/floor_decal/borderfloor{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/lightgrey/border{
-	dir = 1
-	},
-/turf/simulated/floor/tiled,
-/area/hallway/Central_1_Deck_Hall)
 "lrZ" = (
 /turf/simulated/floor/tiled/white,
 /area/rnd/Xenobiology_Lab)
@@ -53232,6 +53259,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
 	},
+/obj/effect/catwalk_plated/techmaint,
 /turf/simulated/floor/plating,
 /area/maintenance/Deck1_Port_Corridor)
 "qJW" = (
@@ -60090,6 +60118,7 @@
 	desc = "Ladder for emergency use only";
 	pixel_y = -32
 	},
+/obj/effect/catwalk_plated/techmaint,
 /turf/simulated/floor/plating,
 /area/maintenance/Deck1_Port_Corridor)
 "tlh" = (
@@ -61346,6 +61375,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 9
 	},
+/obj/effect/catwalk_plated/techmaint,
 /turf/simulated/floor/plating,
 /area/maintenance/Deck1_Star_Corridor)
 "tGZ" = (
@@ -61793,9 +61823,6 @@
 /obj/effect/floor_decal/steeldecal/steel_decals10{
 	dir = 10
 	},
-/obj/structure/cable/green{
-	icon_state = "1-8"
-	},
 /turf/simulated/floor/tiled,
 /area/hallway/Central_1_Deck_Hall)
 "tRq" = (
@@ -61855,6 +61882,14 @@
 	},
 /obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 1
+	},
+/obj/machinery/power/apc{
+	dir = 1;
+	name = "north bump";
+	pixel_y = 24
+	},
+/obj/structure/cable{
+	icon_state = "0-2"
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/Central_1_Deck_Hall)
@@ -62060,6 +62095,12 @@
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 9
+	},
+/obj/effect/floor_decal/borderfloor{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/green/border{
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/Public_Gateway)
@@ -70261,6 +70302,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
+/obj/effect/catwalk_plated/techmaint,
 /turf/simulated/floor/plating,
 /area/maintenance/Deck1_Port_Corridor)
 "wQG" = (
@@ -88735,9 +88777,9 @@ tgg
 nxq
 aaM
 heo
-kUE
+klC
 iXF
-ycA
+sdT
 bsP
 vdg
 xJX
@@ -88993,10 +89035,10 @@ tgg
 tgg
 aaM
 tQT
-vYi
+abC
 iXF
-sdT
-xSP
+ycA
+abB
 vYi
 vYi
 iXF
@@ -90816,7 +90858,7 @@ vYi
 kjQ
 vYi
 vYi
-vYi
+abz
 aVS
 uYn
 arR
@@ -97517,7 +97559,7 @@ aan
 alF
 wJV
 aAa
-auk
+abA
 auk
 auk
 clF
@@ -100548,7 +100590,7 @@ bci
 hts
 lwk
 lwk
-lwk
+bci
 bci
 rWn
 ioc
@@ -105760,7 +105802,7 @@ lfT
 dTJ
 pYp
 tCJ
-abr
+tqY
 abF
 abF
 abF
@@ -106018,7 +106060,7 @@ lfT
 dTJ
 mbX
 dTJ
-lrJ
+xJm
 abF
 abF
 abF
@@ -107777,7 +107819,7 @@ dZy
 raY
 mwj
 hpu
-tTb
+abD
 tTb
 iPp
 kYw
@@ -110956,7 +110998,7 @@ vci
 fVc
 qJl
 oVU
-xaJ
+uSv
 oVU
 oVU
 tqB
@@ -111213,8 +111255,8 @@ ayg
 ddS
 fVc
 xCL
-gDq
-uSv
+vQV
+xaJ
 oVU
 oVU
 vzg
@@ -111471,7 +111513,7 @@ adm
 oXv
 fVc
 cAX
-oVU
+aRY
 xaJ
 oVU
 vUq
@@ -111729,7 +111771,7 @@ adm
 xGZ
 fVc
 cAX
-oVU
+aab
 xaJ
 lxO
 bbQ
