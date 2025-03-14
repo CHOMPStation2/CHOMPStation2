@@ -61,23 +61,12 @@ if [ $retVal -ne 0 ]; then
 	FAILED=1
 fi
 
-<<<<<<< HEAD
-# ChompEDIT START
-(! $grep 'step_[xy]' $modular_map_files)
-retVal=$?
-if [ $retVal -ne 0 ]; then
-  echo -e "${RED}The variables 'step_x' and 'step_y' are present on a map, and they 'break' movement ingame.${NC}"
-  FAILED=1
-fi
-# ChompEDIT END
-=======
 part "base /turf usage"
 if grep -P '\W\/turf\s*[,\){]' $map_files; then
 	echo
 	echo -e "${RED}ERROR: base /turf path use detected in maps, please replace with proper paths.${NC}"
 	FAILED=1
 fi;
->>>>>>> 2757cefab8 (first few resolved greps (#17343))
 
 part "test map included"
 #Checking for any 'checked' maps that include 'test'
