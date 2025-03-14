@@ -858,7 +858,6 @@
 "ef" = (
 /obj/structure/table/reinforced,
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/red,
 /area/derelict/arrival)
 "eh" = (
@@ -1362,11 +1361,6 @@
 /area/derelict/eva/annex)
 "gl" = (
 /obj/structure/bed/chair/wood,
-/turf/simulated/floor/wood,
-/area/derelict/crew_quarters)
-"gm" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/wood,
 /area/derelict/crew_quarters)
 "gp" = (
@@ -2359,7 +2353,6 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/obj/effect/decal/cleanable/blood,
 /obj/effect/decal/cleanable/blood,
 /obj/effect/decal/remains/human{
 	desc = "This guy seemed to have died in terrible way! Half his remains are dust.";
@@ -10752,7 +10745,7 @@ eF
 hm
 fw
 hm
-gm
+fc
 gF
 hm
 hm

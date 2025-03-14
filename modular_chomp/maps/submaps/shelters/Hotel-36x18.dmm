@@ -35,11 +35,6 @@
 /obj/machinery/appliance/mixer/candy,
 /turf/simulated/floor/tiled/white,
 /area/survivalpod/superpose/hotel)
-"eo" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/carpet/turcarpet,
-/area/survivalpod/superpose/hotel)
 "eD" = (
 /obj/structure/bed/double/padded,
 /obj/item/bedsheet/rddouble,
@@ -151,11 +146,6 @@
 	icon_state = "0-2"
 	},
 /turf/simulated/floor/plating,
-/area/survivalpod/superpose/hotel)
-"jM" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/wood/sif/broken,
 /area/survivalpod/superpose/hotel)
 "kr" = (
 /obj/structure/closet/secure_closet/freezer/fridge,
@@ -368,14 +358,6 @@
 	},
 /turf/simulated/floor/wood/sif,
 /area/survivalpod/superpose/hotel)
-"uI" = (
-/obj/structure/bed/chair/wood{
-	dir = 8
-	},
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/carpet,
-/area/survivalpod/superpose/hotel)
 "uO" = (
 /obj/structure/table/marble,
 /obj/machinery/light/floortube/flicker{
@@ -435,12 +417,6 @@
 /obj/machinery/light/floortube/flicker{
 	pixel_y = 5
 	},
-/turf/simulated/floor/wood/sif,
-/area/survivalpod/superpose/hotel)
-"zt" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/random/junk,
 /turf/simulated/floor/wood/sif,
 /area/survivalpod/superpose/hotel)
 "zV" = (
@@ -610,12 +586,6 @@
 /area/survivalpod/superpose/hotel)
 "Id" = (
 /turf/simulated/floor/outdoors/dirt,
-/area/survivalpod/superpose/hotel)
-"Io" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/closet/crate/bin,
-/turf/simulated/floor/wood/sif,
 /area/survivalpod/superpose/hotel)
 "IT" = (
 /obj/structure/table/bench/marble,
@@ -857,11 +827,6 @@
 /obj/structure/table/sifwoodentable,
 /turf/simulated/floor/wood/sif,
 /area/survivalpod/superpose/hotel)
-"Yv" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/wood/sif,
-/area/survivalpod/superpose/hotel)
 "ZI" = (
 /obj/structure/grille/rustic,
 /obj/structure/window/phoronreinforced/full,
@@ -1000,7 +965,7 @@ Li
 AM
 hT
 xj
-Yv
+xj
 cq
 Dc
 pK
@@ -1082,7 +1047,7 @@ jG
 Qt
 xj
 xj
-Yv
+xj
 hT
 hT
 hT
@@ -1120,7 +1085,7 @@ vE
 FR
 wv
 Uq
-Yv
+xj
 xj
 Hk
 oH
@@ -1175,7 +1140,7 @@ Cy
 uR
 hT
 jf
-uI
+bI
 xj
 Eq
 hT
@@ -1299,7 +1264,7 @@ DZ
 pK
 Qt
 xj
-jM
+hK
 lJ
 Eq
 hT
@@ -1319,11 +1284,11 @@ vE
 hT
 OO
 xj
-Yv
+xj
 hT
 Qt
 wv
-Io
+Pa
 xj
 SI
 Qt
@@ -1339,7 +1304,7 @@ Qt
 Qt
 Qt
 IT
-zt
+FS
 RU
 Qt
 Qt
@@ -1399,7 +1364,7 @@ Fn
 xj
 Eq
 hK
-Yv
+xj
 hT
 Qt
 xj
@@ -1419,7 +1384,7 @@ ys
 AJ
 Qt
 xj
-Yv
+xj
 hT
 fP
 xj
@@ -1474,9 +1439,9 @@ Ue
 Ue
 uR
 QQ
-eo
+gP
 px
-zt
+FS
 Eq
 hT
 hK
@@ -1505,7 +1470,7 @@ Eq
 hT
 jf
 jf
-Yv
+xj
 Qt
 "}
 (33,1,1) = {"

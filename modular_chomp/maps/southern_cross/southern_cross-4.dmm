@@ -19737,7 +19737,6 @@
 /area/crew_quarters/sleep/vistor_room_9)
 "qwG" = (
 /obj/structure/catwalk,
-/obj/structure/catwalk,
 /obj/structure/disposalpipe/segment,
 /obj/structure/cable{
 	icon_state = "1-2"

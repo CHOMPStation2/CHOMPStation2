@@ -26,7 +26,6 @@
 	locked = 1
 	},
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/steel,
 /area/submap/AbandonedLab)
 "bl" = (
@@ -466,7 +465,6 @@
 "xd" = (
 /obj/effect/decal/cleanable/generic,
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/submap/AbandonedLab)
 "xj" = (
@@ -509,7 +507,6 @@
 "yq" = (
 /obj/effect/decal/cleanable/greenglow,
 /obj/structure/catwalk,
-/obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/plating,
 /area/submap/AbandonedLab)
@@ -694,7 +691,6 @@
 /area/submap/AbandonedLab)
 "Gk" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
 /obj/effect/floor_decal/rust,
 /obj/effect/decal/remains/human,
 /turf/simulated/floor/tiled/dark,
@@ -756,13 +752,7 @@
 /obj/structure/sign/nosmoking_1{
 	pixel_x = -30
 	},
-/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/dark,
-/area/submap/AbandonedLab)
-"Je" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/shuttle/wall/voidcraft/hard_corner/red,
 /area/submap/AbandonedLab)
 "Jv" = (
 /obj/effect/decal/cleanable/dirt,
@@ -1050,7 +1040,6 @@
 /turf/simulated/floor/tiled/old_tile/green,
 /area/submap/AbandonedLab)
 "WZ" = (
-/obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/floor_decal/rust,
 /obj/effect/decal/cleanable/generic,
@@ -1459,8 +1448,8 @@ BC
 mu
 cH
 KT
-Je
-Je
+cH
+cH
 ku
 Nj
 Dh

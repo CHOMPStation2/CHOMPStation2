@@ -790,7 +790,6 @@
 /area/survivalpod/superpose/HydroCave)
 "vK" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
 /obj/structure/closet/emcloset/legacy,
 /turf/simulated/floor/tiled,
 /area/survivalpod/superpose/HydroCave)

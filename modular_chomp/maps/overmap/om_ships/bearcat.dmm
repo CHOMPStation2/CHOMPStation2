@@ -1792,7 +1792,6 @@
 /area/shuttle/bearcat/cargo)
 "eF" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/pipe/manifold/hidden/cyan{
 	dir = 8
 	},
@@ -2528,7 +2527,6 @@
 /turf/simulated/floor/plating,
 /area/shuttle/bearcat/maintenance_atmos)
 "gp" = (
-/obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/cable{
 	icon_state = "4-8"

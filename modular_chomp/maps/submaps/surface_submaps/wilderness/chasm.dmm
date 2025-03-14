@@ -29,21 +29,11 @@
 /area/submap/Chasm)
 "bN" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/outdoors/dirt,
 /area/submap/Chasm)
 "cj" = (
 /turf/simulated/floor/outdoors/dirt,
 /area/template_noop)
-"eY" = (
-/obj/random/junk,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/outdoors/dirt{
-	outdoors = 0
-	},
-/area/submap/Chasm)
 "gK" = (
 /obj/effect/floor_decal/rust,
 /obj/effect/floor_decal/rust/color_rustedfull,
@@ -52,7 +42,6 @@
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/submap/Chasm)
 "hG" = (
-/obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /mob/living/simple_mob/animal/giant_spider/electric{
 	faction = "virgo2";
@@ -64,18 +53,9 @@
 "hR" = (
 /turf/template_noop,
 /area/template_noop)
-"ik" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/outdoors/dirt{
-	outdoors = 0
-	},
-/area/submap/Chasm)
 "iu" = (
 /obj/effect/floor_decal/rust,
 /obj/effect/floor_decal/rust/mono_rusted2,
-/obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/submap/Chasm)
@@ -85,24 +65,7 @@
 /obj/effect/floor_decal/rust,
 /obj/effect/floor_decal/rust,
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/asteroid_steel,
-/area/submap/Chasm)
-"iR" = (
-/obj/random/trash,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/outdoors/dirt{
-	outdoors = 0
-	},
-/area/submap/Chasm)
-"kn" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/outdoors/dirt{
-	outdoors = 0
-	},
 /area/submap/Chasm)
 "kH" = (
 /obj/random/junk,
@@ -121,7 +84,6 @@
 "lz" = (
 /obj/random/junk,
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/outdoors/dirt{
 	outdoors = 0
 	},
@@ -134,7 +96,6 @@
 /area/submap/Chasm)
 "nx" = (
 /obj/random/trash,
-/obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/outdoors/dirt{
 	outdoors = 0
@@ -180,16 +141,6 @@
 	outdoors = 0
 	},
 /area/submap/Chasm)
-"rR" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/outdoors/dirt{
-	outdoors = 0
-	},
-/area/submap/Chasm)
 "rY" = (
 /obj/structure/cliff/automatic{
 	dir = 8
@@ -220,7 +171,6 @@
 	name = "loose rock stairs"
 	},
 /obj/effect/step_trigger/thrower,
-/obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/outdoors/rocks{
 	outdoors = 0
@@ -353,7 +303,6 @@
 	name = "loose rock stairs"
 	},
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/outdoors/rocks{
 	outdoors = 0
 	},
@@ -420,13 +369,6 @@
 /obj/random/outcrop,
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/submap/Chasm)
-"HE" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/outdoors/rocks{
-	outdoors = 0
-	},
-/area/submap/Chasm)
 "HF" = (
 /obj/structure/cliff/automatic{
 	dir = 5
@@ -444,7 +386,6 @@
 "JJ" = (
 /obj/structure/loot_pile/surface/bones,
 /obj/effect/floor_decal/rust,
-/obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/submap/Chasm)
@@ -781,7 +722,7 @@ cj
 (5,1,1) = {"
 hR
 Sc
-eY
+lz
 Sc
 Sc
 Sc
@@ -806,7 +747,7 @@ hR
 (6,1,1) = {"
 Sc
 Sc
-ik
+rI
 Sc
 Sc
 ua
@@ -831,7 +772,7 @@ cj
 (7,1,1) = {"
 Sc
 Sc
-iR
+nx
 Kv
 Sc
 ua
@@ -856,7 +797,7 @@ hR
 (8,1,1) = {"
 Sc
 Sc
-kn
+rI
 lz
 oA
 oA
@@ -907,7 +848,7 @@ Sc
 Sc
 Sc
 Sc
-ik
+rI
 nx
 ua
 Kv
@@ -933,9 +874,9 @@ hR
 Sc
 Sc
 rI
-rR
+rI
 tg
-HE
+vV
 uf
 Rz
 YU
@@ -960,7 +901,7 @@ Sc
 Sc
 vV
 Cs
-HE
+vV
 uf
 Rz
 Zn
