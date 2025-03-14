@@ -232,4 +232,4 @@
 
 /mob/living/simple_mob/animal/giant_spider/tunneler/cave/Initialize(mapload)
 	. = ..()
-	resize(50)
+	resize(0.50)
