@@ -378,8 +378,6 @@
 	dir = 1
 	},
 /obj/structure/table/rack,
-/obj/item/clothing/suit/space/void/merc/axis/sovrig,
-/obj/item/clothing/head/helmet/space/void/axis/merc/sovrigh,
 /turf/simulated/floor/tiled,
 /area/awaymission/carpfarm/base)
 "bu" = (
