@@ -107,8 +107,13 @@
 			return 1
 		else
 			var/available = get_amount()
+<<<<<<< HEAD
 			user.balloon_alert_visible("\the [user] starts bandaging [M]'s [affecting.name].", \
 					             "bandaging [M]'s [affecting.name]." ) // CHOMPEdit - Balloon Alerts
+=======
+			user.visible_message(span_infoplain(span_bold("\The [user]") + " starts bandaging [M]'s [affecting.name]."), \
+								span_notice("You start bandaging [M]'s [affecting.name]."))
+>>>>>>> c8aff28c5b (space cleanup (#17300))
 			var/used = 0
 			for (var/datum/wound/W in affecting.wounds)
 				if(W.internal)
@@ -130,11 +135,19 @@
 					break
 
 				if (W.current_stage <= W.max_bleeding_stage)
+<<<<<<< HEAD
 					user.balloon_alert_visible("\the [user] bandages \a [W.desc] on [M]'s [affecting.name].", \
 					                              "you bandage \a [W.desc] on [M]'s [affecting.name]." ) // CHOMPEdit - Balloon Alerts
 				else
 					user.balloon_alert_visible("\the [user] places a bandage over \a [W.desc] on [M]'s [affecting.name].", \
 					                              "you place a bandage over \a [W.desc] on [M]'s [affecting.name]." ) // CHOMPEdit - Balloon Alerts
+=======
+					user.visible_message(span_infoplain(span_bold("\The [user]") + " bandages \a [W.desc] on [M]'s [affecting.name]."), \
+												span_notice("You bandage \a [W.desc] on [M]'s [affecting.name]."))
+				else
+					user.visible_message(span_infoplain(span_bold("\The [user]") + " places a bandage over \a [W.desc] on [M]'s [affecting.name]."), \
+												span_notice("You place a bandage over \a [W.desc] on [M]'s [affecting.name]."))
+>>>>>>> c8aff28c5b (space cleanup (#17300))
 				W.bandage()
 				playsound(src, pick(apply_sounds), 25)
 				used++
@@ -176,8 +189,13 @@
 			return 1
 		else
 			var/available = get_amount()
+<<<<<<< HEAD
 			user.balloon_alert_visible("\the [user] starts treating [M]'s [affecting.name].", \
 					             "treating [M]'s [affecting.name]." ) // CHOMPEdit - Balloon Alerts
+=======
+			user.visible_message(span_infoplain(span_bold("\The [user]") + " starts treating [M]'s [affecting.name]."), \
+									span_notice("You start treating [M]'s [affecting.name]."))
+>>>>>>> c8aff28c5b (space cleanup (#17300))
 			var/used = 0
 			for (var/datum/wound/W in affecting.wounds)
 				if (W.internal)
@@ -199,6 +217,7 @@
 					break
 
 				if (W.current_stage <= W.max_bleeding_stage)
+<<<<<<< HEAD
 					user.balloon_alert_visible("\the [user] bandages \a [W.desc] on [M]'s [affecting.name].", \
 					                              "bandaged \a [W.desc] on [M]'s [affecting.name]." ) // CHOMPEdit - Balloon Alerts
 					//H.add_side_effect("Itch")
@@ -208,6 +227,17 @@
 				else
 					user.balloon_alert_visible("\the [user] places a bandaid over \a [W.desc] on [M]'s [affecting.name].", \
 					                              "placed bandaid over \a [W.desc] on [M]'s [affecting.name]." ) // CHOMPEdit - Balloon Alerts
+=======
+					user.visible_message(span_infoplain(span_bold("\The [user]") + " bandages \a [W.desc] on [M]'s [affecting.name]."), \
+											span_notice("You bandage \a [W.desc] on [M]'s [affecting.name]."))
+					//H.add_side_effect("Itch")
+				else if (W.damage_type == BRUISE)
+					user.visible_message(span_infoplain(span_bold("\The [user]") + " places a bruise patch over \a [W.desc] on [M]'s [affecting.name]."), \
+											span_notice("You place a bruise patch over \a [W.desc] on [M]'s [affecting.name]."))
+				else
+					user.visible_message(span_infoplain(span_bold("\The [user]") + " places a bandaid over \a [W.desc] on [M]'s [affecting.name]."), \
+											span_notice("You place a bandaid over \a [W.desc] on [M]'s [affecting.name]."))
+>>>>>>> c8aff28c5b (space cleanup (#17300))
 				W.bandage()
 				// W.disinfect() // VOREStation - Tech1 should not disinfect
 				playsound(src, pick(apply_sounds), 25)
@@ -249,16 +279,26 @@
 			balloon_alert(user, "the wounds on [M]'s [affecting.name] have already been salved.") // CHOMPEdit - Balloon Alerts // CHOMPEdit - Balloon Alerts
 			return 1
 		else
+<<<<<<< HEAD
 			user.balloon_alert_visible("\the [user] starts salving wounds on [M]'s [affecting.name].", \
 					             "salving the wounds on [M]'s [affecting.name]." ) // CHOMPEdit - Balloon Alerts // CHOMPEdit - Balloon Alerts
+=======
+			user.visible_message(span_infoplain(span_bold("\The [user]") + " starts salving wounds on [M]'s [affecting.name]."), \
+									span_notice("You start salving the wounds on [M]'s [affecting.name].") )
+>>>>>>> c8aff28c5b (space cleanup (#17300))
 			if(!do_mob(user, M, 10, exclusive = TRUE))
 				balloon_alert(user, "stand still to salve wounds.") // CHOMPEdit - Balloon Alerts // CHOMPEdit - Balloon Alerts
 				return 1
 			if(affecting.is_salved()) // We do a second check after the delay, in case it was bandaged after the first check.
 				balloon_alert(user, "[M]'s [affecting.name] have already been salved.") // CHOMPEdit - Balloon Alerts // CHOMPEdit - Balloon Alerts
 				return 1
+<<<<<<< HEAD
 			user.balloon_alert_visible("[user] salved wounds on [M]'s [affecting.name].", \
 			                         "salved wounds on [M]'s [affecting.name]." ) // CHOMPEdit - Balloon Alerts // CHOMPEdit - Balloon Alerts
+=======
+			user.visible_message(span_notice("[user] salved wounds on [M]'s [affecting.name]."), \
+									span_notice("You salved wounds on [M]'s [affecting.name].") )
+>>>>>>> c8aff28c5b (space cleanup (#17300))
 			use(1)
 			affecting.salve()
 			playsound(src, pick(apply_sounds), 25)
@@ -295,8 +335,13 @@
 			return 1
 		else
 			var/available = get_amount()
+<<<<<<< HEAD
 			user.balloon_alert_visible("\the [user] starts treating [M]'s [affecting.name].", \
 					             "treating [M]'s [affecting.name]." ) // CHOMPEdit - Balloon Alerts // CHOMPEdit - Balloon Alerts
+=======
+			user.visible_message(span_infoplain(span_bold("\The [user]") + " starts treating [M]'s [affecting.name]."), \
+									span_notice("You start treating [M]'s [affecting.name].") )
+>>>>>>> c8aff28c5b (space cleanup (#17300))
 			var/used = 0
 			for (var/datum/wound/W in affecting.wounds)
 				if (W.internal)
@@ -317,6 +362,7 @@
 					break
 
 				if (W.current_stage <= W.max_bleeding_stage)
+<<<<<<< HEAD
 					user.balloon_alert_visible("\the [user] cleans \a [W.desc] on [M]'s [affecting.name] and seals the edges with bioglue.", \
 					                     "cleaning and sealing \a [W.desc] on [M]'s [affecting.name]." ) // CHOMPEdit - Balloon Alerts
 				else if (W.damage_type == BRUISE)
@@ -325,6 +371,16 @@
 				else
 					user.balloon_alert_visible("\the [user] smears some bioglue over \a [W.desc] on [M]'s [affecting.name].", \
 					                              "smeared bioglue over \a [W.desc] on [M]'s [affecting.name]." ) // CHOMPEdit - Balloon Alerts
+=======
+					user.visible_message(span_infoplain(span_bold("\The [user]") + " cleans \a [W.desc] on [M]'s [affecting.name] and seals the edges with bioglue."), \
+											span_notice("You clean and seal \a [W.desc] on [M]'s [affecting.name].") )
+				else if (W.damage_type == BRUISE)
+					user.visible_message(span_infoplain(span_bold("\The [user]") + " places a medical patch over \a [W.desc] on [M]'s [affecting.name]."), \
+											span_notice("You place a medical patch over \a [W.desc] on [M]'s [affecting.name].") )
+				else
+					user.visible_message(span_infoplain(span_bold("\The [user]") + " smears some bioglue over \a [W.desc] on [M]'s [affecting.name]."), \
+											span_notice("You smear some bioglue over \a [W.desc] on [M]'s [affecting.name].") )
+>>>>>>> c8aff28c5b (space cleanup (#17300))
 				W.bandage()
 				W.disinfect()
 				W.heal_damage(heal_brute)
@@ -363,8 +419,13 @@
 			balloon_alert(user, "[M]'s [affecting.name] has already been salved.") // CHOMPEdit - Balloon Alerts
 			return 1
 		else
+<<<<<<< HEAD
 			user.balloon_alert_visible("\the [user] starts salving wounds on [M]'s [affecting.name].", \
 					             "salving the wounds on [M]'s [affecting.name]." ) // CHOMPEdit - Balloon Alerts
+=======
+			user.visible_message(span_infoplain(span_bold("\The [user]") + " starts salving wounds on [M]'s [affecting.name]."), \
+									span_notice("You start salving the wounds on [M]'s [affecting.name].") )
+>>>>>>> c8aff28c5b (space cleanup (#17300))
 			if(!do_mob(user, M, 10, exclusive = TRUE))
 				balloon_alert(user, "stand still to salve wounds.") // CHOMPEdit - Balloon Alerts
 				return 1

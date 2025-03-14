@@ -1228,14 +1228,21 @@
 	ckeys_allowed = list("natje")
 
 /datum/sprite_accessory/ears/frost
-    name = "Frost antenna"
-    desc = ""
-    icon_state = "frosted_tips"
-    ckeys_allowed = list("tucker0666")
+	name = "Frost antenna"
+	desc = ""
+	icon_state = "frosted_tips"
+	ckeys_allowed = list("tucker0666")
 
 /datum/sprite_accessory/ears/sylv_pip
+<<<<<<< HEAD
     name = "sylveon ears and ribbons (Pip Shyner)"
     desc = ""
     icon_state = "pipears"
     ckeys_allowed = list("phoaly")
 	*/ //CHOMPRemove END
+=======
+	name = "sylveon ears and ribbons (Pip Shyner)"
+	desc = ""
+	icon_state = "pipears"
+	ckeys_allowed = list("phoaly")
+>>>>>>> c8aff28c5b (space cleanup (#17300))

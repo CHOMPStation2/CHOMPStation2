@@ -893,45 +893,51 @@
 
 // This is about 0.896m^3 of atmosphere
 /datum/gas_mixture/belly_air
-    volume = 2500
-    temperature = 293.150
-    total_moles = 104
+	volume = 2500
+	temperature = 293.150
+	total_moles = 104
 
 /datum/gas_mixture/belly_air/New()
-    . = ..()
-    gas = list(
-        GAS_O2 = 21,
-        GAS_N2 = 79)
+	. = ..()
+	gas = list(
+		GAS_O2 = 21,
+		GAS_N2 = 79)
 
 /datum/gas_mixture/belly_air/vox
-    volume = 2500
-    temperature = 293.150
-    total_moles = 104
+	volume = 2500
+	temperature = 293.150
+	total_moles = 104
 
 /datum/gas_mixture/belly_air/vox/New()
+<<<<<<< HEAD
     . = ..()
     gas = list(
         GAS_N2 = 100) // Chomp edit
+=======
+	. = ..()
+	gas = list(
+		GAS_PHORON = 100)
+>>>>>>> c8aff28c5b (space cleanup (#17300))
 
 /datum/gas_mixture/belly_air/zaddat
-    volume = 2500
-    temperature = 293.150
-    total_moles = 300
+	volume = 2500
+	temperature = 293.150
+	total_moles = 300
 
 /datum/gas_mixture/belly_air/zaddat/New()
-    . = ..()
-    gas = list(
-        GAS_O2 = 100)
+	. = ..()
+	gas = list(
+		GAS_O2 = 100)
 
 /datum/gas_mixture/belly_air/nitrogen_breather
-    volume = 2500
-    temperature = 293.150
-    total_moles = 104
+	volume = 2500
+	temperature = 293.150
+	total_moles = 104
 
 /datum/gas_mixture/belly_air/nitrogen_breather/New()
-    . = ..()
-    gas = list(
-        GAS_N2 = 100)
+	. = ..()
+	gas = list(
+		GAS_N2 = 100)
 
 //CHOMPEdit Start - for CO2 breathers
 /datum/gas_mixture/belly_air/carbon_dioxide_breather
