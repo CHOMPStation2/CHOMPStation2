@@ -195,7 +195,7 @@
 		if("brutola")
 			pixel_x = -8
 			vis_height = 64
-			vore_icons = SA_ICON_LIVING
+			vore_icons = SA_ICON_LIVING | SA_ICON_REST
 			vore_capacity = 2
 			icon_dead = "[alternate_selection]_dead"
 			icon = 'modular_chomp/icons/mob/demon_ch_alt.dmi'
