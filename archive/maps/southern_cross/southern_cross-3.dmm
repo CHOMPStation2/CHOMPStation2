@@ -617,7 +617,6 @@
 	dir = 4
 	},
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/steel_dirty,
 /area/surface/outpost/mining_main)
 "bG" = (
@@ -6947,7 +6946,6 @@
 /area/surface/outpost/main/restroom)
 "pm" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
 /obj/effect/overlay/snow/floor,
 /turf/simulated/floor/tiled/steel_dirty{
 	outdoors = 1
@@ -9458,13 +9456,10 @@
 "uA" = (
 /obj/machinery/light/small,
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
 /obj/effect/overlay/snow/floor,
 /turf/simulated/floor/plating/sif/planetuse,
 /area/surface/outpost/research/xenoresearch)
 "uB" = (
-/obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/overlay/snow/floor,
 /turf/simulated/floor/plating/sif/planetuse,
@@ -13039,7 +13034,6 @@
 /area/surface/outpost/research/xenoresearch/xenobiology)
 "Ck" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
 /obj/structure/disposaloutlet,
 /obj/structure/disposalpipe/trunk{
 	dir = 8
@@ -13048,7 +13042,6 @@
 /turf/simulated/floor/tiled/steel/sif/planetuse,
 /area/surface/outpost/research/xenoresearch/xenobiology)
 "Cl" = (
-/obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/overlay/snow/floor,
 /turf/simulated/floor/tiled/steel/sif/planetuse,
