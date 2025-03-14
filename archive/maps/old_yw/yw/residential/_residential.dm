@@ -48,13 +48,13 @@
 	shuttle_tag = "Residential Shuttle"
 
 /obj/structure/table/leadreinforcedwood
-    icon_state = "reinf_preview"
+	icon_state = "reinf_preview"
 
 
 /obj/structure/table/leadreinforcedwood/New()
-    material = get_material_by_name(MAT_LEAD)
-    reinforced = get_material_by_name(MAT_WOOD)
-    ..()
+	material = get_material_by_name(MAT_LEAD)
+	reinforced = get_material_by_name(MAT_WOOD)
+	..()
 
 // Spawn points
 

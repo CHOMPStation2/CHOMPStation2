@@ -56,7 +56,7 @@
 	job_description = "The Pathfinder's job is to lead and manage expeditions, and is the primary authority on all off-station expeditions."
 
 /datum/alt_title/pathfinder
-        title = "Pathfinder"
+	title = "Pathfinder"
 
 /datum/job/pilot
 	title = "Pilot"
@@ -97,7 +97,7 @@
 	job_description = "An Explorer searches for interesting things, and returns them to the station."
 
 /datum/alt_title/explorer
-        title = "Explorer"
+	title = "Explorer"
 
 /datum/job/sar
 	title = "Field Medic"

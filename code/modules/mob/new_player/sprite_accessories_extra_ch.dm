@@ -415,52 +415,52 @@
 
 // Nightstalker Body Markings
 /datum/sprite_accessory/marking/ch/desert_nightstalker
-    name = "Nightstalker Scales (Desert Coloration)"
-    icon_state = "nightstalker_desert"
-    body_parts = list(BP_R_ARM,BP_L_ARM,BP_R_HAND,BP_L_HAND,BP_R_LEG,BP_L_LEG,BP_R_FOOT,BP_L_FOOT,BP_TORSO,BP_GROIN) // Fullbody markings, save head
-    do_colouration = 0 // Don't color, these are pre-colored markings
+	name = "Nightstalker Scales (Desert Coloration)"
+	icon_state = "nightstalker_desert"
+	body_parts = list(BP_R_ARM,BP_L_ARM,BP_R_HAND,BP_L_HAND,BP_R_LEG,BP_L_LEG,BP_R_FOOT,BP_L_FOOT,BP_TORSO,BP_GROIN) // Fullbody markings, save head
+	do_colouration = 0 // Don't color, these are pre-colored markings
 
 /datum/sprite_accessory/marking/ch/desert_nightstalker_head
-    name = "Nightstalker Head (Desert Coloration)"
-    icon_state = "nightstalker_desert"
-    body_parts = list(BP_HEAD)
-    do_colouration = 0 // Don't color, these are pre-colored markings
+	name = "Nightstalker Head (Desert Coloration)"
+	icon_state = "nightstalker_desert"
+	body_parts = list(BP_HEAD)
+	do_colouration = 0 // Don't color, these are pre-colored markings
 
 /datum/sprite_accessory/marking/ch/nightstalker_head_center
-    name = "Nightstalker Head, Tricolor (Center)"
-    icon_state = "nightstalker_1"
-    body_parts = list(BP_HEAD)
-    color_blend_mode = ICON_MULTIPLY
+	name = "Nightstalker Head, Tricolor (Center)"
+	icon_state = "nightstalker_1"
+	body_parts = list(BP_HEAD)
+	color_blend_mode = ICON_MULTIPLY
 
 /datum/sprite_accessory/marking/ch/nightstalker_head_left
-    name = "Nightstalker Head, Tricolor (Left)"
-    icon_state = "nightstalker_2"
-    body_parts = list(BP_HEAD)
-    color_blend_mode = ICON_MULTIPLY
+	name = "Nightstalker Head, Tricolor (Left)"
+	icon_state = "nightstalker_2"
+	body_parts = list(BP_HEAD)
+	color_blend_mode = ICON_MULTIPLY
 
 /datum/sprite_accessory/marking/ch/nightstalker_head_right
-    name = "Nightstalker Head, Tricolor (Right)"
-    icon_state = "nightstalker_3"
-    body_parts = list(BP_HEAD)
-    color_blend_mode = ICON_MULTIPLY
+	name = "Nightstalker Head, Tricolor (Right)"
+	icon_state = "nightstalker_3"
+	body_parts = list(BP_HEAD)
+	color_blend_mode = ICON_MULTIPLY
 
 /datum/sprite_accessory/marking/ch/diamondback_nightstalker_outer
-    name = "Nightstalker Scales, Outer"
-    icon_state = "nightstalker_1"
-    body_parts = list(BP_R_ARM,BP_L_ARM,BP_R_HAND,BP_L_HAND,BP_R_LEG,BP_L_LEG,BP_R_FOOT,BP_L_FOOT,BP_TORSO,BP_GROIN) // Fullbody markings, save head
-    color_blend_mode = ICON_MULTIPLY
+	name = "Nightstalker Scales, Outer"
+	icon_state = "nightstalker_1"
+	body_parts = list(BP_R_ARM,BP_L_ARM,BP_R_HAND,BP_L_HAND,BP_R_LEG,BP_L_LEG,BP_R_FOOT,BP_L_FOOT,BP_TORSO,BP_GROIN) // Fullbody markings, save head
+	color_blend_mode = ICON_MULTIPLY
 
 /datum/sprite_accessory/marking/ch/diamondback_nightstalker_inner
-    name = "Nightstalker Scales, Inner"
-    icon_state = "nightstalker_2"
-    body_parts = list(BP_R_ARM,BP_L_ARM,BP_R_LEG,BP_L_LEG,BP_TORSO,BP_GROIN) // Fullbody markings, save head
-    color_blend_mode = ICON_MULTIPLY
+	name = "Nightstalker Scales, Inner"
+	icon_state = "nightstalker_2"
+	body_parts = list(BP_R_ARM,BP_L_ARM,BP_R_LEG,BP_L_LEG,BP_TORSO,BP_GROIN) // Fullbody markings, save head
+	color_blend_mode = ICON_MULTIPLY
 
 /datum/sprite_accessory/marking/ch/outer_spots
-    name = "Spots, Outer"
-    icon_state = "spots_extremities"
-    body_parts = list(BP_R_ARM,BP_L_ARM,BP_R_LEG,BP_L_LEG,BP_R_FOOT,BP_L_FOOT)
-    color_blend_mode = ICON_MULTIPLY
+	name = "Spots, Outer"
+	icon_state = "spots_extremities"
+	body_parts = list(BP_R_ARM,BP_L_ARM,BP_R_LEG,BP_L_LEG,BP_R_FOOT,BP_L_FOOT)
+	color_blend_mode = ICON_MULTIPLY
 
 //Hellscout panel markings
 /datum/sprite_accessory/marking/ch/hellscout_panels_body

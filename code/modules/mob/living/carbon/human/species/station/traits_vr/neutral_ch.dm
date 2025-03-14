@@ -93,12 +93,12 @@
 	cost = 0
 	var_changes = list(
 	autohiss_basic_map = list(
-        "s" = list("sz", "z", "zz"),
-        "f" = list("zk")
+		"s" = list("sz", "z", "zz"),
+		"f" = list("zk")
 		),
 	autohiss_extra_map = list(
 		"th" = list("zk", "szk"),
-        "r" = list("rk")
+		"r" = list("rk")
 	),
 	autohiss_exempt = list("Vespinae"))
 	excludes = list(/datum/trait/neutral/autohiss_tajaran, /datum/trait/neutral/autohiss_unathi)

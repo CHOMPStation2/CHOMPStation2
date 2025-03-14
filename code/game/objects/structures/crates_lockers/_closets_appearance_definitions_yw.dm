@@ -11,7 +11,7 @@
 	decals = list(
 		"upper_side_vent",
 		"lower_side_vent"
-    )
+	)
 
 /decl/closet_appearance/secure_closet/lumber
 	can_lock = FALSE

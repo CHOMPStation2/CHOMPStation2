@@ -19,12 +19,12 @@
 						access_tox_storage, access_teleporter,
 						access_research, access_robotics, access_xenobiology, access_ai_upload, access_tech_storage,
 						access_RC_announce, access_keycard_auth, access_tcomsat, access_gateway, access_xenoarch, access_eva, access_network,
-			            access_explorer, access_pathfinder, access_xenobotany) //YW Edit access_gateway, _explorer, _pathfinder, and _xenobotany
+						access_explorer, access_pathfinder, access_xenobotany) //YW Edit access_gateway, _explorer, _pathfinder, and _xenobotany
 	minimal_access = list(access_rd, access_heads, access_tox, access_genetics, access_morgue,
 						access_tox_storage, access_teleporter,
 						access_research, access_robotics, access_xenobiology, access_ai_upload, access_tech_storage,
 						access_RC_announce, access_keycard_auth, access_tcomsat, access_gateway, access_xenoarch, access_eva, access_network,
-			            access_explorer, access_pathfinder, access_xenobotany) //YW Edit access_gateway, _explorer, _pathfinder, and _xenobotany
+						access_explorer, access_pathfinder, access_xenobotany) //YW Edit access_gateway, _explorer, _pathfinder, and _xenobotany
 
 	minimum_character_age = 25
 	minimal_player_age = 31 //ChompEDIT

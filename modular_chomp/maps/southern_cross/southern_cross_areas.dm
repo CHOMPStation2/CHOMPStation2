@@ -219,12 +219,12 @@
 
 //CHOMPStation Edit. Two new areas for the vault.
 /area/hallway/primary/firstdeck/vaultcheckpoint
-    name = "\improper Vault Checkpoint"
-    icon_state = "nuke_storage"
+	name = "\improper Vault Checkpoint"
+	icon_state = "nuke_storage"
 
 /area/hallway/primary/firstdeck/vaultlobby
-    name = "\improper Vault Lobby"
-    icon_state = "nuke_storage"
+	name = "\improper Vault Lobby"
+	icon_state = "nuke_storage"
 
 //CHOMPStation Edit Start TFF 4/5/20 - One of these ain't the same thing, bruh. Escape Pod 1, Escape Pod 2, Research Access Hallway.
 /area/hallway/secondary/escape/firstdeck/ep_port

@@ -10,10 +10,10 @@
 	mob.say("[pick("Meow.","*meow","*mrow","*mgeow")]")
 
 /datum/disease2/effect/choreomania
-    name = "Choreomania"
-    stage = 1
-    chance_maxm = 12
-    var/list/dance = list(2,4,8,2,4,8,2,4,8,2,4,8,1,4,1,4,1,4,2,4,8,2)
+	name = "Choreomania"
+	stage = 1
+	chance_maxm = 12
+	var/list/dance = list(2,4,8,2,4,8,2,4,8,2,4,8,1,4,1,4,1,4,2,4,8,2)
 
 /datum/disease2/effect/choreomania/activate(mob/living/carbon/mob, multiplier)
 

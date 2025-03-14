@@ -1148,31 +1148,31 @@
  	item_state = "tesh_cloak_saroth"
 
 /obj/item/clothing/accessory/poncho/cloak/fluff/Jaree
-    name = "plain cloak"
-    desc = "A plain cloak to be worn for warmth or comfort. Looks cozy."
-    icon = 'icons/vore/custom_clothes_yw.dmi'
-    icon_state = "jaree_cloak"
-    icon_override = 'icons/vore/custom_onmob_yw.dmi'
-    item_state = "jaree_cloak"
+	name = "plain cloak"
+	desc = "A plain cloak to be worn for warmth or comfort. Looks cozy."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "jaree_cloak"
+	icon_override = 'icons/vore/custom_onmob_yw.dmi'
+	item_state = "jaree_cloak"
 
 /obj/item/clothing/head/ushanka/alt/fluff/Jaree
-    name = "ushanka"
-    desc = "Perfect for winter in Siberia, da?"
-    icon_state = "ushanka2down"
-    icon = 'icons/vore/custom_clothes_yw.dmi'
-    icon_override = 'icons/vore/custom_onmob_yw.dmi'
-    item_state = "ushanka2down"
-    flags_inv = HIDEEARS
+	name = "ushanka"
+	desc = "Perfect for winter in Siberia, da?"
+	icon_state = "ushanka2down"
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_override = 'icons/vore/custom_onmob_yw.dmi'
+	item_state = "ushanka2down"
+	flags_inv = HIDEEARS
 
 /obj/item/clothing/head/ushanka/alt/fluff/Jaree/attack_self(mob/user as mob)
-    if(src.icon_state == "ushanka2down")
-        src.icon_state = "ushanka2up"
-        src.item_state = "ushanka2up"
-        user << "You raise the ear flaps on the ushanka."
-    else
-        src.icon_state = "ushanka2down"
-        src.item_state = "ushanka2down"
-        user << "You lower the ear flaps on the ushanka."
+	if(src.icon_state == "ushanka2down")
+		src.icon_state = "ushanka2up"
+		src.item_state = "ushanka2up"
+		user << "You raise the ear flaps on the ushanka."
+	else
+		src.icon_state = "ushanka2down"
+		src.item_state = "ushanka2down"
+		user << "You lower the ear flaps on the ushanka."
 
 // ******
 // Benl8561
@@ -1235,13 +1235,13 @@
 	item_state = "noel_glasses"
 
 /obj/item/clothing/suit/storage/toggle/hoodie/fluff/noel_hoodie
-    name = "Noel's casual hoodie"
-    desc = "A blue faded black trimmed hoodie, it looks very simple and warm, there are the initials N.W. on the tag inside"
-    icon = 'icons/vore/custom_clothes_yw.dmi'
-    icon_state = "noel_hoodie"
-    // "noel_hoodie_open" will be the open state
-    icon_override = 'icons/vore/custom_onmob_yw.dmi'
-    item_state = null
+	name = "Noel's casual hoodie"
+	desc = "A blue faded black trimmed hoodie, it looks very simple and warm, there are the initials N.W. on the tag inside"
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "noel_hoodie"
+	// "noel_hoodie_open" will be the open state
+	icon_override = 'icons/vore/custom_onmob_yw.dmi'
+	item_state = null
 
 /obj/item/clothing/ears/earings/fluff/noel_earings
 	name = "Teardrop Earrings"
@@ -1561,13 +1561,13 @@
 	armor = list(melee = 30, bullet = 20, laser = 20, energy = 20, bomb = 35, bio = 75, rad = 35)
 
 /obj/item/clothing/accessory/poncho/cloak/fluff/mocha
-    name = "Elaborate Cloak"
-    desc = "A cloak denoting the rank of a warden, the name \"Mocha\" is embroidered along the collar in red lettering"
-    icon = 'icons/vore/custom_clothes_yw.dmi'
-    icon_state = "mocha_cloak"
-    icon_override = 'icons/vore/custom_clothes_yw.dmi'
-    item_state = "mocha_cloak_s"
-    overlay_state = "mocha_cloak_s"
+	name = "Elaborate Cloak"
+	desc = "A cloak denoting the rank of a warden, the name \"Mocha\" is embroidered along the collar in red lettering"
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "mocha_cloak"
+	icon_override = 'icons/vore/custom_clothes_yw.dmi'
+	item_state = "mocha_cloak_s"
+	overlay_state = "mocha_cloak_s"
 
 // ******
 // Lawst
