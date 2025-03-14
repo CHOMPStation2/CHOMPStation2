@@ -8,7 +8,7 @@
 	vore_tail_transfer_chance = 10 // And the albino ones are EXTRA greedy!
 	ai_holder_type = /datum/ai_holder/simple_mob/melee/hit_and_run // Ambush predators!
 
-/mob/living/simple_mob/vore/lamia/cobra/cave
+/mob/living/simple_mob/vore/lamia/copper/cave
 	name = "cave lamia"
 	desc = "Combination snake-human. This one looks hungry!"
 	melee_damage_lower = 5

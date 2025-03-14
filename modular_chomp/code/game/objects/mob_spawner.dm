@@ -19,11 +19,11 @@
 		/mob/living/simple_mob/animal/passive/mouse/rat = 25,
 		/mob/living/simple_mob/metroid/mine = 25,
 		/mob/living/simple_mob/vore/oregrub = 25,
-		/mob/living/simple_mob/vore/oregrub/lava = 20,
 		/mob/living/simple_mob/vore/aggressive/dino = 20,
 		/mob/living/simple_mob/animal/space/carp = 20,
+		/mob/living/simple_mob/vore/oregrub/lava = 15,
 		/mob/living/simple_mob/vore/stalker = 10,
-		/mob/living/simple_mob/vore/lamia/cobra/cave = 10,
+		/mob/living/simple_mob/vore/lamia/copper/cave = 10,
 		/mob/living/simple_mob/vore/lamia/albino/cave = 5,
 		/mob/living/simple_mob/vore/aggressive/lizardman = 5,
 		/mob/living/simple_mob/vore/otie = 5,
@@ -31,9 +31,10 @@
 		/obj/structure/closet/crate/mimic/cointoss = 1,
 		/obj/structure/closet/crate/mimic/closet/cointoss = 1,
 		/mob/living/simple_mob/vore/otie/feral = 1,
-		/mob/living/simple_mob/vore/sonadile = 1,
+		// /mob/living/simple_mob/vore/sonadile = 1, // Removed until sprite issues fixed.
 		/mob/living/simple_mob/animal/space/bear/brown = 1,
 		/mob/living/simple_mob/vore/aggressive/deathclaw = 1,
+		/mob/living/simple_mob/vore/gryphon = 1,
 		/mob/living/simple_mob/vore/demon = 0.5 // VERY rare!
 	)
 
