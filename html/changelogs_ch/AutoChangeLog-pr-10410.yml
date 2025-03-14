@@ -1,0 +1,4 @@
+author: "SpadesNeil"
+delete-after: True
+changes:
+  - bugfix: "Makes giant cave spiders no longer giant"
