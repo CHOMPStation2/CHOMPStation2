@@ -647,13 +647,6 @@
 	},
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/zeroaft)
-"cw" = (
-/obj/structure/catwalk,
-/obj/structure/catwalk,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/turf/simulated/floor/plating/turfpack/station,
-/area/maintenance/zerocent)
 "cy" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 6
@@ -1145,7 +1138,6 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/maintenance/gravlobby)
 "eA" = (
-/obj/structure/catwalk,
 /obj/structure/catwalk,
 /obj/structure/cable{
 	icon_state = "1-8"
@@ -2609,8 +2601,6 @@
 /area/maintenance/zerocent)
 "kP" = (
 /obj/structure/catwalk,
-/obj/structure/catwalk,
-/obj/structure/catwalk,
 /turf/simulated/floor/dungeon,
 /area/maintenance/zeroaft)
 "kQ" = (
@@ -2795,7 +2785,6 @@
 /turf/simulated/floor/plating,
 /area/maintenance/ragecage)
 "lE" = (
-/obj/structure/catwalk,
 /obj/structure/catwalk,
 /obj/random/trash,
 /turf/simulated/floor/plating/turfpack/station,
@@ -3706,7 +3695,6 @@
 /area/maintenance/zeroaft)
 "pp" = (
 /obj/structure/catwalk,
-/obj/structure/catwalk,
 /obj/machinery/alarm{
 	dir = 8;
 	pixel_x = 22
@@ -4563,11 +4551,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/fieldthrift)
-"sT" = (
-/obj/structure/catwalk,
-/obj/structure/catwalk,
-/turf/simulated/floor/plating/turfpack/station,
-/area/maintenance/zeroport)
 "sV" = (
 /turf/unsimulated/mask,
 /area/engineering/lowlobby)
@@ -5271,12 +5254,6 @@
 /obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/ragecage)
-"wg" = (
-/obj/structure/catwalk,
-/obj/structure/catwalk,
-/obj/effect/floor_decal/rust,
-/turf/simulated/floor/plating/turfpack/station,
-/area/maintenance/zeroaft)
 "wh" = (
 /obj/effect/floor_decal/rust,
 /obj/structure/cable{
@@ -6027,11 +6004,6 @@
 	},
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/zerocent)
-"zI" = (
-/obj/structure/catwalk,
-/obj/structure/catwalk,
-/turf/simulated/floor/plating,
-/area/maintenance/zeroaft)
 "zJ" = (
 /obj/structure/table/rack/shelf,
 /obj/item/clothing/accessory/collar/collarplanet_earth,
@@ -7006,12 +6978,6 @@
 /obj/structure/table,
 /turf/simulated/floor/bmarble,
 /area/maintenance/thrift)
-"DT" = (
-/obj/structure/catwalk,
-/obj/structure/catwalk,
-/obj/effect/floor_decal/rust,
-/turf/simulated/floor/plating/turfpack/station,
-/area/maintenance/zeroport)
 "DU" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
@@ -7828,7 +7794,6 @@
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/zerocent)
 "Hm" = (
-/obj/structure/catwalk,
 /obj/structure/catwalk,
 /obj/structure/cable{
 	icon_state = "2-4"
@@ -11068,11 +11033,6 @@
 /obj/item/radio/subspace,
 /turf/simulated/floor/plating,
 /area/maintenance/field)
-"Wc" = (
-/obj/structure/catwalk,
-/obj/structure/catwalk,
-/turf/simulated/floor/plating/turfpack/station,
-/area/maintenance/zerocent)
 "We" = (
 /turf/simulated/wall/r_wall/turfpack/station,
 /area/maintenance/abcargo)
@@ -11565,20 +11525,6 @@
 	},
 /turf/simulated/floor/tiled/hydro,
 /area/maintenance/abhydroponics)
-"Ya" = (
-/obj/structure/catwalk,
-/obj/structure/catwalk,
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/turf/simulated/floor/plating/turfpack/station,
-/area/maintenance/zeroport)
 "Yb" = (
 /obj/machinery/power/apc{
 	dir = 1;
@@ -34985,7 +34931,7 @@ ic
 hj
 hn
 nF
-DT
+le
 lE
 ua
 iP
@@ -40162,7 +40108,7 @@ PJ
 PJ
 QS
 le
-Ya
+Nf
 PJ
 ua
 wZ
@@ -40400,7 +40346,7 @@ fR
 BJ
 vE
 Pb
-sT
+PJ
 PJ
 PJ
 kY
@@ -42483,7 +42429,7 @@ wZ
 wZ
 Mq
 kn
-wg
+mA
 mA
 Sk
 Bh
@@ -48912,9 +48858,9 @@ Hq
 Hq
 LK
 am
-cw
+am
 zW
-Wc
+Sb
 Sb
 wK
 Sb
@@ -49197,7 +49143,7 @@ kE
 kE
 kE
 oJ
-zI
+vn
 vn
 Sk
 qf
@@ -50999,7 +50945,7 @@ ZW
 EM
 SX
 fj
-zI
+vn
 Mq
 wZ
 wZ

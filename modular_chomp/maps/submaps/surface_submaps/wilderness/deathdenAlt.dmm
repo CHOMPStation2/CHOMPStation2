@@ -77,7 +77,6 @@
 /area/submap/DeathDen)
 "hz" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
 /obj/effect/gibspawner/human,
 /turf/simulated/floor/wood/sif,
 /area/submap/DeathDen)
@@ -95,7 +94,6 @@
 /obj/structure/table/wooden_reinforced,
 /obj/item/pizzabox/meat,
 /obj/random/junk,
-/obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/wood/sif,
 /area/submap/DeathDen)
@@ -163,14 +161,10 @@
 	pixel_x = 6;
 	pixel_y = 4
 	},
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
 /obj/effect/map_helper/no_phaseshift/area,
 /turf/simulated/floor/wood/sif,
 /area/submap/DeathDen)
 "nl" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/wood/sif/broken,
 /area/submap/DeathDen)
@@ -206,8 +200,6 @@
 /area/submap/DeathDen)
 "pE" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
 /obj/random/maintenance/engineering,
 /turf/simulated/floor/wood/sif,
 /area/submap/DeathDen)
@@ -225,15 +217,6 @@
 	outdoors = 0
 	},
 /area/template_noop)
-"rQ" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/item/reagent_containers/food/snacks/candy_corn{
-	pixel_x = 6;
-	pixel_y = 4
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/wood/sif,
-/area/submap/DeathDen)
 "si" = (
 /turf/simulated/floor/outdoors/dirt,
 /area/template_noop)
@@ -299,7 +282,6 @@
 	name = "young deathclaw"
 	},
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/outdoors/dirt{
 	outdoors = 0
 	},
@@ -325,7 +307,6 @@
 	},
 /obj/effect/floor_decal/carpet,
 /obj/effect/gibspawner/human,
-/obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/wood/sif{
 	oxygen = 0
@@ -365,8 +346,6 @@
 /area/submap/DeathDen)
 "Bx" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
 /obj/random/trash,
 /turf/simulated/floor/wood/sif/broken,
 /area/submap/DeathDen)
@@ -397,31 +376,12 @@
 "CZ" = (
 /turf/simulated/floor/tiled/freezer,
 /area/submap/DeathDen)
-"Do" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/wood/sif,
-/area/submap/DeathDen)
 "Dt" = (
 /obj/structure/grille/broken/rustic,
 /turf/simulated/floor/wood/sif{
 	oxygen = 0
 	},
 /area/submap/DeathDen)
-"Em" = (
-/mob/living/simple_mob/vore/aggressive/deathclaw{
-	health = 100;
-	maxHealth = 100;
-	melee_damage_upper = 15;
-	name = "young deathclaw"
-	},
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/outdoors/dirt{
-	outdoors = 0
-	},
-/area/template_noop)
 "EJ" = (
 /turf/simulated/floor/wood/sif{
 	oxygen = 0
@@ -436,7 +396,6 @@
 	dir = 8
 	},
 /obj/random/maintenance/engineering,
-/obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/wood/sif{
 	oxygen = 0
@@ -453,22 +412,6 @@
 	oxygen = 0
 	},
 /area/submap/DeathDen)
-"Gg" = (
-/obj/random/trash,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/wood/sif,
-/area/submap/DeathDen)
-"Go" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/item/reagent_containers/food/snacks/candy_corn{
-	pixel_x = 6;
-	pixel_y = 4
-	},
-/turf/simulated/floor/wood/sif,
-/area/submap/DeathDen)
 "Gr" = (
 /obj/item/clothing/head/psy_crown/gluttony,
 /obj/random/junk,
@@ -478,7 +421,6 @@
 /area/submap/DeathDen)
 "GT" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
 /obj/item/reagent_containers/food/snacks/candy_corn{
 	pixel_x = 6;
 	pixel_y = 4
@@ -487,7 +429,6 @@
 /area/submap/DeathDen)
 "GU" = (
 /obj/random/maintenance/cargo,
-/obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/wood/sif,
 /area/submap/DeathDen)
@@ -511,7 +452,6 @@
 "JE" = (
 /obj/random/trash,
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
 /obj/item/reagent_containers/food/snacks/candy_corn{
 	pixel_x = 6;
 	pixel_y = 4
@@ -528,8 +468,6 @@
 	pixel_y = 4
 	},
 /obj/random/trash,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/wood/sif{
 	oxygen = 0
@@ -569,14 +507,6 @@
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/submap/DeathDen)
-"Mz" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/outdoors/dirt{
-	outdoors = 0
-	},
-/area/template_noop)
 "MI" = (
 /obj/structure/windoor_assembly,
 /obj/effect/decal/cleanable/dirt,
@@ -596,23 +526,9 @@
 "Pj" = (
 /obj/structure/simple_door/sifwood,
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/plating,
 /area/submap/DeathDen)
 "Ps" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/item/reagent_containers/food/snacks/candy_corn{
-	pixel_x = 6;
-	pixel_y = 4
-	},
-/turf/simulated/floor/wood/sif,
-/area/submap/DeathDen)
-"PJ" = (
-/obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/item/reagent_containers/food/snacks/candy_corn{
 	pixel_x = 6;
@@ -670,7 +586,6 @@
 /area/submap/DeathDen)
 "RZ" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/wood/sif{
 	oxygen = 0
 	},
@@ -708,23 +623,7 @@
 	oxygen = 0
 	},
 /area/submap/DeathDen)
-"WV" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/wood/sif/broken,
-/area/submap/DeathDen)
-"Xx" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/outdoors/dirt{
-	outdoors = 0
-	},
-/area/template_noop)
 "Xy" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/item/reagent_containers/food/snacks/candy_corn{
 	pixel_x = 6;
@@ -738,13 +637,10 @@
 /area/submap/DeathDen)
 "Yr" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
 /obj/effect/map_helper/no_phaseshift,
 /turf/simulated/floor/wood/sif,
 /area/submap/DeathDen)
 "YA" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/wood/sif,
 /area/submap/DeathDen)
@@ -836,7 +732,7 @@ MV
 MV
 Ct
 KP
-Mz
+rO
 xh
 Ct
 "}
@@ -845,7 +741,7 @@ Is
 Is
 hq
 xw
-Do
+YA
 nl
 cQ
 zd
@@ -865,9 +761,9 @@ Is
 Is
 hq
 Sf
-WV
+nl
 ix
-Gg
+Cp
 Cp
 MV
 CZ
@@ -924,7 +820,7 @@ Is
 Is
 MV
 Sf
-PJ
+Ps
 JE
 ex
 mR
@@ -944,10 +840,10 @@ Is
 Is
 rn
 Yr
-Go
+Ps
 Xy
 Ps
-Gg
+Cp
 GT
 CJ
 Pj
@@ -964,12 +860,12 @@ Is
 Is
 MV
 ua
-PJ
+Ps
 pE
 hz
-rQ
+Ps
 Bx
-Do
+YA
 MV
 OB
 wa
@@ -1025,7 +921,7 @@ Is
 si
 si
 KP
-Mz
+rO
 Ct
 Ct
 Ct
@@ -1045,8 +941,8 @@ Is
 Is
 Ct
 Ct
-Xx
-Em
+rO
+xh
 Ct
 Ct
 Ct
