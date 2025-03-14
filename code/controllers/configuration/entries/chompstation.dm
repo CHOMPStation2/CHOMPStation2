@@ -67,4 +67,4 @@
 	protection = CONFIG_ENTRY_LOCKED | CONFIG_ENTRY_HIDDEN
 
 /datum/config_entry/number/job_camp_time_limit
-    default = 10 MINUTES
+	default = 10 MINUTES

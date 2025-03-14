@@ -161,11 +161,11 @@
 	digest_brute = 0
 	digest_burn = 2
 	struggle_messages_inside = list(
-    "You struggle and squirm, but the walls around you are too soft and pliable, yielding to your every movement without any resistance. Every time you try to push your way out, the walls just squeeze you tighter, reminding you that there's no escape from this warm and cozy prison.",
-    "You search for any signs of an exit, but the walls around you are too thick and plush, absorbing all of your movements without a trace. You're trapped here, at the mercy of their digestive system, slowly melting away in its warm and slimy embrace.",
-    "You press your limbs and body against the soft walls, trying to push your way out. But the walls just close in around you, enveloping you in a tight and suffocating hug. You can feel the warm and slimy digestive juices slowly dissolving your flesh, as you become one with the creature that swallowed you.",
-    "You thrash and flail, trying to break free from the soft and pliable walls that surround you. But every movement just makes the stomach walls pulsate and squeeze tighter around you, coaxing you deeper into the creature's digestive system.",
-    "You try to resist the relentless contractions of the stomach walls, but they're too warm and plush, too soft and pliable. Every movement you make just sends ripples of pleasure throughout the creature's digestive system, making it squeeze and massage you even harder.")
+	"You struggle and squirm, but the walls around you are too soft and pliable, yielding to your every movement without any resistance. Every time you try to push your way out, the walls just squeeze you tighter, reminding you that there's no escape from this warm and cozy prison.",
+	"You search for any signs of an exit, but the walls around you are too thick and plush, absorbing all of your movements without a trace. You're trapped here, at the mercy of their digestive system, slowly melting away in its warm and slimy embrace.",
+	"You press your limbs and body against the soft walls, trying to push your way out. But the walls just close in around you, enveloping you in a tight and suffocating hug. You can feel the warm and slimy digestive juices slowly dissolving your flesh, as you become one with the creature that swallowed you.",
+	"You thrash and flail, trying to break free from the soft and pliable walls that surround you. But every movement just makes the stomach walls pulsate and squeeze tighter around you, coaxing you deeper into the creature's digestive system.",
+	"You try to resist the relentless contractions of the stomach walls, but they're too warm and plush, too soft and pliable. Every movement you make just sends ripples of pleasure throughout the creature's digestive system, making it squeeze and massage you even harder.")
 	belly_fullscreen = "da_tumby"
 	vore_sound = "Stomach Move"
 

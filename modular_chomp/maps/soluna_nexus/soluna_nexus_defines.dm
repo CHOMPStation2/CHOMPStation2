@@ -201,33 +201,33 @@ but they don't actually change anything about the load order
 #define SOUTHERN_CROSS_HOLOMAP_MARGIN_Y ((HOLOMAP_ICON_SIZE - (2*SOUTHERN_CROSS_MAP_SIZE)) / 2) // 60
 
 /datum/map_z_level/soluna_nexus/station
-    flags = MAP_LEVEL_STATION|MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER|MAP_LEVEL_CONSOLES|MAP_LEVEL_VORESPAWN
-    holomap_legend_x = 220
-    holomap_legend_y = 160
+	flags = MAP_LEVEL_STATION|MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER|MAP_LEVEL_CONSOLES|MAP_LEVEL_VORESPAWN
+	holomap_legend_x = 220
+	holomap_legend_y = 160
 
 /datum/map_z_level/soluna_nexus/station/station_one
-    z = Z_LEVEL_STATION_ONE
-    name = "Deck 1"
-    base_turf = /turf/space
-    transit_chance = 15
-    holomap_offset_x = SOUTHERN_CROSS_HOLOMAP_MARGIN_X - SOUTHERN_CROSS_HOLOMAP_CENTER_GUTTER / 2
-    holomap_offset_y = SOUTHERN_CROSS_HOLOMAP_MARGIN_Y + SOUTHERN_CROSS_MAP_SIZE*0
+	z = Z_LEVEL_STATION_ONE
+	name = "Deck 1"
+	base_turf = /turf/space
+	transit_chance = 15
+	holomap_offset_x = SOUTHERN_CROSS_HOLOMAP_MARGIN_X - SOUTHERN_CROSS_HOLOMAP_CENTER_GUTTER / 2
+	holomap_offset_y = SOUTHERN_CROSS_HOLOMAP_MARGIN_Y + SOUTHERN_CROSS_MAP_SIZE*0
 
 /datum/map_z_level/soluna_nexus/station/station_two
-    z = Z_LEVEL_STATION_TWO
-    name = "Deck 2"
-    base_turf = /turf/simulated/open
-    transit_chance = 15
-    holomap_offset_x = SOUTHERN_CROSS_HOLOMAP_MARGIN_X - SOUTHERN_CROSS_HOLOMAP_CENTER_GUTTER / 2
-    holomap_offset_y = SOUTHERN_CROSS_HOLOMAP_MARGIN_Y + SOUTHERN_CROSS_MAP_SIZE*1
+	z = Z_LEVEL_STATION_TWO
+	name = "Deck 2"
+	base_turf = /turf/simulated/open
+	transit_chance = 15
+	holomap_offset_x = SOUTHERN_CROSS_HOLOMAP_MARGIN_X - SOUTHERN_CROSS_HOLOMAP_CENTER_GUTTER / 2
+	holomap_offset_y = SOUTHERN_CROSS_HOLOMAP_MARGIN_Y + SOUTHERN_CROSS_MAP_SIZE*1
 
 /datum/map_z_level/soluna_nexus/station/station_three
-    z = Z_LEVEL_STATION_THREE
-    name = "Deck 3"
-    base_turf = /turf/simulated/open
-    transit_chance = 15
-    holomap_offset_x = SOUTHERN_CROSS_HOLOMAP_MARGIN_X + SOUTHERN_CROSS_MAP_SIZE + SOUTHERN_CROSS_HOLOMAP_CENTER_GUTTER / 2
-    holomap_offset_y = SOUTHERN_CROSS_HOLOMAP_MARGIN_Y + SOUTHERN_CROSS_MAP_SIZE*1
+	z = Z_LEVEL_STATION_THREE
+	name = "Deck 3"
+	base_turf = /turf/simulated/open
+	transit_chance = 15
+	holomap_offset_x = SOUTHERN_CROSS_HOLOMAP_MARGIN_X + SOUTHERN_CROSS_MAP_SIZE + SOUTHERN_CROSS_HOLOMAP_CENTER_GUTTER / 2
+	holomap_offset_y = SOUTHERN_CROSS_HOLOMAP_MARGIN_Y + SOUTHERN_CROSS_MAP_SIZE*1
 
 /* //CHOMPedit: Disabling empty space map level as overmap generation now generates this as needed.
 /datum/map_z_level/southern_cross/empty_space

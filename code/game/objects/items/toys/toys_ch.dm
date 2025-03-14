@@ -19,10 +19,10 @@
 	toysay = "Attention! Alert level elevated to blue."
 
 /obj/item/toy/plushie/green_fox
-    name = "green fox plushie"
-    icon = 'icons/obj/toy_ch.dmi'
-    icon_state = "greenfox"
-    pokephrase = "Weh!"
+	name = "green fox plushie"
+	icon = 'icons/obj/toy_ch.dmi'
+	icon_state = "greenfox"
+	pokephrase = "Weh!"
 
 /obj/item/toy/plushie/red_dragon
 	name = "red dragon plushie"

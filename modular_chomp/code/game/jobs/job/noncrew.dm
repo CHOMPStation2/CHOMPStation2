@@ -32,8 +32,8 @@
 
 /*seems to be a kin only thing?
 /datum/job/noncrew/is_species_banned(species_name, brain_type)
-    // Any species can join as non-crew, including shadekin.
-    return FALSE
+	// Any species can join as non-crew, including shadekin.
+	return FALSE
  */
 
 /datum/job/shadekin

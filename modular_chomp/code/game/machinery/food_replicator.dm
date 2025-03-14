@@ -188,16 +188,16 @@
 		use_power = USE_POWER_IDLE
 
 /obj/machinery/food_replicator/RefreshParts()
-    var/cap_rating = 0
-    var/man_rating = 0
+	var/cap_rating = 0
+	var/man_rating = 0
 
-    for(var/obj/item/stock_parts/capacitor/C in component_parts)
-        cap_rating += C.rating
-    for(var/obj/item/stock_parts/manipulator/M in component_parts)
-        man_rating += M.rating
+	for(var/obj/item/stock_parts/capacitor/C in component_parts)
+		cap_rating += C.rating
+	for(var/obj/item/stock_parts/manipulator/M in component_parts)
+		man_rating += M.rating
 
-    efficiency = 3 / man_rating
-    speed = cap_rating / 2
+	efficiency = 3 / man_rating
+	speed = cap_rating / 2
 
 
 /obj/machinery/food_replicator/verb/eject_beaker()

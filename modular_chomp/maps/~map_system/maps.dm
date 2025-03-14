@@ -59,11 +59,11 @@ var/list/all_maps = list()
 	var/list/lateload_redgate = list() //VOREStation Add - The same thing as gateway, but safe-ish
 
 	var/list/allowed_jobs = list() //Job datums to use.
-	                               //Works a lot better so if we get to a point where three-ish maps are used
-	                               //We don't have to C&P ones that are only common between two of them
-	                               //That doesn't mean we have to include them with the rest of the jobs though, especially for map specific ones.
-	                               //Also including them lets us override already created jobs, letting us keep the datums to a minimum mostly.
-	                               //This is probably a lot longer explanation than it needs to be.
+							   	//Works a lot better so if we get to a point where three-ish maps are used
+							   	//We don't have to C&P ones that are only common between two of them
+							   	//That doesn't mean we have to include them with the rest of the jobs though, especially for map specific ones.
+							   	//Also including them lets us override already created jobs, letting us keep the datums to a minimum mostly.
+							   	//This is probably a lot longer explanation than it needs to be.
 
 	var/list/holomap_smoosh		// List of lists of zlevels to smoosh into single icons
 	var/list/holomap_offset_x = list()
@@ -84,10 +84,10 @@ var/list/all_maps = list()
 
 	var/station_name  = "BAD Station"
 	var/station_short = "Baddy"
-	var/dock_name     = "THE PirateBay"
-	var/dock_type     = "station"	//VOREStation Edit - for a list of valid types see the switch block in air_traffic.dm at line 148
-	var/boss_name     = "Captain Roger"
-	var/boss_short    = "Cap'"
+	var/dock_name	 = "THE PirateBay"
+	var/dock_type	 = "station"	//VOREStation Edit - for a list of valid types see the switch block in air_traffic.dm at line 148
+	var/boss_name	 = "Captain Roger"
+	var/boss_short	= "Cap'"
 	var/company_name  = "BadMan"
 	var/company_short = "BM"
 	var/starsys_name  = "Dull Star"
@@ -115,16 +115,16 @@ var/list/all_maps = list()
 	var/datum/spawnpoint/spawnpoint_stayed = /datum/spawnpoint/cryo 	// Used if you end the round on the station.
 	// VOREStation Edit End
 
-	var/use_overmap = 0          // If overmap should be used (including overmap space travel override)
+	var/use_overmap = 0		  // If overmap should be used (including overmap space travel override)
 	var/overmap_size = 20		 // Dimensions of overmap zlevel if overmap is used.
-	var/overmap_z = 0		     // If 0 will generate overmap zlevel on init. Otherwise will populate the zlevel provided.
+	var/overmap_z = 0			 // If 0 will generate overmap zlevel on init. Otherwise will populate the zlevel provided.
 	var/overmap_event_areas = 0  // How many event "clouds" will be generated
 
 	var/datum/skybox_settings/default_skybox // What skybox do we use if a zlevel doesn't have a custom one? Provide a type.
 
 	//CHOMPStation Edit Start TFF 24/12/19 - Chompers welcome screen message
 	var/lobby_icon = 'icons/misc/splash_screen.dmi' // The icon which contains the lobby image(s)
-	var/list/lobby_screens = list()                 // The list of lobby screen to pick() from. If left unset the first icon state is always selected.
+	var/list/lobby_screens = list()				 // The list of lobby screen to pick() from. If left unset the first icon state is always selected.
 	//CHOMPStation Edit End
 
 	var/default_law_type = /datum/ai_laws/nanotrasen // The default lawset use by synth units, if not overriden by their laws var.
@@ -278,7 +278,7 @@ var/list/all_maps = list()
 /datum/map/proc/default_internal_channels()
 	return list(
 		num2text(PUB_FREQ)   = list(),
-		num2text(AI_FREQ)    = list(access_synth),
+		num2text(AI_FREQ)	= list(access_synth),
 		num2text(ENT_FREQ)   = list(),
 		num2text(ERT_FREQ)   = list(access_cent_specops),
 		num2text(COMM_FREQ)  = list(access_heads),

@@ -448,17 +448,10 @@ ESCAPE_POD(1)
 
 // Map template for spawning the shuttle
 /datum/map_template/om_ships/hybrid
-<<<<<<< HEAD
-    name = "OM Ship - Generic Shuttle"
-    desc = "A small privately-owned vessel."
-    mappath = 'generic_shuttle.dmm'
-    annihilate = TRUE
-=======
 	name = "OM Ship - Generic Shuttle"
 	desc = "A small privately-owned vessel."
 	mappath = "maps/cynosure/generic_shuttle.dmm"
 	annihilate = TRUE
->>>>>>> c8aff28c5b (space cleanup (#17300))
 
 // The shuttle's area(s)
 /area/shuttle/generic_shuttle/eng

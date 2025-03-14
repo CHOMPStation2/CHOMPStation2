@@ -780,11 +780,11 @@
 	allowed_roles = list(JOB_EXPLORER, JOB_PATHFINDER)
 
 /datum/gear/fluff/mocha_cloak
-    path = /obj/item/clothing/accessory/poncho/cloak/fluff/mocha
-    display_name = "Elaborate Cloak"
-    description = "A cloak denoting the rank of a warden, the name \"Mocha\" is embroidered along the collar in red lettering"
-    ckeywhitelist = list("mocatheporg1")
-    character_name = list("Mocha")
+	path = /obj/item/clothing/accessory/poncho/cloak/fluff/mocha
+	display_name = "Elaborate Cloak"
+	description = "A cloak denoting the rank of a warden, the name \"Mocha\" is embroidered along the collar in red lettering"
+	ckeywhitelist = list("mocatheporg1")
+	character_name = list("Mocha")
 
 //  N CKEYS
 //NESgamer190

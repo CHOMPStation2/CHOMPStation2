@@ -26,21 +26,21 @@
 
 //Natje: Awen Henry
 /obj/item/clothing/head/fluff/wolfgirl
-    name = "Wolfgirl Hat"
-    desc = "An odd, small hat with two strings attached to it."
+	name = "Wolfgirl Hat"
+	desc = "An odd, small hat with two strings attached to it."
 
-    icon_state = "wolfgirlhat"
-    icon = 'icons/vore/custom_clothes_vr.dmi'
-    icon_override = 'icons/vore/custom_onmob_vr.dmi'
+	icon_state = "wolfgirlhat"
+	icon = 'icons/vore/custom_clothes_vr.dmi'
+	icon_override = 'icons/vore/custom_onmob_vr.dmi'
 
 //Natje: Awen Henry
 /obj/item/clothing/shoes/fluff/wolfgirl
-    name = "Red Sandals"
-    desc = "A pair of sandals that make you want to awoo!"
+	name = "Red Sandals"
+	desc = "A pair of sandals that make you want to awoo!"
 
-    icon_state = "wolfgirlsandals"
-    icon = 'icons/vore/custom_clothes_vr.dmi'
-    icon_override = 'icons/vore/custom_onmob_vr.dmi'
+	icon_state = "wolfgirlsandals"
+	icon = 'icons/vore/custom_clothes_vr.dmi'
+	icon_override = 'icons/vore/custom_onmob_vr.dmi'
 
 //Natje: Awen Henry
 /obj/item/clothing/under/fluff/wolfgirl
@@ -2417,11 +2417,11 @@ Departamental Swimsuits, for general use
 
 //Uncle_Fruit_VEVO - Bradley Khatibi
 /obj/item/clothing/shoes/fluff/airjordans
-    name = "A pair of Air Jordan 1 Mid 'Black Gym Red's"
-    desc = "Appearing in a classic Jordan Brand colorway, the Air Jordan 1 Mid 'Black Gym Red' released in May 2021. Built with leather, the shoe's upper sports a white base, contrasted by black on the overlays and highlighted by Gym Red on the padded collar, 'Wings' logo and Swoosh branding. A breathable nylon tongue and perforated toe box support the fit, while underfoot, a standard rubber cupsole with Air in the heel anchors the build."
-    icon_state = "airjordans"
-    icon = 'icons/vore/custom_clothes_vr.dmi'
-    icon_override = 'icons/vore/custom_onmob_vr.dmi'
+	name = "A pair of Air Jordan 1 Mid 'Black Gym Red's"
+	desc = "Appearing in a classic Jordan Brand colorway, the Air Jordan 1 Mid 'Black Gym Red' released in May 2021. Built with leather, the shoe's upper sports a white base, contrasted by black on the overlays and highlighted by Gym Red on the padded collar, 'Wings' logo and Swoosh branding. A breathable nylon tongue and perforated toe box support the fit, while underfoot, a standard rubber cupsole with Air in the heel anchors the build."
+	icon_state = "airjordans"
+	icon = 'icons/vore/custom_clothes_vr.dmi'
+	icon_override = 'icons/vore/custom_onmob_vr.dmi'
 
 //Pandora029:Shona Young
 /obj/item/clothing/under/fluff/foxoflightsuit
@@ -2675,16 +2675,6 @@ End CHOMP Removal*/
 //sixberry: Thistle
 
 /obj/item/clothing/head/fluff/memory_crown
-<<<<<<< HEAD
-    name = "Memory Crown"
-    desc = "A thorned crown sporting numerous amethyst inserts, all of which seem to glow faintly in the dark.  Just holding it makes you feel as though you've forgotten something unpleasant."
-    icon = 'icons/vore/custom_clothes_vr.dmi'
-    icon_state = "memorycrown"
-    icon_override = 'icons/vore/custom_clothes_vr.dmi'
-    item_state = "memorycrown_onmob"
-    slot_flags = SLOT_HEAD
-*/ //Chomp REMOVE END
-=======
 	name = "Memory Crown"
 	desc = "A thorned crown sporting numerous amethyst inserts, all of which seem to glow faintly in the dark.  Just holding it makes you feel as though you've forgotten something unpleasant."
 	icon = 'icons/vore/custom_clothes_vr.dmi'
@@ -2692,4 +2682,4 @@ End CHOMP Removal*/
 	icon_override = 'icons/vore/custom_clothes_vr.dmi'
 	item_state = "memorycrown_onmob"
 	slot_flags = SLOT_HEAD
->>>>>>> c8aff28c5b (space cleanup (#17300))
+*/ //Chomp REMOVE END

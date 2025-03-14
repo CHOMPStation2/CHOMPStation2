@@ -1,6 +1,6 @@
 //Special map objects
 /obj/effect/landmark/map_data/virgo3b_better
-    height = 7
+	height = 7
 
 /obj/turbolift_map_holder/tether
 	name = "Tether Climber"

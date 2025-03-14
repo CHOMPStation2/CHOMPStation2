@@ -14,9 +14,9 @@
 	minimal_player_age = 3
 	economic_modifier = 8
 	access = list(access_security, access_sec_doors, access_brig,
-			            access_medical, access_eva, access_heads, access_teleporter,
-			            access_maint_tunnels, access_morgue,
-			            access_crematorium, access_research, access_hop, access_RC_announce, access_keycard_auth, access_gateway, access_blueshield, access_blueshield_exclusive)
+						access_medical, access_eva, access_heads, access_teleporter,
+						access_maint_tunnels, access_morgue,
+						access_crematorium, access_research, access_hop, access_RC_announce, access_keycard_auth, access_gateway, access_blueshield, access_blueshield_exclusive)
 	minimal_access = list(access_forensics_lockers, access_sec_doors, access_medical, access_maint_tunnels, access_RC_announce, access_keycard_auth, access_heads, access_blueshield, access_blueshield_exclusive)
 
 	outfit_type = /decl/hierarchy/outfit/job/blueshield

@@ -8,7 +8,7 @@
 
 //Special map objects
 /obj/effect/landmark/map_data/borealis2
-    height = 3 //Height marker. Provides the map with knowledge of how many z levels connecting below.
+	height = 3 //Height marker. Provides the map with knowledge of how many z levels connecting below.
 
 
 /datum/turbolift
@@ -22,7 +22,7 @@
 /obj/item/blueprints
 	SPACE_OUTSIDE_TYPES = list(
 		/area/borealis2/outdoors/exterior,
-        /area/borealis2/outdoors/grounds
+		/area/borealis2/outdoors/grounds
 	)
 
 

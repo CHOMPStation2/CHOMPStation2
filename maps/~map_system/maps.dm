@@ -85,10 +85,10 @@ var/list/all_maps = list()
 
 	var/station_name  = "BAD Station"
 	var/station_short = "Baddy"
-	var/dock_name     = "THE PirateBay"
-	var/dock_type     = "station"	//VOREStation Edit - for a list of valid types see the switch block in air_traffic.dm at line 148
-	var/boss_name     = "Captain Roger"
-	var/boss_short    = "Cap'"
+	var/dock_name	 = "THE PirateBay"
+	var/dock_type	 = "station"	//VOREStation Edit - for a list of valid types see the switch block in air_traffic.dm at line 148
+	var/boss_name	 = "Captain Roger"
+	var/boss_short	= "Cap'"
 	var/company_name  = "BadMan"
 	var/company_short = "BM"
 	var/starsys_name  = "Dull Star"
@@ -116,16 +116,16 @@ var/list/all_maps = list()
 	var/datum/spawnpoint/spawnpoint_stayed = /datum/spawnpoint/cryo 	// Used if you end the round on the station.
 	// VOREStation Edit End
 
-	var/use_overmap = 0          // If overmap should be used (including overmap space travel override)
+	var/use_overmap = 0		  // If overmap should be used (including overmap space travel override)
 	var/overmap_size = 20		 // Dimensions of overmap zlevel if overmap is used.
-	var/overmap_z = 0		     // If 0 will generate overmap zlevel on init. Otherwise will populate the zlevel provided.
+	var/overmap_z = 0			 // If 0 will generate overmap zlevel on init. Otherwise will populate the zlevel provided.
 	var/overmap_event_areas = 0  // How many event "clouds" will be generated
 
 	var/datum/skybox_settings/default_skybox // What skybox do we use if a zlevel doesn't have a custom one? Provide a type.
 
 	//CHOMPStation Edit Start TFF 24/12/19 - Chompers welcome screen message
 	var/lobby_icon = 'icons/misc/splash_screen.dmi' // The icon which contains the lobby image(s)
-	var/list/lobby_screens = list()                 // The list of lobby screen to pick() from. If left unset the first icon state is always selected.
+	var/list/lobby_screens = list()				 // The list of lobby screen to pick() from. If left unset the first icon state is always selected.
 	//CHOMPStation Edit End
 
 	var/default_law_type = /datum/ai_laws/nanotrasen // The default lawset use by synth units, if not overriden by their laws var.
@@ -278,9 +278,8 @@ var/list/all_maps = list()
 // This list needs to be purged but people insist on adding more cruft to the radio.
 /datum/map/proc/default_internal_channels()
 	return list(
-<<<<<<< HEAD
 		num2text(PUB_FREQ)   = list(),
-		num2text(AI_FREQ)    = list(access_synth),
+		num2text(AI_FREQ)	= list(access_synth),
 		num2text(ENT_FREQ)   = list(),
 		num2text(ERT_FREQ)   = list(access_cent_specops),
 		num2text(COMM_FREQ)  = list(access_heads),
@@ -293,21 +292,6 @@ var/list/all_maps = list()
 		num2text(SCI_FREQ)   = list(access_tox,access_robotics,access_xenobiology),
 		num2text(SUP_FREQ)   = list(access_cargo),
 		num2text(SRV_FREQ)   = list(access_janitor, access_hydroponics),
-=======
-		num2text(PUB_FREQ)	= list(),
-		num2text(AI_FREQ)	= list(access_synth),
-		num2text(ENT_FREQ)	= list(),
-		num2text(ERT_FREQ)	= list(access_cent_specops),
-		num2text(COMM_FREQ)	= list(access_heads),
-		num2text(ENG_FREQ)	= list(access_engine_equip, access_atmospherics),
-		num2text(MED_FREQ)	= list(access_medical_equip),
-		num2text(MED_I_FREQ)= list(access_medical_equip),
-		num2text(SEC_FREQ)	= list(access_security),
-		num2text(SEC_I_FREQ)= list(access_security),
-		num2text(SCI_FREQ)	= list(access_tox,access_robotics,access_xenobiology),
-		num2text(SUP_FREQ)	= list(access_cargo),
-		num2text(SRV_FREQ)	= list(access_janitor, access_hydroponics),
->>>>>>> c8aff28c5b (space cleanup (#17300))
 	)
 
 /datum/map/proc/get_skybox_datum(z)

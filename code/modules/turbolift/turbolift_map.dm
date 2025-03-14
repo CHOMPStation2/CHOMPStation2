@@ -10,12 +10,8 @@
 	// Various turf and door types used when generating the turbolift floors.
 	var/wall_type = /turf/simulated/wall/elevator
 	var/floor_type = /turf/simulated/floor/tiled/dark
-<<<<<<< HEAD
 	var/door_type =  /obj/machinery/door/airlock/lift
 	var/firedoor_type = /obj/machinery/door/firedoor/glass //CHOMP Edit for adding a firedoor to the exterior door
-=======
-	var/door_type = /obj/machinery/door/airlock/lift
->>>>>>> c8aff28c5b (space cleanup (#17300))
 
 	var/list/areas_to_use = list()
 
@@ -151,7 +147,7 @@
 
 				// Update path appropriately if needed.
 				var/swap_to = /turf/simulated/open
-				if(cz == uz)                                                                       // Elevator.
+				if(cz == uz)																	   // Elevator.
 					if(wall_type && (tx == ux || ty == uy || tx == ex || ty == ey) && !(tx >= door_x1 && tx <= door_x2 && ty >= door_y1 && ty <= door_y2))	//VOREStation edit: Wall-less elevator
 						swap_to = wall_type
 					else
