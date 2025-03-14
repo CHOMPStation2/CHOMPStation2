@@ -19,8 +19,14 @@
 // Keep savefile compatibilty at minimum supported level
 /savefile/byond_version = MIN_COMPILER_VERSION
 
+<<<<<<< HEAD
 // So we want to have compile time guarantees these methods exist on local type
 // We use wrappers for this in case some part of the api ever changes, and to make their function more clear
+=======
+// lib call for external libraries into call_ext
+#define LIBCALL call_ext
+
+>>>>>>> 2757cefab8 (first few resolved greps (#17343))
 // For the record: GLOBAL_VERB_REF would be useless as verbs can't be global.
 
 /// Call by name proc references, checks if the proc exists on either this type or as a global proc.

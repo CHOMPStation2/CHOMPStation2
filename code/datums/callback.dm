@@ -22,20 +22,27 @@
 		global proc while in another global proc:
 			.procname
 			Example:
-				CALLBACK(GLOBAL_PROC, .some_proc_here)
+				CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(some_proc_here))
 
 		proc defined on current(src) object (when in a /proc/ and not an override) OR overridden at src or any of it's parents:
 			.procname
 			Example:
-				CALLBACK(src, .some_proc_here)
+				CALLBACK(src, PROC_REF(some_proc_here))
 
 		when the above doesn't apply:
 			PROC_REF(procname)
 			Example:
+<<<<<<< HEAD
 				CALLBACK(src, PROC_REF(some_proc_here))
 
 		proc defined on a parent of a some type:
 			Example: /some/type/PROC_REF(some_proc_here)
+=======
+				CALLBACK(src,
+
+		proc defined on a parent of a some type:
+			Example: TYPE_PROC_REF(/some/type, some_proc_here))
+>>>>>>> 2757cefab8 (first few resolved greps (#17343))
 
 		Other wise you will have to do the full typepath of the proc (/type/of/thing/proc/procname)
 */
