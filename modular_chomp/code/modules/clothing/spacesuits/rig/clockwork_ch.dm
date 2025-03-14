@@ -20,10 +20,7 @@
 	boot_type = /obj/item/clothing/shoes/magboots/rig/ch/clockwork
 	cell_type =  /obj/item/cell/clockwork
 
-	allowed = list(/obj/item/flashlight,
-	/obj/item/tank,/obj/item/suit_cooling_unit,/obj/item/storage/bag/ore,
-	/obj/item/t_scanner,/obj/item/pickaxe, /obj/item/rcd,/obj/item/storage/backpack,
-	/obj/item/bluespaceradio, /obj/item/defib_kit, /obj/item/ratvarian_spear
+	allowed = list(POCKET_GENERIC, POCKET_ALL_TANKS, POCKET_SUIT_REGULATORS, POCKET_MINING, POCKET_ENGINEERING, POCKET_HEAVYTOOLS, POCKET_BAYSUIT,  /obj/item/storage/backpack, /obj/item/ratvarian_spear
 		)
 
 	initial_modules = list(
