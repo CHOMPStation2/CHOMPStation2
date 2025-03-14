@@ -8275,9 +8275,7 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/obj/structure/extinguisher_cabinet{
-	pixel_w = 0
-	},
+/obj/structure/extinguisher_cabinet,
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/expe/hangarcontrol)
 "pN" = (
@@ -12065,9 +12063,7 @@
 	dir = 1;
 	icon_state = "techfloor_edges"
 	},
-/obj/structure/extinguisher_cabinet{
-	pixel_w = 0
-	},
+/obj/structure/extinguisher_cabinet,
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/expe/corridor4)
 "yI" = (
@@ -12086,9 +12082,7 @@
 	dir = 1;
 	icon_state = "techfloor_edges"
 	},
-/obj/structure/extinguisher_cabinet{
-	pixel_w = 0
-	},
+/obj/structure/extinguisher_cabinet,
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/expe/corridor3)
 "yJ" = (
@@ -12107,9 +12101,7 @@
 	dir = 1;
 	icon_state = "techfloor_edges"
 	},
-/obj/structure/extinguisher_cabinet{
-	pixel_w = 0
-	},
+/obj/structure/extinguisher_cabinet,
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/expe/corridor3)
 "yK" = (
@@ -12125,9 +12117,7 @@
 	dir = 1;
 	icon_state = "techfloor_edges"
 	},
-/obj/structure/extinguisher_cabinet{
-	pixel_w = 0
-	},
+/obj/structure/extinguisher_cabinet,
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/expe/corridor1)
 "yL" = (
@@ -12140,9 +12130,7 @@
 	dir = 1;
 	icon_state = "bordercolor"
 	},
-/obj/structure/extinguisher_cabinet{
-	pixel_w = 0
-	},
+/obj/structure/extinguisher_cabinet,
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/expe/expedition)
 "yM" = (
@@ -12158,9 +12146,7 @@
 	dir = 1;
 	icon_state = "techfloor_edges"
 	},
-/obj/structure/extinguisher_cabinet{
-	pixel_w = 0
-	},
+/obj/structure/extinguisher_cabinet,
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/expe/corridor2)
 "yN" = (
@@ -12176,9 +12162,7 @@
 	dir = 1;
 	icon_state = "techfloor_edges"
 	},
-/obj/structure/extinguisher_cabinet{
-	pixel_w = 0
-	},
+/obj/structure/extinguisher_cabinet,
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/expe/corridor2)
 "yP" = (
