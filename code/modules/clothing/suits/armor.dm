@@ -1,10 +1,6 @@
 /obj/item/clothing/suit/armor
 	name = DEVELOPER_WARNING_NAME
-<<<<<<< HEAD
-	allowed = list(/obj/item/gun/energy,/obj/item/reagent_containers/spray/pepper,/obj/item/gun/projectile,/obj/item/ammo_magazine,/obj/item/ammo_casing,/obj/item/melee/baton,/obj/item/handcuffs,/obj/item/flashlight/maglight,/obj/item/clothing/head/helmet,/obj/item/tank) //CHOMP Add tank
-=======
 	allowed = list(POCKET_GENERIC, POCKET_EMERGENCY, POCKET_SECURITY)
->>>>>>> b36e238cd1 ( Cleaned up every clothing item to use defined pocket lists #35  (#17235))
 	body_parts_covered = CHEST
 	item_flags = THICKMATERIAL
 
