@@ -1,0 +1,6 @@
+author: "Ace"
+delete-after: True
+changes:
+  - rscadd: "Added cave lamias"
+  - rscadd: "Added cave spiders to replace space bees in the mines"
+  - balance: "Changed the list of what mobs appear in caves"
