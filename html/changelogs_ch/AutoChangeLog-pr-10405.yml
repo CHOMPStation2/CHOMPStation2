@@ -1,0 +1,5 @@
+author: "Ace"
+delete-after: True
+changes:
+  - balance: "Altered Thor animal spawn weights."
+  - maptweak: "Various small changes to Thor"
