@@ -544,8 +544,13 @@
 	heat_level_2 = 1000
 	heat_level_3 = 1150
 
+<<<<<<< HEAD
 	flags =  NO_SCAN
 	spawn_flags = SPECIES_IS_RESTRICTED //SPECIES_CAN_JOIN | SPECIES_IS_WHITELISTED | SPECIES_WHITELIST_SELECTABLE CHOMPedit: disabled maybe forever
+=======
+	flags =  NO_DNA | NO_SLEEVE
+	spawn_flags = SPECIES_CAN_JOIN | SPECIES_IS_WHITELISTED | SPECIES_WHITELIST_SELECTABLE
+>>>>>>> f48f89f1db (Split NO_SCAN into two flags (#17226))
 
 	reagent_tag = IS_SHADEKIN		// for shadekin-unqiue chem interactions
 
