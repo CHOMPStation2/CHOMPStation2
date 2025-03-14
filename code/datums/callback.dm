@@ -32,17 +32,10 @@
 		when the above doesn't apply:
 			PROC_REF(procname)
 			Example:
-<<<<<<< HEAD
-				CALLBACK(src, PROC_REF(some_proc_here))
-
-		proc defined on a parent of a some type:
-			Example: /some/type/PROC_REF(some_proc_here)
-=======
 				CALLBACK(src,
 
 		proc defined on a parent of a some type:
 			Example: TYPE_PROC_REF(/some/type, some_proc_here))
->>>>>>> 2757cefab8 (first few resolved greps (#17343))
 
 		Other wise you will have to do the full typepath of the proc (/type/of/thing/proc/procname)
 */
