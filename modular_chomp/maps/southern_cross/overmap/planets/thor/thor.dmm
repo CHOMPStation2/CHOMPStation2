@@ -78,21 +78,11 @@
 /obj/structure/railing,
 /turf/simulated/floor/outdoors/desert_planet/gravel/thor,
 /area/surface/outside/thor/outpost)
-"ak" = (
-/obj/effect/decal/remains,
-/turf/simulated/mineral/floor/cave/thor,
-/area/surface/outside/thor/jungle)
 "al" = (
 /obj/item/picnic_blankets_carried,
 /obj/item/melee/umbrella/random,
 /turf/simulated/floor/outdoors/desert_planet/gravel/thor,
 /area/surface/outside/thor/outpost)
-"am" = (
-/mob/living/simple_mob/vore/wolftaur/dark{
-	faction = "hostile"
-	},
-/turf/simulated/floor/tiled/asteroid_steel,
-/area/surface/thor/caves)
 "an" = (
 /mob/living/simple_mob/vore/catgirl,
 /turf/simulated/floor/wood/alt,
@@ -100,6 +90,7 @@
 "ao" = (
 /obj/structure/bonfire,
 /turf/simulated/floor/outdoors/grass/forest/thor{
+	animals = "thor_safe";
 	tree_chance = 0;
 	grass_chance = 2
 	},
@@ -126,15 +117,19 @@
 	},
 /turf/simulated/floor/wood,
 /area/surface/thor/bar)
-"au" = (
-/obj/structure/flora/ausbushes/palebush,
-/turf/simulated/floor/outdoors/grass/forest/thor{
-	tree_chance = 0;
-	grass_chance = 2
+"at" = (
+/obj/structure/signpostwood{
+	desc = "DANGER! Hungry wildlife beyond this point! Please turn around!"
 	},
-/area/surface/outside/thor/outpost)
+/turf/simulated/floor/beach/sand/desert/outdoors/thor,
+/area/surface/outside/thor/beach)
 "av" = (
-/mob/living/simple_mob/vore/wolf/direwolf/andrews,
+/mob/living/simple_mob/vore/wolf/direwolf/andrews{
+	faction = "hostile";
+	vore_bump_chance = 75;
+	vore_bump_emote = "greedily snaps at";
+	faction_bump_vore = 1
+	},
 /turf/simulated/mineral/floor/cave/thor,
 /area/surface/outside/thor/jungle)
 "aw" = (
@@ -246,12 +241,20 @@
 "aG" = (
 /obj/structure/flora/ausbushes/ppflowers,
 /obj/item/bluespace_harpoon/wand,
-/turf/simulated/floor/outdoors/grass/heavy/thor,
+/turf/simulated/floor/outdoors/grass/heavy/thor{
+	animals = "thor_safe";
+	tree_chance = 0;
+	grass_chance = 5
+	},
 /area/surface/outside/thor/jungle)
 "aH" = (
 /mob/living/simple_mob/vore/horse/kelpie,
 /obj/structure/flora/ausbushes/ppflowers,
-/turf/simulated/floor/outdoors/grass/heavy/thor,
+/turf/simulated/floor/outdoors/grass/heavy/thor{
+	animals = "thor_safe";
+	tree_chance = 0;
+	grass_chance = 5
+	},
 /area/surface/outside/thor/jungle)
 "aI" = (
 /turf/simulated/wall/wood,
@@ -274,6 +277,13 @@
 	},
 /turf/simulated/floor/tiled/asteroid_steel/outdoors/thor,
 /area/surface/outside/thor/outpost)
+"aL" = (
+/turf/simulated/floor/outdoors/grass/forest/thor{
+	animals = "thor_safe";
+	tree_chance = 0;
+	grass_chance = 2
+	},
+/area/surface/outside/thor/jungle)
 "aM" = (
 /obj/structure/toilet,
 /turf/simulated/floor/wood{
@@ -344,15 +354,9 @@
 /obj/item/pickaxe,
 /turf/simulated/mineral/floor/cave/thor,
 /area/surface/thor/caves)
-"aW" = (
-/obj/structure/boulder,
-/turf/simulated/mineral/alt,
-/area/surface/thor/caves)
-"aX" = (
-/mob/living/simple_mob/vore/raptor,
-/turf/simulated/mineral/floor/cave/thor,
-/area/surface/thor/caves)
 "aY" = (
+/obj/item/contraband,
+/obj/item/contraband,
 /obj/item/contraband,
 /turf/simulated/floor/tiled/thor/planetuse,
 /area/surface/outside/thor/jungle)
@@ -364,14 +368,22 @@
 	},
 /area/surface/outside/thor/jungle)
 "ba" = (
-/mob/living/simple_mob/vore/retaliate/corrupthound/janihound/medihound,
+/mob/living/simple_mob/vore/retaliate/corrupthound/janihound/medihound{
+	ai_holder_type = /datum/ai_holder/simple_mob/melee/evasive/guard_limit
+	},
 /turf/simulated/floor/plating/external/thor{
 	icon_state = "dmg2"
 	},
 /area/surface/outside/thor/jungle)
 "bb" = (
 /mob/living/simple_mob/vore/pitcher_plant,
+/turf/simulated/floor/outdoors/grass/forest/thor{
+	animals = "thor_safe";
+	tree_chance = 0;
+	grass_chance = 2
+	},
 /turf/simulated/floor/outdoors/grass/heavy/thor{
+	animals = "thor_safe";
 	tree_chance = 0;
 	grass_chance = 5
 	},
@@ -391,13 +403,6 @@
 /mob/living/simple_mob/vore/pitcher_plant,
 /turf/simulated/floor/outdoors/dirt/thor/planetuse,
 /area/surface/outside/thor/jungle/deep)
-"bg" = (
-/mob/living/simple_mob/vore/pitcher_plant,
-/turf/simulated/floor/outdoors/grass/forest/thor{
-	tree_chance = 0;
-	grass_chance = 2
-	},
-/area/surface/outside/thor/jungle)
 "bh" = (
 /turf/simulated/floor/wood{
 	temperature = 313;
@@ -424,6 +429,7 @@
 /mob/living/simple_mob/vore/pitcher_plant,
 /obj/structure/flora/ausbushes/grassybush,
 /turf/simulated/floor/outdoors/grass/forest/thor{
+	animals = "thor_safe";
 	tree_chance = 0;
 	grass_chance = 2
 	},
@@ -432,6 +438,7 @@
 /mob/living/simple_mob/vore/pitcher_plant,
 /obj/structure/flora/ausbushes/fernybush,
 /turf/simulated/floor/outdoors/grass/forest/thor{
+	animals = "thor_safe";
 	tree_chance = 0;
 	grass_chance = 2
 	},
@@ -452,12 +459,16 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/closet/crate/mimic/cointoss,
 /obj/item/gun/projectile/shotgun/compact,
+/obj/item/ammo_magazine/ammo_box/b12g/pellet,
+/obj/item/ammo_magazine/ammo_box/b12g,
 /turf/simulated/floor/plating/thor/planetuse{
 	outdoors = 0
 	},
 /area/surface/thor/commstower)
 "bp" = (
-/mob/living/simple_mob/vore/stalker,
+/mob/living/simple_mob/vore/stalker{
+	ai_holder_type = /datum/ai_holder/simple_mob/melee/evasive/guard_limit
+	},
 /turf/simulated/mineral/floor/cave/thor,
 /area/surface/thor/caves)
 "bq" = (
@@ -470,6 +481,7 @@
 	pixel_y = 3
 	},
 /turf/simulated/floor/outdoors/grass/forest/thor{
+	animals = "thor_safe";
 	tree_chance = 0;
 	grass_chance = 2
 	},
@@ -502,13 +514,20 @@
 /area/surface/outside/thor/jungle/deep)
 "by" = (
 /turf/simulated/floor/outdoors/grass/forest/thor{
+	animals = "thor_safe";
 	tree_chance = 0;
 	grass_chance = 2
 	},
 /area/surface/outside/thor/landingpad)
 "bz" = (
 /obj/structure/flora/ausbushes/grassybush,
+/turf/simulated/floor/outdoors/grass/forest/thor{
+	animals = "thor_safe";
+	tree_chance = 0;
+	grass_chance = 2
+	},
 /turf/simulated/floor/outdoors/grass/heavy/thor{
+	animals = "thor_safe";
 	tree_chance = 0;
 	grass_chance = 5
 	},
@@ -535,14 +554,24 @@
 /area/shuttle/junker)
 "bD" = (
 /obj/structure/flora/ausbushes/sparsegrass,
+/turf/simulated/floor/outdoors/grass/forest/thor{
+	animals = "thor_safe";
+	tree_chance = 0;
+	grass_chance = 2
+	},
 /turf/simulated/floor/outdoors/grass/heavy/thor{
+	animals = "thor_safe";
 	tree_chance = 0;
 	grass_chance = 5
 	},
 /area/surface/outside/thor/jungle/deep)
 "bE" = (
 /obj/structure/flora/ausbushes/leafybush,
-/turf/simulated/floor/outdoors/grass/forest/thor,
+/turf/simulated/floor/outdoors/grass/forest/thor{
+	animals = "thor_safe";
+	tree_chance = 0;
+	grass_chance = 2
+	},
 /area/surface/outside/thor/jungle)
 "bF" = (
 /obj/effect/floor_decal/borderfloorblack{
@@ -557,7 +586,13 @@
 /area/shuttle/junker)
 "bH" = (
 /obj/structure/flora/ausbushes/stalkybush,
+/turf/simulated/floor/outdoors/grass/forest/thor{
+	animals = "thor_safe";
+	tree_chance = 0;
+	grass_chance = 2
+	},
 /turf/simulated/floor/outdoors/grass/heavy/thor{
+	animals = "thor_safe";
 	tree_chance = 0;
 	grass_chance = 5
 	},
@@ -583,6 +618,73 @@
 	},
 /turf/simulated/floor/plating,
 /area/shuttle/junker)
+"bL" = (
+/obj/item/bone/arm,
+/turf/simulated/mineral/floor/cave/thor,
+/area/surface/outside/thor/jungle)
+"bM" = (
+/obj/item/bone,
+/turf/simulated/mineral/floor/cave/thor,
+/area/surface/outside/thor/jungle)
+"bN" = (
+/obj/item/clothing/suit/armor/pcarrier/merc{
+	name = "chewed up plate carrier";
+	desc = "A lightweight black plate carrier vest. It can be equipped with armor plates, but provides no protection of its own. This one has teeth marks all over it, but should still work fine."
+	},
+/turf/simulated/mineral/floor/cave/thor,
+/area/surface/outside/thor/jungle)
+"bO" = (
+/obj/item/clothing/head/helmet/merc,
+/obj/item/bone/skull,
+/turf/simulated/mineral/floor/cave/thor,
+/area/surface/outside/thor/jungle)
+"bP" = (
+/turf/simulated/floor/outdoors/grass/heavy/thor{
+	animals = "thor_safe";
+	tree_chance = 0;
+	grass_chance = 5
+	},
+/area/surface/outside/thor/jungle)
+"bQ" = (
+/obj/structure/flora/ausbushes/ppflowers,
+/turf/simulated/floor/outdoors/grass/heavy/thor{
+	animals = "thor_safe";
+	tree_chance = 0;
+	grass_chance = 5
+	},
+/area/surface/outside/thor/jungle)
+"bR" = (
+/obj/structure/flora/ausbushes/ywflowers,
+/turf/simulated/floor/outdoors/grass/heavy/thor{
+	animals = "thor_safe";
+	tree_chance = 0;
+	grass_chance = 5
+	},
+/area/surface/outside/thor/jungle)
+"bS" = (
+/obj/structure/signpostwood{
+	desc = "Welcome to the Lazuli Lagoon Jungle Resort! Please do not feed the local wildlife, and remain on resort grounds at all times!"
+	},
+/turf/simulated/floor/outdoors/grass/forest/thor{
+	animals = "thor_safe";
+	tree_chance = 0;
+	grass_chance = 2
+	},
+/area/surface/outside/thor/landingpad)
+"bT" = (
+/obj/structure/prop/desert_planet64x64/palmuria,
+/turf/simulated/floor/outdoors/grass/forest/thor{
+	animals = "thor_safe";
+	tree_chance = 0;
+	grass_chance = 2
+	},
+/area/surface/outside/thor/jungle)
+"bU" = (
+/obj/item/paper{
+	info = "Nobody here but us chickens."
+	},
+/turf/simulated/mineral/floor/cave/thor,
+/area/surface/thor/caves)
 "bV" = (
 /obj/structure/flora/tree/jungle_small,
 /turf/simulated/floor/outdoors/grass/forest/thor,
@@ -604,6 +706,11 @@
 	},
 /turf/simulated/floor/tiled/asteroid_steel/outdoors/thor,
 /area/surface/outside/thor/pool)
+"bY" = (
+/obj/item/clothing/suit/chickensuit,
+/obj/item/clothing/head/chicken,
+/turf/simulated/mineral/floor/cave/thor,
+/area/surface/thor/caves)
 "bZ" = (
 /obj/structure/table/steel,
 /obj/item/material/knife/machete/hatchet,
@@ -614,6 +721,57 @@
 /obj/item/shovel,
 /turf/simulated/floor/tiled/asteroid_steel/outdoors/thor,
 /area/surface/outside/thor/landingpad)
+"ca" = (
+/mob/living/simple_mob/animal/passive/chicken,
+/turf/simulated/mineral/floor/cave/thor,
+/area/surface/thor/caves)
+"cb" = (
+/obj/item/gun/energy/mouseray/chicken,
+/turf/simulated/mineral/floor/cave/thor,
+/area/surface/thor/caves)
+"cc" = (
+/mob/living/simple_mob/vore/pitcher_plant,
+/turf/simulated/floor/outdoors/grass/forest/thor{
+	animals = "thor_safe";
+	tree_chance = 0;
+	grass_chance = 2
+	},
+/area/surface/outside/thor/jungle)
+"cd" = (
+/turf/simulated/floor/outdoors/grass/heavy/thor{
+	animals = "thor_safe";
+	tree_chance = 0;
+	grass_chance = 5
+	},
+/area/surface/outside/thor/jungle/deep)
+"ce" = (
+/mob/living/simple_mob/vore/pitcher_plant,
+/turf/simulated/floor/outdoors/grass/heavy/thor{
+	animals = "thor_safe";
+	tree_chance = 0;
+	grass_chance = 5
+	},
+/area/surface/outside/thor/jungle/deep)
+"cf" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/item/tank/phoron/pressurized,
+/turf/simulated/floor/plating/thor/planetuse{
+	outdoors = 0
+	},
+/area/surface/thor/commstower)
+"cg" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/frame{
+	anchored = 1
+	},
+/turf/simulated/floor/plating/thor/planetuse{
+	outdoors = 0
+	},
+/area/surface/thor/commstower)
+"ch" = (
+/obj/item/tank/jetpack/void,
+/turf/simulated/mineral/floor/cave/thor,
+/area/surface/thor/caves)
 "ci" = (
 /obj/structure/table/steel_reinforced,
 /obj/random/powercell/device,
@@ -717,6 +875,7 @@
 "dz" = (
 /obj/structure/flora/ausbushes/sunnybush,
 /turf/simulated/floor/outdoors/grass/forest/thor{
+	animals = "thor_safe";
 	tree_chance = 0;
 	grass_chance = 2
 	},
@@ -899,6 +1058,7 @@
 "fb" = (
 /obj/structure/flora/ausbushes/fernybush,
 /turf/simulated/floor/outdoors/grass/forest/thor{
+	animals = "thor_safe";
 	tree_chance = 0;
 	grass_chance = 2
 	},
@@ -956,7 +1116,13 @@
 /turf/simulated/floor/plating,
 /area/surface/thor/engi)
 "gk" = (
+/turf/simulated/floor/outdoors/grass/forest/thor{
+	animals = "thor_safe";
+	tree_chance = 0;
+	grass_chance = 2
+	},
 /turf/simulated/floor/outdoors/grass/heavy/thor{
+	animals = "thor_safe";
 	tree_chance = 0;
 	grass_chance = 5
 	},
@@ -994,6 +1160,7 @@
 "gH" = (
 /obj/structure/flora/tree/desert_planet/mpalmtree1,
 /turf/simulated/floor/outdoors/grass/forest/thor{
+	animals = "thor_safe";
 	tree_chance = 0;
 	grass_chance = 2
 	},
@@ -1155,7 +1322,13 @@
 "ih" = (
 /mob/living/simple_mob/vore/pitcher_plant,
 /obj/structure/flora/ausbushes/grassybush,
+/turf/simulated/floor/outdoors/grass/forest/thor{
+	animals = "thor_safe";
+	tree_chance = 0;
+	grass_chance = 2
+	},
 /turf/simulated/floor/outdoors/grass/heavy/thor{
+	animals = "thor_safe";
 	tree_chance = 0;
 	grass_chance = 5
 	},
@@ -1163,6 +1336,7 @@
 "ij" = (
 /obj/structure/table/bench/wooden,
 /turf/simulated/floor/outdoors/grass/forest/thor{
+	animals = "thor_safe";
 	tree_chance = 0;
 	grass_chance = 2
 	},
@@ -1217,6 +1391,7 @@
 /area/surface/outside/thor/jungle)
 "iU" = (
 /turf/simulated/floor/outdoors/grass/forest/thor{
+	animals = "thor_safe";
 	tree_chance = 0;
 	grass_chance = 2
 	},
@@ -1257,10 +1432,6 @@
 	},
 /turf/simulated/floor/wood,
 /area/surface/thor/bar)
-"jk" = (
-/obj/structure/flora/ausbushes/sunnybush,
-/turf/simulated/floor/outdoors/grass/forest/thor,
-/area/surface/outside/thor/outpost)
 "jt" = (
 /obj/structure/bed/double/padded,
 /obj/item/bedsheet/browndouble,
@@ -1300,13 +1471,6 @@
 /obj/machinery/computer/ship/sensors,
 /turf/simulated/floor/plating,
 /area/shuttle/junker)
-"jF" = (
-/obj/structure/flora/ausbushes/lavendergrass,
-/turf/simulated/floor/outdoors/grass/forest/thor{
-	tree_chance = 0;
-	grass_chance = 2
-	},
-/area/surface/outside/thor/outpost)
 "jI" = (
 /turf/unsimulated/wall/planetary/normal/thor,
 /area/surface/outside/thor/ocean)
@@ -1449,6 +1613,7 @@
 	},
 /obj/structure/flora/ausbushes/fullgrass,
 /turf/simulated/floor/outdoors/grass/forest/thor{
+	animals = "thor_safe";
 	tree_chance = 0;
 	grass_chance = 2
 	},
@@ -1533,17 +1698,11 @@
 /obj/item/material/fishing_rod/modern/strong,
 /obj/item/material/fishing_rod/modern/strong,
 /turf/simulated/floor/outdoors/grass/forest/thor{
+	animals = "thor_safe";
 	tree_chance = 0;
 	grass_chance = 2
 	},
 /area/surface/outside/thor/beach)
-"my" = (
-/obj/structure/flora/ausbushes/sunnybush,
-/turf/simulated/floor/outdoors/grass/forest/thor{
-	tree_chance = 0;
-	grass_chance = 2
-	},
-/area/surface/outside/thor/outpost)
 "mA" = (
 /turf/simulated/wall/wood,
 /area/surface/thor/med)
@@ -1709,10 +1868,6 @@
 /mob/living/simple_mob/vore/jelly,
 /turf/simulated/mineral/floor/cave/thor,
 /area/surface/thor/caves)
-"nN" = (
-/obj/structure/flora/ausbushes/lavendergrass,
-/turf/simulated/floor/outdoors/grass/forest/thor,
-/area/surface/outside/thor/outpost)
 "nP" = (
 /obj/structure/flora/tree/jungle,
 /obj/structure/flora/ausbushes/leafybush,
@@ -1760,12 +1915,6 @@
 /obj/item/melee/chainofcommand/curator_whip,
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/surface/thor/caves)
-"oq" = (
-/turf/simulated/floor/outdoors/grass/forest/thor{
-	tree_chance = 0;
-	grass_chance = 2
-	},
-/area/surface/outside/thor/jungle)
 "ou" = (
 /obj/machinery/vending/loadout,
 /turf/simulated/floor/tiled/asteroid_steel/outdoors/thor{
@@ -1816,6 +1965,7 @@
 	icon_state = "1-4"
 	},
 /turf/simulated/floor/outdoors/grass/forest/thor{
+	animals = "thor_safe";
 	tree_chance = 0;
 	grass_chance = 2
 	},
@@ -1881,6 +2031,7 @@
 "ph" = (
 /obj/structure/prop/desert_planet64x64/palmuria1,
 /turf/simulated/floor/outdoors/grass/forest/thor{
+	animals = "thor_safe";
 	tree_chance = 0;
 	grass_chance = 2
 	},
@@ -1989,6 +2140,7 @@
 "pN" = (
 /obj/structure/flora/ausbushes/grassybush,
 /turf/simulated/floor/outdoors/grass/forest/thor{
+	animals = "thor_safe";
 	tree_chance = 0;
 	grass_chance = 2
 	},
@@ -2027,9 +2179,6 @@
 /area/surface/thor/caves)
 "ql" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/frame{
-	anchored = 1
-	},
 /obj/item/stock_parts/manipulator,
 /turf/simulated/floor/plating/thor/planetuse{
 	outdoors = 0
@@ -2057,6 +2206,7 @@
 "qI" = (
 /obj/structure/prop/desert_planet64x64/palmuria,
 /turf/simulated/floor/outdoors/grass/forest/thor{
+	animals = "thor_safe";
 	tree_chance = 0;
 	grass_chance = 2
 	},
@@ -2262,13 +2412,6 @@
 /obj/item/bone/ribs,
 /turf/simulated/floor/outdoors/desert_planet/sand/thor,
 /area/surface/outside/thor/jungle)
-"sF" = (
-/obj/structure/flora/ausbushes/brflowers,
-/turf/simulated/floor/outdoors/grass/forest/thor{
-	tree_chance = 0;
-	grass_chance = 2
-	},
-/area/surface/outside/thor/outpost)
 "sH" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -2290,6 +2433,7 @@
 /area/surface/outside/thor/pool)
 "sX" = (
 /turf/simulated/floor/outdoors/grass/forest/thor{
+	animals = "thor_safe";
 	tree_chance = 0;
 	grass_chance = 2
 	},
@@ -2335,6 +2479,7 @@
 "tq" = (
 /obj/structure/flora/tree/desert_planet/spalmtree3,
 /turf/simulated/floor/outdoors/grass/forest/thor{
+	animals = "thor_safe";
 	tree_chance = 0;
 	grass_chance = 2
 	},
@@ -2458,6 +2603,7 @@
 "vr" = (
 /obj/structure/flora/ausbushes/reedbush,
 /turf/simulated/floor/outdoors/grass/forest/thor{
+	animals = "thor_safe";
 	tree_chance = 0;
 	grass_chance = 2
 	},
@@ -2497,6 +2643,8 @@
 /area/surface/outside/thor/beach)
 "wc" = (
 /mob/living/simple_mob/vore/otie/friendly/chubby{
+	vore_bump_chance = 60;
+	vore_bump_emote = "maws widely at";
 	faction_bump_vore = 1
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -2505,6 +2653,7 @@
 "wd" = (
 /obj/structure/flora/tree/desert_planet/mpalmtree1,
 /turf/simulated/floor/outdoors/grass/forest/thor{
+	animals = "thor_safe";
 	tree_chance = 0;
 	grass_chance = 2
 	},
@@ -2561,7 +2710,13 @@
 	base_turf = /turf/simulated/floor/outdoors/grass/heavy/thor;
 	base_area = /area/surface/outside/thor/jungle/deep
 	},
+/turf/simulated/floor/outdoors/grass/forest/thor{
+	animals = "thor_safe";
+	tree_chance = 0;
+	grass_chance = 2
+	},
 /turf/simulated/floor/outdoors/grass/heavy/thor{
+	animals = "thor_safe";
 	tree_chance = 0;
 	grass_chance = 5
 	},
@@ -2603,6 +2758,7 @@
 /turf/simulated/floor/tiled/asteroid_steel/outdoors/thor,
 /area/surface/outside/thor/landingpad)
 "wY" = (
+/mob/living/simple_mob/vore/wolftaur/blackclothed,
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/surface/thor/janitor)
 "xb" = (
@@ -2696,7 +2852,13 @@
 "yu" = (
 /mob/living/simple_mob/vore/pitcher_plant,
 /obj/structure/flora/ausbushes/stalkybush,
+/turf/simulated/floor/outdoors/grass/forest/thor{
+	animals = "thor_safe";
+	tree_chance = 0;
+	grass_chance = 2
+	},
 /turf/simulated/floor/outdoors/grass/heavy/thor{
+	animals = "thor_safe";
 	tree_chance = 0;
 	grass_chance = 5
 	},
@@ -2820,13 +2982,6 @@
 	outdoors = 0
 	},
 /area/surface/thor/commstower)
-"zz" = (
-/obj/structure/flora/tree/jungle_small,
-/turf/simulated/floor/outdoors/grass/forest/thor{
-	tree_chance = 0;
-	grass_chance = 2
-	},
-/area/surface/outside/thor/outpost)
 "zL" = (
 /obj/structure/closet/secure_closet/personal,
 /obj/machinery/light/small{
@@ -2901,7 +3056,11 @@
 /area/surface/outside/thor/pool)
 "AF" = (
 /obj/item/melee/umbrella/random,
-/turf/simulated/floor/outdoors/grass/heavy/thor,
+/turf/simulated/floor/outdoors/grass/heavy/thor{
+	animals = "thor_safe";
+	tree_chance = 0;
+	grass_chance = 5
+	},
 /area/surface/outside/thor/jungle)
 "AH" = (
 /obj/structure/bed/chair/sofa/left/brown{
@@ -2941,6 +3100,7 @@
 "Bp" = (
 /obj/structure/flora/ausbushes/fullgrass,
 /turf/simulated/floor/outdoors/grass/forest/thor{
+	animals = "thor_safe";
 	tree_chance = 0;
 	grass_chance = 2
 	},
@@ -3020,6 +3180,7 @@
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/outdoors/grass/forest/thor{
+	animals = "thor_safe";
 	tree_chance = 0;
 	grass_chance = 2
 	},
@@ -3058,7 +3219,13 @@
 /area/surface/thor/abandonedhouse)
 "Co" = (
 /obj/structure/flora/tree/desert_planet/spalmtree1,
+/turf/simulated/floor/outdoors/grass/forest/thor{
+	animals = "thor_safe";
+	tree_chance = 0;
+	grass_chance = 2
+	},
 /turf/simulated/floor/outdoors/grass/heavy/thor{
+	animals = "thor_safe";
 	tree_chance = 0;
 	grass_chance = 5
 	},
@@ -3123,6 +3290,7 @@
 /area/surface/outside/thor/jungle)
 "CW" = (
 /turf/simulated/floor/outdoors/grass/forest/thor{
+	animals = "thor_safe";
 	tree_chance = 0;
 	grass_chance = 2
 	},
@@ -3175,6 +3343,7 @@
 "Dj" = (
 /obj/structure/flora/tree/jungle,
 /turf/simulated/floor/outdoors/grass/forest/thor{
+	animals = "thor_safe";
 	tree_chance = 0;
 	grass_chance = 2
 	},
@@ -3320,6 +3489,7 @@
 "Ev" = (
 /obj/structure/flora/tree/jungle_small,
 /turf/simulated/floor/outdoors/grass/forest/thor{
+	animals = "thor_safe";
 	tree_chance = 0;
 	grass_chance = 2
 	},
@@ -3344,7 +3514,13 @@
 /area/shuttle/junker)
 "EH" = (
 /obj/structure/table/bench/wooden,
+/turf/simulated/floor/outdoors/grass/forest/thor{
+	animals = "thor_safe";
+	tree_chance = 0;
+	grass_chance = 2
+	},
 /turf/simulated/floor/outdoors/grass/heavy/thor{
+	animals = "thor_safe";
 	tree_chance = 0;
 	grass_chance = 5
 	},
@@ -3412,6 +3588,7 @@
 /turf/simulated/floor/water/beach,
 /area/surface/outside/thor/jungle)
 "FU" = (
+/mob/living/simple_mob/vore/wolftaur/redclothed,
 /obj/structure/mirror{
 	dir = 4;
 	pixel_x = -27
@@ -3422,7 +3599,7 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/obj/structure/closet/crate/mimic/airlock/cointoss,
+/obj/machinery/door/airlock,
 /turf/simulated/floor/plating/thor/planetuse{
 	outdoors = 0
 	},
@@ -3631,7 +3808,13 @@
 /area/surface/outside/thor/ocean)
 "Il" = (
 /obj/structure/flora/ausbushes/genericbush,
+/turf/simulated/floor/outdoors/grass/forest/thor{
+	animals = "thor_safe";
+	tree_chance = 0;
+	grass_chance = 2
+	},
 /turf/simulated/floor/outdoors/grass/heavy/thor{
+	animals = "thor_safe";
 	tree_chance = 0;
 	grass_chance = 5
 	},
@@ -3678,7 +3861,13 @@
 "II" = (
 /mob/living/simple_mob/vore/pitcher_plant,
 /obj/structure/flora/ausbushes/sparsegrass,
+/turf/simulated/floor/outdoors/grass/forest/thor{
+	animals = "thor_safe";
+	tree_chance = 0;
+	grass_chance = 2
+	},
 /turf/simulated/floor/outdoors/grass/heavy/thor{
+	animals = "thor_safe";
 	tree_chance = 0;
 	grass_chance = 5
 	},
@@ -3810,7 +3999,13 @@
 	},
 /area/surface/thor/commstower)
 "JJ" = (
+/turf/simulated/floor/outdoors/grass/forest/thor{
+	animals = "thor_safe";
+	tree_chance = 0;
+	grass_chance = 2
+	},
 /turf/simulated/floor/outdoors/grass/heavy/thor{
+	animals = "thor_safe";
 	tree_chance = 0;
 	grass_chance = 5
 	},
@@ -3823,7 +4018,13 @@
 /obj/item/material/fishing_rod/modern/strong,
 /obj/item/material/fishing_rod/modern/strong,
 /obj/item/material/fishing_rod/modern/strong,
+/turf/simulated/floor/outdoors/grass/forest/thor{
+	animals = "thor_safe";
+	tree_chance = 0;
+	grass_chance = 2
+	},
 /turf/simulated/floor/outdoors/grass/heavy/thor{
+	animals = "thor_safe";
 	tree_chance = 0;
 	grass_chance = 5
 	},
@@ -3878,6 +4079,7 @@
 "Ko" = (
 /obj/structure/flora/bush,
 /turf/simulated/floor/outdoors/grass/forest/thor{
+	animals = "thor_safe";
 	tree_chance = 0;
 	grass_chance = 2
 	},
@@ -3916,7 +4118,13 @@
 /turf/simulated/floor/outdoors/grass/heavy/thor,
 /area/surface/outside/thor/jungle/deep)
 "KU" = (
+/turf/simulated/floor/outdoors/grass/forest/thor{
+	animals = "thor_safe";
+	tree_chance = 0;
+	grass_chance = 2
+	},
 /turf/simulated/floor/outdoors/grass/heavy/thor{
+	animals = "thor_safe";
 	tree_chance = 0;
 	grass_chance = 5
 	},
@@ -3942,10 +4150,6 @@
 	},
 /turf/simulated/floor/wood,
 /area/surface/thor/abandonedhouse)
-"Lj" = (
-/obj/structure/flora/ausbushes/palebush,
-/turf/simulated/floor/outdoors/grass/forest/thor,
-/area/surface/outside/thor/outpost)
 "Ll" = (
 /turf/simulated/floor/lino{
 	temperature = 313;
@@ -4020,7 +4224,11 @@
 /area/surface/thor/caves)
 "MJ" = (
 /obj/item/material/sword,
-/turf/simulated/floor/outdoors/grass/heavy/thor,
+/turf/simulated/floor/outdoors/grass/heavy/thor{
+	animals = "thor_safe";
+	tree_chance = 0;
+	grass_chance = 5
+	},
 /area/surface/outside/thor/jungle)
 "MR" = (
 /obj/structure/cliff/automatic{
@@ -4050,6 +4258,7 @@
 "Nb" = (
 /obj/structure/sink/puddle,
 /turf/simulated/floor/outdoors/grass/forest/thor{
+	animals = "thor_safe";
 	tree_chance = 0;
 	grass_chance = 2
 	},
@@ -4272,6 +4481,7 @@
 "Pu" = (
 /obj/structure/flora/tree/desert_planet/palmtree,
 /turf/simulated/floor/outdoors/grass/forest/thor{
+	animals = "thor_safe";
 	tree_chance = 0;
 	grass_chance = 2
 	},
@@ -4283,6 +4493,7 @@
 /area/surface/thor/abandonedhouse)
 "PA" = (
 /turf/simulated/floor/outdoors/grass/forest/thor{
+	animals = "thor_safe";
 	tree_chance = 0;
 	grass_chance = 2
 	},
@@ -4409,7 +4620,9 @@
 /turf/simulated/floor/plating,
 /area/surface/thor/engi)
 "Qz" = (
-/obj/effect/decal/mecha_wreckage/shuttlecraft,
+/obj/effect/decal/mecha_wreckage/shuttlecraft{
+	anchored = 1
+	},
 /turf/simulated/floor/outdoors/rocks/thor/planetuse,
 /area/surface/outside/thor/jungle/deep)
 "QH" = (
@@ -4431,17 +4644,13 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/surface/thor/kitchen)
-"QK" = (
-/obj/structure/flora/ausbushes/sunnybush,
-/obj/structure/flora/ausbushes/lavendergrass,
-/turf/simulated/floor/outdoors/grass/forest/thor{
-	tree_chance = 0;
-	grass_chance = 2
-	},
-/area/surface/outside/thor/outpost)
 "QM" = (
 /obj/structure/flora/ausbushes/brflowers,
-/turf/simulated/floor/outdoors/grass/heavy/thor,
+/turf/simulated/floor/outdoors/grass/heavy/thor{
+	animals = "thor_safe";
+	tree_chance = 0;
+	grass_chance = 5
+	},
 /area/surface/outside/thor/jungle)
 "QP" = (
 /obj/structure/railing{
@@ -4566,7 +4775,13 @@
 /area/surface/outside/thor/outpost)
 "RG" = (
 /obj/structure/bonfire,
+/turf/simulated/floor/outdoors/grass/forest/thor{
+	animals = "thor_safe";
+	tree_chance = 0;
+	grass_chance = 2
+	},
 /turf/simulated/floor/outdoors/grass/heavy/thor{
+	animals = "thor_safe";
 	tree_chance = 0;
 	grass_chance = 5
 	},
@@ -4579,10 +4794,6 @@
 /obj/random/medical/lite,
 /turf/simulated/floor/tiled/old_tile/white,
 /area/surface/thor/med)
-"RU" = (
-/obj/structure/flora/ausbushes/brflowers,
-/turf/simulated/floor/outdoors/grass/forest/thor,
-/area/surface/outside/thor/outpost)
 "RX" = (
 /obj/structure/boulder,
 /turf/simulated/mineral/floor/cave/thor,
@@ -4680,6 +4891,7 @@
 /obj/item/stock_parts/subspace/sub_filter,
 /obj/structure/flora/ausbushes/fullgrass,
 /turf/simulated/floor/outdoors/grass/forest/thor{
+	animals = "thor_safe";
 	tree_chance = 0;
 	grass_chance = 2
 	},
@@ -4709,6 +4921,7 @@
 "TV" = (
 /obj/structure/flora/tree/desert_planet/spalmtree1,
 /turf/simulated/floor/outdoors/grass/forest/thor{
+	animals = "thor_safe";
 	tree_chance = 0;
 	grass_chance = 2
 	},
@@ -4738,6 +4951,7 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/outdoors/grass/forest/thor{
+	animals = "thor_safe";
 	tree_chance = 0;
 	grass_chance = 2
 	},
@@ -4745,6 +4959,7 @@
 "Uk" = (
 /obj/machinery/portable_atmospherics/hydroponics/soil,
 /turf/simulated/floor/outdoors/grass/forest/thor{
+	animals = "thor_safe";
 	tree_chance = 0;
 	grass_chance = 2
 	},
@@ -4752,6 +4967,7 @@
 "Uq" = (
 /obj/structure/flora/tree/desert_planet/spalmtree3,
 /turf/simulated/floor/outdoors/grass/forest/thor{
+	animals = "thor_safe";
 	tree_chance = 0;
 	grass_chance = 2
 	},
@@ -4775,6 +4991,7 @@
 "Uu" = (
 /obj/structure/flora/tree/desert_planet/spalmtree4,
 /turf/simulated/floor/outdoors/grass/forest/thor{
+	animals = "thor_safe";
 	tree_chance = 0;
 	grass_chance = 2
 	},
@@ -4818,7 +5035,13 @@
 	base_turf = /turf/simulated/floor/outdoors/grass/heavy/thor;
 	base_area = /area/surface/outside/thor/jungle/deep
 	},
+/turf/simulated/floor/outdoors/grass/forest/thor{
+	animals = "thor_safe";
+	tree_chance = 0;
+	grass_chance = 2
+	},
 /turf/simulated/floor/outdoors/grass/heavy/thor{
+	animals = "thor_safe";
 	tree_chance = 0;
 	grass_chance = 5
 	},
@@ -5285,6 +5508,7 @@
 	id_tag = "spacebus_jungle"
 	},
 /turf/simulated/floor/outdoors/grass/forest/thor{
+	animals = "thor_safe";
 	tree_chance = 0;
 	grass_chance = 2
 	},
@@ -10567,12 +10791,12 @@ eY
 fo
 fo
 fo
-fo
-fo
-fo
-fo
-fo
-fo
+aL
+aL
+aL
+aL
+aL
+aL
 fo
 fo
 fo
@@ -10823,14 +11047,14 @@ fo
 fo
 bc
 bc
-fo
-fo
-fo
+aL
+aL
+aL
 bc
 bc
 bc
-fo
-fo
+aL
+aL
 fo
 fo
 fo
@@ -11082,15 +11306,15 @@ fo
 bc
 bc
 aZ
-fo
+aL
 EB
 bc
 bc
 bc
 EB
-fo
-fo
-fo
+aL
+aL
+aL
 fo
 fo
 bV
@@ -11338,7 +11562,7 @@ fo
 fo
 bc
 bc
-fo
+aL
 aZ
 aZ
 aZ
@@ -11346,9 +11570,9 @@ aZ
 aZ
 Fu
 bc
-fo
-fo
-bc
+aL
+aL
+aL
 fo
 fo
 gD
@@ -11596,7 +11820,7 @@ fo
 bc
 bc
 bc
-YT
+cc
 qR
 aZ
 dZ
@@ -11606,8 +11830,8 @@ qR
 bc
 bc
 bc
-fo
-fo
+aL
+aL
 gD
 gD
 fo
@@ -11853,7 +12077,7 @@ fo
 fo
 bc
 bc
-fo
+aL
 aZ
 aZ
 XY
@@ -11864,9 +12088,9 @@ aZ
 bc
 bc
 bc
-fo
-fo
-fo
+aL
+aL
+aL
 fo
 eY
 Xr
@@ -12111,7 +12335,7 @@ fo
 fo
 fo
 bc
-fo
+aL
 aZ
 XY
 XY
@@ -12123,8 +12347,8 @@ bc
 aZ
 bc
 bc
-fo
-fo
+aL
+aL
 fo
 fo
 fo
@@ -12369,7 +12593,7 @@ fo
 fo
 fo
 bc
-fo
+aL
 aZ
 aZ
 XY
@@ -12382,7 +12606,7 @@ aZ
 bc
 bc
 bc
-fo
+aL
 fo
 fo
 fo
@@ -12626,8 +12850,8 @@ fo
 fo
 fo
 bc
-fo
-fo
+aL
+aL
 aZ
 aZ
 XY
@@ -12639,8 +12863,8 @@ bc
 aZ
 bc
 bc
-fo
-fo
+aL
+aL
 fo
 fo
 fo
@@ -12760,7 +12984,7 @@ iq
 iq
 iq
 iq
-iq
+aa
 iq
 iq
 iq
@@ -12884,7 +13108,7 @@ fo
 fo
 fo
 fo
-fo
+aL
 aZ
 aZ
 aZ
@@ -12897,8 +13121,8 @@ bc
 bc
 bc
 fo
-fo
-fo
+aL
+aL
 fo
 fo
 fo
@@ -13142,9 +13366,9 @@ fo
 fo
 fo
 fo
-fo
-fo
-YT
+aL
+aL
+cc
 qR
 aZ
 bE
@@ -13154,8 +13378,8 @@ bc
 aZ
 bc
 EB
-fo
-fo
+aL
+aL
 fo
 fo
 fo
@@ -13401,10 +13625,10 @@ fo
 fo
 fo
 bc
-fo
-fo
-fo
-YT
+aL
+aL
+aL
+cc
 aZ
 bc
 bc
@@ -13412,8 +13636,8 @@ bc
 bc
 bc
 bc
-fo
-fo
+aL
+aL
 fo
 fo
 fo
@@ -13453,18 +13677,18 @@ fo
 fo
 fo
 fo
-oq
-oq
 fo
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
+fo
+fo
+fo
+fo
+fo
+fo
+fo
+fo
+fo
+fo
+fo
 fo
 fo
 fo
@@ -13590,7 +13814,7 @@ Rg
 Rg
 Oo
 fY
-ZS
+fY
 Rs
 Rg
 fY
@@ -13661,17 +13885,17 @@ fo
 fo
 fo
 fo
-fo
+aL
 bc
 bc
 aZ
-fo
+aL
 aZ
-fo
+aL
 bc
 bc
-fo
-fo
+aL
+aL
 fo
 fo
 fo
@@ -13710,19 +13934,19 @@ fo
 fo
 fo
 fo
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
+fo
+fo
+fo
+fo
+fo
+fo
+fo
+fo
+fo
+fo
+fo
+fo
+fo
 fo
 fo
 fo
@@ -13823,7 +14047,7 @@ fY
 fY
 fY
 fY
-ZS
+fY
 De
 Oo
 fY
@@ -13919,17 +14143,17 @@ fo
 fo
 fo
 fo
-fo
-fo
-fo
-fo
-fo
-fo
-fo
-fo
-fo
-fo
-fo
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
 fo
 fo
 fo
@@ -13966,23 +14190,23 @@ fo
 fo
 fo
 fo
-oq
-oq
-oq
 fo
 fo
-oq
-oq
-oq
-oq
-oq
-oq
 fo
-oq
-oq
-oq
-oq
-oq
+fo
+fo
+fo
+fo
+fo
+fo
+fo
+fo
+fo
+fo
+fo
+fo
+fo
+fo
 fo
 fo
 fo
@@ -14179,14 +14403,14 @@ fo
 fo
 fo
 fo
-fo
-fo
+aL
+aL
 fo
 bc
-fo
-fo
-fo
-fo
+aL
+aL
+aL
+aL
 fo
 fo
 fo
@@ -14224,7 +14448,6 @@ fo
 fo
 fo
 fo
-oq
 fo
 fo
 fo
@@ -14236,11 +14459,12 @@ fo
 fo
 fo
 fo
-oq
-oq
-oq
-oq
-oq
+fo
+fo
+fo
+fo
+fo
+fo
 fo
 fo
 fo
@@ -14482,7 +14706,6 @@ fo
 fo
 fo
 fo
-oq
 fo
 fo
 fo
@@ -14494,11 +14717,12 @@ fo
 fo
 fo
 fo
-oq
-oq
-oq
-oq
-oq
+fo
+fo
+fo
+fo
+fo
+fo
 fo
 fo
 fo
@@ -14740,9 +14964,6 @@ fo
 fo
 fo
 fo
-oq
-oq
-oq
 fo
 fo
 fo
@@ -14752,11 +14973,14 @@ fo
 fo
 fo
 fo
-oq
-oq
-oq
-oq
-oq
+fo
+fo
+fo
+fo
+fo
+fo
+fo
+fo
 fo
 fo
 fo
@@ -14998,23 +15222,23 @@ fo
 fo
 fo
 fo
-oq
-oq
-oq
 fo
 fo
 fo
 fo
 fo
 fo
-oq
-oq
 fo
-oq
-oq
-oq
-oq
-oq
+fo
+fo
+fo
+fo
+fo
+fo
+fo
+fo
+fo
+fo
 fo
 fo
 fo
@@ -15256,23 +15480,23 @@ fo
 fo
 fo
 fo
-oq
-oq
-oq
 fo
 fo
 fo
 fo
 fo
 fo
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
+fo
+fo
+fo
+fo
+fo
+fo
+fo
+fo
+fo
+fo
+fo
 fo
 fo
 fo
@@ -15514,23 +15738,23 @@ fo
 fo
 fo
 fo
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
 fo
-oq
-oq
-oq
-oq
-oq
-oq
-oq
+fo
+fo
+aL
+aL
+aL
+aL
+aL
+aL
+fo
+fo
+fo
+fo
+fo
+fo
+fo
+fo
 fo
 fo
 fo
@@ -15772,23 +15996,23 @@ fo
 fo
 fo
 fo
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
+fo
+fo
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
 fo
 fo
 fo
-oq
-oq
-oq
-oq
-oq
+fo
+fo
+fo
 fo
 fo
 fo
@@ -16030,23 +16254,23 @@ fo
 fo
 fo
 fo
-oq
-oq
-oq
-oq
-oq
+fo
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
 fo
 fo
 fo
 fo
 fo
-fo
-fo
-oq
-oq
-oq
-oq
-oq
 fo
 fo
 fo
@@ -16288,23 +16512,23 @@ fo
 fo
 fo
 fo
-oq
-oq
-oq
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
 fo
 fo
 fo
 fo
-fo
-fo
-fo
-fo
-fo
-oq
-oq
-oq
-oq
-oq
 fo
 fo
 fo
@@ -16546,21 +16770,21 @@ fo
 fo
 fo
 fo
-oq
-oq
-oq
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
 fo
-fo
-fo
-fo
-fo
-fo
-fo
-fo
-fo
-oq
-oq
-oq
 fo
 fo
 fo
@@ -16804,21 +17028,21 @@ fo
 fo
 fo
 fo
-oq
-oq
-oq
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
 fo
-fo
-fo
-fo
-oq
-oq
-fo
-fo
-fo
-oq
-oq
-oq
 fo
 fo
 fo
@@ -17062,21 +17286,21 @@ fo
 fo
 fo
 fo
-oq
-oq
-oq
-fo
-fo
-fo
-fo
-oq
-oq
-fo
-fo
-fo
-oq
-oq
-oq
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
 fo
 fo
 fo
@@ -17320,21 +17544,21 @@ fo
 fo
 fo
 fo
-oq
-oq
-oq
-fo
-fo
-fo
-fo
-oq
-oq
-oq
-fo
-fo
-oq
-oq
-oq
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
 fo
 fo
 fo
@@ -17578,21 +17802,21 @@ fo
 fo
 fo
 fo
-oq
-oq
-oq
-fo
-fo
-fo
-fo
-fo
-fo
-oq
-oq
-oq
-oq
-oq
-oq
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
 fo
 fo
 fo
@@ -17836,21 +18060,21 @@ fo
 fo
 fo
 fo
-oq
-oq
-oq
-fo
-fo
-oq
-oq
-fo
-fo
-oq
-oq
-oq
-oq
-oq
-oq
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
 fo
 fo
 fo
@@ -18094,21 +18318,21 @@ fo
 fo
 fo
 fo
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-fo
-fo
-oq
-oq
-oq
-oq
-oq
-oq
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
 fo
 fo
 fo
@@ -18352,21 +18576,21 @@ fo
 fo
 fo
 fo
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-fo
-fo
-oq
-oq
-oq
-oq
-oq
-oq
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
 fo
 fo
 fo
@@ -18610,21 +18834,21 @@ fo
 fo
 fo
 fo
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-fo
-fo
-oq
-oq
-oq
-oq
-oq
-oq
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
 fo
 fo
 fo
@@ -18868,26 +19092,26 @@ fo
 fo
 fo
 fo
-oq
-oq
-oq
-oq
-oq
-oq
-oq
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
 fo
-fo
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
 fo
 fo
 fo
@@ -19126,26 +19350,26 @@ fo
 fo
 fo
 fo
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-fo
-fo
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
 fo
 fo
 fo
@@ -19385,25 +19609,25 @@ fo
 fo
 fo
 fo
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
 fo
 fo
 fo
@@ -19643,25 +19867,25 @@ fo
 fo
 fo
 fo
-oq
-oq
-oq
+aL
+aL
+aL
 kR
-oq
+aL
 kR
-oq
+aL
 kR
-oq
+aL
 kR
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
 fo
 fo
 fo
@@ -19901,25 +20125,25 @@ gD
 fo
 fo
 fo
-oq
-oq
-oq
+aL
+aL
+aL
 nx
-oq
+aL
 nx
-oq
+aL
 nx
-oq
+aL
 nx
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
 fo
 fo
 fo
@@ -20159,25 +20383,25 @@ aR
 fo
 fo
 fo
-oq
-oq
-oq
+aL
+aL
+aL
 nx
-oq
+aL
 nx
-oq
+aL
 nx
-oq
+aL
 nx
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
 fo
 fo
 fo
@@ -20417,9 +20641,9 @@ Xr
 Xr
 eY
 fo
-oq
-oq
-oq
+aL
+aL
+aL
 mJ
 Ty
 mb
@@ -20427,15 +20651,15 @@ DL
 mb
 Ty
 ZF
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
 fo
 fo
 fo
@@ -20675,25 +20899,25 @@ fo
 fo
 fo
 fo
-oq
-oq
-oq
+aL
+aL
+aL
 nx
-oq
+aL
 nx
-oq
+aL
 nx
-oq
+aL
 nx
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
 fo
 fo
 fo
@@ -20933,25 +21157,25 @@ fo
 bV
 fo
 fo
-oq
-oq
-oq
+aL
+aL
+aL
 nx
-oq
+aL
 nx
-oq
+aL
 nx
-oq
+aL
 nx
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
 fo
 fo
 fo
@@ -21191,25 +21415,25 @@ fo
 fo
 fo
 fo
-oq
-oq
-oq
+aL
+aL
+aL
 nx
-oq
+aL
 nx
-oq
+aL
 nx
-oq
+aL
 nx
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
 fo
 fo
 fo
@@ -21449,9 +21673,9 @@ gD
 fo
 fo
 fo
-oq
-oq
-oq
+aL
+aL
+aL
 cl
 QZ
 DM
@@ -21459,15 +21683,15 @@ tl
 EW
 QZ
 NT
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
 fo
 fo
 fo
@@ -21707,25 +21931,25 @@ eY
 fo
 fo
 fo
-oq
-oq
-oq
-oq
-oq
-oq
+aL
+aL
+aL
+aL
+aL
+aL
 qW
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
 fo
 fo
 fo
@@ -21965,12 +22189,12 @@ fo
 fo
 fo
 fo
-oq
-oq
-oq
-oq
-oq
-oq
+aL
+aL
+aL
+aL
+aL
+aL
 cl
 QZ
 QZ
@@ -21979,11 +22203,11 @@ QZ
 QZ
 QZ
 uj
-oq
-oq
-oq
-oq
-oq
+aL
+aL
+aL
+aL
+aL
 fo
 fo
 fo
@@ -22223,25 +22447,25 @@ fo
 fo
 eY
 fo
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
 qW
-oq
-oq
-oq
-oq
-oq
+aL
+aL
+aL
+aL
+aL
 fo
 fo
 fo
@@ -22480,26 +22704,26 @@ fo
 fo
 fo
 fo
-fo
-fo
-fo
-fo
-fo
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
 qW
-oq
-oq
-oq
-oq
-oq
+aL
+aL
+aL
+aL
+aL
 fo
 fo
 fo
@@ -22738,26 +22962,26 @@ fo
 fo
 fo
 fo
-fo
-fo
-fo
-fo
-fo
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
 qW
-oq
-oq
-oq
-oq
-oq
+aL
+aL
+aL
+aL
+aL
 fo
 fo
 fo
@@ -22995,27 +23219,27 @@ fo
 fo
 fo
 fo
-fo
-fo
-fo
-fo
-fo
-fo
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
 qW
-oq
-oq
-oq
-oq
-oq
+aL
+aL
+aL
+aL
+aL
 fo
 fo
 fo
@@ -23253,27 +23477,27 @@ fo
 fo
 fo
 fo
-fo
-fo
-fo
-fo
-fo
-fo
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
 qW
-oq
-oq
-oq
-oq
-oq
+aL
+aL
+aL
+aL
+aL
 fo
 fo
 fo
@@ -23509,29 +23733,29 @@ fo
 fo
 fo
 fo
-fo
-fo
-fo
-fo
-fo
-fo
-fo
-fo
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
 qW
-oq
-oq
-oq
-oq
-oq
+aL
+aL
+aL
+aL
+aL
 fo
 fo
 fo
@@ -23767,29 +23991,29 @@ fo
 fo
 fo
 fo
-fo
-fo
-fo
-fo
-fo
-fo
-fo
-fo
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
 qW
-oq
-oq
-oq
-oq
-oq
+aL
+aL
+aL
+aL
+aL
 fo
 fo
 fo
@@ -24023,31 +24247,31 @@ fo
 fo
 fo
 fo
-fo
-fo
-fo
-fo
-fo
-fo
-fo
-fo
-fo
-fo
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
 qW
-oq
-oq
-oq
-oq
-oq
+aL
+aL
+aL
+aL
+aL
 fo
 fo
 fo
@@ -24274,38 +24498,38 @@ eY
 fo
 fo
 fo
+aL
+aL
+aL
 fo
-fo
-fo
-fo
-fo
-fo
-fo
-fo
-fo
-fo
-fo
-fo
-fo
-fo
-fo
-fo
-fo
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
 qW
-oq
-oq
-oq
-oq
-oq
+aL
+aL
+aL
+aL
+aL
 fo
 fo
 fo
@@ -24530,25 +24754,25 @@ XT
 XT
 XT
 XT
-XT
-XT
-XT
-XT
-XT
-XT
-XT
-XT
-XT
-XT
-XT
-XT
-XT
-XT
-XT
-XT
-XT
-XT
-XT
+PA
+PA
+PA
+PA
+PA
+PA
+PA
+PA
+PA
+PA
+PA
+PA
+PA
+PA
+PA
+PA
+PA
+PA
+PA
 PA
 PA
 PA
@@ -24787,12 +25011,12 @@ XT
 XT
 XT
 XT
-XT
-XT
-XT
-XT
-XT
-XT
+PA
+PA
+PA
+PA
+PA
+PA
 PA
 PA
 PA
@@ -25040,15 +25264,15 @@ fo
 fo
 fo
 fo
+XT
+XT
+XT
 PA
-XT
-XT
 PA
-XT
-XT
-XT
-XT
-XT
+PA
+PA
+PA
+PA
 PA
 PA
 PA
@@ -25300,17 +25524,17 @@ fo
 fo
 XT
 XT
-XT
-XT
-XT
-XT
-XT
-XT
 PA
 PA
 PA
 PA
-XT
+PA
+PA
+PA
+PA
+PA
+PA
+PA
 PA
 PA
 PA
@@ -25558,17 +25782,17 @@ fo
 fo
 XT
 XT
-XT
-XT
-XT
-XT
-XT
-XT
-XT
-XT
-XT
-XT
-XT
+PA
+PA
+PA
+PA
+PA
+PA
+PA
+PA
+PA
+PA
+PA
 PA
 PA
 PA
@@ -25815,12 +26039,12 @@ fo
 fo
 fo
 XT
-XT
-XT
-XT
-XT
-XT
-XT
+PA
+PA
+PA
+PA
+PA
+PA
 PA
 PA
 PA
@@ -26073,11 +26297,11 @@ fo
 fo
 fo
 XT
-XT
-XT
-XT
-XT
-XT
+PA
+PA
+PA
+PA
+PA
 PA
 PA
 PA
@@ -26330,11 +26554,11 @@ fo
 fo
 fo
 fo
-XT
-XT
-XT
-XT
-XT
+PA
+PA
+PA
+PA
+PA
 PA
 PA
 PA
@@ -26588,10 +26812,10 @@ fo
 fo
 fo
 fo
-XT
-XT
-XT
-XT
+PA
+PA
+PA
+PA
 PA
 PA
 PA
@@ -26845,10 +27069,10 @@ fo
 fo
 fo
 fo
-fo
-XT
-XT
-XT
+aL
+PA
+PA
+PA
 PA
 PA
 PA
@@ -27103,10 +27327,10 @@ fo
 fo
 fo
 fo
-fo
-XT
-XT
-XT
+aL
+PA
+PA
+PA
 PA
 PA
 PA
@@ -27361,8 +27585,8 @@ fo
 fo
 fo
 fo
-fo
-XT
+aL
+PA
 PA
 PA
 PA
@@ -27619,7 +27843,7 @@ fo
 fo
 fo
 fo
-fo
+aL
 PA
 PA
 PA
@@ -27877,8 +28101,8 @@ fo
 fo
 fo
 fo
-fo
-XT
+aL
+PA
 PA
 PA
 PA
@@ -27904,7 +28128,7 @@ FC
 FC
 bF
 hz
-by
+bS
 by
 PA
 PA
@@ -28135,7 +28359,7 @@ fo
 fo
 fo
 fo
-fo
+aL
 PA
 PA
 PA
@@ -31245,17 +31469,17 @@ PA
 PA
 PA
 PA
-XT
-XT
-XT
-XT
-XT
-XT
-XT
-XT
-XT
-XT
-XT
+PA
+PA
+PA
+PA
+PA
+PA
+PA
+PA
+PA
+PA
+PA
 PA
 PA
 PA
@@ -31503,17 +31727,17 @@ PA
 PA
 PA
 PA
-XT
-XT
-XT
-XT
-XT
-XT
-XT
-XT
-XT
-XT
-XT
+PA
+PA
+PA
+PA
+PA
+PA
+PA
+PA
+PA
+PA
+PA
 PA
 PA
 PA
@@ -31761,17 +31985,17 @@ PA
 PA
 PA
 PA
-XT
-XT
-XT
-XT
-XT
-XT
-XT
-XT
-XT
-XT
-XT
+PA
+PA
+PA
+PA
+PA
+PA
+PA
+PA
+PA
+PA
+PA
 PA
 PA
 PA
@@ -32019,17 +32243,17 @@ PA
 PA
 PA
 PA
-XT
-XT
-XT
-XT
-XT
-XT
-XT
-XT
-XT
-XT
-XT
+PA
+PA
+PA
+PA
+PA
+PA
+PA
+PA
+PA
+PA
+PA
 PA
 PA
 PA
@@ -32277,17 +32501,17 @@ PA
 PA
 PA
 PA
-XT
-XT
-XT
-XT
-XT
-XT
-XT
-XT
-XT
-XT
-XT
+PA
+PA
+PA
+PA
+PA
+PA
+PA
+PA
+PA
+PA
+PA
 PA
 PA
 PA
@@ -32535,17 +32759,17 @@ PA
 PA
 PA
 PA
-XT
-XT
-XT
-XT
-XT
-XT
-XT
-XT
-XT
-XT
-XT
+PA
+PA
+PA
+PA
+PA
+PA
+PA
+PA
+PA
+PA
+PA
 PA
 PA
 PA
@@ -32793,17 +33017,17 @@ PA
 PA
 PA
 PA
-XT
-XT
-XT
-XT
-XT
-XT
-XT
-XT
-XT
-XT
-XT
+PA
+PA
+PA
+PA
+PA
+PA
+PA
+PA
+PA
+PA
+PA
 PA
 PA
 PA
@@ -33051,17 +33275,17 @@ XT
 XT
 XT
 PA
-XT
-XT
-XT
-XT
-XT
-XT
-XT
-XT
-XT
-XT
-XT
+PA
+PA
+PA
+PA
+PA
+PA
+PA
+PA
+PA
+PA
+PA
 PA
 PA
 PA
@@ -33310,14 +33534,14 @@ XT
 XT
 XT
 PA
-XT
-XT
-XT
-XT
-XT
-XT
-XT
-XT
+PA
+PA
+PA
+PA
+PA
+PA
+PA
+PA
 PA
 PA
 PA
@@ -33554,28 +33778,28 @@ fo
 fo
 fo
 fo
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
 PA
 PA
 PA
-XT
-XT
-XT
-XT
-XT
-XT
-XT
-XT
-XT
-XT
-XT
-XT
-XT
-XT
-XT
-XT
-XT
-XT
-XT
+PA
+PA
+PA
+PA
 PA
 PA
 PA
@@ -33812,28 +34036,28 @@ fo
 fo
 fo
 fo
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
 PA
 PA
 PA
 PA
-XT
-XT
-XT
-XT
-XT
-XT
-XT
-XT
-XT
-XT
-XT
-XT
-XT
-XT
-XT
-XT
-XT
-XT
+PA
+PA
+PA
 PA
 PA
 PA
@@ -34070,28 +34294,28 @@ fo
 fo
 fo
 fo
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
 PA
 PA
 PA
 PA
 PA
 PA
-XT
-XT
-XT
-XT
-XT
-XT
-XT
-XT
-XT
-XT
-XT
-XT
-XT
-XT
-XT
-XT
 PA
 PA
 PA
@@ -34328,28 +34552,28 @@ fo
 fo
 fo
 fo
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
 PA
 PA
 PA
 PA
 PA
-PA
-PA
-PA
-XT
-XT
-XT
-XT
-XT
-XT
-XT
-XT
-XT
-XT
-XT
-XT
-XT
-XT
 PA
 PA
 PA
@@ -34586,28 +34810,28 @@ fo
 fo
 fo
 fo
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
 PA
-XT
-XT
-XT
-XT
-XT
 PA
 PA
-XT
-XT
-XT
-XT
-XT
-XT
-XT
-XT
-XT
-XT
-XT
-XT
-XT
-XT
+PA
 PA
 PA
 PA
@@ -34844,7 +35068,19 @@ fo
 fo
 fo
 fo
-PA
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
 XT
 XT
 XT
@@ -34853,19 +35089,7 @@ XT
 PA
 PA
 PA
-XT
-XT
-XT
-XT
-XT
-XT
-XT
-XT
-XT
-XT
-XT
-XT
-XT
+PA
 PA
 PA
 PA
@@ -35102,27 +35326,27 @@ fo
 fo
 fo
 fo
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
 PA
-XT
-XT
 PA
 PA
-PA
-PA
-XT
-XT
-XT
-XT
-XT
-XT
-XT
-XT
-XT
-XT
-XT
-XT
-XT
-XT
 PA
 PA
 PA
@@ -35360,13 +35584,6 @@ fo
 fo
 fo
 fo
-PA
-XT
-XT
-PA
-PA
-PA
-PA
 XT
 XT
 XT
@@ -35376,8 +35593,15 @@ XT
 XT
 XT
 XT
-PA
-PA
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
 PA
 PA
 PA
@@ -35618,13 +35842,6 @@ fo
 fo
 fo
 fo
-au
-PA
-PA
-PA
-PA
-PA
-PA
 XT
 XT
 XT
@@ -35634,8 +35851,15 @@ XT
 XT
 XT
 XT
-PA
-PA
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
 PA
 PA
 PA
@@ -35876,13 +36100,13 @@ fo
 fo
 fo
 fo
-PA
 XT
-PA
-my
-PA
-jF
-PA
+XT
+XT
+XT
+XT
+XT
+XT
 XT
 XT
 XT
@@ -36134,13 +36358,13 @@ fo
 fo
 fo
 fo
-PA
 XT
-PA
-jF
-PA
-au
-PA
+XT
+XT
+XT
+XT
+XT
+XT
 XT
 XT
 XT
@@ -36392,20 +36616,20 @@ fo
 fo
 fo
 fo
-PA
-XT
-zz
-PA
-my
-sF
-sF
-jk
 XT
 XT
 XT
 XT
-PA
-PA
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
 XT
 XT
 XT
@@ -36649,21 +36873,21 @@ fo
 fo
 fo
 fo
-gD
-PA
-RU
-PA
-jF
-PA
-PA
-PA
+fo
 XT
 XT
 XT
 XT
 XT
-PA
-PA
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
 XT
 XT
 XT
@@ -36906,22 +37130,22 @@ fo
 fo
 fo
 fo
-eY
 fo
-au
-jk
-PA
-jF
-PA
-PA
-zz
+fo
 XT
 XT
 XT
 XT
 XT
-PA
-PA
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
 XT
 XT
 XT
@@ -37166,21 +37390,21 @@ fo
 fo
 fo
 fo
-PA
-RU
-PA
-PA
-sF
-PA
-PA
 XT
 XT
 XT
 XT
 XT
-PA
-PA
-PA
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
 XT
 XT
 XT
@@ -37423,22 +37647,22 @@ fo
 fo
 fo
 fo
-bV
-PA
-PA
-PA
-zz
-au
-jF
-PA
-PA
-PA
+fo
 XT
 XT
-PA
-PA
-PA
-PA
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
 XT
 XT
 XT
@@ -37681,31 +37905,31 @@ fo
 fo
 fo
 fo
-gD
-QK
+fo
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
 PA
-nN
-PA
-PA
-my
-PA
-PA
-PA
-XT
-XT
-XT
-XT
-XT
-PA
-PA
-XT
-XT
-XT
-XT
-XT
-XT
-XT
-XT
 PA
 PA
 PA
@@ -37938,32 +38162,32 @@ fo
 fo
 fo
 fo
-gD
-gD
+fo
+fo
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
 PA
-PA
-Lj
-sF
-sF
-PA
-PA
-PA
-PA
-XT
-XT
-XT
-XT
-XT
-PA
-PA
-PA
-XT
-XT
-XT
-XT
-XT
-XT
-XT
 PA
 PA
 PA
@@ -38198,30 +38422,30 @@ fo
 fo
 fo
 fo
-my
-sF
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
 XT
 PA
-au
-PA
-PA
-my
-XT
-XT
-XT
-XT
-XT
-XT
-PA
-PA
-PA
-XT
-XT
-XT
-XT
-XT
-XT
-XT
 PA
 PA
 PA
@@ -38456,30 +38680,30 @@ fo
 fo
 fo
 fo
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
 PA
-XT
-jk
-XT
-XT
-PA
-PA
-PA
-XT
-XT
-XT
-XT
-XT
-XT
-PA
-PA
-PA
-PA
-PA
-XT
-XT
-XT
-XT
-XT
 PA
 PA
 PA
@@ -38714,32 +38938,32 @@ fo
 fo
 fo
 fo
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
 PA
-XT
-XT
-XT
-XT
-PA
-XT
-XT
-XT
-XT
-XT
-XT
-XT
-XT
 PA
 PA
-PA
-PA
-PA
-XT
-XT
-XT
-XT
-XT
-XT
-XT
 PA
 PA
 PA
@@ -38973,31 +39197,31 @@ fo
 fo
 fo
 XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
 PA
-XT
-XT
-XT
-XT
-XT
-XT
-XT
-XT
-XT
 PA
 PA
 PA
-PA
-PA
-PA
-PA
-PA
-PA
-XT
-XT
-PA
-XT
-XT
-XT
 PA
 PA
 PA
@@ -39241,21 +39465,21 @@ XT
 XT
 XT
 XT
-PA
-PA
-PA
-PA
-PA
-PA
-PA
 XT
 XT
 XT
 XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
 PA
-XT
-XT
-XT
+PA
+PA
+PA
 PA
 PA
 PA
@@ -39499,21 +39723,21 @@ XT
 XT
 XT
 XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
 PA
 PA
 PA
-PA
-PA
-PA
-PA
-XT
-XT
-XT
-XT
-XT
-XT
-XT
-XT
 PA
 PA
 PA
@@ -39757,21 +39981,21 @@ XT
 XT
 XT
 XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
 PA
 PA
 PA
-PA
-PA
-PA
-PA
-XT
-XT
-XT
-XT
-XT
-XT
-XT
-XT
 PA
 PA
 PA
@@ -40013,26 +40237,26 @@ XT
 XT
 XT
 XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
 PA
 PA
 PA
 PA
 PA
 PA
-PA
-PA
-PA
-XT
-XT
-XT
-XT
-XT
-XT
-XT
-XT
-XT
-XT
-XT
 PA
 PA
 PA
@@ -40271,26 +40495,26 @@ XT
 XT
 XT
 XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
 PA
 PA
 PA
 PA
 PA
 PA
-PA
-PA
-XT
-XT
-XT
-XT
-XT
-XT
-XT
-XT
-XT
-XT
-XT
-XT
 PA
 PA
 PA
@@ -40529,14 +40753,14 @@ XT
 XT
 XT
 XT
-PA
-PA
-PA
-PA
-PA
-PA
-PA
-PA
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
 XT
 XT
 XT
@@ -40545,10 +40769,10 @@ PA
 PA
 PA
 PA
-XT
-XT
-XT
-XT
+PA
+PA
+PA
+PA
 PA
 PA
 PA
@@ -40785,16 +41009,16 @@ XT
 XT
 XT
 XT
-PA
-PA
-PA
-PA
-PA
-PA
-PA
-PA
-PA
-PA
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
 XT
 XT
 XT
@@ -40815,7 +41039,7 @@ PA
 PA
 PA
 PA
-XT
+PA
 PA
 PA
 PA
@@ -41044,15 +41268,15 @@ XT
 XT
 XT
 XT
-PA
-PA
-PA
-PA
-PA
-PA
-PA
-PA
-PA
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
 XT
 XT
 XT
@@ -41073,7 +41297,6 @@ PA
 PA
 PA
 PA
-XT
 PA
 PA
 PA
@@ -41093,8 +41316,9 @@ PA
 PA
 PA
 PA
-XT
-XT
+PA
+PA
+PA
 rz
 Jt
 ru
@@ -41303,15 +41527,15 @@ XT
 XT
 XT
 XT
-PA
-PA
-PA
-PA
-PA
-PA
-PA
-PA
-PA
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
+XT
 XT
 XT
 XT
@@ -41331,7 +41555,6 @@ PA
 PA
 PA
 PA
-XT
 PA
 PA
 PA
@@ -41351,8 +41574,9 @@ PA
 PA
 PA
 PA
-XT
-XT
+PA
+PA
+PA
 rz
 Jt
 ru
@@ -41565,11 +41789,11 @@ XT
 XT
 XT
 XT
-PA
-PA
-PA
-PA
-PA
+XT
+XT
+XT
+XT
+XT
 XT
 XT
 XT
@@ -41589,7 +41813,6 @@ PA
 PA
 PA
 PA
-XT
 PA
 PA
 PA
@@ -41609,8 +41832,9 @@ PA
 PA
 PA
 PA
-XT
-XT
+PA
+PA
+PA
 rz
 mX
 ge
@@ -41847,7 +42071,7 @@ PA
 PA
 PA
 PA
-XT
+PA
 PA
 PA
 PA
@@ -41867,8 +42091,8 @@ PA
 PA
 PA
 PA
-XT
-XT
+PA
+PA
 rz
 EZ
 Jt
@@ -42105,7 +42329,6 @@ PA
 PA
 PA
 PA
-XT
 PA
 PA
 PA
@@ -42125,8 +42348,9 @@ PA
 PA
 PA
 PA
-XT
-XT
+PA
+PA
+PA
 rz
 EZ
 Jt
@@ -42363,7 +42587,6 @@ PA
 PA
 PA
 PA
-XT
 PA
 PA
 PA
@@ -42383,9 +42606,10 @@ PA
 PA
 PA
 PA
-XT
-XT
-XT
+PA
+PA
+PA
+PA
 EZ
 Jt
 ru
@@ -42621,7 +42845,7 @@ PA
 PA
 PA
 PA
-XT
+PA
 PA
 PA
 PA
@@ -42641,9 +42865,9 @@ PA
 PA
 PA
 PA
-XT
-XT
-XT
+PA
+PA
+PA
 EZ
 Jt
 ru
@@ -42863,23 +43087,6 @@ XT
 XT
 XT
 XT
-XT
-PA
-PA
-PA
-PA
-PA
-PA
-PA
-PA
-PA
-PA
-PA
-PA
-PA
-PA
-PA
-XT
 PA
 PA
 PA
@@ -42899,9 +43106,26 @@ PA
 PA
 PA
 PA
-XT
-XT
-XT
+PA
+PA
+PA
+PA
+PA
+PA
+PA
+PA
+PA
+PA
+PA
+PA
+PA
+PA
+PA
+PA
+PA
+PA
+PA
+PA
 EZ
 mX
 ge
@@ -43120,8 +43344,6 @@ XT
 XT
 XT
 XT
-XT
-XT
 PA
 PA
 PA
@@ -43137,7 +43359,9 @@ PA
 PA
 PA
 PA
-XT
+PA
+PA
+PA
 PA
 PA
 PA
@@ -43157,9 +43381,9 @@ PA
 PA
 PA
 PA
-XT
-XT
-XT
+PA
+PA
+PA
 EZ
 EZ
 Jt
@@ -43377,47 +43601,47 @@ fo
 fo
 fo
 fo
-fo
-oT
-fo
-fo
-fo
-fo
-fo
-fo
+aL
+bT
+aL
+aL
+aL
+aL
 fo
 fo
 fo
-fo
-fo
-oq
-oq
-oq
-oq
-oq
-fo
-oq
-oq
-oq
-oq
-oq
-oq
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
 tq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-fo
-fo
-fo
-fo
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
 EZ
 EZ
 Jt
@@ -43634,48 +43858,48 @@ fo
 fo
 fo
 fo
+aL
+aL
+aL
+aL
+aL
+aL
 fo
 fo
 fo
 fo
 fo
 fo
-fo
-fo
-fo
-fo
-fo
-fo
-fo
-fo
-oq
-oq
-oq
-oq
-oq
-fo
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-fo
-fo
-fo
-fo
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
 EZ
 EZ
 Jt
@@ -43892,6 +44116,11 @@ fo
 fo
 fo
 fo
+aL
+aL
+aL
+aL
+aL
 fo
 fo
 fo
@@ -43901,39 +44130,34 @@ fo
 fo
 fo
 fo
-fo
-fo
-fo
-fo
-fo
-oq
-oq
-oq
-oq
-oq
-fo
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-fo
-fo
-fo
-fo
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
 EZ
 EZ
 mX
@@ -44147,6 +44371,14 @@ fo
 fo
 fo
 fo
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
 fo
 fo
 fo
@@ -44163,35 +44395,27 @@ fo
 fo
 fo
 fo
-fo
-oq
-oq
-oq
-oq
-oq
-fo
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
 gH
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-fo
-fo
-fo
-fo
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
 EZ
 EZ
 EZ
@@ -44404,6 +44628,14 @@ fo
 fo
 fo
 fo
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
 fo
 fo
 fo
@@ -44422,34 +44654,26 @@ fo
 fo
 fo
 fo
-oq
-oq
-oq
-oq
-oq
 fo
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-fo
-fo
-fo
-fo
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
 EZ
 EZ
 EZ
@@ -44662,6 +44886,13 @@ fo
 fo
 fo
 fo
+aL
+aL
+aL
+aL
+aL
+aL
+aL
 fo
 fo
 fo
@@ -44680,34 +44911,27 @@ fo
 fo
 fo
 fo
-oq
-oq
-oq
-oq
-oq
-fo
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
 fo
 fo
 fo
 fo
+fo
+fo
+fo
+fo
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
 EZ
 EZ
 EZ
@@ -44919,11 +45143,11 @@ fo
 fo
 fo
 fo
-fo
-fo
-fo
-fo
-fo
+aL
+aL
+aL
+aL
+aL
 fo
 fo
 fo
@@ -44946,26 +45170,26 @@ wP
 wP
 wP
 fo
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
-oq
+fo
+fo
+fo
+fo
+fo
+fo
+fo
+fo
+fo
+fo
+fo
+fo
+aL
+aL
+aL
+aL
+aL
+aL
+aL
+aL
 EZ
 EZ
 EZ
@@ -45177,11 +45401,11 @@ fo
 fo
 fo
 fo
-fo
-fo
-fo
-fo
-fo
+aL
+aL
+aL
+aL
+aL
 fo
 fo
 fo
@@ -45219,11 +45443,11 @@ fo
 fo
 fo
 fo
-oq
-oq
 fo
 fo
-oq
+aL
+aL
+aL
 EZ
 EZ
 EZ
@@ -45434,6 +45658,39 @@ fo
 fo
 fo
 fo
+aL
+aL
+aL
+aL
+fo
+fo
+fo
+fo
+fo
+fo
+wP
+wP
+wP
+wP
+wP
+wP
+wP
+wP
+wP
+wP
+wP
+wP
+wP
+wP
+wP
+wP
+wP
+wP
+wP
+wP
+wP
+wP
+wP
 fo
 fo
 fo
@@ -45444,44 +45701,11 @@ fo
 fo
 fo
 fo
-wP
-wP
-wP
-wP
-wP
-wP
-wP
-wP
-wP
-wP
-wP
-wP
-wP
-wP
-wP
-wP
-wP
-wP
-wP
-wP
-wP
-wP
-wP
 fo
 fo
 fo
 fo
-fo
-fo
-fo
-fo
-fo
-fo
-oq
-oq
-fo
-oq
-oq
+aL
 EZ
 EZ
 EZ
@@ -45692,48 +45916,48 @@ fo
 fo
 fo
 fo
+aL
+aL
+aL
+aL
+fo
+fo
+fo
+fo
+wP
+wP
+wP
+wP
+wP
+wP
+wP
+wP
+wP
+wP
+wP
+wP
+wP
+wP
+wP
+wP
+wP
+wP
+wP
+wP
+wP
+wP
+wP
+wP
+wP
+wP
+wP
+wP
 fo
 fo
 fo
 fo
 fo
 fo
-fo
-fo
-wP
-wP
-wP
-wP
-wP
-wP
-wP
-wP
-wP
-wP
-wP
-wP
-wP
-wP
-wP
-wP
-wP
-wP
-wP
-wP
-wP
-wP
-wP
-wP
-wP
-wP
-wP
-wP
-fo
-fo
-fo
-fo
-oq
-oq
 fo
 fo
 fo
@@ -45950,6 +46174,45 @@ fo
 fo
 fo
 fo
+aL
+aL
+aL
+fo
+fo
+fo
+fo
+wP
+wP
+wP
+wP
+wP
+wP
+wP
+wP
+wP
+wP
+wP
+wP
+wP
+wP
+wP
+wP
+wP
+wP
+wP
+wP
+wP
+wP
+wP
+wP
+wP
+wP
+wP
+wP
+wP
+wP
+wP
+wP
 fo
 fo
 fo
@@ -45957,46 +46220,7 @@ fo
 fo
 fo
 fo
-wP
-wP
-wP
-wP
-wP
-wP
-wP
-wP
-wP
-wP
-wP
-wP
-wP
-wP
-wP
-wP
-wP
-wP
-wP
-wP
-wP
-wP
-wP
-wP
-wP
-wP
-wP
-wP
-wP
-wP
-wP
-wP
 fo
-fo
-fo
-fo
-oq
-fo
-oq
-oq
 fo
 EZ
 EZ
@@ -46207,10 +46431,10 @@ fo
 fo
 fo
 fo
-fo
-fo
-fo
-fo
+aL
+aL
+aL
+aL
 fo
 fo
 fo
@@ -46465,10 +46689,10 @@ fo
 fo
 fo
 fo
-fo
-fo
-fo
-fo
+aL
+aL
+aL
+aL
 fo
 fo
 fo
@@ -46723,11 +46947,11 @@ fo
 fo
 fo
 fo
-fo
-fo
-fo
-fo
-fo
+aL
+aL
+aL
+aL
+aL
 fo
 fo
 wP
@@ -46981,11 +47205,11 @@ fo
 fo
 fo
 fo
-fo
-fo
-fo
-fo
-fo
+aL
+aL
+aL
+aL
+aL
 fo
 fo
 wP
@@ -47036,7 +47260,7 @@ wP
 EZ
 Jt
 ru
-ru
+at
 ru
 ru
 ru
@@ -47239,11 +47463,11 @@ fo
 fo
 fo
 fo
-fo
-fo
-fo
-fo
-fo
+aL
+aL
+aL
+aL
+aL
 fo
 fo
 wP
@@ -47497,11 +47721,11 @@ fo
 fo
 fo
 fo
-fo
-fo
-fo
-fo
-fo
+aL
+aL
+aL
+aL
+aL
 fo
 fo
 wP
@@ -47755,14 +47979,14 @@ fo
 fo
 fo
 fo
+aL
+aL
+aL
+aL
+aL
 fo
 fo
 fo
-fo
-fo
-fo
-fo
-fo
 wP
 wP
 wP
@@ -47795,11 +48019,11 @@ wP
 wP
 wP
 wP
+bO
+af
+bL
 af
 af
-af
-af
-aq
 wP
 wP
 wP
@@ -48014,10 +48238,10 @@ fo
 fo
 fo
 fo
-fo
-fo
-fo
-fo
+aL
+aL
+aL
+aL
 fo
 fo
 fo
@@ -48054,7 +48278,7 @@ wP
 wP
 wP
 av
-af
+bM
 af
 af
 af
@@ -48203,10 +48427,10 @@ fY
 fY
 fY
 fY
-fY
-fY
-fY
-fY
+cd
+cd
+cd
+cd
 fY
 fY
 fY
@@ -48273,9 +48497,9 @@ fo
 fo
 fo
 fo
-fo
-fo
-fo
+aL
+aL
+aL
 fo
 fo
 fo
@@ -48312,7 +48536,7 @@ wP
 wP
 wP
 wP
-af
+bN
 wP
 wP
 af
@@ -48460,12 +48684,12 @@ fY
 fY
 fY
 fY
-fY
-fY
-fY
-fY
-fY
-fY
+cd
+cd
+cd
+cd
+cd
+cd
 fY
 fY
 fY
@@ -48531,10 +48755,10 @@ fo
 fo
 fo
 fo
-fo
-fo
-fo
-fo
+aL
+aL
+aL
+aL
 fo
 fo
 EZ
@@ -48717,13 +48941,13 @@ fY
 fY
 fY
 fY
-fY
-fY
-fY
+cd
+cd
+cd
 lc
-be
-fY
-fY
+ce
+cd
+cd
 fY
 fY
 fY
@@ -48789,10 +49013,10 @@ fo
 fo
 fo
 fo
-fo
-fo
-fo
-fo
+aL
+aL
+aL
+aL
 fo
 fo
 EZ
@@ -48975,13 +49199,13 @@ fY
 fY
 fY
 fY
-fY
-be
+cd
+ce
 lc
 lc
 lc
-fY
-fY
+cd
+cd
 fY
 fY
 fo
@@ -49047,11 +49271,11 @@ fo
 fo
 fo
 fo
-fo
-fo
-fo
-fo
-fo
+aL
+aL
+aL
+aL
+aL
 fo
 EZ
 EZ
@@ -49233,13 +49457,13 @@ fY
 fY
 fY
 fY
-fY
-fY
+cd
+cd
 lc
 lc
 lc
-fY
-fY
+cd
+cd
 fY
 fY
 fo
@@ -49306,10 +49530,10 @@ fo
 fo
 fo
 fo
-fo
-fo
-fo
-fo
+aL
+aL
+aL
+aL
 EZ
 EZ
 EZ
@@ -49350,7 +49574,7 @@ wP
 wP
 wP
 wP
-ak
+aq
 af
 af
 af
@@ -49491,13 +49715,13 @@ fY
 fY
 fY
 fY
-fY
+cd
 lc
 lc
 lc
 lc
-fY
-fY
+cd
+cd
 fo
 fo
 fo
@@ -49565,8 +49789,8 @@ fo
 fo
 fo
 fo
-fo
-fo
+aL
+aL
 EZ
 EZ
 EZ
@@ -49749,13 +49973,13 @@ fY
 fY
 fY
 fY
-be
+ce
 lc
 lc
 lc
-fY
-fY
-fY
+cd
+cd
+cd
 fo
 fo
 fo
@@ -49823,7 +50047,7 @@ fo
 fo
 fo
 fo
-fo
+aL
 EZ
 EZ
 EZ
@@ -50007,12 +50231,12 @@ fY
 fY
 fY
 fY
-fY
+cd
 lc
 lc
-fY
-be
-fY
+cd
+ce
+cd
 fo
 fo
 fo
@@ -50265,11 +50489,11 @@ fY
 fY
 fY
 fY
-fY
-fY
-fY
-fY
-fY
+cd
+cd
+cd
+cd
+cd
 fY
 fo
 fo
@@ -56552,10 +56776,10 @@ fo
 IW
 IW
 hj
-IW
-hj
-IW
-IW
+bP
+bR
+bP
+bP
 Re
 IW
 IW
@@ -56813,7 +57037,7 @@ IW
 QM
 aG
 MJ
-IW
+bP
 IW
 hj
 IW
@@ -57068,10 +57292,10 @@ IW
 IW
 IW
 iy
-IW
+bP
 aH
-IW
-Re
+bP
+bQ
 Re
 IW
 IW
@@ -57328,8 +57552,8 @@ IW
 IW
 AF
 QM
-IW
-IW
+bP
+bP
 cD
 IW
 fo
@@ -57585,7 +57809,7 @@ IW
 IW
 IW
 IW
-IW
+bP
 IW
 IW
 IW
@@ -60582,9 +60806,9 @@ fY
 GU
 CY
 CY
-oq
-oq
-oq
+aL
+aL
+aL
 gD
 gD
 fo
@@ -61101,7 +61325,7 @@ Mn
 fo
 aZ
 sH
-oq
+aL
 Ev
 bl
 Zd
@@ -61354,10 +61578,10 @@ fY
 fY
 fY
 sX
-oq
-oq
+aL
+aL
 Dj
-oq
+aL
 BU
 Dj
 fb
@@ -61612,13 +61836,13 @@ fY
 fY
 fY
 sX
-oq
-oq
-oq
+aL
+aL
+aL
 Ev
 lu
 Bp
-oq
+aL
 Ev
 Bp
 pN
@@ -61870,7 +62094,7 @@ fY
 fY
 fY
 sX
-oq
+aL
 Ev
 TJ
 yF
@@ -61878,9 +62102,9 @@ FX
 yF
 TJ
 TJ
-oq
-oq
-oq
+aL
+aL
+aL
 fq
 aZ
 fo
@@ -62137,8 +62361,8 @@ Pj
 PE
 TJ
 Bp
-oq
-oq
+aL
+aL
 Hl
 fo
 fo
@@ -62396,8 +62620,8 @@ az
 Ao
 Tv
 Zd
-oq
-oq
+aL
+aL
 fo
 fo
 fo
@@ -62644,8 +62868,8 @@ fY
 fY
 fY
 sX
-oq
-oq
+aL
+aL
 TJ
 bo
 ql
@@ -62653,9 +62877,9 @@ nn
 uq
 PH
 br
-oq
-oq
-oq
+aL
+aL
+aL
 fq
 fq
 fo
@@ -62902,18 +63126,18 @@ fY
 fY
 fY
 sX
-oq
+aL
 Ev
 yF
-nn
-nn
+cg
+cf
 nn
 JI
 Bz
 br
-oq
+aL
 Dj
-oq
+aL
 fo
 fo
 fo
@@ -63159,8 +63383,8 @@ fY
 fY
 fY
 fY
-oq
-oq
+aL
+aL
 Dj
 TJ
 zy
@@ -63168,10 +63392,10 @@ nn
 YN
 tK
 TJ
-oq
-oq
+aL
+aL
 Ev
-bg
+cc
 fo
 fo
 fo
@@ -63417,8 +63641,8 @@ fY
 fY
 fY
 fY
-oq
-oq
+aL
+aL
 vr
 TJ
 TJ
@@ -63426,7 +63650,7 @@ TJ
 TJ
 TJ
 TJ
-oq
+aL
 Ev
 aZ
 aZ
@@ -63675,18 +63899,18 @@ fY
 fY
 fY
 fY
-oq
-oq
-oq
+aL
+aL
+aL
 dz
-oq
+aL
 Zd
-oq
-oq
-oq
+aL
+aL
+aL
 Dj
-oq
-oq
+aL
+aL
 CR
 CR
 CR
@@ -64570,7 +64794,7 @@ DJ
 rS
 tF
 tF
-am
+tF
 Rx
 CR
 CR
@@ -64964,7 +65188,7 @@ CR
 CR
 CR
 CR
-wy
+ch
 bt
 wy
 wy
@@ -65488,7 +65712,7 @@ wy
 wy
 CR
 wy
-wy
+RX
 CR
 wy
 Gh
@@ -65535,7 +65759,7 @@ wy
 wy
 wy
 wy
-wy
+RX
 CR
 CR
 CR
@@ -65746,7 +65970,7 @@ wy
 wy
 CR
 CR
-wy
+RX
 wy
 wy
 wy
@@ -66042,7 +66266,7 @@ CR
 CR
 CR
 CR
-wy
+RX
 wy
 wy
 wy
@@ -67611,7 +67835,7 @@ wy
 wy
 wy
 wy
-wy
+RX
 CR
 CR
 CR
@@ -67657,7 +67881,7 @@ CR
 wy
 CR
 CR
-wy
+RX
 CR
 CR
 CR
@@ -67915,7 +68139,7 @@ wy
 wy
 CR
 CR
-wy
+RX
 CR
 CR
 CR
@@ -69406,9 +69630,9 @@ wy
 CR
 CR
 CR
-aW
-aW
-aW
+wy
+RX
+RX
 CR
 CR
 CR
@@ -69660,8 +69884,8 @@ wy
 wy
 wy
 wy
-aX
 wy
+ca
 CR
 CR
 CR
@@ -69917,10 +70141,10 @@ wy
 wy
 wy
 wy
+ca
 wy
 wy
-wy
-wy
+bU
 CR
 CR
 CR
@@ -70176,9 +70400,9 @@ wy
 wy
 wy
 wy
+ca
 wy
-wy
-wy
+bY
 CR
 CR
 CR
@@ -70193,7 +70417,7 @@ CR
 CR
 wy
 wy
-RX
+wy
 RX
 RX
 aV
@@ -70433,9 +70657,9 @@ CR
 wy
 wy
 wy
-aX
+ca
 wy
-wy
+cb
 wy
 CR
 CR
