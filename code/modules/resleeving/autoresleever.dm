@@ -79,20 +79,13 @@
 		to_chat(ghost, span_warning("You are not whitelisted to spawn as this species!"))
 		return
 
-<<<<<<< HEAD
 	// CHOMPedit start
-=======
-	/* // Comments out NO_SLEEVE restriction, as per headmin/maintainer request.
->>>>>>> f48f89f1db (Split NO_SCAN into two flags (#17226))
+
 	var/datum/species/chosen_species
 	if(ghost.client.prefs.species) // In case we somehow don't have a species set here.
 		chosen_species = GLOB.all_species[ghost_client.prefs.species]
 
-<<<<<<< HEAD
 	if((chosen_species.spawn_flags & SPECIES_IS_WHITELISTED) || (chosen_species.spawn_flags & SPECIES_IS_RESTRICTED))
-=======
-	if(chosen_species.flags && NO_SLEEVE) // Sanity. Prevents species like Xenochimera, Proteans, etc from rejoining the round via resleeve, as they should have their own methods of doing so already, as agreed to when you whitelist as them.
->>>>>>> f48f89f1db (Split NO_SCAN into two flags (#17226))
 		to_chat(ghost, span_warning("This species cannot be resleeved!"))
 		return
 	// CHOMPEdit End: Add checks for Whitelist + Resleeving
