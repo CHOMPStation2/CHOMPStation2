@@ -49,13 +49,9 @@
 
 	var/unique_identifier //Define this for objs that we want to be able to rename. Needed to avoid compiler errors if not included.
 
-<<<<<<< HEAD
-/obj/effect/overmap/visitable/Initialize(mapload, dyn_poi) // CHOMPEdit
-=======
 	var/mob_announce_cooldown = 0 //Define this to make it so when visited, the ATC will announce their arrival. Only used if you have a Crossed/Uncrossed that calls announce_atc w/ announce_atc being redefined.
 
-/obj/effect/overmap/visitable/Initialize(mapload)
->>>>>>> b431c4efb2 (ATC Refactor (#17237))
+/obj/effect/overmap/visitable/Initialize(mapload, dyn_poi) //CHOMPEdit - dyn_poi
 	. = ..()
 	if(. == INITIALIZE_HINT_QDEL)
 		return
