@@ -2198,11 +2198,6 @@
 #include "code\modules\blob2\overmind\types\shifting_fragments.dm"
 #include "code\modules\blob2\overmind\types\synchronous_mesh.dm"
 #include "code\modules\blob2\overmind\types\volatile_alluvium.dm"
-<<<<<<< HEAD
-#include "code\modules\busy_space_yw\air_traffic.dm"
-#include "code\modules\busy_space_yw\loremaster.dm"
-#include "code\modules\busy_space_yw\organizations.dm"
-=======
 #include "code\modules\busy_space\atc_chatter.dm"
 #include "code\modules\busy_space\atc_chatter_type.dm"
 #include "code\modules\busy_space\chatter_civilian.dm"
@@ -2214,7 +2209,6 @@
 #include "code\modules\busy_space\chatter_shiftstart.dm"
 #include "code\modules\busy_space\loremaster.dm"
 #include "code\modules\busy_space\organizations.dm"
->>>>>>> b431c4efb2 (ATC Refactor (#17237))
 #include "code\modules\casino\boxes_casino.dm"
 #include "code\modules\casino\casino.dm"
 #include "code\modules\casino\casino_prize_vendor.dm"
