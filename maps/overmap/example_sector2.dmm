@@ -2,22 +2,14 @@
 "aa" = (
 /turf/space,
 /area)
-"ac" = (
-/obj/structure/shuttle/window{
-	icon_state = "3"
-	},
-/turf/simulated/shuttle/floor,
-/area/shuttle/overmap_examples/outpost)
-"ad" = (
+"ab" = (
 /turf/simulated/shuttle/wall{
 	dir = 2
 	},
 /area/shuttle/overmap_examples/outpost)
-"ae" = (
-/turf/simulated/shuttle/wall{
-	icon_state = "swall_straight";
-	dir = 1
-	},
+"ac" = (
+/obj/structure/shuttle/window,
+/turf/simulated/shuttle/floor,
 /area/shuttle/overmap_examples/outpost)
 "af" = (
 /obj/machinery/computer/shuttle_control/explore{
@@ -1870,9 +1862,9 @@ aa
 aa
 "}
 (23,1,1) = {"
-ad
-ae
-ae
+ab
+aj
+aj
 aj
 am
 ap
@@ -1954,9 +1946,9 @@ aa
 aa
 "}
 (25,1,1) = {"
-ad
-ae
-ae
+ab
+aj
+aj
 al
 am
 ar
