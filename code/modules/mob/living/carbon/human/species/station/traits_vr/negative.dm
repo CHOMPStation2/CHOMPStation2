@@ -703,9 +703,7 @@
 	desc = "Even the tiniest particles of dirt give you uneasy footing, even through several layers of footwear."
 	cost = -5
 	var_changes = list("dirtslip" = TRUE)
-<<<<<<< HEAD
 	excludes = list(/datum/trait/positive/absorbent) // CHOMPAdd
-=======
 
 /datum/trait/negative/nodefib
 	name = "Unreviveable"
@@ -731,4 +729,3 @@
 	custom_only = TRUE
 	var_changes = list("flags" = NO_SLEEVE | NO_DEFIB)
 	excludes = list(/datum/trait/negative/nodefib, /datum/trait/negative/noresleeve)
->>>>>>> f48f89f1db (Split NO_SCAN into two flags (#17226))

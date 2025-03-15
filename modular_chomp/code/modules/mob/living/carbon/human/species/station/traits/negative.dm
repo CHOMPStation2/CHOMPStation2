@@ -48,23 +48,6 @@
 	..()
 	H.add_modifier(/datum/modifier/trait/majorempweakness)
 
-/datum/trait/negative/nodefib
-	name = "Unreviveable"
-	desc = "For whatever strange genetic reason, defibs cannot restart your heart."
-	cost = 0
-	custom_only = FALSE
-	var_changes = list("flags" = NO_DEFIB)
-	can_take = ORGANICS //Mostly because I think synth code bypasses the no defib thing. Or maybe that is just vox
-	excludes = list(/datum/trait/negative/noresleeve) //No, just, no
-
-/datum/trait/negative/noresleeve
-	name = "Unsleeveable"
-	desc = "Your genetics have been ruined, to the point where resleeving can no longer bring you back, including the autoresleever."
-	cost = -1
-	custom_only = TRUE
-	var_changes = list("flags" = NO_SCAN)
-	excludes = list(/datum/trait/negative/nodefib) //No, just, no
-
 /datum/trait/negative/meltable
 	name = "Water Weakness"
 	desc = "Due to your biology, water is harmful to you."
@@ -80,14 +63,6 @@
 	custom_only = TRUE
 	var_changes = list("water_resistance" = 0, "water_damage_mod" = 0.8)
 	excludes = list(/datum/trait/negative/meltable)
-
-/datum/trait/negative/onelife
-	name = "One Life"
-	desc = "For whatever reason, once you dead, that is final."
-	cost = -2
-	custom_only = TRUE
-	var_changes = list("flags" = NO_SCAN | NO_DEFIB)
-	excludes = list(/datum/trait/negative/nodefib, /datum/trait/negative/noresleeve)
 
 /datum/trait/negative/lightweight_light
 	name = "Lesser Lightweight"
