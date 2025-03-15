@@ -15,7 +15,7 @@
 
 	extra_z_levels = list(Z_LEVEL_TRANSIT, Z_LEVEL_MISC,Z_LEVEL_SURFACE, Z_LEVEL_SURFACE_MINE, Z_LEVEL_SURFACE_WILD) //This should allow for comms to reach people from the station. Basically this defines all the areas of Southern Cross and the Sif local system on the overmap.
 	// "Z_LEVEL_SURFACE_SKYLANDS, " //removed due to lack of use
-	var/mob_announce_cooldown = 0
+	mob_announce_cooldown = 0
 
 
 	initial_generic_waypoints = list(
