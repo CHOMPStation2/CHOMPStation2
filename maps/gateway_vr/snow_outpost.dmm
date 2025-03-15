@@ -1943,12 +1943,7 @@
 /area/awaymission/snow_outpost/outside)
 "gD" = (
 /obj/structure/cable{
-<<<<<<< HEAD
-	icon_state = "0-2";
-	
-=======
 	icon_state = "0-2"
->>>>>>> 0114e94239 (Map adjustments [MDB IGNORE] (#17342))
 	},
 /obj/machinery/porta_turret/alien/destroyed,
 /turf/simulated/shuttle/floor/alienplating,
