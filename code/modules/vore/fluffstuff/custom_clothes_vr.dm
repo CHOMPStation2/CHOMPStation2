@@ -2275,44 +2275,6 @@ Departamental Swimsuits, for general use
 	icon_override = 'icons/vore/custom_onmob_vr.dmi'
 	item_state = "evelynhood_mob"
 
-<<<<<<< HEAD
-/obj/item/clothing/suit/storage/hooded/wintercoat/security/fluff/evelyn/ui_action_click(mob/user, actiontype)
-	ToggleHood_evelyn()
-
-/obj/item/clothing/suit/storage/hooded/wintercoat/security/fluff/evelyn/equipped(mob/user, slot)
-	if(slot != slot_wear_suit)
-		RemoveHood_evelyn()
-	..()
-
-/obj/item/clothing/suit/storage/hooded/wintercoat/security/fluff/evelyn/proc/RemoveHood_evelyn()
-	icon_state = "evelyncoat"
-	item_state = "evelyncoat_mob"
-	hood_up = 0
-	if(ishuman(hood.loc))
-		var/mob/living/carbon/H = hood.loc
-		H.unEquip(hood, 1)
-		H.update_inv_wear_suit()
-	hood.loc = src
-
-/obj/item/clothing/suit/storage/hooded/wintercoat/security/fluff/evelyn/proc/ToggleHood_evelyn()
-	if(!hood_up)
-		if(ishuman(loc))
-			var/mob/living/carbon/human/H = loc
-			if(H.wear_suit != src)
-				to_chat(H, span_warning("You must be wearing [src] to put up the hood!"))
-				return
-			if(H.head)
-				to_chat(H, span_warning("You're already wearing something on your head!"))
-				return
-			else
-				H.equip_to_slot_if_possible(hood,slot_head,0,0,1)
-				hood_up = 1
-				icon_state = "evelyncoat_t"
-				item_state = "evelyncoat_mob_t"
-				H.update_inv_wear_suit()
-	else
-		RemoveHood_evelyn()
-=======
 //Allweek:Fifi the Magnificent
 /obj/item/clothing/head/fluff/fifi_hat
 	name = "fifi's hat"
@@ -2345,7 +2307,6 @@ Departamental Swimsuits, for general use
 	item_state = "fifi_socks"
 
 
->>>>>>> 032196072a (No more fake hoods (#17314))
 
 //Uncle_Fruit_VEVO - Bradley Khatibi
 /obj/item/clothing/shoes/fluff/airjordans
