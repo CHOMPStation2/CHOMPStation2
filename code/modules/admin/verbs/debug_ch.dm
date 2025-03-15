@@ -23,7 +23,7 @@
 		to_chat(usr,span_warning("Target already has a NIF."))
 		return
 
-	if(H.species.flags & NO_SCAN)
+	if(H.species.flags & NO_DNA)
 		new /obj/item/nif/authenticbio(H)
 	else
 		new /obj/item/nif/authentic(H)
