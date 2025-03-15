@@ -1,7 +1,0 @@
-author: "Ace"
-delete-after: True
-changes:
-  - rscadd: "Gryphons can now rarely appear in the caves."
-  - rscdel: "Sonadile removed from caves at least until the sprite animation looping bug is fixed."
-  - bugfix: "A cobra lamia was incorrectly used as the base of a cave lamia variant. It should have been a copper lamia."
-  - code_imp: "Adjusted a few spawn weights for cave mobs."

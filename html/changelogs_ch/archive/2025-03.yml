@@ -307,3 +307,41 @@
   tacoguy7765093:
   - maptweak: Removed pointless ladder in explo shelter.
   - maptweak: Soluna Nexus duplicate APCs removed.
+2025-03-15:
+  Ace:
+  - rscadd: Gryphons can now rarely appear in the caves.
+  - rscdel: Sonadile removed from caves at least until the sprite animation looping
+      bug is fixed.
+  - bugfix: A cobra lamia was incorrectly used as the base of a cave lamia variant.
+      It should have been a copper lamia.
+  - code_imp: Adjusted a few spawn weights for cave mobs.
+  - balance: Altered Thor animal spawn weights.
+  - maptweak: Various small changes to Thor
+  CHOMPStation2StaffMirrorBot:
+  - code_imp: some more grep checks
+  - bugfix: Fixed a number of duplicate structures and cleanables on maps for the
+      map linter PR.
+  Cameron-The-Raven:
+  - rscadd: Riftwalkers will now be able to swap their sprite appearances on demand.
+      (This means you have much more riftwalker sprites to choose from!)
+  - rscadd: Riftwalkers now have two new LARGE sprites (brutola and ignia) which have
+      2 stomach sprites each
+  Diana:
+  - rscadd: Adds gooborgs! Sprites by Toriate
+  - rscadd: You can now TOGGLE STOMACH GLOWING on borgs! If toggled on, your tummy
+      will GLOW IN THE DARK!
+  - rscadd: Catborgs now have passive glowing parts if they are toggled on
+  - code_imp: Robotic eswords and batons now count as robotic weapons and trigger
+      appropriate sprites.
+  - bugfix: Borg batons will no longer start looking like it has no cell.
+  - qol: Moves 'toggle extras' to a more conspicuous spot in the Abilities tab. (Dullahans
+      and Gryphonborg have alternative sprites if used)
+  - maptweak: touches every map and smashes it with a plasteel hammer to make it comply
+  SpadesNeil:
+  - bugfix: Makes giant cave spiders no longer giant
+  Will:
+  - qol: Clothing pockets now have better lists that allow you to carry a wider list
+      of items inside of them. No longer will winter jacket allow you to hold pens,
+      but winter coat won't.
+  - code_imp: Pockets have been completely reworked to not use randomly defined lists
+      everywhere. They are now consolidated.

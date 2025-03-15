@@ -1,5 +1,0 @@
-author: "Cameron-The-Raven"
-delete-after: True
-changes:
-  - rscadd: "Riftwalkers will now be able to swap their sprite appearances on demand. (This means you have much more riftwalker sprites to choose from!)"
-  - rscadd: "Riftwalkers now have two new LARGE sprites (brutola and ignia) which have 2 stomach sprites each"
