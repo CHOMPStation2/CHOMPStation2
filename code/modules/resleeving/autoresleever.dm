@@ -80,6 +80,7 @@
 		return
 
 	// CHOMPedit start
+
 	var/datum/species/chosen_species
 	if(ghost.client.prefs.species) // In case we somehow don't have a species set here.
 		chosen_species = GLOB.all_species[ghost_client.prefs.species]

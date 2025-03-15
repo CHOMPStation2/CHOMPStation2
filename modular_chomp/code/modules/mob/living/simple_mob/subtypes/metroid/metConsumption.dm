@@ -102,10 +102,10 @@
 	if(L.getCloneLoss() >= L.getMaxHealth() * 1.5)
 		to_chat(src, "This subject does not have an edible life energy...")
 		return FALSE
-	//VOREStation Addition start
+	//VOREStation Addition start //This is a modular_chomp file... why is there a vorestation edit? TODO: Reassess this file. Port upstream if needed.
 	if(istype(L, /mob/living/carbon/human))
 		var/mob/living/carbon/human/H = L
-		if(H.species.flags & NO_SCAN)
+		if(H.species.flags & NO_DNA)
 			to_chat(src, "This subject's life energy is beyond my reach...")
 			return FALSE
 	//VOREStation Addition end
