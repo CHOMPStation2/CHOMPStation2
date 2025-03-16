@@ -128,11 +128,7 @@
 						M.vore_organs -= B
 						new_mob.vore_organs += B
 
-<<<<<<< HEAD
-					M.soulgem.transfer_self(new_mob) //CHOMPAdd Soulcatcher
-=======
 					M.soulgem.transfer_self(new_mob) // Soulcatcher
->>>>>>> f881d54dbf (Panel port test [IDB IGNORE] (#17350))
 
 					new_mob.ckey = M.ckey
 					if(M.ai_holder && new_mob.ai_holder)
@@ -186,11 +182,7 @@
 						M.vore_organs -= B
 						new_mob.vore_organs += B
 
-<<<<<<< HEAD
-					M.soulgem.transfer_self(new_mob) //CHOMPAdd Soulcatcher
-=======
 					M.soulgem.transfer_self(new_mob) // Soulcatcher
->>>>>>> f881d54dbf (Panel port test [IDB IGNORE] (#17350))
 
 					new_mob.ckey = M.ckey
 					if(M.ai_holder && new_mob.ai_holder)

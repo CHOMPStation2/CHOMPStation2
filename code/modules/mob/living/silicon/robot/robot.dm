@@ -8,11 +8,7 @@
 	icon_state = "robot"
 	maxHealth = 200
 	health = 200
-<<<<<<< HEAD
-	nutrition = 0 //CHOMPEdit
-=======
 	nutrition = 0
->>>>>>> f881d54dbf (Panel port test [IDB IGNORE] (#17350))
 
 	mob_bump_flag = ROBOT
 	mob_swap_flags = ~HEAVY
@@ -1471,23 +1467,12 @@
 			undeploy()
 	..()
 
-<<<<<<< HEAD
-//CHOMPAdd Start
-/mob/living/silicon/robot/use_power()
-	if(cell && cell.charge < cell.maxcharge)
-		if(nutrition >= 1 * CYBORG_POWER_USAGE_MULTIPLIER)
-			nutrition -= 1 * CYBORG_POWER_USAGE_MULTIPLIER
-			cell.charge += 10 * CYBORG_POWER_USAGE_MULTIPLIER
-	..()
-//CHOMPAdd End
-=======
 /mob/living/silicon/robot/use_power()
 	if(cell && cell.charge < cell.maxcharge)
 		if(nutrition >= 1 * CYBORG_POWER_USAGE_MULTIPLIER)
 			adjust_nutrition(-(1 * CYBORG_POWER_USAGE_MULTIPLIER))
 			cell.charge += 10 * CYBORG_POWER_USAGE_MULTIPLIER
 	..()
->>>>>>> f881d54dbf (Panel port test [IDB IGNORE] (#17350))
 
 // Those basic ones require quite detailled checks on the robot's vars to see if they are installed!
 /mob/living/silicon/robot/proc/has_basic_upgrade(var/given_type)

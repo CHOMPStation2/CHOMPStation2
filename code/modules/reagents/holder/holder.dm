@@ -280,11 +280,7 @@
 		return splash_mob(target, amount * multiplier, copy) //Touch effects handled by splash_mob
 	if(isturf(target))
 		return trans_to_turf(target, amount, multiplier, copy)
-<<<<<<< HEAD
-	if(isobj(target) && target.is_open_container() && !isbelly(target.loc)) //CHOMPEdit
-=======
 	if(isobj(target) && target.is_open_container() && !isbelly(target.loc))
->>>>>>> f881d54dbf (Panel port test [IDB IGNORE] (#17350))
 		return trans_to_obj(target, amount, multiplier, copy)
 	return 0
 

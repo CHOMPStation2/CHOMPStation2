@@ -480,15 +480,9 @@
 
 #define VIS_CH_STOMACH		34
 
-<<<<<<< HEAD
-#define VIS_SOULCATCHER		35 // CHOMPAdd
-
-#define VIS_COUNT			35 //Must be highest number from above. // CHOMPEdit
-=======
 #define VIS_SOULCATCHER		35
 
 #define VIS_COUNT			35 //Must be highest number from above.
->>>>>>> f881d54dbf (Panel port test [IDB IGNORE] (#17350))
 
 //Some mob icon layering defines
 #define BODY_LAYER		-100

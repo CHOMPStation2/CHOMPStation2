@@ -6,10 +6,6 @@
 	var/resizable = TRUE				// Can other people resize you? (Usually ignored for self-resizes)
 	var/digest_leave_remains = FALSE	// Will this mob leave bones/skull/etc after the melty demise?
 	var/allowmobvore = TRUE				// Will simplemobs attempt to eat the mob?
-<<<<<<< HEAD
-	//var/allow_inbelly_spawning = FALSE	// Will we even bother with attempts of someone to spawn in in one of our bellies? // CHOMPedit: use our code instead of upstream's recoding of our code
-=======
->>>>>>> f881d54dbf (Panel port test [IDB IGNORE] (#17350))
 	var/obj/belly/vore_selected			// Default to no vore capability.
 	var/list/vore_organs = list()		// List of vore containers inside a mob
 	var/absorbed = FALSE				// If a mob is absorbed into another
@@ -73,9 +69,6 @@
 	var/vore_icons = 0					// Bitfield for which fields we have vore icons for.
 	var/vore_eyes = FALSE				// For mobs with fullness specific eye overlays.
 
-<<<<<<< HEAD
-	var/obj/soulgem/soulgem				// CHOMPEnable Soulcatcher. Needs to be up-ported sometime.
-=======
 	var/obj/soulgem/soulgem				// Soulcatcher. Needs to be up-ported sometime.
 
 	var/receive_reagents = FALSE			//Pref for people to avoid others transfering reagents into them.
@@ -100,4 +93,3 @@
 	var/enabled = TRUE //Pauses a mob if disabled (Prevents life ticks from happening)
 	var/died_in_vr = FALSE //For virtual reality sleepers
 	var/last_move_time = 0 //For movement smoothing
->>>>>>> f881d54dbf (Panel port test [IDB IGNORE] (#17350))

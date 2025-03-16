@@ -46,12 +46,8 @@
 #include "code\__defines\assets.dm"
 #include "code\__defines\atmos.dm"
 #include "code\__defines\atoms_movable.dm"
-<<<<<<< HEAD
 #include "code\__defines\atoms_movable_ch.dm"
-#include "code\__defines\belly_modes_ch.dm"
-=======
 #include "code\__defines\belly_messages.dm"
->>>>>>> f881d54dbf (Panel port test [IDB IGNORE] (#17350))
 #include "code\__defines\belly_modes_vr.dm"
 #include "code\__defines\blueprints.dm"
 #include "code\__defines\borg_overlays.dm"
@@ -111,12 +107,8 @@
 #include "code\__defines\misc_ch.dm"
 #include "code\__defines\mob_ch.dm"
 #include "code\__defines\mobs.dm"
-<<<<<<< HEAD
 #include "code\__defines\mobs_yw.dm"
-#include "code\__defines\nif_ch.dm"
-=======
 #include "code\__defines\nif.dm"
->>>>>>> f881d54dbf (Panel port test [IDB IGNORE] (#17350))
 #include "code\__defines\nifsoft.dm"
 #include "code\__defines\objects.dm"
 #include "code\__defines\observer.dm"
@@ -154,10 +146,7 @@
 #include "code\__defines\simple_mob.dm"
 #include "code\__defines\size.dm"
 #include "code\__defines\slosh.dm"
-<<<<<<< HEAD
-=======
 #include "code\__defines\soulcatcher.dm"
->>>>>>> f881d54dbf (Panel port test [IDB IGNORE] (#17350))
 #include "code\__defines\sound.dm"
 #include "code\__defines\span.dm"
 #include "code\__defines\species_languages.dm"
@@ -2276,12 +2265,9 @@
 #include "code\modules\client\preference_setup\loadout\loadout_general.dm"
 #include "code\modules\client\preference_setup\loadout\loadout_gloves.dm"
 #include "code\modules\client\preference_setup\loadout\loadout_head.dm"
-<<<<<<< HEAD
 #include "code\modules\client\preference_setup\loadout\loadout_head_ch.dm"
 #include "code\modules\client\preference_setup\loadout\loadout_head_yw.dm"
-=======
 #include "code\modules\client\preference_setup\loadout\loadout_item_tf.dm"
->>>>>>> f881d54dbf (Panel port test [IDB IGNORE] (#17350))
 #include "code\modules\client\preference_setup\loadout\loadout_mask.dm"
 #include "code\modules\client\preference_setup\loadout\loadout_shoes.dm"
 #include "code\modules\client\preference_setup\loadout\loadout_smoking.dm"
@@ -4248,11 +4234,7 @@
 #include "code\modules\reagents\Chemistry-Metabolism.dm"
 #include "code\modules\reagents\holder\distilling.dm"
 #include "code\modules\reagents\holder\holder.dm"
-<<<<<<< HEAD
-#include "code\modules\reagents\holder\holder_ch.dm"
-=======
 #include "code\modules\reagents\holder\vorebelly.dm"
->>>>>>> f881d54dbf (Panel port test [IDB IGNORE] (#17350))
 #include "code\modules\reagents\hoses\connector.dm"
 #include "code\modules\reagents\hoses\hose.dm"
 #include "code\modules\reagents\hoses\hose_connector.dm"
@@ -4630,11 +4612,7 @@
 #include "code\modules\vore\eating\belly_dat_vr.dm"
 #include "code\modules\vore\eating\belly_import.dm"
 #include "code\modules\vore\eating\belly_messages.dm"
-<<<<<<< HEAD
-#include "code\modules\vore\eating\belly_obj_ch.dm"
-=======
 #include "code\modules\vore\eating\belly_obj_liquids.dm"
->>>>>>> f881d54dbf (Panel port test [IDB IGNORE] (#17350))
 #include "code\modules\vore\eating\belly_obj_vr.dm"
 #include "code\modules\vore\eating\bellymodes_datum_vr.dm"
 #include "code\modules\vore\eating\bellymodes_vr.dm"
@@ -4644,9 +4622,7 @@
 #include "code\modules\vore\eating\inbelly_spawn.dm"
 #include "code\modules\vore\eating\leave_remains_vr.dm"
 #include "code\modules\vore\eating\living_bellies.dm"
-#include "code\modules\vore\eating\living_ch.dm"
 #include "code\modules\vore\eating\living_vr.dm"
-#include "code\modules\vore\eating\mob_ch.dm"
 #include "code\modules\vore\eating\mob_vr.dm"
 #include "code\modules\vore\eating\silicon_vr.dm"
 #include "code\modules\vore\eating\simple_animal_vr.dm"
@@ -4658,12 +4634,6 @@
 #include "code\modules\vore\eating\transforming_vr.dm"
 #include "code\modules\vore\eating\vertical_nom_vr.dm"
 #include "code\modules\vore\eating\vore_vr.dm"
-#include "code\modules\vore\eating\vorehooks_vr.dm"
-<<<<<<< HEAD
-#include "code\modules\vore\eating\vorepanel_ch.dm"
-=======
-#include "code\modules\vore\eating\vorepanel_prefs.dm"
->>>>>>> f881d54dbf (Panel port test [IDB IGNORE] (#17350))
 #include "code\modules\vore\eating\vorepanel_vr.dm"
 #include "code\modules\vore\fluffstuff\custom_boxes_ch.dm"
 #include "code\modules\vore\fluffstuff\custom_boxes_vr.dm"

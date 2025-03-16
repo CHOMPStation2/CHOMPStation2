@@ -6,11 +6,7 @@
 	plane_holder.set_vis(VIS_CLOAKED, TRUE)
 	plane_holder.set_vis(VIS_AI_EYE, TRUE)
 	plane_holder.set_vis(VIS_AUGMENTED, TRUE) //VOREStation Add - GHOST VISION IS AUGMENTED
-<<<<<<< HEAD
-	plane_holder.set_vis(VIS_SOULCATCHER, TRUE) //CHOMPAdd Soulcatcher
-=======
 	plane_holder.set_vis(VIS_SOULCATCHER, TRUE) // Soulcatcher
->>>>>>> f881d54dbf (Panel port test [IDB IGNORE] (#17350))
 	plane = PLANE_GHOSTS
 	if(cleanup_timer)
 		deltimer(cleanup_timer)

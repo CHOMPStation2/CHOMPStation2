@@ -510,11 +510,7 @@
 		B.forceMove(src)
 		B.owner = src
 
-<<<<<<< HEAD
-	soulgem.owner = src //CHOMPAdd
-=======
 	soulgem.owner = src
->>>>>>> f881d54dbf (Panel port test [IDB IGNORE] (#17350))
 
 	//vore_organs.Cut()
 

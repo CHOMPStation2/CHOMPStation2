@@ -24,10 +24,6 @@
 	skull_type = /obj/item/digestion_remains/skull/teshari
 /datum/species/vox
 	skull_type = /obj/item/digestion_remains/skull/vox
-<<<<<<< HEAD
-//CHOMPadd start
-=======
->>>>>>> f881d54dbf (Panel port test [IDB IGNORE] (#17350))
 /datum/species/monkey
 	skull_type = /obj/item/digestion_remains/skull
 /datum/species/monkey/tajaran
@@ -44,10 +40,6 @@
 	skull_type = /obj/item/digestion_remains/skull/vulpkanin
 /datum/species/monkey/sergal
 	skull_type = /obj/item/digestion_remains/skull/sergal
-<<<<<<< HEAD
-//CHOMPadd end.
-=======
->>>>>>> f881d54dbf (Panel port test [IDB IGNORE] (#17350))
 
 /obj/belly/proc/handle_remains_leaving(var/mob/living/M)
 	if(!ishuman(M) && !isrobot(M))	//Are we even humanoid or a borg?
@@ -97,31 +89,18 @@
 		return			// TODO: add synth skulls and remove this.
 	var/skull_amount = 1
 	if(H.species.skull_type)
-<<<<<<< HEAD
-		new H.species.skull_type(src, owner, H) //CHOMPEdit
-=======
 		new H.species.skull_type(src, owner, H)
->>>>>>> f881d54dbf (Panel port test [IDB IGNORE] (#17350))
 		skull_amount--
 
 	if(skull_amount && H.species.selects_bodytype)
 		// We still haven't found correct skull...
 		if(H.species.base_species == SPECIES_HUMAN)
-<<<<<<< HEAD
-			new /obj/item/digestion_remains/skull/unknown(src, owner, H) //CHOMPEdit
-		else
-			new /obj/item/digestion_remains/skull/unknown/anthro(src, owner, H) //CHOMPEdit
-	else if(skull_amount)
-		// Something entirely different...
-		new /obj/item/digestion_remains/skull/unknown(src, owner, H) //CHOMPEdit
-=======
 			new /obj/item/digestion_remains/skull/unknown(src, owner, H)
 		else
 			new /obj/item/digestion_remains/skull/unknown/anthro(src, owner, H)
 	else if(skull_amount)
 		// Something entirely different...
 		new /obj/item/digestion_remains/skull/unknown(src, owner, H)
->>>>>>> f881d54dbf (Panel port test [IDB IGNORE] (#17350))
 
 
 /obj/item/digestion_remains
@@ -145,20 +124,12 @@
 	drop_sound = 'sound/items/drop/device.ogg'   //not organic bones, so they get different sounds
 	pickup_sound = 'sound/items/pickup/device.ogg'
 
-<<<<<<< HEAD
-/obj/item/digestion_remains/Initialize(mapload, var/mob/living/pred, var/mob/living/prey) //CHOMPEdit
-=======
 /obj/item/digestion_remains/Initialize(mapload, var/mob/living/pred, var/mob/living/prey)
->>>>>>> f881d54dbf (Panel port test [IDB IGNORE] (#17350))
 	. = ..()
 	if(!mapload)
 		pred_ckey = pred?.ckey
 		pred_name = pred?.name
-<<<<<<< HEAD
-		if(prey && isliving(prey) && prey.size_multiplier != 1) //CHOMPAdd
-=======
 		if(prey && isliving(prey) && prey.size_multiplier != 1)
->>>>>>> f881d54dbf (Panel port test [IDB IGNORE] (#17350))
 			icon_scale_x = prey.size_multiplier
 			icon_scale_y = prey.size_multiplier
 			update_transform()

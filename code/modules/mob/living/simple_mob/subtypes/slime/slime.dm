@@ -80,10 +80,7 @@ var/list/_slime_default_emotes = list(
 	var/injection_amount = 5 // This determines how much.
 	var/mood = ":3" // Icon to use to display 'mood', as an overlay.
 
-<<<<<<< HEAD
-	can_enter_vent_with = list(/obj/item/clothing/head,
-			/obj/soulgem // CHOMPAdd
-		)
+	can_enter_vent_with = list(/obj/item/clothing/head, /obj/soulgem)
 
 	can_be_drop_prey = FALSE //CHOMP Add
 
@@ -92,9 +89,6 @@ var/list/_slime_default_emotes = list(
 	pain_emote_1p = list("squish", "squelch")
 	pain_emote_3p = list("squishes", "squelches")
 	// CHOMPAdd End
-=======
-	can_enter_vent_with = list(/obj/item/clothing/head, /obj/soulgem)
->>>>>>> f881d54dbf (Panel port test [IDB IGNORE] (#17350))
 
 /mob/living/simple_mob/slime/get_available_emotes()
 	return global._slime_default_emotes.Copy()

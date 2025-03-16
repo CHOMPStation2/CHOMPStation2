@@ -20,21 +20,12 @@
 			plane_holder.set_vis(VIS_CH_VANTAG,FALSE)
 			vis_enabled -= VIS_CH_VANTAG
 
-<<<<<<< HEAD
-	//CHOMPAdd Start Soulcatcher
-=======
->>>>>>> f881d54dbf (Panel port test [IDB IGNORE] (#17350))
 	if(soulgem?.flag_check(SOULGEM_SEE_SR_SOULS))
 		plane_holder.set_vis(VIS_SOULCATCHER, TRUE)
 		vis_enabled += VIS_SOULCATCHER
 	else
 		plane_holder.set_vis(VIS_SOULCATCHER, FALSE)
 		vis_enabled -= VIS_SOULCATCHER
-<<<<<<< HEAD
-	//CHOMPAdd End
-=======
-
->>>>>>> f881d54dbf (Panel port test [IDB IGNORE] (#17350))
 	return
 
 

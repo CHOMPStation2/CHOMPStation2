@@ -507,11 +507,7 @@
 			B.owner = blob
 		vore_organs.Cut()
 
-<<<<<<< HEAD
-		soulgem.owner = blob // CHOMPAdd
-=======
 		soulgem.owner = blob
->>>>>>> f881d54dbf (Panel port test [IDB IGNORE] (#17350))
 
 		//We can still speak our languages!
 		blob.languages = languages.Copy()
@@ -623,11 +619,7 @@
 			B.owner = src
 		languages = blob.languages.Copy()
 
-<<<<<<< HEAD
-		soulgem.owner = src // CHOMPAdd
-=======
 		soulgem.owner = src
->>>>>>> f881d54dbf (Panel port test [IDB IGNORE] (#17350))
 
 		Life(1) //Fix my blindness right meow //Has to be moved up here, there exists a circumstance where blob could be deleted without vore organs moving right.
 

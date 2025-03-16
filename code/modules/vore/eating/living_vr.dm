@@ -17,11 +17,6 @@
 	var/absorbing_prey = 0 				// Determines if the person is using the succubus drain or not. See station_special_abilities_vr.
 	var/drain_finalized = 0				// Determines if the succubus drain will be KO'd/absorbed. Can be toggled on at any time.
 	var/fuzzy = 0						// Preference toggle for sharp/fuzzy icon.
-<<<<<<< HEAD
-//	var/voice_freq = 0					// Preference for character voice frequency		CHOMPEdit - Moved to modular_chomp/code/modules/mob/mob.dm
-//	var/list/voice_sounds_list = list()	// The sound list containing our voice sounds!	CHOMPEdit - Moved to modular_chomp/code/modules/mob/mob.dm
-=======
->>>>>>> f881d54dbf (Panel port test [IDB IGNORE] (#17350))
 	var/next_preyloop					// For Fancy sound internal loop
 	var/stuffing_feeder = FALSE			// Can feed foods to others whole, like trash eater can eat them on their own.
 	var/adminbus_trash = FALSE			// For abusing trash eater for event shenanigans.
@@ -29,11 +24,7 @@
 	var/vis_height = 32					// Sprite height used for resize features.
 	var/appendage_color = "#e03997" //Default pink. Used for the 'long_vore' trait.
 	var/appendage_alt_setting = FALSE	// Dictates if 'long_vore' user pulls prey to them or not. 1 = user thrown towards target.
-<<<<<<< HEAD
-	var/digestion_in_progress = FALSE	// CHOMPEdit: Gradual corpse gurgles
-=======
 	var/digestion_in_progress = FALSE	// Gradual corpse gurgles
->>>>>>> f881d54dbf (Panel port test [IDB IGNORE] (#17350))
 	var/regen_sounds = list(
 		'sound/effects/mob_effects/xenochimera/regen_1.ogg',
 		'sound/effects/mob_effects/xenochimera/regen_2.ogg',
@@ -74,19 +65,10 @@
 /mob/proc/init_vore()
 	//Something else made organs, meanwhile.
 	if(!isnewplayer(src))
-<<<<<<< HEAD
-		AddElement(/datum/element/slosh) // CHOMPEdit - Sloshy element
-	if(LAZYLEN(vore_organs))
-		//CHOMPAdd Start
-		if(!soulgem)
-			soulgem = new(src)
-		//CHOMPAdd End
-=======
 		AddElement(/datum/element/slosh)
 	if(LAZYLEN(vore_organs))
 		if(!soulgem)
 			soulgem = new(src)
->>>>>>> f881d54dbf (Panel port test [IDB IGNORE] (#17350))
 		return TRUE
 
 	//We'll load our client's organs if we have one
@@ -111,14 +93,9 @@
 			var/mob/living/carbon/human/H = src
 			if(istype(H.species,/datum/species/monkey))
 				allow_spontaneous_tf = TRUE
-<<<<<<< HEAD
-		//CHOMPAdd Start
-=======
->>>>>>> f881d54dbf (Panel port test [IDB IGNORE] (#17350))
 		if(!soulgem)
 			soulgem = new(src)
 		return TRUE
-		//CHOMPAdd End
 
 /mob/living/init_vore()
 	if(no_vore)
@@ -305,16 +282,9 @@
 	P.nutrition_messages = src.nutrition_messages
 	P.weight_message_visible = src.weight_message_visible
 	P.weight_messages = src.weight_messages
-<<<<<<< HEAD
-	P.vore_sprite_color = src.vore_sprite_color // CHOMPEdit
-	P.allow_mind_transfer = src.allow_mind_transfer
-
-	//CHOMP stuff Start
-=======
 	P.vore_sprite_color = src.vore_sprite_color
 	P.allow_mind_transfer = src.allow_mind_transfer
 
->>>>>>> f881d54dbf (Panel port test [IDB IGNORE] (#17350))
 	P.phase_vore = src.phase_vore
 	P.noisy_full = src.noisy_full
 	P.latejoin_vore = src.latejoin_vore
@@ -333,10 +303,6 @@
 	P.no_latejoin_prey_warning_persists = src.no_latejoin_prey_warning_persists
 	P.belly_rub_target = src.belly_rub_target
 	P.soulcatcher_pref_flags = src.soulcatcher_pref_flags
-<<<<<<< HEAD
-	//CHOMP Stuff End
-=======
->>>>>>> f881d54dbf (Panel port test [IDB IGNORE] (#17350))
 
 	var/list/serialized = list()
 	for(var/obj/belly/B as anything in src.vore_organs)
@@ -344,21 +310,13 @@
 
 	P.belly_prefs = serialized
 
-<<<<<<< HEAD
-	P.soulcatcher_prefs = src.soulgem.serialize() // CHOMPAdd
-=======
 	P.soulcatcher_prefs = src.soulgem.serialize()
->>>>>>> f881d54dbf (Panel port test [IDB IGNORE] (#17350))
 	return TRUE
 
 //
 //	Proc for applying vore preferences, given bellies
 //
-<<<<<<< HEAD
-/mob/proc/copy_from_prefs_vr(var/bellies = TRUE, var/full_vorgans = FALSE) //CHOMPedit: full_vorgans var to bypass 1-belly load optimization.
-=======
 /mob/proc/copy_from_prefs_vr(var/bellies = TRUE, var/full_vorgans = FALSE) // full_vorgans var to bypass 1-belly load optimization.
->>>>>>> f881d54dbf (Panel port test [IDB IGNORE] (#17350))
 	if(!client || !client.prefs_vr)
 		to_chat(src,span_warning("You attempted to apply your vore prefs but somehow you're in this character without a client.prefs_vr variable. Tell a dev."))
 		return FALSE
@@ -380,10 +338,6 @@
 	show_vore_fx = P.show_vore_fx
 	can_be_drop_prey = P.can_be_drop_prey
 	can_be_drop_pred = P.can_be_drop_pred
-<<<<<<< HEAD
-//	allow_inbelly_spawning = P.allow_inbelly_spawning //CHOMP Removal: we have vore spawning at home. Actually if this were to be enabled, it would break anyway. Just leaving this here as a reference to it.
-=======
->>>>>>> f881d54dbf (Panel port test [IDB IGNORE] (#17350))
 	allow_spontaneous_tf = P.allow_spontaneous_tf
 	step_mechanics_pref = P.step_mechanics_pref
 	pickup_pref = P.pickup_pref
@@ -404,10 +358,6 @@
 	vore_sprite_color = P.vore_sprite_color
 	allow_mind_transfer = P.allow_mind_transfer
 
-<<<<<<< HEAD
-	//CHOMP stuff
-=======
->>>>>>> f881d54dbf (Panel port test [IDB IGNORE] (#17350))
 	phase_vore = P.phase_vore
 	noisy_full = P.noisy_full
 	latejoin_vore = P.latejoin_vore
@@ -431,11 +381,7 @@
 		if(isliving(src))
 			var/mob/living/L = src
 			L.release_vore_contents(silent = TRUE)
-<<<<<<< HEAD
-		QDEL_LIST(vore_organs) // CHOMPedit
-=======
 		QDEL_LIST(vore_organs)
->>>>>>> f881d54dbf (Panel port test [IDB IGNORE] (#17350))
 		for(var/entry in P.belly_prefs)
 			list_to_object(entry,src)
 		if(!vore_organs.len)
@@ -448,10 +394,6 @@
 		else
 			vore_selected = vore_organs[1]
 
-<<<<<<< HEAD
-		//CHOMPAdd Start
-=======
->>>>>>> f881d54dbf (Panel port test [IDB IGNORE] (#17350))
 		if(soulgem)
 			src.soulgem.release_mobs()
 			QDEL_NULL(soulgem)
@@ -459,10 +401,6 @@
 			soulgem = list_to_object(P.soulcatcher_prefs, src)
 		else
 			soulgem = new(src)
-<<<<<<< HEAD
-		//CHMPAdd End
-=======
->>>>>>> f881d54dbf (Panel port test [IDB IGNORE] (#17350))
 
 	return TRUE
 
@@ -588,19 +526,6 @@
 	if(!istype(tasted))
 		return
 
-<<<<<<< HEAD
-	if(!checkClickCooldown() || incapacitated(INCAPACITATION_KNOCKOUT)) //CHOMPEdit
-		return
-
-	setClickCooldown(DEFAULT_ATTACK_COOLDOWN)
-	if(tasted == src) //CHOMPEdit Start
-		visible_message(span_vwarning("[src] licks themself!"),span_notice("You lick yourself. You taste rather like [tasted.get_taste_message()]."),span_infoplain(span_bold("Slurp!")))
-		balloon_alert_visible("licks themself!", "tastes like [tasted.get_taste_message()]")
-	else
-		visible_message(span_vwarning("[src] licks [tasted]!"),span_notice("You lick [tasted]. They taste rather like [tasted.get_taste_message()]."),span_infoplain(span_bold("Slurp!")))
-		balloon_alert_visible("licks [tasted]!", "tastes like [tasted.get_taste_message()]")
-		//CHOMPEdit End
-=======
 	if(!checkClickCooldown() || incapacitated(INCAPACITATION_KNOCKOUT))
 		return
 
@@ -612,7 +537,6 @@
 		visible_message(span_vwarning("[src] licks [tasted]!"),span_notice("You lick [tasted]. They taste rather like [tasted.get_taste_message()]."),span_infoplain(span_bold("Slurp!")))
 		//balloon_alert_visible("licks [tasted]!", "tastes like [tasted.get_taste_message()]")
 
->>>>>>> f881d54dbf (Panel port test [IDB IGNORE] (#17350))
 
 
 /mob/living/proc/get_taste_message(allow_generic = 1)
@@ -639,11 +563,7 @@
 
 
 //This is just the above proc but switched about.
-<<<<<<< HEAD
-/mob/living/proc/smell(mob/living/smelled in living_mobs(1, TRUE)) //CHOMPEdit
-=======
 /mob/living/proc/smell(mob/living/smelled in living_mobs(1, TRUE))
->>>>>>> f881d54dbf (Panel port test [IDB IGNORE] (#17350))
 	set name = "Smell"
 	set category = "IC.Game"
 	set desc = "Smell someone nearby!"
@@ -651,19 +571,6 @@
 
 	if(!istype(smelled))
 		return
-<<<<<<< HEAD
-	if(!checkClickCooldown() || incapacitated(INCAPACITATION_KNOCKOUT)) //CHOMPEdit
-		return
-
-	setClickCooldown(DEFAULT_ATTACK_COOLDOWN)
-	if(smelled == src) //CHOMPEdit Start
-		visible_message(span_vwarning("[src] smells themself!"),span_notice("You smell yourself. You smell like [smelled.get_smell_message()]."),span_infoplain(span_bold("Sniff!")))
-		balloon_alert_visible("smells themself!", "smells like [smelled.get_smell_message()]")
-	else
-		visible_message(span_vwarning("[src] smells [smelled]!"),span_notice("You smell [smelled]. They smell like [smelled.get_smell_message()]."),span_infoplain(span_bold("Sniff!")))
-		balloon_alert_visible("smells [smelled]!", "smells like [smelled.get_smell_message()]")
-		//CHOMPEdit End
-=======
 	if(!checkClickCooldown() || incapacitated(INCAPACITATION_KNOCKOUT))
 		return
 
@@ -675,7 +582,6 @@
 		visible_message(span_vwarning("[src] smells [smelled]!"),span_notice("You smell [smelled]. They smell like [smelled.get_smell_message()]."),span_infoplain(span_bold("Sniff!")))
 		//balloon_alert_visible("smells [smelled]!", "smells like [smelled.get_smell_message()]")
 
->>>>>>> f881d54dbf (Panel port test [IDB IGNORE] (#17350))
 
 /mob/living/proc/get_smell_message(allow_generic = 1)
 	if(!vore_smell && !allow_generic)
@@ -723,11 +629,7 @@
 			LAZYSET(SA.prey_excludes, src, world.time)
 		log_and_message_admins("used the OOC escape button to get out of [key_name(B.owner)] ([B.owner ? "<a href='byond://?_src_=holder;[HrefToken()];adminplayerobservecoodjump=1;X=[B.owner.x];Y=[B.owner.y];Z=[B.owner.z]'>JMP</a>" : "null"])", src)
 
-<<<<<<< HEAD
-		B.owner.handle_belly_update() //CHOMPEdit - This is run whenever a belly's contents are changed.
-=======
 		B.owner.handle_belly_update() //This is run whenever a belly's contents are changed.
->>>>>>> f881d54dbf (Panel port test [IDB IGNORE] (#17350))
 
 	//You're in a dogborg!
 	else if(istype(loc, /obj/item/dogborg/sleeper))
@@ -753,21 +655,13 @@
 		crystal.unleash()
 		crystal.bound_mob = null
 		crystal.bound_mob = capture_crystal = 0
-<<<<<<< HEAD
-		clear_fullscreen(ATOM_BELLY_FULLSCREEN) // CHOMPedit
-=======
 		clear_fullscreen(ATOM_BELLY_FULLSCREEN)
->>>>>>> f881d54dbf (Panel port test [IDB IGNORE] (#17350))
 		log_and_message_admins("used the OOC escape button to get out of [crystal] owned by [crystal.owner]. [ADMIN_FLW(src)]", src)
 
 	//You've been turned into an item!
 	else if(tf_mob_holder && isvoice(src) && istype(src.loc, /obj/item))
 		var/obj/item/item_to_destroy = src.loc //If so, let's destroy the item they just TF'd out of.
-<<<<<<< HEAD
-		//CHOMPEdit Start - If tf_mob_holder is not located in src, then it's a Mind Binder OOC Escape
-=======
 		//If tf_mob_holder is not located in src, then it's a Mind Binder OOC Escape
->>>>>>> f881d54dbf (Panel port test [IDB IGNORE] (#17350))
 		var/mob/living/ourmob = tf_mob_holder
 		if(ourmob.loc != src)
 			if(isnull(ourmob.loc))
@@ -782,10 +676,6 @@
 			qdel(src)
 			log_and_message_admins("[key_name(src)] used the OOC escape button to revert back to their original form from being TFed into an object.")
 			return
-<<<<<<< HEAD
-		//CHOMPEdit End
-=======
->>>>>>> f881d54dbf (Panel port test [IDB IGNORE] (#17350))
 		if(istype(src.loc, /obj/item/clothing)) //Are they in clothes? Delete the item then revert them.
 			qdel(item_to_destroy)
 			log_and_message_admins("used the OOC escape button to revert back to their original form from being TFed into an object.", src)
@@ -811,11 +701,7 @@
 		qdel(G)
 		log_and_message_admins("used the OOC escape button to revert back from being petrified.", src)
 
-<<<<<<< HEAD
-	//CHOMPEdit - In-shoe OOC escape. Checking voices as precaution if something akin to obj TF or possession happens
-=======
 	//In-shoe OOC escape. Checking voices as precaution if something akin to obj TF or possession happens
->>>>>>> f881d54dbf (Panel port test [IDB IGNORE] (#17350))
 	else if(!istype(src, /mob/living/voice) && istype(src.loc, /obj/item/clothing/shoes))
 		var/obj/item/clothing/shoes/S = src.loc
 		forceMove(get_turf(src))
@@ -843,20 +729,12 @@
 // Eating procs depending on who clicked what
 //
 
-<<<<<<< HEAD
-//CHOMPAdd Start
-=======
->>>>>>> f881d54dbf (Panel port test [IDB IGNORE] (#17350))
 /mob/living/proc/feedable_bellies()
 	var/list/bellies = list()
 	for(var/obj/belly/Y in src.vore_organs)
 		if(Y.is_feedable)
 			bellies += Y
 	return bellies
-<<<<<<< HEAD
-//CHOMPAdd End
-=======
->>>>>>> f881d54dbf (Panel port test [IDB IGNORE] (#17350))
 
 /mob/living/proc/feed_grabbed_to_self(mob/living/user, mob/living/prey)
 	var/belly = user.vore_selected
@@ -865,29 +743,17 @@
 /mob/living/proc/eat_held_mob(mob/living/user, mob/living/prey, mob/living/pred)
 	var/belly
 	if(user != pred)
-<<<<<<< HEAD
-		belly = tgui_input_list(user, "Choose Belly", "Belly Choice", pred.feedable_bellies())	//CHOMPEdit
-=======
 		belly = tgui_input_list(user, "Choose Belly", "Belly Choice", pred.feedable_bellies())
->>>>>>> f881d54dbf (Panel port test [IDB IGNORE] (#17350))
 	else
 		belly = pred.vore_selected
 	return perform_the_nom(user, prey, pred, belly)
 
 /mob/living/proc/feed_self_to_grabbed(mob/living/user, mob/living/pred)
-<<<<<<< HEAD
-	var/belly = tgui_input_list(user, "Choose Belly", "Belly Choice", pred.feedable_bellies())	//CHOMPEdit
-	return perform_the_nom(user, user, pred, belly)
-
-/mob/living/proc/feed_grabbed_to_other(mob/living/user, mob/living/prey, mob/living/pred)
-	var/belly = tgui_input_list(user, "Choose Belly", "Belly Choice", pred.feedable_bellies())	//CHOMPEdit
-=======
 	var/belly = tgui_input_list(user, "Choose Belly", "Belly Choice", pred.feedable_bellies())
 	return perform_the_nom(user, user, pred, belly)
 
 /mob/living/proc/feed_grabbed_to_other(mob/living/user, mob/living/prey, mob/living/pred)
 	var/belly = tgui_input_list(user, "Choose Belly", "Belly Choice", pred.feedable_bellies())
->>>>>>> f881d54dbf (Panel port test [IDB IGNORE] (#17350))
 	return perform_the_nom(user, prey, pred, belly)
 
 //
@@ -964,13 +830,8 @@
 	prey.ai_holder?.react_to_attack(user)
 
 	//Timer and progress bar
-<<<<<<< HEAD
-	if(!user.client && prey.weakened > 0) // CHOMPEdit stop crwaling instantly break swallow attempt for mobvore
-		prey.Stun(min(prey.weakened, 2)) // CHOMPEdit stop crwaling instantly break swallow attempt for mobvore
-=======
 	if(!user.client && prey.weakened > 0) // stop crwaling instantly break swallow attempt for mobvore
 		prey.Stun(min(prey.weakened, 2)) // stop crwaling instantly break swallow attempt for mobvore
->>>>>>> f881d54dbf (Panel port test [IDB IGNORE] (#17350))
 	if(!do_after(user, swallow_time, prey, exclusive = TASK_USER_EXCLUSIVE))
 		return FALSE // Prey escpaed (or user disabled) before timer expired.
 
@@ -1048,7 +909,7 @@
 /datum/gas_mixture/belly_air/vox/New()
 	. = ..()
 	gas = list(
-		GAS_N2 = 100) // Chomp edit
+		GAS_N2 = 100) // CHOMPEdit
 
 /datum/gas_mixture/belly_air/zaddat
 	volume = 2500
@@ -1070,10 +931,6 @@
 	gas = list(
 		GAS_N2 = 100)
 
-<<<<<<< HEAD
-//CHOMPEdit Start - for CO2 breathers
-=======
->>>>>>> f881d54dbf (Panel port test [IDB IGNORE] (#17350))
 /datum/gas_mixture/belly_air/carbon_dioxide_breather
 	volume = 2500
 	temperature = 293.150
@@ -1083,10 +940,6 @@
 	. = ..()
 	gas = list(
 		GAS_CO2 = 100)
-<<<<<<< HEAD
-//CHOMPEdit End
-=======
->>>>>>> f881d54dbf (Panel port test [IDB IGNORE] (#17350))
 
 /mob/living/proc/feed_grabbed_to_self_falling_nom(var/mob/living/user, var/mob/living/prey)
 	if(user.is_incorporeal())
@@ -1147,11 +1000,7 @@
 		to_chat(src, span_notice("You are not holding anything."))
 		return
 
-<<<<<<< HEAD
-	if(is_type_in_list(I,edible_trash) || adminbus_trash || is_type_in_list(I,edible_tech) && isSynthetic()) // CHOMPEdit adds edible tech for synth
-=======
 	if(is_type_in_list(I,edible_trash) || adminbus_trash || is_type_in_list(I,edible_tech) && isSynthetic()) // adds edible tech for synth
->>>>>>> f881d54dbf (Panel port test [IDB IGNORE] (#17350))
 		if(!I.on_trash_eaten(src)) // shows object's rejection message itself
 			return
 		drop_item()
@@ -1159,15 +1008,9 @@
 		updateVRPanel()
 		log_admin("VORE: [src] used Eat Trash to swallow [I].")
 		I.after_trash_eaten(src)
-<<<<<<< HEAD
-		visible_message(span_vwarning("[src] demonstrates the voracious capabilities of their [lowertext(vore_selected.name)] by making [I] disappear!")) //CHOMPedit
-		return
-	to_chat(src, span_notice("This snack is too powerful to go down that easily.")) //CHOMPEdit
-=======
 		visible_message(span_vwarning("[src] demonstrates the voracious capabilities of their [lowertext(vore_selected.name)] by making [I] disappear!"))
 		return
 	to_chat(src, span_notice("This snack is too powerful to go down that easily."))
->>>>>>> f881d54dbf (Panel port test [IDB IGNORE] (#17350))
 	return
 
 /mob/living/proc/toggle_trash_catching() //Ported from chompstation
@@ -1175,11 +1018,7 @@
 	set category = "Abilities.Vore"
 	set desc = "Toggle Trash Eater throw vore abilities."
 	trash_catching = !trash_catching
-<<<<<<< HEAD
-	to_chat(src, span_vwarning("Trash catching [trash_catching ? "enabled" : "disabled"].")) //CHOMPEdit
-=======
 	to_chat(src, span_vwarning("Trash catching [trash_catching ? "enabled" : "disabled"]."))
->>>>>>> f881d54dbf (Panel port test [IDB IGNORE] (#17350))
 
 /mob/living/proc/eat_minerals() //Actual eating abstracted so the user isn't given a prompt due to an argument in this verb.
 	set name = "Eat Minerals"
@@ -1361,11 +1200,7 @@
 			save_ooc_panel(usr)
 	if(href_list["print_ooc_notes_chat"])
 		print_ooc_notes_chat(usr)
-<<<<<<< HEAD
-	//CHOMPEdit Start
-=======
-	/* Not implemented on virgo
->>>>>>> f881d54dbf (Panel port test [IDB IGNORE] (#17350))
+	// CHOMPEnable Start
 	if(href_list["edit_ooc_note_favs"])
 		if(usr == src)
 			set_metainfo_favs(usr)
@@ -1374,11 +1209,7 @@
 			set_metainfo_maybes(usr)
 	if(href_list["set_metainfo_ooc_style"])
 		set_metainfo_ooc_style(usr)
-<<<<<<< HEAD
-	//CHOMPEdit End
-=======
-	*/
->>>>>>> f881d54dbf (Panel port test [IDB IGNORE] (#17350))
+	// CHOMPEnable End
 	if(href_list["save_private_notes"])
 		if(usr == src)
 			save_private_notes(usr)
@@ -1395,10 +1226,6 @@
 		dat += span_red(span_bold("OOC DISABLED")) + "<br>"
 	if(!client?.prefs?.read_preference(/datum/preference/toggle/show_looc))
 		dat += span_red(span_bold("LOOC DISABLED")) + "<br>"
-<<<<<<< HEAD
-	//CHOMPEdit Start
-=======
->>>>>>> f881d54dbf (Panel port test [IDB IGNORE] (#17350))
 	dat += span_bold("Devourable:") + " [devourable ? span_green("Enabled") : span_red("Disabled")]<br>"
 	if(devourable)
 		dat += span_bold("Healbelly permission:") + " [permit_healbelly ? span_green("Allowed") : span_red("Disallowed")]<br>"
@@ -1428,10 +1255,7 @@
 	dat += span_bold("Feedable:") + " [feeding ? span_green("Enabled") : span_red("Disabled")]<br>"
 	dat += span_bold("Receiving liquids:") + " [receive_reagents ? span_green("Enabled") : span_red("Disabled")]<br>"
 	dat += span_bold("Giving liquids:") + " [give_reagents ? span_green("Enabled") : span_red("Disabled")]<br>"
-<<<<<<< HEAD
-=======
 	dat += span_bold("Consuming liquids:") + " [consume_liquid_belly ? span_green("Enabled") : span_red("Disabled")]<br>"
->>>>>>> f881d54dbf (Panel port test [IDB IGNORE] (#17350))
 	dat += span_bold("Late join spawn point belly:") + " [latejoin_vore ? span_green("Enabled") : span_red("Disabled")]<br>"
 	if(latejoin_vore)
 		dat += span_bold("Late join spawn auto accept:") + " [no_latejoin_vore_warning ? span_green("Enabled") : span_red("Disabled")]<br>"
@@ -1441,36 +1265,18 @@
 	dat += span_bold("Global Vore Privacy is:") + " [eating_privacy_global ? span_green("Subtle") : span_red("Loud")]<br>"
 	dat += span_bold("Current active belly:") + " [vore_selected ? vore_selected.name : "None"]<br>"
 	dat += span_bold("Belly rub target:") + " [belly_rub_target ? belly_rub_target : (vore_selected ? vore_selected.name : "None")]<br>"
-<<<<<<< HEAD
-	//CHOMPEdit End
-=======
->>>>>>> f881d54dbf (Panel port test [IDB IGNORE] (#17350))
 	var/datum/browser/popup = new(user, "[name]mvp", "Vore Prefs: [src]", 300, 700, src)
 	popup.set_content(dat)
 	popup.open()
 
 // Full screen belly overlays!
 /obj/screen/fullscreen/belly
-<<<<<<< HEAD
-	icon = 'modular_chomp/icons/mob/vore_fullscreens/screen_full_vore_ch.dmi' //CHOMPedit
-
-/obj/screen/fullscreen/belly/fixed //CHOMPedit: tweaking to preserve save data
-	icon = 'icons/mob/screen_full_vore.dmi' //CHOMPedit: tweaking to preserve save data
-	icon_state = ""
-
-/* //Chomp DISABLE - use our solution, not upstream's.
-/obj/screen/fullscreen/belly/colorized/overlay
-	icon = 'icons/mob/screen_full_colorized_vore_overlays.dmi'
-*/ //Chomp DISABLE End
-
-=======
 	icon = 'icons/mob/vore_fullscreens/screen_full_vore_list.dmi'
 
 /obj/screen/fullscreen/belly/fixed
 	icon = 'icons/mob/screen_full_vore.dmi'
 	icon_state = ""
 
->>>>>>> f881d54dbf (Panel port test [IDB IGNORE] (#17350))
 /mob/living/proc/vorebelly_printout() //Spew the vorepanel belly messages into chat window for copypasting.
 	set name = "X-Print Vorebelly Settings"
 	set category = "Preferences.Vore"
@@ -1637,11 +1443,7 @@
 	if(owner.client)
 		create_mob_button(parent)
 	add_verb(owner, /mob/proc/insidePanel)
-<<<<<<< HEAD
-	if(!owner.vorePanel) //CHOMPEdit
-=======
 	if(!owner.vorePanel)
->>>>>>> f881d54dbf (Panel port test [IDB IGNORE] (#17350))
 		owner.vorePanel = new(owner)
 
 /datum/component/vore_panel/UnregisterFromParent()
@@ -1673,11 +1475,7 @@
 /datum/component/vore_panel/proc/vore_panel_click(source, location, control, params, user)
 	var/mob/living/owner = user
 	if(istype(owner) && owner.vorePanel)
-<<<<<<< HEAD
-		INVOKE_ASYNC(owner, TYPE_PROC_REF(/mob/living, insidePanel), owner) //CHOMPEdit
-=======
 		INVOKE_ASYNC(owner, TYPE_PROC_REF(/mob/living, insidePanel), owner)
->>>>>>> f881d54dbf (Panel port test [IDB IGNORE] (#17350))
 /**
  * Screen object for vore panel
  */

@@ -103,7 +103,6 @@
 		var/turf/get_dat_turf = get_turf(target)
 		ourmob.loc = get_dat_turf
 		ourmob.forceMove(get_dat_turf)
-<<<<<<< HEAD
 		if(!M.tf_form_ckey)
 			ourmob.vore_selected = M.vore_selected
 			M.vore_selected = null
@@ -112,12 +111,6 @@
 			M.soulgem.transfer_self(ourmob) //CHOMPAdd Soulcatcher
 
 		ourmob.ckey = M.ckey
-=======
-		ourmob.vore_selected = M.vore_selected
-		M.vore_selected = null
-		ourmob.mob_belly_transfer(M)
-		M.soulgem.transfer_self(ourmob) // Soulcatcher
->>>>>>> f881d54dbf (Panel port test [IDB IGNORE] (#17350))
 
 		ourmob.Life(1)
 		if(ishuman(M))
@@ -209,7 +202,6 @@
 		var/turf/get_dat_turf = get_turf(target)
 		ourmob.loc = get_dat_turf
 		ourmob.forceMove(get_dat_turf)
-<<<<<<< HEAD
 		if(!M.tf_form_ckey) //CHOMPEdit Start
 			ourmob.vore_selected = M.vore_selected
 			M.vore_selected = null
@@ -222,17 +214,6 @@
 			ourmob.nutrition = M.nutrition
 			M.soulgem.transfer_self(ourmob) //CHOMPAdd Soulcatcher
 		ourmob.ckey = M.ckey
-=======
-		ourmob.vore_selected = M.vore_selected
-		M.vore_selected = null
-		for(var/obj/belly/B as anything in M.vore_organs)
-			B.loc = ourmob
-			B.forceMove(ourmob)
-			B.owner = ourmob
-			M.vore_organs -= B
-			ourmob.vore_organs += B
-		M.soulgem.transfer_self(ourmob) // Soulcatcher
->>>>>>> f881d54dbf (Panel port test [IDB IGNORE] (#17350))
 
 		ourmob.Life(1)
 

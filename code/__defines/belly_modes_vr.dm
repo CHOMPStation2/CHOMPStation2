@@ -22,25 +22,15 @@
 #define DM_FLAG_JAMSENSORS		0x20
 #define DM_FLAG_FORCEPSAY		0x40
 #define DM_FLAG_SPARELIMB		0x80
-<<<<<<< HEAD
-#define DM_FLAG_SLOWBODY		0x100 //CHOMPAdd
-#define DM_FLAG_MUFFLEITEMS		0x200 //CHOMPAdd
-#define DM_FLAG_TURBOMODE		0x400 //CHOMPAdd
-=======
 #define DM_FLAG_SLOWBODY		0x100
 #define DM_FLAG_MUFFLEITEMS		0x200
 #define DM_FLAG_TURBOMODE		0x400
->>>>>>> f881d54dbf (Panel port test [IDB IGNORE] (#17350))
 
 //Item related modes
 #define IM_HOLD									"Hold"
 #define IM_DIGEST_FOOD							"Digest (Food Only)"
 #define IM_DIGEST								"Digest"
-<<<<<<< HEAD
-#define IM_DIGEST_PARALLEL						"Digest (Dispersed Damage)" //CHOMPedit
-=======
 #define IM_DIGEST_PARALLEL						"Digest (Dispersed Damage)"
->>>>>>> f881d54dbf (Panel port test [IDB IGNORE] (#17350))
 
 //Stance for hostile mobs to be in while devouring someone.
 #define HOSTILE_STANCE_EATING	99

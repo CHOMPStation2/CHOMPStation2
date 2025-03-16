@@ -184,11 +184,7 @@
 		var/list/potentials = living_mobs(0)
 		if(potentials.len)
 			var/mob/living/target = pick(potentials)
-<<<<<<< HEAD
 			if(can_be_drop_pred && istype(target) && target.devourable && target.can_be_drop_prey && target.phase_vore && vore_selected && phase_vore)
-=======
-			if(istype(target) && target.devourable && target.can_be_drop_prey && target.phase_vore && vore_selected && phase_vore)
->>>>>>> f881d54dbf (Panel port test [IDB IGNORE] (#17350))
 				target.forceMove(vore_selected)
 				to_chat(target, span_vwarning("\The [src] phases in around you, [vore_selected.vore_verb]ing you into their [vore_selected.name]!"))
 				to_chat(src, span_vwarning("You phase around [target], [vore_selected.vore_verb]ing them into your [vore_selected.name]!"))

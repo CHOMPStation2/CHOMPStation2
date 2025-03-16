@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-//CHOMPEdit, all moved to globals! code\__defines\nif_ch.dm
-//These two also have NIF FLAG representations. These are the local setting representations.
-//# define NIF_SC_CATCHING_ME			0x1 //CHOMPRemove
-//# define NIF_SC_CATCHING_OTHERS		0x2 //CHOMPRemove
-//These are purely local setings flags, without global representation.
-//# define NIF_SC_ALLOW_EARS			0x4 //CHOMPRemove
-//# define NIF_SC_ALLOW_EYES			0x8 //CHOMPRemove
-//# define NIF_SC_BACKUPS				0x10 //CHOMPRemove
-//# define NIF_SC_PROJECTING			0x20 //CHOMPRemove
-
-=======
->>>>>>> f881d54dbf (Panel port test [IDB IGNORE] (#17350))
 ///////////
 // Soulcatcher - Like a posibrain, sorta!
 /datum/nifsoft/soulcatcher
@@ -272,19 +259,11 @@
 		brainmob.ooc_notes = H.ooc_notes
 		brainmob.ooc_notes_likes = H.ooc_notes_likes
 		brainmob.ooc_notes_dislikes = H.ooc_notes_dislikes
-<<<<<<< HEAD
-		//CHOMPEdit Start
+		//CHOMPEnable Start
 		brainmob.ooc_notes_favs = H.ooc_notes_favs
 		brainmob.ooc_notes_maybes = H.ooc_notes_maybes
 		brainmob.ooc_notes_style = H.ooc_notes_style
-		//CHOMPEdit End
-=======
-		/* Not implemented on virgo
-		brainmob.ooc_notes_favs = H.ooc_notes_favs
-		brainmob.ooc_notes_maybes = H.ooc_notes_maybes
-		brainmob.ooc_notes_style = H.ooc_notes_style
-		*/
->>>>>>> f881d54dbf (Panel port test [IDB IGNORE] (#17350))
+		//CHOMPEnable End
 		brainmob.timeofhostdeath = H.timeofdeath
 		SStranscore.m_backup(brainmob.mind,0) //It does ONE, so medical will hear about it.
 
@@ -329,11 +308,7 @@
 /mob/living/carbon/brain/caught_soul/Login()
 	..()
 	plane_holder.set_vis(VIS_AUGMENTED, TRUE)
-<<<<<<< HEAD
-	plane_holder.set_vis(VIS_SOULCATCHER, TRUE) //CHOMPAdd
-=======
 	plane_holder.set_vis(VIS_SOULCATCHER, TRUE)
->>>>>>> f881d54dbf (Panel port test [IDB IGNORE] (#17350))
 	identifying_gender = client.prefs.identifying_gender
 
 /mob/living/carbon/brain/caught_soul/Destroy()
@@ -355,11 +330,7 @@
 
 	. = ..()
 
-<<<<<<< HEAD
-	if(!parent_mob && !transient &&(life_tick % 150 == 0) && soulcatcher?.setting_flags & NIF_SC_BACKUPS) //CHOMPEdit
-=======
 	if(!parent_mob && !transient &&(life_tick % 150 == 0) && soulcatcher?.setting_flags & NIF_SC_BACKUPS)
->>>>>>> f881d54dbf (Panel port test [IDB IGNORE] (#17350))
 		SStranscore.m_backup(mind,0) //Passed 0 means "Don't touch the nif fields on the mind record"
 
 	life_tick++
@@ -374,11 +345,7 @@
 	if(parent_mob) return
 
 	//If they're blinded
-<<<<<<< HEAD
-	if(soulcatcher) // CHOMPEdit Start, needs it's own handling to allow vore_fx
-=======
 	if(soulcatcher) // needs it's own handling to allow vore_fx
->>>>>>> f881d54dbf (Panel port test [IDB IGNORE] (#17350))
 		if(ext_blind)
 			eye_blind = 5
 			client.screen.Remove(global_hud.whitense)
@@ -387,25 +354,14 @@
 			eye_blind = 0
 			clear_fullscreens()
 			client.screen.Add(global_hud.whitense)
-<<<<<<< HEAD
-	//CHOMPEdit End
-=======
->>>>>>> f881d54dbf (Panel port test [IDB IGNORE] (#17350))
 
 	//If they're deaf
 	if(ext_deaf)
 		ear_deaf = 5
-<<<<<<< HEAD
-		deaf_loop.start(skip_start_sound = TRUE) // CHOMPStation Add: Ear Ringing/Deafness
+		deaf_loop.start(skip_start_sound = TRUE) // CHOMPEnable: Ear Ringing/Deafness
 	else
 		ear_deaf = 0
-		deaf_loop.stop() // CHOMPStation Add: Ear Ringing/Deafness
-=======
-		//deaf_loop.start(skip_start_sound = TRUE) // Not implemented on Virgo
-	else
-		ear_deaf = 0
-		//deaf_loop.stop()  // Not implemented on Virgo
->>>>>>> f881d54dbf (Panel port test [IDB IGNORE] (#17350))
+		deaf_loop.stop() // CHOMPEnable: Ear Ringing/Deafness
 
 /mob/living/carbon/brain/caught_soul/hear_say()
 	if(ext_deaf || !client)
@@ -474,11 +430,7 @@
 	plane = PLANE_AUGMENTED
 	icon = 'icons/obj/machines/ar_elements.dmi'
 	icon_state = "beacon"
-<<<<<<< HEAD
-	var/mob/living/parent_human //CHOMPEdit, no human, all living!
-=======
 	var/mob/living/parent_human
->>>>>>> f881d54dbf (Panel port test [IDB IGNORE] (#17350))
 
 /mob/observer/eye/ar_soul/New(var/mob/brainmob, var/human)
 	ASSERT(brainmob && brainmob.client)
@@ -539,11 +491,7 @@
 
 ///////////////////
 //The catching hook
-<<<<<<< HEAD
-/hook/death/proc/nif_soulcatcher(var/mob/living/L) 	//CHOMPEdit Start
-=======
 /hook/death/proc/nif_soulcatcher(var/mob/living/L)
->>>>>>> f881d54dbf (Panel port test [IDB IGNORE] (#17350))
 	if(!istype(L) || !L.mind) return TRUE //Hooks must return TRUE
 
 	if(isbelly(L.loc)) //Died in someone
@@ -575,10 +523,6 @@
 		if(H.nif && H.nif.flag_check(NIF_O_SCMYSELF,NIF_FLAGS_OTHER)) //They are caught in their own NIF
 			var/datum/nifsoft/soulcatcher/SC = H.nif.imp_check(NIF_SOULCATCHER)
 			SC.catch_mob(H)
-<<<<<<< HEAD
-//CHOMPEdit End
-=======
->>>>>>> f881d54dbf (Panel port test [IDB IGNORE] (#17350))
 	return TRUE
 
 ///////////////////
@@ -647,11 +591,7 @@
 ///////////////////
 //Verbs for soulbrains
 /mob/living/carbon/brain/caught_soul/verb/ar_project()
-<<<<<<< HEAD
-	set name = "AR/SR Project" //CHOMPEdit
-=======
 	set name = "AR/SR Project"
->>>>>>> f881d54dbf (Panel port test [IDB IGNORE] (#17350))
 	set desc = "Project your form into Augmented Reality for those around your predator with the appearance of your loaded character."
 	set category = "Soulcatcher"
 
@@ -713,13 +653,3 @@
 	if(message)
 		var/sane_message = sanitize(message)
 		soulcatcher.emote_into(sane_message,src,null)
-<<<<<<< HEAD
-
-//# undef NIF_SC_CATCHING_ME //CHOMPRemove
-//# undef NIF_SC_CATCHING_OTHERS //CHOMPRemove
-//# undef NIF_SC_ALLOW_EARS //CHOMPRemove
-//# undef NIF_SC_ALLOW_EYES //CHOMPRemove
-//# undef NIF_SC_BACKUPS //CHOMPRemove
-//# undef NIF_SC_PROJECTING //CHOMPRemove
-=======
->>>>>>> f881d54dbf (Panel port test [IDB IGNORE] (#17350))

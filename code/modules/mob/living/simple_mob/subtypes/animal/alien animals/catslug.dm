@@ -68,11 +68,7 @@
 		/obj/item/holder,
 		/obj/machinery/camera,
 		/obj/belly,
-<<<<<<< HEAD
-		/obj/soulgem, // CHOMPAdd
-=======
 		/obj/soulgem,
->>>>>>> f881d54dbf (Panel port test [IDB IGNORE] (#17350))
 		/obj/screen,
 		/atom/movable/emissive_blocker,
 		/obj/item/material,

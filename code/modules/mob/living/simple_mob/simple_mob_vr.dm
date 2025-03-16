@@ -214,20 +214,6 @@
 		return
 
 	AddElement(/datum/element/slosh) // Sloshy element
-<<<<<<< HEAD
-
-	//CHOMPAdd Start
-	if(!soulgem)
-		soulgem = new(src)
-	//CHOMPAdd End
-
-	/* CHOMPRemove Start, handled with the vore_active var
-	if(!IsAdvancedToolUser())
-		add_verb(src, /mob/living/simple_mob/proc/animal_nom)
-		add_verb(src, /mob/living/proc/shred_limb)
-	*/// CHOMPRemove End
-=======
->>>>>>> f881d54dbf (Panel port test [IDB IGNORE] (#17350))
 
 	if(!soulgem)
 		soulgem = new(src)

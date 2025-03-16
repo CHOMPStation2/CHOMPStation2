@@ -159,12 +159,8 @@ var/global/list/obj/machinery/telecomms/telecomms_list = list()
 	for(var/obj/machinery/telecomms/comm in telecomms_list)
 		comm.links -= src
 	links = list()
-<<<<<<< HEAD
 	QDEL_NULL(soundloop) // CHOMPAdd: Tcomms noises
-	..()
-=======
 	. = ..()
->>>>>>> f881d54dbf (Panel port test [IDB IGNORE] (#17350))
 
 // Used in auto linking
 /obj/machinery/telecomms/proc/add_link(var/obj/machinery/telecomms/T)

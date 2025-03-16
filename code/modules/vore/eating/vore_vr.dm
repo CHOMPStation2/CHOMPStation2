@@ -73,10 +73,6 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 	var/vore_sprite_multiply = list("stomach" = FALSE, "taur belly" = FALSE)
 	var/allow_mind_transfer = FALSE
 
-<<<<<<< HEAD
-	//CHOMP stuff
-=======
->>>>>>> f881d54dbf (Panel port test [IDB IGNORE] (#17350))
 	var/phase_vore = TRUE
 	var/noisy_full = FALSE
 	var/receive_reagents = FALSE
@@ -95,10 +91,6 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 	var/belly_rub_target = null
 	var/soulcatcher_pref_flags = 0
 	var/list/soulcatcher_prefs = list()
-<<<<<<< HEAD
-	//CHOMP stuff end
-=======
->>>>>>> f881d54dbf (Panel port test [IDB IGNORE] (#17350))
 
 	var/list/belly_prefs = list()
 	var/vore_taste = "nothing in particular"
@@ -233,10 +225,6 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 	vore_sprite_color = json_from_file["vore_sprite_color"]
 	allow_mind_transfer = json_from_file["allow_mind_transfer"]
 
-<<<<<<< HEAD
-	//CHOMP stuff Start
-=======
->>>>>>> f881d54dbf (Panel port test [IDB IGNORE] (#17350))
 	phase_vore = json_from_file["phase_vore"]
 	latejoin_vore = json_from_file["latejoin_vore"]
 	latejoin_prey = json_from_file["latejoin_prey"]
@@ -259,10 +247,6 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 	belly_rub_target = json_from_file["belly_rub_target"]
 	soulcatcher_pref_flags = json_from_file["soulcatcher_pref_flags"]
 	soulcatcher_prefs = json_from_file["soulcatcher_prefs"]
-<<<<<<< HEAD
-	//CHOMP stuff End
-=======
->>>>>>> f881d54dbf (Panel port test [IDB IGNORE] (#17350))
 
 	//Quick sanitize
 	if(isnull(digestable))
@@ -356,10 +340,6 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 	if(isnull(allow_mind_transfer))
 		allow_mind_transfer = FALSE
 
-<<<<<<< HEAD
-	//CHOMP stuff Start
-=======
->>>>>>> f881d54dbf (Panel port test [IDB IGNORE] (#17350))
 	if(isnull(phase_vore))
 		phase_vore = TRUE
 	if(isnull(latejoin_vore))
@@ -396,10 +376,6 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 		soulcatcher_pref_flags = 0
 	if(isnull(soulcatcher_prefs))
 		soulcatcher_prefs = list()
-<<<<<<< HEAD
-	//CHOMP stuff End
-=======
->>>>>>> f881d54dbf (Panel port test [IDB IGNORE] (#17350))
 
 	return TRUE
 
@@ -421,48 +397,28 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 			"vore_smell"			= vore_smell,
 			"permit_healbelly"		= permit_healbelly,
 			"noisy" 				= noisy,
-<<<<<<< HEAD
-			"noisy_full" 			= noisy_full, //CHOMPedit
-=======
 			"noisy_full" 			= noisy_full,
->>>>>>> f881d54dbf (Panel port test [IDB IGNORE] (#17350))
 			"selective_preference"	= selective_preference,
 			"show_vore_fx"			= show_vore_fx,
 			"can_be_drop_prey"		= can_be_drop_prey,
 			"can_be_drop_pred"		= can_be_drop_pred,
-<<<<<<< HEAD
-			"latejoin_vore"			= latejoin_vore, //CHOMPedit
-			"latejoin_prey"			= latejoin_prey, //CHOMPedit
-=======
 			"latejoin_vore"			= latejoin_vore,
 			"latejoin_prey"			= latejoin_prey,
->>>>>>> f881d54dbf (Panel port test [IDB IGNORE] (#17350))
 			"allow_spontaneous_tf"	= allow_spontaneous_tf,
 			"step_mechanics_pref"	= step_mechanics_pref,
 			"pickup_pref"			= pickup_pref,
 			"belly_prefs"			= belly_prefs,
-<<<<<<< HEAD
-			"receive_reagents"		= receive_reagents, //CHOMPedit
-			"give_reagents"			= give_reagents, //CHOMPedit
-			"apply_reagents"		= apply_reagents, //CHOMPedit
-=======
 			"receive_reagents"		= receive_reagents,
 			"give_reagents"			= give_reagents,
 			"apply_reagents"		= apply_reagents,
->>>>>>> f881d54dbf (Panel port test [IDB IGNORE] (#17350))
 			"autotransferable"		= autotransferable,
 			"drop_vore"				= drop_vore,
 			"slip_vore"				= slip_vore,
 			"stumble_vore"			= stumble_vore,
 			"throw_vore" 			= throw_vore,
 			"allow_mind_transfer"	= allow_mind_transfer,
-<<<<<<< HEAD
-			"phase_vore" 			= phase_vore, //CHOMPedit
-			"food_vore" 			= food_vore,
-=======
 			"phase_vore" 			= phase_vore,
 			"consume_liquid_belly" 	= consume_liquid_belly,
->>>>>>> f881d54dbf (Panel port test [IDB IGNORE] (#17350))
 			"digest_pain"			= digest_pain,
 			"nutrition_message_visible"	= nutrition_message_visible,
 			"nutrition_messages"		= nutrition_messages,
@@ -471,19 +427,6 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 			"eating_privacy_global"		= eating_privacy_global,
 			"vore_sprite_color"			= vore_sprite_color,
 			"allow_mimicry"				= allow_mimicry,
-<<<<<<< HEAD
-			"vore_sprite_multiply"		= vore_sprite_multiply, //CHOMPEdit
-			"strip_pref" 			= strip_pref, //CHOMPEdit
-			"no_latejoin_vore_warning"		= no_latejoin_vore_warning, //CHOMPEdit
-			"no_latejoin_prey_warning"		= no_latejoin_prey_warning, //CHOMPEdit
-			"no_latejoin_vore_warning_time"		= no_latejoin_vore_warning_time, //CHOMPEdit
-			"no_latejoin_prey_warning_time"		= no_latejoin_prey_warning_time, //CHOMPEdit
-			"no_latejoin_vore_warning_persists"		= no_latejoin_vore_warning_persists, //CHOMPEdit
-			"no_latejoin_prey_warning_persists"		= no_latejoin_prey_warning_persists, //CHOMPEdit
-			"belly_rub_target" = belly_rub_target, //CHOMPEdit
-			"soulcatcher_pref_flags" = soulcatcher_pref_flags, //CHOMPAdd
-			"soulcatcher_prefs"			= soulcatcher_prefs //CHOMPAdd
-=======
 			"vore_sprite_multiply"		= vore_sprite_multiply,
 			"strip_pref" 			= strip_pref,
 			"no_latejoin_vore_warning"		= no_latejoin_vore_warning,
@@ -495,7 +438,6 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 			"belly_rub_target" = belly_rub_target,
 			"soulcatcher_pref_flags" = soulcatcher_pref_flags,
 			"soulcatcher_prefs"			= soulcatcher_prefs
->>>>>>> f881d54dbf (Panel port test [IDB IGNORE] (#17350))
 		)
 
 	//List to JSON
