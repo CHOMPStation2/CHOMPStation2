@@ -50,6 +50,8 @@
 /mob/living/simple_mob/animal/wolf/init_vore() // CHOMPEdit - Allow for customizing bellies on vorecritters
 	if(!voremob_loaded)
 		return
+	if(LAZYLEN(vore_organs))
+		return
 	. = ..()
 
 	var/obj/belly/B = vore_selected

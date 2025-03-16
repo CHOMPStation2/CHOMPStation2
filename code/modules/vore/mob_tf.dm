@@ -37,7 +37,7 @@
 				N.identifying_gender = M.gender
 
 		mob_belly_transfer(M)
-		M.soulgem.transfer_self(src) //CHOMPAdd Soulcatcher
+		M.soulgem.transfer_self(src) // Soulcatcher
 
 		nutrition = M.nutrition
 		src.ckey = M.ckey
@@ -66,9 +66,9 @@
 	if(!tf_mob_holder)
 		return
 	var/mob/living/ourmob = tf_mob_holder
-	//CHOMPAdd Start - OOC Escape functionality for Mind Binder and Body Snatcher
 	if(soulgem) //Should always be the case, but...Safety. Done here first
 		soulgem.transfer_self(ourmob)
+	//CHOMPAdd Start - OOC Escape functionality for Mind Binder and Body Snatcher
 	if(ourmob.loc != src)
 		if(isnull(ourmob.loc))
 			to_chat(src,span_notice("You have no body."))
@@ -144,7 +144,7 @@
 /mob/living/proc/handle_tf_holder()
 	if(!tf_mob_holder)
 		return
-	if(tf_mob_holder.loc != src) return //CHOMPAdd - Prevent bodyswapped creatures having their life linked
+	if(tf_mob_holder.loc != src) return // Prevent bodyswapped creatures having their life linked
 	if(stat != tf_mob_holder.stat)
 		if(stat == DEAD)
 			tf_mob_holder.death(FALSE, null)
@@ -163,7 +163,6 @@
 	new_mob.feeding = feeding
 	new_mob.can_be_drop_prey = can_be_drop_prey
 	new_mob.can_be_drop_pred = can_be_drop_pred
-	// new_mob.allow_inbelly_spawning = allow_inbelly_spawning //CHOMP Removal: we have vore spawning at home. Actually if this were to be enabled, it would break anyway. Just leaving this here as a reference to it.
 	new_mob.digest_leave_remains = digest_leave_remains
 	new_mob.allowmobvore = allowmobvore
 	new_mob.permit_healbelly = permit_healbelly
@@ -176,6 +175,7 @@
 	new_mob.slip_vore = slip_vore
 	new_mob.throw_vore = throw_vore
 	new_mob.food_vore = food_vore
+	new_mob.consume_liquid_belly = consume_liquid_belly
 	new_mob.resizable = resizable
 	new_mob.show_vore_fx = show_vore_fx
 	new_mob.step_mechanics_pref = step_mechanics_pref
@@ -189,7 +189,6 @@
 	new_mob.text_warnings = text_warnings
 	new_mob.allow_mind_transfer = allow_mind_transfer
 
-	//CHOMP stuff Start
 	new_mob.phase_vore = phase_vore
 	new_mob.latejoin_vore = latejoin_vore
 	new_mob.latejoin_prey = latejoin_prey
@@ -209,4 +208,3 @@
 	new_mob.no_latejoin_prey_warning_persists = no_latejoin_prey_warning_persists
 	new_mob.belly_rub_target = belly_rub_target
 	new_mob.soulcatcher_pref_flags = soulcatcher_pref_flags
-	//CHOMP stuff End

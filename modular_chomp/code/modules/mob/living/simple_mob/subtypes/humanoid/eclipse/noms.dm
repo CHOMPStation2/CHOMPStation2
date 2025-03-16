@@ -22,6 +22,8 @@
 /mob/living/simple_mob/humanoid/eclipse/init_vore()
 	if(!voremob_loaded)
 		return
+	if(LAZYLEN(vore_organs))
+		return
 	.=..()
 	var/obj/belly/B = vore_selected
 	B.name = "stomach"
@@ -58,6 +60,8 @@
 
 /mob/living/simple_mob/humanoid/eclipse/head/scientist/init_vore()
 	if(!voremob_loaded)
+		return
+	if(LAZYLEN(vore_organs))
 		return
 	.=..()
 	var/obj/belly/B = vore_selected
@@ -99,6 +103,8 @@
 /mob/living/simple_mob/humanoid/eclipse/head/security/init_vore()
 	if(!voremob_loaded)
 		return
+	if(LAZYLEN(vore_organs))
+		return
 	.=..()
 	var/obj/belly/B = vore_selected
 	B.name = "stomach"
@@ -139,6 +145,8 @@
 
 /mob/living/simple_mob/humanoid/eclipse/head/captain/init_vore()
 	if(!voremob_loaded)
+		return
+	if(LAZYLEN(vore_organs))
 		return
 	.=..()
 	var/obj/belly/B = vore_selected

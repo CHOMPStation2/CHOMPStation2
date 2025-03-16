@@ -129,6 +129,8 @@
 /mob/living/simple_mob/vore/aggressive/corrupthound/init_vore()
 	if(!voremob_loaded)
 		return
+	if(LAZYLEN(vore_organs))
+		return
 	. = ..()
 	var/obj/belly/B = vore_selected
 	B.name = "fuel processor"
@@ -152,6 +154,8 @@
 
 /mob/living/simple_mob/vore/aggressive/corrupthound/prettyboi/init_vore()
 	if(!voremob_loaded)
+		return
+	if(LAZYLEN(vore_organs))
 		return
 	. = ..()
 	var/obj/belly/B = vore_selected

@@ -227,10 +227,8 @@
 		SSjob.shift_keys[title] += keylist
 //CHOMPadd end
 
-//CHOMPAdd Start
 /datum/job/proc/update_limit(var/comperator)
 	return
-//CHOMPAdd End
 
 // Check client-specific availability rules.
 /datum/job/proc/player_has_enough_pto(client/C)

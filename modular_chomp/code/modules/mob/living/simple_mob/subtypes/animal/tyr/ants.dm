@@ -43,9 +43,11 @@
 	unacidable = TRUE
 
 /mob/living/simple_mob/animal/tyr/mineral_ants/init_vore()
-	if(!voremob_loaded) //CHOMPAdd
-		return //CHOMPAdd
-	.=..() //CHOMPEdit
+	if(!voremob_loaded)
+		return
+	if(LAZYLEN(vore_organs))
+		return
+	.=..()
 	var/obj/belly/B = vore_selected
 	B.name = "stomach"
 	B.mode_flags = DM_FLAG_THICKBELLY | DM_FLAG_NUMBING

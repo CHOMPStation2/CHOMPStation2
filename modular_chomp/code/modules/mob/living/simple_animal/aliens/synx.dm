@@ -157,6 +157,8 @@
 /mob/living/simple_mob/animal/synx/init_vore()
 	if(!voremob_loaded)
 		return
+	if(LAZYLEN(vore_organs))
+		return
 	.=..()
 	var/obj/belly/B = vore_selected
 	//B.human_prey_swallow_time = 6 SECONDS //doesnt work
@@ -188,6 +190,8 @@
 /* //OC-insert mob removals. Commenting out instead of full removal as there's some good detail here.
 /mob/living/simple_mob/animal/synx/ai/pet/asteri/init_vore()
 	if(!voremob_loaded)
+		return
+	if(LAZYLEN(vore_organs))
 		return
 	.=..()
 	var/obj/belly/B = vore_selected
@@ -748,6 +752,8 @@
 /mob/living/simple_mob/animal/synx/ai/pet/init_vore()
 	if(!voremob_loaded)
 		return
+	if(LAZYLEN(vore_organs))
+		return
 	.=..()
 	var/obj/belly/B = vore_selected
 	B.vore_verb = "swallow"
@@ -756,6 +762,8 @@
 
 /mob/living/simple_mob/animal/synx/ai/pet/holo/init_vore()
 	if(!voremob_loaded)
+		return
+	if(LAZYLEN(vore_organs))
 		return
 	.=..()
 	var/obj/belly/B = vore_selected

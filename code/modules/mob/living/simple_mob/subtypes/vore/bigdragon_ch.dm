@@ -539,6 +539,8 @@ I think I covered everything.
 	//Ow my sanity
 	if(!voremob_loaded)
 		return
+	if(LAZYLEN(vore_organs))
+		return
 	var/obj/belly/B = new /obj/belly/dragon/maw(src)
 	B.affects_vore_sprites = FALSE
 	B.emote_lists[DM_HOLD] = list(

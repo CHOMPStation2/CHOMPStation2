@@ -160,7 +160,7 @@ var/global/list/obj/machinery/telecomms/telecomms_list = list()
 		comm.links -= src
 	links = list()
 	QDEL_NULL(soundloop) // CHOMPAdd: Tcomms noises
-	..()
+	. = ..()
 
 // Used in auto linking
 /obj/machinery/telecomms/proc/add_link(var/obj/machinery/telecomms/T)

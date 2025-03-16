@@ -60,6 +60,8 @@
 /mob/living/simple_mob/vore/candy/bluecabold/init_vore()
 	if(!voremob_loaded)
 		return
+	if(LAZYLEN(vore_organs))
+		return
 	.=..()
 	var/obj/belly/B = vore_selected
 	B.name = "stomach"
@@ -85,6 +87,8 @@
 
 /mob/living/simple_mob/vore/candy/redcabold/init_vore()
 	if(!voremob_loaded)
+		return
+	if(LAZYLEN(vore_organs))
 		return
 	.=..()
 	var/obj/belly/B = vore_selected
@@ -112,6 +116,8 @@
 /mob/living/simple_mob/vore/candy/yellowcabold/init_vore()
 	if(!voremob_loaded)
 		return
+	if(LAZYLEN(vore_organs))
+		return
 	.=..()
 	var/obj/belly/B = vore_selected
 	B.name = "stomach"
@@ -137,6 +143,8 @@
 
 /mob/living/simple_mob/vore/candy/orangecabold/init_vore()
 	if(!voremob_loaded)
+		return
+	if(LAZYLEN(vore_organs))
 		return
 	.=..()
 	var/obj/belly/B = vore_selected
@@ -164,6 +172,8 @@
 /mob/living/simple_mob/vore/candy/purplecabold/init_vore()
 	if(!voremob_loaded)
 		return
+	if(LAZYLEN(vore_organs))
+		return
 	.=..()
 	var/obj/belly/B = vore_selected
 	B.name = "stomach"
@@ -189,6 +199,8 @@
 
 /mob/living/simple_mob/vore/candy/marshmellowserpent/init_vore()
 	if(!voremob_loaded)
+		return
+	if(LAZYLEN(vore_organs))
 		return
 	.=..()
 	var/obj/belly/B = vore_selected
@@ -692,6 +704,8 @@
 /mob/living/simple_mob/vore/candy/worm/redcabold/init_vore()
 	if(!voremob_loaded)
 		return
+	if(LAZYLEN(vore_organs))
+		return
 	.=..()
 	var/obj/belly/B = vore_selected
 	B.name = "stomach"
@@ -717,6 +731,8 @@
 
 /mob/living/simple_mob/vore/candy/peppermint/init_vore()
 	if(!voremob_loaded)
+		return
+	if(LAZYLEN(vore_organs))
 		return
 	.=..()
 	var/obj/belly/B = vore_selected

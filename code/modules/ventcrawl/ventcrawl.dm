@@ -11,7 +11,7 @@ var/list/ventcrawl_machinery = list(
 	/obj/item/holder,
 	/obj/machinery/camera,
 	/obj/belly,
-	/obj/soulgem, // CHOMPAdd
+	/obj/soulgem,
 	/obj/screen,
 	/atom/movable/emissive_blocker,
 	/obj/item/rig/protean

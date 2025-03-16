@@ -485,7 +485,7 @@
 	power = 2
 	meltdose = 30
 
-/datum/reagent/acid/diet_digestive //CHOMPAdd
+/datum/reagent/acid/diet_digestive
 	name = REAGENT_DIETSTOMACID
 	id = REAGENT_ID_DIETSTOMACID
 	description = "Some form of digestive slurry."

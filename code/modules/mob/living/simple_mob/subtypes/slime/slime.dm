@@ -80,9 +80,7 @@ var/list/_slime_default_emotes = list(
 	var/injection_amount = 5 // This determines how much.
 	var/mood = ":3" // Icon to use to display 'mood', as an overlay.
 
-	can_enter_vent_with = list(/obj/item/clothing/head,
-			/obj/soulgem // CHOMPAdd
-		)
+	can_enter_vent_with = list(/obj/item/clothing/head, /obj/soulgem)
 
 	can_be_drop_prey = FALSE //CHOMP Add
 

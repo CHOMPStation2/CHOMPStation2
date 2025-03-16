@@ -28,7 +28,6 @@
 
 	playsound(src, 'sound/mecha/nominalsyndi.ogg', 75, 0)
 
-//CHOMPAdd Start
 /mob/living/silicon/robot/gravekeeper/proc/scramble_hardware(var/chance)
 	if(prob(chance))  //Small chance to spawn with a scrambled
 		emag_items = 1
@@ -39,4 +38,3 @@
 	if (churn_count == 5)
 		module.emag += new /obj/item/self_repair_system/advanced(module)
 		hud_used.update_robot_modules_display()
-//CHOMPAdd End

@@ -227,7 +227,7 @@
 		M.vore_selected = null
 		ourmob.mob_belly_transfer(M)
 
-		M.soulgem.transfer_self(ourmob) //CHOMPAdd Soulcatcher
+		M.soulgem.transfer_self(ourmob) // Soulcatcher
 
 		ourmob.Life(1)
 		if(ishuman(M))

@@ -602,7 +602,7 @@
 				var/actual_brute = T.getBruteLoss() - old_brute
 				var/actual_burn = T.getFireLoss() - old_burn
 				var/damage_gain = actual_brute + actual_burn
-				hound.nutrition += 2.5 * damage_gain //drain(-25 * damage_gain) //25*total loss as with voreorgan stats.//CHOMPEdit
+				hound.adjust_nutrition(2.5 * damage_gain) //drain(-25 * damage_gain) //25*total loss as with voreorgan stats.
 				//CHOMPAdd Start
 				if(water)
 					water.add_charge(damage_gain)
@@ -669,8 +669,8 @@
 				//CHOMPAdd Start
 				if(T.reagents)
 					volume = T.reagents.total_volume
-				var/is_trash = istype(T, /obj/item/trash)
 				//CHOMPAdd End
+				var/is_trash = istype(T, /obj/item/trash)
 				var/digested = T.digest_act(item_storage = src)
 				if(!digested)
 					items_preserved |= T
@@ -699,15 +699,13 @@
 									plastic.add_charge(total_material)
 								if(material == MAT_WOOD && wood)
 									wood.add_charge(total_material)
-					//CHOMPEdit Start
 					if(is_trash)
-						hound.nutrition += digested
+						hound.adjust_nutrition(digested)
 					else
-						hound.nutrition += 5 * digested //drain(-50 * digested)
-					//CHOMPEdit End
+						hound.adjust_nutrition(5 * digested)  //drain(-50 * digested)
 			else if(istype(target,/obj/effect/decal/remains))
 				qdel(target)
-				hound.nutrition += 10 //drain(-100) //CHOMPEdit
+				hound.adjust_nutrition(10) //drain(-100)
 			else
 				items_preserved |= target
 		update_patient()
