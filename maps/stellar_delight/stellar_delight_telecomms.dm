@@ -7,6 +7,7 @@
 	id = "SD Relay"
 	autolinkers = list("sd_relay")
 
+<<<<<<< HEAD
 // #### Hub ####
 /obj/machinery/telecomms/hub/preset/sd
 	id = "Hub"
@@ -62,6 +63,8 @@
 
 /area/maintenance/station/tcomms
 	name = "\improper Telecoms Maintenance"
+=======
+>>>>>>> 47b71270a9 (fix some issues (#17362))
 
 /datum/map/sd/default_internal_channels()
 	return list(
