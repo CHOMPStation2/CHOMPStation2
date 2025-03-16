@@ -70,6 +70,7 @@ var/global/list/obj/machinery/message_server/message_servers = list()
 			//Messages having theese tokens will be rejected by server. Case sensitive
 	var/spamfilter_limit = MESSAGE_SERVER_DEFAULT_SPAM_LIMIT	//Maximal amount of tokens
 
+<<<<<<< HEAD
 	var/datum/looping_sound/tcomms/soundloop // CHOMPStation Add: Hummy noises
 	var/noisy = FALSE  // CHOMPStation Add: Hummy noises
 
@@ -99,6 +100,17 @@ var/global/list/obj/machinery/message_server/message_servers = list()
 	QDEL_NULL(soundloop) // CHOMPStation Add: Hummy noises
 	..()
 	return
+=======
+/obj/machinery/message_server/Initialize(mapload)
+	. = ..()
+	message_servers += src
+	decryptkey = GenerateKey()
+	send_pda_message("System Administrator", "system", "This is an automated message. The messaging system is functioning correctly.")
+
+/obj/machinery/message_server/Destroy()
+	message_servers -= src
+	return ..()
+>>>>>>> 4d36cfdaeb (Finish Machinery new to init (#17334))
 
 /obj/machinery/message_server/examine(mob/user, distance, infix, suffix)
 	. = ..()
@@ -286,10 +298,11 @@ var/obj/machinery/blackbox_recorder/blackbox
 	var/list/datum/feedback_variable/feedback = new()
 
 	//Only one can exist in the world!
-/obj/machinery/blackbox_recorder/New()
+/obj/machinery/blackbox_recorder/Initialize(mapload)
+	. = ..()
 	if(blackbox)
 		if(istype(blackbox,/obj/machinery/blackbox_recorder))
-			qdel(src)
+			return INITIALIZE_HINT_QDEL
 	blackbox = src
 
 /obj/machinery/blackbox_recorder/Destroy()

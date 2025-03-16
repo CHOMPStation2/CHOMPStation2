@@ -113,6 +113,7 @@
 
 	var/datum/looping_sound/supermatter/soundloop
 
+<<<<<<< HEAD
 	var/engwarn = FALSE // CHOMPEdit: Looping Alarms
 	var/critwarn = FALSE // CHOMPEdit: Looping Alarms
 	var/causalitywarn = FALSE // CHOMPEdit: Looping Alarms
@@ -120,6 +121,10 @@
 
 /obj/machinery/power/supermatter/New()
 	..()
+=======
+/obj/machinery/power/supermatter/Initialize(mapload)
+	. = ..()
+>>>>>>> 4d36cfdaeb (Finish Machinery new to init (#17334))
 	uid = gl_uid++
 
 /obj/machinery/power/supermatter/Initialize(mapload)
