@@ -113,6 +113,13 @@
 
 	var/datum/looping_sound/supermatter/soundloop
 
+	// CHOMPAdd Start
+	var/engwarn = FALSE
+	var/critwarn = FALSE
+	var/causalitywarn = FALSE
+	var/stationcrystal = FALSE
+	// CHOMPAdd End
+
 /obj/machinery/power/supermatter/Initialize(mapload)
 	uid = gl_uid++
 	soundloop = new(list(src), TRUE)
