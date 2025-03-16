@@ -27,12 +27,6 @@
 		looped_insert(5, H)
 
 
-<<<<<<< HEAD
-					for(var/obj/item/organ/E in H.bad_external_organs) // Fix bones
-						var/obj/item/organ/external/affected = E
-						if((affected.damage < affected.min_broken_damage * CONFIG_GET(number/organ_health_multiplier)) && (affected.status & ORGAN_BROKEN)) // CHOMPEdit
-							affected.status &= ~ORGAN_BROKEN
-=======
 /obj/item/inserted_spell/mend_wires/looped_insert(remaining_callbacks, mob/living/carbon/human/H)
 	if(H)
 		remaining_callbacks --
@@ -41,7 +35,6 @@
 				O.damage = max(O.damage - (heal_power / 5), 0)
 			if(O.damage <= 5 && O.organ_tag == O_EYES) // Fix eyes
 				H.sdisabilities &= ~BLIND
->>>>>>> 4d36cfdaeb (Finish Machinery new to init (#17334))
 
 		for(var/obj/item/organ/external/O in H.organs) // Fix limbs
 			if(!O.robotic < ORGAN_ROBOT) // No robot parts for this.
@@ -50,7 +43,7 @@
 
 		for(var/obj/item/organ/E in H.bad_external_organs) // Fix bones
 			var/obj/item/organ/external/affected = E
-			if((affected.damage < affected.min_broken_damage * config.organ_health_multiplier) && (affected.status & ORGAN_BROKEN))
+			if((affected.damage < affected.min_broken_damage *  CONFIG_GET(number/organ_health_multiplier)) && (affected.status & ORGAN_BROKEN))
 				affected.status &= ~ORGAN_BROKEN
 
 			for(var/datum/wound/W in affected.wounds) // Fix IB

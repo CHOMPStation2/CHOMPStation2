@@ -70,15 +70,10 @@ var/global/list/obj/machinery/message_server/message_servers = list()
 			//Messages having theese tokens will be rejected by server. Case sensitive
 	var/spamfilter_limit = MESSAGE_SERVER_DEFAULT_SPAM_LIMIT	//Maximal amount of tokens
 
-<<<<<<< HEAD
 	var/datum/looping_sound/tcomms/soundloop // CHOMPStation Add: Hummy noises
 	var/noisy = FALSE  // CHOMPStation Add: Hummy noises
 
-/obj/machinery/message_server/New()
-	message_servers += src
-	decryptkey = GenerateKey()
-	send_pda_message("System Administrator", "system", "This is an automated message. The messaging system is functioning correctly.")
-
+/obj/machinery/message_server/Initialize(mapload)
 	// CHOMPAdd: PDA Messaging Server humming
 	soundloop = new(list(src), FALSE)
 	if(prob(60)) // 60% chance to change the midloop
@@ -92,16 +87,6 @@ var/global/list/obj/machinery/message_server/message_servers = list()
 			soundloop.mid_sounds = list('sound/machines/tcomms/tcomms_04.ogg' = 1)
 			soundloop.mid_length = 30
 	// CHOMPAdd End
-	..()
-	return
-
-/obj/machinery/message_server/Destroy()
-	message_servers -= src
-	QDEL_NULL(soundloop) // CHOMPStation Add: Hummy noises
-	..()
-	return
-=======
-/obj/machinery/message_server/Initialize(mapload)
 	. = ..()
 	message_servers += src
 	decryptkey = GenerateKey()
@@ -109,8 +94,8 @@ var/global/list/obj/machinery/message_server/message_servers = list()
 
 /obj/machinery/message_server/Destroy()
 	message_servers -= src
+	QDEL_NULL(soundloop) // CHOMPStation Add: Hummy noises
 	return ..()
->>>>>>> 4d36cfdaeb (Finish Machinery new to init (#17334))
 
 /obj/machinery/message_server/examine(mob/user, distance, infix, suffix)
 	. = ..()

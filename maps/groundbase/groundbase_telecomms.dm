@@ -3,12 +3,7 @@
 
 // #### Relays ####
 // Telecomms doesn't know about connected z-levels, so we need relays even for the other surface levels.
-<<<<<<< HEAD
 /obj/machinery/telecomms/relay/preset/station
-=======
-/obj/machinery/telecomms/relay/preset/station/Initialize(mapload)
-	. = ..()
->>>>>>> 4d36cfdaeb (Finish Machinery new to init (#17334))
 	id = "groundbase Relay"
 	autolinkers = list("groundbase_relay")
 
