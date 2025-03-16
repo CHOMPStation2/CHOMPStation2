@@ -80,10 +80,6 @@
 
 //Vore
 /mob/living/silicon/pai/flipper/init_vore()
-	if(!voremob_loaded)
-		return
-	if(LAZYLEN(vore_organs))
-		return
 	var/obj/belly/B = new /obj/belly/flipper/maw(src)
 	B.affects_vore_sprites = FALSE
 	B.emote_lists[DM_HOLD] = list(
