@@ -161,6 +161,7 @@
 	nametext = span_bold("[emoter]")
 	return list("pretext" = pretext, "nametext" = nametext, "subtext" = subtext)
 
+<<<<<<< HEAD
 /mob/proc/custom_emote(var/m_type = VISIBLE_MESSAGE, var/message, var/range = world.view)
 
 	if((usr && stat) || (!use_me && usr == src))
@@ -240,6 +241,8 @@
 
 
 
+=======
+>>>>>>> 17ec1d700b (Removes more sleeps from init (#17332))
 // Specific mob type exceptions below.
 /mob/living/silicon/ai/emote(var/act, var/type, var/message)
 	var/obj/machinery/hologram/holopad/T = src.holo
