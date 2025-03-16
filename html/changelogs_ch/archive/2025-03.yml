@@ -345,3 +345,24 @@
       but winter coat won't.
   - code_imp: Pockets have been completely reworked to not use randomly defined lists
       everywhere. They are now consolidated.
+2025-03-16:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: All suits no longer have a 'toggle hood' button even if they have no hood
+      to toggle.
+  - bugfix: robot sprites broken by goo borgs
+  Diana:
+  - bugfix: Plushies will no longer lose their loadout name
+  - bugfix: Plushies will speak in their given name in the chat properly.
+  - bugfix: Xenoarch organs no longer have the possibility of being rejected.
+  Will:
+  - rscadd: Adds a positive trait that allows you to have your genetics unable to
+      be scrambled.
+  - rscadd: 'Adds three new negative traits: One Life, Unsleeveable, and Unreviveable.'
+  - rscadd: If you have NO_DNA or NO_RESLEEVE(your genetics is trashed), slimes find
+      you unappealing!
+  - code_imp: NO_DNA and NO_RESLEEVE are now separated.
+  - bugfix: Traits will no longer wipe innate species traits
+  - code_imp: ATC is now a subsystem
+  Will & Diana:
+  - bugfix: Dullahans (among others) have proper offsets now
+  - code_imp: Unit test forces coders to comply with proper offsetting of borg sprites
