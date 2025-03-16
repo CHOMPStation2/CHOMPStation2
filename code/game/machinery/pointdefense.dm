@@ -30,9 +30,6 @@ GLOBAL_LIST_BOILERPLATE(pointdefense_turrets, /obj/machinery/pointdefense)
 			if(PC != src && PC.id_tag == id_tag)
 				warning("Two [src] with the same id_tag of [id_tag]")
 				id_tag = null
-	// TODO - Remove this bit once machines are converted to Initialize
-	if(ispath(circuit))
-		circuit = new circuit(src)
 	default_apply_parts()
 
 /obj/machinery/pointdefense_control/get_description_interaction()
@@ -145,9 +142,6 @@ GLOBAL_LIST_BOILERPLATE(pointdefense_turrets, /obj/machinery/pointdefense)
 
 /obj/machinery/power/pointdefense/Initialize(mapload)
 	. = ..()
-	// TODO - Remove this bit once machines are converted to Initialize
-	if(ispath(circuit))
-		circuit = new circuit(src)
 	default_apply_parts()
 	update_icon()
 

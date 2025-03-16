@@ -449,8 +449,8 @@ var/global/list/obj/item/communicator/all_communicators = list()
 /obj/machinery/camera/communicator
 	network = list(NETWORK_COMMUNICATORS)
 
-/obj/machinery/camera/communicator/New()
-	..()
+/obj/machinery/camera/communicator/Initialize(mapload)
+	. = ..()
 	client_huds |= global_hud.whitense
 	client_huds |= global_hud.darkMask
 

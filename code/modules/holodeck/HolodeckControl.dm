@@ -180,8 +180,8 @@
 		if (last_to_emag)
 			C.friends = list(last_to_emag)
 
-/obj/machinery/computer/HolodeckControl/New()
-	..()
+/obj/machinery/computer/HolodeckControl/Initialize(mapload)
+	. = ..()
 	current_program = powerdown_program
 	linkedholodeck = locate(projection_area)
 	if(!linkedholodeck)
