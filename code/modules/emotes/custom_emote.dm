@@ -48,12 +48,13 @@
 	if(message)
 		message = encode_html_emphasis(message)
 
+		/*	CHOMPRemove - Not needed if you set your defaults right
 		var/ourfreq = null
 		if(isliving(src))
 			var/mob/living/L = src
 			if(L.voice_freq > 0 )
 				ourfreq = L.voice_freq
-
+		*/
 
 		// Hearing gasp and such every five seconds is not good emotes were not global for a reason.
 		// Maybe some people are okay with that.
@@ -62,7 +63,7 @@
 		if(!T) return
 
 		if(client)
-			playsound(T, pick(emote_sound), 25, TRUE, falloff = 1 , is_global = TRUE, frequency = ourfreq, ignore_walls = FALSE, preference = /datum/preference/toggle/emote_sounds)
+			playsound(T, pick(emote_sound), 25, TRUE, falloff = 1 , is_global = TRUE, frequency = voice_freq, ignore_walls = FALSE, preference = /datum/preference/toggle/emote_sounds)
 
 		var/list/in_range = get_mobs_and_objs_in_view_fast(T,range,2,remote_ghosts = client ? TRUE : FALSE)
 		var/list/m_viewers = in_range["mobs"]

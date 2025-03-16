@@ -26,10 +26,10 @@
 
 /obj/effect/step_trigger/tramblock/Trigger(var/atom/movable/A)
 	if(istype(A, /mob/living/carbon/human))
-		to_chat(A, "<span class='notice'>OOC Notice: You have an itch to explore, it seems! \
+		to_chat(A, span_notice("OOC Notice: You have an itch to explore, it seems! \
 		This tunnel does not go any further past the doors, thanks to game limitations and stuff in the way! \
 		However, north and the departures tram line extend the entire length of the map! \
-		There's also other areas you can explore. Have fun. <3</span>"
+		There's also other areas you can explore. Have fun. <3")
 		)
 	else
 		return 0
