@@ -3,17 +3,6 @@
 	var/datum/matter_synth/water_res = null //Enable water for lick clean
 	//Multibelly support. We do not want to apply it to any module not supporting it in it's sprites
 
-/mob/living/silicon/robot/verb/purge_nutrition()
-	set name = "Purge Nutrition"
-	set category = "Abilities.Vore"
-	set desc = "Allows you to clear out most of your nutrition if needed."
-
-	if (stat != CONSCIOUS || nutrition <= 1000)
-		return
-	nutrition = 1000
-	to_chat(src, span_warning("You have purged most of the nutrition lingering in your systems."))
-	return TRUE
-
 /mob/living/silicon/robot/proc/ex_reserve_refill()
 	set name = "Refill Extinguisher"
 	set category = "Object"

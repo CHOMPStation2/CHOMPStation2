@@ -291,34 +291,34 @@
 	. = ..()
 	announce_atc(AM,going = TRUE)
 
-/obj/effect/overmap/visitable/sector/cryogaia/proc/announce_atc(var/atom/movable/AM, var/going = FALSE)
+/obj/effect/overmap/visitable/sector/cryogaia/announce_atc(var/atom/movable/AM, var/going = FALSE)
 	var/message = "Sensor contact for vessel '[AM.name]' has [going ? "left" : "entered"] ATC control area."
 	//For landables, we need to see if their shuttle is cloaked
 	if(istype(AM, /obj/effect/overmap/visitable/ship/landable))
 		var/obj/effect/overmap/visitable/ship/landable/SL = AM //Phew
 		var/datum/shuttle/autodock/multi/shuttle = SSshuttles.shuttles[SL.shuttle]
 		if(!istype(shuttle) || !shuttle.cloaked) //Not a multishuttle (the only kind that can cloak) or not cloaked
-			atc.msg(message)
+			SSatc.msg(message)
 
 	//For ships, it's safe to assume they're big enough to not be sneaky
 	else if(istype(AM, /obj/effect/overmap/visitable/ship))
-		atc.msg(message)
+		SSatc.msg(message)
 
 /obj/effect/overmap/visitable/sector/cryogaia/get_space_zlevels()
 	return list() //None!
 
-/obj/effect/overmap/visitable/sector/virgo3b/proc/announce_atc(var/atom/movable/AM, var/going = FALSE)
+/obj/effect/overmap/visitable/sector/virgo3b/announce_atc(var/atom/movable/AM, var/going = FALSE)
 	var/message = "Sensor contact for vessel '[AM.name]' has [going ? "left" : "entered"] ATC control area."
 	//For landables, we need to see if their shuttle is cloaked
 	if(istype(AM, /obj/effect/overmap/visitable/ship/landable))
 		var/obj/effect/overmap/visitable/ship/landable/SL = AM //Phew
 		var/datum/shuttle/autodock/multi/shuttle = SSshuttles.shuttles[SL.shuttle]
 		if(!istype(shuttle) || !shuttle.cloaked) //Not a multishuttle (the only kind that can cloak) or not cloaked
-			atc.msg(message)
+			SSatc.msg(message)
 
 	//For ships, it's safe to assume they're big enough to not be sneaky
 	else if(istype(AM, /obj/effect/overmap/visitable/ship))
-		atc.msg(message)
+		SSatc.msg(message)
 
 
 // For making the 6-in-1 holomap, we calculate some offsets ((Disabled because I don't have a clue to how to start making this for Cryogaia))
