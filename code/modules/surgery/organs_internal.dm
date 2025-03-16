@@ -403,7 +403,7 @@
 			ML.parent_organ = affected.organ_tag
 			organ_compatible = 1
 		else
-			to_chat(user, "<span class='warning'>\The [O] won't fit in \the [affected.name].</span>")
+			to_chat(user, span_warning("\The [O] won't fit in \the [affected.name]."))
 			return SURGERY_FAILURE
 	// CHOMPadd end
 
