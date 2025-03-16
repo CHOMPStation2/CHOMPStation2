@@ -51,12 +51,5 @@
 	for (var/atom/movable/location as anything in get_nested_locs(src)|src)
 		LAZYOR(location.recursive_listeners, arrived.recursive_listeners)
 
-// Helper procs called on entering/exiting a belly. Does nothing by default, override on children for special behavior.
-/atom/movable/proc/enter_belly(obj/belly/B)
-	return
-
-/atom/movable/proc/exit_belly(obj/belly/B)
-	return
-
 /atom/movable/proc/show_message(msg, type, alt, alt_type)//Message, type of message (1 or 2), alternative message, alt message type (1 or 2)
 	return

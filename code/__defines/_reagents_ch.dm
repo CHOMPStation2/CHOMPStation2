@@ -37,8 +37,6 @@
 #define REAGENT_ID_APHRODISIAC "aphrodisiac"
 #define REAGENT_SORBITOL "Sorbitol"
 #define REAGENT_ID_SORBITOL "sorbitol"
-#define REAGENT_CONCENTRATEDRADIUM "Concentrated Radium"
-#define REAGENT_ID_CONCENTRATEDRADIUM "concentrated_radium"
 #define REAGENT_CLARIDYL "Claridyl Natural Remedy"
 #define REAGENT_ID_CLARIDYL "claridyl"
 #define REAGENT_DYLOTEANE "The Anti-Irish"
@@ -271,8 +269,6 @@
 
 
 // Toxins
-#define REAGENT_DIETSTOMACID "Diluted digestive acid"
-#define REAGENT_ID_DIETSTOMACID "diet_stomacid"
 #define REAGENT_DEATHBLOOD "Irradiating Blood"
 #define REAGENT_ID_DEATHBLOOD "deathblood"
 #define REAGENT_LIQUIDFIRE "Liquid Fire"

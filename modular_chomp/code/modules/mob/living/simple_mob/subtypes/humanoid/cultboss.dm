@@ -159,6 +159,8 @@
 /mob/living/simple_mob/humanoid/cultist/magus/rift/init_vore()
 	if(!voremob_loaded)
 		return
+	if(LAZYLEN(vore_organs))
+		return
 	.=..()
 	var/obj/belly/B = vore_selected
 	B.name = "stomach"

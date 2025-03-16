@@ -64,6 +64,8 @@ GLOBAL_VAR_INIT(queen_amount, 0) //We only gonna want 1 queen in the world.
 /mob/living/simple_mob/metroid/mine/init_vore()
 	if(!voremob_loaded)
 		return
+	if(LAZYLEN(vore_organs))
+		return
 	.=..()
 	var/obj/belly/B = vore_selected
 	B.digest_burn = 0.5

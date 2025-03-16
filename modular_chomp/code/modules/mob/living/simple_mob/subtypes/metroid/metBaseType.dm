@@ -90,6 +90,8 @@
 /mob/living/simple_mob/metroid/init_vore()
 	if(!voremob_loaded)
 		return
+	if(LAZYLEN(vore_organs))
+		return
 	.=..()
 	var/obj/belly/B = vore_selected
 	B.digest_brute = 1

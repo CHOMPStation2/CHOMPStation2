@@ -1,27 +1,3 @@
-var/global/list/item_tf_spawnpoints = list() // Global variable tracking which items are item tf spawnpoints
-
-//stuff that only synths can eat
-var/global/list/edible_tech = list(/obj/item/cell,
-				/obj/item/circuitboard,
-				/obj/item/integrated_circuit,
-				/obj/item/broken_device,
-				/obj/item/brokenbug,
-				)
-
-var/global/list/item_digestion_blacklist = list(
-		/obj/item/hand_tele,
-		/obj/item/card/id,
-		/obj/item/gun,
-		/obj/item/pinpointer,
-		/obj/item/clothing/shoes/magboots,
-		/obj/item/areaeditor/blueprints,
-		/obj/item/disk/nuclear,
-		/obj/item/perfect_tele_beacon,
-		/obj/item/organ/internal/brain/slime,
-		/obj/item/mmi/digital/posibrain,
-		/obj/item/mmi/digital/robot,
-		/obj/item/rig/protean)
-
 // Options for transforming into a different mob in virtual reality.
 var/global/list/vr_mob_tf_options = list(
 	"Borg" = /mob/living/silicon/robot,
