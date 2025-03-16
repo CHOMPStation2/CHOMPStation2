@@ -28,7 +28,10 @@
 
 	playsound(src, 'sound/mecha/nominalsyndi.ogg', 75, 0)
 
+<<<<<<< HEAD
 //CHOMPAdd Start
+=======
+>>>>>>> f881d54dbf (Panel port test [IDB IGNORE] (#17350))
 /mob/living/silicon/robot/gravekeeper/proc/scramble_hardware(var/chance)
 	if(prob(chance))  //Small chance to spawn with a scrambled
 		emag_items = 1
@@ -39,4 +42,7 @@
 	if (churn_count == 5)
 		module.emag += new /obj/item/self_repair_system/advanced(module)
 		hud_used.update_robot_modules_display()
+<<<<<<< HEAD
 //CHOMPAdd End
+=======
+>>>>>>> f881d54dbf (Panel port test [IDB IGNORE] (#17350))

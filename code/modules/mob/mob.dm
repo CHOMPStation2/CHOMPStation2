@@ -15,7 +15,11 @@
 		spellremove(src)
 	if(!istype(src,/mob/observer))
 		ghostize()
+<<<<<<< HEAD
 	QDEL_NULL(soulgem) // CHOMPAdd Soulcatcher
+=======
+	QDEL_NULL(soulgem) //Soulcatcher
+>>>>>>> f881d54dbf (Panel port test [IDB IGNORE] (#17350))
 	QDEL_NULL(dna)
 	QDEL_NULL(plane_holder)
 	QDEL_NULL(hud_used)

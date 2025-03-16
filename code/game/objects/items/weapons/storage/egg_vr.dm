@@ -15,7 +15,11 @@
 	show_messages = 0
 	allow_quick_empty = TRUE
 	use_sound = 'sound/items/drop/flesh.ogg'
+<<<<<<< HEAD
 	var/egg_name = null //CHOMPAdd
+=======
+	var/egg_name = null
+>>>>>>> f881d54dbf (Panel port test [IDB IGNORE] (#17350))
 
 /obj/item/storage/vore_egg/Initialize(mapload)
 	. = ..()

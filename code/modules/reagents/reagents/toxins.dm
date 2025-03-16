@@ -485,7 +485,11 @@
 	power = 2
 	meltdose = 30
 
+<<<<<<< HEAD
 /datum/reagent/acid/diet_digestive //CHOMPAdd
+=======
+/datum/reagent/acid/diet_digestive
+>>>>>>> f881d54dbf (Panel port test [IDB IGNORE] (#17350))
 	name = REAGENT_DIETSTOMACID
 	id = REAGENT_ID_DIETSTOMACID
 	description = "Some form of digestive slurry."

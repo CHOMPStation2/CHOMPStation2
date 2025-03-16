@@ -29,8 +29,13 @@
 
 	var/cloaked = FALSE //If we're cloaked or not
 	var/image/cloaked_selfimage //The image we use for our client to let them see where we are
+<<<<<<< HEAD
 	var/belly_cycles = 0 //CHOMPEdit: Counting current belly process cycles for autotransfer.
 	var/autotransferable = TRUE //CHOMPEdit: Toggle for autotransfer mechanics.
+=======
+	var/belly_cycles = 0 // Counting current belly process cycles for autotransfer.
+	var/autotransferable = TRUE // Toggle for autotransfer mechanics.
+>>>>>>> f881d54dbf (Panel port test [IDB IGNORE] (#17350))
 
 /atom/movable/Initialize(mapload)
 	. = ..()
@@ -667,3 +672,10 @@
 	var/direction = get_dir(old_loc, new_loc)
 	loc = new_loc
 	Moved(old_loc, direction, TRUE)
+
+// Helper procs called on entering/exiting a belly. Does nothing by default, override on children for special behavior.
+/atom/movable/proc/enter_belly(obj/belly/B)
+	return
+
+/atom/movable/proc/exit_belly(obj/belly/B)
+	return

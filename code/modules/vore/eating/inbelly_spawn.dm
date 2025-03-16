@@ -27,7 +27,11 @@ Please do not abuse this ability.
 			continue
 		if(ishuman(pred))
 			var/mob/living/carbon/human/H = pred
+<<<<<<< HEAD
 			if(!H.latejoin_vore) //CHOMPEdit - Changes pref to the same as vorespawn pred
+=======
+			if(!H.latejoin_vore)
+>>>>>>> f881d54dbf (Panel port test [IDB IGNORE] (#17350))
 				continue
 			eligible_targets += H
 			continue
@@ -35,7 +39,11 @@ Please do not abuse this ability.
 			var/mob/living/silicon/S = pred
 			if(isAI(S))
 				continue						// Sorry, AI buddies. Your vore works too differently.
+<<<<<<< HEAD
 			if(!S.latejoin_vore) //CHOMPEdit - Changes pref to the same as vorespawn pred
+=======
+			if(!S.latejoin_vore)
+>>>>>>> f881d54dbf (Panel port test [IDB IGNORE] (#17350))
 				continue
 			eligible_targets += S
 			continue
@@ -43,7 +51,11 @@ Please do not abuse this ability.
 			var/mob/living/simple_mob/SM = pred
 			if(!SM.vore_active)						// No vore, no bellies, no inbelly spawning
 				continue
+<<<<<<< HEAD
 			if(!SM.latejoin_vore) //CHOMPEdit - Changes pref to the same as vorespawn pred
+=======
+			if(!SM.latejoin_vore)
+>>>>>>> f881d54dbf (Panel port test [IDB IGNORE] (#17350))
 				continue
 			eligible_targets += SM
 			continue

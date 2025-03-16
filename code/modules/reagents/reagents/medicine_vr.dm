@@ -227,7 +227,11 @@
 		M.vore_selected = null
 		ourmob.mob_belly_transfer(M)
 
+<<<<<<< HEAD
 		M.soulgem.transfer_self(ourmob) //CHOMPAdd Soulcatcher
+=======
+		M.soulgem.transfer_self(ourmob) // Soulcatcher
+>>>>>>> f881d54dbf (Panel port test [IDB IGNORE] (#17350))
 
 		ourmob.Life(1)
 		if(ishuman(M))

@@ -5,7 +5,11 @@
 #define CHEM_TOUCH 1
 #define CHEM_INGEST 2
 #define CHEM_BLOOD 3
+<<<<<<< HEAD
 #define CHEM_VORE 4 //CHOMP vore belly interactions
+=======
+#define CHEM_VORE 4 // vore belly interactions
+>>>>>>> f881d54dbf (Panel port test [IDB IGNORE] (#17350))
 
 #define MINIMUM_CHEMICAL_VOLUME 0.01
 

@@ -111,6 +111,11 @@
 		balloon_alert(user, "\the [src] is empty.") // CHOMPEdit - Changed to balloon alert
 		return TRUE
 
+	if(!target.consume_liquid_belly)
+		if(liquid_belly_check())
+			to_chat(user, span_infoplain("[user == target ? "You can't" : "\The [target] can't"] consume that, it contains something produced from a belly!"))
+			return FALSE
+
 	if(ishuman(target))
 		var/mob/living/carbon/human/H = target
 		if(!H.check_has_mouth())
@@ -160,3 +165,9 @@
 	// to_chat(user, span_notice("You transfer [trans] units of the solution to [target]."))
 	balloon_alert(user, "transfered [trans] units to [target]") // CHOMPEdit - Balloon alerts! They're the future, I tell you.
 	return 1
+
+/obj/item/reagent_containers/proc/liquid_belly_check()
+	for(var/datum/reagent/R in reagents.reagent_list)
+		if(R.from_belly)
+			return TRUE
+	return FALSE

@@ -48,8 +48,12 @@
 /obj/machinery/pda_multicaster/Destroy()
 	for(var/atom/movable/AM in contents)
 		qdel(AM)
+<<<<<<< HEAD
 	QDEL_NULL(soundloop)
 	..()
+=======
+	. = ..()
+>>>>>>> f881d54dbf (Panel port test [IDB IGNORE] (#17350))
 
 /obj/machinery/pda_multicaster/update_icon()
 	if(on)

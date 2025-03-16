@@ -91,10 +91,13 @@
 /obj/item/capture_crystal/after_trash_eaten(var/mob/living/user)
 	if(bound_mob && (bound_mob in contents))
 		if(isbelly(loc))
+<<<<<<< HEAD
 			/* CHOMPRemove Start, handled by indirect FX
 			var/obj/belly/B = loc
 			to_chat(bound_mob, span_notice("Outside of your crystal, you can see; " + span_notice("[B.desc]")))
 			*/// CHOMPRemove End
+=======
+>>>>>>> f881d54dbf (Panel port test [IDB IGNORE] (#17350))
 			to_chat(user, span_notice("You can taste the the power of command."))
 
 // Most trash has no special check, so the rest of these are just after_trash_eaten()

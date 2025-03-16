@@ -220,6 +220,7 @@
 		return TRUE
 	*/
 
+<<<<<<< HEAD
 //CHOMPadd start
 /datum/job/proc/register_shift_key(key)
 	if(key)
@@ -231,6 +232,10 @@
 /datum/job/proc/update_limit(var/comperator)
 	return
 //CHOMPAdd End
+=======
+/datum/job/proc/update_limit(var/comperator)
+	return
+>>>>>>> f881d54dbf (Panel port test [IDB IGNORE] (#17350))
 
 // Check client-specific availability rules.
 /datum/job/proc/player_has_enough_pto(client/C)

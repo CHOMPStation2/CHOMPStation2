@@ -6,7 +6,10 @@
 	var/resizable = TRUE				// Can other people resize you? (Usually ignored for self-resizes)
 	var/digest_leave_remains = FALSE	// Will this mob leave bones/skull/etc after the melty demise?
 	var/allowmobvore = TRUE				// Will simplemobs attempt to eat the mob?
+<<<<<<< HEAD
 	//var/allow_inbelly_spawning = FALSE	// Will we even bother with attempts of someone to spawn in in one of our bellies? // CHOMPedit: use our code instead of upstream's recoding of our code
+=======
+>>>>>>> f881d54dbf (Panel port test [IDB IGNORE] (#17350))
 	var/obj/belly/vore_selected			// Default to no vore capability.
 	var/list/vore_organs = list()		// List of vore containers inside a mob
 	var/absorbed = FALSE				// If a mob is absorbed into another
@@ -19,6 +22,7 @@
 	var/drop_vore = TRUE				//Enabled by default since you have to enable drop pred/prey to do this anyway
 	var/throw_vore = TRUE				//Enabled by default since you have to enable drop pred/prey to do this anyway
 	var/food_vore = TRUE				//Enabled by default since you have to enable drop pred/prey to do this anyway
+	var/consume_liquid_belly = FALSE	//starting off because if someone is into that, they'll toggle it first time they get the error. Otherway around would be more pref breaky.
 	var/digest_pain = TRUE
 	var/can_be_drop_prey = FALSE
 	var/can_be_drop_pred = FALSE
@@ -69,4 +73,31 @@
 	var/vore_icons = 0					// Bitfield for which fields we have vore icons for.
 	var/vore_eyes = FALSE				// For mobs with fullness specific eye overlays.
 
+<<<<<<< HEAD
 	var/obj/soulgem/soulgem				// CHOMPEnable Soulcatcher. Needs to be up-ported sometime.
+=======
+	var/obj/soulgem/soulgem				// Soulcatcher. Needs to be up-ported sometime.
+
+	var/receive_reagents = FALSE			//Pref for people to avoid others transfering reagents into them.
+	var/give_reagents = FALSE				//Pref for people to avoid others taking reagents from them.
+	var/apply_reagents = TRUE				//Pref for people to avoid having stomach reagents applied to them
+	var/latejoin_vore = FALSE				//If enabled, latejoiners can spawn into this, assuming they have a client
+	var/latejoin_prey = FALSE				//If enabled, latejoiners can spawn ontop of and instantly eat the victim
+	var/noisy_full = FALSE					//Enables belching when a mob has overeaten
+	var/phase_vore = TRUE					//Enabled by default since you have to enable drop pred/prey to do this anyway
+	var/strip_pref = TRUE					//Enables the ability for worn items to be stripped
+	var/no_latejoin_vore_warning = FALSE	//Auto accepts pred spwan notifications (roundbased / saveable)
+	var/no_latejoin_prey_warning = FALSE	//Auto accepts prey spawn notifications (roundbased / saveable)
+	var/no_latejoin_vore_warning_time = 15	//Time until accepting prey
+	var/no_latejoin_prey_warning_time = 15	//Time until accepting pred
+	var/no_latejoin_vore_warning_persists = FALSE	//Do we save it?
+	var/no_latejoin_prey_warning_persists = FALSE	//Do we save it?
+	var/belly_rub_target = null
+	var/soulcatcher_pref_flags = 0			//Default disabled
+
+	var/voice_freq = 42500	// Preference for character voice frequency
+	var/list/voice_sounds_list = list()	// The sound list containing our voice sounds!
+	var/enabled = TRUE //Pauses a mob if disabled (Prevents life ticks from happening)
+	var/died_in_vr = FALSE //For virtual reality sleepers
+	var/last_move_time = 0 //For movement smoothing
+>>>>>>> f881d54dbf (Panel port test [IDB IGNORE] (#17350))
