@@ -150,7 +150,11 @@
 #include "code\__defines\span.dm"
 #include "code\__defines\species_languages.dm"
 #include "code\__defines\species_languages_vr.dm"
+<<<<<<< HEAD
 #include "code\__defines\species_languages_YW.dm"
+=======
+#include "code\__defines\species_traits.dm"
+>>>>>>> 229a7d5b12 (Reflexive Biting and Personal Space Traits (#17289))
 #include "code\__defines\speech_channels.dm"
 #include "code\__defines\spells.dm"
 #include "code\__defines\sprite_sheets.dm"
