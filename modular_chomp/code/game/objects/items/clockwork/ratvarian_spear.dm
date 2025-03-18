@@ -14,4 +14,3 @@
 	attack_verb = list("stabbed", "poked", "slashed")
 	hitsound = 'sound/weapons/bladeslice.ogg'
 	w_class = ITEMSIZE_HUGE
-

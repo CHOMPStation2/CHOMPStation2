@@ -66,5 +66,3 @@ VBOanim_gullet2
 VBOanim_intestine1
 VBOanim_belly3
 VBO_anim_intestine2
-
-

@@ -361,7 +361,7 @@
 	wind_low = 4
 	flight_failure_modifier = 100
 	effect_message = span_warning("Extreme rain is crushing you!")
-	
+
 	imminent_transition_message = "A fatal monsoon approaches."
 
 	var/next_lightning_strike = 0 // world.time when lightning will strike.
