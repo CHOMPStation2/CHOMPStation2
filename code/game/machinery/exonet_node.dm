@@ -24,8 +24,6 @@
 // Parameters: None
 // Description: Adds components to the machine for deconstruction.
 /obj/machinery/exonet_node/map/Initialize(mapload)
-	. = ..()
-	default_apply_parts()
 	// CHOMPAdd: Exonet Machinery humming
 	soundloop = new(list(src), FALSE)
 	if(prob(60)) // 60% chance to change the midloop
@@ -40,6 +38,8 @@
 			soundloop.mid_length = 30
 	soundloop.start() // CHOMPStation Edit: This starts on
 	// CHOMPAdd End
+	. = ..()
+	default_apply_parts()
 
 /obj/machinery/exonet_node/map/Initialize(mapload)
 	. = ..()
