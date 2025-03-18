@@ -129,6 +129,7 @@
 	default_value = TRUE
 	savefile_identifier = PREFERENCE_PLAYER
 
+<<<<<<< HEAD
 // Vorey sounds
 /datum/preference/toggle/belch_noises // Belching noises - pref toggle for 'em
 	category = PREFERENCE_CATEGORY_GAME_PREFERENCES
@@ -148,6 +149,8 @@
 	default_value = TRUE
 	savefile_identifier = PREFERENCE_PLAYER
 
+=======
+>>>>>>> dfeaa5f5ed (Make the belly Visibility pref a client one as opposed to a per-character one. (#17375))
 /datum/preference/numeric/ambience_freq
 	category = PREFERENCE_CATEGORY_GAME_PREFERENCES
 	savefile_key = "ambience_freq"
