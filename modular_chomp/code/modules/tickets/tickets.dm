@@ -571,7 +571,7 @@ GLOBAL_DATUM_INIT(tickets, /datum/tickets, new)
 		return
 
 	if(handler == key_name(usr, FALSE, TRUE))
-		to_chat(span_red("You are already handling this ticket."))
+		to_chat(usr, span_red("You are already handling this ticket."))
 		return
 
 	var/msg = span_red("Your AdminHelp is being handled by [key_name(usr,FALSE,FALSE)] please be patient.")

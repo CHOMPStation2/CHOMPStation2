@@ -172,7 +172,7 @@
 		icon_state = "destroyed"
 	if(panel_open)
 		add_overlay("panel_open")
-	if(stat & NOPOWER|EMPED)
+	if(stat & (NOPOWER|EMPED))
 		add_overlay("poweroff")
 	if(printing)
 		add_overlay("printing")
