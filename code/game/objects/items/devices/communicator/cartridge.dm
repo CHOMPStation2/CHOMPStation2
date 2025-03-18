@@ -375,11 +375,12 @@
 	icon_state = "cart-e"
 	ui_templates = list(list("name" = "Power Monitor", "template" = "comm_power_monitor.tmpl"))
 
-/obj/item/commcard/engineering/New()
+/obj/item/commcard/engineering/Initialize(mapload)
 	..()
 	internal_devices |= new /obj/item/halogen_counter(src)
+	return INITIALIZE_HINT_LATELOAD
 
-/obj/item/commcard/engineering/Initialize(mapload)
+/obj/item/commcard/engineering/LateInitialize()
 	. = ..()
 	internal_data["grid_sensors"] = find_powernet_sensors()
 	internal_data["powernet_target"] = ""
@@ -789,12 +790,13 @@
 			list("name" = "Power Monitor", "template" = "comm_power_monitor.tmpl")
 		)
 
-/obj/item/commcard/head/ce/New()
+/obj/item/commcard/head/ce/Initialize(mapload)
 	..()
 	internal_devices |= new /obj.item/analyzer(src)
 	internal_devices |= new /obj/item/halogen_counter(src)
+	return INITIALIZE_HINT_LATELOAD
 
-/obj/item/commcard/head/ce/Initialize(mapload)
+/obj/item/commcard/head/ce/LateInitialize()
 	. = ..()
 	internal_data["grid_sensors"] = find_powernet_sensors()
 	internal_data["powernet_target"] = ""
