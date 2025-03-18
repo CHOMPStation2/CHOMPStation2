@@ -46,8 +46,8 @@ GLOBAL_LIST_INIT(pitcher_plant_lure_messages, list(
 	melee_damage_lower = 0
 
 	armor = list(
-				"melee" = 0, // STOP TRYING TO HACK IT UP WITH AN AXE TO RESCUE A PERSON INSIDE LIKE OH MY GOD YOU ARE ONE UNLUCKY LAG SPIKE FROM CHOPPING THEIR FUCKING CHEST OPEN
-				"bullet" = 0, // NO DON'T SHOOT IT EITHER WHAT IS WRONG WITH YOU
+				"melee" = 0,
+				"bullet" = 0,
 				"laser" = -50, // Okay fine fire type beats plant type
 				"energy" = 0,
 				"bomb" = 0,
@@ -69,7 +69,7 @@ GLOBAL_LIST_INIT(pitcher_plant_lure_messages, list(
 	vore_active = 1
 	vore_icons = 1
 	vore_capacity = 1
-	vore_pounce_chance = 100 // Either this makes mobs get eaten for attacking it or nothing happens and I don't know which.
+	vore_pounce_chance = 5 // Either this makes mobs sometimes get eaten for attacking it or nothing happens and I don't know which it is.
 	swallowTime = 3 //3 deciseconds. This is intended to be nearly instant, e.g. victim trips and falls in.
 	vore_ignores_undigestable = 0
 	vore_default_mode = DM_DIGEST
