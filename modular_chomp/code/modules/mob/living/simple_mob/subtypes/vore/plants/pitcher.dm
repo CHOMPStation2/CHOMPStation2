@@ -229,11 +229,11 @@ GLOBAL_LIST_INIT(pitcher_plant_lure_messages, list(
 					break //We need to terminate the loop after each outcome or this could loop through multiple bellies. Of course, there should only be one belly, but leave this here anyway just in case.
 		if(!N)
 			to_chat(user, span_infoplain("The pitcher is empty."))
-		if(istype(O, /obj/item/newspaper))
-			user.visible_message(span_notice("[user] baps \the [src], but it doesn't seem to do anything."), span_notice("You whap \the [src] with a rolled up newspaper."))
-			if(N)
-				to_chat(user, span_notice("Weird. That usually works. Maybe you can fish out its victim with some string or wire or something? Or maybe kill the thing with some plant-b-gone. Both would probably be safer than hacking it up with a person still inside."))
-			return // You can't newspaper people to freedom like you do with other mobs, but since that doesn't work, fucking tell people.
+	if(istype(O, /obj/item/newspaper))
+		user.visible_message(span_notice("[user] baps \the [src], but it doesn't seem to do anything."), span_notice("You whap \the [src] with a rolled up newspaper."))
+		if(N)
+			to_chat(user, span_notice("Weird. That usually works. Maybe you can fish out its victim with some string or wire or something? Or maybe kill the thing with some plant-b-gone. Both would probably be safer than hacking it up with a person still inside."))
+		return // You can't newspaper people to freedom like you do with other mobs, but since that doesn't work, fucking tell people.
 	..()
 
 /mob/living/simple_mob/vore/pitcher_plant/proc/vore_checks()
@@ -306,7 +306,7 @@ GLOBAL_LIST_INIT(pitcher_plant_lure_messages, list(
 	var/datum/seed/seed = null
 	var/obj/item/seeds/pit = null
 
-/obj/item/reagent_containers/food/snacks/pitcher_fruit/Initialize()
+/obj/item/reagent_containers/food/snacks/pitcher_fruit/Initialize(mapload)
 	. = ..()
 	reagents.add_reagent(REAGENT_ID_PITCHERNECTAR, 5)
 	reagents.add_reagent(REAGENT_ID_PARALYZE_FLUID, 5) // Something worth harvesting the fruits for.
