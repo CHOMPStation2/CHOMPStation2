@@ -46,8 +46,8 @@ GLOBAL_LIST_INIT(pitcher_plant_lure_messages, list(
 	melee_damage_lower = 0
 
 	armor = list(
-				"melee" = 30, // STOP TRYING TO HACK IT UP WITH AN AXE TO RESCUE A PERSON INSIDE LIKE OH MY GOD YOU ARE ONE UNLUCKY LAG SPIKE FROM CHOPPING THEIR FUCKING CHEST OPEN
-				"bullet" = 30, // NO DON'T SHOOT IT EITHER WHAT IS WRONG WITH YOU
+				"melee" = 0, // STOP TRYING TO HACK IT UP WITH AN AXE TO RESCUE A PERSON INSIDE LIKE OH MY GOD YOU ARE ONE UNLUCKY LAG SPIKE FROM CHOPPING THEIR FUCKING CHEST OPEN
+				"bullet" = 0, // NO DON'T SHOOT IT EITHER WHAT IS WRONG WITH YOU
 				"laser" = -50, // Okay fine fire type beats plant type
 				"energy" = 0,
 				"bomb" = 0,
