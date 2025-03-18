@@ -231,8 +231,7 @@ GLOBAL_LIST_INIT(pitcher_plant_lure_messages, list(
 			to_chat(user, span_infoplain("The pitcher is empty."))
 	if(istype(O, /obj/item/newspaper))
 		user.visible_message(span_notice("[user] baps \the [src], but it doesn't seem to do anything."), span_notice("You whap \the [src] with a rolled up newspaper."))
-		if(N)
-			to_chat(user, span_notice("Weird. That usually works. Maybe you can fish out its victim with some string or wire or something? Or maybe kill the thing with some plant-b-gone. Both would probably be safer than hacking it up with a person still inside."))
+		to_chat(user, span_notice("Weird. That usually works. Maybe you can fish out its victim with some string or wire or something? Or maybe kill the thing with some plant-b-gone. Both would probably be safer than hacking it up with a person still inside."))
 		return // You can't newspaper people to freedom like you do with other mobs, but since that doesn't work, fucking tell people.
 	..()
 
