@@ -31,15 +31,6 @@
 	to_chat(src, span_notice("You will [allow_self_surgery ? "now" : "no longer"] attempt to operate upon yourself."))
 	log_admin("DEBUG \[[world.timeofday]\]: [src.ckey ? "[src.name]:([src.ckey])" : "[src.name]"] has [allow_self_surgery ? "Enabled" : "Disabled"] self surgery.")
 
-<<<<<<< HEAD
-//ChompEDIT START - re-assert our layer and plane
-/mob/living/Moved(var/atom/oldloc, direct, forced, movetime)
-	. = ..()
-	if(status_flags & HIDING)
-		layer = HIDING_LAYER
-		plane = OBJ_PLANE
-//ChompEDIT END
-=======
 /mob/living/proc/toggle_patting_defence()
 	set name = "Toggle Reflexive Biting"
 	set desc = "Toggles the automatic biting for if someone pats you on the head or boops your nose."
@@ -63,4 +54,11 @@
 	else
 		touch_reaction_flags |= SPECIES_TRAIT_PERSONAL_BUBBLE
 		to_chat(src,span_notice("You will now dodge all attempts at hugging, patting, booping, licking, smelling and hand shaking."))
->>>>>>> 229a7d5b12 (Reflexive Biting and Personal Space Traits (#17289))
+
+//ChompEDIT START - re-assert our layer and plane
+/mob/living/Moved(var/atom/oldloc, direct, forced, movetime)
+	. = ..()
+	if(status_flags & HIDING)
+		layer = HIDING_LAYER
+		plane = OBJ_PLANE
+//ChompEDIT END

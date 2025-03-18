@@ -515,13 +515,6 @@
 			span_notice("[H] shakes [target]'s hand."), \
 			span_notice("You shake [target]'s hand."), )
 	else if(H.zone_sel.selecting == "mouth")
-<<<<<<< HEAD
-		H.visible_message( \
-			span_notice("[H] boops [target]'s nose."), \
-			span_notice("You boop [target] on the nose."), )
-	else if(H.zone_sel.selecting == BP_GROIN) //CHOMPEdit
-		H.vore_bellyrub(target)
-=======
 		if(target.touch_reaction_flags & SPECIES_TRAIT_PATTING_DEFENCE)
 			H.visible_message( \
 				span_warning("[target] reflexively bites the hand of [H] to prevent nose booping!"), \
@@ -534,7 +527,8 @@
 			H.visible_message( \
 				span_notice("[H] boops [target]'s nose."), \
 				span_notice("You boop [target] on the nose."), )
->>>>>>> 229a7d5b12 (Reflexive Biting and Personal Space Traits (#17289))
+	else if(H.zone_sel.selecting == BP_GROIN) //CHOMPEdit
+		H.vore_bellyrub(target)
 	//VOREStation Edit End
 	else
 		H.visible_message(span_notice("[H] hugs [target] to make [t_him] feel better!"), \
