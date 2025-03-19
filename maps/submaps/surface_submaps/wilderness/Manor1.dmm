@@ -290,7 +290,7 @@
 "bi" = (
 /obj/effect/decal/cleanable/cobweb,
 /turf/simulated/floor/holofloor/wood{
-	icon_state = "wood-broken0"
+	icon_state = "wood_broken0"
 	},
 /area/submap/Manor1)
 "bj" = (
@@ -331,7 +331,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/holofloor/wood{
-	icon_state = "wood-broken5"
+	icon_state = "wood_broken5"
 	},
 /area/submap/Manor1)
 "bs" = (
@@ -490,7 +490,7 @@
 /area/submap/Manor1)
 "bV" = (
 /turf/simulated/floor/holofloor/wood{
-	icon_state = "wood-broken6"
+	icon_state = "wood_broken6"
 	},
 /area/submap/Manor1)
 "bW" = (
@@ -656,7 +656,7 @@
 /area/submap/Manor1)
 "cB" = (
 /turf/simulated/floor/holofloor/wood{
-	icon_state = "wood-broken3"
+	icon_state = "wood_broken3"
 	},
 /area/submap/Manor1)
 "cC" = (

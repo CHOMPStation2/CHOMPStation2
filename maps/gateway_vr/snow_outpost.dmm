@@ -1052,6 +1052,12 @@
 /mob/living/simple_mob/humanoid/merc/ranged/smg/poi,
 /turf/simulated/floor/snow/snow2,
 /area/awaymission/snow_outpost/outside/nospawn)
+"dN" = (
+/turf/simulated/shuttle/wall/dark{
+	icon_state = "dark6";
+	name = "Unknown Shuttle"
+	},
+/area/awaymission/snow_outpost/outside/nospawn)
 "dO" = (
 /turf/simulated/shuttle/wall/dark{
 	icon_state = "dark0";
@@ -1157,6 +1163,12 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/awaymission/snow_outpost/powered)
+"eb" = (
+/turf/simulated/shuttle/wall/dark{
+	icon_state = "dark5";
+	name = "Unknown Shuttle"
+	},
+/area/awaymission/snow_outpost/outside/nospawn)
 "ec" = (
 /turf/simulated/floor/tiled/steel_grid,
 /area/awaymission/snow_outpost/powered)
@@ -1214,12 +1226,6 @@
 	name = "Unknown Shuttle"
 	},
 /area/awaymission/snow_outpost/powered)
-"en" = (
-/turf/simulated/shuttle/wall/dark{
-	icon_state = "dark6";
-	name = "Unknown Shuttle"
-	},
-/area/awaymission/snow_outpost/outside/nospawn)
 "eo" = (
 /mob/living/simple_mob/mechanical/viscerator,
 /mob/living/simple_mob/mechanical/viscerator,
@@ -2595,12 +2601,6 @@
 /obj/item/toy/plushie/spider,
 /turf/simulated/floor/tiled/steel,
 /area/awaymission/snow_outpost/powered)
-"iU" = (
-/turf/simulated/shuttle/wall/dark{
-	icon_state = "dark5";
-	name = "Unknown Shuttle"
-	},
-/area/awaymission/snow_outpost/outside/nospawn)
 "iV" = (
 /turf/simulated/shuttle/wall/dark{
 	icon_state = "dark9";
@@ -15356,14 +15356,14 @@ uy
 uy
 uy
 uy
-en
+dN
 dO
 eW
 fe
 fe
 fn
 dO
-iU
+eb
 uy
 uy
 uy
@@ -15497,7 +15497,7 @@ uy
 uy
 uy
 uy
-en
+dN
 EA
 eM
 eX
@@ -15506,7 +15506,7 @@ eX
 eX
 fq
 EA
-iU
+eb
 uy
 uy
 uy
@@ -15634,11 +15634,11 @@ ab
 ab
 cd
 RF
-en
+dN
 dO
 dO
-iU
-en
+eb
+dN
 EA
 eH
 eN
@@ -15649,11 +15649,11 @@ eR
 fm
 fA
 EA
-iU
-en
+eb
+dN
 dO
 dO
-iU
+eb
 uy
 ab
 ab
@@ -17925,7 +17925,7 @@ fF
 fF
 iT
 dO
-iU
+eb
 uy
 ab
 cd
@@ -18048,7 +18048,7 @@ ab
 ab
 ab
 uy
-en
+dN
 dO
 EA
 ek

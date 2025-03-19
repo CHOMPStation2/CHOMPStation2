@@ -1,4 +1,10 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"au" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/outdoors/dirt{
+	outdoors = 0
+	},
+/area/submap/DeathDen)
 "aJ" = (
 /obj/structure/sink{
 	dir = 8;
@@ -55,6 +61,10 @@
 	},
 /turf/template_noop,
 /area/template_noop)
+"eO" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/wood/sif,
+/area/submap/DeathDen)
 "eS" = (
 /obj/structure/grille/rustic,
 /obj/structure/barricade,
@@ -315,10 +325,6 @@
 /obj/item/material/shard,
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/submap/DeathDen)
-"ph" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/wood/sif,
-/area/submap/DeathDen)
 "pu" = (
 /obj/structure/barricade,
 /obj/structure/grille/broken/rustic,
@@ -370,12 +376,6 @@
 	pixel_x = 6
 	},
 /turf/simulated/floor/wood/sif,
-/area/submap/DeathDen)
-"tr" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/outdoors/dirt{
-	outdoors = 0
-	},
 /area/submap/DeathDen)
 "tN" = (
 /obj/effect/decal/cleanable/dirt,
@@ -744,6 +744,14 @@
 "Th" = (
 /turf/simulated/wall/sifwood,
 /area/submap/DeathDen)
+"TA" = (
+/obj/item/reagent_containers/food/snacks/candy_corn{
+	pixel_x = 5;
+	pixel_y = -8
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/wood/sif,
+/area/submap/DeathDen)
 "TL" = (
 /obj/item/material/shard{
 	pixel_x = -3;
@@ -772,14 +780,6 @@
 "WH" = (
 /obj/effect/gibspawner/human,
 /obj/random/junk,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/wood/sif,
-/area/submap/DeathDen)
-"Zb" = (
-/obj/item/reagent_containers/food/snacks/candy_corn{
-	pixel_x = 5;
-	pixel_y = -8
-	},
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/wood/sif,
 /area/submap/DeathDen)
@@ -842,14 +842,14 @@ pu
 Th
 Th
 HZ
-Zb
+TA
 Th
 oX
 eS
 HZ
 nr
 vr
-tr
+au
 MO
 Qe
 "}
@@ -870,7 +870,7 @@ Th
 MO
 xN
 wa
-tr
+au
 Qe
 "}
 (5,1,1) = {"
@@ -889,8 +889,8 @@ uP
 Th
 MO
 MO
-tr
-tr
+au
+au
 gB
 "}
 (6,1,1) = {"
@@ -899,7 +899,7 @@ hq
 yL
 Qb
 WH
-ph
+eO
 Aw
 Zg
 sh
@@ -923,9 +923,9 @@ bk
 Th
 bk
 dr
-ph
+eO
 oj
-Zb
+TA
 Th
 MO
 MO
@@ -941,7 +941,7 @@ Th
 Th
 Th
 HZ
-ph
+eO
 Ic
 HZ
 Th
@@ -962,11 +962,11 @@ wK
 aJ
 Th
 ig
-ph
+eO
 Th
 vd
 nO
-ph
+eO
 vd
 FR
 Th
@@ -1002,7 +1002,7 @@ Kj
 is
 Aw
 fg
-ph
+eO
 Th
 kc
 fr
@@ -1037,7 +1037,7 @@ Qe
 cf
 cf
 nr
-tr
+au
 xN
 MO
 Th
@@ -1078,8 +1078,8 @@ cf
 cf
 Qe
 Qe
-tr
-tr
+au
+au
 Qe
 Qe
 MO
@@ -1099,7 +1099,7 @@ Qe
 Qe
 Qe
 OZ
-tr
+au
 Qe
 Qe
 MO

@@ -196,14 +196,6 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/mercbase/hall)
-"ax" = (
-/obj/machinery/airlock_sensor/airlock_interior{
-	frequency = 1200;
-	id_tag = "westairlock";
-	master_tag = "westinteriorsensor"
-	},
-/turf/simulated/wall/r_wall,
-/area/mercbase/hall)
 "aH" = (
 /obj/structure/cable{
 	icon_state = "0-4"
@@ -3417,6 +3409,14 @@
 	},
 /obj/machinery/door/firedoor,
 /turf/simulated/floor/tiled/dark,
+/area/mercbase/hall)
+"wF" = (
+/obj/machinery/airlock_sensor/airlock_interior{
+	frequency = 1200;
+	id_tag = "westairlock";
+	master_tag = "westinteriorsensor"
+	},
+/turf/simulated/wall/r_wall,
 /area/mercbase/hall)
 
 (1,1,1) = {"
@@ -11591,7 +11591,7 @@ ih
 kF
 hg
 jY
-ax
+wF
 jM
 kz
 gE

@@ -183,6 +183,12 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/submap/Blackshuttledown)
+"aG" = (
+/turf/simulated/shuttle/wall/dark{
+	icon_state = "dark9";
+	name = "Unknown Shuttle"
+	},
+/area/submap/Blackshuttledown)
 "aH" = (
 /turf/simulated/shuttle/wall/dark{
 	icon_state = "dark6";
@@ -743,12 +749,6 @@
 	name = "Unknown Shuttle"
 	},
 /area/submap/Blackshuttledown)
-"cq" = (
-/turf/simulated/shuttle/wall/dark{
-	icon_state = "dark9";
-	name = "Unknown Shuttle"
-	},
-/area/submap/Blackshuttledown)
 "cr" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
@@ -1239,7 +1239,7 @@ cc
 ch
 aj
 aj
-cq
+aG
 ab
 ab
 ae
@@ -1816,7 +1816,7 @@ aj
 aj
 aj
 aj
-cq
+aG
 ab
 bf
 aj
@@ -1825,7 +1825,7 @@ aN
 ci
 bI
 aj
-cq
+aG
 ab
 bf
 aj
@@ -1852,7 +1852,7 @@ ab
 aj
 aj
 aj
-cq
+aG
 ab
 ab
 ab
@@ -1861,14 +1861,14 @@ al
 al
 al
 al
-cq
+aG
 ab
 ab
 ab
 bf
 al
 al
-cq
+aG
 ad
 ad
 ad

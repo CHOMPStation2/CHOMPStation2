@@ -86,6 +86,12 @@
 "mh" = (
 /turf/simulated/floor/outdoors/dirt,
 /area/submap/FrostOasis)
+"mw" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/outdoors/dirt{
+	outdoors = 0
+	},
+/area/submap/FrostOasis)
 "mD" = (
 /obj/structure/flora/grass/both,
 /mob/living/simple_mob/animal/sif/shantak{
@@ -283,12 +289,6 @@
 /obj/random/obstruction,
 /turf/simulated/floor/wood/broken,
 /area/submap/FrostOasis)
-"Xf" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/outdoors/dirt{
-	outdoors = 0
-	},
-/area/submap/FrostOasis)
 "Yc" = (
 /mob/living/simple_mob/animal/passive/penguin{
 	faction = "diyaab"
@@ -407,7 +407,7 @@ xI
 Nc
 xI
 xI
-Xf
+mw
 ll
 Ka
 co
@@ -426,11 +426,11 @@ co
 oB
 BF
 oB
-Xf
-Xf
-Xf
-Xf
-Xf
+mw
+mw
+mw
+mw
+mw
 co
 co
 co
@@ -618,7 +618,7 @@ st
 co
 co
 ll
-Xf
+mw
 Aj
 oB
 oB
@@ -640,15 +640,15 @@ It
 cm
 ll
 mH
-Xf
-Xf
+mw
+mw
 oB
 pE
 zm
 oB
-Xf
+mw
 am
-Xf
+mw
 Yc
 Ji
 vK

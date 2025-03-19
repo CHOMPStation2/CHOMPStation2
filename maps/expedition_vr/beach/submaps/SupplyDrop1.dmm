@@ -1,6 +1,6 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "a" = (
-/turf/simulated/mineral,
+/turf/simulated/mineral/cave,
 /area/submap/cave/SupplyDrop1)
 "b" = (
 /turf/template_noop,

@@ -72,6 +72,19 @@
 	outdoors = 0
 	},
 /area/submap/WolfDen)
+"v" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/outdoors/dirt{
+	outdoors = 0
+	},
+/area/submap/WolfDen)
+"w" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/random/junk,
+/turf/simulated/floor/outdoors/dirt{
+	outdoors = 0
+	},
+/area/submap/WolfDen)
 "y" = (
 /obj/random/maintenance/security,
 /turf/simulated/floor/outdoors/rocks{
@@ -103,19 +116,6 @@
 "G" = (
 /obj/item/bone/arm,
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/outdoors/dirt{
-	outdoors = 0
-	},
-/area/submap/WolfDen)
-"I" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/outdoors/dirt{
-	outdoors = 0
-	},
-/area/submap/WolfDen)
-"J" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/random/junk,
 /turf/simulated/floor/outdoors/dirt{
 	outdoors = 0
 	},
@@ -222,12 +222,12 @@ o
 (4,1,1) = {"
 Z
 o
-I
+v
 A
-J
+w
 e
-J
-I
+w
+v
 r
 o
 "}
@@ -246,7 +246,7 @@ o
 (6,1,1) = {"
 Z
 o
-I
+v
 o
 o
 p
@@ -270,8 +270,8 @@ o
 (8,1,1) = {"
 Z
 z
-I
-I
+v
+v
 o
 o
 o

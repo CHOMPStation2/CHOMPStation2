@@ -37,6 +37,10 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/submap/lonehome)
+"bb" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/wood/broken,
+/area/submap/lonehome)
 "ck" = (
 /obj/machinery/light/small{
 	dir = 8
@@ -59,6 +63,10 @@
 /obj/item/organ/internal/brain/grey,
 /obj/item/material/knife/plastic,
 /turf/simulated/floor,
+/area/submap/lonehome)
+"cS" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/wood,
 /area/submap/lonehome)
 "dR" = (
 /obj/item/paper{
@@ -323,10 +331,6 @@
 /obj/structure/sign/periodic,
 /turf/simulated/wall/wood,
 /area/submap/lonehome)
-"pX" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/wood/broken,
-/area/submap/lonehome)
 "qa" = (
 /obj/structure/fence,
 /turf/simulated/floor/outdoors/grass/heavy,
@@ -438,10 +442,6 @@
 "uK" = (
 /obj/item/material/minihoe,
 /turf/simulated/floor/outdoors/grass/heavy,
-/area/submap/lonehome)
-"uR" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/wood,
 /area/submap/lonehome)
 "ve" = (
 /obj/structure/table/bench/glass,
@@ -1100,7 +1100,7 @@ NL
 ma
 ma
 Fh
-uR
+cS
 nD
 ve
 ve
@@ -1126,8 +1126,8 @@ yh
 yh
 yh
 JW
-pX
-uR
+bb
+cS
 oZ
 Fu
 Fu
@@ -1155,7 +1155,7 @@ ma
 ma
 Ll
 iw
-pX
+bb
 Fu
 qN
 wa
@@ -1185,9 +1185,9 @@ wa
 iw
 Eo
 qN
-uR
+cS
 uc
-uR
+cS
 BH
 qN
 qN
@@ -1215,7 +1215,7 @@ Nx
 Xc
 ma
 Ex
-pX
+bb
 ks
 Jq
 qo
@@ -1264,15 +1264,15 @@ fl
 ma
 Od
 JW
-uR
-uR
+cS
+cS
 jy
-pX
-pX
+bb
+bb
 ck
-uR
-uR
-uR
+cS
+cS
+cS
 iw
 JW
 MM
@@ -1320,12 +1320,12 @@ yQ
 iQ
 wa
 Zi
-uR
+cS
 ip
 uC
 ma
 UB
-pX
+bb
 Ll
 aK
 ld
@@ -1345,9 +1345,9 @@ uc
 nL
 yQ
 kg
-uR
+cS
 nT
-uR
+cS
 jH
 uw
 uc

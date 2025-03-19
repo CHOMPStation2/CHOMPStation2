@@ -2118,15 +2118,6 @@
 /obj/machinery/portable_atmospherics/powered/scrubber,
 /turf/simulated/floor/plating,
 /area/offmap/aerostat/inside/toxins)
-"fS" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced/full,
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/obj/machinery/door/firedoor/glass,
-/turf/simulated/floor/plating/virgo2,
-/area/offmap/aerostat/inside/airlock/south)
 "fT" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -2147,6 +2138,15 @@
 	},
 /turf/simulated/wall,
 /area/offmap/aerostat/inside/atmos)
+"fW" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced/full,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/machinery/door/firedoor/glass,
+/turf/simulated/floor/plating/virgo2,
+/area/offmap/aerostat/inside/airlock/north)
 "fX" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -2329,15 +2329,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/offmap/aerostat/inside/toxins)
-"gN" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced/full,
-/obj/structure/window/reinforced{
-	dir = 4
-	},
-/obj/machinery/door/firedoor/glass,
-/turf/simulated/floor/plating/virgo2,
-/area/offmap/aerostat/inside/airlock/north)
 "gO" = (
 /obj/effect/floor_decal/industrial/warning/dust{
 	dir = 1
@@ -9168,6 +9159,15 @@
 	},
 /turf/simulated/shuttle/wall/voidcraft/green,
 /area/offmap/aerostat/inside/airlock/south)
+"IB" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced/full,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/machinery/door/firedoor/glass,
+/turf/simulated/floor/plating/virgo2,
+/area/offmap/aerostat/inside/airlock/south)
 "ID" = (
 /turf/simulated/wall/r_wall,
 /area/offmap/aerostat/inside/firingrange)
@@ -9293,6 +9293,15 @@
 	},
 /turf/simulated/floor/tiled,
 /area/offmap/aerostat/inside/drillstorage)
+"Jd" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced/full,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/machinery/door/firedoor/glass,
+/turf/simulated/floor/plating/virgo2,
+/area/offmap/aerostat/inside/airlock/south)
 "Je" = (
 /obj/machinery/alarm{
 	dir = 4;
@@ -9348,15 +9357,6 @@
 	},
 /turf/simulated/wall,
 /area/offmap/aerostat/inside/toxins)
-"Jz" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced/full,
-/obj/structure/window/reinforced{
-	dir = 4
-	},
-/obj/machinery/door/firedoor/glass,
-/turf/simulated/floor/plating/virgo2,
-/area/offmap/aerostat/inside/airlock/south)
 "JA" = (
 /obj/machinery/light{
 	dir = 8
@@ -23213,12 +23213,12 @@ wQ
 eW
 KK
 DC
-fS
-fS
+IB
+IB
 DC
 DC
-fS
-fS
+IB
+IB
 DC
 DP
 RH
@@ -23567,12 +23567,12 @@ QT
 bp
 Wd
 cn
-gN
-gN
+fW
+fW
 cn
 cn
-gN
-gN
+fW
+fW
 dY
 Ce
 Ze
@@ -23639,12 +23639,12 @@ OG
 tR
 KK
 DC
-Jz
-Jz
+Jd
+Jd
 DC
 DC
-Jz
-Jz
+Jd
+Jd
 DC
 DP
 yD

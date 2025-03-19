@@ -6451,13 +6451,6 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/tether/surfacebase/security/armory)
-"akp" = (
-/obj/machinery/alarm{
-	dir = 1;
-	pixel_y = -25
-	},
-/turf/simulated/floor/wood,
-/area/engineering/lower/breakroom)
 "akq" = (
 /turf/simulated/wall,
 /area/tether/surfacebase/medical/bathroom)
@@ -32914,6 +32907,13 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/chapel/main)
+"paD" = (
+/obj/machinery/alarm{
+	dir = 1;
+	pixel_y = -25
+	},
+/turf/simulated/floor/wood,
+/area/engineering/lower/breakroom)
 "pkt" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -46330,7 +46330,7 @@ aNP
 aOF
 aPq
 aQh
-akp
+paD
 aRx
 aSd
 aSd

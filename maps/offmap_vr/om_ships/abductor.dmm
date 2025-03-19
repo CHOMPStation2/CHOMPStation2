@@ -88,7 +88,7 @@
 /obj/item/grenade/flashbang/clusterbang,
 /obj/item/grenade/flashbang/clusterbang,
 /obj/item/storage/box/metalfoam,
-/obj/item/clothing/mask/gas,
+/obj/item/clothing/mask/gas/wwii,
 /obj/item/clothing/mask/gas,
 /obj/structure/closet/alien,
 /turf/simulated/shuttle/floor/alienplating,

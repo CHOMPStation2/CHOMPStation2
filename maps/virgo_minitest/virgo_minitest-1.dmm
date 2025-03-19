@@ -5756,13 +5756,6 @@
 	},
 /turf/simulated/floor,
 /area/engineering/workshop)
-"Lu" = (
-/obj/effect/landmark{
-	name = "Observer-Start"
-	},
-/obj/effect/landmark/start/new_player,
-/turf/simulated/floor/tiled,
-/area/bridge)
 "Lz" = (
 /obj/machinery/computer/power_monitor{
 	dir = 4;
@@ -9138,7 +9131,7 @@ ni
 gr
 gf
 gf
-Lu
+gz
 gf
 gf
 gN

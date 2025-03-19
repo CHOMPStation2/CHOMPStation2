@@ -33,6 +33,13 @@
 	outdoors = 0
 	},
 /area/submap/XenoHive)
+"co" = (
+/obj/effect/alien/weeds,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/outdoors/rocks{
+	outdoors = 0
+	},
+/area/submap/XenoHive)
 "dk" = (
 /mob/living/simple_mob/animal/space/alien/sentinel,
 /obj/effect/alien/weeds,
@@ -363,13 +370,6 @@
 /obj/effect/alien/weeds,
 /obj/structure/prop/blackbox/quarantined_shuttle,
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/submap/XenoHive)
-"HJ" = (
-/obj/effect/alien/weeds,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/outdoors/rocks{
-	outdoors = 0
-	},
 /area/submap/XenoHive)
 "HO" = (
 /obj/structure/table,
@@ -757,7 +757,7 @@ QC
 xB
 xB
 xB
-HJ
+co
 kl
 AB
 sy
@@ -789,7 +789,7 @@ Et
 Et
 Et
 AB
-HJ
+co
 Or
 va
 AB

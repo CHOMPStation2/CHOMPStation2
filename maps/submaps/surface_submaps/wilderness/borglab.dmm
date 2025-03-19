@@ -734,6 +734,14 @@
 "zk" = (
 /turf/simulated/floor/tiled,
 /area/submap/BorgLab)
+"As" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/obj/effect/floor_decal/rust,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled,
+/area/submap/BorgLab)
 "AI" = (
 /mob/living/simple_mob/mechanical/combat_drone/lesser{
 	faction = "corrupt"
@@ -849,14 +857,6 @@
 "GA" = (
 /obj/machinery/door/airlock/maintenance/common,
 /turf/simulated/floor/plating,
-/area/submap/BorgLab)
-"GC" = (
-/obj/effect/floor_decal/industrial/warning{
-	dir = 1
-	},
-/obj/effect/floor_decal/rust,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/tiled,
 /area/submap/BorgLab)
 "GS" = (
 /obj/item/stack/material/gold{
@@ -1946,7 +1946,7 @@ mw
 TU
 Vc
 YD
-GC
+As
 ty
 dd
 UW
@@ -1973,7 +1973,7 @@ TD
 yB
 OD
 mB
-GC
+As
 CS
 oa
 dK
@@ -2054,7 +2054,7 @@ pe
 Wh
 yz
 Jo
-GC
+As
 th
 Fj
 KH
