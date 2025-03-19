@@ -27,7 +27,7 @@ GLOBAL_LIST_INIT(pitcher_plant_lure_messages, list(
 	maxHealth = 200
 	health = 200
 	a_intent = I_HELP // While this is already help by default, I'm leaving this variable here as a reminder that disarm will prevent players from swapping places with the pitcher, but interfere with vore bump.
-	faction = "plants" // Makes plant-b-gone deadly.
+	faction = FACTION_PLANTS // Makes plant-b-gone deadly.
 	ai_holder_type = /datum/ai_holder/simple_mob/passive/pitcher //It's a passive carnivorous plant, it can't detect or interact with people.
 
 	min_oxy = 0 //Immune to atmos because so are space vines. This is arbitrary and can be tweaked if desired.
