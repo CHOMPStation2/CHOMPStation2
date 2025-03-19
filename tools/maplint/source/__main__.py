@@ -110,7 +110,7 @@ def main(args):
 
     # default_maps_dir = os.path.join(frontend.read_settings().map_folder, '') # make sure it has a trailing slash # ChompEDIT
     # for map_filename in (args.maps or glob.glob(default_maps_dir + "**/*.dmm", recursive = True)): # ChompEDIT
-    for map_filename in (args.maps or glob.glob("**/*.dmm", recursive = True)):
+    for map_filename in (args.maps or glob.glob("**/*.dmm", recursive = True)): # ChompEDIT
         print(map_filename, end = " ")
 
         # ChompEDIT START
