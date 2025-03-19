@@ -5019,6 +5019,9 @@
 /obj/effect/floor_decal/industrial/danger,
 /turf/simulated/floor/tiled/techfloor,
 /area/ship/expe/hangar)
+"jV" = (
+/turf/simulated/floor/tiled/techfloor,
+/area/ship/expe/hangarcontrol)
 "jW" = (
 /obj/machinery/suit_cycler/security,
 /turf/simulated/floor/tiled/techfloor,
