@@ -364,7 +364,7 @@
 	name = "Veil of sanity"
 	},
 /obj/structure/gootrap{
-	basecolor = #610B0B;
+	basecolor = "#610B0B";
 	desc = "As if you stepped on a bear trap, you can feel a chilling horror crawling up your spine, gazing upon a pond of maroon fluids you can't help but experience terror upon it";
 	name = "Spill of fear"
 	},
@@ -804,7 +804,7 @@
 	name = "Veil of sanity"
 	},
 /obj/structure/gootrap{
-	basecolor = #610B0B;
+	basecolor = "#610B0B";
 	desc = "As if you stepped on a bear trap, you can feel a chilling horror crawling up your spine, gazing upon a pond of maroon fluids you can't help but experience terror upon it";
 	name = "Spill of fear"
 	},
@@ -1068,7 +1068,7 @@
 	name = "Veil of sanity"
 	},
 /obj/structure/gootrap{
-	basecolor = #610B0B;
+	basecolor = "#610B0B";
 	desc = "As if you stepped on a bear trap, you can feel a chilling horror crawling up your spine, gazing upon a pond of maroon fluids you can't help but experience terror upon it";
 	name = "Spill of fear"
 	},

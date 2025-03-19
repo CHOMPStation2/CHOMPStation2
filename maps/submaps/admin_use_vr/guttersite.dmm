@@ -303,8 +303,7 @@
 	icon_state = "4-8"
 	},
 /obj/structure/cable/cyan{
-	dir = 4;
-	icon_state = "2-8"
+	icon_state = "2-4"
 	},
 /turf/simulated/floor/plating/eris/under,
 /area/tether_away/guttersite/engines)
@@ -453,12 +452,10 @@
 /area/tether_away/guttersite/commons)
 "bB" = (
 /obj/structure/cable/cyan{
-	dir = 1;
 	icon_state = "1-2"
 	},
 /obj/structure/cable/cyan{
-	dir = 4;
-	icon_state = "1-4"
+	icon_state = "1-8"
 	},
 /turf/simulated/floor/plating/eris/under,
 /area/tether_away/guttersite/engines)
@@ -561,13 +558,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
 /area/tether_away/guttersite/atmos)
-"bQ" = (
-/obj/structure/cable/cyan{
-	dir = 4;
-	icon_state = "1-4"
-	},
-/turf/simulated/floor/plating/eris/under,
-/area/tether_away/guttersite/engines)
 "bR" = (
 /obj/structure/cable/cyan{
 	icon_state = "1-4"
@@ -1640,7 +1630,6 @@
 	dir = 1
 	},
 /obj/structure/cable/cyan{
-	dir = 1;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/eris/steel/bar_dance,
@@ -1660,7 +1649,6 @@
 	dir = 1
 	},
 /obj/structure/cable/cyan{
-	dir = 1;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/eris/steel/bar_dance,
@@ -2879,10 +2867,6 @@
 	dir = 1
 	},
 /obj/machinery/door/firedoor/glass,
-/obj/structure/window/reinforced{
-	dir = 8;
-	health = 1e+006
-	},
 /obj/structure/window/reinforced{
 	dir = 8;
 	health = 1e+006
@@ -4331,7 +4315,6 @@
 	dir = 1
 	},
 /obj/structure/cable/cyan{
-	dir = 1;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
@@ -4356,7 +4339,6 @@
 /area/tether_away/guttersite/commons)
 "kG" = (
 /obj/structure/cable/cyan{
-	dir = 1;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -4388,10 +4370,6 @@
 	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/atmospherics/pipe/manifold/hidden{
-	dir = 4;
-	icon_state = "map"
-	},
 /obj/machinery/atmospherics/pipe/manifold/hidden{
 	dir = 4;
 	icon_state = "map"
@@ -4748,7 +4726,6 @@
 	dir = 1
 	},
 /obj/structure/cable/cyan{
-	dir = 1;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
@@ -5857,7 +5834,7 @@
 	name = "exterior access button";
 	pixel_x = -5;
 	pixel_y = -26;
-	req_one_access = list();
+	req_one_access = list()
 	},
 /turf/simulated/floor/plating/eris/under/airless,
 /area/tether_away/guttersite/docking)
@@ -10306,7 +10283,7 @@ aX
 bl
 bB
 bH
-bQ
+bG
 aX
 da
 aF

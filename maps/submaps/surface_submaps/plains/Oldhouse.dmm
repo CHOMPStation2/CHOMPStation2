@@ -1,184 +1,184 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
-"aa" = (
+"a" = (
 /turf/template_noop,
 /area/template_noop)
-"ab" = (
+"b" = (
 /turf/template_noop,
 /area/submap/Oldhouse)
-"ac" = (
+"c" = (
 /turf/simulated/wall/wood,
 /area/submap/Oldhouse)
-"ad" = (
+"d" = (
 /obj/structure/flora/tree/sif,
 /turf/template_noop,
 /area/submap/Oldhouse)
-"ae" = (
+"e" = (
 /obj/structure/window/reinforced/full,
 /turf/simulated/floor/wood,
 /area/submap/Oldhouse)
-"af" = (
+"f" = (
 /obj/structure/table/woodentable,
 /obj/effect/decal/cleanable/cobweb2,
 /turf/simulated/floor/wood,
 /area/submap/Oldhouse)
-"ag" = (
+"g" = (
 /obj/item/stack/material/wood,
 /obj/effect/decal/cleanable/cobweb,
 /turf/simulated/floor/wood,
 /area/submap/Oldhouse)
-"ah" = (
+"h" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/wood,
 /area/submap/Oldhouse)
-"ai" = (
+"i" = (
 /turf/simulated/floor/wood,
 /area/submap/Oldhouse)
-"aj" = (
+"j" = (
 /turf/simulated/floor/wood{
 	icon_state = "wood_broken6"
 	},
 /area/submap/Oldhouse)
-"ak" = (
+"k" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/spiderling_remains,
 /turf/simulated/floor/wood,
 /area/submap/Oldhouse)
-"al" = (
+"l" = (
 /obj/structure/table/woodentable,
 /turf/simulated/floor/wood,
 /area/submap/Oldhouse)
-"am" = (
+"m" = (
 /obj/structure/closet/cabinet,
 /turf/simulated/floor/wood,
 /area/submap/Oldhouse)
-"an" = (
+"n" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/carpet/turcarpet,
 /area/submap/Oldhouse)
-"ao" = (
+"o" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/wood{
 	icon_state = "wood_broken4"
 	},
 /area/submap/Oldhouse)
-"ap" = (
+"p" = (
 /turf/simulated/floor/wood{
 	icon_state = "wood_broken2"
 	},
 /area/submap/Oldhouse)
-"aq" = (
+"q" = (
 /obj/item/stack/material/wood,
 /turf/simulated/floor/wood,
 /area/submap/Oldhouse)
-"ar" = (
+"r" = (
 /turf/simulated/floor/carpet/turcarpet,
 /area/submap/Oldhouse)
-"as" = (
+"s" = (
 /turf/simulated/floor/wood{
 	icon_state = "wood_broken4"
 	},
 /area/submap/Oldhouse)
-"at" = (
+"t" = (
 /obj/structure/table/woodentable,
 /obj/item/paper,
 /obj/effect/decal/cleanable/cobweb2,
 /turf/simulated/floor/wood,
 /area/submap/Oldhouse)
-"au" = (
+"u" = (
 /obj/structure/simple_door/wood,
 /turf/simulated/floor/wood,
 /area/submap/Oldhouse)
-"av" = (
+"v" = (
 /obj/structure/bed/chair/wood{
 	icon_state = "wooden_chair";
 	dir = 1
 	},
 /turf/simulated/floor/wood,
 /area/submap/Oldhouse)
-"aw" = (
+"w" = (
 /obj/item/stack/material/wood,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/wood,
 /area/submap/Oldhouse)
-"ax" = (
+"x" = (
 /obj/effect/decal/cleanable/cobweb,
 /turf/simulated/floor/wood{
 	icon_state = "wood_broken6"
 	},
 /area/submap/Oldhouse)
-"ay" = (
+"y" = (
 /obj/effect/decal/remains/mouse,
 /turf/simulated/floor/wood,
 /area/submap/Oldhouse)
-"az" = (
+"z" = (
 /obj/structure/table/woodentable,
 /obj/item/stack/material/wood,
 /turf/simulated/floor/wood,
 /area/submap/Oldhouse)
-"aA" = (
+"A" = (
 /obj/structure/bed,
 /obj/item/bedsheet,
 /turf/simulated/floor/wood,
 /area/submap/Oldhouse)
-"aB" = (
+"B" = (
 /obj/structure/bed/chair/comfy/teal,
 /turf/simulated/floor/wood,
 /area/submap/Oldhouse)
-"aC" = (
+"C" = (
 /obj/structure/bookcase,
 /turf/simulated/floor/carpet/turcarpet,
 /area/submap/Oldhouse)
-"aD" = (
+"D" = (
 /obj/structure/table,
 /turf/simulated/floor/wood,
 /area/submap/Oldhouse)
-"aE" = (
+"E" = (
 /obj/structure/table/woodentable,
 /obj/item/trash/candle,
 /turf/simulated/floor/wood,
 /area/submap/Oldhouse)
-"aF" = (
+"F" = (
 /obj/structure/table/woodentable,
 /obj/item/pen/blue,
 /turf/simulated/floor/wood,
 /area/submap/Oldhouse)
-"aG" = (
+"G" = (
 /obj/item/reagent_containers/food/snacks/chips,
 /obj/item/reagent_containers/food/snacks/chips,
 /turf/simulated/floor/carpet/turcarpet,
 /area/submap/Oldhouse)
-"aH" = (
+"H" = (
 /obj/structure/table/woodentable,
 /obj/item/flame/candle,
 /turf/simulated/floor/wood,
 /area/submap/Oldhouse)
-"aI" = (
+"I" = (
 /obj/structure/bed/chair/wood{
 	icon_state = "wooden_chair";
 	dir = 8
 	},
 /turf/simulated/floor/carpet/turcarpet,
 /area/submap/Oldhouse)
-"aJ" = (
+"J" = (
 /obj/effect/decal/remains/mouse,
 /turf/simulated/floor/carpet/turcarpet,
 /area/submap/Oldhouse)
-"aK" = (
+"K" = (
 /obj/structure/table/woodentable,
 /obj/item/paper,
 /obj/item/paper,
 /turf/simulated/floor/wood,
 /area/submap/Oldhouse)
-"aL" = (
+"L" = (
 /obj/structure/table/woodentable,
 /obj/item/paper/crumpled,
 /turf/simulated/floor/wood,
 /area/submap/Oldhouse)
-"aM" = (
+"M" = (
 /obj/structure/frame,
 /turf/simulated/floor/wood,
 /area/submap/Oldhouse)
-"aN" = (
+"N" = (
 /mob/living/simple_mob/animal/giant_spider{
 	attack_armor_pen = 100;
 	attacktext = list("lightly bonked");
@@ -193,34 +193,29 @@
 	},
 /turf/simulated/floor/carpet/turcarpet,
 /area/submap/Oldhouse)
-"aO" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/carpet/turcarpet,
-/area/submap/Oldhouse)
-"aP" = (
+"P" = (
 /obj/item/circuitboard/papershredder,
 /turf/simulated/floor/wood,
 /area/submap/Oldhouse)
-"aQ" = (
+"Q" = (
 /obj/item/reagent_containers/food/snacks/cheesiehonkers,
 /obj/item/reagent_containers/food/snacks/cheesiehonkers,
 /turf/simulated/floor/carpet/turcarpet,
 /area/submap/Oldhouse)
-"aR" = (
+"R" = (
 /obj/effect/decal/cleanable/spiderling_remains,
 /turf/simulated/floor/wood,
 /area/submap/Oldhouse)
-"aS" = (
+"S" = (
 /obj/item/paper/crumpled,
 /turf/simulated/floor/wood,
 /area/submap/Oldhouse)
-"aT" = (
+"T" = (
 /obj/structure/table/woodentable,
 /obj/item/storage/backpack/satchel,
 /turf/simulated/floor/wood,
 /area/submap/Oldhouse)
-"aU" = (
+"U" = (
 /obj/structure/table/rack,
 /obj/item/clothing/suit/storage/hooded/wintercoat,
 /obj/item/clothing/suit/storage/hooded/wintercoat,
@@ -228,686 +223,647 @@
 /obj/item/clothing/head/hood/winter,
 /turf/simulated/floor/wood,
 /area/submap/Oldhouse)
-"aV" = (
+"V" = (
 /obj/item/flashlight,
 /turf/simulated/floor/wood,
 /area/submap/Oldhouse)
-"aW" = (
+"W" = (
 /obj/structure/table/rack,
 /obj/item/clothing/shoes/boots/winter,
 /obj/item/clothing/shoes/boots/winter,
 /obj/item/clothing/shoes/boots/winter,
 /turf/simulated/floor/wood,
 /area/submap/Oldhouse)
-"aX" = (
+"X" = (
 /obj/structure/coatrack,
 /turf/simulated/floor/wood,
 /area/submap/Oldhouse)
-"aY" = (
+"Y" = (
 /obj/structure/table/woodentable,
 /turf/simulated/floor/wood{
 	icon_state = "wood_broken6"
 	},
 /area/submap/Oldhouse)
-"aZ" = (
+"Z" = (
 /obj/structure/table/woodentable,
 /turf/simulated/floor/wood{
 	icon_state = "wood_broken2"
 	},
 /area/submap/Oldhouse)
-"ba" = (
-/turf/simulated/floor/wood{
-	icon_state = "wood-broken6"
-	},
-/area/submap/Oldhouse)
-"bb" = (
-/obj/structure/table/woodentable,
-/turf/simulated/floor/wood{
-	icon_state = "wood-broken6"
-	},
-/area/submap/Oldhouse)
-"bc" = (
-/obj/structure/table/woodentable,
-/turf/simulated/floor/wood{
-	icon_state = "wood-broken2"
-	},
-/area/submap/Oldhouse)
-"bd" = (
-/turf/simulated/floor/wood{
-	icon_state = "wood-broken4"
-	},
-/area/submap/Oldhouse)
-"be" = (
-/obj/effect/decal/cleanable/cobweb,
-/turf/simulated/floor/wood{
-	icon_state = "wood-broken6"
-	},
-/area/submap/Oldhouse)
-"bf" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/wood{
-	icon_state = "wood-broken4"
-	},
-/area/submap/Oldhouse)
-"bg" = (
-/turf/simulated/floor/wood{
-	icon_state = "wood-broken2"
-	},
-/area/submap/Oldhouse)
 
 (1,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
 "}
 (2,1,1) = {"
-aa
-ab
-ab
-ac
-ac
-ae
-ae
-ac
-ac
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ad
-ab
-aa
+a
+b
+b
+c
+c
+e
+e
+c
+c
+b
+b
+b
+b
+b
+b
+b
+b
+d
+b
+a
 "}
 (3,1,1) = {"
-aa
-ab
-ac
-ac
-am
-ai
-ai
-aA
-ac
-ac
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-aa
+a
+b
+c
+c
+m
+i
+i
+A
+c
+c
+b
+b
+b
+b
+b
+b
+b
+b
+b
+a
 "}
 (4,1,1) = {"
-aa
-ac
-ac
-af
-ai
-ai
-ai
-aB
-aE
-ac
-ac
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-aa
+a
+c
+c
+f
+i
+i
+i
+B
+E
+c
+c
+b
+b
+b
+b
+b
+b
+b
+b
+a
 "}
 (5,1,1) = {"
-aa
-ac
-ac
-ac
-ac
-au
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ab
-ab
-ab
-ab
-ab
-aa
+a
+c
+c
+c
+c
+u
+c
+c
+c
+c
+c
+c
+c
+c
+b
+b
+b
+b
+b
+a
 "}
 (6,1,1) = {"
-aa
-ac
-ac
-ag
-ai
-ai
-bd
-al
-aF
-al
-aL
-ac
-ac
-ac
-ac
-ab
-ab
-ab
-ab
-aa
+a
+c
+c
+g
+i
+i
+s
+l
+F
+l
+L
+c
+c
+c
+c
+b
+b
+b
+b
+a
 "}
 (7,1,1) = {"
-aa
-ac
-ac
-ah
-an
-an
-an
-an
-ar
-aI
-ar
-ai
-ai
-ac
-ac
-ac
-ac
-ab
-ab
-aa
+a
+c
+c
+h
+n
+n
+n
+n
+r
+I
+r
+i
+i
+c
+c
+c
+c
+b
+b
+a
 "}
 (8,1,1) = {"
-aa
-ac
-ac
-ah
-an
-an
-an
-an
-ar
-ar
-ar
-ai
-aR
-au
-ai
-al
-ac
-ab
-ab
-aa
+a
+c
+c
+h
+n
+n
+n
+n
+r
+r
+r
+i
+R
+u
+i
+l
+c
+b
+b
+a
 "}
 (9,1,1) = {"
-aa
-ac
-ac
-ah
-bf
-ah
-aw
-ai
-ai
-ai
-aM
-aP
-ai
-au
-ai
-aT
-ac
-ab
-ab
-aa
+a
+c
+c
+h
+o
+h
+w
+i
+i
+i
+M
+P
+i
+u
+i
+T
+c
+b
+b
+a
 "}
 (10,1,1) = {"
-aa
-ac
-ac
-ai
-ai
-ac
-ac
-au
-au
-ac
-ac
-ac
-ac
-ac
-ah
-ba
-ac
-ab
-ab
-aa
+a
+c
+c
+i
+i
+c
+c
+u
+u
+c
+c
+c
+c
+c
+h
+j
+c
+b
+b
+a
 "}
 (11,1,1) = {"
-aa
-ab
-ae
-ai
-ai
-ac
-be
-ai
-ai
-ai
-ai
-ai
-aS
-ac
-ah
-ah
-ac
-ab
-ab
-aa
+a
+b
+e
+i
+i
+c
+x
+i
+i
+i
+i
+i
+S
+c
+h
+h
+c
+b
+b
+a
 "}
 (12,1,1) = {"
-aa
-ab
-ae
-ai
-bg
-ac
-ai
-aC
-aC
-aC
-aC
-aC
-ai
-ac
-ah
-ah
-ac
-ab
-ab
-aa
+a
+b
+e
+i
+p
+c
+i
+C
+C
+C
+C
+C
+i
+c
+h
+h
+c
+b
+b
+a
 "}
 (13,1,1) = {"
-aa
-ab
-ae
-ai
-ai
-ac
-ai
-ar
-ar
-ar
-ar
-ar
-ay
-ac
-ai
-aU
-ac
-ab
-ab
-aa
+a
+b
+e
+i
+i
+c
+i
+r
+r
+r
+r
+r
+y
+c
+i
+U
+c
+b
+b
+a
 "}
 (14,1,1) = {"
-aa
-ab
-ac
-ai
-ai
-ac
-ai
-aC
-aC
-aC
-aC
-aC
-ai
-ac
-ai
-aV
-au
-ab
-ab
-aa
+a
+b
+c
+i
+i
+c
+i
+C
+C
+C
+C
+C
+i
+c
+i
+V
+u
+b
+b
+a
 "}
 (15,1,1) = {"
-aa
-ab
-ac
-ai
-ai
-ac
-ay
-aC
-aC
-aC
-aC
-aC
-ai
-ac
-ai
-ai
-au
-ab
-ab
-aa
+a
+b
+c
+i
+i
+c
+y
+C
+C
+C
+C
+C
+i
+c
+i
+i
+u
+b
+b
+a
 "}
 (16,1,1) = {"
-aa
-ab
-ae
-ba
-ai
-ac
-ai
-ar
-aG
-aJ
-aN
-aQ
-ai
-ac
-ai
-aW
-ac
-ab
-ab
-aa
+a
+b
+e
+j
+i
+c
+i
+r
+G
+J
+N
+Q
+i
+c
+i
+W
+c
+b
+b
+a
 "}
 (17,1,1) = {"
-aa
-ab
-ae
-ai
-aq
-ac
-ai
-aC
-aC
-aC
-aC
-aC
-bd
-ac
-ai
-aX
-ac
-ab
-ab
-aa
+a
+b
+e
+i
+q
+c
+i
+C
+C
+C
+C
+C
+s
+c
+i
+X
+c
+b
+b
+a
 "}
 (18,1,1) = {"
-aa
-ab
-ae
-ai
-ai
-ac
-ai
-ai
-ai
-ai
-ai
-ai
-ay
-ac
-aS
-ai
-ac
-ab
-ab
-aa
+a
+b
+e
+i
+i
+c
+i
+i
+i
+i
+i
+i
+y
+c
+S
+i
+c
+b
+b
+a
 "}
 (19,1,1) = {"
-aa
-ac
-ac
-ah
-ai
-ac
-ac
-au
-au
-ac
-ac
-ac
-ac
-ac
-ai
-ai
-ac
-ab
-ab
-aa
+a
+c
+c
+h
+i
+c
+c
+u
+u
+c
+c
+c
+c
+c
+i
+i
+c
+b
+b
+a
 "}
 (20,1,1) = {"
-aa
-ac
-ac
-ah
-ai
-ai
-ai
-ai
-ai
-ah
-ah
-aq
-ai
-au
-ai
-bb
-ac
-ab
-ab
-aa
+a
+c
+c
+h
+i
+i
+i
+i
+i
+h
+h
+q
+i
+u
+i
+Y
+c
+b
+b
+a
 "}
 (21,1,1) = {"
-aa
-ac
-ac
-ak
-ar
-ar
-ar
-ar
-ar
-an
-an
-ai
-ai
-au
-ai
-bc
-ac
-ab
-ab
-aa
+a
+c
+c
+k
+r
+r
+r
+r
+r
+n
+n
+i
+i
+u
+i
+Z
+c
+b
+b
+a
 "}
 (22,1,1) = {"
-aa
-ac
-ac
-ah
-ar
-ar
-ar
-ar
-ar
-ar
-an
-ai
-ai
-ac
-ac
-ac
-ac
-ab
-ab
-aa
+a
+c
+c
+h
+r
+r
+r
+r
+r
+r
+n
+i
+i
+c
+c
+c
+c
+b
+b
+a
 "}
 (23,1,1) = {"
-aa
-ac
-ac
-ah
-bd
-ai
-az
-aD
-aD
-aK
-al
-ac
-ac
-ac
-ac
-ab
-ab
-ab
-ab
-aa
+a
+c
+c
+h
+s
+i
+z
+D
+D
+K
+l
+c
+c
+c
+c
+b
+b
+b
+b
+a
 "}
 (24,1,1) = {"
-aa
-ac
-ac
-ac
-ac
-au
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ac
-ab
-ab
-ab
-ab
-ab
-aa
+a
+c
+c
+c
+c
+u
+c
+c
+c
+c
+c
+c
+c
+c
+b
+b
+b
+b
+b
+a
 "}
 (25,1,1) = {"
-aa
-ac
-ac
-al
-ai
-ai
-ai
-ai
-aH
-ac
-ac
-ab
-ab
-ad
-ab
-ab
-ab
-ab
-ab
-aa
+a
+c
+c
+l
+i
+i
+i
+i
+H
+c
+c
+b
+b
+d
+b
+b
+b
+b
+b
+a
 "}
 (26,1,1) = {"
-aa
-ab
-ac
-ac
-at
-av
-ai
-aA
-ac
-ac
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-aa
+a
+b
+c
+c
+t
+v
+i
+A
+c
+c
+b
+b
+b
+b
+b
+b
+b
+b
+b
+a
 "}
 (27,1,1) = {"
-aa
-ad
-ab
-ac
-ac
-ae
-ae
-ac
-ac
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-ab
-aa
+a
+d
+b
+c
+c
+e
+e
+c
+c
+b
+b
+b
+b
+b
+b
+b
+b
+b
+b
+a
 "}
 (28,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
 "}
