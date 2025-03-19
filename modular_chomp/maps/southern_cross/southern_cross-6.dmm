@@ -25,24 +25,24 @@
 	id = "anolongstorage"
 	},
 /turf/simulated/floor/plating{
-	nitrogen = 93.7835;
+	temperature = 243.15;
 	oxygen = 20.7263;
-	temperature = 243.15
+	nitrogen = 93.7835
 	},
 /area/surface/outpost/research/xenoarcheology)
 "ai" = (
 /turf/simulated/floor/plating{
-	nitrogen = 93.7835;
+	temperature = 243.15;
 	oxygen = 20.7263;
-	temperature = 243.15
+	nitrogen = 93.7835
 	},
 /area/surface/outpost/research/xenoarcheology)
 "aj" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/plating{
-	nitrogen = 93.7835;
+	temperature = 243.15;
 	oxygen = 20.7263;
-	temperature = 243.15
+	nitrogen = 93.7835
 	},
 /area/surface/outpost/research/xenoarcheology)
 "ak" = (
@@ -51,18 +51,18 @@
 	req_access = list(65)
 	},
 /turf/simulated/floor/plating{
-	nitrogen = 93.7835;
+	temperature = 243.15;
 	oxygen = 20.7263;
-	temperature = 243.15
+	nitrogen = 93.7835
 	},
 /area/surface/outpost/research/xenoarcheology)
 "al" = (
 /obj/machinery/light/small,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/plating{
-	nitrogen = 93.7835;
+	temperature = 243.15;
 	oxygen = 20.7263;
-	temperature = 243.15
+	nitrogen = 93.7835
 	},
 /area/surface/outpost/research/xenoarcheology)
 "am" = (
@@ -75,20 +75,20 @@
 /area/surface/outpost/research/xenoarcheology)
 "ao" = (
 /obj/machinery/access_button{
-	command = "cycle_exterior";
-	frequency = 1397;
-	master_tag = "xenoarch2_airlock_control";
 	name = "Xenoarch Access Button";
 	pixel_x = 24;
+	frequency = 1397;
+	command = "cycle_exterior";
+	master_tag = "xenoarch2_airlock_control";
 	req_access = list(47)
 	},
 /obj/machinery/door/airlock/research{
-	autoclose = 0;
-	frequency = 1397;
+	name = "Research Exterior Airlock";
 	icon_state = "door_locked";
-	id_tag = "xenoarch2_airlock_exterior";
+	frequency = 1397;
 	locked = 1;
-	name = "Research Exterior Airlock"
+	id_tag = "xenoarch2_airlock_exterior";
+	autoclose = 0
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/door/firedoor/glass,
@@ -168,8 +168,8 @@
 	dir = 5
 	},
 /obj/item/radio/intercom{
-	dir = 1;
 	name = "Station Intercom (General)";
+	dir = 1;
 	pixel_y = 21
 	},
 /turf/simulated/floor/tiled,
@@ -218,8 +218,8 @@
 	dir = 10
 	},
 /obj/machinery/camera/network/research_outpost{
-	c_tag = "OPR - Xenoarch Airlock 2";
-	dir = 4
+	dir = 4;
+	c_tag = "OPR - Xenoarch Airlock 2"
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/research/xenoarcheology)
@@ -232,8 +232,8 @@
 	dir = 6
 	},
 /obj/item/radio/intercom{
-	dir = 4;
 	name = "Station Intercom (General)";
+	dir = 4;
 	pixel_x = 21
 	},
 /turf/simulated/floor/tiled,
@@ -342,20 +342,20 @@
 /area/surface/outpost/research/xenoarcheology/exp_prep)
 "aX" = (
 /obj/machinery/door/airlock/research{
-	autoclose = 0;
-	frequency = 1397;
+	name = "Research Interior Airlock";
 	icon_state = "door_locked";
-	id_tag = "xenoarch2_airlock_interior";
+	frequency = 1397;
 	locked = 1;
-	name = "Research Interior Airlock"
+	id_tag = "xenoarch2_airlock_interior";
+	autoclose = 0
 	},
 /obj/machinery/access_button{
-	command = "cycle_interior";
-	frequency = 1397;
-	master_tag = "xenoarch2_airlock_control";
 	name = "Research Access Button";
 	pixel_x = 26;
 	pixel_y = 6;
+	frequency = 1397;
+	command = "cycle_interior";
+	master_tag = "xenoarch2_airlock_control";
 	req_access = null
 	},
 /obj/machinery/door/firedoor/glass,
@@ -455,8 +455,8 @@
 /area/surface/outpost/research/xenoarcheology/exp_prep)
 "bm" = (
 /obj/structure/disposalpipe/segment{
-	dir = 1;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/research/xenoarcheology/exp_prep)
@@ -491,11 +491,11 @@
 	dir = 1
 	},
 /obj/machinery/embedded_controller/radio/airlock/access_controller{
-	frequency = 1397;
-	id_tag = "xenoarch2_airlock_control";
 	name = "Research Access Console";
 	pixel_x = 26;
 	pixel_y = 26;
+	frequency = 1397;
+	id_tag = "xenoarch2_airlock_control";
 	tag_exterior_door = "xenoarch2_airlock_exterior";
 	tag_interior_door = "xenoarch2_airlock_interior"
 	},
@@ -587,8 +587,8 @@
 /area/surface/outpost/research/xenoarcheology/longtermstorage)
 "bw" = (
 /obj/structure/disposalpipe/segment{
-	dir = 8;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 8
 	},
 /obj/structure/cable/blue{
 	icon_state = "4-8"
@@ -624,8 +624,8 @@
 /area/surface/outpost/research/xenoarcheology/longtermstorage)
 "bz" = (
 /obj/machinery/power/apc{
-	dir = 4;
 	name = "east bump";
+	dir = 4;
 	pixel_x = 24
 	},
 /obj/machinery/light_switch{
@@ -792,8 +792,8 @@
 	dir = 1
 	},
 /obj/machinery/camera/network/research_outpost{
-	c_tag = "OPR - Long Term Storage";
-	dir = 1
+	dir = 1;
+	c_tag = "OPR - Long Term Storage"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/surface/outpost/research/xenoarcheology/longtermstorage)
@@ -849,8 +849,8 @@
 	dir = 4
 	},
 /obj/machinery/camera/network/research_outpost{
-	c_tag = "OPR - Expedition Prep";
-	dir = 1
+	dir = 1;
+	c_tag = "OPR - Expedition Prep"
 	},
 /obj/machinery/newscaster{
 	layer = 3.3;
@@ -864,8 +864,7 @@
 	layer = 2.6
 	},
 /obj/structure/window/reinforced{
-	dir = 8;
-	health = 1e+006
+	dir = 8
 	},
 /obj/item/storage/belt/archaeology,
 /obj/item/clothing/suit/space/anomaly,
@@ -881,8 +880,7 @@
 	layer = 2.6
 	},
 /obj/structure/window/reinforced{
-	dir = 4;
-	health = 1e+006
+	dir = 4
 	},
 /obj/item/storage/belt/archaeology,
 /obj/item/clothing/suit/space/anomaly,
@@ -927,11 +925,11 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/door/blast/regular/open{
-	closed_layer = 10;
-	id = "biohazardshutters";
-	layer = 1;
 	name = "Biohazard Shutters";
-	open_layer = 1
+	layer = 1;
+	id = "biohazardshutters";
+	open_layer = 1;
+	closed_layer = 10
 	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/research/xenoarcheology/isolation_a)
@@ -956,9 +954,9 @@
 "ce" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/power/emitter{
-	anchored = 1;
 	dir = 1;
-	state = 2
+	state = 2;
+	anchored = 1
 	},
 /obj/structure/window/reinforced,
 /obj/structure/cable/blue{
@@ -976,8 +974,8 @@
 /area/surface/outpost/research/xenoarcheology/anomaly)
 "cg" = (
 /obj/machinery/atmospherics/omni/atmos_filter{
-	tag_east = 1;
 	tag_north = 2;
+	tag_east = 1;
 	tag_west = 3
 	},
 /obj/structure/window/reinforced,
@@ -1007,8 +1005,8 @@
 	pixel_x = -24
 	},
 /obj/item/radio/intercom{
-	dir = 8;
 	name = "Station Intercom (General)";
+	dir = 8;
 	pixel_x = -35
 	},
 /turf/simulated/floor/tiled/white,
@@ -1025,8 +1023,8 @@
 /area/surface/outpost/research/xenoarcheology)
 "ck" = (
 /obj/machinery/camera/network/research_outpost{
-	c_tag = "OPR - Xenoarch Hallway 2";
-	dir = 8
+	dir = 8;
+	c_tag = "OPR - Xenoarch Hallway 2"
 	},
 /obj/effect/floor_decal/corner/purple{
 	dir = 4
@@ -1042,8 +1040,8 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/camera/network/research_outpost{
-	c_tag = "OPR - Anomalous Materials 2";
-	dir = 4
+	dir = 4;
+	c_tag = "OPR - Anomalous Materials 2"
 	},
 /obj/machinery/newscaster{
 	pixel_x = -30
@@ -1077,8 +1075,8 @@
 /area/surface/outpost/research/xenoarcheology/anomaly)
 "cp" = (
 /obj/machinery/power/apc{
-	dir = 1;
 	name = "north bump";
+	dir = 1;
 	pixel_y = 24
 	},
 /obj/machinery/light_switch{
@@ -1107,18 +1105,18 @@
 	req_access = list(65)
 	},
 /obj/machinery/door/blast/regular/open{
-	closed_layer = 10;
-	id = "biohazardshutters";
-	layer = 1;
 	name = "Biohazard Shutters";
-	open_layer = 1
+	layer = 1;
+	id = "biohazardshutters";
+	open_layer = 1;
+	closed_layer = 10
 	},
 /turf/simulated/floor/reinforced,
 /area/surface/outpost/research/xenoarcheology/isolation_a)
 "cr" = (
 /obj/machinery/power/apc{
-	dir = 1;
 	name = "north bump";
+	dir = 1;
 	pixel_y = 24
 	},
 /obj/structure/cable/blue{
@@ -1204,12 +1202,12 @@
 	dir = 8
 	},
 /obj/machinery/alarm{
-	frequency = 1441;
-	pixel_y = 22
+	pixel_y = 22;
+	frequency = 1441
 	},
 /obj/item/radio/intercom{
-	dir = 8;
 	name = "Station Intercom (General)";
+	dir = 8;
 	pixel_x = -21
 	},
 /turf/simulated/floor/tiled/neutral,
@@ -1384,11 +1382,11 @@
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/wingrille_spawn/reinforced,
 /obj/machinery/door/blast/regular/open{
-	closed_layer = 10;
-	id = "biohazardshutters";
-	layer = 1;
 	name = "Biohazard Shutters";
-	open_layer = 1
+	layer = 1;
+	id = "biohazardshutters";
+	open_layer = 1;
+	closed_layer = 10
 	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/research/xenoarcheology/isolation_a)
@@ -1566,9 +1564,9 @@
 "dq" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/yellow,
 /obj/machinery/alarm/monitor/isolation{
-	alarm_id = "isolation_one";
 	dir = 1;
-	pixel_y = -22
+	pixel_y = -22;
+	alarm_id = "isolation_one"
 	},
 /turf/simulated/floor/reinforced,
 /area/surface/outpost/research/xenoarcheology/isolation_a)
@@ -1577,8 +1575,8 @@
 	dir = 8
 	},
 /obj/machinery/camera/network/research_outpost{
-	c_tag = "OPR - Isolation Cell 1";
-	dir = 1
+	dir = 1;
+	c_tag = "OPR - Isolation Cell 1"
 	},
 /turf/simulated/floor/reinforced,
 /area/surface/outpost/research/xenoarcheology/isolation_a)
@@ -1595,8 +1593,8 @@
 /area/surface/outpost/wall/checkpoint)
 "du" = (
 /obj/machinery/power/apc{
-	dir = 8;
 	name = "west bump";
+	dir = 8;
 	pixel_x = -24
 	},
 /obj/machinery/light_switch{
@@ -1674,8 +1672,8 @@
 /area/surface/outpost/research/xenoarcheology)
 "dA" = (
 /obj/machinery/power/apc{
-	dir = 4;
 	name = "east bump";
+	dir = 4;
 	pixel_x = 24
 	},
 /obj/machinery/light_switch{
@@ -1715,14 +1713,14 @@
 	dir = 8
 	},
 /obj/machinery/button/remote/blast_door{
-	id = "biohazardshutters";
 	name = "Biohazard Shutters";
-	pixel_x = 40
+	pixel_x = 40;
+	id = "biohazardshutters"
 	},
 /obj/machinery/button/remote/blast_door{
-	id = "xenoarch_cell2";
 	name = "Cell 2";
-	pixel_x = 26
+	pixel_x = 26;
+	id = "xenoarch_cell2"
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/research/xenoarcheology/anomaly)
@@ -1783,8 +1781,8 @@
 "dK" = (
 /obj/structure/table/glass,
 /obj/item/radio/intercom{
-	dir = 8;
 	name = "Station Intercom (General)";
+	dir = 8;
 	pixel_x = -21
 	},
 /obj/item/defib_kit/loaded,
@@ -1797,13 +1795,13 @@
 /obj/structure/table/glass,
 /obj/machinery/recharger,
 /obj/item/radio{
-	frequency = 1487;
+	name = "Medbay Emergency Radio Link";
 	icon_state = "med_walkietalkie";
-	name = "Medbay Emergency Radio Link"
+	frequency = 1487
 	},
 /obj/machinery/camera/network/research_outpost{
-	c_tag = "OPR - Xenoarch First-Aid";
-	dir = 1
+	dir = 1;
+	c_tag = "OPR - Xenoarch First-Aid"
 	},
 /turf/simulated/floor/tiled/white,
 /area/surface/outpost/research/xenoarcheology/medical)
@@ -1963,8 +1961,8 @@
 /area/surface/outpost/research/xenoarcheology/isolation_b)
 "eb" = (
 /obj/machinery/power/apc{
-	dir = 1;
 	name = "north bump";
+	dir = 1;
 	pixel_y = 24
 	},
 /obj/structure/cable/blue{
@@ -2012,8 +2010,8 @@
 /area/surface/outpost/research/xenoarcheology/exterior)
 "ej" = (
 /obj/structure/sign/greencross{
-	desc = "White cross in a green field, you can get medical aid here.";
-	name = "First-Aid"
+	name = "First-Aid";
+	desc = "White cross in a green field, you can get medical aid here."
 	},
 /turf/simulated/wall,
 /area/surface/outpost/research/xenoarcheology/medical)
@@ -2049,8 +2047,8 @@
 	pixel_x = 24
 	},
 /obj/machinery/camera/network/research_outpost{
-	c_tag = "OPR - Xenoarch Crew Area";
-	dir = 8
+	dir = 8;
+	c_tag = "OPR - Xenoarch Crew Area"
 	},
 /turf/simulated/floor/tiled/neutral,
 /area/surface/outpost/research/xenoarcheology)
@@ -2070,9 +2068,9 @@
 "ep" = (
 /obj/structure/table/reinforced,
 /obj/machinery/computer/atmoscontrol/laptop{
-	monitored_alarm_ids = list("isolation_one","isolation_two","isolation_three");
+	req_one_access = null;
 	req_access = null;
-	req_one_access = null
+	monitored_alarm_ids = list("isolation_one","isolation_two","isolation_three")
 	},
 /obj/effect/floor_decal/corner/purple{
 	dir = 9
@@ -2162,8 +2160,8 @@
 	dir = 5
 	},
 /obj/machinery/camera/network/research_outpost{
-	c_tag = "OPR - Xenoarch Airlock 1";
-	dir = 8
+	dir = 8;
+	c_tag = "OPR - Xenoarch Airlock 1"
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/research/xenoarcheology)
@@ -2278,9 +2276,9 @@
 "eO" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/yellow,
 /obj/machinery/alarm/monitor/isolation{
-	alarm_id = "isolation_two";
 	dir = 1;
-	pixel_y = -22
+	pixel_y = -22;
+	alarm_id = "isolation_two"
 	},
 /turf/simulated/floor/reinforced,
 /area/surface/outpost/research/xenoarcheology/isolation_b)
@@ -2289,26 +2287,26 @@
 	dir = 8
 	},
 /obj/machinery/camera/network/research_outpost{
-	c_tag = "OPR - Isolation Cell 2";
-	dir = 1
+	dir = 1;
+	c_tag = "OPR - Isolation Cell 2"
 	},
 /turf/simulated/floor/reinforced,
 /area/surface/outpost/research/xenoarcheology/isolation_b)
 "eQ" = (
 /obj/machinery/door/airlock/research{
-	autoclose = 0;
-	frequency = 1379;
+	name = "Research Exterior Airlock";
 	icon_state = "door_locked";
-	id_tag = "xenoarch1_airlock_exterior";
+	frequency = 1379;
 	locked = 1;
-	name = "Research Exterior Airlock"
+	id_tag = "xenoarch1_airlock_exterior";
+	autoclose = 0
 	},
 /obj/machinery/access_button{
-	command = "cycle_exterior";
-	frequency = 1379;
-	master_tag = "xenoarch1_airlock_control";
 	name = "Xenoarch Access Button";
 	pixel_y = -24;
+	frequency = 1379;
+	command = "cycle_exterior";
+	master_tag = "xenoarch1_airlock_control";
 	req_access = null
 	},
 /obj/machinery/door/firedoor/glass,
@@ -2329,20 +2327,20 @@
 /area/surface/outpost/research/xenoarcheology)
 "eT" = (
 /obj/machinery/door/airlock/research{
-	autoclose = 0;
-	frequency = 1379;
+	name = "Research Interior Airlock";
 	icon_state = "door_locked";
-	id_tag = "xenoarch1_airlock_interior";
+	frequency = 1379;
 	locked = 1;
-	name = "Research Interior Airlock"
+	id_tag = "xenoarch1_airlock_interior";
+	autoclose = 0
 	},
 /obj/machinery/access_button{
-	command = "cycle_interior";
-	frequency = 1379;
-	master_tag = "xenoarch1_airlock_control";
 	name = "Research Access Button";
 	pixel_x = -6;
 	pixel_y = -26;
+	frequency = 1379;
+	command = "cycle_interior";
+	master_tag = "xenoarch1_airlock_control";
 	req_access = null
 	},
 /obj/machinery/door/firedoor/glass,
@@ -2353,10 +2351,10 @@
 	dir = 6
 	},
 /obj/machinery/embedded_controller/radio/airlock/access_controller{
-	id_tag = "xenoarch1_airlock_control";
 	name = "Research Access Console";
 	pixel_x = -26;
 	pixel_y = -26;
+	id_tag = "xenoarch1_airlock_control";
 	tag_exterior_door = "xenoarch1_airlock_exterior";
 	tag_interior_door = "xenoarch1_airlock_interior"
 	},
@@ -2436,8 +2434,8 @@
 	dir = 6
 	},
 /obj/machinery/camera/network/research_outpost{
-	c_tag = "OPR - Xenoarch Hallway 1";
-	dir = 8
+	dir = 8;
+	c_tag = "OPR - Xenoarch Hallway 1"
 	},
 /turf/simulated/floor/tiled/white,
 /area/surface/outpost/research/xenoarcheology)
@@ -2646,8 +2644,8 @@
 /area/surface/outpost/research/xenoarcheology/isolation_c)
 "fz" = (
 /obj/machinery/power/apc{
-	dir = 1;
 	name = "north bump";
+	dir = 1;
 	pixel_y = 24
 	},
 /obj/structure/cable/blue{
@@ -2849,8 +2847,8 @@
 /area/surface/outpost/research/xenoarcheology/isolation_c)
 "fV" = (
 /obj/machinery/power/smes/buildable/outpost_substation{
-	RCon_tag = "Outpost - Xenoarch";
 	charge = 500000;
+	RCon_tag = "Outpost - Xenoarch";
 	input_attempt = 1;
 	input_level = 150000;
 	output_level = 150000
@@ -2878,8 +2876,8 @@
 /obj/random/tool,
 /obj/random/tool,
 /obj/machinery/alarm{
-	frequency = 1441;
-	pixel_y = 22
+	pixel_y = 22;
+	frequency = 1441
 	},
 /obj/machinery/camera/network/research_outpost{
 	c_tag = "OPR - Xenoarchaeology SMES"
@@ -2940,8 +2938,8 @@
 	icon_state = "0-8"
 	},
 /obj/machinery/power/apc{
-	dir = 4;
 	name = "east bump";
+	dir = 4;
 	pixel_x = 24
 	},
 /obj/machinery/light_switch{
@@ -2976,12 +2974,12 @@
 	dir = 1
 	},
 /obj/machinery/camera/network/research_outpost{
-	c_tag = "OPR - Anomalous Materials 1";
-	dir = 4
+	dir = 4;
+	c_tag = "OPR - Anomalous Materials 1"
 	},
 /obj/item/radio/intercom{
-	dir = 8;
 	name = "Station Intercom (General)";
+	dir = 8;
 	pixel_x = -21
 	},
 /obj/effect/floor_decal/corner/purple{
@@ -3006,8 +3004,8 @@
 /area/surface/outpost/research/xenoarcheology/anomaly)
 "gi" = (
 /obj/machinery/atmospherics/unary/freezer{
-	dir = 1;
-	icon_state = "freezer"
+	icon_state = "freezer";
+	dir = 1
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled,
@@ -3039,9 +3037,9 @@
 "gm" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/yellow,
 /obj/machinery/alarm/monitor/isolation{
-	alarm_id = "isolation_one";
 	dir = 1;
-	pixel_y = -22
+	pixel_y = -22;
+	alarm_id = "isolation_one"
 	},
 /turf/simulated/floor/reinforced,
 /area/surface/outpost/research/xenoarcheology/isolation_c)
@@ -3050,8 +3048,8 @@
 	dir = 8
 	},
 /obj/machinery/camera/network/research_outpost{
-	c_tag = "OPR - Isolation Cell 3";
-	dir = 1
+	dir = 1;
+	c_tag = "OPR - Isolation Cell 3"
 	},
 /turf/simulated/floor/reinforced,
 /area/surface/outpost/research/xenoarcheology/isolation_c)
@@ -3155,8 +3153,8 @@
 /area/surface/outpost/research/xenoarcheology/smes)
 "gB" = (
 /obj/machinery/power/apc{
-	dir = 1;
 	name = "north bump";
+	dir = 1;
 	pixel_y = 24
 	},
 /obj/machinery/light_switch{
@@ -3234,9 +3232,9 @@
 "gM" = (
 /turf/simulated/floor/plating{
 	icon_state = "asteroidplating2";
-	nitrogen = 93.7835;
+	temperature = 243.15;
 	oxygen = 20.7263;
-	temperature = 243.15
+	nitrogen = 93.7835
 	},
 /area/surface/outpost/research/xenoarcheology/exterior)
 "gN" = (
@@ -3270,9 +3268,9 @@
 /area/surface/outpost/research/xenoarcheology/smes)
 "gR" = (
 /obj/machinery/atmospherics/omni/atmos_filter{
-	tag_east = 7;
 	tag_north = 1;
 	tag_south = 2;
+	tag_east = 7;
 	tag_west = 6
 	},
 /turf/simulated/floor/plating,
@@ -3305,16 +3303,16 @@
 "gV" = (
 /obj/structure/table/standard,
 /obj/item/towel{
-	color = "#800080";
-	name = "purple towel"
+	name = "purple towel";
+	color = "#800080"
 	},
 /obj/item/towel{
-	color = "#800080";
-	name = "purple towel"
+	name = "purple towel";
+	color = "#800080"
 	},
 /obj/item/towel{
-	color = "#800080";
-	name = "purple towel"
+	name = "purple towel";
+	color = "#800080"
 	},
 /obj/random/soap,
 /obj/random/soap,
@@ -3330,8 +3328,8 @@
 	dir = 9
 	},
 /obj/machinery/power/apc{
-	dir = 8;
 	name = "west bump";
+	dir = 8;
 	pixel_x = -24
 	},
 /obj/machinery/light_switch{
@@ -3406,8 +3404,8 @@
 	icon_state = "0-2"
 	},
 /obj/machinery/power/apc{
-	dir = 1;
 	name = "north bump";
+	dir = 1;
 	pixel_y = 24
 	},
 /turf/simulated/floor/plating,
@@ -3591,13 +3589,13 @@
 /area/surface/outpost/research/xenoarcheology/anomaly)
 "hA" = (
 /obj/machinery/atmospherics/omni/mixer{
-	active_power_usage = 7500;
-	tag_east = 1;
-	tag_east_con = 0.79;
-	tag_north = 1;
 	tag_north_con = 0.21;
 	tag_south_con = null;
-	tag_west = 2
+	tag_east_con = 0.79;
+	tag_north = 1;
+	tag_east = 1;
+	tag_west = 2;
+	active_power_usage = 7500
 	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/research/xenoarcheology/smes)
@@ -3668,8 +3666,7 @@
 	dir = 10
 	},
 /obj/structure/window/reinforced{
-	dir = 8;
-	health = 1e+006
+	dir = 8
 	},
 /turf/simulated/floor/tiled/white,
 /area/surface/outpost/research/xenoarcheology/analysis)
@@ -3760,8 +3757,8 @@
 	pixel_y = -24
 	},
 /obj/item/radio/intercom{
-	dir = 8;
 	name = "Station Intercom (General)";
+	dir = 8;
 	pixel_x = -21
 	},
 /obj/effect/floor_decal/corner/beige/full,
@@ -3798,8 +3795,7 @@
 "hY" = (
 /obj/machinery/radiocarbon_spectrometer,
 /obj/structure/window/reinforced{
-	dir = 8;
-	health = 1e+006
+	dir = 8
 	},
 /turf/simulated/floor/tiled/dark,
 /area/surface/outpost/research/xenoarcheology/analysis)
@@ -3880,9 +3876,9 @@
 	},
 /turf/simulated/floor/plating{
 	icon_state = "asteroidplating2";
-	nitrogen = 93.7835;
+	temperature = 243.15;
 	oxygen = 20.7263;
-	temperature = 243.15
+	nitrogen = 93.7835
 	},
 /area/surface/outpost/mining_main/cave)
 "ik" = (
@@ -3903,9 +3899,9 @@
 	},
 /turf/simulated/floor/plating{
 	icon_state = "asteroidplating2";
-	nitrogen = 93.7835;
+	temperature = 243.15;
 	oxygen = 20.7263;
-	temperature = 243.15
+	nitrogen = 93.7835
 	},
 /area/surface/outpost/research/xenoarcheology/exterior)
 "im" = (
@@ -3919,9 +3915,9 @@
 	},
 /turf/simulated/floor/plating{
 	icon_state = "asteroidplating2";
-	nitrogen = 93.7835;
+	temperature = 243.15;
 	oxygen = 20.7263;
-	temperature = 243.15
+	nitrogen = 93.7835
 	},
 /area/surface/outpost/mining_main/cave)
 "io" = (
@@ -4012,9 +4008,9 @@
 "iA" = (
 /turf/simulated/floor/plating{
 	icon_state = "asteroidplating2";
-	nitrogen = 93.7835;
+	temperature = 243.15;
 	oxygen = 20.7263;
-	temperature = 243.15
+	nitrogen = 93.7835
 	},
 /area/surface/outpost/mining_main/cave)
 "iB" = (
@@ -4073,9 +4069,9 @@
 /obj/effect/zone_divider,
 /turf/simulated/floor/plating{
 	icon_state = "asteroidplating2";
-	nitrogen = 93.7835;
+	temperature = 243.15;
 	oxygen = 20.7263;
-	temperature = 243.15
+	nitrogen = 93.7835
 	},
 /area/surface/outpost/mining_main/cave)
 "kX" = (
@@ -4110,9 +4106,9 @@
 /obj/effect/zone_divider,
 /turf/simulated/floor/plating{
 	icon_state = "asteroidplating2";
-	nitrogen = 93.7835;
+	temperature = 243.15;
 	oxygen = 20.7263;
-	temperature = 243.15
+	nitrogen = 93.7835
 	},
 /area/surface/outpost/mining_main/cave)
 "ot" = (
@@ -4137,17 +4133,17 @@
 "pV" = (
 /obj/machinery/door/airlock/maintenance_hatch{
 	name = "Outpost Maintenance Hatch";
-	normalspeed = 0;
-	req_one_access = list(1,5,10,12,31,47,48,50)
+	req_one_access = list(1,5,10,12,31,47,48,50);
+	normalspeed = 0
 	},
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/plating{
 	icon_state = "asteroidplating2";
-	nitrogen = 93.7835;
+	temperature = 243.15;
 	oxygen = 20.7263;
-	temperature = 243.15
+	nitrogen = 93.7835
 	},
 /area/surface/outpost/research/xenoarcheology/exterior)
 "qC" = (
@@ -4195,15 +4191,15 @@
 	icon_state = "0-8"
 	},
 /obj/machinery/power/apc{
-	dir = 1;
 	name = "north bump";
+	dir = 1;
 	pixel_y = 24
 	},
 /turf/simulated/floor/plating{
 	icon_state = "asteroidplating2";
-	nitrogen = 93.7835;
+	temperature = 243.15;
 	oxygen = 20.7263;
-	temperature = 243.15
+	nitrogen = 93.7835
 	},
 /area/surface/outpost/research/xenoarcheology/exterior)
 "tS" = (
@@ -4216,9 +4212,9 @@
 /obj/effect/zone_divider,
 /turf/simulated/floor/plating{
 	icon_state = "asteroidplating2";
-	nitrogen = 93.7835;
+	temperature = 243.15;
 	oxygen = 20.7263;
-	temperature = 243.15
+	nitrogen = 93.7835
 	},
 /area/surface/outpost/mining_main/cave)
 "xS" = (
@@ -4232,9 +4228,9 @@
 	},
 /turf/simulated/floor/plating{
 	icon_state = "asteroidplating2";
-	nitrogen = 93.7835;
+	temperature = 243.15;
 	oxygen = 20.7263;
-	temperature = 243.15
+	nitrogen = 93.7835
 	},
 /area/surface/outpost/research/xenoarcheology/exterior)
 "zL" = (
@@ -4248,15 +4244,15 @@
 /obj/effect/map_effect/perma_light/concentrated/incandescent,
 /turf/simulated/floor/plating{
 	icon_state = "asteroidplating2";
-	nitrogen = 93.7835;
+	temperature = 243.15;
 	oxygen = 20.7263;
-	temperature = 243.15
+	nitrogen = 93.7835
 	},
 /area/surface/outpost/mining_main/cave)
 "BX" = (
+/mob/living/simple_mob/humanoid/starhunter/trader/farmer,
 /obj/structure/bed,
 /obj/item/bedsheet/cosmos,
-/mob/living/simple_mob/humanoid/starhunter/trader/farmer,
 /turf/simulated/floor/concrete,
 /area/surface/cave/explored/trader)
 "Co" = (
@@ -4265,15 +4261,15 @@
 	},
 /turf/simulated/floor/plating{
 	icon_state = "asteroidplating2";
-	nitrogen = 93.7835;
+	temperature = 243.15;
 	oxygen = 20.7263;
-	temperature = 243.15
+	nitrogen = 93.7835
 	},
 /area/surface/outpost/mining_main/cave)
 "Cv" = (
+/mob/living/simple_mob/humanoid/starhunter/trader/miner,
 /obj/structure/bed,
 /obj/item/bedsheet/cosmos,
-/mob/living/simple_mob/humanoid/starhunter/trader/miner,
 /turf/simulated/floor/concrete,
 /area/surface/cave/explored/trader)
 "Cx" = (
@@ -4289,9 +4285,9 @@
 /obj/effect/zone_divider,
 /turf/simulated/floor/plating{
 	icon_state = "asteroidplating2";
-	nitrogen = 93.7835;
+	temperature = 243.15;
 	oxygen = 20.7263;
-	temperature = 243.15
+	nitrogen = 93.7835
 	},
 /area/surface/outpost/research/xenoarcheology/exterior)
 "EC" = (
@@ -4350,9 +4346,9 @@
 /obj/effect/zone_divider,
 /turf/simulated/floor/plating{
 	icon_state = "asteroidplating2";
-	nitrogen = 93.7835;
+	temperature = 243.15;
 	oxygen = 20.7263;
-	temperature = 243.15
+	nitrogen = 93.7835
 	},
 /area/surface/outpost/mining_main/cave)
 "NL" = (
@@ -4381,9 +4377,9 @@
 	},
 /turf/simulated/floor/plating{
 	icon_state = "asteroidplating2";
-	nitrogen = 93.7835;
+	temperature = 243.15;
 	oxygen = 20.7263;
-	temperature = 243.15
+	nitrogen = 93.7835
 	},
 /area/surface/outpost/research/xenoarcheology/exterior)
 "Qd" = (
@@ -4399,9 +4395,9 @@
 /obj/effect/zone_divider,
 /turf/simulated/floor/plating{
 	icon_state = "asteroidplating2";
-	nitrogen = 93.7835;
+	temperature = 243.15;
 	oxygen = 20.7263;
-	temperature = 243.15
+	nitrogen = 93.7835
 	},
 /area/surface/outpost/research/xenoarcheology/exterior)
 "QY" = (
@@ -4427,9 +4423,9 @@
 	},
 /turf/simulated/floor/plating{
 	icon_state = "asteroidplating2";
-	nitrogen = 93.7835;
+	temperature = 243.15;
 	oxygen = 20.7263;
-	temperature = 243.15
+	nitrogen = 93.7835
 	},
 /area/surface/outpost/mining_main/cave)
 "St" = (
@@ -4458,9 +4454,9 @@
 	},
 /turf/simulated/floor/plating{
 	icon_state = "asteroidplating2";
-	nitrogen = 93.7835;
+	temperature = 243.15;
 	oxygen = 20.7263;
-	temperature = 243.15
+	nitrogen = 93.7835
 	},
 /area/surface/outpost/mining_main/cave)
 "VP" = (
@@ -4494,9 +4490,9 @@
 	},
 /turf/simulated/floor/plating{
 	icon_state = "asteroidplating2";
-	nitrogen = 93.7835;
+	temperature = 243.15;
 	oxygen = 20.7263;
-	temperature = 243.15
+	nitrogen = 93.7835
 	},
 /area/surface/outpost/research/xenoarcheology/exterior)
 "Zo" = (

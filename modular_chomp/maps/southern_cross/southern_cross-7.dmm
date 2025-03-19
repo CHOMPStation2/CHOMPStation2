@@ -109,22 +109,22 @@
 	id_tag = "needle_pump"
 	},
 /obj/machinery/embedded_controller/radio/airlock/docking_port{
+	pixel_y = 26;
 	frequency = 1380;
 	id_tag = "needle";
-	pixel_y = 26;
-	tag_airpump = "needle_pump";
-	tag_chamber_sensor = "needle_sensor";
 	tag_exterior_door = "needle_outer";
-	tag_interior_door = "needle_inner"
+	tag_interior_door = "needle_inner";
+	tag_airpump = "needle_pump";
+	tag_chamber_sensor = "needle_sensor"
 	},
 /obj/effect/floor_decal/industrial/warning/cee{
 	dir = 1
 	},
 /obj/effect/shuttle_landmark{
-	base_area = /area/expoutpost/hangarfive;
-	base_turf = /turf/simulated/floor/reinforced;
-	landmark_tag = "needle_dock";
 	name = "Needle Dock";
+	landmark_tag = "needle_dock";
+	base_turf = /turf/simulated/floor/reinforced;
+	base_area = /area/expoutpost/hangarfive;
 	docking_controller = "needle_dock"
 	},
 /obj/structure/cable/blue{
@@ -195,8 +195,8 @@
 	},
 /obj/effect/catwalk_plated/techfloor,
 /obj/machinery/door/airlock/multi_tile/glass{
-	dir = 1;
-	name = "Hangar - Ursula"
+	name = "Hangar - Ursula";
+	dir = 1
 	},
 /turf/simulated/floor,
 /area/expoutpost/hangarthree)
@@ -218,8 +218,7 @@
 "ajK" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/window/reinforced{
-	dir = 4;
-	health = 1e+006
+	dir = 4
 	},
 /obj/structure/window/reinforced{
 	dir = 1
@@ -257,8 +256,8 @@
 	dir = 4
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 2;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 2
 	},
 /obj/structure/cable/green{
 	icon_state = "1-8"
@@ -277,9 +276,9 @@
 /area/shuttle/shuttle3/start)
 "ale" = (
 /obj/machinery/door/airlock/external{
+	name = "Port Stern Outer Airlock";
 	icon_state = "door_locked";
-	locked = 1;
-	name = "Port Stern Outer Airlock"
+	locked = 1
 	},
 /obj/machinery/access_button{
 	dir = 4;
@@ -404,8 +403,8 @@
 	dir = 1
 	},
 /obj/item/radio/intercom{
-	dir = 1;
 	name = "Station Intercom (General)";
+	dir = 1;
 	pixel_y = 21
 	},
 /turf/simulated/floor/tiled/dark,
@@ -422,8 +421,8 @@
 	dir = 1
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 2;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 2
 	},
 /turf/simulated/floor/tiled,
 /area/expoutpost/gatewayeva)
@@ -438,8 +437,8 @@
 /area/expoutpost/hangarsix)
 "asy" = (
 /obj/structure/disposalpipe/segment{
-	dir = 2;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 2
 	},
 /obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/floor,
@@ -661,8 +660,8 @@
 	dir = 1
 	},
 /obj/machinery/door/airlock/multi_tile/glass{
-	dir = 1;
-	name = "Q-Pad Junction"
+	name = "Q-Pad Junction";
+	dir = 1
 	},
 /turf/simulated/floor,
 /area/expoutpost/portqpadjunction)
@@ -697,8 +696,8 @@
 /area/shuttle/echidna)
 "aFH" = (
 /obj/machinery/power/apc{
-	dir = 8;
 	name = "west bump";
+	dir = 8;
 	pixel_x = -24
 	},
 /obj/effect/floor_decal/borderfloorblack{
@@ -733,8 +732,7 @@
 	},
 /obj/machinery/door/firedoor/border_only,
 /obj/structure/window/reinforced{
-	dir = 4;
-	health = 1e+006
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/expoutpost/slingcarrierdock)
@@ -743,8 +741,8 @@
 	dir = 9
 	},
 /obj/item/radio/intercom{
-	dir = 8;
 	name = "Station Intercom (General)";
+	dir = 8;
 	pixel_x = -21
 	},
 /turf/simulated/floor/tiled/dark,
@@ -785,9 +783,9 @@
 /area/shuttle/echidna)
 "aHw" = (
 /obj/machinery/power/smes/buildable{
+	name = "Reactor SMES - Secondary";
 	RCon_tag = "Reactor Secondary - Aegis";
-	input_attempt = 1;
-	name = "Reactor SMES - Secondary"
+	input_attempt = 1
 	},
 /obj/structure/cable/green{
 	icon_state = "0-2"
@@ -847,9 +845,9 @@
 	},
 /obj/effect/map_helper/airlock/door/int_door,
 /obj/machinery/door/airlock/glass_external{
+	name = "Port Bow Outer Airlock";
 	icon_state = "door_locked";
-	locked = 1;
-	name = "Port Bow Outer Airlock"
+	locked = 1
 	},
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/reinforced,
@@ -1018,8 +1016,8 @@
 	dir = 4
 	},
 /obj/structure/window/reinforced/survival_pod{
-	dir = 1;
-	opacity = 1
+	opacity = 1;
+	dir = 1
 	},
 /obj/machinery/power/port_gen/pacman,
 /obj/structure/cable/green{
@@ -1147,8 +1145,8 @@
 /area/space)
 "aYq" = (
 /obj/machinery/power/apc{
-	dir = 8;
 	name = "west bump";
+	dir = 8;
 	pixel_x = -24
 	},
 /obj/structure/cable/green{
@@ -1188,16 +1186,16 @@
 /area/expoutpost/bar)
 "aZU" = (
 /obj/machinery/power/quantumpad{
+	name = "Medbay Q-Pad";
 	map_pad_id = "aeg_medbay_padout";
-	map_pad_link_id = "aeg_medbay_padin";
-	name = "Medbay Q-Pad"
+	map_pad_link_id = "aeg_medbay_padin"
 	},
 /obj/machinery/light{
 	dir = 1
 	},
 /obj/item/radio/intercom{
-	dir = 1;
 	name = "Station Intercom (General)";
+	dir = 1;
 	pixel_y = 21
 	},
 /obj/structure/cable/green{
@@ -1275,8 +1273,8 @@
 "bed" = (
 /obj/effect/floor_decal/industrial/outline/red,
 /obj/machinery/atmospherics/portables_connector{
-	dir = 4;
-	name = "Fuel Into Main"
+	name = "Fuel Into Main";
+	dir = 4
 	},
 /turf/simulated/floor/reinforced,
 /area/expoutpost/portfuelstorage)
@@ -1322,11 +1320,11 @@
 /area/expoutpost/lowersternhallway)
 "bfx" = (
 /obj/machinery/computer/general_air_control/supermatter_core{
-	dir = 1;
-	input_tag = "aegrust_cooling_in";
 	name = "Aegis Core Cooling Control";
-	output_tag = "aegrust_cooling_out";
-	sensors = list("aegrustengine_sensor"="Aegis Engine Temperature")
+	dir = 1;
+	sensors = list(aegrustengine_sensor="Aegis Engine Temperature");
+	input_tag = "aegrust_cooling_in";
+	output_tag = "aegrust_cooling_out"
 	},
 /obj/effect/floor_decal/borderfloorblack,
 /obj/effect/floor_decal/corner/orange/border,
@@ -1459,8 +1457,8 @@
 /obj/effect/floor_decal/industrial/outline/red,
 /obj/machinery/portable_atmospherics/canister/phoron,
 /obj/machinery/atmospherics/portables_connector{
-	dir = 4;
-	name = "Refuelling Port"
+	name = "Refuelling Port";
+	dir = 4
 	},
 /turf/simulated/floor,
 /area/expoutpost/staginghangar)
@@ -1591,8 +1589,8 @@
 	dir = 4
 	},
 /obj/item/radio/intercom{
-	dir = 4;
 	name = "Station Intercom (General)";
+	dir = 4;
 	pixel_x = 21
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -1638,9 +1636,9 @@
 /area/expoutpost/starqpadjunction)
 "btC" = (
 /obj/machinery/power/quantumpad{
+	name = "EVA Q-Pad";
 	map_pad_id = "aeg_eva_padout";
-	map_pad_link_id = "aeg_eva_padin";
-	name = "EVA Q-Pad"
+	map_pad_link_id = "aeg_eva_padin"
 	},
 /obj/structure/cable/green{
 	icon_state = "0-8"
@@ -1769,8 +1767,8 @@
 /obj/effect/floor_decal/industrial/outline/red,
 /obj/machinery/portable_atmospherics/canister/phoron,
 /obj/machinery/atmospherics/portables_connector{
-	dir = 8;
-	name = "Refuelling Port"
+	name = "Refuelling Port";
+	dir = 8
 	},
 /turf/simulated/floor,
 /area/expoutpost/staginghangar)
@@ -1932,11 +1930,11 @@
 /area/shuttle/baby_mammoth)
 "bKJ" = (
 /obj/machinery/power/smes/buildable{
-	RCon_tag = "Reactor Input - Aegis";
-	charge = 2e+006;
+	name = "Reactor SMES - Input";
+	charge = 2e+06;
 	cur_coils = 6;
-	input_attempt = 1;
-	name = "Reactor SMES - Input"
+	RCon_tag = "Reactor Input - Aegis";
+	input_attempt = 1
 	},
 /obj/structure/cable/cyan{
 	icon_state = "0-4"
@@ -1955,8 +1953,8 @@
 /area/expoutpost/staginghangar)
 "bLf" = (
 /obj/item/radio/intercom{
-	dir = 8;
 	name = "Station Intercom (General)";
+	dir = 8;
 	pixel_x = -21
 	},
 /turf/simulated/floor/carpet,
@@ -2017,8 +2015,8 @@
 	icon_state = "0-8"
 	},
 /obj/machinery/power/apc{
-	dir = 4;
 	name = "east bump";
+	dir = 4;
 	pixel_x = 24
 	},
 /obj/structure/catwalk,
@@ -2056,8 +2054,8 @@
 	dir = 9
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 1;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 1
 	},
 /turf/simulated/floor,
 /area/expoutpost/uppersternhallway)
@@ -2201,10 +2199,10 @@
 	dir = 4
 	},
 /obj/machinery/button/remote/blast_door{
-	dir = 1;
-	id = "aeg_bar_blastdoor";
 	name = "Bar Blast Doors";
-	pixel_y = -28
+	dir = 1;
+	pixel_y = -28;
+	id = "aeg_bar_blastdoor"
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -2213,9 +2211,9 @@
 /area/expoutpost/bar)
 "bVY" = (
 /obj/machinery/power/quantumpad{
+	name = "TO - MINING";
 	map_pad_id = "aeg_mining_padin";
-	map_pad_link_id = "aeg_mining_padout";
-	name = "TO - MINING"
+	map_pad_link_id = "aeg_mining_padout"
 	},
 /obj/structure/cable/green{
 	icon_state = "0-4"
@@ -2243,13 +2241,13 @@
 	dir = 6
 	},
 /obj/structure/window/reinforced/survival_pod{
-	dir = 1;
-	opacity = 1
+	opacity = 1;
+	dir = 1
 	},
 /obj/machinery/power/smes/buildable/power_shuttle{
-	charge = 4e+006;
-	input_attempt = 1;
+	charge = 4e+06;
 	inputting = 1;
+	input_attempt = 1;
 	outputting = 1
 	},
 /obj/structure/cable/green{
@@ -2304,8 +2302,8 @@
 	dir = 8
 	},
 /obj/item/radio/intercom{
-	dir = 8;
 	name = "Station Intercom (General)";
+	dir = 8;
 	pixel_x = -21
 	},
 /turf/simulated/floor/wood,
@@ -2351,25 +2349,25 @@
 /area/expoutpost/atmospherics)
 "ccq" = (
 /obj/machinery/door/airlock/voidcraft/vertical{
+	name = "shuttle side hatch";
 	icon_state = "door_locked";
-	id_tag = "expshuttle4_door_L";
 	locked = 1;
-	name = "shuttle side hatch"
+	id_tag = "expshuttle4_door_L"
 	},
 /obj/structure/cable/blue{
 	icon_state = "4-8"
 	},
 /obj/machinery/button/remote/airlock{
-	id = "expshuttle4_door_L";
 	name = "Side Hatch Control";
 	pixel_y = -26;
+	id = "expshuttle4_door_L";
 	specialfunctions = 4
 	},
 /obj/machinery/door/blast/regular/open{
+	name = "window blast shield";
 	dir = 4;
-	id = "stargazer_blast";
 	layer = 2.5;
-	name = "window blast shield"
+	id = "stargazer_blast"
 	},
 /turf/simulated/floor,
 /area/shuttle/baby_mammoth)
@@ -2474,8 +2472,8 @@
 	dir = 1
 	},
 /obj/machinery/door/airlock/multi_tile/glass{
-	dir = 1;
 	name = "Exploration Ready Room";
+	dir = 1;
 	req_one_access = list(43,67)
 	},
 /turf/simulated/floor,
@@ -2652,8 +2650,8 @@
 	dir = 4
 	},
 /obj/item/radio/intercom{
-	dir = 8;
 	name = "Station Intercom (General)";
+	dir = 8;
 	pixel_x = -21
 	},
 /turf/simulated/floor/tiled/dark,
@@ -2717,8 +2715,8 @@
 /area/expoutpost/reactorcr)
 "cpA" = (
 /obj/machinery/atmospherics/pipe/simple/visible/universal{
-	dir = 8;
-	name = "Air to Distro"
+	name = "Air to Distro";
+	dir = 8
 	},
 /turf/simulated/floor,
 /area/expoutpost/atmospherics)
@@ -2778,8 +2776,8 @@
 /obj/machinery/door/firedoor/glass,
 /obj/effect/catwalk_plated/techfloor,
 /obj/machinery/door/airlock/silver{
-	id_tag = "aeg_suiteone_bolt";
-	name = "Suite One"
+	name = "Suite One";
+	id_tag = "aeg_suiteone_bolt"
 	},
 /turf/simulated/floor,
 /area/expoutpost/suite1)
@@ -2791,17 +2789,17 @@
 /area/expoutpost/bar)
 "cts" = (
 /obj/machinery/access_button{
-	command = "cycle_exterior";
-	frequency = 1380;
-	master_tag = "ursula";
 	name = "exterior access button";
-	pixel_y = 26
+	pixel_y = 26;
+	frequency = 1380;
+	command = "cycle_exterior";
+	master_tag = "ursula"
 	},
 /obj/machinery/door/airlock/voidcraft/vertical{
+	name = "External Access";
 	frequency = 1380;
-	id_tag = "ursula_outer";
 	locked = 1;
-	name = "External Access"
+	id_tag = "ursula_outer"
 	},
 /obj/structure/cable/blue{
 	icon_state = "4-8"
@@ -2896,9 +2894,9 @@
 	dir = 4
 	},
 /obj/machinery/button/remote/blast_door{
-	id = "aeg_mining_storage";
 	name = "Mining Storage";
-	pixel_y = 28
+	pixel_y = 28;
+	id = "aeg_mining_storage"
 	},
 /turf/simulated/floor/tiled,
 /area/expoutpost/miningfoyer)
@@ -3071,8 +3069,8 @@
 	dir = 4
 	},
 /obj/item/radio/intercom{
-	dir = 4;
 	name = "Station Intercom (General)";
+	dir = 4;
 	pixel_x = 21
 	},
 /turf/simulated/floor/tiled/dark,
@@ -3126,9 +3124,9 @@
 /area/expoutpost/engstorage)
 "cIJ" = (
 /obj/machinery/door/airlock/glass_external{
+	name = "Port Bow Outer Airlock";
 	icon_state = "door_locked";
-	locked = 1;
-	name = "Port Bow Outer Airlock"
+	locked = 1
 	},
 /obj/effect/map_helper/airlock/door/int_door,
 /obj/effect/floor_decal/industrial/warning,
@@ -3226,8 +3224,8 @@
 	},
 /obj/structure/window/reinforced/survival_pod,
 /obj/structure/grille/rustic{
-	health = 25;
-	name = "reinforced grille"
+	name = "reinforced grille";
+	health = 25
 	},
 /turf/simulated/floor,
 /area/shuttle/echidna)
@@ -3265,8 +3263,8 @@
 	icon_state = "2-8"
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 2;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 2
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/expoutpost/staginghangar)
@@ -3277,8 +3275,8 @@
 	dir = 4
 	},
 /obj/structure/grille/rustic{
-	health = 25;
-	name = "reinforced grille"
+	name = "reinforced grille";
+	health = 25
 	},
 /obj/structure/window/reinforced/survival_pod{
 	dir = 9
@@ -3349,8 +3347,8 @@
 	dir = 1
 	},
 /obj/machinery/door/airlock/multi_tile/glass{
-	dir = 1;
-	name = "Mining Office"
+	name = "Mining Office";
+	dir = 1
 	},
 /turf/simulated/floor,
 /area/expoutpost/miningfoyer)
@@ -3371,8 +3369,8 @@
 /area/expoutpost/pathfinderroom)
 "cTt" = (
 /obj/machinery/power/apc{
-	dir = 8;
 	name = "west bump";
+	dir = 8;
 	pixel_x = -24
 	},
 /obj/machinery/light_switch{
@@ -3628,9 +3626,9 @@
 	},
 /obj/machinery/power/port_gen/pacman/super/potato{
 	active = 1;
+	sheets = 50;
 	power_gen = 200000;
-	power_output = 4;
-	sheets = 50
+	power_output = 4
 	},
 /obj/structure/catwalk,
 /obj/structure/cable/yellow,
@@ -3648,8 +3646,8 @@
 	dir = 4
 	},
 /obj/structure/grille/rustic{
-	health = 25;
-	name = "reinforced grille"
+	name = "reinforced grille";
+	health = 25
 	},
 /turf/simulated/floor,
 /area/shuttle/ursula)
@@ -3666,13 +3664,13 @@
 	},
 /obj/structure/window/reinforced/survival_pod,
 /obj/structure/grille/rustic{
-	health = 25;
-	name = "reinforced grille"
+	name = "reinforced grille";
+	health = 25
 	},
 /obj/machinery/door/blast/regular/open{
+	name = "window blast shield";
 	dir = 4;
-	id = "stargazer_blast";
-	name = "window blast shield"
+	id = "stargazer_blast"
 	},
 /obj/machinery/atmospherics/pipe/simple/visible,
 /turf/simulated/floor,
@@ -3740,8 +3738,8 @@
 	icon_state = "0-8"
 	},
 /obj/machinery/power/apc{
-	dir = 1;
 	name = "north bump";
+	dir = 1;
 	pixel_y = 24
 	},
 /turf/simulated/floor,
@@ -3756,8 +3754,8 @@
 	dir = 4
 	},
 /obj/structure/grille/rustic{
-	health = 25;
-	name = "reinforced grille"
+	name = "reinforced grille";
+	health = 25
 	},
 /turf/simulated/floor,
 /area/shuttle/ursula)
@@ -3821,8 +3819,8 @@
 "dqX" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/item/radio/intercom{
-	dir = 4;
 	name = "Station Intercom (General)";
+	dir = 4;
 	pixel_x = 21
 	},
 /turf/simulated/floor/carpet,
@@ -3909,8 +3907,8 @@
 	icon_state = "0-2"
 	},
 /obj/machinery/power/apc{
-	dir = 1;
 	name = "north bump";
+	dir = 1;
 	pixel_y = 24
 	},
 /obj/machinery/firealarm{
@@ -3970,8 +3968,7 @@
 "dyF" = (
 /obj/structure/window/reinforced,
 /obj/structure/window/reinforced{
-	dir = 4;
-	health = 1e+006
+	dir = 4
 	},
 /obj/machinery/door/window{
 	dir = 8
@@ -4018,8 +4015,8 @@
 	icon_state = "1-4"
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 1;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 1
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/expoutpost/staginghangar)
@@ -4033,8 +4030,8 @@
 /area/expoutpost/engstorage)
 "dzS" = (
 /obj/machinery/power/apc{
-	dir = 4;
 	name = "east bump";
+	dir = 4;
 	pixel_x = 24
 	},
 /obj/structure/cable/green{
@@ -4049,8 +4046,8 @@
 	icon_state = "1-2"
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 2;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 2
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/expoutpost/washroom)
@@ -4160,8 +4157,8 @@
 	icon_state = "2-8"
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 2;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 2
 	},
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -4193,9 +4190,9 @@
 "dHz" = (
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/machinery/embedded_controller/radio/airlock/airlock_controller{
+	pixel_x = -28;
 	frequency = 1381;
-	id_tag = "aeg_starstern_airlock";
-	pixel_x = -28
+	id_tag = "aeg_starstern_airlock"
 	},
 /obj/structure/catwalk,
 /turf/simulated/floor,
@@ -4212,8 +4209,7 @@
 "dHI" = (
 /obj/structure/table/rack/shelf,
 /obj/structure/window/reinforced{
-	dir = 4;
-	health = 1e+006
+	dir = 4
 	},
 /obj/structure/window/reinforced{
 	dir = 1
@@ -4293,9 +4289,9 @@
 /area/expoutpost/eva)
 "dJw" = (
 /obj/machinery/power/quantumpad{
+	name = "TO - SCIENCE";
 	map_pad_id = "aeg_science_padin";
-	map_pad_link_id = "aeg_science_padout";
-	name = "TO - SCIENCE"
+	map_pad_link_id = "aeg_science_padout"
 	},
 /obj/structure/cable/green{
 	icon_state = "0-8"
@@ -4366,8 +4362,8 @@
 "dMs" = (
 /obj/effect/wingrille_spawn/reinforced_phoron,
 /obj/machinery/door/blast/radproof{
-	id = "Aeg_CoreShroud";
-	name = "Core Shroud"
+	name = "Core Shroud";
+	id = "Aeg_CoreShroud"
 	},
 /turf/simulated/floor/reinforced,
 /area/expoutpost/reactorroom)
@@ -4679,8 +4675,8 @@
 	},
 /obj/effect/catwalk_plated/techfloor,
 /obj/machinery/door/airlock/multi_tile/glass{
-	dir = 2;
-	name = "Hangar - Echidna"
+	name = "Hangar - Echidna";
+	dir = 2
 	},
 /turf/simulated/floor,
 /area/expoutpost/hangarsix)
@@ -4722,8 +4718,8 @@
 	},
 /obj/effect/catwalk_plated/techfloor,
 /obj/structure/disposalpipe/segment{
-	dir = 2;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 2
 	},
 /turf/simulated/floor,
 /area/expoutpost/slingcarrierdock)
@@ -4732,8 +4728,8 @@
 	dir = 8
 	},
 /obj/machinery/power/apc{
-	dir = 8;
 	name = "west bump";
+	dir = 8;
 	pixel_x = -24
 	},
 /obj/structure/cable/green{
@@ -4750,8 +4746,8 @@
 /area/expoutpost/slingcarrierdock)
 "eiY" = (
 /obj/machinery/power/apc{
-	dir = 8;
 	name = "west bump";
+	dir = 8;
 	pixel_x = -24
 	},
 /obj/effect/floor_decal/borderfloorblack{
@@ -4798,8 +4794,8 @@
 	icon_state = "4-8"
 	},
 /obj/structure/disposalpipe/junction{
-	dir = 4;
-	icon_state = "pipe-j2"
+	icon_state = "pipe-j2";
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/expoutpost/explobriefroom)
@@ -4913,8 +4909,8 @@
 	dir = 1
 	},
 /obj/item/radio/intercom{
-	dir = 1;
 	name = "Station Intercom (General)";
+	dir = 1;
 	pixel_y = 21
 	},
 /turf/simulated/floor/tiled/dark,
@@ -4927,8 +4923,7 @@
 	dir = 8
 	},
 /obj/structure/window/reinforced{
-	dir = 4;
-	health = 1e+006
+	dir = 4
 	},
 /obj/structure/window/reinforced,
 /turf/simulated/floor/reinforced,
@@ -4944,8 +4939,8 @@
 	dir = 8
 	},
 /obj/item/radio/intercom{
-	dir = 8;
 	name = "Station Intercom (General)";
+	dir = 8;
 	pixel_x = -21
 	},
 /turf/simulated/floor/tiled/dark,
@@ -5004,8 +4999,7 @@
 	dir = 1
 	},
 /obj/structure/window/reinforced{
-	dir = 4;
-	health = 1e+006
+	dir = 4
 	},
 /obj/structure/disposaloutlet{
 	dir = 8
@@ -5102,11 +5096,11 @@
 	dir = 4
 	},
 /obj/machinery/button/remote/blast_door{
-	dir = 8;
-	id = "aeg_bar_shutter";
 	name = "Bar Shutters";
+	dir = 8;
 	pixel_x = 28;
 	pixel_y = 8;
+	id = "aeg_bar_shutter";
 	req_access = list(25)
 	},
 /turf/simulated/floor/tiled/white,
@@ -5153,8 +5147,8 @@
 	icon_state = "1-2"
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 1;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 8
@@ -5180,8 +5174,8 @@
 	dir = 9
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 8;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
 	dir = 9
@@ -5243,8 +5237,8 @@
 /area/expoutpost/hangartwo)
 "ezJ" = (
 /obj/machinery/power/apc{
-	dir = 4;
 	name = "east bump";
+	dir = 4;
 	pixel_x = 24
 	},
 /obj/effect/floor_decal/borderfloorblack{
@@ -5297,8 +5291,8 @@
 	icon_state = "2-8"
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 2;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 2
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
 	dir = 10
@@ -5328,10 +5322,10 @@
 /obj/item/book/manual/chef_recipes,
 /obj/item/material/kitchen/rollingpin,
 /obj/machinery/button/remote/blast_door{
-	dir = 8;
-	id = "aeg_kitchen_shutter";
 	name = "Kitchen Shutters";
-	pixel_x = 28
+	dir = 8;
+	pixel_x = 28;
+	id = "aeg_kitchen_shutter"
 	},
 /turf/simulated/floor/tiled/white,
 /area/expoutpost/kitchen)
@@ -5486,8 +5480,8 @@
 	icon_state = "0-2"
 	},
 /obj/machinery/power/apc{
-	dir = 1;
 	name = "north bump";
+	dir = 1;
 	pixel_y = 24
 	},
 /obj/machinery/light_switch{
@@ -5523,8 +5517,8 @@
 /area/expoutpost/bar)
 "eKQ" = (
 /obj/structure/closet/crate/hydroponics{
-	desc = "All you need to start your own honey farm.";
-	name = "beekeeping crate"
+	name = "beekeeping crate";
+	desc = "All you need to start your own honey farm."
 	},
 /obj/item/beehive_assembly,
 /obj/item/bee_smoker,
@@ -5555,9 +5549,9 @@
 /area/shuttle/stargazer)
 "eMf" = (
 /obj/machinery/power/quantumpad{
+	name = "Engineering Q-Pad";
 	map_pad_id = "aeg_engineering_padout";
-	map_pad_link_id = "aeg_engineering_padin";
-	name = "Engineering Q-Pad"
+	map_pad_link_id = "aeg_engineering_padin"
 	},
 /obj/machinery/light{
 	dir = 1
@@ -5575,8 +5569,8 @@
 	dir = 8
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 2;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 2
 	},
 /turf/simulated/floor/tiled,
 /area/expoutpost/cic)
@@ -5594,8 +5588,8 @@
 /area/expoutpost/miningfoyer)
 "eNb" = (
 /obj/structure/disposalpipe/segment{
-	dir = 2;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 2
 	},
 /turf/simulated/floor/tiled/white,
 /area/expoutpost/surgical1)
@@ -5620,16 +5614,16 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/door/airlock/maintenance_hatch{
-	icon_state = "door_locked";
-	id_tag = "aeg_reactor_bolt";
-	locked = 1;
 	name = "Core Access Hatch";
+	icon_state = "door_locked";
+	locked = 1;
+	id_tag = "aeg_reactor_bolt";
 	req_one_access = list(11)
 	},
 /obj/machinery/door/blast/radproof{
+	name = "Core Shroud";
 	dir = 4;
-	id = "Aeg_CoreShroud";
-	name = "Core Shroud"
+	id = "Aeg_CoreShroud"
 	},
 /turf/simulated/floor,
 /area/expoutpost/reactorroom)
@@ -5693,8 +5687,8 @@
 	icon_state = "2-8"
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 2;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 2
 	},
 /obj/effect/catwalk_plated/techfloor,
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
@@ -5725,8 +5719,8 @@
 "eRs" = (
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/silver{
-	id_tag = "aeg_pubshower_bolt";
-	name = "Unit 1"
+	name = "Unit 1";
+	id_tag = "aeg_pubshower_bolt"
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/expoutpost/washroom)
@@ -5763,8 +5757,8 @@
 	dir = 1
 	},
 /obj/machinery/door/airlock/multi_tile/glass{
-	dir = 1;
-	name = "Hangar - Stargazer"
+	name = "Hangar - Stargazer";
+	dir = 1
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/expoutpost/hangarfour)
@@ -5814,12 +5808,12 @@
 /area/expoutpost/atmospherics)
 "eVe" = (
 /obj/machinery/button/remote/airlock{
-	desiredstate = 1;
-	dir = 8;
-	id = "echidna_hatch";
 	name = "Rear Hatch Control";
+	dir = 8;
 	pixel_x = 26;
+	id = "echidna_hatch";
 	req_access = list(67);
+	desiredstate = 1;
 	specialfunctions = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
@@ -5949,8 +5943,8 @@
 	dir = 1
 	},
 /obj/machinery/door/airlock/multi_tile/glass{
-	dir = 2;
-	name = "Hangar - Mammoth"
+	name = "Hangar - Mammoth";
+	dir = 2
 	},
 /obj/effect/catwalk_plated/techfloor,
 /turf/simulated/floor,
@@ -6013,8 +6007,8 @@
 	dir = 1
 	},
 /obj/machinery/power/apc{
-	dir = 1;
 	name = "north bump";
+	dir = 1;
 	pixel_y = 24
 	},
 /obj/structure/cable/green{
@@ -6127,8 +6121,8 @@
 	dir = 1
 	},
 /obj/machinery/door/airlock/multi_tile/glass{
-	dir = 1;
-	name = "Medbay Lobby"
+	name = "Medbay Lobby";
+	dir = 1
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/expoutpost/medbaylobby)
@@ -6144,11 +6138,11 @@
 	},
 /obj/structure/table/wooden_reinforced,
 /obj/machinery/button/remote/airlock{
-	dir = 8;
-	id = "aeg_suiteone_bolt";
 	name = "Door Bolt";
+	dir = 8;
 	pixel_x = 24;
 	pixel_y = 8;
+	id = "aeg_suiteone_bolt";
 	specialfunctions = 4
 	},
 /turf/simulated/floor/carpet,
@@ -6262,8 +6256,8 @@
 	dir = 1
 	},
 /obj/machinery/door/airlock/multi_tile/glass{
-	dir = 2;
-	name = "Hangar - Mammoth"
+	name = "Hangar - Mammoth";
+	dir = 2
 	},
 /turf/simulated/floor/tiled/dark,
 /area/expoutpost/hangartwo)
@@ -6278,8 +6272,8 @@
 	dir = 8
 	},
 /obj/item/radio/intercom{
-	dir = 8;
 	name = "Station Intercom (General)";
+	dir = 8;
 	pixel_x = -21
 	},
 /turf/simulated/floor/tiled/dark,
@@ -6548,9 +6542,9 @@
 	dir = 5
 	},
 /obj/machinery/airlock_sensor{
+	pixel_y = 28;
 	frequency = 1380;
-	id_tag = "baby_mammoth_sensor";
-	pixel_y = 28
+	id_tag = "baby_mammoth_sensor"
 	},
 /turf/simulated/floor,
 /area/shuttle/baby_mammoth)
@@ -6568,17 +6562,17 @@
 	dir = 1
 	},
 /obj/machinery/access_button{
-	dir = 1;
 	name = "interior access button";
+	dir = 1;
 	pixel_x = 8;
 	pixel_y = -22
 	},
 /obj/effect/map_helper/airlock/button/int_button,
 /obj/effect/map_helper/airlock/door/int_door,
 /obj/machinery/door/airlock/glass_external{
+	name = "Port Bow Outer Airlock";
 	icon_state = "door_locked";
-	locked = 1;
-	name = "Port Bow Outer Airlock"
+	locked = 1
 	},
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/reinforced,
@@ -6608,8 +6602,8 @@
 	icon_state = "2-4"
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 4;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 4
 	},
 /obj/effect/catwalk_plated/techfloor,
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
@@ -6698,8 +6692,8 @@
 	},
 /obj/structure/window/reinforced/survival_pod,
 /obj/structure/grille/rustic{
-	health = 25;
-	name = "reinforced grille"
+	name = "reinforced grille";
+	health = 25
 	},
 /turf/simulated/floor,
 /area/shuttle/stargazer)
@@ -6740,8 +6734,8 @@
 /obj/effect/catwalk_plated/techfloor,
 /obj/machinery/door/firedoor/multi_tile/glass,
 /obj/machinery/door/airlock/multi_tile/glass{
-	dir = 8;
-	name = "Breakroom"
+	name = "Breakroom";
+	dir = 8
 	},
 /turf/simulated/floor,
 /area/expoutpost/breakroom)
@@ -6801,8 +6795,8 @@
 	},
 /obj/structure/window/reinforced/survival_pod,
 /obj/structure/grille/rustic{
-	health = 25;
-	name = "reinforced grille"
+	name = "reinforced grille";
+	health = 25
 	},
 /turf/simulated/floor,
 /area/shuttle/baby_mammoth)
@@ -6829,8 +6823,8 @@
 	dir = 1
 	},
 /obj/machinery/door/airlock/multi_tile/glass{
-	dir = 2;
-	name = "Hangar - Shuttle"
+	name = "Hangar - Shuttle";
+	dir = 2
 	},
 /turf/simulated/floor/tiled/dark,
 /area/expoutpost/hangarone)
@@ -6909,8 +6903,8 @@
 	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /obj/item/radio/intercom{
-	dir = 1;
 	name = "Station Intercom (General)";
+	dir = 1;
 	pixel_y = 21
 	},
 /turf/simulated/floor/tiled/white,
@@ -6957,12 +6951,12 @@
 	},
 /obj/structure/window/reinforced/survival_pod,
 /obj/structure/grille/rustic{
-	health = 25;
-	name = "reinforced grille"
+	name = "reinforced grille";
+	health = 25
 	},
 /obj/machinery/door/blast/regular/open{
-	id = "stargazer_blast";
-	name = "window blast shield"
+	name = "window blast shield";
+	id = "stargazer_blast"
 	},
 /turf/simulated/floor,
 /area/shuttle/stargazer)
@@ -7079,8 +7073,8 @@
 /area/expoutpost/starlowermaint)
 "gaV" = (
 /obj/item/radio/intercom{
-	dir = 8;
 	name = "Station Intercom (General)";
+	dir = 8;
 	pixel_x = -21
 	},
 /turf/simulated/floor/tiled/dark,
@@ -7104,8 +7098,8 @@
 	},
 /obj/effect/catwalk_plated/techfloor,
 /obj/machinery/door/airlock/multi_tile/glass{
-	dir = 1;
-	name = "Hangar - Stargazer"
+	name = "Hangar - Stargazer";
+	dir = 1
 	},
 /turf/simulated/floor,
 /area/expoutpost/hangarfour)
@@ -7137,9 +7131,9 @@
 /obj/effect/map_helper/airlock/door/ext_door,
 /obj/effect/map_helper/airlock/button/ext_button,
 /obj/machinery/door/airlock/glass_external{
+	name = "Port Bow Outer Airlock";
 	icon_state = "door_locked";
-	locked = 1;
-	name = "Port Bow Outer Airlock"
+	locked = 1
 	},
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/reinforced,
@@ -7215,8 +7209,8 @@
 	},
 /obj/effect/catwalk_plated/techfloor,
 /obj/machinery/door/airlock/multi_tile/glass{
-	dir = 2;
-	name = "Hangar - Shuttle"
+	name = "Hangar - Shuttle";
+	dir = 2
 	},
 /turf/simulated/floor,
 /area/expoutpost/hangarone)
@@ -7234,8 +7228,8 @@
 	icon_state = "2-8"
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 2;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 2
 	},
 /obj/effect/catwalk_plated/techfloor,
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
@@ -7324,16 +7318,16 @@
 /area/expoutpost/reactorcr)
 "giI" = (
 /obj/machinery/door/airlock/voidcraft/vertical{
+	name = "Internal Access";
 	frequency = 1380;
-	id_tag = "shuttle3_inner";
-	name = "Internal Access"
+	id_tag = "shuttle3_inner"
 	},
 /obj/machinery/access_button{
-	command = "cycle_interior";
-	frequency = 1380;
-	master_tag = "shuttle3_shuttle";
 	name = "interior access button";
 	pixel_y = -26;
+	frequency = 1380;
+	command = "cycle_interior";
+	master_tag = "shuttle3_shuttle";
 	req_access = null
 	},
 /obj/machinery/atmospherics/pipe/simple/visible{
@@ -7376,8 +7370,8 @@
 /obj/structure/table/standard,
 /obj/item/defib_kit/loaded,
 /obj/item/reagent_containers/spray/cleaner{
-	desc = "Someone has crossed out the Space from Space Cleaner and written in Surgery. 'Do not remove under punishment of death!!!' is scrawled on the back.";
 	name = "Surgery Cleaner";
+	desc = "Someone has crossed out the Space from Space Cleaner and written in Surgery. 'Do not remove under punishment of death!!!' is scrawled on the back.";
 	pixel_x = 2;
 	pixel_y = 2
 	},
@@ -7490,8 +7484,8 @@
 /area/expoutpost/secbowcheckpoint)
 "goD" = (
 /obj/structure/disposalpipe/segment{
-	dir = 2;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 2
 	},
 /turf/simulated/floor/carpet,
 /area/expoutpost/suite1)
@@ -7633,12 +7627,12 @@
 	},
 /obj/structure/window/reinforced/survival_pod,
 /obj/structure/grille/rustic{
-	health = 25;
-	name = "reinforced grille"
+	name = "reinforced grille";
+	health = 25
 	},
 /obj/machinery/door/blast/regular/open{
-	id = "stargazer_blast";
-	name = "window blast shield"
+	name = "window blast shield";
+	id = "stargazer_blast"
 	},
 /turf/simulated/floor,
 /area/shuttle/stargazer)
@@ -7687,8 +7681,8 @@
 "gAj" = (
 /obj/structure/catwalk,
 /obj/machinery/power/apc{
-	dir = 8;
 	name = "west bump";
+	dir = 8;
 	pixel_x = -24
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -7710,8 +7704,8 @@
 /area/expoutpost/staginghangar)
 "gAM" = (
 /obj/structure/filingcabinet/medical{
-	desc = "A large cabinet with hard copy medical records.";
-	name = "Medical Records"
+	name = "Medical Records";
+	desc = "A large cabinet with hard copy medical records."
 	},
 /turf/simulated/floor/carpet/blue,
 /area/expoutpost/medicalbay)
@@ -7894,8 +7888,8 @@
 	icon_state = "1-2"
 	},
 /obj/item/radio/intercom{
-	dir = 8;
 	name = "Station Intercom (General)";
+	dir = 8;
 	pixel_x = -21
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -7956,11 +7950,11 @@
 	},
 /obj/machinery/papershredder,
 /obj/machinery/button/remote/airlock{
-	dir = 4;
-	id = "aeg_seccomm_bolt";
 	name = "Door Bolt";
+	dir = 4;
 	pixel_x = -24;
 	pixel_y = -8;
+	id = "aeg_seccomm_bolt";
 	specialfunctions = 4
 	},
 /turf/simulated/floor/carpet,
@@ -8007,16 +8001,16 @@
 /area/expoutpost/explobriefroom)
 "gPg" = (
 /obj/machinery/door/airlock/voidcraft/vertical{
+	name = "External Access";
 	frequency = 1380;
-	id_tag = "stargazer_outer";
-	name = "External Access"
+	id_tag = "stargazer_outer"
 	},
 /obj/machinery/access_button{
-	command = "cycle_exterior";
-	frequency = 1380;
-	master_tag = "stargazer";
 	name = "exterior access button";
-	pixel_y = 26
+	pixel_y = 26;
+	frequency = 1380;
+	command = "cycle_exterior";
+	master_tag = "stargazer"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 10
@@ -8329,10 +8323,10 @@
 	icon_state = "0-2"
 	},
 /obj/machinery/power/apc{
-	dir = 1;
-	lighting = 0;
 	name = "north bump";
-	pixel_y = 24
+	dir = 1;
+	pixel_y = 24;
+	lighting = 0
 	},
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 1
@@ -8399,8 +8393,8 @@
 	icon_state = "2-4"
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 4;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
 	dir = 6
@@ -8477,8 +8471,8 @@
 "hjQ" = (
 /obj/structure/catwalk,
 /obj/item/radio/intercom{
-	dir = 8;
 	name = "Station Intercom (General)";
+	dir = 8;
 	pixel_x = -21
 	},
 /turf/simulated/floor/reinforced,
@@ -8497,8 +8491,8 @@
 	},
 /obj/effect/catwalk_plated/dark,
 /obj/machinery/door/airlock/silver{
-	id_tag = "aeg_dormtwo_bolt";
-	name = "Dorm Two"
+	name = "Dorm Two";
+	id_tag = "aeg_dormtwo_bolt"
 	},
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor,
@@ -8547,17 +8541,17 @@
 /area/expoutpost/botany)
 "hmp" = (
 /obj/machinery/access_button{
-	command = "cycle_interior";
-	frequency = 1380;
-	master_tag = "echidna";
 	name = "interior access button";
-	pixel_y = 26
+	pixel_y = 26;
+	frequency = 1380;
+	command = "cycle_interior";
+	master_tag = "echidna"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/machinery/door/airlock/voidcraft/vertical{
+	name = "External Access";
 	frequency = 1380;
-	id_tag = "echidna_inner";
-	name = "External Access"
+	id_tag = "echidna_inner"
 	},
 /turf/simulated/floor,
 /area/shuttle/echidna)
@@ -8765,8 +8759,8 @@
 /area/expoutpost/pathfinderroom)
 "huK" = (
 /obj/machinery/atmospherics/unary/heater/sauna{
-	dir = 8;
 	icon_state = "heater_1";
+	dir = 8;
 	use_power = 1
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
@@ -8900,8 +8894,8 @@
 "hBU" = (
 /obj/effect/floor_decal/industrial/outline/red,
 /obj/machinery/atmospherics/portables_connector{
-	dir = 8;
-	name = "Fuel Into Main"
+	name = "Fuel Into Main";
+	dir = 8
 	},
 /turf/simulated/floor/reinforced,
 /area/expoutpost/starfuelstorage)
@@ -8920,12 +8914,12 @@
 "hCj" = (
 /obj/effect/floor_decal/industrial/outline/grey,
 /obj/machinery/button/remote/blast_door{
-	id = "aeg_bridge_armory";
 	name = "EMERGENCY Bridge Armory";
 	pixel_x = -20;
 	pixel_y = 22;
-	req_access = list(17);
-	req_one_access = list(17)
+	id = "aeg_bridge_armory";
+	req_one_access = list(17);
+	req_access = list(17)
 	},
 /obj/machinery/button/remote/blast_door{
 	pixel_x = 20;
@@ -9049,15 +9043,15 @@
 	dir = 1
 	},
 /obj/machinery/atmospherics/portables_connector{
-	dir = 4;
-	name = "Refuelling Port"
+	name = "Refuelling Port";
+	dir = 4
 	},
 /turf/simulated/floor,
 /area/expoutpost/staginghangar)
 "hGa" = (
 /obj/machinery/power/apc{
-	dir = 8;
 	name = "west bump";
+	dir = 8;
 	pixel_x = -24
 	},
 /obj/structure/cable/green{
@@ -9228,9 +9222,9 @@
 	},
 /obj/effect/map_helper/airlock/door/int_door,
 /obj/machinery/door/airlock/glass_external{
+	name = "Starboard Bow Inner Airlock";
 	icon_state = "door_locked";
-	locked = 1;
-	name = "Starboard Bow Inner Airlock"
+	locked = 1
 	},
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/reinforced,
@@ -9281,9 +9275,9 @@
 /area/expoutpost/gateway)
 "hPN" = (
 /obj/machinery/door/blast/radproof{
+	name = "Core Shroud";
 	dir = 4;
-	id = "Aeg_CoreShroud";
-	name = "Core Shroud"
+	id = "Aeg_CoreShroud"
 	},
 /obj/structure/window/phoronreinforced{
 	dir = 4
@@ -9303,8 +9297,8 @@
 	icon_state = "0-4"
 	},
 /obj/machinery/power/apc{
-	dir = 1;
 	name = "north bump";
+	dir = 1;
 	pixel_y = 24
 	},
 /turf/simulated/floor,
@@ -9358,8 +9352,8 @@
 /area/expoutpost/janitorial)
 "hTs" = (
 /obj/item/radio/intercom{
-	dir = 8;
 	name = "Station Intercom (General)";
+	dir = 8;
 	pixel_x = -21
 	},
 /obj/effect/floor_decal/borderfloorblack{
@@ -9375,14 +9369,14 @@
 	icon_state = "1-4"
 	},
 /obj/machinery/atmospherics/unary/outlet_injector{
+	name = "Coolant Injector";
 	dir = 1;
+	pixel_y = 1;
 	frequency = 1438;
 	id = "aegrust_cooling_in";
-	name = "Coolant Injector";
-	pixel_y = 1;
+	volume_rate = 700;
 	power_rating = 30000;
-	use_power = 1;
-	volume_rate = 700
+	use_power = 1
 	},
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
@@ -9426,8 +9420,8 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/disposalpipe/segment{
-	dir = 4;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
 /area/expoutpost/kitchen)
@@ -9436,8 +9430,8 @@
 	dir = 4
 	},
 /obj/item/radio/intercom{
-	dir = 4;
 	name = "Station Intercom (General)";
+	dir = 4;
 	pixel_x = 21
 	},
 /turf/simulated/floor/tiled/milspec/raised,
@@ -9450,9 +9444,9 @@
 	dir = 8
 	},
 /obj/machinery/door/blast/regular/open{
-	id = "stargazer_blast";
+	name = "window blast shield";
 	layer = 2.5;
-	name = "window blast shield"
+	id = "stargazer_blast"
 	},
 /turf/simulated/floor,
 /area/shuttle/baby_mammoth)
@@ -9466,8 +9460,8 @@
 	},
 /obj/structure/window/reinforced/survival_pod,
 /obj/structure/grille/rustic{
-	health = 25;
-	name = "reinforced grille"
+	name = "reinforced grille";
+	health = 25
 	},
 /turf/simulated/floor,
 /area/shuttle/echidna)
@@ -9536,10 +9530,10 @@
 	dir = 1
 	},
 /obj/machinery/button/remote/blast_door{
-	dir = 8;
-	id = "aeg_botany_blastdoor";
 	name = "Botany Blast Doors";
-	pixel_x = 28
+	dir = 8;
+	pixel_x = 28;
+	id = "aeg_botany_blastdoor"
 	},
 /turf/simulated/floor/grass2,
 /area/expoutpost/botany)
@@ -9706,8 +9700,8 @@
 	icon_state = "2-4"
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 4;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/expoutpost/staginghangar)
@@ -9827,8 +9821,8 @@
 	dir = 4
 	},
 /obj/machinery/conveyor_switch/oneway{
-	id = "aegis_ore_conveyor";
-	name = "Ore Processing conveyor"
+	name = "Ore Processing conveyor";
+	id = "aegis_ore_conveyor"
 	},
 /turf/simulated/floor/tiled,
 /area/expoutpost/miningfoyer)
@@ -9855,6 +9849,11 @@
 /turf/simulated/floor/tiled/milspec,
 /area/shuttle/echidna)
 "ipN" = (
+/mob/living/simple_mob/animal/sif/glitterfly{
+	name = "Lomp";
+	desc = "A large, shiny butterfly! The explorer who caught it refused to change the name after learning it was not a moth.";
+	makes_dirt = 0
+	},
 /obj/structure/disposalpipe/trunk{
 	dir = 1
 	},
@@ -9863,11 +9862,6 @@
 	pixel_y = -35
 	},
 /obj/structure/dogbed,
-/mob/living/simple_mob/animal/sif/glitterfly{
-	desc = "A large, shiny butterfly! The explorer who caught it refused to change the name after learning it was not a moth.";
-	makes_dirt = 0;
-	name = "Lomp"
-	},
 /turf/simulated/floor/carpet,
 /area/expoutpost/pathfinderroom)
 "ipO" = (
@@ -10068,10 +10062,10 @@
 	dir = 1
 	},
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1380;
-	id_tag = "echidna_dock";
 	name = "shuttle bay controller";
-	pixel_x = -29
+	pixel_x = -29;
+	frequency = 1380;
+	id_tag = "echidna_dock"
 	},
 /turf/simulated/floor/tiled,
 /area/expoutpost/hangarsix)
@@ -10100,9 +10094,9 @@
 "ixK" = (
 /obj/machinery/atmospherics/omni/atmos_filter{
 	name = "CO2 Filter";
-	tag_east = 2;
 	tag_north = null;
 	tag_south = 5;
+	tag_east = 2;
 	tag_west = 1
 	},
 /turf/simulated/floor,
@@ -10195,8 +10189,8 @@
 /obj/effect/catwalk_plated/techfloor,
 /obj/machinery/atmospherics/pipe/manifold/hidden/yellow,
 /obj/structure/disposalpipe/segment{
-	dir = 8;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 8
 	},
 /turf/simulated/floor,
 /area/expoutpost/uppersternhallway)
@@ -10221,8 +10215,8 @@
 	},
 /obj/effect/catwalk_plated/techfloor,
 /obj/structure/disposalpipe/segment{
-	dir = 8;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 8
 	},
 /turf/simulated/floor,
 /area/expoutpost/slingcarrierdock)
@@ -10274,9 +10268,9 @@
 /area/expoutpost/staginghangar)
 "iIB" = (
 /obj/machinery/door/blast/radproof{
+	name = "Emergency Blast Door";
 	dir = 8;
-	id = "aeg_enginevent_stagetwo";
-	name = "Emergency Blast Door"
+	id = "aeg_enginevent_stagetwo"
 	},
 /turf/simulated/floor,
 /area/expoutpost/reactorroom)
@@ -10508,8 +10502,8 @@
 	dir = 4
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 1;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 1
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/expoutpost/restrooms)
@@ -10547,8 +10541,7 @@
 "iUL" = (
 /obj/structure/table/rack/shelf,
 /obj/structure/window/reinforced{
-	dir = 4;
-	health = 1e+006
+	dir = 4
 	},
 /obj/machinery/door/window{
 	dir = 8
@@ -10666,8 +10659,8 @@
 	dir = 6
 	},
 /obj/item/radio/intercom{
-	dir = 4;
 	name = "Station Intercom (General)";
+	dir = 4;
 	pixel_x = 21
 	},
 /turf/simulated/floor/tiled/dark,
@@ -10687,8 +10680,8 @@
 	dir = 9
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 8;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 8
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/expoutpost/staginghangar)
@@ -10743,8 +10736,8 @@
 /area/expoutpost/explobriefroom)
 "jdu" = (
 /obj/machinery/computer/shuttle_control/web/shuttle3{
-	my_doors = list("expshuttle3_door_L"="Port Cargo","shuttle3_outer"="Airlock Outer","shuttle3_inner"="Airlock Inner","expshuttle3_door_cargo"="Cargo Hatch");
-	my_sensors = list("shuttle3sens_exp"="Exterior Environment","shuttle3sens_exp_int"="Cargo Area","shuttle3sens_exp_psg"="Passenger Area")
+	my_doors = list(expshuttle3_door_L="Port Cargo", shuttle3_outer="Airlock Outer", shuttle3_inner="Airlock Inner", expshuttle3_door_cargo="Cargo Hatch");
+	my_sensors = list(shuttle3sens_exp="Exterior Environment", shuttle3sens_exp_int="Cargo Area", shuttle3sens_exp_psg="Passenger Area")
 	},
 /turf/simulated/shuttle/floor/black,
 /area/shuttle/shuttle3/start)
@@ -10858,9 +10851,9 @@
 /obj/effect/floor_decal/industrial/warning/cee,
 /obj/effect/map_helper/airlock/door/int_door,
 /obj/machinery/door/airlock/glass_external{
+	name = "Port Bow Outer Airlock";
 	icon_state = "door_locked";
-	locked = 1;
-	name = "Port Bow Outer Airlock"
+	locked = 1
 	},
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/reinforced,
@@ -10905,8 +10898,8 @@
 /area/expoutpost/portuppermaint)
 "jlz" = (
 /obj/machinery/atmospherics/portables_connector{
-	dir = 4;
-	name = "Fuel Into Main"
+	name = "Fuel Into Main";
+	dir = 4
 	},
 /obj/machinery/portable_atmospherics/canister/air,
 /turf/simulated/floor,
@@ -10941,9 +10934,9 @@
 /area/expoutpost/washroom)
 "jmy" = (
 /obj/machinery/power/apc/hyper{
-	coverlocked = 0;
+	pixel_y = -24;
 	locked = 0;
-	pixel_y = -24
+	coverlocked = 0
 	},
 /obj/structure/cable/green{
 	icon_state = "0-4"
@@ -10960,12 +10953,12 @@
 	},
 /obj/structure/window/reinforced/survival_pod,
 /obj/structure/grille/rustic{
-	health = 25;
-	name = "reinforced grille"
+	name = "reinforced grille";
+	health = 25
 	},
 /obj/machinery/door/blast/regular/open{
-	id = "stargazer_blast";
-	name = "window blast shield"
+	name = "window blast shield";
+	id = "stargazer_blast"
 	},
 /turf/simulated/floor,
 /area/shuttle/stargazer)
@@ -11039,10 +11032,10 @@
 /area/expoutpost/starsternairlock)
 "jpQ" = (
 /obj/machinery/button/remote/airlock{
-	id = "aeg_pubshower_bolt";
 	name = "Door Bolt";
 	pixel_x = 8;
-	pixel_y = 24
+	pixel_y = 24;
+	id = "aeg_pubshower_bolt"
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/expoutpost/washroom)
@@ -11211,8 +11204,8 @@
 /area/expoutpost/commanderroom)
 "jwx" = (
 /obj/item/radio/intercom{
-	dir = 8;
 	name = "Station Intercom (General)";
+	dir = 8;
 	pixel_x = -21
 	},
 /turf/simulated/floor/tiled,
@@ -11330,8 +11323,8 @@
 	dir = 1
 	},
 /obj/item/radio/intercom{
-	dir = 1;
 	name = "Station Intercom (General)";
+	dir = 1;
 	pixel_y = 21
 	},
 /turf/simulated/floor/tiled,
@@ -11378,8 +11371,8 @@
 	dir = 9
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 8;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 8
 	},
 /obj/effect/catwalk_plated/techfloor,
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
@@ -11411,8 +11404,8 @@
 	dir = 4
 	},
 /obj/item/radio/intercom{
-	dir = 4;
 	name = "Station Intercom (General)";
+	dir = 4;
 	pixel_x = 21
 	},
 /turf/simulated/floor/tiled/dark,
@@ -11490,12 +11483,12 @@
 /area/expoutpost/starsciencemaint)
 "jHX" = (
 /obj/machinery/button/remote/airlock{
-	desiredstate = 1;
-	dir = 8;
-	id = "stargazer_hatch";
 	name = "Rear Hatch Control";
+	dir = 8;
 	pixel_x = 26;
+	id = "stargazer_hatch";
 	req_access = null;
+	desiredstate = 1;
 	specialfunctions = 4
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/yellow,
@@ -11506,9 +11499,9 @@
 /area/shuttle/stargazer)
 "jIb" = (
 /obj/machinery/power/quantumpad{
+	name = "TO - BRIDGE";
 	map_pad_id = "aeg_bridge_padin";
-	map_pad_link_id = "aeg_bridge_padout";
-	name = "TO - BRIDGE"
+	map_pad_link_id = "aeg_bridge_padout"
 	},
 /obj/structure/cable/green{
 	icon_state = "0-4"
@@ -11518,8 +11511,8 @@
 "jIo" = (
 /obj/structure/catwalk,
 /obj/item/radio/intercom{
-	dir = 4;
 	name = "Station Intercom (General)";
+	dir = 4;
 	pixel_x = 21
 	},
 /turf/simulated/floor,
@@ -11529,8 +11522,8 @@
 	dir = 1
 	},
 /obj/machinery/power/apc{
-	dir = 1;
 	name = "north bump";
+	dir = 1;
 	pixel_y = 24
 	},
 /obj/structure/cable/green{
@@ -11573,8 +11566,8 @@
 /area/expoutpost/bar)
 "jJO" = (
 /obj/machinery/atmospherics/portables_connector{
-	dir = 4;
-	name = "Fuel Into Main"
+	name = "Fuel Into Main";
+	dir = 4
 	},
 /obj/machinery/portable_atmospherics/canister/phoron,
 /turf/simulated/floor,
@@ -11663,8 +11656,8 @@
 	icon_state = "4-8"
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 1;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 1
 	},
 /obj/structure/cable/green{
 	icon_state = "2-4"
@@ -11773,8 +11766,8 @@
 	dir = 4
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 1;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/expoutpost/miningfoyer)
@@ -11801,8 +11794,8 @@
 /obj/effect/map_helper/airlock/sensor/chamber_sensor,
 /obj/machinery/airlock_sensor{
 	dir = 4;
-	id_tag = null;
-	pixel_x = -27
+	pixel_x = -27;
+	id_tag = null
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden{
 	dir = 8
@@ -11890,8 +11883,8 @@
 	icon_state = "2-8"
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 2;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 2
 	},
 /turf/simulated/floor/tiled/white,
 /area/expoutpost/medicalbay)
@@ -11924,8 +11917,8 @@
 /area/expoutpost/gatewayeva)
 "kbb" = (
 /obj/structure/disposalpipe/segment{
-	dir = 4;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 4
 	},
 /turf/simulated/floor/carpet,
 /area/expoutpost/suite2)
@@ -11985,16 +11978,16 @@
 /obj/machinery/door/firedoor/glass,
 /obj/effect/catwalk_plated/techfloor,
 /obj/machinery/door/airlock/silver{
-	id_tag = "aeg_suitetwo_bolt";
-	name = "Suite Two"
+	name = "Suite Two";
+	id_tag = "aeg_suitetwo_bolt"
 	},
 /turf/simulated/floor,
 /area/expoutpost/suite2)
 "kdc" = (
 /obj/machinery/door/firedoor/multi_tile/glass,
 /obj/machinery/door/airlock/multi_tile/glass{
-	dir = 8;
-	name = "Hangar - Mammoth"
+	name = "Hangar - Mammoth";
+	dir = 8
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/expoutpost/hangartwo)
@@ -12060,8 +12053,8 @@
 /area/expoutpost/portlowermaint)
 "kic" = (
 /obj/machinery/power/apc{
-	dir = 8;
 	name = "west bump";
+	dir = 8;
 	pixel_x = -24
 	},
 /obj/structure/cable/green{
@@ -12142,8 +12135,8 @@
 	dir = 1
 	},
 /obj/machinery/door/airlock/multi_tile/glass{
-	dir = 1;
 	name = "Joint Gateway Hub";
+	dir = 1;
 	req_one_access = list(1,5,43,67)
 	},
 /turf/simulated/floor,
@@ -12157,9 +12150,9 @@
 	},
 /obj/effect/map_helper/airlock/door/ext_door,
 /obj/machinery/door/airlock/glass_external{
+	name = "Port Bow Outer Airlock";
 	icon_state = "door_locked";
-	locked = 1;
-	name = "Port Bow Outer Airlock"
+	locked = 1
 	},
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/reinforced,
@@ -12214,8 +12207,8 @@
 /area/expoutpost/lowersternhallway)
 "kpT" = (
 /obj/item/radio/intercom{
-	dir = 4;
 	name = "Station Intercom (General)";
+	dir = 4;
 	pixel_x = 21
 	},
 /turf/simulated/floor/carpet,
@@ -12458,8 +12451,8 @@
 /area/expoutpost/staginghangar)
 "kCt" = (
 /obj/machinery/power/apc{
-	dir = 1;
 	name = "north bump";
+	dir = 1;
 	pixel_y = 24
 	},
 /obj/effect/floor_decal/borderfloorwhite/corner{
@@ -12634,8 +12627,8 @@
 	dir = 1
 	},
 /obj/item/radio/intercom{
-	dir = 1;
 	name = "Station Intercom (General)";
+	dir = 1;
 	pixel_y = 21
 	},
 /turf/simulated/floor/tiled/dark,
@@ -12668,8 +12661,8 @@
 	dir = 10
 	},
 /obj/item/radio/intercom{
-	dir = 8;
 	name = "Station Intercom (General)";
+	dir = 8;
 	pixel_x = -21
 	},
 /turf/simulated/floor/tiled/dark,
@@ -12745,8 +12738,8 @@
 /area/expoutpost/portfuelstorage)
 "kQv" = (
 /obj/machinery/power/apc{
-	dir = 1;
 	name = "north bump";
+	dir = 1;
 	pixel_y = 24
 	},
 /obj/structure/cable/blue{
@@ -12882,8 +12875,8 @@
 	},
 /obj/structure/window/reinforced/survival_pod,
 /obj/structure/grille/rustic{
-	health = 25;
-	name = "reinforced grille"
+	name = "reinforced grille";
+	health = 25
 	},
 /turf/simulated/floor,
 /area/shuttle/ursula)
@@ -12933,9 +12926,9 @@
 /area/expoutpost/staginghangar)
 "kYS" = (
 /obj/machinery/power/quantumpad{
+	name = "Hangar Q-Pad";
 	map_pad_id = "aeg_hangar_padout";
-	map_pad_link_id = "aeg_hangar_padin";
-	name = "Hangar Q-Pad"
+	map_pad_link_id = "aeg_hangar_padin"
 	},
 /obj/structure/cable/green,
 /obj/structure/cable/green{
@@ -12951,8 +12944,8 @@
 	dir = 4
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 8;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 8
 	},
 /obj/machinery/light{
 	dir = 4
@@ -13007,8 +13000,8 @@
 	dir = 5
 	},
 /obj/machinery/power/apc{
-	dir = 1;
 	name = "north bump";
+	dir = 1;
 	pixel_y = 24
 	},
 /obj/structure/cable/green{
@@ -13019,12 +13012,12 @@
 "lcw" = (
 /obj/machinery/computer/ship/sensors,
 /obj/machinery/button/remote/airlock{
-	desiredstate = 1;
-	dir = 8;
-	id = "expshuttle4_door_cargo";
 	name = "Rear Hatch Control";
+	dir = 8;
 	pixel_x = 26;
+	id = "expshuttle4_door_cargo";
 	req_access = list(67);
+	desiredstate = 1;
 	specialfunctions = 4
 	},
 /turf/simulated/floor/tiled/milspec,
@@ -13032,8 +13025,8 @@
 "lcN" = (
 /obj/machinery/portable_atmospherics/canister/phoron,
 /obj/machinery/atmospherics/portables_connector{
-	dir = 4;
-	name = "Fuel Into Main"
+	name = "Fuel Into Main";
+	dir = 4
 	},
 /turf/simulated/floor,
 /area/shuttle/needle)
@@ -13056,10 +13049,10 @@
 	dir = 1
 	},
 /obj/machinery/button/remote/airlock{
-	dir = 1;
-	id = "aeg_toilet2_bolt";
 	name = "Door Bolt";
+	dir = 1;
 	pixel_y = -24;
+	id = "aeg_toilet2_bolt";
 	specialfunctions = 4
 	},
 /turf/simulated/floor/tiled/freezer,
@@ -13069,15 +13062,15 @@
 /obj/effect/floor_decal/corner/green/border,
 /obj/machinery/light,
 /obj/structure/disposalpipe/segment{
-	dir = 8;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 8
 	},
 /turf/simulated/floor/tiled,
 /area/expoutpost/gatewayeva)
 "leU" = (
 /obj/machinery/door/airlock{
-	id_tag = "aeg_toilet1_bolt";
-	name = "Unit 1"
+	name = "Unit 1";
+	id_tag = "aeg_toilet1_bolt"
 	},
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/tiled/freezer,
@@ -13223,8 +13216,8 @@
 	dir = 1
 	},
 /obj/item/radio/intercom{
-	dir = 1;
 	name = "Station Intercom (General)";
+	dir = 1;
 	pixel_y = 21
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -13324,13 +13317,13 @@
 	dir = 9
 	},
 /obj/machinery/embedded_controller/radio/airlock/docking_port{
+	pixel_y = 26;
 	frequency = 1380;
 	id_tag = "shuttle3_shuttle";
-	pixel_y = 26;
-	tag_airpump = "shuttle3_pump";
-	tag_chamber_sensor = "shuttle3_sensor";
 	tag_exterior_door = "shuttle3_outer";
-	tag_interior_door = "shuttle3_inner"
+	tag_interior_door = "shuttle3_inner";
+	tag_airpump = "shuttle3_pump";
+	tag_chamber_sensor = "shuttle3_sensor"
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	frequency = 1380;
@@ -13615,8 +13608,8 @@
 	icon_state = "1-4"
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 1;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
 	dir = 5
@@ -13681,8 +13674,8 @@
 	dir = 8
 	},
 /obj/item/radio/intercom{
-	dir = 1;
 	name = "Station Intercom (General)";
+	dir = 1;
 	pixel_y = 21
 	},
 /turf/simulated/floor/tiled/freezer,
@@ -13692,13 +13685,13 @@
 	dir = 9
 	},
 /obj/machinery/embedded_controller/radio/airlock/docking_port{
+	pixel_y = 26;
 	frequency = 1380;
 	id_tag = "stargazer";
-	pixel_y = 26;
-	tag_airpump = "stargazer_pump";
-	tag_chamber_sensor = "stargazer_sensor";
 	tag_exterior_door = "stargazer_outer";
-	tag_interior_door = "stargazer_inner"
+	tag_interior_door = "stargazer_inner";
+	tag_airpump = "stargazer_pump";
+	tag_chamber_sensor = "stargazer_sensor"
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	frequency = 1380;
@@ -13780,10 +13773,10 @@
 "lGm" = (
 /obj/machinery/computer/ship/sensors,
 /obj/machinery/button/remote/blast_door{
-	dir = 4;
-	id = "stargazer_blast";
 	name = "remote blast shielding control";
-	pixel_x = 27
+	dir = 4;
+	pixel_x = 27;
+	id = "stargazer_blast"
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/shuttle/stargazer)
@@ -13908,9 +13901,9 @@
 /area/expoutpost/gateway)
 "lKV" = (
 /obj/machinery/power/quantumpad{
+	name = "TO - MEDBAY";
 	map_pad_id = "aeg_medbay_padin";
-	map_pad_link_id = "aeg_medbay_padout";
-	name = "TO - MEDBAY"
+	map_pad_link_id = "aeg_medbay_padout"
 	},
 /obj/structure/cable/green{
 	icon_state = "0-8"
@@ -13947,8 +13940,8 @@
 /area/expoutpost/staginghangar)
 "lMq" = (
 /obj/structure/disposalpipe/segment{
-	dir = 1;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
@@ -13972,9 +13965,9 @@
 	},
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/blast/shutters{
+	name = "Bar Shutter";
 	dir = 1;
-	id = "aeg_bar_shutter";
-	name = "Bar Shutter"
+	id = "aeg_bar_shutter"
 	},
 /turf/simulated/floor/tiled/white,
 /area/expoutpost/bar)
@@ -14005,10 +13998,10 @@
 /obj/effect/floor_decal/industrial/warning/cee,
 /obj/machinery/light,
 /obj/machinery/airlock_sensor{
-	frequency = 1380;
-	id_tag = "needle_sensor";
 	pixel_x = -28;
-	pixel_y = -1
+	pixel_y = -1;
+	frequency = 1380;
+	id_tag = "needle_sensor"
 	},
 /turf/simulated/floor,
 /area/shuttle/needle)
@@ -14027,8 +14020,8 @@
 "lOK" = (
 /obj/machinery/portable_atmospherics/canister/phoron,
 /obj/machinery/atmospherics/portables_connector{
-	dir = 4;
-	name = "Fuel Into Main"
+	name = "Fuel Into Main";
+	dir = 4
 	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
@@ -14110,13 +14103,13 @@
 	dir = 9
 	},
 /obj/machinery/embedded_controller/radio/airlock/docking_port{
+	pixel_y = 26;
 	frequency = 1380;
 	id_tag = "baby_mammoth";
-	pixel_y = 26;
-	tag_airpump = "baby_mammoth_pump";
-	tag_chamber_sensor = "baby_mammoth_sensor";
 	tag_exterior_door = "baby_mammoth_outer";
-	tag_interior_door = "baby_mammoth_inner"
+	tag_interior_door = "baby_mammoth_inner";
+	tag_airpump = "baby_mammoth_pump";
+	tag_chamber_sensor = "baby_mammoth_sensor"
 	},
 /obj/structure/closet/walllocker/emerglocker{
 	pixel_x = -25;
@@ -14147,8 +14140,8 @@
 	},
 /obj/structure/catwalk,
 /obj/item/radio/intercom{
-	dir = 1;
 	name = "Station Intercom (General)";
+	dir = 1;
 	pixel_y = 21
 	},
 /turf/simulated/floor/reinforced,
@@ -14234,8 +14227,8 @@
 	icon_state = "0-4"
 	},
 /obj/machinery/power/apc{
-	dir = 1;
 	name = "north bump";
+	dir = 1;
 	pixel_y = 24
 	},
 /obj/machinery/light_switch{
@@ -14256,8 +14249,8 @@
 	icon_state = "0-8"
 	},
 /obj/machinery/power/apc{
-	dir = 1;
 	name = "north bump";
+	dir = 1;
 	pixel_y = 24
 	},
 /turf/simulated/floor,
@@ -14308,9 +14301,9 @@
 "lWC" = (
 /obj/effect/wingrille_spawn/reinforced_phoron,
 /obj/machinery/door/blast/radproof{
+	name = "Core Shroud";
 	dir = 4;
-	id = "Aeg_CoreShroud";
-	name = "Core Shroud"
+	id = "Aeg_CoreShroud"
 	},
 /turf/simulated/floor/reinforced,
 /area/expoutpost/reactorroom)
@@ -14360,8 +14353,8 @@
 /area/expoutpost/staginghangar)
 "lZt" = (
 /obj/machinery/power/smes/buildable{
-	input_attempt = 1;
-	name = "AI Core SMES"
+	name = "AI Core SMES";
+	input_attempt = 1
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/cable/blue{
@@ -14383,9 +14376,9 @@
 	},
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/blast/shutters{
+	name = "Bar Shutter";
 	dir = 8;
-	id = "aeg_bar_shutter";
-	name = "Bar Shutter"
+	id = "aeg_bar_shutter"
 	},
 /turf/simulated/floor/tiled/white,
 /area/expoutpost/bar)
@@ -14502,8 +14495,8 @@
 "mdP" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/atmospherics/binary/circulator{
-	anchored = 1;
-	dir = 1
+	dir = 1;
+	anchored = 1
 	},
 /turf/simulated/floor,
 /area/expoutpost/reactorroom)
@@ -14517,12 +14510,12 @@
 	},
 /obj/structure/window/reinforced/survival_pod,
 /obj/structure/grille/rustic{
-	health = 25;
-	name = "reinforced grille"
+	name = "reinforced grille";
+	health = 25
 	},
 /obj/machinery/door/blast/regular/open{
-	id = "stargazer_blast";
-	name = "window blast shield"
+	name = "window blast shield";
+	id = "stargazer_blast"
 	},
 /turf/simulated/floor,
 /area/shuttle/baby_mammoth)
@@ -14594,9 +14587,9 @@
 /area/expoutpost/uppersternhallway)
 "mgQ" = (
 /obj/machinery/power/smes/buildable/power_shuttle{
-	charge = 2e+006;
-	input_attempt = 1;
-	inputting = 1
+	charge = 2e+06;
+	inputting = 1;
+	input_attempt = 1
 	},
 /obj/structure/cable/green,
 /turf/simulated/floor/tiled/milspec,
@@ -14808,16 +14801,16 @@
 /area/expoutpost/portbowhallway)
 "mqo" = (
 /obj/machinery/door/airlock/glass_external{
+	name = "Port Stern Inner Airlock";
 	icon_state = "door_locked";
-	locked = 1;
-	name = "Port Stern Inner Airlock"
+	locked = 1
 	},
 /obj/machinery/access_button{
-	dir = 1;
-	master_tag = null;
 	name = "interior access button";
+	dir = 1;
 	pixel_x = 27;
-	pixel_y = 7
+	pixel_y = 7;
+	master_tag = null
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/effect/floor_decal/industrial/warning{
@@ -14840,8 +14833,8 @@
 	pixel_y = -35
 	},
 /obj/machinery/door/window/southright{
-	dir = 8;
 	name = "Bar";
+	dir = 8;
 	req_access = list(25)
 	},
 /obj/machinery/door/firedoor/glass,
@@ -14876,8 +14869,8 @@
 /obj/effect/catwalk_plated/techfloor,
 /obj/machinery/atmospherics/pipe/manifold/hidden/yellow,
 /obj/structure/disposalpipe/junction{
-	dir = 4;
-	icon_state = "pipe-j2"
+	icon_state = "pipe-j2";
+	dir = 4
 	},
 /turf/simulated/floor,
 /area/expoutpost/lowersternhallway)
@@ -14924,10 +14917,10 @@
 	dir = 4
 	},
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1380;
-	id_tag = "exphangar_1";
 	name = "shuttle bay controller";
 	pixel_x = 24;
+	frequency = 1380;
+	id_tag = "exphangar_1";
 	tag_door = "exphangar_1_door"
 	},
 /turf/simulated/floor/tiled,
@@ -15076,8 +15069,8 @@
 /area/expoutpost/secarmory)
 "mCa" = (
 /obj/item/radio/intercom{
-	dir = 4;
 	name = "Station Intercom (General)";
+	dir = 4;
 	pixel_x = 21
 	},
 /turf/simulated/floor/tiled/freezer,
@@ -15126,8 +15119,8 @@
 	dir = 8
 	},
 /obj/item/radio/intercom{
-	dir = 4;
 	name = "Station Intercom (General)";
+	dir = 4;
 	pixel_x = 21
 	},
 /turf/simulated/floor/tiled/dark,
@@ -15204,17 +15197,17 @@
 	dir = 4
 	},
 /obj/machinery/access_button{
-	dir = 1;
 	name = "exterior access button";
+	dir = 1;
 	pixel_x = 8;
 	pixel_y = -22
 	},
 /obj/effect/map_helper/airlock/door/ext_door,
 /obj/effect/map_helper/airlock/button/ext_button,
 /obj/machinery/door/airlock/glass_external{
+	name = "Starboard Bow Outer Airlock";
 	icon_state = "door_locked";
-	locked = 1;
-	name = "Starboard Bow Outer Airlock"
+	locked = 1
 	},
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/reinforced,
@@ -15232,16 +15225,16 @@
 "mIK" = (
 /obj/machinery/door/airlock/multi_tile/metal{
 	icon_state = "door_locked";
-	id_tag = "expshuttle3_door_cargo";
-	locked = 1
+	locked = 1;
+	id_tag = "expshuttle3_door_cargo"
 	},
 /obj/machinery/button/remote/airlock{
-	desiredstate = 1;
-	dir = 4;
-	id = "expshuttle3_door_cargo";
 	name = "Rear Hatch Control";
+	dir = 4;
 	pixel_x = -26;
+	id = "expshuttle3_door_cargo";
 	req_access = list(67);
+	desiredstate = 1;
 	specialfunctions = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/visible{
@@ -15269,9 +15262,9 @@
 /area/expoutpost/portfuelstorage)
 "mKl" = (
 /obj/machinery/door/airlock/external{
+	name = "Starboard Stern Outer Airlock";
 	icon_state = "door_locked";
-	locked = 1;
-	name = "Starboard Stern Outer Airlock"
+	locked = 1
 	},
 /obj/machinery/access_button{
 	dir = 4;
@@ -15391,17 +15384,17 @@
 /area/expoutpost/slingcarrierdock)
 "mPc" = (
 /obj/machinery/door/airlock/voidcraft/vertical{
+	name = "Internal Access";
 	frequency = 1380;
-	id_tag = "ursula_inner";
 	locked = 1;
-	name = "Internal Access"
+	id_tag = "ursula_inner"
 	},
 /obj/machinery/access_button{
-	command = "cycle_interior";
-	frequency = 1380;
-	master_tag = "ursula";
 	name = "interior access button";
-	pixel_y = 26
+	pixel_y = 26;
+	frequency = 1380;
+	command = "cycle_interior";
+	master_tag = "ursula"
 	},
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -15635,8 +15628,8 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/disposalpipe/segment{
-	dir = 1;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 4
@@ -15719,9 +15712,9 @@
 /area/expoutpost/pathfinderroom)
 "ncY" = (
 /obj/machinery/power/quantumpad{
+	name = "Bridge Q-Pad";
 	map_pad_id = "aeg_bridge_padout";
-	map_pad_link_id = "aeg_bridge_padin";
-	name = "Bridge Q-Pad"
+	map_pad_link_id = "aeg_bridge_padin"
 	},
 /obj/structure/sign/department/bridge{
 	pixel_y = 32
@@ -15739,8 +15732,8 @@
 	icon_state = "0-4"
 	},
 /obj/machinery/power/apc{
-	dir = 8;
 	name = "west bump";
+	dir = 8;
 	pixel_x = -24
 	},
 /obj/structure/catwalk,
@@ -15805,8 +15798,8 @@
 /area/expoutpost/engoffice)
 "neW" = (
 /obj/machinery/power/apc{
-	dir = 4;
 	name = "east bump";
+	dir = 4;
 	pixel_x = 24
 	},
 /obj/structure/cable/green{
@@ -15818,8 +15811,8 @@
 "ngg" = (
 /obj/machinery/portable_atmospherics/canister/air/airlock,
 /obj/machinery/atmospherics/portables_connector{
-	dir = 4;
-	name = "Fuel Into Main"
+	name = "Fuel Into Main";
+	dir = 4
 	},
 /obj/effect/floor_decal/industrial/outline,
 /turf/simulated/floor,
@@ -15876,8 +15869,8 @@
 	},
 /obj/effect/catwalk_plated/techfloor,
 /obj/structure/disposalpipe/junction{
-	dir = 2;
-	icon_state = "pipe-j2"
+	icon_state = "pipe-j2";
+	dir = 2
 	},
 /turf/simulated/floor,
 /area/expoutpost/civaccesshallway)
@@ -15894,13 +15887,13 @@
 /area/expoutpost/engstorage)
 "niW" = (
 /obj/machinery/door/airlock/voidcraft/vertical{
-	id_tag = "needle_hatch";
-	name = "shuttle side hatch"
+	name = "shuttle side hatch";
+	id_tag = "needle_hatch"
 	},
 /obj/machinery/button/remote/airlock{
-	id = "needle_hatch";
 	name = "Side Hatch Control";
 	pixel_y = -26;
+	id = "needle_hatch";
 	specialfunctions = 4
 	},
 /turf/simulated/floor,
@@ -15962,10 +15955,10 @@
 	dir = 8
 	},
 /obj/effect/shuttle_landmark{
-	base_area = /area/expoutpost/hangarsix;
-	base_turf = /turf/simulated/floor/reinforced;
-	landmark_tag = "echidna_dock";
 	name = "Echidna Dock";
+	landmark_tag = "echidna_dock";
+	base_turf = /turf/simulated/floor/reinforced;
+	base_area = /area/expoutpost/hangarsix;
 	docking_controller = "echidna_dock"
 	},
 /turf/simulated/floor,
@@ -15981,8 +15974,8 @@
 	dir = 8
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 4;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/expoutpost/miningfoyer)
@@ -15998,13 +15991,13 @@
 /area/shuttle/needle)
 "nlT" = (
 /obj/machinery/door/airlock/voidcraft/vertical{
-	id_tag = "ursula_hatch";
-	name = "shuttle side hatch"
+	name = "shuttle side hatch";
+	id_tag = "ursula_hatch"
 	},
 /obj/machinery/button/remote/airlock{
-	id = "ursula_hatch";
 	name = "Side Hatch Control";
 	pixel_y = -26;
+	id = "ursula_hatch";
 	specialfunctions = 4
 	},
 /turf/simulated/floor,
@@ -16037,8 +16030,8 @@
 	dir = 4
 	},
 /obj/structure/grille/rustic{
-	health = 25;
-	name = "reinforced grille"
+	name = "reinforced grille";
+	health = 25
 	},
 /turf/simulated/floor,
 /area/shuttle/ursula)
@@ -16047,8 +16040,8 @@
 	dir = 9
 	},
 /obj/machinery/power/apc{
-	dir = 1;
 	name = "north bump";
+	dir = 1;
 	pixel_y = 24
 	},
 /obj/structure/cable/green{
@@ -16189,10 +16182,10 @@
 	dir = 1
 	},
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1380;
-	id_tag = "stargazer_dock";
 	name = "shuttle bay controller";
-	pixel_x = -29
+	pixel_x = -29;
+	frequency = 1380;
+	id_tag = "stargazer_dock"
 	},
 /turf/simulated/floor/tiled,
 /area/expoutpost/hangarfour)
@@ -16221,8 +16214,8 @@
 "ntb" = (
 /obj/effect/floor_decal/industrial/warning,
 /obj/machinery/atmospherics/binary/pump{
-	dir = 4;
-	name = "Phoron to Connector"
+	name = "Phoron to Connector";
+	dir = 4
 	},
 /turf/simulated/floor/tiled/yellow,
 /area/shuttle/stargazer)
@@ -16250,10 +16243,10 @@
 	dir = 8
 	},
 /obj/machinery/button/remote/blast_door{
-	dir = 1;
-	id = "aeg_security_armory";
 	name = "Security Armory";
+	dir = 1;
 	pixel_y = -28;
+	id = "aeg_security_armory";
 	req_access = list(3)
 	},
 /turf/simulated/floor/tiled,
@@ -16292,9 +16285,9 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/door/airlock/voidcraft/vertical{
+	name = "External Access";
 	frequency = 1380;
-	id_tag = "echidna_inner";
-	name = "External Access"
+	id_tag = "echidna_inner"
 	},
 /turf/simulated/floor,
 /area/shuttle/echidna)
@@ -16326,23 +16319,23 @@
 /area/expoutpost/miningfoyer)
 "nwH" = (
 /obj/machinery/door/airlock/voidcraft/vertical{
+	name = "External Access";
 	frequency = 1380;
-	id_tag = "baby_mammoth_outer";
 	locked = 1;
-	name = "External Access"
+	id_tag = "baby_mammoth_outer"
 	},
 /obj/machinery/access_button{
-	command = "cycle_exterior";
-	frequency = 1380;
-	master_tag = "baby_mammoth";
 	name = "exterior access button";
-	pixel_y = 26
+	pixel_y = 26;
+	frequency = 1380;
+	command = "cycle_exterior";
+	master_tag = "baby_mammoth"
 	},
 /obj/machinery/door/blast/regular/open{
+	name = "window blast shield";
 	dir = 4;
-	id = "stargazer_blast";
 	layer = 2.5;
-	name = "window blast shield"
+	id = "stargazer_blast"
 	},
 /obj/structure/cable/blue{
 	icon_state = "4-8"
@@ -16352,8 +16345,8 @@
 "nwM" = (
 /obj/machinery/door/firedoor/multi_tile/glass,
 /obj/machinery/door/airlock/multi_tile/glass{
-	dir = 8;
-	name = "Breakroom"
+	name = "Breakroom";
+	dir = 8
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/expoutpost/breakroom)
@@ -16374,17 +16367,17 @@
 /area/expoutpost/midsternhallway)
 "nxV" = (
 /obj/machinery/access_button{
-	command = "cycle_exterior";
-	frequency = 1380;
-	master_tag = "echidna";
 	name = "exterior access button";
-	pixel_y = 26
+	pixel_y = 26;
+	frequency = 1380;
+	command = "cycle_exterior";
+	master_tag = "echidna"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow,
 /obj/machinery/door/airlock/voidcraft/vertical{
+	name = "External Access";
 	frequency = 1380;
-	id_tag = "echidna_outer";
-	name = "External Access"
+	id_tag = "echidna_outer"
 	},
 /turf/simulated/floor,
 /area/shuttle/echidna)
@@ -16477,8 +16470,8 @@
 /area/shuttle/needle)
 "nBd" = (
 /obj/machinery/power/apc{
-	dir = 8;
 	name = "west bump";
+	dir = 8;
 	pixel_x = -24
 	},
 /obj/structure/cable/green{
@@ -16549,11 +16542,11 @@
 	pixel_x = -32
 	},
 /obj/machinery/button/remote/blast_door{
-	dir = 4;
-	id = "aeg_securestorage_blastdoor";
 	name = "Secure Storage";
+	dir = 4;
 	pixel_x = -24;
 	pixel_y = 8;
+	id = "aeg_securestorage_blastdoor";
 	req_one_access = list(10,30)
 	},
 /turf/simulated/floor/tiled/dark,
@@ -16609,8 +16602,8 @@
 	dir = 10
 	},
 /obj/item/radio/intercom{
-	dir = 4;
 	name = "Station Intercom (General)";
+	dir = 4;
 	pixel_x = 21
 	},
 /turf/simulated/floor,
@@ -16630,12 +16623,12 @@
 /area/expoutpost/medbaylobby)
 "nFb" = (
 /obj/machinery/power/smes/buildable{
-	RCon_tag = "Reactor Primary - Aegis";
-	charge = 2e+006;
+	name = "Reactor SMES - Main";
+	charge = 2e+06;
 	cur_coils = 4;
+	RCon_tag = "Reactor Primary - Aegis";
 	input_attempt = 1;
 	input_level = 750000;
-	name = "Reactor SMES - Main";
 	output_level = 750000
 	},
 /obj/structure/cable/green,
@@ -16778,8 +16771,8 @@
 	icon_state = "0-2"
 	},
 /obj/machinery/power/apc{
-	dir = 1;
 	name = "north bump";
+	dir = 1;
 	pixel_y = 24
 	},
 /obj/structure/closet/l3closet/janitor,
@@ -16860,13 +16853,13 @@
 /area/expoutpost/reactorroom)
 "nLN" = (
 /obj/machinery/door/airlock/glass_external{
-	frequency = 1380;
-	icon_state = "door_locked";
-	id_tag = "exp_sling_outpost_door";
-	locked = 1;
 	name = "Carrier Sling Access";
-	req_access = list();
-	req_one_access = list(5,43,67)
+	icon_state = "door_locked";
+	frequency = 1380;
+	locked = 1;
+	id_tag = "exp_sling_outpost_door";
+	req_one_access = list(5,43,67);
+	req_access = list()
 	},
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/plating,
@@ -16885,8 +16878,8 @@
 /area/expoutpost/medicalbay)
 "nMs" = (
 /obj/machinery/door/airlock/multi_tile/metal/mait{
-	id_tag = "echidna_hatch";
-	name = "Rear Hatch"
+	name = "Rear Hatch";
+	id_tag = "echidna_hatch"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
 	dir = 8
@@ -16973,9 +16966,9 @@
 	icon_state = "0-8"
 	},
 /obj/machinery/power/quantumpad{
+	name = "TO - ENGINEERING";
 	map_pad_id = "aeg_engineering_padin";
-	map_pad_link_id = "aeg_engineering_padout";
-	name = "TO - ENGINEERING"
+	map_pad_link_id = "aeg_engineering_padout"
 	},
 /turf/simulated/floor/tiled/milspec/raised,
 /area/expoutpost/starqpadjunction)
@@ -17112,8 +17105,8 @@
 /area/expoutpost/starfuelstorage)
 "oao" = (
 /obj/machinery/power/apc{
-	dir = 8;
 	name = "west bump";
+	dir = 8;
 	pixel_x = -24
 	},
 /obj/structure/cable/green,
@@ -17136,10 +17129,10 @@
 	dir = 4
 	},
 /obj/effect/shuttle_landmark{
-	base_area = /area/expoutpost/hangartwo;
-	base_turf = /turf/simulated/floor/reinforced;
-	landmark_tag = "baby_mammoth_dock";
 	name = "Baby Mammoth Dock";
+	landmark_tag = "baby_mammoth_dock";
+	base_turf = /turf/simulated/floor/reinforced;
+	base_area = /area/expoutpost/hangartwo;
 	docking_controller = "baby_mammoth_dock"
 	},
 /obj/effect/floor_decal/industrial/warning{
@@ -17172,10 +17165,10 @@
 	dir = 4
 	},
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1380;
-	id_tag = "ursula_dock";
 	name = "shuttle bay controller";
-	pixel_x = 29
+	pixel_x = 29;
+	frequency = 1380;
+	id_tag = "ursula_dock"
 	},
 /turf/simulated/floor/tiled,
 /area/expoutpost/hangarthree)
@@ -17193,8 +17186,8 @@
 /area/expoutpost/cic)
 "ocH" = (
 /obj/machinery/power/apc{
-	dir = 4;
 	name = "east bump";
+	dir = 4;
 	pixel_x = 24
 	},
 /obj/effect/floor_decal/borderfloorblack{
@@ -17226,8 +17219,7 @@
 	dir = 8
 	},
 /obj/structure/window/reinforced{
-	dir = 4;
-	health = 1e+006
+	dir = 4
 	},
 /obj/structure/window/reinforced,
 /obj/effect/decal/warning_stripes,
@@ -17235,18 +17227,18 @@
 	dir = 1
 	},
 /obj/machinery/button/remote/blast_door{
-	dir = 1;
-	id = "aeg_enginevent_stagetwo";
 	name = "EMERGENCY Engine Vent Stage Two";
+	dir = 1;
 	pixel_x = 5;
-	pixel_y = -5
+	pixel_y = -5;
+	id = "aeg_enginevent_stagetwo"
 	},
 /obj/machinery/button/remote/blast_door{
-	dir = 1;
-	id = "aeg_enginevent_stageone";
 	name = "EMERGENCY Engine Vent Stage One";
+	dir = 1;
 	pixel_x = -5;
-	pixel_y = -5
+	pixel_y = -5;
+	id = "aeg_enginevent_stageone"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/expoutpost/reactorcr)
@@ -17259,8 +17251,8 @@
 /area/expoutpost/explodorm1)
 "odZ" = (
 /obj/machinery/power/apc{
-	dir = 4;
 	name = "east bump";
+	dir = 4;
 	pixel_x = 24
 	},
 /obj/effect/floor_decal/borderfloorblack{
@@ -17331,8 +17323,8 @@
 	dir = 4
 	},
 /obj/item/radio/intercom{
-	dir = 1;
 	name = "Station Intercom (General)";
+	dir = 1;
 	pixel_y = 21
 	},
 /turf/simulated/floor/tiled,
@@ -17374,8 +17366,8 @@
 	icon_state = "2-8"
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 4;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/expoutpost/cic)
@@ -17474,8 +17466,8 @@
 	dir = 4
 	},
 /obj/machinery/computer/shuttle_control/exploration{
-	dir = 4;
-	name = "Carrier Sling Control Console"
+	name = "Carrier Sling Control Console";
+	dir = 4
 	},
 /turf/simulated/floor/tiled/dark,
 /area/expoutpost/slingcarrierdock)
@@ -17517,8 +17509,8 @@
 /area/expoutpost/atmospherics)
 "ope" = (
 /obj/machinery/power/apc{
-	dir = 4;
 	name = "east bump";
+	dir = 4;
 	pixel_x = 24
 	},
 /obj/effect/floor_decal/borderfloorblack{
@@ -17642,11 +17634,11 @@
 	dir = 4
 	},
 /obj/effect/shuttle_landmark{
-	base_area = /area/expoutpost/hangarone;
-	base_turf = /turf/simulated/floor/reinforced;
-	docking_controller = "exphangar_1";
+	name = "Exploration Carrier Hangar One";
 	landmark_tag = "exphangar_1";
-	name = "Exploration Carrier Hangar One"
+	base_turf = /turf/simulated/floor/reinforced;
+	base_area = /area/expoutpost/hangarone;
+	docking_controller = "exphangar_1"
 	},
 /turf/simulated/shuttle/floor/black,
 /area/shuttle/shuttle3/start)
@@ -17690,8 +17682,8 @@
 /area/expoutpost/hangarsix)
 "oyF" = (
 /obj/machinery/atmospherics/omni/atmos_filter{
-	tag_east = 2;
 	tag_north = 5;
+	tag_east = 2;
 	tag_west = 1;
 	use_power = 0
 	},
@@ -17708,9 +17700,9 @@
 	icon_state = "0-4"
 	},
 /obj/machinery/power/quantumpad{
+	name = "TO - EXPLORATION";
 	map_pad_id = "aeg_explo_padin";
-	map_pad_link_id = "aeg_explo_padout";
-	name = "TO - EXPLORATION"
+	map_pad_link_id = "aeg_explo_padout"
 	},
 /turf/simulated/floor/tiled/milspec/raised,
 /area/expoutpost/portqpadjunction)
@@ -17803,16 +17795,15 @@
 "oCJ" = (
 /obj/structure/table/steel_reinforced,
 /obj/structure/window/reinforced{
-	dir = 4;
-	health = 1e+006
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/expoutpost/miningfoyer)
 "oDM" = (
 /obj/machinery/power/quantumpad{
+	name = "TO - HANGAR BAY";
 	map_pad_id = "aeg_hangar_padin";
-	map_pad_link_id = "aeg_hangar_padout";
-	name = "TO - HANGAR BAY"
+	map_pad_link_id = "aeg_hangar_padout"
 	},
 /obj/structure/cable/green{
 	icon_state = "0-8"
@@ -17858,12 +17849,12 @@
 /obj/machinery/mech_recharger,
 /obj/effect/floor_decal/industrial/warning/full,
 /obj/machinery/power/apc/hyper{
-	coverlocked = 0;
-	environ = 1;
+	pixel_y = -24;
+	locked = 0;
 	equipment = 1;
 	lighting = 1;
-	locked = 0;
-	pixel_y = -24
+	environ = 1;
+	coverlocked = 0
 	},
 /obj/structure/cable/green,
 /obj/structure/cable/green,
@@ -17890,9 +17881,9 @@
 /obj/item/stamp/denied,
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/blast/shutters{
+	name = "Security Checkpoint Shutters";
 	dir = 8;
-	id = "aeg_checkpoint_shutter";
-	name = "Security Checkpoint Shutters"
+	id = "aeg_checkpoint_shutter"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/expoutpost/secbowcheckpoint)
@@ -17935,12 +17926,12 @@
 "oGt" = (
 /obj/structure/flight_right,
 /obj/machinery/button/remote/airlock{
-	desiredstate = 1;
-	dir = 8;
-	id = "expshuttle3_door_cargo";
 	name = "Rear Hatch Control";
+	dir = 8;
 	pixel_x = 26;
+	id = "expshuttle3_door_cargo";
 	req_access = list(67);
+	desiredstate = 1;
 	specialfunctions = 4
 	},
 /turf/simulated/shuttle/floor/black,
@@ -17995,8 +17986,8 @@
 	icon_state = "2-4"
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 4;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 4
 	},
 /obj/effect/catwalk_plated/techfloor,
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
@@ -18147,8 +18138,7 @@
 /obj/structure/grille,
 /obj/machinery/door/firedoor/border_only,
 /obj/structure/window/reinforced{
-	dir = 4;
-	health = 1e+006
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/expoutpost/slingcarrierdock)
@@ -18181,8 +18171,7 @@
 	},
 /obj/structure/window/reinforced,
 /obj/structure/window/reinforced{
-	dir = 4;
-	health = 1e+006
+	dir = 4
 	},
 /turf/simulated/shuttle/plating,
 /area/shuttle/shuttle3/start)
@@ -18206,8 +18195,8 @@
 "oVi" = (
 /obj/machinery/airlock_sensor{
 	dir = 8;
-	id_tag = null;
-	pixel_x = 27
+	pixel_x = 27;
+	id_tag = null
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden{
 	dir = 4
@@ -18304,9 +18293,9 @@
 	req_access = list(1)
 	},
 /obj/machinery/door/blast/shutters{
+	name = "Security Checkpoint Shutters";
 	dir = 8;
-	id = "aeg_checkpoint_shutter";
-	name = "Security Checkpoint Shutters"
+	id = "aeg_checkpoint_shutter"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/expoutpost/secbowcheckpoint)
@@ -18315,8 +18304,7 @@
 	dir = 1
 	},
 /obj/structure/window/reinforced{
-	dir = 4;
-	health = 1e+006
+	dir = 4
 	},
 /obj/item/modular_computer/console/preset/engineering,
 /obj/effect/floor_decal/borderfloorblack{
@@ -18332,9 +18320,9 @@
 /obj/machinery/atmospherics/unary/vent_pump/high_volume,
 /obj/structure/catwalk,
 /obj/machinery/embedded_controller/radio/airlock/airlock_controller{
+	pixel_y = 24;
 	frequency = 1381;
-	id_tag = "aeg_portbow_airlock";
-	pixel_y = 24
+	id_tag = "aeg_portbow_airlock"
 	},
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
 /turf/simulated/floor,
@@ -18449,9 +18437,9 @@
 	amount = 50
 	},
 /obj/item/stack/material/glass{
-	amount = 50;
 	pixel_x = 3;
-	pixel_y = 3
+	pixel_y = 3;
+	amount = 50
 	},
 /obj/item/stack/cable_coil,
 /obj/item/stack/cable_coil,
@@ -18616,9 +18604,9 @@
 /area/expoutpost/medicalbay)
 "pom" = (
 /obj/machinery/power/quantumpad{
+	name = "Mining Q-Pad";
 	map_pad_id = "aeg_mining_padout";
-	map_pad_link_id = "aeg_mining_padin";
-	name = "Mining Q-Pad"
+	map_pad_link_id = "aeg_mining_padin"
 	},
 /obj/structure/cable/green{
 	icon_state = "0-8"
@@ -18646,8 +18634,8 @@
 "pqo" = (
 /obj/structure/catwalk,
 /obj/machinery/power/apc{
-	dir = 4;
 	name = "east bump";
+	dir = 4;
 	pixel_x = 24
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -18671,8 +18659,8 @@
 	},
 /obj/effect/catwalk_plated/dark,
 /obj/machinery/door/airlock/silver{
-	id_tag = "aeg_dormone_bolt";
-	name = "Dorm One"
+	name = "Dorm One";
+	id_tag = "aeg_dormone_bolt"
 	},
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor,
@@ -18747,8 +18735,8 @@
 	dir = 5
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 1;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 1
 	},
 /obj/effect/floor_decal/borderfloorwhite,
 /obj/effect/floor_decal/corner/paleblue/border,
@@ -18782,8 +18770,8 @@
 	dir = 8
 	},
 /obj/item/radio/intercom{
-	dir = 8;
 	name = "Station Intercom (General)";
+	dir = 8;
 	pixel_x = -21
 	},
 /turf/simulated/floor/tiled,
@@ -18835,9 +18823,9 @@
 	id_tag = "shuttle3_pump"
 	},
 /obj/machinery/airlock_sensor{
+	pixel_y = 28;
 	frequency = 1380;
-	id_tag = "shuttle3_sensor";
-	pixel_y = 28
+	id_tag = "shuttle3_sensor"
 	},
 /turf/simulated/shuttle/floor/black,
 /area/shuttle/shuttle3/start)
@@ -18902,8 +18890,8 @@
 	},
 /obj/structure/window/reinforced/survival_pod,
 /obj/structure/grille/rustic{
-	health = 25;
-	name = "reinforced grille"
+	name = "reinforced grille";
+	health = 25
 	},
 /turf/simulated/floor,
 /area/shuttle/needle)
@@ -18942,9 +18930,9 @@
 	dir = 1
 	},
 /obj/machinery/power/quantumpad{
+	name = "Exploration Q-Pad";
 	map_pad_id = "aeg_explo_padout";
-	map_pad_link_id = "aeg_explo_padin";
-	name = "Exploration Q-Pad"
+	map_pad_link_id = "aeg_explo_padin"
 	},
 /obj/structure/cable/green{
 	icon_state = "0-2"
@@ -19008,8 +18996,8 @@
 	dir = 8
 	},
 /obj/item/radio/intercom{
-	dir = 8;
 	name = "Station Intercom (General)";
+	dir = 8;
 	pixel_x = -21
 	},
 /turf/simulated/floor/tiled/dark,
@@ -19038,12 +19026,12 @@
 /area/expoutpost/portbowhallway)
 "pJe" = (
 /obj/machinery/power/apc/hyper{
-	coverlocked = 0;
-	environ = 1;
+	pixel_y = -24;
+	locked = 0;
 	equipment = 1;
 	lighting = 1;
-	locked = 0;
-	pixel_y = -24
+	environ = 1;
+	coverlocked = 0
 	},
 /obj/structure/cable/green,
 /obj/effect/floor_decal/industrial/warning{
@@ -19076,8 +19064,8 @@
 	dir = 1
 	},
 /obj/machinery/power/apc{
-	dir = 1;
 	name = "north bump";
+	dir = 1;
 	pixel_y = 24
 	},
 /obj/structure/cable/green{
@@ -19171,8 +19159,8 @@
 	dir = 1
 	},
 /obj/item/radio/intercom{
-	dir = 1;
 	name = "Station Intercom (General)";
+	dir = 1;
 	pixel_y = 22
 	},
 /turf/simulated/floor/tiled,
@@ -19215,8 +19203,8 @@
 	dir = 9
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 8;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 8
 	},
 /obj/machinery/light{
 	dir = 4
@@ -19476,8 +19464,8 @@
 	dir = 4
 	},
 /obj/item/radio/intercom{
-	dir = 4;
 	name = "Station Intercom (General)";
+	dir = 4;
 	pixel_x = 21
 	},
 /turf/simulated/floor/tiled/milspec/raised,
@@ -19622,9 +19610,9 @@
 	dir = 1
 	},
 /obj/machinery/button/remote/blast_door{
-	id = "aeg_gateway_access";
 	name = "Gateway Access";
 	pixel_y = 28;
+	id = "aeg_gateway_access";
 	req_one_access = list(1,5,43,67)
 	},
 /turf/simulated/floor/tiled,
@@ -19643,8 +19631,7 @@
 /obj/structure/table/reinforced,
 /obj/machinery/computer/med_data/laptop,
 /obj/structure/window/reinforced{
-	dir = 4;
-	health = 1e+006
+	dir = 4
 	},
 /turf/simulated/floor/carpet/blue,
 /area/expoutpost/medicalbay)
@@ -19669,8 +19656,8 @@
 	},
 /obj/effect/catwalk_plated/dark,
 /obj/machinery/door/airlock/multi_tile/glass{
-	dir = 2;
-	name = "Research and Development"
+	name = "Research and Development";
+	dir = 2
 	},
 /obj/machinery/door/firedoor/multi_tile/glass{
 	dir = 1
@@ -19683,8 +19670,8 @@
 	dir = 9
 	},
 /obj/machinery/door/blast/radproof{
-	id = "Aeg_CoreShroud";
-	name = "Core Shroud"
+	name = "Core Shroud";
+	id = "Aeg_CoreShroud"
 	},
 /turf/simulated/floor,
 /area/expoutpost/reactorroom)
@@ -19735,8 +19722,8 @@
 	dir = 1
 	},
 /obj/machinery/door/airlock/multi_tile/glass{
-	dir = 1;
-	name = "Hangar - Needle"
+	name = "Hangar - Needle";
+	dir = 1
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/expoutpost/hangarfive)
@@ -19795,9 +19782,9 @@
 /obj/structure/table/marble,
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/blast/shutters{
+	name = "Kitchen Shutter";
 	dir = 2;
-	id = "aeg_kitchen_shutter";
-	name = "Kitchen Shutter"
+	id = "aeg_kitchen_shutter"
 	},
 /turf/simulated/floor/tiled/white,
 /area/expoutpost/kitchen)
@@ -19808,12 +19795,12 @@
 	},
 /obj/structure/window/reinforced/survival_pod,
 /obj/structure/grille/rustic{
-	health = 25;
-	name = "reinforced grille"
+	name = "reinforced grille";
+	health = 25
 	},
 /obj/machinery/door/blast/regular/open{
-	id = "stargazer_blast";
-	name = "window blast shield"
+	name = "window blast shield";
+	id = "stargazer_blast"
 	},
 /turf/simulated/floor,
 /area/shuttle/baby_mammoth)
@@ -19905,17 +19892,17 @@
 /area/expoutpost/hangarfive)
 "qrZ" = (
 /obj/machinery/door/airlock/voidcraft/vertical{
+	name = "Internal Access";
 	frequency = 1380;
-	id_tag = "needle_inner";
 	locked = 1;
-	name = "Internal Access"
+	id_tag = "needle_inner"
 	},
 /obj/machinery/access_button{
-	command = "cycle_interior";
-	frequency = 1380;
-	master_tag = "needle";
 	name = "interior access button";
-	pixel_y = 26
+	pixel_y = 26;
+	frequency = 1380;
+	command = "cycle_interior";
+	master_tag = "needle"
 	},
 /obj/structure/cable/blue{
 	icon_state = "4-8"
@@ -19950,16 +19937,16 @@
 /area/expoutpost/hangarfour)
 "qtA" = (
 /obj/machinery/door/airlock/voidcraft/vertical{
+	name = "External Access";
 	frequency = 1380;
-	id_tag = "shuttle3_outer";
-	name = "External Access"
+	id_tag = "shuttle3_outer"
 	},
 /obj/machinery/access_button{
-	command = "cycle_exterior";
-	frequency = 1380;
-	master_tag = "shuttle3_shuttle";
 	name = "exterior access button";
 	pixel_y = 26;
+	frequency = 1380;
+	command = "cycle_exterior";
+	master_tag = "shuttle3_shuttle";
 	req_access = null
 	},
 /turf/simulated/shuttle/plating,
@@ -19976,8 +19963,7 @@
 /obj/structure/window/reinforced/full,
 /obj/structure/grille,
 /obj/structure/window/reinforced{
-	dir = 4;
-	health = 1e+006
+	dir = 4
 	},
 /obj/machinery/door/firedoor/border_only,
 /obj/structure/window/reinforced{
@@ -20042,16 +20028,16 @@
 /area/expoutpost/reactorroom)
 "qvR" = (
 /obj/machinery/door/airlock/glass_external{
+	name = "Port Bow Outer Airlock";
 	icon_state = "door_locked";
-	locked = 1;
-	name = "Port Bow Outer Airlock"
+	locked = 1
 	},
 /obj/machinery/access_button{
-	dir = 1;
-	master_tag = null;
 	name = "interior access button";
+	dir = 1;
 	pixel_x = -27;
-	pixel_y = 7
+	pixel_y = 7;
+	master_tag = null
 	},
 /obj/effect/map_helper/airlock/button/int_button,
 /obj/effect/map_helper/airlock/door/int_door,
@@ -20068,8 +20054,8 @@
 	dir = 4
 	},
 /obj/structure/window/reinforced/survival_pod{
-	dir = 1;
-	opacity = 1
+	opacity = 1;
+	dir = 1
 	},
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -20106,8 +20092,8 @@
 	dir = 9
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 8;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 8
 	},
 /turf/simulated/floor/tiled/white,
 /area/expoutpost/kitchen)
@@ -20155,9 +20141,9 @@
 	},
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/blast/regular/open{
+	name = "Emergency Blast Door";
 	dir = 4;
-	id = "aeg_enginevent_stageone";
-	name = "Emergency Blast Door"
+	id = "aeg_enginevent_stageone"
 	},
 /turf/simulated/floor/reinforced,
 /area/expoutpost/reactorroom)
@@ -20199,8 +20185,8 @@
 	},
 /obj/effect/catwalk_plated/techfloor,
 /obj/structure/disposalpipe/junction{
-	dir = 2;
-	icon_state = "pipe-j2"
+	icon_state = "pipe-j2";
+	dir = 2
 	},
 /turf/simulated/floor,
 /area/expoutpost/midsternhallway)
@@ -20292,9 +20278,9 @@
 	},
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/blast/radproof{
+	name = "Emergency Blast Door";
 	dir = 8;
-	id = "aeg_enginevent_stagetwo";
-	name = "Emergency Blast Door"
+	id = "aeg_enginevent_stagetwo"
 	},
 /turf/simulated/floor/reinforced,
 /area/expoutpost/reactorroom)
@@ -20415,8 +20401,8 @@
 	icon_state = "2-4"
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 4;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/expoutpost/explobriefroom)
@@ -20425,13 +20411,13 @@
 	dir = 9
 	},
 /obj/machinery/embedded_controller/radio/airlock/docking_port{
+	pixel_y = 26;
 	frequency = 1380;
 	id_tag = "ursula";
-	pixel_y = 26;
-	tag_airpump = "ursula_pump";
-	tag_chamber_sensor = "ursula_sensor";
 	tag_exterior_door = "ursula_outer";
-	tag_interior_door = "ursula_inner"
+	tag_interior_door = "ursula_inner";
+	tag_airpump = "ursula_pump";
+	tag_chamber_sensor = "ursula_sensor"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/structure/cable/blue{
@@ -20631,8 +20617,8 @@
 	},
 /obj/effect/catwalk_plated/techfloor,
 /obj/structure/disposalpipe/junction{
-	dir = 2;
-	icon_state = "pipe-j2"
+	icon_state = "pipe-j2";
+	dir = 2
 	},
 /turf/simulated/floor,
 /area/expoutpost/starbowhallway)
@@ -20801,9 +20787,9 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow,
 /obj/machinery/door/airlock/voidcraft/vertical{
+	name = "External Access";
 	frequency = 1380;
-	id_tag = "echidna_outer";
-	name = "External Access"
+	id_tag = "echidna_outer"
 	},
 /turf/simulated/floor,
 /area/shuttle/echidna)
@@ -20895,8 +20881,8 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/power/apc{
-	dir = 8;
 	name = "west bump";
+	dir = 8;
 	pixel_x = -24
 	},
 /obj/structure/cable/green,
@@ -20906,11 +20892,11 @@
 	pixel_y = 12
 	},
 /obj/machinery/button/remote/airlock{
-	dir = 4;
-	id = "aeg_dormtwo_bolt";
 	name = "Door Bolt";
+	dir = 4;
 	pixel_x = -24;
 	pixel_y = -14;
+	id = "aeg_dormtwo_bolt";
 	specialfunctions = 4
 	},
 /obj/structure/disposalpipe/segment,
@@ -20948,8 +20934,8 @@
 	dir = 10
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 2;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 2
 	},
 /turf/simulated/floor/tiled,
 /area/expoutpost/engoffice)
@@ -20990,11 +20976,11 @@
 "rjE" = (
 /obj/machinery/computer/ship/helm,
 /obj/machinery/button/remote/blast_door{
-	dir = 4;
-	id = "stargazer_blast";
 	name = "remote blast shielding control";
+	dir = 4;
 	pixel_x = -26;
-	pixel_y = -1
+	pixel_y = -1;
+	id = "stargazer_blast"
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/shuttle/baby_mammoth)
@@ -21086,10 +21072,10 @@
 	dir = 1
 	},
 /obj/machinery/button/remote/airlock{
-	dir = 1;
-	id = "aeg_toilet1_bolt";
 	name = "Door Bolt";
+	dir = 1;
 	pixel_y = -24;
+	id = "aeg_toilet1_bolt";
 	specialfunctions = 4
 	},
 /turf/simulated/floor/tiled/freezer,
@@ -21243,13 +21229,13 @@
 /area/expoutpost/commanderroom)
 "rrP" = (
 /obj/machinery/power/apc/hyper{
-	coverlocked = 0;
 	dir = 4;
-	environ = 1;
+	pixel_x = 23;
+	locked = 0;
 	equipment = 1;
 	lighting = 1;
-	locked = 0;
-	pixel_x = 23
+	environ = 1;
+	coverlocked = 0
 	},
 /obj/structure/panic_button{
 	pixel_y = -32
@@ -21301,8 +21287,8 @@
 	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /obj/item/radio/intercom{
-	dir = 1;
 	name = "Station Intercom (General)";
+	dir = 1;
 	pixel_y = 21
 	},
 /turf/simulated/floor/tiled/white,
@@ -21318,9 +21304,9 @@
 /obj/machinery/atmospherics/unary/vent_pump/high_volume,
 /obj/structure/catwalk,
 /obj/machinery/embedded_controller/radio/airlock/airlock_controller{
+	pixel_y = 24;
 	frequency = 1381;
-	id_tag = "aeg_starbow_airlock";
-	pixel_y = 24
+	id_tag = "aeg_starbow_airlock"
 	},
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
 /turf/simulated/floor,
@@ -21574,11 +21560,11 @@
 "rGj" = (
 /obj/machinery/atmospherics/omni/mixer{
 	name = "Air Mixer";
-	tag_east = 1;
+	tag_south_con = 0.21;
 	tag_east_con = 0.79;
 	tag_north = 1;
 	tag_south = 1;
-	tag_south_con = 0.21;
+	tag_east = 1;
 	tag_west = 2
 	},
 /turf/simulated/floor,
@@ -21658,8 +21644,8 @@
 /obj/effect/catwalk_plated/techfloor,
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow,
 /obj/structure/disposalpipe/junction{
-	dir = 2;
-	icon_state = "pipe-j2"
+	icon_state = "pipe-j2";
+	dir = 2
 	},
 /turf/simulated/floor,
 /area/expoutpost/uppersternhallway)
@@ -21710,9 +21696,9 @@
 /obj/effect/map_helper/airlock/button/int_button,
 /obj/effect/map_helper/airlock/door/int_door,
 /obj/machinery/door/airlock/glass_external{
+	name = "Starboard Bow Inner Airlock";
 	icon_state = "door_locked";
-	locked = 1;
-	name = "Starboard Bow Inner Airlock"
+	locked = 1
 	},
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/reinforced,
@@ -21761,8 +21747,8 @@
 	dir = 4
 	},
 /obj/machinery/power/apc{
-	dir = 4;
 	name = "east bump";
+	dir = 4;
 	pixel_x = 24
 	},
 /obj/structure/cable/green{
@@ -21772,9 +21758,9 @@
 /area/expoutpost/starbowhallway)
 "rLH" = (
 /obj/machinery/power/quantumpad{
+	name = "Science Q-Pad";
 	map_pad_id = "aeg_science_padout";
-	map_pad_link_id = "aeg_science_padin";
-	name = "Science Q-Pad"
+	map_pad_link_id = "aeg_science_padin"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/cable/green{
@@ -21818,10 +21804,10 @@
 	},
 /obj/machinery/atmospherics/pipe/manifold4w/visible,
 /obj/effect/shuttle_landmark{
-	base_area = /area/expoutpost/hangarfour;
-	base_turf = /turf/simulated/floor/reinforced;
-	landmark_tag = "stargazer_dock";
 	name = "Stargazer Dock";
+	landmark_tag = "stargazer_dock";
+	base_turf = /turf/simulated/floor/reinforced;
+	base_area = /area/expoutpost/hangarfour;
 	docking_controller = "stargazer_dock"
 	},
 /obj/structure/cable/blue{
@@ -21875,8 +21861,8 @@
 	dir = 6
 	},
 /obj/item/radio/intercom{
-	dir = 4;
 	name = "Station Intercom (General)";
+	dir = 4;
 	pixel_x = 21
 	},
 /turf/simulated/floor/tiled/dark,
@@ -21912,8 +21898,8 @@
 	dir = 1
 	},
 /obj/machinery/door/airlock/multi_tile/glass{
-	dir = 1;
-	name = "Medbay Lobby"
+	name = "Medbay Lobby";
+	dir = 1
 	},
 /turf/simulated/floor,
 /area/expoutpost/medbaylobby)
@@ -22004,16 +21990,16 @@
 /area/expoutpost/reactorcr)
 "rRn" = (
 /obj/item/radio/intercom{
-	dir = 4;
 	name = "Station Intercom (General)";
+	dir = 4;
 	pixel_x = 21
 	},
 /turf/simulated/floor/carpet,
 /area/expoutpost/suite1)
 "rRR" = (
 /obj/machinery/power/apc{
-	dir = 8;
 	name = "west bump";
+	dir = 8;
 	pixel_x = -24
 	},
 /obj/effect/floor_decal/borderfloorblack{
@@ -22109,10 +22095,10 @@
 /obj/machinery/door/firedoor/glass,
 /obj/effect/catwalk_plated/techfloor,
 /obj/machinery/door/airlock/silver{
-	id_tag = "aeg_seccomm_bolt";
 	name = "Security Commander's Quarters";
-	req_access = list(58);
-	req_one_access = list(19)
+	id_tag = "aeg_seccomm_bolt";
+	req_one_access = list(19);
+	req_access = list(58)
 	},
 /turf/simulated/floor,
 /area/expoutpost/commanderroom)
@@ -22134,8 +22120,8 @@
 	dir = 1
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 4;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 4
 	},
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -22156,15 +22142,15 @@
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/machinery/meter,
 /obj/machinery/airlock_sensor{
+	pixel_y = 28;
 	frequency = 1380;
-	id_tag = "ursula_sensor";
-	pixel_y = 28
+	id_tag = "ursula_sensor"
 	},
 /obj/effect/shuttle_landmark{
-	base_area = /area/expoutpost/hangarthree;
-	base_turf = /turf/simulated/floor/reinforced;
-	landmark_tag = "ursula_dock";
 	name = "Ursula Dock";
+	landmark_tag = "ursula_dock";
+	base_turf = /turf/simulated/floor/reinforced;
+	base_area = /area/expoutpost/hangarthree;
 	docking_controller = "ursula_dock"
 	},
 /obj/structure/cable/blue{
@@ -22277,15 +22263,15 @@
 /area/expoutpost/reactorcr)
 "sfi" = (
 /obj/item/radio/intercom{
-	dir = 4;
 	name = "Station Intercom (General)";
+	dir = 4;
 	pixel_x = 21
 	},
 /obj/machinery/power/port_gen/pacman/super/potato{
 	active = 1;
+	sheets = 50;
 	power_gen = 200000;
-	power_output = 4;
-	sheets = 50
+	power_output = 4
 	},
 /obj/structure/catwalk,
 /obj/structure/cable/yellow,
@@ -22327,8 +22313,8 @@
 "shN" = (
 /obj/machinery/portable_atmospherics/canister/air,
 /obj/machinery/atmospherics/portables_connector{
-	dir = 4;
-	name = "Fuel Into Main"
+	name = "Fuel Into Main";
+	dir = 4
 	},
 /turf/simulated/floor,
 /area/shuttle/stargazer)
@@ -22396,8 +22382,8 @@
 /area/expoutpost/hangarfive)
 "sky" = (
 /obj/machinery/power/smes/buildable{
-	input_attempt = 1;
-	name = "Telecomms SMES"
+	name = "Telecomms SMES";
+	input_attempt = 1
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/cable/blue{
@@ -22422,8 +22408,8 @@
 /area/expoutpost/portbowairlock)
 "smd" = (
 /obj/machinery/power/apc{
-	dir = 4;
 	name = "east bump";
+	dir = 4;
 	pixel_x = 24
 	},
 /obj/structure/cable/green{
@@ -22541,8 +22527,8 @@
 /area/expoutpost/portqpadjunction)
 "ssz" = (
 /obj/item/radio/intercom{
-	dir = 8;
 	name = "Station Intercom (General)";
+	dir = 8;
 	pixel_x = -21
 	},
 /turf/simulated/floor/carpet,
@@ -22595,13 +22581,13 @@
 	},
 /obj/structure/window/reinforced/survival_pod,
 /obj/structure/grille/rustic{
-	health = 25;
-	name = "reinforced grille"
+	name = "reinforced grille";
+	health = 25
 	},
 /obj/machinery/door/blast/regular/open{
+	name = "window blast shield";
 	dir = 4;
-	id = "stargazer_blast";
-	name = "window blast shield"
+	id = "stargazer_blast"
 	},
 /turf/simulated/floor,
 /area/shuttle/stargazer)
@@ -22653,8 +22639,8 @@
 "sxd" = (
 /obj/structure/closet/secure_closet/freezer/kitchen,
 /obj/item/radio/intercom{
-	dir = 4;
 	name = "Station Intercom (General)";
+	dir = 4;
 	pixel_x = 21
 	},
 /turf/simulated/floor/tiled/white,
@@ -22662,8 +22648,8 @@
 "sxH" = (
 /obj/effect/floor_decal/industrial/outline/red,
 /obj/machinery/atmospherics/portables_connector{
-	dir = 8;
-	name = "Refuelling Port"
+	name = "Refuelling Port";
+	dir = 8
 	},
 /turf/simulated/floor/reinforced,
 /area/expoutpost/starfuelstorage)
@@ -22709,23 +22695,22 @@
 	dir = 8
 	},
 /obj/structure/window/reinforced{
-	dir = 4;
-	health = 1e+006
+	dir = 4
 	},
 /obj/structure/window/reinforced,
 /obj/machinery/button/remote/blast_door{
-	dir = 1;
-	id = "Aeg_EngineShroud";
 	name = "Control Room Shielding";
+	dir = 1;
 	pixel_x = -5;
-	pixel_y = -5
+	pixel_y = -5;
+	id = "Aeg_EngineShroud"
 	},
 /obj/machinery/button/remote/blast_door{
-	dir = 1;
-	id = "Aeg_CoreShroud";
 	name = "Core Shielding";
+	dir = 1;
 	pixel_x = 5;
-	pixel_y = -5
+	pixel_y = -5;
+	id = "Aeg_CoreShroud"
 	},
 /obj/machinery/door/window/northleft{
 	name = "Blast Door Controls";
@@ -22745,8 +22730,8 @@
 	dir = 1
 	},
 /obj/item/radio/intercom{
-	dir = 1;
 	name = "Station Intercom (General)";
+	dir = 1;
 	pixel_y = 21
 	},
 /turf/simulated/floor/tiled,
@@ -22777,8 +22762,8 @@
 /area/shuttle/stargazer)
 "sCn" = (
 /obj/machinery/door/airlock/multi_tile/glass{
-	dir = 2;
-	name = "Research and Development"
+	name = "Research and Development";
+	dir = 2
 	},
 /obj/machinery/door/firedoor/multi_tile/glass{
 	dir = 1
@@ -22819,8 +22804,7 @@
 	},
 /obj/structure/window/reinforced,
 /obj/structure/window/reinforced{
-	dir = 4;
-	health = 1e+006
+	dir = 4
 	},
 /turf/simulated/shuttle/plating,
 /area/shuttle/shuttle3/start)
@@ -22885,8 +22869,8 @@
 /area/expoutpost/starsciencemaint)
 "sKz" = (
 /obj/machinery/power/apc{
-	dir = 8;
 	name = "west bump";
+	dir = 8;
 	pixel_x = -24
 	},
 /obj/structure/cable/green{
@@ -22903,8 +22887,8 @@
 	dir = 1
 	},
 /obj/machinery/power/apc{
-	dir = 1;
 	name = "north bump";
+	dir = 1;
 	pixel_y = 24
 	},
 /obj/machinery/light_switch{
@@ -23067,9 +23051,9 @@
 /obj/effect/floor_decal/industrial/warning/cee,
 /obj/effect/map_helper/airlock/door/int_door,
 /obj/machinery/door/airlock/glass_external{
+	name = "Starboard Bow Inner Airlock";
 	icon_state = "door_locked";
-	locked = 1;
-	name = "Starboard Bow Inner Airlock"
+	locked = 1
 	},
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/reinforced,
@@ -23164,8 +23148,8 @@
 	dir = 8
 	},
 /obj/item/radio/intercom{
-	dir = 8;
 	name = "Station Intercom (General)";
+	dir = 8;
 	pixel_x = -21
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -23246,8 +23230,8 @@
 /area/expoutpost/explobriefroom)
 "sZy" = (
 /obj/machinery/atmospherics/binary/pump/on{
-	dir = 8;
-	name = "Air to Distro"
+	name = "Air to Distro";
+	dir = 8
 	},
 /obj/effect/engine_setup/pump_max,
 /turf/simulated/floor,
@@ -23270,17 +23254,17 @@
 	dir = 1
 	},
 /obj/machinery/door/airlock/multi_tile/glass{
-	dir = 2;
 	name = "Engineering Office";
+	dir = 2;
 	req_one_access = list(10)
 	},
 /turf/simulated/floor,
 /area/expoutpost/engoffice)
 "tac" = (
 /obj/machinery/door/airlock/external{
+	name = "Port Stern Outer Airlock";
 	icon_state = "door_locked";
-	locked = 1;
-	name = "Port Stern Outer Airlock"
+	locked = 1
 	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
@@ -23598,16 +23582,16 @@
 	dir = 8
 	},
 /obj/machinery/atmospherics/unary/vent_pump{
-	dir = 1;
-	external_pressure_bound = 0;
-	external_pressure_bound_default = 0;
 	icon_state = "map_vent_in";
-	initialize_directions = 1;
-	internal_pressure_bound = 4000;
-	internal_pressure_bound_default = 4000;
-	pressure_checks = 2;
-	pressure_checks_default = 2;
+	dir = 1;
 	pump_direction = 0;
+	external_pressure_bound = 0;
+	internal_pressure_bound = 4000;
+	pressure_checks = 2;
+	external_pressure_bound_default = 0;
+	internal_pressure_bound_default = 4000;
+	pressure_checks_default = 2;
+	initialize_directions = 1;
 	use_power = 1
 	},
 /turf/simulated/floor/wood,
@@ -23634,8 +23618,8 @@
 "tpv" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/power/generator{
-	anchored = 1;
-	dir = 8
+	dir = 8;
+	anchored = 1
 	},
 /obj/structure/cable/yellow,
 /turf/simulated/floor,
@@ -23785,8 +23769,8 @@
 	icon_state = "2-8"
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 2;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 2
 	},
 /obj/effect/catwalk_plated/techfloor,
 /turf/simulated/floor,
@@ -23804,13 +23788,13 @@
 	},
 /obj/structure/window/reinforced/survival_pod,
 /obj/structure/grille/rustic{
-	health = 25;
-	name = "reinforced grille"
+	name = "reinforced grille";
+	health = 25
 	},
 /obj/machinery/door/blast/regular/open{
+	name = "window blast shield";
 	dir = 4;
-	id = "stargazer_blast";
-	name = "window blast shield"
+	id = "stargazer_blast"
 	},
 /turf/simulated/floor,
 /area/shuttle/baby_mammoth)
@@ -23872,9 +23856,9 @@
 	dir = 1
 	},
 /obj/machinery/door/airlock/multi_tile/metal{
+	name = "Sauna";
 	dir = 1;
-	id_tag = "aeg_sauna_bolt";
-	name = "Sauna"
+	id_tag = "aeg_sauna_bolt"
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/expoutpost/washroom)
@@ -23883,14 +23867,14 @@
 /area/expoutpost/starsciencemaint)
 "tBo" = (
 /obj/machinery/atmospherics/unary/vent_pump/engine{
+	icon_state = "map_vent_in";
 	dir = 4;
+	frequency = 1438;
+	id_tag = "aegrust_cooling_out";
+	pump_direction = 0;
 	external_pressure_bound = 100;
 	external_pressure_bound_default = 0;
-	frequency = 1438;
-	icon_state = "map_vent_in";
-	id_tag = "aegrust_cooling_out";
 	initialize_directions = 1;
-	pump_direction = 0;
 	use_power = 1
 	},
 /obj/structure/cable/yellow{
@@ -23948,8 +23932,8 @@
 	},
 /obj/effect/catwalk_plated/techfloor,
 /obj/structure/disposalpipe/segment{
-	dir = 4;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 4
 	},
 /turf/simulated/floor,
 /area/expoutpost/slingcarrierdock)
@@ -24021,10 +24005,10 @@
 /area/expoutpost/reactorcr)
 "tHw" = (
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1380;
-	id_tag = "exp_sling_outpost";
 	name = "shuttle bay controller";
 	pixel_x = 30;
+	frequency = 1380;
+	id_tag = "exp_sling_outpost";
 	req_one_access = list();
 	tag_door = "exp_sling_outpost_door"
 	},
@@ -24089,9 +24073,9 @@
 /area/expoutpost/commanderroom)
 "tJC" = (
 /obj/machinery/power/quantumpad{
+	name = "TO - EVA";
 	map_pad_id = "aeg_eva_padin";
-	map_pad_link_id = "aeg_eva_padout";
-	name = "TO - EVA"
+	map_pad_link_id = "aeg_eva_padout"
 	},
 /obj/structure/cable/green{
 	icon_state = "0-4"
@@ -24122,9 +24106,9 @@
 /area/shuttle/shuttle3/start)
 "tKK" = (
 /obj/machinery/door/airlock/external{
+	name = "Starboard Stern Outer Airlock";
 	icon_state = "door_locked";
-	locked = 1;
-	name = "Starboard Stern Outer Airlock"
+	locked = 1
 	},
 /obj/effect/map_helper/airlock/door/ext_door,
 /obj/effect/floor_decal/industrial/warning{
@@ -24303,8 +24287,8 @@
 	dir = 1
 	},
 /obj/structure/disposalpipe/junction{
-	dir = 2;
-	icon_state = "pipe-j2"
+	icon_state = "pipe-j2";
+	dir = 2
 	},
 /turf/simulated/floor/wood,
 /area/expoutpost/bar)
@@ -24331,10 +24315,10 @@
 	},
 /obj/structure/closet/walllocker_double/hydrant/south,
 /obj/machinery/airlock_sensor{
-	frequency = 1380;
-	id_tag = "echidna_sensor";
 	pixel_x = -25;
-	pixel_y = -1
+	pixel_y = -1;
+	frequency = 1380;
+	id_tag = "echidna_sensor"
 	},
 /turf/simulated/floor,
 /area/shuttle/echidna)
@@ -24398,8 +24382,8 @@
 /area/expoutpost/cic)
 "tUV" = (
 /obj/machinery/power/apc{
-	dir = 8;
 	name = "west bump";
+	dir = 8;
 	pixel_x = -24
 	},
 /obj/structure/cable/blue{
@@ -24437,8 +24421,8 @@
 	dir = 8
 	},
 /obj/machinery/power/apc{
-	dir = 8;
 	name = "west bump";
+	dir = 8;
 	pixel_x = -24
 	},
 /obj/structure/cable/green{
@@ -24538,8 +24522,8 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/cable/green,
 /obj/machinery/power/apc{
-	dir = 8;
 	name = "west bump";
+	dir = 8;
 	pixel_x = -24
 	},
 /turf/simulated/floor,
@@ -24592,10 +24576,10 @@
 	dir = 4
 	},
 /obj/machinery/button/remote/blast_door{
-	id = "aeg_explo_armory";
 	name = "Exploration Armory";
 	pixel_x = 16;
 	pixel_y = 28;
+	id = "aeg_explo_armory";
 	req_one_access = list(43,67,5)
 	},
 /turf/simulated/floor/tiled,
@@ -24654,8 +24638,8 @@
 	},
 /obj/effect/catwalk_plated/techfloor,
 /obj/machinery/door/airlock/multi_tile/glass{
-	dir = 1;
-	name = "Hangar - Needle"
+	name = "Hangar - Needle";
+	dir = 1
 	},
 /turf/simulated/floor,
 /area/expoutpost/hangarfive)
@@ -24696,8 +24680,8 @@
 /area/expoutpost/staginghangar)
 "ueT" = (
 /obj/structure/disposalpipe/segment{
-	dir = 1;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 1
 	},
 /obj/effect/floor_decal/borderfloorwhite,
 /obj/effect/floor_decal/corner/pink/border,
@@ -24754,8 +24738,8 @@
 	dir = 1
 	},
 /obj/machinery/door/airlock/multi_tile/glass{
-	dir = 2;
-	name = "Hangar - Echidna"
+	name = "Hangar - Echidna";
+	dir = 2
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/expoutpost/hangarsix)
@@ -24773,8 +24757,8 @@
 	icon_state = "1-4"
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 1;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 1
 	},
 /obj/effect/catwalk_plated/techfloor,
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
@@ -24855,9 +24839,9 @@
 /area/shuttle/ursula)
 "umd" = (
 /obj/machinery/door/airlock/glass_external{
+	name = "Port Stern Inner Airlock";
 	icon_state = "door_locked";
-	locked = 1;
-	name = "Port Stern Inner Airlock"
+	locked = 1
 	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
@@ -24925,17 +24909,17 @@
 /area/expoutpost/staruppermaint)
 "upT" = (
 /obj/machinery/door/airlock/voidcraft/vertical{
+	name = "External Access";
 	frequency = 1380;
-	id_tag = "needle_outer";
 	locked = 1;
-	name = "External Access"
+	id_tag = "needle_outer"
 	},
 /obj/machinery/access_button{
-	command = "cycle_exterior";
-	frequency = 1380;
-	master_tag = "needle";
 	name = "exterior access button";
-	pixel_y = 26
+	pixel_y = 26;
+	frequency = 1380;
+	command = "cycle_exterior";
+	master_tag = "needle"
 	},
 /obj/structure/cable/blue{
 	icon_state = "4-8"
@@ -25131,9 +25115,9 @@
 "uxz" = (
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/machinery/embedded_controller/radio/airlock/airlock_controller{
+	pixel_x = 28;
 	frequency = 1381;
-	id_tag = "aeg_portstern_airlock";
-	pixel_x = 28
+	id_tag = "aeg_portstern_airlock"
 	},
 /obj/structure/catwalk,
 /turf/simulated/floor,
@@ -25257,8 +25241,8 @@
 	dir = 6
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 1;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 1
 	},
 /obj/structure/bed/chair/office/dark{
 	dir = 8
@@ -25282,8 +25266,8 @@
 	dir = 9
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 2;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 2
 	},
 /turf/simulated/floor/carpet,
 /area/expoutpost/commanderroom)
@@ -25462,8 +25446,8 @@
 /obj/machinery/door/firedoor/glass,
 /obj/effect/catwalk_plated/techfloor,
 /obj/machinery/door/airlock/silver{
-	id_tag = "aeg_pathfinderroom_bolt";
 	name = "Exploration Manager's Office";
+	id_tag = "aeg_pathfinderroom_bolt";
 	req_one_access = list(62)
 	},
 /turf/simulated/floor,
@@ -25515,8 +25499,8 @@
 /obj/effect/catwalk_plated/techfloor,
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow,
 /obj/structure/disposalpipe/junction{
-	dir = 2;
-	icon_state = "pipe-j2"
+	icon_state = "pipe-j2";
+	dir = 2
 	},
 /turf/simulated/floor,
 /area/expoutpost/lowersternhallway)
@@ -25540,8 +25524,8 @@
 /area/expoutpost/explobriefroom)
 "uOM" = (
 /obj/machinery/power/apc{
-	dir = 1;
 	name = "north bump";
+	dir = 1;
 	pixel_y = 24
 	},
 /obj/structure/cable/green{
@@ -25559,9 +25543,9 @@
 	pixel_y = 24
 	},
 /obj/machinery/button/windowtint{
-	id = "aeg_surgery_tint";
 	pixel_x = -10;
-	pixel_y = 24
+	pixel_y = 24;
+	id = "aeg_surgery_tint"
 	},
 /turf/simulated/floor/tiled/white,
 /area/expoutpost/surgical1)
@@ -25620,8 +25604,8 @@
 	},
 /obj/machinery/air_sensor{
 	frequency = 1438;
-	id_tag = "aegrustengine_sensor";
-	output = 63
+	output = 63;
+	id_tag = "aegrustengine_sensor"
 	},
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
@@ -25664,8 +25648,8 @@
 /area/expoutpost/gateway)
 "uRJ" = (
 /obj/machinery/power/apc{
-	dir = 1;
 	name = "north bump";
+	dir = 1;
 	pixel_y = 24
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -25772,8 +25756,8 @@
 "uWq" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/item/radio/intercom{
-	dir = 4;
 	name = "Station Intercom (General)";
+	dir = 4;
 	pixel_x = 21
 	},
 /turf/simulated/floor/carpet,
@@ -25811,9 +25795,9 @@
 	dir = 5
 	},
 /obj/machinery/airlock_sensor{
+	pixel_y = 28;
 	frequency = 1380;
-	id_tag = "stargazer_sensor";
-	pixel_y = 28
+	id_tag = "stargazer_sensor"
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	frequency = 1380;
@@ -25862,10 +25846,10 @@
 	dir = 1
 	},
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1380;
-	id_tag = "baby_mammoth_dock";
 	name = "shuttle bay controller";
-	pixel_x = -29
+	pixel_x = -29;
+	frequency = 1380;
+	id_tag = "baby_mammoth_dock"
 	},
 /turf/simulated/floor/tiled,
 /area/expoutpost/hangartwo)
@@ -25881,8 +25865,8 @@
 /area/expoutpost/civaccesshallway)
 "uZP" = (
 /obj/machinery/power/apc{
-	dir = 1;
 	name = "north bump";
+	dir = 1;
 	pixel_y = 24
 	},
 /obj/machinery/disposal/wall{
@@ -26034,8 +26018,8 @@
 	},
 /obj/structure/window/reinforced/survival_pod,
 /obj/structure/grille/rustic{
-	health = 25;
-	name = "reinforced grille"
+	name = "reinforced grille";
+	health = 25
 	},
 /turf/simulated/floor,
 /area/shuttle/echidna)
@@ -26082,8 +26066,8 @@
 /area/expoutpost/disposals)
 "vkp" = (
 /obj/machinery/atmospherics/binary/pump/on{
-	dir = 2;
-	name = "Waste Compresser"
+	name = "Waste Compresser";
+	dir = 2
 	},
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -26180,30 +26164,30 @@
 	dir = 8
 	},
 /obj/machinery/atmospherics/unary/vent_pump{
+	icon_state = "map_vent_out";
 	dir = 2;
 	external_pressure_bound = 140;
-	external_pressure_bound_default = 140;
-	icon_state = "map_vent_out";
 	pressure_checks = 0;
+	external_pressure_bound_default = 140;
 	pressure_checks_default = 0;
 	use_power = 1
 	},
 /obj/item/radio/intercom{
-	dir = 1;
 	name = "Station Intercom (General)";
+	dir = 1;
 	pixel_y = 21
 	},
 /obj/machinery/button/windowtint{
-	id = "aeg_sauna_tint";
 	name = "Sauna window tint";
 	pixel_x = 12;
-	pixel_y = 24
+	pixel_y = 24;
+	id = "aeg_sauna_tint"
 	},
 /obj/machinery/button/remote/airlock{
-	id = "aeg_sauna_bolt";
 	name = "Door Bolt";
 	pixel_x = -16;
 	pixel_y = 24;
+	id = "aeg_sauna_bolt";
 	specialfunctions = 4
 	},
 /turf/simulated/floor/wood,
@@ -26232,8 +26216,8 @@
 	dir = 10
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 8;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 8
 	},
 /turf/simulated/floor/carpet,
 /area/expoutpost/suite2)
@@ -26263,8 +26247,8 @@
 	icon_state = "2-4"
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 4;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 4
 	},
 /obj/effect/catwalk_plated/techfloor,
 /turf/simulated/floor,
@@ -26317,9 +26301,9 @@
 	dir = 4
 	},
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1380;
 	name = "shuttle bay controller";
 	pixel_x = 29;
+	frequency = 1380;
 	id_tag = "needle_dock"
 	},
 /turf/simulated/floor/tiled,
@@ -26344,8 +26328,8 @@
 "vtK" = (
 /obj/machinery/power/shield_generator/charged{
 	field_radius = 8;
-	initial_shield_modes = 2153;
-	target_radius = 8
+	target_radius = 8;
+	initial_shield_modes = 2153
 	},
 /obj/structure/railing{
 	dir = 1
@@ -26455,13 +26439,13 @@
 	id_tag = "echidna_pump"
 	},
 /obj/machinery/embedded_controller/radio/airlock/docking_port{
+	pixel_y = 26;
 	frequency = 1380;
 	id_tag = "echidna";
-	pixel_y = 26;
-	tag_airpump = "echidna_pump";
-	tag_chamber_sensor = "echidna_sensor";
 	tag_exterior_door = "echidna_outer";
-	tag_interior_door = "echidna_inner"
+	tag_interior_door = "echidna_inner";
+	tag_airpump = "echidna_pump";
+	tag_chamber_sensor = "echidna_sensor"
 	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 9
@@ -26687,8 +26671,8 @@
 /obj/structure/table/reinforced,
 /obj/machinery/cell_charger,
 /obj/item/radio/intercom{
-	dir = 1;
 	name = "Station Intercom (General)";
+	dir = 1;
 	pixel_y = 21
 	},
 /turf/simulated/floor/tiled/white,
@@ -26744,12 +26728,12 @@
 	},
 /obj/structure/window/reinforced/survival_pod,
 /obj/structure/grille/rustic{
-	health = 25;
-	name = "reinforced grille"
+	name = "reinforced grille";
+	health = 25
 	},
 /obj/machinery/door/blast/regular/open{
-	id = "stargazer_blast";
-	name = "window blast shield"
+	name = "window blast shield";
+	id = "stargazer_blast"
 	},
 /turf/simulated/floor,
 /area/shuttle/baby_mammoth)
@@ -26826,16 +26810,16 @@
 /area/expoutpost/bar)
 "vMu" = (
 /obj/machinery/door/airlock/voidcraft/vertical{
+	name = "Internal Access";
 	frequency = 1380;
-	id_tag = "stargazer_inner";
-	name = "Internal Access"
+	id_tag = "stargazer_inner"
 	},
 /obj/machinery/access_button{
-	command = "cycle_interior";
-	frequency = 1380;
-	master_tag = "stargazer";
 	name = "interior access button";
-	pixel_y = -26
+	pixel_y = -26;
+	frequency = 1380;
+	command = "cycle_interior";
+	master_tag = "stargazer"
 	},
 /obj/structure/cable/blue{
 	icon_state = "4-8"
@@ -26859,8 +26843,8 @@
 	dir = 10
 	},
 /obj/item/radio/intercom{
-	dir = 8;
 	name = "Station Intercom (General)";
+	dir = 8;
 	pixel_x = -21
 	},
 /turf/simulated/floor/tiled/dark,
@@ -27078,8 +27062,8 @@
 	dir = 1
 	},
 /obj/item/radio/intercom{
-	dir = 4;
 	name = "Station Intercom (General)";
+	dir = 4;
 	pixel_x = 21
 	},
 /turf/simulated/floor/grass2,
@@ -27102,15 +27086,15 @@
 /area/expoutpost/staruppermaint)
 "vWj" = (
 /obj/machinery/door/airlock/voidcraft/vertical{
+	name = "shuttle side hatch";
 	icon_state = "door_locked";
-	id_tag = "expshuttle3_door_L";
 	locked = 1;
-	name = "shuttle side hatch"
+	id_tag = "expshuttle3_door_L"
 	},
 /obj/machinery/button/remote/airlock{
-	id = "expshuttle3_door_L";
 	name = "Side Hatch Control";
 	pixel_y = -26;
+	id = "expshuttle3_door_L";
 	req_one_access = null;
 	specialfunctions = 4
 	},
@@ -27301,9 +27285,9 @@
 	},
 /obj/effect/map_helper/airlock/door/ext_door,
 /obj/machinery/door/airlock/glass_external{
+	name = "Starboard Bow Outer Airlock";
 	icon_state = "door_locked";
-	locked = 1;
-	name = "Starboard Bow Outer Airlock"
+	locked = 1
 	},
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/reinforced,
@@ -27370,17 +27354,17 @@
 	dir = 5
 	},
 /obj/machinery/access_button{
-	command = "cycle_interior";
-	frequency = 1380;
-	master_tag = "baby_mammoth";
 	name = "interior access button";
-	pixel_y = 26
+	pixel_y = 26;
+	frequency = 1380;
+	command = "cycle_interior";
+	master_tag = "baby_mammoth"
 	},
 /obj/machinery/door/airlock/voidcraft/vertical{
+	name = "Internal Access";
 	frequency = 1380;
-	id_tag = "baby_mammoth_inner";
 	locked = 1;
-	name = "Internal Access"
+	id_tag = "baby_mammoth_inner"
 	},
 /obj/structure/cable/blue{
 	icon_state = "4-8"
@@ -27392,8 +27376,8 @@
 	dir = 4
 	},
 /obj/item/radio/intercom{
-	dir = 4;
 	name = "Station Intercom (General)";
+	dir = 4;
 	pixel_x = 21
 	},
 /turf/simulated/floor/tiled/dark,
@@ -27422,8 +27406,8 @@
 	icon_state = "0-2"
 	},
 /obj/machinery/power/apc{
-	dir = 1;
 	name = "north bump";
+	dir = 1;
 	pixel_y = 24
 	},
 /obj/effect/floor_decal/techfloor{
@@ -27500,8 +27484,8 @@
 	dir = 4
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 4;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 4
 	},
 /turf/simulated/floor/carpet,
 /area/expoutpost/pathfinderroom)
@@ -27645,8 +27629,8 @@
 	dir = 6
 	},
 /obj/machinery/power/apc{
-	dir = 1;
 	name = "north bump";
+	dir = 1;
 	pixel_y = 24
 	},
 /obj/effect/floor_decal/borderfloorwhite{
@@ -27665,8 +27649,8 @@
 	dir = 8
 	},
 /obj/machinery/power/apc{
-	dir = 8;
 	name = "west bump";
+	dir = 8;
 	pixel_x = -24
 	},
 /obj/structure/cable/green{
@@ -27755,8 +27739,8 @@
 	dir = 1
 	},
 /obj/machinery/door/airlock/multi_tile/glass{
-	dir = 1;
-	name = "Hangar - Ursula"
+	name = "Hangar - Ursula";
+	dir = 1
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/expoutpost/hangarthree)
@@ -27768,9 +27752,9 @@
 /obj/effect/floor_decal/industrial/warning,
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/blast/regular/open{
+	name = "Emergency Blast Door";
 	dir = 4;
-	id = "aeg_enginevent_stageone";
-	name = "Emergency Blast Door"
+	id = "aeg_enginevent_stageone"
 	},
 /turf/simulated/floor/reinforced,
 /area/expoutpost/reactorroom)
@@ -27945,8 +27929,8 @@
 	icon_state = "0-2"
 	},
 /obj/machinery/power/apc{
-	dir = 8;
 	name = "west bump";
+	dir = 8;
 	pixel_x = -24
 	},
 /turf/simulated/floor,
@@ -28055,8 +28039,8 @@
 /area/shuttle/baby_mammoth)
 "wLS" = (
 /obj/item/radio/intercom{
-	dir = 4;
 	name = "Station Intercom (General)";
+	dir = 4;
 	pixel_x = 21
 	},
 /turf/simulated/floor/tiled/dark,
@@ -28066,8 +28050,8 @@
 	dir = 5
 	},
 /obj/item/radio/intercom{
-	dir = 4;
 	name = "Station Intercom (General)";
+	dir = 4;
 	pixel_x = 21
 	},
 /turf/simulated/floor/tiled/dark,
@@ -28102,8 +28086,8 @@
 	dir = 1
 	},
 /obj/machinery/door/airlock/multi_tile/glass{
-	dir = 1;
-	name = "Q-Pad Junction"
+	name = "Q-Pad Junction";
+	dir = 1
 	},
 /turf/simulated/floor,
 /area/expoutpost/starqpadjunction)
@@ -28144,8 +28128,8 @@
 	pixel_y = -26
 	},
 /obj/item/radio/intercom/department/security{
-	dir = 4;
 	icon_state = "secintercom";
+	dir = 4;
 	pixel_x = 21
 	},
 /turf/simulated/floor/tiled,
@@ -28167,8 +28151,8 @@
 	dir = 9
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 8;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 8
 	},
 /obj/effect/floor_decal/borderfloorwhite,
 /obj/effect/floor_decal/corner/paleblue/border,
@@ -28181,12 +28165,12 @@
 "wQf" = (
 /obj/effect/floor_decal/industrial/warning/cee,
 /obj/machinery/power/apc/hyper{
-	coverlocked = 0;
-	environ = 1;
+	pixel_y = -24;
+	locked = 0;
 	equipment = 1;
 	lighting = 1;
-	locked = 0;
-	pixel_y = -24
+	environ = 1;
+	coverlocked = 0
 	},
 /obj/structure/cable/green,
 /obj/structure/closet/crate/engineering,
@@ -28306,8 +28290,8 @@
 /area/expoutpost/staginghangar)
 "wWa" = (
 /obj/machinery/power/apc{
-	dir = 1;
 	name = "north bump";
+	dir = 1;
 	pixel_y = 24
 	},
 /obj/effect/floor_decal/borderfloorblack{
@@ -28406,9 +28390,9 @@
 "xau" = (
 /obj/machinery/atmospherics/omni/atmos_filter{
 	name = "N2/O2 Filter";
-	tag_east = 4;
 	tag_north = 3;
 	tag_south = 2;
+	tag_east = 4;
 	tag_west = 1
 	},
 /turf/simulated/floor,
@@ -28438,8 +28422,8 @@
 /area/expoutpost/medicalbay)
 "xbq" = (
 /obj/machinery/door/airlock{
-	id_tag = "aeg_toilet2_bolt";
-	name = "Unit 2"
+	name = "Unit 2";
+	id_tag = "aeg_toilet2_bolt"
 	},
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/tiled/freezer,
@@ -28546,8 +28530,8 @@
 	icon_state = "0-4"
 	},
 /obj/machinery/power/apc{
-	dir = 1;
 	name = "north bump";
+	dir = 1;
 	pixel_y = 24
 	},
 /obj/machinery/light_switch{
@@ -28556,10 +28540,10 @@
 	pixel_y = 24
 	},
 /obj/machinery/button/remote/airlock{
-	id = "aeg_reactor_bolt";
 	name = "Reactor Door Bolt";
 	pixel_x = -13;
-	pixel_y = 24
+	pixel_y = 24;
+	id = "aeg_reactor_bolt"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/expoutpost/reactorcr)
@@ -28615,8 +28599,8 @@
 /area/expoutpost/telecomms)
 "xil" = (
 /obj/machinery/power/apc{
-	dir = 4;
 	name = "east bump";
+	dir = 4;
 	pixel_x = 24
 	},
 /obj/machinery/light_switch{
@@ -28670,9 +28654,9 @@
 /obj/effect/catwalk_plated/dark,
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/silver{
+	name = "IN CONSTRUCTION";
 	icon_state = "door_locked";
-	locked = 1;
-	name = "IN CONSTRUCTION"
+	locked = 1
 	},
 /obj/item/tape/engineering,
 /turf/simulated/floor,
@@ -28699,8 +28683,8 @@
 	dir = 1
 	},
 /obj/machinery/atmospherics/portables_connector{
-	dir = 8;
-	name = "Refuelling Port"
+	name = "Refuelling Port";
+	dir = 8
 	},
 /turf/simulated/floor,
 /area/expoutpost/staginghangar)
@@ -28801,8 +28785,7 @@
 	},
 /obj/structure/window/reinforced,
 /obj/structure/window/reinforced{
-	dir = 4;
-	health = 1e+006
+	dir = 4
 	},
 /turf/simulated/floor,
 /area/shuttle/shuttle3/start)
@@ -29047,11 +29030,11 @@
 	},
 /obj/structure/table/wooden_reinforced,
 /obj/machinery/button/remote/airlock{
-	dir = 4;
-	id = "aeg_suitetwo_bolt";
 	name = "Door Bolt";
+	dir = 4;
 	pixel_x = -24;
 	pixel_y = 8;
+	id = "aeg_suitetwo_bolt";
 	specialfunctions = 4
 	},
 /turf/simulated/floor/carpet,
@@ -29095,8 +29078,8 @@
 "xyF" = (
 /obj/effect/floor_decal/industrial/outline,
 /obj/machinery/atmospherics/portables_connector{
-	dir = 4;
-	name = "Fuel Into Main"
+	name = "Fuel Into Main";
+	dir = 4
 	},
 /obj/machinery/portable_atmospherics/canister/air/airlock,
 /turf/simulated/floor,
@@ -29116,9 +29099,9 @@
 	},
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/blast/shutters{
+	name = "Bar Shutter";
 	dir = 8;
-	id = "aeg_bar_shutter";
-	name = "Bar Shutter"
+	id = "aeg_bar_shutter"
 	},
 /turf/simulated/floor/tiled/white,
 /area/expoutpost/bar)
@@ -29143,9 +29126,9 @@
 	},
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/blast/shutters{
+	name = "Security Checkpoint Shutters";
 	dir = 8;
-	id = "aeg_checkpoint_shutter";
-	name = "Security Checkpoint Shutters"
+	id = "aeg_checkpoint_shutter"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/expoutpost/secbowcheckpoint)
@@ -29222,8 +29205,8 @@
 	dir = 8
 	},
 /obj/structure/disposalpipe/junction{
-	dir = 4;
-	icon_state = "pipe-j2"
+	icon_state = "pipe-j2";
+	dir = 4
 	},
 /turf/simulated/floor,
 /area/expoutpost/lowersternhallway)
@@ -29246,8 +29229,8 @@
 /area/space)
 "xFv" = (
 /obj/machinery/power/apc{
-	dir = 4;
 	name = "east bump";
+	dir = 4;
 	pixel_x = 24
 	},
 /obj/structure/cable/green,
@@ -29345,8 +29328,8 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/power/apc{
-	dir = 8;
 	name = "west bump";
+	dir = 8;
 	pixel_x = -24
 	},
 /obj/structure/cable/green,
@@ -29356,11 +29339,11 @@
 	pixel_y = 12
 	},
 /obj/machinery/button/remote/airlock{
-	dir = 4;
-	id = "aeg_dormone_bolt";
 	name = "Door Bolt";
+	dir = 4;
 	pixel_x = -24;
 	pixel_y = -14;
+	id = "aeg_dormone_bolt";
 	specialfunctions = 4
 	},
 /obj/structure/disposalpipe/segment,
@@ -29483,8 +29466,8 @@
 /area/expoutpost/starbowhallway)
 "xMn" = (
 /obj/structure/disposalpipe/segment{
-	dir = 4;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/expoutpost/explobriefroom)
@@ -29498,8 +29481,8 @@
 	},
 /obj/structure/window/reinforced/survival_pod,
 /obj/structure/grille/rustic{
-	health = 25;
-	name = "reinforced grille"
+	name = "reinforced grille";
+	health = 25
 	},
 /turf/simulated/floor,
 /area/shuttle/echidna)
@@ -29519,11 +29502,11 @@
 	},
 /obj/machinery/papershredder,
 /obj/machinery/button/remote/airlock{
-	dir = 8;
-	id = "aeg_pathfinderroom_bolt";
 	name = "Door Bolt";
+	dir = 8;
 	pixel_x = 24;
 	pixel_y = -8;
+	id = "aeg_pathfinderroom_bolt";
 	specialfunctions = 4
 	},
 /turf/simulated/floor/carpet,
@@ -29546,23 +29529,23 @@
 "xPj" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/yellow,
 /obj/machinery/button/remote/airlock{
-	desiredstate = 1;
-	dir = 4;
-	id = "expshuttle4_door_cargo";
 	name = "Rear Hatch Control";
+	dir = 4;
 	pixel_x = -26;
+	id = "expshuttle4_door_cargo";
 	req_access = list(67);
+	desiredstate = 1;
 	specialfunctions = 4
 	},
 /obj/machinery/door/blast/regular/open{
-	id = "stargazer_blast";
+	name = "window blast shield";
 	layer = 2.5;
-	name = "window blast shield"
+	id = "stargazer_blast"
 	},
 /obj/machinery/door/airlock/multi_tile/metal/mait{
 	icon_state = "door_locked";
-	id_tag = "expshuttle4_door_cargo";
-	locked = 1
+	locked = 1;
+	id_tag = "expshuttle4_door_cargo"
 	},
 /turf/simulated/floor,
 /area/shuttle/baby_mammoth)
@@ -29687,8 +29670,8 @@
 /obj/effect/catwalk_plated/techfloor,
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow,
 /obj/structure/disposalpipe/junction{
-	dir = 1;
-	icon_state = "pipe-j2"
+	icon_state = "pipe-j2";
+	dir = 1
 	},
 /obj/structure/cable/green{
 	icon_state = "1-4"
@@ -29829,16 +29812,15 @@
 /obj/effect/floor_decal/corner/red/border,
 /obj/structure/window/reinforced,
 /obj/structure/window/reinforced{
-	dir = 4;
-	health = 1e+006
+	dir = 4
 	},
 /obj/structure/table/steel_reinforced,
 /obj/machinery/button/remote/blast_door{
-	dir = 1;
-	id = "aeg_checkpoint_shutter";
 	name = "Security Checkpoint Shutters";
+	dir = 1;
 	pixel_x = 6;
-	pixel_y = -5
+	pixel_y = -5;
+	id = "aeg_checkpoint_shutter"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/expoutpost/secbowcheckpoint)
@@ -29853,8 +29835,8 @@
 	dir = 4
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 8;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 8
 	},
 /obj/effect/catwalk_plated/techfloor,
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow,
@@ -29939,8 +29921,8 @@
 "ybG" = (
 /obj/effect/floor_decal/industrial/outline/red,
 /obj/machinery/atmospherics/portables_connector{
-	dir = 4;
-	name = "Refuelling Port"
+	name = "Refuelling Port";
+	dir = 4
 	},
 /turf/simulated/floor/reinforced,
 /area/expoutpost/portfuelstorage)
@@ -29956,8 +29938,8 @@
 "ycc" = (
 /obj/structure/catwalk,
 /obj/item/radio/intercom{
-	dir = 8;
 	name = "Station Intercom (General)";
+	dir = 8;
 	pixel_x = -21
 	},
 /turf/simulated/floor,
@@ -29992,8 +29974,8 @@
 	id = "aeg_disposal_conveyor"
 	},
 /obj/machinery/button/remote/driver{
-	id = "aeg_disposal_driver";
-	pixel_y = -24
+	pixel_y = -24;
+	id = "aeg_disposal_driver"
 	},
 /turf/simulated/floor,
 /area/expoutpost/disposals)
@@ -30127,9 +30109,9 @@
 	},
 /obj/effect/catwalk_plated/techfloor,
 /obj/machinery/door/airlock/engineering{
+	name = "Secure Storage";
 	icon_state = "door_locked";
-	locked = 1;
-	name = "Secure Storage"
+	locked = 1
 	},
 /obj/item/tape/engineering,
 /turf/simulated/floor,
@@ -30195,12 +30177,12 @@
 /area/expoutpost/restrooms)
 "yjG" = (
 /obj/machinery/power/smes/buildable{
-	RCon_tag = "Auxiliary Reactor - Aegis";
-	charge = 2e+006;
+	name = "Auxiliary Reactor SMES";
+	charge = 2e+06;
 	cur_coils = 2;
+	RCon_tag = "Auxiliary Reactor - Aegis";
 	input_attempt = 1;
 	input_level = 500000;
-	name = "Auxiliary Reactor SMES";
 	output_level = 350000
 	},
 /obj/effect/engine_setup/smes,
@@ -30218,8 +30200,7 @@
 	dir = 8
 	},
 /obj/structure/window/reinforced{
-	dir = 4;
-	health = 1e+006
+	dir = 4
 	},
 /obj/machinery/door/window/southright{
 	dir = 1
@@ -30252,8 +30233,8 @@
 	dir = 8
 	},
 /obj/structure/disposalpipe/junction{
-	dir = 4;
-	icon_state = "pipe-j2"
+	icon_state = "pipe-j2";
+	dir = 4
 	},
 /turf/simulated/floor,
 /area/expoutpost/lowersternhallway)
