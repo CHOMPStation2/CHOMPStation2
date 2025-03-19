@@ -22,16 +22,14 @@ if command -v rg >/dev/null 2>&1; then
 		pcre2_support=0
 	fi
 	code_files="code/**/**.dm modular_chomp/code/**/**.dm" #  CHOMPEdit - Modular code
-	map_files="maps/**/**.dmm"
-	modular_map_files="modular_chomp/maps/**/**.dmm" # CHOMPEdit - Modular maps
+	map_files="maps/**/**.dmm modular_chomp/maps/**/**.dmm" # CHOMPEdit - Modular maps
 	# shuttle_map_files="_maps/shuttles/**.dmm"
 	code_x_515="code/**/!(__byond_version_compat).dm"
 else
 	pcre2_support=0
 	grep=grep
 	code_files="-r --include=code/**/**.dm --include=modular_chomp/code/**/**.dm" # CHOMPEdit - Modular code
-	map_files="-r --include=maps/**/**.dmm"
-	modular_map_files="-r --include=modular_chomp/maps/**/**.dmm" # CHOMPEdit - Modular maps
+	map_files="-r --include=maps/**/**.dmm --include=modular_chomp/maps/**/**.dmm" # CHOMPEdit - Modular maps
 	# shuttle_map_files="-r --include=_maps/shuttles/**.dmm"
 	code_x_515="-r --include=code/**/!(__byond_version_compat).dm"
 fi
@@ -253,7 +251,7 @@ if [ "$pcre2_support" -eq 1 ]; then
 		FAILED=1
 	fi
 
-	(! $grep -Pn '( |\t|;|{)tag( ?)=' $modular_map_files)
+	(! $grep -Pn '( |\t|;|{)tag( ?)=' $map_files)
 	retVal=$?
 	if [ $retVal -ne 0 ]; then
 		echo -e "${RED}A map has 'tag' set on an atom. It may cause problems and should be removed.${NC}"
