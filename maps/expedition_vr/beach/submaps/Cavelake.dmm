@@ -16,7 +16,7 @@
 /turf/simulated/mineral/floor/ignore_mapgen/cave,
 /area/submap/Cavelake)
 "f" = (
-/turf/simulated/floor/outdoors/rocks,
+/turf/simulated/floor/outdoors/rocks/caves,
 /area/submap/Cavelake)
 "g" = (
 /mob/living/simple_mob/animal/sif/hooligan_crab,

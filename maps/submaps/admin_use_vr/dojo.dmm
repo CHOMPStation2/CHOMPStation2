@@ -35,7 +35,7 @@
 /obj/item/target/alien,
 /turf/unsimulated/floor{
 	icon = 'icons/turf/flooring/wood.dmi';
-	icon_state = "wood-broken2"
+	icon_state = "wood_broken2"
 	},
 /area/ninja_dojo/dojo)
 "ai" = (
@@ -427,7 +427,7 @@
 "bb" = (
 /turf/unsimulated/floor{
 	icon = 'icons/turf/flooring/wood.dmi';
-	icon_state = "wood-broken1"
+	icon_state = "wood_broken1"
 	},
 /area/ninja_dojo/dojo)
 "bc" = (
@@ -917,7 +917,7 @@
 /obj/machinery/space_heater,
 /turf/unsimulated/floor{
 	icon = 'icons/turf/flooring/wood.dmi';
-	icon_state = "wood-broken3"
+	icon_state = "wood_broken3"
 	},
 /area/ninja_dojo/dojo)
 

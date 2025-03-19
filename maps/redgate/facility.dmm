@@ -13602,7 +13602,7 @@
 	icon_state = "1-2"
 	},
 /obj/structure/cable{
-	icon_state = "1-4"
+	icon_state = "2-4"
 	},
 /obj/structure/cable{
 	icon_state = "2-8"
@@ -13873,7 +13873,7 @@
 	icon_state = "1-2"
 	},
 /obj/structure/cable{
-	icon_state = "1-4"
+	icon_state = "2-4"
 	},
 /turf/unsimulated/floor/techfloor_grid{
 	name = "singularity flooring"
@@ -15248,7 +15248,7 @@
 	icon_state = "1-4"
 	},
 /obj/structure/cable{
-	icon_state = "1-4"
+	icon_state = "2-4"
 	},
 /turf/unsimulated/floor/techfloor_grid{
 	name = "singularity flooring"
@@ -15276,7 +15276,7 @@
 	icon_state = "4-8"
 	},
 /obj/structure/cable{
-	icon_state = "1-4"
+	icon_state = "2-4"
 	},
 /turf/unsimulated/floor/techfloor_grid{
 	name = "singularity flooring"
@@ -16575,7 +16575,7 @@
 /area/redgate/facility/ne)
 "xtG" = (
 /obj/structure/cable{
-	icon_state = "1-4"
+	icon_state = "2-4"
 	},
 /turf/simulated/floor/tiled/eris/dark/orangecorner,
 /area/redgate/facility/cell29)
