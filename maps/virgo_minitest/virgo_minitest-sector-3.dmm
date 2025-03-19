@@ -88,7 +88,7 @@
 /area/awaymission/wwmines)
 "av" = (
 /turf/simulated/floor/wood{
-	icon_state = "wood-broken6"
+	icon_state = "wood_broken6"
 	},
 /area/awaymission/wwmines)
 "aw" = (
@@ -122,7 +122,7 @@
 /area/awaymission/wwmines)
 "aB" = (
 /turf/simulated/floor/wood{
-	icon_state = "wood-broken2"
+	icon_state = "wood_broken2"
 	},
 /area/awaymission/wwmines)
 "aC" = (
@@ -170,7 +170,7 @@
 /area/awaymission/wwmines)
 "aJ" = (
 /turf/simulated/floor/wood{
-	icon_state = "wood-broken4"
+	icon_state = "wood_broken4"
 	},
 /area/awaymission/wwmines)
 "aK" = (
