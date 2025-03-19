@@ -1,4 +1,0 @@
-author: "Kashargul"
-delete-after: True
-changes:
-  - bugfix: "reverts the emote sounds to the chomp ones"

@@ -391,3 +391,15 @@
   - code_imp: Emotes work a bit differently on the backend.
   - bugfix: immunosuprizine is no longer the strongest poison in the game. It will
       no longer do 1245 damage per unit to people you hit with it.
+2025-03-19:
+  CHOMPStation2StaffMirrorBot:
+  - rscadd: Added a new trait called "Reflexive biting" that causes you to bite the
+      hand of anyone who either pats you on the head or boops you on the nose. This
+      deals one point of damage to the hand committing said offense. This also includes
+      a verb in Abilities to toggle this off and on.
+  - rscadd: Added a personal space bubble trait that takes of priority over the biting
+      trait, which dodges all attempts at hugging, booping, patting, licking, sniffing
+      or hand shaking. This can also be toggled on and off.
+  Kashargul:
+  - bugfix: reverts the emote sounds to the chomp ones
+  - code_imp: enable grep on modular chomp
