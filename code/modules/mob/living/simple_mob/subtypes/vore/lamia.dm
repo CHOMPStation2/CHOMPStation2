@@ -111,15 +111,11 @@
 	tail.nonhuman_prey_swallow_time = swallowTime
 	tail.vore_verb = "stuff"
 	tail.belly_sprite_to_affect = "tail"
-<<<<<<< HEAD
-	tail.emote_lists[DM_HOLD] = B.emote_lists[DM_HOLD].Copy()
-	tail.emote_lists[DM_DIGEST] = B.emote_lists[DM_DIGEST].Copy()
 	// CHOMPEdit Start
 	tail.belly_fullscreen = "VBOanim_snakebelly1"
 	tail.belly_fullscreen_color = "#823232"
 	tail.belly_fullscreen_color2 = "#232300"
 	// CHOMPEdit End
-=======
 
 	// Belly Lines by killerdragn (@kilo.ego on discord) from Rogue Star
 	B.emote_lists[DM_HOLD] = list(
@@ -208,7 +204,6 @@
 		"It was a grueling feat to go through the many stages of digestion inside a lamia's %belly, forced to lay there and submit to a lethargic digestion and feel yourself break down steadily, for all your efforts and struggling you just couldn't overcome the power of this half-serpent breaking you down over the next few hours, it hurt at first but now it was all just a dull hot swaddling blanket of chyme welcoming you to your new existence as bellysoup.",
 		"You kicked, squirmed, twisted, rolled and voiced all your frustrations but none of them would stop %pred from digesting you completely, everything you were and could be reduced to a disgusting caloric sludge inside the lamia's %belly. None of your weak struggles from here on out mattered, you twitched and lurched- pushing your hands out weakly hoping someone could rescue you at this last moment but alas your strength failed and you were forced to become food, thoughts drifting off as your meaty self was squeezed and churned down totally after you lost consciousness."
 	)
->>>>>>> 3e51cac73b ( Ports new belly texts for lamia.dm from RS (#17341))
 
 // FFTA Bra
 /mob/living/simple_mob/vore/lamia/bra
