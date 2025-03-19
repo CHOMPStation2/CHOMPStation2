@@ -40,7 +40,7 @@
 /area/submap/Mechpt)
 "i" = (
 /obj/structure/railing{
-	 icon_state = "railing0";
+	icon_state = "railing0";
 	dir = 4
 	},
 /turf/template_noop,
@@ -50,7 +50,7 @@
 /area/submap/Mechpt)
 "k" = (
 /obj/structure/railing{
-	 icon_state = "railing0";
+	icon_state = "railing0";
 	dir = 8
 	},
 /turf/template_noop,
@@ -81,14 +81,14 @@
 /area/submap/Mechpt)
 "r" = (
 /obj/structure/railing{
-	 icon_state = "railing0";
+	icon_state = "railing0";
 	dir = 1
 	},
 /turf/template_noop,
 /area/submap/Mechpt)
 "s" = (
 /obj/structure/railing{
-	 icon_state = "railing0";
+	icon_state = "railing0";
 	dir = 1
 	},
 /obj/structure/table/woodentable,
@@ -97,7 +97,7 @@
 /area/submap/Mechpt)
 "t" = (
 /obj/structure/railing{
-	 icon_state = "railing0";
+	icon_state = "railing0";
 	dir = 1
 	},
 /obj/structure/table/woodentable,
@@ -106,7 +106,7 @@
 /area/submap/Mechpt)
 "u" = (
 /obj/structure/railing{
-	 icon_state = "railing0";
+	icon_state = "railing0";
 	dir = 1
 	},
 /obj/structure/table/woodentable,
@@ -116,7 +116,7 @@
 /area/submap/Mechpt)
 "v" = (
 /obj/structure/railing{
-	 icon_state = "railing0";
+	icon_state = "railing0";
 	dir = 1
 	},
 /obj/structure/table/woodentable,
