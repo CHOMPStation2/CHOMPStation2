@@ -1,0 +1,5 @@
+author: "Cerami"
+delete-after: True
+changes:
+  - rscadd: "reindeer mob, with festive variant"
+  - rscadd: "Lion mob, with toggle for lioness sprite"
