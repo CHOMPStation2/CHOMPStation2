@@ -1,11 +1,6 @@
 /mob
 	var/vantag_hud = 0			// Do I have the HUD enabled?
-<<<<<<< HEAD
-	var/stomach_vision = 1		// By default, you will see stomachs.
 	var/mob/living/simple_mob/temporary_form		// For holding onto a temporary form	//CHOMPEdit - should be mob/living/simple_mob, not /mob
-=======
-	var/mob/temporary_form		// For holding onto a temporary form
->>>>>>> dfeaa5f5ed (Make the belly Visibility pref a client one as opposed to a per-character one. (#17375))
 
 	var/disconnect_time = null		//Time of client loss, set by Logout(), for timekeeping
 
