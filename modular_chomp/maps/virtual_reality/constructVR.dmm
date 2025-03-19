@@ -7338,7 +7338,7 @@
 	},
 /area/vr/outdoors/powered)
 "fRJ" = (
-/obj/machinery/exonet_node/map,
+/obj/machinery/exonet_node,
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/vr/powered/space/mechfactory)
 "fSg" = (
