@@ -1,6 +1,0 @@
-author: "Drathek"
-delete-after: True
-changes:
-  - code_imp: "Added multivar support to hook installers"
-  - maptweak: "Synchronized maps folder with virgo"
-  - rscdel: "Archived a few maps that are not present on virgo"

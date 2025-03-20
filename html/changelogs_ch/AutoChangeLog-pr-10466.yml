@@ -1,4 +1,0 @@
-author: "CHOMPStation2StaffMirrorBot"
-delete-after: True
-changes:
-  - bugfix: "Fixed personal space trait applying nothing and reactive biting applying both effects."
