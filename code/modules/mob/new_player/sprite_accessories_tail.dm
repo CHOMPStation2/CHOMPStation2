@@ -1751,7 +1751,6 @@
 	desc = ""
 	icon_state = "tigresstail"
 	ckeys_allowed = list("hoodoo")
-<<<<<<< HEAD
 */// CHOMPRemove End
 
 /datum/sprite_accessory/tail/longtail/longflufftail
@@ -1778,5 +1777,3 @@
 	ani_state = "nightstalker_diamondback_w"
 	extra_overlay = "nightstalker_diamondback_markings"
 	extra_overlay_w = "nightstalker_diamondback_markings_w"
-=======
->>>>>>> 7616e82759 (Demi Tesh Conversion Kit (#17292))
