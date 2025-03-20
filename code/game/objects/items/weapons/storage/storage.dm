@@ -238,11 +238,17 @@
 
 /obj/item/storage/proc/open(mob/user as mob)
 	if (use_sound)
+<<<<<<< HEAD
 		//CHOMPStation Edit
 		var/obj/belly/B = user.loc
 		if(isliving(user) && (!isbelly(B) || !(B.mode_flags & DM_FLAG_MUFFLEITEMS)))
 			playsound(src, src.use_sound, 50, 0, -5)
 		//CHOMPStation Edit end
+=======
+		var/obj/belly/B = user.loc
+		if(isliving(user) && (!isbelly(B) || !(B.mode_flags & DM_FLAG_MUFFLEITEMS)))
+			playsound(src, src.use_sound, 50, 0, -5)
+>>>>>>> bfac760d70 (up port muffle items (#17380))
 
 	orient2hud(user)
 	if(user.s_active)

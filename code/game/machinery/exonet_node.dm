@@ -24,6 +24,7 @@
 // Parameters: None
 // Description: Adds components to the machine for deconstruction.
 /obj/machinery/exonet_node/Initialize(mapload)
+<<<<<<< HEAD
 	// CHOMPAdd: Exonet Machinery humming
 	soundloop = new(list(src), FALSE)
 	if(prob(60)) // 60% chance to change the midloop
@@ -38,15 +39,20 @@
 			soundloop.mid_length = 30
 	soundloop.start() // CHOMPStation Edit: This starts on
 	// CHOMPAdd End
+=======
+>>>>>>> bfac760d70 (up port muffle items (#17380))
 	. = ..()
 	default_apply_parts()
 	if(mapload)
 		desc = "This machine is one of many, many nodes inside [using_map.starsys_name]'s section of the Exonet, connecting the [using_map.station_short] to the rest of the system, at least \
 		electronically."
+<<<<<<< HEAD
 
 /obj/machinery/exonet_node/Destroy() // CHOMPAdd: Just in case.
 	QDEL_NULL(soundloop) // CHOMPAdd: Exonet noises
 	return ..()
+=======
+>>>>>>> bfac760d70 (up port muffle items (#17380))
 
 // Proc: update_icon()
 // Parameters: None
