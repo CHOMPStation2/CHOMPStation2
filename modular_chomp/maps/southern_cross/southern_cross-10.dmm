@@ -160,10 +160,10 @@
 /area/surface/outside/river/svartan)
 "aS" = (
 /turf/simulated/floor/wood{
-	nitrogen = 93.7835;
-	outdoors = 1;
+	temperature = 243.15;
 	oxygen = 20.7263;
-	temperature = 243.15
+	nitrogen = 93.7835;
+	outdoors = 1
 	},
 /area/surface/outside/path/wilderness)
 "aT" = (
@@ -193,10 +193,10 @@
 	dir = 1
 	},
 /obj/machinery/door/blast/shutters{
+	name = "Wilderness Shelter Shutters";
 	dir = 2;
-	id = "wilderness_shelter_1st_floor";
 	layer = 4;
-	name = "Wilderness Shelter Shutters"
+	id = "wilderness_shelter_1st_floor"
 	},
 /turf/simulated/floor/wood/sif,
 /area/surface/outpost/shelter)
@@ -210,10 +210,10 @@
 "bc" = (
 /obj/structure/simple_door/sifwood,
 /obj/machinery/door/blast/shutters{
+	name = "Wilderness Shelter Shutters";
 	dir = 2;
-	id = "wilderness_shelter_1st_floor";
 	layer = 4;
-	name = "Wilderness Shelter Shutters"
+	id = "wilderness_shelter_1st_floor"
 	},
 /obj/machinery/atmospheric_field_generator/perma/underdoors,
 /turf/simulated/floor/wood/sif,
@@ -241,17 +241,17 @@
 /area/surface/outpost/shelter)
 "bf" = (
 /obj/machinery/button/remote/blast_door{
-	id = "wilderness_shelter_1st_floor";
 	name = "Wilderness Shelter Shutters";
-	pixel_y = 26
+	pixel_y = 26;
+	id = "wilderness_shelter_1st_floor"
 	},
 /turf/simulated/floor/wood/sif,
 /area/surface/outpost/shelter)
 "bg" = (
 /obj/structure/table/sifwooden_reinforced,
 /obj/machinery/power/apc{
-	dir = 8;
 	name = "west bump";
+	dir = 8;
 	pixel_x = -24
 	},
 /obj/structure/cable{
@@ -261,8 +261,8 @@
 	icon_state = "1-2"
 	},
 /obj/item/radio/subspace{
-	desc = "A heavy duty radio that can pick up all manor of shortwave and subspace frequencies. It's a bit bulkier than a normal radio thanks to the extra hardware. An engraving on the frame reads: IF FOUND, RETURN TO WILDERNESS SHELTER!";
-	name = "Wilderness Shelter subspace radio"
+	name = "Wilderness Shelter subspace radio";
+	desc = "A heavy duty radio that can pick up all manor of shortwave and subspace frequencies. It's a bit bulkier than a normal radio thanks to the extra hardware. An engraving on the frame reads: IF FOUND, RETURN TO WILDERNESS SHELTER!"
 	},
 /obj/item/spaceflare{
 	pixel_x = 5;
@@ -280,8 +280,8 @@
 /area/surface/outpost/shelter)
 "bi" = (
 /obj/machinery/camera/network/carrier{
-	c_tag = "WILD - Shelter First Floor";
-	dir = 8
+	dir = 8;
+	c_tag = "WILD - Shelter First Floor"
 	},
 /turf/simulated/floor/wood/sif,
 /area/surface/outpost/shelter)
@@ -353,10 +353,10 @@
 /area/surface/outpost/shelter)
 "bw" = (
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1380;
-	id_tag = "mining_dock_1";
 	name = "shuttle bay controller";
 	pixel_y = -26;
+	frequency = 1380;
+	id_tag = "mining_dock_1";
 	tag_door = "mining_dock_1_door"
 	},
 /obj/machinery/alarm/sifwilderness{
@@ -391,10 +391,10 @@
 /obj/item/banner/virgov,
 /obj/machinery/light/small,
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1380;
-	id_tag = "mining_dock_3";
 	name = "shuttle bay controller";
 	pixel_y = -26;
+	frequency = 1380;
+	id_tag = "mining_dock_3";
 	tag_door = "mining_dock_3_door"
 	},
 /obj/structure/cable{
@@ -410,9 +410,9 @@
 /area/surface/outpost/wall/checkpoint)
 "bD" = (
 /obj/effect/shuttle_landmark{
-	docking_controller = "mining_dock_3";
+	name = "Wilderness Landing Site";
 	landmark_tag = "shuttle3_mining";
-	name = "Wilderness Landing Site"
+	docking_controller = "mining_dock_3"
 	},
 /turf/simulated/floor/outdoors/grass/sif/planetuse{
 	tree_chance = 0
@@ -448,10 +448,10 @@
 	dir = 1
 	},
 /obj/machinery/door/blast/shutters{
+	name = "Wilderness Shelter Shutters";
 	dir = 2;
-	id = "wilderness_shelter_2nd_floor";
 	layer = 4;
-	name = "Wilderness Shelter Shutters"
+	id = "wilderness_shelter_2nd_floor"
 	},
 /turf/simulated/floor/wood/sif,
 /area/surface/outpost/shelter)
@@ -463,8 +463,8 @@
 /area/surface/outpost/shelter)
 "cD" = (
 /obj/machinery/camera/network/carrier{
-	c_tag = "WILD - Shelter Crew Dorms";
-	dir = 4
+	dir = 4;
+	c_tag = "WILD - Shelter Crew Dorms"
 	},
 /obj/structure/table/sifwooden_reinforced,
 /obj/item/flashlight/lamp/green,
@@ -516,7 +516,7 @@
 /obj/structure/closet/medical_wall{
 	name = "Wilderness Shelter first-aid closet";
 	pixel_y = 31;
-	starts_with = list(/obj/item/roller,/obj/item/bodybag/cryobag,/obj/item/storage/firstaid/regular=2,/obj/item/storage/pill_bottle/spaceacillin)
+	starts_with = list(/obj/item/roller, /obj/item/bodybag/cryobag, /obj/item/storage/firstaid/regular=2, /obj/item/storage/pill_bottle/spaceacillin)
 	},
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 1
@@ -532,10 +532,10 @@
 "fY" = (
 /obj/effect/zone_divider,
 /obj/machinery/button/remote/blast_door{
-	dir = 1;
-	id = "wilderness_shelter_1st_floor";
 	name = "Wilderness Shelter Shutters";
+	dir = 1;
 	pixel_y = -26;
+	id = "wilderness_shelter_1st_floor";
 	req_one_access = list(1,5,10,12,13,18,31,43,47,48,50)
 	},
 /turf/simulated/floor/outdoors/dirt/sif/planetuse,
@@ -566,9 +566,9 @@
 	icon_state = "0-2"
 	},
 /obj/machinery/button/remote/blast_door{
-	id = "wilderness_shelter_Utility";
 	name = "Wilderness Shelter Shutters";
-	pixel_y = 26
+	pixel_y = 26;
+	id = "wilderness_shelter_Utility"
 	},
 /obj/structure/cable{
 	icon_state = "2-4"
@@ -660,10 +660,10 @@
 /area/surface/outpost/shelter/utilityroom)
 "jf" = (
 /obj/effect/shuttle_landmark{
-	base_area = /area/surface/outpost/shelter/exterior;
-	base_turf = /turf/simulated/floor/outdoors/grass/sif/planetuse;
+	name = "Wilderness Shelter";
 	landmark_tag = "wilderness_s";
-	name = "Wilderness Shelter"
+	base_turf = /turf/simulated/floor/outdoors/grass/sif/planetuse;
+	base_area = /area/surface/outpost/shelter/exterior
 	},
 /turf/simulated/floor/outdoors/grass/sif/planetuse{
 	tree_chance = 0
@@ -698,10 +698,10 @@
 /area/surface/outside/wilderness/normal)
 "kU" = (
 /obj/effect/shuttle_landmark{
-	base_area = /area/surface/outside/landing/wilderness;
-	base_turf = /turf/simulated/floor/outdoors/grass/sif/planetuse;
+	name = "Southeast of Wilderness";
 	landmark_tag = "wilderness_se";
-	name = "Southeast of Wilderness"
+	base_turf = /turf/simulated/floor/outdoors/grass/sif/planetuse;
+	base_area = /area/surface/outside/landing/wilderness
 	},
 /turf/simulated/floor/outdoors/grass/sif/planetuse{
 	tree_chance = 0
@@ -823,18 +823,18 @@
 /area/surface/outpost/shelter/utilityroom)
 "pQ" = (
 /obj/machinery/button/remote/blast_door{
-	dir = 4;
-	id = "wilderness_shelter_2nd_floor_2";
 	name = "Wilderness Shelter Shutters";
+	dir = 4;
 	pixel_x = -26;
+	id = "wilderness_shelter_2nd_floor_2";
 	req_one_access = null
 	},
 /turf/simulated/floor/wood/sif,
 /area/surface/outpost/shelter/dorms)
 "qe" = (
 /obj/machinery/camera/network/medbay{
-	c_tag = "WILD - Shelter First Aid";
-	dir = 8
+	dir = 8;
+	c_tag = "WILD - Shelter First Aid"
 	},
 /obj/effect/floor_decal/borderfloorwhite,
 /obj/effect/floor_decal/corner/paleblue/border,
@@ -891,9 +891,9 @@
 /area/surface/outpost/shelter)
 "rv" = (
 /obj/machinery/bluespace_beacon{
-	alpha = 0;
+	name = "Wilderness Shelter Bluespace Gigabeacon";
 	desc = "A device that draws power from bluespace and creates a permanent tracking beacon. This one has a cloaking field. How keen of you to notice!";
-	name = "Wilderness Shelter Bluespace Gigabeacon"
+	alpha = 0
 	},
 /turf/simulated/floor/wood/sif,
 /area/surface/outpost/shelter)
@@ -906,7 +906,7 @@
 /obj/structure/closet/medical_wall{
 	name = "Wilderness Shelter first-aid closet";
 	pixel_y = 31;
-	starts_with = list(/obj/item/roller,/obj/item/bodybag/cryobag,/obj/item/storage/firstaid/regular=2,/obj/item/storage/pill_bottle/spaceacillin)
+	starts_with = list(/obj/item/roller, /obj/item/bodybag/cryobag, /obj/item/storage/firstaid/regular=2, /obj/item/storage/pill_bottle/spaceacillin)
 	},
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -929,8 +929,8 @@
 "tx" = (
 /obj/structure/cable,
 /obj/machinery/power/apc{
-	dir = 4;
 	name = "east bump";
+	dir = 4;
 	pixel_x = 24
 	},
 /turf/simulated/floor/wood/sif,
@@ -943,8 +943,8 @@
 	icon_state = "0-2"
 	},
 /obj/machinery/power/apc{
-	dir = 8;
 	name = "west bump";
+	dir = 8;
 	pixel_x = -24
 	},
 /obj/structure/cable{
@@ -954,10 +954,10 @@
 /area/surface/outpost/shelter/utilityroom)
 "tK" = (
 /obj/machinery/button/remote/blast_door{
-	dir = 8;
-	id = "wilderness_shelter_Utility";
 	name = "Wilderness Shelter Shutters";
+	dir = 8;
 	pixel_x = 24;
+	id = "wilderness_shelter_Utility";
 	req_one_access = list(1,5,10,12,13,18,31,43,47,48,50)
 	},
 /obj/structure/cable{
@@ -990,8 +990,8 @@
 	anchored = 1
 	},
 /obj/machinery/camera/network/carrier{
-	c_tag = "WILD - Shelter Utility Room";
-	dir = 1
+	dir = 1;
+	c_tag = "WILD - Shelter Utility Room"
 	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/shelter/utilityroom)
@@ -1009,10 +1009,10 @@
 "vq" = (
 /obj/structure/table/sifwooden_reinforced,
 /obj/item/storage/box{
-	max_storage_space = 20;
 	name = "box of 7.62mm practice clips";
 	pixel_x = 3;
 	pixel_y = 3;
+	max_storage_space = 20;
 	starts_with = list(/obj/item/ammo_magazine/clip/c762/practice=10)
 	},
 /obj/item/storage/bag/trash{
@@ -1024,10 +1024,10 @@
 	pixel_y = -5
 	},
 /obj/item/storage/box{
-	max_storage_space = 20;
 	name = "box of 7.62mm practice clips";
 	pixel_x = 3;
 	pixel_y = -1;
+	max_storage_space = 20;
 	starts_with = list(/obj/item/ammo_magazine/clip/c762/practice=10)
 	},
 /obj/machinery/recharger/wallcharger{
@@ -1046,8 +1046,8 @@
 	layer = 3
 	},
 /obj/machinery/button/windowtint{
-	id = "dorm_wildey";
-	pixel_x = -22
+	pixel_x = -22;
+	id = "dorm_wildey"
 	},
 /turf/simulated/floor/wood/sif,
 /area/surface/outpost/shelter/dorms)
@@ -1058,7 +1058,7 @@
 "xj" = (
 /obj/structure/closet/walllocker_double/survival/north{
 	name = "Wilderness Shelter Emergency Survival Wall Cabinet";
-	starts_with = list(/obj/item/gps=5,/obj/item/material/knife/tacknife/survival=5,/obj/random/mre=5,/obj/item/flashlight/color/yellow=5,/obj/item/flashlight/flare=5,/obj/item/reagent_containers/food/drinks/cans/waterbottle=5,/obj/item/whetstone)
+	starts_with = list(/obj/item/gps=5, /obj/item/material/knife/tacknife/survival=5, /obj/random/mre=5, /obj/item/flashlight/color/yellow=5, /obj/item/flashlight/flare=5, /obj/item/reagent_containers/food/drinks/cans/waterbottle=5, /obj/item/whetstone)
 	},
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -1075,8 +1075,8 @@
 /area/surface/outpost/shelter/exterior)
 "xM" = (
 /obj/machinery/camera/network/carrier{
-	c_tag = "WILD - Shelter First Floor Exterior";
-	dir = 1
+	dir = 1;
+	c_tag = "WILD - Shelter First Floor Exterior"
 	},
 /turf/simulated/floor/outdoors/dirt/sif/planetuse,
 /area/surface/outpost/shelter/exterior)
@@ -1098,8 +1098,8 @@
 /area/surface/outpost/shelter/utilityroom)
 "yv" = (
 /obj/machinery/camera/network/carrier{
-	c_tag = "WILD - Shelter Utility Exterior";
-	dir = 4
+	dir = 4;
+	c_tag = "WILD - Shelter Utility Exterior"
 	},
 /turf/simulated/floor/outdoors/dirt/sif/planetuse,
 /area/surface/outpost/shelter/exterior)
@@ -1113,8 +1113,8 @@
 /obj/structure/closet/secure_closet/medical_wall{
 	name = "Wilderness Shelter defibrillator closet";
 	pixel_y = 31;
-	req_access = null;
 	req_one_access = list(1,3,43,66,67);
+	req_access = null;
 	starts_with = list(/obj/item/defib_kit/loaded)
 	},
 /obj/structure/cable{
@@ -1138,10 +1138,10 @@
 /area/surface/outpost/shelter/utilityroom)
 "As" = (
 /turf/simulated/floor/wood{
-	nitrogen = 93.7835;
-	outdoors = 1;
+	temperature = 243.15;
 	oxygen = 20.7263;
-	temperature = 243.15
+	nitrogen = 93.7835;
+	outdoors = 1
 	},
 /area/surface/outside/river/svartan)
 "AB" = (
@@ -1167,10 +1167,10 @@
 	},
 /obj/structure/simple_door/sifwood,
 /obj/machinery/door/blast/shutters{
+	name = "Wilderness Shelter Shutters";
 	dir = 2;
-	id = "wilderness_shelter_Utility";
 	layer = 3;
-	name = "Wilderness Shelter Shutters"
+	id = "wilderness_shelter_Utility"
 	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/shelter/utilityroom)
@@ -1234,10 +1234,10 @@
 	dir = 4
 	},
 /obj/machinery/button/remote/blast_door{
-	dir = 8;
-	id = "wilderness_shelter_2nd_floor";
 	name = "Wilderness Shelter Shutters";
+	dir = 8;
 	pixel_x = 26;
+	id = "wilderness_shelter_2nd_floor";
 	req_one_access = null
 	},
 /obj/structure/cable{
@@ -1290,10 +1290,10 @@
 "GG" = (
 /obj/machinery/light,
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1380;
-	id_tag = "om_wilderness";
 	name = "shuttle bay controller";
-	pixel_y = -29
+	pixel_y = -29;
+	frequency = 1380;
+	id_tag = "om_wilderness"
 	},
 /turf/simulated/floor/outdoors/dirt/sif/planetuse,
 /area/surface/outpost/shelter/exterior)
@@ -1354,10 +1354,10 @@
 	dir = 1
 	},
 /obj/machinery/vending/engivend{
-	desc = "Spare tool vending for the Wilderness Shelter. What? Did you expect some witty description?";
 	name = "Wild Shelter-Vend";
-	products = list(/obj/item/geiger=4,/obj/item/cell/high=10,/obj/item/airlock_electronics=10,/obj/item/module/power_control=10,/obj/item/circuitboard/airalarm=10,/obj/item/circuitboard/firealarm=10,/obj/item/circuitboard/status_display=2,/obj/item/circuitboard/ai_status_display=2,/obj/item/circuitboard/newscaster=2,/obj/item/circuitboard/holopad=2,/obj/item/circuitboard/intercom=4,/obj/item/circuitboard/security/telescreen/entertainment=4,/obj/item/stock_parts/motor=2,/obj/item/stock_parts/spring=2,/obj/item/stock_parts/gear=2,/obj/item/circuitboard/atm,/obj/item/circuitboard/guestpass,/obj/item/circuitboard/keycard_auth,/obj/item/circuitboard/geiger,/obj/item/circuitboard/photocopier,/obj/item/circuitboard/fax,/obj/item/circuitboard/request,/obj/item/circuitboard/microwave,/obj/item/circuitboard/washing,/obj/item/circuitboard/scanner_console,/obj/item/circuitboard/sleeper_console,/obj/item/circuitboard/body_scanner,/obj/item/circuitboard/medical_kiosk,/obj/item/circuitboard/sleeper,/obj/item/circuitboard/dna_analyzer);
-	req_access = null
+	desc = "Spare tool vending for the Wilderness Shelter. What? Did you expect some witty description?";
+	req_access = null;
+	products = list(/obj/item/geiger=4, /obj/item/cell/high=10, /obj/item/airlock_electronics=10, /obj/item/module/power_control=10, /obj/item/circuitboard/airalarm=10, /obj/item/circuitboard/firealarm=10, /obj/item/circuitboard/status_display=2, /obj/item/circuitboard/ai_status_display=2, /obj/item/circuitboard/newscaster=2, /obj/item/circuitboard/holopad=2, /obj/item/circuitboard/intercom=4, /obj/item/circuitboard/security/telescreen/entertainment=4, /obj/item/stock_parts/motor=2, /obj/item/stock_parts/spring=2, /obj/item/stock_parts/gear=2, /obj/item/circuitboard/atm, /obj/item/circuitboard/guestpass, /obj/item/circuitboard/keycard_auth, /obj/item/circuitboard/geiger, /obj/item/circuitboard/photocopier, /obj/item/circuitboard/fax, /obj/item/circuitboard/request, /obj/item/circuitboard/microwave, /obj/item/circuitboard/washing, /obj/item/circuitboard/scanner_console, /obj/item/circuitboard/sleeper_console, /obj/item/circuitboard/body_scanner, /obj/item/circuitboard/medical_kiosk, /obj/item/circuitboard/sleeper, /obj/item/circuitboard/dna_analyzer)
 	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/shelter/utilityroom)
@@ -1376,17 +1376,17 @@
 "KU" = (
 /obj/machinery/light/small,
 /obj/structure/closet/secure_closet/guncabinet{
-	anchored = 1;
-	req_one_access = list(1,3,43,67)
+	req_one_access = list(1,3,43,67);
+	anchored = 1
 	},
 /obj/item/storage/box/syndie_kit{
-	max_storage_space = 20;
 	name = "box of 7.62mm clips";
+	max_storage_space = 20;
 	starts_with = list(/obj/item/ammo_magazine/clip/c762=10)
 	},
 /obj/item/storage/box/syndie_kit{
-	max_storage_space = 20;
 	name = "box of 7.62mm clips";
+	max_storage_space = 20;
 	starts_with = list(/obj/item/ammo_magazine/clip/c762=10)
 	},
 /obj/item/binoculars,
@@ -1417,10 +1417,10 @@
 "LI" = (
 /obj/structure/boulder,
 /turf/simulated/floor/wood{
-	nitrogen = 93.7835;
-	outdoors = 1;
+	temperature = 243.15;
 	oxygen = 20.7263;
-	temperature = 243.15
+	nitrogen = 93.7835;
+	outdoors = 1
 	},
 /area/surface/outside/river/svartan)
 "Mg" = (
@@ -1458,8 +1458,8 @@
 /area/surface/outside/landing/wilderness)
 "Oy" = (
 /obj/machinery/power/apc{
-	dir = 4;
 	name = "east bump";
+	dir = 4;
 	pixel_x = 24
 	},
 /obj/structure/cable{
@@ -1492,8 +1492,8 @@
 /area/surface/outpost/shelter/dorms)
 "Px" = (
 /obj/machinery/camera/network/carrier{
-	c_tag = "WILD - Shelter Second Floor";
-	dir = 8
+	dir = 8;
+	c_tag = "WILD - Shelter Second Floor"
 	},
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -1518,25 +1518,25 @@
 "Rr" = (
 /obj/structure/table/sifwooden_reinforced,
 /obj/item/stack/material/log/sif{
-	amount = 25;
 	icon_state = "sheet-log_3";
 	pixel_x = -5;
-	pixel_y = 2
+	pixel_y = 2;
+	amount = 25
 	},
 /obj/item/stack/material/log/sif{
-	amount = 25;
 	icon_state = "sheet-log_3";
 	pixel_x = 5;
-	pixel_y = 2
+	pixel_y = 2;
+	amount = 25
 	},
 /obj/item/stack/tile/wood/sif{
-	amount = 60;
-	icon_state = "tile-sifwood_3"
+	icon_state = "tile-sifwood_3";
+	amount = 60
 	},
 /obj/item/stack/material/wood/sif{
-	amount = 50;
 	icon_state = "sheet-wood_3";
-	pixel_y = 2
+	pixel_y = 2;
+	amount = 50
 	},
 /obj/item/chainsaw{
 	layer = 3.01
@@ -1584,8 +1584,8 @@
 	icon_state = "1-4"
 	},
 /obj/machinery/power/rtg/fake_gen{
-	desc = "A simple power generator, used in small outposts to reliably provide power for decades.";
 	name = "Wilderness Shelter power generator";
+	desc = "A simple power generator, used in small outposts to reliably provide power for decades.";
 	power_gen = 9000
 	},
 /turf/simulated/floor/plating,
@@ -1616,10 +1616,10 @@
 "Us" = (
 /obj/effect/zone_divider,
 /obj/effect/shuttle_landmark/automatic/clearing{
-	base_area = /area/surface/outside/plains/normal;
-	base_turf = /turf/simulated/floor/outdoors/grass/sif/planetuse;
+	name = "Northwest Outpost Perimiter";
 	landmark_tag = "outpost_nw";
-	name = "Northwest Outpost Perimiter"
+	base_turf = /turf/simulated/floor/outdoors/grass/sif/planetuse;
+	base_area = /area/surface/outside/plains/normal
 	},
 /turf/simulated/floor/outdoors/dirt/sif/planetuse,
 /area/surface/outside/wilderness/normal)
@@ -1648,7 +1648,7 @@
 	},
 /obj/structure/closet/walllocker_double/survival/north{
 	name = "Wilderness Shelter Emergency Food Wall Cabinet";
-	starts_with = list(/obj/random/mre=20,/obj/item/reagent_containers/food/drinks/cans/waterbottle=20)
+	starts_with = list(/obj/random/mre=20, /obj/item/reagent_containers/food/drinks/cans/waterbottle=20)
 	},
 /turf/simulated/floor/tiled/white,
 /area/surface/outpost/shelter)
@@ -1671,8 +1671,8 @@
 /obj/structure/closet/secure_closet/medical_wall{
 	name = "Wilderness Shelter defibrillator closet";
 	pixel_y = 31;
-	req_access = null;
 	req_one_access = list(1,3,43,66,67);
+	req_access = null;
 	starts_with = list(/obj/item/defib_kit/loaded)
 	},
 /obj/effect/floor_decal/borderfloorwhite{
@@ -1685,10 +1685,10 @@
 /area/surface/outpost/shelter)
 "WL" = (
 /obj/effect/shuttle_landmark{
-	base_area = /area/surface/outside/landing/wilderness;
-	base_turf = /turf/simulated/floor/outdoors/grass/sif/planetuse;
+	name = "West of Wilderness";
 	landmark_tag = "wilderness_w";
-	name = "West of Wilderness"
+	base_turf = /turf/simulated/floor/outdoors/grass/sif/planetuse;
+	base_area = /area/surface/outside/landing/wilderness
 	},
 /turf/simulated/floor/outdoors/grass/sif/forest/planetuse{
 	tree_chance = 0
@@ -1734,10 +1734,10 @@
 	id = "dorm_wildey"
 	},
 /obj/machinery/door/blast/shutters{
+	name = "Wilderness Shelter Shutters";
 	dir = 2;
-	id = "wilderness_shelter_2nd_floor_2";
 	layer = 4;
-	name = "Wilderness Shelter Shutters"
+	id = "wilderness_shelter_2nd_floor_2"
 	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/shelter/dorms)
@@ -1759,10 +1759,10 @@
 /area/surface/outside/wilderness/deep)
 "Zs" = (
 /obj/effect/shuttle_landmark{
-	base_area = /area/surface/outside/landing/wilderness;
-	base_turf = /turf/simulated/floor/outdoors/grass/sif/planetuse;
+	name = "North of Wilderness";
 	landmark_tag = "wilderness_n";
-	name = "North of Wilderness"
+	base_turf = /turf/simulated/floor/outdoors/grass/sif/planetuse;
+	base_area = /area/surface/outside/landing/wilderness
 	},
 /turf/simulated/floor/outdoors/grass/sif/forest/planetuse{
 	tree_chance = 0

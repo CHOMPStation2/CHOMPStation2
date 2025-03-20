@@ -7,13 +7,13 @@
 /area/space)
 "ah" = (
 /obj/effect/step_trigger/teleporter/random{
-	affect_ghosts = 1;
 	name = "escapeshuttle_leave";
+	affect_ghosts = 1;
 	teleport_x = 25;
-	teleport_x_offset = 245;
 	teleport_y = 25;
-	teleport_y_offset = 245;
 	teleport_z = 4;
+	teleport_x_offset = 245;
+	teleport_y_offset = 245;
 	teleport_z_offset = 4
 	},
 /turf/space/transit/east,
@@ -41,24 +41,24 @@
 /area/space)
 "at" = (
 /obj/effect/step_trigger/teleporter/random{
-	affect_ghosts = 1;
 	name = "escapeshuttle_leave";
+	affect_ghosts = 1;
 	teleport_x = 25;
-	teleport_x_offset = 245;
 	teleport_y = 25;
-	teleport_y_offset = 245;
 	teleport_z = 4;
+	teleport_x_offset = 245;
+	teleport_y_offset = 245;
 	teleport_z_offset = 4
 	},
 /turf/space/transit/north,
 /area/space)
 "av" = (
 /obj/effect/step_trigger/thrower{
-	affect_ghosts = 1;
 	name = "thrower_throwdown";
-	nostop = 1;
+	tiles = 0;
+	affect_ghosts = 1;
 	stopper = 0;
-	tiles = 0
+	nostop = 1
 	},
 /turf/simulated/sky/moving/north,
 /area/space)
@@ -73,33 +73,33 @@
 	landmark_id = "fall_sif"
 	},
 /obj/effect/step_trigger/thrower{
-	affect_ghosts = 1;
 	name = "thrower_throwdown";
-	nostop = 1;
+	tiles = 0;
+	affect_ghosts = 1;
 	stopper = 0;
-	tiles = 0
+	nostop = 1
 	},
 /turf/simulated/sky/moving/north,
 /area/space)
 "aC" = (
 /obj/effect/step_trigger/thrower{
-	affect_ghosts = 1;
 	name = "thrower_throwdown";
-	nostop = 1;
+	tiles = 0;
+	affect_ghosts = 1;
 	stopper = 0;
-	tiles = 0
+	nostop = 1
 	},
 /turf/simulated/sky/south,
 /area/space)
 "aE" = (
 /obj/effect/step_trigger/teleporter/random{
-	affect_ghosts = 1;
 	name = "escapeshuttle_leave";
+	affect_ghosts = 1;
 	teleport_x = 25;
-	teleport_x_offset = 245;
 	teleport_y = 25;
-	teleport_y_offset = 245;
 	teleport_z = 4;
+	teleport_x_offset = 245;
+	teleport_y_offset = 245;
 	teleport_z_offset = 4
 	},
 /turf/space,
@@ -115,8 +115,8 @@
 /area/shuttle/large_escape_pod1/transit)
 "aM" = (
 /obj/effect/step_trigger/thrower{
-	direction = 1;
 	name = "thrower_throwup";
+	direction = 1;
 	tiles = 0
 	},
 /turf/simulated/sky/east,
@@ -135,25 +135,25 @@
 /area/shuttle/large_escape_pod1/transit)
 "aS" = (
 /obj/effect/shuttle_landmark{
-	landmark_tag = "response_ship_sky";
-	name = "Skies of Sif"
+	name = "Skies of Sif";
+	landmark_tag = "response_ship_sky"
 	},
 /turf/simulated/sky/east,
 /area/space)
 "aV" = (
 /obj/effect/step_trigger/thrower{
-	affect_ghosts = 1;
 	name = "thrower_throwdown";
-	nostop = 1;
+	tiles = 0;
+	affect_ghosts = 1;
 	stopper = 0;
-	tiles = 0
+	nostop = 1
 	},
 /turf/simulated/sky/east,
 /area/space)
 "aX" = (
 /obj/effect/shuttle_landmark{
-	landmark_tag = "ninja_sky";
-	name = "Skies of Sif"
+	name = "Skies of Sif";
+	landmark_tag = "ninja_sky"
 	},
 /turf/simulated/sky/south,
 /area/space)
@@ -176,13 +176,13 @@
 /area/shuttle/large_escape_pod2/transit)
 "bx" = (
 /obj/effect/step_trigger/teleporter/random{
-	affect_ghosts = 1;
 	name = "escapeshuttle_leave";
+	affect_ghosts = 1;
 	teleport_x = 25;
-	teleport_x_offset = 245;
 	teleport_y = 25;
-	teleport_y_offset = 245;
 	teleport_z = 4;
+	teleport_x_offset = 245;
+	teleport_y_offset = 245;
 	teleport_z_offset = 4
 	},
 /turf/space/transit/south,
@@ -192,11 +192,11 @@
 /area/space)
 "bN" = (
 /obj/effect/step_trigger/thrower{
-	affect_ghosts = 1;
 	name = "thrower_throwdown";
-	nostop = 1;
+	tiles = 0;
+	affect_ghosts = 1;
 	stopper = 0;
-	tiles = 0
+	nostop = 1
 	},
 /turf/simulated/sky/moving/south,
 /area/space)
@@ -208,11 +208,11 @@
 /area/space)
 "cm" = (
 /obj/effect/step_trigger/thrower{
-	affect_ghosts = 1;
 	name = "thrower_throwdown";
-	nostop = 1;
+	tiles = 0;
+	affect_ghosts = 1;
 	stopper = 0;
-	tiles = 0
+	nostop = 1
 	},
 /turf/space/transit/north,
 /area/space)
@@ -240,8 +240,8 @@
 /area/shuttle/escape_pod6/transit)
 "cY" = (
 /obj/effect/step_trigger/thrower{
-	affect_ghosts = 1;
-	name = "thrower_leftnostop"
+	name = "thrower_leftnostop";
+	affect_ghosts = 1
 	},
 /turf/space/transit/east,
 /area/space)
@@ -261,8 +261,8 @@
 /area/shuttle/escape_pod6/transit)
 "dj" = (
 /obj/effect/step_trigger/thrower{
-	direction = 1;
 	name = "thrower_throwup";
+	direction = 1;
 	tiles = 0
 	},
 /turf/space/transit/east,
@@ -275,18 +275,18 @@
 /area/shuttle/shuttle3/sky)
 "dq" = (
 /obj/effect/shuttle_landmark/transit{
-	landmark_tag = "response_ship_transit";
-	name = "ERT Transit"
+	name = "ERT Transit";
+	landmark_tag = "response_ship_transit"
 	},
 /turf/space/transit/east,
 /area/space)
 "dr" = (
 /obj/effect/step_trigger/thrower{
-	affect_ghosts = 1;
 	name = "thrower_throwdown";
-	nostop = 1;
+	tiles = 0;
+	affect_ghosts = 1;
 	stopper = 0;
-	tiles = 0
+	nostop = 1
 	},
 /turf/space/transit/east,
 /area/space)
@@ -295,8 +295,8 @@
 /area/space)
 "du" = (
 /obj/effect/step_trigger/thrower{
-	direction = 1;
 	name = "thrower_throwup";
+	direction = 1;
 	tiles = 0
 	},
 /turf/simulated/sky/moving/east,
@@ -341,8 +341,8 @@
 /area/shuttle/arrival/pre_game)
 "er" = (
 /obj/effect/shuttle_landmark/transit{
-	landmark_tag = "response_ship_sky_transit";
-	name = "ERT Sky Transit"
+	name = "ERT Sky Transit";
+	landmark_tag = "response_ship_sky_transit"
 	},
 /turf/simulated/sky/moving/east,
 /area/space)
@@ -351,11 +351,11 @@
 /area/shuttle/shuttle3/orbit)
 "eB" = (
 /obj/effect/step_trigger/thrower{
-	affect_ghosts = 1;
 	name = "thrower_throwdown";
-	nostop = 1;
+	tiles = 0;
+	affect_ghosts = 1;
 	stopper = 0;
-	tiles = 0
+	nostop = 1
 	},
 /turf/simulated/sky/moving/east,
 /area/space)
@@ -370,8 +370,8 @@
 "ij" = (
 /obj/structure/closet/emcloset,
 /obj/item/radio/intercom{
-	dir = 4;
 	name = "Station Intercom (General)";
+	dir = 4;
 	pixel_x = 21
 	},
 /turf/simulated/shuttle/floor/white,
@@ -382,8 +382,8 @@
 /area/shuttle/arrival/pre_game)
 "jp" = (
 /obj/effect/shuttle_landmark{
-	landmark_tag = "shuttle3_sky";
-	name = "Skies of Sif"
+	name = "Skies of Sif";
+	landmark_tag = "shuttle3_sky"
 	},
 /turf/simulated/sky/south,
 /area/shuttle/shuttle3/sky)
@@ -402,8 +402,8 @@
 /area/shuttle/arrival/pre_game)
 "ni" = (
 /obj/effect/shuttle_landmark{
-	landmark_tag = "response_ship_orbit";
-	name = "Orbit of Sif"
+	name = "Orbit of Sif";
+	landmark_tag = "response_ship_orbit"
 	},
 /turf/space,
 /area/space)
@@ -451,8 +451,8 @@
 "rB" = (
 /obj/structure/table/steel,
 /obj/structure/flora/pottedplant{
-	icon_state = "plant-09";
 	name = "Dave";
+	icon_state = "plant-09";
 	pixel_y = 15
 	},
 /turf/simulated/shuttle/floor{
@@ -474,11 +474,11 @@
 /area/shuttle/arrival/pre_game)
 "rL" = (
 /obj/effect/step_trigger/thrower{
-	affect_ghosts = 1;
 	name = "thrower_throwdown";
-	nostop = 1;
+	tiles = 0;
+	affect_ghosts = 1;
 	stopper = 0;
-	tiles = 0
+	nostop = 1
 	},
 /turf/space/transit/south,
 /area/space)
@@ -520,17 +520,17 @@
 /area/shuttle/arrival/pre_game)
 "vs" = (
 /obj/machinery/door/airlock/external{
+	name = "Shuttle Hatch";
 	icon_state = "door_locked";
-	locked = 1;
-	name = "Shuttle Hatch"
+	locked = 1
 	},
 /obj/structure/fans/tiny,
 /turf/simulated/shuttle/floor,
 /area/shuttle/arrival/pre_game)
 "ws" = (
 /obj/effect/shuttle_landmark/transit{
-	landmark_tag = "ninja_sky_transit";
-	name = "Ninja Sky Transit"
+	name = "Ninja Sky Transit";
+	landmark_tag = "ninja_sky_transit"
 	},
 /turf/simulated/sky/moving/south,
 /area/space)
@@ -540,29 +540,29 @@
 /area/shuttle/arrival/pre_game)
 "Bd" = (
 /obj/effect/shuttle_landmark{
-	landmark_tag = "shuttle3_orbit";
-	name = "Sif Orbit"
+	name = "Sif Orbit";
+	landmark_tag = "shuttle3_orbit"
 	},
 /turf/space,
 /area/shuttle/shuttle3/orbit)
 "Bi" = (
 /obj/effect/shuttle_landmark{
-	landmark_tag = "ninja_orbit";
-	name = "Orbit of Sif"
+	name = "Orbit of Sif";
+	landmark_tag = "ninja_orbit"
 	},
 /turf/space,
 /area/space)
 "Ck" = (
 /obj/effect/shuttle_landmark/transit{
-	landmark_tag = "shuttle3_transit";
-	name = "Shuttle 3 Transit"
+	name = "Shuttle 3 Transit";
+	landmark_tag = "shuttle3_transit"
 	},
 /turf/space/transit/south,
 /area/shuttle/shuttle3/transit)
 "DK" = (
 /obj/effect/shuttle_landmark/transit{
-	landmark_tag = "shuttle3_sky_transit";
-	name = "Shuttle 3 Sky Transit"
+	name = "Shuttle 3 Sky Transit";
+	landmark_tag = "shuttle3_sky_transit"
 	},
 /turf/simulated/sky/moving/south,
 /area/shuttle/shuttle3/sky_transit)
@@ -573,7 +573,7 @@
 	},
 /obj/structure/window/reinforced{
 	dir = 4;
-	health = 1e+006
+	health = 1e+06
 	},
 /turf/simulated/shuttle/plating/airless,
 /area/shuttle/arrival/pre_game)
@@ -597,8 +597,8 @@
 "Nx" = (
 /obj/structure/closet/emcloset,
 /obj/item/radio/intercom{
-	dir = 8;
 	name = "Station Intercom (General)";
+	dir = 8;
 	pixel_x = -21
 	},
 /turf/simulated/shuttle/floor/white,
@@ -617,8 +617,8 @@
 /area/shuttle/arrival/pre_game)
 "QY" = (
 /obj/effect/shuttle_landmark/transit{
-	landmark_tag = "ninja_transit";
-	name = "Ninja Transit"
+	name = "Ninja Transit";
+	landmark_tag = "ninja_transit"
 	},
 /turf/space/transit/north,
 /area/space)
@@ -640,7 +640,7 @@
 	},
 /obj/structure/window/reinforced{
 	dir = 8;
-	health = 1e+006
+	health = 1e+06
 	},
 /turf/simulated/shuttle/plating/airless,
 /area/shuttle/arrival/pre_game)
@@ -662,11 +662,11 @@
 /area/shuttle/arrival/pre_game)
 "TB" = (
 /obj/machinery/door/airlock/external{
-	frequency = 1380;
-	icon_state = "door_locked";
-	id_tag = "arrivals_shuttle_hatch";
-	locked = 1;
 	name = "Shuttle Hatch";
+	icon_state = "door_locked";
+	frequency = 1380;
+	locked = 1;
+	id_tag = "arrivals_shuttle_hatch";
 	req_access = list(13)
 	},
 /obj/structure/fans/tiny,
@@ -674,9 +674,9 @@
 /area/shuttle/arrival/pre_game)
 "Uh" = (
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
+	pixel_y = 25;
 	frequency = 1380;
 	id_tag = "arrivals_shuttle";
-	pixel_y = 25;
 	req_one_access = list(13);
 	tag_door = "arrivals_shuttle_hatch"
 	},
@@ -686,8 +686,8 @@
 /area/shuttle/arrival/pre_game)
 "UH" = (
 /obj/effect/step_trigger/thrower{
-	direction = 1;
 	name = "thrower_throwup";
+	direction = 1;
 	tiles = 0
 	},
 /turf/space,
@@ -699,9 +699,9 @@
 /area/shuttle/arrival/pre_game)
 "VC" = (
 /obj/machinery/door/airlock/silver{
+	name = "Employees Only";
 	icon_state = "door_locked";
 	locked = 1;
-	name = "Employees Only";
 	secured_wires = 1
 	},
 /turf/simulated/shuttle/floor,
@@ -718,10 +718,10 @@
 /area/shuttle/arrival/pre_game)
 "Xz" = (
 /obj/structure/showcase{
+	name = "Arrivals Announcement Computer";
 	desc = "So that's how the shuttle moves on its own.";
 	icon = 'icons/mob/AI.dmi';
-	icon_state = "ai-red";
-	name = "Arrivals Announcement Computer"
+	icon_state = "ai-red"
 	},
 /turf/simulated/shuttle/floor{
 	icon_state = "floor_red"
@@ -751,11 +751,11 @@
 /area/shuttle/arrival/pre_game)
 "Zf" = (
 /obj/effect/step_trigger/thrower{
-	affect_ghosts = 1;
 	name = "thrower_throwdown";
-	nostop = 1;
+	tiles = 0;
+	affect_ghosts = 1;
 	stopper = 0;
-	tiles = 0
+	nostop = 1
 	},
 /turf/space,
 /area/space)
