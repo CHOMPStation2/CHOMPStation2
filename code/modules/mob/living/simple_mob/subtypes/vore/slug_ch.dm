@@ -149,7 +149,7 @@
 /obj/effect/slug_glue
 	name = "liquid"
 	desc = "This looks wet."
-	icon = 'icons/effects/effects_ch.dmi'
+	icon = 'icons/effects/effects.dmi'
 	icon_state = "wet_turf"
 	opacity = 0
 	mouse_opacity = 0 //Unclickable
