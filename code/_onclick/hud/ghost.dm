@@ -94,7 +94,7 @@
 /obj/screen/ghost/vr
 	name = "Enter VR"
 	desc = "Enter virtual reality."
-	icon = 'modular_chomp/icons/mob/screen_ghost.dmi'
+	icon = 'icons/mob/screen_ghost.dmi'
 	icon_state = "entervr"
 
 /obj/screen/ghost/vr/Click()
