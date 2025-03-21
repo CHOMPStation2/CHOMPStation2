@@ -65,7 +65,7 @@
 
 	avatar.exit_vr() //We don't poof! We're a actual, living entity that isn't restrained by VR zones!
 
-	if(occupant.client)
+	if(occupant && occupant.client)
 		occupant.client.eye = occupant.client.mob
 		occupant.client.perspective = MOB_PERSPECTIVE
 	occupant.forceMove(src.loc)
