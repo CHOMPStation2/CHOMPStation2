@@ -76,6 +76,26 @@
 	icon_state = "steel"
 	},
 /area/centcom/terminal)
+"aan" = (
+/obj/structure/fans/tiny,
+/obj/machinery/door/airlock/external{
+	icon_state = "door_locked";
+	locked = 1;
+	name = "Shuttle Hatch";
+	req_access = list(13)
+	},
+/turf/simulated/shuttle/floor,
+/area/shuttle/escape/centcom)
+"aao" = (
+/obj/machinery/door/airlock/external{
+	icon_state = "door_locked";
+	locked = 1;
+	name = "Shuttle Hatch";
+	req_access = list(13)
+	},
+/obj/structure/fans/tiny,
+/turf/simulated/shuttle/floor,
+/area/shuttle/escape/centcom)
 "aar" = (
 /obj/effect/floor_decal/carpet,
 /turf/unsimulated/floor{
@@ -35416,15 +35436,15 @@ qNq
 vFi
 dmo
 uTl
-aFI
-aFI
+aao
+aan
 uTl
 boQ
 boQ
 boQ
 uTl
-aFI
-aFI
+aan
+aan
 uTl
 dmo
 dmo
