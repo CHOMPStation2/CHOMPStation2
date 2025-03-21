@@ -286,8 +286,6 @@
 		avatar.forceMove(get_turf(S))			// Put the mob on the landmark, instead of inside it
 
 		occupant.enter_vr(avatar)
-		//avatar.regenerate_icons() //TODO: Check if this is even NEEDED anymore.
-		//avatar.update_transform() //TODO: Check if this is even NEEDED anymore.
 		if(spawn_with_clothing)
 			job_master.EquipRank(avatar,"Visitor", 1, FALSE)
 		add_verb(avatar,/mob/living/carbon/human/proc/exit_vr)
