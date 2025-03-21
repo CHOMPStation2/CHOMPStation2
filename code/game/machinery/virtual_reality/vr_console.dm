@@ -386,6 +386,9 @@
 	var/list/vr_landmarks = list()
 	for(var/obj/effect/landmark/virtual_reality/sloc in landmarks_list)
 		vr_landmarks += sloc.name
+	if(!vr_landmarks)
+		to_chat(src, "There are no available spawn locations in virtual reality.")
+		return
 
 	S = tgui_input_list(usr, "Please select a location to spawn your avatar at:", "Spawn location", vr_landmarks)
 	if(!S)
