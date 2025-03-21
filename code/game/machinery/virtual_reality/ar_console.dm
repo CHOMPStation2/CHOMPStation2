@@ -16,6 +16,7 @@
 	var/randomize_species = FALSE
 	var/list/possible_species	// Do we make the newly produced body a random species?
 	perfect_replica = TRUE //All alien VR sleepers make perfect replicas.
+	spawn_with_clothing = FALSE //alien VR sleepers do not spawn with clothing.
 
 /obj/machinery/vr_sleeper/alien/Initialize(mapload)
 	. = ..()

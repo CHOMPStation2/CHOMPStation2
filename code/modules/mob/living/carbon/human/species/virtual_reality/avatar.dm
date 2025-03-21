@@ -123,7 +123,7 @@
 
 	if(istype(vr_holder.loc, /obj/machinery/vr_sleeper))
 		var/obj/machinery/vr_sleeper/V = vr_holder.loc
-		V.go_out()
+		V.go_out(TRUE)
 
 //CHOMPAdd Start
 	if(died_in_vr)
