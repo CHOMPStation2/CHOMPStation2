@@ -1,24 +1,3 @@
-/datum/gear/suit/zaddat
-	sort_category = "Xenowear"
-	whitelisted = SPECIES_ZADDAT
-
-/datum/gear/suit/zaddat/security
-	display_name = "Zaddat security shroud"
-	description = "A zaddat shroud with a layer of armor, for security officers"
-	sort_category = "Xenowear"
-	whitelisted = SPECIES_ZADDAT
-	path = /obj/item/clothing/suit/space/void/zaddat/security
-	allowed_roles = list(JOB_HEAD_OF_SECURITY,JOB_DETECTIV,JOB_WARDEN,JOB_SECURITY_OFFICER)
-
-/datum/gear/suit/zaddat/engineer
-	display_name = "Zaddat engineer shroud"
-	description =  "A zaddat shroud with a extra layer of rad-shielding, for engineers"
-	path = /obj/item/clothing/suit/space/void/zaddat/engineer
-	sort_category = "Xenowear"
-	whitelisted = SPECIES_ZADDAT
-	allowed_roles = list(JOB_CHIEF_ENGINEER,JOB_ATMOSPHERIC_TECHNICIAN, JOB_ENGINEER)
-
-
 //Added from CHOMP
 /datum/gear/suit/hood
 	display_name = "hooded cloak selection (Teshari)"

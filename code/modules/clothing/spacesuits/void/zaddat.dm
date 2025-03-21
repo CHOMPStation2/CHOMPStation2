@@ -120,11 +120,7 @@
 	to_chat(M, "You finish customizing your Shroud. Looking good!")
 	has_been_customized = TRUE
 	M.regenerate_icons()
-<<<<<<< HEAD
-	return 1
-=======
 	return TRUE
->>>>>>> 07ef1a2a18 (Zaddat gear (#17354))
 
 //Zaddat subtypes
 
@@ -166,22 +162,14 @@
 /obj/item/clothing/suit/space/void/zaddat/security/custom_suit() //so it cant turn into looks that dont makes sense and keep security name in it
 	set name = "Customize Shroud"
 	set category = "Object"
-<<<<<<< HEAD
-	set desc = "Pick an appearence for your Shroud."
-=======
 	set desc = "Pick an appearance for your Shroud."
->>>>>>> 07ef1a2a18 (Zaddat gear (#17354))
 
 	var/mob/M = usr
 	var/suit_style = null
 
 	if(has_been_customized)
 		to_chat(M, "This Shroud has already been customized!")
-<<<<<<< HEAD
-		return 0
-=======
 		return FALSE
->>>>>>> 07ef1a2a18 (Zaddat gear (#17354))
 
 	suit_style = input(M, "Which suit style would you like?") in list("Engineer", "Spacer", "Knight", "Fashion", "Bishop", "Hegemony", "Rugged", "Soft")
 	switch(suit_style)
@@ -244,32 +232,20 @@
 	to_chat(M, "You finish customizing your Shroud. Looking good!")
 	has_been_customized = TRUE
 	M.regenerate_icons()
-<<<<<<< HEAD
-	return 1
-=======
 	return TRUE
->>>>>>> 07ef1a2a18 (Zaddat gear (#17354))
 
 
 /obj/item/clothing/suit/space/void/zaddat/engineer/custom_suit()
 	set name = "Customize Shroud"
 	set category = "Object"
-<<<<<<< HEAD
-	set desc = "Pick an appearence for your Shroud."
-=======
 	set desc = "Pick an appearance for your Shroud."
->>>>>>> 07ef1a2a18 (Zaddat gear (#17354))
 
 	var/mob/M = usr
 	var/suit_style = null
 
 	if(has_been_customized)
 		to_chat(M, "This Shroud has already been customized!")
-<<<<<<< HEAD
-		return 0
-=======
 		return FALSE
->>>>>>> 07ef1a2a18 (Zaddat gear (#17354))
 
 	suit_style = input(M, "Which suit style would you like?") in list("Engineer", "Spacer", "Knight", "Fashion", "Bishop", "Hegemony", "Rugged", "Soft")
 	switch(suit_style)
@@ -354,8 +330,4 @@
 	to_chat(M, "You finish customizing your Shroud. Looking good!")
 	has_been_customized = TRUE
 	M.regenerate_icons()
-<<<<<<< HEAD
-	return 1
-=======
 	return TRUE
->>>>>>> 07ef1a2a18 (Zaddat gear (#17354))
