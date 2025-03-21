@@ -68,7 +68,6 @@
 	var/mob/living/ourmob = tf_mob_holder
 	if(soulgem) //Should always be the case, but...Safety. Done here first
 		soulgem.transfer_self(ourmob)
-	//CHOMPAdd Start - OOC Escape functionality for Mind Binder and Body Snatcher
 	if(ourmob.loc != src)
 		if(isnull(ourmob.loc))
 			to_chat(src,span_notice("You have no body."))
@@ -100,7 +99,6 @@
 		tf_mob_holder = null
 		return
 	new /obj/effect/effect/teleport_greyscale(src.loc)
-	//CHOMPAdd End - OOC Escape functionality for Mind Binder and Body Snatcher
 	if(ourmob.ai_holder)
 		var/datum/ai_holder/our_AI = ourmob.ai_holder
 		our_AI.set_stance(STANCE_IDLE)
@@ -109,7 +107,6 @@
 	var/turf/get_dat_turf = get_turf(src)
 	ourmob.loc = get_dat_turf
 	ourmob.forceMove(get_dat_turf)
-	// CHOMPEdit Start
 	if(!tf_form_ckey)
 		ourmob.vore_selected = vore_selected
 		vore_selected = null
@@ -119,7 +116,6 @@
 			B.owner = ourmob
 			vore_organs -= B
 			ourmob.vore_organs += B
-	// CHOMPEdit End
 
 	ourmob.Life(1)
 
@@ -129,7 +125,6 @@
 				continue
 			src.drop_from_inventory(W)
 
-	// CHOMPEdit Start
 	if(tf_form == ourmob)
 		if(tf_form_ckey)
 			src.ckey = tf_form_ckey
@@ -139,7 +134,6 @@
 		src.forceMove(ourmob)
 	else
 		qdel(src)
-	//CHOMPEdit End
 
 /mob/living/proc/handle_tf_holder()
 	if(!tf_mob_holder)

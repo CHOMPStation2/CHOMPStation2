@@ -1073,7 +1073,7 @@ var/global/list/SPECIALS = list(
 	/area/submap/virgo2,
 	/area/submap/event,
 	/area/submap/casino_event,
-	/area/vr //CHOMPedit
+	/area/vr
 	// /area/derelict //commented out, all hail derelict-rebuilders!
 )
 
