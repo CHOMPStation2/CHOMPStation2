@@ -1603,9 +1603,6 @@
 	if(virtual_reality_mob && !istype(get_area(src), /area/vr))
 		log_debug("[src] escaped virtual reality")
 		visible_message("[src] blinks out of existence.")
-		var/mob/living/mob_holder_to_delete
-		if(src.tf_mob_holder)
-			mob_holder_to_delete = tf_mob_holder
 		return_from_vr()
 		for(var/obj/belly/B in vore_organs) // Assume anybody inside an escaped VR mob is also an escaped VR mob.
 			for(var/mob/living/L in B)
@@ -1613,10 +1610,7 @@
 				L.handle_vr_derez() //Recursive! Let's get EVERYONE properly out of here!
 				if(!QDELETED(L)) //This is so we don't double qdel() things when we're doing recursive removal.
 					qdel(L)
-		if(mob_holder_to_delete) //We were a mob before this all got called.
-			qdel(mob_holder_to_delete)
-		else  //We were a humanoid before this all got called.
-			qdel(src) // Would like to convert escaped players into AR holograms in the future to encourage exploit finding.
+		qdel(src) // Would like to convert escaped players into AR holograms in the future to encourage exploit finding.
 
 // This proc checks to see two things: 1. If we have a tf_mob_holder (we are a simple mob) and 2. If we are a human. If so, we try to exit VR properly.
 /mob/living/proc/return_from_vr()
