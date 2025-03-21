@@ -91,7 +91,6 @@
 	var/mob/observer/dead/G = usr
 	G.zMove(DOWN)
 
-// CHOMPedit start
 /obj/screen/ghost/vr
 	name = "Enter VR"
 	desc = "Enter virtual reality."
@@ -102,7 +101,6 @@
 	..()
 	var/mob/observer/dead/G = usr
 	G.fake_enter_vr()
-// CHOMPedit end
 
 /mob/observer/dead/create_mob_hud(datum/hud/HUD, apply_to_client = TRUE)
 	..()
@@ -151,12 +149,10 @@
 	using.hud = src
 	adding += using
 
-	//CHOMPedit start
 	using = new /obj/screen/ghost/vr()
 	using.screen_loc = ui_ghost_vr
 	using.hud = src
 	adding += using
-	//CHOMPedit end
 
 	/*
 	using = new /obj/screen/language_menu
