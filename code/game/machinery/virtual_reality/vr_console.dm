@@ -386,7 +386,7 @@
 	var/list/vr_landmarks = list()
 	for(var/obj/effect/landmark/virtual_reality/sloc in landmarks_list)
 		vr_landmarks += sloc.name
-	if(!vr_landmarks)
+	if(!LAZYLEN(vr_landmarks))
 		to_chat(src, "There are no available spawn locations in virtual reality.")
 		return
 
