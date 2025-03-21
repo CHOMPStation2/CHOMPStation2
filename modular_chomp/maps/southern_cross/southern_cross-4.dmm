@@ -54,16 +54,16 @@
 /area/thirddeck/roof)
 "aal" = (
 /obj/machinery/camera/network/command{
-	c_tag = "AI - Fore";
-	dir = 1
+	dir = 1;
+	c_tag = "AI - Fore"
 	},
 /turf/simulated/floor/reinforced/turfpack/airless,
 /area/thirddeck/roof)
 "aam" = (
 /obj/structure/table/standard,
 /obj/item/radio/intercom{
-	dir = 1;
 	name = "Station Intercom (General)";
+	dir = 1;
 	pixel_y = 21
 	},
 /obj/structure/flora/pottedplant/unusual{
@@ -342,14 +342,14 @@
 "ajC" = (
 /obj/structure/cable/cyan,
 /obj/machinery/power/smes/buildable{
-	charge = 5e+006;
+	charge = 5e+06;
 	input_attempt = 1;
 	input_level = 200000;
 	output_level = 200000
 	},
 /obj/machinery/flasher{
-	id = "AI";
-	pixel_y = -24
+	pixel_y = -24;
+	id = "AI"
 	},
 /turf/simulated/floor/plating,
 /area/ai)
@@ -418,8 +418,8 @@
 /area/maintenance/thirddeck/aftport)
 "aoC" = (
 /obj/machinery/door/airlock/maintenance{
-	req_access = null;
-	req_one_access = null
+	req_one_access = null;
+	req_access = null
 	},
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -486,8 +486,8 @@
 /area/ai)
 "ash" = (
 /obj/machinery/power/solar{
-	id = "foreportsolar";
-	name = "Fore-Port Solar Array"
+	name = "Fore-Port Solar Array";
+	id = "foreportsolar"
 	},
 /obj/structure/cable/yellow{
 	icon_state = "0-4"
@@ -590,8 +590,8 @@
 /area/maintenance/thirddeck/dormsstarboard)
 "awy" = (
 /obj/machinery/camera/network/command{
-	c_tag = "AI - Port 1";
-	dir = 8
+	dir = 8;
+	c_tag = "AI - Port 1"
 	},
 /turf/simulated/floor/reinforced/turfpack/airless,
 /area/thirddeck/roof)
@@ -611,8 +611,8 @@
 	name = "tripai"
 	},
 /obj/item/radio/intercom{
-	dir = 8;
 	name = "Station Intercom (General)";
+	dir = 8;
 	pixel_x = -21
 	},
 /obj/item/radio/intercom/private{
@@ -659,10 +659,10 @@
 /area/ai)
 "aBs" = (
 /obj/machinery/door/airlock/hatch{
-	icon_state = "door_locked";
-	id_tag = null;
-	locked = 1;
 	name = "AI Core";
+	icon_state = "door_locked";
+	locked = 1;
+	id_tag = null;
 	req_access = list(16)
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -678,30 +678,30 @@
 	icon_state = "motion0"
 	},
 /obj/machinery/turretid/stun{
-	check_synth = 1;
 	name = "AI Chamber turret control";
 	pixel_x = -30;
-	pixel_y = -24
+	pixel_y = -24;
+	check_synth = 1
 	},
 /obj/machinery/flasher{
-	id = "AI";
 	pixel_x = 24;
-	pixel_y = -25
+	pixel_y = -25;
+	id = "AI"
 	},
 /obj/machinery/button/remote/blast_door{
-	desc = "A remote control-switch for the AI core maintenance door.";
-	id = "AICore";
 	name = "AI Maintenance Hatch";
+	desc = "A remote control-switch for the AI core maintenance door.";
 	pixel_x = 14;
 	pixel_y = 25;
+	id = "AICore";
 	req_access = list(16)
 	},
 /obj/machinery/camera/xray/command{
 	c_tag = "AI - Core"
 	},
 /obj/machinery/power/apc/super/critical{
-	dir = 1;
 	name = "north bump";
+	dir = 1;
 	pixel_y = 24
 	},
 /obj/structure/cable/cyan{
@@ -711,10 +711,10 @@
 /area/ai)
 "aBW" = (
 /obj/machinery/door/airlock/hatch{
-	icon_state = "door_locked";
-	id_tag = null;
-	locked = 1;
 	name = "AI Core";
+	icon_state = "door_locked";
+	locked = 1;
+	id_tag = null;
 	req_access = list(16)
 	},
 /obj/structure/cable/cyan{
@@ -731,8 +731,8 @@
 /area/crew_quarters/sleep/vistor_room_6)
 "aDE" = (
 /obj/structure/disposalpipe/segment{
-	dir = 1;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 1
 	},
 /turf/simulated/floor/wood,
 /area/maintenance/thirddeck/dormsstarboard)
@@ -768,12 +768,12 @@
 	dir = 8
 	},
 /obj/machinery/access_button{
-	command = "cycle_exterior";
-	frequency = 1379;
-	master_tag = "d3_starboard_airlock";
 	name = "exterior access button";
 	pixel_x = -25;
 	pixel_y = -26;
+	frequency = 1379;
+	command = "cycle_exterior";
+	master_tag = "d3_starboard_airlock";
 	req_access = null
 	},
 /turf/simulated/floor/plating/turfpack/airless,
@@ -789,8 +789,8 @@
 	dir = 9
 	},
 /obj/structure/disposalpipe/sortjunction/flipped{
-	dir = 1;
 	name = "Dorms";
+	dir = 1;
 	sortType = "Dorms"
 	},
 /turf/simulated/floor/tiled,
@@ -849,8 +849,8 @@
 	name = "tripai"
 	},
 /obj/item/radio/intercom{
-	dir = 4;
 	name = "Station Intercom (General)";
+	dir = 4;
 	pixel_x = 21
 	},
 /obj/item/radio/intercom/private{
@@ -884,8 +884,8 @@
 /area/hallway/primary/thirddeck/aftdoorm)
 "aHx" = (
 /obj/machinery/camera/network/command{
-	c_tag = "AI - Starboard";
-	dir = 4
+	dir = 4;
+	c_tag = "AI - Starboard"
 	},
 /turf/simulated/floor/reinforced/turfpack/airless,
 /area/thirddeck/roof)
@@ -910,10 +910,10 @@
 	name = "AI"
 	},
 /obj/machinery/requests_console{
-	department = "AI";
-	departmentType = 5;
 	pixel_x = 30;
-	pixel_y = -32
+	pixel_y = -32;
+	department = "AI";
+	departmentType = 5
 	},
 /obj/machinery/newscaster/security_unit{
 	pixel_x = -32;
@@ -930,9 +930,9 @@
 	pixel_y = -10
 	},
 /obj/item/radio/intercom{
-	broadcasting = 1;
 	name = "Station Intercom (General)";
-	pixel_y = -21
+	pixel_y = -21;
+	broadcasting = 1
 	},
 /obj/machinery/light/small,
 /turf/simulated/floor/greengrid,
@@ -1050,8 +1050,8 @@
 /obj/item/bodysnatcher,
 /obj/structure/table/standard,
 /obj/item/mindbinder{
-	pixel_y = -3;
-	pixel_x = 4
+	pixel_x = 4;
+	pixel_y = -3
 	},
 /turf/simulated/floor/tiled/white,
 /area/maintenance/thirddeck/aftport)
@@ -1097,8 +1097,8 @@
 	pixel_y = -30
 	},
 /obj/machinery/camera/network/third_deck{
-	c_tag = "Third Deck - Central Civ Hallway 2";
-	dir = 1
+	dir = 1;
+	c_tag = "Third Deck - Central Civ Hallway 2"
 	},
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/white/border,
@@ -1206,8 +1206,8 @@
 /area/maintenance/thirddeck/forestarboard)
 "aYI" = (
 /obj/structure/disposalpipe/segment{
-	dir = 1;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 1
 	},
 /turf/simulated/wall,
 /area/crew_quarters/toilet)
@@ -1277,8 +1277,8 @@
 /area/maintenance/solars/foreportsolar)
 "bep" = (
 /obj/structure/disposalpipe/segment{
-	dir = 4;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 4
 	},
 /turf/simulated/wall,
 /area/crew_quarters/sleep/vistor_room_1)
@@ -1302,14 +1302,14 @@
 "bga" = (
 /obj/structure/table/bench/wooden,
 /obj/item/radio/intercom{
-	dir = 4;
 	name = "Station Intercom (General)";
+	dir = 4;
 	pixel_x = 21
 	},
 /obj/item/flashlight/lamp/green,
 /obj/structure/disposalpipe/segment{
-	dir = 8;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 8
 	},
 /turf/simulated/floor/carpet/gaycarpet,
 /area/crew_quarters/sleep/vistor_room_11)
@@ -1329,9 +1329,9 @@
 	icon_state = "0-2"
 	},
 /obj/machinery/power/solar_control{
-	auto_start = 2;
+	name = "Fore Port Solar Control";
 	id = "foreportsolar";
-	name = "Fore Port Solar Control"
+	auto_start = 2
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/solars/foreportsolar)
@@ -1374,13 +1374,13 @@
 	icon_state = "0-2"
 	},
 /obj/machinery/power/apc{
-	dir = 1;
 	name = "north bump";
+	dir = 1;
 	pixel_y = 24
 	},
 /obj/item/radio/intercom{
-	dir = 4;
 	name = "Station Intercom (General)";
+	dir = 4;
 	pixel_x = 21
 	},
 /turf/simulated/floor/plating,
@@ -1416,12 +1416,10 @@
 /area/thirddeck/roof)
 "bkO" = (
 /obj/structure/window/reinforced{
-	dir = 8;
-	health = 1e+006
+	dir = 8
 	},
 /obj/structure/window/reinforced{
-	dir = 4;
-	health = 1e+006
+	dir = 4
 	},
 /obj/structure/window/reinforced,
 /obj/structure/disposalpipe/trunk{
@@ -1595,12 +1593,12 @@
 	icon_state = "0-4"
 	},
 /obj/machinery/door/blast/regular{
+	name = "Blast Doors";
+	icon_state = "pdoor0";
+	opacity = 0;
 	density = 0;
 	dir = 4;
-	icon_state = "pdoor0";
-	id = "csblast";
-	name = "Blast Doors";
-	opacity = 0
+	id = "csblast"
 	},
 /obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/floor/plating,
@@ -1610,13 +1608,13 @@
 	icon_state = "0-2"
 	},
 /obj/machinery/power/apc{
-	dir = 1;
 	name = "north bump";
+	dir = 1;
 	pixel_y = 24
 	},
 /obj/item/radio/intercom{
-	dir = 8;
 	name = "Station Intercom (General)";
+	dir = 8;
 	pixel_x = -21
 	},
 /obj/item/stack/cable_coil/yellow,
@@ -1649,8 +1647,8 @@
 	icon_state = "0-2"
 	},
 /obj/machinery/power/solar_control{
-	id = "forestarboardsolar";
-	name = "Fore Starboard Solar Control"
+	name = "Fore Starboard Solar Control";
+	id = "forestarboardsolar"
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/solars/forestarboardsolar)
@@ -1699,8 +1697,8 @@
 	dir = 4
 	},
 /obj/item/radio/intercom{
-	dir = 8;
 	name = "Station Intercom (General)";
+	dir = 8;
 	pixel_x = -21
 	},
 /obj/structure/disposalpipe/segment,
@@ -1733,17 +1731,17 @@
 "bAH" = (
 /obj/structure/table/reinforced,
 /obj/machinery/button/remote/blast_door{
-	id = "PAShroud";
 	name = "PA Shroud Blast Doors";
 	pixel_x = -6;
 	pixel_y = -8;
+	id = "PAShroud";
 	req_access = list(7)
 	},
 /obj/machinery/button/remote/emitter{
-	id = "PARoomEmitter";
 	name = "PA Room Emitter";
 	pixel_x = 5;
 	pixel_y = -8;
+	id = "PARoomEmitter";
 	req_access = list(7)
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/black,
@@ -1817,8 +1815,8 @@
 /area/maintenance/thirddeck/aftport)
 "bFh" = (
 /obj/structure/disposalpipe/segment{
-	dir = 2;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 2
 	},
 /obj/machinery/door/window/westright{
 	dir = 1
@@ -1862,11 +1860,11 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/door/airlock/external{
-	frequency = 1379;
-	icon_state = "door_locked";
-	id_tag = "fore_port_solar_outer";
-	locked = 1;
 	name = "Engineering External Access";
+	icon_state = "door_locked";
+	frequency = 1379;
+	locked = 1;
+	id_tag = "fore_port_solar_outer";
 	req_access = list(11,13)
 	},
 /turf/simulated/floor/plating,
@@ -1879,19 +1877,19 @@
 	dir = 8
 	},
 /obj/machinery/embedded_controller/radio/airlock/airlock_controller{
-	id_tag = "fore_port_solar_airlock";
 	layer = 3.3;
 	pixel_y = -25;
-	req_access = list(13);
+	id_tag = "fore_port_solar_airlock";
+	tag_exterior_door = "fore_port_solar_outer";
+	tag_interior_door = "fore_port_solar_inner";
 	tag_airpump = "fore_port_solar_pump";
 	tag_chamber_sensor = "fore_port_solar_sensor";
-	tag_exterior_door = "fore_port_solar_outer";
-	tag_interior_door = "fore_port_solar_inner"
+	req_access = list(13)
 	},
 /obj/machinery/airlock_sensor{
-	id_tag = "fore_port_solar_sensor";
 	layer = 3.3;
-	pixel_y = 25
+	pixel_y = 25;
+	id_tag = "fore_port_solar_sensor"
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	frequency = 1379;
@@ -1921,8 +1919,8 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/door/firedoor/glass,
 /obj/structure/disposalpipe/segment{
-	dir = 4;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 4
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/crew_quarters/sleep/vistor_room_3)
@@ -1934,11 +1932,11 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/door/airlock/external{
-	frequency = 1379;
-	icon_state = "door_locked";
-	id_tag = "fore_port_solar_inner";
-	locked = 1;
 	name = "Engineering External Access";
+	icon_state = "door_locked";
+	frequency = 1379;
+	locked = 1;
+	id_tag = "fore_port_solar_inner";
 	req_access = list(11,13)
 	},
 /turf/simulated/floor/plating,
@@ -1955,15 +1953,15 @@
 	},
 /obj/machinery/meter,
 /obj/machinery/access_button{
-	command = "cycle_interior";
-	frequency = 1379;
-	layer = 3.3;
-	master_tag = "fore_port_solar_airlock";
 	name = "interior access button";
+	layer = 3.3;
 	pixel_x = -25;
 	pixel_y = 25;
-	req_access = list();
-	req_one_access = list(11,24)
+	frequency = 1379;
+	command = "cycle_interior";
+	req_one_access = list(11,24);
+	master_tag = "fore_port_solar_airlock";
+	req_access = list()
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/solars/foreportsolar)
@@ -2060,8 +2058,8 @@
 /obj/machinery/door/firedoor/border_only,
 /obj/machinery/door/airlock/engineering{
 	name = "Fore Port Solar Access";
-	req_access = list();
-	req_one_access = list(11,24)
+	req_one_access = list(11,24);
+	req_access = list()
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/solars/foreportsolar)
@@ -2151,8 +2149,8 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/door/firedoor/glass,
 /obj/structure/disposalpipe/segment{
-	dir = 2;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 2
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/crew_quarters/sleep/vistor_room_12)
@@ -2256,8 +2254,8 @@
 /area/ai)
 "bXC" = (
 /obj/machinery/atmospherics/omni/atmos_filter{
-	tag_east = 2;
 	tag_south = 6;
+	tag_east = 2;
 	tag_west = 1
 	},
 /turf/simulated/floor/plating,
@@ -2324,8 +2322,8 @@
 	},
 /obj/random/trash,
 /obj/structure/disposalpipe/segment{
-	dir = 2;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 2
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/forestarboard)
@@ -2339,8 +2337,8 @@
 	icon_state = "0-8"
 	},
 /obj/machinery/power/solar{
-	id = "forestarboardsolar";
-	name = "Fore-Starboard Solar Array"
+	name = "Fore-Starboard Solar Array";
+	id = "forestarboardsolar"
 	},
 /turf/simulated/floor/plating/turfpack/airless{
 	icon_state = "solarpanel"
@@ -2349,8 +2347,8 @@
 "cbJ" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/machinery/door/airlock/maintenance{
-	req_access = null;
-	req_one_access = null
+	req_one_access = null;
+	req_access = null
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -2381,8 +2379,8 @@
 /obj/machinery/door/firedoor/border_only,
 /obj/machinery/door/airlock/engineering{
 	name = "Fore Starboard Solar Access";
-	req_access = list();
-	req_one_access = list(11,24)
+	req_one_access = list(11,24);
+	req_access = list()
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/solars/forestarboardsolar)
@@ -2432,15 +2430,15 @@
 	},
 /obj/machinery/meter,
 /obj/machinery/access_button{
-	command = "cycle_interior";
-	frequency = 1379;
-	layer = 3.3;
-	master_tag = "fore_starboard_solar_airlock";
 	name = "interior access button";
+	layer = 3.3;
 	pixel_x = 25;
 	pixel_y = 25;
-	req_access = list();
-	req_one_access = list(11,24)
+	frequency = 1379;
+	command = "cycle_interior";
+	req_one_access = list(11,24);
+	master_tag = "fore_starboard_solar_airlock";
+	req_access = list()
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/solars/forestarboardsolar)
@@ -2452,11 +2450,11 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/door/airlock/external{
-	frequency = 1379;
-	icon_state = "door_locked";
-	id_tag = "fore_starboard_solar_inner";
-	locked = 1;
 	name = "Engineering External Access";
+	icon_state = "door_locked";
+	frequency = 1379;
+	locked = 1;
+	id_tag = "fore_starboard_solar_inner";
 	req_access = list(11,13)
 	},
 /turf/simulated/floor/plating,
@@ -2493,8 +2491,8 @@
 	},
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/blast/radproof/open{
-	id = "PAShroud";
-	name = "Particle Accelerator Shroud"
+	name = "Particle Accelerator Shroud";
+	id = "PAShroud"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
 	dir = 4
@@ -2530,19 +2528,19 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/embedded_controller/radio/airlock/airlock_controller{
-	id_tag = "fore_starboard_solar_airlock";
 	layer = 3.3;
 	pixel_y = -25;
-	req_access = list(13);
+	id_tag = "fore_starboard_solar_airlock";
+	tag_exterior_door = "fore_starboard_solar_outer";
+	tag_interior_door = "fore_starboard_solar_inner";
 	tag_airpump = "fore_starboard_solar_pump";
 	tag_chamber_sensor = "fore_starboard_solar_sensor";
-	tag_exterior_door = "fore_starboard_solar_outer";
-	tag_interior_door = "fore_starboard_solar_inner"
+	req_access = list(13)
 	},
 /obj/machinery/airlock_sensor{
-	id_tag = "fore_starboard_solar_sensor";
 	layer = 3.3;
-	pixel_y = 25
+	pixel_y = 25;
+	id_tag = "fore_starboard_solar_sensor"
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	frequency = 1379;
@@ -2555,11 +2553,11 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/door/airlock/external{
-	frequency = 1379;
-	icon_state = "door_locked";
-	id_tag = "fore_starboard_solar_outer";
-	locked = 1;
 	name = "Engineering External Access";
+	icon_state = "door_locked";
+	frequency = 1379;
+	locked = 1;
+	id_tag = "fore_starboard_solar_outer";
 	req_access = list(11,13)
 	},
 /turf/simulated/floor/plating,
@@ -2747,8 +2745,8 @@
 	dir = 1
 	},
 /obj/machinery/camera/network/engineering{
-	c_tag = "ENG - Solar Fore Port Access";
-	dir = 4
+	dir = 4;
+	c_tag = "ENG - Solar Fore Port Access"
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/foreport)
@@ -2855,8 +2853,8 @@
 	dir = 4
 	},
 /obj/machinery/camera/network/engineering{
-	c_tag = "ENG - Solar Fore Starboard Access";
-	dir = 8
+	dir = 8;
+	c_tag = "ENG - Solar Fore Starboard Access"
 	},
 /obj/structure/disposalpipe/segment,
 /obj/structure/cable{
@@ -2944,7 +2942,7 @@
 	},
 /obj/structure/closet/radiation{
 	anchored = 1;
-	starts_with = list(/obj/item/clothing/suit/radiation=4,/obj/item/clothing/head/radiation=4,/obj/item/geiger=4)
+	starts_with = list(/obj/item/clothing/suit/radiation=4, /obj/item/clothing/head/radiation=4, /obj/item/geiger=4)
 	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/research/particleaccelerator)
@@ -2979,8 +2977,8 @@
 "cEG" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/machinery/door/airlock/maintenance{
-	req_access = null;
-	req_one_access = null
+	req_one_access = null;
+	req_access = null
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/plating,
@@ -3001,12 +2999,12 @@
 "cFp" = (
 /obj/machinery/door/airlock/vault/bolted{
 	name = "AI core";
-	req_access = list(16);
-	req_one_access = list(16)
+	req_one_access = list(16);
+	req_access = list(16)
 	},
 /obj/machinery/door/blast/regular{
-	id = "AICore";
-	name = "AI core maintenance hatch"
+	name = "AI core maintenance hatch";
+	id = "AICore"
 	},
 /obj/structure/cable/cyan{
 	icon_state = "1-2"
@@ -3027,8 +3025,8 @@
 	dir = 10
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 2;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 2
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 10
@@ -3059,8 +3057,8 @@
 "cHh" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/machinery/door/airlock/maintenance{
-	req_access = null;
-	req_one_access = null
+	req_one_access = null;
+	req_access = null
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/structure/disposalpipe/segment,
@@ -3138,8 +3136,7 @@
 	pixel_y = 2
 	},
 /obj/structure/window/reinforced{
-	dir = 4;
-	health = 1e+006
+	dir = 4
 	},
 /obj/machinery/status_display{
 	pixel_y = 32
@@ -3199,9 +3196,9 @@
 	pixel_y = 21
 	},
 /obj/machinery/flasher{
-	id = "AI";
 	pixel_x = -22;
-	pixel_y = 24
+	pixel_y = 24;
+	id = "AI"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/ai/ai_upload)
@@ -3266,8 +3263,8 @@
 	icon_state = "0-4"
 	},
 /obj/machinery/power/solar{
-	id = "aftstarboardsolar";
-	name = "Aft-Starboard Solar Array"
+	name = "Aft-Starboard Solar Array";
+	id = "aftstarboardsolar"
 	},
 /turf/simulated/floor/plating/turfpack/airless{
 	icon_state = "solarpanel"
@@ -3305,8 +3302,8 @@
 /area/maintenance/thirddeck/foreport)
 "cQQ" = (
 /obj/machinery/camera/network/command{
-	c_tag = "AI - Port 2";
-	dir = 8
+	dir = 8;
+	c_tag = "AI - Port 2"
 	},
 /turf/simulated/floor/reinforced/turfpack/airless,
 /area/thirddeck/roof)
@@ -3368,8 +3365,8 @@
 "cTz" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /obj/item/radio/intercom{
-	dir = 8;
 	name = "Station Intercom (General)";
+	dir = 8;
 	pixel_x = -21
 	},
 /turf/simulated/floor/wood,
@@ -3383,11 +3380,11 @@
 /area/maintenance/thirddeck/forestarboard)
 "cUH" = (
 /obj/machinery/door/blast/regular{
-	density = 0;
-	icon_state = "pdoor0";
-	id = "medbayquar";
 	name = "Medbay Emergency Lockdown Shutters";
-	opacity = 0
+	icon_state = "pdoor0";
+	opacity = 0;
+	density = 0;
+	id = "medbayquar"
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/dormsstarboard)
@@ -3412,8 +3409,8 @@
 /area/ai/ai_upload)
 "cXl" = (
 /obj/machinery/door/airlock/maintenance{
-	req_access = null;
-	req_one_access = null
+	req_one_access = null;
+	req_access = null
 	},
 /obj/machinery/door/firedoor/border_only,
 /turf/simulated/floor/plating,
@@ -3543,8 +3540,8 @@
 /area/maintenance/thirddeck/foreport)
 "ddi" = (
 /obj/machinery/power/apc{
-	dir = 8;
 	name = "west bump";
+	dir = 8;
 	pixel_x = -24
 	},
 /obj/machinery/light_switch{
@@ -3649,10 +3646,10 @@
 /obj/item/aiModule/asimov,
 /obj/item/aiModule/freeformcore,
 /obj/machinery/door/window{
-	base_state = "right";
-	icon_state = "right";
 	name = "Core Modules";
-	req_access = list(20)
+	icon_state = "right";
+	req_access = list(20);
+	base_state = "right"
 	},
 /obj/item/aiModule/corp,
 /obj/item/aiModule/paladin,
@@ -3675,8 +3672,8 @@
 /area/crew_quarters/sleep/vistor_room_12)
 "djV" = (
 /obj/item/radio/intercom{
-	dir = 8;
 	name = "Station Intercom (General)";
+	dir = 8;
 	pixel_x = -21
 	},
 /turf/simulated/floor/bluegrid,
@@ -3713,13 +3710,13 @@
 	id_tag = "d3_port_dorms_pump"
 	},
 /obj/machinery/embedded_controller/radio/airlock/airlock_controller{
-	id_tag = "d3_port_dorms_airlock";
 	pixel_y = -26;
-	req_access = null;
+	id_tag = "d3_port_dorms_airlock";
+	tag_exterior_door = "d3_port_dorms_outer";
+	tag_interior_door = "d3_port_dorms_inner";
 	tag_airpump = "d3_port_dorms_pump";
 	tag_chamber_sensor = "d3_port_dorms_sensor";
-	tag_exterior_door = "d3_port_dorms_outer";
-	tag_interior_door = "d3_port_dorms_inner"
+	req_access = null
 	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 10
@@ -3755,8 +3752,8 @@
 /obj/item/aiModule/oxygen,
 /obj/item/aiModule/oneHuman,
 /obj/machinery/door/window{
-	dir = 8;
 	name = "High-Risk Modules";
+	dir = 8;
 	req_access = list(20)
 	},
 /obj/item/aiModule/purge,
@@ -3783,8 +3780,8 @@
 	},
 /obj/machinery/disposal/wall/cleaner{
 	name = "Resleeving lost & found bin";
-	pixel_y = -35;
-	dir = 1
+	dir = 1;
+	pixel_y = -35
 	},
 /obj/structure/disposalpipe/trunk{
 	dir = 1
@@ -3814,9 +3811,9 @@
 /area/maintenance/thirddeck/forestarboard)
 "dpO" = (
 /obj/machinery/light/small/neon/bar{
-	pixel_y = -1;
+	dir = 8;
 	pixel_x = 27;
-	dir = 8
+	pixel_y = -1
 	},
 /turf/simulated/floor/tiled,
 /area/maintenance/thirddeck/dormsstarboard)
@@ -3857,8 +3854,8 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/door/airlock/highsecurity{
 	name = "AI Upload";
-	req_access = list(16);
-	req_one_access = list(16)
+	req_one_access = list(16);
+	req_access = list(16)
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/ai/ai_upload)
@@ -3948,8 +3945,8 @@
 /area/space)
 "dyy" = (
 /obj/machinery/power/apc{
-	dir = 8;
 	name = "west bump";
+	dir = 8;
 	pixel_x = -24
 	},
 /obj/structure/cable/green{
@@ -3975,8 +3972,8 @@
 "dyU" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/sign/flag/catpirate/right{
-	desc = "Rattle my bones, horned skull cuisuine!";
-	name = "Horned skull flag"
+	name = "Horned skull flag";
+	desc = "Rattle my bones, horned skull cuisuine!"
 	},
 /turf/simulated/wall/r_wall,
 /area/maintenance/thirddeck/hiddenkitchen)
@@ -4004,8 +4001,8 @@
 "dzQ" = (
 /obj/machinery/message_server,
 /obj/machinery/camera/network/command{
-	c_tag = "AI - Messaging Server";
-	dir = 4
+	dir = 4;
+	c_tag = "AI - Messaging Server"
 	},
 /turf/simulated/floor/bluegrid,
 /area/ai/ai_server_room)
@@ -4097,13 +4094,13 @@
 	dir = 5
 	},
 /obj/machinery/turretid/stun{
-	control_area = "\improper AI Upload Chamber";
 	name = "AI Upload turret control";
-	pixel_y = 24
+	pixel_y = 24;
+	control_area = "\improper AI Upload Chamber"
 	},
 /obj/machinery/power/apc{
-	dir = 4;
 	name = "east bump";
+	dir = 4;
 	pixel_x = 24
 	},
 /obj/machinery/light_switch{
@@ -4117,8 +4114,8 @@
 	dir = 8
 	},
 /obj/machinery/flasher{
-	id = "AIFoyer";
-	pixel_y = 36
+	pixel_y = 36;
+	id = "AIFoyer"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/ai/ai_upload_foyer)
@@ -4129,9 +4126,9 @@
 /area/crew_quarters/sleep/vistor_room_9)
 "dDx" = (
 /obj/machinery/button/remote/airlock{
-	id = "Dorms12";
 	name = "Bolt Control";
 	pixel_x = -30;
+	id = "Dorms12";
 	specialfunctions = 4
 	},
 /obj/structure/closet/secure_closet/personal/cabinet,
@@ -4144,9 +4141,9 @@
 "dEz" = (
 /obj/structure/table/rack/shelf/steel,
 /obj/item/stack/material/steel{
-	amount = 50;
 	pixel_x = 2;
-	pixel_y = 2
+	pixel_y = 2;
+	amount = 50
 	},
 /obj/item/stack/material/plastic{
 	amount = 50
@@ -4222,8 +4219,8 @@
 /area/hallway/primary/thirddeck/aftdoorm)
 "dGv" = (
 /obj/machinery/door/airlock{
-	id_tag = "Dorms9";
-	name = "Room 9"
+	name = "Room 9";
+	id_tag = "Dorms9"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -4259,8 +4256,8 @@
 /obj/structure/table/standard,
 /obj/item/phone,
 /obj/machinery/camera/network/command{
-	c_tag = "AI - Cyborg Station";
-	dir = 8
+	dir = 8;
+	c_tag = "AI - Cyborg Station"
 	},
 /obj/machinery/computer/cryopod/robot{
 	pixel_x = 30
@@ -4283,8 +4280,8 @@
 /area/maintenance/thirddeck/aftport)
 "dIt" = (
 /obj/machinery/power/apc{
-	dir = 4;
 	name = "east bump";
+	dir = 4;
 	pixel_x = 24
 	},
 /obj/structure/cable/green{
@@ -4346,8 +4343,8 @@
 /area/ai/ai_server_room)
 "dKx" = (
 /obj/machinery/door/airlock/maintenance{
-	req_access = null;
-	req_one_access = null
+	req_one_access = null;
+	req_access = null
 	},
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -4420,9 +4417,9 @@
 /area/maintenance/thirddeck/dormsport)
 "dOb" = (
 /obj/machinery/door/airlock/maintenance{
-	req_access = null;
+	name = "Dental Offices";
 	req_one_access = null;
-	name = "Dental Offices"
+	req_access = null
 	},
 /obj/machinery/door/firedoor/border_only,
 /obj/item/tape/medical,
@@ -4454,8 +4451,8 @@
 	},
 /obj/machinery/door/airlock/highsecurity{
 	name = "Messaging Server";
-	req_access = list(16);
-	req_one_access = list(16)
+	req_one_access = list(16);
+	req_access = list(16)
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/ai/ai_server_room)
@@ -4546,8 +4543,8 @@
 	},
 /obj/machinery/door/airlock/highsecurity{
 	name = "Synthetic Storage Access";
-	req_access = list(16);
-	req_one_access = list(16)
+	req_one_access = list(16);
+	req_access = list(16)
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/ai/ai_cyborg_station)
@@ -4652,8 +4649,7 @@
 	},
 /obj/structure/window/reinforced,
 /obj/structure/window/reinforced{
-	dir = 4;
-	health = 1e+006
+	dir = 4
 	},
 /obj/structure/disposalpipe/trunk{
 	dir = 4
@@ -4760,8 +4756,8 @@
 	},
 /obj/random/maintenance/medical,
 /obj/structure/disposalpipe/segment{
-	dir = 1;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 1
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/sleep/vistor_room_8)
@@ -4798,18 +4794,18 @@
 /area/crew_quarters/sleep/vistor_room_1)
 "dYp" = (
 /obj/structure/disposalpipe/segment{
-	dir = 8;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 8
 	},
 /turf/simulated/wall,
 /area/crew_quarters/sleep/vistor_room_4)
 "dYv" = (
 /obj/machinery/door/airlock/external{
-	frequency = 1379;
-	icon_state = "door_locked";
-	id_tag = "d3_port_dorms_outer";
-	locked = 1;
 	name = "External Airlock Access";
+	icon_state = "door_locked";
+	frequency = 1379;
+	locked = 1;
+	id_tag = "d3_port_dorms_outer";
 	req_access = list(13)
 	},
 /turf/simulated/floor/plating,
@@ -4859,8 +4855,8 @@
 /area/ai/ai_server_room)
 "dZX" = (
 /obj/machinery/power/apc{
-	dir = 4;
 	name = "east bump";
+	dir = 4;
 	pixel_x = 24
 	},
 /obj/machinery/light_switch{
@@ -4893,8 +4889,8 @@
 /area/maintenance/thirddeck/dormsaft)
 "eaE" = (
 /obj/machinery/camera/network/third_deck{
-	c_tag = "Third Deck - Central Civ Hallway 1";
-	dir = 1
+	dir = 1;
+	c_tag = "Third Deck - Central Civ Hallway 1"
 	},
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/white/border,
@@ -4912,8 +4908,8 @@
 /area/maintenance/thirddeck/dormsaft)
 "eaW" = (
 /obj/machinery/power/apc{
-	dir = 8;
 	name = "west bump";
+	dir = 8;
 	pixel_x = -24
 	},
 /obj/machinery/light_switch{
@@ -5041,19 +5037,17 @@
 	dir = 4
 	},
 /obj/machinery/door/blast/radproof/open{
-	id = "PAShroud";
-	name = "Particle Accelerator Shroud"
+	name = "Particle Accelerator Shroud";
+	id = "PAShroud"
 	},
 /turf/simulated/floor/reinforced,
 /area/rnd/research/particleaccelerator)
 "egi" = (
 /obj/structure/window/reinforced{
-	dir = 8;
-	health = 1e+006
+	dir = 8
 	},
 /obj/structure/window/reinforced{
-	dir = 4;
-	health = 1e+006
+	dir = 4
 	},
 /obj/structure/window/reinforced,
 /obj/structure/disposalpipe/trunk{
@@ -5082,9 +5076,9 @@
 /area/maintenance/thirddeck/dormsatmos)
 "ehe" = (
 /obj/machinery/button/remote/airlock{
-	id = "Dorms11";
 	name = "Bolt Control";
 	pixel_x = -30;
+	id = "Dorms11";
 	specialfunctions = 4
 	},
 /obj/structure/bed/chair/comfy/brown{
@@ -5102,20 +5096,20 @@
 "ehC" = (
 /obj/structure/table/marble,
 /obj/random/miniature{
-	pixel_y = 10;
-	pixel_x = 6
+	pixel_x = 6;
+	pixel_y = 10
 	},
 /obj/random/miniature{
-	pixel_y = 10;
-	pixel_x = -6
+	pixel_x = -6;
+	pixel_y = 10
 	},
 /obj/random/miniature{
-	pixel_y = 2;
-	pixel_x = 7
+	pixel_x = 7;
+	pixel_y = 2
 	},
 /obj/random/miniature{
-	pixel_y = -1;
-	pixel_x = -9
+	pixel_x = -9;
+	pixel_y = -1
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/dormsstarboard)
@@ -5152,8 +5146,8 @@
 /area/maintenance/thirddeck/dormsport)
 "ekp" = (
 /obj/machinery/door/blast/regular{
-	id = "palabvent";
-	name = "PA Lab Blast Door"
+	name = "PA Lab Blast Door";
+	id = "palabvent"
 	},
 /turf/simulated/floor/reinforced,
 /area/rnd/research/particleaccelerator)
@@ -5195,8 +5189,8 @@
 /obj/structure/table/standard,
 /obj/item/flashlight/lamp/green,
 /obj/item/radio/intercom{
-	dir = 4;
 	name = "Station Intercom (General)";
+	dir = 4;
 	pixel_x = 21
 	},
 /turf/simulated/floor/carpet,
@@ -5212,15 +5206,15 @@
 	icon_state = "0-2"
 	},
 /obj/machinery/power/apc{
-	dir = 8;
 	name = "west bump";
+	dir = 8;
 	pixel_x = -24
 	},
 /obj/structure/table/steel,
 /obj/machinery/cell_charger,
 /obj/structure/disposalpipe/segment{
-	dir = 4;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 6
@@ -5338,8 +5332,8 @@
 /obj/structure/table/standard,
 /obj/item/flashlight/lamp/green,
 /obj/item/radio/intercom{
-	dir = 4;
 	name = "Station Intercom (General)";
+	dir = 4;
 	pixel_x = 21
 	},
 /turf/simulated/floor/carpet/blue,
@@ -5351,8 +5345,8 @@
 /obj/structure/table/standard,
 /obj/item/flashlight/lamp/green,
 /obj/item/radio/intercom{
-	dir = 8;
 	name = "Station Intercom (General)";
+	dir = 8;
 	pixel_x = -21
 	},
 /turf/simulated/floor/carpet,
@@ -5373,15 +5367,15 @@
 	dir = 8
 	},
 /obj/structure/disposalpipe/junction{
-	dir = 1;
-	icon_state = "pipe-j2"
+	icon_state = "pipe-j2";
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/thirddeck/aftdoorm)
 "erh" = (
 /obj/machinery/door/airlock{
-	id_tag = "Dorms11";
-	name = "Room 11"
+	name = "Room 11";
+	id_tag = "Dorms11"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -5477,8 +5471,8 @@
 	icon_state = "0-4"
 	},
 /obj/machinery/power/apc{
-	dir = 8;
 	name = "west bump";
+	dir = 8;
 	pixel_x = -24
 	},
 /obj/machinery/light_switch{
@@ -5486,9 +5480,9 @@
 	pixel_y = -6
 	},
 /obj/machinery/button/windowtint{
-	id = "hopquarters";
 	pixel_x = -36;
-	pixel_y = 6
+	pixel_y = 6;
+	id = "hopquarters"
 	},
 /turf/simulated/floor/carpet,
 /area/crew_quarters/heads/sc/hop/quarters)
@@ -5537,8 +5531,8 @@
 /obj/structure/disposalpipe/segment,
 /obj/effect/floor_decal/industrial/warning/corner,
 /obj/machinery/atmospherics/binary/passive_gate{
-	regulate_mode = 0;
-	unlocked = 1
+	unlocked = 1;
+	regulate_mode = 0
 	},
 /turf/simulated/floor,
 /area/maintenance/substation/command)
@@ -5644,10 +5638,10 @@
 /area/maintenance/thirddeck/dormsaft)
 "eyq" = (
 /obj/effect/shuttle_landmark{
-	base_area = /area/space;
-	base_turf = /turf/space;
+	name = "Near SC - Deck 3 South East";
 	landmark_tag = "d3_near_se";
-	name = "Near SC - Deck 3 South East"
+	base_turf = /turf/space;
+	base_area = /area/space
 	},
 /turf/space,
 /area/space)
@@ -5688,8 +5682,8 @@
 /area/maintenance/thirddeck/dormsaft)
 "eAx" = (
 /obj/machinery/door/airlock/maintenance{
-	req_access = null;
-	req_one_access = null
+	req_one_access = null;
+	req_access = null
 	},
 /obj/machinery/door/firedoor/border_only,
 /turf/simulated/floor/plating,
@@ -5699,13 +5693,13 @@
 	icon_state = "0-2"
 	},
 /obj/machinery/power/apc{
-	dir = 8;
 	name = "west bump";
+	dir = 8;
 	pixel_x = -24
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 4;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 4
 	},
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 8
@@ -5729,8 +5723,8 @@
 	icon_state = "0-4"
 	},
 /obj/machinery/power/apc{
-	dir = 8;
 	name = "west bump";
+	dir = 8;
 	pixel_x = -24
 	},
 /obj/machinery/light_switch{
@@ -5738,9 +5732,9 @@
 	pixel_y = -6
 	},
 /obj/machinery/button/windowtint{
-	id = "cmoquarters";
 	pixel_x = -36;
-	pixel_y = 6
+	pixel_y = 6;
+	id = "cmoquarters"
 	},
 /turf/simulated/floor/carpet/blue,
 /area/crew_quarters/heads/sc/cmo/quarters)
@@ -5778,8 +5772,8 @@
 /area/crew_quarters/heads/sc/cmo/quarters)
 "eDv" = (
 /obj/structure/disposalpipe/segment{
-	dir = 4;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 4
 	},
 /turf/simulated/wall,
 /area/crew_quarters/sleep/vistor_room_4)
@@ -5820,8 +5814,8 @@
 /area/crew_quarters/heads/sc/hor/quarters)
 "eGU" = (
 /obj/machinery/power/apc{
-	dir = 4;
 	name = "east bump";
+	dir = 4;
 	pixel_x = 24
 	},
 /obj/structure/cable/green{
@@ -5832,9 +5826,9 @@
 	pixel_y = -6
 	},
 /obj/machinery/button/windowtint{
-	id = "rdquarters";
 	pixel_x = 36;
-	pixel_y = 6
+	pixel_y = 6;
+	id = "rdquarters"
 	},
 /turf/simulated/floor/carpet,
 /area/crew_quarters/heads/sc/hor/quarters)
@@ -5872,8 +5866,8 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/door/airlock/maintenance{
-	req_access = null;
-	req_one_access = null
+	req_one_access = null;
+	req_access = null
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden,
@@ -5908,9 +5902,9 @@
 	pixel_x = 24
 	},
 /obj/machinery/button/remote/airlock{
-	id = "hopquarters";
 	name = "Bolt Control";
 	pixel_y = -30;
+	id = "hopquarters";
 	req_access = list(57);
 	specialfunctions = 4
 	},
@@ -5973,17 +5967,17 @@
 /area/maintenance/substation/command)
 "eKo" = (
 /obj/machinery/atmospherics/unary/vent_pump{
-	dir = 8;
-	external_pressure_bound = 0;
-	external_pressure_bound_default = 0;
-	icon_state = "map_vent_in";
-	initialize_directions = 1;
-	internal_pressure_bound = 250;
-	internal_pressure_bound_default = 250;
 	name = "PA-Room Siphon Vent";
-	pressure_checks = 2;
-	pressure_checks_default = 2;
+	icon_state = "map_vent_in";
+	dir = 8;
 	pump_direction = 0;
+	external_pressure_bound = 0;
+	internal_pressure_bound = 250;
+	pressure_checks = 2;
+	external_pressure_bound_default = 0;
+	internal_pressure_bound_default = 250;
+	pressure_checks_default = 2;
+	initialize_directions = 1;
 	use_power = 1
 	},
 /turf/simulated/floor/reinforced,
@@ -6028,8 +6022,8 @@
 /area/hallway/primary/thirddeck/central)
 "eMQ" = (
 /obj/machinery/camera/network/third_deck{
-	c_tag = "Third Deck - Central Ring 3";
-	dir = 1
+	dir = 1;
+	c_tag = "Third Deck - Central Ring 3"
 	},
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/blue/border,
@@ -6098,9 +6092,9 @@
 	pixel_x = 24
 	},
 /obj/machinery/button/remote/airlock{
-	id = "cmoquarters";
 	name = "Bolt Control";
 	pixel_y = -30;
+	id = "cmoquarters";
 	req_access = list(40);
 	specialfunctions = 4
 	},
@@ -6114,9 +6108,9 @@
 	pixel_x = -24
 	},
 /obj/machinery/button/remote/airlock{
-	id = "rdquarters";
 	name = "Bolt Control";
 	pixel_y = -30;
+	id = "rdquarters";
 	req_access = list(30);
 	specialfunctions = 4
 	},
@@ -6270,8 +6264,8 @@
 "eXI" = (
 /obj/structure/table/standard,
 /obj/machinery/power/apc{
-	dir = 8;
 	name = "west bump";
+	dir = 8;
 	pixel_x = -24
 	},
 /obj/machinery/light_switch{
@@ -6341,8 +6335,8 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/door/airlock/command{
-	id_tag = "hopquarters";
 	name = "Head of Personnel Quarters";
+	id_tag = "hopquarters";
 	req_access = list(57)
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -6359,16 +6353,16 @@
 /obj/effect/floor_decal/borderfloorwhite/corner,
 /obj/effect/floor_decal/corner/grey/bordercorner,
 /obj/machinery/button/remote/blast_door{
-	dir = 8;
-	id = "palabvent";
 	name = "Emergency Vent Control";
+	dir = 8;
 	pixel_x = 24;
 	pixel_y = 2;
+	id = "palabvent";
 	req_access = list(7)
 	},
 /obj/machinery/atmospherics/binary/pump/high_power{
-	dir = 1;
-	name = "PA-Room pump"
+	name = "PA-Room pump";
+	dir = 1
 	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/research/particleaccelerator)
@@ -6397,8 +6391,8 @@
 	dir = 1
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 8;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /turf/simulated/floor/tiled,
@@ -6448,8 +6442,8 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/door/airlock/command{
-	id_tag = "cmoquarters";
 	name = "CMO's Quarters";
+	id_tag = "cmoquarters";
 	req_access = list(40)
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -6478,8 +6472,8 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/door/airlock/command{
-	id_tag = "rdquarters";
 	name = "Research Director Quarters";
+	id_tag = "rdquarters";
 	req_access = list(30)
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -6640,8 +6634,8 @@
 	dir = 5
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 1;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 5
@@ -6651,10 +6645,10 @@
 "fjH" = (
 /obj/structure/cable/yellow,
 /obj/machinery/power/solar_control{
-	auto_start = 2;
+	name = "Aft Port Solar Control";
 	dir = 1;
 	id = "aftportsolar";
-	name = "Aft Port Solar Control"
+	auto_start = 2
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/solars/aftportsolar)
@@ -6772,8 +6766,8 @@
 /area/hallway/primary/thirddeck/port)
 "fnn" = (
 /obj/machinery/power/apc{
-	dir = 1;
 	name = "north bump";
+	dir = 1;
 	pixel_y = 24
 	},
 /obj/structure/cable/green{
@@ -6847,8 +6841,8 @@
 	icon_state = "1-2"
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 1;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/effect/floor_decal/industrial/warning{
@@ -6894,8 +6888,8 @@
 	pixel_y = -24
 	},
 /obj/item/radio/intercom{
-	dir = 4;
 	name = "Station Intercom (General)";
+	dir = 4;
 	pixel_x = 21
 	},
 /turf/simulated/floor/plating,
@@ -6940,8 +6934,8 @@
 /area/crew_quarters/sleep/vistor_room_10)
 "fvh" = (
 /obj/structure/disposalpipe/segment{
-	dir = 2;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 2
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -7211,8 +7205,8 @@
 "fDV" = (
 /obj/effect/floor_decal/corner/orange/diagonal,
 /obj/item/radio/intercom{
-	dir = 8;
 	name = "Station Intercom (General)";
+	dir = 8;
 	pixel_x = -21
 	},
 /obj/structure/cable/green{
@@ -7287,8 +7281,8 @@
 /area/crew_quarters/seconddeck/gym)
 "fGy" = (
 /obj/machinery/door/airlock/maintenance{
-	req_access = null;
-	req_one_access = null
+	req_one_access = null;
+	req_access = null
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
@@ -7355,8 +7349,8 @@
 /area/crew_quarters/sleep/vistor_room_6)
 "fKI" = (
 /obj/item/radio/intercom{
-	dir = 8;
 	name = "Station Intercom (General)";
+	dir = 8;
 	pixel_x = -21
 	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
@@ -7413,8 +7407,8 @@
 	dir = 5
 	},
 /obj/machinery/camera/network/third_deck{
-	c_tag = "Third Deck - Port Hallway 2";
-	dir = 8
+	dir = 8;
+	c_tag = "Third Deck - Port Hallway 2"
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/thirddeck/port)
@@ -7896,8 +7890,8 @@
 	dir = 9
 	},
 /obj/machinery/camera/network/third_deck{
-	c_tag = "Third Deck - Starboard Hallway 2";
-	dir = 4
+	dir = 4;
+	c_tag = "Third Deck - Starboard Hallway 2"
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/thirddeck/starboard)
@@ -7934,15 +7928,15 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/access_button{
-	command = "cycle_exterior";
-	frequency = 1379;
-	layer = 3.3;
-	master_tag = "fore_starboard_solar_airlock";
 	name = "exterior access button";
+	layer = 3.3;
 	pixel_x = -25;
 	pixel_y = -25;
-	req_access = list();
-	req_one_access = list(11,24)
+	frequency = 1379;
+	command = "cycle_exterior";
+	req_one_access = list(11,24);
+	master_tag = "fore_starboard_solar_airlock";
+	req_access = list()
 	},
 /obj/structure/catwalk,
 /turf/simulated/floor/plating/turfpack/airless,
@@ -7979,8 +7973,8 @@
 /area/maintenance/thirddeck/forestarboard)
 "gig" = (
 /obj/machinery/camera/network/third_deck{
-	c_tag = "Third Deck - Aft Civ Dorms 5";
-	dir = 8
+	dir = 8;
+	c_tag = "Third Deck - Aft Civ Dorms 5"
 	},
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled,
@@ -7997,8 +7991,8 @@
 /area/hallway/primary/thirddeck/port)
 "gjP" = (
 /obj/structure/disposalpipe/junction{
-	dir = 1;
-	icon_state = "pipe-j2"
+	icon_state = "pipe-j2";
+	dir = 1
 	},
 /turf/simulated/wall,
 /area/crew_quarters/sleep/vistor_room_4)
@@ -8136,13 +8130,13 @@
 	dir = 10
 	},
 /obj/machinery/embedded_controller/radio/airlock/airlock_controller{
-	id_tag = "d3_port_airlock";
 	pixel_y = -26;
-	req_access = null;
+	id_tag = "d3_port_airlock";
+	tag_exterior_door = "d3_port_outer";
+	tag_interior_door = "d3_port_inner";
 	tag_airpump = "d3_port_pump";
 	tag_chamber_sensor = "d3_port_sensor";
-	tag_exterior_door = "d3_port_outer";
-	tag_interior_door = "d3_port_inner"
+	req_access = null
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	frequency = 1379;
@@ -8184,10 +8178,10 @@
 /area/hallway/primary/thirddeck/port)
 "grh" = (
 /obj/machinery/button/remote/airlock{
-	id = "maintroom";
 	name = "Bolt Control";
-	specialfunctions = 4;
-	pixel_y = 25
+	pixel_y = 25;
+	id = "maintroom";
+	specialfunctions = 4
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/maintenance/thirddeck/aftport)
@@ -8214,8 +8208,8 @@
 	icon_state = "0-8"
 	},
 /obj/machinery/power/apc{
-	dir = 4;
 	name = "east bump";
+	dir = 4;
 	pixel_x = 24
 	},
 /obj/effect/floor_decal/borderfloor{
@@ -8373,8 +8367,8 @@
 /area/maintenance/thirddeck/forestarboard)
 "gzV" = (
 /obj/machinery/atmospherics/omni/atmos_filter{
-	tag_east = 2;
 	tag_south = 7;
+	tag_east = 2;
 	tag_west = 1
 	},
 /turf/simulated/floor/plating,
@@ -8397,8 +8391,8 @@
 "gBw" = (
 /obj/structure/disposalpipe/trunk,
 /obj/machinery/disposal/wall/cleaner{
-	dir = 4;
 	name = "Resleeving lost & found bin";
+	dir = 4;
 	pixel_x = -35;
 	pixel_y = 0
 	},
@@ -8501,9 +8495,9 @@
 /area/shuttle/escape_pod7/station)
 "gJN" = (
 /turf/simulated/shuttle/wall/no_join{
-	base_state = "orange";
 	icon = 'icons/turf/shuttle_orange.dmi';
-	icon_state = "orange"
+	icon_state = "orange";
+	base_state = "orange"
 	},
 /area/shuttle/escape_pod7/station)
 "gKj" = (
@@ -8525,8 +8519,8 @@
 "gKC" = (
 /obj/structure/lattice,
 /obj/structure/grille{
-	density = 0;
-	icon_state = "brokengrille"
+	icon_state = "brokengrille";
+	density = 0
 	},
 /turf/space,
 /area/space)
@@ -8627,8 +8621,8 @@
 /area/crew_quarters/heads/sc/restroom)
 "gPN" = (
 /obj/machinery/atmospherics/valve/shutoff{
-	dir = 4;
-	name = "Dorm Vents automatic shutoff valve"
+	name = "Dorm Vents automatic shutoff valve";
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/dormsatmos)
@@ -8638,8 +8632,8 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/door/airlock/command{
-	id_tag = "cequarters";
 	name = "Chief Engineer Quarters";
+	id_tag = "cequarters";
 	req_access = list(56)
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -8664,8 +8658,8 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/camera/network/third_deck{
-	c_tag = "Third Deck - Central Ring 4";
-	dir = 4
+	dir = 4;
+	c_tag = "Third Deck - Central Ring 4"
 	},
 /obj/machinery/status_display{
 	pixel_x = -32
@@ -8697,8 +8691,8 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/camera/network/third_deck{
-	c_tag = "Third Deck - Central Ring 2";
-	dir = 8
+	dir = 8;
+	c_tag = "Third Deck - Central Ring 2"
 	},
 /obj/machinery/ai_status_display{
 	pixel_x = 32
@@ -8764,8 +8758,8 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/door/airlock/command{
-	id_tag = "hosquarters";
 	name = "Head of Security Quarters";
+	id_tag = "hosquarters";
 	req_access = list(58)
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -8779,8 +8773,8 @@
 /area/maintenance/thirddeck/hiddenkitchen)
 "gXM" = (
 /obj/structure/disposalpipe/segment{
-	dir = 2;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 2
 	},
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 1
@@ -8802,8 +8796,8 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/door/airlock/command{
-	id_tag = "comsecquarters";
 	name = "Secretary Quarters";
+	id_tag = "comsecquarters";
 	req_access = list(19)
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -8841,8 +8835,8 @@
 /area/rnd/research/particleaccelerator)
 "hcx" = (
 /obj/structure/sign/flag/catpirate/left{
-	desc = "Rattle my bones, horned skull cuisuine!";
-	name = "Horned skull flag"
+	name = "Horned skull flag";
+	desc = "Rattle my bones, horned skull cuisuine!"
 	},
 /turf/simulated/wall/r_wall,
 /area/maintenance/thirddeck/hiddenkitchen)
@@ -8877,8 +8871,8 @@
 /area/hallway/primary/thirddeck/starboard)
 "hex" = (
 /obj/structure/disposalpipe/junction{
-	dir = 1;
-	icon_state = "pipe-j2"
+	icon_state = "pipe-j2";
+	dir = 1
 	},
 /turf/simulated/wall,
 /area/crew_quarters/sleep/vistor_room_9)
@@ -8910,8 +8904,8 @@
 "hge" = (
 /obj/structure/table/standard,
 /obj/item/stack/cable_coil{
-	pixel_y = 9;
-	pixel_x = 8
+	pixel_x = 8;
+	pixel_y = 9
 	},
 /obj/item/weldingtool/hugetank,
 /obj/random/maintenance/research,
@@ -8929,9 +8923,9 @@
 /area/maintenance/thirddeck/dormsstarboard/maintbar)
 "hgE" = (
 /turf/simulated/shuttle/wall/no_join{
-	base_state = "orange";
 	icon = 'icons/turf/shuttle_orange.dmi';
-	icon_state = "orange"
+	icon_state = "orange";
+	base_state = "orange"
 	},
 /area/shuttle/escape_pod8/station)
 "hgN" = (
@@ -8946,9 +8940,9 @@
 	pixel_y = 32
 	},
 /obj/machinery/embedded_controller/radio/simple_docking_controller/escape_pod{
+	pixel_y = -25;
 	frequency = 1380;
 	id_tag = "escape_pod_7";
-	pixel_y = -25;
 	tag_door = "escape_pod_7_hatch"
 	},
 /turf/simulated/shuttle/floor,
@@ -8958,8 +8952,8 @@
 	dir = 8
 	},
 /obj/item/radio/intercom{
-	dir = 1;
 	name = "Station Intercom (General)";
+	dir = 1;
 	pixel_y = 21
 	},
 /obj/structure/closet/walllocker/emerglocker{
@@ -8978,8 +8972,8 @@
 /area/maintenance/thirddeck/dormsport)
 "hiy" = (
 /obj/machinery/door/airlock{
-	id_tag = "Dorms12";
-	name = "Room 12"
+	name = "Room 12";
+	id_tag = "Dorms12"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -9031,9 +9025,9 @@
 /area/maintenance/thirddeck/forestarboard)
 "hkY" = (
 /obj/machinery/door/airlock/glass_external{
+	name = "Escape Pod 7";
 	frequency = 1380;
 	id_tag = "escape_pod_7_berth_hatch";
-	name = "Escape Pod 7";
 	req_one_access = null
 	},
 /turf/simulated/floor,
@@ -9043,10 +9037,10 @@
 	dir = 8
 	},
 /obj/machinery/embedded_controller/radio/simple_docking_controller/escape_pod_berth{
-	frequency = 1380;
-	id_tag = "escape_pod_7_berth";
 	pixel_x = -25;
 	pixel_y = 30;
+	frequency = 1380;
+	id_tag = "escape_pod_7_berth";
 	tag_door = "escape_pod_7_berth_hatch"
 	},
 /turf/simulated/floor/tiled,
@@ -9062,9 +9056,9 @@
 /area/hallway/primary/thirddeck/port)
 "hlI" = (
 /obj/structure/fans/hardlight/colorable{
+	name = "hardlight radiation shield";
 	desc = "Retains air, blocks radiation, allows passage.";
 	light_color = "#243550";
-	name = "hardlight radiation shield";
 	rad_resistance = 200
 	},
 /obj/machinery/door/window/brigdoor/northright{
@@ -9072,10 +9066,10 @@
 	req_access = list(7)
 	},
 /obj/machinery/button/remote/blast_door{
-	dir = 8;
-	id = "palabvent";
 	name = "Emergency Vent Control";
+	dir = 8;
 	pixel_x = 25;
+	id = "palabvent";
 	req_access = list(7)
 	},
 /turf/simulated/floor/reinforced,
@@ -9129,8 +9123,8 @@
 "how" = (
 /obj/structure/table/standard,
 /obj/machinery/power/apc{
-	dir = 1;
 	name = "north bump";
+	dir = 1;
 	pixel_y = 24
 	},
 /obj/structure/cable/green{
@@ -9141,8 +9135,8 @@
 	pixel_y = 24
 	},
 /obj/item/radio/intercom{
-	dir = 4;
 	name = "Station Intercom (General)";
+	dir = 4;
 	pixel_x = 21
 	},
 /turf/simulated/floor/tiled/freezer,
@@ -9162,9 +9156,9 @@
 	pixel_x = -24
 	},
 /obj/machinery/button/remote/airlock{
-	id = "cequarters";
 	name = "Bolt Control";
 	pixel_y = 30;
+	id = "cequarters";
 	req_access = list(56);
 	specialfunctions = 4
 	},
@@ -9360,9 +9354,9 @@
 	pixel_x = 24
 	},
 /obj/machinery/button/remote/airlock{
-	id = "hosquarters";
 	name = "Bolt Control";
 	pixel_y = 30;
+	id = "hosquarters";
 	req_access = list(58);
 	specialfunctions = 4
 	},
@@ -9376,9 +9370,9 @@
 /obj/structure/bed/double/padded,
 /obj/item/bedsheet/bluedouble,
 /obj/machinery/button/remote/airlock{
-	id = "comsecquarters";
 	name = "Bolt Control";
 	pixel_y = 30;
+	id = "comsecquarters";
 	req_access = list(19);
 	specialfunctions = 4
 	},
@@ -9394,8 +9388,8 @@
 /area/maintenance/thirddeck/dormsstarboard)
 "hBe" = (
 /obj/structure/disposalpipe/segment{
-	dir = 8;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 8
 	},
 /turf/simulated/wall,
 /area/crew_quarters/sleep/vistor_room_2)
@@ -9451,10 +9445,10 @@
 	dir = 4
 	},
 /obj/machinery/embedded_controller/radio/simple_docking_controller/escape_pod_berth{
-	frequency = 1380;
-	id_tag = "escape_pod_8_berth";
 	pixel_x = 25;
 	pixel_y = 30;
+	frequency = 1380;
+	id_tag = "escape_pod_8_berth";
 	tag_door = "escape_pod_8_berth_hatch"
 	},
 /turf/simulated/floor/tiled,
@@ -9473,9 +9467,9 @@
 /area/maintenance/thirddeck/forestarboard)
 "hDw" = (
 /obj/machinery/door/airlock/glass_external{
+	name = "Escape Pod 8";
 	frequency = 1380;
 	id_tag = "escape_pod_8_berth_hatch";
-	name = "Escape Pod 8";
 	req_one_access = null
 	},
 /turf/simulated/floor,
@@ -9525,9 +9519,9 @@
 	pixel_y = -32
 	},
 /obj/machinery/embedded_controller/radio/simple_docking_controller/escape_pod{
+	pixel_y = 25;
 	frequency = 1380;
 	id_tag = "escape_pod_8";
-	pixel_y = 25;
 	tag_door = "escape_pod_8_hatch"
 	},
 /turf/simulated/shuttle/floor,
@@ -9543,8 +9537,7 @@
 	},
 /obj/structure/window/reinforced,
 /obj/structure/window/reinforced{
-	dir = 4;
-	health = 1e+006
+	dir = 4
 	},
 /turf/simulated/shuttle/plating,
 /area/shuttle/escape_pod8/station)
@@ -9685,17 +9678,17 @@
 /area/maintenance/thirddeck/hiddenkitchen)
 "hPk" = (
 /obj/machinery/power/apc{
-	dir = 4;
 	name = "east bump";
+	dir = 4;
 	pixel_x = 24
 	},
 /obj/structure/cable/green{
 	icon_state = "0-8"
 	},
 /obj/machinery/button/windowtint{
-	id = "cequarters";
 	pixel_x = 36;
-	pixel_y = 6
+	pixel_y = 6;
+	id = "cequarters"
 	},
 /obj/machinery/light_switch{
 	pixel_x = 36;
@@ -9756,8 +9749,8 @@
 /area/hallway/primary/thirddeck/central)
 "hUd" = (
 /obj/structure/disposalpipe/segment{
-	dir = 2;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 2
 	},
 /turf/simulated/wall/r_wall,
 /area/maintenance/thirddeck/hiddenkitchen)
@@ -9817,8 +9810,8 @@
 /area/solar/forestarboardsolar)
 "hXb" = (
 /obj/machinery/power/apc{
-	dir = 8;
 	name = "west bump";
+	dir = 8;
 	pixel_x = -24
 	},
 /obj/structure/cable/green{
@@ -9829,9 +9822,9 @@
 	pixel_y = -6
 	},
 /obj/machinery/button/windowtint{
-	id = "hosquarters";
 	pixel_x = -36;
-	pixel_y = 6
+	pixel_y = 6;
+	id = "hosquarters"
 	},
 /turf/simulated/floor/carpet,
 /area/crew_quarters/heads/sc/hos/quarters)
@@ -9841,11 +9834,11 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/door/blast/regular{
-	density = 0;
-	icon_state = "pdoor0";
-	id = "Biohazard";
 	name = "Biohazard Shutter";
-	opacity = 0
+	icon_state = "pdoor0";
+	opacity = 0;
+	density = 0;
+	id = "Biohazard"
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/forestarboard)
@@ -9938,17 +9931,17 @@
 /area/hallway/primary/thirddeck/aftdoorm)
 "ibq" = (
 /obj/machinery/power/apc{
-	dir = 4;
 	name = "east bump";
+	dir = 4;
 	pixel_x = 24
 	},
 /obj/structure/cable/green{
 	icon_state = "0-8"
 	},
 /obj/machinery/button/windowtint{
-	id = "bsquarters";
 	pixel_x = 36;
-	pixel_y = 6
+	pixel_y = 6;
+	id = "bsquarters"
 	},
 /obj/machinery/light_switch{
 	pixel_x = 36;
@@ -10017,8 +10010,8 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/door/airlock/maintenance{
-	req_access = null;
-	req_one_access = null
+	req_one_access = null;
+	req_access = null
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/plating,
@@ -10043,8 +10036,8 @@
 "iel" = (
 /obj/structure/table/standard,
 /obj/machinery/power/apc{
-	dir = 1;
 	name = "north bump";
+	dir = 1;
 	pixel_y = 24
 	},
 /obj/structure/cable/green{
@@ -10052,8 +10045,8 @@
 	},
 /obj/random/junk,
 /obj/structure/disposalpipe/segment{
-	dir = 4;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 4
 	},
 /obj/machinery/light_switch{
 	pixel_x = 11;
@@ -10083,8 +10076,8 @@
 /obj/structure/table/standard,
 /obj/item/flashlight/lamp/green,
 /obj/item/radio/intercom{
-	dir = 8;
 	name = "Station Intercom (General)";
+	dir = 8;
 	pixel_x = -21
 	},
 /turf/simulated/floor/carpet,
@@ -10105,9 +10098,9 @@
 /area/crew_quarters/heads/sc/chief/quarters)
 "igE" = (
 /obj/machinery/atmospherics/omni/atmos_filter{
-	tag_east = 2;
 	tag_north = 5;
 	tag_south = 3;
+	tag_east = 2;
 	tag_west = 1
 	},
 /turf/simulated/floor/plating,
@@ -10152,8 +10145,8 @@
 	dir = 4
 	},
 /obj/item/radio/intercom{
-	dir = 1;
 	name = "Station Intercom (General)";
+	dir = 1;
 	pixel_y = 21
 	},
 /turf/simulated/floor/tiled,
@@ -10298,8 +10291,8 @@
 /area/maintenance/thirddeck/forestarboard)
 "isJ" = (
 /obj/structure/disposalpipe/segment{
-	dir = 8;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 8
 	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/research/particleaccelerator)
@@ -10418,8 +10411,8 @@
 /obj/structure/table/standard,
 /obj/item/flashlight/lamp/green,
 /obj/item/radio/intercom{
-	dir = 4;
 	name = "Station Intercom (General)";
+	dir = 4;
 	pixel_x = 21
 	},
 /turf/simulated/floor/carpet,
@@ -10449,8 +10442,8 @@
 /area/maintenance/thirddeck/dormsstarboard)
 "iBe" = (
 /obj/item/radio/intercom{
-	dir = 8;
 	name = "Station Intercom (General)";
+	dir = 8;
 	pixel_x = -21
 	},
 /obj/structure/table/standard,
@@ -10473,8 +10466,8 @@
 "iBn" = (
 /obj/structure/closet/lawcloset,
 /obj/machinery/keycard_auth{
-	desc = "This device is used to trigger station functions, which require more than one ID card to authenticate. This one has a small note taped to it. The note reads: I know the secrearies don't have access to these by default, but I am putting it here anyway, on the off chance that one is given the proper clearance and needs to use it. Better safe than sorry. - CE Sivaad Veiter";
 	name = "Oddly Placed Keycard Authentication Device";
+	desc = "This device is used to trigger station functions, which require more than one ID card to authenticate. This one has a small note taped to it. The note reads: I know the secrearies don't have access to these by default, but I am putting it here anyway, on the off chance that one is given the proper clearance and needs to use it. Better safe than sorry. - CE Sivaad Veiter";
 	pixel_x = 26
 	},
 /turf/simulated/floor/carpet/blue,
@@ -10506,8 +10499,8 @@
 /area/rnd/research/particleaccelerator)
 "iCX" = (
 /obj/machinery/door/airlock/maintenance{
-	req_access = null;
-	req_one_access = null
+	req_one_access = null;
+	req_access = null
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
@@ -10526,8 +10519,8 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/door/airlock/maintenance{
-	req_access = null;
-	req_one_access = null
+	req_one_access = null;
+	req_access = null
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -10537,12 +10530,12 @@
 "iEb" = (
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/machinery/access_button{
-	command = "cycle_interior";
-	frequency = 1379;
-	master_tag = "d3_port_dorms_airlock";
 	name = "interior access button";
 	pixel_x = -25;
 	pixel_y = 26;
+	frequency = 1379;
+	command = "cycle_interior";
+	master_tag = "d3_port_dorms_airlock";
 	req_access = null
 	},
 /obj/effect/floor_decal/industrial/warning{
@@ -10567,12 +10560,10 @@
 "iGt" = (
 /obj/structure/window/reinforced,
 /obj/structure/window/reinforced{
-	dir = 4;
-	health = 1e+006
+	dir = 4
 	},
 /obj/structure/window/reinforced{
-	dir = 8;
-	health = 1e+006
+	dir = 8
 	},
 /obj/structure/disposalpipe/trunk{
 	dir = 4
@@ -10587,12 +10578,12 @@
 /area/maintenance/thirddeck/foreport)
 "iHm" = (
 /obj/machinery/access_button{
-	command = "cycle_exterior";
-	frequency = 1379;
-	master_tag = "d3_starboard_dorms_airlock";
 	name = "exterior access button";
 	pixel_x = -25;
 	pixel_y = -26;
+	frequency = 1379;
+	command = "cycle_exterior";
+	master_tag = "d3_starboard_dorms_airlock";
 	req_access = null
 	},
 /obj/effect/floor_decal/industrial/warning{
@@ -10641,8 +10632,8 @@
 	},
 /obj/structure/closet/secure_closet/personal/cabinet,
 /obj/item/radio/intercom{
-	dir = 8;
 	name = "Station Intercom (General)";
+	dir = 8;
 	pixel_x = -21
 	},
 /turf/simulated/floor/wood,
@@ -10692,8 +10683,8 @@
 	icon_state = "0-8"
 	},
 /obj/machinery/power/solar{
-	id = "aftstarboardsolar";
-	name = "Aft-Starboard Solar Array"
+	name = "Aft-Starboard Solar Array";
+	id = "aftstarboardsolar"
 	},
 /turf/simulated/floor/plating/turfpack/airless{
 	icon_state = "solarpanel"
@@ -10719,8 +10710,8 @@
 	dir = 4
 	},
 /obj/machinery/camera/network/third_deck{
-	c_tag = "Third Deck - Central Ring 1";
-	dir = 1
+	dir = 1;
+	c_tag = "Third Deck - Central Ring 1"
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/thirddeck/central)
@@ -10821,7 +10812,7 @@
 "iSF" = (
 /obj/effect/spider/stickyweb/dark,
 /obj/item/clothing/head/culthood/alt{
-	armor = list("melee"=5,"bullet"=5,"laser"=5,"energy"=10,"bomb"=25,"bio"=10,"rad"=0)
+	armor = list(melee=5, bullet=5, laser=5, energy=10, bomb=25, bio=10, rad=0)
 	},
 /obj/effect/decal/cleanable/cobweb,
 /turf/simulated/floor/wood/sif,
@@ -10938,11 +10929,11 @@
 /area/maintenance/thirddeck/aftport)
 "iYl" = (
 /obj/machinery/door/blast/regular{
-	density = 0;
-	icon_state = "pdoor0";
-	id = "bridge blast";
 	name = "Bridge Blast Doors";
-	opacity = 0
+	icon_state = "pdoor0";
+	opacity = 0;
+	density = 0;
+	id = "bridge blast"
 	},
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/tiled,
@@ -10955,11 +10946,11 @@
 /area/maintenance/thirddeck/dormsatmos)
 "iZh" = (
 /obj/machinery/door/blast/regular{
-	density = 0;
-	icon_state = "pdoor0";
-	id = "bridge blast";
 	name = "Bridge Blast Doors";
-	opacity = 0
+	icon_state = "pdoor0";
+	opacity = 0;
+	density = 0;
+	id = "bridge blast"
 	},
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -10972,12 +10963,10 @@
 	dir = 4
 	},
 /obj/structure/window/reinforced{
-	dir = 1;
-	health = 1e+006
+	dir = 1
 	},
 /obj/structure/window/reinforced{
-	dir = 4;
-	health = 1e+006
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/dormsstarboard)
@@ -11042,8 +11031,8 @@
 	},
 /obj/item/soap/deluxe,
 /obj/item/towel{
-	color = "#FFD700";
-	name = "gold towel"
+	name = "gold towel";
+	color = "#FFD700"
 	},
 /obj/machinery/alarm{
 	pixel_y = 22
@@ -11083,8 +11072,8 @@
 /area/maintenance/thirddeck/aftstarboard)
 "jgM" = (
 /obj/machinery/door/airlock/maintenance{
-	req_access = null;
-	req_one_access = null
+	req_one_access = null;
+	req_access = null
 	},
 /obj/machinery/door/firedoor/border_only,
 /obj/structure/cable{
@@ -11102,8 +11091,8 @@
 /area/maintenance/thirddeck/dormsstarboard)
 "jhb" = (
 /obj/structure/disposalpipe/junction{
-	dir = 1;
-	icon_state = "pipe-j2"
+	icon_state = "pipe-j2";
+	dir = 1
 	},
 /turf/simulated/wall,
 /area/crew_quarters/sleep/vistor_room_5)
@@ -11140,7 +11129,7 @@
 /area/maintenance/thirddeck/aftstarboard)
 "jiY" = (
 /obj/item/clothing/suit/cultrobes/alt{
-	armor = list("melee"=5,"bullet"=5,"laser"=5,"energy"=10,"bomb"=25,"bio"=10,"rad"=0)
+	armor = list(melee=5, bullet=5, laser=5, energy=10, bomb=25, bio=10, rad=0)
 	},
 /turf/simulated/floor/wood/sif/broken,
 /area/maintenance/thirddeck/aftstarboard)
@@ -11162,9 +11151,9 @@
 	icon_state = "0-8"
 	},
 /obj/machinery/power/emitter{
-	anchored = 1;
+	state = 2;
 	id = "PARoomEmitter";
-	state = 2
+	anchored = 1
 	},
 /turf/simulated/floor/reinforced,
 /area/rnd/research/particleaccelerator)
@@ -11293,8 +11282,8 @@
 "jqO" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/machinery/door/airlock/glass_command{
-	id_tag = "sbridgedoor";
 	name = "Bridge";
+	id_tag = "sbridgedoor";
 	req_access = list(19)
 	},
 /turf/simulated/floor/tiled/steel_grid,
@@ -11311,8 +11300,8 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/door/airlock/glass_command{
-	id_tag = "sbridgedoor";
 	name = "Bridge";
+	id_tag = "sbridgedoor";
 	req_access = list(19)
 	},
 /turf/simulated/floor/tiled/steel_grid,
@@ -11327,8 +11316,8 @@
 	},
 /obj/random_multi/single_item/captains_spare_id,
 /obj/item/radio/intercom{
-	dir = 8;
 	name = "Station Intercom (General)";
+	dir = 8;
 	pixel_x = -21
 	},
 /turf/simulated/floor/carpet,
@@ -11412,8 +11401,8 @@
 /area/crew_quarters/sleep/vistor_room_6)
 "jvH" = (
 /obj/machinery/power/solar{
-	id = "foreportsolar";
-	name = "Fore-Port Solar Array"
+	name = "Fore-Port Solar Array";
+	id = "foreportsolar"
 	},
 /obj/structure/cable/yellow{
 	icon_state = "0-8"
@@ -11463,9 +11452,9 @@
 /area/crew_quarters/heads/sc/sd)
 "jxY" = (
 /obj/machinery/door/airlock/maintenance{
-	req_access = null;
+	id_tag = "maintroom";
 	req_one_access = null;
-	id_tag = "maintroom"
+	req_access = null
 	},
 /obj/structure/barricade,
 /turf/simulated/floor/plating,
@@ -11473,13 +11462,13 @@
 "jye" = (
 /obj/structure/table/darkglass,
 /obj/item/digestion_remains/variant1{
-	pixel_y = 9;
-	pixel_x = -7
+	pixel_x = -7;
+	pixel_y = 9
 	},
 /obj/item/digestion_remains/variant1,
 /obj/item/handcuffs/legcuffs/fuzzy{
-	pixel_y = -5;
-	pixel_x = -3
+	pixel_x = -3;
+	pixel_y = -5
 	},
 /obj/machinery/light_construct{
 	dir = 8
@@ -11703,12 +11692,12 @@
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/wingrille_spawn/reinforced,
 /obj/machinery/door/blast/shutters{
+	name = "Meeting Room Window Shutters";
+	icon_state = "shutter0";
+	opacity = 0;
 	density = 0;
 	dir = 8;
-	icon_state = "shutter0";
-	id = "heads_meeting";
-	name = "Meeting Room Window Shutters";
-	opacity = 0
+	id = "heads_meeting"
 	},
 /obj/structure/cable/green{
 	icon_state = "0-2"
@@ -11806,12 +11795,10 @@
 "jNw" = (
 /obj/structure/window/reinforced,
 /obj/structure/window/reinforced{
-	dir = 8;
-	health = 1e+006
+	dir = 8
 	},
 /obj/structure/window/reinforced{
-	dir = 4;
-	health = 1e+006
+	dir = 4
 	},
 /obj/structure/disposalpipe/trunk{
 	dir = 8
@@ -11834,8 +11821,8 @@
 /area/maintenance/thirddeck/foreport)
 "jNP" = (
 /obj/structure/disposalpipe/segment{
-	dir = 4;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 4
 	},
 /obj/structure/cable/green{
 	icon_state = "1-4"
@@ -11859,11 +11846,11 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/door/blast/regular{
-	density = 0;
-	icon_state = "pdoor0";
-	id = "Biohazard";
 	name = "Biohazard Shutter";
-	opacity = 0
+	icon_state = "pdoor0";
+	opacity = 0;
+	density = 0;
+	id = "Biohazard"
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/forestarboard)
@@ -11990,11 +11977,11 @@
 /area/hallway/primary/thirddeck/central)
 "jUh" = (
 /obj/machinery/door/blast/regular{
-	density = 0;
-	icon_state = "pdoor0";
-	id = "bridge blast";
 	name = "Bridge Blast Doors";
-	opacity = 0
+	icon_state = "pdoor0";
+	opacity = 0;
+	density = 0;
+	id = "bridge blast"
 	},
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/structure/disposalpipe/segment,
@@ -12029,8 +12016,8 @@
 /area/hallway/primary/thirddeck/central)
 "jVD" = (
 /obj/machinery/door/airlock/maintenance{
-	req_access = null;
-	req_one_access = null
+	req_one_access = null;
+	req_access = null
 	},
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -12130,12 +12117,12 @@
 	dir = 4
 	},
 /obj/machinery/access_button{
-	command = "cycle_interior";
-	frequency = 1379;
-	master_tag = "d3_starboard_airlock";
 	name = "interior access button";
 	pixel_x = 25;
 	pixel_y = 26;
+	frequency = 1379;
+	command = "cycle_interior";
+	master_tag = "d3_starboard_airlock";
 	req_access = null
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden,
@@ -12159,8 +12146,8 @@
 /area/maintenance/thirddeck/forestarboard)
 "jZH" = (
 /obj/item/radio/intercom{
-	dir = 1;
 	name = "Station Intercom (General)";
+	dir = 1;
 	pixel_y = 21
 	},
 /obj/effect/floor_decal/borderfloor/corner{
@@ -12201,8 +12188,7 @@
 	},
 /obj/structure/curtain/open/shower,
 /obj/structure/window/reinforced{
-	dir = 8;
-	health = 1e+006
+	dir = 8
 	},
 /obj/machinery/door/window/northright,
 /obj/item/bikehorn/rubberducky,
@@ -12228,8 +12214,8 @@
 	dir = 4
 	},
 /obj/machinery/disposal/wall/cleaner{
-	dir = 8;
 	name = "Resleeving lost & found bin";
+	dir = 8;
 	pixel_x = 35;
 	pixel_y = 0
 	},
@@ -12348,8 +12334,8 @@
 	icon_state = "4-8"
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 2;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 2
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/crew_quarters/toilet)
@@ -12359,8 +12345,8 @@
 /area/maintenance/thirddeck/aftport)
 "knK" = (
 /obj/machinery/power/apc{
-	dir = 8;
 	name = "west bump";
+	dir = 8;
 	pixel_x = -24
 	},
 /obj/structure/cable/green,
@@ -12392,12 +12378,12 @@
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/wingrille_spawn/reinforced,
 /obj/machinery/door/blast/shutters{
+	name = "Meeting Room Window Shutters";
+	icon_state = "shutter0";
+	opacity = 0;
 	density = 0;
 	dir = 8;
-	icon_state = "shutter0";
-	id = "heads_meeting";
-	name = "Meeting Room Window Shutters";
-	opacity = 0
+	id = "heads_meeting"
 	},
 /obj/structure/cable/green{
 	icon_state = "0-2"
@@ -12425,18 +12411,18 @@
 /area/crew_quarters/cafeteria)
 "kpZ" = (
 /obj/machinery/atmospherics/unary/vent_pump{
+	icon_state = "map_vent_out";
 	dir = 1;
 	external_pressure_bound = 140;
-	external_pressure_bound_default = 140;
-	icon_state = "map_vent_out";
 	pressure_checks = 0;
+	external_pressure_bound_default = 140;
 	pressure_checks_default = 0;
 	use_power = 1
 	},
 /obj/machinery/button/remote/airlock{
-	id = "sauna1";
 	name = "Bolt Control";
 	pixel_x = -30;
+	id = "sauna1";
 	specialfunctions = 4
 	},
 /turf/simulated/floor/wood,
@@ -12484,8 +12470,8 @@
 	icon_state = "1-8"
 	},
 /obj/machinery/camera/network/command{
-	c_tag = "COM - Conference Room";
-	dir = 8
+	dir = 8;
+	c_tag = "COM - Conference Room"
 	},
 /turf/simulated/floor/wood,
 /area/bridge/meeting_room)
@@ -12564,8 +12550,8 @@
 /area/rnd/research/particleaccelerator)
 "kxk" = (
 /obj/machinery/camera/network/third_deck{
-	c_tag = "Third Deck - Stairwell";
-	dir = 1
+	dir = 1;
+	c_tag = "Third Deck - Stairwell"
 	},
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 8
@@ -12577,8 +12563,8 @@
 /area/hallway/primary/thirddeck/central)
 "kxK" = (
 /obj/structure/disposalpipe/segment{
-	dir = 4;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/thirddeck/central)
@@ -12614,8 +12600,8 @@
 	dir = 8
 	},
 /obj/item/radio/intercom{
-	dir = 4;
 	name = "Station Intercom (General)";
+	dir = 4;
 	pixel_x = 21
 	},
 /obj/effect/floor_decal/borderfloor,
@@ -12675,8 +12661,8 @@
 /area/maintenance/thirddeck/dormsatmos)
 "kEc" = (
 /obj/machinery/power/apc{
-	dir = 4;
 	name = "east bump";
+	dir = 4;
 	pixel_x = 24
 	},
 /obj/structure/cable/green,
@@ -12831,12 +12817,12 @@
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/wingrille_spawn/reinforced,
 /obj/machinery/door/blast/shutters{
+	name = "Meeting Room Window Shutters";
+	icon_state = "shutter0";
+	opacity = 0;
 	density = 0;
 	dir = 8;
-	icon_state = "shutter0";
-	id = "heads_meeting";
-	name = "Meeting Room Window Shutters";
-	opacity = 0
+	id = "heads_meeting"
 	},
 /obj/structure/cable/green,
 /turf/simulated/floor/plating,
@@ -12873,8 +12859,8 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/power/apc{
-	dir = 4;
 	name = "east bump";
+	dir = 4;
 	pixel_x = 24
 	},
 /obj/structure/cable/green,
@@ -12930,8 +12916,8 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/door/airlock/highsecurity{
 	name = "AI Upload Access";
-	req_access = list(16);
-	req_one_access = list(16)
+	req_one_access = list(16);
+	req_access = list(16)
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/ai/ai_upload_foyer)
@@ -12944,12 +12930,12 @@
 	icon_state = "0-4"
 	},
 /obj/machinery/door/blast/regular{
+	name = "Bridge Blast Doors";
+	icon_state = "pdoor0";
+	opacity = 0;
 	density = 0;
 	dir = 4;
-	icon_state = "pdoor0";
-	id = "bridge blast";
-	name = "Bridge Blast Doors";
-	opacity = 0
+	id = "bridge blast"
 	},
 /obj/effect/wingrille_spawn/reinforced/polarized{
 	id = "bridge_center"
@@ -12998,12 +12984,12 @@
 	icon_state = "2-4"
 	},
 /obj/machinery/door/blast/regular{
+	name = "Bridge Blast Doors";
+	icon_state = "pdoor0";
+	opacity = 0;
 	density = 0;
 	dir = 4;
-	icon_state = "pdoor0";
-	id = "bridge blast";
-	name = "Bridge Blast Doors";
-	opacity = 0
+	id = "bridge blast"
 	},
 /obj/structure/cable/green{
 	icon_state = "0-2"
@@ -13019,12 +13005,12 @@
 	icon_state = "0-8"
 	},
 /obj/machinery/door/blast/regular{
+	name = "Bridge Blast Doors";
+	icon_state = "pdoor0";
+	opacity = 0;
 	density = 0;
 	dir = 8;
-	icon_state = "pdoor0";
-	id = "bridge blast";
-	name = "Bridge Blast Doors";
-	opacity = 0
+	id = "bridge blast"
 	},
 /obj/effect/wingrille_spawn/reinforced/polarized{
 	id = "bridge_center"
@@ -13062,8 +13048,8 @@
 	icon_state = "0-2"
 	},
 /obj/machinery/power/apc{
-	dir = 1;
 	name = "north bump";
+	dir = 1;
 	pixel_y = 24
 	},
 /obj/machinery/light_switch{
@@ -13085,8 +13071,8 @@
 	department = "Captain's Office"
 	},
 /obj/item/radio/intercom{
-	dir = 1;
 	name = "Station Intercom (General)";
+	dir = 1;
 	pixel_y = 21
 	},
 /obj/item/paper/dockingcodes{
@@ -13211,8 +13197,8 @@
 /area/maintenance/thirddeck/aftport)
 "lfv" = (
 /obj/machinery/door/airlock/maintenance{
-	req_access = null;
-	req_one_access = null
+	req_one_access = null;
+	req_access = null
 	},
 /obj/machinery/door/firedoor/border_only,
 /turf/simulated/floor/plating,
@@ -13227,8 +13213,8 @@
 	pixel_y = 7
 	},
 /obj/item/deck/wizoff{
-	pixel_y = 12;
-	pixel_x = -9
+	pixel_x = -9;
+	pixel_y = 12
 	},
 /obj/item/deck/wizoff{
 	pixel_y = 7
@@ -13350,11 +13336,11 @@
 /area/maintenance/thirddeck/dormsstarboard/maintbar)
 "lrk" = (
 /obj/machinery/door/airlock/external{
-	frequency = 1379;
-	icon_state = "door_locked";
-	id_tag = "d3_starboard_outer";
-	locked = 1;
 	name = "External Airlock Access";
+	icon_state = "door_locked";
+	frequency = 1379;
+	locked = 1;
+	id_tag = "d3_starboard_outer";
 	req_access = list(13)
 	},
 /turf/simulated/floor/plating,
@@ -13376,8 +13362,8 @@
 /area/maintenance/thirddeck/dormsaft)
 "lsL" = (
 /obj/machinery/door/airlock/maintenance{
-	req_access = null;
-	req_one_access = null
+	req_one_access = null;
+	req_access = null
 	},
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -13395,13 +13381,13 @@
 /area/hallway/primary/thirddeck/aftdoorm)
 "lsW" = (
 /obj/item/radio/intercom{
-	dir = 1;
 	name = "Station Intercom (General)";
+	dir = 1;
 	pixel_y = 21
 	},
 /obj/machinery/camera/network/command{
-	c_tag = "COM - Bridge Port";
-	dir = 6
+	dir = 6;
+	c_tag = "COM - Bridge Port"
 	},
 /obj/structure/window/reinforced{
 	dir = 8
@@ -13524,11 +13510,11 @@
 /area/bridge)
 "lzC" = (
 /obj/machinery/door/blast/regular{
-	density = 0;
-	icon_state = "pdoor0";
-	id = "crglockdown";
 	name = "Cargo Lockdown";
-	opacity = 0
+	icon_state = "pdoor0";
+	opacity = 0;
+	density = 0;
+	id = "crglockdown"
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/aftport)
@@ -13538,8 +13524,8 @@
 /area/hallway/primary/thirddeck/central)
 "lzT" = (
 /obj/item/radio/intercom{
-	dir = 1;
 	name = "Station Intercom (General)";
+	dir = 1;
 	pixel_y = 21
 	},
 /obj/machinery/camera/network/command{
@@ -13590,8 +13576,8 @@
 	dir = 4
 	},
 /obj/structure/disposalpipe/sortjunction/flipped{
-	dir = 1;
 	name = "Bridge Conference room";
+	dir = 1;
 	sortType = "Bridge Conference room"
 	},
 /turf/simulated/floor/tiled,
@@ -13612,11 +13598,11 @@
 	name = "PA-Room siphon pump"
 	},
 /obj/machinery/computer/security/telescreen{
+	name = "Particle Accelerator Chamber Telescreen";
 	desc = "Used for watching the Particle Accelerator chamber.";
 	layer = 4;
-	name = "Particle Accelerator Chamber Telescreen";
-	network = list("PA Room");
-	pixel_y = 36
+	pixel_y = 36;
+	network = list("PA Room")
 	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/research/particleaccelerator)
@@ -13685,19 +13671,19 @@
 "lFA" = (
 /obj/structure/bed/chair/office/dark,
 /obj/machinery/button/remote/airlock{
-	desc = "A remote control switch for the Starboard Bridge Doors.";
-	id = "sbridgedoor";
 	name = "Starboard Bridge Door Control";
+	desc = "A remote control switch for the Starboard Bridge Doors.";
 	pixel_x = 30;
 	pixel_y = -6;
+	id = "sbridgedoor";
 	req_access = list(20)
 	},
 /obj/machinery/button/remote/airlock{
-	desc = "A remote control switch for the captain's office.";
-	id = "captaindoor";
 	name = "Office Door Control";
+	desc = "A remote control switch for the captain's office.";
 	pixel_x = 30;
 	pixel_y = 6;
+	id = "captaindoor";
 	req_access = list(20)
 	},
 /obj/effect/landmark/start/captain,
@@ -13712,19 +13698,19 @@
 	dir = 4
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 4;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 4
 	},
 /turf/simulated/floor/wood/alt/panel,
 /area/maintenance/thirddeck/hiddenkitchen)
 "lHl" = (
 /obj/structure/table/wooden_reinforced,
 /obj/machinery/requests_console{
-	announcementConsole = 1;
+	name = "Station Administrator RC";
+	pixel_x = 30;
 	department = "Station Director's Desk";
 	departmentType = 5;
-	name = "Station Administrator RC";
-	pixel_x = 30
+	announcementConsole = 1
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/heads/sc/sd)
@@ -13739,8 +13725,8 @@
 /area/maintenance/thirddeck/aftport)
 "lIM" = (
 /obj/machinery/door/airlock{
-	id_tag = "Dorms5";
-	name = "Room 5"
+	name = "Room 5";
+	id_tag = "Dorms5"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -13894,13 +13880,13 @@
 	id_tag = "d3_starboard_pump"
 	},
 /obj/machinery/embedded_controller/radio/airlock/airlock_controller{
-	id_tag = "d3_starboard_airlock";
 	pixel_y = -26;
-	req_access = null;
+	id_tag = "d3_starboard_airlock";
+	tag_exterior_door = "d3_starboard_outer";
+	tag_interior_door = "d3_starboard_inner";
 	tag_airpump = "d3_starboard_pump";
 	tag_chamber_sensor = "d3_starboard_sensor";
-	tag_exterior_door = "d3_starboard_outer";
-	tag_interior_door = "d3_starboard_inner"
+	req_access = null
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/forestarboard)
@@ -14011,8 +13997,7 @@
 	},
 /obj/structure/window/reinforced,
 /obj/structure/window/reinforced{
-	dir = 4;
-	health = 1e+006
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/dormsstarboard)
@@ -14033,8 +14018,8 @@
 /area/bridge)
 "lTP" = (
 /obj/structure/disposalpipe/segment{
-	dir = 2;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 2
 	},
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -14055,8 +14040,7 @@
 /obj/item/tank/jetpack/oxygen,
 /obj/item/clothing/mask/gas,
 /obj/structure/window/reinforced{
-	dir = 8;
-	health = null
+	dir = 8
 	},
 /obj/structure/window/reinforced{
 	dir = 4
@@ -14110,8 +14094,8 @@
 	dir = 4
 	},
 /obj/item/radio/intercom{
-	dir = 8;
 	name = "Station Intercom (General)";
+	dir = 8;
 	pixel_x = -21
 	},
 /obj/structure/disposalpipe/segment,
@@ -14120,8 +14104,8 @@
 "lVi" = (
 /obj/structure/table/woodentable,
 /obj/item/radio/intercom{
-	dir = 4;
 	name = "Station Intercom (General)";
+	dir = 4;
 	pixel_x = 21
 	},
 /obj/item/flashlight/lamp/green,
@@ -14176,22 +14160,22 @@
 /area/maintenance/thirddeck/dormsstarboard)
 "lWB" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	dir = 8;
-	icon_state = "map_vent_out";
 	name = "PA-Room Air Vent";
+	icon_state = "map_vent_out";
+	dir = 8;
 	use_power = 1
 	},
 /obj/machinery/camera/network/research{
-	c_tag = "SCI - Particle Accelerator 3";
 	dir = 1;
-	network = list("Research","PA Room")
+	network = list("Research","PA Room");
+	c_tag = "SCI - Particle Accelerator 3"
 	},
 /turf/simulated/floor/reinforced,
 /area/rnd/research/particleaccelerator)
 "lXZ" = (
 /obj/structure/disposalpipe/segment{
-	dir = 4;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 4
 	},
 /obj/machinery/door/window/westleft{
 	dir = 1
@@ -14237,8 +14221,8 @@
 	dir = 1
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 2;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 2
 	},
 /turf/simulated/wall,
 /area/crew_quarters/toilet)
@@ -14308,8 +14292,8 @@
 /area/bridge/meeting_room)
 "mgF" = (
 /obj/structure/disposalpipe/segment{
-	dir = 4;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 4
 	},
 /turf/simulated/floor/wood,
 /area/bridge/meeting_room)
@@ -14367,8 +14351,8 @@
 	dir = 4
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 8;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 8
 	},
 /turf/simulated/floor/tiled,
 /area/bridge)
@@ -14546,8 +14530,8 @@
 	dir = 4
 	},
 /obj/machinery/power/apc{
-	dir = 1;
 	name = "north bump";
+	dir = 1;
 	pixel_y = 24
 	},
 /obj/machinery/light_switch{
@@ -14600,8 +14584,8 @@
 /area/bridge)
 "mmP" = (
 /obj/structure/disposalpipe/segment{
-	dir = 1;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -14640,11 +14624,11 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/requests_console{
-	announcementConsole = 1;
+	name = "Bridge RC";
+	pixel_y = 30;
 	department = "Bridge";
 	departmentType = 5;
-	name = "Bridge RC";
-	pixel_y = 30
+	announcementConsole = 1
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 10
@@ -14661,16 +14645,16 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/door/airlock/command{
-	id_tag = "captaindoor";
 	name = "Station Director's Office";
+	id_tag = "captaindoor";
 	req_access = list(20)
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/crew_quarters/heads/sc/sd)
 "mps" = (
 /obj/structure/disposalpipe/segment{
-	dir = 2;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 2
 	},
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -14740,8 +14724,8 @@
 	dir = 4
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 1;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 1
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/sleep/vistor_room_3)
@@ -14774,8 +14758,8 @@
 /obj/item/melee/chainofcommand,
 /obj/item/hand_tele,
 /obj/item/radio/intercom{
-	dir = 4;
 	name = "Station Intercom (General)";
+	dir = 4;
 	pixel_x = 21
 	},
 /turf/simulated/floor/wood,
@@ -14783,8 +14767,8 @@
 "mxa" = (
 /obj/structure/cable,
 /obj/machinery/power/apc{
-	dir = 8;
 	name = "west bump";
+	dir = 8;
 	pixel_x = -24
 	},
 /turf/simulated/floor/plating,
@@ -14796,12 +14780,12 @@
 	pixel_x = -11
 	},
 /obj/random/mech_toy{
-	pixel_y = -6;
-	pixel_x = -3
+	pixel_x = -3;
+	pixel_y = -6
 	},
 /obj/random/mech_toy{
-	pixel_y = -7;
-	pixel_x = 7
+	pixel_x = 7;
+	pixel_y = -7
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/dormsstarboard)
@@ -14818,8 +14802,8 @@
 /area/maintenance/thirddeck/aftstarboard)
 "mzR" = (
 /obj/machinery/atmospherics/binary/pump/on{
-	dir = 4;
 	name = "Scrubber to Waste";
+	dir = 4;
 	target_pressure = 301.325
 	},
 /obj/effect/floor_decal/rust,
@@ -14840,9 +14824,9 @@
 /area/maintenance/thirddeck/aftstarboard)
 "mBf" = (
 /obj/machinery/computer/general_air_control{
-	frequency = 1491;
 	name = "PA Chamber Monitor";
-	sensors = list("pa_room"="Particle Accelerator Chamber")
+	frequency = 1491;
+	sensors = list(pa_room="Particle Accelerator Chamber")
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/universal{
 	color = "#0000ff"
@@ -14890,8 +14874,8 @@
 "mCV" = (
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/structure/disposalpipe/segment{
-	dir = 4;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 6
@@ -14929,12 +14913,12 @@
 	dir = 4
 	},
 /obj/machinery/door/blast/regular{
+	name = "Bridge Blast Doors";
+	icon_state = "pdoor0";
+	opacity = 0;
 	density = 0;
 	dir = 4;
-	icon_state = "pdoor0";
-	id = "bridge blast";
-	name = "Bridge Blast Doors";
-	opacity = 0
+	id = "bridge blast"
 	},
 /turf/simulated/floor/plating,
 /area/bridge/meeting_room)
@@ -14998,13 +14982,13 @@
 /area/bridge/meeting_room)
 "mGO" = (
 /obj/item/radio/intercom{
-	dir = 4;
 	name = "Station Intercom (General)";
+	dir = 4;
 	pixel_x = 21
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 8;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 8
 	},
 /turf/simulated/floor/wood,
 /area/bridge/meeting_room)
@@ -15069,11 +15053,11 @@
 	dir = 8
 	},
 /obj/machinery/door/blast/regular{
-	density = 0;
-	icon_state = "pdoor0";
-	id = "Biohazard";
 	name = "Biohazard Shutter";
-	opacity = 0
+	icon_state = "pdoor0";
+	opacity = 0;
+	density = 0;
+	id = "Biohazard"
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/forestarboard)
@@ -15201,8 +15185,8 @@
 "mUo" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/machinery/door/airlock/maintenance{
-	req_access = null;
-	req_one_access = null
+	req_one_access = null;
+	req_access = null
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/structure/disposalpipe/segment,
@@ -15213,9 +15197,9 @@
 "mVO" = (
 /obj/machinery/photocopier,
 /obj/machinery/button/remote/blast_door{
-	id = "csblast";
 	name = "Blastdoors";
 	pixel_y = -24;
+	id = "csblast";
 	req_access = list(19)
 	},
 /turf/simulated/floor/wood,
@@ -15253,8 +15237,8 @@
 /area/bridge/meeting_room)
 "mXD" = (
 /obj/machinery/power/apc{
-	dir = 8;
 	name = "west bump";
+	dir = 8;
 	pixel_x = -24
 	},
 /obj/structure/cable/green{
@@ -15285,8 +15269,8 @@
 "mYj" = (
 /obj/structure/bed/chair,
 /obj/item/radio/intercom{
-	dir = 1;
 	name = "Station Intercom (General)";
+	dir = 1;
 	pixel_y = 21
 	},
 /obj/effect/floor_decal/borderfloor{
@@ -15405,8 +15389,8 @@
 "naW" = (
 /obj/structure/table/standard,
 /obj/machinery/power/apc{
-	dir = 1;
 	name = "north bump";
+	dir = 1;
 	pixel_y = 24
 	},
 /obj/machinery/light_switch{
@@ -15424,9 +15408,9 @@
 /area/crew_quarters/sleep/vistor_room_1)
 "nbg" = (
 /obj/machinery/button/remote/airlock{
-	id = "Dorms6";
 	name = "Bolt Control";
 	pixel_x = -30;
+	id = "Dorms6";
 	specialfunctions = 4
 	},
 /obj/structure/closet/secure_closet/personal/cabinet,
@@ -15476,9 +15460,9 @@
 /area/bridge)
 "ndI" = (
 /obj/machinery/door/airlock/multi_tile/metal{
+	name = "Sauna";
 	dir = 2;
-	id_tag = "sauna1";
-	name = "Sauna"
+	id_tag = "sauna1"
 	},
 /obj/machinery/door/firedoor/multi_tile/glass{
 	dir = 1
@@ -15503,15 +15487,15 @@
 /area/bridge)
 "nfF" = (
 /obj/machinery/button/remote/blast_door{
-	id = "bridge blast";
 	name = "Bridge Blastdoors";
 	pixel_y = -36;
+	id = "bridge blast";
 	req_access = list(19)
 	},
 /obj/machinery/button/windowtint{
-	id = "bridge_center";
 	pixel_x = -11;
 	pixel_y = -24;
+	id = "bridge_center";
 	req_access = null
 	},
 /obj/machinery/keycard_auth{
@@ -15533,8 +15517,7 @@
 /area/bridge)
 "nfH" = (
 /obj/structure/window/reinforced{
-	dir = 8;
-	health = 1e+006
+	dir = 8
 	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 10
@@ -15569,8 +15552,8 @@
 /area/maintenance/thirddeck/dormsatmos)
 "nhx" = (
 /obj/structure/disposalpipe/segment{
-	dir = 8;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 8
 	},
 /turf/simulated/wall,
 /area/crew_quarters/sleep/vistor_room_11)
@@ -15649,8 +15632,8 @@
 "njv" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/machinery/door/airlock/maintenance{
-	req_access = null;
-	req_one_access = null
+	req_one_access = null;
+	req_access = null
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/structure/disposalpipe/segment,
@@ -15662,9 +15645,9 @@
 	req_access = list(7)
 	},
 /obj/structure/fans/hardlight/colorable{
+	name = "hardlight radiation shield";
 	desc = "Retains air, blocks radiation, allows passage.";
 	light_color = "#243550";
-	name = "hardlight radiation shield";
 	rad_resistance = 200
 	},
 /turf/simulated/floor/reinforced,
@@ -15763,12 +15746,12 @@
 	icon_state = "0-4"
 	},
 /obj/machinery/door/blast/regular{
+	name = "Bridge Blast Doors";
+	icon_state = "pdoor0";
+	opacity = 0;
 	density = 0;
 	dir = 4;
-	icon_state = "pdoor0";
-	id = "bridge blast";
-	name = "Bridge Blast Doors";
-	opacity = 0
+	id = "bridge blast"
 	},
 /obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/floor/plating,
@@ -15782,12 +15765,12 @@
 	icon_state = "0-4"
 	},
 /obj/machinery/door/blast/regular{
+	name = "Bridge Blast Doors";
+	icon_state = "pdoor0";
+	opacity = 0;
 	density = 0;
 	dir = 4;
-	icon_state = "pdoor0";
-	id = "bridge blast";
-	name = "Bridge Blast Doors";
-	opacity = 0
+	id = "bridge blast"
 	},
 /obj/structure/cable/green,
 /obj/effect/wingrille_spawn/reinforced,
@@ -15799,12 +15782,12 @@
 	icon_state = "0-8"
 	},
 /obj/machinery/door/blast/regular{
+	name = "Bridge Blast Doors";
+	icon_state = "pdoor0";
+	opacity = 0;
 	density = 0;
 	dir = 4;
-	icon_state = "pdoor0";
-	id = "bridge blast";
-	name = "Bridge Blast Doors";
-	opacity = 0
+	id = "bridge blast"
 	},
 /obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/floor/plating,
@@ -15924,12 +15907,12 @@
 	},
 /obj/effect/wingrille_spawn/reinforced,
 /obj/machinery/door/blast/regular{
+	name = "Bridge Blast Doors";
+	icon_state = "pdoor0";
+	opacity = 0;
 	density = 0;
 	dir = 8;
-	icon_state = "pdoor0";
-	id = "bridge blast";
-	name = "Bridge Blast Doors";
-	opacity = 0
+	id = "bridge blast"
 	},
 /turf/simulated/floor/plating,
 /area/bridge)
@@ -15960,8 +15943,8 @@
 	dir = 8
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 1;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/thirddeck/aftdoorm)
@@ -15976,12 +15959,12 @@
 /obj/structure/cable/green,
 /obj/effect/wingrille_spawn/reinforced,
 /obj/machinery/door/blast/regular{
+	name = "Bridge Blast Doors";
+	icon_state = "pdoor0";
+	opacity = 0;
 	density = 0;
 	dir = 8;
-	icon_state = "pdoor0";
-	id = "bridge blast";
-	name = "Bridge Blast Doors";
-	opacity = 0
+	id = "bridge blast"
 	},
 /turf/simulated/floor/plating,
 /area/bridge)
@@ -15992,20 +15975,20 @@
 	},
 /obj/effect/wingrille_spawn/reinforced,
 /obj/machinery/door/blast/regular{
+	name = "Bridge Blast Doors";
+	icon_state = "pdoor0";
+	opacity = 0;
 	density = 0;
 	dir = 8;
-	icon_state = "pdoor0";
-	id = "bridge blast";
-	name = "Bridge Blast Doors";
-	opacity = 0
+	id = "bridge blast"
 	},
 /turf/simulated/floor/plating,
 /area/bridge)
 "nza" = (
 /obj/machinery/button/remote/blast_door{
-	id = "directorblast";
 	name = "Security Shutters";
 	pixel_x = -26;
+	id = "directorblast";
 	req_access = list(20)
 	},
 /turf/simulated/floor/wood,
@@ -16070,8 +16053,8 @@
 "nBp" = (
 /obj/structure/table/woodentable,
 /obj/item/radio/intercom{
-	dir = 4;
 	name = "Station Intercom (General)";
+	dir = 4;
 	pixel_x = 21
 	},
 /obj/item/flashlight/lamp/green,
@@ -16130,8 +16113,8 @@
 	pixel_x = 32
 	},
 /obj/machinery/camera/network/engineering{
-	c_tag = "ENG - Solar Aft Starboard Access";
-	dir = 8
+	dir = 8;
+	c_tag = "ENG - Solar Aft Starboard Access"
 	},
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/plating,
@@ -16206,8 +16189,8 @@
 "nHA" = (
 /obj/structure/bed/chair/wood,
 /obj/item/radio/intercom{
-	dir = 1;
 	name = "Station Intercom (General)";
+	dir = 1;
 	pixel_y = 21
 	},
 /turf/simulated/floor/wood,
@@ -16221,12 +16204,12 @@
 	dir = 8
 	},
 /obj/machinery/access_button{
-	command = "cycle_interior";
-	frequency = 1379;
-	master_tag = "d3_port_airlock";
 	name = "interior access button";
 	pixel_x = -25;
 	pixel_y = 26;
+	frequency = 1379;
+	command = "cycle_interior";
+	master_tag = "d3_port_airlock";
 	req_access = null
 	},
 /turf/simulated/floor/plating,
@@ -16329,12 +16312,12 @@
 /area/maintenance/solars/aftstarboardsolar)
 "nMY" = (
 /obj/structure/disposalpipe/segment{
-	dir = 8;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 8
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 4;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 4
 	},
 /turf/simulated/floor/wood/broken,
 /area/maintenance/thirddeck/dormsstarboard)
@@ -16379,9 +16362,9 @@
 	dir = 8
 	},
 /obj/machinery/portable_atmospherics/canister/empty{
-	canister_color = "grey";
+	name = "Canister \[Air]";
 	icon_state = "grey";
-	name = "Canister \[Air\]"
+	canister_color = "grey"
 	},
 /obj/effect/floor_decal/industrial/outline/grey,
 /turf/simulated/floor/tiled/dark,
@@ -16404,11 +16387,11 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/door/airlock/external{
-	frequency = 1379;
-	icon_state = "door_locked";
-	id_tag = "aft_port_solar_outer";
-	locked = 1;
 	name = "Engineering External Access";
+	icon_state = "door_locked";
+	frequency = 1379;
+	locked = 1;
+	id_tag = "aft_port_solar_outer";
 	req_access = list(11,13)
 	},
 /turf/simulated/floor/plating,
@@ -16418,22 +16401,22 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/embedded_controller/radio/airlock/airlock_controller{
-	id_tag = "aft_port_solar_airlock";
 	layer = 3.3;
 	pixel_y = 25;
-	req_access = list(13);
+	id_tag = "aft_port_solar_airlock";
+	tag_exterior_door = "aft_port_solar_outer";
+	tag_interior_door = "aft_port_solar_inner";
 	tag_airpump = "aft_port_solar_pump";
 	tag_chamber_sensor = "aft_port_solar_sensor";
-	tag_exterior_door = "aft_port_solar_outer";
-	tag_interior_door = "aft_port_solar_inner"
+	req_access = list(13)
 	},
 /obj/effect/floor_decal/industrial/warning/cee{
 	dir = 8
 	},
 /obj/machinery/airlock_sensor{
-	id_tag = "aft_port_solar_sensor";
 	layer = 3.3;
-	pixel_y = -25
+	pixel_y = -25;
+	id_tag = "aft_port_solar_sensor"
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 1;
@@ -16497,11 +16480,11 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/door/airlock/external{
-	frequency = 1379;
-	icon_state = "door_locked";
-	id_tag = "aft_port_solar_inner";
-	locked = 1;
 	name = "Engineering External Access";
+	icon_state = "door_locked";
+	frequency = 1379;
+	locked = 1;
+	id_tag = "aft_port_solar_inner";
 	req_access = list(11,13)
 	},
 /turf/simulated/floor/plating,
@@ -16560,12 +16543,12 @@
 	icon_state = "0-4"
 	},
 /obj/machinery/door/blast/regular{
+	name = "Blast Doors";
+	icon_state = "pdoor0";
+	opacity = 0;
 	density = 0;
 	dir = 4;
-	icon_state = "pdoor0";
-	id = "csblast";
-	name = "Blast Doors";
-	opacity = 0
+	id = "csblast"
 	},
 /obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/floor/plating,
@@ -16580,12 +16563,12 @@
 	icon_state = "0-8"
 	},
 /obj/machinery/door/blast/regular{
+	name = "Blast Doors";
+	icon_state = "pdoor0";
+	opacity = 0;
 	density = 0;
 	dir = 4;
-	icon_state = "pdoor0";
-	id = "csblast";
-	name = "Blast Doors";
-	opacity = 0
+	id = "csblast"
 	},
 /obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/floor/plating,
@@ -16596,12 +16579,12 @@
 	icon_state = "0-8"
 	},
 /obj/machinery/door/blast/regular{
+	name = "Blast Doors";
+	icon_state = "pdoor0";
+	opacity = 0;
 	density = 0;
 	dir = 4;
-	icon_state = "pdoor0";
-	id = "csblast";
-	name = "Blast Doors";
-	opacity = 0
+	id = "csblast"
 	},
 /obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/floor/plating,
@@ -16630,12 +16613,12 @@
 	icon_state = "0-4"
 	},
 /obj/machinery/door/blast/regular{
+	name = "Bridge Blast Doors";
+	icon_state = "pdoor0";
+	opacity = 0;
 	density = 0;
 	dir = 4;
-	icon_state = "pdoor0";
-	id = "bridge blast";
-	name = "Bridge Blast Doors";
-	opacity = 0
+	id = "bridge blast"
 	},
 /obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/floor/plating,
@@ -16657,12 +16640,12 @@
 	icon_state = "0-8"
 	},
 /obj/machinery/door/blast/regular{
+	name = "Bridge Blast Doors";
+	icon_state = "pdoor0";
+	opacity = 0;
 	density = 0;
 	dir = 4;
-	icon_state = "pdoor0";
-	id = "bridge blast";
-	name = "Bridge Blast Doors";
-	opacity = 0
+	id = "bridge blast"
 	},
 /obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/floor/plating,
@@ -16698,12 +16681,12 @@
 	icon_state = "0-8"
 	},
 /obj/machinery/door/blast/regular{
+	name = "Bridge Blast Doors";
+	icon_state = "pdoor0";
+	opacity = 0;
 	density = 0;
 	dir = 4;
-	icon_state = "pdoor0";
-	id = "bridge blast";
-	name = "Bridge Blast Doors";
-	opacity = 0
+	id = "bridge blast"
 	},
 /obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/floor/plating,
@@ -16719,8 +16702,7 @@
 	},
 /obj/structure/window/reinforced,
 /obj/structure/window/reinforced{
-	dir = 4;
-	health = 1e+006
+	dir = 4
 	},
 /turf/simulated/shuttle/plating,
 /area/shuttle/escape_pod7/station)
@@ -16737,12 +16719,12 @@
 	icon_state = "0-4"
 	},
 /obj/machinery/door/blast/regular{
+	name = "Blast Doors";
+	icon_state = "pdoor0";
+	opacity = 0;
 	density = 0;
 	dir = 8;
-	icon_state = "pdoor0";
-	id = "directorblast";
-	name = "Blast Doors";
-	opacity = 0
+	id = "directorblast"
 	},
 /obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/floor/plating,
@@ -16762,8 +16744,8 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/unary/outlet_injector{
-	dir = 8;
 	name = "PA-Room air injector";
+	dir = 8;
 	use_power = 1
 	},
 /turf/simulated/floor/reinforced,
@@ -16774,8 +16756,7 @@
 	},
 /obj/structure/window/reinforced,
 /obj/structure/window/reinforced{
-	dir = 8;
-	health = 1e+006
+	dir = 8
 	},
 /obj/structure/disposalpipe/trunk{
 	dir = 8
@@ -16795,12 +16776,12 @@
 	},
 /obj/structure/cable/green,
 /obj/machinery/door/blast/regular{
+	name = "Blast Doors";
+	icon_state = "pdoor0";
+	opacity = 0;
 	density = 0;
 	dir = 8;
-	icon_state = "pdoor0";
-	id = "directorblast";
-	name = "Blast Doors";
-	opacity = 0
+	id = "directorblast"
 	},
 /obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/floor/plating,
@@ -16820,12 +16801,12 @@
 	icon_state = "0-4"
 	},
 /obj/machinery/door/blast/regular{
+	name = "Blast Doors";
+	icon_state = "pdoor0";
+	opacity = 0;
 	density = 0;
 	dir = 8;
-	icon_state = "pdoor0";
-	id = "directorblast";
-	name = "Blast Doors";
-	opacity = 0
+	id = "directorblast"
 	},
 /obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/floor/plating,
@@ -16844,12 +16825,12 @@
 	icon_state = "0-8"
 	},
 /obj/machinery/door/blast/regular{
+	name = "Blast Doors";
+	icon_state = "pdoor0";
+	opacity = 0;
 	density = 0;
 	dir = 8;
-	icon_state = "pdoor0";
-	id = "directorblast";
-	name = "Blast Doors";
-	opacity = 0
+	id = "directorblast"
 	},
 /obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/floor/plating,
@@ -16915,8 +16896,8 @@
 	icon_state = "4-8"
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 4;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/aftstarboard)
@@ -16941,8 +16922,8 @@
 	dir = 4
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 8;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 8
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/aftstarboard)
@@ -16956,8 +16937,8 @@
 /obj/machinery/door/firedoor/border_only,
 /obj/machinery/door/airlock/engineering{
 	name = "Aft Starboard Solar Access";
-	req_access = list();
-	req_one_access = list(11,24)
+	req_one_access = list(11,24);
+	req_access = list()
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/solars/aftstarboardsolar)
@@ -17015,15 +16996,15 @@
 	},
 /obj/machinery/meter,
 /obj/machinery/access_button{
-	command = "cycle_interior";
-	frequency = 1379;
-	layer = 3.3;
-	master_tag = "aft_starboard_solar_airlock";
 	name = "interior access button";
+	layer = 3.3;
 	pixel_x = 25;
 	pixel_y = 25;
-	req_access = list();
-	req_one_access = list(11,24)
+	frequency = 1379;
+	command = "cycle_interior";
+	req_one_access = list(11,24);
+	master_tag = "aft_starboard_solar_airlock";
+	req_access = list()
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/solars/aftstarboardsolar)
@@ -17035,11 +17016,11 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/door/airlock/external{
-	frequency = 1379;
-	icon_state = "door_locked";
-	id_tag = "aft_starboard_solar_inner";
-	locked = 1;
 	name = "Engineering External Access";
+	icon_state = "door_locked";
+	frequency = 1379;
+	locked = 1;
+	id_tag = "aft_starboard_solar_inner";
 	req_access = list(11,13)
 	},
 /turf/simulated/floor/plating,
@@ -17071,19 +17052,19 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/embedded_controller/radio/airlock/airlock_controller{
-	id_tag = "aft_starboard_solar_airlock";
 	layer = 3.3;
 	pixel_y = 25;
-	req_access = list(13);
+	id_tag = "aft_starboard_solar_airlock";
+	tag_exterior_door = "aft_starboard_solar_outer";
+	tag_interior_door = "aft_starboard_solar_inner";
 	tag_airpump = "aft_starboard_solar_pump";
 	tag_chamber_sensor = "aft_starboard_solar_sensor";
-	tag_exterior_door = "aft_starboard_solar_outer";
-	tag_interior_door = "aft_starboard_solar_inner"
+	req_access = list(13)
 	},
 /obj/machinery/airlock_sensor{
-	id_tag = "aft_starboard_solar_sensor";
 	layer = 3.3;
-	pixel_y = -25
+	pixel_y = -25;
+	id_tag = "aft_starboard_solar_sensor"
 	},
 /obj/effect/floor_decal/industrial/warning/cee{
 	dir = 4
@@ -17095,11 +17076,11 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/door/airlock/external{
-	frequency = 1379;
-	icon_state = "door_locked";
-	id_tag = "aft_starboard_solar_outer";
-	locked = 1;
 	name = "Engineering External Access";
+	icon_state = "door_locked";
+	frequency = 1379;
+	locked = 1;
+	id_tag = "aft_starboard_solar_outer";
 	req_access = list(11,13)
 	},
 /turf/simulated/floor/plating,
@@ -17143,8 +17124,8 @@
 	icon_state = "0-8"
 	},
 /obj/machinery/power/solar{
-	id = "aftportsolar";
-	name = "Aft-Port Solar Array"
+	name = "Aft-Port Solar Array";
+	id = "aftportsolar"
 	},
 /turf/simulated/floor/plating/turfpack/airless{
 	icon_state = "solarpanel"
@@ -17152,8 +17133,8 @@
 /area/solar/aftportsolar)
 "onQ" = (
 /obj/machinery/atmospherics/binary/pump/on{
-	dir = 4;
 	name = "Air to Supply";
+	dir = 4;
 	target_pressure = 301.325
 	},
 /turf/simulated/floor/plating,
@@ -17225,9 +17206,9 @@
 /area/thirddeck/roof)
 "orc" = (
 /obj/machinery/button/remote/airlock{
-	id = "Dorms3";
 	name = "Bolt Control";
 	pixel_y = -29;
+	id = "Dorms3";
 	specialfunctions = 4
 	},
 /obj/structure/cable/green{
@@ -17337,8 +17318,8 @@
 "oxB" = (
 /obj/structure/cable,
 /obj/item/radio/intercom{
-	dir = 8;
 	name = "Station Intercom (General)";
+	dir = 8;
 	pixel_x = -21
 	},
 /obj/machinery/power/apc{
@@ -17355,48 +17336,45 @@
 "oyN" = (
 /obj/structure/disposaloutlet,
 /obj/structure/window/reinforced{
-	dir = 8;
-	health = 1e+006
+	dir = 8
 	},
 /obj/structure/window/reinforced{
-	dir = 1;
-	health = 1e+006;
-	req_access = list(5)
+	dir = 1
 	},
 /obj/structure/disposalpipe/trunk,
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/dormsstarboard)
 "ozS" = (
 /obj/machinery/camera/network/engineering{
-	c_tag = "ENG - Solar Aft Starboard";
-	dir = 1
+	dir = 1;
+	c_tag = "ENG - Solar Aft Starboard"
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/solars/aftstarboardsolar)
 "ozU" = (
 /obj/structure/cable/yellow,
 /obj/machinery/power/solar_control{
-	auto_start = 2;
+	name = "Aft Starboard Solar Control";
 	dir = 1;
 	id = "aftstarboardsolar";
-	name = "Aft Starboard Solar Control"
+	auto_start = 2
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/solars/aftstarboardsolar)
 "ozZ" = (
 /obj/structure/disposalpipe/segment{
-	dir = 4;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 4
 	},
 /turf/simulated/wall,
 /area/crew_quarters/sleep/vistor_room_7)
 "oBG" = (
 /obj/machinery/door/airlock/external{
-	frequency = 1379;
-	icon_state = "door_locked";
-	id_tag = "d3_port_outer";
-	locked = 1;
 	name = "External Airlock Access";
+	icon_state = "door_locked";
+	frequency = 1379;
+	locked = 1;
+	id_tag = "d3_port_outer";
 	req_access = list(13)
 	},
 /turf/simulated/floor/plating,
@@ -17524,12 +17502,12 @@
 /area/maintenance/thirddeck/dormsstarboard)
 "oKm" = (
 /obj/structure/disposalpipe/segment{
-	dir = 2;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 2
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 1;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 1
 	},
 /obj/machinery/door/window/westleft{
 	dir = 2
@@ -17629,8 +17607,8 @@
 	dir = 4
 	},
 /obj/machinery/power/apc{
-	dir = 4;
 	name = "east bump";
+	dir = 4;
 	pixel_x = 24
 	},
 /obj/structure/cable/green{
@@ -17644,8 +17622,8 @@
 	icon_state = "0-2"
 	},
 /obj/machinery/power/apc{
-	dir = 1;
 	name = "north bump";
+	dir = 1;
 	pixel_y = 24
 	},
 /turf/simulated/floor/plating,
@@ -17713,8 +17691,8 @@
 /area/hallway/primary/thirddeck/aftportcentral)
 "oRH" = (
 /obj/machinery/power/apc{
-	dir = 1;
 	name = "north bump";
+	dir = 1;
 	pixel_y = 24
 	},
 /obj/structure/cable/green{
@@ -17812,8 +17790,8 @@
 /area/hallway/primary/thirddeck/stationgateway)
 "oUd" = (
 /obj/machinery/power/apc{
-	dir = 1;
 	name = "north bump";
+	dir = 1;
 	pixel_y = 24
 	},
 /obj/structure/cable/green{
@@ -17853,8 +17831,8 @@
 /area/hallway/primary/thirddeck/aftstarboardcentral)
 "oUU" = (
 /obj/item/radio/intercom{
-	dir = 1;
 	name = "Station Intercom (General)";
+	dir = 1;
 	pixel_y = 21
 	},
 /obj/effect/floor_decal/borderfloor/corner{
@@ -17891,8 +17869,8 @@
 "oXh" = (
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/machinery/camera/network/engineering{
-	c_tag = "ENG - Solar Aft Port Access";
-	dir = 4
+	dir = 4;
+	c_tag = "ENG - Solar Aft Port Access"
 	},
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -17988,8 +17966,8 @@
 	pixel_y = 26
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 1;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/thirddeck/aftstarboardcentral)
@@ -18008,8 +17986,8 @@
 /area/hallway/primary/thirddeck/aftstarboardcentral)
 "pcr" = (
 /obj/machinery/door/airlock{
-	id_tag = "Dorms6";
-	name = "Room 6"
+	name = "Room 6";
+	id_tag = "Dorms6"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -18321,8 +18299,8 @@
 "ppx" = (
 /obj/machinery/air_sensor{
 	frequency = 1491;
-	id_tag = "pa_room";
-	output = 63
+	output = 63;
+	id_tag = "pa_room"
 	},
 /turf/simulated/floor/reinforced,
 /area/rnd/research/particleaccelerator)
@@ -18336,8 +18314,8 @@
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
 /obj/structure/disposalpipe/segment{
-	dir = 4;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 4
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/hallway/primary/thirddeck/aftstarboardcentral)
@@ -18408,8 +18386,8 @@
 	dir = 4
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 8;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 8
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/hallway/primary/thirddeck/aftstarboardcentral)
@@ -18500,8 +18478,8 @@
 /area/hallway/primary/thirddeck/aftportcentral)
 "pwP" = (
 /obj/item/radio/intercom{
-	dir = 4;
 	name = "Station Intercom (General)";
+	dir = 4;
 	pixel_x = 21
 	},
 /obj/machinery/light{
@@ -18516,8 +18494,8 @@
 "pwS" = (
 /obj/structure/table/standard,
 /obj/machinery/power/apc{
-	dir = 1;
 	name = "north bump";
+	dir = 1;
 	pixel_y = 24
 	},
 /obj/machinery/light_switch{
@@ -18692,8 +18670,8 @@
 /area/maintenance/thirddeck/dormsaft)
 "pEm" = (
 /obj/structure/disposalpipe/segment{
-	dir = 2;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 2
 	},
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -18708,8 +18686,8 @@
 /area/hallway/primary/thirddeck/stationgateway)
 "pES" = (
 /obj/machinery/camera/network/third_deck{
-	c_tag = "Third Deck - Station Gateway";
-	dir = 1
+	dir = 1;
+	c_tag = "Third Deck - Station Gateway"
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/thirddeck/stationgateway)
@@ -18794,8 +18772,8 @@
 /area/maintenance/thirddeck/hiddenkitchen)
 "pHp" = (
 /obj/machinery/door/airlock/maintenance{
-	req_access = null;
-	req_one_access = null
+	req_one_access = null;
+	req_access = null
 	},
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -18850,8 +18828,8 @@
 /area/hallway/primary/thirddeck/aftstarboardcentral)
 "pKH" = (
 /obj/machinery/camera/network/third_deck{
-	c_tag = "Third Deck - Central Civ Hallway 3";
-	dir = 1
+	dir = 1;
+	c_tag = "Third Deck - Central Civ Hallway 3"
 	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
@@ -18897,8 +18875,8 @@
 /area/hallway/primary/thirddeck/aftstarboardcentral)
 "pLY" = (
 /obj/structure/disposalpipe/segment{
-	dir = 8;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 8
 	},
 /turf/simulated/wall,
 /area/crew_quarters/sleep/vistor_room_7)
@@ -19036,9 +19014,9 @@
 /area/hallway/primary/thirddeck/aftstarboardcentral)
 "pVD" = (
 /obj/machinery/button/remote/airlock{
-	id = "Dorms9";
 	name = "Bolt Control";
 	pixel_x = 26;
+	id = "Dorms9";
 	specialfunctions = 4
 	},
 /obj/structure/bed/padded,
@@ -19160,15 +19138,15 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/disposalpipe/segment{
-	dir = 8;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 8
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/thirddeck/aftdoorm)
 "qbV" = (
 /obj/machinery/door/airlock/maintenance{
-	req_access = null;
-	req_one_access = null
+	req_one_access = null;
+	req_access = null
 	},
 /obj/machinery/door/firedoor/border_only,
 /turf/simulated/floor/plating,
@@ -19198,8 +19176,8 @@
 	pixel_x = -32
 	},
 /obj/machinery/atmospherics/binary/pump/high_power{
-	dir = 1;
-	name = "PA-Loop to Waste pump"
+	name = "PA-Loop to Waste pump";
+	dir = 1
 	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/research/particleaccelerator)
@@ -19228,9 +19206,9 @@
 /area/crew_quarters/cafeteria)
 "qfg" = (
 /obj/machinery/button/remote/blast_door{
-	id = "heads_meeting";
 	name = "Security Shutters";
 	pixel_x = -26;
+	id = "heads_meeting";
 	req_access = list(19)
 	},
 /turf/simulated/floor/wood,
@@ -19249,8 +19227,8 @@
 	id_tag = "d3_port_pump"
 	},
 /obj/machinery/airlock_sensor{
-	id_tag = "d3_port_sensor";
-	pixel_y = 25
+	pixel_y = 25;
+	id_tag = "d3_port_sensor"
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/foreport)
@@ -19277,11 +19255,11 @@
 	dir = 1
 	},
 /obj/machinery/computer/security/telescreen{
+	name = "Particle Accelerator Chamber Telescreen";
 	desc = "Used for watching the Particle Accelerator chamber.";
 	layer = 4;
-	name = "Particle Accelerator Chamber Telescreen";
-	network = list("PA Room");
-	pixel_y = 32
+	pixel_y = 32;
+	network = list("PA Room")
 	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/research/particleaccelerator)
@@ -19424,8 +19402,8 @@
 "qlN" = (
 /obj/machinery/shield_diffuser,
 /obj/machinery/door/blast/regular{
-	id = "palabvent";
-	name = "PA Lab Blast Door"
+	name = "PA Lab Blast Door";
+	id = "palabvent"
 	},
 /turf/simulated/floor/reinforced,
 /area/rnd/research/particleaccelerator)
@@ -19459,9 +19437,9 @@
 /area/crew_quarters/cafeteria)
 "qmU" = (
 /obj/machinery/button/remote/airlock{
-	id = "Dorms5";
 	name = "Bolt Control";
 	pixel_y = -30;
+	id = "Dorms5";
 	specialfunctions = 4
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
@@ -19555,8 +19533,8 @@
 "qph" = (
 /obj/structure/table/standard,
 /obj/machinery/power/apc{
-	dir = 1;
 	name = "north bump";
+	dir = 1;
 	pixel_y = 24
 	},
 /obj/machinery/light_switch{
@@ -19649,11 +19627,11 @@
 	dir = 4
 	},
 /obj/machinery/door/airlock/glass_external{
-	frequency = 1379;
-	icon_state = "door_locked";
-	id_tag = "d3_starboard_dorms_inner";
-	locked = 1;
 	name = "Internal Airlock Access";
+	icon_state = "door_locked";
+	frequency = 1379;
+	locked = 1;
+	id_tag = "d3_starboard_dorms_inner";
 	req_access = list(13)
 	},
 /turf/simulated/floor/plating,
@@ -19675,8 +19653,8 @@
 	dir = 8
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 8;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 8
 	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/research/particleaccelerator)
@@ -19813,8 +19791,8 @@
 /area/maintenance/thirddeck/dormsaft)
 "qzT" = (
 /obj/machinery/door/airlock/maintenance{
-	req_access = null;
-	req_one_access = null
+	req_one_access = null;
+	req_access = null
 	},
 /obj/machinery/door/firedoor/border_only,
 /turf/simulated/floor/plating,
@@ -19842,8 +19820,8 @@
 /area/crew_quarters/cafeteria)
 "qAy" = (
 /obj/machinery/door/airlock{
-	id_tag = "Dorms3";
-	name = "Room 3"
+	name = "Room 3";
+	id_tag = "Dorms3"
 	},
 /obj/machinery/door/firedoor/glass,
 /obj/structure/cable/green{
@@ -19945,8 +19923,8 @@
 /area/crew_quarters/cafeteria)
 "qFF" = (
 /obj/machinery/door/airlock/maintenance{
-	req_access = null;
-	req_one_access = null
+	req_one_access = null;
+	req_access = null
 	},
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -20089,8 +20067,8 @@
 /area/maintenance/thirddeck/aftstarboard)
 "qMf" = (
 /obj/machinery/door/airlock{
-	id_tag = "Dorms8";
-	name = "Room 8"
+	name = "Room 8";
+	id_tag = "Dorms8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -20179,8 +20157,8 @@
 /area/maintenance/thirddeck/dormsstarboard)
 "qRl" = (
 /obj/structure/disposalpipe/segment{
-	dir = 8;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 8
 	},
 /turf/simulated/wall/r_wall,
 /area/maintenance/thirddeck/hiddenkitchen)
@@ -20241,8 +20219,8 @@
 /area/crew_quarters/thirddeck/vrroom)
 "qTm" = (
 /obj/machinery/door/airlock/maintenance{
-	req_access = null;
-	req_one_access = null
+	req_one_access = null;
+	req_access = null
 	},
 /obj/machinery/door/firedoor/border_only,
 /turf/simulated/floor/plating,
@@ -20329,8 +20307,8 @@
 /area/crew_quarters/cafeteria)
 "qZD" = (
 /obj/machinery/door/airlock/medical{
-	id_tag = "mentaldoor";
 	name = "Dental";
+	id_tag = "mentaldoor";
 	req_access = list(64)
 	},
 /turf/simulated/floor/plating,
@@ -20470,19 +20448,19 @@
 	pixel_y = -1
 	},
 /obj/item/stack/material/plastic{
-	amount = 25;
 	pixel_x = -7;
-	pixel_y = 0
+	pixel_y = 0;
+	amount = 25
 	},
 /obj/item/stack/material/steel{
-	amount = 25;
 	pixel_x = -7;
-	pixel_y = 3
+	pixel_y = 3;
+	amount = 25
 	},
 /obj/item/stack/material/glass{
-	amount = 25;
 	pixel_x = -7;
-	pixel_y = 7
+	pixel_y = 7;
+	amount = 25
 	},
 /obj/item/storage/toolbox/mechanical{
 	pixel_x = 5;
@@ -20496,9 +20474,9 @@
 	pixel_y = 6
 	},
 /obj/item/stack/material/wood{
-	amount = 20;
 	pixel_x = -10;
-	pixel_y = 0
+	pixel_y = 0;
+	amount = 20
 	},
 /turf/simulated/wall/r_wall,
 /area/maintenance/thirddeck/hiddenkitchen)
@@ -20529,8 +20507,7 @@
 /area/maintenance/thirddeck/aftport)
 "reM" = (
 /obj/structure/window/reinforced{
-	dir = 1;
-	health = 1e+006
+	dir = 1
 	},
 /obj/machinery/conveyor{
 	id = "toyfight"
@@ -20630,8 +20607,8 @@
 "rjA" = (
 /obj/structure/table/reinforced,
 /obj/item/radio/intercom{
-	dir = 1;
 	name = "Station Intercom (General)";
+	dir = 1;
 	pixel_y = 21
 	},
 /obj/item/bodybag/cryobag{
@@ -20657,8 +20634,8 @@
 /area/rnd/research/particleaccelerator)
 "rjS" = (
 /obj/structure/disposalpipe/segment{
-	dir = 8;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 8
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/dormsstarboard)
@@ -20683,8 +20660,8 @@
 	icon_state = "0-4"
 	},
 /obj/machinery/power/solar{
-	id = "forestarboardsolar";
-	name = "Fore-Starboard Solar Array"
+	name = "Fore-Starboard Solar Array";
+	id = "forestarboardsolar"
 	},
 /turf/simulated/floor/plating/turfpack/airless{
 	icon_state = "solarpanel"
@@ -20720,17 +20697,17 @@
 "rnN" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/button/windowtint{
-	id = "vrroom";
 	pixel_x = 26;
-	pixel_y = 11
+	pixel_y = 11;
+	id = "vrroom"
 	},
 /obj/machinery/alarm{
 	dir = 8;
 	pixel_x = 24
 	},
 /obj/machinery/light_switch{
-	dir = 8;
 	name = "light switch ";
+	dir = 8;
 	pixel_x = 26;
 	pixel_y = -11
 	},
@@ -20768,8 +20745,8 @@
 	dir = 4
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 1;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 1
 	},
 /obj/effect/floor_decal/corner/orange/diagonal,
 /turf/simulated/floor/tiled,
@@ -20820,17 +20797,17 @@
 	dir = 4
 	},
 /obj/machinery/computer/general_air_control{
+	name = "PA Chamber Monitor";
 	dir = 8;
 	frequency = 1491;
-	name = "PA Chamber Monitor";
-	sensors = list("pa_room"="Particle Accelerator Chamber")
+	sensors = list(pa_room="Particle Accelerator Chamber")
 	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/research/particleaccelerator)
 "rqw" = (
 /turf/simulated/wall{
-	can_open = 1;
-	desc = "A huge chunk of metal used to seperate rooms. There are scratch marks along the floor."
+	desc = "A huge chunk of metal used to seperate rooms. There are scratch marks along the floor.";
+	can_open = 1
 	},
 /area/maintenance/thirddeck/dormsstarboard)
 "rqQ" = (
@@ -20874,8 +20851,8 @@
 	dir = 4
 	},
 /obj/structure/disposalpipe/junction{
-	dir = 1;
-	icon_state = "pipe-j2"
+	icon_state = "pipe-j2";
+	dir = 1
 	},
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -20976,8 +20953,8 @@
 	id_tag = "d3_starboard_pump"
 	},
 /obj/machinery/airlock_sensor{
-	id_tag = "d3_starboard_sensor";
-	pixel_y = 25
+	pixel_y = 25;
+	id_tag = "d3_starboard_sensor"
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/forestarboard)
@@ -21010,8 +20987,8 @@
 /area/maintenance/thirddeck/dormsstarboard/maintbar)
 "rxc" = (
 /obj/machinery/atmospherics/valve/shutoff{
-	dir = 8;
-	name = "Dorm Scrubbers automatic shutoff valve"
+	name = "Dorm Scrubbers automatic shutoff valve";
+	dir = 8
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/dormsatmos)
@@ -21118,8 +21095,8 @@
 /area/space)
 "rGv" = (
 /obj/structure/disposalpipe/segment{
-	dir = 1;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 1
 	},
 /obj/structure/table/bench/standard,
 /obj/effect/floor_decal/borderfloor,
@@ -21172,8 +21149,8 @@
 "rJr" = (
 /obj/structure/cable,
 /obj/machinery/power/apc{
-	dir = 8;
 	name = "west bump";
+	dir = 8;
 	pixel_x = -24
 	},
 /turf/simulated/floor/tiled,
@@ -21296,8 +21273,8 @@
 /area/maintenance/thirddeck/dormsatmos)
 "rNS" = (
 /obj/machinery/atmospherics/omni/atmos_filter{
-	tag_east = 1;
 	tag_north = 4;
+	tag_east = 1;
 	tag_west = 2
 	},
 /turf/simulated/floor/plating,
@@ -21347,11 +21324,11 @@
 /area/maintenance/thirddeck/dormsstarboard)
 "rQP" = (
 /obj/machinery/door/airlock/external{
-	frequency = 1379;
-	icon_state = "door_locked";
-	id_tag = "d3_starboard_dorms_outer";
-	locked = 1;
 	name = "External Airlock Access";
+	icon_state = "door_locked";
+	frequency = 1379;
+	locked = 1;
+	id_tag = "d3_starboard_dorms_outer";
 	req_access = list(13)
 	},
 /turf/simulated/floor/plating,
@@ -21398,11 +21375,11 @@
 /obj/effect/floor_decal/borderfloorwhite,
 /obj/effect/floor_decal/corner/grey/border,
 /obj/machinery/button/remote/emitter{
-	dir = 1;
-	id = "PARoomEmitter";
 	name = "PA Room Emitter";
+	dir = 1;
 	pixel_x = 25;
 	pixel_y = -25;
+	id = "PARoomEmitter";
 	req_access = list(7)
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/purple,
@@ -21451,8 +21428,8 @@
 	dir = 1
 	},
 /obj/machinery/door/airlock/multi_tile/glass{
-	dir = 2;
-	name = "Cafeteria"
+	name = "Cafeteria";
+	dir = 2
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/crew_quarters/cafeteria)
@@ -21528,8 +21505,8 @@
 	dir = 1
 	},
 /obj/machinery/door/airlock/multi_tile/glass{
-	dir = 2;
-	name = "Gym"
+	name = "Gym";
+	dir = 2
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/crew_quarters/seconddeck/gym)
@@ -21560,23 +21537,23 @@
 "rZO" = (
 /obj/structure/table/glass,
 /obj/item/towel{
-	color = "#b5651d";
-	name = "brown towel"
+	name = "brown towel";
+	color = "#b5651d"
 	},
 /obj/item/towel{
-	color = "#00FFFF";
 	name = "cyan towel";
 	pixel_x = 2;
-	pixel_y = 4
+	pixel_y = 4;
+	color = "#00FFFF"
 	},
 /obj/item/towel{
-	color = "#90ee90";
-	name = "green towel"
+	name = "green towel";
+	color = "#90ee90"
 	},
 /obj/machinery/light,
 /obj/machinery/vending/wallmed1{
-	dir = 1;
 	name = "NanoMed Wall";
+	dir = 1;
 	pixel_y = -30
 	},
 /turf/simulated/floor/tiled/freezer,
@@ -21644,15 +21621,15 @@
 /obj/effect/floor_decal/borderfloor/corner,
 /obj/effect/floor_decal/corner/brown/bordercorner,
 /obj/structure/disposalpipe/junction{
-	dir = 1;
-	icon_state = "pipe-j2"
+	icon_state = "pipe-j2";
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/thirddeck/aftdoorm)
 "sdS" = (
 /obj/structure/disposalpipe/segment{
-	dir = 8;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -21673,8 +21650,8 @@
 /area/maintenance/thirddeck/dormsstarboard)
 "sev" = (
 /obj/item/radio/intercom{
-	dir = 1;
 	name = "Station Intercom (General)";
+	dir = 1;
 	pixel_y = 21
 	},
 /turf/simulated/floor/boxing/gym,
@@ -21692,8 +21669,8 @@
 	dir = 9
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 4;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/seconddeck/gym)
@@ -21713,8 +21690,8 @@
 	dir = 4
 	},
 /obj/machinery/button/windowtint{
-	id = "sauna";
-	pixel_x = 27
+	pixel_x = 27;
+	id = "sauna"
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/crew_quarters/seconddeck/gym)
@@ -21804,8 +21781,8 @@
 	dir = 4
 	},
 /obj/item/radio/intercom{
-	dir = 8;
 	name = "Station Intercom (General)";
+	dir = 8;
 	pixel_x = -21
 	},
 /turf/simulated/floor/wood,
@@ -21903,8 +21880,8 @@
 	dir = 8
 	},
 /obj/machinery/camera/network/civilian{
-	c_tag = "CIV - Gym Port";
-	dir = 4
+	dir = 4;
+	c_tag = "CIV - Gym Port"
 	},
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -21975,8 +21952,8 @@
 /area/maintenance/thirddeck/dormsstarboard)
 "soF" = (
 /obj/machinery/door/airlock/maintenance{
-	req_access = null;
-	req_one_access = null
+	req_one_access = null;
+	req_access = null
 	},
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -21991,8 +21968,8 @@
 /obj/effect/floor_decal/borderfloor/corner,
 /obj/effect/floor_decal/corner/brown/bordercorner,
 /obj/structure/disposalpipe/segment{
-	dir = 2;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 2
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/thirddeck/aftdoorm)
@@ -22043,8 +22020,8 @@
 /area/crew_quarters/seconddeck/gym)
 "srC" = (
 /obj/structure/disposalpipe/segment{
-	dir = 8;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 8
 	},
 /turf/simulated/floor/wood,
 /area/maintenance/thirddeck/dormsstarboard)
@@ -22068,8 +22045,8 @@
 /area/maintenance/thirddeck/foreport)
 "ssw" = (
 /obj/machinery/door/airlock/maintenance{
-	req_access = null;
-	req_one_access = null
+	req_one_access = null;
+	req_access = null
 	},
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -22236,8 +22213,8 @@
 /area/maintenance/thirddeck/forestarboard)
 "sBY" = (
 /obj/structure/disposalpipe/segment{
-	dir = 4;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 4
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/cafeteria)
@@ -22268,15 +22245,15 @@
 /area/maintenance/thirddeck/aftport)
 "sEc" = (
 /obj/structure/disposalpipe/segment{
-	dir = 1;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 1
 	},
 /turf/simulated/wall,
 /area/crew_quarters/sleep/vistor_room_5)
 "sEf" = (
 /obj/structure/disposalpipe/segment{
-	dir = 8;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 8
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/cafeteria)
@@ -22339,8 +22316,8 @@
 /area/maintenance/thirddeck/dormsatmos)
 "sGX" = (
 /obj/machinery/power/apc{
-	dir = 4;
 	name = "east bump";
+	dir = 4;
 	pixel_x = 24
 	},
 /obj/structure/cable/green,
@@ -22361,8 +22338,8 @@
 	dir = 1
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 4;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -22437,16 +22414,16 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/unary/vent_pump{
-	dir = 1;
-	external_pressure_bound = 0;
-	external_pressure_bound_default = 0;
 	icon_state = "map_vent_in";
-	initialize_directions = 1;
-	internal_pressure_bound = 4000;
-	internal_pressure_bound_default = 4000;
-	pressure_checks = 2;
-	pressure_checks_default = 2;
+	dir = 1;
 	pump_direction = 0;
+	external_pressure_bound = 0;
+	internal_pressure_bound = 4000;
+	pressure_checks = 2;
+	external_pressure_bound_default = 0;
+	internal_pressure_bound_default = 4000;
+	pressure_checks_default = 2;
+	initialize_directions = 1;
 	use_power = 1
 	},
 /obj/machinery/newscaster{
@@ -22456,8 +22433,8 @@
 /area/crew_quarters/seconddeck/gym)
 "sLp" = (
 /obj/machinery/atmospherics/unary/heater/sauna{
-	dir = 8;
 	icon_state = "heater_1";
+	dir = 8;
 	use_power = 1
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -22481,10 +22458,10 @@
 /area/maintenance/thirddeck/dormsstarboard)
 "sMl" = (
 /obj/effect/shuttle_landmark{
-	base_area = /area/space;
-	base_turf = /turf/space;
+	name = "Near SC - Deck 3 West";
 	landmark_tag = "d3_near_w";
-	name = "Near SC - Deck 3 West"
+	base_turf = /turf/space;
+	base_area = /area/space
 	},
 /turf/space,
 /area/space)
@@ -22504,8 +22481,8 @@
 	dir = 1
 	},
 /obj/machinery/camera/network/third_deck{
-	c_tag = "Third Deck - Port Civ Bar 3";
-	dir = 1
+	dir = 1;
+	c_tag = "Third Deck - Port Civ Bar 3"
 	},
 /obj/structure/sign/double/barsign{
 	pixel_y = -32
@@ -22528,8 +22505,8 @@
 	id_tag = "d3_starboard_dorms_pump"
 	},
 /obj/machinery/airlock_sensor{
-	id_tag = "d3_starboard_dorms_sensor";
-	pixel_y = 25
+	pixel_y = 25;
+	id_tag = "d3_starboard_dorms_sensor"
 	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 5
@@ -22630,8 +22607,8 @@
 /area/crew_quarters/cafeteria)
 "sUk" = (
 /obj/machinery/camera/network/third_deck{
-	c_tag = "Third Deck - VR Lobby";
-	dir = 1
+	dir = 1;
+	c_tag = "Third Deck - VR Lobby"
 	},
 /obj/machinery/vr_sleeper,
 /turf/simulated/floor/tiled/milspec/raised,
@@ -22958,8 +22935,8 @@
 	dir = 4
 	},
 /obj/item/radio/intercom{
-	dir = 1;
 	name = "Station Intercom (General)";
+	dir = 1;
 	pixel_y = 21
 	},
 /turf/simulated/floor/wood,
@@ -23025,9 +23002,9 @@
 /area/maintenance/thirddeck/dormsstarboard/maintbar)
 "thB" = (
 /obj/machinery/button/remote/airlock{
-	id = "Dorms8";
 	name = "Bolt Control";
 	pixel_y = -30;
+	id = "Dorms8";
 	specialfunctions = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -23076,14 +23053,14 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/camera/network/third_deck{
-	c_tag = "Third Deck - Port Civ Bar 1";
-	dir = 4
+	dir = 4;
+	c_tag = "Third Deck - Port Civ Bar 1"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/sign/securearea{
+	name = "A warning sign which reads 'UNDER CONSTRUCTION'.";
 	desc = "VR-Room under construction, not all of it's features have been implemented yet.";
 	icon_state = "atmos_waste";
-	name = "A warning sign which reads 'UNDER CONSTRUCTION'.";
 	pixel_x = -32
 	},
 /turf/simulated/floor/tiled,
@@ -23135,8 +23112,8 @@
 /area/maintenance/thirddeck/dormsstarboard)
 "tkE" = (
 /obj/machinery/door/airlock/maintenance{
-	req_access = null;
-	req_one_access = null
+	req_one_access = null;
+	req_access = null
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
@@ -23250,8 +23227,8 @@
 	dir = 1
 	},
 /obj/machinery/disposal/wall/cleaner{
-	dir = 8;
 	name = "Resleeving lost & found bin";
+	dir = 8;
 	pixel_x = 35;
 	pixel_y = 0
 	},
@@ -23267,8 +23244,8 @@
 /area/maintenance/thirddeck/forestarboard)
 "tmZ" = (
 /obj/machinery/door/airlock/maintenance{
-	req_access = null;
-	req_one_access = null
+	req_one_access = null;
+	req_access = null
 	},
 /obj/machinery/door/firedoor/border_only,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -23305,11 +23282,11 @@
 /area/hallway/primary/thirddeck/aftdoorm)
 "tos" = (
 /obj/machinery/door/blast/regular{
-	density = 0;
-	icon_state = "pdoor0";
-	id = "Biohazard";
 	name = "Biohazard Shutter";
-	opacity = 0
+	icon_state = "pdoor0";
+	opacity = 0;
+	density = 0;
+	id = "Biohazard"
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/forestarboard)
@@ -23508,8 +23485,8 @@
 /area/medical/first_aid_station/thirddeck)
 "tCS" = (
 /obj/machinery/power/apc{
-	dir = 1;
 	name = "north bump";
+	dir = 1;
 	pixel_y = 24
 	},
 /obj/machinery/light_switch{
@@ -23596,8 +23573,8 @@
 /obj/structure/table/reinforced,
 /obj/machinery/door/window/eastright{
 	name = "Dental Reception";
-	req_access = list(5);
-	dir = 1
+	dir = 1;
+	req_access = list(5)
 	},
 /obj/machinery/door/window/westright{
 	name = "Dental Reception";
@@ -23665,8 +23642,8 @@
 "tIU" = (
 /obj/structure/bed/chair/oldsofa,
 /obj/item/digestion_remains/variant2{
-	pixel_y = -3;
-	pixel_x = 8
+	pixel_x = 8;
+	pixel_y = -3
 	},
 /turf/simulated/floor/tiled,
 /area/maintenance/thirddeck/dormsstarboard/maintbar)
@@ -23681,8 +23658,8 @@
 	dir = 10
 	},
 /obj/item/radio/intercom{
-	dir = 8;
 	name = "Station Intercom (General)";
+	dir = 8;
 	pixel_x = -21
 	},
 /obj/machinery/light{
@@ -23890,8 +23867,8 @@
 	dir = 1
 	},
 /obj/machinery/door/airlock/multi_tile/glass{
-	dir = 2;
-	name = "Cafeteria"
+	name = "Cafeteria";
+	dir = 2
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/crew_quarters/cafeteria)
@@ -23960,8 +23937,8 @@
 	dir = 1
 	},
 /obj/machinery/door/airlock/multi_tile/glass{
-	dir = 2;
-	name = "Central Access"
+	name = "Central Access";
+	dir = 2
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/hallway/primary/thirddeck/aft)
@@ -24008,8 +23985,8 @@
 /area/hallway/primary/thirddeck/aftportcentral)
 "tYn" = (
 /obj/machinery/camera/network/engineering{
-	c_tag = "ENG - Solar Aft Port";
-	dir = 1
+	dir = 1;
+	c_tag = "ENG - Solar Aft Port"
 	},
 /obj/item/stool,
 /turf/simulated/floor/plating,
@@ -24064,8 +24041,8 @@
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/glass_medical{
 	name = "First-Aid Station";
-	req_access = newlist();
-	req_one_access = newlist()
+	req_one_access = newlist();
+	req_access = newlist()
 	},
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -24158,11 +24135,11 @@
 "udk" = (
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/machinery/door/airlock/glass_external{
-	frequency = 1379;
-	icon_state = "door_locked";
-	id_tag = "d3_starboard_dorms_inner";
-	locked = 1;
 	name = "Internal Airlock Access";
+	icon_state = "door_locked";
+	frequency = 1379;
+	locked = 1;
+	id_tag = "d3_starboard_dorms_inner";
 	req_access = list(13)
 	},
 /turf/simulated/floor/plating,
@@ -24253,8 +24230,8 @@
 	dir = 10
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 4;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 4
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/sleep/vistor_room_9)
@@ -24496,8 +24473,8 @@
 /area/hallway/primary/thirddeck/aft)
 "uuD" = (
 /obj/machinery/door/airlock/maintenance{
-	req_access = null;
-	req_one_access = null
+	req_one_access = null;
+	req_access = null
 	},
 /obj/machinery/door/firedoor/border_only,
 /obj/structure/disposalpipe/segment,
@@ -24605,8 +24582,8 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/camera/network/third_deck{
-	c_tag = "Third Deck - Aft Civ Hallway 2";
-	dir = 1
+	dir = 1;
+	c_tag = "Third Deck - Aft Civ Hallway 2"
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/hallway/primary/thirddeck/aft)
@@ -24639,8 +24616,8 @@
 /area/maintenance/thirddeck/forestarboard)
 "uAL" = (
 /obj/machinery/vending/wallmed1{
-	dir = 1;
 	name = "NanoMed Wall";
+	dir = 1;
 	pixel_y = -30
 	},
 /obj/structure/table/rack,
@@ -24675,14 +24652,14 @@
 	},
 /obj/structure/table/glass,
 /obj/item/radio{
-	frequency = 1487;
+	name = "Medbay Emergency Radio Link";
 	icon_state = "med_walkietalkie";
-	name = "Medbay Emergency Radio Link"
+	frequency = 1487
 	},
 /obj/item/radio{
-	frequency = 1487;
+	name = "Medbay Emergency Radio Link";
 	icon_state = "med_walkietalkie";
-	name = "Medbay Emergency Radio Link"
+	frequency = 1487
 	},
 /obj/effect/floor_decal/borderfloorwhite,
 /obj/effect/floor_decal/corner/paleblue/border,
@@ -24725,8 +24702,8 @@
 	pixel_y = -21
 	},
 /obj/machinery/camera/network/medbay{
-	c_tag = "MED - FA Station Deck 3";
-	dir = 1
+	dir = 1;
+	c_tag = "MED - FA Station Deck 3"
 	},
 /obj/structure/table/rack,
 /obj/item/tool/crowbar,
@@ -24762,8 +24739,8 @@
 	icon_state = "1-4"
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 1;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 1
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/crew_quarters/toilet)
@@ -24850,8 +24827,8 @@
 	dir = 1
 	},
 /obj/machinery/disposal/wall/cleaner{
-	dir = 4;
 	name = "Resleeving lost & found bin";
+	dir = 4;
 	pixel_x = -35;
 	pixel_y = 0
 	},
@@ -24906,14 +24883,14 @@
 /obj/structure/table/glass,
 /obj/item/towel,
 /obj/item/towel{
-	color = "#FFD700";
-	name = "gold towel"
+	name = "gold towel";
+	color = "#FFD700"
 	},
 /obj/item/towel{
-	color = "#3fc0ea";
 	name = "light blue towel";
 	pixel_x = 2;
-	pixel_y = 4
+	pixel_y = 4;
+	color = "#3fc0ea"
 	},
 /obj/item/radio/intercom{
 	name = "Station Intercom (General)";
@@ -24936,8 +24913,8 @@
 	dir = 9
 	},
 /obj/item/radio/intercom{
-	dir = 8;
 	name = "Station Intercom (General)";
+	dir = 8;
 	pixel_x = -21
 	},
 /obj/machinery/light{
@@ -25000,8 +24977,8 @@
 /area/maintenance/thirddeck/hiddenkitchen)
 "uRm" = (
 /obj/structure/disposalpipe/segment{
-	dir = 4;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 4
 	},
 /turf/simulated/wall,
 /area/hallway/primary/thirddeck/aftdoorm)
@@ -25070,8 +25047,7 @@
 	dir = 1
 	},
 /obj/structure/window/reinforced{
-	dir = 8;
-	health = 1e+006
+	dir = 8
 	},
 /obj/structure/window/reinforced,
 /obj/structure/disposalpipe/trunk{
@@ -25134,8 +25110,8 @@
 /area/maintenance/thirddeck/dormsport)
 "uUU" = (
 /obj/machinery/door/airlock/maintenance{
-	req_access = null;
-	req_one_access = null
+	req_one_access = null;
+	req_access = null
 	},
 /obj/machinery/door/firedoor/border_only,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -25243,12 +25219,12 @@
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/dormsport)
 "uZK" = (
+/mob/living/simple_mob/animal/passive/armadillo/torta,
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
 /obj/machinery/hologram/holopad,
 /obj/effect/floor_decal/industrial/outline/grey,
-/mob/living/simple_mob/animal/passive/armadillo/torta,
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/thirddeck/aftdoorm)
 "uZX" = (
@@ -25325,8 +25301,8 @@
 	dir = 1
 	},
 /obj/structure/disposalpipe/junction{
-	dir = 8;
-	icon_state = "pipe-j2"
+	icon_state = "pipe-j2";
+	dir = 8
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/thirddeck/aftdoorm)
@@ -25345,8 +25321,8 @@
 /area/hallway/primary/thirddeck/aftdoorm)
 "vdi" = (
 /obj/structure/disposalpipe/segment{
-	dir = 8;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 8
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 9
@@ -25365,8 +25341,8 @@
 /area/hallway/primary/thirddeck/aftdoorm)
 "veo" = (
 /obj/item/radio/intercom{
-	dir = 1;
 	name = "Station Intercom (General)";
+	dir = 1;
 	pixel_y = 21
 	},
 /obj/effect/floor_decal/corner_steel_grid{
@@ -25453,10 +25429,10 @@
 /area/maintenance/thirddeck/dormsport)
 "vhO" = (
 /obj/structure/curtain/black{
-	icon_state = "open";
-	layer = 2;
 	name = "privacy curtain";
-	opacity = 0
+	icon_state = "open";
+	opacity = 0;
+	layer = 2
 	},
 /turf/simulated/floor/tiled,
 /area/maintenance/thirddeck/dormsstarboard/maintbar)
@@ -25518,8 +25494,8 @@
 	dir = 4
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 4;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 4
 	},
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -25662,8 +25638,8 @@
 	dir = 4
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 8;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 8
 	},
 /obj/structure/cable/green{
 	icon_state = "1-8"
@@ -26001,8 +25977,8 @@
 /area/hallway/primary/thirddeck/aftdoorm)
 "vyE" = (
 /obj/machinery/door/airlock/maintenance{
-	req_access = null;
-	req_one_access = null
+	req_one_access = null;
+	req_access = null
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -26128,8 +26104,8 @@
 	dir = 1
 	},
 /obj/machinery/camera/network/third_deck{
-	c_tag = "Third Deck - Aft Civ Dorms 3";
-	dir = 4
+	dir = 4;
+	c_tag = "Third Deck - Aft Civ Dorms 3"
 	},
 /obj/effect/floor_decal/corner/brown{
 	dir = 5
@@ -26227,27 +26203,26 @@
 	dir = 4
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 1;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/thirddeck/aftdoorm)
 "vHd" = (
 /obj/structure/table/marble,
 /obj/structure/window/reinforced{
-	dir = 8;
-	health = 1e+006
+	dir = 8
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 8;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 8
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/dormsstarboard)
 "vHp" = (
 /obj/machinery/power/apc{
-	dir = 4;
 	name = "east bump";
+	dir = 4;
 	pixel_x = 24
 	},
 /obj/machinery/light_switch{
@@ -26441,8 +26416,8 @@
 	dir = 1
 	},
 /obj/machinery/camera/network/third_deck{
-	c_tag = "Third Deck - Aft Civ Dorms 4";
-	dir = 8
+	dir = 8;
+	c_tag = "Third Deck - Aft Civ Dorms 4"
 	},
 /obj/effect/floor_decal/corner/brown{
 	dir = 5
@@ -26483,8 +26458,8 @@
 /area/hallway/primary/thirddeck/aftdoorm)
 "vOT" = (
 /obj/machinery/door/airlock/maintenance{
-	req_access = null;
-	req_one_access = null
+	req_one_access = null;
+	req_access = null
 	},
 /obj/machinery/door/firedoor/border_only,
 /obj/structure/cable{
@@ -26642,18 +26617,18 @@
 /area/hallway/primary/thirddeck/aftdoorm)
 "vUp" = (
 /obj/machinery/door/blast/regular{
-	density = 0;
-	icon_state = "pdoor0";
-	id = "englockdown";
 	name = "Engineering Lockdown";
-	opacity = 0
+	icon_state = "pdoor0";
+	opacity = 0;
+	density = 0;
+	id = "englockdown"
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/aftport)
 "vUr" = (
 /obj/structure/disposalpipe/segment{
-	dir = 4;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 4
 	},
 /turf/simulated/wall,
 /area/crew_quarters/sleep/vistor_room_10)
@@ -26697,8 +26672,8 @@
 "vYr" = (
 /obj/structure/catwalk,
 /obj/machinery/power/apc{
-	dir = 8;
 	name = "west bump";
+	dir = 8;
 	pixel_x = -24
 	},
 /obj/structure/cable{
@@ -26718,15 +26693,15 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/access_button{
-	command = "cycle_interior";
-	frequency = 1379;
-	layer = 3.3;
-	master_tag = "aft_port_solar_airlock";
 	name = "interior access button";
+	layer = 3.3;
 	pixel_x = -25;
 	pixel_y = 25;
-	req_access = list();
-	req_one_access = list(11,24)
+	frequency = 1379;
+	command = "cycle_interior";
+	req_one_access = list(11,24);
+	master_tag = "aft_port_solar_airlock";
+	req_access = list()
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/solars/aftportsolar)
@@ -26780,8 +26755,8 @@
 	id_tag = "d3_port_dorms_pump"
 	},
 /obj/machinery/airlock_sensor{
-	id_tag = "d3_port_dorms_sensor";
-	pixel_y = 25
+	pixel_y = 25;
+	id_tag = "d3_port_dorms_sensor"
 	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 9
@@ -26790,11 +26765,11 @@
 /area/maintenance/thirddeck/dormsport)
 "wbl" = (
 /obj/machinery/door/airlock/glass_external{
-	frequency = 1379;
-	icon_state = "door_locked";
-	id_tag = "d3_port_dorms_inner";
-	locked = 1;
 	name = "Internal Airlock Access";
+	icon_state = "door_locked";
+	frequency = 1379;
+	locked = 1;
+	id_tag = "d3_port_dorms_inner";
 	req_access = list(13)
 	},
 /turf/simulated/floor/plating,
@@ -26810,8 +26785,8 @@
 "wbq" = (
 /obj/structure/closet/secure_closet/personal/cabinet,
 /obj/structure/disposalpipe/segment{
-	dir = 4;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 4
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/sleep/vistor_room_1)
@@ -26829,9 +26804,9 @@
 /area/hallway/primary/thirddeck/starboard)
 "wbX" = (
 /obj/machinery/button/remote/airlock{
-	id = "Dorms1";
 	name = "Bolt Control";
 	pixel_y = 29;
+	id = "Dorms1";
 	specialfunctions = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -26871,8 +26846,8 @@
 /area/maintenance/thirddeck/dormsatmos)
 "wcY" = (
 /obj/machinery/door/airlock/maintenance{
-	req_access = null;
-	req_one_access = null
+	req_one_access = null;
+	req_access = null
 	},
 /obj/machinery/door/firedoor/border_only,
 /obj/structure/cable{
@@ -26882,8 +26857,8 @@
 /area/maintenance/thirddeck/dormsport)
 "wdC" = (
 /obj/machinery/door/airlock{
-	id_tag = "Dorms1";
-	name = "Room 1"
+	name = "Room 1";
+	id_tag = "Dorms1"
 	},
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -26976,8 +26951,8 @@
 /area/hallway/primary/thirddeck/aftdoorm)
 "wgy" = (
 /obj/machinery/door/airlock{
-	id_tag = "Dorms4";
-	name = "Room 4"
+	name = "Room 4";
+	id_tag = "Dorms4"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -26997,9 +26972,9 @@
 /area/crew_quarters/sleep/vistor_room_4)
 "whE" = (
 /obj/machinery/button/remote/airlock{
-	id = "Dorms4";
 	name = "Bolt Control";
 	pixel_y = 30;
+	id = "Dorms4";
 	specialfunctions = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -27053,8 +27028,8 @@
 "wiE" = (
 /obj/structure/table/standard,
 /obj/machinery/power/apc{
-	dir = 1;
 	name = "north bump";
+	dir = 1;
 	pixel_y = 24
 	},
 /obj/machinery/light_switch{
@@ -27079,15 +27054,15 @@
 	pixel_y = 26
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 2;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 2
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/sleep/vistor_room_4)
 "wja" = (
 /obj/machinery/door/airlock/maintenance{
-	req_access = null;
-	req_one_access = null
+	req_one_access = null;
+	req_access = null
 	},
 /obj/machinery/door/firedoor/border_only,
 /obj/structure/cable{
@@ -27101,8 +27076,8 @@
 "wjn" = (
 /obj/machinery/door/airlock/maintenance{
 	name = "Firefighting equipment";
-	req_access = null;
-	req_one_access = null
+	req_one_access = null;
+	req_access = null
 	},
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/plating,
@@ -27126,8 +27101,8 @@
 /area/crew_quarters/sleep/vistor_room_4)
 "wlk" = (
 /obj/machinery/door/airlock/maintenance{
-	req_access = null;
-	req_one_access = null
+	req_one_access = null;
+	req_access = null
 	},
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -27176,8 +27151,8 @@
 "woC" = (
 /obj/structure/table/standard,
 /obj/machinery/power/apc{
-	dir = 1;
 	name = "north bump";
+	dir = 1;
 	pixel_y = 24
 	},
 /obj/machinery/light_switch{
@@ -27211,8 +27186,8 @@
 	},
 /obj/random/maintenance/medical,
 /obj/structure/disposalpipe/segment{
-	dir = 4;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 4
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/sleep/vistor_room_7)
@@ -27245,9 +27220,9 @@
 /area/maintenance/thirddeck/dormsaft)
 "wqg" = (
 /obj/machinery/button/remote/airlock{
-	id = "Dorms7";
 	name = "Bolt Control";
 	pixel_y = 30;
+	id = "Dorms7";
 	specialfunctions = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -27286,8 +27261,8 @@
 /area/maintenance/thirddeck/aftport)
 "wtR" = (
 /obj/machinery/door/airlock{
-	id_tag = "Dorms7";
-	name = "Room 7"
+	name = "Room 7";
+	id_tag = "Dorms7"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -27309,8 +27284,8 @@
 	dir = 8
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 2;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 2
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/sleep/vistor_room_12)
@@ -27340,8 +27315,8 @@
 	dir = 1
 	},
 /obj/structure/disposalpipe/junction{
-	dir = 1;
-	icon_state = "pipe-j2"
+	icon_state = "pipe-j2";
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/thirddeck/aftdoorm)
@@ -27395,8 +27370,8 @@
 "wwM" = (
 /obj/structure/table/standard,
 /obj/machinery/power/apc{
-	dir = 1;
 	name = "north bump";
+	dir = 1;
 	pixel_y = 24
 	},
 /obj/machinery/light_switch{
@@ -27460,9 +27435,9 @@
 	dir = 8
 	},
 /obj/structure/sign/securearea{
+	name = "A warning sign which reads 'UNDER CONSTRUCTION'.";
 	desc = "VR-Room under construction, not all of it's features have been implemented yet.";
 	icon_state = "atmos_waste";
-	name = "A warning sign which reads 'UNDER CONSTRUCTION'.";
 	pixel_x = -32
 	},
 /turf/simulated/floor/tiled,
@@ -27508,8 +27483,8 @@
 /obj/machinery/door/firedoor/border_only,
 /obj/machinery/door/airlock/engineering{
 	name = "Aft Port Solar Access";
-	req_access = list();
-	req_one_access = list(11,24)
+	req_one_access = list(11,24);
+	req_access = list()
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
@@ -27627,8 +27602,8 @@
 "wGX" = (
 /obj/structure/table/woodentable,
 /obj/item/radio/intercom{
-	dir = 4;
 	name = "Station Intercom (General)";
+	dir = 4;
 	pixel_x = 21
 	},
 /obj/item/flashlight/lamp/green,
@@ -27657,8 +27632,8 @@
 /area/crew_quarters/sleep/vistor_room_7)
 "wJE" = (
 /obj/machinery/power/apc{
-	dir = 8;
 	name = "west bump";
+	dir = 8;
 	pixel_x = -24
 	},
 /obj/structure/cable{
@@ -27742,8 +27717,8 @@
 /area/solar/aftportsolar)
 "wLB" = (
 /obj/machinery/door/airlock{
-	id_tag = "Dorms10";
-	name = "Room 10"
+	name = "Room 10";
+	id_tag = "Dorms10"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -27830,11 +27805,11 @@
 /area/crew_quarters/sleep/vistor_room_10)
 "wNb" = (
 /obj/machinery/door/airlock/glass_external{
-	frequency = 1379;
-	icon_state = "door_locked";
-	id_tag = "d3_port_inner";
-	locked = 1;
 	name = "Internal Airlock Access";
+	icon_state = "door_locked";
+	frequency = 1379;
+	locked = 1;
+	id_tag = "d3_port_inner";
 	req_access = list(13)
 	},
 /turf/simulated/floor/plating,
@@ -27853,8 +27828,8 @@
 	dir = 8
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 2;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 2
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/sleep/vistor_room_10)
@@ -27867,8 +27842,8 @@
 "wPe" = (
 /obj/structure/table/woodentable,
 /obj/item/radio/intercom{
-	dir = 4;
 	name = "Station Intercom (General)";
+	dir = 4;
 	pixel_x = 21
 	},
 /obj/item/flashlight/lamp/green,
@@ -28051,8 +28026,8 @@
 	dir = 8
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 4;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/thirddeck/aftdoorm)
@@ -28208,8 +28183,8 @@
 /area/crew_quarters/sleep/vistor_room_7)
 "xbY" = (
 /obj/structure/disposalpipe/segment{
-	dir = 2;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 2
 	},
 /turf/simulated/wall,
 /area/crew_quarters/sleep/vistor_room_9)
@@ -28348,9 +28323,9 @@
 /area/hallway/primary/thirddeck/aftdoorm)
 "xhm" = (
 /obj/machinery/button/remote/airlock{
-	id = "Dorms10";
 	name = "Bolt Control";
 	pixel_x = -30;
+	id = "Dorms10";
 	specialfunctions = 4
 	},
 /obj/structure/closet/secure_closet/personal/cabinet,
@@ -28358,11 +28333,11 @@
 /area/crew_quarters/sleep/vistor_room_10)
 "xho" = (
 /obj/machinery/door/blast/regular{
-	density = 0;
-	icon_state = "pdoor0";
-	id = "englockdown";
 	name = "Engineering Lockdown";
-	opacity = 0
+	icon_state = "pdoor0";
+	opacity = 0;
+	density = 0;
+	id = "englockdown"
 	},
 /obj/machinery/alarm{
 	dir = 1;
@@ -28510,11 +28485,11 @@
 /area/maintenance/thirddeck/dormsaft)
 "xnq" = (
 /obj/machinery/door/airlock/glass_external{
-	frequency = 1379;
-	icon_state = "door_locked";
-	id_tag = "d3_starboard_inner";
-	locked = 1;
 	name = "Internal Airlock Access";
+	icon_state = "door_locked";
+	frequency = 1379;
+	locked = 1;
+	id_tag = "d3_starboard_inner";
 	req_access = list(13)
 	},
 /turf/simulated/floor/plating,
@@ -28533,8 +28508,8 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/disposalpipe/segment{
-	dir = 4;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 4
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/crew_quarters/sleep/vistor_room_7)
@@ -28575,8 +28550,8 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/door/firedoor/glass,
 /obj/structure/disposalpipe/segment{
-	dir = 2;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 2
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/crew_quarters/sleep/vistor_room_10)
@@ -28599,8 +28574,8 @@
 /area/crew_quarters/sleep/vistor_room_9)
 "xqC" = (
 /obj/machinery/camera/network/research{
-	c_tag = "SCI - Particle Accelerator 2";
-	dir = 1
+	dir = 1;
+	c_tag = "SCI - Particle Accelerator 2"
 	},
 /obj/effect/floor_decal/borderfloorwhite,
 /obj/effect/floor_decal/corner/grey/border,
@@ -28616,13 +28591,13 @@
 	id_tag = "d3_starboard_dorms_pump"
 	},
 /obj/machinery/embedded_controller/radio/airlock/airlock_controller{
-	id_tag = "d3_starboard_dorms_airlock";
 	pixel_y = -26;
-	req_access = null;
+	id_tag = "d3_starboard_dorms_airlock";
+	tag_exterior_door = "d3_starboard_dorms_outer";
+	tag_interior_door = "d3_starboard_dorms_inner";
 	tag_airpump = "d3_starboard_dorms_pump";
 	tag_chamber_sensor = "d3_starboard_dorms_sensor";
-	tag_exterior_door = "d3_starboard_dorms_outer";
-	tag_interior_door = "d3_starboard_dorms_inner"
+	req_access = null
 	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 6
@@ -28631,11 +28606,11 @@
 /area/maintenance/thirddeck/dormsaft)
 "xrI" = (
 /obj/machinery/door/blast/regular{
-	density = 0;
-	icon_state = "pdoor0";
-	id = "englockdown";
 	name = "Engineering Lockdown";
-	opacity = 0
+	icon_state = "pdoor0";
+	opacity = 0;
+	density = 0;
+	id = "englockdown"
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/foreport)
@@ -28689,11 +28664,11 @@
 /area/rnd/research/particleaccelerator)
 "xtj" = (
 /obj/machinery/door/blast/regular{
-	density = 0;
-	icon_state = "pdoor0";
-	id = "bridge blast";
 	name = "Bridge Blast Doors";
-	opacity = 0
+	icon_state = "pdoor0";
+	opacity = 0;
+	density = 0;
+	id = "bridge blast"
 	},
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/structure/cable/green{
@@ -28757,8 +28732,8 @@
 	dir = 4
 	},
 /obj/machinery/disposal/wall/cleaner{
-	dir = 8;
 	name = "Resleeving lost & found bin";
+	dir = 8;
 	pixel_x = 35;
 	pixel_y = 0
 	},
@@ -28779,8 +28754,8 @@
 	icon_state = "0-4"
 	},
 /obj/machinery/power/solar{
-	id = "aftportsolar";
-	name = "Aft-Port Solar Array"
+	name = "Aft-Port Solar Array";
+	id = "aftportsolar"
 	},
 /turf/simulated/floor/plating/turfpack/airless{
 	icon_state = "solarpanel"
@@ -28849,8 +28824,8 @@
 	dir = 1
 	},
 /obj/machinery/disposal/wall/cleaner{
-	dir = 4;
 	name = "Resleeving lost & found bin";
+	dir = 4;
 	pixel_x = -35;
 	pixel_y = 0
 	},
@@ -28949,8 +28924,8 @@
 	dir = 1
 	},
 /obj/machinery/disposal/wall/cleaner{
-	dir = 8;
 	name = "Resleeving lost & found bin";
+	dir = 8;
 	pixel_x = 35;
 	pixel_y = 0
 	},
@@ -29038,8 +29013,8 @@
 /area/crew_quarters/sleep/vistor_room_11)
 "xGh" = (
 /obj/machinery/door/airlock/maintenance{
-	req_access = null;
-	req_one_access = null
+	req_one_access = null;
+	req_access = null
 	},
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -29071,8 +29046,8 @@
 "xHM" = (
 /obj/structure/table/standard,
 /obj/machinery/power/apc{
-	dir = 1;
 	name = "north bump";
+	dir = 1;
 	pixel_y = 24
 	},
 /obj/machinery/light_switch{
@@ -29134,8 +29109,8 @@
 	dir = 1
 	},
 /obj/machinery/disposal/wall/cleaner{
-	dir = 4;
 	name = "Resleeving lost & found bin";
+	dir = 4;
 	pixel_x = -35;
 	pixel_y = 0
 	},
@@ -29223,8 +29198,8 @@
 	pixel_x = -24
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 2;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 2
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/crew_quarters/sleep/vistor_room_8)
@@ -29324,8 +29299,8 @@
 	dir = 8
 	},
 /obj/machinery/disposal/wall/cleaner{
-	dir = 4;
 	name = "Resleeving lost & found bin";
+	dir = 4;
 	pixel_x = -35;
 	pixel_y = 0
 	},
@@ -29384,12 +29359,11 @@
 "xQY" = (
 /obj/structure/table/marble,
 /obj/structure/window/reinforced{
-	dir = 8;
-	health = 1e+006
+	dir = 8
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 2;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 2
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/dormsstarboard)
@@ -29398,12 +29372,12 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/access_button{
-	command = "cycle_interior";
-	frequency = 1379;
-	master_tag = "d3_starboard_dorms_airlock";
 	name = "interior access button";
 	pixel_x = 25;
 	pixel_y = 26;
+	frequency = 1379;
+	command = "cycle_interior";
+	master_tag = "d3_starboard_dorms_airlock";
 	req_access = null
 	},
 /obj/effect/floor_decal/industrial/warning{
@@ -29467,8 +29441,8 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/camera/network/third_deck{
-	c_tag = "Third Deck - Aft Civ Dorms 2";
-	dir = 4
+	dir = 4;
+	c_tag = "Third Deck - Aft Civ Dorms 2"
 	},
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 1
@@ -29576,8 +29550,8 @@
 	dir = 4
 	},
 /obj/machinery/disposal/wall/cleaner{
-	dir = 4;
 	name = "Resleeving lost & found bin";
+	dir = 4;
 	pixel_x = -35;
 	pixel_y = 0
 	},
@@ -29620,8 +29594,8 @@
 /obj/item/towel/random,
 /obj/item/towel/random,
 /obj/structure/disposalpipe/segment{
-	dir = 1;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 1
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/crew_quarters/sleep/vistor_room_8)
@@ -29640,8 +29614,8 @@
 	dir = 8
 	},
 /obj/machinery/disposal/wall/cleaner{
-	dir = 8;
 	name = "Resleeving lost & found bin";
+	dir = 8;
 	pixel_x = 35;
 	pixel_y = 0
 	},
@@ -29675,12 +29649,12 @@
 	dir = 4
 	},
 /obj/machinery/access_button{
-	command = "cycle_exterior";
-	frequency = 1379;
-	master_tag = "d3_port_airlock";
 	name = "exterior access button";
 	pixel_x = 25;
 	pixel_y = -26;
+	frequency = 1379;
+	command = "cycle_exterior";
+	master_tag = "d3_port_airlock";
 	req_access = null
 	},
 /turf/simulated/floor/plating/turfpack/airless,
@@ -29765,9 +29739,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/table/woodentable,
 /obj/item/paper{
+	name = "VR Pod Disclaimer";
 	desc = "";
-	info = "Pain sustained in Virtual Reality will be sustained in the real world.";
-	name = "VR Pod Disclaimer"
+	info = "Pain sustained in Virtual Reality will be sustained in the real world."
 	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/cafeteria)
@@ -29826,12 +29800,12 @@
 /area/maintenance/thirddeck/foreport)
 "yfh" = (
 /obj/machinery/access_button{
-	command = "cycle_exterior";
-	frequency = 1379;
-	master_tag = "d3_port_dorms_airlock";
 	name = "exterior access button";
 	pixel_x = 25;
 	pixel_y = -26;
+	frequency = 1379;
+	command = "cycle_exterior";
+	master_tag = "d3_port_dorms_airlock";
 	req_access = null
 	},
 /obj/effect/floor_decal/industrial/warning{
@@ -29880,8 +29854,8 @@
 	dir = 4
 	},
 /obj/machinery/door/blast/radproof/open{
-	id = "PAShroud";
-	name = "Particle Accelerator Shroud"
+	name = "Particle Accelerator Shroud";
+	id = "PAShroud"
 	},
 /turf/simulated/floor/reinforced,
 /area/rnd/research/particleaccelerator)
@@ -29937,9 +29911,9 @@
 /area/maintenance/thirddeck/aftport)
 "yjL" = (
 /obj/machinery/button/remote/airlock{
-	id = "Dorms2";
 	name = "Bolt Control";
 	pixel_y = 29;
+	id = "Dorms2";
 	specialfunctions = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -29982,8 +29956,8 @@
 /area/maintenance/thirddeck/dormsatmos)
 "ykd" = (
 /obj/machinery/door/airlock{
-	id_tag = "Dorms2";
-	name = "Room 2"
+	name = "Room 2";
+	id_tag = "Dorms2"
 	},
 /obj/machinery/door/firedoor/glass,
 /obj/structure/cable/green{
@@ -30030,8 +30004,8 @@
 	pixel_x = 28
 	},
 /obj/structure/disposalpipe/junction{
-	dir = 1;
-	icon_state = "pipe-j2"
+	icon_state = "pipe-j2";
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/thirddeck/aftdoorm)

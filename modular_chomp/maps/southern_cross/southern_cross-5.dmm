@@ -59,8 +59,8 @@
 /area/surface/outpost/main/exploration)
 "ai" = (
 /obj/machinery/camera/network/main_outpost{
-	c_tag = "MO - Gym";
-	dir = 1
+	dir = 1;
+	c_tag = "MO - Gym"
 	},
 /turf/simulated/floor/holofloor/wood,
 /area/surface/outpost/main/gym)
@@ -71,8 +71,8 @@
 	icon_state = "1-2"
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 4;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/left_lower)
@@ -159,8 +159,8 @@
 	dir = 9
 	},
 /obj/machinery/camera/network/main_outpost{
-	c_tag = "MO Left Wing - Hallway 4";
-	dir = 8
+	dir = 8;
+	c_tag = "MO Left Wing - Hallway 4"
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/left_lower)
@@ -172,8 +172,8 @@
 	pixel_y = 22
 	},
 /obj/machinery/camera/network/engineering_outpost{
-	c_tag = "SUBS - Left Wing";
-	dir = 4
+	dir = 4;
+	c_tag = "SUBS - Left Wing"
 	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/main/gen_room/smes_left)
@@ -230,8 +230,8 @@
 	icon_state = "1-4"
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 1;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/left_lower)
@@ -257,8 +257,8 @@
 	icon_state = "1-4"
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 4;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 4
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/surface/outpost/main/showers)
@@ -281,8 +281,8 @@
 	icon_state = "2-8"
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 2;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 2
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/dorms)
@@ -386,8 +386,8 @@
 	pixel_y = 12
 	},
 /obj/machinery/power/apc{
-	dir = 4;
 	name = "east bump";
+	dir = 4;
 	pixel_x = 24
 	},
 /obj/structure/cable/cyan{
@@ -420,8 +420,8 @@
 	icon_state = "0-8"
 	},
 /obj/machinery/power/apc{
-	dir = 4;
 	name = "east bump";
+	dir = 4;
 	pixel_x = 24
 	},
 /obj/structure/disposalpipe/segment{
@@ -493,8 +493,8 @@
 "aY" = (
 /obj/effect/overlay/snow/floor,
 /obj/structure/disposalpipe/segment{
-	dir = 8;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 8
 	},
 /turf/simulated/floor/tiled/steel/sif/planetuse,
 /area/surface/outside/plains/outpost)
@@ -523,9 +523,9 @@
 	icon_state = "1-8"
 	},
 /obj/machinery/embedded_controller/radio/airlock/access_controller{
-	id_tag = "main5_airlock_control";
 	pixel_x = 26;
 	pixel_y = -26;
+	id_tag = "main5_airlock_control";
 	tag_exterior_door = "main5_airlock_exterior";
 	tag_interior_door = "main5_airlock_interior"
 	},
@@ -551,12 +551,12 @@
 /area/surface/outside/plains/outpost)
 "bd" = (
 /obj/machinery/atmospherics/omni/mixer{
-	active_power_usage = 7500;
-	tag_east = 2;
 	tag_south_con = 0.79;
-	tag_west = 1;
 	tag_west_con = 0.21;
-	tag_south = 1
+	tag_south = 1;
+	tag_east = 2;
+	tag_west = 1;
+	active_power_usage = 7500
 	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/engineering/atmos_room)
@@ -614,26 +614,26 @@
 	dir = 4
 	},
 /obj/machinery/conveyor_switch/oneway{
-	id = "mining_north";
-	name = "mining conveyor"
+	name = "mining conveyor";
+	id = "mining_north"
 	},
 /turf/simulated/floor/tiled/steel/sif/planetuse,
 /area/surface/outpost/mining_main/exterior)
 "bk" = (
 /obj/machinery/door/airlock/glass_external{
-	autoclose = 0;
-	frequency = 1379;
+	name = "Main Outpost External";
 	icon_state = "door_locked";
-	id_tag = "main8_airlock_exterior";
+	frequency = 1379;
 	locked = 1;
-	name = "Main Outpost External"
+	id_tag = "main8_airlock_exterior";
+	autoclose = 0
 	},
 /obj/machinery/access_button{
-	command = "cycle_exterior";
-	frequency = 1379;
-	master_tag = "main8_airlock_control";
 	name = "External Access Button";
-	pixel_x = -26
+	pixel_x = -26;
+	frequency = 1379;
+	command = "cycle_exterior";
+	master_tag = "main8_airlock_control"
 	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/surface/outpost/main/airlock/left_three)
@@ -913,8 +913,8 @@
 	icon_state = "1-4"
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 1;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/right_lower)
@@ -1146,22 +1146,22 @@
 "cs" = (
 /obj/structure/table/standard,
 /obj/item/towel{
-	color = "#3fc0ea";
 	name = "light blue towel";
 	pixel_x = 2;
-	pixel_y = 4
+	pixel_y = 4;
+	color = "#3fc0ea"
 	},
 /obj/item/towel{
-	color = "#3fc0ea";
 	name = "light blue towel";
 	pixel_x = 2;
-	pixel_y = 4
+	pixel_y = 4;
+	color = "#3fc0ea"
 	},
 /obj/item/towel{
-	color = "#3fc0ea";
 	name = "light blue towel";
 	pixel_x = 2;
-	pixel_y = 4
+	pixel_y = 4;
+	color = "#3fc0ea"
 	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
@@ -1311,9 +1311,9 @@
 /area/surface/outpost/security/smes)
 "cI" = (
 /obj/machinery/button/remote/blast_door{
-	id = "garage2";
 	name = "Garage Shutter Control";
-	pixel_x = 22
+	pixel_x = 22;
+	id = "garage2"
 	},
 /turf/simulated/floor/outdoors/dirt/sif/planetuse,
 /area/surface/outpost/main/airlock/right_one)
@@ -1329,9 +1329,9 @@
 	dir = 9
 	},
 /obj/machinery/embedded_controller/radio/airlock/access_controller{
-	id_tag = "civ1_airlock_control";
 	pixel_x = -26;
 	pixel_y = 26;
+	id_tag = "civ1_airlock_control";
 	tag_exterior_door = "civ1_airlock_exterior";
 	tag_interior_door = "civ1_airlock_interior"
 	},
@@ -1389,8 +1389,8 @@
 	icon_state = "1-2"
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 8;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 8
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/right_upper)
@@ -1467,16 +1467,16 @@
 	},
 /obj/machinery/door/window/brigdoor/westleft{
 	name = "Medical Supplies";
-	req_access = null;
-	req_one_access = list(5,43)
+	req_one_access = list(5,43);
+	req_access = null
 	},
 /turf/simulated/floor/tiled/white,
 /area/surface/outpost/main/search_and_rescue)
 "cY" = (
 /obj/machinery/door/airlock/multi_tile/glass{
 	name = "Exploration Prep";
-	req_access = null;
-	req_one_access = list(43,67)
+	req_one_access = list(43,67);
+	req_access = null
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -1644,9 +1644,9 @@
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/white/border,
 /obj/machinery/camera/network/main_outpost{
-	c_tag = "MO Right Wing - Hallway 4";
+	name = "MO Right Wing - Hallway Three";
 	dir = 1;
-	name = "MO Right Wing - Hallway Three"
+	c_tag = "MO Right Wing - Hallway 4"
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/right_upper)
@@ -1684,8 +1684,8 @@
 	icon_state = "4-8"
 	},
 /obj/structure/disposalpipe/junction{
-	dir = 4;
-	icon_state = "pipe-j2"
+	icon_state = "pipe-j2";
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/right_upper)
@@ -1775,9 +1775,9 @@
 	icon_state = "0-2"
 	},
 /obj/machinery/power/smes/buildable{
-	RCon_tag = "Outpost Parallel - Main 2";
-	charge = 2e+007;
+	charge = 2e+07;
 	cur_coils = 4;
+	RCon_tag = "Outpost Parallel - Main 2";
 	input_attempt = 1;
 	input_level = 750000;
 	output_level = 100
@@ -2040,8 +2040,8 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/camera/network/main_outpost{
-	c_tag = "MO Right Wing - Hallway 6";
-	dir = 1
+	dir = 1;
+	c_tag = "MO Right Wing - Hallway 6"
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/right_upper)
@@ -2106,8 +2106,8 @@
 	dir = 9
 	},
 /obj/machinery/camera/network/main_outpost{
-	c_tag = "MO - Laundry 1";
-	dir = 4
+	dir = 4;
+	c_tag = "MO - Laundry 1"
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/laundry)
@@ -2186,8 +2186,8 @@
 	icon_state = "2-4"
 	},
 /obj/structure/disposalpipe/junction{
-	dir = 2;
-	icon_state = "pipe-j2"
+	icon_state = "pipe-j2";
+	dir = 2
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/dorms)
@@ -2275,8 +2275,8 @@
 	dir = 9
 	},
 /obj/item/radio/intercom{
-	dir = 4;
 	name = "Station Intercom (General)";
+	dir = 4;
 	pixel_x = 21
 	},
 /turf/simulated/floor/tiled,
@@ -2481,10 +2481,10 @@
 /area/surface/outpost/engineering/atmos_room)
 "eW" = (
 /obj/machinery/power/apc{
-	dir = 8;
 	name = "west bump";
-	operating = 0;
-	pixel_x = -24
+	dir = 8;
+	pixel_x = -24;
+	operating = 0
 	},
 /obj/structure/cable/blue{
 	icon_state = "0-4"
@@ -2520,8 +2520,8 @@
 	dir = 10
 	},
 /obj/machinery/power/apc{
-	dir = 8;
 	name = "west bump";
+	dir = 8;
 	pixel_x = -24
 	},
 /obj/structure/cable/blue{
@@ -2571,17 +2571,17 @@
 	icon_state = "1-4"
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 1;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/left_lower)
 "ff" = (
 /obj/effect/shuttle_landmark{
-	base_area = /area/surface/outside/landing/plains;
-	base_turf = /turf/simulated/floor/outdoors/grass/sif/planetuse;
+	name = "Northwest Outpost Perimiter";
 	landmark_tag = "outpost_nw";
-	name = "Northwest Outpost Perimiter"
+	base_turf = /turf/simulated/floor/outdoors/grass/sif/planetuse;
+	base_area = /area/surface/outside/landing/plains
 	},
 /turf/simulated/floor/outdoors/snow/sif/planetuse,
 /area/surface/outside/landing/plains)
@@ -2604,8 +2604,8 @@
 	pixel_x = 3
 	},
 /obj/machinery/camera/network/civilian{
-	c_tag = "CO - Fishing 2";
-	dir = 1
+	dir = 1;
+	c_tag = "CO - Fishing 2"
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/civilian/fishing)
@@ -2697,8 +2697,8 @@
 	dir = 10
 	},
 /obj/structure/disposalpipe/junction{
-	dir = 8;
-	icon_state = "pipe-j2"
+	icon_state = "pipe-j2";
+	dir = 8
 	},
 /turf/simulated/floor/tiled/steel/sif/planetuse,
 /area/surface/outpost/civilian/smes)
@@ -2727,8 +2727,8 @@
 	icon_state = "2-4"
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 4;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 6
@@ -2827,8 +2827,8 @@
 	icon_state = "1-8"
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 8;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 8
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/right_lower)
@@ -2838,8 +2838,8 @@
 /area/surface/outpost/main/bar)
 "fH" = (
 /obj/machinery/camera/network/main_outpost{
-	c_tag = "MO Right Wing - Airlock Access 3";
-	dir = 8
+	dir = 8;
+	c_tag = "MO Right Wing - Airlock Access 3"
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals3{
 	dir = 6
@@ -2855,10 +2855,10 @@
 	dir = 8
 	},
 /obj/machinery/camera/emp_proof{
-	c_tag = "ENG - Outpost Airlock";
-	dir = 9;
 	name = "Engineering_Outpost";
-	network = list("Engineering")
+	dir = 9;
+	network = list("Engineering");
+	c_tag = "ENG - Outpost Airlock"
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/engineering/monitoring)
@@ -2902,8 +2902,8 @@
 	icon_state = "4-8"
 	},
 /obj/item/radio/intercom{
-	dir = 1;
 	name = "Station Intercom (General)";
+	dir = 1;
 	pixel_y = 21
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals7,
@@ -2935,21 +2935,21 @@
 /area/surface/outpost/civilian/fishing)
 "fP" = (
 /obj/machinery/access_button{
-	command = "cycle_interior";
-	frequency = 1379;
-	master_tag = "sec1_airlock_control";
 	name = "Internal Access Button";
 	pixel_x = 5;
 	pixel_y = 26;
-	req_one_access = list(1)
+	frequency = 1379;
+	command = "cycle_interior";
+	req_one_access = list(1);
+	master_tag = "sec1_airlock_control"
 	},
 /obj/machinery/door/airlock/glass_external{
-	autoclose = 0;
-	frequency = 1379;
+	name = "Security Outpost Internal";
 	icon_state = "door_locked";
-	id_tag = "sec1_airlock_interior";
+	frequency = 1379;
 	locked = 1;
-	name = "Security Outpost Internal"
+	id_tag = "sec1_airlock_interior";
+	autoclose = 0
 	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/surface/outpost/security)
@@ -2962,10 +2962,10 @@
 /area/surface/outpost/mining_main/refinery)
 "fT" = (
 /obj/machinery/access_button{
-	command = "cycle_exterior";
+	name = "External Access Button";
 	frequency = 1379;
-	master_tag = "main3_airlock_control";
-	name = "External Access Button"
+	command = "cycle_exterior";
+	master_tag = "main3_airlock_control"
 	},
 /turf/simulated/wall/r_wall,
 /area/surface/outpost/main/airlock/landing_south)
@@ -3161,10 +3161,10 @@
 	icon_state = "0-2"
 	},
 /obj/machinery/camera/emp_proof{
-	c_tag = "ENG - Outpost  Fuel Storage";
-	dir = 6;
 	name = "Engineering_Outpost";
-	network = list("Engineering")
+	dir = 6;
+	network = list("Engineering");
+	c_tag = "ENG - Outpost  Fuel Storage"
 	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/engineering/storage)
@@ -3176,14 +3176,14 @@
 	dir = 9
 	},
 /obj/machinery/atmospherics/unary/outlet_injector{
+	name = "Coolant Injector";
 	dir = 1;
+	pixel_y = 1;
 	frequency = 1438;
 	id = "rust_cooling_in";
-	name = "Coolant Injector";
-	pixel_y = 1;
+	volume_rate = 700;
 	power_rating = 30000;
-	use_power = 1;
-	volume_rate = 700
+	use_power = 1
 	},
 /turf/simulated/floor/reinforced/airless,
 /area/surface/outpost/engineering/reactor_smes)
@@ -3200,14 +3200,14 @@
 /area/surface/outpost/main/corridor)
 "gB" = (
 /obj/machinery/button/windowtint{
-	id = "sauna_tint1";
 	pixel_x = -5;
-	pixel_y = 22
+	pixel_y = 22;
+	id = "sauna_tint1"
 	},
 /obj/machinery/button/windowtint{
-	id = "sauna_tint2";
 	pixel_x = 6;
-	pixel_y = 22
+	pixel_y = 22;
+	id = "sauna_tint2"
 	},
 /obj/effect/floor_decal/spline/fancy/wood/corner{
 	dir = 8
@@ -3266,8 +3266,8 @@
 	icon_state = "1-8"
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 8;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 8
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/right_lower)
@@ -3298,8 +3298,8 @@
 	icon_state = "2-8"
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 2;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 2
 	},
 /obj/machinery/light{
 	dir = 4
@@ -3482,8 +3482,8 @@
 	},
 /obj/structure/table/rack,
 /obj/machinery/camera/network/main_outpost{
-	c_tag = "MO Left Wing - Airlock 1";
-	dir = 4
+	dir = 4;
+	c_tag = "MO Left Wing - Airlock 1"
 	},
 /obj/item/melee/umbrella{
 	color = "#7c0d0d"
@@ -3516,8 +3516,8 @@
 /area/surface/outpost/mining_main)
 "hh" = (
 /obj/structure/closet/secure_closet/guncabinet{
-	req_access = newlist();
-	req_one_access = list(43,67)
+	req_one_access = list(43,67);
+	req_access = newlist()
 	},
 /obj/effect/floor_decal/corner/purple{
 	dir = 5
@@ -3570,19 +3570,19 @@
 /area/surface/outpost/mining_main/storage)
 "hl" = (
 /obj/machinery/door/airlock/glass_external{
-	autoclose = 0;
-	frequency = 1379;
+	name = "Main Outpost External";
 	icon_state = "door_locked";
-	id_tag = "main7_airlock_exterior";
+	frequency = 1379;
 	locked = 1;
-	name = "Main Outpost External"
+	id_tag = "main7_airlock_exterior";
+	autoclose = 0
 	},
 /obj/machinery/access_button{
-	command = "cycle_exterior";
-	frequency = 1379;
-	master_tag = "main7_airlock_control";
 	name = "External Access Button";
-	pixel_y = -26
+	pixel_y = -26;
+	frequency = 1379;
+	command = "cycle_exterior";
+	master_tag = "main7_airlock_control"
 	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/surface/outpost/main/airlock/left_two)
@@ -3617,8 +3617,8 @@
 	icon_state = "4-8"
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 4;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 4
 	},
 /obj/machinery/status_display{
 	pixel_y = 32
@@ -3656,20 +3656,20 @@
 /area/surface/outpost/mining_main/tools)
 "hr" = (
 /obj/machinery/access_button{
-	command = "cycle_interior";
-	frequency = 1379;
-	master_tag = "civ2_airlock_control";
 	name = "Internal Access Button";
 	pixel_x = 26;
-	pixel_y = 5
+	pixel_y = 5;
+	frequency = 1379;
+	command = "cycle_interior";
+	master_tag = "civ2_airlock_control"
 	},
 /obj/machinery/door/airlock/glass_external{
-	autoclose = 0;
-	frequency = 1379;
+	name = "Civilian Outpost Internal";
 	icon_state = "door_locked";
-	id_tag = "civ2_airlock_interior";
+	frequency = 1379;
 	locked = 1;
-	name = "Civilian Outpost Internal"
+	id_tag = "civ2_airlock_interior";
+	autoclose = 0
 	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/surface/outpost/civilian/sauna)
@@ -3690,8 +3690,8 @@
 	icon_state = "0-2"
 	},
 /obj/machinery/power/apc{
-	dir = 8;
 	name = "west bump";
+	dir = 8;
 	pixel_x = -24
 	},
 /turf/simulated/floor/tiled,
@@ -3732,8 +3732,8 @@
 	pixel_x = 22
 	},
 /obj/machinery/power/apc{
-	dir = 1;
 	name = "north bump";
+	dir = 1;
 	pixel_y = 24
 	},
 /obj/structure/cable/blue{
@@ -3759,8 +3759,8 @@
 "hy" = (
 /obj/structure/cable/blue,
 /obj/machinery/power/smes/buildable/outpost_substation{
+	charge = 5e+06;
 	RCon_tag = "Outpost - Shuttle Landing";
-	charge = 5e+006;
 	input_attempt = 1;
 	input_level = 150000;
 	output_level = 150000
@@ -3773,8 +3773,8 @@
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals3,
 /obj/machinery/camera/network/security{
-	c_tag = "SO - Airlock Access";
-	dir = 8
+	dir = 8;
+	c_tag = "SO - Airlock Access"
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/security)
@@ -3801,9 +3801,9 @@
 /area/surface/outpost/wall)
 "hD" = (
 /obj/machinery/door/blast/shutters{
+	name = "Production Shutters";
 	dir = 8;
-	id = "production1";
-	name = "Production Shutters"
+	id = "production1"
 	},
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/tiled/steel_grid,
@@ -3832,8 +3832,8 @@
 	icon_state = "1-8"
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 8;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 9
@@ -3924,8 +3924,8 @@
 	icon_state = "2-8"
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 2;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 2
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/left_lower)
@@ -3969,8 +3969,8 @@
 	dir = 1
 	},
 /obj/machinery/door/airlock/multi_tile/glass{
-	dir = 1;
 	name = "Tool Storage";
+	dir = 1;
 	req_one_access = list(48)
 	},
 /turf/simulated/floor/tiled/monotile,
@@ -4105,8 +4105,8 @@
 	dir = 5
 	},
 /obj/machinery/power/apc{
-	dir = 1;
 	name = "north bump";
+	dir = 1;
 	pixel_y = 24
 	},
 /obj/structure/cable/blue{
@@ -4167,10 +4167,10 @@
 /area/surface/outpost/engineering/auxiliary_storage)
 "ip" = (
 /obj/effect/shuttle_landmark{
-	base_area = /area/surface/outside/landing/plains;
-	base_turf = /turf/simulated/floor/outdoors/rocks/sif/planetuse;
+	name = "Sif Surface East";
 	landmark_tag = "response_ship_planet";
-	name = "Sif Surface East"
+	base_turf = /turf/simulated/floor/outdoors/rocks/sif/planetuse;
+	base_area = /area/surface/outside/landing/plains
 	},
 /turf/simulated/floor/outdoors/rocks/sif/planetuse,
 /area/surface/outside/landing/plains)
@@ -4219,8 +4219,8 @@
 	icon_state = "1-8"
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 8;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 9
@@ -4290,8 +4290,8 @@
 	dir = 1
 	},
 /obj/item/radio/intercom{
-	dir = 1;
 	name = "Station Intercom (General)";
+	dir = 1;
 	pixel_y = 21
 	},
 /turf/simulated/floor/plating,
@@ -4377,6 +4377,7 @@
 /turf/simulated/floor/plating,
 /area/surface/outpost/main/airlock/right_three)
 "iJ" = (
+/mob/living/simple_mob/animal/passive/mouse/mining,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/floor_decal/steeldecal/steel_decals6{
 	dir = 10
@@ -4384,7 +4385,6 @@
 /obj/structure/cable/blue{
 	icon_state = "1-2"
 	},
-/mob/living/simple_mob/animal/passive/mouse/mining,
 /turf/simulated/floor/tiled/steel_dirty,
 /area/surface/outpost/mining_main/uxstorage)
 "iK" = (
@@ -4418,8 +4418,8 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/camera/network/main_outpost{
-	c_tag = "MO Left Wing - Central Hall";
-	dir = 1
+	dir = 1;
+	c_tag = "MO Left Wing - Central Hall"
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor)
@@ -4449,8 +4449,8 @@
 	dir = 1
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 1;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 1
 	},
 /obj/structure/cable/blue{
 	icon_state = "1-8"
@@ -4475,16 +4475,16 @@
 	},
 /obj/machinery/air_sensor{
 	frequency = 1438;
-	id_tag = "rustengine_sensor";
-	output = 63
+	output = 63;
+	id_tag = "rustengine_sensor"
 	},
 /turf/simulated/floor/reinforced/airless,
 /area/surface/outpost/engineering/reactor_smes)
 "iU" = (
 /obj/machinery/embedded_controller/radio/airlock/access_controller{
-	id_tag = "ENG_Outpost_airlock_control";
 	pixel_x = 26;
 	pixel_y = 26;
+	id_tag = "ENG_Outpost_airlock_control";
 	tag_exterior_door = "ENG_Outpost_airlock_exterior";
 	tag_interior_door = "ENG_Outpost_airlock_interior"
 	},
@@ -4515,8 +4515,8 @@
 	icon_state = "1-2"
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 2;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 2
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/mining_main)
@@ -4669,8 +4669,8 @@
 	dir = 6
 	},
 /obj/machinery/power/apc{
-	dir = 8;
 	name = "west bump";
+	dir = 8;
 	pixel_x = -24
 	},
 /obj/structure/cable/blue{
@@ -4746,8 +4746,8 @@
 "jr" = (
 /obj/item/reagent_containers/glass/bucket/wood,
 /obj/machinery/power/apc{
-	dir = 1;
 	name = "north bump";
+	dir = 1;
 	pixel_y = 24
 	},
 /obj/machinery/light_switch{
@@ -4786,20 +4786,20 @@
 /area/surface/outpost/main/corridor/right_lower)
 "ju" = (
 /obj/machinery/door/airlock/glass_external{
-	autoclose = 0;
-	frequency = 1379;
+	name = "Mining Outpost External";
 	icon_state = "door_locked";
-	id_tag = "mining2_airlock_exterior";
+	frequency = 1379;
 	locked = 1;
-	name = "Mining Outpost External"
+	id_tag = "mining2_airlock_exterior";
+	autoclose = 0
 	},
 /obj/machinery/access_button{
-	command = "cycle_exterior";
-	frequency = 1379;
-	master_tag = "mining2_airlock_control";
 	name = "External Access Button";
 	pixel_x = -26;
-	req_one_access = list(48,10)
+	frequency = 1379;
+	command = "cycle_exterior";
+	req_one_access = list(48,10);
+	master_tag = "mining2_airlock_control"
 	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/surface/outpost/mining_main/tools)
@@ -4855,9 +4855,9 @@
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals4,
 /obj/machinery/embedded_controller/radio/airlock/access_controller{
-	id_tag = "sec1_airlock_control";
 	pixel_x = 26;
 	pixel_y = 26;
+	id_tag = "sec1_airlock_control";
 	req_one_access = list(1);
 	tag_exterior_door = "sec1_airlock_exterior";
 	tag_interior_door = "sec1_airlock_interior"
@@ -4902,8 +4902,8 @@
 /obj/item/tool/crowbar/red,
 /obj/item/flashlight,
 /obj/machinery/power/apc{
-	dir = 4;
 	name = "east bump";
+	dir = 4;
 	pixel_x = 24
 	},
 /obj/machinery/alarm{
@@ -4961,23 +4961,23 @@
 /area/surface/outpost/main/corridor/left_upper)
 "jH" = (
 /obj/structure/sign/warning/caution{
-	desc = "This appears to be a sign warning people that the other side is dangerous. It also says that NanoTrasen cannot guarantee your safety beyond this point.";
-	name = "\improper WARNING: NO ACCESS"
+	name = "\improper WARNING: NO ACCESS";
+	desc = "This appears to be a sign warning people that the other side is dangerous. It also says that NanoTrasen cannot guarantee your safety beyond this point."
 	},
 /turf/simulated/shuttle/wall/voidcraft,
 /area/surface/outpost/wall)
 "jI" = (
 /obj/machinery/atmospherics/unary/vent_pump{
-	dir = 1;
-	external_pressure_bound = 0;
-	external_pressure_bound_default = 0;
 	icon_state = "map_vent_in";
-	initialize_directions = 1;
-	internal_pressure_bound = 4000;
-	internal_pressure_bound_default = 4000;
-	pressure_checks = 2;
-	pressure_checks_default = 2;
+	dir = 1;
 	pump_direction = 0;
+	external_pressure_bound = 0;
+	internal_pressure_bound = 4000;
+	pressure_checks = 2;
+	external_pressure_bound_default = 0;
+	internal_pressure_bound_default = 4000;
+	pressure_checks_default = 2;
+	initialize_directions = 1;
 	use_power = 1
 	},
 /turf/simulated/floor/wood,
@@ -5001,8 +5001,8 @@
 /area/surface/outpost/main/corridor/right_upper)
 "jK" = (
 /obj/machinery/power/apc{
-	dir = 8;
 	name = "west bump";
+	dir = 8;
 	pixel_x = -24
 	},
 /obj/structure/cable/cyan{
@@ -5138,8 +5138,8 @@
 "jZ" = (
 /obj/effect/overlay/snow/floor,
 /obj/structure/disposalpipe/segment{
-	dir = 4;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 4
 	},
 /obj/effect/overlay/snow/floor/edges{
 	dir = 9
@@ -5282,8 +5282,8 @@
 	icon_state = "1-4"
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 1;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 1
 	},
 /obj/machinery/vending/wallmed1{
 	name = "NanoMed Wall";
@@ -5362,8 +5362,8 @@
 	dir = 1
 	},
 /obj/machinery/camera/network/main_outpost{
-	c_tag = "MO Right Wing - Teleporter Hallway";
-	dir = 1
+	dir = 1;
+	c_tag = "MO Right Wing - Teleporter Hallway"
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor)
@@ -5429,20 +5429,20 @@
 /area/surface/outpost/security/maa)
 "kC" = (
 /obj/machinery/access_button{
-	command = "cycle_interior";
-	frequency = 1379;
-	master_tag = "main7_airlock_control";
 	name = "Internal Access Button";
 	pixel_x = 6;
-	pixel_y = -26
+	pixel_y = -26;
+	frequency = 1379;
+	command = "cycle_interior";
+	master_tag = "main7_airlock_control"
 	},
 /obj/machinery/door/airlock/glass_external{
-	autoclose = 0;
-	frequency = 1379;
+	name = "Main Outpost Internal";
 	icon_state = "door_locked";
-	id_tag = "main7_airlock_interior";
+	frequency = 1379;
 	locked = 1;
-	name = "Main Outpost Internal"
+	id_tag = "main7_airlock_interior";
+	autoclose = 0
 	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/surface/outpost/main/airlock/left_two)
@@ -5495,8 +5495,8 @@
 /obj/random/junk,
 /obj/random/tool,
 /obj/machinery/camera/network/engineering_outpost{
-	c_tag = "SUBS - Main Outpost";
-	dir = 4
+	dir = 4;
+	c_tag = "SUBS - Main Outpost"
 	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/main/gen_room)
@@ -5622,8 +5622,8 @@
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/highsecurity{
 	name = "Teleporter Access";
-	req_access = newlist();
-	req_one_access = list(17)
+	req_one_access = list(17);
+	req_access = newlist()
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -5635,8 +5635,8 @@
 "kX" = (
 /obj/machinery/light,
 /obj/machinery/atmospherics/unary/heater/sauna{
-	dir = 8;
 	icon_state = "heater_1";
+	dir = 8;
 	use_power = 1
 	},
 /turf/simulated/floor/tiled/steel_grid,
@@ -5659,8 +5659,8 @@
 /area/surface/outpost/main/corridor/right_lower)
 "kZ" = (
 /obj/item/radio/intercom{
-	dir = 1;
 	name = "Station Intercom (General)";
+	dir = 1;
 	pixel_y = 21
 	},
 /turf/simulated/floor/tiled,
@@ -5734,8 +5734,8 @@
 /area/surface/outpost/main/gym)
 "lg" = (
 /obj/machinery/power/generator{
-	anchored = 1;
-	dir = 8
+	dir = 8;
+	anchored = 1
 	},
 /obj/structure/cable/yellow{
 	icon_state = "0-2"
@@ -5785,8 +5785,8 @@
 "lk" = (
 /obj/item/stool/padded,
 /obj/machinery/camera/network/civilian{
-	c_tag = "CO - Pool 2";
-	dir = 4
+	dir = 4;
+	c_tag = "CO - Pool 2"
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/surface/outpost/civilian/pool)
@@ -5801,20 +5801,20 @@
 /area/surface/outpost/main/corridor/right_lower)
 "lm" = (
 /obj/machinery/access_button{
-	command = "cycle_interior";
-	frequency = 1379;
-	master_tag = "main8_airlock_control";
 	name = "Internal Access Button";
 	pixel_x = -26;
-	pixel_y = -6
+	pixel_y = -6;
+	frequency = 1379;
+	command = "cycle_interior";
+	master_tag = "main8_airlock_control"
 	},
 /obj/machinery/door/airlock/glass_external{
-	autoclose = 0;
-	frequency = 1379;
+	name = "Main Outpost Internal";
 	icon_state = "door_locked";
-	id_tag = "main8_airlock_interior";
+	frequency = 1379;
 	locked = 1;
-	name = "Main Outpost Internal"
+	id_tag = "main8_airlock_interior";
+	autoclose = 0
 	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/surface/outpost/main/airlock/left_three)
@@ -5861,8 +5861,8 @@
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals9,
 /obj/machinery/camera/network/main_outpost{
-	c_tag = "MO Left Wing - Hallway 2";
-	dir = 8
+	dir = 8;
+	c_tag = "MO Left Wing - Hallway 2"
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/left_lower)
@@ -5926,9 +5926,9 @@
 /area/surface/outpost/security/maa)
 "lA" = (
 /turf/simulated/wall/dungeon{
+	name = "Wall Gate";
 	icon = 'icons/obj/doors/shuttledoors.dmi';
-	icon_state = "door_locked";
-	name = "Wall Gate"
+	icon_state = "door_locked"
 	},
 /area/surface/outpost/wall)
 "lB" = (
@@ -5985,8 +5985,8 @@
 	dir = 5
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 1;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 1
 	},
 /obj/structure/cable/blue{
 	icon_state = "4-8"
@@ -6119,8 +6119,8 @@
 "lV" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/camera/network/main_outpost{
-	c_tag = "ATV Garage 2";
-	dir = 8
+	dir = 8;
+	c_tag = "ATV Garage 2"
 	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/main/airlock/right_one)
@@ -6134,9 +6134,9 @@
 	icon_state = "0-8"
 	},
 /obj/machinery/power/smes/buildable{
-	RCon_tag = "Outpost Parallel - Main 1";
-	charge = 2e+007;
+	charge = 2e+07;
 	cur_coils = 4;
+	RCon_tag = "Outpost Parallel - Main 1";
 	input_attempt = 1;
 	input_level = 750000;
 	output_level = 750000
@@ -6243,8 +6243,8 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/disposalpipe/segment{
-	dir = 1;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 1
 	},
 /obj/structure/cable/blue{
 	icon_state = "1-2"
@@ -6262,8 +6262,8 @@
 /area/surface/outpost/engineering/monitoring)
 "mm" = (
 /obj/structure/disposalpipe/segment{
-	dir = 2;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 2
 	},
 /obj/structure/catwalk,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -6615,19 +6615,19 @@
 /area/surface/outside/plains/outpost)
 "mS" = (
 /obj/machinery/door/airlock/glass_external{
-	autoclose = 0;
-	frequency = 1379;
+	name = "Civilian Outpost External";
 	icon_state = "door_locked";
-	id_tag = "civ1_airlock_exterior";
+	frequency = 1379;
 	locked = 1;
-	name = "Civilian Outpost External"
+	id_tag = "civ1_airlock_exterior";
+	autoclose = 0
 	},
 /obj/machinery/access_button{
-	command = "cycle_exterior";
-	frequency = 1379;
-	master_tag = "civ1_airlock_control";
 	name = "External Access Button";
-	pixel_x = -26
+	pixel_x = -26;
+	frequency = 1379;
+	command = "cycle_exterior";
+	master_tag = "civ1_airlock_control"
 	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/surface/outpost/civilian/fishing)
@@ -6642,8 +6642,8 @@
 	dir = 8
 	},
 /obj/machinery/power/apc{
-	dir = 8;
 	name = "west bump";
+	dir = 8;
 	pixel_x = -24
 	},
 /obj/structure/cable/blue{
@@ -6698,8 +6698,8 @@
 /area/surface/outpost/main/corridor/left_lower)
 "mY" = (
 /obj/machinery/power/apc{
-	dir = 1;
 	name = "north bump";
+	dir = 1;
 	pixel_y = 24
 	},
 /obj/structure/catwalk,
@@ -6713,17 +6713,17 @@
 	dir = 6
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 4;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 4
 	},
 /obj/structure/cable/blue{
 	icon_state = "0-2"
 	},
 /obj/machinery/camera/emp_proof{
-	c_tag = "SUBS - Eng Outpost";
-	dir = 4;
 	name = "Engineering_Outpost";
-	network = list("Engineering Outpost")
+	dir = 4;
+	network = list("Engineering Outpost");
+	c_tag = "SUBS - Eng Outpost"
 	},
 /obj/machinery/light_switch{
 	pixel_x = -11;
@@ -6773,10 +6773,10 @@
 /area/surface/outside/ocean)
 "nf" = (
 /obj/machinery/camera/emp_proof{
-	c_tag = "ENG - Outpost Auxiliary Room";
-	dir = 10;
 	name = "Engineering_Outpost";
-	network = list("Engineering")
+	dir = 10;
+	network = list("Engineering");
+	c_tag = "ENG - Outpost Auxiliary Room"
 	},
 /obj/machinery/atmospherics/binary/pump{
 	dir = 4
@@ -6795,8 +6795,8 @@
 	icon_state = "1-4"
 	},
 /obj/structure/disposalpipe/junction{
-	dir = 2;
-	icon_state = "pipe-j2"
+	icon_state = "pipe-j2";
+	dir = 2
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/dorms)
@@ -6884,8 +6884,8 @@
 	icon_state = "4-8"
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 8;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 8
 	},
 /turf/simulated/floor/wood,
 /area/surface/outpost/civilian/sauna)
@@ -6998,17 +6998,17 @@
 /obj/effect/floor_decal/industrial/danger/cee,
 /obj/machinery/door/window/brigdoor/westleft{
 	name = "Containment Pen";
-	req_access = newlist();
-	req_one_access = list(43,1)
+	req_one_access = list(43,1);
+	req_access = newlist()
 	},
 /obj/machinery/door/window/brigdoor/eastright{
 	name = "Containment Pen";
-	req_access = newlist();
-	req_one_access = list(43,1)
+	req_one_access = list(43,1);
+	req_access = newlist()
 	},
 /obj/machinery/door/blast/regular/open{
-	id = "pen";
-	name = "Containment Lockdown Blast Doors"
+	name = "Containment Lockdown Blast Doors";
+	id = "pen"
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/exploration/containment)
@@ -7061,8 +7061,8 @@
 	icon_state = "1-2"
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 1;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 1
 	},
 /obj/structure/cable/blue{
 	icon_state = "1-4"
@@ -7120,8 +7120,8 @@
 /obj/fiftyspawner/rods,
 /obj/fiftyspawner/steel,
 /obj/machinery/camera/network/engineering_outpost{
-	c_tag = "ENG - Mining Outpost Power 1";
-	dir = 1
+	dir = 1;
+	c_tag = "ENG - Mining Outpost Power 1"
 	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/engineering/atmos_room)
@@ -7187,8 +7187,8 @@
 /area/surface/outpost/main/corridor/left_lower)
 "nR" = (
 /obj/machinery/power/smes/buildable/outpost_substation{
+	charge = 5e+06;
 	RCon_tag = "Outpost - Engineering Outpost";
-	charge = 5e+006;
 	input_attempt = 1;
 	input_level = 150000;
 	output_level = 150000
@@ -7300,8 +7300,8 @@
 "oc" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/camera/network/main_outpost{
-	c_tag = "ATV Garage 1";
-	dir = 8
+	dir = 8;
+	c_tag = "ATV Garage 1"
 	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/main/airlock/right_two)
@@ -7431,8 +7431,8 @@
 	pixel_x = 25
 	},
 /obj/machinery/power/apc{
-	dir = 1;
 	name = "north bump";
+	dir = 1;
 	pixel_y = 24
 	},
 /obj/random/soap,
@@ -7471,8 +7471,8 @@
 	icon_state = "0-8"
 	},
 /obj/machinery/power/apc{
-	dir = 4;
 	name = "east bump";
+	dir = 4;
 	pixel_x = 24
 	},
 /obj/machinery/alarm{
@@ -7516,8 +7516,8 @@
 /obj/structure/table/steel,
 /obj/item/storage/box/lights/mixed,
 /obj/machinery/power/apc{
-	dir = 8;
 	name = "west bump";
+	dir = 8;
 	pixel_x = -24
 	},
 /obj/structure/cable/blue{
@@ -7571,21 +7571,21 @@
 /area/surface/outpost/civilian/sauna)
 "oI" = (
 /obj/machinery/access_button{
-	command = "cycle_interior";
-	frequency = 1379;
-	master_tag = "mining1_airlock_control";
 	name = "Internal Access Button";
 	pixel_x = 5;
 	pixel_y = -26;
-	req_one_access = list(48)
+	frequency = 1379;
+	command = "cycle_interior";
+	req_one_access = list(48);
+	master_tag = "mining1_airlock_control"
 	},
 /obj/machinery/door/airlock/glass_external{
-	autoclose = 0;
-	frequency = 1379;
+	name = "Mining Outpost Internal";
 	icon_state = "door_locked";
-	id_tag = "mining1_airlock_interior";
+	frequency = 1379;
 	locked = 1;
-	name = "Mining Outpost Internal"
+	id_tag = "mining1_airlock_interior";
+	autoclose = 0
 	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/surface/outpost/mining_main/storage)
@@ -7838,8 +7838,8 @@
 	icon_state = "2-8"
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 2;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 2
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 10
@@ -7871,8 +7871,8 @@
 /area/surface/outpost/engineering/atmos_room)
 "pn" = (
 /obj/machinery/camera/network/main_outpost{
-	c_tag = "MO Right Wing - Airlock Access 2";
-	dir = 4
+	dir = 4;
+	c_tag = "MO Right Wing - Airlock Access 2"
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals3{
 	dir = 5
@@ -7951,8 +7951,8 @@
 "pv" = (
 /obj/effect/overlay/snow/floor,
 /obj/structure/disposalpipe/junction{
-	dir = 8;
-	icon_state = "pipe-j2"
+	icon_state = "pipe-j2";
+	dir = 8
 	},
 /obj/structure/cable/heavyduty{
 	icon_state = "2-8"
@@ -8076,8 +8076,8 @@
 	dir = 9
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 1;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/janitor)
@@ -8327,9 +8327,9 @@
 /area/surface/outpost/main/corridor/left_upper)
 "qd" = (
 /obj/machinery/atmospherics/omni/atmos_filter{
-	tag_east = 5;
 	tag_north = 2;
 	tag_south = 1;
+	tag_east = 5;
 	tag_west = 3
 	},
 /turf/simulated/floor/plating,
@@ -8337,8 +8337,8 @@
 "qe" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/structure/disposalpipe/segment{
-	dir = 1;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/gym)
@@ -8388,14 +8388,14 @@
 	dir = 8
 	},
 /obj/machinery/camera/emp_proof{
-	c_tag = "ENG - Outpost Reactor Room Access";
-	dir = 10;
 	name = "Engineering_Outpost";
-	network = list("Engineering")
+	dir = 10;
+	network = list("Engineering");
+	c_tag = "ENG - Outpost Reactor Room Access"
 	},
 /obj/item/radio/intercom{
-	dir = 4;
 	name = "Station Intercom (General)";
+	dir = 4;
 	pixel_x = 21
 	},
 /obj/effect/floor_decal/industrial/warning{
@@ -8471,8 +8471,8 @@
 /area/surface/outpost/main/airlock/left_two)
 "qp" = (
 /obj/machinery/power/apc{
-	dir = 8;
 	name = "west bump";
+	dir = 8;
 	pixel_x = -24
 	},
 /obj/structure/cable/blue{
@@ -8486,8 +8486,8 @@
 /area/surface/outpost/main/dorms/dorm_6)
 "qq" = (
 /obj/machinery/atmospherics/binary/circulator{
-	anchored = 1;
-	dir = 1
+	dir = 1;
+	anchored = 1
 	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/engineering/auxiliary_storage)
@@ -8592,8 +8592,8 @@
 	icon_state = "1-4"
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 1;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/left_upper)
@@ -8612,8 +8612,8 @@
 	dir = 10
 	},
 /obj/machinery/power/apc{
-	dir = 4;
 	name = "east bump";
+	dir = 4;
 	pixel_x = 24
 	},
 /obj/structure/cable/blue{
@@ -8699,8 +8699,8 @@
 /area/surface/outpost/civilian/smes)
 "qO" = (
 /obj/item/radio/intercom{
-	dir = 4;
 	name = "Station Intercom (General)";
+	dir = 4;
 	pixel_x = 21
 	},
 /turf/simulated/floor/tiled,
@@ -8771,8 +8771,8 @@
 	dir = 8
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 4;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 4
 	},
 /obj/structure/cable/blue{
 	icon_state = "1-4"
@@ -8784,8 +8784,8 @@
 /area/surface/outpost/civilian/pool)
 "qZ" = (
 /obj/machinery/camera/network/main_outpost{
-	c_tag = "MO Left Wing - Airlock Access 2";
-	dir = 8
+	dir = 8;
+	c_tag = "MO Left Wing - Airlock Access 2"
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals3,
 /obj/effect/floor_decal/steeldecal/steel_decals3{
@@ -8875,27 +8875,27 @@
 /area/surface/outpost/engineering/monitoring)
 "rg" = (
 /obj/machinery/access_button{
-	command = "cycle_interior";
-	frequency = 1379;
-	master_tag = "main5_airlock_control";
 	name = "Internal Access Button";
 	pixel_x = 5;
-	pixel_y = -26
+	pixel_y = -26;
+	frequency = 1379;
+	command = "cycle_interior";
+	master_tag = "main5_airlock_control"
 	},
 /obj/machinery/door/airlock/glass_external{
-	autoclose = 0;
-	frequency = 1379;
+	name = "Main Outpost Internal";
 	icon_state = "door_locked";
-	id_tag = "main5_airlock_interior";
+	frequency = 1379;
 	locked = 1;
-	name = "Main Outpost Internal"
+	id_tag = "main5_airlock_interior";
+	autoclose = 0
 	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/surface/outpost/main/airlock/right_three)
 "rh" = (
 /obj/machinery/door/airlock/multi_tile/glass{
-	dir = 1;
-	name = "Construction Area"
+	name = "Construction Area";
+	dir = 1
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals_central1,
 /obj/machinery/door/firedoor/multi_tile/glass{
@@ -8932,8 +8932,8 @@
 	icon_state = "2-4"
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 4;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/right_lower)
@@ -8993,8 +8993,8 @@
 	icon_state = "0-2"
 	},
 /obj/machinery/power/smes/buildable/outpost_substation{
-	RCon_tag = "Outpost - Civilian";
 	charge = 500000;
+	RCon_tag = "Outpost - Civilian";
 	input_attempt = 1;
 	input_level = 150000;
 	output_level = 150000
@@ -9009,19 +9009,19 @@
 /area/surface/outpost/main/laundry)
 "rr" = (
 /obj/machinery/door/airlock/glass_external{
-	autoclose = 0;
-	frequency = 1379;
+	name = "Civilian Outpost External";
 	icon_state = "door_locked";
-	id_tag = "civ2_airlock_exterior";
+	frequency = 1379;
 	locked = 1;
-	name = "Civilian Outpost External"
+	id_tag = "civ2_airlock_exterior";
+	autoclose = 0
 	},
 /obj/machinery/access_button{
-	command = "cycle_exterior";
-	frequency = 1379;
-	master_tag = "civ2_airlock_control";
 	name = "External Access Button";
-	pixel_x = 26
+	pixel_x = 26;
+	frequency = 1379;
+	command = "cycle_exterior";
+	master_tag = "civ2_airlock_control"
 	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/surface/outpost/civilian/sauna)
@@ -9036,8 +9036,8 @@
 	icon_state = "1-4"
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 1;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/left_upper)
@@ -9182,8 +9182,8 @@
 /area/surface/outpost/main/dorms/dorm_2)
 "rL" = (
 /obj/machinery/atmospherics/omni/atmos_filter{
-	tag_east = 2;
 	tag_north = 5;
+	tag_east = 2;
 	tag_west = 1;
 	use_power = 0
 	},
@@ -9226,8 +9226,8 @@
 	dir = 1
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 2;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 2
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/engineering/monitoring)
@@ -9304,8 +9304,8 @@
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/purple/border,
 /obj/machinery/camera/network/main_outpost{
-	c_tag = "MO - Custodial Closet";
-	dir = 1
+	dir = 1;
+	c_tag = "MO - Custodial Closet"
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/janitor)
@@ -9340,10 +9340,10 @@
 	pixel_y = 8
 	},
 /obj/machinery/button/remote/blast_door{
-	id = "production1";
 	name = "Production Shutters";
 	pixel_x = -20;
 	pixel_y = -10;
+	id = "production1";
 	req_one_access = list(48)
 	},
 /turf/simulated/floor/tiled/dark,
@@ -9422,8 +9422,8 @@
 	icon_state = "4-8"
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 8;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 8
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/left_upper)
@@ -9604,17 +9604,17 @@
 	},
 /obj/structure/disposalpipe/segment,
 /obj/machinery/camera/network/main_outpost{
-	c_tag = "MO Left Wing - Hallway 3";
-	dir = 4
+	dir = 4;
+	c_tag = "MO Left Wing - Hallway 3"
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/dorms)
 "sA" = (
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/blast/shutters{
+	name = "Production Shutters";
 	dir = 8;
-	id = "production1";
-	name = "Production Shutters"
+	id = "production1"
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/surface/outpost/mining_main/refinery)
@@ -9633,9 +9633,9 @@
 "sD" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/door/blast/shutters{
+	name = "Garage Shutters";
 	dir = 8;
-	id = "garage2";
-	name = "Garage Shutters"
+	id = "garage2"
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/surface/outpost/main/airlock/right_one)
@@ -9720,8 +9720,8 @@
 	dir = 9
 	},
 /obj/machinery/power/apc{
-	dir = 4;
 	name = "east bump";
+	dir = 4;
 	pixel_x = 24
 	},
 /obj/structure/cable/blue{
@@ -9812,8 +9812,8 @@
 	pixel_x = -22
 	},
 /obj/machinery/power/apc{
-	dir = 1;
 	name = "north bump";
+	dir = 1;
 	pixel_y = 24
 	},
 /obj/structure/cable/blue{
@@ -9844,8 +9844,8 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /obj/machinery/camera/network/main_outpost{
-	c_tag = "MO Left Wing - Central Hall";
-	dir = 1
+	dir = 1;
+	c_tag = "MO Left Wing - Central Hall"
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor)
@@ -9936,10 +9936,10 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/camera/emp_proof{
-	c_tag = "ENG - Outpost  Reactor Room East";
-	dir = 4;
 	name = "Reactor_Room";
-	network = list("Engine")
+	dir = 4;
+	network = list("Engine");
+	c_tag = "ENG - Outpost  Reactor Room East"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
@@ -10034,8 +10034,8 @@
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals3,
 /obj/machinery/camera/network/mining{
-	c_tag = "PO - Airlock Access 1";
-	dir = 8
+	dir = 8;
+	c_tag = "PO - Airlock Access 1"
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/mining_main/storage)
@@ -10149,8 +10149,8 @@
 	icon_state = "1-8"
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 8;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 8
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/right_upper)
@@ -10211,9 +10211,9 @@
 "tA" = (
 /obj/machinery/disposal,
 /obj/machinery/button/remote/airlock{
-	id = "dorm1";
 	name = "Door Lock Control";
 	pixel_y = -25;
+	id = "dorm1";
 	specialfunctions = 4
 	},
 /obj/structure/disposalpipe/trunk{
@@ -10306,10 +10306,10 @@
 	dir = 1
 	},
 /obj/machinery/computer/general_air_control/supermatter_core{
-	input_tag = "rust_cooling_in";
 	name = "Engine Cooling Control";
-	output_tag = "rust_cooling_out";
-	sensors = list("rustengine_sensor"="Engine Temperature")
+	sensors = list(rustengine_sensor="Engine Temperature");
+	input_tag = "rust_cooling_in";
+	output_tag = "rust_cooling_out"
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/engineering/reactor_smes)
@@ -10418,8 +10418,8 @@
 "tQ" = (
 /obj/structure/table/bench/wooden,
 /obj/item/radio/intercom{
-	dir = 4;
 	name = "Station Intercom (General)";
+	dir = 4;
 	pixel_x = 21
 	},
 /turf/simulated/floor/wood,
@@ -10490,8 +10490,8 @@
 /area/surface/outpost/main/corridor/right_upper)
 "tX" = (
 /obj/machinery/power/apc{
-	dir = 8;
 	name = "west bump";
+	dir = 8;
 	pixel_x = -24
 	},
 /obj/structure/cable/blue{
@@ -10547,8 +10547,8 @@
 "uc" = (
 /obj/structure/closet/secure_closet/guncabinet/phase{
 	name = "phase weapon cabinet";
-	req_access = newlist();
-	req_one_access = list(43,67)
+	req_one_access = list(43,67);
+	req_access = newlist()
 	},
 /obj/item/clothing/accessory/holster/hip,
 /obj/effect/floor_decal/corner/purple{
@@ -10558,8 +10558,8 @@
 	dir = 10
 	},
 /obj/machinery/camera/network/main_outpost{
-	c_tag = "MO - Exploration Prep";
-	dir = 8
+	dir = 8;
+	c_tag = "MO - Exploration Prep"
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals9{
 	dir = 4
@@ -10631,11 +10631,11 @@
 	dir = 4
 	},
 /obj/machinery/turretid/stun{
-	check_records = 0;
-	control_area = "\improper Main Outpost Teleporter";
 	name = "Main Outpost Teleporter turret control";
 	pixel_y = 24;
-	req_access = list(19)
+	check_records = 0;
+	req_access = list(19);
+	control_area = "\improper Main Outpost Teleporter"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -10657,8 +10657,8 @@
 	dir = 1
 	},
 /obj/machinery/button/windowtint{
-	id = "dorm_tint5";
-	pixel_x = -22
+	pixel_x = -22;
+	id = "dorm_tint5"
 	},
 /turf/simulated/floor/wood,
 /area/surface/outpost/main/dorms/dorm_5)
@@ -10679,10 +10679,10 @@
 /area/surface/outpost/main/laundry)
 "up" = (
 /obj/machinery/light/small{
-	brightness_color = "#DA0205";
-	brightness_power = 1;
+	dir = 8;
 	brightness_range = 5;
-	dir = 8
+	brightness_power = 1;
+	brightness_color = "#DA0205"
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
 	dir = 6
@@ -10696,8 +10696,8 @@
 	icon_state = "0-2"
 	},
 /obj/machinery/power/apc{
-	dir = 1;
 	name = "north bump";
+	dir = 1;
 	pixel_y = 24
 	},
 /obj/machinery/light/small{
@@ -10728,8 +10728,8 @@
 	dir = 1
 	},
 /obj/machinery/camera/network/telecom{
-	c_tag = "Tcoms - Main Outpost";
-	dir = 4
+	dir = 4;
+	c_tag = "Tcoms - Main Outpost"
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/surface/outpost/main/tcomm)
@@ -10769,9 +10769,9 @@
 /area/surface/outpost/main/corridor)
 "uz" = (
 /turf/simulated/floor/weird_things/dark{
-	nitrogen = 93.7835;
+	temperature = 243.15;
 	oxygen = 20.7263;
-	temperature = 243.15
+	nitrogen = 93.7835
 	},
 /area/surface/outside/plains/mountains)
 "uA" = (
@@ -10924,8 +10924,8 @@
 	dir = 5
 	},
 /obj/machinery/power/apc{
-	dir = 1;
 	name = "north bump";
+	dir = 1;
 	pixel_y = 24
 	},
 /obj/machinery/light_switch{
@@ -11212,8 +11212,8 @@
 	icon_state = "2-4"
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 4;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/left_lower)
@@ -11248,10 +11248,10 @@
 /area/surface/outpost/main/dorms/dorm_3)
 "vx" = (
 /obj/machinery/access_button{
-	command = "cycle_exterior";
+	name = "External Access Button";
 	frequency = 1379;
-	master_tag = "main4_airlock_control";
-	name = "External Access Button"
+	command = "cycle_exterior";
+	master_tag = "main4_airlock_control"
 	},
 /turf/simulated/wall/r_wall,
 /area/surface/outpost/main/airlock/landing_north)
@@ -11270,8 +11270,8 @@
 	icon_state = "1-8"
 	},
 /obj/machinery/camera/network/mining{
-	c_tag = "PO - Mining Production Room";
-	dir = 8
+	dir = 8;
+	c_tag = "PO - Mining Production Room"
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/mining_main/refinery)
@@ -11317,8 +11317,8 @@
 	},
 /obj/item/storage/pill_bottle/spaceacillin,
 /obj/machinery/power/apc{
-	dir = 8;
 	name = "west bump";
+	dir = 8;
 	pixel_x = -24
 	},
 /obj/machinery/light_switch{
@@ -11394,8 +11394,8 @@
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/white/border,
 /obj/machinery/camera/network/main_outpost{
-	c_tag = "MO Left Wing - Hallway 1";
-	dir = 1
+	dir = 1;
+	c_tag = "MO Left Wing - Hallway 1"
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor)
@@ -11435,8 +11435,8 @@
 "vU" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /obj/structure/disposalpipe/segment{
-	dir = 8;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 9
@@ -11630,8 +11630,8 @@
 "wn" = (
 /obj/structure/table/standard,
 /obj/machinery/power/apc{
-	dir = 1;
 	name = "north bump";
+	dir = 1;
 	pixel_y = 24
 	},
 /obj/machinery/light_switch{
@@ -11659,19 +11659,19 @@
 /area/surface/outpost/main/gym)
 "wp" = (
 /obj/machinery/door/airlock/glass_external{
-	autoclose = 0;
-	frequency = 1379;
+	name = "Main Outpost External";
 	icon_state = "door_locked";
-	id_tag = "main6_airlock_exterior";
+	frequency = 1379;
 	locked = 1;
-	name = "Main Outpost External"
+	id_tag = "main6_airlock_exterior";
+	autoclose = 0
 	},
 /obj/machinery/access_button{
-	command = "cycle_exterior";
-	frequency = 1379;
-	master_tag = "main6_airlock_control";
 	name = "External Access Button";
-	pixel_x = 26
+	pixel_x = 26;
+	frequency = 1379;
+	command = "cycle_exterior";
+	master_tag = "main6_airlock_control"
 	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/surface/outpost/main/airlock/left_one)
@@ -11774,29 +11774,29 @@
 "wH" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/button/remote/blast_door{
-	id = "garage2";
 	name = "Garage Shutter Control";
 	pixel_x = -6;
-	pixel_y = -22
+	pixel_y = -22;
+	id = "garage2"
 	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/main/airlock/right_one)
 "wI" = (
 /obj/machinery/access_button{
-	command = "cycle_interior";
-	frequency = 1379;
-	master_tag = "main2_airlock_control";
 	name = "Internal Access Button";
 	pixel_x = -26;
-	pixel_y = -6
+	pixel_y = -6;
+	frequency = 1379;
+	command = "cycle_interior";
+	master_tag = "main2_airlock_control"
 	},
 /obj/machinery/door/airlock/glass_external{
-	autoclose = 0;
-	frequency = 1379;
+	name = "Main Outpost Internal";
 	icon_state = "door_locked";
-	id_tag = "main2_airlock_interior";
+	frequency = 1379;
 	locked = 1;
-	name = "Main Outpost Internal"
+	id_tag = "main2_airlock_interior";
+	autoclose = 0
 	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/surface/outpost/main/airlock/right_one)
@@ -11806,20 +11806,20 @@
 /area/surface/outside/plains/outpost)
 "wK" = (
 /obj/machinery/access_button{
-	command = "cycle_exterior";
-	frequency = 1379;
-	master_tag = "ENG_Outpost_airlock_control";
 	name = "External Access Button";
 	pixel_y = 26;
-	req_one_access = list(10)
+	frequency = 1379;
+	command = "cycle_exterior";
+	req_one_access = list(10);
+	master_tag = "ENG_Outpost_airlock_control"
 	},
 /obj/machinery/door/airlock/glass_external{
-	autoclose = 0;
-	frequency = 1379;
+	name = "Engineering Outpost External";
 	icon_state = "door_locked";
-	id_tag = "ENG_Outpost_airlock_exterior";
+	frequency = 1379;
 	locked = 1;
-	name = "Engineering Outpost External"
+	id_tag = "ENG_Outpost_airlock_exterior";
+	autoclose = 0
 	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/surface/outpost/engineering/monitoring)
@@ -11833,9 +11833,9 @@
 "wM" = (
 /turf/simulated/floor/plating{
 	icon_state = "asteroidplating2";
-	nitrogen = 93.7835;
+	temperature = 243.15;
 	oxygen = 20.7263;
-	temperature = 243.15
+	nitrogen = 93.7835
 	},
 /area/surface/outpost/mining_main/exterior)
 "wN" = (
@@ -11849,10 +11849,10 @@
 /area/surface/outpost/security/maa)
 "wO" = (
 /obj/item/towel{
-	color = "#00FFFF";
 	name = "cyan towel";
 	pixel_x = 2;
-	pixel_y = 4
+	pixel_y = 4;
+	color = "#00FFFF"
 	},
 /obj/structure/sink{
 	dir = 4;
@@ -11865,10 +11865,10 @@
 	dir = 4
 	},
 /obj/machinery/camera/emp_proof{
-	c_tag = "ENG - Outpost Foyeur";
-	dir = 10;
 	name = "Engineering Outpost";
-	network = list("Engineering")
+	dir = 10;
+	network = list("Engineering");
+	c_tag = "ENG - Outpost Foyeur"
 	},
 /obj/item/radio/intercom{
 	name = "Station Intercom (General)";
@@ -11942,8 +11942,8 @@
 	dir = 8
 	},
 /obj/machinery/camera/network/main_outpost{
-	c_tag = "MO - Containment Pen";
-	dir = 4
+	dir = 4;
+	c_tag = "MO - Containment Pen"
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/exploration/containment)
@@ -12031,8 +12031,8 @@
 	dir = 1
 	},
 /obj/structure/disposalpipe/junction{
-	dir = 8;
-	icon_state = "pipe-j2"
+	icon_state = "pipe-j2";
+	dir = 8
 	},
 /obj/structure/cable/blue{
 	icon_state = "4-8"
@@ -12055,20 +12055,20 @@
 /area/surface/outpost/security/smes)
 "xk" = (
 /obj/machinery/access_button{
-	command = "cycle_exterior";
-	frequency = 1379;
-	master_tag = "mining1_airlock_control";
 	name = "External Access Button";
 	pixel_y = -26;
-	req_one_access = list(48)
+	frequency = 1379;
+	command = "cycle_exterior";
+	req_one_access = list(48);
+	master_tag = "mining1_airlock_control"
 	},
 /obj/machinery/door/airlock/glass_external{
-	autoclose = 0;
-	frequency = 1379;
+	name = "Mining Outpost External";
 	icon_state = "door_locked";
-	id_tag = "mining1_airlock_exterior";
+	frequency = 1379;
 	locked = 1;
-	name = "Mining Outpost External"
+	id_tag = "mining1_airlock_exterior";
+	autoclose = 0
 	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/surface/outpost/mining_main/storage)
@@ -12125,10 +12125,10 @@
 /area/surface/outpost/main/exploration/containment)
 "xq" = (
 /turf/simulated/floor/wood{
-	nitrogen = 93.7835;
-	outdoors = 1;
+	temperature = 243.15;
 	oxygen = 20.7263;
-	temperature = 243.15
+	nitrogen = 93.7835;
+	outdoors = 1
 	},
 /area/surface/outside/path/plains)
 "xr" = (
@@ -12179,8 +12179,8 @@
 	dir = 1
 	},
 /obj/machinery/power/apc{
-	dir = 1;
 	name = "north bump";
+	dir = 1;
 	pixel_y = 24
 	},
 /obj/machinery/light_switch{
@@ -12253,10 +12253,10 @@
 /area/surface/outpost/main/airlock/left_two)
 "xy" = (
 /obj/machinery/camera/emp_proof{
-	c_tag = "ENG - Outpost  Reactor Room South";
-	dir = 4;
 	name = "Reactor_Room";
-	network = list("Engine")
+	dir = 4;
+	network = list("Engine");
+	c_tag = "ENG - Outpost  Reactor Room South"
 	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/engineering/reactor_smes)
@@ -12359,8 +12359,8 @@
 	icon_state = "0-8"
 	},
 /obj/machinery/power/apc{
-	dir = 4;
 	name = "east bump";
+	dir = 4;
 	pixel_x = 24
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -12383,8 +12383,8 @@
 "xK" = (
 /obj/effect/overlay/snow/floor,
 /obj/structure/disposalpipe/segment{
-	dir = 4;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 4
 	},
 /obj/effect/overlay/snow/floor/edges{
 	dir = 8
@@ -12694,8 +12694,8 @@
 /area/surface/outpost/main/dorms/dorm_1)
 "yn" = (
 /obj/structure/disposalpipe/segment{
-	dir = 4;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 4
 	},
 /obj/structure/cable/blue{
 	icon_state = "4-8"
@@ -12714,8 +12714,8 @@
 /area/surface/outpost/security/maa)
 "yo" = (
 /obj/machinery/power/apc{
-	dir = 8;
 	name = "west bump";
+	dir = 8;
 	pixel_x = -24
 	},
 /obj/structure/cable/blue{
@@ -12760,8 +12760,8 @@
 	icon_state = "0-2"
 	},
 /obj/machinery/power/apc{
-	dir = 1;
 	name = "north bump";
+	dir = 1;
 	pixel_y = 24
 	},
 /turf/simulated/floor/tiled/dark,
@@ -12857,8 +12857,8 @@
 	dir = 10
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 2;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 2
 	},
 /obj/machinery/light_switch{
 	pixel_x = -21;
@@ -12886,8 +12886,8 @@
 /area/surface/outpost/main/corridor/right_lower)
 "yF" = (
 /obj/item/radio/intercom{
-	dir = 4;
 	name = "Station Intercom (General)";
+	dir = 4;
 	pixel_x = 21
 	},
 /turf/simulated/floor/tiled,
@@ -12922,9 +12922,9 @@
 	},
 /turf/simulated/floor/plating{
 	icon_state = "asteroidplating2";
-	nitrogen = 93.7835;
+	temperature = 243.15;
 	oxygen = 20.7263;
-	temperature = 243.15
+	nitrogen = 93.7835
 	},
 /area/surface/outpost/mining_main/exterior)
 "yI" = (
@@ -12977,8 +12977,8 @@
 	icon_state = "0-4"
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 4;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 4
 	},
 /obj/effect/overlay/snow/floor/edges{
 	dir = 8
@@ -13002,9 +13002,9 @@
 	icon_state = "1-4"
 	},
 /obj/machinery/embedded_controller/radio/airlock/access_controller{
-	id_tag = "main1_airlock_control";
 	pixel_x = -26;
 	pixel_y = -26;
+	id_tag = "main1_airlock_control";
 	tag_exterior_door = "main1_airlock_exterior";
 	tag_interior_door = "main1_airlock_interior"
 	},
@@ -13133,8 +13133,8 @@
 	icon_state = "2-8"
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 2;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 2
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/left_upper)
@@ -13163,8 +13163,8 @@
 "zj" = (
 /obj/effect/overlay/snow/floor,
 /obj/structure/disposalpipe/segment{
-	dir = 1;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 1
 	},
 /turf/simulated/floor/plating/sif/planetuse,
 /area/surface/outpost/engineering/atmos_room)
@@ -13231,10 +13231,10 @@
 /area/surface/outpost/main/airlock/left_three)
 "zp" = (
 /obj/effect/shuttle_landmark{
-	base_area = /area/surface/outside/landing/plains;
-	base_turf = /turf/simulated/floor/outdoors/grass/sif/planetuse;
+	name = "West Outpost Perimiter";
 	landmark_tag = "outpost_w";
-	name = "West Outpost Perimiter"
+	base_turf = /turf/simulated/floor/outdoors/grass/sif/planetuse;
+	base_area = /area/surface/outside/landing/plains
 	},
 /turf/simulated/floor/outdoors/grass/sif/planetuse{
 	tree_chance = 0
@@ -13272,15 +13272,15 @@
 	icon_state = "1-4"
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 1;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/right_upper)
 "zs" = (
 /obj/machinery/power/apc{
-	dir = 8;
 	name = "west bump";
+	dir = 8;
 	pixel_x = -24
 	},
 /obj/structure/cable/blue{
@@ -13357,10 +13357,10 @@
 /area/surface/outpost/mining_main)
 "zC" = (
 /obj/effect/shuttle_landmark{
-	base_area = /area/surface/outside/landing/plains;
-	base_turf = /turf/simulated/floor/outdoors/grass/sif/planetuse;
+	name = "South of Outpost";
 	landmark_tag = "outpost_s";
-	name = "South of Outpost"
+	base_turf = /turf/simulated/floor/outdoors/grass/sif/planetuse;
+	base_area = /area/surface/outside/landing/plains
 	},
 /turf/simulated/floor/outdoors/dirt/sif/planetuse,
 /area/surface/outside/landing/plains)
@@ -13427,20 +13427,20 @@
 /area/surface/outpost/main/construction_area)
 "zM" = (
 /obj/machinery/access_button{
-	command = "cycle_interior";
-	frequency = 1379;
-	master_tag = "civ1_airlock_control";
 	name = "Internal Access Button";
 	pixel_x = -26;
-	pixel_y = 5
+	pixel_y = 5;
+	frequency = 1379;
+	command = "cycle_interior";
+	master_tag = "civ1_airlock_control"
 	},
 /obj/machinery/door/airlock/glass_external{
-	autoclose = 0;
-	frequency = 1379;
+	name = "Civilian Outpost Internal";
 	icon_state = "door_locked";
-	id_tag = "civ1_airlock_interior";
+	frequency = 1379;
 	locked = 1;
-	name = "Civilian Outpost Internal"
+	id_tag = "civ1_airlock_interior";
+	autoclose = 0
 	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/surface/outpost/civilian/fishing)
@@ -13466,8 +13466,8 @@
 	icon_state = "0-2"
 	},
 /obj/machinery/power/apc{
-	dir = 1;
 	name = "north bump";
+	dir = 1;
 	pixel_y = 24
 	},
 /obj/machinery/light/small{
@@ -13663,9 +13663,9 @@
 /obj/effect/map_effect/perma_light/concentrated,
 /turf/simulated/floor/plating{
 	icon_state = "asteroidplating2";
-	nitrogen = 93.7835;
+	temperature = 243.15;
 	oxygen = 20.7263;
-	temperature = 243.15
+	nitrogen = 93.7835
 	},
 /area/surface/outpost/mining_main/exterior)
 "Am" = (
@@ -13743,8 +13743,8 @@
 	icon_state = "1-4"
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 1;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 5
@@ -13780,8 +13780,8 @@
 /obj/machinery/cell_charger,
 /obj/random/powercell,
 /obj/machinery/camera/network/engineering_outpost{
-	c_tag = "SUBS - Right Wing";
-	dir = 4
+	dir = 4;
+	c_tag = "SUBS - Right Wing"
 	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/main/gen_room/smes_right)
@@ -13800,9 +13800,9 @@
 	icon_state = "2-8"
 	},
 /obj/machinery/embedded_controller/radio/airlock/access_controller{
-	id_tag = "main6_airlock_control";
 	pixel_x = 26;
 	pixel_y = 26;
+	id_tag = "main6_airlock_control";
 	tag_exterior_door = "main6_airlock_exterior";
 	tag_interior_door = "main6_airlock_interior"
 	},
@@ -13826,8 +13826,8 @@
 	},
 /obj/structure/catwalk,
 /obj/structure/disposalpipe/segment{
-	dir = 1;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 1
 	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/main/gen_room)
@@ -13976,8 +13976,8 @@
 	icon_state = "1-4"
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 1;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 5
@@ -13997,9 +13997,9 @@
 	icon_state = "0-8"
 	},
 /obj/machinery/shieldwallgen{
-	anchored = 1;
+	state = 1;
 	req_access = list(1,43);
-	state = 1
+	anchored = 1
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/exploration/containment)
@@ -14074,8 +14074,8 @@
 	icon_state = "2-8"
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 2;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 2
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/right_upper)
@@ -14129,8 +14129,8 @@
 	icon_state = "2-4"
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 4;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/left_upper)
@@ -14138,8 +14138,8 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/disposalpipe/segment{
-	dir = 4;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 4
 	},
 /obj/structure/cable/blue{
 	icon_state = "2-4"
@@ -14202,8 +14202,8 @@
 	dir = 8
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 2;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 2
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/gateway)
@@ -14302,8 +14302,8 @@
 /obj/structure/disposalpipe/trunk,
 /obj/machinery/disposal,
 /obj/item/radio/intercom{
-	dir = 4;
 	name = "Station Intercom (General)";
+	dir = 4;
 	pixel_x = 21
 	},
 /turf/simulated/floor/tiled,
@@ -14345,8 +14345,8 @@
 	dir = 9
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 8;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 8
 	},
 /obj/machinery/light/small{
 	dir = 4
@@ -14419,8 +14419,8 @@
 /obj/item/flashlight,
 /obj/machinery/light,
 /obj/machinery/camera/network/main_outpost{
-	c_tag = "MO - Landing South Airlock";
-	dir = 1
+	dir = 1;
+	c_tag = "MO - Landing South Airlock"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/surface/outpost/main/airlock/landing_south)
@@ -14611,8 +14611,8 @@
 	dir = 6
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 4;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 4
 	},
 /obj/machinery/newscaster{
 	pixel_x = -30
@@ -14632,12 +14632,12 @@
 /area/surface/outpost/main/construction_area)
 "Cb" = (
 /obj/machinery/door/airlock/glass_external{
-	autoclose = 0;
-	frequency = 1379;
+	name = "Landing South External";
 	icon_state = "door_locked";
-	id_tag = "main3_airlock_exterior";
+	frequency = 1379;
 	locked = 1;
-	name = "Landing South External"
+	id_tag = "main3_airlock_exterior";
+	autoclose = 0
 	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/surface/outpost/main/airlock/landing_south)
@@ -14652,13 +14652,10 @@
 	dir = 1
 	},
 /obj/machinery/camera/network/main_outpost{
-	c_tag = "MO - Search and Rescue Starboard";
-	dir = 8
+	dir = 8;
+	c_tag = "MO - Search and Rescue Starboard"
 	},
-/obj/structure/window/reinforced{
-	health = 1e+006;
-	req_access = list(5)
-	},
+/obj/structure/window/reinforced,
 /obj/structure/table/rack,
 /obj/item/storage/belt/medical/emt,
 /obj/item/storage/belt/medical/emt,
@@ -14673,10 +14670,10 @@
 	dir = 1
 	},
 /obj/machinery/door/window/brigdoor/southleft{
-	dir = 8;
 	name = "EMT Supplies";
-	req_access = list(5);
-	req_one_access = list(5,43)
+	dir = 8;
+	req_one_access = list(5,43);
+	req_access = list(5)
 	},
 /turf/simulated/floor/tiled/white,
 /area/surface/outpost/main/search_and_rescue)
@@ -14775,8 +14772,8 @@
 	name = "Tritium Storage"
 	},
 /obj/machinery/power/apc{
-	dir = 1;
 	name = "north bump";
+	dir = 1;
 	pixel_y = 24
 	},
 /obj/structure/cable/cyan{
@@ -14867,8 +14864,8 @@
 	dir = 9
 	},
 /obj/machinery/camera/network/main_outpost{
-	c_tag = "MO Left Wing - Hallway 5";
-	dir = 1
+	dir = 1;
+	c_tag = "MO Left Wing - Hallway 5"
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals7{
 	dir = 1
@@ -14895,8 +14892,8 @@
 	icon_state = "0-2"
 	},
 /obj/machinery/power/apc{
-	dir = 1;
 	name = "north bump";
+	dir = 1;
 	pixel_y = 24
 	},
 /obj/machinery/light_switch{
@@ -14907,9 +14904,9 @@
 /area/surface/outpost/main/gym)
 "CB" = (
 /obj/machinery/atmospherics/omni/atmos_filter{
-	tag_east = 7;
 	tag_north = 2;
 	tag_south = 1;
+	tag_east = 7;
 	tag_west = 6
 	},
 /turf/simulated/floor/plating,
@@ -14929,8 +14926,8 @@
 /area/surface/outpost/main/corridor)
 "CD" = (
 /obj/item/radio/intercom{
-	dir = 4;
 	name = "Station Intercom (General)";
+	dir = 4;
 	pixel_x = 21
 	},
 /turf/simulated/floor/tiled,
@@ -15193,8 +15190,8 @@
 /obj/item/clothing/shoes/boots/winter/climbing,
 /obj/item/clothing/shoes/boots/winter/climbing,
 /obj/machinery/camera/network/civilian{
-	c_tag = "CO - Fishing 1";
-	dir = 8
+	dir = 8;
+	c_tag = "CO - Fishing 1"
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/civilian/fishing)
@@ -15298,8 +15295,8 @@
 	dir = 9
 	},
 /obj/item/radio/intercom{
-	dir = 1;
 	name = "Station Intercom (General)";
+	dir = 1;
 	pixel_y = 21
 	},
 /obj/structure/extinguisher_cabinet{
@@ -15478,8 +15475,8 @@
 /area/surface/outpost/main/corridor)
 "DU" = (
 /obj/item/radio/intercom{
-	dir = 4;
 	name = "Station Intercom (General)";
+	dir = 4;
 	pixel_x = 21
 	},
 /turf/simulated/floor/tiled,
@@ -15493,10 +15490,10 @@
 	dir = 4
 	},
 /obj/machinery/camera/emp_proof{
-	c_tag = "ENG - Outpost SMES Room";
-	dir = 10;
 	name = "Engineering_Outpost";
-	network = list("Engineering")
+	dir = 10;
+	network = list("Engineering");
+	c_tag = "ENG - Outpost SMES Room"
 	},
 /obj/machinery/light_switch{
 	pixel_x = -21;
@@ -15652,8 +15649,8 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/disposalpipe/segment{
-	dir = 2;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 2
 	},
 /obj/structure/cable/blue{
 	icon_state = "2-8"
@@ -15671,8 +15668,8 @@
 	dir = 9
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 8;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 8
 	},
 /obj/structure/cable/blue{
 	icon_state = "1-8"
@@ -15926,8 +15923,8 @@
 	icon_state = "1-8"
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 8;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 9
@@ -15941,9 +15938,9 @@
 "EV" = (
 /obj/structure/table/steel,
 /obj/item/stack/material/glass{
-	amount = 50;
 	pixel_x = 3;
-	pixel_y = 3
+	pixel_y = 3;
+	amount = 50
 	},
 /obj/item/stack/material/steel{
 	amount = 50
@@ -16107,8 +16104,8 @@
 /area/surface/outpost/main/exploration/containment)
 "Fn" = (
 /obj/item/radio/intercom{
-	dir = 1;
 	name = "Station Intercom (General)";
+	dir = 1;
 	pixel_y = 21
 	},
 /turf/simulated/floor/tiled,
@@ -16149,9 +16146,9 @@
 "Fq" = (
 /obj/machinery/disposal,
 /obj/machinery/button/remote/airlock{
-	id = "dorm6";
 	name = "Door Lock Control";
 	pixel_y = 25;
+	id = "dorm6";
 	specialfunctions = 4
 	},
 /obj/structure/disposalpipe/trunk{
@@ -16170,8 +16167,8 @@
 	pixel_y = 22
 	},
 /obj/machinery/power/apc{
-	dir = 8;
 	name = "west bump";
+	dir = 8;
 	pixel_x = -24
 	},
 /obj/structure/cable/blue{
@@ -16229,8 +16226,8 @@
 	dir = 6
 	},
 /obj/machinery/camera/network/main_outpost{
-	c_tag = "MO - Laundry 2";
-	dir = 8
+	dir = 8;
+	c_tag = "MO - Laundry 2"
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/laundry)
@@ -16291,9 +16288,9 @@
 	icon_state = "1-8"
 	},
 /obj/machinery/embedded_controller/radio/airlock/access_controller{
-	id_tag = "main7_airlock_control";
 	pixel_x = 26;
 	pixel_y = -26;
+	id_tag = "main7_airlock_control";
 	tag_exterior_door = "main7_airlock_exterior";
 	tag_interior_door = "main7_airlock_interior"
 	},
@@ -16337,8 +16334,8 @@
 	dir = 8
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 4;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 4
 	},
 /obj/structure/cable/blue{
 	icon_state = "1-4"
@@ -16513,8 +16510,8 @@
 	icon_state = "2-4"
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 4;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/right_upper)
@@ -16526,9 +16523,9 @@
 	dir = 9
 	},
 /obj/machinery/embedded_controller/radio/airlock/access_controller{
-	id_tag = "civ2_airlock_control";
 	pixel_x = 26;
 	pixel_y = 26;
+	id_tag = "civ2_airlock_control";
 	tag_exterior_door = "civ2_airlock_exterior";
 	tag_interior_door = "civ2_airlock_interior"
 	},
@@ -16547,8 +16544,8 @@
 	icon_state = "0-4"
 	},
 /obj/machinery/power/smes/buildable/outpost_substation{
+	charge = 5e+06;
 	RCon_tag = "Outpost - Left Wing";
-	charge = 5e+006;
 	input_attempt = 1;
 	input_level = 150000;
 	output_level = 150000
@@ -16601,8 +16598,8 @@
 	icon_state = "2-8"
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 2;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 2
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 1
@@ -16627,8 +16624,8 @@
 	icon_state = "4-8"
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 2;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 2
 	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/main/gen_room)
@@ -16735,8 +16732,8 @@
 	icon_state = "0-2"
 	},
 /obj/machinery/power/apc{
-	dir = 1;
 	name = "north bump";
+	dir = 1;
 	pixel_y = 24
 	},
 /turf/simulated/floor/plating,
@@ -16800,8 +16797,8 @@
 /area/surface/outside/path/plains)
 "GF" = (
 /obj/structure/disposalpipe/junction{
-	dir = 8;
-	icon_state = "pipe-j2"
+	icon_state = "pipe-j2";
+	dir = 8
 	},
 /obj/structure/cable/blue{
 	icon_state = "4-8"
@@ -16882,12 +16879,12 @@
 /area/surface/outpost/civilian/fishing)
 "GL" = (
 /obj/machinery/door/airlock/hatch{
-	icon_state = "door_locked";
-	id_tag = "engine_access_hatch";
-	locked = 1;
 	name = "Reactor Core";
-	rad_resistance = 150;
-	req_access = list(11)
+	icon_state = "door_locked";
+	locked = 1;
+	id_tag = "engine_access_hatch";
+	req_access = list(11);
+	rad_resistance = 150
 	},
 /turf/simulated/floor/reinforced,
 /area/surface/outpost/engineering/reactor_smes)
@@ -16964,8 +16961,8 @@
 	dir = 1
 	},
 /obj/machinery/door/airlock/multi_tile/glass{
-	dir = 1;
 	name = "Mining Storage";
+	dir = 1;
 	req_one_access = list(48)
 	},
 /turf/simulated/floor/tiled/monotile,
@@ -16999,8 +16996,8 @@
 	dir = 4
 	},
 /obj/structure/disposalpipe/junction{
-	dir = 8;
-	icon_state = "pipe-j2"
+	icon_state = "pipe-j2";
+	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -17032,8 +17029,8 @@
 	icon_state = "1-2"
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 2;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 2
 	},
 /obj/structure/cable/blue{
 	icon_state = "2-4"
@@ -17162,8 +17159,8 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/disposalpipe/segment{
-	dir = 4;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 4
 	},
 /turf/simulated/floor/wood,
 /area/surface/outpost/main/dorms/dorm_3)
@@ -17193,8 +17190,8 @@
 /area/surface/outpost/main/airlock/left_one)
 "Ht" = (
 /obj/item/radio/intercom{
-	dir = 1;
 	name = "Station Intercom (General)";
+	dir = 1;
 	pixel_y = 21
 	},
 /turf/simulated/floor/tiled,
@@ -17296,8 +17293,8 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/disposalpipe/segment{
-	dir = 4;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 4
 	},
 /turf/simulated/floor/wood,
 /area/surface/outpost/main/dorms/dorm_1)
@@ -17408,9 +17405,9 @@
 	dir = 6
 	},
 /obj/machinery/camera/network/main_outpost{
-	c_tag = "MO Right Wing - Hallway 2";
+	name = "security camera";
 	dir = 4;
-	name = "security camera"
+	c_tag = "MO Right Wing - Hallway 2"
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/right_lower)
@@ -17444,8 +17441,8 @@
 	dir = 4
 	},
 /obj/item/radio/intercom{
-	dir = 1;
 	name = "Station Intercom (General)";
+	dir = 1;
 	pixel_y = 21
 	},
 /turf/simulated/floor/tiled,
@@ -17505,15 +17502,15 @@
 	icon_state = "1-8"
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 8;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 8
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/left_lower)
 "HY" = (
 /obj/item/towel{
-	color = "#FF6666";
-	name = "light red towel"
+	name = "light red towel";
+	color = "#FF6666"
 	},
 /obj/structure/sink{
 	pixel_y = 16
@@ -17556,8 +17553,8 @@
 	icon_state = "2-4"
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 4;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 6
@@ -17578,8 +17575,8 @@
 /area/surface/outpost/civilian/fishing)
 "If" = (
 /obj/machinery/door/airlock{
-	id_tag = "dorm1";
-	name = "Dorm 1"
+	name = "Dorm 1";
+	id_tag = "dorm1"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/cable/blue{
@@ -17637,8 +17634,8 @@
 	icon_state = "0-4"
 	},
 /obj/machinery/power/smes/buildable/outpost_substation{
+	charge = 5e+06;
 	RCon_tag = "Outpost - Mining";
-	charge = 5e+006;
 	input_attempt = 1;
 	input_level = 150000;
 	output_level = 150000
@@ -17668,8 +17665,8 @@
 /area/surface/outpost/main/airlock/landing_south)
 "Is" = (
 /obj/item/towel{
-	color = "#90ee90";
-	name = "green towel"
+	name = "green towel";
+	color = "#90ee90"
 	},
 /obj/structure/sink{
 	dir = 4;
@@ -17687,9 +17684,9 @@
 "Iu" = (
 /obj/machinery/disposal,
 /obj/machinery/button/remote/airlock{
-	id = "dorm2";
 	name = "Door Lock Control";
 	pixel_y = 25;
+	id = "dorm2";
 	specialfunctions = 4
 	},
 /obj/structure/disposalpipe/trunk{
@@ -17748,8 +17745,8 @@
 	icon_state = "2-8"
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 2;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 2
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/laundry)
@@ -17774,19 +17771,19 @@
 	icon_state = "2-8"
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 2;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 2
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/right_upper)
 "ID" = (
 /obj/machinery/door/airlock/glass_external{
-	autoclose = 0;
-	frequency = 1379;
+	name = "Landing North External";
 	icon_state = "door_locked";
-	id_tag = "main4_airlock_exterior";
+	frequency = 1379;
 	locked = 1;
-	name = "Landing North External"
+	id_tag = "main4_airlock_exterior";
+	autoclose = 0
 	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/surface/outpost/main/airlock/landing_north)
@@ -17954,8 +17951,8 @@
 "IV" = (
 /obj/effect/floor_decal/steeldecal/steel_decals_central4,
 /obj/machinery/conveyor_switch/oneway{
-	id = "mining_internal";
-	name = "mining conveyor"
+	name = "mining conveyor";
+	id = "mining_internal"
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/mining_main/refinery)
@@ -17974,9 +17971,9 @@
 	icon_state = "1-4"
 	},
 /obj/machinery/embedded_controller/radio/airlock/access_controller{
-	id_tag = "main2_airlock_control";
 	pixel_x = -26;
 	pixel_y = -26;
+	id_tag = "main2_airlock_control";
 	tag_exterior_door = "main2_airlock_exterior";
 	tag_interior_door = "main2_airlock_interior"
 	},
@@ -18005,9 +18002,9 @@
 	dir = 5
 	},
 /obj/machinery/button/remote/blast_door{
-	id = "production1";
 	name = "Production Shutters";
 	pixel_x = 22;
+	id = "production1";
 	req_one_access = list(48)
 	},
 /obj/item/hand_labeler,
@@ -18066,8 +18063,8 @@
 	icon_state = "1-8"
 	},
 /obj/machinery/camera/network/engineering_outpost{
-	c_tag = "SUBS - Civilian";
-	dir = 1
+	dir = 1;
+	c_tag = "SUBS - Civilian"
 	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/civilian/smes)
@@ -18097,8 +18094,8 @@
 	dir = 10
 	},
 /obj/machinery/camera/network/main_outpost{
-	c_tag = "MO - Teleporter";
-	dir = 4
+	dir = 4;
+	c_tag = "MO - Teleporter"
 	},
 /obj/machinery/light,
 /turf/simulated/floor/tiled,
@@ -18134,8 +18131,8 @@
 /area/surface/outpost/main/airlock/left_one)
 "Jh" = (
 /obj/machinery/door/airlock{
-	id_tag = "dorm2";
-	name = "Dorm 2"
+	name = "Dorm 2";
+	id_tag = "dorm2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -18252,12 +18249,12 @@
 /area/surface/outpost/main/restroom)
 "Jo" = (
 /obj/machinery/door/airlock/glass_external{
-	autoclose = 0;
-	frequency = 1379;
+	name = "Landing South Internal";
 	icon_state = "door_locked";
-	id_tag = "main3_airlock_interior";
+	frequency = 1379;
 	locked = 1;
-	name = "Landing South Internal"
+	id_tag = "main3_airlock_interior";
+	autoclose = 0
 	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/surface/outpost/main/airlock/landing_south)
@@ -18342,9 +18339,9 @@
 	dir = 8
 	},
 /obj/machinery/embedded_controller/radio/airlock/access_controller{
-	id_tag = "mining2_airlock_control";
 	pixel_x = -26;
 	pixel_y = -26;
+	id_tag = "mining2_airlock_control";
 	req_one_access = list(48,10);
 	tag_exterior_door = "mining2_airlock_exterior";
 	tag_interior_door = "mining2_airlock_interior"
@@ -18375,8 +18372,8 @@
 /area/surface/outpost/civilian/sauna)
 "JB" = (
 /obj/machinery/camera/network/main_outpost{
-	c_tag = "MO Right Wing - Teleporter";
-	dir = 5
+	dir = 5;
+	c_tag = "MO Right Wing - Teleporter"
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor)
@@ -18392,8 +18389,8 @@
 	icon_state = "2-8"
 	},
 /obj/structure/disposalpipe/junction{
-	dir = 8;
-	icon_state = "pipe-j2"
+	icon_state = "pipe-j2";
+	dir = 8
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/right_lower)
@@ -18424,8 +18421,8 @@
 	icon_state = "2-8"
 	},
 /obj/structure/disposalpipe/junction{
-	dir = 8;
-	icon_state = "pipe-j2"
+	icon_state = "pipe-j2";
+	dir = 8
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/left_lower)
@@ -18448,8 +18445,8 @@
 /area/surface/outpost/main/airlock/landing_south)
 "JH" = (
 /obj/structure/sign/warning/caution{
-	desc = "This appears to be a sign warning people that the other side is dangerous. It also says that NanoTrasen cannot guarantee your safety beyond this point.";
-	name = "\improper WARNING: NO ACCESS"
+	name = "\improper WARNING: NO ACCESS";
+	desc = "This appears to be a sign warning people that the other side is dangerous. It also says that NanoTrasen cannot guarantee your safety beyond this point."
 	},
 /turf/simulated/shuttle/wall/voidcraft/hard_corner,
 /area/surface/outpost/wall)
@@ -18522,8 +18519,8 @@
 	dir = 8
 	},
 /obj/machinery/camera/network/mining{
-	c_tag = "PO - Mining Storage";
-	dir = 1
+	dir = 1;
+	c_tag = "PO - Mining Storage"
 	},
 /turf/simulated/floor/tiled/steel_dirty,
 /area/surface/outpost/mining_main/uxstorage)
@@ -18678,8 +18675,8 @@
 	dir = 4
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 2;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 2
 	},
 /obj/structure/cable/blue{
 	icon_state = "1-8"
@@ -19027,8 +19024,8 @@
 "KV" = (
 /obj/structure/bed/chair/comfy/black,
 /obj/machinery/button/windowtint{
-	id = "dorm_tint6";
-	pixel_x = -22
+	pixel_x = -22;
+	id = "dorm_tint6"
 	},
 /turf/simulated/floor/wood,
 /area/surface/outpost/main/dorms/dorm_6)
@@ -19140,14 +19137,14 @@
 	dir = 5
 	},
 /obj/machinery/atmospherics/unary/vent_pump/engine{
+	icon_state = "map_vent_in";
 	dir = 1;
+	frequency = 1438;
+	id_tag = "rust_cooling_out";
+	pump_direction = 0;
 	external_pressure_bound = 100;
 	external_pressure_bound_default = 0;
-	frequency = 1438;
-	icon_state = "map_vent_in";
-	id_tag = "rust_cooling_out";
 	initialize_directions = 1;
-	pump_direction = 0;
 	use_power = 1
 	},
 /turf/simulated/floor/reinforced/airless,
@@ -19261,8 +19258,8 @@
 	icon_state = "0-8"
 	},
 /obj/machinery/power/apc{
-	dir = 4;
 	name = "east bump";
+	dir = 4;
 	pixel_x = 24
 	},
 /obj/machinery/light/small{
@@ -19466,20 +19463,20 @@
 /area/surface/outpost/main/airlock/landing_south)
 "LK" = (
 /obj/machinery/access_button{
-	command = "cycle_interior";
-	frequency = 1379;
-	master_tag = "main6_airlock_control";
 	name = "Internal Access Button";
 	pixel_x = 26;
-	pixel_y = 5
+	pixel_y = 5;
+	frequency = 1379;
+	command = "cycle_interior";
+	master_tag = "main6_airlock_control"
 	},
 /obj/machinery/door/airlock/glass_external{
-	autoclose = 0;
-	frequency = 1379;
+	name = "Main Outpost Internal";
 	icon_state = "door_locked";
-	id_tag = "main6_airlock_interior";
+	frequency = 1379;
 	locked = 1;
-	name = "Main Outpost Internal"
+	id_tag = "main6_airlock_interior";
+	autoclose = 0
 	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/surface/outpost/main/airlock/left_one)
@@ -19529,8 +19526,8 @@
 /area/surface/outpost/main/corridor/left_upper)
 "LP" = (
 /obj/machinery/power/apc{
-	dir = 8;
 	name = "west bump";
+	dir = 8;
 	pixel_x = -24
 	},
 /obj/structure/cable/blue{
@@ -19583,10 +19580,10 @@
 "LU" = (
 /obj/structure/cable/blue,
 /obj/machinery/power/apc{
-	dir = 8;
 	name = "west bump";
-	operating = 0;
-	pixel_x = -24
+	dir = 8;
+	pixel_x = -24;
+	operating = 0
 	},
 /obj/machinery/light_switch{
 	pixel_x = -22;
@@ -19625,8 +19622,8 @@
 	icon_state = "2-4"
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 4;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 6
@@ -19733,8 +19730,8 @@
 	icon_state = "4-8"
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 8;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 8
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/right_upper)
@@ -19880,8 +19877,8 @@
 /area/surface/outpost/main/gen_room/smes_right)
 "My" = (
 /obj/machinery/door/airlock/multi_tile/glass{
-	dir = 1;
-	name = "Gym"
+	name = "Gym";
+	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -19920,8 +19917,8 @@
 	},
 /obj/machinery/door/window/brigdoor/westleft{
 	name = "Medical Supplies";
-	req_access = null;
-	req_one_access = list(5,43)
+	req_one_access = list(5,43);
+	req_access = null
 	},
 /turf/simulated/floor/tiled/white,
 /area/surface/outpost/main/search_and_rescue)
@@ -19953,8 +19950,8 @@
 	icon_state = "4-8"
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 4;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 4
 	},
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 8
@@ -20094,8 +20091,8 @@
 "MR" = (
 /obj/effect/overlay/snow/floor,
 /obj/structure/disposalpipe/segment{
-	dir = 2;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 2
 	},
 /obj/effect/overlay/snow/floor/edges{
 	dir = 4
@@ -20234,8 +20231,8 @@
 /area/surface/outpost/mining_main)
 "Nh" = (
 /obj/machinery/camera/network/civilian{
-	c_tag = "CO - Sauna";
-	dir = 1
+	dir = 1;
+	c_tag = "CO - Sauna"
 	},
 /turf/simulated/floor/wood,
 /area/surface/outpost/civilian/sauna)
@@ -20284,8 +20281,8 @@
 	dir = 10
 	},
 /obj/machinery/camera/network/main_outpost{
-	c_tag = "MO Right Wing - Hallway 3";
-	dir = 4
+	dir = 4;
+	c_tag = "MO Right Wing - Hallway 3"
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/right_upper)
@@ -20399,9 +20396,9 @@
 "Nu" = (
 /obj/machinery/disposal,
 /obj/machinery/button/remote/airlock{
-	id = "dorm5";
 	name = "Door Lock Control";
 	pixel_y = -25;
+	id = "dorm5";
 	specialfunctions = 4
 	},
 /obj/structure/disposalpipe/trunk{
@@ -20491,9 +20488,9 @@
 "NE" = (
 /obj/machinery/disposal,
 /obj/machinery/button/remote/airlock{
-	id = "dorm4";
 	name = "Door Lock Control";
 	pixel_y = 25;
+	id = "dorm4";
 	specialfunctions = 4
 	},
 /obj/structure/disposalpipe/trunk{
@@ -20545,8 +20542,8 @@
 	icon_state = "1-8"
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 8;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 9
@@ -20567,8 +20564,8 @@
 	dir = 8
 	},
 /obj/structure/disposalpipe/junction{
-	dir = 2;
-	icon_state = "pipe-j2"
+	icon_state = "pipe-j2";
+	dir = 2
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 9
@@ -20607,8 +20604,8 @@
 	dir = 6
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 8;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 8
 	},
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
@@ -20678,8 +20675,8 @@
 	icon_state = "1-2"
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 1;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/laundry)
@@ -20690,8 +20687,8 @@
 "NZ" = (
 /obj/effect/floor_decal/industrial/warning,
 /obj/item/radio/intercom{
-	dir = 1;
 	name = "Station Intercom (General)";
+	dir = 1;
 	pixel_y = 21
 	},
 /obj/machinery/light/small{
@@ -20732,8 +20729,8 @@
 /area/surface/outpost/main/airlock/right_two)
 "Oe" = (
 /obj/machinery/door/airlock{
-	id_tag = "dorm3";
-	name = "Dorm 3"
+	name = "Dorm 3";
+	id_tag = "dorm3"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/cable/blue{
@@ -20820,8 +20817,8 @@
 	icon_state = "2-4"
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 4;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/right_upper)
@@ -20900,8 +20897,8 @@
 	icon_state = "4-8"
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 4;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/mining_main)
@@ -20917,20 +20914,20 @@
 /area/surface/outpost/main/dorms/dorm_6)
 "Ox" = (
 /obj/machinery/door/airlock/glass_external{
-	autoclose = 0;
-	frequency = 1379;
+	name = "Security Outpost External";
 	icon_state = "door_locked";
-	id_tag = "sec1_airlock_exterior";
+	frequency = 1379;
 	locked = 1;
-	name = "Security Outpost External"
+	id_tag = "sec1_airlock_exterior";
+	autoclose = 0
 	},
 /obj/machinery/access_button{
-	command = "cycle_exterior";
-	frequency = 1379;
-	master_tag = "sec1_airlock_control";
 	name = "External Access Button";
 	pixel_y = 26;
-	req_one_access = list(1)
+	frequency = 1379;
+	command = "cycle_exterior";
+	req_one_access = list(1);
+	master_tag = "sec1_airlock_control"
 	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/surface/outpost/security)
@@ -20956,9 +20953,9 @@
 "OB" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/door/blast/shutters{
+	name = "Garage Shutters";
 	dir = 8;
-	id = "garage1";
-	name = "Garage Shutters"
+	id = "garage1"
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/surface/outpost/main/airlock/right_two)
@@ -20973,8 +20970,8 @@
 /area/surface/outpost/civilian/sauna)
 "OD" = (
 /obj/machinery/camera/network/main_outpost{
-	c_tag = "MO Right Wing - Airlock Access 1";
-	dir = 1
+	dir = 1;
+	c_tag = "MO Right Wing - Airlock Access 1"
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals3{
 	dir = 8
@@ -21005,36 +21002,36 @@
 /area/surface/outpost/main/bar)
 "OH" = (
 /obj/machinery/access_button{
-	command = "cycle_interior";
-	frequency = 1379;
-	master_tag = "main1_airlock_control";
 	name = "Internal Access Button";
 	pixel_x = -6;
-	pixel_y = -26
+	pixel_y = -26;
+	frequency = 1379;
+	command = "cycle_interior";
+	master_tag = "main1_airlock_control"
 	},
 /obj/machinery/door/airlock/glass_external{
-	autoclose = 0;
-	frequency = 1379;
+	name = "Main Outpost Internal";
 	icon_state = "door_locked";
-	id_tag = "main1_airlock_interior";
+	frequency = 1379;
 	locked = 1;
-	name = "Main Outpost Internal"
+	id_tag = "main1_airlock_interior";
+	autoclose = 0
 	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/surface/outpost/main/airlock/right_two)
 "OI" = (
 /obj/machinery/embedded_controller/radio/airlock/access_controller{
-	id_tag = "main4_airlock_control";
 	pixel_x = -5;
+	id_tag = "main4_airlock_control";
 	tag_exterior_door = "main4_airlock_exterior";
 	tag_interior_door = "main4_airlock_interior"
 	},
 /obj/machinery/access_button{
-	command = "cycle_interior";
-	frequency = 1379;
-	master_tag = "main4_airlock_control";
 	name = "Internal Access Button";
-	pixel_x = 5
+	pixel_x = 5;
+	frequency = 1379;
+	command = "cycle_interior";
+	master_tag = "main4_airlock_control"
 	},
 /turf/simulated/wall/r_wall,
 /area/surface/outpost/main/airlock/landing_north)
@@ -21076,8 +21073,8 @@
 /area/surface/outpost/civilian/fishing)
 "OO" = (
 /obj/item/towel{
-	color = "#FF8C00";
-	name = "orange towel"
+	name = "orange towel";
+	color = "#FF8C00"
 	},
 /obj/structure/sink{
 	dir = 4;
@@ -21087,8 +21084,8 @@
 /area/surface/outpost/main/dorms/dorm_1)
 "OP" = (
 /obj/structure/showcase/sign{
-	desc = "This appears to be a sign warning people that it is dangerous outside. Further reading suggests being properly equipped or acquiring an umbrella.";
-	name = "WARNING: HAIL STORMS"
+	name = "WARNING: HAIL STORMS";
+	desc = "This appears to be a sign warning people that it is dangerous outside. Further reading suggests being properly equipped or acquiring an umbrella."
 	},
 /turf/simulated/floor/outdoors/snow/sif/planetuse,
 /area/surface/outside/plains/outpost)
@@ -21207,21 +21204,21 @@
 /area/surface/outpost/main/airlock/left_two)
 "Pc" = (
 /obj/machinery/access_button{
-	command = "cycle_interior";
-	frequency = 1379;
-	master_tag = "mining2_airlock_control";
 	name = "Internal Access Button";
 	pixel_x = -26;
 	pixel_y = -6;
-	req_one_access = list(48,10)
+	frequency = 1379;
+	command = "cycle_interior";
+	req_one_access = list(48,10);
+	master_tag = "mining2_airlock_control"
 	},
 /obj/machinery/door/airlock/glass_external{
-	autoclose = 0;
-	frequency = 1379;
+	name = "Mining Outpost Internal";
 	icon_state = "door_locked";
-	id_tag = "mining2_airlock_interior";
+	frequency = 1379;
 	locked = 1;
-	name = "Mining Outpost Internal"
+	id_tag = "mining2_airlock_interior";
+	autoclose = 0
 	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/surface/outpost/mining_main/tools)
@@ -21391,8 +21388,8 @@
 /area/surface/outpost/engineering/monitoring)
 "Pz" = (
 /obj/item/radio/intercom{
-	dir = 4;
 	name = "Station Intercom (General)";
+	dir = 4;
 	pixel_x = 21
 	},
 /obj/machinery/light/small{
@@ -21455,8 +21452,8 @@
 	icon_state = "2-4"
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 4;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/left_lower)
@@ -21512,8 +21509,8 @@
 	dir = 4
 	},
 /obj/machinery/power/apc{
-	dir = 4;
 	name = "east bump";
+	dir = 4;
 	pixel_x = 24
 	},
 /obj/structure/cable/blue{
@@ -21720,8 +21717,8 @@
 	icon_state = "1-8"
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 8;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 8
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/left_lower)
@@ -21782,8 +21779,8 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/disposalpipe/segment{
-	dir = 1;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 1
 	},
 /obj/structure/cable/blue{
 	icon_state = "1-2"
@@ -21848,8 +21845,8 @@
 	dir = 4
 	},
 /obj/machinery/button/remote/blast_door{
-	id = "pen";
-	pixel_x = 22
+	pixel_x = 22;
+	id = "pen"
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/exploration/containment)
@@ -21918,8 +21915,8 @@
 /area/surface/outpost/main/laundry)
 "Qv" = (
 /obj/machinery/atmospherics/binary/pump{
-	dir = 4;
-	name = "Air Tank Bypass Pump"
+	name = "Air Tank Bypass Pump";
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/cyan,
 /turf/simulated/floor/plating,
@@ -21965,16 +21962,16 @@
 	icon_state = "1-8"
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 2;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 2
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/gym)
 "QB" = (
 /obj/structure/flora/pottedplant/stoutbush,
 /obj/machinery/camera/network/security{
-	c_tag = "SO - Security Checkpoint";
-	dir = 8
+	dir = 8;
+	c_tag = "SO - Security Checkpoint"
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/security)
@@ -21993,8 +21990,8 @@
 /area/surface/outpost/civilian/sauna)
 "QD" = (
 /obj/machinery/camera/network/main_outpost{
-	c_tag = "MO Left Wing - Airlock Access 3";
-	dir = 1
+	dir = 1;
+	c_tag = "MO Left Wing - Airlock Access 3"
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals3{
 	dir = 8
@@ -22018,8 +22015,8 @@
 	dir = 5
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 2;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 2
 	},
 /obj/structure/cable/blue{
 	icon_state = "2-8"
@@ -22160,9 +22157,9 @@
 	},
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/blast/shutters{
+	name = "Production Shutters";
 	dir = 8;
-	id = "production1";
-	name = "Production Shutters"
+	id = "production1"
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/surface/outpost/mining_main/refinery)
@@ -22181,8 +22178,8 @@
 /area/surface/outpost/main/corridor/left_lower)
 "QV" = (
 /obj/machinery/door/airlock{
-	id_tag = "dorm5";
-	name = "Dorm 5"
+	name = "Dorm 5";
+	id_tag = "dorm5"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/cable/blue{
@@ -22210,8 +22207,8 @@
 /area/surface/outpost/engineering/atmos_room)
 "QZ" = (
 /obj/machinery/power/apc{
-	dir = 8;
 	name = "west bump";
+	dir = 8;
 	pixel_x = -24
 	},
 /obj/structure/cable/blue{
@@ -22225,17 +22222,17 @@
 /area/surface/outpost/main/dorms/dorm_4)
 "Ra" = (
 /obj/machinery/embedded_controller/radio/airlock/access_controller{
-	id_tag = "main3_airlock_control";
 	pixel_x = -5;
+	id_tag = "main3_airlock_control";
 	tag_exterior_door = "main3_airlock_exterior";
 	tag_interior_door = "main3_airlock_interior"
 	},
 /obj/machinery/access_button{
-	command = "cycle_interior";
-	frequency = 1379;
-	master_tag = "main3_airlock_control";
 	name = "Internal Access Button";
-	pixel_x = 5
+	pixel_x = 5;
+	frequency = 1379;
+	command = "cycle_interior";
+	master_tag = "main3_airlock_control"
 	},
 /turf/simulated/wall/r_wall,
 /area/surface/outpost/main/airlock/landing_south)
@@ -22271,8 +22268,8 @@
 	icon_state = "1-2"
 	},
 /obj/structure/disposalpipe/junction{
-	dir = 1;
-	icon_state = "pipe-j2"
+	icon_state = "pipe-j2";
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/left_upper)
@@ -22309,8 +22306,8 @@
 /area/surface/outpost/main/corridor/dorms)
 "Rg" = (
 /obj/machinery/door/airlock{
-	id_tag = "dorm6";
-	name = "Dorm 6"
+	name = "Dorm 6";
+	id_tag = "dorm6"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -22338,8 +22335,8 @@
 	dir = 4
 	},
 /obj/item/radio/intercom{
-	dir = 4;
 	name = "Station Intercom (General)";
+	dir = 4;
 	pixel_x = 21
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals5,
@@ -22380,8 +22377,8 @@
 	icon_state = "1-8"
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 8;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 8
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/mining_main/storage)
@@ -22392,10 +22389,10 @@
 "Rp" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/button/remote/blast_door{
-	id = "garage1";
 	name = "Garage Shutter Control";
 	pixel_x = -6;
-	pixel_y = 22
+	pixel_y = 22;
+	id = "garage1"
 	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/main/airlock/right_two)
@@ -22410,9 +22407,9 @@
 	dir = 9
 	},
 /obj/machinery/button/remote/blast_door/radproof{
-	id = "EngineReactor";
 	name = "Reactor Blast Doors";
-	pixel_x = -25
+	pixel_x = -25;
+	id = "EngineReactor"
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/engineering/reactor_smes)
@@ -22479,8 +22476,8 @@
 /area/surface/outpost/main/airlock/landing_north)
 "Ry" = (
 /obj/item/towel{
-	color = "#b5651d";
-	name = "brown towel"
+	name = "brown towel";
+	color = "#b5651d"
 	},
 /obj/structure/sink{
 	pixel_y = 16
@@ -22497,8 +22494,8 @@
 	dir = 1
 	},
 /obj/machinery/camera/network/main_outpost{
-	c_tag = "MO Left Wing - Hallway 1";
-	dir = 1
+	dir = 1;
+	c_tag = "MO Left Wing - Hallway 1"
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/left_lower)
@@ -22515,8 +22512,8 @@
 /obj/structure/table/steel,
 /obj/item/storage/box/lights/mixed,
 /obj/machinery/power/apc{
-	dir = 1;
 	name = "north bump";
+	dir = 1;
 	pixel_y = 24
 	},
 /obj/machinery/light/small{
@@ -22529,19 +22526,19 @@
 /area/surface/outpost/civilian/emergency_storage)
 "RC" = (
 /obj/machinery/door/airlock/glass_external{
-	autoclose = 0;
-	frequency = 1379;
+	name = "Main Outpost External";
 	icon_state = "door_locked";
-	id_tag = "main5_airlock_exterior";
+	frequency = 1379;
 	locked = 1;
-	name = "Main Outpost External"
+	id_tag = "main5_airlock_exterior";
+	autoclose = 0
 	},
 /obj/machinery/access_button{
-	command = "cycle_exterior";
-	frequency = 1379;
-	master_tag = "main5_airlock_control";
 	name = "External Access Button";
-	pixel_y = -26
+	pixel_y = -26;
+	frequency = 1379;
+	command = "cycle_exterior";
+	master_tag = "main5_airlock_control"
 	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/surface/outpost/main/airlock/right_three)
@@ -22608,8 +22605,8 @@
 	},
 /obj/item/clothing/glasses/meson,
 /obj/machinery/power/apc{
-	dir = 8;
 	name = "west bump";
+	dir = 8;
 	pixel_x = -24
 	},
 /obj/machinery/light_switch{
@@ -22679,8 +22676,8 @@
 	},
 /obj/structure/table/rack,
 /obj/machinery/camera/network/main_outpost{
-	c_tag = "MO Right Wing - Airlock 1";
-	dir = 8
+	dir = 8;
+	c_tag = "MO Right Wing - Airlock 1"
 	},
 /obj/item/melee/umbrella{
 	color = "#7c0d0d"
@@ -23061,8 +23058,8 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/camera/network/main_outpost{
-	c_tag = "MO Right Wing - Hallway 5";
-	dir = 1
+	dir = 1;
+	c_tag = "MO Right Wing - Hallway 5"
 	},
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 8
@@ -23115,18 +23112,18 @@
 "SQ" = (
 /obj/structure/table/woodentable,
 /obj/item/towel{
-	color = "#FF6666";
-	name = "light red towel"
+	name = "light red towel";
+	color = "#FF6666"
 	},
 /obj/item/towel{
-	color = "#FF6666";
 	name = "light red towel";
-	pixel_y = 3
+	pixel_y = 3;
+	color = "#FF6666"
 	},
 /obj/item/towel{
-	color = "#FF6666";
 	name = "light red towel";
-	pixel_y = 6
+	pixel_y = 6;
+	color = "#FF6666"
 	},
 /turf/simulated/floor/wood,
 /area/surface/outpost/civilian/sauna)
@@ -23153,8 +23150,8 @@
 	dir = 8
 	},
 /obj/machinery/camera/network/main_outpost{
-	c_tag = "MO - Gateway";
-	dir = 4
+	dir = 4;
+	c_tag = "MO - Gateway"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/surface/outpost/main/gateway)
@@ -23362,8 +23359,8 @@
 	dir = 8
 	},
 /obj/machinery/camera/network/mining{
-	c_tag = "PO - Mining Hallway 2";
-	dir = 4
+	dir = 4;
+	c_tag = "PO - Mining Hallway 2"
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/mining_main/storage)
@@ -23376,8 +23373,8 @@
 /area/surface/outpost/main/construction_area)
 "Tv" = (
 /obj/machinery/door/airlock{
-	id_tag = "dorm4";
-	name = "Dorm 4"
+	name = "Dorm 4";
+	id_tag = "dorm4"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -23400,8 +23397,8 @@
 	},
 /obj/machinery/light,
 /obj/machinery/camera/network/mining{
-	c_tag = "PO - Tool Storage";
-	dir = 4
+	dir = 4;
+	c_tag = "PO - Tool Storage"
 	},
 /obj/item/multitool,
 /turf/simulated/floor/tiled,
@@ -23435,8 +23432,8 @@
 /obj/structure/table/steel,
 /obj/item/storage/box/lights/mixed,
 /obj/machinery/power/apc{
-	dir = 1;
 	name = "north bump";
+	dir = 1;
 	pixel_y = 24
 	},
 /obj/structure/cable/blue{
@@ -23486,8 +23483,8 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/disposalpipe/segment{
-	dir = 1;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 1
 	},
 /obj/structure/closet/toolcloset,
 /obj/item/storage/belt,
@@ -23505,8 +23502,8 @@
 	icon_state = "0-4"
 	},
 /obj/machinery/power/apc{
-	dir = 1;
 	name = "north bump";
+	dir = 1;
 	pixel_y = 24
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals3{
@@ -23577,8 +23574,8 @@
 	dir = 4
 	},
 /obj/item/radio/intercom{
-	dir = 1;
 	name = "Station Intercom (General)";
+	dir = 1;
 	pixel_y = 21
 	},
 /turf/simulated/floor/tiled,
@@ -23615,19 +23612,19 @@
 	},
 /turf/simulated/floor/plating{
 	icon_state = "asteroidplating2";
-	nitrogen = 93.7835;
+	temperature = 243.15;
 	oxygen = 20.7263;
-	temperature = 243.15
+	nitrogen = 93.7835
 	},
 /area/surface/outpost/mining_main/exterior)
 "TT" = (
 /obj/machinery/door/airlock/glass_external{
-	autoclose = 0;
-	frequency = 1379;
+	name = "Landing North Internal";
 	icon_state = "door_locked";
-	id_tag = "main4_airlock_interior";
+	frequency = 1379;
 	locked = 1;
-	name = "Landing North Internal"
+	id_tag = "main4_airlock_interior";
+	autoclose = 0
 	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/surface/outpost/main/airlock/landing_north)
@@ -23684,8 +23681,8 @@
 "Ub" = (
 /obj/effect/overlay/snow/floor,
 /obj/structure/disposalpipe/segment{
-	dir = 8;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 8
 	},
 /obj/structure/cable/heavyduty{
 	icon_state = "1-8"
@@ -23783,8 +23780,8 @@
 	icon_state = "1-8"
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 1;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 1
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/plating,
@@ -23802,9 +23799,9 @@
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals4,
 /obj/machinery/embedded_controller/radio/airlock/access_controller{
-	id_tag = "mining1_airlock_control";
 	pixel_x = 26;
 	pixel_y = -26;
+	id_tag = "mining1_airlock_control";
 	req_one_access = list(48);
 	tag_exterior_door = "mining1_airlock_exterior";
 	tag_interior_door = "mining1_airlock_interior"
@@ -23824,8 +23821,8 @@
 	icon_state = "1-4"
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 1;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 5
@@ -23878,8 +23875,8 @@
 /area/surface/outpost/mining_main/uxstorage)
 "Uv" = (
 /obj/item/radio/intercom{
-	dir = 4;
 	name = "Station Intercom (General)";
+	dir = 4;
 	pixel_x = 21
 	},
 /turf/simulated/floor/plating,
@@ -23907,8 +23904,8 @@
 	dir = 9
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 8;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 8
 	},
 /obj/structure/extinguisher_cabinet{
 	pixel_x = 25
@@ -23981,19 +23978,19 @@
 /area/surface/outpost/engineering/reactor_smes)
 "UE" = (
 /obj/machinery/door/airlock/glass_external{
-	autoclose = 0;
-	frequency = 1379;
+	name = "Main Outpost External";
 	icon_state = "door_locked";
-	id_tag = "main2_airlock_exterior";
+	frequency = 1379;
 	locked = 1;
-	name = "Main Outpost External"
+	id_tag = "main2_airlock_exterior";
+	autoclose = 0
 	},
 /obj/machinery/access_button{
-	command = "cycle_exterior";
-	frequency = 1379;
-	master_tag = "main2_airlock_control";
 	name = "External Access Button";
-	pixel_x = -26
+	pixel_x = -26;
+	frequency = 1379;
+	command = "cycle_exterior";
+	master_tag = "main2_airlock_control"
 	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/surface/outpost/main/airlock/right_one)
@@ -24045,8 +24042,8 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/disposalpipe/segment{
-	dir = 1;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 1
 	},
 /obj/structure/cable/blue{
 	icon_state = "1-2"
@@ -24083,8 +24080,8 @@
 "UL" = (
 /obj/structure/cable/blue,
 /obj/machinery/power/smes/buildable/outpost_substation{
+	charge = 5e+06;
 	RCon_tag = "Outpost - Security";
-	charge = 5e+006;
 	input_attempt = 1;
 	input_level = 150000;
 	output_level = 150000
@@ -24153,8 +24150,8 @@
 /area/surface/outpost/main/exploration)
 "UT" = (
 /obj/item/radio/intercom{
-	dir = 4;
 	name = "Station Intercom (General)";
+	dir = 4;
 	pixel_x = 21
 	},
 /turf/simulated/floor/tiled,
@@ -24164,8 +24161,8 @@
 /obj/effect/floor_decal/corner/brown/border,
 /obj/structure/closet/crate,
 /obj/machinery/camera/network/mining{
-	c_tag = "PO - Mining Stocking";
-	dir = 1
+	dir = 1;
+	c_tag = "PO - Mining Stocking"
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/mining_main)
@@ -24223,9 +24220,9 @@
 	id_tag = "Outpost Fusion Core"
 	},
 /obj/machinery/camera/emp_proof{
-	c_tag = "ENG - Outpost  Reactor Monitoring";
 	name = "Engineering_Outpost";
-	network = list("Engineering")
+	network = list("Engineering");
+	c_tag = "ENG - Outpost  Reactor Monitoring"
 	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
@@ -24320,9 +24317,9 @@
 	icon_state = "1-4"
 	},
 /obj/machinery/embedded_controller/radio/airlock/access_controller{
-	id_tag = "main8_airlock_control";
 	pixel_x = -26;
 	pixel_y = -26;
+	id_tag = "main8_airlock_control";
 	tag_exterior_door = "main8_airlock_exterior";
 	tag_interior_door = "main8_airlock_interior"
 	},
@@ -24446,8 +24443,8 @@
 	dir = 8
 	},
 /obj/machinery/camera/network/main_outpost{
-	c_tag = "MO - Landing South Airlock Access";
-	dir = 1
+	dir = 1;
+	c_tag = "MO - Landing South Airlock Access"
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/airlock/landing_south)
@@ -24555,8 +24552,8 @@
 	dir = 5
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 1;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
 /turf/simulated/floor/tiled/freezer,
@@ -24573,8 +24570,8 @@
 	icon_state = "1-8"
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 8;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 9
@@ -24658,8 +24655,8 @@
 "VY" = (
 /obj/item/stool/padded,
 /obj/machinery/camera/network/civilian{
-	c_tag = "CO - Pool 1";
-	dir = 8
+	dir = 8;
+	c_tag = "CO - Pool 1"
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/surface/outpost/civilian/pool)
@@ -24908,28 +24905,28 @@
 	dir = 9
 	},
 /obj/machinery/camera/network/mining{
-	c_tag = "PO - Airlock Access 2";
-	dir = 1
+	dir = 1;
+	c_tag = "PO - Airlock Access 2"
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/mining_main/tools)
 "Wz" = (
 /obj/machinery/access_button{
-	command = "cycle_interior";
-	frequency = 1379;
-	master_tag = "ENG_Outpost_airlock_control";
 	name = "Internal Access Button";
 	pixel_x = 5;
 	pixel_y = 26;
-	req_one_access = list(10)
+	frequency = 1379;
+	command = "cycle_interior";
+	req_one_access = list(10);
+	master_tag = "ENG_Outpost_airlock_control"
 	},
 /obj/machinery/door/airlock/glass_external{
-	autoclose = 0;
-	frequency = 1379;
+	name = "Engineering Outpost Internal";
 	icon_state = "door_locked";
-	id_tag = "ENG_Outpost_airlock_interior";
+	frequency = 1379;
 	locked = 1;
-	name = "Engineering Outpost Internal"
+	id_tag = "ENG_Outpost_airlock_interior";
+	autoclose = 0
 	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/surface/outpost/engineering/monitoring)
@@ -25014,19 +25011,19 @@
 /area/surface/outpost/main/corridor/right_upper)
 "WK" = (
 /obj/machinery/door/airlock/glass_external{
-	autoclose = 0;
-	frequency = 1379;
+	name = "Main Outpost External";
 	icon_state = "door_locked";
-	id_tag = "main1_airlock_exterior";
+	frequency = 1379;
 	locked = 1;
-	name = "Main Outpost External"
+	id_tag = "main1_airlock_exterior";
+	autoclose = 0
 	},
 /obj/machinery/access_button{
-	command = "cycle_exterior";
-	frequency = 1379;
-	master_tag = "main1_airlock_control";
 	name = "External Access Button";
-	pixel_y = -26
+	pixel_y = -26;
+	frequency = 1379;
+	command = "cycle_exterior";
+	master_tag = "main1_airlock_control"
 	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/surface/outpost/main/airlock/right_two)
@@ -25067,9 +25064,9 @@
 "WO" = (
 /obj/machinery/disposal,
 /obj/machinery/button/remote/airlock{
-	id = "dorm3";
 	name = "Door Lock Control";
 	pixel_y = -25;
+	id = "dorm3";
 	specialfunctions = 4
 	},
 /obj/structure/disposalpipe/trunk{
@@ -25097,8 +25094,8 @@
 	icon_state = "2-8"
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 2;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 2
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/right_lower)
@@ -25169,8 +25166,8 @@
 "WZ" = (
 /obj/effect/floor_decal/steeldecal/steel_decals_central1,
 /obj/machinery/door/airlock/multi_tile/glass{
-	dir = 1;
-	name = "Pool"
+	name = "Pool";
+	dir = 1
 	},
 /obj/machinery/door/firedoor/multi_tile/glass{
 	dir = 1
@@ -25248,9 +25245,9 @@
 /area/surface/outpost/main/corridor/left_lower)
 "Xg" = (
 /obj/machinery/button/remote/blast_door{
-	id = "garage1";
 	name = "Garage Shutter Control";
 	pixel_x = 22;
+	id = "garage1";
 	req_one_access = list(48,43)
 	},
 /turf/simulated/floor/outdoors/dirt/sif/planetuse,
@@ -25443,8 +25440,8 @@
 	req_one_access = list(43,1)
 	},
 /obj/machinery/door/blast/regular/open{
-	id = "pen";
-	name = "Containment Lockdown Blast Doors"
+	name = "Containment Lockdown Blast Doors";
+	id = "pen"
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/exploration/containment)
@@ -25846,8 +25843,8 @@
 /area/surface/outpost/main/corridor/right_upper)
 "Yl" = (
 /obj/item/towel{
-	color = "#800080";
-	name = "purple towel"
+	name = "purple towel";
+	color = "#800080"
 	},
 /obj/structure/sink{
 	pixel_y = 16
@@ -25875,8 +25872,8 @@
 "Yo" = (
 /obj/effect/overlay/snow/floor,
 /obj/structure/disposalpipe/segment{
-	dir = 1;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 1
 	},
 /turf/simulated/floor/tiled/steel/sif/planetuse,
 /area/surface/outside/plains/outpost)
@@ -25920,8 +25917,8 @@
 /area/surface/outpost/main/corridor/right_upper)
 "Yr" = (
 /obj/item/radio/intercom{
-	dir = 8;
 	name = "Station Intercom (General)";
+	dir = 8;
 	pixel_x = -21
 	},
 /turf/simulated/floor/tiled,
@@ -25937,10 +25934,10 @@
 	icon_state = "0-2"
 	},
 /obj/machinery/power/apc{
-	dir = 1;
 	name = "north bump";
-	operating = 0;
-	pixel_y = 24
+	dir = 1;
+	pixel_y = 24;
+	operating = 0
 	},
 /obj/effect/decal/cleanable/blood/oil,
 /obj/machinery/light_switch{
@@ -26053,8 +26050,8 @@
 "YH" = (
 /obj/effect/overlay/snow/floor,
 /obj/structure/disposalpipe/segment{
-	dir = 8;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 8
 	},
 /turf/simulated/floor/tiled/steel/sif/planetuse,
 /area/surface/outpost/civilian/smes)
@@ -26101,8 +26098,8 @@
 	dir = 8
 	},
 /obj/machinery/power/apc{
-	dir = 8;
 	name = "west bump";
+	dir = 8;
 	pixel_x = -24
 	},
 /obj/structure/cable/blue,
@@ -26141,8 +26138,8 @@
 /area/surface/outpost/main/bar)
 "YR" = (
 /obj/machinery/power/apc{
-	dir = 4;
 	name = "east bump";
+	dir = 4;
 	pixel_x = 24
 	},
 /obj/structure/cable/blue{
@@ -26216,8 +26213,8 @@
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/white/border,
 /obj/machinery/camera/network/main_outpost{
-	c_tag = "MO Left Wing - Hallway 1";
-	dir = 1
+	dir = 1;
+	c_tag = "MO Left Wing - Hallway 1"
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor)
@@ -26234,8 +26231,8 @@
 	icon_state = "0-4"
 	},
 /obj/machinery/power/smes/buildable/outpost_substation{
+	charge = 5e+06;
 	RCon_tag = "Outpost - Right Wing";
-	charge = 5e+006;
 	input_attempt = 1;
 	input_level = 150000;
 	output_level = 150000
@@ -26261,8 +26258,8 @@
 /obj/structure/closet/crate,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/power/apc{
-	dir = 1;
 	name = "north bump";
+	dir = 1;
 	pixel_y = 24
 	},
 /obj/structure/cable/blue{
@@ -26319,8 +26316,8 @@
 	icon_state = "0-8"
 	},
 /obj/machinery/power/apc{
-	dir = 4;
 	name = "east bump";
+	dir = 4;
 	pixel_x = 24
 	},
 /obj/effect/floor_decal/corner/purple/border{
@@ -26337,8 +26334,8 @@
 	pixel_y = -10
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 2;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 2
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/janitor)
@@ -26532,8 +26529,8 @@
 	icon_state = "1-4"
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 1;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 5
@@ -26591,8 +26588,8 @@
 "ZL" = (
 /obj/structure/table/bench/standard,
 /obj/item/radio/intercom{
-	dir = 1;
 	name = "Station Intercom (General)";
+	dir = 1;
 	pixel_y = 21
 	},
 /turf/simulated/floor/tiled/dark,
@@ -26610,8 +26607,8 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/disposalpipe/segment{
-	dir = 4;
-	icon_state = "pipe-c"
+	icon_state = "pipe-c";
+	dir = 4
 	},
 /turf/simulated/floor/wood,
 /area/surface/outpost/main/dorms/dorm_5)
@@ -26680,11 +26677,11 @@
 /area/surface/outpost/mining_main/storage)
 "ZU" = (
 /obj/machinery/atmospherics/unary/vent_pump{
+	icon_state = "map_vent_out";
 	dir = 1;
 	external_pressure_bound = 140;
-	external_pressure_bound_default = 140;
-	icon_state = "map_vent_out";
 	pressure_checks = 0;
+	external_pressure_bound_default = 140;
 	pressure_checks_default = 0;
 	use_power = 1
 	},
@@ -26730,8 +26727,8 @@
 /obj/structure/disposalpipe/segment,
 /obj/random/powercell,
 /obj/item/radio/intercom{
-	dir = 8;
 	name = "Station Intercom (General)";
+	dir = 8;
 	pixel_x = -21
 	},
 /turf/simulated/floor/plating,
