@@ -6,7 +6,6 @@
 	vore_upper_transfer_chance = 75 // Since these lamias are on the hunt, you're getting pushed into the tail tum for fussing.
 	vore_tail_transfer_chance = 10 // And the albino ones are EXTRA greedy!
 	ai_holder_type = /datum/ai_holder/simple_mob/vore/stalker // Good enough for now.
-	tail.digest_mode = DM_DIGEST
 
 /mob/living/simple_mob/vore/lamia/copper/cave
 	name = "cave lamia"
@@ -15,4 +14,3 @@
 	melee_damage_upper = 5
 	vore_upper_transfer_chance = 75
 	ai_holder_type = /datum/ai_holder/simple_mob/melee/evasive
-	tail.digest_mode = DM_DIGEST
