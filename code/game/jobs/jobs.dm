@@ -57,8 +57,12 @@ var/const/ENTREPRENEUR		=(1<<15)
 var/const/OTHER				=(1<<10) //VOREStation Note: Unused on VS. Used downstream.
 var/const/NONCREW			=(1<<0)
 var/const/ANOMALY			=(1<<0) //VOREStation Note: Unused on VS. Used downstream.
+<<<<<<< HEAD
 /* // CHOMPedit: Comment out Talon positions, we don't have that here.
 //VOREStation Add
+=======
+
+>>>>>>> 95e3bf67c4 (VR pod and mob TF fixes & adjustments (#17397))
 var/const/TALON				=(1<<3)
 
 var/const/TALCAP			=(1<<0)
