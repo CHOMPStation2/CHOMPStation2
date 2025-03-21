@@ -21,7 +21,7 @@
 #include "gateway/maddnesslab.dmm"
 #include "gateway/snowfield.dmm"
 // #include "gateway/hiddeneclipse.dmm" //needs remaping and energy is low.
-#include "/maps/virtual_reality/constructVR.dmm"
+#include "../../virtual_reality/constructVR.dmm"
 #endif
 
 
@@ -89,11 +89,11 @@
 */
 //VR maps go here, tell me if theres a better way to load this
 // #include "virtual_reality/constructVR.dm" Virtual Reality areas included by default.
-//#include "/maps/virtual_reality/constructVR.dm" //Included in .dme
+//#include "maps/virtual_reality/constructVR.dm" //Included in .dme
 /datum/map_template/sc_lateload/vr_world
 	name = "VR World"
 	desc = "A dynamic, virtual world."
-	mappath = "maps/virtual_reality/constructVR.dmm"
+	mappath = "modular_chomp/maps/virtual_reality/constructVR.dmm" //Use modular
 	associated_map_datum = /datum/map_z_level/sc_lateload/vr_world
 
 /datum/map_z_level/sc_lateload/vr_world
