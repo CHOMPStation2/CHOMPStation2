@@ -1,12 +1,12 @@
 /mob/living/simple_mob/vore/lamia/albino/cave
 	name = "albino cave lamia"
 	desc = "Combination snake-human. This one looks ravenous!"
-	vore_default_mode = DM_DIGEST
 	melee_damage_lower = 5
 	melee_damage_upper = 5
 	vore_upper_transfer_chance = 75 // Since these lamias are on the hunt, you're getting pushed into the tail tum for fussing.
 	vore_tail_transfer_chance = 10 // And the albino ones are EXTRA greedy!
-	ai_holder_type = /datum/ai_holder/simple_mob/melee/hit_and_run // Ambush predators!
+	ai_holder_type = /datum/ai_holder/simple_mob/vore/stalker // Good enough for now.
+	tail.digest_mode = DM_DIGEST
 
 /mob/living/simple_mob/vore/lamia/copper/cave
 	name = "cave lamia"
@@ -14,4 +14,5 @@
 	melee_damage_lower = 5
 	melee_damage_upper = 5
 	vore_upper_transfer_chance = 75
-	ai_holder_type = /datum/ai_holder/simple_mob/melee/evasive // Aggressive!
+	ai_holder_type = /datum/ai_holder/simple_mob/melee/evasive
+	tail.digest_mode = DM_DIGEST
