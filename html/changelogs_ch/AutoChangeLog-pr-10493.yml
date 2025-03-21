@@ -1,0 +1,4 @@
+author: "zeskorion"
+delete-after: True
+changes:
+  - rscadd: "cracked and broken YR3 monitor icons\nfix:fixes legs on YR3 enviroshell being the wrong way around on side sprites"
