@@ -1,5 +1,3 @@
-//CHOMPedit: This file has been disabled and moved to the modular_chomp folder. Check that one if you're bug-fixing!
-
 /obj/machinery/vr_sleeper
 	name = "virtual reality sleeper"
 	desc = "A fancy bed with built-in sensory I/O ports and connectors to interface users' minds with their bodies in virtual reality."
@@ -266,13 +264,8 @@
 			avatar.shapeshifter_change_shape(occupant.species.name)
 		avatar.forceMove(get_turf(S))			// Put the mob on the landmark, instead of inside it
 
-//CHOMPedit start VR fix
+
 		occupant.enter_vr(avatar)
-<<<<<<< HEAD
-		//Yes, I am using a aheal just so your markings transfer over, I could not get .prefs.copy_to working. This is very stupid, and I can't be assed to rewrite this.  Too bad!
-		avatar.revive()
-		avatar.species.equip_survival_gear(avatar)
-=======
 		//This handles all the 'We make it look like ourself' code.
 		if(perfect_replica)
 			avatar.species.create_organs(avatar) // Reset our organs/limbs.
@@ -283,10 +276,9 @@
 			avatar.sync_organ_dna()
 			avatar.initialize_vessel()
 
->>>>>>> c08dacb566 (VR pod rewrite (#17337))
 		add_verb(avatar, /mob/living/carbon/human/proc/exit_vr) //ahealing removes the prommie verbs and the VR verbs, giving it back
+		avatar.Sleeping(1)
 
-//CHOMPedit end
 		// Prompt for username after they've enterred the body.
 		var/newname = sanitize(tgui_input_text(avatar, "You are entering virtual reality. Your username is currently [src.name]. Would you like to change it to something else?", "Name change", null, MAX_NAME_LEN), MAX_NAME_LEN)
 		if (newname)
