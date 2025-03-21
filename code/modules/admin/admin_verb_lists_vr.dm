@@ -293,8 +293,8 @@ var/list/admin_verbs_debug = list(
 	/datum/admins/proc/quick_nif, //CHOMPStation Add,
 	/datum/admins/proc/quick_authentic_nif, //CHOMPStation add
 	/client/proc/reload_jobwhitelist, //ChompADD
-	/client/proc/reload_alienwhitelist //ChompADD
-	/client/proc/reload_configuration, //CHOMPAdd
+	/client/proc/reload_alienwhitelist, //ChompADD
+	/client/proc/reload_configuration //CHOMPAdd
 	)
 
 var/list/admin_verbs_paranoid_debug = list(
