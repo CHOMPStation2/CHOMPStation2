@@ -22,11 +22,6 @@
 	QDEL_NULL(touching)
 	// We don't qdel(bloodstr) because it's the same as qdel(reagents)
 	bloodstr = null
-<<<<<<< HEAD
-	QDEL_NULL_LIST(internal_organs)
-	QDEL_NULL_LIST(stomach_contents)
-=======
->>>>>>> f4257e9d76 (More  unarmed fixes (#17276))
 	return ..()
 
 /mob/living/carbon/rejuvenate()

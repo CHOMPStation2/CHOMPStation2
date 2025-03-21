@@ -208,10 +208,7 @@
 		apply_effect(3, WEAKEN, armor_check)
 		playsound(src, 'sound/weapons/thudswoosh.ogg', 50, 1, -1)
 		if(armor_check < 60)
-<<<<<<< HEAD
 			drop_both_hands()	// CHOMPEdit - We've been pushed! Drop our stuff as well
-			visible_message(span_danger("[M] has pushed [src]!"))
-=======
 			if(M.lying)
 				visible_message(span_danger("[M] swept [src] down onto the floor!"))
 			else
@@ -219,7 +216,6 @@
 			break_all_grabs(M)
 			for(var/obj/item/I in holding)
 				drop_from_inventory(I)
->>>>>>> f4257e9d76 (More  unarmed fixes (#17276))
 		else
 			visible_message(span_warning("[M] attempted to push [src]!"))
 		return
