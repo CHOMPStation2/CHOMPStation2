@@ -233,11 +233,6 @@ var/list/admin_verbs_server = list(
 	)
 
 var/list/admin_verbs_debug = list(
-<<<<<<< HEAD
-	/client/proc/reload_configuration, // CHOMPEdit
-	/client/proc/getruntimelog,                     //allows us to access runtime logs to somebody,
-=======
->>>>>>> ac99b78fc4 (Server logs (#17264))
 	/client/proc/cmd_admin_list_open_jobs,
 	/client/proc/Debug2,
 	/client/proc/kill_air,
@@ -299,6 +294,7 @@ var/list/admin_verbs_debug = list(
 	/datum/admins/proc/quick_authentic_nif, //CHOMPStation add
 	/client/proc/reload_jobwhitelist, //ChompADD
 	/client/proc/reload_alienwhitelist //ChompADD
+	/client/proc/reload_configuration, //CHOMPAdd
 	)
 
 var/list/admin_verbs_paranoid_debug = list(
@@ -427,16 +423,12 @@ var/list/admin_verbs_mod = list(
 	/datum/admins/proc/sendFax,
 	/client/proc/getserverlog,			//allows us to fetch server logs (diary) for other days,
 	/datum/admins/proc/view_persistent_data,
-<<<<<<< HEAD
 	/datum/admins/proc/view_txt_log,	//shows the server log (diary) for today,
 	/datum/admins/proc/view_atk_log,		//shows the server combat-log, doesn't do anything presently,
 	/client/proc/start_vote,
 	/datum/admins/proc/quick_nif, //CHOMPStation Add,
 	/client/proc/reload_jobwhitelist, //ChompADD
 	/client/proc/reload_alienwhitelist //ChompADD
-=======
-	/client/proc/start_vote
->>>>>>> ac99b78fc4 (Server logs (#17264))
 )
 
 var/list/admin_verbs_event_manager = list(
