@@ -729,7 +729,7 @@ var/induromol_code = rand(1, 50)
 	if(!init)
 		to_chat(M, span_warning("You start tripping balls."))
 		init = 1
-	var/drugs = list(REAGENT_ID_SPACEDRUGS, REAGENT_ID_SEROTROTIUM, REAGENT_ID_PSILOCYBIN, REAGENT_ID_NUKACOLA, REAGENT_ID_ATOMICBOMB, REAGENT_ID_HIPPIESDELIGHT)
+	var/drugs = list(REAGENT_ID_BLISS, REAGENT_ID_SEROTROTIUM, REAGENT_ID_PSILOCYBIN, REAGENT_ID_NUKACOLA, REAGENT_ID_ATOMICBOMB, REAGENT_ID_HIPPIESDELIGHT)
 	for(var/drug in drugs)
 		M.reagents.add_reagent(drug, 1)
 	M.reagents.add_reagent(REAGENT_ID_MINDBREAKER, 0.2)

@@ -56,7 +56,7 @@
 /decl/chemical_reaction/instant/freshtea/green
 	id = REAGENT_ID_FRESHTEAGREEN
 	result = REAGENT_ID_FRESHTEAGREEN
-	required_reagents = list (REAGENT_ID_TEALEAVESGREEN = 1, REAGENT_ID_HOTWATER = 9)
+	required_reagents = list (REAGENT_ID_TEALEAVESGREEN = 1, REAGENT_ID_WATER = 9)
 	result_amount = 10
 
 /decl/chemical_reaction/instant/instantteapowder/green
@@ -74,7 +74,7 @@
 /decl/chemical_reaction/instant/matcha
 	id = REAGENT_ID_MATCHA
 	result = REAGENT_ID_MATCHA
-	required_reagents = list (REAGENT_ID_MATCHAPOWDER = 1, REAGENT_ID_HOTWATER = 2)
+	required_reagents = list (REAGENT_ID_MATCHAPOWDER = 1, REAGENT_ID_WATER = 2)
 	result_amount = 2
 
 /decl/chemical_reaction/instant/drinks/spiderdrink
@@ -86,37 +86,37 @@
 
 /decl/chemical_reaction/instant/drinks/bubbleteawatermelon
 	name = REAGENT_BUBBLETEAWATERMELON
-	id = REAGENT_BUBBLETEAWATERMELON
-	result = REAGENT_BUBBLETEAWATERMELON
-	required_reagents = list(REAGENT_GELATIN = 2, REAGENT_ID_WATERMELONTEA = 6, REAGENT_ID_MILK = 2)
+	id = REAGENT_ID_BUBBLETEAWATERMELON
+	result = REAGENT_ID_BUBBLETEAWATERMELON
+	required_reagents = list(REAGENT_ID_GELATIN = 2, REAGENT_ID_WATERMELONTEA = 6, REAGENT_ID_MILK = 2)
 	result_amount = 10
 
 /decl/chemical_reaction/instant/drinks/bubbleteastrawberry
 	name = REAGENT_BUBBLETEASTRAWBERRY
 	id = REAGENT_ID_BUBBLETEASTRAWBERRY
 	result = REAGENT_ID_BUBBLETEASTRAWBERRY
-	required_reagents = list(REAGENT_GELATIN = 2, REAGENT_ID_BERRYTEA = 6, REAGENT_ID_MILK = 2)
+	required_reagents = list(REAGENT_ID_GELATIN = 2, REAGENT_ID_BERRYTEA = 6, REAGENT_ID_MILK = 2)
 	result_amount = 10
 
 /decl/chemical_reaction/instant/drinks/bubbleteacherry
 	name = REAGENT_BUBBLETEACHERRY
 	id = REAGENT_ID_BUBBLETEACHERRY
 	result = REAGENT_ID_BUBBLETEACHERRY
-	required_reagents = list(REAGENT_GELATIN = 2, REAGENT_ID_CHERRYTEA = 6, REAGENT_ID_MILK = 2)
+	required_reagents = list(REAGENT_ID_GELATIN = 2, REAGENT_ID_CHERRYTEA = 6, REAGENT_ID_MILK = 2)
 	result_amount = 10
 
 /decl/chemical_reaction/instant/drinks/bubbleteacoffee
 	name = REAGENT_BUBBLETEACOFFEE
 	id = REAGENT_ID_BUBBLETEACOFFEE
 	result = REAGENT_ID_BUBBLETEACOFFEE
-	required_reagents = list(REAGENT_GELATIN = 2, REAGENT_ID_TEA = 5, REAGENT_ID_CAFELATTE = 3)
+	required_reagents = list(REAGENT_ID_GELATIN = 2, REAGENT_ID_TEA = 5, REAGENT_ID_CAFELATTE = 3)
 	result_amount = 10
 
 /decl/chemical_reaction/instant/drinks/bubbleteabanana
 	name = REAGENT_BUBBLETEABANANA
 	id = REAGENT_ID_BUBBLETEABANANA
 	result = REAGENT_ID_BUBBLETEABANANA
-	required_reagents = list(REAGENT_GELATIN = 2, REAGENT_ID_TEA = 5, REAGENT_ID_BANANA = 1, REAGENT_ID_MILK = 2)
+	required_reagents = list(REAGENT_ID_GELATIN = 2, REAGENT_ID_TEA = 5, REAGENT_ID_BANANA = 1, REAGENT_ID_MILK = 2)
 	result_amount = 10
 
 /decl/chemical_reaction/instant/drinks/horchata
@@ -186,7 +186,7 @@
 	name = REAGENT_HACHI
 	id = REAGENT_ID_HACHI
 	result = REAGENT_ID_HACHI
-	required_reagents = list(REAGENT_ID_BURBON = 2, REAGENT_ID_SAKE = 1, REAGENT_ID_LEMONJUICE = 1, PLANT_MUSHROOMS = 1) //Whoever coded this never made a mushroom reagent so this can't be created.
+	required_reagents = list(REAGENT_ID_WHISKEY = 2, REAGENT_ID_SAKE = 1, REAGENT_ID_LEMONJUICE = 1, REAGENT_ID_PSILOCYBIN = 1) //Whoever coded this never made a mushroom reagent so this can't be created.
 	result_amount = 5
 
 /decl/chemical_reaction/instant/drinks/narsour
@@ -236,70 +236,70 @@
 
 /decl/chemical_reaction/instant/drinks/enragedarachnidslammer1
 	name = REAGENT_ENRAGEDARACHNIDSLAMMER
-	id = REAGENT_ID_ENRAGEDARACHNIDSLAMMER
+	id = REAGENT_ID_ENRAGEDARACHNIDSLAMMER + "1"
 	required_reagents = list(REAGENT_ID_ENRAGEDARACHNIDSLAMMER = 1, REAGENT_ID_CYANIDE = 1)
 	result = REAGENT_ID_ENRAGEDARACHNIDSLAMMER
 	result_amount = 0.1
 
 /decl/chemical_reaction/instant/drinks/enragedarachnidslammer2
 	name = REAGENT_ENRAGEDARACHNIDSLAMMER
-	id = REAGENT_ID_ENRAGEDARACHNIDSLAMMER
+	id = REAGENT_ID_ENRAGEDARACHNIDSLAMMER + "2"
 	required_reagents = list(REAGENT_ID_ENRAGEDARACHNIDSLAMMER = 1, REAGENT_ID_CHLORALHYDRATE = 1)
 	result = REAGENT_ID_ENRAGEDARACHNIDSLAMMER
 	result_amount = 0.1
 
 /decl/chemical_reaction/instant/drinks/enragedarachnidslammer3
 	name = REAGENT_ENRAGEDARACHNIDSLAMMER
-	id = REAGENT_ID_ENRAGEDARACHNIDSLAMMER
+	id = REAGENT_ID_ENRAGEDARACHNIDSLAMMER + "3"
 	required_reagents = list(REAGENT_ID_ENRAGEDARACHNIDSLAMMER = 1, REAGENT_ID_STIMM = 1)
 	result = REAGENT_ID_ENRAGEDARACHNIDSLAMMER
 	result_amount = 0.1
 
 /decl/chemical_reaction/instant/drinks/enragedarachnidslammer4
 	name = REAGENT_ENRAGEDARACHNIDSLAMMER
-	id = REAGENT_ID_ENRAGEDARACHNIDSLAMMER
+	id = REAGENT_ID_ENRAGEDARACHNIDSLAMMER + "4"
 	required_reagents = list(REAGENT_ID_ENRAGEDARACHNIDSLAMMER = 1, REAGENT_ID_CRYOTOXIN = 1)
 	result = REAGENT_ID_ENRAGEDARACHNIDSLAMMER
 	result_amount = 0.1
 
 /decl/chemical_reaction/instant/drinks/enragedarachnidslammer5
 	name = REAGENT_ENRAGEDARACHNIDSLAMMER
-	id = REAGENT_ID_ENRAGEDARACHNIDSLAMMER
+	id = REAGENT_ID_ENRAGEDARACHNIDSLAMMER + "5"
 	required_reagents = list(REAGENT_ID_ENRAGEDARACHNIDSLAMMER = 1, REAGENT_ID_CRYPTOBIOLIN = 1)
 	result = REAGENT_ID_ENRAGEDARACHNIDSLAMMER
 	result_amount = 0.1
 
 /decl/chemical_reaction/instant/drinks/enragedarachnidslammer6
 	name = REAGENT_ENRAGEDARACHNIDSLAMMER
-	id = REAGENT_ID_ENRAGEDARACHNIDSLAMMER
+	id = REAGENT_ID_ENRAGEDARACHNIDSLAMMER + "6"
 	required_reagents = list(REAGENT_ID_ENRAGEDARACHNIDSLAMMER = 1, REAGENT_ID_STOXIN = 1)
 	result = REAGENT_ID_ENRAGEDARACHNIDSLAMMER
 	result_amount = 0.1
 
 /decl/chemical_reaction/instant/drinks/enragedarachnidslammer7
 	name = REAGENT_ENRAGEDARACHNIDSLAMMER
-	id = REAGENT_ID_ENRAGEDARACHNIDSLAMMER
+	id = REAGENT_ID_ENRAGEDARACHNIDSLAMMER + "7"
 	required_reagents = list(REAGENT_ID_ENRAGEDARACHNIDSLAMMER = 1, REAGENT_ID_CONDENSEDCAPSAICINV = 1)
 	result = REAGENT_ID_ENRAGEDARACHNIDSLAMMER
 	result_amount = 0.1
 
 /decl/chemical_reaction/instant/drinks/enragedarachnidslammer8
 	name = REAGENT_ENRAGEDARACHNIDSLAMMER
-	id = REAGENT_ID_ENRAGEDARACHNIDSLAMMER
+	id = REAGENT_ID_ENRAGEDARACHNIDSLAMMER + "8"
 	required_reagents = list(REAGENT_ID_ENRAGEDARACHNIDSLAMMER = 1, REAGENT_ID_PHORON = 1)
 	result = REAGENT_ID_ENRAGEDARACHNIDSLAMMER
 	result_amount = 0.1
 
 /decl/chemical_reaction/instant/drinks/enragedarachnidslammer9
 	name = REAGENT_ENRAGEDARACHNIDSLAMMER
-	id = REAGENT_ID_ENRAGEDARACHNIDSLAMMER
+	id = REAGENT_ID_ENRAGEDARACHNIDSLAMMER + "9"
 	required_reagents = list(REAGENT_ID_ENRAGEDARACHNIDSLAMMER = 1, REAGENT_ID_THERMITEV = 1)
 	result = REAGENT_ID_ENRAGEDARACHNIDSLAMMER
 	result_amount = 0.1
 
 /decl/chemical_reaction/instant/drinks/enragedarachnidslammer10
 	name = REAGENT_ENRAGEDARACHNIDSLAMMER
-	id = REAGENT_ID_ENRAGEDARACHNIDSLAMMER
+	id = REAGENT_ID_ENRAGEDARACHNIDSLAMMER + "10"
 	required_reagents = list(REAGENT_ID_ENRAGEDARACHNIDSLAMMER = 1, REAGENT_ID_SEROTROTIUMV = 1)
 	result = REAGENT_ID_ENRAGEDARACHNIDSLAMMER
 	result_amount = 0.1
@@ -384,13 +384,6 @@
 	result_amount = 6
 
 //YW drinks
-/decl/chemical_reaction/instant/drinks/lovepotion_yw
-	name = REAGENT_STRAWBERRYLOVEPOTION
-	id = REAGENT_ID_STRAWBERRYLOVEPOTION
-	result = REAGENT_ID_STRAWBERRYLOVEPOTION
-	required_reagents = list(REAGENT_ID_CREAM = 1, REAGENT_ID_BERRYJUICE = 1, REAGENT_ID_SUGAR = 1)
-	result_amount = 3
-
 /decl/chemical_reaction/instant/drinks/wormblood
 	name = "Wormblood"
 	id = REAGENT_ID_WORMBLOOD
