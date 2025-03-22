@@ -34,7 +34,7 @@
 /decl/chemical_reaction/instant/slime/secertslime
 	name = "Secert Slime "
 	id = "sepia_swapm"
-	result = "change_secert"
+	result = null
 	required_reagents = list(REAGENT_ID_BLOOD = 5, REAGENT_ID_WATER = 5)
 	result_amount = 1
 	required = /obj/item/slime_extract/sepia

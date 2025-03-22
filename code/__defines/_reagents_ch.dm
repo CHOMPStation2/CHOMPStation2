@@ -58,11 +58,6 @@
 #define REAGENT_ALIZENE "Alizene"
 #define REAGENT_ID_ALIZENE "alizene"
 
-// Does not exist?
-#define REAGENT_ID_SPACEDRUGS "space_drugs"
-#define REAGENT_ID_HOTWATER "hotwater"
-#define REAGENT_ID_BURBON "burbon"
-
 // Food & Drinks
 #define REAGENT_SNAPS "Akvavit"
 #define REAGENT_ID_SNAPS "snaps"

@@ -56,7 +56,7 @@
 /decl/chemical_reaction/instant/freshtea/green
 	id = REAGENT_ID_FRESHTEAGREEN
 	result = REAGENT_ID_FRESHTEAGREEN
-	required_reagents = list (REAGENT_ID_TEALEAVESGREEN = 1, REAGENT_ID_HOTWATER = 9)
+	required_reagents = list (REAGENT_ID_TEALEAVESGREEN = 1, REAGENT_ID_WATER = 9)
 	result_amount = 10
 
 /decl/chemical_reaction/instant/instantteapowder/green
@@ -74,7 +74,7 @@
 /decl/chemical_reaction/instant/matcha
 	id = REAGENT_ID_MATCHA
 	result = REAGENT_ID_MATCHA
-	required_reagents = list (REAGENT_ID_MATCHAPOWDER = 1, REAGENT_ID_HOTWATER = 2)
+	required_reagents = list (REAGENT_ID_MATCHAPOWDER = 1, REAGENT_ID_WATER = 2)
 	result_amount = 2
 
 /decl/chemical_reaction/instant/drinks/spiderdrink
@@ -186,7 +186,7 @@
 	name = REAGENT_HACHI
 	id = REAGENT_ID_HACHI
 	result = REAGENT_ID_HACHI
-	required_reagents = list(REAGENT_ID_BURBON = 2, REAGENT_ID_SAKE = 1, REAGENT_ID_LEMONJUICE = 1, PLANT_MUSHROOMS = 1) //Whoever coded this never made a mushroom reagent so this can't be created.
+	required_reagents = list(REAGENT_ID_WHISKEY = 2, REAGENT_ID_SAKE = 1, REAGENT_ID_LEMONJUICE = 1, REAGENT_ID_PSILOCYBIN = 1) //Whoever coded this never made a mushroom reagent so this can't be created.
 	result_amount = 5
 
 /decl/chemical_reaction/instant/drinks/narsour
