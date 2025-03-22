@@ -4787,7 +4787,6 @@
 #include "maps\redgate\falls\atoll_turfs.dm"
 #include "maps\submaps\_helpers.dm"
 #include "maps\submaps\_readme.dm"
-<<<<<<< HEAD
 #include "maps\virtual_reality\constructVR.dm"
 #include "modular_chomp\code\coalesce_ch.dm"
 #include "modular_chomp\code\global.dm"
@@ -5196,23 +5195,4 @@
 #include "modular_chomp\maps\~turfpacks\unsim_turfs\unsim_turfs_special.dm"
 #include "modular_chomp\maps\~turfpacks\unsim_turfs\unsim_turfs_tiles.dm"
 #include "modular_chomp\maps\~turfpacks\unsim_turfs\unsim_turfs_walls.dm"
-=======
-#include "maps\submaps\admin_use_vr\event_autonomous_drone.dm"
-#include "maps\submaps\engine_submaps\engine.dm"
-#include "maps\submaps\engine_submaps\engine_areas.dm"
-#include "maps\submaps\engine_submaps_vr\tether\_engine_submaps.dm"
-#include "maps\submaps\space_rocks\space_rocks_stuff.dm"
-#include "maps\submaps\space_submaps\space.dm"
-#include "maps\submaps\space_submaps\debrisfield\debrisfield.dm"
-#include "maps\submaps\surface_submaps\wilderness\wilderness.dm"
-#include "maps\submaps\surface_submaps\wilderness\wilderness_areas.dm"
-#include "maps\tether\tether_areas.dm"
-#include "maps\tether\tether_jobs.dm"
-#include "maps\tether\tether_phoronlock.dm"
-#include "maps\tether\tether_shuttle_defs.dm"
-#include "maps\tether\tether_telecomm_defs.dm"
-#include "maps\virtual_reality\constructVR.dm"
-#include "maps\~map_system\_map_selection.dm"
-#include "maps\~map_system\maps.dm"
->>>>>>> 95e3bf67c4 (VR pod and mob TF fixes & adjustments (#17397))
 // END_INCLUDE
