@@ -88,35 +88,35 @@
 	name = REAGENT_BUBBLETEAWATERMELON
 	id = REAGENT_ID_BUBBLETEAWATERMELON
 	result = REAGENT_ID_BUBBLETEAWATERMELON
-	required_reagents = list(REAGENT_GELATIN = 2, REAGENT_ID_WATERMELONTEA = 6, REAGENT_ID_MILK = 2)
+	required_reagents = list(REAGENT_ID_GELATIN = 2, REAGENT_ID_WATERMELONTEA = 6, REAGENT_ID_MILK = 2)
 	result_amount = 10
 
 /decl/chemical_reaction/instant/drinks/bubbleteastrawberry
 	name = REAGENT_BUBBLETEASTRAWBERRY
 	id = REAGENT_ID_BUBBLETEASTRAWBERRY
 	result = REAGENT_ID_BUBBLETEASTRAWBERRY
-	required_reagents = list(REAGENT_GELATIN = 2, REAGENT_ID_BERRYTEA = 6, REAGENT_ID_MILK = 2)
+	required_reagents = list(REAGENT_ID_GELATIN = 2, REAGENT_ID_BERRYTEA = 6, REAGENT_ID_MILK = 2)
 	result_amount = 10
 
 /decl/chemical_reaction/instant/drinks/bubbleteacherry
 	name = REAGENT_BUBBLETEACHERRY
 	id = REAGENT_ID_BUBBLETEACHERRY
 	result = REAGENT_ID_BUBBLETEACHERRY
-	required_reagents = list(REAGENT_GELATIN = 2, REAGENT_ID_CHERRYTEA = 6, REAGENT_ID_MILK = 2)
+	required_reagents = list(REAGENT_ID_GELATIN = 2, REAGENT_ID_CHERRYTEA = 6, REAGENT_ID_MILK = 2)
 	result_amount = 10
 
 /decl/chemical_reaction/instant/drinks/bubbleteacoffee
 	name = REAGENT_BUBBLETEACOFFEE
 	id = REAGENT_ID_BUBBLETEACOFFEE
 	result = REAGENT_ID_BUBBLETEACOFFEE
-	required_reagents = list(REAGENT_GELATIN = 2, REAGENT_ID_TEA = 5, REAGENT_ID_CAFELATTE = 3)
+	required_reagents = list(REAGENT_ID_GELATIN = 2, REAGENT_ID_TEA = 5, REAGENT_ID_CAFELATTE = 3)
 	result_amount = 10
 
 /decl/chemical_reaction/instant/drinks/bubbleteabanana
 	name = REAGENT_BUBBLETEABANANA
 	id = REAGENT_ID_BUBBLETEABANANA
 	result = REAGENT_ID_BUBBLETEABANANA
-	required_reagents = list(REAGENT_GELATIN = 2, REAGENT_ID_TEA = 5, REAGENT_ID_BANANA = 1, REAGENT_ID_MILK = 2)
+	required_reagents = list(REAGENT_ID_GELATIN = 2, REAGENT_ID_TEA = 5, REAGENT_ID_BANANA = 1, REAGENT_ID_MILK = 2)
 	result_amount = 10
 
 /decl/chemical_reaction/instant/drinks/horchata
