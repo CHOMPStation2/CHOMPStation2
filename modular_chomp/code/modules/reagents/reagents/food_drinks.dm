@@ -388,8 +388,8 @@
 	M.adjustToxLoss(-3 * removed) //Almost on par with dylovene despite being harder to obtain in bulk. Nerf if this causes problems.
 
 /datum/reagent/drink/juice/gelatin
-	name = REAGENT_ID_GELATIN
-	id = REAGENT_GELATIN
+	name = REAGENT_GELATIN
+	id = REAGENT_ID_GELATIN
 	description = "It doesnt taste like anything."
 	taste_description = REAGENT_ID_NOTHING
 	nutrition = 0
