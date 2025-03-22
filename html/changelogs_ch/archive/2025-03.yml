@@ -471,3 +471,23 @@
   - bugfix: The flamethrower UI now works properly.
   - rscadd: Flamethrower now is more useful than spawning a few fire tiles. It's now
       an actual threat!
+2025-03-22:
+  CHOMPStation2StaffMirrorBot:
+  - qol: updates server logs verbs
+  - rscadd: animation flick support to robot sprites
+  Diana:
+  - bugfix: Replicant pods now let you be NOT just a human! You can be yourself!
+  - bugfix: Replicant pods will no longer break movement related things.
+  - code_imp: VR pods and Replicant pods work a bit better on the backend
+  - spellcheck: Adjusts the fluff text you get when pushing someone onto the floor
+      while you're on the floor.
+  - bugfix: You can no longer grab/disarm/do cpr while restrained (or pinned)
+  - rscdel: Removes vore. (The old, unused version.)
+  - balance: You can no longer buckle/have someone buckle you to break free from grabs.
+  - balance: You can no longer crawl while grabbed
+  - rscadd: Zaddat now have security and Engineering specific subtypes they can choose
+      in the xenowear loadout...We have Zaddat players...Right?
+  zeskorion:
+  - rscadd: 'cracked and broken YR3 monitor icons
+
+      fix:fixes legs on YR3 enviroshell being the wrong way around on side sprites'
