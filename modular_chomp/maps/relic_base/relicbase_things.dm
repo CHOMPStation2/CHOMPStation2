@@ -125,7 +125,7 @@
 	desc = "Dark black basalt. Rich in exotic minerals."
 	icon_state = "deeprock"
 	icon = 'modular_chomp/icons/turf/thor.dmi'
-	temperature = 393.15
+	temperature = 293.15
 
 /turf/unsimulated/mineral/thor/mines
 	name = "impassable dark rock"
