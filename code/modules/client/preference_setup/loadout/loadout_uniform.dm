@@ -670,7 +670,12 @@
 /datum/gear/suit/job_fed/sec
 	display_name = "fed uniform, sec"
 	path = /obj/item/clothing/suit/storage/fluff/fedcoat
+<<<<<<< HEAD
 	allowed_roles = list(JOB_HEAD_OF_SECURITY, JOB_WARDEN, JOB_DETECTIVE, JOB_SECURITY_OFFICER, JOB_BLUESHIELD_GUARD, JOB_SECURITY_PILOT) //YW ADDITIONS
+=======
+	allowed_roles = list(JOB_HEAD_OF_SECURITY, JOB_WARDEN, JOB_DETECTIVE, JOB_SECURITY_OFFICER)
+	cost = 2
+>>>>>>> 1efd3719da (Makes a few loadout fluff items NOT give you 50% armor (#17335))
 
 /datum/gear/suit/job_fed/medsci
 	display_name = "fed uniform, med/sci"
@@ -689,9 +694,13 @@
 	allowed_roles = list(JOB_HEAD_OF_SECURITY,JOB_SITE_MANAGER,JOB_HEAD_OF_PERSONNEL,JOB_CHIEF_ENGINEER,JOB_RESEARCH_DIRECTOR,
 						JOB_CHIEF_MEDICAL_OFFICER,JOB_MEDICAL_DOCTOR,JOB_CHEMIST,JOB_PARAMEDIC,JOB_GENETICIST,
 						JOB_SCIENTIST,JOB_ROBOTICIST,JOB_XENOBIOLOGIST,JOB_XENOBOTANIST,JOB_ATMOSPHERIC_TECHNICIAN,
+<<<<<<< HEAD
 						JOB_ENGINEER,JOB_WARDEN,JOB_DETECTIVE,JOB_SECURITY_OFFICER,
 						JOB_PATHFINDER,JOB_EXPLORER,JOB_FIELD_MEDIC,JOB_BLUESHIELD_GUARD,JOB_SECURITY_PILOT) //YW ADDITIONS  //CHOMP keep explo
 
+=======
+						JOB_ENGINEER,JOB_WARDEN,JOB_DETECTIVE,JOB_SECURITY_OFFICER)
+>>>>>>> 1efd3719da (Makes a few loadout fluff items NOT give you 50% armor (#17335))
 /*
 Swimsuits
 */
