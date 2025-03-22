@@ -682,16 +682,6 @@
 //////////////////////////////////////////////
 
 //YW drinks
-/datum/reagent/drink/lovepotion_yw
-	name = REAGENT_STRAWBERRYLOVEPOTION
-	id = REAGENT_ID_STRAWBERRYLOVEPOTION
-	description = "Creamy strawberries and sugar, simple and sweet."
-	taste_description = "strawberries and cream"
-	color = "#fc8a8a" // rgb(252, 138, 138)
-
-	glass_name = "Love Potion"
-	glass_desc = "Love me tender, love me sweet."
-
 /datum/reagent/ethanol/wormblood
 	name = REAGENT_WORMBLOOD
 	id = REAGENT_ID_WORMBLOOD

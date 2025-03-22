@@ -384,13 +384,6 @@
 	result_amount = 6
 
 //YW drinks
-/decl/chemical_reaction/instant/drinks/lovepotion_yw
-	name = REAGENT_STRAWBERRYLOVEPOTION
-	id = REAGENT_ID_STRAWBERRYLOVEPOTION
-	result = REAGENT_ID_STRAWBERRYLOVEPOTION
-	required_reagents = list(REAGENT_ID_CREAM = 1, REAGENT_ID_BERRYJUICE = 1, REAGENT_ID_SUGAR = 1)
-	result_amount = 3
-
 /decl/chemical_reaction/instant/drinks/wormblood
 	name = "Wormblood"
 	id = REAGENT_ID_WORMBLOOD
