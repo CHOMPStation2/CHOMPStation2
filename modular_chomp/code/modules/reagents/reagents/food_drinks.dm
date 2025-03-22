@@ -400,7 +400,7 @@
 
 /datum/reagent/drink/bubbleteawatermelon
 	name = REAGENT_BUBBLETEAWATERMELON
-	id = REAGENT_BUBBLETEAWATERMELON
+	id = REAGENT_ID_BUBBLETEAWATERMELON
 	description = "A tea with milk and watermelon in it and gelatin balls as well."
 	taste_description = "creamy tea and watermelon"
 	color = "#b83333"

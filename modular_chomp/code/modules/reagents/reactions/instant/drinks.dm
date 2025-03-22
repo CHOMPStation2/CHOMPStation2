@@ -86,8 +86,8 @@
 
 /decl/chemical_reaction/instant/drinks/bubbleteawatermelon
 	name = REAGENT_BUBBLETEAWATERMELON
-	id = REAGENT_BUBBLETEAWATERMELON
-	result = REAGENT_BUBBLETEAWATERMELON
+	id = REAGENT_ID_BUBBLETEAWATERMELON
+	result = REAGENT_ID_BUBBLETEAWATERMELON
 	required_reagents = list(REAGENT_GELATIN = 2, REAGENT_ID_WATERMELONTEA = 6, REAGENT_ID_MILK = 2)
 	result_amount = 10
 
