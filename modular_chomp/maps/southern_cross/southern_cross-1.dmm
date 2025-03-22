@@ -145,14 +145,14 @@
 /obj/effect/floor_decal/rust,
 /obj/structure/table/rack,
 /obj/item/storage/firstaid/regular{
-	empty = 1;
 	name = "First-Aid (empty)";
 	pixel_x = 5;
-	pixel_y = 5
+	pixel_y = 5;
+	empty = 1
 	},
 /obj/item/storage/firstaid/regular{
-	empty = 1;
-	name = "First-Aid (empty)"
+	name = "First-Aid (empty)";
+	empty = 1
 	},
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/abfirstaid)
@@ -254,8 +254,8 @@
 "aU" = (
 /obj/structure/bed/pillowpilefront/teal,
 /obj/machinery/power/apc{
-	dir = 1;
 	name = "north bump";
+	dir = 1;
 	pixel_y = 24
 	},
 /obj/structure/cable{
@@ -296,8 +296,8 @@
 "aZ" = (
 /obj/item/reagent_containers/chem_disp_cartridge/water,
 /obj/item/reagent_containers/chem_disp_cartridge/ethanol{
-	pixel_y = 7;
-	pixel_x = -4
+	pixel_x = -4;
+	pixel_y = 7
 	},
 /obj/item/reagent_containers/chem_disp_cartridge/chlorine{
 	pixel_x = -5
@@ -412,8 +412,8 @@
 	},
 /obj/random/trash,
 /obj/machinery/power/apc{
-	dir = 1;
 	name = "north bump";
+	dir = 1;
 	pixel_y = 24
 	},
 /obj/structure/cable{
@@ -770,8 +770,8 @@
 	dir = 1
 	},
 /obj/machinery/power/apc{
-	dir = 1;
 	name = "north bump";
+	dir = 1;
 	pixel_y = 24
 	},
 /obj/structure/cable{
@@ -992,12 +992,12 @@
 /area/maintenance/abhydroponicssupp)
 "dX" = (
 /obj/machinery/door/airlock/external{
-	icon_state = "door_locked";
-	locked = 1;
 	name = "External Airlock Access";
-	req_access = list(13);
+	icon_state = "door_locked";
 	frequency = 1379;
-	id_tag = "d0_outer"
+	locked = 1;
+	id_tag = "d0_outer";
+	req_access = list(13)
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/zeroport)
@@ -1019,11 +1019,11 @@
 "ec" = (
 /obj/item/storage/bag/cash,
 /obj/machinery/button/remote/airlock{
-	id = "cage";
 	name = "Cage Bolts";
-	specialfunctions = 4;
 	dir = 8;
-	pixel_x = 30
+	pixel_x = 30;
+	id = "cage";
+	specialfunctions = 4
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/ragecage)
@@ -1113,21 +1113,21 @@
 /area/maintenance/bar/dorms/dorm_1)
 "ex" = (
 /obj/machinery/door/airlock/external{
-	icon_state = "door_locked";
-	locked = 1;
 	name = "External Airlock Access";
-	req_access = list(13);
+	icon_state = "door_locked";
 	frequency = 1379;
-	id_tag = "d0_outer"
+	locked = 1;
+	id_tag = "d0_outer";
+	req_access = list(13)
 	},
 /obj/machinery/access_button{
-	command = "cycle_exterior";
-	frequency = 1379;
-	master_tag = "d0_airlock";
 	name = "exterior access button";
-	pixel_y = -28;
 	dir = 8;
-	pixel_x = -8
+	pixel_x = -8;
+	pixel_y = -28;
+	frequency = 1379;
+	command = "cycle_exterior";
+	master_tag = "d0_airlock"
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/zeroport)
@@ -1204,12 +1204,12 @@
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/purple/border,
 /obj/random/plushie{
-	pixel_y = -3;
-	pixel_x = -11
+	pixel_x = -11;
+	pixel_y = -3
 	},
 /obj/random/plushie{
-	pixel_y = 4;
-	pixel_x = 16
+	pixel_x = 16;
+	pixel_y = 4
 	},
 /turf/simulated/floor/tiled/white,
 /area/maintenance/abscience)
@@ -1518,8 +1518,8 @@
 	dir = 1
 	},
 /obj/machinery/door/airlock/multi_tile/metal/mait{
-	dir = 2;
-	name = "Maintenance Access"
+	name = "Maintenance Access";
+	dir = 2
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/maintenance/engineering/gravgen)
@@ -1528,8 +1528,8 @@
 /area/maintenance/zerobar)
 "gl" = (
 /obj/machinery/power/apc{
-	dir = 1;
 	name = "north bump";
+	dir = 1;
 	pixel_y = 24
 	},
 /obj/structure/cable{
@@ -1689,15 +1689,15 @@
 	dir = 1
 	},
 /obj/machinery/door/airlock/multi_tile/metal/mait{
-	dir = 2;
-	name = "Maintenance Access"
+	name = "Maintenance Access";
+	dir = 2
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/maintenance/gravlobby)
 "gX" = (
 /obj/machinery/power/apc{
-	dir = 1;
 	name = "north bump";
+	dir = 1;
 	pixel_y = 24
 	},
 /obj/structure/cable{
@@ -1962,12 +1962,12 @@
 /area/engineering/lowlobby)
 "ie" = (
 /obj/machinery/door/airlock/glass_external{
-	icon_state = "door_locked";
-	locked = 1;
 	name = "Internal Airlock Access";
-	req_access = list(13);
+	icon_state = "door_locked";
 	frequency = 1379;
-	id_tag = "d0_inner"
+	locked = 1;
+	id_tag = "d0_inner";
+	req_access = list(13)
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/zeroport)
@@ -2201,12 +2201,12 @@
 /area/maintenance/zeroaft)
 "jo" = (
 /obj/machinery/embedded_controller/radio/airlock/airlock_controller{
-	id_tag = "d0_airlock";
 	pixel_y = -26;
-	tag_airpump = "d0_pump";
-	tag_chamber_sensor = "d0_sensor";
+	id_tag = "d0_airlock";
 	tag_exterior_door = "d0_outer";
-	tag_interior_door = "d0_inner"
+	tag_interior_door = "d0_inner";
+	tag_airpump = "d0_pump";
+	tag_chamber_sensor = "d0_sensor"
 	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 10
@@ -2340,8 +2340,8 @@
 /area/maintenance/zerostarboard)
 "jK" = (
 /obj/machinery/power/apc{
-	dir = 1;
 	name = "north bump";
+	dir = 1;
 	pixel_y = 24
 	},
 /obj/structure/cable{
@@ -2373,12 +2373,12 @@
 	pixel_y = -4
 	},
 /obj/item/reagent_containers/chem_disp_cartridge/lithium{
-	pixel_y = 10;
-	pixel_x = -4
+	pixel_x = -4;
+	pixel_y = 10
 	},
 /obj/item/storage/firstaid/regular{
-	empty = 1;
-	name = "First-Aid (empty)"
+	name = "First-Aid (empty)";
+	empty = 1
 	},
 /turf/simulated/floor/reinforced,
 /area/maintenance/abchemistry)
@@ -3134,8 +3134,8 @@
 	dir = 8
 	},
 /obj/machinery/power/apc{
-	dir = 1;
 	name = "north bump";
+	dir = 1;
 	pixel_y = 24
 	},
 /obj/structure/cable{
@@ -3213,11 +3213,11 @@
 	pixel_y = 32
 	},
 /obj/machinery/power/smes/buildable{
-	charge = 5e+006;
+	charge = 5e+06;
+	RCon_tag = "Gravity Generator";
 	input_attempt = 1;
 	input_level = 200000;
-	output_level = 200000;
-	RCon_tag = "Gravity Generator"
+	output_level = 200000
 	},
 /obj/structure/cable/cyan{
 	icon_state = "0-8"
@@ -3302,8 +3302,8 @@
 	dir = 8
 	},
 /obj/structure/sign/directions/engineering/gravgen{
-	pixel_y = 10;
-	dir = 4
+	dir = 4;
+	pixel_y = 10
 	},
 /obj/structure/sign/directions/evac{
 	dir = 8;
@@ -3405,8 +3405,8 @@
 /area/maintenance/zerocent)
 "oc" = (
 /obj/machinery/power/apc{
-	dir = 1;
 	name = "north bump";
+	dir = 1;
 	pixel_y = 24
 	},
 /obj/structure/cable{
@@ -3489,8 +3489,8 @@
 /obj/structure/table/standard,
 /obj/random/maintenance/foodstuff,
 /obj/machinery/power/apc{
-	dir = 1;
 	name = "north bump";
+	dir = 1;
 	pixel_y = 24
 	},
 /obj/structure/cable{
@@ -3554,9 +3554,9 @@
 /area/maintenance/abhydroponics)
 "oB" = (
 /obj/machinery/button/remote/airlock{
-	id = "MaintRoom2";
 	name = "Bolt Control";
 	pixel_y = -30;
+	id = "MaintRoom2";
 	specialfunctions = 4
 	},
 /turf/simulated/floor/wood/turfpack/station,
@@ -3641,16 +3641,16 @@
 "pc" = (
 /obj/structure/table/marble,
 /obj/item/reagent_containers/food/drinks/bottle/small/beer{
-	pixel_y = 10;
-	pixel_x = 5
+	pixel_x = 5;
+	pixel_y = 10
 	},
 /obj/item/reagent_containers/food/drinks/bottle/small/beer{
 	pixel_y = 10
 	},
 /obj/item/reagent_containers/food/drinks/cans/beercan,
 /obj/item/reagent_containers/food/drinks/cans/beercan{
-	pixel_y = 5;
-	pixel_x = 10
+	pixel_x = 10;
+	pixel_y = 5
 	},
 /obj/random/maintenance/foodstuff,
 /turf/simulated/floor/plating/turfpack/station,
@@ -3986,8 +3986,8 @@
 	dir = 1
 	},
 /obj/machinery/door/airlock/multi_tile/metal/mait{
-	dir = 2;
-	name = "Maintenance Access"
+	name = "Maintenance Access";
+	dir = 2
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/maintenance/smoleroom)
@@ -4087,8 +4087,8 @@
 /obj/effect/floor_decal/rust,
 /obj/structure/table/rack,
 /obj/item/storage/firstaid/regular{
-	empty = 1;
-	name = "First-Aid (empty)"
+	name = "First-Aid (empty)";
+	empty = 1
 	},
 /obj/item/storage/firstaid/regular{
 	pixel_x = 6;
@@ -4301,8 +4301,8 @@
 	dir = 9
 	},
 /obj/item/storage/toolbox/electrical{
-	pixel_y = 6;
-	pixel_x = -2
+	pixel_x = -2;
+	pixel_y = 6
 	},
 /obj/machinery/alarm{
 	pixel_y = 22
@@ -4376,8 +4376,8 @@
 /area/maintenance/zerobar)
 "sh" = (
 /obj/item/storage/firstaid/regular{
-	empty = 1;
-	name = "First-Aid (empty)"
+	name = "First-Aid (empty)";
+	empty = 1
 	},
 /obj/item/storage/firstaid/regular{
 	pixel_x = 6;
@@ -4688,8 +4688,8 @@
 /area/maintenance/abhydroponicssupp)
 "tz" = (
 /obj/machinery/door/airlock/multi_tile/metal/mait{
-	dir = 8;
 	name = "Rage Cage";
+	dir = 8;
 	id_tag = "cage"
 	},
 /turf/simulated/floor/plating/turfpack/station,
@@ -4919,8 +4919,8 @@
 "uH" = (
 /obj/machinery/door/airlock/hatch{
 	icon_state = "door_locked";
-	id_tag = "engine_access_hatch";
 	locked = 1;
+	id_tag = "engine_access_hatch";
 	req_one_access = null
 	},
 /turf/simulated/floor/plating/turfpack/station,
@@ -4937,8 +4937,8 @@
 /area/maintenance/abhydroponicssupp)
 "uJ" = (
 /obj/machinery/power/apc{
-	dir = 1;
 	name = "north bump";
+	dir = 1;
 	pixel_y = 24
 	},
 /obj/structure/cable{
@@ -5036,8 +5036,8 @@
 /area/maintenance/ragecage)
 "vd" = (
 /obj/random/plushie{
-	pixel_y = -3;
-	pixel_x = 2
+	pixel_x = 2;
+	pixel_y = -3
 	},
 /turf/simulated/floor/tiled/white,
 /area/maintenance/abscience)
@@ -5096,12 +5096,12 @@
 "vx" = (
 /obj/structure/closet/lasertag/blue,
 /obj/item/tvcamera{
-	channel = "NLS Southern Cross Hyperball";
-	name = "hyperball camera drone"
+	name = "hyperball camera drone";
+	channel = "NLS Southern Cross Hyperball"
 	},
 /obj/item/tvcamera{
-	channel = "NLS Southern Cross Hyperball";
-	name = "hyperball camera drone"
+	name = "hyperball camera drone";
+	channel = "NLS Southern Cross Hyperball"
 	},
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/field)
@@ -5168,12 +5168,12 @@
 "vL" = (
 /obj/structure/closet/lasertag/red,
 /obj/item/tvcamera{
-	channel = "NLS Southern Cross Hyperball";
-	name = "hyperball camera drone"
+	name = "hyperball camera drone";
+	channel = "NLS Southern Cross Hyperball"
 	},
 /obj/item/tvcamera{
-	channel = "NLS Southern Cross Hyperball";
-	name = "hyperball camera drone"
+	name = "hyperball camera drone";
+	channel = "NLS Southern Cross Hyperball"
 	},
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/field)
@@ -5444,20 +5444,20 @@
 /area/maintenance/zeroaft)
 "wV" = (
 /obj/machinery/door/airlock/glass_external{
-	icon_state = "door_locked";
-	locked = 1;
 	name = "Internal Airlock Access";
-	req_access = list(13);
+	icon_state = "door_locked";
 	frequency = 1379;
-	id_tag = "d0_inner"
+	locked = 1;
+	id_tag = "d0_inner";
+	req_access = list(13)
 	},
 /obj/machinery/access_button{
-	command = "cycle_interior";
-	frequency = 1379;
-	master_tag = "d0_airlock";
 	name = "interior access button";
 	pixel_x = 26;
-	pixel_y = 23
+	pixel_y = 23;
+	frequency = 1379;
+	command = "cycle_interior";
+	master_tag = "d0_airlock"
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/zeroport)
@@ -5985,8 +5985,8 @@
 /obj/item/material/shard,
 /obj/item/material/shard{
 	icon_state = "medium";
-	pixel_y = -7;
-	pixel_x = -3
+	pixel_x = -3;
+	pixel_y = -7
 	},
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/abchemistry)
@@ -6146,9 +6146,9 @@
 /area/maintenance/abcargo)
 "Am" = (
 /obj/machinery/button/remote/airlock{
-	id = "MaintRoom1";
 	name = "Bolt Control";
 	pixel_y = 30;
+	id = "MaintRoom1";
 	specialfunctions = 4
 	},
 /obj/structure/bed/pillowpilefront/teal,
@@ -6175,8 +6175,8 @@
 /area/maintenance/ragecage)
 "Ay" = (
 /obj/machinery/power/apc{
-	dir = 1;
 	name = "north bump";
+	dir = 1;
 	pixel_y = 24
 	},
 /obj/structure/cable{
@@ -6345,8 +6345,8 @@
 /obj/effect/floor_decal/borderfloorblack,
 /obj/effect/floor_decal/industrial/danger,
 /obj/machinery/power/apc{
-	dir = 4;
 	name = "east bump";
+	dir = 4;
 	pixel_x = 24
 	},
 /obj/structure/cable{
@@ -6567,8 +6567,8 @@
 /area/maintenance/thrift)
 "Cf" = (
 /obj/machinery/power/apc{
-	dir = 1;
 	name = "north bump";
+	dir = 1;
 	pixel_y = 24
 	},
 /obj/structure/cable{
@@ -6810,8 +6810,8 @@
 	dir = 4
 	},
 /obj/machinery/power/apc{
-	dir = 4;
 	name = "east bump";
+	dir = 4;
 	pixel_x = 24;
 	locked = 0
 	},
@@ -7222,8 +7222,8 @@
 	dir = 8
 	},
 /obj/machinery/power/apc{
-	dir = 8;
 	name = "west bump";
+	dir = 8;
 	pixel_x = -24
 	},
 /obj/structure/cable{
@@ -7385,12 +7385,12 @@
 	pixel_y = 5
 	},
 /obj/item/paper/guide/gravity{
-	pixel_y = -4;
-	pixel_x = 5
+	pixel_x = 5;
+	pixel_y = -4
 	},
 /obj/machinery/camera/network/engineering{
-	c_tag = "ENG - Gravity Generator Entrance";
-	dir = 4
+	dir = 4;
+	c_tag = "ENG - Gravity Generator Entrance"
 	},
 /turf/simulated/floor/tiled,
 /area/maintenance/substation/gravgen)
@@ -7398,8 +7398,8 @@
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/purple/border,
 /obj/random/plushie{
-	pixel_y = 4;
-	pixel_x = 16
+	pixel_x = 16;
+	pixel_y = 4
 	},
 /turf/simulated/floor/tiled/white,
 /area/maintenance/abscience)
@@ -7654,8 +7654,8 @@
 	pixel_x = 5
 	},
 /obj/random/plushie{
-	pixel_y = 4;
-	pixel_x = 16
+	pixel_x = 16;
+	pixel_y = 4
 	},
 /turf/simulated/floor/tiled/white,
 /area/maintenance/abscience)
@@ -7669,8 +7669,8 @@
 "GP" = (
 /obj/effect/floor_decal/rust,
 /obj/machinery/power/apc{
-	dir = 8;
 	name = "west bump";
+	dir = 8;
 	pixel_x = -24
 	},
 /obj/structure/cable{
@@ -7686,15 +7686,15 @@
 "GQ" = (
 /obj/item/material/shard{
 	icon_state = "medium";
-	pixel_y = -7;
-	pixel_x = -3
+	pixel_x = -3;
+	pixel_y = -7
 	},
 /obj/item/material/shard{
 	icon_state = "medium"
 	},
 /obj/item/reagent_containers/glass/beaker/large{
-	pixel_y = 5;
-	pixel_x = -8
+	pixel_x = -8;
+	pixel_y = 5
 	},
 /turf/simulated/floor/reinforced,
 /area/maintenance/abchemistry)
@@ -7747,8 +7747,8 @@
 /area/maintenance/zerobar)
 "Hd" = (
 /obj/machinery/power/apc{
-	dir = 1;
 	name = "north bump";
+	dir = 1;
 	pixel_y = 24
 	},
 /obj/structure/cable{
@@ -7837,8 +7837,8 @@
 	dir = 1
 	},
 /obj/machinery/door/airlock/multi_tile/metal/mait{
-	dir = 2;
-	name = "Maintenance Access"
+	name = "Maintenance Access";
+	dir = 2
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/maintenance/zeroaft)
@@ -8201,9 +8201,9 @@
 /area/maintenance/engineering/gravgen)
 "IX" = (
 /obj/machinery/firealarm{
+	dir = 1;
 	layer = 3.3;
-	pixel_x = -30;
-	dir = 1
+	pixel_x = -30
 	},
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/thrift)
@@ -8232,8 +8232,8 @@
 	dir = 4
 	},
 /obj/machinery/power/apc{
-	dir = 1;
 	name = "north bump";
+	dir = 1;
 	pixel_y = 24
 	},
 /obj/structure/cable{
@@ -8348,8 +8348,8 @@
 	dir = 1
 	},
 /obj/machinery/door/airlock/multi_tile/metal/mait{
-	dir = 2;
-	name = "Maintenance Access"
+	name = "Maintenance Access";
+	dir = 2
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/maintenance/abhydroponicssupp)
@@ -8486,8 +8486,8 @@
 "Kk" = (
 /obj/random/trash,
 /obj/machinery/power/apc{
-	dir = 8;
 	name = "west bump";
+	dir = 8;
 	pixel_x = -24
 	},
 /obj/structure/cable{
@@ -8732,8 +8732,8 @@
 "Lv" = (
 /obj/structure/bed/chair,
 /obj/machinery/power/apc{
-	dir = 1;
 	name = "north bump";
+	dir = 1;
 	pixel_y = 24
 	},
 /obj/structure/cable{
@@ -9197,14 +9197,14 @@
 /area/maintenance/zerocent)
 "NR" = (
 /obj/item/storage/firstaid/regular{
-	empty = 1;
 	name = "First-Aid (empty)";
 	pixel_x = 5;
-	pixel_y = 5
+	pixel_y = 5;
+	empty = 1
 	},
 /obj/item/storage/firstaid/regular{
-	empty = 1;
-	name = "First-Aid (empty)"
+	name = "First-Aid (empty)";
+	empty = 1
 	},
 /turf/simulated/floor/reinforced,
 /area/maintenance/abchemistry)
@@ -9219,9 +9219,9 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/firealarm{
+	dir = 1;
 	layer = 3.3;
-	pixel_x = -30;
-	dir = 1
+	pixel_x = -30
 	},
 /turf/simulated/floor/tiled/hydro,
 /area/maintenance/abhydroponics)
@@ -9351,8 +9351,8 @@
 	},
 /obj/machinery/door/firedoor/multi_tile,
 /obj/machinery/door/airlock/multi_tile/metal/mait{
-	dir = 8;
-	name = "Maintenance Access"
+	name = "Maintenance Access";
+	dir = 8
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/maintenance/zerobar)
@@ -9412,8 +9412,8 @@
 /obj/structure/table/marble,
 /obj/random/cigarettes,
 /obj/item/radio/subspace{
-	pixel_y = 8;
-	pixel_x = 6
+	pixel_x = 6;
+	pixel_y = 8
 	},
 /turf/simulated/floor/lino,
 /area/maintenance/zerobar)
@@ -9527,8 +9527,8 @@
 /area/maintenance/thrift)
 "Pg" = (
 /obj/machinery/camera/network/engineering{
-	c_tag = "ENG - Technical Storage";
-	dir = 1
+	dir = 1;
+	c_tag = "ENG - Technical Storage"
 	},
 /obj/machinery/power/breakerbox,
 /turf/simulated/floor/tiled,
@@ -9735,8 +9735,8 @@
 /area/maintenance/ragecage)
 "Qd" = (
 /obj/random/plushie{
-	pixel_y = -3;
-	pixel_x = -11
+	pixel_x = -11;
+	pixel_y = -3
 	},
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/abscience)
@@ -9762,8 +9762,8 @@
 	dir = 5
 	},
 /obj/machinery/camera/network/engineering{
-	c_tag = "ENG - Technical Storage";
-	dir = 1
+	dir = 1;
+	c_tag = "ENG - Technical Storage"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 5
@@ -9869,8 +9869,8 @@
 "QP" = (
 /obj/machinery/floodlight,
 /obj/machinery/power/apc{
-	dir = 1;
 	name = "north bump";
+	dir = 1;
 	pixel_y = 24
 	},
 /obj/structure/cable{
@@ -10270,8 +10270,8 @@
 /area/maintenance/field)
 "ST" = (
 /obj/machinery/power/apc{
-	dir = 1;
 	name = "north bump";
+	dir = 1;
 	pixel_y = 24
 	},
 /obj/structure/cable{
@@ -10483,8 +10483,8 @@
 	dir = 8
 	},
 /obj/machinery/power/apc{
-	dir = 8;
 	name = "west bump";
+	dir = 8;
 	pixel_x = -24
 	},
 /obj/structure/cable{
@@ -10721,8 +10721,8 @@
 	},
 /obj/item/smes_coil/super_io,
 /obj/item/multitool{
-	pixel_y = -9;
-	pixel_x = 8
+	pixel_x = 8;
+	pixel_y = -9
 	},
 /obj/item/tool/screwdriver{
 	pixel_x = -5
@@ -10754,8 +10754,8 @@
 /area/maintenance/zerocent)
 "Va" = (
 /obj/item/reagent_containers/syringe/drugs{
-	pixel_y = 5;
-	pixel_x = 7
+	pixel_x = 7;
+	pixel_y = 5
 	},
 /obj/item/reagent_containers/syringe/drugs,
 /turf/simulated/floor/reinforced,
@@ -10784,8 +10784,8 @@
 	icon_state = "0-8"
 	},
 /obj/machinery/power/apc{
-	dir = 4;
 	name = "east bump";
+	dir = 4;
 	pixel_x = 24
 	},
 /obj/machinery/light_switch{
@@ -10893,8 +10893,8 @@
 "Vz" = (
 /obj/item/stool/baystool/padded,
 /obj/machinery/computer/security/telescreen/entertainment{
-	pixel_y = -3;
-	pixel_x = -32
+	pixel_x = -32;
+	pixel_y = -3
 	},
 /turf/simulated/floor/wood/turfpack/station,
 /area/maintenance/zerobar)
@@ -11015,8 +11015,8 @@
 /area/space)
 "Wa" = (
 /obj/machinery/power/apc{
-	dir = 4;
 	name = "east bump";
+	dir = 4;
 	pixel_x = 24
 	},
 /obj/structure/cable{
@@ -11205,8 +11205,8 @@
 	},
 /obj/machinery/door/firedoor/multi_tile,
 /obj/machinery/door/airlock/multi_tile/metal/mait{
-	dir = 8;
-	name = "Cargo Warehouse"
+	name = "Cargo Warehouse";
+	dir = 8
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/maintenance/abcargo)
@@ -11314,8 +11314,8 @@
 /area/maintenance/zerobar)
 "Xt" = (
 /obj/item/reagent_containers/syringe/drugs{
-	pixel_y = 5;
-	pixel_x = 7
+	pixel_x = 7;
+	pixel_y = 5
 	},
 /obj/item/reagent_containers/syringe/drugs,
 /obj/item/storage/pill_bottle/happy{
@@ -11375,8 +11375,8 @@
 "XD" = (
 /obj/effect/floor_decal/rust,
 /obj/machinery/power/apc{
-	dir = 1;
 	name = "north bump";
+	dir = 1;
 	pixel_y = 24
 	},
 /obj/structure/cable{
@@ -11434,12 +11434,12 @@
 	pixel_y = 7
 	},
 /obj/random/plushie{
-	pixel_y = -3;
-	pixel_x = -11
+	pixel_x = -11;
+	pixel_y = -3
 	},
 /obj/random/plushie{
-	pixel_y = 4;
-	pixel_x = 16
+	pixel_x = 16;
+	pixel_y = 4
 	},
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/plating/turfpack/station,
@@ -11527,8 +11527,8 @@
 /area/maintenance/abhydroponics)
 "Yb" = (
 /obj/machinery/power/apc{
-	dir = 1;
 	name = "north bump";
+	dir = 1;
 	pixel_y = 24
 	},
 /obj/structure/cable/cyan{
@@ -11584,8 +11584,8 @@
 /area/space)
 "Yo" = (
 /turf/simulated/wall{
-	can_open = 1;
-	desc = "A huge chunk of metal used to seperate rooms. There are scratch marks along the floor."
+	desc = "A huge chunk of metal used to seperate rooms. There are scratch marks along the floor.";
+	can_open = 1
 	},
 /area/maintenance/zeroaft)
 "Yp" = (
@@ -11638,8 +11638,8 @@
 	dir = 9
 	},
 /obj/machinery/power/apc{
-	dir = 1;
 	name = "north bump";
+	dir = 1;
 	pixel_y = 24
 	},
 /obj/structure/cable{
@@ -11741,8 +11741,8 @@
 	dir = 4
 	},
 /obj/machinery/power/apc{
-	dir = 1;
 	name = "north bump";
+	dir = 1;
 	pixel_y = 24
 	},
 /obj/structure/cable{
@@ -11782,8 +11782,8 @@
 /area/maintenance/zeroaft)
 "Zf" = (
 /obj/machinery/power/apc{
-	dir = 1;
 	name = "north bump";
+	dir = 1;
 	pixel_y = 24
 	},
 /obj/structure/cable/cyan{
@@ -11808,13 +11808,13 @@
 "Zk" = (
 /obj/structure/table/reinforced,
 /obj/item/reagent_containers/syringe/drugs{
-	pixel_y = 5;
-	pixel_x = 7
+	pixel_x = 7;
+	pixel_y = 5
 	},
 /obj/item/storage/pill_bottle/happy,
 /obj/item/reagent_containers/glass/beaker/vial/microcillin{
-	pixel_y = 4;
-	pixel_x = -6
+	pixel_x = -6;
+	pixel_y = 4
 	},
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/abchemistry)
@@ -11875,44 +11875,44 @@
 	pixel_y = -6
 	},
 /obj/item/cell/apc{
-	pixel_y = 15;
-	pixel_x = -5
+	pixel_x = -5;
+	pixel_y = 15
 	},
 /obj/item/cell/apc{
 	pixel_x = -5;
 	pixel_y = -6
 	},
 /obj/item/cell/apc{
-	pixel_y = 5;
-	pixel_x = -5
+	pixel_x = -5;
+	pixel_y = 5
 	},
 /obj/item/cell/apc{
-	pixel_y = 15;
-	pixel_x = 5
+	pixel_x = 5;
+	pixel_y = 15
 	},
 /obj/item/cell/apc{
-	pixel_y = 15;
-	pixel_x = -5
+	pixel_x = -5;
+	pixel_y = 15
 	},
 /obj/item/cell/apc{
-	pixel_y = 15;
-	pixel_x = -5
+	pixel_x = -5;
+	pixel_y = 15
 	},
 /obj/item/cell/apc{
-	pixel_y = 15;
-	pixel_x = 5
+	pixel_x = 5;
+	pixel_y = 15
 	},
 /obj/item/cell/apc{
-	pixel_y = 15;
-	pixel_x = 5
+	pixel_x = 5;
+	pixel_y = 15
 	},
 /obj/item/cell/apc{
-	pixel_y = 5;
-	pixel_x = -5
+	pixel_x = -5;
+	pixel_y = 5
 	},
 /obj/item/cell/apc{
-	pixel_y = 5;
-	pixel_x = -5
+	pixel_x = -5;
+	pixel_y = 5
 	},
 /obj/item/cell/apc{
 	pixel_x = 5;
@@ -11958,8 +11958,8 @@
 	},
 /obj/random/trash,
 /obj/machinery/power/apc{
-	dir = 1;
 	name = "north bump";
+	dir = 1;
 	pixel_y = 24
 	},
 /obj/structure/cable{
@@ -12015,8 +12015,8 @@
 	},
 /obj/item/reagent_containers/hypospray/autoinjector/biginjector/expired,
 /obj/machinery/power/apc{
-	dir = 1;
 	name = "north bump";
+	dir = 1;
 	pixel_y = 24
 	},
 /obj/structure/cable{
