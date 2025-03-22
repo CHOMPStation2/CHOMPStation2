@@ -1,7 +1,7 @@
 /*
 A work in progress, lore will go here later. "Later." // Chompstation snrk, Rykka waz here. *pawstamp*
 List of things solar grubs should be able to do:
-
+1. What happened to item 1? Did one of you dorks eat it? :T -Ace
 2. have three stages of growth depending on time. (Or energy drained altho that seems like a hard one to code)
 3. be capable of eating people that get knocked out. (also be able to shock attackers that don’t wear insulated gloves.)
 5. ((potentially use digested people to reproduce))
@@ -15,29 +15,45 @@ List of things solar grubs should be able to do:
 	Therefore, if you see the grubs, kill them while they're small, or things might escalate." // TODO: PORT SOLAR MOTHS - Rykka
 	value = CATALOGUER_REWARD_EASY
 
+<<<<<<< HEAD
 var/global/moth_amount = 0 // Chompstation Addition, Rykka waz here. *pawstamp*
+=======
+// var/global/moth_amount = 0 // Chompstation, Rykka waz here. *pawstamp*
+// Ace was here too. Vorestation doesn't have solar moths yet! Uncomment this if someone else adds them. I don't know if Vorestation will like them.
+>>>>>>> 6755e5dc26 (Updates grubs and jelly blobs to match Chompstation levels of detail, fixes missing overlays (#17395))
 
 /mob/living/simple_mob/vore/solargrub
 	name = "juvenile solargrub"
 	desc = "A young sparkling solargrub"
 	catalogue_data = list(/datum/category_item/catalogue/fauna/solargrub)
+<<<<<<< HEAD
 	icon = 'icons/mob/vore.dmi' //all of these are placeholders - placeholder much? Been ages. :p CHOMPStation Edit, Rykka waz here. *pawstamp*
+=======
+	icon = 'icons/mob/vore.dmi'
+>>>>>>> 6755e5dc26 (Updates grubs and jelly blobs to match Chompstation levels of detail, fixes missing overlays (#17395))
 	icon_state = "solargrub"
 	icon_living = "solargrub"
 	icon_dead = "solargrub-dead"
 
+<<<<<<< HEAD
 	// CHOMPEDIT Start, Rykka waz here. *pawstamp*
 	var/charge = null // CHOMPEDIT The amount of power we sucked off, in K as in THOUSANDS.
 	var/can_evolve = 1 // CHOMPEDIT VAR to decide whether this subspecies is allowed to become a queen
 	var/adult_forms = "/mob/living/simple_mob/vore/solarmoth" // CHOMPEDIT VAR that decides what mob the queen form is. ex /mob/living/simple_mob/subtypes/vore/solarmoth
 	// CHOMPEDIT End, Rykka waz here. *pawstamp*
+=======
+	var/charge = null // The amount of power we sucked off, in K as in THOUSANDS.
+	var/can_evolve = 0 // To decide whether this subspecies is allowed to become a queen, which Ace has set as 0 because there's no evolution form yet.
+	var/adult_forms = null // This decides what mob the queen form is. ex adult_forms = /mob/living/simple_mob/subtypes/vore/solarmoth
+	// Don't leave that as null if you add solar moths.
+>>>>>>> 6755e5dc26 (Updates grubs and jelly blobs to match Chompstation levels of detail, fixes missing overlays (#17395))
 
 	faction = FACTION_GRUBS
-	maxHealth = 50 //grubs can take a lot of harm
+	maxHealth = 50
 	health = 50
 
 	melee_damage_lower = 1
-	melee_damage_upper = 3	//low damage, but poison and stuns are strong
+	melee_damage_upper = 3 	//low damage, but poison and stuns are strong
 
 	movement_cooldown = 3
 
@@ -57,7 +73,11 @@ var/global/moth_amount = 0 // Chompstation Addition, Rykka waz here. *pawstamp*
 	var/datum/powernet/PN            // Our powernet
 	var/obj/structure/cable/attached        // the attached cable
 	var/shock_chance = 10 // Beware
+<<<<<<< HEAD
 	var/powerdraw = 100000 // previous value 150000 // CHOMPStation Addition, Rykka waz here. *pawstamp*
+=======
+	var/powerdraw = 100000
+>>>>>>> 6755e5dc26 (Updates grubs and jelly blobs to match Chompstation levels of detail, fixes missing overlays (#17395))
 	var/tracked = FALSE
 
 	can_be_drop_prey = FALSE //CHOMP Add
@@ -89,8 +109,13 @@ var/global/moth_amount = 0 // Chompstation Addition, Rykka waz here. *pawstamp*
 				sparks.start()
 			anchored = TRUE
 			PN = attached.powernet
+<<<<<<< HEAD
 			PN.draw_power(powerdraw) // previous value 150000 // CHOMPEDIT Start, Rykka waz here. *pawstamp*
 			charge = charge + (powerdraw/1000) //This adds raw powerdraw to charge(Charge is in Ks as in 1 = 1000) // CHOMPEDIT End, Rykka waz here. *pawstamp*
+=======
+			PN.draw_power(powerdraw)
+			charge = charge + (powerdraw/1000) //This adds raw powerdraw to charge(Charge is in Ks as in 1 = 1000)
+>>>>>>> 6755e5dc26 (Updates grubs and jelly blobs to match Chompstation levels of detail, fixes missing overlays (#17395))
 			var/apc_drain_rate = 750 //Going to see if grubs are better as a minimal bother. previous value : 4000
 			for(var/obj/machinery/power/terminal/T in PN.nodes)
 				if(istype(T.master, /obj/machinery/power/apc))
@@ -102,6 +127,25 @@ var/global/moth_amount = 0 // Chompstation Addition, Rykka waz here. *pawstamp*
 		else if(!attached && anchored)
 			anchored = FALSE
 			PN = null
+		/*if(prob(1) && charge >= 32000 && can_evolve == 1 && moth_amount < 1) //it's reading from the moth_amount global list to determine if it can evolve. There should only ever be a maxcap of 1 existing solar moth alive at any time. TODO: make the code decrease the list after 1 has spawned this shift.
+			anchored = 0
+			PN = attached.powernet
+			release_vore_contents()
+			if(prey_excludes)
+				prey_excludes.Cut()
+			moth_amount = moth_amount + 1
+			death_star()*/ // Removed until moths added.
+
+/mob/living/simple_mob/vore/solargrub/proc/death_star()
+	visible_message(span_warning("\The [src]'s shell rips open and evolves!"))
+
+/*
+//Commenting this bit out. It's unncecessary, especially since we only use one form.
+	var/chosen_form = pickweight(adult_forms)
+	new chosen_form(get_turf(src))
+*/
+	new adult_forms(get_turf(src)) //Added this line to spawn the only form because the above is commented out.
+	qdel(src)
 
 		// CHOMPEDIT Start, Rykka waz here. *pawstamp*
 		if(prob(1) && charge >= 32000 && can_evolve == 1 && moth_amount < 1) //it's reading from the moth_amount global list to determine if it can evolve. There should only ever be a maxcap of 1 existing solar moth alive at any time. TODO: make the code decrease the list after 1 has spawned this shift.
@@ -184,11 +228,20 @@ var/global/moth_amount = 0 // Chompstation Addition, Rykka waz here. *pawstamp*
 	var/obj/belly/B = vore_selected
 	B.name = "stomach"
 	B.desc = "Through either grave error, overwhelming willingness, or some other factor, you find yourself lodged halfway past the solargrub's mandibles. While it had initially hissed and chittered in glee at the prospect of a new meal, it is clearly more versed in suckling on power cables; inch by inch, bit by bit, it undulates forth to slowly, noisily gulp you down its short esophagus... and right into its extra-cramped, surprisingly hot stomach. As the rest of you spills out into the plush-walled chamber, the grub's soft body bulges outwards here and there with your compressed figure. Before long, a thick slime oozes out from the surrounding stomach walls; only time will tell how effective it is on something solid like you..."
+<<<<<<< HEAD
 	B.vore_sound = "Tauric Swallow"				// CHOMPedit - Fancy Vore Sounds
 	B.release_sound = "Pred Escape"				// CHOMPedit - Fancy Vore Sounds
 	B.fancy_vore = 1							// CHOMPedit - Fancy Vore Sounds
 	B.belly_fullscreen_color = "#baca24" 		// CHOMPedit - Belly Fullscreen
 	B.belly_fullscreen = "anim_belly" 			// CHOMPedit - Belly Fullscreen
+=======
+	B.vore_sound = "Tauric Swallow"
+	B.release_sound = "Pred Escape"
+	B.fancy_vore = 1
+	B.belly_fullscreen_color = "#baca24"
+	B.belly_fullscreen = "VBOanim_belly1"
+	B.colorization_enabled = TRUE
+>>>>>>> 6755e5dc26 (Updates grubs and jelly blobs to match Chompstation levels of detail, fixes missing overlays (#17395))
 
 	B.emote_lists[DM_HOLD] = list(
 		"The air trapped within the solargrub is hot, humid, and tinged with ozone, but otherwise mercifully harmless to you aside from being heavy on the lungs.",

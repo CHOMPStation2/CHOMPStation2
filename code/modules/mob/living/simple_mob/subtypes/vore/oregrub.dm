@@ -58,11 +58,17 @@
 	var/min_ore = 4
 	var/max_ore = 7
 
+<<<<<<< HEAD
 	vore_bump_chance = 60 // CHOMPEdit - Un-disabled.
 	vore_bump_emote = "applies minimal effort to try and slurp up"
 	vore_active = 1 // CHOMPEdit - Un-disabled.
+=======
+	vore_bump_chance = 60
+	vore_bump_emote = "applies minimal effort to try and slurp up"
+	vore_active = 1
+>>>>>>> 6755e5dc26 (Updates grubs and jelly blobs to match Chompstation levels of detail, fixes missing overlays (#17395))
 	vore_capacity = 1
-	vore_pounce_chance = 0 //grubs only eat incapacitated targets
+	vore_pounce_chance = 50 // Might seem unforgiving, but these guys run away from enemies, making them more of an environmental hazard than a real threat. You have to bump them.
 	vore_default_mode = DM_DIGEST
 
 	min_oxy = 0
@@ -164,7 +170,10 @@
 		to_chat(L, span_warning("You feel fire running through your veins!"))
 		L.reagents.add_reagent(poison_type, poison_per_bite)
 
+<<<<<<< HEAD
 // CHOMPEdit - Un-disabled.
+=======
+>>>>>>> 6755e5dc26 (Updates grubs and jelly blobs to match Chompstation levels of detail, fixes missing overlays (#17395))
 /mob/living/simple_mob/vore/oregrub/init_vore()
 	if(!voremob_loaded)
 		return
@@ -174,6 +183,7 @@
 	var/obj/belly/B = vore_selected
 	B.name = "stomach"
 	B.desc = "Through either grave error, overwhelming willingness, or some other factor, you find yourself lodged halfway past the grub's mandibles. While it had initially hissed and chittered in glee at the prospect of a new meal, it is clearly more versed in crunching ores to feed off of; inch by inch, bit by bit, it undulates forth to slowly, noisily gulp you down its short esophagus... and right into its extra-cramped, surprisingly hot stomach. As the rest of you spills out into the plush-walled chamber, the grub's soft body bulges outwards here and there with your compressed figure. Before long, a thick slime oozes out from the surrounding stomach walls; only time will tell how effective it is on something fleshy like you, although given it's usual diet..."
+<<<<<<< HEAD
 	B.vore_sound = "Tauric Swallow"				// CHOMPedit - Fancy Vore Sounds
 	B.release_sound = "Pred Escape"				// CHOMPedit - Fancy Vore Sounds
 	B.fancy_vore = 1							// CHOMPedit - Fancy Vore Sounds
@@ -181,6 +191,16 @@
 	B.belly_fullscreen = "anim_belly" 			// CHOMPedit - Belly Fullscreen
 
 	// CHOMPEdit: Yes, these are copied + modified from the solargrub list. These are better placeholders than ~nothing~, and will give us more voremobs to work with.
+=======
+	B.vore_sound = "Tauric Swallow"
+	B.release_sound = "Pred Escape"
+	B.fancy_vore = 1
+	B.belly_fullscreen_color = "#1b4ba3"
+	B.belly_fullscreen = "VBOanim_belly1"
+	B.colorization_enabled = TRUE
+
+	// Yes, these are copied + modified from the solargrub list. These are better placeholders than ~nothing~, and will give us more voremobs to work with.
+>>>>>>> 6755e5dc26 (Updates grubs and jelly blobs to match Chompstation levels of detail, fixes missing overlays (#17395))
 	B.emote_lists[DM_HOLD] = list(
 		"The air trapped within the grub is hot, humid, and tinged with soot, but otherwise mercifully harmless to you aside from being heavy on the lungs.",
 		"Your doughy, squishy surroundings heavily pulse around your body as the grub attempts to wriggle elsewhere, its solid prey weighing it down quite a bit.",
@@ -204,4 +224,8 @@
 		return
 	.=..()
 	var/obj/belly/B = vore_selected
+<<<<<<< HEAD
 	B.belly_fullscreen_color = "#cf741e" 		// CHOMPedit - Belly Fullscreen
+=======
+	B.belly_fullscreen_color = "#cf741e"
+>>>>>>> 6755e5dc26 (Updates grubs and jelly blobs to match Chompstation levels of detail, fixes missing overlays (#17395))
