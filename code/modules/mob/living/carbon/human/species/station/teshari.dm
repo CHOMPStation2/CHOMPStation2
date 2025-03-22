@@ -53,11 +53,11 @@
 	slowdown = -1
 	snow_movement = -2	// Ignores light snow
 	item_slowdown_mod = 2	// Tiny birds don't like heavy things
-	//Chompedit begins
+	//CHOMPEdit Start
 	total_health = 75 
 	brute_mod = 1 
 	burn_mod =  1 
-	//Chompedit end
+	//CHOMPEdit End
 	mob_size = MOB_SMALL
 	pass_flags = PASSTABLE
 	holder_type = /obj/item/holder/micro //CHOMPEdit from holder/human to holder/micro
