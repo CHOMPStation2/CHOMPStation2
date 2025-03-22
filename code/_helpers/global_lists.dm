@@ -408,15 +408,9 @@ var/global/list/item_tf_spawnpoints = list() // Global variable tracking which i
 var/global/list/vr_mob_tf_options = list(
 	"Borg" = /mob/living/silicon/robot,
 	"Cortical borer" = /mob/living/simple_mob/animal/borer/non_antag,
-<<<<<<< HEAD
 	"Hyena" = /mob/living/simple_mob/animal/hyena, //TODO: Port from Downstream //CHOMPStation Enable
 	"Giant spider" = /mob/living/simple_mob/animal/giant_spider/thermic,
 	"Armadillo" = /mob/living/simple_mob/animal/passive/armadillo, //TODO: Port from Downstream //CHOMPStation Enable
-=======
-	//"Hyena" = /mob/living/simple_mob/animal/hyena, //TODO: Port from Downstream
-	"Giant spider" = /mob/living/simple_mob/animal/giant_spider/thermic,
-	//"Armadillo" = /mob/living/simple_mob/animal/passive/armadillo, //TODO: Port from Downstream
->>>>>>> 95e3bf67c4 (VR pod and mob TF fixes & adjustments (#17397))
 	"Parrot" = /mob/living/simple_mob/animal/passive/bird/parrot,
 	"Cat" = /mob/living/simple_mob/animal/passive/cat,
 	"Corgi" = /mob/living/simple_mob/animal/passive/dog/corgi,
@@ -424,7 +418,6 @@ var/global/list/vr_mob_tf_options = list(
 	"Frog" = /mob/living/simple_mob/vore/aggressive/frog,
 	"Seagull" =/mob/living/simple_mob/vore/seagull,
 	"Fox" = /mob/living/simple_mob/animal/passive/fox,
-<<<<<<< HEAD
 	"Racoon" = /mob/living/simple_mob/animal/passive/raccoon_ch, //TODO: Port from Downstream //CHOMPStation Enable
 	"Shantak" = /mob/living/simple_mob/animal/sif/shantak,
 	"Goose" = /mob/living/simple_mob/animal/space/goose,
@@ -434,17 +427,6 @@ var/global/list/vr_mob_tf_options = list(
 	"Construct Artificer" = /mob/living/simple_mob/construct/artificer,
 	"Tech golem" = /mob/living/simple_mob/mechanical/technomancer_golem,
 	"Metroid" = /mob/living/simple_mob/metroid/juvenile/baby, //TODO: Port from Downstream //CHOMPStation Enable
-=======
-	//"Racoon" = /mob/living/simple_mob/animal/passive/raccoon_ch, //TODO: Port from Downstream
-	"Shantak" = /mob/living/simple_mob/animal/sif/shantak,
-	"Goose" = /mob/living/simple_mob/animal/space/goose,
-	"Space shark" = /mob/living/simple_mob/animal/space/shark,
-	//"Synx" = /mob/living/simple_mob/animal/synx, //TODO: Port from Downstream
-	"Dire wolf" = /mob/living/simple_mob/vore/wolf/direwolf,
-	"Construct Artificer" = /mob/living/simple_mob/construct/artificer,
-	"Tech golem" = /mob/living/simple_mob/mechanical/technomancer_golem,
-	//"Metroid" = /mob/living/simple_mob/metroid/juvenile/baby, //TODO: Port from Downstream
->>>>>>> 95e3bf67c4 (VR pod and mob TF fixes & adjustments (#17397))
 	"Otie" = /mob/living/simple_mob/vore/otie/cotie/chubby,
 	"Red-eyed Shadekin" = /mob/living/simple_mob/shadekin/red,
 	"Blue-eyed Shadekin" = /mob/living/simple_mob/shadekin/blue,
@@ -453,15 +435,9 @@ var/global/list/vr_mob_tf_options = list(
 	"Yellow-eyed Shadekin" = /mob/living/simple_mob/shadekin/yellow,
 	"Slime" = /mob/living/simple_mob/slime/xenobio/metal,
 	"Corrupt hound" = /mob/living/simple_mob/vore/aggressive/corrupthound,
-<<<<<<< HEAD
 	"Deathclaw" = /mob/living/simple_mob/vore/aggressive/deathclaw/den, //Downstream uses /den variant here. //CHOMPStation Enable
 	"Weretiger" = /mob/living/simple_mob/vore/weretiger,
 	"Mimic" = /mob/living/simple_mob/vore/aggressive/mimic/floor/plating, //Downstream uses /floor/plating variant here //CHOMPStation Enable
-=======
-	"Deathclaw" = /mob/living/simple_mob/vore/aggressive/deathclaw, //Downstream uses /den variant here.
-	"Weretiger" = /mob/living/simple_mob/vore/weretiger,
-	"Mimic" = /mob/living/simple_mob/vore/aggressive/mimic, //Downstream uses /floor/plating variant here
->>>>>>> 95e3bf67c4 (VR pod and mob TF fixes & adjustments (#17397))
 	"Giant rat" = /mob/living/simple_mob/vore/aggressive/rat,
 	"Catslug" = /mob/living/simple_mob/vore/alienanimals/catslug,
 	"Dust jumper" = /mob/living/simple_mob/vore/alienanimals/dustjumper,
@@ -469,18 +445,13 @@ var/global/list/vr_mob_tf_options = list(
 	"Teppi" = /mob/living/simple_mob/vore/alienanimals/teppi,
 	"Bee" = /mob/living/simple_mob/vore/bee,
 	"Dragon" = /mob/living/simple_mob/vore/bigdragon/friendly,
-<<<<<<< HEAD
 	"Riftwalker" = /mob/living/simple_mob/vore/demon/wendigo, //Downstream uses /wendigo variant here //CHOMPStation Enable
-=======
-	"Riftwalker" = /mob/living/simple_mob/vore/demon, //Downstream uses /wendigo variant here
->>>>>>> 95e3bf67c4 (VR pod and mob TF fixes & adjustments (#17397))
 	"Horse" = /mob/living/simple_mob/vore/horse/big,
 	"Morph" = /mob/living/simple_mob/vore/morph,
 	"Leopardmander" = /mob/living/simple_mob/vore/leopardmander,
 	"Rabbit" = /mob/living/simple_mob/vore/rabbit,
 	"Red panda" = /mob/living/simple_mob/vore/redpanda,
 	"Sect drone" = /mob/living/simple_mob/vore/sect_drone,
-<<<<<<< HEAD
 	"Armalis vox" = /mob/living/simple_mob/vox/armalis, //TODO: Port from Downstream //CHOMPStation Enable
 	"Xeno hunter" = /mob/living/simple_mob/xeno_ch/hunter, //TODO: Port from Downstream //CHOMPStation Enable
 	"Xeno queen" = /mob/living/simple_mob/xeno_ch/queen/maid, //TODO: Port from Downstream //CHOMPStation Enable
@@ -492,19 +463,6 @@ var/global/list/vr_mob_tf_options = list(
 	"Abyss leaper" = /mob/living/simple_mob/vore/vore_hostile/leaper,
 	"Gelatinous cube" = /mob/living/simple_mob/vore/vore_hostile/gelatinous_cube,
 	"Gryphon" = /mob/living/simple_mob/vore/gryphon //TODO: Port from Downstream //CHOMPStation Enable
-=======
-	//"Armalis vox" = /mob/living/simple_mob/vox/armalis, //TODO: Port from Downstream
-	//"Xeno hunter" = /mob/living/simple_mob/xeno_ch/hunter, //TODO: Port from Downstream
-	//"Xeno queen" = /mob/living/simple_mob/xeno_ch/queen/maid, //TODO: Port from Downstream
-	//"Xeno sentinel" = /mob/living/simple_mob/xeno_ch/sentinel, //TODO: Port from Downstream
-	"Space carp" = /mob/living/simple_mob/animal/space/carp,
-	"Jelly blob" = /mob/living/simple_mob/vore/jelly,
-	//"SWOOPIE XL" = /mob/living/simple_mob/vore/aggressive/corrupthound/swoopie, //TODO: Port from Downstream
-	"Abyss lurker" = /mob/living/simple_mob/vore/vore_hostile/abyss_lurker,
-	"Abyss leaper" = /mob/living/simple_mob/vore/vore_hostile/leaper,
-	"Gelatinous cube" = /mob/living/simple_mob/vore/vore_hostile/gelatinous_cube,
-	//"Gryphon" = /mob/living/simple_mob/vore/gryphon //TODO: Port from Downstream
->>>>>>> 95e3bf67c4 (VR pod and mob TF fixes & adjustments (#17397))
 	)
 
 var/global/list/vr_mob_spawner_options = list(
@@ -522,13 +480,8 @@ var/global/list/vr_mob_spawner_options = list(
 	"Fennec" = /mob/living/simple_mob/vore/fennec,
 	"Seagull" =/mob/living/simple_mob/vore/seagull,
 	"Corgi" = /mob/living/simple_mob/animal/passive/dog/corgi,
-<<<<<<< HEAD
 	"Armadillo" = /mob/living/simple_mob/animal/passive/armadillo, //TODO: Port from Downstream //CHOMPStation Enable
 	"Racoon" = /mob/living/simple_mob/animal/passive/raccoon_ch, //TODO: Port from Downstream //CHOMPStation Enable
-=======
-	//"Armadillo" = /mob/living/simple_mob/animal/passive/armadillo, //TODO: Port from Downstream
-	//"Racoon" = /mob/living/simple_mob/animal/passive/raccoon_ch, //TODO: Port from Downstream
->>>>>>> 95e3bf67c4 (VR pod and mob TF fixes & adjustments (#17397))
 	"Goose" = /mob/living/simple_mob/animal/space/goose,
 	"Frog" = /mob/living/simple_mob/vore/aggressive/frog,
 	"Dust jumper" = /mob/living/simple_mob/vore/alienanimals/dustjumper,
@@ -540,20 +493,12 @@ var/global/list/vr_mob_spawner_options = list(
 	"Red otie" = /mob/living/simple_mob/vore/otie/red,
 	"Giant rat" = /mob/living/simple_mob/vore/aggressive/rat,
 	"Giant snake" = /mob/living/simple_mob/vore/aggressive/giant_snake,
-<<<<<<< HEAD
 	"Hyena" = /mob/living/simple_mob/animal/hyena, //TODO: Port from Downstream //CHOMPStation Enable
-=======
-	//"Hyena" = /mob/living/simple_mob/animal/hyena, //TODO: Port from Downstream
->>>>>>> 95e3bf67c4 (VR pod and mob TF fixes & adjustments (#17397))
 	"Space shark" = /mob/living/simple_mob/animal/space/shark,
 	"Shantak" = /mob/living/simple_mob/animal/sif/shantak,
 	"Kururak" = /mob/living/simple_mob/animal/sif/kururak,
 	"Teppi" = /mob/living/simple_mob/vore/alienanimals/teppi,
-<<<<<<< HEAD
 	"Slug" = /mob/living/simple_mob/vore/slug, //TODO: Port from Downstream //CHOMPStation Enable
-=======
-	//"Slug" = /mob/living/simple_mob/vore/slug, //TODO: Port from Downstream
->>>>>>> 95e3bf67c4 (VR pod and mob TF fixes & adjustments (#17397))
 	"Catslug" = /mob/living/simple_mob/vore/alienanimals/catslug,
 	"Weretiger" = /mob/living/simple_mob/vore/weretiger,
 	"Dust jumper" = /mob/living/simple_mob/vore/alienanimals/dustjumper,
@@ -565,7 +510,6 @@ var/global/list/vr_mob_spawner_options = list(
 	"Abyss leaper" = /mob/living/simple_mob/vore/vore_hostile/leaper,
 	"Gelatinous cube" = /mob/living/simple_mob/vore/vore_hostile/gelatinous_cube,
 	"Panther" = /mob/living/simple_mob/vore/aggressive/panther,
-<<<<<<< HEAD
 	"Lizard man" = /mob/living/simple_mob/vore/aggressive/lizardman, //TODO: Port from Downstream //CHOMPStation Enable
 	"Pakkun" = /mob/living/simple_mob/vore/pakkun,
 	"Synx" = /mob/living/simple_mob/animal/synx, //TODO: Port from Downstream //CHOMPStation Enable
@@ -578,20 +522,6 @@ var/global/list/vr_mob_spawner_options = list(
 	"Zeta metroid" = /mob/living/simple_mob/metroid/juvenile/zeta, //TODO: Port from Downstream //CHOMPStation Enable
 	"Omega metroid" = /mob/living/simple_mob/metroid/juvenile/omega, //TODO: Port from Downstream //CHOMPStation Enable
 	"Queen metroid" = /mob/living/simple_mob/metroid/juvenile/queen, //TODO: Port from Downstream //CHOMPStation Enable
-=======
-	//"Lizard man" = /mob/living/simple_mob/vore/aggressive/lizardman, //TODO: Port from Downstream
-	"Pakkun" = /mob/living/simple_mob/vore/pakkun,
-	//"Synx" = /mob/living/simple_mob/animal/synx, //TODO: Port from Downstream
-	"Jelly blob" = /mob/living/simple_mob/vore/jelly,
-	"Voracious lizard" = /mob/living/simple_mob/vore/aggressive/dino,
-	//"Baby metroid" = /mob/living/simple_mob/metroid/juvenile/baby, //TODO: Port from Downstream
-	//"Super metroid" = /mob/living/simple_mob/metroid/juvenile/super, //TODO: Port from Downstream
-	//"Alpha metroid" = /mob/living/simple_mob/metroid/juvenile/alpha, //TODO: Port from Downstream
-	//"Gamma metroid" = /mob/living/simple_mob/metroid/juvenile/gamma, //TODO: Port from Downstream
-	//"Zeta metroid" = /mob/living/simple_mob/metroid/juvenile/zeta, //TODO: Port from Downstream
-	//"Omega metroid" = /mob/living/simple_mob/metroid/juvenile/omega, //TODO: Port from Downstream
-	//"Queen metroid" = /mob/living/simple_mob/metroid/juvenile/queen, //TODO: Port from Downstream
->>>>>>> 95e3bf67c4 (VR pod and mob TF fixes & adjustments (#17397))
 	"Xeno hunter" = /mob/living/simple_mob/animal/space/alien,
 	"Xeno sentinel" = /mob/living/simple_mob/animal/space/alien/sentinel,
 	"Xeno Praetorian" = /mob/living/simple_mob/animal/space/alien/sentinel/praetorian,
@@ -605,7 +535,6 @@ var/global/list/vr_mob_spawner_options = list(
 	"Great White Wolf" = /mob/living/simple_mob/vore/greatwolf,
 	"Great Black Wolf" = /mob/living/simple_mob/vore/greatwolf/black,
 	"Solar grub" = /mob/living/simple_mob/vore/solargrub,
-<<<<<<< HEAD
 	"Pitcher plant" = /mob/living/simple_mob/vore/pitcher_plant, //TODO: Port from Downstream //CHOMPStation Enable
 	"Red gummy kobold" = /mob/living/simple_mob/vore/candy/redcabold, //TODO: Port from Downstream //CHOMPStation Enable
 	"Blue gummy kobold" = /mob/living/simple_mob/vore/candy/bluecabold, //TODO: Port from Downstream //CHOMPStation Enable
@@ -613,15 +542,6 @@ var/global/list/vr_mob_spawner_options = list(
 	"Marshmellow serpent" = /mob/living/simple_mob/vore/candy/marshmellowserpent, //TODO: Port from Downstream //CHOMPStation Enable
 	"Riftwalker" = /mob/living/simple_mob/vore/demon,
 	"Wendigo" = /mob/living/simple_mob/vore/demon/wendigo, //TODO: Port from Downstream //CHOMPStation Enable
-=======
-	//"Pitcher plant" = /mob/living/simple_mob/vore/pitcher_plant, //TODO: Port from Downstream
-	//"Red gummy kobold" = /mob/living/simple_mob/vore/candy/redcabold, //TODO: Port from Downstream
-	//"Blue gummy kobold" = /mob/living/simple_mob/vore/candy/bluecabold, //TODO: Port from Downstream
-	//"Yellow gummy kobold" = /mob/living/simple_mob/vore/candy/yellowcabold, //TODO: Port from Downstream
-	//"Marshmellow serpent" = /mob/living/simple_mob/vore/candy/marshmellowserpent, //TODO: Port from Downstream
-	"Riftwalker" = /mob/living/simple_mob/vore/demon,
-	//"Wendigo" = /mob/living/simple_mob/vore/demon/wendigo, //TODO: Port from Downstream
->>>>>>> 95e3bf67c4 (VR pod and mob TF fixes & adjustments (#17397))
 	"Shadekin" = /mob/living/simple_mob/shadekin,
 	"Catgirl" = /mob/living/simple_mob/vore/catgirl,
 	"Wolfgirl" = /mob/living/simple_mob/vore/wolfgirl,
@@ -629,19 +549,11 @@ var/global/list/vr_mob_spawner_options = list(
 	"Lamia" = /mob/living/simple_mob/vore/lamia,
 	"Corrupt hound" = /mob/living/simple_mob/vore/aggressive/corrupthound,
 	"Corrupt corrupt hound" = /mob/living/simple_mob/vore/aggressive/corrupthound/prettyboi,
-<<<<<<< HEAD
 	"SWOOPIE XL" = /mob/living/simple_mob/vore/aggressive/corrupthound/swoopie, //TODO: Port from Downstream //CHOMPStation Enable
 	"Cultist Teshari" = /mob/living/simple_mob/humanoid/cultist/tesh, //TODO: Port from Downstream //CHOMPStation Enable
 	"Burning Mage" = /mob/living/simple_mob/humanoid/cultist/human/bloodjaunt/fireball, //TODO: Port from Downstream //CHOMPStation Enable
 	"Converted" = /mob/living/simple_mob/humanoid/cultist/noodle, //TODO: Port from Downstream //CHOMPStation Enable
 	"Cultist Teshari Mage" = /mob/living/simple_mob/humanoid/cultist/castertesh, //TODO: Port from Downstream //CHOMPStation Enable
-=======
-	//"SWOOPIE XL" = /mob/living/simple_mob/vore/aggressive/corrupthound/swoopie, //TODO: Port from Downstream
-	//"Cultist Teshari" = /mob/living/simple_mob/humanoid/cultist/tesh, //TODO: Port from Downstream
-	//"Burning Mage" = /mob/living/simple_mob/humanoid/cultist/human/bloodjaunt/fireball, //TODO: Port from Downstream
-	//"Converted" = /mob/living/simple_mob/humanoid/cultist/noodle, //TODO: Port from Downstream
-	//"Cultist Teshari Mage" = /mob/living/simple_mob/humanoid/cultist/castertesh, //TODO: Port from Downstream
->>>>>>> 95e3bf67c4 (VR pod and mob TF fixes & adjustments (#17397))
 	"Monkey" = /mob/living/carbon/human/monkey,
 	"Wolpin" = /mob/living/carbon/human/wolpin,
 	"Sparra" = /mob/living/carbon/human/sparram,

@@ -29,22 +29,14 @@
 		spawn(50)
 			if(QDELETED(character) || QDELETED(pref))
 				return // They might have been deleted during the wait
-<<<<<<< HEAD
-			if(!character.virtual_reality_mob && !(/mob/living/carbon/human/proc/exit_vr in character.verbs)) // CHOMPedit start: janky fix to prevent resleeving VR avatars but beats refactoring transcore
-=======
 			if(!character.virtual_reality_mob && !(/mob/living/carbon/human/proc/exit_vr in character.verbs)) //Janky fix to prevent resleeving VR avatars but beats refactoring transcore
->>>>>>> 95e3bf67c4 (VR pod and mob TF fixes & adjustments (#17397))
 				if(pref.resleeve_scan)
 					var/datum/transhuman/body_record/BR = new()
 					BR.init_from_mob(character, pref.resleeve_scan, pref.resleeve_lock)
 				if(pref.mind_scan)
 					var/datum/transcore_db/our_db = SStranscore.db_by_key(null)
 					if(our_db)
-<<<<<<< HEAD
-						our_db.m_backup(character.mind,character.nif,one_time = TRUE) // CHOMPedit end
-=======
 						our_db.m_backup(character.mind,character.nif,one_time = TRUE)
->>>>>>> 95e3bf67c4 (VR pod and mob TF fixes & adjustments (#17397))
 			if(pref.resleeve_lock)
 				character.resleeve_lock = character.ckey
 			character.original_player = character.ckey
