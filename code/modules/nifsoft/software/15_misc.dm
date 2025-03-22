@@ -122,8 +122,13 @@
 	name = "Mass Alteration"
 	desc = "A system that allows one to change their size, through drastic mass rearrangement. Causes significant wear when installed."
 	list_pos = NIF_SIZECHANGE
+<<<<<<< HEAD
 	cost = 375
 	wear = 0.5
+=======
+	cost = 300
+	wear = 1
+>>>>>>> d788537d1b (Fixed sizechange nifsoft wear and cost (#17401))
 
 /datum/nifsoft/sizechange/activate()
 	if((. = ..()))
