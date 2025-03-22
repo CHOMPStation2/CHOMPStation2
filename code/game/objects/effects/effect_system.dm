@@ -589,10 +589,6 @@ steam.start() -- spawns the effect
 			round(min(flash, BOMBCAP_FLASH_RADIUS))
 			)
 
-////////////////////////////////////////////
-// A fancier teleport, used in hyper pads
-////////////////////////////////////////////
-
 /obj/effect/effect/teleport_greyscale
 	name = "teleportation"
 	icon = 'icons/effects/effects.dmi'
