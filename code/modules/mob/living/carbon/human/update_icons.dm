@@ -1141,7 +1141,6 @@ GLOBAL_LIST_EMPTY(damage_icon_parts) //see UpdateDamageIcon()
 
 	var/image/wing_image = get_wing_image(FALSE)
 
-
 	if(wing_image)
 		wing_image.layer = BODY_LAYER+WING_LAYER
 		overlays_standing[WING_LAYER] = wing_image
