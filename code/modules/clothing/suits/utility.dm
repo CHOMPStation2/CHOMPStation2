@@ -114,7 +114,7 @@
 /obj/item/clothing/head/radiation/teshari
 	name = "Small radiation hood"
 	desc = "A specialist hood with radiation protective properties, designed specifically for use by Teshari. Made to order by Aether."
-	icon = 'icons/inventory/head/item_teshari.dmi' //CHOMPEdit - Actually use the proper icon path... (I'll up-port it in a bit)
+	icon = 'icons/inventory/head/item_teshari.dmi'
 	icon_override = 'icons/inventory/head/mob_teshari.dmi'
 	icon_state = "rad_fitted"
 	species_restricted = list(SPECIES_TESHARI)
