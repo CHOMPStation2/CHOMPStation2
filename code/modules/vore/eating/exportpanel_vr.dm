@@ -27,13 +27,8 @@
 	var/list/data = list()
 	var/mob/living/host = user
 
-<<<<<<< HEAD
-	data["db_version"] = "0.1"
-	data["db_repo"] = "chompstation" // CHOMPEdit
-=======
 	data["db_version"] = "0.2"
-	data["db_repo"] = "vorestation"
->>>>>>> 2a83d9da7f (allows soulcatcher import and export (#17391))
+	data["db_repo"] = "chompstation" // CHOMPEdit
 	data["mob_name"] = host.real_name
 
 	for(var/belly in host.vore_organs)
