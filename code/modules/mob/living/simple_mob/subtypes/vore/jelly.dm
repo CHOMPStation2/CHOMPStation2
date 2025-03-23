@@ -68,6 +68,11 @@
 	B.digest_brute = 0.3
 	B.digest_burn = 0.3
 	B.escapechance = 10 // You were dumb enough to walk into it or stand still, now good luck escaping.
+	// CHOMPAdd Start
+	B.contaminates = 1
+	B.contamination_flavor = "Slimy"
+	B.contamination_color = "green"
+	// CHOMPAdd End
 	B.item_digest_mode = IM_HOLD
 	B.belly_fullscreen = "VBOanim_belly1"
 	B.belly_fullscreen_color = "#823232"
