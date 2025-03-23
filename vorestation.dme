@@ -3353,7 +3353,11 @@
 #include "code\modules\mob\living\carbon\human\species\station\traits_vr\negative_ch.dm"
 #include "code\modules\mob\living\carbon\human\species\station\traits_vr\negative_genes.dm"
 #include "code\modules\mob\living\carbon\human\species\station\traits_vr\neutral.dm"
+<<<<<<< HEAD
 #include "code\modules\mob\living\carbon\human\species\station\traits_vr\neutral_ch.dm"
+=======
+#include "code\modules\mob\living\carbon\human\species\station\traits_vr\neutral_genes.dm"
+>>>>>>> 0b366a90f9 (Trait Adjustments (#17392))
 #include "code\modules\mob\living\carbon\human\species\station\traits_vr\positive.dm"
 #include "code\modules\mob\living\carbon\human\species\station\traits_vr\positive_ch.dm"
 #include "code\modules\mob\living\carbon\human\species\station\traits_vr\positive_genes.dm"
