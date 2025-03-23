@@ -104,27 +104,7 @@ var/global/moth_amount = 0 // CHOMPEnable, Rykka waz here. *pawstamp*
 		else if(!attached && anchored)
 			anchored = FALSE
 			PN = null
-		/*if(prob(1) && charge >= 32000 && can_evolve == 1 && moth_amount < 1) //it's reading from the moth_amount global list to determine if it can evolve. There should only ever be a maxcap of 1 existing solar moth alive at any time. TODO: make the code decrease the list after 1 has spawned this shift.
-			anchored = 0
-			PN = attached.powernet
-			release_vore_contents()
-			if(prey_excludes)
-				prey_excludes.Cut()
-			moth_amount = moth_amount + 1
-			death_star()*/ // Removed until moths added.
-
-/mob/living/simple_mob/vore/solargrub/proc/death_star()
-	visible_message(span_warning("\The [src]'s shell rips open and evolves!"))
-
-/*
-//Commenting this bit out. It's unncecessary, especially since we only use one form.
-	var/chosen_form = pickweight(adult_forms)
-	new chosen_form(get_turf(src))
-*/
-	new adult_forms(get_turf(src)) //Added this line to spawn the only form because the above is commented out.
-	qdel(src)
-
-		// CHOMPEDIT Start, Rykka waz here. *pawstamp*
+		//CHOMPEnable Start
 		if(prob(1) && charge >= 32000 && can_evolve == 1 && moth_amount < 1) //it's reading from the moth_amount global list to determine if it can evolve. There should only ever be a maxcap of 1 existing solar moth alive at any time. TODO: make the code decrease the list after 1 has spawned this shift.
 			anchored = 0
 			PN = attached.powernet
@@ -133,6 +113,7 @@ var/global/moth_amount = 0 // CHOMPEnable, Rykka waz here. *pawstamp*
 				prey_excludes.Cut()
 			moth_amount = moth_amount + 1
 			death_star()
+		// CHOMPEnable End
 
 /mob/living/simple_mob/vore/solargrub/proc/death_star()
 	visible_message(span_warning("\The [src]'s shell rips open and evolves!"))
@@ -144,7 +125,6 @@ var/global/moth_amount = 0 // CHOMPEnable, Rykka waz here. *pawstamp*
 */
 	new adult_forms(get_turf(src)) //Added this line to spawn the only form because the above is commented out.
 	qdel(src)
-// CHOMPEDIT End, Rykka waz here. *pawstamp*
 
 /mob/living/simple_mob/vore/solargrub //active noms
 	vore_bump_chance = 50
