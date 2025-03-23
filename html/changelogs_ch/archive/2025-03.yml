@@ -491,3 +491,28 @@
   - rscadd: 'cracked and broken YR3 monitor icons
 
       fix:fixes legs on YR3 enviroshell being the wrong way around on side sprites'
+2025-03-23:
+  CHOMPStation2StaffMirrorBot:
+  - qol: changing your scale under the VORE tab will autofill your *current* scale
+      instead of defaulting to the minimum of 25
+  - balance: Adjusted cost and wear of Mass Alteration
+  - bugfix: Liquid bellies won't create nonexistent chems
+  - code_imp: fixed various issues related to placing and cutting heavy cables
+  - code_imp: added option in code to allow players to cut heavy cables with a welder
+  - qol: Teshari no longer have double slowdown from radsuits
+  - bugfix: Missing internal overlays on grubs and jelly blobs are restored.
+  - code_imp: Fleshed out grubs and jelly blobs.
+  Diana:
+  - bugfix: Internals will now not randomly turn off
+  TheGreatKitsune:
+  - rscadd: Adds radiation suits for teshari to some lockers in Southern Cross
+  - bugfix: Fixes sprite used for teshari radiation hood
+  Will:
+  - rscadd: The CHEM ANALYZER has been COMPLETELY reworked. Give it a look!
+  - qol: Chem analyzer will give you MUCH more information now.
+  - bugfix: frostoil reaction for steel+plasteel now works properly
+  - bugfix: vaccine -> antibody reaction fixed
+  - code_imp: Backend stuff to ensure broken chemical reactions will never happen
+      again.
+  crabcube:
+  - balance: tesh health and damage

@@ -1,5 +1,0 @@
-author: "TheGreatKitsune"
-delete-after: True
-changes:
-  - rscadd: "Adds radiation suits for teshari to some lockers in Southern Cross"
-  - bugfix: "Fixes sprite used for teshari radiation hood"
