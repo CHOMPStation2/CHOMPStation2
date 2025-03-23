@@ -196,10 +196,17 @@
 		)
 
 /*
+<<<<<<< HEAD
 	belter_docked_z = 		list(Z_LEVEL_SPACE_LOW)
 	belter_transit_z =	 	list(Z_LEVEL_MISC)
 	belter_belt_z = 		list(Z_LEVEL_ROGUEMINE_1,
 						 		 Z_LEVEL_ROGUEMINE_2)
+=======
+	belter_docked_z = 		list(Z_LEVEL_TETHER_SPACE_LOW)
+	belter_transit_z =		list(Z_NAME_ALIAS_MISC)
+	belter_belt_z = 		list(Z_NAME_TETHER_ROGUEMINE_1,
+								Z_NAME_TETHER_ROGUEMINE_2)
+>>>>>>> 2556102719 (only tab indentation (#17408))
 
 	mining_station_z =		list(Z_LEVEL_SPACE_LOW)
 	mining_outpost_z =		list(Z_LEVEL_SURFACE_MINE)

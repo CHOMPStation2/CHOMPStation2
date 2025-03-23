@@ -218,6 +218,7 @@
 		if(ishuman(M))
 			var/mob/living/carbon/human/H = M
 			if(H == user)
+<<<<<<< HEAD
 				if(icon_state == "scrap" && H.check_has_mouth()) //YW Edit Start
 					user << span_warning("You begin to stuff \the [src] into your mouth!")
 					if(do_after(user, 30))
@@ -227,6 +228,17 @@
 						qdel(src)
 				else
 					user << span_notice("You wipe off the lipstick with [src].")
+=======
+				to_chat(user, span_notice("You wipe off the lipstick with [src]."))
+				H.lip_style = null
+				H.update_icons_body()
+			else
+				user.visible_message(span_warning("[user] begins to wipe [H]'s lipstick off with \the [src]."), \
+										span_notice("You begin to wipe off [H]'s lipstick."))
+				if(do_after(user, 10) && do_after(H, 10, 5, 0))	//user needs to keep their active hand, H does not.
+					user.visible_message(span_notice("[user] wipes [H]'s lipstick off with \the [src]."), \
+											span_notice("You wipe off [H]'s lipstick."))
+>>>>>>> 2556102719 (only tab indentation (#17408))
 					H.lip_style = null
 					H.update_icons_body()
 			else

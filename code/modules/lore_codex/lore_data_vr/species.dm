@@ -19,6 +19,7 @@
 /datum/lore/codex/page/human/add_content()
 	name = "Human"
 	keywords += list("Humanity")
+<<<<<<< HEAD
 	data = "Humans are a race of 'ape'-like creatures from the continental planet Earth in the Sol system. They are the primary driving \
 	force for rapid space expansion, owing to their strong, expansionist central government and opportunistic [quick_link("TSC","Trans-Stellar Corporations")]. \
 	The prejudices of their 21st century history have mostly given way to bitter divides on the most important issue of the times- technological \
@@ -27,6 +28,18 @@
 	While most humans have accepted the existence of aliens in their communities and workplaces as a fact of life, exceptions abound. \
 	While more culturally diverse than most species, humans are generally regarded as somewhat technophobic and isolationist by members \
 	of other species."
+=======
+	data = "Humanity, everything and nothing can be said about them. As diverse is their thinking, as fractured is their society. \
+	Intrepid and mercantile, brutal if needed to, Humanity has formed a great diaspora among the stars primarily driven by their innate curiosity and love for adventure and exploration.\
+	While a good half of them live under the wing of the Sol-Procyon Commonwealth, centered around their home planet Earth,\
+	the extremely diverse political theory they have accumulated over the centuries led to many splits, arguments and secessions.\
+	<br><br>\
+	While most humans are accepting of other species and simply want to earn an honest paycheck, the best and worst are found among them. \
+	You never know what a human is going to be like when you first meet them.\
+	<br><br>\
+	Humans are most well-known for the stalemate and eventual peace with the Unathi during the Hegemony War, \
+	firmly cementing them as one of the major species in the Orion Spur."
+>>>>>>> 2556102719 (only tab indentation (#17408))
 
 /datum/lore/codex/page/skrell
 	name = "Skrell"
