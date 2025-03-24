@@ -104,9 +104,9 @@
 	START_PROCESSING(SSobj, src)
 	return ..()
 
-/obj/effect/spider/eggcluster/New(var/location, var/atom/parent)
+/obj/effect/spider/eggcluster/Initialize(mapload, var/atom/parent)
+	. = ..()
 	get_light_and_color(parent)
-	..()
 
 /obj/effect/spider/eggcluster/Destroy()
 	STOP_PROCESSING(SSobj, src)
@@ -169,8 +169,13 @@
 			/mob/living/simple_mob/animal/giant_spider/webslinger, /mob/living/simple_mob/animal/giant_spider/phorogenic, /mob/living/simple_mob/animal/giant_spider/carrier,
 			/mob/living/simple_mob/animal/giant_spider/ion)
 
+<<<<<<< HEAD
 /obj/effect/spider/spiderling/New(var/location, var/atom/parent)
 	..()
+=======
+/obj/effect/spider/spiderling/Initialize(mapload, var/atom/parent)
+	. = ..()
+>>>>>>> d3b7ba8b43 (next new to init (#17400))
 	pixel_x = rand(6,-6)
 	pixel_y = rand(6,-6)
 	START_PROCESSING(SSobj, src)
@@ -300,8 +305,8 @@
 	desc = "There's a special aura about this one."
 	grow_as = list(/mob/living/simple_mob/animal/giant_spider/nurse/queen)
 
-/obj/effect/spider/spiderling/princess/New(var/location, var/atom/parent)
-	..()
+/obj/effect/spider/spiderling/princess/Initialize(mapload, var/atom/parent)
+	. = ..()
 	amount_grown = 50
 
 /obj/effect/decal/cleanable/spiderling_remains
@@ -316,8 +321,9 @@
 	icon_state = "cocoon1"
 	health = 15
 
-/obj/effect/spider/cocoon/New()
-		icon_state = pick("cocoon1","cocoon2","cocoon3")
+/obj/effect/spider/cocoon/Initialize(mapload)
+	. = ..()
+	icon_state = pick("cocoon1","cocoon2","cocoon3")
 
 /obj/effect/spider/cocoon/Destroy()
 	src.visible_message(span_warning("\The [src] splits open."))

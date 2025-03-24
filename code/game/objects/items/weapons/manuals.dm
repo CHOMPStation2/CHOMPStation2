@@ -11,9 +11,6 @@
 	item_state = "book15"
 	author = "Engineering Encyclopedia"		 // Who wrote the thing, can be changed by pen or PC. It is not automatically assigned
 	title = "Particle Accelerator User's Guide"
-
-/obj/item/book/manual/engineering_particle_accelerator/New()
-	..()
 	dat = {"<html>
 				<head>
 				<style>
@@ -59,9 +56,12 @@
 	item_state = "book15"
 	author = "Central Engineering Division"
 	title = "Supermatter Engine Operating Manual"
+<<<<<<< HEAD
 
 /obj/item/book/manual/supermatter_engine/New()
 	..()			//CHOMPEdit Start - Updated Supermatter Engine Manual
+=======
+>>>>>>> d3b7ba8b43 (next new to init (#17400))
 	dat = {"<html>
 				<head>
 				<style>
@@ -216,10 +216,13 @@
 	item_state = "book15"
 	author = "Central Engineering Division"
 	title = "R-UST Operating Manual"
+<<<<<<< HEAD
 
 //R-UST guide Re-Writen by Gozulio to reflect how the R-UST actually operates. (CHOMPedit, re-written again :3 By Foxglove)
 /obj/item/book/manual/rust_engine/New()
 	..()
+=======
+>>>>>>> d3b7ba8b43 (next new to init (#17400))
 	dat = {"<html>
 				<head>
 				<style>

@@ -24,6 +24,7 @@
 	teleport_y = y --
 	teleport_z = Z_LEVEL_GB_BOTTOM
 
+<<<<<<< HEAD
 /turf/unsimulated/mineral/virgo3b
 	blocks_air = TRUE
 
@@ -98,6 +99,11 @@ VIRGO3B_TURF_CREATE(/turf/simulated/floor/outdoors/rocks)
 		var/datum/effect/effect/system/spark_spread/s = new /datum/effect/effect/system/spark_spread
 		s.set_up(5, 1, src)
 		s.start()
+=======
+/turf/simulated/floor/maglev/Initialize(mapload)
+	. = ..()
+	shock_area = /area/centcom/terminal/tramfluff
+>>>>>>> d3b7ba8b43 (next new to init (#17400))
 
 // Shelter Capsule extra restrictions
 /datum/map_template/shelter/New()
