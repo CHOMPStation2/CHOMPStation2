@@ -99,8 +99,8 @@
 	else
 		to_chat(src, span_warning("Your mob does not have a PDA in its ID slot."))
 
-/mob/living/simple_mob/New(var/newloc)
-	..()
+/mob/living/simple_mob/Initialize(mapload)
+	. = ..()
 	add_verb(src,/mob/living/simple_mob/proc/use_headset) //CHOMPEdit TGPanel
 	add_verb(src,/mob/living/simple_mob/proc/use_pda) //CHOMPEdit TGPanel
 

@@ -21,15 +21,12 @@
 	var/amount_grown = 0
 	var/metroid_type = /mob/living/simple_mob/metroid/juvenile/baby
 
-/obj/effect/metroid/egg/Initialize(mapload)
+/obj/effect/metroid/egg/Initialize(mapload, var/atom/parent)
+	get_light_and_color(parent)
+	. = ..()
 	pixel_x = rand(3,-3)
 	pixel_y = rand(3,-3)
 	START_PROCESSING(SSobj, src)
-	return ..()
-
-/obj/effect/metroid/egg/New(var/location, var/atom/parent)
-	get_light_and_color(parent)
-	..()
 
 /obj/effect/metroid/egg/Destroy()
 	STOP_PROCESSING(SSobj, src)

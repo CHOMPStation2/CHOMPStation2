@@ -62,8 +62,8 @@
 	projectile_type = /obj/item/projectile/simple_bullet
 	var/ammo_flags = 0
 
-/obj/item/ammo_casing/simple/New()
-	..()
+/obj/item/ammo_casing/simple/Initialize(mapload)
+	. = ..()
 	var/obj/item/projectile/simple_bullet/P = BB
 	if(istype(P))
 		P.ammo_flags = ammo_flags

@@ -332,7 +332,6 @@
 	to_chat(M, span_danger("BANG"))						// Called during the loop that bangs people in lockers/containers and when banging
 	playsound(src, 'sound/effects/bang.ogg', 50, 1, 30)		// people in normal view.  Could theroetically be called during other explosions.
 
-<<<<<<< HEAD
 
 	//Checking for protections
 	var/eye_safety = 0
@@ -398,10 +397,8 @@
 	else if(M.ear_damage >= 5)
 		to_chat(M, span_danger("Your ears start to ring!"))
 //CHOMPEdit End
-/obj/item/gun/magnetic/fuelrod/New()
-=======
+
 /obj/item/gun/magnetic/fuelrod/Initialize(mapload)
->>>>>>> d3b7ba8b43 (next new to init (#17400))
 	cell = new /obj/item/cell/high
 	capacitor = new /obj/item/stock_parts/capacitor
 	. = ..()

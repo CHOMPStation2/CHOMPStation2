@@ -19,8 +19,8 @@ Only physical attributes are copied.
 	ai_holder_type = /datum/ai_holder/simple_mob/melee/pack_mob //A pack of these would be absolutely terrifying.
 	var/flesh_mimic = FALSE //are we currently posing as something else?
 
-/mob/living/simple_mob/fleshtaker/New()
-	..()
+/mob/living/simple_mob/fleshtaker/Initialize(mapload)
+	. = ..()
 	base_values["name"] = name
 	base_values["desc"] = desc
 	base_values["icon"] = icon

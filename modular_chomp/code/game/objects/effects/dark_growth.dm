@@ -84,7 +84,7 @@
 		if(!linked_node)
 			qdel(src)
 
-/obj/effect/dark/floor/New(loc, var/node)
+/obj/effect/dark/floor/Initialize(mapload, var/node)
 	. = ..()
 	if(isspace(loc))
 		return INITIALIZE_HINT_QDEL
@@ -104,7 +104,7 @@
 	light_range = 3
 	var/node_range = 9
 
-/obj/structure/prop/dark_node/New()
+/obj/structure/prop/dark_node/Initialize(mapload)
 	. = ..()
 	set_light(light_range, -20, "#FFFFFF")
 	START_PROCESSING(SSobj, src)

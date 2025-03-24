@@ -11,10 +11,7 @@
 	origin_tech = list(TECH_MAGNET = 2, TECH_BIO = 2, TECH_ILLEGAL = 1)
 	possessed_voice = list()
 	var/self_bind = FALSE
-
-/obj/item/mindbinder/New()
-	..()
-	flags |= NOBLUDGEON //So borgs don't spark.
+	flags = NOBLUDGEON
 
 /obj/item/mindbinder/attack(mob/living/M, mob/living/user)
 	usr.setClickCooldown(DEFAULT_ATTACK_COOLDOWN)

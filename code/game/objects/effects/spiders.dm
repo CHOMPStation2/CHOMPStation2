@@ -169,13 +169,8 @@
 			/mob/living/simple_mob/animal/giant_spider/webslinger, /mob/living/simple_mob/animal/giant_spider/phorogenic, /mob/living/simple_mob/animal/giant_spider/carrier,
 			/mob/living/simple_mob/animal/giant_spider/ion)
 
-<<<<<<< HEAD
-/obj/effect/spider/spiderling/New(var/location, var/atom/parent)
-	..()
-=======
 /obj/effect/spider/spiderling/Initialize(mapload, var/atom/parent)
 	. = ..()
->>>>>>> d3b7ba8b43 (next new to init (#17400))
 	pixel_x = rand(6,-6)
 	pixel_y = rand(6,-6)
 	START_PROCESSING(SSobj, src)

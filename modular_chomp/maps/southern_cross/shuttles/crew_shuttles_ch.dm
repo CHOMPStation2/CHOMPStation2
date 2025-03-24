@@ -123,8 +123,8 @@ GLOBAL_LIST_EMPTY(shuttdisp_list)
 		SD.get_my_shuttle()
 	return TRUE
 
-/obj/machinery/status_display/shuttle_display/New()
-	..()
+/obj/machinery/status_display/shuttle_display/Initialize(mapload)
+	. = ..()
 	get_my_shuttle()
 	update()
 

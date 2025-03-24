@@ -56,12 +56,7 @@
 	item_state = "book15"
 	author = "Central Engineering Division"
 	title = "Supermatter Engine Operating Manual"
-<<<<<<< HEAD
-
-/obj/item/book/manual/supermatter_engine/New()
-	..()			//CHOMPEdit Start - Updated Supermatter Engine Manual
-=======
->>>>>>> d3b7ba8b43 (next new to init (#17400))
+	//CHOMPEdit Start - Updated Supermatter Engine Manual
 	dat = {"<html>
 				<head>
 				<style>
@@ -216,13 +211,7 @@
 	item_state = "book15"
 	author = "Central Engineering Division"
 	title = "R-UST Operating Manual"
-<<<<<<< HEAD
-
-//R-UST guide Re-Writen by Gozulio to reflect how the R-UST actually operates. (CHOMPedit, re-written again :3 By Foxglove)
-/obj/item/book/manual/rust_engine/New()
-	..()
-=======
->>>>>>> d3b7ba8b43 (next new to init (#17400))
+	//R-UST guide Re-Writen by Gozulio to reflect how the R-UST actually operates. (CHOMPedit, re-written again :3 By Foxglove)
 	dat = {"<html>
 				<head>
 				<style>
