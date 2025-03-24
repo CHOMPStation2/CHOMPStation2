@@ -360,7 +360,7 @@
 		t = replacetext(t, "\[/row\]", "") //CHOMPEDIT: nuking closing statements for rows.
 		t = replacetext(t, "\[cell\]", "<td>")
 		t = replacetext(t, "\[/cell\]", "") //CHOMPEDIT: nuking closing statements for cells.
-		 //CHOMPEdit Start
+		//CHOMPEdit Start
 		t = replacetext(t, "\[logo\]", "<img src = https://raw.githubusercontent.com/CHOMPStation2/CHOMPStation2/master/html/images/ntlogo.png>")
 		t = replacetext(t, "\[sglogo\]", "<img src = https://raw.githubusercontent.com/CHOMPStation2/CHOMPStation2/master/html/images/sglogo.png>")
 		t = replacetext(t, "\[trlogo\]", "<img src = https://raw.githubusercontent.com/CHOMPStation2/CHOMPStation2/master/html/images/trader.png>")

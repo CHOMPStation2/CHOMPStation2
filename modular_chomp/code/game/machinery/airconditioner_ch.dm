@@ -57,7 +57,7 @@
 		var/cop = removed.temperature/TN60C
 		var/actual_heat_transfer = heat_transfer
 		heat_transfer = min(heat_transfer, active_power_usage*cop)
-		 // power_avail = draw_power(heat_transfer/cop)
+		// power_avail = draw_power(heat_transfer/cop)
 		removed.add_thermal_energy(-min(active_power_usage*1000*cop,actual_heat_transfer))
 	env.merge(removed)
 

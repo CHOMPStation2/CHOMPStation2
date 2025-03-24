@@ -8,7 +8,7 @@
 	desc = "A cold blooded, genderless, parasitic eel from the more distant and stranger areas of the cosmos. Plain, white, perpetually grinning and possessing a hunger as enthusiastic and endless as humanity's sense of exploration."
 	tt_desc = "synxus pergulus"
 
-	 //Synx species belongs to ChimeraSynx , Base sprites made by: SpitefulCrow
+	//Synx species belongs to ChimeraSynx , Base sprites made by: SpitefulCrow
 	icon = 'icons/mob/synx.dmi'//giving synxes their own DMI file!
 	icon_state = "synx_living"
 	icon_living = "synx_living"

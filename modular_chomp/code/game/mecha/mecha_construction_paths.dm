@@ -2,12 +2,12 @@
 /datum/construction/mecha/hades_chassis
 	result = "/obj/mecha/combat/hades"
 	steps = list(list("key"=/obj/item/mecha_parts/part/hades_torso),//1
-					 list("key"=/obj/item/mecha_parts/part/hades_left_arm),//2
-					 list("key"=/obj/item/mecha_parts/part/hades_right_arm),//3
-					 list("key"=/obj/item/mecha_parts/part/hades_left_leg),//4
-					 list("key"=/obj/item/mecha_parts/part/hades_right_leg),//5
-					 list("key"=/obj/item/mecha_parts/part/hades_head)
-					)
+					list("key"=/obj/item/mecha_parts/part/hades_left_arm),//2
+					list("key"=/obj/item/mecha_parts/part/hades_right_arm),//3
+					list("key"=/obj/item/mecha_parts/part/hades_left_leg),//4
+					list("key"=/obj/item/mecha_parts/part/hades_right_leg),//5
+					list("key"=/obj/item/mecha_parts/part/hades_head)
+				)
 
 /datum/construction/mecha/hades_chassis/custom_action(step, obj/item/I, mob/user)
 	user.visible_message("[user] has connected [I] to [holder].", "You connect [I] to [holder]")

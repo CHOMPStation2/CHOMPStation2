@@ -2335,7 +2335,7 @@
 		<b>Available universal slots:</b> [max_universal_equip-universal_equipment.len]<br>
 		<b>Available special slots:</b> [max_special_equip-special_equipment.len]<br>
 		</div></div>
-	 "} */ //CHOMPedit commented micromech stuff, because fuck this trash
+	"} */ //CHOMPedit commented micromech stuff, because fuck this trash
 	return output
 
 /obj/mecha/proc/get_equipment_list() //outputs mecha equipment list in html
