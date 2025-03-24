@@ -42,11 +42,12 @@
 	cast_sound = null			// Sound file played when this is used.
 	var/last_castcheck = null	// The last time this spell was cast.
 
-/obj/item/spell/unrestricted/New()
+/obj/item/spell/unrestricted/Initialize(mapload, coreless)
+	. = ..()
 	if(isliving(loc))
 		owner = loc
 	if(!owner)
-		qdel(src)
+		return INITIALIZE_HINT_QDEL
 	update_icon()
 
 /obj/item/spell/unrestricted/run_checks()

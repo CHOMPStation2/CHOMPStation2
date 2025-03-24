@@ -51,8 +51,8 @@ Maybe later, gotta figure out a way to click yourself when in a locker etc.
 
 	ClickOn(src)
 
-/mob/living/New(var/newloc)
-	..()
+/mob/living/Initialize(mapload)
+	. = ..()
 	add_verb(src,/mob/living/proc/click_self) //CHOMPEdit TGPanel
 */
 

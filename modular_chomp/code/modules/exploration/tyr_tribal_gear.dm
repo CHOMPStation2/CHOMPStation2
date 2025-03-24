@@ -109,8 +109,8 @@
 	desc = "A strange plant."
 	icon_state = "tyrflora"
 
-/obj/structure/flora/tyr/flowers/New()
-	..()
+/obj/structure/flora/tyr/flowers/Initialize(mapload)
+	. = ..()
 	icon_state = "tyrflora[rand(1, 5)]gb"
 
 //tier 2
