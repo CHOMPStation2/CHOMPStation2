@@ -108,7 +108,7 @@
 		else
 			var/available = get_amount()
 			user.balloon_alert_visible("\the [user] starts bandaging [M]'s [affecting.name].", \
-								 "bandaging [M]'s [affecting.name]." ) // CHOMPEdit - Balloon Alerts
+											"bandaging [M]'s [affecting.name]." ) // CHOMPEdit - Balloon Alerts
 			var/used = 0
 			for (var/datum/wound/W in affecting.wounds)
 				if(W.internal)
@@ -131,10 +131,10 @@
 
 				if (W.current_stage <= W.max_bleeding_stage)
 					user.balloon_alert_visible("\the [user] bandages \a [W.desc] on [M]'s [affecting.name].", \
-												  "you bandage \a [W.desc] on [M]'s [affecting.name]." ) // CHOMPEdit - Balloon Alerts
+												"you bandage \a [W.desc] on [M]'s [affecting.name]." ) // CHOMPEdit - Balloon Alerts
 				else
 					user.balloon_alert_visible("\the [user] places a bandage over \a [W.desc] on [M]'s [affecting.name].", \
-												  "you place a bandage over \a [W.desc] on [M]'s [affecting.name]." ) // CHOMPEdit - Balloon Alerts
+												"you place a bandage over \a [W.desc] on [M]'s [affecting.name]." ) // CHOMPEdit - Balloon Alerts
 				W.bandage()
 				playsound(src, pick(apply_sounds), 25)
 				used++
@@ -177,7 +177,7 @@
 		else
 			var/available = get_amount()
 			user.balloon_alert_visible("\the [user] starts treating [M]'s [affecting.name].", \
-								 "treating [M]'s [affecting.name]." ) // CHOMPEdit - Balloon Alerts
+										"treating [M]'s [affecting.name]." ) // CHOMPEdit - Balloon Alerts
 			var/used = 0
 			for (var/datum/wound/W in affecting.wounds)
 				if (W.internal)
@@ -200,14 +200,14 @@
 
 				if (W.current_stage <= W.max_bleeding_stage)
 					user.balloon_alert_visible("\the [user] bandages \a [W.desc] on [M]'s [affecting.name].", \
-												  "bandaged \a [W.desc] on [M]'s [affecting.name]." ) // CHOMPEdit - Balloon Alerts
+												"bandaged \a [W.desc] on [M]'s [affecting.name]." ) // CHOMPEdit - Balloon Alerts
 					//H.add_side_effect("Itch")
 				else if (W.damage_type == BRUISE)
 					user.balloon_alert_visible("\the [user] places a bruise patch over \a [W.desc] on [M]'s [affecting.name].", \
-												  "placed bruise patch over \a [W.desc] on [M]'s [affecting.name]." ) // CHOMPEdit - Balloon Alerts
+												"placed bruise patch over \a [W.desc] on [M]'s [affecting.name]." ) // CHOMPEdit - Balloon Alerts
 				else
 					user.balloon_alert_visible("\the [user] places a bandaid over \a [W.desc] on [M]'s [affecting.name].", \
-												  "placed bandaid over \a [W.desc] on [M]'s [affecting.name]." ) // CHOMPEdit - Balloon Alerts
+												"placed bandaid over \a [W.desc] on [M]'s [affecting.name]." ) // CHOMPEdit - Balloon Alerts
 				W.bandage()
 				// W.disinfect() // VOREStation - Tech1 should not disinfect
 				playsound(src, pick(apply_sounds), 25)
@@ -250,7 +250,7 @@
 			return 1
 		else
 			user.balloon_alert_visible("\the [user] starts salving wounds on [M]'s [affecting.name].", \
-								 "salving the wounds on [M]'s [affecting.name]." ) // CHOMPEdit - Balloon Alerts // CHOMPEdit - Balloon Alerts
+										"salving the wounds on [M]'s [affecting.name]." ) // CHOMPEdit - Balloon Alerts // CHOMPEdit - Balloon Alerts
 			if(!do_mob(user, M, 10, exclusive = TRUE))
 				balloon_alert(user, "stand still to salve wounds.") // CHOMPEdit - Balloon Alerts // CHOMPEdit - Balloon Alerts
 				return 1
@@ -258,7 +258,7 @@
 				balloon_alert(user, "[M]'s [affecting.name] have already been salved.") // CHOMPEdit - Balloon Alerts // CHOMPEdit - Balloon Alerts
 				return 1
 			user.balloon_alert_visible("[user] salved wounds on [M]'s [affecting.name].", \
-									 "salved wounds on [M]'s [affecting.name]." ) // CHOMPEdit - Balloon Alerts // CHOMPEdit - Balloon Alerts
+										"salved wounds on [M]'s [affecting.name]." ) // CHOMPEdit - Balloon Alerts // CHOMPEdit - Balloon Alerts
 			use(1)
 			affecting.salve()
 			playsound(src, pick(apply_sounds), 25)
@@ -296,7 +296,7 @@
 		else
 			var/available = get_amount()
 			user.balloon_alert_visible("\the [user] starts treating [M]'s [affecting.name].", \
-								 "treating [M]'s [affecting.name]." ) // CHOMPEdit - Balloon Alerts // CHOMPEdit - Balloon Alerts
+										"treating [M]'s [affecting.name]." ) // CHOMPEdit - Balloon Alerts // CHOMPEdit - Balloon Alerts
 			var/used = 0
 			for (var/datum/wound/W in affecting.wounds)
 				if (W.internal)
@@ -318,13 +318,13 @@
 
 				if (W.current_stage <= W.max_bleeding_stage)
 					user.balloon_alert_visible("\the [user] cleans \a [W.desc] on [M]'s [affecting.name] and seals the edges with bioglue.", \
-										 "cleaning and sealing \a [W.desc] on [M]'s [affecting.name]." ) // CHOMPEdit - Balloon Alerts
+												"cleaning and sealing \a [W.desc] on [M]'s [affecting.name]." ) // CHOMPEdit - Balloon Alerts
 				else if (W.damage_type == BRUISE)
 					user.balloon_alert_visible("\the [user] places a medical patch over \a [W.desc] on [M]'s [affecting.name].", \
-												  "placed medical patch over \a [W.desc] on [M]'s [affecting.name]." ) // CHOMPEdit - Balloon Alerts
+												"placed medical patch over \a [W.desc] on [M]'s [affecting.name]." ) // CHOMPEdit - Balloon Alerts
 				else
 					user.balloon_alert_visible("\the [user] smears some bioglue over \a [W.desc] on [M]'s [affecting.name].", \
-												  "smeared bioglue over \a [W.desc] on [M]'s [affecting.name]." ) // CHOMPEdit - Balloon Alerts
+												"smeared bioglue over \a [W.desc] on [M]'s [affecting.name]." ) // CHOMPEdit - Balloon Alerts
 				W.bandage()
 				W.disinfect()
 				W.heal_damage(heal_brute)
@@ -364,7 +364,7 @@
 			return 1
 		else
 			user.balloon_alert_visible("\the [user] starts salving wounds on [M]'s [affecting.name].", \
-								 "salving the wounds on [M]'s [affecting.name]." ) // CHOMPEdit - Balloon Alerts
+										"salving the wounds on [M]'s [affecting.name]." ) // CHOMPEdit - Balloon Alerts
 			if(!do_mob(user, M, 10, exclusive = TRUE))
 				balloon_alert(user, "stand still to salve wounds.") // CHOMPEdit - Balloon Alerts
 				return 1

@@ -392,7 +392,7 @@
 			"slime" = image(icon = 'icons/mob/species/protean/protean.dmi', icon_state = "slime"),
 			"chaos" = image(icon = 'icons/mob/species/protean/protean.dmi', icon_state = "chaos"),
 			"cloud" = image(icon = 'icons/mob/species/protean/protean.dmi', icon_state = "cloud"),
-			 // CHOMPEnable Start
+			// CHOMPEnable Start
 			"catslug" = image(icon = 'icons/mob/species/protean/protean.dmi', icon_state = "catslug"),
 			"cat" = image(icon = 'icons/mob/species/protean/protean.dmi', icon_state = "cat"),
 			"mouse" = image(icon = 'icons/mob/species/protean/protean.dmi', icon_state = "mouse"),
