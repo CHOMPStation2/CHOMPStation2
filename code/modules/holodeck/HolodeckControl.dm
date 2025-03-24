@@ -32,38 +32,17 @@
 	"Beach" 			= new/datum/holodeck_program(/area/holodeck/source_beach),
 	"Desert" 			= new/datum/holodeck_program(/area/holodeck/source_desert,
 													list(
-<<<<<<< HEAD
 														'sound/ambience/desert/desertnight1.ogg',
-											 			'sound/ambience/desert/desertnight2.ogg',
-											 			'sound/ambience/desert/desertnight3.ogg',
+														'sound/ambience/desert/desertnight2.ogg',
+														'sound/ambience/desert/desertnight3.ogg',
 														'sound/ambience/desert/desertnight4.ogg'
-												 		)
-		 											),
+														)
+													),
 	"Snowfield" 		= new/datum/holodeck_program(/area/holodeck/source_snowfield,
 													list(
 														'sound/effects/weather/snowstorm/snowstorm_loop.ogg'
-												 		)
-		 											),
-=======
-														'sound/effects/weather/wind/wind_2_1.ogg',
-														'sound/effects/weather/wind/wind_2_2.ogg',
-														'sound/effects/weather/wind/wind_3_1.ogg',
-														'sound/effects/weather/wind/wind_4_1.ogg',
-														'sound/effects/weather/wind/wind_4_2.ogg',
-														'sound/effects/weather/wind/wind_5_1.ogg'
 														)
 													),
-	"Snowfield" 		= new/datum/holodeck_program(/area/holodeck/source_snowfield,
-													list(
-														'sound/effects/weather/wind/wind_2_1.ogg',
-														'sound/effects/weather/wind/wind_2_2.ogg',
-														'sound/effects/weather/wind/wind_3_1.ogg',
-														'sound/effects/weather/wind/wind_4_1.ogg',
-														'sound/effects/weather/wind/wind_4_2.ogg',
-														'sound/effects/weather/wind/wind_5_1.ogg'
-														)
-													),
->>>>>>> 2556102719 (only tab indentation (#17408))
 	"Space" 			= new/datum/holodeck_program(/area/holodeck/source_space,
 													list(
 														'sound/ambience/ambispace.ogg',

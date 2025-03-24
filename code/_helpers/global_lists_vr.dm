@@ -911,19 +911,11 @@ var/global/list/event_wildlife_aquatic = list(
 var/global/list/event_wildlife_roaming = list(
 										list(
 												list(/mob/living/simple_mob/animal/passive/mouse/jerboa = 1,
-<<<<<<< HEAD
-													 /mob/living/simple_mob/animal/passive/mouse/black = 2,
-													 /mob/living/simple_mob/animal/passive/mouse/brown = 2,
-													 /mob/living/simple_mob/animal/passive/mouse/gray = 2,
-													 /mob/living/simple_mob/animal/passive/mouse/white = 2,
-													 /mob/living/simple_mob/animal/passive/mouse/rat/strong = 3), // CHOMPEdit
-=======
 														/mob/living/simple_mob/animal/passive/mouse/black = 2,
 														/mob/living/simple_mob/animal/passive/mouse/brown = 2,
 														/mob/living/simple_mob/animal/passive/mouse/gray = 2,
 														/mob/living/simple_mob/animal/passive/mouse/white = 2,
-														/mob/living/simple_mob/animal/passive/mouse/rat = 3),
->>>>>>> 2556102719 (only tab indentation (#17408))
+														/mob/living/simple_mob/animal/passive/mouse/rat/strong = 3), // CHOMPEdit
 												list(/mob/living/simple_mob/animal/passive/bird/black_bird = 1,
 														/mob/living/simple_mob/animal/passive/bird/azure_tit = 1,
 														/mob/living/simple_mob/animal/passive/bird/european_robin = 1,

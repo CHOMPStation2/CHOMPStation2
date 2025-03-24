@@ -8,23 +8,13 @@
 
 	//VORESTATION Edit - added machine speeches here for better fixing of the event. // CHOMPEdit, using balloon alerts
 
-<<<<<<< HEAD
 	var/list/rampant_speeches = list("try our aggressive new marketing strategies!", \
-									 "you should buy products to feed your lifestyle obession!", \
-									 "consume!", \
-									 "your money can buy happiness!", \
-									 "engage direct marketing!", \
-									 "advertising is legalized lying! But don't let that put you off our great deals!", \
-									 "you don't want to buy anything? Yeah, well I didn't want to buy your mom either.")
-=======
-	var/list/rampant_speeches = list("Try our aggressive new marketing strategies!", \
-										"You should buy products to feed your lifestyle obession!", \
-										"Consume!", \
-										"Your money can buy happiness!", \
-										"Engage direct marketing!", \
-										"Advertising is legalized lying! But don't let that put you off our great deals!", \
-										"You don't want to buy anything? Yeah, well I didn't want to buy your mom either.")
->>>>>>> 2556102719 (only tab indentation (#17408))
+										"you should buy products to feed your lifestyle obession!", \
+										"consume!", \
+										"your money can buy happiness!", \
+										"engage direct marketing!", \
+										"advertising is legalized lying! But don't let that put you off our great deals!", \
+										"you don't want to buy anything? Yeah, well I didn't want to buy your mom either.")
 	//VORESTATION Edit End
 
 /datum/event/brand_intelligence/announce()
