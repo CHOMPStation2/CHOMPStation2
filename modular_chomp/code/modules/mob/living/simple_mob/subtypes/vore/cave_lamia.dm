@@ -14,4 +14,3 @@
 	melee_damage_upper = 5
 	vore_upper_transfer_chance = 75
 	ai_holder_type = /datum/ai_holder/simple_mob/melee/evasive
-	
