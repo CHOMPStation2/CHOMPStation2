@@ -1,4 +1,0 @@
-author: "CHOMPStation2StaffMirrorBot"
-delete-after: True
-changes:
-  - bugfix: "Fixes demuxer output not pushing to other circuits."
