@@ -261,7 +261,7 @@ var/induromol_code = rand(1, 50)
 	for(var/mob/living/carbon/human/H in viewers(T, 2))
 		var/distTo = sqrt(((T.x - H.x) ** 2) + ((T.y - H.y) ** 2))
 		if(distTo < dist && (istype(H.l_hand, /obj/item/reagent_containers) || \
-				 istype(H.r_hand, /obj/item/reagent_containers)))
+		istype(H.r_hand, /obj/item/reagent_containers)))
 			immune = H //so reagent spill does not affect user, they already threw up when it was created
 
 	src = null
@@ -729,7 +729,7 @@ var/induromol_code = rand(1, 50)
 	if(!init)
 		to_chat(M, span_warning("You start tripping balls."))
 		init = 1
-	var/drugs = list(REAGENT_ID_SPACEDRUGS, REAGENT_ID_SEROTROTIUM, REAGENT_ID_PSILOCYBIN, REAGENT_ID_NUKACOLA, REAGENT_ID_ATOMICBOMB, REAGENT_ID_HIPPIESDELIGHT)
+	var/drugs = list(REAGENT_ID_BLISS, REAGENT_ID_SEROTROTIUM, REAGENT_ID_PSILOCYBIN, REAGENT_ID_NUKACOLA, REAGENT_ID_ATOMICBOMB, REAGENT_ID_HIPPIESDELIGHT)
 	for(var/drug in drugs)
 		M.reagents.add_reagent(drug, 1)
 	M.reagents.add_reagent(REAGENT_ID_MINDBREAKER, 0.2)
@@ -1091,7 +1091,7 @@ not yet finished to a satisfactory degree, or I just don't like it enough to kee
 	reaction_turf(var/turf/T, var/volume) //can't melt space, centcomm walls, or shuttles
 											//maybe make work off explosion resistance?
 		if(!istype(T, /turf/space) && !istype(T, /turf/unsimulated/wall) && !istype(T.loc, /area/shuttle) \
-						 && !istype(T.loc, /area/supply/station)) //TODO: Deal with bluespace tiles
+		&& !istype(T.loc, /area/supply/station)) //TODO: Deal with bluespace tiles
 			src = null //ensure sleep proc doesn't return upon completion
 			if(volume <= 10)
 				return

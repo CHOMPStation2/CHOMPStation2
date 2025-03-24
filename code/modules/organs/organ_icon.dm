@@ -5,7 +5,7 @@ GLOBAL_LIST_EMPTY(limb_icon_cache)
 
 /obj/item/organ/external/proc/compile_icon()
 	cut_overlays()
-	 // This is a kludge, only one icon has more than one generation of children though.
+	// This is a kludge, only one icon has more than one generation of children though.
 	for(var/obj/item/organ/external/organ in contents)
 		if(organ.children && organ.children.len)
 			for(var/obj/item/organ/external/child in organ.children)

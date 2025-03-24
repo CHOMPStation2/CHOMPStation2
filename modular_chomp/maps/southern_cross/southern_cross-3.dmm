@@ -14800,6 +14800,8 @@
 /obj/machinery/status_display{
 	pixel_y = 32
 	},
+/obj/item/clothing/head/radiation/teshari,
+/obj/item/clothing/suit/radiation/teshari,
 /turf/simulated/floor/tiled,
 /area/engineering/engine_monitoring)
 "aVb" = (
@@ -52248,6 +52250,8 @@
 /obj/item/clothing/glasses/meson,
 /obj/item/clothing/glasses/meson,
 /obj/item/clothing/glasses/meson,
+/obj/item/clothing/suit/radiation/teshari,
+/obj/item/clothing/head/radiation/teshari,
 /turf/simulated/floor/tiled/white,
 /area/rnd/research)
 "ilQ" = (

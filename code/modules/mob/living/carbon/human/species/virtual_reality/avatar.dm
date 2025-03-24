@@ -80,7 +80,6 @@
 	src.vr_link = avatar // Can't reuse vr_holder so that death can automatically eject users from VR
 
 	// Move the mind
-	// avatar.Sleeping(1) So vox don't drop their can, also feels arbitrary
 	src.mind.transfer_to(avatar)
 	to_chat(avatar, span_infoplain(span_bold("You have enterred Virtual Reality!\nAll normal gameplay rules still apply.\nWounds you suffer here won't persist when you leave VR, but some of the pain will.\nYou can leave VR at any time by using the \"Exit Virtual Reality\" verb in the Abilities tab, or by ghosting."))) //No more prommie VR thing, so removed tidbit about changing appearance
 	to_chat(avatar, span_notice(" You black out for a moment, and wake to find yourself in a new body in virtual reality.")) // So this is what VR feels like?
@@ -92,10 +91,10 @@
 
 	if(!vr_holder)
 		return
-	if(tfed_into_mob_check()) //CHOMPedit start: make sure we're not TFed and revert if we are before checking for a mind.
+	if(tfed_into_mob_check()) //Make sure we're not TFed and revert if we are before checking for a mind.
 		var/mob/living/M = loc
 		if(istype(M)) // Sanity check, though shouldn't be needed since this is already checked by the proc.
-			M.revert_mob_tf() // CHOMPedit end
+			M.revert_mob_tf()
 
 	if(!mind)
 		return
@@ -123,9 +122,8 @@
 
 	if(istype(vr_holder.loc, /obj/machinery/vr_sleeper))
 		var/obj/machinery/vr_sleeper/V = vr_holder.loc
-		V.go_out()
+		V.go_out(TRUE)
 
-//CHOMPAdd Start
 	if(died_in_vr)
 		addtimer(CALLBACK(src, PROC_REF(cleanup_vr)), 3000, TIMER_DELETE_ME) //Delete the body after 5 minutes
 
@@ -137,4 +135,3 @@
 			unEquip(I,force = TRUE)
 	release_vore_contents(include_absorbed = TRUE, silent = TRUE)
 	qdel(src)
-//CHOMPAdd End

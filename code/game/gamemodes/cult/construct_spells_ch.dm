@@ -187,7 +187,7 @@
 /obj/effect/temporary_effect/pulse/soothing_sphere
 	name = "soothing sphere"
 	desc = "A portal to some hellish place. Its screams wrack your body with pain."
-	icon = 'icons/effects/effects_ch.dmi'
+	icon = 'icons/effects/effects.dmi'
 	icon_state = "blue_static_sphere"
 	time_to_die = null
 	light_range = 4

@@ -53,7 +53,7 @@
 	dir = 6
 	},
 /obj/structure/cable{
-	icon_state = "2-4"
+	icon_state = "1-4"
 	},
 /turf/simulated/shuttle/floor/yellow,
 /area/submap/event_autonomous_drone/engineering)
@@ -134,8 +134,7 @@
 	pixel_y = 28
 	},
 /obj/structure/cable{
-	icon_state = "0-4";
-	d2 = 4
+	icon_state = "0-4"
 	},
 /turf/simulated/shuttle/floor/yellow,
 /area/submap/event_autonomous_drone/engineering)
@@ -484,7 +483,7 @@
 	dir = 8
 	},
 /obj/structure/cable{
-	icon_state = "2-4"
+	icon_state = "2-8"
 	},
 /obj/structure/cable{
 	icon_state = "4-8"
