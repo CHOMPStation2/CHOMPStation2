@@ -59,8 +59,8 @@
 	cost = -2
 	custom_only = FALSE
 
-	is_genetrait = FALSE 	//VOREStation Note: TRAITGENETICS - Disabled on VS
-	hidden = TRUE			//VOREStation Note: TRAITGENETICS - Disabled on VS
+	is_genetrait = TRUE 	//VOREStation Note: TRAITGENETICS - Disabled on VS //CHOMPStation Edit - Enable
+	hidden = FALSE			//VOREStation Note: TRAITGENETICS - Disabled on VS //CHOMPStation Edit - Enable
 
 	disability=TOURETTES
 	activation_message="You twitch."
@@ -162,8 +162,8 @@
 	cost = -4
 	custom_only = FALSE
 
-	is_genetrait = FALSE	//VOREStation Note: TRAITGENETICS - Disabled on VS
-	hidden = TRUE			//VOREStation Note: TRAITGENETICS - Disabled on VS
+	is_genetrait = TRUE	//VOREStation Note: TRAITGENETICS - Disabled on VS //CHOMPStation Edit - Enable
+	hidden = FALSE			//VOREStation Note: TRAITGENETICS - Disabled on VS //CHOMPStation Edit - Enable
 
 	disability=DETERIORATE
 	activation_message="You feel sore..."
