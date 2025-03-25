@@ -27,11 +27,7 @@ var/datum/species/shapeshifter/promethean/prometheans
 	swap_flags =	~HEAVY
 	flags =			NO_DNA | NO_SLEEVE | NO_SLIP | NO_MINOR_CUT | NO_HALLUCINATION | NO_INFECT | NO_DEFIB
 	appearance_flags = HAS_SKIN_COLOR | HAS_EYE_COLOR | HAS_HAIR_COLOR | RADIATION_GLOWS | HAS_UNDERWEAR
-<<<<<<< HEAD
-	spawn_flags		 = SPECIES_CAN_JOIN
-=======
 	spawn_flags = SPECIES_CAN_JOIN
->>>>>>> 34537c70ee (Consolidates Species Files (#17293))
 	health_hud_intensity = 2
 	num_alternate_languages = 3
 	language = LANGUAGE_PROMETHEAN
@@ -56,13 +52,6 @@ var/datum/species/shapeshifter/promethean/prometheans
 
 	economic_modifier = 3
 
-<<<<<<< HEAD
-	// male_scream_sound = null //CHOMPedit
-	// female_scream_sound = null //CHOMPedit
-
-	gluttonous =	1
-=======
->>>>>>> 34537c70ee (Consolidates Species Files (#17293))
 	virus_immune =	1
 	blood_volume =	560
 	brute_mod =		0.7  //chompedit Old values of .75 brute and 2 burn were imbalanced.
@@ -135,6 +124,7 @@ var/datum/species/shapeshifter/promethean/prometheans
 		/mob/living/carbon/human/proc/prommie_blobform,
 		/mob/living/proc/set_size,
 		/mob/living/carbon/human/proc/promethean_select_opaqueness,
+		/mob/living/carbon/human/proc/shapeshifter_reassemble //CHOMPEdit: reform verb
 		)
 
 	valid_transform_species = list(

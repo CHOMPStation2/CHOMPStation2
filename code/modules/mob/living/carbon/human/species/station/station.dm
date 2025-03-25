@@ -236,11 +236,7 @@
 	climbing_delay = 1.00 //Cats are good climbers.
 
 	min_age = 18
-<<<<<<< HEAD
-	max_age = 110
-=======
 	max_age = 80
->>>>>>> 34537c70ee (Consolidates Species Files (#17293))
 
 	economic_modifier = 10
 
@@ -462,11 +458,7 @@
 	flash_mod = 2
 	flash_burn = 15 //flashing a zaddat probably counts as police brutality
 	metabolic_rate = 0.7 //did u know if your ancestors starved ur body will actually start in starvation mode?
-<<<<<<< HEAD
 	item_slowdown_mod = 0.30 //CHOMPedit: They can actually wear their living-required spacesuits without enormous slowdown now.
-	gluttonous = 1
-=======
->>>>>>> 34537c70ee (Consolidates Species Files (#17293))
 	taste_sensitivity = TASTE_SENSITIVE
 	num_alternate_languages = 3
 	secondary_langs = list(LANGUAGE_ZADDAT, LANGUAGE_UNATHI)
@@ -1111,7 +1103,7 @@
 	the polar tundral regions outside of Skrell territory. Extremely fragile, they developed \
 	hunting skills that emphasized taking out their prey without themselves getting hit. They \
 	are only recently becoming known on human stations after reaching space with Skrell assistance."
-	wikilink="https://wiki.vore-station.net/Teshari"
+	wikilink="https://wiki.chompstation13.net/index.php?title=Teshari" //CHOMPedit: link to our wiki
 	catalogue_data = list(/datum/category_item/catalogue/fauna/teshari)
 
 	num_alternate_languages = 3
@@ -1126,10 +1118,8 @@
 
 	health_hud_intensity = 3
 
-	male_sneeze_sound = list('sound/effects/mob_effects/tesharisneeze.ogg','sound/effects/mob_effects/tesharisneezeb.ogg')
-	female_sneeze_sound = list('sound/effects/mob_effects/tesharisneeze.ogg','sound/effects/mob_effects/tesharisneezeb.ogg')
-	male_sneeze_sound = 'sound/effects/mob_effects/tesharisneeze.ogg'
-	female_sneeze_sound = 'sound/effects/mob_effects/tesharisneeze.ogg'
+	//male_sneeze_sound = list('sound/effects/mob_effects/tesharisneeze.ogg','sound/effects/mob_effects/tesharisneezeb.ogg') //CHOMPStation Edit Disable
+	//female_sneeze_sound = list('sound/effects/mob_effects/tesharisneeze.ogg','sound/effects/mob_effects/tesharisneezeb.ogg') //CHOMPStation Edit Disable
 	center_offset = 0
 
 	blood_color = "#D514F7"
@@ -1257,8 +1247,8 @@
 
 /datum/species/teshari/equip_survival_gear(var/mob/living/carbon/human/H)
 	..()
-	if(!(H.client?.prefs?.shoe_hater))
-		H.equip_to_slot_or_del(new /obj/item/clothing/shoes/sandal(H),slot_shoes)
+	//if(!(H.client?.prefs?.shoe_hater)) //CHOMPStation Edit. Disables shoe_hater. Un-indents below line by 1.
+	H.equip_to_slot_or_del(new /obj/item/clothing/shoes/sandal(H),slot_shoes)
 /*
 /datum/species/teshari/handle_falling(mob/living/carbon/human/H, atom/hit_atom, damage_min, damage_max, silent, planetary)
 
@@ -1377,10 +1367,10 @@
 
 	//has_glowing_eyes = TRUE			// Applicable through traits.
 
-	male_cough_sounds = null
-	female_cough_sounds = null
-	male_sneeze_sound = null
-	female_sneeze_sound = null
+	//male_cough_sounds = null //CHOMPStation Edit
+	//female_cough_sounds = null //CHOMPStation Edit
+	//male_sneeze_sound = null //CHOMPStation Edit
+	//female_sneeze_sound = null //CHOMPStation Edit
 
 	speech_bubble_appearance = "ghost"
 
@@ -1670,6 +1660,8 @@
 	min_age = 18
 	max_age = 200
 
+	species_sounds = "Canine"  //CHOMPStation Edit - Species Sounds
+
 	blurb = "Big buff werewolves. These are a limited functionality event species that are not balanced for regular gameplay. Adminspawn only."
 
 	wikilink="N/A"
@@ -1730,11 +1722,16 @@
 	inherent_verbs = list(
 		/mob/living/carbon/human/proc/reconstitute_form,
 		///mob/living/carbon/human/proc/sonar_ping,
-		/mob/living/carbon/human/proc/tie_hair)
+		/mob/living/carbon/human/proc/tie_hair,
+		/mob/living/carbon/human/proc/lick_wounds,
+		/mob/living/carbon/human/proc/shapeshifter_reassemble)		//Xenochimera get all the special verbs since they can't select traits.
+		// CHOMPEdit: Lick Wounds Verb, reform verb
 
 	virus_immune = 1 // They practically ARE one.
 	min_age = 18
 	max_age = 80
+
+	species_sounds = "Unset" // CHOMPEdit: Chimera get a default/safety of unset, going off their icon base if there's none overriding.
 
 	blurb = "Some amalgamation of different species from across the universe,with extremely unstable DNA, making them unfit for regular cloners. \
 	Widely known for their voracious nature and violent tendencies when stressed or left unfed for long periods of time. \
@@ -1782,14 +1779,15 @@
 
 	//While regenerating
 	if(H.revive_ready == REVIVING_NOW || H.revive_ready == REVIVING_DONE)
-		H.weakened = 5
+		H.stunned = 5 // CHOMPEdit - Crawling is a thing now
 		H.canmove = 0
 		H.does_not_breathe = TRUE
 		var/regen_sounds = H.regen_sounds
 		if(prob(2)) // 2% chance of playing squelchy noise while reviving, which is run roughly every 2 seconds/tick while regenerating.
 			playsound(H, pick(regen_sounds), 30)
 			H.visible_message(span_danger("<p>" + span_huge("[H.name]'s motionless form shudders grotesquely, rippling unnaturally.") + "</p>"))
-
+		if(!H.lying) //CHOMPStation Edit
+			H.lay_down() //CHOMPStation Edit
 	//Cold/pressure effects when not regenerating
 	else
 		var/datum/gas_mixture/environment = H.loc.return_air()
