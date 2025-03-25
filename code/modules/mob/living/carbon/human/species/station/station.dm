@@ -1118,8 +1118,13 @@
 
 	health_hud_intensity = 3
 
+<<<<<<< HEAD
 	//male_sneeze_sound = list('sound/effects/mob_effects/tesharisneeze.ogg','sound/effects/mob_effects/tesharisneezeb.ogg') //CHOMPStation Edit Disable
 	//female_sneeze_sound = list('sound/effects/mob_effects/tesharisneeze.ogg','sound/effects/mob_effects/tesharisneezeb.ogg') //CHOMPStation Edit Disable
+=======
+	male_sneeze_sound = list('sound/effects/mob_effects/tesharisneeze.ogg','sound/effects/mob_effects/tesharisneezeb.ogg')
+	female_sneeze_sound = list('sound/effects/mob_effects/tesharisneeze.ogg','sound/effects/mob_effects/tesharisneezeb.ogg')
+>>>>>>> 4a008e4545 (whoops forgot these (#17420))
 	center_offset = 0
 
 	blood_color = "#D514F7"
