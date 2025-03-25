@@ -529,3 +529,25 @@
   - rscadd: text surrounded by || text || will now be spoilered in the statpanel
   - bugfix: examine will be auto focussed again if the setting is enabled
   - maptweak: added xenoarch storage to the stellar delight
+2025-03-25:
+  CHOMPStation2StaffMirrorBot:
+  - code_imp: next set of NEW to INIT
+  Diana:
+  - balance: sec fed uniform no longer gives 50% melee armor. Gives same as Cyberpunk
+      vest and also costs 2 points.
+  - balance: 'Fed uniforms now give resistances based on other common loadout items.
+      (Ex: Hazard vest, labcoat)'
+  - balance: Hazard vests now give 20% rad resistance
+  - qol: Temperature artifacts can no longer randomly spawn active.
+  - balance: Laser gun artifacts can spawn with pulse beams if you are lucky.
+  SpadesNeil:
+  - bugfix: Albino cave lamia no longer run away.
+  - bugfix: Cave lamia tails are now set to digest by default, but only the tail.
+  Vorestation Staff Consensus (VORESTATION ONLY):
+  - rscdel: Tourettes disabled
+  - rscdel: Rotting Genetics Disabled
+  - rscdel: Xray disabled
+  - spellcheck: Anxiety Disorder name changed to Nervousness
+  - balance: Censored move to Neutral (RP trait)
+  - balance: Nervousness moved to Neutral (RP Trait)
+  - bugfix: FBP dionas will no longer explode

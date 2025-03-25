@@ -1,5 +1,0 @@
-author: "SpadesNeil"
-delete-after: True
-changes:
-  - bugfix: "Albino cave lamia no longer run away."
-  - bugfix: "Cave lamia tails are now set to digest by default, but only the tail."
