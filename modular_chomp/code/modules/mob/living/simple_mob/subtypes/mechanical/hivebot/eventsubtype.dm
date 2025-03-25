@@ -326,4 +326,3 @@
 	downfour_leftfour(target)
 	attackcycle = next_cycle
 
-//end
