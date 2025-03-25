@@ -52,13 +52,7 @@
 	cold_level_2 = 50
 	cold_level_3 = 0
 
-<<<<<<< HEAD
-	gluttonous = 1
-
 	breath_type = GAS_N2 //CHOMPedit
-=======
-	breath_type = GAS_PHORON
->>>>>>> 34537c70ee (Consolidates Species Files (#17293))
 	poison_type = GAS_O2
 	ideal_air_type = /datum/gas_mixture/belly_air/vox
 	siemens_coefficient = 0.2
