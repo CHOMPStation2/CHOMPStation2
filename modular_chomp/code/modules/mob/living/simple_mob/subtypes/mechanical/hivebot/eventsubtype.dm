@@ -143,7 +143,7 @@
 				addtimer(CALLBACK(src, PROC_REF(singleproj), A, 2), 3 SECONDS, TIMER_DELETE_ME)
 				attackcycle = 0
 			else if(attackcycle == 2)
-				say("PROTOCOL: DESTORY. POWER LEVEL ONE.")
+				say("PROTOCOL: DESTORY.")
 				Beam(A, icon_state = "solar_beam", time = 2.5 SECONDS, maxdistance = INFINITY)
 				specialattackprojectile = /obj/item/projectile/beam/midlaser
 				addtimer(CALLBACK(src, PROC_REF(singleproj), A, 3), 3 SECONDS, TIMER_DELETE_ME)
@@ -204,7 +204,7 @@
 				addtimer(CALLBACK(src, PROC_REF(singleproj), A, 2), 3 SECONDS, TIMER_DELETE_ME)
 				attackcycle = 0
 			else if(attackcycle == 2) //laser to be blocked by the foam we set up.
-				say("PROTOCOL: DESTORY. POWER LEVEL ONE.")
+				say("PROTOCOL: DESTORY.")
 				Beam(A, icon_state = "solar_beam", time = 2.5 SECONDS, maxdistance = INFINITY)
 				specialattackprojectile = /obj/item/projectile/beam/midlaser
 				addtimer(CALLBACK(src, PROC_REF(singleproj), A, 3), 3 SECONDS, TIMER_DELETE_ME)
@@ -324,3 +324,6 @@
 	upfour_rightfour(target)
 	downfour_rightfour(target)
 	downfour_leftfour(target)
+	attackcycle = next_cycle
+
+//end
