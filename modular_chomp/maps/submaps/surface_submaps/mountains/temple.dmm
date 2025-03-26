@@ -121,6 +121,7 @@
 	},
 /area/submap/cave/AbandonedTemple)
 "r" = (
+/mob/living/simple_mob/vore/vampire/queen,
 /obj/effect/rune,
 /obj/effect/decal/remains/human,
 /turf/simulated/floor/tiled/asteroid_steel{
@@ -300,6 +301,20 @@
 /obj/effect/decal/cleanable/blood,
 /turf/simulated/mineral/floor/ignore_mapgen/sif,
 /area/submap/cave/AbandonedTemple)
+"P" = (
+/mob/living/simple_mob/vore/vampire,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 243.15
+	},
+/area/submap/cave/AbandonedTemple)
+"Q" = (
+/mob/living/simple_mob/vore/vampire,
+/turf/simulated/floor/carpet/turcarpet{
+	temperature = 243.15;
+	oxygen = 20.7263;
+	nitrogen = 93.7835
+	},
+/area/submap/cave/AbandonedTemple)
 
 (1,1,1) = {"
 a
@@ -417,7 +432,7 @@ d
 e
 p
 u
-p
+Q
 p
 p
 w
@@ -447,7 +462,7 @@ v
 y
 p
 p
-c
+P
 E
 c
 s
@@ -499,7 +514,7 @@ h
 c
 h
 z
-c
+P
 g
 B
 c
@@ -529,11 +544,11 @@ g
 c
 g
 C
+P
 c
 c
 c
-c
-c
+P
 D
 d
 m
@@ -718,11 +733,11 @@ g
 c
 g
 C
+P
 c
 c
 c
-c
-c
+P
 D
 d
 s
@@ -740,9 +755,9 @@ c
 d
 m
 c
-c
+P
 z
-c
+P
 g
 D
 c
@@ -798,7 +813,7 @@ c
 n
 c
 c
-c
+P
 c
 w
 n
@@ -822,7 +837,7 @@ d
 o
 c
 x
-c
+P
 c
 A
 n
