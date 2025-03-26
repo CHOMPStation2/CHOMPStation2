@@ -12,6 +12,7 @@
 #include "chemspill1.dmm"
 #include "construction.dmm"
 #include "Diner.dmm"
+#include "emptycabin.dmm"
 #include "Epod.dmm"
 #include "Epod2.dmm"
 #include "explorerhouse.dmm"
@@ -270,11 +271,16 @@
 	mappath = "modular_chomp/maps/submaps/surface_submaps/plains/VRDen.dmm"
 	cost = 10
 
-
 /datum/map_template/surface/plains/wreckedshelter
 	name = "Wrecked Shelter"
 	desc = "The remains of some old shelter. It's completely ruined."
 	mappath = "modular_chomp/maps/submaps/surface_submaps/plains/wreckedshelter.dmm"
+	cost = 10
+
+/datum/map_template/surface/plains/emptycabin
+	name = "empty cabin"
+	desc = "An abandoned cabin with one suspiciously well fed otie still living inside."
+	mappath = "modular_chomp/maps/submaps/surface_submaps/plains/emptycabin.dmm"
 	cost = 10
 
 
