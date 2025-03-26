@@ -11,31 +11,27 @@
 /area/submap/cave/geyser_2)
 "d" = (
 /obj/structure/fence/corner{
-	dir = 9;
-	icon_state = "corner"
+	icon_state = "corner";
+	dir = 9
 	},
 /turf/simulated/floor/outdoors/rocks/caves,
 /area/submap/cave/geyser_2)
 "e" = (
 /obj/structure/fence{
-	dir = 8;
-	icon_state = "straight"
+	icon_state = "straight";
+	dir = 8
 	},
 /turf/simulated/floor/outdoors/rocks/caves,
 /area/submap/cave/geyser_2)
 "f" = (
 /obj/structure/fence/corner{
-	dir = 5;
-	icon_state = "corner"
+	icon_state = "corner";
+	dir = 5
 	},
 /turf/simulated/floor/outdoors/rocks/caves,
 /area/submap/cave/geyser_2)
 "g" = (
 /obj/structure/fence/cut/large,
-/turf/simulated/floor/outdoors/rocks/caves,
-/area/submap/cave/geyser_2)
-"h" = (
-/mob/living/simple_mob/mechanical/viscerator,
 /turf/simulated/floor/outdoors/rocks/caves,
 /area/submap/cave/geyser_2)
 "i" = (
@@ -44,8 +40,8 @@
 /area/submap/cave/geyser_2)
 "j" = (
 /obj/structure/fence/corner{
-	dir = 10;
-	icon_state = "corner"
+	icon_state = "corner";
+	dir = 10
 	},
 /turf/simulated/floor/outdoors/rocks/caves,
 /area/submap/cave/geyser_2)
@@ -55,8 +51,8 @@
 /area/submap/cave/geyser_2)
 "l" = (
 /obj/structure/fence/corner{
-	dir = 6;
-	icon_state = "corner"
+	icon_state = "corner";
+	dir = 6
 	},
 /turf/simulated/floor/outdoors/rocks/caves,
 /area/submap/cave/geyser_2)
@@ -92,7 +88,7 @@ a
 b
 b
 b
-h
+c
 b
 b
 b
@@ -108,11 +104,11 @@ b
 "}
 (4,1,1) = {"
 c
-h
+c
 e
 m
 k
-h
+c
 c
 "}
 (5,1,1) = {"
@@ -128,7 +124,7 @@ b
 b
 b
 b
-h
+c
 b
 b
 b
