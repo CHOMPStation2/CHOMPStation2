@@ -89,7 +89,7 @@
 */
 //VR maps go here, tell me if theres a better way to load this
 // #include "virtual_reality/constructVR.dm" Virtual Reality areas included by default.
-//#include "modular_chomp/maps/virtual_reality/constructVR.dm" //Included in .dme
+//#include "maps/virtual_reality/constructVR.dm" //Included in .dme
 /datum/map_template/sc_lateload/vr_world
 	name = "VR World"
 	desc = "A dynamic, virtual world."

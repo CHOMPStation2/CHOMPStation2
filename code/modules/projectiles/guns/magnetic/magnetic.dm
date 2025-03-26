@@ -397,7 +397,8 @@
 	else if(M.ear_damage >= 5)
 		to_chat(M, span_danger("Your ears start to ring!"))
 //CHOMPEdit End
-/obj/item/gun/magnetic/fuelrod/New()
+
+/obj/item/gun/magnetic/fuelrod/Initialize(mapload)
 	cell = new /obj/item/cell/high
 	capacitor = new /obj/item/stock_parts/capacitor
 	. = ..()

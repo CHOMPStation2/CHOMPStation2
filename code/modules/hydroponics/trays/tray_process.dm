@@ -131,7 +131,7 @@
 		seed.get_trait(TRAIT_SPREAD) == 2 && \
 		2 * age >= seed.get_trait(TRAIT_MATURATION) && \
 		!(locate(/obj/effect/plant) in get_turf(src)) && \
-	 	prob(2 * seed.get_trait(TRAIT_POTENCY)))
+		prob(2 * seed.get_trait(TRAIT_POTENCY)))
 		// CHOMPEdit Start - Need to start processing the vine or it'll never spread.
 		var/obj/effect/plant/D = new /obj/effect/plant(get_turf(src), seed)
 		SSplants.add_plant(D)

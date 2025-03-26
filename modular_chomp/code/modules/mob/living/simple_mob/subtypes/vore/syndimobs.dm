@@ -312,8 +312,8 @@
 				"bio" = 100,
 				"rad" = 100
 				)
-/mob/living/simple_mob/vore/wolftaur/New()
-	..()
+/mob/living/simple_mob/vore/wolftaur/Initialize(mapload)
+	. = ..()
 	var/oursize = rand(90, 200) / 100
 	resize(oursize)
 

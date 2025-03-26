@@ -3,10 +3,12 @@
 	if(!istype(SK))
 		to_chat(src, span_warning("Only a shadekin can use that!"))
 		return FALSE
-	else if(stat)
+
+	if(stat)
 		to_chat(src, span_warning("Can't use that ability in your state!"))
 		return FALSE
-	else if((ability_flags & AB_DARK_RESPITE || has_modifier_of_type(/datum/modifier/dark_respite)) && !(ability_flags & AB_PHASE_SHIFTED))
+
+	if((ability_flags & AB_DARK_RESPITE || has_modifier_of_type(/datum/modifier/dark_respite)) && !(ability_flags & AB_PHASE_SHIFTED))
 		to_chat(src, span_warning("You can't use that so soon after an emergency warp!"))
 		return FALSE
 	return TRUE
@@ -47,10 +49,12 @@
 
 	if(!shadekin_ability_check())
 		return FALSE
-	else if(ability_flags & AB_PHASE_SHIFTED)
+
+	if(ability_flags & AB_PHASE_SHIFTED)
 		to_chat(src, span_warning("You can't use that while phase shifted!"))
 		return FALSE
-	else if(ability_flags & AB_DARK_TUNNEL)
+
+	if(ability_flags & AB_DARK_TUNNEL)
 		to_chat(src, span_warning("You have already made a tunnel to the Dark!"))
 		return FALSE
 
@@ -95,8 +99,7 @@
 		ability_flags |= AB_DARK_TUNNEL
 		shadekin_adjust_energy(-(ability_cost - 10)) //Leaving enough energy to actually activate the portal
 		return TRUE
-	else
-		return FALSE
+	return FALSE
 
 /datum/power/shadekin/dark_respite
 	name = "Dark Respite (Only in Dark)"
@@ -113,18 +116,23 @@
 	if(!istype(SK))
 		to_chat(src, span_warning("Only a shadekin can use that!"))
 		return FALSE
-	else if(!istype(get_area(src), /area/shadekin))
+
+	if(!istype(get_area(src), /area/shadekin))
 		to_chat(src, span_warning("Can only trigger Dark Respite in the Dark!"))
 		return FALSE
-	else if(stat)
+
+	if(stat)
 		to_chat(src, span_warning("Can't use that ability in your state!"))
 		return FALSE
-	else if(ability_flags & AB_DARK_RESPITE)
+
+	if(ability_flags & AB_DARK_RESPITE)
 		to_chat(src, span_warning("You can't use that so soon after an emergency warp!"))
 		return FALSE
-	else if(has_modifier_of_type(/datum/modifier/dark_respite) && !SK.manual_respite)
+
+	if(has_modifier_of_type(/datum/modifier/dark_respite) && !SK.manual_respite)
 		to_chat(src, span_warning("You cannot manually end a Dark Respite triggered by an emergency warp!"))
-	else if(ability_flags & AB_PHASE_SHIFTED)
+
+	if(ability_flags & AB_PHASE_SHIFTED)
 		to_chat(src, span_warning("You can't use that while phase shifted!"))
 		return FALSE
 
@@ -155,26 +163,28 @@
 	icon = 'modular_chomp/icons/obj/Shadekin_powers_2.dmi'
 	icon_state = "dark_maw_waiting"
 
-/obj/effect/abstract/dark_maw/New(loc, var/mob/living/user, var/trigger_now = 0)
+/obj/effect/abstract/dark_maw/Initialize(mapload, var/mob/living/user, var/trigger_now = 0)
 	. = ..()
-	if(istype(user))
-		owner = user
-		target = owner.vore_selected
 
 	if(!isturf(loc))
 		return INITIALIZE_HINT_QDEL
+
 	var/turf/T = loc
 	if(T.get_lumcount() >= 0.5)
 		visible_message(span_notice("A set of shadowy lines flickers away in the light."))
 		icon_state = "dark_maw_used"
-		qdel(src)
-		return
+		return INITIALIZE_HINT_QDEL
+
+	if(istype(user))
+		owner = user
+		target = owner.vore_selected
 
 	var/mob/living/target_user = null
 	for(var/mob/living/L in T)
 		if(L != owner && !L.incorporeal_move)
 			target_user = L
 			break
+
 	if(istype(target_user))
 		triggered_by(target_user, 1)
 		// to trigger rebuild
@@ -182,8 +192,7 @@
 		icon_state = "dark_maw_used"
 		flick("dark_maw_tr", src)
 		visible_message(span_warning("A set of crystals suddenly springs from the ground and shadowy tendrils wrap around nothing before vanishing."))
-		spawn(30)
-			qdel(src)
+		QDEL_IN(src, 3 SECONDS)
 	else
 		var/mob/living/carbon/human/carbon_owner = owner
 		var/mob/living/simple_mob/shadekin/sm_owner = owner
@@ -207,6 +216,8 @@
 				SK.active_dark_maws -= src
 		else if(istype(sm_owner))
 			sm_owner.active_dark_maws -= src
+	target = null
+	owner = null
 	return ..()
 
 /obj/effect/abstract/dark_maw/Crossed(O)
@@ -240,30 +251,35 @@
 	visible_message(span_warning("A set of crystals spring out of the ground and shadowy tendrils start wrapping around [L]."))
 	if(owner && !triggered_instantly)
 		to_chat(owner, span_warning("A dark maw you deployed has triggered!"))
-	spawn(10)
-		var/will_vore = 1
+	addtimer(CALLBACK(src, PROC_REF(do_trigger), L), 1 SECOND, TIMER_DELETE_ME)
 
-		if(!owner || !(target in owner) || !L.devourable || !L.can_be_drop_prey || !owner.can_be_drop_pred || !L.phase_vore)
-			will_vore = 0
+/obj/effect/abstract/dark_maw/proc/do_trigger(var/mob/living/L)
+	var/will_vore = 1
 
-		if(!src || src.gc_destroyed)
-			//We got deleted probably, do nothing more
-			return
+	if(!owner || !(target in owner) || !L.devourable || !L.can_be_drop_prey || !owner.can_be_drop_pred || !L.phase_vore)
+		will_vore = 0
 
-		if(L.loc != get_turf(src))
-			visible_message(span_notice("The shadowy tendrils fail to catch anything and dissipate."))
-			qdel(src)
-		else if(will_vore)
-			visible_message(span_warning("The shadowy tendrils grab around [L] and drag them into the floor, leaving nothing behind."))
-			L.forceMove(target)
-			qdel(src)
-		else
-			var/obj/effect/energy_net/dark/net = new /obj/effect/energy_net/dark(get_turf(src))
-			if(net.buckle_mob(L))
-				visible_message(span_warning("The shadowy tendrils wrap around [L] and traps them in a net of dark energy."))
-			else
-				visible_message(span_notice("The shadowy tendrils wrap around [L] and then dissipate, leaving them in place."))
-			qdel(src)
+	if(!src || src.gc_destroyed)
+		//We got deleted probably, do nothing more
+		return
+
+	if(L.loc != get_turf(src))
+		visible_message(span_notice("The shadowy tendrils fail to catch anything and dissipate."))
+		qdel(src)
+		return
+
+	if(will_vore)
+		visible_message(span_warning("The shadowy tendrils grab around [L] and drag them into the floor, leaving nothing behind."))
+		L.forceMove(target)
+		qdel(src)
+		return
+
+	var/obj/effect/energy_net/dark/net = new /obj/effect/energy_net/dark(get_turf(src))
+	if(net.buckle_mob(L))
+		visible_message(span_warning("The shadowy tendrils wrap around [L] and traps them in a net of dark energy."))
+	else
+		visible_message(span_notice("The shadowy tendrils wrap around [L] and then dissipate, leaving them in place."))
+	qdel(src)
 
 /obj/effect/energy_net/dark
 	name = "dark net"
@@ -278,7 +294,8 @@
 		visible_message(span_danger("[user] dissipates \the [src] with a touch!"))
 		unbuckle_mob(buckled_mob)
 		return
-	else if(istype(user,/mob/living/carbon/human))
+
+	if(istype(user,/mob/living/carbon/human))
 		var/mob/living/carbon/human/H = user
 		var/datum/species/shadekin/SK = H.species
 		if(istype(SK))
@@ -309,14 +326,17 @@
 
 	if(!shadekin_ability_check())
 		return FALSE
-	else if(shadekin_get_energy() < ability_cost)
+
+	if(shadekin_get_energy() < ability_cost)
 		to_chat(src, span_warning("Not enough energy for that ability!"))
 		return FALSE
+
 	var/turf/T = get_turf(src)
 	if(!istype(T))
 		to_chat(src, span_warning("You don't seem to be able to set a trap here!"))
 		return FALSE
-	else if(T.get_lumcount() >= 0.5)
+
+	if(T.get_lumcount() >= 0.5)
 		to_chat(src, span_warning("There is too much light here for your trap to last!"))
 		return FALSE
 
@@ -328,8 +348,7 @@
 		shadekin_adjust_energy(-ability_cost)
 
 		return TRUE
-	else
-		return FALSE
+	return FALSE
 
 /mob/living/carbon/human/proc/clear_dark_maws()
 	set name = "Dispel dark maws"

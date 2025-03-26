@@ -54,11 +54,3 @@
 	else
 		touch_reaction_flags |= SPECIES_TRAIT_PERSONAL_BUBBLE
 		to_chat(src,span_notice("You will now dodge all attempts at hugging, patting, booping, licking, smelling and hand shaking."))
-
-//ChompEDIT START - re-assert our layer and plane
-/mob/living/Moved(var/atom/oldloc, direct, forced, movetime)
-	. = ..()
-	if(status_flags & HIDING)
-		layer = HIDING_LAYER
-		plane = OBJ_PLANE
-//ChompEDIT END

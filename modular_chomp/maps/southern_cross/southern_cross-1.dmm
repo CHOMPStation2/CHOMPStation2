@@ -10704,6 +10704,8 @@
 /obj/structure/sign/warning/radioactive{
 	pixel_y = 32
 	},
+/obj/item/clothing/head/radiation/teshari,
+/obj/item/clothing/suit/radiation/teshari,
 /turf/simulated/floor/tiled,
 /area/maintenance/substation/gravgen)
 "US" = (

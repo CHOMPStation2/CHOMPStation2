@@ -105,7 +105,7 @@
 	cost = 5
 	custom_only = FALSE
 
-	is_genetrait = TRUE
+	is_genetrait = TRUE //VOREStation Note: TRAITGENETICS - Disabled on VS //CHOMPStation Edit - Enable
 	activity_bounds = DNA_HARDER_BOUNDS
 	hidden = TRUE // Cannot start with superpowers
 

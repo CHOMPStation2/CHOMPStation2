@@ -21,11 +21,11 @@
 
 /datum/say_list/cyber_horror
 	speak = list("H@!#$$P M@!$#",
-				 "GHAA!@@#",
-				 "KR@!!N",
-				 "K!@@##L!@@ %!@#E",
-				 "G@#!$ H@!#%",
-				 "H!@%%@ @!E")
+					"GHAA!@@#",
+					"KR@!!N",
+					"K!@@##L!@@ %!@#E",
+					"G@#!$ H@!#%",
+					"H!@%%@ @!E")
 	emote_hear = list("emits", "groans", "wails", "pleads")
 	emote_see = list ("stares unblinkingly.", "jitters and twitches.", "emits a synthetic scream.", "rapidly twitches.", "convulses.", "twitches uncontrollably.", "goes stock still.")
 	say_threaten = list ("FR@#DOM","EN@ T#I$-$","N0$ M^> B@!#")
@@ -72,11 +72,11 @@
 
 /datum/say_list/cyber_horror
 	speak = list("H@!#$$P M@!$#",
-				 "GHAA!@@#",
-				 "KR@!!N",
-				 "K!@@##L!@@ %!@#E",
-				 "G@#!$ H@!#%",
-				 "H!@%%@ @!E")
+					"GHAA!@@#",
+					"KR@!!N",
+					"K!@@##L!@@ %!@#E",
+					"G@#!$ H@!#%",
+					"H!@%%@ @!E")
 	emote_hear = list("emits", "groans", "wails", "pleads")
 	emote_see = list ("stares unblinkingly.", "jitters and twitches.", "emits a synthetic scream.", "rapidly twitches.", "convulses.", "twitches uncontrollably.", "goes stock still.")
 	say_threaten = list ("FR@#DOM","EN@ T#I$-$","N0$ M^> B@!#")

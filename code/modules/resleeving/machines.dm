@@ -167,7 +167,7 @@
 
 		else if(occupant.health < heal_level && occupant.getCloneLoss() > 0)
 
-			 //Slowly get that clone healed and finished.
+			//Slowly get that clone healed and finished.
 			occupant.adjustCloneLoss(-2 * heal_rate)
 
 			//Premature clones may have brain damage.

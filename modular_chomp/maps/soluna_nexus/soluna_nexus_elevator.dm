@@ -37,6 +37,7 @@
 
 /obj/turbolift_map_holder/soluna_nexus/center
 	name = "Southern Cross turbolift map placeholder - Center"
+	wall_type = null
 
 	areas_to_use = list(
 		/area/turbolift/center_deck_one,
@@ -47,6 +48,7 @@
 /obj/turbolift_map_holder/soluna_nexus/aft
 	name = "Southern Cross turbolift map placeholder - Aft"
 	dir = NORTH
+	wall_type = null
 
 	areas_to_use = list(
 		/area/turbolift/aft_deck_one,
