@@ -13,10 +13,6 @@
 /mob/living/simple_mob/vore/oregrub/lava,
 /turf/simulated/mineral/floor/ignore_mapgen,
 /area/submap/cave/oregrubdeposit)
-"e" = (
-/mob/living/simple_mob/vore/oregrub,
-/turf/simulated/mineral/floor/ignore_mapgen,
-/area/submap/cave/oregrubdeposit)
 "f" = (
 /obj/item/pickaxe/silver,
 /turf/simulated/mineral/floor/ignore_mapgen,
@@ -56,7 +52,7 @@ a
 b
 b
 b
-e
+d
 b
 b
 b
