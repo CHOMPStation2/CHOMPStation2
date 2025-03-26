@@ -238,11 +238,9 @@
 
 /obj/item/storage/proc/open(mob/user as mob)
 	if (use_sound)
-		//CHOMPStation Edit
 		var/obj/belly/B = user.loc
 		if(isliving(user) && (!isbelly(B) || !(B.mode_flags & DM_FLAG_MUFFLEITEMS)))
 			playsound(src, src.use_sound, 50, 0, -5)
-		//CHOMPStation Edit end
 
 	orient2hud(user)
 	if(user.s_active)

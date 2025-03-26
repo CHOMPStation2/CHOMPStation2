@@ -1,6 +1,6 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "a" = (
-/turf/simulated/mineral,
+/turf/simulated/mineral/cave,
 /area/submap/cave/BlastMine1)
 "b" = (
 /turf/simulated/mineral/floor/ignore_mapgen/cave,

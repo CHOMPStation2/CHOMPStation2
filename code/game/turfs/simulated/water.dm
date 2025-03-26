@@ -229,12 +229,12 @@ var/list/shoreline_icon_cache = list()
 		add_overlay(shoreline_icon_cache[cache_string])
 
 /turf/simulated/floor/water/is_safe_to_enter(mob/living/L)
-	 //CHOMPEDIT: Aquatic flags simulated water as safe now
+	//CHOMPEDIT: Aquatic flags simulated water as safe now
 	if(istype(L,/mob/living/carbon))
 		var /mob/living/carbon/A = L
 		if(/datum/trait/positive/aquatic in A.species.traits)
 			return TRUE
-		 //CHOMPEDIT: Aquatic flags simulated water as safe now
+	//CHOMPEDIT: Aquatic flags simulated water as safe now
 	if(L.get_water_protection() < 1)
 		return FALSE
 	return ..()

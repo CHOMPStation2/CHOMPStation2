@@ -1,11 +1,11 @@
 /datum/construction/mecha/scarab_chassis
 	steps = list(list("key"=/obj/item/mecha_parts/part/scarab_torso),//1
-					 list("key"=/obj/item/mecha_parts/part/scarab_left_arm),//2
-					 list("key"=/obj/item/mecha_parts/part/scarab_right_arm),//3
-					 list("key"=/obj/item/mecha_parts/part/scarab_left_legs),//4
-					 list("key"=/obj/item/mecha_parts/part/scarab_right_legs),//5
-					 list("key"=/obj/item/mecha_parts/part/scarab_head)
-					)
+					list("key"=/obj/item/mecha_parts/part/scarab_left_arm),//2
+					list("key"=/obj/item/mecha_parts/part/scarab_right_arm),//3
+					list("key"=/obj/item/mecha_parts/part/scarab_left_legs),//4
+					list("key"=/obj/item/mecha_parts/part/scarab_right_legs),//5
+					list("key"=/obj/item/mecha_parts/part/scarab_head)
+				)
 
 /datum/construction/mecha/scarab_chassis/custom_action(step, obj/item/I, mob/user)
 	user.visible_message("[user] has connected [I] to [holder].", "You connect [I] to [holder]")
@@ -34,81 +34,81 @@
 					list("key"=IS_WELDER,
 							"backkey"=IS_WRENCH,
 							"desc"="External armor is wrenched."),
-					 //2
-					 list("key"=IS_WRENCH,
-					 		"backkey"=IS_CROWBAR,
-					 		"desc"="External armor is installed."),
-					 //3
-					 list("key"=/obj/item/stack/material/plasteel,
-					 		"backkey"=IS_WELDER,
-					 		"desc"="Internal armor is welded."),
-					 //4
-					 list("key"=IS_WELDER,
-					 		"backkey"=IS_WRENCH,
-					 		"desc"="Internal armor is wrenched"),
-					 //5
-					 list("key"=IS_WRENCH,
-					 		"backkey"=IS_CROWBAR,
-					 		"desc"="Internal armor is installed"),
-					 //6
-					 list("key"=/obj/item/stack/material/steel,
-					 		"backkey"=IS_SCREWDRIVER,
-					 		"desc"="Advanced capacitor is secured"),
-					 //7
-					 list("key"=IS_SCREWDRIVER,
-					 		"backkey"=IS_CROWBAR,
-					 		"desc"="Advanced capacitor is installed"),
-					 //8
-					 list("key"=/obj/item/stock_parts/capacitor/adv,
-					 		"backkey"=IS_SCREWDRIVER,
-					 		"desc"="Advanced scanner module is secured"),
-					 //9
-					 list("key"=IS_SCREWDRIVER,
-					 		"backkey"=IS_CROWBAR,
-					 		"desc"="Advanced scanner module is installed"),
-					 //10
-					 list("key"=/obj/item/stock_parts/scanning_module/adv,
-					 		"backkey"=IS_SCREWDRIVER,
-					 		"desc"="Targeting module is secured"),
-					 //11
-					 list("key"=IS_SCREWDRIVER,
-					 		"backkey"=IS_CROWBAR,
-					 		"desc"="Targeting module is installed"),
-					 //12
-					 list("key"=/obj/item/circuitboard/mecha/scarab/targeting,
-					 		"backkey"=IS_SCREWDRIVER,
-					 		"desc"="Peripherals control module is secured"),
-					 //13
-					 list("key"=IS_SCREWDRIVER,
-					 		"backkey"=IS_CROWBAR,
-					 		"desc"="Peripherals control module is installed"),
-					 //14
-					 list("key"=/obj/item/circuitboard/mecha/scarab/peripherals,
-					 		"backkey"=IS_SCREWDRIVER,
-					 		"desc"="Central control module is secured"),
-					 //15
-					 list("key"=IS_SCREWDRIVER,
-					 		"backkey"=IS_CROWBAR,
-					 		"desc"="Central control module is installed"),
-					 //16
-					 list("key"=/obj/item/circuitboard/mecha/scarab/main,
-					 		"backkey"=IS_SCREWDRIVER,
-					 		"desc"="The wiring is adjusted"),
-					 //17
-					 list("key"=IS_WIRECUTTER,
-					 		"backkey"=IS_SCREWDRIVER,
-					 		"desc"="The wiring is added"),
-					 //18
-					 list("key"=/obj/item/stack/cable_coil,
-					 		"backkey"=IS_SCREWDRIVER,
-					 		"desc"="The hydraulic systems are active."),
-					 //19
-					 list("key"=IS_SCREWDRIVER,
-					 		"backkey"=IS_WRENCH,
-					 		"desc"="The hydraulic systems are connected."),
-					 //20
-					 list("key"=IS_WRENCH,
-					 		"desc"="The hydraulic systems are disconnected.")
+					//2
+					list("key"=IS_WRENCH,
+							"backkey"=IS_CROWBAR,
+							"desc"="External armor is installed."),
+					//3
+					list("key"=/obj/item/stack/material/plasteel,
+							"backkey"=IS_WELDER,
+							"desc"="Internal armor is welded."),
+					//4
+					list("key"=IS_WELDER,
+							"backkey"=IS_WRENCH,
+							"desc"="Internal armor is wrenched"),
+					//5
+					list("key"=IS_WRENCH,
+							"backkey"=IS_CROWBAR,
+							"desc"="Internal armor is installed"),
+					//6
+					list("key"=/obj/item/stack/material/steel,
+							"backkey"=IS_SCREWDRIVER,
+							"desc"="Advanced capacitor is secured"),
+					//7
+					list("key"=IS_SCREWDRIVER,
+							"backkey"=IS_CROWBAR,
+							"desc"="Advanced capacitor is installed"),
+					//8
+					list("key"=/obj/item/stock_parts/capacitor/adv,
+							"backkey"=IS_SCREWDRIVER,
+							"desc"="Advanced scanner module is secured"),
+					//9
+					list("key"=IS_SCREWDRIVER,
+							"backkey"=IS_CROWBAR,
+							"desc"="Advanced scanner module is installed"),
+					//10
+					list("key"=/obj/item/stock_parts/scanning_module/adv,
+							"backkey"=IS_SCREWDRIVER,
+							"desc"="Targeting module is secured"),
+					//11
+					list("key"=IS_SCREWDRIVER,
+							"backkey"=IS_CROWBAR,
+							"desc"="Targeting module is installed"),
+					//12
+					list("key"=/obj/item/circuitboard/mecha/scarab/targeting,
+							"backkey"=IS_SCREWDRIVER,
+							"desc"="Peripherals control module is secured"),
+					//13
+					list("key"=IS_SCREWDRIVER,
+							"backkey"=IS_CROWBAR,
+							"desc"="Peripherals control module is installed"),
+					//14
+					list("key"=/obj/item/circuitboard/mecha/scarab/peripherals,
+							"backkey"=IS_SCREWDRIVER,
+							"desc"="Central control module is secured"),
+					//15
+					list("key"=IS_SCREWDRIVER,
+							"backkey"=IS_CROWBAR,
+							"desc"="Central control module is installed"),
+					//16
+					list("key"=/obj/item/circuitboard/mecha/scarab/main,
+							"backkey"=IS_SCREWDRIVER,
+							"desc"="The wiring is adjusted"),
+					//17
+					list("key"=IS_WIRECUTTER,
+							"backkey"=IS_SCREWDRIVER,
+							"desc"="The wiring is added"),
+					//18
+					list("key"=/obj/item/stack/cable_coil,
+							"backkey"=IS_SCREWDRIVER,
+							"desc"="The hydraulic systems are active."),
+					//19
+					list("key"=IS_SCREWDRIVER,
+							"backkey"=IS_WRENCH,
+							"desc"="The hydraulic systems are connected."),
+					//20
+					list("key"=IS_WRENCH,
+							"desc"="The hydraulic systems are disconnected.")
 					)
 
 /datum/construction/reversible/mecha/scarab/action(obj/item/I,mob/user as mob)

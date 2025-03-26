@@ -1054,7 +1054,7 @@
 /area/lunaship/office)
 "px" = (
 /obj/structure/lattice,
-/obj/machinery/pointdefense{
+/obj/machinery/power/pointdefense{
 	id_tag = "luna_ship_pd"
 	},
 /obj/structure/cable/cyan{
@@ -1936,7 +1936,7 @@
 /area/lunaship/cockpit)
 "Ad" = (
 /obj/structure/lattice,
-/obj/machinery/pointdefense{
+/obj/machinery/power/pointdefense{
 	id_tag = "luna_ship_pd"
 	},
 /obj/structure/cable/cyan,

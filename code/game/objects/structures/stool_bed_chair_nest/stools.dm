@@ -125,7 +125,7 @@ var/global/list/stool_cache = list() //haha stool
 			qdel(C)
 			return
 		var/padding_type
-		 //CHOMPstation Start: making carpets different and not just the boring basic red no matter carpet type, consider merging material variables at stack level in future - Jack
+		//CHOMPstation Start: making carpets different and not just the boring basic red no matter carpet type, consider merging material variables at stack level in future - Jack
 		if(istype(W,/obj/item/stack/tile/carpet))
 			var/obj/item/stack/tile/carpet/M = W
 			if(M.material && (M.material.flags & MATERIAL_PADDING))

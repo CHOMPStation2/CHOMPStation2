@@ -3751,7 +3751,7 @@
 /turf/simulated/floor/outdoors/dirt,
 /area/space)
 "cAO" = (
-/obj/machinery/exonet_node/map,
+/obj/machinery/exonet_node,
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/space)
 "cBF" = (
@@ -28912,7 +28912,7 @@
 /turf/simulated/floor/reinforced,
 /area/space)
 "tjy" = (
-/obj/machinery/exonet_node/map,
+/obj/machinery/exonet_node,
 /turf/simulated/floor/outdoors/dirt,
 /area/space)
 "tjB" = (

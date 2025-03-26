@@ -91,9 +91,9 @@
 			H.custom_pain("Your hands feel strange",1)
 	..()
 
-/obj/item/clothing/gloves/stamina/New()
+/obj/item/clothing/gloves/stamina/Initialize(mapload)
+	. = ..()
 	START_PROCESSING(SSobj, src)
-	..()
 
 /obj/item/clothing/gloves/stamina/Destroy()
 	STOP_PROCESSING(SSobj, src)

@@ -48723,12 +48723,6 @@
 	icon_state = "vault"
 	},
 /area/survivalpod)
-"oir" = (
-/obj/machinery/exonet_node/map,
-/turf/simulated/fitness{
-	icon_state = "vault"
-	},
-/area/survivalpod)
 "oiD" = (
 /obj/item/clothing/suit/storage/hooded/wintercoat/solgov/fleet,
 /turf/simulated/fitness{
@@ -92075,7 +92069,7 @@ hhZ
 bSW
 huP
 bSW
-oir
+hih
 bSW
 nHW
 bSW

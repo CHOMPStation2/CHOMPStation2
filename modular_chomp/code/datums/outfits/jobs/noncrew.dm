@@ -51,10 +51,3 @@
 	if(istype(wallet))
 		wallet.owner_name = H.real_name
 		wallet.worth = 1000
-
-/decl/hierarchy/outfit/noncrew/vr_avatar
-	pda_slot = null
-	id_slot = null
-	r_pocket = null
-	l_pocket = null
-	flags = OUTFIT_HAS_BACKPACK

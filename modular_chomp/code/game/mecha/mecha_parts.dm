@@ -2,8 +2,8 @@
 	name = "Hades Chassis"
 	origin_tech = list(TECH_MATERIAL = 7)
 
-/obj/item/mecha_parts/chassis/hades/New()
-	..()
+/obj/item/mecha_parts/chassis/hades/Initialize(mapload)
+	. = ..()
 	construct = new /datum/construction/mecha/hades_chassis(src)
 
 /obj/item/mecha_parts/part/hades_torso

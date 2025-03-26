@@ -443,7 +443,7 @@
 			desc = "A mysterious slice, coated in purple frosting that smells like grapes."
 			nutriment_desc = list("The desire to show off an party" = 10)
 			reagents.add_reagent(REAGENT_ID_STOXIN, 2)
-			reagents.add_reagent(REAGENT_ID_SPACEDRUGS, 10)
+			reagents.add_reagent(REAGENT_ID_BLISS, 10)
 			reagents.add_reagent(REAGENT_ID_SEROTROTIUM, 4)
 			reagents.add_reagent(REAGENT_ID_CRYPTOBIOLIN, 8)
 			reagents.add_reagent(REAGENT_ID_MINDBREAKER, 10)
@@ -535,10 +535,10 @@
 	var/slicetime = 15 SECONDS
 
 	var/slicelist = list(/obj/item/reagent_containers/food/snacks/sliceable/pizza/margherita/bigslice,
-						 /obj/item/reagent_containers/food/snacks/sliceable/pizza/pineapple/bigslice,
-						 /obj/item/reagent_containers/food/snacks/sliceable/pizza/meatpizza/bigslice,
-						 /obj/item/reagent_containers/food/snacks/sliceable/pizza/mushroompizza/bigslice,
-						 /obj/item/reagent_containers/food/snacks/sliceable/pizza/vegetablepizza/bigslice)
+							/obj/item/reagent_containers/food/snacks/sliceable/pizza/pineapple/bigslice,
+							/obj/item/reagent_containers/food/snacks/sliceable/pizza/meatpizza/bigslice,
+							/obj/item/reagent_containers/food/snacks/sliceable/pizza/mushroompizza/bigslice,
+							/obj/item/reagent_containers/food/snacks/sliceable/pizza/vegetablepizza/bigslice)
 
 /obj/structure/theonepizza/attackby(var/obj/item/W, var/mob/living/user)
 	if(istype(W,/obj/item/material/knife))

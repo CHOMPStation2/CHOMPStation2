@@ -21,10 +21,7 @@
 			"output destination" = 8
 			)
 	var/vac_owner = null
-
-/obj/item/vac_attachment/New()
-	..()
-	flags |= NOBLUDGEON //No more attack messages
+	flags = NOBLUDGEON
 
 /obj/item/vac_attachment/attack_self(mob/living/user)
 	var/set_input = null

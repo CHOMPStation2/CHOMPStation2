@@ -192,7 +192,7 @@
 	name = "Prizes: Drinks"
 	keywords += list("Prizes", "Drinks")
 	data = "All is 50!<br><br>\
-		 Redeemer brew <br>Warlock velvet <br>Wrapp artiste patron <br>Flask of holy water <br>College girl goldschlager <br>Gilthari luxury champagne <br>Bottle of nothing <br>Special blend whiskey <br>Akvavit"
+		Redeemer brew <br>Warlock velvet <br>Wrapp artiste patron <br>Flask of holy water <br>College girl goldschlager <br>Gilthari luxury champagne <br>Bottle of nothing <br>Special blend whiskey <br>Akvavit"
 
 /datum/lore/codex/page/casinomanual_pets/add_content()
 	name = "Prizes: Pets"
