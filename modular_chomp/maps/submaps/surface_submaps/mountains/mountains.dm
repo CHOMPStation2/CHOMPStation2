@@ -322,11 +322,13 @@
 	mappath = "modular_chomp/maps/submaps/surface_submaps/mountains/Scave1.dmm"
 	cost = 20
 
+/*
 /datum/map_template/surface/mountains/deep/spatial_anomaly
 	name = "spatial anomaly"
 	desc = "A strange section of the caves that seems twist and turn in ways that shouldn't be physically possible."
 	mappath = "modular_chomp/maps/submaps/surface_submaps/mountains/spatial_anomaly.dmm"
 	cost = 20
+*/
 
 /datum/map_template/surface/mountains/normal/Speakeasy //VOREStation add
 	name = "Speakeasy"
