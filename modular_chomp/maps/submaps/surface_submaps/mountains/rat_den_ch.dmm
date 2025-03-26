@@ -81,9 +81,9 @@
 /obj/effect/decal/cleanable/blood/drip,
 /turf/simulated/mineral/floor/ignore_mapgen,
 /area/submap/cave/ratden)
-"t" = (
-/obj/effect/decal/cleanable/blood,
+"u" = (
 /mob/living/simple_mob/vore/aggressive/rat,
+/obj/effect/decal/cleanable/blood,
 /turf/simulated/mineral/floor/ignore_mapgen,
 /area/submap/cave/ratden)
 
@@ -112,7 +112,7 @@ g
 g
 g
 n
-n
+a
 a
 "}
 (3,1,1) = {"
@@ -125,7 +125,7 @@ g
 g
 h
 g
-g
+n
 n
 a
 "}
@@ -164,7 +164,7 @@ d
 i
 g
 g
-g
+h
 q
 g
 g
@@ -266,7 +266,7 @@ g
 o
 g
 g
-g
+h
 a
 "}
 (14,1,1) = {"
@@ -279,7 +279,7 @@ g
 g
 o
 g
-g
+u
 n
 a
 "}
@@ -292,9 +292,9 @@ l
 g
 g
 o
-g
 n
-t
+n
+a
 a
 "}
 (16,1,1) = {"
