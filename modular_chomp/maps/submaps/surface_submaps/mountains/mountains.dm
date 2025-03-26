@@ -34,7 +34,7 @@
 #include "ritual.dmm"
 #include "Rockb1.dmm"
 #include "Scave1.dmm"
-#include "spatial_anomaly.dmm"
+// #include "spatial_anomaly.dmm" //Incredibly bugged.
 #include "speakeasy_vr.dmm"
 #include "SupplyDrop1.dmm"
 #include "SwordCave.dmm"
