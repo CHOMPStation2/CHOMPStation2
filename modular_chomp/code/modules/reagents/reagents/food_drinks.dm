@@ -387,20 +387,9 @@
 		return
 	M.adjustToxLoss(-3 * removed) //Almost on par with dylovene despite being harder to obtain in bulk. Nerf if this causes problems.
 
-/datum/reagent/drink/juice/gelatin
-	name = REAGENT_ID_GELATIN
-	id = REAGENT_GELATIN
-	description = "It doesnt taste like anything."
-	taste_description = REAGENT_ID_NOTHING
-	nutrition = 0
-	color = "#aaabcf"
-
-	glass_name = REAGENT_ID_GELATIN
-	glass_desc = "It's like flavourless slime."
-
 /datum/reagent/drink/bubbleteawatermelon
 	name = REAGENT_BUBBLETEAWATERMELON
-	id = REAGENT_BUBBLETEAWATERMELON
+	id = REAGENT_ID_BUBBLETEAWATERMELON
 	description = "A tea with milk and watermelon in it and gelatin balls as well."
 	taste_description = "creamy tea and watermelon"
 	color = "#b83333"
@@ -682,16 +671,6 @@
 //////////////////////////////////////////////
 
 //YW drinks
-/datum/reagent/drink/lovepotion_yw
-	name = REAGENT_STRAWBERRYLOVEPOTION
-	id = REAGENT_ID_STRAWBERRYLOVEPOTION
-	description = "Creamy strawberries and sugar, simple and sweet."
-	taste_description = "strawberries and cream"
-	color = "#fc8a8a" // rgb(252, 138, 138)
-
-	glass_name = "Love Potion"
-	glass_desc = "Love me tender, love me sweet."
-
 /datum/reagent/ethanol/wormblood
 	name = REAGENT_WORMBLOOD
 	id = REAGENT_ID_WORMBLOOD

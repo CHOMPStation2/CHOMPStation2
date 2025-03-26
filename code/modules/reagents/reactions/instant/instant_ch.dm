@@ -60,6 +60,7 @@
 
 /decl/chemical_reaction/instant/glucose
 	name = REAGENT_GLUCOSE
+	id = REAGENT_ID_GLUCOSE
 	result = REAGENT_ID_GLUCOSE
 	required_reagents = list(REAGENT_ID_SODIUMCHLORIDE = 1, REAGENT_ID_WATER = 1, REAGENT_ID_SUGAR = 1)
 	result_amount = 1
@@ -67,7 +68,7 @@
 
 /decl/chemical_reaction/instant/myelamine_sap //This is the clotting agent used by clotting packs.
 	name = REAGENT_MYELAMINE
-	id = REAGENT_ID_MYELAMINE
+	id = REAGENT_ID_MYELAMINE + "sap"
 	result = REAGENT_ID_MYELAMINE
 	required_reagents = list(REAGENT_ID_BICARIDINE = 1, REAGENT_ID_IRON = 2, REAGENT_ID_KELOTANE = 1, REAGENT_ID_BLUESAP = 1)
 	result_amount = 1

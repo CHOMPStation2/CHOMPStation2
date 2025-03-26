@@ -158,5 +158,5 @@
 	else if(result == 2)
 		comment = "heads"
 	user.visible_message(span_notice("[user] has thrown \the [src]. It lands on [comment]!"), \
-						 span_notice("You throw \the [src]. It lands on [comment]!"))
+							span_notice("You throw \the [src]. It lands on [comment]!"))
 	balloon_alert_visible("\the [src] lands on [comment]!", "\the [src] lands on [comment]!")
