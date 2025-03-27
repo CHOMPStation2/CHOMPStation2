@@ -7,14 +7,6 @@
 	..()
 	turfs = GLOB.latejoin_gatewaystation
 
-/datum/spawnpoint/vore/itemtf
-	display_name = "Item TF spawn"
-	msg = "has arrived on the station"
-
-/datum/spawnpoint/vore/New()
-	..()
-	turfs = latejoin
-
 /datum/spawnpoint/plainspath
 	display_name = "Sif plains"
 	msg = "has checked in at the plains gate"
