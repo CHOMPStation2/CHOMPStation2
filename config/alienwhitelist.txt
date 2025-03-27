@@ -12,6 +12,24 @@ azmodan412 - Xenochimera
 alphaprime1 - Protean
 bothnevarbackwards - Diona
 bricker98 - Protean
+<<<<<<< HEAD
+=======
+bricker98 - Black-Eyed Shadekin
+bricker98 - Hanner
+bubonicsweetie - Protean
+burritojustice - Protean
+camanis - Protean
+cameron653 - Protean
+cgr - Protean
+chaosdoomsday - Black-Eyed Shadekin
+chaosdoomsday - Protean
+chargae - Protean
+chemlight - Xenochimera
+chillyfang - Black-Eyed Shadekin
+chloeplayer - Protean
+comradenitro - Protean
+coolcrow420 - Black-Eyed Shadekin
+>>>>>>> 1440e687a9 (Hanner application (#17431))
 crossexonar - Protean
 funnyman2003 - Xenochimera
 flurriee - Protean
@@ -49,6 +67,22 @@ sharplight - Protean
 tastypred - Black-Eyed Shadekin
 tastypred - Xenochimera
 timidvi - Diona
+<<<<<<< HEAD
+=======
+titaania - Protean
+tombomb90 - Protean
+torquegstc - Protean
+trifireblade - Protean
+trikonei - Protean
+umbraferros - Black-Eyed Shadekin
+umbraferros - Protean
+umbraferros - Xenochimera
+umbraferros - Hanner
+umbrenos - Black-Eyed Shadekin
+unkindnaysayer - Hanner
+varkaselyn - Protean
+varonis - Protean
+>>>>>>> 1440e687a9 (Hanner application (#17431))
 varonis - Xenochimera
 verkister - Xenochimera
 vitoras - Protean
