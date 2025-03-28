@@ -560,3 +560,10 @@
   - bugfix: Xenochimera brains will no longer runtime under certain circumstances.
   FluffMedic:
   - rscadd: Something for event coming up.
+2025-03-28:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: recycling in bellies
+  Diana:
+  - bugfix: Environmental traits now work properly
+  - bugfix: Lightning strikes will no longer strike people in nullspace
+  - bugfix: Humans now have their proper skin color selection back
