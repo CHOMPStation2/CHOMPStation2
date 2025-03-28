@@ -165,8 +165,9 @@
 
 	if(until_full_process-- <= 0)
 		for(var/obj/effect/dark/dark_tile in orange(node_range, src))
-			if(!(dark_tile in children_effects))
-				children_effects |= dark_tile
+			if(QDELETED(dark_tile))
+				continue
+			children_effects |= dark_tile
 		until_full_process = 4
 
 	children_effects.Remove(null)
