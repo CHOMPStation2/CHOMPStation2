@@ -79,7 +79,7 @@
 	layer = ABOVE_TURF_LAYER
 
 /obj/effect/dark/proc/unlinked()
-	node.children_effects -= src
+	linked_node.children_effects -= src
 	linked_node = null
 	addtimer(CALLBACK(src, PROC_REF(perform_unlink), rand(20, 70), TIMER_DELETE_ME))
 
