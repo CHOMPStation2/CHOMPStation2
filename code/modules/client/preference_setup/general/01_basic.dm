@@ -61,13 +61,8 @@
 	. += "(<a href='byond://?src=\ref[src];reset_nickname=1'>Clear</A>)"
 	. += "<br>"
 	. += span_bold("Biological Sex:") + " <a href='byond://?src=\ref[src];bio_gender=1'><b>[gender2text(pref.biological_gender)]</b></a><br>"
-<<<<<<< HEAD
-	. += span_bold("Pronouns:") + " <a href='byond://?src=\ref[src];id_gender=1'><b>[gender2text(pref.identifying_gender)]</b></a><br>"
-	. += span_bold("Age:") + " <a href='byond://?src=\ref[src];age=1'>[pref.read_preference(/datum/preference/numeric/human/age)]</a> <b>Birthday:</b> <a href='byond://?src=\ref[src];bday_month=1'>[pref.read_preference(/datum/preference/numeric/human/bday_month)]</a><b>/</b><a href='byond://?src=\ref[src];bday_day=1'>[pref.read_preference(/datum/preference/numeric/human/bday_day)]</a> - <b>Announce?:</b> <a href='byond://?src=\ref[src];bday_announce=1'>[pref.read_preference(/datum/preference/toggle/human/bday_announce) ? "Yes" : "Disabled"]</a><br>" //ChompEDIT - DISABLE the announcement
-=======
 	. += span_bold("Pronouns:") + " <a href='byond://?src=\ref[src];id_gender=1'><b>[genders_to_pronoun_set[pref.identifying_gender]]</b></a><br>"
-	. += span_bold("Age:") + " <a href='byond://?src=\ref[src];age=1'>[pref.read_preference(/datum/preference/numeric/human/age)]</a> <b>Birthday:</b> <a href='byond://?src=\ref[src];bday_month=1'>[pref.read_preference(/datum/preference/numeric/human/bday_month)]</a><b>/</b><a href='byond://?src=\ref[src];bday_day=1'>[pref.read_preference(/datum/preference/numeric/human/bday_day)]</a> - <b>Announce?:</b> <a href='byond://?src=\ref[src];bday_announce=1'>[pref.read_preference(/datum/preference/toggle/human/bday_announce) ? "Yes" : "No"]</a><br>"
->>>>>>> c151ca1fc7 (Woe, pronouns be upon you (#17433))
+	. += span_bold("Age:") + " <a href='byond://?src=\ref[src];age=1'>[pref.read_preference(/datum/preference/numeric/human/age)]</a> <b>Birthday:</b> <a href='byond://?src=\ref[src];bday_month=1'>[pref.read_preference(/datum/preference/numeric/human/bday_month)]</a><b>/</b><a href='byond://?src=\ref[src];bday_day=1'>[pref.read_preference(/datum/preference/numeric/human/bday_day)]</a> - <b>Announce?:</b> <a href='byond://?src=\ref[src];bday_announce=1'>[pref.read_preference(/datum/preference/toggle/human/bday_announce) ? "Yes" : "Disabled"]</a><br>" //ChompEDIT - DISABLE the announcement
 	. += span_bold("Spawn Point:") + " <a href='byond://?src=\ref[src];spawnpoint=1'>[pref.read_preference(/datum/preference/choiced/living/spawnpoint)]</a><br>"
 	if(CONFIG_GET(flag/allow_metadata))
 		//CHOMPEdit Start
