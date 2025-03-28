@@ -1,0 +1,9 @@
+author: "Ace"
+delete-after: True
+changes:
+  - rscadd: "Pitcher plants now have struggle emotes that TELL YOU that you need outside help to be rescued."
+  - rscadd: "Pitcher plant fruits now have a new reagent."
+  - bugfix: "Pitcher plants would not be anchored after being killed and revived, or sometimes in other circumstances just wouldn't be anchored correctly."
+  - bugfix: "Pitcher plants did not effectively communicate that you can rescue players with wire and that a newspaper roll won't work."
+  - code_imp: "Removed OOC bracketed text about having to use OOC escape. Most players are smart enough to understand without bashing their heads with it."
+  - code_imp: "Changed damage values of pitcher plant for a much slower digestion."
