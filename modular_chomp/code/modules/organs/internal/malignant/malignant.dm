@@ -22,8 +22,8 @@
 			while(++i < 10)
 				// done here, because New() does all the setup for placing the organ...
 				// attempt to select a valid exterior organ that isn't synthetic!
-				parent_organ = pick(validBPspawns)
 				if(isliving(loc))
+					parent_organ = pick(validBPspawns)
 					var/mob/living/L = loc
 					var/obj/item/organ/checklimb = L.organs_by_name[parent_organ]
 					if(checklimb)
