@@ -105,8 +105,8 @@
 /obj/structure/table/glass,
 /obj/structure/window/reinforced,
 /obj/item/coin/phoron{
-	desc = "This phoron coin is a very early mint. It still flips as good as any other.";
-	name = "vintage phoron coin"
+	name = "vintage phoron coin";
+	desc = "This phoron coin is a very early mint. It still flips as good as any other."
 	},
 /obj/structure/sign/kiddieplaque/poi4{
 	pixel_y = 28
@@ -115,8 +115,8 @@
 /area/submap/explorerhouse)
 "ax" = (
 /obj/item/clothing/head/bearpelt{
-	desc = "A bit worn, but still fuzzy. There's a harpoon-shaped patch on the back of it.";
 	name = "vintage bear pelt hat";
+	desc = "A bit worn, but still fuzzy. There's a harpoon-shaped patch on the back of it.";
 	pixel_y = 6
 	},
 /obj/structure/table/glass,
@@ -128,8 +128,8 @@
 /area/submap/explorerhouse)
 "ay" = (
 /obj/item/material/harpoon{
-	desc = "This harpoon looks like it's seen better days, but is reinforced enough to still skewer beasts.";
-	name = "vintage harpoon"
+	name = "vintage harpoon";
+	desc = "This harpoon looks like it's seen better days, but is reinforced enough to still skewer beasts."
 	},
 /obj/structure/table/glass,
 /obj/structure/window/reinforced,
@@ -142,8 +142,8 @@
 /obj/structure/table/glass,
 /obj/structure/window/reinforced,
 /obj/item/clothing/accessory/medal/conduct{
-	desc = "A rusted medal. It's too faded to make much out beyond the words 'Audentes fortuna iuvat'.";
 	name = "expeditionary corps medal";
+	desc = "A rusted medal. It's too faded to make much out beyond the words 'Audentes fortuna iuvat'.";
 	pixel_y = 6
 	},
 /obj/structure/sign/kiddieplaque/poi1{
@@ -163,11 +163,11 @@
 	icon_state = "0-4"
 	},
 /obj/machinery/power/apc{
-	dir = 1;
 	name = "north bump";
-	operating = 1;
+	dir = 1;
 	pixel_x = 0;
-	pixel_y = 24
+	pixel_y = 24;
+	operating = 1
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/door/window/westleft,
@@ -207,8 +207,8 @@
 /area/submap/explorerhouse)
 "aI" = (
 /obj/structure/window/reinforced/tinted{
-	dir = 8;
-	icon_state = "twindow"
+	icon_state = "twindow";
+	dir = 8
 	},
 /obj/machinery/shower{
 	dir = 1
@@ -253,6 +253,7 @@
 "aQ" = (
 /obj/structure/table/rack,
 /obj/item/gps/explorer,
+/obj/item/gun/energy/locked/frontier/holdout,
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/explorerhouse)
 "aR" = (
@@ -272,9 +273,9 @@
 /area/submap/explorerhouse)
 "aU" = (
 /obj/machinery/button/remote/blast_door{
-	id = "explorerhome";
 	name = "Armory Door";
-	pixel_y = 28
+	pixel_y = 28;
+	id = "explorerhome"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/submap/explorerhouse)
@@ -369,10 +370,10 @@
 "bm" = (
 /obj/machinery/portable_atmospherics/powered/scrubber/huge/stationary,
 /obj/machinery/light/small{
-	brightness_color = "#DA0205";
-	brightness_power = 1;
+	dir = 8;
 	brightness_range = 5;
-	dir = 8
+	brightness_power = 1;
+	brightness_color = "#DA0205"
 	},
 /turf/simulated/floor/wood,
 /area/submap/explorerhouse)
@@ -391,8 +392,8 @@
 /area/submap/explorerhouse)
 "bp" = (
 /obj/structure/sink{
-	dir = 8;
 	icon_state = "sink";
+	dir = 8;
 	pixel_x = -12;
 	pixel_y = 2
 	},
@@ -402,10 +403,10 @@
 	pixel_y = 0
 	},
 /obj/machinery/light/small{
-	brightness_color = "#DA0205";
-	brightness_power = 1;
+	dir = 8;
 	brightness_range = 5;
-	dir = 8
+	brightness_power = 1;
+	brightness_color = "#DA0205"
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/submap/explorerhouse)
@@ -426,17 +427,17 @@
 /area/submap/explorerhouse)
 "bx" = (
 /obj/machinery/light/small{
-	brightness_color = "#DA0205";
-	brightness_power = 1;
+	dir = 8;
 	brightness_range = 5;
-	dir = 8
+	brightness_power = 1;
+	brightness_color = "#DA0205"
 	},
 /turf/simulated/floor/carpet/sblucarpet,
 /area/submap/explorerhouse)
 "bz" = (
 /obj/structure/sign/kiddieplaque{
-	desc = "To anyone reading this, you'll note that I'm not home right now, and unfortunately due to reassignment, I won't be for a very long time. Exploring somewhere really far and dangerous now. You can stay if you want, but please try to keep my home in good condition.";
 	name = "read me visitors";
+	desc = "To anyone reading this, you'll note that I'm not home right now, and unfortunately due to reassignment, I won't be for a very long time. Exploring somewhere really far and dangerous now. You can stay if you want, but please try to keep my home in good condition.";
 	pixel_y = 0
 	},
 /turf/simulated/wall/wood,

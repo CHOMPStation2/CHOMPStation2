@@ -11,8 +11,8 @@
 /area/submap/farm)
 "d" = (
 /obj/structure/railing{
-	dir = 4;
-	icon_state = "railing0"
+	icon_state = "railing0";
+	dir = 4
 	},
 /turf/simulated/floor/outdoors/dirt,
 /area/submap/farm)
@@ -21,8 +21,8 @@
 /area/submap/farm)
 "f" = (
 /obj/structure/railing{
-	dir = 8;
-	icon_state = "railing0"
+	icon_state = "railing0";
+	dir = 8
 	},
 /turf/simulated/floor/outdoors/dirt,
 /area/submap/farm)
@@ -145,8 +145,8 @@
 /area/submap/farm)
 "C" = (
 /obj/structure/bed/chair/wood{
-	dir = 8;
-	icon_state = "wooden_chair"
+	icon_state = "wooden_chair";
+	dir = 8
 	},
 /turf/simulated/floor/wood,
 /area/submap/farm)
@@ -221,10 +221,28 @@
 /area/submap/farm)
 "T" = (
 /obj/structure/railing{
-	dir = 1;
-	icon_state = "railing0"
+	icon_state = "railing0";
+	dir = 1
 	},
 /turf/simulated/floor/outdoors/dirt,
+/area/submap/farm)
+"U" = (
+/obj/item/stack/cable_coil/white,
+/turf/simulated/floor/outdoors/dirt{
+	outdoors = 0
+	},
+/area/submap/farm)
+"V" = (
+/mob/living/simple_mob/vore/pitcher_plant,
+/turf/simulated/floor/outdoors/mud{
+	outdoors = 0
+	},
+/area/submap/farm)
+"W" = (
+/obj/effect/decal/remains/human,
+/turf/simulated/floor/outdoors/mud{
+	outdoors = 0
+	},
 /area/submap/farm)
 
 (1,1,1) = {"
@@ -749,7 +767,7 @@ o
 r
 w
 r
-o
+U
 F
 i
 e
@@ -850,7 +868,7 @@ n
 o
 s
 s
-s
+V
 o
 F
 i
@@ -882,9 +900,9 @@ e
 i
 n
 o
-s
+V
 x
-s
+W
 o
 F
 i
@@ -918,7 +936,7 @@ n
 o
 s
 y
-s
+V
 o
 F
 i

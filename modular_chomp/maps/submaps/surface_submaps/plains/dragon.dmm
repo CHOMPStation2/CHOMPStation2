@@ -37,12 +37,6 @@
 	outdoors = 0
 	},
 /area/submap/dragon)
-"h" = (
-/mob/living/simple_mob/vore/aggressive/dragon,
-/turf/simulated/floor/outdoors/dirt{
-	outdoors = 0
-	},
-/area/submap/dragon)
 "i" = (
 /turf/simulated/floor/outdoors/dirt,
 /area/submap/dragon)
@@ -58,6 +52,12 @@
 /obj/item/reagent_containers/food/snacks/meat,
 /obj/item/reagent_containers/food/snacks/meat,
 /obj/item/material/knife/hook,
+/turf/simulated/floor/outdoors/dirt{
+	outdoors = 0
+	},
+/area/submap/dragon)
+"l" = (
+/mob/living/simple_mob/vore/bigdragon/friendly,
 /turf/simulated/floor/outdoors/dirt{
 	outdoors = 0
 	},
@@ -208,7 +208,7 @@ d
 d
 d
 d
-d
+l
 d
 d
 d
@@ -231,7 +231,7 @@ g
 d
 d
 d
-h
+d
 d
 d
 d
