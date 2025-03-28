@@ -9,7 +9,7 @@
 
 /obj/effect/dark/Initialize(mapload, check_glow)
 	. = ..()
-	if(prob(5) && should_glow)
+	if(prob(5) && check_glow)
 		add_glow()
 
 /obj/effect/dark/proc/add_glow()
