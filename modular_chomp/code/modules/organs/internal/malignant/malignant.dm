@@ -156,7 +156,7 @@
 			owner.AdjustWeakened(3 * base_mult)
 		if(prob(75))
 			owner.AdjustConfused(4 * base_mult)
-		var/obj/item/organ/exteranl/O = owner.organs_by_name[parent_organ]
+		var/obj/item/organ/external/O = owner.organs_by_name[parent_organ]
 		if(damage >= min_broken_damage)
 			owner.custom_pain(span_warning("You feel a painful sensation in your [O.name]."),damage,TRUE)
 			owner.AdjustBlinded(6 * base_mult)
