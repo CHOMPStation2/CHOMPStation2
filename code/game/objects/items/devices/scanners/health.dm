@@ -304,7 +304,7 @@
 					dat += "<br>"
 			else if(istype(io,/obj/item/organ/internal/malignant))
 				if(advscan >= 2)
-					var/obj/item/organ/internal/ORG = H.organs_by_name[io.parent_organ]
+					var/obj/item/organ/external/ORG = H.organs_by_name[io.parent_organ]
 					dat += span_warning("Anatomical irregularities detected in subject's [ORG.name].")
 					dat += "<br>"
 				else
