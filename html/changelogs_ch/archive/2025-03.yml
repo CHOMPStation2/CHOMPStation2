@@ -551,3 +551,19 @@
   - balance: Censored move to Neutral (RP trait)
   - balance: Nervousness moved to Neutral (RP Trait)
   - bugfix: FBP dionas will no longer explode
+2025-03-27:
+  CHOMPStation2StaffMirrorBot:
+  - rscadd: Added mail options for entrepreneurs.
+  Diana:
+  - code_imp: Consolidates a bunch of species files for backend cleanup.
+  - bugfix: Gets rid of an override that overrode tajaran being able to lick wounds
+  - bugfix: Xenochimera brains will no longer runtime under certain circumstances.
+  FluffMedic:
+  - rscadd: Something for event coming up.
+2025-03-28:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: recycling in bellies
+  Diana:
+  - bugfix: Environmental traits now work properly
+  - bugfix: Lightning strikes will no longer strike people in nullspace
+  - bugfix: Humans now have their proper skin color selection back
