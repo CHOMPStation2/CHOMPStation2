@@ -23,8 +23,9 @@
 				// done here, because New() does all the setup for placing the organ...
 				// attempt to select a valid exterior organ that isn't synthetic!
 				parent_organ = pick(validBPspawns)
-				if(isliving(owner))
-					var/obj/item/organ/checklimb = owner.organs_by_name[parent_organ]
+				if(isliving(loc))
+					var/mob/living/L = loc
+					var/obj/item/organ/checklimb = L.organs_by_name[parent_organ]
 					if(checklimb)
 						// valid limb, check if organic!
 						if(checklimb.status == 0 && checklimb.robotic < ORGAN_ROBOT)
