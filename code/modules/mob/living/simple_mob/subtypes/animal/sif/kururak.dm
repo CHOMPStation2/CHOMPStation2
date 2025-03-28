@@ -88,8 +88,6 @@
 	var/instinct	// The points used by Kururaks to decide Who Is The Boss
 	var/obey_pack_rule = TRUE	// Decides if the Kururak will automatically assign itself to follow the one with the highest instinct.
 
-<<<<<<< HEAD
-=======
 /mob/living/simple_mob/animal/sif/kururak/init_vore()
 	if(!voremob_loaded)
 		return
@@ -109,7 +107,6 @@
 	B.absorbchance = 0
 	B.escapechance = 25
 	B.escape_stun = 5
->>>>>>> d448036334 (Adds a vore belly to kururak (#17436))
 
 /datum/say_list/kururak
 	speak = list("Kurr?","|R|rrh..", "Ksss...")
