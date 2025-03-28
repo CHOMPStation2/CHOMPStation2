@@ -7,9 +7,9 @@
 	var/health = 10
 	var/obj/structure/prop/dark_node/linked_node = null
 
-/obj/effect/dark/Initialize(mapload)
+/obj/effect/dark/Initialize(mapload, check_glow)
 	. = ..()
-	if(prob(5))
+	if(check_glow && prob(5))
 		add_glow()
 
 /obj/effect/dark/proc/add_glow()
@@ -79,13 +79,18 @@
 	layer = ABOVE_TURF_LAYER
 
 /obj/effect/dark/proc/unlinked()
+	linked_node.children_effects -= src
 	linked_node = null
-	spawn(rand(20,70))
-		if(!linked_node)
-			qdel(src)
+	addtimer(CALLBACK(src, PROC_REF(perform_unlink), rand(20, 70), TIMER_DELETE_ME))
 
-/obj/effect/dark/floor/Initialize(mapload, var/node)
-	. = ..()
+/obj/effect/dark/proc/perform_unlink()
+	PRIVATE_PROC(TRUE)
+	if(!linked_node)
+		qdel(src)
+
+/obj/effect/dark/floor/Initialize(mapload, check_glow, var/node)
+	. = ..(mapload, !isspace(loc))
+
 	if(isspace(loc))
 		return INITIALIZE_HINT_QDEL
 
@@ -146,7 +151,7 @@
 			if(T2.get_lumcount() >= 0.4)
 				continue
 
-			var/new_dark_tile = new /obj/effect/dark/floor(T2, linked_node)
+			var/new_dark_tile = new /obj/effect/dark/floor(T2, null, linked_node)
 			linked_node.children_effects |= new_dark_tile
 
 
@@ -155,7 +160,7 @@
 	//set background = 1
 
 	if(!(locate(/obj/effect/dark) in get_turf(src)))
-		var/new_dark_tile = new /obj/effect/dark/floor(get_turf(src), src)
+		var/new_dark_tile = new /obj/effect/dark/floor(get_turf(src), null, src)
 		children_effects |= new_dark_tile
 
 	if(until_full_process-- <= 0)

@@ -538,7 +538,7 @@
 
 			// CHOMPedit begin - malignant organs
 			if(istype(i, /obj/item/organ/internal/malignant))
-				var/obj/item/organ/internal/ORG = occupant.organs_by_name[i.parent_organ]
+				var/obj/item/organ/external/ORG = occupant.organs_by_name[i.parent_organ]
 				hasMalignants += span_red(" -[ORG.name]") + "<BR>"
 			// CHOMPedit end
 

@@ -22,9 +22,10 @@
 			while(++i < 10)
 				// done here, because New() does all the setup for placing the organ...
 				// attempt to select a valid exterior organ that isn't synthetic!
-				parent_organ = pick(validBPspawns)
-				if(isliving(owner))
-					var/obj/item/organ/checklimb = owner.organs_by_name[parent_organ]
+				if(isliving(loc))
+					parent_organ = pick(validBPspawns)
+					var/mob/living/L = loc
+					var/obj/item/organ/checklimb = L.organs_by_name[parent_organ]
 					if(checklimb)
 						// valid limb, check if organic!
 						if(checklimb.status == 0 && checklimb.robotic < ORGAN_ROBOT)
@@ -155,7 +156,7 @@
 			owner.AdjustWeakened(3 * base_mult)
 		if(prob(75))
 			owner.AdjustConfused(4 * base_mult)
-		var/obj/item/organ/O = owner.organs_by_name[parent_organ]
+		var/obj/item/organ/external/O = owner.organs_by_name[parent_organ]
 		if(damage >= min_broken_damage)
 			owner.custom_pain(span_warning("You feel a painful sensation in your [O.name]."),damage,TRUE)
 			owner.AdjustBlinded(6 * base_mult)
@@ -303,7 +304,7 @@
 			owner.Confuse(30)
 
 	if(prob(2))
-		var/obj/item/organ/O = owner.organs_by_name[parent_organ]
+		var/obj/item/organ/external/O = owner.organs_by_name[parent_organ]
 		if(stage_progress > 200)
 			owner.custom_pain(span_warning("You feel bloated. The pain in your [O.name] is agonizing."),20,TRUE)
 			owner.automatic_custom_emote(VISIBLE_MESSAGE, "winces slightly.", check_stat = TRUE)
@@ -455,7 +456,7 @@
 		supply_conversion_value = initial(supply_conversion_value) + ((thalers * SSsupply.points_per_money))
 
 	if(prob(2))
-		var/obj/item/organ/O = owner.organs_by_name[parent_organ]
+		var/obj/item/organ/external/O = owner.organs_by_name[parent_organ]
 		if(thalers < 100)
 			pass()
 		else if(thalers < 500)
