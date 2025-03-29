@@ -233,7 +233,7 @@
 	edge_blending_priority = 4
 	turf_layers = list(/turf/simulated/floor/outdoors/desert_planet/sand)
 
-  //I want this for the water tiles
+//I want this for the water tiles
 /turf/simulated/floor/water
 	name = "shallow water"
 	desc = "A body of water.  It seems shallow enough to walk through, if needed."

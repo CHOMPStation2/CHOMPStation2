@@ -233,9 +233,9 @@
 
 // Called when a mob dies
 /datum/reagent/proc/on_mob_death(var/mob/M)
- 	return
+	return
 
- //on transfer to new container, return 1 to allow it to continue
+//on transfer to new container, return 1 to allow it to continue
 /datum/reagent/proc/on_transfer(var/volume)
 	return 1
 //YW edit end

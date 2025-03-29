@@ -73,7 +73,7 @@
 	if(blood_volume <= M.species.blood_volume*M.species.blood_level_safe)
 		bloodloss = TRUE
 
- //CHOMPedit start: Wording
+//CHOMPedit start: Wording
 	if(bleeding_external)
 		dat += span_bold("Surface Bleeding") + " - Apply bandages or administer Bicaridine.<br>"
 	if(bleeding_internal)

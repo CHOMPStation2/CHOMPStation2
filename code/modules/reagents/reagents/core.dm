@@ -301,7 +301,7 @@
 	if(alien == IS_SLIME && prob(10))
 		M.visible_message(span_warning("[M]'s flesh sizzles where the water touches it!"), span_danger("Your flesh burns in the water!"))
 	..()
-  //VOREStation Edit End,
+//VOREStation Edit End,
 
 #undef WATER_LATENT_HEAT
 

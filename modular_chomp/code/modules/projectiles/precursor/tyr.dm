@@ -208,5 +208,5 @@
 	spread_range = 60
 
 /obj/item/projectile/energy/spikeenergy_ball/slow
- 	speed = 15
- 	range = 20
+	speed = 15
+	range = 20
