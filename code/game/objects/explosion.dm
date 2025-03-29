@@ -111,8 +111,8 @@
 		sleep(8)
 
 		if(!powernet_rebuild_was_deferred_already && defer_powernet_rebuild)
-			SSmachines.makepowernets()
 			defer_powernet_rebuild = 0
+			SSmachines.makepowernets()
 	return 1
 
 /proc/secondaryexplosion(turf/epicenter, range)

@@ -444,6 +444,9 @@ var/list/possible_cable_coil_colours = list(
 	var/turf/T1 = loc
 	if(!T1) return
 
+	if(!defer_powernet_rebuild)
+		return
+
 	var/list/powerlist = power_list(T1,src,0,0) //find the other cables that ended in the centre of the turf, with or without a powernet
 	if(powerlist.len>0)
 		var/datum/powernet/PN = new()
@@ -475,6 +478,9 @@ var/list/possible_cable_coil_colours = list(
 	// remove the cut cable from its turf and powernet, so that it doesn't get count in propagate_network worklist
 	loc = null
 	powernet.remove_cable(src) //remove the cut cable from its powernet
+
+	if(!defer_powernet_rebuild)
+		return
 
 	var/datum/powernet/newPN = new()// creates a new powernet...
 	propagate_network(P_list[1], newPN)//... and propagates it to the other side of the cable
