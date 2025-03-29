@@ -56,6 +56,8 @@ SUBSYSTEM_DEF(machines)
 	setup_powernets_for_cables(cable_list)
 
 /datum/controller/subsystem/machines/proc/setup_powernets_for_cables(list/cables)
+	if(defer_powernet_rebuild == 1)
+		return
 	for(var/obj/structure/cable/PC as anything in cables)
 		if(!PC.powernet)
 			var/datum/powernet/NewPN = new()
