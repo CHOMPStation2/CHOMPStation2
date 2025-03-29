@@ -94,12 +94,8 @@
 	var/obj/item/dnalockingchip/attached_lock
 
 	var/last_shot = 0			//records the last shot fired
-<<<<<<< HEAD
 	var/recoil_mode = 1			//If the gun will hurt micros if shot or not. Disabled on Virgo, used downstream. //CHOMPEDIT - Enabled
-=======
-	var/recoil_mode = 0			//If the gun will hurt micros if shot or not. Disabled on Virgo, used downstream.
 	var/mounted_gun = 0				//If the gun is mounted within a rigsuit or elsewhere. This makes it so the gun can be shot even if it's loc != a mob
->>>>>>> 83a702faee (rigsuit fixes (#17434))
 
 //VOREStation Add - /tg/ icon system
 	var/charge_sections = 4
