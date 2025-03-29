@@ -21,6 +21,7 @@
 			newplayer_start += loc
 			delete_me = TRUE
 		if("JoinLate") // Bit difference, since we need the spawn point to move.
+<<<<<<< HEAD
 			latejoin += src
 			simulated = TRUE
 		//	delete_me = 1
@@ -48,6 +49,14 @@
 			GLOB.latejoin_tyrvillage += loc
 			delete_me = TRUE
 		//CHOMPEdit End
+=======
+			latejoin += loc
+			delete_me = TRUE
+		if("JoinLateGateway")
+			latejoin_gateway += loc
+			latejoin += loc				//VOREStation Addition
+			delete_me = TRUE
+>>>>>>> 4ad2c4568d (fix admin spawn or error (#17446))
 		if("JoinLateElevator")
 			latejoin_elevator += loc
 			delete_me = TRUE
