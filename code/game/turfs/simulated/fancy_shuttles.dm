@@ -181,8 +181,6 @@ GLOBAL_LIST_EMPTY(fancy_shuttles)
 	return "[alpha]-[color]-[dir]-[icon_state]-[T.layer]-[icon_file]"
 
 /**
-<<<<<<< HEAD
-=======
  * Shuttle Glass
  */
 //OLD GLASS - USE NEW GLASS
@@ -218,7 +216,6 @@ GLOBAL_LIST_EMPTY(fancy_shuttles)
 		icon_state = "walls [x - F.x],[y - F.y]"
 
 /**
->>>>>>> c30f2b9c49 (next grep, no spaces (#17437))
  * Invisible ship equipment (otherwise the same as normal)
  */
 // Gas engine

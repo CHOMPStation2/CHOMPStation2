@@ -1,4 +1,4 @@
- //Fodder
+//Fodder
 /mob/living/simple_mob/mechanical/cyber_horror
 	name = "Cyber horror"
 	desc = "What was once a man, twisted and warped by machine."
@@ -67,7 +67,7 @@
 	threaten_delay = 1 SECOND
 	threaten_timeout = 30 SECONDS
 
- // Fragile but dangerous
+// Fragile but dangerous
 /mob/living/simple_mob/mechanical/cyber_horror/plasma_cyber_horror
 	name = "Nanite husk"
 	desc = "What was once a phoronoid, now a empty shell of malfunctioning nanites."
@@ -84,7 +84,7 @@
 	attacktext = "splattered on"
 	attack_sound = 'sound/effects/slime_squish.ogg'
 
- // Do y'like brain damage?
+// Do y'like brain damage?
 	var/poison_chance = 100
 	var/poison_per_bite = 3
 	var/poison_type = "neurophage_nanites"
@@ -100,14 +100,14 @@
 			if(L.can_inject(src, null, target_zone))
 				inject_poison(L, target_zone)
 
- // Does actual poison injection, after all checks passed.
+// Does actual poison injection, after all checks passed.
 /mob/living/simple_mob/mechanical/cyber_horror/plasma_cyber_horror/proc/inject_poison(mob/living/L, target_zone)
 	if(prob(poison_chance))
 		to_chat(L, span_warning("You feel nanites digging into your skin!"))
 		L.reagents.add_reagent(poison_type, poison_per_bite)
 
 
- // Mech Shredder
+// Mech Shredder
 /mob/living/simple_mob/mechanical/cyber_horror/ling_cyber_horror
 	name = "Nanite abomination"
 	desc = "What was once something, now an exposed shell with lashing cables."
@@ -117,7 +117,7 @@
 
 	maxHealth = 250
 	health = 250
- // Four attacks per second.
+// Four attacks per second.
 	melee_damage_lower = 10
 	melee_damage_upper = 20
 	attack_armor_pen = 50
@@ -126,30 +126,30 @@
 	attack_edge = 1
 	attack_sound = 'modular_chomp/sound/mob/robots/Cyber_Horror_ChangelingMelee.ogg'
 	attacktext = list ("sliced", "diced", "lashed", "shredded")
- // Slow as all sin
+// Slow as all sin
 	movement_cooldown = 9
 	movement_sound = 'sound/effects/houndstep.ogg'
 
 	ai_holder_type = /datum/ai_holder/simple_mob/melee/cyber_horror
 
- // You do NOT Want to get in touchy range of this thing.
+// You do NOT Want to get in touchy range of this thing.
 	armor = list(melee = 75, bullet = -10, laser = -25, bio = 100, rad = 100)
 	hovering = FALSE
 
 
- // Leaping is a special attack, so these values determine when leap can happen.
- // Leaping won't occur if its on cooldown, set to a minute due to it purely break formations.
+// Leaping is a special attack, so these values determine when leap can happen.
+// Leaping won't occur if its on cooldown, set to a minute due to it purely break formations.
 	special_attack_min_range = 2
 	special_attack_max_range = 7
 	special_attack_cooldown = 60 SECONDS
- // How long the leap telegraphing is.
+// How long the leap telegraphing is.
 	var/leap_warmup = 2 SECOND
 	var/leap_sound = 'modular_chomp/sound/mob/robots/Cyber_Horror_ChangelingLeap.ogg'
 
 /datum/say_list/cyber_horror/ling
 	threaten_sound = 'modular_chomp/sound/mob/robots/Cyber_Horror_Changeling.ogg'
 
- // Multiplies damage if the victim is stunned in some form, including a successful leap.
+// Multiplies damage if the victim is stunned in some form, including a successful leap.
 /mob/living/simple_mob/mechanical/cyber_horror/ling_cyber_horror/apply_bonus_melee_damage(atom/A, damage_amount)
 	if(isliving(A))
 		var/mob/living/L = A
@@ -157,36 +157,36 @@
 			return damage_amount * 2.5
 	return ..()
 
- // The actual leaping attack.
+// The actual leaping attack.
 /mob/living/simple_mob/mechanical/cyber_horror/ling_cyber_horror/do_special_attack(atom/A)
 	set waitfor = FALSE
 	set_AI_busy(TRUE)
 
- // Telegraph, since getting stunned suddenly feels bad.
+// Telegraph, since getting stunned suddenly feels bad.
 	do_windup_animation(A, leap_warmup)
- // For the telegraphing.
+// For the telegraphing.
 	sleep(leap_warmup)
 
- // Do the actual leap.
- // Lets us pass over everything.
+// Do the actual leap.
+// Lets us pass over everything.
 	status_flags |= LEAPING
 	visible_message(span_danger("\The [src] leaps at \the [A]!"))
 	throw_at(get_step(get_turf(A), get_turf(src)), special_attack_max_range+1, 1, src)
 	playsound(src, leap_sound, 75, 1)
- // For the throw to complete. It won't hold up the AI SSticker due to waitfor being false.
+// For the throw to complete. It won't hold up the AI SSticker due to waitfor being false.
 	sleep(5)
 
- // Revert special passage ability.
+// Revert special passage ability.
 	if(status_flags & LEAPING)
 		status_flags &= ~LEAPING
- // Where we landed. This might be different than A's turf.
+// Where we landed. This might be different than A's turf.
 	var/turf/T = get_turf(src)
 
 	. = FALSE
 
- // Now for the stun.
+// Now for the stun.
 	var/mob/living/victim = null
- // So player-controlled cyber horrors only need to click the tile to stun them.
+// So player-controlled cyber horrors only need to click the tile to stun them.
 	for(var/mob/living/L in T)
 		if(L == src)
 			continue
@@ -194,7 +194,7 @@
 		if(ishuman(L))
 			var/mob/living/carbon/human/H = L
 			if(H.check_shields(damage = 0, damage_source = src, attacker = src, def_zone = null, attack_text = "the leap"))
- // We were blocked.
+// We were blocked.
 				continue
 
 		victim = L
@@ -209,7 +209,7 @@
 	set_AI_busy(FALSE)
 
 
- //Slightly more durable fodder
+//Slightly more durable fodder
 /mob/living/simple_mob/mechanical/cyber_horror/vox
 	name = "Vox shambles"
 	desc = "Once a Vox now torn and changed, peices of a Durand has been grafted onto it."
@@ -361,7 +361,7 @@
 
 	melee_damage_lower = 2
 	melee_damage_upper = 2
- // Four attacks per second.
+// Four attacks per second.
 	base_attack_cooldown = 2.5
 	attack_sharp = 1
 	attack_edge = 1
@@ -369,7 +369,7 @@
 
 	attacktext = list("jabbed", "injected")
 
- // Do y'like drugs?
+// Do y'like drugs?
 	var/poison_chance = 75
 	var/poison_per_bite = 3
 	var/poison_type = REAGENT_ID_MINDBREAKER
@@ -385,7 +385,7 @@
 			if(L.can_inject(src, null, target_zone))
 				inject_poison(L, target_zone)
 
- // Does actual poison injection, after all checks passed.
+// Does actual poison injection, after all checks passed.
 /mob/living/simple_mob/mechanical/cyber_horror/cat_cyber_horror/proc/inject_poison(mob/living/L, target_zone)
 	if(prob(poison_chance))
 		to_chat(L, span_warning("You feel an uncomfortable prick!"))

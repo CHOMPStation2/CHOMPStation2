@@ -1,4 +1,4 @@
- //Cataloguer things
+//Cataloguer things
 /datum/category_item/catalogue/fauna/livingcandy
 	name = "Living Candy"
 	desc = "Upon investigation of the strange creatures, a mix of \
