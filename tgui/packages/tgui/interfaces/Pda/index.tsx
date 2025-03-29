@@ -77,7 +77,7 @@ export const Pda = (props) => {
     );
   }
 
-  let App = getPdaApp(app.template);
+  const App = getPdaApp(app.template);
 
   const [settingsMode, setSettingsMode] = useState<BooleanLike>(false);
 

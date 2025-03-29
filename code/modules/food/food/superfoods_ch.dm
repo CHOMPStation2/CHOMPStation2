@@ -44,6 +44,7 @@
 			/obj/item/stack/material/diamond
 		)
 	result = /obj/item/thecake_layer
+	wiki_flag = WIKI_SPOILER
 
 /datum/recipe/thecake_thirdlayer
 	reagents = list(REAGENT_ID_FLOUR = 300, REAGENT_ID_SINGULO = 300, REAGENT_ID_ATOMICBOMB = 150, REAGENT_ID_THREEMILEISLAND = 150, REAGENT_ID_MANHATTANPROJ = 100)
@@ -66,6 +67,7 @@
 			/obj/item/reagent_containers/food/snacks/carpmeat
 		)
 	result = /obj/item/thecake_layer/three
+	wiki_flag = WIKI_SPOILER
 
 /datum/recipe/thecake_fourthlayer
 	reagents = list(REAGENT_ID_FLOUR = 400, REAGENT_ID_HOLYMARY = 100, REAGENT_ID_ANGELSKISS = 100, REAGENT_ID_GOLDSCHLAGER = 100, REAGENT_ID_GOLD = 300)
@@ -88,6 +90,7 @@
 			/obj/item/reagent_containers/food/snacks/appletart
 		)
 	result = /obj/item/thecake_layer/four
+	wiki_flag = WIKI_SPOILER
 
 /datum/recipe/thecake_fifthlayer
 	reagents = list(REAGENT_ID_DEATHBELL = 1000)
@@ -110,6 +113,7 @@
 			/obj/item/reagent_containers/food/snacks/xenomeat
 		)
 	result = /obj/item/thecake_layer/five
+	wiki_flag = WIKI_SPOILER
 
 /obj/structure/thecake/proc/HasSliceMissing()
 	if(slices < maxslices)
@@ -248,6 +252,7 @@
 			/obj/item/reagent_containers/food/snacks/dough
 		)
 	result = /obj/item/chaoscake_layer
+	wiki_flag = WIKI_SPOILER
 
 /datum/recipe/chaoscake_layerthree
 	reagents = list(REAGENT_ID_FLOUR = 240, REAGENT_ID_MILK = 150, REAGENT_ID_SUGAR = 80, REAGENT_ID_EGG = 24, REAGENT_ID_DEATHBELL = 100)
@@ -258,6 +263,7 @@
 			/obj/item/reagent_containers/food/snacks/dough
 		)
 	result = /obj/item/chaoscake_layer/three
+	wiki_flag = WIKI_SPOILER
 
 /datum/recipe/chaoscake_layerfour
 	reagents = list(REAGENT_ID_FLOUR = 240, REAGENT_ID_MILK = 150, REAGENT_ID_SUGAR = 80, REAGENT_ID_EGG = 24, REAGENT_ID_MILKSHAKE = 300)
@@ -268,6 +274,7 @@
 			/obj/item/reagent_containers/food/snacks/dough
 		)
 	result = /obj/item/chaoscake_layer/four
+	wiki_flag = WIKI_SPOILER
 
 /datum/recipe/chaoscake_layerfive
 	reagents = list(REAGENT_ID_FLOUR = 180, REAGENT_ID_MILK = 100, REAGENT_ID_SUGAR = 60, REAGENT_ID_EGG = 18, REAGENT_ID_BLOOD = 300)
@@ -279,6 +286,7 @@
 		/obj/item/reagent_containers/food/snacks/lobster
 		)
 	result = /obj/item/chaoscake_layer/five
+	wiki_flag = WIKI_SPOILER
 
 /datum/recipe/chaoscake_layersix
 	reagents = list(REAGENT_ID_FLOUR = 180, REAGENT_ID_MILK = 100, REAGENT_ID_SUGAR = 60, REAGENT_ID_EGG = 18, REAGENT_ID_SPRINKLES = 10)
@@ -292,6 +300,7 @@
 			/obj/item/reagent_containers/food/snacks/chocolatebar
 		)
 	result = /obj/item/chaoscake_layer/six
+	wiki_flag = WIKI_SPOILER
 
 /datum/recipe/chaoscake_layerseven
 	reagents = list(REAGENT_ID_FLOUR = 120, REAGENT_ID_MILK = 50, REAGENT_ID_SUGAR = 40, REAGENT_ID_EGG = 12, REAGENT_ID_DEVILSKISS = 200)
@@ -302,6 +311,7 @@
 			/obj/item/reagent_containers/food/snacks/dough
 		)
 	result = /obj/item/chaoscake_layer/seven
+	wiki_flag = WIKI_SPOILER
 
 /datum/recipe/chaoscake_layereight
 	reagents = list(REAGENT_ID_FLOUR = 120, REAGENT_ID_MILK = 50, REAGENT_ID_SUGAR = 40, REAGENT_ID_EGG = 12, REAGENT_ID_CREAM = 200)
@@ -312,15 +322,17 @@
 			/obj/item/reagent_containers/food/snacks/dough
 		)
 	result = /obj/item/chaoscake_layer/eight
+	wiki_flag = WIKI_SPOILER
 
 /datum/recipe/chaoscake_layernine
 	reagents = list(REAGENT_ID_WATER = 100, REAGENT_ID_BLOOD = 100)
 	fruit = list(PLANT_GOLDAPPLE = 50)
 	items = list()
 	result = /obj/item/chaoscake_layer/nine
+	wiki_flag = WIKI_SPOILER
 
 /obj/structure/chaoscake
-	name = "An unfinished cake"
+	name = "An strange unfinished cake"
 	desc = "A single layer of a strange cake, you can see the cherry paste ooze, but it feels very incomplete..."
 
 	icon = 'icons/obj/food64x64.dmi'

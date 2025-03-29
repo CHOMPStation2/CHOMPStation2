@@ -1,6 +1,3 @@
-/datum/category_item/catalogue/information/organization/solgov
-	name = "Government - Commonwealth of Sol-Procyon"
-
 //TODO: VIRGO_LORE_WRITING_WIP - this whole file
 //CHOMPedits: basically every "desc" variable in this file.
 
