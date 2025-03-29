@@ -18,21 +18,6 @@
 	)
 	result = /obj/item/storage/box/wings //This is kinda like the donut box.
 
-<<<<<<< HEAD
-//CHOMP remove start
-/*/datum/recipe/chickenwings
-*	appliance = FRYER
-*	items = list(
-*		/obj/item/reagent_containers/food/snacks/meat,
-*		/obj/item/reagent_containers/food/snacks/meat,
-*		/obj/item/reagent_containers/food/snacks/meat,
-*		/obj/item/reagent_containers/food/snacks/meat
-*	)
-*	result = /obj/item/reagent_containers/food/snacks/generalschicken
-*CHOMP remove end */
-
-=======
->>>>>>> c42610c5ae (Have you bingled that (#17407))
 /datum/recipe/locust
 	appliance = FRYER
 	reagents = list(REAGENT_ID_SODIUMCHLORIDE = 1)
