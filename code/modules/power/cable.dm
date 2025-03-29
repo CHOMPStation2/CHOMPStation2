@@ -444,7 +444,7 @@ var/list/possible_cable_coil_colours = list(
 	var/turf/T1 = loc
 	if(!T1) return
 
-	if(!defer_powernet_rebuild)
+	if(defer_powernet_rebuild)
 		return
 
 	var/list/powerlist = power_list(T1,src,0,0) //find the other cables that ended in the centre of the turf, with or without a powernet
@@ -479,7 +479,7 @@ var/list/possible_cable_coil_colours = list(
 	loc = null
 	powernet.remove_cable(src) //remove the cut cable from its powernet
 
-	if(!defer_powernet_rebuild)
+	if(defer_powernet_rebuild)
 		return
 
 	var/datum/powernet/newPN = new()// creates a new powernet...
