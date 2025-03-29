@@ -58035,13 +58035,13 @@
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 1
 	},
-/obj/structure/filingcabinet,
 /obj/effect/floor_decal/corner/green/bordercorner{
 	dir = 1
 	},
 /obj/machinery/ai_status_display{
 	pixel_y = 32
 	},
+/obj/machinery/librarywikicomp,
 /turf/simulated/floor/tiled,
 /area/library)
 "lzd" = (
