@@ -1,6 +1,6 @@
 import {
   CheckboxInput,
-  FeatureToggle,
+  type FeatureToggle,
 } from 'tgui/interfaces/PreferencesMenu/preferences/features/base';
 
 export const SOUND_ALARMLOOP: FeatureToggle = {

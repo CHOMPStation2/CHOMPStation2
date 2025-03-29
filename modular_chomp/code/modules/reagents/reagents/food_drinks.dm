@@ -296,7 +296,7 @@
 	M.adjustToxLoss(-2 * removed) //Higher toxin removal than other tea to reflect difficulty in preparing, still worse than dylovene.
 
 /datum/reagent/drink/freshtea/green
-	name = REAGENT_FRESHTEA
+	name = REAGENT_FRESHGREENTEA
 	id = REAGENT_ID_FRESHTEAGREEN
 	description = "Floral green tea, it has antioxidants, it's good for you! Fresh means it's even healthier!"
 	taste_description = "floral with vegetal notes and a slightly bitter aftertaste"
