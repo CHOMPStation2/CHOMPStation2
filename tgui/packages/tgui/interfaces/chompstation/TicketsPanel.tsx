@@ -1,5 +1,5 @@
 /* eslint react/no-danger: "off" */
-import { RefObject, useEffect, useRef, useState } from 'react';
+import { type RefObject, useEffect, useRef, useState } from 'react';
 import { useBackend } from 'tgui/backend';
 import { Window } from 'tgui/layouts';
 import {
@@ -16,7 +16,7 @@ import {
 } from 'tgui-core/components';
 import { KEY } from 'tgui-core/keys';
 import { round, toFixed } from 'tgui-core/math';
-import { BooleanLike } from 'tgui-core/react';
+import { type BooleanLike } from 'tgui-core/react';
 
 const Level = {
   0: 'Admin',
@@ -78,7 +78,7 @@ const getFilteredTickets = (
   state: string,
   level: number,
 ): Ticket[] => {
-  let result: Ticket[] = [];
+  const result: Ticket[] = [];
 
   tickets.forEach((t) => {
     if (
@@ -122,7 +122,11 @@ export const TicketsPanel = (props) => {
     }
   });
 
-  let filtered_tickets = getFilteredTickets(tickets, stateFilter, levelFilter);
+  const filtered_tickets = getFilteredTickets(
+    tickets,
+    stateFilter,
+    levelFilter,
+  );
   return (
     <Window width={1000} height={600}>
       <Window.Content>

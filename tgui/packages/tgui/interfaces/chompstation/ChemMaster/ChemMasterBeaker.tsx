@@ -2,10 +2,10 @@ import { useBackend } from 'tgui/backend';
 import { BeakerContents } from 'tgui/interfaces/common/BeakerContents';
 import { modalOpen } from 'tgui/interfaces/common/ComplexModal';
 import { Box, Button, Section } from 'tgui-core/components';
-import { BooleanLike } from 'tgui-core/react';
+import type { BooleanLike } from 'tgui-core/react';
 
 import { transferAmounts } from './constants';
-import { reagent } from './types';
+import type { reagent } from './types';
 
 export const ChemMasterBeaker = (props: {
   beaker: BooleanLike;
@@ -15,7 +15,7 @@ export const ChemMasterBeaker = (props: {
   const { act } = useBackend();
   const { beaker, beakerReagents, bufferNonEmpty } = props;
 
-  let headerButton = bufferNonEmpty ? (
+  const headerButton = bufferNonEmpty ? (
     <Button.Confirm
       icon="eject"
       disabled={!beaker}

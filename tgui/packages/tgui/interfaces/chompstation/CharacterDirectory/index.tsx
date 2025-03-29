@@ -5,7 +5,7 @@ import { Box, Button, LabeledList, Section } from 'tgui-core/components';
 
 import { CharacterDirectoryList } from './CharacterDirectoryList';
 import { ViewCharacter } from './CharacterDirectoryViewCharacter';
-import { Data, mobEntry } from './types';
+import type { Data, mobEntry } from './types';
 
 export const CharacterDirectory = (props) => {
   const { act, data } = useBackend<Data>();
