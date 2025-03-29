@@ -567,3 +567,24 @@
   - bugfix: Environmental traits now work properly
   - bugfix: Lightning strikes will no longer strike people in nullspace
   - bugfix: Humans now have their proper skin color selection back
+2025-03-29:
+  Ace:
+  - rscadd: Pitcher plants now have struggle emotes that TELL YOU that you need outside
+      help to be rescued.
+  - rscadd: Pitcher plant fruits now have a new reagent.
+  - bugfix: Pitcher plants would not be anchored after being killed and revived, or
+      sometimes in other circumstances just wouldn't be anchored correctly.
+  - bugfix: Pitcher plants did not effectively communicate that you can rescue players
+      with wire and that a newspaper roll won't work.
+  - code_imp: Removed OOC bracketed text about having to use OOC escape. Most players
+      are smart enough to understand without bashing their heads with it.
+  - code_imp: Changed damage values of pitcher plant for a much slower digestion.
+  CHOMPStation2StaffMirrorBot:
+  - rscadd: Unusual gait positive trait for 2 points. This trait makes you move faster
+      when your hands are empty.
+  Cerami:
+  - rscadd: Adds a vore belly to kururak
+  Kashargul:
+  - bugfix: dark tiles keeping refs in some cases
+  Tost:
+  - bugfix: You can now see what pronouns you are choosing for your character on setup.
