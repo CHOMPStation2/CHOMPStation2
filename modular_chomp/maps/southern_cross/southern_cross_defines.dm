@@ -305,7 +305,6 @@ but they don't actually change anything about the load order
 /datum/map_z_level/southern_cross/station/station_maintenance
 	z = Z_LEVEL_STATION_MAINTS
 	name = "Maintenance Deck"
-	base_turf = /turf/simulated/open
 	transit_chance = 15
 	holomap_offset_x = HOLOMAP_ICON_SIZE - SOUTHERN_CROSS_HOLOMAP_MARGIN_X - SOUTHERN_CROSS_MAP_SIZE - 40
 	holomap_offset_y = SOUTHERN_CROSS_HOLOMAP_MARGIN_Y + SOUTHERN_CROSS_MAP_SIZE*1
