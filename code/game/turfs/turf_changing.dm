@@ -144,9 +144,10 @@
 	var/is_open = istype(W,/turf/simulated/open)
 
 
-	propogate_sunlight_changes(oldtype, old_density, W)
 	var/turf/simulated/cur_turf = src
 	if(istype(cur_turf))
+		if(is_outdoors())
+			propogate_sunlight_changes(oldtype, old_density, W)
 		if(is_open != was_open)
 			do
 				cur_turf = GetBelow(cur_turf)
@@ -155,9 +156,9 @@
 				var/area/A = cur_turf.loc
 				if(is_open && !A.isAlwaysIndoors())
 					cur_turf.make_outdoors()
+					cur_turf.propogate_sunlight_changes(oldtype, old_density, W, above = TRUE)
 				else
 					cur_turf.make_indoors()
-				cur_turf.propogate_sunlight_changes(oldtype, old_density, W, above = TRUE)
 			while(istype(cur_turf,/turf/simulated/open) && HasBelow(cur_turf.z))
 
 	if(old_shandler) old_shandler.holder_change()
