@@ -21,20 +21,13 @@
 			newplayer_start += loc
 			delete_me = TRUE
 		if("JoinLate") // Bit difference, since we need the spawn point to move.
-<<<<<<< HEAD
-			latejoin += src
-			simulated = TRUE
-		//	delete_me = 1
-		//VOREStation Add end
-		if("Observer-Start") // Ghosts are the only thing that use the latejoin list afaik and it complains if there's nothing in the list.
-			latejoin += src
-			simulated = TRUE
+			latejoin += loc
+			delete_me = TRUE
 		//VOREStation Add end
 		if("JoinLateGateway")
 			latejoin_gateway += loc
-			// CHOMPEdit Start
+			// latejoin += loc				//VOREStation Addition // CHOMPRemove
 			delete_me = TRUE
-			// CHOMPEdit End
 		//CHOMPEdit Begin
 		if("JoinLateStationGateway")
 			GLOB.latejoin_gatewaystation += loc
@@ -49,14 +42,6 @@
 			GLOB.latejoin_tyrvillage += loc
 			delete_me = TRUE
 		//CHOMPEdit End
-=======
-			latejoin += loc
-			delete_me = TRUE
-		if("JoinLateGateway")
-			latejoin_gateway += loc
-			latejoin += loc				//VOREStation Addition
-			delete_me = TRUE
->>>>>>> 4ad2c4568d (fix admin spawn or error (#17446))
 		if("JoinLateElevator")
 			latejoin_elevator += loc
 			delete_me = TRUE
