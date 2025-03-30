@@ -38,6 +38,7 @@
 	name = "Gateway Destination"
 	z = Z_LEVEL_GATEWAY
 
+#ifndef DARK_COMPLEX
 #include "gateway/snowfield_ch.dm" //CHOMPEDIT - Use the good one instead
 /datum/map_template/sc_lateload/gateway/snowfield
 	name = "Snow Field"
@@ -79,6 +80,17 @@
 	desc = "Asteroid base surrounded by carp"
 	mappath = "modular_chomp/maps/southern_cross/submaps/gateway/carpfarm.dmm"
 	associated_map_datum = /datum/map_z_level/sc_lateload/gateway_destination
+#endif
+
+#ifdef DARK_COMPLEX
+#include "gateway/darkcomplex.dm"
+/datum/map_template/sc_lateload/gateway/darkcomplex
+	name = "Dark Complex"
+	desc = "A dark, abandoned complex filled with powerful creatures"
+	mappath = "modular_chomp/maps/southern_cross/submaps/gateway/darkcomplex.dmm"
+	associated_map_datum = /datum/map_z_level/sc_lateload/gateway_destination
+#endif
+
 /*
 #include "gateway/hiddeneclipse.dm"
 /datum/map_template/sc_lateload/gateway/hiddeneclipse

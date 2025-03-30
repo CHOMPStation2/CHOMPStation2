@@ -12,6 +12,9 @@
 // Debug
 #define USE_MAP_MINITEST
 
+// Enables the Dark Complex, replacing all other gateways
+#define DARK_COMPLEX
+
 /*********************/
 /* End Map Selection */
 /*********************/

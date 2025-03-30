@@ -62,6 +62,8 @@
 
 	allowed_spawns = list("Arrivals Shuttle","Gateway","Cryogenic Storage","Cyborg Storage")
 
+	lateload_gateway = list(list("Dark Complex"))
+
 /datum/map/virgo_minitest/New()
 	..()
 	SSticker.start_immediately = TRUE
@@ -73,9 +75,21 @@
 	holomap_legend_x = 220
 	holomap_legend_y = 160
 
+#include "../southern_cross/submaps/gateway/darkcomplex.dm"
+/datum/map_template/gateway/darkcomplex
+	name = "Dark Complex"
+	desc = "A dark, abandoned complex filled with powerful creatures"
+	mappath = "modular_chomp/maps/southern_cross/submaps/gateway/darkcomplex.dmm"
+
 /datum/map/virgo_minitest/perform_map_generation()
 /*
 	new /datum/random_map/automata/cave_system(null, 1, 1, Z_LEVEL_MAIN_VIRGO_TESTING, world.maxx, world.maxy)
 	new /datum/random_map/noise/ore(null, 1, 1, Z_LEVEL_MAIN_VIRGO_TESTING, 64, 64)
 */
+	to_chat(world, span_boldannounce("Generating map!"))
+	generate_maze(400, 400, 4)
+	seed_submaps(list(4), 100, /area/awaymission/darkcomplex/low_risk, /datum/map_template/darkcomplex/low_risk)
+	seed_submaps(list(4), 100, /area/awaymission/darkcomplex/mid_risk, /datum/map_template/darkcomplex/mid_risk)
+	seed_submaps(list(4), 100, /area/awaymission/darkcomplex/high_risk, /datum/map_template/darkcomplex/high_risk)
+	seed_submaps(list(4), 100, /area/awaymission/darkcomplex/darkness, /datum/map_template/darkcomplex/darkness)
 	return 1

@@ -189,6 +189,7 @@
 	var/list/loaded_submap_names = list()
 	var/list/template_groups_used = list() // Used to avoid spawning three seperate versions of the same PoI.
 
+	to_chat(world, span_boldannounce("Seeding for [whitelist] - [length(priority_submaps)]!"))
 	// Now lets start choosing some.
 	while(budget > 0 && overall_sanity > 0)
 		overall_sanity--
@@ -249,6 +250,7 @@
 			if(!valid)
 				continue
 
+			to_chat(world, span_boldannounce("Submap \"[chosen_template.name]\" placed at ([T.x], [T.y], [T.z])"))
 			admin_notice("Submap \"[chosen_template.name]\" placed at ([T.x], [T.y], [T.z])\n", R_DEBUG)
 
 			if(specific_sanity < 0)

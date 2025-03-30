@@ -18,17 +18,19 @@ SUBSYSTEM_DEF(mapping)
 	world.max_z_changed() // This is to set up the player z-level list, maxz hasn't actually changed (probably)
 	load_map_templates()
 
-	if(CONFIG_GET(flag/generate_map))
-		// Map-gen is still very specific to the map, however putting it here should ensure it loads in the correct order.
-		using_map.perform_map_generation()
-
 	loadEngine()
 	preloadShelterTemplates() // VOREStation EDIT: Re-enable Shelter Capsules
 	// Mining generation probably should be here too
 	// TODO - Other stuff related to maps and areas could be moved here too.  Look at /tg
 	// Lateload Code related to Expedition areas.
+	to_chat(world, span_boldannounce("Picking with [using_map] for [world.maxz]"))
 	if(using_map) // VOREStation Edit: Re-enable this.
 		loadLateMaps()
+
+	// This is done after loadLateMaps so gateways using map generation are called after loaded.
+	if(CONFIG_GET(flag/generate_map))
+		// Map-gen is still very specific to the map, however putting it here should ensure it loads in the correct order.
+		using_map.perform_map_generation()
 	return SS_INIT_SUCCESS
 
 /datum/controller/subsystem/mapping/proc/load_map_templates()
@@ -36,6 +38,7 @@ SUBSYSTEM_DEF(mapping)
 		if(!(initial(template.mappath))) // If it's missing the actual path its probably a base type or being used for inheritence.
 			continue
 		template = new template()
+
 		map_templates[template.name] = template
 	return TRUE
 

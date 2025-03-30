@@ -20,6 +20,9 @@ const_format = "0.2.33"
 eyre = "0.6.12"
 meowtonin = { git = "https://github.com/Absolucy/meowtonin.git" }
 rand = "0.8.5"
+itertools = "0.14.0"
+pathfinding = "4.14.0"
+maze_generator = "2.0.0"
 
 [build-dependencies]
 bosion = "1.1.1"

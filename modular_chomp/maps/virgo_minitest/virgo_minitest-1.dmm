@@ -3366,6 +3366,12 @@
 	},
 /turf/simulated/floor,
 /area/engineering/workshop)
+"kh" = (
+/obj/machinery/gateway{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/bridge)
 "kr" = (
 /obj/structure/table/steel,
 /obj/item/storage/box/lights/mixed,
@@ -3561,6 +3567,13 @@
 /obj/effect/floor_decal/industrial/outline/red,
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/engine_gas)
+"mI" = (
+/obj/machinery/gateway{
+	density = 0;
+	dir = 10
+	},
+/turf/simulated/floor/tiled,
+/area/bridge)
 "mP" = (
 /obj/effect/floor_decal/industrial/warning/corner,
 /turf/simulated/floor,
@@ -3624,6 +3637,10 @@
 /obj/machinery/meter,
 /turf/simulated/floor,
 /area/engineering/workshop)
+"nE" = (
+/obj/machinery/gateway/centerstation,
+/turf/simulated/floor/tiled,
+/area/bridge)
 "nI" = (
 /obj/structure/cable/cyan{
 	icon_state = "1-2"
@@ -4098,6 +4115,12 @@
 /obj/structure/lattice,
 /turf/space,
 /area/space)
+"sg" = (
+/obj/machinery/gateway{
+	dir = 5
+	},
+/turf/simulated/floor/tiled,
+/area/bridge)
 "sh" = (
 /obj/machinery/light{
 	dir = 1
@@ -4639,6 +4662,12 @@
 	},
 /turf/space,
 /area/space)
+"yp" = (
+/obj/machinery/gateway{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/bridge)
 "ys" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -5239,6 +5268,12 @@
 	},
 /turf/simulated/floor/airless,
 /area/space)
+"EK" = (
+/obj/machinery/gateway{
+	dir = 9
+	},
+/turf/simulated/floor/tiled,
+/area/bridge)
 "ES" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /obj/effect/floor_decal/borderfloor{
@@ -5663,6 +5698,10 @@
 /obj/effect/floor_decal/steeldecal,
 /turf/simulated/floor/tiled,
 /area/submap/pa_room)
+"KN" = (
+/obj/machinery/gateway,
+/turf/simulated/floor/tiled,
+/area/bridge)
 "KO" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/yellow{
 	dir = 1
@@ -6478,6 +6517,13 @@
 	},
 /turf/simulated/floor/tiled,
 /area/bridge)
+"SO" = (
+/obj/machinery/gateway{
+	density = 0;
+	dir = 6
+	},
+/turf/simulated/floor/tiled,
+/area/bridge)
 "SS" = (
 /obj/machinery/atmospherics/pipe/simple/visible/black{
 	dir = 4
@@ -6833,6 +6879,12 @@
 /obj/item/tool/screwdriver,
 /turf/simulated/floor,
 /area/engineering/engine_room)
+"XE" = (
+/obj/machinery/gateway{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/bridge)
 "XH" = (
 /obj/structure/particle_accelerator/end_cap{
 	dir = 8
@@ -9566,9 +9618,9 @@ hp
 gf
 gf
 gf
-gf
-gf
-gf
+EK
+XE
+mI
 gf
 fY
 aa
@@ -9668,9 +9720,9 @@ gf
 gf
 gf
 gf
-gf
-gf
-gf
+kh
+nE
+KN
 gf
 fY
 aa
@@ -9770,9 +9822,9 @@ gf
 gf
 gf
 gf
-gf
-gf
-gf
+sg
+yp
+SO
 gE
 fY
 aa
