@@ -204,10 +204,10 @@ var/global/list/latejoin_tram   = list()
 	name = "JoinLateTram"
 	delete_me = 1
 
-/obj/effect/landmark/tram/New()
+/obj/effect/landmark/tram/Initialize(mapload)
 	latejoin_tram += loc // Register this turf as tram latejoin.
 	latejoin += loc // Also register this turf as fallback latejoin, since we won't have any arrivals shuttle landmarks.
-	..()
+	. = ..()
 
 /datum/spawnpoint/tram
 	display_name = "Tram Station"

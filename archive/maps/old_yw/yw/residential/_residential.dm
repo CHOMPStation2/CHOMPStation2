@@ -63,9 +63,9 @@ var/global/list/latejoin_residential = list()
 	name = "JoinLateResidential"
 	delete_me = 1
 
-/obj/effect/landmark/residential/New()
+/obj/effect/landmark/residential/Initialize(mapload)
 	latejoin_residential += loc // Register this turf as tram latejoin.
-	..()
+	. = ..()
 
 /datum/spawnpoint/residential
 	display_name = "NCS Serenity Residential"
