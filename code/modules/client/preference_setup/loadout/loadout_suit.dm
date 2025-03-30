@@ -140,7 +140,11 @@
 	"Pink labcoat" = /obj/item/clothing/suit/storage/toggle/labcoat/pink,
 	"Red labcoat" = /obj/item/clothing/suit/storage/toggle/labcoat/red,
 	"Yellow labcoat" = /obj/item/clothing/suit/storage/toggle/labcoat/yellow,
+<<<<<<< HEAD
 	"Modern labcoat" = /obj/item/clothing/suit/storage/toggle/labcoat/modern // CHOMPEdit - Adds modern labcoat
+=======
+	"Modern labcoat" = /obj/item/clothing/suit/storage/toggle/labcoat/modern
+>>>>>>> 3145e69e32 (Adds leg warmers + modern labcoat to loadout (#17442))
 	)
 	gear_tweaks += new/datum/gear_tweak/path(labcoats)
 
