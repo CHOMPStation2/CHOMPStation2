@@ -424,6 +424,15 @@
 	body_parts = list(BP_HEAD)
 	hide_body_parts = list(BP_HEAD)
 
+// eyelights
+
+/datum/sprite_accessory/marking/ch/roboteyelight
+	name = "Robot eye light"
+	icon = 'modular_chomp/icons/mob/human_races/sprite_accessories/robotdecals.dmi'
+	icon_state = "robotredeyelight_eyes"
+	body_parts = list(BP_HEAD)
+
+
 // TEETH //
 
 /datum/sprite_accessory/marking/ch/xenomorph/xeno_teeth
