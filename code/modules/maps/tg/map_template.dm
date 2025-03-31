@@ -250,7 +250,6 @@
 			if(!valid)
 				continue
 
-			to_chat(world, span_boldannounce("Submap \"[chosen_template.name]\" placed at ([T.x], [T.y], [T.z])"))
 			admin_notice("Submap \"[chosen_template.name]\" placed at ([T.x], [T.y], [T.z])\n", R_DEBUG)
 
 			if(specific_sanity < 0)

@@ -44,25 +44,21 @@ pub fn generate_maze(
     // Half it, since the maze generator walls are 0 tiles large.
     let maze = EllersGenerator::new(None).generate(limit_x as i32 / 2, limit_y as i32 / 2)
         .unwrap();
-    for (y, x) in iproduct!(0..limit_x / 2 - 1, 0..limit_y / 2 - 1) {
-        let field = maze.get_field(&(x as i32, y as i32).into()).unwrap();
-        let mut update = |mx, my| output[(x as i32*2+1+mx) as usize * limit_x + (y as i32*2+1+my) as usize] = false;
-        update(0, 0);
+    for (y, x) in iproduct!(0..limit_x / 2, 0..limit_y / 2) {
+        let (cy, cx) = (y * 2 + 1, x * 2 + 1);
+        output[cy * limit_x + cx] = false;
 
-        // Passages are 2-way, so we only check south/west
-        if y > 0 && !field.has_passage(&Direction::South) {
-            update(0, -1);
+        let field = maze.get_field(&(x as i32, y as i32).into()).unwrap();
+
+        if field.has_passage(&Direction::West) && cx > 0 {
+            output[cy * limit_x + (cx - 1)] = false;
         }
-        if x > 0 && !field.has_passage(&Direction::West) {
-            update(-1, 0);
-        }
-        if y < limit_y && !field.has_passage(&Direction::North) {
-            update(0, 1);
-        }
-        if x < limit_x && !field.has_passage(&Direction::East) {
-            update(1, 0);
+
+        if field.has_passage(&Direction::North) && cy > 0 {
+            output[(cy - 1) * limit_x + cx] = false;
         }
     }
+
     output.to_byond()
 }
 
@@ -126,6 +122,6 @@ mod test {
 
     #[test]
     fn test_generate_maze() {
-        let _ = generate_maze(400.to_byond().unwrap(), 400.to_byond().unwrap()).unwrap();
+        let _ = generate_maze(401.to_byond().unwrap(), 401.to_byond().unwrap()).unwrap();
     }
 }

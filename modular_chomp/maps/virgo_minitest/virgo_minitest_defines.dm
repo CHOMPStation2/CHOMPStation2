@@ -86,10 +86,6 @@
 	new /datum/random_map/automata/cave_system(null, 1, 1, Z_LEVEL_MAIN_VIRGO_TESTING, world.maxx, world.maxy)
 	new /datum/random_map/noise/ore(null, 1, 1, Z_LEVEL_MAIN_VIRGO_TESTING, 64, 64)
 */
-	to_chat(world, span_boldannounce("Generating map!"))
 	generate_maze(400, 400, 4)
-	seed_submaps(list(4), 100, /area/awaymission/darkcomplex/low_risk, /datum/map_template/darkcomplex/low_risk)
-	seed_submaps(list(4), 100, /area/awaymission/darkcomplex/mid_risk, /datum/map_template/darkcomplex/mid_risk)
-	seed_submaps(list(4), 100, /area/awaymission/darkcomplex/high_risk, /datum/map_template/darkcomplex/high_risk)
-	seed_submaps(list(4), 100, /area/awaymission/darkcomplex/darkness, /datum/map_template/darkcomplex/darkness)
+	spawn_templates(400, 400, 4)
 	return 1
