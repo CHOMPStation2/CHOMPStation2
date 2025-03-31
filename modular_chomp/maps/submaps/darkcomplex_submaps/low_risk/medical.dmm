@@ -1,17 +1,17 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "R" = (
 /turf/simulated/wall/plastihull,
-/area/space)
+/area/awaymission/darkcomplex/low_risk)
 "S" = (
 /turf/simulated/floor/light,
-/area/space)
+/area/awaymission/darkcomplex/low_risk)
 "X" = (
 /obj/effect/landmark/darkcomplex_room{
 	width = 7;
 	height = 4
 	},
 /turf/simulated/floor/light,
-/area/space)
+/area/awaymission/darkcomplex/low_risk)
 
 (1,1,1) = {"
 R

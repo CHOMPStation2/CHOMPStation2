@@ -1,23 +1,23 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "a" = (
 /turf/simulated/wall/plastihull,
-/area/space)
+/area/awaymission/darkcomplex/low_risk)
 "d" = (
 /obj/machinery/gateway{
 	dir = 8
 	},
 /turf/simulated/floor/light,
-/area/space)
+/area/awaymission/darkcomplex/low_risk)
 "i" = (
 /obj/machinery/gateway,
 /turf/simulated/floor/light,
-/area/space)
+/area/awaymission/darkcomplex/low_risk)
 "q" = (
 /obj/machinery/gateway{
 	dir = 4
 	},
 /turf/simulated/floor/light,
-/area/space)
+/area/awaymission/darkcomplex/low_risk)
 "s" = (
 /obj/effect/landmark/darkcomplex_room{
 	width = 3;
@@ -27,46 +27,46 @@
 	calibrated = 0
 	},
 /turf/simulated/floor/light,
-/area/space)
+/area/awaymission/darkcomplex/low_risk)
 "x" = (
 /obj/machinery/gateway{
 	dir = 5
 	},
 /turf/simulated/floor/light,
-/area/space)
+/area/awaymission/darkcomplex/low_risk)
 "A" = (
 /obj/machinery/gateway{
 	density = 0;
 	dir = 6
 	},
 /turf/simulated/floor/light,
-/area/space)
+/area/awaymission/darkcomplex/low_risk)
 "B" = (
 /turf/simulated/floor/light,
-/area/space)
+/area/awaymission/darkcomplex/low_risk)
 "D" = (
 /obj/machinery/gateway{
 	dir = 9
 	},
 /turf/simulated/floor/light,
-/area/space)
+/area/awaymission/darkcomplex/low_risk)
 "J" = (
 /obj/effect/landmark/gateway_scatter,
 /turf/simulated/floor/light,
-/area/space)
+/area/awaymission/darkcomplex/low_risk)
 "O" = (
 /obj/machinery/gateway{
 	dir = 1
 	},
 /turf/simulated/floor/light,
-/area/space)
+/area/awaymission/darkcomplex/low_risk)
 "R" = (
 /obj/machinery/gateway{
 	density = 0;
 	dir = 10
 	},
 /turf/simulated/floor/light,
-/area/space)
+/area/awaymission/darkcomplex/low_risk)
 
 (1,1,1) = {"
 a

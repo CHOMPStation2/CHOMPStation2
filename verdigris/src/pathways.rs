@@ -1,6 +1,6 @@
 use itertools::iproduct;
-use maze_generator::ellers_algorithm::EllersGenerator;
 use maze_generator::prelude::{Direction, Generator};
+use maze_generator::recursive_backtracking::RbGenerator;
 use meowtonin::{ByondResult, ByondValue, FromByond, ToByond};
 use pathfinding::undirected::prim::prim;
 
@@ -42,9 +42,10 @@ pub fn generate_maze(
     let limit_y: usize = limit_y.to()?;
     let mut output = vec![true; limit_x * limit_y];
     // Half it, since the maze generator walls are 0 tiles large.
-    let maze = EllersGenerator::new(None).generate(limit_x as i32 / 2, limit_y as i32 / 2)
+    // RB creates nice, long, winding hallways, making it great for running around.
+    let maze = RbGenerator::new(None).generate(limit_x as i32 / 2, limit_y as i32 / 2)
         .unwrap();
-    for (y, x) in iproduct!(0..limit_x / 2, 0..limit_y / 2) {
+    for (y, x) in iproduct!(0..limit_y / 2, 0..limit_x / 2) {
         let (cy, cx) = (y * 2 + 1, x * 2 + 1);
         output[cy * limit_x + cx] = false;
 
@@ -122,6 +123,6 @@ mod test {
 
     #[test]
     fn test_generate_maze() {
-        let _ = generate_maze(401.to_byond().unwrap(), 401.to_byond().unwrap()).unwrap();
+        let maze = generate_maze(401.to_byond().unwrap(), 401.to_byond().unwrap()).unwrap();
     }
 }

@@ -86,6 +86,7 @@
 	new /datum/random_map/automata/cave_system(null, 1, 1, Z_LEVEL_MAIN_VIRGO_TESTING, world.maxx, world.maxy)
 	new /datum/random_map/noise/ore(null, 1, 1, Z_LEVEL_MAIN_VIRGO_TESTING, 64, 64)
 */
-	generate_maze(400, 400, 4)
-	spawn_templates(400, 400, 4)
+	generate_maze(250, 200, 4)
+	spawn_templates(400, 200, 4)
+	generate_pathways(150, 200, 4)
 	return 1

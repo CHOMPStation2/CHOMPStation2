@@ -1,41 +1,48 @@
-
-/obj/machinery/power/rtg/fake_z_wires //A 'reactor' disguised as a multi Z wire coming from godknowswhereium
-	name = "Multi-Floor Wire"
-	desc = "A thick industrial cable connecting power between all of the floors of the building."
-	power_gen = 150000
-	icon = 'modular_chomp/icons/obj/power.dmi'
-	icon_state = "rtgfakez"
-
 /obj/effect/landmark/darkcomplex_room
 	name = "Dark Complex Room"
 	var/width
 	var/height
 
+/obj/effect/landmark/darkcomplex_room/New()
+	var/area/awaymission/darkcomplex/low_risk/area = get_area(src)
+	area.marks += src
+
 //Areas
 /area/awaymission/darkcomplex
 	icon_state = "blank"
 	var/submaps = null
+	var/wall = null
+	var/floor = null
 
 /area/awaymission/darkcomplex/low_risk
 	icon_state = "green"
 	name = "Away Mission - Dark Complex (Low)"
 	forced_ambience = list('sound/ambience/fluorescentlight.ogg')
 	submaps = list("Dark Complex - Gateway", "Dark Complex - Medical")
+	wall = /turf/simulated/wall/r_wall
+	floor = /turf/simulated/floor/plating
+	var/list/obj/effect/landmark/darkcomplex_room/marks = list()
 
 /area/awaymission/darkcomplex/mid_risk
 	icon_state = "yellow"
 	name = "Away Mission - Dark Complex (Mid)"
 	forced_ambience = list('sound/ambience/fluorescentlight.ogg')
+	wall = /turf/simulated/wall/concrete
+	floor = /turf/simulated/floor/tiled/white
 
 /area/awaymission/darkcomplex/high_risk
 	icon_state = "red"
 	name = "Away Mission - Dark Complex (High)"
 	forced_ambience = list('sound/ambience/fluorescentlight.ogg')
+	wall = /turf/simulated/gore
+	floor = /turf/simulated/floor/gorefloor2
 
 /area/awaymission/darkcomplex/darkness
 	icon_state = "black"
 	name = "Away Mission - Dark Complex (Dark)"
 	forced_ambience = list('sound/ambience/fluorescentlight.ogg')
+	wall = /turf/unsimulated/wall/dark
+	floor = /turf/unsimulated/floor/dark
 
 /datum/map_template/darkcomplex
 	name = "Gateway Content - Dark Complex"
