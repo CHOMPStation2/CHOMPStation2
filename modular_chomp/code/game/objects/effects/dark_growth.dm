@@ -152,8 +152,6 @@
 				continue
 
 			var/new_dark_tile = new /obj/effect/dark/floor(T2, null, linked_node)
-			if(QDELETED(new_dark_tile))
-				continue
 			linked_node.children_effects += new_dark_tile
 
 /obj/structure/prop/dark_node/process()
@@ -161,8 +159,7 @@
 
 	if(!(locate(/obj/effect/dark) in get_turf(src)))
 		var/new_dark_tile = new /obj/effect/dark/floor(get_turf(src), null, src)
-		if(!QDELETED(new_dark_tile))
-			children_effects += new_dark_tile
+		children_effects += new_dark_tile
 
 	if(until_full_process-- <= 0)
 		for(var/obj/effect/dark/dark_tile in orange(node_range, src))
