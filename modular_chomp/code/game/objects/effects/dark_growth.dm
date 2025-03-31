@@ -126,7 +126,7 @@
 		linked_node = null
 	. = ..()
 
-/obj/effect/dark/process()
+/obj/effect/dark/proc/do_process()
 	//set background = 1
 	var/turf/U = get_turf(src)
 
@@ -151,36 +151,35 @@
 			if(T2.get_lumcount() >= 0.4)
 				continue
 
-			var/new_dark_tile = new /obj/effect/dark/floor(T2, null, linked_node)
-			linked_node.children_effects |= new_dark_tile
-
-
+			var/obj/effect/dark/floor/new_dark_tile = new /obj/effect/dark/floor(T2, null, linked_node)
+			if(QDELETED(new_dark_tile))
+				continue
+			linked_node.children_effects += new_dark_tile
 
 /obj/structure/prop/dark_node/process()
 	//set background = 1
 
 	if(!(locate(/obj/effect/dark) in get_turf(src)))
-		var/new_dark_tile = new /obj/effect/dark/floor(get_turf(src), null, src)
-		children_effects |= new_dark_tile
+		var/obj/effect/dark/floor/new_dark_tile = new /obj/effect/dark/floor(get_turf(src), null, src)
+		if(!QDELETED(new_dark_tile))
+			children_effects += new_dark_tile
 
 	if(until_full_process-- <= 0)
 		for(var/obj/effect/dark/dark_tile in orange(node_range, src))
 			if(QDELETED(dark_tile))
 				continue
-			children_effects |= dark_tile
+			if(dark_tile.linked_node)
+				continue
+			children_effects += dark_tile
+			dark_tile.linked_node = src
 		until_full_process = 4
 
-	children_effects.Remove(null)
-
 	for(var/obj/effect/dark/dark_tile as anything in children_effects)
-		if(!dark_tile.linked_node)
-			dark_tile.linked_node = src
-
-//		W.color = W.linked_node.set_color // CHOMPedit: No coloration.
+//		W.color = W.linked_node.set_color
 
 		dark_tile.light_check()
 		if(dark_tile.linked_node == src && prob(max(10, 60 - (children_effects.len))))
-			dark_tile.process()
+			dark_tile.do_process()
 
 /obj/structure/prop/dark_node/dust
 	name = "crystal dust"
