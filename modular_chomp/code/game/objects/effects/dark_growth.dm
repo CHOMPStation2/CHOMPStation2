@@ -159,7 +159,7 @@
 
 	if(!(locate(/obj/effect/dark) in get_turf(src)))
 		var/new_dark_tile = new /obj/effect/dark/floor(get_turf(src), null, src)
-		children_effects += new_dark_tile
+			children_effects += new_dark_tile
 
 	if(until_full_process-- <= 0)
 		for(var/obj/effect/dark/dark_tile in orange(node_range, src))
@@ -171,6 +171,7 @@
 			dark_tile.linked_node = src
 		until_full_process = 4
 
+	for(var/obj/effect/dark/dark_tile as anything in children_effects)
 //		W.color = W.linked_node.set_color
 
 		dark_tile.light_check()
