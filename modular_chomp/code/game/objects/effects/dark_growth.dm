@@ -151,7 +151,7 @@
 			if(T2.get_lumcount() >= 0.4)
 				continue
 
-			var/new_dark_tile = new /obj/effect/dark/floor(T2, null, linked_node)
+			var/obj/effect/dark/floor/new_dark_tile = new /obj/effect/dark/floor(T2, null, linked_node)
 			if(QDELETED(new_dark_tile))
 				continue
 			linked_node.children_effects += new_dark_tile
@@ -160,7 +160,7 @@
 	//set background = 1
 
 	if(!(locate(/obj/effect/dark) in get_turf(src)))
-		var/new_dark_tile = new /obj/effect/dark/floor(get_turf(src), null, src)
+		var/obj/effect/dark/floor/ew_dark_tile = new /obj/effect/dark/floor(get_turf(src), null, src)
 		if(!QDELETED(new_dark_tile))
 			children_effects += new_dark_tile
 
