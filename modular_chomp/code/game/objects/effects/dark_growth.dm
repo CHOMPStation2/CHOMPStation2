@@ -156,8 +156,6 @@
 				continue
 			linked_node.children_effects += new_dark_tile
 
-
-
 /obj/structure/prop/dark_node/process()
 	//set background = 1
 
