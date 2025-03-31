@@ -20,9 +20,14 @@
 
 #define LANGUAGE_SHADEKIN "Shadekin Empathy"
 #define LANGUAGE_LLEILL "Glamour Speak"
+<<<<<<< HEAD
 #define LANGUAGE_MARISH "Marish" // CHOMPedit
 
 //CHOMPedit Start - Xeno languages selectable
 #define LANGUAGE_XENOLINGUA "Xenolingua"
 #define LANGUAGE_HIVEMIND "Hivemind"
 // CHOMPedit End.
+=======
+
+#define LANGUAGE_SPARKLE "Sparkle"
+>>>>>>> ab5b10ae81 (Hotfix for body colour (#17458))
