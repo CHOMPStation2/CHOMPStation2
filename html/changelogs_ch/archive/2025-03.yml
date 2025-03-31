@@ -607,3 +607,24 @@
   - qol: ChemAnalyser Pro now uses tgui
   - bugfix: chat scroll tracking failing on large displayed count when huge messages
       blocks were sent
+2025-03-31:
+  CHOMPStation2StaffMirrorBot:
+  - qol: Changed the default setting for Save Organs and Save Markings to No in character
+      setup
+  - admin: 'fix spawn at arrivals will not either pick from the secondary list or
+      sanely fail
+
+      fix latespawn loc code'
+  - rscadd: Added a treadmill fitness machine.
+  - rscadd: Added a non-alcohol version of the booze-o-mat, the virgin-o-mat!
+  - maptweak: Major changes to the pool area to include a poolside bar, new gym, locker
+      room, sauna and massage room.
+  - maptweak: Added a designated smoking area to the stellar delight.
+  - bugfix: useless light recalcs, which might even have caused darker than supposed
+      areas
+  - bugfix: multiple bugs in outdoor and turf open / space handling
+  Kashargul:
+  - bugfix: deck 0 crashing the server
+  Tost:
+  - rscadd: Adds modern labcoat to loadout, under the public labcoat selector.
+  - rscadd: Adds 3 different leg warmers accessories.
