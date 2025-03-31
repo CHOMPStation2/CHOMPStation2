@@ -160,7 +160,7 @@
 	//set background = 1
 
 	if(!(locate(/obj/effect/dark) in get_turf(src)))
-		var/obj/effect/dark/floor/ew_dark_tile = new /obj/effect/dark/floor(get_turf(src), null, src)
+		var/obj/effect/dark/floor/new_dark_tile = new /obj/effect/dark/floor(get_turf(src), null, src)
 		if(!QDELETED(new_dark_tile))
 			children_effects += new_dark_tile
 
