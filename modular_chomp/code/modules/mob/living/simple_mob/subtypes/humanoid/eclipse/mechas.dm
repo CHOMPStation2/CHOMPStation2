@@ -1388,3 +1388,111 @@
 	downtwo_leftfour(target)
 	downtwo_rightfour(target)
 	attackcycle = next_cycle
+
+
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/singleproj/(atom/target, var/next_cycle)
+	if(!target)
+		return
+	var/obj/item/projectile/P = new specialattackprojectile(get_turf(src))
+	P.launch_projectile(target, BP_TORSO, src)
+	attackcycle = next_cycle
+
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/burst(atom/target, var/next_cycle)
+	if(!target)
+		return
+	upfour_leftfour(target)
+	upfour_leftthree(target)
+	upfour_lefttwo(target)
+	upfour_leftone(target)
+	upfour(target)
+	upfour_rightone(target)
+	upfour_righttwo(target)
+	upfour_rightthree(target)
+	upfour_rightfour(target)
+	upthree_rightfour(target)
+	uptwo_rightfour(target)
+	upone_rightfour(target)
+	rightfour(target)
+	downone_rightfour(target)
+	downtwo_rightfour(target)
+	downthree_rightfour(target)
+	downfour_rightfour(target)
+	downfour_rightthree(target)
+	downfour_righttwo(target)
+	downfour_rightone(target)
+	downfour(target)
+	downfour_leftone(target)
+	downfour_lefttwo(target)
+	downfour_leftthree(target)
+	downfour_leftfour(target)
+	downthree_leftfour(target)
+	downtwo_leftfour(target)
+	downone_leftfour(target)
+	leftfour(target)
+	upone_leftfour(target)
+	uptwo_leftfour(target)
+	upthree_leftfour(target)
+	attackcycle = next_cycle
+
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/miniburst_a(atom/target, var/next_cycle)
+	if(!target)
+		return
+	upfour_leftfour(target)
+	upfour_rightfour(target)
+	downfour_rightfour(target)
+	downfour_leftfour(target)
+	attackcycle = next_cycle
+
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/miniburst_b(atom/target, var/next_cycle)
+	if(!target)
+		return
+	upfour_leftfour(target)
+	upfour_rightfour(target)
+	downfour_rightfour(target)
+	downfour_leftfour(target)
+	attackcycle = next_cycle
+
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/teleport_attack(atom/target, var/next_cycle)
+	// Teleport attack.
+	if(!target)
+		to_chat(src, span_warning("There's nothing to teleport to."))
+		return FALSE
+
+	var/list/nearby_things = range(4, target)
+	var/list/valid_turfs = list()
+
+	// All this work to just go to a non-dense tile.
+	for(var/turf/potential_turf in nearby_things)
+		var/valid_turf = TRUE
+		if(potential_turf.density)
+			continue
+		for(var/atom/movable/AM in potential_turf)
+			if(AM.density)
+				valid_turf = FALSE
+		if(valid_turf)
+			valid_turfs.Add(potential_turf)
+
+	if(!(valid_turfs.len))
+		to_chat(src, span_warning("There wasn't an unoccupied spot to teleport to."))
+		return FALSE
+
+	var/turf/target_turf = pick(valid_turfs)
+	var/turf/T = get_turf(src)
+
+	var/datum/effect/effect/system/spark_spread/s1 = new /datum/effect/effect/system/spark_spread
+	s1.set_up(5, 1, T)
+	var/datum/effect/effect/system/spark_spread/s2 = new /datum/effect/effect/system/spark_spread
+	s2.set_up(5, 1, target_turf)
+
+
+	T.visible_message(span_warning("\The [src] vanishes!"))
+	s1.start()
+
+	forceMove(target_turf)
+	playsound(target_turf, 'sound/effects/phasein.ogg', 50, 1)
+	to_chat(src, span_notice("You teleport to \the [target_turf]."))
+
+	target_turf.visible_message(span_warning("\The [src] appears!"))
+	s2.start()
+	attackcycle = next_cycle
+
