@@ -461,3 +461,5 @@
 	B7t the 0th3rs s7rv1val s33ms 7nl1k3ly... \
 	Th3 t3rr4f0rm3rs ar3 4lr3ady 4ffl1ct3d by 4 pl4g73.."
 	value = CATALOGUER_REWARD_HARD
+
+

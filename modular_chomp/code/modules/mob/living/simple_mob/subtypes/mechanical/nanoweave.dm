@@ -764,3 +764,5 @@
 	if(!target)
 		return
 	explosion(src.loc, 30, 16, 8, 4)
+
+//end

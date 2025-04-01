@@ -1495,3 +1495,5 @@
 	target_turf.visible_message(span_warning("\The [src] appears!"))
 	s2.start()
 	attackcycle = next_cycle
+
+//end
