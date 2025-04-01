@@ -423,7 +423,7 @@
 /datum/category_item/catalogue/anomalous/cyandisc
 	name = "Precursor Object - Data Disc Cyan"
 	desc = "End of time measures are now to be taken. Aimming several survial pods. \
-	 amongst our lands, and allies. \
+	amongst our lands, and allies. \
 	They shall burrow deep beneath the earth and overseen by the Overlord program. \
 	Survival outlook likly.\
 	<br><br>\
@@ -437,7 +437,7 @@
 /datum/category_item/catalogue/anomalous/orangedisc
 	name = "Precursor Object - Data Disc Orange"
 	desc = "The voidwalkers are launching themselves into the void. \
-	 The beast callers venture into the unknown. \
+	The beast callers venture into the unknown. \
 	The abyss divers never plan to surface. \
 	The terraformers are following a similiar plan to us, burrowing beneath the surface.\
 	<br><br>\
