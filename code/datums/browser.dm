@@ -66,7 +66,7 @@
 	var/file
 
 	// If a client exists, but they have disabled fancy windowing, disable it!
-	if(!user?.client?.prefs?.read_preference(/datum/preference/toggle/browser_style))
+	if(user?.client?.prefs?.read_preference(/datum/preference/toggle/browser_style))
 		head_content += "<link rel='stylesheet' type='text/css' href='[common_asset.get_url_mappings()["common.css"]]'>"
 	for (file in stylesheets)
 		head_content += "<link rel='stylesheet' type='text/css' href='[SSassets.transport.get_asset_url(file)]'>"
