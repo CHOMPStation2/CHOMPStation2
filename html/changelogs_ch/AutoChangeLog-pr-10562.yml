@@ -1,4 +1,0 @@
-author: "Diana"
-delete-after: True
-changes:
-  - bugfix: "Removes the yawn edit that removed Fennec's ability to use rig gauntlets or helmet (This made fennecs unable to use any rigsuits)"
