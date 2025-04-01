@@ -281,7 +281,6 @@
 	attackcycle = next_cycle
 
 
-
 /obj/effect/callstrike_nanoweave
 	anchored = TRUE
 	density = FALSE
