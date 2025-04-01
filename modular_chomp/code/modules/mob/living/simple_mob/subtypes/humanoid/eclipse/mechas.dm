@@ -1496,4 +1496,3 @@
 	s2.start()
 	attackcycle = next_cycle
 
-//end
