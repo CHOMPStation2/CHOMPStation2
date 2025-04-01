@@ -287,9 +287,6 @@
 	density = FALSE
 	mouse_opacity = 0
 	icon ='modular_chomp/icons/mob/hivebot.dmi'
-
-/obj/effect/callstrike_nanoweave/Initialize(mapload)
-	.=..()
 	icon_state = "arti"
 
 /obj/effect/callstrike_nanoweave/end_fall(var/crushing = FALSE)
