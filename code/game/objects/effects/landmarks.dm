@@ -41,6 +41,9 @@
 		if("JoinLateTyrVillage")
 			GLOB.latejoin_tyrvillage += loc
 			delete_me = TRUE
+		if("JoinLateTheDark")
+			GLOB.latejoin_thedark += loc
+			delete_me = TRUE
 		//CHOMPEdit End
 		if("JoinLateElevator")
 			latejoin_elevator += loc
