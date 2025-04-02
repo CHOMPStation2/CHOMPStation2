@@ -22,10 +22,6 @@
 /obj/structure/ghost_pod/manual/cursedblade,
 /turf/simulated/mineral/floor/ignore_mapgen,
 /area/submap/cave/swordcave)
-"h" = (
-/mob/living/simple_mob/faithless/cult,
-/turf/simulated/mineral/floor/ignore_mapgen,
-/area/submap/cave/swordcave)
 "i" = (
 /obj/item/gps/explorer/on,
 /turf/simulated/mineral/floor/ignore_mapgen,
@@ -34,12 +30,13 @@
 /obj/structure/loot_pile/surface/bones,
 /turf/simulated/mineral/floor/ignore_mapgen,
 /area/submap/cave/swordcave)
-"k" = (
-/mob/living/simple_mob/animal/space/bats,
-/turf/simulated/mineral/floor/ignore_mapgen,
-/area/submap/cave/swordcave)
-"l" = (
-/mob/living/simple_mob/animal/space/bats/cult,
+"m" = (
+/mob/living/simple_mob/vore/horse/kelpie{
+	name = "kelpie guardian";
+	faction = "wild animal";
+	health = 350;
+	maxHealth = 350
+	},
 /turf/simulated/mineral/floor/ignore_mapgen,
 /area/submap/cave/swordcave)
 
@@ -360,7 +357,7 @@ c
 c
 c
 c
-l
+c
 c
 c
 c
@@ -539,7 +536,7 @@ c
 c
 c
 c
-l
+c
 c
 c
 c
@@ -590,7 +587,7 @@ d
 c
 c
 c
-l
+c
 c
 c
 c
@@ -667,7 +664,7 @@ e
 c
 c
 c
-l
+c
 c
 c
 c
@@ -845,7 +842,7 @@ c
 c
 c
 c
-l
+c
 c
 c
 d
@@ -938,7 +935,7 @@ c
 c
 c
 c
-l
+c
 c
 c
 c
@@ -1001,7 +998,7 @@ e
 e
 c
 c
-c
+m
 c
 c
 e
@@ -1013,7 +1010,7 @@ d
 c
 c
 c
-l
+c
 c
 c
 c
@@ -1043,7 +1040,7 @@ f
 e
 e
 c
-h
+c
 c
 c
 e
@@ -1196,7 +1193,7 @@ c
 c
 c
 c
-l
+c
 c
 c
 c
@@ -1227,7 +1224,7 @@ e
 c
 c
 c
-l
+c
 c
 c
 c
@@ -1309,7 +1306,7 @@ e
 e
 c
 c
-k
+c
 c
 c
 c
@@ -1443,7 +1440,7 @@ c
 c
 c
 c
-l
+c
 c
 c
 c
@@ -1483,7 +1480,7 @@ d
 c
 c
 c
-l
+c
 c
 c
 c

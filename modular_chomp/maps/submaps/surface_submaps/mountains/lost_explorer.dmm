@@ -36,6 +36,10 @@
 /obj/item/flashlight/lantern,
 /turf/simulated/mineral/floor/ignore_mapgen,
 /area/submap/cave/lost_explorer)
+"j" = (
+/obj/item/gun/energy/locked/phasegun/pistol,
+/turf/simulated/mineral/floor/ignore_mapgen,
+/area/submap/cave/lost_explorer)
 
 (1,1,1) = {"
 a
@@ -48,7 +52,7 @@ i
 a
 c
 e
-a
+j
 a
 "}
 (3,1,1) = {"
