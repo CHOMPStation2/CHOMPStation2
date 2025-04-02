@@ -280,8 +280,8 @@ class ChatRenderer {
       this.processBatch(this.queue, { doArchive: doArchive });
       this.queue = [];
       // Find scrollable parent
-      if (this.rootNode && this.scrollNode) {
-        if (this.scrollNode.scrollHeight === undefined) {
+      if (this.rootNode) {
+        if (!this.scrollNode || this.scrollNode.scrollHeight === undefined) {
           this.scrollNode = findNearestScrollableParent(
             this.rootNode,
           ) as HTMLElement;
