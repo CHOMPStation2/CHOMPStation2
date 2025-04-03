@@ -17,15 +17,8 @@
 			icon_state = initial(G.base_icon)
 		if(ispath(item, /obj/item/reagent_containers/hypospray/autoinjector))
 			icon_state += "0"
-<<<<<<< HEAD
-		//CHOMPadd start
 		if(ispath(item, /obj/item/melee/shock_maul))
 			icon_state += "0"
-		//CHOMPadd end
-=======
-		if(ispath(item, /obj/item/melee/shock_maul))
-			icon_state += "0"
->>>>>>> 35b3a76176 (some fixes (#17468))
 
 		var/datum/universal_icon/I
 
