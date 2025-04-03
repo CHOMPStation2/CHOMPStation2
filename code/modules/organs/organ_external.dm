@@ -599,15 +599,10 @@ This function completely restores a damaged organ to perfect condition.
 		owner.custom_pain("Something ruptures inside of your [name]. You get the feeling you'll need more than just a bandage to fix it.", 15, TRUE)
 		to_chat(owner, span_bolddanger(span_massive("OH GOD! Something just tore in your [name]!"))) //Let's make this CLEAR that an artery was severed. This was vague enough that most players didn't realize they had IB.
 
-<<<<<<< HEAD
-	if((damage > 5 || damage + burn_dam >= 15) && type == BURN && (robotic < ORGAN_ROBOT) && !(species.flags & NO_BLOOD))
-		var/fluid_loss = 0.1 * (damage/(owner.getMaxHealth() - CONFIG_GET(number/health_threshold_dead))) * owner.species.blood_volume*(1 - owner.species.blood_level_fatal) //CHOMPedit reduce fluid loss 4-fold so lasers dont suck your blood
-=======
 //Burn damage can cause fluid loss due to blistering and cook-off
 
 	if((damage > 5 || damage + burn_dam >= 15) && type == BURN && (robotic < ORGAN_ROBOT) && !(data.get_species_appearance_flags() & NO_BLOOD))
-		var/fluid_loss = 0.4 * (damage/(owner.getMaxHealth() - CONFIG_GET(number/health_threshold_dead))) * owner.species.blood_volume*(1 - owner.species.blood_level_fatal)
->>>>>>> 1da1cad936 (DNA Clone Fix (#17466))
+		var/fluid_loss = 0.1 * (damage/(owner.getMaxHealth() - CONFIG_GET(number/health_threshold_dead))) * owner.species.blood_volume*(1 - owner.species.blood_level_fatal) //CHOMPedit reduce fluid loss 4-fold so lasers dont suck your blood
 		owner.remove_blood(fluid_loss)
 	// first check whether we can widen an existing wound
 	if(wounds.len > 0 && prob(max(50+(number_wounds-1)*10,90)))
