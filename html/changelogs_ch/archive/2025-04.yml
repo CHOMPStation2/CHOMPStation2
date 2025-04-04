@@ -14,3 +14,10 @@
   - rscadd: admin verb to modify the shift end
   Kashargul:
   - rscadd: The dark spawnpoint
+2025-04-04:
+  CHOMPStation2StaffMirrorBot:
+  - qol: spawning carbon mobs is less laggy
+  - refactor: dna datum cloning per organ removed in favor of a organ_data datum
+  - bugfix: Proteans can select icon base again
+  - code_imp: tgui core to 1.8.4
+  - rscdel: vchat
