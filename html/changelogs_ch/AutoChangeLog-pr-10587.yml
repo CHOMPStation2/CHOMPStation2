@@ -1,0 +1,5 @@
+author: "FluffMedic"
+delete-after: True
+changes:
+  - rscadd: "New tyr layout, WIP due to active edge issues"
+  - qol: "stargazer eclipse space boss glows in a large area"
