@@ -231,17 +231,18 @@ class ChatRenderer {
     this.lastScrollHeight = 0;
     this.handleScroll = (type) => {
       const node = this.scrollNode;
-      if (node) {
-        const height = node.scrollHeight;
-        const bottom = node.scrollTop + node.offsetHeight;
-        const scrollTracking =
-          Math.abs(height - bottom) < SCROLL_TRACKING_TOLERANCE ||
-          this.lastScrollHeight === 0;
-        if (scrollTracking !== this.scrollTracking) {
-          this.scrollTracking = scrollTracking;
-          this.events.emit('scrollTrackingChanged', scrollTracking);
-          logger.debug('tracking', this.scrollTracking);
-        }
+      if (!node) {
+        return;
+      }
+      const height = node.scrollHeight;
+      const bottom = node.scrollTop + node.offsetHeight;
+      const scrollTracking =
+        Math.abs(height - bottom) < SCROLL_TRACKING_TOLERANCE ||
+        this.lastScrollHeight === 0;
+      if (scrollTracking !== this.scrollTracking) {
+        this.scrollTracking = scrollTracking;
+        this.events.emit('scrollTrackingChanged', scrollTracking);
+        logger.debug('tracking', this.scrollTracking);
       }
     };
     this.ensureScrollTracking = () => {
@@ -281,14 +282,11 @@ class ChatRenderer {
     if (this.isReady() && this.queue.length > 0) {
       this.processBatch(this.queue, { doArchive: doArchive });
       this.queue = [];
-<<<<<<< HEAD
-=======
       // In case we had no vaclid scroll node before
       setTimeout(() => {
         this.tryFindScrollable();
         this.scrollToBottom();
       });
->>>>>>> d1b9aa9ae8 (dependency update (#17454))
     }
   }
 
@@ -447,8 +445,6 @@ class ChatRenderer {
     }
   }
 
-<<<<<<< HEAD
-=======
   tryFindScrollable() {
     // Find scrollable parent
     if (this.rootNode) {
@@ -463,7 +459,6 @@ class ChatRenderer {
     }
   }
 
->>>>>>> d1b9aa9ae8 (dependency update (#17454))
   setVisualChatLimits(
     visibleMessageLimit: number,
     combineMessageLimit: number,
