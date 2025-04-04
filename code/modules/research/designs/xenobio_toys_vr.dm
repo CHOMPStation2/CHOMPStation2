@@ -2,13 +2,8 @@
 	name = "bluespace monkey deployment system"
 	desc = "An Advanced monkey teleportation and rehydration system. For serious monkey business."
 	id = "monkey_gun"
-<<<<<<< HEAD
-	req_tech = list(TECH_MATERIAL = 3, TECH_BIO = 3, TECH_POWER = 4, TECH_COMBAT = 4, TECH_BLUESPACE = 6)
-	materials = list(MAT_PLASTEEL = 5000, MAT_GLASS = 5000, MAT_DIAMOND = 500, MAT_MORPHIUM = 350)
-=======
 	req_tech = list(TECH_BIO = 6, TECH_BLUESPACE = 5)
 	materials = list(MAT_STEEL = 3500, MAT_GLASS = 3500, MAT_PHORON = 1500, MAT_DIAMOND = 1500)
->>>>>>> 1aa1388fc8 (Various fixes & tweaks (#17439))
 	build_path = /obj/item/xenobio/monkey_gun
 	sort_string = "HBBA"
 
