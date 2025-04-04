@@ -419,6 +419,10 @@
 	catalogue_data = list(/datum/category_item/catalogue/anomalous/orangedisc)
 	icon_state = "orangedisc"
 
+/obj/item/prop/nanoweave/terraformers
+	catalogue_data = list(/datum/category_item/catalogue/anomalous/orangedisc)
+	icon_state = "orangedisc"
+
 
 /datum/category_item/catalogue/anomalous/cyandisc
 	name = "Precursor Object - Data Disc Cyan"
@@ -462,4 +466,78 @@
 	Th3 t3rr4f0rm3rs ar3 4lr3ady 4ffl1ct3d by 4 pl4g73.."
 	value = CATALOGUER_REWARD_HARD
 
+/datum/category_item/catalogue/anomalous/terraformers
+	name = "Precursor Object - Data Disc Styx"
+	desc = "We have secured our technoly within the vaults. Settled upon the core. \
+	of the planet. It should be safe from tampering..\
+	Our pods should land a few hundred meters above them. \
+	Survival outlook likly.\
+	<br><br>\
+	Error file corruption.\
+	<br><br>\
+	W3 h4v3 s3t 07r c0mp7t3rs t0 b71lt c07nt3r m34sur3s 1n c4s3 th3 0th3rs s7rv1v3 th3 p7rg3.. \
+	B7t the 0th3rs s7rv1val s33ms 7nl1k3ly... \
+	Th3 t3rr4f0rm3rs ar3 4lr3ady 4ffl1ct3d by 4 pl4g73.."
+	value = CATALOGUER_REWARD_HARD
+
+
+
+/mob/living/simple_mob/mechanical/mecha/eclipse/hivebot/powertower
+	name = "automated remote handless testing unit"
+	desc = "A large, very important looking robot."
+	icon_state = "powertower"
+	size_multiplier = 2
+	maxHealth = 1000
+	health = 1000
+	glow_toggle = TRUE
+	glow_override = TRUE
+	glow_color = "#FFA723"
+	glow_range = 16
+	wreckage = /obj/item/prop/nanoweave/terraformers
+
+/*
+/mob/living/simple_mob/mechanical/mecha/eclipse/hivebot/green/do_special_attack(atom/A)
+	. = TRUE // So we don't fire a bolt as well.
+	switch(a_intent)
+		if(I_DISARM) // Phase 3 1 safe zone
+			if(attackcycle == 1)
+				say("PROTOCOL: LASERBLADE.")
+				specialattackprojectile = /obj/item/projectile/beam/midlaser/shortrange
+				addtimer(CALLBACK(src, PROC_REF(burst), A, 2), 2 SECONDS, TIMER_DELETE_ME)
+				attackcycle = 0
+			else if(attackcycle == 2)
+				say("PROTOCOL: TELEPORT.")
+				addtimer(CALLBACK(src, PROC_REF(teleport_attack), A, 1), 1 SECOND, TIMER_DELETE_ME)
+				attackcycle = 0
+			else if(attackcycle == 2)
+				say("PROTOCOL: TELEPORT.")
+				addtimer(CALLBACK(src, PROC_REF(teleport_attack), A, 1), 1 SECOND, TIMER_DELETE_ME)
+				attackcycle = 0
+			else if(attackcycle == 2)
+				say("PROTOCOL: TELEPORT.")
+				addtimer(CALLBACK(src, PROC_REF(teleport_attack), A, 1), 1 SECOND, TIMER_DELETE_ME)
+				attackcycle = 0
+
+		if(I_HURT) //phase 1 3 safe zones
+			if(attackcycle == 1)
+				say("PROTOCOL: SWEEP. FIGURATION: A.")
+
+				attackcycle = 0
+			else if(attackcycle == 2)
+				say("PROTOCOL: SWEEP. FIGURATION: B.")
+
+				attackcycle = 0
+			else if(attackcycle == 3)
+				say("PROTOCOL: LASERBLADE.")
+
+				attackcycle = 0
+
+		if(I_GRAB) // Phase 2 2 safe zones
+			if(attackcycle == 1)
+				say("PROTOCOL: SWEEP. FIGURATION: A.")
+
+				attackcycle = 0
+			else if(attackcycle == 2)
+
+*/
 
