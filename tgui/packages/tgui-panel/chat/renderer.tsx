@@ -438,6 +438,7 @@ class ChatRenderer {
   }
 
   scrollToBottom() {
+    this.tryFindScrollable();
     // scrollHeight is always bigger than scrollTop and is
     // automatically clamped to the valid range.
     if (this.scrollNode) {
