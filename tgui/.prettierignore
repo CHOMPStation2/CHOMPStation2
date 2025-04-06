@@ -8,7 +8,6 @@
 
 .swcrc
 /docs
-/public
 /packages/tgui-polyfill
 /packages/tgfont/static
 /packages/tgfont/dist
@@ -16,6 +15,7 @@
 **/*.yml
 **/*.md
 
-## Build artifacts
-/public/.tmp/**/*
-/public/*.map
+# Avoid running on any bundles.
+/public/**/*
+# Running it on tgui.html is fine, however.
+!/public/tgui.html
