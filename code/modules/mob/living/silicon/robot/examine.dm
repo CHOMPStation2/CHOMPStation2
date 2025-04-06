@@ -29,11 +29,7 @@
 				. += "It appears to be in stand-by mode." //afk
 		if(UNCONSCIOUS)		. += span_warning("It doesn't seem to be responding.")
 		if(DEAD)			. += span_deadsay("It looks completely unsalvageable.")
-<<<<<<< HEAD
-	. += attempt_vr(src,"examine_reagent_bellies",args) //CHOMP reagent bellies
-=======
 	. += attempt_vr(src,"examine_reagent_bellies",args) // reagent bellies
->>>>>>> aad224fafe (Reworks weather effects to no longer hurt phased entities (#17469))
 
 	// VOREStation Edit: Start
 	. += attempt_vr(src,"examine_bellies_borg",args) //VOREStation Edit

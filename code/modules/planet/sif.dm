@@ -303,21 +303,11 @@ var/datum/planet/sif/planet_sif = null
 	indoor_sounds_type = /datum/looping_sound/weather/rain/indoors
 	effect_flags = HAS_PLANET_EFFECT | EFFECT_ONLY_LIVING
 
-<<<<<<< HEAD
-/datum/weather/sif/rain/process_effects()
-	..()
-	for(var/mob/living/L as anything in living_mob_list)
-		if(L?.z in holder.our_planet.expected_z_levels) // CHOMPedit Add a check that L has to be valid and not null
-			var/turf/T = get_turf(L)
-			if(!T.is_outdoors())
-				continue // They're indoors, so no need to rain on them.
-=======
 /datum/weather/sif/rain/planet_effect(mob/living/L)
 	if(L.z in holder.our_planet.expected_z_levels)
 		var/turf/T = get_turf(L)
 		if(!T.is_outdoors())
 			return // They're indoors, so no need to rain on them.
->>>>>>> aad224fafe (Reworks weather effects to no longer hurt phased entities (#17469))
 
 		// If they have an open umbrella, it'll guard from rain
 		var/obj/item/melee/umbrella/U = L.get_active_hand()
@@ -425,21 +415,11 @@ var/datum/planet/sif/planet_sif = null
 	)
 	effect_flags = HAS_PLANET_EFFECT | EFFECT_ONLY_HUMANS
 
-<<<<<<< HEAD
-/datum/weather/sif/hail/process_effects()
-	..()
-	for(var/mob/living/carbon/H as anything in human_mob_list)
-		if(H?.z in holder.our_planet.expected_z_levels) // CHOMPedit Add a check that L has to be valid and not null
-			var/turf/T = get_turf(H)
-			if(!T.is_outdoors())
-				continue // They're indoors, so no need to pelt them with ice.
-=======
 /datum/weather/sif/hail/planet_effect(mob/living/carbon/H)
 	if(H.z in holder.our_planet.expected_z_levels)
 		var/turf/T = get_turf(H)
 		if(!T.is_outdoors())
 			return // They're indoors, so no need to pelt them with ice.
->>>>>>> aad224fafe (Reworks weather effects to no longer hurt phased entities (#17469))
 
 		// If they have an open umbrella, it'll guard from hail
 		var/obj/item/melee/umbrella/U = H.get_active_hand()
