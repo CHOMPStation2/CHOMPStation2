@@ -661,11 +661,11 @@ var/list/global/tank_gauge_cache = list()
 	SIGNAL_HANDLER
 	if(isnull(WF))
 		return
-	var/atom/movable/AM = WF.resolve()
+	var/atom/movable/AM = WF
 	if(isnull(AM))
 		log_debug("DEBUG: HasProximity called without reference on [src].")
 		return
-	assembly?.HasProximity(T, WF, old_loc)
+	assembly?.HasProximity(T, WEAKREF(AM), old_loc)
 
 /obj/item/tankassemblyproxy/Moved(old_loc, direction, forced)
 	if(isturf(old_loc))
