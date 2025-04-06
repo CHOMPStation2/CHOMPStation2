@@ -1,17 +1,11 @@
 #!/usr/bin/env node
 
-<<<<<<< HEAD
-const { existsSync } = require(`fs`);
-const { createRequire } = require(`module`);
-const { resolve } = require(`path`);
-=======
 const {existsSync} = require(`fs`);
 const {createRequire, register} = require(`module`);
 const {resolve} = require(`path`);
 const {pathToFileURL} = require(`url`);
->>>>>>> cc02a1a056 (split tgui html (#17476))
 
-const relPnpApiPath = '../../../../.pnp.cjs';
+const relPnpApiPath = "../../../../.pnp.cjs";
 
 const absPnpApiPath = resolve(__dirname, relPnpApiPath);
 const absUserWrapperPath = resolve(__dirname, `./sdk.user.cjs`);
