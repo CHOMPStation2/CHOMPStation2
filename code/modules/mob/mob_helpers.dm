@@ -160,20 +160,6 @@
 	if(force_hit)
 		return zone
 
-<<<<<<< HEAD
-	var/miss_chance = 10
-	if (zone in base_miss_chance)
-		miss_chance = base_miss_chance[zone]
-	if (zone == "eyes" || zone == "mouth")
-		miss_chance = base_miss_chance["head"]
-	// miss_chance = max(miss_chance + miss_chance_mod, 0) CHOMPEDIT - removing baymiss
-	if(prob(miss_chance_mod)) //CHOMPADD - removing baymiss. Checking the miss chance for legacy. This should only be affected by special cases and evasion.
-		return null
-	if(prob(miss_chance))
-		//if(prob(70))
-		//	return null	CHOMPEDIT - removing baymiss
-		return pick(base_miss_chance)
-=======
 	//This is done here now, since previously it was just done in a dumb spot that made no sense.
 	//Even if you were Neo, anyone could land a blow on you.
 	var/has_evasion_chance = FALSE
@@ -234,7 +220,6 @@
 	// Finally, now that we have our newfound zone, we see if we miss it or not!
 	if(prob(randomization_chance)) //If the mob rolled a miss chance?
 		return null //No hit! Player escapes unscathed!
->>>>>>> 168a4e2279 (Removes baymiss. Mostly. (#17340))
 	return zone
 
 

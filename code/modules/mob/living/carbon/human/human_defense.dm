@@ -456,19 +456,11 @@ emp_act
 			zone = ran_zone(BP_TORSO,75)	//Hits a random part of the body, geared towards the chest
 
 		//check if we hit
-		/*
 		var/miss_chance = 15
 		if (O.throw_source)
 			var/distance = get_dist(O.throw_source, loc)
 			miss_chance = max(15*(distance-2), 0)
-<<<<<<< HEAD
-
-		zone = get_zone_with_miss_chance(zone, src, miss_chance, ranged_attack=1)
-		*/
-		//CHOMPEDIT - removing baymiss
-=======
 		zone = get_zone_with_miss_chance(zone, src, miss_chance, ranged_attack=1, attacker = O.thrower)
->>>>>>> 168a4e2279 (Removes baymiss. Mostly. (#17340))
 
 		if(zone && O.thrower != src)
 			var/shield_check = check_shields(throw_damage, O, thrower, zone, "[O]")
