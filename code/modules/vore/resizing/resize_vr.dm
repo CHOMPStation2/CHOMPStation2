@@ -86,12 +86,8 @@
  * * ignore_prefs - CHANGE_ME. Default: FALSE
  * * aura_animation - CHANGE_ME. Default: TRUE
  */
-<<<<<<< HEAD
-/mob/living/proc/resize(var/new_size, var/animate = TRUE, var/uncapped = FALSE, var/ignore_prefs = FALSE, var/aura_animation = FALSE) //CHOMPEdit - Disable aura_animation. Too expensive for something you can't even see.
-=======
 //#define USE_DIRECT_MULTIPLIERS //Uncomment to use old resize calculations.
-/mob/living/proc/resize(var/new_size, var/animate = TRUE, var/uncapped = FALSE, var/ignore_prefs = FALSE, var/aura_animation = TRUE)
->>>>>>> e2980a5c48 (Resizing & better runechat (#17384))
+/mob/living/proc/resize(var/new_size, var/animate = TRUE, var/uncapped = FALSE, var/ignore_prefs = FALSE, var/aura_animation = FALSE) //CHOMPEdit - Disable aura_animation. Too expensive for something you can't even see.
 	if(!uncapped)
 		#ifdef USE_DIRECT_MULTIPLIERS
 		new_size = clamp(new_size, RESIZE_MINIMUM, RESIZE_MAXIMUM)
@@ -148,13 +144,8 @@
 			animate_aura(src, color = aura_color, offset = aura_offset, anim_duration = aura_anim_duration, loops = aura_loops, grow_to = aura_grow_to)
 	else
 		update_transform() //Lame way
-<<<<<<< HEAD
-
-/mob/living/carbon/human/resize(var/new_size, var/animate = TRUE, var/uncapped = FALSE, var/ignore_prefs = FALSE, var/aura_animation = FALSE) //CHOMPEdit - Disable aura_animation. Too expensive for something you can't even see.
-=======
 //#undef USE_DIRECT_MULTIPLIERS //Uncomment to use old resize calculations.
-/mob/living/carbon/human/resize(var/new_size, var/animate = TRUE, var/uncapped = FALSE, var/ignore_prefs = FALSE, var/aura_animation = TRUE)
->>>>>>> e2980a5c48 (Resizing & better runechat (#17384))
+/mob/living/carbon/human/resize(var/new_size, var/animate = TRUE, var/uncapped = FALSE, var/ignore_prefs = FALSE, var/aura_animation = FALSE) //CHOMPEdit - Disable aura_animation. Too expensive for something you can't even see.
 	if(!resizable && !ignore_prefs)
 		return 1
 	. = ..()
