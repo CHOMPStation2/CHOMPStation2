@@ -1,7 +1,0 @@
-author: "CHOMPStation2StaffMirrorBot"
-delete-after: True
-changes:
-  - bugfix: "phased entities are no longer effected by weather effects"
-  - bugfix: "planetary weather effects"
-  - bugfix: "examine on admin spawned mobs"
-  - bugfix: "liquid examine"
