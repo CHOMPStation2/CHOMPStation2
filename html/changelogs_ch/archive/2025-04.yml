@@ -39,3 +39,18 @@
   FluffMedic:
   - rscadd: New tyr layout, WIP due to active edge issues
   - qol: stargazer eclipse space boss glows in a large area
+2025-04-07:
+  CHOMPStation2StaffMirrorBot:
+  - rscadd: explo chassis 'bulwark'
+  - bugfix: phased entities are no longer effected by weather effects
+  - bugfix: planetary weather effects
+  - bugfix: examine on admin spawned mobs
+  - bugfix: liquid examine
+  - bugfix: Fixed mail thinking you're a different person after resleeving
+  - bugfix: Fixed mail being sent to various crewmember's bodyparts
+  - bugfix: Fixed mail containing power tools disguised as common tools
+  - refactor: Refactored some of the mail code, using mind instead of mob
+  - bugfix: added vox to the unusual gait species exclude list (they were supposed
+      to be there but I forgor)
+  tacoguy7765093:
+  - maptweak: Atmospherics tweaks for active edges.

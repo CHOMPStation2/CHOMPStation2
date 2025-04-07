@@ -1,4 +1,0 @@
-author: "CHOMPStation2StaffMirrorBot"
-delete-after: True
-changes:
-  - bugfix: "added vox to the unusual gait species exclude list (they were supposed to be there but I forgor)"
