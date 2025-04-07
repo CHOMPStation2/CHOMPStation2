@@ -208,6 +208,7 @@
 
 /mob/living/silicon/robot/LateInitialize()
 	. = ..()
+	pick_module()
 	update_icon()
 
 /mob/living/silicon/robot/rejuvenate()
