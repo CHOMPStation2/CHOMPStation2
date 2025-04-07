@@ -12,7 +12,7 @@
 	icon_state = "shardmedium"
 	},
 /obj/item/stack/rods,
-/turf/simulated/floor,
+/turf/simulated/floor/plating/turfpack/sif,
 /area/submap/DJOutpost1)
 "d" = (
 /obj/structure/grille,
@@ -40,7 +40,7 @@
 /area/submap/DJOutpost1)
 "i" = (
 /mob/living/simple_mob/animal/giant_spider/frost,
-/turf/simulated/floor/wood,
+/turf/simulated/floor/wood/turfpack/sif,
 /area/submap/DJOutpost1)
 "j" = (
 /obj/effect/decal/remains,
@@ -48,7 +48,7 @@
 /obj/item/clothing/under/frontier,
 /obj/item/material/knife/tacknife/combatknife,
 /obj/random_multi/single_item/sfr_headset,
-/turf/simulated/floor/wood,
+/turf/simulated/floor/wood/turfpack/sif,
 /area/submap/DJOutpost1)
 "k" = (
 /obj/machinery/door/airlock/glass,
@@ -84,9 +84,7 @@
 /obj/structure/cable/yellow{
 	icon_state = "2-8"
 	},
-/turf/simulated/floor{
-	outdoors = 1
-	},
+/turf/simulated/floor/plating/turfpack/sif,
 /area/submap/DJOutpost1)
 "p" = (
 /obj/structure/bed/chair/wood,
@@ -97,7 +95,7 @@
 /obj/item/clothing/under/dress/blacktango,
 /obj/effect/decal/cleanable/blood,
 /obj/item/universal_translator/ear,
-/turf/simulated/floor/wood,
+/turf/simulated/floor/wood/turfpack/sif,
 /area/submap/DJOutpost1)
 "r" = (
 /obj/random/mob/spider/mutant,
@@ -133,21 +131,19 @@
 /obj/item/stack/material/phoron{
 	amount = 25
 	},
-/turf/simulated/floor{
-	outdoors = 1
-	},
+/turf/simulated/floor/plating/turfpack/sif,
 /area/submap/DJOutpost1)
 "v" = (
 /obj/structure/table/woodentable,
 /obj/item/trash/candle,
-/turf/simulated/floor/wood,
+/turf/simulated/floor/wood/turfpack/sif,
 /area/submap/DJOutpost1)
 "w" = (
 /obj/structure/bed/chair/wood{
 	dir = 8;
 	icon_state = "wooden_chair"
 	},
-/turf/simulated/floor/wood,
+/turf/simulated/floor/wood/turfpack/sif,
 /area/submap/DJOutpost1)
 "x" = (
 /obj/structure/bookcase,
@@ -155,7 +151,7 @@
 /obj/item/book/manual/excavation,
 /obj/item/book/manual/wiki/engineering_construction,
 /obj/item/storage/bible,
-/turf/simulated/floor/wood,
+/turf/simulated/floor/wood/turfpack/sif,
 /area/submap/DJOutpost1)
 "y" = (
 /obj/item/storage/toolbox/mechanical,
@@ -197,9 +193,7 @@
 /obj/effect/overlay/snow/floor,
 /obj/machinery/power/port_gen/pacman,
 /obj/structure/cable/yellow,
-/turf/simulated/floor{
-	outdoors = 1
-	},
+/turf/simulated/floor/plating/turfpack/sif,
 /area/submap/DJOutpost1)
 "D" = (
 /obj/machinery/door/airlock/glass,
@@ -295,6 +289,13 @@
 /obj/machinery/portable_atmospherics/hydroponics,
 /turf/simulated/floor/wood,
 /area/submap/DJOutpost1)
+"S" = (
+/turf/simulated/floor/wood/turfpack/sif,
+/area/submap/DJOutpost1)
+"T" = (
+/obj/structure/bed/chair/wood,
+/turf/simulated/floor/wood/turfpack/sif,
+/area/submap/DJOutpost1)
 "W" = (
 /obj/structure/ghost_pod/manual/lost_drone/dogborg{
 	activated = 1
@@ -341,8 +342,8 @@ a
 a
 b
 b
-e
-p
+S
+T
 v
 b
 p
@@ -357,9 +358,9 @@ a
 a
 b
 b
-e
+S
 i
-e
+S
 w
 b
 r
@@ -373,11 +374,11 @@ a
 (5,1,1) = {"
 a
 c
-e
-e
+S
+S
 j
-e
-e
+S
+S
 b
 e
 e
@@ -390,9 +391,9 @@ a
 (6,1,1) = {"
 a
 b
-e
-e
-e
+S
+S
+S
 q
 x
 b
