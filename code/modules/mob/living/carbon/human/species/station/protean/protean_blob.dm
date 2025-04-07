@@ -68,27 +68,7 @@
 	emote_see = list("shifts wetly","undulates placidly")
 
 //Constructor allows passing the human to sync damages
-<<<<<<< HEAD
 /mob/living/simple_mob/protean_blob/New(var/newloc, var/mob/living/carbon/human/H)
-	..()
-	if(H)
-		humanform = H
-		updatehealth()
-		refactory = locate() in humanform.internal_organs
-		// add_verb(src,/mob/living/proc/ventcrawl) // CHOMPRemove
-		add_verb(src,/mob/living/proc/usehardsuit)
-		add_verb(src,/mob/living/simple_mob/protean_blob/proc/nano_partswap)
-		add_verb(src,/mob/living/simple_mob/protean_blob/proc/nano_regenerate)
-		add_verb(src,/mob/living/simple_mob/protean_blob/proc/nano_metalnom)
-		add_verb(src,/mob/living/simple_mob/protean_blob/proc/nano_blobform)
-		add_verb(src,/mob/living/simple_mob/protean_blob/proc/nano_rig_transform)
-		add_verb(src,/mob/living/simple_mob/protean_blob/proc/appearance_switch)
-		add_verb(src,/mob/living/simple_mob/protean_blob/proc/nano_latch)
-		remove_verb(src,/mob/living/simple_mob/proc/nutrition_heal) // CHOMPAdd
-	else
-		update_icon()
-=======
-/mob/living/simple_mob/protean_blob/Initialize(mapload, var/mob/living/carbon/human/H)
 	. = ..()
 	if(!H)
 		stack_trace("URGENT: A protean blob was created without a humanform! src = [src] ckey = [ckey]! The blob has been deleted.")
@@ -97,7 +77,7 @@
 	humanform = H
 	updatehealth()
 	refactory = locate() in humanform.internal_organs
-	add_verb(src,/mob/living/proc/ventcrawl)
+	// add_verb(src,/mob/living/proc/ventcrawl) // CHOMPRemove
 	add_verb(src,/mob/living/proc/usehardsuit)
 	add_verb(src,/mob/living/simple_mob/protean_blob/proc/nano_partswap)
 	add_verb(src,/mob/living/simple_mob/protean_blob/proc/nano_regenerate)
@@ -106,7 +86,7 @@
 	add_verb(src,/mob/living/simple_mob/protean_blob/proc/nano_rig_transform)
 	add_verb(src,/mob/living/simple_mob/protean_blob/proc/appearance_switch)
 	add_verb(src,/mob/living/simple_mob/protean_blob/proc/nano_latch)
->>>>>>> a1ac262628 (Tracing (#17390))
+	remove_verb(src,/mob/living/simple_mob/proc/nutrition_heal) // CHOMPAdd
 	add_verb(src,/mob/living/simple_mob/proc/animal_mount)
 	add_verb(src,/mob/living/proc/toggle_rider_reins)
 
