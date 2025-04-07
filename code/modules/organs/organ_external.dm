@@ -386,7 +386,9 @@
 			var/modifed_burn = burn
 
 			// Let's calculate how INJURED our limb is accounting for AFTER the damage we just took. Determines the chance the next attack will take our limb off!
-			var/damage_factor = ((max_damage*CONFIG_GET(number/organ_health_multiplier))/(brute_dam + burn_dam))*100
+			var/damage_factor = ((brute_dam + burn_dam)/(max_damage*CONFIG_GET(number/organ_health_multiplier)))*100
+			if(brute_dam > max_damage || burn_dam > max_damage) //This is in case we go OVER our max. This doesn't EVER happen except on VITAL organs.
+				damage_factor = 100
 			// Max_damage of 80 and brute_dam of 80? || Factor = 100 Max_damage of 80 and brute_dam of 40? Factor = 50 || Max_damage of 80 and brute_dam of 5? Factor = 5
 			// This lowers our chances of having our limb removed when it has less damage. The more damaged the limb, the higher the chance it falls off!
 
@@ -1134,6 +1136,12 @@ Note that amputating the affected organ does in fact remove the infection from t
 	if((status & ORGAN_BROKEN) || cannot_break)
 		return
 
+<<<<<<< HEAD
+=======
+	playsound(src, "fracture", 10, 1, -2)
+	status |= ORGAN_BROKEN
+	broken_description = pick("broken","fracture","hairline fracture")
+>>>>>>> d4e4c8268c (Medical Adjustments (#17455))
 	if(owner)
 		if(organ_can_feel_pain() && !isbelly(owner.loc) && !isliving(owner.loc))
 			//CHOMPEdit Begin
@@ -1143,6 +1151,7 @@ Note that amputating the affected organ does in fact remove the infection from t
 				span_danger("You hear a sickening crack.")),brokenpain)
 			//CHOMPEdit End
 			owner.emote("scream")
+<<<<<<< HEAD
 		jostle_bone()	//VOREStation Edit End
 
 	if(istype(owner.loc, /obj/belly)) //CHOMPedit, bone breaks in bellys should be whisper range to prevent bar wide blender prefbreak. This is a hacky passive hardcode, if a pref gets added, remove this if else
@@ -1151,6 +1160,9 @@ Note that amputating the affected organ does in fact remove the infection from t
 		playsound(src, "fracture", 90, 1, -2) // CHOMPedit: Much more audible bonebreaks.
 	status |= ORGAN_BROKEN
 	broken_description = pick("broken","fracture","hairline fracture")
+=======
+		jostle_bone()
+>>>>>>> d4e4c8268c (Medical Adjustments (#17455))
 
 	// Fractures have a chance of getting you out of restraints
 	if (prob(25))
