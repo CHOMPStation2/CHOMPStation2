@@ -54,3 +54,29 @@
       to be there but I forgor)
   tacoguy7765093:
   - maptweak: Atmospherics tweaks for active edges.
+2025-04-08:
+  CHOMPStation2StaffMirrorBot:
+  - rscadd: teshari alternative tail (the fluffy one) has been converted to be used
+      with demi-teshari or really anyone human shaped
+  - image: added the demitesh flufftail sprite states to taurs.dmi
+  - code_imp: update browser window
+  - code_imp: migrate vendor icons to icon forge
+  - code_imp: Sprites no longer break the resize cap when resized, unless uncapped
+      is set to TRUE
+  - code_imp: Robot sprite_decals are now generated before stomachs
+  - bugfix: Runechat will properly appear above sprites.
+  Diana:
+  - qol: Defib now informs you WHY it's failing, so you can properly fix the problem.
+  - balance: CPR can now REVIVE people if their HP is above a threshold with a 10%
+      chance per CPR usage.
+  - balance: CPR will cause the recipient to metabolize reagents.
+  - balance: CPR now has a small chance of causing brute damage and rib fractures
+      to the chest.
+  - balance: Patient Stabilizer will cause the patient to metabolize reagents if dead.
+  - bugfix: Breaking a bone now has its random chance to jostle when broken for the
+      first time.
+  - bugfix: Shadekin no longer runtime if created (mannequins) during pre-init.
+  - bugfix: ore bag can fit on the mining satchel
+  - bugfix: You can no longer double-leave on the tram
+  - bugfix: Vital organs now properly calculate drop chance. Chance goes UP the more
+      damaged you are, not DOWN
