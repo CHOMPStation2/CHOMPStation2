@@ -101,7 +101,7 @@ export const TicketsPanel = (props) => {
 
   const [ticketChat, setTicketChat] = useState('');
 
-  const messagesEndRef: RefObject<HTMLDivElement> = useRef(null);
+  const messagesEndRef: RefObject<HTMLDivElement | null> = useRef(null);
 
   useEffect(() => {
     const scroll = messagesEndRef.current;

@@ -48,7 +48,7 @@ export const TicketChat = (props) => {
   const [ticketChat, setTicketChat] = useState('');
   const { id, level, handler, log } = data;
 
-  const messagesEndRef: RefObject<HTMLDivElement> = useRef(null);
+  const messagesEndRef: RefObject<HTMLDivElement | null> = useRef(null);
 
   useEffect(() => {
     const scroll = messagesEndRef.current;
