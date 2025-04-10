@@ -98,3 +98,18 @@
       on Player Characters
   - balance: Point blank shots will still always 100% hit Player Characters no matter
       your evasion. Just a reminder!
+2025-04-10:
+  CHOMPStation2StaffMirrorBot:
+  - code_imp: tgui core 2.0
+  - bugfix: Fixed mail scanner not working
+  Diana:
+  - rscdel: bad code
+  - rscadd: good code (questionable)
+  - bugfix: VR Sleepers properly exit you if EMP'd, depowered, or someone tries to
+      pull you out of it
+  - bugfix: Ghostspawns no longer multiply SECONDS by SECONDS
+  Tost:
+  - rscadd: Adds a variant of the roboticist labcoat to Suits and Overwear
+  - rscadd: Adds "traffic officer's jacket" to Suits and Overwear
+  - rscadd: Adds the option to bring a rubber ducky with you to the loadout on General
+  - rscadd: Adds the waiter's outfit to the loadout on Casual Dress
