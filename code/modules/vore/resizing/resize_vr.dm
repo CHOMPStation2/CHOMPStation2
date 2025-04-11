@@ -86,12 +86,7 @@
  * * ignore_prefs - CHANGE_ME. Default: FALSE
  * * aura_animation - CHANGE_ME. Default: TRUE
  */
-<<<<<<< HEAD
-//#define USE_DIRECT_MULTIPLIERS //Uncomment to use old resize calculations.
 /mob/living/proc/resize(var/new_size, var/animate = TRUE, var/uncapped = FALSE, var/ignore_prefs = FALSE, var/aura_animation = FALSE) //CHOMPEdit - Disable aura_animation. Too expensive for something you can't even see.
-=======
-/mob/living/proc/resize(var/new_size, var/animate = TRUE, var/uncapped = FALSE, var/ignore_prefs = FALSE, var/aura_animation = TRUE)
->>>>>>> a97ded5b3b (fix runechat offset (#17510))
 	if(!uncapped)
 		if((z in using_map.station_levels) && CONFIG_GET(flag/pixel_size_limit))
 			var/size_diff = ((runechat_y_offset() / size_multiplier) * new_size) // This returns 32 multiplied with the new size
@@ -147,13 +142,8 @@
 			animate_aura(src, color = aura_color, offset = aura_offset, anim_duration = aura_anim_duration, loops = aura_loops, grow_to = aura_grow_to)
 	else
 		update_transform() //Lame way
-<<<<<<< HEAD
-//#undef USE_DIRECT_MULTIPLIERS //Uncomment to use old resize calculations.
-/mob/living/carbon/human/resize(var/new_size, var/animate = TRUE, var/uncapped = FALSE, var/ignore_prefs = FALSE, var/aura_animation = FALSE) //CHOMPEdit - Disable aura_animation. Too expensive for something you can't even see.
-=======
 
-/mob/living/carbon/human/resize(var/new_size, var/animate = TRUE, var/uncapped = FALSE, var/ignore_prefs = FALSE, var/aura_animation = TRUE)
->>>>>>> a97ded5b3b (fix runechat offset (#17510))
+/mob/living/carbon/human/resize(var/new_size, var/animate = TRUE, var/uncapped = FALSE, var/ignore_prefs = FALSE, var/aura_animation = FALSE) //CHOMPEdit - Disable aura_animation. Too expensive for something you can't even see.
 	if(!resizable && !ignore_prefs)
 		return 1
 	. = ..()
