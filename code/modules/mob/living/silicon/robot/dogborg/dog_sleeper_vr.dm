@@ -56,7 +56,7 @@
 
 /obj/item/dogborg/sleeper/Destroy()
 	go_out()
-	..()
+	. = ..()
 
 /obj/item/dogborg/sleeper/Exit(atom/movable/O)
 	return 0
