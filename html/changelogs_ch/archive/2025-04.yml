@@ -113,3 +113,8 @@
   - rscadd: Adds "traffic officer's jacket" to Suits and Overwear
   - rscadd: Adds the option to bring a rubber ducky with you to the loadout on General
   - rscadd: Adds the waiter's outfit to the loadout on Casual Dress
+2025-04-11:
+  CHOMPStation2StaffMirrorBot:
+  - qol: Added an animation when dropping items on tables
+  Cerami:
+  - balance: Venom bite now warns players that it is being used.
