@@ -1,7 +1,7 @@
 import { useBackend } from 'tgui/backend';
 import { BeakerContents } from 'tgui/interfaces/common/BeakerContents';
 import { modalOpen } from 'tgui/interfaces/common/ComplexModal';
-import { Box, Button, Section } from 'tgui-core/components';
+import { Box, Button, Section, Stack } from 'tgui-core/components';
 import type { BooleanLike } from 'tgui-core/react';
 
 import { transferAmounts } from './constants';
@@ -36,54 +36,61 @@ export const ChemMasterBeaker = (props: {
           beakerLoaded
           beakerContents={beakerReagents}
           buttons={(chemical: reagent, i: number) => (
-            <Box mb={i < beakerReagents.length - 1 && '2px'}>
-              <Button
-                mb="0"
-                onClick={() =>
-                  modalOpen('analyze', {
-                    idx: i + 1,
-                    beaker: 1,
-                  })
-                }
-              >
-                Analyze
-              </Button>
-              {transferAmounts.map((am, j) => (
+            <Stack mb={i < beakerReagents.length - 1 && '2px'}>
+              <Stack.Item>
                 <Button
-                  key={j}
+                  mb="0"
+                  onClick={() =>
+                    modalOpen('analyze', {
+                      idx: i + 1,
+                      beaker: 1,
+                    })
+                  }
+                >
+                  Analyze
+                </Button>
+              </Stack.Item>
+              {transferAmounts.map((am, j) => (
+                <Stack.Item key={j}>
+                  <Button
+                    mb="0"
+                    onClick={() =>
+                      act('add', {
+                        id: chemical.id,
+                        amount: am,
+                      })
+                    }
+                  >
+                    {am}
+                  </Button>
+                </Stack.Item>
+              ))}
+              <Stack.Item>
+                <Button
                   mb="0"
                   onClick={() =>
                     act('add', {
                       id: chemical.id,
-                      amount: am,
+                      amount: chemical.volume,
                     })
                   }
                 >
-                  {am}
+                  All
                 </Button>
-              ))}
-              <Button
-                mb="0"
-                onClick={() =>
-                  act('add', {
-                    id: chemical.id,
-                    amount: chemical.volume,
-                  })
-                }
-              >
-                All
-              </Button>
-              <Button
-                mb="0"
-                onClick={() =>
-                  modalOpen('addcustom', {
-                    id: chemical.id,
-                  })
-                }
-              >
-                Custom..
-              </Button>
-            </Box>
+              </Stack.Item>
+              <Stack.Item>
+                <Button
+                  mb="0"
+                  onClick={() =>
+                    modalOpen('addcustom', {
+                      id: chemical.id,
+                    })
+                  }
+                >
+                  Custom...
+                </Button>
+              </Stack.Item>
+            </Stack>
           )}
         />
       ) : (
