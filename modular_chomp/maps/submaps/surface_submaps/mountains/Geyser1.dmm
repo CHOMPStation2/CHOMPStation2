@@ -6,12 +6,12 @@
 /turf/simulated/floor/outdoors/rocks/caves,
 /area/submap/cave/geyser_1)
 "c" = (
-/obj/random/turf/lava,
+/obj/random/turf/lava/sif,
 /turf/simulated/floor/outdoors/rocks/caves,
 /area/submap/cave/geyser_1)
 "d" = (
 /obj/random/outcrop,
-/obj/random/turf/lava,
+/obj/random/turf/lava/sif,
 /turf/simulated/floor/outdoors/rocks/caves,
 /area/submap/cave/geyser_1)
 "e" = (
@@ -35,7 +35,7 @@
 	},
 /area/submap/cave/geyser_1)
 "g" = (
-/obj/random/turf/lava,
+/obj/random/turf/lava/sif,
 /obj/random/outcrop,
 /turf/simulated/floor/outdoors/rocks/caves,
 /area/submap/cave/geyser_1)
