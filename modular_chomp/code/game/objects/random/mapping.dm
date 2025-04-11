@@ -135,6 +135,6 @@ Make this if you can figure out a way to do it for every area in that z level ex
 	turf_outdoors = OUTDOORS_NO
 
 /obj/random/turf/lava/sif/item_to_spawn()
-	return pick(prob(5);/turf/simulated/floor/lava/outdoors/turfpack/sif,
+	return pick(prob(5);/turf/simulated/floor/lava/sif,
 				prob(3);/turf/simulated/floor/outdoors/rocks/caves,
 				prob(1);/turf/simulated/mineral/ignore_mapgen/cave)
