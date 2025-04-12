@@ -5170,6 +5170,7 @@
 #include "modular_chomp\maps\southern_cross\items\clothing\sc_accessory.dm"
 #include "modular_chomp\maps\southern_cross\items\clothing\sc_suit.dm"
 #include "modular_chomp\maps\southern_cross\items\clothing\sc_under.dm"
+#include "modular_chomp\maps\southern_cross\overmap\space\carrier.dm"
 #include "modular_chomp\maps\southern_cross\structures\closets\engineering.dm"
 #include "modular_chomp\maps\southern_cross\structures\closets\medical.dm"
 #include "modular_chomp\maps\southern_cross\structures\closets\misc.dm"
