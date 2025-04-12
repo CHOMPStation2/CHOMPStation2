@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useBackend } from 'tgui/backend';
 import { Window } from 'tgui/layouts';
-import { Box, Button, LabeledList, Section } from 'tgui-core/components';
+import { Box, Button, LabeledList, Section, Stack } from 'tgui-core/components';
 
 import { CharacterDirectoryList } from './CharacterDirectoryList';
 import { ViewCharacter } from './CharacterDirectoryViewCharacter';
@@ -37,18 +37,22 @@ export const CharacterDirectory = (props) => {
             <Section
               title="Settings and Preferences"
               buttons={
-                <>
-                  <Box color="label" inline>
-                    Save to current preferences slot:&nbsp;
-                  </Box>
-                  <Button
-                    icon={overwritePrefs ? 'toggle-on' : 'toggle-off'}
-                    selected={overwritePrefs}
-                    onClick={() => setOverwritePrefs(!overwritePrefs)}
-                  >
-                    {overwritePrefs ? 'On' : 'Off'}
-                  </Button>
-                </>
+                <Stack>
+                  <Stack.Item>
+                    <Box color="label" inline>
+                      Save to current preferences slot:&nbsp;
+                    </Box>
+                  </Stack.Item>
+                  <Stack.Item>
+                    <Button
+                      icon={overwritePrefs ? 'toggle-on' : 'toggle-off'}
+                      selected={overwritePrefs}
+                      onClick={() => setOverwritePrefs(!overwritePrefs)}
+                    >
+                      {overwritePrefs ? 'On' : 'Off'}
+                    </Button>
+                  </Stack.Item>
+                </Stack>
               }
             >
               <LabeledList>

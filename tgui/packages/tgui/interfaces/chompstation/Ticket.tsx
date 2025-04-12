@@ -3,7 +3,6 @@ import { type RefObject, useEffect, useRef, useState } from 'react';
 import { useBackend } from 'tgui/backend';
 import { Window } from 'tgui/layouts';
 import {
-  Box,
   Button,
   Divider,
   Input,
@@ -104,13 +103,19 @@ export const Ticket = (props) => {
             <Section
               title={'Ticket #' + id}
               buttons={
-                <Box nowrap>
-                  <Button icon="pen" onClick={() => act('retitle')}>
-                    Rename Ticket
-                  </Button>
-                  <Button onClick={() => act('legacy')}>Legacy UI</Button>
-                  <Button color={LevelColor[level]}>{Level[level]}</Button>
-                </Box>
+                <Stack>
+                  <Stack.Item>
+                    <Button icon="pen" onClick={() => act('retitle')}>
+                      Rename Ticket
+                    </Button>
+                  </Stack.Item>
+                  <Stack.Item>
+                    <Button onClick={() => act('legacy')}>Legacy UI</Button>
+                  </Stack.Item>
+                  <Stack.Item>
+                    <Button color={LevelColor[level]}>{Level[level]}</Button>
+                  </Stack.Item>
+                </Stack>
               }
             >
               <LabeledList>

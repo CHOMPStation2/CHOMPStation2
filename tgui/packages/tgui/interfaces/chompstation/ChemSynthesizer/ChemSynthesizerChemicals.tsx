@@ -53,20 +53,24 @@ export const ChemSynthesizerChemicals = (props) => {
         title="Catalyst"
         minHeight="25%"
         buttons={
-          <Box>
+          <Stack>
             {!!catalyst && (
-              <Box inline color="label" mr={2}>
-                {catalystCurrentVolume} / {catalystMaxVolume} units
-              </Box>
+              <Stack.Item>
+                <Box inline color="label" mr={2}>
+                  {catalystCurrentVolume} / {catalystMaxVolume} units
+                </Box>
+              </Stack.Item>
             )}
-            <Button
-              icon="eject"
-              disabled={!catalyst || !!busy}
-              onClick={() => act('eject_catalyst')}
-            >
-              Eject
-            </Button>
-          </Box>
+            <Stack.Item>
+              <Button
+                icon="eject"
+                disabled={!catalyst || !!busy}
+                onClick={() => act('eject_catalyst')}
+              >
+                Eject
+              </Button>
+            </Stack.Item>
+          </Stack>
         }
       >
         <BeakerContents
