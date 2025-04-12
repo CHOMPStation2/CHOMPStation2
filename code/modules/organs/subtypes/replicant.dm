@@ -146,7 +146,7 @@
 	robotic = ORGAN_LIFELIKE
 
 	organ_verbs = list(
-		/mob/living/carbon/human/proc/exit_vr
+		/mob/living/carbon/human/proc/perform_exit_vr
 		)
 	supply_conversion_value = 50 // CHOMPedit - Selling engineered organs
 
