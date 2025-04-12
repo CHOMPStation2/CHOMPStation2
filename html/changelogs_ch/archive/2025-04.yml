@@ -118,3 +118,16 @@
   - qol: Added an animation when dropping items on tables
   Cerami:
   - balance: Venom bite now warns players that it is being used.
+2025-04-12:
+  CHOMPStation2StaffMirrorBot:
+  - rscadd: Space heaters can now be crafted
+  - rscadd: Space heaters can now be upgraded to cool/heat faster (Uses micro_laser,
+      manipulator, and capacitor to upgrade various parts)
+  - maptweak: Moved the medical kiosk from the west side of the medbay lobby over
+      to the east corner, near chemistry.
+  - rscadd: moves eye layer under bellies for borgs
+  Cameron-The-Raven:
+  - bugfix: guitar loadout now properly gives you a guitar
+  Drathek:
+  - code_imp: DMI merge hook will now try to retain positioning of sprites when handling
+      some conflicts
