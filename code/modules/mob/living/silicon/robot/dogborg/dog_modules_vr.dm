@@ -521,7 +521,7 @@
 	UnregisterSignal(src, COMSIG_OBSERVER_MOVED)
 	R = null
 	last_robot_loc = null
-	..()
+	. = ..()
 
 /obj/item/mining_scanner/robot
 	name = "integrated deep scan device"

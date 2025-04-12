@@ -835,7 +835,7 @@
 		// otherwise, do normal expel from turf
 		if(H)
 			expel(H, T, 0)
-	..()
+	. = ..()
 
 // returns the direction of the next pipe object, given the entrance dir
 // by default, returns the bitmask of remaining directions
@@ -1102,7 +1102,7 @@
 		// otherwise, do normal expel from turf
 		if(H)
 			expel(H, T, 0)
-	..()
+	. = ..()
 
 /obj/structure/disposalpipe/hides_under_flooring()
 	return 1
