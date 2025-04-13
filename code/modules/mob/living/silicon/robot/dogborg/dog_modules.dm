@@ -301,6 +301,7 @@
 		enabled = FALSE
 		icon_state = "scrub0"
 
+<<<<<<< HEAD:code/modules/mob/living/silicon/robot/dogborg/dog_modules_vr.dm
 /obj/item/gun/energy/taser/mounted/cyborg/ertgun //Not a taser, but it's being used as a base so it takes energy and actually works.
 	name = "disabler"
 	desc = "A small and nonlethal gun produced by NT.."
@@ -312,6 +313,8 @@
 	recharge_time = 1 //Takes ten ticks to recharge a laser, so don't waste them all!
 	//cell_type = null //Same cell as a taser until edits are made.
 
+=======
+>>>>>>> 734a07a9aa (some robot file splitting (#17525)):code/modules/mob/living/silicon/robot/dogborg/dog_modules.dm
 /obj/item/lightreplacer/dogborg
 	name = "light replacer"
 	desc = "A device to automatically replace lights. This version is capable to produce a few replacements using your internal matter reserves."
@@ -566,6 +569,7 @@
 			. += span_notice("[src] is wet. Just like it should be.")
 		if(water.energy < 5)
 			. += span_notice("[src] is dry.")
+<<<<<<< HEAD:code/modules/mob/living/silicon/robot/dogborg/dog_modules_vr.dm
 //CHOMPEDIT Enable
 
 /obj/item/shield_projector/line/exploborg
@@ -720,3 +724,6 @@
 	use_external_power = 1
 	self_recharge = 1
 	borg_flags = COUNTS_AS_ROBOT_GUN | COUNTS_AS_ROBOT_LASER
+=======
+*/
+>>>>>>> 734a07a9aa (some robot file splitting (#17525)):code/modules/mob/living/silicon/robot/dogborg/dog_modules.dm
