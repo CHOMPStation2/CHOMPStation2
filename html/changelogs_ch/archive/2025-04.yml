@@ -131,3 +131,18 @@
   Drathek:
   - code_imp: DMI merge hook will now try to retain positioning of sprites when handling
       some conflicts
+2025-04-13:
+  CHOMPStation2StaffMirrorBot:
+  - rscadd: Silicon are now able to be picked up, with a toggle in their abilities
+      section to preserve petting.
+  - bugfix: Fixes some bad destroys
+  - bugfix: RPD interface
+  - code_imp: tgui-core to 3.0.4
+  - rscadd: Added IDs to the list of edible trash eater items. Just like PDA's they
+      require the owner to be watching when they're eaten.
+  - bugfix: Fixed PDA eating warning messages not being visible.
+  - bugfix: runechat offset delta being applied twice in some cases
+  - rscadd: Added the recolour ability to beast form transformations, allowing them
+      to recolour themselves once per transformation.
+  Diana:
+  - bugfix: Exit VR now properly lets you exit vr
