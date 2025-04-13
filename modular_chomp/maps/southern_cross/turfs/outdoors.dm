@@ -139,11 +139,6 @@
 	nitrogen	= MOLES_N2SIF
 	temperature	= TEMPERATURE_SIF
 
-/turf/simulated/floor/lava/sif
-	oxygen		= MOLES_O2SIF
-	nitrogen	= MOLES_N2SIF
-	temperature	= TEMPERATURE_SIF
-
 /turf/simulated/sky
 	oxygen		= MOLES_O2SIF
 	nitrogen	= MOLES_N2SIF
