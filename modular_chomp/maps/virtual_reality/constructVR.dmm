@@ -6,11 +6,6 @@
 	oxygen = 21.8366
 	},
 /area/vr/outdoors/powered)
-"aab" = (
-/turf/simulated/floor/water/turfpack/station{
-	nitrogen = s
-	},
-/area/vr/outdoors/powered)
 "aac" = (
 /turf/simulated/floor/water/beach{
 	temperature = 293.15;
@@ -43198,7 +43193,7 @@ wfq
 wfq
 wfq
 wfq
-aab
+wfq
 wfq
 wfq
 wfq
