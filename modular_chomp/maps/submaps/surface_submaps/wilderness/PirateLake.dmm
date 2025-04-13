@@ -106,7 +106,7 @@
 /obj/item/gun/projectile/deagle/gold,
 /obj/item/soap/golden_soap,
 /obj/item/reagent_containers/food/drinks/golden_cup,
-/obj/item/toy/plushie/gold_eastdragon,
+/obj/item/toy/plushie/dragon/gold_east,
 /obj/item/slime_extract/gold,
 /turf/simulated/floor/wood/turfpack/sif,
 /area/submap/PirateLake)
