@@ -125,3 +125,16 @@ Make this if you can figure out a way to do it for every area in that z level ex
 	if(A)
 		A.flags |= PHASE_SHIELDED
 	qdel(src)
+
+//For active edges in Sif POIs
+/obj/random/turf/lava/sif
+	name = "random Lava spawn sif"
+	desc = "This is a random lava spawn. Programmed to spawn lava with sif temps"
+
+	override_outdoors = TRUE
+	turf_outdoors = OUTDOORS_NO
+
+/obj/random/turf/lava/sif/item_to_spawn()
+	return pick(prob(5);/turf/simulated/floor/lava/external,
+				prob(3);/turf/simulated/floor/outdoors/rocks/caves,
+				prob(1);/turf/simulated/mineral/ignore_mapgen/cave)
