@@ -106,12 +106,11 @@ export const TicketChat = (props) => {
                 <Stack.Item grow>
                   <Input
                     autoFocus
-                    updateOnPropsChange
                     autoSelect
                     fluid
                     placeholder="Enter a message..."
                     value={ticketChat}
-                    onInput={(e, value: string) => setTicketChat(value)}
+                    onChange={(value: string) => setTicketChat(value)}
                     onKeyDown={(e) => {
                       if (KEY.Enter === e.key) {
                         act('send_msg', { msg: ticketChat });

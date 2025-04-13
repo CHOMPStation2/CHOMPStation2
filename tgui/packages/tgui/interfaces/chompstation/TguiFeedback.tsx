@@ -45,14 +45,14 @@ export const TguiFeedback = (props) => {
               <Section title="Rating">
                 Please enter your rating of this window from a range from 1 to 5
                 <br />
-                <Input onChange={(e, val) => setRating(val)} value={rating} />
+                <Input onChange={(val) => setRating(val)} value={rating} />
               </Section>
               <Section title="Optional Comment">
                 If you want, you can leave an optional comment as well!
                 <br />
                 <TextArea
                   height={'18rem'}
-                  onChange={(e, val) => setComment(val)}
+                  onChange={(val) => setComment(val)}
                   value={comment}
                 />
               </Section>
