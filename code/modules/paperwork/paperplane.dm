@@ -11,7 +11,11 @@
 
 	var/obj/item/paper/internalPaper
 
+<<<<<<< HEAD
 /obj/item/paperplane/Initialize(mapload, obj/item/paper/newPaper) //ChompEDIT New --> Initialize
+=======
+/obj/item/paperplane/Initialize(mapload, obj/item/paper/newPaper)
+>>>>>>> cdfa1c853f (New to init final (#17512))
 	. = ..()
 	pixel_y = rand(-8, 8)
 	pixel_x = rand(-9, 9)

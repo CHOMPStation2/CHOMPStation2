@@ -88,13 +88,13 @@
 			delete_me = TRUE
 		//VORE Station Add End
 
-	landmarks_list += src
-
 	if(delete_me)
 		return INITIALIZE_HINT_QDEL
+	else
+		landmarks_list += src
 
 /obj/effect/landmark/Destroy(var/force = FALSE)
-	if(delete_me || force)
+	if(force)
 		landmarks_list -= src
 		return ..()
 	return QDEL_HINT_LETMELIVE

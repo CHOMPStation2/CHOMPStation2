@@ -23,6 +23,7 @@
 
 #define LANGUAGE_SPARKLE "Sparkle"
 
+<<<<<<< HEAD
 // CHOMPAdd Start
 #define LANGUAGE_MARISH "Marish"
 
@@ -30,3 +31,7 @@
 #define LANGUAGE_XENOLINGUA "Xenolingua"
 #define LANGUAGE_HIVEMIND "Hivemind"
 // CHOMPAdd End
+=======
+#define LANGUAGE_XENOLINGUA "Xenomorph"
+#define LANGUAGE_HIVEMIND "Hivemind"
+>>>>>>> cdfa1c853f (New to init final (#17512))

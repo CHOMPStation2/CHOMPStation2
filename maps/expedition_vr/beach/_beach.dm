@@ -60,6 +60,7 @@
 /obj/away_mission_init/beachcave
 	name = "away mission initializer - beachcave"
 
+<<<<<<< HEAD
 //In our case, it initializes the ores and random submaps in the beach's cave, then deletes itself
 /obj/away_mission_init/beachcave/Initialize(mapload)
 	// Cave submaps are first.
@@ -73,6 +74,8 @@
 	flags |= ATOM_INITIALIZED
 	return INITIALIZE_HINT_QDEL
 
+=======
+>>>>>>> cdfa1c853f (New to init final (#17512))
 // Two mob spawners that are placed on the map that spawn some mobs!
 // They keep track of their mob, and when it's dead, spawn another (only if nobody is looking)
 // Note that if your map has step teleports, mobs may wander through them accidentally and not know how to get back

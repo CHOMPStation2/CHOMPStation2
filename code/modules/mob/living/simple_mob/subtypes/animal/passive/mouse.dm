@@ -44,6 +44,7 @@
 
 	var/body_color //brown, gray, white and black, leave blank for random
 
+<<<<<<< HEAD
 	//CHOMP Addition: Added these vore variables in and swapped the booleans from their defaults too.
 	can_be_drop_prey = TRUE
 	can_be_drop_pred = FALSE
@@ -66,11 +67,15 @@
 
 /mob/living/simple_mob/animal/passive/mouse/New()
 	..()
+=======
+/mob/living/simple_mob/animal/passive/mouse/Initialize(mapload, keep_parent_data)
+	. = ..()
+>>>>>>> cdfa1c853f (New to init final (#17512))
 
 	add_verb(src, /mob/living/proc/ventcrawl)
 	add_verb(src, /mob/living/proc/hide)
 
-	if(name == initial(name))
+	if(!keep_parent_data && name == initial(name))
 		name = "[name] ([rand(1, 1000)])"
 	real_name = name
 
@@ -81,7 +86,7 @@
 	icon_living = "mouse_[body_color]"
 	icon_dead = "mouse_[body_color]_dead"
 	icon_rest = "mouse_[body_color]_sleep"
-	if (body_color != "rat")
+	if (!keep_parent_data && body_color != "rat")
 		desc = "A small [body_color] rodent, often seen hiding in maintenance areas and making a nuisance of itself."
 		holder_type = /obj/item/holder/mouse/rat
 	if (body_color == "operative")
@@ -151,10 +156,8 @@
 	name = "Tom"
 	desc = "Jerry the cat is not amused."
 
-/mob/living/simple_mob/animal/passive/mouse/brown/Tom/New()
-	..()
-	// Change my name back, don't want to be named Tom (666)
-	name = initial(name)
+/mob/living/simple_mob/animal/passive/mouse/brown/Tom/Initialize(mapload)
+	. = ..(mapload, TRUE)
 
 /mob/living/simple_mob/animal/passive/mouse/black
 	body_color = "black"
@@ -204,10 +207,8 @@
 	name = "Agent Cheese"
 	desc = "I like my cheese Swiss... not American."
 
-/mob/living/simple_mob/animal/passive/mouse/operative/agent_cheese/New()
-	..()
-	// Change my name back, don't want to be named agent_cheese (666)
-	name = initial(name)
+/mob/living/simple_mob/animal/passive/mouse/operative/agent_cheese/Initialize(mapload)
+	. = ..(mapload, TRUE)
 
 // Mouse noises
 /datum/say_list/mouse

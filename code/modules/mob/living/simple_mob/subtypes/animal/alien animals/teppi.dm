@@ -691,10 +691,13 @@ GLOBAL_VAR_INIT(teppi_count, 0)	// How mant teppi DO we have?
 			var/nutrition_cost = 500 + (nutrition / 2)
 			adjust_nutrition(-nutrition_cost)
 			new /mob/living/simple_mob/vore/alienanimals/teppi(loc, src)
+<<<<<<< HEAD
 			if(!teppi_growingup)
 				teppi_growingup = TRUE
 				qdel(src)
 				return
+=======
+>>>>>>> cdfa1c853f (New to init final (#17512))
 		else
 			visible_message("\The [src] whines pathetically...", runemessage = "whines")
 			if(prob(50))
@@ -769,13 +772,14 @@ GLOBAL_VAR_INIT(teppi_count, 0)	// How mant teppi DO we have?
 		return TRUE
 
 //Handles both growing up from a baby and also passing parent details to new babies.
-/mob/living/simple_mob/vore/alienanimals/teppi/New(newloc, teppi1, teppi2)
+/mob/living/simple_mob/vore/alienanimals/teppi/Initialize(mapload, teppi1, teppi2)
 	GLOB.teppi_count ++
 	if(teppi1 && !teppi2)
 		inherit_from_baby(teppi1)
+		qdel(teppi1)
 	else if (teppi1 && teppi2)
 		inherit_from_parents(teppi1, teppi2)
-	..()
+	. = ..()
 
 /mob/living/simple_mob/vore/alienanimals/teppi/Destroy()
 	GLOB.teppi_count --
@@ -1141,13 +1145,13 @@ GLOBAL_VAR_INIT(teppi_count, 0)	// How mant teppi DO we have?
 			return
 
 //This a teppi with funny colors will spawn!
-/mob/living/simple_mob/vore/alienanimals/teppi/mutant/New()
+/mob/living/simple_mob/vore/alienanimals/teppi/mutant/Initialize(mapload)
 	teppi_mutate = TRUE
 	. = ..()
 
 //Custom teppi colors! For funzies.
 
-/mob/living/simple_mob/vore/alienanimals/teppi/cass/New()
+/mob/living/simple_mob/vore/alienanimals/teppi/cass/Initialize(mapload)
 	inherit_colors = TRUE
 	color = "#c69c85"
 	marking_color = "#eeb698"
@@ -1158,7 +1162,7 @@ GLOBAL_VAR_INIT(teppi_count, 0)	// How mant teppi DO we have?
 	horn_type =  "0"
 	. = ..()
 
-/mob/living/simple_mob/vore/alienanimals/teppi/baby/cass/New()
+/mob/living/simple_mob/vore/alienanimals/teppi/baby/cass/Initialize(mapload)
 	inherit_colors = TRUE
 	color = "#c69c85"
 	marking_color = "#eeb698"
@@ -1169,7 +1173,7 @@ GLOBAL_VAR_INIT(teppi_count, 0)	// How mant teppi DO we have?
 	horn_type =  "0"
 	. = ..()
 
-/mob/living/simple_mob/vore/alienanimals/teppi/aronai/New()
+/mob/living/simple_mob/vore/alienanimals/teppi/aronai/Initialize(mapload)
 	inherit_colors = TRUE
 	color = "#404040"
 	marking_color = "#222222"
@@ -1180,7 +1184,7 @@ GLOBAL_VAR_INIT(teppi_count, 0)	// How mant teppi DO we have?
 	horn_type = "1"
 	. = ..()
 
-/mob/living/simple_mob/vore/alienanimals/teppi/lira/New()
+/mob/living/simple_mob/vore/alienanimals/teppi/lira/Initialize(mapload)
 	inherit_colors = TRUE
 	color = "#fdfae9"
 	marking_color = "#ffffc0"

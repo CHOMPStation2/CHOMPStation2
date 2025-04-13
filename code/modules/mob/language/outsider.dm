@@ -86,9 +86,14 @@
 	syllables = list("sss","sSs","SSS")
 
 /datum/language/xenos
+<<<<<<< HEAD
 	name = "Hivemind"
 	desc = "A psychic link permitting members of a xenomorph hive to communicate over enormous distances. Requires a specialized organ only found in xenomorph specimens." //CHOMPedit
 	machine_understands = 0 // CHOMPedit: Borgs and AI can't figure this one out.
+=======
+	name = LANGUAGE_HIVEMIND
+	desc = "Xenomorphs have the strange ability to commune over a psychic hivemind."
+>>>>>>> cdfa1c853f (New to init final (#17512))
 	speech_verb = "hisses"
 	ask_verb = "hisses"
 	exclaim_verb = "hisses"

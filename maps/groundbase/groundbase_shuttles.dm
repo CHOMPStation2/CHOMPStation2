@@ -29,6 +29,7 @@
 	name = "Exploration Shuttle"
 	requires_power = 1
 
+<<<<<<< HEAD
 //////////////////////////////////////////////
 
 // Supply shuttle
@@ -51,6 +52,11 @@
 	landmark_tag = "groundbase"
 
 ///////////////////////////////////////////////
+=======
+/obj/effect/shuttle_landmark/shuttle_initializer/axolotl/Initialize(mapload)
+	shuttle_type = /datum/shuttle/autodock/overmap/axolotl
+	. = ..()
+>>>>>>> cdfa1c853f (New to init final (#17512))
 
 // Escape shuttle
 /datum/shuttle/autodock/ferry/emergency/escape

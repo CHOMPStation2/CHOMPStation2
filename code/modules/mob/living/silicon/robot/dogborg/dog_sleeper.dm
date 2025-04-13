@@ -44,13 +44,16 @@
 	var/recycles = FALSE
 	var/medsensor = TRUE //Does belly sprite come with patient ok/dead light?
 	var/obj/item/healthanalyzer/med_analyzer = null
+<<<<<<< HEAD
 	var/ore_storage = FALSE //CHOMPAdd
 	var/max_ore_storage = 500 //CHOMPAdd
 	var/current_capacity = 0 //CHOMPAdd
+=======
+	flags = NOBLUDGEON
+>>>>>>> cdfa1c853f (New to init final (#17512))
 
-/obj/item/dogborg/sleeper/New()
-	..()
-	flags |= NOBLUDGEON //No more attack messages
+/obj/item/dogborg/sleeper/Initialize(mapload)
+	. = ..()
 	files = new /datum/research/techonly(src)
 	med_analyzer = new /obj/item/healthanalyzer
 
