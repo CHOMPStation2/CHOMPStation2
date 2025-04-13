@@ -1,4 +1,43 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aaa" = (
+/turf/simulated/floor/water/deep{
+	temperature = 293.15;
+	nitrogen = 82.1472;
+	oxygen = 21.8366
+	},
+/area/vr/outdoors/powered)
+"aab" = (
+/turf/simulated/floor/water/turfpack/station{
+	nitrogen = s
+	},
+/area/vr/outdoors/powered)
+"aac" = (
+/turf/simulated/floor/water/beach{
+	temperature = 293.15;
+	nitrogen = 82.1472;
+	oxygen = 21.8366
+	},
+/area/vr/outdoors/powered)
+"aad" = (
+/turf/simulated/floor/outdoors/sidewalk/slab/turfpack/thor,
+/area/vr/outdoors/powered)
+"aae" = (
+/turf/simulated/floor/water/beach{
+	dir = 6;
+	temperature = 313;
+	nitrogen = 63.4124;
+	oxygen = 34.1451
+	},
+/area/vr/outdoors/powered)
+"aaf" = (
+/obj/structure/railing/grey,
+/turf/simulated/floor/water/pool/turfpack/station,
+/area/vr/outdoors/powered)
+"aag" = (
+/obj/structure/railing/grey,
+/obj/structure/flora/ausbushes/reedbush,
+/turf/simulated/floor/water/pool/turfpack/station,
+/area/vr/outdoors/powered)
 "aak" = (
 /obj/effect/decal/cleanable/blood/gibs/xeno,
 /turf/simulated/floor/tiled/techfloor,
@@ -24,12 +63,12 @@
 /area/vr/powered/cult)
 "abC" = (
 /obj/effect/floor_decal/spline/fancy/wood,
-/turf/simulated/floor/beach/sand/desert,
+/turf/simulated/floor/beach/sand/desert/turfpack/thor,
 /area/vr/outdoors/powered/mall)
 "acf" = (
 /obj/structure/table/steel_reinforced,
 /obj/item/storage/firstaid/adv,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel/turfpack/station,
 /area/vr/powered/building2)
 "acC" = (
 /obj/effect/landmark/virtual_reality{
@@ -77,10 +116,7 @@
 	hacked = 1;
 	name = "hacked autolathe"
 	},
-/turf/simulated/floor/outdoors/sidewalk/slab{
-	movement_cost = 0;
-	temperature = 293.15
-	},
+/turf/simulated/floor/outdoors/sidewalk/slab/turfpack/station,
 /area/vr/outdoors/powered)
 "afn" = (
 /obj/structure/window/phoronreinforced{
@@ -122,7 +158,7 @@
 /area/vr/powered/space/sciship)
 "ahQ" = (
 /obj/structure/salvageable/bliss,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel/turfpack/station,
 /area/vr/powered/space/mechfactory)
 "aiv" = (
 /obj/structure/table/gamblingtable,
@@ -165,7 +201,9 @@
 /area/vr/powered/mall)
 "ajZ" = (
 /turf/simulated/floor/water/indoors{
-	temperature = 293.15
+	temperature = 293.15;
+	nitrogen = 82.1472;
+	oxygen = 21.8366
 	},
 /area/vr/powered/dungeon)
 "ake" = (
@@ -380,10 +418,7 @@
 /area/vr/powered/space/mechfactory)
 "asH" = (
 /mob/living/simple_mob/animal/passive/bird/goldcrest,
-/turf/simulated/floor/outdoors/grass/heavy{
-	can_atmos_pass = 0;
-	temperature = 311
-	},
+/turf/simulated/floor/outdoors/grass/heavy/thor,
 /area/vr/outdoors/powered)
 "ate" = (
 /obj/item/reagent_containers/food/snacks/badrecipe,
@@ -622,11 +657,7 @@
 "aCZ" = (
 /obj/structure/table/standard,
 /obj/item/storage/box/matches,
-/turf/simulated/floor/beach/sand/desert{
-	can_atmos_pass = 0;
-	outdoors = 1;
-	temperature = 311
-	},
+/turf/simulated/floor/beach/sand/desert/turfpack/thor,
 /area/vr/outdoors/powered)
 "aDr" = (
 /obj/machinery/atmospherics/unary/vent_pump/on,
@@ -696,7 +727,9 @@
 	dir = 9
 	},
 /turf/simulated/floor/water/indoors{
-	temperature = 293.15
+	temperature = 293.15;
+	nitrogen = 82.1472;
+	oxygen = 21.8366
 	},
 /area/vr/powered/dungeon)
 "aGv" = (
@@ -713,16 +746,11 @@
 "aHz" = (
 /obj/structure/flora/ausbushes/ywflowers,
 /obj/structure/flora/smallbould,
-/turf/simulated/floor/outdoors/grass/heavy{
-	can_atmos_pass = 0;
-	temperature = 311
-	},
+/turf/simulated/floor/outdoors/grass/heavy/thor,
 /area/vr/outdoors/powered)
 "aHH" = (
 /obj/structure/flora/ausbushes,
-/turf/simulated/floor/outdoors/grass{
-	temperature = 293.15
-	},
+/turf/simulated/floor/outdoors/grass/turfpack/station,
 /area/vr/outdoors/powered)
 "aHI" = (
 /obj/effect/floor_decal/corner/blue/diagonal{
@@ -933,9 +961,7 @@
 /obj/structure/fence/hedge/corner{
 	dir = 8
 	},
-/turf/simulated/floor/outdoors/grass{
-	temperature = 293.15
-	},
+/turf/simulated/floor/outdoors/grass/turfpack/station,
 /area/vr/outdoors/powered)
 "aPz" = (
 /obj/machinery/disperser/back{
@@ -952,23 +978,14 @@
 	color = "red";
 	icon_state = "mgibbl1"
 	},
-/turf/simulated/floor/beach/sand/desert{
-	can_atmos_pass = 0;
-	nitrogen = 0;
-	outdoors = 0;
-	oxygen = 0;
-	temperature = 311
-	},
+/turf/simulated/floor/beach/sand/desert/turfpack/thor,
 /area/vr/powered/rocks)
 "aQJ" = (
 /turf/simulated/wall/cult,
 /area/vr/outdoors/powered/cult)
 "aRb" = (
 /obj/structure/flora/smallbould,
-/turf/simulated/floor/outdoors/grass/heavy{
-	can_atmos_pass = 0;
-	temperature = 311
-	},
+/turf/simulated/floor/outdoors/grass/heavy/thor,
 /area/vr/outdoors/powered)
 "aRy" = (
 /turf/simulated/floor/carpet/gaycarpet,
@@ -1007,7 +1024,7 @@
 	},
 /area/vr/outdoors/powered/lava)
 "aTx" = (
-/turf/simulated/floor/outdoors/road,
+/turf/simulated/floor/outdoors/road/turfpack/station,
 /area/vr/outdoors/powered)
 "aTO" = (
 /obj/structure/table/standard,
@@ -1121,9 +1138,7 @@
 "aXq" = (
 /obj/structure/flora/ausbushes/ywflowers,
 /obj/structure/flora/ausbushes/lavendergrass,
-/turf/simulated/floor/outdoors/grass{
-	temperature = 293.15
-	},
+/turf/simulated/floor/outdoors/grass/turfpack/station,
 /area/vr/outdoors/powered)
 "aXy" = (
 /obj/structure/table/rack/shelf/wood,
@@ -1134,7 +1149,7 @@
 /obj/effect/map_effect/portal/line/side_b{
 	dir = 8
 	},
-/turf/simulated/floor/outdoors/road,
+/turf/simulated/floor/outdoors/road/turfpack/station,
 /area/vr/outdoors/powered)
 "aYm" = (
 /obj/item/weldingtool/largetank,
@@ -1210,7 +1225,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
 	},
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel/turfpack/station,
 /area/vr/powered/space/mechfactory)
 "bbs" = (
 /obj/machinery/computer/arcade,
@@ -1341,10 +1356,7 @@
 	deployed = 1;
 	icon_state = "beartrap1"
 	},
-/turf/simulated/floor/outdoors/dirt{
-	outdoors = 0;
-	temperature = 293.15
-	},
+/turf/simulated/floor/outdoors/dirt/thor,
 /area/vr/powered/dungeon)
 "bhs" = (
 /obj/effect/floor_decal/techfloor/corner{
@@ -1547,7 +1559,7 @@
 /area/vr/powered/space/mechfactory)
 "bqc" = (
 /obj/item/pizzavoucher,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel/turfpack/station,
 /area/vr/powered/space/mechfactory)
 "bqf" = (
 /obj/item/clothing/mask/muzzle,
@@ -1588,7 +1600,7 @@
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 4
 	},
-/turf/simulated/floor/beach/sand/desert,
+/turf/simulated/floor/beach/sand/desert/turfpack/thor,
 /area/vr/outdoors/powered/mall)
 "bsn" = (
 /obj/structure/closet/crate,
@@ -1609,11 +1621,7 @@
 /area/vr/powered/material)
 "bsG" = (
 /obj/effect/overlay/palmtree_r,
-/turf/simulated/floor/beach/sand/desert{
-	can_atmos_pass = 0;
-	outdoors = 1;
-	temperature = 311
-	},
+/turf/simulated/floor/beach/sand/desert/turfpack/thor,
 /area/vr/outdoors/powered)
 "btN" = (
 /obj/machinery/transhuman/autoresleever{
@@ -1632,7 +1640,7 @@
 	dir = 4;
 	portal_id = "vrmall"
 	},
-/turf/simulated/floor/outdoors/road,
+/turf/simulated/floor/outdoors/road/turfpack/station,
 /area/vr/powered/rocks)
 "bvk" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
@@ -1697,9 +1705,7 @@
 /turf/simulated/floor/plating,
 /area/vr/powered/space/mechfactory)
 "bym" = (
-/turf/simulated/floor/water{
-	temperature = 311
-	},
+/turf/simulated/floor/water/turfpack/thor,
 /area/vr/outdoors/powered)
 "byq" = (
 /obj/structure/salvageable/console_broken_os{
@@ -1714,10 +1720,7 @@
 /area/vr/powered/cult)
 "bzc" = (
 /mob/living/simple_mob/animal/passive/raccoon_ch,
-/turf/simulated/floor/outdoors/grass/heavy{
-	can_atmos_pass = 0;
-	temperature = 311
-	},
+/turf/simulated/floor/outdoors/grass/heavy/thor,
 /area/vr/outdoors/powered)
 "bzi" = (
 /turf/simulated/floor/flock{
@@ -1743,10 +1746,7 @@
 /obj/structure/bonfire/permanent,
 /obj/effect/decal/cleanable/dirt,
 /obj/item/reagent_containers/food/snacks/sliceable/sharkchunk,
-/turf/simulated/floor/outdoors/dirt{
-	outdoors = 0;
-	temperature = 293.15
-	},
+/turf/simulated/floor/outdoors/dirt/thor,
 /area/vr/powered/dungeon)
 "bAT" = (
 /obj/effect/floor_decal/spline/fancy/wood{
@@ -1789,7 +1789,7 @@
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 8
 	},
-/turf/simulated/floor/beach/sand/desert,
+/turf/simulated/floor/beach/sand/desert/turfpack/thor,
 /area/vr/outdoors/powered/mall)
 "bCG" = (
 /obj/machinery/light/small{
@@ -1830,10 +1830,7 @@
 /obj/effect/floor_decal/arrow{
 	dir = 4
 	},
-/turf/simulated/floor/outdoors/sidewalk/slab{
-	movement_cost = 0;
-	temperature = 293.15
-	},
+/turf/simulated/floor/outdoors/sidewalk/slab/turfpack/station,
 /area/vr/outdoors/powered)
 "bEw" = (
 /obj/structure/table/marble,
@@ -2057,17 +2054,11 @@
 /area/vr/powered/mall)
 "bMB" = (
 /obj/structure/fence/corner,
-/turf/simulated/floor/outdoors/grass/heavy{
-	can_atmos_pass = 0;
-	temperature = 311
-	},
+/turf/simulated/floor/outdoors/grass/heavy/thor,
 /area/vr/outdoors/powered)
 "bMT" = (
 /obj/structure/flora/bboulder1,
-/turf/simulated/floor/grass2{
-	outdoors = 1;
-	temperature = 311
-	},
+/turf/simulated/floor/grass2/turfpack/thor,
 /area/vr/outdoors/powered)
 "bNe" = (
 /turf/simulated/wall/r_wall,
@@ -2102,13 +2093,11 @@
 /area/vr/powered/space/sciship)
 "bOr" = (
 /obj/structure/railing/grey,
-/turf/simulated/floor/outdoors/grass{
-	temperature = 293.15
-	},
+/turf/simulated/floor/outdoors/grass/turfpack/station,
 /area/vr/outdoors/powered/mall)
 "bOB" = (
 /obj/effect/floor_decal/corner/lightgrey/border/shifted,
-/turf/simulated/floor/outdoors/road,
+/turf/simulated/floor/outdoors/road/turfpack/station,
 /area/vr/outdoors/powered)
 "bOO" = (
 /obj/effect/floor_decal/rust,
@@ -2154,13 +2143,7 @@
 /area/vr/powered/cult)
 "bQB" = (
 /obj/structure/outcrop/gold,
-/turf/simulated/floor/beach/sand/desert{
-	can_atmos_pass = 0;
-	nitrogen = 0;
-	outdoors = 0;
-	oxygen = 0;
-	temperature = 311
-	},
+/turf/simulated/floor/beach/sand/desert/turfpack/thor,
 /area/vr/powered/rocks)
 "bQG" = (
 /obj/item/material/twohanded/riding_crop,
@@ -2186,17 +2169,11 @@
 /area/vr/powered/mall/dorms/secondlife5)
 "bQS" = (
 /obj/item/reagent_containers/food/snacks/sausage,
-/turf/simulated/floor/outdoors/newdirt_nograss{
-	temperature = 293.15
-	},
+/turf/simulated/floor/outdoors/newdirt_nograss/turfpack/station,
 /area/vr/outdoors/powered/mall)
 "bQZ" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/outdoors/sidewalk/side{
-	icon_state = "sidewalk";
-	movement_cost = 0;
-	temperature = 293.15
-	},
+/turf/simulated/floor/outdoors/sidewalk/turfpack/station,
 /area/vr/outdoors/powered)
 "bRG" = (
 /obj/machinery/conveyor{
@@ -2291,21 +2268,12 @@
 /area/vr/powered/mall/dorms/dorms2)
 "bTp" = (
 /obj/structure/table/bench/wooden,
-/turf/simulated/floor/beach/sand/desert{
-	can_atmos_pass = 0;
-	nitrogen = 0;
-	outdoors = 0;
-	oxygen = 0;
-	temperature = 311
-	},
+/turf/simulated/floor/beach/sand/desert/turfpack/thor,
 /area/vr/powered/rocks)
 "bTy" = (
 /obj/structure/flora/tree/jungle,
 /obj/structure/flora/ausbushes/fullgrass,
-/turf/simulated/floor/outdoors/grass/heavy{
-	can_atmos_pass = 0;
-	temperature = 311
-	},
+/turf/simulated/floor/outdoors/grass/heavy/thor,
 /area/vr/outdoors/powered)
 "bTZ" = (
 /obj/structure/table/darkglass,
@@ -2343,10 +2311,7 @@
 /obj/structure/fence/end{
 	dir = 4
 	},
-/turf/simulated/floor/outdoors/grass/heavy{
-	can_atmos_pass = 0;
-	temperature = 311
-	},
+/turf/simulated/floor/outdoors/grass/heavy/thor,
 /area/vr/outdoors/powered)
 "bWI" = (
 /obj/item/gun/projectile/shotgun/doublebarrel,
@@ -2376,7 +2341,7 @@
 /turf/simulated/floor/wmarble,
 /area/vr/powered/mall)
 "bYn" = (
-/turf/simulated/floor/beach/sand/desert,
+/turf/simulated/floor/beach/sand/desert/turfpack/thor,
 /area/vr/outdoors/powered/mall)
 "bYA" = (
 /obj/structure/table/reinforced,
@@ -2528,7 +2493,7 @@
 /obj/item/grenade/spawnergrenade/casino/yithian,
 /obj/item/grenade/spawnergrenade/casino/yithian,
 /obj/item/grenade/spawnergrenade/casino/yithian,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel/turfpack/station,
 /area/vr/powered/building2)
 "cdC" = (
 /obj/effect/floor_decal/corner/purple/border{
@@ -2549,10 +2514,7 @@
 /area/vr/powered/space/whiteship)
 "cem" = (
 /obj/structure/flora/ausbushes/fullgrass,
-/turf/simulated/floor/outdoors/grass/heavy{
-	can_atmos_pass = 0;
-	temperature = 311
-	},
+/turf/simulated/floor/outdoors/grass/heavy/thor,
 /area/vr/outdoors/powered)
 "ceu" = (
 /turf/simulated/floor/cult,
@@ -2673,21 +2635,13 @@
 /area/vr/powered/mall/dorms/dorms5)
 "cks" = (
 /obj/structure/prop/rock/small/water,
-/turf/simulated/floor/water{
-	temperature = 311
-	},
+/turf/simulated/floor/water/turfpack/thor,
 /area/vr/outdoors/powered)
 "ckt" = (
 /obj/vehicle/boat/dragon/sifwood{
 	dir = 8
 	},
-/turf/simulated/floor/beach/sand/desert{
-	can_atmos_pass = 0;
-	nitrogen = 0;
-	outdoors = 0;
-	oxygen = 0;
-	temperature = 311
-	},
+/turf/simulated/floor/beach/sand/desert/turfpack/thor,
 /area/vr/outdoors/powered)
 "ckA" = (
 /obj/structure/bed/chair/office/dark{
@@ -2875,9 +2829,7 @@
 /area/vr/powered/mall)
 "crG" = (
 /obj/structure/flora/ausbushes/ppflowers,
-/turf/simulated/floor/outdoors/grass{
-	temperature = 293.15
-	},
+/turf/simulated/floor/outdoors/grass/turfpack/station,
 /area/vr/outdoors/powered)
 "crI" = (
 /obj/structure/table/rack/shelf,
@@ -2931,9 +2883,7 @@
 /area/vr/powered/motel)
 "cuJ" = (
 /obj/structure/flora/ausbushes/ywflowers,
-/turf/simulated/floor/outdoors/newdirt_nograss{
-	temperature = 293.15
-	},
+/turf/simulated/floor/outdoors/newdirt_nograss/turfpack/station,
 /area/vr/outdoors/powered)
 "cuS" = (
 /obj/structure/railing/grey{
@@ -2941,9 +2891,7 @@
 	},
 /obj/structure/railing/grey,
 /obj/machinery/light/lamppost,
-/turf/simulated/floor/outdoors/grass{
-	temperature = 293.15
-	},
+/turf/simulated/floor/outdoors/grass/turfpack/station,
 /area/vr/outdoors/powered/mall)
 "cuW" = (
 /obj/machinery/sparker{
@@ -2981,10 +2929,7 @@
 /area/vr/powered/mall)
 "cxq" = (
 /obj/structure/flora/rocks2,
-/turf/simulated/floor/outdoors/sidewalk/slab{
-	movement_cost = 0;
-	temperature = 293.15
-	},
+/turf/simulated/floor/outdoors/sidewalk/slab/turfpack/thor,
 /area/vr/outdoors/powered)
 "cyE" = (
 /obj/structure/sink{
@@ -3090,7 +3035,7 @@
 /area/vr/powered/mall/backrooms)
 "cDl" = (
 /obj/random/maintenance,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel/turfpack/station,
 /area/vr/powered/space/mechfactory)
 "cEi" = (
 /obj/machinery/light{
@@ -3146,11 +3091,7 @@
 /area/vr/powered/space/sciship)
 "cFT" = (
 /obj/effect/overlay/palmtree_l,
-/turf/simulated/floor/beach/sand/desert{
-	can_atmos_pass = 0;
-	outdoors = 1;
-	temperature = 311
-	},
+/turf/simulated/floor/beach/sand/desert/turfpack/thor,
 /area/vr/outdoors/powered)
 "cFW" = (
 /obj/effect/map_effect/perma_light/brighter{
@@ -3181,9 +3122,7 @@
 /area/vr/powered/mall/backrooms)
 "cGB" = (
 /obj/structure/bonfire,
-/turf/simulated/floor/outdoors/newdirt_nograss{
-	temperature = 293.15
-	},
+/turf/simulated/floor/outdoors/newdirt_nograss/turfpack/station,
 /area/vr/outdoors/powered/mall)
 "cHq" = (
 /obj/effect/floor_decal/corner/red/diagonal,
@@ -3225,10 +3164,7 @@
 /area/vr/powered/mall)
 "cIZ" = (
 /obj/structure/flora/ausbushes/palebush,
-/turf/simulated/floor/outdoors/grass/heavy{
-	can_atmos_pass = 0;
-	temperature = 311
-	},
+/turf/simulated/floor/outdoors/grass/heavy/thor,
 /area/vr/outdoors/powered)
 "cJn" = (
 /obj/structure/table/standard,
@@ -3259,7 +3195,7 @@
 /turf/simulated/floor/flock,
 /area/vr/powered/rocks)
 "cKr" = (
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel/turfpack/station,
 /area/vr/powered/building1)
 "cLi" = (
 /obj/structure/table/fancyblack,
@@ -3328,11 +3264,7 @@
 "cPW" = (
 /obj/structure/table/standard,
 /obj/random/cigarettes,
-/turf/simulated/floor/beach/sand/desert{
-	can_atmos_pass = 0;
-	outdoors = 1;
-	temperature = 311
-	},
+/turf/simulated/floor/beach/sand/desert/turfpack/thor,
 /area/vr/outdoors/powered)
 "cQq" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
@@ -3447,10 +3379,7 @@
 /obj/structure/fence/corner{
 	dir = 10
 	},
-/turf/simulated/floor/outdoors/grass/heavy{
-	can_atmos_pass = 0;
-	temperature = 311
-	},
+/turf/simulated/floor/outdoors/grass/heavy/thor,
 /area/vr/outdoors/powered)
 "cVF" = (
 /obj/structure/simple_door/wood,
@@ -3515,7 +3444,7 @@
 /obj/machinery/light/small{
 	dir = 1
 	},
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel/turfpack/station,
 /area/vr/powered/space/mechfactory)
 "cZD" = (
 /obj/structure/table/darkglass,
@@ -3671,11 +3600,7 @@
 /area/vr/powered/space/whiteship)
 "des" = (
 /obj/structure/reagent_dispensers/beerkeg,
-/turf/simulated/floor/beach/sand/desert{
-	can_atmos_pass = 0;
-	outdoors = 1;
-	temperature = 311
-	},
+/turf/simulated/floor/beach/sand/desert/turfpack/thor,
 /area/vr/outdoors/powered)
 "dev" = (
 /obj/machinery/sleep_console{
@@ -3782,10 +3707,7 @@
 /obj/structure/table/rack/shelf/steel,
 /obj/item/clothing/head/cowboy,
 /obj/item/clothing/glasses/fakesunglasses/aviator,
-/turf/simulated/floor/reinforced{
-	nitrogen = 93.7835;
-	oxygen = 20.7263
-	},
+/turf/simulated/floor/reinforced,
 /area/vr/powered/bluebase)
 "djt" = (
 /obj/structure/window/basic{
@@ -3812,13 +3734,7 @@
 	color = "red";
 	icon_state = "gibdown1_flesh"
 	},
-/turf/simulated/floor/beach/sand/desert{
-	can_atmos_pass = 0;
-	nitrogen = 0;
-	outdoors = 0;
-	oxygen = 0;
-	temperature = 311
-	},
+/turf/simulated/floor/beach/sand/desert/turfpack/thor,
 /area/vr/powered/rocks)
 "dkh" = (
 /obj/structure/closet/walllocker/emerglocker{
@@ -3872,10 +3788,7 @@
 	desc = "Don't Fall.";
 	name = "WARNING: OSHA VIOLATIONS"
 	},
-/turf/simulated/floor/tiled/asteroid_steel{
-	outdoors = 1;
-	temperature = 293.15
-	},
+/turf/simulated/floor/tiled/asteroid_steel/turfpack/station,
 /area/vr/outdoors/powered)
 "dlT" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow,
@@ -4023,16 +3936,11 @@
 /turf/simulated/floor/wmarble,
 /area/vr/outdoors/powered)
 "dsz" = (
-/turf/simulated/floor/wood{
-	outdoors = 1;
-	temperature = 311
-	},
+/turf/simulated/floor/wood/turfpack/thor,
 /area/vr/outdoors/powered)
 "dsG" = (
 /obj/structure/flora/ausbushes/palebush,
-/turf/simulated/floor/outdoors/grass{
-	temperature = 293.15
-	},
+/turf/simulated/floor/outdoors/grass/turfpack/station,
 /area/vr/outdoors/powered)
 "dsS" = (
 /obj/effect/floor_decal/corner/lightgrey/border{
@@ -4072,17 +3980,11 @@
 /area/vr/powered/mall/secondlife)
 "dvd" = (
 /obj/structure/low_wall/bay/white,
-/turf/simulated/floor/outdoors/sidewalk/slab{
-	movement_cost = 0;
-	temperature = 293.15
-	},
+/turf/simulated/floor/outdoors/sidewalk/slab/turfpack/station,
 /area/vr/outdoors/powered/mall)
 "dvk" = (
 /obj/structure/flora/ausbushes/pointybush,
-/turf/simulated/floor/outdoors/grass/heavy{
-	can_atmos_pass = 0;
-	temperature = 311
-	},
+/turf/simulated/floor/outdoors/grass/heavy/thor,
 /area/vr/outdoors/powered)
 "dwo" = (
 /obj/structure/sign/warning/caution{
@@ -4426,9 +4328,7 @@
 /area/vr/powered/vet)
 "dLz" = (
 /obj/structure/flora/tree/bigtree,
-/turf/simulated/floor/outdoors/grass{
-	temperature = 293.15
-	},
+/turf/simulated/floor/outdoors/grass/turfpack/station,
 /area/vr/outdoors/powered)
 "dLC" = (
 /obj/structure/table/marble,
@@ -4454,10 +4354,7 @@
 /obj/structure/cliff/automatic{
 	dir = 2
 	},
-/turf/simulated/floor/lava{
-	nitrogen = 93.7835;
-	oxygen = 20.7263
-	},
+/turf/simulated/floor/lava,
 /area/vr/outdoors/powered/lava)
 "dNs" = (
 /obj/structure/window/reinforced/survival_pod{
@@ -4527,10 +4424,7 @@
 /area/vr/powered/dungeon)
 "dNS" = (
 /obj/structure/flora/ausbushes/fernybush,
-/turf/simulated/floor/grass2{
-	outdoors = 1;
-	temperature = 311
-	},
+/turf/simulated/floor/grass2/turfpack/thor,
 /area/vr/outdoors/powered)
 "dOc" = (
 /obj/effect/decal/cleanable/filth,
@@ -4552,10 +4446,7 @@
 /obj/structure/flora/tree/jungle_small,
 /obj/structure/flora/ausbushes/fullgrass,
 /obj/structure/flora/ausbushes/fullgrass,
-/turf/simulated/floor/outdoors/grass/heavy{
-	can_atmos_pass = 0;
-	temperature = 311
-	},
+/turf/simulated/floor/outdoors/grass/heavy/thor,
 /area/vr/outdoors/powered)
 "dOT" = (
 /mob/living/simple_mob/vore/otie/cotie/chubby,
@@ -4870,19 +4761,12 @@
 	},
 /area/vr/powered/mall/backrooms)
 "dXs" = (
-/turf/simulated/floor/lava{
-	nitrogen = 93.7835;
-	oxygen = 20.7263
-	},
+/turf/simulated/floor/lava,
 /area/vr/outdoors/powered/lava)
 "dXG" = (
 /obj/structure/table/standard,
 /obj/item/reagent_containers/food/drinks/bottle/vodka,
-/turf/simulated/floor/beach/sand/desert{
-	can_atmos_pass = 0;
-	outdoors = 1;
-	temperature = 311
-	},
+/turf/simulated/floor/beach/sand/desert/turfpack/thor,
 /area/vr/outdoors/powered)
 "dXR" = (
 /obj/random/pottedplant,
@@ -4924,7 +4808,7 @@
 /turf/simulated/floor/tiled/white,
 /area/vr/powered)
 "dYe" = (
-/turf/simulated/mineral/sif,
+/turf/simulated/mineral/cave,
 /area/vr/outdoors/powered/lava)
 "dYf" = (
 /obj/structure/bed/chair/wood{
@@ -4940,13 +4824,15 @@
 /area/vr/powered/dungeon)
 "dYG" = (
 /obj/machinery/power/shield_generator/charged,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel/turfpack/station,
 /area/vr/powered/space/mechfactory)
 "dYY" = (
 /obj/structure/prop/rock/small/wateralt,
 /turf/simulated/floor/water{
 	outdoors = 0;
-	temperature = 311
+	temperature = 313;
+	nitrogen = 63.4124;
+	oxygen = 34.1451
 	},
 /area/vr/outdoors/powered)
 "dZc" = (
@@ -5001,9 +4887,7 @@
 /area/vr/powered/mall)
 "dZv" = (
 /obj/structure/flora/ausbushes/brflowers,
-/turf/simulated/floor/outdoors/grass{
-	temperature = 293.15
-	},
+/turf/simulated/floor/outdoors/grass/turfpack/station,
 /area/vr/outdoors/powered/mall)
 "ead" = (
 /obj/structure/flora/pottedplant/fern,
@@ -5034,17 +4918,16 @@
 /turf/simulated/shuttle/floor/white,
 /area/vr/powered/space/whiteship)
 "ebE" = (
-/turf/simulated/floor/reinforced{
-	nitrogen = 93.7835;
-	oxygen = 20.7263
-	},
+/turf/simulated/floor/reinforced,
 /area/vr/powered/bluebase)
 "ebH" = (
 /obj/structure/railing{
 	dir = 8
 	},
 /turf/simulated/floor/water/deep{
-	temperature = 311
+	temperature = 313;
+	nitrogen = 63.4124;
+	oxygen = 34.1451
 	},
 /area/vr/outdoors/powered)
 "ebN" = (
@@ -5246,9 +5129,7 @@
 /area/vr/powered/cult)
 "ejf" = (
 /obj/effect/step_trigger/teleporter/bridge/south_to_north,
-/turf/simulated/floor/water{
-	temperature = 311
-	},
+/turf/simulated/floor/water/turfpack/thor,
 /area/vr/outdoors/powered)
 "ela" = (
 /obj/machinery/light{
@@ -5260,9 +5141,7 @@
 /turf/simulated/floor/tiled,
 /area/vr/powered/gunshop)
 "elg" = (
-/turf/simulated/floor/outdoors/dirt{
-	temperature = 311
-	},
+/turf/simulated/floor/outdoors/dirt/thor,
 /area/vr/outdoors/powered)
 "elr" = (
 /obj/effect/floor_decal/techfloor{
@@ -5313,7 +5192,9 @@
 "enA" = (
 /turf/simulated/floor/water/deep{
 	outdoors = 0;
-	temperature = 311
+	temperature = 313;
+	nitrogen = 63.4124;
+	oxygen = 34.1451
 	},
 /area/vr/powered/rocks)
 "enN" = (
@@ -5462,10 +5343,7 @@
 	dir = 1
 	},
 /obj/item/seeds/bluespacetomatoseed,
-/turf/simulated/floor/outdoors/grass/heavy{
-	can_atmos_pass = 0;
-	temperature = 311
-	},
+/turf/simulated/floor/outdoors/grass/heavy/thor,
 /area/vr/outdoors/powered)
 "evB" = (
 /obj/structure/table/darkglass,
@@ -5541,10 +5419,7 @@
 /obj/item/storage/belt/utility/full/multitool{
 	pixel_y = 6
 	},
-/turf/simulated/floor/outdoors/sidewalk/slab{
-	movement_cost = 0;
-	temperature = 293.15
-	},
+/turf/simulated/floor/outdoors/sidewalk/slab/turfpack/station,
 /area/vr/outdoors/powered)
 "eAf" = (
 /obj/machinery/vending/wardrobe/engidrobe{
@@ -5589,19 +5464,13 @@
 /turf/unsimulated/shuttle/floor/purple,
 /area/vr/powered/mall/secondlife)
 "eCs" = (
-/turf/simulated/floor/water/pool{
-	outdoors = 1;
-	temperature = 293.15
-	},
+/turf/simulated/floor/water/pool/turfpack/station,
 /area/vr/outdoors/powered)
 "eCJ" = (
 /obj/structure/ledge{
 	dir = 4
 	},
-/turf/simulated/floor/outdoors/dirt{
-	outdoors = 0;
-	temperature = 293.15
-	},
+/turf/simulated/floor/outdoors/dirt/thor,
 /area/vr/powered/dungeon)
 "eCT" = (
 /obj/effect/floor_decal/corner/paleblue/full,
@@ -5724,13 +5593,7 @@
 	color = "red";
 	icon_state = "mfloor6"
 	},
-/turf/simulated/floor/beach/sand/desert{
-	can_atmos_pass = 0;
-	nitrogen = 0;
-	outdoors = 0;
-	oxygen = 0;
-	temperature = 311
-	},
+/turf/simulated/floor/beach/sand/desert/turfpack/thor,
 /area/vr/powered/rocks)
 "eFB" = (
 /obj/structure/table/standard,
@@ -5830,10 +5693,7 @@
 /obj/machinery/light{
 	layer = 3
 	},
-/turf/simulated/floor/reinforced{
-	nitrogen = 93.7835;
-	oxygen = 20.7263
-	},
+/turf/simulated/floor/reinforced,
 /area/vr/powered/redbase)
 "eHU" = (
 /obj/machinery/vending/dinnerware{
@@ -5905,10 +5765,7 @@
 /area/vr/powered/space/whiteship)
 "eJA" = (
 /obj/structure/flora/ausbushes/sunnybush,
-/turf/simulated/floor/outdoors/grass/heavy{
-	can_atmos_pass = 0;
-	temperature = 311
-	},
+/turf/simulated/floor/outdoors/grass/heavy/thor,
 /area/vr/outdoors/powered)
 "eJN" = (
 /obj/structure/dispenser{
@@ -6078,13 +5935,7 @@
 /area/vr/powered/mall)
 "eRl" = (
 /obj/item/gun/projectile/heavysniper,
-/turf/simulated/floor/beach/sand/desert{
-	can_atmos_pass = 0;
-	nitrogen = 0;
-	outdoors = 0;
-	oxygen = 0;
-	temperature = 311
-	},
+/turf/simulated/floor/beach/sand/desert/turfpack/thor,
 /area/vr/powered/rocks)
 "eRp" = (
 /obj/machinery/button/remote/airlock{
@@ -6133,7 +5984,9 @@
 "eTA" = (
 /turf/simulated/floor/water/deep{
 	outdoors = 0;
-	temperature = 311
+	temperature = 313;
+	nitrogen = 63.4124;
+	oxygen = 34.1451
 	},
 /area/vr/outdoors/powered)
 "eTS" = (
@@ -6149,9 +6002,7 @@
 /area/vr/powered/dungeon)
 "eUL" = (
 /obj/machinery/light/lamppost,
-/turf/simulated/floor/outdoors/grass{
-	temperature = 293.15
-	},
+/turf/simulated/floor/outdoors/grass/turfpack/station,
 /area/vr/outdoors/powered/mall)
 "eUO" = (
 /obj/structure/table/darkglass,
@@ -6232,14 +6083,11 @@
 /area/vr/powered/space/sciship)
 "eZl" = (
 /obj/structure/table/bench/marble,
-/turf/simulated/floor/outdoors/grass/heavy{
-	can_atmos_pass = 0;
-	temperature = 311
-	},
+/turf/simulated/floor/outdoors/grass/heavy/thor,
 /area/vr/outdoors/powered)
 "fan" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/outdoors/road,
+/turf/simulated/floor/outdoors/road/turfpack/station,
 /area/vr/outdoors/powered)
 "fas" = (
 /obj/effect/floor_decal/milspec/color/silver,
@@ -6275,9 +6123,7 @@
 /area/vr/powered)
 "faS" = (
 /obj/structure/prop/rock/water,
-/turf/simulated/floor/water{
-	temperature = 311
-	},
+/turf/simulated/floor/water/turfpack/thor,
 /area/vr/outdoors/powered)
 "fbH" = (
 /obj/effect/floor_decal/corner/paleblue/diagonal{
@@ -6339,10 +6185,7 @@
 /obj/structure/fence/corner{
 	dir = 4
 	},
-/turf/simulated/floor/outdoors/grass/heavy{
-	can_atmos_pass = 0;
-	temperature = 311
-	},
+/turf/simulated/floor/outdoors/grass/heavy/thor,
 /area/vr/outdoors/powered)
 "fdf" = (
 /obj/structure/bed/chair/sofa/right/brown{
@@ -6368,7 +6211,9 @@
 	dir = 4
 	},
 /turf/simulated/floor/water/deep{
-	temperature = 311
+	temperature = 313;
+	nitrogen = 63.4124;
+	oxygen = 34.1451
 	},
 /area/vr/outdoors/powered)
 "feM" = (
@@ -6440,10 +6285,7 @@
 /obj/item/ammo_magazine/hectate,
 /obj/item/ammo_magazine/hectate,
 /obj/item/ammo_magazine/hectate,
-/turf/simulated/floor/reinforced{
-	nitrogen = 93.7835;
-	oxygen = 20.7263
-	},
+/turf/simulated/floor/reinforced,
 /area/vr/powered/redbase)
 "ffS" = (
 /obj/structure/table/rack/shelf/steel,
@@ -6488,7 +6330,9 @@
 "fij" = (
 /mob/living/simple_mob/vore/aggressive/rat,
 /turf/simulated/floor/water/indoors{
-	temperature = 293.15
+	temperature = 293.15;
+	nitrogen = 82.1472;
+	oxygen = 21.8366
 	},
 /area/vr/powered/dungeon)
 "fim" = (
@@ -6524,20 +6368,19 @@
 	dir = 1
 	},
 /obj/item/reagent_containers/glass/bucket,
-/turf/simulated/floor/beach/sand/desert,
+/turf/simulated/floor/beach/sand/desert/turfpack/thor,
 /area/vr/outdoors/powered/mall)
 "fjR" = (
 /obj/structure/prop/rock/round,
-/turf/simulated/floor/outdoors/dirt{
-	outdoors = 0;
-	temperature = 311
+/turf/simulated/floor/outdoors/dirt/thor{
+	outdoors = 0
 	},
 /area/vr/powered/rocks)
 "fjW" = (
 /obj/effect/map_effect/portal/line/side_a{
 	dir = 4
 	},
-/turf/simulated/floor/outdoors/road,
+/turf/simulated/floor/outdoors/road/turfpack/station,
 /area/vr/powered/rocks)
 "fki" = (
 /obj/structure/closet/walllocker/emerglocker/south,
@@ -6672,11 +6515,7 @@
 /turf/simulated/shuttle/floor/white,
 /area/vr/powered/space/sciship)
 "fqb" = (
-/turf/simulated/floor/beach/sand/desert{
-	can_atmos_pass = 0;
-	outdoors = 1;
-	temperature = 311
-	},
+/turf/simulated/floor/beach/sand/desert/turfpack/thor,
 /area/vr/outdoors/powered)
 "fqC" = (
 /obj/structure/table/glass,
@@ -6775,14 +6614,14 @@
 /obj/structure/railing,
 /obj/effect/step_trigger/teleporter/bridge/north_to_south,
 /turf/simulated/floor/water/deep{
-	temperature = 311
+	temperature = 313;
+	nitrogen = 63.4124;
+	oxygen = 34.1451
 	},
 /area/vr/outdoors/powered)
 "ftT" = (
 /obj/structure/flora/tree/bigtree,
-/turf/simulated/floor/outdoors/grass{
-	temperature = 293.15
-	},
+/turf/simulated/floor/outdoors/grass/turfpack/station,
 /area/vr/outdoors/powered/mall)
 "ftV" = (
 /turf/simulated/floor/cult,
@@ -6878,7 +6717,7 @@
 /area/vr/powered/dungeon)
 "fwp" = (
 /obj/machinery/icecream_vat,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel/turfpack/station,
 /area/vr/powered/space/mechfactory)
 "fwD" = (
 /turf/simulated/floor/tiled,
@@ -6916,9 +6755,8 @@
 /area/vr/powered/mall/secondlife)
 "fyf" = (
 /obj/structure/prop/rock/small/alt,
-/turf/simulated/floor/outdoors/dirt{
-	outdoors = 0;
-	temperature = 311
+/turf/simulated/floor/outdoors/dirt/thor{
+	outdoors = 0
 	},
 /area/vr/powered/rocks)
 "fyS" = (
@@ -7036,7 +6874,9 @@
 	dir = 8
 	},
 /turf/simulated/floor/water/indoors{
-	temperature = 293.15
+	temperature = 293.15;
+	nitrogen = 82.1472;
+	oxygen = 21.8366
 	},
 /area/vr/powered/dungeon)
 "fEM" = (
@@ -7109,9 +6949,7 @@
 /area/vr/powered/dungeon)
 "fGS" = (
 /obj/structure/flora/ausbushes/brflowers,
-/turf/simulated/floor/outdoors/grass{
-	temperature = 293.15
-	},
+/turf/simulated/floor/outdoors/grass/turfpack/station,
 /area/vr/outdoors/powered)
 "fHm" = (
 /obj/structure/table/standard,
@@ -7314,13 +7152,7 @@
 /area/vr/powered/vendor)
 "fQT" = (
 /obj/random/trash,
-/turf/simulated/floor/beach/sand/desert{
-	can_atmos_pass = 0;
-	nitrogen = 0;
-	outdoors = 0;
-	oxygen = 0;
-	temperature = 311
-	},
+/turf/simulated/floor/beach/sand/desert/turfpack/thor,
 /area/vr/powered/rocks)
 "fRb" = (
 /obj/structure/table/rack/shelf/steel,
@@ -7333,11 +7165,7 @@
 "fRo" = (
 /obj/structure/table/standard,
 /obj/item/reagent_containers/food/drinks/cans/root_beer,
-/turf/simulated/floor/beach/sand/desert{
-	can_atmos_pass = 0;
-	outdoors = 1;
-	temperature = 311
-	},
+/turf/simulated/floor/beach/sand/desert/turfpack/thor,
 /area/vr/outdoors/powered)
 "fRu" = (
 /obj/structure/railing/grey{
@@ -7352,12 +7180,14 @@
 /area/vr/outdoors/powered)
 "fRH" = (
 /turf/simulated/floor/water/deep{
-	temperature = 311
+	temperature = 313;
+	nitrogen = 63.4124;
+	oxygen = 34.1451
 	},
 /area/vr/outdoors/powered)
 "fRJ" = (
 /obj/machinery/exonet_node,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel/turfpack/station,
 /area/vr/powered/space/mechfactory)
 "fSg" = (
 /obj/machinery/light{
@@ -7446,10 +7276,7 @@
 /area/vr/powered/armory)
 "fVr" = (
 /obj/machinery/vending/deathmatch,
-/turf/simulated/floor/reinforced{
-	nitrogen = 93.7835;
-	oxygen = 20.7263
-	},
+/turf/simulated/floor/reinforced,
 /area/vr/powered/bluebase)
 "fVG" = (
 /obj/structure/table/rack/shelf/steel,
@@ -7488,10 +7315,7 @@
 /obj/item/cell/slime,
 /obj/item/cell/slime,
 /obj/item/cell/slime,
-/turf/simulated/floor/reinforced{
-	nitrogen = 93.7835;
-	oxygen = 20.7263
-	},
+/turf/simulated/floor/reinforced,
 /area/vr/powered/bluebase)
 "fWQ" = (
 /obj/machinery/vending/deluxe_dinner,
@@ -7638,10 +7462,7 @@
 /obj/structure/cliff/automatic{
 	dir = 5
 	},
-/turf/simulated/floor/lava{
-	nitrogen = 93.7835;
-	oxygen = 20.7263
-	},
+/turf/simulated/floor/lava,
 /area/vr/outdoors/powered/lava)
 "gfv" = (
 /obj/structure/closet,
@@ -7747,9 +7568,7 @@
 /obj/structure/fence/hedge/corner{
 	dir = 1
 	},
-/turf/simulated/floor/outdoors/grass{
-	temperature = 293.15
-	},
+/turf/simulated/floor/outdoors/grass/turfpack/station,
 /area/vr/outdoors/powered)
 "glK" = (
 /obj/effect/floor_decal/spline/fancy/wood{
@@ -7845,10 +7664,7 @@
 /area/vr/powered/armory)
 "gqE" = (
 /obj/structure/flora/ausbushes/lavendergrass,
-/turf/simulated/floor/outdoors/grass/heavy{
-	can_atmos_pass = 0;
-	temperature = 311
-	},
+/turf/simulated/floor/outdoors/grass/heavy/thor,
 /area/vr/outdoors/powered)
 "gqG" = (
 /obj/machinery/conveyor{
@@ -7860,10 +7676,7 @@
 /area/vr/powered/mall)
 "gqM" = (
 /obj/effect/decal/remains,
-/turf/simulated/floor/outdoors/dirt{
-	outdoors = 0;
-	temperature = 293.15
-	},
+/turf/simulated/floor/outdoors/dirt/thor,
 /area/vr/powered/dungeon)
 "grL" = (
 /obj/effect/floor_decal/chapel{
@@ -8026,10 +7839,7 @@
 /obj/structure/cliff/automatic{
 	dir = 4
 	},
-/turf/simulated/floor/lava{
-	nitrogen = 93.7835;
-	oxygen = 20.7263
-	},
+/turf/simulated/floor/lava,
 /area/vr/outdoors/powered/lava)
 "gBI" = (
 /obj/machinery/light{
@@ -8151,10 +7961,7 @@
 /obj/structure/fence/door/opened{
 	dir = 4
 	},
-/turf/simulated/floor/outdoors/grass/heavy{
-	can_atmos_pass = 0;
-	temperature = 311
-	},
+/turf/simulated/floor/outdoors/grass/heavy/thor,
 /area/vr/outdoors/powered)
 "gGD" = (
 /obj/structure/table/standard,
@@ -8172,11 +7979,7 @@
 /area/vr/powered/mall)
 "gHu" = (
 /mob/living/simple_mob/animal/passive/crab,
-/turf/simulated/floor/beach/sand/desert{
-	can_atmos_pass = 0;
-	outdoors = 1;
-	temperature = 311
-	},
+/turf/simulated/floor/beach/sand/desert/turfpack/thor,
 /area/vr/outdoors/powered)
 "gHF" = (
 /obj/item/bedsheet/pillow,
@@ -8274,10 +8077,7 @@
 /area/vr/powered/motel)
 "gNU" = (
 /obj/structure/cliff/automatic/corner,
-/turf/simulated/floor/lava{
-	nitrogen = 93.7835;
-	oxygen = 20.7263
-	},
+/turf/simulated/floor/lava,
 /area/vr/outdoors/powered/lava)
 "gOb" = (
 /obj/machinery/vending/medical{
@@ -8368,13 +8168,7 @@
 	color = "red";
 	icon_state = "gib2_flesh"
 	},
-/turf/simulated/floor/beach/sand/desert{
-	can_atmos_pass = 0;
-	nitrogen = 0;
-	outdoors = 0;
-	oxygen = 0;
-	temperature = 311
-	},
+/turf/simulated/floor/beach/sand/desert/turfpack/thor,
 /area/vr/powered/rocks)
 "gRg" = (
 /obj/machinery/washing_machine,
@@ -8384,15 +8178,13 @@
 /obj/structure/fence/hedge{
 	dir = 4
 	},
-/turf/simulated/floor/outdoors/grass{
-	temperature = 293.15
-	},
+/turf/simulated/floor/outdoors/grass/turfpack/station,
 /area/vr/outdoors/powered)
 "gRT" = (
 /obj/machinery/light{
 	layer = 3
 	},
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel/turfpack/station,
 /area/vr/powered/building1)
 "gSu" = (
 /obj/structure/table/darkglass,
@@ -8469,16 +8261,13 @@
 /area/vr/powered/mall/dorms/secondlife5)
 "gWl" = (
 /mob/living/simple_mob/animal/passive/lizard,
-/turf/simulated/floor/outdoors/grass/heavy{
-	can_atmos_pass = 0;
-	temperature = 311
-	},
+/turf/simulated/floor/outdoors/grass/heavy/thor,
 /area/vr/outdoors/powered)
 "gXu" = (
 /obj/machinery/light{
 	dir = 1
 	},
-/turf/simulated/floor/outdoors/road,
+/turf/simulated/floor/outdoors/road/turfpack/station,
 /area/vr/powered/rocks)
 "gXF" = (
 /mob/living/simple_mob/clowns/big/c_shift/chlown,
@@ -8490,9 +8279,7 @@
 /area/vr/powered/mall/secondlife)
 "gYA" = (
 /obj/structure/flora/ausbushes/lavendergrass,
-/turf/simulated/floor/outdoors/grass{
-	temperature = 293.15
-	},
+/turf/simulated/floor/outdoors/grass/turfpack/station,
 /area/vr/outdoors/powered)
 "hbA" = (
 /obj/structure/table/darkglass,
@@ -8548,16 +8335,14 @@
 /area/vr/powered/mall)
 "hdu" = (
 /obj/structure/bed/chair,
-/turf/simulated/floor/outdoors/newdirt_nograss{
-	temperature = 293.15
-	},
+/turf/simulated/floor/outdoors/newdirt_nograss/turfpack/station,
 /area/vr/outdoors/powered/mall)
 "hdB" = (
 /obj/machinery/telecomms/allinone,
 /obj/machinery/light/small{
 	dir = 1
 	},
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel/turfpack/station,
 /area/vr/powered/space/mechfactory)
 "hdN" = (
 /obj/machinery/light{
@@ -8598,10 +8383,7 @@
 /area/vr/powered/bar)
 "hfb" = (
 /obj/structure/flora/bboulder2,
-/turf/simulated/floor/grass2{
-	outdoors = 1;
-	temperature = 311
-	},
+/turf/simulated/floor/grass2/turfpack/thor,
 /area/vr/outdoors/powered)
 "hfi" = (
 /obj/structure/table/reinforced,
@@ -8626,10 +8408,7 @@
 /area/vr/powered/space/mechfactory)
 "hfB" = (
 /obj/machinery/light/lamppost,
-/turf/simulated/floor/outdoors/sidewalk/side{
-	movement_cost = 0;
-	temperature = 293.15
-	},
+/turf/simulated/floor/outdoors/sidewalk/side/turfpack/station,
 /area/vr/outdoors/powered)
 "hfI" = (
 /obj/machinery/light/lamppost,
@@ -8688,9 +8467,7 @@
 /obj/structure/bed/chair/sofa/bench/marble{
 	dir = 8
 	},
-/turf/simulated/floor/outdoors/newdirt_nograss{
-	temperature = 293.15
-	},
+/turf/simulated/floor/outdoors/newdirt_nograss/turfpack/station,
 /area/vr/outdoors/powered/mall)
 "hhf" = (
 /turf/simulated/wall/wood,
@@ -8703,11 +8480,7 @@
 /area/vr/powered/art)
 "hhP" = (
 /obj/machinery/light/lamppost,
-/turf/simulated/floor/outdoors/sidewalk/side{
-	icon_state = "sidewalk";
-	movement_cost = 0;
-	temperature = 293.15
-	},
+/turf/simulated/floor/outdoors/sidewalk/turfpack/station,
 /area/vr/outdoors/powered)
 "him" = (
 /turf/simulated/floor/tiled/techfloor,
@@ -8752,10 +8525,7 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/vr/powered/dungeon)
 "hkZ" = (
-/turf/simulated/floor/reinforced{
-	nitrogen = 93.7835;
-	oxygen = 20.7263
-	},
+/turf/simulated/floor/reinforced,
 /area/vr/powered/redbase)
 "hlj" = (
 /obj/effect/floor_decal/corner/black/diagonal,
@@ -8827,10 +8597,7 @@
 /obj/item/material/knife/machete,
 /obj/structure/table/rack/shelf/steel,
 /obj/item/material/knife/machete,
-/turf/simulated/floor/reinforced{
-	nitrogen = 93.7835;
-	oxygen = 20.7263
-	},
+/turf/simulated/floor/reinforced,
 /area/vr/powered/bluebase)
 "hoq" = (
 /turf/simulated/shuttle/floor/white,
@@ -8894,13 +8661,7 @@
 /area/vr/outdoors/powered)
 "hrv" = (
 /obj/structure/outcrop/phoron,
-/turf/simulated/floor/beach/sand/desert{
-	can_atmos_pass = 0;
-	nitrogen = 0;
-	outdoors = 0;
-	oxygen = 0;
-	temperature = 311
-	},
+/turf/simulated/floor/beach/sand/desert/turfpack/thor,
 /area/vr/powered/rocks)
 "hrF" = (
 /turf/unsimulated/elevator_shaft,
@@ -9029,10 +8790,7 @@
 /obj/fiftyspawner/glass,
 /obj/fiftyspawner/glass,
 /obj/fiftyspawner/glass,
-/turf/simulated/floor/outdoors/sidewalk/slab{
-	movement_cost = 0;
-	temperature = 293.15
-	},
+/turf/simulated/floor/outdoors/sidewalk/slab/turfpack/station,
 /area/vr/outdoors/powered)
 "hvJ" = (
 /obj/structure/bed/chair/bay/comfy/captain{
@@ -9045,9 +8803,7 @@
 	dir = 4
 	},
 /obj/structure/flora/lily3,
-/turf/simulated/floor/water{
-	temperature = 311
-	},
+/turf/simulated/floor/water/turfpack/thor,
 /area/vr/outdoors/powered)
 "hvQ" = (
 /obj/effect/floor_decal/industrial/warning{
@@ -9114,7 +8870,7 @@
 /area/vr/powered/mall)
 "hzJ" = (
 /obj/machinery/fitness/heavy/lifter,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel/turfpack/station,
 /area/vr/powered/space/mechfactory)
 "hzU" = (
 /turf/simulated/floor/carpet/purple,
@@ -9330,12 +9086,6 @@
 /obj/structure/simple_door/wood,
 /turf/simulated/floor/carpet/brown,
 /area/vr/powered/mall/dorms/dorms4)
-"hNG" = (
-/turf/simulated/floor/outdoors/dirt{
-	outdoors = 0;
-	temperature = 311
-	},
-/area/vr/powered/rocks)
 "hNK" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/confetti,
@@ -9369,9 +9119,7 @@
 /obj/structure/railing/grey{
 	dir = 8
 	},
-/turf/simulated/floor/outdoors/grass{
-	temperature = 293.15
-	},
+/turf/simulated/floor/outdoors/grass/turfpack/station,
 /area/vr/outdoors/powered/mall)
 "hPe" = (
 /turf/unsimulated/wall/seperator,
@@ -9461,9 +9209,7 @@
 /area/vr/powered/rocks)
 "hSI" = (
 /obj/structure/flora/ausbushes/sunnybush,
-/turf/simulated/floor/outdoors/grass{
-	temperature = 293.15
-	},
+/turf/simulated/floor/outdoors/grass/turfpack/station,
 /area/vr/outdoors/powered)
 "hSS" = (
 /obj/structure/fans,
@@ -9553,7 +9299,7 @@
 	pixel_y = 3
 	},
 /obj/item/storage/toolbox/syndicate/powertools,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel/turfpack/station,
 /area/vr/powered/space/mechfactory)
 "hWx" = (
 /obj/structure/table/darkglass,
@@ -9584,9 +9330,7 @@
 /area/vr/powered/bar)
 "hXy" = (
 /obj/structure/railing/grey,
-/turf/simulated/floor/outdoors/newdirt_nograss{
-	temperature = 293.15
-	},
+/turf/simulated/floor/outdoors/newdirt_nograss/turfpack/station,
 /area/vr/outdoors/powered/mall)
 "hXB" = (
 /obj/structure/bed/double/padded,
@@ -9965,7 +9709,7 @@
 /area/vr/outdoors/powered)
 "ihy" = (
 /obj/random/junk,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel/turfpack/station,
 /area/vr/powered/space/mechfactory)
 "ihz" = (
 /obj/random/trash,
@@ -9985,10 +9729,7 @@
 /obj/structure/fence{
 	dir = 4
 	},
-/turf/simulated/floor/outdoors/grass/heavy{
-	can_atmos_pass = 0;
-	temperature = 311
-	},
+/turf/simulated/floor/outdoors/grass/heavy/thor,
 /area/vr/outdoors/powered)
 "ihR" = (
 /obj/structure/closet/crate/trashcart,
@@ -10164,7 +9905,9 @@
 	dir = 2
 	},
 /turf/simulated/floor/water/indoors{
-	temperature = 293.15
+	temperature = 293.15;
+	nitrogen = 82.1472;
+	oxygen = 21.8366
 	},
 /area/vr/powered/dungeon)
 "ioC" = (
@@ -10344,10 +10087,7 @@
 /obj/item/rcd/advanced/loaded,
 /obj/item/rcd_ammo/large,
 /obj/item/rcd_ammo/large,
-/turf/simulated/floor/outdoors/sidewalk/slab{
-	movement_cost = 0;
-	temperature = 293.15
-	},
+/turf/simulated/floor/outdoors/sidewalk/slab/turfpack/station,
 /area/vr/outdoors/powered)
 "iuL" = (
 /obj/item/stool/baystool/padded{
@@ -10357,9 +10097,7 @@
 /area/vr/powered/mall)
 "ivc" = (
 /obj/structure/prop/statue/pillar,
-/turf/simulated/floor/outdoors/grass{
-	temperature = 293.15
-	},
+/turf/simulated/floor/outdoors/grass/turfpack/station,
 /area/vr/outdoors/powered/mall)
 "ivl" = (
 /turf/simulated/wall/sandstone{
@@ -10376,17 +10114,12 @@
 /obj/structure/bed/chair/sofa/bench/marble{
 	dir = 4
 	},
-/turf/simulated/floor/outdoors/newdirt_nograss{
-	temperature = 293.15
-	},
+/turf/simulated/floor/outdoors/newdirt_nograss/turfpack/station,
 /area/vr/outdoors/powered/mall)
 "ivI" = (
 /obj/structure/flora/ausbushes/fernybush,
 /obj/structure/flora/rocks1,
-/turf/simulated/floor/outdoors/grass/heavy{
-	can_atmos_pass = 0;
-	temperature = 311
-	},
+/turf/simulated/floor/outdoors/grass/heavy/thor,
 /area/vr/outdoors/powered)
 "ivK" = (
 /obj/machinery/vending/dinnerware{
@@ -10463,7 +10196,7 @@
 	pixel_x = -24
 	},
 /obj/item/denecrotizer/medical,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel/turfpack/station,
 /area/vr/powered/building2)
 "iyK" = (
 /obj/item/reagent_containers/food/snacks/syndicake,
@@ -10529,7 +10262,7 @@
 /obj/item/perfect_tele,
 /obj/item/perfect_tele,
 /obj/item/perfect_tele,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel/turfpack/station,
 /area/vr/powered/building2)
 "iDr" = (
 /obj/structure/closet/secure_closet/freezer/fridge,
@@ -10562,16 +10295,12 @@
 /area/vr/powered/vendor)
 "iEH" = (
 /obj/item/beach_ball/holoball,
-/turf/simulated/floor/outdoors/road,
+/turf/simulated/floor/outdoors/road/turfpack/station,
 /area/vr/outdoors/powered)
 "iET" = (
 /obj/effect/overlay/palmtree_r,
 /obj/effect/overlay/coconut,
-/turf/simulated/floor/beach/sand/desert{
-	can_atmos_pass = 0;
-	outdoors = 1;
-	temperature = 311
-	},
+/turf/simulated/floor/beach/sand/desert/turfpack/thor,
 /area/vr/outdoors/powered)
 "iFg" = (
 /obj/effect/map_effect/perma_light/brighter,
@@ -10638,7 +10367,7 @@
 /turf/simulated/floor/tiled/white,
 /area/vr/powered/vet)
 "iIT" = (
-/turf/simulated/floor/outdoors/road,
+/turf/simulated/floor/outdoors/road/turfpack/station,
 /area/vr/powered/rocks)
 "iIY" = (
 /obj/item/gun/projectile/automatic/serdy/hunter,
@@ -10760,10 +10489,7 @@
 /area/vr/powered/space/mechfactory)
 "iQe" = (
 /obj/structure/flora/ausbushes/ywflowers,
-/turf/simulated/floor/outdoors/grass/heavy{
-	can_atmos_pass = 0;
-	temperature = 311
-	},
+/turf/simulated/floor/outdoors/grass/heavy/thor,
 /area/vr/outdoors/powered)
 "iRw" = (
 /obj/structure/bed/chair/office/dark{
@@ -10777,13 +10503,7 @@
 /obj/random/trash,
 /obj/random/trash,
 /obj/effect/decal/remains,
-/turf/simulated/floor/beach/sand/desert{
-	can_atmos_pass = 0;
-	nitrogen = 0;
-	outdoors = 0;
-	oxygen = 0;
-	temperature = 311
-	},
+/turf/simulated/floor/beach/sand/desert/turfpack/thor,
 /area/vr/powered/rocks)
 "iTd" = (
 /obj/structure/table/bench/wooden,
@@ -10812,7 +10532,9 @@
 "iUv" = (
 /obj/structure/flora/lily2,
 /turf/simulated/floor/water/deep{
-	temperature = 311
+	temperature = 313;
+	nitrogen = 63.4124;
+	oxygen = 34.1451
 	},
 /area/vr/outdoors/powered)
 "iVL" = (
@@ -10949,7 +10671,7 @@
 "iZH" = (
 /obj/structure/table/reinforced,
 /obj/machinery/cell_charger,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel/turfpack/station,
 /area/vr/powered/space/mechfactory)
 "iZU" = (
 /obj/structure/table/hardwoodtable,
@@ -11036,15 +10758,11 @@
 "jcI" = (
 /obj/structure/railing/grey,
 /obj/machinery/light/lamppost,
-/turf/simulated/floor/outdoors/newdirt_nograss{
-	temperature = 293.15
-	},
+/turf/simulated/floor/outdoors/newdirt_nograss/turfpack/station,
 /area/vr/outdoors/powered/mall)
 "jcO" = (
 /obj/effect/fake_sun/always_day,
-/turf/simulated/floor/outdoors/newdirt_nograss{
-	temperature = 293.15
-	},
+/turf/simulated/floor/outdoors/newdirt_nograss/turfpack/station,
 /area/vr/outdoors/powered)
 "jcV" = (
 /obj/structure/window/reinforced/tinted{
@@ -11144,9 +10862,7 @@
 /area/vr/powered/cult)
 "jgH" = (
 /obj/structure/prop/rock/waterflat,
-/turf/simulated/floor/water{
-	temperature = 311
-	},
+/turf/simulated/floor/water/turfpack/thor,
 /area/vr/outdoors/powered)
 "jhb" = (
 /obj/item/trash/bowl,
@@ -11165,11 +10881,7 @@
 "jhj" = (
 /obj/structure/table/standard,
 /obj/item/reagent_containers/food/drinks/bottle/small/beer,
-/turf/simulated/floor/beach/sand/desert{
-	can_atmos_pass = 0;
-	outdoors = 1;
-	temperature = 311
-	},
+/turf/simulated/floor/beach/sand/desert/turfpack/thor,
 /area/vr/outdoors/powered)
 "jhG" = (
 /turf/simulated/floor/water/beach/corner{
@@ -11201,10 +10913,7 @@
 /obj/structure/railing{
 	dir = 4
 	},
-/turf/simulated/floor/outdoors/grass/heavy{
-	can_atmos_pass = 0;
-	temperature = 311
-	},
+/turf/simulated/floor/outdoors/grass/heavy/thor,
 /area/vr/outdoors/powered)
 "jjo" = (
 /obj/structure/bed/chair/wood{
@@ -11220,10 +10929,7 @@
 /obj/structure/cliff/automatic/corner{
 	dir = 6
 	},
-/turf/simulated/floor/lava{
-	nitrogen = 93.7835;
-	oxygen = 20.7263
-	},
+/turf/simulated/floor/lava,
 /area/vr/outdoors/powered/lava)
 "jjV" = (
 /obj/item/fossil/skull,
@@ -11265,9 +10971,7 @@
 /area/vr/powered/constore)
 "jmD" = (
 /obj/structure/flora/ausbushes/stalkybush,
-/turf/simulated/floor/outdoors/grass{
-	temperature = 293.15
-	},
+/turf/simulated/floor/outdoors/grass/turfpack/station,
 /area/vr/outdoors/powered)
 "jmG" = (
 /obj/structure/table/marble,
@@ -11368,7 +11072,7 @@
 /obj/machinery/sleep_console{
 	dir = 4
 	},
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel/turfpack/station,
 /area/vr/powered/space/mechfactory)
 "jpy" = (
 /obj/effect/floor_decal/corner/purple/border{
@@ -11410,19 +11114,13 @@
 "jrJ" = (
 /obj/structure/bonfire/permanent,
 /obj/item/reagent_containers/food/snacks/cuttlefish,
-/turf/simulated/floor/beach/sand/desert{
-	can_atmos_pass = 0;
-	nitrogen = 0;
-	outdoors = 0;
-	oxygen = 0;
-	temperature = 311
-	},
+/turf/simulated/floor/beach/sand/desert/turfpack/thor,
 /area/vr/powered/rocks)
 "jrK" = (
 /obj/machinery/door/airlock/multi_tile/glass{
 	dir = 2
 	},
-/turf/simulated/floor/beach/sand/desert,
+/turf/simulated/floor/beach/sand/desert/turfpack/thor,
 /area/vr/powered/mall/vw)
 "jrR" = (
 /obj/machinery/vending/fishing,
@@ -11436,7 +11134,7 @@
 /area/vr/powered/cult)
 "jrX" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel/turfpack/station,
 /area/vr/powered/space/mechfactory)
 "jsd" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
@@ -11513,19 +11211,14 @@
 /area/vr/powered/mall)
 "jvh" = (
 /obj/structure/flora/smallbould,
-/turf/simulated/floor/grass2{
-	outdoors = 1;
-	temperature = 311
-	},
+/turf/simulated/floor/grass2/turfpack/thor,
 /area/vr/outdoors/powered)
 "jvT" = (
 /obj/structure/flora/ausbushes/brflowers,
 /obj/structure/railing/grey{
 	dir = 8
 	},
-/turf/simulated/floor/outdoors/grass{
-	temperature = 293.15
-	},
+/turf/simulated/floor/outdoors/grass/turfpack/station,
 /area/vr/outdoors/powered/mall)
 "jwx" = (
 /obj/structure/bed/chair/wood/wings{
@@ -11568,10 +11261,7 @@
 /obj/structure/railing{
 	dir = 1
 	},
-/turf/simulated/floor/tiled/asteroid_steel{
-	outdoors = 1;
-	temperature = 293.15
-	},
+/turf/simulated/floor/tiled/asteroid_steel/turfpack/station,
 /area/vr/outdoors/powered)
 "jzI" = (
 /obj/structure/table/rack/shelf/steel,
@@ -11599,10 +11289,7 @@
 /obj/item/radio/headset,
 /obj/item/radio/headset,
 /obj/item/radio/headset,
-/turf/simulated/floor/wood{
-	outdoors = 1;
-	temperature = 311
-	},
+/turf/simulated/floor/wood/turfpack/thor,
 /area/vr/outdoors/powered)
 "jAB" = (
 /obj/machinery/artifact_scanpad,
@@ -11655,7 +11342,7 @@
 /area/vr/powered/mall)
 "jDN" = (
 /obj/machinery/feeder,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel/turfpack/station,
 /area/vr/powered/space/mechfactory)
 "jDX" = (
 /obj/machinery/conveyor{
@@ -11692,10 +11379,7 @@
 /obj/item/radio/headset,
 /obj/item/radio/headset,
 /obj/item/radio/headset,
-/turf/simulated/floor/wood{
-	outdoors = 1;
-	temperature = 311
-	},
+/turf/simulated/floor/wood/turfpack/thor,
 /area/vr/outdoors/powered)
 "jED" = (
 /obj/machinery/atmospherics/pipe/tank/air{
@@ -11742,7 +11426,9 @@
 "jGB" = (
 /mob/living/simple_mob/animal/passive/fish/measelshark,
 /turf/simulated/floor/water/deep{
-	temperature = 311
+	temperature = 313;
+	nitrogen = 63.4124;
+	oxygen = 34.1451
 	},
 /area/vr/outdoors/powered)
 "jGS" = (
@@ -11794,10 +11480,7 @@
 /area/vr/powered/cult)
 "jIm" = (
 /obj/structure/railing,
-/turf/simulated/floor/outdoors/sidewalk/side{
-	movement_cost = 0;
-	temperature = 293.15
-	},
+/turf/simulated/floor/outdoors/sidewalk/side/turfpack/station,
 /area/vr/outdoors/powered)
 "jIp" = (
 /obj/structure/table/bench/wooden,
@@ -11860,7 +11543,7 @@
 /area/vr/powered/mall)
 "jKl" = (
 /obj/effect/landmark/button_mob_spawner_landmark/second,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel/turfpack/station,
 /area/vr/powered/building2)
 "jKA" = (
 /obj/machinery/door/airlock{
@@ -11878,16 +11561,11 @@
 /area/vr/powered/dungeon)
 "jLk" = (
 /obj/machinery/light/lamppost,
-/turf/simulated/floor/outdoors/sidewalk/slab{
-	movement_cost = 0;
-	temperature = 293.15
-	},
+/turf/simulated/floor/outdoors/sidewalk/slab/turfpack/station,
 /area/vr/outdoors/powered)
 "jLr" = (
 /obj/structure/flora/ausbushes/brflowers,
-/turf/simulated/floor/outdoors/newdirt_nograss{
-	temperature = 293.15
-	},
+/turf/simulated/floor/outdoors/newdirt_nograss/turfpack/station,
 /area/vr/outdoors/powered)
 "jMc" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/yellow{
@@ -11920,9 +11598,7 @@
 	},
 /area/vr/outdoors/powered)
 "jNo" = (
-/turf/simulated/floor/outdoors/grass{
-	temperature = 293.15
-	},
+/turf/simulated/floor/outdoors/grass/turfpack/station,
 /area/vr/outdoors/powered/mall)
 "jNH" = (
 /obj/structure/salvageable/machine_os,
@@ -11980,9 +11656,7 @@
 /turf/simulated/floor/carpet/gaycarpet,
 /area/vr/powered/mall/dorms/secondlife4)
 "jPG" = (
-/turf/simulated/floor/outdoors/newdirt_nograss{
-	temperature = 293.15
-	},
+/turf/simulated/floor/outdoors/newdirt_nograss/turfpack/station,
 /area/vr/outdoors/powered)
 "jPP" = (
 /obj/effect/floor_decal/spline/fancy{
@@ -12194,20 +11868,14 @@
 /area/vr/powered/space/sciship)
 "jXX" = (
 /obj/item/storage/part_replacer/adv/discount_bluespace,
-/turf/simulated/floor/outdoors/sidewalk/slab{
-	movement_cost = 0;
-	temperature = 293.15
-	},
+/turf/simulated/floor/outdoors/sidewalk/slab/turfpack/station,
 /area/vr/outdoors/powered)
 "jYM" = (
 /turf/simulated/floor/wood/broken,
 /area/vr/powered/space/whiteship)
 "jZl" = (
 /obj/structure/flora/tree/jungle_small,
-/turf/simulated/floor/outdoors/grass/heavy{
-	can_atmos_pass = 0;
-	temperature = 311
-	},
+/turf/simulated/floor/outdoors/grass/heavy/thor,
 /area/vr/outdoors/powered)
 "jZo" = (
 /obj/structure/table/hardwoodtable,
@@ -12241,7 +11909,7 @@
 /obj/structure/holohoop{
 	dir = 1
 	},
-/turf/simulated/floor/outdoors/road,
+/turf/simulated/floor/outdoors/road/turfpack/station,
 /area/vr/outdoors/powered)
 "kby" = (
 /turf/simulated/floor/wood/alt/parquet/turfpack,
@@ -12253,11 +11921,7 @@
 "kch" = (
 /obj/structure/table/standard,
 /obj/item/reagent_containers/food/drinks/cans/beercan,
-/turf/simulated/floor/beach/sand/desert{
-	can_atmos_pass = 0;
-	outdoors = 1;
-	temperature = 311
-	},
+/turf/simulated/floor/beach/sand/desert/turfpack/thor,
 /area/vr/outdoors/powered)
 "kck" = (
 /obj/structure/window/phoronbasic,
@@ -12313,17 +11977,12 @@
 /obj/structure/bed/chair/backed_red{
 	dir = 8
 	},
-/turf/simulated/floor/beach/sand/desert{
-	can_atmos_pass = 0;
-	outdoors = 1;
-	temperature = 311
-	},
+/turf/simulated/floor/beach/sand/desert/turfpack/thor,
 /area/vr/outdoors/powered)
 "keX" = (
 /obj/structure/prop/rock/sharp,
-/turf/simulated/floor/outdoors/dirt{
-	outdoors = 0;
-	temperature = 311
+/turf/simulated/floor/outdoors/dirt/thor{
+	outdoors = 0
 	},
 /area/vr/powered/rocks)
 "kfo" = (
@@ -12401,7 +12060,7 @@
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 6
 	},
-/turf/simulated/floor/beach/sand/desert,
+/turf/simulated/floor/beach/sand/desert/turfpack/thor,
 /area/vr/outdoors/powered/mall)
 "khJ" = (
 /obj/structure/bookcase,
@@ -12439,17 +12098,11 @@
 /area/vr/powered/mall/backrooms)
 "kiv" = (
 /obj/machinery/fusion_fuel_compressor,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel/turfpack/station,
 /area/vr/powered/space/mechfactory)
 "kiI" = (
 /obj/structure/outcrop/uranium,
-/turf/simulated/floor/beach/sand/desert{
-	can_atmos_pass = 0;
-	nitrogen = 0;
-	outdoors = 0;
-	oxygen = 0;
-	temperature = 311
-	},
+/turf/simulated/floor/beach/sand/desert/turfpack/thor,
 /area/vr/powered/rocks)
 "kiU" = (
 /obj/structure/table/glass,
@@ -12493,10 +12146,7 @@
 /obj/structure/railing{
 	dir = 4
 	},
-/turf/simulated/floor/outdoors/sidewalk/side{
-	movement_cost = 0;
-	temperature = 293.15
-	},
+/turf/simulated/floor/outdoors/sidewalk/side/turfpack/station,
 /area/vr/outdoors/powered)
 "kkK" = (
 /obj/machinery/door/airlock/maintenance/common,
@@ -12520,11 +12170,7 @@
 "kls" = (
 /obj/effect/overlay/palmtree_l,
 /obj/effect/overlay/coconut,
-/turf/simulated/floor/beach/sand/desert{
-	can_atmos_pass = 0;
-	outdoors = 1;
-	temperature = 311
-	},
+/turf/simulated/floor/beach/sand/desert/turfpack/thor,
 /area/vr/outdoors/powered)
 "klI" = (
 /obj/effect/floor_decal/techfloor/corner{
@@ -12566,7 +12212,9 @@
 /turf/simulated/floor/water/beach/corner{
 	dir = 1;
 	outdoors = 0;
-	temperature = 311
+	temperature = 313;
+	nitrogen = 63.4124;
+	oxygen = 34.1451
 	},
 /area/vr/outdoors/powered)
 "knh" = (
@@ -12631,7 +12279,7 @@
 "krk" = (
 /obj/structure/table/steel_reinforced,
 /obj/item/storage/box/handcuffs,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel/turfpack/station,
 /area/vr/powered/building2)
 "ksd" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/yellow{
@@ -12642,10 +12290,7 @@
 /area/vr/powered/space/whiteship)
 "ksj" = (
 /obj/structure/flora/ausbushes/fullgrass,
-/turf/simulated/floor/grass2{
-	outdoors = 1;
-	temperature = 311
-	},
+/turf/simulated/floor/grass2/turfpack/thor,
 /area/vr/outdoors/powered)
 "kss" = (
 /obj/effect/decal/cleanable/fruit_smudge,
@@ -12786,20 +12431,13 @@
 "kzS" = (
 /obj/random/trash,
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/outdoors/dirt{
-	outdoors = 0;
-	temperature = 293.15
-	},
+/turf/simulated/floor/outdoors/dirt/thor,
 /area/vr/powered/dungeon)
 "kAh" = (
 /obj/effect/landmark/virtual_reality{
 	name = "Beach"
 	},
-/turf/simulated/floor/beach/sand/desert{
-	can_atmos_pass = 0;
-	outdoors = 1;
-	temperature = 311
-	},
+/turf/simulated/floor/beach/sand/desert/turfpack/thor,
 /area/vr/outdoors/powered)
 "kAV" = (
 /obj/machinery/power/terminal,
@@ -12861,13 +12499,11 @@
 /obj/fruitspawner/ambrosia,
 /obj/fruitspawner/ambrosia,
 /obj/fruitspawner/ambrosia,
-/turf/simulated/floor/beach/sand/desert,
+/turf/simulated/floor/beach/sand/desert/turfpack/thor,
 /area/vr/powered/mall/vw)
 "kFt" = (
 /obj/structure/flora/ausbushes/ppflowers,
-/turf/simulated/floor/outdoors/grass{
-	temperature = 293.15
-	},
+/turf/simulated/floor/outdoors/grass/turfpack/station,
 /area/vr/outdoors/powered/mall)
 "kGx" = (
 /obj/effect/catwalk_plated/dark,
@@ -12929,12 +12565,7 @@
 /turf/simulated/floor/carpet/sblucarpet,
 /area/vr/powered/mall/dorms/secondlife)
 "kIl" = (
-/turf/simulated/floor/outdoors/grass{
-	temperature = 293.15
-	},
-/area/vr/outdoors/powered)
-"kIo" = (
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/outdoors/grass/turfpack/station,
 /area/vr/outdoors/powered)
 "kIz" = (
 /obj/random/trash,
@@ -13053,7 +12684,7 @@
 /area/vr/powered/mall/dorms/dorms6)
 "kKK" = (
 /obj/effect/landmark/button_mob_spawner_landmark,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel/turfpack/station,
 /area/vr/powered/building2)
 "kLz" = (
 /obj/machinery/power/emitter/antique,
@@ -13131,22 +12762,17 @@
 "kNp" = (
 /obj/random/junk,
 /obj/random/maintenance,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel/turfpack/station,
 /area/vr/powered/space/mechfactory)
 "kNr" = (
 /obj/item/storage/box/pocky,
-/turf/simulated/floor/outdoors/newdirt_nograss{
-	temperature = 293.15
-	},
+/turf/simulated/floor/outdoors/newdirt_nograss/turfpack/station,
 /area/vr/outdoors/powered/mall)
 "kNv" = (
 /obj/structure/table/rack/shelf/steel,
 /obj/item/material/knife/machete,
 /obj/item/material/knife/machete,
-/turf/simulated/floor/reinforced{
-	nitrogen = 93.7835;
-	oxygen = 20.7263
-	},
+/turf/simulated/floor/reinforced,
 /area/vr/powered/redbase)
 "kNU" = (
 /obj/machinery/recharge_station,
@@ -13315,7 +12941,7 @@
 	dir = 4
 	},
 /obj/random/maintenance,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel/turfpack/station,
 /area/vr/powered/space/mechfactory)
 "kTE" = (
 /obj/item/stool{
@@ -13342,10 +12968,7 @@
 /area/vr/powered/space/whiteship)
 "kWb" = (
 /obj/effect/zone_divider,
-/turf/simulated/floor/tiled/asteroid_steel{
-	outdoors = 1;
-	temperature = 293.15
-	},
+/turf/simulated/floor/tiled/asteroid_steel/turfpack/station,
 /area/vr/outdoors/powered)
 "kWn" = (
 /obj/effect/floor_decal/corner/black/diagonal,
@@ -13401,10 +13024,7 @@
 /area/vr/powered)
 "kYR" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/outdoors/dirt{
-	outdoors = 0;
-	temperature = 293.15
-	},
+/turf/simulated/floor/outdoors/dirt/thor,
 /area/vr/powered/dungeon)
 "kZd" = (
 /obj/structure/table/rack/steel,
@@ -13432,15 +13052,14 @@
 "lai" = (
 /obj/structure/flora/tree/jungle_small,
 /obj/structure/flora/ausbushes/fullgrass,
-/turf/simulated/floor/outdoors/grass/heavy{
-	can_atmos_pass = 0;
-	temperature = 311
-	},
+/turf/simulated/floor/outdoors/grass/heavy/thor,
 /area/vr/outdoors/powered)
 "laj" = (
 /mob/living/simple_mob/vore/aggressive/rat/phoron,
 /turf/simulated/floor/water/indoors{
-	temperature = 293.15
+	temperature = 293.15;
+	nitrogen = 82.1472;
+	oxygen = 21.8366
 	},
 /area/vr/powered/dungeon)
 "laz" = (
@@ -13667,7 +13286,7 @@
 /obj/effect/floor_decal/industrial/arrows/red{
 	dir = 4
 	},
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel/turfpack/station,
 /area/vr/powered/building2)
 "llk" = (
 /obj/effect/floor_decal/chapel{
@@ -13921,7 +13540,9 @@
 	dir = 4
 	},
 /turf/simulated/floor/water/indoors{
-	temperature = 293.15
+	temperature = 293.15;
+	nitrogen = 82.1472;
+	oxygen = 21.8366
 	},
 /area/vr/powered/dungeon)
 "ltK" = (
@@ -14019,7 +13640,7 @@
 /area/vr/powered/mall)
 "lvo" = (
 /obj/machinery/replicator/clothing,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel/turfpack/station,
 /area/vr/powered/building2)
 "lvy" = (
 /obj/effect/floor_decal/corner/grey/diagonal{
@@ -14164,9 +13785,8 @@
 /area/vr/powered/mall)
 "lyW" = (
 /obj/structure/prop/rock/flat,
-/turf/simulated/floor/outdoors/dirt{
-	outdoors = 0;
-	temperature = 311
+/turf/simulated/floor/outdoors/dirt/thor{
+	outdoors = 0
 	},
 /area/vr/powered/rocks)
 "lze" = (
@@ -14182,7 +13802,7 @@
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 1
 	},
-/turf/simulated/floor/beach/sand/desert,
+/turf/simulated/floor/beach/sand/desert/turfpack/thor,
 /area/vr/outdoors/powered/mall)
 "lzY" = (
 /obj/effect/map_effect/portal/master/side_b{
@@ -14226,7 +13846,9 @@
 	layer = 3
 	},
 /turf/simulated/floor/water/indoors{
-	temperature = 293.15
+	temperature = 293.15;
+	nitrogen = 82.1472;
+	oxygen = 21.8366
 	},
 /area/vr/powered/dungeon)
 "lCl" = (
@@ -14262,10 +13884,7 @@
 "lDo" = (
 /obj/item/material/minihoe,
 /obj/structure/flora/ausbushes/ppflowers,
-/turf/simulated/floor/outdoors/grass/heavy{
-	can_atmos_pass = 0;
-	temperature = 311
-	},
+/turf/simulated/floor/outdoors/grass/heavy/thor,
 /area/vr/outdoors/powered)
 "lDw" = (
 /obj/machinery/light{
@@ -14282,11 +13901,7 @@
 /area/vr/powered/vendor)
 "lDF" = (
 /obj/effect/overlay/coconut,
-/turf/simulated/floor/beach/sand/desert{
-	can_atmos_pass = 0;
-	outdoors = 1;
-	temperature = 311
-	},
+/turf/simulated/floor/beach/sand/desert/turfpack/thor,
 /area/vr/outdoors/powered)
 "lDZ" = (
 /turf/unsimulated/floor{
@@ -14335,7 +13950,9 @@
 /area/vr/powered/cult)
 "lFE" = (
 /turf/simulated/floor/water/beach/corner{
-	temperature = 311
+	temperature = 313;
+	nitrogen = 63.4124;
+	oxygen = 34.1451
 	},
 /area/vr/outdoors/powered)
 "lFI" = (
@@ -14401,7 +14018,9 @@
 /obj/effect/step_trigger/teleporter/bridge/south_to_north,
 /turf/simulated/floor/water/beach{
 	dir = 4;
-	temperature = 311
+	temperature = 313;
+	nitrogen = 63.4124;
+	oxygen = 34.1451
 	},
 /area/vr/outdoors/powered)
 "lKJ" = (
@@ -14557,13 +14176,17 @@
 	},
 /mob/living/simple_mob/vore/aggressive/rat,
 /turf/simulated/floor/water/indoors{
-	temperature = 293.15
+	temperature = 293.15;
+	nitrogen = 82.1472;
+	oxygen = 21.8366
 	},
 /area/vr/powered/dungeon)
 "lPg" = (
 /mob/living/simple_mob/animal/giant_spider/hunter,
 /turf/simulated/floor/water/indoors{
-	temperature = 293.15
+	temperature = 293.15;
+	nitrogen = 82.1472;
+	oxygen = 21.8366
 	},
 /area/vr/powered/dungeon)
 "lPp" = (
@@ -14675,7 +14298,7 @@
 /area/vr/powered/mall/dorms/dorms3)
 "lSc" = (
 /obj/machinery/portable_atmospherics/hydroponics/soil,
-/turf/simulated/floor/beach/sand/desert,
+/turf/simulated/floor/beach/sand/desert/turfpack/thor,
 /area/vr/powered/mall/vw)
 "lSn" = (
 /obj/effect/floor_decal/techfloor{
@@ -14772,7 +14395,7 @@
 	dir = 9
 	},
 /obj/random/maintenance,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel/turfpack/station,
 /area/vr/powered/space/mechfactory)
 "lWZ" = (
 /obj/structure/table/rack/shelf/steel,
@@ -14830,10 +14453,7 @@
 	dir = 8
 	},
 /obj/structure/flora/rocks2,
-/turf/simulated/floor/outdoors/grass/heavy{
-	can_atmos_pass = 0;
-	temperature = 311
-	},
+/turf/simulated/floor/outdoors/grass/heavy/thor,
 /area/vr/outdoors/powered)
 "lZt" = (
 /obj/random/maintenance,
@@ -14871,16 +14491,11 @@
 /turf/simulated/floor/cult,
 /area/vr/powered/cult)
 "mbF" = (
-/turf/simulated/floor/outdoors/newdirt_nograss{
-	temperature = 293.15
-	},
+/turf/simulated/floor/outdoors/newdirt_nograss/turfpack/station,
 /area/vr/outdoors/powered/mall)
 "mbM" = (
 /obj/structure/flora/ausbushes/fernybush,
-/turf/simulated/floor/outdoors/grass/heavy{
-	can_atmos_pass = 0;
-	temperature = 311
-	},
+/turf/simulated/floor/outdoors/grass/heavy/thor,
 /area/vr/outdoors/powered)
 "mbN" = (
 /obj/machinery/door/airlock/gold{
@@ -14947,7 +14562,7 @@
 /area/vr/powered/mall)
 "mdF" = (
 /obj/machinery/atmospherics/pipe/simple/hidden,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel/turfpack/station,
 /area/vr/powered/space/mechfactory)
 "mec" = (
 /obj/structure/table/marble{
@@ -15053,7 +14668,7 @@
 /area/vr/powered/mall/dorms/dorms3)
 "mhK" = (
 /obj/machinery/holoplant,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel/turfpack/station,
 /area/vr/powered/space/mechfactory)
 "mhM" = (
 /obj/machinery/light{
@@ -15072,7 +14687,9 @@
 "mif" = (
 /turf/simulated/floor/water/beach{
 	dir = 4;
-	temperature = 293.15
+	temperature = 293.15;
+	nitrogen = 82.1472;
+	oxygen = 21.8366
 	},
 /area/vr/outdoors/powered)
 "mit" = (
@@ -15163,10 +14780,7 @@
 /area/vr/powered/dungeon)
 "mkY" = (
 /obj/structure/flora/ausbushes/brflowers,
-/turf/simulated/floor/outdoors/grass/heavy{
-	can_atmos_pass = 0;
-	temperature = 311
-	},
+/turf/simulated/floor/outdoors/grass/heavy/thor,
 /area/vr/outdoors/powered)
 "mln" = (
 /obj/structure/bed/chair/wood,
@@ -15204,10 +14818,7 @@
 /area/vr/powered/space/sciship)
 "mnD" = (
 /obj/structure/flora/bush,
-/turf/simulated/floor/outdoors/grass/heavy{
-	can_atmos_pass = 0;
-	temperature = 311
-	},
+/turf/simulated/floor/outdoors/grass/heavy/thor,
 /area/vr/outdoors/powered)
 "mnF" = (
 /obj/machinery/recharger/wallcharger{
@@ -15283,10 +14894,7 @@
 /turf/simulated/floor/tiled/neutral,
 /area/vr/powered)
 "mpw" = (
-/turf/simulated/floor/outdoors/grass{
-	outdoors = -1;
-	temperature = 293.15
-	},
+/turf/simulated/floor/outdoors/grass/turfpack/station,
 /area/vr/powered/mall)
 "msk" = (
 /obj/structure/closet/walllocker_double/medical/west,
@@ -15305,7 +14913,7 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/vr/powered/space/mechfactory)
 "mso" = (
-/turf/simulated/floor/beach/sand/desert,
+/turf/simulated/floor/beach/sand/desert/turfpack/thor,
 /area/vr/powered/mall/vw)
 "msp" = (
 /obj/item/reagent_containers/syringe,
@@ -15315,9 +14923,7 @@
 "mss" = (
 /obj/structure/railing,
 /obj/effect/step_trigger/teleporter/bridge/north_to_south,
-/turf/simulated/floor/water{
-	temperature = 311
-	},
+/turf/simulated/floor/water/turfpack/thor,
 /area/vr/outdoors/powered)
 "msC" = (
 /obj/structure/table/glass,
@@ -15467,10 +15073,7 @@
 	hacked = 1;
 	name = "hacked autolathe"
 	},
-/turf/simulated/floor/reinforced{
-	nitrogen = 93.7835;
-	oxygen = 20.7263
-	},
+/turf/simulated/floor/reinforced,
 /area/vr/powered/bluebase)
 "mzl" = (
 /obj/structure/window/reinforced,
@@ -15596,10 +15199,7 @@
 /turf/unsimulated/wall/seperator,
 /area/vr/outdoors/powered)
 "mGX" = (
-/turf/simulated/floor/outdoors/sidewalk/side{
-	movement_cost = 0;
-	temperature = 293.15
-	},
+/turf/simulated/floor/outdoors/sidewalk/side/turfpack/station,
 /area/vr/outdoors/powered)
 "mHw" = (
 /obj/structure/bed/double/padded,
@@ -15751,9 +15351,7 @@
 /area/vr/powered/vendor)
 "mKY" = (
 /obj/structure/flora/ausbushes/sparsegrass,
-/turf/simulated/floor/outdoors/newdirt_nograss{
-	temperature = 293.15
-	},
+/turf/simulated/floor/outdoors/newdirt_nograss/turfpack/station,
 /area/vr/outdoors/powered/mall)
 "mLa" = (
 /obj/effect/floor_decal/corner/lightgrey/border,
@@ -15797,10 +15395,7 @@
 /area/vr/powered/space/mechfactory)
 "mMB" = (
 /obj/structure/flora/ausbushes/leafybush,
-/turf/simulated/floor/outdoors/grass/heavy{
-	can_atmos_pass = 0;
-	temperature = 311
-	},
+/turf/simulated/floor/outdoors/grass/heavy/thor,
 /area/vr/outdoors/powered)
 "mNd" = (
 /obj/effect/floor_decal/spline/fancy/wood,
@@ -15879,11 +15474,7 @@
 	},
 /obj/item/clothing/under/pants/track,
 /obj/item/clothing/head/ushanka,
-/turf/simulated/floor/beach/sand/desert{
-	can_atmos_pass = 0;
-	outdoors = 1;
-	temperature = 311
-	},
+/turf/simulated/floor/beach/sand/desert/turfpack/thor,
 /area/vr/outdoors/powered)
 "mOV" = (
 /obj/machinery/power/port_gen/pacman,
@@ -15913,10 +15504,7 @@
 /obj/effect/spawner/parts/t5,
 /obj/effect/spawner/parts/t5,
 /obj/effect/spawner/parts/t5,
-/turf/simulated/floor/outdoors/sidewalk/slab{
-	movement_cost = 0;
-	temperature = 293.15
-	},
+/turf/simulated/floor/outdoors/sidewalk/slab/turfpack/station,
 /area/vr/outdoors/powered)
 "mRo" = (
 /obj/structure/closet/crate/bin,
@@ -15944,26 +15532,20 @@
 /obj/item/handcuffs/legcuffs/fuzzy,
 /obj/item/handcuffs/fuzzy,
 /obj/item/handcuffs/fuzzy,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel/turfpack/station,
 /area/vr/powered/building2)
 "mSa" = (
 /turf/simulated/wall/wood,
 /area/vr/outdoors/powered)
 "mSx" = (
 /obj/structure/flora/tree/bigtree,
-/turf/simulated/floor/outdoors/grass/heavy{
-	can_atmos_pass = 0;
-	temperature = 311
-	},
+/turf/simulated/floor/outdoors/grass/heavy/thor,
 /area/vr/outdoors/powered)
 "mSU" = (
 /obj/machinery/light{
 	layer = 3
 	},
-/turf/simulated/floor/reinforced{
-	nitrogen = 93.7835;
-	oxygen = 20.7263
-	},
+/turf/simulated/floor/reinforced,
 /area/vr/powered/bluebase)
 "mUd" = (
 /obj/effect/floor_decal/industrial/warning{
@@ -16059,13 +15641,7 @@
 /area/vr/powered/cult)
 "mXQ" = (
 /obj/item/material/fishing_rod/modern/cheap,
-/turf/simulated/floor/beach/sand/desert{
-	can_atmos_pass = 0;
-	nitrogen = 0;
-	outdoors = 0;
-	oxygen = 0;
-	temperature = 311
-	},
+/turf/simulated/floor/beach/sand/desert/turfpack/thor,
 /area/vr/outdoors/powered)
 "mYs" = (
 /obj/structure/simple_door/wood,
@@ -16227,25 +15803,20 @@
 /area/vr/powered/mall/dorms/dorms3)
 "neM" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/outdoors/sidewalk/side{
-	movement_cost = 0;
-	temperature = 293.15
-	},
+/turf/simulated/floor/outdoors/sidewalk/side/turfpack/station,
 /area/vr/outdoors/powered)
 "nfv" = (
 /obj/structure/window/reinforced{
 	dir = 4;
 	health = 1e+006
 	},
-/turf/simulated/floor/outdoors/dirt{
-	temperature = 311
-	},
+/turf/simulated/floor/outdoors/dirt/thor,
 /area/vr/outdoors/powered)
 "nfy" = (
 /obj/machinery/light{
 	dir = 8
 	},
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel/turfpack/station,
 /area/vr/powered/building1)
 "nfD" = (
 /obj/structure/window/plastitanium/full,
@@ -16269,10 +15840,7 @@
 /obj/structure/railing{
 	dir = 8
 	},
-/turf/simulated/floor/outdoors/sidewalk/side{
-	movement_cost = 0;
-	temperature = 293.15
-	},
+/turf/simulated/floor/outdoors/sidewalk/side/turfpack/station,
 /area/vr/outdoors/powered)
 "nhF" = (
 /obj/structure/table/woodentable,
@@ -16289,7 +15857,7 @@
 /area/vr/powered/bar)
 "nik" = (
 /obj/structure/table/reinforced,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel/turfpack/station,
 /area/vr/powered/space/mechfactory)
 "niA" = (
 /obj/structure/prop/machine/alien_tank/starts_broken,
@@ -16325,10 +15893,7 @@
 	pixel_y = -34
 	},
 /obj/machinery/vending/deathmatch,
-/turf/simulated/floor/reinforced{
-	nitrogen = 93.7835;
-	oxygen = 20.7263
-	},
+/turf/simulated/floor/reinforced,
 /area/vr/powered/bluebase)
 "nkj" = (
 /obj/effect/floor_decal/techfloor/corner{
@@ -16378,10 +15943,7 @@
 /area/vr/powered/space/mechfactory)
 "nmj" = (
 /obj/random/trash,
-/turf/simulated/floor/outdoors/dirt{
-	outdoors = 0;
-	temperature = 293.15
-	},
+/turf/simulated/floor/outdoors/dirt/thor,
 /area/vr/powered/dungeon)
 "nml" = (
 /turf/simulated/floor/wood/alt/panel,
@@ -16390,10 +15952,7 @@
 /obj/structure/cliff/automatic{
 	dir = 8
 	},
-/turf/simulated/floor/lava{
-	nitrogen = 93.7835;
-	oxygen = 20.7263
-	},
+/turf/simulated/floor/lava,
 /area/vr/outdoors/powered/lava)
 "nmx" = (
 /obj/machinery/computer/operating{
@@ -16421,10 +15980,7 @@
 /obj/structure/fence/corner{
 	dir = 8
 	},
-/turf/simulated/floor/outdoors/grass/heavy{
-	can_atmos_pass = 0;
-	temperature = 311
-	},
+/turf/simulated/floor/outdoors/grass/heavy/thor,
 /area/vr/outdoors/powered)
 "nmL" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
@@ -16490,7 +16046,7 @@
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 9
 	},
-/turf/simulated/floor/beach/sand/desert,
+/turf/simulated/floor/beach/sand/desert/turfpack/thor,
 /area/vr/outdoors/powered/mall)
 "noZ" = (
 /turf/simulated/floor/outdoors/mud{
@@ -16512,7 +16068,7 @@
 	dir = 4;
 	pixel_x = -7
 	},
-/turf/simulated/floor/beach/sand/desert,
+/turf/simulated/floor/beach/sand/desert/turfpack/thor,
 /area/vr/powered/mall/vw)
 "nrk" = (
 /obj/machinery/door/airlock/hatch{
@@ -16547,9 +16103,7 @@
 /obj/structure/bed/chair/sofa/bench/marble{
 	dir = 1
 	},
-/turf/simulated/floor/outdoors/newdirt_nograss{
-	temperature = 293.15
-	},
+/turf/simulated/floor/outdoors/newdirt_nograss/turfpack/station,
 /area/vr/outdoors/powered/mall)
 "nrK" = (
 /obj/structure/window/reinforced/tinted/frosted{
@@ -16594,9 +16148,7 @@
 	desc = "This sign appears to be telling you that there are more maps under construction.";
 	name = "UNDER CONSTRUCTION"
 	},
-/turf/simulated/floor/outdoors/grass{
-	temperature = 293.15
-	},
+/turf/simulated/floor/outdoors/grass/turfpack/station,
 /area/vr/outdoors/powered)
 "ntG" = (
 /mob/living/simple_mob/construct/wraith{
@@ -16660,7 +16212,9 @@
 "nwT" = (
 /mob/living/simple_mob/animal/passive/fish/trout,
 /turf/simulated/floor/water/deep{
-	temperature = 311
+	temperature = 313;
+	nitrogen = 63.4124;
+	oxygen = 34.1451
 	},
 /area/vr/outdoors/powered)
 "nxD" = (
@@ -16668,7 +16222,7 @@
 	dir = 8;
 	portal_id = "vrmall"
 	},
-/turf/simulated/floor/outdoors/road,
+/turf/simulated/floor/outdoors/road/turfpack/station,
 /area/vr/outdoors/powered)
 "nxF" = (
 /obj/structure/railing,
@@ -16695,11 +16249,7 @@
 /obj/structure/bed/chair/backed_red{
 	dir = 4
 	},
-/turf/simulated/floor/beach/sand/desert{
-	can_atmos_pass = 0;
-	outdoors = 1;
-	temperature = 311
-	},
+/turf/simulated/floor/beach/sand/desert/turfpack/thor,
 /area/vr/outdoors/powered)
 "nyN" = (
 /obj/structure/bed/chair/wood{
@@ -17071,9 +16621,8 @@
 /area/vr/powered/rocks)
 "nKv" = (
 /obj/structure/prop/rock/small,
-/turf/simulated/floor/outdoors/dirt{
-	outdoors = 0;
-	temperature = 311
+/turf/simulated/floor/outdoors/dirt/thor{
+	outdoors = 0
 	},
 /area/vr/powered/rocks)
 "nKw" = (
@@ -17089,15 +16638,6 @@
 "nKG" = (
 /turf/simulated/floor/carpet/gaycarpet,
 /area/vr/powered/mall/dorms/dorms6)
-"nKH" = (
-/turf/simulated/floor/beach/sand/desert{
-	can_atmos_pass = 0;
-	nitrogen = 0;
-	outdoors = 0;
-	oxygen = 0;
-	temperature = 311
-	},
-/area/vr/outdoors/powered)
 "nKR" = (
 /obj/structure/bed/chair/bay/comfy/black{
 	dir = 1
@@ -17142,7 +16682,7 @@
 /obj/machinery/light/small{
 	dir = 1
 	},
-/turf/simulated/floor/outdoors/road,
+/turf/simulated/floor/outdoors/road/turfpack/station,
 /area/vr/powered/rocks)
 "nMh" = (
 /obj/structure/window/phoronreinforced{
@@ -17290,10 +16830,7 @@
 /area/vr/powered/space/whiteship)
 "nSg" = (
 /obj/structure/fence/door/opened,
-/turf/simulated/floor/outdoors/grass/heavy{
-	can_atmos_pass = 0;
-	temperature = 311
-	},
+/turf/simulated/floor/outdoors/grass/heavy/thor,
 /area/vr/outdoors/powered)
 "nSr" = (
 /obj/machinery/sleep_console{
@@ -17304,10 +16841,7 @@
 "nSM" = (
 /obj/structure/barricade,
 /obj/item/tape/police,
-/turf/simulated/floor/outdoors/dirt{
-	outdoors = 0;
-	temperature = 293.15
-	},
+/turf/simulated/floor/outdoors/dirt/thor,
 /area/vr/powered/dungeon)
 "nSN" = (
 /obj/machinery/light{
@@ -17391,7 +16925,9 @@
 "nWc" = (
 /obj/structure/flora/log2,
 /turf/simulated/floor/water/deep{
-	temperature = 311
+	temperature = 313;
+	nitrogen = 63.4124;
+	oxygen = 34.1451
 	},
 /area/vr/outdoors/powered)
 "nWl" = (
@@ -17523,10 +17059,7 @@
 	name = "Fast Travel to Construct";
 	portal_id = 69
 	},
-/turf/simulated/floor/outdoors/sidewalk/slab{
-	movement_cost = 0;
-	temperature = 293.15
-	},
+/turf/simulated/floor/outdoors/sidewalk/slab/turfpack/thor,
 /area/vr/outdoors/powered)
 "oaZ" = (
 /obj/structure/table/reinforced,
@@ -17554,9 +17087,7 @@
 	light_range = 10
 	},
 /obj/structure/flora/ausbushes/brflowers,
-/turf/simulated/floor/outdoors/grass{
-	temperature = 293.15
-	},
+/turf/simulated/floor/outdoors/grass/turfpack/station,
 /area/vr/outdoors/powered/mall)
 "ocA" = (
 /obj/machinery/light{
@@ -17592,10 +17123,7 @@
 /area/vr/powered/gunshop)
 "oeP" = (
 /obj/structure/prop/statue,
-/turf/simulated/floor/water/pool{
-	outdoors = 1;
-	temperature = 293.15
-	},
+/turf/simulated/floor/water/pool/turfpack/station,
 /area/vr/outdoors/powered/mall)
 "ofy" = (
 /obj/effect/floor_decal/techfloor{
@@ -17821,10 +17349,7 @@
 /area/vr/powered/mall)
 "olz" = (
 /obj/machinery/vending/deathmatch/red,
-/turf/simulated/floor/reinforced{
-	nitrogen = 93.7835;
-	oxygen = 20.7263
-	},
+/turf/simulated/floor/reinforced,
 /area/vr/powered/redbase)
 "olK" = (
 /obj/structure/table/marble,
@@ -17860,10 +17385,7 @@
 /obj/structure/cliff/automatic{
 	dir = 9
 	},
-/turf/simulated/floor/lava{
-	nitrogen = 93.7835;
-	oxygen = 20.7263
-	},
+/turf/simulated/floor/lava,
 /area/vr/outdoors/powered/lava)
 "ono" = (
 /obj/effect/map_effect/portal/line/side_a,
@@ -17929,7 +17451,9 @@
 "ooT" = (
 /obj/random/mob/fish,
 /turf/simulated/floor/water/deep{
-	temperature = 311
+	temperature = 313;
+	nitrogen = 63.4124;
+	oxygen = 34.1451
 	},
 /area/vr/outdoors/powered)
 "oph" = (
@@ -17956,7 +17480,9 @@
 "oqf" = (
 /obj/machinery/light,
 /turf/simulated/floor/water/indoors{
-	temperature = 293.15
+	temperature = 293.15;
+	nitrogen = 82.1472;
+	oxygen = 21.8366
 	},
 /area/vr/powered/dungeon)
 "oqk" = (
@@ -17981,10 +17507,7 @@
 /area/vr/powered/mall)
 "oqz" = (
 /obj/effect/decal/remains/unathi,
-/turf/simulated/floor/lava{
-	nitrogen = 93.7835;
-	oxygen = 20.7263
-	},
+/turf/simulated/floor/lava,
 /area/vr/outdoors/powered/lava)
 "oqE" = (
 /obj/effect/floor_decal/corner/black/diagonal,
@@ -18196,10 +17719,7 @@
 /obj/item/radio/headset,
 /obj/item/radio/headset,
 /obj/item/radio/headset,
-/turf/simulated/floor/outdoors/sidewalk/side{
-	movement_cost = 0;
-	temperature = 293.15
-	},
+/turf/simulated/floor/outdoors/sidewalk/side/turfpack/station,
 /area/vr/outdoors/powered)
 "oym" = (
 /obj/item/reagent_containers/glass/bucket,
@@ -18218,10 +17738,7 @@
 /obj/item/radio/headset,
 /obj/item/radio/headset,
 /obj/item/radio/headset,
-/turf/simulated/floor/tiled/asteroid_steel{
-	outdoors = 1;
-	temperature = 293.15
-	},
+/turf/simulated/floor/tiled/asteroid_steel/turfpack/station,
 /area/vr/outdoors/powered)
 "oyM" = (
 /obj/structure/bed/chair/sofa/right/brown{
@@ -18271,7 +17788,7 @@
 /obj/machinery/light{
 	layer = 3
 	},
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel/turfpack/station,
 /area/vr/powered/conspawn)
 "ozP" = (
 /obj/effect/floor_decal/industrial/warning{
@@ -18379,7 +17896,7 @@
 /area/vr/powered/mall/secondlife)
 "oCQ" = (
 /obj/machinery/atmospherics/unary/vent_pump/on,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel/turfpack/station,
 /area/vr/powered/space/mechfactory)
 "oDb" = (
 /turf/simulated/wall/wood,
@@ -18402,10 +17919,7 @@
 /obj/structure/table/rack/shelf/steel,
 /obj/item/clothing/head/cowboy,
 /obj/item/clothing/glasses/fakesunglasses/aviator,
-/turf/simulated/floor/reinforced{
-	nitrogen = 93.7835;
-	oxygen = 20.7263
-	},
+/turf/simulated/floor/reinforced,
 /area/vr/powered/redbase)
 "oDn" = (
 /obj/structure/table/marble,
@@ -18422,7 +17936,7 @@
 /obj/structure/bed/chair{
 	dir = 8
 	},
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel/turfpack/station,
 /area/vr/powered/space/mechfactory)
 "oDJ" = (
 /obj/structure/table/fancyblack,
@@ -18658,7 +18172,7 @@
 /area/vr/space)
 "oOr" = (
 /obj/machinery/light/small,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel/turfpack/station,
 /area/vr/powered/space/mechfactory)
 "oOv" = (
 /obj/effect/simple_portal/linked{
@@ -18795,7 +18309,7 @@
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 10
 	},
-/turf/simulated/floor/beach/sand/desert,
+/turf/simulated/floor/beach/sand/desert/turfpack/thor,
 /area/vr/outdoors/powered/mall)
 "oWr" = (
 /obj/effect/floor_decal/spline/fancy/wood{
@@ -18867,16 +18381,13 @@
 /obj/structure/railing{
 	dir = 4
 	},
-/turf/simulated/floor/outdoors/sidewalk/side{
-	movement_cost = 0;
-	temperature = 293.15
-	},
+/turf/simulated/floor/outdoors/sidewalk/side/turfpack/station,
 /area/vr/outdoors/powered)
 "pbm" = (
 /obj/effect/map_effect/portal/line/side_a{
 	dir = 8
 	},
-/turf/simulated/floor/outdoors/road,
+/turf/simulated/floor/outdoors/road/turfpack/station,
 /area/vr/powered/rocks)
 "pbq" = (
 /obj/structure/reagent_dispensers/fueltank,
@@ -18967,22 +18478,13 @@
 /area/vr/powered/vet)
 "pdB" = (
 /obj/structure/prop/statue/pillar,
-/turf/simulated/floor/outdoors/sidewalk/slab{
-	movement_cost = 0;
-	temperature = 293.15
-	},
+/turf/simulated/floor/outdoors/sidewalk/slab/turfpack/station,
 /area/vr/outdoors/powered/mall)
 "pdP" = (
 /obj/vehicle/boat{
 	dir = 8
 	},
-/turf/simulated/floor/beach/sand/desert{
-	can_atmos_pass = 0;
-	nitrogen = 0;
-	outdoors = 0;
-	oxygen = 0;
-	temperature = 311
-	},
+/turf/simulated/floor/beach/sand/desert/turfpack/thor,
 /area/vr/powered/rocks)
 "pen" = (
 /obj/effect/floor_decal/techfloor/corner{
@@ -18992,9 +18494,7 @@
 /area/vr/powered/cult)
 "peZ" = (
 /obj/structure/flora/ausbushes,
-/turf/simulated/floor/outdoors/newdirt_nograss{
-	temperature = 293.15
-	},
+/turf/simulated/floor/outdoors/newdirt_nograss/turfpack/station,
 /area/vr/outdoors/powered)
 "pfa" = (
 /obj/machinery/vending/wallmed1{
@@ -19064,10 +18564,7 @@
 /area/vr/powered/dungeon)
 "pha" = (
 /obj/structure/flora/ausbushes/sunnybush,
-/turf/simulated/floor/outdoors/sidewalk/slab{
-	movement_cost = 0;
-	temperature = 293.15
-	},
+/turf/simulated/floor/outdoors/sidewalk/slab/turfpack/thor,
 /area/vr/outdoors/powered)
 "phr" = (
 /obj/machinery/light/floortube{
@@ -19078,7 +18575,9 @@
 "phT" = (
 /mob/living/simple_mob/animal/passive/fish/koi,
 /turf/simulated/floor/water/deep{
-	temperature = 311
+	temperature = 313;
+	nitrogen = 63.4124;
+	oxygen = 34.1451
 	},
 /area/vr/outdoors/powered)
 "pit" = (
@@ -19105,10 +18604,7 @@
 /obj/item/tvcamera,
 /obj/item/tvcamera,
 /obj/item/tvcamera,
-/turf/simulated/floor/outdoors/sidewalk/slab{
-	movement_cost = 0;
-	temperature = 293.15
-	},
+/turf/simulated/floor/outdoors/sidewalk/slab/turfpack/station,
 /area/vr/outdoors/powered)
 "pjF" = (
 /turf/simulated/wall/sandstone{
@@ -19209,15 +18705,13 @@
 /obj/structure/fence/hedge/end{
 	dir = 4
 	},
-/turf/simulated/floor/outdoors/grass{
-	temperature = 293.15
-	},
+/turf/simulated/floor/outdoors/grass/turfpack/station,
 /area/vr/outdoors/powered)
 "pnq" = (
 /obj/machinery/sleeper{
 	dir = 4
 	},
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel/turfpack/station,
 /area/vr/powered/space/mechfactory)
 "pnV" = (
 /obj/effect/floor_decal/spline/fancy{
@@ -19333,9 +18827,7 @@
 	light_range = 10
 	},
 /obj/structure/flora/ausbushes/ywflowers,
-/turf/simulated/floor/outdoors/grass{
-	temperature = 293.15
-	},
+/turf/simulated/floor/outdoors/grass/turfpack/station,
 /area/vr/outdoors/powered/mall)
 "prl" = (
 /obj/structure/table/rack/shelf,
@@ -19361,7 +18853,9 @@
 	dir = 5
 	},
 /turf/simulated/floor/water/indoors{
-	temperature = 293.15
+	temperature = 293.15;
+	nitrogen = 82.1472;
+	oxygen = 21.8366
 	},
 /area/vr/powered/dungeon)
 "ptY" = (
@@ -19437,7 +18931,9 @@
 /turf/simulated/floor/water/beach{
 	dir = 10;
 	outdoors = 0;
-	temperature = 311
+	temperature = 313;
+	oxygen = 34.1451;
+	nitrogen = 63.4124
 	},
 /area/vr/outdoors/powered)
 "pyt" = (
@@ -19488,10 +18984,7 @@
 /area/vr/powered/bar)
 "pzO" = (
 /obj/structure/railing,
-/turf/simulated/floor/wood{
-	outdoors = 1;
-	temperature = 311
-	},
+/turf/simulated/floor/wood/turfpack/thor,
 /area/vr/outdoors/powered)
 "pzR" = (
 /obj/structure/cult/pylon{
@@ -19513,10 +19006,7 @@
 "pBf" = (
 /obj/structure/closet/crate/trashcart,
 /obj/item/reagent_containers/food/drinks/bottle/vodka,
-/turf/simulated/floor/outdoors/grass/heavy{
-	can_atmos_pass = 0;
-	temperature = 311
-	},
+/turf/simulated/floor/outdoors/grass/heavy/thor,
 /area/vr/outdoors/powered)
 "pBo" = (
 /obj/structure/table/bench/wooden,
@@ -19644,7 +19134,7 @@
 /obj/item/clothing/under/permit,
 /obj/item/clothing/under/permit,
 /obj/item/clothing/under/permit,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel/turfpack/station,
 /area/vr/powered/space/mechfactory)
 "pFI" = (
 /obj/effect/floor_decal/industrial/warning/corner{
@@ -19658,7 +19148,9 @@
 "pGz" = (
 /turf/simulated/floor/water{
 	outdoors = 0;
-	temperature = 311
+	temperature = 313;
+	nitrogen = 63.4124;
+	oxygen = 34.1451
 	},
 /area/vr/powered/rocks)
 "pGH" = (
@@ -19698,7 +19190,9 @@
 /obj/random/mob/fish,
 /turf/simulated/floor/water/deep{
 	outdoors = 0;
-	temperature = 311
+	temperature = 313;
+	nitrogen = 63.4124;
+	oxygen = 34.1451
 	},
 /area/vr/powered/rocks)
 "pIO" = (
@@ -19892,10 +19386,7 @@
 /area/vr/powered/mall/dorms/dorms6)
 "pOg" = (
 /obj/structure/flora/rocks1,
-/turf/simulated/floor/outdoors/grass/heavy{
-	can_atmos_pass = 0;
-	temperature = 311
-	},
+/turf/simulated/floor/outdoors/grass/heavy/thor,
 /area/vr/outdoors/powered)
 "pOw" = (
 /obj/effect/floor_decal/techfloor/corner{
@@ -19949,9 +19440,7 @@
 /area/vr/powered/space/mechfactory)
 "pRZ" = (
 /obj/structure/flora/ausbushes/ywflowers,
-/turf/simulated/floor/outdoors/grass{
-	temperature = 293.15
-	},
+/turf/simulated/floor/outdoors/grass/turfpack/station,
 /area/vr/outdoors/powered)
 "pSh" = (
 /obj/effect/wingrille_spawn/reinforced,
@@ -19963,7 +19452,9 @@
 	dir = 8
 	},
 /turf/simulated/floor/water/indoors{
-	temperature = 293.15
+	temperature = 293.15;
+	nitrogen = 82.1472;
+	oxygen = 21.8366
 	},
 /area/vr/powered/dungeon)
 "pTA" = (
@@ -20027,7 +19518,7 @@
 /obj/structure/table/steel_reinforced,
 /obj/item/bodysnatcher,
 /obj/item/bodysnatcher,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel/turfpack/station,
 /area/vr/powered/building2)
 "pVR" = (
 /obj/structure/table/alien/blue,
@@ -20115,15 +19606,12 @@
 /obj/structure/cliff/automatic/corner{
 	dir = 10
 	},
-/turf/simulated/floor/lava{
-	nitrogen = 93.7835;
-	oxygen = 20.7263
-	},
+/turf/simulated/floor/lava,
 /area/vr/outdoors/powered/lava)
 "qab" = (
 /obj/effect/zone_divider,
 /obj/structure/fans/tiny,
-/turf/simulated/floor/outdoors/road,
+/turf/simulated/floor/outdoors/road/turfpack/station,
 /area/vr/outdoors/powered)
 "qan" = (
 /obj/structure/bed/chair/sofa/left/beige{
@@ -20223,13 +19711,7 @@
 	color = "red";
 	icon_state = "metroid_gib1"
 	},
-/turf/simulated/floor/beach/sand/desert{
-	can_atmos_pass = 0;
-	nitrogen = 0;
-	outdoors = 0;
-	oxygen = 0;
-	temperature = 311
-	},
+/turf/simulated/floor/beach/sand/desert/turfpack/thor,
 /area/vr/powered/rocks)
 "qcE" = (
 /obj/structure/bed/chair/sofa/corner/black,
@@ -20250,7 +19732,9 @@
 /mob/living/simple_mob/animal/passive/fish/rockfish,
 /turf/simulated/floor/water/deep{
 	outdoors = 0;
-	temperature = 311
+	temperature = 313;
+	nitrogen = 63.4124;
+	oxygen = 34.1451
 	},
 /area/vr/powered/rocks)
 "qdl" = (
@@ -20353,9 +19837,7 @@
 /area/vr/powered/space/sciship)
 "qgF" = (
 /obj/structure/bed/chair/sofa/bench/marble,
-/turf/simulated/floor/outdoors/newdirt_nograss{
-	temperature = 293.15
-	},
+/turf/simulated/floor/outdoors/newdirt_nograss/turfpack/station,
 /area/vr/outdoors/powered/mall)
 "qgI" = (
 /obj/machinery/gateway/brass{
@@ -20443,10 +19925,7 @@
 /area/vr/powered/mall/dorms/dorms1)
 "qiO" = (
 /obj/structure/cliff/automatic,
-/turf/simulated/floor/lava{
-	nitrogen = 93.7835;
-	oxygen = 20.7263
-	},
+/turf/simulated/floor/lava,
 /area/vr/outdoors/powered/lava)
 "qiV" = (
 /obj/structure/bed/chair/bay/comfy/black{
@@ -20514,17 +19993,11 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/vr/powered/dungeon)
 "qkV" = (
-/turf/simulated/floor/outdoors/newdirt_nograss{
-	temperature = 293.15
-	},
+/turf/simulated/floor/outdoors/newdirt_nograss/turfpack/station,
 /area/vr/outdoors/powered/lava)
 "qle" = (
 /obj/structure/table/standard,
-/turf/simulated/floor/beach/sand/desert{
-	can_atmos_pass = 0;
-	outdoors = 1;
-	temperature = 311
-	},
+/turf/simulated/floor/beach/sand/desert/turfpack/thor,
 /area/vr/outdoors/powered)
 "qlh" = (
 /obj/structure/salvageable/console_os{
@@ -20795,7 +20268,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 9
 	},
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel/turfpack/station,
 /area/vr/powered/space/mechfactory)
 "qxS" = (
 /turf/simulated/floor/carpet,
@@ -20824,16 +20297,13 @@
 	deployed = 1;
 	icon_state = "beartrap1"
 	},
-/turf/simulated/floor/outdoors/dirt{
-	outdoors = 0;
-	temperature = 293.15
-	},
+/turf/simulated/floor/outdoors/dirt/thor,
 /area/vr/powered/dungeon)
 "qyR" = (
 /obj/machinery/light{
 	dir = 1
 	},
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel/turfpack/station,
 /area/vr/powered/building2)
 "qyT" = (
 /obj/structure/closet{
@@ -20917,10 +20387,7 @@
 "qzC" = (
 /obj/structure/flora/ausbushes/ppflowers,
 /mob/living/simple_mob/animal/passive/cow,
-/turf/simulated/floor/outdoors/grass/heavy{
-	can_atmos_pass = 0;
-	temperature = 311
-	},
+/turf/simulated/floor/outdoors/grass/heavy/thor,
 /area/vr/outdoors/powered)
 "qzR" = (
 /obj/effect/floor_decal/techfloor/corner{
@@ -21005,9 +20472,7 @@
 /area/vr/powered/vendor)
 "qBV" = (
 /obj/structure/railing,
-/turf/simulated/floor/outdoors/newdirt_nograss{
-	temperature = 293.15
-	},
+/turf/simulated/floor/outdoors/newdirt_nograss/turfpack/station,
 /area/vr/outdoors/powered/lava)
 "qBX" = (
 /obj/structure/cable/green{
@@ -21099,10 +20564,7 @@
 "qGD" = (
 /obj/structure/flora/bboulder1,
 /obj/structure/flora/bboulder1,
-/turf/simulated/floor/outdoors/grass/heavy{
-	can_atmos_pass = 0;
-	temperature = 311
-	},
+/turf/simulated/floor/outdoors/grass/heavy/thor,
 /area/vr/outdoors/powered)
 "qGM" = (
 /obj/machinery/light/small,
@@ -21123,10 +20585,7 @@
 /obj/machinery/light{
 	dir = 1
 	},
-/turf/simulated/floor/reinforced{
-	nitrogen = 93.7835;
-	oxygen = 20.7263
-	},
+/turf/simulated/floor/reinforced,
 /area/vr/powered/bluebase)
 "qHR" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
@@ -21273,10 +20732,7 @@
 /area/vr/powered/cult)
 "qOu" = (
 /obj/structure/flora/tree/jungle,
-/turf/simulated/floor/outdoors/grass/heavy{
-	can_atmos_pass = 0;
-	temperature = 311
-	},
+/turf/simulated/floor/outdoors/grass/heavy/thor,
 /area/vr/outdoors/powered)
 "qOZ" = (
 /obj/vehicle/train/engine/quadbike/random,
@@ -21343,15 +20799,13 @@
 /turf/simulated/floor/tiled/old_cargo/purple,
 /area/vr/powered/mall/dorms/dorms2)
 "qSK" = (
-/turf/simulated/floor/outdoors/dirt{
-	temperature = 311
-	},
+/turf/simulated/floor/outdoors/dirt/thor,
 /area/vr/powered)
 "qTf" = (
 /obj/machinery/light{
 	dir = 4
 	},
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel/turfpack/station,
 /area/vr/outdoors/powered)
 "qTp" = (
 /obj/structure/table/marble,
@@ -21372,7 +20826,7 @@
 /area/vr/powered/bar)
 "qTR" = (
 /obj/random/trash,
-/turf/simulated/floor/outdoors/road,
+/turf/simulated/floor/outdoors/road/turfpack/station,
 /area/vr/outdoors/powered)
 "qTU" = (
 /obj/structure/table/darkglass,
@@ -21452,7 +20906,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 10
 	},
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel/turfpack/station,
 /area/vr/powered/space/mechfactory)
 "qZD" = (
 /obj/random/trash,
@@ -21460,13 +20914,7 @@
 /obj/random/trash,
 /obj/random/trash,
 /obj/item/digestion_remains/ribcage,
-/turf/simulated/floor/beach/sand/desert{
-	can_atmos_pass = 0;
-	nitrogen = 0;
-	outdoors = 0;
-	oxygen = 0;
-	temperature = 311
-	},
+/turf/simulated/floor/beach/sand/desert/turfpack/thor,
 /area/vr/powered/rocks)
 "qZO" = (
 /obj/structure/closet/alien{
@@ -21507,11 +20955,7 @@
 "rbH" = (
 /obj/structure/table/standard,
 /obj/item/reagent_containers/food/snacks/semki,
-/turf/simulated/floor/beach/sand/desert{
-	can_atmos_pass = 0;
-	outdoors = 1;
-	temperature = 311
-	},
+/turf/simulated/floor/beach/sand/desert/turfpack/thor,
 /area/vr/outdoors/powered)
 "rbI" = (
 /turf/simulated/wall/concrete,
@@ -21528,7 +20972,7 @@
 /turf/simulated/wall/titanium,
 /area/vr/powered/vet)
 "rcK" = (
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel/turfpack/station,
 /area/vr/powered/building2)
 "rcW" = (
 /obj/structure/simple_door/wood,
@@ -21564,10 +21008,7 @@
 /area/vr/powered/motel)
 "reW" = (
 /obj/structure/flora/rocks2,
-/turf/simulated/floor/outdoors/grass/heavy{
-	can_atmos_pass = 0;
-	temperature = 311
-	},
+/turf/simulated/floor/outdoors/grass/heavy/thor,
 /area/vr/outdoors/powered)
 "rfu" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
@@ -21601,10 +21042,7 @@
 /area/vr/powered/mall/backrooms)
 "rgY" = (
 /obj/structure/flora/ausbushes/genericbush,
-/turf/simulated/floor/outdoors/grass/heavy{
-	can_atmos_pass = 0;
-	temperature = 311
-	},
+/turf/simulated/floor/outdoors/grass/heavy/thor,
 /area/vr/outdoors/powered)
 "rhm" = (
 /obj/structure/table/marble,
@@ -21821,7 +21259,9 @@
 "rnS" = (
 /turf/simulated/floor/water/beach{
 	dir = 6;
-	temperature = 311
+	temperature = 313;
+	oxygen = 34.1451;
+	nitrogen = 63.4124
 	},
 /area/vr/outdoors/powered)
 "rom" = (
@@ -21833,7 +21273,7 @@
 "roq" = (
 /obj/item/material/minihoe,
 /obj/item/tool/wirecutters/clippers/trimmers,
-/turf/simulated/floor/beach/sand/desert,
+/turf/simulated/floor/beach/sand/desert/turfpack/thor,
 /area/vr/powered/mall/vw)
 "rpg" = (
 /obj/machinery/mech_recharger,
@@ -22035,10 +21475,7 @@
 "rAh" = (
 /obj/effect/zone_divider,
 /obj/structure/fans/tiny,
-/turf/simulated/floor/tiled/asteroid_steel{
-	outdoors = 1;
-	temperature = 293.15
-	},
+/turf/simulated/floor/tiled/asteroid_steel/turfpack/station,
 /area/vr/outdoors/powered)
 "rAG" = (
 /obj/structure/bed/chair/comfy/black,
@@ -22132,7 +21569,7 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
 	},
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel/turfpack/station,
 /area/vr/powered/space/mechfactory)
 "rFf" = (
 /obj/effect/floor_decal/industrial/warning/corner,
@@ -22194,10 +21631,7 @@
 /obj/machinery/light/bigfloorlamp{
 	light_range = 10
 	},
-/turf/simulated/floor/outdoors/sidewalk/side{
-	movement_cost = 0;
-	temperature = 293.15
-	},
+/turf/simulated/floor/outdoors/sidewalk/side/turfpack/station,
 /area/vr/outdoors/powered)
 "rKk" = (
 /obj/structure/table/rack/shelf,
@@ -22325,10 +21759,7 @@
 "rOu" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/remains,
-/turf/simulated/floor/outdoors/dirt{
-	outdoors = 0;
-	temperature = 293.15
-	},
+/turf/simulated/floor/outdoors/dirt/thor,
 /area/vr/powered/dungeon)
 "rOL" = (
 /obj/machinery/porta_turret/alien{
@@ -22376,10 +21807,7 @@
 /obj/structure/cliff/automatic/corner{
 	dir = 9
 	},
-/turf/simulated/floor/lava{
-	nitrogen = 93.7835;
-	oxygen = 20.7263
-	},
+/turf/simulated/floor/lava,
 /area/vr/outdoors/powered/lava)
 "rSb" = (
 /obj/structure/bed/chair/office/dark{
@@ -22407,10 +21835,7 @@
 /obj/machinery/light{
 	dir = 1
 	},
-/turf/simulated/floor/reinforced{
-	nitrogen = 93.7835;
-	oxygen = 20.7263
-	},
+/turf/simulated/floor/reinforced,
 /area/vr/powered/redbase)
 "rSM" = (
 /obj/effect/decal/cleanable/fruit_smudge,
@@ -22492,7 +21917,9 @@
 /obj/effect/step_trigger/teleporter/bridge/north_to_south,
 /turf/simulated/floor/water/beach{
 	dir = 4;
-	temperature = 311
+	temperature = 313;
+	nitrogen = 63.4124;
+	oxygen = 34.1451
 	},
 /area/vr/outdoors/powered)
 "rVY" = (
@@ -22544,10 +21971,7 @@
 /obj/machinery/light/bigfloorlamp{
 	light_range = 10
 	},
-/turf/simulated/floor/outdoors/sidewalk/slab{
-	movement_cost = 0;
-	temperature = 293.15
-	},
+/turf/simulated/floor/outdoors/sidewalk/slab/turfpack/station,
 /area/vr/outdoors/powered)
 "rYl" = (
 /obj/effect/floor_decal/techfloor,
@@ -22562,10 +21986,7 @@
 /area/vr/space)
 "rYV" = (
 /obj/structure/flora/ausbushes/grassybush,
-/turf/simulated/floor/outdoors/grass/heavy{
-	can_atmos_pass = 0;
-	temperature = 311
-	},
+/turf/simulated/floor/outdoors/grass/heavy/thor,
 /area/vr/outdoors/powered)
 "rZj" = (
 /obj/effect/floor_decal/corner/grey/diagonal{
@@ -22652,10 +22073,7 @@
 	pixel_y = 24
 	},
 /obj/machinery/vending/deathmatch/red,
-/turf/simulated/floor/reinforced{
-	nitrogen = 93.7835;
-	oxygen = 20.7263
-	},
+/turf/simulated/floor/reinforced,
 /area/vr/powered/redbase)
 "sbG" = (
 /obj/effect/floor_decal/spline/fancy{
@@ -22687,9 +22105,7 @@
 /turf/simulated/floor/tiled,
 /area/vr/powered/vendor)
 "sdm" = (
-/turf/simulated/floor/beach/sand/desert{
-	outdoors = 1
-	},
+/turf/simulated/floor/beach/sand/desert/turfpack/station,
 /area/vr/outdoors/powered)
 "sdZ" = (
 /obj/structure/window/reinforced{
@@ -22736,13 +22152,7 @@
 /area/vr/powered/vet)
 "sfs" = (
 /obj/structure/loot_pile/surface/bones,
-/turf/simulated/floor/beach/sand/desert{
-	can_atmos_pass = 0;
-	nitrogen = 0;
-	outdoors = 0;
-	oxygen = 0;
-	temperature = 311
-	},
+/turf/simulated/floor/beach/sand/desert/turfpack/thor,
 /area/vr/powered/rocks)
 "sfL" = (
 /obj/machinery/vending/security{
@@ -22842,7 +22252,7 @@
 /area/vr/powered/space/whiteship)
 "slC" = (
 /obj/machinery/robotic_fabricator,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel/turfpack/station,
 /area/vr/powered/space/mechfactory)
 "slK" = (
 /obj/machinery/holosign/bar{
@@ -22854,7 +22264,7 @@
 /obj/structure/salvageable/console_os{
 	dir = 4
 	},
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel/turfpack/station,
 /area/vr/powered/space/mechfactory)
 "smk" = (
 /obj/machinery/vending/boozeomat{
@@ -22891,10 +22301,7 @@
 /turf/simulated/floor/wood,
 /area/vr/powered/cafe)
 "sns" = (
-/turf/simulated/floor/tiled/asteroid_steel{
-	outdoors = 1;
-	temperature = 293.15
-	},
+/turf/simulated/floor/tiled/asteroid_steel/turfpack/station,
 /area/vr/outdoors/powered)
 "soj" = (
 /obj/effect/floor_decal/techfloor,
@@ -22921,21 +22328,13 @@
 /area/vr/powered/space/sciship)
 "spC" = (
 /obj/item/storage/box/wormcan,
-/turf/simulated/floor/beach/sand/desert{
-	can_atmos_pass = 0;
-	nitrogen = 0;
-	outdoors = 0;
-	oxygen = 0;
-	temperature = 311
-	},
+/turf/simulated/floor/beach/sand/desert/turfpack/thor,
 /area/vr/powered/rocks)
 "spL" = (
 /obj/structure/fence/hedge/end{
 	dir = 8
 	},
-/turf/simulated/floor/outdoors/grass{
-	temperature = 293.15
-	},
+/turf/simulated/floor/outdoors/grass/turfpack/station,
 /area/vr/outdoors/powered)
 "squ" = (
 /turf/simulated/floor/wood/alt/panel/broken{
@@ -23076,7 +22475,7 @@
 /area/vr/powered/mall)
 "sut" = (
 /obj/random/trash,
-/turf/simulated/floor/outdoors/road,
+/turf/simulated/floor/outdoors/road/turfpack/station,
 /area/vr/powered/rocks)
 "suw" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden{
@@ -23162,7 +22561,7 @@
 /area/vr/powered/mall/dorms/dorms2)
 "sww" = (
 /obj/effect/wingrille_spawn/reinforced,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel/turfpack/station,
 /area/vr/powered/building2)
 "swz" = (
 /obj/structure/bed/chair/comfy/brown{
@@ -23217,10 +22616,7 @@
 /obj/machinery/light{
 	dir = 4
 	},
-/turf/simulated/floor/reinforced{
-	nitrogen = 93.7835;
-	oxygen = 20.7263
-	},
+/turf/simulated/floor/reinforced,
 /area/vr/powered/bluebase)
 "syC" = (
 /obj/machinery/bodyscanner,
@@ -23302,8 +22698,8 @@
 /turf/simulated/floor/plating,
 /area/vr/powered/space/sciship)
 "sBl" = (
-/turf/simulated/floor/outdoors/dirt{
-	temperature = 311
+/turf/simulated/floor/outdoors/dirt/thor{
+	outdoors = 0
 	},
 /area/vr/powered/rocks)
 "sBU" = (
@@ -23412,10 +22808,7 @@
 	name = "Fast Travel to Construct";
 	portal_id = 70
 	},
-/turf/simulated/floor/outdoors/sidewalk/slab{
-	movement_cost = 0;
-	temperature = 293.15
-	},
+/turf/simulated/floor/outdoors/sidewalk/slab/turfpack/station,
 /area/vr/outdoors/powered)
 "sFH" = (
 /obj/structure/table/reinforced,
@@ -23453,9 +22846,7 @@
 /area/vr/powered/dungeon)
 "sHe" = (
 /obj/structure/flora/ausbushes/lavendergrass,
-/turf/simulated/floor/outdoors/newdirt_nograss{
-	temperature = 293.15
-	},
+/turf/simulated/floor/outdoors/newdirt_nograss/turfpack/station,
 /area/vr/outdoors/powered/mall)
 "sHi" = (
 /obj/structure/table/marble,
@@ -23483,7 +22874,7 @@
 /turf/simulated/floor/tiled,
 /area/vr/powered/vet)
 "sHT" = (
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel/turfpack/station,
 /area/vr/powered/space/mechfactory)
 "sIg" = (
 /obj/effect/floor_decal/corner/purple/diagonal{
@@ -23526,13 +22917,7 @@
 	color = "red";
 	icon_state = "remainsposi"
 	},
-/turf/simulated/floor/beach/sand/desert{
-	can_atmos_pass = 0;
-	nitrogen = 0;
-	outdoors = 0;
-	oxygen = 0;
-	temperature = 311
-	},
+/turf/simulated/floor/beach/sand/desert/turfpack/thor,
 /area/vr/powered/rocks)
 "sJv" = (
 /obj/structure/table/darkglass,
@@ -23572,9 +22957,7 @@
 	dir = 8
 	},
 /obj/structure/flora/ausbushes/sparsegrass,
-/turf/simulated/floor/outdoors/grass{
-	temperature = 293.15
-	},
+/turf/simulated/floor/outdoors/grass/turfpack/station,
 /area/vr/outdoors/powered)
 "sKU" = (
 /obj/machinery/door/airlock/glass_medical{
@@ -23752,16 +23135,11 @@
 /area/vr/powered/mall)
 "sUw" = (
 /obj/structure/flora/ausbushes/ppflowers,
-/turf/simulated/floor/outdoors/newdirt_nograss{
-	temperature = 293.15
-	},
+/turf/simulated/floor/outdoors/newdirt_nograss/turfpack/station,
 /area/vr/outdoors/powered)
 "sUK" = (
 /obj/structure/flora/ausbushes/ywflowers,
-/turf/simulated/floor/outdoors/sidewalk/slab{
-	movement_cost = 0;
-	temperature = 293.15
-	},
+/turf/simulated/floor/outdoors/sidewalk/slab/turfpack/thor,
 /area/vr/outdoors/powered)
 "sVe" = (
 /obj/structure/table/marble{
@@ -23792,14 +23170,14 @@
 	dir = 9
 	},
 /turf/simulated/floor/water/indoors{
-	temperature = 293.15
+	temperature = 293.15;
+	nitrogen = 82.1472;
+	oxygen = 21.8366
 	},
 /area/vr/powered/dungeon)
 "sVq" = (
 /obj/structure/flora/lily2,
-/turf/simulated/floor/water{
-	temperature = 311
-	},
+/turf/simulated/floor/water/turfpack/thor,
 /area/vr/outdoors/powered)
 "sVX" = (
 /turf/simulated/floor/wood/alt/tile,
@@ -23913,9 +23291,7 @@
 /obj/structure/railing/grey{
 	dir = 8
 	},
-/turf/simulated/floor/outdoors/grass{
-	temperature = 293.15
-	},
+/turf/simulated/floor/outdoors/grass/turfpack/station,
 /area/vr/outdoors/powered/mall)
 "tfh" = (
 /obj/structure/table/rack/shelf/steel,
@@ -24044,16 +23420,14 @@
 /area/vr/powered/cult)
 "tkF" = (
 /obj/item/clothing/head/cone,
-/turf/simulated/floor/outdoors/grass{
-	temperature = 293.15
-	},
+/turf/simulated/floor/outdoors/grass/turfpack/station,
 /area/vr/outdoors/powered)
 "tlY" = (
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 5
 	},
 /obj/item/shovel/spade,
-/turf/simulated/floor/beach/sand/desert,
+/turf/simulated/floor/beach/sand/desert/turfpack/thor,
 /area/vr/outdoors/powered/mall)
 "tmd" = (
 /obj/machinery/vending/magivend,
@@ -24127,10 +23501,7 @@
 /obj/structure/cliff/automatic{
 	dir = 10
 	},
-/turf/simulated/floor/lava{
-	nitrogen = 93.7835;
-	oxygen = 20.7263
-	},
+/turf/simulated/floor/lava,
 /area/vr/outdoors/powered/lava)
 "tph" = (
 /obj/structure/bed/chair/oldsofa/left{
@@ -24190,9 +23561,7 @@
 /area/vr/powered)
 "ttc" = (
 /obj/structure/prop/rock/small/wateralt,
-/turf/simulated/floor/water{
-	temperature = 311
-	},
+/turf/simulated/floor/water/turfpack/thor,
 /area/vr/outdoors/powered)
 "ttd" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/yellow,
@@ -24209,7 +23578,8 @@
 /area/vr/powered/space/whiteship)
 "ttg" = (
 /turf/simulated/floor/water/beach{
-	temperature = 293.15
+	temperature = 293.15;
+	oxygen = 21.8366
 	},
 /area/vr/outdoors/powered)
 "tto" = (
@@ -24296,9 +23666,7 @@
 /obj/item/shovel,
 /obj/item/material/knife/machete/hatchet,
 /obj/item/material/knife/machete/hatchet,
-/turf/simulated/floor/outdoors/grass{
-	temperature = 293.15
-	},
+/turf/simulated/floor/outdoors/grass/turfpack/station,
 /area/vr/outdoors/powered)
 "tvH" = (
 /obj/machinery/recharge_station,
@@ -24312,7 +23680,7 @@
 /obj/item/disk/nifsoft/compliance,
 /obj/item/disk/nifsoft/compliance,
 /obj/item/card/emag,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel/turfpack/station,
 /area/vr/powered/building2)
 "tvX" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
@@ -24553,11 +23921,11 @@
 /obj/machinery/light{
 	layer = 3
 	},
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel/turfpack/station,
 /area/vr/powered/building2)
 "tGm" = (
 /obj/random/maintenance/engineering,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel/turfpack/station,
 /area/vr/powered/space/mechfactory)
 "tGE" = (
 /obj/structure/railing/grey,
@@ -24584,15 +23952,14 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/vr/powered/space/sciship)
 "tHK" = (
-/turf/simulated/floor/outdoors/dirt{
-	outdoors = 0;
-	temperature = 293.15
-	},
+/turf/simulated/floor/outdoors/dirt/thor,
 /area/vr/powered/dungeon)
 "tHR" = (
 /turf/simulated/floor/water{
 	outdoors = 0;
-	temperature = 311
+	temperature = 313;
+	nitrogen = 63.4124;
+	oxygen = 34.1451
 	},
 /area/vr/outdoors/powered)
 "tIS" = (
@@ -24647,7 +24014,9 @@
 "tKh" = (
 /mob/living/simple_mob/animal/giant_spider/tunneler,
 /turf/simulated/floor/water/indoors{
-	temperature = 293.15
+	temperature = 293.15;
+	nitrogen = 82.1472;
+	oxygen = 21.8366
 	},
 /area/vr/powered/dungeon)
 "tKx" = (
@@ -24725,13 +24094,7 @@
 /area/vr/powered/mall/dorms/secondlife5)
 "tOD" = (
 /obj/item/storage/box/wormcan/sickly,
-/turf/simulated/floor/beach/sand/desert{
-	can_atmos_pass = 0;
-	nitrogen = 0;
-	outdoors = 0;
-	oxygen = 0;
-	temperature = 311
-	},
+/turf/simulated/floor/beach/sand/desert/turfpack/thor,
 /area/vr/outdoors/powered)
 "tOX" = (
 /obj/structure/table/glass,
@@ -24767,11 +24130,7 @@
 /turf/simulated/floor/wood/alt/panel,
 /area/vr/powered/mall)
 "tPv" = (
-/turf/simulated/floor/outdoors/sidewalk/side{
-	icon_state = "sidewalk";
-	movement_cost = 0;
-	temperature = 293.15
-	},
+/turf/simulated/floor/outdoors/sidewalk/turfpack/station,
 /area/vr/outdoors/powered)
 "tPw" = (
 /obj/structure/prop/rock/waterflat,
@@ -24926,10 +24285,7 @@
 /turf/simulated/shuttle/floor/white,
 /area/vr/powered/dungeon)
 "tUn" = (
-/turf/simulated/floor/grass2{
-	outdoors = 1;
-	temperature = 311
-	},
+/turf/simulated/floor/grass2/turfpack/thor,
 /area/vr/outdoors/powered)
 "tUD" = (
 /obj/structure/window/reinforced/tinted/frosted{
@@ -24976,10 +24332,7 @@
 /area/vr/powered/space/sciship)
 "tWV" = (
 /obj/structure/flora/bboulder2,
-/turf/simulated/floor/outdoors/grass/heavy{
-	can_atmos_pass = 0;
-	temperature = 311
-	},
+/turf/simulated/floor/outdoors/grass/heavy/thor,
 /area/vr/outdoors/powered)
 "tXa" = (
 /obj/machinery/light/small{
@@ -24995,7 +24348,7 @@
 /obj/machinery/light/small{
 	dir = 1
 	},
-/turf/simulated/floor/beach/sand/desert,
+/turf/simulated/floor/beach/sand/desert/turfpack/thor,
 /area/vr/powered/mall/vw)
 "tXo" = (
 /obj/structure/table/alien/blue,
@@ -25012,10 +24365,7 @@
 /obj/structure/fence/end{
 	dir = 8
 	},
-/turf/simulated/floor/outdoors/grass/heavy{
-	can_atmos_pass = 0;
-	temperature = 311
-	},
+/turf/simulated/floor/outdoors/grass/heavy/thor,
 /area/vr/outdoors/powered)
 "tYL" = (
 /obj/effect/floor_decal/milspec/color/silver,
@@ -25060,7 +24410,7 @@
 	amount = 20
 	},
 /obj/fiftyspawner/steel,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel/turfpack/station,
 /area/vr/powered/space/mechfactory)
 "tZj" = (
 /obj/effect/decal/cleanable/dirt,
@@ -25238,14 +24588,11 @@
 /obj/structure/table/steel_reinforced,
 /obj/item/gun/energy/sizegun,
 /obj/item/gun/energy/sizegun,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel/turfpack/station,
 /area/vr/powered/building2)
 "udN" = (
 /obj/structure/flora/ausbushes/ppflowers,
-/turf/simulated/floor/outdoors/grass/heavy{
-	can_atmos_pass = 0;
-	temperature = 311
-	},
+/turf/simulated/floor/outdoors/grass/heavy/thor,
 /area/vr/outdoors/powered)
 "udR" = (
 /turf/simulated/floor/carpet/bcarpet,
@@ -25264,7 +24611,9 @@
 "ufu" = (
 /turf/simulated/floor/water/beach{
 	outdoors = 0;
-	temperature = 311
+	temperature = 313;
+	nitrogen = 63.4124;
+	oxygen = 34.1451
 	},
 /area/vr/outdoors/powered)
 "ufK" = (
@@ -25278,7 +24627,9 @@
 "uga" = (
 /obj/structure/flora/log1,
 /turf/simulated/floor/water/deep{
-	temperature = 311
+	temperature = 313;
+	nitrogen = 63.4124;
+	oxygen = 34.1451
 	},
 /area/vr/outdoors/powered)
 "ugj" = (
@@ -25348,10 +24699,7 @@
 /turf/simulated/floor/bmarble,
 /area/vr/powered/mall)
 "uiA" = (
-/turf/simulated/floor/outdoors/sidewalk/slab{
-	movement_cost = 0;
-	temperature = 293.15
-	},
+/turf/simulated/floor/outdoors/sidewalk/slab/turfpack/station,
 /area/vr/outdoors/powered)
 "uiI" = (
 /obj/effect/decal/cleanable/dirt,
@@ -25408,9 +24756,7 @@
 /obj/effect/landmark/virtual_reality{
 	name = "Mall"
 	},
-/turf/simulated/floor/outdoors/newdirt_nograss{
-	temperature = 293.15
-	},
+/turf/simulated/floor/outdoors/newdirt_nograss/turfpack/station,
 /area/vr/outdoors/powered)
 "ulc" = (
 /obj/item/stool/padded,
@@ -25446,13 +24792,7 @@
 "unf" = (
 /mob/living/simple_mob/vore/bigdragon,
 /obj/item/ammo_casing/a145,
-/turf/simulated/floor/beach/sand/desert{
-	can_atmos_pass = 0;
-	nitrogen = 0;
-	outdoors = 0;
-	oxygen = 0;
-	temperature = 311
-	},
+/turf/simulated/floor/beach/sand/desert/turfpack/thor,
 /area/vr/powered/rocks)
 "uno" = (
 /obj/machinery/light/small,
@@ -25516,13 +24856,7 @@
 /area/vr/powered)
 "uqk" = (
 /obj/structure/outcrop/diamond,
-/turf/simulated/floor/beach/sand/desert{
-	can_atmos_pass = 0;
-	nitrogen = 0;
-	outdoors = 0;
-	oxygen = 0;
-	temperature = 311
-	},
+/turf/simulated/floor/beach/sand/desert/turfpack/thor,
 /area/vr/powered/rocks)
 "uqx" = (
 /obj/structure/table/hardwoodtable,
@@ -25563,13 +24897,7 @@
 /turf/simulated/floor/carpet/blue,
 /area/vr/powered/motel)
 "usz" = (
-/turf/simulated/floor/beach/sand/desert{
-	can_atmos_pass = 0;
-	nitrogen = 0;
-	outdoors = 0;
-	oxygen = 0;
-	temperature = 311
-	},
+/turf/simulated/floor/beach/sand/desert/turfpack/thor,
 /area/vr/powered/rocks)
 "usM" = (
 /obj/structure/simple_door/flock,
@@ -25589,10 +24917,7 @@
 /area/vr/powered/cult)
 "utF" = (
 /obj/item/storage/bag/trash,
-/turf/simulated/floor/outdoors/grass/heavy{
-	can_atmos_pass = 0;
-	temperature = 311
-	},
+/turf/simulated/floor/outdoors/grass/heavy/thor,
 /area/vr/outdoors/powered)
 "utS" = (
 /obj/structure/table/hardwoodtable,
@@ -25678,10 +25003,7 @@
 /area/vr/powered/mall)
 "uyL" = (
 /obj/structure/fence,
-/turf/simulated/floor/outdoors/grass/heavy{
-	can_atmos_pass = 0;
-	temperature = 311
-	},
+/turf/simulated/floor/outdoors/grass/heavy/thor,
 /area/vr/outdoors/powered)
 "uzr" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
@@ -25720,7 +25042,7 @@
 /area/vr/powered/bar)
 "uzT" = (
 /obj/structure/closet/crate/trashcart,
-/turf/simulated/floor/outdoors/road,
+/turf/simulated/floor/outdoors/road/turfpack/station,
 /area/vr/outdoors/powered)
 "uzU" = (
 /obj/effect/wingrille_spawn/reinforced,
@@ -25782,10 +25104,7 @@
 	hacked = 1;
 	name = "hacked autolathe"
 	},
-/turf/simulated/floor/reinforced{
-	nitrogen = 93.7835;
-	oxygen = 20.7263
-	},
+/turf/simulated/floor/reinforced,
 /area/vr/powered/redbase)
 "uCI" = (
 /obj/machinery/vending/tool{
@@ -25847,7 +25166,7 @@
 /obj/random/soap,
 /obj/random/soap,
 /obj/random/soap,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel/turfpack/station,
 /area/vr/powered/building2)
 "uFw" = (
 /obj/machinery/atmospherics/pipe/tank/phoron/full,
@@ -25889,10 +25208,7 @@
 /obj/item/storage/belt/utility/full/multitool{
 	pixel_y = 6
 	},
-/turf/simulated/floor/outdoors/sidewalk/slab{
-	movement_cost = 0;
-	temperature = 293.15
-	},
+/turf/simulated/floor/outdoors/sidewalk/slab/turfpack/station,
 /area/vr/outdoors/powered)
 "uGW" = (
 /obj/structure/closet/cabinet,
@@ -25984,10 +25300,7 @@
 /area/vr/powered/mall)
 "uIK" = (
 /obj/effect/decal/remains/ribcage,
-/turf/simulated/floor/lava{
-	nitrogen = 93.7835;
-	oxygen = 20.7263
-	},
+/turf/simulated/floor/lava,
 /area/vr/outdoors/powered/lava)
 "uIR" = (
 /obj/machinery/light{
@@ -26123,7 +25436,7 @@
 /area/vr/powered)
 "uNG" = (
 /obj/item/tape/police,
-/turf/simulated/floor/outdoors/road,
+/turf/simulated/floor/outdoors/road/turfpack/station,
 /area/vr/powered/rocks)
 "uOu" = (
 /obj/structure/salvageable/implant_container_os,
@@ -26137,9 +25450,7 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/vr/powered/dungeon)
 "uOW" = (
-/turf/simulated/floor/outdoors/newdirt_nograss{
-	temperature = 293.15
-	},
+/turf/simulated/floor/outdoors/newdirt_nograss/turfpack/station,
 /area/vr/space)
 "uPj" = (
 /obj/machinery/button/windowtint{
@@ -26214,10 +25525,7 @@
 /area/vr/powered/mall)
 "uQq" = (
 /obj/structure/flora/bboulder1,
-/turf/simulated/floor/outdoors/grass/heavy{
-	can_atmos_pass = 0;
-	temperature = 311
-	},
+/turf/simulated/floor/outdoors/grass/heavy/thor,
 /area/vr/outdoors/powered)
 "uQL" = (
 /obj/machinery/power/smes/buildable/hybrid,
@@ -26289,10 +25597,7 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/vr/powered/mall/secondlife)
 "uUX" = (
-/turf/simulated/floor/outdoors/sidewalk/slab{
-	movement_cost = 0;
-	temperature = 293.15
-	},
+/turf/simulated/floor/outdoors/sidewalk/slab/turfpack/station,
 /area/vr/outdoors/powered/mall)
 "uVh" = (
 /obj/structure/cliff/automatic,
@@ -26337,13 +25642,7 @@
 	color = "red";
 	icon_state = "gib3"
 	},
-/turf/simulated/floor/beach/sand/desert{
-	can_atmos_pass = 0;
-	nitrogen = 0;
-	outdoors = 0;
-	oxygen = 0;
-	temperature = 311
-	},
+/turf/simulated/floor/beach/sand/desert/turfpack/thor,
 /area/vr/powered/rocks)
 "uXy" = (
 /obj/effect/floor_decal/corner/black/diagonal,
@@ -26354,9 +25653,7 @@
 /area/vr/powered/mall/dorms/dorms4)
 "uXF" = (
 /obj/structure/prop/rock/watersharp,
-/turf/simulated/floor/water{
-	temperature = 311
-	},
+/turf/simulated/floor/water/turfpack/thor,
 /area/vr/outdoors/powered)
 "uXX" = (
 /obj/machinery/vending/medical{
@@ -26443,9 +25740,7 @@
 /area/vr/powered/mall/dorms/dorms5)
 "vdd" = (
 /obj/structure/flora/ausbushes/sparsegrass,
-/turf/simulated/floor/outdoors/grass{
-	temperature = 293.15
-	},
+/turf/simulated/floor/outdoors/grass/turfpack/station,
 /area/vr/outdoors/powered)
 "vdj" = (
 /obj/structure/bed/chair/sofa/left/brown{
@@ -26569,7 +25864,9 @@
 /obj/structure/prop/rock/small/water,
 /turf/simulated/floor/water{
 	outdoors = 0;
-	temperature = 311
+	temperature = 313;
+	nitrogen = 63.4124;
+	oxygen = 34.1451
 	},
 /area/vr/powered/rocks)
 "vil" = (
@@ -26586,11 +25883,7 @@
 	name = "Fast Travel to Beachhouses";
 	portal_id = 69
 	},
-/turf/simulated/floor/beach/sand/desert{
-	can_atmos_pass = 0;
-	outdoors = 1;
-	temperature = 311
-	},
+/turf/simulated/floor/beach/sand/desert/turfpack/station,
 /area/vr/outdoors/powered)
 "vjd" = (
 /obj/structure/bed/pillowpile/red,
@@ -26666,7 +25959,7 @@
 	dir = 8;
 	portal_id = "vrdungeon"
 	},
-/turf/simulated/floor/outdoors/road,
+/turf/simulated/floor/outdoors/road/turfpack/station,
 /area/vr/powered/rocks)
 "vlV" = (
 /obj/structure/bed/double/padded,
@@ -26793,18 +26086,14 @@
 /area/vr/powered/mall)
 "vqv" = (
 /obj/item/ammo_casing/a145,
-/turf/simulated/floor/beach/sand/desert{
-	can_atmos_pass = 0;
-	nitrogen = 0;
-	outdoors = 0;
-	oxygen = 0;
-	temperature = 311
-	},
+/turf/simulated/floor/beach/sand/desert/turfpack/thor,
 /area/vr/powered/rocks)
 "vqw" = (
 /obj/structure/cliff/automatic,
 /turf/simulated/floor/water/indoors{
-	temperature = 293.15
+	temperature = 293.15;
+	nitrogen = 82.1472;
+	oxygen = 21.8366
 	},
 /area/vr/powered/dungeon)
 "vrb" = (
@@ -26929,9 +26218,7 @@
 	dir = 8;
 	health = 1e+006
 	},
-/turf/simulated/floor/outdoors/dirt{
-	temperature = 311
-	},
+/turf/simulated/floor/outdoors/dirt/thor,
 /area/vr/outdoors/powered)
 "vwl" = (
 /obj/structure/bed/chair/sofa/right/beige{
@@ -26960,9 +26247,7 @@
 /obj/structure/railing/grey{
 	dir = 8
 	},
-/turf/simulated/floor/outdoors/grass{
-	temperature = 293.15
-	},
+/turf/simulated/floor/outdoors/grass/turfpack/station,
 /area/vr/outdoors/powered)
 "vzc" = (
 /obj/machinery/recharger/wallcharger{
@@ -27228,23 +26513,18 @@
 /area/vr/powered/vet)
 "vKn" = (
 /turf/simulated/floor/water/beach/corner{
-	temperature = 293.15
+	temperature = 293.15;
+	nitrogen = 82.1472
 	},
 /area/vr/outdoors/powered)
 "vKp" = (
 /obj/structure/railing{
 	dir = 1
 	},
-/turf/simulated/floor/outdoors/sidewalk/side{
-	movement_cost = 0;
-	temperature = 293.15
-	},
+/turf/simulated/floor/outdoors/sidewalk/side/turfpack/station,
 /area/vr/outdoors/powered)
 "vKr" = (
-/turf/simulated/floor/outdoors/grass/heavy{
-	can_atmos_pass = 0;
-	temperature = 311
-	},
+/turf/simulated/floor/outdoors/grass/heavy/thor,
 /area/vr/outdoors/powered)
 "vKu" = (
 /obj/effect/decal/remains,
@@ -27274,10 +26554,7 @@
 /area/vr/powered/dungeon)
 "vNz" = (
 /mob/living/simple_mob/animal/passive/bird/parrot/kea,
-/turf/simulated/floor/outdoors/grass/heavy{
-	can_atmos_pass = 0;
-	temperature = 311
-	},
+/turf/simulated/floor/outdoors/grass/heavy/thor,
 /area/vr/outdoors/powered)
 "vOm" = (
 /obj/machinery/sleeper{
@@ -27473,7 +26750,9 @@
 "vWC" = (
 /mob/living/simple_mob/animal/passive/fish/salmon,
 /turf/simulated/floor/water/deep{
-	temperature = 311
+	temperature = 313;
+	nitrogen = 63.4124;
+	oxygen = 34.1451
 	},
 /area/vr/outdoors/powered)
 "vWQ" = (
@@ -27486,7 +26765,9 @@
 "vWS" = (
 /turf/simulated/floor/water/beach{
 	dir = 4;
-	temperature = 311
+	temperature = 313;
+	nitrogen = 63.4124;
+	oxygen = 34.1451
 	},
 /area/vr/outdoors/powered)
 "vXA" = (
@@ -27515,9 +26796,7 @@
 /area/vr/powered/dungeon)
 "vXY" = (
 /obj/structure/flora/lily3,
-/turf/simulated/floor/water{
-	temperature = 311
-	},
+/turf/simulated/floor/water/turfpack/thor,
 /area/vr/outdoors/powered)
 "vYq" = (
 /obj/structure/grille/cult,
@@ -27585,13 +26864,7 @@
 /area/vr/powered/space/whiteship)
 "wat" = (
 /obj/item/material/fishing_net,
-/turf/simulated/floor/beach/sand/desert{
-	can_atmos_pass = 0;
-	nitrogen = 0;
-	outdoors = 0;
-	oxygen = 0;
-	temperature = 311
-	},
+/turf/simulated/floor/beach/sand/desert/turfpack/thor,
 /area/vr/outdoors/powered)
 "waF" = (
 /obj/structure/closet/athletic_mixed,
@@ -27690,9 +26963,7 @@
 /turf/simulated/floor/tiled/steel_dirty,
 /area/vr/powered/space/mechfactory)
 "wfq" = (
-/turf/simulated/floor/water{
-	temperature = 293.15
-	},
+/turf/simulated/floor/water/turfpack/station,
 /area/vr/outdoors/powered)
 "wfu" = (
 /obj/machinery/atmospherics/unary/vent_pump/on,
@@ -27715,13 +26986,7 @@
 	color = "red";
 	icon_state = "gibup1_flesh"
 	},
-/turf/simulated/floor/beach/sand/desert{
-	can_atmos_pass = 0;
-	nitrogen = 0;
-	outdoors = 0;
-	oxygen = 0;
-	temperature = 311
-	},
+/turf/simulated/floor/beach/sand/desert/turfpack/thor,
 /area/vr/powered/rocks)
 "wfN" = (
 /obj/structure/table/woodentable,
@@ -27735,10 +27000,7 @@
 /obj/machinery/light{
 	dir = 1
 	},
-/turf/simulated/floor/outdoors/dirt{
-	outdoors = 0;
-	temperature = 293.15
-	},
+/turf/simulated/floor/outdoors/dirt/thor,
 /area/vr/powered/dungeon)
 "wgL" = (
 /obj/effect/floor_decal/corner/purple/border{
@@ -27851,9 +27113,7 @@
 /obj/structure/railing/grey{
 	dir = 4
 	},
-/turf/simulated/floor/outdoors/grass{
-	temperature = 293.15
-	},
+/turf/simulated/floor/outdoors/grass/turfpack/station,
 /area/vr/outdoors/powered)
 "wjI" = (
 /obj/structure/table/darkglass,
@@ -27979,10 +27239,7 @@
 /turf/simulated/floor/carpet/retro,
 /area/vr/powered/mall)
 "wpx" = (
-/turf/simulated/floor/water/pool{
-	outdoors = 1;
-	temperature = 293.15
-	},
+/turf/simulated/floor/water/pool/turfpack/station,
 /area/vr/outdoors/powered/mall)
 "wpA" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow,
@@ -28003,9 +27260,7 @@
 /area/vr/powered/mall)
 "wqh" = (
 /obj/structure/flora/ausbushes/ywflowers,
-/turf/simulated/floor/outdoors/grass{
-	temperature = 293.15
-	},
+/turf/simulated/floor/outdoors/grass/turfpack/station,
 /area/vr/outdoors/powered/mall)
 "wrr" = (
 /obj/machinery/door/airlock/sandstone{
@@ -28133,7 +27388,7 @@
 /turf/simulated/floor/wood/alt/parquet/turfpack,
 /area/vr/powered/mall)
 "wzb" = (
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel/turfpack/station,
 /area/vr/powered/conspawn)
 "wAt" = (
 /obj/structure/sink{
@@ -28156,7 +27411,7 @@
 	pixel_y = 3
 	},
 /obj/item/storage/toolbox/electrical,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel/turfpack/station,
 /area/vr/powered/space/mechfactory)
 "wAA" = (
 /turf/simulated/wall,
@@ -28184,7 +27439,7 @@
 /obj/machinery/vending/engivend{
 	emagged = 1
 	},
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel/turfpack/station,
 /area/vr/powered/space/mechfactory)
 "wBO" = (
 /obj/structure/sign/warning/lethal_turrets{
@@ -28247,7 +27502,7 @@
 /obj/item/implanter/compliance{
 	pixel_y = 8
 	},
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel/turfpack/station,
 /area/vr/powered/building2)
 "wDy" = (
 /obj/structure/table/rack/shelf/wood,
@@ -28262,8 +27517,8 @@
 /area/vr/powered/mall)
 "wEa" = (
 /obj/structure/prop/statue/lion,
-/turf/simulated/floor/outdoors/dirt{
-	temperature = 311
+/turf/simulated/floor/outdoors/dirt/thor{
+	outdoors = 0
 	},
 /area/vr/powered/rocks)
 "wEq" = (
@@ -28283,7 +27538,7 @@
 /obj/machinery/light/small{
 	dir = 1
 	},
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel/turfpack/station,
 /area/vr/powered/space/mechfactory)
 "wEW" = (
 /obj/structure/table/hardwoodtable,
@@ -28336,13 +27591,7 @@
 /area/vr/powered/mall)
 "wGG" = (
 /obj/item/clothing/head/helmet/bulletproof,
-/turf/simulated/floor/beach/sand/desert{
-	can_atmos_pass = 0;
-	nitrogen = 0;
-	outdoors = 0;
-	oxygen = 0;
-	temperature = 311
-	},
+/turf/simulated/floor/beach/sand/desert/turfpack/thor,
 /area/vr/powered/rocks)
 "wGQ" = (
 /turf/unsimulated/floor{
@@ -28518,11 +27767,7 @@
 "wNK" = (
 /obj/structure/table/standard,
 /obj/item/gun/projectile/automatic/serdy/memegun,
-/turf/simulated/floor/beach/sand/desert{
-	can_atmos_pass = 0;
-	outdoors = 1;
-	temperature = 311
-	},
+/turf/simulated/floor/beach/sand/desert/turfpack/thor,
 /area/vr/outdoors/powered)
 "wNS" = (
 /obj/structure/table/bench/wooden,
@@ -28545,9 +27790,8 @@
 /area/vr/powered/space/whiteship)
 "wOc" = (
 /obj/structure/prop/rock,
-/turf/simulated/floor/outdoors/dirt{
-	outdoors = 0;
-	temperature = 311
+/turf/simulated/floor/outdoors/dirt/thor{
+	outdoors = 0
 	},
 /area/vr/powered/rocks)
 "wPa" = (
@@ -28566,10 +27810,7 @@
 /obj/structure/cliff/automatic{
 	dir = 6
 	},
-/turf/simulated/floor/lava{
-	nitrogen = 93.7835;
-	oxygen = 20.7263
-	},
+/turf/simulated/floor/lava,
 /area/vr/outdoors/powered/lava)
 "wPJ" = (
 /obj/structure/table/steel_reinforced,
@@ -28624,11 +27865,7 @@
 /area/vr/powered/mall/secondlife)
 "wRG" = (
 /obj/structure/railing,
-/turf/simulated/floor/beach/sand/desert{
-	can_atmos_pass = 0;
-	outdoors = 1;
-	temperature = 311
-	},
+/turf/simulated/floor/beach/sand/desert/turfpack/thor,
 /area/vr/outdoors/powered)
 "wSj" = (
 /obj/effect/floor_decal/corner/black/diagonal,
@@ -28885,9 +28122,7 @@
 /turf/simulated/floor/wood,
 /area/vr/powered/bar)
 "wYi" = (
-/turf/simulated/floor/outdoors/newdirt_nograss{
-	temperature = 293.15
-	},
+/turf/simulated/floor/outdoors/newdirt_nograss/turfpack/station,
 /area/vr/powered/dungeon)
 "wYr" = (
 /obj/machinery/light{
@@ -28907,11 +28142,7 @@
 /obj/structure/table/standard,
 /obj/item/ammo_magazine/akm,
 /obj/item/ammo_magazine/akm,
-/turf/simulated/floor/beach/sand/desert{
-	can_atmos_pass = 0;
-	outdoors = 1;
-	temperature = 311
-	},
+/turf/simulated/floor/beach/sand/desert/turfpack/thor,
 /area/vr/outdoors/powered)
 "xbs" = (
 /obj/structure/table/fancyblack,
@@ -29013,13 +28244,7 @@
 	color = "red";
 	icon_state = "gibbearhead"
 	},
-/turf/simulated/floor/beach/sand/desert{
-	can_atmos_pass = 0;
-	nitrogen = 0;
-	outdoors = 0;
-	oxygen = 0;
-	temperature = 311
-	},
+/turf/simulated/floor/beach/sand/desert/turfpack/thor,
 /area/vr/powered/rocks)
 "xfV" = (
 /obj/structure/reagent_dispensers/fueltank/high,
@@ -29030,10 +28255,7 @@
 /obj/machinery/light/bigfloorlamp{
 	light_range = 10
 	},
-/turf/simulated/floor/outdoors/grass/heavy{
-	can_atmos_pass = 0;
-	temperature = 311
-	},
+/turf/simulated/floor/outdoors/grass/heavy/thor,
 /area/vr/outdoors/powered)
 "xgs" = (
 /obj/effect/floor_decal/corner/blue/diagonal{
@@ -29070,7 +28292,9 @@
 	dir = 10
 	},
 /turf/simulated/floor/water/indoors{
-	temperature = 293.15
+	temperature = 293.15;
+	nitrogen = 82.1472;
+	oxygen = 21.8366
 	},
 /area/vr/powered/dungeon)
 "xiz" = (
@@ -29089,10 +28313,7 @@
 	name = "Fast Travel to City";
 	portal_id = 75
 	},
-/turf/simulated/floor/outdoors/sidewalk/slab{
-	movement_cost = 0;
-	temperature = 293.15
-	},
+/turf/simulated/floor/outdoors/sidewalk/slab/turfpack/station,
 /area/vr/outdoors/powered)
 "xjq" = (
 /obj/effect/floor_decal/corner/red/diagonal,
@@ -29133,10 +28354,7 @@
 /obj/item/ammo_magazine/hectate,
 /obj/item/ammo_magazine/hectate,
 /obj/item/ammo_magazine/hectate,
-/turf/simulated/floor/reinforced{
-	nitrogen = 93.7835;
-	oxygen = 20.7263
-	},
+/turf/simulated/floor/reinforced,
 /area/vr/powered/bluebase)
 "xkt" = (
 /obj/machinery/chem_master,
@@ -29343,7 +28561,9 @@
 "xuz" = (
 /obj/effect/step_trigger/teleporter/bridge/south_to_north,
 /turf/simulated/floor/water/deep{
-	temperature = 311
+	temperature = 313;
+	nitrogen = 63.4124;
+	oxygen = 34.1451
 	},
 /area/vr/outdoors/powered)
 "xuH" = (
@@ -29410,10 +28630,7 @@
 /obj/item/gun/projectile/automatic/serdy/hectate,
 /obj/item/gun/projectile/automatic/serdy/awp,
 /obj/item/gun/projectile/automatic/serdy/awp,
-/turf/simulated/floor/reinforced{
-	nitrogen = 93.7835;
-	oxygen = 20.7263
-	},
+/turf/simulated/floor/reinforced,
 /area/vr/powered/redbase)
 "xys" = (
 /turf/simulated/mineral/alt{
@@ -29443,9 +28660,7 @@
 /area/vr/powered/cult)
 "xAg" = (
 /obj/structure/fence/hedge,
-/turf/simulated/floor/outdoors/grass{
-	temperature = 293.15
-	},
+/turf/simulated/floor/outdoors/grass/turfpack/station,
 /area/vr/outdoors/powered)
 "xAp" = (
 /obj/effect/floor_decal/spline/fancy{
@@ -29673,13 +28888,7 @@
 /obj/random/trash,
 /obj/random/trash,
 /obj/effect/decal/remains/deer,
-/turf/simulated/floor/beach/sand/desert{
-	can_atmos_pass = 0;
-	nitrogen = 0;
-	outdoors = 0;
-	oxygen = 0;
-	temperature = 311
-	},
+/turf/simulated/floor/beach/sand/desert/turfpack/thor,
 /area/vr/powered/rocks)
 "xIV" = (
 /obj/effect/floor_decal/corner/lime/border,
@@ -29805,7 +29014,7 @@
 /area/vr/powered/gunshop)
 "xOy" = (
 /obj/machinery/light/small,
-/turf/simulated/floor/outdoors/road,
+/turf/simulated/floor/outdoors/road/turfpack/station,
 /area/vr/powered/rocks)
 "xOT" = (
 /obj/structure/table/rack/shelf/steel,
@@ -29835,29 +29044,23 @@
 /area/vr/powered/mall)
 "xPR" = (
 /obj/machinery/floorlayer,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel/turfpack/station,
 /area/vr/powered/space/mechfactory)
 "xQB" = (
 /obj/machinery/light{
 	dir = 1
 	},
-/turf/simulated/floor/outdoors/road,
+/turf/simulated/floor/outdoors/road/turfpack/station,
 /area/vr/outdoors/powered)
 "xQE" = (
 /obj/fiftyspawner/wood,
-/turf/simulated/floor/outdoors/sidewalk/slab{
-	movement_cost = 0;
-	temperature = 293.15
-	},
+/turf/simulated/floor/outdoors/sidewalk/slab/turfpack/station,
 /area/vr/outdoors/powered)
 "xQL" = (
 /mob/living/simple_mob/vore/horse/big{
 	dir = 4
 	},
-/turf/simulated/floor/outdoors/grass/heavy{
-	can_atmos_pass = 0;
-	temperature = 311
-	},
+/turf/simulated/floor/outdoors/grass/heavy/thor,
 /area/vr/outdoors/powered)
 "xQT" = (
 /turf/simulated/wall/sandstonediamond,
@@ -29964,17 +29167,16 @@
 /obj/item/cell/slime,
 /obj/item/cell/slime,
 /obj/item/cell/slime,
-/turf/simulated/floor/reinforced{
-	nitrogen = 93.7835;
-	oxygen = 20.7263
-	},
+/turf/simulated/floor/reinforced,
 /area/vr/powered/redbase)
 "xXa" = (
 /obj/machinery/light/small{
 	dir = 1
 	},
 /turf/simulated/floor/water/indoors{
-	temperature = 293.15
+	temperature = 293.15;
+	nitrogen = 82.1472;
+	oxygen = 21.8366
 	},
 /area/vr/powered/dungeon)
 "xXe" = (
@@ -30020,16 +29222,12 @@
 /area/vr/powered/mall)
 "xYU" = (
 /obj/structure/flora/lily1,
-/turf/simulated/floor/water{
-	temperature = 311
-	},
+/turf/simulated/floor/water/turfpack/thor,
 /area/vr/outdoors/powered)
 "xZf" = (
 /obj/structure/railing/grey,
 /obj/structure/flora/ausbushes/lavendergrass,
-/turf/simulated/floor/outdoors/newdirt_nograss{
-	temperature = 293.15
-	},
+/turf/simulated/floor/outdoors/newdirt_nograss/turfpack/station,
 /area/vr/outdoors/powered/mall)
 "xZn" = (
 /obj/item/spacecash/ewallet{
@@ -30066,10 +29264,7 @@
 	},
 /obj/machinery/portable_atmospherics/hydroponics/soil,
 /obj/item/seeds/bluespacetomatoseed,
-/turf/simulated/floor/outdoors/grass/heavy{
-	can_atmos_pass = 0;
-	temperature = 311
-	},
+/turf/simulated/floor/outdoors/grass/heavy/thor,
 /area/vr/outdoors/powered)
 "yco" = (
 /turf/simulated/wall/r_wall,
@@ -30126,17 +29321,12 @@
 /obj/structure/railing{
 	dir = 8
 	},
-/turf/simulated/floor/water{
-	temperature = 311
-	},
+/turf/simulated/floor/water/turfpack/thor,
 /area/vr/outdoors/powered)
 "yey" = (
 /obj/structure/flora/rocks2,
 /mob/living/simple_mob/animal/passive/bird/black_bird,
-/turf/simulated/floor/outdoors/grass/heavy{
-	can_atmos_pass = 0;
-	temperature = 311
-	},
+/turf/simulated/floor/outdoors/grass/heavy/thor,
 /area/vr/outdoors/powered)
 "yeB" = (
 /obj/structure/table/hardwoodtable,
@@ -30175,7 +29365,9 @@
 "yfc" = (
 /obj/structure/cliff/automatic/corner,
 /turf/simulated/floor/water/indoors{
-	temperature = 293.15
+	temperature = 293.15;
+	nitrogen = 82.1472;
+	oxygen = 21.8366
 	},
 /area/vr/powered/dungeon)
 "yfs" = (
@@ -30235,10 +29427,7 @@
 "ygo" = (
 /obj/structure/flora/ausbushes/fullgrass,
 /obj/structure/flora/ausbushes/fullgrass,
-/turf/simulated/floor/outdoors/grass/heavy{
-	can_atmos_pass = 0;
-	temperature = 311
-	},
+/turf/simulated/floor/outdoors/grass/heavy/thor,
 /area/vr/outdoors/powered)
 "ygH" = (
 /obj/structure/window/phoronreinforced{
@@ -30250,7 +29439,7 @@
 /obj/machinery/light{
 	dir = 4
 	},
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel/turfpack/station,
 /area/vr/powered/building1)
 "yhp" = (
 /obj/effect/floor_decal/corner/purple/bordercorner{
@@ -31543,8 +30732,8 @@ ghG
 ghG
 ghG
 lyW
-hNG
-hNG
+sBl
+sBl
 oEZ
 oEZ
 oEZ
@@ -31802,7 +30991,7 @@ bec
 ghG
 ghG
 wEa
-hNG
+sBl
 oEZ
 oEZ
 oEZ
@@ -32059,8 +31248,8 @@ aiI
 hgi
 usM
 bzi
-hNG
-hNG
+sBl
+sBl
 fjR
 oEZ
 oEZ
@@ -32119,9 +31308,9 @@ qsk
 vZH
 aZv
 aZv
-fqb
+sdm
 viH
-fqb
+sdm
 vcM
 vcM
 uiA
@@ -32317,9 +31506,9 @@ nJZ
 hgi
 usM
 bzi
-hNG
-hNG
-hNG
+sBl
+sBl
+sBl
 oEZ
 oEZ
 oEZ
@@ -32377,9 +31566,9 @@ hiz
 hiz
 aZv
 aZv
-fqb
-fqb
-fqb
+sdm
+sdm
+sdm
 aZv
 aZv
 uiA
@@ -32575,9 +31764,9 @@ cME
 hgi
 usM
 bzi
-hNG
+sBl
 nKv
-hNG
+sBl
 oEZ
 oEZ
 oEZ
@@ -32834,8 +32023,8 @@ bec
 ghG
 ghG
 wEa
-hNG
-hNG
+sBl
+sBl
 oEZ
 oEZ
 oEZ
@@ -33090,9 +32279,9 @@ ghG
 ghG
 ghG
 ghG
-hNG
-hNG
-hNG
+sBl
+sBl
+sBl
 nKv
 oEZ
 oEZ
@@ -33344,13 +32533,13 @@ oEZ
 oEZ
 oEZ
 oEZ
-hNG
-hNG
-hNG
+sBl
+sBl
+sBl
 nKv
-hNG
-hNG
-hNG
+sBl
+sBl
+sBl
 oEZ
 oEZ
 oEZ
@@ -33602,11 +32791,11 @@ oEZ
 oEZ
 oEZ
 nKv
-hNG
-hNG
-hNG
-hNG
-hNG
+sBl
+sBl
+sBl
+sBl
+sBl
 oEZ
 oEZ
 oEZ
@@ -33859,9 +33048,9 @@ hHa
 oEZ
 oEZ
 oEZ
-hNG
-hNG
-hNG
+sBl
+sBl
+sBl
 fjR
 oEZ
 oEZ
@@ -33869,7 +33058,7 @@ oEZ
 oEZ
 oEZ
 keX
-hNG
+sBl
 sBl
 elg
 elg
@@ -34117,17 +33306,17 @@ hHa
 oEZ
 oEZ
 keX
-hNG
-hNG
-hNG
+sBl
+sBl
+sBl
 oEZ
 oEZ
 oEZ
 oEZ
-hNG
-hNG
-hNG
-hNG
+sBl
+sBl
+sBl
+sBl
 sBl
 elg
 elg
@@ -34374,18 +33563,18 @@ kcZ
 hHa
 oEZ
 oEZ
-hNG
-hNG
-hNG
+sBl
+sBl
+sBl
 oEZ
 oEZ
 oEZ
 oEZ
-hNG
-hNG
-hNG
-hNG
-hNG
+sBl
+sBl
+sBl
+sBl
+sBl
 oEZ
 elg
 eJA
@@ -34632,15 +33821,15 @@ kcZ
 hHa
 oEZ
 oEZ
-hNG
-hNG
+sBl
+sBl
 nKv
-hNG
+sBl
 oEZ
 fyf
-hNG
-hNG
-hNG
+sBl
+sBl
+sBl
 fyf
 oEZ
 oEZ
@@ -34891,14 +34080,14 @@ hHa
 oEZ
 oEZ
 wOc
-hNG
-hNG
-hNG
-hNG
-hNG
-hNG
-hNG
-hNG
+sBl
+sBl
+sBl
+sBl
+sBl
+sBl
+sBl
+sBl
 oEZ
 oEZ
 oEZ
@@ -35149,13 +34338,13 @@ hHa
 oEZ
 oEZ
 oEZ
-hNG
-hNG
+sBl
+sBl
 fyf
-hNG
-hNG
-hNG
-hNG
+sBl
+sBl
+sBl
+sBl
 wOc
 oEZ
 oEZ
@@ -35422,8 +34611,8 @@ vKr
 vKr
 vKr
 pha
-uiA
-uiA
+aad
+aad
 cem
 cIZ
 vKr
@@ -35507,9 +34696,9 @@ sns
 sns
 uiA
 uiA
-kIo
-kIo
-kIo
+sns
+sns
+sns
 wHR
 cKr
 cKr
@@ -35679,9 +34868,9 @@ vKr
 iQe
 pOg
 elg
-uiA
+aad
 oaU
-uiA
+aad
 vKr
 vKr
 vKr
@@ -35765,9 +34954,9 @@ sns
 sns
 uiA
 uiA
-kIo
-kIo
-kIo
+sns
+sns
+sns
 cKr
 cKr
 cKr
@@ -35939,7 +35128,7 @@ reW
 elg
 cxq
 sUK
-uiA
+aad
 vKr
 rgY
 vKr
@@ -36023,9 +35212,9 @@ sns
 sns
 uiA
 uiA
-kIo
+sns
 qTf
-kIo
+sns
 wHR
 cKr
 cKr
@@ -44001,7 +43190,7 @@ dRV
 kIl
 kIl
 sdm
-ttg
+aac
 wfq
 wfq
 wfq
@@ -44009,7 +43198,7 @@ wfq
 wfq
 wfq
 wfq
-wfq
+aab
 wfq
 wfq
 wfq
@@ -44259,7 +43448,7 @@ kIl
 kIl
 kIl
 sdm
-ttg
+aac
 wfq
 wfq
 wfq
@@ -44268,16 +43457,16 @@ wfq
 wfq
 wfq
 wfq
-mtS
-mtS
-mtS
+aaa
+aaa
+aaa
 wfq
 wfq
 wfq
 wfq
-mtS
-mtS
-mtS
+aaa
+aaa
+aaa
 wfq
 wfq
 jzk
@@ -44517,27 +43706,27 @@ kIl
 kIl
 vdd
 sdm
-ttg
+aac
 wfq
 wfq
 wfq
 wfq
 wfq
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 mtS
 mtS
 mtS
 mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
+aaa
+aaa
+aaa
+aaa
+aaa
 jzk
 sns
 sns
@@ -44775,27 +43964,27 @@ kIl
 kIl
 kIl
 sdm
-ttg
+aac
 wfq
 wfq
 wfq
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 jzk
 sns
 sns
@@ -45033,27 +44222,27 @@ dRV
 kIl
 kIl
 sdm
-ttg
+aac
 wfq
 wfq
 wfq
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 jzk
 sns
 sns
@@ -45291,27 +44480,27 @@ kIl
 gYA
 kIl
 sdm
-ttg
+aac
 wfq
 wfq
 wfq
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 jzk
 sns
 sns
@@ -45549,27 +44738,27 @@ dRV
 kIl
 kIl
 sdm
-ttg
+aac
 wfq
 wfq
 wfq
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 jzk
 sns
 sns
@@ -45807,27 +44996,27 @@ uiA
 uiA
 kIl
 sdm
-ttg
+aac
 wfq
 wfq
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 jzk
 sns
 sns
@@ -46065,27 +45254,27 @@ uiA
 uiA
 kIl
 sdm
-ttg
+aac
 wfq
 wfq
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 jzk
 sns
 sns
@@ -46323,27 +45512,27 @@ uiA
 uiA
 kIl
 sdm
-ttg
+aac
 wfq
 wfq
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 jzk
 sns
 sns
@@ -46581,27 +45770,27 @@ uiA
 uiA
 kIl
 sdm
-ttg
+aac
 wfq
 wfq
 wfq
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 jzk
 sns
 sns
@@ -46839,27 +46028,27 @@ uiA
 uiA
 kIl
 sdm
-ttg
+aac
 wfq
 wfq
 wfq
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 jzk
 sns
 sns
@@ -47097,27 +46286,27 @@ uiA
 uiA
 kIl
 sdm
-ttg
+aac
 wfq
 wfq
 wfq
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 jzk
 sns
 sns
@@ -47355,27 +46544,27 @@ uiA
 uiA
 kIl
 sdm
-ttg
+aac
 wfq
 wfq
 wfq
 wfq
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 jzk
 sns
 sns
@@ -47613,27 +46802,27 @@ uiA
 uiA
 kIl
 sdm
-ttg
+aac
 wfq
 wfq
 wfq
 wfq
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 jzk
 sns
 sns
@@ -47871,27 +47060,27 @@ uiA
 uiA
 crG
 sdm
-ttg
+aac
 wfq
 wfq
 wfq
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 jzk
 sns
 sns
@@ -48129,27 +47318,27 @@ uiA
 uiA
 kIl
 sdm
-ttg
+aac
 wfq
 wfq
 wfq
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 jzk
 sns
 sns
@@ -48387,27 +47576,27 @@ uiA
 uiA
 kIl
 sdm
-ttg
+aac
 wfq
 wfq
 wfq
 wfq
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 jzk
 sns
 sns
@@ -48645,27 +47834,27 @@ uiA
 uiA
 vdd
 sdm
-ttg
+aac
 wfq
 wfq
 wfq
 wfq
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 jzk
 sns
 sns
@@ -48903,27 +48092,27 @@ uiA
 uiA
 kIl
 sdm
-ttg
+aac
 wfq
 wfq
 wfq
 wfq
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 jzk
 sns
 sns
@@ -49161,27 +48350,27 @@ uiA
 uiA
 kIl
 sdm
-ttg
+aac
 wfq
 wfq
 wfq
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 jzk
 sns
 sns
@@ -49419,27 +48608,27 @@ uiA
 uiA
 kIl
 sdm
-ttg
+aac
 wfq
 wfq
 wfq
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
-mtS
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 jzk
 sns
 sns
@@ -55787,7 +54976,7 @@ kcZ
 kcZ
 pwc
 oEZ
-rnS
+aae
 bym
 bym
 bym
@@ -73358,7 +72547,7 @@ oEZ
 oEZ
 oEZ
 oEZ
-nKH
+fqb
 ufu
 tHR
 tHR
@@ -74133,7 +73322,7 @@ usz
 usz
 jrJ
 usz
-nKH
+fqb
 ufu
 tHR
 tHR
@@ -74650,7 +73839,7 @@ moA
 usz
 spC
 tOD
-nKH
+fqb
 ufu
 tHR
 tHR
@@ -74908,7 +74097,7 @@ squ
 usz
 usz
 tOD
-nKH
+fqb
 ufu
 tHR
 tHR
@@ -75165,8 +74354,8 @@ squ
 moA
 usz
 usz
-nKH
-nKH
+fqb
+fqb
 kmG
 pyc
 tHR
@@ -75423,9 +74612,9 @@ fBA
 usz
 usz
 usz
-nKH
-nKH
-nKH
+fqb
+fqb
+fqb
 ufu
 tHR
 tHR
@@ -75681,8 +74870,8 @@ usz
 usz
 oEZ
 usz
-nKH
-nKH
+fqb
+fqb
 ckt
 ufu
 tHR
@@ -75940,8 +75129,8 @@ oEZ
 oEZ
 oEZ
 oEZ
-nKH
-nKH
+fqb
+fqb
 ufu
 tHR
 tHR
@@ -81814,7 +81003,7 @@ oDb
 oDb
 oDb
 oDb
-oVM
+aaf
 kIl
 jPG
 jPG
@@ -82072,7 +81261,7 @@ oDb
 cIs
 iHV
 oDb
-oVM
+aaf
 kIl
 jPG
 jPG
@@ -82330,7 +81519,7 @@ oDb
 mOR
 afZ
 oDb
-oVM
+aaf
 kIl
 jPG
 jPG
@@ -82588,7 +81777,7 @@ oDb
 oDb
 tMF
 oDb
-oVM
+aaf
 vdd
 jPG
 jPG
@@ -82846,7 +82035,7 @@ rHw
 aJc
 rHw
 oDb
-oVM
+aaf
 kIl
 jPG
 jPG
@@ -83104,7 +82293,7 @@ oDb
 oDb
 sJh
 oDb
-oVM
+aaf
 crG
 jPG
 jPG
@@ -83362,7 +82551,7 @@ bos
 uZT
 cqn
 wkK
-oVM
+aaf
 kIl
 jPG
 jPG
@@ -83620,7 +82809,7 @@ hwS
 cqn
 cqn
 wkK
-oVM
+aaf
 kIl
 jPG
 jPG
@@ -83878,7 +83067,7 @@ gIm
 neC
 sNQ
 oDb
-tGE
+aag
 kIl
 jPG
 jPG
@@ -84136,7 +83325,7 @@ oDb
 oDb
 oDb
 oDb
-oVM
+aaf
 kIl
 jPG
 jPG
@@ -84394,7 +83583,7 @@ eKD
 qPP
 orV
 eKD
-oVM
+aaf
 kIl
 jPG
 jPG
@@ -84652,7 +83841,7 @@ eKD
 dVN
 gtl
 eKD
-oVM
+aaf
 kIl
 jPG
 jPG
@@ -84910,7 +84099,7 @@ eKD
 eKD
 qfZ
 eKD
-oVM
+aaf
 crG
 jPG
 jPG
@@ -85168,7 +84357,7 @@ oIG
 lMp
 oIG
 eKD
-oVM
+aaf
 kIl
 jPG
 jPG
@@ -85426,7 +84615,7 @@ eKD
 eKD
 hKT
 eKD
-oVM
+aaf
 kIl
 jPG
 jPG
@@ -85684,7 +84873,7 @@ wDy
 stq
 hFX
 ewx
-oVM
+aaf
 kIl
 jPG
 jPG
@@ -85942,7 +85131,7 @@ uJK
 hFX
 hFX
 ewx
-oVM
+aaf
 kIl
 jPG
 jPG
@@ -86200,7 +85389,7 @@ jGS
 wAv
 fDg
 eKD
-oVM
+aaf
 kIl
 jPG
 jPG
@@ -86458,7 +85647,7 @@ eKD
 eKD
 eKD
 eKD
-oVM
+aaf
 kIl
 jPG
 jPG
@@ -86716,7 +85905,7 @@ sWf
 nOQ
 oYF
 sWf
-oVM
+aaf
 kIl
 jPG
 jPG
@@ -86974,7 +86163,7 @@ sWf
 mJa
 vdb
 sWf
-oVM
+aaf
 vdd
 jPG
 jPG
@@ -87232,7 +86421,7 @@ sWf
 sWf
 auQ
 sWf
-oVM
+aaf
 kIl
 jPG
 jPG
@@ -87490,7 +86679,7 @@ dgT
 ppu
 dgT
 sWf
-oVM
+aaf
 kIl
 jPG
 jPG
@@ -87748,7 +86937,7 @@ sWf
 sWf
 iNx
 sWf
-tGE
+aag
 kIl
 jPG
 jPG
@@ -88006,7 +87195,7 @@ oYU
 ehz
 dED
 uCK
-oVM
+aaf
 kIl
 jPG
 jPG
@@ -88264,7 +87453,7 @@ oVX
 dED
 dED
 uCK
-oVM
+aaf
 kIl
 jPG
 jPG
@@ -88522,7 +87711,7 @@ hAt
 erY
 bmm
 sWf
-oVM
+aaf
 kIl
 jPG
 jPG
@@ -88780,7 +87969,7 @@ sWf
 sWf
 sWf
 sWf
-oVM
+aaf
 kIl
 jPG
 jPG
@@ -89038,7 +88227,7 @@ epd
 guZ
 aIN
 epd
-oVM
+aaf
 kIl
 jPG
 jPG
@@ -89296,7 +88485,7 @@ epd
 gbm
 mUk
 epd
-tGE
+aag
 vdd
 jPG
 jPG
@@ -89554,7 +88743,7 @@ epd
 epd
 bmI
 epd
-oVM
+aaf
 kIl
 jPG
 jPG
@@ -89812,7 +89001,7 @@ nKT
 sNs
 nKT
 epd
-oVM
+aaf
 kIl
 jPG
 jPG
@@ -90070,7 +89259,7 @@ epd
 epd
 rcW
 epd
-tGE
+aag
 kIl
 jPG
 jPG
@@ -90328,7 +89517,7 @@ aXy
 uPj
 uFT
 eis
-oVM
+aaf
 kIl
 jPG
 jPG
@@ -90586,7 +89775,7 @@ hAV
 uFT
 uFT
 eis
-oVM
+aaf
 kIl
 jPG
 jPG
