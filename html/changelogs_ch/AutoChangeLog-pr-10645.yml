@@ -1,0 +1,5 @@
+author: "CHOMPStation2StaffMirrorBot"
+delete-after: True
+changes:
+  - bugfix: "color picker layout"
+  - qol: "we no longer reset the value on blur, we only validate input or onEnter"
