@@ -36,7 +36,7 @@
 	if (pokephrase != "Rawr~!")
 		pokephrase = pick("ROAR!", "RAWR!", "GAWR!", "GRR!", "GROAR!", "GRAH!", "Weh!", "Merp!")
 
-/obj/item/toy/plushie/dragon/attack_self(mob/user as mob)
+/obj/item/toy/plushie/dragon/attack_self(mob/user)
 	if(!cooldown)
 		switch(pokephrase)
 			if("Weh!")
