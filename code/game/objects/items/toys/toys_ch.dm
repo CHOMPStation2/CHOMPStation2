@@ -46,7 +46,7 @@
 			else
 				playsound(user, 'sound/voice/roarbark.ogg', 20, 0)
 		cooldown = TRUE
-		addtimer(VARSET_CALLBACK(src, cooldown, FALSE), 15 SECONDS, TIMER_DELETE_ME)
+		addtimer(VARSET_CALLBACK(src, cooldown, FALSE), 5 SECONDS, TIMER_DELETE_ME)
 	return ..()
 
 /obj/item/toy/plushie/dragon/green
