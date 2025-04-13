@@ -892,6 +892,7 @@
 					/obj/item/toy/plushie/dragon/red_east = 1,
 					/obj/item/toy/plushie/dragon/green_east = 1,
 					/obj/item/toy/plushie/dragon/gold_east = 1,
+					/obj/item/toy/plushie/dragon/customizable = 10,
 					/obj/item/toy/plushie/teppi = 1,
 					/obj/item/toy/plushie/teppi/alt = 1
 					//CHOMPStation Add End
@@ -952,6 +953,7 @@
 					/obj/item/toy/plushie/dragon/red_east = 50,
 					/obj/item/toy/plushie/dragon/green_east = 50,
 					/obj/item/toy/plushie/dragon/gold_east = 500,
+					/obj/item/toy/plushie/dragon/customizable = 50,
 					/obj/item/toy/plushie/teppi = 50,
 					/obj/item/toy/plushie/teppi/alt = 50
 					//CHOMPStation Add End
