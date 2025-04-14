@@ -84,11 +84,11 @@
 	var/horns = "classic_h"
 	var/extra
 
-	var/base_color = "#FFFFFF"
-	var/underbelly_color = "#FFFFFF"
-	var/wing_color = "#FFFFFF"
-	var/horn_color = "#FFFFFF"
-	var/extra_color = "#FFFFFF"
+	var/base_color = COLOR_WHITE
+	var/underbelly_color = COLOR_WHITE
+	var/wing_color = COLOR_WHITE
+	var/horn_color = COLOR_WHITE
+	var/extra_color = COLOR_WHITE
 
 /obj/item/toy/plushie/dragon/customizable/Initialize(mapload)
 	. = ..()
@@ -134,24 +134,38 @@
 	set category = "Object"
 	set src in usr
 
-	var/list/wings_choice = list("None" = null, "Classic" = "classic_w", "Fairy" = "fairy_w")
-	var/list/horns_choice = list("None" = null, "Classic" = "classic_h", "Double" = "double_h")
-	var/list/extra_choice = list("None" = null, "Fur" = "durg_fur")
+	var/list/wings_choice = list("None" = "", "Classic" = "classic_w", "Fairy" = "fairy_w")
+	var/list/horns_choice = list("None" = "", "Classic" = "classic_h", "Double" = "double_h")
+	var/list/extra_choice = list("None" = "", "Fur" = "durg_fur")
 
-	base_color = tgui_color_picker(usr, "Please select base color", "Base Color", base_color)
-	underbelly_color = tgui_color_picker(usr, "Please select secondary color", "Secondary Color", underbelly_color)
+	var/new_base_color = tgui_color_picker(usr, "Please select base color", "Base Color", base_color)
+	var/new_underbelly_color = tgui_color_picker(usr, "Please select secondary color", "Secondary Color", underbelly_color)
 
-	wings = wings_choice[tgui_input_list(usr, "Please select wings", "Wings", wings_choice)]
-	if(wings)
-		wing_color = tgui_color_picker(usr, "Please select wing color", "Wing Color", wing_color)
+	if(new_base_color)
+		base_color = new_base_color
+	if(new_underbelly_color)
+		underbelly_color = new_underbelly_color
 
-	horns = horns_choice[tgui_input_list(usr, "Please select horns", "Horns", horns_choice)]
-	if(horns)
-		horn_color = tgui_color_picker(usr, "Please select horn color", "Horn Color", horn_color)
+	var/new_wings = tgui_input_list(usr, "Please select wings", "Wings", wings_choice, wings)
+	if(new_wings)
+		wings = wings_choice[new_wings]
+		var/new_wing_color = tgui_color_picker(usr, "Please select wing color", "Wing Color", wing_color)
+		if(new_wing_color)
+			wing_color = new_wing_color
 
-	extra = extra_choice[tgui_input_list(usr, "Please select extra", "Extra", extra_choice)]
-	if(extra)
-		extra_color = tgui_color_picker(usr, "Please select extra color", "Extra Color", extra_color)
+	var/new_horns = tgui_input_list(usr, "Please select horns", "Horns", horns_choice, horns)
+	if(new_horns)
+		horns = horns_choice[new_horns]
+		var/new_horn_color = tgui_color_picker(usr, "Please select horn color", "Horn Color", horn_color)
+		if(new_horn_color)
+			horn_color = new_horn_color
+
+	var/new_extra = tgui_input_list(usr, "Please select extra", "Extra", extra_choice, extra)
+	if(new_extra)
+		extra = extra_choice[new_extra]
+		var/new_extra_color = tgui_color_picker(usr, "Please select extra color", "Extra Color", extra_color)
+		if(new_extra_color)
+			extra_color = new_extra_color
 
 	update_icon()
 
