@@ -453,16 +453,6 @@
 /obj/structure/closet/radiation,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/expoutpost/cic)
-"abf" = (
-/turf/simulated/floor/reinforced/airless,
-/area/expoutpost/slingcarrierdock)
-"abg" = (
-/obj/machinery/shipsensors{
-	dir = 1
-	},
-/obj/effect/floor_decal/industrial/hatch/yellow,
-/turf/simulated/floor/reinforced/airless,
-/area/expoutpost/slingcarrierdock)
 "abh" = (
 /obj/effect/shuttle_landmark/southern_cross/carrier/port_dock,
 /turf/space,
@@ -17953,6 +17943,9 @@
 /turf/simulated/floor/tiled/milspec/raised,
 /area/expoutpost/portqpadjunction)
 "oBI" = (
+/obj/machinery/shipsensors{
+	dir = 1
+	},
 /turf/simulated/floor/reinforced/airless,
 /area/expoutpost/starboardbowairlock)
 "oBP" = (
@@ -62796,7 +62789,7 @@ xEV
 xEV
 cwA
 cwA
-itM
+cwA
 itM
 ead
 dln
@@ -63054,7 +63047,7 @@ xEV
 xEV
 cwA
 cwA
-abf
+cwA
 itM
 ead
 dln
@@ -63312,7 +63305,7 @@ xEV
 xEV
 cwA
 cwA
-abg
+cwA
 itM
 ead
 oHI
@@ -63570,7 +63563,7 @@ xEV
 xEV
 cwA
 cwA
-abf
+cwA
 itM
 ead
 dln
@@ -63828,7 +63821,7 @@ xEV
 xEV
 cwA
 cwA
-itM
+cwA
 itM
 ead
 yfH

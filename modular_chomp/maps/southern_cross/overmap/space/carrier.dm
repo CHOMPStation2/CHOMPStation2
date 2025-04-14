@@ -2,9 +2,11 @@
 	name = "NEV Aegis"
 	icon_state = "nt_destroyer_g"
 	desc = "Spacefaring vessel. NanoTrasen IFF detected."
-	scanner_desc = span_italic("Registration") + ": NEV Aegis" +
-    span_italic("Class") + ": Light Exploratory Carrier" +
-    span_italic("Transponder") + "Transmitting (EXP), NanoTrasen IFF"
+		//Whenever possible. Replace description with spans. Dont let this sit for 10 years without being done.
+	scanner_desc = @{"[i]Registration[/i]: NEV Aegis
+	[i]Class[/i]: Light Exploratory Carrier
+	[i]Transponder[/i]: Transmitting (EXP), NanoTrasen IFF"
+	[b]Notice[/b]: NanoTrasen exploratory vessel, authorized personnel only"}
 	vessel_mass = 20000
 	vessel_size = SHIP_SIZE_LARGE
 	initial_generic_waypoints = list("exphangar_1", "baby_mammoth_dock", "ursula_dock", "stargazer_dock", "needle_dock", "echidna_dock", "carrier_port_dock", "carrier_starboard_dock")
