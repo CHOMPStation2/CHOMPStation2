@@ -45,10 +45,15 @@
 	return total_radiation
 
 
+<<<<<<< HEAD
 /obj/structure/girder/proc/set_material(var/new_material)
 	girder_material = get_material_by_name(new_material)
 	if(!girder_material)
 		qdel(src)
+=======
+/obj/structure/girder/proc/set_material(var/datum/material/new_material)
+	girder_material = new_material
+>>>>>>> f5b5727dcf (oups forgot to delete the old code (#17534))
 	name = "[girder_material.display_name] [initial(name)]"
 	max_health = round(girder_material.integrity) //Should be 150 with default integrity (steel). Weaker than ye-olden Girders now.
 	health = max_health
