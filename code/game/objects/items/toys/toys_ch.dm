@@ -79,10 +79,11 @@
 	name = "custom dragon plushie"
 	icon_state = "blankdurg"
 
+	var/base = "blankdurg"
 	var/underbelly = "blankdurg2"
 	var/wings = "classic_w"
 	var/horns = "classic_h"
-	var/extra
+	var/extra = ""
 
 	var/base_color = COLOR_WHITE
 	var/underbelly_color = COLOR_WHITE
@@ -99,7 +100,7 @@
 	..()
 
 	var/list/overlays = list()
-	var/image/base = image("blankdurg")
+	var/image/base = image(base)
 	var/image/underbelly_image = image(underbelly)
 	var/image/wings_1 = image("[wings]_1")
 	var/image/wings_2 = image("[wings]_2")
@@ -112,20 +113,21 @@
 
 	overlays += base
 	overlays += underbelly_image
-	if(wings)
+
+	if(wings != "")
 		wings_1.color = wing_color
 		wings_2.color = wing_color
 		overlays += wings_2
-	if(horns)
+	if(horns != "")
 		horns_1.color = horn_color
 		horns_2.color = horn_color
 		overlays += horns_2
-	if(extra)
+	if(extra != "")
 		extra_image.color = extra_color
 		overlays += extra_image
-	if(wings)
+	if(wings != "")
 		overlays += wings_1
-	if(horns)
+	if(horns != "")
 		overlays += horns_1
 
 	add_overlay(overlays)
@@ -149,23 +151,26 @@
 	var/new_wings = tgui_input_list(usr, "Please select wings", "Wings", wings_choice, wings)
 	if(new_wings)
 		wings = wings_choice[new_wings]
-		var/new_wing_color = tgui_color_picker(usr, "Please select wing color", "Wing Color", wing_color)
-		if(new_wing_color)
-			wing_color = new_wing_color
+		if(wings != "")
+			var/new_wing_color = tgui_color_picker(usr, "Please select wing color", "Wing Color", wing_color)
+			if(new_wing_color)
+				wing_color = new_wing_color
 
 	var/new_horns = tgui_input_list(usr, "Please select horns", "Horns", horns_choice, horns)
 	if(new_horns)
 		horns = horns_choice[new_horns]
-		var/new_horn_color = tgui_color_picker(usr, "Please select horn color", "Horn Color", horn_color)
-		if(new_horn_color)
-			horn_color = new_horn_color
+		if(horns != "")
+			var/new_horn_color = tgui_color_picker(usr, "Please select horn color", "Horn Color", horn_color)
+			if(new_horn_color)
+				horn_color = new_horn_color
 
 	var/new_extra = tgui_input_list(usr, "Please select extra", "Extra", extra_choice, extra)
 	if(new_extra)
 		extra = extra_choice[new_extra]
-		var/new_extra_color = tgui_color_picker(usr, "Please select extra color", "Extra Color", extra_color)
-		if(new_extra_color)
-			extra_color = new_extra_color
+		if(extra != "")
+			var/new_extra_color = tgui_color_picker(usr, "Please select extra color", "Extra Color", extra_color)
+			if(new_extra_color)
+				extra_color = new_extra_color
 
 	update_icon()
 
