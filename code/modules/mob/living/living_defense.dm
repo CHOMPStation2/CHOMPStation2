@@ -338,6 +338,14 @@
 	if(isliving(AM))
 		var/mob/living/thrown_mob = AM
 
+<<<<<<< HEAD
+=======
+		if(!allowmobvore && isanimal(thrown_mob) && !thrown_mob.ckey) //Does the person being hit not allow mob vore and the perrson being thrown a simple_mob?
+			return
+		if(!thrown_mob.allowmobvore && isanimal(src) && !ckey) //Does the person being thrown not allow mob vore and is the person being hit (us) a simple_mob?
+			return
+
+>>>>>>> 834571b0fe (fix some bad mobvore checks (#17528))
 		// PERSON BEING HIT: CAN BE DROP PRED, ALLOWS THROW VORE.
 		// PERSON BEING THROWN: DEVOURABLE, ALLOWS THROW VORE, CAN BE DROP PREY.
 		if((can_be_drop_pred && throw_vore) && (thrown_mob.devourable && thrown_mob.throw_vore && thrown_mob.can_be_drop_prey)) //Prey thrown into pred.
