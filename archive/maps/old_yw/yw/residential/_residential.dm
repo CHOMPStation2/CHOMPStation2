@@ -51,10 +51,10 @@
 	icon_state = "reinf_preview"
 
 
-/obj/structure/table/leadreinforcedwood/New()
+/obj/structure/table/leadreinforcedwood/Initialize(mapload)
 	material = get_material_by_name(MAT_LEAD)
 	reinforced = get_material_by_name(MAT_WOOD)
-	..()
+	. = ..()
 
 // Spawn points
 

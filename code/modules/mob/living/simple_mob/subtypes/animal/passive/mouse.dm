@@ -58,7 +58,7 @@
 	return ..()
 //CHOMPAdd End
 
-/mob/living/simple_mob/animal/passive/mouse/Initialize(mapload)
+/mob/living/simple_mob/animal/passive/mouse/Initialize(mapload, keep_parent_data)
 	. = ..()
 	//CHOMPAdd Start
 	ghostjoin = 1

@@ -35,8 +35,8 @@
 	name = "[initial(name)] (Wielded)"
 	update_icon()
 
-/obj/item/oldtwohanded/New()
-	..()
+/obj/item/oldtwohanded/Initialize(mapload)
+	. = ..()
 	update_icon()
 
 /obj/item/oldtwohanded/mob_can_equip(M as mob, slot, disable_warning = FALSE)

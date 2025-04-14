@@ -8,12 +8,11 @@
 	anchored = 1.0
 	density = 0
 
-/obj/structure/event/present/New()
-	..()
+/obj/structure/event/present/Initialize(mapload)
+	. = ..()
 	pixel_x = rand(-10,10)
 	pixel_y = rand(-10,10)
 	icon_state = "gift[pick("1", "2", "3")]_[pick("g", "r", "b", "y", "p")]"
-	return
 
 /obj/structure/event/santa_sack
 

@@ -12,7 +12,10 @@
 					)
 	can_be_pushed = 0
 
-/obj/item/robot_module/xenomaid/New(var/mob/living/silicon/robot/R)
+/obj/item/robot_module/xenomaid/Initialize(mapload)
+	var/mob/living/silicon/robot/R = loc
+	if(!istype(R))
+		return INITIALIZE_HINT_QDEL
 	src.modules += new /obj/item/flash(src)
 	src.modules += new /obj/item/soap/nanotrasen(src)
 	src.modules += new /obj/item/storage/bag/trash(src)
@@ -23,7 +26,7 @@
 	src.emag.name = "Lube spray"
 	R.icon 		 = 'icons/mob/robots_yw.dmi'
 	R.hands.icon = 'icons/mob/screen1_robot_vr.dmi'
-	..()
+	. = ..()
 
 
 
@@ -36,7 +39,10 @@
 	networks = list(NETWORK_MINE)
 	can_be_pushed = 0
 
-/obj/item/robot_module/blade/New(var/mob/living/silicon/robot/R)
+/obj/item/robot_module/blade/Initialize(mapload)
+	var/mob/living/silicon/robot/R = loc
+	if(!istype(R))
+		return INITIALIZE_HINT_QDEL
 	src.modules += new /obj/item/dogborg/jaws/big(src) //In case there's some kind of hostile mob.
 	src.modules += new /obj/item/dogborg/boop_module(src) //Boop people on the nose.
 	src.modules += new /obj/item/dogborg/tongue(src) //This is so they can clean up bloody evidence after it's examined, and so they can lick crew.
@@ -57,7 +63,7 @@
 	R.hands.icon = 'icons/mob/screen1_robot_vr.dmi'
 	R.pixel_x 	 = -16
 	R.old_x 	 = -16
-	..()
+	. = ..()
 
 
 /obj/item/robot_module/surgeryhound
@@ -71,7 +77,10 @@
 					"Dark Medical Hound (Static)" = "medihounddark"
 					)
 
-/obj/item/robot_module/surgeryhound/New(var/mob/living/silicon/robot/R)
+/obj/item/robot_module/surgeryhound/Initialize(mapload)
+	var/mob/living/silicon/robot/R = loc
+	if(!istype(R))
+		return INITIALIZE_HINT_QDEL
 	src.modules += new /obj/item/dogborg/jaws/small(src) //In case a patient is being attacked by carp.
 	src.modules += new /obj/item/dogborg/boop_module(src) //Boop the crew.
 	src.modules += new /obj/item/dogborg/tongue(src) //Clean up bloody items by licking them, and eat rubbish for
@@ -102,7 +111,7 @@
 	//R.icon_state = "medihound"
 	R.pixel_x 	 = -16
 	R.old_x  	 = -16
-	..()
+	. = ..()
 
 	var/datum/matter_synth/medicine = new /datum/matter_synth/medicine(10000)
 	synths += medicine

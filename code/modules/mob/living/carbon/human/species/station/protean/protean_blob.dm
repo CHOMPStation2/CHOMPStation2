@@ -68,7 +68,7 @@
 	emote_see = list("shifts wetly","undulates placidly")
 
 //Constructor allows passing the human to sync damages
-/mob/living/simple_mob/protean_blob/New(var/newloc, var/mob/living/carbon/human/H)
+/mob/living/simple_mob/protean_blob/Initialize(mapload, var/mob/living/carbon/human/H)
 	. = ..()
 	if(!H)
 		stack_trace("URGENT: A protean blob was created without a humanform! src = [src] ckey = [ckey]! The blob has been deleted.")

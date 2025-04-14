@@ -286,8 +286,8 @@
 	var/on = 0
 	var/brightness_on = 4 //luminosity when on
 
-/obj/item/stack/lightpole/New()
-	..()
+/obj/item/stack/lightpole/Initialize(mapload)
+	. = ..()
 	base_state = icon_state
 
 /obj/item/stack/lightpole/blue

@@ -4,8 +4,8 @@
 	fuel_colour = "#FCE300"
 	fuel_type = "blitz"
 
-/obj/item/fuel_assembly/blitz/New(var/newloc)
-	..(newloc, "blitz")
+/obj/item/fuel_assembly/blitz/Initialize(mapload)
+	. = ..(mapload, "blitz")
 
 /obj/item/fuel_assembly/blitz/unshielded/Initialize(mapload)
 	. = ..()

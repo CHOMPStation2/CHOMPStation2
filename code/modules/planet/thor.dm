@@ -759,8 +759,8 @@ var/datum/planet/thor/planet_thor = null
 	name = "deep ocean"
 	alpha = 0
 
-/obj/machinery/power/smes/buildable/offmap_spawn/empty/New()
-	..(1)
+/obj/machinery/power/smes/buildable/offmap_spawn/empty/Initialize(mapload)
+	. = ..()
 	charge = 0
 	RCon = TRUE
 	input_level = input_level_max

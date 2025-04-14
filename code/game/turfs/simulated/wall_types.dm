@@ -100,10 +100,15 @@
 
 /turf/simulated/wall/durasteel/Initialize(mapload)
 	. = ..(mapload, MAT_DURASTEEL, MAT_DURASTEEL)
-/turf/simulated/wall/durasteel/blueserg/New(var/newloc)
-	..(newloc,MAT_DURASTEEL, MAT_DURASTEEL)
+
+// CHOMPAdd Start
+/turf/simulated/wall/durasteel/blueserg/Initialize(mapload)
+	. = ..(mapload, MAT_DURASTEEL, MAT_DURASTEEL)
+
 /turf/simulated/wall/durasteel/blueserg/attackby(obj/item/I, mob/user)
 	return
+// CHOMPAdd ENd
+
 /turf/simulated/wall/wood/Initialize(mapload)
 	. = ..(mapload,  MAT_WOOD)
 
