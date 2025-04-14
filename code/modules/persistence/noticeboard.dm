@@ -215,4 +215,3 @@
 	P.stamped = list(/obj/item/stamp/rd)
 	P.add_overlay("paper_stamped_rd")
 	contents += P
-	. = ..() //ChompEDIT New --> Initialize
