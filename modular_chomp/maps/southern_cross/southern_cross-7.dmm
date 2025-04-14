@@ -9064,7 +9064,7 @@
 	name = "Aegis Bridge";
 	req_one_access = list(19,62,67)
 	},
-/turf/simulated/floor/tiled/techfloor,
+/turf/simulated/floor,
 /area/expoutpost/cic)
 "huf" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
