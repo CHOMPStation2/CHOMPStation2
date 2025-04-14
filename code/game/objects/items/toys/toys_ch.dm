@@ -79,9 +79,9 @@
 	name = "custom dragon plushie"
 	icon_state = "blankdurg"
 
-	var/underbelly = "durgunderbelly"
-	var/wings = "durgwestwings"
-	var/horns = "durgwesthorns"
+	var/underbelly = "blankdurg2"
+	var/wings = "classic_w"
+	var/horns = "classic_h"
 	var/extra
 
 	var/base_color = "#FFFFFF"
@@ -98,7 +98,8 @@
 	cut_overlays()
 	..()
 
-	var/image/base_image = image("blankdurg")
+	var/list/overlays = list()
+	var/image/base = image("blankdurg")
 	var/image/underbelly_image = image(underbelly)
 	var/image/wings_1 = image("[wings]_1")
 	var/image/wings_2 = image("[wings]_2")
@@ -106,68 +107,51 @@
 	var/image/horns_2 = image("[horns]_2")
 	var/image/extra_image = image(extra)
 
-	base_image.color = base_color
+	base.color = base_color
 	underbelly_image.color = underbelly_color
 
-	add_overlay(base_image)
-	add_overlay(underbelly_image)
+	overlays += base
+	overlays += underbelly_image
 	if(wings)
 		wings_1.color = wing_color
 		wings_2.color = wing_color
-		add_overlay(wings_2)
+		overlays += wings_2
 	if(horns)
 		horns_1.color = horn_color
 		horns_2.color = horn_color
-		add_overlay(horns_2)
+		overlays += horns_2
 	if(extra)
 		extra_image.color = extra_color
-		add_overlay(extra_image)
+		overlays += extra_image
 	if(wings)
-		add_overlay(wings_1)
+		overlays += wings_1
 	if(horns)
-		add_overlay(horns_1)
+		overlays += horns_1
+
+	add_overlay(overlays)
 
 /obj/item/toy/plushie/dragon/customizable/verb/Customize()
 	set category = "Object"
 	set src in usr
 
-	var/wings_choice = list("None", "Western", "Fairy")
-	var/horns_choice = list("None", "Single", "Double")
-	var/extra_choice = list("None", "Fur")
+	var/list/wings_choice = list("None" = null, "Classic" = "classic_w", "Fairy" = "fairy_w")
+	var/list/horns_choice = list("None" = null, "Classic" = "classic_h", "Double" = "double_h")
+	var/list/extra_choice = list("None" = null, "Fur" = "durg_fur")
 
-	base_color = tgui_color_picker(usr, "Please select base color", "Base Color")
-	underbelly_color = tgui_color_picker(usr, "Please select secondary color", "Secondary Color")
+	base_color = tgui_color_picker(usr, "Please select base color", "Base Color", base_color)
+	underbelly_color = tgui_color_picker(usr, "Please select secondary color", "Secondary Color", underbelly_color)
 
-	var/new_wings = tgui_input_list(usr, "Please select wings", "Wings", wings_choice)
-	switch(new_wings)
-		if("Western")
-			wings = "durgwestwings"
-		if("Fairy")
-			wings = "durgfairywings"
-		else
-			wings = null
+	wings = wings_choice[tgui_input_list(usr, "Please select wings", "Wings", wings_choice)]
 	if(wings)
-		wing_color = tgui_color_picker(usr, "Please select wing color", "Wing Color")
+		wing_color = tgui_color_picker(usr, "Please select wing color", "Wing Color", wing_color)
 
-	var/new_horns = tgui_input_list(usr, "Please select horns", "Horns", horns_choice)
-	switch(new_horns)
-		if("Single")
-			horns = "durgwesthorns"
-		if("Double")
-			horns = "durgeasthorns"
-		else
-			horns = null
+	horns = horns_choice[tgui_input_list(usr, "Please select horns", "Horns", horns_choice)]
 	if(horns)
-		horn_color = tgui_color_picker(usr, "Please select horn color", "Horn Color")
+		horn_color = tgui_color_picker(usr, "Please select horn color", "Horn Color", horn_color)
 
-	var/new_extra = tgui_input_list(usr, "Please select extra", "Extra", extra_choice)
-	switch(new_extra)
-		if("Fur")
-			extra = "durgeastfur"
-		else
-			extra = null
+	extra = extra_choice[tgui_input_list(usr, "Please select extra", "Extra", extra_choice)]
 	if(extra)
-		extra_color = tgui_color_picker(usr, "Please select extra color", "Extra Color")
+		extra_color = tgui_color_picker(usr, "Please select extra color", "Extra Color", extra_color)
 
 	update_icon()
 
