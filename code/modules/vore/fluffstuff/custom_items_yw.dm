@@ -676,7 +676,7 @@
 		/obj/item/reagent_containers/food/snacks/chocolatebar,
 		)
 
-/obj/item/storage/secure/briefcase/fluff/jeans/Initialize() //this is entierly nessicary to spawn stuff. "FUN" -luke
+/obj/item/storage/secure/briefcase/fluff/jeans/Initialize(mapload) //this is entierly nessicary to spawn stuff. "FUN" -luke
 	storage_slots = has_items.len
 	allowed = list()
 	for(var/P in has_items)

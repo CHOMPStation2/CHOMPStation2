@@ -146,3 +146,19 @@
       to recolour themselves once per transformation.
   Diana:
   - bugfix: Exit VR now properly lets you exit vr
+2025-04-14:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: chat messages not querying
+  - bugfix: color picker layout
+  - qol: we no longer reset the value on blur, we only validate input or onEnter
+  - rscadd: marker beacon to mining robots
+  - bugfix: modal inputs
+  - rscadd: Added Special teleporter vorebellies.
+  - code_imp: Added support for vorebellies to be marked as unsavable, preventing
+      them from being saved to characters.
+  Diana:
+  - bugfix: Stumblevore and flight vore should now work properly.
+  tacoguy7765093:
+  - maptweak: Ore-Rich-Geyser POI active edge fix.
+  - rscadd: Thor turfpack for mappers
+  - maptweak: Operating Rooms contain patient stabilizers for post mortem blood pumping!
