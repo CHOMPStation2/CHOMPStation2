@@ -12,9 +12,5 @@
 
 /mob/living/carbon/alien/larva/Initialize(mapload)
 	. = ..()
-<<<<<<< HEAD
-	add_language("Xenolingua") //Bonus language. CHOMPedit
-=======
 	add_language(LANGUAGE_XENOLINGUA) //Bonus language.
->>>>>>> cdfa1c853f (New to init final (#17512))
 	internal_organs |= new /obj/item/organ/internal/xenos/hivenode(src)

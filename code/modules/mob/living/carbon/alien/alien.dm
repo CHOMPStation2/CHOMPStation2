@@ -52,11 +52,7 @@
 /mob/living/carbon/alien/get_default_language()
 	if(default_language)
 		return default_language
-<<<<<<< HEAD
-	return GLOB.all_languages["Xenolingua"] //CHOMPedit
-=======
 	return GLOB.all_languages[LANGUAGE_XENOLINGUA]
->>>>>>> cdfa1c853f (New to init final (#17512))
 
 /mob/living/carbon/alien/say_quote(var/message, var/datum/language/speaking = null)
 	var/verb = "hisses"

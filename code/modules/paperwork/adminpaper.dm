@@ -16,11 +16,7 @@
 	var/footer = null
 	var/footerOn = FALSE
 
-<<<<<<< HEAD
-/obj/item/paper/admin/Initialize(mapload) //ChompEDIT New --> Initialize
-=======
 /obj/item/paper/admin/Initialize(mapload, text, title)
->>>>>>> cdfa1c853f (New to init final (#17512))
 	. = ..()
 	generateInteractions()
 

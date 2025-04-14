@@ -44,7 +44,6 @@
 
 	var/body_color //brown, gray, white and black, leave blank for random
 
-<<<<<<< HEAD
 	//CHOMP Addition: Added these vore variables in and swapped the booleans from their defaults too.
 	can_be_drop_prey = TRUE
 	can_be_drop_pred = FALSE
@@ -53,24 +52,19 @@
 	pain_emote_1p = list("squeak", "squik") // CHOMP Addition: Pain/etc sounds
 	pain_emote_1p = list("squeaks", "squiks") // CHOMP Addition: Pain/etc sounds
 
-//CHOMPEdit Start
-/mob/living/simple_mob/animal/passive/mouse/Initialize(mapload)
-	. = ..()
-	ghostjoin = 1
-	ghostjoin_icon()
-	active_ghost_pods |= src
-
+//CHOMPAdd Start
 /mob/living/simple_mob/animal/passive/mouse/Destroy()
 	active_ghost_pods -= src
 	return ..()
-//CHOMPEdit End
+//CHOMPAdd End
 
-/mob/living/simple_mob/animal/passive/mouse/New()
-	..()
-=======
-/mob/living/simple_mob/animal/passive/mouse/Initialize(mapload, keep_parent_data)
+/mob/living/simple_mob/animal/passive/mouse/Initialize(mapload)
 	. = ..()
->>>>>>> cdfa1c853f (New to init final (#17512))
+	//CHOMPAdd Start
+	ghostjoin = 1
+	ghostjoin_icon()
+	active_ghost_pods += src
+	//CHOMPAdd End
 
 	add_verb(src, /mob/living/proc/ventcrawl)
 	add_verb(src, /mob/living/proc/hide)
