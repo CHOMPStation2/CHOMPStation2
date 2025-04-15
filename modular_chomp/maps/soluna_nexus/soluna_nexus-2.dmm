@@ -199,6 +199,12 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/tiled/techmaint,
 /area/security/HoS_Office)
+"aan" = (
+/obj/machinery/computer/cryopod/robot{
+	pixel_x = 30
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/engineering/Drone_Fab)
 "aao" = (
 /obj/random/trash,
 /obj/structure/table/standard,
@@ -5856,8 +5862,6 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/effect/floor_decal/borderfloor,
-/obj/effect/floor_decal/corner/lightgrey/border,
 /turf/simulated/floor/tiled,
 /area/hallway/Star_2_Deck_Central_Corridor_1)
 "ajz" = (
@@ -26395,8 +26399,12 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/obj/effect/floor_decal/borderfloor,
-/obj/effect/floor_decal/corner/lightgrey/border,
+/obj/effect/floor_decal/borderfloor/corner{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/lightgrey/bordercorner{
+	dir = 8
+	},
 /turf/simulated/floor/tiled,
 /area/hallway/Star_2_Deck_Central_Corridor_1)
 "bwK" = (
@@ -116967,8 +116975,8 @@
 	dir = 1;
 	icon_state = "pipe-c"
 	},
-/obj/effect/floor_decal/borderfloor,
-/obj/effect/floor_decal/corner/lightgrey/border,
+/obj/effect/floor_decal/borderfloor/corner,
+/obj/effect/floor_decal/corner/lightgrey/bordercorner,
 /turf/simulated/floor/tiled,
 /area/hallway/Star_2_Deck_Central_Corridor_1)
 "wZI" = (
@@ -140034,7 +140042,7 @@ aaa
 aaa
 uZK
 bNY
-mYL
+aan
 cge
 cgc
 tNw
