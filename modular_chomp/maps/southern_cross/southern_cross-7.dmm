@@ -453,11 +453,11 @@
 /obj/structure/closet/radiation,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/expoutpost/cic)
-"abh" = (
+"abf" = (
 /obj/effect/shuttle_landmark/southern_cross/carrier/port_dock,
 /turf/space,
 /area/space)
-"abi" = (
+"abg" = (
 /obj/effect/shuttle_landmark/southern_cross/carrier/starboard_dock,
 /turf/space,
 /area/space)
@@ -56548,7 +56548,7 @@ cwA
 cwA
 cwA
 cwA
-abh
+abf
 cwA
 cwA
 cwA
@@ -69964,7 +69964,7 @@ cwA
 cwA
 cwA
 cwA
-abi
+abg
 cwA
 cwA
 cwA
