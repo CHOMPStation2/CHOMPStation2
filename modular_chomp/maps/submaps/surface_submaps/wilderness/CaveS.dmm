@@ -229,12 +229,6 @@
 	outdoors = 0
 	},
 /area/submap/CaveS)
-"Z" = (
-/mob/living/simple_mob/animal/giant_spider/lurker{
-	loot_list = list(/obj/item/stock_parts/capacitor/omni = 50)
-	},
-/turf/simulated/floor/outdoors/dirt,
-/area/submap/CaveS)
 
 (1,1,1) = {"
 a
@@ -771,7 +765,7 @@ d
 k
 k
 d
-Z
+W
 d
 d
 d
