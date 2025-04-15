@@ -92,6 +92,8 @@
 	var/horn_color = COLOR_WHITE
 	var/extra_color = COLOR_WHITE
 
+
+
 /obj/item/toy/plushie/dragon/customizable/Initialize(mapload)
 	. = ..()
 	update_icon()
@@ -101,14 +103,8 @@
 	..()
 
 	var/list/overlays = list()
-	var/image/base_image = image(base)
-	var/image/underbelly_image = image(underbelly)
-	var/image/wings_1 = image("[wings]_1")
-	var/image/wings_2 = image("[wings]_2")
-	var/image/wings_misc = image("[wings]_misc")
-	var/image/horns_1 = image("[horns]_1")
-	var/image/horns_2 = image("[horns]_2")
-	var/image/extra_image = image(extra)
+	var/image/base_image = image(icon_state = base)
+	var/image/underbelly_image = image(icon_state = underbelly)
 
 	base_image.color = base_color
 	underbelly_image.color = underbelly_color
@@ -117,21 +113,27 @@
 	overlays += underbelly_image
 
 	if(wings != "")
-		wings_1.color = wing_color
+		var/image/wings_2 = image(icon_state = "[wings]_2")
 		wings_2.color = wing_color
-		wings_misc.color = wing_color_2
 		overlays += wings_2
 	if(horns != "")
-		horns_1.color = horn_color
+		var/image/horns_2 = image(icon_state = "[horns]_2")
 		horns_2.color = horn_color
 		overlays += horns_2
 	if(extra != "")
+		var/image/extra_image = image(icon_state = extra)
 		extra_image.color = extra_color
 		overlays += extra_image
 	if(wings != "")
+		var/image/wings_1 = image(icon_state = "[wings]_1")
+		var/image/wings_misc = image(icon_state = "[wings]_misc")
+		wings_1.color = wing_color
+		wings_misc.color = wing_color_2
 		overlays += wings_1
 		overlays += wings_misc
 	if(horns != "")
+		var/image/horns_1 = image(icon_state = "[horns]_1")
+		horns_1.color = horn_color
 		overlays += horns_1
 
 	add_overlay(overlays)
