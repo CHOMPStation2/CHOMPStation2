@@ -54,7 +54,7 @@
 /area/submap/CaveS)
 "m" = (
 /obj/effect/spider/stickyweb,
-/turf/simulated/floor/outdoors/dirt,
+/turf/simulated/floor/outdoors/dirt/turfpack/sif,
 /area/submap/CaveS)
 "n" = (
 /obj/item/clothing/accessory/storage/webbing,
@@ -121,7 +121,7 @@
 /mob/living/simple_mob/animal/giant_spider/lurker{
 	loot_list = list(/obj/item/stock_parts/manipulator/omni = 50)
 	},
-/turf/simulated/floor/outdoors/dirt,
+/turf/simulated/floor/outdoors/dirt/turfpack/sif,
 /area/submap/CaveS)
 "y" = (
 /obj/structure/flora/tree/sif,
