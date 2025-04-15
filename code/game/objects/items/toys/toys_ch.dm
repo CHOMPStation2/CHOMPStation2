@@ -88,6 +88,7 @@
 	var/base_color = COLOR_WHITE
 	var/underbelly_color = COLOR_WHITE
 	var/wing_color = COLOR_WHITE
+	var/wing_color_2 = COLOR_WHITE
 	var/horn_color = COLOR_WHITE
 	var/extra_color = COLOR_WHITE
 
@@ -100,23 +101,25 @@
 	..()
 
 	var/list/overlays = list()
-	var/image/base = image(base)
+	var/image/base_image = image(base)
 	var/image/underbelly_image = image(underbelly)
 	var/image/wings_1 = image("[wings]_1")
 	var/image/wings_2 = image("[wings]_2")
+	var/image/wings_misc = image("[wings]_misc")
 	var/image/horns_1 = image("[horns]_1")
 	var/image/horns_2 = image("[horns]_2")
 	var/image/extra_image = image(extra)
 
-	base.color = base_color
+	base_image.color = base_color
 	underbelly_image.color = underbelly_color
 
-	overlays += base
+	overlays += base_image
 	overlays += underbelly_image
 
 	if(wings != "")
 		wings_1.color = wing_color
 		wings_2.color = wing_color
+		wings_misc.color = wing_color_2
 		overlays += wings_2
 	if(horns != "")
 		horns_1.color = horn_color
@@ -127,6 +130,7 @@
 		overlays += extra_image
 	if(wings != "")
 		overlays += wings_1
+		overlays += wings_misc
 	if(horns != "")
 		overlays += horns_1
 
@@ -136,9 +140,9 @@
 	set category = "Object"
 	set src in usr
 
-	var/list/wings_choice = list("None" = "", "Classic" = "classic_w", "Fairy" = "fairy_w")
-	var/list/horns_choice = list("None" = "", "Classic" = "classic_h", "Double" = "double_h")
-	var/list/extra_choice = list("None" = "", "Fur" = "durg_fur")
+	var/list/wings_choice = list("None" = "", "Classic" = "classic_w", "Fairy" = "fairy_w", "Angular" = "angular_w")
+	var/list/horns_choice = list("None" = "", "Classic" = "classic_h", "Double" = "double_h", "Thick" = "thick_h")
+	var/list/extra_choice = list("None" = "", "Fur" = "durg_fur", "Spines" = "durg_spines")
 
 	var/new_base_color = tgui_color_picker(usr, "Please select base color", "Base Color", base_color)
 	var/new_underbelly_color = tgui_color_picker(usr, "Please select secondary color", "Secondary Color", underbelly_color)
@@ -153,8 +157,11 @@
 		wings = wings_choice[new_wings]
 		if(wings != "")
 			var/new_wing_color = tgui_color_picker(usr, "Please select wing color", "Wing Color", wing_color)
+			var/new_wing_color_2 = tgui_color_picker(usr, "Please select secondary wing color", "Secondary Wing Color", wing_color_2)
 			if(new_wing_color)
 				wing_color = new_wing_color
+			if(new_wing_color_2)
+				wing_color_2 = new_wing_color_2
 
 	var/new_horns = tgui_input_list(usr, "Please select horns", "Horns", horns_choice, horns)
 	if(new_horns)
