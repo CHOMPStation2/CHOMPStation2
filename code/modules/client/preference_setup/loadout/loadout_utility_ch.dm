@@ -81,7 +81,7 @@
 /datum/gear/utility/guitar
 	display_name = "Guitar"
 	description = "A normal guitar"
-	path = /obj/item/instrument/eguitar
+	path = /obj/item/instrument/guitar
 	cost = 3
 
 /datum/gear/utility/harmonica

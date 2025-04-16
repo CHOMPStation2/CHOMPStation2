@@ -1,22 +1,60 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aa" = (
+/obj/structure/alien/wall,
+/turf/simulated/floor/outdoors/dirt/turfpack/sif{
+	outdoors = 0
+	},
+/area/submap/XenoHive)
+"ab" = (
+/obj/effect/alien/weeds,
+/obj/effect/landmark/loot_spawn/low,
+/turf/simulated/floor/outdoors/dirt/turfpack/sif{
+	outdoors = 0
+	},
+/area/submap/XenoHive)
+"ac" = (
+/obj/structure/alien/wall,
+/turf/simulated/floor/outdoors/dirt/turfpack/sif,
+/area/submap/XenoHive)
+"ad" = (
+/mob/living/simple_mob/animal/space/alien/sentinel,
+/obj/effect/alien/weeds,
+/turf/simulated/floor/outdoors/dirt/turfpack/sif,
+/area/submap/XenoHive)
+"ae" = (
+/turf/simulated/floor/outdoors/dirt/turfpack/sif,
+/area/submap/XenoHive)
+"af" = (
+/obj/effect/alien/weeds,
+/turf/simulated/floor/outdoors/dirt/turfpack/sif,
+/area/submap/XenoHive)
+"ag" = (
+/obj/effect/alien/weeds,
+/obj/effect/landmark/loot_spawn/low,
+/turf/simulated/floor/outdoors/dirt/turfpack/sif,
+/area/submap/XenoHive)
+"ah" = (
+/obj/structure/loot_pile/surface/bones,
+/turf/simulated/floor/outdoors/dirt/turfpack/sif,
+/area/submap/XenoHive)
 "av" = (
 /obj/structure/table/steel_reinforced,
 /obj/structure/salvageable/personal,
 /obj/effect/alien/weeds,
-/turf/simulated/floor/tiled/steel_dirty,
+/turf/simulated/floor/tiled/steel_dirty/turfpack/sif,
 /area/submap/XenoHive)
 "aS" = (
 /mob/living/simple_mob/animal/space/alien/sentinel,
 /obj/effect/alien/weeds/node,
 /obj/effect/alien/weeds,
-/turf/simulated/floor,
+/turf/simulated/floor/plating/turfpack/sif,
 /area/submap/XenoHive)
 "bq" = (
 /obj/structure/closet/secure_closet/egg/xenomorph,
 /obj/effect/alien/weeds,
 /obj/random/plushie,
 /obj/item/organ/internal/intestine,
-/turf/simulated/floor/outdoors/dirt{
+/turf/simulated/floor/outdoors/dirt/turfpack/sif{
 	outdoors = 0
 	},
 /area/submap/XenoHive)
@@ -35,11 +73,6 @@
 	outdoors = 0
 	},
 /area/submap/XenoHive)
-"dk" = (
-/obj/effect/alien/weeds,
-/obj/effect/landmark/loot_spawn/low,
-/turf/simulated/floor/outdoors/dirt,
-/area/submap/XenoHive)
 "dm" = (
 /obj/effect/alien/weeds,
 /obj/machinery/portable_atmospherics/powered/reagent_distillery/industrial,
@@ -47,27 +80,21 @@
 	outdoors = 0
 	},
 /area/submap/XenoHive)
-"dn" = (
-/obj/effect/alien/weeds,
-/turf/simulated/floor/outdoors/dirt{
-	outdoors = 0
-	},
-/area/submap/XenoHive)
 "eM" = (
 /obj/structure/loot_pile/surface/bones,
-/turf/simulated/floor/outdoors/dirt,
+/turf/simulated/floor/outdoors/dirt/turfpack/sif,
 /area/template_noop)
 "fw" = (
 /turf/template_noop,
 /area/submap/XenoHive)
 "fG" = (
 /obj/effect/alien/weeds,
-/turf/simulated/floor/tiled/steel_dirty,
+/turf/simulated/floor/tiled/steel_dirty/turfpack/sif,
 /area/submap/XenoHive)
 "fW" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/map_effect/interval/sound_emitter/ballistic_gunfight,
-/turf/simulated/floor/outdoors/dirt,
+/turf/simulated/floor/outdoors/dirt/turfpack/sif,
 /area/submap/XenoHive)
 "gO" = (
 /obj/structure/closet/secure_closet/egg/xenomorph,
@@ -78,17 +105,17 @@
 /obj/structure/reagent_dispensers/space_cleaner{
 	pixel_y = 31
 	},
-/turf/simulated/floor,
+/turf/simulated/floor/plating/turfpack/sif,
 /area/submap/XenoHive)
 "gS" = (
 /obj/structure/alien/wall,
-/turf/simulated/mineral/ignore_mapgen,
+/turf/simulated/floor/outdoors/dirt/turfpack/sif,
 /area/template_noop)
 "hx" = (
 /obj/effect/alien/weeds,
 /obj/machinery/telecomms/broadcaster,
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor,
+/turf/simulated/floor/plating/turfpack/sif,
 /area/submap/XenoHive)
 "im" = (
 /obj/item/stack/animalhide/xeno,
@@ -103,7 +130,7 @@
 	},
 /obj/effect/alien/weeds,
 /obj/effect/gibspawner/human,
-/turf/simulated/floor/tiled/steel_dirty,
+/turf/simulated/floor/tiled/steel_dirty/turfpack/sif,
 /area/submap/XenoHive)
 "iJ" = (
 /obj/effect/alien/weeds,
@@ -111,25 +138,25 @@
 /obj/machinery/light/small/emergency/flicker{
 	dir = 1
 	},
-/turf/simulated/floor,
+/turf/simulated/floor/plating/turfpack/sif,
 /area/submap/XenoHive)
 "iX" = (
 /obj/effect/alien/weeds,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/map_helper/no_phaseshift/area,
-/turf/simulated/floor/tiled/steel_dirty,
+/turf/simulated/floor/tiled/steel_dirty/turfpack/sif,
 /area/submap/XenoHive)
 "jY" = (
 /obj/effect/alien/weeds,
 /mob/living/simple_mob/animal/space/alien/queen/empress{
 	loot_list = list(/obj/item/storage/backpack/holding = 20)
 	},
-/turf/simulated/floor,
+/turf/simulated/floor/plating/turfpack/sif,
 /area/submap/XenoHive)
 "kl" = (
 /obj/effect/alien/weeds,
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/outdoors/dirt{
+/turf/simulated/floor/outdoors/dirt/turfpack/sif{
 	outdoors = 0
 	},
 /area/submap/XenoHive)
@@ -139,18 +166,18 @@
 "mE" = (
 /obj/effect/alien/weeds,
 /obj/random/junk,
-/turf/simulated/floor,
+/turf/simulated/floor/plating/turfpack/sif,
 /area/submap/XenoHive)
 "nd" = (
 /obj/structure/salvageable/server,
 /obj/effect/alien/weeds,
 /obj/effect/alien/weeds,
-/turf/simulated/floor/tiled/techfloor/grid,
+/turf/simulated/floor/tiled/techfloor/grid/turfpack/sif,
 /area/submap/XenoHive)
 "oo" = (
 /mob/living/simple_mob/animal/space/alien/drone,
 /obj/effect/alien/weeds,
-/turf/simulated/floor/tiled/steel_dirty,
+/turf/simulated/floor/tiled/steel_dirty/turfpack/sif,
 /area/submap/XenoHive)
 "ps" = (
 /obj/structure/sign/department/xenolab,
@@ -159,22 +186,24 @@
 "qz" = (
 /mob/living/simple_mob/animal/space/alien/sentinel/praetorian,
 /obj/effect/alien/weeds,
-/turf/simulated/floor,
+/turf/simulated/floor/plating/turfpack/sif,
 /area/submap/XenoHive)
 "qI" = (
 /obj/effect/alien/weeds/node,
 /obj/effect/decal/cleanable/dirt,
 /obj/random/junk,
-/turf/simulated/floor,
+/turf/simulated/floor/plating/turfpack/sif,
 /area/submap/XenoHive)
 "rL" = (
 /obj/effect/alien/weeds,
-/turf/simulated/floor/outdoors/dirt,
+/turf/simulated/floor/outdoors/dirt/turfpack/sif{
+	outdoors = 0
+	},
 /area/submap/XenoHive)
 "sp" = (
 /obj/effect/alien/weeds/node,
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/outdoors/dirt{
+/turf/simulated/floor/outdoors/dirt/turfpack/sif{
 	outdoors = 0
 	},
 /area/submap/XenoHive)
@@ -185,12 +214,12 @@
 /obj/effect/alien/weeds,
 /obj/effect/decal/cleanable/dirt,
 /obj/random/junk,
-/turf/simulated/floor,
+/turf/simulated/floor/plating/turfpack/sif,
 /area/submap/XenoHive)
 "tz" = (
 /obj/effect/alien/weeds,
 /obj/effect/landmark/loot_spawn,
-/turf/simulated/floor/outdoors/dirt{
+/turf/simulated/floor/outdoors/dirt/turfpack/sif{
 	outdoors = 0
 	},
 /area/submap/XenoHive)
@@ -201,7 +230,7 @@
 	health = 15;
 	maxHealth = 15
 	},
-/turf/simulated/floor/tiled/steel_dirty,
+/turf/simulated/floor/tiled/steel_dirty/turfpack/sif,
 /area/submap/XenoHive)
 "uJ" = (
 /obj/structure/sign/biohazard,
@@ -216,14 +245,14 @@
 "vu" = (
 /obj/effect/alien/weeds,
 /obj/structure/bed/nest,
-/turf/simulated/floor/outdoors/dirt{
+/turf/simulated/floor/outdoors/dirt/turfpack/sif{
 	outdoors = 0
 	},
 /area/submap/XenoHive)
 "wH" = (
 /obj/effect/alien/weeds,
 /obj/structure/loot_pile/mecha/durand,
-/turf/simulated/floor/outdoors/dirt{
+/turf/simulated/floor/outdoors/dirt/turfpack/sif{
 	outdoors = 0
 	},
 /area/submap/XenoHive)
@@ -233,7 +262,7 @@
 "xQ" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/alien/weeds,
-/turf/simulated/floor/outdoors/dirt{
+/turf/simulated/floor/outdoors/dirt/turfpack/sif{
 	outdoors = 0
 	},
 /area/submap/XenoHive)
@@ -243,20 +272,20 @@
 	health = 15;
 	maxHealth = 15
 	},
-/turf/simulated/floor,
+/turf/simulated/floor/plating/turfpack/sif,
 /area/submap/XenoHive)
 "yx" = (
 /mob/living/simple_mob/animal/space/alien/sentinel,
 /obj/effect/alien/weeds,
 /obj/effect/alien/weeds,
-/turf/simulated/floor/outdoors/dirt,
+/turf/simulated/floor/outdoors/dirt/turfpack/sif,
 /area/submap/XenoHive)
 "yS" = (
 /obj/structure/table/steel_reinforced,
 /obj/effect/alien/weeds,
 /obj/item/toy/plushie/face_hugger,
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor,
+/turf/simulated/floor/plating/turfpack/sif,
 /area/submap/XenoHive)
 "zm" = (
 /obj/item/modular_computer/tablet/preset/custom_loadout/elite,
@@ -269,7 +298,7 @@
 /obj/structure/salvageable/autolathe,
 /obj/effect/alien/weeds,
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/tiled/steel_dirty,
+/turf/simulated/floor/tiled/steel_dirty/turfpack/sif,
 /area/submap/XenoHive)
 "AA" = (
 /obj/structure/alien/wall,
@@ -283,7 +312,7 @@
 "BD" = (
 /obj/structure/alien/membrane,
 /obj/effect/alien/weeds,
-/turf/simulated/floor/outdoors/dirt{
+/turf/simulated/floor/outdoors/dirt/turfpack/sif{
 	outdoors = 0
 	},
 /area/submap/XenoHive)
@@ -291,7 +320,7 @@
 /obj/structure/bed/chair,
 /obj/effect/alien/weeds,
 /obj/effect/gibspawner/human,
-/turf/simulated/floor/tiled/steel_dirty,
+/turf/simulated/floor/tiled/steel_dirty/turfpack/sif,
 /area/submap/XenoHive)
 "Ce" = (
 /obj/structure/closet/secure_closet/egg/xenomorph,
@@ -302,23 +331,19 @@
 /obj/item/organ/internal/brain/alraune,
 /obj/item/organ/internal/eyes/replicant,
 /obj/item/gun/energy/gun/fluff/dominator,
-/turf/simulated/floor,
+/turf/simulated/floor/plating/turfpack/sif,
 /area/submap/XenoHive)
-"CR" = (
-/obj/structure/alien/wall,
-/turf/simulated/floor/outdoors/dirt,
-/area/template_noop)
 "De" = (
 /obj/effect/alien/weeds,
 /obj/effect/gibspawner/human,
-/turf/simulated/floor/outdoors/dirt{
+/turf/simulated/floor/outdoors/dirt/turfpack/sif{
 	outdoors = 0
 	},
 /area/submap/XenoHive)
 "Dh" = (
 /mob/living/simple_mob/animal/space/alien/sentinel,
 /obj/effect/alien/weeds,
-/turf/simulated/floor/outdoors/dirt{
+/turf/simulated/floor/outdoors/dirt/turfpack/sif{
 	outdoors = 0
 	},
 /area/submap/XenoHive)
@@ -328,12 +353,12 @@
 "FE" = (
 /mob/living/simple_mob/animal/space/alien/drone,
 /obj/effect/alien/weeds,
-/turf/simulated/floor,
+/turf/simulated/floor/plating/turfpack/sif,
 /area/submap/XenoHive)
 "FV" = (
 /obj/effect/alien/weeds,
 /obj/structure/reagent_dispensers/fueltank/high,
-/turf/simulated/floor,
+/turf/simulated/floor/plating/turfpack/sif,
 /area/submap/XenoHive)
 "Gw" = (
 /obj/structure/table,
@@ -341,46 +366,46 @@
 /obj/item/stack/material/phoron{
 	amount = 10
 	},
-/turf/simulated/floor,
+/turf/simulated/floor/plating/turfpack/sif,
 /area/submap/XenoHive)
 "Gy" = (
 /mob/living/simple_mob/animal/space/alien/sentinel,
 /obj/effect/alien/weeds,
-/turf/simulated/floor/tiled/steel_dirty,
+/turf/simulated/floor/tiled/steel_dirty/turfpack/sif,
 /area/submap/XenoHive)
 "GN" = (
 /obj/effect/alien/weeds,
 /obj/structure/alien/membrane,
-/turf/simulated/floor/outdoors/dirt{
+/turf/simulated/floor/outdoors/dirt/turfpack/sif{
 	outdoors = 0
 	},
 /area/submap/XenoHive)
 "Hr" = (
-/turf/simulated/floor/outdoors/dirt,
+/turf/simulated/floor/outdoors/dirt/turfpack/sif,
 /area/template_noop)
 "Hu" = (
 /obj/structure/table/rack/shelf/steel,
 /obj/effect/alien/weeds,
-/turf/simulated/floor,
+/turf/simulated/floor/plating/turfpack/sif,
 /area/submap/XenoHive)
 "Hx" = (
 /obj/item/portable_destructive_analyzer,
 /obj/effect/alien/weeds,
-/turf/simulated/floor/outdoors/dirt{
+/turf/simulated/floor/outdoors/dirt/turfpack/sif{
 	outdoors = 0
 	},
 /area/submap/XenoHive)
 "Hz" = (
 /obj/effect/alien/weeds,
 /obj/structure/simple_door/resin,
-/turf/simulated/floor/outdoors/dirt{
+/turf/simulated/floor/outdoors/dirt/turfpack/sif{
 	outdoors = 0
 	},
 /area/submap/XenoHive)
 "HI" = (
 /obj/structure/prop/blackbox/xenofrigate,
 /obj/effect/alien/weeds,
-/turf/simulated/floor/tiled/techfloor/grid,
+/turf/simulated/floor/tiled/techfloor/grid/turfpack/sif,
 /area/submap/XenoHive)
 "HJ" = (
 /obj/effect/alien/weeds,
@@ -393,12 +418,12 @@
 /obj/structure/table,
 /obj/effect/alien/weeds,
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor,
+/turf/simulated/floor/plating/turfpack/sif,
 /area/submap/XenoHive)
 "Ir" = (
 /obj/effect/alien/weeds,
 /obj/structure/bed/nest,
-/turf/simulated/floor,
+/turf/simulated/floor/plating/turfpack/sif,
 /area/submap/XenoHive)
 "Is" = (
 /obj/effect/alien/weeds,
@@ -411,40 +436,35 @@
 /obj/effect/alien/weeds,
 /obj/effect/alien/weeds,
 /obj/structure/bed/nest,
-/turf/simulated/floor/tiled/steel_dirty,
+/turf/simulated/floor/tiled/steel_dirty/turfpack/sif,
 /area/submap/XenoHive)
 "Jj" = (
 /obj/effect/alien/weeds,
 /obj/item/stack/material/phoron{
 	amount = 10
 	},
-/turf/simulated/floor/tiled/steel_dirty,
+/turf/simulated/floor/tiled/steel_dirty/turfpack/sif,
 /area/submap/XenoHive)
 "JV" = (
 /obj/effect/alien/weeds,
 /obj/structure/simple_door/resin,
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/outdoors/dirt{
+/turf/simulated/floor/outdoors/dirt/turfpack/sif{
 	outdoors = 0
 	},
 /area/submap/XenoHive)
 "LB" = (
 /obj/effect/alien/weeds,
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor,
+/turf/simulated/floor/plating/turfpack/sif,
 /area/submap/XenoHive)
 "Mx" = (
 /obj/machinery/door/airlock/vault,
-/turf/simulated/floor/tiled/techfloor,
+/turf/simulated/floor/tiled/techfloor/turfpack/sif,
 /area/submap/XenoHive)
 "MJ" = (
 /obj/structure/loot_pile/surface/bones,
-/turf/simulated/floor/outdoors/dirt,
-/area/submap/XenoHive)
-"MZ" = (
-/obj/effect/alien/weeds,
-/obj/effect/landmark/loot_spawn/low,
-/turf/simulated/floor/outdoors/dirt{
+/turf/simulated/floor/outdoors/dirt/turfpack/sif{
 	outdoors = 0
 	},
 /area/submap/XenoHive)
@@ -460,19 +480,19 @@
 /obj/effect/alien/weeds,
 /obj/effect/alien/weeds,
 /obj/machinery/telecomms/receiver,
-/turf/simulated/floor/tiled/steel_dirty,
+/turf/simulated/floor/tiled/steel_dirty/turfpack/sif,
 /area/submap/XenoHive)
 "Pq" = (
 /obj/structure/simple_door/resin,
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/outdoors/dirt{
+/turf/simulated/floor/outdoors/dirt/turfpack/sif{
 	outdoors = 0
 	},
 /area/submap/XenoHive)
 "Pv" = (
 /mob/living/simple_mob/animal/space/alien,
 /obj/effect/alien/weeds,
-/turf/simulated/floor/outdoors/dirt{
+/turf/simulated/floor/outdoors/dirt/turfpack/sif{
 	outdoors = 0
 	},
 /area/submap/XenoHive)
@@ -493,7 +513,7 @@
 "QG" = (
 /obj/effect/alien/weeds,
 /obj/effect/alien/weeds,
-/turf/simulated/floor,
+/turf/simulated/floor/plating/turfpack/sif,
 /area/submap/XenoHive)
 "Rr" = (
 /obj/structure/noticeboard/anomaly,
@@ -502,19 +522,17 @@
 "Sl" = (
 /obj/structure/salvageable/bliss,
 /obj/effect/alien/weeds,
-/turf/simulated/floor,
+/turf/simulated/floor/plating/turfpack/sif,
 /area/submap/XenoHive)
 "Tb" = (
 /obj/effect/alien/weeds,
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/tiled/steel_dirty,
+/turf/simulated/floor/tiled/steel_dirty/turfpack/sif,
 /area/submap/XenoHive)
 "Tq" = (
 /mob/living/simple_mob/animal/space/alien,
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/outdoors/dirt{
-	outdoors = 0
-	},
+/turf/simulated/floor/outdoors/dirt/turfpack/sif,
 /area/submap/XenoHive)
 "Tv" = (
 /mob/living/simple_mob/animal/space/alien/sentinel/praetorian,
@@ -529,23 +547,25 @@
 /obj/structure/prop/transmitter,
 /obj/effect/decal/cleanable/dirt,
 /obj/item/gps/internal/poi,
-/turf/simulated/floor,
+/turf/simulated/floor/plating/turfpack/sif,
 /area/submap/XenoHive)
 "Vj" = (
-/turf/simulated/floor/outdoors/dirt,
+/turf/simulated/floor/outdoors/dirt/turfpack/sif{
+	outdoors = 0
+	},
 /area/submap/XenoHive)
 "VA" = (
 /obj/effect/alien/weeds/node,
 /obj/effect/decal/cleanable/dirt,
 /obj/random/junk,
-/turf/simulated/floor/outdoors/dirt{
+/turf/simulated/floor/outdoors/dirt/turfpack/sif{
 	outdoors = 0
 	},
 /area/submap/XenoHive)
 "WE" = (
 /obj/effect/alien/weeds,
 /obj/structure/mopbucket,
-/turf/simulated/floor/outdoors/dirt{
+/turf/simulated/floor/outdoors/dirt/turfpack/sif{
 	outdoors = 0
 	},
 /area/submap/XenoHive)
@@ -555,7 +575,7 @@
 /obj/machinery/light/small/emergency/flicker{
 	dir = 8
 	},
-/turf/simulated/floor,
+/turf/simulated/floor/plating/turfpack/sif,
 /area/submap/XenoHive)
 "YG" = (
 /obj/effect/alien/weeds,
@@ -563,7 +583,7 @@
 	health = 15;
 	maxHealth = 15
 	},
-/turf/simulated/floor/tiled/steel_dirty,
+/turf/simulated/floor/tiled/steel_dirty/turfpack/sif,
 /area/submap/XenoHive)
 "YL" = (
 /obj/effect/decal/cleanable/dirt,
@@ -571,13 +591,13 @@
 	health = 15;
 	maxHealth = 15
 	},
-/turf/simulated/floor/outdoors/dirt,
+/turf/simulated/floor/outdoors/dirt/turfpack/sif,
 /area/submap/XenoHive)
 "Zc" = (
 /obj/effect/alien/weeds,
 /obj/effect/decal/cleanable/dirt,
 /obj/random/junk,
-/turf/simulated/floor/outdoors/dirt{
+/turf/simulated/floor/outdoors/dirt/turfpack/sif{
 	outdoors = 0
 	},
 /area/submap/XenoHive)
@@ -588,7 +608,7 @@
 	health = 15;
 	maxHealth = 15
 	},
-/turf/simulated/floor/outdoors/dirt{
+/turf/simulated/floor/outdoors/dirt/turfpack/sif{
 	outdoors = 0
 	},
 /area/submap/XenoHive)
@@ -799,8 +819,8 @@ lb
 "}
 (13,1,1) = {"
 Hr
-rL
-dn
+af
+af
 Et
 Et
 Et
@@ -816,9 +836,9 @@ lb
 "}
 (14,1,1) = {"
 sy
-AB
-dn
-Dh
+ac
+af
+ad
 Et
 Et
 AB
@@ -833,14 +853,14 @@ lb
 "}
 (15,1,1) = {"
 eM
-rL
-MZ
+af
+ag
 Et
 Et
 AB
 WE
-dn
-MZ
+rL
+ab
 AB
 Et
 Et
@@ -860,7 +880,7 @@ kl
 AB
 Et
 Et
-dn
+rL
 rL
 sy
 lb
@@ -871,12 +891,12 @@ sy
 Et
 AB
 Pv
-dn
+rL
 Zc
 Pv
 AB
 Et
-MZ
+ab
 Dh
 sy
 sy
@@ -887,14 +907,14 @@ lb
 sy
 Et
 Et
-dn
+rL
 De
 Zx
-dn
+rL
 Et
 Et
-MZ
-dn
+ab
+rL
 gS
 sy
 lb
@@ -904,30 +924,30 @@ lb
 sy
 Et
 AB
-dn
+rL
 sp
 kl
 AB
 Et
 Et
 Dh
-AB
+aa
 sy
 sy
 lb
 "}
 (20,1,1) = {"
 Hr
-dk
+ag
 Et
 Et
-MZ
+ab
 kl
-dn
+rL
 Et
 Et
 Et
-dn
+rL
 rL
 sy
 sy
@@ -935,7 +955,7 @@ lb
 "}
 (21,1,1) = {"
 lb
-rL
+af
 yx
 Et
 AB
@@ -952,8 +972,8 @@ lb
 "}
 (22,1,1) = {"
 lb
-AB
-rL
+ac
+af
 Et
 Et
 Pv
@@ -970,15 +990,15 @@ lb
 (23,1,1) = {"
 sy
 sy
-MJ
-Vj
+ah
+ae
 Et
 AB
 xQ
 sp
 Pq
 Tq
-AB
+ac
 Et
 Et
 lb
@@ -992,7 +1012,7 @@ fw
 Et
 Et
 Et
-dn
+rL
 Pq
 fW
 YL
@@ -1010,7 +1030,7 @@ lb
 sy
 sy
 sy
-CR
+gS
 eM
 lb
 lb

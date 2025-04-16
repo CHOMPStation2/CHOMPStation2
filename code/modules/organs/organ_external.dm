@@ -386,7 +386,9 @@
 			var/modifed_burn = burn
 
 			// Let's calculate how INJURED our limb is accounting for AFTER the damage we just took. Determines the chance the next attack will take our limb off!
-			var/damage_factor = ((max_damage*CONFIG_GET(number/organ_health_multiplier))/(brute_dam + burn_dam))*100
+			var/damage_factor = ((brute_dam + burn_dam)/(max_damage*CONFIG_GET(number/organ_health_multiplier)))*100
+			if(brute_dam > max_damage || burn_dam > max_damage) //This is in case we go OVER our max. This doesn't EVER happen except on VITAL organs.
+				damage_factor = 100
 			// Max_damage of 80 and brute_dam of 80? || Factor = 100 Max_damage of 80 and brute_dam of 40? Factor = 50 || Max_damage of 80 and brute_dam of 5? Factor = 5
 			// This lowers our chances of having our limb removed when it has less damage. The more damaged the limb, the higher the chance it falls off!
 
@@ -1143,7 +1145,7 @@ Note that amputating the affected organ does in fact remove the infection from t
 				span_danger("You hear a sickening crack.")),brokenpain)
 			//CHOMPEdit End
 			owner.emote("scream")
-		jostle_bone()	//VOREStation Edit End
+		jostle_bone()
 
 	if(istype(owner.loc, /obj/belly)) //CHOMPedit, bone breaks in bellys should be whisper range to prevent bar wide blender prefbreak. This is a hacky passive hardcode, if a pref gets added, remove this if else
 		playsound(src, "fracture", 90, 1, -6.5)

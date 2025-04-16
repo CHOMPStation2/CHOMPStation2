@@ -82,7 +82,6 @@ var/global/list/robot_modules = list(
 		R.radio.recalculateChannels()
 
 	R.set_default_module_icon()
-	R.pick_module()
 	if(!R.client)
 		R.icon_selected = FALSE			// It wasnt a player selecting icon? Let them do it later!
 
@@ -775,6 +774,15 @@ var/global/list/robot_modules = list(
 	src.modules += new /obj/item/gun/energy/robotic/phasegun(src) //CHOMPedit: Phasegun for regular mining cyborg.
 	src.modules += new /obj/item/vac_attachment(src) //CHOMPAdd
 	src.emag += new /obj/item/kinetic_crusher/machete/dagger(src)
+
+	var/datum/matter_synth/beacon = new /datum/matter_synth/beacon(10000)
+	synths += beacon
+
+	var/obj/item/stack/marker_beacon/MB = new /obj/item/stack/marker_beacon(src)
+	MB.uses_charge = 1
+	MB.charge_costs = list(500)
+	MB.synths = list(beacon)
+	src.modules += MB
 
 	src.modules += new /obj/item/dogborg/sleeper/compactor/supply(src)
 	src.emag += new /obj/item/dogborg/pounce(src)

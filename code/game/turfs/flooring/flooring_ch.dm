@@ -22,3 +22,15 @@
 /turf/simulated/floor/boxing/gym
 	name = "gym mat"
 	icon_state = "gym_mat"
+
+/turf/simulated/floor/grass2/sif
+	name = "light sif grass patch"
+	desc = "You can't tell if this is real grass or just cheap plastic imitation."
+	icon = 'icons/turf/outdoors.dmi'
+	icon_state = "grass_sif0"
+
+/turf/simulated/floor/grass2/sif/forest
+	name = "dark sif grass patch"
+	desc = "You can't tell if this is real grass or just cheap plastic imitation."
+	icon = 'icons/turf/outdoors.dmi'
+	icon_state = "grass_sif_dark0"

@@ -101,7 +101,7 @@ export const TicketsPanel = (props) => {
 
   const [ticketChat, setTicketChat] = useState('');
 
-  const messagesEndRef: RefObject<HTMLDivElement> = useRef(null);
+  const messagesEndRef: RefObject<HTMLDivElement | null> = useRef(null);
 
   useEffect(() => {
     const scroll = messagesEndRef.current;
@@ -198,24 +198,34 @@ export const TicketsPanel = (props) => {
                   <Section
                     title={'Ticket #' + selected_ticket.id}
                     buttons={
-                      <Box nowrap>
-                        <Button
-                          icon="arrow-up"
-                          onClick={() => act('undock_ticket')}
-                        >
-                          Undock
-                        </Button>
-                        <Button
-                          icon="pen"
-                          onClick={() => act('retitle_ticket')}
-                        >
-                          Rename Ticket
-                        </Button>
-                        <Button onClick={() => act('legacy')}>Legacy UI</Button>
-                        <Button color={LevelColor[selected_ticket.level]}>
-                          {Level[selected_ticket.level]}
-                        </Button>
-                      </Box>
+                      <Stack>
+                        <Stack.Item>
+                          <Button
+                            icon="arrow-up"
+                            onClick={() => act('undock_ticket')}
+                          >
+                            Undock
+                          </Button>
+                        </Stack.Item>
+                        <Stack.Item>
+                          <Button
+                            icon="pen"
+                            onClick={() => act('retitle_ticket')}
+                          >
+                            Rename Ticket
+                          </Button>
+                        </Stack.Item>
+                        <Stack.Item>
+                          <Button onClick={() => act('legacy')}>
+                            Legacy UI
+                          </Button>
+                        </Stack.Item>
+                        <Stack.Item>
+                          <Button color={LevelColor[selected_ticket.level]}>
+                            {Level[selected_ticket.level]}
+                          </Button>
+                        </Stack.Item>
+                      </Stack>
                     }
                   >
                     <LabeledList>
@@ -300,10 +310,9 @@ export const TicketsPanel = (props) => {
                           autoFocus
                           autoSelect
                           fluid
-                          updateOnPropsChange
                           placeholder="Enter a message..."
                           value={ticketChat}
-                          onInput={(e, value: string) => setTicketChat(value)}
+                          onChange={(value: string) => setTicketChat(value)}
                           onKeyDown={(e) => {
                             if (KEY.Enter === e.key) {
                               act('send_msg', { msg: ticketChat });
@@ -330,23 +339,29 @@ export const TicketsPanel = (props) => {
               <Section
                 title="No ticket selected"
                 buttons={
-                  <Box nowrap>
-                    <Button
-                      disabled
-                      icon="arrow-up"
-                      onClick={() => act('undock_ticket')}
-                    >
-                      Undock
-                    </Button>
-                    <Button
-                      disabled
-                      icon="pen"
-                      onClick={() => act('retitle_ticket')}
-                    >
-                      Rename Ticket
-                    </Button>
-                    <Button onClick={() => act('legacy')}>Legacy UI</Button>
-                  </Box>
+                  <Stack>
+                    <Stack.Item>
+                      <Button
+                        disabled
+                        icon="arrow-up"
+                        onClick={() => act('undock_ticket')}
+                      >
+                        Undock
+                      </Button>
+                    </Stack.Item>
+                    <Stack.Item>
+                      <Button
+                        disabled
+                        icon="pen"
+                        onClick={() => act('retitle_ticket')}
+                      >
+                        Rename Ticket
+                      </Button>
+                    </Stack.Item>
+                    <Stack.Item>
+                      <Button onClick={() => act('legacy')}>Legacy UI</Button>
+                    </Stack.Item>
+                  </Stack>
                 }
               >
                 Please select a ticket on the left to view its details.

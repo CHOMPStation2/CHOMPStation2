@@ -23868,6 +23868,10 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow,
+/obj/machinery/power/sensor{
+	name = "Powernet Sensor - Exp Carrier";
+	name_tag = "Exp Carrier Subgrid"
+	},
 /turf/simulated/floor,
 /area/expoutpost/reactorroom)
 "uJZ" = (
@@ -28120,7 +28124,6 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow,
-/obj/machinery/power/sensor,
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/engineering{
 	name = "R-UST Access"
