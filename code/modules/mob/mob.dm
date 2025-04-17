@@ -389,7 +389,7 @@
 			"Quit This Round",list("Quit Round","No"))
 			if(extra_check == "Quit Round")
 				//Update any existing objectives involving this mob.
-				for(var/datum/objective/O in all_objectives)
+				for(var/datum/objective/O in GLOB.all_objectives)
 					if(O.target == mind)
 						if(O.owner && O.owner.current)
 							to_chat(O.owner.current,span_warning("You get the feeling your target is no longer within your reach..."))
@@ -409,8 +409,8 @@
 					mind.special_role = null
 
 				//Cut the PDA manifest (ugh)
-				if(PDA_Manifest.len)
-					PDA_Manifest.Cut()
+				if(GLOB.PDA_Manifest.len)
+					GLOB.PDA_Manifest.Cut()
 				for(var/datum/data/record/R in data_core.medical)
 					if((R.fields["name"] == real_name))
 						qdel(R)
@@ -479,8 +479,13 @@
 	var/list/targets = list()
 
 
+<<<<<<< HEAD
 	targets += observe_list_format(nuke_disks)
 	targets += observe_list_format(GLOB.all_singularities) //CHOMP Edit
+=======
+	targets += observe_list_format(GLOB.nuke_disks)
+	targets += observe_list_format(all_singularities)
+>>>>>>> 21dcf0555b (Conversion many Globals to Managed Globals (Part 1) (#17121))
 	targets += getmobs()
 	targets += observe_list_format(sortAtom(mechas_list))
 	targets += observe_list_format(SSshuttles.ships)

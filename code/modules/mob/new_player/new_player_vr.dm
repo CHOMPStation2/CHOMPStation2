@@ -17,7 +17,7 @@
 		pass = FALSE
 
 	//Are they on the VERBOTEN LIST?
-	if (prevent_respawns.Find(client?.prefs?.real_name))
+	if (GLOB.prevent_respawns.Find(client?.prefs?.real_name))
 		to_chat(src,span_warning("You've already quit the round as this character. You can't go back now that you've free'd your job slot. Play another character, or wait for the next round."))
 		pass = FALSE
 
@@ -52,7 +52,12 @@
 	var/pref_synth = client.prefs.dirty_synth
 	var/pref_meat = client.prefs.gross_meatbag
 	for(var/datum/trait/T as anything in megalist)
+<<<<<<< HEAD
 		var/cost = traits_costs[T]
+=======
+		var/cost = GLOB.traits_costs[T]
+
+>>>>>>> 21dcf0555b (Conversion many Globals to Managed Globals (Part 1) (#17121))
 		if(T.category == TRAIT_TYPE_POSITIVE)
 			traits_left--
 
@@ -62,7 +67,7 @@
 			to_chat(src,span_warning("Your species is not playable. One or more traits appear to have been removed from the game or renamed. Enter character setup to correct this."))
 			break
 		else
-			points_left -= traits_costs[T]
+			points_left -= GLOB.traits_costs[T]
 
 		var/take_flags = initial(T.can_take)
 		if((pref_synth && !(take_flags & SYNTHETICS)) || (pref_meat && !(take_flags & ORGANICS)))

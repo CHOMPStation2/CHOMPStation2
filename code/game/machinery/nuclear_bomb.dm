@@ -1,4 +1,4 @@
-var/bomb_set
+GLOBAL_VAR(bomb_set)
 
 /obj/machinery/nuclearbomb
 	name = "\improper Nuclear Fission Explosive"
@@ -45,7 +45,7 @@ var/bomb_set
 
 /obj/machinery/nuclearbomb/process()
 	if(timing)
-		bomb_set = 1 //So long as there is one nuke timing, it means one nuke is armed.
+		GLOB.bomb_set = 1 //So long as there is one nuke timing, it means one nuke is armed.
 		timeleft--
 		playsound(src, 'sound/items/timer.ogg',50) //chompedit... beep :)
 		if(timeleft <= 0)
@@ -275,8 +275,12 @@ var/bomb_set
 							if(icon_state == "nuclearbomb2")
 								icon_state = "nuclearbomb1"
 						timing = 0
+<<<<<<< HEAD
 						bomb_set = 0
 						set_security_level("red") //chompedit
+=======
+						GLOB.bomb_set = 0
+>>>>>>> 21dcf0555b (Conversion many Globals to Managed Globals (Part 1) (#17121))
 					if(light_wire == temp_wire)
 						lighthack = !lighthack
 
@@ -323,6 +327,7 @@ var/bomb_set
 						if(!lighthack)
 							icon_state = "nuclearbomb2"
 						if(!safety)
+<<<<<<< HEAD
 							bomb_set = 1//There can still be issues with this reseting when there are multiple bombs. Not a big deal tho for Nuke/N
 							set_security_level("delta")//chompedit
 						else
@@ -331,14 +336,25 @@ var/bomb_set
 					else
 						bomb_set = 0
 						set_security_level("red") //chompedit
+=======
+							GLOB.bomb_set = 1//There can still be issues with this reseting when there are multiple bombs. Not a big deal tho for Nuke/N
+						else
+							GLOB.bomb_set = 0
+					else
+						GLOB.bomb_set = 0
+>>>>>>> 21dcf0555b (Conversion many Globals to Managed Globals (Part 1) (#17121))
 						if(!lighthack)
 							icon_state = "nuclearbomb1"
 				if(href_list["safety"])
 					safety = !(safety)
 					if(safety)
 						timing = 0
+<<<<<<< HEAD
 						bomb_set = 0
 						set_security_level("red") //chompedit
+=======
+						GLOB.bomb_set = 0
+>>>>>>> 21dcf0555b (Conversion many Globals to Managed Globals (Part 1) (#17121))
 				if(href_list["anchor"])
 
 					if(removal_stage == 5)
@@ -420,10 +436,10 @@ var/bomb_set
 
 /obj/item/disk/nuclear/Initialize(mapload)
 	. = ..()
-	nuke_disks += src
+	GLOB.nuke_disks += src
 
 /obj/item/disk/nuclear/Destroy()
-	if(!nuke_disks.len && blobstart.len > 0)
+	if(!GLOB.nuke_disks.len && blobstart.len > 0)
 		var/obj/D = new /obj/item/disk/nuclear(pick(blobstart))
 		message_admins("[src], the last authentication disk, has been destroyed. Spawning [D] at ([D.x], [D.y], [D.z]).")
 		log_game("[src], the last authentication disk, has been destroyed. Spawning [D] at ([D.x], [D.y], [D.z]).")

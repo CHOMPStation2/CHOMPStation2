@@ -1,6 +1,10 @@
 #define WHITELISTFILE "data/whitelist.txt"
 
+<<<<<<< HEAD
 GLOBAL_LIST_EMPTY(whitelist) // CHOMPEdit - Managed Globals
+=======
+GLOBAL_LIST_EMPTY(whitelist)
+>>>>>>> 21dcf0555b (Conversion many Globals to Managed Globals (Part 1) (#17121))
 
 /hook/startup/proc/loadWhitelist()
 	if(CONFIG_GET(flag/usewhitelist))
@@ -8,6 +12,7 @@ GLOBAL_LIST_EMPTY(whitelist) // CHOMPEdit - Managed Globals
 	return 1
 
 /proc/load_whitelist()
+<<<<<<< HEAD
 	GLOB.whitelist = file2list(WHITELISTFILE) // CHOMPEdit - Managed Globals
 	if(!GLOB.whitelist.len)	GLOB.whitelist = null // CHOMPEdit - Managed Globals
 
@@ -19,6 +24,17 @@ GLOBAL_LIST_EMPTY(whitelist) // CHOMPEdit - Managed Globals
 	return ("[M.ckey]" in GLOB.whitelist) // CHOMPEdit - Managed Globals
 
 GLOBAL_LIST_EMPTY(alien_whitelist) // CHOMPEdit - Managed Globals
+=======
+	GLOB.whitelist = file2list(WHITELISTFILE)
+	if(!GLOB.whitelist.len)	GLOB.whitelist = null
+
+/proc/check_whitelist(mob/M /*, var/rank*/)
+	if(!GLOB.whitelist)
+		return 0
+	return ("[M.ckey]" in GLOB.whitelist)
+
+GLOBAL_LIST_EMPTY(alien_whitelist)
+>>>>>>> 21dcf0555b (Conversion many Globals to Managed Globals (Part 1) (#17121))
 
 /hook/startup/proc/loadAlienWhitelist()
 	if(CONFIG_GET(flag/usealienwhitelist))
@@ -40,10 +56,17 @@ GLOBAL_LIST_EMPTY(alien_whitelist) // CHOMPEdit - Managed Globals
 			if(key != ckey(key))
 				warning("Alien whitelist entry appears to have key, not ckey: [line]") // The key contains invalid ckey characters
 				continue
+<<<<<<< HEAD
 			var/list/our_whitelists = GLOB.alien_whitelist[key] // Try to see if we have one already and add to it // CHOMPEdit - Managed Globals
 			if(!our_whitelists) // Guess this is their first/only whitelist entry
 				our_whitelists = list()
 				GLOB.alien_whitelist[key] = our_whitelists // CHOMPEdit - Managed Globals
+=======
+			var/list/our_whitelists = GLOB.alien_whitelist[key] // Try to see if we have one already and add to it
+			if(!our_whitelists) // Guess this is their first/only whitelist entry
+				our_whitelists = list()
+				GLOB.alien_whitelist[key] = our_whitelists
+>>>>>>> 21dcf0555b (Conversion many Globals to Managed Globals (Part 1) (#17121))
 			our_whitelists += left_and_right[2]
 
 /proc/is_alien_whitelisted(client/C, var/datum/species/species)
@@ -60,7 +83,11 @@ GLOBAL_LIST_EMPTY(alien_whitelist) // CHOMPEdit - Managed Globals
 		return TRUE
 
 	//Search the whitelist
+<<<<<<< HEAD
 	var/list/our_whitelists = GLOB.alien_whitelist[C.ckey] // CHOMPEdit - Managed Globals
+=======
+	var/list/our_whitelists = GLOB.alien_whitelist[C.ckey]
+>>>>>>> 21dcf0555b (Conversion many Globals to Managed Globals (Part 1) (#17121))
 	if("All" in our_whitelists)
 		return TRUE
 	if(species.name in our_whitelists)
@@ -83,7 +110,11 @@ GLOBAL_LIST_EMPTY(alien_whitelist) // CHOMPEdit - Managed Globals
 		return TRUE
 
 	//Search the whitelist
+<<<<<<< HEAD
 	var/list/our_whitelists = GLOB.alien_whitelist[M.ckey] // CHOMPEdit - Managed Globals
+=======
+	var/list/our_whitelists = GLOB.alien_whitelist[M.ckey]
+>>>>>>> 21dcf0555b (Conversion many Globals to Managed Globals (Part 1) (#17121))
 	if("All" in our_whitelists)
 		return TRUE
 	if(language.name in our_whitelists)
@@ -105,8 +136,13 @@ GLOBAL_LIST_EMPTY(alien_whitelist) // CHOMPEdit - Managed Globals
 		return 1
 
 	//If we have a loaded file, search it
+<<<<<<< HEAD
 	if(GLOB.alien_whitelist) // CHOMPEdit - Managed Globals
 		for (var/s in GLOB.alien_whitelist) // CHOMPEdit - Managed Globals
+=======
+	if(GLOB.alien_whitelist)
+		for (var/s in GLOB.alien_whitelist)
+>>>>>>> 21dcf0555b (Conversion many Globals to Managed Globals (Part 1) (#17121))
 			if(findtext(s,"[M.ckey] - [module]"))
 				return 1
 			if(findtext(s,"[M.ckey] - All"))

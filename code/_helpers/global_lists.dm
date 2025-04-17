@@ -372,9 +372,13 @@ GLOBAL_LIST_EMPTY(legacy_globals)
 	GLOB.legacy_globals["visual_nets"] = visual_nets
 	GLOB.legacy_globals["cameranet"] = cameranet
 	GLOB.legacy_globals["cultnet"] = cultnet
+<<<<<<< HEAD
 	GLOB.legacy_globals["item_tf_spawnpoints"] = item_tf_spawnpoints
 	GLOB.legacy_globals["existing_solargrubs"] = existing_solargrubs
 	*/
+=======
+	GLOB.legacy_globals["existing_solargrubs"] = GLOB.existing_solargrubs
+>>>>>>> 21dcf0555b (Conversion many Globals to Managed Globals (Part 1) (#17121))
 
 var/global/list/selectable_footstep = list(
 	"Default" = FOOTSTEP_MOB_HUMAN,
