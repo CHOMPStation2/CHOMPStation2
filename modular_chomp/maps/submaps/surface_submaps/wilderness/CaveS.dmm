@@ -52,10 +52,6 @@
 /obj/item/reagent_containers/food/snacks/xenomeat/spidermeat,
 /turf/template_noop,
 /area/submap/CaveS)
-"m" = (
-/obj/effect/spider/stickyweb,
-/turf/simulated/floor/outdoors/dirt,
-/area/submap/CaveS)
 "n" = (
 /obj/item/clothing/accessory/storage/webbing,
 /obj/item/material/knife/tacknife/combatknife,
@@ -140,22 +136,22 @@
 /obj/item/stack/cable_coil,
 /obj/item/storage/toolbox,
 /obj/random/toolbox,
-/turf/simulated/floor,
+/turf/simulated/floor/plating,
 /area/submap/CaveS)
 "C" = (
 /obj/structure/loot_pile/maint/technical,
-/turf/simulated/floor,
+/turf/simulated/floor/plating,
 /area/submap/CaveS)
 "D" = (
 /obj/structure/table/woodentable,
-/turf/simulated/floor,
+/turf/simulated/floor/plating,
 /area/submap/CaveS)
 "E" = (
 /obj/machinery/power/port_gen/pacman,
 /obj/structure/cable{
 	icon_state = "0-2"
 	},
-/turf/simulated/floor,
+/turf/simulated/floor/plating,
 /area/submap/CaveS)
 "F" = (
 /turf/simulated/wall,
@@ -169,14 +165,14 @@
 /obj/item/reagent_containers/pill/antitox,
 /obj/item/reagent_containers/pill/antitox,
 /obj/item/reagent_containers/pill/paracetamol,
-/turf/simulated/floor,
+/turf/simulated/floor/plating,
 /area/submap/CaveS)
 "H" = (
 /obj/structure/cable{
 	icon_state = "1-2";
 	pixel_y = 0
 	},
-/turf/simulated/floor,
+/turf/simulated/floor/plating,
 /area/submap/CaveS)
 "I" = (
 /obj/structure/closet/crate,
@@ -188,7 +184,7 @@
 /obj/item/material/star,
 /obj/item/material/star,
 /obj/item/material/star,
-/turf/simulated/floor,
+/turf/simulated/floor/plating,
 /area/submap/CaveS)
 "J" = (
 /obj/effect/spider/stickyweb,
@@ -201,25 +197,32 @@
 /obj/structure/cable{
 	icon_state = "1-4"
 	},
-/turf/simulated/floor,
+/turf/simulated/floor/plating,
 /area/submap/CaveS)
 "L" = (
 /obj/structure/cable{
 	icon_state = "4-8";
 	pixel_x = 0
 	},
-/turf/simulated/floor,
+/turf/simulated/floor/plating,
 /area/submap/CaveS)
 "M" = (
 /obj/machinery/computer/communications,
 /obj/structure/cable{
 	icon_state = "0-8"
 	},
-/turf/simulated/floor,
+/turf/simulated/floor/plating,
 /area/submap/CaveS)
 "N" = (
 /obj/structure/loot_pile/maint/boxfort,
 /turf/simulated/floor,
+/area/submap/CaveS)
+"O" = (
+/turf/simulated/floor/plating,
+/area/submap/CaveS)
+"P" = (
+/obj/random/mob/spider/mutant,
+/turf/simulated/floor/plating,
 /area/submap/CaveS)
 "W" = (
 /mob/living/simple_mob/animal/giant_spider/lurker{
@@ -228,12 +231,6 @@
 /turf/simulated/floor/outdoors/dirt{
 	outdoors = 0
 	},
-/area/submap/CaveS)
-"Z" = (
-/mob/living/simple_mob/animal/giant_spider/lurker{
-	loot_list = list(/obj/item/stock_parts/capacitor/omni = 50)
-	},
-/turf/simulated/floor/outdoors/dirt,
 /area/submap/CaveS)
 
 (1,1,1) = {"
@@ -771,7 +768,7 @@ d
 k
 k
 d
-Z
+W
 d
 d
 d
@@ -1214,7 +1211,7 @@ b
 b
 h
 k
-m
+i
 d
 d
 d
@@ -1257,7 +1254,7 @@ d
 i
 k
 k
-m
+i
 d
 d
 d
@@ -1359,9 +1356,9 @@ d
 k
 k
 k
-A
-A
-A
+O
+O
+O
 k
 k
 W
@@ -1400,7 +1397,7 @@ d
 k
 k
 k
-A
+O
 E
 H
 K
@@ -1426,7 +1423,7 @@ d
 d
 d
 d
-m
+i
 k
 k
 k
@@ -1440,13 +1437,13 @@ k
 d
 W
 k
-A
-A
+O
+O
 D
 F
 F
 L
-A
+O
 A
 k
 d
@@ -1482,13 +1479,13 @@ k
 d
 k
 k
-A
-A
+O
+O
 D
 F
 F
 M
-A
+O
 N
 d
 d
@@ -1525,12 +1522,12 @@ d
 d
 k
 B
-A
-A
+O
+O
 G
 I
-A
-A
+O
+O
 d
 d
 d
@@ -1568,10 +1565,10 @@ d
 k
 k
 C
-A
-w
+O
+P
 k
-A
+O
 d
 d
 d
