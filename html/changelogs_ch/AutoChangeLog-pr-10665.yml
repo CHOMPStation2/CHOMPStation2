@@ -1,0 +1,4 @@
+author: "CHOMPStation2StaffMirrorBot"
+delete-after: True
+changes:
+  - refactor: "converts a bunch of global variables/lists to managed global variables/lists"
