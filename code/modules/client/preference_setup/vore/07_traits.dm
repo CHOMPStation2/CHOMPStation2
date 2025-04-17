@@ -300,14 +300,8 @@ var/global/list/valid_bloodreagents = list("default",REAGENT_ID_IRON,REAGENT_ID_
 
 	var/points_left = pref.starting_trait_points
 
-<<<<<<< HEAD
-
-	for(var/T in pref.pos_traits + pref.neg_traits) // CHOMPEdit: Only Positive traits cost slots now.
-		points_left -= traits_costs[T]
-=======
 	for(var/T in pref.pos_traits + pref.neg_traits)
 		points_left -= GLOB.traits_costs[T]
->>>>>>> 21dcf0555b (Conversion many Globals to Managed Globals (Part 1) (#17121))
 		if(T in pref.pos_traits)
 			traits_left--
 	. += span_bold("Traits Left:") + " [traits_left]<br>"

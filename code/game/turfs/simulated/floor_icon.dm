@@ -25,11 +25,7 @@ var/image/no_ceiling_image = null
 			icon_state = flooring.icon_base
 									//VOREStation Addition Start
 			if(flooring.check_season)
-<<<<<<< HEAD
-				icon_state = "[icon_state]-[GLOB.world_time_season]"	//VOREStation Addition End // CHOMPEdit - Managed Globals
-=======
 				icon_state = "[icon_state]-[GLOB.world_time_season]"	//VOREStation Addition End
->>>>>>> 21dcf0555b (Conversion many Globals to Managed Globals (Part 1) (#17121))
 			if(flooring.has_base_range)
 				icon_state = "[icon_state][rand(0,flooring.has_base_range)]"
 				flooring_override = icon_state

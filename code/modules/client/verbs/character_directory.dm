@@ -34,14 +34,14 @@ GLOBAL_DATUM(character_directory, /datum/character_directory)
 		data["personalVisibility"] = user.mind.show_in_directory
 		data["personalTag"] = user.mind.directory_tag || "Unset"
 		data["personalErpTag"] = user.mind.directory_erptag || "Unset"
-		data["personalEventTag"] = vantag_choices_list[user.mind.vantag_preference] //CHOMPEdit
+		data["personalEventTag"] = GLOB.vantag_choices_list[user.mind.vantag_preference] //CHOMPEdit
 		data["personalGenderTag"] = user.mind.directory_gendertag || "Unset" // CHOMPStation Edit: Character Directory Update
 		data["personalSexualityTag"] = user.mind.directory_sexualitytag || "Unset" // CHOMPStation Edit: Character Directory Update
 	else if (user?.client?.prefs)
 		data["personalVisibility"] = user.client.prefs.show_in_directory
 		data["personalTag"] = user.client.prefs.directory_tag || "Unset"
 		data["personalErpTag"] = user.client.prefs.directory_erptag || "Unset"
-		data["personalEventTag"] = vantag_choices_list[user.client.prefs.vantag_preference] //CHOMPEdit
+		data["personalEventTag"] = GLOB.vantag_choices_list[user.client.prefs.vantag_preference] //CHOMPEdit
 		data["personalGenderTag"] = user.client.prefs.directory_gendertag || "Unset" // CHOMPStation Edit: Character Directory Update
 		data["personalSexualityTag"] = user.client.prefs.directory_sexualitytag || "Unset" // CHOMPStation Edit: Character Directory Update
 
@@ -69,7 +69,7 @@ GLOBAL_DATUM(character_directory, /datum/character_directory)
 		var/ooc_notes_style = null
 		var/gendertag = null
 		var/sexualitytag = null
-		var/eventtag = vantag_choices_list[VANTAG_NONE]
+		var/eventtag = GLOB.vantag_choices_list[VANTAG_NONE]
 		//CHOMPEdit End
 		var/flavor_text = null
 		var/tag
@@ -82,7 +82,7 @@ GLOBAL_DATUM(character_directory, /datum/character_directory)
 			//CHOMPEdit Start
 			gendertag = C.mob.mind.directory_gendertag || "Unset"
 			sexualitytag = C.mob.mind.directory_sexualitytag || "Unset"
-			eventtag = vantag_choices_list[C.mob.mind.vantag_preference]
+			eventtag = GLOB.vantag_choices_list[C.mob.mind.vantag_preference]
 			//CHOMPEdit End
 		else
 			tag = C.prefs.directory_tag || "Unset"
@@ -91,7 +91,7 @@ GLOBAL_DATUM(character_directory, /datum/character_directory)
 			//CHOMPEdit Start
 			gendertag = C.prefs.directory_gendertag || "Unset"
 			sexualitytag = C.prefs.directory_sexualitytag || "Unset"
-			eventtag = vantag_choices_list[C.prefs.vantag_preference]
+			eventtag = GLOB.vantag_choices_list[C.prefs.vantag_preference]
 			//CHOMPEdit End
 
 		if(ishuman(C.mob))
@@ -323,8 +323,8 @@ GLOBAL_DATUM(character_directory, /datum/character_directory)
 			return set_for_mind_or_prefs(user, action, new_sexualitytag, can_set_prefs, can_set_mind)
 		if("setEventTag")
 			var/list/names_list = list()
-			for(var/C in vantag_choices_list)
-				names_list[vantag_choices_list[C]] = C
+			for(var/C in GLOB.vantag_choices_list)
+				names_list[GLOB.vantag_choices_list[C]] = C
 			var/list/new_eventtag = tgui_input_list(usr, "Pick your preference for event involvement", "Event Preference Tag", usr?.client?.prefs?.vantag_preference, names_list)
 			if(!new_eventtag)
 				return

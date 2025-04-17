@@ -275,12 +275,8 @@ GLOBAL_VAR(bomb_set)
 							if(icon_state == "nuclearbomb2")
 								icon_state = "nuclearbomb1"
 						timing = 0
-<<<<<<< HEAD
-						bomb_set = 0
-						set_security_level("red") //chompedit
-=======
 						GLOB.bomb_set = 0
->>>>>>> 21dcf0555b (Conversion many Globals to Managed Globals (Part 1) (#17121))
+						set_security_level("red") //chompedit
 					if(light_wire == temp_wire)
 						lighthack = !lighthack
 
@@ -327,34 +323,22 @@ GLOBAL_VAR(bomb_set)
 						if(!lighthack)
 							icon_state = "nuclearbomb2"
 						if(!safety)
-<<<<<<< HEAD
-							bomb_set = 1//There can still be issues with this reseting when there are multiple bombs. Not a big deal tho for Nuke/N
+							GLOB.bomb_set = 1//There can still be issues with this reseting when there are multiple bombs. Not a big deal tho for Nuke/N
 							set_security_level("delta")//chompedit
 						else
-							bomb_set = 0
+							GLOB.bomb_set = 0
 							set_security_level("red")
 					else
-						bomb_set = 0
-						set_security_level("red") //chompedit
-=======
-							GLOB.bomb_set = 1//There can still be issues with this reseting when there are multiple bombs. Not a big deal tho for Nuke/N
-						else
-							GLOB.bomb_set = 0
-					else
 						GLOB.bomb_set = 0
->>>>>>> 21dcf0555b (Conversion many Globals to Managed Globals (Part 1) (#17121))
+						set_security_level("red") //chompedit
 						if(!lighthack)
 							icon_state = "nuclearbomb1"
 				if(href_list["safety"])
 					safety = !(safety)
 					if(safety)
 						timing = 0
-<<<<<<< HEAD
-						bomb_set = 0
-						set_security_level("red") //chompedit
-=======
 						GLOB.bomb_set = 0
->>>>>>> 21dcf0555b (Conversion many Globals to Managed Globals (Part 1) (#17121))
+						set_security_level("red") //chompedit
 				if(href_list["anchor"])
 
 					if(removal_stage == 5)

@@ -259,15 +259,11 @@
 			if("goon speak roach")
 				S = sound(pick(GLOB.goon_speak_roach_sound))
 			if("goon speak skelly")
-<<<<<<< HEAD
-				S = sound(pick(goon_speak_skelly_sound))
+				S = sound(pick(GLOB.goon_speak_skelly_sound))
 //CHOMPedit start.
 			if("xeno speak")
-				S = sound(pick(xeno_speak_sound))
+				S = sound(pick(GLOB.xeno_speak_sound))
 //CHOMPedit end.
-=======
-				S = sound(pick(GLOB.goon_speak_skelly_sound))
->>>>>>> 21dcf0555b (Conversion many Globals to Managed Globals (Part 1) (#17121))
 		if(S)
 			S.frequency = pick(pref.voice_freq)
 			S.volume = 50

@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-GLOBAL_LIST_EMPTY(job_whitelist) // CHOMPEdit - Managed Globals
-=======
 GLOBAL_LIST_EMPTY(job_whitelist)
->>>>>>> 21dcf0555b (Conversion many Globals to Managed Globals (Part 1) (#17121))
 
 /hook/startup/proc/loadJobWhitelist()
 	if(CONFIG_GET(flag/use_jobwhitelist)) // CHOMPedit
@@ -14,11 +10,7 @@ GLOBAL_LIST_EMPTY(job_whitelist)
 	if (!text)
 		log_misc("Failed to load config/jobwhitelist.txt")
 	else
-<<<<<<< HEAD
-		GLOB.job_whitelist = splittext(text, "\n") // CHOMPEdit - Managed Globals
-=======
 		GLOB.job_whitelist = splittext(text, "\n")
->>>>>>> 21dcf0555b (Conversion many Globals to Managed Globals (Part 1) (#17121))
 
 /proc/is_job_whitelisted(mob/M, var/rank)
 	if(!CONFIG_GET(flag/use_jobwhitelist)) // CHOMPedit
@@ -30,17 +22,10 @@ GLOBAL_LIST_EMPTY(job_whitelist)
 		return 1
 	if(check_rights(R_ADMIN, 0) || check_rights(R_DEBUG, 0) || check_rights(R_EVENT, 0)) // CHOMPedit
 		return 1
-<<<<<<< HEAD
-	if(!GLOB.job_whitelist) // CHOMPEdit - Managed Globals
-		return 0
-	if(M && rank)
-		for (var/s in GLOB.job_whitelist) // CHOMPEdit - Managed Globals
-=======
 	if(!GLOB.job_whitelist)
 		return 0
 	if(M && rank)
 		for (var/s in GLOB.job_whitelist)
->>>>>>> 21dcf0555b (Conversion many Globals to Managed Globals (Part 1) (#17121))
 			if(findtext(s,"[lowertext(M.ckey)] - [lowertext(rank)]"))
 				return 1
 			if(findtext(s,"[M.ckey] - All"))

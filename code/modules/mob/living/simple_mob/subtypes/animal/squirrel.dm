@@ -157,11 +157,7 @@
 /mob/living/simple_mob/vore/squirrel/Initialize(mapload)
 	. = ..()
 	if(do_seasons)
-<<<<<<< HEAD
-		switch(GLOB.world_time_season) // CHOMPEdit - Managed Globals
-=======
 		switch(GLOB.world_time_season)
->>>>>>> 21dcf0555b (Conversion many Globals to Managed Globals (Part 1) (#17121))
 			if("spring")
 				if(prob(1))
 					winterize()

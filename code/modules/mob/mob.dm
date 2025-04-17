@@ -479,13 +479,8 @@
 	var/list/targets = list()
 
 
-<<<<<<< HEAD
-	targets += observe_list_format(nuke_disks)
-	targets += observe_list_format(GLOB.all_singularities) //CHOMP Edit
-=======
 	targets += observe_list_format(GLOB.nuke_disks)
-	targets += observe_list_format(all_singularities)
->>>>>>> 21dcf0555b (Conversion many Globals to Managed Globals (Part 1) (#17121))
+	targets += observe_list_format(GLOB.all_singularities) //CHOMP Edit
 	targets += getmobs()
 	targets += observe_list_format(sortAtom(mechas_list))
 	targets += observe_list_format(SSshuttles.ships)

@@ -34,12 +34,8 @@ GLOBAL_LIST_INIT(player_sizes_list, list(
 		"Tiny" 		= RESIZE_TINY))
 
 //stores vantag settings indexed by name
-<<<<<<< HEAD
 //CHOMPEdit start - expanding the vore hud list
-var/global/list/vantag_choices_list = list(
-=======
 GLOBAL_LIST_INIT(vantag_choices_list, list(
->>>>>>> 21dcf0555b (Conversion many Globals to Managed Globals (Part 1) (#17121))
 		VANTAG_NONE		=	"No Involvement",
 		VANTAG_VORE		=	"Be Prey (Any)",
 		VANTAG_VORE_YE	=	"Be Prey (Endo)",
@@ -50,12 +46,8 @@ GLOBAL_LIST_INIT(vantag_choices_list, list(
 		VANTAG_VORE_DD	=	"Be Pred (Digestion)",
 		VANTAG_VORE_DA	=	"Be Pred (Absorption)",
 		VANTAG_KIDNAP	=	"Be Kidnapped",
-<<<<<<< HEAD
-		VANTAG_KILL		=	"Be Killed")
-//CHOMPEdit end
-=======
 		VANTAG_KILL		=	"Be Killed"))
->>>>>>> 21dcf0555b (Conversion many Globals to Managed Globals (Part 1) (#17121))
+//CHOMPEdit end
 
 //Blacklist to exclude items from object ingestion. Digestion blacklist located in digest_act_vr.dm
 var/global/list/item_vore_blacklist = list(

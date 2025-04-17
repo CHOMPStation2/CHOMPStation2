@@ -10,11 +10,7 @@
 	for(var/obj/effect/landmark/C in landmarks_list)
 		if(istype(C, /obj/effect/landmark/wildlife))
 			var/obj/effect/landmark/wildlife/WLLM = C
-<<<<<<< HEAD
-			if(GLOB.world_time_season == "winter" && WLLM.wildlife_type == 1) //fish forbidden in winter because ice now aparently // CHOMPEdit - Managed Globals
-=======
 			if(GLOB.world_time_season == "winter" && WLLM.wildlife_type == 1)		//fish forbidden in winter because ice now aparently
->>>>>>> 21dcf0555b (Conversion many Globals to Managed Globals (Part 1) (#17121))
 				continue
 			possible_spawns.Add(C)
 

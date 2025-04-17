@@ -52,12 +52,8 @@
 	var/pref_synth = client.prefs.dirty_synth
 	var/pref_meat = client.prefs.gross_meatbag
 	for(var/datum/trait/T as anything in megalist)
-<<<<<<< HEAD
-		var/cost = traits_costs[T]
-=======
 		var/cost = GLOB.traits_costs[T]
 
->>>>>>> 21dcf0555b (Conversion many Globals to Managed Globals (Part 1) (#17121))
 		if(T.category == TRAIT_TYPE_POSITIVE)
 			traits_left--
 
@@ -85,7 +81,7 @@
 	//CHOMP Addition Begin
 	if(client?.prefs?.neu_traits)
 		for(var/T in client.prefs.neu_traits)
-			var/datum/trait/instance = all_traits[T]
+			var/datum/trait/instance = GLOB.all_traits[T]
 			if(client.prefs.species in instance.banned_species)
 				pass = FALSE
 				to_chat(src,span_warning("One of your traits, [instance.name], is not available for your species! Please fix this conflict and then try again."))
