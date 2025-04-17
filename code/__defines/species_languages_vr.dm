@@ -25,8 +25,8 @@
 
 // CHOMPAdd Start
 #define LANGUAGE_MARISH "Marish"
+// CHOMPAdd End
 
 // Xeno languages selectable
 #define LANGUAGE_XENOLINGUA "Xenolingua"
 #define LANGUAGE_HIVEMIND "Hivemind"
-// CHOMPAdd End

@@ -272,8 +272,8 @@
 	pixel_y = -16
 	shake_animation_degrees = 2
 
-/obj/structure/flora/tree/winter/New()
-	..()
+/obj/structure/flora/tree/winter/Initialize(mapload)
+	. = ..()
 	icon_state = "[base_state][rand(1, 6)]"
 
 
@@ -289,8 +289,8 @@
 	pixel_y = -16
 	shake_animation_degrees = 2
 
-/obj/structure/flora/tree/winter1/New()
-	..()
+/obj/structure/flora/tree/winter1/Initialize(mapload)
+	. = ..()
 	icon_state = "[base_state][rand(1, 6)]"
 
 // Sif trees

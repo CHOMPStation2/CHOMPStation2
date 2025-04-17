@@ -14,12 +14,10 @@
 	var/amount = 6.0
 	var/time_to_live = 500
 
-/obj/effect/effect/confetti/New()
-	..()
+/obj/effect/effect/confetti/Initialize(mapload)
+	. = ..()
 	if(time_to_live)
-		spawn (time_to_live)
-			if(!QDELETED(src))
-				qdel(src)
+		QDEL_IN(src, time_to_live)
 				//make confetti on ground cleanable decal to spawn
 
 /datum/effect/effect/system/confetti_spread

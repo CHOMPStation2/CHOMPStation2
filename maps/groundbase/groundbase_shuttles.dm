@@ -51,6 +51,9 @@
 	landmark_tag = "groundbase"
 
 ///////////////////////////////////////////////
+/obj/effect/shuttle_landmark/shuttle_initializer/axolotl/Initialize(mapload)
+	shuttle_type = /datum/shuttle/autodock/overmap/axolotl
+	. = ..()
 
 // Escape shuttle
 /datum/shuttle/autodock/ferry/emergency/escape

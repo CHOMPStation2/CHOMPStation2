@@ -21,9 +21,11 @@
 	var/shift_mode = NOT_WHILE_SHIFTED
 	var/ab_sound
 
-/obj/effect/rakshasa_ability/New(var/new_kin)
-	..()
-	my_kin = new_kin
+/obj/effect/rakshasa_ability/Initialize(mapload)
+	. = ..()
+	my_kin = loc
+	if(!istype(my_kin))
+		return INITIALIZE_HINT_QDEL
 	loc = null
 
 /obj/effect/rakshasa_ability/Destroy()

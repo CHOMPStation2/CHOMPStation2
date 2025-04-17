@@ -148,7 +148,7 @@
 /turf/simulated/floor/plating/turfpack/sif,
 /area/submap/CaveS)
 "F" = (
-/turf/simulated/wall,
+/turf/simulated/wall/turfpack/sif,
 /area/submap/CaveS)
 "G" = (
 /obj/structure/closet/crate,

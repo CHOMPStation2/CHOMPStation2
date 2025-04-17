@@ -148,8 +148,8 @@
 	name = "bottle of Benzilate pills"
 	desc = "This just hurts to look at with how many words of caution are scrawled on the lable. Better eat all of 'em!"
 
-/obj/item/storage/pill_bottle/benzilate/New()
-	..()
+/obj/item/storage/pill_bottle/benzilate/Initialize(mapload)
+	. = ..()
 	new /obj/item/reagent_containers/pill/benzilate( src )
 	new /obj/item/reagent_containers/pill/benzilate( src )
 	new /obj/item/reagent_containers/pill/benzilate( src )
@@ -162,8 +162,8 @@
 	name = "bottle of Phenethylamine pills"
 	desc = "Looks like someone drew a happy face on the label, replacing whatever was previously present."
 
-/obj/item/storage/pill_bottle/phenethylamine/New()
-	..()
+/obj/item/storage/pill_bottle/phenethylamine/Initialize(mapload)
+	. = ..()
 	new /obj/item/reagent_containers/pill/phenethylamine( src )
 	new /obj/item/reagent_containers/pill/phenethylamine( src )
 	new /obj/item/reagent_containers/pill/phenethylamine( src )

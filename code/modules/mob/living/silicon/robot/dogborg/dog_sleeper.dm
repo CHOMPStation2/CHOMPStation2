@@ -47,10 +47,10 @@
 	var/ore_storage = FALSE //CHOMPAdd
 	var/max_ore_storage = 500 //CHOMPAdd
 	var/current_capacity = 0 //CHOMPAdd
+	flags = NOBLUDGEON
 
-/obj/item/dogborg/sleeper/New()
-	..()
-	flags |= NOBLUDGEON //No more attack messages
+/obj/item/dogborg/sleeper/Initialize(mapload)
+	. = ..()
 	files = new /datum/research/techonly(src)
 	med_analyzer = new /obj/item/healthanalyzer
 

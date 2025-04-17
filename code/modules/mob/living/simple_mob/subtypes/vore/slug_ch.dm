@@ -163,27 +163,20 @@
 	var/turf/my_turf = null //The turf we spawn on.
 	var/base_escape_time = 1 MINUTE //How long does it take to struggle free? Affected by the victim's size_multiplier.
 
-/obj/effect/slug_glue/New()
-	..()
-	dissipate()
+/obj/effect/slug_glue/Initialize(mapload)
+	. = ..()
+	if(!persist_time)
+		return INITIALIZE_HINT_QDEL
 	my_turf = get_turf(src)
 	if(istype(my_turf, /turf/simulated/floor/water)) //Aside from not making sense in water, this prevents drowning.
-		qdel(src)
+		return INITIALIZE_HINT_QDEL
+	QDEL_IN(src, persist_time)
 /*	for(var/obj/effect/slug_glue/G in my_turf.contents)
 		if(G == src)
 			continue
 		else
 			qdel(G) //Prevent glue layering
 */ //Not including this due to performance concerns but keeping as comments for reference.
-
-/obj/effect/slug_glue/proc/dissipate() //When spawned, set a timer to despawn.
-	if(!persist_time)
-		qdel(src)
-		return
-	else
-		spawn(persist_time) //I used sleep() here first and it made the slug sleep for 5 minutes when spawning glue. Byond.
-		qdel(src)
-		return
 
 /obj/effect/slug_glue/Destroy()
 	. = ..()

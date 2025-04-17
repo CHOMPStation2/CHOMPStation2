@@ -178,8 +178,8 @@
 	var/datum/weakref/showing
 	var/showing_name
 
-/obj/item/clothing/accessory/bodycam/New()
-	..()
+/obj/item/clothing/accessory/bodycam/Initialize(mapload)
+	. = ..()
 	listening_objects += src
 
 /obj/item/clothing/accessory/bodycam/Destroy()

@@ -50,8 +50,8 @@
 	board_type = new /datum/frame/frame_types/display
 	matter = list(MAT_STEEL = 50, MAT_GLASS = 50)
 
-/obj/item/circuitboard/security/telescreen/bodycamera/New()
-	..()
+/obj/item/circuitboard/security/telescreen/bodycamera/Initialize(mapload)
+	. = ..()
 	network = NETWORK_BODYCAM
 // CHOMPEdit End
 

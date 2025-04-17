@@ -3,12 +3,13 @@
  */
 
 // Snowflake marker for now. Because easy modularity.
-/obj/effect/landmark/shipping_marker/New()
+/obj/effect/landmark/shipping_marker/Initialize(mapload)
 	switch (name)
 		if ("return")
 			shippping_return = loc
 
 	delete_me = TRUE
+	. = ..()
 
 /**
  * Does all of the shipping ID init at round start.

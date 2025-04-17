@@ -1320,8 +1320,8 @@
 	slot_flags = SLOT_TIE | SLOT_OCLOTHING
 	w_class = 2
 
-/obj/item/accessory/fluff/kettek_collar/New()
-	..()
+/obj/item/accessory/fluff/kettek_collar/Initialize(mapload)
+	. = ..()
 	verbs |= /obj/item/accessory/fluff/kettek_collar/proc/change_color
 	color = get_random_colour()
 	update_icon()

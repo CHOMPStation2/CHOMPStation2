@@ -182,8 +182,8 @@
 
 	glow_toggle = !glow_toggle
 
-/mob/living/simple_mob/vore/leopardmander/exotic/New()
-	..()
+/mob/living/simple_mob/vore/leopardmander/exotic/Initialize(mapload)
+	. = ..()
 	add_verb(src,/mob/living/simple_mob/vore/leopardmander/exotic/proc/toggle_glow) //CHOMPEdit TGPanel
 
 /mob/living/simple_mob/vore/leopardmander/exotic/init_vore()

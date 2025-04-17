@@ -74,5 +74,5 @@
 	if(H.fire_stacks < 0 && H.get_water_protection() <= 0.5)	// If over half your body is soaked, you're melting.
 		H.adjustFireLoss(max(0,(3 - (3 * H.get_water_protection()))))	// Tripled because 0.5 is miniscule, and fire_stacks are capped in both directions.
 
-/mob/living/carbon/human/grey/New(var/new_loc) //makes grey spawnable
-	..(new_loc, SPECIES_GREY_YW)
+/mob/living/carbon/human/grey/Initialize(mapload) //makes grey spawnable
+	. = ..(mapload, SPECIES_GREY_YW)

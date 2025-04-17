@@ -8,12 +8,12 @@
 	var/clean_turfs // A list of lists, where each list is (x, )
 
 //check for duplicte loaders. TODO: Make referance a subsystem that isnt upstream. See /controllers/subsystems/mapping_yw.dm and mapping_vr.dm
-/obj/effect/landmark/engine_loader_pickable/New()
+/obj/effect/landmark/engine_loader_pickable/Initialize(mapload)
 	if(SSmapping.engine_loader_pickable)
 		warning("Duplicate engine_loader landmarks: [log_info_line(src)] and [log_info_line(SSmapping.engine_loader)]")
 		delete_me = TRUE
 	SSmapping.engine_loader_pickable = src
-	return ..()
+	. = ..()
 
 /obj/effect/landmark/engine_loader_pickable/proc/get_turfs_to_clean()
 	. = list()
@@ -93,9 +93,9 @@
 	var/destroy = 0 //killmepls
 	var/building = 0
 
-/obj/machinery/computer/pickengine/New()
+/obj/machinery/computer/pickengine/Initialize(mapload)
+	. = ..()
 	message_admins("Engine select console placed at [src.x] [src.y] [src.z]")
-	..()
 
 /obj/machinery/computer/pickengine/attack_ai(var/mob/user as mob)
 	if(istype(user, /mob/living/silicon/robot))

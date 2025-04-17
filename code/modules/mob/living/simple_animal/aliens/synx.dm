@@ -170,9 +170,9 @@
 	)
 */
 
-/mob/living/simple_mob/animal/synx/New() //this is really cool. Should be able to ventcrawl canonicaly, contort, and make random speech.
+/mob/living/simple_mob/animal/synx/Initialize(mapload) //this is really cool. Should be able to ventcrawl canonicaly, contort, and make random speech.
 //some things should be here that arent tho.
-	..()
+	. = ..()
 	add_verb(src,/mob/living/proc/ventcrawl) //CHOMPEdit TGPanel
 	add_verb(src,/mob/living/simple_mob/animal/synx/proc/distend_stomach) //CHOMPEdit TGPanel //to do later: sprites of stomach outside the body.
 	add_verb(src,/mob/living/simple_mob/proc/contort) //CHOMPEdit TGPanel
@@ -709,8 +709,8 @@
 	faction = "SYN"
 
 
-/mob/living/simple_mob/animal/synx/ai/pet/greed/synth/New()
-	..()
+/mob/living/simple_mob/animal/synx/ai/pet/greed/synth/Initialize(mapload)
+	. = ..()
 	name = "SYN-KinC-([rand(100,999)])"
 
 /mob/living/simple_mob/animal/synx/ai/pet/greed/synth/goodboy
@@ -777,7 +777,8 @@
 	set category = "Debug.Synx" //CHOMPEdit
 	icon_state = input(usr, "What would you like to change icon_state to?", "Respriting", null)
 
-/mob/living/simple_mob/animal/synx/ai/pet/debug/New()
+/mob/living/simple_mob/animal/synx/ai/pet/debug/Initialize(mapload)
+	. = ..()
 	add_verb(src,/mob/living/simple_mob/animal/synx/ai/pet/debug/proc/rename) //CHOMPEdit TGPanel
 	add_verb(src,/mob/living/simple_mob/animal/synx/ai/pet/debug/proc/resprite) //CHOMPEdit TGPanel
 	add_verb(src,/mob/living/simple_mob/animal/synx/ai/pet/debug/proc/redesc) //CHOMPEdit TGPanel

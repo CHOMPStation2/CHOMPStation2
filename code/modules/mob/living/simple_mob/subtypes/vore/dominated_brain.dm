@@ -28,17 +28,13 @@
 	var/prey_ooc_dislikes
 	var/was_mob = FALSE //CHOMPAdd - tracks if the dominated being was a mob
 
-/mob/living/dominated_brain/New(loc, var/mob/living/pred, preyname, var/mob/living/prey)
-	. = ..()
+/mob/living/dominated_brain/Initialize(mapload, var/mob/living/pred, preyname, var/mob/living/prey)
 	prey_name = preyname
 	if(prey)
 		prey_body = prey
 	pred_body = pred
-
-/mob/living/dominated_brain/Initialize(mapload)
 	if(!isliving(loc))
-		qdel(src)
-		return
+		return INITIALIZE_HINT_QDEL
 	. = ..()
 	lets_register_our_signals()
 	add_verb(src, /mob/living/dominated_brain/proc/resist_control)

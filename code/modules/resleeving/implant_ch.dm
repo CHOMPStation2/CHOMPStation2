@@ -6,9 +6,6 @@
 	icon_state = "laptop-gun"
 	desc = "After discovering clients constantly lacked staff to replace implants, Vey-Medical designed this version capable of creating implants on demand."
 	anchored = TRUE
-
-/obj/structure/backup_implanter_ch/New()
-	..()
 	germ_level = 0
 
 //Click to get implant.

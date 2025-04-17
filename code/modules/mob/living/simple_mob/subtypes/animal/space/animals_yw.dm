@@ -171,8 +171,8 @@
 	name = "Cooper"
 	desc = "A lonely miner's best friend."
 
-/mob/living/simple_mob/animal/passive/mouse/mining/New()
-	..()
+/mob/living/simple_mob/animal/passive/mouse/mining/Initialize(mapload)
+	. = ..()
 
 	add_verb(src,/mob/living/proc/ventcrawl) //CHOMPEdit TGPanel
 	add_verb(src,/mob/living/proc/hide) //CHOMPEdit TGPanel

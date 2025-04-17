@@ -450,8 +450,8 @@
 	if(!manual_chamber)
 		process_chambered()
 
-/obj/item/gun/projectile/New(loc, var/starts_loaded = 1)
-	..()
+/obj/item/gun/projectile/Initialize(mapload, var/starts_loaded = 1)
+	. = ..()
 	if(manual_chamber)
 		verbs |= /obj/item/gun/projectile/verb/change_firemode
 	update_icon()

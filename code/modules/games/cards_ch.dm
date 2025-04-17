@@ -20,7 +20,8 @@
 	icon = 'icons/obj/playing_cards_ch.dmi'
 	icon_state = "casino_deck"
 
-/obj/item/deck/cards/casino/New()
+/obj/item/deck/cards/casino/Initialize(mapload)
+	. = ..()
 	var/datum/playingcard/casino/P
 	for(var/suit in list("spades","clubs","diamonds","hearts"))
 

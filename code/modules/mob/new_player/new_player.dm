@@ -22,8 +22,8 @@
 
 	var/created_for
 
-/mob/new_player/New()
-	mob_list += src
+/mob/new_player/Initialize(mapload)
+	. = ..()
 	add_verb(src, /mob/proc/insidePanel)
 	//CHOMPEdit Begin
 	if(length(GLOB.newplayer_start))
@@ -31,7 +31,6 @@
 	else
 		forceMove(locate(1,1,1))
 	//CHOMPEdit End
-	flags |= ATOM_INITIALIZED // Explicitly don't use Initialize().  New players join super early and use New()
 
 
 /mob/new_player/Destroy()
@@ -458,7 +457,6 @@
 	spawning = 1
 	close_spawn_windows()
 
-	//CHOMPEdit start - join as mob in crystal...
 	var/obj/item/itemtf = join_props["itemtf"]
 	if(itemtf && istype(itemtf, /obj/item/capture_crystal))
 		var/obj/item/capture_crystal/cryst = itemtf
@@ -482,7 +480,6 @@
 			cryst.update_icon()
 			qdel(src)
 			return
-	//CHOMPEdit end
 
 	job_master.AssignRole(src, rank, 1)
 
@@ -524,7 +521,6 @@
 
 	ticker.mode.latespawn(character)
 
-	//CHOMPEdit Begin - non-crew join don't get a message
 	if(rank == JOB_OUTSIDER)
 		log_and_message_admins("has joined the round as non-crew. (<A href='byond://?_src_=holder;[HrefToken()];adminplayerobservecoodjump=1;X=[T.x];Y=[T.y];Z=[T.z]'>JMP</a>)",character)
 		if(!(J.mob_type & JOB_SILICON))
@@ -533,7 +529,6 @@
 		log_and_message_admins("has joined the round as anomaly. (<A href='byond://?_src_=holder;[HrefToken()];adminplayerobservecoodjump=1;X=[T.x];Y=[T.y];Z=[T.z]'>JMP</a>)",character)
 		if(!(J.mob_type & JOB_SILICON))
 			ticker.minds += character.mind
-	//CHOMPEdit End
 	else if(J.mob_type & JOB_SILICON)
 		AnnounceCyborg(character, rank, join_message, announce_channel, character.z)
 	else
@@ -547,9 +542,8 @@
 			if(imp.handle_implant(character,character.zone_sel.selecting))
 				imp.post_implant(character)
 	var/gut = join_props["voreny"]
-	var/start_absorbed = join_props["absorb"] //CHOMPAdd
+	var/start_absorbed = join_props["absorb"]
 	var/mob/living/prey = join_props["prey"]
-	//CHOMPEdit Start - Item TF
 	if(itemtf && istype(itemtf, /obj/item/capture_crystal))
 		//We want to be in the crystal, not actually possessing the crystal.
 		var/obj/item/capture_crystal/cryst = itemtf
@@ -563,7 +557,6 @@
 		itemtf.trash_eatable = character.devourable
 		itemtf.unacidable = !character.digestable
 		character.forceMove(possessed_voice)
-	//CHOMPEdit End
 	else if(prey)
 		character.copy_from_prefs_vr(1,1) //Yes I know we're reloading these, shut up
 		var/obj/belly/gut_to_enter
@@ -575,20 +568,14 @@
 		tele.set_up("#00FFFF", get_turf(prey))
 		tele.start()
 		character.forceMove(get_turf(prey))
-		//CHOMPAdd Start
 		if(start_absorbed)
 			prey.absorbed = 1
-		//CHOMPAdd End
 		prey.forceMove(gut_to_enter)
 	else
 		if(gut)
-			//CHOMPAdd Start
 			if(start_absorbed)
 				character.absorbed = 1
-			//CHOMPAdd End
 			character.forceMove(gut)
-
-	character.client.init_verbs() // init verbs for the late join
 
 	character.client.init_verbs()
 	qdel(src) // Delete new_player mob

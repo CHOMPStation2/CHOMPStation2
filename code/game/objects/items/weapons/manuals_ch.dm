@@ -5,9 +5,6 @@
 	icon = 'icons/obj/library.dmi'
 	author = "NanoTrasen"
 	title = "Chemical Recipes and Refreshers"
-
-/obj/item/book/manual/chemistry_guide/New()
-	..()
 	dat = {"
 				<head>
 				<style>
