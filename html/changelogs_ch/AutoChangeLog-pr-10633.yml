@@ -1,0 +1,5 @@
+author: "sunofang"
+delete-after: True
+changes:
+  - rscadd: "NanoTrasen shipwrights have now made the carrier actually capable of interplanetary travel"
+  - maptweak: "New bridge for the carrier"
