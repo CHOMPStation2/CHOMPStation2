@@ -52,10 +52,6 @@
 /obj/item/reagent_containers/food/snacks/xenomeat/spidermeat,
 /turf/template_noop,
 /area/submap/CaveS)
-"m" = (
-/obj/effect/spider/stickyweb,
-/turf/simulated/floor/outdoors/dirt,
-/area/submap/CaveS)
 "n" = (
 /obj/item/clothing/accessory/storage/webbing,
 /obj/item/material/knife/tacknife/combatknife,
@@ -116,12 +112,6 @@
 /turf/simulated/floor/outdoors/dirt/turfpack/sif{
 	outdoors = 0
 	},
-/area/submap/CaveS)
-"x" = (
-/mob/living/simple_mob/animal/giant_spider/lurker{
-	loot_list = list(/obj/item/stock_parts/manipulator/omni = 50)
-	},
-/turf/simulated/floor/outdoors/dirt,
 /area/submap/CaveS)
 "y" = (
 /obj/structure/flora/tree/sif,
@@ -228,12 +218,6 @@
 /turf/simulated/floor/outdoors/dirt/turfpack/sif{
 	outdoors = 0
 	},
-/area/submap/CaveS)
-"Z" = (
-/mob/living/simple_mob/animal/giant_spider/lurker{
-	loot_list = list(/obj/item/stock_parts/capacitor/omni = 50)
-	},
-/turf/simulated/floor/outdoors/dirt,
 /area/submap/CaveS)
 
 (1,1,1) = {"
@@ -771,7 +755,7 @@ d
 k
 k
 d
-Z
+W
 d
 d
 d
@@ -1057,7 +1041,7 @@ d
 p
 k
 k
-x
+r
 d
 d
 k
@@ -1214,7 +1198,7 @@ b
 b
 h
 k
-m
+i
 d
 d
 d
@@ -1257,7 +1241,7 @@ d
 i
 k
 k
-m
+i
 d
 d
 d
@@ -1426,7 +1410,7 @@ d
 d
 d
 d
-m
+i
 k
 k
 k
