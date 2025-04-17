@@ -59,7 +59,7 @@ FIRE ALARM
 		offset_alarm()
 
 	if(z in using_map.contact_levels)
-		set_security_level(security_level ? get_security_level() : "green")
+		set_security_level(GLOB.security_level ? get_security_level() : "green")
 
 	soundloop = new(list(src), FALSE) // CHOMPEdit: Create soundloop
 	engalarm = new(list(src), FALSE) // CHOMPEdit: Create soundloop

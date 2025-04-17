@@ -45,7 +45,7 @@
 		var/list/total = list()
 		if(data_core)
 			data_core.get_manifest_list()
-		for(var/list/item in PDA_Manifest)
+		for(var/list/item in GLOB.PDA_Manifest)
 			outp += "\n__**[item["cat"]]:**__"
 			for(var/list/person in item["elems"])
 				total |= person
