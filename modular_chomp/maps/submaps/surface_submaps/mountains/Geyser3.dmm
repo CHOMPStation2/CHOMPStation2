@@ -4,8 +4,8 @@
 /area/template_noop)
 "b" = (
 /obj/structure/cliff/automatic{
-	dir = 9;
-	icon_state = "cliffbuilder"
+	icon_state = "cliffbuilder";
+	dir = 9
 	},
 /turf/simulated/floor/outdoors/rocks/caves,
 /area/submap/cave/geyser_3)
@@ -19,26 +19,27 @@
 /area/submap/cave/geyser_3)
 "e" = (
 /obj/structure/cliff/automatic{
-	dir = 5;
-	icon_state = "cliffbuilder"
+	icon_state = "cliffbuilder";
+	dir = 5
 	},
 /turf/simulated/floor/outdoors/rocks/caves,
 /area/submap/cave/geyser_3)
 "f" = (
 /obj/structure/cliff/automatic/corner{
-	dir = 9;
-	icon_state = "cliffbuilder-corner"
+	icon_state = "cliffbuilder-corner";
+	dir = 9
 	},
 /turf/simulated/floor/outdoors/rocks/caves,
 /area/submap/cave/geyser_3)
 "g" = (
 /turf/simulated/floor/lava{
-	nitrogen = 93.7835;
+	temperature = 243.15;
 	oxygen = 20.7263;
-	temperature = 243.15
+	nitrogen = 93.7835
 	},
 /area/submap/cave/geyser_3)
 "h" = (
+/mob/living/simple_mob/vore/pakkun/fire,
 /turf/simulated/floor/outdoors/rocks/caves,
 /area/submap/cave/geyser_3)
 "i" = (
@@ -47,15 +48,15 @@
 /area/submap/cave/geyser_3)
 "j" = (
 /obj/structure/cliff/automatic{
-	dir = 8;
-	icon_state = "cliffbuilder"
+	icon_state = "cliffbuilder";
+	dir = 8
 	},
 /turf/simulated/floor/outdoors/rocks/caves,
 /area/submap/cave/geyser_3)
 "k" = (
 /obj/structure/cliff/automatic{
-	dir = 4;
-	icon_state = "cliffbuilder"
+	icon_state = "cliffbuilder";
+	dir = 4
 	},
 /turf/simulated/floor/outdoors/rocks/caves,
 /area/submap/cave/geyser_3)
@@ -72,43 +73,43 @@
 	interval_upper_bound = 1200
 	},
 /turf/simulated/floor/lava{
-	nitrogen = 93.7835;
+	temperature = 243.15;
 	oxygen = 20.7263;
-	temperature = 243.15
+	nitrogen = 93.7835
 	},
 /area/submap/cave/geyser_3)
 "m" = (
 /obj/structure/cliff/automatic{
-	dir = 10;
-	icon_state = "cliffbuilder"
+	icon_state = "cliffbuilder";
+	dir = 10
 	},
 /turf/simulated/floor/outdoors/rocks/caves,
 /area/submap/cave/geyser_3)
 "n" = (
 /obj/structure/cliff/automatic/corner{
-	dir = 10;
-	icon_state = "cliffbuilder-corner"
+	icon_state = "cliffbuilder-corner";
+	dir = 10
 	},
 /turf/simulated/floor/outdoors/rocks/caves,
 /area/submap/cave/geyser_3)
 "o" = (
 /obj/structure/cliff/automatic/corner{
-	dir = 6;
-	icon_state = "cliffbuilder-corner"
+	icon_state = "cliffbuilder-corner";
+	dir = 6
 	},
 /turf/simulated/floor/outdoors/rocks/caves,
 /area/submap/cave/geyser_3)
 "p" = (
 /obj/structure/cliff/automatic{
-	dir = 6;
-	icon_state = "cliffbuilder"
+	icon_state = "cliffbuilder";
+	dir = 6
 	},
 /turf/simulated/floor/outdoors/rocks/caves,
 /area/submap/cave/geyser_3)
 "q" = (
 /obj/structure/cliff/automatic{
-	dir = 2;
-	icon_state = "cliffbuilder"
+	icon_state = "cliffbuilder";
+	dir = 2
 	},
 /turf/simulated/floor/outdoors/rocks/caves,
 /area/submap/cave/geyser_3)

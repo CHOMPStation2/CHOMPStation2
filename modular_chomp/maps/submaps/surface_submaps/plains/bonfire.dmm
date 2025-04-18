@@ -37,6 +37,10 @@
 /obj/item/stack/material/log/sif,
 /turf/simulated/floor/outdoors/dirt,
 /area/submap/bonfire)
+"k" = (
+/obj/item/clothing/accessory/holster/machete,
+/turf/simulated/floor/outdoors/dirt,
+/area/submap/bonfire)
 
 (1,1,1) = {"
 a
@@ -93,7 +97,7 @@ a
 c
 f
 g
-c
+k
 a
 a
 a
