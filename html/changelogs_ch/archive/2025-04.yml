@@ -166,3 +166,16 @@
   Diana:
   - bugfix: Shoulder augments can now be installed the first time without having to
       screwdriver them twice
+2025-04-18:
+  CHOMPStation2StaffMirrorBot:
+  - rscadd: NIF commlinks auto-initialize if the relevant preference is set in character
+      creation
+  - refactor: converts a bunch of global variables/lists to managed global variables/lists
+  - bugfix: samples no longer generate infinite tech level lists
+  - code_imp: finishes new to init
+  MeepleMuncher:
+  - rscadd: Customizable dragon plushies
+  sunofang:
+  - rscadd: NanoTrasen shipwrights have now made the carrier actually capable of interplanetary
+      travel
+  - maptweak: New bridge for the carrier
