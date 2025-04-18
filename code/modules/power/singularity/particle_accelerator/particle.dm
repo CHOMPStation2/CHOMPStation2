@@ -97,12 +97,6 @@
 	movement_range--
 	if(movement_range <= 0)
 		qdel(src)
-<<<<<<< HEAD
-	else
-		spawn(lag)
-			move(lag)
-=======
 		return
 
 	addtimer(CALLBACK(src, PROC_REF(move), lag), lag)
->>>>>>> 18988ab883 (remove sleep in accelerator particles (#17552))
