@@ -1,43 +1,4 @@
-//Combat refactor changes commented out
-/*
-/mob/living/simple_mob/animal/space/alien
-	maxHealth = 100
-	health = 100
-	harm_intent_damage = 5
-	melee_damage_lower = 25
-	melee_damage_upper = 25
-	attack_armor_pen = 15
 
-/mob/living/simple_mob/animal/space/alien/drone
-	health = 60
-	melee_damage_lower = 15
-	melee_damage_upper = 15
-
-/mob/living/simple_mob/animal/space/alien/sentinel
-	health = 120
-	melee_damage_lower = 15
-	melee_damage_upper = 15
-
-/mob/living/simple_mob/animal/space/alien/sentinel/praetorian
-	maxHealth = 200
-	health = 200
-
-/mob/living/simple_mob/animal/space/alien/queen
-	health = 125
-	maxHealth = 125
-	melee_damage_lower = 7
-	melee_damage_upper = 7
-
-/mob/living/simple_mob/animal/space/alien/queen/empress
-	maxHealth = 200
-	health = 200
-
-/mob/living/simple_mob/animal/space/alien/queen/empress/mother
-	maxHealth = 300
-	health = 300
-	melee_damage_lower = 7
-	melee_damage_upper = 12
-*/
 //what are this things?
 /mob/living/simple_mob/animal/space/alien/sentinel/praetorian/echo
 	name = "alien Echopraetorian"
