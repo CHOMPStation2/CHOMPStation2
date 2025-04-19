@@ -325,11 +325,12 @@
 
 	// Forcibly enable hardware-accelerated graphics, as we need them for the lighting overlays.
 	// (but turn them off first, since sometimes BYOND doesn't turn them on properly otherwise)
-	spawn(5) // And wait a half-second, since it sounds like you can do this too fast.
-		if(src)
-			winset(src, null, "command=\".configure graphics-hwmode off\"")
-			sleep(2) // wait a bit more, possibly fixes hardware mode not re-activating right
-			winset(src, null, "command=\".configure graphics-hwmode on\"")
+	// CHOMPEdit Start
+	// spawn(5) // And wait a half-second, since it sounds like you can do this too fast.
+	//	if(src)
+	//		winset(src, null, "command=\".configure graphics-hwmode off\"")
+	//		sleep(2) // wait a bit more, possibly fixes hardware mode not re-activating right
+	winset(src, null, "command=\".configure graphics-hwmode on\"") // CHOMPEdit End
 
 	log_client_to_db()
 
@@ -532,7 +533,7 @@
 
 	//Logging player access
 	var/serverip = "[world.internet_address]:[world.port]"
-	var/datum/db_query/query_accesslog = SSdbcore.NewQuery("INSERT INTO `erro_connection_log`(`id`,`datetime`,`serverip`,`ckey`,`ip`,`computerid`) VALUES(null,Now(),'[serverip]','[sql_ckey]','[sql_ip]','[sql_computerid]');")
+	var/datum/db_query/query_accesslog = SSdbcore.NewQuery("INSERT INTO erro_connection_log (id, datetime, serverip, ckey, ip, computerid) VALUES (null, Now(), '[serverip]', '[sql_ckey]', '[sql_ip]', '[sql_computerid]')") //CHOMPEdit
 	query_accesslog.Execute()
 	qdel(query_accesslog)
 
