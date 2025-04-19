@@ -72,12 +72,6 @@
 	},
 /turf/space,
 /area/expoutpost/reactorroom)
-"aao" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/yellow{
-	dir = 9
-	},
-/turf/simulated/wall/r_wall,
-/area/expoutpost/reactorroom)
 "aap" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
 	dir = 6
@@ -322,7 +316,9 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/expoutpost/cic)
 "aaT" = (
-/obj/machinery/computer/ship/helm,
+/obj/machinery/computer/ship/helm{
+	req_one_access = list(19,62,67)
+	},
 /turf/simulated/floor/tiled/milspec/raised,
 /area/expoutpost/cic)
 "aaU" = (
@@ -352,7 +348,7 @@
 	dir = 6
 	},
 /obj/structure/closet/secure_closet/guncabinet{
-	req_one_access = list(43,67)
+	req_one_access = list(19,62,67)
 	},
 /obj/item/stack/sandbags{
 	amount = 25
@@ -461,6 +457,12 @@
 /obj/effect/shuttle_landmark/southern_cross/carrier/starboard_dock,
 /turf/space,
 /area/space)
+"abh" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/yellow{
+	dir = 1
+	},
+/turf/simulated/wall/r_wall,
+/area/expoutpost/reactorroom)
 "abn" = (
 /obj/machinery/atmospherics/binary/pump/high_power{
 	dir = 1
@@ -760,8 +762,6 @@
 /obj/structure/cable/green{
 	icon_state = "1-4"
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/yellow,
-/obj/machinery/meter,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor,
@@ -2178,13 +2178,6 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
 /turf/simulated/floor/carpet,
 /area/expoutpost/suite2)
-"byF" = (
-/obj/structure/shuttle/engine/heater,
-/obj/machinery/atmospherics/pipe/simple/hidden/yellow{
-	dir = 8
-	},
-/turf/simulated/wall/r_wall,
-/area/expoutpost/portfuelstorage)
 "bAe" = (
 /obj/structure/railing/overhang/waterless/grey{
 	dir = 4
@@ -3956,7 +3949,6 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/yellow,
 /obj/machinery/door/firedoor/glass,
 /obj/effect/catwalk_plated/techfloor,
 /obj/machinery/door/airlock/engineering{
@@ -8138,9 +8130,7 @@
 	id = "aeg_bridge_saferoom";
 	name = "Bridge Saferoom";
 	pixel_x = -25;
-	pixel_y = 26;
-	req_access = list(17);
-	req_one_access = list(17)
+	pixel_y = 26
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/expoutpost/cic)
@@ -8155,12 +8145,6 @@
 /obj/structure/table/wooden_reinforced,
 /turf/simulated/floor/carpet,
 /area/expoutpost/explodorm2)
-"gGg" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/yellow{
-	dir = 5
-	},
-/turf/simulated/wall/r_wall,
-/area/expoutpost/reactorroom)
 "gHs" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -9243,15 +9227,15 @@
 	pixel_x = 30;
 	pixel_y = 34;
 	name = "Emergency Armoury";
-	id = "aeg_bridge_armory"
+	id = "aeg_bridge_armory";
+	req_one_access = list(19,62,67)
 	},
 /obj/machinery/button/remote/blast_door{
 	id = "aeg_bridge_saferoom";
 	name = "Bridge Saferoom";
 	pixel_x = -30;
 	pixel_y = 34;
-	req_access = list(17);
-	req_one_access = list(17)
+	req_one_access = list(19,62,67)
 	},
 /obj/structure/bed/chair/bay/comfy/blue{
 	dir = 1
@@ -9928,7 +9912,6 @@
 /obj/machinery/power/terminal{
 	dir = 4
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/yellow,
 /obj/structure/cable/yellow{
 	icon_state = "0-2"
 	},
@@ -10875,7 +10858,6 @@
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/yellow,
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
 	},
@@ -11993,7 +11975,6 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/yellow,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/techfloor,
@@ -12439,6 +12420,10 @@
 "klw" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/door/airlock/vault{
+	name = "Emergency Armoury";
+	req_one_access = list(19,62,67)
+	},
 /obj/machinery/door/blast/regular{
 	dir = 8;
 	id = "aeg_bridge_armory"
@@ -15191,7 +15176,6 @@
 /obj/structure/cable/cyan{
 	icon_state = "1-8"
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/yellow,
 /turf/simulated/floor,
 /area/expoutpost/reactorroom)
 "mto" = (
@@ -17140,8 +17124,8 @@
 /area/expoutpost/slingcarrierdock)
 "nLP" = (
 /obj/structure/shuttle/engine/heater,
-/obj/machinery/atmospherics/pipe/simple/hidden/yellow{
-	dir = 9
+/obj/machinery/atmospherics/pipe/manifold/hidden/yellow{
+	dir = 4
 	},
 /turf/simulated/wall/r_wall,
 /area/expoutpost/portfuelstorage)
@@ -18642,7 +18626,6 @@
 /turf/simulated/wall/r_wall,
 /area/expoutpost/exploarmory)
 "phn" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/yellow,
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
 	},
@@ -19552,7 +19535,7 @@
 	dir = 5
 	},
 /obj/structure/closet/secure_closet/guncabinet{
-	req_one_access = list(43,67)
+	req_one_access = list(19,62,67)
 	},
 /obj/item/stack/sandbags{
 	amount = 25
@@ -20815,7 +20798,6 @@
 /obj/structure/cable/cyan{
 	icon_state = "2-8"
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/yellow,
 /obj/structure/cable/yellow{
 	icon_state = "1-4"
 	},
@@ -22318,13 +22300,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/expoutpost/rnd)
-"rWv" = (
-/obj/structure/shuttle/engine/heater,
-/obj/machinery/atmospherics/pipe/simple/hidden/yellow{
-	dir = 8
-	},
-/turf/simulated/wall/r_wall,
-/area/expoutpost/starfuelstorage)
 "rWL" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -23203,28 +23178,6 @@
 	},
 /turf/simulated/floor,
 /area/expoutpost/disposals)
-"sOJ" = (
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/obj/structure/cable/green{
-	icon_state = "2-8"
-	},
-/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
-	dir = 1
-	},
-/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
-	dir = 1
-	},
-/obj/effect/catwalk_plated/techfloor,
-/obj/machinery/atmospherics/pipe/manifold/hidden/yellow{
-	dir = 1
-	},
-/turf/simulated/floor,
-/area/expoutpost/lowersternhallway)
 "sPa" = (
 /obj/structure/window/reinforced,
 /obj/structure/table/steel_reinforced,
@@ -25619,7 +25572,6 @@
 /obj/structure/cable/cyan{
 	icon_state = "1-2"
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/yellow,
 /turf/simulated/floor,
 /area/expoutpost/reactorroom)
 "uJZ" = (
@@ -26968,7 +26920,8 @@
 /area/expoutpost/portfuelstorage)
 "vLz" = (
 /obj/machinery/door/airlock/vault{
-	name = "Bridge Saferoom"
+	name = "Bridge Saferoom";
+	req_one_access = list(19,62,67)
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -27367,7 +27320,6 @@
 /obj/machinery/power/terminal{
 	dir = 4
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/yellow,
 /obj/structure/cable/yellow{
 	icon_state = "0-2"
 	},
@@ -30046,7 +29998,6 @@
 /obj/structure/cable/cyan{
 	icon_state = "1-2"
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/yellow,
 /obj/machinery/power/sensor,
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/engineering{
@@ -30152,8 +30103,8 @@
 /area/expoutpost/starlowermaint)
 "ydq" = (
 /obj/structure/shuttle/engine/heater,
-/obj/machinery/atmospherics/pipe/simple/hidden/yellow{
-	dir = 5
+/obj/machinery/atmospherics/pipe/manifold/hidden/yellow{
+	dir = 8
 	},
 /turf/simulated/wall/r_wall,
 /area/expoutpost/starfuelstorage)
@@ -58797,7 +58748,7 @@ cuH
 iFQ
 lgS
 spq
-byF
+kJb
 pzO
 pzO
 cwA
@@ -59569,7 +59520,7 @@ oFW
 oFW
 ruI
 spq
-byF
+kJb
 pzO
 pzO
 cwA
@@ -60341,7 +60292,7 @@ ruI
 oFW
 ruI
 spq
-byF
+kJb
 pzO
 pzO
 cwA
@@ -61849,7 +61800,7 @@ dJj
 jia
 jia
 oNO
-sOJ
+caA
 jNd
 daS
 aoL
@@ -62642,7 +62593,7 @@ aDR
 wtu
 vUT
 wfX
-gGg
+aat
 aam
 aak
 aXP
@@ -63158,7 +63109,7 @@ ucP
 lWC
 kLE
 gSi
-wPD
+abh
 vfD
 aai
 aai
@@ -63674,7 +63625,7 @@ ucP
 lWC
 kLE
 gSi
-wPD
+abh
 vfD
 aai
 aXP
@@ -64190,7 +64141,7 @@ aDR
 qzs
 vUT
 jfA
-aao
+aau
 aan
 aal
 aai
@@ -66533,7 +66484,7 @@ heD
 tuN
 heD
 ktu
-rWv
+bTg
 iav
 wuT
 cwA
@@ -67309,7 +67260,7 @@ tuN
 tuN
 heD
 ktu
-rWv
+bTg
 iav
 wuT
 cwA
@@ -68085,7 +68036,7 @@ wkl
 wTp
 oac
 ktu
-rWv
+bTg
 iav
 wuT
 cwA
