@@ -179,3 +179,6 @@
   - rscadd: NanoTrasen shipwrights have now made the carrier actually capable of interplanetary
       travel
   - maptweak: New bridge for the carrier
+2025-04-19:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: highlight input size
