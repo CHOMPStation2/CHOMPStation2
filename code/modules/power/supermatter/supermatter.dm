@@ -270,7 +270,7 @@
 		// CHOMPEdit Start
 		if(!critwarn)
 			if(src.z in using_map.station_levels)
-				for(var/obj/machinery/firealarm/candidate_alarm in global.machines)
+				for(var/obj/machinery/firealarm/candidate_alarm in GLOB.machines)
 					var/area/our_area = get_area(candidate_alarm)
 					if(istype(our_area, /area/engineering))
 						candidate_alarm.critalarm.start()
@@ -282,7 +282,7 @@
 		// CHOMPEdit: Looping Alarms - we're not making a proc for initiating the alarms in this case.
 		if(!engwarn)
 			if(src.z in using_map.station_levels)
-				for(var/obj/machinery/firealarm/candidate_alarm in global.machines)
+				for(var/obj/machinery/firealarm/candidate_alarm in GLOB.machines)
 					var/area/our_area = get_area(candidate_alarm)
 					if(istype(our_area, /area/engineering))
 						for(var/obj/machinery/light/L in our_area)
@@ -452,7 +452,7 @@
 	if(!final_countdown)
 		if(!causalitywarn)
 			if(src.z in using_map.station_levels)
-				for(var/obj/machinery/firealarm/candidate_alarm in global.machines)
+				for(var/obj/machinery/firealarm/candidate_alarm in GLOB.machines)
 					var/area/our_area = get_area(candidate_alarm)
 					if(istype(our_area, /area/engineering))
 						candidate_alarm.causality.start()
@@ -469,10 +469,10 @@
 	update_icon()
 
 	var/speaking = "[emergency_alert] The supermatter has reached critical integrity failure. Emergency causality destabilization field has been activated."
-	global_announcer.autosay(speaking, "Supermatter Monitor")
+	GLOB.global_announcer.autosay(speaking, "Supermatter Monitor")
 	for(var/i in SUPERMATTER_COUNTDOWN_TIME to 0 step -10)
 		if(damage < explosion_point) // Cutting it a bit close there engineers
-			global_announcer.autosay("[safe_alert] Failsafe has been disengaged.", "Supermatter Monitor")
+			GLOB.global_announcer.autosay("[safe_alert] Failsafe has been disengaged.", "Supermatter Monitor")
 			final_countdown = FALSE
 			update_icon()
 			return
@@ -483,7 +483,7 @@
 			speaking = "[DisplayTimeText(i, TRUE)] remain before causality stabilization."
 		else
 			speaking = "[i*0.1]..."
-		global_announcer.autosay(speaking, "Supermatter Monitor")
+		GLOB.global_announcer.autosay(speaking, "Supermatter Monitor")
 		sleep(10)
 
 	explode() // Chompers Edit End
@@ -656,7 +656,7 @@
 	causalitywarn = FALSE
 
 /proc/reset_sm_alarms()
-	for(var/obj/machinery/firealarm/candidate_alarm in global.machines)
+	for(var/obj/machinery/firealarm/candidate_alarm in GLOB.machines)
 		var/area/our_area = get_area(candidate_alarm)
 		if(istype(our_area, /area/engineering))
 			for(var/obj/machinery/light/L in our_area)

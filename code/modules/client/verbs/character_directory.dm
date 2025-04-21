@@ -96,21 +96,13 @@ GLOBAL_DATUM(character_directory, /datum/character_directory)
 
 		if(ishuman(C.mob))
 			var/mob/living/carbon/human/H = C.mob
-<<<<<<< HEAD
 			// CHOMPEdit Start
 			var/strangername = H.real_name
-			if(data_core && data_core.general)
+			if(GLOB.data_core && GLOB.data_core.general)
 				if(!find_general_record("name", H.real_name))
-					if(!find_record("name", H.real_name, data_core.hidden_general))
+					if(!find_record("name", H.real_name, GLOB.data_core.hidden_general))
 						strangername = "unknown"
 			name = strangername
-=======
-			//if(data_core && GLOB.data_core.general)
-			//	if(!find_general_record("name", H.real_name))
-			//		if(!find_record("name", H.real_name, data_core.hidden_general))
-			//			continue
-			name = H.real_name
->>>>>>> 28e969778c (code/global.dm => code/_global_vars/ (#17244))
 			species = "[H.custom_species ? H.custom_species : H.species.name]"
 			ooc_notes = H.ooc_notes
 			//CHOMPEdit Start

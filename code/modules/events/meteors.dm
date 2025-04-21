@@ -23,7 +23,7 @@
 /datum/event/meteor_wave/start()
 	affecting_z -= global.using_map.sealed_levels // Space levels only please!
 	//CHOMPAdd Start, fills gaps
-	for(var/obj/machinery/shield_gen/gen in global.machines)
+	for(var/obj/machinery/shield_gen/gen in GLOB.machines)
 		gen.fill_diffused()
 	//CHOMPAdd End
 	..()
@@ -65,7 +65,7 @@
 /datum/event/meteor_wave/end()
 	..()
 	//CHOMPAdd Start, fills gaps
-	for(var/obj/machinery/shield_gen/gen in global.machines)
+	for(var/obj/machinery/shield_gen/gen in GLOB.machines)
 		gen.fill_diffused()
 	//CHOMPAdd End
 	if(!victim)

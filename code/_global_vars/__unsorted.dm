@@ -26,7 +26,8 @@ GLOBAL_LIST_INIT(hit_appends, list("-OOF", "-ACK", "-UGH", "-HRNK", "-HURGH", "-
 // var/const/company_short	= "NT"
 // var/const/star_name		= "Vir"
 // var/const/starsys_name	= "Vir"
-GLOBAL_VAR_INIT(game_year, (text2num(time2text(world.realtime, "YYYY")) + 300))
+GLOBAL_VAR_INIT(servernews_hash, "") //ChompADD - news hash gen
+GLOBAL_VAR_INIT(game_year, (text2num(time2text(world.realtime, "YYYY")) + 544)) // CHOMPEdit
 GLOBAL_VAR_INIT(round_progressing, TRUE)
 
 GLOBAL_VAR_INIT(master_mode, "extended") // "extended"
@@ -51,7 +52,7 @@ GLOBAL_VAR(custom_event_msg)
 GLOBAL_LIST_INIT(robot_module_types, list(
 	"Standard", "Engineering", /*"Surgeon",*/ "Crisis", "Miner",
 	"Janitor", "Service", "Clown", "Clerical", "Security",
-	"Research", "Command" //"Exploration"
+	"Research", "Command", "Exploration" //CHOMPedit: Enables Exploration borg.
 ))
 // List of modules added during code red
 GLOBAL_LIST_INIT(emergency_module_types, list(
@@ -61,7 +62,7 @@ GLOBAL_LIST_INIT(emergency_module_types, list(
 GLOBAL_LIST_INIT(shell_module_types, list(
 	"Standard", "Engineering", "Surgeon", "Crisis", "Miner",
 	"Janitor", "Service", "Clown", "Clerical", "Security",
-	"Research", "Command" //"Exploration"
+	"Research", "Command", "Exploration" //CHOMPedit: Enables Exploration borg.
 ))
 // List of whitelisted modules
 GLOBAL_LIST_INIT(whitelisted_module_types, list(

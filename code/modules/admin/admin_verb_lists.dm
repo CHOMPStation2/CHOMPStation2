@@ -375,14 +375,10 @@ var/list/admin_verbs_mod = list(
 	/datum/admins/proc/sendFax,
 	/client/proc/getserverlog,			//allows us to fetch server logs (GLOB.diary) for other days,
 	/datum/admins/proc/view_persistent_data,
-<<<<<<< HEAD
 	/datum/admins/proc/view_txt_log,	//shows the server log (diary) for today,
 	/datum/admins/proc/quick_nif, //CHOMPEdit
 	/datum/admins/proc/quick_authentic_nif, //CHOMPEdit
 	/client/proc/admin_teleport,		//CHOMPEdit
-=======
-	/datum/admins/proc/view_txt_log,	//shows the server log (GLOB.diary) for today,
->>>>>>> 28e969778c (code/global.dm => code/_global_vars/ (#17244))
 	/datum/admins/proc/view_atk_log		//shows the server combat-log, doesn't do anything presently,
 )
 

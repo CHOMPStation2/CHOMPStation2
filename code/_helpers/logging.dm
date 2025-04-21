@@ -47,14 +47,8 @@
 		WRITE_LOG(GLOB.diary, "PRAY: [key_name(source)]: [text]")
 
 /proc/log_debug(text)
-<<<<<<< HEAD
-	//if (CONFIG_GET(flag/log_debug)) // CHOMPRemove
-	//	WRITE_LOG(debug_log, "DEBUG: [sanitize(text)]") // CHOMPRemove
-	WRITE_LOG(debug_log, "DEBUG: [sanitize(text)]")
-=======
 	if (CONFIG_GET(flag/log_debug))
 		WRITE_LOG(GLOB.debug_log, "DEBUG: [sanitize(text)]")
->>>>>>> 28e969778c (code/global.dm => code/_global_vars/ (#17244))
 
 	for(var/client/C in GLOB.admins)
 		if(C.prefs?.read_preference(/datum/preference/toggle/show_debug_logs))
@@ -103,8 +97,7 @@
 
 /proc/log_ooc(text, client/user)
 	if (CONFIG_GET(flag/log_ooc))
-<<<<<<< HEAD
-		WRITE_LOG(diary, "OOC: [user.simple_info_line()]: [html_decode(text)]")
+		WRITE_LOG(GLOB.diary, "OOC: [user.simple_info_line()]: [html_decode(text)]")
 	if(!SSdbcore.IsConnected())
 		establish_db_connection()
 		if(!SSdbcore.IsConnected())
@@ -120,7 +113,7 @@
 
 /proc/log_aooc(text, client/user)
 	if (CONFIG_GET(flag/log_ooc))
-		WRITE_LOG(diary, "AOOC: [user.simple_info_line()]: [html_decode(text)]")
+		WRITE_LOG(GLOB.diary, "AOOC: [user.simple_info_line()]: [html_decode(text)]")
 	if(!SSdbcore.IsConnected())
 		establish_db_connection()
 		if(!SSdbcore.IsConnected())
@@ -136,7 +129,7 @@
 
 /proc/log_looc(text, client/user)
 	if (CONFIG_GET(flag/log_ooc))
-		WRITE_LOG(diary, "LOOC: [user.simple_info_line()]: [html_decode(text)]")
+		WRITE_LOG(GLOB.diary, "LOOC: [user.simple_info_line()]: [html_decode(text)]")
 	if(!SSdbcore.IsConnected())
 		establish_db_connection()
 		if(!SSdbcore.IsConnected())
@@ -149,23 +142,6 @@
 		return
 	qdel(query_insert)
 	//GLOB.round_text_log += span_bold("([time_stamp()])") + " (" + span_bold("[user]") + ") " + span_underline("LOOC:") + " - " + span_orange(span_bold("[text]"))
-=======
-		WRITE_LOG(GLOB.diary, "OOC: [user.simple_info_line()]: [html_decode(text)]")
-
-	GLOB.round_text_log += span_bold("([time_stamp()])") + " (" + span_bold("[user]") + ") " + span_underline("OOC:") + " - " + span_blue(span_bold("[text]"))
-
-/proc/log_aooc(text, client/user)
-	if (CONFIG_GET(flag/log_ooc))
-		WRITE_LOG(GLOB.diary, "AOOC: [user.simple_info_line()]: [html_decode(text)]")
-
-	GLOB.round_text_log += span_bold("([time_stamp()])") + " (" + span_bold("[user]") + ") " + span_underline("AOOC:") + " - " + span_red(span_bold("[text]"))
-
-/proc/log_looc(text, client/user)
-	if (CONFIG_GET(flag/log_ooc))
-		WRITE_LOG(GLOB.diary, "LOOC: [user.simple_info_line()]: [html_decode(text)]")
-
-	GLOB.round_text_log += span_bold("([time_stamp()])") + " (" + span_bold("[user]") + ") " + span_underline("LOOC:") + " - " + span_orange(span_bold("[text]"))
->>>>>>> 28e969778c (code/global.dm => code/_global_vars/ (#17244))
 
 /proc/log_whisper(text, mob/speaker)
 	if (CONFIG_GET(flag/log_whisper))
@@ -188,13 +164,8 @@
 
 /proc/log_emote(text, mob/speaker)
 	if (CONFIG_GET(flag/log_emote))
-<<<<<<< HEAD
-		WRITE_LOG(diary, "EMOTE: [speaker.simple_info_line()]: [html_decode(text)]")
-	//CHOMPEdit Begin
-=======
 		WRITE_LOG(GLOB.diary, "EMOTE: [speaker.simple_info_line()]: [html_decode(text)]")
-
->>>>>>> 28e969778c (code/global.dm => code/_global_vars/ (#17244))
+	//CHOMPEdit Begin
 	if(speaker.client)
 		//speaker.dialogue_log += span_bold("([time_stamp()])") + " (" + span_bold("[speaker]/[speaker.client]") + ") " + span_underline("EMOTE:") + " - " + span_pink("[text]")
 		//GLOB.round_text_log += span_bold("([time_stamp()])") + " (" + span_bold("[speaker]/[speaker.client]") + ") " + span_underline("EMOTE:") + " - " + span_pink("[text]")
@@ -229,8 +200,7 @@
 
 /proc/log_ghostsay(text, mob/speaker)
 	if (CONFIG_GET(flag/log_say))
-<<<<<<< HEAD
-		WRITE_LOG(diary, "DEADCHAT: [speaker.simple_info_line()]: [html_decode(text)]")
+		WRITE_LOG(GLOB.diary, "DEADCHAT: [speaker.simple_info_line()]: [html_decode(text)]")
 	//CHOMPEdit Begin
 	if(speaker.client)
 		if(!SSdbcore.IsConnected())
@@ -244,9 +214,6 @@
 			qdel(query_insert)
 			return
 		qdel(query_insert)
-=======
-		WRITE_LOG(GLOB.diary, "DEADCHAT: [speaker.simple_info_line()]: [html_decode(text)]")
->>>>>>> 28e969778c (code/global.dm => code/_global_vars/ (#17244))
 
 	//speaker.dialogue_log += span_bold("([time_stamp()])") + " (" + span_bold("[speaker]/[speaker.client]") + ") " + span_underline("DEADSAY:") + " - " + span_green("[text]")
 	//GLOB.round_text_log += span_small(span_purple(span_bold("([time_stamp()])") + " (" + span_bold("[speaker]/[speaker.client]") + ") " + span_underline("DEADSAY:") + " - [text]"))
@@ -254,8 +221,7 @@
 
 /proc/log_ghostemote(text, mob/speaker)
 	if (CONFIG_GET(flag/log_emote))
-<<<<<<< HEAD
-		WRITE_LOG(diary, "DEADEMOTE: [speaker.simple_info_line()]: [html_decode(text)]")
+		WRITE_LOG(GLOB.diary, "DEADEMOTE: [speaker.simple_info_line()]: [html_decode(text)]")
 	//CHOMPEdit Begin
 	if(speaker.client)
 		if(!SSdbcore.IsConnected())
@@ -270,9 +236,6 @@
 			return
 		qdel(query_insert)
 	//CHOMPEdit End
-=======
-		WRITE_LOG(GLOB.diary, "DEADEMOTE: [speaker.simple_info_line()]: [html_decode(text)]")
->>>>>>> 28e969778c (code/global.dm => code/_global_vars/ (#17244))
 
 /proc/log_adminwarn(text)
 	if (CONFIG_GET(flag/log_adminwarn))
@@ -280,8 +243,7 @@
 
 /proc/log_pda(text, mob/speaker)
 	if (CONFIG_GET(flag/log_pda))
-<<<<<<< HEAD
-		WRITE_LOG(diary, "PDA: [speaker.simple_info_line()]: [html_decode(text)]")
+		WRITE_LOG(GLOB.diary, "PDA: [speaker.simple_info_line()]: [html_decode(text)]")
 	//CHOMPEdit Begin
 	if(speaker.client)
 		if(!SSdbcore.IsConnected())
@@ -295,9 +257,6 @@
 			qdel(query_insert)
 			return
 		qdel(query_insert)
-=======
-		WRITE_LOG(GLOB.diary, "PDA: [speaker.simple_info_line()]: [html_decode(text)]")
->>>>>>> 28e969778c (code/global.dm => code/_global_vars/ (#17244))
 
 	//speaker.dialogue_log += span_bold("([time_stamp()])") + " (" + span_bold("[speaker]/[speaker.client]") + ") " + span_underline("MSG:") + " - " + span_darkgreen("[text]")
 	//GLOB.round_text_log += span_bold("([time_stamp()])") + " (" + span_bold("[speaker]/[speaker.client]") + ") " + span_underline("MSG:") + " - " + span_darkgreen("[text]")
@@ -305,14 +264,8 @@
 
 /proc/log_to_dd(text)
 	to_world_log(text) //this comes before the config check because it can't possibly runtime
-<<<<<<< HEAD
-	//if(CONFIG_GET(flag/log_world_output)) // CHOMPRemove
-	//	WRITE_LOG(diary, "DD_OUTPUT: [text]") // CHOMPRemove
-	WRITE_LOG(diary, "DD_OUTPUT: [text]")
-=======
 	if(CONFIG_GET(flag/log_world_output))
 		WRITE_LOG(GLOB.diary, "DD_OUTPUT: [text]")
->>>>>>> 28e969778c (code/global.dm => code/_global_vars/ (#17244))
 
 /proc/log_error(text)
 	to_world_log(text)

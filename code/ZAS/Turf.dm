@@ -205,11 +205,7 @@
 		if(istype(unsim, /turf/simulated))
 
 			var/turf/simulated/sim = unsim
-<<<<<<< HEAD
-			sim.open_directions |= GLOB.reverse_dir[d] // CHOMPEdit
-=======
 			sim.open_directions |= GLOB.reverse_dir[d]
->>>>>>> 28e969778c (code/global.dm => code/_global_vars/ (#17244))
 
 			if(TURF_HAS_VALID_ZONE(sim)) // CHOMPEdit
 

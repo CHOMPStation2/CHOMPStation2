@@ -25,13 +25,8 @@
 			simulated = TRUE
 			//delete_me = TRUE // see above, moving, always use this list with get_turf
 		if("JoinLateGateway")
-<<<<<<< HEAD
-			latejoin_gateway += loc
-			// latejoin += loc				//VOREStation Addition // CHOMPRemove
-=======
 			GLOB.latejoin_gateway += loc
-			GLOB.latejoin += loc				//VOREStation Addition
->>>>>>> 28e969778c (code/global.dm => code/_global_vars/ (#17244))
+			//GLOB.latejoin += loc				//VOREStation Addition // CHOMPRemove
 			delete_me = TRUE
 		//CHOMPEdit Begin
 		if("JoinLateStationGateway")

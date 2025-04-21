@@ -40,12 +40,8 @@
 	base.layer = DISPOSAL_LAYER
 	base.plane = PLATING_PLANE
 	base.appearance_flags = PIXEL_SCALE
-<<<<<<< HEAD
-	for(var/direction in cardinal)
-=======
 
 	for(var/direction in GLOB.cardinal)
->>>>>>> 28e969778c (code/global.dm => code/_global_vars/ (#17244))
 		var/mutable_appearance/dir = new /mutable_appearance(base)
 		dir.dir = direction
 		dir.icon_state = "background_[direction]"

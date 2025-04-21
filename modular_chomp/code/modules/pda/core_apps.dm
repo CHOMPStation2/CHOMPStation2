@@ -102,7 +102,7 @@
 		pda.id.rank = newjob.title
 		pda.id.assignment = newassignment
 		pda.id.name = text("[pda.id.registered_name]'s ID Card ([pda.id.assignment])")
-		data_core.manifest_modify(pda.id.registered_name, pda.id.assignment, pda.id.rank)
+		GLOB.data_core.manifest_modify(pda.id.registered_name, pda.id.assignment, pda.id.rank)
 		pda.id.last_job_switch = world.time
 		callHook("reassign_employee", list(pda.id))
 		newjob.current_positions++
@@ -131,7 +131,7 @@
 		pda.id.rank = ptojob.title
 		pda.id.assignment = ptojob.title
 		pda.id.name = text("[pda.id.registered_name]'s ID Card ([pda.id.assignment])")
-		data_core.manifest_modify(pda.id.registered_name, pda.id.assignment, pda.id.rank)
+		GLOB.data_core.manifest_modify(pda.id.registered_name, pda.id.assignment, pda.id.rank)
 		pda.id.last_job_switch = world.time
 		callHook("reassign_employee", list(pda.id))
 		user.mind.assigned_role = ptojob.title

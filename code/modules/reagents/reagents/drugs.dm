@@ -65,13 +65,8 @@
 		drug_strength *= 0.15 //~ 1/6
 
 	M.druggy = max(M.druggy, drug_strength)
-<<<<<<< HEAD
 	if(prob_proc == TRUE && prob(10) && isturf(M.loc) && !istype(M.loc, /turf/space) && M.canmove && !M.restrained() && !M.resting) // CHOMPstation edit - Stop drug movement from forcing crawling
-		step(M, pick(cardinal))
-=======
-	if(prob_proc == TRUE && prob(10) && isturf(M.loc) && !istype(M.loc, /turf/space) && M.canmove && !M.restrained())
 		step(M, pick(GLOB.cardinal))
->>>>>>> 28e969778c (code/global.dm => code/_global_vars/ (#17244))
 		prob_proc = FALSE
 	if(prob_proc == TRUE && prob(7))
 		M.emote(pick("twitch", "drool", "moan", "giggle"))

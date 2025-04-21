@@ -39,17 +39,13 @@
 		if(LAZYLEN(R.restrict_modules_to) > 0)
 			modules.Add(R.restrict_modules_to)
 		else if(R.shell)
-<<<<<<< HEAD
-			modules.Add(robot_module_types) // CHOMPEdit
+			modules.Add(GLOB.robot_module_types) // CHOMPEdit
 			// CHOMPAdd Start, shell blacklist and crisis mode for shells
 			modules.Remove(GLOB.shell_module_blacklist)
 			if(R.crisis || GLOB.security_level == SEC_LEVEL_RED || R.crisis_override)
 				to_chat(src, span_red("Crisis mode active. Combat module available."))
-				modules |= emergency_module_types
+				modules |= GLOB.emergency_module_types
 			// CHOMPAdd End
-=======
-			modules.Add(GLOB.shell_module_types)
->>>>>>> 28e969778c (code/global.dm => code/_global_vars/ (#17244))
 		else
 			modules.Add(GLOB.robot_module_types)
 			if(R.crisis || GLOB.security_level >= SEC_LEVEL_RED || R.crisis_override)

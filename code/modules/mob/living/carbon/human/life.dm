@@ -1874,12 +1874,8 @@
 				if(text2num(time2text(world.timeofday, "DD")) == 1)
 					playsound_local(src,pick(GLOB.scawwySownds),50, 0)
 					return
-<<<<<<< HEAD
 			*/ // CHOMPedit End
-			playsound_local(src,pick(scarySounds),50, 1, -1)
-=======
 			playsound_local(src,pick(GLOB.scarySounds),50, 1, -1)
->>>>>>> 28e969778c (code/global.dm => code/_global_vars/ (#17244))
 
 /mob/living/carbon/human/proc/handle_changeling()
 	if(mind && mind.changeling)

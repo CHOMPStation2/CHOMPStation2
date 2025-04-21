@@ -26,7 +26,7 @@
 		F["title"] >> title //This is done twice on purpose. For some reason BYOND misses the first read, if performed before the world starts
 		var/body
 		F["body"] >> body
-		servernews_hash = md5("[title]" + "[body]")
+		GLOB.servernews_hash = md5("[title]" + "[body]")
 	//ChompADD End
 
 	if(byond_version < RECOMMENDED_VERSION)
