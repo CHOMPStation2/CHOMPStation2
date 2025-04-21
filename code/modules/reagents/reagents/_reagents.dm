@@ -224,8 +224,11 @@
 
 /datum/reagent/Destroy() // This should only be called by the holder, so it's already handled clearing its references
 	holder = null
+	if(islist(data))
+		data.Cut()
 	. = ..()
 
+<<<<<<< HEAD
 //YW edit start
 // Called when reagents are removed from a container, most likely after metabolizing in a mob
 /datum/reagent/proc/on_remove(var/atom/A)
@@ -251,6 +254,8 @@
 /datum/reagent/proc/reaction_mob(var/mob/target)
 	touch_mob(target)
 
+=======
+>>>>>>> 640cab345e (Virology Update #3 (#17227))
 /// Called by [/datum/reagents/proc/conditional_update]
 /datum/reagent/proc/on_update(atom/A)
 	return
