@@ -224,7 +224,13 @@
 
 /datum/reagent/Destroy() // This should only be called by the holder, so it's already handled clearing its references
 	holder = null
+	if(islist(data))
+		data.Cut()
 	. = ..()
+
+/// Called by [/datum/reagents/proc/conditional_update]
+/datum/reagent/proc/on_update(atom/A)
+	return
 
 //YW edit start
 // Called when reagents are removed from a container, most likely after metabolizing in a mob
@@ -239,18 +245,3 @@
 /datum/reagent/proc/on_transfer(var/volume)
 	return 1
 //YW edit end
-
-/* DEPRECATED - TODO: REMOVE EVERYWHERE */
-
-/datum/reagent/proc/reaction_turf(var/turf/target)
-	touch_turf(target)
-
-/datum/reagent/proc/reaction_obj(var/obj/target)
-	touch_obj(target)
-
-/datum/reagent/proc/reaction_mob(var/mob/target)
-	touch_mob(target)
-
-/// Called by [/datum/reagents/proc/conditional_update]
-/datum/reagent/proc/on_update(atom/A)
-	return
