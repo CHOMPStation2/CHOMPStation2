@@ -5,20 +5,13 @@
 	organ_tag = O_EYES
 	parent_organ = BP_HEAD
 	var/list/eye_colour = list(0,0,0)
-	var/innate_flash_protection = FLASH_PROTECTION_NONE
 
 /obj/item/organ/internal/eyes/robotize()
 	..()
 	name = "optical sensor"
-	innate_flash_protection = FLASH_PROTECTION_MAJOR // CHOMPedit: So synths can repair brute damage on themselves without needing eye protection, like many other servers. QOL.
 	verbs |= /obj/item/organ/internal/eyes/proc/change_eye_color
-<<<<<<< HEAD
-	organ_verbs = list(/obj/item/organ/internal/eyes/proc/change_eye_color) //CHOMPAdd
-	handle_organ_mod_special() //CHOMPAdd
-=======
 	organ_verbs = list(/obj/item/organ/internal/eyes/proc/change_eye_color)
 	handle_organ_mod_special()
->>>>>>> 9b0bb5f814 (Makes FBP not go blind from welders (#17493))
 
 /obj/item/organ/internal/eyes/robot
 	name = "optical sensor"
