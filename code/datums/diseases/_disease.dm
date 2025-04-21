@@ -39,13 +39,8 @@ GLOBAL_LIST_INIT(diseases, subtypesof(/datum/disease))
 
 /datum/disease/Destroy()
 	affected_mob = null
-<<<<<<< HEAD
-	active_diseases.Remove(src)
-	if(processing)
-=======
 	GLOB.active_diseases.Remove(src)
 	if(global_flag_check(virus_modifiers, PROCESSING))
->>>>>>> 640cab345e (Virology Update #3 (#17227))
 		End()
 	return ..()
 

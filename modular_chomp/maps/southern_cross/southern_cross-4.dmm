@@ -21343,6 +21343,7 @@
 /area/hallway/primary/thirddeck/aftdoorm)
 "rQK" = (
 /obj/random/trash,
+/obj/effect/decal/cleanable/vomit/old,
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/dormsstarboard)
 "rQP" = (
