@@ -716,6 +716,16 @@
 	var_changes = list("dirtslip" = TRUE)
 	excludes = list(/datum/trait/positive/absorbent) // CHOMPAdd
 
+/datum/trait/negative/thick_digits
+	name = "Thick Digits"
+	desc = "Your hands are not shaped in a way that allows useage of guns."
+	cost = -4
+	custom_only = FALSE
+
+/datum/trait/negative/thick_digits/apply(var/datum/species/S,var/mob/living/carbon/human/H)
+	..()
+	H.add_modifier(/datum/modifier/trait/thickdigits)
+
 /datum/trait/negative/nodefib
 	name = "Unreviveable"
 	desc = "For whatever strange genetic reason, defibs cannot restart your heart."
