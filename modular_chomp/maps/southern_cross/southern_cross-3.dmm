@@ -53166,6 +53166,7 @@
 /area/rnd/lab)
 "iOS" = (
 /obj/machinery/vending/medical,
+/mob/living/simple_mob/animal/passive/mouse/white/virology,
 /turf/simulated/floor/tiled/dark,
 /area/medical/medbay2)
 "iOW" = (
@@ -71663,6 +71664,14 @@
 /obj/item/reagent_containers/glass/bottle/mutagen{
 	pixel_y = 9;
 	pixel_x = 7
+	},
+/obj/item/extrapolator{
+	pixel_x = -12;
+	pixel_y = 12
+	},
+/obj/item/extrapolator{
+	pixel_x = -6;
+	pixel_y = 6
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)

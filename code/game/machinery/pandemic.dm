@@ -79,45 +79,7 @@
 			var/datum/disease/advance/A = GLOB.archive_diseases[type]
 			if(!A)
 				atom_say("Unable to find requested strain.")
-<<<<<<< HEAD
-				return
-			print_form(A, ui.user)
-		if("name_strain")
-			var/strain_index = text2num(params["strain_index"])
-			if(isnull(strain_index))
-				atom_say("Unable to respond to command.")
-				return
-			var/type = GetVirusTypeByIndex(strain_index)
-			if(!type)
-				atom_say("Unable to find requested strain.")
-				return
-			var/datum/disease/advance/A = GLOB.archive_diseases[type]
-			if(!A)
-				atom_say("Unable to find requested strain.")
-				return
-			if(A.name != "Unknown")
-				atom_say("Request rejected. Strain already has a name.")
-				return
-			var/new_name = tgui_input_text(ui.user, "Name the Strain", "New Name", max_length = MAX_NAME_LEN)
-			if(!new_name)
-				return
-			A.AssignName(new_name)
-			for(var/datum/disease/advance/AD in active_diseases)
-				AD.Refresh()
-			update_tgui_static_data(ui.user)
-		if("switch_strain")
-			var/strain_index = text2num(params["strain_index"])
-			if(isnull(strain_index) || strain_index < 1)
-				atom_say("Unable to respond to command.")
-				return
-			var/list/viruses = GetViruses()
-			if(strain_index > length(viruses))
-				atom_say("Unable to find requested strain.")
-				return
-			selected_strain_index = strain_index;
-=======
 				return FALSE
->>>>>>> 640cab345e (Virology Update #3 (#17227))
 		else
 			return FALSE
 

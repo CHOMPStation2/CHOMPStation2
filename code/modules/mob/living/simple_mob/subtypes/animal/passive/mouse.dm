@@ -44,7 +44,8 @@
 
 	var/body_color //brown, gray, white and black, leave blank for random
 
-<<<<<<< HEAD
+	var/list/datum/disease/rat_diseases
+
 	//CHOMP Addition: Added these vore variables in and swapped the booleans from their defaults too.
 	can_be_drop_prey = TRUE
 	can_be_drop_pred = FALSE
@@ -58,9 +59,6 @@
 	active_ghost_pods -= src
 	return ..()
 //CHOMPAdd End
-=======
-	var/list/datum/disease/rat_diseases
->>>>>>> 640cab345e (Virology Update #3 (#17227))
 
 /mob/living/simple_mob/animal/passive/mouse/Initialize(mapload, keep_parent_data)
 	. = ..()
@@ -222,7 +220,6 @@
 	emote_hear = list("squeeks","squeaks","squiks")
 	emote_see = list("runs in a circle", "shakes", "scritches at something")
 
-<<<<<<< HEAD
 // CHOMPAdd - Verb for mice colour changing
 /mob/living/simple_mob/animal/passive/mouse/verb/set_mouse_colour()
 	set name = "Set Mouse Colour"
@@ -240,7 +237,7 @@
 	to_chat(src, span_notice("You are now a [new_mouse_colour] mouse!"))
 	remove_verb(src,/mob/living/simple_mob/animal/passive/mouse/verb/set_mouse_colour) //CHOMPEdit TGPanel
 // CHOMPAdd End
-=======
+
 /mob/living/simple_mob/animal/passive/mouse/white/virology
 	name = "Fleming"
 	desc = "A small white rodent, often found in Virology. This one isn't quite the nuisance!"
@@ -257,4 +254,3 @@
 	if(isliving(AM) && !isnull(rat_diseases) && prob(20))
 		var/mob/living/L = AM
 		L.ContractDisease(pick(rat_diseases), BP_R_FOOT)
->>>>>>> 640cab345e (Virology Update #3 (#17227))
