@@ -227,3 +227,21 @@
 	if(islist(data))
 		data.Cut()
 	. = ..()
+
+/// Called by [/datum/reagents/proc/conditional_update]
+/datum/reagent/proc/on_update(atom/A)
+	return
+
+//YW edit start
+// Called when reagents are removed from a container, most likely after metabolizing in a mob
+/datum/reagent/proc/on_remove(var/atom/A)
+	return
+
+// Called when a mob dies
+/datum/reagent/proc/on_mob_death(var/mob/M)
+	return
+
+//on transfer to new container, return 1 to allow it to continue
+/datum/reagent/proc/on_transfer(var/volume)
+	return 1
+//YW edit end
