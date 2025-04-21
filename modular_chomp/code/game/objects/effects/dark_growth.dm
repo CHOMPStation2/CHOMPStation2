@@ -142,7 +142,7 @@
 
 	var/turf/T1 = get_turf(src)
 	if(T1.get_lumcount() < 0.4)
-		for(var/dirn in cardinal)
+		for(var/dirn in GLOB.cardinal)
 			var/turf/T2 = get_step(src, dirn)
 
 			if(!istype(T2) || locate(/obj/effect/dark) in T2 || istype(T2.loc, /area/arrival) || isspace(T2) || istype(T2, /turf/simulated/open))

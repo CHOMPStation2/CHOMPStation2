@@ -77,7 +77,7 @@
 	var/unconnected_dirs = check_dirs
 
 	#ifdef MULTIZAS
-	var/to_check = cornerdirsz
+	var/to_check = GLOB.cornerdirsz
 	#else
 	var/to_check = cornerdirs
 	#endif
@@ -99,7 +99,7 @@
 		/*
 			//check that they are connected by the corner turf
 			var/connected_dirs = get_zone_neighbours(get_step(src, dir))
-			if(connected_dirs && (dir & reverse_dir[connected_dirs]) == dir)
+			if(connected_dirs && (dir & GLOB.reverse_dir[connected_dirs]) == dir)
 				unconnected_dirs &= ~dir //they are, so unflag the cardinals in question
 			*/
 			var/turf/simulated/T = get_step(src, dir)
@@ -120,9 +120,9 @@
 	. = 0
 	if(istype(T) && T.zone)
 		#ifdef MULTIZAS
-		var/to_check = cardinalz
+		var/to_check = GLOB.cardinalz
 		#else
-		var/to_check = cardinal
+		var/to_check = GLOB.cardinal
 		#endif
 		for(var/dir in to_check)
 			var/turf/simulated/other = get_step(T, dir)
@@ -205,7 +205,7 @@
 		if(istype(unsim, /turf/simulated))
 
 			var/turf/simulated/sim = unsim
-			sim.open_directions |= GLOB.reverse_dir[d] // CHOMPEdit
+			sim.open_directions |= GLOB.reverse_dir[d]
 
 			if(TURF_HAS_VALID_ZONE(sim)) // CHOMPEdit
 

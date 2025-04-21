@@ -229,7 +229,7 @@ FIRE ALARM
 		return
 	var/area/area = get_area(src)
 	if(!firewarn && !alarms_hidden) // CHOMPAdd
-		global_announcer.autosay("Tripped [area]", "Fire Alarm Monitor", DEPARTMENT_ENGINEERING)
+		GLOB.global_announcer.autosay("Tripped [area]", "Fire Alarm Monitor", DEPARTMENT_ENGINEERING)
 	for(var/obj/machinery/firealarm/FA in area)
 		fire_alarm.triggerAlarm(loc, FA, duration, hidden = alarms_hidden)
 		FA.soundloop.start() // CHOMPEdit: Soundloop

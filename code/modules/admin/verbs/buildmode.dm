@@ -608,7 +608,7 @@ CHOMP Remove end */
 							AI.give_target(A)
 							i++
 						to_chat(user, span_notice("Commanded [i] mob\s to attack \the [A]."))
-						var/image/orderimage = image(buildmode_hud,A,"ai_targetorder")
+						var/image/orderimage = image(GLOB.buildmode_hud,A,"ai_targetorder")
 						orderimage.plane = PLANE_BUILDMODE
 						flick_overlay(orderimage, list(user.client), 8, TRUE)
 						return
@@ -635,7 +635,7 @@ CHOMP Remove end */
 					if(j)
 						message += "[j] mob\s to follow \the [L]."
 					to_chat(user, span_notice(message))
-					var/image/orderimage = image(buildmode_hud,L,"ai_targetorder")
+					var/image/orderimage = image(GLOB.buildmode_hud,L,"ai_targetorder")
 					orderimage.plane = PLANE_BUILDMODE
 					flick_overlay(orderimage, list(user.client), 8, TRUE)
 					return
@@ -654,7 +654,7 @@ CHOMP Remove end */
 							AI.give_destination(T, 1, pa.Find("shift")) // If shift is held, the mobs will not stop moving to attack a visible enemy.
 							told++
 					to_chat(user, span_notice("Commanded [told] mob\s to move to \the [T], and manually placed [forced] of them."))
-					var/image/orderimage = image(buildmode_hud,T,"ai_turforder")
+					var/image/orderimage = image(GLOB.buildmode_hud,T,"ai_turforder")
 					orderimage.plane = PLANE_BUILDMODE
 					flick_overlay(orderimage, list(user.client), 8, TRUE)
 					return
@@ -831,7 +831,7 @@ CHOMP Remove end */
 	while(pending.len)
 		var/turf/T = pending[1]
 		pending -= T
-		for (var/dir in cardinal)
+		for (var/dir in GLOB.cardinal)
 			var/turf/NT = get_step(T,dir)
 			if (!isturf(NT) || (NT in found) || (NT in pending))
 				continue

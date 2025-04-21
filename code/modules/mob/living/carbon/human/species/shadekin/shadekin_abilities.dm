@@ -206,13 +206,13 @@
 
 	// Add gentle phasing
 	if(SK.phase_gentle) // gentle case: No light destruction. Flicker in 4 tile radius once.
-		for(var/obj/machinery/light/L in machines)
+		for(var/obj/machinery/light/L in GLOB.machines)
 			if(L.z != z || get_dist(src,L) > 4)
 				continue
 			L.flicker(1)
 		Stun(1)
 	else //CHOMPEdit End
-		for(var/obj/machinery/light/L in machines)
+		for(var/obj/machinery/light/L in GLOB.machines)
 			if(L.z != z || get_dist(src,L) > 10)
 				continue
 

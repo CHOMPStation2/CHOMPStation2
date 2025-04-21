@@ -52,9 +52,9 @@
 			var/direction = src.direction
 			if(!direction)
 				if(src.cardinals)
-					direction = pick(cardinal)
+					direction = pick(GLOB.cardinal)
 				else
-					direction = pick(alldirs)
+					direction = pick(GLOB.alldirs)
 			for(i=0, i<pick(0,1,1,1,2,2,2,3), i++)
 				sleep(10)
 				step(confetti,direction)

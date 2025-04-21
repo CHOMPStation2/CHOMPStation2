@@ -89,7 +89,7 @@
 	var/pdir = P.dir
 	var/pangle = P.Angle
 	var/ploc = get_turf(P)
-	if(!finished || !allowed_projectile_typecache[P.type] || !(P.dir in cardinal))
+	if(!finished || !allowed_projectile_typecache[P.type] || !(P.dir in GLOB.cardinal))
 		return ..()
 	if(auto_reflect(P, pdir, ploc, pangle) != 2)
 		return ..()
