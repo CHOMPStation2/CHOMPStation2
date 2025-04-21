@@ -1673,9 +1673,6 @@
 	extra_overlay = "chonksqrl-m1"
 	extra_overlay2 = "chonksqrl-m2"
 
-<<<<<<< HEAD
-/* // Exclusive Tails // CHOMPRemove start
-=======
 /datum/sprite_accessory/tail/longtail/qaavos
 	name = "Qaavos Tail"
 	icon_state = "qaavos_tail"
@@ -1809,9 +1806,7 @@
 	color_blend_mode = ICON_MULTIPLY
 	extra_overlay = "stripedtail_colorable_w"
 
-// Exclusive Tails
->>>>>>> 4181f9ccd2 (Adds more tails into the game (#17496))
-
+/* // Exclusive Tails // CHOMPRemove start
 /datum/sprite_accessory/tail/peacocktail_red //this is ckey locked for now, but prettiebyrd wants these tails to be unlocked at a later date
 	name = "Peacock tail (vwag)"
 	desc = ""
