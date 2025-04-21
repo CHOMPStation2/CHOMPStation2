@@ -68,20 +68,13 @@
 		/obj/item/gun/energy/x01,
 		/obj/item/cell/device/weapon,
 		/obj/item/melee/telebaton,
-<<<<<<< HEAD
 //		/obj/item/clothing/head/beret/sec/corporate/hos, //CHOMP Remove
 //		/obj/item/clothing/suit/storage/hooded/wintercoat/security, //CHOMP Remove
 //		/obj/item/clothing/shoes/boots/winter/security, //CHOMP Remove
 		/obj/item/ticket_printer, //CHOMP Add
 		/obj/item/gun/energy/taser, // CHOMPADD
-		/obj/item/flashlight/maglight)
-=======
-		/obj/item/clothing/head/beret/sec/corporate/hos,
-		/obj/item/clothing/suit/storage/hooded/wintercoat/security,
-		/obj/item/clothing/shoes/boots/winter/security,
 		/obj/item/flashlight/maglight,
 		/obj/item/personal_shield_generator/security/loaded)
->>>>>>> f1f51a597c (More PSG changes (#17503))
 
 //Custom NT Security Lockers, Only found at central command
 /obj/structure/closet/secure_closet/nanotrasen_security
