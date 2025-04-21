@@ -133,82 +133,6 @@ var/list/RMS_random_malfunction = list(/obj/item/fbp_backup_cell,
 		consume_resources(charge_cost * overcharge_modifier)
 	playsound(src.loc, 'sound/machines/click.ogg', 50, 1)
 	if(do_after(user, 5, target = A))
-<<<<<<< HEAD:code/game/objects/items/weapons/RMS_vr.dm
-		switch(mode_index)
-			if(RMS_STEEL)
-				if(overcharge)
-					product = new /obj/item/stack/material/plasteel  // can only create one sheet at max charge, and uses five times more charge
-					spark_system.start()
-				else
-					product = new /obj/item/stack/material/steel
-			if(RMS_GLASS)
-				if(overcharge)
-					product= new /obj/item/stack/material/glass/phoronglass // can only create one sheet at max charge, and uses five times more charge
-					spark_system.start()
-				else
-					product = new /obj/item/stack/material/glass
-			if(RMS_CLOTH)
-				if(overcharge)
-					product= new /obj/item/stack/material/leather // can only create one sheet at max charge, and uses five times more charge
-					spark_system.start()
-				else
-					product = new /obj/item/stack/material/cloth
-			if(RMS_PLASTIC)
-				if(overcharge)
-					product= new /obj/item/stack/material/cardboard // can only create one sheet at max charge, and uses five times more charge
-					spark_system.start()
-				else
-					product = new /obj/item/stack/material/plastic
-			if(RMS_STONE)
-				if(overcharge)
-					product= new /obj/item/stack/material/marble // can only create one sheet at max charge, and uses five times more charge
-					spark_system.start()
-				else
-					product = new /obj/item/stack/material/sandstone
-			if(RMS_RAND)
-				if(!overcharge && !emagged)
-					product = pick(10;new /obj/item/trash/material/metal,
-									10;new /obj/item/material/shard,
-									10;new /obj/item/stack/cable_coil/random,
-									10;new /obj/item/stack/material/wood,
-									10;new /obj/item/stack/material/wood/sif,
-									10;new /obj/item/stack/material/snow)
-				if(overcharge && !emagged)
-					product = pick(1;new /obj/item/stack/rods,
-									5;new /obj/item/fbp_backup_cell,
-									5;new /obj/item/trash/rkibble,
-									10;new /obj/item/stack/tile/grass,
-									10;new /obj/item/stack/tile/carpet)
-					spark_system.start()
-				if(!overcharge && emagged)
-					product = pick(10;new /obj/item/trash/material/metal,
-									10;new /obj/item/material/shard,
-									10;new /obj/item/stack/cable_coil/random,
-									10;new /obj/item/stack/material/wood,
-									10;new /obj/item/stack/material/wood/sif,
-									10;new /obj/item/stack/material/snow,
-									5;new /obj/item/stack/material/phoron,
-									5;new /obj/item/stack/material/silver,
-									5;new /obj/item/stack/material/gold,
-									1;new /obj/item/stack/material/diamond
-									)
-				if(overcharge && emagged)
-					product = pick(1;new /obj/item/stack/rods,
-									5;new /obj/item/fbp_backup_cell,
-									5;new /obj/item/trash/rkibble,
-									10;new /obj/item/stack/tile/grass,
-									10;new /obj/item/stack/tile/carpet,
-									10;new /obj/item/reagent_containers/spray/waterflower,
-									10;new /obj/item/bikehorn,
-									10;new /obj/item/storage/backpack/clown,
-									10;new /obj/item/clothing/under/rank/clown,
-									10;new /obj/item/clothing/shoes/clown_shoes,
-									10;new /obj/item/clothing/mask/gas/clown_hat,
-									10;new /obj/item/pda/clown,
-									1;new /mob/living/simple_mob/vore/catgirl
-									)
-					spark_system.start()
-=======
 		if(overcharge)
 			if(prob(5)) //5% chance for malfunction
 				var/thing_to_spawn = pick(RMS_random_malfunction)
@@ -219,7 +143,6 @@ var/list/RMS_random_malfunction = list(/obj/item/fbp_backup_cell,
 			product = choose_normal(user)
 
 	spark_system.start()
->>>>>>> bf52fdd23d (RMS Adjustments (#17490)):code/game/objects/items/weapons/RMS.dm
 	product.loc = get_turf(A)
 
 /obj/item/rms/proc/choose_overcharge(mob/living/user)
