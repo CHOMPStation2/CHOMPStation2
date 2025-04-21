@@ -78,7 +78,7 @@
 //custom light flicker proc
 /mob/living/simple_mob/shadekin/proc/handle_phasein_flicker()
 	if(phase_gentle) // gentle case: No light destruction. Flicker in 4 tile radius for 3s. Weaken for 3sec after
-		for(var/obj/machinery/light/L in machines)
+		for(var/obj/machinery/light/L in GLOB.machines)
 			if(L.z != z || get_dist(src,L) > 4)
 				continue
 			L.flicker(3)
@@ -90,7 +90,7 @@
 		if(eye_state == PURPLE_EYES)
 			destroy_lights = 25
 
-		for(var/obj/machinery/light/L in machines)
+		for(var/obj/machinery/light/L in GLOB.machines)
 			if(L.z != z || get_dist(src,L) > 10)
 				continue
 

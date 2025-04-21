@@ -83,11 +83,6 @@ SUBSYSTEM_DEF(title)
 	file_path = SStitle.file_path
 	previous_icon = SStitle.previous_icon
 
-
-//Following is related to jank required to get stuff to render for new players
-
-GLOBAL_LIST_EMPTY(newplayer_start)
-
 // Must be immediate because players will
 // join before SSatom initializes everything.
 INITIALIZE_IMMEDIATE(/obj/effect/landmark/start/new_player)

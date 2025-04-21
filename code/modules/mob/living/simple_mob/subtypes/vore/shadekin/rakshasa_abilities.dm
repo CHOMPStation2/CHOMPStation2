@@ -340,7 +340,7 @@
 		update_icon()
 
 		//Affect nearby lights
-		for(var/obj/machinery/light/L in machines)
+		for(var/obj/machinery/light/L in GLOB.machines)
 			if(L.z != z || get_dist(src,L) > 10)
 				continue
 			L.flicker(10)
@@ -448,7 +448,7 @@
 ////////////////////////////////////////////////////////////////
 //A flicker proc. Because apparently putting this straight into the ability button doesn't work.
 /mob/living/simple_mob/shadekin/proc/rakshasa_flicker()
-	for(var/obj/machinery/light/L in machines)
+	for(var/obj/machinery/light/L in GLOB.machines)
 		if(L.z != z || get_dist(src,L) > 10)
 			continue
 		L.flicker(10)
