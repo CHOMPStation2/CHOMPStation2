@@ -73,7 +73,8 @@
 //		/obj/item/clothing/shoes/boots/winter/security, //CHOMP Remove
 		/obj/item/ticket_printer, //CHOMP Add
 		/obj/item/gun/energy/taser, // CHOMPADD
-		/obj/item/flashlight/maglight)
+		/obj/item/flashlight/maglight,
+		/obj/item/personal_shield_generator/security/loaded)
 
 //Custom NT Security Lockers, Only found at central command
 /obj/structure/closet/secure_closet/nanotrasen_security
