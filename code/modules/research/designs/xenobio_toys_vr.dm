@@ -11,7 +11,7 @@
 	name = "portable slime processor"
 	desc = "This high tech device combines the slime processor with the latest in woodcutting technology."
 	id = "slime_grinder"
-	req_tech = list(TECH_MAGNET = 4, TECH_BIO = 7)
-	materials = list(MAT_STEEL = 500, MAT_GLASS = 500, MAT_DIAMOND = 500, MAT_MORPHIUM = 100)
+	req_tech = list(TECH_MAGNET = 4, TECH_BIO = 5)
+	materials = list(MAT_STEEL = 200, MAT_GLASS = 200, MAT_SILVER = 500, MAT_GOLD = 100)
 	build_path = /obj/item/slime_grinder
 	sort_string = "HBBB"
