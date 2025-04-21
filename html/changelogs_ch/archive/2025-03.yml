@@ -551,3 +551,80 @@
   - balance: Censored move to Neutral (RP trait)
   - balance: Nervousness moved to Neutral (RP Trait)
   - bugfix: FBP dionas will no longer explode
+2025-03-27:
+  CHOMPStation2StaffMirrorBot:
+  - rscadd: Added mail options for entrepreneurs.
+  Diana:
+  - code_imp: Consolidates a bunch of species files for backend cleanup.
+  - bugfix: Gets rid of an override that overrode tajaran being able to lick wounds
+  - bugfix: Xenochimera brains will no longer runtime under certain circumstances.
+  FluffMedic:
+  - rscadd: Something for event coming up.
+2025-03-28:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: recycling in bellies
+  Diana:
+  - bugfix: Environmental traits now work properly
+  - bugfix: Lightning strikes will no longer strike people in nullspace
+  - bugfix: Humans now have their proper skin color selection back
+2025-03-29:
+  Ace:
+  - rscadd: Pitcher plants now have struggle emotes that TELL YOU that you need outside
+      help to be rescued.
+  - rscadd: Pitcher plant fruits now have a new reagent.
+  - bugfix: Pitcher plants would not be anchored after being killed and revived, or
+      sometimes in other circumstances just wouldn't be anchored correctly.
+  - bugfix: Pitcher plants did not effectively communicate that you can rescue players
+      with wire and that a newspaper roll won't work.
+  - code_imp: Removed OOC bracketed text about having to use OOC escape. Most players
+      are smart enough to understand without bashing their heads with it.
+  - code_imp: Changed damage values of pitcher plant for a much slower digestion.
+  CHOMPStation2StaffMirrorBot:
+  - rscadd: Unusual gait positive trait for 2 points. This trait makes you move faster
+      when your hands are empty.
+  Cerami:
+  - rscadd: Adds a vore belly to kururak
+  Kashargul:
+  - bugfix: dark tiles keeping refs in some cases
+  Tost:
+  - bugfix: You can now see what pronouns you are choosing for your character on setup.
+2025-03-30:
+  CHOMPStation2StaffMirrorBot:
+  - rscadd: next grep check to ensure space / tab sanity
+  - rscadd: Added a new system for announcing horribly corporate appreciation days.
+  - rscadd: Added a bingle computer to each library and command briefing room.
+  Diana:
+  - bugfix: Mounted rigsuit guns now properly work
+  - bugfix: Protean rigs can no longer be removed by proteans
+  - bugfix: Protean rigs can no longer be removed if one is on your back and the protean
+      is dead
+  - bugfix: Protean rigs no longer be in a 'limbo state' of being enabled but not
+      enabled.
+  TheCaramelion:
+  - maptweak: The library now houses a wiki-computer. Go bingle stuff.
+  Will, Kash:
+  - rscadd: Bingle
+  - qol: ChemAnalyser Pro now uses tgui
+  - bugfix: chat scroll tracking failing on large displayed count when huge messages
+      blocks were sent
+2025-03-31:
+  CHOMPStation2StaffMirrorBot:
+  - qol: Changed the default setting for Save Organs and Save Markings to No in character
+      setup
+  - admin: 'fix spawn at arrivals will not either pick from the secondary list or
+      sanely fail
+
+      fix latespawn loc code'
+  - rscadd: Added a treadmill fitness machine.
+  - rscadd: Added a non-alcohol version of the booze-o-mat, the virgin-o-mat!
+  - maptweak: Major changes to the pool area to include a poolside bar, new gym, locker
+      room, sauna and massage room.
+  - maptweak: Added a designated smoking area to the stellar delight.
+  - bugfix: useless light recalcs, which might even have caused darker than supposed
+      areas
+  - bugfix: multiple bugs in outdoor and turf open / space handling
+  Kashargul:
+  - bugfix: deck 0 crashing the server
+  Tost:
+  - rscadd: Adds modern labcoat to loadout, under the public labcoat selector.
+  - rscadd: Adds 3 different leg warmers accessories.

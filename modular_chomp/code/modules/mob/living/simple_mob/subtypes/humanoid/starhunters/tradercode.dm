@@ -111,16 +111,16 @@
 	return 1
 
 /mob/living/simple_mob/humanoid/starhunter/trader/proc/credit_purchase(var/target as text)
-	vendor_account.money += currently_vending.price
+	GLOB.vendor_account.money += currently_vending.price
 
 	var/datum/transaction/T = new()
 	T.target_name = target
 	T.purpose = "Purchase of [currently_vending.item_name]"
 	T.amount = "[currently_vending.price]"
 	T.source_terminal = name
-	T.date = current_date_string
+	T.date = GLOB.current_date_string
 	T.time = stationtime2text()
-	vendor_account.transaction_log.Add(T)
+	GLOB.vendor_account.transaction_log.Add(T)
 
 /mob/living/simple_mob/humanoid/starhunter/trader/tgui_interact(mob/user, datum/tgui/ui)
 	ui = SStgui.try_update_ui(user, src, ui)
@@ -228,7 +228,7 @@
 			var/mob/living/carbon/human/H = usr
 			var/obj/item/card/id/C = H.GetIdCard()
 
-			if(!vendor_account || vendor_account.suspended)
+			if(!GLOB.vendor_account || GLOB.vendor_account.suspended)
 				to_chat(usr, span_filter_notice("Vendor account offline. Unable to process transaction."))
 				flick("[icon_state]-deny",src)
 				vend_ready = TRUE
@@ -358,14 +358,14 @@
 
 	// create entry in the purchaser's account log
 	var/datum/transaction/T = new()
-	T.target_name = "[vendor_account.owner_name] (via [name])"
+	T.target_name = "[GLOB.vendor_account.owner_name] (via [name])"
 	T.purpose = "Purchase of [currently_vending.item_name]"
 	if(currently_vending.price > 0)
 		T.amount = "([currently_vending.price])"
 	else
 		T.amount = "[currently_vending.price]"
 	T.source_terminal = name
-	T.date = current_date_string
+	T.date = GLOB.current_date_string
 	T.time = stationtime2text()
 	customer_account.transaction_log.Add(T)
 

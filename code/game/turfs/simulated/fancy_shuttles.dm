@@ -25,7 +25,8 @@ GLOBAL_LIST_EMPTY(fancy_shuttles)
 	var/icon/split_icon
 	var/fancy_shuttle_tag
 
-/obj/effect/fancy_shuttle/New() // has to be very early so others can grab it
+INITIALIZE_IMMEDIATE(/obj/effect/fancy_shuttle)
+/obj/effect/fancy_shuttle/Initialize(mapload) // has to be very early so others can grab it
 	. = ..()
 	if(!fancy_shuttle_tag)
 		error("Fancy shuttle with no tag at [x],[y],[z]! Type is: [type]")
@@ -179,6 +180,41 @@ GLOBAL_LIST_EMPTY(fancy_shuttles)
 
 /obj/effect/floor_decal/fancy_shuttle/get_cache_key(var/turf/T)
 	return "[alpha]-[color]-[dir]-[icon_state]-[T.layer]-[icon_file]"
+
+/**
+ * Shuttle Glass
+ */
+//OLD GLASS - USE NEW GLASS
+/turf/simulated/wall/fancy_shuttle/window
+	opacity = FALSE
+	icon_state = "hull_transparent"
+
+/turf/simulated/wall/fancy_shuttle/window/attack_generic(mob/user, damage, attack_message)
+	take_damage(damage)
+	return damage
+
+//NEW GLASS
+/obj/structure/window/fancy_shuttle
+	name = "shuttle window"
+	desc = "It looks rather strong. Might take a few good hits to shatter it."
+	icon = 'icons/turf/fancy_shuttles/_fancy_helpers.dmi'
+	icon_state = "hull_window"
+	density = TRUE
+	fulltile = TRUE
+	maxhealth = 60
+	reinf = 1
+	force_threshold = 7
+	var/fancy_shuttle_tag
+
+// Trust me, this is WAY faster than the normal wall overlays shenanigans, don't worry about performance
+/obj/structure/window/fancy_shuttle/update_icon()
+	if(fancy_shuttle_tag) // after a shuttle jump it won't be set anymore, but the shuttle jump proc will set our icon and state
+		var/obj/effect/fancy_shuttle/F = GLOB.fancy_shuttles[fancy_shuttle_tag]
+		if(!F)
+			warning("Fancy shuttle wall at [x],[y],[z] couldn't locate a helper with tag [fancy_shuttle_tag]")
+			return
+		icon = F.split_icon
+		icon_state = "walls [x - F.x],[y - F.y]"
 
 /**
  * Invisible ship equipment (otherwise the same as normal)

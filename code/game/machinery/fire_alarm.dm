@@ -59,7 +59,7 @@ FIRE ALARM
 		offset_alarm()
 
 	if(z in using_map.contact_levels)
-		set_security_level(security_level ? get_security_level() : "green")
+		set_security_level(GLOB.security_level ? get_security_level() : "green")
 
 	soundloop = new(list(src), FALSE) // CHOMPEdit: Create soundloop
 	engalarm = new(list(src), FALSE) // CHOMPEdit: Create soundloop
@@ -229,7 +229,7 @@ FIRE ALARM
 		return
 	var/area/area = get_area(src)
 	if(!firewarn && !alarms_hidden) // CHOMPAdd
-		global_announcer.autosay("Tripped [area]", "Fire Alarm Monitor", DEPARTMENT_ENGINEERING)
+		GLOB.global_announcer.autosay("Tripped [area]", "Fire Alarm Monitor", DEPARTMENT_ENGINEERING)
 	for(var/obj/machinery/firealarm/FA in area)
 		fire_alarm.triggerAlarm(loc, FA, duration, hidden = alarms_hidden)
 		FA.soundloop.start() // CHOMPEdit: Soundloop

@@ -54,6 +54,7 @@
 	sober_message_list = list("Everything feels a little more grounded.",
 	"Colors seem... flatter.",
 	"Everything feels a little dull, now.")
+	wiki_flag = WIKI_SPOILER
 
 /datum/reagent/drugs/bliss/affect_blood(mob/living/carbon/M, var/alien, var/removed)
 	..()
@@ -65,7 +66,7 @@
 
 	M.druggy = max(M.druggy, drug_strength)
 	if(prob_proc == TRUE && prob(10) && isturf(M.loc) && !istype(M.loc, /turf/space) && M.canmove && !M.restrained() && !M.resting) // CHOMPstation edit - Stop drug movement from forcing crawling
-		step(M, pick(cardinal))
+		step(M, pick(GLOB.cardinal))
 		prob_proc = FALSE
 	if(prob_proc == TRUE && prob(7))
 		M.emote(pick("twitch", "drool", "moan", "giggle"))
@@ -195,7 +196,7 @@
 
 	M.druggy = max(M.druggy, drug_strength)
 	if(prob(10) && prob_proc == TRUE && isturf(M.loc) && !istype(M.loc, /turf/space) && M.canmove && !M.restrained())
-		step(M, pick(cardinal))
+		step(M, pick(GLOB.cardinal))
 		prob_proc = FALSE
 	if(prob(7) && prob_proc == TRUE)
 		M.emote(pick("twitch", "drool", "moan", "giggle"))

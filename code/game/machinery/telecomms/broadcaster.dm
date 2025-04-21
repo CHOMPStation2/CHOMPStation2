@@ -7,8 +7,8 @@
 	They receive their message from a server after the message has been logged.
 */
 
-var/list/recentmessages = list() // global list of recent messages broadcasted : used to circumvent massive radio spam
-var/message_delay = 0 // To make sure restarting the recentmessages list is kept in sync
+GLOBAL_LIST_EMPTY(recentmessages) // global list of recent messages broadcasted : used to circumvent massive radio spam
+GLOBAL_VAR_INIT(message_delay, 0) // To make sure restarting the recentmessages list is kept in sync
 
 /obj/machinery/telecomms/broadcaster
 	name = "Subspace Broadcaster"
@@ -29,10 +29,6 @@ var/message_delay = 0 // To make sure restarting the recentmessages list is kept
 	var/overmap_range_max = 5
 	//Linked bluespace radios
 	var/list/linked_radios_weakrefs = list()
-
-/obj/machinery/telecomms/processor/Initialize(mapload)
-	. = ..()
-	default_apply_parts()
 
 /obj/machinery/telecomms/broadcaster/proc/link_radio(var/obj/item/radio/R)
 	if(!istype(R))
@@ -56,9 +52,9 @@ var/message_delay = 0 // To make sure restarting the recentmessages list is kept
 			original.data["level"] = signal.data["level"]
 
 		var/signal_message = "[signal.frequency]:[signal.data["message"]]:[signal.data["realname"]]"
-		if(signal_message in recentmessages)
+		if(signal_message in GLOB.recentmessages)
 			return
-		recentmessages.Add(signal_message)
+		GLOB.recentmessages.Add(signal_message)
 
 		if(signal.data["slow"] > 0)
 			sleep(signal.data["slow"]) // simulate the network lag if necessary
@@ -108,19 +104,19 @@ var/message_delay = 0 // To make sure restarting the recentmessages list is kept
 							  signal.data["compression"], signal.data["level"], signal.frequency,
 							  signal.data["verb"], forced_radios)
 
-		if(!message_delay)
-			message_delay = 1
+		if(!GLOB.message_delay)
+			GLOB.message_delay = 1
 			spawn(10)
-				message_delay = 0
-				recentmessages = list()
+				GLOB.message_delay = 0
+				GLOB.recentmessages = list()
 
 		/* --- Do a snazzy animation! --- */
 		flick("broadcaster_send", src)
 
 /obj/machinery/telecomms/broadcaster/Destroy()
 	// In case message_delay is left on 1, otherwise it won't reset the list and people can't say the same thing twice anymore.
-	if(message_delay)
-		message_delay = 0
+	if(GLOB.message_delay)
+		GLOB.message_delay = 0
 	. = ..()
 
 
@@ -341,7 +337,7 @@ var/message_delay = 0 // To make sure restarting the recentmessages list is kept
 						var/data, var/compression, var/list/level, var/freq, var/verbage = "says",
 						var/list/forced_radios)
 
-  /* ###### Prepare the radio connection ###### */
+	/* ###### Prepare the radio connection ###### */
 
 	var/display_freq = freq
 
@@ -392,9 +388,9 @@ var/message_delay = 0 // To make sure restarting the recentmessages list is kept
 	// Get a list of mobs who can hear from the radios we collected.
 	var/list/receive = get_mobs_in_radio_ranges(radios)
 
-  /* ###### Organize the receivers into categories for displaying the message ###### */
+	/* ###### Organize the receivers into categories for displaying the message ###### */
 
-  	// Understood the message:
+	// Understood the message:
 	var/list/heard_masked 	= list() // masked name or no real name
 	var/list/heard_normal 	= list() // normal message
 
@@ -453,7 +449,7 @@ var/message_delay = 0 // To make sure restarting the recentmessages list is kept
 				heard_garbled += R
 
 
-  /* ###### Begin formatting and sending the message ###### */
+	/* ###### Begin formatting and sending the message ###### */
 	if(length(heard_masked) || length(heard_normal) || length(heard_voice) || length(heard_garbled) || length(heard_gibberish))
 
 	  /* --- Some miscellaneous variables to format the string output --- */
@@ -557,7 +553,7 @@ var/message_delay = 0 // To make sure restarting the recentmessages list is kept
 
 /proc/Broadcast_SimpleMessage(var/source, var/frequency, list/message_pieces, var/data, var/mob/M, var/compression, var/level, var/list/forced_radios)
 	var/text = multilingual_to_message(message_pieces)
-  /* ###### Prepare the radio connection ###### */
+	/* ###### Prepare the radio connection ###### */
 
 	if(!M)
 		var/mob/living/carbon/human/H = new
@@ -613,7 +609,7 @@ var/message_delay = 0 // To make sure restarting the recentmessages list is kept
 				receive |= R.send_hear(display_freq)
 
 
-  /* ###### Organize the receivers into categories for displaying the message ###### */
+	/* ###### Organize the receivers into categories for displaying the message ###### */
 
 	// Understood the message:
 	var/list/heard_normal 	= list() // normal message
@@ -650,7 +646,7 @@ var/message_delay = 0 // To make sure restarting the recentmessages list is kept
 			heard_garbled += R
 
 
-  /* ###### Begin formatting and sending the message ###### */
+	/* ###### Begin formatting and sending the message ###### */
 	if(length(heard_normal) || length(heard_garbled) || length(heard_gibberish))
 
 	  /* --- Some miscellaneous variables to format the string output --- */
@@ -759,7 +755,7 @@ var/message_delay = 0 // To make sure restarting the recentmessages list is kept
 	)
 	signal.frequency = PUB_FREQ// Common channel
 
-  //#### Sending the signal to all subspace receivers ####//
+	//#### Sending the signal to all subspace receivers ####//
 	for(var/obj/machinery/telecomms/receiver/R in telecomms_list)
 		R.receive_signal(signal)
 

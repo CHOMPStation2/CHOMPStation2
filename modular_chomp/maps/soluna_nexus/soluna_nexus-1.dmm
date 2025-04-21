@@ -651,6 +651,13 @@
 	},
 /turf/simulated/floor/plating,
 /area/hallway/Aft_1_Deck_Stairwell)
+"abu" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 8
+	},
+/obj/effect/floor_decal/arrivals,
+/turf/simulated/floor/tiled,
+/area/harbor/Dock5)
 "abv" = (
 /obj/structure/disposalpipe/segment{
 	dir = 1;
@@ -2088,29 +2095,30 @@
 /obj/structure/railing{
 	dir = 1
 	},
-/turf/simulated/floor/water/deep/indoors,
+/turf/simulated/floor/water/deep/indoors{
+	oxygen = 21.8366;
+	nitrogen = 82.1472;
+	temperature = 293.15
+	},
 /area/hallway/Star_1Deck_Atrium)
 "adZ" = (
-/obj/machinery/hologram/holopad,
-/obj/effect/floor_decal/shuttle/blue{
-	pixel_x = -1;
-	pixel_y = 1
+/obj/machinery/atmospherics/pipe/manifold/hidden{
+	dir = 8
 	},
-/obj/machinery/airlock_sensor{
-	dir = 4;
-	pixel_x = -24
+/obj/machinery/embedded_controller/radio/airlock/docking_port{
+	frequency = 1380;
+	id_tag = "sc-D1_L1A1_airlock";
+	pixel_x = -24;
+	dir = 4
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 6
-	},
-/obj/effect/map_helper/airlock/sensor/chamber_sensor,
 /obj/effect/floor_decal/steeldecal/steel_decals_central2{
+	dir = 1;
 	color = "#989898"
 	},
 /obj/structure/cable/white{
 	icon_state = "2-8"
 	},
-/turf/simulated/floor/tiled/techmaint,
+/turf/simulated/floor/tiled/dark,
 /area/harbor/Dock1)
 "aea" = (
 /obj/effect/floor_decal/steeldecal/steel_decals6{
@@ -2159,6 +2167,15 @@
 	},
 /obj/structure/window/basic{
 	dir = 4
+	},
+/obj/structure/sign/directions/bar{
+	pixel_y = 9;
+	layer = 3.5;
+	dir = 1
+	},
+/obj/structure/sign/directions/stairs_up{
+	dir = 1;
+	layer = 3.5
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/Deck1_Star_Corridor)
@@ -2430,6 +2447,96 @@
 	},
 /turf/simulated/floor/glass,
 /area/hallway/Deck1_Transit_Hall)
+"aeP" = (
+/obj/structure/cable/white{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden,
+/obj/effect/floor_decal/shuttle/blue{
+	pixel_x = -1;
+	pixel_y = 1
+	},
+/obj/machinery/hologram/holopad,
+/turf/simulated/floor/tiled/techmaint,
+/area/harbor/Dock5)
+"aeQ" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 4
+	},
+/obj/effect/floor_decal/arrivals/right,
+/turf/simulated/floor/tiled,
+/area/harbor/Dock5)
+"aeR" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 4
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 9
+	},
+/obj/effect/floor_decal/arrivals/right,
+/turf/simulated/floor/tiled,
+/area/harbor/Dock5)
+"aeS" = (
+/obj/effect/floor_decal/shuttle/blue{
+	pixel_x = -1;
+	pixel_y = 1
+	},
+/obj/machinery/hologram/holopad,
+/turf/simulated/floor/tiled/techmaint,
+/area/hallway/Aft_1_Deck_Stairwell)
+"aeT" = (
+/obj/machinery/light,
+/turf/simulated/floor/tiled/dark,
+/area/harbor/Dock1)
+"aeU" = (
+/obj/machinery/light,
+/turf/simulated/floor/tiled/dark,
+/area/harbor/Dock4)
+"aeV" = (
+/obj/structure/cable/white{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden,
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/harbor/Dock1)
+"aeW" = (
+/obj/machinery/atmospherics/pipe/simple/hidden,
+/obj/structure/cable/white{
+	icon_state = "1-2"
+	},
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/harbor/Dock4)
+"aeX" = (
+/obj/machinery/hologram/holopad,
+/obj/effect/floor_decal/shuttle/blue{
+	pixel_x = -1;
+	pixel_y = 1
+	},
+/obj/machinery/airlock_sensor{
+	dir = 4;
+	pixel_x = -24
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 6
+	},
+/obj/effect/map_helper/airlock/sensor/chamber_sensor,
+/obj/effect/floor_decal/steeldecal/steel_decals_central2{
+	color = "#989898"
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/harbor/Dock1)
 "aeY" = (
 /obj/machinery/door/firedoor/glass/hidden/steel{
 	dir = 1
@@ -2467,6 +2574,25 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/engineering/Telecomms_Control_Room)
+"afb" = (
+/obj/machinery/hologram/holopad,
+/obj/effect/floor_decal/shuttle/blue{
+	pixel_x = -1;
+	pixel_y = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 10
+	},
+/obj/machinery/airlock_sensor{
+	dir = 8;
+	pixel_x = 24
+	},
+/obj/effect/map_helper/airlock/sensor/chamber_sensor,
+/obj/effect/floor_decal/steeldecal/steel_decals_central2{
+	color = "#989898"
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/harbor/Dock4)
 "afd" = (
 /obj/structure/table/glass,
 /turf/simulated/floor/tiled,
@@ -2663,16 +2789,6 @@
 /turf/simulated/floor/tiled,
 /area/hallway/Central_1_Deck_Hall)
 "agy" = (
-/obj/machinery/turretid/lethal{
-	ailock = 1;
-	control_area = "\improper GravGen Room";
-	desc = "A firewall prevents AIs from interacting with this device.";
-	name = "GravityGen lethal turret control";
-	pixel_y = 29;
-	req_access = list(10);
-	check_records = 0;
-	req_one_access = list(17,11,24)
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
@@ -2687,6 +2803,14 @@
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 1
+	},
+/obj/machinery/turretid/stun{
+	check_records = 0;
+	control_area = "\improper GravGen Room";
+	name = "GravityGen lethal turret control";
+	req_access = list(11, 19);
+	req_one_access = list(17,11,24);
+	pixel_y = 29
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/GravGen_Room)
@@ -4467,7 +4591,11 @@
 /area/hallway/Star_1Deck_Atrium)
 "aqp" = (
 /obj/structure/flora/lily2,
-/turf/simulated/floor/water/deep/indoors,
+/turf/simulated/floor/water/deep/indoors{
+	oxygen = 21.8366;
+	nitrogen = 82.1472;
+	temperature = 293.15
+	},
 /area/hallway/Star_1Deck_Atrium)
 "aqv" = (
 /obj/machinery/door/firedoor/border_only,
@@ -4750,7 +4878,11 @@
 	name = "Sol";
 	faction = "nanotrasen"
 	},
-/turf/simulated/floor/water/deep/indoors,
+/turf/simulated/floor/water/deep/indoors{
+	oxygen = 21.8366;
+	nitrogen = 82.1472;
+	temperature = 293.15
+	},
 /area/hallway/Star_1Deck_Atrium)
 "asm" = (
 /obj/machinery/alarm{
@@ -6146,18 +6278,6 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/shuttle/echidna)
-"aDh" = (
-/obj/effect/floor_decal/industrial/arrows/blue{
-	dir = 4
-	},
-/obj/effect/floor_decal/industrial/arrows/blue{
-	dir = 8
-	},
-/obj/machinery/atmospherics/binary/pump{
-	name = "Waste to Scrubbers"
-	},
-/turf/simulated/floor/tiled/techmaint,
-/area/hallway/Aft_1_Deck_Stairwell)
 "aDi" = (
 /turf/simulated/wall/r_wall,
 /area/harbor/Port_Docking_Foyer)
@@ -6433,6 +6553,7 @@
 /obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 9
 	},
+/obj/effect/floor_decal/arrivals,
 /turf/simulated/floor/tiled,
 /area/harbor/Dock5)
 "aFj" = (
@@ -10577,7 +10698,11 @@
 	color = "#ccc9ff";
 	desc = "An extra bright lighting fixture."
 	},
-/turf/simulated/floor/water/deep/indoors,
+/turf/simulated/floor/water/deep/indoors{
+	oxygen = 21.8366;
+	nitrogen = 82.1472;
+	temperature = 293.15
+	},
 /area/hallway/Star_1Deck_Atrium)
 "bBI" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
@@ -14633,6 +14758,7 @@
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 1
 	},
+/obj/effect/floor_decal/arrivals/right,
 /turf/simulated/floor/tiled,
 /area/hallway/Aft_1_Deck_Stairwell)
 "cXm" = (
@@ -15737,6 +15863,7 @@
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 1
 	},
+/obj/effect/floor_decal/arrivals,
 /turf/simulated/floor/tiled,
 /area/hallway/Aft_1_Deck_Stairwell)
 "doD" = (
@@ -17144,8 +17271,8 @@
 	},
 /obj/machinery/door/airlock/angled_bay/secure{
 	name = "Telecoms Control Room";
-	req_access = list(61);
-	req_one_access = list(61);
+	req_access = list(17);
+	req_one_access = list(17);
 	dir = 4
 	},
 /obj/structure/cable/green{
@@ -23944,7 +24071,7 @@
 	desc = "A firewall prevents AIs from interacting with this device.";
 	name = "Telecoms Control Room Turret Control";
 	pixel_y = 29;
-	req_access = list(10);
+	req_access = list(11, 19);
 	req_one_access = list(17,11,24)
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -24810,7 +24937,11 @@
 	name = "Pon";
 	faction = "nanotrasen"
 	},
-/turf/simulated/floor/water/deep/indoors,
+/turf/simulated/floor/water/deep/indoors{
+	oxygen = 21.8366;
+	nitrogen = 82.1472;
+	temperature = 293.15
+	},
 /area/hallway/Star_1Deck_Atrium)
 "fYR" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -25809,7 +25940,11 @@
 	c_tag = "D1-Com-Star Atrium3";
 	network = list("Commons")
 	},
-/turf/simulated/floor/water/deep/indoors,
+/turf/simulated/floor/water/deep/indoors{
+	oxygen = 21.8366;
+	nitrogen = 82.1472;
+	temperature = 293.15
+	},
 /area/hallway/Star_1Deck_Atrium)
 "gqi" = (
 /turf/simulated/wall/r_wall,
@@ -28740,7 +28875,11 @@
 	name = "Spike";
 	faction = "nanotrasen"
 	},
-/turf/simulated/floor/water/deep/indoors,
+/turf/simulated/floor/water/deep/indoors{
+	oxygen = 21.8366;
+	nitrogen = 82.1472;
+	temperature = 293.15
+	},
 /area/hallway/Star_1Deck_Atrium)
 "hwK" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -34230,6 +34369,7 @@
 	pixel_y = -14
 	},
 /obj/machinery/shield_diffuser,
+/obj/structure/fans/tiny,
 /turf/simulated/floor/tiled/techmaint,
 /area/harbor/Dock5)
 "jEl" = (
@@ -34720,7 +34860,11 @@
 	name = "Bon";
 	faction = "nanotrasen"
 	},
-/turf/simulated/floor/water/deep/indoors,
+/turf/simulated/floor/water/deep/indoors{
+	oxygen = 21.8366;
+	nitrogen = 82.1472;
+	temperature = 293.15
+	},
 /area/hallway/Star_1Deck_Atrium)
 "jLi" = (
 /obj/structure/cable/white{
@@ -34991,6 +35135,10 @@
 "jSg" = (
 /obj/structure/reagent_dispensers/watertank/high,
 /obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/machinery/recharger/wallcharger{
+	pixel_y = -4;
+	pixel_x = 32
+	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/Xenobiology_Lab)
 "jSv" = (
@@ -36875,7 +37023,12 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/hallway/Star_1Deck_Central_Corridor_1)
 "kEx" = (
-/turf/simulated/floor/water/indoors,
+/turf/simulated/floor/water/indoors{
+	outdoors = -1;
+	temperature = 293.15;
+	nitrogen = 82.1472;
+	oxygen = 21.8366
+	},
 /area/hallway/Star_1Deck_Atrium)
 "kED" = (
 /obj/machinery/light/small/emergency{
@@ -36894,7 +37047,11 @@
 /area/maintenance/Deck1_AftPort_Chamber3)
 "kEK" = (
 /obj/structure/flora/log1,
-/turf/simulated/floor/water/deep/indoors,
+/turf/simulated/floor/water/deep/indoors{
+	oxygen = 21.8366;
+	nitrogen = 82.1472;
+	temperature = 293.15
+	},
 /area/hallway/Star_1Deck_Atrium)
 "kFh" = (
 /obj/random/junk,
@@ -37066,7 +37223,11 @@
 /turf/simulated/floor/tiled,
 /area/quartermaster/Supply_Ship_Bay)
 "kHT" = (
-/turf/simulated/floor/water/deep/indoors,
+/turf/simulated/floor/water/deep/indoors{
+	oxygen = 21.8366;
+	nitrogen = 82.1472;
+	temperature = 293.15
+	},
 /area/hallway/Star_1Deck_Atrium)
 "kHV" = (
 /obj/structure/dispenser/phoron,
@@ -37223,7 +37384,11 @@
 /area/maintenance/ab_Hydroponics)
 "kKU" = (
 /obj/structure/flora/lily1,
-/turf/simulated/floor/water/deep/indoors,
+/turf/simulated/floor/water/deep/indoors{
+	oxygen = 21.8366;
+	nitrogen = 82.1472;
+	temperature = 293.15
+	},
 /area/hallway/Star_1Deck_Atrium)
 "kLb" = (
 /obj/random/junk,
@@ -37410,7 +37575,11 @@
 /area/harbor/Ship_Bay3)
 "kPi" = (
 /obj/structure/flora/lily3,
-/turf/simulated/floor/water/deep/indoors,
+/turf/simulated/floor/water/deep/indoors{
+	oxygen = 21.8366;
+	nitrogen = 82.1472;
+	temperature = 293.15
+	},
 /area/hallway/Star_1Deck_Atrium)
 "kPp" = (
 /obj/effect/catwalk_plated/techmaint,
@@ -37849,7 +38018,12 @@
 /area/crew_quarters/Public_EVA)
 "kXb" = (
 /obj/structure/flora/ausbushes/sparsegrass,
-/turf/simulated/floor/water/indoors,
+/turf/simulated/floor/water/indoors{
+	outdoors = -1;
+	temperature = 293.15;
+	nitrogen = 82.1472;
+	oxygen = 21.8366
+	},
 /area/hallway/Star_1Deck_Atrium)
 "kXg" = (
 /obj/structure/sign/directions/science/xenoflora{
@@ -39339,7 +39513,12 @@
 /area/maintenance/ab_StripBar)
 "lxX" = (
 /obj/structure/flora/ausbushes/reedbush,
-/turf/simulated/floor/water/indoors,
+/turf/simulated/floor/water/indoors{
+	outdoors = -1;
+	temperature = 293.15;
+	nitrogen = 82.1472;
+	oxygen = 21.8366
+	},
 /area/hallway/Star_1Deck_Atrium)
 "lyO" = (
 /obj/structure/cable/green{
@@ -41575,7 +41754,11 @@
 	name = "Pancrasia";
 	faction = "nanotrasen"
 	},
-/turf/simulated/floor/water/deep/indoors,
+/turf/simulated/floor/water/deep/indoors{
+	oxygen = 21.8366;
+	nitrogen = 82.1472;
+	temperature = 293.15
+	},
 /area/hallway/Star_1Deck_Atrium)
 "mnR" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -42199,7 +42382,6 @@
 /turf/simulated/floor/wood/alt/parquet/turfpack/station,
 /area/hallway/Cryostorage_Lounge)
 "mwm" = (
-/obj/machinery/portable_atmospherics/canister/air,
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 4
 	},
@@ -42207,6 +42389,7 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/industrial/hatch/blue,
+/obj/machinery/portable_atmospherics/canister/oxygen,
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/Public_EVA)
 "mwp" = (
@@ -43769,11 +43952,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/Central_1_Deck_Hall)
-"mYa" = (
-/turf/simulated/floor/water/indoors{
-	outdoors = -1
-	},
-/area/hallway/Star_1Deck_Atrium)
 "mYA" = (
 /obj/effect/floor_decal/industrial/hatch,
 /obj/machinery/shield_diffuser,
@@ -44422,26 +44600,23 @@
 /turf/simulated/floor/plating,
 /area/maintenance/ab_SportsField)
 "npa" = (
-/obj/machinery/hologram/holopad,
-/obj/effect/floor_decal/shuttle/blue{
-	pixel_x = -1;
-	pixel_y = 1
+/obj/machinery/atmospherics/pipe/manifold/hidden{
+	dir = 4
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 10
+/obj/machinery/embedded_controller/radio/airlock/docking_port{
+	frequency = 1380;
+	id_tag = "sc-D1_L4A1_airlock";
+	pixel_x = 24;
+	dir = 8
 	},
-/obj/machinery/airlock_sensor{
-	dir = 8;
-	pixel_x = 24
-	},
-/obj/effect/map_helper/airlock/sensor/chamber_sensor,
 /obj/effect/floor_decal/steeldecal/steel_decals_central2{
+	dir = 1;
 	color = "#989898"
 	},
 /obj/structure/cable/white{
 	icon_state = "2-4"
 	},
-/turf/simulated/floor/tiled/techmaint,
+/turf/simulated/floor/tiled/dark,
 /area/harbor/Dock4)
 "npi" = (
 /obj/machinery/door/firedoor/multi_tile/glass{
@@ -44552,7 +44727,12 @@
 /area/maintenance/ab_Medical)
 "nrg" = (
 /obj/structure/flora/ausbushes/fullgrass,
-/turf/simulated/floor/water/indoors,
+/turf/simulated/floor/water/indoors{
+	outdoors = -1;
+	temperature = 293.15;
+	nitrogen = 82.1472;
+	oxygen = 21.8366
+	},
 /area/hallway/Star_1Deck_Atrium)
 "nrk" = (
 /obj/effect/catwalk_plated/techmaint,
@@ -45655,11 +45835,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/techmaint,
 /area/engineering/Telecomms_Foyer)
-"nLm" = (
-/turf/simulated/floor/water/deep/indoors{
-	outdoors = -1
-	},
-/area/hallway/Star_1Deck_Atrium)
 "nLC" = (
 /obj/structure/reagent_dispensers/coolanttank,
 /turf/simulated/floor/plating,
@@ -48369,9 +48544,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 9
 	},
-/obj/machinery/light{
-	dir = 4
-	},
 /turf/simulated/floor/tiled,
 /area/harbor/Dock4)
 "oFv" = (
@@ -49614,7 +49786,12 @@
 /area/shuttle/cryo/station)
 "pat" = (
 /obj/structure/railing,
-/turf/simulated/floor/water/indoors,
+/turf/simulated/floor/water/indoors{
+	outdoors = -1;
+	temperature = 293.15;
+	nitrogen = 82.1472;
+	oxygen = 21.8366
+	},
 /area/hallway/Star_1Deck_Atrium)
 "paG" = (
 /obj/structure/disposalpipe/segment{
@@ -50932,12 +51109,21 @@
 "pvG" = (
 /obj/structure/railing,
 /obj/structure/flora/ausbushes/fullgrass,
-/turf/simulated/floor/water/indoors,
+/turf/simulated/floor/water/indoors{
+	outdoors = -1;
+	temperature = 293.15;
+	nitrogen = 82.1472;
+	oxygen = 21.8366
+	},
 /area/hallway/Star_1Deck_Atrium)
 "pvH" = (
 /obj/structure/railing,
 /obj/structure/flora/lily3,
-/turf/simulated/floor/water/deep/indoors,
+/turf/simulated/floor/water/deep/indoors{
+	oxygen = 21.8366;
+	nitrogen = 82.1472;
+	temperature = 293.15
+	},
 /area/hallway/Star_1Deck_Atrium)
 "pwh" = (
 /obj/random/maintenance/misc,
@@ -50974,7 +51160,11 @@
 /area/quartermaster/Mining_Ship_Bay)
 "pwH" = (
 /obj/structure/railing,
-/turf/simulated/floor/water/deep/indoors,
+/turf/simulated/floor/water/deep/indoors{
+	oxygen = 21.8366;
+	nitrogen = 82.1472;
+	temperature = 293.15
+	},
 /area/hallway/Star_1Deck_Atrium)
 "pwO" = (
 /obj/structure/cable/green{
@@ -55558,12 +55748,12 @@
 /obj/effect/floor_decal/techfloor/orange{
 	dir = 4
 	},
+/obj/effect/floor_decal/techfloor{
+	dir = 8
+	},
 /obj/machinery/light/floortube{
 	dir = 8;
 	pixel_x = -3
-	},
-/obj/effect/floor_decal/techfloor{
-	dir = 8
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/Star_1Deck_Atrium)
@@ -56362,10 +56552,10 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/security/Exploration_Ship_Bay)
 "roQ" = (
-/obj/machinery/atmospherics/valve/shutoff{
-	name = "Harbor automatic shutoff valve"
-	},
 /obj/effect/floor_decal/industrial/outline/blue,
+/obj/machinery/atmospherics/valve/open{
+	dir = 2
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/Distro_Harbor)
 "rpf" = (
@@ -59231,6 +59421,7 @@
 	pixel_y = -14
 	},
 /obj/machinery/shield_diffuser,
+/obj/structure/fans/tiny,
 /turf/simulated/floor/tiled/techmaint,
 /area/harbor/Dock5)
 "ssD" = (
@@ -61785,7 +61976,12 @@
 	dir = 1
 	},
 /obj/structure/flora/ausbushes/reedbush,
-/turf/simulated/floor/water/indoors,
+/turf/simulated/floor/water/indoors{
+	outdoors = -1;
+	temperature = 293.15;
+	nitrogen = 82.1472;
+	oxygen = 21.8366
+	},
 /area/hallway/Star_1Deck_Atrium)
 "tsf" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -62000,25 +62196,6 @@
 /obj/structure/cable,
 /turf/simulated/floor/plating,
 /area/maintenance/Deck1_AftPort_Chamber2)
-"twF" = (
-/obj/machinery/atmospherics/pipe/manifold/hidden{
-	dir = 8
-	},
-/obj/machinery/embedded_controller/radio/airlock/docking_port{
-	frequency = 1380;
-	id_tag = "sc-D1_L1A1_airlock";
-	pixel_x = -24;
-	dir = 4
-	},
-/obj/effect/floor_decal/steeldecal/steel_decals_central2{
-	dir = 1;
-	color = "#989898"
-	},
-/obj/structure/cable/white{
-	icon_state = "1-2"
-	},
-/turf/simulated/floor/tiled/dark,
-/area/harbor/Dock1)
 "twM" = (
 /obj/structure/shuttle/engine/heater{
 	dir = 8
@@ -62401,7 +62578,12 @@
 /obj/structure/railing{
 	dir = 1
 	},
-/turf/simulated/floor/water/indoors,
+/turf/simulated/floor/water/indoors{
+	outdoors = -1;
+	temperature = 293.15;
+	nitrogen = 82.1472;
+	oxygen = 21.8366
+	},
 /area/hallway/Star_1Deck_Atrium)
 "tCJ" = (
 /obj/machinery/door/firedoor/glass,
@@ -62499,7 +62681,11 @@
 /obj/effect/landmark{
 	name = "lightsout"
 	},
-/turf/simulated/floor/water/deep/indoors,
+/turf/simulated/floor/water/deep/indoors{
+	oxygen = 21.8366;
+	nitrogen = 82.1472;
+	temperature = 293.15
+	},
 /area/hallway/Star_1Deck_Atrium)
 "tDP" = (
 /obj/structure/flora/rocks2,
@@ -62827,6 +63013,7 @@
 	unlocked = 1;
 	dir = 4
 	},
+/obj/effect/floor_decal/industrial/outline/blue,
 /turf/simulated/floor/plating,
 /area/maintenance/Distro_Central)
 "tLv" = (
@@ -63128,16 +63315,10 @@
 /obj/machinery/cell_charger{
 	pixel_y = 11
 	},
-/obj/machinery/recharger{
-	pixel_x = -6;
-	pixel_y = -2
-	},
-/obj/item/cell/device{
-	pixel_x = 8
-	},
+/obj/item/cell/device,
 /obj/item/cell/device{
 	pixel_y = -4;
-	pixel_x = 8
+	pixel_x = 1
 	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/Xenobiology_Lab)
@@ -65652,7 +65833,12 @@
 /area/hallway/Deck1_Transit_Hall)
 "uMv" = (
 /obj/structure/flora/lily1,
-/turf/simulated/floor/water/indoors,
+/turf/simulated/floor/water/indoors{
+	outdoors = -1;
+	temperature = 293.15;
+	nitrogen = 82.1472;
+	oxygen = 21.8366
+	},
 /area/hallway/Star_1Deck_Atrium)
 "uMU" = (
 /turf/simulated/wall/r_wall,
@@ -65720,6 +65906,7 @@
 /obj/machinery/atmospherics/valve/digital/open{
 	dir = 4
 	},
+/obj/effect/floor_decal/industrial/outline/blue,
 /turf/simulated/floor/plating,
 /area/maintenance/Distro_Central)
 "uOA" = (
@@ -66778,6 +66965,10 @@
 "vic" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/structure/reagent_dispensers/foam,
+/obj/machinery/recharger/wallcharger{
+	pixel_y = -4;
+	pixel_x = 32
+	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/Xenobiology_Lab)
 "vif" = (
@@ -68460,7 +68651,11 @@
 /area/harbor/Port_Docking_Foyer)
 "vFX" = (
 /obj/structure/flora/log2,
-/turf/simulated/floor/water/deep/indoors,
+/turf/simulated/floor/water/deep/indoors{
+	oxygen = 21.8366;
+	nitrogen = 82.1472;
+	temperature = 293.15
+	},
 /area/hallway/Star_1Deck_Atrium)
 "vGa" = (
 /obj/structure/cable/green{
@@ -69211,8 +69406,8 @@
 /turf/simulated/floor/tiled,
 /area/hallway/Port_1Deck_Atrium)
 "vUD" = (
-/obj/machinery/atmospherics/valve/shutoff{
-	name = "Central automatic shutoff valve";
+/obj/effect/floor_decal/industrial/outline/blue,
+/obj/machinery/atmospherics/valve/open{
 	dir = 4
 	},
 /turf/simulated/floor/plating,
@@ -70497,6 +70692,9 @@
 	dir = 8;
 	pixel_y = -9
 	},
+/obj/structure/sign/directions/bar{
+	dir = 4
+	},
 /turf/simulated/wall,
 /area/crew_quarters/Public_Gateway)
 "wtj" = (
@@ -70783,7 +70981,11 @@
 	name = "Eliz";
 	faction = "nanotrasen"
 	},
-/turf/simulated/floor/water/deep/indoors,
+/turf/simulated/floor/water/deep/indoors{
+	oxygen = 21.8366;
+	nitrogen = 82.1472;
+	temperature = 293.15
+	},
 /area/hallway/Star_1Deck_Atrium)
 "wzW" = (
 /obj/structure/table/standard,
@@ -71262,7 +71464,11 @@
 	color = "#6457f7";
 	faction = "nanotrasen"
 	},
-/turf/simulated/floor/water/deep/indoors,
+/turf/simulated/floor/water/deep/indoors{
+	oxygen = 21.8366;
+	nitrogen = 82.1472;
+	temperature = 293.15
+	},
 /area/hallway/Star_1Deck_Atrium)
 "wJV" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -72048,6 +72254,7 @@
 	},
 /obj/effect/map_helper/airlock/door/ext_door,
 /obj/machinery/shield_diffuser,
+/obj/structure/fans/tiny,
 /turf/simulated/floor/tiled/techmaint,
 /area/harbor/Dock5)
 "wXu" = (
@@ -73284,7 +73491,12 @@
 	color = "#ccc9ff";
 	desc = "An extra bright lighting fixture."
 	},
-/turf/simulated/floor/water/indoors,
+/turf/simulated/floor/water/indoors{
+	outdoors = -1;
+	temperature = 293.15;
+	nitrogen = 82.1472;
+	oxygen = 21.8366
+	},
 /area/hallway/Star_1Deck_Atrium)
 "xsD" = (
 /obj/effect/floor_decal/techfloor/corner{
@@ -74114,7 +74326,11 @@
 	name = "Chayote";
 	faction = "nanotrasen"
 	},
-/turf/simulated/floor/water/deep/indoors,
+/turf/simulated/floor/water/deep/indoors{
+	oxygen = 21.8366;
+	nitrogen = 82.1472;
+	temperature = 293.15
+	},
 /area/hallway/Star_1Deck_Atrium)
 "xNN" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -74944,25 +75160,6 @@
 /obj/machinery/door/firedoor/glass/hidden,
 /turf/simulated/floor/tiled/dark,
 /area/harbor/Fueling_Storage)
-"yaq" = (
-/obj/machinery/atmospherics/pipe/manifold/hidden{
-	dir = 4
-	},
-/obj/machinery/embedded_controller/radio/airlock/docking_port{
-	frequency = 1380;
-	id_tag = "sc-D1_L4A1_airlock";
-	pixel_x = 24;
-	dir = 8
-	},
-/obj/effect/floor_decal/steeldecal/steel_decals_central2{
-	dir = 1;
-	color = "#989898"
-	},
-/obj/structure/cable/white{
-	icon_state = "1-2"
-	},
-/turf/simulated/floor/tiled/dark,
-/area/harbor/Dock4)
 "yaQ" = (
 /obj/structure/girder/reinforced,
 /obj/structure/cable/green{
@@ -75135,9 +75332,6 @@
 "ydF" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 5
-	},
-/obj/machinery/light{
-	dir = 8
 	},
 /turf/simulated/floor/tiled,
 /area/harbor/Dock1)
@@ -88372,9 +88566,9 @@ qIQ
 aaf
 aaa
 aBe
-aVI
-kgv
 cNg
+kgv
+aeT
 aBe
 aaa
 aaa
@@ -88882,10 +89076,10 @@ aaa
 aaa
 aaa
 aaa
-aaa
 cfp
 khE
 gOu
+cfp
 cfp
 xVx
 eZA
@@ -89138,14 +89332,14 @@ aaa
 aaa
 aaa
 aaa
-aaa
 yek
 aaa
 com
+aeX
 adZ
-twF
 qOm
 weV
+aeV
 eDh
 aYG
 fWo
@@ -89398,12 +89592,12 @@ aaa
 aaa
 aaa
 aaa
-aaa
 nBE
 rkI
 hPL
 ezu
 ybD
+azD
 aAX
 aAX
 wZu
@@ -89656,12 +89850,12 @@ aaa
 aaa
 aaa
 aaa
-aaa
 cfp
 rbq
 gOu
 cfp
 kwu
+azD
 aAX
 aAX
 bRL
@@ -101305,7 +101499,7 @@ pFU
 pFU
 pFU
 pFU
-vXj
+pFU
 pFU
 pFU
 pFU
@@ -103369,7 +103563,7 @@ pFU
 pFU
 pFU
 pFU
-pFU
+vXj
 pFU
 pFU
 pFU
@@ -105179,7 +105373,7 @@ mWi
 abI
 ebd
 mdY
-mdY
+abu
 mdY
 mlW
 sEk
@@ -105403,7 +105597,7 @@ whv
 ese
 cnx
 sSr
-doz
+aeS
 bwK
 bKR
 bKR
@@ -105437,7 +105631,7 @@ sPh
 wpV
 pyv
 pyv
-pyv
+aeP
 pyv
 pyv
 kAW
@@ -105676,7 +105870,7 @@ bKR
 bKR
 pWo
 aJA
-aFh
+aeR
 aaY
 pkh
 aaY
@@ -105695,7 +105889,7 @@ abK
 abJ
 gvO
 fHt
-fHt
+aeQ
 fHt
 aXg
 abG
@@ -106949,7 +107143,7 @@ aeZ
 aKQ
 vNd
 uwl
-aDh
+aeZ
 mAs
 kAF
 aVW
@@ -115906,7 +116100,7 @@ pPv
 gdQ
 awX
 nrg
-mYa
+kEx
 kXb
 iEe
 nrb
@@ -116681,7 +116875,7 @@ nVj
 awX
 gpT
 xNM
-nLm
+kHT
 fYQ
 wzV
 pwH
@@ -121132,12 +121326,12 @@ aaa
 aaa
 aaa
 aaa
-aaa
 wOk
 oAw
 gaP
 wOk
 raD
+eKQ
 okm
 okm
 sCl
@@ -121388,7 +121582,6 @@ aaa
 aaa
 aaa
 aaa
-aaa
 lJp
 aaa
 hAm
@@ -121396,6 +121589,7 @@ vsv
 qwQ
 qGN
 qBK
+eKQ
 okm
 okm
 mnS
@@ -121648,12 +121842,12 @@ aaa
 aaa
 aaa
 aaa
-aaa
 dZk
+afb
 npa
-yaq
 gOf
 tWs
+aeW
 qGW
 fmF
 kpI
@@ -121906,10 +122100,10 @@ aaa
 aaa
 aaa
 aaa
-aaa
 wOk
 acQ
 gaP
+wOk
 wOk
 xkT
 cHa
@@ -122428,9 +122622,9 @@ qIQ
 aaf
 aaa
 viE
-aFG
-cMm
 eVQ
+cMm
+aeU
 viE
 aaa
 aaa

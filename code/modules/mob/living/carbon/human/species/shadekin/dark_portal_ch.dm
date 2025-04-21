@@ -84,8 +84,8 @@ GLOBAL_LIST_BOILERPLATE(all_darkportal_hubs, /obj/structure/dark_portal/hub)
 	locked = src
 	locked_name = src.name
 
-/obj/structure/dark_portal/hub/New()
-	..()
+/obj/structure/dark_portal/hub/Initialize(mapload)
+	. = ..()
 	set_light(2, 3, "#ffffff")
 
 /obj/structure/dark_portal/hub/close_portal()

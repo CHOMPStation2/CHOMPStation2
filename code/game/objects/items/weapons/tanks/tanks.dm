@@ -176,7 +176,7 @@ var/list/global/tank_gauge_cache = list()
 			to_chat(user, span_notice("You begin attaching the assembly to \the [src]."))
 			if(do_after(user, 50, src))
 				to_chat(user, span_notice("You finish attaching the assembly to \the [src]."))
-				bombers += "[key_name(user)] attached an assembly to a wired [src]. Temp: [src.air_contents.temperature-T0C]"
+				GLOB.bombers += "[key_name(user)] attached an assembly to a wired [src]. Temp: [src.air_contents.temperature-T0C]"
 				message_admins("[key_name_admin(user)] attached an assembly to a wired [src]. Temp: [src.air_contents.temperature-T0C]")
 				assemble_bomb(W,user)
 			else
@@ -195,7 +195,7 @@ var/list/global/tank_gauge_cache = list()
 					src.valve_welded = 1
 					src.leaking = 0
 				else
-					bombers += "[key_name(user)] attempted to weld a [src]. [src.air_contents.temperature-T0C]"
+					GLOB.bombers += "[key_name(user)] attempted to weld a [src]. [src.air_contents.temperature-T0C]"
 					message_admins("[key_name_admin(user)] attempted to weld a [src]. [src.air_contents.temperature-T0C]")
 					if(WT.welding)
 						to_chat(user, span_danger("You accidentally rake \the [W] across \the [src]!"))
@@ -661,11 +661,11 @@ var/list/global/tank_gauge_cache = list()
 	SIGNAL_HANDLER
 	if(isnull(WF))
 		return
-	var/atom/movable/AM = WF
+	var/atom/movable/AM = WF.resolve()
 	if(isnull(AM))
 		log_debug("DEBUG: HasProximity called without reference on [src].")
 		return
-	assembly?.HasProximity(T, WEAKREF(AM), old_loc)
+	assembly?.HasProximity(T, WF, old_loc)
 
 /obj/item/tankassemblyproxy/Moved(old_loc, direction, forced)
 	if(isturf(old_loc))

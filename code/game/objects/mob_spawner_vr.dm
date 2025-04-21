@@ -136,8 +136,8 @@ It also makes it so a ghost wont know where all the goodies/mobs are.
 	var/datum/proximity_monitor/mobspawner/prox
 	var/list/mobs_in_range = list()
 
-/obj/structure/mob_spawner/scanner/New()
-	..()
+/obj/structure/mob_spawner/scanner/Initialize(mapload)
+	. = ..()
 	prox = new(src, range)
 
 //CHOMPEdit Start

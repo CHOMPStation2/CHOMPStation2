@@ -71,7 +71,7 @@ var/global/moth_amount = 0 // CHOMPEnable, Rykka waz here. *pawstamp*
 
 /mob/living/simple_mob/vore/solargrub/Initialize(mapload)
 	. = ..()
-	existing_solargrubs += src
+	GLOB.existing_solargrubs += src
 
 /mob/living/simple_mob/vore/solargrub/Life()
 	. = ..()
@@ -165,8 +165,8 @@ var/global/moth_amount = 0 // CHOMPEnable, Rykka waz here. *pawstamp*
 	..()
 
 /mob/living/simple_mob/vore/solargrub/Destroy()
-	existing_solargrubs -= src
-	..()
+	GLOB.existing_solargrubs -= src
+	. = ..()
 
 /mob/living/simple_mob/vore/solargrub/handle_light()
 	. = ..()

@@ -7,7 +7,7 @@ SUBSYSTEM_DEF(overlays)
 	stats = list()
 
 /datum/controller/subsystem/overlays/Shutdown()
-	WRITE_LOG("[log_path]-overlay.log", render_stats(stats))
+	WRITE_LOG("[GLOB.log_directory]-overlay.log", render_stats(stats))
 
 /datum/controller/subsystem/overlays/Recover()
 	stats = SSoverlays.stats

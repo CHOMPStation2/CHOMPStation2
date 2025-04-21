@@ -30,8 +30,8 @@
 
 /proc/ManifestToHtml()
 	var/html = ""
-	if(data_core)
-		html = data_core.get_manifest(FALSE,TRUE,snowflake = TRUE)
+	if(GLOB.data_core)
+		html = GLOB.data_core.get_manifest(FALSE,TRUE,snowflake = TRUE)
 	else
 		html = span_bold("ERROR: NO DATACORE") //Could make the error more fancy later
 	rustg_file_write(html,"[CONFIG_GET(string/nodebot_location)]\\html.html")
@@ -43,9 +43,9 @@
 	else
 		var/outp = "Crew Manifest:"
 		var/list/total = list()
-		if(data_core)
-			data_core.get_manifest_list()
-		for(var/list/item in PDA_Manifest)
+		if(GLOB.data_core)
+			GLOB.data_core.get_manifest_list()
+		for(var/list/item in GLOB.PDA_Manifest)
 			outp += "\n__**[item["cat"]]:**__"
 			for(var/list/person in item["elems"])
 				total |= person

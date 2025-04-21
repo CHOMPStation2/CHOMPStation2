@@ -1,6 +1,6 @@
 //Updates the mob's health from organs and mob damage variables
 /mob/living/carbon/human/updatehealth()
-	var/huskmodifier = 2.5 //VOREStation Edit // With 1.5, you need 250 burn instead of 200 to husk a human.
+	var/huskmodifier = 2.5 // With 1.5, you need 250 burn instead of 200 to husk a human.
 
 	if(status_flags & GODMODE)
 		health = getMaxHealth()
@@ -51,8 +51,8 @@
 
 	if(status_flags & GODMODE)	return 0	//godmode
 
-	if(should_have_organ("brain"))
-		var/obj/item/organ/internal/brain/sponge = internal_organs_by_name["brain"]
+	if(should_have_organ(O_BRAIN))
+		var/obj/item/organ/internal/brain/sponge = internal_organs_by_name[O_BRAIN]
 		if(sponge)
 			sponge.take_damage(amount)
 			brainloss = sponge.damage
@@ -65,8 +65,8 @@
 
 	if(status_flags & GODMODE)	return 0	//godmode
 
-	if(should_have_organ("brain"))
-		var/obj/item/organ/internal/brain/sponge = internal_organs_by_name["brain"]
+	if(should_have_organ(O_BRAIN))
+		var/obj/item/organ/internal/brain/sponge = internal_organs_by_name[O_BRAIN]
 		if(sponge)
 			sponge.damage = min(max(amount, 0),(getMaxHealth()*2))
 			brainloss = sponge.damage
@@ -79,8 +79,8 @@
 
 	if(status_flags & GODMODE)	return 0	//godmode
 
-	if(should_have_organ("brain"))
-		var/obj/item/organ/internal/brain/sponge = internal_organs_by_name["brain"]
+	if(should_have_organ(O_BRAIN))
+		var/obj/item/organ/internal/brain/sponge = internal_organs_by_name[O_BRAIN]
 		if(sponge)
 			brainloss = min(sponge.damage,getMaxHealth()*2)
 		else
@@ -516,7 +516,7 @@ This function restores all organs.
 */
 
 /mob/living/carbon/human/apply_damage(var/damage = 0, var/damagetype = BRUTE, var/def_zone = null, var/blocked = 0, var/soaked = 0, var/sharp = FALSE, var/edge = FALSE, var/obj/used_weapon = null, var/projectile = FALSE)
-	if(Debug2)
+	if(GLOB.Debug2)
 		to_world_log("## DEBUG: human/apply_damage() was called on [src], with [damage] damage, an armor value of [blocked], and a soak value of [soaked].")
 	var/obj/item/organ/external/organ = null
 	if(isorgan(def_zone))
@@ -599,7 +599,7 @@ This function restores all organs.
 	if(soaked)
 		damage -= soaked
 
-	if(Debug2)
+	if(GLOB.Debug2)
 		to_world_log("## DEBUG: [src] was hit for [damage].")
 
 	switch(damagetype)

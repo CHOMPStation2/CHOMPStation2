@@ -31,8 +31,6 @@
 	var/burn_dam = 0                   // Actual current burn damage.
 	var/last_dam = -1                  // used in healing/processing calculations.
 	var/spread_dam = 0
-	var/thick_skin = 0                 // If a needle has a chance to fail to penetrate.
-
 	// Appearance vars.
 	var/nonsolid                       // Snowflake warning, reee. Used for slime limbs.
 	var/transparent                    // As above, so below. Used for transparent limbs.
@@ -41,7 +39,6 @@
 	var/icon_position = 0              // Used in mob overlay layering calculations.
 	var/model                          // Used when caching robolimb icons.
 	var/force_icon                     // Used to force override of species-specific limb icons (for prosthetics). Also used for any limbs chopped from a simple mob, and then attached to humans.
-	var/force_icon_key                 // Used to force the override of the icon-key generated using the species. Must be used in tandem with the above.
 	var/icon/mob_icon                  // Cached icon for use in mob overlays.
 	var/gendered_icon = 0              // Whether or not the icon state appends a gender.
 	var/s_tone                         // Skin tone.
@@ -257,7 +254,8 @@
 
 /obj/item/organ/external/LateInitialize()
 	. = ..()
-	get_icon()
+	if(!QDELETED(src))
+		get_icon()
 
 /obj/item/organ/external/replaced(var/mob/living/carbon/human/target)
 	owner = target
@@ -388,7 +386,9 @@
 			var/modifed_burn = burn
 
 			// Let's calculate how INJURED our limb is accounting for AFTER the damage we just took. Determines the chance the next attack will take our limb off!
-			var/damage_factor = ((max_damage*CONFIG_GET(number/organ_health_multiplier))/(brute_dam + burn_dam))*100
+			var/damage_factor = ((brute_dam + burn_dam)/(max_damage*CONFIG_GET(number/organ_health_multiplier)))*100
+			if(brute_dam > max_damage || burn_dam > max_damage) //This is in case we go OVER our max. This doesn't EVER happen except on VITAL organs.
+				damage_factor = 100
 			// Max_damage of 80 and brute_dam of 80? || Factor = 100 Max_damage of 80 and brute_dam of 40? Factor = 50 || Max_damage of 80 and brute_dam of 5? Factor = 5
 			// This lowers our chances of having our limb removed when it has less damage. The more damaged the limb, the higher the chance it falls off!
 
@@ -508,9 +508,9 @@
 	if(user == src.owner)
 		var/grasp
 		if(user.l_hand == tool && (src.body_part & (ARM_LEFT|HAND_LEFT)))
-			grasp = "l_hand"
+			grasp = BP_L_HAND
 		else if(user.r_hand == tool && (src.body_part & (ARM_RIGHT|HAND_RIGHT)))
-			grasp = "r_hand"
+			grasp = BP_R_HAND
 
 		if(grasp)
 			to_chat(user, span_warning("You can't reach your [src.name] while holding [tool] in your [owner.get_bodypart_name(grasp)]."))
@@ -529,7 +529,7 @@
 	if(damage_desc)
 		var/fix_verb = (damage_amount > repair_amount) ? "patches" : "finishes patching"
 		if(user == src.owner)
-			var/datum/gender/T = gender_datums[user.get_visible_gender()]
+			var/datum/gender/T = GLOB.gender_datums[user.get_visible_gender()]
 			user.visible_message(span_infoplain(span_bold("\The [user]") + " [fix_verb] [damage_desc] on [T.his] [src.name] with [tool]."))
 		else
 			user.visible_message(span_infoplain(span_bold("\The [user]") + " [fix_verb] [damage_desc] on [owner]'s [src.name] with [tool]."))
@@ -595,13 +595,15 @@ This function completely restores a damaged organ to perfect condition.
 	//moved this before the open_wound check so that having many small wounds for example doesn't somehow protect you from taking internal damage (because of the return)
 	//Possibly trigger an internal wound, too.
 	var/local_damage = brute_dam + burn_dam + damage
-	if((damage > 15) && (type != BURN) && (local_damage > 30) && prob(damage) && (robotic < ORGAN_ROBOT) && !(species.flags & NO_BLOOD))
+	if((damage > 15) && (type != BURN) && (local_damage > 30) && prob(damage) && (robotic < ORGAN_ROBOT) && !(data.get_species_flags() & NO_BLOOD))
 		var/datum/wound/internal_bleeding/I = new (min(damage - 15, 15))
 		wounds += I
 		owner.custom_pain("Something ruptures inside of your [name]. You get the feeling you'll need more than just a bandage to fix it.", 15, TRUE)
 		to_chat(owner, span_bolddanger(span_massive("OH GOD! Something just tore in your [name]!"))) //Let's make this CLEAR that an artery was severed. This was vague enough that most players didn't realize they had IB.
 
-	if((damage > 5 || damage + burn_dam >= 15) && type == BURN && (robotic < ORGAN_ROBOT) && !(species.flags & NO_BLOOD))
+//Burn damage can cause fluid loss due to blistering and cook-off
+
+	if((damage > 5 || damage + burn_dam >= 15) && type == BURN && (robotic < ORGAN_ROBOT) && !(data.get_species_flags() & NO_BLOOD))
 		var/fluid_loss = 0.1 * (damage/(owner.getMaxHealth() - CONFIG_GET(number/health_threshold_dead))) * owner.species.blood_volume*(1 - owner.species.blood_level_fatal) //CHOMPedit reduce fluid loss 4-fold so lasers dont suck your blood
 		owner.remove_blood(fluid_loss)
 	// first check whether we can widen an existing wound
@@ -787,8 +789,7 @@ Note that amputating the affected organ does in fact remove the infection from t
 
 //Updating wounds. Handles wound natural I had some free spachealing, internal bleedings and infections
 /obj/item/organ/external/proc/update_wounds()
-
-	if((robotic >= ORGAN_ROBOT) || (species.flags & UNDEAD)) //Robotic and dead limbs don't heal or get worse.
+	if((robotic >= ORGAN_ROBOT) || (data.get_species_flags() & UNDEAD)) //Robotic and dead limbs don't heal or get worse.
 		for(var/datum/wound/W in wounds) //Repaired wounds disappear though
 			if(W.damage <= 0)  //and they disappear right away
 				wounds -= W    //TODO: robot wounds for robot limbs
@@ -959,8 +960,8 @@ Note that amputating the affected organ does in fact remove the infection from t
 	var/mob/living/carbon/human/victim = owner //Keep a reference for post-removed().
 	var/obj/item/organ/external/parent_organ = parent
 
-	var/use_flesh_colour = species?.get_flesh_colour(owner) ? species.get_flesh_colour(owner) : "#C80000"
-	var/use_blood_colour = species?.get_blood_colour(owner) ? species.get_blood_colour(owner) : "#C80000"
+	var/use_flesh_colour = data.get_species_flesh_colour(owner)
+	var/use_blood_colour = data.get_species_blood_colour(owner)
 
 	removed(null, ignore_children)
 	victim?.traumatic_shock += 60
@@ -999,7 +1000,7 @@ Note that amputating the affected organ does in fact remove the infection from t
 			if(!clean)
 				// Throw limb around.
 				if(src && istype(loc,/turf))
-					throw_at(get_edge_target_turf(src,pick(alldirs)),rand(1,3),5)
+					throw_at(get_edge_target_turf(src,pick(GLOB.alldirs)),rand(1,3),5)
 				dir = 2
 		if(DROPLIMB_BURN)
 			new /obj/effect/decal/cleanable/ash(droploc)
@@ -1013,24 +1014,23 @@ Note that amputating the affected organ does in fact remove the infection from t
 				gore = new /obj/effect/decal/cleanable/blood/gibs/robot(droploc)
 			else
 				gore = new /obj/effect/decal/cleanable/blood/gibs(droploc)
-				if(species)
-					gore.fleshcolor = use_flesh_colour
-					gore.basecolor =  use_blood_colour
-					gore.update_icon()
+				gore.fleshcolor = use_flesh_colour
+				gore.basecolor = use_blood_colour
+				gore.update_icon()
 
-			gore.throw_at(get_edge_target_turf(src,pick(alldirs)),rand(1,3),5)
+			gore.throw_at(get_edge_target_turf(src,pick(GLOB.alldirs)),rand(1,3),5)
 
 			for(var/obj/item/organ/I in internal_organs)
 				I.removed()
 				if(istype(loc,/turf))
-					I.throw_at(get_edge_target_turf(src,pick(alldirs)),rand(1,3),5)
+					I.throw_at(get_edge_target_turf(src,pick(GLOB.alldirs)),rand(1,3),5)
 
 			for(var/obj/item/I in src)
 				if(I.w_class <= ITEMSIZE_SMALL)
 					qdel(I)
 					continue
 				I.forceMove(droploc)
-				I.throw_at(get_edge_target_turf(src,pick(alldirs)),rand(1,3),5)
+				I.throw_at(get_edge_target_turf(src,pick(GLOB.alldirs)),rand(1,3),5)
 
 			qdel(src)
 
@@ -1145,7 +1145,7 @@ Note that amputating the affected organ does in fact remove the infection from t
 				span_danger("You hear a sickening crack.")),brokenpain)
 			//CHOMPEdit End
 			owner.emote("scream")
-		jostle_bone()	//VOREStation Edit End
+		jostle_bone()
 
 	if(istype(owner.loc, /obj/belly)) //CHOMPedit, bone breaks in bellys should be whisper range to prevent bar wide blender prefbreak. This is a hacky passive hardcode, if a pref gets added, remove this if else
 		playsound(src, "fracture", 90, 1, -6.5)
@@ -1204,9 +1204,9 @@ Note that amputating the affected organ does in fact remove the infection from t
 
 	if(company)
 		model = company
-		var/datum/robolimb/R = all_robolimbs[company]
-		if(!R || (species && (species.name in R.species_cannot_use)))
-			R = basic_robolimb
+		var/datum/robolimb/R = GLOB.all_robolimbs[company]
+		if(!R || (data.get_species_name() in R.species_cannot_use))
+			R = GLOB.basic_robolimb
 		if(R)
 			force_icon = R.icon
 			brute_mod *= R.robo_brute_mod

@@ -101,7 +101,7 @@
 		A.fire_act(air_contents, air_contents.temperature, air_contents.volume)
 
 	// Spreading behaviour
-	for(var/direction in shuffle(cardinal))
+	for(var/direction in shuffle(GLOB.cardinal))
 		var/turf/simulated/enemy_tile = get_step(my_tile, direction)
 		if(istype(enemy_tile))
 			if(my_tile.open_directions & direction)

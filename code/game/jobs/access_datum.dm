@@ -267,13 +267,13 @@ var/const/access_explorer = 43
 	id = access_explorer
 	desc = JOB_EXPLORER
 	region = ACCESS_REGION_GENERAL
- //CHOMP explo keep removed a wide comment field on this line
+//CHOMP explo keep removed a wide comment field on this line
 /var/const/access_pathfinder = 44
 /datum/access/pathfinder
 	id = access_pathfinder
 	desc = JOB_PATHFINDER
 	region = ACCESS_REGION_GENERAL
- //CHOMP explo keep removed the closing wide comment field on this line. KEEP THE PATHFINDER
+//CHOMP explo keep removed the closing wide comment field on this line. KEEP THE PATHFINDER
 
 /var/const/access_surgery = 45
 /datum/access/surgery

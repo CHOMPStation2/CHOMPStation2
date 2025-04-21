@@ -75,7 +75,7 @@
 	if(O.anchored)
 		return 0 //mob is anchored???
 	if(get_dist(user, src) > 1 || get_dist(user, O) > 1)
-		return 0 //doesn't use adjacent() to allow for non-cardinal (fuck my life)
+		return 0 //doesn't use adjacent() to allow for non-GLOB.cardinal (fuck my life)
 	if(!ishuman(user) && !isrobot(user))
 		return 0 //not a borg or human
 	if(panel_open)
@@ -215,7 +215,7 @@
 			var/blood_volume = round(H.vessel.get_reagent_amount(REAGENT_ID_BLOOD))
 			var/blood_max = H.species.blood_volume
 			bloodData["volume"] = blood_volume
-			bloodData["percent"] = round(((blood_volume / blood_max)*100))
+			bloodData["percent"] = blood_max ? round(((blood_volume / blood_max)*100)) : 0
 
 		occupantData["blood"] = bloodData
 
@@ -538,7 +538,7 @@
 
 			// CHOMPedit begin - malignant organs
 			if(istype(i, /obj/item/organ/internal/malignant))
-				var/obj/item/organ/internal/ORG = occupant.organs_by_name[i.parent_organ]
+				var/obj/item/organ/external/ORG = occupant.organs_by_name[i.parent_organ]
 				hasMalignants += span_red(" -[ORG.name]") + "<BR>"
 			// CHOMPedit end
 

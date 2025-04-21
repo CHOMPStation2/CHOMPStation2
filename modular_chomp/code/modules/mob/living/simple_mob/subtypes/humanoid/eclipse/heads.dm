@@ -2,7 +2,7 @@
 	name = "Eclipse Head"
 	desc = "You shouldn't be seeing this. This is going to be rough"
 	health = 315
-	maxHealth = 315 //A 20 damae shot will need to land 35 times
+	maxHealth = 315 //A 20 damage shot will need to land 35 times
 	projectile_dispersion = 8
 	projectile_accuracy = 0
 	ranged_cooldown = 5
@@ -623,6 +623,10 @@
 	icon_living = "medi" //place holdery
 	health = 600
 	maxHealth = 600
+	glow_toggle = TRUE
+	glow_override = TRUE
+	glow_color = "#FFA723"
+	glow_range = 16
 	armor = list(melee = 35, bullet = 35, laser = 35, energy = 35, bomb = 100, bio = 100, rad = 100)
 	armor_soak = list(melee = 7, bullet = 7, laser = 7, energy = 7, bomb = 0, bio = 0, rad = 0)
 	projectiletype = /obj/item/projectile/energy/homing_bolt

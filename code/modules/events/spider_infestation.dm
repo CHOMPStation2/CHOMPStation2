@@ -16,7 +16,7 @@
 
 /datum/event/spider_infestation/start()
 	var/list/vents = list()
-	for(var/obj/machinery/atmospherics/unary/vent_pump/temp_vent in machines)
+	for(var/obj/machinery/atmospherics/unary/vent_pump/temp_vent in GLOB.machines)
 		//CHOMPEdit: Added a couple areas to the exclusion. Also made this actually work.
 		var/in_area = get_area(temp_vent)
 		if(istype(in_area, /area/crew_quarters/sleep) || istype(in_area, /area/hallway/secondary/entry))

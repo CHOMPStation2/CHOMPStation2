@@ -2351,7 +2351,7 @@
 /obj/mecha/proc/get_log_html()
 	var/output = "<html><head><title>[src.name] Log</title></head><body style='font: 13px 'Courier', monospace;'>"
 	for(var/list/entry in log)
-		output += {"<div style='font-weight: bold;'>[time2text(entry["time"],"DDD MMM DD hh:mm:ss")] [game_year]</div>
+		output += {"<div style='font-weight: bold;'>[time2text(entry["time"],"DDD MMM DD hh:mm:ss")] [GLOB.game_year]</div>
 						<div style='margin-left:15px; margin-bottom:10px;'>[entry["message"]]</div>
 						"}
 	output += "</body></html>"
@@ -2362,7 +2362,7 @@
 	for(var/list/entry in log)
 		data.Add(list(list(
 			"time" = time2text(entry["time"], "DDD MMM DD hh:mm:ss"),
-			"year" = game_year,
+			"year" = GLOB.game_year,
 			"message" = entry["message"],
 		)))
 	return data
@@ -2853,8 +2853,8 @@
 						<a href='byond://?src=\ref[src];debug=1;clear_i_dam=[MECHA_INT_SHORT_CIRCUIT]'>MECHA_INT_SHORT_CIRCUIT</a><br />
 						<a href='byond://?src=\ref[src];debug=1;clear_i_dam=[MECHA_INT_TANK_BREACH]'>MECHA_INT_TANK_BREACH</a><br />
 						<a href='byond://?src=\ref[src];debug=1;clear_i_dam=[MECHA_INT_CONTROL_LOST]'>MECHA_INT_CONTROL_LOST</a><br />
- 					   </body>
-						</html>"}
+						</body>
+					</html>"}
 
 	occupant << browse(output, "window=ex_debug")
 	//src.health = initial(src.health)/2.2

@@ -7,9 +7,9 @@
 	var/health = 10
 	var/obj/structure/prop/dark_node/linked_node = null
 
-/obj/effect/dark/Initialize(mapload)
+/obj/effect/dark/Initialize(mapload, check_glow)
 	. = ..()
-	if(prob(5))
+	if(check_glow && prob(5))
 		add_glow()
 
 /obj/effect/dark/proc/add_glow()
@@ -79,13 +79,18 @@
 	layer = ABOVE_TURF_LAYER
 
 /obj/effect/dark/proc/unlinked()
+	linked_node.children_effects -= src
 	linked_node = null
-	spawn(rand(20,70))
-		if(!linked_node)
-			qdel(src)
+	addtimer(CALLBACK(src, PROC_REF(perform_unlink), rand(20, 70), TIMER_DELETE_ME))
 
-/obj/effect/dark/floor/Initialize(mapload, var/node)
-	. = ..()
+/obj/effect/dark/proc/perform_unlink()
+	PRIVATE_PROC(TRUE)
+	if(!linked_node)
+		qdel(src)
+
+/obj/effect/dark/floor/Initialize(mapload, check_glow, var/node)
+	. = ..(mapload, !isspace(loc))
+
 	if(isspace(loc))
 		return INITIALIZE_HINT_QDEL
 
@@ -121,7 +126,7 @@
 		linked_node = null
 	. = ..()
 
-/obj/effect/dark/process()
+/obj/effect/dark/proc/do_process()
 	//set background = 1
 	var/turf/U = get_turf(src)
 
@@ -137,7 +142,7 @@
 
 	var/turf/T1 = get_turf(src)
 	if(T1.get_lumcount() < 0.4)
-		for(var/dirn in cardinal)
+		for(var/dirn in GLOB.cardinal)
 			var/turf/T2 = get_step(src, dirn)
 
 			if(!istype(T2) || locate(/obj/effect/dark) in T2 || istype(T2.loc, /area/arrival) || isspace(T2) || istype(T2, /turf/simulated/open))
@@ -146,35 +151,35 @@
 			if(T2.get_lumcount() >= 0.4)
 				continue
 
-			var/new_dark_tile = new /obj/effect/dark/floor(T2, linked_node)
-			linked_node.children_effects |= new_dark_tile
-
-
+			var/obj/effect/dark/floor/new_dark_tile = new /obj/effect/dark/floor(T2, null, linked_node)
+			if(QDELETED(new_dark_tile))
+				continue
+			linked_node.children_effects += new_dark_tile
 
 /obj/structure/prop/dark_node/process()
 	//set background = 1
 
 	if(!(locate(/obj/effect/dark) in get_turf(src)))
-		var/new_dark_tile = new /obj/effect/dark/floor(get_turf(src), src)
-		children_effects |= new_dark_tile
+		var/obj/effect/dark/floor/new_dark_tile = new /obj/effect/dark/floor(get_turf(src), null, src)
+		if(!QDELETED(new_dark_tile))
+			children_effects += new_dark_tile
 
 	if(until_full_process-- <= 0)
 		for(var/obj/effect/dark/dark_tile in orange(node_range, src))
-			if(!(dark_tile in children_effects))
-				children_effects |= dark_tile
+			if(QDELETED(dark_tile))
+				continue
+			if(dark_tile.linked_node)
+				continue
+			children_effects += dark_tile
+			dark_tile.linked_node = src
 		until_full_process = 4
 
-	children_effects.Remove(null)
-
 	for(var/obj/effect/dark/dark_tile as anything in children_effects)
-		if(!dark_tile.linked_node)
-			dark_tile.linked_node = src
-
-//		W.color = W.linked_node.set_color // CHOMPedit: No coloration.
+//		W.color = W.linked_node.set_color
 
 		dark_tile.light_check()
 		if(dark_tile.linked_node == src && prob(max(10, 60 - (children_effects.len))))
-			dark_tile.process()
+			dark_tile.do_process()
 
 /obj/structure/prop/dark_node/dust
 	name = "crystal dust"

@@ -32846,6 +32846,7 @@
 /obj/effect/floor_decal/corner/pink/border{
 	dir = 6
 	},
+/obj/machinery/oxygen_pump/mobile/stabilizer,
 /turf/simulated/floor/tiled/white,
 /area/medical/surgery)
 "cds" = (
@@ -58035,13 +58036,13 @@
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 1
 	},
-/obj/structure/filingcabinet,
 /obj/effect/floor_decal/corner/green/bordercorner{
 	dir = 1
 	},
 /obj/machinery/ai_status_display{
 	pixel_y = 32
 	},
+/obj/machinery/librarywikicomp,
 /turf/simulated/floor/tiled,
 /area/library)
 "lzd" = (
@@ -59317,6 +59318,7 @@
 /obj/effect/floor_decal/corner/pink/border{
 	dir = 10
 	},
+/obj/machinery/oxygen_pump/mobile/stabilizer,
 /turf/simulated/floor/tiled/white,
 /area/medical/surgery2)
 "mmq" = (

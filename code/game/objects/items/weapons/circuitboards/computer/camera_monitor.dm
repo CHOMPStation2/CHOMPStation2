@@ -25,7 +25,7 @@
 
 /obj/item/circuitboard/security/engineering/Initialize(mapload)
 	. = ..()
-	network = engineering_networks
+	network = GLOB.engineering_networks
 
 /obj/item/circuitboard/security/mining
 	name = T_BOARD("mining camera monitor")
@@ -50,8 +50,8 @@
 	board_type = new /datum/frame/frame_types/display
 	matter = list(MAT_STEEL = 50, MAT_GLASS = 50)
 
-/obj/item/circuitboard/security/telescreen/bodycamera/New()
-	..()
+/obj/item/circuitboard/security/telescreen/bodycamera/Initialize(mapload)
+	. = ..()
 	network = NETWORK_BODYCAM
 // CHOMPEdit End
 

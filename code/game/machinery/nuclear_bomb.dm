@@ -1,4 +1,4 @@
-var/bomb_set
+GLOBAL_VAR(bomb_set)
 
 /obj/machinery/nuclearbomb
 	name = "\improper Nuclear Fission Explosive"
@@ -45,7 +45,7 @@ var/bomb_set
 
 /obj/machinery/nuclearbomb/process()
 	if(timing)
-		bomb_set = 1 //So long as there is one nuke timing, it means one nuke is armed.
+		GLOB.bomb_set = 1 //So long as there is one nuke timing, it means one nuke is armed.
 		timeleft--
 		playsound(src, 'sound/items/timer.ogg',50) //chompedit... beep :)
 		if(timeleft <= 0)
@@ -275,7 +275,7 @@ var/bomb_set
 							if(icon_state == "nuclearbomb2")
 								icon_state = "nuclearbomb1"
 						timing = 0
-						bomb_set = 0
+						GLOB.bomb_set = 0
 						set_security_level("red") //chompedit
 					if(light_wire == temp_wire)
 						lighthack = !lighthack
@@ -323,13 +323,13 @@ var/bomb_set
 						if(!lighthack)
 							icon_state = "nuclearbomb2"
 						if(!safety)
-							bomb_set = 1//There can still be issues with this reseting when there are multiple bombs. Not a big deal tho for Nuke/N
+							GLOB.bomb_set = 1//There can still be issues with this reseting when there are multiple bombs. Not a big deal tho for Nuke/N
 							set_security_level("delta")//chompedit
 						else
-							bomb_set = 0
+							GLOB.bomb_set = 0
 							set_security_level("red")
 					else
-						bomb_set = 0
+						GLOB.bomb_set = 0
 						set_security_level("red") //chompedit
 						if(!lighthack)
 							icon_state = "nuclearbomb1"
@@ -337,7 +337,7 @@ var/bomb_set
 					safety = !(safety)
 					if(safety)
 						timing = 0
-						bomb_set = 0
+						GLOB.bomb_set = 0
 						set_security_level("red") //chompedit
 				if(href_list["anchor"])
 
@@ -420,14 +420,14 @@ var/bomb_set
 
 /obj/item/disk/nuclear/Initialize(mapload)
 	. = ..()
-	nuke_disks += src
+	GLOB.nuke_disks += src
 
 /obj/item/disk/nuclear/Destroy()
-	if(!nuke_disks.len && blobstart.len > 0)
-		var/obj/D = new /obj/item/disk/nuclear(pick(blobstart))
+	if(!GLOB.nuke_disks.len && GLOB.blobstart.len > 0)
+		var/obj/D = new /obj/item/disk/nuclear(pick(GLOB.blobstart))
 		message_admins("[src], the last authentication disk, has been destroyed. Spawning [D] at ([D.x], [D.y], [D.z]).")
 		log_game("[src], the last authentication disk, has been destroyed. Spawning [D] at ([D.x], [D.y], [D.z]).")
-	..()
+	. = ..()
 
 /obj/item/disk/nuclear/touch_map_edge()
 	qdel(src)

@@ -9,7 +9,6 @@
 	var/fixed_tech = null	//do we have a predetermined tech-group, per request? if so, overrides randomization for icon and name
 	var/rand_tech = null	//randomized tech-group from the list below
 	var/list/valid_techs = list(TECH_COMBAT,TECH_MAGNET,TECH_POWER,TECH_BIO,TECH_DATA,TECH_ENGINEERING,TECH_PHORON,TECH_MATERIAL,TECH_BLUESPACE,TECH_ILLEGAL,TECH_ARCANE,TECH_PRECURSOR)
-	origin_tech = list()	//blank list creation, or else we get a runtime trying to assign the new techgroup
 
 	persist_storable = FALSE //don't shove hazardous shinies into the item bank!! also their properties are (usually) randomized on creation, so saving them is pointless-- you won't get out what you put in
 
@@ -26,10 +25,15 @@
 
 /obj/item/research_sample/Initialize(mapload)
 	. = ..()
-	var/tech_mod = rand(0,rand_level)
-	var/tech_value = tech_level+tech_mod
+	var/new_tech
+	if(LAZYLEN(origin_tech))
+		new_tech = origin_tech.Copy()
+	else
+		new_tech = list()
+	var/tech_mod = rand(0, rand_level)
+	var/tech_value = tech_level + tech_mod
 	if(fixed_tech)
-		origin_tech.Add(list("[fixed_tech]" = tech_value))
+		LAZYSET(new_tech, fixed_tech, tech_value)
 	else	//if we're not a preset, randomize the name, icon, and associated tech, to make sure samples aren't predictable/metagamable
 		var/name_prefix = "[pick("strange","anomalous","exotic","atypical","unusual","incongruous","weird","aberrant","eccentric")]"
 		var/name_suffix		//blank because it's randomized per sample appearance
@@ -62,7 +66,8 @@
 				name_suffix = "[pick("object","sample","thing","fragment","specimen","element","alloy","chunk","remnant","scrap","sliver")]"
 		name = "[name_prefix] [name_suffix]"
 		rand_tech = pick(valid_techs)	//assign techs last
-		origin_tech.Add(list("[rand_tech]" = tech_value))
+		LAZYSET(new_tech, rand_tech, tech_value)
+	origin_tech = new_tech
 
 /obj/item/research_sample/attack_hand(mob/user)
 	. = ..()
@@ -88,12 +93,12 @@
 			switch(damage_type)
 				if("BRUTE")
 					H.visible_message(span_danger("\The [src] creaks as it ravages [H]'s hands!"))
-					H.apply_damage(rand(min_damage,max_damage), BRUTE, "r_hand", used_weapon=src)
-					H.apply_damage(rand(min_damage,max_damage), BRUTE, "l_hand", used_weapon=src)
+					H.apply_damage(rand(min_damage,max_damage), BRUTE, BP_R_HAND, used_weapon=src)
+					H.apply_damage(rand(min_damage,max_damage), BRUTE, BP_L_HAND, used_weapon=src)
 				if("BURN")
 					H.visible_message(span_danger("\The [src] flashes as it scorches [H]'s hands!"))
-					H.apply_damage(rand(min_damage,max_damage), BURN, "r_hand", used_weapon=src)
-					H.apply_damage(rand(min_damage,max_damage), BURN, "l_hand", used_weapon=src)
+					H.apply_damage(rand(min_damage,max_damage), BURN, BP_R_HAND, used_weapon=src)
+					H.apply_damage(rand(min_damage,max_damage), BURN, BP_L_HAND, used_weapon=src)
 				if("TOX")
 					H.visible_message(span_danger("\The [src] seethes and hisses like burning acid!"))
 					if(!H.isSynthetic())
@@ -145,12 +150,12 @@
 			switch(damage_type)
 				if("BRUTE")
 					H.visible_message(span_danger("\The [src] creaks as it ravages [H]'s hands!"))
-					H.apply_damage(rand(min_damage,max_damage), BRUTE, "r_hand", used_weapon=src)
-					H.apply_damage(rand(min_damage,max_damage), BRUTE, "l_hand", used_weapon=src)
+					H.apply_damage(rand(min_damage,max_damage), BRUTE, BP_R_HAND, used_weapon=src)
+					H.apply_damage(rand(min_damage,max_damage), BRUTE, BP_L_HAND, used_weapon=src)
 				if("BURN")
 					H.visible_message(span_danger("\The [src] flashes as it scorches [H]'s hands!"))
-					H.apply_damage(rand(min_damage,max_damage), BURN, "r_hand", used_weapon=src)
-					H.apply_damage(rand(min_damage,max_damage), BURN, "l_hand", used_weapon=src)
+					H.apply_damage(rand(min_damage,max_damage), BURN, BP_R_HAND, used_weapon=src)
+					H.apply_damage(rand(min_damage,max_damage), BURN, BP_L_HAND, used_weapon=src)
 				if("TOX")
 					H.visible_message(span_danger("\The [src] seethes and hisses like burning acid!"))
 					if(!H.isSynthetic())

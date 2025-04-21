@@ -21,10 +21,9 @@
 	..()
 	color = basecolor
 
-/obj/structure/gootrap/New()
-	..()
+/obj/structure/gootrap/Initialize(mapload)
+	. = ..()
 	update_icon()
-	return
 
 /obj/structure/gootrap/attack_hand(mob/user as mob)
 	if(has_buckled_mobs() && can_use(user))

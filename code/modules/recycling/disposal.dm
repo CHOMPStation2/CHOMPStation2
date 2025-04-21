@@ -835,7 +835,7 @@
 		// otherwise, do normal expel from turf
 		if(H)
 			expel(H, T, 0)
-	..()
+	. = ..()
 
 // returns the direction of the next pipe object, given the entrance dir
 // by default, returns the bitmask of remaining directions
@@ -956,7 +956,7 @@
 // remains : set to leave broken pipe pieces in place
 /obj/structure/disposalpipe/proc/broken(var/remains = 0)
 	if(remains)
-		for(var/D in cardinal)
+		for(var/D in GLOB.cardinal)
 			if(D & dpdir)
 				var/obj/structure/disposalpipe/broken/P = new(src.loc)
 				P.set_dir(D)
@@ -1102,7 +1102,7 @@
 		// otherwise, do normal expel from turf
 		if(H)
 			expel(H, T, 0)
-	..()
+	. = ..()
 
 /obj/structure/disposalpipe/hides_under_flooring()
 	return 1
@@ -1662,7 +1662,7 @@
 	if(direction)
 		dirs = list( direction, turn(direction, -45), turn(direction, 45))
 	else
-		dirs = alldirs.Copy()
+		dirs = GLOB.alldirs.Copy()
 
 	src.streak(dirs)
 
@@ -1671,7 +1671,7 @@
 	if(direction)
 		dirs = list( direction, turn(direction, -45), turn(direction, 45))
 	else
-		dirs = alldirs.Copy()
+		dirs = GLOB.alldirs.Copy()
 
 	src.streak(dirs)
 

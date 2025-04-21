@@ -268,28 +268,27 @@ var/datum/planet/thor/planet_thor = null
 	imminent_transition_message = "Light drips of water are starting to fall from the sky."
 	outdoor_sounds_type = /datum/looping_sound/weather/rain
 	indoor_sounds_type = /datum/looping_sound/weather/rain/indoors
+	effect_flags = HAS_PLANET_EFFECT | EFFECT_ONLY_LIVING
 
-/datum/weather/thor/rain/process_effects()
-	..()
-	for(var/mob/living/L as anything in living_mob_list)
-		if(L.z in holder.our_planet.expected_z_levels)
-			var/turf/T = get_turf(L)
-			if(!T.is_outdoors())
-				continue // They're indoors, so no need to rain on them.
+/datum/weather/thor/rain/planet_effect(mob/living/L)
+	if(L.z in holder.our_planet.expected_z_levels)
+		var/turf/T = get_turf(L)
+		if(!T.is_outdoors())
+			return // They're indoors, so no need to rain on them.
 
-			// If they have an open umbrella, it'll guard from rain
-			var/obj/item/melee/umbrella/U = L.get_active_hand()
-			if(!istype(U) || !U.open)
-				U = L.get_inactive_hand()
+		// If they have an open umbrella, it'll guard from rain
+		var/obj/item/melee/umbrella/U = L.get_active_hand()
+		if(!istype(U) || !U.open)
+			U = L.get_inactive_hand()
 
-			if(istype(U) && U.open)
-				if(show_message)
-					to_chat(L, span_notice("Rain patters softly onto your umbrella."))
-				continue
-
-			L.water_act(1)
+		if(istype(U) && U.open)
 			if(show_message)
-				to_chat(L, effect_message)
+				to_chat(L, span_notice("Rain patters softly onto your umbrella."))
+			return
+
+		L.water_act(1)
+		if(show_message)
+			to_chat(L, effect_message)
 
 /datum/weather/thor/storm
 	name = "storm"
@@ -318,30 +317,31 @@ var/datum/planet/thor/planet_thor = null
 		WEATHER_STORM = 10,
 		WEATHER_RAIN = 80
 		)
+	effect_flags = HAS_PLANET_EFFECT | EFFECT_ONLY_LIVING
+
+/datum/weather/thor/storm/planet_effect(mob/living/L)
+	if(L.z in holder.our_planet.expected_z_levels)
+		var/turf/T = get_turf(L)
+		if(!T.is_outdoors())
+			return // They're indoors, so no need to rain on them.
+
+		// If they have an open umbrella, it'll guard from rain
+		var/obj/item/melee/umbrella/U = L.get_active_hand()
+		if(!istype(U) || !U.open)
+			U = L.get_inactive_hand()
+
+		if(istype(U) && U.open)
+			if(show_message)
+				to_chat(L, span_notice("Rain showers loudly onto your umbrella!"))
+			return
+
+
+		L.water_act(2)
+		if(show_message)
+			to_chat(L, effect_message)
 
 /datum/weather/thor/storm/process_effects()
 	..()
-	for(var/mob/living/L as anything in living_mob_list)
-		if(L.z in holder.our_planet.expected_z_levels)
-			var/turf/T = get_turf(L)
-			if(!T.is_outdoors())
-				continue // They're indoors, so no need to rain on them.
-
-			// If they have an open umbrella, it'll guard from rain
-			var/obj/item/melee/umbrella/U = L.get_active_hand()
-			if(!istype(U) || !U.open)
-				U = L.get_inactive_hand()
-
-			if(istype(U) && U.open)
-				if(show_message)
-					to_chat(L, span_notice("Rain showers loudly onto your umbrella!"))
-				continue
-
-
-			L.water_act(2)
-			if(show_message)
-				to_chat(L, effect_message)
-
 	handle_lightning()
 
 // This gets called to do lightning periodically.
@@ -374,41 +374,40 @@ var/datum/planet/thor/planet_thor = null
 		"An intense chill is felt, and chunks of ice start to fall from the sky, towards you."
 	)
 	imminent_transition_message = "Small bits of ice are falling from the sky, growing larger by the second. Hail is starting, get to cover!"
+	effect_flags = HAS_PLANET_EFFECT | EFFECT_ONLY_HUMANS
 
-/datum/weather/thor/hail/process_effects()
-	..()
-	for(var/mob/living/carbon/H as anything in human_mob_list)
-		if(H.z in holder.our_planet.expected_z_levels)
-			var/turf/T = get_turf(H)
-			if(!T.is_outdoors())
-				continue // They're indoors, so no need to pelt them with ice.
+/datum/weather/thor/hail/planet_effect(mob/living/carbon/H)
+	if(H.z in holder.our_planet.expected_z_levels)
+		var/turf/T = get_turf(H)
+		if(!T.is_outdoors())
+			return // They're indoors, so no need to pelt them with ice.
 
-			// If they have an open umbrella, it'll guard from hail
-			var/obj/item/melee/umbrella/U = H.get_active_hand()
-			if(!istype(U) || !U.open)
-				U = H.get_inactive_hand()
+		// If they have an open umbrella, it'll guard from hail
+		var/obj/item/melee/umbrella/U = H.get_active_hand()
+		if(!istype(U) || !U.open)
+			U = H.get_inactive_hand()
 
-			if(istype(U) && U.open)
-				if(show_message)
-					to_chat(H, span_notice("Hail patters onto your umbrella."))
-				continue
-
-			var/target_zone = pick(BP_ALL)
-			var/amount_blocked = H.run_armor_check(target_zone, "melee")
-			var/amount_soaked = H.get_armor_soak(target_zone, "melee")
-
-			var/damage = rand(1,3)
-
-			if(amount_blocked >= 30)
-				continue // No need to apply damage. Hardhats are 30. They should probably protect you from hail on your head.
-				//Voidsuits are likewise 40, and riot, 80. Clothes are all less than 30.
-
-			if(amount_soaked >= damage)
-				continue // No need to apply damage.
-
-			H.apply_damage(damage, BRUTE, target_zone, amount_blocked, amount_soaked, used_weapon = "hail")
+		if(istype(U) && U.open)
 			if(show_message)
-				to_chat(H, effect_message)
+				to_chat(H, span_notice("Hail patters onto your umbrella."))
+			return
+
+		var/target_zone = pick(BP_ALL)
+		var/amount_blocked = H.run_armor_check(target_zone, "melee")
+		var/amount_soaked = H.get_armor_soak(target_zone, "melee")
+
+		var/damage = rand(1,3)
+
+		if(amount_blocked >= 30)
+			return // No need to apply damage. Hardhats are 30. They should probably protect you from hail on your head.
+			//Voidsuits are likewise 40, and riot, 80. Clothes are all less than 30.
+
+		if(amount_soaked >= damage)
+			return // No need to apply damage.
+
+		H.apply_damage(damage, BRUTE, target_zone, amount_blocked, amount_soaked, used_weapon = "hail")
+		if(show_message)
+			to_chat(H, effect_message)
 
 /datum/weather/thor/fog
 	name = "fog"
@@ -494,16 +493,15 @@ var/datum/planet/thor/planet_thor = null
 	// Lets recycle.
 	outdoor_sounds_type = /datum/looping_sound/weather/outside_blizzard
 	indoor_sounds_type = /datum/looping_sound/weather/inside_blizzard
+	effect_flags = HAS_PLANET_EFFECT | EFFECT_ONLY_LIVING
 
-/datum/weather/thor/ash_storm/process_effects()
-	..()
-	for(var/mob/living/L as anything in living_mob_list)
-		if(L.z in holder.our_planet.expected_z_levels)
-			var/turf/T = get_turf(L)
-			if(!T.is_outdoors())
-				continue // They're indoors, so no need to burn them with ash.
+/datum/weather/thor/ash_storm/planet_effect(mob/living/L)
+	if(L.z in holder.our_planet.expected_z_levels)
+		var/turf/T = get_turf(L)
+		if(!T.is_outdoors())
+			return // They're indoors, so no need to burn them with ash.
 
-			L.inflict_heat_damage(rand(1, 3))
+		L.inflict_heat_damage(rand(1, 3))
 
 //A non-lethal variant of the ash_storm. Stays on indefinitely.
 /datum/weather/thor/ash_storm_safe
@@ -554,17 +552,16 @@ var/datum/planet/thor/planet_thor = null
 	// How much radiation is bursted onto a random tile near a mob.
 	var/fallout_rad_low = RAD_LEVEL_HIGH
 	var/fallout_rad_high = RAD_LEVEL_VERY_HIGH
+	effect_flags = HAS_PLANET_EFFECT | EFFECT_ONLY_LIVING
 
-/datum/weather/thor/fallout/process_effects()
-	..()
-	for(var/mob/living/L as anything in living_mob_list)
-		if(L.z in holder.our_planet.expected_z_levels)
-			irradiate_nearby_turf(L)
-			var/turf/T = get_turf(L)
-			if(!T.is_outdoors())
-				continue // They're indoors, so no need to irradiate them with fallout.
+/datum/weather/thor/fallout/planet_effect(mob/living/L)
+	if(L.z in holder.our_planet.expected_z_levels)
+		irradiate_nearby_turf(L)
+		var/turf/T = get_turf(L)
+		if(!T.is_outdoors())
+			return // They're indoors, so no need to irradiate them with fallout.
 
-			L.rad_act(rand(direct_rad_low, direct_rad_high))
+		L.rad_act(rand(direct_rad_low, direct_rad_high))
 
 // This makes random tiles near people radioactive for awhile.
 // Tiles far away from people are left alone, for performance.
@@ -646,32 +643,33 @@ var/datum/planet/thor/planet_thor = null
 	)
 	outdoor_sounds_type = /datum/looping_sound/weather/rainheavy
 	indoor_sounds_type = /datum/looping_sound/weather/rainindoors
+	effect_flags = HAS_PLANET_EFFECT | EFFECT_ONLY_LIVING
+
+/datum/weather/thor/downpour/planet_effect(mob/living/L)
+	if(L.z in holder.our_planet.expected_z_levels)
+		var/turf/T = get_turf(L)
+		if(!T.is_outdoors())
+			return // They're indoors, so no need to rain on them.
+
+		// If they have an open umbrella, knock it off
+		if(ishuman(L))
+			var/mob/living/carbon/human/H = L
+			var/obj/item/melee/umbrella/U = L.get_active_hand()
+			if(!istype(U) || !U.open)
+				U = L.get_inactive_hand()
+
+			if(istype(U) && U.open)
+				if(show_message)
+					to_chat(L, span_notice("The rain pushes the umbrella off your hands!"))
+					H.drop_both_hands()
+
+		L.water_act(2)
+		L.Weaken(3)
+		if(show_message)
+			to_chat(L, effect_message)
 
 /datum/weather/thor/downpour/process_effects()
 	..()
-	for(var/mob/living/L as anything in living_mob_list)
-		if(L.z in holder.our_planet.expected_z_levels)
-			var/turf/T = get_turf(L)
-			if(!T.is_outdoors())
-				continue // They're indoors, so no need to rain on them.
-
-			// If they have an open umbrella, knock it off
-			if(ishuman(L))
-				var/mob/living/carbon/human/H = L
-				var/obj/item/melee/umbrella/U = L.get_active_hand()
-				if(!istype(U) || !U.open)
-					U = L.get_inactive_hand()
-
-				if(istype(U) && U.open)
-					if(show_message)
-						to_chat(L, span_notice("The rain pushes the umbrella off your hands!"))
-						H.drop_both_hands()
-
-			L.water_act(2)
-			L.Weaken(3)
-			if(show_message)
-				to_chat(L, effect_message)
-
 	handle_lightning()
 
 // This gets called to do lightning periodically.
@@ -706,45 +704,45 @@ var/datum/planet/thor/planet_thor = null
 	//No transition message, supposed to be the 'actual' rain
 	outdoor_sounds_type = /datum/looping_sound/weather/rainextreme
 	indoor_sounds_type = /datum/looping_sound/weather/rainindoors
+	effect_flags = HAS_PLANET_EFFECT | EFFECT_ONLY_LIVING
+
+/datum/weather/thor/downpourfatal/planet_effect(mob/living/L)
+	if(L.z in holder.our_planet.expected_z_levels)
+		var/turf/T = get_turf(L)
+		if(!T.is_outdoors())
+			return // They're indoors, so no need to rain on them.
+
+		// Knock the umbrella off your hands, aint protecting you c:
+		if(ishuman(L))
+			var/mob/living/carbon/human/H = L
+			var/obj/item/melee/umbrella/U = L.get_active_hand()
+			if(!istype(U) || !U.open)
+				U = L.get_inactive_hand()
+
+			if(istype(U) && U.open)
+				if(show_message)
+					to_chat(L, span_notice("The rain pushes the umbrella off your hands!"))
+					H.drop_both_hands()
+
+		var/target_zone = pick(BP_ALL)
+		var/amount_blocked = L.run_armor_check(target_zone, "melee")
+		var/amount_soaked = L.get_armor_soak(target_zone, "melee")
+
+		var/damage = rand(10,30) //Ow
+
+		if(amount_blocked >= 30)
+			return
+
+		if(amount_soaked >= damage)
+			return // No need to apply damage.
+
+		L.apply_damage(damage, BRUTE, target_zone, amount_blocked, amount_soaked, used_weapon = "rain bludgoning")
+		L.Weaken(3)
+		if(show_message)
+			to_chat(L, effect_message)
 
 /datum/weather/thor/downpourfatal/process_effects()
 	..()
-	for(var/mob/living/L as anything in living_mob_list)
-		if(L.z in holder.our_planet.expected_z_levels)
-			var/turf/T = get_turf(L)
-			if(!T.is_outdoors())
-				continue // They're indoors, so no need to rain on them.
-
-			// Knock the umbrella off your hands, aint protecting you c:
-			if(ishuman(L))
-				var/mob/living/carbon/human/H = L
-				var/obj/item/melee/umbrella/U = L.get_active_hand()
-				if(!istype(U) || !U.open)
-					U = L.get_inactive_hand()
-
-				if(istype(U) && U.open)
-					if(show_message)
-						to_chat(L, span_notice("The rain pushes the umbrella off your hands!"))
-						H.drop_both_hands()
-
-			var/target_zone = pick(BP_ALL)
-			var/amount_blocked = L.run_armor_check(target_zone, "melee")
-			var/amount_soaked = L.get_armor_soak(target_zone, "melee")
-
-			var/damage = rand(10,30) //Ow
-
-			if(amount_blocked >= 30)
-				continue
-
-			if(amount_soaked >= damage)
-				continue // No need to apply damage.
-
-			L.apply_damage(damage, BRUTE, target_zone, amount_blocked, amount_soaked, used_weapon = "rain bludgoning")
-			L.Weaken(3)
-			if(show_message)
-				to_chat(L, effect_message)
-
-
 	handle_lightning()
 
 // This gets called to do lightning periodically.
@@ -761,8 +759,8 @@ var/datum/planet/thor/planet_thor = null
 	name = "deep ocean"
 	alpha = 0
 
-/obj/machinery/power/smes/buildable/offmap_spawn/empty/New()
-	..(1)
+/obj/machinery/power/smes/buildable/offmap_spawn/empty/Initialize(mapload)
+	. = ..()
 	charge = 0
 	RCon = TRUE
 	input_level = input_level_max

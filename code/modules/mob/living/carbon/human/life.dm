@@ -1293,7 +1293,7 @@
 	else				//ALIVE. LIGHTS ARE ON
 		updatehealth()	//TODO
 
-		if(health <= CONFIG_GET(number/health_threshold_dead) || (should_have_organ("brain") && !has_brain()))
+		if(health <= CONFIG_GET(number/health_threshold_dead) || (should_have_organ(O_BRAIN) && !has_brain()))
 			death()
 			blinded = 1
 			silent = 0
@@ -1321,7 +1321,7 @@
 				qdel(a)
 
 		//Brain damage from Oxyloss
-		if(should_have_organ("brain"))
+		if(should_have_organ(O_BRAIN))
 			var/brainOxPercent = 0.015		//Default 1.5% of your current oxyloss is applied as brain damage, 50 oxyloss is 1 brain damage
 			if(CE_STABLE in chem_effects)
 				brainOxPercent = 0.008		//Halved in effect
@@ -1746,7 +1746,7 @@
 
 		if(seer==1)
 			var/obj/effect/rune/R = locate() in loc
-			if(R && R.word1 == cultwords["see"] && R.word2 == cultwords["hell"] && R.word3 == cultwords["join"])
+			if(R && R.word1 == GLOB.cultwords["see"] && R.word2 == GLOB.cultwords["hell"] && R.word3 == GLOB.cultwords["join"])
 				see_invisible = SEE_INVISIBLE_CULT
 			else
 				see_invisible = see_invisible_default
@@ -1872,10 +1872,10 @@
 			/* CHOMPEdit Start
 			if(text2num(time2text(world.timeofday, "MM")) == 4)
 				if(text2num(time2text(world.timeofday, "DD")) == 1)
-					playsound_local(src,pick(scawwySownds),50, 0)
+					playsound_local(src,pick(GLOB.scawwySownds),50, 0)
 					return
 			*/ // CHOMPedit End
-			playsound_local(src,pick(scarySounds),50, 1, -1)
+			playsound_local(src,pick(GLOB.scarySounds),50, 1, -1)
 
 /mob/living/carbon/human/proc/handle_changeling()
 	if(mind && mind.changeling)
@@ -2181,9 +2181,9 @@
 			if(I)
 				perpname = I.registered_name
 
-		for(var/datum/data/record/E in data_core.general)
+		for(var/datum/data/record/E in GLOB.data_core.general)
 			if(E.fields["name"] == perpname)
-				for (var/datum/data/record/R in data_core.security)
+				for (var/datum/data/record/R in GLOB.data_core.security)
 					if((R.fields["id"] == E.fields["id"]) && (R.fields["criminal"] == "*Arrest*"))
 						holder.icon_state = "hudwanted"
 						break
@@ -2230,8 +2230,8 @@
 		var/image/holder = grab_hud(SPECIALROLE_HUD)
 		holder.icon_state = "hudblank"
 		if(mind && mind.special_role)
-			if(hud_icon_reference[mind.special_role])
-				holder.icon_state = hud_icon_reference[mind.special_role]
+			if(GLOB.hud_icon_reference[mind.special_role])
+				holder.icon_state = GLOB.hud_icon_reference[mind.special_role]
 			else
 				holder.icon_state = "hudsyndicate"
 		apply_hud(SPECIALROLE_HUD, holder)

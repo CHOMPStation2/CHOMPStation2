@@ -92,6 +92,7 @@
 // Other parameters are passed from New (excluding loc), this does not happen if mapload is TRUE
 // Must return an Initialize hint. Defined in code/__defines/subsystems.dm
 /atom/proc/Initialize(mapload, ...)
+	SHOULD_CALL_PARENT(TRUE)
 	if(QDELETED(src))
 		stack_trace("GC: -- [type] had initialize() called after qdel() --")
 	if(flags & ATOM_INITIALIZED)
@@ -508,12 +509,12 @@
 	R.reagents.splash(src, 1)
 
 /atom/proc/get_global_map_pos()
-	if(!islist(global_map) || isemptylist(global_map)) return
+	if(!islist(GLOB.global_map) || isemptylist(GLOB.global_map)) return
 	var/cur_x = null
 	var/cur_y = null
 	var/list/y_arr = null
-	for(cur_x=1,cur_x<=global_map.len,cur_x++)
-		y_arr = global_map[cur_x]
+	for(cur_x = 1, cur_x <= GLOB.global_map.len, cur_x++)
+		y_arr = GLOB.global_map[cur_x]
 		cur_y = y_arr.Find(src.z)
 		if(cur_y)
 			break

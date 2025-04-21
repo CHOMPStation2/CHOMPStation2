@@ -4516,7 +4516,7 @@
 /turf/simulated/floor/tiled/white,
 /area/awaymission/diescraper/indoors/floor9)
 "nF" = (
-/obj/item/toy/plushie/red_eastdragon{
+/obj/item/toy/plushie/dragon/red_east{
 	desc = "This plushie looks like a doofus."
 	},
 /turf/simulated/floor/carpet/purple,

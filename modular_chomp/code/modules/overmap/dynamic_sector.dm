@@ -194,7 +194,7 @@ GLOBAL_VAR_INIT(dynamic_sector_master, null)
 			my_index = i
 			parent.active_pois[i] = src
 			map_z[1] = parent.map_z[i]
-			map_sectors["[parent.map_z[i]]"] = src // Pass ownership of z-level to child, probably hacky and terribad, also mandatory for using forceMove() on shuttle landmarks
+			GLOB.map_sectors["[parent.map_z[i]]"] = src // Pass ownership of z-level to child, probably hacky and terribad, also mandatory for using forceMove() on shuttle landmarks
 			break // Terminate loop
 	if(!my_index) // No z-levels available
 		var/confirm = tgui_alert(user, "\[REDACTED\] matrix at capacity; a bluespace link must be permanently severed to stabilize this anomaly. Continue?", "Are you sure?", list("No", "Yes"))
@@ -204,7 +204,7 @@ GLOBAL_VAR_INIT(dynamic_sector_master, null)
 		if(my_index)
 			parent.active_pois[my_index] = src
 			map_z[1] = parent.map_z[my_index]
-			map_sectors["[parent.map_z[my_index]]"] = src
+			GLOB.map_sectors["[parent.map_z[my_index]]"] = src
 		else // Something went wrong, ideally due to all relevant z-levels containing players.
 			to_chat(user, "Unable to sever any bluespace link. All links likely contain living realspace entities.")
 			return
@@ -251,7 +251,7 @@ GLOBAL_VAR_INIT(dynamic_sector_master, null)
 		qdel(src)
 		return
 
-	map_sectors["[parent.map_z[my_index]]"] = parent // Pass ownership back to parent.
+	GLOB.map_sectors["[parent.map_z[my_index]]"] = parent // Pass ownership back to parent.
 	parent.active_pois[my_index] = null
 	if(!LAZYLEN(map_z)) // If this is 0, how did we get this far?
 		log_and_message_admins("Dynamic overmap POI attempted to unload without a linked z-level.")
@@ -292,7 +292,7 @@ GLOBAL_VAR_INIT(dynamic_sector_master, null)
 			destroy_poi()
 		else
 			if(parent && (parent.active_pois.len >= my_index) && (parent.map_z.len >= my_index) && (my_index > 0)) // Unless vars are turbofucked.
-				map_sectors["[parent.map_z[my_index]]"] = parent
+				GLOB.map_sectors["[parent.map_z[my_index]]"] = parent
 				parent.active_pois[my_index] = null
 	if(parent)
 		parent.all_children.Remove(src)
@@ -305,7 +305,7 @@ GLOBAL_VAR_INIT(dynamic_sector_master, null)
 // Make sure we reassign our z_level to the parent if one exists and somehow this gets called.
 /obj/effect/overmap/visitable/dynamic/poi/unregister_z_levels()
 	if(parent && LAZYLEN(map_z))
-		map_sectors["[map_z[1]]"] = parent
+		GLOB.map_sectors["[map_z[1]]"] = parent
 		map_z = null
 	return ..()
 

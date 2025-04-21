@@ -94,3 +94,27 @@
 #undef TURFPACK_N2
 #undef TURFPACK_PHORON
 #undef TURFPACK_CO2
+
+// THOR ATMOS
+#define TURFPACK_PACKNAME thor
+#define TURFPACK_TEMP THOR_AVG_TEMP
+#define TURFPACK_O2 THOR_MOL_O2
+#define TURFPACK_N2 THOR_MOL_N2
+#define TURFPACK_PHORON 0
+#define TURFPACK_CO2 THOR_MOL_CO2
+
+#include "packs_sim/turfpacks_sim_tiled.dm"
+#include "packs_sim/turfpacks_sim_outdoors.dm"
+#include "packs_sim/turfpacks_sim_walls.dm"
+#include "packs_sim/turfpacks_sim_special.dm"
+#include "packs_unsim/turfpacks_unsim_tiled.dm"
+#include "packs_unsim/turfpacks_unsim_outdoors.dm"
+#include "packs_unsim/turfpacks_unsim_walls.dm"
+#include "packs_unsim/turfpacks_unsim_special.dm"
+
+#undef TURFPACK_PACKNAME
+#undef TURFPACK_TEMP
+#undef TURFPACK_O2
+#undef TURFPACK_N2
+#undef TURFPACK_PHORON
+#undef TURFPACK_CO2
