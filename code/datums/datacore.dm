@@ -1,6 +1,6 @@
 
 /hook/startup/proc/createDatacore()
-	data_core = new /datum/datacore()
+	GLOB.data_core = new /datum/datacore()
 	return 1
 
 /datum/datacore
@@ -45,7 +45,7 @@
 	"} //Also a chompstation edit with the snowflake stuff on line 43
 	var/even = 0
 	// sort mobs
-	for(var/datum/data/record/t in data_core.general)
+	for(var/datum/data/record/t in GLOB.data_core.general)
 		var/name = t.fields["name"]
 		var/rank = t.fields["rank"]
 		var/real_rank = make_list_rank(t.fields["real_rank"])
@@ -207,7 +207,7 @@ GLOBAL_LIST_EMPTY(PDA_Manifest)
 	var/list/civ = list()
 	var/list/bot = list()
 	var/list/misc = list()
-	for(var/datum/data/record/t in data_core.general)
+	for(var/datum/data/record/t in GLOB.data_core.general)
 		var/name = sanitize(t.fields["name"])
 		var/rank = sanitize(t.fields["rank"])
 		var/real_rank = make_list_rank(t.fields["real_rank"])
@@ -307,7 +307,7 @@ GLOBAL_LIST_EMPTY(PDA_Manifest)
 	var/datum/data/record/foundrecord
 	var/real_title = assignment
 
-	for(var/datum/data/record/t in data_core.general)
+	for(var/datum/data/record/t in GLOB.data_core.general)
 		if (t)
 			if(t.fields["name"] == name)
 				foundrecord = t
@@ -540,13 +540,13 @@ GLOBAL_LIST_EMPTY(PDA_Manifest)
 		GLOB.PDA_Manifest.Cut()
 
 /proc/find_general_record(field, value)
-	return find_record(field, value, data_core.general)
+	return find_record(field, value, GLOB.data_core.general)
 
 /proc/find_medical_record(field, value)
-	return find_record(field, value, data_core.medical)
+	return find_record(field, value, GLOB.data_core.medical)
 
 /proc/find_security_record(field, value)
-	return find_record(field, value, data_core.security)
+	return find_record(field, value, GLOB.data_core.security)
 
 /proc/find_record(field, value, list/L)
 	for(var/datum/data/record/R in L)

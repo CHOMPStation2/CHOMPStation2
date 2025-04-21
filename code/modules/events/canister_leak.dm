@@ -6,8 +6,13 @@
 /datum/event/canister_leak/start()
 	// List of all non-destroyed canisters on station levels
 	var/list/all_canisters = list()
+<<<<<<< HEAD
 	for(var/obj/machinery/portable_atmospherics/canister/C in machines)
 		if(!C.destroyed && (C.z in using_map.station_levels) && C.air_contents.total_moles >= MOLES_CELLSTANDARD && !C.dont_burst)	//CHOMPEdit
+=======
+	for(var/obj/machinery/portable_atmospherics/canister/C in GLOB.machines)
+		if(!C.destroyed && (C.z in using_map.station_levels) && C.air_contents.total_moles >= MOLES_CELLSTANDARD)
+>>>>>>> 28e969778c (code/global.dm => code/_global_vars/ (#17244))
 			all_canisters += C
 
 	for(var/i in 1 to 10)

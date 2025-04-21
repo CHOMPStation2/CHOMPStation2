@@ -198,11 +198,17 @@
 	//Affect nearby lights
 	var/destroy_lights = 0
 
+<<<<<<< HEAD
 	//CHOMPEdit Start - Add back light destruction & gentle phasing (Port upstream but replace with my variable toggle for full 100% control over chance, color, etc ~Diana)
 	if(SK.get_shadekin_eyecolor(src) == RED_EYES)
 		destroy_lights = 80
 	else if(SK.get_shadekin_eyecolor(src) == PURPLE_EYES)
 		destroy_lights = 25
+=======
+	for(var/obj/machinery/light/L in GLOB.machines)
+		if(L.z != z || get_dist(src,L) > 10)
+			continue
+>>>>>>> 28e969778c (code/global.dm => code/_global_vars/ (#17244))
 
 	// Add gentle phasing
 	if(SK.phase_gentle) // gentle case: No light destruction. Flicker in 4 tile radius once.
