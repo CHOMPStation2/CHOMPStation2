@@ -186,37 +186,38 @@ GLOBAL_VAR_INIT(message_delay, 0) // To make sure restarting the recentmessages 
 		signal.data["level"] = map_levels
 
 		if(signal.data["slow"] > 0)
-			sleep(signal.data["slow"]) // simulate the network lag if necessary
+			addtimer(CALLBACK(src, PROC_REF(broadcast_signal), signal), signal.data["slow"], TIMER_DELETE_ME)
 
-		/* ###### Broadcast a message using signal.data ###### */
 
-		var/datum/radio_frequency/connection = signal.data["connection"]
+/obj/machinery/telecomms/allinone/proc/broadcast_signal(datum/signal/signal)
+	/* ###### Broadcast a message using signal.data ###### */
+	var/datum/radio_frequency/connection = signal.data["connection"]
 
-		var/list/forced_radios
-		for(var/datum/weakref/wr in linked_radios_weakrefs)
-			var/obj/item/radio/R = wr.resolve()
-			if(istype(R))
-				LAZYDISTINCTADD(forced_radios, R)
+	var/list/forced_radios
+	for(var/datum/weakref/wr in linked_radios_weakrefs)
+		var/obj/item/radio/R = wr.resolve()
+		if(istype(R))
+			LAZYDISTINCTADD(forced_radios, R)
 
-		Broadcast_Message(
-			signal.data["connection"],
-			signal.data["mob"],
-			signal.data["vmask"],
-			signal.data["vmessage"],
-			signal.data["radio"],
-			signal.data["message"],
-			signal.data["name"],
-			signal.data["job"],
-			signal.data["realname"],
-			signal.data["vname"],
-			DATA_NORMAL,
-			signal.data["compression"],
-			signal.data["level"],
-			connection.frequency,
-			signal.data["verb"],
-			signal.data["language"],
-			forced_radios
-		)
+	Broadcast_Message(
+		signal.data["connection"],
+		signal.data["mob"],
+		signal.data["vmask"],
+		signal.data["vmessage"],
+		signal.data["radio"],
+		signal.data["message"],
+		signal.data["name"],
+		signal.data["job"],
+		signal.data["realname"],
+		signal.data["vname"],
+		DATA_NORMAL,
+		signal.data["compression"],
+		signal.data["level"],
+		connection.frequency,
+		signal.data["verb"],
+		signal.data["language"],
+		forced_radios
+	)
 
 //Antag version with unlimited range (doesn't even check) and uses no power, to enable antag comms to work anywhere.
 /obj/machinery/telecomms/allinone/antag
@@ -244,35 +245,37 @@ GLOBAL_VAR_INIT(message_delay, 0) // To make sure restarting the recentmessages 
 		//signal.data["level"] = using_map.contact_levels.Copy()
 
 		if(signal.data["slow"] > 0)
-			sleep(signal.data["slow"]) // simulate the network lag if necessary
+			addtimer(CALLBACK(src, PROC_REF(broadcast_signal), signal), signal.data["slow"], TIMER_DELETE_ME)
 
-		/* ###### Broadcast a message using signal.data ###### */
+/obj/machinery/telecomms/allinone/antag/broadcast_signal(datum/signal/signal)
+	/* ###### Broadcast a message using signal.data ###### */
 
-		var/datum/radio_frequency/connection = signal.data["connection"]
+	var/datum/radio_frequency/connection = signal.data["connection"]
 
-		var/list/forced_radios
-		for(var/datum/weakref/wr in linked_radios_weakrefs)
-			var/obj/item/radio/R = wr.resolve()
-			if(istype(R))
-				LAZYDISTINCTADD(forced_radios, R)
+	var/list/forced_radios
+	for(var/datum/weakref/wr in linked_radios_weakrefs)
+		var/obj/item/radio/R = wr.resolve()
+		if(istype(R))
+			LAZYDISTINCTADD(forced_radios, R)
 
-		if(connection.frequency in ANTAG_FREQS) // if antag broadcast, just
+	if(connection.frequency in ANTAG_FREQS) // if antag broadcast, just
+		Broadcast_Message(signal.data["connection"], signal.data["mob"],
+							signal.data["vmask"], signal.data["vmessage"],
+							signal.data["radio"], signal.data["message"],
+							signal.data["name"], signal.data["job"],
+							signal.data["realname"], signal.data["vname"], DATA_NORMAL,
+							signal.data["compression"], list(0), connection.frequency,
+							signal.data["verb"], forced_radios)
+	else
+		if(intercept)
 			Broadcast_Message(signal.data["connection"], signal.data["mob"],
-							  signal.data["vmask"], signal.data["vmessage"],
-							  signal.data["radio"], signal.data["message"],
-							  signal.data["name"], signal.data["job"],
-							  signal.data["realname"], signal.data["vname"], DATA_NORMAL,
-							  signal.data["compression"], list(0), connection.frequency,
-							  signal.data["verb"], forced_radios)
-		else
-			if(intercept)
-				Broadcast_Message(signal.data["connection"], signal.data["mob"],
-							  signal.data["vmask"], signal.data["vmessage"],
-							  signal.data["radio"], signal.data["message"],
-							  signal.data["name"], signal.data["job"],
-							  signal.data["realname"], signal.data["vname"], DATA_ANTAG,
-							  signal.data["compression"], list(0), connection.frequency,
-							  signal.data["verb"], forced_radios)
+							signal.data["vmask"], signal.data["vmessage"],
+							signal.data["radio"], signal.data["message"],
+							signal.data["name"], signal.data["job"],
+							signal.data["realname"], signal.data["vname"], DATA_ANTAG,
+							signal.data["compression"], list(0), connection.frequency,
+							signal.data["verb"], forced_radios)
+
 
 /**
 
