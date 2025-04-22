@@ -138,11 +138,7 @@ GLOBAL_VAR_INIT(message_delay, 0) // To make sure restarting the recentmessages 
 	machinetype = 6
 	produces_heat = 0
 	var/intercept = 0 // if nonzero, broadcasts all messages to syndicate channel
-<<<<<<< HEAD
-	var/overmap_range = 0 //Same turf //CHOMP Edit: Reverted range from 1 to 0 because I think this is causing double speak somehow over comms.
-=======
 	var/overmap_range = 0
->>>>>>> 9e728a6099 (Removes more sleeps in the code (#17572))
 
 	var/list/linked_radios_weakrefs = list()
 
