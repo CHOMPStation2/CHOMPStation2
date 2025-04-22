@@ -41,6 +41,13 @@ var/obj/effect/lobby_image = new /obj/effect/lobby_image
 		mind.active = 1
 		mind.current = src
 
+	//CHOMPEdit Begin
+	if(length(GLOB.newplayer_start))
+		forceMove(pick(GLOB.newplayer_start))
+	else
+		forceMove(locate(1,1,1))
+	//CHOMPEdit End
+
 	//loc = null CHOMPEdit Removal
 	//client.screen += lobby_image CHOMPEdit Removal
 	my_client = client

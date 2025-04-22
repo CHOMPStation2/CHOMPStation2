@@ -25,13 +25,6 @@
 /mob/new_player/Initialize(mapload)
 	. = ..()
 	add_verb(src, /mob/proc/insidePanel)
-	//CHOMPEdit Begin
-	if(length(GLOB.newplayer_start))
-		forceMove(pick(GLOB.newplayer_start))
-	else
-		forceMove(locate(1,1,1))
-	//CHOMPEdit End
-
 
 /mob/new_player/Destroy()
 	if(panel)
