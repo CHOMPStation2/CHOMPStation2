@@ -2,14 +2,14 @@
 "am" = (
 /obj/random/obstruction,
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/wood/broken,
+/turf/simulated/floor/wood/broken/turfpack/sif,
 /area/submap/FrostOasis)
 "bB" = (
 /obj/structure/closet/cabinet,
 /obj/item/stolenpackage,
 /obj/item/stolenpackage,
 /obj/item/storage/belt/holding,
-/turf/simulated/floor/wood,
+/turf/simulated/floor/wood/turfpack/sif,
 /area/submap/FrostOasis)
 "cm" = (
 /obj/effect/decal/cleanable/dirt,
@@ -27,9 +27,7 @@
 "fh" = (
 /obj/effect/floor_decal/stairs/wood_stairs,
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/outdoors/dirt{
-	outdoors = 0
-	},
+/turf/simulated/floor/wood/turfpack/sif,
 /area/submap/FrostOasis)
 "fj" = (
 /turf/simulated/floor/outdoors/ice,
@@ -51,7 +49,7 @@
 /obj/item/flame/candle/candelabra/everburn{
 	pixel_y = 7
 	},
-/turf/simulated/floor/wood/broken,
+/turf/simulated/floor/wood/broken/turfpack/sif,
 /area/submap/FrostOasis)
 "jN" = (
 /mob/living/simple_mob/animal/sif/glitterfly{
@@ -63,7 +61,7 @@
 "kr" = (
 /obj/item/a_gift,
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/wood,
+/turf/simulated/floor/wood/turfpack/sif,
 /area/submap/FrostOasis)
 "ll" = (
 /obj/random/obstruction,
@@ -135,7 +133,7 @@
 "tv" = (
 /obj/item/a_gift,
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/wood/broken,
+/turf/simulated/floor/wood/broken/turfpack/sif,
 /area/submap/FrostOasis)
 "tT" = (
 /obj/effect/landmark/loot_spawn,
@@ -156,7 +154,7 @@
 "vK" = (
 /obj/item/a_gift,
 /obj/item/clothing/ears/earring/dangle/glass,
-/turf/simulated/floor/wood,
+/turf/simulated/floor/wood/turfpack/sif,
 /area/submap/FrostOasis)
 "xI" = (
 /turf/simulated/floor/outdoors/dirt{
@@ -168,7 +166,7 @@
 /turf/simulated/floor/outdoors/snow,
 /area/submap/FrostOasis)
 "zI" = (
-/turf/simulated/wall/sifwood,
+/turf/simulated/wall/sifwood/turfpack/sif,
 /area/submap/FrostOasis)
 "Aj" = (
 /mob/living/simple_mob/animal/sif/savik{
@@ -191,7 +189,7 @@
 "EW" = (
 /obj/structure/table/standard,
 /obj/item/gift,
-/turf/simulated/floor/wood/broken,
+/turf/simulated/floor/wood/broken/turfpack/sif,
 /area/submap/FrostOasis)
 "Fl" = (
 /obj/structure/curtain/open/bed,
@@ -209,7 +207,7 @@
 /obj/structure/window/reinforced/tinted/frosted{
 	dir = 4
 	},
-/turf/simulated/floor/wood/broken,
+/turf/simulated/floor/wood/broken/turfpack/sif,
 /area/submap/FrostOasis)
 "It" = (
 /obj/effect/decal/cleanable/dirt,
@@ -222,7 +220,7 @@
 /obj/item/a_gift,
 /obj/random/junk,
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/wood,
+/turf/simulated/floor/wood/turfpack/sif,
 /area/submap/FrostOasis)
 "Ka" = (
 /obj/random/obstruction,
@@ -283,7 +281,7 @@
 /obj/structure/table/bench/padded,
 /obj/random/junk,
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/wood,
+/turf/simulated/floor/wood/turfpack/sif,
 /area/submap/FrostOasis)
 "TD" = (
 /obj/structure/flora/tree/winter,
@@ -297,13 +295,11 @@
 /area/submap/FrostOasis)
 "Vz" = (
 /obj/random/obstruction,
-/turf/simulated/floor/wood/broken,
+/turf/simulated/floor/wood/broken/turfpack/sif,
 /area/submap/FrostOasis)
 "Wk" = (
 /obj/effect/floor_decal/stairs/wood_stairs,
-/turf/simulated/floor/outdoors/dirt{
-	outdoors = 0
-	},
+/turf/simulated/floor/wood/turfpack/sif,
 /area/submap/FrostOasis)
 "Xf" = (
 /obj/effect/decal/cleanable/dirt,
@@ -316,7 +312,7 @@
 	faction = "diyaab"
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/wood/broken,
+/turf/simulated/floor/wood/broken/turfpack/sif,
 /area/submap/FrostOasis)
 "ZD" = (
 /obj/structure/flora/grass/brown,
