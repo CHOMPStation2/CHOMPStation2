@@ -103,8 +103,8 @@
 	selection_color = "#999440"
 	economic_modifier = 6
 	pto_type = PTO_EXPLORATION
-	access = list(access_explorer, access_external_airlocks, access_eva)
-	minimal_access = list(access_explorer, access_external_airlocks, access_eva)
+	access = list(access_explorer, access_external_airlocks, access_eva, access_pilot)
+	minimal_access = list(access_explorer, access_external_airlocks, access_eva, access_pilot)
 	outfit_type = /decl/hierarchy/outfit/job/explorer2
 	job_description = "An " + JOB_EXPLORER + " searches for interesting things, and returns them to the station."
 	alt_titles = list(JOB_ALT_SURVEYOR = /datum/alt_title/surveyor, JOB_ALT_OFFSITE_SCOUT = /datum/alt_title/offsite_scout)
