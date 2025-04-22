@@ -138,7 +138,7 @@ GLOBAL_VAR_INIT(message_delay, 0) // To make sure restarting the recentmessages 
 	machinetype = 6
 	produces_heat = 0
 	var/intercept = 0 // if nonzero, broadcasts all messages to syndicate channel
-	var/overmap_range = 0 //Same turf //CHOMP Edit: Reverted range from 1 to 0 because I think this is causing double speak somehow over comms.
+	var/overmap_range = 0
 
 	var/list/linked_radios_weakrefs = list()
 
@@ -417,11 +417,9 @@ GLOBAL_VAR_INIT(message_delay, 0) // To make sure restarting the recentmessages 
 		if(data == DATA_ANTAG && isobserver(R) && R.client?.prefs?.read_preference(/datum/preference/toggle/ghost_radio))
 			continue
 
-		// ChompEDIT START - Ghost blacklist for certain spammy radio channels
-		var/list/ghostradio_freq_blacklist = list(ENT_FREQ, BDCM_FREQ)
+		var/list/ghostradio_freq_blacklist = list(ENT_FREQ, BDCM_FREQ) //Kept for Downstream use //CHOMPEdit - Enable BDCM_FREQ
 		if(istype(R, /mob/observer/dead) && R.client?.prefs?.read_preference(/datum/preference/toggle/ghost_radio) && (connection.frequency in ghostradio_freq_blacklist))
 			continue
-		// ChompEDIT END
 
 		// --- Check for compression ---
 		if(compression > 0)
