@@ -425,6 +425,7 @@
 #include "code\controllers\subsystems\planets.dm"
 #include "code\controllers\subsystems\plants.dm"
 #include "code\controllers\subsystems\player_tips.dm"
+#include "code\controllers\subsystems\pois.dm"
 #include "code\controllers\subsystems\radiation.dm"
 #include "code\controllers\subsystems\reflect_ch.dm"
 #include "code\controllers\subsystems\robot_sprites.dm"
