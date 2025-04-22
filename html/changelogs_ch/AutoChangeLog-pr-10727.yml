@@ -1,0 +1,4 @@
+author: "Cerami"
+delete-after: True
+changes:
+  - bugfix: "Change how Dark Respite chooses locations to send kin."
