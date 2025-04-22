@@ -322,3 +322,8 @@ modular computers
 	display_name = "blood bag (Randomized)"
 	path = /obj/item/reagent_containers/blood/random_bloodsucker
 	cost = 1
+
+/datum/gear/utility/allergypen //For people with allergies
+	display_name = "AllergyPen"
+	path = /obj/item/reagent_containers/hypospray/autoinjector/allergen
+	cost = 1
