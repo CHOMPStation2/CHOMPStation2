@@ -1,71 +1,58 @@
-//Unfiying spider health, into two catagories. Disrupters and tanks.
-/mob/living/simple_mob/animal/giant_spider/carrier //Disrupter, old 100
+//Now that players will get less overpowered weapons, let mobs have lower HP to compensate. Assume a player has a 10 shot laser rifle doing 40 damage, or a 20 shot smg that does 20
+/mob/living/simple_mob/animal/giant_spider/carrier
 	maxHealth = 60
-	health = 60
-	//melee_damage_lower = 4
-	//melee_damage_upper = 12
 
-/mob/living/simple_mob/animal/giant_spider/electric //disrupter, old 210
+/mob/living/simple_mob/animal/giant_spider/electric
 	maxHealth = 60
 	health = 60
 	projectiletype = /obj/item/projectile/energy/mob/electric_spider
-	//melee_damage_lower = 5
-	//melee_damage_upper = 12
-/*
+
 /mob/living/simple_mob/animal/giant_spider/frost //tank, old 175
-	maxHealth = 60
-	health = 60
+	maxHealth = 75
+	health = 75
 
 /mob/living/simple_mob/animal/giant_spider //tank, old 200
-	maxHealth = 60
-	health = 60
-	melee_damage_lower = 9
-	melee_damage_upper = 15
+	maxHealth = 80
+	health = 80
 
 /mob/living/simple_mob/animal/giant_spider/ion //disrupter, old 90
-	maxHealth = 30
-	health = 30
+	maxHealth = 45
+	health = 45
 
 /mob/living/simple_mob/animal/giant_spider/hunter //disrupter, old 120
-	maxHealth = 30
-	health = 30
+	maxHealth = 40
+	health = 40
 
 /mob/living/simple_mob/animal/giant_spider/lurker //disrupter, old 100
-	maxHealth = 30
-	health = 30
+	maxHealth = 40
+	health = 40
 
 /mob/living/simple_mob/animal/giant_spider/pepper //tank, old 210
-	maxHealth = 60
-	health = 60
+	maxHealth = 80
+	health = 80
 
 /mob/living/simple_mob/animal/giant_spider/phorogenic //tank, old 225
-	maxHealth = 60
-	health = 60
-	melee_damage_lower = 12
-	melee_damage_upper = 20
+	maxHealth = 200 //Gives people a second to stand back
+	health = 200
 
 /mob/living/simple_mob/animal/giant_spider/thermic //tank, old 175
-	maxHealth = 60
-	health = 60
-	melee_damage_lower = 5
-	melee_damage_upper = 12
+	maxHealth = 75
+	health = 75
 
 /mob/living/simple_mob/animal/giant_spider/tunneler //disrupter, old 120
-	maxHealth = 30
-	health = 30
+	maxHealth = 65
+	health = 65
 
 /mob/living/simple_mob/animal/giant_spider/webslinger //disrupter, old 90
-	maxHealth = 30
-	health = 30
+	maxHealth = 40
+	health = 40
 
 /obj/effect/spider/eggcluster
 	spider_type = /obj/effect/spider/spiderling/varied
 
 /mob/living/simple_mob/animal/giant_spider/broodmother
-	maxHealth = 400
-	health = 400
-	melee_damage_lower = 12
-	melee_damage_upper = 20
+	maxHealth = 700
+	health = 700
 
 /mob/living/simple_mob/animal/giant_spider/frost/broodling
 	maxHealth = 20
@@ -115,7 +102,7 @@
 
 	melee_damage_lower = 5
 	melee_damage_upper = 10
-*/
+
 
 //Hijacking this file to make new event spiders
 
@@ -154,8 +141,8 @@
 	*/
 
 /mob/living/simple_mob/animal/giant_spider/lurker/space
-	maxHealth = 20
-	health = 20
+	maxHealth = 40
+	health = 40
 
 /mob/living/simple_mob/animal/giant_spider/nurse/space
 	name = "giant space spider"
@@ -210,14 +197,6 @@
 	min_oxy = 0
 	max_tox = 0
 	max_co2 = 0
-
-	/* Use the parent
-	maxHealth = 30
-	health = 30
-
-	melee_damage_lower = 5
-	melee_damage_upper = 10
-	*/
 
 /mob/living/simple_mob/animal/giant_spider/tunneler/cave
 	name = "cave spider"
