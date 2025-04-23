@@ -267,3 +267,14 @@
   - code_imp: Added is_mouth_covered proc
   sunofang:
   - maptweak: Carrier starts on now.
+2025-04-23:
+  CHOMPStation2StaffMirrorBot:
+  - rscadd: Added a new AllergyPen autoinjector, available via the loadout (1 point)
+      and medical vendors.
+  - balance: Reduced the plastic cost of large autoinjectors in the injector maker
+      from 1500 to 250, and smaller ones from 30 to 25.
+  Cerami:
+  - bugfix: Change how Dark Respite chooses locations to send kin.
+  - bugfix: Your loadout items won't poof
+  Kashargul:
+  - bugfix: title showing too late
