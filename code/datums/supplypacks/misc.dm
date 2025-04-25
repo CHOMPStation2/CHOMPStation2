@@ -98,12 +98,12 @@
 			/obj/item/toy/plushie/teshari/y_yw,
 			//YawnWider Add End
 			//CHOMPStation Add Start
-			/obj/item/toy/plushie/red_dragon,
-			/obj/item/toy/plushie/green_dragon,
-			/obj/item/toy/plushie/purple_dragon,
-			/obj/item/toy/plushie/white_eastdragon,
-			/obj/item/toy/plushie/red_eastdragon,
-			/obj/item/toy/plushie/green_eastdragon,
+			/obj/item/toy/plushie/dragon,
+			/obj/item/toy/plushie/dragon/green,
+			/obj/item/toy/plushie/dragon/purple,
+			/obj/item/toy/plushie/dragon/white_east,
+			/obj/item/toy/plushie/dragon/red_east,
+			/obj/item/toy/plushie/dragon/green_east,
 			/obj/item/toy/plushie/teppi,
 			/obj/item/toy/plushie/teppi/alt
 			//CHOMPStation Add End
@@ -269,11 +269,13 @@
 
 /datum/supply_pack/randomised/misc/explorer_shield
 	name = JOB_EXPLORER + " shield"
-	desc = "A pair of shields for use by away teams. Requires EVA or Pilot's access."
+	desc = "Two Physical and Two PSG shields for use by away teams. Requires EVA or Pilot's access."
 	num_contained = 2
 	contains = list(
 			/obj/item/shield/riot/explorer,
-			/obj/item/shield/riot/explorer/purple
+			/obj/item/shield/riot/explorer/purple,
+			/obj/item/personal_shield_generator/belt/melee,
+			/obj/item/personal_shield_generator/belt/mining/upgraded
 			)
 	cost = 75
 	containertype = /obj/structure/closet/crate/secure/gear

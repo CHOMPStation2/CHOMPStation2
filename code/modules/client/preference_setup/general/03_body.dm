@@ -197,7 +197,7 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 
 	character.set_gender(pref.biological_gender)
 
-	character.synthetic = pref.species == "Protean" ? all_robolimbs["protean"] : null //Clear the existing var. (unless protean, then switch it to the normal protean limb)
+	character.synthetic = pref.species == "Protean" ? GLOB.all_robolimbs["protean"] : null //Clear the existing var. (unless protean, then switch it to the normal protean limb)
 	var/list/organs_to_edit = list()
 	for (var/name in list(BP_TORSO, BP_HEAD, BP_GROIN, BP_L_ARM, BP_R_ARM, BP_L_HAND, BP_R_HAND, BP_L_LEG, BP_R_LEG, BP_L_FOOT, BP_R_FOOT))
 		var/obj/item/organ/external/O = character.organs_by_name[name]
@@ -334,16 +334,16 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 			if(ind > 1)
 				. += ", "
 
-			var/datum/robolimb/R = basic_robolimb
+			var/datum/robolimb/R = GLOB.basic_robolimb
 			var/key = pref.rlimb_data[name]
 			if(!istext(key))
 				log_debug("Bad rlimb_data for [key_name(pref.client)], [name] was set to [key]")
 				to_chat(usr, span_warning("Error loading robot limb data for `[name]`, clearing pref."))
 				pref.rlimb_data -= name
 			else
-				R = LAZYACCESS(all_robolimbs, key)
+				R = LAZYACCESS(GLOB.all_robolimbs, key)
 				if(!istype(R))
-					R = basic_robolimb
+					R = GLOB.basic_robolimb
 			. += "\t[R.company] [organ_name] prosthesis"
 		else if(status == "amputated")
 			++ind
@@ -845,7 +845,7 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 
 		// Full prosthetic bodies without a brain are borderline unkillable so make sure they have a brain to remove/destroy.
 		var/datum/species/current_species = GLOB.all_species[pref.species]
-		if(!current_species.has_organ["brain"])
+		if(!current_species.has_organ[O_BRAIN])
 			limb_selection_list -= "Full Body"
 		else if(pref.organ_data[BP_TORSO] == "cyborg")
 			limb_selection_list |= "Head"
@@ -924,8 +924,8 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 			if("Prosthesis")
 				var/tmp_species = pref.species ? pref.species : SPECIES_HUMAN
 				var/list/usable_manufacturers = list()
-				for(var/company in chargen_robolimbs)
-					var/datum/robolimb/M = chargen_robolimbs[company]
+				for(var/company in GLOB.chargen_robolimbs)
+					var/datum/robolimb/M = GLOB.chargen_robolimbs[company]
 					if(!(limb in M.parts))
 						continue
 					if(tmp_species in M.species_cannot_use)
@@ -990,7 +990,7 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 				if(pref.organ_data[BP_HEAD] != "cyborg")
 					to_chat(user, span_warning("You may only select a cybernetic or synthetic brain if you have a full prosthetic body."))
 					return
-				organ = "brain"
+				organ = O_BRAIN
 
 		var/datum/species/current_species = GLOB.all_species[pref.species]
 		var/list/organ_choices = list("Normal")

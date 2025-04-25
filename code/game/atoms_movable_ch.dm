@@ -3,7 +3,7 @@
 	var/recursive_listeners
 	var/listening_recursive = NON_LISTENING_ATOM
 
-/atom/movable/New()
+/atom/movable/Initialize(mapload)
 	. = ..()
 	if (listening_recursive)
 		set_listening(listening_recursive)

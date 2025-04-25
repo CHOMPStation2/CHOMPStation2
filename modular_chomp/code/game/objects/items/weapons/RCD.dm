@@ -752,7 +752,7 @@ rborosilicate = 12
 			var/obj/O = new the_rcd.wall_frame_type(get_step(src,direction))
 			O.dir = direction
 			if(istype(O,/obj/machinery/light))
-				O.dir = reverse_dir[O.dir]
+				O.dir = GLOB.reverse_dir[O.dir]
 				return TRUE
 			var/list/adjusts = list(
 			/obj/machinery/computer/security/telescreen/entertainment,

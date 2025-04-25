@@ -704,22 +704,22 @@
 //Aurora Goldtail
 
 /obj/item/clothing/glasses/omnihud/prescription/aurora
- 	name = "Round glasses"
- 	desc = "A pair of circular shaped prescription glasses. They seem fit for a avian head and will most likely make anyone wearing these look like a big nerd. It seems they are outfitted with a augmented reality module."
- 	icon = 'icons/vore/custom_clothes_yw.dmi'
- 	icon_state = "aurora_glasses"
- 	icon_override = 'icons/vore/custom_onmob_yw.dmi'
- 	item_state = "aurora_glasses"
+	name = "Round glasses"
+	desc = "A pair of circular shaped prescription glasses. They seem fit for a avian head and will most likely make anyone wearing these look like a big nerd. It seems they are outfitted with a augmented reality module."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "aurora_glasses"
+	icon_override = 'icons/vore/custom_onmob_yw.dmi'
+	item_state = "aurora_glasses"
 
- //Strix Hades
+//Strix Hades
 
 /obj/item/clothing/suit/storage/teshari/cloak/fluff/strix
- 	name = JOB_ALT_COLONY_DIRECTOR + " Coat"
- 	desc = "It drapes over a Avali's shoulders and closes at the neck with pockets convienently placed inside. It bears the " + JOB_ALT_COLONY_DIRECTOR + "'s colors. The name 'Strix Hades' is embroilled in gold lettering around a golden embroilled outline on the neck collar."
- 	icon = 'icons/vore/custom_clothes_yw.dmi'
- 	icon_state = "tesh_cloak_cd"
- 	icon_override = 'icons/vore/custom_clothes_yw.dmi'
- 	item_state = "tesh_cloak_cd"
+	name = JOB_ALT_COLONY_DIRECTOR + " Coat"
+	desc = "It drapes over a Avali's shoulders and closes at the neck with pockets convienently placed inside. It bears the " + JOB_ALT_COLONY_DIRECTOR + "'s colors. The name 'Strix Hades' is embroilled in gold lettering around a golden embroilled outline on the neck collar."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "tesh_cloak_cd"
+	icon_override = 'icons/vore/custom_clothes_yw.dmi'
+	item_state = "tesh_cloak_cd"
 
 /obj/item/clothing/under/teshari/undercoat/fluff/strix
 	name = JOB_ALT_COLONY_DIRECTOR + " Undercoat"
@@ -733,12 +733,12 @@
 					)
 
 /obj/item/clothing/suit/storage/teshari/cloak/fluff/strix_cco
- 	name = "Central Command Cloak"
- 	desc = "It drapes over a Avali's shoulders and closes at the neck with pockets convienently placed inside. It bears the Central Command's colors. The name 'Strix Hades' is embroilled in gold lettering around a golden embroilled outline on the neck collar."
- 	icon = 'icons/vore/custom_clothes_yw.dmi'
- 	icon_state = "tesh_cloak_cco"
- 	icon_override = 'icons/vore/custom_clothes_yw.dmi'
- 	item_state = "tesh_cloak_cco"
+	name = "Central Command Cloak"
+	desc = "It drapes over a Avali's shoulders and closes at the neck with pockets convienently placed inside. It bears the Central Command's colors. The name 'Strix Hades' is embroilled in gold lettering around a golden embroilled outline on the neck collar."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "tesh_cloak_cco"
+	icon_override = 'icons/vore/custom_clothes_yw.dmi'
+	item_state = "tesh_cloak_cco"
 
 /obj/item/clothing/under/teshari/undercoat/fluff/strix_cco
 	name = "Central Command Undercoat"
@@ -877,12 +877,12 @@
 //Kita
 
 /obj/item/clothing/suit/storage/teshari/cloak/fluff/kita
- 	name = "Magical Cloak"
- 	desc = "It drapes over a Teshari's shoulders and closes at the neck with pockets convienently placed inside. It bears magical colors."
- 	icon = 'icons/vore/custom_clothes_yw.dmi'
- 	icon_state = "tesh_cloak_kita"
- 	icon_override = 'icons/vore/custom_clothes_yw.dmi'
- 	item_state = "tesh_cloak_kita"
+	name = "Magical Cloak"
+	desc = "It drapes over a Teshari's shoulders and closes at the neck with pockets convienently placed inside. It bears magical colors."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "tesh_cloak_kita"
+	icon_override = 'icons/vore/custom_clothes_yw.dmi'
+	item_state = "tesh_cloak_kita"
 
 // ********
 // lukevale
@@ -1088,12 +1088,12 @@
 //Saroth
 
 /obj/item/clothing/suit/storage/teshari/cloak/fluff/Saroth
- 	name = "Research Director cloak"
- 	desc = "It drapes over a Teshari's shoulders and closes at the neck with pockets conveniently placed inside. This one bears the colors of the science department with additional trimming to designate it as the research director's. It has 'operty of Saroth' sewed in on the inside at the neck. The pockets seem slightly bigger on the inside than they appear on the outside."
- 	icon = 'icons/vore/custom_clothes_yw.dmi'
- 	icon_state = "tesh_cloak_saroth"
- 	icon_override = 'icons/vore/custom_clothes_yw.dmi'
- 	item_state = "tesh_cloak_saroth"
+	name = "Research Director cloak"
+	desc = "It drapes over a Teshari's shoulders and closes at the neck with pockets conveniently placed inside. This one bears the colors of the science department with additional trimming to designate it as the research director's. It has 'operty of Saroth' sewed in on the inside at the neck. The pockets seem slightly bigger on the inside than they appear on the outside."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "tesh_cloak_saroth"
+	icon_override = 'icons/vore/custom_clothes_yw.dmi'
+	item_state = "tesh_cloak_saroth"
 
 /obj/item/clothing/accessory/poncho/cloak/fluff/Jaree
 	name = "plain cloak"
@@ -1320,8 +1320,8 @@
 	slot_flags = SLOT_TIE | SLOT_OCLOTHING
 	w_class = 2
 
-/obj/item/accessory/fluff/kettek_collar/New()
-	..()
+/obj/item/accessory/fluff/kettek_collar/Initialize(mapload)
+	. = ..()
 	verbs |= /obj/item/accessory/fluff/kettek_collar/proc/change_color
 	color = get_random_colour()
 	update_icon()

@@ -73,7 +73,7 @@
 	if(blood_volume <= M.species.blood_volume*M.species.blood_level_safe)
 		bloodloss = TRUE
 
- //CHOMPedit start: Wording
+//CHOMPedit start: Wording
 	if(bleeding_external)
 		dat += span_bold("Surface Bleeding") + " - Apply bandages or administer Bicaridine.<br>"
 	if(bleeding_internal)
@@ -100,7 +100,7 @@
 		dat += span_bold("Genetic Damage") + " - Utilize cryogenic pod with appropriate chemicals (i.e. Cryoxadone) and below 70 K, or give Rezadone.<br>"
 	if(bone)
 		dat += span_bold("Bone fracture") + " - Splint damaged area. Treat with bone repair surgery or Osteodaxon after treating brute damage.<br>"
-	if(M.viruses && M.viruses.len)
+	if(M.IsInfected())
 		for(var/datum/disease/D in M.GetViruses())
 			if(D.visibility_flags & HIDDEN_SCANNER)
 				continue

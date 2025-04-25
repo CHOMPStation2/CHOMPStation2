@@ -188,10 +188,10 @@
 /obj/vehicle/train/engine/relaymove(mob/user, direction)
 	if(user != load)
 		return 0
-  // Start CHOMPStation Edit
+	// Start CHOMPStation Edit
 	if(user.paralysis || user.sleeping)
 		return 0
-  // End CHOMPStation Edit
+	// End CHOMPStation Edit
 	if(is_train_head())
 		if(direction == reverse_direction(dir) && tow)
 			return 0

@@ -119,6 +119,7 @@ GLOBAL_LIST_EMPTY(bodycamera_screens) // CHOMPEdit
 	power_change()
 
 /obj/machinery/computer/security/telescreen/entertainment/Destroy()
+	GLOB.entertainment_screens -= src
 	if(showing)
 		stop_showing()
 	vis_contents.Cut()
@@ -339,7 +340,7 @@ GLOBAL_LIST_EMPTY(bodycamera_screens) // CHOMPEdit
 	light_color = "#FAC54B"
 
 /obj/machinery/computer/security/engineering/get_default_networks()
-	. = engineering_networks.Copy()
+	. = GLOB.engineering_networks.Copy()
 
 /obj/machinery/computer/security/nuclear
 	name = "head mounted camera monitor"

@@ -4,7 +4,7 @@ import { Button, Section, Table } from 'tgui-core/components';
 
 import { SortButton } from './CharacterDirectorySortButton';
 import { getTagColor } from './constants';
-import { mobEntry } from './types';
+import type { mobEntry } from './types';
 
 export const CharacterDirectoryList = (props: {
   directory: mobEntry[];

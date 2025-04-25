@@ -22,17 +22,9 @@
 
 	var/created_for
 
-/mob/new_player/New()
-	mob_list += src
+/mob/new_player/Initialize(mapload)
+	. = ..()
 	add_verb(src, /mob/proc/insidePanel)
-	//CHOMPEdit Begin
-	if(length(GLOB.newplayer_start))
-		forceMove(pick(GLOB.newplayer_start))
-	else
-		forceMove(locate(1,1,1))
-	//CHOMPEdit End
-	flags |= ATOM_INITIALIZED // Explicitly don't use Initialize().  New players join super early and use New()
-
 
 /mob/new_player/Destroy()
 	if(panel)
@@ -118,7 +110,7 @@
 
 	output += "</div>"
 
-	if (client.prefs.lastlorenews == GLOB.news_data.newsindex)
+	if (client.prefs?.lastlorenews == GLOB.news_data.newsindex)
 		client.seen_news = 1
 
 	if(GLOB.news_data.station_newspaper && !client.seen_news && client.prefs?.read_preference(/datum/preference/toggle/show_lore_news))
@@ -136,7 +128,7 @@
 	. = ..()
 	. += ""
 
-	. += "Game Mode: [SSticker.hide_mode ? "Secret" : "[config.mode_names[master_mode]]"]"
+	. += "Game Mode: [SSticker.hide_mode ? "Secret" : "[config.mode_names[GLOB.master_mode]]"]"
 
 	// if(SSvote.mode)
 	// 	. += "Vote: [capitalize(SSvote.mode)] Time Left: [SSvote.time_remaining] s"
@@ -145,7 +137,7 @@
 		. += "Time To Start: Server Initializing"
 
 	else if(SSticker.current_state == GAME_STATE_PREGAME)
-		. += "Time To Start: [round(SSticker.pregame_timeleft,1)][round_progressing ? "" : " (DELAYED)"]"
+		. += "Time To Start: [round(SSticker.pregame_timeleft,1)][GLOB.round_progressing ? "" : " (DELAYED)"]"
 		. += "Players: [totalPlayers]"
 		. += "Players Ready: [totalPlayersReady]"
 		totalPlayers = 0
@@ -195,7 +187,6 @@
 			client.prefs.dress_preview_mob(mannequin)
 			var/mob/observer/dead/observer = new(mannequin)
 			observer.moveToNullspace() //Let's not stay in our doomed mannequin
-			qdel(mannequin) //We're not used anymore, so goodbye!
 
 			spawning = 1
 			if(client.media)
@@ -459,7 +450,6 @@
 	spawning = 1
 	close_spawn_windows()
 
-	//CHOMPEdit start - join as mob in crystal...
 	var/obj/item/itemtf = join_props["itemtf"]
 	if(itemtf && istype(itemtf, /obj/item/capture_crystal))
 		var/obj/item/capture_crystal/cryst = itemtf
@@ -483,7 +473,6 @@
 			cryst.update_icon()
 			qdel(src)
 			return
-	//CHOMPEdit end
 
 	job_master.AssignRole(src, rank, 1)
 
@@ -500,8 +489,8 @@
 	if(J.mob_type & JOB_SILICON_AI)
 
 		// IsJobAvailable for AI checks that there is an empty core available in this list
-		var/obj/structure/AIcore/deactivated/C = empty_playable_ai_cores[1]
-		empty_playable_ai_cores -= C
+		var/obj/structure/AIcore/deactivated/C = GLOB.empty_playable_ai_cores[1]
+		GLOB.empty_playable_ai_cores -= C
 
 		character.loc = C.loc
 
@@ -525,7 +514,6 @@
 
 	ticker.mode.latespawn(character)
 
-	//CHOMPEdit Begin - non-crew join don't get a message
 	if(rank == JOB_OUTSIDER)
 		log_and_message_admins("has joined the round as non-crew. (<A href='byond://?_src_=holder;[HrefToken()];adminplayerobservecoodjump=1;X=[T.x];Y=[T.y];Z=[T.z]'>JMP</a>)",character)
 		if(!(J.mob_type & JOB_SILICON))
@@ -534,12 +522,11 @@
 		log_and_message_admins("has joined the round as anomaly. (<A href='byond://?_src_=holder;[HrefToken()];adminplayerobservecoodjump=1;X=[T.x];Y=[T.y];Z=[T.z]'>JMP</a>)",character)
 		if(!(J.mob_type & JOB_SILICON))
 			ticker.minds += character.mind
-	//CHOMPEdit End
 	else if(J.mob_type & JOB_SILICON)
 		AnnounceCyborg(character, rank, join_message, announce_channel, character.z)
 	else
 		AnnounceArrival(character, rank, join_message, announce_channel, character.z)
-		data_core.manifest_inject(character)
+		GLOB.data_core.manifest_inject(character)
 		ticker.minds += character.mind//Cyborgs and AIs handle this in the transform proc.	//TODO!!!!! ~Carn
 	if(ishuman(character))
 		if(character.client.prefs.auto_backup_implant)
@@ -548,9 +535,8 @@
 			if(imp.handle_implant(character,character.zone_sel.selecting))
 				imp.post_implant(character)
 	var/gut = join_props["voreny"]
-	var/start_absorbed = join_props["absorb"] //CHOMPAdd
+	var/start_absorbed = join_props["absorb"]
 	var/mob/living/prey = join_props["prey"]
-	//CHOMPEdit Start - Item TF
 	if(itemtf && istype(itemtf, /obj/item/capture_crystal))
 		//We want to be in the crystal, not actually possessing the crystal.
 		var/obj/item/capture_crystal/cryst = itemtf
@@ -564,7 +550,6 @@
 		itemtf.trash_eatable = character.devourable
 		itemtf.unacidable = !character.digestable
 		character.forceMove(possessed_voice)
-	//CHOMPEdit End
 	else if(prey)
 		character.copy_from_prefs_vr(1,1) //Yes I know we're reloading these, shut up
 		var/obj/belly/gut_to_enter
@@ -576,20 +561,14 @@
 		tele.set_up("#00FFFF", get_turf(prey))
 		tele.start()
 		character.forceMove(get_turf(prey))
-		//CHOMPAdd Start
 		if(start_absorbed)
 			prey.absorbed = 1
-		//CHOMPAdd End
 		prey.forceMove(gut_to_enter)
 	else
 		if(gut)
-			//CHOMPAdd Start
 			if(start_absorbed)
 				character.absorbed = 1
-			//CHOMPAdd End
 			character.forceMove(gut)
-
-	character.client.init_verbs() // init verbs for the late join
 
 	character.client.init_verbs()
 	qdel(src) // Delete new_player mob
@@ -600,7 +579,7 @@
 		if(character.mind.role_alt_title)
 			rank = character.mind.role_alt_title
 		// can't use their name here, since cyborg namepicking is done post-spawn, so we'll just say "A new Cyborg has arrived"/"A new Android has arrived"/etc.
-		global_announcer.autosay("A new[rank ? " [rank]" : " visitor" ] [join_message ? join_message : "has arrived on the station"].", "Arrivals Announcement Computer", channel, zlevels)
+		GLOB.global_announcer.autosay("A new[rank ? " [rank]" : " visitor" ] [join_message ? join_message : "has arrived on the station"].", "Arrivals Announcement Computer", channel, zlevels)
 
 /mob/new_player/proc/LateChoices()
 	if(!late_choices_dialog)

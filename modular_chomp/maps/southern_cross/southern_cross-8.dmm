@@ -44,6 +44,14 @@
 	icon_state = "dark"
 	},
 /area/syndicate_station)
+"aaj" = (
+/obj/effect/landmark/darkspawn,
+/turf/simulated/floor/wood/sif,
+/area/shadekin)
+"aak" = (
+/obj/effect/landmark/darkspawn,
+/turf/simulated/floor/tiled/techmaint,
+/area/shadekin)
 "aal" = (
 /obj/machinery/vending/cigarette{
 	dir = 4
@@ -60,6 +68,10 @@
 	icon_state = "lino"
 	},
 /area/tdome/tdomeobserve)
+"aan" = (
+/obj/effect/landmark/darkspawn,
+/turf/simulated/floor,
+/area/shadekin)
 "aao" = (
 /obj/machinery/vending/coffee{
 	dir = 8
@@ -68,6 +80,11 @@
 	icon_state = "lino"
 	},
 /area/tdome/tdomeobserve)
+"aap" = (
+/obj/effect/floor_decal/milspec/monotile,
+/obj/effect/landmark/darkspawn,
+/turf/simulated/floor/tiled/steel_dirty,
+/area/shadekin)
 "aaq" = (
 /obj/machinery/vending/snack{
 	dir = 8
@@ -1670,6 +1687,7 @@
 /area/shuttle/merchant)
 "bbP" = (
 /mob/living/simple_mob/animal/sif/glitterfly/rare,
+/obj/effect/landmark/darkspawn,
 /turf/simulated/floor/outdoors/grass/heavy,
 /area/shadekin)
 "bcb" = (
@@ -49669,7 +49687,7 @@ vDP
 vDP
 bMy
 kyg
-oTO
+aak
 fqz
 lRH
 avb
@@ -59967,7 +59985,7 @@ bMy
 tLx
 bAY
 bAY
-hel
+aap
 hel
 bAY
 bAY
@@ -61289,7 +61307,7 @@ oTO
 gSa
 awS
 omL
-omL
+aaj
 qzw
 pfy
 bMy
@@ -63852,7 +63870,7 @@ qqh
 dWy
 wKW
 bMy
-rVH
+aan
 rVH
 rVH
 rVH

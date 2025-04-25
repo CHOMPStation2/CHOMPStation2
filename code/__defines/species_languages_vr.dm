@@ -20,9 +20,13 @@
 
 #define LANGUAGE_SHADEKIN "Shadekin Empathy"
 #define LANGUAGE_LLEILL "Glamour Speak"
-#define LANGUAGE_MARISH "Marish" // CHOMPedit
 
-//CHOMPedit Start - Xeno languages selectable
+#define LANGUAGE_SPARKLE "Sparkle"
+
+// CHOMPAdd Start
+#define LANGUAGE_MARISH "Marish"
+// CHOMPAdd End
+
+// Xeno languages selectable
 #define LANGUAGE_XENOLINGUA "Xenolingua"
 #define LANGUAGE_HIVEMIND "Hivemind"
-// CHOMPedit End.

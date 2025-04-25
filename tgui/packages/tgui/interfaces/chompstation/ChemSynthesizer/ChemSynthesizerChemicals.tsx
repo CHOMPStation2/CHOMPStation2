@@ -2,7 +2,7 @@ import { useBackend } from 'tgui/backend';
 import { BeakerContents } from 'tgui/interfaces/common/BeakerContents';
 import { Box, Button, Section, Stack } from 'tgui-core/components';
 
-import { Data } from './types';
+import type { Data } from './types';
 
 export const ChemSynthesizerChemicals = (props) => {
   const { act, data } = useBackend<Data>();
@@ -53,20 +53,24 @@ export const ChemSynthesizerChemicals = (props) => {
         title="Catalyst"
         minHeight="25%"
         buttons={
-          <Box>
+          <Stack>
             {!!catalyst && (
-              <Box inline color="label" mr={2}>
-                {catalystCurrentVolume} / {catalystMaxVolume} units
-              </Box>
+              <Stack.Item>
+                <Box inline color="label" mr={2}>
+                  {catalystCurrentVolume} / {catalystMaxVolume} units
+                </Box>
+              </Stack.Item>
             )}
-            <Button
-              icon="eject"
-              disabled={!catalyst || !!busy}
-              onClick={() => act('eject_catalyst')}
-            >
-              Eject
-            </Button>
-          </Box>
+            <Stack.Item>
+              <Button
+                icon="eject"
+                disabled={!catalyst || !!busy}
+                onClick={() => act('eject_catalyst')}
+              >
+                Eject
+              </Button>
+            </Stack.Item>
+          </Stack>
         }
       >
         <BeakerContents

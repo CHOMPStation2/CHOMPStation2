@@ -2,9 +2,6 @@
 "a" = (
 /turf/template_noop,
 /area/template_noop)
-"b" = (
-/turf/simulated/mineral/floor/ignore_mapgen,
-/area/template_noop)
 "c" = (
 /obj/item/ore,
 /turf/simulated/mineral/floor/ignore_mapgen,
@@ -67,7 +64,7 @@ a
 (2,1,1) = {"
 a
 a
-b
+k
 a
 a
 a
@@ -79,7 +76,7 @@ a
 (3,1,1) = {"
 a
 a
-b
+k
 k
 k
 k
@@ -91,7 +88,7 @@ a
 (4,1,1) = {"
 a
 a
-b
+k
 c
 e
 c
@@ -103,7 +100,7 @@ a
 (5,1,1) = {"
 a
 a
-b
+k
 k
 f
 e
@@ -120,15 +117,15 @@ k
 c
 h
 k
-b
+k
 a
 a
 "}
 (7,1,1) = {"
 a
 a
-b
-b
+k
+k
 k
 h
 k
@@ -139,7 +136,7 @@ a
 (8,1,1) = {"
 a
 a
-b
+k
 d
 k
 f
@@ -151,8 +148,8 @@ a
 (9,1,1) = {"
 a
 a
-b
-b
+k
+k
 k
 k
 h
@@ -163,9 +160,9 @@ a
 (10,1,1) = {"
 a
 a
-b
+k
 c
-b
+k
 k
 f
 e
@@ -175,9 +172,9 @@ a
 (11,1,1) = {"
 a
 a
-b
-b
-b
+k
+k
+k
 k
 k
 h
@@ -187,8 +184,8 @@ a
 (12,1,1) = {"
 a
 a
-b
-b
+k
+k
 d
 k
 c
@@ -199,9 +196,9 @@ a
 (13,1,1) = {"
 a
 a
-b
-b
-b
+k
+c
+k
 k
 k
 h
@@ -212,8 +209,8 @@ a
 a
 a
 a
-b
-b
+k
+k
 k
 g
 i
@@ -224,7 +221,7 @@ a
 a
 a
 a
-b
+k
 c
 k
 h
@@ -235,33 +232,33 @@ a
 (16,1,1) = {"
 a
 a
-b
-b
-b
+k
+k
+k
 k
 h
 k
-b
+k
 a
 "}
 (17,1,1) = {"
 a
 a
-b
+k
 d
-b
+k
 k
 h
 k
-b
+k
 a
 "}
 (18,1,1) = {"
 a
 a
-b
-b
-b
+k
+k
+k
 c
 h
 k
@@ -271,60 +268,60 @@ a
 (19,1,1) = {"
 a
 a
-b
-b
+k
+k
 k
 g
 i
 k
-b
+k
 a
 "}
 (20,1,1) = {"
 a
 a
-b
+k
 c
 k
 h
 k
 k
-b
+k
 a
 "}
 (21,1,1) = {"
 a
 a
-b
+k
 d
 k
 h
 k
 c
-b
+k
 a
 "}
 (22,1,1) = {"
 a
 a
-b
-b
+k
+k
 c
 h
 k
-b
+k
 a
 a
 "}
 (23,1,1) = {"
 a
 a
-b
-b
+k
+k
 g
 i
 c
-b
+k
 a
 a
 "}
@@ -336,7 +333,7 @@ k
 h
 k
 j
-b
+k
 a
 a
 "}
@@ -347,8 +344,8 @@ a
 k
 h
 k
-b
-b
+k
+k
 a
 a
 "}
@@ -359,7 +356,7 @@ a
 c
 h
 k
-b
+k
 a
 a
 a
@@ -367,11 +364,11 @@ a
 (27,1,1) = {"
 a
 a
-b
+k
 k
 i
 c
-b
+k
 a
 a
 a
@@ -379,7 +376,7 @@ a
 (28,1,1) = {"
 a
 a
-b
+k
 k
 k
 k

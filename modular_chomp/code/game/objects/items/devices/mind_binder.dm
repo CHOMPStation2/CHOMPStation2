@@ -150,7 +150,7 @@
 		to_chat(usr,span_warning("The device beeps a warning that there is already a mind loaded!"))
 		return
 
-	if(!target.mind || (target.mind.name in prevent_respawns))
+	if(!target.mind || (target.mind.name in GLOB.prevent_respawns))
 		to_chat(usr,span_warning("The device beeps a warning that the target isn't sentient."))
 		return
 

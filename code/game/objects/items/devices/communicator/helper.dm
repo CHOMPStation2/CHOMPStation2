@@ -108,7 +108,7 @@
 // Medical records
 /obj/item/commcard/proc/get_med_records()
 	var/med_records[0]
-	for(var/datum/data/record/M in sortRecord(data_core.medical))
+	for(var/datum/data/record/M in sortRecord(GLOB.data_core.medical))
 		var/record[0]
 		record[++record.len] = list("tab" = "Name", "val" = M.fields["name"])
 		record[++record.len] = list("tab" = "ID", "val" = M.fields["id"])
@@ -129,7 +129,7 @@
 // Employment records
 /obj/item/commcard/proc/get_emp_records()
 	var/emp_records[0]
-	for(var/datum/data/record/G in sortRecord(data_core.general))
+	for(var/datum/data/record/G in sortRecord(GLOB.data_core.general))
 		var/record[0]
 		record[++record.len] = list("tab" = "Name", "val" = G.fields["name"])
 		record[++record.len] = list("tab" = "ID", "val" = G.fields["id"])
@@ -148,7 +148,7 @@
 // Security records
 /obj/item/commcard/proc/get_sec_records()
 	var/sec_records[0]
-	for(var/datum/data/record/G in sortRecord(data_core.general))
+	for(var/datum/data/record/G in sortRecord(GLOB.data_core.general))
 		var/record[0]
 		record[++record.len] = list("tab" = "Name", "val" = G.fields[""])
 		record[++record.len] = list("tab" = "Sex", "val" = G.fields[""])
@@ -226,7 +226,7 @@
 	var/turf/T = get_turf(src)
 	if(T)
 		var/list/levels = using_map.get_map_levels(T.z, FALSE)
-		for(var/obj/machinery/power/sensor/S in machines)
+		for(var/obj/machinery/power/sensor/S in GLOB.machines)
 			if((S.long_range) || (S.loc.z in levels) || (S.loc.z == T.z)) // Consoles have range on their Z-Level. Sensors with long_range var will work between Z levels.
 				if(S.name_tag == "#UNKN#") // Default name. Shouldn't happen!
 					warning("Powernet sensor with unset ID Tag! [S.x]X [S.y]Y [S.z]Z")
@@ -523,7 +523,7 @@
 			"shuttle_auth" = (internal_data["supply_controls"] & SUP_SEND_SHUTTLE),
 			"order_auth" = (internal_data["supply_controls"] & SUP_ACCEPT_ORDERS),
 			"supply_points" = SSsupply.points,
-			"supply_categories" = all_supply_groups
+			"supply_categories" = GLOB.all_supply_groups
 		)
 
 /obj/item/commcard/proc/get_status_display()
@@ -537,7 +537,7 @@
 
 /obj/item/commcard/proc/find_blast_doors()
 	var/target_doors[0]
-	for(var/obj/machinery/door/blast/B in machines)
+	for(var/obj/machinery/door/blast/B in GLOB.machines)
 		if(B.id == internal_data["shuttle_door_code"])
 			target_doors += B
 

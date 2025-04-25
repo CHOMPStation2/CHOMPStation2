@@ -200,6 +200,7 @@
 		"The stinging and aching gives way to numbness as you're slowly smothered out. Your body is steadily reduced to nutrients and energy for the creature to continue on its way.",
 		"The chaos of being digested fades as you're snuffed out by a harsh clench! You're steadily broken down into a thick paste, processed and absorbed by the predator!"
 		)
+	. = ..()
 
 /mob/living/simple_mob/shadekin/Life()
 	. = ..()
@@ -267,10 +268,7 @@
 		return ..(FALSE, deathmessage)
 
 
-	var/list/floors = list()
-	for(var/turf/unsimulated/floor/dark/floor in get_area_turfs(/area/shadekin))
-		floors.Add(floor)
-	if(!LAZYLEN(floors))
+	if(!LAZYLEN(GLOB.latejoin_thedark))
 		log_and_message_admins("[src] died outside of the dark but there were no valid floors to warp to")
 		icon_state = ""
 		spawn(1 SECOND)
@@ -300,7 +298,7 @@
 		var/obj/belly/belly = src.loc
 		add_attack_logs(belly.owner, src, "Digested in [lowertext(belly.name)]")
 		to_chat(belly.owner, span_notice("\The [src.name] suddenly vanishes within your [belly.name]"))
-		forceMove(pick(floors))
+		forceMove(pick(GLOB.latejoin_thedark))
 		flick("tp_in",src)
 		respite_activating = FALSE
 		belly.owner.handle_belly_update() // CHOMPEdit
@@ -318,7 +316,7 @@
 	else
 		spawn(1 SECOND)
 			respite_activating = FALSE
-			forceMove(pick(floors))
+			forceMove(pick(GLOB.latejoin_thedark))
 			update_icon()
 			flick("tp_in",src)
 			invisibility = initial(invisibility)
@@ -486,7 +484,7 @@
 
 				//Random walk
 				if(!moving_to)
-					moving_to = pick(cardinal)
+					moving_to = pick(GLOB.cardinal)
 					dir = moving_to
 
 				var/turf/T = get_step(src,moving_to)

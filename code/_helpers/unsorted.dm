@@ -303,7 +303,7 @@ Turf and target are seperate in case you want to teleport some distance from a t
 
 	if(oldname)
 		//update the datacore records! This is goig to be a bit costly.
-		for(var/list/L in list(data_core.general,data_core.medical,data_core.security,data_core.locked))
+		for(var/list/L in list(GLOB.data_core.general, GLOB.data_core.medical, GLOB.data_core.security, GLOB.data_core.locked))
 			for(var/datum/data/record/R in L)
 				if(R.fields["name"] == oldname)
 					R.fields["name"] = newname
@@ -787,7 +787,7 @@ Turf and target are seperate in case you want to teleport some distance from a t
 					if(istype(T,/turf/simulated/shuttle))
 						shuttlework = 1
 						var/turf/simulated/shuttle/SS = T
-						if(!SS.landed_holder) SS.landed_holder = new(turf = SS)
+						if(!SS.landed_holder) SS.landed_holder = new(SS)
 						X = SS.landed_holder.land_on(B)
 
 					//Generic non-shuttle turf move.
@@ -1036,18 +1036,18 @@ Turf and target are seperate in case you want to teleport some distance from a t
 
 
 /proc/parse_zone(zone)
-	if(zone == "r_hand") return "right hand"
-	else if (zone == "l_hand") return "left hand"
-	else if (zone == "l_arm") return "left arm"
-	else if (zone == "r_arm") return "right arm"
-	else if (zone == "l_leg") return "left leg"
-	else if (zone == "r_leg") return "right leg"
-	else if (zone == "l_foot") return "left foot"
-	else if (zone == "r_foot") return "right foot"
-	else if (zone == "l_hand") return "left hand"
-	else if (zone == "r_hand") return "right hand"
-	else if (zone == "l_foot") return "left foot"
-	else if (zone == "r_foot") return "right foot"
+	if(zone == BP_R_HAND) return "right hand"
+	else if (zone == BP_L_HAND) return "left hand"
+	else if (zone == BP_L_ARM) return "left arm"
+	else if (zone == BP_R_ARM) return "right arm"
+	else if (zone == BP_L_LEG) return "left leg"
+	else if (zone == BP_R_LEG) return "right leg"
+	else if (zone == BP_L_FOOT) return "left foot"
+	else if (zone == BP_R_FOOT) return "right foot"
+	else if (zone == BP_L_HAND) return "left hand"
+	else if (zone == BP_R_HAND) return "right hand"
+	else if (zone == BP_L_FOOT) return "left foot"
+	else if (zone == BP_R_FOOT) return "right foot"
 	else return zone
 
 /proc/get(atom/loc, type)
@@ -1179,8 +1179,8 @@ var/global/list/common_tools = list(
 	if(surface)
 		return surface
 
-/proc/reverse_direction(var/dir)
-	return global.reverse_dir[dir]
+/proc/reverse_direction(dir)
+	return GLOB.reverse_dir[dir]
 
 /*
 Checks if that loc and dir has a item on the wall

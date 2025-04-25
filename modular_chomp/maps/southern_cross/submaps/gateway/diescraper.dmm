@@ -543,7 +543,7 @@
 /area/awaymission/diescraper/indoors/floor2)
 "bC" = (
 /obj/structure/table/reinforced,
-/obj/item/reagent_containers/glass/bottle/culture/cold,
+/obj/item/reagent_containers/glass/beaker/vial/culture/cold,
 /obj/item/defib_kit/loaded,
 /turf/unsimulated/floor/tiled/old_tile/blue,
 /area/awaymission/diescraper/indoors/floor8)
@@ -4516,7 +4516,7 @@
 /turf/simulated/floor/tiled/white,
 /area/awaymission/diescraper/indoors/floor9)
 "nF" = (
-/obj/item/toy/plushie/red_eastdragon{
+/obj/item/toy/plushie/dragon/red_east{
 	desc = "This plushie looks like a doofus."
 	},
 /turf/simulated/floor/carpet/purple,

@@ -53,7 +53,7 @@
  * C-20r
  */
 
- /* CHOMPedit remove: Moved to automatic_ch.dm. *
+/* CHOMPedit remove: Moved to automatic_ch.dm. *
 
 /obj/item/gun/projectile/automatic/c20r
 	name = "submachine gun"

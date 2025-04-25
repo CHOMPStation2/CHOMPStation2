@@ -1,7 +1,7 @@
 import { useBackend } from 'tgui/backend';
 import { Box, Button, LabeledList, Section, Stack } from 'tgui-core/components';
 
-import { Data } from './types';
+import type { Data } from './types';
 
 export const ChemSynthesizerQueueRecipes = (props) => {
   const { act, data } = useBackend<Data>();
@@ -21,32 +21,38 @@ export const ChemSynthesizerQueueRecipes = (props) => {
           title="Queue"
           overflowY="scroll"
           buttons={
-            <>
-              <Button
-                disabled={!!busy}
-                color={use_catalyst ? 'green' : 'bad'}
-                icon="wrench"
-                tooltip="Enable/Disable the catalyst BEFORE starting the queue."
-                onClick={() => act('toggle_catalyst')}
-              >
-                {use_catalyst ? 'Catalyst Active' : 'Catalyst Disabled'}
-              </Button>
-              <Button.Confirm
-                disabled={!queue.length}
-                color="bad"
-                icon="minus-circle"
-                tooltip="Clear Queue"
-                onClick={() => act('clear_queue')}
-              />
-              {!busy && (
+            <Stack>
+              <Stack.Item>
                 <Button
+                  disabled={!!busy}
+                  color={use_catalyst ? 'green' : 'bad'}
+                  icon="wrench"
+                  tooltip="Enable/Disable the catalyst BEFORE starting the queue."
+                  onClick={() => act('toggle_catalyst')}
+                >
+                  {use_catalyst ? 'Catalyst Active' : 'Catalyst Disabled'}
+                </Button>
+              </Stack.Item>
+              <Stack.Item>
+                <Button.Confirm
                   disabled={!queue.length}
-                  icon="play"
-                  tooltip="Start Queue"
-                  onClick={() => act('start_queue')}
+                  color="bad"
+                  icon="minus-circle"
+                  tooltip="Clear Queue"
+                  onClick={() => act('clear_queue')}
                 />
+              </Stack.Item>
+              {!busy && (
+                <Stack.Item>
+                  <Button
+                    disabled={!queue.length}
+                    icon="play"
+                    tooltip="Start Queue"
+                    onClick={() => act('start_queue')}
+                  />
+                </Stack.Item>
               )}
-            </>
+            </Stack>
           }
         >
           <LabeledList>

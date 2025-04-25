@@ -1,7 +1,7 @@
 import { Box, Button, Section, Table } from 'tgui-core/components';
 
 import { getTagColor } from './constants';
-import { mobEntry } from './types';
+import type { mobEntry } from './types';
 
 export const ViewCharacter = (props: {
   overlay: mobEntry;

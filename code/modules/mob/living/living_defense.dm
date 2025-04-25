@@ -12,7 +12,7 @@
 	A number between 0 and 100, with higher numbers resulting in less damage taken.
 */
 /mob/living/proc/run_armor_check(var/def_zone = null, var/attack_flag = "melee", var/armour_pen = 0, var/absorb_text = null, var/soften_text = null)
-	if(Debug2)
+	if(GLOB.Debug2)
 		to_world_log("## DEBUG: getarmor() was called.")
 
 	if(armour_pen >= 100)
@@ -22,7 +22,7 @@
 	if(armor)
 		var/armor_variance_range = round(armor * 0.25) //Armor's effectiveness has a +25%/-25% variance.
 		var/armor_variance = rand(-armor_variance_range, armor_variance_range) //Get a random number between -25% and +25% of the armor's base value
-		if(Debug2)
+		if(GLOB.Debug2)
 			to_world_log("## DEBUG: The range of armor variance is [armor_variance_range].  The variance picked by RNG is [armor_variance].")
 
 		armor = min(armor + armor_variance, 100)	//Now we calcuate damage using the new armor percentage.
@@ -38,7 +38,7 @@
 				to_chat(src, span_danger("[soften_text]"))
 			else
 				to_chat(src, span_danger("Your armor softens the blow!"))
-		if(Debug2)
+		if(GLOB.Debug2)
 			to_world_log("## DEBUG: Armor when [src] was attacked was [armor].")
 	return armor
 
@@ -341,7 +341,7 @@
 		// PERSON BEING HIT: CAN BE DROP PRED, ALLOWS THROW VORE.
 		// PERSON BEING THROWN: DEVOURABLE, ALLOWS THROW VORE, CAN BE DROP PREY.
 		if((can_be_drop_pred && throw_vore) && (thrown_mob.devourable && thrown_mob.throw_vore && thrown_mob.can_be_drop_prey)) //Prey thrown into pred.
-			if(!thrown_mob.allowmobvore && isanimal(src) || !vore_selected) //Does the person being thrown not allow mob vore and is the person being hit (us) a simple_mob?
+			if(!thrown_mob.allowmobvore && isanimal(src) && !ckey || !vore_selected) //Does the person being thrown not allow mob vore and is the person being hit (us) a simple_mob?
 				return
 			vore_selected.nom_mob(thrown_mob) //Eat them!!!
 			visible_message(span_vwarning("[thrown_mob] is thrown right into [src]'s [lowertext(vore_selected.name)]!"))
@@ -354,7 +354,7 @@
 		// PERSON BEING HIT: CAN BE DROP PREY, ALLOWS THROW VORE, AND IS DEVOURABLE.
 		// PERSON BEING THROWN: CAN BE DROP PRED, ALLOWS THROW VORE.
 		else if((can_be_drop_prey && throw_vore && devourable) && (thrown_mob.can_be_drop_pred && thrown_mob.throw_vore)) //Pred thrown into prey.
-			if(!allowmobvore && isanimal(thrown_mob) || !thrown_mob.vore_selected) //Does the person being hit not allow mob vore and the perrson being thrown a simple_mob?
+			if(!allowmobvore && isanimal(thrown_mob) && !thrown_mob.ckey || !thrown_mob.vore_selected) //Does the person being hit not allow mob vore and the perrson being thrown a simple_mob?
 				return
 			visible_message(span_vwarning("[src] suddenly slips inside of [thrown_mob]'s [lowertext(thrown_mob.vore_selected.name)] as [thrown_mob] flies into them!"))
 			thrown_mob.vore_selected.nom_mob(src) //Eat them!!!
@@ -621,3 +621,10 @@
 
 /mob/living/proc/restore_all_organs()
 	return
+
+/mob/living/proc/is_mouth_covered(head_only = FALSE, mask_only = FALSE)
+	return FALSE
+
+/mob/living/extrapolator_act(mob/living/user, obj/item/extrapolator/extrapolator, dry_run)
+	. = ..()
+	EXTRAPOLATOR_ACT_ADD_DISEASES(., viruses)

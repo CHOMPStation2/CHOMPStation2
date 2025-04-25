@@ -3,15 +3,14 @@
 
 //^Does the bug this comment refers to even exist anymore. idk.
 
-/obj/item/stack/tile/New()
-	..()
+/obj/item/stack/tile/Initialize(mapload)
+	. = ..()
 
 	if(!default_type)
 		default_type = DEFAULT_WALL_MATERIAL
 	material = get_material_by_name("[default_type]")
 	if(!material)
-		qdel(src)
-		return 0
+		return INITIALIZE_HINT_QDEL
 
 	//recipes = material.get_recipes()	No.
 	stacktype = material.stack_type
@@ -25,7 +24,6 @@
 		flags |= NOCONDUCT
 
 	//matter = material.get_matter()	Bad.
-	return 1
 
 
 /obj/item/stack/material/get_material()
