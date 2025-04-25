@@ -30,6 +30,26 @@
 	title = "Spacefarer"
 	title_outfit = /decl/hierarchy/outfit/noncrew/spacefarer
 
+/datum/alt_title/scavenger
+	title = "Scavenger"
+	title_outfit = /decl/hierarchy/outfit/job/assistant/entrepreneur/tradesperson // Placeholder, might do something slightly better than this later.
+
+/datum/alt_title/wildlife_hunter
+	title = "Wildlife Hunter"
+	//title_outfit = /decl/hierarchy/outfit/noncrew/wildlife_hunter // Doesn't exist yet, still working out the details.
+
+/datum/alt_title/bounty_hunter
+	title = "Bounty Hunter"
+	//title_outfit = /decl/hierarchy/outfit/noncrew/bounty_hunter // Doesn't exist yet, still working out the details.
+
+/datum/alt_title/traveling_performer
+	title = "Traveling Performer"
+	title_outfit = /decl/hierarchy/outfit/job/assistant/entertainer
+
+/datum/alt_title/sif_angler
+	title = "Sif Angler"
+	title_outfit = /decl/hierarchy/outfit/job/assistant/entrepreneur/fisher
+
 /*seems to be a kin only thing?
 /datum/job/noncrew/is_species_banned(species_name, brain_type)
 	// Any species can join as non-crew, including shadekin.
