@@ -283,3 +283,7 @@
   - balance: Mercenary firerate nerfed, some magazine sizes reduced on them,
   - balance: Sniper merc fires 1 second faster
   - balance: Spider HP massively nerfed.
+2025-04-25:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: resting causing an error
+  - code_imp: some less usr
