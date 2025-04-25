@@ -1,5 +1,5 @@
 /datum/job/noncrew
-	title = JOB_OUTSIDER
+	title = "Sif Inhabitant" //JOB_OUTSIDER
 	disallow_jobhop = TRUE
 	total_positions = 6
 	spawn_positions = 6
@@ -23,7 +23,7 @@
 		-----Outsiders are expected to behave in accordance with Unauthorized Personnel SOP regardless of their IC knowledge.
 		-----Outsiders are not allowed to log-off with station key items (e.g. Captain's spare, station blueprints, nuclear authentication disk, bluespace harpoon, large quantities of station goods, etc). Please leave these items on station or with relevant crew.
 		-----We encourage outsiders to take on exploration content as a group, staff will not help you for any hardships of solo play.
-		-----Notice: The outsider role is relatively new; if you encounter bugs, please notify a staff member and avoid using exploits."}
+		-----Notice: The outsider role is relatively unpolished; if you encounter bugs, please notify a staff member and avoid using exploits."}
 	alt_titles = list("Spacefarer" = /datum/alt_title/spacefarer)
 
 /datum/alt_title/spacefarer
