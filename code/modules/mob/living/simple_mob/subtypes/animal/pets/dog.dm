@@ -26,12 +26,18 @@
 
 	var/obj/item/inventory_head
 	var/obj/item/inventory_back
+<<<<<<< HEAD
 
 	// CHOMPAdd: :c
 	species_sounds = "Canine"
 	pain_emote_1p = list("yelp", "whine", "bark", "growl")
 	pain_emote_3p = list("yelps", "whines", "barks", "growls")
 
+=======
+	species_sounds = "Canine"
+	pain_emote_1p = list("yelp", "whine", "bark", "growl")
+	pain_emote_3p = list("yelps", "whines", "barks", "growls")
+>>>>>>> d0787362cd (Kitchen Sink PR (#17515))
 
 /mob/living/simple_mob/animal/passive/dog/attackby(var/obj/item/O as obj, var/mob/user as mob)
 	if(istype(O, /obj/item/newspaper))

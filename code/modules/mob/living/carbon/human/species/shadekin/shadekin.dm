@@ -62,12 +62,16 @@
 
 	// has_glowing_eyes = TRUE			//Applicable through neutral taits.
 
+<<<<<<< HEAD
 	//death_message = "phases to somewhere far away!" //CHOMPEdit Removed
 	// male_cough_sounds = null
 	// female_cough_sounds = null
 	// male_sneeze_sound = null
 	// female_sneeze_sound = null
 
+=======
+	death_message = "phases to somewhere far away!"
+>>>>>>> d0787362cd (Kitchen Sink PR (#17515))
 	speech_bubble_appearance = "ghost"
 
 	genders = list(MALE, FEMALE, PLURAL, NEUTER)

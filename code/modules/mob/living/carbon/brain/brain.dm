@@ -12,6 +12,9 @@
 	can_pain_emote = FALSE // CHOMPEdit: Sanity/safety
 	low_priority = TRUE //CHOMPEdit
 
+	can_pain_emote = FALSE
+	low_priority = TRUE
+
 /mob/living/carbon/brain/Initialize(mapload)
 	. = ..()
 	var/datum/reagents/R = new/datum/reagents(1000)

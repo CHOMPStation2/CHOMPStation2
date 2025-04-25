@@ -119,7 +119,11 @@
 		else
 			to_chat(user, "You press the power button and start up \the [src]")
 		enable_computer(user)
+<<<<<<< HEAD
 		playsound(src, 'modular_chomp/sound/machines/console_power_on.ogg', 60, 1, volume_channel = VOLUME_CHANNEL_MACHINERY)
+=======
+		playsound(src, 'sound/machines/console_power_on.ogg', 60, 1, volume_channel = VOLUME_CHANNEL_MACHINERY)
+>>>>>>> d0787362cd (Kitchen Sink PR (#17515))
 
 	else // Unpowered
 		if(issynth)

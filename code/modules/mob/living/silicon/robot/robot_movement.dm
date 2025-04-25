@@ -6,6 +6,7 @@
 /mob/living/silicon/robot/Check_Shoegrip()
 	return module && module.no_slip
 
+<<<<<<< HEAD
 /* CHOMPedit: Nuking slipping.
 /mob/living/silicon/robot/Process_Spaceslipping(var/prob_slip)
 	var/obj/item/tank/jetpack/thrust = get_jetpack()
@@ -16,6 +17,8 @@
 	..(prob_slip)
 */// CHOMPedit end.
 
+=======
+>>>>>>> d0787362cd (Kitchen Sink PR (#17515))
 /mob/living/silicon/robot/Process_Spacemove(var/check_drift = 0)
 	if(..())//Can move due to other reasons, don't use jetpack fuel
 		return 1
@@ -36,8 +39,13 @@
 
 	if(get_restraining_bolt())	// Borgs with Restraining Bolts move slower.
 		. += 1
+<<<<<<< HEAD
 	if(nutrition > 1000) //CHOMPAdd
 		. += nutrition / 2000 //CHOMPAdd
+=======
+	if(nutrition > 1000)
+		. += nutrition / 2000
+>>>>>>> d0787362cd (Kitchen Sink PR (#17515))
 
 	. += CONFIG_GET(number/robot_delay)
 

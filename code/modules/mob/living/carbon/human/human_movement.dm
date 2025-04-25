@@ -184,7 +184,11 @@
 	// Loop through some slots, and add up their slowdowns.
 	// Includes slots which can provide armor, the back slot, and suit storage.
 	for(var/obj/item/I in list(wear_suit, w_uniform, back, gloves, head, s_store))
+<<<<<<< HEAD
 		if(istype(I,/obj/item/rig)) //CHOMPAdd
+=======
+		if(istype(I,/obj/item/rig))
+>>>>>>> d0787362cd (Kitchen Sink PR (#17515))
 			for(var/obj/item/II in I.contents)
 				. += II.slowdown
 		. += I.slowdown
@@ -205,9 +209,14 @@
 		var/turf_move_cost = T.movement_cost
 		if(istype(T, /turf/simulated/floor/water))
 			if(species.water_movement)
+<<<<<<< HEAD
 				//turf_move_cost = CLAMP(turf_move_cost + species.water_movement, HUMAN_LOWEST_SLOWDOWN, 15) //ChompEDIT - all water is free movement for aquatics
 				turf_move_cost = 0 //ChompEDIT - all water is free movement for aquatics
 			if(istype(shoes, /obj/item/clothing/shoes))	//CHOMPEdit - Fixes runtime
+=======
+				turf_move_cost = 0
+			if(istype(shoes, /obj/item/clothing/shoes))
+>>>>>>> d0787362cd (Kitchen Sink PR (#17515))
 				var/obj/item/clothing/shoes/feet = shoes
 				if(istype(feet) && feet.water_speed)
 					turf_move_cost = CLAMP(turf_move_cost + feet.water_speed, HUMAN_LOWEST_SLOWDOWN, 15)
@@ -215,7 +224,11 @@
 		else if(istype(T, /turf/simulated/floor/outdoors/snow))
 			if(species.snow_movement)
 				turf_move_cost = CLAMP(turf_move_cost + species.snow_movement, HUMAN_LOWEST_SLOWDOWN, 15)
+<<<<<<< HEAD
 			if(istype(shoes, /obj/item/clothing/shoes))	//CHOMPEdit - Fixes runtime
+=======
+			if(istype(shoes, /obj/item/clothing/shoes))
+>>>>>>> d0787362cd (Kitchen Sink PR (#17515))
 				var/obj/item/clothing/shoes/feet = shoes
 				if(istype(feet) && feet.snow_speed)
 					turf_move_cost = CLAMP(turf_move_cost + feet.snow_speed, HUMAN_LOWEST_SLOWDOWN, 15)
@@ -274,6 +287,7 @@
 
 	return FALSE
 
+<<<<<<< HEAD
 
 /* CHOMPedit: Nuking slipping.
 /mob/living/carbon/human/Process_Spaceslipping(var/prob_slip = 5)
@@ -306,6 +320,8 @@
 	return(prob_slip)
 */// CHOMPedit end.
 
+=======
+>>>>>>> d0787362cd (Kitchen Sink PR (#17515))
 // Handle footstep sounds
 /mob/living/carbon/human/handle_footstep(var/turf/T)
 	if(shoes && loc == T && get_gravity(loc) && !flying)

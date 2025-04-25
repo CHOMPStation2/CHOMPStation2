@@ -11,13 +11,19 @@
 	if(locate(/obj/item/grab) in src)
 		. += 5
 
+<<<<<<< HEAD
 	// CHOMPAdd Start - When crawling, move slow.
+=======
+>>>>>>> d0787362cd (Kitchen Sink PR (#17515))
 	if(lying)
 		if(weakened >= 1)
 			. += 14			// Very slow when weakened.
 		else
 			. += 8
+<<<<<<< HEAD
 	// CHOMPAdd End
+=======
+>>>>>>> d0787362cd (Kitchen Sink PR (#17515))
 
 	// Movespeed delay based on movement mode
 	switch(m_intent)
@@ -252,7 +258,11 @@
 		to_chat(src, span_blue("You're pinned to a wall by [my_mob.pinned[1]]!"))
 		return 0
 
+<<<<<<< HEAD
 	var/old_delay = mob.next_move //CHOMPEdit momentum
+=======
+	var/old_delay = mob.next_move
+>>>>>>> d0787362cd (Kitchen Sink PR (#17515))
 
 	if(istype(my_mob.buckled, /obj/vehicle) || ismob(my_mob.buckled))
 		//manually set move_delay for vehicles so we don't inherit any mob movement penalties
@@ -308,7 +318,10 @@
 					direct = turn(direct, pick(90, -90))
 					n = get_step(my_mob, direct)
 
+<<<<<<< HEAD
 	//CHOMP Removal moved downwards
+=======
+>>>>>>> d0787362cd (Kitchen Sink PR (#17515))
 
 	if(istype(my_mob.pulledby, /obj/structure/bed/chair/wheelchair))
 		. = my_mob.pulledby.relaymove(my_mob, direct)
@@ -320,16 +333,25 @@
 	//CHOMPEdit Begin
 	// If we ended up moving diagonally, increase delay.
 	if((direct & (direct - 1)) && mob.loc == n)
+<<<<<<< HEAD
 		total_delay *= SQRT_2 //CHOMPEDIT
+=======
+		total_delay *= SQRT_2
+>>>>>>> d0787362cd (Kitchen Sink PR (#17515))
 
 	//total_delay = DS2NEARESTTICK(total_delay) //Rounded to the next tick in equivalent ds
 	if(mob.last_move_time > (world.time - total_delay * 1.25))
 		mob.next_move = DS2NEARESTTICK(old_delay + total_delay)
 	else
 		mob.next_move = DS2NEARESTTICK(world.time + total_delay)
+<<<<<<< HEAD
 	//CHOMPEdit End
 
 	if(!isliving(my_mob)) //CHOMPAdd
+=======
+
+	if(!isliving(my_mob))
+>>>>>>> d0787362cd (Kitchen Sink PR (#17515))
 		moving = 0
 		return
 
@@ -368,7 +390,11 @@
 
 	// We're not in the middle of a move anymore
 	moving = 0
+<<<<<<< HEAD
 	mob.last_move_time = world.time //CHOMPEdit
+=======
+	mob.last_move_time = world.time
+>>>>>>> d0787362cd (Kitchen Sink PR (#17515))
 
 /mob/proc/SelfMove(turf/n, direct, movetime)
 	return Move(n, direct, movetime)
@@ -378,16 +404,24 @@
 //Important to note: world.time is always in deciseconds. Higher tickrates mean more subdivisions of world.time (20fps = 0.5, 40fps = 0.25)
 /client
 	var/is_leaving_belly = FALSE
+<<<<<<< HEAD
 	var/incorporeal_speed = 0.5 // CHOMPAdd
 
 //ChompEDIT START
+=======
+	var/incorporeal_speed = 0.5
+
+>>>>>>> d0787362cd (Kitchen Sink PR (#17515))
 /client/verb/set_incorporeal_speed()
 	set category = "OOC.Game Settings"
 	set name = "Set Incorporeal Speed"
 
 	var/input = tgui_input_number(usr, "Set an incorporeal movement delay between 0 (fastest) and 5 (slowest)", "Incorporeal movement speed", (0.5/world.tick_lag), 5, 0)
 	incorporeal_speed = input * world.tick_lag
+<<<<<<< HEAD
 //ChompEDIT End
+=======
+>>>>>>> d0787362cd (Kitchen Sink PR (#17515))
 
 ///Process_Incorpmove
 ///Called by client/Move()
@@ -403,13 +437,19 @@
 		is_leaving_belly = FALSE
 	var/turf/mobloc = get_turf(mob)
 
+<<<<<<< HEAD
 	//ChompEDIT START
+=======
+>>>>>>> d0787362cd (Kitchen Sink PR (#17515))
 	if(incorporeal_speed)
 		var/mob/my_mob = mob
 		if(!my_mob.checkMoveCooldown()) //Only bother with speed if it isn't 0
 			return
 		my_mob.setMoveCooldown(incorporeal_speed)
+<<<<<<< HEAD
 	//ChompEDIT END
+=======
+>>>>>>> d0787362cd (Kitchen Sink PR (#17515))
 
 	switch(mob.incorporeal_move)
 		if(1)
@@ -506,6 +546,7 @@
 		return 0
 	inertia_dir = 0
 	return 1
+<<<<<<< HEAD
 
 /* CHOMPedit: Nuking slipping.
 	//Check to see if we slipped
@@ -516,6 +557,8 @@
 		return 0
 	//If not then we can reset inertia and move
 */// CHOMPedit end.
+=======
+>>>>>>> d0787362cd (Kitchen Sink PR (#17515))
 
 /mob/proc/Check_Dense_Object() //checks for anything to push off in the vicinity. also handles magboots on gravity-less floors tiles
 
@@ -558,6 +601,7 @@
 /mob/proc/Check_Shoegrip()
 	return 0
 
+<<<<<<< HEAD
 /* CHOMPedit: Nuking slipping.
 /mob/proc/Process_Spaceslipping(var/prob_slip = 5)
 	//Setup slipage
@@ -569,6 +613,8 @@
 	return(prob_slip)
 */// CHOMPedit end.
 
+=======
+>>>>>>> d0787362cd (Kitchen Sink PR (#17515))
 /mob/proc/mob_get_gravity(turf/T)
 	return get_gravity(src, T)
 

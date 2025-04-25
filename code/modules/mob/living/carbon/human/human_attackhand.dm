@@ -205,7 +205,11 @@
 		apply_effect(3, WEAKEN, armor_check)
 		playsound(src, 'sound/weapons/thudswoosh.ogg', 50, 1, -1)
 		if(armor_check < 60)
+<<<<<<< HEAD
 			drop_both_hands()	// CHOMPEdit - We've been pushed! Drop our stuff as well
+=======
+			drop_both_hands()
+>>>>>>> d0787362cd (Kitchen Sink PR (#17515))
 			if(M.lying)
 				visible_message(span_danger("[M] swept [src] down onto the floor!"))
 			else

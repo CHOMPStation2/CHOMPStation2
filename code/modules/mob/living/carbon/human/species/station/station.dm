@@ -46,12 +46,18 @@
 		O_INTESTINE =	/obj/item/organ/internal/intestine
 		)
 
+<<<<<<< HEAD
 	// CHOMPEdit: Species Specific Sounds
+=======
+>>>>>>> d0787362cd (Kitchen Sink PR (#17515))
 	species_sounds = "Human Male"
 	gender_specific_species_sounds = TRUE
 	species_sounds_male = "Human Male"
 	species_sounds_female = "Human Female"
+<<<<<<< HEAD
 	// CHOMPEdit End
+=======
+>>>>>>> d0787362cd (Kitchen Sink PR (#17515))
 
 	inherent_verbs = list(
 		/mob/living/carbon/human/proc/tie_hair)
@@ -98,6 +104,7 @@
 
 	economic_modifier = 10
 
+<<<<<<< HEAD
 	// CHOMPEdit: Reverted these back to Polaris, but commented them out. We're using species-specific sounds instead.
 	// male_scream_sound = list ('sound/effects/mob_effects/una_scream1.ogg','sound/effects/mob_effects/una_scream2.ogg')
 	// female_scream_sound = list ('sound/effects/mob_effects/una_scream1.ogg','sound/effects/mob_effects/una_scream2.ogg')
@@ -105,6 +112,12 @@
 
 	pain_verb_1p = list("hiss", "growl") // CHOMPEdit: Unathi pain emotes
 	pain_verb_3p = list("hisses", "growls") // CHOMPEdit: Pain emotes
+=======
+	species_sounds = "Lizard" // Species sounds
+
+	pain_verb_1p = list("hiss", "growl")
+	pain_verb_3p = list("hisses", "growls")
+>>>>>>> d0787362cd (Kitchen Sink PR (#17515))
 
 	blurb = "Heavily reptilian in appearance, the Unathi hail from the Uueoa-Esa system, roughly translated as 'Burning Mother'. \
 			Their home planet, Moghes, is an arid climate with hot rocky plains and deserts, and a temperate band of swamps and savannas with \
@@ -240,6 +253,7 @@
 
 	economic_modifier = 10
 
+<<<<<<< HEAD
 	// CHOMPEdit Start: Species sounds
 	species_sounds = "Feline"
 	// male_scream_sound = list('modular_chomp/sound/voice/scream/feline/feline_scream.ogg') //CHOMPedit: Scream sounds, finally, 3 years later.
@@ -248,6 +262,12 @@
 	pain_verb_1p = list("hiss", "growl", "yowl") // CHOMPEdit: Unathi pain emotes
 	pain_verb_3p = list("hisses", "growls", "yowls") // CHOMPEdit: Pain emotes
 	// CHOMPEdit End
+=======
+	species_sounds = "Feline"
+
+	pain_verb_1p = list("hiss", "growl", "yowl")
+	pain_verb_3p = list("hisses", "growls", "yowls")
+>>>>>>> d0787362cd (Kitchen Sink PR (#17515))
 
 	blurb = "The Tajaran are a mammalian species resembling roughly felines, hailing from Meralar in the Rarkajar system. \
 	While reaching to the stars independently from outside influences, the humans engaged them in peaceful trade contact \
@@ -361,9 +381,12 @@
 	max_age = 130
 
 	economic_modifier = 10
+<<<<<<< HEAD
 
 	// male_scream_sound = null //CHOMPedit
 	// female_scream_sound = null //CHOMPedit
+=======
+>>>>>>> d0787362cd (Kitchen Sink PR (#17515))
 
 	darksight = 4
 	flash_mod = 1.2
@@ -458,7 +481,11 @@
 	flash_mod = 2
 	flash_burn = 15 //flashing a zaddat probably counts as police brutality
 	metabolic_rate = 0.7 //did u know if your ancestors starved ur body will actually start in starvation mode?
+<<<<<<< HEAD
 	item_slowdown_mod = 0.30 //CHOMPedit: They can actually wear their living-required spacesuits without enormous slowdown now.
+=======
+	item_slowdown_mod = 0.30
+>>>>>>> d0787362cd (Kitchen Sink PR (#17515))
 	taste_sensitivity = TASTE_SENSITIVE
 	num_alternate_languages = 3
 	secondary_langs = list(LANGUAGE_ZADDAT, LANGUAGE_UNATHI)
@@ -594,10 +621,13 @@
 	max_age = 300
 
 	economic_modifier = 10
+<<<<<<< HEAD
 
 	// CHOMPEdit: For shits and giggles, I want someone to give the Diona plant sounds from like, WoW. lmao
 	// male_scream_sound = null //CHOMPedit
 	// female_scream_sound = null //CHOMPedit
+=======
+>>>>>>> d0787362cd (Kitchen Sink PR (#17515))
 
 	blurb = "Commonly referred to (erroneously) as 'plant people', the Dionaea are a strange space-dwelling collective \
 	species hailing from Epsilon Ursae Minoris. Each 'diona' is a cluster of numerous cat-sized organisms called nymphs; \
@@ -764,7 +794,9 @@
 	digi_allowed = TRUE
 
 	min_age = 18
-	max_age = 80
+	max_age = 110
+
+	species_sounds = "Canine"
 
 	blurb = "There are two subspecies of Sergal; Southern and Northern. Northern sergals are a highly aggressive race \
 	that lives in the plains and tundra of their homeworld. They are characterized by long, fluffy fur bodies with cold colors; \
@@ -1118,8 +1150,12 @@
 
 	health_hud_intensity = 3
 
+<<<<<<< HEAD
 	//male_sneeze_sound = list('sound/effects/mob_effects/tesharisneeze.ogg','sound/effects/mob_effects/tesharisneezeb.ogg') //CHOMPStation Edit Disable
 	//female_sneeze_sound = list('sound/effects/mob_effects/tesharisneeze.ogg','sound/effects/mob_effects/tesharisneezeb.ogg') //CHOMPStation Edit Disable
+=======
+	species_sounds = "Teshari"
+>>>>>>> d0787362cd (Kitchen Sink PR (#17515))
 	center_offset = 0
 
 	blood_color = "#D514F7"
@@ -1367,11 +1403,14 @@
 
 	//has_glowing_eyes = TRUE			// Applicable through traits.
 
+<<<<<<< HEAD
 	//male_cough_sounds = null //CHOMPStation Edit
 	//female_cough_sounds = null //CHOMPStation Edit
 	//male_sneeze_sound = null //CHOMPStation Edit
 	//female_sneeze_sound = null //CHOMPStation Edit
 
+=======
+>>>>>>> d0787362cd (Kitchen Sink PR (#17515))
 	speech_bubble_appearance = "ghost"
 
 	genders = list(MALE, FEMALE, PLURAL, NEUTER)
@@ -1660,7 +1699,11 @@
 	min_age = 18
 	max_age = 200
 
+<<<<<<< HEAD
 	species_sounds = "Canine"  //CHOMPStation Edit - Species Sounds
+=======
+	species_sounds = "Canine"
+>>>>>>> d0787362cd (Kitchen Sink PR (#17515))
 
 	blurb = "Big buff werewolves. These are a limited functionality event species that are not balanced for regular gameplay. Adminspawn only."
 
@@ -1723,15 +1766,23 @@
 		/mob/living/carbon/human/proc/reconstitute_form,
 		///mob/living/carbon/human/proc/sonar_ping,
 		/mob/living/carbon/human/proc/tie_hair,
+<<<<<<< HEAD
 		/mob/living/carbon/human/proc/lick_wounds,
 		/mob/living/carbon/human/proc/shapeshifter_reassemble)		//Xenochimera get all the special verbs since they can't select traits.
 		// CHOMPEdit: Lick Wounds Verb, reform verb
+=======
+		/mob/living/carbon/human/proc/lick_wounds)		//Xenochimera get all the special verbs since they can't select traits.
+>>>>>>> d0787362cd (Kitchen Sink PR (#17515))
 
 	virus_immune = 1 // They practically ARE one.
 	min_age = 18
 	max_age = 80
 
+<<<<<<< HEAD
 	species_sounds = "Unset" // CHOMPEdit: Chimera get a default/safety of unset, going off their icon base if there's none overriding.
+=======
+	species_sounds = "Unset" // Chimera get a default/safety of unset, going off their icon base if there's none overriding.
+>>>>>>> d0787362cd (Kitchen Sink PR (#17515))
 
 	blurb = "Some amalgamation of different species from across the universe,with extremely unstable DNA, making them unfit for regular cloners. \
 	Widely known for their voracious nature and violent tendencies when stressed or left unfed for long periods of time. \
@@ -1779,15 +1830,24 @@
 
 	//While regenerating
 	if(H.revive_ready == REVIVING_NOW || H.revive_ready == REVIVING_DONE)
+<<<<<<< HEAD
 		H.stunned = 5 // CHOMPEdit - Crawling is a thing now
+=======
+		H.stunned = 5
+>>>>>>> d0787362cd (Kitchen Sink PR (#17515))
 		H.canmove = 0
 		H.does_not_breathe = TRUE
 		var/regen_sounds = H.regen_sounds
 		if(prob(2)) // 2% chance of playing squelchy noise while reviving, which is run roughly every 2 seconds/tick while regenerating.
 			playsound(H, pick(regen_sounds), 30)
 			H.visible_message(span_danger("<p>" + span_huge("[H.name]'s motionless form shudders grotesquely, rippling unnaturally.") + "</p>"))
+<<<<<<< HEAD
 		if(!H.lying) //CHOMPStation Edit
 			H.lay_down() //CHOMPStation Edit
+=======
+		if(!H.lying)
+			H.lay_down()
+>>>>>>> d0787362cd (Kitchen Sink PR (#17515))
 	//Cold/pressure effects when not regenerating
 	else
 		var/datum/gas_mixture/environment = H.loc.return_air()

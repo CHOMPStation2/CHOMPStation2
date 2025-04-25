@@ -76,11 +76,16 @@
 
 	// The languages the species can't speak without an assisted organ.
 	// This list is a guess at things that no one other than the parent species should be able to speak
+<<<<<<< HEAD
 	var/list/assisted_langs = list(LANGUAGE_EAL, LANGUAGE_SKRELLIAN, LANGUAGE_ROOTLOCAL, LANGUAGE_ROOTGLOBAL, LANGUAGE_VOX, LANGUAGE_PROMETHEAN, LANGUAGE_HIVEMIND) //CHOMPedit: Added Hivemind.
+=======
+	var/list/assisted_langs = list(LANGUAGE_EAL, LANGUAGE_SKRELLIAN, LANGUAGE_ROOTLOCAL, LANGUAGE_ROOTGLOBAL, LANGUAGE_VOX, LANGUAGE_PROMETHEAN)
+>>>>>>> d0787362cd (Kitchen Sink PR (#17515))
 
 	//Soundy emotey things.
 	var/scream_verb_1p = "scream"
 	var/scream_verb_3p = "screams"
+<<<<<<< HEAD
 	// CHOMPEdit Start: Overriding with our own species-specific sounds.
 	// If you're wanting to know where the lists are per-species, go to sound.dm
 	/*
@@ -91,6 +96,10 @@
 	var/male_sneeze_sound = 'sound/effects/mob_effects/sneeze.ogg'
 	var/female_sneeze_sound = 'sound/effects/mob_effects/f_sneeze.ogg'
 	*/
+=======
+	var/pain_verb_1p = list("shout", "growl", "grunt", "gasp")
+	var/pain_verb_3p = list("shouts", "growls", "grunts", "gasps")
+>>>>>>> d0787362cd (Kitchen Sink PR (#17515))
 	/* Our base species sounds.
 	 * Note that species_sounds is meant to be used in the place of gendered sound.
 	 * If your species has gendered sounds, set 'gender_specific_species_sounds' to TRUE, and define your gendered sounds below.
@@ -106,7 +115,10 @@
 	var/gasp_volume = 50 // Self-explanatory, define this separately on your species if the sound files are louder.
 	var/death_volume = 50 // Self-explanatory, define this separately on your species if the sound files are louder.
 	// var/species_sounds_herm // If you want a custom sound played for other genders, just add them like so
+<<<<<<< HEAD
 	// CHOMPEdit End
+=======
+>>>>>>> d0787362cd (Kitchen Sink PR (#17515))
 
 	var/footstep = FOOTSTEP_MOB_HUMAN
 	var/list/special_step_sounds = null
@@ -550,7 +562,6 @@
 			span_notice("[target] moves to avoid being touched by you!"), )
 		return
 
-	//VOREStation Edit Start - Headpats and Handshakes.
 	if(H.zone_sel.selecting == BP_HEAD)
 		if(target.touch_reaction_flags & SPECIES_TRAIT_PATTING_DEFENCE)
 			H.visible_message( \
@@ -581,9 +592,14 @@
 			H.visible_message( \
 				span_notice("[H] boops [target]'s nose."), \
 				span_notice("You boop [target] on the nose."), )
+<<<<<<< HEAD
 	else if(H.zone_sel.selecting == BP_GROIN) //CHOMPEdit
 		H.vore_bellyrub(target)
 	//VOREStation Edit End
+=======
+	/*else if(H.zone_sel.selecting == BP_GROIN) //Disabled on Virgo. Used downstream.
+		H.vore_bellyrub(target)*/ //Disabled on Virgo. Used downstream.
+>>>>>>> d0787362cd (Kitchen Sink PR (#17515))
 	else
 		H.visible_message(span_notice("[H] hugs [target] to make [t_him] feel better!"), \
 						span_notice("You hug [target] to make [t_him] feel better!"))

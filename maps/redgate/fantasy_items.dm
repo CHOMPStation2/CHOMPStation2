@@ -479,7 +479,11 @@
 
 /obj/item/perfect_tele/magic/attack_self(mob/user, var/radial_menu_anchor = src)
 	if(loc_network)
+<<<<<<< HEAD
 		for(var/obj/item/perfect_tele_beacon/stationary/nb in GLOB.premade_tele_beacons) //ChompEDIT - GLOB
+=======
+		for(var/obj/item/perfect_tele_beacon/stationary/nb in GLOB.premade_tele_beacons)
+>>>>>>> d0787362cd (Kitchen Sink PR (#17515))
 			if(nb.tele_network == loc_network)
 				beacons[nb.tele_name] = nb
 		loc_network = null //Consumed

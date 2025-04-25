@@ -11,11 +11,19 @@
 	var/weight_loss = 50	// Weight loss rate.
 	var/fuzzy = 0			// Preference toggle for sharp/fuzzy icon. Default sharp.
 	var/offset_override = FALSE
+<<<<<<< HEAD
 	var/voice_freq = 42500	//CHOMPEdit - Why was the default 0
 	var/voice_sound = "goon speak 1"	//CHOMPEdit - Changed the default voice to one less jarring
 	var/custom_speech_bubble = "default"
 	var/custom_footstep = "Default"
 	var/species_sound = "Unset"		// CHOMPEdit: Use default species pain/scream sounds based off icon base if none set, override otherwise
+=======
+	var/voice_freq = 42500
+	var/voice_sound = "goon speak 1"
+	var/custom_speech_bubble = "default"
+	var/custom_footstep = "Default"
+	var/species_sound = "Unset"
+>>>>>>> d0787362cd (Kitchen Sink PR (#17515))
 
 // Definition of the stuff for Sizing
 /datum/category_item/player_setup_item/vore/size

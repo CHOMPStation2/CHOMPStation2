@@ -270,11 +270,14 @@ var/global/list/valid_bloodreagents = list("default",REAGENT_ID_IRON,REAGENT_ID_
 	//Any additional non-trait settings can be applied here
 	new_S.blood_color = pref.blood_color
 
+<<<<<<< HEAD
 	/*
 	if(pref.species_sound) // CHOMPEdit: Custom Scream/Death/Gasp/Pain Sounds. Don't try to do this if it doesn't exist. //  && new_S.selects_bodytype && pref.custom_base) // we aren't a custom species, and we don't have a custom base.
 		new_S.copy_species_sounds(new_S, pref.species_sound, pref.custom_base) // CHOMPEdit: Custom Scream/Death/Gasp/Pain Sounds
 	*/
 	// CHOMPEdit: Custom Scream/Death/Gasp/Pain Sounds.
+=======
+>>>>>>> d0787362cd (Kitchen Sink PR (#17515))
 	var/species_sounds_to_copy = pref.species_sound // What sounds are we using?
 	if(species_sounds_to_copy == "Unset") // Are we unset?
 		species_sounds_to_copy = select_default_species_sound(pref) // This will also grab gendered versions of the sounds, if they exist.
@@ -300,6 +303,7 @@ var/global/list/valid_bloodreagents = list("default",REAGENT_ID_IRON,REAGENT_ID_
 
 	var/points_left = pref.starting_trait_points
 
+
 	for(var/T in pref.pos_traits + pref.neg_traits)
 		points_left -= GLOB.traits_costs[T]
 		if(T in pref.pos_traits)
@@ -309,21 +313,33 @@ var/global/list/valid_bloodreagents = list("default",REAGENT_ID_IRON,REAGENT_ID_
 	if(points_left < 0 || traits_left < 0 || (!pref.custom_species && pref.species == SPECIES_CUSTOM))
 		. += span_red(span_bold("^ Fix things! ^")) + "<br>"
 
+<<<<<<< HEAD
 	. += "<a href='byond://?src=\ref[src];add_trait=[POSITIVE_MODE]'>Positive Trait(s) (Limited) +</a><br>" // CHOMPEdit: More obvious/clear to players.
+=======
+	. += "<a href='byond://?src=\ref[src];add_trait=[POSITIVE_MODE]'>Positive Trait(s) (Limited) +</a><br>"
+>>>>>>> d0787362cd (Kitchen Sink PR (#17515))
 	. += "<ul>"
 	for(var/T in pref.pos_traits)
 		var/datum/trait/trait = GLOB.positive_traits[T]
 		. += "<li>- <a href='byond://?src=\ref[src];clicked_pos_trait=[T]'>[trait.name] ([trait.cost])</a> [get_html_for_trait(trait, pref.pos_traits[T])]</li>"
 	. += "</ul>"
 
+<<<<<<< HEAD
 	. += "<a href='byond://?src=\ref[src];add_trait=[NEUTRAL_MODE]'>Neutral Trait(s) (No Limit) +</a><br>" // CHOMPEdit: More obvious/clear to players.
+=======
+	. += "<a href='byond://?src=\ref[src];add_trait=[NEUTRAL_MODE]'>Neutral Trait(s) (No Limit) +</a><br>"
+>>>>>>> d0787362cd (Kitchen Sink PR (#17515))
 	. += "<ul>"
 	for(var/T in pref.neu_traits)
 		var/datum/trait/trait = GLOB.neutral_traits[T]
 		. += "<li>- <a href='byond://?src=\ref[src];clicked_neu_trait=[T]'>[trait.name] ([trait.cost])</a> [get_html_for_trait(trait, pref.neu_traits[T])]</li>"
 	. += "</ul>"
 
+<<<<<<< HEAD
 	. += "<a href='byond://?src=\ref[src];add_trait=[NEGATIVE_MODE]'>Negative Trait(s) (No Limit) +</a><br>" // CHOMPEdit: More obvious/clear to players.
+=======
+	. += "<a href='byond://?src=\ref[src];add_trait=[NEGATIVE_MODE]'>Negative Trait(s) (No Limit) +</a><br>"
+>>>>>>> d0787362cd (Kitchen Sink PR (#17515))
 	. += "<ul>"
 	for(var/T in pref.neg_traits)
 		var/datum/trait/trait = GLOB.negative_traits[T]

@@ -29,8 +29,13 @@
 	meat_type = /obj/item/reagent_containers/food/snacks/tomatomeat
 	meat_amount = 4
 
+<<<<<<< HEAD
 	can_be_drop_prey = FALSE //CHOMP Add
 	can_pain_emote = FALSE // CHOMPEdit: Can't feel pain and shouldn't take damage anyways, but, sanity
+=======
+	can_be_drop_prey = FALSE
+	can_pain_emote = FALSE
+>>>>>>> d0787362cd (Kitchen Sink PR (#17515))
 
 /decl/mob_organ_names/tomato
 	hit_zones = list("flesh", "leaf", "mouth")
