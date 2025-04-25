@@ -12,12 +12,14 @@ GLOBAL_LIST_EMPTY(simple_portals)
 	var/teleport_sound = 'sound/effects/portal_effect.ogg'
 
 /obj/effect/simple_portal/Initialize(mapload)
-	..()
+	. = ..()
 	GLOB.simple_portals += src
+
+/obj/effect/simple_portal/linked/Initialize(mapload)
+	..()
 	return INITIALIZE_HINT_LATELOAD
 
 /obj/effect/simple_portal/linked/LateInitialize()
-	. = ..()
 	if(portal_id)
 		link_portal()
 
