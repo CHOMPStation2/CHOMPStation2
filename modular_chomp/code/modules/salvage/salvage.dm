@@ -6,8 +6,8 @@
 	throwforce = 5
 	throw_speed = 1
 	throw_speed = 4
-	hitsound = 'modular_chomp/sound/items/salvage/salvagepickup.ogg'
-	drop_sound = 'modular_chomp/sound/items/salvage/salvagedrop.ogg'
+	hitsound = 'sound/items/salvage/salvagepickup.ogg'
+	drop_sound = 'sound/items/salvage/salvagedrop.ogg'
 	w_class = ITEMSIZE_NORMAL
 	var/worth = 100
 
@@ -63,9 +63,9 @@
 	name = "stolen jewellery"
 	desc = "A collection of stolen jewellery, fashioned from pilfered bluespace crystals and gems. Rumour has it, local pirates have been known to use these accessories to avoid capture."
 	icon_state = "pirate_treasure"
-	hitsound = 'modular_chomp/sound/items/taperecorder_drop.ogg'
-	pickup_sound = 'modular_chomp/sound/items/taperecorder_pickup.ogg'
-	drop_sound = 'modular_chomp/sound/items/taperecorder_drop.ogg'
+	hitsound = 'sound/items/taperecorder_drop.ogg'
+	pickup_sound = 'sound/items/taperecorder_pickup.ogg'
+	drop_sound = 'sound/items/taperecorder_drop.ogg'
 
 /obj/item/salvage/loot/russian
 	name = "siosp manual"

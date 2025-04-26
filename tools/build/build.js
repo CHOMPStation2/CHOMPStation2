@@ -212,7 +212,7 @@ export const DmTarget = new Juke.Target({
     'tgui/public/tgui.html',
     'modular_chomp/code/**',
     'modular_chomp/icons/**',
-    'modular_chomp/sound/**',
+    'sound/**',
     'modular_chomp/maps/**/*.dm',
     'modular_chomp/maps/soluna_nexus/**/*.dmm', // Placed here so it recompiles on map changes
     'modular_chomp/maps/southern_cross/**/*.dmm', // Placed here so it recompiles on map changes

@@ -22,13 +22,13 @@
 /obj/item/clothing/shoes/mech_shoes/heavy
 	name = "heavy mech shoes"
 	desc = "Thud thud, but heavy."
-	squeak_sound = list('modular_chomp/sound/mob/footstep_large.ogg'=1,'modular_chomp/sound/mob/footstep_large2.ogg'=1)
+	squeak_sound = list('sound/mob/footstep_large.ogg'=1,'sound/mob/footstep_large2.ogg'=1)
 	step_volume_mod = 4
 
 /obj/item/clothing/shoes/mech_shoes/mister_x
 	name = "concealed extra large jackboots"
 	desc = "Lets hope there's no evil in this residence."
-	squeak_sound = list('modular_chomp/sound/mob/heavy_boots.ogg'=1)
+	squeak_sound = list('sound/mob/heavy_boots.ogg'=1)
 	step_volume_mod = 5
 
 /obj/item/clothing/shoes/mech_shoes/mister_x/visible
