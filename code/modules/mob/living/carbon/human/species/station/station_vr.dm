@@ -264,8 +264,8 @@
 		/mob/living/carbon/human/proc/tie_hair)
 	digi_allowed = TRUE
 
-	// male_scream_sound = list('modular_chomp/sound/voice/scream/canine/wolf_scream.ogg', 'modular_chomp/sound/voice/scream/canine/wolf_scream2.ogg', 'modular_chomp/sound/voice/scream/canine/wolf_scream3.ogg', 'modular_chomp/sound/voice/scream/canine/wolf_scream4.ogg', 'modular_chomp/sound/voice/scream/canine/wolf_scream5.ogg', 'modular_chomp/sound/voice/scream/canine/wolf_scream6.ogg') //CHOMPedit: Scream sounds, finally, 3 years later.
-	// female_scream_sound = list('modular_chomp/sound/voice/scream/canine/wolf_scream.ogg', 'modular_chomp/sound/voice/scream/canine/wolf_scream2.ogg', 'modular_chomp/sound/voice/scream/canine/wolf_scream3.ogg', 'modular_chomp/sound/voice/scream/canine/wolf_scream4.ogg', 'modular_chomp/sound/voice/scream/canine/wolf_scream5.ogg', 'modular_chomp/sound/voice/scream/canine/wolf_scream6.ogg') //CHOMPedit: Scream sounds, finally, 3 years later.
+	// male_scream_sound = list('sound/voice/scream/canine/wolf_scream.ogg', 'sound/voice/scream/canine/wolf_scream2.ogg', 'sound/voice/scream/canine/wolf_scream3.ogg', 'sound/voice/scream/canine/wolf_scream4.ogg', 'sound/voice/scream/canine/wolf_scream5.ogg', 'sound/voice/scream/canine/wolf_scream6.ogg') //CHOMPedit: Scream sounds, finally, 3 years later.
+	// female_scream_sound = list('sound/voice/scream/canine/wolf_scream.ogg', 'sound/voice/scream/canine/wolf_scream2.ogg', 'sound/voice/scream/canine/wolf_scream3.ogg', 'sound/voice/scream/canine/wolf_scream4.ogg', 'sound/voice/scream/canine/wolf_scream5.ogg', 'sound/voice/scream/canine/wolf_scream6.ogg') //CHOMPedit: Scream sounds, finally, 3 years later.
 	// CHOMPEdit Start: Add Pain/Gasp/Death sounds
 	pain_verb_1p = list("yelp", "growl")
 	pain_verb_3p = list("yelps", "growls")

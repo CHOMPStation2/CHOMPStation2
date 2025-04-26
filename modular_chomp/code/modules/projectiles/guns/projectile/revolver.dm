@@ -7,7 +7,7 @@
 	icon_state = "ukr"
 	item_state = "ukr"
 	icon = 'modular_chomp/icons/obj/guns/altmarksman/altmarksman.dmi'
-	fire_sound = 'modular_chomp/sound/weapons/marksmanalt.ogg'
+	fire_sound = 'sound/weapons/marksmanalt.ogg'
 	item_icons = list(
 		slot_l_hand_str = 'modular_chomp/icons/obj/guns/altmarksman/lefthand_guns.dmi',
 		slot_r_hand_str = 'modular_chomp/icons/obj/guns/altmarksman/righthand_guns.dmi',

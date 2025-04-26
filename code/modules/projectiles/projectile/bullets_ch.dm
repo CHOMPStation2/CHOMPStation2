@@ -76,7 +76,7 @@ only use the hollow_point and armor_penetration values.*/
 	velocity = 360
 
 /obj/item/projectile/bullet/a57
-	fire_sound = 'modular_chomp/sound/weapons/ballistics/smg_heavy.ogg'
+	fire_sound = 'sound/weapons/ballistics/smg_heavy.ogg'
 	diam = 5.7
 	grains = 31
 	velocity = 716

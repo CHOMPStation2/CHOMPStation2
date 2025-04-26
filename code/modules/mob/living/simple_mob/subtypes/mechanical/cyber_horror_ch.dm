@@ -45,7 +45,7 @@
 	emote_see = list ("stares unblinkingly.", "jitters and twitches.", "emits a synthetic scream.", "rapidly twitches.", "convulses.", "twitches uncontrollably.", "goes stock still.")
 	say_threaten = list ("FR@#DOM","EN@ T#I$-$","N0$ M^> B@!#")
 	say_got_target = list("I *#@ Y@%","!E@#$P","F#RR @I","D0@#$ ##OK %","IT $##TS")
-	threaten_sound = 'modular_chomp/sound/mob/robots/Cyber_Horror.ogg'
+	threaten_sound = 'sound/mob/robots/Cyber_Horror.ogg'
 
 /datum/ai_holder/simple_mob/melee/evasive/cyber_horror
 	threaten = TRUE
@@ -90,7 +90,7 @@
 	var/poison_type = "neurophage_nanites"
 
 /datum/say_list/cyber_horror/plasma
-	threaten_sound = 'modular_chomp/sound/mob/robots/Cyber_Horror_Plasma.ogg'
+	threaten_sound = 'sound/mob/robots/Cyber_Horror_Plasma.ogg'
 
 /mob/living/simple_mob/mechanical/cyber_horror/plasma_cyber_horror/apply_melee_effects(var/atom/A)
 	if(isliving(A))
@@ -124,7 +124,7 @@
 	base_attack_cooldown = 2.5
 	attack_sharp = 1
 	attack_edge = 1
-	attack_sound = 'modular_chomp/sound/mob/robots/Cyber_Horror_ChangelingMelee.ogg'
+	attack_sound = 'sound/mob/robots/Cyber_Horror_ChangelingMelee.ogg'
 	attacktext = list ("sliced", "diced", "lashed", "shredded")
 // Slow as all sin
 	movement_cooldown = 9
@@ -144,10 +144,10 @@
 	special_attack_cooldown = 60 SECONDS
 // How long the leap telegraphing is.
 	var/leap_warmup = 2 SECOND
-	var/leap_sound = 'modular_chomp/sound/mob/robots/Cyber_Horror_ChangelingLeap.ogg'
+	var/leap_sound = 'sound/mob/robots/Cyber_Horror_ChangelingLeap.ogg'
 
 /datum/say_list/cyber_horror/ling
-	threaten_sound = 'modular_chomp/sound/mob/robots/Cyber_Horror_Changeling.ogg'
+	threaten_sound = 'sound/mob/robots/Cyber_Horror_Changeling.ogg'
 
 // Multiplies damage if the victim is stunned in some form, including a successful leap.
 /mob/living/simple_mob/mechanical/cyber_horror/ling_cyber_horror/apply_bonus_melee_damage(atom/A, damage_amount)
@@ -221,7 +221,7 @@
 	ai_holder_type = /datum/ai_holder/simple_mob/melee/cyber_horror
 
 /datum/say_list/cyber_horror/vox
-	threaten_sound = 'modular_chomp/sound/mob/robots/Cyber_Horror_Vox.ogg'
+	threaten_sound = 'sound/mob/robots/Cyber_Horror_Vox.ogg'
 
 
 // Hit and run mob
@@ -231,7 +231,7 @@
 	icon_state = "tajaran_cyber_horror"
 	icon_dead = "tajaran_cyber_horror_dead"
 	say_list_type = /datum/say_list/cyber_horror/tajaran
-	attack_sound = 'modular_chomp/sound/weapons/meleetear.ogg'
+	attack_sound = 'sound/weapons/meleetear.ogg'
 
 
 	ai_holder_type = /datum/ai_holder/simple_mob/melee/hit_and_run/cyber_horror
@@ -243,7 +243,7 @@
 	var/last_uncloak = 0
 
 /datum/say_list/cyber_horror/tajaran
-	threaten_sound = 'modular_chomp/sound/mob/robots/Cyber_Horror_Tajaran.ogg'
+	threaten_sound = 'sound/mob/robots/Cyber_Horror_Tajaran.ogg'
 
 /mob/living/simple_mob/mechanical/cyber_horror/tajaran/cloak()
 	if(cloaked)
@@ -311,13 +311,13 @@
 	say_list_type = /datum/say_list/cyber_horror/grey
 
 	projectiletype = /obj/item/projectile/arc/blue_energy
-	projectilesound = 'modular_chomp/sound/weapons/plasmaNEW.ogg'
+	projectilesound = 'sound/weapons/plasmaNEW.ogg'
 	ai_holder_type = /datum/ai_holder/simple_mob/ranged/kiting/cyber_horror
 
 	armor = list(melee = -30, bullet = 10, laser = 10, bio = 100, rad = 100)
 
 /datum/say_list/cyber_horror/grey
-	threaten_sound = 'modular_chomp/sound/mob/robots/Cyber_Horror_Grey.ogg'
+	threaten_sound = 'sound/mob/robots/Cyber_Horror_Grey.ogg'
 
 
 //Direct Ranged Mob
@@ -332,13 +332,13 @@
 
 	base_attack_cooldown = 4
 	projectiletype = /obj/item/projectile/beam/drone
-	projectilesound = 'modular_chomp/sound/weapons/SmallLaser.ogg'
+	projectilesound = 'sound/weapons/SmallLaser.ogg'
 	movement_sound = 'sound/effects/servostep.ogg'
 
 	ai_holder_type = /datum/ai_holder/simple_mob/ranged/kiting/threatening
 
 /datum/say_list/cyber_horror/corgi
-	threaten_sound = 'modular_chomp/sound/mob/robots/Cyber_Horror_Corgi.ogg'
+	threaten_sound = 'sound/mob/robots/Cyber_Horror_Corgi.ogg'
 
 
 //Cats and mayhem
@@ -375,7 +375,7 @@
 	var/poison_type = REAGENT_ID_MINDBREAKER
 
 /datum/say_list/cyber_horror/cat
-	threaten_sound = 'modular_chomp/sound/mob/robots/Cyber_Horror_Cat.ogg'
+	threaten_sound = 'sound/mob/robots/Cyber_Horror_Cat.ogg'
 
 /mob/living/simple_mob/mechanical/cyber_horror/cat_cyber_horror/apply_melee_effects(var/atom/A)
 	if(isliving(A))
