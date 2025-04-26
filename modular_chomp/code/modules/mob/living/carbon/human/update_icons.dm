@@ -35,60 +35,7 @@
 	apply_layer(SHOES_LAYER)
 	apply_layer(SHOES_LAYER_ALT)
 
-/mob/living/carbon/human/proc/GetAppearanceFromPrefs(var/flavourtext, var/oocnotes)
-	/* Jank code that effectively creates the client's mob from save, then copies its appearance to our current mob.
-	Intended to be used with shapeshifter species so we don't reset their organs in doing so.*/
-	if(client.prefs)
-		var/mob/living/carbon/human/dummy/mannequin/Dummy = get_mannequin(client.ckey)
-		client.prefs.copy_to(Dummy)
-		//Important, since some sprites only work for specific species
-		/*	Probably not needed anymore since impersonate_bodytype no longer exists
-		if(Dummy.species.base_species == "Promethean")
-			impersonate_bodytype = "Human"
-		else
-			impersonate_bodytype = Dummy.species.base_species
-		*/
-		custom_species = Dummy.custom_species
-		var/list/traits = dna.species_traits.Copy()
-		dna = Dummy.dna.Clone()
-		dna.species_traits.Cut()
-		dna.species_traits = traits.Copy()
-		UpdateAppearance()
-		icon = Dummy.icon
-		if(flavourtext)
-			flavor_texts = client.prefs.flavor_texts.Copy()
-		if(oocnotes)
-			ooc_notes = client.prefs.read_preference(/datum/preference/text/living/ooc_notes)
-			ooc_notes_likes = client.prefs.read_preference(/datum/preference/text/living/ooc_notes_likes)
-			ooc_notes_dislikes = client.prefs.read_preference(/datum/preference/text/living/ooc_notes_dislikes)
-			ooc_notes_favs = read_preference(/datum/preference/text/living/ooc_notes_favs)
-			ooc_notes_maybes = read_preference(/datum/preference/text/living/ooc_notes_maybes)
-			ooc_notes_style = read_preference(/datum/preference/toggle/living/ooc_notes_style)
 
-/*	Alternative version of the above proc, incase it turns out cloning our dummy mob's DNA is an awful, terrible bad idea.
-Would need to fix this proc up to work as smoothly as the above proc, though.
-/mob/living/carbon/human/proc/GetAppearanceFromPrefs()
-	/* Jank code that effectively creates the client's mob from save, then copies its appearance to our current mob.
-	Intended to be used with shapeshifter species so we don't reset their organs in doing so.*/
-	var/mob/living/carbon/human/dummy/mannequin/Dummy = new
-	if(client.prefs)
-		client.prefs.copy_to(Dummy)
-		//Important, since some sprites only work for specific species
-		if(Dummy.species.base_species == "Promethean")
-			impersonate_bodytype = "Human"
-		else
-			impersonate_bodytype = Dummy.species.base_species
-		custom_species = Dummy.custom_species
-		for(var/tag in Dummy.dna.body_markings)
-			var/obj/item/organ/external/E = organs_by_name[tag]
-			if(E)
-				E.markings.Cut()
-				var/list/marklist = Dummy.dna.body_markings[tag]
-				E.markings = marklist.Copy()
-		UpdateAppearance(Dummy.dna.UI.Copy())
-		icon = Dummy.icon
-	qdel(Dummy)
-*/
 
 /mob/living/carbon/human/update_tail_showing()
 	. = ..()

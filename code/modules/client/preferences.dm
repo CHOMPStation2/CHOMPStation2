@@ -614,11 +614,9 @@ var/list/preferences_datums = list()
 		character.ooc_notes 				= read_preference(/datum/preference/text/living/ooc_notes)
 		character.ooc_notes_dislikes 		= read_preference(/datum/preference/text/living/ooc_notes_dislikes)
 		character.ooc_notes_likes 			= read_preference(/datum/preference/text/living/ooc_notes_likes)
-		// CHOMPAdd Start
 		character.ooc_notes_favs 			= read_preference(/datum/preference/text/living/ooc_notes_favs)
 		character.ooc_notes_maybes 			= read_preference(/datum/preference/text/living/ooc_notes_maybes)
 		character.ooc_notes_style 			= read_preference(/datum/preference/toggle/living/ooc_notes_style)
-		// CHOMPAdd End
 
 	character.weight			= weight_vr
 	character.weight_gain		= weight_gain
