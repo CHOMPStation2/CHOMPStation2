@@ -206,6 +206,9 @@
 						if(voice_sounds_list)	//CHOMPEdit, changes to subtle emotes to use mob voice instead
 							M << sound(pick(voice_sounds_list), volume = 25)
 
+		for(var/obj/o in contents)
+			vis_objs |= o
+
 		for(var/obj/O as anything in vis_objs)
 			spawn(0)
 				O.see_emote(src, message, 2)
