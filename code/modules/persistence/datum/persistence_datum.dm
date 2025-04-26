@@ -126,11 +126,18 @@
 	. += "<tr><td colspan = 4><hr></td></tr>"
 
 	for(var/thing in my_tracks)
+<<<<<<< HEAD
 	// CHOMPAdd
 		var/data = GetAdminDataStringFor(thing, can_modify, user)
 		if(!isnull(data))
 			. += "<tr>[GetAdminDataStringFor(thing, can_modify, user)]</tr>"
 	// CHOMPAdd End
+=======
+		var/data = GetAdminDataStringFor(thing, can_modify, user)
+		if(!isnull(data))
+			. += "<tr>[GetAdminDataStringFor(thing, can_modify, user)]</tr>"
+		. += "<tr>[GetAdminDataStringFor(thing, can_modify, user)]</tr>"
+>>>>>>> 4d6ea5d336 (up port those (#17599))
 	. += "<tr><td colspan = 4><hr></td></tr>"
 
 

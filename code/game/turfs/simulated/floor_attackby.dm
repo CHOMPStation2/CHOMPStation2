@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 /turf/simulated/floor/attackby(var/obj/item/C, var/mob/user, attack_modifier, click_parameters) // CHOMPAdd - Attack_modifier, click_parameters
+=======
+/turf/simulated/floor/attackby(var/obj/item/C, var/mob/user, attack_modifier, click_parameters)
+>>>>>>> 4d6ea5d336 (up port those (#17599))
 
 	if(!C || !user)
 		return 0
@@ -10,7 +14,20 @@
 				try_graffiti(L, C, click_parameters) // back by unpopular demand - CHOMPEdit Add - Click parameters
 				return
 			attack_tile(C, L) // Be on help intent if you want to decon something.
+<<<<<<< HEAD
 			return	//CHOMPEDIT END
+=======
+			return
+/*
+//By god, no I do NOT want to engrave when trying to cut wires, can't get this working with non-help intent either else you just swipe the tools over the floors.
+	if(!(C.has_tool_quality(TOOL_SCREWDRIVER) && flooring && (flooring.flags & TURF_REMOVE_SCREWDRIVER)))
+		if(isliving(user))
+			var/mob/living/L = user
+			if(L.a_intent == I_HELP)
+				try_graffiti(L, C, click_parameters) // back by unpopular demand
+					return
+*/
+>>>>>>> 4d6ea5d336 (up port those (#17599))
 
 	// Multi-z roof building
 	if(istype(C, /obj/item/stack/tile/roofing))
