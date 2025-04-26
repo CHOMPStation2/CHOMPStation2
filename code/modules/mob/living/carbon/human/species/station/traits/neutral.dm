@@ -70,10 +70,6 @@
 			"x" = list("ks", "kss", "ksss")
 		),
 	autohiss_exempt = list(LANGUAGE_UNATHI))
-<<<<<<< HEAD
-	excludes = list(/datum/trait/neutral/autohiss_tajaran, /datum/trait/neutral/autohiss_vassilian, /datum/trait/neutral/autohiss_zaddat) // CHOMPEdit: exclude vassillian hiss
-	custom_only = FALSE
-=======
 	excludes = list(
 		/datum/trait/neutral/autohiss_tajaran,
 		/datum/trait/neutral/autohiss_zaddat,
@@ -84,7 +80,6 @@
 		/datum/trait/neutral/autohiss_zaddat/xenochimera,
 		/datum/trait/neutral/autohiss_vassilian/xenochimera,
 		/datum/trait/neutral/autohiss_yingish/xenochimera)
->>>>>>> af7eee3fbc (Ported Autohisses and Autohiss Unit Test (#17575))
 
 /datum/trait/neutral/autohiss_tajaran
 	name = "Autohiss (Tajaran)"
@@ -96,10 +91,6 @@
 			"r" = list("rr", "rrr", "rrrr")
 		),
 	autohiss_exempt = list(LANGUAGE_SIIK,LANGUAGE_AKHANI,LANGUAGE_ALAI))
-<<<<<<< HEAD
-	excludes = list(/datum/trait/neutral/autohiss_unathi, /datum/trait/neutral/autohiss_zaddat, /datum/trait/neutral/autohiss_vassilian) // CHOMPEdit: exclude vassillian hiss
-	custom_only = FALSE
-=======
 	excludes = list(
 		/datum/trait/neutral/autohiss_unathi,
 		/datum/trait/neutral/autohiss_zaddat,
@@ -110,7 +101,6 @@
 		/datum/trait/neutral/autohiss_zaddat/xenochimera,
 		/datum/trait/neutral/autohiss_vassilian/xenochimera,
 		/datum/trait/neutral/autohiss_yingish/xenochimera)
->>>>>>> af7eee3fbc (Ported Autohisses and Autohiss Unit Test (#17575))
 
 /datum/trait/neutral/autohiss_zaddat
 	name = "Autohiss (Zaddat)"
@@ -129,9 +119,6 @@
 			"v" = list("vv", "vvv")
 		),
 	autohiss_exempt = list(LANGUAGE_ZADDAT,LANGUAGE_VESPINAE))
-<<<<<<< HEAD
-	excludes = list(/datum/trait/neutral/autohiss_tajaran, /datum/trait/neutral/autohiss_unathi, /datum/trait/neutral/autohiss_vassilian) // CHOMPEdit: exclude vassillian hiss
-=======
 	excludes = list(
 		/datum/trait/neutral/autohiss_tajaran,
 		/datum/trait/neutral/autohiss_unathi,
@@ -147,7 +134,6 @@
 	name = "Autohiss (Vassilian)"
 	desc = "You buzz your S's, F's, Th's, and R's."
 	cost = 0
->>>>>>> af7eee3fbc (Ported Autohisses and Autohiss Unit Test (#17575))
 	custom_only = FALSE
 	var_changes = list(
 	autohiss_basic_map = list(
