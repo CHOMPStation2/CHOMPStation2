@@ -33,9 +33,13 @@
 	pref.voice_sound		= save_data["voice_sound"]
 	pref.custom_speech_bubble	= save_data["custom_speech_bubble"]
 	pref.custom_footstep	= save_data["custom_footstep"]
+<<<<<<< HEAD
 	//CHOMPAdd Start
 	pref.species_sound		= save_data["species_sound"]
 	//CHOMPAdd End
+=======
+	pref.species_sound		= save_data["species_sound"]
+>>>>>>> a0e9785d0d (Kitchen Sink P2 TGUI Prefs (#17579))
 
 /datum/category_item/player_setup_item/vore/size/save_character(list/save_data)
 	save_data["size_multiplier"]	= pref.size_multiplier
@@ -48,9 +52,13 @@
 	save_data["voice_sound"]		= pref.voice_sound
 	save_data["custom_speech_bubble"]		= pref.custom_speech_bubble
 	save_data["custom_footstep"]	= pref.custom_footstep
+<<<<<<< HEAD
 	//CHOMPAdd Start
 	save_data["species_sound"]		= pref.species_sound
 	//CHOMPAdd End
+=======
+	save_data["species_sound"]		= pref.species_sound
+>>>>>>> a0e9785d0d (Kitchen Sink P2 TGUI Prefs (#17579))
 
 /datum/category_item/player_setup_item/vore/size/sanitize_character()
 	pref.weight_vr			= sanitize_integer(pref.weight_vr, WEIGHT_MIN, WEIGHT_MAX, initial(pref.weight_vr))
@@ -59,16 +67,26 @@
 	pref.fuzzy				= sanitize_integer(pref.fuzzy, 0, 1, initial(pref.fuzzy))
 	pref.offset_override	= sanitize_integer(pref.offset_override, 0, 1, initial(pref.offset_override))
 	if(pref.voice_freq != 0)
+<<<<<<< HEAD
 		pref.voice_freq			= sanitize_integer(pref.voice_freq, MIN_VOICE_FREQ, MAX_VOICE_FREQ, initial(pref.voice_freq)) //CHOMPEdit
+=======
+		pref.voice_freq			= sanitize_integer(pref.voice_freq, MIN_VOICE_FREQ, MAX_VOICE_FREQ, initial(pref.voice_freq))
+>>>>>>> a0e9785d0d (Kitchen Sink P2 TGUI Prefs (#17579))
 	if(pref.size_multiplier == null || pref.size_multiplier < RESIZE_TINY || pref.size_multiplier > RESIZE_HUGE)
 		pref.size_multiplier = initial(pref.size_multiplier)
 	if(!(pref.custom_speech_bubble in GLOB.selectable_speech_bubbles))
 		pref.custom_speech_bubble = "default"
 	if(!(pref.custom_footstep))
 		pref.custom_footstep = "Default"
+<<<<<<< HEAD
 	// var/datum/species/selected_species = GLOB.all_species[pref.species] // CHOMPEdit
 	if(!(pref.species_sound)) // CHOMPEdit // && selected_species.selects_bodytype
 		pref.species_sound = "Unset" // CHOMPEdit - otherwise, we leave this as null or w/e the default is
+=======
+	// var/datum/species/selected_species = GLOB.all_species[pref.species]
+	if(!(pref.species_sound))
+		pref.species_sound = "Unset"
+>>>>>>> a0e9785d0d (Kitchen Sink P2 TGUI Prefs (#17579))
 
 /datum/category_item/player_setup_item/vore/size/copy_to_mob(var/mob/living/carbon/human/character)
 	character.weight			= pref.weight_vr
@@ -79,7 +97,10 @@
 	character.voice_freq		= pref.voice_freq
 	character.resize(pref.size_multiplier, animate = FALSE, ignore_prefs = TRUE)
 
+<<<<<<< HEAD
 	//CHOMPEDIT Global voice lookup
+=======
+>>>>>>> a0e9785d0d (Kitchen Sink P2 TGUI Prefs (#17579))
 	if(!pref.voice_sound)
 		character.voice_sounds_list = GLOB.talk_sound
 	else
@@ -92,9 +113,15 @@
 	. += span_bold("Scale:") + " <a href='byond://?src=\ref[src];size_multiplier=1'>[round(pref.size_multiplier*100)]%</a><br>"
 	. += span_bold("Scaled Appearance:") + " <a [pref.fuzzy ? "" : ""] href='byond://?src=\ref[src];toggle_fuzzy=1'><b>[pref.fuzzy ? "Fuzzy" : "Sharp"]</b></a><br>"
 	. += span_bold("Scaling Center:") + " <a [pref.offset_override ? "" : ""] href='byond://?src=\ref[src];toggle_offset_override=1'><b>[pref.offset_override ? "Odd" : "Even"]</b></a><br>"
+<<<<<<< HEAD
 	. += "<br>" // CHOMPEdit: Fancy:tm:
 	. += span_bold("Mob Speech/Noise Customization") + "" // CHOMPEdit: Fancy:tm:
 	. += "<br>"  // CHOMPEdit
+=======
+	. += "<br>"
+	. += span_bold("Mob Speech/Noise Customization") + ""
+	. += "<br>"
+>>>>>>> a0e9785d0d (Kitchen Sink P2 TGUI Prefs (#17579))
 	. += span_bold("Voice Frequency:") + " <a href='byond://?src=\ref[src];voice_freq=1'>[pref.voice_freq]</a><br>"
 	. += span_bold("Voice Sounds:") + " <a href='byond://?src=\ref[src];voice_sounds_list=1'>[pref.voice_sound]</a><br>"
 	. += "<a href='byond://?src=\ref[src];voice_test=1'><b>Test Selected Voice</b></a><br>"
@@ -112,6 +139,14 @@
 	. += "<a href='byond://?src=\ref[src];gasp_test=1'><b>Test Gasp Sounds</b></a><br>"
 	. += "<a href='byond://?src=\ref[src];death_test=1'><b>Test Death Sounds</b></a><br>"
 	// CHOMPEdit End: Pain/Scream/Death Custom Sounds
+	. += "<br>"
+	. += span_bold("Species Sounds:") + " <a href='byond://?src=\ref[src];species_sound_options=1'>[pref.species_sound]</a><br>"
+	. += "<a href='byond://?src=\ref[src];cough_test=1'><b>Test Cough Sounds</b></a><br>"
+	. += "<a href='byond://?src=\ref[src];sneeze_test=1'><b>Test Sneeze Sounds</b></a><br>"
+	. += "<a href='byond://?src=\ref[src];scream_test=1'><b>Test Scream Sounds</b></a><br>"
+	. += "<a href='byond://?src=\ref[src];pain_test=1'><b>Test Pain Sounds</b></a><br>"
+	. += "<a href='byond://?src=\ref[src];gasp_test=1'><b>Test Gasp Sounds</b></a><br>"
+	. += "<a href='byond://?src=\ref[src];death_test=1'><b>Test Death Sounds</b></a><br>"
 	. += "<br>"
 	. += span_bold("Relative Weight:") + " <a href='byond://?src=\ref[src];weight=1'>[pref.weight_vr]</a><br>"
 	. += span_bold("Weight Gain Rate:") + " <a href='byond://?src=\ref[src];weight_gain=1'>[pref.weight_gain]</a><br>"
@@ -178,7 +213,11 @@
 			return
 		choice = preset_voice_freqs[choice]
 		if(choice == 0)
+<<<<<<< HEAD
 			pref.voice_freq = 42500 //CHOMPEdit
+=======
+			pref.voice_freq = 42500
+>>>>>>> a0e9785d0d (Kitchen Sink P2 TGUI Prefs (#17579))
 			return TOPIC_REFRESH
 		else if(choice == 1)
 			choice = tgui_input_number(user, "Choose your character's voice frequency, ranging from [MIN_VOICE_FREQ] to [MAX_VOICE_FREQ]", "Custom Voice Frequency", null, MAX_VOICE_FREQ, MIN_VOICE_FREQ)
@@ -205,12 +244,21 @@
 			"goon speak pugg",
 			"goon speak roach",
 			"goon speak skelly",
+<<<<<<< HEAD
 			"xeno speak") // CHOMPedit
 		var/choice = tgui_input_list(user, "Which set of sounds would you like to use for your character's speech sounds?", "Voice Sounds", possible_voice_types)
 		if(!pref.voice_sound)
 			pref.voice_sound = "goon speak 1"	//CHOMPEdit - Defaults voice to a less jarring sound
 		else if(!choice)
 			return TOPIC_REFRESH  // CHOMPEdit
+=======
+			"xeno speak")
+		var/choice = tgui_input_list(user, "Which set of sounds would you like to use for your character's speech sounds?", "Voice Sounds", possible_voice_types)
+		if(!pref.voice_sound)
+			pref.voice_sound = "goon speak 1"
+		else if(!choice)
+			return TOPIC_REFRESH
+>>>>>>> a0e9785d0d (Kitchen Sink P2 TGUI Prefs (#17579))
 		else
 			pref.voice_sound = choice
 		return TOPIC_REFRESH
@@ -260,15 +308,23 @@
 				S = sound(pick(GLOB.goon_speak_roach_sound))
 			if("goon speak skelly")
 				S = sound(pick(GLOB.goon_speak_skelly_sound))
+<<<<<<< HEAD
 //CHOMPedit start.
 			if("xeno speak")
 				S = sound(pick(GLOB.xeno_speak_sound))
 //CHOMPedit end.
+=======
+			if("xeno speak")
+				S = sound(pick(GLOB.xeno_speak_sound))
+>>>>>>> a0e9785d0d (Kitchen Sink P2 TGUI Prefs (#17579))
 		if(S)
 			S.frequency = pick(pref.voice_freq)
 			S.volume = 50
 			SEND_SOUND(user, S)
+<<<<<<< HEAD
 	// CHOMPEdit Start: Pain/Scream/Death sounds
+=======
+>>>>>>> a0e9785d0d (Kitchen Sink P2 TGUI Prefs (#17579))
 	else if(href_list["species_sound_options"]) // You shouldn't be able to see this option if you don't have the option to select a custom icon base, so we don't need to re-check for safety here.
 		var/list/possible_species_sound_types = species_sound_map
 		var/choice = tgui_input_list(user, "Which set of sounds would you like to use for your character's species sounds? (Cough, Sneeze, Scream, Pain, Gasp, Death)", "Species Sounds", possible_species_sound_types)
@@ -367,7 +423,10 @@
 		S.volume = 20
 		SEND_SOUND(user, S)
 		return TOPIC_REFRESH
+<<<<<<< HEAD
 	// CHOMPEdit End
+=======
+>>>>>>> a0e9785d0d (Kitchen Sink P2 TGUI Prefs (#17579))
 	return ..();
 
 #undef WEIGHT_CHANGE_MIN

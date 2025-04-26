@@ -111,11 +111,17 @@ GLOBAL_LIST_BOILERPLATE(all_brain_organs, /obj/item/organ/internal/brain)
 			brainmob.ooc_notes = H.ooc_notes
 			brainmob.ooc_notes_likes = H.ooc_notes_likes
 			brainmob.ooc_notes_dislikes = H.ooc_notes_dislikes
+<<<<<<< HEAD
 			//CHOMPEdit Start
 			brainmob.ooc_notes_favs = H.ooc_notes_favs
 			brainmob.ooc_notes_maybes = H.ooc_notes_maybes
 			brainmob.ooc_notes_style = H.ooc_notes_style
 			//CHOMPEdit End
+=======
+			brainmob.ooc_notes_favs = H.ooc_notes_favs
+			brainmob.ooc_notes_maybes = H.ooc_notes_maybes
+			brainmob.ooc_notes_style = H.ooc_notes_style
+>>>>>>> a0e9785d0d (Kitchen Sink P2 TGUI Prefs (#17579))
 
 		// Copy modifiers.
 		for(var/datum/modifier/M in H.modifiers)

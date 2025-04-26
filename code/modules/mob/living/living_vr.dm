@@ -96,7 +96,10 @@
 	if(!ooc_notes)
 		return
 	var/msg = ooc_notes
+<<<<<<< HEAD
 	//CHOMPEdit Start
+=======
+>>>>>>> a0e9785d0d (Kitchen Sink P2 TGUI Prefs (#17579))
 	if(ooc_notes_style && (ooc_notes_favs || ooc_notes_likes || ooc_notes_maybes || ooc_notes_dislikes) && !user.client?.prefs?.read_preference(/datum/preference/toggle/vchat_enable)) // Oldchat hates proper formatting
 		msg += "<br><br>"
 		msg += "<table><tr>"
@@ -140,8 +143,12 @@
 		if(ooc_notes_dislikes)
 			msg += "<br><br><b>[span_red("DISLIKES")]</b><br>[ooc_notes_dislikes]"
 	to_chat(user, span_chatexport("<b>[src]'s Metainfo:</b><br>[msg]"))
+<<<<<<< HEAD
 	//CHOMPEdit End
 //ChompEDIT END - Removal of usr
+=======
+
+>>>>>>> a0e9785d0d (Kitchen Sink P2 TGUI Prefs (#17579))
 /mob/living/verb/set_custom_link()
 	set name = "Set Custom Link"
 	set desc = "Set a custom link to show up with your examine text."

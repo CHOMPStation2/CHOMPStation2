@@ -46,11 +46,17 @@
 	infomorph.ooc_notes = MR.mind_oocnotes
 	infomorph.ooc_notes_likes = MR.mind_ooclikes
 	infomorph.ooc_notes_dislikes = MR.mind_oocdislikes
+<<<<<<< HEAD
 	//CHOMPEdit Start
 	infomorph.ooc_notes_favs = MR.mind_oocfavs
 	infomorph.ooc_notes_maybes = MR.mind_oocmaybes
 	infomorph.ooc_notes_style = MR.mind_oocstyle
 	//CHOMPEdit End
+=======
+	infomorph.ooc_notes_favs = MR.mind_oocfavs
+	infomorph.ooc_notes_maybes = MR.mind_oocmaybes
+	infomorph.ooc_notes_style = MR.mind_oocstyle
+>>>>>>> a0e9785d0d (Kitchen Sink P2 TGUI Prefs (#17579))
 	infomorph.apply_vore_prefs() //Cheap hack for now to give them SOME bellies.
 
 	//Don't set 'real_name' because then we get a nice (as sleevecard) thing.

@@ -477,11 +477,17 @@
 		blob.ooc_notes = ooc_notes
 		blob.ooc_notes_likes = ooc_notes_likes
 		blob.ooc_notes_dislikes = ooc_notes_dislikes
+<<<<<<< HEAD
 		// CHOMPAdd Start
 		blob.ooc_notes_favs = ooc_notes_favs
 		blob.ooc_notes_maybes = ooc_notes_maybes
 		blob.ooc_notes_style = ooc_notes_style
 		// CHOMPAdd End
+=======
+		blob.ooc_notes_favs = ooc_notes_favs
+		blob.ooc_notes_maybes = ooc_notes_maybes
+		blob.ooc_notes_style = ooc_notes_style
+>>>>>>> a0e9785d0d (Kitchen Sink P2 TGUI Prefs (#17579))
 		temporary_form = blob
 		var/obj/item/radio/R = null
 		if(isradio(l_ear))
@@ -609,11 +615,17 @@
 		ooc_notes = blob.ooc_notes // Lets give the protean any updated notes from blob form.
 		ooc_notes_likes = blob.ooc_notes_likes
 		ooc_notes_dislikes = blob.ooc_notes_dislikes
+<<<<<<< HEAD
 		// CHOMPAdd Start
 		ooc_notes_favs = blob.ooc_notes_favs
 		ooc_notes_maybes = blob.ooc_notes_maybes
 		ooc_notes_style = blob.ooc_notes_style
 		// CHOMPAdd End
+=======
+		ooc_notes_favs = blob.ooc_notes_favs
+		ooc_notes_maybes = blob.ooc_notes_maybes
+		ooc_notes_style = blob.ooc_notes_style
+>>>>>>> a0e9785d0d (Kitchen Sink P2 TGUI Prefs (#17579))
 		temporary_form = null
 
 		//Transfer vore organs
