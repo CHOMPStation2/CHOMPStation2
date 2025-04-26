@@ -287,3 +287,10 @@
   CHOMPStation2StaffMirrorBot:
   - bugfix: resting causing an error
   - code_imp: some less usr
+2025-04-26:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: name loading for robot module selection
+  - bugfix: tgui say unsupported channels are no longer black on black in dark mode
+  - qol: Virus extrapolator can now identify stealthy viruses
+  - rscdel: Removed "old vomit" spreading viruses
+  - bugfix: Makes vaccines work again
