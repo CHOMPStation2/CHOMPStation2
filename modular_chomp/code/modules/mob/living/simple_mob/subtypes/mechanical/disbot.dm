@@ -4,7 +4,7 @@
 
 
 /datum/say_list/disbot
-	threaten_sound = 'modular_chomp/sound/mob/robots/infector.ogg'
+	threaten_sound = 'sound/mob/robots/infector.ogg'
 
 /datum/ai_holder/simple_mob/melee/disbot
 	threaten = TRUE

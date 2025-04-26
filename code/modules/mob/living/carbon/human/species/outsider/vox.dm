@@ -36,14 +36,6 @@
 	pain_verb_1p = "shriek"
 	pain_verb_3p = "shrieks"
 	species_sounds = "Vox"
-	// CHOMPedit: Species Sounds Standardization
-	// male_scream_sound = list('sound/voice/shriek1.ogg') // CHOMPEdit: List-ified
-	// female_scream_sound = list('sound/voice/shriek1.ogg') // CHOMPEdit: List-ified
-	// male_cough_sounds = list('sound/voice/shriekcough.ogg')
-	// female_cough_sounds = list('sound/voice/shriekcough.ogg')
-	// male_sneeze_sound = 'sound/voice/shrieksneeze.ogg'
-	// female_sneeze_sound = 'sound/voice/shrieksneeze.ogg'
-	// CHOMPEdit End
 
 	warning_low_pressure = 50
 	hazard_low_pressure = 0

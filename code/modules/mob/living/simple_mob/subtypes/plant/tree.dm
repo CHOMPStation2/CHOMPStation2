@@ -32,8 +32,8 @@
 
 	pixel_x = -16
 
-	can_be_drop_prey = FALSE //CHOMP Add
-	can_pain_emote = FALSE // CHOMPEdit: Can't feel pain and shouldn't take damage anyways, but, sanity
+	can_be_drop_prey = FALSE
+	can_pain_emote = FALSE // Can't feel pain and shouldn't take damage anyways, but, sanity
 
 /mob/living/simple_mob/animal/space/tree/apply_melee_effects(var/atom/A)
 	if(isliving(A))

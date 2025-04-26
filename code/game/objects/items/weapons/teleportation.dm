@@ -79,7 +79,7 @@ Frequency:
 							src.temp += "[W.code]-[dir2text(get_dir(sr, tr))]-[direct]<BR>"
 
 				src.temp += span_bold("Extraneous Signals:") + "<BR>"
-				for (var/obj/item/implant/tracking/W in GLOB.all_tracking_implants) // CHOMPEdit
+				for (var/obj/item/implant/tracking/W in GLOB.all_tracking_implants)
 					if (!W.implanted || !(istype(W.loc,/obj/item/organ/external) || ismob(W.loc) || W.malfunction))
 						continue
 

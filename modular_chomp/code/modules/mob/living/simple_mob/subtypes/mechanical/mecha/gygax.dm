@@ -21,8 +21,8 @@
 	say_threaten = list("This area is condemned by Vir System Authority. Please leave immediately. You have 20 seconds to comply.")
 	say_stand_down = list("Visual lost.", "Error: Target not found.")
 	say_escalate = list("Intruder is tresspassing. Maximum force authorized by Vir System Suthority.")
-	threaten_sound = 'modular_chomp/sound/mob/robots/GygaxIntruder4.ogg'
-	stand_down_sound = 'modular_chomp/sound/mob/robots/GygaxDanger.ogg'
+	threaten_sound = 'sound/mob/robots/GygaxIntruder4.ogg'
+	stand_down_sound = 'sound/mob/robots/GygaxDanger.ogg'
 
 /datum/ai_holder/simple_mob/ranged/kiting/threatening/drone_aerostat
 	threaten_delay = 20 SECOND

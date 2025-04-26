@@ -213,7 +213,7 @@
 	if(on)
 		return FALSE
 	on = 1
-	playsound(src, 'modular_chomp/sound/effects/vehicle/ignition_car.ogg', 60, 2, -2) //CHOMPedit: New sound effects.
+	playsound(src, 'sound/effects/vehicle/ignition_car.ogg', 60, 2, -2) //CHOMPedit: New sound effects.
 	soundloop.start()
 	set_light(initial(light_range))
 	update_icon()
@@ -225,7 +225,7 @@
 	if(!mechanical)
 		return FALSE
 	on = 0
-	playsound(src, 'modular_chomp/sound/effects/vehicle/engine_off.ogg', 60, 2, -2) //CHOMPedit: New sound effects.
+	playsound(src, 'sound/effects/vehicle/engine_off.ogg', 60, 2, -2) //CHOMPedit: New sound effects.
 	soundloop.stop()
 	set_light(0)
 	update_icon()
@@ -243,7 +243,7 @@
 
 /obj/vehicle/proc/explode()
 	src.visible_message(span_bolddanger("[src] blows apart!"), 1)
-	playsound(src, 'modular_chomp/sound/effects/explosions/vehicleexplosion.ogg', 100, 8, 3) //CHOMPedit: New sound effects.
+	playsound(src, 'sound/effects/explosions/vehicleexplosion.ogg', 100, 8, 3) //CHOMPedit: New sound effects.
 	var/turf/Tsec = get_turf(src)
 
 	//stuns people who are thrown off a train that has been blown up
@@ -442,7 +442,7 @@
 //----------------------------
 
 /datum/looping_sound/idle_carengine
-	mid_sounds = 'modular_chomp/sound/effects/vehicle/engine_loop.ogg'
+	mid_sounds = 'sound/effects/vehicle/engine_loop.ogg'
 	mid_length = 2.60 SECONDS
 	chance = 100
 	volume = 10
