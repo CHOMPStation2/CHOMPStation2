@@ -249,20 +249,6 @@ var/list/mob_hat_cache = list()
 				request_player()
 			return
 
-<<<<<<< HEAD
-		/*else //CHOMPEdit - Comment out drone shutting down since it seems to be a round remove with no recourse
-			user.visible_message(span_danger("\The [user] swipes [TU.his] ID card through \the [src], attempting to shut it down."), span_danger("You swipe your ID card through \the [src], attempting to shut it down."))
-
-			if(emagged)
-				return
-
-			if(allowed(user))
-				shut_down()
-			else
-				to_chat(user, span_danger("Access denied."))*/
-
-=======
->>>>>>> d0787362cd (Kitchen Sink PR (#17515))
 		return
 
 	..()
@@ -322,14 +308,6 @@ var/list/mob_hat_cache = list()
 		return
 	..()
 
-<<<<<<< HEAD
-/* DRONE MOVEMENT. // CHOMPedit: Nuking slipping.
-/mob/living/silicon/robot/drone/Process_Spaceslipping(var/prob_slip)
-	return 0
-*/// CHOMPedit end.
-
-=======
->>>>>>> d0787362cd (Kitchen Sink PR (#17515))
 //CONSOLE PROCS
 /mob/living/silicon/robot/drone/proc/law_resync()
 	if(stat != DEAD)

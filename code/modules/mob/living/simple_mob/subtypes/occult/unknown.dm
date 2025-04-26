@@ -41,13 +41,8 @@
 
 	loot_list = list(/obj/item/nif/glitch = 100)
 
-<<<<<<< HEAD
-	can_be_drop_prey = FALSE //CHOMP Add
-	can_pain_emote = FALSE // CHOMPEdit: Can't feel pain
-=======
 	can_be_drop_prey = FALSE
 	can_pain_emote = FALSE
->>>>>>> d0787362cd (Kitchen Sink PR (#17515))
 
 /obj/item/projectile/energy/slow_orb
 	name = "TROJAN"
@@ -323,11 +318,7 @@
 
 	ai_holder_type = /datum/ai_holder/simple_mob/ranged/aggressive/bossmob_glitch_fake
 
-<<<<<<< HEAD
-	can_pain_emote = FALSE // CHOMPEdit: Can't feel pain
-=======
 	can_pain_emote = FALSE
->>>>>>> d0787362cd (Kitchen Sink PR (#17515))
 
 /mob/living/simple_mob/glitch_boss_fake/strong
 	maxHealth = 100

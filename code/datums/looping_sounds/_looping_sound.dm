@@ -34,13 +34,9 @@
 	var/extra_range
 	var/opacity_check
 	var/pref_check
-	var/volume_chan //CHOMPedit
 	var/exclusive
-<<<<<<< HEAD
 	var/falloff // CHOMPEdit: Add Falloff
-=======
 	var/volume_chan
->>>>>>> d0787362cd (Kitchen Sink PR (#17515))
 
 	var/timerid
 	var/started

@@ -43,11 +43,6 @@ var/datum/species/shapeshifter/promethean/prometheans
 
 	speech_bubble_appearance = "slime"
 
-<<<<<<< HEAD
-	// male_cough_sounds = list('sound/effects/slime_squish.ogg')
-	// female_cough_sounds = list('sound/effects/slime_squish.ogg')
-=======
->>>>>>> d0787362cd (Kitchen Sink PR (#17515))
 	species_sounds = "Slime"
 
 	min_age = 18

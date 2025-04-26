@@ -74,20 +74,10 @@
 			vore_organs -= B
 	if(tf_mob_holder)
 		tf_mob_holder = null
-<<<<<<< HEAD
-	//VOREStation Addition End
-	QDEL_NULL_LIST(hud_list)
-	QDEL_NULL(selected_image)
-	//QDEL_NULL(vorePanel) //VOREStation Add commented and moved to /mob
-	//QDEL_LIST_NULL(vore_organs) //VOREStation Add commented and moved to /mob
-	temp_language_sources = null //VOREStation Add
-	temp_languages = null //VOREStation Add
-=======
 	QDEL_NULL_LIST(hud_list)
 	QDEL_NULL(selected_image)
 	temp_language_sources = null
 	temp_languages = null
->>>>>>> d0787362cd (Kitchen Sink PR (#17515))
 
 	if(LAZYLEN(organs))
 		organs_by_name.Cut()
@@ -175,17 +165,10 @@
 		health = 100
 		set_stat(CONSCIOUS)
 	else
-<<<<<<< HEAD
-		// CHOMPEdit Start: Pain/etc calculations, but more efficient:tm: - this should work for literally anything that applies to health. Far better than slapping emote("pain") everywhere like scream does.
-		if(health > getMaxHealth()) //Overhealth
-			health = getMaxHealth()
-		var/initialhealth = health // CHOMPEdit: Getting our health before this check
-=======
 		// Pain/etc calculations, but more efficient:tm: - this should work for literally anything that applies to health. Far better than slapping emote("pain") everywhere like scream does.
 		if(health > getMaxHealth()) //Overhealth
 			health = getMaxHealth()
 		var/initialhealth = health // Getting our health before this check
->>>>>>> d0787362cd (Kitchen Sink PR (#17515))
 		health = getMaxHealth() - getOxyLoss() - getToxLoss() - getFireLoss() - getBruteLoss() - getCloneLoss() - halloss
 		if(!((ishuman(src)) || (issilicon(src))) && src.can_pain_emote) // Only run this if we're non-human/non-silicon (bots and mechanical simplemobs should be allowed to make pain sounds) & can emote pain, bc humans + carbons already do this. human_damage doesn't call parent, but sanity is better here.
 			if(health < initialhealth) // Did we lose health?
@@ -204,10 +187,6 @@
 					if(51 to INFINITY)
 						if(prob(pain_noise * 3)  && !isbelly(loc)) // More likely, most severe damage. No pain noises inside bellies.
 							emote("pain")
-<<<<<<< HEAD
-	// CHOMPEdit End: Pain
-=======
->>>>>>> d0787362cd (Kitchen Sink PR (#17515))
 
 //This proc is used for mobs which are affected by pressure to calculate the amount of pressure that actually
 //affects them once clothing is factored in. ~Errorage
@@ -932,19 +911,10 @@
 /mob/living/adjustEarDamage(var/damage, var/deaf)
 	ear_damage = max(0, ear_damage + damage)
 	ear_deaf = max(0, ear_deaf + deaf)
-<<<<<<< HEAD
-	if(ear_deaf > 0)
+	if(ear_deaf > 0) //CHOMPStaiton Enable: Ear Ringing/Deafness
 		deaf_loop.start() // CHOMPStation Add: Ear Ringing/Deafness - Not sure if we need this, but, safety.
 	else if(ear_deaf <= 0)
 		deaf_loop.stop() // CHOMPStation Add: Ear Ringing/Deafness - Not sure if we need this, but, safety.
-=======
-	/* //Segment here used downstream. Enable when deaf_loop is added.
-	if(ear_deaf > 0)
-		deaf_loop.start()
-	else if(ear_deaf <= 0)
-		deaf_loop.stop()
-	*/
->>>>>>> d0787362cd (Kitchen Sink PR (#17515))
 
 //pass a negative argument to skip one of the variable
 /mob/living/setEarDamage(var/damage, var/deaf)
@@ -952,11 +922,7 @@
 		ear_damage = damage
 	if(deaf >= 0)
 		ear_deaf = deaf
-<<<<<<< HEAD
-		deaf_loop.start() // CHOMPStation Add: Ear Ringing/Deafness - Not sure if we need this, but, safety.
-=======
-		//deaf_loop.start() // Ear Ringing/Deafness - Not sure if we need this, but, safety. NYI. Used downstream.
->>>>>>> d0787362cd (Kitchen Sink PR (#17515))
+		deaf_loop.start() // Ear Ringing/Deafness - Not sure if we need this, but, safety. NYI. Used downstream. //CHOMPStation Enable
 
 /mob/living/proc/vomit(lost_nutrition = 10, blood = FALSE, stun = 5, distance = 1, message = TRUE, toxic = VOMIT_TOXIC, purge = FALSE)
 
@@ -1076,33 +1042,14 @@
 			lying = incapacitated(INCAPACITATION_KNOCKDOWN)
 			canmove = !incapacitated(INCAPACITATION_DISABLED)
 
-<<<<<<< HEAD
-	if(incapacitated(INCAPACITATION_KNOCKOUT) || incapacitated(INCAPACITATION_STUNNED)) // CHOMPAdd - Making sure we're in good condition to crawl
-		canmove = 0
-		//drop_both_hands() CHOMPremove, purple stuns dont drop items, this makes space EVA less frustrating and slips/shoves are already coded to drop your stuff.
-=======
 	if(incapacitated(INCAPACITATION_KNOCKOUT) || incapacitated(INCAPACITATION_STUNNED)) // Making sure we're in good condition to crawl
 		canmove = 0
->>>>>>> d0787362cd (Kitchen Sink PR (#17515))
 	else
 		canmove = 1
 
 	if(lying)
 		density = FALSE
-<<<<<<< HEAD
-	/* CHOMPEdit - Allow us to hold stuff while laying down.
-		if(l_hand)
-			unEquip(l_hand)
-		if(r_hand)
-			unEquip(r_hand)
-		for(var/obj/item/holder/holder in get_mob_riding_slots())
-			unEquip(holder)
-	*/
 		update_water() // Submerges the mob.
-		// CHOMPAdd Start - For crawling.
-=======
-		update_water() // Submerges the mob.
->>>>>>> d0787362cd (Kitchen Sink PR (#17515))
 		stop_pulling()
 
 		if(!passtable_crawl_checked)
@@ -1113,23 +1060,12 @@
 				passtable_reset = TRUE
 				pass_flags |= PASSTABLE
 
-<<<<<<< HEAD
-		// CHOMPEdit End
 	else
 		density = initial(density)
-	// CHOMPEdit Start - Rest passtable when crawling
-=======
-	else
-		density = initial(density)
->>>>>>> d0787362cd (Kitchen Sink PR (#17515))
 		if(passtable_reset)
 			passtable_reset = FALSE
 			pass_flags &= ~PASSTABLE
 		passtable_crawl_checked = FALSE
-<<<<<<< HEAD
-	// CHOMPEdit End
-=======
->>>>>>> d0787362cd (Kitchen Sink PR (#17515))
 
 	for(var/obj/item/grab/G in grabbed_by)
 		if(G.state >= GRAB_AGGRESSIVE)
@@ -1320,22 +1256,6 @@
 	if(!item)
 		return FALSE //Grab processing has a chance of returning null
 
-<<<<<<< HEAD
-/* CHOMPEdit. If I want to do a nice little give I use the actual verb for it.
-	if(a_intent == I_HELP && Adjacent(target) && isitem(item) && ishuman(target))
-		var/obj/item/I = item
-		var/mob/living/carbon/human/H = target
-		if(H.in_throw_mode && H.a_intent == I_HELP && unEquip(I))
-			H.put_in_hands(I) // If this fails it will just end up on the floor, but that's fitting for things like dionaea.
-			visible_message(span_filter_notice(span_bold("[src]") + " hands \the [H] \a [I]."), span_notice("You give \the [target] \a [I]."))
-		else
-			to_chat(src, span_notice("You offer \the [I] to \the [target]."))
-			do_give(H)
-		return TRUE
-*/
-
-=======
->>>>>>> d0787362cd (Kitchen Sink PR (#17515))
 	drop_from_inventory(item)
 
 	if(!item || QDELETED(item))

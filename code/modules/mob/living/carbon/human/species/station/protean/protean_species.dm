@@ -61,11 +61,7 @@
 
 	rarity_value = 5
 
-<<<<<<< HEAD
-	species_sounds = "Robotic" // CHOMPEnable
-=======
 	species_sounds = "Robotic"
->>>>>>> d0787362cd (Kitchen Sink PR (#17515))
 
 	crit_mod = 4	//Unable to go crit  // CHOMPEnable
 	var/obj/item/rig/protean/OurRig

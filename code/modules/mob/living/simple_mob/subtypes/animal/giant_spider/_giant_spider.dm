@@ -119,17 +119,10 @@
 		)
 
 	allow_mind_transfer = TRUE
-<<<<<<< HEAD
-	can_be_drop_prey = FALSE //CHOMP Add
-	species_sounds = "Spider"
-	pain_emote_1p = list("chitter", "click") //CHOMP Add
-	pain_emote_3p = list("chitters", "clicks") //CHOMP Add
-=======
 	can_be_drop_prey = FALSE
 	species_sounds = "Spider"
 	pain_emote_1p = list("chitter", "click")
 	pain_emote_3p = list("chitters", "clicks")
->>>>>>> d0787362cd (Kitchen Sink PR (#17515))
 
 /mob/living/simple_mob/animal/giant_spider/Initialize(mapload)
 	. = ..()

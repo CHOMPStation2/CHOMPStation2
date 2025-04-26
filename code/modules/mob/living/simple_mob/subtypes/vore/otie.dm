@@ -49,18 +49,10 @@
 
 	allow_mind_transfer = TRUE
 
-<<<<<<< HEAD
-	// CHOMPAdd Start :c
-=======
->>>>>>> d0787362cd (Kitchen Sink PR (#17515))
 	can_be_drop_prey = FALSE
 	species_sounds = "Canine"
 	pain_emote_1p = list("yelp", "whine", "bark", "growl")
 	pain_emote_3p = list("yelps", "whines", "barks", "growls")
-<<<<<<< HEAD
-	// CHOMPAdd End
-=======
->>>>>>> d0787362cd (Kitchen Sink PR (#17515))
 
 // Activate Noms!
 
