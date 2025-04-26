@@ -61,7 +61,7 @@
 
 	rarity_value = 5
 
-	species_sounds = "Robotic" // CHOMPEnable
+	species_sounds = "Robotic"
 
 	crit_mod = 4	//Unable to go crit  // CHOMPEnable
 	var/obj/item/rig/protean/OurRig

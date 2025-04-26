@@ -20,7 +20,7 @@
 /obj/machinery/computer/shuttle_control/explore/stargazer
 	name = "short jump console"
 	shuttle_tag = "Stargazer"
-	req_one_access = list(access_pilot)
+	//req_one_access = list(access_pilot)
 
 //Baby_Mammoth
 /datum/shuttle/autodock/overmap/baby_mammoth
@@ -43,7 +43,7 @@
 /obj/machinery/computer/shuttle_control/explore/baby_mammoth
 	name = "short jump console"
 	shuttle_tag = "Baby_mammoth"
-	req_one_access = list(access_pilot)
+	//req_one_access = list(access_pilot)
 
 //Ursula
 /datum/shuttle/autodock/overmap/ursula
@@ -66,7 +66,7 @@
 /obj/machinery/computer/shuttle_control/explore/ursula
 	name = "short jump console"
 	shuttle_tag = "Ursula"
-	req_one_access = list(access_pilot)
+	//req_one_access = list(access_pilot)
 
 //Needle
 /datum/shuttle/autodock/overmap/needle
@@ -89,7 +89,7 @@
 /obj/machinery/computer/shuttle_control/explore/needle
 	name = "short jump console"
 	shuttle_tag = "Needle"
-	req_one_access = list(access_pilot)
+	//req_one_access = list(access_pilot)
 
 //Echidna
 /datum/shuttle/autodock/overmap/echidna
@@ -112,7 +112,7 @@
 /obj/machinery/computer/shuttle_control/explore/echidna
 	name = "short jump console"
 	shuttle_tag = "Echidna"
-	req_one_access = list(access_pilot)
+	//req_one_access = list(access_pilot)
 
 //Spacebus
 /datum/shuttle/autodock/overmap/spacebus
@@ -135,7 +135,7 @@
 /obj/machinery/computer/shuttle_control/explore/spacebus
 	name = "short jump console"
 	shuttle_tag = "Space Bus"
-	req_one_access = list(access_pilot)
+	//req_one_access = list(access_pilot)
 
 //POI Junker
 /datum/shuttle/autodock/overmap/junker

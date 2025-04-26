@@ -230,6 +230,7 @@
 /obj/item/rig/baymed
 	name = "\improper Solgov medical hardsuit control module"
 	desc = "A lightweight first responder hardsuit from Solgov. Not suitable for combat use, but advanced myomer fibers can push the user to incredible speeds."
+	interface_intro = "Commonwealth"
 
 	icon = 'icons/obj/rig_modules_vr.dmi' // the item
 	default_mob_icon = 'icons/mob/rig_back_vr.dmi' // the onmob
@@ -295,6 +296,7 @@
 /obj/item/rig/bayeng
 	name = "\improper Solgov engineering hardsuit control module"
 	desc = "An advanced construction hardsuit from Solgov. Built like a tank. Don't expect to be taking any tight corners while running."
+	interface_intro = "Commonwealth"
 
 	icon = 'icons/obj/rig_modules_vr.dmi' // the item
 	default_mob_icon = 'icons/mob/rig_back_vr.dmi' // the onmob
@@ -361,6 +363,7 @@
 /obj/item/rig/pathfinder
 	name = "\improper Solgov pathfinder hardsuit control module"
 	desc = "A Solgov pathfinder hardsuit is hard to come by... how'd this end up on the frontier?"
+	interface_intro = "Commonwealth"
 
 	icon = 'icons/obj/rig_modules_vr.dmi' // the item
 	default_mob_icon = 'icons/mob/rig_back_vr.dmi' // the onmob

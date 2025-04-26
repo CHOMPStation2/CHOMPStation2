@@ -545,6 +545,7 @@
 		update_hologram()
 
 /obj/item/integrated_circuit/output/holographic_projector/proc/on_moved()
+	SIGNAL_HANDLER
 	if(hologram)
 		update_hologram_position()
 

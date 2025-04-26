@@ -84,24 +84,6 @@
 	desc = "You will eat anything instantly, in one bite."
 	cost = 0
 	var_changes = list("bite_mod" = 16) // Setting this intentionally ridiculously high, so anything will overflow and be eaten in one go.
-	custom_only = FALSE
-
-// CHOMPNote: Moving YW additions here, to sync our files better with VORE in the event of edits.
-/datum/trait/neutral/autohiss_vassilian
-	name = "Autohiss (Vassilian)"
-	desc = "You buzz your S's, F's, Th's, and R's."
-	cost = 0
-	var_changes = list(
-	autohiss_basic_map = list(
-		"s" = list("sz", "z", "zz"),
-		"f" = list("zk")
-		),
-	autohiss_extra_map = list(
-		"th" = list("zk", "szk"),
-		"r" = list("rk")
-	),
-	autohiss_exempt = list("Vespinae"))
-	excludes = list(/datum/trait/neutral/autohiss_tajaran, /datum/trait/neutral/autohiss_unathi)
 
 /datum/trait/neutral/slip_reflex
 	name ="Slippery Reflexes"

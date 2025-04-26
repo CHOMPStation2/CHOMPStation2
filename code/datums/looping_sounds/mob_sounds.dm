@@ -10,11 +10,11 @@
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /datum/looping_sound/mob/deafened
-	start_sound = 'modular_chomp/sound/effects/ear_ring/ear_deaf_in.ogg'
+	start_sound = 'sound/effects/ear_ring/ear_deaf_in.ogg'
 	start_length = 4 SECONDS // 2 seconds shorter than the actual file ending, bc we want it to overlap
-	mid_sounds = list('modular_chomp/sound/misc/silence.ogg'=1)
+	mid_sounds = list('sound/misc/silence.ogg'=1)
 	mid_length = 3 SECONDS
-	end_sound = 'modular_chomp/sound/effects/ear_ring/ear_deaf_out.ogg'
+	end_sound = 'sound/effects/ear_ring/ear_deaf_out.ogg'
 	volume = 40
 	direct = TRUE 		// We send this sound directly to the mob, bc they only hear it when they're deaf.
 	exclusive = TRUE	// This should only occur once, because we can only be deafened once.
@@ -23,7 +23,7 @@
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /datum/looping_sound/mob/cozyloop
-	mid_sounds = list('modular_chomp/sound/misc/cozy.ogg'=1)
+	mid_sounds = list('sound/misc/cozy.ogg'=1)
 	mid_length = 21 SECONDS
 	volume = 40
 	pref_check = /datum/preference/toggle/sleep_music

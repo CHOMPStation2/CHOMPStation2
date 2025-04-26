@@ -32,10 +32,10 @@
 		return
 	recharging = 1
 	update_icon()
-	playsound(src,'modular_chomp/sound/weapons/clockwork/clockwork_cock.ogg',25,1)
+	playsound(src,'sound/weapons/clockwork/clockwork_cock.ogg',25,1)
 	user.visible_message(span_notice("[user] pulls the charging handle on \the [src] and it whirrs to life!"), \
 						span_notice("You pull the charging handle on \the [src] and begin the reloading sequence."))
-	playsound(src,'modular_chomp/sound/weapons/clockwork/cwc_rifle_fabricate.ogg',25,5)
+	playsound(src,'sound/weapons/clockwork/cwc_rifle_fabricate.ogg',25,5)
 	while(recharging)
 		if(!do_after(user, 50, src))
 			break
@@ -48,13 +48,13 @@
 	user.hud_used.update_ammo_hud(user, src) // Update one last time once we're finished!
 
 /obj/item/projectile/bullet/rifle/clockwork
-	fire_sound = 'modular_chomp/sound/weapons/clockwork/cwc_rifle_fire.ogg'
+	fire_sound = 'sound/weapons/clockwork/cwc_rifle_fire.ogg'
 	damage = 20 //Old 10
 	hud_state = "rifle_heavy"
 
 /obj/item/projectile/beam/shock/clockwork
 	name = "shock beam"
-	fire_sound = 'modular_chomp/sound/weapons/clockwork/voltbeam_fire.ogg'
+	fire_sound = 'sound/weapons/clockwork/voltbeam_fire.ogg'
 	icon_state = "lightning"
 	damage_type = ELECTROCUTE
 
@@ -66,7 +66,7 @@
 	agony = 15
 	eyeblur = 2
 	hitsound = 'sound/effects/lightningshock.ogg'
-	hitsound_wall = 'modular_chomp/sound/weapons/clockwork/voltbeamsearwall.ogg'
+	hitsound_wall = 'sound/weapons/clockwork/voltbeamsearwall.ogg'
 	hud_state = "taser"
 
 /obj/effect/projectile/muzzle/voltbeam
