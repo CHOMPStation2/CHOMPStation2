@@ -4984,7 +4984,6 @@
 #include "modular_chomp\code\modules\mob\language\language.dm"
 #include "modular_chomp\code\modules\mob\living\emote.dm"
 #include "modular_chomp\code\modules\mob\living\living.dm"
-#include "modular_chomp\code\modules\mob\living\ooc_notes.dm"
 #include "modular_chomp\code\modules\mob\living\carbon\carbon.dm"
 #include "modular_chomp\code\modules\mob\living\carbon\human\emote.dm"
 #include "modular_chomp\code\modules\mob\living\carbon\human\human.dm"
