@@ -80,12 +80,7 @@
 #define WAIT_FINISH  4
 #define DO_AUTOPILOT 5
 
-<<<<<<< HEAD
-// Setting this much higher than 1024 could allow spammers to DOS the server easily.
-#define MAX_MESSAGE_LEN       4096 //CHOMPStation Edit - This is what it means to go even further byond
-=======
 #define MAX_MESSAGE_LEN       4096
->>>>>>> d0787362cd (Kitchen Sink PR (#17515))
 #define MAX_PAPER_MESSAGE_LEN 6144
 #define MAX_BOOK_MESSAGE_LEN  24576
 #define MAX_RECORD_LENGTH	  24576
@@ -450,15 +445,9 @@ GLOBAL_LIST_EMPTY(##LIST_NAME);\
 #define VOLUME_CHANNEL_INSTRUMENTS "Instruments"
 #define VOLUME_CHANNEL_WEATHER "Weather"
 #define VOLUME_CHANNEL_SPECIES_SOUNDS "Species Sounds (Verbal Injury Feedback)"
-<<<<<<< HEAD
-#define VOLUME_CHANNEL_HUD_WARNINGS "SS13 HUD (Clientside-only sounds)"
+#define VOLUME_CHANNEL_HUD_WARNINGS "SS13 HUD (Clientside-only sounds)" //NYI //CHOMPStation Note: Implemented on Chomp
 #define VOLUME_CHANNEL_DEATH_SOUNDS "Death Sounds"
-#define VOLUME_CHANNEL_INJURY_SOUNDS "Mob Injury Sounds (Non-Verbal Feedback)"
-=======
-#define VOLUME_CHANNEL_HUD_WARNINGS "SS13 HUD (Clientside-only sounds)" //NYI
-#define VOLUME_CHANNEL_DEATH_SOUNDS "Death Sounds"
-#define VOLUME_CHANNEL_INJURY_SOUNDS "Mob Injury Sounds (Non-Verbal Feedback)" //NYI
->>>>>>> d0787362cd (Kitchen Sink PR (#17515))
+#define VOLUME_CHANNEL_INJURY_SOUNDS "Mob Injury Sounds (Non-Verbal Feedback)" //NYI //CHOMPStation Note: Implemented on Chomp
 #define VOLUME_CHANNEL_MACHINERY "Machinery Noises"
 #define VOLUME_CHANNEL_MACHINERY_IDLE "Machinery Idle Noises"
 

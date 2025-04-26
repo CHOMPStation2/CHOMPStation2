@@ -6,11 +6,7 @@
 	log_access_out(src)
 	unset_machine()
 	if(GLOB.admin_datums[src.ckey])
-<<<<<<< HEAD
-		message_admins("Staff logout: [key_name(src)]") // CHOMPEdit: Admin logout notice displays no matter what//Edit2: STAFF
-=======
 		message_admins("Staff logout: [key_name(src)]") // Staff logout notice displays no matter what
->>>>>>> d0787362cd (Kitchen Sink PR (#17515))
 		if (ticker && ticker.current_state == GAME_STATE_PLAYING) //Only report this stuff if we are currently playing.
 			var/admins_number = GLOB.admins.len
 

@@ -80,11 +80,7 @@
 	. = ..()
 	//return QDEL_HINT_HARDDEL_NOW Just keep track of mob references. They delete SO much faster now.
 
-<<<<<<< HEAD
-/mob/show_message(msg, type, alt, alt_type)//Message, type of message (1 or 2), alternative message, alt message type (1 or 2) //CHOMPEdit show_message() moved to /atom/movable
-=======
 /mob/show_message(msg, type, alt, alt_type)
->>>>>>> d0787362cd (Kitchen Sink PR (#17515))
 
 	if(!client && !teleop)	return
 
@@ -484,11 +480,7 @@
 
 
 	targets += observe_list_format(GLOB.nuke_disks)
-<<<<<<< HEAD
-	targets += observe_list_format(GLOB.all_singularities) //CHOMP Edit
-=======
 	targets += observe_list_format(GLOB.all_singularities)
->>>>>>> d0787362cd (Kitchen Sink PR (#17515))
 	targets += getmobs()
 	targets += observe_list_format(sortAtom(mechas_list))
 	targets += observe_list_format(SSshuttles.ships)
@@ -571,11 +563,7 @@
 		to_chat(src, span_warning("It won't budge!"))
 		return
 
-<<<<<<< HEAD
-	if(lying) // CHOMPAdd - No pulling while we crawl.
-=======
 	if(lying)
->>>>>>> d0787362cd (Kitchen Sink PR (#17515))
 		return
 
 	var/mob/M = AM
@@ -1150,23 +1138,6 @@
 	in_throw_mode = 1
 	if(throw_icon && !issilicon(src)) // Silicon use this for something else. Do not overwrite their HUD icon
 		throw_icon.icon_state = "act_throw_on"
-<<<<<<< HEAD
-/* CHOMPedit removal begin
-/mob/verb/spacebar_throw_on()
-	set name = ".throwon"
-	set hidden = TRUE
-	set instant = TRUE
-	throw_mode_on()
-
-/mob/verb/spacebar_throw_off()
-	set name = ".throwoff"
-	set hidden = TRUE
-	set instant = TRUE
-	throw_mode_off()
-ChompEdit removal end*/
-=======
-
->>>>>>> d0787362cd (Kitchen Sink PR (#17515))
 /mob/proc/isSynthetic()
 	return 0
 
@@ -1191,10 +1162,6 @@ ChompEdit removal end*/
 		var/mob/exploited = exploit_for.resolve()
 		exploited?.exploit_addons -= src
 		exploit_for = null
-<<<<<<< HEAD
-	// CHOMPEdit End
-=======
->>>>>>> d0787362cd (Kitchen Sink PR (#17515))
 	. = ..()
 
 

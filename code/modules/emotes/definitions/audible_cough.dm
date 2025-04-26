@@ -12,10 +12,6 @@
 	emote_volume_synthetic = 50
 
 	conscious = FALSE
-<<<<<<< HEAD
-// CHOMPEdit Start: Standardize Species Sounds
-=======
->>>>>>> d0787362cd (Kitchen Sink PR (#17515))
 	// emote_sound_synthetic = list()
 
 /decl/emote/audible/cough/get_emote_sound(var/atom/user)
@@ -39,8 +35,4 @@
 			"vol" = emote_volume,
 			"volchannel" = VOLUME_CHANNEL_SPECIES_SOUNDS
 		)
-<<<<<<< HEAD
-// CHOMPEdit End
-=======
->>>>>>> d0787362cd (Kitchen Sink PR (#17515))
 	return ..()

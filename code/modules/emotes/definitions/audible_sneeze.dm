@@ -10,10 +10,6 @@
 /decl/emote/audible/sneeze/get_emote_sound(var/atom/user)
 	if(ishuman(user) && !check_synthetic(user))
 		var/mob/living/carbon/human/H = user
-<<<<<<< HEAD
-		// CHOMPEdit Start: Standardize Species Sounds
-=======
->>>>>>> d0787362cd (Kitchen Sink PR (#17515))
 		var/vol = H.species.sneeze_volume
 		var/s = get_species_sound(get_gendered_sound(H))["sneeze"]
 		if(!s && !(get_species_sound(H.species.species_sounds) == "None")) // Failsafe, so we always use the default sneeze/etc sounds. None will cancel out anyways.

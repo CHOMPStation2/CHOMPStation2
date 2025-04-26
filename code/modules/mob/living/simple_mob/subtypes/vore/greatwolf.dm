@@ -39,20 +39,7 @@
 	can_buckle = TRUE
 	buckle_movable = TRUE
 	buckle_lying = FALSE
-<<<<<<< HEAD
-
-	can_be_drop_prey = FALSE //CHOMP Add
-	// CHOMPAdd: :c
-	species_sounds = "Canine"
-	pain_emote_1p = list("yelp", "whine", "bark", "growl")
-	pain_emote_3p = list("yelps", "whines", "barks", "growls")
-	// CHOMPAdd End
-
-/mob/living/simple_mob/vore/greatwolf
-
-=======
 	max_tox = 0 // for virgo3b survivability
->>>>>>> d0787362cd (Kitchen Sink PR (#17515))
 	vore_bump_chance = 25
 	vore_digest_chance = 5
 	vore_escape_chance = 5
