@@ -1,12 +1,7 @@
 /datum/persistent/filth/trash
 	name = "trash"
-<<<<<<< HEAD
-	saves_dirt = FALSE //VOREStation edit
-	has_admin_data = FALSE // CHOMPEdit
-=======
 	saves_dirt = FALSE
 	has_admin_data = FALSE
->>>>>>> 4d6ea5d336 (up port those (#17599))
 
 /datum/persistent/filth/trash/CheckTurfContents(var/turf/T, var/list/tokens)
 	var/too_much_trash = 0

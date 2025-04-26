@@ -220,6 +220,8 @@ SUBSYSTEM_DEF(statpanels)
 			continue
 		if(turf_content in overrides)
 			continue
+		if(!(turf_content.plane in target_mob.planes_visible))
+			continue
 		//if(turf_content.IsObscured())
 			//continue
 		atoms_to_display += turf_content

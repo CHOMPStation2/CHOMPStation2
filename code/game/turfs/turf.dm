@@ -374,11 +374,7 @@
 /turf/proc/can_engrave()
 	return FALSE
 
-<<<<<<< HEAD
-/turf/proc/try_graffiti(var/mob/vandal, var/obj/item/tool, click_parameters) // CHOMPEdt - click_parameters
-=======
 /turf/proc/try_graffiti(var/mob/vandal, var/obj/item/tool, click_parameters)
->>>>>>> 4d6ea5d336 (up port those (#17599))
 
 	if(!tool || !tool.sharp || !can_engrave()) //CHOMP Edit
 		return FALSE
@@ -411,10 +407,6 @@
 	graffiti.message = message
 	graffiti.author = vandal.ckey
 
-<<<<<<< HEAD
-	// CHOMPAdd - Cooler graffitis
-=======
->>>>>>> 4d6ea5d336 (up port those (#17599))
 	if(click_parameters)
 		var/list/mouse_control = params2list(click_parameters)
 		var/p_x = 0
@@ -426,10 +418,6 @@
 
 		graffiti.pixel_x = p_x
 		graffiti.pixel_y = p_y
-<<<<<<< HEAD
-	// CHOMPAdd End
-=======
->>>>>>> 4d6ea5d336 (up port those (#17599))
 
 	if(lowertext(message) == "elbereth")
 		to_chat(vandal, span_notice("You feel much safer."))
