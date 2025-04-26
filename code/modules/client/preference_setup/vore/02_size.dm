@@ -95,18 +95,6 @@
 	. += "<a href='byond://?src=\ref[src];voice_test=1'><b>Test Selected Voice</b></a><br>"
 	. += span_bold("Custom Speech Bubble:") + " <a href='byond://?src=\ref[src];customize_speech_bubble=1'>[pref.custom_speech_bubble]</a><br>"
 	. += span_bold("Custom Footstep Sounds:") + "<a href='byond://?src=\ref[src];customize_footsteps=1'>[pref.custom_footstep]</a><br>"
-	// CHOMPEdit Start: Pain/Scream/Death Custom Sounds
-	// var/datum/species/selected_species = GLOB.all_species[pref.species]
-	// if(selected_species.selects_bodytype)
-	. += "<br>"
-	. += span_bold("Species Sounds:") + " <a href='byond://?src=\ref[src];species_sound_options=1'>[pref.species_sound]</a><br>"
-	. += "<a href='byond://?src=\ref[src];cough_test=1'><b>Test Cough Sounds</b></a><br>"
-	. += "<a href='byond://?src=\ref[src];sneeze_test=1'><b>Test Sneeze Sounds</b></a><br>"
-	. += "<a href='byond://?src=\ref[src];scream_test=1'><b>Test Scream Sounds</b></a><br>"
-	. += "<a href='byond://?src=\ref[src];pain_test=1'><b>Test Pain Sounds</b></a><br>"
-	. += "<a href='byond://?src=\ref[src];gasp_test=1'><b>Test Gasp Sounds</b></a><br>"
-	. += "<a href='byond://?src=\ref[src];death_test=1'><b>Test Death Sounds</b></a><br>"
-	// CHOMPEdit End: Pain/Scream/Death Custom Sounds
 	. += "<br>"
 	. += span_bold("Species Sounds:") + " <a href='byond://?src=\ref[src];species_sound_options=1'>[pref.species_sound]</a><br>"
 	. += "<a href='byond://?src=\ref[src];cough_test=1'><b>Test Cough Sounds</b></a><br>"
