@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ///var/atom/movable/lobby_image = new /atom/movable{icon = 'icons/misc/title.dmi'; icon_state = lobby_image_state; screen_loc = "1,1"; name = "Polaris"}
 
 var/obj/effect/lobby_image = new /obj/effect/lobby_image
@@ -26,6 +27,8 @@ var/obj/effect/lobby_image = new /obj/effect/lobby_image
 /mob/new_player
 	var/client/my_client // Need to keep track of this ourselves, since by the time Logout() is called the client has already been nulled
 
+=======
+>>>>>>> e627fb8d1d (CMSS Lobby Screen (#17581))
 /mob/new_player/Login()
 	update_Login_details()	//handles setting lastKnownIP and computer_id for use by the ban systems as well as checking for multikeying
 	if(GLOB.join_motd)
@@ -41,6 +44,7 @@ var/obj/effect/lobby_image = new /obj/effect/lobby_image
 		mind.active = 1
 		mind.current = src
 
+<<<<<<< HEAD
 	//CHOMPEdit Begin
 	if(length(GLOB.newplayer_start))
 		forceMove(pick(GLOB.newplayer_start))
@@ -51,13 +55,21 @@ var/obj/effect/lobby_image = new /obj/effect/lobby_image
 	//loc = null CHOMPEdit Removal
 	//client.screen += lobby_image CHOMPEdit Removal
 	my_client = client
+=======
+	if(client)
+		persistent_ckey = client.ckey
+
+	loc = null
+>>>>>>> e627fb8d1d (CMSS Lobby Screen (#17581))
 	sight |= SEE_TURFS
+
+	initialize_lobby_screen()
+
 	player_list |= src
 
 	created_for = ckey
 
 	if(!QDELETED(src))
-		new_player_panel()
 		addtimer(CALLBACK(src, PROC_REF(do_after_login)), 4 SECONDS, TIMER_DELETE_ME)
 
 /mob/new_player/proc/do_after_login()

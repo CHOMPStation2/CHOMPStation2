@@ -5,9 +5,8 @@
 	var/spawning = 0			//Referenced when you want to delete the new_player later on in the code.
 	var/totalPlayers = 0		//Player counts for the Lobby tab
 	var/totalPlayersReady = 0
-	var/show_hidden_jobs = 0	//Show jobs that are set to "Never" in preferences
 	var/has_respawned = FALSE	//Determines if we're using RESPAWN_MESSAGE
-	var/datum/browser/panel
+	var/datum/tgui_window/lobby_window = null
 	var/datum/tgui_module/crew_manifest/new_player/manifest_dialog = null
 	var/datum/tgui_module/late_choices/late_choices_dialog = null
 	universal_speak = 1
@@ -27,14 +26,13 @@
 	add_verb(src, /mob/proc/insidePanel)
 
 /mob/new_player/Destroy()
-	if(panel)
-		QDEL_NULL(panel)
 	if(manifest_dialog)
 		QDEL_NULL(manifest_dialog)
 	if(late_choices_dialog)
 		QDEL_NULL(late_choices_dialog)
 	. = ..()
 
+<<<<<<< HEAD
 /mob/new_player/verb/new_player_panel()
 	set src = usr
 	new_player_panel_proc()
@@ -124,6 +122,8 @@
 	panel.open()
 	return
 
+=======
+>>>>>>> e627fb8d1d (CMSS Lobby Screen (#17581))
 /mob/new_player/get_status_tab_items()
 	. = ..()
 	. += ""
@@ -160,78 +160,6 @@
 
 /mob/new_player/Topic(href, href_list[])
 	if(!client)	return 0
-
-	if(href_list["show_preferences"])
-		client.prefs.ShowChoices(src)
-		return 1
-
-	if(href_list["ready"])
-		if(!ticker || ticker.current_state <= GAME_STATE_PREGAME) // Make sure we don't ready up after the round has started
-			ready = text2num(href_list["ready"])
-		else
-			ready = 0
-
-	if(href_list["refresh"])
-		panel.close()
-		new_player_panel_proc()
-
-	if(href_list["observe"])
-		if(!SSticker || SSticker.current_state == GAME_STATE_INIT)
-			to_chat(src, span_warning("The game is still setting up, please try again later."))
-			return 0
-		if(tgui_alert(src,"Are you sure you wish to observe? If you do, make sure to not use any knowledge gained from observing if you decide to join later.","Observe Round?",list("Yes","No")) == "Yes")
-			if(!client)	return 1
-
-			//Make a new mannequin quickly, and allow the observer to take the appearance
-			var/mob/living/carbon/human/dummy/mannequin = get_mannequin(client.ckey)
-			client.prefs.dress_preview_mob(mannequin)
-			var/mob/observer/dead/observer = new(mannequin)
-			observer.moveToNullspace() //Let's not stay in our doomed mannequin
-
-			spawning = 1
-			if(client.media)
-				client.media.stop_music() // MAD JAMS cant last forever yo
-
-			observer.started_as_observer = 1
-			close_spawn_windows()
-			var/obj/O = locate("landmark*Observer-Start")
-			if(istype(O))
-				to_chat(src, span_notice("Now teleporting."))
-				observer.forceMove(O.loc)
-			else
-				to_chat(src, span_danger("Could not locate an observer spawn point. Use the Teleport verb to jump to the station map."))
-
-			announce_ghost_joinleave(src)
-
-			if(client.prefs.read_preference(/datum/preference/toggle/human/name_is_always_random))
-				client.prefs.real_name = random_name(client.prefs.identifying_gender)
-			observer.real_name = client.prefs.real_name
-			observer.name = observer.real_name
-			if(!client.holder && !CONFIG_GET(flag/antag_hud_allowed))           // For new ghosts we remove the verb from even showing up if it's not allowed.
-				remove_verb(observer, /mob/observer/dead/verb/toggle_antagHUD)        // Poor guys, don't know what they are missing!
-			observer.key = key
-			observer.set_respawn_timer(time_till_respawn()) // Will keep their existing time if any, or return 0 and pass 0 into set_respawn_timer which will use the defaults
-			observer.client.init_verbs()
-			qdel(src)
-
-			return TRUE
-
-	if(href_list["late_join"])
-
-		if(!ticker || ticker.current_state != GAME_STATE_PLAYING)
-			to_chat(usr, span_red("The round is either not ready, or has already finished..."))
-			return
-
-		var/time_till_respawn = time_till_respawn()
-		if(time_till_respawn == -1) // Special case, never allowed to respawn
-			to_chat(usr, span_warning("Respawning is not allowed!"))
-		else if(time_till_respawn) // Nonzero time to respawn
-			to_chat(usr, span_warning("You can't respawn yet! You need to wait another [round(time_till_respawn/10/60, 0.1)] minutes."))
-			return
-		LateChoices()
-
-	if(href_list["manifest"])
-		ViewManifest()
 
 	if(href_list["privacy_poll"])
 		establish_db_connection()
@@ -275,13 +203,6 @@
 	if(!ready && href_list["preference"])
 		if(client)
 			client.prefs.process_link(src, href_list)
-	else if(!href_list["late_join"])
-		new_player_panel()
-
-	if(href_list["showpoll"])
-
-		handle_player_polling()
-		return
 
 	if(href_list["pollid"])
 
@@ -333,27 +254,6 @@
 					if(!isnull(href_list["option_[optionid]"]))	//Test if this optionid was selected
 						vote_on_poll(pollid, optionid, 1)
 
-	if(href_list["shownews"])
-		handle_server_news()
-		return
-
-	if(href_list["hidden_jobs"])
-		show_hidden_jobs = !show_hidden_jobs
-		LateChoices()
-
-	if(href_list["give_feedback"])
-		if(!SSsqlite.can_submit_feedback(my_client))
-			return
-
-		if(client.feedback_form)
-			client.feedback_form.display() // In case they closed the form early.
-		else
-			client.feedback_form = new(client)
-
-	if(href_list["open_changelog"])
-		write_preference_directly(/datum/preference/text/lastchangelog, GLOB.changelog_hash)
-		client.changes()
-		return
 
 /mob/new_player/proc/handle_server_news()
 	if(!client)
@@ -479,9 +379,6 @@
 	var/mob/living/character = create_character(T)	//creates the human and transfers vars and mind
 	character = job_master.EquipRank(character, rank, 1)					//equips the human
 	UpdateFactionList(character)
-	if(character && character.client)
-		var/obj/screen/splash/Spl = new(character.client, TRUE)
-		Spl.Fade(TRUE)
 
 	var/datum/job/J = SSjob.get_job(rank)
 
@@ -674,7 +571,6 @@
 	src << browse(null, "window=latechoices") //closes late choices window
 	src << browse(null, "window=preferences_window") //VOREStation Edit?
 	src << browse(null, "window=News") //closes news window
-	panel.close()
 
 /mob/new_player/get_species()
 	var/datum/species/chosen_species
