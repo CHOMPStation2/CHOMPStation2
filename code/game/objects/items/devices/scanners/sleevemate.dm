@@ -53,17 +53,9 @@ var/global/mob/living/carbon/human/dummy/mannequin/sleevemate_mob
 	ooc_notes = M.ooc_notes
 	ooc_notes_likes = M.ooc_notes_likes
 	ooc_notes_dislikes = M.ooc_notes_dislikes
-<<<<<<< HEAD
-	//CHOMPEdit Start
 	ooc_notes_favs = M.ooc_notes_favs
 	ooc_notes_maybes = M.ooc_notes_maybes
 	ooc_notes_style = M.ooc_notes_style
-	//CHOMPEdit End
-=======
-	ooc_notes_favs = M.ooc_notes_favs
-	ooc_notes_maybes = M.ooc_notes_maybes
-	ooc_notes_style = M.ooc_notes_style
->>>>>>> a0e9785d0d (Kitchen Sink P2 TGUI Prefs (#17579))
 	stored_mind = M.mind
 	M.ghostize()
 	stored_mind.current = null
@@ -75,17 +67,9 @@ var/global/mob/living/carbon/human/dummy/mannequin/sleevemate_mob
 	M.ooc_notes = ooc_notes
 	M.ooc_notes_likes = ooc_notes_likes
 	M.ooc_notes_dislikes = ooc_notes_dislikes
-<<<<<<< HEAD
-	//CHOMPEdit Start
 	M.ooc_notes_favs = ooc_notes_favs
 	M.ooc_notes_maybes = ooc_notes_maybes
 	M.ooc_notes_style = ooc_notes_style
-	//CHOMPEdit End
-=======
-	M.ooc_notes_favs = ooc_notes_favs
-	M.ooc_notes_maybes = ooc_notes_maybes
-	M.ooc_notes_style = ooc_notes_style
->>>>>>> a0e9785d0d (Kitchen Sink P2 TGUI Prefs (#17579))
 	clear_mind()
 
 

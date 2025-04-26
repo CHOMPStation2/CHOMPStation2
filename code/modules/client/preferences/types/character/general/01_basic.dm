@@ -123,11 +123,7 @@
 	can_randomize = FALSE
 
 /datum/preference/toggle/living/ooc_notes_style/apply_to_living(mob/living/target, value)
-<<<<<<< HEAD
-	target.ooc_notes_style = value // CHOMPEnable
-=======
 	target.ooc_notes_style = value
->>>>>>> a0e9785d0d (Kitchen Sink P2 TGUI Prefs (#17579))
 	return
 
 /datum/preference/text/living/ooc_notes_maybes
@@ -138,11 +134,7 @@
 	can_randomize = FALSE
 
 /datum/preference/text/living/ooc_notes_maybes/apply_to_living(mob/living/target, value)
-<<<<<<< HEAD
-	target.ooc_notes_maybes = value // CHOMPEnable
-=======
 	target.ooc_notes_maybes = value
->>>>>>> a0e9785d0d (Kitchen Sink P2 TGUI Prefs (#17579))
 	return
 
 /datum/preference/text/living/ooc_notes_favs
@@ -153,11 +145,7 @@
 	can_randomize = FALSE
 
 /datum/preference/text/living/ooc_notes_favs/apply_to_living(mob/living/target, value)
-<<<<<<< HEAD
-	target.ooc_notes_favs = value // CHOMPEnable
-=======
 	target.ooc_notes_favs = value
->>>>>>> a0e9785d0d (Kitchen Sink P2 TGUI Prefs (#17579))
 	return
 
 /datum/preference/toggle/human/name_is_always_random

@@ -33,11 +33,7 @@ var/list/talk_sound_map = rlist(
 									GLOB.goon_speak_pugg_sound,
 									GLOB.goon_speak_roach_sound,
 									GLOB.goon_speak_skelly_sound,
-<<<<<<< HEAD
-									GLOB.xeno_speak_sound // CHOMPEnable
-=======
 									GLOB.xeno_speak_sound // Does not exist on virgo
->>>>>>> a0e9785d0d (Kitchen Sink P2 TGUI Prefs (#17579))
 									)
 								)
 

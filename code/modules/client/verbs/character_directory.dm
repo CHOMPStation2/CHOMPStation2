@@ -34,28 +34,16 @@ GLOBAL_DATUM(character_directory, /datum/character_directory)
 		data["personalVisibility"] = user.mind.show_in_directory
 		data["personalTag"] = user.mind.directory_tag || "Unset"
 		data["personalErpTag"] = user.mind.directory_erptag || "Unset"
-<<<<<<< HEAD
-		data["personalEventTag"] = GLOB.vantag_choices_list[user.mind.vantag_preference] //CHOMPEdit
-		data["personalGenderTag"] = user.mind.directory_gendertag || "Unset" // CHOMPStation Edit: Character Directory Update
-		data["personalSexualityTag"] = user.mind.directory_sexualitytag || "Unset" // CHOMPStation Edit: Character Directory Update
-=======
 		data["personalEventTag"] = GLOB.vantag_choices_list[user.mind.vantag_preference]
 		data["personalGenderTag"] = user.mind.directory_gendertag || "Unset"
 		data["personalSexualityTag"] = user.mind.directory_sexualitytag || "Unset"
->>>>>>> a0e9785d0d (Kitchen Sink P2 TGUI Prefs (#17579))
 	else if (user?.client?.prefs)
 		data["personalVisibility"] = user.client.prefs.show_in_directory
 		data["personalTag"] = user.client.prefs.directory_tag || "Unset"
 		data["personalErpTag"] = user.client.prefs.directory_erptag || "Unset"
-<<<<<<< HEAD
-		data["personalEventTag"] = GLOB.vantag_choices_list[user.client.prefs.vantag_preference] //CHOMPEdit
-		data["personalGenderTag"] = user.client.prefs.directory_gendertag || "Unset" // CHOMPStation Edit: Character Directory Update
-		data["personalSexualityTag"] = user.client.prefs.directory_sexualitytag || "Unset" // CHOMPStation Edit: Character Directory Update
-=======
 		data["personalEventTag"] = GLOB.vantag_choices_list[user.client.prefs.vantag_preference]
 		data["personalGenderTag"] = user.client.prefs.directory_gendertag || "Unset"
 		data["personalSexualityTag"] = user.client.prefs.directory_sexualitytag || "Unset"
->>>>>>> a0e9785d0d (Kitchen Sink P2 TGUI Prefs (#17579))
 
 	return data
 
@@ -73,10 +61,6 @@ GLOBAL_DATUM(character_directory, /datum/character_directory)
 		var/name = null
 		var/species = null
 		var/ooc_notes = null
-<<<<<<< HEAD
-		//CHOMPEdit Start
-=======
->>>>>>> a0e9785d0d (Kitchen Sink P2 TGUI Prefs (#17579))
 		var/ooc_notes_favs = null
 		var/ooc_notes_likes = null
 		var/ooc_notes_maybes = null
@@ -85,10 +69,6 @@ GLOBAL_DATUM(character_directory, /datum/character_directory)
 		var/gendertag = null
 		var/sexualitytag = null
 		var/eventtag = GLOB.vantag_choices_list[VANTAG_NONE]
-<<<<<<< HEAD
-		//CHOMPEdit End
-=======
->>>>>>> a0e9785d0d (Kitchen Sink P2 TGUI Prefs (#17579))
 		var/flavor_text = null
 		var/tag
 		var/erptag
@@ -97,39 +77,19 @@ GLOBAL_DATUM(character_directory, /datum/character_directory)
 			tag = C.mob.mind.directory_tag || "Unset"
 			erptag = C.mob.mind.directory_erptag || "Unset"
 			character_ad = C.mob.mind.directory_ad
-<<<<<<< HEAD
-			//CHOMPEdit Start
 			gendertag = C.mob.mind.directory_gendertag || "Unset"
 			sexualitytag = C.mob.mind.directory_sexualitytag || "Unset"
 			eventtag = GLOB.vantag_choices_list[C.mob.mind.vantag_preference]
-			//CHOMPEdit End
-=======
-			gendertag = C.mob.mind.directory_gendertag || "Unset"
-			sexualitytag = C.mob.mind.directory_sexualitytag || "Unset"
-			eventtag = GLOB.vantag_choices_list[C.mob.mind.vantag_preference]
->>>>>>> a0e9785d0d (Kitchen Sink P2 TGUI Prefs (#17579))
 		else
 			tag = C.prefs.directory_tag || "Unset"
 			erptag = C.prefs.directory_erptag || "Unset"
 			character_ad = C.prefs.directory_ad
-<<<<<<< HEAD
-			//CHOMPEdit Start
-			gendertag = C.prefs.directory_gendertag || "Unset"
-			sexualitytag = C.prefs.directory_sexualitytag || "Unset"
-			eventtag = GLOB.vantag_choices_list[C.prefs.vantag_preference]
-			//CHOMPEdit End
-
-		if(ishuman(C.mob))
-			var/mob/living/carbon/human/H = C.mob
-			// CHOMPEdit Start
-=======
 			gendertag = C.prefs.directory_gendertag || "Unset"
 			sexualitytag = C.prefs.directory_sexualitytag || "Unset"
 			eventtag = GLOB.vantag_choices_list[C.prefs.vantag_preference]
 
 		if(ishuman(C.mob))
 			var/mob/living/carbon/human/H = C.mob
->>>>>>> a0e9785d0d (Kitchen Sink P2 TGUI Prefs (#17579))
 			var/strangername = H.real_name
 			if(GLOB.data_core && GLOB.data_core.general)
 				if(!find_general_record("name", H.real_name))
@@ -138,10 +98,6 @@ GLOBAL_DATUM(character_directory, /datum/character_directory)
 			name = strangername
 			species = "[H.custom_species ? H.custom_species : H.species.name]"
 			ooc_notes = H.ooc_notes
-<<<<<<< HEAD
-			//CHOMPEdit Start
-=======
->>>>>>> a0e9785d0d (Kitchen Sink P2 TGUI Prefs (#17579))
 			if(H.ooc_notes_style && (H.ooc_notes_favs || H.ooc_notes_likes || H.ooc_notes_maybes || H.ooc_notes_dislikes))
 				ooc_notes = H.ooc_notes + "\n\n"
 				ooc_notes_favs = H.ooc_notes_favs
@@ -160,20 +116,12 @@ GLOBAL_DATUM(character_directory, /datum/character_directory)
 					ooc_notes += "\n\nDISLIKES\n\n[H.ooc_notes_dislikes]"
 			if(LAZYLEN(H.flavor_texts))
 				flavor_text = H.flavor_texts["general"]
-<<<<<<< HEAD
-			//CHOMPEdit End
-=======
->>>>>>> a0e9785d0d (Kitchen Sink P2 TGUI Prefs (#17579))
 
 		if(isAI(C.mob))
 			var/mob/living/silicon/ai/A = C.mob
 			name = A.name
 			species = "Artificial Intelligence"
 			ooc_notes = A.ooc_notes
-<<<<<<< HEAD
-			//CHOMPEdit Start
-=======
->>>>>>> a0e9785d0d (Kitchen Sink P2 TGUI Prefs (#17579))
 			if(A.ooc_notes_style && (A.ooc_notes_favs || A.ooc_notes_likes || A.ooc_notes_maybes || A.ooc_notes_dislikes))
 				ooc_notes = A.ooc_notes + "\n\n"
 				ooc_notes_favs = A.ooc_notes_favs
@@ -190,10 +138,6 @@ GLOBAL_DATUM(character_directory, /datum/character_directory)
 					ooc_notes += "\n\nMAYBES\n\n[A.ooc_notes_maybes]"
 				if(A.ooc_notes_dislikes)
 					ooc_notes += "\n\nDISLIKES\n\n[A.ooc_notes_dislikes]"
-<<<<<<< HEAD
-			//CHOMPEdit End
-=======
->>>>>>> a0e9785d0d (Kitchen Sink P2 TGUI Prefs (#17579))
 
 			flavor_text = null // No flavor text for AIs :c
 
@@ -204,10 +148,6 @@ GLOBAL_DATUM(character_directory, /datum/character_directory)
 			name = R.name
 			species = "[R.modtype] [R.braintype]"
 			ooc_notes = R.ooc_notes
-<<<<<<< HEAD
-			//CHOMPEdit Start
-=======
->>>>>>> a0e9785d0d (Kitchen Sink P2 TGUI Prefs (#17579))
 			if(R.ooc_notes_style && (R.ooc_notes_favs || R.ooc_notes_likes || R.ooc_notes_maybes || R.ooc_notes_dislikes))
 				ooc_notes = R.ooc_notes + "\n\n"
 				ooc_notes_favs = R.ooc_notes_favs
@@ -224,10 +164,6 @@ GLOBAL_DATUM(character_directory, /datum/character_directory)
 					ooc_notes += "\n\nMAYBES\n\n[R.ooc_notes_maybes]"
 				if(R.ooc_notes_dislikes)
 					ooc_notes += "\n\nDISLIKES\n\n[R.ooc_notes_dislikes]"
-<<<<<<< HEAD
-			//CHOMPEdit End
-=======
->>>>>>> a0e9785d0d (Kitchen Sink P2 TGUI Prefs (#17579))
 
 			flavor_text = R.flavor_text
 
@@ -236,10 +172,6 @@ GLOBAL_DATUM(character_directory, /datum/character_directory)
 			name = P.name
 			species = "pAI"
 			ooc_notes = P.ooc_notes
-<<<<<<< HEAD
-			// CHOMPEdit Start
-=======
->>>>>>> a0e9785d0d (Kitchen Sink P2 TGUI Prefs (#17579))
 			if(P.ooc_notes_style && (P.ooc_notes_favs || P.ooc_notes_likes || P.ooc_notes_maybes || P.ooc_notes_dislikes))
 				ooc_notes = P.ooc_notes + "\n\n"
 				ooc_notes_favs = P.ooc_notes_favs
@@ -256,19 +188,11 @@ GLOBAL_DATUM(character_directory, /datum/character_directory)
 					ooc_notes += "\n\nMAYBES\n\n[P.ooc_notes_maybes]"
 				if(P.ooc_notes_dislikes)
 					ooc_notes += "\n\nDISLIKES\n\n[P.ooc_notes_dislikes]"
-<<<<<<< HEAD
-			//CHOMPEdit End
-=======
->>>>>>> a0e9785d0d (Kitchen Sink P2 TGUI Prefs (#17579))
 			flavor_text = P.flavor_text
 
 		if(isanimal(C.mob))
 			var/mob/living/simple_mob/S = C.mob
 			name = S.name
-<<<<<<< HEAD
-			// CHOMPEdit Start
-=======
->>>>>>> a0e9785d0d (Kitchen Sink P2 TGUI Prefs (#17579))
 			species = S.character_directory_species()
 			ooc_notes = S.ooc_notes
 			if(S.ooc_notes_style && (S.ooc_notes_favs || S.ooc_notes_likes || S.ooc_notes_maybes || S.ooc_notes_dislikes))
@@ -287,10 +211,6 @@ GLOBAL_DATUM(character_directory, /datum/character_directory)
 					ooc_notes += "\n\nMAYBES\n\n[S.ooc_notes_maybes]"
 				if(S.ooc_notes_dislikes)
 					ooc_notes += "\n\nDISLIKES\n\n[S.ooc_notes_dislikes]"
-<<<<<<< HEAD
-			// CHOMPEdit End
-=======
->>>>>>> a0e9785d0d (Kitchen Sink P2 TGUI Prefs (#17579))
 			flavor_text = S.desc
 
 		// It's okay if we fail to find OOC notes and flavor text
@@ -301,10 +221,6 @@ GLOBAL_DATUM(character_directory, /datum/character_directory)
 		directory_mobs.Add(list(list(
 			"name" = name,
 			"species" = species,
-<<<<<<< HEAD
-			//CHOMPEdit Start
-=======
->>>>>>> a0e9785d0d (Kitchen Sink P2 TGUI Prefs (#17579))
 			"ooc_notes_favs" = ooc_notes_favs,
 			"ooc_notes_likes" = ooc_notes_likes,
 			"ooc_notes_maybes" = ooc_notes_maybes,
@@ -313,10 +229,6 @@ GLOBAL_DATUM(character_directory, /datum/character_directory)
 			"gendertag" = gendertag,
 			"sexualitytag" = sexualitytag,
 			"eventtag" = eventtag,
-<<<<<<< HEAD
-			//CHOMPEdit End
-=======
->>>>>>> a0e9785d0d (Kitchen Sink P2 TGUI Prefs (#17579))
 			"ooc_notes" = ooc_notes,
 			"tag" = tag,
 			"erptag" = erptag,
@@ -379,10 +291,6 @@ GLOBAL_DATUM(character_directory, /datum/character_directory)
 			if(isnull(new_ad))
 				return
 			return set_for_mind_or_prefs(user, action, new_ad, can_set_prefs, can_set_mind)
-<<<<<<< HEAD
-		// CHOMPStation Edit Start: Directory Update
-=======
->>>>>>> a0e9785d0d (Kitchen Sink P2 TGUI Prefs (#17579))
 		if("setGenderTag")
 			var/list/new_gendertag = tgui_input_list(usr, "Pick a new Gender tag for the character directory. This is YOUR gender, not what you prefer.", "Character Gender Tag", GLOB.char_directory_gendertags)
 			if(!new_gendertag)
@@ -401,10 +309,6 @@ GLOBAL_DATUM(character_directory, /datum/character_directory)
 			if(!new_eventtag)
 				return
 			return set_for_mind_or_prefs(user, action, names_list[new_eventtag], can_set_prefs, can_set_mind)
-<<<<<<< HEAD
-		//CHOMPEdit end
-=======
->>>>>>> a0e9785d0d (Kitchen Sink P2 TGUI Prefs (#17579))
 
 /datum/character_directory/proc/set_for_mind_or_prefs(mob/user, action, new_value, can_set_prefs, can_set_mind)
 	can_set_prefs &&= !!user.client.prefs
@@ -437,10 +341,6 @@ GLOBAL_DATUM(character_directory, /datum/character_directory)
 			if (can_set_mind)
 				user.mind.directory_ad = new_value
 			return TRUE
-<<<<<<< HEAD
-		//CHOMPEdit Start
-=======
->>>>>>> a0e9785d0d (Kitchen Sink P2 TGUI Prefs (#17579))
 		if ("setEventTag")
 			if (can_set_prefs)
 				user.client.prefs.vantag_preference = new_value
@@ -456,7 +356,3 @@ GLOBAL_DATUM(character_directory, /datum/character_directory)
 				user.client.prefs.directory_sexualitytag = new_value
 			if (can_set_mind)
 				user.mind.directory_sexualitytag = new_value
-<<<<<<< HEAD
-		//CHOMPEdit End
-=======
->>>>>>> a0e9785d0d (Kitchen Sink P2 TGUI Prefs (#17579))

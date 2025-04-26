@@ -382,17 +382,9 @@
 	blob.ooc_notes = ooc_notes
 	blob.ooc_notes_likes = ooc_notes_likes
 	blob.ooc_notes_dislikes = ooc_notes_dislikes
-<<<<<<< HEAD
-	//CHOMPEdit Start
 	blob.ooc_notes_favs = ooc_notes_favs
 	blob.ooc_notes_maybes = ooc_notes_maybes
 	blob.ooc_notes_style = ooc_notes_style
-	//CHOMPEdit End
-=======
-	blob.ooc_notes_favs = ooc_notes_favs
-	blob.ooc_notes_maybes = ooc_notes_maybes
-	blob.ooc_notes_style = ooc_notes_style
->>>>>>> a0e9785d0d (Kitchen Sink P2 TGUI Prefs (#17579))
 	blob.transforming = FALSE
 	blob.name = name
 	blob.real_name = real_name
@@ -481,17 +473,9 @@
 	ooc_notes = blob.ooc_notes // Updating notes incase they change them in blob form.
 	ooc_notes_likes = blob.ooc_notes_likes
 	ooc_notes_dislikes = blob.ooc_notes_dislikes
-<<<<<<< HEAD
-	//CHOMPEdit Start
 	ooc_notes_favs = blob.ooc_notes_favs
 	ooc_notes_maybes = blob.ooc_notes_maybes
 	ooc_notes_style = blob.ooc_notes_style
-	//CHOMPEdit End
-=======
-	ooc_notes_favs = blob.ooc_notes_favs
-	ooc_notes_maybes = blob.ooc_notes_maybes
-	ooc_notes_style = blob.ooc_notes_style
->>>>>>> a0e9785d0d (Kitchen Sink P2 TGUI Prefs (#17579))
 	transforming = FALSE
 	blob.name = "Promethean Blob"
 	var/obj/item/hat = blob.hat
