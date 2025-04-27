@@ -23340,7 +23340,7 @@
 /turf/simulated/floor/tiled,
 /area/hallway/Port_2_Deck_Corridor_2)
 "bkB" = (
-/obj/machinery/r_n_d/protolathe/science,
+/obj/machinery/r_n_d/protolathe,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/firealarm{
 	dir = 8;
