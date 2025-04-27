@@ -482,19 +482,6 @@
 
 
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/hivebot/powertower
-	name = "automated remote handless testing unit"
-	desc = "A large, very important looking robot."
-	icon_state = "powertower"
-	size_multiplier = 2
-	maxHealth = 1000
-	health = 1000
-	glow_toggle = TRUE
-	glow_override = TRUE
-	glow_color = "#FFA723"
-	glow_range = 16
-	wreckage = /obj/item/prop/nanoweave/terraformers
-
 /*
 /mob/living/simple_mob/mechanical/mecha/eclipse/hivebot/green/do_special_attack(atom/A)
 	. = TRUE // So we don't fire a bolt as well.

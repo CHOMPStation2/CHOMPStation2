@@ -790,7 +790,7 @@
 	upfour_leftfour(target)
 	upfour_leftthree(target)
 	upfour_lefttwo(target)
-	if(prob(50))
+	if(prob(20))
 		addtimer(CALLBACK(src, PROC_REF(beglaser), target, next_cycle), 1 SECOND, TIMER_DELETE_ME)
 	else
 		attackcycle = next_cycle
@@ -828,39 +828,11 @@
 /mob/living/simple_mob/mechanical/mecha/eclipse/darkmatter_assualt //The final boss
 	name = "Eclipse Expirmental Janus"
 	armor = list(melee = 60, bullet = 60, laser = 60, energy = 60, bomb = 80, bio = 100, rad = 100)
-	specialattackprojectile = /obj/item/projectile/energy/darkspike
+	specialattackprojectile = /obj/item/projectile/energy/eclipse/janusjavelin
 	pilot_type = /mob/living/simple_mob/humanoid/eclipse/head/tyrlead
 	icon_state = "eclipse_janus"
 	attackcycle = 1
 
-/obj/item/projectile/energy/darkspike //This will end you
-	name = "gravity well"
-	icon = 'modular_chomp/icons/obj/guns/precursor/tyr.dmi'
-	icon_state = "gravity_well"
-	damage = 60
-	armor_penetration = 30
-	speed = 15 //Note to self, may need to slow down even further.
-
-/obj/item/projectile/energy/infernosphere
-	name = "burning plasma"
-	icon = 'modular_chomp/icons/obj/guns/precursor/tyr.dmi'
-	icon_state = "plasma"
-	damage = 60
-	armor_penetration = 30
-	speed = 15
-
-/obj/item/projectile/energy/infernosphere/Move()
-	. = ..()
-	if(prob(20))
-		new /obj/fire(src.loc)
-
-/obj/item/projectile/bullet/eclipsejanus
-	use_submunitions = 1
-	range = 0
-	embed_chance = 0
-	submunition_spread_max = 900
-	submunition_spread_min = 100
-	submunitions = list(/obj/item/projectile/energy/darkspike = 3, /obj/item/projectile/energy/infernosphere = 3)
 
 /mob/living/simple_mob/mechanical/mecha/eclipse/darkmatter_assualt/bullet_act(obj/item/projectile/P)
 	.= ..()
@@ -878,76 +850,58 @@
 	switch(a_intent)
 		if(I_DISARM) // Phase 3
 			if(attackcycle == 1)
-				phasethree_cycleone(A)
+				specialattackprojectile = /obj/item/projectile/arc/explosive_rocket
+				attackcycle = 0
+				if(prob(50))
+					addtimer(CALLBACK(src, PROC_REF(miniburst_a), A, 1), 0.5 SECONDS, TIMER_DELETE_ME)
+				else
+					addtimer(CALLBACK(src, PROC_REF(miniburst_b), A, 1), 0.5 SECONDS, TIMER_DELETE_ME)
 			else if(attackcycle == 2)
-				phasethree_cycletwo(A)
+				addtimer(CALLBACK(src, PROC_REF(random_firing), A, 10, 2, 0.75 SECONDS), 0.5 SECONDS, TIMER_DELETE_ME)
+				attackcycle = 0
 			else if(attackcycle == 3)
-				phasethree_cyclethree(A)
+				say("Hypercharge laser burst!")
+				specialattackprojectile = /obj/item/projectile/beam/heavylaser
+				addtimer(CALLBACK(src, PROC_REF(burst), A, 3), 6 SECONDS, TIMER_DELETE_ME)
+				attackcycle = 0
+			else if(attackcycle == 4)
+				specialattackprojectile = /obj/item/projectile/energy/eclipse/janusjavelin
+				addtimer(CALLBACK(src, PROC_REF(random_firing), A, 10, 1, 0.75 SECONDS), 0.5 SECONDS, TIMER_DELETE_ME)
+				attackcycle = 0
 		if(I_HURT) // Phase 1
+			specialattackprojectile = /obj/item/projectile/energy/eclipse/janusjavelin
 			if(attackcycle == 1)
-				phaseone_cycleone(A)
+				addtimer(CALLBACK(src, PROC_REF(spin_to_win), A, 2), 2 SECONDS, TIMER_DELETE_ME)
+				attackcycle = 0
 			else if(attackcycle == 2)
-				phaseone_cycletwo(A)
+				addtimer(CALLBACK(src, PROC_REF(random_firing), A, 10, 3, 0.75 SECONDS), 0.5 SECONDS, TIMER_DELETE_ME)
+				attackcycle = 0
 			else if(attackcycle == 3)
-				phaseone_cyclethree(A)
+				addtimer(CALLBACK(src, PROC_REF(beglaser), A, 4), 1 SECOND, TIMER_DELETE_ME)
+				attackcycle = 0
+			else if(attackcycle == 4)
+				addtimer(CALLBACK(src, PROC_REF(random_firing), A, 10, 1, 0.75 SECONDS), 0.5 SECONDS, TIMER_DELETE_ME)
+				attackcycle = 0
 		if(I_GRAB) // Phase 2
 			if(attackcycle == 1)
-				phasetwo_cycleone(A)
+				addtimer(CALLBACK(src, PROC_REF(teleport_attack), A, 2), 0.5 SECONDS, TIMER_DELETE_ME)
+				attackcycle = 0
 			else if(attackcycle == 2)
-				phasetwo_cycletwo(A)
+				say("Activating laser surge")
+				specialattackprojectile = /obj/item/projectile/energy/burninglaser/boss
+				addtimer(CALLBACK(src, PROC_REF(miniburst_a), A, 2), 3 SECONDS, TIMER_DELETE_ME)
 			else if(attackcycle == 3)
-				phasetwo_cyclethree(A)
-
-//Phase One. Appears random but isn't. Scales higher.
-/mob/living/simple_mob/mechanical/mecha/eclipse/darkmatter_assualt/proc/phaseone_cycleone(atom/target)
-	specialattackprojectile = /obj/item/projectile/energy/darkspike
-	addtimer(CALLBACK(src, PROC_REF(spin_to_win), target, 2), 2 SECONDS, TIMER_DELETE_ME)
-	attackcycle = 0
-
-/mob/living/simple_mob/mechanical/mecha/eclipse/darkmatter_assualt/proc/phaseone_cycletwo(atom/target)
-	specialattackprojectile = /obj/item/projectile/energy/darkspike
-	addtimer(CALLBACK(src, PROC_REF(beglaser), target, 3), 1 SECOND, TIMER_DELETE_ME)
-	attackcycle = 0
-
-/mob/living/simple_mob/mechanical/mecha/eclipse/darkmatter_assualt/proc/phaseone_cyclethree(atom/target)
-	specialattackprojectile = /obj/item/projectile/energy/darkspike
-	addtimer(CALLBACK(src, PROC_REF(random_firing), target, 20, 1, 0.2 SECONDS), 0.5 SECONDS, TIMER_DELETE_ME)
-	attackcycle = 0
-
-//Phase Two where we change things up a bit.
-/mob/living/simple_mob/mechanical/mecha/eclipse/darkmatter_assualt/proc/phasetwo_cycleone(atom/target) //shows a laser then fires a rockect
-	specialattackprojectile = /obj/item/projectile/energy/infernosphere
-	addtimer(CALLBACK(src, PROC_REF(spin_to_win), target, 2), 2 SECONDS, TIMER_DELETE_ME)
-	attackcycle = 0
-
-/mob/living/simple_mob/mechanical/mecha/eclipse/darkmatter_assualt/proc/phasetwo_cycletwo(atom/target) //summon the most useless horde
-	specialattackprojectile = /obj/item/projectile/energy/infernosphere
-	addtimer(CALLBACK(src, PROC_REF(beglaser), target, 3), 1 SECOND, TIMER_DELETE_ME)
-	attackcycle = 0
-
-/mob/living/simple_mob/mechanical/mecha/eclipse/darkmatter_assualt/proc/phasetwo_cyclethree(atom/target) //turns out the horde is meant to be a shield for the next attack.
-	specialattackprojectile = /obj/item/projectile/energy/infernosphere
-	addtimer(CALLBACK(src, PROC_REF(random_firing), target, 20, 1, 0.2 SECONDS), 0.5 SECONDS, TIMER_DELETE_ME)
-	attackcycle = 0
-
-//Phase three 2 wierd patterns, and 1 strange attack.
-/mob/living/simple_mob/mechanical/mecha/eclipse/darkmatter_assualt/proc/phasethree_cycleone(atom/target)
-	specialattackprojectile = /obj/item/projectile/bullet/eclipsejanus
-	addtimer(CALLBACK(src, PROC_REF(spin_to_win), target, 2), 2 SECONDS, TIMER_DELETE_ME)
-	attackcycle = 0
-
-/mob/living/simple_mob/mechanical/mecha/eclipse/darkmatter_assualt/proc/phasethree_cycletwo(atom/target)
-	specialattackprojectile = /obj/item/projectile/energy/homing_bolt
-	addtimer(CALLBACK(src, PROC_REF(beglaser), target, 3), 1 SECOND, TIMER_DELETE_ME)
-	attackcycle = 0
-
-/mob/living/simple_mob/mechanical/mecha/eclipse/darkmatter_assualt/proc/phasethree_cyclethree(atom/target) //eight spinning death beams
-	specialattackprojectile = /obj/item/projectile/bullet/eclipsejanus
-	addtimer(CALLBACK(src, PROC_REF(random_firing), target, 20, 1, 0.2 SECONDS), 0.5 SECONDS, TIMER_DELETE_ME)
-	attackcycle = 0
+				specialattackprojectile = /obj/item/projectile/energy/eclipse/janusjavelin
+				addtimer(CALLBACK(src, PROC_REF(random_firing), A, 10, 4, 0.75 SECONDS), 0.5 SECONDS, TIMER_DELETE_ME)
+				attackcycle = 0
+			else if(attackcycle == 4)
+				specialattackprojectile = /obj/item/projectile/bullet/gyro
+				Beam(A, icon_state = "solar_beam", time = 2.5 SECONDS, maxdistance = INFINITY)
+				addtimer(CALLBACK(src, PROC_REF(singleproj), A, 1), 3 SECONDS, TIMER_DELETE_ME)
+				attackcycle = 0
 
 /mob/living/simple_mob/mechanical/mecha/eclipse/engimecha
-	name = "Eclipse Expirmental Mining Mecha"
+	name = "Eclipse Expirmental Enginering Mecha"
 	health = 300
 	maxHealth = 300
 	specialattackprojectile = /obj/item/projectile/energy/excavate/weak
@@ -1496,3 +1450,24 @@
 	s2.start()
 	attackcycle = next_cycle
 
+/mob/living/simple_mob/mechanical/mecha/eclipse/sniper
+	name = "Eclipse Lead Pilot"
+	icon_state = "captian"
+	icon_living = "captian"
+	health = 100
+	maxHealth = 100
+	ai_holder_type = /datum/ai_holder/simple_mob/intentional/three_phases
+	armor = list(melee = 70, bullet = 70, laser = 70, energy = 70, bomb = 50, bio = 100, rad = 100)
+	specialattackprojectile = /obj/item/projectile/arc/explosive_rocket
+	wreckage = /obj/item/prop/tyrlore/monodisc
+
+/mob/living/simple_mob/mechanical/mecha/eclipse/sniper/do_special_attack(atom/A)
+	. = TRUE // So we don't fire a bolt as well.
+	if(attackcycle == 1)
+		addtimer(CALLBACK(src, PROC_REF(teleport_attack), A, 2), 0.5 SECONDS, TIMER_DELETE_ME)
+		attackcycle = 0
+	else if(attackcycle == 2)
+		specialattackprojectile = /obj/item/projectile/beam/heavylaser/cannon
+		Beam(A, icon_state = "solar_beam", time = 0.75 SECONDS, maxdistance = INFINITY)
+		addtimer(CALLBACK(src, PROC_REF(singleproj), A, 1), 1 SECOND, TIMER_DELETE_ME)
+		attackcycle = 0
