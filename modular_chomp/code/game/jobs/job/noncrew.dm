@@ -24,15 +24,44 @@
 		-----Outsiders are not allowed to log-off with station key items (e.g. Captain's spare, station blueprints, nuclear authentication disk, bluespace harpoon, large quantities of station goods, etc). Please leave these items on station or with relevant crew.
 		-----We encourage outsiders to take on exploration content as a group, staff will not help you for any hardships of solo play.
 		-----Notice: The outsider role is relatively unpolished; if you encounter bugs, please notify a staff member and avoid using exploits."}
-	alt_titles = list("Spacefarer" = /datum/alt_title/spacefarer)
+	alt_titles = list(
+		"Tyr Local" = /datum/alt_title/tyr_local,
+		//"Thor Local" = /datum/alt_title/thor_local,
+		"Bounty Hunter" = /datum/alt_title/bounty_hunter,
+		"Camper" = /datum/alt_title/camper,
+		"Local Fisher" = /datum/alt_title/local_fisher,
+		"Scavenger" = /datum/alt_title/scavenger,
+		"Spacefarer" = /datum/alt_title/spacefarer,
+		"Tourist" = /datum/alt_title/tourist,
+		"Traveling Performer" = /datum/alt_title/traveling_performer,
+		"Wild Game Hunter" = /datum/alt_title/wild_game_hunter
+		)
 
-/datum/alt_title/spacefarer
-	title = "Spacefarer"
-	title_outfit = /decl/hierarchy/outfit/noncrew/spacefarer
+/datum/alt_title/tyr_local
+	title = "Tyr Local" // I mean you can spawn on Tyr, so why not?
+
+///datum/alt_title/thor_local
+//	title = "Thor Local" // Can't yet spawn on Thor, though. :(
+
+/datum/alt_title/bounty_hunter
+	title = "Bounty Hunter"
+	//title_outfit = /decl/hierarchy/outfit/noncrew/bounty_hunter // Doesn't exist yet, still working out the details.
+
+/datum/alt_title/camper
+	title = "Camper"
+	//title_outfit = /decl/hierarchy/outfit/noncrew/camper // Doesn't exist yet, still working out the details.
+
+/datum/alt_title/local_fisher
+	title = "Local Fisher"
+	title_outfit = /decl/hierarchy/outfit/job/assistant/entrepreneur/fisher // Placeholder, might do something slightly better than this later.
 
 /datum/alt_title/scavenger
 	title = "Scavenger"
 	title_outfit = /decl/hierarchy/outfit/job/assistant/entrepreneur/tradesperson // Placeholder, might do something slightly better than this later.
+
+/datum/alt_title/spacefarer
+	title = "Spacefarer"
+	title_outfit = /decl/hierarchy/outfit/noncrew/spacefarer
 
 /datum/alt_title/tourist
 	title = "Tourist"
