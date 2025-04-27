@@ -264,7 +264,7 @@
 		"status" = status,
 		"interface" = list(
 			"name" = interface,
-			"layout" = null, // user.client.prefs.read_preference(/datum/preference/choiced/tgui_layout), // unused
+			"layout" = null, // user.read_preference(/datum/preference/choiced/tgui_layout), // unused
 		),
 		//"refreshing" = refreshing,
 		"refreshing" = FALSE,
@@ -275,7 +275,7 @@
 			"size" = window_size,
 			"fancy" = user.read_preference(/datum/preference/toggle/tgui_fancy),
 			"locked" = user.read_preference(/datum/preference/toggle/tgui_lock),
-			"scale" = user.client.prefs.read_preference(/datum/preference/toggle/ui_scale),
+			"scale" = user.read_preference(/datum/preference/toggle/ui_scale),
 		),
 		"client" = list(
 			"ckey" = user.client.ckey,
