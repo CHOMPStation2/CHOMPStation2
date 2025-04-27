@@ -341,7 +341,7 @@ GLOBAL_LIST_EMPTY(##LIST_NAME);\
 #define JOB_SILICON			0x6 // 2|4, probably don't set jobs to this, but good for checking
 
 //Job defines
-#define JOB_OUTSIDER	"Outsider" //VOREStation Note: Not implemented on VS. Used downstream.
+#define JOB_OUTSIDER	"Sif Local" //VOREStation Note: Not implemented on VS. Used downstream. // ChompEdit: "Outsider" named "Sif Local" for our lore.
 #define JOB_ANOMALY 	"Anomaly" //VOREStation Note: Not implemented on VS. Used downstream.
 #define JOB_VR			"VR Avatar"
 

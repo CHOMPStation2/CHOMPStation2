@@ -1,5 +1,5 @@
 /datum/job/noncrew
-	title = "Sif Inhabitant" //JOB_OUTSIDER
+	title = JOB_OUTSIDER
 	disallow_jobhop = TRUE
 	total_positions = 6
 	spawn_positions = 6
@@ -34,21 +34,17 @@
 	title = "Scavenger"
 	title_outfit = /decl/hierarchy/outfit/job/assistant/entrepreneur/tradesperson // Placeholder, might do something slightly better than this later.
 
-/datum/alt_title/wildlife_hunter
-	title = "Wildlife Hunter"
-	//title_outfit = /decl/hierarchy/outfit/noncrew/wildlife_hunter // Doesn't exist yet, still working out the details.
-
-/datum/alt_title/bounty_hunter
-	title = "Bounty Hunter"
-	//title_outfit = /decl/hierarchy/outfit/noncrew/bounty_hunter // Doesn't exist yet, still working out the details.
+/datum/alt_title/tourist
+	title = "Tourist"
+	// title_outfit = /decl/hierarchy/outfit/noncrew/tourist // Doesn't exist yet, still working out the details.
 
 /datum/alt_title/traveling_performer
 	title = "Traveling Performer"
 	title_outfit = /decl/hierarchy/outfit/job/assistant/entertainer
 
-/datum/alt_title/sif_angler
-	title = "Sif Angler"
-	title_outfit = /decl/hierarchy/outfit/job/assistant/entrepreneur/fisher
+/datum/alt_title/wild_game_hunter
+	title = "Wild Game Hunter"
+	//title_outfit = /decl/hierarchy/outfit/noncrew/wild_game_hunter // Doesn't exist yet, still working out the details.
 
 /*seems to be a kin only thing?
 /datum/job/noncrew/is_species_banned(species_name, brain_type)
