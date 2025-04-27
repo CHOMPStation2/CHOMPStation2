@@ -147,19 +147,12 @@
 	unregister_radio(src, frequency)
 	qdel(wires)
 	wires = null
-<<<<<<< HEAD
-	if(alarm_area && alarm_area.master_air_alarm == src)
-		alarm_area.master_air_alarm = null
-		elect_master(exclude_self = TRUE)
-	QDEL_NULL(soundloop)  // CHOMPEdit: Looping Alarms
-	return ..()
-=======
 	alarm_area.air_alarms -= src
 	if(alarm_area.main_air_alarm?.resolve() == src)
 		alarm_area.elect_main_air_alarm(TRUE)
 	alarm_area = null
+	QDEL_NULL(soundloop)  // CHOMPEdit: Looping Alarms
 	. = ..()
->>>>>>> 25678e2903 (Multiple Air Alarm Support [DRAFT] (#17497))
 
 /obj/machinery/alarm/proc/offset_airalarm()
 	pixel_x = (dir & 3) ? 0 : (dir == 4 ? -26 : 26)
@@ -181,22 +174,13 @@
 	alarm_area = get_area(src)
 	area_uid = "\ref[alarm_area]"
 	if(name == "alarm")
-<<<<<<< HEAD
-		name = "[alarm_area.name] Air Alarm"
+		name = "[alarm_area.name] Air Alarm \[[rand(9999)]\]" // random number id to help with players locating alarms, cosmetic
 
+// CHOMPAdd Start
 /obj/machinery/alarm/Initialize(mapload)
 	. = ..()
-	set_frequency(frequency)
-	if(!master_is_operating())
-		elect_master()
-	soundloop = new(list(src), FALSE)  // CHOMPEdit: Looping Alarms
-
-/obj/machinery/alarm/process()
-	if((stat & (NOPOWER|BROKEN)) || shorted)
-		return
-=======
-		name = "[alarm_area.name] Air Alarm \[[rand(9999)]\]" // random number id to help with players locating alarms, cosmetic
->>>>>>> 25678e2903 (Multiple Air Alarm Support [DRAFT] (#17497))
+	soundloop = new(list(src), FALSE)
+// CHOMPAdd ENd
 
 /obj/machinery/alarm/proc/scan_atmo()
 	var/turf/simulated/location = src.loc
@@ -223,18 +207,16 @@
 		mode = AALARM_MODE_FILL
 		apply_mode()
 
-<<<<<<< HEAD
-	if(alarm_area?.atmosalm || danger_level > 0)  // CHOMPEdit: Looping Alarms (Trigger Decompression alarm here, on detection of any breach in the area)
-		soundloop.start()  // CHOMPEdit: Looping Alarms
-		atmoswarn = TRUE // CHOMPEdit: Looping Alarms
-	else if(danger_level == 0 && alarm_area?.atmosalm == 0)  // CHOMPEdit: Looping Alarms (Cancel Decompression alarm here)
-		soundloop.stop()  // CHOMPEdit: Looping Alarms
-		atmoswarn = FALSE // CHOMPEdit: Looping Alarms
+	// CHOMPAdd Start
+	if(alarm_area?.atmosalm || danger_level > 0)  // Looping Alarms (Trigger Decompression alarm here, on detection of any breach in the area)
+		soundloop.start()
+		atmoswarn = TRUE
+	else if(danger_level == 0 && alarm_area?.atmosalm == 0)  // Looping Alarms (Cancel Decompression alarm here)
+		soundloop.stop()
+		atmoswarn = FALSE
+	// CHOMPAdd End
 
 	//atmos computer remote controll stuff
-=======
-	//atmos computer remote control stuff
->>>>>>> 25678e2903 (Multiple Air Alarm Support [DRAFT] (#17497))
 	switch(rcon_setting)
 		if(RCON_NO)
 			remote_control = 0
@@ -584,11 +566,7 @@
 /obj/machinery/alarm/tgui_data(mob/user, datum/tgui/ui, datum/tgui_state/state)
 	var/list/data = list(
 		"locked" = locked,
-<<<<<<< HEAD
-		"siliconUser" = siliconaccess(user) || (isobserver(user) && is_admin(user)), //CHOMPEdit borg access + admin access
-=======
-		"siliconUser" = siliconaccess(user) || (isobserver(user) && is_admin(user)), //CHOMPEdit borg access + admin access --- do we keep this?  QUESTION
->>>>>>> 25678e2903 (Multiple Air Alarm Support [DRAFT] (#17497))
+		"siliconUser" = siliconaccess(user) || (isobserver(user) && is_admin(user)),
 		"remoteUser" = !!ui.parent_ui,
 		"danger_level" = danger_level,
 		"target_temperature" = "[target_temperature - T0C]C",
@@ -638,11 +616,7 @@
 			"danger_level" = TEST_TLV_VALUES
 		)))
 
-<<<<<<< HEAD
-	if(!locked || siliconaccess(user) || data["remoteUser"] || (isobserver(user) && is_admin(user))) //CHOMPEdit borg access + admin access
-=======
-	if(!locked || siliconaccess(user) || data["remoteUser"] || (isobserver(user) && is_admin(user))) //CHOMPEdit borg access + admin access --- do we keep this?  QUESTION
->>>>>>> 25678e2903 (Multiple Air Alarm Support [DRAFT] (#17497))
+	if(!locked || siliconaccess(user) || data["remoteUser"] || (isobserver(user) && is_admin(user)))
 		var/list/list/vents = list()
 		data["vents"] = vents
 		for(var/id_tag in A.air_vent_names)
@@ -759,21 +733,13 @@
 	// Yes, this is kinda snowflaky; however, I would argue it would be far more snowflakey
 	// to include "custom hrefs" and all the other bullshit that nano states have just for the
 	// like, two UIs, that want remote access to other UIs.
-<<<<<<< HEAD
-	if((locked && !(siliconaccess(ui.user) || (isobserver(ui.user) && is_admin(ui.user))) && !istype(state, /datum/tgui_state/air_alarm_remote)) || (issilicon(ui.user) && aidisabled)) //CHOMPedit borg access
-=======
-	if((locked && !(siliconaccess(ui.user) || (isobserver(ui.user) && is_admin(ui.user))) && !istype(state, /datum/tgui_state/air_alarm_remote)) || (issilicon(ui.user) && aidisabled)) //CHOMPedit borg access --- do we keep this?  QUESTION
->>>>>>> 25678e2903 (Multiple Air Alarm Support [DRAFT] (#17497))
+	if((locked && !(siliconaccess(ui.user) || (isobserver(ui.user) && is_admin(ui.user))) && !istype(state, /datum/tgui_state/air_alarm_remote)) || (issilicon(ui.user) && aidisabled))
 		return
 
 	var/device_id = params["id_tag"]
 	switch(action)
 		if("lock")
-<<<<<<< HEAD
-			if((siliconaccess(ui.user) && !wires.is_cut(WIRE_IDSCAN)) || (isobserver(ui.user) && is_admin(ui.user))) //CHOMPEdit borg access + admin acces
-=======
-			if((siliconaccess(ui.user) && !wires.is_cut(WIRE_IDSCAN)) || (isobserver(ui.user) && is_admin(ui.user))) //CHOMPEdit borg access + admin acces --- do we keep this?  QUESTION
->>>>>>> 25678e2903 (Multiple Air Alarm Support [DRAFT] (#17497))
+			if((siliconaccess(ui.user) && !wires.is_cut(WIRE_IDSCAN)) || (isobserver(ui.user) && is_admin(ui.user)))
 				locked = !locked
 				. = TRUE
 		if( "power",
@@ -907,19 +873,22 @@
 
 /obj/machinery/alarm/power_change()
 	..()
-<<<<<<< HEAD
-	spawn(rand(0,15))
-		update_icon()
-		// CHOMPEdit Start: Looping Alarms
-		if(!soundloop)
-			return
-		if(stat & (NOPOWER | BROKEN))
-			soundloop.stop()
-		else if(atmoswarn)
-			soundloop.start()
-		// CHOMPEdit End
-=======
-	addtimer(CALLBACK(src, TYPE_PROC_REF(/atom,update_icon)), rand(0,15), TIMER_DELETE_ME)
+	var/delay_time = rand(0,15)
+	if(delay_time)
+		addtimer(CALLBACK(src, PROC_REF(process_power_change)), delay_time, TIMER_DELETE_ME) // CHOMPEdit
+		return
+	process_power_change()
+
+// CHOMPAdd Start
+/obj/machinery/alarm/proc/process_power_change()
+	update_icon()
+	if(!soundloop)
+		return
+	if(stat & (NOPOWER | BROKEN))
+		soundloop.stop()
+	else if(atmoswarn)
+		soundloop.start()
+// CHOMPAdd End
 
 /obj/machinery/alarm/server/Initialize(mapload)
 	. = ..()
@@ -931,7 +900,6 @@
 	TLV["pressure"] =		list(0,ONE_ATMOSPHERE*0.10,ONE_ATMOSPHERE*1.40,ONE_ATMOSPHERE*1.60) /* kpa */
 	TLV["temperature"] =	list(20, 40, 140, 160) // K
 	target_temperature = 90
->>>>>>> 25678e2903 (Multiple Air Alarm Support [DRAFT] (#17497))
 
 /obj/machinery/alarm/freezer
 	target_temperature = T0C - 13.15 // Chilly freezer room
@@ -941,7 +909,6 @@
 
 	TLV["temperature"] =	list(T0C - 40, T0C - 20, T0C + 40, T0C + 66) // K, Lower Temperature for Freezer Air Alarms (This is because TLV is hardcoded to be generated on first_run, and therefore the only way to modify this without changing TLV generation)
 
-<<<<<<< HEAD
 // VOREStation Edit End, CHOMPEdit START
 /obj/machinery/alarm/sifwilderness
 	breach_detection = 0
@@ -954,8 +921,7 @@
 	TLV["pressure"] =		list(0,ONE_ATMOSPHERE*0.10,ONE_ATMOSPHERE*1.50,ONE_ATMOSPHERE*1.60)
 	TLV["temperature"] =	list(T0C - 40, T0C - 31, T0C + 40, T0C + 120)
 // CHOMPEdit END
-=======
->>>>>>> 25678e2903 (Multiple Air Alarm Support [DRAFT] (#17497))
+
 #undef LOAD_TLV_VALUES
 #undef TEST_TLV_VALUES
 #undef DECLARE_TLV_VALUES
