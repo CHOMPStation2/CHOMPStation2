@@ -1,6 +1,0 @@
-author: "CHOMPStation2StaffMirrorBot"
-delete-after: True
-changes:
-  - rscadd: "vassilian autohiss"
-  - rscadd: "yingish autohiss"
-  - code_imp: "autohiss unit testing"

@@ -294,3 +294,55 @@
   - qol: Virus extrapolator can now identify stealthy viruses
   - rscdel: Removed "old vomit" spreading viruses
   - bugfix: Makes vaccines work again
+2025-04-27:
+  CHOMPStation2StaffMirrorBot:
+  - rscadd: Added old blood
+  - qol: Extrapolator can isolate symptoms now
+  - bugfix: Fixed Pandemic not saving the name of named diseases
+  - bugfix: Fixed Pandemic not printing the "virus release" notice
+  - rscadd: Microwave UI is prettier now~
+  - rscadd: Added some new machines in maint, go find them!
+  - rscadd: Added some remote scene tools - bluespace stickers, and the voodoo kit.
+      They let you ahr pea - but remotely.
+  - rscdel: Removed some maint-trader spawn locations
+  - maptweak: Maint Recyclers and Maint Vendors both have several spawn locations
+      in maint
+  - refactor: fixed the logout commsig never getting sent
+  - rscadd: Slightly prettier Canister UI.
+  - qol: RIGSuit UI made prettier and more usable!
+  - rscadd: adds dullahan taurs
+  - rscadd: /tg/'s fonts added, maptext now uses Grand9K Pixel.
+  - rscadd: You can now crawl while down!
+  - rscadd: Species now have specific sounds and gendered sounds.
+  - qol: Weather can now be turned up/down in the character preferences
+  - balance: Xenochimera have licking wounds
+  - qol: Bellyrubbing is now an emote
+  - rscadd: Wolves now have vore stomachs
+  - qol: Staff can see when each other log out
+  - bugfix: runtime on bad runes in persistent files
+  - bugfix: Fixed Resistance not being calculated properly
+  - rscadd: naga wings
+  - rscadd: naga ears
+  - bugfix: Fixed an old programming error that caused hell ramen and soemmerfire
+      to continuously increase the body temperature of the mob that ingested it.
+  - rscadd: More immersive photocopier
+  - rscadd: Pretty UI for the algae farm
+  - rscadd: vassilian autohiss
+  - rscadd: yingish autohiss
+  - code_imp: autohiss unit testing
+  - rscadd: You can now set your Favorite and Maybe OOC prefs.
+  - rscadd: You can now set your Sexuality and Gender in the Character Directory
+  - rscadd: Even more RIG startup screens
+  - rscadd: Adds Xenoarch access to the SD's EVA shuttle
+  - code_imp: Added missing SIGNAL_HANDLER lines to many RegisterSignal() proc refs.
+  - bugfix: a crash when an empty regular expression was used in highlight blacklists
+  - rscadd: TEG has pretty spinning fans
+  - rscadd: Disposal bin UI overhauled to be more skeuomorphic
+  Kash:
+  - bugfix: Fixes a bug where reagents would show up twice in the chem dispenser
+  Tost:
+  - rscadd: Adds colour selection to earrings
+  tacoguy7765093:
+  - maptweak: Use the correct protolathes this time for science.
+  - qol: Supply console, Robotics Fabs, and Pilot consoles no longer have hard access
+      locks.
