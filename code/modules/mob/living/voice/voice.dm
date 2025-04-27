@@ -4,7 +4,11 @@
 	desc = "How are you examining me?"
 	see_invisible = SEE_INVISIBLE_LIVING
 	var/obj/item/communicator/comm = null
+<<<<<<< HEAD
 	var/item_tf = FALSE //CHOMPEdit
+=======
+	var/item_tf = FALSE
+>>>>>>> 550f36fad7 (Somemissingthings (#17615))
 
 	emote_type = 2 //This lets them emote through containers.  The communicator has a image feed of the person calling them so...
 
@@ -141,14 +145,20 @@
 	return ..()
 
 /mob/living/voice/custom_emote(var/m_type = VISIBLE_MESSAGE, var/message = null, var/range = world.view)
+<<<<<<< HEAD
 	//CHOMPEdit Start
+=======
+>>>>>>> 550f36fad7 (Somemissingthings (#17615))
 	if(comm)
 		..(m_type,message,comm.video_range)
 	else if(item_tf)
 		..(m_type,message,range)
+<<<<<<< HEAD
 	//CHOMPEdit End
 
 //CHOMPEdit Start: Emotes!
 /mob/living/voice/get_available_emotes()
 	. |= global._simple_mob_default_emotes.Copy()
 //CHOMPEdit End
+=======
+>>>>>>> 550f36fad7 (Somemissingthings (#17615))
