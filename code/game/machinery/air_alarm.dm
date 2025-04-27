@@ -873,7 +873,6 @@
 
 /obj/machinery/alarm/power_change()
 	..()
-<<<<<<< HEAD
 	var/delay_time = rand(0,15)
 	if(delay_time)
 		addtimer(CALLBACK(src, PROC_REF(process_power_change)), delay_time, TIMER_DELETE_ME) // CHOMPEdit
@@ -890,13 +889,6 @@
 	else if(atmoswarn)
 		soundloop.start()
 // CHOMPAdd End
-=======
-	var/delay_time = rand(0, 15)
-	if(delay_time)
-		addtimer(CALLBACK(src, TYPE_PROC_REF(/atom,update_icon)), delay_time, TIMER_DELETE_ME)
-		return
-	update_icon()
->>>>>>> 305944ccc6 (cleans up some comments (#17613))
 
 /obj/machinery/alarm/server/Initialize(mapload)
 	. = ..()
