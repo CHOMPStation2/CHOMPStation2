@@ -279,11 +279,7 @@ var/list/gear_datums = list()
 	if(!description)
 		var/obj/O = path
 		description = initial(O.desc)
-<<<<<<< HEAD
-	gear_tweaks = list(gear_tweak_free_name, gear_tweak_free_desc, GLOB.gear_tweak_item_tf_spawn, GLOB.gear_tweak_free_matrix_recolor) //CHOMPEdit - Item TF spawnpoints
-=======
 	gear_tweaks = list(gear_tweak_free_name, gear_tweak_free_desc, GLOB.gear_tweak_item_tf_spawn, GLOB.gear_tweak_free_matrix_recolor)
->>>>>>> 550f36fad7 (Somemissingthings (#17615))
 
 /datum/gear_data
 	var/path
