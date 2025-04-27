@@ -124,9 +124,11 @@ GLOBAL_LIST_EMPTY(latejoin_tram)
 	display_name = "Vorespawn - Pred"
 	msg = "has arrived on the station"
 
+// CHOMPEnable Start
 /datum/spawnpoint/vore/itemtf
 	display_name = "Item TF spawn"
 	msg = "has arrived on the station"
+// CHOMPEnable End
 
 /datum/spawnpoint/vore/New()
 	..()
