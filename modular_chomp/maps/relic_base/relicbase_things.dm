@@ -18,7 +18,7 @@
 */
 
 /obj/effect/step_trigger/tramblock
-	invisibility = 99 // nope cant see this shit
+	invisibility = INVISIBILITY_BADMIN // nope cant see this shit
 	plane = ABOVE_PLANE
 	anchored = TRUE
 	icon = 'icons/mob/screen1.dmi' //VS Edit

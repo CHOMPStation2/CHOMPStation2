@@ -1,7 +1,7 @@
 /obj/effect/step_trigger/teleporter/to_mining
 	icon = 'icons/obj/structures/stairs_64x64.dmi'
 	icon_state = ""
-	invisibility = 0
+	invisibility = INVISIBILITY_NONE
 	plane = TURF_PLANE
 	layer = ABOVE_TURF_LAYER
 
@@ -14,7 +14,7 @@
 /obj/effect/step_trigger/teleporter/from_mining
 	icon = 'icons/obj/structures/stairs_64x64.dmi'
 	icon_state = ""
-	invisibility = 0
+	invisibility = INVISIBILITY_NONE
 	plane = TURF_PLANE
 	layer = ABOVE_TURF_LAYER
 
