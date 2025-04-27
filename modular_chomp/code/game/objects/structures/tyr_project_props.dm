@@ -418,3 +418,5 @@
 	The weather is also strange, weather fireworks being wrong for here. \
 	Proabaly something to do with this valley being a pockect of cool in the heat."
 	value = CATALOGUER_REWARD_HARD
+
+

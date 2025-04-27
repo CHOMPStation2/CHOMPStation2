@@ -165,3 +165,4 @@
 	. = ..()
 	reagents.add_reagent(REAGENT_ID_PROTEIN, 3)
 	reagents.add_reagent(REAGENT_ID_LIQUIDLIFE, 3)
+
