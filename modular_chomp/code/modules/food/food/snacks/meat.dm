@@ -118,7 +118,7 @@
 /obj/item/reagent_containers/food/snacks/painiteant/Initialize(mapload)
 	. = ..()
 	reagents.add_reagent(REAGENT_ID_PROTEIN, 3)
-	reagents.add_reagent(REAGENT_ID_NEOLIQUIDFIRE =  3)
+	reagents.add_reagent(REAGENT_ID_NEOLIQUIDFIRE,  3)
 
 
 /obj/item/reagent_containers/food/snacks/bronzeant
