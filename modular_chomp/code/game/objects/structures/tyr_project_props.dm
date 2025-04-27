@@ -1,18 +1,3 @@
-/obj/structure/prop/blackbox/tyr_precursor_a
-	catalogue_data = list(/datum/category_item/catalogue/information/blackbox/tyr_precursor_a)
-
-/datum/category_item/catalogue/information/blackbox/tyr_precursor_a
-
-/obj/structure/prop/blackbox/tyr_precursor_b
-	catalogue_data = list(/datum/category_item/catalogue/information/blackbox/tyr_precursor_b)
-
-/datum/category_item/catalogue/information/blackbox/tyr_precursor_b
-
-/obj/structure/prop/blackbox/tyr_precursor_c
-	catalogue_data = list(/datum/category_item/catalogue/information/blackbox/tyr_precursor_c)
-
-/datum/category_item/catalogue/information/blackbox/tyr_precursor_c
-
 //oooh, shiny
 /obj/structure/prop/tyr_elevator //This won't function for a while, if ever
 	name = "odd elevator"
@@ -300,3 +285,138 @@
 				prob(5);/obj/structure/outcrop/weathered_gate,
 				prob(3);/obj/structure/outcrop/hydrogen,
 				prob(1);/obj/structure/outcrop/lead/tyr)
+
+/obj/item/prop/tyrlore
+	name = "alien disk"
+	desc = "A disc for storing data."
+	icon = 'modular_chomp/icons/obj/weather_ruins.dmi'
+	w_class = ITEMSIZE_SMALL
+
+/obj/item/prop/tyrlore/reddisc
+	catalogue_data = list(/datum/category_item/catalogue/anomalous/tyr_red)
+	icon_state = "disc_red"
+
+/obj/item/prop/tyrlore/purpledisc
+	catalogue_data = list(/datum/category_item/catalogue/anomalous/tyr_purple)
+	icon_state = "disc_purple"
+
+/obj/item/prop/tyrlore/greendisc
+	catalogue_data = list(/datum/category_item/catalogue/anomalous/tyr_green)
+	icon_state = "disc_green"
+
+/obj/item/prop/tyrlore/baseneon
+	name = "data disc"
+	desc = "A disc for storing data."
+	catalogue_data = list(/datum/category_item/catalogue/technology/base_neon)
+	icon_state = "neon_disc"
+
+/obj/item/prop/tyrlore/neonsec
+	name = "data disc"
+	desc = "A disc for storing data."
+	catalogue_data = list(/datum/category_item/catalogue/technology/base_neon_forward)
+	icon_state = "sec_disc"
+
+/obj/item/prop/tyrlore/neonmedi
+	name = "data disc"
+	desc = "A disc for storing data."
+	catalogue_data = list(/datum/category_item/catalogue/technology/base_neon_virus)
+	icon_state = "medi_disc"
+
+/obj/item/prop/tyrlore/monodisc
+	name = "strange disk"
+	desc = "A disc for storing data, but it appears to have none on it"
+	icon_state = "mono_disc"
+
+/obj/item/prop/tyrlore/neonengi
+	name = "data disc"
+	desc = "A disc for storing data."
+	catalogue_data = list(/datum/category_item/catalogue/technology/base_neon_anomalous)
+	icon_state = "engi_disc"
+
+/datum/category_item/catalogue/anomalous/tyr_red
+	name = "Precursor Object - Tyr Data Disc Red"
+	desc = "The following data has been corrupted. \
+	<br><br>\
+	oslra yclce hietg hotfsaun ifev undhdre htiytr veesn.\
+	No huftrer ritrdecisev cevredive. \
+	notencnidoc tihw fof pantel posd lsot wot tuhanosd cslcey..\
+	leif sgisn lbeow tslo gilans reorsr.\
+	ireaneregnot dops wolakrbe.. \
+	rsoescure gaklicn. \
+	cenictomon To lawdorr.\
+	tatepmt treeh hudnedr senevty tow."
+	value = CATALOGUER_REWARD_HARD
+
+/datum/category_item/catalogue/anomalous/tyr_purple
+	name = "Precursor Object - Tyr Data Disc Purple"
+	desc = "The following data has been corrupted. \
+	<br><br>\
+	tapa'cnsi lgo, 1 ohur rebofe rcoy elpa.\
+	I ma ont yerlal rues wtah yeht tawn ee to ptu ni tihs. \
+	ts'i tjsu gipretena tginsh e'vi yarelad sida.\
+	amirpexnlet irwnig is gongi yirwahe.\
+	varesel crew memebers are filling ill. \
+	But the elevators are holding strong. \
+	And stable power is, well, stable.\
+	I hope for a good dream."
+	value = CATALOGUER_REWARD_HARD
+
+/datum/category_item/catalogue/anomalous/tyr_green
+	name = "Precursor Object - Tyr Data Disc Green"
+	desc = "Final mortality count before cryo leap.\
+	29,895 illness\
+	113,615 workplace injuries\
+	20,105 off planet\
+	300 to be determined."
+	value = CATALOGUER_REWARD_HARD
+
+/datum/category_item/catalogue/technology/base_neon
+	name = "Goal Manifest"
+	desc = "After we activation of the seal upon sif our foundation collapsed.\
+	We have migrated most of this systems forces to new hidden sights as a result.\
+	The discovery of three siginals lead us here, along with two other locals.\
+	The discovery of this cool point in an overheated planet proved anomalous,\
+	precursor ruins being swiftly discovered.\
+	However they appear to be diffrent then the ones upon Sif. \
+	No signs of the shadelurkers here, nor in the other two new sights.\
+	We have been given the second most resources of this branch, with potential\
+	for further. Praying for all three leads to give us support."
+	value = CATALOGUER_REWARD_HARD
+
+/datum/category_item/catalogue/technology/base_neon_forward
+	name = "Going Forward"
+	desc = "Check List Of Things To Do.\
+	1. Get the precursor vanguard for further protection.\
+	2. Set up a false friendly docking bay for further materials.\
+	3. Expanded Operating Base Neon southwards,\
+	4. Recruit the locals potentially.\
+	5. Obtain a Absoulete Zero Mecha. \
+	6. See if a phazon and janus combined could phase deeper below.\
+	7. Construct a Mountain Killer prototype. Patent that name too\
+	8. Get a better source of food."
+	value = CATALOGUER_REWARD_HARD
+
+/datum/category_item/catalogue/technology/base_neon_virus
+	name = "Note Worthy Ailments"
+	desc = "Offical note taking mode. Not sure out higher ups even read this but here we go\
+	We discovered traces remains of a virus within the precursor ruins, but seems adapated for beings centuries ago.\
+	Although there are some theroies this is a renamant of a dead plague.\
+	Either way, we assume all the precursors of tyr are dead, sealed in a tomb of their own making,\
+	But that doesn't explain the siginal we've been recevving..\
+	Newly activated, and leagues below the earth. \
+	Our scans say the ruins should be able to go that deep, but we've yet to find a way to breach.\
+	So running theory is rogue Ai, or some small pockect of immune folks.."
+	value = CATALOGUER_REWARD_HARD
+
+/datum/category_item/catalogue/technology/base_neon_anomalous
+	name = "Anomalous Conditions"
+	desc = "The work conditions keep changing! Horrendous!\
+	Southern ruins are horrendous, some wires burst into lavas and crystals!.\
+	Then others burst with water and sparky smoke!\
+	Scientists blabber about heated crystals, and steam power but nothing beats,\
+	good old fashioned alien flora!\
+	The weather is also strange, weather fireworks being wrong for here. \
+	Proabaly something to do with this valley being a pockect of cool in the heat."
+	value = CATALOGUER_REWARD_HARD
+
+

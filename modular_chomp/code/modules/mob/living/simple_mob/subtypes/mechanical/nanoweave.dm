@@ -197,7 +197,7 @@
 /mob/living/simple_mob/mechanical/mecha/eclipse/proc/omega_three(atom/target, var/next_cycle)
 	if(!target)
 		return
-	addtimer(CALLBACK(src, PROC_REF(omega_three), target, next_cycle), 1.5 SECONDS, TIMER_DELETE_ME)
+	addtimer(CALLBACK(src, PROC_REF(omega_four), target, next_cycle), 1.5 SECONDS, TIMER_DELETE_ME)
 	uptwo_leftfour(target)
 	downtwo_leftfour(target)
 	uptwo_rightfour(target)

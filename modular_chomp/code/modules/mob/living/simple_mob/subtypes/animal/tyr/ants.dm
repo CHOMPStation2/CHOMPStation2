@@ -1,18 +1,18 @@
 /mob/living/simple_mob/animal/tyr/mineral_ants
 	name = "metal ant"
 	desc = "A large ant."
-	icon_state = "normal_ant"
-	icon_dead = "dead_ant"
+	icon_state = "ne_ant"
+	icon_dead = "dead_new"
 	maxHealth = 25 //two hits with agate sword, three with spear, one with hammer, four with bow
 	health = 25
 	pass_flags = PASSTABLE
 	movement_cooldown = 1
 
-	ai_holder_type = /datum/ai_holder/simple_mob/retaliate/cooperative
+	ai_holder_type = /datum/ai_holder/simple_mob/melee/evasive
 
-	see_in_dark = 12
-	melee_damage_lower = 8 //12.5 hits unarmored. 15.625 with the tribal armor
-	melee_damage_upper = 8 //Rng numbers are wierd
+	see_in_dark = 3
+	melee_damage_lower = 16 //6.25 hits unarmored.
+	melee_damage_upper = 16 //Rng numbers are wierd
 	attack_sharp = TRUE
 	attack_edge = 1
 
@@ -57,35 +57,56 @@
 	B.absorbchance = 0
 	B.escapechance = 25
 
-/mob/living/simple_mob/animal/tyr/mineral_ants/bronze
+/mob/living/simple_mob/animal/tyr/mineral_ants/bronze //shockers
 	icon_state = "bronze_ant"
+	icon_living = "bronze_ant"
 	butchery_loot = list(\
-		/obj/item/stack/material/bronze = 6\
+		/obj/item/stack/material/bronze = 18\
 		)
+	meat_amount = 3
+	meat_type = /obj/item/reagent_containers/food/snacks/bronzeant
 
 /mob/living/simple_mob/animal/tyr/mineral_ants/copper
 	icon_state = "copper_ant"
+	icon_living = "copper_ant"
 	butchery_loot = list(\
-		/obj/item/stack/material/copper = 6\
+		/obj/item/stack/material/copper = 18\
 		)
+	meat_amount = 3
+	meat_type = /obj/item/reagent_containers/food/snacks/copperant
 
-/mob/living/simple_mob/animal/tyr/mineral_ants/agate
+/mob/living/simple_mob/animal/tyr/mineral_ants/agate //shockers
 	icon_state = "agate_ant"
+	icon_living = "agate_ant"
 	butchery_loot = list(\
-		/obj/item/stack/material/weathered_agate = 6\
+		/obj/item/stack/material/weathered_agate = 18\
 		)
+	meat_amount = 3
+	meat_type = /obj/item/reagent_containers/food/snacks/agateant
 
 /mob/living/simple_mob/animal/tyr/mineral_ants/quartz
+	icon_state = "quartz_ant"
+	icon_living = "quartz_ant"
 	butchery_loot = list(\
-		/obj/item/stack/material/quartz = 6\
+		/obj/item/stack/material/quartz = 18\
 		)
+	meat_amount = 3
+	meat_type = /obj/item/reagent_containers/food/snacks/quartzant
 
 /mob/living/simple_mob/animal/tyr/mineral_ants/painite
+	icon_state = "painite_ant"
+	icon_living = "painite_ant"
 	butchery_loot = list(\
-		/obj/item/stack/material/painite = 6\
+		/obj/item/stack/material/painite = 18\
 		)
+	meat_amount = 3
+	meat_type = /obj/item/reagent_containers/food/snacks/painiteant
+
+
 
 /mob/living/simple_mob/animal/tyr/mineral_ants/builder
+	icon_state = "builder_ant"
+	icon_living = "builder_ant"
 	butchery_loot = list(\
 		/obj/item/stack/material/concrete = 6\
 		)
@@ -185,13 +206,12 @@ ANT STRUCTURES
 	spawn_delay = 10 MINUTES
 
 	spawn_types = list(
-	/mob/living/simple_mob/animal/tyr/mineral_ants = 1,
-	/mob/living/simple_mob/animal/tyr/mineral_ants/bronze = 1,
+	/mob/living/simple_mob/animal/tyr/mineral_ants/bronze = 5,
+	/mob/living/simple_mob/animal/tyr/mineral_ants/builder = 7,
 	/mob/living/simple_mob/animal/tyr/mineral_ants/copper = 1,
-	/mob/living/simple_mob/animal/tyr/mineral_ants/agate = 3,
 	/mob/living/simple_mob/animal/tyr/mineral_ants/quartz = 1,
-	/mob/living/simple_mob/animal/tyr/mineral_ants/painite = 1,
-	/mob/living/simple_mob/animal/tyr/mineral_ants/builder = 1
+	/mob/living/simple_mob/animal/tyr/mineral_ants/agate = 1,
+	/mob/living/simple_mob/animal/tyr/mineral_ants/painite = 5
 	)
 
 	simultaneous_spawns = 5
@@ -303,13 +323,12 @@ ANT STRUCTURES
 	anchored = FALSE
 	layer = HIDING_LAYER
 	health = 3
-	grow_as = list(/mob/living/simple_mob/animal/tyr/mineral_ants,
-	/mob/living/simple_mob/animal/tyr/mineral_ants/bronze,
+	grow_as = list(/mob/living/simple_mob/animal/tyr/mineral_ants/bronze,
+	/mob/living/simple_mob/animal/tyr/mineral_ants/builder,
 	/mob/living/simple_mob/animal/tyr/mineral_ants/copper,
-	/mob/living/simple_mob/animal/tyr/mineral_ants/agate,
 	/mob/living/simple_mob/animal/tyr/mineral_ants/quartz,
-	/mob/living/simple_mob/animal/tyr/mineral_ants/painite,
-	/mob/living/simple_mob/animal/tyr/mineral_ants/builder)
+	/mob/living/simple_mob/animal/tyr/mineral_ants/agate,
+	/mob/living/simple_mob/animal/tyr/mineral_ants/painite)
 	faction = FACTION_TYR
 
 /obj/effect/ant_structure/webbarrier

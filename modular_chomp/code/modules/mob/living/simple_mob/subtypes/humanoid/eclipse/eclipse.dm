@@ -32,7 +32,7 @@
 	attack_edge = 1
 	attacktext = list("slashed", "stabbed")
 	projectile_dispersion = 0
-	ranged_cooldown = 10
+	ranged_cooldown = 40
 	armor = list(melee = 50, bullet = 50, laser = 50, energy = 50, bomb = 50, bio = 100, rad = 100)	// Simple mob immunuties plus base Eclipse foe stuff
 
 	can_be_drop_prey = FALSE //CHOMP Add
@@ -54,8 +54,8 @@
 	projectilesound = 'sound/weapons/Gunshot_light.ogg'
 
 	needs_reload = TRUE
-	reload_max = 7		// Not the best default, but it fits the pistol
-	reload_time = 1.5 SECONDS
+	reload_max = 4
+	reload_time = 2.5 SECONDS
 	ai_holder_type = /datum/ai_holder/simple_mob/intentional/eclipse
 
 	special_attack_cooldown = 15 SECONDS
@@ -138,7 +138,7 @@
 		visible_message(span_cult("[P] seems ineffective!."))
 
 /mob/living/simple_mob/humanoid/eclipse/solar/snipertesh
-	name = "Solar Eclipse Sniper"
+	name = "Solar Eclipse Breaker"
 	desc = "An armored teshari with a sniper, protected from laser and energy based attacks"
 	health = 50 //old 20
 	maxHealth = 50
@@ -153,7 +153,7 @@
 
 	reload_max = 1
 	reload_time = 2.5 SECONDS
-	ranged_attack_delay = 1.5 SECONDS
+	ranged_attack_delay = 2 SECONDS
 	var/cloaked_alpha = 60			// Lower = Harder to see.
 	var/cloak_cooldown = 5 SECONDS	// Amount of time needed to re-cloak after losing it.
 	var/last_uncloak = 0
@@ -467,9 +467,9 @@
 	projectiletype = /obj/item/projectile/bullet/crystalineburst
 	reload_max = 1
 	reload_time = 2.5 SECONDS
-	ranged_attack_delay = 1.5 SECONDS
+	ranged_attack_delay = 2 SECONDS
 	var/cloaked_alpha = 40			// Lower = Harder to see.
-	var/cloak_cooldown = 1 SECONDS	// Amount of time needed to re-cloak after losing it.
+	var/cloak_cooldown = 1 SECOND	// Amount of time needed to re-cloak after losing it.
 	var/last_uncloak = 0
 
 	loot_list = list(/obj/item/slime_extract/sepia  = 1,
@@ -653,9 +653,10 @@
 	icon_state = "eclipse_gravliz"
 	icon_living = "eclipse_gravliz"
 	reload_max = 1
+	reload_time = 3 SECONDS
 	movement_cooldown = 1
 
-	special_attack_cooldown = 7 SECONDS
+	special_attack_cooldown = 15 SECONDS
 	special_attack_min_range = 1
 	special_attack_max_range = 7
 
@@ -717,7 +718,7 @@
 	projectiletype = /obj/item/projectile/ion/pistol
 	icon_state = "eclipse_diver" //note to self try to redo this sprite sometime
 	reload_max = 1
-	reload_time = 1.5 SECOND
+	reload_time = 5 SECONDS
 
 	specialattackprojectile = /obj/item/projectile/energy/mechahack
 
@@ -780,13 +781,172 @@
 /mob/living/simple_mob/humanoid/eclipse/proc/gravity_pull(mob/living/L)
 	if(!L)
 		return
-	L.throw_at(src, 2, 4) // Just yoinked.
+	for(L in view(src, 7))
+		L.throw_at(src, 2, 4) // Just yoinked.
 
 /mob/living/simple_mob/humanoid/eclipse/proc/itemyoink(mob/living/carbon/human/H)
 	if(!H)
 		return
 	var/obj/item/I = H.get_active_hand()
-	H.drop_item()
-	if(I)
-		I.throw_at(src, 2, 4) // Just yoinked.
-		src.visible_message(span_danger("The [name] heaves, pulling \the [H]'s weapon from their hands!"))
+	if(H in view(src, 7))
+		H.drop_item()
+		if(I)
+			I.throw_at(src, 2, 4) // Just yoinked.
+			src.visible_message(span_danger("The [name] heaves, pulling \the [H]'s weapon from their hands!"))
+
+
+//new tyr mobs
+/mob/living/simple_mob/humanoid/eclipse/lunar/heavyshark //melee shork, anti-flesh
+	name = "Lunar Eclipse Brusier"
+	desc = "A akula in a strange eriee red and black armor. Bullets and melee armaments seem ineffective."
+	icon_state = "aegis_shark"
+	icon_living = "aegis_shark"
+	projectiletype = null
+	ai_holder_type = /datum/ai_holder/simple_mob/intentional/adv_dark_gygax
+	melee_damage_lower = 30
+	melee_damage_upper = 30
+	attack_armor_pen = 30
+
+	loot_list = list(/obj/item/slime_extract/sepia  = 1,
+		/obj/item/bone/skull = 100,
+		/obj/item/soulstone = 30,
+		/obj/item/melee/cursedblade = 15
+			)
+
+/mob/living/simple_mob/humanoid/eclipse/lunar/heavyshark/apply_melee_effects(var/atom/A) //maybe replace this with Doom lite
+	if(isliving(A))
+		var/mob/living/L = A
+		L.add_modifier(/datum/modifier/deep_wounds, 10 SECONDS)
+
+
+/mob/living/simple_mob/humanoid/eclipse/lunar/cultfanatic //A semi tough creature
+	name = "Lunar Eclipse Fanatic"
+	desc = "A furry creature with stolen and modified cult attire. Seemingly swapped high energy resistance for brunt and sharp."
+	icon_state = "return"
+	icon_living = "return"
+	projectiletype = /obj/item/projectile/bullet/crystaline
+	loot_list = list(/obj/item/slime_extract/sepia  = 1,
+		/obj/item/bone/skull = 100,
+		/obj/item/clothing/suit/cultrobes/alt = 40,
+		/obj/item/clothing/head/culthood/alt = 40
+			)
+
+/mob/living/simple_mob/humanoid/eclipse/lunar/cultfanatic/do_special_attack(atom/A)
+	teleport(A)
+
+/mob/living/simple_mob/humanoid/eclipse/lunar/cultfanatic/attackby(var/obj/item/O as obj, var/mob/user as mob) //I question why you are meleeing the meleeing resisting mob but funny shield flavour
+	if(O.force)
+		if(prob(70))
+			visible_message(span_danger("\The [src] blocks \the [O] with its shield!"))
+			if(user)
+				ai_holder.react_to_attack(user)
+			return
+		else
+			..()
+	else
+		to_chat(user, span_warning("This weapon is ineffective, it does no damage."))
+		visible_message(span_warning("\The [user] gently taps [src] with \the [O]."))
+
+/mob/living/simple_mob/humanoid/eclipse/lunar/changeling //A wierd creature
+	name = "Lunar Eclipse Bio-Weapon"
+	desc = "A horror of twisted and armored flesh. Whilst bullets and blades bounce off, perhaps it still burns."
+	icon_state = "horror"
+	icon_living = "horror"
+	projectiletype = /obj/item/projectile/energy/blob/acid
+	ai_holder_type = /datum/ai_holder/simple_mob/intentional/adv_dark_gygax
+	melee_damage_lower = 20
+	melee_damage_upper = 20
+	attack_armor_pen = 40
+	specialattackprojectile = /obj/item/projectile/arc/spore
+
+/mob/living/simple_mob/humanoid/eclipse/lunar/changeling/do_special_attack(atom/A)
+	Beam(A, icon_state = "tentacle", time = 3 SECONDS, maxdistance = INFINITY)
+	addtimer(CALLBACK(src, PROC_REF(special_projectile), A), 3.5 SECONDS, TIMER_DELETE_ME)
+
+
+/mob/living/simple_mob/humanoid/eclipse/solar/clockspear //Melee creature
+	name = "Solar Eclipse Spearmaster"
+	desc = "A furry creature wearing modified artifact armor, protecting itself from burns and energy."
+	icon_state = "clock_spear"
+	icon_living = "clock_spear"
+	projectiletype = null
+	ai_holder_type = /datum/ai_holder/simple_mob/intentional/adv_dark_gygax
+	melee_damage_lower = 30
+	melee_damage_upper = 30
+	attack_armor_pen = 60
+	melee_attack_delay = 3 SECONDS
+
+	loot_list = list(/obj/item/slime_extract/sepia  = 1,
+		/obj/item/bone/skull = 100,
+		/obj/item/rig/ch/clockwork = 10,
+		/obj/item/ratvarian_spear = 30
+			)
+
+/mob/living/simple_mob/humanoid/eclipse/solar/clockspear/apply_melee_effects(var/atom/A)
+	if(isliving(A))
+		var/mob/living/L = A
+		A.emp_act(4) //The weakest strength of EMP
+		playsound(src, 'sound/weapons/Egloves.ogg', 75, 1)
+		L.stuttering = max(L.stuttering, 4)
+		var/datum/effect/effect/system/spark_spread/s = new /datum/effect/effect/system/spark_spread
+		s.set_up(5, 1, L)
+		s.start()
+
+/mob/living/simple_mob/humanoid/eclipse/solar/clocksgun //Melee creature
+	name = "Solar Eclipse Artificer"
+	desc = "A furry creature wearing modified artifact armor, protecting itself from burns and energy."
+	icon_state = "clock_gun"
+	icon_living = "clock_gun"
+	projectiletype = /obj/item/projectile/bullet/rifle/clockwork
+	ranged_cooldown = 20
+	reload_max = 10
+	reload_time = 5 SECONDS
+	specialattackprojectile = /obj/item/projectile/beam/shock/clockwork
+
+	loot_list = list(/obj/item/slime_extract/sepia  = 1,
+		/obj/item/bone/skull = 100,
+		/obj/item/rig/ch/clockwork = 10,
+		/obj/item/gun/energy/clockwork = 30
+			)
+
+
+/mob/living/simple_mob/humanoid/eclipse/solar/clocksgun/do_special_attack(atom/A)
+	Beam(A, icon_state = "volt_ray", time = 5 SECONDS, maxdistance = INFINITY)
+	addtimer(CALLBACK(src, PROC_REF(special_projectile), A), 5.5 SECONDS, TIMER_DELETE_ME)
+
+
+/mob/living/simple_mob/humanoid/eclipse/solar/zaddat //Melee creature
+	name = "Solar Eclipse Spacer"
+	desc = "A zaddat wearing orange armor, shielding itself from lasers and energy."
+	icon_state = "zaddat_spacer"
+	icon_living = "zaddat_spacer"
+	reload_max = 3
+	reload_time = 3 SECONDS
+
+	loot_list = list(/obj/item/slime_extract/sepia  = 1,
+		/obj/item/bone/skull = 100,
+		/obj/item/clothing/head/helmet/space/void/zaddat = 30,
+		/obj/item/clothing/suit/space/void/zaddat = 30,
+		/obj/item/material/fishing_rod/modern = 30
+			)
+
+/mob/living/simple_mob/humanoid/eclipse/solar/zaddat/bullet_act(obj/item/projectile/P)
+	if(istype(P, /obj/item/projectile/energy) || istype(P, /obj/item/projectile/beam))
+		var/reflect_prob = P.damage
+		if(prob(reflect_prob))
+			visible_message(span_danger("The [P.name] gets reflected by [src]'s armor!"), \
+							span_userdanger("The [P.name] gets reflected by [src]'s armor!"))
+
+			// Find a turf near or on the original location to bounce to
+			if(P.starting)
+				var/new_x = P.starting.x + pick(0, 0, -1, 1, -2, 2, -2, 2, -2, 2, -3, 3, -3, 3)
+				var/new_y = P.starting.y + pick(0, 0, -1, 1, -2, 2, -2, 2, -2, 2, -3, 3, -3, 3)
+				var/turf/curloc = get_turf(src)
+
+				// redirect the projectile
+				P.redirect(new_x, new_y, curloc, src)
+				P.reflected = 1
+
+			return -1 // complete projectile permutation
+
+	return (..(P))
