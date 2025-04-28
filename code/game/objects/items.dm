@@ -428,14 +428,13 @@
 	if(user.client)	user.client.screen |= src
 	if(user.pulling == src) user.stop_pulling()
 	if(("[slot]" in slot_flags_enumeration) && (slot_flags & slot_flags_enumeration["[slot]"]))
-		if(equip_sound && !muffled_by_belly(user)) //ChompEDIT
+		if(equip_sound && !muffled_by_belly(user))
 			playsound(src, equip_sound, 20, preference = /datum/preference/toggle/pickup_sounds)
-		else if(!muffled_by_belly(user)) //ChompEDIT
+		else if(!muffled_by_belly(user))
 			playsound(src, drop_sound, 20, preference = /datum/preference/toggle/pickup_sounds)
 	else if(slot == slot_l_hand || slot == slot_r_hand)
-		if(!muffled_by_belly(user)) //ChompEDIT
+		if(!muffled_by_belly(user))
 			playsound(src, pickup_sound, 20, preference = /datum/preference/toggle/pickup_sounds)
-	return
 
 /// Gives one of our item actions to a mob, when equipped to a certain slot
 /obj/item/proc/give_item_action(datum/action/action, mob/to_who, slot)
