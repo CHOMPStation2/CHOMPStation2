@@ -84,6 +84,7 @@
 	desc = "You will eat anything instantly, in one bite."
 	cost = 0
 	var_changes = list("bite_mod" = 16) // Setting this intentionally ridiculously high, so anything will overflow and be eaten in one go.
+	custom_only = FALSE
 
 /datum/trait/neutral/slip_reflex
 	name ="Slippery Reflexes"
