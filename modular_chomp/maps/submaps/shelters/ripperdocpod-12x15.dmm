@@ -88,14 +88,14 @@
 /area/survivalpod/superpose/ripperdocpod)
 "n" = (
 /obj/structure/table/reinforced,
-/obj/structure/sign/poster/custom{
-	dir = 4
-	},
 /obj/machinery/light/small{
 	dir = 4
 	},
 /obj/machinery/recharger,
 /obj/item/soap/syndie,
+/obj/machinery/newscaster{
+	pixel_x = 30
+	},
 /turf/simulated/floor/tiled/techfloor/grid/turfpack,
 /area/survivalpod/superpose/ripperdocpod)
 "o" = (
@@ -115,6 +115,15 @@
 	pixel_x = -8
 	},
 /obj/item/storage/quickdraw/syringe_case,
+/obj/item/reagent_containers/glass/beaker/vial/tricordrazine{
+	pixel_x = 10
+	},
+/obj/item/storage/pill_bottle/tramadol,
+/obj/item/storage/pill_bottle/paracetamol,
+/obj/item/reagent_containers/glass/bottle/oxycodone{
+	pixel_y = 8;
+	pixel_x = -8
+	},
 /turf/simulated/floor/tiled/techfloor/grid/turfpack,
 /area/survivalpod/superpose/ripperdocpod)
 "q" = (
@@ -349,7 +358,7 @@
 /turf/simulated/floor/tiled/techfloor/grid/turfpack,
 /area/survivalpod/superpose/ripperdocpod)
 "O" = (
-/turf/simulated/wall,
+/turf/simulated/wall/concrete,
 /area/survivalpod/superpose/ripperdocpod)
 "P" = (
 /obj/random/trash,
@@ -381,6 +390,9 @@
 /obj/item/modular_computer/laptop/preset/custom_loadout/advanced,
 /obj/structure/sign/poster/custom{
 	dir = 4
+	},
+/obj/machinery/computer/security/telescreen/entertainment{
+	pixel_x = 32
 	},
 /turf/simulated/floor/tiled/techfloor/grid/turfpack,
 /area/survivalpod/superpose/ripperdocpod)
@@ -444,6 +456,10 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/rust,
+/obj/item/radio/intercom{
+	dir = 4;
+	pixel_x = 21
+	},
 /turf/simulated/floor/tiled/steel_dirty,
 /area/survivalpod/superpose/ripperdocpod)
 
