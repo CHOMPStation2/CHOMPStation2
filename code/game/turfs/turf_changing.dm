@@ -74,7 +74,7 @@
 		if(S.zone) S.zone.rebuild()
 
 	cut_overlays(TRUE)
-	RemoveElement(/datum/element/turf_z_transparency)
+	// RemoveElement(/datum/element/turf_z_transparency)
 	changing_turf = TRUE
 	qdel(src)
 
