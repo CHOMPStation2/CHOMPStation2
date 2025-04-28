@@ -23,21 +23,12 @@
 /datum/map/stellar_delight/New()
 	..()
 	var/choice = pickweight(list(
-<<<<<<< HEAD
-		"logo1" = 50,
-		"logo2" = 50,
-		"gateway" = 5,
-		"youcanttaketheskyfromme" = 200,
-		"intothedark" = 200,
-		"above3b" = 200
-=======
 		'html/lobby/logo1.gif' = 50,
 		'html/lobby/logo2.gif' = 50,
 		'html/lobby/gateway.gif' = 5,
 		'html/lobby/youcanttaketheskyfromme.gif' = 200,
 		'html/lobby/intothedark.gif' = 200,
 		'html/lobby/above3b.gif' = 200,
->>>>>>> 8f2f1f80df (Overhaul title screens to be more compatible with TGUI (#17617))
 	))
 	if(choice)
 		lobby_screens = list(choice)

@@ -6,12 +6,7 @@
 	full_name = "The Test Map"
 	path = "example"
 
-<<<<<<< HEAD
-	lobby_icon = 'icons/misc/title_ch.dmi'	//CHOMPStation Edit TFF 24/12/19 - _ch.dmi
-	lobby_screens = list("mockingjay00")
-=======
 	lobby_screens = list('html/lobby/mockingjay00.gif')
->>>>>>> 8f2f1f80df (Overhaul title screens to be more compatible with TGUI (#17617))
 
 	zlevel_datum_type = /datum/map_z_level/example
 

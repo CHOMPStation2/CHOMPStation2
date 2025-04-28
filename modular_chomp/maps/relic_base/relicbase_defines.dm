@@ -28,9 +28,8 @@
 	full_name = "NLS Relic Base"
 	path = "relicbase"
 
-	lobby_icon = 'icons/misc/splash_screen.dmi'
-	lobby_screens = list("thor") //CHOMPStation Edit TFF 24/12/19 - CHOMPStation image
-	id_hud_icons = 'icons/mob/hud_jobs_vr.dmi'	//CHOMPStation Edit 25/1/20 TFF - Job icons for off-duty/exploration
+	lobby_screens = list('icons/misc/CHOMPSTATION_BG_eggman.gif')
+	id_hud_icons = 'icons/mob/hud_jobs_vr.dmi'
 
 	holomap_smoosh = list(list(
 		Z_LEVEL_UNDERGROUND,
