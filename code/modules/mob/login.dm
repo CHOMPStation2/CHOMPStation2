@@ -31,6 +31,7 @@
 						log_adminwarn("Notice: [key_name(src)] has the same [matches] as [key_name(M)] (no longer logged in).")
 
 /mob/Login()
+	persistent_ckey = client.ckey
 
 	player_list |= src
 	update_Login_details()
