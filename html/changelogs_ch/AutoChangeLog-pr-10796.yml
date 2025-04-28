@@ -1,0 +1,4 @@
+author: "CHOMPStation2StaffMirrorBot"
+delete-after: True
+changes:
+  - qol: "PAI may now climb up and down ladders, lattices, and move freely up and down in zeroG"
