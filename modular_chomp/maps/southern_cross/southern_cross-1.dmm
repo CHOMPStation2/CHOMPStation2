@@ -2098,7 +2098,7 @@
 /area/engineering/backuppowerlobby)
 "iN" = (
 /obj/turbolift_map_holder/southern_cross/port,
-/turf/unsimulated/mask,
+/turf/simulated/floor/plating,
 /area/engineering/lowlobby)
 "iP" = (
 /turf/simulated/floor/plating/turfpack/airless,
@@ -4552,7 +4552,7 @@
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/fieldthrift)
 "sV" = (
-/turf/unsimulated/mask,
+/turf/simulated/floor/plating,
 /area/engineering/lowlobby)
 "sW" = (
 /turf/simulated/wall,
