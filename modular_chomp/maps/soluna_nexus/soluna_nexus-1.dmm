@@ -15147,7 +15147,7 @@
 /turf/simulated/floor/tiled,
 /area/hallway/Aft_1_Deck_Stairwell)
 "dcA" = (
-/turf/unsimulated/mask,
+/turf/simulated/floor/plating/eris/under,
 /area/maintenance/Deck1_Cargo_Corridor1)
 "dcI" = (
 /obj/structure/bed/chair/wheelchair/motor,
@@ -61057,7 +61057,7 @@
 /obj/turbolift_map_holder/soluna_nexus/cargo{
 	dir = 1
 	},
-/turf/unsimulated/mask,
+/turf/simulated/floor/plating/eris/under,
 /area/maintenance/Deck1_Cargo_Corridor1)
 "sZQ" = (
 /turf/simulated/wall/r_wall,
