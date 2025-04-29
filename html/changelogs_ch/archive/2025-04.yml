@@ -367,3 +367,12 @@
   - maptweak: Tyr Precursor ruins is altered, and a new
   tacoguy7765093:
   - bugfix: Fixes science protolathe being too restricted.
+2025-04-29:
+  CHOMPStation2StaffMirrorBot:
+  - rscadd: Added new lobby screen and new player experience.
+  - bugfix: Title screens work better
+  Kashargul:
+  - bugfix: fast eater not being custom
+  tacoguy7765093:
+  - rscadd: Added a new outsider pod called the RipperDocPod for all your cyberpunk
+      needs.
