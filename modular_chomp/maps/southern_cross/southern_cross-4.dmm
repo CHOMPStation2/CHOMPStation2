@@ -17886,7 +17886,7 @@
 /turf/simulated/floor/tiled,
 /area/hallway/primary/thirddeck/aftstarboardcentral)
 "oXg" = (
-/turf/unsimulated/mask,
+/turf/simulated/open,
 /area/hallway/primary/thirddeck/central)
 "oXh" = (
 /obj/machinery/atmospherics/pipe/simple/hidden,

@@ -1088,7 +1088,7 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/first_aid_station/firstdeck)
 "aez" = (
-/turf/unsimulated/mask,
+/turf/simulated/floor/plating/eris/under,
 /area/hallway/primary/firstdeck/elevator)
 "aeA" = (
 /obj/structure/cable/cyan{
@@ -7884,7 +7884,7 @@
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/escape/firstdeck/ep_aftport)
 "aPZ" = (
-/turf/unsimulated/mask,
+/turf/simulated/open,
 /area/hallway/primary/firstdeck/port)
 "aQd" = (
 /obj/machinery/computer/security{
@@ -15117,7 +15117,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/firstdeck/elevator)
 "eYA" = (
-/turf/unsimulated/mask,
+/turf/simulated/floor/plating/eris/under,
 /area/quartermaster/storage)
 "eZG" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -15791,7 +15791,7 @@
 /area/rnd/xenobiology/xenoflora)
 "fFD" = (
 /obj/turbolift_map_holder/southern_cross/cargo,
-/turf/unsimulated/mask,
+/turf/simulated/floor/plating/eris/under,
 /area/quartermaster/storage)
 "fGi" = (
 /obj/effect/floor_decal/industrial/warning/full,
@@ -26824,7 +26824,7 @@
 /turf/simulated/wall/r_wall,
 /area/hallway/primary/firstdeck/starboard)
 "sbP" = (
-/turf/unsimulated/mask,
+/turf/simulated/floor/plating/eris/under,
 /area/hallway/primary/firstdeck/starboard)
 "sbU" = (
 /obj/structure/loot_pile/maint/technical,
@@ -31855,7 +31855,7 @@
 /area/teleporter/firstdeck)
 "xdS" = (
 /obj/turbolift_map_holder/southern_cross/center,
-/turf/unsimulated/mask,
+/turf/simulated/floor/plating/eris/under,
 /area/hallway/primary/firstdeck/elevator)
 "xeb" = (
 /obj/structure/table/bench/standard,
@@ -32272,7 +32272,7 @@
 /area/hallway/primary/firstdeck/starboard)
 "xIH" = (
 /obj/turbolift_map_holder/southern_cross/starboard,
-/turf/unsimulated/mask,
+/turf/simulated/floor/plating/eris/under,
 /area/hallway/primary/firstdeck/starboard)
 "xIL" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{

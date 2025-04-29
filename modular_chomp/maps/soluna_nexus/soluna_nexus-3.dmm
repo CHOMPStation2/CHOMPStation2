@@ -295,7 +295,7 @@
 /turf/simulated/floor/tiled,
 /area/hallway/Stairwell_Aft)
 "aaG" = (
-/turf/unsimulated/mask,
+/turf/simulated/open,
 /area/hallway/Stairwell_Aft)
 "aaH" = (
 /obj/machinery/light{
@@ -17883,7 +17883,7 @@
 /turf/space,
 /area/space)
 "foz" = (
-/turf/unsimulated/mask,
+/turf/simulated/open,
 /area/hallway/For_3_Deck_Stairwell)
 "foO" = (
 /obj/structure/cable/green{
@@ -19963,7 +19963,7 @@
 /turf/simulated/floor/plating,
 /area/maintenance/Deck3_Center_Star)
 "fXe" = (
-/turf/unsimulated/mask,
+/turf/simulated/open,
 /area/hallway/Port_3_Deck_Stairwell)
 "fXj" = (
 /obj/structure/cable/yellow{
@@ -59880,7 +59880,7 @@
 /turf/simulated/open,
 /area/hallway/Star_Breakroom)
 "twW" = (
-/turf/unsimulated/mask,
+/turf/simulated/open,
 /area/hallway/Star_3_Deck_Stairwell)
 "txl" = (
 /obj/machinery/power/port_gen/pacman,
@@ -73699,7 +73699,7 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/maintenance/Deck3_Dorms_StarCorridor1)
 "xPE" = (
-/turf/unsimulated/mask,
+/turf/simulated/open,
 /area/hallway/Central_3_Deck_Hall)
 "xPF" = (
 /obj/effect/catwalk_plated/techmaint,
