@@ -72,18 +72,6 @@ module.exports = (env = {}, argv) => {
       },
     },
     module: {
-      parser: {
-        css: {
-          url: {
-            filter: (url, resourcePath) => {
-              if (url.includes('.ttf')) {
-                return false;
-              }
-              return true;
-            },
-          },
-        },
-      },
       rules: [
         {
           test: /\.([tj]s(x)?|cjs)$/,
@@ -115,15 +103,13 @@ module.exports = (env = {}, argv) => {
               options: {
                 api: 'modern-compiler',
                 implementation: 'sass-embedded',
-                parser: {
-                  css: {
-                    url: {
-                      filter: (url, resourcePath) => {
-                        if (url.includes('.ttf')) {
-                          return false;
-                        }
-                        return true;
-                      },
+                css: {
+                  url: {
+                    filter: (url, resourcePath) => {
+                      if (url.includes('.ttf')) {
+                        return false;
+                      }
+                      return true;
                     },
                   },
                 },
