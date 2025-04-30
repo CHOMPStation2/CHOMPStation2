@@ -23,7 +23,7 @@
 
 /mob/living/verb/toggle_selfsurgery() //CHOMPedit, make it a inherent verb instead of a proc
 	set name = "Allow Self Surgery"
-	set desc = "Toggles the 'safeties' on self-surgery, allowing you to do so. This does not work on if you are a full body prosthetic." //CHOMPedit description addition.
+	set desc = "Toggles the 'safeties' on self-surgery, allowing you to do so.
 	set category = "Object"
 
 	allow_self_surgery = !allow_self_surgery
