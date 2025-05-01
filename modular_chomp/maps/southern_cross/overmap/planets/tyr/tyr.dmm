@@ -92,14 +92,14 @@
 /turf/simulated/floor/tiled/dark,
 /area/surface/tyr/eclipse_stronghold/sec)
 "as" = (
+/obj/effect/floor_decal/corner/purple/diagonal,
+/obj/machinery/door/airlock/silver,
+/turf/simulated/floor/tiled/old_tile/purple,
+/area/surface/tyr/eclipse_stronghold/science)
+"at" = (
 /obj/random/vendorsnack,
 /obj/effect/zone_divider,
 /turf/simulated/floor/tiled/dark,
-/area/surface/tyr/eclipse_stronghold/sec)
-"at" = (
-/obj/random/obstruction,
-/obj/effect/zone_divider,
-/turf/simulated/floor,
 /area/surface/tyr/eclipse_stronghold/sec)
 "au" = (
 /mob/living/simple_mob/humanoid/eclipse/solar/clockspear,
@@ -112,20 +112,25 @@
 /turf/simulated/floor/tiled/dark,
 /area/surface/tyr/eclipse_stronghold/sec)
 "aw" = (
+/obj/random/obstruction,
+/obj/effect/zone_divider,
+/turf/simulated/floor,
+/area/surface/tyr/eclipse_stronghold/sec)
+"ax" = (
+/turf/simulated/floor/carpet/bcarpet,
+/area/surface/tyr/eclipse_stronghold/science)
+"ay" = (
 /obj/machinery/light/small{
 	dir = 1
 	},
 /obj/effect/zone_divider,
 /turf/simulated/floor/concrete,
 /area/surface/tyr/eclipse_stronghold/sec)
-"ax" = (
-/turf/simulated/floor/carpet/bcarpet,
-/area/surface/tyr/eclipse_stronghold/science)
-"ay" = (
+"az" = (
 /obj/effect/zone_divider,
 /turf/simulated/floor,
 /area/surface/tyr/eclipse_stronghold/engineering)
-"az" = (
+"aA" = (
 /obj/effect/floor_decal/corner/yellow{
 	dir = 1
 	},
@@ -133,11 +138,6 @@
 /obj/effect/zone_divider,
 /turf/simulated/floor/tiled/techmaint,
 /area/surface/tyr/eclipse_stronghold/engineering)
-"aA" = (
-/obj/effect/floor_decal/corner/purple/diagonal,
-/obj/machinery/door/airlock/silver,
-/turf/simulated/floor/tiled/old_tile/purple,
-/area/surface/tyr/eclipse_stronghold/science)
 "aB" = (
 /obj/effect/floor_decal/corner/white/diagonal,
 /turf/simulated/floor/tiled/white,
@@ -22431,7 +22431,7 @@ Qp
 MW
 Qp
 Qp
-aA
+as
 fc
 jA
 uc
@@ -36873,11 +36873,11 @@ lz
 nA
 HP
 rD
-at
-at
-at
+aw
+aw
+aw
 rD
-as
+at
 ad
 Gf
 ar
@@ -47431,15 +47431,15 @@ em
 Eg
 mG
 mG
+aA
+Eg
+az
+az
+az
+az
 az
 Eg
 ay
-ay
-ay
-ay
-ay
-Eg
-aw
 dL
 PF
 dL
