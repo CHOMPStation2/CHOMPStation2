@@ -16,11 +16,22 @@
 	},
 /turf/simulated/floor/bmarble,
 /area/surface/tyr/eclipse_stronghold/science)
+"ad" = (
+/obj/effect/zone_divider,
+/turf/simulated/floor/tiled/dark,
+/area/surface/tyr/eclipse_stronghold/sec)
 "ae" = (
 /obj/structure/flora/tyr/flowers,
 /mob/living/simple_mob/animal/tyr/groundpitcher,
 /turf/simulated/floor/outdoors/desert_planet/deep_grass/tyr,
 /area/surface/tyr/south_caverns)
+"af" = (
+/obj/structure/bed/chair/backed_grey{
+	dir = 1
+	},
+/obj/effect/zone_divider,
+/turf/simulated/floor/tiled/dark,
+/area/surface/tyr/eclipse_stronghold/sec)
 "ag" = (
 /obj/effect/zone_divider,
 /turf/simulated/wall/r_concrete,
@@ -42,14 +53,53 @@
 /obj/random/obstruction,
 /turf/simulated/floor,
 /area/surface/tyr/eclipse_stronghold/science)
+"al" = (
+/obj/structure/table/steel,
+/obj/effect/zone_divider,
+/turf/simulated/floor/tiled/dark,
+/area/surface/tyr/eclipse_stronghold/sec)
+"am" = (
+/obj/structure/bed/chair/backed_grey,
+/obj/effect/zone_divider,
+/turf/simulated/floor/tiled/dark,
+/area/surface/tyr/eclipse_stronghold/sec)
 "an" = (
 /obj/effect/zone_divider,
 /turf/simulated/mineral/light/tyr,
 /area/surface/tyr/north_caverns)
+"ao" = (
+/obj/machinery/light/small{
+	dir = 1
+	},
+/obj/effect/zone_divider,
+/turf/simulated/floor/tiled/dark,
+/area/surface/tyr/eclipse_stronghold/sec)
+"ap" = (
+/obj/structure/table/steel,
+/obj/item/handcuffs/legcuffs,
+/obj/effect/zone_divider,
+/turf/simulated/floor/tiled/dark,
+/area/surface/tyr/eclipse_stronghold/sec)
 "aq" = (
 /obj/machinery/portable_atmospherics/hydroponics,
 /obj/effect/floor_decal/corner/lime/diagonal,
 /turf/simulated/floor/tiled/hydro,
+/area/surface/tyr/eclipse_stronghold/sec)
+"ar" = (
+/obj/structure/table/steel,
+/obj/item/handcuffs/legcuffs/bola,
+/obj/effect/zone_divider,
+/turf/simulated/floor/tiled/dark,
+/area/surface/tyr/eclipse_stronghold/sec)
+"as" = (
+/obj/random/vendorsnack,
+/obj/effect/zone_divider,
+/turf/simulated/floor/tiled/dark,
+/area/surface/tyr/eclipse_stronghold/sec)
+"at" = (
+/obj/random/obstruction,
+/obj/effect/zone_divider,
+/turf/simulated/floor,
 /area/surface/tyr/eclipse_stronghold/sec)
 "au" = (
 /mob/living/simple_mob/humanoid/eclipse/solar/clockspear,
@@ -61,9 +111,28 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/surface/tyr/eclipse_stronghold/sec)
+"aw" = (
+/obj/machinery/light/small{
+	dir = 1
+	},
+/obj/effect/zone_divider,
+/turf/simulated/floor/concrete,
+/area/surface/tyr/eclipse_stronghold/sec)
 "ax" = (
 /turf/simulated/floor/carpet/bcarpet,
 /area/surface/tyr/eclipse_stronghold/science)
+"ay" = (
+/obj/effect/zone_divider,
+/turf/simulated/floor,
+/area/surface/tyr/eclipse_stronghold/engineering)
+"az" = (
+/obj/effect/floor_decal/corner/yellow{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/lightorange,
+/obj/effect/zone_divider,
+/turf/simulated/floor/tiled/techmaint,
+/area/surface/tyr/eclipse_stronghold/engineering)
 "aB" = (
 /obj/effect/floor_decal/corner/white/diagonal,
 /turf/simulated/floor/tiled/white,
@@ -450,9 +519,6 @@
 "cN" = (
 /turf/simulated/wall/sandstone,
 /area/surface/tyr/south_caverns)
-"cP" = (
-/turf/simulated/floor/water/indoors,
-/area/surface/tyr/precursorruins/finale)
 "cQ" = (
 /obj/machinery/disposal/deliveryChute{
 	dir = 1
@@ -470,7 +536,10 @@
 /area/surface/tyr/south_caverns)
 "cY" = (
 /obj/effect/map_effect/interval/effect_emitter/smoke/shock,
-/turf/simulated/floor/water/deep/indoors,
+/turf/simulated/floor/water/deep/indoors{
+	nitrogen = 82.1472;
+	oxygen = 21.8366
+	},
 /area/surface/tyr/precursorruins/finale)
 "db" = (
 /obj/structure/inflatable/door,
@@ -1048,10 +1117,6 @@
 /mob/living/simple_mob/humanoid/eclipse/solar/snipertesh,
 /turf/simulated/floor/tiled/white,
 /area/surface/tyr/eclipse_stronghold/medical)
-"fN" = (
-/obj/effect/zone_divider,
-/turf/simulated/floor/water/indoors,
-/area/surface/tyr/precursorruins/finale)
 "fO" = (
 /obj/structure/table/standard,
 /obj/item/universal_translator,
@@ -1119,10 +1184,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/surface/tyr/eclipse_stronghold/medical)
-"gc" = (
-/obj/structure/table/darkglass,
-/turf/simulated/floor/water/indoors,
-/area/surface/tyr/precursorruins/finale)
 "ge" = (
 /obj/structure/mob_spawner/ant_hill,
 /obj/effect/zone_divider,
@@ -1367,7 +1428,7 @@
 /turf/simulated/floor/outdoors/desert_planet/gravel/tyr,
 /area/surface/tyr/south_caverns)
 "hd" = (
-/turf/simulated/floor/water/indoors,
+/turf/space,
 /area/surface/tyr/eclipse_stronghold/science)
 "he" = (
 /obj/structure/disposalpipe/segment{
@@ -6724,6 +6785,7 @@
 "Gf" = (
 /obj/structure/bed/chair/backed_grey,
 /mob/living/simple_mob/humanoid/eclipse/solar/clocksgun,
+/obj/effect/zone_divider,
 /turf/simulated/floor/tiled/dark,
 /area/surface/tyr/eclipse_stronghold/sec)
 "Gg" = (
@@ -6940,6 +7002,7 @@
 	dir = 1
 	},
 /mob/living/simple_mob/humanoid/eclipse/lunar/silvernoodle,
+/obj/effect/zone_divider,
 /turf/simulated/floor/tiled/dark,
 /area/surface/tyr/eclipse_stronghold/sec)
 "HP" = (
@@ -7094,7 +7157,7 @@
 /area/surface/tyr/eclipse_stronghold/sec)
 "IT" = (
 /obj/random/mob/fish,
-/turf/simulated/floor/water/indoors,
+/turf/space,
 /area/surface/tyr/eclipse_stronghold/science)
 "IY" = (
 /obj/structure/closet/toolcloset,
@@ -36805,26 +36868,26 @@ lz
 nA
 HP
 rD
-jU
-jU
-jU
-Sq
-VJ
-Xj
+at
+at
+at
+rD
+as
+ad
 Gf
-ta
-ml
+ar
+ap
 HL
-Xj
-Sq
-av
-Xj
-IZ
-Hx
-SM
-Xj
-Xj
-Sq
+ad
+rD
+ao
+ad
+am
+al
+af
+ad
+ad
+rD
 an
 an
 an
@@ -43148,7 +43211,7 @@ Mz
 Mz
 Th
 bF
-cP
+Th
 Mz
 Mz
 Mz
@@ -43405,7 +43468,7 @@ Th
 Mz
 Mz
 Th
-cP
+bF
 cY
 Mz
 Mz
@@ -43664,7 +43727,7 @@ Mz
 Mz
 Th
 bF
-cP
+Th
 Mz
 Mz
 Th
@@ -44167,7 +44230,7 @@ hU
 hU
 Mz
 Mz
-cP
+Th
 Th
 Th
 Th
@@ -44223,7 +44286,7 @@ Th
 Th
 Th
 Th
-cP
+Th
 Th
 Th
 Th
@@ -44426,7 +44489,6 @@ Mz
 Mz
 Mz
 cY
-cP
 bF
 bF
 bF
@@ -44434,7 +44496,8 @@ bF
 bF
 bF
 bF
-cP
+bF
+bF
 bF
 bF
 bF
@@ -44480,9 +44543,9 @@ Th
 bF
 bF
 bF
-cP
+bF
 cY
-cP
+bF
 bF
 bF
 bF
@@ -44683,7 +44746,7 @@ Mz
 Mz
 Mz
 Mz
-cP
+Th
 bF
 Th
 Th
@@ -44691,9 +44754,9 @@ Th
 Th
 Th
 Th
-cP
+Th
 cY
-cP
+Th
 Th
 bF
 Th
@@ -44739,12 +44802,12 @@ bF
 Th
 Th
 Th
-cP
 Th
 Th
 Th
 Th
-cP
+Th
+Th
 bF
 Th
 Mz
@@ -44980,9 +45043,9 @@ Mz
 Mz
 Th
 Th
-cP
+Th
 cY
-cP
+Th
 Th
 fW
 Mz
@@ -45003,7 +45066,7 @@ Mz
 Mz
 Mz
 cY
-cP
+bF
 Th
 Mz
 "}
@@ -45200,7 +45263,7 @@ Mz
 Mz
 Mz
 Th
-cP
+bF
 Th
 Mz
 Mz
@@ -45239,7 +45302,7 @@ Mz
 Th
 bF
 bF
-cP
+bF
 bF
 bF
 Mz
@@ -45260,7 +45323,7 @@ Mz
 Mz
 Mz
 Mz
-cP
+Th
 bF
 Th
 Mz
@@ -45457,19 +45520,19 @@ Mz
 Mz
 Mz
 Th
-cP
+Th
 cY
-cP
 Th
 Th
 Th
-cP
+Th
+Th
 cY
-cP
+Th
 Mz
 Mz
 Th
-cP
+bF
 Th
 Mz
 Mz
@@ -45510,7 +45573,7 @@ Mz
 Mz
 Th
 bF
-cP
+Th
 Mz
 Mz
 Th
@@ -45716,19 +45779,19 @@ Mz
 Mz
 Th
 bF
-cP
-ct
-bF
-bF
 bF
 ct
-cP
+bF
+bF
+bF
+ct
+bF
 Th
 Mz
 Mz
-cP
+Th
 cY
-cP
+Th
 Mz
 Mz
 Mz
@@ -45767,7 +45830,7 @@ Mz
 Mz
 Mz
 Th
-cP
+bF
 cY
 Mz
 Mz
@@ -45985,7 +46048,7 @@ Th
 Mz
 Mz
 Th
-cP
+bF
 Th
 Mz
 Mz
@@ -46026,7 +46089,7 @@ Mz
 Mz
 Th
 bF
-cP
+Th
 Mz
 Mz
 Th
@@ -46259,7 +46322,7 @@ Th
 Th
 bF
 Th
-cP
+Th
 Th
 Th
 Th
@@ -46276,9 +46339,9 @@ Th
 Th
 Th
 Th
-cP
+Th
 cY
-cP
+Th
 Th
 Th
 Th
@@ -46492,12 +46555,12 @@ Th
 Th
 bF
 bF
-cP
 bF
 bF
 bF
 bF
-cP
+bF
+Th
 Mz
 Mz
 Th
@@ -46516,9 +46579,8 @@ bF
 bF
 bF
 bF
-cP
+bF
 cY
-cP
 bF
 bF
 bF
@@ -46527,7 +46589,6 @@ bF
 bF
 bF
 bF
-cP
 bF
 bF
 bF
@@ -46535,7 +46596,9 @@ bF
 bF
 bF
 bF
-cP
+bF
+bF
+bF
 bF
 bF
 bF
@@ -46749,12 +46812,12 @@ Mz
 Mz
 Th
 bF
-cP
+bF
 cY
-cP
 bF
 bF
-cP
+bF
+bF
 cY
 Mz
 Mz
@@ -46775,7 +46838,7 @@ Th
 Th
 Th
 Th
-cP
+Th
 Th
 Th
 Th
@@ -46784,9 +46847,9 @@ bF
 Th
 Th
 Th
-cP
+Th
 cY
-cP
+Th
 Th
 Th
 Th
@@ -47008,12 +47071,12 @@ Mz
 Th
 Th
 hC
-cP
+bF
 bF
 bF
 hC
 bF
-cP
+Th
 Mz
 Mz
 Th
@@ -47038,7 +47101,7 @@ Mz
 Mz
 Mz
 Th
-cP
+bF
 Th
 Mz
 Mz
@@ -47295,9 +47358,9 @@ Mz
 Mz
 Mz
 Mz
-cP
+Th
 cY
-cP
+Th
 Mz
 Mz
 Mz
@@ -47363,35 +47426,35 @@ em
 Eg
 mG
 mG
-MY
-fR
-Qa
-Qa
-Qa
-Qa
-Qa
-fR
-Vu
-yS
-Iu
-yS
-yS
-yS
-Iu
-yS
-yS
-Iu
-yS
-yS
-Iu
-yS
-yS
-Iu
-yS
-yS
-Iu
-yS
-yS
+az
+Eg
+ay
+ay
+ay
+ay
+ay
+Eg
+aw
+dL
+PF
+dL
+dL
+dL
+PF
+dL
+dL
+PF
+dL
+dL
+PF
+dL
+dL
+PF
+dL
+dL
+PF
+dL
+dL
 PF
 dL
 dL
@@ -47534,46 +47597,46 @@ aa
 aa
 co
 fG
-fN
-aa
-aa
-co
-co
-co
-co
-co
-co
-co
-co
-co
-co
-co
-co
-co
-co
-co
-co
-co
-fN
-co
-co
-co
-co
-co
-co
-co
-co
-co
-co
-co
-co
-co
-co
 co
 aa
 aa
 co
-fN
+co
+co
+co
+co
+co
+co
+co
+co
+co
+co
+co
+co
+co
+co
+co
+co
+fG
+co
+co
+co
+co
+co
+co
+co
+co
+co
+co
+co
+co
+co
+co
+co
+aa
+aa
+co
+fG
 co
 aa
 aa
@@ -47791,17 +47854,12 @@ Mz
 Mz
 Mz
 Th
-cP
+bF
 cY
 Mz
 Mz
 Th
 ct
-gc
-bF
-bF
-bF
-ct
 ct
 bF
 bF
@@ -47811,6 +47869,11 @@ ct
 bF
 bF
 bF
+ct
+ct
+bF
+bF
+bF
 bF
 bF
 bF
@@ -47818,7 +47881,7 @@ bF
 bF
 bF
 ct
-gc
+ct
 bF
 bF
 ct
@@ -47830,9 +47893,9 @@ ct
 Th
 Mz
 Mz
-cP
+Th
 cY
-cP
+Th
 Mz
 Mz
 Mz
@@ -48050,19 +48113,19 @@ Mz
 Mz
 Th
 bF
-cP
+Th
 Mz
 Mz
 Th
-cP
+bF
 cY
-cP
 bF
 bF
 bF
 bF
 bF
-cP
+bF
+bF
 bF
 bF
 bF
@@ -48075,9 +48138,9 @@ Th
 Th
 Th
 Th
-cP
+bF
 cY
-cP
+bF
 bF
 bF
 bF
@@ -48089,7 +48152,7 @@ Th
 Mz
 Mz
 Th
-cP
+bF
 Th
 Mz
 Mz
@@ -48313,15 +48376,15 @@ Mz
 Mz
 Th
 ct
-gc
+ct
 bF
 bF
 bF
 ct
 ct
-cP
+bF
 cY
-cP
+bF
 ct
 ct
 Th
@@ -48334,7 +48397,7 @@ Mz
 Mz
 Th
 ct
-gc
+ct
 bF
 bF
 ct
@@ -48578,7 +48641,7 @@ Th
 Th
 Th
 Th
-cP
+Th
 Th
 Th
 Th
@@ -48822,7 +48885,7 @@ bF
 bF
 Mz
 Mz
-cP
+Th
 bF
 Th
 Mz
@@ -48845,7 +48908,7 @@ Mz
 Mz
 Th
 bF
-cP
+Th
 Mz
 Mz
 Mz
@@ -49081,7 +49144,7 @@ bF
 Mz
 Mz
 cY
-cP
+bF
 Th
 Mz
 Mz
@@ -49102,7 +49165,7 @@ Mz
 Mz
 Mz
 Th
-cP
+bF
 cY
 Mz
 Mz
@@ -49338,7 +49401,7 @@ bF
 bF
 Mz
 Mz
-cP
+Th
 bF
 Th
 Mz
@@ -49346,9 +49409,9 @@ Mz
 Th
 Th
 Th
-cP
+Th
 cY
-cP
+Th
 Th
 Th
 Th
@@ -49361,7 +49424,7 @@ Mz
 Mz
 Th
 bF
-cP
+Th
 Mz
 Mz
 Th
@@ -49605,7 +49668,7 @@ Th
 ct
 ct
 bF
-cP
+bF
 bF
 ct
 ct
@@ -49868,7 +49931,7 @@ bF
 bF
 bF
 bF
-cP
+bF
 bF
 bF
 bF
@@ -49887,7 +49950,7 @@ bF
 bF
 bF
 bF
-cP
+bF
 bF
 bF
 bF
@@ -50125,28 +50188,28 @@ bF
 bF
 ct
 ct
-cP
+bF
 cY
-cP
-ct
-ct
-bF
-bF
-bF
-bF
-bF
-bF
-bF
-bF
 bF
 ct
 ct
 bF
 bF
+bF
+bF
+bF
+bF
+bF
+bF
+bF
 ct
-gc
+ct
+bF
+bF
+ct
+ct
 cY
-cP
+bF
 ct
 ct
 Th
@@ -50384,7 +50447,6 @@ Th
 Th
 Th
 Th
-cP
 Th
 Th
 Th
@@ -50403,7 +50465,8 @@ Th
 Th
 Th
 Th
-cP
+Th
+Th
 Th
 Th
 Th
@@ -54889,7 +54952,7 @@ Na
 Na
 Na
 if
-Zy
+an
 dN
 dZ
 dZ
@@ -55147,7 +55210,7 @@ Na
 Na
 Na
 if
-Zy
+an
 dN
 dZ
 dZ
@@ -55405,7 +55468,7 @@ Na
 Na
 Na
 if
-Zy
+an
 dN
 dN
 dZ
@@ -55663,7 +55726,7 @@ Na
 Na
 Na
 if
-Zy
+an
 dN
 dN
 dZ
@@ -55921,7 +55984,7 @@ if
 if
 if
 if
-Zy
+an
 dN
 dN
 dZ
@@ -56179,7 +56242,7 @@ Zy
 Zy
 Zy
 Zy
-Zy
+an
 dN
 dN
 dZ
@@ -56437,7 +56500,7 @@ Zy
 Zy
 Zy
 Zy
-Zy
+an
 dN
 dN
 dZ
@@ -56695,7 +56758,7 @@ if
 if
 if
 Zy
-Zy
+an
 dN
 dN
 dN
@@ -56953,7 +57016,7 @@ iH
 iH
 if
 Zy
-Zy
+an
 dN
 dN
 dN
