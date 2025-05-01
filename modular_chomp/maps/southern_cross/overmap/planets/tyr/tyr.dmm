@@ -133,6 +133,11 @@
 /obj/effect/zone_divider,
 /turf/simulated/floor/tiled/techmaint,
 /area/surface/tyr/eclipse_stronghold/engineering)
+"aA" = (
+/obj/effect/floor_decal/corner/purple/diagonal,
+/obj/machinery/door/airlock/silver,
+/turf/simulated/floor/tiled/old_tile/purple,
+/area/surface/tyr/eclipse_stronghold/science)
 "aB" = (
 /obj/effect/floor_decal/corner/white/diagonal,
 /turf/simulated/floor/tiled/white,
@@ -1428,7 +1433,7 @@
 /turf/simulated/floor/outdoors/desert_planet/gravel/tyr,
 /area/surface/tyr/south_caverns)
 "hd" = (
-/turf/space,
+/turf/simulated/floor/water/pool/turfpack/station,
 /area/surface/tyr/eclipse_stronghold/science)
 "he" = (
 /obj/structure/disposalpipe/segment{
@@ -7157,7 +7162,7 @@
 /area/surface/tyr/eclipse_stronghold/sec)
 "IT" = (
 /obj/random/mob/fish,
-/turf/space,
+/turf/simulated/floor/water/pool/turfpack/station,
 /area/surface/tyr/eclipse_stronghold/science)
 "IY" = (
 /obj/structure/closet/toolcloset,
@@ -22426,7 +22431,7 @@ Qp
 MW
 Qp
 Qp
-Qp
+aA
 fc
 jA
 uc
