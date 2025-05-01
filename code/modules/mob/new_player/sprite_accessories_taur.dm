@@ -1246,7 +1246,7 @@
 	fullness_icons = 3
 	ani_state = "bigleggy_stanced"
 	extra_overlay_w = "bigleggy_markings_stanced"
-	clip_mask_state = null
+	clip_mask_state = null //ChompAdd - No clip mask for big legs
 
 /datum/sprite_accessory/tail/taur/bigleggy/canine
 	name = "Big Leggies (Canine Tail)"
