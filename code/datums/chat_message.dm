@@ -107,7 +107,7 @@ var/list/runechat_image_cache = list()
  */
 /datum/chatmessage/proc/generate_image(text, atom/target, mob/owner, list/extra_classes, lifespan)
 
-	if(!target || !owner)
+	if(!target || !owner || !owner.client) //CHOMPEdit
 		qdel(src)
 		return
 
