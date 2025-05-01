@@ -1,0 +1,5 @@
+2025-05-01:
+  CHOMPStation2StaffMirrorBot:
+  - rscadd: Wires UI is now extra pretty
+  TheCaramelion:
+  - bugfix: fixed TGUI not compiling
