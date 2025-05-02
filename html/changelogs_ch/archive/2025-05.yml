@@ -3,3 +3,14 @@
   - rscadd: Wires UI is now extra pretty
   TheCaramelion:
   - bugfix: fixed TGUI not compiling
+2025-05-02:
+  CHOMPStation2StaffMirrorBot:
+  - rscadd: laser5 sound file
+  - qol: 'bullet_pellet fire_sound to laser5 from Laser4
+
+      :cl:'
+  - bugfix: You cant self surgery without NT's permission anymore.
+  - bugfix: TGUI not compiling
+  - bugfix: cuffing runtime flood on invalid targets
+  FluffMedic:
+  - bugfix: tyr active edges fixed

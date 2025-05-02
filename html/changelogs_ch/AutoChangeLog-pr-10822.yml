@@ -1,5 +1,0 @@
-author: "CHOMPStation2StaffMirrorBot"
-delete-after: True
-changes:
-  - rscadd: "laser5 sound file"
-  - qol: "bullet_pellet fire_sound to laser5 from Laser4\n:cl:"
