@@ -88,7 +88,6 @@
 	vision_range = 7
 	conserve_ammo = TRUE
 	intelligence_level = AI_SMART
-	use_astar = TRUE
 	pointblank = TRUE
 	firing_lanes = TRUE
 	call_distance = 2
@@ -97,6 +96,9 @@
 	var/multiplayer_threshold = 3
 
 /datum/ai_holder/simple_mob/intentional/eclipse/on_engagement(atom/A)
+	if(prob(20))
+		step_rand(holder)
+		holder.face_atom(A)
 	if(get_dist(holder, A) <= closest_desired_distance)
 		holder.IMove(get_step_away(holder, A, closest_desired_distance))
 	else if(get_dist(holder, A) > closest_desired_distance)
@@ -677,8 +679,9 @@
 			addtimer(CALLBACK(src, PROC_REF(special_projectile), A), 3.5 SECONDS, TIMER_DELETE_ME)
 		else
 			visible_message(span_danger("The [src]'s gauntlet glows silver!"))
+			Beam(A, icon_state = "purple_lighting", time = 3 SECONDS, maxdistance = 7)
 			if(isliving(A))
-				addtimer(CALLBACK(src, PROC_REF(gravity_pull), A), 3 SECOND, TIMER_DELETE_ME)
+				addtimer(CALLBACK(src, PROC_REF(gravity_pull), A), 3 SECONDS, TIMER_DELETE_ME)
 
 //The Precursor intative big folks
 /mob/living/simple_mob/humanoid/eclipse/lunar/titanhunter //lunar melee unit
