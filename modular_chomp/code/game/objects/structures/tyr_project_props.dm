@@ -333,6 +333,12 @@
 	catalogue_data = list(/datum/category_item/catalogue/technology/base_neon_anomalous)
 	icon_state = "engi_disc"
 
+/obj/item/prop/tyrlore/neonsci
+	name = "data disc"
+	desc = "A disc for storing data."
+	catalogue_data = list(/datum/category_item/catalogue/technology/base_neon_planetary_report)
+	icon_state = "sci_disc"
+
 /datum/category_item/catalogue/anomalous/tyr_red
 	name = "Precursor Object - Tyr Data Disc Red"
 	desc = "The following data has been corrupted. \
@@ -419,4 +425,20 @@
 	Proabaly something to do with this valley being a pockect of cool in the heat."
 	value = CATALOGUER_REWARD_HARD
 
+/datum/category_item/catalogue/technology/base_neon_planetary_report
+	name = "Anomalous Conditions"
+	desc = "Planteray Objects Of Importance\
+	<br><br>\
+	Desgination: ALRE - Tyranical\
+	Resources: Precursor Tech, Potential Biofuels and Weapons\
+	<br><br>\
+	Desgination:CHRL - Sivian\
+	Resources: Precursor tech, rifts within space, the void acess\
+	<br><br>\
+	Desgination:AMRL - Wasteland\
+	Resources: Abnormal amounts of radiations, crystaline fuel, crystaline beasts\
+	<br><br>\
+	Desgination: CMRE - Citadel. \
+	Resources: Recruitment"
+	value = CATALOGUER_REWARD_HARD
 
