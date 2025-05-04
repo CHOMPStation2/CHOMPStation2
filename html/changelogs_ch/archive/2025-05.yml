@@ -14,3 +14,8 @@
   - bugfix: cuffing runtime flood on invalid targets
   FluffMedic:
   - bugfix: tyr active edges fixed
+2025-05-04:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: Wires actually work on things other than airlocks again
+  FluffMedic:
+  - rscadd: Tyr Scientist drops a funny lore disc now
