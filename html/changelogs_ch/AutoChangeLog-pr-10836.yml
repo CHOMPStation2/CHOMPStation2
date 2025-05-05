@@ -1,0 +1,4 @@
+author: "CHOMPStation2StaffMirrorBot"
+delete-after: True
+changes:
+  - bugfix: "secborg dullahans resting sprites not head bobbing properly. (misaligned.)"
