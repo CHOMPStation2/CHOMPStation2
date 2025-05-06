@@ -1138,6 +1138,22 @@
 	in_throw_mode = 1
 	if(throw_icon && !issilicon(src)) // Silicon use this for something else. Do not overwrite their HUD icon
 		throw_icon.icon_state = "act_throw_on"
+<<<<<<< HEAD
+=======
+
+/mob/verb/spacebar_throw_on()
+	set name = ".throwon"
+	set hidden = TRUE
+	set instant = TRUE
+	throw_mode_on()
+
+/mob/verb/spacebar_throw_off()
+	set name = ".throwoff"
+	set hidden = TRUE
+	set instant = TRUE
+	throw_mode_off()
+
+>>>>>>> f0444ef8d8 (Fix a handful of bugs introduced in VOREStation/VOREStation#17515 (#17669))
 /mob/proc/isSynthetic()
 	return 0
 
