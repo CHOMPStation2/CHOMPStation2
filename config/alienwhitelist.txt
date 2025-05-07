@@ -48,6 +48,14 @@ storesund97 - Protean
 sharplight - Protean
 tastypred - Black-Eyed Shadekin
 tastypred - Xenochimera
+<<<<<<< HEAD
+=======
+terrestris - Common Skrellian
+terrestris - Vox
+thedavestdave - Protean
+theoun - Hanner
+thexdkidoflol - Xenochimera
+>>>>>>> d9804ec9e7 (Fix thexdkidoflol's xenochimera whitelist (#17672))
 timidvi - Diona
 varonis - Xenochimera
 verkister - Xenochimera
