@@ -1,7 +1,3 @@
-
-
-
-
 /obj/item/clothing/glasses/omnihud/med/prescription
 	name = "\improper AR-M glasses (pr)"
 	prescription = 1
@@ -21,3 +17,4 @@
 /obj/item/clothing/glasses/omnihud/all/prescription
 	name = "\improper AR-B glasses (pr)"
 	prescription = 1
+
