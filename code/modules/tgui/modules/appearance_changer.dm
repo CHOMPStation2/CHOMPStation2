@@ -767,13 +767,11 @@
 	data["digitigrade"] = owner.digitigrade
 	data["blood_reagent"] = owner.dna.blood_reagents
 	data["blood_color"] = owner.dna.blood_color
-	// CHOMPEnable Start
 	data["species_sound"] = owner.species.species_sounds //TODO: RAISE UP FROM CHOMP
-	// CHOMPEnable End
 	// Are these needed? It seems to be only used if above is unset??
-	//data["species_sounds_gendered"] = owner.species.gender_specific_species_sounds
-	//data["species_sounds_female"] = owner.species.species_sounds_female
-	//data["species_sounds_male"] = owner.species.species_sounds_male
+	data["species_sounds_gendered"] = owner.species.gender_specific_species_sounds
+	data["species_sounds_female"] = owner.species.species_sounds_female
+	data["species_sounds_male"] = owner.species.species_sounds_male
 	// flavor
 	if(!owner.flavor_texts.len)
 		owner.flavor_texts["general"] = ""
