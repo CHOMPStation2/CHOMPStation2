@@ -382,3 +382,9 @@
 	mappath = "modular_chomp/maps/submaps/shelters/secondlifebar-19x25.dmm"
 	name = "Second Life Bar"
 	description = "A bar for all your hedonistics needs, only the sky is the limit~"
+
+/datum/map_template/shelter/superpose/RipperDocPod
+	shelter_id = "RipperDocPod"
+	mappath = "modular_chomp/maps/submaps/shelters/ripperdocpod-12x15.dmm"
+	name = "Ripper Doc"
+	description = "A small dubiously legal surgical site for all your cybernetic needs, may contain some illegal items."

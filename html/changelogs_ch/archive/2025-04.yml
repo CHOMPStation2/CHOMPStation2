@@ -367,3 +367,20 @@
   - maptweak: Tyr Precursor ruins is altered, and a new
   tacoguy7765093:
   - bugfix: Fixes science protolathe being too restricted.
+2025-04-29:
+  CHOMPStation2StaffMirrorBot:
+  - rscadd: Added new lobby screen and new player experience.
+  - bugfix: Title screens work better
+  Kashargul:
+  - bugfix: fast eater not being custom
+  tacoguy7765093:
+  - rscadd: Added a new outsider pod called the RipperDocPod for all your cyberpunk
+      needs.
+2025-04-30:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: Loadout items no longer disappear during migrations
+  - code_imp: tgui-core 3.1.3
+  - code_imp: Adjustment on self surgery proc to allow synthetics to commit self surgery.
+  - rscadd: Wearing specific types of footwear preserves barefoot stepping sounds
+  - bugfix: Lobby screen is less colorbandy
+  - bugfix: fixed recyclers fucking up every button ever in tgui

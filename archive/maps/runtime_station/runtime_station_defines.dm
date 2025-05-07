@@ -5,8 +5,7 @@
 	full_name = "Southern Cross"
 	path = "modular_chomp/maps/runtime/runtime_station"
 
-	lobby_icon = 'icons/misc/splash_screen.dmi'	//CHOMPStation Edit
-	lobby_screens = list() //CHOMPStation Edit - CHOMPStation image
+	lobby_screens = list('html/lobby/logo2.gif') // CHOMPEdit
 	id_hud_icons = 'icons/mob/hud_jobs_vr.dmi'	//CHOMPStation Edit - Job icons for off-duty/exploration
 
 	zlevel_datum_type = /datum/map_z_level/runtime_station

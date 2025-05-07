@@ -86,7 +86,8 @@
 		/obj/item/prop/alien/phasecoil = 60,
 		/obj/item/circuitboard/mecha/durand/peripherals = 60,
 		/obj/item/bluespace_harpoon = 10,
-		/obj/item/bone/skull = 100
+		/obj/item/bone/skull = 100,
+		/obj/item/prop/tyrlore/neonsci = 100
 			)
 
 	var/obj/item/shield_projector/shield1 = null
