@@ -31,8 +31,24 @@ oreganovulgaris - Xenochimera
 paradoxspace - Xenochimera
 pearlprophet - Protean
 phoenixx0 - Vox
+<<<<<<< HEAD
 rapidvalj - Vox
 rapidvalj - Common Skrellian
+=======
+pontifexminimus - Black-Eyed Shadekin
+pontifexminimus - Protean
+pontifexminimus - Xenochimera
+pontifexminimus - Hanner
+pugly43 - Protean
+qrocakes - Black-Eyed Shadekin
+radiantaurora - Protean
+rainbyplays - Protean
+ramomisama - Protean
+residentcody - Black-Eyed Shadekin
+residentcody - Protean
+residentcody - Gamma Replicant
+revolvereloise - Protean
+>>>>>>> cd32fbdcc9 (Replicant whitelist (#17678))
 rikaru19xjenkins - Xenochimera
 rixunie - Diona
 rykkastormheart - Xenochimera
