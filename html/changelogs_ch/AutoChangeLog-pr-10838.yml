@@ -1,0 +1,6 @@
+author: "CHOMPStation2StaffMirrorBot"
+delete-after: True
+changes:
+  - bugfix: "Fixes throw passing (I didn't even know this was a thing)"
+  - bugfix: "Fix spacebar throwing"
+  - bugfix: "Fix appearance changer menu lacking data for species sounds"
