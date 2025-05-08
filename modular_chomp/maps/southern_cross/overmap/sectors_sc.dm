@@ -90,8 +90,8 @@ GLOBAL_LIST_EMPTY(station_waypoints) //Create global list for station waypoints,
 	GLOB.station_waypoints += src
 
 /obj/effect/overmap/visitable/sector/Southern_Cross/Destroy()
-	. = ..()
 	GLOB.station_waypoints -= src
+	. = ..()
 
 /obj/effect/overmap/visitable/planet/Sif/Initialize(mapload)
 	. = ..()
