@@ -27,21 +27,17 @@
 /turf/simulated/wall/titanium,
 /area/submap/cave/SupplyDrop1)
 "h" = (
-/obj/structure/closet/crate,
-/obj/item/gun/energy/stunrevolver,
-/obj/item/gun/energy/stunrevolver,
 /obj/item/storage/box/flare,
 /obj/item/stack/marker_beacon/ten,
 /obj/item/cell/device/weapon,
 /obj/item/cell/device/weapon,
-/obj/item/trash/tastybread,
-/obj/item/trash/tastybread,
-/obj/item/trash/sosjerky,
-/obj/item/trash/sosjerky,
-/obj/item/trash/liquidfood,
-/obj/item/trash/liquidfood,
-/obj/item/flame/lighter/random,
 /obj/item/gps,
+/obj/item/gun/energy/locked/phasegun,
+/obj/item/gun/energy/locked/phasegun,
+/obj/item/storage/firstaid/adv,
+/obj/item/storage/firstaid/regular,
+/obj/effect/landmark/loot_spawn,
+/obj/structure/closet/crate/mimic/cointoss,
 /turf/simulated/floor/reinforced,
 /area/submap/cave/SupplyDrop1)
 "i" = (
