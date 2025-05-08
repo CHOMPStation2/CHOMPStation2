@@ -69,8 +69,12 @@
 	switch(mode)
 		if(SYRINGE_CAPPED)
 			mode = SYRINGE_DRAW
+<<<<<<< HEAD
 			// to_chat(user,span_notice("You uncap the syringe."))
 			balloon_alert(user, "[src] uncapped") // CHOMPEdit - Changed to balloon_alert
+=======
+			balloon_alert(user, "[src] uncapped")
+>>>>>>> 78c71907e9 (Balloon Alerts (#17540))
 		if(SYRINGE_DRAW)
 			mode = SYRINGE_INJECT
 		if(SYRINGE_INJECT)
@@ -308,15 +312,23 @@
 
 			return
 
+<<<<<<< HEAD
 		// user.visible_message(span_danger("[user] stabs [target] in \the [hit_area] with [src.name]!"))
 		balloon_alert_visible("stabs [target] in \the [hit_area] with [src.name]!") // CHOMPEdit - Changed to balloon alert
+=======
+		balloon_alert_visible("stabs [target] in \the [hit_area] with [src.name]!")
+>>>>>>> 78c71907e9 (Balloon Alerts (#17540))
 
 		if(affecting.take_damage(3))
 			H.UpdateDamageIcon()
 
 	else
+<<<<<<< HEAD
 		// user.visible_message(span_danger("[user] stabs [target] with [src.name]!"))
 		balloon_alert_visible("stabs [user] in \the [target] with [src.name]!") // CHOMPEdit - Changed to balloon alert
+=======
+		balloon_alert_visible("stabs [user] in \the [target] with [src.name]!")
+>>>>>>> 78c71907e9 (Balloon Alerts (#17540))
 		target.take_organ_damage(3)// 7 is the same as crowbar punch
 
 
