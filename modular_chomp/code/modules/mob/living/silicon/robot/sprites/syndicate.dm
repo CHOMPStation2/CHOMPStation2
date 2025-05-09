@@ -13,7 +13,6 @@
 	module_type = list("Protector", "Mechanist", "Combat Medic")
 	sprite_hud_icon_state = "malf"
 
-/datum/robot_sprite/dogborg/syndie/smolraptor
 	name = "Small Raptor"
 	sprite_icon_state = "smolraptor"
 	has_eye_light_sprites = TRUE

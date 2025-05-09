@@ -255,11 +255,11 @@
 	has_eye_light_sprites = TRUE
 	has_dead_sprite_overlay = FALSE
 
-/datum/robot_sprite/dogborg/smolraptorjanitorsprite
-	sprite_icon = 'icons/mob/robot/smallraptors/smolraptor_jani.dmi'
+/datum/robot_sprite/dogborg/janitor/smolraptor
+	sprite_icon = 'icons/mob/robot/smallraptors/smolraptor_serv.dmi'
 	module_type = "Janitor"
 	name = "Small Raptor"
-	sprite_icon_state = "smolraptor"
+	sprite_icon_state = "smolraptor_alt"
 	has_dead_sprite_overlay = FALSE
 	has_eye_light_sprites = TRUE
 	has_vore_belly_sprites = TRUE

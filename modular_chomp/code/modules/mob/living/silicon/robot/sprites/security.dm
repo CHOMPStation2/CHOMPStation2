@@ -34,16 +34,11 @@
 /datum/robot_sprite/dogborg/security/smolraptor
 	sprite_icon = 'modular_chomp/icons/mob/smallraptors/smolraptor_sec.dmi'
 
-/datum/robot_sprite/dogborg/security/smolraptor/sprite
 	name = "Small Raptor"
 	sprite_icon_state = "smolraptor"
 	has_eye_light_sprites = TRUE
 	has_vore_belly_sprites = TRUE
 	rest_sprite_options = list("Default", "Sit")
 
-/datum/robot_sprite/dogborg/security/smolraptor/altsprite
-	name = "Small Raptor"
+/datum/robot_sprite/dogborg/security/smolraptor/alt
 	sprite_icon_state = "smolraptor_alt"
-	has_eye_light_sprites = TRUE
-	has_vore_belly_sprites = TRUE
-	rest_sprite_options = list("Default", "Sit")

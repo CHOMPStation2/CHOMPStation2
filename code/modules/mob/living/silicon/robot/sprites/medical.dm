@@ -473,3 +473,6 @@
 	has_eye_light_sprites = TRUE
 	has_vore_belly_sprites = TRUE
 	rest_sprite_options = list("Default", "Sit")
+
+/datum/robot_sprite/dogborg/crisis/smolraptor/alt
+	sprite_icon_state = "smolraptor_alt"

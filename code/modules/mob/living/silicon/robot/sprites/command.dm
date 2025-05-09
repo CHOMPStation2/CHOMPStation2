@@ -109,7 +109,7 @@
 	rest_sprite_options = list("Default", "Sit")
 	icon_x = 32
 
-/datum/robot_sprite/dogborg/command/smolraptorcommand
+/datum/robot_sprite/dogborg/command/smolraptor
 	name = "Small Raptor"
 	sprite_icon = 'icons/mob/robot/smallraptors/smolraptor_cc.dmi'
 	sprite_icon_state = "smolraptor"
