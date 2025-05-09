@@ -40,32 +40,20 @@
 /datum/surgery_step/brainstem/mend_vessels/begin_step(mob/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	user.visible_message(span_filter_notice("[user] starts to mend the blood vessels on [target]'s brainstem with \the [tool]."), \
 	span_filter_notice("You start to mend the blood vessels on [target]'s brainstem with \the [tool]."))
-<<<<<<< HEAD
-	user.balloon_alert_visible("starts mending blood vessels on [target]'s brainstem", "mending blood vessels on the brainstem.") // CHOMPEdit
-=======
 	user.balloon_alert_visible("starts mending blood vessels on [target]'s brainstem", "mending blood vessels on the brainstem.")
->>>>>>> 78c71907e9 (Balloon Alerts (#17540))
 	..()
 
 /datum/surgery_step/brainstem/mend_vessels/end_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	user.visible_message(span_notice("[user] has mended the blood vessels on [target]'s brainstem with \the [tool].") , \
 	span_notice(" You have mended the blood vessels on [target]'s brainstem with \the [tool]."),)
-<<<<<<< HEAD
-	user.balloon_alert_visible("mended the blood vessels on [target]'s brainstem", "mended the blood vessels on the brainstem.") // CHOMPEdit
-=======
 	user.balloon_alert_visible("mended the blood vessels on [target]'s brainstem", "mended the blood vessels on the brainstem.")
->>>>>>> 78c71907e9 (Balloon Alerts (#17540))
 	target.op_stage.brainstem = 1
 
 /datum/surgery_step/brainstem/mend_vessels/fail_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
 	user.visible_message(span_danger("[user]'s hand slips, tearing at [target]'s brainstem with \the [tool]!") , \
 	span_danger("Your hand slips, tearing at [target]'s brainstem with \the [tool]!") )
-<<<<<<< HEAD
-	user.balloon_alert_visible("slips, tearing at [target]'s brainstem", "your hand slips, tearing at the brainstem") // CHOMPEdit
-=======
 	user.balloon_alert_visible("slips, tearing at [target]'s brainstem", "your hand slips, tearing at the brainstem")
->>>>>>> 78c71907e9 (Balloon Alerts (#17540))
 	affected.createwound(PIERCE, 10)
 	target.AdjustParalysis(10)
 
@@ -93,22 +81,14 @@
 /datum/surgery_step/brainstem/drill_vertebrae/begin_step(mob/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	user.visible_message(span_filter_notice("[user] starts to drill around [target]'s brainstem with \the [tool]."), \
 	span_filter_notice("You start to drill around [target]'s brainstem with \the [tool]."))
-<<<<<<< HEAD
-	user.balloon_alert_visible("starts drilling around [target]'s brainstem", "drilling around the brainstem") // CHOMPEdit
-=======
 	user.balloon_alert_visible("starts drilling around [target]'s brainstem", "drilling around the brainstem")
->>>>>>> 78c71907e9 (Balloon Alerts (#17540))
 	..()
 
 /datum/surgery_step/brainstem/drill_vertebrae/end_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
 	user.visible_message(span_notice("[user] has drilled around [target]'s brainstem with \the [tool].") , \
 	span_notice(" You have drilled around [target]'s brainstem with \the [tool]."),)
-<<<<<<< HEAD
-	user.balloon_alert_visible("drilled around [target]'s brainstem", "drilled around the brainstem") // CHOMPEdit
-=======
 	user.balloon_alert_visible("drilled around [target]'s brainstem", "drilled around the brainstem")
->>>>>>> 78c71907e9 (Balloon Alerts (#17540))
 	target.AdjustParalysis(10) //We're getting Invasive here. This only ticks down when the person is alive, so it's a good side-effect for this step. Rattling the braincase with a drill is not optimal.
 	target.op_stage.brainstem = 2
 	affected.fracture() //Does not apply damage, simply breaks it if it wasn't already. Doesn't stop a defib on its own.
@@ -117,11 +97,7 @@
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
 	user.visible_message(span_danger("[user]'s hand slips, shredding [target]'s brainstem with \the [tool]!") , \
 	span_danger("Your hand slips, shredding [target]'s brainstem with \the [tool]!") )
-<<<<<<< HEAD
-	user.balloon_alert_visible("slips, shredding [target]'s brainstem", "your hand slips, shredding the brainstem.") // CHOMPEdit
-=======
 	user.balloon_alert_visible("slips, shredding [target]'s brainstem", "your hand slips, shredding the brainstem.")
->>>>>>> 78c71907e9 (Balloon Alerts (#17540))
 	affected.createwound(PIERCE, 10)
 	target.AdjustParalysis(15)
 	spawn()
@@ -150,21 +126,13 @@
 /datum/surgery_step/brainstem/clean_chips/begin_step(mob/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	user.visible_message(span_filter_notice("[user] starts to pick around [target]'s brainstem for bone chips with \the [tool]."), \
 	span_filter_notice("You start to pick around [target]'s brainstem for bone chips with \the [tool]."))
-<<<<<<< HEAD
-	user.balloon_alert_visible("starts to pick around [target]'s brainstem for bone chips.", "picking around the brainstem for bone chips.") // CHOMPEdit
-=======
 	user.balloon_alert_visible("starts to pick around [target]'s brainstem for bone chips.", "picking around the brainstem for bone chips.")
->>>>>>> 78c71907e9 (Balloon Alerts (#17540))
 	..()
 
 /datum/surgery_step/brainstem/clean_chips/end_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	user.visible_message(span_notice("[user] has cleaned around [target]'s brainstem with \the [tool].") , \
 	span_notice(" You have cleaned around [target]'s brainstem with \the [tool]."),)
-<<<<<<< HEAD
-	user.balloon_alert_visible("cleaned around [target]'s brainstem") // CHOMPEdit
-=======
 	user.balloon_alert_visible("cleaned around [target]'s brainstem")
->>>>>>> 78c71907e9 (Balloon Alerts (#17540))
 	target.AdjustParalysis(10) //Still invasive.
 	target.op_stage.brainstem = 3
 
@@ -172,11 +140,7 @@
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
 	user.visible_message(span_danger("[user]'s hand slips, gouging [target]'s brainstem with \the [tool]!") , \
 	span_danger("Your hand slips, gouging [target]'s brainstem with \the [tool]!") )
-<<<<<<< HEAD
-	user.balloon_alert_visible("slips, gouging [target]'s brainstem", "your hand slips, gouging the brainstem") // CHOMPEdit
-=======
 	user.balloon_alert_visible("slips, gouging [target]'s brainstem", "your hand slips, gouging the brainstem")
->>>>>>> 78c71907e9 (Balloon Alerts (#17540))
 	affected.createwound(CUT, 5)
 	target.AdjustParalysis(10)
 	spawn()
@@ -205,21 +169,13 @@
 /datum/surgery_step/brainstem/mend_cord/begin_step(mob/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	user.visible_message(span_filter_notice("[user] starts to fuse [target]'s spinal cord with \the [tool]."), \
 	span_filter_notice("You start to fuse [target]'s spinal cord with \the [tool]."))
-<<<<<<< HEAD
-	user.balloon_alert_visible("starts fusing [target]'s spinal cord", "fusing the spinal cord") // CHOMPEdit
-=======
 	user.balloon_alert_visible("starts fusing [target]'s spinal cord", "fusing the spinal cord")
->>>>>>> 78c71907e9 (Balloon Alerts (#17540))
 	..()
 
 /datum/surgery_step/brainstem/mend_cord/end_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	user.visible_message(span_notice("[user] has fused [target]'s spinal cord with \the [tool].") , \
 	span_notice(" You have fused [target]'s spinal cord with \the [tool]."),)
-<<<<<<< HEAD
-	user.balloon_alert_visible("fused [target]'s spinal cord", "fused the spinal cord") // CHOMPEdit
-=======
 	user.balloon_alert_visible("fused [target]'s spinal cord", "fused the spinal cord")
->>>>>>> 78c71907e9 (Balloon Alerts (#17540))
 	target.op_stage.brainstem = 4
 	target.AdjustParalysis(5)
 	target.add_modifier(/datum/modifier/franken_sickness, 20 MINUTES)
@@ -228,11 +184,7 @@
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
 	user.visible_message(span_danger("[user]'s hand slips, tearing at [target]'s spinal cord with \the [tool]!") , \
 	span_danger("Your hand slips, tearing at [target]'s spinal cord with \the [tool]!") )
-<<<<<<< HEAD
-	user.balloon_alert_visible("slips, tearing [target]'s spinal cord", "your hand slips, tearing at the spinal cord") // CHOMPEdit
-=======
 	user.balloon_alert_visible("slips, tearing [target]'s spinal cord", "your hand slips, tearing at the spinal cord")
->>>>>>> 78c71907e9 (Balloon Alerts (#17540))
 	affected.createwound(PIERCE, 5)
 	target.AdjustParalysis(20)
 	spawn()
@@ -260,21 +212,13 @@
 /datum/surgery_step/brainstem/mend_vertebrae/begin_step(mob/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	user.visible_message(span_filter_notice("[user] starts to mend [target]'s opened vertebrae with \the [tool]."), \
 	span_filter_notice("You start to mend [target]'s opened vertebrae with \the [tool]."))
-<<<<<<< HEAD
-	user.balloon_alert_visible("starts mending [target]'s opened vertebrae", "mending opened vertebrae") // CHOMPEdit
-=======
 	user.balloon_alert_visible("starts mending [target]'s opened vertebrae", "mending opened vertebrae")
->>>>>>> 78c71907e9 (Balloon Alerts (#17540))
 	..()
 
 /datum/surgery_step/brainstem/mend_vertebrae/end_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	user.visible_message(span_notice("[user] has mended [target]'s vertebrae with \the [tool].") , \
 	span_notice(" You have mended [target]'s vertebrae with \the [tool]."),)
-<<<<<<< HEAD
-	user.balloon_alert_visible("mended [target]'s vertebrae", "mended the vertebrae") // CHOMPEdit
-=======
 	user.balloon_alert_visible("mended [target]'s vertebrae", "mended the vertebrae")
->>>>>>> 78c71907e9 (Balloon Alerts (#17540))
 	target.can_defib = 1
 	target.op_stage.brainstem = 5
 
@@ -282,11 +226,7 @@
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
 	user.visible_message(span_danger("[user]'s hand slips, tearing at [target]'s spinal cord with \the [tool]!") , \
 	span_danger("Your hand slips, tearing at [target]'s spinal cord with \the [tool]!") )
-<<<<<<< HEAD
-	user.balloon_alert_visible("slips, tearing at [target]'s spinal cord", "your hand slips, tearing at the spinal cord") // CHOMPEdit
-=======
 	user.balloon_alert_visible("slips, tearing at [target]'s spinal cord", "your hand slips, tearing at the spinal cord")
->>>>>>> 78c71907e9 (Balloon Alerts (#17540))
 	affected.createwound(PIERCE, 5)
 	target.AdjustParalysis(15)
 	spawn()
@@ -315,21 +255,13 @@
 /datum/surgery_step/brainstem/realign_tissue/begin_step(mob/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	user.visible_message(span_filter_notice("[user] starts to realign the tissues in [target]'s skull with \the [tool]."), \
 	span_filter_notice("You start to realign the tissues in [target]'s skull with \the [tool]."))
-<<<<<<< HEAD
-	user.balloon_alert_visible("starts to realign the tissues in [target]'s skull", "realigning the tissues in the skull") // CHOMPEdit
-=======
 	user.balloon_alert_visible("starts to realign the tissues in [target]'s skull", "realigning the tissues in the skull")
->>>>>>> 78c71907e9 (Balloon Alerts (#17540))
 	..()
 
 /datum/surgery_step/brainstem/realign_tissue/end_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	user.visible_message(span_notice("[user] has realigned the tissues in [target]'s skull back into place with \the [tool].") , \
 	span_notice(" You have realigned the tissues in [target]'s skull back into place with \the [tool]."),)
-<<<<<<< HEAD
-	user.balloon_alert_visible("realigned the tissues in [target]'s skull back in place", "realigned the tissues in the skull back into place") // CHOMPEdit
-=======
 	user.balloon_alert_visible("realigned the tissues in [target]'s skull back in place", "realigned the tissues in the skull back into place")
->>>>>>> 78c71907e9 (Balloon Alerts (#17540))
 	target.AdjustParalysis(5) //I n v a s i v e
 	target.op_stage.brainstem = 0 //The cycle begins anew.
 
@@ -337,11 +269,7 @@
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
 	user.visible_message(span_danger("[user]'s hand slips, gouging [target]'s brainstem with \the [tool]!") , \
 	span_danger("Your hand slips, gouging [target]'s brainstem with \the [tool]!"))
-<<<<<<< HEAD
-	user.balloon_alert_visible("slips, gounging at [target]'s brainstem", "your hand slips, gouging at the brainstem") // CHOMPEdit
-=======
 	user.balloon_alert_visible("slips, gounging at [target]'s brainstem", "your hand slips, gouging at the brainstem")
->>>>>>> 78c71907e9 (Balloon Alerts (#17540))
 	affected.createwound(CUT, 5)
 	target.AdjustParalysis(30)
 	spawn()
