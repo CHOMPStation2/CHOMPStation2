@@ -31,12 +31,7 @@
 
 /obj/item/reagent_containers/hypospray/attack(mob/living/M as mob, mob/user as mob)
 	if(!reagents.total_volume)
-<<<<<<< HEAD
-		// to_chat(user, span_warning("[src] is empty."))
-		balloon_alert(user, "\the [src] is empty.") // CHOMPEdit - Changed to balloon alert
-=======
 		balloon_alert(user, "\the [src] is empty.")
->>>>>>> 78c71907e9 (Balloon Alerts (#17540))
 		return
 	if (!istype(M))
 		return
@@ -49,12 +44,7 @@
 	if(istype(H))
 		var/obj/item/organ/external/affected = H.get_organ(user.zone_sel.selecting)
 		if(!affected)
-<<<<<<< HEAD
-			// to_chat(user, span_danger("\The [H] is missing that limb!"))
-			balloon_alert(user, "\the [H] is missing that limb!") // CHOMPEdit - Changed to balloon alert
-=======
 			balloon_alert(user, "\the [H] is missing that limb!")
->>>>>>> 78c71907e9 (Balloon Alerts (#17540))
 			return
 		/* since synths have oil/coolant streams now, it only makes sense that you should be able to inject stuff. preserved for posterity.
 		else if(affected.robotic >= ORGAN_ROBOT)
@@ -64,26 +54,14 @@
 
 		//VOREStation Add Start - Adds Prototype Hypo functionality
 		if(H != user && prototype)
-<<<<<<< HEAD
-			// to_chat(user, span_notice("You begin injecting [H] with \the [src]."))
-			// to_chat(H, span_danger(" [user] is trying to inject you with \the [src]!"))
-			balloon_alert(user, "injecting [H] with \the [src]") // CHOMPEdit - Changed to balloon alert
-=======
 			balloon_alert(user, "injecting [H] with \the [src]")
->>>>>>> 78c71907e9 (Balloon Alerts (#17540))
 			balloon_alert(H, "[user] is trying to inject you with \the [src]")
 			if(!do_after(user, 30, H))
 				return
 		//VOREstation Add End
 		else if(!H.stat && !prototype)
 			if(H != user)
-<<<<<<< HEAD
-				if(H.a_intent != I_HELP) // CHOMPEdit - Changed to balloon alert
-					// to_chat(user, span_notice("[H] is resisting your attempt to inject them with \the [src]."))
-					// to_chat(H, span_danger(" [user] is trying to inject you with \the [src]!"))
-=======
 				if(H.a_intent != I_HELP)
->>>>>>> 78c71907e9 (Balloon Alerts (#17540))
 					balloon_alert(user, "[H] resists your attempt to inject them with \the [src].")
 					balloon_alert(H, "[user] is trying to inject you with \the [src]")
 					if(!do_after(user, 30, H))
@@ -97,13 +75,7 @@
 	if(!istype(H) || !istype(user))
 		return FALSE
 
-<<<<<<< HEAD
-	user.setClickCooldown(DEFAULT_QUICK_COOLDOWN) // CHOMPEdit - Changed to balloon alert
-	// to_chat(user, span_notice("You inject \the [H] with \the [src]."))
-	// to_chat(H, span_warning("You feel a tiny prick!"))
-=======
 	user.setClickCooldown(DEFAULT_QUICK_COOLDOWN)
->>>>>>> 78c71907e9 (Balloon Alerts (#17540))
 	balloon_alert(user, "injected \the [H] with \the [src]")
 	balloon_alert(H, "you feel a tiny prick!")
 
@@ -141,10 +113,6 @@
 			loaded_vial.update_icon()
 			user.put_in_hands(loaded_vial)
 			loaded_vial = null
-<<<<<<< HEAD
-			// to_chat(user, span_notice("You remove the vial from the [src]."))
-=======
->>>>>>> 78c71907e9 (Balloon Alerts (#17540))
 			balloon_alert(user, "vial removed from \the [src]")
 			update_icon()
 			playsound(src, 'sound/weapons/flipblade.ogg', 50, 1)
@@ -163,12 +131,7 @@
 /obj/item/reagent_containers/hypospray/vial/attackby(obj/item/W, mob/user as mob)
 	if(istype(W, /obj/item/reagent_containers/glass/beaker/vial))
 		if(!loaded_vial)
-<<<<<<< HEAD
-			// user.visible_message(span_notice("[user] begins loading [W] into \the [src]."),span_notice("You start loading [W] into \the [src]."))
-			balloon_alert_visible("[user] begins loading [W] into \the [src].", "loading [W] into \the [src].") // CHOMPEdit - Changed to balloon alert
-=======
 			balloon_alert_visible("[user] begins loading [W] into \the [src].", "loading [W] into \the [src].")
->>>>>>> 78c71907e9 (Balloon Alerts (#17540))
 			if(!do_after(user,30) || loaded_vial || !(W in user))
 				return 0
 			if(W.is_open_container())
@@ -179,21 +142,11 @@
 			loaded_vial = W
 			reagents.maximum_volume = loaded_vial.reagents.maximum_volume
 			loaded_vial.reagents.trans_to_holder(reagents,volume)
-<<<<<<< HEAD
-			// user.visible_message(span_notice("[user] has loaded [W] into \the [src]."),span_notice("You have loaded [W] into \the [src]."))
-			balloon_alert_visible("[user] has loaded [W] into \the [src].", "loaded [W] into \the [src].") // CHOMPEdit - Changed to balloon alert
-			update_icon()
-			playsound(src, 'sound/weapons/empty.ogg', 50, 1)
-		else
-			// to_chat(user, span_notice("\The [src] already has a vial."))
-			balloon_alert(user, "\the [src] already has a vial.") // CHOMPEdit - Changed to balloon alert
-=======
 			balloon_alert_visible("[user] has loaded [W] into \the [src].", "loaded [W] into \the [src].")
 			update_icon()
 			playsound(src, 'sound/weapons/empty.ogg', 50, 1)
 		else
 			balloon_alert(user, "\the [src] already has a vial.")
->>>>>>> 78c71907e9 (Balloon Alerts (#17540))
 	else
 		..()
 

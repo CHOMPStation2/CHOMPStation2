@@ -7,11 +7,7 @@
 			playsound(src,'sound/items/eatfood.ogg', rand(10,50), 1)
 			user.drop_item()
 			forceMove(H.vore_selected)
-<<<<<<< HEAD
-			balloon_alert(H, "you can taste the flavor of garbage. Wait what?") // CHOMPEdit - Balloon alerts
-=======
 			balloon_alert(H, "you can taste the flavor of garbage. Wait what?")
->>>>>>> 78c71907e9 (Balloon Alerts (#17540))
 			return
 
 	if(isrobot(M))
@@ -20,11 +16,7 @@
 			playsound(src,'sound/items/eatfood.ogg', rand(10,50), 1)
 			user.drop_item()
 			forceMove(R.vore_selected)
-<<<<<<< HEAD
-			R.balloon_alert_visible("[user] feeds [R] with [src]!", "you feed [R] \the [src]!") // CHOMPEdit - Balloon alerts
-=======
 			R.balloon_alert_visible("[user] feeds [R] with [src]!", "you feed [R] \the [src]!")
->>>>>>> 78c71907e9 (Balloon Alerts (#17540))
 			return
 	..()
 
