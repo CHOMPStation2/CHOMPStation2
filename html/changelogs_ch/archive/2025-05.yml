@@ -51,3 +51,12 @@
 2025-05-09:
   tacoguy7765093:
   - bugfix: Fixed carrier ships not having southern cross's docking codes
+2025-05-10:
+  CHOMPStation2StaffMirrorBot:
+  - rscadd: Balloon Alerts
+  - refactor: Changed various to_chat to balloon alerts
+  - bugfix: Fixes runtime errors caused by barefoot sounds.
+  - bugfix: some coulcatcher vis and pref issues
+  - code_imp: update tgui core to 3.1.4
+  Diana:
+  - rscadd: Rx variants of omnihuds now selectable in the loadout.

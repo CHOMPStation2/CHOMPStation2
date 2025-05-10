@@ -1,5 +1,0 @@
-author: "CHOMPStation2StaffMirrorBot"
-delete-after: True
-changes:
-  - rscadd: "Balloon Alerts"
-  - refactor: "Changed various to_chat to balloon alerts"
