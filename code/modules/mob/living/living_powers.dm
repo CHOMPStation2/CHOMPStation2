@@ -21,7 +21,7 @@
 		plane = OBJ_PLANE
 		to_chat(src,span_notice("You are now hiding."))
 
-/mob/living/proc/toggle_selfsurgery()
+/mob/living/verb/toggle_selfsurgery() //CHOMPedit, make it a inherent verb instead of a proc
 	set name = "Allow Self Surgery"
 	set desc = "Toggles the 'safeties' on self-surgery, allowing you to do so."
 	set category = "Object"
