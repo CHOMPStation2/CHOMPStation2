@@ -13,8 +13,8 @@ var/global/list/seen_religions = list()
 		seen_religions    |= M.client.prefs.religion*/
 	return
 
+// CHOMPEdit Start
 var/global/list/citizenship_choices = list(
-<<<<<<< HEAD
 	"Earth",
 	"Mars",
 	"Sif",
@@ -22,20 +22,8 @@ var/global/list/citizenship_choices = list(
 	"Moghes",
 	"Meralar",
 	"Qerr'balak"
-=======
-	"Greater Human Diaspora",
-	"Commonwealth of Sol-Procyon",
-	"Skrell Consensus",
-	"Moghes Hegemony",
-	"Tajaran Diaspora",
-	"Unitary Alliance of Salthan Fyrds",
-	"Elysian Colonies",
-	"Third Ares Confederation",
-	"Teshari Union",
-	"Altevian Hegemony",
-	"Kosaky Fleets"
->>>>>>> b295ecebe7 (tesh lore updoot (#17593))
 	)
+//CHOMPEdit End
 
 var/global/list/home_system_choices = list(
 	"Earth, Sol",
