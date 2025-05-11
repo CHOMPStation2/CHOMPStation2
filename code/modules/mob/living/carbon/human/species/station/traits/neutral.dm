@@ -1483,6 +1483,7 @@
 	name = "Drippy"
 	desc = "You cannot hold your form together, or produce a constant film of sludge that drips off of your body. Hope the station has a janitor."
 	cost = 0
+	custom_only = FALSE
 	var_changes = list("drippy" = 1)
 
 	// Traitgenes Made into a genetrait
