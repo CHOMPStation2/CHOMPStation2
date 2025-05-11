@@ -1088,13 +1088,8 @@
 	blurb = "A race of feathered raptors who developed alongside the Skrell, inhabiting \
 	the polar tundral regions outside of Skrell territory. Extremely fragile, they developed \
 	hunting skills that emphasized taking out their prey without themselves getting hit. They \
-<<<<<<< HEAD
-	are only recently becoming known on human stations after reaching space with Skrell assistance."
-	wikilink="https://wiki.chompstation13.net/index.php?title=Teshari" //CHOMPedit: link to our wiki
-=======
 	are known for their communalism and pack based family structures."
-	wikilink="https://wiki.vore-station.net/Teshari"
->>>>>>> b295ecebe7 (tesh lore updoot (#17593))
+	wikilink="https://wiki.chompstation13.net/index.php?title=Teshari" //CHOMPedit: link to our wiki
 	catalogue_data = list(/datum/category_item/catalogue/fauna/teshari)
 
 	num_alternate_languages = 3
