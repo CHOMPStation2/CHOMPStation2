@@ -14,6 +14,7 @@ var/global/list/seen_religions = list()
 	return
 
 var/global/list/citizenship_choices = list(
+<<<<<<< HEAD
 	"Earth",
 	"Mars",
 	"Sif",
@@ -21,6 +22,19 @@ var/global/list/citizenship_choices = list(
 	"Moghes",
 	"Meralar",
 	"Qerr'balak"
+=======
+	"Greater Human Diaspora",
+	"Commonwealth of Sol-Procyon",
+	"Skrell Consensus",
+	"Moghes Hegemony",
+	"Tajaran Diaspora",
+	"Unitary Alliance of Salthan Fyrds",
+	"Elysian Colonies",
+	"Third Ares Confederation",
+	"Teshari Union",
+	"Altevian Hegemony",
+	"Kosaky Fleets"
+>>>>>>> b295ecebe7 (tesh lore updoot (#17593))
 	)
 
 var/global/list/home_system_choices = list(
@@ -86,7 +100,8 @@ var/global/list/faction_choices = list(
 	"United Solar Defense Force",
 	"Proxima Centauri Risk Control",
 	"HIVE Security",
-	"Stealth Assault Enterprises"
+	"Stealth Assault Enterprises",
+	"Teshari Union"
 	)
 
 var/global/list/antag_faction_choices = list()	//Should be populated after brainstorming. Leaving as blank in case brainstorming does not occur.
