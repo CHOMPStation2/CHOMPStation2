@@ -116,11 +116,15 @@
 	var/kin_type
 	var/energy_light = 0.25
 	var/energy_dark = 0.75
+<<<<<<< HEAD
 	var/nutrition_conversion_scaling = 0.5 //CHOMPEdit - Add nutrition <-> dark energy conversion
 	var/phase_gentle = TRUE //CHOMPEdit - Add gentle phasing, defaults to on.
 	var/manual_respite = FALSE //CHOMPEdit - Dark Respite
 	var/respite_activating = FALSE //CHOMPEdit - Dark Respite
 	var/nutrition_energy_conversion = TRUE //CHOMPEdit - Add toggle to nutrition and energy conversions
+=======
+	species_component = /datum/component/shadekin
+>>>>>>> 2b0853887b (Shadekin and Xenochimera variable refactor (#17651))
 
 /datum/species/shadekin/New()
 	..()
@@ -345,8 +349,11 @@
 	update_shadekin_hud(H)
 
 /datum/species/shadekin/proc/get_energy(var/mob/living/carbon/human/H)
-	var/obj/item/organ/internal/brain/shadekin/shade_organ = H.internal_organs_by_name[O_BRAIN]
+	var/datum/component/shadekin/comp = H.GetComponent(/datum/component/shadekin)
+	if(!comp)
+		return FALSE //No component, no energy to be had.
 
+<<<<<<< HEAD
 	if(!istype(shade_organ))
 		return 0
 	//CHOMPEdit - Dark Respite
@@ -355,32 +362,40 @@
 	//CHOMPEdit - Dark Respite
 	if(shade_organ.dark_energy_infinite)
 		return shade_organ.max_dark_energy
+=======
+	if(comp.dark_energy_infinite)
+		return comp.max_dark_energy
+>>>>>>> 2b0853887b (Shadekin and Xenochimera variable refactor (#17651))
 
-	return shade_organ.dark_energy
+	return comp.dark_energy
 
 /datum/species/shadekin/proc/get_max_energy(var/mob/living/carbon/human/H)
-	var/obj/item/organ/internal/brain/shadekin/shade_organ = H.internal_organs_by_name[O_BRAIN]
+	var/datum/component/shadekin/comp = H.GetComponent(/datum/component/shadekin)
+	if(!comp)
+		return FALSE //No component, no energy to be had.
 
+<<<<<<< HEAD
 	if(!istype(shade_organ))
 		return 0
 
 	return shade_organ.max_dark_energy - (LAZYLEN(active_dark_maws) * 5)
+=======
+	return comp.max_dark_energy
+>>>>>>> 2b0853887b (Shadekin and Xenochimera variable refactor (#17651))
 
 /datum/species/shadekin/proc/set_energy(var/mob/living/carbon/human/H, var/new_energy)
-	var/obj/item/organ/internal/brain/shadekin/shade_organ = H.internal_organs_by_name[O_BRAIN]
+	var/datum/component/shadekin/comp = H.GetComponent(/datum/component/shadekin)
+	if(!comp)
+		return FALSE //No component, no energy to be had.
 
-	if(!istype(shade_organ))
-		return
-
-	shade_organ.dark_energy = CLAMP(new_energy, 0, get_max_energy(H))
+	comp.dark_energy = CLAMP(new_energy, 0, get_max_energy(H))
 
 /datum/species/shadekin/proc/set_max_energy(var/mob/living/carbon/human/H, var/new_max_energy)
-	var/obj/item/organ/internal/brain/shadekin/shade_organ = H.internal_organs_by_name[O_BRAIN]
+	var/datum/component/shadekin/comp = H.GetComponent(/datum/component/shadekin)
+	if(!comp)
+		return FALSE //No component, no energy to be had.
 
-	if(!istype(shade_organ))
-		return 0
-
-	shade_organ.max_dark_energy = new_max_energy
+	comp.max_dark_energy = new_max_energy
 
 /datum/species/shadekin/proc/update_shadekin_hud(var/mob/living/carbon/human/H)
 	var/turf/T = get_turf(H)

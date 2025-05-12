@@ -68,8 +68,7 @@
 	var/image/tailimage //Cached tail image
 
 	//Darknesssss
-	var/energy = 100 //For abilities
-	var/energy_adminbuse = FALSE //For adminbuse infinite energy
+	var/datum/component/shadekin/comp = /datum/component/shadekin //Component that holds all the shadekin vars.
 	var/dark_gains = 0 //Last tick's change in energy
 	var/ability_flags = 0 //Flags for active abilities
 	var/obj/screen/darkhud //Holder to update this icon
@@ -100,6 +99,7 @@
 		new new_type(loc)
 		flags |= ATOM_INITIALIZED
 		return INITIALIZE_HINT_QDEL
+	comp = LoadComponent(comp)
 
 	if(icon_state == "map_example")
 		icon_state = pick("white","dark","brown")
@@ -208,9 +208,13 @@
 		density = FALSE
 
 	//Convert spare nutrition into energy at a certain ratio
+<<<<<<< HEAD
 	if(. && nutrition > initial(nutrition) && energy < 100 && !(ability_flags | AB_DARK_RESPITE)) //CHOMPEdit - Dark Respite
+=======
+	if(. && nutrition > initial(nutrition) && comp.dark_energy < 100)
+>>>>>>> 2b0853887b (Shadekin and Xenochimera variable refactor (#17651))
 		nutrition = max(0, nutrition-5)
-		energy = min(100,energy+1)
+		comp.dark_energy = min(100,comp.dark_energy+1)
 	if(!client && check_for_observer && check_timer++ > 5)
 		check_timer = 0
 		var/non_kin_count = 0
@@ -400,14 +404,19 @@
 				if(darkness >= 0.65)
 					dark_gains = 0.30
 
-	energy = max(0,min(initial(energy),energy + dark_gains))
+	comp.dark_energy = max(0,min(initial(comp.dark_energy),comp.dark_energy + dark_gains))
 
+<<<<<<< HEAD
 	if(energy_adminbuse)
 		energy = 100
 	//CHOMPEdit Begin - Dark Respite
 	if(ability_flags & AB_DARK_RESPITE)
 		energy = 0
 	//CHOMPEdit End
+=======
+	if(comp.dark_energy_infinite)
+		comp.dark_energy = 100
+>>>>>>> 2b0853887b (Shadekin and Xenochimera variable refactor (#17651))
 
 	//Update turf darkness hud
 	if(darkhud)
@@ -425,7 +434,7 @@
 
 	//Update energy storage hud
 	if(energyhud)
-		switch(energy)
+		switch(comp.dark_energy)
 			if(80 to INFINITY)
 				energyhud.icon_state = "energy0"
 			if(60 to 80)
@@ -517,7 +526,7 @@
 				if(ORANGE_EYES)
 					gains = 5
 
-			energy += gains
+			comp.dark_energy += gains
 
 //Special hud elements for darkness and energy gains
 /mob/living/simple_mob/shadekin/extra_huds(var/datum/hud/hud,var/icon/ui_style,var/list/hud_elements)
