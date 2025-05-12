@@ -1,5 +1,0 @@
-author: "CHOMPStation2StaffMirrorBot"
-delete-after: True
-changes:
-  - qol: "makes lobby screen more reliable"
-  - code_imp: "tgui-core 3.1.5"
