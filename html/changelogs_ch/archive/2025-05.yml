@@ -74,3 +74,6 @@
       fleet, as well as a valid faction choice
   - qol: makes lobby screen more reliable
   - code_imp: tgui-core 3.1.5
+2025-05-13:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: Fixes micros being able to pick themselves up.
