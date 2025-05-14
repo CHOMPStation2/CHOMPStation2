@@ -160,4 +160,4 @@
 	display_name = "taur duty vest (backpack) (Heavy)"
 	path = /obj/item/storage/backpack/saddlebag_common/vest/heavy
 	slot = slot_back
-	cost = 1
+	cost = 2 //Dufflebag
