@@ -77,3 +77,10 @@
 2025-05-13:
   CHOMPStation2StaffMirrorBot:
   - bugfix: Fixes micros being able to pick themselves up.
+2025-05-14:
+  CHOMPStation2StaffMirrorBot:
+  - rscadd: Engi and med v3 dullahans wings now work again
+  - bugfix: Fixed Neutered symptoms not staying neutered when moved around
+  - bugfix: Fixed diseases duplicating when created
+  - bugfix: Fixed species with immunity catching viruses
+  - bugfix: Fixed Pandemic runtimes when trying to duplicate a non-advanced diseases
