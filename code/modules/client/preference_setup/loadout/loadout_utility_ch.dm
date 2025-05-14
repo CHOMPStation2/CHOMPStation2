@@ -148,13 +148,13 @@
 	display_name = "saddle bag, common (Light)"
 	path = /obj/item/storage/backpack/saddlebag_common/lightweight
 	slot = slot_back
-	cost = 2
+	cost = 1 //These are just retextured backpacks.
 
 /datum/gear/utility/saddlebag_common/robust/lightweight
 	display_name = "saddle bag, robust (Light)"
 	path = /obj/item/storage/backpack/saddlebag_common/robust/lightweight
 	slot = slot_back
-	cost = 2
+	cost = 1 //These are just retextured backpacks.
 
 /datum/gear/utility/saddlebag_common/vest/heavy
 	display_name = "taur duty vest (backpack) (Heavy)"
