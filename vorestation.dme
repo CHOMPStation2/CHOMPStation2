@@ -2260,7 +2260,6 @@
 #include "code\modules\client\preference_setup\loadout\loadout_cyberware.dm"
 #include "code\modules\client\preference_setup\loadout\loadout_ears.dm"
 #include "code\modules\client\preference_setup\loadout\loadout_eyes.dm"
-#include "code\modules\client\preference_setup\loadout\loadout_eyes_yw.dm"
 #include "code\modules\client\preference_setup\loadout\loadout_fluffitems.dm"
 #include "code\modules\client\preference_setup\loadout\loadout_fluffitems_ch.dm"
 #include "code\modules\client\preference_setup\loadout\loadout_general.dm"
