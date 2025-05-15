@@ -203,15 +203,12 @@
 /datum/trait/positive/weaver
 	name = "Weaver"
 	desc = "You can produce silk and create various articles of clothing and objects."
-<<<<<<< HEAD
-	category = 0 //CHOMPEdit making weaver a neutral trait instead
-	cost = 0 //Also not worth 2 points, wtf, this is literally just fluff
-	var_changes = list("is_weaver" = 1)
-//	allowed_species = list(SPECIES_HANNER, SPECIES_CUSTOM) //So it only shows up for custom species and hanner CHOMPedit: We allowed further access of this.
-=======
-	cost = 2
-	allowed_species = list(SPECIES_HANNER, SPECIES_CUSTOM) //So it only shows up for custom species and hanner
->>>>>>> 5d95b50db9 (Component Traits. (#17665))
+	// CHOMPEdit Start, making weaver a neutral trait instead, 2 -> 0 cost
+	category = 0
+	cost = 0
+	// CHOMPEdit End
+	// allowed_species = list(SPECIES_HANNER, SPECIES_CUSTOM) //So it only shows up for custom species and hanner // CHOMPRemove
+
 	custom_only = FALSE
 	has_preferences = list("silk_production" = list(TRAIT_PREF_TYPE_BOOLEAN, "Silk production on spawn", TRAIT_NO_VAREDIT_TARGET), \
 							"silk_color" = list(TRAIT_PREF_TYPE_COLOR, "Silk color", TRAIT_NO_VAREDIT_TARGET))
