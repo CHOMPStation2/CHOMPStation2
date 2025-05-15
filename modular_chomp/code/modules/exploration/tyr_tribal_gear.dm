@@ -45,10 +45,10 @@
 
 
 /obj/item/stack/material/weathered_agate
-	name = "weathered agate"
+	name = MAT_WAGATE
 	icon_state = "sheet-void_opal"
 	singular_name = "weathered agate"
-	default_type = "weathered agate"
+	default_type = MAT_WAGATE
 
 /obj/item/reagent_containers/food/snacks/weatherlily
 	name = "strange leaves"
