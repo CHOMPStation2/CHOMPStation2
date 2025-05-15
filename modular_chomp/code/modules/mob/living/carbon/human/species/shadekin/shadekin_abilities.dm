@@ -46,6 +46,7 @@
 	var/datum/map_template/shelter/template
 
 	var/ability_cost = 100
+	var/tunnel_time = 60 SECONDS
 
 	if(!shadekin_ability_check())
 		return FALSE
@@ -88,7 +89,7 @@
 	smoke.start()
 
 	src.visible_message(span_notice("[src] begins pulling dark energies around themselves."))
-	if(do_after(src, 600)) //60 seconds
+	if(do_after(src, tunnel_time))
 		playsound(src, 'sound/effects/phasein.ogg', 100, 1)
 		src.visible_message(span_notice("[src] finishes pulling dark energies around themselves, creating a portal."))
 

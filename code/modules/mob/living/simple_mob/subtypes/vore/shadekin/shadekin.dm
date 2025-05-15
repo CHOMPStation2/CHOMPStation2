@@ -208,11 +208,7 @@
 		density = FALSE
 
 	//Convert spare nutrition into energy at a certain ratio
-<<<<<<< HEAD
-	if(. && nutrition > initial(nutrition) && energy < 100 && !(ability_flags | AB_DARK_RESPITE)) //CHOMPEdit - Dark Respite
-=======
-	if(. && nutrition > initial(nutrition) && comp.dark_energy < 100)
->>>>>>> 2b0853887b (Shadekin and Xenochimera variable refactor (#17651))
+	if(. && nutrition > initial(nutrition) && comp.dark_energy < 100 && !(ability_flags | AB_DARK_RESPITE))  //CHOMPEdit - Dark Respite
 		nutrition = max(0, nutrition-5)
 		comp.dark_energy = min(100,comp.dark_energy+1)
 	if(!client && check_for_observer && check_timer++ > 5)
@@ -286,7 +282,7 @@
 	drop_l_hand()
 	drop_r_hand()
 
-	energy = 0
+	comp.dark_energy = 0
 	ability_flags |= AB_DARK_RESPITE
 	invisibility = INVISIBILITY_LEVEL_TWO
 
@@ -406,17 +402,12 @@
 
 	comp.dark_energy = max(0,min(initial(comp.dark_energy),comp.dark_energy + dark_gains))
 
-<<<<<<< HEAD
-	if(energy_adminbuse)
-		energy = 100
 	//CHOMPEdit Begin - Dark Respite
 	if(ability_flags & AB_DARK_RESPITE)
-		energy = 0
+		comp.dark_energy = 0
 	//CHOMPEdit End
-=======
 	if(comp.dark_energy_infinite)
 		comp.dark_energy = 100
->>>>>>> 2b0853887b (Shadekin and Xenochimera variable refactor (#17651))
 
 	//Update turf darkness hud
 	if(darkhud)
