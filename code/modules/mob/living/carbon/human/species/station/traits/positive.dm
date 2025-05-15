@@ -203,21 +203,28 @@
 /datum/trait/positive/weaver
 	name = "Weaver"
 	desc = "You can produce silk and create various articles of clothing and objects."
+<<<<<<< HEAD
 	category = 0 //CHOMPEdit making weaver a neutral trait instead
 	cost = 0 //Also not worth 2 points, wtf, this is literally just fluff
 	var_changes = list("is_weaver" = 1)
 //	allowed_species = list(SPECIES_HANNER, SPECIES_CUSTOM) //So it only shows up for custom species and hanner CHOMPedit: We allowed further access of this.
+=======
+	cost = 2
+	allowed_species = list(SPECIES_HANNER, SPECIES_CUSTOM) //So it only shows up for custom species and hanner
+>>>>>>> 5d95b50db9 (Component Traits. (#17665))
 	custom_only = FALSE
-	has_preferences = list("silk_production" = list(TRAIT_PREF_TYPE_BOOLEAN, "Silk production on spawn", TRAIT_VAREDIT_TARGET_SPECIES), \
-							"silk_color" = list(TRAIT_PREF_TYPE_COLOR, "Silk color", TRAIT_VAREDIT_TARGET_SPECIES))
+	has_preferences = list("silk_production" = list(TRAIT_PREF_TYPE_BOOLEAN, "Silk production on spawn", TRAIT_NO_VAREDIT_TARGET), \
+							"silk_color" = list(TRAIT_PREF_TYPE_COLOR, "Silk color", TRAIT_NO_VAREDIT_TARGET))
+	added_component_path = /datum/component/weaver
 
-/datum/trait/positive/weaver/apply(var/datum/species/S,var/mob/living/carbon/human/H)
+/datum/trait/positive/weaver/apply(var/datum/species/S,var/mob/living/carbon/human/H, var/list/trait_prefs)
 	..()
-	add_verb(H, /mob/living/carbon/human/proc/check_silk_amount)
-	add_verb(H, /mob/living/carbon/human/proc/toggle_silk_production)
-	add_verb(H, /mob/living/carbon/human/proc/weave_structure)
-	add_verb(H, /mob/living/carbon/human/proc/weave_item)
-	add_verb(H, /mob/living/carbon/human/proc/set_silk_color)
+	var/datum/component/weaver/W = H.GetComponent(added_component_path)
+	if(S.get_bodytype() == SPECIES_VASILISSAN)
+		W.silk_reserve = 500
+		W.silk_max_reserve = 1000
+	W.silk_production = trait_prefs["silk_production"]
+	W.silk_color = lowertext(trait_prefs["silk_color"])
 
 /datum/trait/positive/aquatic
 	name = "Aquatic"
