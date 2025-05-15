@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 var/list/talk_sound_map = rlist(
@@ -36,11 +37,14 @@ var/list/talk_sound_map = rlist(
 									GLOB.xeno_speak_sound // Does not exist on virgo
 									)
 								)
+=======
+#define DEFAULT_TALK_SOUNDS GLOB.talk_sound
+>>>>>>> 71cc89be87 (Talk Sound Refactor (#17691))
 
 /proc/get_talk_sound(var/voice_sound)
 	if(!voice_sound)
-		return talk_sound_map[1]
-	return talk_sound_map[2][voice_sound]
+		return DEFAULT_TALK_SOUNDS
+	return SSsounds.talk_sound_map[voice_sound]
 
 /proc/rlist(var/list/keys,var/list/values) //short for reversible list generator
 	var/list/rlist = list(list(),list(),FALSE,0)
