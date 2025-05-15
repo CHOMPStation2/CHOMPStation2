@@ -142,17 +142,21 @@
 /decl/chemical_reaction/instant/xenolazarus/on_reaction(var/datum/reagents/holder, var/created_volume) //literally all this does is mash the regenerate button
 	if(ishuman(holder.my_atom))
 		var/mob/living/carbon/human/H = holder.my_atom
-		if(H.stat == DEAD && (/mob/living/carbon/human/proc/reconstitute_form in H.verbs)) //no magical regen for non-regenners, and can't force the reaction on live ones
-			if(H.hasnutriment()) // make sure it actually has the conditions to revive
-				if(H.revive_ready >= 1) // if it's not reviving, start doing so
-					H.revive_ready = REVIVING_READY // overrides the normal cooldown
-					H.visible_message(span_info("[H] shudders briefly, then relaxes, faint movements stirring within."))
-					H.chimera_regenerate()
-				else if (/mob/living/carbon/human/proc/hatch in H.verbs)// already reviving, check if they're ready to hatch
-					H.chimera_hatch()
-					H.visible_message(span_danger(span_huge("[H] violently convulses and then bursts open, revealing a new, intact copy in the pool of viscera."))) // Hope you were wearing waterproofs, doc...
-					H.adjustBrainLoss(10) // they're reviving from dead, so take 10 brainloss
-				else //they're already reviving but haven't hatched. Give a little message to tell them to wait.
-					H.visible_message(span_info("[H] stirs faintly, but doesn't appear to be ready to wake up yet."))
-			else
-				H.visible_message(span_info("[H] twitches for a moment, but remains still.")) // no nutriment
+		var/datum/component/xenochimera/comp = H.GetComponent(/datum/component/xenochimera)
+		if(!comp)
+			return
+		else
+			if(H.stat == DEAD)
+				if(H.hasnutriment()) // make sure it actually has the conditions to revive
+					if(comp.revive_ready >= 1) // if it's not reviving, start doing so
+						comp.revive_ready = REVIVING_READY // overrides the normal cooldown
+						H.visible_message(span_info("[H] shudders briefly, then relaxes, faint movements stirring within."))
+						H.chimera_regenerate()
+					else if(comp.revive_ready == REVIVING_DONE)// already reviving, check if they're ready to hatch
+						H.chimera_hatch()
+						H.visible_message(span_danger(span_huge("[H] violently convulses and then bursts open, revealing a new, intact copy in the pool of viscera."))) // Hope you were wearing waterproofs, doc...
+						H.adjustBrainLoss(10) // they're reviving from dead, so take 10 brainloss
+					else //they're already reviving but haven't hatched. Give a little message to tell them to wait.
+						H.visible_message(span_info("[H] stirs faintly, but doesn't appear to be ready to wake up yet."))
+				else
+					H.visible_message(span_info("[H] twitches for a moment, but remains still.")) // no nutriment

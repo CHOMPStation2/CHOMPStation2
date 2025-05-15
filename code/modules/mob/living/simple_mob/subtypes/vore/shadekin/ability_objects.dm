@@ -188,9 +188,9 @@
 	if(!..())
 		return
 	if(!my_kin.dark_tunneling())
-		my_kin.energy += cost //Refund due to abort
+		my_kin.comp.dark_energy += cost //Refund due to abort
 	else
-		my_kin.energy += 10 //Refund enough to open the dark portal
+		my_kin.comp.dark_energy += 10 //Refund enough to open the dark portal
 //CHOMPEdit End
 
 //CHOMPEdit start - Add Dark Maw ability
@@ -205,5 +205,5 @@
 	if(!..())
 		return
 	if(!my_kin.dark_maw())
-		my_kin.energy += cost //Refund due to abort
+		my_kin.comp.dark_energy += cost //Refund due to abort
 //CHOMPEdit End

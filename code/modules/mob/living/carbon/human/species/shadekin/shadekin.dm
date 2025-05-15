@@ -116,15 +116,12 @@
 	var/kin_type
 	var/energy_light = 0.25
 	var/energy_dark = 0.75
-<<<<<<< HEAD
 	var/nutrition_conversion_scaling = 0.5 //CHOMPEdit - Add nutrition <-> dark energy conversion
 	var/phase_gentle = TRUE //CHOMPEdit - Add gentle phasing, defaults to on.
 	var/manual_respite = FALSE //CHOMPEdit - Dark Respite
 	var/respite_activating = FALSE //CHOMPEdit - Dark Respite
 	var/nutrition_energy_conversion = TRUE //CHOMPEdit - Add toggle to nutrition and energy conversions
-=======
 	species_component = /datum/component/shadekin
->>>>>>> 2b0853887b (Shadekin and Xenochimera variable refactor (#17651))
 
 /datum/species/shadekin/New()
 	..()
@@ -352,20 +349,12 @@
 	var/datum/component/shadekin/comp = H.GetComponent(/datum/component/shadekin)
 	if(!comp)
 		return FALSE //No component, no energy to be had.
-
-<<<<<<< HEAD
-	if(!istype(shade_organ))
-		return 0
 	//CHOMPEdit - Dark Respite
 	if(H.ability_flags & AB_DARK_RESPITE || H.has_modifier_of_type(/datum/modifier/dark_respite))
-		return 0
+		return FALSE
 	//CHOMPEdit - Dark Respite
-	if(shade_organ.dark_energy_infinite)
-		return shade_organ.max_dark_energy
-=======
 	if(comp.dark_energy_infinite)
 		return comp.max_dark_energy
->>>>>>> 2b0853887b (Shadekin and Xenochimera variable refactor (#17651))
 
 	return comp.dark_energy
 
@@ -373,15 +362,7 @@
 	var/datum/component/shadekin/comp = H.GetComponent(/datum/component/shadekin)
 	if(!comp)
 		return FALSE //No component, no energy to be had.
-
-<<<<<<< HEAD
-	if(!istype(shade_organ))
-		return 0
-
-	return shade_organ.max_dark_energy - (LAZYLEN(active_dark_maws) * 5)
-=======
 	return comp.max_dark_energy
->>>>>>> 2b0853887b (Shadekin and Xenochimera variable refactor (#17651))
 
 /datum/species/shadekin/proc/set_energy(var/mob/living/carbon/human/H, var/new_energy)
 	var/datum/component/shadekin/comp = H.GetComponent(/datum/component/shadekin)
