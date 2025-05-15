@@ -1,45 +1,4 @@
-<<<<<<< HEAD
-
-
-var/list/talk_sound_map = rlist(
-								list(
-									"beep-boop",
-									"goon speak 1",
-									"goon speak 2",
-									"goon speak 3",
-									"goon speak 4",
-									"goon speak blub",
-									"goon speak bottalk",
-									"goon speak buwoo",
-									"goon speak cow",
-									"goon speak lizard",
-									"goon speak pug",
-									"goon speak pugg",
-									"goon speak roach",
-									"goon speak skelly",
-									"xeno speak" // CHOMPEnable
-								),
-								list(
-									GLOB.talk_sound,
-									GLOB.goon_speak_one_sound,
-									GLOB.goon_speak_two_sound,
-									GLOB.goon_speak_three_sound,
-									GLOB.goon_speak_four_sound,
-									GLOB.goon_speak_blub_sound,
-									GLOB.goon_speak_bottalk_sound,
-									GLOB.goon_speak_buwoo_sound,
-									GLOB.goon_speak_cow_sound,
-									GLOB.goon_speak_lizard_sound,
-									GLOB.goon_speak_pug_sound,
-									GLOB.goon_speak_pugg_sound,
-									GLOB.goon_speak_roach_sound,
-									GLOB.goon_speak_skelly_sound,
-									GLOB.xeno_speak_sound // Does not exist on virgo
-									)
-								)
-=======
 #define DEFAULT_TALK_SOUNDS GLOB.talk_sound
->>>>>>> 71cc89be87 (Talk Sound Refactor (#17691))
 
 /proc/get_talk_sound(var/voice_sound)
 	if(!voice_sound)
