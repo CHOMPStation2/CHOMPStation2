@@ -2701,11 +2701,7 @@
 #include "code\modules\fishing\fishing_rod.dm"
 #include "code\modules\fishing\fishing_rod_vr.dm"
 #include "code\modules\fishing\fishing_vr.dm"
-<<<<<<< HEAD
-=======
-#include "code\modules\flufftext\Dreaming.dm"
 #include "code\modules\flufftext\fake_attacker.dm"
->>>>>>> 709e9d130c (Hallucination Refactor (#17661))
 #include "code\modules\flufftext\Hallucination.dm"
 #include "code\modules\flufftext\hallucination_events.dm"
 #include "code\modules\flufftext\look_up.dm"
