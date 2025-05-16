@@ -29,7 +29,7 @@
 	if(shift_denial)
 		name = shift_denial
 	else
-		name = my_kin.energy >= cost ? "Activate" : "No Energy"
+		name = my_kin.comp.dark_energy >= cost ? "Activate" : "No Energy"
 	return src
 
 /obj/effect/shadekin_ability/Click(var/location, var/control, var/params)
@@ -58,11 +58,11 @@
 	else if(shift_mode == ONLY_WHILE_SHIFTED && !(my_kin.ability_flags & AB_PHASE_SHIFTED))
 		to_chat(my_kin,span_warning("Can only use that ability while phase shifted!"))
 		return FALSE
-	else if(my_kin.energy < cost)
+	else if(my_kin.comp.dark_energy < cost)
 		to_chat(my_kin,span_warning("Not enough energy for that ability!"))
 		return FALSE
 
-	my_kin.energy -= cost
+	my_kin.comp.dark_energy -= cost
 	if(ab_sound)
 		playsound(src,ab_sound,75,1)
 
@@ -96,7 +96,7 @@
 	if(!..())
 		return
 	if(!my_kin.mend_other())
-		my_kin.energy += cost //Refund due to abort
+		my_kin.comp.dark_energy += cost //Refund due to abort
 /*
 /datum/modifier/shadekin/heal_boop
 	name = "Shadekin Regen"
@@ -188,9 +188,9 @@
 	if(!..())
 		return
 	if(!my_kin.dark_tunneling())
-		my_kin.energy += cost //Refund due to abort
+		my_kin.comp.dark_energy += cost //Refund due to abort
 	else
-		my_kin.energy += 10 //Refund enough to open the dark portal
+		my_kin.comp.dark_energy += 10 //Refund enough to open the dark portal
 //CHOMPEdit End
 
 //CHOMPEdit start - Add Dark Maw ability
@@ -205,5 +205,5 @@
 	if(!..())
 		return
 	if(!my_kin.dark_maw())
-		my_kin.energy += cost //Refund due to abort
+		my_kin.comp.dark_energy += cost //Refund due to abort
 //CHOMPEdit End
