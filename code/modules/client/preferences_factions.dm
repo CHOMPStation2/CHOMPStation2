@@ -13,6 +13,7 @@ var/global/list/seen_religions = list()
 		seen_religions    |= M.client.prefs.religion*/
 	return
 
+// CHOMPEdit Start
 var/global/list/citizenship_choices = list(
 	"Earth",
 	"Mars",
@@ -22,6 +23,7 @@ var/global/list/citizenship_choices = list(
 	"Meralar",
 	"Qerr'balak"
 	)
+//CHOMPEdit End
 
 var/global/list/home_system_choices = list(
 	"Earth, Sol",
@@ -86,7 +88,8 @@ var/global/list/faction_choices = list(
 	"United Solar Defense Force",
 	"Proxima Centauri Risk Control",
 	"HIVE Security",
-	"Stealth Assault Enterprises"
+	"Stealth Assault Enterprises",
+	"Teshari Union"
 	)
 
 var/global/list/antag_faction_choices = list()	//Should be populated after brainstorming. Leaving as blank in case brainstorming does not occur.

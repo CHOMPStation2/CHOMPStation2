@@ -1445,10 +1445,11 @@
 							"tint" = list(TRAIT_PREF_TYPE_COLOR, "Statue color", TRAIT_NO_VAREDIT_TARGET, "#FFFFFF"),
 							"adjective" = list(TRAIT_PREF_TYPE_STRING, "Adjective", TRAIT_NO_VAREDIT_TARGET, "hardens")/*,
 							"pickupable" = list(TRAIT_PREF_TYPE_BOOLEAN, "Can be picked up", TRAIT_NO_VAREDIT_TARGET, FALSE)*/)
+	added_component_path = /datum/component/gargoyle
 
 /datum/trait/neutral/gargoyle/apply(var/datum/species/S,var/mob/living/carbon/human/H, var/list/trait_prefs)
 	..()
-	var/datum/component/gargoyle/G = H.LoadComponent(/datum/component/gargoyle)
+	var/datum/component/gargoyle/G = H.GetComponent(added_component_path)
 	if (trait_prefs)
 		G.tint = trait_prefs["tint"]
 		G.material = lowertext(trait_prefs["material"])
@@ -1484,7 +1485,6 @@
 	desc = "You cannot hold your form together, or produce a constant film of sludge that drips off of your body. Hope the station has a janitor."
 	cost = 0
 	custom_only = FALSE // CHOMPAdd, enables all races to take the trait
-	var_changes = list("drippy" = 1)
 
 	// Traitgenes Made into a genetrait
 	is_genetrait = TRUE
@@ -1492,6 +1492,7 @@
 
 	activation_message="You feel softer..."
 	primitive_expression_messages=list("drips.")
+	added_component_path = /datum/component/drippy
 
 /datum/trait/neutral/mudking
 	name = "Mudking"
