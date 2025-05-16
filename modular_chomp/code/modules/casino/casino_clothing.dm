@@ -8,3 +8,5 @@
 	icon_state = "casino_armband"
 	icon_override = 'modular_chomp/icons/inventory/accessory/mob.dmi'
 	sprite_sheets = list(SPECIES_TESHARI = 'modular_chomp/icons/inventory/accessory/mob_teshari.dmi')
+
+
