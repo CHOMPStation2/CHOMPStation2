@@ -81,6 +81,7 @@ GLOBAL_LIST_EMPTY(available_ai_shells)
 
 	if(!LAZYLEN(possible))
 		to_chat(src, span_warning("No usable AI shell beacons detected."))
+		return
 
 	if(LAZYLEN(possible) < 2)
 		target = possible[1]
