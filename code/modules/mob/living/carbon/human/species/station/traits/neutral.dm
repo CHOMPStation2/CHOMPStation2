@@ -1682,3 +1682,37 @@
 		/datum/trait/neutral/autohiss_tajaran/xenochimera,
 		/datum/trait/neutral/autohiss_zaddat/xenochimera,
 		/datum/trait/neutral/autohiss_vassilian/xenochimera)
+<<<<<<< HEAD
+=======
+
+/datum/trait/neutral/waddle
+	name = "Waddle / Animated Movement (Adjustable)"
+	desc = "You move with a waddle or otherwise animated movement! Has adjustable settings with more adjustments able to be made in game!"
+	cost = 0
+	custom_only = FALSE
+	is_genetrait = TRUE
+	hidden = FALSE
+	has_preferences = list("waddler" = list(TRAIT_PREF_TYPE_BOOLEAN, "Waddle on Spawn", TRAIT_NO_VAREDIT_TARGET, TRUE))
+	added_component_path = /datum/component/waddle_trait
+
+/datum/trait/neutral/waddle/apply(var/datum/species/S,var/mob/living/carbon/human/H, var/list/trait_prefs)
+	..()
+	var/datum/component/waddle_trait/G = H.GetComponent(added_component_path)
+	G.waddling = trait_prefs["waddler"]
+
+/datum/trait/neutral/nutritiongrow
+	name = "Growing"
+	desc = "After you consume enough nutrition, you start to slowly grow while metabolizing nutrition faster."
+	excludes = list(/datum/trait/neutral/nutritionshrink)
+	cost = 0
+	hidden = TRUE //Disabled on Virgo
+	added_component_path = /datum/component/nutrition_size_change/growing
+
+/datum/trait/neutral/nutritionshrink
+	name = "Shrinking"
+	desc = "If you don't eat enough, your body starts shrinking to make up the difference!"
+	excludes = list(/datum/trait/neutral/nutritiongrow)
+	cost = 0
+	hidden = TRUE //Disabled on Virgo
+	added_component_path = /datum/component/nutrition_size_change/shrinking
+>>>>>>> 1711fcf3d7 (implimentation (#17713))

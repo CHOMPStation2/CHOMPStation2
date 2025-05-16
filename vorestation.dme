@@ -545,6 +545,12 @@
 #include "code\datums\components\disabilities\tourettes.dm"
 #include "code\datums\components\traits\drippy.dm"
 #include "code\datums\components\traits\gargoyle.dm"
+<<<<<<< HEAD
+=======
+#include "code\datums\components\traits\nutrition_size_change.dm"
+#include "code\datums\components\traits\photosynth.dm"
+#include "code\datums\components\traits\waddle.dm"
+>>>>>>> 1711fcf3d7 (implimentation (#17713))
 #include "code\datums\components\traits\weaver.dm"
 #include "code\datums\components\species\shadekin.dm"
 #include "code\datums\components\species\xenochimera.dm"
