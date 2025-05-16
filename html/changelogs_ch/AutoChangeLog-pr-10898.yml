@@ -1,0 +1,5 @@
+author: "CHOMPStation2StaffMirrorBot"
+delete-after: True
+changes:
+  - code_imp: "RemoveDisease proc now uses LAZYREMOVE"
+  - code_imp: "HasResistance proc now uses LAZYFIND"
