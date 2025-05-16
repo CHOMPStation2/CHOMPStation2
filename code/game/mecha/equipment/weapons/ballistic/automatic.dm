@@ -4,8 +4,13 @@
 	icon_state = "mecha_uac2"
 	equip_cooldown = 10
 	projectile = /obj/item/projectile/bullet/pistol/medium
+<<<<<<< HEAD
 	fire_sound = 'sound/weapons/UAC2.ogg'
 	projectiles = 300 //10 bursts, matching the Scattershot's 10. Also, conveniently, doesn't eat your powercell when reloading like 300 bullets does. //CHOMPEdit: Literally factually incorrect. You reloading 300 rounds is the same as reloading 30 rounds 10 times. Resetting this back to 300.
+=======
+	fire_sound = 'sound/weapons/gunshot_machinegun.ogg'
+	projectiles = 30 //10 bursts, matching the Scattershot's 10. Also, conveniently, doesn't eat your powercell when reloading like 300 bullets does.
+>>>>>>> 86a21e9578 (Properly paths sound files and folders (#17604))
 	projectiles_per_shot = 3
 	deviation = 0.3
 	projectile_energy_cost = 20

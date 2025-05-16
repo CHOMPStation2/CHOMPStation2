@@ -15,8 +15,13 @@
 	icon_override = 'icons/vore/custom_guns_vr.dmi'
 	item_state = "gun"
 
+<<<<<<< HEAD
 	fire_sound = 'sound/weapons/Taser.ogg'
 	projectile_type = /obj/item/projectile/beam/stun/med //CHOMPedit, default proj uses weak stun but firemode switches to med, fixing
+=======
+	fire_sound = 'sound/weapons/taser.ogg'
+	projectile_type = /obj/item/projectile/beam/stun
+>>>>>>> 86a21e9578 (Properly paths sound files and folders (#17604))
 
 	modifystate = "stun"
 
