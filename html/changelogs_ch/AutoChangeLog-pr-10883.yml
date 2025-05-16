@@ -1,4 +1,0 @@
-author: "CHOMPStation2StaffMirrorBot"
-delete-after: True
-changes:
-  - refactor: "Talk sounds are more convenient to add to or change downstream"

@@ -1,0 +1,4 @@
+author: "Aphast"
+delete-after: True
+changes:
+  - rscadd: "Any species can now take the 'drippy' trait, previously custom only"
