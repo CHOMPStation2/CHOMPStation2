@@ -1682,8 +1682,6 @@
 		/datum/trait/neutral/autohiss_tajaran/xenochimera,
 		/datum/trait/neutral/autohiss_zaddat/xenochimera,
 		/datum/trait/neutral/autohiss_vassilian/xenochimera)
-<<<<<<< HEAD
-=======
 
 /datum/trait/neutral/waddle
 	name = "Waddle / Animated Movement (Adjustable)"
@@ -1715,4 +1713,3 @@
 	cost = 0
 	hidden = TRUE //Disabled on Virgo
 	added_component_path = /datum/component/nutrition_size_change/shrinking
->>>>>>> 1711fcf3d7 (implimentation (#17713))
