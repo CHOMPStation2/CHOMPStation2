@@ -57,11 +57,15 @@
 	Your body feels hot, growing weaker, more tired. Draining. Darkness coming. \
 	You struggle to stay awake while floating helplessly in the goo."
 	player_msg = "You are Rakshasa. You are not to directly harm crew, only consume. You never speak a language."
-	energy_adminbuse = TRUE
 	maxHealth = 1000000000000
 	health = 1000000000000
 	eye_state = "BLUE EYES"
 	eye_icon_state = "e_rakshasa"
+
+/mob/living/simple_mob/shadekin/red/rakshasa/Initialize(mapload)
+	. = ..()
+	if(comp)
+		comp.dark_energy_infinite = TRUE
 
 /mob/living/simple_mob/shadekin/blue/luna
 	name = "Luna"
