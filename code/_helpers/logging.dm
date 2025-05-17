@@ -264,7 +264,7 @@
 
 /proc/log_to_dd(text)
 	to_world_log(text) //this comes before the config check because it can't possibly runtime
-	if(CONFIG_GET(flag/log_world_output))
+	if(config?.loaded && CONFIG_GET(flag/log_world_output))
 		WRITE_LOG(GLOB.diary, "DD_OUTPUT: [text]")
 
 /proc/log_error(text)
@@ -288,7 +288,7 @@
 	to_world_log("## UNIT_TEST: [text]")
 
 #ifdef REFERENCE_TRACKING_LOG
-#define log_reftracker(msg) log_world("## REF SEARCH [msg]")
+#define log_reftracker(msg) WRITE_LOG(GLOB.diary, "## REF SEARCH [msg]")
 #else
 #define log_reftracker(msg)
 #endif

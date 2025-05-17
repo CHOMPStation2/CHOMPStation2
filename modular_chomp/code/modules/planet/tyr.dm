@@ -33,26 +33,26 @@ var/datum/planet/tyr/planet_tyr = null
 
 	switch(sun_position)
 		if(0 to 0.20) // Night
-			low_brightness = 0.1
+			low_brightness = 0.4
 			low_color = "#0A0028"
 
-			high_brightness = 0.3
+			high_brightness = 0.7
 			high_color = "#21007F"
-			min = 0
+			min = 0.3
 
 		if(0.20 to 0.30) // Twilight
-			low_brightness = 0.35
+			low_brightness = 0.65
 			low_color = "#310D54"
 
-			high_brightness = 0.5
+			high_brightness = 0.8
 			high_color = "#58389E"
-			min = 0.40
+			min = 0.50
 
 		if(0.30 to 0.40) // Sunrise/set
-			low_brightness = 0.5
+			low_brightness = 0.8
 			low_color = "#19277F"
 
-			high_brightness = 0.6
+			high_brightness = 0.9
 			high_color = "#2437B5"
 			min = 0.50
 
@@ -122,8 +122,8 @@ var/datum/planet/tyr/planet_tyr = null
 /datum/weather/tyr/clear
 	name = "clear"
 	transition_chances = list(
-		WEATHER_CLEAR = 50,
-		WEATHER_SANDSTORM = 50
+		WEATHER_CLEAR = 80,
+		WEATHER_SANDSTORM = 20
 		)
 	transition_messages = list(
 		"The sky clears up.",
@@ -188,9 +188,9 @@ var/datum/planet/tyr/planet_tyr = null
 	name = "sandstorm"
 	icon_state = "sandstorm"
 	transition_chances = list(
-		WEATHER_CLEAR = 60,
-		WEATHER_SANDSTORM = 20,
-		WEATHER_HEAVYSANDSTORM = 20)
+		WEATHER_CLEAR = 80,
+		WEATHER_SANDSTORM = 10,
+		WEATHER_HEAVYSANDSTORM = 10)
 	transition_messages = list(
 		"The sky is engulfed by sand."
 		)
@@ -225,9 +225,9 @@ var/datum/planet/tyr/planet_tyr = null
 	name = "fierce sandstorm"
 	icon_state = "sandstorm"
 	transition_chances = list(
-		WEATHER_CLEAR = 60,
-		WEATHER_SANDSTORM = 20,
-		WEATHER_HEAVYSANDSTORM = 20)
+		WEATHER_CLEAR = 80,
+		WEATHER_SANDSTORM = 10,
+		WEATHER_HEAVYSANDSTORM = 10)
 	transition_messages = list(
 		"The sky is engulfed by sand."
 		)

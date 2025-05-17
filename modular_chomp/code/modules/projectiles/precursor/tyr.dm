@@ -52,7 +52,7 @@
 /obj/item/projectile/beam/precursor_tyr
 	name = "laser"
 	icon_state = "laser"
-	damage = 20
+	damage = 15
 	armor_penetration = 30
 	penetrating = 20
 	damage_type = BURN

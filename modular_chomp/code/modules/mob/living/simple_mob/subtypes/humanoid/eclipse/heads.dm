@@ -24,6 +24,7 @@
 	has_heal_droid = TRUE
 	specialattackprojectile = /obj/item/projectile/bullet/dragon
 	loot_list = list(/obj/item/gun/energy/flamegun = 100,
+		/obj/item/prop/tyrlore/neonsec = 100,
 		/obj/item/bone/skull = 100
 			)
 
@@ -85,7 +86,8 @@
 		/obj/item/prop/alien/phasecoil = 60,
 		/obj/item/circuitboard/mecha/durand/peripherals = 60,
 		/obj/item/bluespace_harpoon = 10,
-		/obj/item/bone/skull = 100
+		/obj/item/bone/skull = 100,
+		/obj/item/prop/tyrlore/neonsci = 100
 			)
 
 	var/obj/item/shield_projector/shield1 = null
@@ -140,6 +142,11 @@
 	special_attack_max_range = 8
 	projectiletype = /obj/item/projectile/energy/homing_bolt
 	ai_holder_type = /datum/ai_holder/simple_mob/intentional/adv_dark_gygax
+	loot_list = list(/obj/item/prop/tyrlore/baseneon = 100,
+		/obj/item/disposable_teleporter = 100,
+		/obj/item/hand_tele = 10,
+		/obj/item/bone/skull = 100
+			)
 	var/fullshield = 4
 	var/shieldrage = 4
 
@@ -188,7 +195,8 @@
 		/obj/item/material/twohanded/fireaxe  = 60,
 		/obj/item/storage/toolbox/syndicate/powertools = 60,
 		/obj/item/rig/ce = 60,
-		/obj/item/rig_module/teleporter = 5
+		/obj/item/rig_module/teleporter = 5,
+		/obj/item/prop/tyrlore/neonengi = 100
 			)
 
 /mob/living/simple_mob/humanoid/eclipse/head/engineer/Initialize(mapload)
@@ -215,6 +223,7 @@
 		/obj/item/ammo_casing/microbattery/medical/brute3 = 15,
 		/obj/item/ammo_casing/microbattery/medical/burn3 = 15,
 		/obj/item/ammo_casing/microbattery/medical/toxin3 = 15,
+		/obj/item/prop/tyrlore/neonmedi = 100,
 		/obj/item/ammo_casing/microbattery/medical/omni3 = 5
 			)
 

@@ -93,17 +93,22 @@
 	var/last_revive_notification = null // world.time of last notification, used to avoid spamming players from defibs or cloners.
 	var/cleanup_timer // Refernece to a timer that will delete this mob if no client returns
 
-/mob/observer/dead/Initialize(mapload, aghost = FALSE)
-
-	appearance = loc
 	invisibility = INVISIBILITY_OBSERVER
 	layer = BELOW_MOB_LAYER
 	plane = PLANE_GHOSTS
 	alpha = 127
+	sight = SEE_TURFS | SEE_MOBS | SEE_OBJS | SEE_SELF
+	see_invisible = SEE_INVISIBLE_OBSERVER
+
+/mob/observer/dead/Initialize(mapload, aghost = FALSE)
+
+	appearance = loc
+	invisibility = initial(invisibility)
+	layer = initial(layer)
+	plane = initial(plane)
+	alpha = initial(alpha)
 	admin_ghosted = aghost
 
-	sight |= SEE_TURFS | SEE_MOBS | SEE_OBJS | SEE_SELF
-	see_invisible = SEE_INVISIBLE_OBSERVER
 	see_in_dark = world.view //I mean. I don't even know if byond has occlusion culling... but...
 
 	var/turf/T
@@ -597,13 +602,14 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 		M.following_mobs -= src
 	stop_following()
 	observer_mob_list -= src
+	for(var/datum/chunk/ghost/ghost_chunks in visibleChunks)
+		ghost_chunks.remove(src)
 	//ChompEDIT START - deal with weird behavior on qdelled ghosts
 	if(client) //qdelling a ghost with a client = make a new ghost i guess
 		ghostize()
 	if(key) //qdelling a ghost with a key = remove the key first to prevent logging into the GC queue
 		key = null
 	//ChompEDIT END
-
 	return ..()
 
 /mob/Moved(atom/old_loc, direction, forced = FALSE)
@@ -909,7 +915,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 		to_chat(src, span_info("You are now visible!"))
 
 	plane = (plane == PLANE_GHOSTS) ? PLANE_WORLD : PLANE_GHOSTS
-	invisibility = (plane == PLANE_WORLD) ? 0 : INVISIBILITY_OBSERVER
+	invisibility = (plane == PLANE_WORLD) ? INVISIBILITY_NONE : INVISIBILITY_OBSERVER
 
 	// Give the ghost a cult icon which should be visible only to itself
 	toggle_icon("cult")

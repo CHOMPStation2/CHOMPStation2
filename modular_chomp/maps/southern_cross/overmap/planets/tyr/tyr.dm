@@ -124,156 +124,36 @@
 	name = "Base Neon"
 	icon_state = "bluenew"
 	outdoors = OUTDOORS_NO
+	requires_power = FALSE
 
-/area/surface/tyr/eclipse_stronghold/sciencehalls
-	name = "Base Neon - Science Halls"
+/area/surface/tyr/eclipse_stronghold/sec
+	name = "Base Neon - Security Branch"
+	icon_state = "red"
 
-/area/surface/tyr/eclipse_stronghold/creaturestorageA
-	name = "Base Neon - Creature Storage A"
+/area/surface/tyr/eclipse_stronghold/engineering
+	name = "Base Neon - Enginering Branch"
+	icon_state = "yellow"
 
-/area/surface/tyr/eclipse_stronghold/creaturestorageB
-	name = "Base Neon - Creature Storage B"
+/area/surface/tyr/eclipse_stronghold/science
+	name = "Base Neon - Science Branch"
+	icon_state = "purple"
 
-/area/surface/tyr/eclipse_stronghold/toolstorage
-	name = "Base Neon - Tool Storage"
+/area/surface/tyr/eclipse_stronghold/medical
+	name = "Base Neon - Medical Branch"
+	icon_state = "blue2"
 
-/area/surface/tyr/eclipse_stronghold/meatstorage
-	name = "Base Neon - Meat Storage"
+/area/surface/tyr/eclipse_stronghold/command
+	name = "Base Neon - Command Branch"
+	icon_state = "green"
 
-/area/surface/tyr/eclipse_stronghold/slimeresearch
-	name = "Base Neon - Slime Den"
-
-/area/surface/tyr/eclipse_stronghold/breakroom
-	name = "Base Neon - Breakroom"
-
-/area/surface/tyr/eclipse_stronghold/poolroom
-	name = "Base Neon - Poolroom"
-
-/area/surface/tyr/eclipse_stronghold/bathroom
-	name = "Base Neon - Bathroom"
-
-/area/surface/tyr/eclipse_stronghold/showers
-	name = "Base Neon - Shower"
-
-/area/surface/tyr/eclipse_stronghold/researchleadoffice
-	name = "Base Neon - Head Scientist Study"
-
-/area/surface/tyr/eclipse_stronghold/furnace
-	name = "Base Neon - Furnace"
-
-//Medical area
-/area/surface/tyr/eclipse_stronghold/medicalhalls
-	name = "Base Neon - Medical Halls"
-
-/area/surface/tyr/eclipse_stronghold/chemicalgas
-	name = "Base Neon - Distillery Storage"
-
-/area/surface/tyr/eclipse_stronghold/viro
-	name = "Base Neon - Virus Study"
-
-/area/surface/tyr/eclipse_stronghold/genetics
-	name = "Base Neon - Life Study"
-
-/area/surface/tyr/eclipse_stronghold/distillery
-	name = "Base Neon - Distillery"
-
-/area/surface/tyr/eclipse_stronghold/surgery
-	name = "Base Neon - Mass Operations"
-
-/area/surface/tyr/eclipse_stronghold/alienbotany
-	name = "Base Neon - Abnormal Botany"
-
-/area/surface/tyr/eclipse_stronghold/chemista
-	name = "Base Neon - Chemistry"
-
-/area/surface/tyr/eclipse_stronghold/chemistb
-	name = "Base Neon - Sub-Chemistry"
-
-/area/surface/tyr/eclipse_stronghold/cmooffice
-	name = "Base Neon - Lead Medical Officer Restzone"
-
-/area/surface/tyr/eclipse_stronghold/recoveryA
-	name = "Base Neon - Recovery Zone A"
-
-/area/surface/tyr/eclipse_stronghold/recoveryB
-	name = "Base Neon - Recovery Zone B"
-
-/area/surface/tyr/eclipse_stronghold/recoveryC
-	name = "Base Neon - Recovery Zone C"
-
-/area/surface/tyr/eclipse_stronghold/morgue
-	name = "Base Neon - Final Rest Zone"
-
-//sec areas
-/area/surface/tyr/eclipse_stronghold/sechalls
-	name = "Base Neon - Security Halls"
-
-/area/surface/tyr/eclipse_stronghold/breakroom
-	name = "Base Neon - Breaking Room"
-
-/area/surface/tyr/eclipse_stronghold/jailhouse
-	name = "Base Neon - Jailhouse"
-
-/area/surface/tyr/eclipse_stronghold/secoffice
-	name = "Base Neon - Warden Office"
-
-/area/surface/tyr/eclipse_stronghold/stash
-	name = "Base Neon - Obtained Equipment Stash"
-
-//engi areas
-/area/surface/tyr/eclipse_stronghold/engihalls
-	name = "Base Neon - Eletrical Halls"
-
-/area/surface/tyr/eclipse_stronghold/radequipmentA
-	name = "Base Neon - Glowing Equipment A"
-
-/area/surface/tyr/eclipse_stronghold/radequipmentB
-	name = "Base Neon - Glowing Equipment B"
-
-/area/surface/tyr/eclipse_stronghold/engihead
-	name = "Base Neon - Lighting Master Den"
-
-/area/surface/tyr/eclipse_stronghold/powerplantgens
-	name = "Base Neon - Main Generator"
-
-/area/surface/tyr/eclipse_stronghold/powerplantfuel
-	name = "Base Neon - Generator Battery"
-
-/area/surface/tyr/eclipse_stronghold/generatorA
-	name = "Base Neon - Backup Battery A"
-
-/area/surface/tyr/eclipse_stronghold/generatorB
-	name = "Base Neon - Backup Battery B"
-
-/area/surface/tyr/eclipse_stronghold/teslastorage
-	name = "Base Neon - Tesla Storage"
-
-//the cargo misc area
-/area/surface/tyr/eclipse_stronghold/cargohalls
-	name = "Base Neon - Cargo Hall"
-
-/area/surface/tyr/eclipse_stronghold/cafe
-	name = "Base Neon - Cafe"
-
-/area/surface/tyr/eclipse_stronghold/antroom
-	name = "Base Neon - Antroom"
-
-/area/surface/tyr/eclipse_stronghold/miscstorage
-	name = "Base Neon - Misc Storage"
-
-/area/surface/tyr/eclipse_stronghold/filestorage
-	name = "Base Neon - File Storage"
-
-/area/surface/tyr/eclipse_stronghold/docks
-	name = "Base Neon - Docks"
-
-/area/surface/tyr/eclipse_stronghold/generatorC
-	name = "Base Neon - Backup Battery C"
-
+/area/surface/tyr/eclipse_stronghold/cargo
+	name = "Base Neon - Cargo Branch"
+	icon_state = "dark"
 
 /area/surface/tyr/eclipse_stronghold/sectorfinale
 	name = "Precursor Ruins"
-	requires_power = FALSE
+	icon_state = "away"
+
 
 /area/surface/tyr/precursorruins
 	icon_state = "bluenew"
