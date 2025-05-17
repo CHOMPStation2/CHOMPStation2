@@ -7,22 +7,22 @@
 	dir = 9;
 	icon_state = "cliffbuilder"
 	},
-/turf/simulated/floor/outdoors/rocks/caves,
+/turf/simulated/floor/outdoors/rocks/caves/turfpack/sif,
 /area/submap/cave/geyser_3)
 "c" = (
 /obj/structure/cliff/automatic,
-/turf/simulated/floor/outdoors/rocks/caves,
+/turf/simulated/floor/outdoors/rocks/caves/turfpack/sif,
 /area/submap/cave/geyser_3)
 "d" = (
-/obj/random/turf/lava,
-/turf/simulated/floor/outdoors/rocks/caves,
+/obj/random/turf/lava/sif,
+/turf/simulated/floor/outdoors/rocks/caves/turfpack/sif,
 /area/submap/cave/geyser_3)
 "e" = (
 /obj/structure/cliff/automatic{
 	dir = 5;
 	icon_state = "cliffbuilder"
 	},
-/turf/simulated/floor/outdoors/rocks/caves,
+/turf/simulated/floor/outdoors/rocks/caves/turfpack/sif,
 /area/submap/cave/geyser_3)
 "f" = (
 /obj/structure/cliff/automatic/corner{
@@ -32,32 +32,28 @@
 /turf/simulated/floor/outdoors/rocks/caves,
 /area/submap/cave/geyser_3)
 "g" = (
-/turf/simulated/floor/lava{
-	nitrogen = 93.7835;
-	oxygen = 20.7263;
-	temperature = 243.15
-	},
+/turf/simulated/floor/lava/turfpack/sif,
 /area/submap/cave/geyser_3)
 "h" = (
-/turf/simulated/floor/outdoors/rocks/caves,
+/turf/simulated/floor/outdoors/rocks/caves/turfpack/sif,
 /area/submap/cave/geyser_3)
 "i" = (
 /obj/structure/cliff/automatic/corner,
-/turf/simulated/floor/outdoors/rocks/caves,
+/turf/simulated/floor/outdoors/rocks/caves/turfpack/sif,
 /area/submap/cave/geyser_3)
 "j" = (
 /obj/structure/cliff/automatic{
 	dir = 8;
 	icon_state = "cliffbuilder"
 	},
-/turf/simulated/floor/outdoors/rocks/caves,
+/turf/simulated/floor/outdoors/rocks/caves/turfpack/sif,
 /area/submap/cave/geyser_3)
 "k" = (
 /obj/structure/cliff/automatic{
 	dir = 4;
 	icon_state = "cliffbuilder"
 	},
-/turf/simulated/floor/outdoors/rocks/caves,
+/turf/simulated/floor/outdoors/rocks/caves/turfpack/sif,
 /area/submap/cave/geyser_3)
 "l" = (
 /obj/effect/map_effect/interval/effect_emitter/steam,
@@ -71,50 +67,46 @@
 /obj/effect/map_effect/interval/effect_emitter/smoke/fire{
 	interval_upper_bound = 1200
 	},
-/turf/simulated/floor/lava{
-	nitrogen = 93.7835;
-	oxygen = 20.7263;
-	temperature = 243.15
-	},
+/turf/simulated/floor/lava/turfpack/sif,
 /area/submap/cave/geyser_3)
 "m" = (
 /obj/structure/cliff/automatic{
 	dir = 10;
 	icon_state = "cliffbuilder"
 	},
-/turf/simulated/floor/outdoors/rocks/caves,
+/turf/simulated/floor/outdoors/rocks/caves/turfpack/sif,
 /area/submap/cave/geyser_3)
 "n" = (
 /obj/structure/cliff/automatic/corner{
 	dir = 10;
 	icon_state = "cliffbuilder-corner"
 	},
-/turf/simulated/floor/outdoors/rocks/caves,
+/turf/simulated/floor/outdoors/rocks/caves/turfpack/sif,
 /area/submap/cave/geyser_3)
 "o" = (
 /obj/structure/cliff/automatic/corner{
 	dir = 6;
 	icon_state = "cliffbuilder-corner"
 	},
-/turf/simulated/floor/outdoors/rocks/caves,
+/turf/simulated/floor/outdoors/rocks/caves/turfpack/sif,
 /area/submap/cave/geyser_3)
 "p" = (
 /obj/structure/cliff/automatic{
 	dir = 6;
 	icon_state = "cliffbuilder"
 	},
-/turf/simulated/floor/outdoors/rocks/caves,
+/turf/simulated/floor/outdoors/rocks/caves/turfpack/sif,
 /area/submap/cave/geyser_3)
 "q" = (
 /obj/structure/cliff/automatic{
 	dir = 2;
 	icon_state = "cliffbuilder"
 	},
-/turf/simulated/floor/outdoors/rocks/caves,
+/turf/simulated/floor/outdoors/rocks/caves/turfpack/sif,
 /area/submap/cave/geyser_3)
 "r" = (
 /obj/random/multiple/minevault,
-/turf/simulated/floor/outdoors/rocks/caves,
+/turf/simulated/floor/outdoors/rocks/caves/turfpack/sif,
 /area/submap/cave/geyser_3)
 
 (1,1,1) = {"

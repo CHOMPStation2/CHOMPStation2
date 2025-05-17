@@ -1,4 +1,8 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aa" = (
+/obj/effect/floor_decal/corner/grey/diagonal,
+/turf/simulated/floor/concrete/turfpack/sif,
+/area/submap/BountyHunters)
 "aH" = (
 /obj/machinery/button/remote/blast_door{
 	id = "bountycellA"
@@ -18,7 +22,7 @@
 /area/submap/BountyHunters)
 "aZ" = (
 /obj/effect/floor_decal/industrial/warning,
-/turf/simulated/floor/outdoors/dirt,
+/turf/simulated/floor/outdoors/dirt/turfpack/sif,
 /area/submap/BountyHunters)
 "cL" = (
 /obj/structure/table/sifwoodentable,
@@ -36,7 +40,7 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 5
 	},
-/turf/simulated/floor/outdoors/dirt,
+/turf/simulated/floor/outdoors/dirt/turfpack/sif,
 /area/submap/BountyHunters)
 "dR" = (
 /turf/template_noop,
@@ -77,11 +81,11 @@
 	icon_state = "1-8"
 	},
 /obj/effect/floor_decal/corner/grey/diagonal,
-/turf/simulated/floor/concrete,
+/turf/simulated/floor/concrete/turfpack/sif,
 /area/submap/BountyHunters)
 "kx" = (
 /obj/machinery/light/small,
-/turf/simulated/floor/outdoors/dirt,
+/turf/simulated/floor/outdoors/dirt/turfpack/sif,
 /area/submap/BountyHunters)
 "lT" = (
 /obj/structure/railing,
@@ -89,7 +93,7 @@
 	dir = 8
 	},
 /obj/effect/floor_decal/corner/grey/diagonal,
-/turf/simulated/floor/concrete,
+/turf/simulated/floor/concrete/turfpack/sif,
 /area/submap/BountyHunters)
 "mi" = (
 /mob/living/simple_mob/clowns/destroyer,
@@ -190,7 +194,7 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 9
 	},
-/turf/simulated/floor/outdoors/dirt,
+/turf/simulated/floor/outdoors/dirt/turfpack/sif,
 /area/submap/BountyHunters)
 "wc" = (
 /obj/structure/grille,
@@ -252,7 +256,7 @@
 	},
 /obj/machinery/power/port_gen/pacman,
 /obj/effect/floor_decal/corner/grey/diagonal,
-/turf/simulated/floor/concrete,
+/turf/simulated/floor/concrete/turfpack/sif,
 /area/submap/BountyHunters)
 "Gi" = (
 /obj/structure/cable{
@@ -261,7 +265,7 @@
 	},
 /mob/living/simple_mob/humanoid/merc/ranged/sniper,
 /obj/effect/floor_decal/corner/grey/diagonal,
-/turf/simulated/floor/concrete,
+/turf/simulated/floor/concrete/turfpack/sif,
 /area/submap/BountyHunters)
 "Gq" = (
 /obj/structure/table/sifwoodentable,
@@ -299,7 +303,7 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 10
 	},
-/turf/simulated/floor/outdoors/dirt,
+/turf/simulated/floor/outdoors/dirt/turfpack/sif,
 /area/submap/BountyHunters)
 "KN" = (
 /obj/structure/railing,
@@ -307,12 +311,12 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/corner/grey/diagonal,
-/turf/simulated/floor/concrete,
+/turf/simulated/floor/concrete/turfpack/sif,
 /area/submap/BountyHunters)
 "LV" = (
 /obj/effect/floor_decal/corner/grey/diagonal,
 /obj/effect/floor_decal/corner/grey/diagonal,
-/turf/simulated/floor/concrete,
+/turf/simulated/floor/concrete/turfpack/sif,
 /area/submap/BountyHunters)
 "LX" = (
 /obj/structure/table/steel,
@@ -348,7 +352,7 @@
 "NE" = (
 /obj/structure/railing,
 /obj/effect/floor_decal/corner/grey/diagonal,
-/turf/simulated/floor/concrete,
+/turf/simulated/floor/concrete/turfpack/sif,
 /area/submap/BountyHunters)
 "NZ" = (
 /obj/structure/grille,
@@ -375,7 +379,7 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
 	},
-/turf/simulated/floor/outdoors/dirt,
+/turf/simulated/floor/outdoors/dirt/turfpack/sif,
 /area/submap/BountyHunters)
 "PP" = (
 /obj/machinery/power/apc{
@@ -388,13 +392,13 @@
 	icon_state = "0-8"
 	},
 /obj/effect/floor_decal/corner/grey/diagonal,
-/turf/simulated/floor/concrete,
+/turf/simulated/floor/concrete/turfpack/sif,
 /area/submap/BountyHunters)
 "QW" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
 	},
-/turf/simulated/floor/outdoors/dirt,
+/turf/simulated/floor/outdoors/dirt/turfpack/sif,
 /area/submap/BountyHunters)
 "QX" = (
 /mob/living/simple_mob/humanoid/cultist/noodle,
@@ -423,7 +427,7 @@
 	icon_state = "4-8"
 	},
 /obj/effect/floor_decal/corner/grey/diagonal,
-/turf/simulated/floor/concrete,
+/turf/simulated/floor/concrete/turfpack/sif,
 /area/submap/BountyHunters)
 "Tc" = (
 /obj/machinery/power/terminal{
@@ -434,7 +438,7 @@
 	icon_state = "0-4"
 	},
 /obj/effect/floor_decal/corner/grey/diagonal,
-/turf/simulated/floor/concrete,
+/turf/simulated/floor/concrete/turfpack/sif,
 /area/submap/BountyHunters)
 "Uc" = (
 /obj/machinery/door/blast/regular{
@@ -468,7 +472,7 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
 	},
-/turf/simulated/floor/outdoors/dirt,
+/turf/simulated/floor/outdoors/dirt/turfpack/sif,
 /area/submap/BountyHunters)
 "Zl" = (
 /obj/effect/floor_decal/industrial/warning{
@@ -477,10 +481,10 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 6
 	},
-/turf/simulated/floor/outdoors/dirt,
+/turf/simulated/floor/outdoors/dirt/turfpack/sif,
 /area/submap/BountyHunters)
 "Zm" = (
-/turf/simulated/floor/outdoors/dirt,
+/turf/simulated/floor/outdoors/dirt/turfpack/sif,
 /area/submap/BountyHunters)
 
 (1,1,1) = {"
@@ -609,9 +613,9 @@ zl
 QY
 qG
 pn
-qG
-qG
-qG
+aa
+aa
+aa
 zl
 VU
 VU
@@ -636,9 +640,9 @@ xM
 qG
 qG
 zl
-qG
-qG
-qG
+aa
+aa
+aa
 lT
 VU
 VU
@@ -665,7 +669,7 @@ qG
 zl
 SR
 Tc
-qG
+aa
 NE
 VU
 VU
@@ -692,7 +696,7 @@ RC
 zl
 PP
 Gi
-qG
+aa
 NE
 VU
 VU
@@ -935,7 +939,7 @@ qG
 zl
 SR
 Tc
-qG
+aa
 lT
 VU
 VU
@@ -962,7 +966,7 @@ RC
 zl
 PP
 Gi
-qG
+aa
 NE
 VU
 VU
@@ -989,7 +993,7 @@ qG
 zl
 FN
 jO
-qG
+aa
 NE
 VU
 VU
@@ -1014,9 +1018,9 @@ fM
 qG
 qG
 zl
-qG
-qG
-qG
+aa
+aa
+aa
 KN
 VU
 VU
@@ -1041,9 +1045,9 @@ zl
 tU
 qG
 pn
-qG
-qG
-qG
+aa
+aa
+aa
 zl
 VU
 VU
