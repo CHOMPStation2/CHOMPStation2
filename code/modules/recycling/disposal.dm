@@ -535,25 +535,15 @@
 		H.vent_gas(loc)
 		qdel(H)
 
+
 /obj/machinery/disposal/hitby(atom/movable/AM)
 	. = ..()
-	//CHOMPEdit: fixes thrown disposal dunking with mobs~ - Reo
-	if((istype(AM, /obj/item) || istype(AM, /mob/living)) && !istype(AM, /obj/item/projectile))
+	if(istype(AM, /obj/item) && !istype(AM, /obj/item/projectile))
 		if(prob(75))
 			AM.forceMove(src)
-			if(istype(AM, /obj/item/holder/micro) || istype(AM, /mob/living))
-				log_and_message_admins("[AM] was thrown into \the [src]", null)
-				visible_message("\The [AM] lands in \the [src]!")
-				//flush() //Away they go! //Uncomment this for proper autoflush. Compromising with autopull to avoid possible disposal dunking abuse
-				//flush = 1 //1984. No autoflush, no autopull. Leaving this here incase someone wants to revisit this in the future when the mood on this changes
-			else
-				visible_message("\The [AM] lands in \the [src].")
-			update_icon() //Yogs did this, so it probably doesnt hurt..
+			visible_message("\The [AM] lands in \the [src].")
 		else
 			visible_message("\The [AM] bounces off of \the [src]'s rim!")
-			return ..() //...Yogs also did this! it's probably good to stop it from flying after clonking the thing. Also prevents trying to insert the mob repeatedly due to it the throw not ending.
-	return ..()
-	//CHOMPEdit End.
 
 	if(istype(AM,/mob/living))
 		if(prob(75))
