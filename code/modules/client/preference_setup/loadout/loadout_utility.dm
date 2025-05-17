@@ -11,7 +11,11 @@
 /datum/gear/utility/tts_device
 	display_name = "text to speech device"
 	path = /obj/item/text_to_speech
+<<<<<<< HEAD
 	cost = 0 //Not extremely expensive, but it's useful for mute chracters. //CHOMPEDIT: 3 points is pretty high for a pure fluff piece, make it 0
+=======
+	cost = 0
+>>>>>>> 8b8b12a2a1 (Makes TTS device free (#17718))
 
 /datum/gear/utility/communicator
 	display_name = "communicator selection"
