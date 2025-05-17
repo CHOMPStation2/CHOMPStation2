@@ -4,11 +4,7 @@
 	icon_state = "mecha_scatter"
 	equip_cooldown = 20
 	projectile = /obj/item/projectile/bullet/pellet/shotgun/flak
-<<<<<<< HEAD
-	fire_sound = 'sound/weapons/LBX10.ogg'
-=======
 	fire_sound = 'sound/weapons/gunshot_shotgun.ogg'
->>>>>>> 86a21e9578 (Properly paths sound files and folders (#17604))
 	fire_volume = 80
 	projectiles = 40
 	projectiles_per_shot = 4
