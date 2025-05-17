@@ -142,15 +142,6 @@
 
 	user.drop_item()
 	if(I)
-<<<<<<< HEAD
-		if(istype(I, /obj/item/holder/micro))
-			log_and_message_admins("placed [I.name] inside \the [src]", user)
-			var/obj/item/holder/H = I
-			H.held_mob.forceMove(src)
-			qdel(I)
-		else
-			I.forceMove(src)
-=======
 		if(istype(I, /obj/item/holder))
 			var/obj/item/holder/holder = I
 			var/mob/victim = holder.held_mob
@@ -159,7 +150,6 @@
 			victim.forceMove(src)
 
 		I.forceMove(src)
->>>>>>> 8f49180d34 (Fix mob holders not being able to be thrown in, fix mob holders not being able to be placed in (#17547))
 
 	user.visible_message("[user] places \the [I] into the [src].",  "You place \the [I] into the [src].","Ca-Clunk")
 	update()
