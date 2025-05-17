@@ -48,20 +48,20 @@
 //Damage values back to old values for combat refactor walkback, keeping simplemob bonus damage.
 /obj/item/projectile/beam/phaser //The "medium" phaser beam.
 	//damage = 10
-	SA_bonus_damage = 10
+	mob_bonus_damage = 10
 
 /obj/item/projectile/beam/phaser/light
 	//damage = 5
-	SA_bonus_damage = 5
+	mob_bonus_damage = 5
 
 /obj/item/projectile/beam/phaser/heavy
 	//damage = 12
-	SA_bonus_damage = 12
+	mob_bonus_damage = 12
 
 
 /obj/item/projectile/beam/phaser/heavy/cannon
 	//damage = 15
-	SA_bonus_damage = 15
+	mob_bonus_damage = 15
 
 
 /obj/item/projectile/scatter/laser

@@ -89,13 +89,6 @@
 		/obj/item/rig_module/datajack
 		)
 
-<<<<<<< HEAD
-/obj/item/rig/ert/assetprotection/antiareli
-	name = "Heavy Asset Protection Special Agent control module"
-	desc = "A heavy suit worn by the highest level of the highest level of Asset Protection, don't mess with the person wearing this. Armoured and space ready and protected against almost fucking everything"
-	armor = list(melee = 80, bullet = 80, laser = 80,energy = 80, bomb = 100, bio = 100, rad = 100)
-	siemens_coefficient= 0
-=======
 /obj/item/rig/ert/janitor
 	name = "ERT-J suit control module"
 	desc = "A suit worn by the janitorial division of an Emergency Response Team. Has purple highlights. Armoured and space ready."
@@ -106,4 +99,3 @@
 		/obj/item/rig_module/maneuvering_jets,
 		/obj/item/rig_module/cleaner_launcher,
 		)
->>>>>>> f40bf1f7e4 (Vendor and Phasegun adjustments (#17647))
