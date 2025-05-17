@@ -180,12 +180,6 @@ var/global/list/ore_reagents = list( //have a number of reageents divisible by R
 	user.remove_from_mob(O)
 	O.loc = src
 	holdingitems += O
-	//CHOMPedit start
-	if(istype(O,/obj/item/stack/material/supermatter))
-		var/obj/item/stack/material/supermatter/S = O
-		set_light(l_range = max(1, S.get_amount()/10), l_power = max(1, S.get_amount()/10), l_color = "#8A8A00")
-		addtimer(CALLBACK(src, PROC_REF(puny_protons)), 30 SECONDS)
-	//CHOMPedit end
 	return 0
 
 /obj/machinery/reagentgrinder/AltClick(mob/user)
@@ -258,14 +252,6 @@ var/global/list/ore_reagents = list( //have a number of reageents divisible by R
 
 	// Process.
 	for (var/obj/item/O in holdingitems)
-		//CHOMPedit start
-		if(istype(O,/obj/item/stack/material/supermatter))
-			var/regrets = 0
-			for(var/obj/item/stack/material/supermatter/S in holdingitems)
-				regrets += S.get_amount()
-			puny_protons(regrets)
-			return
-		//CHOMPedit end
 
 		var/remaining_volume = beaker.reagents.maximum_volume - beaker.reagents.total_volume
 		if(remaining_volume <= 0)
@@ -324,24 +310,3 @@ var/global/list/ore_reagents = list( //have a number of reageents divisible by R
 		beaker = new_beaker
 	update_icon()
 	return TRUE
-
-// CHOMPedit start: Repurposed coffee grinders and supermatter do not mix.
-/obj/machinery/reagentgrinder/proc/puny_protons(regrets = 0)
-	set_light(0)
-	if(regrets > 0) // If you thought grinding supermatter would end well. Values taken from ex_act() for the supermatter stacks.
-		SSradiation.radiate(get_turf(src), 15 + regrets * 4)
-		explosion(get_turf(src), round(regrets / 12) , round(regrets / 6), round(regrets / 3), round(regrets / 25))
-		qdel(src)
-		return
-
-	else // If you added supermatter but didn't try grinding it, or somehow this is negative.
-		for(var/obj/item/stack/material/supermatter/S in holdingitems)
-			S.loc = src.loc
-			holdingitems -= S
-			regrets += S.get_amount()
-		SSradiation.radiate(get_turf(src), 15 + regrets)
-		visible_message(span_warning("\The [src] glows brightly, bursting into flames and flashing into ash."),\
-		span_warning("You hear an unearthly shriek, burning heat washing over you."))
-		new /obj/effect/decal/cleanable/ash(src.loc)
-		qdel(src)
-// CHOMPedit end
