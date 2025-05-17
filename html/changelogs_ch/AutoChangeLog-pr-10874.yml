@@ -1,6 +1,0 @@
-author: "Diana"
-delete-after: True
-changes:
-  - balance: "Lightweight saddlebags now properly hold normal storage amounts"
-  - balance: "Lightweight saddlebags now only cost 1 loadout point."
-  - balance: "taur duty vest (backpack) (Heavy) now costs 2 loadout points."

@@ -103,3 +103,29 @@
   - server: Ref Track now goes => .log. Proper ref tracking dm ticked in the .dme
   Kashargul & Diana:
   - bugfix: Fixes an error where nulls would enter the player list.
+2025-05-17:
+  Aphast:
+  - rscadd: Any species can now take the 'drippy' trait, previously custom only
+  CHOMPStation2StaffMirrorBot:
+  - refactor: Posters can now use downstream overrides to use their own dmis
+  - code_imp: adds a unit-test to prevent illegal icons and icon_states in poster
+      definitions
+  - bugfix: Fixes the glamour drain ability showing the "contact has been broken"
+      message when it is successful.
+  - code_imp: RemoveDisease proc now uses LAZYREMOVE
+  - code_imp: HasResistance proc now uses LAZYFIND
+  - refactor: Photosynthesis code moved to component
+  - refactor: complete rebuild of hallucination code to use components and more safely
+      handled client images
+  - refactor: Overmap shuttle star movement overlay is not controlled by a subsystem
+  Diana:
+  - bugfix: Endurance traits now are properly calculated when it comes to death &
+      crit.
+  - bugfix: Xenochimera can no longer move while dead
+  - balance: Lightweight saddlebags now properly hold normal storage amounts
+  - balance: Lightweight saddlebags now only cost 1 loadout point.
+  - balance: taur duty vest (backpack) (Heavy) now costs 2 loadout points.
+  - rscadd: New Waddle mechanic that can be turned on via 'Character' under Preferences.
+      Allows you to have animated movement.
+  - bugfix: Teshari HoS cloak is now selectable
+  - bugfix: Teshari captain cloak now selects properly
