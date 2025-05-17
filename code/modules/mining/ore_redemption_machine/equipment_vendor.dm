@@ -15,11 +15,7 @@
 	var/icon_vend = "minevend-vend"
 	circuit = /obj/item/circuitboard/mining_equipment_vendor
 	var/obj/item/card/id/inserted_id
-<<<<<<< HEAD
-	var/list/prize_list // Initialized just below! (if you're wondering why - check CONTRIBUTING.md, look for: "hidden" init proc)
-=======
-	var/list/prize_list = list() //Generated during Initialize
->>>>>>> f40bf1f7e4 (Vendor and Phasegun adjustments (#17647))
+	var/list/prize_list //Generated during Initialize
 	var/dirty_items = FALSE // Used to refresh the static/redundant data in case the machine gets VV'd
 
 /datum/data/mining_equipment
@@ -41,7 +37,7 @@
 		EQUIPMENT("Defense Equipment - Razor Drone Deployer",	/obj/item/grenade/spawnergrenade/manhacks/station/locked,	1000),
 		EQUIPMENT("Defense Equipment - Sentry Drone Deployer",	/obj/item/grenade/spawnergrenade/ward,						1500),
 		EQUIPMENT("Defense Equipment - Smoke Bomb",				/obj/item/grenade/smokebomb,								100),
-		EQUIPMENT("Defense Equipment - Phase Pistol",			/obj/item/gun/energy/phasegun/pistol,						1500),
+		EQUIPMENT("Defense Equipment - Phase Pistol",			/obj/item/gun/energy/locked/phasegun/pistol,				1500), //CHOMPEDIT
 		EQUIPMENT("Hybrid Equipment - Proto-Kinetic Dagger",	/obj/item/kinetic_crusher/machete/dagger,					500),
 		EQUIPMENT("Hybrid Equipment - Proto-Kinetic Machete",	/obj/item/kinetic_crusher/machete,							1000),
 		EQUIPMENT("Hybrid Equipment - Proto-Kinetic Gauntlets",	/obj/item/kinetic_crusher/machete/gauntlets,				1000), //eh this is two-handed so whatever, same price for slight dmg increase!
@@ -124,25 +120,6 @@
 		EQUIPMENT("Hardsuit - Proto-Kinetic Gauntlets",		/obj/item/rig_module/gauntlets,									2000),
 	)
 	prize_list["Miscellaneous"] = list(
-<<<<<<< HEAD
-		EQUIPMENT(REAGENT_ABSINTHE,				/obj/item/reagent_containers/food/drinks/bottle/absinthe,	125),
-		EQUIPMENT("Cigar",						/obj/item/clothing/mask/smokable/cigarette/cigar/havana,			150),
-		EQUIPMENT("Digital Tablet - Standard",	/obj/item/modular_computer/tablet/preset/custom_loadout/standard,	500),
-		EQUIPMENT("Digital Tablet - Advanced",	/obj/item/modular_computer/tablet/preset/custom_loadout/advanced,	1000),
-		EQUIPMENT("Laser Pointer",				/obj/item/laser_pointer,										900),
-		EQUIPMENT("Luxury Shelter Capsule",		/obj/item/survivalcapsule/luxury,							3100),
-		EQUIPMENT("Bar Shelter Capsule",		/obj/item/survivalcapsule/luxurybar,							10000),
-		EQUIPMENT("Plush Toy",					/obj/random/plushie,												300),
-		EQUIPMENT("Soap",						/obj/item/soap/nanotrasen,									200),
-		EQUIPMENT("Thalers - 100",				/obj/item/spacecash/c100,									1000),
-		EQUIPMENT("Thalers - 1000",				/obj/item/spacecash/c1000,									10000),
-		EQUIPMENT("Umbrella",					/obj/item/melee/umbrella/random,								200),
-		EQUIPMENT(REAGENT_WHISKEY,				/obj/item/reagent_containers/food/drinks/bottle/whiskey,		125),
-		EQUIPMENT("Mining PSG Upgrade Disk",	/obj/item/borg/upgrade/shield_upgrade,								2500),
-	//CHOMPedit Start
-		EQUIPMENT("Mining PSG", 				/obj/item/personal_shield_generator/belt/mining/loaded,      2000),
-	//CHOMPedit End
-=======
 		EQUIPMENT(REAGENT_ABSINTHE,				/obj/item/reagent_containers/food/drinks/bottle/absinthe,					125),
 		EQUIPMENT("Cigar",						/obj/item/clothing/mask/smokable/cigarette/cigar/havana,					150),
 		EQUIPMENT("Digital Tablet - Standard",	/obj/item/modular_computer/tablet/preset/custom_loadout/standard,			500),
@@ -156,7 +133,6 @@
 		EQUIPMENT("Thalers - 1000",				/obj/item/spacecash/c1000,													10000),
 		EQUIPMENT("Umbrella",					/obj/item/melee/umbrella/random,											200),
 		EQUIPMENT(REAGENT_WHISKEY,				/obj/item/reagent_containers/food/drinks/bottle/whiskey,					125),
->>>>>>> f40bf1f7e4 (Vendor and Phasegun adjustments (#17647))
 	)
 	prize_list["Extra"] = list() // Used in child vendors
 

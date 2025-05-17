@@ -2475,11 +2475,7 @@
 #include "code\modules\clothing\spacesuits\rig\suits\pmc.dm"
 #include "code\modules\clothing\spacesuits\rig\suits\robotics.dm"
 #include "code\modules\clothing\spacesuits\rig\suits\station.dm"
-<<<<<<< HEAD
 #include "code\modules\clothing\spacesuits\rig\suits\station_ch.dm"
-#include "code\modules\clothing\spacesuits\rig\suits\station_vr.dm"
-=======
->>>>>>> f40bf1f7e4 (Vendor and Phasegun adjustments (#17647))
 #include "code\modules\clothing\spacesuits\void\ert_vr.dm"
 #include "code\modules\clothing\spacesuits\void\event.dm"
 #include "code\modules\clothing\spacesuits\void\event_vr.dm"
