@@ -129,11 +129,7 @@
 
 	embed_chance = 0	//Base chance for a projectile to embed
 
-<<<<<<< HEAD
-	var/fire_sound = 'sound/weapons/Gunshot1.ogg' // Can be overriden in gun.dm's fire_sound var. It can also be null but I don't know why you'd ever want to do that. -Ace
-=======
 	var/fire_sound = 'sound/weapons/gunshot_old.ogg' // Can be overriden in gun.dm's fire_sound var. It can also be null but I don't know why you'd ever want to do that. -Ace
->>>>>>> 86a21e9578 (Properly paths sound files and folders (#17604))
 
 	var/vacuum_traversal = TRUE //Determines if the projectile can exist in vacuum, if false, the projectile will be deleted if it enters vacuum.
 

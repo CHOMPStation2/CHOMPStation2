@@ -132,12 +132,8 @@
 
 /obj/item/projectile/bullet/shotgun
 	name = "slug"
-<<<<<<< HEAD
-	icon_state = "bullet_chonk" //Ywedit
-	fire_sound = 'sound/weapons/Gunshot_shotgun.ogg'
-=======
+	icon_state = "bullet_chonk" //CHOMPEdit
 	fire_sound = 'sound/weapons/gunshot_shotgun.ogg'
->>>>>>> 86a21e9578 (Properly paths sound files and folders (#17604))
 	damage = 50
 	armor_penetration = 20
 	hud_state = "shotgun_slug"
