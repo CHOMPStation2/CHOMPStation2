@@ -1,4 +1,4 @@
-// Collection of Casino specific clothing and accessories primarily meant for casino crew/volunteers and post-event temporary items part of volunteer rewards/prizes - Shadowfire117 
+// Collection of Casino specific clothing and accessories primarily meant for casino crew/volunteers and post-event temporary items part of volunteer rewards/prizes - Shadowfire117
 
 /obj/item/clothing/accessory/armband/casino
 	name = "casino crew armband"
