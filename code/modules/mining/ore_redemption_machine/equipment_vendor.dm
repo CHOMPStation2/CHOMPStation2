@@ -15,11 +15,7 @@
 	var/icon_vend = "minevend-vend"
 	circuit = /obj/item/circuitboard/mining_equipment_vendor
 	var/obj/item/card/id/inserted_id
-<<<<<<< HEAD
-	var/list/prize_list // Initialized just below! (if you're wondering why - check CONTRIBUTING.md, look for: "hidden" init proc)
-=======
 	var/list/prize_list //Generated during Initialize
->>>>>>> 47110b04e5 (Makes gibbing 75% more efficient! (#17719))
 	var/dirty_items = FALSE // Used to refresh the static/redundant data in case the machine gets VV'd
 
 /datum/data/mining_equipment
