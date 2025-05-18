@@ -17,14 +17,6 @@
 	..()
 	add_verb(H,/mob/living/proc/succubus_bite) //CHOMPEdit TGPanel
 
-/datum/trait/neutral/nutritiongrow/apply(var/datum/species/S,var/mob/living/carbon/human/H)
-	..()
-	add_verb(H,/mob/living/carbon/proc/toggle_growth) //CHOMPEdit TGPanel
-
-/datum/trait/neutral/nutritiongrow/apply(var/datum/species/S,var/mob/living/carbon/human/H)
-	..()
-	add_verb(H,/mob/living/carbon/proc/toggle_shrinking) //CHOMPEdit TGPanel
-
 /datum/trait/neutral/singularity_metabolism
 	name = "Metabolism, Singularity"
 	desc = "You are insanely hungry. You can seemingly never get enough to eat. Perhaps you had a singularity as an ancestor, or maybe one is currently living inside of your gut."
