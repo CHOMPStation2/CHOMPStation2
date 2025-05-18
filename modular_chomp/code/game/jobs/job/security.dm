@@ -1,6 +1,6 @@
 /datum/job/hos
 	camp_protection = TRUE
-
+/*
 /datum/job/brigphysician
 	title = JOB_BRIG_PHYSICIAN
 	flag = BRIGPHYS
@@ -40,3 +40,4 @@
 
 /datum/alt_title/detention_med
 	title = JOB_ALT_DETENTION_HEALTH_OFFICER
+*/
