@@ -1,0 +1,5 @@
+author: "CHOMPStation2StaffMirrorBot"
+delete-after: True
+changes:
+  - rscadd: "Nutrition resizing traits, disabled on virgo"
+  - refactor: "Moved nutrition resizing code to components"
