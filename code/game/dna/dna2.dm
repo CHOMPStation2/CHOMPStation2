@@ -194,6 +194,10 @@ GLOBAL_LIST_EMPTY_TYPED(dna_genes_bad, /datum/gene/trait)
 	src.gender_specific_species_sounds = character.species.gender_specific_species_sounds
 	src.species_sounds_male = character.species.species_sounds_male
 	src.species_sounds_female = character.species.species_sounds_female
+	src.grad_style = character.grad_style
+	src.r_grad = character.r_grad
+	src.g_grad = character.g_grad
+	src.b_grad = character.b_grad
 	src.species_traits = character.species.traits.Copy()
 	src.custom_say = character.custom_say
 	src.custom_ask = character.custom_ask
