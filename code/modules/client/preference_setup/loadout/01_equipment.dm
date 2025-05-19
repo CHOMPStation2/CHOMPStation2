@@ -147,7 +147,7 @@ var/global/list/valid_ringtones = list(
 	data["pda_type"] = pdachoicelist[pref.pdachoice]
 	data["communicator_visibility"] = pref.communicator_visibility // boolean
 	data["ringtone"] = pref.ringtone
-	data["shoes"] = pref.shoe_hater
+	// data["shoes"] = pref.shoe_hater
 	data["jacket"] = pref.no_jacket
 
 	return data
@@ -247,9 +247,9 @@ var/global/list/valid_ringtones = list(
 				pref.ringtone = choice
 			return TOPIC_REFRESH
 
-		if("toggle_shoes")
-			pref.shoe_hater = !pref.shoe_hater
-			return TOPIC_REFRESH
+		// if("toggle_shoes")
+		// 	pref.shoe_hater = !pref.shoe_hater
+		// 	return TOPIC_REFRESH
 
 		if("toggle_jacket")
 			pref.no_jacket = !pref.no_jacket

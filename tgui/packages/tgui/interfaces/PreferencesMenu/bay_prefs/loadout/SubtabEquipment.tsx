@@ -20,7 +20,7 @@ export const SubtabEquipment = (props: {
     pda_type,
     communicator_visibility,
     ringtone,
-    shoes,
+    // shoes,
     jacket,
   } = data;
 
@@ -70,11 +70,11 @@ export const SubtabEquipment = (props: {
               {ringtone || 'None'}
             </Button>
           </LabeledList.Item>
-          <LabeledList.Item label="Spawn With Shoes">
+          {/* <LabeledList.Item label="Spawn With Shoes">
             <Button onClick={() => act('toggle_shoes')}>
               {shoes ? 'Yes' : 'No'}
             </Button>
-          </LabeledList.Item>
+          </LabeledList.Item> */}
           <LabeledList.Item label="Spawn With Jacket">
             <Button onClick={() => act('toggle_jacket')}>
               {jacket ? 'Yes' : 'No'}
