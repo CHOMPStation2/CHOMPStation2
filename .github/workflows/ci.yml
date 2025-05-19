@@ -163,7 +163,7 @@ jobs:
       - name: Compile POIs
         run: tools/ci/compile_and_run.sh
         env:
-          EXTRA_ARGS: "-DMAP_TEST"
+          EXTRA_ARGS: "-DMAP_TEST -D${{ matrix.map }}"
           RUN: "0"
       - name: Compile away missions
         run: tools/ci/compile_and_run.sh
