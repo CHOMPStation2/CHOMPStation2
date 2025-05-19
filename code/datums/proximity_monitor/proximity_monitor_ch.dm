@@ -86,12 +86,10 @@
 /datum/proximity_monitor/mobspawner
 
 /datum/proximity_monitor/mobspawner/on_uncrossed(atom/source, atom/movable/AM, atom/new_loc)
-	SIGNAL_HANDLER
 	var/obj/structure/mob_spawner/scanner/scanner = host
 	scanner.CheckProximity(AM,new_loc)
 
 /datum/proximity_monitor/mobspawner/on_entered(atom/source, atom/movable/arrived)
-	SIGNAL_HANDLER
 	var/obj/structure/mob_spawner/scanner/scanner = host
 	if(source != host)
 		scanner.NewProximity(arrived)
