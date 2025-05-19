@@ -285,7 +285,6 @@
 		dat += "<br>"
 	if(ishuman(M))
 		var/mob/living/carbon/human/H = M
-<<<<<<< HEAD
 		//CHOMPedit begin - malignant organs
 		for(var/obj/item/organ/internal/io in H.internal_organs)
 			if(istype(io,/obj/item/organ/internal/appendix))
@@ -309,7 +308,6 @@
 					dat += span_warning("Anatomical irregularities detected in subject.")
 					dat += "<br>"
 		//CHOMPedit end
-=======
 		// Addictions
 		if(H.get_addiction_to_reagent(REAGENT_ID_ASUSTENANCE) > 0)
 			dat += span_warning("Biologically unstable, requires [REAGENT_ASUSTENANCE] to function properly.")
@@ -333,7 +331,6 @@
 					dat += "<br>"
 					break
 		// Appendix
->>>>>>> c213dbcd21 (Reagent Addictions (#17498))
 		for(var/obj/item/organ/internal/appendix/a in H.internal_organs)
 			var/severity = ""
 			if(a.inflamed > 3)
