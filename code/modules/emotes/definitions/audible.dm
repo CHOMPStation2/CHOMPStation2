@@ -157,7 +157,7 @@
 	key = "bhiss"
 	emote_message_3p_target = "hisses at TARGET."
 	emote_message_3p = "hisses."
-	emote_sound = 'sound/voice/BugHiss.ogg'
+	emote_sound = 'sound/voice/bughiss.ogg'
 
 /decl/emote/audible/bug_buzz
 	key = "bbuzz"
@@ -167,7 +167,7 @@
 /decl/emote/audible/bug_chitter
 	key = "chitter"
 	emote_message_3p = "chitters."
-	emote_sound = 'sound/voice/Bug.ogg'
+	emote_sound = 'sound/voice/bug.ogg'
 
 /decl/emote/audible/roar
 	key = "roar"
