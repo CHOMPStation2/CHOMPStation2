@@ -143,3 +143,12 @@
 2025-05-19:
   Guti:
   - qol: Adjusted the vomit proc.
+2025-05-20:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: mobs can be extinguished by hand when beneath paincrit threshold
+  - code_imp: Prepared signal handling code for future work
+  - rscadd: Nutrition resizing traits, disabled on virgo
+  - refactor: Moved nutrition resizing code to components
+  Diana:
+  - qol: TTS device now costs 0 points
+  - code_imp: Gibbing is now 75% FASTER!!!
