@@ -152,3 +152,16 @@
   Diana:
   - qol: TTS device now costs 0 points
   - code_imp: Gibbing is now 75% FASTER!!!
+2025-05-21:
+  CHOMPStation2StaffMirrorBot:
+  - image: Fox taurs now have belly sprites.
+  - code_imp: tgui-core 3.2.0
+  - image: added new smolraptors (sec blue, sec red, syndicate); "pk" sec white smolraptor
+      moved to crisis
+  - image: new rest mode for smolraptors
+  - qol: Changes a few descriptions of eating to be more neutral, and a bit less gross
+      and discouraging to people who like stuffing.
+  Diana:
+  - rscdel: Supermatter is no longer obtainable via xenoarcheology & xenobotany
+  TheCaramelion:
+  - rscdel: Disabled SecMed
