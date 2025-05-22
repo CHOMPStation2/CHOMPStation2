@@ -1757,6 +1757,7 @@
 /area/survivalpod)
 "adL" = (
 /obj/structure/table/marble,
+/obj/item/reagent_containers/food/snacks/cheesenachos,
 /turf/simulated/floor/carpet/oracarpet,
 /area/survivalpod)
 "adM" = (
