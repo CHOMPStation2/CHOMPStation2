@@ -13,6 +13,7 @@ var/list/preferences_datums = list()
 	var/muted = 0
 	var/last_ip
 	var/last_id
+	var/saved_notification = FALSE
 
 	//game-preferences
 	var/lastchangelog = ""				//Saved changlog filesize to detect if there was a change // CHOMPAdd
