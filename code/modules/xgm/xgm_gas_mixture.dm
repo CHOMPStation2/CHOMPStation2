@@ -42,7 +42,7 @@
 
 	if(moles > 0 && abs(temperature - temp) > MINIMUM_TEMPERATURE_DELTA_TO_CONSIDER)
 		var/self_heat_capacity = heat_capacity()
-		var/giver_heat_capacity = gas_data.specific_heat[gasid] * moles
+		var/giver_heat_capacity = GLOB.gas_data.specific_heat[gasid] * moles
 		var/combined_heat_capacity = giver_heat_capacity + self_heat_capacity
 		if(combined_heat_capacity != 0)
 			temperature = (temp * giver_heat_capacity + temperature * self_heat_capacity) / combined_heat_capacity
@@ -129,7 +129,7 @@
 /datum/gas_mixture/proc/heat_capacity()
 	. = 0
 	for(var/g in gas)
-		. += gas_data.specific_heat[g] * gas[g]
+		. += GLOB.gas_data.specific_heat[g] * gas[g]
 	. *= group_multiplier
 
 
@@ -184,8 +184,8 @@
 		return SPECIFIC_ENTROPY_VACUUM	//that gas isn't here
 
 	//group_multiplier gets divided out in volume/gas[gasid] - also, V/(m*T) = R/(partial pressure)
-	var/molar_mass = gas_data.molar_mass[gasid]
-	var/specific_heat = gas_data.specific_heat[gasid]
+	var/molar_mass = GLOB.gas_data.molar_mass[gasid]
+	var/specific_heat = GLOB.gas_data.specific_heat[gasid]
 	return R_IDEAL_GAS_EQUATION * ( log( (IDEAL_GAS_ENTROPY_CONSTANT*volume/(gas[gasid] * temperature)) * (molar_mass*specific_heat*temperature)**(2/3) + 1 ) +  15 )
 
 	//alternative, simpler equation
@@ -265,13 +265,13 @@
 
 	var/sum = 0
 	for(var/g in gas)
-		if(gas_data.flags[g] & flag)
+		if(GLOB.gas_data.flags[g] & flag)
 			sum += gas[g]
 
 	var/datum/gas_mixture/removed = new
 
 	for(var/g in gas)
-		if(gas_data.flags[g] & flag)
+		if(GLOB.gas_data.flags[g] & flag)
 			removed.gas[g] = QUANTIZE((gas[g] / sum) * amount)
 			gas[g] -= removed.gas[g] / group_multiplier
 
@@ -285,7 +285,7 @@
 /datum/gas_mixture/proc/get_by_flag(flag)
 	. = 0
 	for(var/g in gas)
-		if(gas_data.flags[g] & flag)
+		if(GLOB.gas_data.flags[g] & flag)
 			. += gas[g]
 
 //Copies gas and temperature from another gas_mixture.
@@ -341,6 +341,7 @@
 //Rechecks the gas_mixture and adjusts the graphic list if needed.
 //Two lists can be passed by reference if you need know specifically which graphics were added and removed.
 /datum/gas_mixture/proc/check_tile_graphic(list/graphic_add = null, list/graphic_remove = null)
+<<<<<<< HEAD
 	// var/list/cur_graphic = graphic // Cache for sanic speed
 
 	for(var/obj/effect/gas_overlay/O in graphic)
@@ -350,11 +351,17 @@
 	for(var/g in gas_data.overlay_limit)
 /*
 		if(cur_graphic && cur_graphic.Find(gas_data.tile_overlay[g]))
+=======
+	var/list/cur_graphic = graphic // Cache for sanic speed
+	for(var/g in GLOB.gas_data.overlay_limit)
+		if(cur_graphic && cur_graphic.Find(GLOB.gas_data.tile_overlay[g]))
+>>>>>>> 959b1728d9 (Fix gas overlays (#17735))
 			//Overlay is already applied for this gas, check if it's still valid.
-			if(gas[g] <= gas_data.overlay_limit[g])
-				LAZYADD(graphic_remove, gas_data.tile_overlay[g])
+			if(gas[g] <= GLOB.gas_data.overlay_limit[g])
+				LAZYADD(graphic_remove, GLOB.gas_data.tile_overlay[g])
 		else
 			//Overlay isn't applied for this gas, check if it's valid and needs to be added.
+<<<<<<< HEAD
 			if(gas[g] > gas_data.overlay_limit[g])
 				LAZYADD(graphic_add, gas_data.tile_overlay[g])
 */
@@ -362,6 +369,10 @@
 			var/tile_overlay = get_tile_overlay(g)
 			if(!(tile_overlay in graphic))
 				LAZYADD(graphic_add, tile_overlay)
+=======
+			if(gas[g] > GLOB.gas_data.overlay_limit[g])
+				LAZYADD(graphic_add, GLOB.gas_data.tile_overlay[g])
+>>>>>>> 959b1728d9 (Fix gas overlays (#17735))
 
 	. = FALSE
 /*
@@ -518,4 +529,4 @@
 
 /datum/gas_mixture/proc/get_mass()
 	for(var/g in gas)
-		. += gas[g] * gas_data.molar_mass[g] * group_multiplier
+		. += gas[g] * GLOB.gas_data.molar_mass[g] * group_multiplier

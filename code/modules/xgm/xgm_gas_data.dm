@@ -1,4 +1,4 @@
-/var/datum/xgm_gas_data/gas_data
+GLOBAL_DATUM_INIT(gas_data, /datum/xgm_gas_data, new())
 
 /datum/xgm_gas_data
 	//Simple list of all the gas IDs.
@@ -16,6 +16,28 @@
 	//Flags.
 	var/list/flags = list()
 
+/datum/xgm_gas_data/New()
+	. = ..()
+	for(var/p in subtypesof(/decl/xgm_gas))
+		var/decl/xgm_gas/gas = new p //avoid initial() because of potential New() actions
+
+		if(gas.id in gases)
+			error("Duplicate gas id `[gas.id]` in `[p]`")
+
+		gases += gas.id
+		name[gas.id] = gas.name
+		specific_heat[gas.id] = gas.specific_heat
+		molar_mass[gas.id] = gas.molar_mass
+		if(gas.tile_overlay)
+			var/atom/movable/gas_visuals/GV = new(null)
+			GV.icon_state = gas.tile_overlay
+			tile_overlay[gas.id] = GV
+		if(gas.overlay_limit)
+			overlay_limit[gas.id] = gas.overlay_limit
+		flags[gas.id] = gas.flags
+
+	return 1
+
 /decl/xgm_gas
 	var/id = ""
 	var/name = "Unnamed Gas"
@@ -27,6 +49,7 @@
 
 	var/flags = 0
 
+<<<<<<< HEAD
 /hook/startup/proc/generateGasData()
 	gas_data = new
 	for(var/p in subtypesof(/decl/xgm_gas))
@@ -51,11 +74,15 @@
 /obj/effect/gas_overlay
 	name = "gas"
 	desc = "You shouldn't be clicking this."
+=======
+/atom/movable/gas_visuals
+>>>>>>> 959b1728d9 (Fix gas overlays (#17735))
 	icon = 'icons/effects/tile_effects.dmi'
 	icon_state = "generic"
 	layer = GASFIRE_LAYER
 	appearance_flags = PIXEL_SCALE | RESET_COLOR
 	mouse_opacity = 0
+<<<<<<< HEAD
 	var/gas_id
 
 /obj/effect/gas_overlay/Initialize(mapload, gas)
@@ -64,3 +91,6 @@
 	if(gas_data.tile_overlay[gas_id])
 		icon_state = gas_data.tile_overlay[gas_id]
 // CHOMPEdit End
+=======
+	plane = ABOVE_MOB_PLANE
+>>>>>>> 959b1728d9 (Fix gas overlays (#17735))
