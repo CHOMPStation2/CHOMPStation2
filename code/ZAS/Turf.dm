@@ -139,12 +139,7 @@
 		c_copy_air()
 		zone = null //Easier than iterating through the list at the zone.
 
-<<<<<<< HEAD
-	var/s_block // CHOMPEdit
-	ATMOS_CANPASS_TURF(s_block, src, src)
-=======
 	var/s_block = self_airblock()
->>>>>>> af6fad2797 (Startup Time Optimization (#17673))
 	if(s_block & AIR_BLOCKED)
 		#ifdef ZASDBG
 		if(verbose) to_world("Self-blocked.")
