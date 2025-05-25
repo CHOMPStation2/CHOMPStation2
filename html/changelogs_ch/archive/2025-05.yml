@@ -165,3 +165,9 @@
   - rscdel: Supermatter is no longer obtainable via xenoarcheology & xenobotany
   TheCaramelion:
   - rscdel: Disabled SecMed
+2025-05-25:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: Capsaicin no longer causes toxin damage when eaten
+  - bugfix: qdeleted new_players causing havoc
+  ShadowLarkens:
+  - qol: Entire character setup menu rewritten in TGUI
