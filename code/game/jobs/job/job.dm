@@ -205,6 +205,7 @@
 	return ideal_character_age // VOREStation Edit - Minimum character age by rules is 18, return default which is standard for all species
 	//return (brain_type && LAZYACCESS(ideal_age_by_species, brain_type)) || LAZYACCESS(ideal_age_by_species, brain_type) || ideal_character_age //VOREStation Removal
 
+<<<<<<< HEAD
 /datum/job/proc/is_species_banned(species_name, brain_type)
 	// CHOMPEdit begin -- Shadekin cannot be any crew position
 	if(species_name == SPECIES_SHADEKIN)
@@ -227,6 +228,8 @@
 		SSjob.shift_keys[title] += keylist
 //CHOMPadd end
 
+=======
+>>>>>>> 31e8e009db (Character Setup Rework (#17576))
 /datum/job/proc/update_limit(var/comperator)
 	return
 

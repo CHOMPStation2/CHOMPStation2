@@ -1,6 +1,7 @@
 var/global/list/special_roles = list( //keep synced with the defines BE_* in setup.dm --rastaf
 //some autodetection here.
 // Change these to 0 if the equivalent mode is disabled for whatever reason!
+<<<<<<< HEAD
 	// CHOMPEdit Start
 	"traitor" = 1,										// 0
 	"operative" = 1,									// 1
@@ -21,11 +22,32 @@ var/global/list/special_roles = list( //keep synced with the defines BE_* in set
 	"loyalist" = 1,										// 14
 	"GHOST" = 0,										// CHOMPEDIT - add seperate section for ghost roles
 	// CHOMPEdit End
+=======
+	"traitor" = 0,										// 0
+	"operative" = 0,									// 1
+	"changeling" = 0,									// 2
+	"wizard" = 0,										// 3
+	"malf AI" = 0,										// 4
+	"revolutionary" = 0,								// 5
+	"alien candidate" = 0,								// 6
+	"positronic brain" = 1,								// 7
+	"cultist" = 0,										// 8
+	"renegade" = 0,										// 9
+	"ninja" = 0,										// 10
+	"raider" = 0,										// 11
+	"diona" = 0,										// 12
+	"mutineer" = 0,										// 13
+	"loyalist" = 0,										// 14
+>>>>>>> 31e8e009db (Character Setup Rework (#17576))
 	"pAI candidate" = 1,								// 15
 	//VOREStation Add
 	"lost drone" = 1,									// 16
 	"maint pred" = 1,									// 17
+<<<<<<< HEAD
 	"stowaway" = 1,										// 18 // CHOMPEdit
+=======
+	"maint lurker" = 1,									// 18
+>>>>>>> 31e8e009db (Character Setup Rework (#17576))
 	"morph" = 1,										// 19
 	"corgi" = 1,										// 20
 	"cursed sword" = 1,									// 21

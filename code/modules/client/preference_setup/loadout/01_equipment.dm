@@ -15,8 +15,13 @@
 	pref.backbag					= save_data["backbag"]
 	pref.pdachoice					= save_data["pdachoice"]
 	pref.communicator_visibility	= save_data["communicator_visibility"]
+<<<<<<< HEAD
 	pref.ringtone					= save_data["ttone"] // CHOMPEdit - We use ttone in the pref so that it doesnt get reset
 	//pref.shoe_hater					= save_data["shoe_hater"] //CHOMPRemove, remove RS No shoes
+=======
+	pref.ringtone					= save_data["ringtone"]
+	pref.shoe_hater					= save_data["shoe_hater"]
+>>>>>>> 31e8e009db (Character Setup Rework (#17576))
 	pref.no_jacket					= save_data["no_jacket"]
 
 /datum/category_item/player_setup_item/loadout/equipment/save_character(list/save_data)
@@ -29,8 +34,13 @@
 	save_data["backbag"]					= pref.backbag
 	save_data["pdachoice"]					= pref.pdachoice
 	save_data["communicator_visibility"]	= pref.communicator_visibility
+<<<<<<< HEAD
 	save_data["ttone"]						= pref.ringtone // CHOMPEdit - We use ttone in the pref so that it doesnt get reset
 	//save_data["shoe_hater"] 				= pref.shoe_hater //CHOMPRemove, remove RS No shoes
+=======
+	save_data["ringtone"]					= pref.ringtone
+	save_data["shoe_hater"] 				= pref.shoe_hater
+>>>>>>> 31e8e009db (Character Setup Rework (#17576))
 	save_data["no_jacket"]					= pref.no_jacket
 
 var/global/list/valid_ringtones = list(
@@ -40,11 +50,18 @@ var/global/list/valid_ringtones = list(
 		"honk",
 		"SKREE",
 		"xeno",
+<<<<<<< HEAD
 		"dust", // CHOMPEdit - Keeps dust as ringtone
 		"spark",
 		"rad",
 		"servo",
 		// "buh-boop", // CHOMPEdit - No.
+=======
+		"spark",
+		"rad",
+		"servo",
+		"buh-boop",
+>>>>>>> 31e8e009db (Character Setup Rework (#17576))
 		"trombone",
 		"whistle",
 		"chirp",
@@ -147,7 +164,11 @@ var/global/list/valid_ringtones = list(
 	data["pda_type"] = pdachoicelist[pref.pdachoice]
 	data["communicator_visibility"] = pref.communicator_visibility // boolean
 	data["ringtone"] = pref.ringtone
+<<<<<<< HEAD
 	// data["shoes"] = pref.shoe_hater
+=======
+	data["shoes"] = pref.shoe_hater
+>>>>>>> 31e8e009db (Character Setup Rework (#17576))
 	data["jacket"] = pref.no_jacket
 
 	return data
@@ -247,9 +268,15 @@ var/global/list/valid_ringtones = list(
 				pref.ringtone = choice
 			return TOPIC_REFRESH
 
+<<<<<<< HEAD
 		// if("toggle_shoes")
 		// 	pref.shoe_hater = !pref.shoe_hater
 		// 	return TOPIC_REFRESH
+=======
+		if("toggle_shoes")
+			pref.shoe_hater = !pref.shoe_hater
+			return TOPIC_REFRESH
+>>>>>>> 31e8e009db (Character Setup Rework (#17576))
 
 		if("toggle_jacket")
 			pref.no_jacket = !pref.no_jacket
