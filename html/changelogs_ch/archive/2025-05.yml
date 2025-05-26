@@ -171,3 +171,17 @@
   - bugfix: qdeleted new_players causing havoc
   ShadowLarkens:
   - qol: Entire character setup menu rewritten in TGUI
+2025-05-26:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: Gas overlays work again
+  - code_imp: xgm gas_data is now a GLOB
+  - server: Server starts faster now
+  Diana:
+  - bugfix: Gorka sprites now properly show
+  - bugfix: Vox will no longer have a green suit when equipping an unsprited suit
+  - bugfix: Missing teshari uniform sprites will fallback to a rainbow suit instead
+      of naked
+  - bugfix: Missing rolled down/sleeves up uniform sprites will now fallback to an
+      owlsuit instead of a giant floating SUIT
+  - rscadd: Missing uniform sprites show up as an owlsuit instead of a giant floating
+      SUIT
