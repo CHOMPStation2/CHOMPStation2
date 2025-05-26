@@ -1529,13 +1529,12 @@
 			spawn(0)
 			qdel(H)	//glorp
 			return
+		H.burn_skin(damage) //CHOMPEdit Start
 		if(linked_mob)
-			H.burn_skin(damage)
-			if(linked_mob)
-				var/how_much = (damage * H.size_multiplier) * H.get_digestion_nutrition_modifier() * linked_mob.get_digestion_efficiency_modifier()
-				if(!H.ckey)
-					how_much = how_much / 10	//Braindead mobs are worth less
-				linked_mob.adjust_nutrition(how_much)
+			var/how_much = (damage * H.size_multiplier) * H.get_digestion_nutrition_modifier() * linked_mob.get_digestion_efficiency_modifier()
+			if(!H.ckey)
+				how_much = how_much / 10	//Braindead mobs are worth less
+			linked_mob.adjust_nutrition(how_much) //CHOMPEdit End
 	else if (isliving(thing))
 		var/mob/living/L = thing
 		if(!L)
