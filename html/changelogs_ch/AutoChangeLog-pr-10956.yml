@@ -1,0 +1,4 @@
+author: "Verkister"
+delete-after: True
+changes:
+  - bugfix: "Fixed a runtime error with food items on acid turfs."
