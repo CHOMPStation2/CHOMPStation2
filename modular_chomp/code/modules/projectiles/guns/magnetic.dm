@@ -19,7 +19,7 @@
 */
 /obj/item/projectile/bullet/magnetic/flechette/hunting
 	armor_penetration = 15
-	SA_bonus_damage = 20
+	mob_bonus_damage = 20
 /*
 /obj/item/projectile/bullet/magnetic/heated/weak
 	damage = 7

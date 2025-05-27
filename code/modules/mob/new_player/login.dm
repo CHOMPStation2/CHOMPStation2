@@ -1,4 +1,10 @@
 /mob/new_player/Login()
+	// Happens sometimes
+	if(QDELETED(src))
+		var/mob/new_player/replacement = new /mob/new_player()
+		replacement.key = key
+		return
+
 	update_Login_details()	//handles setting lastKnownIP and computer_id for use by the ban systems as well as checking for multikeying
 	if(GLOB.join_motd)
 		GLOB.join_motd = GLOB.is_valid_url.Replace(GLOB.join_motd, span_linkify("$1"))
@@ -26,8 +32,7 @@
 
 	created_for = ckey
 
-	if(!QDELETED(src))
-		addtimer(CALLBACK(src, PROC_REF(do_after_login)), 4 SECONDS, TIMER_DELETE_ME)
+	addtimer(CALLBACK(src, PROC_REF(do_after_login)), 4 SECONDS, TIMER_DELETE_ME)
 
 /mob/new_player/proc/do_after_login()
 	PRIVATE_PROC(TRUE)

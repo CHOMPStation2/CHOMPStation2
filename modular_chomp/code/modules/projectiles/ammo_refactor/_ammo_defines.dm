@@ -21,5 +21,5 @@
 #define AMMO_RUBBER_AGONY_MULT 2 //Multiply a projectile's damage by this to get the agony for it's rubber counterpart
 #define AMMO_RUBBER_DAMAGE_MULT 0.25 //Rubber bullets still do some regular damage. This is the multiplier for their damage amount.
 
-#define AMMO_HUNTER_SA_DAMAGE_MULT 1.2 //Multiply by original projectile damage to get SA_bonus_damage
+#define AMMO_HUNTER_SA_DAMAGE_MULT 1.2 //Multiply by original projectile damage to get mob_bonus_damage
 #define AMMO_HUNTER_DAMAGE_MULT 0.2 //Damage multiplier for hunter rounds, SA bonus makes up for it
