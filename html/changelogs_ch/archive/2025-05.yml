@@ -185,3 +185,8 @@
       owlsuit instead of a giant floating SUIT
   - rscadd: Missing uniform sprites show up as an owlsuit instead of a giant floating
       SUIT
+2025-05-27:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: Weird pref data causing a UI crash
+  Verkister:
+  - bugfix: Fixed a runtime error with food items on acid turfs.
