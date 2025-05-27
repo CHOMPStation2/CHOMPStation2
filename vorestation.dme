@@ -4664,16 +4664,13 @@
 #include "code\modules\vore\eating\vertical_nom_vr.dm"
 #include "code\modules\vore\eating\vore_vr.dm"
 #include "code\modules\vore\eating\vorepanel_vr.dm"
-<<<<<<< HEAD
-#include "code\modules\vore\fluffstuff\custom_boxes_ch.dm"
-=======
 #include "code\modules\vore\eating\panel_databackend\vorepanel_pref_data.dm"
 #include "code\modules\vore\eating\panel_databackend\vorepanel_set_attribute.dm"
 #include "code\modules\vore\eating\panel_databackend\vorepanel_set_liqattribute.dm"
 #include "code\modules\vore\eating\panel_databackend\vorepanel_soulcatcher_data.dm"
 #include "code\modules\vore\eating\panel_databackend\vorepanel_vore_data.dm"
 #include "code\modules\vore\eating\panel_databackend\vorepanel_vore_subdata.dm"
->>>>>>> faf52ecce2 (vorepanel reloaded (#17723))
+#include "code\modules\vore\fluffstuff\custom_boxes_ch.dm"
 #include "code\modules\vore\fluffstuff\custom_boxes_vr.dm"
 #include "code\modules\vore\fluffstuff\custom_boxes_yw.dm"
 #include "code\modules\vore\fluffstuff\custom_clothes_ch.dm"

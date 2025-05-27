@@ -2,16 +2,11 @@
 // Vore management panel for players
 //
 
-<<<<<<< HEAD
-#define VORE_RESIZE_COST 125
 #define STATION_PREF_NAME "Chomp" // CHOMPEdit
-=======
-#define STATION_PREF_NAME "Virgo"
 #define VORE_BELLY_TAB 0
 #define SOULCATCHER_TAB 1
 #define GENERAL_TAB 2
 #define PREFERENCE_TAB 3
->>>>>>> faf52ecce2 (vorepanel reloaded (#17723))
 
 /mob
 	var/datum/vore_look/vorePanel
