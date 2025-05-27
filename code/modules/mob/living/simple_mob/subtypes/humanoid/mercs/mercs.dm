@@ -165,7 +165,7 @@
 	icon_living = "syndicateranged"
 	projectiletype = /obj/item/projectile/bullet/pistol/medium
 //	casingtype = /obj/item/ammo_casing/spent	//Makes infinite stacks of bullets when put in PoIs.
-	projectilesound = 'sound/weapons/Gunshot_light.ogg'
+	projectilesound = 'sound/weapons/gunshot_light.ogg'
 	loot_list = list(/obj/item/gun/projectile/colt = 100)
 
 	needs_reload = TRUE
@@ -202,7 +202,7 @@
 
 	loot_list = list(/obj/item/gun/projectile/automatic/z8 = 100)
 
-	projectilesound = 'sound/weapons/Gunshot_heavy.ogg'
+	projectilesound = 'sound/weapons/gunshot_heavy.ogg'
 	projectiletype = /obj/item/projectile/bullet/rifle/a762
 	projectile_dispersion = 8
 	projectile_accuracy = -15
@@ -248,7 +248,7 @@
 	icon_state = "syndicateranged_shotgun"
 	icon_living = "syndicateranged_shotgun"
 	projectiletype = /obj/item/projectile/bullet/pellet/shotgun		// Buckshot
-	projectilesound = 'sound/weapons/Gunshot_shotgun.ogg'
+	projectilesound = 'sound/weapons/gunshot_shotgun.ogg'
 
 	loot_list = list(/obj/item/gun/projectile/shotgun/pump = 100)
 
@@ -264,7 +264,7 @@
 	icon_state = "syndicateranged_technician"
 	icon_living = "syndicateranged_technician"
 	projectiletype = /obj/item/projectile/fake_syringe/poison	// Toxin dart.
-	projectilesound = 'sound/weapons/Gunshot_old.ogg'
+	projectilesound = 'sound/weapons/gunshot_old.ogg'
 
 	loot_list = list(/obj/item/gun/projectile/dartgun = 100,
 		/obj/item/gun/launcher/grenade = 100,
@@ -288,7 +288,7 @@
 	icon_state = "syndicateranged_sniper"
 	icon_living = "syndicateranged_sniper"
 	projectiletype = /obj/item/projectile/bullet/rifle/a145/highvel // Really scary bullet.
-	projectilesound = 'sound/weapons/Gunshot_cannon.ogg'
+	projectilesound = 'sound/weapons/gunshot_cannon.ogg'
 
 	projectile_accuracy = 75
 

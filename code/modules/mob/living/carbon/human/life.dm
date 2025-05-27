@@ -877,7 +877,7 @@
 
 	//Check for contaminants before anything else because we don't want to skip it.
 	for(var/g in environment.gas)
-		if(gas_data.flags[g] & XGM_GAS_CONTAMINANT && environment.gas[g] > gas_data.overlay_limit[g] + 1)
+		if(GLOB.gas_data.flags[g] & XGM_GAS_CONTAMINANT && environment.gas[g] > GLOB.gas_data.overlay_limit[g] + 1)
 			pl_effects()
 			break
 
@@ -1169,22 +1169,6 @@
 		return 0	//godmode
 
 	// nutrition decrease
-	if(nutrition <= 0 &&  species.shrinks && size_multiplier > RESIZE_TINY)
-		nutrition = 0.1
-	if(nutrition > 0 && stat != DEAD)
-		var/nutrition_reduction = species.hunger_factor
-
-		for(var/datum/modifier/mod in modifiers)
-			if(!isnull(mod.metabolism_percent))
-				nutrition_reduction *= mod.metabolism_percent
-		if(nutrition > 1000 && species.grows) //Removing the strict check against normal max/min size to support dorms/VR oversizing
-			nutrition_reduction *= 5
-			resize(size_multiplier+0.01, animate = FALSE, uncapped = has_large_resize_bounds()) //Bringing this code in line with micro and macro shrooms
-		if(nutrition < 50 && species.shrinks)
-			nutrition_reduction *= 0.3
-			resize(size_multiplier-0.01, animate = FALSE, uncapped = has_large_resize_bounds()) //Bringing this code in line with micro and macro shrooms
-		adjust_nutrition(-nutrition_reduction)
-
 	if(noisy == TRUE && nutrition < 250 && prob(10))
 		var/sound/growlsound = sound(get_sfx("hunger_sounds"))
 		var/growlmultiplier = 100 - (nutrition / 250 * 100)
@@ -1434,7 +1418,8 @@
 
 	if(istype(client.eye,/obj/machinery/camera))
 		var/obj/machinery/camera/cam = client.eye
-		client.screen |= cam.client_huds
+		if(LAZYLEN(cam.client_huds))
+			client.screen |= cam.client_huds
 
 	if(stat == DEAD) //Dead
 		if(!druggy)		see_invisible = SEE_INVISIBLE_LEVEL_TWO
@@ -1803,7 +1788,7 @@
 			/* CHOMPEdit Start
 			if(text2num(time2text(world.timeofday, "MM")) == 4)
 				if(text2num(time2text(world.timeofday, "DD")) == 1)
-					playsound_local(src,pick(GLOB.scawwySownds),50, 0)
+					playsound_local(src,pick(GLOB.scawwysownds),50, 0)
 					return
 			*/ // CHOMPedit End
 			playsound_local(src,pick(GLOB.scarySounds),50, 1, -1)

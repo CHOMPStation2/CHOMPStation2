@@ -132,7 +132,7 @@
 
 	var/total_oxidizers = 0
 	for(var/g in air_contents.gas)
-		if(gas_data.flags[g] & XGM_GAS_OXIDIZER)
+		if(GLOB.gas_data.flags[g] & XGM_GAS_OXIDIZER)
 			total_oxidizers += air_contents.gas[g]
 
 	var/invalid_fire = total_oxidizers < 1 || air_contents.temperature <= (T0C + 15) || ultimate_burnout >= 1 || my_tile.is_outdoors() || SSair.lingering_fires >= 1000

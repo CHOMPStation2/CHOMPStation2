@@ -38,7 +38,10 @@
 		/obj/item/spacecasinocash,
 		/obj/item/casino_platinum_chip,
 		/obj/item/deck,
-		/obj/item/book/codex/casino
+		/obj/item/book/codex/casino,
+		/obj/item/storage/pill_bottle/dice,
+		/obj/item/storage/pill_bottle/dice_nerd,
+		/obj/item/storage/dicecup/loaded
 		)
 
 /obj/item/storage/wallet/casino/verb/toggle_design()
