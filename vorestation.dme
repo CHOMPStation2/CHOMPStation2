@@ -547,10 +547,7 @@
 #include "code\datums\components\disabilities\tourettes.dm"
 #include "code\datums\components\species\shadekin.dm"
 #include "code\datums\components\species\xenochimera.dm"
-<<<<<<< HEAD
-=======
 #include "code\datums\components\traits\burninlight.dm"
->>>>>>> 919dce1a14 (Collector event machine (#17751))
 #include "code\datums\components\traits\drippy.dm"
 #include "code\datums\components\traits\gargoyle.dm"
 #include "code\datums\components\traits\nutrition_size_change.dm"
@@ -3550,12 +3547,6 @@
 #include "code\modules\mob\living\simple_mob\subtypes\animal\giant_spider\thermic.dm"
 #include "code\modules\mob\living\simple_mob\subtypes\animal\giant_spider\tunneler.dm"
 #include "code\modules\mob\living\simple_mob\subtypes\animal\giant_spider\webslinger.dm"
-<<<<<<< HEAD
-#include "code\modules\mob\living\simple_mob\subtypes\animal\hyena\hyena.dm"
-#include "code\modules\mob\living\simple_mob\subtypes\animal\passive\armadillo_ch.dm"
-#include "code\modules\mob\living\simple_mob\subtypes\animal\giant_spider\event_spiders.dm"
-=======
->>>>>>> 919dce1a14 (Collector event machine (#17751))
 #include "code\modules\mob\living\simple_mob\subtypes\animal\passive\cockroach.dm"
 #include "code\modules\mob\living\simple_mob\subtypes\animal\passive\crab.dm"
 #include "code\modules\mob\living\simple_mob\subtypes\animal\passive\fish.dm"
