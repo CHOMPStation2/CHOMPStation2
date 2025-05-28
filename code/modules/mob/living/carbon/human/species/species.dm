@@ -244,8 +244,6 @@
 	var/gluttonous											// Can eat some mobs. 1 for mice, 2 for monkeys, 3 for people.
 	var/soft_landing = FALSE								// Can fall down and land safely on small falls.
 
-	var/shrinks = FALSE										// If we shrink when we have no nutrition. Not added but here for downstream's sake.
-	var/grows = FALSE										// Same as above but if we grow when >1000 nutrition.
 	var/crit_mod = 1										// Used for when we go unconscious. Used downstream.
 	var/list/env_traits = list()
 	var/pixel_offset_x = 0									// Used for offsetting 64x64 and up icons.
@@ -304,8 +302,6 @@
 	var/swap_flags = ~HEAVY			// What can we swap place with?
 
 	var/pass_flags = 0
-
-	var/list/descriptors = list()
 
 	//This is used in character setup preview generation (prefences_setup.dm) and human mob
 	//rendering (update_icons.dm)
@@ -387,15 +383,6 @@
 		hud = new hud_type()
 	else
 		hud = new()
-
-	// Prep the descriptors for the species
-	if(LAZYLEN(descriptors))
-		var/list/descriptor_datums = list()
-		for(var/desctype in descriptors)
-			var/datum/mob_descriptor/descriptor = new desctype
-			descriptor.comparison_offset = descriptors[desctype]
-			descriptor_datums[descriptor.name] = descriptor
-		descriptors = descriptor_datums
 
 	//If the species has eyes, they are the default vision organ
 	if(!vision_organ && has_organ[O_EYES])
