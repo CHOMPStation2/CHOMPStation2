@@ -31,6 +31,7 @@
 		default_type = MAT_STEEL
 	material = get_material_by_name("[default_type]")
 	if(!material)
+		log_debug("Something is fucked. [default_type] does not exist in materials.")
 		return INITIALIZE_HINT_QDEL
 
 	recipes = material.get_recipes()
