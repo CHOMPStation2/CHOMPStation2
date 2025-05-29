@@ -3,14 +3,9 @@
 	tgui_id = "CrewMonitor"
 
 /datum/tgui_module/crew_monitor/ui_assets(mob/user)
-<<<<<<< HEAD
-	. = ..()
-	. += get_asset_datum(/datum/asset/simple/nanomaps)
-=======
 	return list(
 		get_asset_datum(/datum/asset/simple/holo_nanomap),
 	)
->>>>>>> 54e4fa3d6b (Piggyback on holomaps to generate runtime maps (#17731))
 
 /datum/tgui_module/crew_monitor/tgui_act(action, params, datum/tgui/ui)
 	if(..())
