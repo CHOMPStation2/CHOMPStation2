@@ -21,9 +21,6 @@ SUBSYSTEM_DEF(holomaps)
 /datum/controller/subsystem/holomaps/stat_entry(msg)
 	if (!GLOB.Debug2)
 		return // Only show up in stat panel if debugging is enabled.
-<<<<<<< HEAD
-	return ..() //CHOMPEdit
-=======
 	. = ..()
 
 /datum/controller/subsystem/holomaps/proc/dump_nanomap_icons()
@@ -51,4 +48,3 @@ SUBSYSTEM_DEF(holomaps)
 			stack_trace("Failed to strip [fname]: [error]")
 
 		.["minimap_[z].png"] = fname
->>>>>>> 54e4fa3d6b (Piggyback on holomaps to generate runtime maps (#17731))
