@@ -157,7 +157,7 @@ const BiochemEditor = (props) => {
               ))}
             </LabeledList.Item>
           ) : (
-            <NoticeBox warning>
+            <NoticeBox>
               {'WARNING: Genetic integrity of seed is too poor to proceed.'}
             </NoticeBox>
           )}
