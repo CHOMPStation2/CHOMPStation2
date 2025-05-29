@@ -180,11 +180,7 @@
 		AdjustStunned(2)
 		playsound(src, 'sound/weapons/punchmiss.ogg', 25, 1, -1)
 
-<<<<<<< HEAD
-	if(will_eat(M) && (M.lying || vore_standing_too)) //if they're edible then eat them too //CHOMPEdit
-=======
 	if(will_eat(M) && (M.lying || vore_standing_too)) //if they're edible then eat them too
->>>>>>> f31346c67f (Mobvore fix (#17680))
 		return EatTarget(M)
 	else
 		return //just leave them
