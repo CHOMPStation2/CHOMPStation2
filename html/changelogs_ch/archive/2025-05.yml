@@ -212,3 +212,11 @@
   - bugfix: Mobs not updating their transform to match their size
   - bugfix: Resleeving not allowed to print whitelisted species
   - bugfix: Game preferences missing tgui options
+2025-05-29:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: Server is now more stable.
+  Diana:
+  - bugfix: Some waddle fixes. Waddle height and animation time are now properly selectable
+  - bugfix: Fixes an oversight that resulted in synthetics not being able to unabsorb
+      prey.
+  - bugfix: Toggling silk production now works
