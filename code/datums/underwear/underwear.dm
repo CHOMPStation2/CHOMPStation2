@@ -63,7 +63,11 @@
 /datum/category_item/underwear/proc/is_default(var/gender)
 	return is_default
 
+<<<<<<< HEAD
 /datum/category_item/underwear/proc/generate_image(var/list/metadata, var/layer = FLOAT_LAYER, var/digitigrade = FALSE) //CHOMPEdit
+=======
+/datum/category_item/underwear/proc/generate_image(var/list/metadata, var/layer = FLOAT_LAYER, var/digitigrade = FALSE)
+>>>>>>> 47b708c40d (Converts cache to a GLOB. Other overlay tweaks (#17767))
 	if(!icon_state)
 		return
 
