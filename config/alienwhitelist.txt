@@ -20,7 +20,34 @@ hollifex - Diona
 inuzari - Diona
 jademanique - Xenochimera
 ktccd - Diona
+<<<<<<< HEAD
 khanivore - Protean
+=======
+kyrendragon - Black-Eyed Shadekin
+lavenderrs - Teppi
+lazzar - Black-Eyed Shadekin
+lazzar - Hanner
+lewzharri - Hanner
+lianvee - Black-Eyed Shadekin
+lillianfyre - Xenochimera
+liquidfirefly - Protean
+lizehrd - Xenochimera
+looptyloo - Protean
+lordlag - Black-Eyed Shadekin
+lorgenz - Protean
+losstinspess - Protean
+losstinspess - Xenochimera
+lykojeyot - Black-Eyed Shadekin
+negatist - Protean
+madmulk9 - Protean
+magpiemayhem - Vox
+magpiemayhem - Xenochimera
+makkinindorn - Protean
+marcobarko - Black-Eyed Shadekin
+marcobarko - Protean
+maxcaliber50 - Protean
+maxine64 - Xenochimera
+>>>>>>> 2dff2017ae (Whitelist updates (#17765))
 mewchild - Diona
 mewchild - Vox
 mrsebbi - Xenochimera
