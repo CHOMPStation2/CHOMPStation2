@@ -2,19 +2,11 @@
 	Global associative list for caching humanoid icons.
 	Index format m or f, followed by a string of 0 and 1 to represent bodyparts followed by husk fat hulk skeleton 1 or 0.
 */
-<<<<<<< HEAD
-//ChompEDIT START - change to managed GLOB
-=======
->>>>>>> 47b708c40d (Converts cache to a GLOB. Other overlay tweaks (#17767))
 GLOBAL_LIST_EMPTY(human_icon_cache) //key is incredibly complex, see update_icons_body()
 GLOBAL_LIST_EMPTY(tail_icon_cache) //key is [species.race_key][r_skin][g_skin][b_skin]
 GLOBAL_LIST_EMPTY(wing_icon_cache) // See tail.
 GLOBAL_LIST_EMPTY(light_overlay_cache) //see make_worn_icon() on helmets
 GLOBAL_LIST_EMPTY(damage_icon_parts) //see UpdateDamageIcon()
-<<<<<<< HEAD
-//ChompEDIT END
-=======
->>>>>>> 47b708c40d (Converts cache to a GLOB. Other overlay tweaks (#17767))
 
 ////////////////////////////////////////////////////////////////////////////////////////////////
 // # Human Icon Updating System
@@ -166,15 +158,6 @@ GLOBAL_LIST_EMPTY(damage_icon_parts) //see UpdateDamageIcon()
 		if(O.damage_state == "00") continue
 		var/icon/DI
 		var/cache_index = "[O.damage_state]/[O.icon_name]/[species.get_blood_colour(src)]/[species.get_bodytype(src)]"
-<<<<<<< HEAD
-		if(GLOB.damage_icon_parts[cache_index] == null) //ChompEDIT Managed GLOB
-			DI = icon(species.get_damage_overlays(src), O.damage_state)			// the damage icon for whole human
-			DI.Blend(icon(species.get_damage_mask(src), O.icon_name), ICON_MULTIPLY)	// mask with this organ's pixels
-			DI.Blend(species.get_blood_colour(src), ICON_MULTIPLY)
-			GLOB.damage_icon_parts[cache_index] = DI //ChompEDIT Managed GLOB
-		else
-			DI = GLOB.damage_icon_parts[cache_index] //ChompEDIT Managed GLOB
-=======
 		if(GLOB.damage_icon_parts[cache_index] == null)
 			DI = icon(species.get_damage_overlays(src), O.damage_state)			// the damage icon for whole human
 			DI.Blend(icon(species.get_damage_mask(src), O.icon_name), ICON_MULTIPLY)	// mask with this organ's pixels
@@ -182,7 +165,6 @@ GLOBAL_LIST_EMPTY(damage_icon_parts) //see UpdateDamageIcon()
 			GLOB.damage_icon_parts[cache_index] = DI
 		else
 			DI = GLOB.damage_icon_parts[cache_index]
->>>>>>> 47b708c40d (Converts cache to a GLOB. Other overlay tweaks (#17767))
 
 		standing_image.add_overlay(DI)
 
@@ -302,11 +284,7 @@ GLOBAL_LIST_EMPTY(damage_icon_parts) //see UpdateDamageIcon()
 	else
 		//BEGIN CACHED ICON GENERATION.
 		var/obj/item/organ/external/chest = get_organ(BP_TORSO)
-<<<<<<< HEAD
-		base_icon = new(chest?.get_icon(skeleton, !wholeicontransparent)) //ChompEDIT NEW icon, not referencing original
-=======
 		base_icon = new(chest?.get_icon(skeleton, !wholeicontransparent))
->>>>>>> 47b708c40d (Converts cache to a GLOB. Other overlay tweaks (#17767))
 
 		var/apply_extra_transparency_leg = organs_by_name[BP_L_LEG] && organs_by_name[BP_R_LEG]
 		var/apply_extra_transparency_foot = organs_by_name[BP_L_FOOT] && organs_by_name[BP_R_FOOT]
@@ -332,11 +310,7 @@ GLOBAL_LIST_EMPTY(damage_icon_parts) //see UpdateDamageIcon()
 		for(var/obj/item/organ/external/part in organs)
 			if(isnull(part) || part.is_stump() || part == chest || part.is_hidden_by_sprite_accessory()) //Allowing tails to prevent bodyparts rendering, granting more spriter freedom for taur/digitigrade stuff.
 				continue
-<<<<<<< HEAD
-			var/icon/temp = new(part.get_icon(skeleton, !wholeicontransparent)) //ChompEDIT NEW icon, not referencing original
-=======
 			var/icon/temp = new(part.get_icon(skeleton, !wholeicontransparent))
->>>>>>> 47b708c40d (Converts cache to a GLOB. Other overlay tweaks (#17767))
 
 			if((part.organ_tag in list(BP_L_LEG, BP_R_LEG, BP_L_FOOT, BP_R_FOOT)) && Cutter)
 				temp.Blend(Cutter, ICON_AND, x = icon_x_offset, y = icon_y_offset)
@@ -352,18 +326,7 @@ GLOBAL_LIST_EMPTY(damage_icon_parts) //see UpdateDamageIcon()
 				if(!(part.icon_position & RIGHT))
 					temp2.Insert(new/icon(temp,dir=WEST),dir=WEST)
 				base_icon.Blend(temp2, ICON_OVERLAY)
-<<<<<<< HEAD
-				/* //ChompEDIT START - icon crashes
-				temp2.Insert(temp2,"blank",dir=NORTH) //faaaaairly certain this is more efficient than reloading temp2, doing this so we don't blend the icons twice (it matters more in transparent limbs)
-				temp2.Insert(temp2,"blank",dir=SOUTH)
-				temp2.Insert(temp2,"blank",dir=EAST)
-				temp2.Insert(temp2,"blank",dir=WEST)
-				*/
 				temp2 = new(species.icon_template ? species.icon_template : 'icons/mob/human.dmi', icon_state = "blank")
-				//ChompEDIT END
-=======
-				temp2 = new(species.icon_template ? species.icon_template : 'icons/mob/human.dmi', icon_state = "blank")
->>>>>>> 47b708c40d (Converts cache to a GLOB. Other overlay tweaks (#17767))
 				if(part.icon_position & LEFT)
 					temp2.Insert(new/icon(temp,dir=EAST),dir=EAST)
 				if(part.icon_position & RIGHT)
@@ -444,11 +407,7 @@ GLOBAL_LIST_EMPTY(damage_icon_parts) //see UpdateDamageIcon()
 
 	//Bloody feet
 	if(feet_blood_DNA)
-<<<<<<< HEAD
-		var/image/bloodsies = image(icon = digitigrade ? 'icons/mob/human_races/masks/blood_digitigrade.dmi' : species.get_blood_mask(src), icon_state = "shoeblood", layer = BODY_LAYER+BLOOD_LAYER) //CHOMPEdit: digitigrade feeties
-=======
 		var/image/bloodsies = image(icon = digitigrade ? 'icons/mob/human_races/masks/blood_digitigrade.dmi' : species.get_blood_mask(src), icon_state = "shoeblood", layer = BODY_LAYER+BLOOD_LAYER)
->>>>>>> 47b708c40d (Converts cache to a GLOB. Other overlay tweaks (#17767))
 		bloodsies.color = feet_blood_color
 		both.add_overlay(bloodsies)
 
@@ -469,11 +428,7 @@ GLOBAL_LIST_EMPTY(damage_icon_parts) //see UpdateDamageIcon()
 			if(hide_underwear[category])
 				continue
 			var/datum/category_item/underwear/UWI = all_underwear[category]
-<<<<<<< HEAD
-			var/image/wear = UWI.generate_image(all_underwear_metadata[category], layer = BODY_LAYER+UNDERWEAR_LAYER, digitigrade = digitigrade) //CHOMPEdit
-=======
 			var/image/wear = UWI.generate_image(all_underwear_metadata[category], layer = BODY_LAYER+UNDERWEAR_LAYER, digitigrade = digitigrade)
->>>>>>> 47b708c40d (Converts cache to a GLOB. Other overlay tweaks (#17767))
 			overlays_standing[UNDERWEAR_LAYER] += wear
 
 		apply_layer(UNDERWEAR_LAYER)
@@ -737,11 +692,7 @@ GLOBAL_LIST_EMPTY(damage_icon_parts) //see UpdateDamageIcon()
 	remove_layer(GLASSES_LAYER)
 	remove_layer(GLASSES_LAYER_ALT)
 
-<<<<<<< HEAD
-	if(!glasses || hide_glasses) // CHOMPEdit - Add "|| hide_glasses" for glasses hiding
-=======
 	if(!glasses || hide_glasses)
->>>>>>> 47b708c40d (Converts cache to a GLOB. Other overlay tweaks (#17767))
 		return //Not wearing glasses, no need to update anything.
 
 	var/glasses_layer = GLASSES_LAYER
@@ -766,11 +717,7 @@ GLOBAL_LIST_EMPTY(damage_icon_parts) //see UpdateDamageIcon()
 	if(!l_ear && !r_ear)
 		return //Why bother, if no ear sprites
 
-<<<<<<< HEAD
-	if(hide_headset) //CHOMPEdit Start
-=======
 	if(hide_headset)
->>>>>>> 47b708c40d (Converts cache to a GLOB. Other overlay tweaks (#17767))
 		if(l_ear && istype(l_ear, /obj/item/radio/headset)) //No need to generate blank images if only headsets are present.
 			if(!r_ear || istype(r_ear, /obj/item/radio/headset))
 				return
@@ -797,11 +744,7 @@ GLOBAL_LIST_EMPTY(damage_icon_parts) //see UpdateDamageIcon()
 				both.add_overlay(standing)
 		else
 			var/image/standing = r_ear.make_worn_icon(body_type = species.get_bodytype(src), slot_name = slot_r_ear_str, default_icon = INV_EARS_DEF_ICON, default_layer = EARS_LAYER)
-<<<<<<< HEAD
-			both.add_overlay(standing) //CHOMPEdit End
-=======
 			both.add_overlay(standing)
->>>>>>> 47b708c40d (Converts cache to a GLOB. Other overlay tweaks (#17767))
 
 	overlays_standing[EARS_LAYER] = both
 	apply_layer(EARS_LAYER)
@@ -1041,11 +984,7 @@ GLOBAL_LIST_EMPTY(damage_icon_parts) //see UpdateDamageIcon()
 	apply_layer(L_HAND_LAYER)
 
 /mob/living/carbon/human/proc/get_tail_layer()
-<<<<<<< HEAD
-	var/list/lower_layer_dirs = list(SOUTH, EAST, WEST) //ChompEDIT - Tail below clothing on side views too.
-=======
 	var/list/lower_layer_dirs = list(SOUTH, EAST, WEST) //Tail below clothing on side views too.
->>>>>>> 47b708c40d (Converts cache to a GLOB. Other overlay tweaks (#17767))
 	if(tail_style)
 		lower_layer_dirs = tail_style.lower_layer_dirs.Copy()
 
@@ -1090,11 +1029,7 @@ GLOBAL_LIST_EMPTY(damage_icon_parts) //see UpdateDamageIcon()
 //TODO: Is this the appropriate place for this, and not on species...?
 /mob/living/carbon/human/proc/get_tail_icon()
 	var/icon_key = "[species.get_race_key(src)][r_skin][g_skin][b_skin][r_hair][g_hair][b_hair]"
-<<<<<<< HEAD
-	var/icon/tail_icon = GLOB.tail_icon_cache[icon_key] //ChompEDIT Managed GLOB
-=======
 	var/icon/tail_icon = GLOB.tail_icon_cache[icon_key]
->>>>>>> 47b708c40d (Converts cache to a GLOB. Other overlay tweaks (#17767))
 	if(!tail_icon)
 		//generate a new one
 		var/species_tail_anim = species.get_tail_animation(src)
@@ -1108,11 +1043,7 @@ GLOBAL_LIST_EMPTY(damage_icon_parts) //see UpdateDamageIcon()
 			var/icon/hair_icon = icon('icons/effects/species.dmi', "[species.get_tail(src)]_[use_species_tail]")
 			hair_icon.Blend(rgb(r_hair, g_hair, b_hair), species.color_mult ? ICON_MULTIPLY : ICON_ADD)				//Check for species color_mult
 			tail_icon.Blend(hair_icon, ICON_OVERLAY)
-<<<<<<< HEAD
-		GLOB.tail_icon_cache[icon_key] = tail_icon //ChompEDIT Managed GLOB
-=======
 		GLOB.tail_icon_cache[icon_key] = tail_icon
->>>>>>> 47b708c40d (Converts cache to a GLOB. Other overlay tweaks (#17767))
 
 	return tail_icon
 
@@ -1546,49 +1477,3 @@ GLOBAL_LIST_EMPTY(damage_icon_parts) //see UpdateDamageIcon()
 			ooc_notes_favs = read_preference(/datum/preference/text/living/ooc_notes_favs)
 			ooc_notes_maybes = read_preference(/datum/preference/text/living/ooc_notes_maybes)
 			ooc_notes_style = read_preference(/datum/preference/toggle/living/ooc_notes_style)
-<<<<<<< HEAD
-
-//Human Overlays Indexes/////////
-/* CHOMPEdit - why are these undefined??
-# undef MUTATIONS_LAYER
-# undef SKIN_LAYER
-# undef BLOOD_LAYER
-# undef MOB_DAM_LAYER
-# undef SURGERY_LAYER
-# undef UNDERWEAR_LAYER
-# undef SHOES_LAYER_ALT
-# undef UNIFORM_LAYER
-# undef ID_LAYER
-# undef SHOES_LAYER
-# undef GLOVES_LAYER
-# undef BELT_LAYER
-# undef SUIT_LAYER
-# undef TAIL_UPPER_LAYER
-# undef TAIL_LOWER_LAYER
-# undef WING_LOWER_LAYER
-# undef GLASSES_LAYER
-# undef BELT_LAYER_ALT
-# undef SUIT_STORE_LAYER
-# undef BACK_LAYER
-# undef HAIR_LAYER
-# undef HAIR_ACCESSORY_LAYER
-# undef EARS_LAYER
-# undef EYES_LAYER
-# undef FACEMASK_LAYER
-# undef GLASSES_LAYER_ALT
-# undef HEAD_LAYER
-# undef HANDCUFF_LAYER
-# undef LEGCUFF_LAYER
-# undef L_HAND_LAYER
-# undef R_HAND_LAYER
-# undef VORE_BELLY_LAYER
-# undef WING_LAYER
-# undef TAIL_UPPER_LAYER_ALT
-# undef MODIFIER_EFFECTS_LAYER
-# undef FIRE_LAYER
-# undef WATER_LAYER
-# undef TARGETED_LAYER
-# undef TOTAL_LAYERS
-*/
-=======
->>>>>>> 47b708c40d (Converts cache to a GLOB. Other overlay tweaks (#17767))
