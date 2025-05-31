@@ -15,13 +15,8 @@
 	var/image/standing = ..()
 	if(light_on && slot_name == slot_head_str)
 		var/cache_key = "[light_overlay][LAZYACCESS(sprite_sheets, body_type) ? "_[body_type]" : ""]"
-<<<<<<< HEAD
-		if(standing && GLOB.light_overlay_cache[cache_key]) //ChompEDIT Managed GLOB
-			standing.add_overlay(GLOB.light_overlay_cache[cache_key]) //ChompEDIT Managed GLOB
-=======
 		if(standing && GLOB.light_overlay_cache[cache_key])
 			standing.add_overlay(GLOB.light_overlay_cache[cache_key])
->>>>>>> 47b708c40d (Converts cache to a GLOB. Other overlay tweaks (#17767))
 	return standing
 
 //SUIT: Blood state is slightly different
