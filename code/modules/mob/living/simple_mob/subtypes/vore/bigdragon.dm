@@ -569,11 +569,15 @@ I think I covered everything.
 /obj/belly/dragon
 	autotransferchance = 50
 	autotransferwait = 150
+<<<<<<< HEAD
 	autotransfer_enabled = 1 //ChompEDIT
 	escapable = 1
+=======
+	escapable = TRUE
+>>>>>>> be4c7b0568 (adjusts some wrong vars (#17770))
 	escapechance = 100
 	escapetime = 15
-	fancy_vore = 1
+	fancy_vore = TRUE
 	contamination_color = "grey"
 	contamination_flavor = "Wet"
 	vore_verb = "slurp"
