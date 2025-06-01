@@ -5,9 +5,15 @@
 /* FOR LIVE SERVER   */
 /*********************/
 
+<<<<<<< HEAD
 // #define USE_MAP_TETHER
 #define USE_MAP_STELLARDELIGHT
 // #define USE_MAP_GROUNDBASE
+=======
+#define USE_MAP_TETHER
+//#define USE_MAP_STELLARDELIGHT
+//#define USE_MAP_GROUNDBASE
+>>>>>>> 62fda7a814 (Map Swap (#17776))
 
 // Debug
 //#define USE_MAP_MINITEST
