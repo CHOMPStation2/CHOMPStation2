@@ -483,7 +483,11 @@ export const ServerTarget = new Juke.Target({
     const options = {
       dmbFile: `${DME_NAME}.dmb`,
       namedDmVersion: get(DmVersionParameter),
+<<<<<<< HEAD
     }
+=======
+    };
+>>>>>>> dd99e0951b (Nutrition fix (#17785))
     await DreamDaemon(options, port, "-trusted -invisible");
   },
 });
