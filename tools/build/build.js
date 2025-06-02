@@ -33,12 +33,7 @@ Juke.setup({ file: import.meta.url }).then((code) => {
   }
 });
 
-<<<<<<< HEAD
-const DME_NAME = 'vorestation';
-const CUTTER_SUFFIX = '.png.toml'
-=======
 const DME_NAME = "vorestation";
->>>>>>> b4eb766984 (dependency cleanup and loader removal (#17781))
 
 // Stores the contents of dependencies.sh as a key value pair
 // Best way I could figure to get ahold of this stuff
@@ -84,27 +79,19 @@ export const ForceRecutParameter = new Juke.Parameter({
   name: "force-recut",
 });
 
-<<<<<<< HEAD
-=======
 export const SkipIconCutter = new Juke.Parameter({
   type: "boolean",
   name: "skip-icon-cutter",
 });
 
->>>>>>> b4eb766984 (dependency cleanup and loader removal (#17781))
 export const WarningParameter = new Juke.Parameter({
   type: "string[]",
   alias: "W",
 });
 
 export const NoWarningParameter = new Juke.Parameter({
-<<<<<<< HEAD
-  type: 'string[]',
-  alias: 'NW',
-=======
   type: "string[]",
   alias: "I",
->>>>>>> b4eb766984 (dependency cleanup and loader removal (#17781))
 });
 
 export const CutterTarget = new Juke.Target({
@@ -163,18 +150,6 @@ async function download_file(url, file) {
 
 export const IconCutterTarget = new Juke.Target({
   parameters: [ForceRecutParameter],
-<<<<<<< HEAD
-  dependsOn: () => [
-    CutterTarget,
-  ],
-  inputs: [
-    'icons/**/*.png',
-    `icons/**/*${CUTTER_SUFFIX}`,
-    `cutter_templates/**/*${CUTTER_SUFFIX}`,
-    `tgui/public/tgui.html`,
-    cutter_path,
-  ],
-=======
   dependsOn: () => [CutterTarget],
   inputs: ({ get }) => {
     const standard_inputs = [
@@ -195,23 +170,12 @@ export const IconCutterTarget = new Juke.Target({
       ...existing_configs.map((file) => file.replace(".toml", "")),
     ];
   },
->>>>>>> b4eb766984 (dependency cleanup and loader removal (#17781))
   outputs: ({ get }) => {
     if (get(ForceRecutParameter)) return [];
     const folders = [
-      ...Juke.glob(`icons/**/*${CUTTER_SUFFIX}`, `modular_chomp/icons/**/*${CUTTER_SUFFIX}`),
+      ...Juke.glob(`icons/**/*.png.toml`, `modular_chomp/icons/**/*.png.toml`),
     ];
     return folders
-<<<<<<< HEAD
-      .map((file) => file.replace(`${CUTTER_SUFFIX}`, '.dmi'));
-  },
-  executes: async () => {
-    await Juke.exec(cutter_path, [
-      '--dont-wait',
-      '--templates',
-      'cutter_templates',
-      'icons',
-=======
       .map((file) => file.replace(`.png.toml`, ".dmi"))
       .map((file) => file.replace(`.dmi.toml`, ".png"));
   },
@@ -221,7 +185,6 @@ export const IconCutterTarget = new Juke.Target({
       "--templates",
       "cutter_templates",
       "icons",
->>>>>>> b4eb766984 (dependency cleanup and loader removal (#17781))
     ]);
   },
 });
@@ -229,23 +192,15 @@ export const IconCutterTarget = new Juke.Target({
 export const DmMapsIncludeTarget = new Juke.Target({
   executes: async () => {
     const folders = [
-<<<<<<< HEAD
-      //...Juke.glob('_maps/map_files/**/modular_pieces/*.dmm'),
-      //...Juke.glob('_maps/RandomRuins/**/*.dmm'),
-      //...Juke.glob('_maps/RandomZLevels/**/*.dmm'),
-      //...Juke.glob('_maps/shuttles/**/*.dmm'),
-      //...Juke.glob('_maps/templates/**/*.dmm'),
-      ...Juke.glob('modular_chomp/maps/soluna_nexus/**/*.dmm'),
-      ...Juke.glob('modular_chomp/maps/southern_cross/**/*.dmm'),
-      ...Juke.glob('modular_chomp/maps/relic_base/**/*.dmm'),
-      ...Juke.glob('modular_chomp/maps/submap/**/*.dmm'),
-=======
-      ...Juke.glob("_maps/map_files/**/modular_pieces/*.dmm"),
-      ...Juke.glob("_maps/RandomRuins/**/*.dmm"),
-      ...Juke.glob("_maps/RandomZLevels/**/*.dmm"),
-      ...Juke.glob("_maps/shuttles/**/*.dmm"),
-      ...Juke.glob("_maps/templates/**/*.dmm"),
->>>>>>> b4eb766984 (dependency cleanup and loader removal (#17781))
+      //...Juke.glob("_maps/map_files/**/modular_pieces/*.dmm"),
+      //...Juke.glob("_maps/RandomRuins/**/*.dmm"),
+      //...Juke.glob("_maps/RandomZLevels/**/*.dmm"),
+      //...Juke.glob("_maps/shuttles/**/*.dmm"),
+      //...Juke.glob("_maps/templates/**/*.dmm"),
+      ...Juke.glob("modular_chomp/maps/soluna_nexus/**/*.dmm"),
+      ...Juke.glob("modular_chomp/maps/southern_cross/**/*.dmm"),
+      ...Juke.glob("modular_chomp/maps/relic_base/**/*.dmm"),
+      ...Juke.glob("modular_chomp/maps/submap/**/*.dmm"),
     ];
     const content =
       folders
@@ -257,30 +212,6 @@ export const DmMapsIncludeTarget = new Juke.Target({
 });
 
 export const DmTarget = new Juke.Target({
-<<<<<<< HEAD
-  parameters: [DefineParameter, DmVersionParameter, WarningParameter, NoWarningParameter],
-  dependsOn: ({ get }) => [
-    get(DefineParameter).includes('ALL_MAPS') && DmMapsIncludeTarget,
-    IconCutterTarget,
-  ],
-  inputs: [
-    '_maps/map_files/generic/**',
-    'maps/**/*.dm',
-    'code/**',
-    'html/**',
-    'icons/**',
-    'interface/**',
-    'sound/**',
-    'tgui/public/tgui.html',
-    'modular_chomp/code/**',
-    'modular_chomp/icons/**',
-    'sound/**',
-    'modular_chomp/maps/**/*.dm',
-    'modular_chomp/maps/soluna_nexus/**/*.dmm', // Placed here so it recompiles on map changes
-    'modular_chomp/maps/southern_cross/**/*.dmm', // Placed here so it recompiles on map changes
-    'modular_chomp/maps/relic_base/**/*.dmm', // Placed here so it recompiles on map changes
-    'modular_chomp/maps/submap/**/*.dmm', // Placed here so it recompiles on map changes
-=======
   parameters: [
     DefineParameter,
     DmVersionParameter,
@@ -301,7 +232,13 @@ export const DmTarget = new Juke.Target({
     "interface/**",
     "sound/**",
     "tgui/public/tgui.html",
->>>>>>> b4eb766984 (dependency cleanup and loader removal (#17781))
+    "modular_chomp/code/**",
+    "modular_chomp/icons/**",
+    "modular_chomp/maps/**/*.dm",
+    "modular_chomp/maps/soluna_nexus/**/*.dmm", // Placed here so it recompiles on map changes
+    "modular_chomp/maps/southern_cross/**/*.dmm", // Placed here so it recompiles on map changes
+    "modular_chomp/maps/relic_base/**/*.dmm", // Placed here so it recompiles on map changes
+    "modular_chomp/maps/submap/**/*.dmm", // Placed here so it recompiles on map changes
     `${DME_NAME}.dme`,
     NamedVersionFile,
   ],
@@ -347,16 +284,11 @@ export const DmTestTarget = new Juke.Target({
     };
     await DreamDaemon(
       options,
-<<<<<<< HEAD
-      '-close', '-trusted', '-verbose', '-invisible',
-      '-params', 'log-directory=ci'
-=======
       "-close",
       "-trusted",
       "-verbose",
       "-params",
       "log-directory=ci",
->>>>>>> b4eb766984 (dependency cleanup and loader removal (#17781))
     );
     Juke.rm("*.test.*");
     try {
@@ -400,16 +332,11 @@ export const AutowikiTarget = new Juke.Target({
     };
     await DreamDaemon(
       options,
-<<<<<<< HEAD
-      '-close', '-trusted', '-invisible', '-verbose',
-      '-params', 'log-directory=ci',
-=======
       "-close",
       "-trusted",
       "-verbose",
       "-params",
       "log-directory=ci",
->>>>>>> b4eb766984 (dependency cleanup and loader removal (#17781))
     );
     Juke.rm("*.test.*");
     if (!fs.existsSync("data/autowiki_edits.txt")) {
@@ -417,12 +344,8 @@ export const AutowikiTarget = new Juke.Target({
       throw new Juke.ExitCode(1);
     }
   },
-<<<<<<< HEAD
 })
 */
-=======
-});
->>>>>>> b4eb766984 (dependency cleanup and loader removal (#17781))
 
 export const YarnTarget = new Juke.Target({
   parameters: [CiParameter],
@@ -560,13 +483,8 @@ export const ServerTarget = new Juke.Target({
     const options = {
       dmbFile: `${DME_NAME}.dmb`,
       namedDmVersion: get(DmVersionParameter),
-<<<<<<< HEAD
     }
-    await DreamDaemon(options, port, '-trusted -invisible');
-=======
-    };
-    await DreamDaemon(options, port, "-trusted");
->>>>>>> b4eb766984 (dependency cleanup and loader removal (#17781))
+    await DreamDaemon(options, port, "-trusted -invisible");
   },
 });
 
