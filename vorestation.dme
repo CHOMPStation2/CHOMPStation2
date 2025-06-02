@@ -1446,11 +1446,8 @@
 #include "code\game\objects\items\sahoc_ch.dm"
 #include "code\game\objects\items\selectable_item_vr.dm"
 #include "code\game\objects\items\shooting_range.dm"
-<<<<<<< HEAD
-#include "code\game\objects\items\surplus_voucher_ch.dm"
-=======
 #include "code\game\objects\items\soap.dm"
->>>>>>> 9eb876de72 (Soap & clean proc refactor  (#17744))
+#include "code\game\objects\items\surplus_voucher_ch.dm"
 #include "code\game\objects\items\tailoring.dm"
 #include "code\game\objects\items\trash.dm"
 #include "code\game\objects\items\trash_material.dm"

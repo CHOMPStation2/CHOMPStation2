@@ -439,19 +439,6 @@
 	. = 1
 	return 1
 
-<<<<<<< HEAD
-/atom/proc/clean_blood()
-	if(!simulated)
-		return
-	fluorescent = 0
-	src.germ_level = 0
-	if(istype(blood_DNA, /list))
-		blood_DNA = null
-		return TRUE
-	blood_color = null //chompfixy, cleaning objects saved its future blood color no matter what
-
-=======
->>>>>>> 9eb876de72 (Soap & clean proc refactor  (#17744))
 /atom/proc/on_rag_wipe(var/obj/item/reagent_containers/glass/rag/R)
 	wash(CLEAN_WASH)
 	R.reagents.splash(src, 1)
