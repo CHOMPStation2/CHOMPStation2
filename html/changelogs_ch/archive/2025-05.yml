@@ -220,3 +220,18 @@
   - bugfix: Fixes an oversight that resulted in synthetics not being able to unabsorb
       prey.
   - bugfix: Toggling silk production now works
+2025-05-30:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: Mobs are briefly stunned when pounced
+  - image: Fixes missing nukie can sprite
+  - rscadd: Added a new event collector objector that is designed for events where
+      players have to gather items to complete a recipe.
+  - rscadd: Added a blocker object to accompany the event collector.
+  - rscadd: 'Added a bunch of new torso definition markings: Bust/Bustier (solid,
+      translucent and outline), nipples (normal position, closer together and one
+      pixel lower) and abs.'
+  - bugfix: Admin respawn respects record button selection
+  - bugfix: custom egg name and size input
+  - qol: adds an option to have edit mode enabled on window open
+  - bugfix: dullahan taur jani and command sprites
+  - bugfix: dullahan syndie sprite
