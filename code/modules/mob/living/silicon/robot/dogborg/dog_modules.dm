@@ -233,7 +233,7 @@
 			water.use_charge(5)
 			var/obj/effect/decal/cleanable/C = locate() in target
 			qdel(C)
-			target.clean_blood()
+			target.wash(CLEAN_WASH)
 		busy = 0
 		//CHOMPADD End
 	else if(ishuman(target))
@@ -264,7 +264,7 @@
 			to_chat(user, span_notice("You clean \the [target.name]."))
 			var/obj/effect/decal/cleanable/C = locate() in target
 			qdel(C)
-			target.clean_blood()
+			target.wash(CLEAN_WASH)
 			water.use_charge(5)
 			if(istype(target, /turf/simulated))
 				var/turf/simulated/T = target
