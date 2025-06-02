@@ -139,10 +139,6 @@
 	pixel_x = 6;
 	pixel_y = 13
 	},
-/obj/random/action_figure{
-	pixel_x = -9;
-	pixel_y = -4
-	},
 /obj/item/dice/d20,
 /obj/item/deck/tarot,
 /obj/item/material/sword/katana{
@@ -152,6 +148,10 @@
 /obj/item/clothing/head/fedora{
 	pixel_x = -4;
 	pixel_y = 10
+	},
+/obj/random/action_figure{
+	pixel_x = -9;
+	pixel_y = -4
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/cybershuttle)
