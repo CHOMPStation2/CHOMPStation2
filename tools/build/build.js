@@ -483,7 +483,7 @@ export const ServerTarget = new Juke.Target({
     const options = {
       dmbFile: `${DME_NAME}.dmb`,
       namedDmVersion: get(DmVersionParameter),
-    }
+    };
     await DreamDaemon(options, port, "-trusted -invisible");
   },
 });
