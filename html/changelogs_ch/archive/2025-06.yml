@@ -14,3 +14,23 @@
   - rscadd: Added three new chemicals for higher level symptoms.
   - rscadd: Old syringes and old syringe boxes, which may include include diseases.
   - balance: Buffed the chance of mice having diseases on them.
+2025-06-03:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: genescanner tool now has a proper description
+  - bugfix: Holomaps/Nanomaps no longer show POI walls
+  - bugfix: lights do not ignore light switch state when a bulb is inserted
+  - image: Fixed taj belly markings missing their groins.
+  - bugfix: macrophages escape chance is now properly set to 20%
+  - balance: Unathi no longer pass out from sugar, they just get knocked over.
+  Diana:
+  - code_imp: Less random lagspikes during the middle of the round.
+  FluffMedic:
+  - qol: Cyber shuttle has full glass walls
+  Guti:
+  - refactor: Refactored soap
+  - refactor: Refactored washing machine code to get rid of sleeps
+  - rscadd: You can eat soap now
+  - rscadd: Clean component
+  - code_imp: Replaced clean(), clean_blood(), and clean_contamination() with wash()
+  Verkister:
+  - bugfix: Fixed unlinked digestive juice turfs not damaging humanmobs.

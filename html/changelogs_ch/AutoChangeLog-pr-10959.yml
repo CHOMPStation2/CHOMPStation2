@@ -1,4 +1,0 @@
-author: "Verkister"
-delete-after: True
-changes:
-  - bugfix: "Fixed unlinked digestive juice turfs not damaging humanmobs."
