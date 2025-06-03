@@ -820,6 +820,10 @@ GLOBAL_LIST_EMPTY(icon_dimensions)
 		blood_DNA = null
 		return TRUE
 
+<<<<<<< HEAD
 	blood_color = null // CHOMPEdit - PR this upstream at some point
+=======
+	blood_color = null
+>>>>>>> 98c26af2b2 (Fixes washing related issues (#17789))
 	germ_level = 0
 	fluorescent = 0
