@@ -27,13 +27,8 @@
 	/obj/item/stack/medical/bruise_pack = 20
 	)
 
-<<<<<<< HEAD
-	min_duration = 60 //CHOMPedit
-	max_duration = 60 //CHOMPedit
-=======
 	min_duration = 60
 	max_duration = 60
->>>>>>> 01eab8bd72 (Spooky/Horror modifier & various tweaks/fixes (#17775))
 
 /datum/surgery_step/internal/fix_organ/can_use(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	if (!hasorgans(target))
@@ -134,13 +129,8 @@
 	/obj/item/storage/toolbox = 10 	//Percussive Maintenance
 	)
 
-<<<<<<< HEAD
-	min_duration = 60 //CHOMPedit
-	max_duration = 60 //CHOMPedit
-=======
 	min_duration = 60
 	max_duration = 60
->>>>>>> 01eab8bd72 (Spooky/Horror modifier & various tweaks/fixes (#17775))
 
 /datum/surgery_step/fix_organic_organ_robotic/can_use(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	if (!hasorgans(target))
@@ -216,13 +206,8 @@
 	/obj/item/material/shard = 50, 		\
 	)
 
-<<<<<<< HEAD
-	min_duration = 60 //CHOMPedit
-	max_duration = 60 //CHOMPedit
-=======
 	min_duration = 60
 	max_duration = 60
->>>>>>> 01eab8bd72 (Spooky/Horror modifier & various tweaks/fixes (#17775))
 
 /datum/surgery_step/internal/detatch_organ/can_use(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	if (!..())
@@ -294,11 +279,7 @@
 	allowed_procs = list(IS_WIRECUTTER = 100) //FBP code also uses this, so let's be nice. Roboticists won't know to use hemostats.
 
 	min_duration = 60
-<<<<<<< HEAD
-	max_duration = 60 //CHOMPedit
-=======
 	max_duration = 60
->>>>>>> 01eab8bd72 (Spooky/Horror modifier & various tweaks/fixes (#17775))
 
 /datum/surgery_step/internal/remove_organ/can_use(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	if (!..())
@@ -377,13 +358,8 @@
 	/obj/item/organ = 100
 	)
 
-<<<<<<< HEAD
-	min_duration = 40 //CHOMPedit
-	max_duration = 40 //CHOMPedit
-=======
 	min_duration = 40
 	max_duration = 40
->>>>>>> 01eab8bd72 (Spooky/Horror modifier & various tweaks/fixes (#17775))
 
 /datum/surgery_step/internal/replace_organ/can_use(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/internal/O = tool
@@ -407,21 +383,9 @@
 		to_chat(user, span_danger("You have no idea what species this person is. Report this on the bug tracker."))
 		return SURGERY_FAILURE
 
-<<<<<<< HEAD
-	//var/o_is = (O.gender == PLURAL) ? "are" : "is"
 	var/o_a =  (O.gender == PLURAL) ? "" : "a "
 	var/o_do = (O.gender == PLURAL) ? "don't" : "doesn't"
 
-/* CHOMPedit begin, allow rotten/damaged organs to be inserted again to allow for organ repair in the case of worst-case-scenerio gib situation. Also to make a funny if lets say, a doctor didnt examine a damaged organ and inserted it anyway.
-	if(O.damage > (O.max_damage * 0.75))
-		to_chat(user, span_warning("\The [O.organ_tag] [o_is] in no state to be transplanted."))
-		return SURGERY_FAILURE
-*/
-=======
-	var/o_a =  (O.gender == PLURAL) ? "" : "a "
-	var/o_do = (O.gender == PLURAL) ? "don't" : "doesn't"
-
->>>>>>> 01eab8bd72 (Spooky/Horror modifier & various tweaks/fixes (#17775))
 	if(!target.internal_organs_by_name[O.organ_tag])
 		organ_missing = 1
 	else
