@@ -34,3 +34,21 @@
   - code_imp: Replaced clean(), clean_blood(), and clean_contamination() with wash()
   Verkister:
   - bugfix: Fixed unlinked digestive juice turfs not damaging humanmobs.
+2025-06-04:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: Fixed showers not washing atoms in it's space
+  - rscadd: Added a small amount of weaken to spider warning bites to knock people
+      over.
+  - rscadd: Added a new variable to mobs that can prevent them from being pulled when
+      alive, currently only applies to the spiders.
+  - bugfix: Fixed an issue where spiders would sometimes try to inject poison where
+      they couldn't and runtime.
+  - rscadd: Multishock integration
+  - rscadd: Photodegeneration genetrait, cannot be selected from round start
+  - bugfix: Drippy trait will no longer drop drips into the cryopod when a human with
+      it is in the pod
+  - refactor: inStasisNow() has a base proc on mob, for ease of component compatibility
+      between simple and human mobs
+  - refactor: Moved species/shadow and zaddat light-based damage code to a component
+  Diana:
+  - bugfix: You now lose nutrition passively again
