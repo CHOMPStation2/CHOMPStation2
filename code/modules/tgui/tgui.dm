@@ -281,6 +281,10 @@
 		//"refreshing" = refreshing,
 		"refreshing" = FALSE,
 		"mapZLevel" = map_z_level,
+		"mapInfo" = list(
+			"maxx" = world.maxx,
+			"maxy" = world.maxy,
+		),
 		"window" = list(
 			"key" = window_key,
 			"size" = window_size,

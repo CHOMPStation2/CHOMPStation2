@@ -269,6 +269,10 @@ type BackendState<TData> = {
     refreshing: boolean;
     map: string; // Vorestation Add
     mapZLevel: number; // Vorestation Add
+    mapInfo: {
+      maxx: number; // Vorestation Add
+      maxy: number; // Vorestation Add
+    }; // Vorestation Add
     window: {
       key: string;
       size: [number, number];
