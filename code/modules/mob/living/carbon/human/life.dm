@@ -1168,16 +1168,20 @@
 	if(status_flags & GODMODE)
 		return 0	//godmode
 
-	if(species.light_dam)
-		var/light_amount = 0
-		if(isturf(loc))
-			var/turf/T = loc
-			light_amount = T.get_lumcount() * 10
-		if(light_amount > species.light_dam) //if there's enough light, start dying
-			take_overall_damage(1,1)
-		else //heal in the dark
-			heal_overall_damage(1,1)
 	// nutrition decrease
+	// Species controls hunger rate for humans, otherwise use defaults
+	if(nutrition > 0 && stat != DEAD)
+		var/nutrition_reduction = DEFAULT_HUNGER_FACTOR
+		nutrition_reduction = species.hunger_factor
+		// Modifiers can increase or decrease nutrition cost
+		for(var/datum/modifier/mod in modifiers)
+			if(!isnull(mod.metabolism_percent))
+				nutrition_reduction *= mod.metabolism_percent
+		var/datum/component/nutrition_size_change/comp = GetComponent(/datum/component/nutrition_size_change)
+		if(comp)
+			nutrition_reduction *= comp.get_nutrition_multiplier()
+		adjust_nutrition(-nutrition_reduction)
+
 	if(noisy == TRUE && nutrition < 250 && prob(10))
 		var/sound/growlsound = sound(get_sfx("hunger_sounds"))
 		var/growlmultiplier = 100 - (nutrition / 250 * 100)
