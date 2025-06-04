@@ -78,7 +78,7 @@
 /obj/structure/table/standard,
 /obj/item/a_gift,
 /obj/item/a_gift,
-/turf/simulated/floor/wood,
+/turf/simulated/floor/wood/turfpack/sif,
 /area/submap/FrostOasis)
 "me" = (
 /obj/effect/decal/cleanable/dirt,
@@ -149,7 +149,7 @@
 /obj/structure/bed/double/padded,
 /obj/item/bedsheet/rddouble,
 /obj/effect/spresent,
-/turf/simulated/floor/wood,
+/turf/simulated/floor/wood/turfpack/sif,
 /area/submap/FrostOasis)
 "vK" = (
 /obj/item/a_gift,
@@ -189,7 +189,7 @@
 "EW" = (
 /obj/structure/table/standard,
 /obj/item/gift,
-/turf/simulated/floor/wood/broken/turfpack/sif,
+/turf/simulated/floor/wood/turfpack/sif,
 /area/submap/FrostOasis)
 "Fl" = (
 /obj/structure/curtain/open/bed,
