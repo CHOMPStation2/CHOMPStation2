@@ -52,3 +52,20 @@
   - refactor: Moved species/shadow and zaddat light-based damage code to a component
   Diana:
   - bugfix: You now lose nutrition passively again
+2025-06-05:
+  Diana:
+  - rscadd: Your spleen has been rescued from the Skrell. (Everyone now has a spleen,
+      not JUST skrell)
+  - bugfix: Worm meat can now properly be cut into
+  - bugfix: Organs now properly show their names when you're interacting with them
+      surgically.
+  - qol: Surgery steps don't have randomness anymore. Surgery steps also lowered
+  - qol: You can shove dead organs in bodies. Still a bad idea, but can be combined
+      with the patient stabilizer to some success.
+  - code_imp: Adds a spooky modifier with some special stuff to go along with it.
+      Not obtainable outside of admins.
+  - bugfix: Puking with a broken liver now properly makes you vomit the correct blood
+      color
+  Guti:
+  - bugfix: Fixed wash() proc to delete cleanable decals
+  - bugfix: Fixed mops and soaps not making the floor wet
