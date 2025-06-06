@@ -3,7 +3,6 @@ var/list/admin_verbs_default = list(
 //	/datum/admins/proc/show_player_panel,	//shows an interface for individual players, with various links (links require additional flags, //VOREStation Remove,
 //	/client/proc/player_panel_new, //shows an interface for all players, with links to various panels, //VOREStation Remove,
 //	/client/proc/player_panel,			//VOREStation Remove,
-	/client/proc/deadmin,			//destroys our own admin datum so we can play as a regular player,
 	/client/proc/cmd_admin_say,			//VOREStation Add,
 	/client/proc/cmd_mod_say,			//VOREStation Add,
 	/client/proc/cmd_event_say,			//VOREStation Add,
@@ -84,7 +83,6 @@ var/list/admin_verbs_admin = list(
 	/datum/admins/proc/toggleoocdead,	//toggles ooc on/off for everyone who is dead,
 	/datum/admins/proc/togglehubvisibility, //toggles visibility on the BYOND Hub.,
 	/datum/admins/proc/toggledsay,		//toggles dsay on/off for everyone,
-	/client/proc/game_panel,			//game panel, allows to change game-mode etc,
 	/client/proc/cmd_admin_say,			//admin-only ooc chat,
 	/client/proc/cmd_mod_say,
 	/client/proc/cmd_event_say,
@@ -122,19 +120,12 @@ var/list/admin_verbs_admin = list(
 	/datum/admins/proc/view_feedback,
 	/client/proc/make_mentor,
 	/client/proc/unmake_mentor,
-	/client/proc/removetickets,
 	/client/proc/delbook,
 	/client/proc/toggle_spawning_with_recolour,
-	/client/proc/modify_shift_end,
 	/client/proc/start_vote,
 	/client/proc/hide_motion_tracker_feedback,
 	/client/proc/reload_jobwhitelist, //ChompADD
 	/client/proc/reload_alienwhitelist //ChompADD
-	)
-
-var/list/admin_verbs_ban = list(
-	/client/proc/unban_panel,
-	/client/proc/jobbans
 	)
 
 var/list/admin_verbs_sounds = list(
@@ -317,7 +308,6 @@ var/list/admin_verbs_rejuv = list(
 
 //verbs which can be hidden - needs work
 var/list/admin_verbs_hideable = list(
-	/client/proc/deadmin,
 //	/client/proc/deadchat,
 	/datum/admins/proc/show_traitor_panel,
 	/datum/admins/proc/toggleenter,
@@ -415,7 +405,6 @@ var/list/admin_verbs_mod = list(
 	/datum/admins/proc/show_player_panel,
 	/client/proc/check_antagonists,
 	/client/proc/aooc,
-	/client/proc/jobbans,
 	/client/proc/cmd_admin_subtle_message, 	//send an message to somebody as a 'voice in their head',
 	/datum/admins/proc/paralyze_mob,
 	/client/proc/cmd_admin_direct_narrate,
@@ -538,7 +527,6 @@ var/list/admin_verbs_event_manager = list(
 	/client/proc/admin_memo,                        //admin memo system. show/delete/write. +SERVER needed to delete admin memos of others,
 	/client/proc/dsay,                                      //talk in deadchat using our ckey/fakekey,
 	/client/proc/secrets,
-	/client/proc/game_panel,                        //game panel, allows to change game-mode etc,
 	/client/proc/cmd_mod_say,
 	/client/proc/cmd_event_say,
 	/datum/admins/proc/show_player_info,
@@ -575,7 +563,6 @@ var/list/admin_verbs_event_manager = list(
 	/client/proc/toggle_random_events,
 	/client/proc/modify_server_news,
 	/client/proc/toggle_spawning_with_recolour,
-	/client/proc/modify_shift_end,
 	/client/proc/start_vote,
 	/client/proc/AdminCreateVirus,
 	/client/proc/ReleaseVirus,
@@ -589,6 +576,7 @@ var/list/admin_verbs_event_manager = list(
 	/client/proc/reload_jobwhitelist, //ChompADD
 	/client/proc/reload_alienwhitelist //ChompADD
 )
+<<<<<<< HEAD
 
 /client/proc/add_admin_verbs()
 	if(holder)
@@ -631,3 +619,5 @@ var/list/admin_verbs_event_manager = list(
 		debug_verbs
 		))
 //CHOMPEdit End
+=======
+>>>>>>> 47b5d56db1 (Enables admin verb subsystem (#17793))
