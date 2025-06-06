@@ -530,7 +530,11 @@
 #include "code\datums\components\connect_containers_ch.dm"
 #include "code\datums\components\connect_loc_behalf.dm"
 #include "code\datums\components\connect_mob_behalf.dm"
+<<<<<<< HEAD
 #include "code\datums\components\connect_range_ch.dm"
+=======
+#include "code\datums\components\holographic_nature.dm"
+>>>>>>> 4fc52f2ad6 (tgstation/tgstation#89689 - holograms now wibble when stuff passes through them (#17806))
 #include "code\datums\components\material_container.dm"
 #include "code\datums\components\orbiter.dm"
 #include "code\datums\components\overlay_lighting.dm"
