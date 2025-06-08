@@ -17,8 +17,8 @@
 
 /mob/living/simple_mob/mechanical/hivebot/tyr
 	name = "terraforming hivebot"
-	maxHealth = 1.5 LASERS_TO_KILL // 60 hp
-	health = 1.5 LASERS_TO_KILL
+	maxHealth = 0.5 LASERS_TO_KILL // 20 hp
+	health = 0.5 LASERS_TO_KILL
 	icon = 'modular_chomp/icons/mob/hivebot.dmi'
 	desc = "A robot with strange gardening looking gear."
 	loot_list = list(/obj/structure/foamedmetal = 100
@@ -72,10 +72,10 @@
 /mob/living/simple_mob/mechanical/mecha/eclipse/hivebot/tyr/proc/summon_janitor(atom/target, var/amount, var/next_cycle)
 	if(!target)
 		return
-	new /mob/living/simple_mob/mechanical/combat_drone/artillery
+	new /mob/living/simple_mob/mechanical/hivebot/tyr
 	amount--
 	if(amount > 0)
-		addtimer(CALLBACK(src, PROC_REF(summon_drones), target, amount, next_cycle), 0.5 SECONDS, TIMER_DELETE_ME)
+		addtimer(CALLBACK(src, PROC_REF(summon_janitor), target, amount, next_cycle), 0.5 SECONDS, TIMER_DELETE_ME)
 	else
 		attackcycle = next_cycle
 

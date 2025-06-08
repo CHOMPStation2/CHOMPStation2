@@ -829,7 +829,7 @@
 	name = "Eclipse Expirmental Janus"
 	armor = list(melee = 60, bullet = 60, laser = 60, energy = 60, bomb = 80, bio = 100, rad = 100)
 	specialattackprojectile = /obj/item/projectile/energy/eclipse/janusjavelin
-	pilot_type = /mob/living/simple_mob/humanoid/eclipse/head/tyrlead
+	pilot_type = /mob/living/simple_mob/mechanical/mecha/eclipse/sniper
 	icon_state = "eclipse_janus"
 	attackcycle = 1
 
@@ -840,10 +840,12 @@
 		armor = list(melee = 80, bullet = 80, laser = 40, energy = 40, bomb = 80, bio = 100, rad = 100)
 		armor_soak = list(melee = 10, bullet = 10, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0)
 		icon_state = "eclipse_janus_red"
+		visible_message(span_cult("[P] has been adapted too!."))
 	else
 		armor = list(melee = 40, bullet = 40, laser = 80, energy = 80, bomb = 80, bio = 100, rad = 100)
 		armor_soak = list(melee = 0, bullet = 0, laser = 10, energy = 10, bomb = 0, bio = 0, rad = 0)
 		icon_state = "eclipse_janus_orange"
+		visible_message(span_cult("[P] has been adapted too!."))
 
 /mob/living/simple_mob/mechanical/mecha/eclipse/darkmatter_assualt/do_special_attack(atom/A)
 	. = TRUE // So we don't fire a bolt as well.
@@ -888,7 +890,7 @@
 				attackcycle = 0
 			else if(attackcycle == 2)
 				say("Activating laser surge")
-				specialattackprojectile = /obj/item/projectile/energy/burninglaser/boss
+				specialattackprojectile = /obj/item/projectile/energy/eclipse/janusjavelin
 				addtimer(CALLBACK(src, PROC_REF(miniburst_a), A, 2), 3 SECONDS, TIMER_DELETE_ME)
 			else if(attackcycle == 3)
 				specialattackprojectile = /obj/item/projectile/energy/eclipse/janusjavelin
