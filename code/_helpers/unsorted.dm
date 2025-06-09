@@ -861,6 +861,7 @@ Turf and target are seperate in case you want to teleport some distance from a t
 	else
 		O=new original.type(locate(0,0,0))
 
+<<<<<<< HEAD
 	var/static/list/blacklisted_var_names = list(
 		"ATOM_TOPIC_EXAMINE",
 		"type",
@@ -877,6 +878,9 @@ Turf and target are seperate in case you want to teleport some distance from a t
 		"_listen_lookup",  // ChompEDIT - blacklist signal listeners
 		"_signal_procs" // ChompEDIT - blacklist signal procs
 	)
+=======
+	var/static/list/blacklisted_var_names = list(BLACKLISTED_COPY_VARS)
+>>>>>>> cbd3f1ea2b (Dna, Bodyrecord, Xenochi Revive Refactor (#17732))
 	if(perfectcopy)
 		if((O) && (original))
 			for(var/V in original.vars)
