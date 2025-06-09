@@ -116,3 +116,20 @@
   - qol: The chat now supports TTS for chosen message types, filtered the same way
       that chat tabs are filtered. This is an accessibility feature.
   - bugfix: Fixed runtime on vampire xenoartifact's blood sucking effect
+2025-06-09:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: phased shadekin no longer prevent airlocks from closing
+  - bugfix: phased shadekin are no longer crushed by dangerous airlocks closing
+  - rscadd: Dormant diseases may now be acquired via blood samples
+  - qol: Allowed virus immune species to get dormant diseases, as well as access to
+      Disease Carrier trait
+  - balance: The extrapolator may find any disease with no regards of it's stealth
+  - code_imp: added GetDormantDiseases proc
+  Diana:
+  - bugfix: Plat and gold can be put in prosfabs again
+  - balance: Spooky modifier was tested and had some balance adjustments
+  FluffMedic:
+  - bugfix: properly removes a nonfunctioning attack from the E-janus
+  - bugfix: The hivebot tower summoning the wrong mobs
+  - bugfix: wrong pilot for E-janus
+  - qol: Added more feedback to the E-Janus's armor gimmick.

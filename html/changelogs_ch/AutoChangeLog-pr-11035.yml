@@ -1,7 +1,0 @@
-author: "FluffMedic"
-delete-after: True
-changes:
-  - bugfix: "properly removes a nonfunctioning attack from the E-janus"
-  - bugfix: "The hivebot tower summoning the wrong mobs"
-  - bugfix: "wrong pilot for E-janus"
-  - qol: "Added more feedback to the E-Janus's armor gimmick."
