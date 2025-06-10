@@ -149,3 +149,5 @@
 		say("PROTOCOL: MISSILE.")
 		addtimer(CALLBACK(src, PROC_REF(singleproj), A, rng_cycle), 2 SECONDS, TIMER_DELETE_ME)
 		attackcycle = 0
+
+
