@@ -70,6 +70,8 @@
 #include "syndisniperAlt.dmm"
 #include "wolfden.dmm"
 #include "xenohive.dmm"
+#include "XenoWeaveMajor.dmm"
+#include "XenoWeaveMinour.dmm"
 #endif
 
 // The 'wilderness' is the endgame for Explorers. Extremely dangerous and far away from help, but with vast shinies.
@@ -532,6 +534,18 @@
 	desc = "Yarr, explorers my expirence diffcults when facing defenses of water and table."
 	mappath = "modular_chomp/maps/submaps/surface_submaps/wilderness/PirateLake.dmm"
 	cost = 20
+
+/datum/map_template/surface/wilderness/deep/XenoWeaveMajor
+	name = "Assimilated Engine"
+	desc = "An engine fallen off a precursor structure, stolen by a diffrent breed."
+	mappath = "modular_chomp/maps/submaps/surface_submaps/wilderness/XenoWeaveMajor.dmm"
+	cost = 45
+
+/datum/map_template/surface/wilderness/deep/XenoWeaveMinour
+	name = "Assimilated Building"
+	desc = "A building claimed and assimilated into the xenoweave."
+	mappath = "modular_chomp/maps/submaps/surface_submaps/wilderness/XenoWeaveMinour.dmm"
+	cost = 30
 
 /*==Disabled==/
 

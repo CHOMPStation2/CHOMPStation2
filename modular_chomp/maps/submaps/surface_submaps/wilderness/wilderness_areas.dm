@@ -235,6 +235,14 @@
 	name = "POI Wilderness - Xeno Hive"
 	ambience = AMBIENCE_RUINS
 
+/area/submap/XenoWeaveMajor
+	name = "POI Wilderness - Assimilated Engine"
+	ambience = AMBIENCE_HOLY
+
+/area/submap/XenoWeaveMinour
+	name = "POI Wilderness - Assimilated Building"
+	ambience = AMBIENCE_HOLY
+
 /area/submap/VolcanicFissure
 	name = "POI Wilderness - Volcanic Fissure"
 	ambience = AMBIENCE_RUINS
