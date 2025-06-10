@@ -238,10 +238,12 @@
 /area/submap/XenoWeaveMajor
 	name = "POI Wilderness - Assimilated Engine"
 	ambience = AMBIENCE_HOLY
+	requires_power = FALSE
 
 /area/submap/XenoWeaveMinour
 	name = "POI Wilderness - Assimilated Building"
 	ambience = AMBIENCE_HOLY
+	requires_power = FALSE
 
 /area/submap/VolcanicFissure
 	name = "POI Wilderness - Volcanic Fissure"
