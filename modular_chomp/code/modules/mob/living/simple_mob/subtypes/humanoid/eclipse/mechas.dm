@@ -1402,6 +1402,19 @@
 /mob/living/simple_mob/mechanical/mecha/eclipse/proc/miniburst_b(atom/target, var/next_cycle)
 	if(!target)
 		return
+	upfour(target)
+	rightfour(target)
+	downfour(target)
+	leftfour(target)
+	attackcycle = next_cycle
+
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/miniburst_c(atom/target, var/next_cycle)
+	if(!target)
+		return
+	upfour(target)
+	rightfour(target)
+	downfour(target)
+	leftfour(target)
 	upfour_leftfour(target)
 	upfour_rightfour(target)
 	downfour_rightfour(target)

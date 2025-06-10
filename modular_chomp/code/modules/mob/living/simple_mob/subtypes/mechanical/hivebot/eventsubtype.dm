@@ -39,11 +39,11 @@
 	armor = list(melee = 80, bullet = 80, laser = 80, energy = 80, bomb = 0, bio = 100, rad = 100)
 
 
-/mob/living/simple_mob/mechanical/hivebot/nanoevent/orange //missiles!
+/mob/living/simple_mob/mechanical/hivebot/nanoevent/orange //knockback
 	name = "nanoweave artillery hivebot"
 	icon_state = "orange"
 	icon_living = "orange"
-	projectiletype = /obj/item/projectile/energy/burninglaser
+	projectiletype = /obj/item/projectile/knockback
 	movement_cooldown = 1
 
 
@@ -76,21 +76,15 @@
 /obj/item/projectile/beam/midlaser/veryshortrange
 	range = 2
 
-/obj/item/projectile/energy/burninglaser
-	name = "energy bolt"
-	icon_state = "heavylaser"
-	damage = 25
-	armor_penetration = 20
-	penetrating = 5
-	speed = 3
 
-/obj/item/projectile/energy/burninglaser/Move()
-	. = ..()
-	new /obj/fire(src.loc)
-
-/obj/item/projectile/energy/burninglaser/boss
-	armor_penetration = 50
-	speed = 10
+/obj/item/projectile/energy/lightingspark/nanoweave
+	damage = 15
+	armor_penetration = 40
+	damage_type = BURN
+	nodamage = 0
+	penetrating = 10
+	icon_state = "tesla_projectile"
+	speed = 15
 
 /obj/item/projectile/knockback
 	name = "sonic blast"
@@ -145,6 +139,21 @@
 /mob/living/simple_mob/mechanical/mecha/eclipse/hivebot/boss/event //super buffed HP for event
 	maxHealth = 5000
 	health = 5000
+
+/mob/living/simple_mob/mechanical/mecha/eclipse/hivebot/boss/sifpoi
+	maxHealth = 600
+	health = 600
+	loot_list = list(/obj/item/prop/alien/junk = 100,
+		/obj/item/multitool/alien = 20,
+		/obj/item/stack/cable_coil/alien = 20,
+		/obj/item/tool/crowbar/alien = 20,
+		/obj/item/tool/screwdriver/alien = 20,
+		/obj/item/weldingtool/alien = 20,
+		/obj/item/tool/wirecutters/alien = 20,
+		/obj/item/tool/wrench/alien = 20,
+		/obj/item/cell/device/weapon/recharge/alien = 30,
+		/obj/item/perfect_tele/alien = 100
+			)
 
 /mob/living/simple_mob/mechanical/mecha/eclipse/hivebot/boss/do_special_attack(atom/A)
 	. = TRUE // So we don't fire a bolt as well.
@@ -202,8 +211,8 @@
 				else
 					addtimer(CALLBACK(src, PROC_REF(miniburst_b), A, 10), 2 SECONDS, TIMER_DELETE_ME)
 			else if(attackcycle == 10)
-				say("PROTOCOL: FIREWALL.")
-				specialattackprojectile = /obj/item/projectile/energy/burninglaser/boss
+				say("PROTOCOL: DISCHARGE.")
+				specialattackprojectile = /obj/item/projectile/energy/lightingspark/nanoweave
 				attackcycle = 0
 				if(prob(50))
 					addtimer(CALLBACK(src, PROC_REF(miniburst_a), A, 1), 2 SECONDS, TIMER_DELETE_ME)
@@ -268,8 +277,8 @@
 				addtimer(CALLBACK(src, PROC_REF(burst), A, 7), 3 SECONDS, TIMER_DELETE_ME)
 				attackcycle = 0
 			else if(attackcycle == 7)
-				say("PROTOCOL: FIREWALL.")
-				specialattackprojectile = /obj/item/projectile/energy/burninglaser/boss
+				say("PROTOCOL: DISCHARGE.")
+				specialattackprojectile = /obj/item/projectile/energy/lightingspark/nanoweave
 				attackcycle = 0
 				if(prob(50))
 					addtimer(CALLBACK(src, PROC_REF(miniburst_a), A, 1), 3 SECONDS, TIMER_DELETE_ME)
@@ -321,7 +330,7 @@
 				say("PROTOCOL: TELEPORT.")
 				addtimer(CALLBACK(src, PROC_REF(teleport_attack), A, 1), 1 SECOND, TIMER_DELETE_ME)
 				attackcycle = 0
-
+/*
 /mob/living/simple_mob/mechanical/mecha/eclipse/hivebot/green
 	name = "command hivebot"
 	desc = "A large, very important looking robot."
@@ -396,7 +405,7 @@
 				say("PROTOCOL: TELEPORT.")
 				addtimer(CALLBACK(src, PROC_REF(teleport_attack), A, 1), 1 SECOND, TIMER_DELETE_ME)
 				attackcycle = 0
-
+*/
 
 
 
@@ -420,7 +429,7 @@
 	icon_state = "orangedisc"
 
 /obj/item/prop/nanoweave/terraformers
-	catalogue_data = list(/datum/category_item/catalogue/anomalous/orangedisc)
+	catalogue_data = list(/datum/category_item/catalogue/anomalous/terraformers)
 	icon_state = "orangedisc"
 
 
