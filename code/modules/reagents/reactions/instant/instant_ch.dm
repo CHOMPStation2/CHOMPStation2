@@ -151,9 +151,9 @@
 					if(comp.revive_ready >= 1) // if it's not reviving, start doing so
 						comp.revive_ready = REVIVING_READY // overrides the normal cooldown
 						H.visible_message(span_info("[H] shudders briefly, then relaxes, faint movements stirring within."))
-						H.chimera_regenerate()
+						comp.chimera_regenerate()
 					else if(comp.revive_ready == REVIVING_DONE)// already reviving, check if they're ready to hatch
-						H.chimera_hatch()
+						comp.chimera_hatch()
 						H.visible_message(span_danger(span_huge("[H] violently convulses and then bursts open, revealing a new, intact copy in the pool of viscera."))) // Hope you were wearing waterproofs, doc...
 						H.adjustBrainLoss(10) // they're reviving from dead, so take 10 brainloss
 					else //they're already reviving but haven't hatched. Give a little message to tell them to wait.
