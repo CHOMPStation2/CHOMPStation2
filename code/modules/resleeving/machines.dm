@@ -29,22 +29,8 @@
 	remove_biomass(CLONE_BIOMASS)
 
 	//Get the DNA and generate a new mob
-<<<<<<< HEAD
-	var/datum/dna2/record/R = current_project.mydna
-	var/mob/living/carbon/human/H = new /mob/living/carbon/human(src, R.dna.species)
-	if(current_project.locked)
-		H.resleeve_lock = current_project.ckey //CHOMPAdd, keep the lock
-		/*CHOMPRemove Start
-		if(current_project.ckey)
-			H.resleeve_lock = current_project.ckey
-		else
-			// Ensure even body scans without an attached ckey respect locking
-			H.resleeve_lock = "@badckey"
-		*///CHOMPRemove End
-=======
 	var/mob/living/carbon/human/H = current_project.produce_human_mob(src,FALSE,FALSE,"clone ([rand(0,999)])")
 	SEND_SIGNAL(H, COMSIG_HUMAN_DNA_FINALIZED)
->>>>>>> cbd3f1ea2b (Dna, Bodyrecord, Xenochi Revive Refactor (#17732))
 
 	//Give breathing equipment if needed
 	if(current_project.breath_type != null && current_project.breath_type != GAS_O2)
@@ -223,108 +209,14 @@
 		return
 
 	//Get the DNA and generate a new mob
-<<<<<<< HEAD
-	var/datum/dna2/record/R = current_project.mydna
-	var/mob/living/carbon/human/H = new /mob/living/carbon/human(src, R.dna.species)
-	if(current_project.locked)
-		H.resleeve_lock = current_project.ckey //CHOMPAdd, keep the lock
-		/*CHOMPRemove Start
-		if(current_project.ckey)
-			H.resleeve_lock = current_project.ckey
-		else
-			// Ensure even body scans without an attached ckey respect locking
-			H.resleeve_lock = "@badckey"
-		*///CHOMPRemove End
-
-	//Fix the external organs
-	for(var/part in current_project.limb_data)
-
-		var/status = current_project.limb_data[part]
-		if(status == null) continue //Species doesn't have limb? Child of amputated limb?
-
-		var/obj/item/organ/external/O = H.organs_by_name[part]
-		if(!O) continue //Not an organ. Perhaps another amputation removed it already.
-
-		if(status == 1) //Normal limbs
-			continue
-		else if(status == 0) //Missing limbs
-			O.remove_rejuv()
-		else if(status) //Anything else is a manufacturer
-			O.robotize(status)
-
-	//Then the internal organs
-	for(var/part in current_project.organ_data)
-
-		var/status = current_project.organ_data[part]
-		if(status == null) continue //Species doesn't have organ? Child of missing part?
-
-		var/obj/item/organ/I = H.internal_organs_by_name[part]
-		if(!I) continue//Not an organ. Perhaps external conversion changed it already?
-
-		if(status == 0) //Normal organ
-			continue
-		else if(status == 1) //Assisted organ
-			I.mechassist()
-		else if(status == 2) //Mechanical organ
-			I.robotize()
-		else if(status == 3) //Digital organ
-			I.digitize()
-
-	//Set the name or generate one
-	if(!R.dna.real_name)
-		R.dna.real_name = "synth ([rand(0,999)])"
-	H.real_name = R.dna.real_name
-
-	//Apply DNA
-	qdel_swap(H.dna, R.dna.Clone())
-	H.original_player = current_project.ckey
-
-	//Apply legs
-	H.digitigrade = R.dna.digitigrade // ensure clone mob has digitigrade var set appropriately
-	if(H.dna.digitigrade <> R.dna.digitigrade)
-		H.dna.digitigrade = R.dna.digitigrade // ensure cloned DNA is set appropriately from record??? for some reason it doesn't get set right despite the override to datum/dna/Clone()
-=======
 	var/mob/living/carbon/human/H = current_project.produce_human_mob(src,TRUE,FALSE,"synth ([rand(0,999)])")
 	SEND_SIGNAL(H, COMSIG_HUMAN_DNA_FINALIZED)
->>>>>>> cbd3f1ea2b (Dna, Bodyrecord, Xenochi Revive Refactor (#17732))
 
 	//Apply damage
 	H.adjustBruteLoss(brute_value)
 	H.adjustFireLoss(burn_value)
 	H.updatehealth()
 
-<<<<<<< HEAD
-	//Update appearance, remake icons
-	H.UpdateAppearance()
-	H.sync_dna_traits(FALSE) // Traitgenes Sync traits to genetics if needed
-	H.sync_organ_dna()
-	H.regenerate_icons()
-	H.initialize_vessel()
-
-	//Basically all the VORE stuff
-	H.ooc_notes = current_project.body_oocnotes
-	H.ooc_notes_likes = current_project.body_ooclikes
-	H.ooc_notes_dislikes = current_project.body_oocdislikes
-	//CHOMPEdit Start
-	H.ooc_notes_favs = current_project.body_oocfavs
-	H.ooc_notes_maybes = current_project.body_oocmaybes
-	H.ooc_notes_style = current_project.body_oocstyle
-	//CHOMPEdit End
-	H.flavor_texts = current_project.mydna.flavor.Copy()
-	H.resize(current_project.sizemult)
-	H.appearance_flags = current_project.aflags
-	H.weight = current_project.weight
-	if(current_project.speciesname)
-		H.custom_species = current_project.speciesname
-
-	//Suiciding var
-	H.suiciding = 0
-
-	//Making double-sure this is not set
-	H.mind = null
-
-=======
->>>>>>> cbd3f1ea2b (Dna, Bodyrecord, Xenochi Revive Refactor (#17732))
 	//Plonk them here.
 	H.forceMove(get_turf(src))
 
