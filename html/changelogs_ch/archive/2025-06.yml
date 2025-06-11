@@ -133,3 +133,10 @@
   - bugfix: The hivebot tower summoning the wrong mobs
   - bugfix: wrong pilot for E-janus
   - qol: Added more feedback to the E-Janus's armor gimmick.
+2025-06-11:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: fixed dormant diseases showing up in Medical scanners
+  - bugfix: some vorepanel message toggles in the general tab
+  - bugfix: game panel inaccessible to devs / event managers
+  FluffMedic:
+  - rscadd: 2 new sif POIs based off a past event
