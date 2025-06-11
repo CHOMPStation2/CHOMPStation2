@@ -116,6 +116,7 @@ but they don't actually change anything about the load order
 			Z_LEVEL_STATION_ONE,
 			Z_LEVEL_STATION_TWO,
 			Z_LEVEL_STATION_THREE,
+			Z_LEVEL_MISC,
 			Z_LEVEL_SURFACE,
 			Z_LEVEL_SURFACE_MINE
 		)
