@@ -267,6 +267,7 @@
 
 ///////////////////////////////////////Stock Parts /////////////////////////////////
 
+<<<<<<< HEAD
 /obj/item/storage/part_replacer
 	name = "rapid part exchange device"
 	desc = "A special mechanical module made to store, sort, and apply standard machine parts."
@@ -370,6 +371,8 @@
 		remove_from_storage(B, T)
 
 
+=======
+>>>>>>> 530809ffe6 (Add a very simple bluespace RPED (#17835))
 /obj/item/stock_parts
 	name = "stock part"
 	desc = "What?"
