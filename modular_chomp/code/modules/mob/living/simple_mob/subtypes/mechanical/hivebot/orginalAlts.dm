@@ -34,7 +34,7 @@
 	icon_state = "powertower"
 	icon_living = "powertower"
 	faction = FACTION_HIVEBOT
-	movement_cooldown = 7
+	movement_cooldown = 10
 	size_multiplier = 2
 	maxHealth = 500
 	health = 500
@@ -91,7 +91,7 @@
 	icon_state = "bluetower"
 	icon_living = "bluetower"
 	faction = FACTION_HIVEBOT
-	movement_cooldown = 7
+	movement_cooldown = 10
 	size_multiplier = 2
 	maxHealth = 500
 	health = 500

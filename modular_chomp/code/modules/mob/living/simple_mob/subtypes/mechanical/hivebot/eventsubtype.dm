@@ -418,19 +418,19 @@
 
 /obj/item/prop/nanoweave/lime
 	catalogue_data = list(/datum/category_item/catalogue/anomalous/limedisc)
-	icon_state = "limedisc"
+	icon_state = "limedisk"
 
 /obj/item/prop/nanoweave/cyan
 	catalogue_data = list(/datum/category_item/catalogue/anomalous/cyandisc)
-	icon_state = "cyandisc"
+	icon_state = "cyandisk"
 
 /obj/item/prop/nanoweave/orange
 	catalogue_data = list(/datum/category_item/catalogue/anomalous/orangedisc)
-	icon_state = "orangedisc"
+	icon_state = "orangedisk"
 
 /obj/item/prop/nanoweave/terraformers
 	catalogue_data = list(/datum/category_item/catalogue/anomalous/terraformers)
-	icon_state = "orangedisc"
+	icon_state = "reddisk"
 
 
 /datum/category_item/catalogue/anomalous/cyandisc

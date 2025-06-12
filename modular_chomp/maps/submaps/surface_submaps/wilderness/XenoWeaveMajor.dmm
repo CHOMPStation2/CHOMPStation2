@@ -1,4 +1,27 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aa" = (
+/obj/machinery/door/blast/puzzle{
+	id = "nanoweavePOI"
+	},
+/turf/simulated/shuttle/floor/alienplating/blue,
+/area/submap/XenoWeaveMajor)
+"ab" = (
+/obj/machinery/door/blast/puzzle{
+	id = "nanoweavePOI"
+	},
+/turf/simulated/shuttle/wall/alien/blue,
+/area/submap/XenoWeaveMajor)
+"ac" = (
+/obj/structure/foamedmetal,
+/turf/simulated/shuttle/floor/alien/blue,
+/area/submap/XenoWeaveMajor)
+"ad" = (
+/obj/structure/table/darkglass,
+/obj/machinery/button/remote/blast_door{
+	id = "nanoweavePOI"
+	},
+/turf/simulated/shuttle/floor/alien/blue,
+/area/submap/XenoWeaveMajor)
 "an" = (
 /mob/living/simple_mob/mechanical/mecha/eclipse/hivebot/nanoweavetower,
 /turf/simulated/shuttle/floor/alien/blue,
@@ -1016,7 +1039,7 @@ wC
 wC
 wC
 wC
-wC
+ab
 wC
 dE
 Wj
@@ -1065,7 +1088,7 @@ wC
 wC
 wC
 wC
-wC
+ab
 wC
 dE
 Wj
@@ -1114,7 +1137,7 @@ wC
 wC
 wC
 wC
-wC
+ab
 wC
 dE
 Wj
@@ -1250,7 +1273,7 @@ TP
 wC
 wC
 mZ
-mZ
+ad
 wC
 wC
 Wj
@@ -1299,8 +1322,8 @@ Yg
 wC
 wC
 mZ
-mZ
-wC
+ac
+ac
 wC
 Wj
 dE
@@ -1311,7 +1334,7 @@ Wj
 Wj
 dE
 Wj
-wC
+aa
 jV
 ed
 jV
@@ -1348,9 +1371,9 @@ TP
 wC
 wC
 mZ
-mZ
 wC
-wC
+ac
+ac
 Wj
 dE
 Wj
@@ -1360,7 +1383,7 @@ UV
 Wj
 dE
 Wj
-wC
+aa
 jV
 ed
 hH
@@ -1409,7 +1432,7 @@ dE
 Wj
 dE
 Wj
-wC
+aa
 dE
 Wj
 Wj
@@ -1446,9 +1469,9 @@ TP
 wC
 wC
 mZ
-mZ
 wC
-wC
+ac
+ac
 Wj
 dE
 Wj
@@ -1458,7 +1481,7 @@ mJ
 Wj
 dE
 Wj
-wC
+aa
 Dz
 HW
 Rf
@@ -1495,8 +1518,8 @@ Yg
 wC
 wC
 mZ
-mZ
-wC
+ac
+ac
 wC
 Wj
 dE
@@ -1507,7 +1530,7 @@ Wj
 Wj
 dE
 Wj
-wC
+aa
 Dz
 HW
 Dz
@@ -1544,7 +1567,7 @@ Yg
 wC
 wC
 mZ
-mZ
+ad
 wC
 wC
 Wj
