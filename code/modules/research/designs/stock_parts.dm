@@ -298,9 +298,7 @@
 	materials = list(MAT_STEEL = 30000, MAT_GLASS = 10000, MAT_SILVER = 5000, MAT_GOLD = 5000, MAT_DIAMOND = 1000)
 	build_path = /obj/item/storage/part_replacer/adv/discount_bluespace
 	sort_string = "ABAAB"
-<<<<<<< HEAD
 	department = LATHE_ALL | LATHE_ENGINEERING // CHOMPAdd
-=======
 
 /datum/design/item/stock_part/BRPED
 	name = "Bluespace Rapid Part Exchange Device"
@@ -311,4 +309,4 @@
 	materials = list(MAT_STEEL = 30000, MAT_GLASS = 10000, MAT_SILVER = 5000, MAT_GOLD = 5000, MAT_DIAMOND = 1000)
 	build_path = /obj/item/storage/part_replacer/adv/bluespace
 	sort_string = "ABAAB"
->>>>>>> 530809ffe6 (Add a very simple bluespace RPED (#17835))
+	department = LATHE_ALL | LATHE_ENGINEERING // CHOMPAdd
