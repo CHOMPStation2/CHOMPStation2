@@ -1,0 +1,4 @@
+author: "CHOMPStation2StaffMirrorBot"
+delete-after: True
+changes:
+  - sound: "SMESes now make a big contactor noise when switched on and off."
