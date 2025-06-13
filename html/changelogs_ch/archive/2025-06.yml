@@ -168,3 +168,24 @@
       record datum.
   FluffMedic:
   - bugfix: carrier being disconnected from medical sensors
+2025-06-13:
+  CHOMPStation2StaffMirrorBot:
+  - rscadd: Improved AI holonoms, they use real bellies now
+  - rscadd: 'Succubi care about consent and have a safeword~ :heart:'
+  - sound: SMESes now make a big contactor noise when switched on and off.
+  - admin: Added a new smite that forces the skyrim intro meme onto someone.
+  - qol: The stripping menu is more intuitive now
+  - bugfix: Emote sound mode should now apply to things like *meow.
+  - rscadd: The cooking machines now have unique UIs.
+  - qol: The cooking machines like the grill and deep fryer now attempt to predict
+      what they will produce.
+  - rscadd: Character Directory now shows profile pictures.
+  - code_imp: added primitive color grading for areas and weather
+  - qol: You can configure whether or not you want the runechat "Balloon Messages"
+      to appear to you or not
+  Will:
+  - qol: dna modification console takes 5 seconds instead of 30 to make a new injector
+  - qol: gene scanner provides the current value of an active gene, but not it's block
+      ID
+  - qol: gene scanner can now scan dna injectors to find out what unmarked injectors
+      do

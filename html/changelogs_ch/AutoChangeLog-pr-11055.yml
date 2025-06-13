@@ -1,4 +1,0 @@
-author: "CHOMPStation2StaffMirrorBot"
-delete-after: True
-changes:
-  - rscadd: "Improved AI holonoms, they use real bellies now"
