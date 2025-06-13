@@ -100,18 +100,18 @@
 	anchored = 1
 	armor = list(melee = 60, bullet = 60, laser = 60, energy = 60, bomb = 50, bio = 100, rad = 100)
 	loot_list = list(/obj/item/prop/alien/junk = 100,
-		/obj/item/multitool/alien = 10,
-		/obj/item/stack/cable_coil/alien = 10,
-		/obj/item/tool/crowbar/alien = 10,
-		/obj/item/tool/screwdriver/alien = 10,
-		/obj/item/weldingtool/alien = 10,
-		/obj/item/tool/wirecutters/alien = 10,
-		/obj/item/tool/wrench/alien = 10,
-		/obj/item/cell/device/weapon/recharge/alien = 20,
-		/obj/item/prop/nanoweave/terraformers = 30,
-		/obj/item/prop/nanoweave/cyan = 30,
-		/obj/item/prop/nanoweave/lime = 30,
-		/obj/item/perfect_tele/alien = 50
+		/obj/item/multitool/alien = 30,
+		/obj/item/stack/cable_coil/alien = 30,
+		/obj/item/tool/crowbar/alien = 30,
+		/obj/item/tool/screwdriver/alien = 30,
+		/obj/item/weldingtool/alien = 30,
+		/obj/item/tool/wirecutters/alien = 30,
+		/obj/item/tool/wrench/alien = 30,
+		/obj/item/cell/device/weapon/recharge/alien = 40,
+		/obj/item/prop/nanoweave/terraformers = 50,
+		/obj/item/prop/nanoweave/cyan = 50,
+		/obj/item/prop/nanoweave/lime = 50,
+		/obj/item/perfect_tele/alien = 100
 			)
 
 /mob/living/simple_mob/mechanical/mecha/eclipse/hivebot/nanoweavetower/do_special_attack(atom/A)

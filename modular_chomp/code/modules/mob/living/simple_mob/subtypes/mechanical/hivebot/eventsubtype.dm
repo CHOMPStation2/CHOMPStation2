@@ -144,13 +144,13 @@
 	maxHealth = 600
 	health = 600
 	loot_list = list(/obj/item/prop/alien/junk = 100,
-		/obj/item/multitool/alien = 20,
-		/obj/item/stack/cable_coil/alien = 20,
-		/obj/item/tool/crowbar/alien = 20,
-		/obj/item/tool/screwdriver/alien = 20,
-		/obj/item/weldingtool/alien = 20,
-		/obj/item/tool/wirecutters/alien = 20,
-		/obj/item/tool/wrench/alien = 20,
+		/obj/item/multitool/alien = 60,
+		/obj/item/stack/cable_coil/alien = 60,
+		/obj/item/tool/crowbar/alien = 60,
+		/obj/item/tool/screwdriver/alien = 60,
+		/obj/item/weldingtool/alien = 60,
+		/obj/item/tool/wirecutters/alien = 60,
+		/obj/item/tool/wrench/alien = 60,
 		/obj/item/cell/device/weapon/recharge/alien = 30,
 		/obj/item/perfect_tele/alien = 100
 			)
