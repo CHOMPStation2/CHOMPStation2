@@ -1,0 +1,6 @@
+author: "FluffMedic"
+delete-after: True
+changes:
+  - bugfix: "hivebot disks are named disks instead of disc."
+  - qol: "reduced softlock chances"
+  - balance: "blue tower hivebot has more wiggle room, and is a bit more worthwhile"
