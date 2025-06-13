@@ -144,13 +144,13 @@
 	maxHealth = 600
 	health = 600
 	loot_list = list(/obj/item/prop/alien/junk = 100,
-		/obj/item/multitool/alien = 20,
-		/obj/item/stack/cable_coil/alien = 20,
-		/obj/item/tool/crowbar/alien = 20,
-		/obj/item/tool/screwdriver/alien = 20,
-		/obj/item/weldingtool/alien = 20,
-		/obj/item/tool/wirecutters/alien = 20,
-		/obj/item/tool/wrench/alien = 20,
+		/obj/item/multitool/alien = 60,
+		/obj/item/stack/cable_coil/alien = 60,
+		/obj/item/tool/crowbar/alien = 60,
+		/obj/item/tool/screwdriver/alien = 60,
+		/obj/item/weldingtool/alien = 60,
+		/obj/item/tool/wirecutters/alien = 60,
+		/obj/item/tool/wrench/alien = 60,
 		/obj/item/cell/device/weapon/recharge/alien = 30,
 		/obj/item/perfect_tele/alien = 100
 			)
@@ -418,19 +418,19 @@
 
 /obj/item/prop/nanoweave/lime
 	catalogue_data = list(/datum/category_item/catalogue/anomalous/limedisc)
-	icon_state = "limedisc"
+	icon_state = "limedisk"
 
 /obj/item/prop/nanoweave/cyan
 	catalogue_data = list(/datum/category_item/catalogue/anomalous/cyandisc)
-	icon_state = "cyandisc"
+	icon_state = "cyandisk"
 
 /obj/item/prop/nanoweave/orange
 	catalogue_data = list(/datum/category_item/catalogue/anomalous/orangedisc)
-	icon_state = "orangedisc"
+	icon_state = "orangedisk"
 
 /obj/item/prop/nanoweave/terraformers
 	catalogue_data = list(/datum/category_item/catalogue/anomalous/terraformers)
-	icon_state = "orangedisc"
+	icon_state = "reddisk"
 
 
 /datum/category_item/catalogue/anomalous/cyandisc
