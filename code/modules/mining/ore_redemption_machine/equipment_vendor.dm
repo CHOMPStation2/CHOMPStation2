@@ -48,12 +48,8 @@
 		EQUIPMENT("Defense Equipment - Razor Drone Deployer",	/obj/item/grenade/spawnergrenade/manhacks/station/locked,	1000),
 		EQUIPMENT("Defense Equipment - Sentry Drone Deployer",	/obj/item/grenade/spawnergrenade/ward,						1500),
 		EQUIPMENT("Defense Equipment - Smoke Bomb",				/obj/item/grenade/smokebomb,								100),
-<<<<<<< HEAD
 		EQUIPMENT("Defense Equipment - Phase Pistol",			/obj/item/gun/energy/locked/phasegun/pistol,				1500), //CHOMPEDIT
-=======
-		EQUIPMENT("Defense Equipment - Phase Pistol",			/obj/item/gun/energy/phasegun/pistol,						1500),
 		EQUIPMENT("Hybrid Equipment - Proto-Kinetic Crusher",	/obj/item/kinetic_crusher,									1000),
->>>>>>> 47c7e598eb (More Mining Vendor & Kinetic Crusher adjustments (#17851))
 		EQUIPMENT("Hybrid Equipment - Proto-Kinetic Dagger",	/obj/item/kinetic_crusher/machete/dagger,					500),
 		EQUIPMENT("Hybrid Equipment - Proto-Kinetic Machete",	/obj/item/kinetic_crusher/machete,							1000),
 		EQUIPMENT("Hybrid Equipment - Proto-Kinetic Gauntlets",	/obj/item/kinetic_crusher/machete/gauntlets,				1000), //eh this is two-handed so whatever, same price for slight dmg increase!
