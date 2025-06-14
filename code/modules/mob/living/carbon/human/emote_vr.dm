@@ -62,8 +62,6 @@
 		if(SWITCH_TAIL_LAYER_LOWER)
 			tail_alt = TAIL_UPPER_LAYER_LOW
 
-	message_admins("tail_alt is [tail_alt] and input is [input]")
-
 	update_tail_showing()
 
 /mob/living/carbon/human/verb/hide_wings_vr()

@@ -1009,7 +1009,7 @@ GLOBAL_LIST_EMPTY(damage_icon_parts) //see UpdateDamageIcon()
 	if(tail_layer == TAIL_UPPER_LAYER)
 		tail_layer = tail_alt
 
-	message_admins("tail alt is [tail_alt] and tail layer is [tail_layer]")
+	to_chat(src, "tail alt is [tail_alt] and tail layer is [tail_layer]")
 
 	var/obj/item/organ/external/chest = organs_by_name[BP_TORSO]
 
