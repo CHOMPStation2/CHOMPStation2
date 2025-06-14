@@ -189,3 +189,14 @@
       ID
   - qol: gene scanner can now scan dna injectors to find out what unmarked injectors
       do
+2025-06-14:
+  CHOMPStation2StaffMirrorBot:
+  - code_imp: fixed colorgrading issues
+  - qol: Paint bucket no longer tries to preview, it's too confusing to look at
+  - qol: Added a new vore pref to force belly visuals to be capped at a certain alpha.
+  - rscadd: Real Bluespace RPED that works at range. Locked behind prototype brped
+      requirements + anomalous 1.
+  FluffMedic:
+  - bugfix: hivebot disks are named disks instead of disc.
+  - qol: reduced softlock chances
+  - balance: blue tower hivebot has more wiggle room, and is a bit more worthwhile
