@@ -555,7 +555,14 @@
 #include "code\datums\components\disabilities\nervousness.dm"
 #include "code\datums\components\disabilities\rotting.dm"
 #include "code\datums\components\disabilities\tourettes.dm"
+<<<<<<< HEAD
 #include "code\datums\components\traits\burninlight.dm"
+=======
+#include "code\datums\components\reagent_hose\connector.dm"
+#include "code\datums\components\reagent_hose\datum.dm"
+#include "code\datums\components\reagent_hose\inflation.dm"
+#include "code\datums\components\reagent_hose\item.dm"
+>>>>>>> e9f7e3b784 (Mob Hose Inflation and Draining (#17849))
 #include "code\datums\components\species\shadekin.dm"
 #include "code\datums\components\species\xenochimera.dm"
 #include "code\datums\components\traits\drippy.dm"
