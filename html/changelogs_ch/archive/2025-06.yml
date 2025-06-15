@@ -200,3 +200,15 @@
   - bugfix: hivebot disks are named disks instead of disc.
   - qol: reduced softlock chances
   - balance: blue tower hivebot has more wiggle room, and is a bit more worthwhile
+2025-06-15:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: airflow thrown objects don't hit phased shadekin now
+  - bugfix: fixed a crash when updating a player record from the employment records
+      computer
+  - rscadd: Added new hackable wires to disposal pipe junctions. Divert the flow of
+      junk as you desire.
+  - bugfix: Fixed disposal pipe deconstruction
+  Diana:
+  - balance: Dogborg blade can be turned on/off. Glows when on.
+  - rscadd: Dogborg blade can be recolored.
+  - rscadd: Ninja blade (more damage) and Syndicate blade (starts red)
