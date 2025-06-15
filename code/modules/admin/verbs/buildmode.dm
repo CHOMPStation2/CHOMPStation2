@@ -826,7 +826,7 @@ CHOMP Remove end */
 /proc/detect_room_buildmode(var/turf/first, var/allowedAreas = AREA_SPACE)
 	if(!istype(first))
 		return
-	var/list/turf/found = new
+	var/list/turf/found = list()
 	var/list/turf/pending = list(first)
 	while(pending.len)
 		var/turf/T = pending[1]
