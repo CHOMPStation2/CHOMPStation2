@@ -554,15 +554,12 @@
 #include "code\datums\components\disabilities\nervousness.dm"
 #include "code\datums\components\disabilities\rotting.dm"
 #include "code\datums\components\disabilities\tourettes.dm"
-<<<<<<< HEAD
-#include "code\datums\components\traits\burninlight.dm"
-=======
 #include "code\datums\components\reagent_hose\connector.dm"
 #include "code\datums\components\reagent_hose\datum.dm"
 #include "code\datums\components\reagent_hose\item.dm"
->>>>>>> ad15521409 (Hose Connector Component (#17836))
 #include "code\datums\components\species\shadekin.dm"
 #include "code\datums\components\species\xenochimera.dm"
+#include "code\datums\components\traits\burninlight.dm"
 #include "code\datums\components\traits\drippy.dm"
 #include "code\datums\components\traits\gargoyle.dm"
 #include "code\datums\components\traits\nutrition_size_change.dm"
