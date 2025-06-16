@@ -9,7 +9,7 @@
 
 /datum/map_z_level/thor_lateload/away_fueldepot
 	name = "Away Mission - Fuel Depot"
-	z = Z_LEVEL_FUELDEPOT
+	z = Z_LEVEL_RB_FUELDEPOT
 
 
 // -- Overmap -- //

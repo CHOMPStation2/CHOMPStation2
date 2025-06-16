@@ -59,7 +59,7 @@
 
 /datum/map_z_level/thor_lateload/gateway_destination
 	name = "Gateway Destination"
-	z = Z_LEVEL_GATEWAY
+	z = Z_LEVEL_RB_GATEWAY
 
 // Gateway maps from Chompers
 #include "gateway/darkrps.dm"
@@ -177,13 +177,13 @@
 
 /datum/map_z_level/thor_lateload/redgate_destination
 	name = "Redgate Destination"
-	z = Z_LEVEL_REDGATE
+	z = Z_LEVEL_RB_REDGATE
 	flags = MAP_LEVEL_PLAYER|MAP_LEVEL_SEALED
 
 /datum/map_template/thor_lateload/redgate/on_map_loaded(z)
 	. = ..()
-	new /datum/random_map/automata/cave_system/no_cracks(null, 3, 3, Z_LEVEL_REDGATE, world.maxx, world.maxy)
-	new /datum/random_map/noise/ore(null, 1, 1, Z_LEVEL_REDGATE, 64, 64)
+	new /datum/random_map/automata/cave_system/no_cracks(null, 3, 3, Z_LEVEL_RB_REDGATE, world.maxx, world.maxy)
+	new /datum/random_map/noise/ore(null, 1, 1, Z_LEVEL_RB_REDGATE, 64, 64)
 
 /datum/map_template/thor_lateload/redgate/teppi_ranch
 	name = "Redgate - Teppi Ranch"
