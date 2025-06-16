@@ -681,6 +681,7 @@ VIRGO3C_TURF_CREATE(/turf/simulated/floor/tiled/asteroid_steel/outdoors)
 /turf/simulated/floor/outdoors/grass/virgo3c
 	VIRGO3C_SET_ATMOS
 
+	/* CHOMPRemove Start
 	grass_types = list(
 		/obj/structure/flora/ausbushes/sparsegrass = 50,
 		/obj/structure/flora/ausbushes/fullgrass = 50,
@@ -688,12 +689,13 @@ VIRGO3C_TURF_CREATE(/turf/simulated/floor/tiled/asteroid_steel/outdoors)
 		/obj/structure/flora/ausbushes/ppflowers = 1,
 		/obj/structure/flora/ausbushes/ywflowers = 1
 		)
+	*/// CHOMPRemove End
 
 /turf/simulated/floor/outdoors/grass/forest/virgo3c
 	VIRGO3C_SET_ATMOS
 	var/tree_chance = 5
 
-	var/animal_chance = 0.5
+	animal_chance = 0.5
 	var/animal_types = list(
 		/mob/living/simple_mob/vore/redpanda = 40,
 		/mob/living/simple_mob/vore/redpanda/fae = 2,
