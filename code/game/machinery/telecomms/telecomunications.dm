@@ -123,8 +123,6 @@ var/global/list/obj/machinery/telecomms/telecomms_list = list()
 
 
 /obj/machinery/telecomms/LateInitialize()
-	. = ..()
-
 	//Set the listening_level if there's none.
 	if(!listening_level)
 		//Defaults to our Z level!
@@ -160,7 +158,7 @@ var/global/list/obj/machinery/telecomms/telecomms_list = list()
 		comm.links -= src
 	links = list()
 	QDEL_NULL(soundloop) // CHOMPAdd: Tcomms noises
-	..()
+	. = ..()
 
 // Used in auto linking
 /obj/machinery/telecomms/proc/add_link(var/obj/machinery/telecomms/T)

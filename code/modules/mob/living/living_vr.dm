@@ -92,11 +92,10 @@
 	if(client.prefs.save_character())
 		to_chat(src, span_filter_notice("Character preferences saved."))
 
-/mob/living/proc/print_ooc_notes_to_chat(mob/user)
+/mob/living/proc/print_ooc_notes_chat(mob/user)
 	if(!ooc_notes)
 		return
 	var/msg = ooc_notes
-	//CHOMPEdit Start
 	if(ooc_notes_style && (ooc_notes_favs || ooc_notes_likes || ooc_notes_maybes || ooc_notes_dislikes) && !user.client?.prefs?.read_preference(/datum/preference/toggle/vchat_enable)) // Oldchat hates proper formatting
 		msg += "<br><br>"
 		msg += "<table><tr>"
@@ -140,8 +139,6 @@
 		if(ooc_notes_dislikes)
 			msg += "<br><br><b>[span_red("DISLIKES")]</b><br>[ooc_notes_dislikes]"
 	to_chat(user, span_chatexport("<b>[src]'s Metainfo:</b><br>[msg]"))
-	//CHOMPEdit End
-//ChompEDIT END - Removal of usr
 /mob/living/verb/set_custom_link()
 	set name = "Set Custom Link"
 	set desc = "Set a custom link to show up with your examine text."
@@ -188,7 +185,7 @@
 	var/list/possible_voice_types = get_talk_sound()
 	var/choice = tgui_input_list(src, "Which set of sounds would you like to use for your character's speech sounds?", "Voice Sounds", possible_voice_types)
 	if(!choice)
-		voice_sounds_list = talk_sound
+		voice_sounds_list = DEFAULT_TALK_SOUNDS
 	voice_sounds_list = get_talk_sound(choice)
 
 /mob/living/proc/save_private_notes(mob/user)
@@ -200,12 +197,12 @@
 	if(client.prefs.save_character())
 		to_chat(src, span_filter_notice("Character preferences saved."))
 
-/mob/living/verb/open_private_notes(mob/user)
+/mob/living/verb/open_private_notes()
 	set name = "Private Notes"
 	set desc = "View and edit your character's private notes, that persist between rounds!"
 	set category = "IC.Notes"
 
-	private_notes_window(user)
+	private_notes_window(src)
 
 /mob/living/proc/set_metainfo_private_notes(mob/user)
 	if(user != src)

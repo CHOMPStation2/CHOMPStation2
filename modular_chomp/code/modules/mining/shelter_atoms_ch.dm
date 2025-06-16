@@ -152,6 +152,8 @@
 	icon_state = "toilet"
 	flags = AREA_ALLOW_LARGE_SIZE | AREA_SOUNDPROOF
 
+/area/survivalpod/superpose/ripperdocpod
+
 /obj/item/survivalcapsule/superpose
 	name = "superposed surfluid shelter capsule"
 	desc = "A proprietary hyperstructure of many three-dimensional spaces superposed around a supermatter nano crystal; right-click to reset the pod. There's a license for use printed on the bottom."

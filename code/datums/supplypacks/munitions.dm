@@ -304,7 +304,7 @@
 			/obj/item/gun/projectile/revolver/nova,
 			/obj/item/gun/projectile/revolver/detective,
 			/obj/item/gun/projectile/revolver/deckard,
-		    /obj/item/gun/projectile/revolver/mateba,
+			/obj/item/gun/projectile/revolver/mateba,
 			/obj/item/gun/projectile/derringer
 			)
 	cost = 150

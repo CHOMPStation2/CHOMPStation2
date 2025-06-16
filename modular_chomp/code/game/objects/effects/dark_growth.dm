@@ -7,9 +7,9 @@
 	var/health = 10
 	var/obj/structure/prop/dark_node/linked_node = null
 
-/obj/effect/dark/Initialize(mapload)
+/obj/effect/dark/Initialize(mapload, check_glow)
 	. = ..()
-	if(prob(5))
+	if(check_glow && prob(5))
 		add_glow()
 
 /obj/effect/dark/proc/add_glow()
@@ -46,15 +46,14 @@
 				to_chat(L, span_danger("The more you move through this darkness, the more you can feel a throbbing, shooting ache in your bones."))
 			if(prob(5))
 				L.visible_message("[L]'s body gives off a faint, sparking, haze...", "Your body gives off a faint, sparking, haze...", runemessage = "gives off a faint, sparking haze")
-		else if(istype(L.species, /datum/species/shadekin))
-			var/obj/item/organ/internal/brain/shadekin/B = L.internal_organs_by_name["brain"]
-			B.dark_energy += 10
+		var/datum/component/shadekin/comp = L.GetComponent(/datum/component/shadekin)
+		if(comp)
+			comp.dark_energy += 10
 			if(prob(10))
 				to_chat(L, span_notice("You can feel the energy flowing into you!"))
-		else
-			if(prob(0.25))
-				to_chat(L, span_danger("The darkness seethes under your feet..."))
-				L.hallucination += 50
+		else if(prob(0.25))
+			to_chat(L, span_danger("The darkness seethes under your feet..."))
+			L.hallucination += 50
 
 /obj/effect/dark/proc/light_check()
 	var/turf/T = get_turf(src)
@@ -79,13 +78,18 @@
 	layer = ABOVE_TURF_LAYER
 
 /obj/effect/dark/proc/unlinked()
+	linked_node.children_effects -= src
 	linked_node = null
-	spawn(rand(20,70))
-		if(!linked_node)
-			qdel(src)
+	addtimer(CALLBACK(src, PROC_REF(perform_unlink), rand(20, 70), TIMER_DELETE_ME))
 
-/obj/effect/dark/floor/New(loc, var/node)
-	. = ..()
+/obj/effect/dark/proc/perform_unlink()
+	PRIVATE_PROC(TRUE)
+	if(!linked_node)
+		qdel(src)
+
+/obj/effect/dark/floor/Initialize(mapload, check_glow, var/node)
+	. = ..(mapload, !isspace(loc))
+
 	if(isspace(loc))
 		return INITIALIZE_HINT_QDEL
 
@@ -104,7 +108,7 @@
 	light_range = 3
 	var/node_range = 9
 
-/obj/structure/prop/dark_node/New()
+/obj/structure/prop/dark_node/Initialize(mapload)
 	. = ..()
 	set_light(light_range, -20, "#FFFFFF")
 	START_PROCESSING(SSobj, src)
@@ -121,7 +125,7 @@
 		linked_node = null
 	. = ..()
 
-/obj/effect/dark/process()
+/obj/effect/dark/proc/do_process()
 	//set background = 1
 	var/turf/U = get_turf(src)
 
@@ -137,7 +141,7 @@
 
 	var/turf/T1 = get_turf(src)
 	if(T1.get_lumcount() < 0.4)
-		for(var/dirn in cardinal)
+		for(var/dirn in GLOB.cardinal)
 			var/turf/T2 = get_step(src, dirn)
 
 			if(!istype(T2) || locate(/obj/effect/dark) in T2 || istype(T2.loc, /area/arrival) || isspace(T2) || istype(T2, /turf/simulated/open))
@@ -146,35 +150,35 @@
 			if(T2.get_lumcount() >= 0.4)
 				continue
 
-			var/new_dark_tile = new /obj/effect/dark/floor(T2, linked_node)
-			linked_node.children_effects |= new_dark_tile
-
-
+			var/obj/effect/dark/floor/new_dark_tile = new /obj/effect/dark/floor(T2, null, linked_node)
+			if(QDELETED(new_dark_tile))
+				continue
+			linked_node.children_effects += new_dark_tile
 
 /obj/structure/prop/dark_node/process()
 	//set background = 1
 
 	if(!(locate(/obj/effect/dark) in get_turf(src)))
-		var/new_dark_tile = new /obj/effect/dark/floor(get_turf(src), src)
-		children_effects |= new_dark_tile
+		var/obj/effect/dark/floor/new_dark_tile = new /obj/effect/dark/floor(get_turf(src), null, src)
+		if(!QDELETED(new_dark_tile))
+			children_effects += new_dark_tile
 
 	if(until_full_process-- <= 0)
 		for(var/obj/effect/dark/dark_tile in orange(node_range, src))
-			if(!(dark_tile in children_effects))
-				children_effects |= dark_tile
+			if(QDELETED(dark_tile))
+				continue
+			if(dark_tile.linked_node)
+				continue
+			children_effects += dark_tile
+			dark_tile.linked_node = src
 		until_full_process = 4
 
-	children_effects.Remove(null)
-
 	for(var/obj/effect/dark/dark_tile as anything in children_effects)
-		if(!dark_tile.linked_node)
-			dark_tile.linked_node = src
-
-//		W.color = W.linked_node.set_color // CHOMPedit: No coloration.
+//		W.color = W.linked_node.set_color
 
 		dark_tile.light_check()
 		if(dark_tile.linked_node == src && prob(max(10, 60 - (children_effects.len))))
-			dark_tile.process()
+			dark_tile.do_process()
 
 /obj/structure/prop/dark_node/dust
 	name = "crystal dust"

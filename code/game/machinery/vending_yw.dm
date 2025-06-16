@@ -1,7 +1,7 @@
-/obj/machinery/vending/cigarette/New()
+/obj/machinery/vending/cigarette/Initialize(mapload)
 	products += list(/obj/item/storage/fancy/cigarettes/yw/mauser = 5)
 	prices += list(/obj/item/storage/fancy/cigarettes/yw/mauser = 18)
-	..()
+	. = ..()
 
 /obj/machinery/vending/food/prison
 	name = "Prison Nutriment Vendor"

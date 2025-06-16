@@ -68,6 +68,8 @@
 /mob/living/simple_mob/vore/demonAI/init_vore()
 	if(!voremob_loaded)
 		return
+	if(LAZYLEN(vore_organs))
+		return
 	.=..()
 	var/obj/belly/B = vore_selected
 	B.name = "Stomach"
@@ -183,20 +185,20 @@
 	..()
 
 /mob/living/simple_mob/vore/demonAI/bullet_act()
-    playsound(src, 'sound/misc/demonlaugh.ogg', 50, 1)
-    ..()
+	playsound(src, 'sound/misc/demonlaugh.ogg', 50, 1)
+	..()
 
 /mob/living/simple_mob/vore/demonAI/attack_hand()
-    playsound(src, 'sound/misc/demonlaugh.ogg', 50, 1)
-    ..()
+	playsound(src, 'sound/misc/demonlaugh.ogg', 50, 1)
+	..()
 
 /mob/living/simple_mob/vore/demonAI/hitby()
-    playsound(src, 'sound/misc/demonlaugh.ogg', 50, 1)
-    ..()
+	playsound(src, 'sound/misc/demonlaugh.ogg', 50, 1)
+	..()
 
 /mob/living/simple_mob/vore/demonAI/attackby()
-    playsound(src, 'sound/misc/demonlaugh.ogg', 50, 1)
-    ..()
+	playsound(src, 'sound/misc/demonlaugh.ogg', 50, 1)
+	..()
 
 /mob/living/simple_mob/vore/demonAI/gibspam
 

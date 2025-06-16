@@ -108,7 +108,9 @@
 	desc = "Dark rock that has been smoothened to be perfectly even. It's coated in a layer of slippey ice"
 
 /turf/unsimulated/floor/outdoors/ice/Entered(var/mob/living/M)
-	sleep(1 * world.tick_lag)
+	addtimer(CALLBACK(src, PROC_REF(do_slip), M), (1 * world.tick_lag), TIMER_DELETE_ME)
+
+/turf/unsimulated/floor/outdoors/ice/proc/do_slip(var/mob/living/M)
 	if(istype(M, /mob/living))
 		if(M.stunned == 0)
 			to_chat(M, span_warning("You slide across the ice!"))
@@ -140,7 +142,7 @@
 	icon = 'icons/turf/desert.dmi'
 	icon_state = "desert"
 
-/turf/unsimulated/floor/beach/sand/desert/Initialize()
+/turf/unsimulated/floor/beach/sand/desert/Initialize(mapload)
 	. = ..()
 	if(prob(5))
 		icon_state = "desert[rand(0,4)]"
@@ -159,7 +161,7 @@
 	icon_state = "seadeep"
 	movement_cost = 8 // Deep water should be difficult to wade through.
 
-/turf/unsimulated/floor/beach/water/Initialize()
+/turf/unsimulated/floor/beach/water/Initialize(mapload)
 	. = ..()
 	add_overlay(image("icon"='icons/misc/beach.dmi',"icon_state"="water5","layer"=MOB_LAYER+0.1))
 

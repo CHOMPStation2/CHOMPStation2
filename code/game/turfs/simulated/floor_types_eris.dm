@@ -764,7 +764,7 @@
 	icon_state = "bar_light"
 	initial_flooring = /decl/flooring/tiling/eris/steel/bar_light
 
-/turf/simulated/floor/tiled/eris/steel/bar_light/Initialize()
+/turf/simulated/floor/tiled/eris/steel/bar_light/Initialize(mapload)
 	. = ..()
 	set_light(3,4,"#00AAFF")
 
@@ -1014,7 +1014,6 @@
 	health = 100
 
 	floor_smooth = SMOOTH_BLACKLIST
-	flooring_blacklist = list(/decl/flooring/reinforced/plating/under,/decl/flooring/reinforced/plating/hull) //Smooth with everything except the contents of this list
 	smooth_movable_atom = SMOOTH_GREYLIST
 	movable_atom_blacklist = list(list(/obj, list("density" = TRUE, "anchored" = TRUE), 1))
 	movable_atom_whitelist = list(list(/obj/machinery/door/airlock, list(), 2))

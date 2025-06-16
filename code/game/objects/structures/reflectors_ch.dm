@@ -23,7 +23,7 @@
 	var/list/has_projectiles = list()
 	var/bullet_act_in_progress = FALSE
 
-/obj/structure/reflector/Initialize()
+/obj/structure/reflector/Initialize(mapload)
 	. = ..()
 	icon_state = "reflector_base"
 	allowed_projectile_typecache = typecacheof(allowed_projectile_typecache)
@@ -89,7 +89,7 @@
 	var/pdir = P.dir
 	var/pangle = P.Angle
 	var/ploc = get_turf(P)
-	if(!finished || !allowed_projectile_typecache[P.type] || !(P.dir in cardinal))
+	if(!finished || !allowed_projectile_typecache[P.type] || !(P.dir in GLOB.cardinal))
 		return ..()
 	if(auto_reflect(P, pdir, ploc, pangle) != 2)
 		return ..()
@@ -308,6 +308,6 @@
 /obj/machinery/portable_atmospherics/canister
 	var/dont_burst = FALSE
 
-/obj/machinery/portable_atmospherics/canister/phoron/cold/Initialize() //ChompEDIT New --> Initialize
+/obj/machinery/portable_atmospherics/canister/phoron/cold/Initialize(mapload)
+	. = ..()
 	src.air_contents.temperature = 2.72
-	..()

@@ -65,6 +65,8 @@
 /mob/living/simple_mob/vr/alchemistbee/init_vore()
 	if(!voremob_loaded)
 		return
+	if(LAZYLEN(vore_organs))
+		return
 	.=..()
 	var/obj/belly/B = vore_selected
 	B.name = "stomach"
@@ -238,7 +240,7 @@
 	var/splatter_volume = 5			// The volume of its chemical container, for said cloud of reagents.
 	var/list/my_chems = list(REAGENT_ID_MOLD)
 
-/obj/item/projectile/arc/vial/Initialize()
+/obj/item/projectile/arc/vial/Initialize(mapload)
 	. = ..()
 	if(splatter)
 		create_reagents(splatter_volume)

@@ -31,7 +31,7 @@ var/global/mob/living/carbon/human/dummy/mannequin/sleevemate_mob
 	pickup_sound = 'sound/items/pickup/device.ogg'
 	drop_sound = 'sound/items/drop/device.ogg'
 
-/obj/item/sleevemate/Initialize()
+/obj/item/sleevemate/Initialize(mapload)
 	. = ..()
 	our_db = SStranscore.db_by_key(db_key)
 
@@ -53,11 +53,9 @@ var/global/mob/living/carbon/human/dummy/mannequin/sleevemate_mob
 	ooc_notes = M.ooc_notes
 	ooc_notes_likes = M.ooc_notes_likes
 	ooc_notes_dislikes = M.ooc_notes_dislikes
-	//CHOMPEdit Start
 	ooc_notes_favs = M.ooc_notes_favs
 	ooc_notes_maybes = M.ooc_notes_maybes
 	ooc_notes_style = M.ooc_notes_style
-	//CHOMPEdit End
 	stored_mind = M.mind
 	M.ghostize()
 	stored_mind.current = null
@@ -69,11 +67,9 @@ var/global/mob/living/carbon/human/dummy/mannequin/sleevemate_mob
 	M.ooc_notes = ooc_notes
 	M.ooc_notes_likes = ooc_notes_likes
 	M.ooc_notes_dislikes = ooc_notes_dislikes
-	//CHOMPEdit Start
 	M.ooc_notes_favs = ooc_notes_favs
 	M.ooc_notes_maybes = ooc_notes_maybes
 	M.ooc_notes_style = ooc_notes_style
-	//CHOMPEdit End
 	clear_mind()
 
 
@@ -212,7 +208,7 @@ var/global/mob/living/carbon/human/dummy/mannequin/sleevemate_mob
 
 	//The actual options
 	if(href_list["mindscan"])
-		if(!target.mind || (target.mind.name in prevent_respawns))
+		if(!target.mind || (target.mind.name in GLOB.prevent_respawns))
 			to_chat(usr,span_warning("Target seems totally braindead."))
 			return
 
@@ -249,7 +245,7 @@ var/global/mob/living/carbon/human/dummy/mannequin/sleevemate_mob
 		return
 
 	if(href_list["mindsteal"])
-		if(!target.mind || (target.mind.name in prevent_respawns))
+		if(!target.mind || (target.mind.name in GLOB.prevent_respawns))
 			to_chat(usr,span_warning("Target seems totally braindead."))
 			return
 

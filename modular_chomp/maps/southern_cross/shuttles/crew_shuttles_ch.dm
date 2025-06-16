@@ -7,7 +7,7 @@ GLOBAL_LIST_EMPTY(shuttdisp_list)
 /obj/machinery/computer/shuttle_control/web/shuttle3
 	name = "shuttle control console"
 	shuttle_tag = "Shuttle 3"
-	req_access = list(access_pilot)
+	//req_access = list(access_pilot)
 
 /datum/shuttle/autodock/web_shuttle/shuttle3
 	name = "Shuttle 3"
@@ -114,8 +114,8 @@ GLOBAL_LIST_EMPTY(shuttdisp_list)
 	. = ..()
 	. += "[shuttle_tag] is currently [location_desc]."
 
-/obj/machinery/status_display/shuttle_display/Initialize()
-	..()
+/obj/machinery/status_display/shuttle_display/Initialize(mapload)
+	. = ..()
 	GLOB.shuttdisp_list |= src //Populates the global list for the roundstart hook.
 
 /hook/roundstart/proc/shuttdisp_connect() //Initialize (and LateInitialize) call before the shuttle datums exist so this is needed to make shuttle displays work when mapped in
@@ -123,8 +123,8 @@ GLOBAL_LIST_EMPTY(shuttdisp_list)
 		SD.get_my_shuttle()
 	return TRUE
 
-/obj/machinery/status_display/shuttle_display/New()
-	..()
+/obj/machinery/status_display/shuttle_display/Initialize(mapload)
+	. = ..()
 	get_my_shuttle()
 	update()
 

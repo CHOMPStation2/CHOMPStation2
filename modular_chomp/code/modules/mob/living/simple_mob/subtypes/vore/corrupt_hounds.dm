@@ -141,6 +141,8 @@
 /mob/living/simple_mob/vore/retaliate/corrupthound/janihound/init_vore()
 	if(!voremob_loaded)
 		return
+	if(LAZYLEN(vore_organs))
+		return
 	.=..()
 	var/obj/belly/B = vore_selected
 	B.vore_sound = "Tauric Swallow"				// CHOMPedit - Fancy Vore Sounds

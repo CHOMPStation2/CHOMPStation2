@@ -3,7 +3,7 @@
 	departments = list(DEPARTMENT_EVERYONE)
 
 /datum/event2/meta/infestation/get_weight()
-	return metric.count_people_in_department(DEPARTMENT_EVERYONE) * 10
+	return GLOB.metric.count_people_in_department(DEPARTMENT_EVERYONE) * 10
 
 /datum/event2/meta/infestation/rodents
 	name = "infestation - rodents"
@@ -37,7 +37,7 @@
 		/mob/living/simple_mob/animal/passive/mouse/brown,
 		/mob/living/simple_mob/animal/passive/mouse/black,
 		/mob/living/simple_mob/animal/passive/mouse/white,
-		/mob/living/simple_mob/animal/passive/mouse/rat
+		/mob/living/simple_mob/animal/passive/mouse/rat/strong // CHOMPEdit
 	)
 
 /datum/event2/event/infestation/lizards

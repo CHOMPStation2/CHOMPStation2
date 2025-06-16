@@ -79,6 +79,8 @@
 /mob/living/simple_mob/vore/ddraig/init_vore()
 	if(!voremob_loaded)
 		return
+	if(LAZYLEN(vore_organs))
+		return
 	. = ..()
 	var/obj/belly/B = vore_selected
 	B.name = "stomach"
@@ -246,7 +248,7 @@
 
 /obj/item/projectile/beam/mouselaser/ddraig/spawn_mob(var/mob/living/target)
 	var/list/tf_list = list(/mob/living/simple_mob/animal/passive/mouse,
-		/mob/living/simple_mob/animal/passive/mouse/rat,
+		/mob/living/simple_mob/animal/passive/mouse/rat/strong, // CHOMPEdit
 		/mob/living/simple_mob/vore/alienanimals/dustjumper,
 		/mob/living/simple_mob/vore/woof,
 		/mob/living/simple_mob/animal/passive/dog/corgi,
@@ -317,7 +319,7 @@
 		set_stance(STANCE_FLEE)
 		return
 
-	if((holder.health < (holder.maxHealth / 4)) && !used_invis)
+	if((holder.health < (holder.getMaxHealth() / 4)) && !used_invis)
 		holder.cloak()
 		used_invis = 1
 		step_away(holder, target, 8)
@@ -368,7 +370,7 @@
 		on_engagement(target)
 		if(firing_lanes && !test_projectile_safety(target))
 			// Nudge them a bit, maybe they can shoot next time.
-			var/turf/T = get_step(holder, pick(cardinal))
+			var/turf/T = get_step(holder, pick(GLOB.cardinal))
 			if(T)
 				holder.IMove(T) // IMove() will respect movement cooldown.
 				holder.face_atom(target)

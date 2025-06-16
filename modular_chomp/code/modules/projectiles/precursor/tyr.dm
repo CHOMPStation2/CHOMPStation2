@@ -52,7 +52,7 @@
 /obj/item/projectile/beam/precursor_tyr
 	name = "laser"
 	icon_state = "laser"
-	damage = 20
+	damage = 15
 	armor_penetration = 30
 	penetrating = 20
 	damage_type = BURN
@@ -208,5 +208,5 @@
 	spread_range = 60
 
 /obj/item/projectile/energy/spikeenergy_ball/slow
- 	speed = 15
- 	range = 20
+	speed = 15
+	range = 20

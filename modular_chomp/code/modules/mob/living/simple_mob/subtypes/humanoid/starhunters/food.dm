@@ -21,6 +21,8 @@
 /mob/living/simple_mob/humanoid/starhunter/hunter/druid/init_vore()
 	if(!voremob_loaded)
 		return
+	if(LAZYLEN(vore_organs))
+		return
 	.=..()
 	var/obj/belly/B = vore_selected
 	B.name = "stomach"
@@ -58,6 +60,8 @@
 
 /mob/living/simple_mob/humanoid/starhunter/hunter/champion/init_vore()
 	if(!voremob_loaded)
+		return
+	if(LAZYLEN(vore_organs))
 		return
 	.=..()
 	var/obj/belly/B = vore_selected
@@ -97,6 +101,8 @@
 
 /mob/living/simple_mob/humanoid/starhunter/hunter/avatar/init_vore()
 	if(!voremob_loaded)
+		return
+	if(LAZYLEN(vore_organs))
 		return
 	.=..()
 	var/obj/belly/B = vore_selected

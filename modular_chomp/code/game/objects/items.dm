@@ -1,19 +1,6 @@
 /obj/item
-	var/item_tf_spawn_allowed = FALSE
-	var/list/ckeys_allowed_itemspawn = list()
 	var/user_vars_to_edit //fun times :3 - pretty much just grabbed from tg immabehonest - list(variable_name = variable_value) eg list("name" = "Wizardly Wizard", "real_name" = "Wizardly Wizard")
 	var/user_vars_remembered //not needed for manual editing, just stores the original vars from the above list to make sure they go back to normal later
-	var/digestable = TRUE
-
-/obj/item/proc/item_tf_spawnpoint_set()
-	if(!item_tf_spawn_allowed)
-		item_tf_spawn_allowed = TRUE
-		item_tf_spawnpoints += src
-
-/obj/item/proc/item_tf_spawnpoint_used()
-	if(item_tf_spawn_allowed)
-		item_tf_spawn_allowed = FALSE
-		item_tf_spawnpoints -= src
 
 /obj/item/Destroy(force, ...)
 	if(item_tf_spawn_allowed)
@@ -49,11 +36,3 @@
 					if(user.vars[variable] == user_vars_to_edit[variable])
 						user.vars[variable] = user_vars_remembered[variable]
 			user_vars_remembered = initial(user_vars_remembered)
-
-/obj/item/verb/toggle_digestable()
-	set category = "Object"
-	set name = "Toggle Digestable"
-	set desc = "Toggle item's digestability."
-	digestable = !digestable
-	if(!digestable)
-		to_chat(usr, span_notice("[src] is now protected from digestion."))

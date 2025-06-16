@@ -84,7 +84,7 @@
 
 /mob/living/simple_mob/humanoid/starhunter/hunter/harvester/handle_special() //wierd movement
 	if(prob(20))
-		step(src, pick(cardinal))
+		step(src, pick(GLOB.cardinal))
 	..()
 
 /mob/living/simple_mob/humanoid/starhunter/hunter/ninja

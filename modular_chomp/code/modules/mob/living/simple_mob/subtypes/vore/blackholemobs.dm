@@ -548,7 +548,7 @@
 	pixel_x = -16
 	pixel_y = 0
 
-	movement_sound = 'modular_chomp/sound/effects/carrev.ogg'
+	movement_sound = 'sound/effects/carrev.ogg'
 
 	min_oxy = 0
 	max_oxy = 0
@@ -781,7 +781,7 @@ GLOBAL_LIST_INIT(obelisk_lure_messages, list(
 
 // hackified shitcode poached from the pitcher plant for ~~cool flavor text~~ when you're near either 'structure'
 
-/mob/living/simple_mob/vore/blackhole_obelisk/Initialize()
+/mob/living/simple_mob/vore/blackhole_obelisk/Initialize(mapload)
 	. = ..()
 	obelisk_lure_messages = GLOB.obelisk_lure_messages
 	loopy = new(list(src),FALSE)
@@ -803,7 +803,7 @@ GLOBAL_LIST_INIT(obelisk_lure_messages, list(
 				return
 
 /datum/looping_sound/obelisk ///thanks to BM for helpin' me make this work <3
-	mid_sounds = 'modular_chomp/sound/effects/monolith_ambience.ogg'
+	mid_sounds = 'sound/effects/monolith_ambience.ogg'
 	mid_length = 50
 	chance = 100
 	volume = 35
@@ -843,7 +843,7 @@ GLOBAL_LIST_INIT(obelisk_lure_messages, list(
 /mob/living/simple_mob/vore/blackhole_obelisk/death()
 	..()
 	visible_message("[src] flashes brightly, crumbling as its psychic influence suddenly vanishes from the minds of those nearby...")
-	playsound(src, 'modular_chomp/sound/effects/monolith_death.ogg', 100)
+	playsound(src, 'sound/effects/monolith_death.ogg', 100)
 
 #undef OBELISK_LURE
 
@@ -851,21 +851,21 @@ GLOBAL_LIST_INIT(obelisk_lure_messages, list(
 ///size randomization!///
 ///-------------------------------------------------------------------------------------------------------------------------------------------------------------///
 
-/mob/living/simple_mob/vore/blackhole/Initialize()
+/mob/living/simple_mob/vore/blackhole/Initialize(mapload)
 	. = ..()
 	var/oursize = rand(90, 150) / 100
 	resize(oursize)
 
-/mob/living/simple_mob/vore/blackhole/bikers/Initialize()
+/mob/living/simple_mob/vore/blackhole/bikers/Initialize(mapload)
 	. = ..()
 	resize(1) // Scale them back down
 
-/mob/living/simple_mob/vore/otie/syndicate/blackhole/Initialize()
+/mob/living/simple_mob/vore/otie/syndicate/blackhole/Initialize(mapload)
 	. = ..()
 	var/oursize = rand(100, 180) / 100
 	resize(oursize)
 
-/mob/living/simple_mob/humanoid/merc/ranged/sniper/blackhole/Initialize()
+/mob/living/simple_mob/humanoid/merc/ranged/sniper/blackhole/Initialize(mapload)
 	. = ..()
 	var/oursize = rand(100, 180) / 100
 	resize(oursize)

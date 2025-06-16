@@ -11,7 +11,7 @@
 /datum/gear/utility/tts_device
 	display_name = "text to speech device"
 	path = /obj/item/text_to_speech
-	cost = 0 //Not extremely expensive, but it's useful for mute chracters. //CHOMPEDIT: 3 points is pretty high for a pure fluff piece, make it 0
+	cost = 0
 
 /datum/gear/utility/communicator
 	display_name = "communicator selection"
@@ -275,9 +275,9 @@ modular computers
 	path = /obj/item/storage/backpack/dufflebag/emt
 
 /datum/gear/utility/dufflebag/sec
-    display_name = "security Dufflebag"
-    allowed_roles = list(JOB_HEAD_OF_SECURITY,JOB_WARDEN,JOB_DETECTIVE,JOB_SECURITY_OFFICER,JOB_BLUESHIELD_GUARD,JOB_SECURITY_PILOT) //YW ADDITIONS
-    path = /obj/item/storage/backpack/dufflebag/sec
+	display_name = "security Dufflebag"
+	allowed_roles = list(JOB_HEAD_OF_SECURITY,JOB_WARDEN,JOB_DETECTIVE,JOB_SECURITY_OFFICER,JOB_BLUESHIELD_GUARD,JOB_SECURITY_PILOT) //YW ADDITIONS
+	path = /obj/item/storage/backpack/dufflebag/sec
 
 /datum/gear/utility/dufflebag/eng
 	display_name = "engineering dufflebag"
@@ -321,4 +321,9 @@ modular computers
 /datum/gear/utility/bloodbag //For your vampiric crew!
 	display_name = "blood bag (Randomized)"
 	path = /obj/item/reagent_containers/blood/random_bloodsucker
+	cost = 1
+
+/datum/gear/utility/allergypen //For people with allergies
+	display_name = "AllergyPen"
+	path = /obj/item/reagent_containers/hypospray/autoinjector/allergen
 	cost = 1

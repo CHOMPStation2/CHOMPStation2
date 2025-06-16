@@ -8,6 +8,7 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
 */
 #define TRAIT_DREAMING			"currently_dreaming" // CHOMPAdd
 #define TRAIT_MUTE				"mute"
+#define TRAIT_CAN_SEE_WIRES		"wire_seerr"
 /*
 #define TRAIT_EMOTEMUTE			"emotemute"
 #define TRAIT_DEAF				"deaf"
@@ -209,6 +210,8 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
 #define FROGENITE_TRAIT "frogenite"
 #define FERVEATIUM_TRAIT "ferveatium"
 */
+
+#define STRONG_IMMUNITY_TRAIT "strongimmunity"
 
 #define ORGANICS	1
 #define SYNTHETICS	2

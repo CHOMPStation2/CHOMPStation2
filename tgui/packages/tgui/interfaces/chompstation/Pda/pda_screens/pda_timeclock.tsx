@@ -10,7 +10,7 @@ import {
 } from 'tgui-core/components';
 import { formatTime } from 'tgui-core/format';
 import { toFixed } from 'tgui-core/math';
-import { BooleanLike } from 'tgui-core/react';
+import type { BooleanLike } from 'tgui-core/react';
 
 type Data = {
   card: string | null;
@@ -147,7 +147,7 @@ export const pda_timeclock = (props) => {
             (!!job_choices &&
               Object.keys(job_choices).length &&
               Object.keys(job_choices).map((job) => {
-                let alt_titles = job_choices[job];
+                const alt_titles = job_choices[job];
 
                 return alt_titles.map((title) => (
                   <Button

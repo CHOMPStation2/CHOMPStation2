@@ -2,12 +2,12 @@
 // Garage Doors:
 /obj/machinery/door/blast/shutters/garage
 	name = "Garage Door"
-	open_sound = 'modular_chomp/sound/machines/door/garagedooropen.ogg'
-	close_sound = 'modular_chomp/sound/machines/door/garagedoorclose.ogg'
+	open_sound = 'sound/machines/door/garagedooropen.ogg'
+	close_sound = 'sound/machines/door/garagedoorclose.ogg'
 
 /obj/machinery/door/blast/gate/thin
-	open_sound = 'modular_chomp/sound/machines/door/gateopen.ogg'
-	close_sound = 'modular_chomp/sound/machines/door/gateclose.ogg'
+	open_sound = 'sound/machines/door/gateopen.ogg'
+	close_sound = 'sound/machines/door/gateclose.ogg'
 
 /obj/machinery/camera/network/exterior
 	network = list(NETWORK_EXTERIOR)
@@ -18,7 +18,7 @@
 */
 
 /obj/effect/step_trigger/tramblock
-	invisibility = 99 // nope cant see this shit
+	invisibility = INVISIBILITY_BADMIN // nope cant see this shit
 	plane = ABOVE_PLANE
 	anchored = TRUE
 	icon = 'icons/mob/screen1.dmi' //VS Edit
@@ -26,10 +26,10 @@
 
 /obj/effect/step_trigger/tramblock/Trigger(var/atom/movable/A)
 	if(istype(A, /mob/living/carbon/human))
-		to_chat(A, "<span class='notice'>OOC Notice: You have an itch to explore, it seems! \
+		to_chat(A, span_notice("OOC Notice: You have an itch to explore, it seems! \
 		This tunnel does not go any further past the doors, thanks to game limitations and stuff in the way! \
 		However, north and the departures tram line extend the entire length of the map! \
-		There's also other areas you can explore. Have fun. <3</span>"
+		There's also other areas you can explore. Have fun. <3")
 		)
 	else
 		return 0
@@ -43,7 +43,7 @@
 
 	var/area/shock_area = /area/hallway/primary // We use this, given our current tram /areas/ are set to this. Clean this up later if we give tram halls their own dedicated /area/
 
-/turf/simulated/floor/maglev/Initialize()
+/turf/simulated/floor/maglev/Initialize(mapload)
 	. = ..()
 	shock_area = locate(shock_area)
 

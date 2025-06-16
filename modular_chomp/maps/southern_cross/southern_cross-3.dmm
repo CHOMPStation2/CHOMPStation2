@@ -14800,6 +14800,8 @@
 /obj/machinery/status_display{
 	pixel_y = 32
 	},
+/obj/item/clothing/head/radiation/teshari,
+/obj/item/clothing/suit/radiation/teshari,
 /turf/simulated/floor/tiled,
 /area/engineering/engine_monitoring)
 "aVb" = (
@@ -17146,7 +17148,7 @@
 /turf/simulated/floor/plating,
 /area/maintenance/central)
 "bdg" = (
-/turf/unsimulated/mask,
+/turf/simulated/open,
 /area/hallway/primary/seconddeck/apcenter)
 "bdh" = (
 /turf/simulated/floor/plating,
@@ -26558,7 +26560,7 @@
 /turf/simulated/floor/tiled,
 /area/hallway/primary/seconddeck/port)
 "bGl" = (
-/turf/unsimulated/mask,
+/turf/simulated/open,
 /area/hallway/primary/seconddeck/port)
 "bGm" = (
 /obj/machinery/light{
@@ -28846,7 +28848,7 @@
 /turf/simulated/floor/tiled,
 /area/security/lobby)
 "bOQ" = (
-/turf/unsimulated/mask,
+/turf/simulated/open,
 /area/quartermaster/office)
 "bPb" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -32844,6 +32846,7 @@
 /obj/effect/floor_decal/corner/pink/border{
 	dir = 6
 	},
+/obj/machinery/oxygen_pump/mobile/stabilizer,
 /turf/simulated/floor/tiled/white,
 /area/medical/surgery)
 "cds" = (
@@ -52248,6 +52251,8 @@
 /obj/item/clothing/glasses/meson,
 /obj/item/clothing/glasses/meson,
 /obj/item/clothing/glasses/meson,
+/obj/item/clothing/suit/radiation/teshari,
+/obj/item/clothing/head/radiation/teshari,
 /turf/simulated/floor/tiled/white,
 /area/rnd/research)
 "ilQ" = (
@@ -53528,7 +53533,6 @@
 /turf/simulated/floor/tiled,
 /area/hallway/primary/seconddeck/dockhallway)
 "iYU" = (
-/obj/structure/closet/crate/freezer,
 /obj/machinery/power/apc{
 	dir = 1;
 	name = "north bump";
@@ -53547,11 +53551,7 @@
 	pixel_x = 12;
 	pixel_y = 25
 	},
-/obj/item/reagent_containers/glass/bottle/culture/cold{
-	pixel_x = -5;
-	pixel_y = 5
-	},
-/obj/item/reagent_containers/glass/bottle/culture/flu,
+/mob/living/simple_mob/animal/passive/mouse/white/virology,
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
 "iYZ" = (
@@ -57017,9 +57017,7 @@
 /turf/simulated/floor/plating,
 /area/maintenance/research)
 "kQH" = (
-/obj/machinery/r_n_d/protolathe{
-	name = "Core R&D Protolathe"
-	},
+/obj/machinery/r_n_d/protolathe,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/reagent_dispensers/acid{
 	pixel_x = -30
@@ -58031,13 +58029,13 @@
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 1
 	},
-/obj/structure/filingcabinet,
 /obj/effect/floor_decal/corner/green/bordercorner{
 	dir = 1
 	},
 /obj/machinery/ai_status_display{
 	pixel_y = 32
 	},
+/obj/machinery/librarywikicomp,
 /turf/simulated/floor/tiled,
 /area/library)
 "lzd" = (
@@ -59313,6 +59311,7 @@
 /obj/effect/floor_decal/corner/pink/border{
 	dir = 10
 	},
+/obj/machinery/oxygen_pump/mobile/stabilizer,
 /turf/simulated/floor/tiled/white,
 /area/medical/surgery2)
 "mmq" = (
@@ -69464,7 +69463,7 @@
 /turf/simulated/wall/r_wall,
 /area/hallway/primary/seconddeck/starboard)
 "sql" = (
-/turf/unsimulated/mask,
+/turf/simulated/open,
 /area/hallway/primary/seconddeck/starboard)
 "sqJ" = (
 /obj/structure/reagent_dispensers/fueltank,
@@ -71657,6 +71656,14 @@
 /obj/item/reagent_containers/glass/bottle/mutagen{
 	pixel_y = 9;
 	pixel_x = 7
+	},
+/obj/item/extrapolator{
+	pixel_x = -12;
+	pixel_y = 12
+	},
+/obj/item/extrapolator{
+	pixel_x = -6;
+	pixel_y = 6
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)

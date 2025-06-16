@@ -41,11 +41,12 @@
 	var/target_patience = 5
 	var/frustration = 0
 	var/max_frustration = 0
+	can_pain_emote = FALSE // Sanity/safety, if bots ever get emotes later, undo this
 
 	can_pain_emote = FALSE // CHOMPEdit: Sanity/safety, if bots ever get emotes later, undo this
 	allow_mind_transfer = TRUE
 
-/mob/living/bot/Initialize()
+/mob/living/bot/Initialize(mapload)
 	. = ..()
 
 	//default_language = GLOB.all_languages[LANGUAGE_GALCOM] //VOREstation edit: moved to Init
@@ -344,7 +345,7 @@
 	var/obj/machinery/navbeacon/targ = locate() in get_turf(src)
 
 	if(!targ)
-		for(var/obj/machinery/navbeacon/N in navbeacons)
+		for(var/obj/machinery/navbeacon/N in GLOB.navbeacons)
 			if(!N.codes["patrol"])
 				continue
 			if(get_dist(src, N) < minDist)
@@ -352,7 +353,7 @@
 				targ = N
 
 	if(targ && targ.codes["next_patrol"])
-		for(var/obj/machinery/navbeacon/N in navbeacons)
+		for(var/obj/machinery/navbeacon/N in GLOB.navbeacons)
 			if(N.location == targ.codes["next_patrol"])
 				targ = N
 				break
@@ -426,14 +427,14 @@
 // Used for A-star pathfinding
 
 
-// Returns the surrounding cardinal turfs with open links
+// Returns the surrounding GLOB.cardinal turfs with open links
 // Including through doors openable with the ID
 /turf/proc/CardinalTurfsWithAccess(var/obj/item/card/id/ID)
 	var/L[] = new()
 
 	//	for(var/turf/simulated/t in oview(src,1))
 
-	for(var/d in cardinal)
+	for(var/d in GLOB.cardinal)
 		var/turf/T = get_step(src, d)
 		if(istype(T) && !T.density)
 			if(!LinkBlockedWithAccess(src, T, ID))
@@ -441,11 +442,11 @@
 	return L
 
 
-// Similar to above but not restricted to just cardinal directions.
+// Similar to above but not restricted to just GLOB.cardinal directions.
 /turf/proc/TurfsWithAccess(var/obj/item/card/id/ID)
 	var/L[] = new()
 
-	for(var/d in alldirs)
+	for(var/d in GLOB.alldirs)
 		var/turf/T = get_step(src, d)
 		if(istype(T) && !T.density)
 			if(!LinkBlockedWithAccess(src, T, ID))
@@ -535,11 +536,9 @@
 	ooc_notes = AI.ooc_notes
 	ooc_notes_likes = AI.ooc_notes_likes
 	ooc_notes_dislikes = AI.ooc_notes_dislikes
-	//CHOMPEdit Start
 	ooc_notes_favs = AI.ooc_notes_favs
 	ooc_notes_maybes = AI.ooc_notes_maybes
 	ooc_notes_style = AI.ooc_notes_style
-	//CHOMPEdit End
 	to_chat(src, span_notice("You feel a tingle in your circuits as your systems interface with \the [initial(src.name)]."))
 	if(AI.idcard.GetAccess())
 		botcard.access	|= AI.idcard.GetAccess()
@@ -551,11 +550,9 @@
 		AI.ooc_notes = ooc_notes
 		AI.ooc_notes_likes = ooc_notes_likes
 		AI.ooc_notes_dislikes = ooc_notes_dislikes
-		//CHOMPEdit Start
 		AI.ooc_notes_favs = ooc_notes_favs
 		AI.ooc_notes_maybes = ooc_notes_maybes
 		AI.ooc_notes_style = ooc_notes_style
-		//CHOMPEdit End
 		paicard.forceMove(src.loc)
 		paicard = null
 		name = initial(name)

@@ -274,7 +274,7 @@
 	)
 	return data
 
-/obj/machinery/porta_turret/Initialize()
+/obj/machinery/porta_turret/Initialize(mapload)
 	//Sets up a spark system
 	spark_system = new /datum/effect/effect/system/spark_spread
 	spark_system.set_up(5, 0, src)
@@ -373,7 +373,7 @@
 			lethal_projectile = /obj/item/projectile/beam/xray
 			projectile = /obj/item/projectile/beam/stun // Otherwise we fire xrays on both modes.
 			lethal_shot_sound = 'sound/weapons/eluger.ogg'
-			shot_sound = 'sound/weapons/Taser.ogg'
+			shot_sound = 'sound/weapons/taser.ogg'
 
 /obj/machinery/porta_turret/proc/isLocked(mob/user)
 	if(locked && !issilicon(user))

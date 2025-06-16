@@ -3,10 +3,11 @@
 	vore_capacity = 2
 	vore_max_size = RESIZE_HUGE
 	vore_min_size = RESIZE_SMALL
-	vore_pounce_chance = 0 // Beat them into crit before eating.
+	vore_pounce_chance = 30
 	vore_icons = null
 
-	can_be_drop_prey = FALSE //CHOMP Add
+	can_be_drop_prey = FALSE
+	can_be_drop_pred = TRUE
 
 /mob/living/simple_mob/humanoid/eclipse/Login()
 	. = ..()
@@ -21,6 +22,8 @@
 
 /mob/living/simple_mob/humanoid/eclipse/init_vore()
 	if(!voremob_loaded)
+		return
+	if(LAZYLEN(vore_organs))
 		return
 	.=..()
 	var/obj/belly/B = vore_selected
@@ -58,6 +61,8 @@
 
 /mob/living/simple_mob/humanoid/eclipse/head/scientist/init_vore()
 	if(!voremob_loaded)
+		return
+	if(LAZYLEN(vore_organs))
 		return
 	.=..()
 	var/obj/belly/B = vore_selected
@@ -99,6 +104,8 @@
 /mob/living/simple_mob/humanoid/eclipse/head/security/init_vore()
 	if(!voremob_loaded)
 		return
+	if(LAZYLEN(vore_organs))
+		return
 	.=..()
 	var/obj/belly/B = vore_selected
 	B.name = "stomach"
@@ -139,6 +146,8 @@
 
 /mob/living/simple_mob/humanoid/eclipse/head/captain/init_vore()
 	if(!voremob_loaded)
+		return
+	if(LAZYLEN(vore_organs))
 		return
 	.=..()
 	var/obj/belly/B = vore_selected

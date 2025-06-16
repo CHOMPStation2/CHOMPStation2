@@ -107,6 +107,7 @@
 	name = "oven"
 	desc = "Old fashioned cookies are ready, dear."
 	icon_state = "yeoldovenopen"
+	tgui_id = "CookingOvenOld"
 
 /obj/machinery/appliance/cooker/oven/yeoldoven/update_icon()
 	if(!open)
@@ -179,7 +180,7 @@
 		to_chat(user, "You carefully place \the [I] into the cistern.")
 		return
 
-/obj/structure/toilet/wooden/Initialize()
+/obj/structure/toilet/wooden/Initialize(mapload)
 	open = 1 //just to make sure it works
 	icon_state = "toilet3"
 	. = ..()
@@ -479,7 +480,7 @@
 
 /obj/item/perfect_tele/magic/attack_self(mob/user, var/radial_menu_anchor = src)
 	if(loc_network)
-		for(var/obj/item/perfect_tele_beacon/stationary/nb in GLOB.premade_tele_beacons) //ChompEDIT - GLOB
+		for(var/obj/item/perfect_tele_beacon/stationary/nb in GLOB.premade_tele_beacons)
 			if(nb.tele_network == loc_network)
 				beacons[nb.tele_name] = nb
 		loc_network = null //Consumed

@@ -31,8 +31,8 @@ var/global/list/light_type_cache = list()
 
 	var/cell_connectors = TRUE
 
-/obj/machinery/light_construct/New(var/atom/newloc, var/newdir, var/building = 0, var/datum/frame/frame_types/frame_type, var/obj/machinery/light/fixture = null)
-	..(newloc)
+/obj/machinery/light_construct/Initialize(mapload, var/newdir, var/building = 0, var/datum/frame/frame_types/frame_type, var/obj/machinery/light/fixture = null)
+	. = ..()
 	if(fixture)
 		fixture_type = fixture.type
 		fixture.transfer_fingerprints_to(src)
@@ -485,8 +485,8 @@ var/global/list/light_type_cache = list()
 			if(rigged)
 				if(status == LIGHT_OK && trigger)
 
-					log_admin("LOG: Rigged light explosion, last touched by [fingerprintslast]")
-					message_admins("LOG: Rigged light explosion, last touched by [fingerprintslast]")
+					log_admin("LOG: Rigged light explosion, last touched by [forensic_data?.get_lastprint()]")
+					message_admins("LOG: Rigged light explosion, last touched by [forensic_data?.get_lastprint()]")
 
 					explode()
 			else if( prob( min(60, switchcount*switchcount*0.01) ) )
@@ -595,13 +595,13 @@ var/global/list/light_type_cache = list()
 	installed_light = L
 	L.loc = src //Move it into the socket!
 
-	on = powered()
+	on = powered() && !turned_off() // Do not instantly turn on lights if the area lightswitch is off
 	update()
 
 	if(on && rigged)
 
-		log_admin("LOG: Rigged light explosion, last touched by [fingerprintslast]")
-		message_admins("LOG: Rigged light explosion, last touched by [fingerprintslast]")
+		log_admin("LOG: Rigged light explosion, last touched by [forensic_data?.get_lastprint()]")
+		message_admins("LOG: Rigged light explosion, last touched by [forensic_data?.get_lastprint()]")
 
 		explode()
 
@@ -1095,8 +1095,8 @@ var/global/list/light_type_cache = list()
 			desc = "A broken [name]."
 
 
-/obj/item/light/New(atom/newloc, obj/machinery/light/fixture = null)
-	..()
+/obj/item/light/Initialize(mapload, obj/machinery/light/fixture = null)
+	. = ..()
 	if(fixture)
 		status = fixture.status
 		rigged = fixture.rigged

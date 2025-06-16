@@ -60,8 +60,12 @@
 	var/laugh = 'sound/misc/demonlaugh.ogg' //Yknow maybe someone wants a custom laugh, you never know.
 	injury_enrages = TRUE
 
+	var/list/alt_demon_appearances = list("boxfox","eater","engorge","wendigo","zellic","avarn","covern","ira","ire","laxel","lutra","brutola","ignia") // Allow extra decals
+
 /mob/living/simple_mob/vore/demon/init_vore()
 	if(!voremob_loaded)
+		return
+	if(LAZYLEN(vore_organs))
 		return
 	.=..()
 	var/obj/belly/B = vore_selected
@@ -152,3 +156,57 @@
 	amount = 0 - amount
 	src.adjustBruteLoss(amount)
 	..()
+
+
+/mob/living/simple_mob/vore/demon/verb/alt_appearance()
+	set name = "Toggle Alernate Appearance"
+	set desc = "Change your sprite to an alternative one."
+	set category = "Abilities.Demon"
+
+	if(!LAZYLEN(alt_demon_appearances))
+		to_chat(src, span_warning("There are no alternative apperances selectable!"))
+		return
+
+	var/alternate_selection = tgui_input_list(src, "Please select which alternate appearance you want to swap to.", "Variant Sprite", alt_demon_appearances)
+	if(!alternate_selection)
+		return
+
+	alternate_selection = lowertext(alternate_selection)
+
+	//Change the all the icon info.
+	icon = 'modular_chomp/icons/mob/demon_ch.dmi' //Mass majority of the sprites use this icon
+	icon_state = "[alternate_selection]"
+	icon_living = "[alternate_selection]"
+	icon_dead = "dead"
+	icon_rest = "[alternate_selection]_rest"
+	vis_height = 47 //Mass majority of sprites use vis_height = 47. If its different, its done below.
+	pixel_x = 0
+	vore_icons = FALSE //No stomach sprites unless specifically specified!
+	//This is where we handle the special ones!
+	switch(alternate_selection)
+		if("boxfox")
+			vore_icons = SA_ICON_LIVING
+			vore_capacity = 1
+
+		if("wendigo")
+			vore_icons = SA_ICON_LIVING
+			vore_capacity = 1
+			icon_dead = "[alternate_selection]_dead"
+
+		//These are the larger variants, so we do some different stuff here!
+		if("brutola")
+			pixel_x = -8
+			vis_height = 64
+			vore_icons = SA_ICON_LIVING | SA_ICON_REST
+			vore_capacity = 2
+			icon_dead = "[alternate_selection]_dead"
+			icon = 'modular_chomp/icons/mob/demon_ch_alt.dmi'
+
+		if("ignia")
+			pixel_x = -8
+			vis_height = 64
+			vore_icons = SA_ICON_LIVING
+			vore_capacity = 2
+			icon_dead = "[alternate_selection]_dead"
+			icon = 'modular_chomp/icons/mob/demon_ch_alt.dmi'
+	update_icon()

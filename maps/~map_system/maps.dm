@@ -37,7 +37,7 @@ var/list/all_maps = list()
 	var/static/list/secret_levels = list() // Z-levels that (non-admin) ghosts can't get to
 	var/static/list/hidden_levels = list() // Z-levels who's contents are hidden, but not forbidden (gateways)
 	var/static/list/empty_levels = list()   // Empty Z-levels that may be used for various things
-	var/static/list/vorespawn_levels = list() //Z-levels where players are allowed to vore latejoin to. //CHOMPedit: the number of missing chompedits is giving me an aneurysm
+	var/static/list/vorespawn_levels = list() //Z-levels where players are allowed to vore latejoin to.
 	var/static/list/mappable_levels = list()// List of levels where mapping or other similar devices might work fully
 	var/static/list/below_blocked_levels = list()// List of levels where mapping or other similar devices might work fully
 	// End Static Lists
@@ -60,11 +60,11 @@ var/list/all_maps = list()
 	var/list/lateload_redgate = list() //VOREStation Add - The same thing as gateway, but safe-ish
 
 	var/list/allowed_jobs = list() //Job datums to use.
-	                               //Works a lot better so if we get to a point where three-ish maps are used
-	                               //We don't have to C&P ones that are only common between two of them
-	                               //That doesn't mean we have to include them with the rest of the jobs though, especially for map specific ones.
-	                               //Also including them lets us override already created jobs, letting us keep the datums to a minimum mostly.
-	                               //This is probably a lot longer explanation than it needs to be.
+								//Works a lot better so if we get to a point where three-ish maps are used
+								//We don't have to C&P ones that are only common between two of them
+								//That doesn't mean we have to include them with the rest of the jobs though, especially for map specific ones.
+								//Also including them lets us override already created jobs, letting us keep the datums to a minimum mostly.
+								//This is probably a lot longer explanation than it needs to be.
 
 	var/list/holomap_smoosh		// List of lists of zlevels to smoosh into single icons
 	var/list/holomap_offset_x = list()
@@ -85,10 +85,10 @@ var/list/all_maps = list()
 
 	var/station_name  = "BAD Station"
 	var/station_short = "Baddy"
-	var/dock_name     = "THE PirateBay"
-	var/dock_type     = "station"	//VOREStation Edit - for a list of valid types see the switch block in air_traffic.dm at line 148
-	var/boss_name     = "Captain Roger"
-	var/boss_short    = "Cap'"
+	var/dock_name	 = "THE PirateBay"
+	var/dock_type	 = "station"	//VOREStation Edit - for a list of valid types see the switch block in air_traffic.dm at line 148
+	var/boss_name	 = "Captain Roger"
+	var/boss_short	= "Cap'"
 	var/company_name  = "BadMan"
 	var/company_short = "BM"
 	var/starsys_name  = "Dull Star"
@@ -116,17 +116,14 @@ var/list/all_maps = list()
 	var/datum/spawnpoint/spawnpoint_stayed = /datum/spawnpoint/cryo 	// Used if you end the round on the station.
 	// VOREStation Edit End
 
-	var/use_overmap = 0          // If overmap should be used (including overmap space travel override)
+	var/use_overmap = 0		  // If overmap should be used (including overmap space travel override)
 	var/overmap_size = 20		 // Dimensions of overmap zlevel if overmap is used.
-	var/overmap_z = 0		     // If 0 will generate overmap zlevel on init. Otherwise will populate the zlevel provided.
+	var/overmap_z = 0			 // If 0 will generate overmap zlevel on init. Otherwise will populate the zlevel provided.
 	var/overmap_event_areas = 0  // How many event "clouds" will be generated
 
 	var/datum/skybox_settings/default_skybox // What skybox do we use if a zlevel doesn't have a custom one? Provide a type.
 
-	//CHOMPStation Edit Start TFF 24/12/19 - Chompers welcome screen message
-	var/lobby_icon = 'icons/misc/splash_screen.dmi' // The icon which contains the lobby image(s)
-	var/list/lobby_screens = list()                 // The list of lobby screen to pick() from. If left unset the first icon state is always selected.
-	//CHOMPStation Edit End
+	var/list/lobby_screens = list('html/lobby/mockingjay00.webp')                 // The list of lobby screen to pick() from. If left unset the first icon state is always selected.
 
 	var/default_law_type = /datum/ai_laws/nanotrasen // The default lawset use by synth units, if not overriden by their laws var.
 
@@ -214,8 +211,8 @@ var/list/all_maps = list()
 /datum/map/proc/get_empty_zlevel()
 	// Try to free up a z level from existing temp sectors
 	if(!empty_levels.len)
-		for(var/Z in map_sectors)
-			var/obj/effect/overmap/visitable/sector/temporary/T = map_sectors[Z]
+		for(var/Z in GLOB.map_sectors)
+			var/obj/effect/overmap/visitable/sector/temporary/T = GLOB.map_sectors[Z]
 			T.cleanup() // If we can release some of these, do that.
 
 	// Else, we need to buy a new one.
@@ -279,7 +276,7 @@ var/list/all_maps = list()
 /datum/map/proc/default_internal_channels()
 	return list(
 		num2text(PUB_FREQ)   = list(),
-		num2text(AI_FREQ)    = list(access_synth),
+		num2text(AI_FREQ)	= list(access_synth),
 		num2text(ENT_FREQ)   = list(),
 		num2text(ERT_FREQ)   = list(access_cent_specops),
 		num2text(COMM_FREQ)  = list(access_heads),
@@ -331,7 +328,7 @@ var/list/all_maps = list()
 	if(flags & MAP_LEVEL_PLAYER) map.player_levels += z
 	if(flags & MAP_LEVEL_SEALED) map.sealed_levels += z
 	if(flags & MAP_LEVEL_XENOARCH_EXEMPT) map.xenoarch_exempt_levels += z
-	if(flags & MAP_LEVEL_VORESPAWN) map.vorespawn_levels += z //CHOMPedit: I stg stop forgetting CHOMPedit comments
+	if(flags & MAP_LEVEL_VORESPAWN) map.vorespawn_levels += z
 	if(flags & MAP_LEVEL_PERSIST) map.persist_levels += z
 	if(flags & MAP_LEVEL_EMPTY)
 		if(!map.empty_levels) map.empty_levels = list()

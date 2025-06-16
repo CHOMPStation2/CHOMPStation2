@@ -3,7 +3,7 @@
 /turf/template_noop,
 /area/template_noop)
 "b" = (
-/obj/random/turf/lava,
+/obj/random/turf/lava/sif,
 /turf/simulated/floor/outdoors/rocks/caves,
 /area/submap/cave/geyser_2)
 "c" = (

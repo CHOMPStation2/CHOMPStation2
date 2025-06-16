@@ -15,13 +15,13 @@
 //
 /obj/item/projectile/energy/phase/bolt
 	range = 4
-	SA_bonus_damage = 15	// 30 total on animals
+	mob_bonus_damage = 15	// 30 total on animals
 	icon_state = "cbbolt"
 	hud_state = "taser"
 
 /obj/item/projectile/energy/phase/bolt/heavy
 	range = 4
-	SA_bonus_damage = 25	// 20 total on animals
+	mob_bonus_damage = 25	// 20 total on animals
 	hud_state = "taser"
 
 /obj/item/projectile/energy/plasma/vepr
@@ -30,20 +30,20 @@
 
 /obj/item/projectile/energy/phase
 	//damage = 5
-	SA_bonus_damage = 15
+	mob_bonus_damage = 15
 	armor_penetration = 0
 	SA_vulnerability = list(SA_ANIMAL, MOB_CLASS_SYNTHETIC, MOB_CLASS_ABERRATION)
 
 /obj/item/projectile/energy/phase/light
-	SA_bonus_damage = 5
+	mob_bonus_damage = 5
 	armor_penetration = 0
 
 /obj/item/projectile/energy/phase/heavy
 	//damage = 5
-	SA_bonus_damage = 20
+	mob_bonus_damage = 20
 	armor_penetration = 0
 
 /obj/item/projectile/energy/phase/heavy/cannon
 	//damage = 5
-	SA_bonus_damage = 35
+	mob_bonus_damage = 35
 	armor_penetration = 0

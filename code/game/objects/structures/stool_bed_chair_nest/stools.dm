@@ -19,21 +19,20 @@ var/global/list/stool_cache = list() //haha stool
 /obj/item/stool/padded
 	icon_state = "stool_padded_preview" //set for the map
 
-/obj/item/stool/New(var/newloc, var/new_material, var/new_padding_material)
-	..(newloc)
+/obj/item/stool/Initialize(mapload, var/new_material, var/new_padding_material)
+	. = ..()
 	if(!new_material)
 		new_material = MAT_STEEL
 	material = get_material_by_name(new_material)
 	if(new_padding_material)
 		padding_material = get_material_by_name(new_padding_material)
 	if(!istype(material))
-		qdel(src)
-		return
+		return INITIALIZE_HINT_QDEL
 	force = round(material.get_blunt_damage()*0.4)
 	update_icon()
 
-/obj/item/stool/padded/New(var/newloc, var/new_material)
-	..(newloc, MAT_STEEL, MAT_CARPET)
+/obj/item/stool/padded/Initialize(mapload, var/new_material)
+	. = ..(mapload, MAT_STEEL, MAT_CARPET)
 
 /obj/item/stool/update_icon()
 	// Prep icon.
@@ -125,7 +124,7 @@ var/global/list/stool_cache = list() //haha stool
 			qdel(C)
 			return
 		var/padding_type
-		 //CHOMPstation Start: making carpets different and not just the boring basic red no matter carpet type, consider merging material variables at stack level in future - Jack
+		//CHOMPstation Start: making carpets different and not just the boring basic red no matter carpet type, consider merging material variables at stack level in future - Jack
 		if(istype(W,/obj/item/stack/tile/carpet))
 			var/obj/item/stack/tile/carpet/M = W
 			if(M.material && (M.material.flags & MATERIAL_PADDING))

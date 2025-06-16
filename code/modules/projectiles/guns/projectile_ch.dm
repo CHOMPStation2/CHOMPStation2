@@ -203,10 +203,10 @@
 		var/mob/living/carbon/human/H = loc
 		if(istype(H))
 			if(!istype(H.gloves, /obj/item/clothing))
-				H.gunshot_residue = chambered.caliber
+				H.add_gunshotresidue(chambered)
 			else
 				var/obj/item/clothing/G = H.gloves
-				G.gunshot_residue = chambered.caliber
+				G.add_gunshotresidue(chambered)
 
 	switch(handle_casings)
 		if(EJECT_CASINGS) //eject casing onto ground.
@@ -450,8 +450,8 @@
 	if(!manual_chamber)
 		process_chambered()
 
-/obj/item/gun/projectile/New(loc, var/starts_loaded = 1)
-	..()
+/obj/item/gun/projectile/Initialize(mapload, var/starts_loaded = 1)
+	. = ..()
 	if(manual_chamber)
 		verbs |= /obj/item/gun/projectile/verb/change_firemode
 	update_icon()

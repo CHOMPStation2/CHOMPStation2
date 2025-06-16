@@ -97,6 +97,18 @@
 	icon_state = "bedevere"
 	body_parts_covered = CHEST
 
+/obj/item/clothing/suit/armor/combat/crusader/quizzler
+	name = "knight's armor"
+	desc = "ye olde knight, risen again."
+	icon_state = "quizzler"
+	armor = list(melee = 60, bullet = 10, laser = 10, energy = 0, bomb = 0, bio = 0, rad = 0)
+
+/obj/item/clothing/suit/armor/combat/crusader/pink
+	name = "knight's armor"
+	desc = "ye olde knight, risen again."
+	icon_state = "pink"
+	armor = list(melee = 60, bullet = 10, laser = 10, energy = 0, bomb = 0, bio = 0, rad = 0)
+
 // Costume Versions Here
 /obj/item/clothing/suit/armor/combat/crusader_costume
 	name = "crusader costume armor"
@@ -153,16 +165,7 @@
 	slowdown=0
 	siemens_coefficient = 0.9
 	armor = list(melee = 30, bullet = 20, laser = 20, energy = 20, bomb = 35, bio = 75, rad = 35) // Inferior to sec vests in bullet/laser but better for environmental protection.
-	allowed = list(
-		/obj/item/flashlight,
-		/obj/item/gun,
-		/obj/item/ammo_magazine,
-		/obj/item/melee,
-		/obj/item/material/knife,
-		/obj/item/tank,
-		/obj/item/radio,
-		/obj/item/pickaxe
-		)
+	allowed = list(POCKET_GENERIC, POCKET_EMERGENCY, POCKET_EXPLO, POCKET_ALL_TANKS, POCKET_MINING)
 
 /obj/item/clothing/suit/armor/combat/crusader_explo/FM
 	name = "field medic low tech suit"

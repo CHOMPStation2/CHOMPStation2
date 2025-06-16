@@ -4,10 +4,10 @@
 	fuel_colour = "#FCE300"
 	fuel_type = "blitz"
 
-/obj/item/fuel_assembly/blitz/New(var/newloc)
-	..(newloc, "blitz")
+/obj/item/fuel_assembly/blitz/Initialize(mapload)
+	. = ..(mapload, "blitz")
 
-/obj/item/fuel_assembly/blitz/unshielded/Initialize()
+/obj/item/fuel_assembly/blitz/unshielded/Initialize(mapload)
 	. = ..()
 	name = "unshielded blitz rod"
 	desc = "An extremely unstable, raw rod of compressed supermatter and phoron. This seems like a terrible idea."
@@ -65,7 +65,7 @@
 /obj/item/fuel_assembly/blitz/shielded
 	name = "blitz rod"
 
-/obj/item/fuel_assembly/blitz/shielded/Initialize()
+/obj/item/fuel_assembly/blitz/shielded/Initialize(mapload)
 	. = ..()
 	name = "blitz rod"
 	desc = "A highly unstable, and highly explosive supermatter and phoron fuel rod with a lead shell, created by someone of questionable sanity. This thing has to violate at least a few intergalactic regulations."

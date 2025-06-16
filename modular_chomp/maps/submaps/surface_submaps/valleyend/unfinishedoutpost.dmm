@@ -538,15 +538,6 @@
 	temperature = 243.15
 	},
 /area/submap/unfinishedoutpost)
-"Zg" = (
-/obj/structure/catwalk,
-/obj/structure/catwalk,
-/turf/simulated/floor/plating{
-	oxygen = 20.7263;
-	nitrogen = 93.7835;
-	temperature = 243.15
-	},
-/area/submap/unfinishedoutpost)
 "Zh" = (
 /obj/structure/window/reinforced{
 	dir = 1;
@@ -926,8 +917,8 @@ CM
 CM
 CM
 CM
-Zg
-Zg
+CM
+CM
 CM
 CM
 CM

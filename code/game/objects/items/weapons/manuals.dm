@@ -11,9 +11,6 @@
 	item_state = "book15"
 	author = "Engineering Encyclopedia"		 // Who wrote the thing, can be changed by pen or PC. It is not automatically assigned
 	title = "Particle Accelerator User's Guide"
-
-/obj/item/book/manual/engineering_particle_accelerator/New()
-	..()
 	dat = {"<html>
 				<head>
 				<style>
@@ -59,9 +56,7 @@
 	item_state = "book15"
 	author = "Central Engineering Division"
 	title = "Supermatter Engine Operating Manual"
-
-/obj/item/book/manual/supermatter_engine/New()
-	..()			//CHOMPEdit Start - Updated Supermatter Engine Manual
+	//CHOMPEdit Start - Updated Supermatter Engine Manual
 	dat = {"<html>
 				<head>
 				<style>
@@ -216,10 +211,7 @@
 	item_state = "book15"
 	author = "Central Engineering Division"
 	title = "R-UST Operating Manual"
-
-//R-UST guide Re-Writen by Gozulio to reflect how the R-UST actually operates. (CHOMPedit, re-written again :3 By Foxglove)
-/obj/item/book/manual/rust_engine/New()
-	..()
+	//R-UST guide Re-Writen by Gozulio to reflect how the R-UST actually operates. (CHOMPedit, re-written again :3 By Foxglove)
 	dat = {"<html>
 				<head>
 				<style>
@@ -262,17 +254,17 @@
 				<li> Once the CO<sup>2</sup> canister is empty, unwrench it and replace it with a second canister and wrench it down in the original canister's place. The hot-loop requires two canisters of CO<sup>2</sup> to remain stable and safe. <i>Once the hot-loop is set up, you may power down the <b>intake</b> pipe, located directly <ins>south</ins> of the intake connector port</i>.</li>
 				<li> While not <i>required</i> there is an omni-filter you can set-up and power on <mark>just north</mark> of the reactor shroud. It can be used to filter gas out of reactor, it is not required, however, and can be safely ignored for standard basic set-up of TEG and R-UST alike. </li>
 				</ol>
-                <br>
+				<br>
 				<h2>R-UST STANDARD STARTUP PROCEDURE</h2>
-                <h1>The Engine Control Room and what to know.</h1>
-                <li> <b><ins>Gyrotron Controller</ins></b> <em>This is the terminal located on the far <mark>west</mark> and controls the gyrotron. This device can be viewed as the catalyst that causes the reaction within the core and must remain turned on <b>only during use</b></em>. </li>
-                <li> <b><ins>Fuel Injector Control</b></ins> <em>This is the terminal <mark>adjacent</mark> to the gyrotron controller, it controls the injectors that pump fuel into the reactor core chamber and must remained turned on <b>only when in use <ins>and</ins> with the projection field powered and active</b></em>. </li>
-                <li> <b><ins>R-UST Core Monitoring</ins></b> <em>This is the terminal in the <mark>middle</mark> of the room. It gives you information about the status of the reactor, the core chamber, and the reaction going on within the R-UST</em>.</li>
-                <li> <b><ins>Engine Cooling Control</ins></b> <em>This is the terminal directly <mark>in front of you</mark> when you walk into the engine control room. This terminal controls the cooling pumps and systems within the R-UST core</em>. </li>
-                <li> <b><ins>Shroud Controls</ins></b> <em>There are two buttons that control and cycle the monitoring room shroud and the reactor core shroud. These are located <mark>on the sides</mark> of the monitoring room. The reactor shroud should be left open during setup. And the monitoring room shroud should be left shut <b>after</b> setup is complete</em>. </li>
-                <li> <b><ins>Deuterium</ins></b> <em>The standard set-up for your R-UST reaction is Deuterium-Dueterium. Go to the fuel storage chamber <mark>east</mark> of the reactor shroud and ensure you have two rods on hand for set-up. You may safely grab <b>two</b> of these rods now and insert them into the two <mark>southern</mark> fuel injectors. If you do, skip the first step below</em>.</li>
-                <br>
-                <ol>
+				<h1>The Engine Control Room and what to know.</h1>
+				<li> <b><ins>Gyrotron Controller</ins></b> <em>This is the terminal located on the far <mark>west</mark> and controls the gyrotron. This device can be viewed as the catalyst that causes the reaction within the core and must remain turned on <b>only during use</b></em>. </li>
+				<li> <b><ins>Fuel Injector Control</b></ins> <em>This is the terminal <mark>adjacent</mark> to the gyrotron controller, it controls the injectors that pump fuel into the reactor core chamber and must remained turned on <b>only when in use <ins>and</ins> with the projection field powered and active</b></em>. </li>
+				<li> <b><ins>R-UST Core Monitoring</ins></b> <em>This is the terminal in the <mark>middle</mark> of the room. It gives you information about the status of the reactor, the core chamber, and the reaction going on within the R-UST</em>.</li>
+				<li> <b><ins>Engine Cooling Control</ins></b> <em>This is the terminal directly <mark>in front of you</mark> when you walk into the engine control room. This terminal controls the cooling pumps and systems within the R-UST core</em>. </li>
+				<li> <b><ins>Shroud Controls</ins></b> <em>There are two buttons that control and cycle the monitoring room shroud and the reactor core shroud. These are located <mark>on the sides</mark> of the monitoring room. The reactor shroud should be left open during setup. And the monitoring room shroud should be left shut <b>after</b> setup is complete</em>. </li>
+				<li> <b><ins>Deuterium</ins></b> <em>The standard set-up for your R-UST reaction is Deuterium-Dueterium. Go to the fuel storage chamber <mark>east</mark> of the reactor shroud and ensure you have two rods on hand for set-up. You may safely grab <b>two</b> of these rods now and insert them into the two <mark>southern</mark> fuel injectors. If you do, skip the first step below</em>.</li>
+				<br>
+				<ol>
 				<li> Collect two (2) deuterium fuel rods from the fuel storage chamber and socket them into any two fuel injectors. <i>It is adviced to use the two <mark>southern</mark> injectors to allow for easier visual checks from the engine control room.</i> </li>
 				<li> Assuming the room and controls are powered open both the reactor shroud and the control room shroud. If the room is not powered (which you can check by looking at the R-UST Core Monitor and seeing if the buttons are greyed out or not, if they are grey it does not have enough power). If it is unpowered or otherwise does not have sufficient power see <ins>ADDITIONAL INFORMATION <strong>1.</strong></ins> below.</li>
 				<li> Now, please ensure everyone in the engine control room is wearing full radiation protection gear, ensure the control room door will not be opened during set-up to prevent radiation leakage. </li>

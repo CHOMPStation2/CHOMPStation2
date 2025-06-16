@@ -1,259 +1,17 @@
-/mob/living/carbon/human/proc/phase_shift()
-	set name = "Phase Shift (100)"
-	set desc = "Shift yourself out of alignment with realspace to travel quickly to different areas."
-	set category = "Abilities.Shadekin"
-
-	var/ability_cost = 100
-
-	var/darkness = 1
-	var/turf/T = get_turf(src)
-	if(!T)
-		to_chat(src,span_warning("You can't use that here!"))
-		return FALSE
-	if((get_area(src).flags & PHASE_SHIELDED))	// Mapping tools to control phasing
-		to_chat(src,span_warning("This area is preventing you from phasing!"))
-		return FALSE
-	//RS Port #658 Start
-	var/area/A = get_area(src)
-	if(!client?.holder && A.flag_check(AREA_BLOCK_PHASE_SHIFT))
-		to_chat(src, span_warning("You can't do that here!"))
-		return FALSE
-	//RS Port #658 End
-
-	if(ability_flags & AB_PHASE_SHIFTING)
-		return FALSE
-
-	var/brightness = T.get_lumcount() //Brightness in 0.0 to 1.0
-	darkness = 1-brightness //Invert
-
-	var/watcher = 0
-	// Nerf to phasing
-	for(var/thing in orange(7, src))
-		if(istype(thing, /mob/living/carbon/human))
-			var/mob/living/carbon/human/watchers = thing
-			if((watchers in oviewers(7,src)) && watchers.species != SPECIES_SHADEKIN)	// And they can see us... (And aren't themselves a shadekin)
-				if(!(watchers.stat) && !isbelly(watchers.loc) && !istype(watchers.loc, /obj/item/holder))	// And they are alive and not being held by someone...
-					watcher++	// They are watching us!
-		else if(istype(thing, /mob/living/silicon/robot))
-			var/mob/living/silicon/robot/watchers = thing
-			if(watchers in oviewers(7,src))
-				if(!watchers.stat && !isbelly(watchers.loc))
-					watcher++	//The robot is watching us!
-		else if(istype(thing, /obj/machinery/camera))
-			var/obj/machinery/camera/watchers = thing
-			if(watchers.can_use())
-				if(src in watchers.can_see())
-					watcher++	//The camera is watching us!
-
-
-	ability_cost = CLAMP(ability_cost/(0.01+darkness*2),50, 80)//This allows for 1 watcher in full light
-	if(watcher>0)
-		ability_cost = ability_cost + ( 15 * watcher )
-	if(!(ability_flags & AB_PHASE_SHIFTED))
-		log_debug("[src] attempted to shift with [watcher] observers with a  cost of [ability_cost] in a darkness level of [darkness]")
-	// inform about the observers affecting phasing
-	if(darkness<=0.4 && watcher>=2)
-		to_chat(src, span_warning("You have a few observers in a well-lit area! This may prevent phasing. (Working cameras count towards observers)"))
-	else if(watcher>=3)
-		to_chat(src, span_warning("You have a large number of observers! This may prevent phasing. (Working cameras count towards observers)"))
-
-
+/mob/living/carbon/human/proc/shadekin_ability_check()
 	var/datum/species/shadekin/SK = species
-	if(!shadekin_ability_check())
-		return FALSE
-	// Prevent bugs when spamming phase button
-	else if(SK.doing_phase)
-		to_chat(src, span_warning("You are already trying to phase!"))
+	if(!istype(SK))
+		to_chat(src, span_warning("Only a shadekin can use that!"))
 		return FALSE
 
-	else if(shadekin_get_energy() < ability_cost && !(ability_flags & AB_PHASE_SHIFTED))
-		to_chat(src, span_warning("Not enough energy for that ability!"))
+	if(stat)
+		to_chat(src, span_warning("Can't use that ability in your state!"))
 		return FALSE
 
-	if(!(ability_flags & AB_PHASE_SHIFTED))
-		shadekin_adjust_energy(-ability_cost)
-	playsound(src, 'sound/effects/stealthoff.ogg', 75, 1)
-
-	if(!T.CanPass(src,T) || loc != T)
-		to_chat(src,span_warning("You can't use that here!"))
+	if((ability_flags & AB_DARK_RESPITE || has_modifier_of_type(/datum/modifier/dark_respite)) && !(ability_flags & AB_PHASE_SHIFTED))
+		to_chat(src, span_warning("You can't use that so soon after an emergency warp!"))
 		return FALSE
-
-
-	SK.doing_phase = TRUE // Prevent bugs when spamming phase button
-	//Shifting in
-	if(ability_flags & AB_PHASE_SHIFTED)
-		phase_in(T)
-	//Shifting out
-	else
-		phase_out(T)
-	SK.doing_phase = FALSE // Prevent bugs when spamming phase button
-
-
-
-/mob/living/carbon/human/proc/phase_in(var/turf/T)
-	if(ability_flags & AB_PHASE_SHIFTED)
-		var/datum/species/shadekin/SK = species
-
-		// pre-change
-		forceMove(T)
-		var/original_canmove = canmove
-		SetStunned(0)
-		SetWeakened(0)
-		if(buckled)
-			buckled.unbuckle_mob()
-		if(pulledby)
-			pulledby.stop_pulling()
-		stop_pulling()
-		canmove = FALSE
-
-		// change
-		ability_flags &= ~AB_PHASE_SHIFTED
-		ability_flags |= AB_PHASE_SHIFTING
-		throwpass = FALSE
-		name = get_visible_name()
-		for(var/obj/belly/B as anything in vore_organs)
-			B.escapable = initial(B.escapable)
-
-		//cut_overlays()
-		invisibility = initial(invisibility)
-		see_invisible = initial(see_invisible)
-		see_invisible_default = initial(see_invisible_default) // Allow seeing phased entities while phased.
-		incorporeal_move = initial(incorporeal_move)
-		density = initial(density)
-		force_max_speed = initial(force_max_speed)
-		// resetting pull ability after phasing back in
-		can_pull_size = initial(can_pull_size)
-		can_pull_mobs = initial(can_pull_mobs)
-		hovering = initial(hovering)
-		update_icon()
-
-		//Cosmetics mostly
-		var/obj/effect/temp_visual/shadekin/phase_in/phaseanim = new /obj/effect/temp_visual/shadekin/phase_in(src.loc)
-		phaseanim.pixel_y = (src.size_multiplier - 1) * 16 // Pixel shift for the animation placement
-		phaseanim.adjust_scale(src.size_multiplier, src.size_multiplier)
-		phaseanim.dir = dir
-		alpha = 0
-		custom_emote(1,"phases in!")
-		sleep(5) //The duration of the TP animation
-		canmove = original_canmove
-		alpha = initial(alpha)
-		remove_modifiers_of_type(/datum/modifier/shadekin_phase_vision)
-		remove_modifiers_of_type(/datum/modifier/shadekin_phase) // Shadekin probably shouldn't be hit while phasing
-
-		//Potential phase-in vore
-		if(can_be_drop_pred || can_be_drop_prey) //Toggleable in vore panel
-			var/list/potentials = living_mobs(0)
-			if(potentials.len)
-				var/mob/living/target = pick(potentials)
-				if(can_be_drop_pred && istype(target) && target.devourable && target.can_be_drop_prey && target.phase_vore && vore_selected && phase_vore)
-					target.forceMove(vore_selected)
-					to_chat(target, span_vwarning("\The [src] phases in around you, [vore_selected.vore_verb]ing you into their [vore_selected.name]!"))
-					to_chat(src, span_vwarning("You phase around [target], [vore_selected.vore_verb]ing them into your [vore_selected.name]!"))
-				else if(can_be_drop_prey && istype(target) && devourable && target.can_be_drop_pred && target.phase_vore && target.vore_selected && phase_vore)
-					forceMove(target.vore_selected)
-					to_chat(target, span_vwarning("\The [src] phases into you, [target.vore_selected.vore_verb]ing them into your [target.vore_selected.name]!"))
-					to_chat(src, span_vwarning("You phase into [target], having them [target.vore_selected.vore_verb] you into their [target.vore_selected.name]!"))
-
-		ability_flags &= ~AB_PHASE_SHIFTING
-
-		//Affect nearby lights
-		var/destroy_lights = 0
-
-		// Add back light destruction
-		if(SK.get_shadekin_eyecolor(src) == RED_EYES)
-			destroy_lights = 80
-		else if(SK.get_shadekin_eyecolor(src) == PURPLE_EYES)
-			destroy_lights = 25
-
-		// Add gentle phasing
-		if(SK.phase_gentle) // gentle case: No light destruction. Flicker in 4 tile radius once.
-			for(var/obj/machinery/light/L in machines)
-				if(L.z != z || get_dist(src,L) > 4)
-					continue
-				L.flicker(1)
-			src.Stun(1)
-		else
-			for(var/obj/machinery/light/L in machines)
-				if(L.z != z || get_dist(src,L) > 10)
-					continue
-
-				if(prob(destroy_lights))
-					spawn(rand(5,25))
-						L.broken()
-				else
-					L.flicker(10)
-
-/mob/living/carbon/human/proc/phase_out(var/turf/T)
-	if(!(ability_flags & AB_PHASE_SHIFTED))
-		// pre-change
-		forceMove(T)
-		var/original_canmove = canmove
-		SetStunned(0)
-		SetWeakened(0)
-		if(buckled)
-			buckled.unbuckle_mob()
-		if(pulledby)
-			pulledby.stop_pulling()
-		stop_pulling()
-		canmove = FALSE
-
-		var/list/allowed_implants = list(
-			/obj/item/implant/sizecontrol,
-			/obj/item/implant/compliance,
-		)
-		for(var/obj/item/organ/external/organ in organs)
-			for(var/obj/item/O in organ.implants)
-				if(is_type_in_list(O, allowed_implants))
-					continue
-				if(O == nif)
-					nif.unimplant(src)
-				O.forceMove(drop_location())
-				organ.implants -= O
-		if(!has_embedded_objects())
-			clear_alert("embeddedobject")
-
-		// change
-		ability_flags |= AB_PHASE_SHIFTED
-		ability_flags |= AB_PHASE_SHIFTING
-		throwpass = TRUE
-		custom_emote(1,"phases out!")
-		name = get_visible_name()
-
-		// Unequipping slots when phasing in, and preventing pulling stuff while phased.
-		if(l_hand)
-			unEquip(l_hand)
-		if(r_hand)
-			unEquip(r_hand)
-		if(back)
-			unEquip(back)
-
-		can_pull_size = 0
-		can_pull_mobs = MOB_PULL_NONE
-		hovering = TRUE
-
-		for(var/obj/belly/B as anything in vore_organs)
-			B.escapable = FALSE
-
-		var/obj/effect/temp_visual/shadekin/phase_out/phaseanim = new /obj/effect/temp_visual/shadekin/phase_out(src.loc)
-		phaseanim.pixel_y = (src.size_multiplier - 1) * 16 // Pixel shift for the animation placement
-		phaseanim.adjust_scale(src.size_multiplier, src.size_multiplier)
-		phaseanim.dir = dir
-		alpha = 0
-		add_modifier(/datum/modifier/shadekin_phase_vision)
-		add_modifier(/datum/modifier/shadekin_phase) //Shadekin probably shouldn't be hit while phasing
-		sleep(5)
-		invisibility = INVISIBILITY_SHADEKIN
-		see_invisible = INVISIBILITY_SHADEKIN
-		see_invisible_default = INVISIBILITY_SHADEKIN // Allow seeing phased entities while phased.
-		//cut_overlays()
-		update_icon()
-		alpha = 127
-
-		canmove = original_canmove
-		incorporeal_move = TRUE
-		density = FALSE
-		force_max_speed = TRUE
-		ability_flags &= ~AB_PHASE_SHIFTING
+	return TRUE
 
 //toggle proc for toggling gentle/normal phasing
 /mob/living/carbon/human/proc/phase_strength_toggle()
@@ -288,13 +46,16 @@
 	var/datum/map_template/shelter/template
 
 	var/ability_cost = 100
+	var/tunnel_time = 60 SECONDS
 
 	if(!shadekin_ability_check())
 		return FALSE
-	else if(ability_flags & AB_PHASE_SHIFTED)
+
+	if(ability_flags & AB_PHASE_SHIFTED)
 		to_chat(src, span_warning("You can't use that while phase shifted!"))
 		return FALSE
-	else if(ability_flags & AB_DARK_TUNNEL)
+
+	if(ability_flags & AB_DARK_TUNNEL)
 		to_chat(src, span_warning("You have already made a tunnel to the Dark!"))
 		return FALSE
 
@@ -328,7 +89,7 @@
 	smoke.start()
 
 	src.visible_message(span_notice("[src] begins pulling dark energies around themselves."))
-	if(do_after(src, 600)) //60 seconds
+	if(do_after(src, tunnel_time))
 		playsound(src, 'sound/effects/phasein.ogg', 100, 1)
 		src.visible_message(span_notice("[src] finishes pulling dark energies around themselves, creating a portal."))
 
@@ -339,8 +100,7 @@
 		ability_flags |= AB_DARK_TUNNEL
 		shadekin_adjust_energy(-(ability_cost - 10)) //Leaving enough energy to actually activate the portal
 		return TRUE
-	else
-		return FALSE
+	return FALSE
 
 /datum/power/shadekin/dark_respite
 	name = "Dark Respite (Only in Dark)"
@@ -357,18 +117,23 @@
 	if(!istype(SK))
 		to_chat(src, span_warning("Only a shadekin can use that!"))
 		return FALSE
-	else if(!istype(get_area(src), /area/shadekin))
+
+	if(!istype(get_area(src), /area/shadekin))
 		to_chat(src, span_warning("Can only trigger Dark Respite in the Dark!"))
 		return FALSE
-	else if(stat)
+
+	if(stat)
 		to_chat(src, span_warning("Can't use that ability in your state!"))
 		return FALSE
-	else if(ability_flags & AB_DARK_RESPITE)
+
+	if(ability_flags & AB_DARK_RESPITE)
 		to_chat(src, span_warning("You can't use that so soon after an emergency warp!"))
 		return FALSE
-	else if(has_modifier_of_type(/datum/modifier/dark_respite) && !SK.manual_respite)
+
+	if(has_modifier_of_type(/datum/modifier/dark_respite) && !SK.manual_respite)
 		to_chat(src, span_warning("You cannot manually end a Dark Respite triggered by an emergency warp!"))
-	else if(ability_flags & AB_PHASE_SHIFTED)
+
+	if(ability_flags & AB_PHASE_SHIFTED)
 		to_chat(src, span_warning("You can't use that while phase shifted!"))
 		return FALSE
 
@@ -399,26 +164,28 @@
 	icon = 'modular_chomp/icons/obj/Shadekin_powers_2.dmi'
 	icon_state = "dark_maw_waiting"
 
-/obj/effect/abstract/dark_maw/New(loc, var/mob/living/user, var/trigger_now = 0)
+/obj/effect/abstract/dark_maw/Initialize(mapload, var/mob/living/user, var/trigger_now = 0)
 	. = ..()
-	if(istype(user))
-		owner = user
-		target = owner.vore_selected
 
 	if(!isturf(loc))
 		return INITIALIZE_HINT_QDEL
+
 	var/turf/T = loc
 	if(T.get_lumcount() >= 0.5)
 		visible_message(span_notice("A set of shadowy lines flickers away in the light."))
 		icon_state = "dark_maw_used"
-		qdel(src)
-		return
+		return INITIALIZE_HINT_QDEL
+
+	if(istype(user))
+		owner = user
+		target = owner.vore_selected
 
 	var/mob/living/target_user = null
 	for(var/mob/living/L in T)
 		if(L != owner && !L.incorporeal_move)
 			target_user = L
 			break
+
 	if(istype(target_user))
 		triggered_by(target_user, 1)
 		// to trigger rebuild
@@ -426,8 +193,7 @@
 		icon_state = "dark_maw_used"
 		flick("dark_maw_tr", src)
 		visible_message(span_warning("A set of crystals suddenly springs from the ground and shadowy tendrils wrap around nothing before vanishing."))
-		spawn(30)
-			qdel(src)
+		QDEL_IN(src, 3 SECONDS)
 	else
 		var/mob/living/carbon/human/carbon_owner = owner
 		var/mob/living/simple_mob/shadekin/sm_owner = owner
@@ -451,6 +217,8 @@
 				SK.active_dark_maws -= src
 		else if(istype(sm_owner))
 			sm_owner.active_dark_maws -= src
+	target = null
+	owner = null
 	return ..()
 
 /obj/effect/abstract/dark_maw/Crossed(O)
@@ -484,30 +252,35 @@
 	visible_message(span_warning("A set of crystals spring out of the ground and shadowy tendrils start wrapping around [L]."))
 	if(owner && !triggered_instantly)
 		to_chat(owner, span_warning("A dark maw you deployed has triggered!"))
-	spawn(10)
-		var/will_vore = 1
+	addtimer(CALLBACK(src, PROC_REF(do_trigger), L), 1 SECOND, TIMER_DELETE_ME)
 
-		if(!owner || !(target in owner) || !L.devourable || !L.can_be_drop_prey || !owner.can_be_drop_pred || !L.phase_vore)
-			will_vore = 0
+/obj/effect/abstract/dark_maw/proc/do_trigger(var/mob/living/L)
+	var/will_vore = 1
 
-		if(!src || src.gc_destroyed)
-			//We got deleted probably, do nothing more
-			return
+	if(!owner || !(target in owner) || !L.devourable || !L.can_be_drop_prey || !owner.can_be_drop_pred || !L.phase_vore)
+		will_vore = 0
 
-		if(L.loc != get_turf(src))
-			visible_message(span_notice("The shadowy tendrils fail to catch anything and dissipate."))
-			qdel(src)
-		else if(will_vore)
-			visible_message(span_warning("The shadowy tendrils grab around [L] and drag them into the floor, leaving nothing behind."))
-			L.forceMove(target)
-			qdel(src)
-		else
-			var/obj/effect/energy_net/dark/net = new /obj/effect/energy_net/dark(get_turf(src))
-			if(net.buckle_mob(L))
-				visible_message(span_warning("The shadowy tendrils wrap around [L] and traps them in a net of dark energy."))
-			else
-				visible_message(span_notice("The shadowy tendrils wrap around [L] and then dissipate, leaving them in place."))
-			qdel(src)
+	if(!src || src.gc_destroyed)
+		//We got deleted probably, do nothing more
+		return
+
+	if(L.loc != get_turf(src))
+		visible_message(span_notice("The shadowy tendrils fail to catch anything and dissipate."))
+		qdel(src)
+		return
+
+	if(will_vore)
+		visible_message(span_warning("The shadowy tendrils grab around [L] and drag them into the floor, leaving nothing behind."))
+		L.forceMove(target)
+		qdel(src)
+		return
+
+	var/obj/effect/energy_net/dark/net = new /obj/effect/energy_net/dark(get_turf(src))
+	if(net.buckle_mob(L))
+		visible_message(span_warning("The shadowy tendrils wrap around [L] and traps them in a net of dark energy."))
+	else
+		visible_message(span_notice("The shadowy tendrils wrap around [L] and then dissipate, leaving them in place."))
+	qdel(src)
 
 /obj/effect/energy_net/dark
 	name = "dark net"
@@ -522,7 +295,8 @@
 		visible_message(span_danger("[user] dissipates \the [src] with a touch!"))
 		unbuckle_mob(buckled_mob)
 		return
-	else if(istype(user,/mob/living/carbon/human))
+
+	if(istype(user,/mob/living/carbon/human))
 		var/mob/living/carbon/human/H = user
 		var/datum/species/shadekin/SK = H.species
 		if(istype(SK))
@@ -553,14 +327,17 @@
 
 	if(!shadekin_ability_check())
 		return FALSE
-	else if(shadekin_get_energy() < ability_cost)
+
+	if(shadekin_get_energy() < ability_cost)
 		to_chat(src, span_warning("Not enough energy for that ability!"))
 		return FALSE
+
 	var/turf/T = get_turf(src)
 	if(!istype(T))
 		to_chat(src, span_warning("You don't seem to be able to set a trap here!"))
 		return FALSE
-	else if(T.get_lumcount() >= 0.5)
+
+	if(T.get_lumcount() >= 0.5)
 		to_chat(src, span_warning("There is too much light here for your trap to last!"))
 		return FALSE
 
@@ -572,8 +349,7 @@
 		shadekin_adjust_energy(-ability_cost)
 
 		return TRUE
-	else
-		return FALSE
+	return FALSE
 
 /mob/living/carbon/human/proc/clear_dark_maws()
 	set name = "Dispel dark maws"

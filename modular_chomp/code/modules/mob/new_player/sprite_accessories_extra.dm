@@ -201,16 +201,16 @@
 	name = "Reptile Breasts"
 	icon_state = "breasts_reptile"
 
-/datum/sprite_accessory/marking/ch/dragon_upperjaw
-	name = "Dragon Upper Jaw"
-	icon_state = "dragon_upperjaw"
+/datum/sprite_accessory/marking/ch/firstdragon_upperjaw
+	name = "Dragon Upper Jaw 1"
+	icon_state = "firstdragon_upperjaw"
 	body_parts = list(BP_HEAD)
 	color_blend_mode = ICON_MULTIPLY
 
 
-/datum/sprite_accessory/marking/ch/dragon_lowerjaw
-	name = "Dragon Lower Jaw"
-	icon_state = "dragon_lowerjaw"
+/datum/sprite_accessory/marking/ch/firstdragon_lowerjaw
+	name = "Dragon Lower Jaw 1"
+	icon_state = "firstdragon_lowerjaw"
 	body_parts = list(BP_HEAD)
 	color_blend_mode = ICON_MULTIPLY
 

@@ -17,7 +17,6 @@
 	species_language = LANGUAGE_SAGARU
 	color_mult = 1
 	inherent_verbs = list(/mob/living/carbon/human/proc/tie_hair)
-	digi_allowed = TRUE
 
 	min_age = 18
 	max_age = 110
@@ -93,7 +92,6 @@
 	min_age = 18
 	//max_age = 80
 	max_age = 110 //CHOMPedit
-	digi_allowed = TRUE
 	// male_scream_sound = null //CHOMPedit
 	// female_scream_sound = null //CHOMPedit
 
@@ -151,7 +149,6 @@
 	min_age = 18
 	//max_age = 80
 	max_age = 110 //CHOMPedit
-	digi_allowed = TRUE
 	// male_scream_sound = null //CHOMPedit
 	// female_scream_sound = null //CHOMPedit
 	// CHOMPEdit Start: Missing Sounds, so none for this race.
@@ -199,7 +196,6 @@
 		/mob/living/proc/shred_limb,
 		/mob/living/carbon/human/proc/tie_hair)
 	assisted_langs = list(LANGUAGE_EAL, LANGUAGE_SKRELLIAN, LANGUAGE_ROOTLOCAL, LANGUAGE_ROOTGLOBAL, LANGUAGE_VOX)	//AEIOU edit: Zorren can speak Terminus unassisted.
-	digi_allowed = TRUE
 
 	min_age = 18
 	max_age = 110
@@ -262,10 +258,9 @@
 	color_mult = 1
 	inherent_verbs = list(/mob/living/carbon/human/proc/lick_wounds,
 		/mob/living/carbon/human/proc/tie_hair)
-	digi_allowed = TRUE
 
-	// male_scream_sound = list('modular_chomp/sound/voice/scream/canine/wolf_scream.ogg', 'modular_chomp/sound/voice/scream/canine/wolf_scream2.ogg', 'modular_chomp/sound/voice/scream/canine/wolf_scream3.ogg', 'modular_chomp/sound/voice/scream/canine/wolf_scream4.ogg', 'modular_chomp/sound/voice/scream/canine/wolf_scream5.ogg', 'modular_chomp/sound/voice/scream/canine/wolf_scream6.ogg') //CHOMPedit: Scream sounds, finally, 3 years later.
-	// female_scream_sound = list('modular_chomp/sound/voice/scream/canine/wolf_scream.ogg', 'modular_chomp/sound/voice/scream/canine/wolf_scream2.ogg', 'modular_chomp/sound/voice/scream/canine/wolf_scream3.ogg', 'modular_chomp/sound/voice/scream/canine/wolf_scream4.ogg', 'modular_chomp/sound/voice/scream/canine/wolf_scream5.ogg', 'modular_chomp/sound/voice/scream/canine/wolf_scream6.ogg') //CHOMPedit: Scream sounds, finally, 3 years later.
+	// male_scream_sound = list('sound/voice/scream/canine/wolf_scream.ogg', 'sound/voice/scream/canine/wolf_scream2.ogg', 'sound/voice/scream/canine/wolf_scream3.ogg', 'sound/voice/scream/canine/wolf_scream4.ogg', 'sound/voice/scream/canine/wolf_scream5.ogg', 'sound/voice/scream/canine/wolf_scream6.ogg') //CHOMPedit: Scream sounds, finally, 3 years later.
+	// female_scream_sound = list('sound/voice/scream/canine/wolf_scream.ogg', 'sound/voice/scream/canine/wolf_scream2.ogg', 'sound/voice/scream/canine/wolf_scream3.ogg', 'sound/voice/scream/canine/wolf_scream4.ogg', 'sound/voice/scream/canine/wolf_scream5.ogg', 'sound/voice/scream/canine/wolf_scream6.ogg') //CHOMPedit: Scream sounds, finally, 3 years later.
 	// CHOMPEdit Start: Add Pain/Gasp/Death sounds
 	pain_verb_1p = list("yelp", "growl")
 	pain_verb_3p = list("yelps", "growls")
@@ -326,7 +321,7 @@
 	deform = 'icons/mob/human_races/r_def_lizard_vr.dmi'
 	tail_animation = 'icons/mob/species/unathi/tail_vr.dmi'
 	color_mult = 1
-	min_age = 40 //ChompEDIT - Unathi lore minimal adult age. 
+	min_age = 40 //ChompEDIT - Unathi lore minimal adult age.
 	inherent_verbs = list(/mob/living/carbon/human/proc/tie_hair)
 	gluttonous = 0
 	inherent_verbs = list(/mob/living/proc/shred_limb)
@@ -458,7 +453,6 @@
 	color_mult = 1
 	genders = list(MALE, FEMALE, PLURAL, NEUTER)
 	inherent_verbs = list(/mob/living/proc/flying_toggle,/mob/living/proc/flying_vore_toggle,/mob/living/proc/start_wings_hovering,/mob/living/carbon/human/proc/tie_hair)
-	digi_allowed = TRUE
 
 	min_age = 18
 	max_age = 80
@@ -506,7 +500,6 @@
 //CHOMPStation Removal
 //	wikilink = "https://wiki.vore-station.net/Shadekin"
 	catalogue_data = list(/datum/category_item/catalogue/fauna/shadekin)
-	digi_allowed = TRUE
 
 	language = LANGUAGE_SHADEKIN
 	name_language = LANGUAGE_SHADEKIN
@@ -544,7 +537,7 @@
 	heat_level_2 = 1000
 	heat_level_3 = 1150
 
-	flags =  NO_SCAN
+	flags =  NO_DNA | NO_SLEEVE
 	spawn_flags = SPECIES_IS_RESTRICTED //SPECIES_CAN_JOIN | SPECIES_IS_WHITELISTED | SPECIES_WHITELIST_SELECTABLE CHOMPedit: disabled maybe forever
 
 	reagent_tag = IS_SHADEKIN		// for shadekin-unqiue chem interactions
@@ -618,7 +611,6 @@
 	name_language = LANGUAGE_TERMINUS
 	species_language = LANGUAGE_TERMINUS
 	inherent_verbs = list(/mob/living/carbon/human/proc/lick_wounds,/mob/living/proc/shred_limb,/mob/living/carbon/human/proc/tie_hair)
-	digi_allowed = TRUE
 
 	min_age = 18
 	max_age = 80
@@ -654,7 +646,6 @@
 	darksight = 4 //Better hunters in the dark.
 	hunger_factor = 0.1 //In exchange, they get hungry a tad faster.
 	num_alternate_languages = 3
-	digi_allowed = TRUE
 
 	min_age = 18
 	max_age = 80
@@ -698,7 +689,6 @@
 	name_language = null
 	color_mult = 1
 	inherent_verbs = list(/mob/living/carbon/human/proc/tie_hair)
-	digi_allowed = TRUE
 
 	min_age = 18
 	max_age = 80

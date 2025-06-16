@@ -15,7 +15,7 @@ GLOBAL_VAR_INIT(dynamic_sector_master, null)
 	name = "DO NOT USE IN MAPS"
 	known = FALSE
 	scannable = FALSE
-	invisibility = 101
+	invisibility = INVISIBILITY_ABSTRACT
 	in_space = FALSE //This prevents you from walking off the edge and getting soft-locked into the infinispace layer
 	scanner_desc = "You should not see this."
 	var/generated_z = FALSE
@@ -50,27 +50,26 @@ GLOBAL_VAR_INIT(dynamic_sector_master, null)
 				shuttle_landmarks[i] = spawn_directions
 		generated_z = TRUE
 
-/obj/effect/overmap/visitable/dynamic/Initialize()
+/obj/effect/overmap/visitable/dynamic/Initialize(mapload, dyn_poi)
 	if(!GLOB.dynamic_sector_master)
 		GLOB.dynamic_sector_master = src
 	. = ..()
-	if(ispath(base_area))
-		var/area/spehss = locate(base_area)
-		if(!istype(spehss))
-			CRASH("Dynamic POI generation couldn't locate area [base_area].")
-		base_area = spehss
-	create_children()
+	if(!dyn_poi)
+		if(ispath(base_area))
+			var/area/spehss = locate(base_area)
+			if(!istype(spehss))
+				CRASH("Dynamic POI generation couldn't locate area [base_area].")
+			base_area = spehss
+		create_children()
 
 // Create POI objects for each overmap POI template, link to parent. Initialize() of children handles turf assignment
 /obj/effect/overmap/visitable/dynamic/proc/create_children()
 	for(var/datum/map_template/dynamic_overmap/poi as anything in subtypesof(/datum/map_template/dynamic_overmap))
 		if(!initial(poi.mappath) || !initial(poi.name) || (initial(poi.block_size) > MAX_DYNAMIC_POI_DIMENSIONS)) // Exclude templates without an actual map or are too big (or are not included in the mapping subsystem map_templates)
 			continue
-		var/obj/effect/overmap/visitable/dynamic/poi/P = new()
-		P.my_template = SSmapping.map_templates[initial(poi.name)] // Link to the stored map datums.
+		var/obj/effect/overmap/visitable/dynamic/poi/P = new(null, TRUE, SSmapping.map_templates[initial(poi.name)])
 		P.parent = src
 		all_children.Add(P)
-		P.seed_overmap()
 
 // Randomly unload a child POI, if possible. Returns the index of the recovered level if successful, 0 if not.
 // Should only be called if active_pois[] is full.
@@ -131,7 +130,7 @@ GLOBAL_VAR_INIT(dynamic_sector_master, null)
 	unknown_state = "poi"
 	known = FALSE
 	scannable = TRUE
-	invisibility = 0
+	invisibility = INVISIBILITY_NONE
 	in_space = TRUE
 	map_z = list(null) // Override parent value
 	active_pois = null
@@ -141,39 +140,13 @@ GLOBAL_VAR_INIT(dynamic_sector_master, null)
 	var/loaded = FALSE
 	var/my_index = 0 // Tracks which z-level we're using in the parent. Corresponds to index in parent's active_pois[]
 
-/obj/effect/overmap/visitable/dynamic/poi/Initialize()
-	if(!global.using_map.use_overmap)
+/obj/effect/overmap/visitable/dynamic/poi/Initialize(mapload, dyn_poi, var/template)
+	if(!global.using_map.use_overmap || !template)
 		return INITIALIZE_HINT_QDEL
+	my_template = template
+	. = ..(mapload, dyn_poi)
 
-// Normally Initialize() would do this but I need it to call after Initialize(), therefore new proc.
-/obj/effect/overmap/visitable/dynamic/poi/proc/seed_overmap()
-	start_x = start_x || rand(OVERMAP_EDGE, global.using_map.overmap_size - OVERMAP_EDGE)
-	start_y = start_y || rand(OVERMAP_EDGE, global.using_map.overmap_size - OVERMAP_EDGE)
 
-	forceMove(locate(start_x, start_y, global.using_map.overmap_z))
-
-	for(var/obj/effect/overmap/visitable/dynamic/poi/P in loc.contents) // If we've spawned on another poi, we'll try again once.
-		if(P == src)
-			continue
-		start_x = start_x || rand(OVERMAP_EDGE, global.using_map.overmap_size - OVERMAP_EDGE)
-		start_y = start_y || rand(OVERMAP_EDGE, global.using_map.overmap_size - OVERMAP_EDGE)
-		forceMove(locate(start_x, start_y, global.using_map.overmap_z))
-		break
-
-	if(!docking_codes)
-		docking_codes = "[ascii2text(rand(65,90))][ascii2text(rand(65,90))][ascii2text(rand(65,90))][ascii2text(rand(65,90))]"
-
-	if(known)
-		plane = PLANE_LIGHTING_ABOVE
-		for(var/obj/machinery/computer/ship/helm/H in global.machines)
-			H.get_known_sectors()
-	else
-		real_appearance = image(icon, src, my_template.poi_icon)
-		real_appearance.override = TRUE
-		name = unknown_name
-		icon_state = unknown_state
-		color = null
-		desc = "Scan this to find out more information."
 
 // Grab scanner info from map template, allow the user to load/unload POI's.
 /obj/effect/overmap/visitable/dynamic/poi/get_scan_data(user)
@@ -221,7 +194,7 @@ GLOBAL_VAR_INIT(dynamic_sector_master, null)
 			my_index = i
 			parent.active_pois[i] = src
 			map_z[1] = parent.map_z[i]
-			map_sectors["[parent.map_z[i]]"] = src // Pass ownership of z-level to child, probably hacky and terribad, also mandatory for using forceMove() on shuttle landmarks
+			GLOB.map_sectors["[parent.map_z[i]]"] = src // Pass ownership of z-level to child, probably hacky and terribad, also mandatory for using forceMove() on shuttle landmarks
 			break // Terminate loop
 	if(!my_index) // No z-levels available
 		var/confirm = tgui_alert(user, "\[REDACTED\] matrix at capacity; a bluespace link must be permanently severed to stabilize this anomaly. Continue?", "Are you sure?", list("No", "Yes"))
@@ -231,7 +204,7 @@ GLOBAL_VAR_INIT(dynamic_sector_master, null)
 		if(my_index)
 			parent.active_pois[my_index] = src
 			map_z[1] = parent.map_z[my_index]
-			map_sectors["[parent.map_z[my_index]]"] = src
+			GLOB.map_sectors["[parent.map_z[my_index]]"] = src
 		else // Something went wrong, ideally due to all relevant z-levels containing players.
 			to_chat(user, "Unable to sever any bluespace link. All links likely contain living realspace entities.")
 			return
@@ -278,7 +251,7 @@ GLOBAL_VAR_INIT(dynamic_sector_master, null)
 		qdel(src)
 		return
 
-	map_sectors["[parent.map_z[my_index]]"] = parent // Pass ownership back to parent.
+	GLOB.map_sectors["[parent.map_z[my_index]]"] = parent // Pass ownership back to parent.
 	parent.active_pois[my_index] = null
 	if(!LAZYLEN(map_z)) // If this is 0, how did we get this far?
 		log_and_message_admins("Dynamic overmap POI attempted to unload without a linked z-level.")
@@ -319,7 +292,7 @@ GLOBAL_VAR_INIT(dynamic_sector_master, null)
 			destroy_poi()
 		else
 			if(parent && (parent.active_pois.len >= my_index) && (parent.map_z.len >= my_index) && (my_index > 0)) // Unless vars are turbofucked.
-				map_sectors["[parent.map_z[my_index]]"] = parent
+				GLOB.map_sectors["[parent.map_z[my_index]]"] = parent
 				parent.active_pois[my_index] = null
 	if(parent)
 		parent.all_children.Remove(src)
@@ -332,7 +305,7 @@ GLOBAL_VAR_INIT(dynamic_sector_master, null)
 // Make sure we reassign our z_level to the parent if one exists and somehow this gets called.
 /obj/effect/overmap/visitable/dynamic/poi/unregister_z_levels()
 	if(parent && LAZYLEN(map_z))
-		map_sectors["[map_z[1]]"] = parent
+		GLOB.map_sectors["[map_z[1]]"] = parent
 		map_z = null
 	return ..()
 

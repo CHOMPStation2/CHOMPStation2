@@ -68,8 +68,8 @@
 	pain_emote_1p = list("squeak", "squik") // CHOMP Addition: Pain/etc sounds
 	pain_emote_1p = list("squeaks", "squiks") // CHOMP Addition: Pain/etc sounds
 
-/mob/living/simple_mob/animal/space/mouse_army/New()
-	..()
+/mob/living/simple_mob/animal/space/mouse_army/Initialize(mapload)
+	. = ..()
 
 	add_verb(src,/mob/living/proc/ventcrawl) //CHOMPEdit TGPanel
 	add_verb(src,/mob/living/proc/hide) //CHOMPEdit TGPanel

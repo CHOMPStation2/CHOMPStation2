@@ -6910,11 +6910,6 @@
 /obj/structure/flora/ausbushes/brflowers,
 /turf/simulated/floor/grass,
 /area/casino/casino_ship)
-"tH" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/carpet/turcarpet,
-/area/submap/lonehome)
 "tM" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -7772,14 +7767,6 @@
 /obj/machinery/light,
 /turf/simulated/floor/tiled/white,
 /area/casino/casino_ship/wing_left)
-"yu" = (
-/obj/structure/bed/chair/wood{
-	dir = 8
-	},
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/carpet,
-/area/submap/lonehome)
 "yx" = (
 /obj/structure/barricade,
 /turf/simulated/floor/outdoors/dirt{
@@ -8373,12 +8360,6 @@
 	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/casino/casino_ship/wing_left)
-"BS" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/closet/crate/bin,
-/turf/simulated/floor/wood/sif,
-/area/submap/lonehome)
 "BT" = (
 /obj/structure/table/glass,
 /obj/item/beach_ball,
@@ -8554,11 +8535,6 @@
 	},
 /obj/random/trash,
 /turf/simulated/floor/plating,
-/area/submap/lonehome)
-"Dd" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/wood/sif/broken,
 /area/submap/lonehome)
 "Df" = (
 /obj/effect/decal/cleanable/dirt,
@@ -9179,12 +9155,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/submap/lonehome)
-"GY" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/random/junk,
-/turf/simulated/floor/wood/sif,
-/area/submap/lonehome)
 "Hd" = (
 /obj/machinery/appliance/cooker/fryer,
 /obj/effect/floor_decal/corner/grey/diagonal{
@@ -9610,11 +9580,6 @@
 	temperature = 300
 	},
 /area/surface/outside/plains/mountains)
-"JO" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/wood/sif,
-/area/submap/lonehome)
 "JW" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -19512,7 +19477,7 @@ FH
 GP
 jK
 AL
-JO
+AL
 oY
 wp
 lk
@@ -20262,7 +20227,7 @@ Wj
 Od
 AL
 AL
-JO
+AL
 jK
 jK
 jK
@@ -20634,7 +20599,7 @@ dD
 Dk
 Pq
 zG
-JO
+AL
 AL
 Df
 ag
@@ -21190,7 +21155,7 @@ by
 Ho
 jK
 hN
-yu
+jl
 AL
 EW
 jK
@@ -22316,7 +22281,7 @@ rH
 lk
 Od
 AL
-Dd
+iO
 mG
 EW
 jK
@@ -22503,11 +22468,11 @@ dD
 jK
 tB
 AL
-JO
+AL
 jK
 Od
 Pq
-BS
+NS
 AL
 IL
 Od
@@ -22690,7 +22655,7 @@ Od
 Od
 Od
 OC
-GY
+cY
 MS
 Od
 Od
@@ -23251,7 +23216,7 @@ lf
 AL
 EW
 iO
-JO
+AL
 jK
 Od
 AL
@@ -23438,7 +23403,7 @@ MK
 Pu
 Od
 AL
-JO
+AL
 jK
 yO
 AL
@@ -23994,9 +23959,9 @@ mN
 mN
 Ho
 tZ
-tH
+yn
 SZ
-GY
+cY
 EW
 jK
 iO
@@ -24192,7 +24157,7 @@ EW
 jK
 hN
 hN
-JO
+AL
 Od
 gN
 mN

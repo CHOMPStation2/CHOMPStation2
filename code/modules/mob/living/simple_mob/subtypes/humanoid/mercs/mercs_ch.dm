@@ -69,7 +69,7 @@
 	icon = 'modular_chomp/icons/mob/animal_ch.dmi'
 	catalogue_data = list(/datum/category_item/catalogue/fauna/mercenary/human)
 
-/mob/living/simple_mob/humanoid/merc/Initialize()
+/mob/living/simple_mob/humanoid/merc/Initialize(mapload)
 	. = ..()
 	loot_list += list(/obj/item/salvage/loot/syndicate = 10)
 

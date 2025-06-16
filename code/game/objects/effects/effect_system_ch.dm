@@ -6,7 +6,7 @@
 
 /obj/effect/effect/confetti
 	name = "confetti"
-	icon = 'icons/effects/effects_ch.dmi'
+	icon = 'icons/effects/effects.dmi'
 	icon_state = "confetti"
 	opacity = 0
 	anchored = 0.0
@@ -14,12 +14,10 @@
 	var/amount = 6.0
 	var/time_to_live = 500
 
-/obj/effect/effect/confetti/New()
-	..()
+/obj/effect/effect/confetti/Initialize(mapload)
+	. = ..()
 	if(time_to_live)
-		spawn (time_to_live)
-			if(!QDELETED(src))
-				qdel(src)
+		QDEL_IN(src, time_to_live)
 				//make confetti on ground cleanable decal to spawn
 
 /datum/effect/effect/system/confetti_spread
@@ -54,9 +52,9 @@
 			var/direction = src.direction
 			if(!direction)
 				if(src.cardinals)
-					direction = pick(cardinal)
+					direction = pick(GLOB.cardinal)
 				else
-					direction = pick(alldirs)
+					direction = pick(GLOB.alldirs)
 			for(i=0, i<pick(0,1,1,1,2,2,2,3), i++)
 				sleep(10)
 				step(confetti,direction)
@@ -86,34 +84,3 @@
 /obj/effect/effect/snow/heavy
 	name = "heavy snowfall"
 	icon_state = "snowfall_heavy"
-
-////////////////////////////////////////////
-// A fancier teleport, used in hyper pads
-////////////////////////////////////////////
-
-/obj/effect/effect/teleport_greyscale
-	name = "teleportation"
-	icon = 'icons/effects/effects_ch.dmi'
-	icon_state = "teleport_greyscale"
-	anchored = 1
-	mouse_opacity = 0
-	plane = MOB_PLANE
-	layer = ABOVE_MOB_LAYER
-
-/obj/effect/effect/teleport_greyscale/Initialize()
-	. = ..()
-	QDEL_IN(src, 2 SECONDS)
-
-/datum/effect/effect/system/teleport_greyscale
-	var/color = "#FFFFFF"
-
-/datum/effect/effect/system/teleport_greyscale/set_up(cl, loca)
-	if(istype(loca, /turf/))
-		location = loca
-	else
-		location = get_turf(loca)
-	color = cl
-
-/datum/effect/effect/system/teleport_greyscale/start()
-	var/obj/effect/effect/teleport_greyscale/tele = new /obj/effect/effect/teleport_greyscale(src.location)
-	tele.color = color

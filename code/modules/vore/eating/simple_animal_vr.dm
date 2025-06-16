@@ -27,14 +27,13 @@
 	if(istype(src, /mob/living/simple_mob/animal/passive/mouse) && !T.ckey)
 		// Mice can't eat logged out players!
 		return
-	/*if(client && IsAdvancedToolUser()) //CHOMPedit: Mob QOL, not everything can be grabbed and nobody wants wiseguy gotchas for trying.
+	/*if(client && IsAdvancedToolUser()) Mob QOL, not everything can be grabbed and nobody wants wiseguy gotchas for trying.
 		to_chat(src, span_warning("Put your hands to good use instead!"))
 		return
 	*/
 	feed_grabbed_to_self(src,T)
-	//update_icon() CHOMPEdit
 
-/mob/living/simple_mob/perform_the_nom(mob/living/user, mob/living/prey, mob/living/pred, obj/belly/belly, delay)
+/mob/living/simple_mob/perform_the_nom(mob/living/user, mob/living/prey, mob/living/pred, obj/belly/belly, delay_time)
 	if(vore_active && !voremob_loaded && pred == src) //Only init your own bellies.
 		voremob_loaded = TRUE
 		init_vore()
@@ -123,7 +122,7 @@
 
 /mob/living/simple_mob/proc/nutrition_heal()
 	set name = "Nutrition Heal"
-	set category = "Abilities.Mob" //CHOMPEdit
+	set category = "Abilities.Mob"
 	set desc = "Slowly regenerate health using nutrition."
 
 	if(nutrition < 10)

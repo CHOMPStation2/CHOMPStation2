@@ -12,7 +12,8 @@
 	var/w_items = 0			//the combined w_class of all the items in the cistern
 	var/mob/living/swirlie = null	//the mob being given a swirlie
 
-/obj/structure/toilet/New()
+/obj/structure/toilet/Initialize(mapload)
+	. = ..()
 	open = round(rand(0, 1))
 	update_icon()
 
@@ -164,7 +165,7 @@
 	var/list/temperature_settings = list("normal" = 310, "boiling" = T0C+100, "freezing" = T0C)
 	var/datum/looping_sound/showering/soundloop
 
-/obj/machinery/shower/Initialize()
+/obj/machinery/shower/Initialize(mapload)
 	create_reagents(50)
 	soundloop = new(list(src), FALSE)
 	return ..()
@@ -190,10 +191,10 @@
 	if(on)
 		soundloop.start()
 		if (M.loc == loc)
-			wash(M)
+			do_wash(M)
 			process_heat(M)
 		for (var/atom/movable/G in src.loc)
-			G.clean_blood(TRUE)
+			G.wash(CLEAN_SCRUB)
 	else
 		soundloop.stop()
 
@@ -246,7 +247,7 @@
 
 
 //Yes, showers are super powerful as far as washing goes.
-/obj/machinery/shower/proc/wash(atom/movable/O as obj|mob)
+/obj/machinery/shower/proc/do_wash(atom/movable/O as obj|mob)
 	if(!on) return
 
 	if(isliving(O))
@@ -261,7 +262,7 @@
 			var/remove_amount = M.touching.maximum_volume * M.reagent_permeability() //take off your suit first
 			M.touching.remove_any(remove_amount)
 
-		M.clean_blood()
+	O.wash(CLEAN_SCRUB)
 
 	reagents.splash(O, 10, min_spill = 0, max_spill = 0)
 
@@ -269,7 +270,7 @@
 	if(!on) return
 	for(var/atom/movable/AM in loc)
 		if(AM.simulated)
-			wash(AM)
+			do_wash(AM)
 			if(isliving(AM))
 				var/mob/living/L = AM
 				process_heat(L)
@@ -281,7 +282,7 @@
 		return
 	is_washing = 1
 	var/turf/T = get_turf(src)
-	T.clean(src)
+	T.wash(CLEAN_SCRUB)
 	addtimer(VARSET_CALLBACK(src, is_washing, 0), 100, TIMER_DELETE_ME)
 
 /obj/machinery/shower/proc/process_heat(mob/living/M)
@@ -409,7 +410,7 @@
 
 /obj/item/bikehorn/rubberducky/grey/attack_self(mob/user as mob)
 	if(spam_flag == 0)
-		for(var/obj/machinery/light/L in machines)
+		for(var/obj/machinery/light/L in GLOB.machines)
 			if(L.z != user.z || get_dist(user,L) > 10)
 				continue
 			else
@@ -516,9 +517,9 @@
 /obj/structure/sink/attack_hand(mob/user as mob)
 	if (ishuman(user))
 		var/mob/living/carbon/human/H = user
-		var/obj/item/organ/external/temp = H.organs_by_name["r_hand"]
+		var/obj/item/organ/external/temp = H.organs_by_name[BP_R_HAND]
 		if (H.hand)
-			temp = H.organs_by_name["l_hand"]
+			temp = H.organs_by_name[BP_L_HAND]
 		if(temp && !temp.is_usable())
 			to_chat(user, span_notice("You try to move your [temp.name], but cannot!"))
 			return
@@ -545,23 +546,22 @@
 
 	if(ishuman(user))
 		var/mob/living/carbon/human/H = user
-		H.gunshot_residue = null
 		if(H.gloves)
-			H.gloves.clean_blood()
+			H.gloves.wash(CLEAN_SCRUB)
 			H.update_inv_gloves()
 			H.gloves.germ_level = 0
 		else
 			if(H.r_hand)
-				H.r_hand.clean_blood()
+				H.r_hand.wash(CLEAN_SCRUB)
 			if(H.l_hand)
-				H.l_hand.clean_blood()
+				H.l_hand.wash(CLEAN_SCRUB)
 			H.bloody_hands = 0
 			H.germ_level = 0
 			H.hand_blood_color = null
-			LAZYCLEARLIST(H.blood_DNA)
+			H.forensic_data?.wash(CLEAN_SCRUB)
 		H.update_bloodied()
 	else
-		user.clean_blood()
+		user.wash(CLEAN_SCRUB)
 	for(var/mob/V in viewers(src, null))
 		V.show_message(span_notice("[user] washes their hands using \the [src]."))
 
@@ -590,7 +590,7 @@
 					R.cell.charge -= 20
 				else
 					B.deductcharge(B.hitcost)
-				var/datum/gender/TU = gender_datums[user.get_visible_gender()]
+				var/datum/gender/TU = GLOB.gender_datums[user.get_visible_gender()]
 				user.visible_message( \
 					span_danger("[user] was stunned by [TU.his] wet [O]!"), \
 					span_userdanger("[user] was stunned by [TU.his] wet [O]!"))
@@ -622,7 +622,7 @@
 		return
 	busy = 0
 
-	O.clean_blood()
+	O.wash(CLEAN_SCRUB)
 	O.water_act(rand(1,10))
 	user.visible_message( \
 		span_notice("[user] washes \a [I] using \the [src]."), \

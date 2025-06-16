@@ -52,7 +52,7 @@
 											/mob/living/simple_mob/animal/passive/cockroach)
 	var/obj/item/vac_attachment/swoopie/Vac
 
-/mob/living/simple_mob/vore/aggressive/corrupthound/swoopie/Initialize()
+/mob/living/simple_mob/vore/aggressive/corrupthound/swoopie/Initialize(mapload)
 	. = ..()
 	if(!voremob_loaded)
 		voremob_loaded = TRUE
@@ -163,6 +163,9 @@
 	B.fancy_vore = 1
 	B.vore_sound = "Stomach Move"
 	B.sound_volume = 20
+
+	// This needs to go here as swoopies can't call simple mob init_vore...They shouldn't be a subtype of corrupt hound.
+	AddElement(/datum/element/slosh)
 
 	if(!soulgem)
 		soulgem = new(src)

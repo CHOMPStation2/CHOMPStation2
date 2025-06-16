@@ -232,19 +232,19 @@
 			else
 				if(icon_state == "scrap" && H.check_has_mouth())
 					user.visible_message(span_warning("[user] begins to stuff \the [src] into [H]'s mouth!"), \
-										 span_warning("You begin to stuff \the [src] into [H]'s mouth!"),)
+											span_warning("You begin to stuff \the [src] into [H]'s mouth!"),)
 					if(do_after(user, 30, H))
 						user.visible_message(span_warning("[user] stuffs \the [src] into [H]'s mouth!"),\
-											 span_warning("You stuff \the [src] into [H]'s mouth!"))
+												span_warning("You stuff \the [src] into [H]'s mouth!"))
 						H.ingested.add_reagent("paper", 10)
 						H.adjustOxyLoss(10)
 						qdel(src)
 				else
 					user.visible_message(span_warning("[user] begins to wipe [H]'s lipstick off with \the [src]."), \
-								 	 span_notice("You begin to wipe off [H]'s lipstick."))
+											span_notice("You begin to wipe off [H]'s lipstick."))
 					if(do_after(user, 10, H))
 						user.visible_message(span_notice("[user] wipes [H]'s lipstick off with \the [src]."), \
-										 span_notice("You wipe off [H]'s lipstick."))
+												span_notice("You wipe off [H]'s lipstick."))
 						H.lip_style = null
 						H.update_icons_body() //YW Edit End
 
@@ -360,7 +360,7 @@
 		t = replacetext(t, "\[/row\]", "") //CHOMPEDIT: nuking closing statements for rows.
 		t = replacetext(t, "\[cell\]", "<td>")
 		t = replacetext(t, "\[/cell\]", "") //CHOMPEDIT: nuking closing statements for cells.
-		 //CHOMPEdit Start
+		//CHOMPEdit Start
 		t = replacetext(t, "\[logo\]", "<img src = https://raw.githubusercontent.com/CHOMPStation2/CHOMPStation2/master/html/images/ntlogo.png>")
 		t = replacetext(t, "\[sglogo\]", "<img src = https://raw.githubusercontent.com/CHOMPStation2/CHOMPStation2/master/html/images/sglogo.png>")
 		t = replacetext(t, "\[trlogo\]", "<img src = https://raw.githubusercontent.com/CHOMPStation2/CHOMPStation2/master/html/images/trader.png>")
@@ -402,7 +402,7 @@
 
 /obj/item/paper/proc/burnpaper(obj/item/flame/P, mob/user)
 	var/class = "warning"
-	var/datum/gender/TU = gender_datums[user.get_visible_gender()]
+	var/datum/gender/TU = GLOB.gender_datums[user.get_visible_gender()]
 
 	if(P.lit && !user.restrained())
 		if(istype(P, /obj/item/flame/lighter/zippo))

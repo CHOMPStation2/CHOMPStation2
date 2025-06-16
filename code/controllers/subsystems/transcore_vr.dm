@@ -74,13 +74,13 @@ SUBSYSTEM_DEF(transcore)
 		//In a human
 		BITSET(H.hud_updateflag, BACKUP_HUD)
 
-		if(H == imp.imp_in && H.stat < DEAD) //CHOMPEdit Start
+		//CHOMPEdit Start
+		if(H == imp.imp_in && H.stat < DEAD)
 			if(H.mind)
 				db.m_backup(H.mind,H.nif)
-				persist_nif_data(H)
 			else if(H.vr_link && H.vr_link.mind)
 				db.m_backup(H.vr_link.mind,H.nif)
-				persist_nif_data(H) //CHOMPEdit End
+		//CHOMPEdit End
 
 		if(MC_TICK_CHECK)
 			return
@@ -260,9 +260,9 @@ SUBSYSTEM_DEF(transcore)
 	var/datum/transcore_db/db = SStranscore.db_by_mind_name(MR.mindname)
 	var/datum/transhuman/body_record/BR = db.body_scans[MR.mindname]
 	if(!BR)
-		global_announcer.autosay("[MR.mindname] is past-due for a mind backup, but lacks a corresponding body record.", "TransCore Oversight", "Medical")
+		GLOB.global_announcer.autosay("[MR.mindname] is past-due for a mind backup, but lacks a corresponding body record.", "TransCore Oversight", "Medical")
 		return
-	global_announcer.autosay("[MR.mindname] is past-due for a mind backup.", "TransCore Oversight", BR.synthetic ? "Science" : "Medical")
+	GLOB.global_announcer.autosay("[MR.mindname] is past-due for a mind backup.", "TransCore Oversight", BR.synthetic ? "Science" : "Medical")
 
 // Called from mind_record to add itself to the transcore.
 /datum/transcore_db/proc/add_backup(var/datum/transhuman/mind_record/MR)
@@ -297,8 +297,8 @@ SUBSYSTEM_DEF(transcore)
 // Moves all mind records from the databaes into the disk and shuts down all backup canary processing.
 /datum/transcore_db/proc/core_dump(var/obj/item/disk/transcore/disk)
 	ASSERT(disk)
-	global_announcer.autosay("An emergency core dump has been initiated!", "TransCore Oversight", "Command")
-	global_announcer.autosay("An emergency core dump has been initiated!", "TransCore Oversight", "Medical")
+	GLOB.global_announcer.autosay("An emergency core dump has been initiated!", "TransCore Oversight", "Command")
+	GLOB.global_announcer.autosay("An emergency core dump has been initiated!", "TransCore Oversight", "Medical")
 
 	disk.stored += backed_up
 	backed_up.Cut()

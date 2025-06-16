@@ -447,7 +447,7 @@
 /turf/unsimulated/floor/tiled/eris/steel/bar_light
 	icon_state = "bar_light"
 
-/turf/unsimulated/floor/tiled/eris/steel/bar_light/Initialize()
+/turf/unsimulated/floor/tiled/eris/steel/bar_light/Initialize(mapload)
 	. = ..()
 	set_light(3,4,"#00AAFF")
 

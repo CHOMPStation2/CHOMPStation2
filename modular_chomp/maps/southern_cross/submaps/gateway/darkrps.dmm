@@ -3748,13 +3748,6 @@
 /obj/effect/floor_decal/corner/grey/diagonal{
 	dir = 4
 	},
-/obj/effect/decal/cleanable/blood{
-	pixel_y = 2;
-	pixel_x = -33
-	},
-/obj/effect/decal/cleanable/blood{
-	pixel_y = 32
-	},
 /obj/effect/decal/cleanable/blood,
 /obj/random/meat,
 /turf/simulated/floor/tiled/white,
@@ -8243,7 +8236,6 @@
 /obj/structure/table/marble,
 /obj/item/material/kitchen/rollingpin,
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/ghettohouse2)
 "laF" = (
@@ -10238,7 +10230,7 @@
 /turf/simulated/floor/tiled/white,
 /area/awaymission/darkrp/ghettoeats)
 "nxS" = (
-/obj/item/toy/plushie/susred,
+/obj/item/toy/plushie/sus,
 /obj/machinery/atmospherics/unary/vent_pump{
 	dir = 4;
 	external_pressure_bound = 140;
@@ -18834,13 +18826,6 @@
 /obj/item/reagent_containers/food/drinks/cans/waterbottle,
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/ghettosouthwarehouse)
-"yen" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/outdoors/newdirt{
-	temperature = 293.15
-	},
-/area/awaymission/darkrp/outside)
 "yev" = (
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -44819,9 +44804,9 @@ fOb
 fOb
 dwh
 dwh
-yen
 oVr
-yen
+oVr
+oVr
 dwh
 oVr
 dwh
@@ -45145,9 +45130,9 @@ dwh
 dwh
 oVr
 dwh
-yen
 oVr
-yen
+oVr
+oVr
 dwh
 dwh
 dwh

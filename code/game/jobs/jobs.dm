@@ -54,9 +54,9 @@ var/const/BRIDGE			=(1<<12)
 var/const/ENTERTAINER		=(1<<14)
 var/const/ENTREPRENEUR		=(1<<15)
 
-var/const/OTHER				=(1<<10) //CHOMPStation Add
-var/const/NONCREW			=(1<<0) //CHOMPStation Add
-var/const/ANOMALY			=(1<<0) //CHOMPstation Add
+var/const/OTHER				=(1<<10) //VOREStation Note: Unused on VS. Used downstream.
+var/const/NONCREW			=(1<<0)
+var/const/ANOMALY			=(1<<0) //VOREStation Note: Unused on VS. Used downstream.
 /* // CHOMPedit: Comment out Talon positions, we don't have that here.
 //VOREStation Add
 var/const/TALON				=(1<<3)

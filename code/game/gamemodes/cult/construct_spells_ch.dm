@@ -89,8 +89,7 @@
 	fire_sound = 'sound/weapons/spiderlunge.ogg'
 	damage = 15
 	damage_type = BURN
-	SA_bonus_damage = 45
-	SA_vulnerability = list(MOB_CLASS_DEMONIC,MOB_CLASS_ILLUSION)
+	mob_bonus_damage = 45
 	check_armour = "laser"
 	armor_penetration = 60
 	light_range = 2
@@ -187,7 +186,7 @@
 /obj/effect/temporary_effect/pulse/soothing_sphere
 	name = "soothing sphere"
 	desc = "A portal to some hellish place. Its screams wrack your body with pain."
-	icon = 'icons/effects/effects_ch.dmi'
+	icon = 'icons/effects/effects.dmi'
 	icon_state = "blue_static_sphere"
 	time_to_die = null
 	light_range = 4

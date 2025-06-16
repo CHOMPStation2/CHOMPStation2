@@ -34,7 +34,7 @@
 /decl/chemical_reaction/instant/slime/secertslime
 	name = "Secert Slime "
 	id = "sepia_swapm"
-	result = "change_secert"
+	result = null
 	required_reagents = list(REAGENT_ID_BLOOD = 5, REAGENT_ID_WATER = 5)
 	result_amount = 1
 	required = /obj/item/slime_extract/sepia
@@ -427,13 +427,13 @@
 
 /decl/chemical_reaction/instant/slime/nuclear_radpulse
 	name = "Slime Radiation Pulse"
-	id = "m_green_radpulse"
+	id = "m_green_radpulse2"
 	required_reagents = list(REAGENT_ID_PHORON = 5)
 	result_amount = 1
 	required = /obj/item/slime_extract/nuclear
 
 /decl/chemical_reaction/instant/slime/nuclear_radpulse/on_reaction(var/datum/reagents/holder)
-	log_and_message_admins("Green extract reaction (radiation pulse) has been activated in [get_area(holder.my_atom)].  Last fingerprints: [holder.my_atom.fingerprintslast]")
+	log_and_message_admins("Green extract reaction (radiation pulse) has been activated in [get_area(holder.my_atom)].  Last fingerprints: [holder.my_atom.forensic_data?.get_lastprint()]")
 	playsound(holder.my_atom, 'sound/effects/phasein.ogg', 75, 1)
 	holder.my_atom.visible_message(span_danger("\The [holder.my_atom] begins to vibrate violently!"))
 	spawn(5 SECONDS)
@@ -443,20 +443,20 @@
 
 /decl/chemical_reaction/instant/slime/nuclear_emitter
 	name = "Slime Radiation Emitter"
-	id = "m_green_emitter"
+	id = "m_green_emitter2"
 	required_reagents = list(REAGENT_ID_BLOOD = 5)
 	result_amount = 1
 	required = /obj/item/slime_extract/green
 
 /decl/chemical_reaction/instant/slime/green_emitter/on_reaction(var/datum/reagents/holder)
-	log_and_message_admins("Green extract reaction (radiation emitter) has been activated in [get_area(holder.my_atom)].  Last fingerprints: [holder.my_atom.fingerprintslast]")
+	log_and_message_admins("Green extract reaction (radiation emitter) has been activated in [get_area(holder.my_atom)].  Last fingerprints: [holder.my_atom.forensic_data?.get_lastprint()]")
 	new /obj/item/slime_irradiator(get_turf(holder.my_atom))
 	..()
 
 
 /decl/chemical_reaction/instant/slime/nuclear_radium
 	name = "Slime Radium"
-	id = "m_green_radium"
+	id = "m_green_radium2"
 	result = REAGENT_ID_RADIUM
 	required_reagents = list(REAGENT_ID_WATER = 5)
 	result_amount = 30
@@ -465,7 +465,7 @@
 
 /decl/chemical_reaction/instant/slime/nuclear_uranium
 	name = "Slime Uranium"
-	id = "m_green_uranium"
+	id = "m_green_uranium2"
 	required_reagents = list(REAGENT_ID_SLIMEJELLY = 5)
 	result_amount = 1
 	required = /obj/item/slime_extract/green
@@ -690,8 +690,8 @@
 	..()
 
 /decl/chemical_reaction/instant/slime/soundphoron
-	name = "sound blood"
-	id = "m_sound_blood"
+	name = "sound phoron"
+	id = "m_sound_phoron"
 	required_reagents = list(REAGENT_ID_PHORON = 5)
 	result_amount = 1
 	required = /obj/item/slime_extract/sound

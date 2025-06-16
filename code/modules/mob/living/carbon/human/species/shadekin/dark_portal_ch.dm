@@ -37,7 +37,7 @@
 /obj/structure/dark_portal/proc/get_shadekin_energy(mob/shade_maybe)
 	if(istype(shade_maybe, /mob/living/simple_mob/shadekin))
 		var/mob/living/simple_mob/shadekin/shadekin = shade_maybe
-		return shadekin.energy
+		return shadekin.comp.dark_energy
 	else if(istype(shade_maybe, /mob/living/carbon/human))
 		var/mob/living/carbon/human/carbonkin_maybe = shade_maybe
 		return carbonkin_maybe.shadekin_get_energy()
@@ -46,7 +46,7 @@
 /obj/structure/dark_portal/proc/adjust_shadekin_energy(mob/shade_maybe, amount)
 	if(istype(shade_maybe, /mob/living/simple_mob/shadekin))
 		var/mob/living/simple_mob/shadekin/shadekin = shade_maybe
-		shadekin.energy += amount
+		shadekin.comp.dark_energy += amount
 		return
 	else if(istype(shade_maybe, /mob/living/carbon/human))
 		var/mob/living/carbon/human/carbonkin_maybe = shade_maybe
@@ -79,13 +79,13 @@
 
 GLOBAL_LIST_BOILERPLATE(all_darkportal_hubs, /obj/structure/dark_portal/hub)
 
-/obj/structure/dark_portal/hub/Initialize()
+/obj/structure/dark_portal/hub/Initialize(mapload)
 	. = ..()
 	locked = src
 	locked_name = src.name
 
-/obj/structure/dark_portal/hub/New()
-	..()
+/obj/structure/dark_portal/hub/Initialize(mapload)
+	. = ..()
 	set_light(2, 3, "#ffffff")
 
 /obj/structure/dark_portal/hub/close_portal()

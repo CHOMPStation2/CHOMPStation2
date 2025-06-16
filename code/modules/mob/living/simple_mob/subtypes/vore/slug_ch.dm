@@ -59,6 +59,8 @@
 /mob/living/simple_mob/vore/slug/init_vore()
 	if(!voremob_loaded)
 		return
+	if(LAZYLEN(vore_organs))
+		return
 	.=..()
 	var/obj/belly/B = vore_selected
 	B.desc	= "Somehow you remained still just long enough for the slug to wrap its radula around your body and gradually draw you into its pharynx. The slug moves with agonizing slowness and devours prey at a snail's pace; inch by inch you're crammed down its gullet and squishes and squeezed into the slug's gizzard. Thick walls bear down, covered with shallow, toothy ridges. The slimy moss in here suggests you're not the slug's diet but the gizzard seems intent on churning and scraping over you regardless..."
@@ -147,7 +149,7 @@
 /obj/effect/slug_glue
 	name = "liquid"
 	desc = "This looks wet."
-	icon = 'icons/effects/effects_ch.dmi'
+	icon = 'icons/effects/effects.dmi'
 	icon_state = "wet_turf"
 	opacity = 0
 	mouse_opacity = 0 //Unclickable
@@ -161,27 +163,20 @@
 	var/turf/my_turf = null //The turf we spawn on.
 	var/base_escape_time = 1 MINUTE //How long does it take to struggle free? Affected by the victim's size_multiplier.
 
-/obj/effect/slug_glue/New()
-	..()
-	dissipate()
+/obj/effect/slug_glue/Initialize(mapload)
+	. = ..()
+	if(!persist_time)
+		return INITIALIZE_HINT_QDEL
 	my_turf = get_turf(src)
 	if(istype(my_turf, /turf/simulated/floor/water)) //Aside from not making sense in water, this prevents drowning.
-		qdel(src)
+		return INITIALIZE_HINT_QDEL
+	QDEL_IN(src, persist_time)
 /*	for(var/obj/effect/slug_glue/G in my_turf.contents)
 		if(G == src)
 			continue
 		else
 			qdel(G) //Prevent glue layering
 */ //Not including this due to performance concerns but keeping as comments for reference.
-
-/obj/effect/slug_glue/proc/dissipate() //When spawned, set a timer to despawn.
-	if(!persist_time)
-		qdel(src)
-		return
-	else
-		spawn(persist_time) //I used sleep() here first and it made the slug sleep for 5 minutes when spawning glue. Byond.
-		qdel(src)
-		return
 
 /obj/effect/slug_glue/Destroy()
 	. = ..()
@@ -258,8 +253,9 @@
 		unbuckle_mob(buckled_mob)
 		unalert_slug(buckled_mob)
 
-/obj/effect/slug_glue/clean_blood(var/ignore = 0) //Remove with space cleaner.
-	if(!ignore)
+/obj/effect/slug_glue/wash(clean_types) // Needs proper scrubbing
+	. = ..()
+	if (. || (clean_types & CLEAN_SCRUB))
 		qdel(src)
-		return
-	..()
+		return TRUE
+	return .

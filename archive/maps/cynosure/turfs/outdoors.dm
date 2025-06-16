@@ -171,8 +171,8 @@
 	temperature = TCMB
 
 // Step trigger to fall down to planet Sif
-/obj/effect/step_trigger/teleporter/planetary_fall/sif/find_planet()
-	planet = planet_sif
+/turf/simulated/sky/moving/north/sif/planet_fall/find_planet()
+	return planet_sif
 
 //CHOMPedit: Changes to sif/planetuse snow to make it work properly as it does on Polaris, it was broken by YW edits.
 /turf/simulated/floor/outdoors/snow/sif/planetuse

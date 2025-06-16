@@ -91,8 +91,8 @@
 
 	can_be_drop_prey = FALSE //CHOMP Add
 
-/mob/living/simple_mob/xeno_ch/Initialize()
-	..()
+/mob/living/simple_mob/xeno_ch/Initialize(mapload)
+	. = ..()
 	src.adjust_nutrition(src.max_nutrition)
 	sight |= SEE_MOBS
 

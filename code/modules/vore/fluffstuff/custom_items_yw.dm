@@ -539,7 +539,7 @@
 	desc = "DAS A BIG COOKIE!!!"
 	bitesize = 100
 
-/obj/item/reagent_containers/food/snacks/cookie/mysterious/Initialize()
+/obj/item/reagent_containers/food/snacks/cookie/mysterious/Initialize(mapload)
 	. = ..()
 
 /obj/item/reagent_containers/food/snacks/cookie/mysterious/attack(mob/living/M as mob, mob/user as mob, def_zone)
@@ -666,21 +666,20 @@
 		slot_r_hand_str = 'icons/vore/custom_items_right_hand_yw.dmi',
 		)
 	var/list/has_items = list(
-        /obj/item/reagent_containers/food/snacks/chocolatebar,
-        /obj/item/reagent_containers/food/snacks/chocolatebar,
-        /obj/item/reagent_containers/food/snacks/chocolatebar,
-        /obj/item/reagent_containers/food/snacks/chocolatebar,
 		/obj/item/reagent_containers/food/snacks/chocolatebar,
-        /obj/item/reagent_containers/food/snacks/chocolatebar,
-        /obj/item/reagent_containers/food/snacks/chocolatebar,
-        /obj/item/reagent_containers/food/snacks/chocolatebar,
-        )
+		/obj/item/reagent_containers/food/snacks/chocolatebar,
+		/obj/item/reagent_containers/food/snacks/chocolatebar,
+		/obj/item/reagent_containers/food/snacks/chocolatebar,
+		/obj/item/reagent_containers/food/snacks/chocolatebar,
+		/obj/item/reagent_containers/food/snacks/chocolatebar,
+		/obj/item/reagent_containers/food/snacks/chocolatebar,
+		/obj/item/reagent_containers/food/snacks/chocolatebar,
+		)
 
-/obj/item/storage/secure/briefcase/fluff/jeans/New() //this is entierly nessicary to spawn stuff. "FUN" -luke
+/obj/item/storage/secure/briefcase/fluff/jeans/Initialize(mapload) //this is entierly nessicary to spawn stuff. "FUN" -luke
 	storage_slots = has_items.len
 	allowed = list()
 	for(var/P in has_items)
 		allowed += P
 		new P(src)
-	..()
-	return
+	. = ..()

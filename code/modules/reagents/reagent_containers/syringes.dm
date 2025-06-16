@@ -38,8 +38,7 @@
 	drop_sound = 'sound/items/drop/glass.ogg'
 	pickup_sound = 'sound/items/pickup/glass.ogg'
 
-
-/obj/item/reagent_containers/syringe/Initialize()
+/obj/item/reagent_containers/syringe/Initialize(mapload)
 	. = ..()
 	update_icon()
 
@@ -69,8 +68,7 @@
 	switch(mode)
 		if(SYRINGE_CAPPED)
 			mode = SYRINGE_DRAW
-			// to_chat(user,span_notice("You uncap the syringe."))
-			balloon_alert(user, "[src] uncapped") // CHOMPEdit - Changed to balloon_alert
+			balloon_alert(user, "[src] uncapped")
 		if(SYRINGE_DRAW)
 			mode = SYRINGE_INJECT
 		if(SYRINGE_INJECT)
@@ -85,6 +83,10 @@
 
 /obj/item/reagent_containers/syringe/attackby(obj/item/I as obj, mob/user as mob)
 	return
+
+/obj/item/reagent_containers/syringe/extrapolator_act(mob/living/user, obj/item/extrapolator/extrapolator, dry_run)
+	. = ..()
+	EXTRAPOLATOR_ACT_ADD_DISEASES(., viruses)
 
 /obj/item/reagent_containers/syringe/afterattack(obj/target, mob/user, proximity)
 	if(!proximity || !target.reagents)
@@ -209,6 +211,10 @@
 			var/mob/living/carbon/human/H = target
 			var/obj/item/organ/external/affected //VOREStation Edit - Moved this outside this if
 			if(istype(H))
+				if(!H.consume_liquid_belly)
+					if(liquid_belly_check())
+						to_chat(user, span_infoplain("[user == H ? "You can't" : "\The [H] can't"] take that, it contains something produced from a belly!"))
+						return
 				affected = H.get_organ(user.zone_sel.selecting) //VOREStation Edit - See above comment.
 				if(!affected)
 					to_chat(user, span_danger("\The [H] is missing that limb!"))
@@ -282,7 +288,7 @@
 		var/obj/item/organ/external/affecting = H.get_organ(target_zone)
 
 		if (!affecting || affecting.is_stump())
-			balloon_alert(user, "They are missing that limb!") // CHOMPEdit - Changed to balloon_alert
+			balloon_alert(user, "they are missing that limb!") // CHOMPEdit - Changed to balloon_alert
 			return
 
 		var/hit_area = affecting.name
@@ -300,15 +306,13 @@
 
 			return
 
-		// user.visible_message(span_danger("[user] stabs [target] in \the [hit_area] with [src.name]!"))
-		balloon_alert_visible("Stabs [target] in \the [hit_area] with [src.name]!") // CHOMPEdit - Changed to balloon alert
+		balloon_alert_visible("stabs [target] in \the [hit_area] with [src.name]!")
 
 		if(affecting.take_damage(3))
 			H.UpdateDamageIcon()
 
 	else
-		// user.visible_message(span_danger("[user] stabs [target] with [src.name]!"))
-		balloon_alert_visible("Stabs [user] in \the [target] with [src.name]!") // CHOMPEdit - Changed to balloon alert
+		balloon_alert_visible("stabs [user] in \the [target] with [src.name]!")
 		target.take_organ_damage(3)// 7 is the same as crowbar punch
 
 
@@ -354,7 +358,7 @@
 	name = "Syringe (inaprovaline)"
 	desc = "Contains inaprovaline - used to stabilize patients."
 
-/obj/item/reagent_containers/syringe/inaprovaline/Initialize()
+/obj/item/reagent_containers/syringe/inaprovaline/Initialize(mapload)
 	. = ..()
 	reagents.add_reagent(REAGENT_ID_INAPROVALINE, 15)
 	//mode = SYRINGE_INJECT //VOREStation Edit - Starts capped
@@ -364,7 +368,7 @@
 	name = "Syringe (anti-toxin)"
 	desc = "Contains anti-toxins."
 
-/obj/item/reagent_containers/syringe/antitoxin/Initialize()
+/obj/item/reagent_containers/syringe/antitoxin/Initialize(mapload)
 	. = ..()
 	reagents.add_reagent(REAGENT_ID_ANTITOXIN, 15)
 	//mode = SYRINGE_INJECT //VOREStation Edit - Starts capped
@@ -374,7 +378,7 @@
 	name = "Syringe (spaceacillin)"
 	desc = "Contains antiviral agents."
 
-/obj/item/reagent_containers/syringe/antiviral/Initialize()
+/obj/item/reagent_containers/syringe/antiviral/Initialize(mapload)
 	. = ..()
 	reagents.add_reagent(REAGENT_ID_SPACEACILLIN, 15)
 	//mode = SYRINGE_INJECT //VOREStation Edit - Starts capped
@@ -384,7 +388,7 @@
 	name = "Syringe (drugs)"
 	desc = "Contains aggressive drugs meant for torture."
 
-/obj/item/reagent_containers/syringe/drugs/Initialize()
+/obj/item/reagent_containers/syringe/drugs/Initialize(mapload)
 	. = ..()
 	reagents.add_reagent(REAGENT_ID_BLISS,  5)
 	reagents.add_reagent(REAGENT_ID_MINDBREAKER,  5)
@@ -392,7 +396,7 @@
 	//mode = SYRINGE_INJECT //VOREStation Edit - Starts capped
 	//update_icon()
 
-/obj/item/reagent_containers/syringe/ld50_syringe/choral/Initialize()
+/obj/item/reagent_containers/syringe/ld50_syringe/choral/Initialize(mapload)
 	. = ..()
 	reagents.add_reagent(REAGENT_ID_CHLORALHYDRATE, 50)
 	mode = SYRINGE_INJECT
@@ -402,7 +406,7 @@
 	name = "Syringe (anabolic steroids)"
 	desc = "Contains drugs for muscle growth."
 
-/obj/item/reagent_containers/syringe/steroid/Initialize()
+/obj/item/reagent_containers/syringe/steroid/Initialize(mapload)
 	. = ..()
 	//reagents.add_reagent(REAGENT_ID_ADRENALINE,5) //VOREStation Edit - No thanks.
 	reagents.add_reagent(REAGENT_ID_HYPERZINE,10)
@@ -420,9 +424,9 @@
 	targets |= hash
 
 	//Grab any viruses they have
-	if(iscarbon(target) && LAZYLEN(target.viruses.len))
+	if(iscarbon(target) && LAZYLEN(target.IsInfected()))
 		LAZYINITLIST(viruses)
-		var/datum/disease/virus = pick(target.viruses.len)
+		var/datum/disease/virus = pick(target.IsInfected())
 		viruses[hash] = virus.Copy()
 
 	//Dirtiness should be very low if you're the first injectee. If you're spam-injecting 4 people in a row around you though,
@@ -490,6 +494,17 @@
 
 	icon_state = "[rounded_vol]"
 	item_state = "syringe_[rounded_vol]"
+
+/obj/item/reagent_containers/syringe/old
+	name = "old syringe"
+	desc = "An old, broken syringe. Are you sure it's a good idea to pick it up without gloves?"
+	mode = SYRINGE_BROKEN
+
+/obj/item/reagent_containers/syringe/old/Initialize(mapload)
+	. = ..()
+	if(prob(75))
+		var/datum/disease/advance/new_disease = new /datum/disease/advance/random(rand(1, 3), rand(7, 9), 2)
+		src.viruses += new_disease
 
 #undef SYRINGE_DRAW
 #undef SYRINGE_INJECT

@@ -51,7 +51,7 @@
 	var/last_pet				// This tracks the last time someone patted us.
 	var/grump_decay = 5 SECONDS // This is how quickly our grumpiness decays.
 
-/mob/living/simple_mob/vore/rabbit/New()
+/mob/living/simple_mob/vore/rabbit/Initialize(mapload)
 	. = ..()
 
 	if(!body_color)
@@ -96,6 +96,8 @@
 // CHOMPEdit start: More voremob bellies!
 /mob/living/simple_mob/vore/rabbit/init_vore()
 	if(!voremob_loaded)
+		return
+	if(LAZYLEN(vore_organs))
 		return
 	.=..()
 

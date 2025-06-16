@@ -83,7 +83,7 @@
 			to_chat(O, span_warning("[src] launches a razor-sharp quill at [target]!"))
 
 	var/obj/item/arrow/quill/Q = new(loc)
-	Q.fingerprintslast = src.ckey
+	Q.add_fingerprint(ckey)
 	Q.throw_at(target,10,30)
 	quills--
 

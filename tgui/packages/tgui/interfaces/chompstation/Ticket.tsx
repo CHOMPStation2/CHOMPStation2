@@ -1,9 +1,8 @@
 /* eslint react/no-danger: "off" */
-import { RefObject, useEffect, useRef, useState } from 'react';
+import { type RefObject, useEffect, useRef, useState } from 'react';
 import { useBackend } from 'tgui/backend';
 import { Window } from 'tgui/layouts';
 import {
-  Box,
   Button,
   Divider,
   Input,
@@ -61,7 +60,7 @@ export const Ticket = (props) => {
   const { act, data } = useBackend<Data>();
   const [ticketChat, setTicketChat] = useState('');
 
-  const messagesEndRef: RefObject<HTMLDivElement> = useRef(null);
+  const messagesEndRef: RefObject<HTMLDivElement | null> = useRef(null);
 
   useEffect(() => {
     const scroll = messagesEndRef.current;
@@ -104,13 +103,19 @@ export const Ticket = (props) => {
             <Section
               title={'Ticket #' + id}
               buttons={
-                <Box nowrap>
-                  <Button icon="pen" onClick={() => act('retitle')}>
-                    Rename Ticket
-                  </Button>
-                  <Button onClick={() => act('legacy')}>Legacy UI</Button>
-                  <Button color={LevelColor[level]}>{Level[level]}</Button>
-                </Box>
+                <Stack>
+                  <Stack.Item>
+                    <Button icon="pen" onClick={() => act('retitle')}>
+                      Rename Ticket
+                    </Button>
+                  </Stack.Item>
+                  <Stack.Item>
+                    <Button onClick={() => act('legacy')}>Legacy UI</Button>
+                  </Stack.Item>
+                  <Stack.Item>
+                    <Button color={LevelColor[level]}>{Level[level]}</Button>
+                  </Stack.Item>
+                </Stack>
               }
             >
               <LabeledList>
@@ -168,12 +173,11 @@ export const Ticket = (props) => {
                 <Stack.Item grow>
                   <Input
                     autoFocus
-                    updateOnPropsChange
                     autoSelect
                     fluid
                     placeholder="Enter a message..."
                     value={ticketChat}
-                    onInput={(e, value: string) => setTicketChat(value)}
+                    onChange={(value: string) => setTicketChat(value)}
                     onKeyDown={(e) => {
                       if (KEY.Enter === e.key) {
                         act('send_msg', {

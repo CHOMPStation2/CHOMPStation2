@@ -53,7 +53,7 @@
  * C-20r
  */
 
- /* CHOMPedit remove: Moved to automatic_ch.dm. *
+/* CHOMPedit remove: Moved to automatic_ch.dm. *
 
 /obj/item/gun/projectile/automatic/c20r
 	name = "submachine gun"
@@ -232,8 +232,8 @@
 	var/use_launcher = 0
 	var/obj/item/gun/launcher/grenade/underslung/launcher
 
-/obj/item/gun/projectile/automatic/z8/New()
-	..()
+/obj/item/gun/projectile/automatic/z8/Initialize(mapload)
+	. = ..()
 	launcher = new(src)
 
 /obj/item/gun/projectile/automatic/z8/attackby(obj/item/I, mob/user)
@@ -428,7 +428,7 @@
 		icon_state = "mini-uzi-empty"
 
 // CHOMPEdit: Uzi tilting
-/obj/item/gun/projectile/automatic/mini_uzi/Initialize()
+/obj/item/gun/projectile/automatic/mini_uzi/Initialize(mapload)
 	. = ..()
 	if(is64x32)
 		update_transform()

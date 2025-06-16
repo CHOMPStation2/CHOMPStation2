@@ -126,9 +126,9 @@
 	name = "Cards Against The Galaxy"
 	keywords += list("Social", "Cards Against The Galaxy", "Games")
 	data = "The idea with Cards Against The Galaxy is that 3 or more players, preferably 4 to 5 players sits with 7 white cards on their hands with random words on them.<br>\
-	 One player each round is the 'Card Czar' and draws a black card with a question or phrase, there are one or more blank lines and each player draws cards and lays out secretly for the Czar to read.<br>\
-	 The Czar reads them and chooses the combination of the black and white cards that they like best, and the player who put those cards down wins the round and the black card as a point.<br><br>\
-	 It's a simple and fun game, far more focused on crew having fun and a good laugh together. Best part is that if a casino staffmember verifies you all played a round, everyone gets 25 chips with the winner of the round getting an additional 25!"
+	One player each round is the 'Card Czar' and draws a black card with a question or phrase, there are one or more blank lines and each player draws cards and lays out secretly for the Czar to read.<br>\
+	The Czar reads them and chooses the combination of the black and white cards that they like best, and the player who put those cards down wins the round and the black card as a point.<br><br>\
+	It's a simple and fun game, far more focused on crew having fun and a good laugh together. Best part is that if a casino staffmember verifies you all played a round, everyone gets 25 chips with the winner of the round getting an additional 25!"
 
 /datum/lore/codex/page/casinomanual_mechbattle/add_content()	//WIP, in future events set up proper mech toy fighting if feature isnt broken
 	name = "Mech Battle Showdown"
@@ -138,8 +138,8 @@
 /datum/lore/codex/category/casinomanual_prizes
 	name = "Prizes"
 	data = "Hey folks, welcome to the prize section! First off I wanna tell you some great news! Nanotransen has gone along with a nice deal that allows crew to occasionally keep their hard earned rewards on station for a limited time,<br>\
-	 now you can enjoy your new fancy toolbelt or bluespace beaker for more than just the shift where the casino comes around!<br>\
-     (Be aware, there can be limitations on how many rewards you get to keep after the shift, it might be unfair if some shows up and wins one thing, while they watch as command staff crew with high background income as well as hyperactive miners walks home with 20 prizes they get to enjoy while having almost done no gambling at all.))<br><br>\
+	now you can enjoy your new fancy toolbelt or bluespace beaker for more than just the shift where the casino comes around!<br>\
+	(Be aware, there can be limitations on how many rewards you get to keep after the shift, it might be unfair if some shows up and wins one thing, while they watch as command staff crew with high background income as well as hyperactive miners walks home with 20 prizes they get to enjoy while having almost done no gambling at all.))<br><br>\
 	Lets get to the prizes and exchange rate before we get started on the stuff specifically for the booth operators, so heres the current prizes one can win and their costs! Be aware there might be new prizes or absent ones from time to time!<br>\
 
 	EXCHANGE RATE<br>\
@@ -192,7 +192,7 @@
 	name = "Prizes: Drinks"
 	keywords += list("Prizes", "Drinks")
 	data = "All is 50!<br><br>\
-		 Redeemer brew <br>Warlock velvet <br>Wrapp artiste patron <br>Flask of holy water <br>College girl goldschlager <br>Gilthari luxury champagne <br>Bottle of nothing <br>Special blend whiskey <br>Akvavit"
+		Redeemer brew <br>Warlock velvet <br>Wrapp artiste patron <br>Flask of holy water <br>College girl goldschlager <br>Gilthari luxury champagne <br>Bottle of nothing <br>Special blend whiskey <br>Akvavit"
 
 /datum/lore/codex/page/casinomanual_pets/add_content()
 	name = "Prizes: Pets"

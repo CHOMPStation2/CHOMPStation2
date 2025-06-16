@@ -2,9 +2,8 @@
 	name = "filth"
 	entries_expire_at = 4 // 4 rounds, 24 hours.
 	var/saves_dirt = TRUE //VOREStation edit
-	has_admin_data = TRUE // CHOMPEdit
+	has_admin_data = TRUE
 
-// CHOMPAdd
 /datum/persistent/filth/GetAdminDataStringFor(var/thing, var/can_modify, var/mob/user)
 	if(istype(thing, /obj/effect/decal/cleanable/crayon))
 		var/obj/effect/decal/cleanable/crayon/CRAY = thing
@@ -12,7 +11,6 @@
 			return "<td colspan = 3>[thing]</td><td>Loc:([CRAY.x],[CRAY.y],[CRAY.z]) P_X: [CRAY.pixel_x] P_Y: [CRAY.pixel_y] Color: [CRAY.art_color] Shading: [CRAY.art_shade] Type: [CRAY.art_type]</td><td><a href='byond://?src=\ref[src];caller=\ref[user];remove_entry=\ref[thing]'>Destroy</a></td>"
 		return "<td colspan = 4>[thing]</td>"
 	return null
-// CHOMPEnd
 
 /datum/persistent/filth/IsValidEntry(var/atom/entry)
 	. = ..() && entry.invisibility == 0
@@ -20,14 +18,12 @@
 /datum/persistent/filth/CheckTokenSanity(var/list/token)
 	// byond's json implementation is "questionable", and uses types as keys and values without quotes sometimes even though they aren't valid json
 	token["path"] = istext(token["path"]) ? text2path(token["path"]) : token["path"]
-	// CHOMPAdd - Cooler graffiti
 	token["pixel_x"] = istext(token["pixel_x"]) ? text2num(token["pixel_x"]) : token["pixel_x"]
 	token["pixel_y"] = istext(token["pixel_y"]) ? text2num(token["pixel_y"]) : token["pixel_y"]
 	return ..() && ispath(token["path"]) && (!saves_dirt || isnum(token["dirt"])) && isnum(token["pixel_x"]) && isnum(token["pixel_y"])
-	// CHOMPAdd End
+
 /datum/persistent/filth/CheckTurfContents(var/turf/T, var/list/token)
 	var/_path = token["path"]
-	// CHOMPEdit Start - Cooler graffitis
 	// return (locate(_path) in T) ? FALSE : TRUE
 	if(!ispath(_path, /obj/effect/decal/cleanable/crayon))
 		return (locate(_path) in T) ? FALSE : TRUE
@@ -39,13 +35,11 @@
 		if(too_much_crayon >= 5)
 			return FALSE
 	return TRUE
-	// CHOMPEdit End
 
 /datum/persistent/filth/CreateEntryInstance(var/turf/creating, var/list/token)
 	var/_path = token["path"]
 	if (isspace(creating) || iswall(creating) ||isopenspace(creating))
 		return
-	// CHOMPEdit Start
 	// new _path(creating, token["age"]+1)
 	var/atom/inst
 	if(ispath(_path, /obj/effect/decal/cleanable/crayon))
@@ -62,7 +56,6 @@
 			inst.pixel_x = token["pixel_x"]
 		if(token["pixel_y"])
 			inst.pixel_y = token["pixel_y"]
-	// CHOMPEdit End
 
 /datum/persistent/filth/GetEntryAge(var/atom/entry)
 	var/obj/effect/decal/cleanable/filth = entry
@@ -83,7 +76,6 @@
 	LAZYADDASSOC(., "path", "[GetEntryPath(entry)]")
 	if (saves_dirt)
 		LAZYADDASSOC(., "dirt", GetEntryDirt(entry))
-	// CHOMPAdd Start - Cooler graffiti
 	LAZYADDASSOC(., "pixel_x", "[entry.pixel_x]")
 	LAZYADDASSOC(., "pixel_y", "[entry.pixel_y]")
 
@@ -92,4 +84,3 @@
 		LAZYADDASSOC(., "art_type", "[Inst.art_type]")
 		LAZYADDASSOC(., "art_color", "[Inst.art_color]")
 		LAZYADDASSOC(., "art_shade", "[Inst.art_shade]")
-	// CHOMPAdd End

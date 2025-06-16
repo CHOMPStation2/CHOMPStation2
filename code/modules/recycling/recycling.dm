@@ -8,7 +8,7 @@
 	var/negative_dir = null	//VOREStation Addition
 	var/hand_fed = TRUE //CHOMPAdd
 
-/obj/machinery/recycling/Initialize() //CHOMPAdd
+/obj/machinery/recycling/Initialize(mapload) //CHOMPAdd
 	. = ..()
 	default_apply_parts()
 
@@ -228,9 +228,9 @@
 	icon_state = "debris"
 	w_class = ITEMSIZE_NORMAL
 
-/obj/item/debris_pack/New(newloc, list/matter)
-	..()
-	src.matter = matter.Copy()
+/obj/item/debris_pack/Initialize(mapload, list/matter_init)
+	matter = matter_init.Copy()
+	. = ..()
 
 /obj/item/material_dust
 	name = "dust"
@@ -240,9 +240,9 @@
 	w_class = ITEMSIZE_SMALL
 	var/material_name
 
-/obj/item/material_dust/New(loc, mat)
-	..()
+/obj/item/material_dust/Initialize(mapload, mat)
 	material_name = mat
 	name = "[material_name] [initial(name)]"
 	var/datum/material/M = get_material_by_name(material_name)
 	color = M?.icon_colour
+	. = ..()

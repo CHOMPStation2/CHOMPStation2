@@ -4,7 +4,7 @@
 /obj/effect/overmap/visitable/sector/virgo2
 	initial_generic_waypoints = list("aerostat_n_w", "aerostat_n_n","aerostat_n_e","aerostat_s_w","aerostat_s_s","aerostat_s_e","aerostat_west","aerostat_east")
 
-/obj/effect/overmap/visitable/sector/virgo2/Initialize()
+/obj/effect/overmap/visitable/sector/virgo2/Initialize(mapload)
 	for(var/obj/effect/overmap/visitable/ship/stellar_delight/sd in world)
 		docking_codes = sd.docking_codes
 	. = ..()

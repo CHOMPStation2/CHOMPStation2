@@ -14754,7 +14754,6 @@
 	dir = 8
 	},
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/milspec,
@@ -18029,15 +18028,6 @@
 "hJB" = (
 /turf/simulated/wall,
 /area/hallway/primary/thirddeck/stationgateway)
-"hJD" = (
-/obj/effect/floor_decal/rust,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/tiled/steel_dirty{
-	outdoors = 1
-	},
-/area/surface/outside/path/plains)
 "hKs" = (
 /obj/structure/bed/chair/comfy/brown{
 	dir = 1
@@ -37843,14 +37833,6 @@
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/cafeteria)
-"qyJ" = (
-/obj/effect/floor_decal/rust,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/tiled/steel_dirty{
-	outdoors = 1
-	},
-/area/surface/outside/path/plains)
 "qyU" = (
 /obj/machinery/meter,
 /obj/machinery/atmospherics/pipe/manifold/hidden{
@@ -96209,7 +96191,7 @@ wEa
 ygw
 erG
 ygB
-qyJ
+erG
 hFV
 lvr
 grB
@@ -96465,8 +96447,8 @@ yeV
 wZt
 erG
 wZt
-qyJ
-hJD
+erG
+erG
 guI
 vtG
 vBx

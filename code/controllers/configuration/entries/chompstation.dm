@@ -9,10 +9,6 @@
 ///datum/config_entry/flag/emojis
 //	default = FALSE
 
-/// In future see about making a function to adjust volume serverside in config.txt, easy to do with reenable values. - Jack
-/datum/config_entry/number/vorefootstep_volume
-	default = 75
-
 /// So, nodebot is a supplement to the TGS discord bot pretty much. For things likes faxes and the manifest it's very helpful because it's able to render html into an image and post it.
 /datum/config_entry/flag/nodebot_enabled
 	default = FALSE
@@ -67,4 +63,4 @@
 	protection = CONFIG_ENTRY_LOCKED | CONFIG_ENTRY_HIDDEN
 
 /datum/config_entry/number/job_camp_time_limit
-    default = 10 MINUTES
+	default = 10 MINUTES

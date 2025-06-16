@@ -32,7 +32,7 @@
 
 	meat_type = /obj/item/reagent_containers/food/snacks/xenomeat
 	meat_amount = 5
-	
+
 	can_be_drop_prey = FALSE //CHOMP Add
 
 /mob/living/simple_mob/animal/space/alien/drone

@@ -5,11 +5,13 @@
  */
 
 import { createRoot } from 'react-dom/client';
+import { useSelector } from 'tgui/backend';
 import { createLogger } from 'tgui/logging';
 import { Tooltip } from 'tgui-core/components';
 import { EventEmitter } from 'tgui-core/events';
 import { classes } from 'tgui-core/react';
 
+import { selectSettings } from '../settings/selectors';
 import { exportToDisk } from './chatExport';
 import {
   IMAGE_RETRY_DELAY,
@@ -198,6 +200,10 @@ class ChatRenderer {
       }[]
     | null;
   databaseBackendEnabled: boolean;
+  lastScrollHeight: number;
+  ttsVoice: string;
+  ttsCategories: Record<string, boolean>;
+
   constructor() {
     /** @type {HTMLElement} */
     this.loaded = false;
@@ -227,18 +233,21 @@ class ChatRenderer {
     /** @type {HTMLElement} */
     this.scrollNode = null;
     this.scrollTracking = true;
+    this.lastScrollHeight = 0;
     this.handleScroll = (type) => {
       const node = this.scrollNode;
-      if (node) {
-        const height = node.scrollHeight;
-        const bottom = node.scrollTop + node.offsetHeight;
-        const scrollTracking =
-          Math.abs(height - bottom) < SCROLL_TRACKING_TOLERANCE;
-        if (scrollTracking !== this.scrollTracking) {
-          this.scrollTracking = scrollTracking;
-          this.events.emit('scrollTrackingChanged', scrollTracking);
-          logger.debug('tracking', this.scrollTracking);
-        }
+      if (!node) {
+        return;
+      }
+      const height = node.scrollHeight;
+      const bottom = node.scrollTop + node.offsetHeight;
+      const scrollTracking =
+        Math.abs(height - bottom) < SCROLL_TRACKING_TOLERANCE ||
+        this.lastScrollHeight === 0;
+      if (scrollTracking !== this.scrollTracking) {
+        this.scrollTracking = scrollTracking;
+        this.events.emit('scrollTrackingChanged', scrollTracking);
+        logger.debug('tracking', this.scrollTracking);
       }
     };
     this.ensureScrollTracking = () => {
@@ -263,18 +272,8 @@ class ChatRenderer {
     else {
       this.rootNode = node;
     }
-    // Find scrollable parent
-    if (this.rootNode) {
-      this.scrollNode = findNearestScrollableParent(
-        this.rootNode,
-      ) as HTMLElement;
-    }
-    if (this.scrollNode) {
-      this.scrollNode.addEventListener('scroll', this.handleScroll);
-    }
-    setTimeout(() => {
-      this.scrollToBottom();
-    });
+    // Attempts to find the scroll node on mount
+    this.tryFindScrollable();
     // Flush the queue
     this.tryFlushQueue();
   }
@@ -288,11 +287,16 @@ class ChatRenderer {
     if (this.isReady() && this.queue.length > 0) {
       this.processBatch(this.queue, { doArchive: doArchive });
       this.queue = [];
+      // In case we had no vaclid scroll node before
+      setTimeout(() => {
+        this.tryFindScrollable();
+        this.scrollToBottom();
+      });
     }
   }
 
   assignStyle(style = {}) {
-    for (let key of Object.keys(style)) {
+    for (const key of Object.keys(style)) {
       if (this.rootNode) {
         this.rootNode.style.setProperty(key, style[key]);
       }
@@ -313,7 +317,7 @@ class ChatRenderer {
       const highlightWholeMessage = setting.highlightWholeMessage;
       const matchWord = setting.matchWord;
       const matchCase = setting.matchCase;
-      const allowedRegex = /^[a-z0-9_\-$/^[\s\]\\]+$/gi;
+      const allowedRegex = /^[a-zа-яё0-9_\-$/^[\s\]\\]+$/gi;
       const regexEscapeCharacters = /[!#$%^&*)(+=.<>{}[\]:;'"|~`_\-\\/]/g;
       const lines = String(text)
         .split(',')
@@ -350,7 +354,7 @@ class ChatRenderer {
       let blacklistWords;
       let blacklistregex;
       if (highlightBlacklist && blacklistLines.length > 0) {
-        let blacklistRegexExpressions: string[] = [];
+        const blacklistRegexExpressions: string[] = [];
         for (let line of blacklistLines) {
           // Regex expression syntax is /[exp]/
           if (line.charAt(0) === '/' && line.charAt(line.length - 1) === '/') {
@@ -361,18 +365,13 @@ class ChatRenderer {
             }
             blacklistRegexExpressions.push(expr);
           } else {
-            // Lazy init
-            if (!blacklistWords) {
-              blacklistWords = [];
-            }
             // We're not going to let regex characters fuck up our RegEx operation.
             line = line.replace(regexEscapeCharacters, '\\$&');
 
-            blacklistWords.push('^\\s*' + line);
-            blacklistWords.push('^\\[\\d+:\\d+\\]\\s*' + line);
+            blacklistRegexExpressions.push('^' + line);
           }
         }
-        const regexStrBL = blacklistWords.join('|');
+        const regexStrBL = blacklistRegexExpressions.join('|');
         const flagsBL = 'i';
         // We wrap this in a try-catch to ensure that broken regex doesn't break
         // the entire chat.
@@ -383,7 +382,7 @@ class ChatRenderer {
           blacklistregex = null;
         }
       }
-      let regexExpressions: string[] = [];
+      const regexExpressions: string[] = [];
       // Organize each highlight entry into regex expressions and words
       for (let line of lines) {
         // Regex expression syntax is /[exp]/
@@ -446,6 +445,20 @@ class ChatRenderer {
     }
   }
 
+  tryFindScrollable() {
+    // Find scrollable parent
+    if (this.rootNode) {
+      if (!this.scrollNode || this.scrollNode.scrollHeight === undefined) {
+        this.scrollNode = findNearestScrollableParent(
+          this.rootNode,
+        ) as HTMLElement;
+        if (this.scrollNode) {
+          this.scrollNode.addEventListener('scroll', this.handleScroll);
+        }
+      }
+    }
+  }
+
   setVisualChatLimits(
     visibleMessageLimit: number,
     combineMessageLimit: number,
@@ -459,6 +472,8 @@ class ChatRenderer {
     interleaveEnabled: boolean,
     interleaveColor: string,
     databaseBackendEnabled: boolean,
+    ttsVoice: string,
+    ttsCategories: Record<string, boolean>,
   ) {
     this.visibleMessageLimit = visibleMessageLimit;
     this.combineMessageLimit = combineMessageLimit;
@@ -472,6 +487,8 @@ class ChatRenderer {
     this.interleaveEnabled = interleaveEnabled;
     this.interleaveColor = interleaveColor;
     this.databaseBackendEnabled = databaseBackendEnabled;
+    this.ttsVoice = ttsVoice;
+    this.ttsCategories = ttsCategories;
   }
 
   changePage(page: Page) {
@@ -489,7 +506,7 @@ class ChatRenderer {
     // Re-add message nodes
     const fragment = document.createDocumentFragment();
     let node;
-    for (let message of this.messages) {
+    for (const message of this.messages) {
       if (
         canPageAcceptType(page, message.type) &&
         !(
@@ -537,6 +554,20 @@ class ChatRenderer {
     return null;
   }
 
+  tryTTS(message: message, node: HTMLElement) {
+    if (this.ttsCategories[message.type]) {
+      const utterance = new SpeechSynthesisUtterance(node.innerText);
+
+      const voice = window.speechSynthesis
+        .getVoices()
+        .find((val) => val.name === this.ttsVoice);
+      utterance.voice = voice || null;
+
+      window.speechSynthesis.speak(utterance);
+    }
+  }
+
+  // eslint-disable-next-line complexity
   processBatch(
     batch: message[],
     options: {
@@ -545,6 +576,7 @@ class ChatRenderer {
       doArchive?: boolean;
     } = {},
   ) {
+    const settings = useSelector(selectSettings);
     const { prepend, notifyListeners = true, doArchive = false } = options;
     const now = Date.now();
     // Queue up messages until chat is ready
@@ -556,11 +588,15 @@ class ChatRenderer {
       }
       return;
     }
+    // Store last scroll position
+    if (this.scrollNode) {
+      this.lastScrollHeight = this.scrollNode.scrollHeight;
+    }
     // Insert messages
     const fragment = document.createDocumentFragment();
     const countByType = {};
     let node;
-    for (let payload of batch) {
+    for (const payload of batch) {
       const message = createMessage(payload);
       // Combine messages
       const combinable = this.getCombinableMessage(message);
@@ -602,7 +638,7 @@ class ChatRenderer {
           const childNode = nodes[i];
           const targetName = childNode.getAttribute('data-component');
           // Let's pull out the attibute info we need
-          let outputProps = {};
+          const outputProps = {};
           for (let j = 0; j < childNode.attributes.length; j++) {
             const attribute = childNode.attributes[j];
 
@@ -635,10 +671,12 @@ class ChatRenderer {
 
           /* eslint-disable react/no-danger */
           reactRoot.render(
-            <Element {...outputProps}>
-              <span dangerouslySetInnerHTML={oldHtml} />
-            </Element>,
-            childNode,
+            <>
+              <Element {...outputProps}>
+                <span dangerouslySetInnerHTML={oldHtml} />
+              </Element>
+              {childNode}
+            </>,
           );
           /* eslint-enable react/no-danger */
         }
@@ -646,11 +684,16 @@ class ChatRenderer {
         // Highlight text
         if (!message.avoidHighlighting && this.highlightParsers) {
           this.highlightParsers.map((parser) => {
+            const ourUser = node.getElementsByClassName('name');
+            const isEmote = node.getElementsByClassName('emote');
             if (
               !(
                 parser.highlightBlacklist &&
                 parser.blacklistregex &&
-                parser.blacklistregex.test(node.textContent)
+                ((ourUser.length > 0 &&
+                  parser.blacklistregex.test(ourUser[0].textContent)) ||
+                  (isEmote.length > 0 &&
+                    parser.blacklistregex.test(isEmote[0].textContent)))
               )
             ) {
               const highlighted = highlightNode(
@@ -695,6 +738,13 @@ class ChatRenderer {
       countByType[message.type] += 1;
       // TODO: Detect duplicates
       this.messages.push(message);
+
+      // TTS
+      // Only TTS on new messages
+      if (doArchive) {
+        this.tryTTS(message, node);
+      }
+
       if (
         doArchive &&
         this.logEnable &&
@@ -807,7 +857,7 @@ class ChatRenderer {
     const fromIndex = Math.max(0, this.messages.length - rebuildLimit);
     const messages = this.messages.slice(fromIndex);
     // Remove existing nodes
-    for (let message of messages) {
+    for (const message of messages) {
       message.node = undefined;
     }
     // Fast clear of the root node
@@ -820,6 +870,31 @@ class ChatRenderer {
     this.processBatch(messages, {
       notifyListeners: false,
     });
+  }
+
+  /**
+   * @clearChat
+   * @copyright 2023
+   * @author Cheffie
+   * @link https://github.com/CheffieGithub
+   * @license MIT
+   */
+  clearChat() {
+    const messages = this.visibleMessages;
+    this.visibleMessages = [];
+    for (let i = 0; i < messages.length; i++) {
+      const message = messages[i];
+      if (this.rootNode && message.node instanceof HTMLElement) {
+        this.rootNode.removeChild(message.node);
+      }
+      // Mark this message as pruned
+      message.node = 'pruned';
+    }
+    // Remove pruned messages from the message array
+    this.messages = this.messages.filter(
+      (message) => message.node !== 'pruned',
+    );
+    logger.log(`Cleared chat`);
   }
 
   saveToDisk(
@@ -872,7 +947,7 @@ class ChatRenderer {
       }
 
       // for (let message of this.visibleMessages) { // TODO: Actually having a better message archiving maybe for exports?
-      for (let message of tmpMsgArray) {
+      for (const message of tmpMsgArray) {
         // Filter messages according to active tab for export
         if (this.page && canPageAcceptType(this.page, message.type)) {
           messagesHtml += message.html + '\n';

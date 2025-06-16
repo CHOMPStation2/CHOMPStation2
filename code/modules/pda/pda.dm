@@ -128,8 +128,8 @@ var/global/list/obj/item/pda/PDAs = list()
 		close(user)
 	return 0
 
-/obj/item/pda/New(var/mob/living/carbon/human/H)
-	..()
+/obj/item/pda/Initialize(mapload)
+	. = ..()
 	PDAs += src
 	PDAs = sortAtom(PDAs)
 	update_programs()
@@ -137,7 +137,13 @@ var/global/list/obj/item/pda/PDAs = list()
 		cartridge = new default_cartridge(src)
 		cartridge.update_programs(src)
 	new /obj/item/pen(src)
-	pdachoice = isnull(H) ? 1 : (ishuman(H) ? H.pdachoice : 1)
+
+	if(ishuman(loc))
+		var/mob/living/carbon/human/H = loc
+		pdachoice = H.pdachoice
+	else
+		pdachoice = 1
+
 	switch(pdachoice)
 		if(1)
 			icon = 'icons/obj/pda_vr.dmi'			//VOREStation edit
@@ -183,7 +189,7 @@ var/global/list/obj/item/pda/PDAs = list()
 	start_program(find_program(/datum/data/pda/app/main_menu))
 
 //ChompEDIT START - move icon ops to initialize
-/obj/item/pda/Initialize()
+/obj/item/pda/Initialize(mapload)
 	. = ..()
 	add_overlay("pda-pen")
 //ChompEDIT END
@@ -517,8 +523,8 @@ var/global/list/obj/item/pda/PDAs = list()
 	icon = 'icons/obj/pda_vr.dmi'			//VOREStation edit
 	icon_state = "pdabox"
 
-/obj/item/storage/box/PDAs/New()
-	..()
+/obj/item/storage/box/PDAs/Initialize(mapload)
+	. = ..()
 	new /obj/item/pda(src)
 	new /obj/item/pda(src)
 	new /obj/item/pda(src)

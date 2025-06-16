@@ -1049,7 +1049,7 @@
 /turf/simulated/floor/tiled/steel_grid,
 /area/mothership/eva)
 "cy" = (
-/obj/item/clothing/suit/space/void/medical/alt,
+/obj/item/clothing/suit/space/void/medical/veymed,
 /obj/item/clothing/head/helmet/space/void/medical/emt,
 /obj/item/tank/oxygen,
 /obj/item/clothing/shoes/magboots,

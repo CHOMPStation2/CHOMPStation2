@@ -48,7 +48,7 @@
 // Standard procs
 //-------------------------------------------
 //ChompADD START
-/obj/vehicle/Initialize()
+/obj/vehicle/Initialize(mapload)
 	. = ..()
 	soundloop = new(list(src), FALSE)
 //ChompADD END
@@ -182,7 +182,7 @@
 	pulse2.icon_state = "empdisable"
 	pulse2.name = "emp sparks"
 	pulse2.anchored = TRUE
-	pulse2.set_dir(pick(cardinal))
+	pulse2.set_dir(pick(GLOB.cardinal))
 
 	spawn(10)
 		qdel(pulse2)
@@ -213,7 +213,7 @@
 	if(on)
 		return FALSE
 	on = 1
-	playsound(src, 'modular_chomp/sound/effects/vehicle/ignition_car.ogg', 60, 2, -2) //CHOMPedit: New sound effects.
+	playsound(src, 'sound/effects/vehicle/ignition_car.ogg', 60, 2, -2) //CHOMPedit: New sound effects.
 	soundloop.start()
 	set_light(initial(light_range))
 	update_icon()
@@ -225,7 +225,7 @@
 	if(!mechanical)
 		return FALSE
 	on = 0
-	playsound(src, 'modular_chomp/sound/effects/vehicle/engine_off.ogg', 60, 2, -2) //CHOMPedit: New sound effects.
+	playsound(src, 'sound/effects/vehicle/engine_off.ogg', 60, 2, -2) //CHOMPedit: New sound effects.
 	soundloop.stop()
 	set_light(0)
 	update_icon()
@@ -243,7 +243,7 @@
 
 /obj/vehicle/proc/explode()
 	src.visible_message(span_bolddanger("[src] blows apart!"), 1)
-	playsound(src, 'modular_chomp/sound/effects/explosions/vehicleexplosion.ogg', 100, 8, 3) //CHOMPedit: New sound effects.
+	playsound(src, 'sound/effects/explosions/vehicleexplosion.ogg', 100, 8, 3) //CHOMPedit: New sound effects.
 	var/turf/Tsec = get_turf(src)
 
 	//stuns people who are thrown off a train that has been blown up
@@ -377,7 +377,7 @@
 	//if these all result in the same turf as the vehicle or nullspace, pick a new turf with open space
 	if(!dest || dest == get_turf(src))
 		var/list/options = new()
-		for(var/test_dir in alldirs)
+		for(var/test_dir in GLOB.alldirs)
 			var/new_dir = get_step_to(src, get_step(src, test_dir))
 			if(new_dir && load.Adjacent(new_dir))
 				options += new_dir
@@ -442,7 +442,7 @@
 //----------------------------
 
 /datum/looping_sound/idle_carengine
-	mid_sounds = 'modular_chomp/sound/effects/vehicle/engine_loop.ogg'
+	mid_sounds = 'sound/effects/vehicle/engine_loop.ogg'
 	mid_length = 2.60 SECONDS
 	chance = 100
 	volume = 10

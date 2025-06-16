@@ -22,6 +22,20 @@ var/global/list/joblist = list()					//list of all jobstypes, minus borg and AI
 
 #define all_genders_define_list list(MALE,FEMALE,PLURAL,NEUTER,HERM) //VOREStaton Edit
 #define all_genders_text_list list("Male","Female","Plural","Neuter","Herm") //VOREStation Edit
+#define pronoun_set_to_genders list(\
+			"He/Him" = MALE,\
+			"She/Her" = FEMALE,\
+			"It/Its" = NEUTER,\
+			"They/Them" = PLURAL,\
+			"Shi/Hir" = HERM\
+			)
+#define genders_to_pronoun_set list(\
+			MALE = "He/Him",\
+			FEMALE = "She/Her",\
+			NEUTER = "It/Its",\
+			PLURAL = "They/Them",\
+			HERM = "Shi/Hir"\
+			)
 
 var/list/mannequins_
 
@@ -294,7 +308,9 @@ GLOBAL_LIST_EMPTY(mannequins)
 */
 
 	// Custom species icon bases
-	var/list/blacklisted_icons = list(SPECIES_CUSTOM,SPECIES_PROMETHEAN) //VOREStation Edit
+	///These are icons that you DO NOT want to be selectable!
+	var/list/blacklisted_icons = list(SPECIES_CUSTOM,SPECIES_PROMETHEAN)
+	///These are icons that you WANT to be selectable, even if they're a whitelist species!
 	var/list/whitelisted_icons = list(SPECIES_FENNEC,SPECIES_XENOHYBRID,SPECIES_VOX,SPECIES_SHADEKIN) //CHOMPedit
 	for(var/species_name in GLOB.playable_species)
 		if(species_name in blacklisted_icons)
@@ -359,7 +375,7 @@ GLOBAL_LIST_EMPTY(legacy_globals)
 	GLOB.legacy_globals["cameranet"] = cameranet
 	GLOB.legacy_globals["cultnet"] = cultnet
 	GLOB.legacy_globals["item_tf_spawnpoints"] = item_tf_spawnpoints
-	GLOB.legacy_globals["existing_solargrubs"] = existing_solargrubs
+	GLOB.legacy_globals["existing_solargrubs"] = GLOB.existing_solargrubs
 	*/
 
 var/global/list/selectable_footstep = list(
@@ -379,3 +395,199 @@ var/global/list/blacklisted_artifact_effects = list(
 	/datum/artifact_effect/gas/phoron,
 	/datum/artifact_effect/extreme
 )
+
+//stuff that only synths can eat
+var/global/list/edible_tech = list(/obj/item/cell,
+				/obj/item/circuitboard,
+				/obj/item/integrated_circuit,
+				/obj/item/broken_device,
+				/obj/item/brokenbug,
+				)
+
+var/global/list/item_digestion_blacklist = list(
+		/obj/item/hand_tele,
+		/obj/item/card/id,
+		/obj/item/gun,
+		/obj/item/pinpointer,
+		/obj/item/clothing/shoes/magboots,
+		/obj/item/areaeditor/blueprints,
+		/obj/item/disk/nuclear,
+		/obj/item/perfect_tele_beacon,
+		/obj/item/organ/internal/brain/slime,
+		/obj/item/mmi/digital/posibrain,
+		/obj/item/mmi/digital/robot,
+		/obj/item/rig/protean)
+
+///A list of chemicals that are banned from being obtainable through means that generate chemicals. These chemicals are either lame, annoying, pref-breaking, or OP (This list does NOT include reactions)
+GLOBAL_LIST_INIT(obtainable_chemical_blacklist, list(
+	REAGENT_ID_ADMINORDRAZINE,
+	REAGENT_ID_NUTRIMENT,
+	REAGENT_ID_MACROCILLIN,
+	REAGENT_ID_MICROCILLIN,
+	REAGENT_ID_NORMALCILLIN,
+	REAGENT_ID_MAGICDUST,
+	REAGENT_ID_SUPERMATTER
+	))
+
+var/global/list/item_tf_spawnpoints = list() // Global variable tracking which items are item tf spawnpoints
+
+// Options for transforming into a different mob in virtual reality.
+var/global/list/vr_mob_tf_options = list(
+	"Borg" = /mob/living/silicon/robot,
+	"Cortical borer" = /mob/living/simple_mob/animal/borer/non_antag,
+	"Hyena" = /mob/living/simple_mob/animal/hyena, //TODO: Port from Downstream //CHOMPStation Enable
+	"Giant spider" = /mob/living/simple_mob/animal/giant_spider/thermic,
+	"Armadillo" = /mob/living/simple_mob/animal/passive/armadillo, //TODO: Port from Downstream //CHOMPStation Enable
+	"Parrot" = /mob/living/simple_mob/animal/passive/bird/parrot,
+	"Cat" = /mob/living/simple_mob/animal/passive/cat,
+	"Corgi" = /mob/living/simple_mob/animal/passive/dog/corgi,
+	"Squirrel" = /mob/living/simple_mob/vore/squirrel,
+	"Frog" = /mob/living/simple_mob/vore/aggressive/frog,
+	"Seagull" =/mob/living/simple_mob/vore/seagull,
+	"Fox" = /mob/living/simple_mob/animal/passive/fox,
+	"Racoon" = /mob/living/simple_mob/animal/passive/raccoon_ch, //TODO: Port from Downstream //CHOMPStation Enable
+	"Shantak" = /mob/living/simple_mob/animal/sif/shantak,
+	"Goose" = /mob/living/simple_mob/animal/space/goose,
+	"Space shark" = /mob/living/simple_mob/animal/space/shark,
+	"Synx" = /mob/living/simple_mob/animal/synx, //TODO: Port from Downstream //CHOMPStation Enable
+	"Dire wolf" = /mob/living/simple_mob/vore/wolf/direwolf,
+	"Construct Artificer" = /mob/living/simple_mob/construct/artificer,
+	"Tech golem" = /mob/living/simple_mob/mechanical/technomancer_golem,
+	"Metroid" = /mob/living/simple_mob/metroid/juvenile/baby, //TODO: Port from Downstream //CHOMPStation Enable
+	"Otie" = /mob/living/simple_mob/vore/otie/cotie/chubby,
+	"Red-eyed Shadekin" = /mob/living/simple_mob/shadekin/red,
+	"Blue-eyed Shadekin" = /mob/living/simple_mob/shadekin/blue,
+	"Purple-eyed Shadekin" = /mob/living/simple_mob/shadekin/purple,
+	"Green-eyed Shadekin" = /mob/living/simple_mob/shadekin/green,
+	"Yellow-eyed Shadekin" = /mob/living/simple_mob/shadekin/yellow,
+	"Slime" = /mob/living/simple_mob/slime/xenobio/metal,
+	"Corrupt hound" = /mob/living/simple_mob/vore/aggressive/corrupthound,
+	"Deathclaw" = /mob/living/simple_mob/vore/aggressive/deathclaw/den, //Downstream uses /den variant here. //CHOMPStation Enable
+	"Weretiger" = /mob/living/simple_mob/vore/weretiger,
+	"Mimic" = /mob/living/simple_mob/vore/aggressive/mimic/floor/plating, //Downstream uses /floor/plating variant here //CHOMPStation Enable
+	"Giant rat" = /mob/living/simple_mob/vore/aggressive/rat,
+	"Catslug" = /mob/living/simple_mob/vore/alienanimals/catslug,
+	"Dust jumper" = /mob/living/simple_mob/vore/alienanimals/dustjumper,
+	"Space ghost" = /mob/living/simple_mob/vore/alienanimals/spooky_ghost,
+	"Teppi" = /mob/living/simple_mob/vore/alienanimals/teppi,
+	"Bee" = /mob/living/simple_mob/vore/bee,
+	"Dragon" = /mob/living/simple_mob/vore/bigdragon/friendly,
+	"Riftwalker" = /mob/living/simple_mob/vore/demon/wendigo, //Downstream uses /wendigo variant here //CHOMPStation Enable
+	"Horse" = /mob/living/simple_mob/vore/horse/big,
+	"Morph" = /mob/living/simple_mob/vore/morph,
+	"Leopardmander" = /mob/living/simple_mob/vore/leopardmander,
+	"Rabbit" = /mob/living/simple_mob/vore/rabbit,
+	"Red panda" = /mob/living/simple_mob/vore/redpanda,
+	"Sect drone" = /mob/living/simple_mob/vore/sect_drone,
+	"Armalis vox" = /mob/living/simple_mob/vox/armalis, //TODO: Port from Downstream //CHOMPStation Enable
+	"Xeno hunter" = /mob/living/simple_mob/xeno_ch/hunter, //TODO: Port from Downstream //CHOMPStation Enable
+	"Xeno queen" = /mob/living/simple_mob/xeno_ch/queen/maid, //TODO: Port from Downstream //CHOMPStation Enable
+	"Xeno sentinel" = /mob/living/simple_mob/xeno_ch/sentinel, //TODO: Port from Downstream //CHOMPStation Enable
+	"Space carp" = /mob/living/simple_mob/animal/space/carp,
+	"Jelly blob" = /mob/living/simple_mob/vore/jelly,
+	"SWOOPIE XL" = /mob/living/simple_mob/vore/aggressive/corrupthound/swoopie, //TODO: Port from Downstream //CHOMPStation Enable
+	"Abyss lurker" = /mob/living/simple_mob/vore/vore_hostile/abyss_lurker,
+	"Abyss leaper" = /mob/living/simple_mob/vore/vore_hostile/leaper,
+	"Gelatinous cube" = /mob/living/simple_mob/vore/vore_hostile/gelatinous_cube,
+	"Gryphon" = /mob/living/simple_mob/vore/gryphon //TODO: Port from Downstream //CHOMPStation Enable
+	)
+
+var/global/list/vr_mob_spawner_options = list(
+	"Parrot" = /mob/living/simple_mob/animal/passive/bird/parrot,
+	"Rabbit" = /mob/living/simple_mob/vore/rabbit,
+	"Cat" = /mob/living/simple_mob/animal/passive/cat,
+	"Fox" = /mob/living/simple_mob/animal/passive/fox,
+	"Cow" = /mob/living/simple_mob/animal/passive/cow,
+	"Dog" = /mob/living/simple_mob/vore/woof,
+	"Horse" = /mob/living/simple_mob/vore/horse/big,
+	"Hippo" = /mob/living/simple_mob/vore/hippo,
+	"Sheep" = /mob/living/simple_mob/vore/sheep,
+	"Squirrel" = /mob/living/simple_mob/vore/squirrel,
+	"Red panda" = /mob/living/simple_mob/vore/redpanda,
+	"Fennec" = /mob/living/simple_mob/vore/fennec,
+	"Seagull" =/mob/living/simple_mob/vore/seagull,
+	"Corgi" = /mob/living/simple_mob/animal/passive/dog/corgi,
+	"Armadillo" = /mob/living/simple_mob/animal/passive/armadillo, //TODO: Port from Downstream //CHOMPStation Enable
+	"Racoon" = /mob/living/simple_mob/animal/passive/raccoon_ch, //TODO: Port from Downstream //CHOMPStation Enable
+	"Goose" = /mob/living/simple_mob/animal/space/goose,
+	"Frog" = /mob/living/simple_mob/vore/aggressive/frog,
+	"Dust jumper" = /mob/living/simple_mob/vore/alienanimals/dustjumper,
+	"Dire wolf" = /mob/living/simple_mob/vore/wolf/direwolf,
+	"Space bumblebee" = /mob/living/simple_mob/vore/bee,
+	"Space bear" = /mob/living/simple_mob/animal/space/bear,
+	"Otie" = /mob/living/simple_mob/vore/otie,
+	"Mutated otie" =/mob/living/simple_mob/vore/otie/feral,
+	"Red otie" = /mob/living/simple_mob/vore/otie/red,
+	"Giant rat" = /mob/living/simple_mob/vore/aggressive/rat,
+	"Giant snake" = /mob/living/simple_mob/vore/aggressive/giant_snake,
+	"Hyena" = /mob/living/simple_mob/animal/hyena, //TODO: Port from Downstream //CHOMPStation Enable
+	"Space shark" = /mob/living/simple_mob/animal/space/shark,
+	"Shantak" = /mob/living/simple_mob/animal/sif/shantak,
+	"Kururak" = /mob/living/simple_mob/animal/sif/kururak,
+	"Teppi" = /mob/living/simple_mob/vore/alienanimals/teppi,
+	"Slug" = /mob/living/simple_mob/vore/slug, //TODO: Port from Downstream //CHOMPStation Enable
+	"Catslug" = /mob/living/simple_mob/vore/alienanimals/catslug,
+	"Weretiger" = /mob/living/simple_mob/vore/weretiger,
+	"Dust jumper" = /mob/living/simple_mob/vore/alienanimals/dustjumper,
+	"Star treader" = /mob/living/simple_mob/vore/alienanimals/startreader,
+	"Space ghost" = /mob/living/simple_mob/vore/alienanimals/spooky_ghost,
+	"Space carp" = /mob/living/simple_mob/animal/space/carp,
+	"Space jelly fish" = /mob/living/simple_mob/vore/alienanimals/space_jellyfish,
+	"Abyss lurker" = /mob/living/simple_mob/vore/vore_hostile/abyss_lurker,
+	"Abyss leaper" = /mob/living/simple_mob/vore/vore_hostile/leaper,
+	"Gelatinous cube" = /mob/living/simple_mob/vore/vore_hostile/gelatinous_cube,
+	"Panther" = /mob/living/simple_mob/vore/aggressive/panther,
+	"Lizard man" = /mob/living/simple_mob/vore/aggressive/lizardman, //TODO: Port from Downstream //CHOMPStation Enable
+	"Pakkun" = /mob/living/simple_mob/vore/pakkun,
+	"Synx" = /mob/living/simple_mob/animal/synx, //TODO: Port from Downstream //CHOMPStation Enable
+	"Jelly blob" = /mob/living/simple_mob/vore/jelly,
+	"Voracious lizard" = /mob/living/simple_mob/vore/aggressive/dino,
+	"Baby metroid" = /mob/living/simple_mob/metroid/juvenile/baby, //TODO: Port from Downstream //CHOMPStation Enable
+	"Super metroid" = /mob/living/simple_mob/metroid/juvenile/super, //TODO: Port from Downstream //CHOMPStation Enable
+	"Alpha metroid" = /mob/living/simple_mob/metroid/juvenile/alpha, //TODO: Port from Downstream //CHOMPStation Enable
+	"Gamma metroid" = /mob/living/simple_mob/metroid/juvenile/gamma, //TODO: Port from Downstream //CHOMPStation Enable
+	"Zeta metroid" = /mob/living/simple_mob/metroid/juvenile/zeta, //TODO: Port from Downstream //CHOMPStation Enable
+	"Omega metroid" = /mob/living/simple_mob/metroid/juvenile/omega, //TODO: Port from Downstream //CHOMPStation Enable
+	"Queen metroid" = /mob/living/simple_mob/metroid/juvenile/queen, //TODO: Port from Downstream //CHOMPStation Enable
+	"Xeno hunter" = /mob/living/simple_mob/animal/space/alien,
+	"Xeno sentinel" = /mob/living/simple_mob/animal/space/alien/sentinel,
+	"Xeno Praetorian" = /mob/living/simple_mob/animal/space/alien/sentinel/praetorian,
+	"Xeno queen" = /mob/living/simple_mob/animal/space/alien/queen,
+	"Xeno Empress" = /mob/living/simple_mob/animal/space/alien/queen/empress,
+	"Xeno Queen Mother" = /mob/living/simple_mob/animal/space/alien/queen/empress/mother,
+	"Defanged xeno" = /mob/living/simple_mob/vore/xeno_defanged,
+	"Sect drone" = /mob/living/simple_mob/vore/sect_drone,
+	"Sect queen" = /mob/living/simple_mob/vore/sect_queen,
+	"Deathclaw" = /mob/living/simple_mob/vore/aggressive/deathclaw,
+	"Great White Wolf" = /mob/living/simple_mob/vore/greatwolf,
+	"Great Black Wolf" = /mob/living/simple_mob/vore/greatwolf/black,
+	"Solar grub" = /mob/living/simple_mob/vore/solargrub,
+	"Pitcher plant" = /mob/living/simple_mob/vore/pitcher_plant, //TODO: Port from Downstream //CHOMPStation Enable
+	"Red gummy kobold" = /mob/living/simple_mob/vore/candy/redcabold, //TODO: Port from Downstream //CHOMPStation Enable
+	"Blue gummy kobold" = /mob/living/simple_mob/vore/candy/bluecabold, //TODO: Port from Downstream //CHOMPStation Enable
+	"Yellow gummy kobold" = /mob/living/simple_mob/vore/candy/yellowcabold, //TODO: Port from Downstream //CHOMPStation Enable
+	"Marshmellow serpent" = /mob/living/simple_mob/vore/candy/marshmellowserpent, //TODO: Port from Downstream //CHOMPStation Enable
+	"Riftwalker" = /mob/living/simple_mob/vore/demon,
+	"Wendigo" = /mob/living/simple_mob/vore/demon/wendigo, //TODO: Port from Downstream //CHOMPStation Enable
+	"Shadekin" = /mob/living/simple_mob/shadekin,
+	"Catgirl" = /mob/living/simple_mob/vore/catgirl,
+	"Wolfgirl" = /mob/living/simple_mob/vore/wolfgirl,
+	"Wolftaur" = /mob/living/simple_mob/vore/wolftaur,
+	"Lamia" = /mob/living/simple_mob/vore/lamia,
+	"Corrupt hound" = /mob/living/simple_mob/vore/aggressive/corrupthound,
+	"Corrupt corrupt hound" = /mob/living/simple_mob/vore/aggressive/corrupthound/prettyboi,
+	"SWOOPIE XL" = /mob/living/simple_mob/vore/aggressive/corrupthound/swoopie, //TODO: Port from Downstream //CHOMPStation Enable
+	"Cultist Teshari" = /mob/living/simple_mob/humanoid/cultist/tesh, //TODO: Port from Downstream //CHOMPStation Enable
+	"Burning Mage" = /mob/living/simple_mob/humanoid/cultist/human/bloodjaunt/fireball, //TODO: Port from Downstream //CHOMPStation Enable
+	"Converted" = /mob/living/simple_mob/humanoid/cultist/noodle, //TODO: Port from Downstream //CHOMPStation Enable
+	"Cultist Teshari Mage" = /mob/living/simple_mob/humanoid/cultist/castertesh, //TODO: Port from Downstream //CHOMPStation Enable
+	"Monkey" = /mob/living/carbon/human/monkey,
+	"Wolpin" = /mob/living/carbon/human/wolpin,
+	"Sparra" = /mob/living/carbon/human/sparram,
+	"Saru" = /mob/living/carbon/human/sergallingm,
+	"Sobaka" = /mob/living/carbon/human/sharkm,
+	"Farwa" = /mob/living/carbon/human/farwa,
+	"Neaera" = /mob/living/carbon/human/neaera,
+	"Stok" = /mob/living/carbon/human/stok,
+	//"Gryphon" = /mob/living/simple_mob/vore/gryphon // Disabled until tested
+	)

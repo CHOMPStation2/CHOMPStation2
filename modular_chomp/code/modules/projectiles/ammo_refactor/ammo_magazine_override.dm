@@ -1,9 +1,10 @@
 //Replace old magazine with new
-/obj/item/ammo_magazine/New(loc)
+/obj/item/ammo_magazine/Initialize(mapload)
+	. = ..()
 	var/replacement_type = magazine_overrides[type]
 	if(replacement_type)
-		qdel(src)
-		return new replacement_type(loc)
+		new replacement_type(loc)
+		return INITIALIZE_HINT_QDEL
 	. = ..()
 
 

@@ -62,7 +62,8 @@
 	lightboom = 0
 	flash = 0
 
-/obj/effect/instantboom/Initialize()
+/obj/effect/instantboom/Initialize(mapload)
+	..()
 	var/turf/T = get_turf(src)
 	explosion(T,devastation,heavyboom,lightboom,flash)
-	qdel(src)
+	return INITIALIZE_HINT_QDEL

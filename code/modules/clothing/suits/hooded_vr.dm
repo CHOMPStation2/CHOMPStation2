@@ -45,6 +45,24 @@
 	slowdown = -1
 	siemens_coefficient = 3
 
+// Weaker variants for the redgate
+
+/obj/item/clothing/suit/storage/hooded/knight/chain
+	name = "chain armor"
+	icon_state = "chain"
+	hoodtype = /obj/item/clothing/head/hood/chain
+	armor = list(melee = 60, bullet = 10, laser = 10, energy = 0, bomb = 0, bio = 0, rad = 0)
+	slowdown = 0.5
+	actions_types = list(/datum/action/item_action/toggle_knight_headgear)
+
+/obj/item/clothing/suit/storage/hooded/knight/chain/lezzy
+	icon_state = "lezzy"
+	hoodtype = /obj/item/clothing/head/hood/chain
+
+/obj/item/clothing/suit/storage/hooded/knight/chain/black_white
+	icon_state = "black_white"
+	hoodtype = /obj/item/clothing/head/hood/chain
+
 // Costume Knight Gear Here
 /obj/item/clothing/suit/storage/hooded/knight_costume
 	name = "crusader's costume armor"
@@ -119,8 +137,7 @@
 	cold_protection = CHEST|ARMS|LEGS
 	min_cold_protection_temperature = SPACE_SUIT_MIN_COLD_PROTECTION_TEMPERATURE
 	hoodtype = /obj/item/clothing/head/hood/hoodie
-	allowed = list(/obj/item/pen, /obj/item/paper, /obj/item/flashlight, /obj/item/tank/emergency/oxygen, /obj/item/storage/fancy/cigarettes,
-	/obj/item/storage/box/matches, /obj/item/reagent_containers/food/drinks/flask, /obj/item/suit_cooling_unit)
+	allowed = list(POCKET_GENERIC, POCKET_EMERGENCY, POCKET_SUIT_REGULATORS)
 
 /obj/item/clothing/suit/storage/hooded/hoodie/redtrim
 	name = "red-trimmed hoodie"

@@ -129,6 +129,8 @@
 /mob/living/simple_mob/humanoid/cultist/human/bloodjaunt/fireball/init_vore()
 	if(!voremob_loaded)
 		return
+	if(LAZYLEN(vore_organs))
+		return
 	.=..()
 	var/obj/belly/B = vore_selected
 	B.name = "stomach"
@@ -168,6 +170,8 @@
 
 /mob/living/simple_mob/humanoid/cultist/noodle/init_vore()
 	if(!voremob_loaded)
+		return
+	if(LAZYLEN(vore_organs))
 		return
 	.=..()
 	var/obj/belly/B = vore_selected
@@ -210,6 +214,8 @@
 /mob/living/simple_mob/humanoid/cultist/tesh/init_vore()
 	if(!voremob_loaded)
 		return
+	if(LAZYLEN(vore_organs))
+		return
 	.=..()
 	var/obj/belly/B = vore_selected
 	B.name = "stomach"
@@ -249,6 +255,8 @@
 
 /mob/living/simple_mob/humanoid/cultist/castertesh/init_vore()
 	if(!voremob_loaded)
+		return
+	if(LAZYLEN(vore_organs))
 		return
 	.=..()
 	var/obj/belly/B = vore_selected

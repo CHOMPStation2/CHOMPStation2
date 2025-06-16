@@ -74,7 +74,7 @@
 	var/recursive_set = FALSE //CHOMPEdit: bool to indicate if recursive movement detection ever got set. If it did, don't try to set it again!
 
 // Do not do power stuff in New/Initialize until after ..()
-/obj/machinery/Initialize()
+/obj/machinery/Initialize(mapload)
 	. = ..()
 
 	//ChompEDIT START -- only add this if we init on a non-turf (and non-null)
@@ -119,6 +119,7 @@
 	*/
 
 /obj/machinery/proc/update_power_on_move(atom/movable/mover, atom/old_loc, atom/new_loc)
+	SIGNAL_HANDLER
 	var/area/old_area = get_area(old_loc)
 	var/area/new_area = get_area(new_loc)
 	if(old_area != new_area)

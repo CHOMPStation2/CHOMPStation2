@@ -4,27 +4,12 @@
 /area)
 "ab" = (
 /turf/simulated/shuttle/wall{
-	 icon_state = "swall_s";
-	dir = 14
-	},
-/area/shuttle/overmap_examples/outpost)
-"ac" = (
-/obj/structure/shuttle/window{
-	 icon_state = "3"
-	},
-/turf/simulated/shuttle/floor,
-/area/shuttle/overmap_examples/outpost)
-"ad" = (
-/turf/simulated/shuttle/wall{
-	 icon_state = "swall_s";
 	dir = 2
 	},
 /area/shuttle/overmap_examples/outpost)
-"ae" = (
-/turf/simulated/shuttle/wall{
-	 icon_state = "swall_straight";
-	dir = 1
-	},
+"ac" = (
+/obj/structure/shuttle/window,
+/turf/simulated/shuttle/floor,
 /area/shuttle/overmap_examples/outpost)
 "af" = (
 /obj/machinery/computer/shuttle_control/explore{
@@ -49,7 +34,6 @@
 /area/shuttle/escape_pod2/centcom)
 "aj" = (
 /turf/simulated/shuttle/wall{
-	 icon_state = "swall_s";
 	dir = 1
 	},
 /area/shuttle/overmap_examples/outpost)
@@ -59,7 +43,6 @@
 /area/shuttle/overmap_examples/outpost)
 "al" = (
 /turf/simulated/shuttle/wall{
-	 icon_state = "swall_s";
 	dir = 8
 	},
 /area/shuttle/overmap_examples/outpost)
@@ -1880,8 +1863,8 @@ aa
 "}
 (23,1,1) = {"
 ab
-ae
-ae
+aj
+aj
 aj
 am
 ap
@@ -1963,9 +1946,9 @@ aa
 aa
 "}
 (25,1,1) = {"
-ad
-ae
-ae
+ab
+aj
+aj
 al
 am
 ar

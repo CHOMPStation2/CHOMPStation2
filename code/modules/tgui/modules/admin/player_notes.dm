@@ -48,7 +48,7 @@
 	current_filter = filter
 
 /datum/tgui_module/player_notes/proc/open_legacy()
-	var/datum/admins/A = admin_datums[usr.ckey]
+	var/datum/admins/A = GLOB.admin_datums[usr.ckey]
 	A.PlayerNotesLegacy()
 
 /datum/tgui_module/player_notes/tgui_state(mob/user)
@@ -113,7 +113,7 @@
 	if(..())
 		return TRUE
 
-	var/datum/admins/A = admin_datums[usr.ckey]
+	var/datum/admins/A = GLOB.admin_datums[usr.ckey]
 	A.show_player_info_legacy(key)
 
 /datum/tgui_module/player_notes_info/tgui_act(action, params, datum/tgui/ui)
@@ -238,7 +238,9 @@
 			if(index == page)
 				dat = span_bold(dat)
 
-	usr << browse("<html>[dat]</html>", "window=player_notes;size=400x400")
+	var/datum/browser/popup = new(usr, "player_notes", "Admin Playernotes", 480, 480)
+	popup.set_content(dat)
+	popup.open()
 
 /datum/admins/proc/player_has_info_legacy(var/key as text)
 	var/savefile/info = new("data/player_saves/[copytext(key, 1, 2)]/[key]/info.sav")
@@ -253,8 +255,7 @@
 	if (!istype(src,/datum/admins))
 		to_chat(usr, "Error: you are not an admin!")
 		return
-	var/dat = "<html><head><title>Info on [key]</title></head>"
-	dat += "<body>"
+	var/dat = ""
 
 	var/p_age = "unknown"
 	for(var/client/C in GLOB.clients)
@@ -288,8 +289,10 @@
 	dat += "<br>"
 	dat += "<A href='byond://?src=\ref[src];[HrefToken()];add_player_info_legacy=[key]'>Add Comment</A><br>"
 
-	dat += "</body></html>"
-	usr << browse(dat, "window=adminplayerinfo;size=480x480")
+	var/datum/browser/popup = new(usr, "adminplayerinfo", "Admin Playerinfo", 480, 480)
+	popup.add_head_content("<title>Info on [key]</title>")
+	popup.set_content(dat)
+	popup.open()
 
 /datum/admins/Topic(href, href_list)
 	..()

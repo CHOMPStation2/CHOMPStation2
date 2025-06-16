@@ -73,7 +73,8 @@
 //		/obj/item/clothing/shoes/boots/winter/security, //CHOMP Remove
 		/obj/item/ticket_printer, //CHOMP Add
 		/obj/item/gun/energy/taser, // CHOMPADD
-		/obj/item/flashlight/maglight)
+		/obj/item/flashlight/maglight,
+		/obj/item/personal_shield_generator/security/loaded)
 
 //Custom NT Security Lockers, Only found at central command
 /obj/structure/closet/secure_closet/nanotrasen_security
@@ -109,7 +110,7 @@
 		/obj/item/clothing/shoes/boots/jackboots,
 		/obj/item/clothing/shoes/boots/jackboots/toeless)
 
-/obj/structure/closet/secure_closet/nanotrasen_security/Initialize()
+/obj/structure/closet/secure_closet/nanotrasen_security/Initialize(mapload)
 	if(prob(25))
 		starts_with += /obj/item/storage/backpack/security
 	else
@@ -159,7 +160,7 @@
 		/obj/item/clothing/shoes/boots/jackboots/toeless,
 		/obj/item/clothing/under/nanotrasen/security/commander)
 
-/obj/structure/closet/secure_closet/nanotrasen_commander/Initialize()
+/obj/structure/closet/secure_closet/nanotrasen_commander/Initialize(mapload)
 	if(prob(25))
 		starts_with += /obj/item/storage/backpack/security
 	else
@@ -201,7 +202,7 @@
 		/obj/item/clothing/shoes/boots/jackboots,
 		/obj/item/clothing/shoes/boots/jackboots/toeless)
 
-/obj/structure/closet/secure_closet/nanotrasen_warden/Initialize()
+/obj/structure/closet/secure_closet/nanotrasen_warden/Initialize(mapload)
 	if(prob(25))
 		new /obj/item/storage/backpack/security(src)
 	else

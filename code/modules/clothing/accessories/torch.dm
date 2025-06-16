@@ -212,7 +212,7 @@ badges
 	badge_string = "Sol Central Government"
 	slot_flags = SLOT_MASK | SLOT_TIE
 
-/obj/item/clothing/accessory/badge/solgov/tags/Initialize()
+/obj/item/clothing/accessory/badge/solgov/tags/Initialize(mapload)
 	. = ..()
 	var/mob/living/carbon/human/H
 	H = get_holder_of_type(src, /mob/living/carbon/human)
@@ -224,7 +224,7 @@ badges
 	if(!istype(H))
 		return
 	var/religion = "Unset"
-	desc = "[initial(desc)]\nName: [H.real_name] ([H.get_species()])\nReligion: [religion]\nBlood type: [H.b_type]"
+	desc = "[initial(desc)]\nName: [H.real_name] ([H.get_species()])\nReligion: [religion]\nBlood type: [H.dna ? H.dna.b_type : DEFAULT_BLOOD_TYPE]"
 
 /obj/item/clothing/accessory/badge/solgov/representative
 	name = "representative's badge"

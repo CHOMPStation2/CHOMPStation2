@@ -95,7 +95,7 @@
 	description = "An escape pod, with a mediocre amount of supplies \
 		for escaping a dying ship as soon as possible."
 	mappath = "maps/offmap_vr/om_ships/shelter_5.dmm"
-	
+
 /datum/map_template/shelter/cabin
 	name = "Shelter Cabin"
 	shelter_id = "shelter_cab"

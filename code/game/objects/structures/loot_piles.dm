@@ -136,7 +136,7 @@ Loot piles can be depleted, if loot_depleted is turned on.  Note that players wh
 	var/path = pick(rare_loot)
 	return new path(src)
 
-/obj/structure/loot_pile/Initialize()
+/obj/structure/loot_pile/Initialize(mapload)
 	if(icon_states_to_use && icon_states_to_use.len)
 		icon_state = pick(icon_states_to_use)
 	. = ..()
@@ -218,7 +218,8 @@ Loot piles can be depleted, if loot_depleted is turned on.  Note that players wh
 		/obj/item/pda,
 		/obj/item/radio/headset,
 		/obj/item/paicard,
-		/obj/item/reagent_containers/hypospray/autoinjector/biginjector/glucose
+		/obj/item/reagent_containers/hypospray/autoinjector/biginjector/glucose,
+		/obj/item/reagent_containers/syringe/old
 	)
 
 	uncommon_loot = list(
@@ -276,7 +277,8 @@ Loot piles can be depleted, if loot_depleted is turned on.  Note that players wh
 		/obj/item/poster/custom,
 		/obj/item/newspaper,
 		/obj/item/paper/crumpled,
-		/obj/item/paper/crumpled/bloody
+		/obj/item/paper/crumpled/bloody,
+		/obj/item/reagent_containers/syringe/old
 	)
 
 	uncommon_loot = list(
@@ -323,7 +325,8 @@ Loot piles can be depleted, if loot_depleted is turned on.  Note that players wh
 		/obj/item/storage/box/smokes,
 		/obj/item/storage/box/metalfoam,
 		/obj/item/storage/box/handcuffs,
-		/obj/item/storage/box/seccarts
+		/obj/item/storage/box/seccarts,
+		/obj/item/storage/box/old_syringes,
 	)
 
 	rare_loot = list(
@@ -384,6 +387,8 @@ Loot piles can be depleted, if loot_depleted is turned on.  Note that players wh
 		/obj/item/cartridge/engineering,
 		/obj/item/analyzer,
 		/obj/item/healthanalyzer,
+		/obj/item/extrapolator,
+		/obj/item/gene_scanner,
 		/obj/item/robotanalyzer,
 		/obj/item/lightreplacer,
 		/obj/item/radio,
@@ -549,50 +554,50 @@ Loot piles can be depleted, if loot_depleted is turned on.  Note that players wh
 	)
 
 /obj/structure/loot_pile/surface/bones
-    name = "bone pile"
-    desc = "A pile of various dusty bones. Your graverobbing instincts tell you there might be valuables here."
-    icon = 'icons/obj/bones.dmi'
-    icon_state = "bonepile"
-    delete_on_depletion = TRUE
+	name = "bone pile"
+	desc = "A pile of various dusty bones. Your graverobbing instincts tell you there might be valuables here."
+	icon = 'icons/obj/bones.dmi'
+	icon_state = "bonepile"
+	delete_on_depletion = TRUE
 
-    common_loot = list(
-        /obj/item/bone,
-        /obj/item/bone/skull,
-        /obj/item/bone/skull/tajaran,
-        /obj/item/bone/skull/unathi,
-        /obj/item/bone/skull/unknown,
-        /obj/item/bone/leg,
-        /obj/item/bone/arm,
-        /obj/item/bone/ribs,
-    )
-    uncommon_loot = list(
-        /obj/item/coin/gold,
-        /obj/item/coin/silver,
-        /obj/item/deck/tarot,
-        /obj/item/flame/lighter/zippo/gold,
-        /obj/item/flame/lighter/zippo/black,
-        /obj/item/material/knife/tacknife/survival,
-        /obj/item/material/knife/tacknife/combatknife,
-        /obj/item/material/knife/machete/hatchet,
-        /obj/item/material/knife/butch,
-        /obj/item/storage/wallet/random,
-        /obj/item/clothing/accessory/bracelet/material/gold,
-        /obj/item/clothing/accessory/bracelet/material/silver,
-        /obj/item/clothing/accessory/locket,
-        /obj/item/clothing/accessory/poncho/blue,
-        /obj/item/clothing/shoes/boots/cowboy,
-        /obj/item/clothing/suit/storage/toggle/bomber,
-        /obj/item/clothing/under/frontier,
-        /obj/item/clothing/under/overalls,
-        /obj/item/clothing/under/pants/classicjeans/ripped,
-        /obj/item/clothing/under/sl_suit
-    )
-    rare_loot = list(
-        /obj/item/storage/belt/utility/alien/full,
-        /obj/item/gun/projectile/revolver,
-        /obj/item/gun/projectile/sec,
-        /obj/item/gun/launcher/crossbow
-    )
+	common_loot = list(
+		/obj/item/bone,
+		/obj/item/bone/skull,
+		/obj/item/bone/skull/tajaran,
+		/obj/item/bone/skull/unathi,
+		/obj/item/bone/skull/unknown,
+		/obj/item/bone/leg,
+		/obj/item/bone/arm,
+		/obj/item/bone/ribs,
+	)
+	uncommon_loot = list(
+		/obj/item/coin/gold,
+		/obj/item/coin/silver,
+		/obj/item/deck/tarot,
+		/obj/item/flame/lighter/zippo/gold,
+		/obj/item/flame/lighter/zippo/black,
+		/obj/item/material/knife/tacknife/survival,
+		/obj/item/material/knife/tacknife/combatknife,
+		/obj/item/material/knife/machete/hatchet,
+		/obj/item/material/knife/butch,
+		/obj/item/storage/wallet/random,
+		/obj/item/clothing/accessory/bracelet/material/gold,
+		/obj/item/clothing/accessory/bracelet/material/silver,
+		/obj/item/clothing/accessory/locket,
+		/obj/item/clothing/accessory/poncho/blue,
+		/obj/item/clothing/shoes/boots/cowboy,
+		/obj/item/clothing/suit/storage/toggle/bomber,
+		/obj/item/clothing/under/frontier,
+		/obj/item/clothing/under/overalls,
+		/obj/item/clothing/under/pants/classicjeans/ripped,
+		/obj/item/clothing/under/sl_suit
+	)
+	rare_loot = list(
+		/obj/item/storage/belt/utility/alien/full,
+		/obj/item/gun/projectile/revolver,
+		/obj/item/gun/projectile/sec,
+		/obj/item/gun/launcher/crossbow
+	)
 
 // Subtype for mecha and mecha accessories. These might not always be on the surface.
 /obj/structure/loot_pile/mecha

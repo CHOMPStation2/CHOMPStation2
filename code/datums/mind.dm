@@ -45,7 +45,7 @@
 
 	var/rev_cooldown = 0
 	var/tcrystals = 0
-	var/list/purchase_log = new
+	var/list/purchase_log = list()
 	var/used_TC = 0
 
 	var/list/learned_recipes //List of learned recipe TYPES.
@@ -72,7 +72,7 @@
 	purchase_log = list()
 	..()
 
-/datum/mind/proc/transfer_to(mob/living/new_character)
+/datum/mind/proc/transfer_to(mob/living/new_character, force = FALSE)
 	if(!istype(new_character))
 		to_world_log("## DEBUG: transfer_to(): Some idiot has tried to transfer_to() a non mob/living mob. Please inform Carn")
 	if(current)					//remove ourself from our old body's mind variable
@@ -90,7 +90,7 @@
 	if(changeling)
 		new_character.make_changeling()
 
-	if(active)
+	if(active || force)
 		new_character.key = key		//now transfer the key to link the client to our new body
 
 	if(new_character.client)
@@ -114,7 +114,10 @@
 
 	if(ambitions)
 		output += "<HR><B>Ambitions:</B> [ambitions]<br>"
-	recipient << browse("<html>[output]</html>","window=memory")
+
+	var/datum/browser/popup = new(recipient, "memory", "Memory")
+	popup.set_content(output)
+	popup.open()
 
 /datum/mind/proc/edit_memory()
 	if(!ticker || !ticker.mode)
@@ -126,8 +129,8 @@
 	out += "Assigned role: [assigned_role]. <a href='byond://?src=\ref[src];[HrefToken()];role_edit=1'>Edit</a><br>"
 	out += "<hr>"
 	out += "Factions and special roles:<br><table>"
-	for(var/antag_type in all_antag_types)
-		var/datum/antagonist/antag = all_antag_types[antag_type]
+	for(var/antag_type in GLOB.all_antag_types)
+		var/datum/antagonist/antag = GLOB.all_antag_types[antag_type]
 		out += "[antag.get_panel_entry(src)]"
 	out += "</table><hr>"
 	out += span_bold("Objectives") + "</br>"
@@ -149,13 +152,16 @@
 		out += "None."
 	out += "<br><a href='byond://?src=\ref[src];[HrefToken()];obj_add=1'>\[add\]</a><br><br>"
 	out += span_bold("Ambitions:") + " [ambitions ? ambitions : "None"] <a href='byond://?src=\ref[src];[HrefToken()];amb_edit=\ref[src]'>\[edit\]</a></br>"
-	usr << browse("<html>[out]</html>", "window=edit_memory[src]")
+
+	var/datum/browser/popup = new(usr, "edit_memory[src]", "Edit Memory")
+	popup.set_content(out)
+	popup.open()
 
 /datum/mind/Topic(href, href_list)
 	if(!check_rights(R_ADMIN|R_FUN|R_EVENT))	return
 
 	if(href_list["add_antagonist"])
-		var/datum/antagonist/antag = all_antag_types[href_list["add_antagonist"]]
+		var/datum/antagonist/antag = GLOB.all_antag_types[href_list["add_antagonist"]]
 		if(antag)
 			if(antag.add_antagonist(src, 1, 1, 0, 1, 1)) // Ignore equipment and role type for this.
 				log_admin("[key_name_admin(usr)] made [key_name(src)] into a [antag.role_text].")
@@ -163,19 +169,19 @@
 				to_chat(usr, span_warning("[src] could not be made into a [antag.role_text]!"))
 
 	else if(href_list["remove_antagonist"])
-		var/datum/antagonist/antag = all_antag_types[href_list["remove_antagonist"]]
+		var/datum/antagonist/antag = GLOB.all_antag_types[href_list["remove_antagonist"]]
 		if(antag) antag.remove_antagonist(src)
 
 	else if(href_list["equip_antagonist"])
-		var/datum/antagonist/antag = all_antag_types[href_list["equip_antagonist"]]
+		var/datum/antagonist/antag = GLOB.all_antag_types[href_list["equip_antagonist"]]
 		if(antag) antag.equip(src.current)
 
 	else if(href_list["unequip_antagonist"])
-		var/datum/antagonist/antag = all_antag_types[href_list["unequip_antagonist"]]
+		var/datum/antagonist/antag = GLOB.all_antag_types[href_list["unequip_antagonist"]]
 		if(antag) antag.unequip(src.current)
 
 	else if(href_list["move_antag_to_spawn"])
-		var/datum/antagonist/antag = all_antag_types[href_list["move_antag_to_spawn"]]
+		var/datum/antagonist/antag = GLOB.all_antag_types[href_list["move_antag_to_spawn"]]
 		if(antag) antag.place_mob(src.current)
 
 	else if (href_list["role_edit"])
@@ -403,7 +409,7 @@
 				take_uplink()
 				memory = null//Remove any memory they may have had.
 			if("crystals")
-				if (usr.client.holder.rights & R_FUN)
+				if (check_rights_for(usr.client, R_FUN))
 				//	var/obj/item/uplink/hidden/suplink = find_syndicate_uplink() No longer needed, uses stored in mind
 					var/crystals
 					crystals = tcrystals

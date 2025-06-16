@@ -44,8 +44,8 @@
 
 	male_cough_sounds = null
 	female_cough_sounds = null
-	male_sneeze_sound = null
-	female_sneeze_sound = null
+	//male_sneeze_sound = null  //CHOMPStation Edit Disable
+	//female_sneeze_sound = null  //CHOMPStation Edit Disable
 
 	speech_bubble_appearance = "ghost"
 

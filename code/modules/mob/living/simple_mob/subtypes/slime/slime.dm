@@ -80,9 +80,7 @@ var/list/_slime_default_emotes = list(
 	var/injection_amount = 5 // This determines how much.
 	var/mood = ":3" // Icon to use to display 'mood', as an overlay.
 
-	can_enter_vent_with = list(/obj/item/clothing/head,
-			/obj/soulgem // CHOMPAdd
-		)
+	can_enter_vent_with = list(/obj/item/clothing/head, /obj/soulgem)
 
 	can_be_drop_prey = FALSE //CHOMP Add
 
@@ -100,7 +98,7 @@ var/list/_slime_default_emotes = list(
 	emote_see = list("bounces", "jiggles", "sways")
 	emote_hear = list("squishes")
 
-/mob/living/simple_mob/slime/Initialize()
+/mob/living/simple_mob/slime/Initialize(mapload)
 	add_verb(src, /mob/living/proc/ventcrawl)
 	update_mood()
 	glow_color = color

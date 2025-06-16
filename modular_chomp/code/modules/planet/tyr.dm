@@ -33,26 +33,26 @@ var/datum/planet/tyr/planet_tyr = null
 
 	switch(sun_position)
 		if(0 to 0.20) // Night
-			low_brightness = 0.1
+			low_brightness = 0.4
 			low_color = "#0A0028"
 
-			high_brightness = 0.3
+			high_brightness = 0.7
 			high_color = "#21007F"
-			min = 0
+			min = 0.3
 
 		if(0.20 to 0.30) // Twilight
-			low_brightness = 0.35
+			low_brightness = 0.65
 			low_color = "#310D54"
 
-			high_brightness = 0.5
+			high_brightness = 0.8
 			high_color = "#58389E"
-			min = 0.40
+			min = 0.50
 
 		if(0.30 to 0.40) // Sunrise/set
-			low_brightness = 0.5
+			low_brightness = 0.8
 			low_color = "#19277F"
 
-			high_brightness = 0.6
+			high_brightness = 0.9
 			high_color = "#2437B5"
 			min = 0.50
 
@@ -122,8 +122,8 @@ var/datum/planet/tyr/planet_tyr = null
 /datum/weather/tyr/clear
 	name = "clear"
 	transition_chances = list(
-		WEATHER_CLEAR = 50,
-		WEATHER_SANDSTORM = 50
+		WEATHER_CLEAR = 80,
+		WEATHER_SANDSTORM = 20
 		)
 	transition_messages = list(
 		"The sky clears up.",
@@ -160,77 +160,74 @@ var/datum/planet/tyr/planet_tyr = null
 	sky_visible = TRUE
 	observed_message = "The sky is on fire."
 	imminent_transition_message = "The sky is set ablaze."
+	effect_flags = HAS_PLANET_EFFECT | EFFECT_ONLY_HUMANS
 
-/datum/weather/tyr/flamestorm/process_effects()
-	..()
-	for(var/mob/living/carbon/H as anything in human_mob_list)
-		if(H?.z in holder.our_planet.expected_z_levels) // CHOMPedit Add a check that L has to be valid and not null
-			var/turf/T = get_turf(H)
-			if(!T.is_outdoors())
-				continue
+/datum/weather/tyr/flamestorm/planet_effect(mob/living/carbon/H)
+	if(H.z in holder.our_planet.expected_z_levels)
+		var/turf/T = get_turf(H)
+		if(!T.is_outdoors())
+			return
 
-			var/target_zone = pick(BP_ALL)
-			var/amount_blocked = H.run_armor_check(target_zone, "bio")
-			var/amount_soaked = H.get_armor_soak(target_zone, "bio")
+		var/target_zone = pick(BP_ALL)
+		var/amount_blocked = H.run_armor_check(target_zone, "bio")
+		var/amount_soaked = H.get_armor_soak(target_zone, "bio")
 
-			var/damage = rand(1,1)
+		var/damage = rand(1,1)
 
-			if(amount_blocked >= 40)
-				continue
+		if(amount_blocked >= 40)
+			return
 
-			if(amount_soaked >= damage)
-				continue // No need to apply damage.
+		if(amount_soaked >= damage)
+			return // No need to apply damage.
 
-			H.apply_damage(damage, BURN, target_zone, amount_blocked, amount_soaked, used_weapon = "burning ash")
-			if(show_message)
-				to_chat(H, effect_message)
+		H.apply_damage(damage, BURN, target_zone, amount_blocked, amount_soaked, used_weapon = "burning ash")
+		if(show_message)
+			to_chat(H, effect_message)
 
 /datum/weather/tyr/sandstorm
 	name = "sandstorm"
 	icon_state = "sandstorm"
 	transition_chances = list(
-		WEATHER_CLEAR = 60,
-		WEATHER_SANDSTORM = 20,
-		WEATHER_HEAVYSANDSTORM = 20)
+		WEATHER_CLEAR = 80,
+		WEATHER_SANDSTORM = 10,
+		WEATHER_HEAVYSANDSTORM = 10)
 	transition_messages = list(
 		"The sky is engulfed by sand."
 		)
 	sky_visible = TRUE
 	observed_message = "The sky is full of sand."
 	imminent_transition_message = "Pebbles begin to fill the sky."
+	effect_flags = HAS_PLANET_EFFECT | EFFECT_ONLY_HUMANS
 
+/datum/weather/tyr/sandstorm/planet_effect(mob/living/carbon/H)
+	if(H.z in holder.our_planet.expected_z_levels)
+		var/turf/T = get_turf(H)
+		if(!T.is_outdoors())
+			return
 
-/datum/weather/tyr/sandstorm/process_effects()
-	..()
-	for(var/mob/living/carbon/H as anything in human_mob_list)
-		if(H?.z in holder.our_planet.expected_z_levels)
-			var/turf/T = get_turf(H)
-			if(!T.is_outdoors())
-				continue
+		var/target_zone = pick(BP_ALL)
+		var/amount_blocked = H.run_armor_check(target_zone, "melee")
+		var/amount_soaked = H.get_armor_soak(target_zone, "melee")
 
-			var/target_zone = pick(BP_ALL)
-			var/amount_blocked = H.run_armor_check(target_zone, "melee")
-			var/amount_soaked = H.get_armor_soak(target_zone, "melee")
+		var/damage = rand(2,2)
 
-			var/damage = rand(2,2)
+		if(amount_blocked >= 10)
+			return
 
-			if(amount_blocked >= 10)
-				continue
+		if(amount_soaked >= damage)
+			return // No need to apply damage.
 
-			if(amount_soaked >= damage)
-				continue // No need to apply damage.
-
-			H.apply_damage(damage, BRUTE, target_zone, amount_blocked, amount_soaked, used_weapon = "sand")
-			if(show_message)
-				to_chat(H, effect_message)
+		H.apply_damage(damage, BRUTE, target_zone, amount_blocked, amount_soaked, used_weapon = "sand")
+		if(show_message)
+			to_chat(H, effect_message)
 
 /datum/weather/tyr/sandstorm_fierce
 	name = "fierce sandstorm"
 	icon_state = "sandstorm"
 	transition_chances = list(
-		WEATHER_CLEAR = 60,
-		WEATHER_SANDSTORM = 20,
-		WEATHER_HEAVYSANDSTORM = 20)
+		WEATHER_CLEAR = 80,
+		WEATHER_SANDSTORM = 10,
+		WEATHER_HEAVYSANDSTORM = 10)
 	transition_messages = list(
 		"The sky is engulfed by sand."
 		)
@@ -240,30 +237,29 @@ var/datum/planet/tyr/planet_tyr = null
 	light_modifier = 0.5
 
 	imminent_transition_message = "The sky is blocked out by rock."
+	effect_flags = HAS_PLANET_EFFECT | EFFECT_ONLY_HUMANS
 
-/datum/weather/tyr/sandstorm_fierce/process_effects()
-	..()
-	for(var/mob/living/carbon/H as anything in human_mob_list)
-		if(H?.z in holder.our_planet.expected_z_levels)
-			var/turf/T = get_turf(H)
-			if(!T.is_outdoors())
-				continue
+/datum/weather/tyr/sandstorm_fierce/planet_effect(mob/living/carbon/H)
+	if(H.z in holder.our_planet.expected_z_levels)
+		var/turf/T = get_turf(H)
+		if(!T.is_outdoors())
+			return
 
-			var/target_zone = pick(BP_ALL)
-			var/amount_blocked = H.run_armor_check(target_zone, "melee")
-			var/amount_soaked = H.get_armor_soak(target_zone, "melee")
+		var/target_zone = pick(BP_ALL)
+		var/amount_blocked = H.run_armor_check(target_zone, "melee")
+		var/amount_soaked = H.get_armor_soak(target_zone, "melee")
 
-			var/damage = rand(5,5)
+		var/damage = rand(5,5)
 
-			if(amount_blocked >= 40)
-				continue
+		if(amount_blocked >= 40)
+			return
 
-			if(amount_soaked >= damage)
-				continue // No need to apply damage.
+		if(amount_soaked >= damage)
+			return // No need to apply damage.
 
-			H.apply_damage(damage, BRUTE, target_zone, amount_blocked, amount_soaked, used_weapon = "sand")
-			if(show_message)
-				to_chat(H, effect_message)
+		H.apply_damage(damage, BRUTE, target_zone, amount_blocked, amount_soaked, used_weapon = "sand")
+		if(show_message)
+			to_chat(H, effect_message)
 
 //Anomalous/summonable weather
 /datum/weather/tyr/starrynight
@@ -274,15 +270,14 @@ var/datum/planet/tyr/planet_tyr = null
 		WEATHER_FALLOUT_TEMP = 50)
 
 	imminent_transition_message = "The sky is rapidly begins to glow."
+	effect_flags = HAS_PLANET_EFFECT | EFFECT_ONLY_HUMANS
 
-/datum/weather/tyr/starrynight/process_effects()
-	..()
-	for(var/mob/living/carbon/H as anything in human_mob_list)
-		if(H?.z in holder.our_planet.expected_z_levels)
-			var/turf/T = get_turf(H)
-			if(!T.is_outdoors())
-				continue
-			H.add_modifier(/datum/modifier/starrynight_boon, 1 SECONDS, src)
+/datum/weather/tyr/starrynight/planet_effect(mob/living/carbon/H)
+	if(H.z in holder.our_planet.expected_z_levels)
+		var/turf/T = get_turf(H)
+		if(!T.is_outdoors())
+			return
+		H.add_modifier(/datum/modifier/starrynight_boon, 1 SECONDS, src)
 
 /datum/weather/tyr/blizzard
 	name = "blizzard"
@@ -319,17 +314,16 @@ var/datum/planet/tyr/planet_tyr = null
 	// How much radiation is bursted onto a random tile near a mob.
 	var/fallout_rad_low = RAD_LEVEL_HIGH
 	var/fallout_rad_high = RAD_LEVEL_VERY_HIGH
+	effect_flags = HAS_PLANET_EFFECT | EFFECT_ONLY_LIVING
 
-/datum/weather/tyr/storm/process_effects()
-	..()
-	for(var/mob/living/L as anything in living_mob_list)
-		if(L.z in holder.our_planet.expected_z_levels)
-			irradiate_nearby_turf(L)
-			var/turf/T = get_turf(L)
-			if(!T.is_outdoors())
-				continue // They're indoors, so no need to irradiate them with fallout.
+/datum/weather/tyr/storm/planet_effect(mob/living/L)
+	if(L.z in holder.our_planet.expected_z_levels)
+		irradiate_nearby_turf(L)
+		var/turf/T = get_turf(L)
+		if(!T.is_outdoors())
+			return // They're indoors, so no need to irradiate them with fallout.
 
-			L.rad_act(rand(direct_rad_low, direct_rad_high))
+		L.rad_act(rand(direct_rad_low, direct_rad_high))
 
 // This makes random tiles near people radioactive for awhile.
 // Tiles far away from people are left alone, for performance.
@@ -359,30 +353,31 @@ var/datum/planet/tyr/planet_tyr = null
 	var/next_lightning_strike = 0 // world.time when lightning will strike.
 	var/min_lightning_cooldown = 5 SECONDS
 	var/max_lightning_cooldown = 1 MINUTE
+	effect_flags = HAS_PLANET_EFFECT | EFFECT_ONLY_LIVING
+
+/datum/weather/tyr/fog/planet_effect(mob/living/L)
+	if(L.z in holder.our_planet.expected_z_levels)
+		var/turf/T = get_turf(L)
+		if(!T.is_outdoors())
+			return // They're indoors, so no need to rain on them.
+
+		// If they have an open umbrella, it'll guard from rain
+		var/obj/item/melee/umbrella/U = L.get_active_hand()
+		if(!istype(U) || !U.open)
+			U = L.get_inactive_hand()
+
+		if(istype(U) && U.open)
+			if(show_message)
+				to_chat(L, span_notice("Rain showers loudly onto your umbrella!"))
+			return
+
+
+		L.water_act(2)
+		if(show_message)
+			to_chat(L, effect_message)
 
 /datum/weather/tyr/fog/process_effects()
 	..()
-	for(var/mob/living/L as anything in living_mob_list)
-		if(L.z in holder.our_planet.expected_z_levels)
-			var/turf/T = get_turf(L)
-			if(!T.is_outdoors())
-				continue // They're indoors, so no need to rain on them.
-
-			// If they have an open umbrella, it'll guard from rain
-			var/obj/item/melee/umbrella/U = L.get_active_hand()
-			if(!istype(U) || !U.open)
-				U = L.get_inactive_hand()
-
-			if(istype(U) && U.open)
-				if(show_message)
-					to_chat(L, span_notice("Rain showers loudly onto your umbrella!"))
-				continue
-
-
-			L.water_act(2)
-			if(show_message)
-				to_chat(L, effect_message)
-
 	handle_lightning()
 
 // This gets called to do lightning periodically.

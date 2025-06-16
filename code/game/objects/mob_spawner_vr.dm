@@ -136,8 +136,8 @@ It also makes it so a ghost wont know where all the goodies/mobs are.
 	var/datum/proximity_monitor/mobspawner/prox
 	var/list/mobs_in_range = list()
 
-/obj/structure/mob_spawner/scanner/New()
-	..()
+/obj/structure/mob_spawner/scanner/Initialize(mapload)
+	. = ..()
 	prox = new(src, range)
 
 //CHOMPEdit Start
@@ -227,7 +227,7 @@ It also makes it so a ghost wont know where all the goodies/mobs are.
 	total_spawns = -1
 	destructible = 0
 	anchored = TRUE
-	invisibility = 101
+	invisibility = INVISIBILITY_ABSTRACT
 	spawn_types = list(
 	/mob/living/simple_mob/animal/passive/gaslamp = 20,
 //	/mob/living/simple_mob/vore/otie/feral = 10,

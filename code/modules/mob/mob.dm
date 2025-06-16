@@ -14,8 +14,8 @@
 	if(mind && mind.current == src)
 		spellremove(src)
 	if(!istype(src,/mob/observer))
-		ghostize()
-	QDEL_NULL(soulgem) // CHOMPAdd Soulcatcher
+		ghostize(FALSE)
+	QDEL_NULL(soulgem) //Soulcatcher
 	QDEL_NULL(dna)
 	QDEL_NULL(plane_holder)
 	QDEL_NULL(hud_used)
@@ -77,10 +77,11 @@
 	lastarea = get_area(src)
 	set_focus(src) // VOREStation Add - Key Handling
 	hook_vr("mob_new",list(src)) //VOREStation Code
+	update_transform() // Some mobs may start bigger or smaller than normal.
 	. = ..()
 	//return QDEL_HINT_HARDDEL_NOW Just keep track of mob references. They delete SO much faster now.
 
-/mob/show_message(msg, type, alt, alt_type)//Message, type of message (1 or 2), alternative message, alt message type (1 or 2) //CHOMPEdit show_message() moved to /atom/movable
+/mob/show_message(msg, type, alt, alt_type)
 
 	if(!client && !teleop)	return
 
@@ -132,7 +133,7 @@
 /atom/proc/drain_power(var/drain_check,var/surge, var/amount = 0)
 	return -1
 
- // used for petrification machines
+// used for petrification machines
 /atom/proc/get_ultimate_mob()
 	var/mob/ultimate_mob
 	var/atom/to_check = loc
@@ -373,6 +374,9 @@
 /mob/verb/abandon_mob()
 	set name = "Return to Menu"
 	set category = "OOC.Game"
+	if(istype(src, /mob/new_player))
+		to_chat(src, span_boldnotice("You are already in the lobby!"))
+		return
 
 	if(stat != DEAD || !ticker)
 		to_chat(src, span_boldnotice("You must be dead to use this!"))
@@ -389,7 +393,7 @@
 			"Quit This Round",list("Quit Round","No"))
 			if(extra_check == "Quit Round")
 				//Update any existing objectives involving this mob.
-				for(var/datum/objective/O in all_objectives)
+				for(var/datum/objective/O in GLOB.all_objectives)
 					if(O.target == mind)
 						if(O.owner && O.owner.current)
 							to_chat(O.owner.current,span_warning("You get the feeling your target is no longer within your reach..."))
@@ -409,15 +413,15 @@
 					mind.special_role = null
 
 				//Cut the PDA manifest (ugh)
-				if(PDA_Manifest.len)
-					PDA_Manifest.Cut()
-				for(var/datum/data/record/R in data_core.medical)
+				if(GLOB.PDA_Manifest.len)
+					GLOB.PDA_Manifest.Cut()
+				for(var/datum/data/record/R in GLOB.data_core.medical)
 					if((R.fields["name"] == real_name))
 						qdel(R)
-				for(var/datum/data/record/T in data_core.security)
+				for(var/datum/data/record/T in GLOB.data_core.security)
 					if((T.fields["name"] == real_name))
 						qdel(T)
-				for(var/datum/data/record/G in data_core.general)
+				for(var/datum/data/record/G in GLOB.data_core.general)
 					if((G.fields["name"] == real_name))
 						qdel(G)
 
@@ -442,6 +446,7 @@
 	if(!client)
 		log_game("[key] AM failed due to disconnect.")
 		qdel(M)
+		M.key = null
 		return
 
 	M.has_respawned = TRUE //When we returned to main menu, send respawn message
@@ -467,7 +472,7 @@
 	set category = "OOC.Game"
 	var/is_admin = 0
 
-	if(client.holder && (client.holder.rights & R_ADMIN|R_EVENT))
+	if(check_rights_for(client, R_ADMIN|R_EVENT))
 		is_admin = 1
 	else if(stat != DEAD || isnewplayer(src))
 		to_chat(src, span_filter_notice("[span_blue("You must be observing to use this!")]"))
@@ -479,8 +484,8 @@
 	var/list/targets = list()
 
 
-	targets += observe_list_format(nuke_disks)
-	targets += observe_list_format(GLOB.all_singularities) //CHOMP Edit
+	targets += observe_list_format(GLOB.nuke_disks)
+	targets += observe_list_format(GLOB.all_singularities)
 	targets += getmobs()
 	targets += observe_list_format(sortAtom(mechas_list))
 	targets += observe_list_format(SSshuttles.ships)
@@ -517,8 +522,19 @@
 		src << browse(null, t1)
 
 	if(href_list["flavor_more"])
-		usr << browse(text("<HTML><HEAD><TITLE>[]</TITLE></HEAD><BODY><TT>[]</TT></BODY></HTML>", name, replacetext(flavor_text, "\n", "<BR>")), text("window=[];size=500x200", name))
-		onclose(usr, "[name]")
+		var/examine_text = splittext(flavor_text, "||")
+		var/index = 0
+		var/rendered_text = ""
+		for(var/part in examine_text)
+			if(index % 2)
+				rendered_text += span_spoiler("[part]")
+			else
+				rendered_text += "[part]"
+			index++
+		examine_text = replacetext(rendered_text, "\n", "<BR>")
+		var/datum/browser/popup = new(usr, "[name]", "[name]", 500, 300, src)
+		popup.set_content(examine_text)
+		popup.open()
 	if(href_list["flavor_change"])
 		update_flavor_text()
 	return ..()
@@ -552,7 +568,7 @@
 		to_chat(src, span_warning("It won't budge!"))
 		return
 
-	if(lying) // CHOMPAdd - No pulling while we crawl.
+	if(lying)
 		return
 
 	var/mob/M = AM
@@ -590,6 +606,10 @@
 			M.LAssailant = null
 		else
 			M.LAssailant = usr
+
+		if(M.no_pull_when_living && !(M.stat == DEAD)) //If it's now allowed to be pulled when living, and it's not dead yet, deny.
+			to_chat(src, span_warning("\The [M] won't let you just pull them!"))
+			return
 
 	else if(isobj(AM))
 		var/obj/I = AM
@@ -1127,7 +1147,7 @@
 	in_throw_mode = 1
 	if(throw_icon && !issilicon(src)) // Silicon use this for something else. Do not overwrite their HUD icon
 		throw_icon.icon_state = "act_throw_on"
-/* CHOMPedit removal begin
+
 /mob/verb/spacebar_throw_on()
 	set name = ".throwon"
 	set hidden = TRUE
@@ -1139,7 +1159,7 @@
 	set hidden = TRUE
 	set instant = TRUE
 	throw_mode_off()
-ChompEdit removal end*/
+
 /mob/proc/isSynthetic()
 	return 0
 
@@ -1164,7 +1184,6 @@ ChompEdit removal end*/
 		var/mob/exploited = exploit_for.resolve()
 		exploited?.exploit_addons -= src
 		exploit_for = null
-	// CHOMPEdit End
 	. = ..()
 
 
@@ -1217,8 +1236,23 @@ ChompEdit removal end*/
 // This is for inheritence since /mob/living will serve most cases. If you need ghosts to use this you'll have to implement that yourself.
 /mob/proc/update_client_color()
 	if(client && client.color)
-		animate(client, color = null, time = 10)
+		animate(client, color = get_location_color_tint(), time = 10)
 	return
+
+/mob/proc/get_location_color_tint()
+	PROTECTED_PROC(TRUE)
+	SHOULD_NOT_OVERRIDE(TRUE)
+	var/turf/T = get_turf(src)
+	var/area/A = get_area(src)
+	if(!T || !A)
+		return null
+	if(T.is_outdoors()) // check weather
+		var/datum/planet/P = LAZYACCESS(SSplanets.z_to_planet, T.z)
+		var/weather_tint = P?.weather_holder.current_weather.get_color_tint()
+		if(weather_tint) // But not if the weather has no blending!
+			return weather_tint
+	// If not weather based then just area's
+	return A.get_color_tint()
 
 /mob/proc/swap_hand()
 	return

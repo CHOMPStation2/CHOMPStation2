@@ -9,7 +9,8 @@
 	pickup_sound = 'sound/items/pickup/device.ogg'
 	drop_sound = 'sound/items/drop/device.ogg'
 
-/obj/item/emergency_beacon/New()
+/obj/item/emergency_beacon/Initialize(mapload)
+	. = ..()
 	gps = new/obj/item/gps/emergency_beacon(src)
 
 /obj/item/gps/emergency_beacon

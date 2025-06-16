@@ -1,4 +1,4 @@
-/mob/living/simple_mob/shadekin/Initialize()
+/mob/living/simple_mob/shadekin/Initialize(mapload)
 	var/list/ability_types = subtypesof(/obj/effect/shadekin_ability)
 	if(name == "Rakshasa")
 		ability_types += subtypesof(/obj/effect/rakshasa_ability)
@@ -21,9 +21,11 @@
 	var/shift_mode = NOT_WHILE_SHIFTED
 	var/ab_sound
 
-/obj/effect/rakshasa_ability/New(var/new_kin)
-	..()
-	my_kin = new_kin
+/obj/effect/rakshasa_ability/Initialize(mapload)
+	. = ..()
+	my_kin = loc
+	if(!istype(my_kin))
+		return INITIALIZE_HINT_QDEL
 	loc = null
 
 /obj/effect/rakshasa_ability/Destroy()
@@ -41,7 +43,7 @@
 	if(shift_denial)
 		name = shift_denial
 	else
-		name = my_kin.energy >= cost ? "Activate" : "No Energy"
+		name = my_kin.comp.dark_energy >= cost ? "Activate" : "No Energy"
 	return src
 
 /obj/effect/rakshasa_ability/Click(var/location, var/control, var/params)
@@ -65,11 +67,11 @@
 	else if(shift_mode == ONLY_WHILE_SHIFTED && !(my_kin.ability_flags & AB_PHASE_SHIFTED))
 		to_chat(my_kin,span_warning("Can only use that ability while phase shifted!"))
 		return FALSE
-	else if(my_kin.energy < cost)
+	else if(my_kin.comp.dark_energy < cost)
 		to_chat(my_kin,span_warning("Not enough energy for that ability!"))
 		return FALSE
 
-	my_kin.energy -= cost
+	my_kin.comp.dark_energy -= cost
 	if(ab_sound)
 		playsound(src,ab_sound,75,1)
 
@@ -338,7 +340,7 @@
 		update_icon()
 
 		//Affect nearby lights
-		for(var/obj/machinery/light/L in machines)
+		for(var/obj/machinery/light/L in GLOB.machines)
 			if(L.z != z || get_dist(src,L) > 10)
 				continue
 			L.flicker(10)
@@ -446,7 +448,7 @@
 ////////////////////////////////////////////////////////////////
 //A flicker proc. Because apparently putting this straight into the ability button doesn't work.
 /mob/living/simple_mob/shadekin/proc/rakshasa_flicker()
-	for(var/obj/machinery/light/L in machines)
+	for(var/obj/machinery/light/L in GLOB.machines)
 		if(L.z != z || get_dist(src,L) > 10)
 			continue
 		L.flicker(10)

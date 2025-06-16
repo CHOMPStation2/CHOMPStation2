@@ -79,7 +79,7 @@ Frequency:
 							src.temp += "[W.code]-[dir2text(get_dir(sr, tr))]-[direct]<BR>"
 
 				src.temp += span_bold("Extraneous Signals:") + "<BR>"
-				for (var/obj/item/implant/tracking/W in GLOB.all_tracking_implants) // CHOMPEdit
+				for (var/obj/item/implant/tracking/W in GLOB.all_tracking_implants)
 					if (!W.implanted || !(istype(W.loc,/obj/item/organ/external) || ismob(W.loc) || W.malfunction))
 						continue
 
@@ -138,13 +138,13 @@ Frequency:
 		to_chat(user, span_notice("\The [src] is malfunctioning."))
 		return
 	var/list/L = list(  )
-	for(var/obj/machinery/teleport/hub/R in machines)
+	for(var/obj/machinery/teleport/hub/R in GLOB.machines)
 		var/obj/machinery/computer/teleporter/com
 		var/obj/machinery/teleport/station/station
-		for(var/direction in cardinal)
+		for(var/direction in GLOB.cardinal)
 			station = locate(/obj/machinery/teleport/station, get_step(R, direction))
 			if(station)
-				for(direction in cardinal)
+				for(direction in GLOB.cardinal)
 					com = locate(/obj/machinery/computer/teleporter, get_step(station, direction))
 					if(com)
 						break

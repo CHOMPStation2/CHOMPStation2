@@ -69,7 +69,7 @@
 		shadeColour = new_colour
 	return
 
-/obj/item/pen/crayon/afterattack(atom/target, mob/user, proximity, click_parameters) // CHOMPEdit - Click parameters
+/obj/item/pen/crayon/afterattack(atom/target, mob/user, proximity, click_parameters)
 	if(!proximity) return
 	if(istype(target,/turf/simulated/floor))
 		var/drawtype = tgui_input_list(user, "Choose what you'd like to draw.", "Crayon scribbles", list("graffiti","rune","letter","arrow"))
@@ -99,8 +99,6 @@
 					return
 				to_chat(user, "You start drawing an arrow on the [target.name].")
 		if(instant || do_after(user, 50))
-			// CHOMPEdit Start - Better graffiti
-			//new /obj/effect/decal/cleanable/crayon(target,colour,shadeColour,drawtype)
 			var/list/mouse_control = params2list(click_parameters)
 			var/p_x = 0
 			var/p_y = 0
@@ -111,7 +109,6 @@
 			var/atom/new_graffiti = new /obj/effect/decal/cleanable/crayon(target,colour,shadeColour,drawtype)
 			new_graffiti.pixel_x = p_x
 			new_graffiti.pixel_y = p_y
-			// CHOMPEdit End
 			to_chat(user, "You finish drawing.")
 
 			var/msg = "[user.client.key] ([user]) has drawn [drawtype] (with [src]) at [target.x],[target.y],[target.z]."
@@ -131,7 +128,11 @@
 	if(M == user)
 		to_chat(user, "You take a bite of the crayon and swallow it.")
 		user.nutrition += 1
-		user.reagents.add_reagent(REAGENT_ID_CRAYONDUST,min(5,uses)/3)
+		if(ishuman(user))
+			var/mob/living/carbon/human/human = user
+			human.ingested.add_reagent(REAGENT_ID_CRAYONDUST,min(5,uses)/3)
+		else
+			user.reagents.add_reagent(REAGENT_ID_CRAYONDUST,min(5,uses)/3)
 		if(uses)
 			uses -= 5
 			if(uses <= 0)
@@ -221,7 +222,11 @@
 	if(M == user)
 		to_chat(user, "You take a bite of the marker and swallow it.")
 		user.nutrition += 1
-		user.reagents.add_reagent(REAGENT_ID_MARKERINK,6)
+		if(ishuman(user))
+			var/mob/living/carbon/human/human = user
+			human.ingested.add_reagent(REAGENT_ID_MARKERINK,6)
+		else
+			user.reagents.add_reagent(REAGENT_ID_MARKERINK,6)
 		if(uses)
 			uses -= 5
 			if(uses <= 0)

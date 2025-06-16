@@ -2,9 +2,18 @@
 "a" = (
 /turf/template_noop,
 /area/template_noop)
+"b" = (
+/obj/effect/spider/stickyweb,
+/mob/living/simple_mob/animal/giant_spider/phorogenic{
+	loot_list = list(/obj/item/stock_parts/scanning_module/omni = 50)
+	},
+/turf/simulated/floor/outdoors/dirt/turfpack/sif{
+	outdoors = 0
+	},
+/area/submap/CaveS)
 "c" = (
 /obj/structure/loot_pile/surface/bones,
-/turf/simulated/floor/outdoors/dirt{
+/turf/simulated/floor/outdoors/dirt/turfpack/sif{
 	outdoors = 0
 	},
 /area/submap/CaveS)
@@ -12,12 +21,12 @@
 /obj/structure/closet/crate,
 /obj/random/contraband,
 /obj/random/energy,
-/turf/simulated/floor,
+/turf/simulated/floor/plating/turfpack/sif,
 /area/submap/CaveS)
 "e" = (
 /obj/effect/spider/stickyweb,
 /obj/structure/loot_pile/surface/bones,
-/turf/simulated/floor/outdoors/dirt{
+/turf/simulated/floor/outdoors/dirt/turfpack/sif{
 	outdoors = 0
 	},
 /area/submap/CaveS)
@@ -26,12 +35,12 @@
 	icon_state = "4-8";
 	pixel_x = 0
 	},
-/turf/simulated/floor,
+/turf/simulated/floor/plating/turfpack/sif,
 /area/submap/CaveS)
 "h" = (
 /obj/effect/spider/stickyweb,
 /obj/effect/spider/stickyweb,
-/turf/simulated/floor/outdoors/dirt{
+/turf/simulated/floor/outdoors/dirt/turfpack/sif{
 	outdoors = 0
 	},
 /area/submap/CaveS)
@@ -42,7 +51,7 @@
 /mob/living/simple_mob/animal/giant_spider/phorogenic{
 	loot_list = list(/obj/item/stock_parts/manipulator/omni = 50)
 	},
-/turf/simulated/floor/outdoors/dirt{
+/turf/simulated/floor/outdoors/dirt/turfpack/sif{
 	outdoors = 0
 	},
 /area/submap/CaveS)
@@ -55,29 +64,25 @@
 	icon_state = "0-8"
 	},
 /obj/effect/decal/cleanable/ash,
-/turf/simulated/floor,
+/turf/simulated/floor/plating/turfpack/sif,
 /area/submap/CaveS)
 "r" = (
 /obj/effect/spider/stickyweb,
-/turf/simulated/floor/outdoors/dirt{
+/turf/simulated/floor/outdoors/dirt/turfpack/sif{
 	outdoors = 0
 	},
 /area/submap/CaveS)
 "t" = (
 /obj/structure/closet/crate,
 /obj/random/contraband,
-/turf/simulated/floor,
+/turf/simulated/floor/plating/turfpack/sif,
 /area/submap/CaveS)
 "u" = (
 /obj/machinery/power/port_gen/pacman,
 /obj/structure/cable{
 	icon_state = "0-4"
 	},
-/turf/simulated/floor,
-/area/submap/CaveS)
-"x" = (
-/obj/effect/spider/stickyweb,
-/turf/simulated/floor/outdoors/dirt,
+/turf/simulated/floor/plating/turfpack/sif,
 /area/submap/CaveS)
 "z" = (
 /turf/simulated/mineral/ignore_mapgen,
@@ -86,13 +91,13 @@
 /mob/living/simple_mob/animal/giant_spider/phorogenic{
 	loot_list = list(/obj/item/stock_parts/capacitor/omni = 50)
 	},
-/turf/simulated/floor/outdoors/dirt{
+/turf/simulated/floor/outdoors/dirt/turfpack/sif{
 	outdoors = 0
 	},
 /area/submap/CaveS)
 "D" = (
 /obj/effect/decal/cleanable/cobweb,
-/turf/simulated/floor/outdoors/dirt{
+/turf/simulated/floor/outdoors/dirt/turfpack/sif{
 	outdoors = 0
 	},
 /area/submap/CaveS)
@@ -100,24 +105,21 @@
 /mob/living/simple_mob/animal/giant_spider/phorogenic{
 	loot_list = list(/obj/item/stock_parts/scanning_module/omni = 50)
 	},
-/turf/simulated/floor/outdoors/dirt{
+/turf/simulated/floor/outdoors/dirt/turfpack/sif{
 	outdoors = 0
 	},
 /area/submap/CaveS)
 "H" = (
-/turf/simulated/floor,
+/turf/simulated/floor/plating/turfpack/sif,
 /area/submap/CaveS)
 "I" = (
 /obj/effect/spider/stickyweb,
 /mob/living/simple_mob/animal/giant_spider/phorogenic{
 	loot_list = list(/obj/item/stock_parts/manipulator/omni = 50)
 	},
-/turf/simulated/floor/outdoors/dirt{
+/turf/simulated/floor/outdoors/dirt/turfpack/sif{
 	outdoors = 0
 	},
-/area/submap/CaveS)
-"J" = (
-/turf/simulated/floor/outdoors/dirt,
 /area/submap/CaveS)
 "K" = (
 /obj/effect/spider/stickyweb,
@@ -130,12 +132,12 @@
 /area/submap/CaveS)
 "M" = (
 /obj/effect/decal/cleanable/cobweb2,
-/turf/simulated/floor/outdoors/dirt{
+/turf/simulated/floor/outdoors/dirt/turfpack/sif{
 	outdoors = 0
 	},
 /area/submap/CaveS)
 "P" = (
-/turf/simulated/floor/outdoors/dirt{
+/turf/simulated/floor/outdoors/dirt/turfpack/sif{
 	outdoors = 0
 	},
 /area/submap/CaveS)
@@ -144,20 +146,20 @@
 /mob/living/simple_mob/animal/giant_spider/phorogenic{
 	loot_list = list(/obj/item/stock_parts/capacitor/omni = 50)
 	},
-/turf/simulated/floor/outdoors/dirt{
+/turf/simulated/floor/outdoors/dirt/turfpack/sif{
 	outdoors = 0
 	},
 /area/submap/CaveS)
 "S" = (
 /obj/structure/loot_pile/surface/bones,
 /obj/item/rig/industrial,
-/turf/simulated/floor/outdoors/dirt{
+/turf/simulated/floor/outdoors/dirt/turfpack/sif{
 	outdoors = 0
 	},
 /area/submap/CaveS)
 "V" = (
 /obj/random/mob/spider/mutant,
-/turf/simulated/floor/outdoors/dirt{
+/turf/simulated/floor/outdoors/dirt/turfpack/sif{
 	outdoors = 0
 	},
 /area/submap/CaveS)
@@ -172,14 +174,14 @@
 /obj/item/reagent_containers/chem_disp_cartridge/cola,
 /obj/item/reagent_containers/chem_disp_cartridge/dexalin,
 /obj/item/reagent_containers/chem_disp_cartridge/hot_coco,
-/turf/simulated/floor/outdoors/dirt{
+/turf/simulated/floor/outdoors/dirt/turfpack/sif{
 	outdoors = 0
 	},
 /area/submap/CaveS)
 "Y" = (
 /obj/structure/loot_pile/surface/bones,
 /obj/item/kinetic_crusher,
-/turf/simulated/floor/outdoors/dirt{
+/turf/simulated/floor/outdoors/dirt/turfpack/sif{
 	outdoors = 0
 	},
 /area/submap/CaveS)
@@ -543,7 +545,7 @@ z
 z
 z
 z
-K
+b
 P
 P
 r
@@ -719,7 +721,7 @@ z
 P
 P
 z
-x
+r
 z
 z
 z
@@ -1005,7 +1007,7 @@ z
 D
 P
 P
-J
+P
 z
 z
 P

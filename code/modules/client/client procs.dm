@@ -165,8 +165,8 @@
 		stat_panel.reinitialize() //CHOMPEdit
 
 	//Logs all hrefs
-	if(config && CONFIG_GET(flag/log_hrefs) && href_logfile)
-		WRITE_LOG(href_logfile, "[src] (usr:[usr])</small> || [hsrc ? "[hsrc] " : ""][href]")
+	if(config && CONFIG_GET(flag/log_hrefs) && GLOB.href_logfile)
+		WRITE_LOG(GLOB.href_logfile, "[src] (usr:[usr])</small> || [hsrc ? "[hsrc] " : ""][href]")
 
 	//byond bug ID:2256651
 	if (asset_cache_job && (asset_cache_job in completed_asset_jobs))
@@ -252,17 +252,18 @@
 
 	// Instantiate stat panel
 	stat_panel = new(src, "statbrowser")
-	stat_panel.subscribe(src, .proc/on_stat_panel_message)
+	stat_panel.subscribe(src, PROC_REF(on_stat_panel_message))
 
 	// Instantiate tgui panel
 	tgui_say = new(src, "tgui_say")
+	tgui_shocker = new(src, "tgui_shock")
 	initialize_commandbar_spy()
 	tgui_panel = new(src, "browseroutput")
 
 	GLOB.tickets.ClientLogin(src) // CHOMPedit - Tickets System
 
 	//Admin Authorisation
-	holder = admin_datums[ckey]
+	holder = GLOB.admin_datums[ckey]
 	if(holder)
 		GLOB.admins += src
 		holder.owner = src
@@ -298,18 +299,22 @@
 	)
 	addtimer(CALLBACK(src, PROC_REF(check_panel_loaded)), 30 SECONDS)
 
+	INVOKE_ASYNC(src, PROC_REF(acquire_dpi))
+
+	tgui_panel.initialize()
+
 	// Initialize tgui panel
 	tgui_say.initialize()
-	tgui_panel.initialize()
+	tgui_shocker.initialize()
 
 	connection_time = world.time
 	connection_realtime = world.realtime
 	connection_timeofday = world.timeofday
 
-	if(custom_event_msg && custom_event_msg != "")
+	if(GLOB.custom_event_msg && GLOB.custom_event_msg != "")
 		to_chat(src, "<h1 class='alert'>Custom Event</h1>")
 		to_chat(src, "<h2 class='alert'>A custom event is taking place. OOC Info:</h2>")
-		to_chat(src, span_alert("[custom_event_msg]"))
+		to_chat(src, span_alert("[GLOB.custom_event_msg]"))
 		to_chat(src, "<br>")
 
 	if(!winexists(src, "asset_cache_browser")) // The client is using a custom skin, tell them.
@@ -465,7 +470,7 @@
 
 	var/admin_rank = "Player"
 	if(src.holder)
-		admin_rank = src.holder.rank
+		admin_rank = src.holder.rank_names()
 
 	var/sql_ip = sql_sanitize_text(src.address)
 	var/sql_computerid = sql_sanitize_text(src.computer_id)
@@ -475,7 +480,7 @@
 
 	//Panic bunker code
 	if (isnum(player_age) && player_age == 0) //first connection
-		if (CONFIG_GET(flag/panic_bunker) && !holder && !deadmin_holder)
+		if (CONFIG_GET(flag/panic_bunker) && !holder && !GLOB.deadmins[key])
 			log_adminwarn("Failed Login: [key] - New account attempting to connect during panic bunker")
 			message_admins(span_adminnotice("Failed Login: [key] - New account attempting to connect during panic bunker"))
 			disconnect_with_message("Sorry but the server is currently not accepting connections from never before seen players.")
@@ -576,14 +581,18 @@
 /client/verb/character_setup()
 	set name = "Character Setup"
 	set category = "Preferences.Character"
-	if(prefs)
-		prefs.ShowChoices(usr)
+
+	prefs.current_window = PREFERENCE_TAB_CHARACTER_PREFERENCES
+	prefs.update_tgui_static_data(mob)
+	prefs.tgui_interact(mob)
 
 /client/verb/game_options()
 	set name = "Game Options"
 	set category = "Preferences.Game"
-	if(prefs)
-		prefs.tgui_interact(usr)
+
+	prefs.current_window = PREFERENCE_TAB_GAME_PREFERENCES
+	prefs.update_tgui_static_data(mob)
+	prefs.tgui_interact(mob)
 
 /client/proc/findJoinDate()
 	var/list/http = world.Export("http://byond.com/members/[ckey]?format=text")
@@ -813,6 +822,10 @@
 			return
 	SEND_SIGNAL(src, COMSIG_CLIENT_CLICK, object, location, control, params, usr)
 	. = ..()
+
+/// This grabs the DPI of the user per their skin
+/client/proc/acquire_dpi()
+	window_scaling = text2num(winget(src, null, "dpi"))
 
 #undef ADMINSWARNED_AT
 #undef CURRENT_MINUTE

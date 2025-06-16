@@ -7,8 +7,8 @@
 	conditions  can cause different byproducts to be produced.<br>\
 	Magma or Lava can be pumped to produce mineralized fluid."
 
-	anchored = 0
-	density = 1
+	anchored = TRUE
+	density = TRUE
 
 	icon = 'icons/obj/machines/reagent.dmi'
 	icon_state = "pump"
@@ -17,27 +17,21 @@
 	active_power_usage = 200 * CELLRATE
 
 	var/obj/item/cell/cell = null
-	var/obj/item/hose_connector/output/Output = null
 	var/reagents_per_cycle = 5 // severe nerf to unupgraded speed
 	var/on = 0
 	var/unlocked = 0
 	var/open = 0
 
-/obj/machinery/pump/Initialize()
+/obj/machinery/pump/Initialize(mapload)
 	create_reagents(200)
 	. = ..()
 	default_apply_parts()
 	cell = default_use_hicell()
 
-	Output = new(src)
+	AddComponent(/datum/component/hose_connector/output)
 
 	RefreshParts()
 	update_icon()
-
-/obj/machinery/pump/Destroy()
-	QDEL_NULL(cell)
-	QDEL_NULL(Output)
-	. = ..()
 
 /obj/machinery/pump/RefreshParts()
 	var/obj/item/stock_parts/manipulator/SM = locate() in component_parts
@@ -94,11 +88,8 @@
 	T.pump_reagents(reagents, reagents_per_cycle)
 	update_icon()
 
-	if(Output.get_pairing())
-		reagents.trans_to_holder(Output.reagents, Output.reagents.maximum_volume)
-		if(prob(5))
-			visible_message(span_notice("\The [src] gurgles as it pumps fluid."))
-
+	var/datum/component/hose_connector/HC = GetComponent(/datum/component/hose_connector)
+	HC.force_pump()
 
 // Sets the power state, if possible.
 // Returns TRUE/FALSE on power state changing

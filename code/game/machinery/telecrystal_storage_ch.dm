@@ -84,7 +84,7 @@
 	icon_state = "x4"
 	var/amount_to_spawn = 5
 
-/obj/tcspawner/Initialize()
+/obj/tcspawner/Initialize(mapload)
 	..()
 
 	var/turf/T = get_turf(src)

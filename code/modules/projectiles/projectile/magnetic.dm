@@ -37,8 +37,7 @@
 /obj/item/projectile/bullet/magnetic/flechette/hunting
 	name = "shredder slug"
 	armor_penetration = 30
-	SA_bonus_damage = 40
-	SA_vulnerability = SA_ANIMAL
+	mob_bonus_damage = 40
 	hud_state = "alloy_spike"
 
 /obj/item/projectile/bullet/magnetic/heated
@@ -174,7 +173,7 @@
 	range = 6
 	hud_state = "plasma_rifle_blast"
 
-/obj/item/projectile/bullet/magnetic/bore/Initialize(loc, range_mod) // i'm gonna be real honest i dunno how this works but it does
+/obj/item/projectile/bullet/magnetic/bore/Initialize(mapload, range_mod) // i'm gonna be real honest i dunno how this works but it does
 	. = ..()
 	range += range_mod
 

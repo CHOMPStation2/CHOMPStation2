@@ -23,7 +23,7 @@
 	icon_keyboard = "tech_key"
 	icon_screen = "supply"
 	light_color = "#b88b2e"
-	req_access = list(access_cargo)
+	//req_access = list(access_cargo) //CHOMPedit, removing hard access locks.
 	circuit = /obj/item/circuitboard/supplycomp/control
 	authorization = SUP_SEND_SHUTTLE | SUP_ACCEPT_ORDERS
 
@@ -177,7 +177,7 @@
 
 		pack_list.Add(list(pack))
 	data["supply_packs"] = pack_list
-	data["categories"] = all_supply_groups
+	data["categories"] = GLOB.all_supply_groups
 	return data
 
 /obj/machinery/computer/supplycomp/tgui_act(action, params, datum/tgui/ui)

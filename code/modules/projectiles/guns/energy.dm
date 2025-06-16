@@ -29,8 +29,8 @@
 	var/battery_lock = 0	//If set, weapon cannot switch batteries
 	var/random_start_ammo = FALSE	//if TRUE, the weapon will spawn with randomly-determined ammo
 
-/obj/item/gun/energy/New()
-	//..() CHOMPEdit moved to bottom
+/obj/item/gun/energy/Initialize(mapload)
+	. = ..()
 	var/static/list/gun_icons = icon_states('icons/obj/gun_ch.dmi')
 	if (icon == 'icons/obj/gun_ch.dmi' && !(icon_state in gun_icons))
 		icon = 'icons/obj/gun.dmi'
@@ -45,14 +45,7 @@
 	//random starting power! gives us a random number of shots in the battery between 0 and the max possible
 	if(random_start_ammo && cell_type)
 		power_supply.charge = charge_cost*rand(0,power_supply.maxcharge/charge_cost)
-	//update_icon() //CHOMPRemove
-	..() //CHOMPEdit if you see this, it is a cry for help. Please tell people to stop putting ..() at the top of New() :(
-
-//CHOMPEdit Start
-/obj/item/gun/energy/Initialize()
-	. = ..()
 	update_icon()
-//CHOMPEdit End
 
 /obj/item/gun/energy/Destroy()
 	if(self_recharge)

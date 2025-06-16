@@ -45,10 +45,10 @@
 
 
 /obj/item/stack/material/weathered_agate
-	name = "weathered agate"
+	name = MAT_WAGATE
 	icon_state = "sheet-void_opal"
 	singular_name = "weathered agate"
-	default_type = "weathered agate"
+	default_type = MAT_WAGATE
 
 /obj/item/reagent_containers/food/snacks/weatherlily
 	name = "strange leaves"
@@ -57,7 +57,7 @@
 	icon_state = "leaves"
 	bitesize = 1
 
-/obj/item/reagent_containers/food/snacks/weatherlily/Initialize()
+/obj/item/reagent_containers/food/snacks/weatherlily/Initialize(mapload)
 	. = ..()
 	//reagents.add_reagent(REAGENT_ID_AMATOXIN, 1) I want this for lore of this being a strange bioenginered thing to mess with organic things buuuut it's one of two food sources
 	reagents.add_reagent(REAGENT_ID_LUMINOL,1)
@@ -109,8 +109,8 @@
 	desc = "A strange plant."
 	icon_state = "tyrflora"
 
-/obj/structure/flora/tyr/flowers/New()
-	..()
+/obj/structure/flora/tyr/flowers/Initialize(mapload)
+	. = ..()
 	icon_state = "tyrflora[rand(1, 5)]gb"
 
 //tier 2
@@ -124,7 +124,7 @@
 	nutriment_desc = list(REAGENT_ID_PROTEIN = 4)
 	bitesize = 2
 
-/obj/item/reagent_containers/food/snacks/mutatedmeat/Initialize()
+/obj/item/reagent_containers/food/snacks/mutatedmeat/Initialize(mapload)
 	. = ..()
 	reagents.add_reagent(REAGENT_ID_PROTEIN, 4)
 
@@ -138,7 +138,7 @@
 	var/static/list/possible_states = list("crystal", "generator","core", "hilt")
 	var/static/list/possible_tech = list(TECH_MATERIAL, TECH_ENGINEERING, TECH_PHORON, TECH_POWER, TECH_BIO, TECH_COMBAT, TECH_MAGNET, TECH_DATA)
 
-/obj/item/prop/alien/prototype/Initialize()
+/obj/item/prop/alien/prototype/Initialize(mapload)
 	. = ..()
 	icon_state = pick(possible_states)
 	var/list/techs = possible_tech.Copy()

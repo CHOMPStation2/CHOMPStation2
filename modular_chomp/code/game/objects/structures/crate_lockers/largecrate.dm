@@ -14,7 +14,7 @@
 	name = "Dangerous drone carrier"
 	starts_with = list(/mob/living/simple_mob/vore/sect_drone)
 
-/obj/structure/largecrate/animal/bugsect/Initialize()
+/obj/structure/largecrate/animal/bugsect/Initialize(mapload)
 	starts_with = list(pick(/mob/living/simple_mob/vore/sect_drone,
 							/mob/living/simple_mob/vore/sect_queen))
 	return ..()

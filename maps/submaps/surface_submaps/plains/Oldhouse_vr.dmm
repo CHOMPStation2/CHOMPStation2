@@ -35,7 +35,7 @@
 /area/submap/Oldhouse)
 "aj" = (
 /turf/simulated/floor/wood{
-	icon_state = "wood-broken6"
+	icon_state = "wood_broken6"
 	},
 /area/submap/Oldhouse)
 "ak" = (
@@ -58,12 +58,12 @@
 "ao" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/wood{
-	icon_state = "wood-broken4"
+	icon_state = "wood_broken4"
 	},
 /area/submap/Oldhouse)
 "ap" = (
 /turf/simulated/floor/wood{
-	icon_state = "wood-broken2"
+	icon_state = "wood_broken2"
 	},
 /area/submap/Oldhouse)
 "aq" = (
@@ -75,7 +75,7 @@
 /area/submap/Oldhouse)
 "as" = (
 /turf/simulated/floor/wood{
-	icon_state = "wood-broken4"
+	icon_state = "wood_broken4"
 	},
 /area/submap/Oldhouse)
 "at" = (
@@ -103,7 +103,7 @@
 "ax" = (
 /obj/effect/decal/cleanable/cobweb,
 /turf/simulated/floor/wood{
-	icon_state = "wood-broken6"
+	icon_state = "wood_broken6"
 	},
 /area/submap/Oldhouse)
 "ay" = (
@@ -193,11 +193,6 @@
 	},
 /turf/simulated/floor/carpet/turcarpet,
 /area/submap/Oldhouse)
-"aO" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/carpet/turcarpet,
-/area/submap/Oldhouse)
 "aP" = (
 /obj/item/circuitboard/papershredder,
 /turf/simulated/floor/wood,
@@ -246,13 +241,13 @@
 "aY" = (
 /obj/structure/table/woodentable,
 /turf/simulated/floor/wood{
-	icon_state = "wood-broken6"
+	icon_state = "wood_broken6"
 	},
 /area/submap/Oldhouse)
 "aZ" = (
 /obj/structure/table/woodentable,
 /turf/simulated/floor/wood{
-	icon_state = "wood-broken2"
+	icon_state = "wood_broken2"
 	},
 /area/submap/Oldhouse)
 "ba" = (
@@ -715,7 +710,7 @@ ar
 ar
 ar
 an
-aO
+an
 ai
 ai
 au

@@ -1,9 +1,8 @@
 /* eslint react/no-danger: "off" */
-import { RefObject, useEffect, useRef, useState } from 'react';
+import { type RefObject, useEffect, useRef, useState } from 'react';
 import { useBackend } from 'tgui/backend';
 import { Window } from 'tgui/layouts';
 import {
-  Box,
   Button,
   Divider,
   Input,
@@ -48,7 +47,7 @@ export const TicketChat = (props) => {
   const [ticketChat, setTicketChat] = useState('');
   const { id, level, handler, log } = data;
 
-  const messagesEndRef: RefObject<HTMLDivElement> = useRef(null);
+  const messagesEndRef: RefObject<HTMLDivElement | null> = useRef(null);
 
   useEffect(() => {
     const scroll = messagesEndRef.current;
@@ -77,9 +76,7 @@ export const TicketChat = (props) => {
             <Section
               title={'Ticket #' + id}
               buttons={
-                <Box nowrap>
-                  <Button color={LevelColor[level]}>{Level[level]}</Button>
-                </Box>
+                <Button color={LevelColor[level]}>{Level[level]}</Button>
               }
             >
               <LabeledList>
@@ -109,12 +106,11 @@ export const TicketChat = (props) => {
                 <Stack.Item grow>
                   <Input
                     autoFocus
-                    updateOnPropsChange
                     autoSelect
                     fluid
                     placeholder="Enter a message..."
                     value={ticketChat}
-                    onInput={(e, value: string) => setTicketChat(value)}
+                    onChange={(value: string) => setTicketChat(value)}
                     onKeyDown={(e) => {
                       if (KEY.Enter === e.key) {
                         act('send_msg', { msg: ticketChat });

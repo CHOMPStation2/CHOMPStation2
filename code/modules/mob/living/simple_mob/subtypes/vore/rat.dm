@@ -76,6 +76,8 @@
 /mob/living/simple_mob/vore/aggressive/rat/init_vore()
 	if(!voremob_loaded)
 		return
+	if(LAZYLEN(vore_organs))
+		return
 	. = ..()
 	var/obj/belly/B = vore_selected
 	B.name = "stomach"
@@ -259,7 +261,7 @@
 	name = "pet rat"
 	ai_holder_type = /datum/ai_holder/simple_mob/retaliate
 
-/mob/living/simple_mob/vore/aggressive/rat/pet/Initialize()
+/mob/living/simple_mob/vore/aggressive/rat/pet/Initialize(mapload)
 	.=..()
 
 	var/chance = rand(1,101)

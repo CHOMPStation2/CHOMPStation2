@@ -219,14 +219,13 @@
 
 	return hear
 
-//CHOMPEdit - entire proc changed basically to use recursive listening
 /proc/get_mobs_in_radio_ranges(var/list/obj/item/radio/radios)
 
 	. = list()
 	// Returns a list of mobs who can hear any of the radios given in @radios
 	for(var/obj/item/radio/R as anything in radios)
 		if(get_turf(R))
-			for(var/turf/T in R.can_broadcast_to())	//CHOMPEdit
+			for(var/turf/T in R.can_broadcast_to())
 				for (var/atom/movable/hearing in T)
 					if (hearing.recursive_listeners)
 						. |= hearing.recursive_listeners
@@ -382,7 +381,7 @@
 	else
 		return 0
 
-/proc/get_cardinal_step_away(atom/start, atom/finish) //returns the position of a step from start away from finish, in one of the cardinal directions
+/proc/get_cardinal_step_away(atom/start, atom/finish) //returns the position of a step from start away from finish, in one of the GLOB.cardinal directions
 	//returns only NORTH, SOUTH, EAST, or WEST
 	var/dx = finish.x - start.x
 	var/dy = finish.y - start.y
@@ -550,7 +549,7 @@
 	return mixedcolor
 
 /**
-* Gets the highest and lowest pressures from the tiles in cardinal directions
+* Gets the highest and lowest pressures from the tiles in GLOB.cardinal directions
 * around us, then checks the difference.
 */
 /proc/getOPressureDifferential(var/turf/loc)
@@ -744,3 +743,6 @@
 
 	var/color = rgb(r, g, b)
 	return color
+
+/proc/remove_image_from_client(image/image, client/remove_from)
+	remove_from?.images -= image

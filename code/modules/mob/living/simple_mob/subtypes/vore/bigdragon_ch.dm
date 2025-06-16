@@ -249,8 +249,8 @@ I think I covered everything.
 	//verbs |= /mob/living/simple_mob/vore/bigdragon/proc/set_desc //Implemented upstream
 	faction = FACTION_NEUTRAL
 
-/mob/living/simple_mob/vore/bigdragon/Initialize()
-	..()
+/mob/living/simple_mob/vore/bigdragon/Initialize(mapload)
+	. = ..()
 	src.adjust_nutrition(src.max_nutrition)
 	build_icons(1)
 	voremob_loaded = 1
@@ -538,6 +538,8 @@ I think I covered everything.
 /mob/living/simple_mob/vore/bigdragon/init_vore()
 	//Ow my sanity
 	if(!voremob_loaded)
+		return
+	if(LAZYLEN(vore_organs))
 		return
 	var/obj/belly/B = new /obj/belly/dragon/maw(src)
 	B.affects_vore_sprites = FALSE

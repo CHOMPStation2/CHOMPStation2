@@ -11,15 +11,14 @@
 	plane = ABOVE_MOB_PLANE
 	var/chaos
 
-/obj/item/a_gift/advanced/New()
-	..()
+/obj/item/a_gift/advanced/Initialize(mapload)
+	. = ..()
 	icon_state += "_[pick("g","r","b","y","p")]"
 	if(prob(1))
 		icon_state = "chomp_present_chaos"
 		chaos = TRUE
 		name = "chaotic present"
 		desc = "The casino dev messed up and gave you the wrong present! This one pulses with potential for good or evil!"
-	return
 
 /obj/item/a_gift/advanced/attack_self(mob/M as mob) //WIP - ALWAYS add more items to list! - Jack
 	var/gift_type_advanced = pick(

@@ -84,6 +84,8 @@
 	var/list/RGB2 = ReadRGB(rgb2)
 
 	// add missing alpha if needed
+	if(!RGB1 || !RGB2) //Don't blend if we don't two! No use blending what we don't have!
+		return
 	if(RGB1.len < RGB2.len) RGB1 += 255
 	else if(RGB2.len < RGB1.len) RGB2 += 255
 	var/usealpha = RGB1.len > 3
@@ -659,8 +661,7 @@ GLOBAL_LIST_EMPTY(cached_examine_icons)
 
 	if (!isicon(icon2collapse))
 		if (isfile(thing)) //special snowflake
-			//var/name = SANITIZE_FILENAME("[generate_asset_name(thing)].png")
-			var/name = "[generate_asset_name(thing)].png"
+			var/name = SANITIZE_FILENAME("[generate_asset_name(thing)].png")
 			if (!SSassets.cache[name])
 				SSassets.transport.register_asset(name, thing)
 			for (var/thing2 in targets)
@@ -756,3 +757,25 @@ GLOBAL_LIST_EMPTY(cached_examine_icons)
 
 	var/icon/I = getFlatIcon(thing, force_south = force_south)
 	return icon2html(I, target, sourceonly = sourceonly)
+
+/// Checks whether a given icon state exists in a given icon file. If `file` and `state` both exist,
+/// this will return `TRUE` - otherwise, it will return `FALSE`.
+///
+/// If you want a stack trace to be output when the given state/file doesn't exist, use
+/// `/proc/icon_exists_or_scream()`.
+/proc/icon_exists(file, state)
+	var/static/list/icon_states_cache = list()
+	if(isnull(file) || isnull(state))
+		return FALSE //This is common enough that it shouldn't panic, imo.
+
+	if(isnull(icon_states_cache[file]))
+		icon_states_cache[file] = list()
+		var/file_string = "[file]"
+		if(isfile(file) && length(file_string)) // ensure that it's actually a file, and not a runtime icon
+			for(var/istate in json_decode(rustg_dmi_icon_states(file_string)))
+				icon_states_cache[file][istate] = TRUE
+		else // Otherwise, we have to use the slower BYOND proc
+			for(var/istate in icon_states(file))
+				icon_states_cache[file][istate] = TRUE
+
+	return !isnull(icon_states_cache[file][state])

@@ -359,7 +359,7 @@
 /turf/simulated/floor/lino,
 /area/awaymission/diescraper/indoors/floor10)
 "bd" = (
-/obj/item/toy/plushie/susred,
+/obj/item/toy/plushie/sus,
 /turf/simulated/floor/concrete,
 /area/awaymission/diescraper/outside)
 "be" = (
@@ -543,7 +543,7 @@
 /area/awaymission/diescraper/indoors/floor2)
 "bC" = (
 /obj/structure/table/reinforced,
-/obj/item/reagent_containers/glass/bottle/culture/cold,
+/obj/item/reagent_containers/glass/beaker/vial/culture/cold,
 /obj/item/defib_kit/loaded,
 /turf/unsimulated/floor/tiled/old_tile/blue,
 /area/awaymission/diescraper/indoors/floor8)
@@ -3147,11 +3147,6 @@
 /obj/item/flashlight/lamp/green,
 /turf/simulated/floor/wood,
 /area/awaymission/diescraper/indoors/floor10)
-"jM" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/tiled/steel_dirty,
-/area/awaymission/diescraper/indoors/floor8)
 "jN" = (
 /obj/structure/table/hardwoodtable,
 /obj/item/paper_bin,
@@ -3977,7 +3972,7 @@
 /obj/random/mech_toy,
 /obj/random/mech_toy,
 /obj/random/mech_toy,
-/obj/item/toy/plushie/susred,
+/obj/item/toy/plushie/sus,
 /turf/simulated/floor/tiled/dark,
 /area/awaymission/diescraper/indoors/floor7)
 "lZ" = (
@@ -4481,7 +4476,6 @@
 /area/awaymission/diescraper/indoors/floor10)
 "nA" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/fruit_smudge,
 /obj/item/toy/plushie/bigcat,
 /turf/simulated/floor/tiled/steel_dirty,
@@ -4522,7 +4516,7 @@
 /turf/simulated/floor/tiled/white,
 /area/awaymission/diescraper/indoors/floor9)
 "nF" = (
-/obj/item/toy/plushie/red_eastdragon{
+/obj/item/toy/plushie/dragon/red_east{
 	desc = "This plushie looks like a doofus."
 	},
 /turf/simulated/floor/carpet/purple,
@@ -9927,7 +9921,6 @@
 /area/awaymission/diescraper/indoors/floor8)
 "CW" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/remains/mummy1,
 /turf/simulated/floor/tiled/steel_dirty,
 /area/awaymission/diescraper/indoors/floor8)
@@ -14944,12 +14937,6 @@
 /obj/random/medical,
 /obj/random/firstaid,
 /turf/unsimulated/floor/tiled/yellow,
-/area/awaymission/diescraper/indoors/floor8)
-"RF" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/random/junk,
-/turf/simulated/floor/tiled/steel_dirty,
 /area/awaymission/diescraper/indoors/floor8)
 "RG" = (
 /obj/machinery/light/flicker,
@@ -67352,9 +67339,9 @@ tk
 Gj
 lp
 Dj
-jM
+Gj
 CW
-jM
+Gj
 Ut
 Wo
 In
@@ -69150,10 +69137,10 @@ kR
 Ka
 pF
 CQ
-RF
-jM
+HU
+Gj
 nA
-RF
+HU
 Gj
 ak
 zL

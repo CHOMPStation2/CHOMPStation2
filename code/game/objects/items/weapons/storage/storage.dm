@@ -238,11 +238,9 @@
 
 /obj/item/storage/proc/open(mob/user as mob)
 	if (use_sound)
-		//CHOMPStation Edit
 		var/obj/belly/B = user.loc
 		if(isliving(user) && (!isbelly(B) || !(B.mode_flags & DM_FLAG_MUFFLEITEMS)))
 			playsound(src, src.use_sound, 50, 0, -5)
-		//CHOMPStation Edit end
 
 	orient2hud(user)
 	if(user.s_active)
@@ -823,11 +821,11 @@
 		icon_state = closed_state
 
 /obj/item/storage/trinketbox/Initialize(mapload)
-	. = ..()
 	if(!open_state)
 		open_state = "[initial(icon_state)]_open"
 	if(!closed_state)
 		closed_state = "[initial(icon_state)]"
+	. = ..()
 
 /obj/item/storage/trinketbox/attack_self()
 	open = !open

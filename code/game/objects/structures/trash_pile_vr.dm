@@ -30,7 +30,7 @@
 
 	var/global/list/allocated_gamma = list()
 
-/obj/structure/trash_pile/Initialize()
+/obj/structure/trash_pile/Initialize(mapload)
 	. = ..()
 	icon_state = pick(
 		"pile1",
@@ -103,10 +103,10 @@
 		return
 
 	var/timedifference = world.time - user.client.time_died_as_mouse
-	if(user.client.time_died_as_mouse && timedifference <= mouse_respawn_time * 600)
+	if(user.client.time_died_as_mouse && timedifference <= CONFIG_GET(number/mouse_respawn_time) MINUTES)
 		var/timedifference_text
-		timedifference_text = time2text(mouse_respawn_time * 600 - timedifference,"mm:ss")
-		to_chat(user, span_warning("You may only spawn again as a mouse more than [mouse_respawn_time] minutes after your death. You have [timedifference_text] left."))
+		timedifference_text = time2text(CONFIG_GET(number/mouse_respawn_time) MINUTES - timedifference,"mm:ss")
+		to_chat(user, span_warning("You may only spawn again as a mouse more than [CONFIG_GET(number/mouse_respawn_time)] minutes after your death. You have [timedifference_text] left."))
 		return
 
 	var/response = tgui_alert(user, "Are you -sure- you want to become a mouse?","Are you sure you want to squeek?",list("Squeek!","Nope!"))
@@ -306,6 +306,7 @@
 					prob(3);/obj/item/clothing/accessory/knuckledusters,
 					prob(3);/obj/item/clothing/gloves/heavy_engineer,
 					prob(3);/obj/item/reagent_containers/syringe/drugs,
+					prob(3);/obj/item/reagent_containers/syringe/old,
 					prob(2);/obj/item/implanter/sizecontrol,
 					prob(2);/obj/item/handcuffs/fuzzy,
 					prob(2);/obj/item/handcuffs/legcuffs/fuzzy,
@@ -315,6 +316,7 @@
 					prob(2);/obj/item/selectable_item/chemistrykit/size,
 					prob(2);/obj/item/selectable_item/chemistrykit/gender,
 					prob(2);/obj/item/clothing/gloves/bluespace/emagged,
+					prob(2);/obj/item/reagent_containers/glass/beaker/vial/sustenance,
 					prob(1);/obj/item/clothing/suit/storage/vest/heavy/merc,
 					prob(1);/obj/item/nif/bad,
 					prob(1);/obj/item/radio_jammer,
@@ -363,14 +365,14 @@
 	icon = 'icons/obj/trash_piles.dmi'
 	icon_state = "randompile"
 	spawn_types = list(
-    /mob/living/simple_mob/animal/passive/mouse= 100,
-    /mob/living/simple_mob/animal/passive/cockroach = 25)
+	/mob/living/simple_mob/animal/passive/mouse= 100,
+	/mob/living/simple_mob/animal/passive/cockroach = 25)
 	simultaneous_spawns = 1
 	destructible = 1
 	spawn_delay = 1 HOUR
 
-/obj/structure/mob_spawner/mouse_nest/New()
-	..()
+/obj/structure/mob_spawner/mouse_nest/Initialize(mapload)
+	. = ..()
 	last_spawn = rand(world.time - spawn_delay, world.time)
 	icon_state = pick(
 		"pile1",

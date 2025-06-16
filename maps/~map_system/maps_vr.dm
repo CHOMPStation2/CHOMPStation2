@@ -93,4 +93,4 @@
 					error("Randompick Z level \"[map]\" is not a valid map!")
 				else
 					MT.load_new_z(centered = FALSE)
-    . = ..()
+	. = ..()

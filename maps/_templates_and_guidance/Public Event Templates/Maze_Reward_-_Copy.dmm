@@ -13,7 +13,7 @@
 	name = "Veil of sanity"
 	},
 /turf/simulated/floor/flesh/colour{
-	color = red
+	color = "red"
 	},
 /area/survivalpod)
 "bu" = (
@@ -30,12 +30,12 @@
 	name = "Veil of sanity"
 	},
 /obj/effect/spider/stickyweb/dark{
-	color = #8A0808;
+	color = "#8A0808";
 	desc = "You gaze upon a mess of stained barbed wires,  the attempt of making sense upon this scratches thoughts from your mind as it fills you with a sense of dread, it's best you don't get tangled in this mess";
 	name = "Wires of doubt"
 	},
 /turf/simulated/floor/flesh/colour{
-	color = red
+	color = "red"
 	},
 /area/survivalpod)
 "bG" = (
@@ -54,7 +54,7 @@
 	invisibility = 99
 	},
 /turf/simulated/floor/flesh/colour{
-	color = red
+	color = "red"
 	},
 /area/survivalpod)
 "bL" = (
@@ -73,12 +73,12 @@
 	name = "Veil of sanity"
 	},
 /obj/effect/spider/stickyweb/dark{
-	color = #8A0808;
+	color = "#8A0808";
 	desc = "You gaze upon a mess of stained barbed wires,  the attempt of making sense upon this scratches thoughts from your mind as it fills you with a sense of dread, it's best you don't get tangled in this mess";
 	name = "Wires of doubt"
 	},
 /turf/simulated/floor/flesh/colour{
-	color = red
+	color = "red"
 	},
 /area/survivalpod)
 "cA" = (
@@ -94,12 +94,12 @@
 	name = "Veil of sanity"
 	},
 /obj/effect/spider/stickyweb{
-	color = #8A0808;
+	color = "#8A0808";
 	desc = "Like a leash you can see those strings trying to hold you back, hesitating at the thought only to exasperate the sensation of the reality you are in. . . this may not be an illusion.";
 	name = "Strings of distress"
 	},
 /turf/simulated/floor/flesh/colour{
-	color = red
+	color = "red"
 	},
 /area/survivalpod)
 "cI" = (
@@ -123,7 +123,7 @@
 	name = "Veil of sanity"
 	},
 /obj/effect/spider/stickyweb{
-	color = #8A0808;
+	color = "#8A0808";
 	desc = "Like a leash you can see those strings trying to hold you back, hesitating at the thought only to exasperate the sensation of the reality you are in. . . this may not be an illusion.";
 	name = "Strings of distress"
 	},
@@ -143,12 +143,12 @@
 	name = "Veil of sanity"
 	},
 /obj/effect/spider/stickyweb{
-	color = #8A0808;
+	color = "#8A0808";
 	desc = "Like a leash you can see those strings trying to hold you back, hesitating at the thought only to exasperate the sensation of the reality you are in. . . this may not be an illusion.";
 	name = "Strings of distress"
 	},
 /turf/simulated/floor/flesh/colour{
-	color = red
+	color = "red"
 	},
 /area/survivalpod)
 "fH" = (
@@ -168,12 +168,12 @@
 	name = "Veil of sanity"
 	},
 /obj/effect/spider/stickyweb/dark{
-	color = #8A0808;
+	color = "#8A0808";
 	desc = "You gaze upon a mess of stained barbed wires,  the attempt of making sense upon this scratches thoughts from your mind as it fills you with a sense of dread, it's best you don't get tangled in this mess";
 	name = "Wires of doubt"
 	},
 /turf/simulated/floor/flesh/colour{
-	color = red
+	color = "red"
 	},
 /area/survivalpod)
 "gW" = (
@@ -189,7 +189,7 @@
 	name = "Veil of sanity"
 	},
 /obj/effect/spider/stickyweb/dark{
-	color = #8A0808;
+	color = "#8A0808";
 	desc = "You gaze upon a mess of stained barbed wires,  the attempt of making sense upon this scratches thoughts from your mind as it fills you with a sense of dread, it's best you don't get tangled in this mess";
 	name = "Wires of doubt"
 	},
@@ -222,12 +222,12 @@
 	name = "Veil of sanity"
 	},
 /obj/effect/spider/stickyweb/dark{
-	color = #8A0808;
+	color = "#8A0808";
 	desc = "You gaze upon a mess of stained barbed wires,  the attempt of making sense upon this scratches thoughts from your mind as it fills you with a sense of dread, it's best you don't get tangled in this mess";
 	name = "Wires of doubt"
 	},
 /turf/simulated/floor/flesh/colour{
-	color = red
+	color = "red"
 	},
 /area/survivalpod)
 "hJ" = (
@@ -242,12 +242,12 @@
 	name = "Veil of sanity"
 	},
 /obj/effect/spider/stickyweb/dark{
-	color = #8A0808;
+	color = "#8A0808";
 	desc = "You gaze upon a mess of stained barbed wires,  the attempt of making sense upon this scratches thoughts from your mind as it fills you with a sense of dread, it's best you don't get tangled in this mess";
 	name = "Wires of doubt"
 	},
 /turf/simulated/floor/flesh/colour{
-	color = red
+	color = "red"
 	},
 /area/survivalpod)
 "iK" = (
@@ -267,7 +267,7 @@
 	name = "Veil of sanity"
 	},
 /turf/simulated/floor/flesh/colour{
-	color = red
+	color = "red"
 	},
 /area/survivalpod)
 "lQ" = (
@@ -287,7 +287,7 @@
 	name = "Veil of sanity"
 	},
 /obj/effect/spider/stickyweb/dark{
-	color = #8A0808;
+	color = "#8A0808";
 	desc = "You gaze upon a mess of stained barbed wires,  the attempt of making sense upon this scratches thoughts from your mind as it fills you with a sense of dread, it's best you don't get tangled in this mess";
 	name = "Wires of doubt"
 	},
@@ -310,12 +310,12 @@
 	name = "Veil of sanity"
 	},
 /obj/effect/spider/stickyweb/dark{
-	color = #8A0808;
+	color = "#8A0808";
 	desc = "You gaze upon a mess of stained barbed wires,  the attempt of making sense upon this scratches thoughts from your mind as it fills you with a sense of dread, it's best you don't get tangled in this mess";
 	name = "Wires of doubt"
 	},
 /turf/simulated/floor/flesh/colour{
-	color = red
+	color = "red"
 	},
 /area/survivalpod)
 "nA" = (
@@ -348,25 +348,6 @@
 	dir = 1;
 	maxhealth = 500;
 	name = "Veil of sanity"
-	},
-/turf/simulated/floor/gorefloor,
-/area/survivalpod)
-"pn" = (
-/obj/structure/window/phoronreinforced{
-	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
-	dir = 1;
-	maxhealth = 500;
-	name = "Veil of sanity"
-	},
-/obj/structure/window/phoronreinforced{
-	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
-	maxhealth = 500;
-	name = "Veil of sanity"
-	},
-/obj/structure/gootrap{
-	basecolor = #610B0B;
-	desc = "As if you stepped on a bear trap, you can feel a chilling horror crawling up your spine, gazing upon a pond of maroon fluids you can't help but experience terror upon it";
-	name = "Spill of fear"
 	},
 /turf/simulated/floor/gorefloor,
 /area/survivalpod)
@@ -407,7 +388,7 @@
 	once = 0
 	},
 /turf/simulated/floor/flesh/colour{
-	color = red
+	color = "red"
 	},
 /area/survivalpod)
 "sS" = (
@@ -420,7 +401,7 @@
 /obj/effect/map_effect/interval/sound_emitter/geiger/high,
 /obj/effect/map_effect/interval/sound_emitter/thunder,
 /turf/simulated/floor/flesh/colour{
-	color = red
+	color = "red"
 	},
 /area/survivalpod)
 "tf" = (
@@ -438,16 +419,6 @@
 	},
 /turf/simulated/floor/gorefloor,
 /area/survivalpod)
-"tq" = (
-/obj/effect/simple_portal/linked{
-	desc = "It looks like a hole that leads to somewhere, although you can't quite see through it. . . It seems dormant and sealed closed. . .";
-	name = "Demonic portal";
-	portal_id = 20
-	},
-/turf/simulated/floor/flesh/colour{
-	color = red
-	},
-/area/survivalpod)
 "tt" = (
 /obj/structure/window/phoronreinforced{
 	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
@@ -461,7 +432,7 @@
 	name = "Veil of sanity"
 	},
 /obj/effect/spider/stickyweb/dark{
-	color = #8A0808;
+	color = "#8A0808";
 	desc = "You gaze upon a mess of stained barbed wires,  the attempt of making sense upon this scratches thoughts from your mind as it fills you with a sense of dread, it's best you don't get tangled in this mess";
 	name = "Wires of doubt"
 	},
@@ -475,7 +446,7 @@
 	name = "Veil of sanity"
 	},
 /obj/effect/spider/stickyweb/dark{
-	color = #8A0808;
+	color = "#8A0808";
 	desc = "You gaze upon a mess of stained barbed wires,  the attempt of making sense upon this scratches thoughts from your mind as it fills you with a sense of dread, it's best you don't get tangled in this mess";
 	name = "Wires of doubt"
 	},
@@ -503,7 +474,7 @@
 	name = "Veil of sanity"
 	},
 /turf/simulated/floor/flesh/colour{
-	color = red
+	color = "red"
 	},
 /area/survivalpod)
 "wU" = (
@@ -519,7 +490,7 @@
 	name = "Veil of sanity"
 	},
 /turf/simulated/floor/flesh/colour{
-	color = red
+	color = "red"
 	},
 /area/survivalpod)
 "xC" = (
@@ -554,7 +525,7 @@
 	name = "Veil of sanity"
 	},
 /obj/effect/spider/stickyweb{
-	color = #8A0808;
+	color = "#8A0808";
 	desc = "Like a leash you can see those strings trying to hold you back, hesitating at the thought only to exasperate the sensation of the reality you are in. . . this may not be an illusion.";
 	name = "Strings of distress"
 	},
@@ -600,7 +571,7 @@
 	name = "Veil of sanity"
 	},
 /turf/simulated/floor/flesh/colour{
-	color = red
+	color = "red"
 	},
 /area/survivalpod)
 "AR" = (
@@ -617,7 +588,7 @@
 	name = "Veil of sanity"
 	},
 /turf/simulated/floor/flesh/colour{
-	color = red
+	color = "red"
 	},
 /area/survivalpod)
 "Bt" = (
@@ -629,7 +600,7 @@
 /area/survivalpod)
 "Bw" = (
 /obj/effect/spider/stickyweb{
-	color = #8A0808;
+	color = "#8A0808";
 	desc = "Like a leash you can see those strings trying to hold you back, hesitating at the thought only to exasperate the sensation of the reality you are in. . . this may not be an illusion.";
 	name = "Strings of distress"
 	},
@@ -646,7 +617,7 @@
 	name = "Veil of sanity"
 	},
 /turf/simulated/floor/flesh/colour{
-	color = red
+	color = "red"
 	},
 /area/survivalpod)
 "Cy" = (
@@ -666,7 +637,7 @@
 	name = "Veil of sanity"
 	},
 /turf/simulated/floor/flesh/colour{
-	color = red
+	color = "red"
 	},
 /area/survivalpod)
 "Dn" = (
@@ -702,12 +673,12 @@
 /area/survivalpod)
 "Es" = (
 /obj/effect/spider/stickyweb/dark{
-	color = #8A0808;
+	color = "#8A0808";
 	desc = "You gaze upon a mess of stained barbed wires,  the attempt of making sense upon this scratches thoughts from your mind as it fills you with a sense of dread, it's best you don't get tangled in this mess";
 	name = "Wires of doubt"
 	},
 /turf/simulated/floor/flesh/colour{
-	color = red
+	color = "red"
 	},
 /area/survivalpod)
 "Fv" = (
@@ -725,7 +696,7 @@
 	name = "Veil of sanity"
 	},
 /turf/simulated/floor/flesh/colour{
-	color = red
+	color = "red"
 	},
 /area/survivalpod)
 "GI" = (
@@ -739,12 +710,6 @@
 /obj/structure/girder/cult,
 /turf/simulated/floor/cult,
 /area/survivalpod)
-"Ia" = (
-/mob/living/simple_mob/vore/demonAI{
-	faction = "cult"
-	},
-/turf/simulated/floor/gorefloor2,
-/area/survivalpod)
 "Ib" = (
 /obj/structure/window/phoronreinforced{
 	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
@@ -753,12 +718,12 @@
 	name = "Veil of sanity"
 	},
 /obj/effect/spider/stickyweb{
-	color = #8A0808;
+	color = "#8A0808";
 	desc = "Like a leash you can see those strings trying to hold you back, hesitating at the thought only to exasperate the sensation of the reality you are in. . . this may not be an illusion.";
 	name = "Strings of distress"
 	},
 /turf/simulated/floor/flesh/colour{
-	color = red
+	color = "red"
 	},
 /area/survivalpod)
 "In" = (
@@ -774,14 +739,8 @@
 	name = "Veil of sanity"
 	},
 /turf/simulated/floor/flesh/colour{
-	color = red
+	color = "red"
 	},
-/area/survivalpod)
-"Iy" = (
-/mob/living/simple_mob/vore/demon/wendigo{
-	faction = "cult"
-	},
-/turf/simulated/floor/gorefloor2,
 /area/survivalpod)
 "Jb" = (
 /obj/effect/decal/remains/deer,
@@ -795,27 +754,6 @@
 "Jt" = (
 /obj/structure/loot_pile/surface/bones,
 /turf/simulated/floor/gorefloor2,
-/area/survivalpod)
-"JY" = (
-/obj/structure/window/phoronreinforced{
-	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
-	dir = 1;
-	maxhealth = 500;
-	name = "Veil of sanity"
-	},
-/obj/structure/gootrap{
-	basecolor = #610B0B;
-	desc = "As if you stepped on a bear trap, you can feel a chilling horror crawling up your spine, gazing upon a pond of maroon fluids you can't help but experience terror upon it";
-	name = "Spill of fear"
-	},
-/obj/structure/window/phoronreinforced{
-	desc = "You gaze upon a nightmare of your own mind as it feels as if the horrors before you can harm you, yet the thought of keeping yourself alive cracks upon the glass you gaze at. You have to keep yourself sane. . .";
-	maxhealth = 500;
-	name = "Veil of sanity"
-	},
-/turf/simulated/floor/flesh/colour{
-	color = red
-	},
 /area/survivalpod)
 "Kb" = (
 /turf/simulated/goreeyes,
@@ -849,12 +787,12 @@
 	name = "Veil of sanity"
 	},
 /obj/effect/spider/stickyweb{
-	color = #8A0808;
+	color = "#8A0808";
 	desc = "Like a leash you can see those strings trying to hold you back, hesitating at the thought only to exasperate the sensation of the reality you are in. . . this may not be an illusion.";
 	name = "Strings of distress"
 	},
 /turf/simulated/floor/flesh/colour{
-	color = red
+	color = "red"
 	},
 /area/survivalpod)
 "Lq" = (
@@ -870,12 +808,12 @@
 	name = "Veil of sanity"
 	},
 /turf/simulated/floor/flesh/colour{
-	color = red
+	color = "red"
 	},
 /area/survivalpod)
 "LQ" = (
 /obj/effect/spider/stickyweb/dark{
-	color = #8A0808;
+	color = "#8A0808";
 	desc = "You gaze upon a mess of stained barbed wires,  the attempt of making sense upon this scratches thoughts from your mind as it fills you with a sense of dread, it's best you don't get tangled in this mess";
 	name = "Wires of doubt"
 	},
@@ -892,7 +830,7 @@
 	name = "Veil of sanity"
 	},
 /turf/simulated/floor/flesh/colour{
-	color = red
+	color = "red"
 	},
 /area/survivalpod)
 "LY" = (
@@ -915,7 +853,7 @@
 /area/survivalpod)
 "Mv" = (
 /turf/simulated/floor/flesh/colour{
-	color = red
+	color = "red"
 	},
 /area/survivalpod)
 "MT" = (
@@ -932,7 +870,7 @@
 	name = "Veil of sanity"
 	},
 /obj/effect/spider/stickyweb/dark{
-	color = #8A0808;
+	color = "#8A0808";
 	desc = "You gaze upon a mess of stained barbed wires,  the attempt of making sense upon this scratches thoughts from your mind as it fills you with a sense of dread, it's best you don't get tangled in this mess";
 	name = "Wires of doubt"
 	},
@@ -951,12 +889,12 @@
 	name = "Veil of sanity"
 	},
 /obj/effect/spider/stickyweb{
-	color = #8A0808;
+	color = "#8A0808";
 	desc = "Like a leash you can see those strings trying to hold you back, hesitating at the thought only to exasperate the sensation of the reality you are in. . . this may not be an illusion.";
 	name = "Strings of distress"
 	},
 /turf/simulated/floor/flesh/colour{
-	color = red
+	color = "red"
 	},
 /area/survivalpod)
 "NV" = (
@@ -967,14 +905,8 @@
 	name = "Veil of sanity"
 	},
 /turf/simulated/floor/flesh/colour{
-	color = red
+	color = "red"
 	},
-/area/survivalpod)
-"PU" = (
-/mob/living/simple_mob/vore/demon/covern{
-	faction = "cult"
-	},
-/turf/simulated/floor/cult,
 /area/survivalpod)
 "Qh" = (
 /obj/structure/window/phoronreinforced{
@@ -990,7 +922,7 @@
 	name = "Veil of sanity"
 	},
 /obj/effect/spider/stickyweb/dark{
-	color = #8A0808;
+	color = "#8A0808";
 	desc = "You gaze upon a mess of stained barbed wires,  the attempt of making sense upon this scratches thoughts from your mind as it fills you with a sense of dread, it's best you don't get tangled in this mess";
 	name = "Wires of doubt"
 	},
@@ -1026,12 +958,12 @@
 	name = "Veil of sanity"
 	},
 /obj/effect/spider/stickyweb/dark{
-	color = #8A0808;
+	color = "#8A0808";
 	desc = "You gaze upon a mess of stained barbed wires,  the attempt of making sense upon this scratches thoughts from your mind as it fills you with a sense of dread, it's best you don't get tangled in this mess";
 	name = "Wires of doubt"
 	},
 /turf/simulated/floor/flesh/colour{
-	color = red
+	color = "red"
 	},
 /area/survivalpod)
 "Sm" = (
@@ -1067,17 +999,12 @@
 	maxhealth = 500;
 	name = "Veil of sanity"
 	},
-/obj/structure/gootrap{
-	basecolor = #610B0B;
-	desc = "As if you stepped on a bear trap, you can feel a chilling horror crawling up your spine, gazing upon a pond of maroon fluids you can't help but experience terror upon it";
-	name = "Spill of fear"
-	},
 /obj/effect/step_trigger/message{
 	message = "Your body starts to feel numb with every step you take, there is an imposing presence you have yet to face. . . Maybe this isn't as bad.";
 	once = 0
 	},
 /turf/simulated/floor/flesh/colour{
-	color = red
+	color = "red"
 	},
 /area/survivalpod)
 "Th" = (
@@ -1092,7 +1019,7 @@
 	name = "Veil of sanity"
 	},
 /turf/simulated/floor/flesh/colour{
-	color = red
+	color = "red"
 	},
 /area/survivalpod)
 "TU" = (
@@ -1123,7 +1050,7 @@
 	name = "Veil of sanity"
 	},
 /obj/effect/spider/stickyweb/dark{
-	color = #8A0808;
+	color = "#8A0808";
 	desc = "You gaze upon a mess of stained barbed wires,  the attempt of making sense upon this scratches thoughts from your mind as it fills you with a sense of dread, it's best you don't get tangled in this mess";
 	name = "Wires of doubt"
 	},
@@ -1148,7 +1075,7 @@
 	name = "Veil of sanity"
 	},
 /turf/simulated/floor/flesh/colour{
-	color = red
+	color = "red"
 	},
 /area/survivalpod)
 "UH" = (
@@ -1165,7 +1092,7 @@
 	name = "Veil of sanity"
 	},
 /turf/simulated/floor/flesh/colour{
-	color = red
+	color = "red"
 	},
 /area/survivalpod)
 "UO" = (
@@ -1186,7 +1113,7 @@
 	name = "Veil of sanity"
 	},
 /obj/effect/spider/stickyweb{
-	color = #8A0808;
+	color = "#8A0808";
 	desc = "Like a leash you can see those strings trying to hold you back, hesitating at the thought only to exasperate the sensation of the reality you are in. . . this may not be an illusion.";
 	name = "Strings of distress"
 	},
@@ -1208,12 +1135,12 @@
 	name = "Veil of sanity"
 	},
 /obj/effect/spider/stickyweb/dark{
-	color = #8A0808;
+	color = "#8A0808";
 	desc = "You gaze upon a mess of stained barbed wires,  the attempt of making sense upon this scratches thoughts from your mind as it fills you with a sense of dread, it's best you don't get tangled in this mess";
 	name = "Wires of doubt"
 	},
 /turf/simulated/floor/flesh/colour{
-	color = red
+	color = "red"
 	},
 /area/survivalpod)
 "Yn" = (
@@ -1230,7 +1157,7 @@
 	name = "Veil of sanity"
 	},
 /turf/simulated/floor/flesh/colour{
-	color = red
+	color = "red"
 	},
 /area/survivalpod)
 "Yz" = (
@@ -1257,12 +1184,12 @@
 	name = "Veil of sanity"
 	},
 /obj/effect/spider/stickyweb{
-	color = #8A0808;
+	color = "#8A0808";
 	desc = "Like a leash you can see those strings trying to hold you back, hesitating at the thought only to exasperate the sensation of the reality you are in. . . this may not be an illusion.";
 	name = "Strings of distress"
 	},
 /turf/simulated/floor/flesh/colour{
-	color = red
+	color = "red"
 	},
 /area/survivalpod)
 
@@ -1421,7 +1348,7 @@ iK
 ZZ
 Es
 Mv
-tq
+Mv
 Mv
 NI
 iK
@@ -1452,7 +1379,7 @@ Mv
 Mv
 NI
 iK
-Ia
+eh
 Nh
 "}
 (8,1,1) = {"
@@ -1596,7 +1523,7 @@ eh
 eh
 eh
 iK
-JY
+CK
 iK
 eh
 eh
@@ -1695,7 +1622,7 @@ eh
 eh
 eh
 eh
-Iy
+eh
 Nh
 "}
 (17,1,1) = {"
@@ -1979,10 +1906,10 @@ Jt
 Nh
 YJ
 Bt
-pn
+LY
 iK
 El
-PU
+eD
 KC
 Ut
 vf
@@ -2000,7 +1927,7 @@ Nh
 Nh
 eh
 iK
-pn
+LY
 eh
 eh
 Kb

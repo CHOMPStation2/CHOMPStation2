@@ -1,11 +1,11 @@
 /datum/map/groundbase/New()
 	..()
 	var/choice = pickweight(list(
-		"virgo3C" = 200,
-		"rp2" = 200,
-		"logo1" = 20,
-		"logo2" = 20,
-		"gateway" = 5
+		'html/lobby/virgo3C.png' = 200,
+		'html/lobby/rp2.png' = 200,
+		'html/lobby/logo1.png' = 20,
+		'html/lobby/logo2.png' = 20,
+		'html/lobby/gateway.png' = 5
 	))
 	if(choice)
 		lobby_screens = list(choice)
@@ -23,8 +23,7 @@
 
 	zlevel_datum_type = /datum/map_z_level/groundbase
 
-	lobby_icon = 'icons/misc/title_vr.dmi'
-	lobby_screens = list("logo1")
+	lobby_screens = list('html/lobby/logo1.png')
 	id_hud_icons = 'icons/mob/hud_jobs_vr.dmi'
 
 
@@ -299,7 +298,7 @@
 
 // We have a bunch of stuff common to the station z levels
 /datum/map_z_level/groundbase
-	flags = MAP_LEVEL_STATION|MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER|MAP_LEVEL_CONSOLES|MAP_LEVEL_XENOARCH_EXEMPT|MAP_LEVEL_PERSIST
+	flags = MAP_LEVEL_STATION|MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER|MAP_LEVEL_CONSOLES|MAP_LEVEL_XENOARCH_EXEMPT|MAP_LEVEL_PERSIST|MAP_LEVEL_VORESPAWN
 	holomap_legend_x = 220
 	holomap_legend_y = 160
 

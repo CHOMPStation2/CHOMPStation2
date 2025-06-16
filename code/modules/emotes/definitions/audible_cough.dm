@@ -12,7 +12,6 @@
 	emote_volume_synthetic = 50
 
 	conscious = FALSE
-// CHOMPEdit Start: Standardize Species Sounds
 	// emote_sound_synthetic = list()
 
 /decl/emote/audible/cough/get_emote_sound(var/atom/user)
@@ -36,5 +35,4 @@
 			"vol" = emote_volume,
 			"volchannel" = VOLUME_CHANNEL_SPECIES_SOUNDS
 		)
-// CHOMPEdit End
 	return ..()

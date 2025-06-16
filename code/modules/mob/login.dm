@@ -31,6 +31,7 @@
 						log_adminwarn("Notice: [key_name(src)] has the same [matches] as [key_name(M)] (no longer logged in).")
 
 /mob/Login()
+	persistent_ckey = client.ckey
 
 	player_list |= src
 	update_Login_details()
@@ -62,6 +63,8 @@
 	if(!vis_enabled)
 		vis_enabled = list()
 	client.screen += plane_holder.plane_masters
+	if(GLOB.global_vantag_hud)
+		vantag_hud = TRUE
 	recalculate_vis()
 
 	// AO support
@@ -87,3 +90,6 @@
 		client.images += cloaked_selfimage
 	client.init_verbs()
 	SEND_SIGNAL(src, COMSIG_MOB_CLIENT_LOGIN, client)
+	SEND_SIGNAL(client, COMSIG_CLIENT_MOB_LOGIN, src)
+
+	set_listening(LISTENING_PLAYER)

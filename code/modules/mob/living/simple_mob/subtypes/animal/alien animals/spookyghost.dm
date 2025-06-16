@@ -86,7 +86,7 @@
 	reload_max = 1
 	reload_count = 0
 	reload_time = 7 SECONDS
-	
+
 	can_be_drop_prey = FALSE //CHOMP Add
 
 
@@ -191,7 +191,7 @@
 
 	ai_holder_type = /datum/ai_holder/simple_mob/melee/space_ghost
 
-/mob/living/simple_mob/vore/alienanimals/spooky_ghost/Initialize()
+/mob/living/simple_mob/vore/alienanimals/spooky_ghost/Initialize(mapload)
 	. = ..()
 	icon_living = "spookyghost-[rand(1,2)]"
 	icon_state = icon_living

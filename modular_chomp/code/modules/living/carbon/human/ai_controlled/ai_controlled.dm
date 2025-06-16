@@ -1,4 +1,4 @@
-/mob/living/carbon/human/ai_controlled/greytide/Initialize()
+/mob/living/carbon/human/ai_controlled/greytide/Initialize(mapload)
 	to_wear_r_hand = pick(
 		prob(20); /obj/item/storage/toolbox/electrical,
 		prob(20); /obj/item/storage/toolbox/mechanical,
@@ -20,7 +20,7 @@
 		)
 	else
 		to_wear_gloves = null
-	..()
+	. = ..()
 
 /mob/living/carbon/human/ai_controlled/greytide
 	name = "John Greytide" //theyll get a normal name on spawn

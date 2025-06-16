@@ -7,7 +7,7 @@
 	taste_description = "powdered wax"
 	reagent_state = LIQUID
 	color = "#888888"
-	overdose = 5
+	overdose = 10
 
 /datum/reagent/crayon_dust/red
 	name = REAGENT_CRAYONDUSTRED
@@ -56,7 +56,7 @@
 	taste_description = "extremely bitter"
 	reagent_state = LIQUID
 	color = "#888888"
-	overdose = 5
+	overdose = 10
 
 /datum/reagent/marker_ink/black
 	name = REAGENT_MARKERINKBLACK
@@ -176,6 +176,7 @@
 
 	glass_name = "liquid gold"
 	glass_desc = "It's magic. We don't have to explain it."
+	wiki_flag = WIKI_SPOILER
 
 /datum/reagent/adminordrazine/affect_touch(var/mob/living/carbon/M, var/alien, var/removed)
 	affect_blood(M, alien, removed)
@@ -316,6 +317,7 @@
 	affects_robots = TRUE
 	description = "The immense power of a supermatter crystal, in liquid form. You're not entirely sure how that's possible, but it's probably best handled with care."
 	taste_description = "taffy" // 0. The supermatter is tasty, tasty taffy.
+	wiki_flag = WIKI_SPOILER
 
 // Same as if you boop it wrong. It touches you, you die
 /datum/reagent/supermatter/affect_touch(mob/living/carbon/M, alien, removed)
@@ -357,6 +359,7 @@
 
 	glass_name = "holy water"
 	glass_desc = "An ashen-obsidian-water mix, this solution will alter certain sections of the brain's rationality."
+	wiki_flag = WIKI_SPOILER
 
 /datum/reagent/water/holywater/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
 	..()
@@ -443,7 +446,7 @@
 	..()
 	if(iscarbon(M))
 		var/mob/living/carbon/C = M
-		C.clean_blood(TRUE)
+		C.wash(CLEAN_SCRUB)
 
 	if(istype(M, /mob/living/simple_mob/vore/aggressive/macrophage)) // Big ouch for viruses
 		var/mob/living/simple_mob/macrophage = M
@@ -451,7 +454,7 @@
 
 /datum/reagent/space_cleaner/touch_obj(var/obj/O)
 	..()
-	O.clean_blood()
+	O.wash(CLEAN_SCRUB)
 
 /datum/reagent/space_cleaner/touch_turf(var/turf/T)
 	..()
@@ -459,7 +462,7 @@
 		if(istype(T, /turf/simulated))
 			var/turf/simulated/S = T
 			S.dirt = 0
-		T.clean_blood()
+		T.wash(CLEAN_SCRUB)
 		for(var/obj/effect/O in T)
 			if(istype(O,/obj/effect/rune) || istype(O,/obj/effect/decal/cleanable) || istype(O,/obj/effect/overlay))
 				qdel(O)
@@ -474,32 +477,32 @@
 
 /datum/reagent/space_cleaner/affect_touch(var/mob/living/carbon/M, var/alien, var/removed)
 	if(M.r_hand)
-		M.r_hand.clean_blood()
+		M.r_hand.wash(CLEAN_SCRUB)
 	if(M.l_hand)
-		M.l_hand.clean_blood()
+		M.l_hand.wash(CLEAN_SCRUB)
 	if(M.wear_mask)
-		if(M.wear_mask.clean_blood())
+		if(M.wear_mask.wash(CLEAN_SCRUB))
 			M.update_inv_wear_mask(0)
 	if(ishuman(M))
 		var/mob/living/carbon/human/H = M
 		if(alien == IS_SLIME)
 			M.adjustToxLoss(rand(5, 10))
 		if(H.head)
-			if(H.head.clean_blood())
+			if(H.head.wash(CLEAN_SCRUB))
 				H.update_inv_head(0)
 		if(H.wear_suit)
-			if(H.wear_suit.clean_blood())
+			if(H.wear_suit.wash(CLEAN_SCRUB))
 				H.update_inv_wear_suit(0)
 		else if(H.w_uniform)
-			if(H.w_uniform.clean_blood())
+			if(H.w_uniform.wash(CLEAN_SCRUB))
 				H.update_inv_w_uniform(0)
 		if(H.shoes)
-			if(H.shoes.clean_blood())
+			if(H.shoes.wash(CLEAN_SCRUB))
 				H.update_inv_shoes(0)
 		else
-			H.clean_blood(1)
+			H.wash(CLEAN_SCRUB)
 			return
-	M.clean_blood()
+	M.wash(CLEAN_SCRUB)
 
 /datum/reagent/space_cleaner/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
 	if(alien == IS_SLIME)
@@ -651,6 +654,7 @@
 	color = "#333333"
 	metabolism = REM * 3 // Broken nanomachines go a bit slower.
 	scannable = 1
+	wiki_flag = WIKI_SPOILER
 
 /datum/reagent/defective_nanites/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	M.take_organ_damage(2 * removed, 2 * removed)

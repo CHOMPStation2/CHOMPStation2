@@ -26,7 +26,7 @@
 /obj/away_mission_init/guttersite
 	name = "away mission initializer - guttersite"
 
-/obj/away_mission_init/guttersite/Initialize()
+/obj/away_mission_init/guttersite/Initialize(mapload)
 	initialized = TRUE
 	return INITIALIZE_HINT_QDEL
 

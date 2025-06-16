@@ -241,9 +241,9 @@
 	name = "Virus Samples - FRAGILE";
 	opened = 1
 	},
-/obj/item/reagent_containers/glass/bottle/culture/cold,
-/obj/item/reagent_containers/glass/bottle/culture/cold,
-/obj/item/reagent_containers/glass/bottle/culture/cold,
+/obj/item/reagent_containers/glass/beaker/vial/culture/cold,
+/obj/item/reagent_containers/glass/beaker/vial/culture/cold,
+/obj/item/reagent_containers/glass/beaker/vial/culture/cold,
 /turf/simulated/floor/tiled/yellow,
 /area/survivalpod/superpose/CrashedQurantineShip)
 "aL" = (
@@ -630,7 +630,7 @@
 /turf/simulated/floor/tiled/milspec/sterile,
 /area/survivalpod/superpose/CrashedQurantineShip)
 "bP" = (
-/obj/item/reagent_containers/glass/bottle/culture/cold,
+/obj/item/reagent_containers/glass/beaker/vial/culture/cold,
 /turf/simulated/floor/tiled/yellow,
 /area/survivalpod/superpose/CrashedQurantineShip)
 "bQ" = (

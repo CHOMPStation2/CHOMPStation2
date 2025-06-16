@@ -535,7 +535,7 @@
 	var/list/zLevels = using_map.station_levels.Copy()
 	for(var/datum/planet/P in SSplanets.planets)
 		zLevels -= P.expected_z_levels
-	for(var/obj/machinery/gravity_generator/main/GG in machines)
+	for(var/obj/machinery/gravity_generator/main/GG in GLOB.machines)
 		if(GG.z in zLevels)
 			GG.update_areas()
 	return TRUE
@@ -671,14 +671,14 @@
 		return ROOM_ERR_LOLWAT
 	if(!visual && forbiddenAreas[first.loc.type] || forbiddenAreas[first.type]) //Is the area of the starting turf a banned area? Is the turf a banned area?
 		return ROOM_ERR_FORBIDDEN
-	var/list/turf/found = new
+	var/list/turf/found = list()
 	var/list/turf/pending = list(first)
 	while(pending.len)
 		if (found.len+pending.len > BP_MAX_ROOM_SIZE)
 			return ROOM_ERR_TOOLARGE
 		var/turf/T = pending[1] //why byond havent list::pop()?
 		pending -= T
-		for (var/dir in cardinal)
+		for (var/dir in GLOB.cardinal)
 			var/turf/NT = get_step(T,dir)
 			if (!isturf(NT) || (NT in found) || (NT in pending))
 				continue
@@ -828,14 +828,14 @@
 		to_chat(usr, span_warning("You can not create a room here."))
 		return
 	if(get_new_area_type(first.loc) == 1) //Are they in an area they can build? I tried to do this BUILDABLE_AREA_TYPES[first.loc.type] but it refused.
-		var/list/turf/found = new
+		var/list/turf/found = list()
 		var/list/turf/pending = list(first)
 		while(pending.len)
 			if (found.len+pending.len > 70)
 				return 1 //TOOLARGE
 			var/turf/T = pending[1]
 			pending -= T
-			for (var/dir in cardinal)
+			for (var/dir in GLOB.cardinal)
 				var/turf/NT = get_step(T,dir)
 				if (!isturf(NT) || (NT in found) || (NT in pending))
 					continue
@@ -936,7 +936,7 @@
 	var/list/zLevels = using_map.station_levels.Copy()
 	for(var/datum/planet/P in SSplanets.planets)
 		zLevels -= P.expected_z_levels
-	for(var/obj/machinery/gravity_generator/main/GG in machines)
+	for(var/obj/machinery/gravity_generator/main/GG in GLOB.machines)
 		if(GG.z in zLevels)
 			GG.update_areas()
 	return

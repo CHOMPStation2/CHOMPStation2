@@ -1,13 +1,3 @@
-//CHOMPEdit, all moved to globals! code\__defines\nif_ch.dm
-//These two also have NIF FLAG representations. These are the local setting representations.
-//# define NIF_SC_CATCHING_ME			0x1 //CHOMPRemove
-//# define NIF_SC_CATCHING_OTHERS		0x2 //CHOMPRemove
-//These are purely local setings flags, without global representation.
-//# define NIF_SC_ALLOW_EARS			0x4 //CHOMPRemove
-//# define NIF_SC_ALLOW_EYES			0x8 //CHOMPRemove
-//# define NIF_SC_BACKUPS				0x10 //CHOMPRemove
-//# define NIF_SC_PROJECTING			0x20 //CHOMPRemove
-
 ///////////
 // Soulcatcher - Like a posibrain, sorta!
 /datum/nifsoft/soulcatcher
@@ -238,7 +228,7 @@
 //Complex version for catching in-round characters
 /datum/nifsoft/soulcatcher/proc/catch_mob(var/mob/M)
 	if(!M.mind)	return
-	if(!(M.soulcatcher_pref_flags & SOULCATCHER_ALLOW_CAPTURE)) return
+	if(!(M.soulcatcher_pref_flags & SOULCATCHER_ALLOW_CAPTURE) && !isobserver(M)) return // Bypass pref check for observer join
 
 	//Create a new brain mob
 	var/mob/living/carbon/brain/caught_soul/brainmob = new(nif)
@@ -269,11 +259,9 @@
 		brainmob.ooc_notes = H.ooc_notes
 		brainmob.ooc_notes_likes = H.ooc_notes_likes
 		brainmob.ooc_notes_dislikes = H.ooc_notes_dislikes
-		//CHOMPEdit Start
 		brainmob.ooc_notes_favs = H.ooc_notes_favs
 		brainmob.ooc_notes_maybes = H.ooc_notes_maybes
 		brainmob.ooc_notes_style = H.ooc_notes_style
-		//CHOMPEdit End
 		brainmob.timeofhostdeath = H.timeofdeath
 		SStranscore.m_backup(brainmob.mind,0) //It does ONE, so medical will hear about it.
 
@@ -318,7 +306,7 @@
 /mob/living/carbon/brain/caught_soul/Login()
 	..()
 	plane_holder.set_vis(VIS_AUGMENTED, TRUE)
-	plane_holder.set_vis(VIS_SOULCATCHER, TRUE) //CHOMPAdd
+	plane_holder.set_vis(VIS_SOULCATCHER, TRUE)
 	identifying_gender = client.prefs.identifying_gender
 
 /mob/living/carbon/brain/caught_soul/Destroy()
@@ -340,7 +328,7 @@
 
 	. = ..()
 
-	if(!parent_mob && !transient &&(life_tick % 150 == 0) && soulcatcher?.setting_flags & NIF_SC_BACKUPS) //CHOMPEdit
+	if(!parent_mob && !transient &&(life_tick % 150 == 0) && soulcatcher?.setting_flags & NIF_SC_BACKUPS)
 		SStranscore.m_backup(mind,0) //Passed 0 means "Don't touch the nif fields on the mind record"
 
 	life_tick++
@@ -355,24 +343,23 @@
 	if(parent_mob) return
 
 	//If they're blinded
-	if(soulcatcher) // CHOMPEdit Start, needs it's own handling to allow vore_fx
+	if(soulcatcher) // needs it's own handling to allow vore_fx
 		if(ext_blind)
 			eye_blind = 5
-			client.screen.Remove(global_hud.whitense)
+			client.screen.Remove(GLOB.global_hud.whitense)
 			overlay_fullscreen("blind", /obj/screen/fullscreen/blind)
 		else
 			eye_blind = 0
 			clear_fullscreens()
-			client.screen.Add(global_hud.whitense)
-	//CHOMPEdit End
+			client.screen.Add(GLOB.global_hud.whitense)
 
 	//If they're deaf
 	if(ext_deaf)
 		ear_deaf = 5
-		deaf_loop.start(skip_start_sound = TRUE) // CHOMPStation Add: Ear Ringing/Deafness
+		deaf_loop.start(skip_start_sound = TRUE) // CHOMPEnable: Ear Ringing/Deafness
 	else
 		ear_deaf = 0
-		deaf_loop.stop() // CHOMPStation Add: Ear Ringing/Deafness
+		deaf_loop.stop() // CHOMPEnable: Ear Ringing/Deafness
 
 /mob/living/carbon/brain/caught_soul/hear_say()
 	if(ext_deaf || !client)
@@ -438,14 +425,17 @@
 ///////////////////
 //A projected AR soul thing
 /mob/observer/eye/ar_soul
+	invisibility = 0
 	plane = PLANE_AUGMENTED
 	icon = 'icons/obj/machines/ar_elements.dmi'
 	icon_state = "beacon"
-	var/mob/living/parent_human //CHOMPEdit, no human, all living!
+	var/mob/living/parent_human
 
-/mob/observer/eye/ar_soul/New(var/mob/brainmob, var/human)
-	ASSERT(brainmob && brainmob.client)
-	..()
+/mob/observer/eye/ar_soul/Initialize(mapload, var/human)
+	. = ..()
+	var/mob/brainmob = loc
+	if(!istype(brainmob) || !brainmob.client)
+		return INITIALIZE_HINT_QDEL
 
 	owner = brainmob				//Set eyeobj's owner
 	parent_human = human			//E-z reference to human
@@ -460,13 +450,12 @@
 
 	//Time to play dressup
 	if(brainmob.client.prefs)
-		var/mob/living/carbon/human/dummy/dummy = new ()
-		brainmob.client.prefs.dress_preview_mob(dummy)
-		sleep(1 SECOND) //Strange bug in preview code? Without this, certain things won't show up. Yay race conditions?
-		dummy.regenerate_icons()
+		var/mob/living/carbon/human/dummy/mannequin = get_mannequin(brainmob.client.ckey)
+		mannequin.delete_inventory(TRUE)
+		brainmob.client.prefs.dress_preview_mob(mannequin)
+		mannequin.regenerate_icons()
 
-		var/icon/new_icon = getHologramIcon(getCompoundIcon(dummy))
-		qdel(dummy)
+		var/icon/new_icon = getHologramIcon(getCompoundIcon(mannequin))
 		icon = new_icon
 
 /mob/observer/eye/ar_soul/Destroy()
@@ -497,12 +486,13 @@
 	return 1
 
 /mob/observer/eye/ar_soul/proc/human_moved()
+	SIGNAL_HANDLER
 	if(!can_see(parent_human,src))
 		forceMove(get_turf(parent_human))
 
 ///////////////////
 //The catching hook
-/hook/death/proc/nif_soulcatcher(var/mob/living/L) 	//CHOMPEdit Start
+/hook/death/proc/nif_soulcatcher(var/mob/living/L)
 	if(!istype(L) || !L.mind) return TRUE //Hooks must return TRUE
 
 	if(isbelly(L.loc)) //Died in someone
@@ -534,7 +524,6 @@
 		if(H.nif && H.nif.flag_check(NIF_O_SCMYSELF,NIF_FLAGS_OTHER)) //They are caught in their own NIF
 			var/datum/nifsoft/soulcatcher/SC = H.nif.imp_check(NIF_SOULCATCHER)
 			SC.catch_mob(H)
-//CHOMPEdit End
 	return TRUE
 
 ///////////////////
@@ -603,7 +592,7 @@
 ///////////////////
 //Verbs for soulbrains
 /mob/living/carbon/brain/caught_soul/verb/ar_project()
-	set name = "AR/SR Project" //CHOMPEdit
+	set name = "AR/SR Project"
 	set desc = "Project your form into Augmented Reality for those around your predator with the appearance of your loaded character."
 	set category = "Soulcatcher"
 
@@ -665,10 +654,3 @@
 	if(message)
 		var/sane_message = sanitize(message)
 		soulcatcher.emote_into(sane_message,src,null)
-
-//# undef NIF_SC_CATCHING_ME //CHOMPRemove
-//# undef NIF_SC_CATCHING_OTHERS //CHOMPRemove
-//# undef NIF_SC_ALLOW_EARS //CHOMPRemove
-//# undef NIF_SC_ALLOW_EYES //CHOMPRemove
-//# undef NIF_SC_BACKUPS //CHOMPRemove
-//# undef NIF_SC_PROJECTING //CHOMPRemove

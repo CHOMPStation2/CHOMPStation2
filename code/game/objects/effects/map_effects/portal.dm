@@ -46,7 +46,7 @@ when portals are shortly lived, or when portals are made to be obvious with spec
 
 /obj/effect/map_effect/portal
 	name = "portal subtype"
-	invisibility = 0
+	invisibility = INVISIBILITY_NONE
 	opacity = TRUE
 	plane = TURF_PLANE
 	layer = ABOVE_TURF_LAYER
@@ -145,7 +145,7 @@ when portals are shortly lived, or when portals are made to be obvious with spec
 	var/portal_id = "test" // For a portal to be made, both the A and B sides need to share the same ID value.
 	var/list/portal_lines = list()
 
-/obj/effect/map_effect/portal/master/Initialize()
+/obj/effect/map_effect/portal/master/Initialize(mapload)
 	GLOB.all_portal_masters += src
 	find_lines()
 	..()

@@ -71,7 +71,7 @@
 
 //////////////////////////////////////////////////////////////////////////////
 //Antag/Event/ERT Areas
-
+/* Included in common
 #include "../../submaps/admin_use_vr/ert.dm"
 #include "../../submaps/admin_use_vr/mercship.dm"
 #include "../../submaps/admin_use_vr/salamander_trader.dm"
@@ -115,7 +115,7 @@
 	name = "Special Area - Ninja Dojo"
 	desc = "Sneaky"
 	mappath = "maps/submaps/admin_use_vr/dojo.dmm"
-
+*/
 //////////////////////////////////////////////////////////////////////////////
 //Rogue Mines Stuff
 
@@ -167,7 +167,7 @@
 /obj/effect/step_trigger/zlevel_fall //Don't ever use this, only use subtypes.Define a new var/static/target_z on each
 	affect_ghosts = 1
 
-/obj/effect/step_trigger/zlevel_fall/Initialize()
+/obj/effect/step_trigger/zlevel_fall/Initialize(mapload)
 	. = ..()
 
 	if(istype(get_turf(src), /turf/simulated/floor))

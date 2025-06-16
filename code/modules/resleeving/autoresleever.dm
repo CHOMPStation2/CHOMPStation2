@@ -75,11 +75,12 @@
 
 	var/client/ghost_client = ghost.client
 
-	if(!is_alien_whitelisted(ghost, GLOB.all_species[ghost_client?.prefs?.species]) && !check_rights(R_ADMIN, 0)) // Prevents a ghost ghosting in on a slot and spawning via a resleever with race they're not whitelisted for, getting around normal join restrictions.
+	if(!is_alien_whitelisted(ghost.client, GLOB.all_species[ghost_client?.prefs?.species]) && !check_rights(R_ADMIN, 0)) // Prevents a ghost ghosting in on a slot and spawning via a resleever with race they're not whitelisted for, getting around normal join restrictions.
 		to_chat(ghost, span_warning("You are not whitelisted to spawn as this species!"))
 		return
 
 	// CHOMPedit start
+
 	var/datum/species/chosen_species
 	if(ghost.client.prefs.species) // In case we somehow don't have a species set here.
 		chosen_species = GLOB.all_species[ghost_client.prefs.species]
@@ -156,6 +157,7 @@
 		new_character.dna.ResetUIFrom(new_character)
 		new_character.sync_dna_traits(TRUE) // Traitgenes Sync traits to genetics if needed
 		new_character.sync_organ_dna()
+	new_character.sync_addictions() // These are addicitions our profile wants... May as well give them!
 	new_character.initialize_vessel()
 	if(ghost.mind)
 		ghost.mind.transfer_to(new_character)
@@ -186,6 +188,8 @@
 		if(def_lang)
 			new_character.default_language = def_lang
 
+	SEND_SIGNAL(new_character, COMSIG_HUMAN_DNA_FINALIZED)
+
 	//If desired, apply equipment.
 	if(equip_body)
 		if(charjob)
@@ -210,7 +214,7 @@
 	if(db)
 		var/datum/transhuman/mind_record/record = db.backed_up[new_character.mind.name]
 		if((world.time - record.last_notification) < 30 MINUTES)
-			global_announcer.autosay("[new_character.name] has been resleeved by the automatic resleeving system.", "TransCore Oversight", new_character.isSynthetic() ? "Science" : "Medical")
+			GLOB.global_announcer.autosay("[new_character.name] has been resleeved by the automatic resleeving system.", "TransCore Oversight", new_character.isSynthetic() ? "Science" : "Medical")
 		spawn(0)	//Wait a second for nif to do its thing if there is one
 		if(record.nif_path)
 			var/obj/item/nif/nif

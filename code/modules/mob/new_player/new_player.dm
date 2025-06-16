@@ -5,14 +5,13 @@
 	var/spawning = 0			//Referenced when you want to delete the new_player later on in the code.
 	var/totalPlayers = 0		//Player counts for the Lobby tab
 	var/totalPlayersReady = 0
-	var/show_hidden_jobs = 0	//Show jobs that are set to "Never" in preferences
 	var/has_respawned = FALSE	//Determines if we're using RESPAWN_MESSAGE
-	var/datum/browser/panel
+	var/datum/tgui_window/lobby_window = null
 	var/datum/tgui_module/crew_manifest/new_player/manifest_dialog = null
 	var/datum/tgui_module/late_choices/late_choices_dialog = null
 	universal_speak = 1
 
-	invisibility = 101
+	invisibility = INVISIBILITY_ABSTRACT
 
 	density = FALSE
 	stat = 2
@@ -22,121 +21,23 @@
 
 	var/created_for
 
-/mob/new_player/New()
-	mob_list += src
+/mob/new_player/Initialize(mapload)
+	. = ..()
 	add_verb(src, /mob/proc/insidePanel)
-	//CHOMPEdit Begin
-	if(length(GLOB.newplayer_start))
-		forceMove(pick(GLOB.newplayer_start))
-	else
-		forceMove(locate(1,1,1))
-	//CHOMPEdit End
-	flags |= ATOM_INITIALIZED // Explicitly don't use Initialize().  New players join super early and use New()
-
 
 /mob/new_player/Destroy()
-	if(panel)
-		QDEL_NULL(panel)
+	GLOB.new_player_list -= src
 	if(manifest_dialog)
 		QDEL_NULL(manifest_dialog)
 	if(late_choices_dialog)
 		QDEL_NULL(late_choices_dialog)
 	. = ..()
 
-/mob/new_player/verb/new_player_panel()
-	set src = usr
-	new_player_panel_proc()
-
-
-/mob/new_player/proc/new_player_panel_proc()
-	var/output = "<div align='center'>"
-
-	output += span_bold("Map:") + " [using_map.full_name]<br>"
-	output += span_bold("Station Time:") + " [stationtime2text()]<br>"
-
-	if(!ticker || ticker.current_state <= GAME_STATE_PREGAME)
-		output += span_bold("Server Initializing!")
-	else
-		output += span_bold("Round Duration:") + " [roundduration2text()]<br>"
-	output += "<hr>"
-
-	output += "<p><a href='byond://?src=\ref[src];show_preferences=1'>Character Setup</A></p>"
-
-	if(!ticker || ticker.current_state <= GAME_STATE_PREGAME)
-		if(ready)
-			output += "<p>\[ " + span_linkOn(span_bold("Ready")) + " | <a href='byond://?src=\ref[src];ready=0'>Not Ready</a> \]</p>" //ChompEDIT - fixed height
-		else
-			output += "<p>\[ <a href='byond://?src=\ref[src];ready=1'>Ready</a> | " + span_linkOn(span_bold("Not Ready")) + " \]</p>"
-		output += "<p><s>Join Game!</s></p>"
-
-	else
-		output += "<p><a href='byond://?src=\ref[src];manifest=1'>View the Crew Manifest</A></p>"
-		output += "<p><a href='byond://?src=\ref[src];late_join=1'>Join Game!</A></p>"
-
-	output += "<p><a href='byond://?src=\ref[src];observe=1'>Observe</A></p>"
-
-	output += "<hr>" //ChompADD - a line divider between functional and info buttons
-
-	//nobody uses this feature //WELL WE'RE GONNA
-	if(!IsGuestKey(src.key))
-		establish_db_connection()
-
-		if(SSdbcore.IsConnected())
-			var/isadmin = 0
-			if(src.client && src.client.holder)
-				isadmin = 1
-			var/datum/db_query/query = SSdbcore.NewQuery("SELECT id FROM erro_poll_question WHERE [(isadmin ? "" : "adminonly = false AND")] Now() BETWEEN starttime AND endtime AND id NOT IN (SELECT pollid FROM erro_poll_vote WHERE ckey = \"[ckey]\") AND id NOT IN (SELECT pollid FROM erro_poll_textreply WHERE ckey = \"[ckey]\")")
-			query.Execute()
-			var/newpoll = 0
-			while(query.NextRow())
-				newpoll = 1
-				break
-			qdel(query)
-			if(newpoll)
-				output += "<p><b><a href='byond://?src=\ref[src];showpoll=1'>Show Player Polls</A><br>(NEW!)</b></p>"
-			else
-				output += "<p><a href='byond://?src=\ref[src];showpoll=1'>Show Player Polls</A><br><i>No Changes</i></p>"
-
-	if(client?.check_for_new_server_news())
-		output += "<p><b><a href='byond://?src=\ref[src];shownews=1'>Show Server News</A><br>(NEW!)</b></p>"
-	else
-		output += "<p><a href='byond://?src=\ref[src];shownews=1'>Show Server News</A><br><i>No Changes</i></p>"
-
-	if(SSsqlite.can_submit_feedback(client))
-		output += "<p>[href(src, list("give_feedback" = 1), "Give Feedback")]</p>"
-
-	if(GLOB.news_data.station_newspaper)
-		if(client.prefs.lastlorenews == GLOB.news_data.newsindex)
-			output += "<p><a href='byond://?src=\ref[src];open_station_news=1'>Show [using_map.station_name] News<br><i>No Changes</i></A></p>"
-		else
-			output += "<p><b><a href='byond://?src=\ref[src];open_station_news=1'>Show [using_map.station_name] News<br>(NEW!)</A></b></p>"
-
-	if(read_preference(/datum/preference/text/lastchangelog) == GLOB.changelog_hash)
-		output += "<p><a href='byond://?src=\ref[src];open_changelog=1'>Show Changelog</A><br><i>No Changes</i></p>"
-	else
-		output += "<p><b><a href='byond://?src=\ref[src];open_changelog=1'>Show Changelog</A><br>(NEW!)</b></p>"
-
-	output += "</div>"
-
-	if (client.prefs.lastlorenews == GLOB.news_data.newsindex)
-		client.seen_news = 1
-
-	if(GLOB.news_data.station_newspaper && !client.seen_news && client.prefs?.read_preference(/datum/preference/toggle/show_lore_news))
-		show_latest_news(GLOB.news_data.station_newspaper)
-		client.prefs.lastlorenews = GLOB.news_data.newsindex
-		SScharacter_setup.queue_preferences_save(client.prefs)
-
-	panel = new(src, "Welcome","Welcome", 210, 500, src)
-	panel.set_window_options("can_close=0")
-	panel.set_content(output)
-	panel.open()
-	return
-
 /mob/new_player/get_status_tab_items()
 	. = ..()
 	. += ""
 
-	. += "Game Mode: [SSticker.hide_mode ? "Secret" : "[config.mode_names[master_mode]]"]"
+	. += "Game Mode: [SSticker.hide_mode ? "Secret" : "[config.mode_names[GLOB.master_mode]]"]"
 
 	// if(SSvote.mode)
 	// 	. += "Vote: [capitalize(SSvote.mode)] Time Left: [SSvote.time_remaining] s"
@@ -145,16 +46,16 @@
 		. += "Time To Start: Server Initializing"
 
 	else if(SSticker.current_state == GAME_STATE_PREGAME)
-		. += "Time To Start: [round(SSticker.pregame_timeleft,1)][round_progressing ? "" : " (DELAYED)"]"
+		. += "Time To Start: [round(SSticker.pregame_timeleft,1)][GLOB.round_progressing ? "" : " (DELAYED)"]"
 		. += "Players: [totalPlayers]"
 		. += "Players Ready: [totalPlayersReady]"
 		totalPlayers = 0
 		totalPlayersReady = 0
 		var/datum/job/refJob = null
 		for(var/mob/new_player/player in player_list)
-			refJob = player.client.prefs.get_highest_job()
-			var/obfuscate_key = player.client.prefs.read_preference(/datum/preference/toggle/obfuscate_key)
-			var/obfuscate_job = player.client.prefs.read_preference(/datum/preference/toggle/obfuscate_job)
+			refJob = player.client?.prefs.get_highest_job()
+			var/obfuscate_key = player.read_preference(/datum/preference/toggle/obfuscate_key)
+			var/obfuscate_job = player.read_preference(/datum/preference/toggle/obfuscate_job)
 			if(obfuscate_key && obfuscate_job)
 				. += "Anonymous User [player.ready ? "Ready!" : null]"
 			else if(obfuscate_key)
@@ -168,75 +69,6 @@
 
 /mob/new_player/Topic(href, href_list[])
 	if(!client)	return 0
-
-	if(href_list["show_preferences"])
-		client.prefs.ShowChoices(src)
-		return 1
-
-	if(href_list["ready"])
-		if(!ticker || ticker.current_state <= GAME_STATE_PREGAME) // Make sure we don't ready up after the round has started
-			ready = text2num(href_list["ready"])
-		else
-			ready = 0
-
-	if(href_list["refresh"])
-		panel.close()
-		new_player_panel_proc()
-
-	if(href_list["observe"])
-		if(tgui_alert(src,"Are you sure you wish to observe? If you do, make sure to not use any knowledge gained from observing if you decide to join later.","Observe Round?",list("Yes","No")) == "Yes")
-			if(!client)	return 1
-
-			//Make a new mannequin quickly, and allow the observer to take the appearance
-			var/mob/living/carbon/human/dummy/mannequin = get_mannequin(client.ckey)
-			client.prefs.dress_preview_mob(mannequin)
-			var/mob/observer/dead/observer = new(mannequin)
-			observer.moveToNullspace() //Let's not stay in our doomed mannequin
-
-			spawning = 1
-			if(client.media)
-				client.media.stop_music() // MAD JAMS cant last forever yo
-
-			observer.started_as_observer = 1
-			close_spawn_windows()
-			var/obj/O = locate("landmark*Observer-Start")
-			if(istype(O))
-				to_chat(src, span_notice("Now teleporting."))
-				observer.forceMove(O.loc)
-			else
-				to_chat(src, span_danger("Could not locate an observer spawn point. Use the Teleport verb to jump to the station map."))
-
-			announce_ghost_joinleave(src)
-
-			if(client.prefs.read_preference(/datum/preference/toggle/human/name_is_always_random))
-				client.prefs.real_name = random_name(client.prefs.identifying_gender)
-			observer.real_name = client.prefs.real_name
-			observer.name = observer.real_name
-			if(!client.holder && !CONFIG_GET(flag/antag_hud_allowed))           // For new ghosts we remove the verb from even showing up if it's not allowed.
-				remove_verb(observer, /mob/observer/dead/verb/toggle_antagHUD)        // Poor guys, don't know what they are missing!
-			observer.key = key
-			observer.set_respawn_timer(time_till_respawn()) // Will keep their existing time if any, or return 0 and pass 0 into set_respawn_timer which will use the defaults
-			observer.client.init_verbs()
-			qdel(src)
-
-			return TRUE
-
-	if(href_list["late_join"])
-
-		if(!ticker || ticker.current_state != GAME_STATE_PLAYING)
-			to_chat(usr, span_red("The round is either not ready, or has already finished..."))
-			return
-
-		var/time_till_respawn = time_till_respawn()
-		if(time_till_respawn == -1) // Special case, never allowed to respawn
-			to_chat(usr, span_warning("Respawning is not allowed!"))
-		else if(time_till_respawn) // Nonzero time to respawn
-			to_chat(usr, span_warning("You can't respawn yet! You need to wait another [round(time_till_respawn/10/60, 0.1)] minutes."))
-			return
-		LateChoices()
-
-	if(href_list["manifest"])
-		ViewManifest()
 
 	if(href_list["privacy_poll"])
 		establish_db_connection()
@@ -280,13 +112,6 @@
 	if(!ready && href_list["preference"])
 		if(client)
 			client.prefs.process_link(src, href_list)
-	else if(!href_list["late_join"])
-		new_player_panel()
-
-	if(href_list["showpoll"])
-
-		handle_player_polling()
-		return
 
 	if(href_list["pollid"])
 
@@ -338,27 +163,6 @@
 					if(!isnull(href_list["option_[optionid]"]))	//Test if this optionid was selected
 						vote_on_poll(pollid, optionid, 1)
 
-	if(href_list["shownews"])
-		handle_server_news()
-		return
-
-	if(href_list["hidden_jobs"])
-		show_hidden_jobs = !show_hidden_jobs
-		LateChoices()
-
-	if(href_list["give_feedback"])
-		if(!SSsqlite.can_submit_feedback(my_client))
-			return
-
-		if(client.feedback_form)
-			client.feedback_form.display() // In case they closed the form early.
-		else
-			client.feedback_form = new(client)
-
-	if(href_list["open_changelog"])
-		write_preference_directly(/datum/preference/text/lastchangelog, GLOB.changelog_hash)
-		client.changes()
-		return
 
 /mob/new_player/proc/handle_server_news()
 	if(!client)
@@ -455,7 +259,6 @@
 	spawning = 1
 	close_spawn_windows()
 
-	//CHOMPEdit start - join as mob in crystal...
 	var/obj/item/itemtf = join_props["itemtf"]
 	if(itemtf && istype(itemtf, /obj/item/capture_crystal))
 		var/obj/item/capture_crystal/cryst = itemtf
@@ -479,16 +282,12 @@
 			cryst.update_icon()
 			qdel(src)
 			return
-	//CHOMPEdit end
 
 	job_master.AssignRole(src, rank, 1)
 
 	var/mob/living/character = create_character(T)	//creates the human and transfers vars and mind
 	character = job_master.EquipRank(character, rank, 1)					//equips the human
 	UpdateFactionList(character)
-	if(character && character.client)
-		var/obj/screen/splash/Spl = new(character.client, TRUE)
-		Spl.Fade(TRUE)
 
 	var/datum/job/J = SSjob.get_job(rank)
 
@@ -496,8 +295,8 @@
 	if(J.mob_type & JOB_SILICON_AI)
 
 		// IsJobAvailable for AI checks that there is an empty core available in this list
-		var/obj/structure/AIcore/deactivated/C = empty_playable_ai_cores[1]
-		empty_playable_ai_cores -= C
+		var/obj/structure/AIcore/deactivated/C = GLOB.empty_playable_ai_cores[1]
+		GLOB.empty_playable_ai_cores -= C
 
 		character.loc = C.loc
 
@@ -521,7 +320,6 @@
 
 	ticker.mode.latespawn(character)
 
-	//CHOMPEdit Begin - non-crew join don't get a message
 	if(rank == JOB_OUTSIDER)
 		log_and_message_admins("has joined the round as non-crew. (<A href='byond://?_src_=holder;[HrefToken()];adminplayerobservecoodjump=1;X=[T.x];Y=[T.y];Z=[T.z]'>JMP</a>)",character)
 		if(!(J.mob_type & JOB_SILICON))
@@ -530,12 +328,11 @@
 		log_and_message_admins("has joined the round as anomaly. (<A href='byond://?_src_=holder;[HrefToken()];adminplayerobservecoodjump=1;X=[T.x];Y=[T.y];Z=[T.z]'>JMP</a>)",character)
 		if(!(J.mob_type & JOB_SILICON))
 			ticker.minds += character.mind
-	//CHOMPEdit End
 	else if(J.mob_type & JOB_SILICON)
 		AnnounceCyborg(character, rank, join_message, announce_channel, character.z)
 	else
 		AnnounceArrival(character, rank, join_message, announce_channel, character.z)
-		data_core.manifest_inject(character)
+		GLOB.data_core.manifest_inject(character)
 		ticker.minds += character.mind//Cyborgs and AIs handle this in the transform proc.	//TODO!!!!! ~Carn
 	if(ishuman(character))
 		if(character.client.prefs.auto_backup_implant)
@@ -544,9 +341,8 @@
 			if(imp.handle_implant(character,character.zone_sel.selecting))
 				imp.post_implant(character)
 	var/gut = join_props["voreny"]
-	var/start_absorbed = join_props["absorb"] //CHOMPAdd
+	var/start_absorbed = join_props["absorb"]
 	var/mob/living/prey = join_props["prey"]
-	//CHOMPEdit Start - Item TF
 	if(itemtf && istype(itemtf, /obj/item/capture_crystal))
 		//We want to be in the crystal, not actually possessing the crystal.
 		var/obj/item/capture_crystal/cryst = itemtf
@@ -560,7 +356,6 @@
 		itemtf.trash_eatable = character.devourable
 		itemtf.unacidable = !character.digestable
 		character.forceMove(possessed_voice)
-	//CHOMPEdit End
 	else if(prey)
 		character.copy_from_prefs_vr(1,1) //Yes I know we're reloading these, shut up
 		var/obj/belly/gut_to_enter
@@ -572,20 +367,14 @@
 		tele.set_up("#00FFFF", get_turf(prey))
 		tele.start()
 		character.forceMove(get_turf(prey))
-		//CHOMPAdd Start
 		if(start_absorbed)
 			prey.absorbed = 1
-		//CHOMPAdd End
 		prey.forceMove(gut_to_enter)
 	else
 		if(gut)
-			//CHOMPAdd Start
 			if(start_absorbed)
 				character.absorbed = 1
-			//CHOMPAdd End
 			character.forceMove(gut)
-
-	character.client.init_verbs() // init verbs for the late join
 
 	character.client.init_verbs()
 	qdel(src) // Delete new_player mob
@@ -596,7 +385,7 @@
 		if(character.mind.role_alt_title)
 			rank = character.mind.role_alt_title
 		// can't use their name here, since cyborg namepicking is done post-spawn, so we'll just say "A new Cyborg has arrived"/"A new Android has arrived"/etc.
-		global_announcer.autosay("A new[rank ? " [rank]" : " visitor" ] [join_message ? join_message : "has arrived on the station"].", "Arrivals Announcement Computer", channel, zlevels)
+		GLOB.global_announcer.autosay("A new[rank ? " [rank]" : " visitor" ] [join_message ? join_message : "has arrived on the station"].", "Arrivals Announcement Computer", channel, zlevels)
 
 /mob/new_player/proc/LateChoices()
 	if(!late_choices_dialog)
@@ -617,7 +406,7 @@
 
 	if(chosen_species && use_species_name)
 		// Have to recheck admin due to no usr at roundstart. Latejoins are fine though.
-		if(is_alien_whitelisted(chosen_species))
+		if(is_alien_whitelisted(src.client, chosen_species))
 			new_character = new(T, use_species_name)
 
 	if(!new_character)
@@ -626,7 +415,6 @@
 	if(ticker.random_players)
 		new_character.gender = pick(MALE, FEMALE)
 		client.prefs.real_name = random_name(new_character.gender)
-		client.prefs.randomize_appearance_and_body_for(new_character)
 	else
 		client.prefs.copy_to(new_character, icon_updates = TRUE)
 
@@ -646,6 +434,7 @@
 	new_character.dna.b_type = client.prefs.b_type
 	new_character.sync_dna_traits(TRUE) // Traitgenes Sync traits to genetics if needed
 	new_character.sync_organ_dna()
+	new_character.sync_addictions() // Handle round-start addictions
 	new_character.initialize_vessel()
 
 	for(var/lang in client.prefs.alternate_languages)
@@ -658,14 +447,14 @@
 			var/datum/language/keylang = GLOB.all_languages[client.prefs.language_custom_keys[key]]
 			if(keylang)
 				new_character.language_keys[key] = keylang
-	// VOREStation Add: Preferred Language Setting;
 	if(client.prefs.preferred_language) // Do we have a preferred language?
 		var/datum/language/def_lang = GLOB.all_languages[client.prefs.preferred_language]
 		if(def_lang)
 			new_character.default_language = def_lang
-	// VOREStation Add End
 	// And uncomment this, too.
 	//new_character.dna.UpdateSE()
+
+	SEND_SIGNAL(new_character, COMSIG_HUMAN_DNA_FINALIZED)
 
 	// Do the initial caching of the player's body icons.
 	new_character.force_update_limbs()
@@ -691,10 +480,6 @@
 	src << browse(null, "window=latechoices") //closes late choices window
 	src << browse(null, "window=preferences_window") //VOREStation Edit?
 	src << browse(null, "window=News") //closes news window
-	panel.close()
-
-/mob/new_player/proc/has_admin_rights()
-	return check_rights(R_ADMIN, 0, src)
 
 /mob/new_player/get_species()
 	var/datum/species/chosen_species
@@ -704,7 +489,7 @@
 	if(!chosen_species)
 		return SPECIES_HUMAN
 
-	if(is_alien_whitelisted(chosen_species))
+	if(is_alien_whitelisted(src.client, chosen_species))
 		return chosen_species.name
 
 	return SPECIES_HUMAN

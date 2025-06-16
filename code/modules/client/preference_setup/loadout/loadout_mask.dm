@@ -20,12 +20,10 @@
 /datum/gear/mask/sterile
 	display_name = "sterile mask"
 	path = /obj/item/clothing/mask/surgical
-	cost = 2
 
 /datum/gear/mask/sterile/white
 	display_name = "white sterile mask"
 	path = /obj/item/clothing/mask/surgical/white
-	cost = 2
 
 /datum/gear/mask/sterile/white/dust
 	display_name = "dust mask"
@@ -60,13 +58,6 @@
 /datum/gear/mask/gaiter
 	display_name = "neck gaiter selection"
 	path = /obj/item/clothing/accessory/gaiter
-	cost = 1
-	
-//CHOMPAdd - Put this mask in loadout
-/datum/gear/mask/death
-	display_name = "white mask"
-	path = /obj/item/clothing/mask/gas/cyborg
-	cost = 1
 
 /datum/gear/mask/gaiter/New()
 	..()
@@ -75,6 +66,12 @@
 		var/obj/item/clothing/accessory/gaiter_type = gaiter
 		gaiters[initial(gaiter_type.name)] = gaiter_type
 	gear_tweaks += new/datum/gear_tweak/path(sortTim(gaiters, GLOBAL_PROC_REF(cmp_text_asc)))
+
+//CHOMPAdd - Put this mask in loadout
+/datum/gear/mask/death
+	display_name = "cyborg visor" //This was named 'white mask' before when it's...Not. It's literally a cyborg visor gas mask.
+	path = /obj/item/clothing/mask/gas/cyborg
+	cost = 3 ///Because it functions as a gas mask, and therefore has a mechanical advantage.
 
 /datum/gear/mask/lace
 	display_name = "lace veil"
@@ -90,7 +87,6 @@
 /datum/gear/mask/wrestling
 	display_name = "wrestling mask"
 	path = /obj/item/clothing/mask/luchador/colorable
-	cost = 1
 
 /datum/gear/mask/wrestling/New()
 	gear_tweaks += gear_tweak_free_color_choice

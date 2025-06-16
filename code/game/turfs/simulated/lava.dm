@@ -23,7 +23,7 @@
 	outdoors = OUTDOORS_YES
 
 // For maximum pedantry.
-/turf/simulated/floor/lava/Initialize()
+/turf/simulated/floor/lava/Initialize(mapload)
 	if(!is_outdoors())
 		name = "magma"
 	update_icon()
@@ -31,11 +31,11 @@
 	soundloop = new(list(src), FALSE)
 	soundloop.start()
 	return ..()
-	
+
 /turf/simulated/floor/lava/Destroy()
 	soundloop.stop()
 	QDEL_NULL(soundloop)
-	
+
 	. = ..()
 
 /turf/simulated/floor/lava/make_outdoors()

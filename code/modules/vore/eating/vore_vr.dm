@@ -1,23 +1,24 @@
 
 /*
-VVVVVVVV           VVVVVVVV     OOOOOOOOO     RRRRRRRRRRRRRRRRR   EEEEEEEEEEEEEEEEEEEEEE
-V::::::V           V::::::V   OO:::::::::OO   R::::::::::::::::R  E::::::::::::::::::::E
-V::::::V           V::::::V OO:::::::::::::OO R::::::RRRRRR:::::R E::::::::::::::::::::E
-V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEEEEE::::E
- V:::::V           V:::::V O::::::O   O::::::O  R::::R     R:::::R  E:::::E       EEEEEE
-  V:::::V         V:::::V  O:::::O     O:::::O  R::::R     R:::::R  E:::::E
-   V:::::V       V:::::V   O:::::O     O:::::O  R::::RRRRRR:::::R   E::::::EEEEEEEEEE
-    V:::::V     V:::::V    O:::::O     O:::::O  R:::::::::::::RR    E:::::::::::::::E
-     V:::::V   V:::::V     O:::::O     O:::::O  R::::RRRRRR:::::R   E:::::::::::::::E
-      V:::::V V:::::V      O:::::O     O:::::O  R::::R     R:::::R  E::::::EEEEEEEEEE
-       V:::::V:::::V       O:::::O     O:::::O  R::::R     R:::::R  E:::::E
-        V:::::::::V        O::::::O   O::::::O  R::::R     R:::::R  E:::::E       EEEEEE
-         V:::::::V         O:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEEEE:::::E
-          V:::::V           OO:::::::::::::OO R::::::R     R:::::RE::::::::::::::::::::E
-           V:::V              OO:::::::::OO   R::::::R     R:::::RE::::::::::::::::::::E
-            VVV                 OOOOOOOOO     RRRRRRRR     RRRRRRREEEEEEEEEEEEEEEEEEEEEE
-
--Aro <3 */
+ * VVVVVVVV           VVVVVVVV     OOOOOOOOO     RRRRRRRRRRRRRRRRR   EEEEEEEEEEEEEEEEEEEEEE
+ * V::::::V           V::::::V   OO:::::::::OO   R::::::::::::::::R  E::::::::::::::::::::E
+ * V::::::V           V::::::V OO:::::::::::::OO R::::::RRRRRR:::::R E::::::::::::::::::::E
+ * V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEEEEE::::E
+ *  V:::::V           V:::::V O::::::O   O::::::O  R::::R     R:::::R  E:::::E       EEEEEE
+ *   V:::::V         V:::::V  O:::::O     O:::::O  R::::R     R:::::R  E:::::E
+ *    V:::::V       V:::::V   O:::::O     O:::::O  R::::RRRRRR:::::R   E::::::EEEEEEEEEE
+ *     V:::::V     V:::::V    O:::::O     O:::::O  R:::::::::::::RR    E:::::::::::::::E
+ *      V:::::V   V:::::V     O:::::O     O:::::O  R::::RRRRRR:::::R   E:::::::::::::::E
+ *       V:::::V V:::::V      O:::::O     O:::::O  R::::R     R:::::R  E::::::EEEEEEEEEE
+ *        V:::::V:::::V       O:::::O     O:::::O  R::::R     R:::::R  E:::::E
+ *         V:::::::::V        O::::::O   O::::::O  R::::R     R:::::R  E:::::E       EEEEEE
+ *          V:::::::V         O:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEEEE:::::E
+ *           V:::::V           OO:::::::::::::OO R::::::R     R:::::RE::::::::::::::::::::E
+ *            V:::V              OO:::::::::OO   R::::::R     R:::::RE::::::::::::::::::::E
+ *             VVV                 OOOOOOOOO     RRRRRRRR     RRRRRRREEEEEEEEEEEEEEEEEEEEEE
+ *
+ * -Aro <3
+ */
 
 //
 // Overrides/additions to stock defines go here, as well as hooks. Sort them by
@@ -61,6 +62,7 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 	var/slip_vore = TRUE
 	var/throw_vore = TRUE
 	var/food_vore = TRUE
+	var/consume_liquid_belly = FALSE //starting off because if someone is into that, they'll toggle it first time they get the error. Otherway around would be more pref breaky.
 
 	var/digest_pain = TRUE
 
@@ -72,7 +74,6 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 	var/vore_sprite_multiply = list("stomach" = FALSE, "taur belly" = FALSE)
 	var/allow_mind_transfer = FALSE
 
-	//CHOMP stuff
 	var/phase_vore = TRUE
 	var/noisy_full = FALSE
 	var/receive_reagents = FALSE
@@ -91,7 +92,8 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 	var/belly_rub_target = null
 	var/soulcatcher_pref_flags = 0
 	var/list/soulcatcher_prefs = list()
-	//CHOMP stuff end
+	var/max_voreoverlay_alpha = 255
+	var/persistend_edit_mode = FALSE
 
 	var/list/belly_prefs = list()
 	var/vore_taste = "nothing in particular"
@@ -154,7 +156,7 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 
 //
 //	Belly searching for simplifying other procs
-//  Mostly redundant now with belly-objects and isbelly(loc)
+//	Mostly redundant now with belly-objects and isbelly(loc)
 //
 /proc/check_belly(atom/movable/A)
 	return isbelly(A.loc)
@@ -214,6 +216,7 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 	slip_vore = json_from_file["slip_vore"]
 	food_vore = json_from_file["food_vore"]
 	throw_vore = json_from_file["throw_vore"]
+	consume_liquid_belly = json_from_file["consume_liquid_belly"]
 	stumble_vore = json_from_file["stumble_vore"]
 	digest_pain = json_from_file["digest_pain"]
 	nutrition_message_visible = json_from_file["nutrition_message_visible"]
@@ -225,7 +228,6 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 	vore_sprite_color = json_from_file["vore_sprite_color"]
 	allow_mind_transfer = json_from_file["allow_mind_transfer"]
 
-	//CHOMP stuff Start
 	phase_vore = json_from_file["phase_vore"]
 	latejoin_vore = json_from_file["latejoin_vore"]
 	latejoin_prey = json_from_file["latejoin_prey"]
@@ -248,7 +250,8 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 	belly_rub_target = json_from_file["belly_rub_target"]
 	soulcatcher_pref_flags = json_from_file["soulcatcher_pref_flags"]
 	soulcatcher_prefs = json_from_file["soulcatcher_prefs"]
-	//CHOMP stuff End
+	persistend_edit_mode = json_from_file["persistend_edit_mode"]
+	max_voreoverlay_alpha = json_from_file["max_voreoverlay_alpha"]
 
 	//Quick sanitize
 	if(isnull(digestable))
@@ -295,6 +298,8 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 		stumble_vore = TRUE
 	if(isnull(food_vore))
 		food_vore = TRUE
+	if(isnull(consume_liquid_belly))
+		consume_liquid_belly = FALSE
 	if(isnull(digest_pain))
 		digest_pain = TRUE
 	if(isnull(nutrition_message_visible))
@@ -340,7 +345,6 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 	if(isnull(allow_mind_transfer))
 		allow_mind_transfer = FALSE
 
-	//CHOMP stuff Start
 	if(isnull(phase_vore))
 		phase_vore = TRUE
 	if(isnull(latejoin_vore))
@@ -377,7 +381,10 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 		soulcatcher_pref_flags = 0
 	if(isnull(soulcatcher_prefs))
 		soulcatcher_prefs = list()
-	//CHOMP stuff End
+	if(isnull(persistend_edit_mode))
+		persistend_edit_mode = FALSE
+	if(isnull(max_voreoverlay_alpha))
+		max_voreoverlay_alpha = 255
 
 	return TRUE
 
@@ -399,28 +406,28 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 			"vore_smell"			= vore_smell,
 			"permit_healbelly"		= permit_healbelly,
 			"noisy" 				= noisy,
-			"noisy_full" 			= noisy_full, //CHOMPedit
+			"noisy_full" 			= noisy_full,
 			"selective_preference"	= selective_preference,
 			"show_vore_fx"			= show_vore_fx,
 			"can_be_drop_prey"		= can_be_drop_prey,
 			"can_be_drop_pred"		= can_be_drop_pred,
-			"latejoin_vore"			= latejoin_vore, //CHOMPedit
-			"latejoin_prey"			= latejoin_prey, //CHOMPedit
+			"latejoin_vore"			= latejoin_vore,
+			"latejoin_prey"			= latejoin_prey,
 			"allow_spontaneous_tf"	= allow_spontaneous_tf,
 			"step_mechanics_pref"	= step_mechanics_pref,
 			"pickup_pref"			= pickup_pref,
 			"belly_prefs"			= belly_prefs,
-			"receive_reagents"		= receive_reagents, //CHOMPedit
-			"give_reagents"			= give_reagents, //CHOMPedit
-			"apply_reagents"		= apply_reagents, //CHOMPedit
+			"receive_reagents"		= receive_reagents,
+			"give_reagents"			= give_reagents,
+			"apply_reagents"		= apply_reagents,
 			"autotransferable"		= autotransferable,
 			"drop_vore"				= drop_vore,
 			"slip_vore"				= slip_vore,
 			"stumble_vore"			= stumble_vore,
 			"throw_vore" 			= throw_vore,
 			"allow_mind_transfer"	= allow_mind_transfer,
-			"phase_vore" 			= phase_vore, //CHOMPedit
-			"food_vore" 			= food_vore,
+			"phase_vore" 			= phase_vore,
+			"consume_liquid_belly" 	= consume_liquid_belly,
 			"digest_pain"			= digest_pain,
 			"nutrition_message_visible"	= nutrition_message_visible,
 			"nutrition_messages"		= nutrition_messages,
@@ -429,17 +436,19 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 			"eating_privacy_global"		= eating_privacy_global,
 			"vore_sprite_color"			= vore_sprite_color,
 			"allow_mimicry"				= allow_mimicry,
-			"vore_sprite_multiply"		= vore_sprite_multiply, //CHOMPEdit
-			"strip_pref" 			= strip_pref, //CHOMPEdit
-			"no_latejoin_vore_warning"		= no_latejoin_vore_warning, //CHOMPEdit
-			"no_latejoin_prey_warning"		= no_latejoin_prey_warning, //CHOMPEdit
-			"no_latejoin_vore_warning_time"		= no_latejoin_vore_warning_time, //CHOMPEdit
-			"no_latejoin_prey_warning_time"		= no_latejoin_prey_warning_time, //CHOMPEdit
-			"no_latejoin_vore_warning_persists"		= no_latejoin_vore_warning_persists, //CHOMPEdit
-			"no_latejoin_prey_warning_persists"		= no_latejoin_prey_warning_persists, //CHOMPEdit
-			"belly_rub_target" = belly_rub_target, //CHOMPEdit
-			"soulcatcher_pref_flags" = soulcatcher_pref_flags, //CHOMPAdd
-			"soulcatcher_prefs"			= soulcatcher_prefs //CHOMPAdd
+			"vore_sprite_multiply"		= vore_sprite_multiply,
+			"strip_pref" 			= strip_pref,
+			"no_latejoin_vore_warning"		= no_latejoin_vore_warning,
+			"no_latejoin_prey_warning"		= no_latejoin_prey_warning,
+			"no_latejoin_vore_warning_time"		= no_latejoin_vore_warning_time,
+			"no_latejoin_prey_warning_time"		= no_latejoin_prey_warning_time,
+			"no_latejoin_vore_warning_persists"		= no_latejoin_vore_warning_persists,
+			"no_latejoin_prey_warning_persists"		= no_latejoin_prey_warning_persists,
+			"belly_rub_target" = belly_rub_target,
+			"soulcatcher_pref_flags" = soulcatcher_pref_flags,
+			"soulcatcher_prefs"			= soulcatcher_prefs,
+			"persistend_edit_mode" = persistend_edit_mode,
+			"max_voreoverlay_alpha" = max_voreoverlay_alpha,
 		)
 
 	//List to JSON

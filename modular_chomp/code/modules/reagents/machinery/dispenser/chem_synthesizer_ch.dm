@@ -71,7 +71,7 @@
 		REAGENT_ID_COPPER, REAGENT_ID_MERCURY, REAGENT_ID_RADIUM, REAGENT_ID_WATER, REAGENT_ID_ETHANOL, REAGENT_ID_SUGAR, REAGENT_ID_SACID, REAGENT_ID_TUNGSTEN, REAGENT_ID_CALCIUM
 		)
 
-/obj/machinery/chemical_synthesizer/Initialize()
+/obj/machinery/chemical_synthesizer/Initialize(mapload)
 	. = ..()
 	// Create the reagents datum which will act as the machine's reaction vessel.
 	create_reagents(600)
@@ -644,7 +644,7 @@
 	// After all this mess of code, we reach the line where the magic happens.
 	C.reagents.trans_to_holder(src.reagents, quantity)
 	update_icon() // Update underlays.
-	playsound(src, 'modular_chomp/sound/machines/HPLC_binary_pump.ogg', 15, 1)
+	playsound(src, 'sound/machines/HPLC_binary_pump.ogg', 15, 1)
 
 	// Advance to the next step in the recipe. If this is outside of the recipe's index, we're finished. Otherwise, proceed to next step.
 	step += 2

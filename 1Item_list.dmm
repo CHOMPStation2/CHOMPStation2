@@ -5879,7 +5879,7 @@
 	},
 /area/survivalpod)
 "bMh" = (
-/obj/item/toy/plushie/squid/green,
+/obj/item/toy/plushie/squid,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -8620,7 +8620,7 @@
 	},
 /area/survivalpod)
 "cBi" = (
-/obj/item/toy/plushie/therapy/red,
+/obj/item/toy/plushie/therapy,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -9791,12 +9791,6 @@
 /area/survivalpod)
 "cSC" = (
 /obj/item/pipe/trinary/flippable,
-/turf/simulated/fitness{
-	icon_state = "vault"
-	},
-/area/survivalpod)
-"cSJ" = (
-/obj/item/clothing/suit/storage/labcoat/fluff/zeke_vincir_3/axis,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -11737,12 +11731,6 @@
 /area/survivalpod)
 "dwK" = (
 /obj/item/stack/tile/floor/eris/steel/violetcorener,
-/turf/simulated/fitness{
-	icon_state = "vault"
-	},
-/area/survivalpod)
-"dwO" = (
-/obj/item/clothing/head/axiscap/officer,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -15069,12 +15057,6 @@
 	icon_state = "vault"
 	},
 /area/survivalpod)
-"evu" = (
-/obj/item/clothing/under/axis,
-/turf/simulated/fitness{
-	icon_state = "vault"
-	},
-/area/survivalpod)
 "evA" = (
 /obj/machinery/power/rtg/abductor/built,
 /turf/simulated/fitness{
@@ -15495,12 +15477,6 @@
 /area/survivalpod)
 "eBw" = (
 /obj/item/fuel_assembly/phoron,
-/turf/simulated/fitness{
-	icon_state = "vault"
-	},
-/area/survivalpod)
-"eBC" = (
-/obj/item/clothing/suit/space/void/merc/axis/axisrig,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -17309,7 +17285,7 @@
 	},
 /area/survivalpod)
 "feW" = (
-/obj/item/clothing/head/helmet/space/void/medical/alt,
+/obj/item/clothing/head/helmet/space/void/medical/veymed,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -28802,12 +28778,6 @@
 	icon_state = "vault"
 	},
 /area/survivalpod)
-"ivh" = (
-/obj/item/clothing/suit/space/void/merc/axis/sovrig,
-/turf/simulated/fitness{
-	icon_state = "vault"
-	},
-/area/survivalpod)
 "ivm" = (
 /obj/machinery/door/airlock/angled_bay/standard/color/security,
 /turf/simulated/fitness{
@@ -35862,12 +35832,6 @@
 	icon_state = "vault"
 	},
 /area/survivalpod)
-"kyF" = (
-/obj/item/clothing/suit/storage/labcoat/fluff/zeke_vincir_3/axis/officer,
-/turf/simulated/fitness{
-	icon_state = "vault"
-	},
-/area/survivalpod)
 "kyR" = (
 /obj/vehicle/train/rover/engine/dunebuggy,
 /turf/simulated/fitness{
@@ -38038,12 +38002,6 @@
 /mob/living/simple_mob/horror/Master,
 /turf/simulated/floor/atoll,
 /area/survivalpod)
-"ldJ" = (
-/obj/item/clothing/head/axiscap,
-/turf/simulated/fitness{
-	icon_state = "vault"
-	},
-/area/survivalpod)
 "ldO" = (
 /obj/item/clothing/accessory/solgov/department/exploration/jumper,
 /turf/simulated/fitness{
@@ -39266,12 +39224,6 @@
 /area/survivalpod)
 "lxU" = (
 /obj/item/clothing/suit/storage/hooded/wintercoat/security/hos,
-/turf/simulated/fitness{
-	icon_state = "vault"
-	},
-/area/survivalpod)
-"lxZ" = (
-/obj/item/clothing/head/helmet/space/void/axis/merc/sovrigh,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -42901,12 +42853,6 @@
 	icon_state = "vault"
 	},
 /area/survivalpod)
-"mBv" = (
-/obj/item/clothing/head/helmet/space/void/merc/axis/axisrigh,
-/turf/simulated/fitness{
-	icon_state = "vault"
-	},
-/area/survivalpod)
 "mBw" = (
 /obj/item/storage/belt/explorer/pathfinder,
 /turf/simulated/fitness{
@@ -46296,12 +46242,6 @@
 	icon_state = "vault"
 	},
 /area/survivalpod)
-"nyQ" = (
-/obj/item/clothing/head/helmet/axis,
-/turf/simulated/fitness{
-	icon_state = "vault"
-	},
-/area/survivalpod)
 "nyR" = (
 /obj/machinery/transhuman/synthprinter,
 /turf/simulated/fitness{
@@ -47441,12 +47381,6 @@
 /area/survivalpod)
 "nOM" = (
 /obj/item/clothing/under/away/daedalus,
-/turf/simulated/fitness{
-	icon_state = "vault"
-	},
-/area/survivalpod)
-"nON" = (
-/obj/item/clothing/under/axis/officer,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -48785,12 +48719,6 @@
 /area/survivalpod)
 "oim" = (
 /obj/item/clothing/gloves/bluespace/emagged,
-/turf/simulated/fitness{
-	icon_state = "vault"
-	},
-/area/survivalpod)
-"oir" = (
-/obj/machinery/exonet_node/map,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -57871,12 +57799,6 @@
 	icon_state = "vault"
 	},
 /area/survivalpod)
-"qXp" = (
-/obj/item/clothing/suit/space/void/merc/axis,
-/turf/simulated/fitness{
-	icon_state = "vault"
-	},
-/area/survivalpod)
 "qXq" = (
 /obj/item/storage/box/botanydisk,
 /turf/simulated/fitness{
@@ -64654,12 +64576,6 @@
 	icon_state = "vault"
 	},
 /area/survivalpod)
-"sZf" = (
-/obj/item/clothing/head/helmet/space/void/medical/alt/tesh,
-/turf/simulated/fitness{
-	icon_state = "vault"
-	},
-/area/survivalpod)
 "sZg" = (
 /obj/item/clothing/under/dress/dress_green,
 /turf/simulated/fitness{
@@ -69020,7 +68936,7 @@
 	},
 /area/survivalpod)
 "uoj" = (
-/obj/item/clothing/suit/space/void/medical/alt/tesh,
+/obj/item/clothing/suit/space/void/medical/veymed_static,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -71973,12 +71889,6 @@
 /area/survivalpod)
 "vgS" = (
 /obj/item/stack/flag/yellow,
-/turf/simulated/fitness{
-	icon_state = "vault"
-	},
-/area/survivalpod)
-"vhb" = (
-/obj/item/clothing/head/helmet/space/void/merc/axis,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -77431,7 +77341,7 @@
 	},
 /area/survivalpod)
 "wKe" = (
-/obj/item/clothing/suit/space/void/medical/alt,
+/obj/item/clothing/suit/space/void/medical/veymed,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -92159,7 +92069,7 @@ hhZ
 bSW
 huP
 bSW
-oir
+hih
 bSW
 nHW
 bSW
@@ -100105,7 +100015,7 @@ ecy
 apG
 viO
 bSW
-ldJ
+bSW
 chs
 iPo
 vGa
@@ -100307,7 +100217,7 @@ mnD
 gYy
 bSW
 bSW
-dwO
+bSW
 bsR
 pbv
 kez
@@ -102486,7 +102396,7 @@ jKg
 rDt
 fyU
 ubC
-nyQ
+bSW
 fxM
 lvD
 wth
@@ -102705,8 +102615,8 @@ aBa
 rmi
 whe
 wov
-sZf
-vhb
+wKe
+bSW
 hxh
 dNn
 tey
@@ -102908,7 +102818,7 @@ aQE
 eAQ
 jGW
 nCH
-mBv
+bSW
 dXS
 mnh
 tzO
@@ -102952,7 +102862,7 @@ tlR
 bRZ
 gXF
 pHC
-qXp
+bSW
 mEF
 trR
 gCt
@@ -103104,7 +103014,7 @@ dEJ
 cNT
 qay
 owM
-lxZ
+bSW
 azT
 lsS
 oUq
@@ -103154,8 +103064,8 @@ rcG
 edf
 jck
 fch
-eBC
-ivh
+bSW
+bSW
 tId
 qMt
 gRN
@@ -106203,7 +106113,7 @@ jPD
 hcY
 iMx
 fdu
-evu
+bSW
 aYV
 eka
 iKh
@@ -106405,7 +106315,7 @@ qxc
 mmT
 jlN
 qwZ
-nON
+bSW
 jpb
 vqW
 kif
@@ -107478,7 +107388,7 @@ eeF
 nAp
 mFl
 uXh
-cSJ
+bSW
 gqy
 jQc
 gKe
@@ -107680,7 +107590,7 @@ vwy
 gEF
 vAD
 lpT
-kyF
+bSW
 saf
 nVY
 vbW

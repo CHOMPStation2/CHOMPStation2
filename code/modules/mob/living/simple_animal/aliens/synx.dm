@@ -8,7 +8,7 @@
 	desc = "A cold blooded, genderless, parasitic eel from the more distant and stranger areas of the cosmos. Plain, white, perpetually grinning and possessing a hunger as enthusiastic and endless as humanity's sense of exploration."
 	tt_desc = "synxus pergulus"
 
-	 //Synx species belongs to ChimeraSynx , Base sprites made by: SpitefulCrow
+	//Synx species belongs to ChimeraSynx , Base sprites made by: SpitefulCrow
 	icon = 'icons/mob/synx.dmi'//giving synxes their own DMI file!
 	icon_state = "synx_living"
 	icon_living = "synx_living"
@@ -110,6 +110,8 @@
 /mob/living/simple_mob/animal/synx/init_vore()
 	if(!voremob_loaded)
 		return
+	if(LAZYLEN(vore_organs))
+		return
 	.=..()
 	var/obj/belly/B = vore_selected
 	//B.human_prey_swallow_time = 6 SECONDS //doesnt work
@@ -142,6 +144,8 @@
 /mob/living/simple_mob/animal/synx/ai/pet/asteri/init_vore()
 	if(!voremob_loaded)
 		return
+	if(LAZYLEN(vore_organs))
+		return
 	.=..()
 	var/obj/belly/B = vore_selected
 	B.desc    = "The synx eagerly swallows you, taking you from its gullet into its long, serpentine stomach. The internals around you greedily press into your from all sides, keeping you coated in a slick coat of numbing fluids..."
@@ -166,9 +170,9 @@
 	)
 */
 
-/mob/living/simple_mob/animal/synx/New() //this is really cool. Should be able to ventcrawl canonicaly, contort, and make random speech.
+/mob/living/simple_mob/animal/synx/Initialize(mapload) //this is really cool. Should be able to ventcrawl canonicaly, contort, and make random speech.
 //some things should be here that arent tho.
-	..()
+	. = ..()
 	add_verb(src,/mob/living/proc/ventcrawl) //CHOMPEdit TGPanel
 	add_verb(src,/mob/living/simple_mob/animal/synx/proc/distend_stomach) //CHOMPEdit TGPanel //to do later: sprites of stomach outside the body.
 	add_verb(src,/mob/living/simple_mob/proc/contort) //CHOMPEdit TGPanel
@@ -280,7 +284,7 @@
 		new /obj/item/bikehorn(location)
 		M.custom_pain("You suddenly cough up a bikehorn!",60)
 
-  /*why is this in here twice? -Lo
+/*why is this in here twice? -Lo
 	/datum/reagent/inaprovaline/synxchem/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 		if(alien != IS_DIONA)
 		if(prob(5))
@@ -559,6 +563,8 @@
 /mob/living/simple_mob/animal/synx/ai/pet/init_vore()
 	if(!voremob_loaded)
 		return
+	if(LAZYLEN(vore_organs))
+		return
 	.=..()
 	var/obj/belly/B = vore_selected
 	B.vore_verb = "swallow"
@@ -567,6 +573,8 @@
 
 /mob/living/simple_mob/animal/synx/ai/pet/holo/init_vore()
 	if(!voremob_loaded)
+		return
+	if(LAZYLEN(vore_organs))
 		return
 	.=..()
 	var/obj/belly/B = vore_selected
@@ -651,30 +659,30 @@
 
 /mob/living/simple_mob/animal/synx/ai/pet/greed/synth
 /*
-▓███▓     ▓▓▓     ▓▓▓     ▓▓▓     ▓▓▓     ▓███▓
- ▓▓   ▓▓▓█ ▓▓  ▓▓█ ▓▓  ▓▓█ ▓▓  ▓▓█ ▓▓  ▓▓█ ▓▓   ▓▓▓█
-▓      ▓▓▓▓     ▓▓▓     ▓▓▓     ▓▓▓     ▓▓▓      ▓▓▓▓
-▓      █▓▓▓     █▓▓     █▓▓     █▓▓     █▓▓      █▓▓▓
-▓      █▓▓▓▓█  █▓▓ ▓█  █▓▓ ▓█  █▓▓█▓█  █▓▓▓      █▓▓▓
-▓      █▓▓▓  ▓█▓    █▓█▓█   █▓█▓█   ▓▓█   ▓█     █▓▓▓
-▓█     █▓▓▓          ▓▓▓     ▓▓▓          ▓▓     █▓▓▓
-▓▓     █▓▓            ▓       ▓            ▓     █▓▓▓
- ▓     █▓▓                                 ▓█    █▓▓
-  ▓    ▓▓▓                                 ▓▓   █▓▓
-   █\   ▓▓      ▓▓                   ▓█      ▓  █▓▓
-   ▓█\   ▓█    ▓█▓                   ▓▓▓    █▓ █▓▓
-    ▓▓▓█  ▓   ▓▓▓▓                   ▓ ▓▓   ▓ █▓▓
-        ▓█▓  ▓▓█▓▓                   ▓  ▓▓  ▓▓▓
-            ▓▓ █▓▓█                 █▓  █▓▓
-           ▓▓   ▓▓▓                 ▓▓   █▓▓
-           ▓    ▓▓▓                 ▓    █▓▓
-         ▓▓    █▓▓█               █▓    █▓▓▓
-         ▓     █▓▓▓  ▓▓█     █▓█  ▓▓    █▓▓▓
-         ▓     █▓▓▓▓▓  ▓▓█ ▓▓  ▓▓█▓     █▓▓▓
-         ▓     █▓▓▓     ▓▓▓     ▓▓▓     █▓▓▓
-         ▓     █▓▓▓     ▓▓▓     ▓▓▓     █▓▓▓
-           ▓█▓██▓▓▓█▓█▓█▓▓▓█▓█▓█▓▓▓█▓█▓██▓▓▓
-*/
+ * ▓███▓     ▓▓▓     ▓▓▓     ▓▓▓     ▓▓▓     ▓███▓
+ *  ▓▓   ▓▓▓█ ▓▓  ▓▓█ ▓▓  ▓▓█ ▓▓  ▓▓█ ▓▓  ▓▓█ ▓▓   ▓▓▓█
+ * ▓      ▓▓▓▓     ▓▓▓     ▓▓▓     ▓▓▓     ▓▓▓      ▓▓▓▓
+ * ▓      █▓▓▓     █▓▓     █▓▓     █▓▓     █▓▓      █▓▓▓
+ * ▓      █▓▓▓▓█  █▓▓ ▓█  █▓▓ ▓█  █▓▓█▓█  █▓▓▓      █▓▓▓
+ * ▓      █▓▓▓  ▓█▓    █▓█▓█   █▓█▓█   ▓▓█   ▓█     █▓▓▓
+ * ▓█     █▓▓▓          ▓▓▓     ▓▓▓          ▓▓     █▓▓▓
+ * ▓▓     █▓▓            ▓       ▓            ▓     █▓▓▓
+ *  ▓     █▓▓                                 ▓█    █▓▓
+ *   ▓    ▓▓▓                                 ▓▓   █▓▓
+ *    █\   ▓▓      ▓▓                   ▓█      ▓  █▓▓
+ *    ▓█\   ▓█    ▓█▓                   ▓▓▓    █▓ █▓▓
+ *     ▓▓▓█  ▓   ▓▓▓▓                   ▓ ▓▓   ▓ █▓▓
+ *         ▓█▓  ▓▓█▓▓                   ▓  ▓▓  ▓▓▓
+ *             ▓▓ █▓▓█                 █▓  █▓▓
+ *            ▓▓   ▓▓▓                 ▓▓   █▓▓
+ *            ▓    ▓▓▓                 ▓    █▓▓
+ *          ▓▓    █▓▓█               █▓    █▓▓▓
+ *          ▓     █▓▓▓  ▓▓█     █▓█  ▓▓    █▓▓▓
+ *          ▓     █▓▓▓▓▓  ▓▓█ ▓▓  ▓▓█▓     █▓▓▓
+ *          ▓     █▓▓▓     ▓▓▓     ▓▓▓     █▓▓▓
+ *          ▓     █▓▓▓     ▓▓▓     ▓▓▓     █▓▓▓
+ *            ▓█▓██▓▓▓█▓█▓█▓▓▓█▓█▓█▓▓▓█▓█▓██▓▓▓
+ */
 	icon_state = "synx_C_living"
 	icon_living = "synx_C_living"
 	icon_dead = "synx_C_dead"
@@ -701,8 +709,8 @@
 	faction = "SYN"
 
 
-/mob/living/simple_mob/animal/synx/ai/pet/greed/synth/New()
-	..()
+/mob/living/simple_mob/animal/synx/ai/pet/greed/synth/Initialize(mapload)
+	. = ..()
 	name = "SYN-KinC-([rand(100,999)])"
 
 /mob/living/simple_mob/animal/synx/ai/pet/greed/synth/goodboy
@@ -769,7 +777,8 @@
 	set category = "Debug.Synx" //CHOMPEdit
 	icon_state = input(usr, "What would you like to change icon_state to?", "Respriting", null)
 
-/mob/living/simple_mob/animal/synx/ai/pet/debug/New()
+/mob/living/simple_mob/animal/synx/ai/pet/debug/Initialize(mapload)
+	. = ..()
 	add_verb(src,/mob/living/simple_mob/animal/synx/ai/pet/debug/proc/rename) //CHOMPEdit TGPanel
 	add_verb(src,/mob/living/simple_mob/animal/synx/ai/pet/debug/proc/resprite) //CHOMPEdit TGPanel
 	add_verb(src,/mob/living/simple_mob/animal/synx/ai/pet/debug/proc/redesc) //CHOMPEdit TGPanel

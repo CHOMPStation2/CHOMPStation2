@@ -1,20 +1,21 @@
-//Atmosphere properties //CHOMP Comment: I guess this THOR planetary information should go here. THOR is a gas giant, it ain't gonna be getting very many other maps.
-#define THOR_ONE_ATMOSPHERE	101.5 //kPa
-#define THOR_AVG_TEMP			313 //kelvin
+//MOVED TO modular_chomp/icons/turf/flooring/flooring_premade.dm
+// //Atmosphere properties //CHOMP Comment: I guess this THOR planetary information should go here. THOR is a gas giant, it ain't gonna be getting very many other maps.
+// #define THOR_ONE_ATMOSPHERE	101.5 //kPa
+// #define THOR_AVG_TEMP			313 //kelvin
 
-#define THOR_PER_N2		0.65 //percent
-#define THOR_PER_O2		0.35
-#define THOR_PER_N2O		0.00 //Currently no capacity to 'start' a turf with this. See turf.dm
-#define THOR_PER_CO2		0.00
-#define THOR_PER_PHORON	0.00
+// #define THOR_PER_N2		0.65 //percent
+// #define THOR_PER_O2		0.35
+// #define THOR_PER_N2O		0.00 //Currently no capacity to 'start' a turf with this. See turf.dm
+// #define THOR_PER_CO2		0.00
+// #define THOR_PER_PHORON	0.00
 
-//Math only beyond this point
-#define THOR_MOL_PER_TURF		(THOR_ONE_ATMOSPHERE*CELL_VOLUME/(THOR_AVG_TEMP*R_IDEAL_GAS_EQUATION))
-#define THOR_MOL_N2			(THOR_MOL_PER_TURF * THOR_PER_N2)
-#define THOR_MOL_O2			(THOR_MOL_PER_TURF * THOR_PER_O2)
-#define THOR_MOL_N2O			(THOR_MOL_PER_TURF * THOR_PER_N2O)
-#define THOR_MOL_CO2			(THOR_MOL_PER_TURF * THOR_PER_CO2)
-#define THOR_MOL_PHORON		(THOR_MOL_PER_TURF * THOR_PER_PHORON)
+// //Math only beyond this point
+// #define THOR_MOL_PER_TURF		(THOR_ONE_ATMOSPHERE*CELL_VOLUME/(THOR_AVG_TEMP*R_IDEAL_GAS_EQUATION))
+// #define THOR_MOL_N2			(THOR_MOL_PER_TURF * THOR_PER_N2)
+// #define THOR_MOL_O2			(THOR_MOL_PER_TURF * THOR_PER_O2)
+// #define THOR_MOL_N2O			(THOR_MOL_PER_TURF * THOR_PER_N2O)
+// #define THOR_MOL_CO2			(THOR_MOL_PER_TURF * THOR_PER_CO2)
+// #define THOR_MOL_PHORON		(THOR_MOL_PER_TURF * THOR_PER_PHORON)
 
 //Turfmakers
 #define THOR_SET_ATMOS	nitrogen=THOR_MOL_N2;oxygen=THOR_MOL_O2;carbon_dioxide=THOR_MOL_CO2;phoron=THOR_MOL_PHORON;temperature=THOR_AVG_TEMP
@@ -50,7 +51,7 @@
 	tmp.pixel_y = skybox_offset_y
 	return tmp
 
-/obj/effect/overmap/visitable/planet/thor/Initialize()
+/obj/effect/overmap/visitable/planet/thor/Initialize(mapload)
 	atmosphere = new(CELL_VOLUME) // Necessary for the planet overmap icon to generate properly, but gas type does not seem to matter.
 	atmosphere.adjust_gas_temp(GAS_CO2, THOR_MOL_CO2, THOR_AVG_TEMP)
 	atmosphere.adjust_gas_temp(GAS_N2, THOR_MOL_N2, THOR_AVG_TEMP)
@@ -220,18 +221,24 @@
 	oxygen		= THOR_MOL_O2
 	nitrogen	= THOR_MOL_N2
 	temperature	= THOR_AVG_TEMP
+	animals = "thor_real"
+	grass = "thor_real"
 	var/tree_chance = 5
 
 /turf/simulated/floor/outdoors/grass/heavy/thor
 	oxygen		= THOR_MOL_O2
 	nitrogen	= THOR_MOL_N2
 	temperature	= THOR_AVG_TEMP
+	animals = "thor_real"
+	grass = "thor_real"
 	var/tree_chance = 10
 
 /turf/simulated/floor/outdoors/grass/forest/thor
 	oxygen		= THOR_MOL_O2
 	nitrogen	= THOR_MOL_N2
 	temperature	= THOR_AVG_TEMP
+	animals = "thor_real"
+	grass = "thor_real"
 	var/tree_chance = 10
 
 /turf/simulated/floor/outdoors/dirt/thor/planetuse
@@ -275,19 +282,19 @@
 	nitrogen	= THOR_MOL_N2
 	temperature	= THOR_AVG_TEMP
 
-/turf/simulated/floor/outdoors/grass/thor/Initialize()
+/turf/simulated/floor/outdoors/grass/thor/Initialize(mapload)
 	if(tree_chance && prob(tree_chance) && !check_density())
 		new /obj/structure/flora/tree/jungle(src)
 	. = ..()
 
-/turf/simulated/floor/outdoors/grass/heavy/thor/Initialize()
+/turf/simulated/floor/outdoors/grass/heavy/thor/Initialize(mapload)
 	if(tree_chance && prob(tree_chance) && !check_density())
 		new /obj/structure/flora/tree/jungle(src)
 	. = ..()
 
-/turf/simulated/floor/outdoors/grass/forest/thor/Initialize()
+/turf/simulated/floor/outdoors/grass/forest/thor/Initialize(mapload)
 	if(tree_chance && prob(tree_chance) && !check_density())
 		new /obj/structure/flora/tree/jungle(src)
 
-	grass = "thor"
+	grass = "thor_real"
 	. = ..()

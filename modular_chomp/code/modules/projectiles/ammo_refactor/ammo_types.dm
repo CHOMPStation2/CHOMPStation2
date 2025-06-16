@@ -43,7 +43,7 @@
 		return P.launch_from_gun(target, target_zone, user, params, angle_override, forced_spread, launcher)
 	if(ammo_flags & AMMO_FLAG_HUNTER)
 		var/obj/item/projectile/P = new projectile_type_real(src.loc)
-		P.SA_bonus_damage = round(P.damage * AMMO_HUNTER_SA_DAMAGE_MULT) //In exchange for SA damage
+		P.mob_bonus_damage = round(P.damage * AMMO_HUNTER_SA_DAMAGE_MULT) //In exchange for SA damage
 		P.damage = round(P.damage * AMMO_HUNTER_DAMAGE_MULT) //Severely reduced damage
 		qdel(src)
 		return P.launch_from_gun(target, target_zone, user, params, angle_override, forced_spread, launcher)
@@ -62,8 +62,8 @@
 	projectile_type = /obj/item/projectile/simple_bullet
 	var/ammo_flags = 0
 
-/obj/item/ammo_casing/simple/New()
-	..()
+/obj/item/ammo_casing/simple/Initialize(mapload)
+	. = ..()
 	var/obj/item/projectile/simple_bullet/P = BB
 	if(istype(P))
 		P.ammo_flags = ammo_flags

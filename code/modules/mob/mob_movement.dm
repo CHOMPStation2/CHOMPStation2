@@ -11,13 +11,11 @@
 	if(locate(/obj/item/grab) in src)
 		. += 5
 
-	// CHOMPAdd Start - When crawling, move slow.
 	if(lying)
 		if(weakened >= 1)
 			. += 14			// Very slow when weakened.
 		else
 			. += 8
-	// CHOMPAdd End
 
 	// Movespeed delay based on movement mode
 	switch(m_intent)
@@ -252,7 +250,7 @@
 		to_chat(src, span_blue("You're pinned to a wall by [my_mob.pinned[1]]!"))
 		return 0
 
-	var/old_delay = mob.next_move //CHOMPEdit momentum
+	var/old_delay = mob.next_move
 
 	if(istype(my_mob.buckled, /obj/vehicle) || ismob(my_mob.buckled))
 		//manually set move_delay for vehicles so we don't inherit any mob movement penalties
@@ -277,8 +275,8 @@
 		else if(istype(my_mob.buckled, /obj/structure/bed/chair/wheelchair))
 			if(ishuman(my_mob))
 				var/mob/living/carbon/human/driver = my_mob
-				var/obj/item/organ/external/l_hand = driver.get_organ("l_hand")
-				var/obj/item/organ/external/r_hand = driver.get_organ("r_hand")
+				var/obj/item/organ/external/l_hand = driver.get_organ(BP_L_HAND)
+				var/obj/item/organ/external/r_hand = driver.get_organ(BP_R_HAND)
 				if((!l_hand || l_hand.is_stump()) && (!r_hand || r_hand.is_stump()))
 					return // No hands to drive your chair? Tough luck!
 			//drunk wheelchair driving
@@ -308,7 +306,6 @@
 					direct = turn(direct, pick(90, -90))
 					n = get_step(my_mob, direct)
 
-	//CHOMP Removal moved downwards
 
 	if(istype(my_mob.pulledby, /obj/structure/bed/chair/wheelchair))
 		. = my_mob.pulledby.relaymove(my_mob, direct)
@@ -320,16 +317,15 @@
 	//CHOMPEdit Begin
 	// If we ended up moving diagonally, increase delay.
 	if((direct & (direct - 1)) && mob.loc == n)
-		total_delay *= SQRT_2 //CHOMPEDIT
+		total_delay *= SQRT_2
 
 	//total_delay = DS2NEARESTTICK(total_delay) //Rounded to the next tick in equivalent ds
 	if(mob.last_move_time > (world.time - total_delay * 1.25))
 		mob.next_move = DS2NEARESTTICK(old_delay + total_delay)
 	else
 		mob.next_move = DS2NEARESTTICK(world.time + total_delay)
-	//CHOMPEdit End
 
-	if(!isliving(my_mob)) //CHOMPAdd
+	if(!isliving(my_mob))
 		moving = 0
 		return
 
@@ -361,14 +357,14 @@
 	// Update all the grabs!
 	for (var/obj/item/grab/G in my_mob)
 		if (G.state == GRAB_NECK)
-			mob.set_dir(reverse_dir[direct])
+			mob.set_dir(GLOB.reverse_dir[direct])
 		G.adjust_position()
 	for (var/obj/item/grab/G in my_mob.grabbed_by)
 		G.adjust_position()
 
 	// We're not in the middle of a move anymore
 	moving = 0
-	mob.last_move_time = world.time //CHOMPEdit
+	mob.last_move_time = world.time
 
 /mob/proc/SelfMove(turf/n, direct, movetime)
 	return Move(n, direct, movetime)
@@ -378,16 +374,14 @@
 //Important to note: world.time is always in deciseconds. Higher tickrates mean more subdivisions of world.time (20fps = 0.5, 40fps = 0.25)
 /client
 	var/is_leaving_belly = FALSE
-	var/incorporeal_speed = 0.5 // CHOMPAdd
+	var/incorporeal_speed = 0.5
 
-//ChompEDIT START
 /client/verb/set_incorporeal_speed()
 	set category = "OOC.Game Settings"
 	set name = "Set Incorporeal Speed"
 
 	var/input = tgui_input_number(usr, "Set an incorporeal movement delay between 0 (fastest) and 5 (slowest)", "Incorporeal movement speed", (0.5/world.tick_lag), 5, 0)
 	incorporeal_speed = input * world.tick_lag
-//ChompEDIT End
 
 ///Process_Incorpmove
 ///Called by client/Move()
@@ -403,13 +397,11 @@
 		is_leaving_belly = FALSE
 	var/turf/mobloc = get_turf(mob)
 
-	//ChompEDIT START
 	if(incorporeal_speed)
 		var/mob/my_mob = mob
 		if(!my_mob.checkMoveCooldown()) //Only bother with speed if it isn't 0
 			return
 		my_mob.setMoveCooldown(incorporeal_speed)
-	//ChompEDIT END
 
 	switch(mob.incorporeal_move)
 		if(1)
@@ -507,16 +499,6 @@
 	inertia_dir = 0
 	return 1
 
-/* CHOMPedit: Nuking slipping.
-	//Check to see if we slipped
-	if(prob(Process_Spaceslipping(5)) && !buckled)
-		to_chat(src, span_boldnotice("You slipped!"))
-		inertia_dir = last_move
-		step(src, src.inertia_dir) // Not using Move for smooth glide here because this is a 'slip' so should be sudden.
-		return 0
-	//If not then we can reset inertia and move
-*/// CHOMPedit end.
-
 /mob/proc/Check_Dense_Object() //checks for anything to push off in the vicinity. also handles magboots on gravity-less floors tiles
 
 	var/dense_object = 0
@@ -557,17 +539,6 @@
 
 /mob/proc/Check_Shoegrip()
 	return 0
-
-/* CHOMPedit: Nuking slipping.
-/mob/proc/Process_Spaceslipping(var/prob_slip = 5)
-	//Setup slipage
-	//If knocked out we might just hit it and stop.  This makes it possible to get dead bodies and such.
-	if(stat)
-		prob_slip = 0  // Changing this to zero to make it line up with the comment.
-
-	prob_slip = round(prob_slip)
-	return(prob_slip)
-*/// CHOMPedit end.
 
 /mob/proc/mob_get_gravity(turf/T)
 	return get_gravity(src, T)

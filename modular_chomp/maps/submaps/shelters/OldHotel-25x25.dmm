@@ -30,11 +30,6 @@
 /obj/item/multitool,
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/OldHotel)
-"bQ" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/tiled/asteroid_steel,
-/area/survivalpod/superpose/OldHotel)
 "bW" = (
 /obj/item/material/shard,
 /turf/template_noop,
@@ -782,11 +777,6 @@
 "Vj" = (
 /turf/simulated/floor/carpet/oracarpet,
 /area/survivalpod/superpose/OldHotel)
-"Wy" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/wood,
-/area/survivalpod/superpose/OldHotel)
 "WD" = (
 /obj/structure/closet/secure_closet/freezer/fridge{
 	locked = 0
@@ -1030,7 +1020,7 @@ hQ
 TU
 SG
 yM
-Wy
+SZ
 ZG
 TU
 kI
@@ -1187,7 +1177,7 @@ QG
 if
 SZ
 go
-bQ
+Sy
 rb
 lj
 Ac
@@ -1214,7 +1204,7 @@ SZ
 qg
 TU
 go
-bQ
+Sy
 Cx
 Jq
 Cx
@@ -1295,7 +1285,7 @@ Gz
 hQ
 wX
 Jq
-bQ
+Sy
 Cx
 Cx
 MU

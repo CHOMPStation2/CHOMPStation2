@@ -50,7 +50,7 @@
 	heat_level_2 = 1000
 	heat_level_3 = 1150
 
-	flags =  NO_SCAN | NO_MINOR_CUT | NO_INFECT
+	flags =  NO_DNA | NO_SLEEVE | NO_MINOR_CUT | NO_INFECT
 	spawn_flags = SPECIES_CAN_JOIN | SPECIES_IS_WHITELISTED | SPECIES_WHITELIST_SELECTABLE
 
 	reagent_tag = IS_SHADEKIN		// for shadekin-unqiue chem interactions
@@ -62,12 +62,7 @@
 
 	// has_glowing_eyes = TRUE			//Applicable through neutral taits.
 
-	//death_message = "phases to somewhere far away!" //CHOMPEdit Removed
-	// male_cough_sounds = null
-	// female_cough_sounds = null
-	// male_sneeze_sound = null
-	// female_sneeze_sound = null
-
+	//death_message = "phases to somewhere far away!"  //CHOMPEdit Removed
 	speech_bubble_appearance = "ghost"
 
 	genders = list(MALE, FEMALE, PLURAL, NEUTER)
@@ -89,6 +84,7 @@
 		O_VOICE = 		/obj/item/organ/internal/voicebox,
 		O_LIVER =		/obj/item/organ/internal/liver,
 		O_KIDNEYS =		/obj/item/organ/internal/kidneys,
+		O_SPLEEN =		/obj/item/organ/internal/spleen,
 		O_BRAIN =		/obj/item/organ/internal/brain/shadekin,
 		O_EYES =		/obj/item/organ/internal/eyes,
 		O_STOMACH =		/obj/item/organ/internal/stomach,
@@ -126,6 +122,7 @@
 	var/manual_respite = FALSE //CHOMPEdit - Dark Respite
 	var/respite_activating = FALSE //CHOMPEdit - Dark Respite
 	var/nutrition_energy_conversion = TRUE //CHOMPEdit - Add toggle to nutrition and energy conversions
+	species_component = /datum/component/shadekin
 
 /datum/species/shadekin/New()
 	..()
@@ -141,10 +138,7 @@
 	var/area/current_area = get_area(H)
 	if((H.ability_flags & AB_DARK_RESPITE) || H.has_modifier_of_type(/datum/modifier/dark_respite) || current_area.flag_check(AREA_LIMIT_DARK_RESPITE))
 		return
-	var/list/floors = list()
-	for(var/turf/unsimulated/floor/dark/floor in get_area_turfs(/area/shadekin))
-		floors.Add(floor)
-	if(!LAZYLEN(floors))
+	if(!LAZYLEN(GLOB.latejoin_thedark))
 		log_and_message_admins("[H] died outside of the dark but there were no valid floors to warp to")
 		return
 
@@ -180,7 +174,7 @@
 		var/obj/belly/belly = H.loc
 		add_attack_logs(belly.owner, H, "Digested in [lowertext(belly.name)]")
 		to_chat(belly.owner, span_notice("\The [H.name] suddenly vanishes within your [belly.name]"))
-		H.forceMove(pick(floors))
+		H.forceMove(pick(GLOB.latejoin_thedark))
 		if(H.ability_flags & AB_PHASE_SHIFTED)
 			H.phase_shift()
 		else
@@ -206,7 +200,7 @@
 		H.add_modifier(/datum/modifier/dark_respite, 25 MINUTES)
 
 		spawn(1 SECOND)
-			H.forceMove(pick(floors))
+			H.forceMove(pick(GLOB.latejoin_thedark))
 			if(H.ability_flags & AB_PHASE_SHIFTED)
 				H.phase_shift()
 			else
@@ -353,42 +347,37 @@
 	update_shadekin_hud(H)
 
 /datum/species/shadekin/proc/get_energy(var/mob/living/carbon/human/H)
-	var/obj/item/organ/internal/brain/shadekin/shade_organ = H.internal_organs_by_name[O_BRAIN]
-
-	if(!istype(shade_organ))
-		return 0
+	var/datum/component/shadekin/comp = H.GetComponent(/datum/component/shadekin)
+	if(!comp)
+		return FALSE //No component, no energy to be had.
 	//CHOMPEdit - Dark Respite
 	if(H.ability_flags & AB_DARK_RESPITE || H.has_modifier_of_type(/datum/modifier/dark_respite))
-		return 0
+		return FALSE
 	//CHOMPEdit - Dark Respite
-	if(shade_organ.dark_energy_infinite)
-		return shade_organ.max_dark_energy
+	if(comp.dark_energy_infinite)
+		return comp.max_dark_energy
 
-	return shade_organ.dark_energy
+	return comp.dark_energy
 
 /datum/species/shadekin/proc/get_max_energy(var/mob/living/carbon/human/H)
-	var/obj/item/organ/internal/brain/shadekin/shade_organ = H.internal_organs_by_name[O_BRAIN]
-
-	if(!istype(shade_organ))
-		return 0
-
-	return shade_organ.max_dark_energy - (LAZYLEN(active_dark_maws) * 5)
+	var/datum/component/shadekin/comp = H.GetComponent(/datum/component/shadekin)
+	if(!comp)
+		return FALSE //No component, no energy to be had.
+	return comp.max_dark_energy
 
 /datum/species/shadekin/proc/set_energy(var/mob/living/carbon/human/H, var/new_energy)
-	var/obj/item/organ/internal/brain/shadekin/shade_organ = H.internal_organs_by_name[O_BRAIN]
+	var/datum/component/shadekin/comp = H.GetComponent(/datum/component/shadekin)
+	if(!comp)
+		return FALSE //No component, no energy to be had.
 
-	if(!istype(shade_organ))
-		return
-
-	shade_organ.dark_energy = CLAMP(new_energy, 0, get_max_energy(H))
+	comp.dark_energy = CLAMP(new_energy, 0, get_max_energy(H))
 
 /datum/species/shadekin/proc/set_max_energy(var/mob/living/carbon/human/H, var/new_max_energy)
-	var/obj/item/organ/internal/brain/shadekin/shade_organ = H.internal_organs_by_name[O_BRAIN]
+	var/datum/component/shadekin/comp = H.GetComponent(/datum/component/shadekin)
+	if(!comp)
+		return FALSE //No component, no energy to be had.
 
-	if(!istype(shade_organ))
-		return 0
-
-	shade_organ.max_dark_energy = new_max_energy
+	comp.max_dark_energy = new_max_energy
 
 /datum/species/shadekin/proc/update_shadekin_hud(var/mob/living/carbon/human/H)
 	var/turf/T = get_turf(H)
@@ -396,7 +385,7 @@
 		var/l_icon = 0
 		var/e_icon = 0
 
-		H.shadekin_display.invisibility = 0
+		H.shadekin_display.invisibility = INVISIBILITY_NONE
 		if(T)
 			var/brightness = T.get_lumcount() //Brightness in 0.0 to 1.0
 			var/darkness = 1-brightness //Invert
@@ -505,7 +494,7 @@
 
 	H.maxHealth = total_health
 
-	H.health = H.maxHealth
+	H.health = H.getMaxHealth()
 
 /datum/species/shadekin/produceCopy(var/list/traits, var/mob/living/carbon/human/H, var/custom_base, var/reset_dna = TRUE) // Traitgenes reset_dna flag required, or genes get reset on resleeve
 

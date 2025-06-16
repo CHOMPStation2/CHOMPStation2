@@ -15,30 +15,24 @@
 	var/pred_ooc_notes
 	var/pred_ooc_likes
 	var/pred_ooc_dislikes
-	//CHOMPEdit Start
 	var/pred_ooc_favs
 	var/pred_ooc_maybes
 	var/pred_ooc_style
 	var/prey_ooc_favs
 	var/prey_ooc_maybes
 	var/prey_ooc_style
-	//CHOMPEdit End
 	var/prey_ooc_notes
 	var/prey_ooc_likes
 	var/prey_ooc_dislikes
-	var/was_mob = FALSE //CHOMPAdd - tracks if the dominated being was a mob
+	var/was_mob
 
-/mob/living/dominated_brain/New(loc, var/mob/living/pred, preyname, var/mob/living/prey)
-	. = ..()
+/mob/living/dominated_brain/Initialize(mapload, var/mob/living/pred, preyname, var/mob/living/prey)
 	prey_name = preyname
 	if(prey)
 		prey_body = prey
 	pred_body = pred
-
-/mob/living/dominated_brain/Initialize()
 	if(!isliving(loc))
-		qdel(src)
-		return
+		return INITIALIZE_HINT_QDEL
 	. = ..()
 	lets_register_our_signals()
 	add_verb(src, /mob/living/dominated_brain/proc/resist_control)
@@ -65,11 +59,13 @@
 	pred_was_deleted()
 
 /mob/living/dominated_brain/proc/prey_was_deleted()
+	SIGNAL_HANDLER
 	if(prey_body)
 		UnregisterSignal(prey_body, COMSIG_PARENT_QDELETING)
 		prey_body = null
 
 /mob/living/dominated_brain/proc/pred_was_deleted()
+	SIGNAL_HANDLER
 	if(pred_body)
 		UnregisterSignal(pred_body, COMSIG_PARENT_QDELETING)
 		pred_body = null
@@ -123,11 +119,9 @@
 		prey_goes_here.ooc_notes = prey_ooc_notes
 		prey_goes_here.ooc_notes_likes = prey_ooc_likes
 		prey_goes_here.ooc_notes_dislikes = prey_ooc_dislikes
-		//CHOMPEdit Start
 		prey_goes_here.ooc_notes_favs = prey_ooc_favs
 		prey_goes_here.ooc_notes_maybes = prey_ooc_maybes
 		prey_goes_here.ooc_notes_style = prey_ooc_style
-		//CHOMPEdit End
 		add_verb(prey_goes_here, /mob/living/dominated_brain/proc/cease_this_foolishness)
 
 
@@ -144,11 +138,9 @@
 		prey_goes_here.ooc_notes = prey_ooc_notes
 		prey_goes_here.ooc_notes_likes = prey_ooc_likes
 		prey_goes_here.ooc_notes_dislikes = prey_ooc_dislikes
-		//CHOMPEdit Start
 		prey_goes_here.ooc_notes_favs = prey_ooc_favs
 		prey_goes_here.ooc_notes_maybes = prey_ooc_maybes
 		prey_goes_here.ooc_notes_style = prey_ooc_style
-		//CHOMPEdit End
 
 	///////////////////
 
@@ -161,11 +153,9 @@
 	pred_body.ooc_notes = pred_ooc_notes
 	pred_body.ooc_notes_likes = pred_ooc_likes
 	pred_body.ooc_notes_dislikes = pred_ooc_dislikes
-	//CHOMPEdit Start
 	pred_body.ooc_notes_favs = pred_ooc_favs
 	pred_body.ooc_notes_maybes = pred_ooc_maybes
 	pred_body.ooc_notes_style = pred_ooc_style
-	//CHOMPEdit End
 	log_and_message_admins("is now controlled by [pred_body.ckey]. They were restored to control through prey domination, and had been controlled by [prey_ckey].", pred_body)
 	pred_body.absorb_langs()
 	pred_body.prey_controlled = FALSE
@@ -199,7 +189,7 @@
 	set category = "Abilities.Vore"
 	set name = "Dominate Predator"
 	set desc = "Connect to and dominate the brain of your predator."
-	var/is_mob = FALSE //CHOMPAdd - tracks if character is a non player mob
+	var/is_mob = FALSE // - tracks if character is a non player mob TODO: Add
 
 	var/mob/living/pred
 	var/mob/living/prey = src
@@ -242,7 +232,6 @@
 	to_chat(prey, span_notice("You attempt to exert your control over \the [pred]..."))
 	log_admin("[key_name_admin(prey)] attempted to take over [pred].")
 
-//CHOMPEdit start - Ability to use dominate pred trait against whitelisted mobs
 	if(pred.ckey) //check if body is assigned to another player currently
 		if(tgui_alert(pred, "\The [prey] has elected to attempt to take control of you. Is this something you will allow to happen?", "Allow Prey Domination",list("No","Yes")) != "Yes")
 			to_chat(prey, span_warning("\The [pred] declined your request for control."))
@@ -256,7 +245,6 @@
 	else //at this point we end up with a mob
 		pred.ckey = "DOMMOB[rand(100000,999999)]" //this is cursed, but it does work and is cleaned up after
 		is_mob = TRUE
-//CHOMPEdit end
 
 	to_chat(pred, span_warning("You can feel the will of another overwriting your own, control of your body being sapped away from you..."))
 	to_chat(prey, span_warning("You can feel the will of your host diminishing as you exert your will over them!"))
@@ -282,14 +270,12 @@
 	pred_brain.prey_ooc_notes = prey.ooc_notes
 	pred_brain.prey_ooc_likes = prey.ooc_notes_likes
 	pred_brain.prey_ooc_dislikes = prey.ooc_notes_dislikes
-	//CHOMPEdit Start
 	pred_brain.prey_ooc_favs = prey.ooc_notes_favs
 	pred_brain.prey_ooc_maybes = prey.ooc_notes_maybes
 	pred_brain.prey_ooc_style = prey.ooc_notes_style
 	pred_brain.pred_ooc_favs = pred.ooc_notes_favs
 	pred_brain.pred_ooc_maybes = pred.ooc_notes_maybes
 	pred_brain.pred_ooc_style = pred.ooc_notes_style
-	//CHOMPEdit End
 	pred_brain.pred_ooc_notes = pred.ooc_notes
 	pred_brain.pred_ooc_likes = pred.ooc_notes_likes
 	pred_brain.pred_ooc_dislikes = pred.ooc_notes_dislikes
@@ -305,11 +291,9 @@
 	pred.ooc_notes = pred_brain.prey_ooc_notes
 	pred.ooc_notes_likes = pred_brain.prey_ooc_likes
 	pred.ooc_notes_dislikes = pred_brain.prey_ooc_dislikes
-	//CHOMPEdit Start
 	pred.ooc_notes_favs = pred_brain.prey_ooc_favs
 	pred.ooc_notes_maybes = pred_brain.prey_ooc_maybes
 	pred.ooc_notes_style = pred_brain.prey_ooc_style
-	//CHOMPEdit End
 
 	add_verb(pred, /mob/proc/release_predator)
 
@@ -322,10 +306,8 @@
 	if(delete_source)
 		qdel(prey)
 
-//CHOMPEdit start - extra variable for mobs that assist cleanup
 	if(is_mob == 1)
 		pred_brain.was_mob = TRUE
-//CHOMPEdit End
 
 /mob/proc/release_predator()
 	set category = "Abilities.Vore"
@@ -338,13 +320,13 @@
 			if(db.ckey == db.pred_ckey)
 				to_chat(src, span_notice("You ease off of your control, releasing \the [db]."))
 				to_chat(db, span_notice("You feel the alien presence fade, and restore control of your body to you of their own will..."))
-				if(db.was_mob) //CHOMPEdit start - clean up if the dominated body was a playerless mob
+				if(db.was_mob)
 					db.pred_ckey = null
 					db.ckey = null
 					db.restore_control()
 				else
 					db.restore_control()
-				return //CHOMPEdit end
+				return
 			else
 				continue
 	to_chat(src, span_danger("You haven't been taken over, and shouldn't have this verb. I'll clean that up for you. Report this on the github, it is a bug."))
@@ -381,7 +363,6 @@
 				possible_mobs |= L
 			else
 				continue
-	//CHOMPEdit Start - Let dominate prey work on grabbed people
 	var/obj/item/grab/G = src.get_active_hand()
 	if(istype(G))
 		var/mob/living/L = G.affecting
@@ -390,7 +371,6 @@
 				possible_mobs |= "~~[L.name]~~ (reinforce grab first)"
 			else
 				possible_mobs |= L
-	//CHOMPEdit End
 	if(!possible_mobs)
 		to_chat(src, span_warning("There are no valid targets inside of you."))
 		return
@@ -398,11 +378,9 @@
 	if(!input)
 		return
 	var/mob/living/M = input
-	//CHOMPEdit Start - Let dominate prey work on grabbed people
 	if(!istype(M))
 		to_chat(src, span_warning("You must have a tighter grip to dominate this creature."))
 		return
-	//CHOMPEdit End
 	if(!M.allow_mind_transfer) //check if the dominated mob pref is enabled
 		to_chat(src, span_warning("[M] is unable to be dominated."))
 		return
@@ -419,15 +397,13 @@
 	to_chat(M, span_warning("You can feel the will of another pulling you away from your body..."))
 	to_chat(src, span_warning("You can feel the will of your prey diminishing as you gather them!"))
 
-	//CHOMPEdit Start - Let dominate prey work on grabbed people
 	if(istype(G) && M == G.affecting)
 		src.visible_message(span_danger("[src] seems to be doing something to [M], resulting in [M]'s body looking increasingly drowsy with every passing moment!"))
-	//CHOMPEdit End
 	if(!do_after(src, 10 SECONDS, exclusive = TRUE))
 		to_chat(M, span_notice("The alien presence fades, and you are left along in your body..."))
 		to_chat(src, span_notice("Your attempt to gather [M]'s mind has been interrupted."))
 		return
-	if(!isbelly(M.loc) && !(istype(G) && M == G.affecting && G.state == GRAB_NECK)) //CHOMPEdit - Let dominate prey work on grabbed people
+	if(!isbelly(M.loc) && !(istype(G) && M == G.affecting && G.state == GRAB_NECK)) // Let dominate prey work on grabbed people
 		to_chat(M, span_notice("The alien presence fades, and you are left along in your body..."))
 		to_chat(src, span_notice("Your attempt to gather [M]'s mind has been interrupted."))
 		return
@@ -447,14 +423,12 @@
 	db.ooc_notes = M.ooc_notes
 	db.ooc_notes_likes = M.ooc_notes_likes
 	db.ooc_notes_dislikes = M.ooc_notes_dislikes
-	//CHOMPEdit Start
 	db.ooc_notes_favs = M.ooc_notes_favs
 	db.ooc_notes_maybes = M.ooc_notes_maybes
 	db.ooc_notes_style = M.ooc_notes_style
 	db.prey_ooc_favs = M.ooc_notes_favs
 	db.prey_ooc_maybes = M.ooc_notes_maybes
 	db.prey_ooc_style = M.ooc_notes_style
-	//CHOMPEdit End
 	db.prey_ooc_likes = M.ooc_notes_likes
 	db.prey_ooc_dislikes = M.ooc_notes_dislikes
 	add_verb(db, /mob/living/dominated_brain/proc/cease_this_foolishness)
@@ -465,10 +439,8 @@
 	log_admin("[db] ([db.ckey]) has agreed to [src]'s dominate prey attempt, and so no longer occupies their original body.")
 	to_chat(src, span_notice("You feel your mind expanded as [M] is incorporated into you."))
 	to_chat(M, span_warning("Your mind is gathered into \the [src], becoming part of them..."))
-	//CHOMPEdit Start - Let dominate prey work on grabbed people
 	if(istype(G) && M == G.affecting)
 		visible_message(span_danger("[src] seems to finish whatever they were doing to [M]."))
-	//CHOMPEdit End
 
 /mob/living/dominated_brain/proc/cease_this_foolishness()
 	set category = "Abilities.Vore"
@@ -567,14 +539,12 @@
 	pred_brain.prey_ooc_notes = prey.ooc_notes
 	pred_brain.prey_ooc_likes = prey.ooc_notes_likes
 	pred_brain.prey_ooc_dislikes = prey.ooc_notes_dislikes
-	//CHOMPEdit Start
 	pred_brain.prey_ooc_favs = prey.ooc_notes_favs
 	pred_brain.prey_ooc_maybes = prey.ooc_notes_maybes
 	pred_brain.prey_ooc_style = prey.ooc_notes_style
 	pred_brain.pred_ooc_favs = pred.ooc_notes_favs
 	pred_brain.pred_ooc_maybes = pred.ooc_notes_maybes
 	pred_brain.pred_ooc_style = pred.ooc_notes_style
-	//CHOMPEdit End
 	pred_brain.pred_ooc_notes = pred.ooc_notes
 	pred_brain.pred_ooc_likes = pred.ooc_notes_likes
 	pred_brain.pred_ooc_dislikes = pred.ooc_notes_dislikes
@@ -589,11 +559,9 @@
 	pred.ooc_notes = pred_brain.prey_ooc_notes
 	pred.ooc_notes_likes = pred_brain.prey_ooc_likes
 	pred.ooc_notes_dislikes = pred_brain.prey_ooc_dislikes
-	//CHOMPEdit Start
 	pred.ooc_notes_favs = pred_brain.prey_ooc_favs
 	pred.ooc_notes_maybes = pred_brain.prey_ooc_maybes
 	pred.ooc_notes_style = pred_brain.prey_ooc_style
-	//CHOMPEdit End
 
 	add_verb(pred, /mob/proc/release_predator)
 

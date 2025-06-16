@@ -2,7 +2,7 @@
 	name = "Eclipse Head"
 	desc = "You shouldn't be seeing this. This is going to be rough"
 	health = 315
-	maxHealth = 315 //A 20 damae shot will need to land 35 times
+	maxHealth = 315 //A 20 damage shot will need to land 35 times
 	projectile_dispersion = 8
 	projectile_accuracy = 0
 	ranged_cooldown = 5
@@ -24,6 +24,7 @@
 	has_heal_droid = TRUE
 	specialattackprojectile = /obj/item/projectile/bullet/dragon
 	loot_list = list(/obj/item/gun/energy/flamegun = 100,
+		/obj/item/prop/tyrlore/neonsec = 100,
 		/obj/item/bone/skull = 100
 			)
 
@@ -85,7 +86,8 @@
 		/obj/item/prop/alien/phasecoil = 60,
 		/obj/item/circuitboard/mecha/durand/peripherals = 60,
 		/obj/item/bluespace_harpoon = 10,
-		/obj/item/bone/skull = 100
+		/obj/item/bone/skull = 100,
+		/obj/item/prop/tyrlore/neonsci = 100
 			)
 
 	var/obj/item/shield_projector/shield1 = null
@@ -140,6 +142,11 @@
 	special_attack_max_range = 8
 	projectiletype = /obj/item/projectile/energy/homing_bolt
 	ai_holder_type = /datum/ai_holder/simple_mob/intentional/adv_dark_gygax
+	loot_list = list(/obj/item/prop/tyrlore/baseneon = 100,
+		/obj/item/disposable_teleporter = 100,
+		/obj/item/hand_tele = 10,
+		/obj/item/bone/skull = 100
+			)
 	var/fullshield = 4
 	var/shieldrage = 4
 
@@ -188,10 +195,11 @@
 		/obj/item/material/twohanded/fireaxe  = 60,
 		/obj/item/storage/toolbox/syndicate/powertools = 60,
 		/obj/item/rig/ce = 60,
-		/obj/item/rig_module/teleporter = 5
+		/obj/item/rig_module/teleporter = 5,
+		/obj/item/prop/tyrlore/neonengi = 100
 			)
 
-/mob/living/simple_mob/humanoid/eclipse/head/engineer/Initialize()
+/mob/living/simple_mob/humanoid/eclipse/head/engineer/Initialize(mapload)
 	add_modifier(/datum/modifier/technomancer/haste, null, src) // tesh goes nyooooom
 	return ..()
 
@@ -215,6 +223,7 @@
 		/obj/item/ammo_casing/microbattery/medical/brute3 = 15,
 		/obj/item/ammo_casing/microbattery/medical/burn3 = 15,
 		/obj/item/ammo_casing/microbattery/medical/toxin3 = 15,
+		/obj/item/prop/tyrlore/neonmedi = 100,
 		/obj/item/ammo_casing/microbattery/medical/omni3 = 5
 			)
 
@@ -623,6 +632,10 @@
 	icon_living = "medi" //place holdery
 	health = 600
 	maxHealth = 600
+	glow_toggle = TRUE
+	glow_override = TRUE
+	glow_color = "#FFA723"
+	glow_range = 16
 	armor = list(melee = 35, bullet = 35, laser = 35, energy = 35, bomb = 100, bio = 100, rad = 100)
 	armor_soak = list(melee = 7, bullet = 7, laser = 7, energy = 7, bomb = 0, bio = 0, rad = 0)
 	projectiletype = /obj/item/projectile/energy/homing_bolt

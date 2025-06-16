@@ -9,7 +9,7 @@ GLOBAL_LIST_EMPTY(available_ai_shells)
 	var/first_transfer = TRUE
 
 // Premade AI shell, for roundstart shells.
-/mob/living/silicon/robot/ai_shell/Initialize()
+/mob/living/silicon/robot/ai_shell/Initialize(mapload)
 	add_verb(src,/mob/living/silicon/robot/proc/transfer_shell_act) //CHOMPEdit TGPanel //CHOMPEDIT: add sideloader
 	mmi = new /obj/item/mmi/inert/ai_remote(src)
 	post_mmi_setup()
@@ -81,6 +81,7 @@ GLOBAL_LIST_EMPTY(available_ai_shells)
 
 	if(!LAZYLEN(possible))
 		to_chat(src, span_warning("No usable AI shell beacons detected."))
+		return
 
 	if(LAZYLEN(possible) < 2)
 		target = possible[1]
@@ -230,7 +231,7 @@ GLOBAL_LIST_EMPTY(available_ai_shells)
 	icon_state = "x3"
 	delete_me = TRUE
 
-/obj/effect/landmark/free_ai_shell/Initialize()
+/obj/effect/landmark/free_ai_shell/Initialize(mapload)
 	if(CONFIG_GET(flag/allow_ai_shells) && CONFIG_GET(flag/give_free_ai_shell))
 		new /mob/living/silicon/robot/ai_shell(get_turf(src))
 	return ..()

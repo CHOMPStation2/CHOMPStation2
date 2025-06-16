@@ -340,7 +340,7 @@
 			internal_data["stat_display_active2"] = data2
 			if(loc)
 				var/obj/item/PDA = loc
-				var/mob/user = PDA.fingerprintslast
+				var/mob/user = PDA.forensic_data?.get_lastprint()
 				log_admin("STATUS: [user] set status screen with [src]. Message: [data1] [data2]")
 				message_admins("STATUS: [user] set status screen with [src]. Message: [data1] [data2]")
 
@@ -375,11 +375,13 @@
 	icon_state = "cart-e"
 	ui_templates = list(list("name" = "Power Monitor", "template" = "comm_power_monitor.tmpl"))
 
-/obj/item/commcard/engineering/New()
+/obj/item/commcard/engineering/Initialize(mapload)
 	..()
 	internal_devices |= new /obj/item/halogen_counter(src)
+	return INITIALIZE_HINT_LATELOAD
 
-/obj/item/commcard/engineering/Initialize()
+/obj/item/commcard/engineering/LateInitialize()
+	. = ..()
 	internal_data["grid_sensors"] = find_powernet_sensors()
 	internal_data["powernet_target"] = ""
 
@@ -396,9 +398,9 @@
 	name = "\improper BreatheDeep cartridge"
 	icon_state = "cart-a"
 
-/obj/item/commcard/atmos/New()
-	..()
-	internal_devices |= new /obj/item/analyzer(src)
+/obj/item/commcard/atmos/Initialize(mapload)
+	. = ..()
+	internal_devices += new /obj/item/analyzer(src)
 
 
 // Medical Cartridge:
@@ -412,10 +414,10 @@
 	icon_state = "cart-m"
 	ui_templates = list(list("name" = "Medical Records", "template" = "med_records.tmpl"))
 
-/obj/item/commcard/medical/New()
-	..()
-	internal_devices |= new /obj/item/healthanalyzer(src)
-	internal_devices |= new /obj/item/halogen_counter(src)
+/obj/item/commcard/medical/Initialize(mapload)
+	. = ..()
+	internal_devices += new /obj/item/healthanalyzer(src)
+	internal_devices += new /obj/item/halogen_counter(src)
 
 /obj/item/commcard/medical/get_data()
 	return list(list("field" = "med_records", "value" = get_med_records()))
@@ -432,9 +434,9 @@
 	name = "\improper ChemWhiz cartridge"
 	icon_state = "cart-chem"
 
-/obj/item/commcard/medical/chemistry/New()
-	..()
-	internal_devices |= new /obj/item/reagent_scanner(src)
+/obj/item/commcard/medical/chemistry/Initialize(mapload)
+	. = ..()
+	internal_devices += new /obj/item/reagent_scanner(src)
 
 
 // Detective Cartridge:
@@ -524,9 +526,9 @@
 			list("name" = "Integrated Signaler Control", "template" = "signaler_access.tmpl")
 		)
 
-/obj/item/commcard/signal/New()
-	..()
-	internal_devices |= new /obj/item/assembly/signaler(src)
+/obj/item/commcard/signal/Initialize(mapload)
+	. = ..()
+	internal_devices += new /obj/item/assembly/signaler(src)
 
 /obj/item/commcard/signal/get_data()
 	return list(
@@ -547,10 +549,10 @@
 	icon_state = "cart-tox"
 	// UI templates inherited
 
-/obj/item/commcard/signal/science/New()
-	..()
-	internal_devices |= new /obj/item/reagent_scanner(src)
-	internal_devices |= new /obj/item/analyzer(src)
+/obj/item/commcard/signal/science/Initialize(mapload)
+	. = ..()
+	internal_devices += new /obj/item/reagent_scanner(src)
+	internal_devices += new /obj/item/analyzer(src)
 
 
 // Supply Cartridge:
@@ -564,8 +566,8 @@
 			list("name" = "Supply Records", "template" = "supply_records.tmpl")
 		)
 
-/obj/item/commcard/supply/New()
-	..()
+/obj/item/commcard/supply/Initialize(mapload)
+	. = ..()
 	internal_data["supply_category"] = null
 	internal_data["supply_controls"] = FALSE // Cannot control the supply shuttle, cannot accept orders
 	internal_data["supply_pack_expanded"] = list()
@@ -608,18 +610,18 @@
 			list("name" = "Employment Records", "template" = "emp_records.tmpl")
 		)
 
-/obj/item/commcard/head/New()
-	..()
+/obj/item/commcard/head/Initialize(mapload)
+	. = ..()
 	internal_data["stat_display_line1"] = null
 	internal_data["stat_display_line2"] = null
 	internal_data["stat_display_active1"] = null
 	internal_data["stat_display_active2"] = null
 	internal_data["stat_display_special"] = null
 
-/obj/item/commcard/head/Initialize()
+/obj/item/commcard/head/Initialize(mapload)
 	// Have to register the commcard with the Radio controller to receive updates to the status displays
 	radio_controller.add_object(src, 1435)
-	..()
+	. = ..()
 
 /obj/item/commcard/head/Destroy()
 	// Have to unregister the commcard for proper bookkeeping
@@ -728,11 +730,11 @@
 			list("name" = "Integrated Signaler Control", "template" = "signaler_access.tmpl")
 		)
 
-/obj/item/commcard/head/rd/New()
-	..()
-	internal_devices |= new /obj/item/analyzer(src)
-	internal_devices |= new /obj/item/reagent_scanner(src)
-	internal_devices |= new /obj/item/assembly/signaler(src)
+/obj/item/commcard/head/rd/Initialize(mapload)
+	. = ..()
+	internal_devices += new /obj/item/analyzer(src)
+	internal_devices += new /obj/item/reagent_scanner(src)
+	internal_devices += new /obj/item/assembly/signaler(src)
 
 /obj/item/commcard/head/rd/get_data()
 	var/list/data = ..()
@@ -759,11 +761,11 @@
 			list("name" = "Medical Records", "template" = "med_records.tmpl")
 		)
 
-/obj/item/commcard/head/cmo/New()
-	..()
-	internal_devices |= new /obj/item/healthanalyzer(src)
-	internal_devices |= new /obj/item/reagent_scanner(src)
-	internal_devices |= new /obj/item/halogen_counter(src)
+/obj/item/commcard/head/cmo/Initialize(mapload)
+	. = ..()
+	internal_devices += new /obj/item/healthanalyzer(src)
+	internal_devices += new /obj/item/reagent_scanner(src)
+	internal_devices += new /obj/item/halogen_counter(src)
 
 /obj/item/commcard/head/cmo/get_data()
 	var/list/data = ..()
@@ -788,12 +790,14 @@
 			list("name" = "Power Monitor", "template" = "comm_power_monitor.tmpl")
 		)
 
-/obj/item/commcard/head/ce/New()
+/obj/item/commcard/head/ce/Initialize(mapload)
 	..()
 	internal_devices |= new /obj.item/analyzer(src)
 	internal_devices |= new /obj/item/halogen_counter(src)
+	return INITIALIZE_HINT_LATELOAD
 
-/obj/item/commcard/head/ce/Initialize()
+/obj/item/commcard/head/ce/LateInitialize()
+	. = ..()
 	internal_data["grid_sensors"] = find_powernet_sensors()
 	internal_data["powernet_target"] = ""
 
@@ -841,13 +845,13 @@
 			list("name" = "Integrated Signaler Control", "template" = "signaler_access.tmpl")
 		)
 
-/obj/item/commcard/head/captain/New()
-	..()
-	internal_devices |= new /obj.item/analyzer(src)
-	internal_devices |= new /obj/item/healthanalyzer(src)
-	internal_devices |= new /obj/item/reagent_scanner(src)
-	internal_devices |= new /obj/item/halogen_counter(src)
-	internal_devices |= new /obj/item/assembly/signaler(src)
+/obj/item/commcard/head/captain/Initialize(mapload)
+	. = ..()
+	internal_devices += new /obj.item/analyzer(src)
+	internal_devices += new /obj/item/healthanalyzer(src)
+	internal_devices += new /obj/item/reagent_scanner(src)
+	internal_devices += new /obj/item/halogen_counter(src)
+	internal_devices += new /obj/item/assembly/signaler(src)
 
 /obj/item/commcard/head/captain/get_data()
 	var/list/data = ..()
@@ -904,7 +908,8 @@
 			list("name" = "Shuttle Blast Door Control", "template" = "merc_blast_door_control.tmpl")
 		)
 
-/obj/item/commcard/mercenary/Initialize()
+/obj/item/commcard/mercenary/Initialize(mapload)
+	. = ..()
 	internal_data["shuttle_door_code"] = "smindicate" // Copied from PDA code
 	internal_data["shuttle_doors"] = find_blast_doors()
 
@@ -938,9 +943,9 @@
 			list("name" = "Integrated GPS", "template" = "gps_access.tmpl")
 		)
 
-/obj/item/commcard/explorer/New()
-	..()
-	internal_devices |= new /obj/item/gps/explorer(src)
+/obj/item/commcard/explorer/Initialize(mapload)
+	. = ..()
+	internal_devices += new /obj/item/gps/explorer(src)
 
 /obj/item/commcard/explorer/get_data()
 	var/list/GPS = get_GPS_lists()

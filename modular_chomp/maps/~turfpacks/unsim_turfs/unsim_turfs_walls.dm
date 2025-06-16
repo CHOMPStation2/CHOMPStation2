@@ -72,7 +72,7 @@
 	icon = 'icons/goonstation/featherzone.dmi'
 	icon_state = "flockwall0"
 
-/turf/unsimulated/shuttle/wall/flock/Initialize()
+/turf/unsimulated/shuttle/wall/flock/Initialize(mapload)
 	. = ..()
 	set_light(3,3,"#26c5a9")
 

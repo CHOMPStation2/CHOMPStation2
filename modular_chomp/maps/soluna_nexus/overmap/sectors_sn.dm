@@ -15,7 +15,7 @@
 
 	extra_z_levels = list(Z_LEVEL_TRANSIT, Z_LEVEL_MISC,Z_LEVEL_SURFACE, Z_LEVEL_SURFACE_MINE, Z_LEVEL_SURFACE_WILD) //This should allow for comms to reach people from the station. Basically this defines all the areas of Southern Cross and the Sif local system on the overmap.
 	// "Z_LEVEL_SURFACE_SKYLANDS, " //removed due to lack of use
-	var/mob_announce_cooldown = 0
+	mob_announce_cooldown = 0
 
 
 	initial_generic_waypoints = list(
@@ -68,7 +68,7 @@
 	. = ..()
 	announce_atc(AM,going = TRUE)
 
-/obj/effect/overmap/visitable/sector/Southern_Cross/proc/announce_atc(var/atom/movable/AM, var/going = FALSE)
+/obj/effect/overmap/visitable/sector/Southern_Cross/announce_atc(var/atom/movable/AM, var/going = FALSE)
 	if(istype(AM, /obj/effect/overmap/visitable/ship/simplemob))
 		if(world.time < mob_announce_cooldown)
 			return
@@ -80,12 +80,12 @@
 		var/obj/effect/overmap/visitable/ship/landable/SL = AM //Phew
 		var/datum/shuttle/autodock/multi/shuttle = SSshuttles.shuttles[SL.shuttle]
 		if(!istype(shuttle) || !shuttle.cloaked) //Not a multishuttle (the only kind that can cloak) or not cloaked
-			atc.msg(message)
+			SSatc.msg(message)
 
 	//For ships, it's safe to assume they're big enough to not be sneaky
 	else if(istype(AM, /obj/effect/overmap/visitable/ship))
-		atc.msg(message)
+		SSatc.msg(message)
 
-/obj/effect/overmap/visitable/planet/Sif/Initialize()
+/obj/effect/overmap/visitable/planet/Sif/Initialize(mapload)
 	. = ..()
 	docking_codes = null

@@ -13,7 +13,7 @@
 	containertype = /obj/structure/closet/crate/secure/weapon
 	containername = "Blueshield equipment"
 	access = access_blueshield_exclusive
-	
+
 /datum/supply_pack/misc/blueshieldweapons
 	name = "Blueshield Weapon Kits"
 	contains = list(
@@ -28,7 +28,7 @@
 /datum/supply_pack/misc/bluespaceradioyw
 	name = "Bluespace Radio Packs"
 	contains = list(
-			 /obj/item/bluespaceradio/cryogaia_prelinked = 2
+				/obj/item/bluespaceradio/cryogaia_prelinked = 2
 			)
 	cost = 75
 	containertype = /obj/structure/closet/crate

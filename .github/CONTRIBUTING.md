@@ -2,13 +2,13 @@
 
 :+1::tada: First off, thanks for taking the time to contribute! :tada::+1:
 
-The following is a set of guidelines for contributing to Chomp Station, which is hosted in the [Chomp Station](https://github.com/CHOMPStation2/CHOMPStation2) on GitHub.
-These are just guidelines, not rules, use your best judgment and feel free to propose changes to this document in a pull request.
+The following is a set of regulations for contributing to Chomp Station, which is hosted in the [Chomp Station](https://github.com/CHOMPStation2/CHOMPStation2) on GitHub.
 
 #### Table Of Contents
 
 [What should I know before I get started?](#what-should-i-know-before-i-get-started)
   * [Code of Conduct](#code-of-conduct)
+  * [Upstream Parity with Virgo](#upstream-parity-with-virgo)
 
 [How Can I Contribute?](#how-can-i-contribute)
   * [Your First Code Contribution](#your-first-code-contribution)
@@ -26,6 +26,24 @@ These are just guidelines, not rules, use your best judgment and feel free to pr
 
 This project adheres to the Contributor Covenant [code of conduct](code_of_conduct.md).
 By participating, you are expected to uphold this code.
+
+### Upstream Parity with [Virgo](https://github.com/VOREStation/VOREStation)
+
+To work together with Virgo and make the lives of the devstaff easier for ourselves, our upstream and our downstreams, we enforce parity with upstream files.
+* What are upstream files?
+    * Upstream files are files that exist on Virgo's repo identically to here.
+* What is upstream parity?
+    * Upstream parity means to keep files that exist identically both here and upstream, identical. 
+* Why are we doing this?
+    * Cooperation between this codebase and upstream has taken significant upturns recently. There is much effort from coders both here and upstream to fix a great many issues with this shared codebase. To avoid the difficulty of trying to both fix a codebase and retain parity/maintainability, it is much preferred to fix core code on Virgo, whom is the primary upstream of this codebase (They disconnected from polaris) in a complete and clean manner and allow those fixes to trickle down to all downstreams. This helps us, it helps virgo, and it helps all the other downstreams too. 
+* I just want to code for Chomp though.
+    * This is fine, we do not want to prevent this. There will be greater emphasis on putting all chomp-only code in the /modular_chomp subdirectory from now on. For assistance on coding in a modular fashion, please ask for help in the CHOMP discord #ss13-development channel.
+* I want to edit a core mechanic / implement a feature that only works when editing upstream code.
+    * Please try your hardest to make this modular. If this isn't possible, your PR might be requested to be moved up to virgo, or denied. 
+* I just want to add sprites / sounds / add a new type of mob / add clothing / add a map
+    * This is fine! This is easily made modular and done by adding code and resources to the modular_chomp directory. 
+* What if Virgo deny a core change that was desired on Chomp?
+    * Hopefully this shouldn't happen. If you implement your feature with an "on/off" switch, then you can push it to virgo turned off, and we can turn it on here. If differences of development become too divisive in the future, then we will go back to the way things were with more freedom on this codebase. 
 
 ## How Can I Contribute?
 
@@ -57,11 +75,8 @@ Unsure where to begin contributing to Chomp Station? You can start by looking th
 
 ### Codewriting
 * Where possible, add changes to the modular_chomp/ subdirectory.
-* For edits to upstream code (Code not inside /modular_chomp)
-    * For single line edits, add "//ChompEDIT - description" at the end of the line.
-    * For block edits, encapsulate your edit with "//ChompEDIT START - explanation" and "//ChompEDIT END".
-    * For removals, comment out the upstream code and append "//ChompEDIT REMOVE - explanation"
-    * For block removals, use "/\*" and "\*/" with "//ChompEDIT REMOVE - explanations"
+* Avoid edits to upstream code. If upstream code MUST be edited to make a feature work, please make that change on [Virgo](https://github.com/VOREStation/VOREStation).
+    * Single line edits may still be okay (Tweaks, toggling functions, ect) and should have a //ChompEDIT comment on each line.
 * **DO NOT** edit upstream .dmi (icon) files. Add icon changes in a new file in the /modular_chomp folder and override the object's "icon" and "icon_state" variables. 
 * **DO NOT** edit anything in the upstream /maps folder 
 * Avoid the use of the 'usr' variable where possible. Use src or have the proc chain give the user's reference.

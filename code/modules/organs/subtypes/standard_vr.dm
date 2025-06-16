@@ -16,10 +16,10 @@
 /obj/item/organ/external/head/shadekin
 	cannot_gib = 1
 	cannot_amputate = 1
-  
+
 	eye_icon_location = 'icons/mob/human_face_vr.dmi'
 	eye_icon = "eyes_shadekin"
-  
+
 	//yw edit
 /obj/item/organ/external/head/vr/grey
 	eye_icon_location = 'icons/mob/human_face_yw.dmi'

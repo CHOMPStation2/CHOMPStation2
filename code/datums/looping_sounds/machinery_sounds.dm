@@ -142,10 +142,10 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /datum/looping_sound/shield_generator
-	start_sound = 'modular_chomp/sound/machines/shield_hum/shield_generator_whir.ogg'
-	mid_sounds = list('modular_chomp/sound/machines/shield_hum/shield_generator_hum2.ogg', 'modular_chomp/sound/machines/shield_hum/shield_generator_hum3.ogg')
+	start_sound = 'sound/machines/shield_hum/shield_generator_whir.ogg'
+	mid_sounds = list('sound/machines/shield_hum/shield_generator_hum2.ogg', 'sound/machines/shield_hum/shield_generator_hum3.ogg')
 	mid_length = 60
-	end_sound = 'modular_chomp/sound/machines/shield_hum/shield_generator_whir.ogg'
+	end_sound = 'sound/machines/shield_hum/shield_generator_whir.ogg'
 	volume = 40
 	volume_chan = VOLUME_CHANNEL_MACHINERY
 	exclusive = TRUE

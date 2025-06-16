@@ -312,7 +312,7 @@
 /obj/item/bedsheet/orange,
 /turf/unsimulated/floor{
 	icon = 'icons/turf/flooring/wood.dmi';
-	icon_state = "wood-broken1"
+	icon_state = "wood_broken1"
 	},
 /area/skipjack_station)
 "aO" = (
@@ -481,7 +481,7 @@
 "bi" = (
 /turf/unsimulated/floor{
 	icon = 'icons/turf/flooring/wood.dmi';
-	icon_state = "wood-broken3"
+	icon_state = "wood_broken3"
 	},
 /area/skipjack_station)
 "bj" = (
@@ -528,7 +528,7 @@
 /obj/effect/landmark/late_antag/raider,
 /turf/unsimulated/floor{
 	icon = 'icons/turf/flooring/wood.dmi';
-	icon_state = "wood-broken3"
+	icon_state = "wood_broken3"
 	},
 /area/skipjack_station)
 "bp" = (
@@ -1538,7 +1538,6 @@
 /area/shuttle/skipjack)
 "dI" = (
 /obj/structure/shuttle/engine/propulsion,
-/turf/space,
 /turf/simulated/shuttle/plating/airless/carry,
 /area/shuttle/skipjack)
 "dJ" = (

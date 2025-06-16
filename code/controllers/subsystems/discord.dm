@@ -1,9 +1,9 @@
 /**
-  * Sends a message to TGS chat channels.
-  *
-  * message - The message to send.
-  * channel_tag - Required. If "", the message with be sent to all connected (Game-type for TGS3) channels. Otherwise, it will be sent to TGS4 channels with that tag (Delimited by ','s).
-  */
+ * Sends a message to TGS chat channels.
+ *
+ * message - The message to send.
+ * channel_tag - Required. If "", the message with be sent to all connected (Game-type for TGS3) channels. Otherwise, it will be sent to TGS4 channels with that tag (Delimited by ','s).
+ */
 /proc/send2chat(message, channel_tag)
 	if(channel_tag == null || !world.TgsAvailable())
 		return
@@ -24,11 +24,11 @@
 		world.TgsChatBroadcast(message, channels_to_use)
 
 /**
-  * Sends a message to TGS admin chat channels.
-  *
-  * category - The category of the mssage.
-  * message - The message to send.
-  */
+ * Sends a message to TGS admin chat channels.
+ *
+ * category - The category of the mssage.
+ * message - The message to send.
+ */
 /proc/send2adminchat(category, message)
 	category = replacetext(replacetext(category, "\proper", ""), "\improper", "")
 	message = replacetext(replacetext(message, "\proper", ""), "\improper", "")

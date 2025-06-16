@@ -7245,8 +7245,8 @@
 /obj/item/surgical/cautery,
 /obj/item/surgical/FixOVein,
 /obj/item/surgical/retractor,
-/obj/item/reagent_containers/glass/bottle/culture/cold,
-/obj/item/reagent_containers/glass/bottle/culture/flu{
+/obj/item/reagent_containers/glass/beaker/vial/culture/cold,
+/obj/item/reagent_containers/glass/beaker/vial/culture/flu{
 	pixel_x = 10;
 	pixel_y = 10
 	},
@@ -17886,7 +17886,7 @@
 /turf/simulated/floor/tiled,
 /area/hallway/primary/thirddeck/aftstarboardcentral)
 "oXg" = (
-/turf/unsimulated/mask,
+/turf/simulated/open,
 /area/hallway/primary/thirddeck/central)
 "oXh" = (
 /obj/machinery/atmospherics/pipe/simple/hidden,
@@ -19737,7 +19737,6 @@
 /area/crew_quarters/sleep/vistor_room_9)
 "qwG" = (
 /obj/structure/catwalk,
-/obj/structure/catwalk,
 /obj/structure/disposalpipe/segment,
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -21344,6 +21343,7 @@
 /area/hallway/primary/thirddeck/aftdoorm)
 "rQK" = (
 /obj/random/trash,
+/obj/effect/decal/cleanable/vomit/old,
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/dormsstarboard)
 "rQP" = (
