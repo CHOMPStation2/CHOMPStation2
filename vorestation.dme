@@ -5269,7 +5269,6 @@
 #include "modular_chomp\maps\southern_cross\structures\closets\misc.dm"
 #include "modular_chomp\maps\southern_cross\structures\closets\research.dm"
 #include "modular_chomp\maps\southern_cross\structures\closets\security.dm"
-#include "modular_chomp\maps\submaps\engine_submaps\engine.dm"
 #include "modular_chomp\maps\submaps\engine_submaps\engine_areas.dm"
 #include "modular_chomp\maps\submaps\engine_submaps\southern_cross\_engine_submaps.dm"
 #include "modular_chomp\maps\submaps\surface_submaps\mountains\mountains.dm"
