@@ -4660,6 +4660,7 @@
 #include "code\modules\vore\appearance\preferences_vr.dm"
 #include "code\modules\vore\appearance\sprite_accessories_yw.dm"
 #include "code\modules\vore\appearance\update_icons_vr.dm"
+#include "code\modules\vore\eating\belly_actions.dm"
 #include "code\modules\vore\eating\belly_dat_vr.dm"
 #include "code\modules\vore\eating\belly_import.dm"
 #include "code\modules\vore\eating\belly_messages.dm"
