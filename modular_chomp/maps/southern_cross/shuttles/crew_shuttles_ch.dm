@@ -106,7 +106,7 @@ GLOBAL_LIST_EMPTY(shuttdisp_list)
 	message1 = "SHUT1" //Intended to be set on the map. Defaults to SHUT1 if spawned in to allow lazier mapping.
 
 	var/datum/shuttle/autodock/web_shuttle/my_shuttle //This is set by the get_my_shuttle() proc. Don't modify it here. Typepath needs to be defined this far for the compiler to recognize shuttle datum variables.
-	var/last_z = Z_LEVEL_STATION_ONE
+	var/last_z = Z_LEVEL_SC_STATION_ONE
 	var/shuttle_tag = "Shuttle 1" //This needs to use the same tag system as the shuttles subsystem. Set this on the map, otherwise defaults to "Shuttle 1."
 	var/location_desc //Location descriptions for extra information on examine.
 
@@ -148,22 +148,22 @@ GLOBAL_LIST_EMPTY(shuttdisp_list)
 			message2 = "MANUAL"
 			location_desc = "piloted manually. Please contact Exploration to return the shuttle to autopilot" //Tell them to use Shuttle 3.
 
-		else if(my_shuttle.current_location.z == Z_LEVEL_STATION_ONE)
+		else if(my_shuttle.current_location.z == Z_LEVEL_SC_STATION_ONE)
 			message2 = "Stat"
-			last_z = Z_LEVEL_STATION_ONE
+			last_z = Z_LEVEL_SC_STATION_ONE
 			location_desc = "docked on the station"
 
-		else if(my_shuttle.current_location.z == Z_LEVEL_SURFACE)
+		else if(my_shuttle.current_location.z == Z_LEVEL_SC_SURFACE)
 			message2 = "Outp"
-			last_z = Z_LEVEL_SURFACE
+			last_z = Z_LEVEL_SC_SURFACE
 			location_desc =	"docked on the outpost"
 
 		else
-			if(last_z == Z_LEVEL_STATION_ONE)
+			if(last_z == Z_LEVEL_SC_STATION_ONE)
 				message2 = "STS-O"
 				location_desc = "travelling to the outpost"
 
-			if(last_z == Z_LEVEL_SURFACE)
+			if(last_z == Z_LEVEL_SC_SURFACE)
 				message2 = "STS-S"
 				location_desc = "travelling to the station"
 

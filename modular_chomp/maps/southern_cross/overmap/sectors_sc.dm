@@ -15,7 +15,7 @@ GLOBAL_LIST_EMPTY(station_waypoints) //Create global list for station waypoints,
 	start_y =  10
 	known = 1 // lets Sectors appear on shuttle navigation for easy finding.
 
-	extra_z_levels = list(Z_LEVEL_TRANSIT, Z_LEVEL_MISC,Z_LEVEL_SURFACE, Z_LEVEL_SURFACE_MINE, Z_LEVEL_SURFACE_WILD) //This should allow for comms to reach people from the station. Basically this defines all the areas of Southern Cross and the Sif local system on the overmap.
+	extra_z_levels = list(Z_LEVEL_SC_TRANSIT, Z_LEVEL_SC_MISC, Z_LEVEL_SC_SURFACE, Z_LEVEL_SC_SURFACE_MINE, Z_LEVEL_SC_SURFACE_WILD) //This should allow for comms to reach people from the station. Basically this defines all the areas of Southern Cross and the Sif local system on the overmap.
 	// "Z_LEVEL_SURFACE_SKYLANDS, " //removed due to lack of use
 	mob_announce_cooldown = 0
 
@@ -52,11 +52,11 @@ GLOBAL_LIST_EMPTY(station_waypoints) //Create global list for station waypoints,
 
 /obj/effect/overmap/visitable/sector/Southern_Cross/get_space_zlevels() //These are the primary levels that our space station resides in. This also indicates what levels astronauts can drift into.
 	return list(
-			Z_LEVEL_STATION_MAINTS,
-			Z_LEVEL_STATION_ONE,
-			Z_LEVEL_STATION_TWO,
-			Z_LEVEL_STATION_THREE,
-			Z_LEVEL_MISC)
+			Z_LEVEL_SC_STATION_MAINTS,
+			Z_LEVEL_SC_STATION_ONE,
+			Z_LEVEL_SC_STATION_TWO,
+			Z_LEVEL_SC_STATION_THREE,
+			Z_LEVEL_SC_MISC)
 
 /obj/effect/overmap/visitable/sector/Southern_Cross/Crossed(var/atom/movable/AM)
 	. = ..()

@@ -7,7 +7,7 @@
 [i]Transponder[/i]: Transmitting (CIV), Vir IFF
 [b]Notice[/b]: The Vir government welcomes you to this world."}
 
-	map_z = list(Z_LEVEL_SURFACE, Z_LEVEL_SURFACE_MINE, Z_LEVEL_SURFACE_WILD)
+	map_z = list(Z_LEVEL_SC_SURFACE, Z_LEVEL_SC_SURFACE_MINE, Z_LEVEL_SC_SURFACE_WILD)
 	//Z_LEVEL_SURFACE_SKYLANDS, //removed due to lack of use
 
 	initial_generic_waypoints = list(
