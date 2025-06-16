@@ -216,7 +216,7 @@
 /proc/difflist(var/list/first, var/list/second, var/skiprep=0)
 	if(!islist(first) || !islist(second))
 		return
-	var/list/result = new
+	var/list/result = list()
 	if(skiprep)
 		for(var/e in first)
 			if(!(e in result) && !(e in second))
@@ -265,7 +265,7 @@ Checks if a list has the same entries and values as an element of big.
 /proc/uniquemergelist(var/list/first, var/list/second, var/skiprep=0)
 	if(!islist(first) || !islist(second))
 		return
-	var/list/result = new
+	var/list/result = list()
 	if(skiprep)
 		result = difflist(first, second, skiprep)+difflist(second, first, skiprep)
 	else
