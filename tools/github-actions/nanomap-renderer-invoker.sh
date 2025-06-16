@@ -7,17 +7,6 @@ mapdirs=(
     "modular_chomp/maps/soluna_nexus"
     "modular_chomp/maps/relic_base"
 )
-<<<<<<< HEAD
-#Put a define file to include. One per line matching mapdirs.
-#If the same define is reused it will be batched if in sequence.
-mapdefines=(
-	"modular_chomp/maps/southern_cross/southern_cross.dm"
-	"modular_chomp/maps/soluna_nexus/soluna_nexus.dm"
-	"modular_chomp/maps/relic_base/relicbase.dm"
-)
-dme="vorestation.dme"
-=======
->>>>>>> 3e46e16e8c (Simultaneous map definitions (#16924))
 
 RED='\033[0;31m'
 GREEN="\033[0;32m"
