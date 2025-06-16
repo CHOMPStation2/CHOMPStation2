@@ -5256,6 +5256,7 @@
 #include "modular_chomp\code\ZAS\Fire.dm"
 #include "modular_chomp\code\ZAS\Fire_acts.dm"
 #include "modular_chomp\icons\turf\flooring\flooring_premade.dm"
+#include "modular_chomp\maps\common\common_defines.dm"
 #include "modular_chomp\maps\overmap\aegis_carrier\aegis_objs.dm"
 #include "modular_chomp\maps\overmap\om_ships\offmap.dm"
 #include "modular_chomp\maps\overmap\space_pois\space_areas.dm"

@@ -1,28 +1,4 @@
 // To be filled out when more progress on the new map occurs.
-
-#define Z_LEVEL_CATACOMBS				1
-#define Z_LEVEL_UNDERGROUND				2
-#define Z_LEVEL_SURFACE					3
-#define Z_LEVEL_UPPER_FLOORS			4
-#define Z_LEVEL_THE_SKY					5
-#define Z_LEVEL_UNDERMINES				6
-#define Z_LEVEL_SURFACE_WILDS			7
-#define Z_LEVEL_WILDERNESS_SKY			8
-#define Z_LEVEL_SURFACE_OCEAN			9
-#define Z_LEVEL_SURFACE_MINES			10
-#define Z_LEVEL_CARRIER 				11
-#define Z_LEVEL_CENTCOM					12
-#define Z_LEVEL_TRANSIT					13
-
-
-
-#define Z_LEVEL_FUELDEPOT				14
-#define Z_LEVEL_GATEWAY					15
-#define Z_LEVEL_REDGATE					16
-
-// Camera Network Additions
-#define NETWORK_EXTERIOR "Exterior" // Exterior Cameras
-
 /datum/map/relicbase
 	name = "Relic Base"
 	full_name = "NLS Relic Base"
@@ -32,9 +8,9 @@
 	id_hud_icons = 'icons/mob/hud_jobs_vr.dmi'
 
 	holomap_smoosh = list(list(
-		Z_LEVEL_UNDERGROUND,
-		Z_LEVEL_SURFACE,
-		Z_LEVEL_UPPER_FLOORS))
+		Z_LEVEL_RB_UNDERGROUND,
+		Z_LEVEL_RB_SURFACE,
+		Z_LEVEL_RB_UPPER_FLOORS))
 
 	zlevel_datum_type = /datum/map_z_level/relicbase
 
@@ -97,16 +73,16 @@
 	planet_datums_to_make = list(/datum/planet/thor) //This must be added to load maps at round start otherwise they will have weather or sun.
 
 	map_levels = list(
-			Z_LEVEL_UNDERGROUND,
-			Z_LEVEL_SURFACE,
-			Z_LEVEL_UPPER_FLOORS,
-			Z_LEVEL_UNDERMINES,
-			Z_LEVEL_SURFACE_WILDS,
-			Z_LEVEL_SURFACE_MINES,
-			Z_LEVEL_WILDERNESS_SKY,
-			Z_LEVEL_SURFACE_OCEAN,
-			Z_LEVEL_THE_SKY,
-			Z_LEVEL_CATACOMBS
+			Z_LEVEL_RB_UNDERGROUND,
+			Z_LEVEL_RB_SURFACE,
+			Z_LEVEL_RB_UPPER_FLOORS,
+			Z_LEVEL_RB_UNDERMINES,
+			Z_LEVEL_RB_SURFACE_WILDS,
+			Z_LEVEL_RB_SURFACE_MINES,
+			Z_LEVEL_RB_WILDERNESS_SKY,
+			Z_LEVEL_RB_SURFACE_OCEAN,
+			Z_LEVEL_RB_THE_SKY,
+			Z_LEVEL_RB_CATACOMBS
 		)
 
 
@@ -154,21 +130,21 @@
 /datum/map/southern_cross/get_map_levels(var/srcz, var/long_range = TRUE)
 	if (long_range && (srcz in map_levels))
 		return map_levels
-	else if (srcz == Z_LEVEL_TRANSIT && !long_range)
+	else if (srcz == Z_LEVEL_RB_TRANSIT && !long_range)
 		return list() // Nothing on these z-levels- sensors won't show, and GPSes won't see each other.
 	else if (srcz >= Z_LEVEL_STATION_ONE && srcz <= Z_LEVEL_STATION_THREE) // Station can see other decks.
 		return list(
 			Z_LEVEL_STATION_ONE,
 			Z_LEVEL_STATION_TWO,
 			Z_LEVEL_STATION_THREE,
-			Z_LEVEL_SURFACE,
-			Z_LEVEL_SURFACE_MINE,
-			Z_LEVEL_SURFACE_WILD)
-	else if(srcz in list(Z_LEVEL_SURFACE, Z_LEVEL_SURFACE_MINE, Z_LEVEL_SURFACE_WILD)) // Being on the surface lets you see other surface Zs.
+			Z_LEVEL_RB_SURFACE,
+			Z_LEVEL_RB_SURFACE_MINE,
+			Z_LEVEL_RB_SURFACE_WILD)
+	else if(srcz in list(Z_LEVEL_RB_SURFACE, Z_LEVEL_RB_SURFACE_MINE, Z_LEVEL_RB_SURFACE_WILD)) // Being on the surface lets you see other surface Zs.
 		return list(
-			Z_LEVEL_SURFACE,
-			Z_LEVEL_SURFACE_MINE,
-			Z_LEVEL_SURFACE_WILD)
+			Z_LEVEL_RB_SURFACE,
+			Z_LEVEL_RB_SURFACE_MINE,
+			Z_LEVEL_RB_SURFACE_WILD)
 	else
 		return list(srcz) //prevents runtimes when using CMC. any Z-level not defined above will be 'isolated' and only show to GPSes/CMCs on that same Z (e.g. CentCom).
 */
@@ -176,23 +152,23 @@
 	// First, place a bunch of submaps. This comes before tunnel/forest generation as to not interfere with the submap.(This controls POI limit generation, increase or lower its values to have more or less POI's)
 
 	// Cave submaps are first.
-	seed_submaps(list(Z_LEVEL_UNDERMINES), 140, /area/surface/cave/unexplored/normal, /datum/map_template/surface/mountains/normal)
-	seed_submaps(list(Z_LEVEL_UNDERMINES), 140, /area/surface/cave/unexplored/deep, /datum/map_template/surface/mountains/deep)
-	seed_submaps(list(Z_LEVEL_SURFACE_MINES), 140, /area/surface/outside/wilderness/mountains, /datum/map_template/surface/mountains/normal)
+	seed_submaps(list(Z_LEVEL_RB_UNDERMINES), 140, /area/surface/cave/unexplored/normal, /datum/map_template/surface/mountains/normal)
+	seed_submaps(list(Z_LEVEL_RB_UNDERMINES), 140, /area/surface/cave/unexplored/deep, /datum/map_template/surface/mountains/deep)
+	seed_submaps(list(Z_LEVEL_RB_SURFACE_MINES), 140, /area/surface/outside/wilderness/mountains, /datum/map_template/surface/mountains/normal)
 	// Plains to make them less plain.
-	seed_submaps(list(Z_LEVEL_SURFACE), 220, /area/surface/outside/plains/normal, /datum/map_template/surface/plains) // Both of these will need a massive POI overhaul. The framework is in, and tiles will be mass-edited to match, but better POIs are wanted.
-	seed_submaps(list(Z_LEVEL_SURFACE_OCEAN), 220, /area/surface/outside/plains/normal, /datum/map_template/surface/plains) // Both of these will need a massive POI overhaul. The framework is in, and tiles will be mass-edited to match, but better POIs are wanted.
+	seed_submaps(list(Z_LEVEL_RB_SURFACE), 220, /area/surface/outside/plains/normal, /datum/map_template/surface/plains) // Both of these will need a massive POI overhaul. The framework is in, and tiles will be mass-edited to match, but better POIs are wanted.
+	seed_submaps(list(Z_LEVEL_RB_SURFACE_OCEAN), 220, /area/surface/outside/plains/normal, /datum/map_template/surface/plains) // Both of these will need a massive POI overhaul. The framework is in, and tiles will be mass-edited to match, but better POIs are wanted.
 
 	// Wilderness is next.
-	seed_submaps(list(Z_LEVEL_SURFACE_WILDS), 240, /area/surface/outside/wilderness/normal, /datum/map_template/surface/wilderness/normal)
-	seed_submaps(list(Z_LEVEL_SURFACE_WILDS), 240, /area/surface/outside/wilderness/deep, /datum/map_template/surface/wilderness/deep)
+	seed_submaps(list(Z_LEVEL_RB_SURFACE_WILDS), 240, /area/surface/outside/wilderness/normal, /datum/map_template/surface/wilderness/normal)
+	seed_submaps(list(Z_LEVEL_RB_SURFACE_WILDS), 240, /area/surface/outside/wilderness/deep, /datum/map_template/surface/wilderness/deep)
 	// If Space submaps are made, add a line to make them here as well.
 
 	// Now for the tunnels. (This decides the load order of ore generation and cave generation. Check Random_Map to see % )
-	new /datum/random_map/automata/cave_system/no_cracks(null, 1, 1, Z_LEVEL_UNDERMINES, world.maxx, world.maxy) // Create the mining Z-level.
-	new /datum/random_map/noise/ore(null, 1, 1, Z_LEVEL_UNDERMINES, 64, 64)         // Create the mining ore distribution map.
-	new /datum/random_map/automata/cave_system/no_cracks(null, 1, 1, Z_LEVEL_SURFACE_MINES, world.maxx, world.maxy) // Create the mining Z-level.
-	new /datum/random_map/noise/ore(null, 1, 1, Z_LEVEL_SURFACE_MINES, 64, 64)
+	new /datum/random_map/automata/cave_system/no_cracks(null, 1, 1, Z_LEVEL_RB_UNDERMINES, world.maxx, world.maxy) // Create the mining Z-level.
+	new /datum/random_map/noise/ore(null, 1, 1, Z_LEVEL_RB_UNDERMINES, 64, 64)         // Create the mining ore distribution map.
+	new /datum/random_map/automata/cave_system/no_cracks(null, 1, 1, Z_LEVEL_RB_SURFACE_MINES, world.maxx, world.maxy) // Create the mining Z-level.
+	new /datum/random_map/noise/ore(null, 1, 1, Z_LEVEL_RB_SURFACE_MINES, 64, 64)
 	// Todo: Forest generation.
 	return 1
 
@@ -212,7 +188,7 @@
 	holomap_legend_y = 160
 
 /datum/map_z_level/relicbase/station/station_one
-	z = Z_LEVEL_UNDERGROUND
+	z = Z_LEVEL_RB_UNDERGROUND
 	name = "Underground"
 	base_turf = /turf/simulated/mineral/floor/cave
 	transit_chance = 10
@@ -220,7 +196,7 @@
 	holomap_offset_y = SOUTHERN_CROSS_HOLOMAP_MARGIN_Y + SOUTHERN_CROSS_MAP_SIZE*0
 
 /datum/map_z_level/relicbase/station/station_two
-	z = Z_LEVEL_SURFACE
+	z = Z_LEVEL_RB_SURFACE
 	name = "Surface"
 	base_turf = /turf/simulated/open
 	transit_chance = 10
@@ -228,7 +204,7 @@
 	holomap_offset_y = SOUTHERN_CROSS_HOLOMAP_MARGIN_Y + SOUTHERN_CROSS_MAP_SIZE*1
 
 /datum/map_z_level/relicbase/station/station_three
-	z = Z_LEVEL_UPPER_FLOORS
+	z = Z_LEVEL_RB_UPPER_FLOORS
 	name = "Upper Levels"
 	base_turf = /turf/simulated/open
 	transit_chance = 10
@@ -244,60 +220,60 @@
 */
 /*
 /datum/map_z_level/relicbase/surface
-	z = Z_LEVEL_SURFACE
+	z = Z_LEVEL_RB_SURFACE
 	name = "Plains"
 	flags = MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER|MAP_LEVEL_SEALED|MAP_LEVEL_CONSOLES|MAP_LEVEL_VORESPAWN
 	base_turf = /turf/simulated/floor/outdoors/rocks
 */
 
 /datum/map_z_level/relicbase/undeground_mine
-	z = Z_LEVEL_UNDERMINES
+	z = Z_LEVEL_RB_UNDERMINES
 	name = "Underground Mines"
 	flags = MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER|MAP_LEVEL_SEALED|MAP_LEVEL_CONSOLES
 	base_turf = /turf/simulated/floor/outdoors/rocks
 
 /datum/map_z_level/relicbase/surface_mine
-	z = Z_LEVEL_SURFACE_MINES
+	z = Z_LEVEL_RB_SURFACE_MINES
 	name = "Surface Mines"
 	flags = MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER|MAP_LEVEL_SEALED|MAP_LEVEL_CONSOLES
 	base_turf = /turf/simulated/floor/outdoors/rocks
 
 /datum/map_z_level/relicbase/surface_wild
-	z = Z_LEVEL_SURFACE_WILDS
+	z = Z_LEVEL_RB_SURFACE_WILDS
 	name = "Wilderness"
 	flags = MAP_LEVEL_PLAYER|MAP_LEVEL_SEALED|MAP_LEVEL_CONTACT|MAP_LEVEL_CONSOLES|MAP_LEVEL_VORESPAWN|MAP_LEVEL_XENOARCH_EXEMPT
 	base_turf = /turf/simulated/floor/outdoors/rocks
 
 /datum/map_z_level/relicbase/surface_ocean
-	z = Z_LEVEL_SURFACE_OCEAN
+	z = Z_LEVEL_RB_SURFACE_OCEAN
 	name = "Ocean"
 	flags = MAP_LEVEL_PLAYER|MAP_LEVEL_SEALED|MAP_LEVEL_CONTACT|MAP_LEVEL_CONSOLES|MAP_LEVEL_VORESPAWN|MAP_LEVEL_XENOARCH_EXEMPT
 	base_turf = /turf/simulated/floor/outdoors/rocks
 
 /datum/map_z_level/relicbase/carrier
-	z = Z_LEVEL_CARRIER
+	z = Z_LEVEL_RB_CARRIER
 	name = "Misc"
 	flags = MAP_LEVEL_PLAYER|MAP_LEVEL_VORESPAWN
 	transit_chance = 10
 
 /datum/map_z_level/relicbase/centcom
-	z = Z_LEVEL_CENTCOM
+	z = Z_LEVEL_RB_CENTCOM
 	name = "Centcom"
 	flags = MAP_LEVEL_ADMIN|MAP_LEVEL_CONTACT|MAP_LEVEL_XENOARCH_EXEMPT
 
 /datum/map_z_level/relicbase/transit
-	z = Z_LEVEL_TRANSIT
+	z = Z_LEVEL_RB_TRANSIT
 	name = "Transit"
 	flags = MAP_LEVEL_ADMIN|MAP_LEVEL_SEALED|MAP_LEVEL_PLAYER|MAP_LEVEL_CONTACT|MAP_LEVEL_XENOARCH_EXEMPT
 
 /datum/map_z_level/relicbase/station/catacombs
-	z = Z_LEVEL_CATACOMBS
+	z = Z_LEVEL_RB_CATACOMBS
 	name = "Catacombs"
 	base_turf = /turf/simulated/mineral/floor/cave
 	transit_chance = 10
 
 /datum/map_z_level/relicbase/station/thesky
-	z = Z_LEVEL_THE_SKY
+	z = Z_LEVEL_RB_THE_SKY
 	name = "Sky"
 	base_turf = /turf/simulated/open
 	transit_chance = 10
@@ -310,13 +286,13 @@
 	. = ..()
 	teleport_x = src.x
 	teleport_y = 2
-	teleport_z = Z_LEVEL_SURFACE_MINE
+	teleport_z = Z_LEVEL_RB_SURFACE_MINE
 
 /obj/effect/step_trigger/teleporter/mine/from_mining/Initialize(mapload)
 	. = ..()
 	teleport_x = src.x
 	teleport_y = world.maxy - 1
-	teleport_z = Z_LEVEL_SURFACE
+	teleport_z = Z_LEVEL_RB_SURFACE
 
 //Teleport to Wild
 
@@ -324,27 +300,27 @@
 	. = ..()
 	teleport_x = src.x
 	teleport_y = 2
-	teleport_z = Z_LEVEL_SURFACE_WILD
+	teleport_z = Z_LEVEL_RB_SURFACE_WILD
 
 /obj/effect/step_trigger/teleporter/wild/from_wild/Initialize(mapload)
 	. = ..()
 	teleport_x = src.x
 	teleport_y = world.maxy - 1
-	teleport_z = Z_LEVEL_SURFACE_MINE
+	teleport_z = Z_LEVEL_RB_SURFACE_MINE
 */
 
 /datum/planet/thor
 	expected_z_levels = list(
-		Z_LEVEL_SURFACE,
-		Z_LEVEL_UNDERGROUND,
-		Z_LEVEL_UPPER_FLOORS,
-		Z_LEVEL_SURFACE_WILDS,
-		Z_LEVEL_SURFACE_MINES,
-		Z_LEVEL_WILDERNESS_SKY,
-		Z_LEVEL_UNDERMINES,
-		Z_LEVEL_SURFACE_OCEAN,
-		Z_LEVEL_THE_SKY,
-		Z_LEVEL_CATACOMBS
+		Z_LEVEL_RB_SURFACE,
+		Z_LEVEL_RB_UNDERGROUND,
+		Z_LEVEL_RB_UPPER_FLOORS,
+		Z_LEVEL_RB_SURFACE_WILDS,
+		Z_LEVEL_RB_SURFACE_MINES,
+		Z_LEVEL_RB_WILDERNESS_SKY,
+		Z_LEVEL_RB_UNDERMINES,
+		Z_LEVEL_RB_SURFACE_OCEAN,
+		Z_LEVEL_RB_THE_SKY,
+		Z_LEVEL_RB_CATACOMBS
 	)
 
 /obj/effect/step_trigger/teleporter/bridge/east_to_west/Initialize(mapload)
@@ -414,9 +390,9 @@
 //CHOMPEdit this is very much necessary for us otherwise weather sounds play on other levels
 /datum/planet/sif
 	expected_z_levels = list(
-		Z_LEVEL_SURFACE,
-		Z_LEVEL_SURFACE_MINE,
-		Z_LEVEL_SURFACE_WILD
+		Z_LEVEL_RB_SURFACE,
+		Z_LEVEL_RB_SURFACE_MINE,
+		Z_LEVEL_RB_SURFACE_WILD
 	)
 */
 //Suit Storage Units
