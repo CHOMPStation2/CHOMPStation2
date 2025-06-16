@@ -10,7 +10,6 @@
 	drop_sound = 'sound/items/drop/device.ogg'
 
 /obj/item/emergency_beacon/Initialize(mapload)
-	. = ..()
 	gps = new/obj/item/gps/emergency_beacon(src)
 	for(var/i in 1 to length(levels_for_distress))
 		var/current = levels_for_distress[i]
