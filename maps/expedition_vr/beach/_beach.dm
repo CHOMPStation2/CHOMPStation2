@@ -10,7 +10,7 @@
 	icon_state = "globe"
 	in_space = 0
 	initial_generic_waypoints = list("beach_e", "beach_c", "beach_nw")
-	extra_z_levels = list(Z_LEVEL_BEACH_CAVE)
+	extra_z_levels = list(Z_NAME_BEACH_CAVE)
 	known = TRUE
 	icon_state = "desert"
 
