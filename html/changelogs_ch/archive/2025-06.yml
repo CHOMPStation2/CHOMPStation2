@@ -238,3 +238,14 @@
   - qol: Reagent hoses have feedback on connection and disconnection
   - qol: Reagent hoses drop on disconnection instead of being destroyed
   - qol: Reagent hoses change colors as reagents are pumped through them
+2025-06-17:
+  CHOMPStation2StaffMirrorBot:
+  - rscadd: Xenoarch's Radiocarbon Spectrometer has been rewritten to be more engaging.
+  Will:
+  - rscadd: reagent hoses can be used to inflate and drain other human mobs in various
+      ways
+  - rscadd: borgs now have hose connectors that go to their current vore belly
+  - qol: Show belly fluid verb now shows composition of belly fluids and not just
+      amount
+  - code_imp: reagents that enter someone's belly become belly reagents to respect
+      prefs
