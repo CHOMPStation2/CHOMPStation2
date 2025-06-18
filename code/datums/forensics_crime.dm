@@ -82,10 +82,14 @@
 /datum/forensics_crime/proc/merge_prints(var/datum/forensics_crime/origin)
 	if(!islist(origin?.fingerprints))
 		return
+<<<<<<< HEAD
 	if(fingerprints)
 		fingerprints |= origin.fingerprints
 	else
 		fingerprints = origin.fingerprints.Copy()
+=======
+	LAZYOR(fingerprints,origin.fingerprints)
+>>>>>>> fb1aa59374 (allow nondna blood smearing (#17880))
 
 /// Clears data to default state, wiping all evidence
 /datum/forensics_crime/proc/clear_prints()
@@ -146,10 +150,14 @@
 /datum/forensics_crime/proc/merge_hiddenprints(var/datum/forensics_crime/origin)
 	if(!islist(origin?.fingerprintshidden))
 		return
+<<<<<<< HEAD
 	if(fingerprintshidden)
 		fingerprintshidden |= origin.fingerprintshidden
 	else
 		fingerprintshidden = origin.fingerprintshidden.Copy()
+=======
+	LAZYOR(fingerprintshidden,origin.fingerprintshidden)
+>>>>>>> fb1aa59374 (allow nondna blood smearing (#17880))
 
 
 //////////////////////////////////////////////////////////////////////////////////////
@@ -201,10 +209,14 @@
 /datum/forensics_crime/proc/merge_fibres(var/datum/forensics_crime/origin)
 	if(!islist(origin?.suit_fibres))
 		return
+<<<<<<< HEAD
 	if(suit_fibres)
 		suit_fibres |= origin.suit_fibres
 	else
 		suit_fibres = origin.suit_fibres.Copy()
+=======
+	LAZYOR(suit_fibres,origin.suit_fibres)
+>>>>>>> fb1aa59374 (allow nondna blood smearing (#17880))
 
 /// Clears data to default state, wiping all evidence
 /datum/forensics_crime/proc/clear_fibres()
@@ -262,18 +274,26 @@
 /datum/forensics_crime/proc/merge_blooddna(var/datum/forensics_crime/origin, var/list/raw_list = null)
 	// Copying from a list, blood on a mob's feet is stored as a list outside of forensics data
 	if(raw_list)
+<<<<<<< HEAD
 		if(blood_DNA)
 			blood_DNA |= raw_list
 		else
 			blood_DNA = raw_list.Copy()
+=======
+		LAZYOR(blood_DNA,raw_list)
+>>>>>>> fb1aa59374 (allow nondna blood smearing (#17880))
 		return
 	// Copying from another datums
 	if(!islist(origin?.blood_DNA))
 		return
+<<<<<<< HEAD
 	if(blood_DNA)
 		blood_DNA |= origin.blood_DNA
 	else
 		blood_DNA = origin.blood_DNA.Copy()
+=======
+	LAZYOR(blood_DNA,origin.blood_DNA)
+>>>>>>> fb1aa59374 (allow nondna blood smearing (#17880))
 
 /// Clears data to default state, wiping all evidence
 /datum/forensics_crime/proc/clear_blooddna()
