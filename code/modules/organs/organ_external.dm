@@ -1140,16 +1140,6 @@ Note that amputating the affected organ does in fact remove the infection from t
 		return
 
 	if(owner)
-<<<<<<< HEAD
-		if(organ_can_feel_pain() && !isbelly(owner.loc) && !isliving(owner.loc) && !owner.transforming)
-			//CHOMPEdit Begin
-			owner.custom_pain(pick(\
-				span_danger("You hear a loud cracking sound coming from \the [owner]."),\
-				span_danger("Something feels like it shattered in your [name]!"),\
-				span_danger("You hear a sickening crack.")),brokenpain)
-			//CHOMPEdit End
-			owner.emote("scream")
-=======
 		var/show_message = TRUE
 		var/scream = TRUE
 		if(!organ_can_feel_pain() || owner.transforming)
@@ -1161,13 +1151,14 @@ Note that amputating the affected organ does in fact remove the infection from t
 				show_message = FALSE
 
 		if(show_message)
-			owner.visible_message(\
+			// CHOMPEdit Start
+			owner.custom_pain(pick(\
 				span_danger("You hear a loud cracking sound coming from \the [owner]."),\
 				span_danger("Something feels like it shattered in your [name]!"),\
-				span_danger("You hear a sickening crack."))
+				span_danger("You hear a sickening crack.")), brokenpain)
+			// CHOMPEdit End
 			if(scream)
 				owner.emote("scream")
->>>>>>> e0d5d01158 (Add a new process option: Break Bone (#17855))
 		jostle_bone()
 
 	if(istype(owner.loc, /obj/belly)) //CHOMPedit, bone breaks in bellys should be whisper range to prevent bar wide blender prefbreak. This is a hacky passive hardcode, if a pref gets added, remove this if else
