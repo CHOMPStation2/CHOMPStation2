@@ -53,12 +53,6 @@
 	#include "overmap/planets/thor/thor.dm"
 	#include "overmap/planets/tyr/tyr.dm"
 
-	//SPACE - Anything random in space
-	#include "overmap/space/fueldepot.dm" //This is a fuel depot in space.
-
-
-
-
 	#define USING_MAP_DATUM /datum/map/southern_cross
 
 	// todo: map.dmm-s here

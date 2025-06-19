@@ -11,7 +11,6 @@
 	#include "turfs/outdoors.dm"
 	#include "overmap/shuttles.dm"
 	#include "overmap/sectors.dm"
-	#include "overmap/space/fueldepot.dm" //This is a fuel depot in space.
 
 	// Map exclusive
 	#include "relicbase_things.dm"

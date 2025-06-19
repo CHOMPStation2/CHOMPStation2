@@ -55,9 +55,6 @@
 	#include "../southern_cross/overmap/planets/thor/thor.dm"
 	#include "../southern_cross/overmap/planets/tyr/tyr.dm"
 
-	//SPACE - Anything random in space
-	#include "../southern_cross/overmap/space/fueldepot.dm" //This is a fuel depot in space.
-
 
 
 
