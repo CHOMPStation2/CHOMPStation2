@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 //Simple borg hand.
 //Limited use.
 /obj/item/gripper
@@ -429,6 +430,8 @@
 
 				user.visible_message(span_danger("[user] removes the power cell from [A]!"), "You remove the power cell.")
 
+=======
+>>>>>>> 3b4bcef49b (Better borg modules (#17507))
 //TODO: Matter decompiler.
 /obj/item/matter_decompiler
 
