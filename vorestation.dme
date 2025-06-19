@@ -5262,6 +5262,7 @@
 #include "modular_chomp\maps\common\common_machinery.dm"
 #include "modular_chomp\maps\common\common_munitions.dm"
 #include "modular_chomp\maps\common\common_outfits.dm"
+#include "modular_chomp\maps\common\common_shuttles.dm"
 #include "modular_chomp\maps\common\common_shuttles_crew.dm"
 #include "modular_chomp\maps\common\common_shuttles_ert.dm"
 #include "modular_chomp\maps\common\common_shuttles_heist.dm"
