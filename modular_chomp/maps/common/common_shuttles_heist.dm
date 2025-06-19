@@ -1,3 +1,4 @@
+// Heist shuttles
 /obj/machinery/computer/shuttle_control/multi/heist
 	name = "skipjack control console"
 	req_access = list(access_syndicate)

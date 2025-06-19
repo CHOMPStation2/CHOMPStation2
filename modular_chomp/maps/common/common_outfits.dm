@@ -4,8 +4,6 @@
 SOUTHERN CROSS OUTFITS
 Keep outfits simple. Spawn with basic uniforms and minimal gear. Gear instead goes in lockers. Keep this in mind if editing.
 */
-
-
 /decl/hierarchy/outfit/job/explorer2
 	name = OUTFIT_JOB_NAME("Explorer")
 	shoes = /obj/item/clothing/shoes/boots/winter/explorer

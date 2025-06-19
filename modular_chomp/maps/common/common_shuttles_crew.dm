@@ -49,17 +49,6 @@ GLOBAL_LIST_EMPTY(shuttdisp_list)
 		/datum/shuttle_destination/shuttle3/stationhangar3 = 25 SECONDS
 	)
 
-/*
-/datum/shuttle_destination/shuttle3/outside_SC
-	name = "Outside of NLS Southern Cross"
-	my_landmark = "shuttle3_seconddeck"
-	preferred_interim_tag = "shuttle3_transit"
-
-	routes_to_make = list(
-		/datum/shuttle_destination/shuttle3/stationhangar3 = 0 SECONDS
-	)
-*/
-
 /datum/shuttle_destination/shuttle3/stationhangar3
 	name = "Southern Cross Hangar Three"
 	my_landmark = "hangar_3"
