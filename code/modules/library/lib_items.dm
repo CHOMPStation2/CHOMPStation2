@@ -205,9 +205,9 @@ Book Cart End
 
 /// Proc that handles sending the book information to the user, as well as some housekeeping stuff.
 /obj/item/book/proc/display_content(mob/living/user)
-	if(!findtext(dat, regex("^<html")))
-		dat = "<html>[dat]</html>"
-	user << browse(replacetext(dat, "<html>", "<html><TT><I>Penned by [author].</I></TT> <BR>"), "window=book")
+	var/datum/browser/popup = new(user, "book", "<TT><I>Penned by [author].</I></TT>")
+	popup.set_content(dat)
+	popup.open()
 
 /obj/item/book/attackby(obj/item/W, mob/user)
 	if(carved)
