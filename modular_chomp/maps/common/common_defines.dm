@@ -16,7 +16,6 @@
 #define Z_LEVEL_SC_SURFACE_WILD				10
 //#define Z_LEVEL_SC_SURFACE_VALLEY 			11 //CHOMpedit: Repalcing with Tyr
 #define Z_LEVEL_SC_VR_REALM					11
-#define Z_LEVEL_SC_FUELDEPOT				12
 #define Z_LEVEL_SC_JUNGLE					13
 #define Z_LEVEL_SC_DEATH_VALLEY				14
 #define Z_LEVEL_SC_GATEWAY					15
@@ -33,7 +32,6 @@
 #define Z_LEVEL_SN_SURFACE_WILD				9
 //#define Z_LEVEL_SN_SURFACE_VALLEY 			10 Re comment once valley is added
 #define Z_LEVEL_SN_VR_REALM					10
-#define Z_LEVEL_SN_FUELDEPOT				11
 #define Z_LEVEL_SN_JUNGLE					12
 #define Z_LEVEL_SN_DEATH_VALLEY				13
 #define Z_LEVEL_SN_GATEWAY					14
@@ -52,9 +50,11 @@
 #define Z_LEVEL_RB_CARRIER 					11
 #define Z_LEVEL_RB_CENTCOM					12
 #define Z_LEVEL_RB_TRANSIT					13
-#define Z_LEVEL_RB_FUELDEPOT				14
 #define Z_LEVEL_RB_GATEWAY					15
 #define Z_LEVEL_RB_REDGATE					16
+
+// Named Submaps
+#define Z_NAME_FUELDEPOT					"Fueldepot"
 
 // Camera Network Additions
 #define NETWORK_EXTERIOR "Exterior" // Exterior Cameras

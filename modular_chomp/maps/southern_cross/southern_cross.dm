@@ -2,37 +2,19 @@
 
 #if !defined(USING_MAP_DATUM)
 
-	// CHOMPStation Edits Start: Disabling specific includes as vorestation.dme has them already loading via #includes there. UPDATE THIS if that changes.
 	#include "southern_cross_areas_planet.dm"
 	#include "southern_cross_areas.dm"
 	#include "southern_cross_defines.dm"
 	#include "southern_cross_sif_defines.dm"
 	#include "southern_cross_elevator.dm"
-	#include "southern_cross_events.dm"
-	#include "southern_cross_overrides.dm"
 	#include "southern_cross_presets.dm"
 	#include "southern_cross_shuttles.dm"
 	#include "southern_cross_shuttles_ch.dm"
-	#include "shuttles/crew_shuttles_ch.dm"
 
-	#include "loadout/loadout_accessories.dm"
-	// #include "loadout/loadout_suit.dm"
-	// #include "loadout/loadout_uniform.dm"
-
-	// #include "items/encryptionkey_sc.dm"
-	// #include "items/headset_sc.dm"
-	// #include "items/clothing/sc_suit.dm"
-	// #include "items/clothing/sc_under.dm"
-	// #include "items/clothing/sc_accessory.dm"
-	// #include "structures/closets/engineering.dm"
-	// #include "structures/closets/medical.dm"
-	// #include "structures/closets/misc.dm"
-	// #include "structures/closets/research.dm"
-	// #include "structures/closets/security.dm"
 	#include "turfs/outdoors.dm"
-	#include "events/wildlife_encounter.dm"
 
-	// CHOMPStation Edits End - Un-disable these includes if vorestation.dme ever removes them from their #includes.
+	// Map specific
+	#include "southern_cross_overrides.dm"
 
 	#ifndef AWAY_MISSION_TEST //Don't include these for just testing away missions if the flag is set to true in /code/_away_mission_tests.dm
 		#include "southern_cross-1.dmm" //	Deck 0 z1
