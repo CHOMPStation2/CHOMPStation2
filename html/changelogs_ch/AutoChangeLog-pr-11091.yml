@@ -1,4 +1,0 @@
-author: "CHOMPStation2StaffMirrorBot"
-delete-after: True
-changes:
-  - bugfix: "blood without dna from simple mobs will track onto shoes, floors and hands again"
