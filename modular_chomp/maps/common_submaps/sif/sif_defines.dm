@@ -1,5 +1,3 @@
-
-
 /datum/planet/sif
 	expected_z_levels = list(
 		Z_LEVEL_SC_SURFACE,
