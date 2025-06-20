@@ -1035,7 +1035,6 @@ GLOBAL_LIST_INIT(BUILDABLE_AREA_TYPES, list(
 	/area/mine
 //	/area/surface/outside, 	//SC //CHOMP Comment - Actually these are causing compilation error.
 //	/area/surface/cave,		//SC
-<<<<<<< HEAD
 //	/area/tether/surfacebase/outside,	//CHOMP Edit Downstreams, uncomment these if you are using these maps
 //	/area/groundbase/unexplored/outdoors,
 //	/area/maintenance/groundbase/level1,
@@ -1045,17 +1044,6 @@ GLOBAL_LIST_INIT(BUILDABLE_AREA_TYPES, list(
 //	/area/tether_away/beach,
 //	/area/tether_away/cave,
 )
-=======
-	/area/tether/surfacebase/outside,
-	/area/groundbase/unexplored/outdoors,
-	/area/maintenance/groundbase/level1,
-	/area/submap/groundbase/wilderness,
-	/area/groundbase/mining,
-	/area/offmap/aerostat/surface,
-	/area/tether_away/beach,
-	/area/tether_away/cave,
-))
->>>>>>> 3b4bcef49b (Better borg modules (#17507))
 
 GLOBAL_LIST_INIT(blacklisted_areas, typecacheof(list(
 	/area/space,
@@ -1065,7 +1053,6 @@ GLOBAL_LIST_INIT(blacklisted_areas, typecacheof(list(
 	//TETHER STUFF BELOW THIS	//CHOMP Edit Downstreams, uncomment these if you are using these maps
 //	/area/tether/surfacebase/outside,
 	//GROUNDBASE STUFF BELOW THIS
-<<<<<<< HEAD
 //	/area/groundbase/unexplored/outdoors,
 //	/area/maintenance/groundbase/level1,
 //	/area/submap/groundbase/wilderness,
@@ -1074,16 +1061,6 @@ GLOBAL_LIST_INIT(blacklisted_areas, typecacheof(list(
 //	/area/tether_away/beach,
 //	/area/tether_away/cave
 	))
-=======
-	/area/groundbase/unexplored/outdoors,
-	/area/maintenance/groundbase/level1,
-	/area/submap/groundbase/wilderness,
-	/area/groundbase/mining,
-	/area/offmap/aerostat/surface,
-	/area/tether_away/beach,
-	/area/tether_away/cave
-	)))
->>>>>>> 3b4bcef49b (Better borg modules (#17507))
 
 GLOBAL_LIST_INIT(SPECIALS, list(
 	/turf/space,
@@ -1125,12 +1102,8 @@ GLOBAL_LIST_INIT(area_or_turf_fail_types, typecacheof(list(
 	/turf/unsimulated/wall/planetary,
 	/area/submap/virgo2,
 	/area/submap/event,
-<<<<<<< HEAD
 	/area/submap/casino_event,
 	/area/vr //CHOMPedit
-	))
-=======
-	/area/submap/casino_event
 	)))
 
 //GRIPPERS!!!
@@ -1139,6 +1112,7 @@ GLOBAL_LIST_INIT(area_or_turf_fail_types, typecacheof(list(
 	/obj/item/airlock_electronics, \
 	/obj/item/tracker_electronics, \
 	/obj/item/module/power_control, \
+	/obj/item/bluespace_crystal, \
 	/obj/item/stock_parts, \
 	/obj/item/frame, \
 	/obj/item/camera_assembly, \
@@ -1178,6 +1152,7 @@ GLOBAL_LIST_INIT(area_or_turf_fail_types, typecacheof(list(
 	/obj/item/storage/pill_bottle, \
 	/obj/item/reagent_containers/pill, \
 	/obj/item/reagent_containers/blood, \
+	/obj/item/nif, \
 	/obj/item/stack/material/phoron, \
 	/obj/item/tank/anesthetic, \
 	/obj/item/disk/body_record
@@ -1297,4 +1272,3 @@ GLOBAL_LIST_INIT(material_synth_list, list(
 								WIRE_SYNTH = /datum/matter_synth/wire,
 								CLOTH_SYNTH = /datum/matter_synth/cloth
 							))
->>>>>>> 3b4bcef49b (Better borg modules (#17507))

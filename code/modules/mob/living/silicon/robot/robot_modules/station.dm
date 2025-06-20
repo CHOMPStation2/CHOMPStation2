@@ -459,12 +459,7 @@ var/global/list/robot_modules = list(
 	src.modules += new /obj/item/taperoll/police(src)
 	src.modules += new /obj/item/reagent_containers/spray/pepper(src)
 	src.modules += new /obj/item/gripper/security(src)
-<<<<<<< HEAD
-	src.modules += new /obj/item/ticket_printer(src)	//VOREStation Add
 	src.modules += new /obj/item/gun/energy/robotic/phasegun(src) // CHOMPedit: Phasegun for regular sec cyborg.
-=======
-	src.modules += new /obj/item/ticket_printer(src)
->>>>>>> 3b4bcef49b (Better borg modules (#17507))
 	src.emag += new /obj/item/gun/energy/robotic/laser/rifle(src)
 
 	src.modules += new /obj/item/dogborg/sleeper/K9(src) //Eat criminals. Bring them to the brig.
