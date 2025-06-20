@@ -9,7 +9,7 @@
 
 /datum/map_z_level/sc_lateload/away_fueldepot
 	name = "Away Mission - Fuel Depot"
-	z = Z_NAME_FUELDEPOT
+	z = Z_NAME_FUELDEPOT_CH
 
 
 // -- Overmap -- //

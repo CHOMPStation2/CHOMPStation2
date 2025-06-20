@@ -1,4 +1,4 @@
-/obj/effect/overmap/visitable/sector/Southern_Cross
+/obj/effect/overmap/visitable/sector/Soluna_Nexus
 	name = "Soluna Nexus"
 	icon = 'modular_chomp/icons/obj/overmap.dmi'
 	icon_state = "southerncross"
@@ -53,22 +53,22 @@
 		"echidna_dock"
 		)
 
-/obj/effect/overmap/visitable/sector/Southern_Cross/get_space_zlevels() //These are the primary levels that our space station resides in. This also indicates what levels astronauts can drift into.
+/obj/effect/overmap/visitable/sector/Soluna_Nexus/get_space_zlevels() //These are the primary levels that our space station resides in. This also indicates what levels astronauts can drift into.
 	return list(
 			Z_LEVEL_SN_STATION_ONE,
 			Z_LEVEL_SN_STATION_TWO,
 			Z_LEVEL_SN_STATION_THREE,
 			Z_LEVEL_SN_MISC)
 
-/obj/effect/overmap/visitable/sector/Southern_Cross/Crossed(var/atom/movable/AM)
+/obj/effect/overmap/visitable/sector/Soluna_Nexus/Crossed(var/atom/movable/AM)
 	. = ..()
 	announce_atc(AM,going = FALSE)
 
-/obj/effect/overmap/visitable/sector/Southern_Cross/Uncrossed(var/atom/movable/AM)
+/obj/effect/overmap/visitable/sector/Soluna_Nexus/Uncrossed(var/atom/movable/AM)
 	. = ..()
 	announce_atc(AM,going = TRUE)
 
-/obj/effect/overmap/visitable/sector/Southern_Cross/announce_atc(var/atom/movable/AM, var/going = FALSE)
+/obj/effect/overmap/visitable/sector/Soluna_Nexus/announce_atc(var/atom/movable/AM, var/going = FALSE)
 	if(istype(AM, /obj/effect/overmap/visitable/ship/simplemob))
 		if(world.time < mob_announce_cooldown)
 			return
@@ -85,7 +85,3 @@
 	//For ships, it's safe to assume they're big enough to not be sneaky
 	else if(istype(AM, /obj/effect/overmap/visitable/ship))
 		SSatc.msg(message)
-
-/obj/effect/overmap/visitable/planet/Sif/Initialize(mapload)
-	. = ..()
-	docking_codes = null

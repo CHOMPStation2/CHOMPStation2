@@ -1,5 +1,3 @@
-GLOBAL_LIST_EMPTY(station_waypoints) //Create global list for station waypoints, so things like explo carrier can pull docking codes form it without having to scan world.
-
 /obj/effect/overmap/visitable/sector/Southern_Cross
 	name = "Southern Cross"
 	icon = 'modular_chomp/icons/obj/overmap.dmi'
@@ -92,7 +90,3 @@ GLOBAL_LIST_EMPTY(station_waypoints) //Create global list for station waypoints,
 /obj/effect/overmap/visitable/sector/Southern_Cross/Destroy()
 	GLOB.station_waypoints -= src
 	. = ..()
-
-/obj/effect/overmap/visitable/planet/Sif/Initialize(mapload)
-	. = ..()
-	docking_codes = null

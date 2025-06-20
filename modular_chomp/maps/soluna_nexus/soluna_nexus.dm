@@ -40,7 +40,6 @@
 //PLANETS, installations, sectors, ships, etc for the overmap, I want put here. Add new comments and includes when you make new planets
 	//SIF - Planet
 	#include "overmap/sectors_sn.dm" //This is actually the sector for SN.
-	#include "../southern_cross/overmap/sectors_sif.dm" //This is actually the sector for Sif.
 
 
 

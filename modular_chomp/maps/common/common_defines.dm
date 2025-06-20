@@ -54,7 +54,12 @@
 #define Z_LEVEL_RB_REDGATE					16
 
 // Named Submaps
-#define Z_NAME_FUELDEPOT					"Fueldepot"
+#define Z_NAME_FUELDEPOT_CH					"Fueldepot CH"
+#define Z_NAME_TRANSIT_CH					"Transit CH"
+#define Z_NAME_MISC_CH						"Misc CH"
+#define Z_NAME_SURFACE_CH					"Surface CH"
+#define Z_NAME_SURFACE_MINE_CH				"Surface Mine CH"
+#define Z_NAME_SURFACE_WILD_CH				"Surface Wild CH"
 
 // Camera Network Additions
 #define NETWORK_EXTERIOR "Exterior" // Exterior Cameras
