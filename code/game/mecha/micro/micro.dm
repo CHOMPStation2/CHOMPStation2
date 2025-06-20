@@ -1,4 +1,3 @@
-/* //CHOMPedit commented micromech stuff, because fuck this trash
 /obj/mecha/micro
 	icon = 'icons/mecha/micro.dmi'
 	force = 10 //still a robot
@@ -146,4 +145,4 @@
 	return result
 
 /obj/effect/decal/mecha_wreckage/micro
-	icon = 'icons/mecha/micro.dmi' */
+	icon = 'icons/mecha/micro.dmi'

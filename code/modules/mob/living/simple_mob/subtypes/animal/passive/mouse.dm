@@ -56,7 +56,7 @@
 
 //CHOMPAdd Start
 /mob/living/simple_mob/animal/passive/mouse/Destroy()
-	active_ghost_pods -= src
+	GLOB.active_ghost_pods -= src
 	return ..()
 //CHOMPAdd End
 
@@ -65,7 +65,7 @@
 	//CHOMPAdd Start
 	ghostjoin = 1
 	ghostjoin_icon()
-	active_ghost_pods += src
+	GLOB.active_ghost_pods += src
 	//CHOMPAdd End
 
 	add_verb(src, /mob/living/proc/ventcrawl)

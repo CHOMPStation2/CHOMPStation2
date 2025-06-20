@@ -220,7 +220,7 @@
 			Vac.afterattack(S, src, 1)
 			return
 	for(var/obj/O in T)
-		if(is_type_in_list(O, edible_trash) && !O.anchored)
+		if(is_type_in_list(O, GLOB.edible_trash) && !O.anchored)
 			Vac.afterattack(T, src, 1)
 			return
 	for(var/mob/living/L in T)

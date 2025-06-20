@@ -1043,7 +1043,7 @@ GLOBAL_LIST_INIT(BUILDABLE_AREA_TYPES, list(
 //	/area/offmap/aerostat/surface,
 //	/area/tether_away/beach,
 //	/area/tether_away/cave,
-)
+))
 
 GLOBAL_LIST_INIT(blacklisted_areas, typecacheof(list(
 	/area/space,
@@ -1060,7 +1060,7 @@ GLOBAL_LIST_INIT(blacklisted_areas, typecacheof(list(
 //	/area/offmap/aerostat/surface,
 //	/area/tether_away/beach,
 //	/area/tether_away/cave
-	))
+	)))
 
 GLOBAL_LIST_INIT(SPECIALS, list(
 	/turf/space,
