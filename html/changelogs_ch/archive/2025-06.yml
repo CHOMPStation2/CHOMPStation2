@@ -278,3 +278,6 @@
       again
   Diana:
   - bugfix: arglasses can be properly selected in the loadout
+2025-06-20:
+  CHOMPStation2StaffMirrorBot:
+  - code_imp: gene conflict list uses much less memory
