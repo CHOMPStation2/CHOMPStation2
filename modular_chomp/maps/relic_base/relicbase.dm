@@ -7,9 +7,7 @@
 	#include "relicbase_defines.dm"
 	#include "relicbase_elevator.dm"
 	#include "relicbase_presets.dm"
-	#include "relicbase_shuttles.dm"
 	#include "turfs/outdoors.dm"
-	#include "overmap/shuttles.dm"
 	#include "overmap/sectors.dm"
 
 	// Map exclusive
