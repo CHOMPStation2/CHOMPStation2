@@ -42,8 +42,13 @@
 			if(get_dir(cap, src) == cap.dir)
 				capacitors |= cap
 				cap.owned_gen = src
+<<<<<<< HEAD
 	shield_hum = new(list(src), FALSE)
 	return ..()
+=======
+	. = ..()
+	AddElement(/datum/element/climbable)
+>>>>>>> 5d31f14e94 (Climbable Element (#17764))
 
 /obj/machinery/shield_gen/Destroy()
 	QDEL_LIST_NULL(field)
