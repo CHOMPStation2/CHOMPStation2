@@ -278,37 +278,6 @@
 	base_turf = /turf/simulated/open
 	transit_chance = 10
 
-
-/* KSC 9/29/20 = No longer relevant code as we have nonencludian portals to jump between outpost,caves and wilderness
-//Teleport to Mine
-
-/obj/effect/step_trigger/teleporter/mine/to_mining/Initialize(mapload)
-	. = ..()
-	teleport_x = src.x
-	teleport_y = 2
-	teleport_z = Z_LEVEL_RB_SURFACE_MINE
-
-/obj/effect/step_trigger/teleporter/mine/from_mining/Initialize(mapload)
-	. = ..()
-	teleport_x = src.x
-	teleport_y = world.maxy - 1
-	teleport_z = Z_LEVEL_RB_SURFACE
-
-//Teleport to Wild
-
-/obj/effect/step_trigger/teleporter/wild/to_wild/Initialize(mapload)
-	. = ..()
-	teleport_x = src.x
-	teleport_y = 2
-	teleport_z = Z_LEVEL_RB_SURFACE_WILD
-
-/obj/effect/step_trigger/teleporter/wild/from_wild/Initialize(mapload)
-	. = ..()
-	teleport_x = src.x
-	teleport_y = world.maxy - 1
-	teleport_z = Z_LEVEL_RB_SURFACE_MINE
-*/
-
 /datum/planet/thor
 	expected_z_levels = list(
 		Z_LEVEL_RB_SURFACE,
@@ -322,80 +291,6 @@
 		Z_LEVEL_RB_THE_SKY,
 		Z_LEVEL_RB_CATACOMBS
 	)
-
-/obj/effect/step_trigger/teleporter/bridge/east_to_west/Initialize(mapload)
-	teleport_x = src.x - 4
-	teleport_y = src.y
-	teleport_z = src.z
-	return ..()
-
-/obj/effect/step_trigger/teleporter/bridge/east_to_west/small/Initialize(mapload)
-	teleport_x = src.x - 3
-	teleport_y = src.y
-	teleport_z = src.z
-	return ..()
-
-/obj/effect/step_trigger/teleporter/bridge/west_to_east/Initialize(mapload)
-	teleport_x = src.x + 4
-	teleport_y = src.y
-	teleport_z = src.z
-	return ..()
-
-/obj/effect/step_trigger/teleporter/bridge/west_to_east/small/Initialize(mapload)
-	teleport_x = src.x + 3
-	teleport_y = src.y
-	teleport_z = src.z
-	return ..()
-
-/obj/effect/step_trigger/teleporter/bridge/north_to_south/Initialize(mapload)
-	teleport_x = src.x
-	teleport_y = src.y - 4
-	teleport_z = src.z
-	return ..()
-
-/obj/effect/step_trigger/teleporter/bridge/south_to_north/Initialize(mapload)
-	teleport_x = src.x
-	teleport_y = src.y + 4
-	teleport_z = src.z
-	return ..()
-
- /* KSC 9/29/20 = Adding these as we now have nonencludian portals */
-
-/obj/effect/map_effect/portal/master/side_a/plains_to_caves
-	portal_id = "plains_caves-normal"
-
-/obj/effect/map_effect/portal/master/side_b/caves_to_plains
-	portal_id = "plains_caves-normal"
-
-/obj/effect/map_effect/portal/master/side_a/plains_to_caves/river
-	portal_id = "plains_caves-river"
-
-/obj/effect/map_effect/portal/master/side_b/caves_to_plains/river
-	portal_id = "plains_caves-river"
-
-
-/obj/effect/map_effect/portal/master/side_a/caves_to_wilderness
-	portal_id = "caves_wilderness-normal"
-
-/obj/effect/map_effect/portal/master/side_b/wilderness_to_caves
-	portal_id = "caves_wilderness-normal"
-
-/obj/effect/map_effect/portal/master/side_a/caves_to_wilderness/river
-	portal_id = "caves_wilderness-river"
-
-/obj/effect/map_effect/portal/master/side_b/wilderness_to_caves/river
-	portal_id = "caves_wilderness-river"
-
-/*
-//CHOMPEdit this is very much necessary for us otherwise weather sounds play on other levels
-/datum/planet/sif
-	expected_z_levels = list(
-		Z_LEVEL_RB_SURFACE,
-		Z_LEVEL_RB_SURFACE_MINE,
-		Z_LEVEL_RB_SURFACE_WILD
-	)
-*/
-//Suit Storage Units
 
 /obj/machinery/suit_cycler/exploration
 	name = "Explorer suit cycler"

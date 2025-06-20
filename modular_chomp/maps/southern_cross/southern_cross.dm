@@ -5,7 +5,6 @@
 	#include "southern_cross_areas_planet.dm"
 	#include "southern_cross_areas.dm"
 	#include "southern_cross_defines.dm"
-	#include "southern_cross_sif_defines.dm"
 	#include "southern_cross_elevator.dm"
 	#include "southern_cross_presets.dm"
 
@@ -30,7 +29,6 @@
 //		#include "southern_cross-12-unused.dmm" //Skylands z10 //Remove due to lack of use
 		// #include "southern_cross-13.dmm" //Valley z11 seemingly. For stranger critters and POIs.
 	#endif
-//	#include "southern_cross-casino.dmm" //CHOMPedit: Disabled to save resources and loaded in during events - Jack
 
 	#include "submaps/_southern_cross_submaps.dm" //This contains VR world and gateway stuff
 
@@ -41,15 +39,6 @@
 	#include "overmap/sectors_sif.dm" //This is actually the sector for Sif.
 	#include "overmap/space/carrier.dm" //Explo carrier
 	#include "overmap/planets/kara/kara_OM_only.dm" //Kara, but just an OM icon
-	/* //Disabled due to low usage. These are heavy mini-station-like Z layers too.
-	//KARA - Planet
-	#include "overmap/planets/kara/kara.dm" //And this is the sector for Kara. I have decided to better organize future planets and maps for them
-	//KARA Z layers
-	#include "overmap/planets/kara/northern_star/northern_star.dm" //This is the actual map info that we're using for kara
-	#include "overmap/planets/kara/aerostat/aerostat.dm" //This is an installation for Kara.
-	*/
-	#include "overmap/planets/thor/thor.dm"
-	#include "overmap/planets/tyr/tyr.dm"
 
 	#define USING_MAP_DATUM /datum/map/southern_cross
 
