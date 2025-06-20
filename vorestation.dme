@@ -5284,6 +5284,7 @@
 #include "modular_chomp\maps\southern_cross\items\clothing\sc_accessory.dm"
 #include "modular_chomp\maps\southern_cross\items\clothing\sc_suit.dm"
 #include "modular_chomp\maps\southern_cross\items\clothing\sc_under.dm"
+#include "modular_chomp\maps\southern_cross\overmap\planets\kara\kara_OM_only.dm"
 #include "modular_chomp\maps\southern_cross\overmap\planets\thor\thor.dm"
 #include "modular_chomp\maps\southern_cross\overmap\planets\tyr\tyr.dm"
 #include "modular_chomp\maps\southern_cross\structures\closets\engineering.dm"

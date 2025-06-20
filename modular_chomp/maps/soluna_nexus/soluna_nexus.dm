@@ -41,7 +41,6 @@
 	//SIF - Planet
 	#include "overmap/sectors_sn.dm" //This is actually the sector for SN.
 	#include "../southern_cross/overmap/sectors_sif.dm" //This is actually the sector for Sif.
-	#include "../southern_cross/overmap/planets/kara/kara_OM_only.dm" //Kara, but just an OM icon
 
 
 
