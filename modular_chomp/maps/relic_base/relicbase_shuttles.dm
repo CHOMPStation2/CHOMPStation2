@@ -7,11 +7,6 @@
 	move_direction = NORTH
 	var/base_turf = /turf/simulated/floor/reinforced
 
-
-/datum/shuttle/autodock/ferry/emergency/centcom/New()
-	radio_connection = radio_controller.add_object(src, frequency, null)
-	..()
-
 /datum/shuttle/autodock/ferry/emergency/centcom/dock()
 	..()
 	// Open Doorsunes

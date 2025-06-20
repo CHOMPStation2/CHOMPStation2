@@ -9,7 +9,6 @@
 	#include "southern_cross_elevator.dm"
 	#include "southern_cross_presets.dm"
 	#include "southern_cross_shuttles.dm"
-	#include "southern_cross_shuttles_ch.dm"
 
 	#include "turfs/outdoors.dm"
 

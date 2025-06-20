@@ -8,13 +8,12 @@
 	#include "../southern_cross/southern_cross_sif_defines.dm"
 	#include "soluna_nexus_elevator.dm"
 	#include "soluna_nexus_presets.dm"
-	#include "soluna_nexus_shuttles.dm"
-	#include "../southern_cross/southern_cross_shuttles_ch.dm"
 
 	#include "../southern_cross/turfs/outdoors.dm"
 
 	// Map specific
 	#include "../southern_cross/southern_cross_overrides.dm"
+	#include "../southern_cross/southern_cross_shuttles.dm"
 
 
 	#ifndef AWAY_MISSION_TEST //Don't include these for just testing away missions if the flag is set to true in /code/_away_mission_tests.dm
