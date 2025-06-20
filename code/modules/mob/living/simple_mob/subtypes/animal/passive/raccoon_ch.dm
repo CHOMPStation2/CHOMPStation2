@@ -41,11 +41,11 @@
 	. = ..()
 	ghostjoin = 1
 	ghostjoin_icon()
-	active_ghost_pods |= src
+	GLOB.active_ghost_pods += src
 
 /mob/living/simple_mob/animal/passive/raccoon_ch/Destroy()
-	active_ghost_pods -= src
-	return ..()
+	GLOB.active_ghost_pods -= src
+	. = ..()
 
 /datum/say_list/raccoon_ch
 	speak = list("HSSSSS")

@@ -15,7 +15,7 @@
 
 /datum/map_template/shelter/dark_portal/New()
 	. = ..()
-	blacklisted_areas = typecacheof(list(/area/centcom, /area/shadekin, /area/vr))
+	GLOB.blacklisted_areas = typecacheof(list(/area/centcom, /area/shadekin, /area/vr))
 
 /mob/living/carbon/human/shadekin_ability_check()
 	. = ..()
