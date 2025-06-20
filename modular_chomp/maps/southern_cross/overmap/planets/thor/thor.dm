@@ -30,7 +30,7 @@
 [i]Transponder[/i]: Transmitting (CIV), Vir IFF
 [b]Notice[/b]: The Vir government welcomes you to this world."}
 
-	map_z = list(Z_LEVEL_JUNGLE)
+	map_z = list(Z_LEVEL_SC_JUNGLE)
 	initial_generic_waypoints = list("thor_nw","thor_e","spacebus_jungle")
 	start_x  = 11
 	start_y  = 17
