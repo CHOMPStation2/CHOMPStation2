@@ -70,7 +70,6 @@
 	icon = 'modular_chomp/icons/obj/tribal_gear.dmi'
 	density = TRUE
 	throwpass = 1
-	climbable = TRUE
 	anchored = TRUE
 	icon_state = "outcrop"
 	mindrop = 3
