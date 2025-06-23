@@ -296,3 +296,4 @@
 	armor_penetration = 30
 	speed = 10
 	excavation_amount = 100
+

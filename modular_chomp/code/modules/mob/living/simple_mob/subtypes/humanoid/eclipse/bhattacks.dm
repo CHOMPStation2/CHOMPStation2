@@ -842,3 +842,5 @@
 	bullet_heck(target, -5, 7)
 	bullet_heck(target, -4, 7)
 	attackcycle = next_cycle
+
+

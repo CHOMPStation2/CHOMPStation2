@@ -153,3 +153,4 @@
 	icon_living = "janitor"
 	projectiletype = /obj/item/projectile/beam/midlaser/shortrange
 	ai_holder_type = /datum/ai_holder/simple_mob/ranged/pointblank
+
