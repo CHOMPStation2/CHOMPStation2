@@ -304,3 +304,7 @@
   - refactor: turns object climbing code into a component
   - qol: many more objects are climbable, preventing softlocks, especially for engineers
       and miners
+2025-06-23:
+  CHOMPStation2StaffMirrorBot:
+  - spellcheck: removed all strucutres from the game
+  - rscadd: Hoses can connect to sinks for endless water, or as an endless drain
