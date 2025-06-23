@@ -102,7 +102,33 @@
 	meat_amount = 3
 	meat_type = /obj/item/reagent_containers/food/snacks/painiteant
 
+/mob/living/simple_mob/animal/tyr/mineral_ants/diamond
+	icon_state = "diamond_ant"
+	icon_living = "diamond_ant"
+	butchery_loot = list(\
+		/obj/item/stack/material/diamond = 18\
+		)
 
+/mob/living/simple_mob/animal/tyr/mineral_ants/verdantium
+	icon_state = "verdantium_ant"
+	icon_living = "verdantium_ant"
+	butchery_loot = list(\
+		/obj/item/stack/material/verdantium = 18\
+		)
+
+/mob/living/simple_mob/animal/tyr/mineral_ants/uranium
+	icon_state = "rad_ant"
+	icon_living = "rad_ant"
+	butchery_loot = list(\
+		/obj/item/stack/material/uranium = 18\
+		)
+
+/mob/living/simple_mob/animal/tyr/mineral_ants/tritium
+	icon_state = "tritium_ant"
+	icon_living = "tritium_ant"
+	butchery_loot = list(\
+		/obj/item/stack/material/tritium = 18\
+		)
 
 /mob/living/simple_mob/animal/tyr/mineral_ants/builder
 	icon_state = "builder_ant"
@@ -206,12 +232,16 @@ ANT STRUCTURES
 	spawn_delay = 10 MINUTES
 
 	spawn_types = list(
-	/mob/living/simple_mob/animal/tyr/mineral_ants/bronze = 5,
-	/mob/living/simple_mob/animal/tyr/mineral_ants/builder = 7,
+	/mob/living/simple_mob/animal/tyr/mineral_ants/bronze = 1,
+	/mob/living/simple_mob/animal/tyr/mineral_ants/builder = 2,
 	/mob/living/simple_mob/animal/tyr/mineral_ants/copper = 1,
 	/mob/living/simple_mob/animal/tyr/mineral_ants/quartz = 1,
 	/mob/living/simple_mob/animal/tyr/mineral_ants/agate = 1,
-	/mob/living/simple_mob/animal/tyr/mineral_ants/painite = 5
+	/mob/living/simple_mob/animal/tyr/mineral_ants/painite = 1,
+	/mob/living/simple_mob/animal/tyr/mineral_ants/diamond = 1,
+	/mob/living/simple_mob/animal/tyr/mineral_ants/verdantium = 1,
+	/mob/living/simple_mob/animal/tyr/mineral_ants/tritium = 1,
+	/mob/living/simple_mob/animal/tyr/mineral_ants/uranium = 1
 	)
 
 	simultaneous_spawns = 5
@@ -328,7 +358,11 @@ ANT STRUCTURES
 	/mob/living/simple_mob/animal/tyr/mineral_ants/copper,
 	/mob/living/simple_mob/animal/tyr/mineral_ants/quartz,
 	/mob/living/simple_mob/animal/tyr/mineral_ants/agate,
-	/mob/living/simple_mob/animal/tyr/mineral_ants/painite)
+	/mob/living/simple_mob/animal/tyr/mineral_ants/painite,
+	/mob/living/simple_mob/animal/tyr/mineral_ants/diamond,
+	/mob/living/simple_mob/animal/tyr/mineral_ants/verdantium,
+	/mob/living/simple_mob/animal/tyr/mineral_ants/tritium,
+	/mob/living/simple_mob/animal/tyr/mineral_ants/uranium)
 	faction = FACTION_TYR
 
 /obj/effect/ant_structure/webbarrier

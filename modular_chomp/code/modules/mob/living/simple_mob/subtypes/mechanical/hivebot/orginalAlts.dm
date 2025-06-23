@@ -54,19 +54,15 @@
 	else if(attackcycle == 2)
 		say("Prepare. Area. Cleanse. Radiation.")
 		specialattackprojectile = /obj/item/projectile/beam/gamma
-		addtimer(CALLBACK(src, PROC_REF(burst), A, 3), 6 SECONDS, TIMER_DELETE_ME)
+		addtimer(CALLBACK(src, PROC_REF(giant_burst), A, 3), 6 SECONDS, TIMER_DELETE_ME)
 		attackcycle = 0
 	else if(attackcycle == 3)
 		specialattackprojectile = /obj/item/projectile/energy/spikeenergy_ball/boss
-		addtimer(CALLBACK(src, PROC_REF(alpha_slash), A, 4), 1 SECOND, TIMER_DELETE_ME)
+		addtimer(CALLBACK(src, PROC_REF(dual_spin), A, 4), 1 SECOND, TIMER_DELETE_ME)
 		attackcycle = 0
 	else if(attackcycle == 4)
 		specialattackprojectile = /obj/item/projectile/energy/spikeenergy_ball/boss
-		addtimer(CALLBACK(src, PROC_REF(omega), A, 5), 1 SECOND, TIMER_DELETE_ME)
-		attackcycle = 0
-	else if(attackcycle == 5)
-		specialattackprojectile = /obj/item/projectile/energy/spikeenergy_ball/boss
-		addtimer(CALLBACK(src, PROC_REF(random_firing), A, 12, 1, 0.5 SECONDS), 1 SECOND, TIMER_DELETE_ME)
+		addtimer(CALLBACK(src, PROC_REF(quad_random_firing), A, 12, 1, 0.5 SECONDS), 1 SECOND, TIMER_DELETE_ME)
 		attackcycle = 0
 
 
@@ -84,6 +80,7 @@
 	damage = 40
 	armor_penetration = 60
 	speed = 10
+	crawl_destroy = TRUE
 
 /mob/living/simple_mob/mechanical/mecha/eclipse/hivebot/nanoweavetower
 	name = "ai control center"
@@ -119,35 +116,40 @@
 	var/rng_cycle
 	if(attackcycle == 1)
 		specialattackprojectile = /obj/item/projectile/beam/burstlaser
-		rng_cycle = rand(1,5)
+		rng_cycle = rand(1,4)
 		say("PROTOCOL: CROSS X.")
-		addtimer(CALLBACK(src, PROC_REF(miniburst_c), A, rng_cycle), 2 SECONDS, TIMER_DELETE_ME)
+		addtimer(CALLBACK(src, PROC_REF(star_burst), A, rng_cycle), 2 SECONDS, TIMER_DELETE_ME)
 		attackcycle = 0
 	else if(attackcycle == 2)
 		specialattackprojectile = /obj/item/projectile/energy/wallbreaker/boss
-		rng_cycle = rand(1,5)
+		rng_cycle = rand(1,4)
 		say("PROTOCOL: PRECISION. SWEEP.")
-		addtimer(CALLBACK(src, PROC_REF(zone_control_one), A, rng_cycle), 2 SECONDS, TIMER_DELETE_ME)
+		addtimer(CALLBACK(src, PROC_REF(dual_spin), A, rng_cycle), 2 SECONDS, TIMER_DELETE_ME)
 		attackcycle = 0
 	else if(attackcycle == 3)
 		specialattackprojectile = /obj/item/projectile/energy/lightingspark/nanoweave
-		rng_cycle = rand(1,5)
+		rng_cycle = rand(1,4)
 		say("PROTOCOL: DISCHARGE.")
-		addtimer(CALLBACK(src, PROC_REF(spin_to_win), A, rng_cycle), 2 SECONDS, TIMER_DELETE_ME)
+		addtimer(CALLBACK(src, PROC_REF(quad_random_firing), A, 12, rng_cycle, 15), 1 SECOND, TIMER_DELETE_ME)
 		attackcycle = 0
 	else if(attackcycle == 4)
-		specialattackprojectile = /obj/item/projectile/knockback
-		rng_cycle = rand(1,5)
-		Beam(A, icon_state = "r_beam", time = 2 SECONDS, maxdistance = INFINITY)
-		say("PROTOCOL: AIRCANNON.")
-		addtimer(CALLBACK(src, PROC_REF(singleproj), A, rng_cycle), 2 SECONDS, TIMER_DELETE_ME)
-		attackcycle = 0
-	else if(attackcycle == 5)
 		specialattackprojectile = /obj/item/projectile/arc/explosive_rocket/big
-		rng_cycle = rand(1,5)
+		rng_cycle = rand(1,4)
 		Beam(A, icon_state = "r_beam", time = 1 SECOND, maxdistance = INFINITY)
 		say("PROTOCOL: MISSILE.")
 		addtimer(CALLBACK(src, PROC_REF(singleproj), A, rng_cycle), 2 SECONDS, TIMER_DELETE_ME)
 		attackcycle = 0
 
 
+/mob/living/simple_mob/mechanical/hivebot/eclipse
+	name = "repurposed hivebot"
+	maxHealth = 2.5 LASERS_TO_KILL // 100 hp
+	health = 2.5 LASERS_TO_KILL
+	icon = 'modular_chomp/icons/mob/hivebot.dmi'
+	desc = "A repurposed hivebot."
+	faction = FACTION_ECLIPSE
+	pass_flags = PASSTABLE
+	icon_state = "janitor"
+	icon_living = "janitor"
+	projectiletype = /obj/item/projectile/beam/midlaser/shortrange
+	ai_holder_type = /datum/ai_holder/simple_mob/ranged/pointblank

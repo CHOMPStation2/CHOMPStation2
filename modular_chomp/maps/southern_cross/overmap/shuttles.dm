@@ -157,3 +157,24 @@
 /obj/machinery/computer/shuttle_control/explore/junker
 	name = "short jump console"
 	shuttle_tag = "Junker"
+
+//POI
+/datum/shuttle/autodock/overmap/phoenix
+	name = "Phoenix"
+	warmup_time = 4
+	current_location = "phoenix"
+	docking_controller_tag = "phoenix"
+	shuttle_area = /area/shuttle/phoenix
+	fuel_consumption = 1
+	move_direction = NORTH
+
+/obj/effect/overmap/visitable/ship/landable/phoenix
+	name = "Phoenix"
+	desc = "Small class ship, non-NT property."
+	vessel_mass = 1000
+	vessel_size = SHIP_SIZE_SMALL
+	shuttle = "phoenix"
+
+/obj/machinery/computer/shuttle_control/explore/phoenix
+	name = "short jump console"
+	shuttle_tag = "phoenix"

@@ -243,18 +243,19 @@
 	check_armour = "laser"
 	damage = 30
 	armor_penetration = 20
+	penetrating = 2
 	speed = 2
+	crawl_destroy = TRUE
 
-//The normal laser is easier to guard, but can chain screw ups easier
+//The normal laser respects more armor, but deals more damage if you don't have it.precursor will thwack folks equally.
 /obj/item/projectile/energy/eclipse/lorge
-	damage = 30
-	armor_penetration = 60
-	eyeblur = 3
+	damage = 60
+	armor_penetration = 30
 	icon_state = "mega_laser"
 	speed = 10
 
 /obj/item/projectile/energy/eclipse/lorgealien
-	damage = 50
+	damage = 20
 	armor_penetration = 60
 	icon_state = "mega_laser_p"
 	speed = 10
@@ -273,6 +274,25 @@
 	icon_state = "javelin"
 	damage_type = SEARING
 	check_armour = "bullet"
-	damage = 90
-	armor_penetration = 50
+	damage = 45
+	armor_penetration = 95
 	speed = 10
+
+/obj/item/projectile/energy/eclipse/chillingwind
+	name = "ice winds"
+	icon_state = "ice_wind"
+	damage = 15
+	armor_penetration = 70
+	speed = 10
+	modifier_type_to_apply = /datum/modifier/cryogelled
+	modifier_duration = 0.25 MINUTE
+
+/obj/item/projectile/energy/eclipse/mining
+	name = "drill"
+	icon_state = "drill"
+	damage_type = BRUTE
+	check_armour = "bullet"
+	damage = 40
+	armor_penetration = 30
+	speed = 10
+	excavation_amount = 100
