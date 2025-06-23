@@ -342,7 +342,7 @@
 			if(!addon_selection)
 				to_chat(redeemer, "You must select an addon.")
 				return
-			new /obj/item/gun/energy/phasegun/pistol(drop_location) //1500
+			new /obj/item/gun/energy/locked/phasegun/pistol(drop_location) //1500
 			new /obj/item/material/knife/machete(drop_location) //1000
 			switch(addon_selection)
 				if("Shelter Capsule")
