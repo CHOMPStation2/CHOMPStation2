@@ -103,6 +103,7 @@
 	meat_type = /obj/item/reagent_containers/food/snacks/painiteant
 
 /mob/living/simple_mob/animal/tyr/mineral_ants/diamond
+	name = " cyan metal ant"
 	icon_state = "diamond_ant"
 	icon_living = "diamond_ant"
 	butchery_loot = list(\
@@ -110,6 +111,7 @@
 		)
 
 /mob/living/simple_mob/animal/tyr/mineral_ants/verdantium
+	name = "green metal ant"
 	icon_state = "verdantium_ant"
 	icon_living = "verdantium_ant"
 	butchery_loot = list(\
@@ -117,6 +119,7 @@
 		)
 
 /mob/living/simple_mob/animal/tyr/mineral_ants/uranium
+	name = "lime metal ant"
 	icon_state = "rad_ant"
 	icon_living = "rad_ant"
 	butchery_loot = list(\
