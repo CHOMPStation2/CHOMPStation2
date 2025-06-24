@@ -162,7 +162,7 @@
 /datum/shuttle/autodock/overmap/phoenix
 	name = "Phoenix"
 	warmup_time = 4
-	current_location = "phoenix"
+	current_location = "phoenixspawn"
 	docking_controller_tag = "phoenix"
 	shuttle_area = /area/shuttle/phoenix
 	fuel_consumption = 1
