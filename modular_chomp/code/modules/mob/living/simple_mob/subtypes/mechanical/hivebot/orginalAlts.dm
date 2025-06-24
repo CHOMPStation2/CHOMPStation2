@@ -143,8 +143,8 @@
 
 /mob/living/simple_mob/mechanical/hivebot/eclipse
 	name = "repurposed hivebot"
-	maxHealth = 2.5 LASERS_TO_KILL // 100 hp
-	health = 2.5 LASERS_TO_KILL
+	maxHealth = 1.5 LASERS_TO_KILL // 60 hp
+	health = 1,5 LASERS_TO_KILL
 	icon = 'modular_chomp/icons/mob/hivebot.dmi'
 	desc = "A repurposed hivebot."
 	faction = FACTION_ECLIPSE
