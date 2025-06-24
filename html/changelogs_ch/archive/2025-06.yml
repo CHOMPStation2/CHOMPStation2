@@ -308,3 +308,11 @@
   CHOMPStation2StaffMirrorBot:
   - spellcheck: removed all strucutres from the game
   - rscadd: Hoses can connect to sinks for endless water, or as an endless drain
+2025-06-24:
+  CHOMPStation2StaffMirrorBot:
+  - qol: climbable objects being pulled up or down stairs no longer knock you around
+  Diana:
+  - rscadd: Miners now start with a voucher that can be redeemed for various loadouts
+      at the ore vendor.
+  Will:
+  - qol: Borgs can now examine items to know if any of their grippers can hold it.
