@@ -185,6 +185,7 @@
 	name = "Eclipse Expirmental Enginering Mecha"
 	health = 300
 	maxHealth = 300
+	desc = "A mecha made for enginering purposes, with several alterations to be an odd ball combat unit."
 	specialattackprojectile = /obj/item/projectile/energy/excavate/weak
 	armor = list(melee = 30, bullet = 30, laser = 30, energy = 40, bomb = 90, bio = 100, rad = 100)
 	armor_soak = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0)
@@ -452,6 +453,7 @@
 
 /mob/living/simple_mob/mechanical/mecha/eclipse/excavate_head
 	name = "Xenoarch Lead"
+	desc = "A unathi wearing what appears to be a modified breacher suit. Something seems off though"
 	icon_state = "cursor_guard"
 	icon_living = "cursor_guard"
 	armor = list(melee = 80, bullet = 80, laser = 80, energy = 80, bomb = 80, bio = 100, rad = 100)
