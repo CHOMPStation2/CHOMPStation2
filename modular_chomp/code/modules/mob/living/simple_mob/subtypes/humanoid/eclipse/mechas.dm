@@ -284,12 +284,12 @@
 /mob/living/simple_mob/mechanical/mecha/eclipse/darkmatter_assualt/armored/bullet_act(obj/item/projectile/P)
 	.= ..()
 	if(istype(P, /obj/item/projectile/bullet))
-		armor = list(melee = 80, bullet = 80, laser = 40, energy = 40, bomb = 80, bio = 100, rad = 100)
+		armor = list(melee = 80, bullet = 80, laser = 30, energy = 30, bomb = 80, bio = 100, rad = 100)
 		armor_soak = list(melee = 10, bullet = 10, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0)
 		icon_state = "eclipse_janus_red"
 		visible_message(span_cult("[P] has been adapted too!."))
 	else
-		armor = list(melee = 40, bullet = 40, laser = 80, energy = 80, bomb = 80, bio = 100, rad = 100)
+		armor = list(melee = 30, bullet = 30, laser = 80, energy = 80, bomb = 80, bio = 100, rad = 100)
 		armor_soak = list(melee = 0, bullet = 0, laser = 10, energy = 10, bomb = 0, bio = 0, rad = 0)
 		icon_state = "eclipse_janus_orange"
 		visible_message(span_cult("[P] has been adapted too!."))
