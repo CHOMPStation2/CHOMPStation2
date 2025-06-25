@@ -1,23 +1,9 @@
 var/const/YR3_monitor_styles = "blank=YR3_blank;\
-	orangefoureyes=YR3_foureyes_orange;\
-	orangebigeyes=YR3_bigeyes_orange;\
-	orangemonoeye=YR3_monoeye_orange;\
-	greenfoureyes=YR3_foureyes_green;\
-	greenbigeyes=YR3_bigeyes_green;\
-	greenmonoeye=YR3_monoeye_green;\
-	cyanfoureyes=YR3_foureyes_cyan;\
-	cyanbigeyes=YR3_bigeyes_cyan;\
-	cyanmonoeye=YR3_monoeye_cyan;\
-	redfoureyes=YR3_foureyes_red;\
-	redbigeyes=YR3_bigeyes_red;\
-	redmonoeye=YR3_monoeye_red;\
-	pinkfoureyes=YR3_foureyes_pink;\
-	pinkbigeyes=YR3_bigeyes_pink;\
-	pinkmonoeye=YR3_monoeye_pink;\
-	whitefoureyes=YR3_foureyes_white;\
-	whitebigeyes=YR3_bigeyes_white;\
-	whitemonoeye=YR3_monoeye_white;\
-	whitemonoeyenopupil=YR3_blindeye_white;\
+	foureyes=YR3_foureyes;\
+	bigeyes=YR3_bigeyes\
+	monoeye=YR3_monoeye;\
+	foureyes=YR3_eyes;\
+	monoeyenopupil=YR3_blindeye;\
 	bluescreen=YR3_bsod;\
 	interrogative=YR3_interrogative;\
 	alarm=YR3_danger;\
@@ -25,16 +11,14 @@ var/const/YR3_monitor_styles = "blank=YR3_blank;\
 	surprise=YR3_surprise;\
 	heart=YR3_heart;\
 	query=YR3_query;\
-	loading=YR3_computing;\
-	smiley=YR3_smiley;\
-	sadface=YR3_sadface;\
-	skull=YR3_skull;\
-	dangerskull=YR3_skulldanger;\
+	loading=YR3_loading;\
 	endo=YR3_safebar;\
 	processing1=YR3_processing;\
 	processing2=YR3_assimilating;\
 	processed=YR3_processed;\
-	pskull=YR3_pskull"
+	cracked=YR3_cracked;\
+	broken = YR3_broken;\
+	containmentbreach = YR3_crackedopenbloody"
 
 /datum/robolimb/enviroshell
 	company = "YR3 Enviroshell"

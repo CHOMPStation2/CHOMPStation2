@@ -76,3 +76,12 @@
 	name = "Carbon Dioxide Breather"
 	desc = "You breathe carbon dioxide instead of oxygen, much like a plant. Oxygen is not poisonous to you."
 	var_changes = list("breath_type" = GAS_CO2, "exhale_type" = GAS_O2, "ideal_air_type" = /datum/gas_mixture/belly_air/carbon_dioxide_breather)
+
+/datum/trait/negative/synth_pain
+	name = "Obligate Pain Simulation"
+	desc = "Due to a structural flaw, hard-coding, or other inherent weakness, your body can feel pain, and you can't turn it off."
+	cost = -4
+	custom_only = FALSE
+	can_take = SYNTHETICS
+	var_changes = list("synth_cosmetic_pain" = 1)
+	excludes = list(/datum/trait/neutral/synth_cosmetic_pain)
