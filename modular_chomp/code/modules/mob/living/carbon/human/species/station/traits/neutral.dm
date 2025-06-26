@@ -47,8 +47,3 @@
 			qdel_null(implant)
 			H.adjust_nutrition(100)
 			to_chat(H, span_critical("Your NIF lets out one last sputter as it finally gives out"))
-
-/datum/species/xenochimera/handle_environment_special(mob/living/carbon/human/H)
-	for(var/datum/trait/env_trait in env_traits)
-		env_trait.handle_environment_special(H)
-	return ..()
