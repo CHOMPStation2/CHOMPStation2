@@ -63,8 +63,8 @@
 	name = "juggernog"
 	id = "distill_juggernog"
 	result = REAGENT_ID_JUGGERNOG
-	required_reagents = list(REAGENT_ID_CARBON = 1, REAGENT_ID_IRON = 1, REAGENT_ID_RADIUM = 1, REAGENT_ID_NEOLIQUIDFIRE = 1)
-	result_amount = 2
+	required_reagents = list(REAGENT_ID_CARBON = 1, REAGENT_ID_IRON = 1, REAGENT_ID_QUADCORD = 1, REAGENT_ID_NEOLIQUIDFIRE = 1, REAGENT_ID_RADIUM = 1)
+	result_amount = 5
 
 	reaction_rate = HALF_LIFE(10)
 
