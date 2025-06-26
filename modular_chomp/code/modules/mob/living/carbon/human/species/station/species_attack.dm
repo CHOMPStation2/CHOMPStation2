@@ -1,5 +1,5 @@
 /datum/unarmed_attack/punch/chimera //special feral attack that gets stronger as they get angrier. YR3 strain deals slightly more damage, but doesn't cause bleeding
-	damage = 5
+	damage = 3
 
 /datum/unarmed_attack/punch/chimera/get_unarmed_damage(var/mob/living/carbon/human/user)
 	return damage + user.get_feralness()/5
