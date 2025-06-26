@@ -28,8 +28,9 @@
 	cost = 0
 	category = 0
 	custom_only = FALSE
+	special_env = TRUE
 	excludes = list(/datum/trait/negative/speed_slow_plus, /datum/trait/negative/speed_slow, /datum/trait/neutral/hotadapt, /datum/trait/neutral/coldadapt)
-	var_changes = list("slowdown" = 1,  "burn_mod" = 0.7, "unarmed_types" = list(list(/datum/unarmed_attack/stomp, /datum/unarmed_attack/kick, /datum/unarmed_attack/punch/chimera, /datum/unarmed_attack/bite/sharp)), "heat_level_1" = 420, "heat_level_2" = 480, "heat_level_3" = 1100, "breath_heat_level_1" = 450, "breath_heat_level_2" = 530, "breath_heat_level_3" = 1500, "heat_discomfort_level" = 390) //xenochim are already tank
+	var_changes = list("slowdown" = 1,  "burn_mod" = 0.7, "unarmed_types" = list(/datum/unarmed_attack/stomp, /datum/unarmed_attack/kick, /datum/unarmed_attack/punch/chimera, /datum/unarmed_attack/bite/sharp), "heat_level_1" = 420, "heat_level_2" = 480, "heat_level_3" = 1100, "breath_heat_level_1" = 450, "breath_heat_level_2" = 530, "breath_heat_level_3" = 1500, "heat_discomfort_level" = 390) //xenochim are already tank
 
 /datum/trait/neutral/xenochimera_YR3/handle_environment_special(mob/living/carbon/human/H)
 	var/list/nanitereagents = list(REAGENT_HEALINGNANITES, REAGENT_SHREDDINGNANITES, REAGENT_IRRADIATEDNANITES, REAGENT_NEUROPHAGENANITES, REAGENT_NIFREPAIRNANITES)
@@ -43,6 +44,11 @@
 		H.adjust_nutrition(10)
 		if(!implant.durability)
 			implant.unimplant(H)
-			qdel(implant)
+			qdel_null(implant)
 			H.adjust_nutrition(100)
 			to_chat(H,span_critical("Your NIF lets out one last sputter as it finally gives out"))
+
+/datum/species/xenochimera/handle_environment_special(mob/living/carbon/human/H)
+	for(var/datum/trait/env_trait in env_traits)
+		env_trait.handle_environment_special(H)
+	return ..()

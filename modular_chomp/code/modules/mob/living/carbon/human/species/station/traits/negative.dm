@@ -83,5 +83,8 @@
 	cost = -4
 	custom_only = FALSE
 	can_take = SYNTHETICS
-	var_changes = list("synth_cosmetic_pain" = 1)
 	excludes = list(/datum/trait/neutral/synth_cosmetic_pain)
+
+/datum/trait/negative/synth_pain/apply(datum/species/S, mob/living/carbon/human/H, trait_prefs)
+	H.synth_cosmetic_pain = TRUE
+	. = ..()
