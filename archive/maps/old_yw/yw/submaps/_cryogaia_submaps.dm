@@ -65,9 +65,6 @@
 	name = "Away Mission - Desert Cave"
 	z = Z_LEVEL_BEACH_CAVE
 
-/obj/effect/step_trigger/zlevel_fall/beach
-	var/static/target_z
-
 #include "alienship/_alienship.dm"
 /datum/map_template/cryogaia_lateload/away_alienship
 	name = "Alien Ship - Z1 Ship"

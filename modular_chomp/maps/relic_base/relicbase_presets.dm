@@ -35,17 +35,17 @@ var/const/NETWORK_CARRIER  = "Exploration Carrier" //CHOMPedit: Exploration outp
 // Telecomms doesn't know about connected z-levels, so we need relays even for the other surface levels.
 /obj/machinery/telecomms/relay/preset/southerncross/d1
 	id = "Station Relay 1"
-	listening_level = Z_LEVEL_UNDERGROUND
+	listening_level = Z_LEVEL_RB_UNDERGROUND
 	autolinkers = list("d1_relay")
 
 /obj/machinery/telecomms/relay/preset/southerncross/d2
 	id = "Station Relay 2"
-	listening_level = Z_LEVEL_SURFACE
+	listening_level = Z_LEVEL_RB_SURFACE
 	autolinkers = list("d2_relay")
 
 /obj/machinery/telecomms/relay/preset/southerncross/d3
 	id = "Station Relay 3"
-	listening_level = Z_LEVEL_UPPER_FLOORS
+	listening_level = Z_LEVEL_RB_UPPER_FLOORS
 	autolinkers = list("d3_relay")
 
 /*
@@ -57,21 +57,21 @@ var/const/NETWORK_CARRIER  = "Exploration Carrier" //CHOMPedit: Exploration outp
 
 /obj/machinery/telecomms/relay/preset/southerncross/cave
 	id = "Cave Relay"
-	listening_level = Z_LEVEL_UNDERMINES
+	listening_level = Z_LEVEL_RB_UNDERMINES
 	autolinkers = list("cve_relay")
 
 /obj/machinery/telecomms/relay/preset/southerncross/wild
 	id = "Wild Relay"
-	listening_level = Z_LEVEL_SURFACE_WILDS
+	listening_level = Z_LEVEL_RB_SURFACE_WILDS
 	autolinkers = list("wld_relay")
 
 /obj/machinery/telecomms/relay/preset/southerncross/transit
 	id = "Transit Relay"
-	listening_level = Z_LEVEL_TRANSIT
+	listening_level = Z_LEVEL_RB_TRANSIT
 	autolinkers = list("tns_relay")
 
 /obj/machinery/telecomms/relay/preset/southerncross/explorer //CHOMPedit: Tcomms relay for exploration carrier
-	listening_level = Z_LEVEL_CARRIER
+	listening_level = Z_LEVEL_RB_CARRIER
 	autolinkers = list("exp_relay")
 
 //Temp Removal TFF 15/2/20
@@ -84,7 +84,7 @@ var/const/NETWORK_CARRIER  = "Exploration Carrier" //CHOMPedit: Exploration outp
 
 /obj/machinery/telecomms/relay/preset/southerncross/centcomm
 	id = "Centcom Relay"
-	listening_level = Z_LEVEL_CENTCOM
+	listening_level = Z_LEVEL_RB_CENTCOM
 	autolinkers = list("cnt_relay")
 
 // #### Telecomms ####
