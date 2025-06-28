@@ -2571,17 +2571,15 @@
 /area/surface/tyr/eclipse_stronghold/cargo)
 "jn" = (
 /obj/effect/shuttle_landmark{
-	base_area = /area/surface/tyr/southern_wilderness;
+	base_area = /area/surface/tyr/junkyard;
 	base_turf = /turf/simulated/floor/outdoors/desert_planet/sand/tyr;
-	landmark_tag = "phoenixspawn";
-	name = "Unknown Landing Site"
+	landmark_tag = "tyrshuttle";
+	name = "Crashed Shuttle"
 	},
 /turf/simulated/shuttle/plating,
 /area/shuttle/phoenix)
 "jo" = (
-/obj/machinery/computer/shuttle_control/explore/junker{
-	dir = 2
-	},
+/obj/machinery/computer/shuttle_control/explore/phoenix,
 /turf/simulated/shuttle/plating,
 /area/shuttle/phoenix)
 "jp" = (
@@ -56874,7 +56872,7 @@ il
 iw
 iw
 iw
-iZ
+iw
 iL
 il
 ic
@@ -59192,7 +59190,7 @@ dQ
 il
 il
 iw
-iw
+iZ
 il
 iL
 iL
