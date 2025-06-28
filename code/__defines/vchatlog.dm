@@ -27,7 +27,7 @@
  * * html - HTML of the received message
  * * round_id - Current ID of the round (library will resolve this to -1 if invalid or non-existant)
  */
-#define vchatlog_write(ckey, html, round_id, type) VCHATLOG_CALL("write_chatlog", ckey, html, round_id, type)
+#define vchatlog_generate_token(ckey, round_id) VCHATLOG_CALL("generate_token", ckey, round_id)
 
 /**
  * This function returns a list of the 10 most recent roundids that are available to be exported.
