@@ -1028,6 +1028,10 @@
 /obj/machinery/portable_atmospherics/hydroponics/soil,
 /turf/simulated/floor/outdoors/desert_planet/gravel/tyr,
 /area/surface/tyr)
+"dH" = (
+/mob/living/simple_mob/mechanical/mecha/eclipse/darkmatter_assualt/armored,
+/turf/simulated/shuttle/floor/alien,
+/area/surface/tyr/eclipse_stronghold/sectorfinale)
 "dI" = (
 /obj/structure/table/standard,
 /obj/item/material/minihoe,
@@ -6050,7 +6054,6 @@
 /turf/simulated/floor/carpet/geo,
 /area/surface/tyr/eclipse_stronghold/command)
 "xg" = (
-/mob/living/simple_mob/mechanical/mecha/eclipse/darkmatter_assualt,
 /obj/effect/map_helper/no_phaseshift/area,
 /turf/simulated/shuttle/floor/alien,
 /area/surface/tyr/eclipse_stronghold/sectorfinale)
@@ -42847,7 +42850,7 @@ CW
 CW
 CW
 wY
-CW
+dH
 CW
 CW
 xg
