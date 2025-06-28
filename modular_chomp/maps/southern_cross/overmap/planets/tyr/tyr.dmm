@@ -1028,6 +1028,20 @@
 /obj/machinery/portable_atmospherics/hydroponics/soil,
 /turf/simulated/floor/outdoors/desert_planet/gravel/tyr,
 /area/surface/tyr)
+"dH" = (
+/obj/structure/fans/hardlight,
+/obj/machinery/embedded_controller/radio/simple_docking_controller{
+	frequency = 1380;
+	id_tag = "phoenix";
+	pixel_y = -25
+	},
+/obj/effect/map_helper/airlock/door/simple,
+/obj/machinery/door/airlock/hatch{
+	id_tag = "phoenix_outer";
+	req_one_access = null
+	},
+/turf/simulated/shuttle/plating,
+/area/shuttle/phoenix)
 "dI" = (
 /obj/structure/table/standard,
 /obj/item/material/minihoe,
@@ -59706,7 +59720,7 @@ dQ
 dQ
 il
 il
-ji
+dH
 il
 il
 il
