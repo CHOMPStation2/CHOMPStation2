@@ -63,7 +63,9 @@ SUBSYSTEM_DEF(statpanels)
 			//target.stat_panel.send_message("update_split_admin_tabs", !!(target.prefs.toggles & SPLIT_ADMIN_TABS))
 			target.stat_panel.send_message("update_split_admin_tabs", FALSE)
 
-			if(!("MC" in target.panel_tabs) || !("Tickets" in target.panel_tabs))
+			if(check_rights_for(target, R_MENTOR))
+				target.stat_panel.send_message("add_tickets_tabs", target.holder.href_token)
+			else if(!("MC" in target.panel_tabs) || !("Tickets" in target.panel_tabs))
 				target.stat_panel.send_message("add_admin_tabs", target.holder.href_token)
 
 			//if(target.stat_tab == "MC" && ((num_fires % mc_wait == 0) || target?.prefs.read_preference(/datum/preference/toggle/fast_mc_refresh)))
@@ -177,13 +179,9 @@ SUBSYSTEM_DEF(statpanels)
 	target.stat_panel.send_message("update_examine", list("EX" = examine_update, "UPD" = update_panel))
 
 /datum/controller/subsystem/statpanels/proc/set_tickets_tab(client/target)
-	/* CHOMPRemove Start, our tickets are handled differently
 	var/list/tickets = list()
-	if(check_rights_for(target, R_ADMIN|R_SERVER|R_MOD)) //Prevents non-staff from opening the list of ahelp tickets
-		tickets += GLOB.ahelp_tickets.stat_entry(target)
-	tickets += GLOB.mhelp_tickets.stat_entry(target)
-	*/// CHOMPRemove End
-	var/list/tickets = GLOB.tickets.stat_entry(target) // CHOMPEdit
+	if(check_rights_for(target, R_ADMIN|R_SERVER|R_MOD|R_MENTOR)) //Prevents non-staff from opening the list of ahelp tickets
+		tickets = GLOB.tickets.stat_entry(target)
 	target.stat_panel.send_message("update_tickets", tickets)
 
 /datum/controller/subsystem/statpanels/proc/set_SDQL2_tab(client/target)

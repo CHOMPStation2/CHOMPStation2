@@ -16,17 +16,21 @@ import {
 } from 'tgui-core/components';
 import { KEY } from 'tgui-core/keys';
 import { round, toFixed } from 'tgui-core/math';
-import { type BooleanLike } from 'tgui-core/react';
+import type { BooleanLike } from 'tgui-core/react';
 
-const Level = {
-  0: 'Admin',
-  1: 'Mentor',
+const AdminLevel = {
+  0: 'Mentor',
+  1: 'Admin',
   2: 'All Levels',
 };
 
+const MentorLevel = {
+  0: 'Mentor',
+};
+
 const LevelColor = {
-  0: 'red',
-  1: 'green',
+  0: 'green',
+  1: 'red',
   2: 'pink',
 };
 
@@ -53,6 +57,7 @@ type Data = {
   tickets: Ticket[];
 
   selected_ticket: Ticket;
+  is_admin: BooleanLike;
 };
 
 type Ticket = {
@@ -94,7 +99,7 @@ const getFilteredTickets = (
 
 export const TicketsPanel = (props) => {
   const { act, data } = useBackend<Data>();
-  const { tickets, selected_ticket } = data;
+  const { tickets, selected_ticket, is_admin } = data;
 
   const [stateFilter, setStateFilter] = useState('open');
   const [levelFilter, setLevelFilter] = useState(2);
@@ -122,6 +127,8 @@ export const TicketsPanel = (props) => {
     }
   });
 
+  const availableLevel = is_admin ? AdminLevel : MentorLevel;
+
   const filtered_tickets = getFilteredTickets(
     tickets,
     stateFilter,
@@ -148,10 +155,10 @@ export const TicketsPanel = (props) => {
               <Dropdown
                 width="100%"
                 maxHeight="160px"
-                options={Object.values(Level)}
-                selected={Level[levelFilter]}
+                options={Object.values(availableLevel)}
+                selected={availableLevel[levelFilter]}
                 onSelected={(val) =>
-                  setLevelFilter(Object.values(Level).indexOf(val))
+                  setLevelFilter(Object.values(availableLevel).indexOf(val))
                 }
               />
             </Section>
@@ -177,7 +184,7 @@ export const TicketsPanel = (props) => {
                     <Box inline>
                       <Box>
                         <Button color={LevelColor[ticket.level]}>
-                          {Level[ticket.level]}
+                          {availableLevel[ticket.level]}
                         </Button>
                         {ticket.name}
                       </Box>
@@ -198,34 +205,24 @@ export const TicketsPanel = (props) => {
                   <Section
                     title={'Ticket #' + selected_ticket.id}
                     buttons={
-                      <Stack>
-                        <Stack.Item>
-                          <Button
-                            icon="arrow-up"
-                            onClick={() => act('undock_ticket')}
-                          >
-                            Undock
-                          </Button>
-                        </Stack.Item>
-                        <Stack.Item>
-                          <Button
-                            icon="pen"
-                            onClick={() => act('retitle_ticket')}
-                          >
-                            Rename Ticket
-                          </Button>
-                        </Stack.Item>
-                        <Stack.Item>
-                          <Button onClick={() => act('legacy')}>
-                            Legacy UI
-                          </Button>
-                        </Stack.Item>
-                        <Stack.Item>
-                          <Button color={LevelColor[selected_ticket.level]}>
-                            {Level[selected_ticket.level]}
-                          </Button>
-                        </Stack.Item>
-                      </Stack>
+                      <Box nowrap>
+                        <Button
+                          icon="arrow-up"
+                          onClick={() => act('undock_ticket')}
+                        >
+                          Undock
+                        </Button>
+                        <Button
+                          icon="pen"
+                          onClick={() => act('retitle_ticket')}
+                        >
+                          Rename Ticket
+                        </Button>
+                        <Button onClick={() => act('legacy')}>Legacy UI</Button>
+                        <Button color={LevelColor[selected_ticket.level]}>
+                          {availableLevel[selected_ticket.level]}
+                        </Button>
+                      </Box>
                     }
                   >
                     <LabeledList>
@@ -238,7 +235,7 @@ export const TicketsPanel = (props) => {
                         />
                       </LabeledList.Item>
                       <LabeledList.Item label="Type">
-                        {Level[selected_ticket.level]}
+                        {availableLevel[selected_ticket.level]}
                       </LabeledList.Item>
                       <LabeledList.Item label="State">
                         {State[selected_ticket.state]}
@@ -339,29 +336,23 @@ export const TicketsPanel = (props) => {
               <Section
                 title="No ticket selected"
                 buttons={
-                  <Stack>
-                    <Stack.Item>
-                      <Button
-                        disabled
-                        icon="arrow-up"
-                        onClick={() => act('undock_ticket')}
-                      >
-                        Undock
-                      </Button>
-                    </Stack.Item>
-                    <Stack.Item>
-                      <Button
-                        disabled
-                        icon="pen"
-                        onClick={() => act('retitle_ticket')}
-                      >
-                        Rename Ticket
-                      </Button>
-                    </Stack.Item>
-                    <Stack.Item>
-                      <Button onClick={() => act('legacy')}>Legacy UI</Button>
-                    </Stack.Item>
-                  </Stack>
+                  <Box nowrap>
+                    <Button
+                      disabled
+                      icon="arrow-up"
+                      onClick={() => act('undock_ticket')}
+                    >
+                      Undock
+                    </Button>
+                    <Button
+                      disabled
+                      icon="pen"
+                      onClick={() => act('retitle_ticket')}
+                    >
+                      Rename Ticket
+                    </Button>
+                    <Button onClick={() => act('legacy')}>Legacy UI</Button>
+                  </Box>
                 }
               >
                 Please select a ticket on the left to view its details.

@@ -11,17 +11,16 @@ import {
   Stack,
 } from 'tgui-core/components';
 import { KEY } from 'tgui-core/keys';
-import { round, toFixed } from 'tgui-core/math';
 
 const Level = {
-  0: 'Adminhelp',
-  1: 'Mentorhelp',
+  0: 'Mentorhelp',
+  1: 'Adminhelp',
   2: 'GM Request',
 };
 
 const LevelColor = {
-  0: 'red',
-  1: 'green',
+  0: 'green',
+  1: 'red',
   2: 'pink',
 };
 
@@ -38,27 +37,15 @@ const State = {
 
 type Data = {
   id: number;
-  title: string;
-  name: string;
-  ticket_ref: string;
-  state: string;
   level: number;
   handler: string;
-  opened_at: number;
-  closed_at: number;
-  opened_at_date: string;
-  closed_at_date: string;
-  actions: string;
   log: string[];
 };
 
-window.addEventListener('keydown', (event) => {
-  console.log(event);
-});
-
-export const Ticket = (props) => {
+export const TicketChat = (props) => {
   const { act, data } = useBackend<Data>();
   const [ticketChat, setTicketChat] = useState('');
+  const { id, level, handler, log } = data;
 
   const messagesEndRef: RefObject<HTMLDivElement | null> = useRef(null);
 
@@ -81,20 +68,6 @@ export const Ticket = (props) => {
     }
   });
 
-  const {
-    id,
-    name,
-    ticket_ref,
-    state,
-    level,
-    handler,
-    opened_at,
-    closed_at,
-    opened_at_date,
-    closed_at_date,
-    actions,
-    log,
-  } = data;
   return (
     <Window width={900} height={600}>
       <Window.Content>
@@ -103,56 +76,18 @@ export const Ticket = (props) => {
             <Section
               title={'Ticket #' + id}
               buttons={
-                <Stack>
-                  <Stack.Item>
-                    <Button icon="pen" onClick={() => act('retitle')}>
-                      Rename Ticket
-                    </Button>
-                  </Stack.Item>
-                  <Stack.Item>
-                    <Button onClick={() => act('legacy')}>Legacy UI</Button>
-                  </Stack.Item>
-                  <Stack.Item>
-                    <Button color={LevelColor[level]}>{Level[level]}</Button>
-                  </Stack.Item>
-                </Stack>
+                <Button color={LevelColor[level]}>{Level[level]}</Button>
               }
             >
               <LabeledList>
-                <LabeledList.Item label="Ticket ID">
-                  #{id}: <div dangerouslySetInnerHTML={{ __html: name }} />
-                </LabeledList.Item>
-                <LabeledList.Item label="Type">{Level[level]}</LabeledList.Item>
-                <LabeledList.Item label="State">
-                  {State[state]}
-                </LabeledList.Item>
                 <LabeledList.Item label="Assignee">{handler}</LabeledList.Item>
-                {State[state] === State.open ? (
-                  <LabeledList.Item label="Opened At">
-                    {opened_at_date +
-                      ' (' +
-                      toFixed(round((opened_at / 600) * 10, 0) / 10, 1) +
-                      ' minutes ago.)'}
-                  </LabeledList.Item>
-                ) : (
-                  <LabeledList.Item label="Closed At">
-                    {closed_at_date +
-                      ' (' +
-                      toFixed(round((closed_at / 600) * 10, 0) / 10, 1) +
-                      ' minutes ago.)'}
-                    <Button onClick={() => act('reopen')}>Reopen</Button>
-                  </LabeledList.Item>
-                )}
-                <LabeledList.Item label="Actions">
-                  <div dangerouslySetInnerHTML={{ __html: actions }} />
-                </LabeledList.Item>
                 <LabeledList.Item label="Log" />
               </LabeledList>
             </Section>
             <Divider />
           </Stack.Item>
           <Stack.Item grow>
-            <Section scrollable ref={messagesEndRef} fill>
+            <Section fill ref={messagesEndRef} scrollable>
               <Stack fill direction="column">
                 <Stack.Item grow>
                   {Object.keys(log)
@@ -166,8 +101,6 @@ export const Ticket = (props) => {
                 </Stack.Item>
               </Stack>
             </Section>
-          </Stack.Item>
-          <Stack.Item>
             <Section fill>
               <Stack fill>
                 <Stack.Item grow>
@@ -180,10 +113,7 @@ export const Ticket = (props) => {
                     onChange={(value: string) => setTicketChat(value)}
                     onKeyDown={(e) => {
                       if (KEY.Enter === e.key) {
-                        act('send_msg', {
-                          msg: ticketChat,
-                          ticket_ref: ticket_ref,
-                        });
+                        act('send_msg', { msg: ticketChat });
                         setTicketChat('');
                       }
                     }}
@@ -192,10 +122,7 @@ export const Ticket = (props) => {
                 <Stack.Item>
                   <Button
                     onClick={() => {
-                      act('send_msg', {
-                        msg: ticketChat,
-                        ticket_ref: ticket_ref,
-                      });
+                      act('send_msg', { msg: ticketChat });
                       setTicketChat('');
                     }}
                   >
