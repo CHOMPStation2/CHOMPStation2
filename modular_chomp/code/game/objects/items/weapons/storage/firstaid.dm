@@ -15,43 +15,43 @@
 /obj/item/storage/pill_bottle/neotane
 	name = "pill bottle (" + REAGENT_NEOTANE + ")"
 	desc = "Contains experimental pills, good for soothing burns but tends to mangle the flesh."
-	starts_with = list(/obj/item/reagent_containers/pill/neotane = 7)
+	starts_with = list(/obj/item/reagent_containers/pill/neotane = 12)
 	wrapper_color = COLOR_ORANGE
 
 /obj/item/storage/pill_bottle/burncard
 	name = "pill bottle (" + REAGENT_BURNCARD + ")"
 	desc = "Contains experimental pills, good for sealing cuts and bruises but is quite searing."
-	starts_with = list(/obj/item/reagent_containers/pill/burncard = 7)
+	starts_with = list(/obj/item/reagent_containers/pill/burncard = 12)
 	wrapper_color = COLOR_RED
 
 /obj/item/storage/pill_bottle/flamecure
 	name = "pill bottle (" + REAGENT_FLAMECURE + ")"
 	desc = "Contains experimental pills, good for searing shut internal wounds."
-	starts_with = list(/obj/item/reagent_containers/pill/flamecure = 7)
+	starts_with = list(/obj/item/reagent_containers/pill/flamecure = 12)
 	wrapper_color = COLOR_ORANGE
 
 /obj/item/storage/pill_bottle/juggernog
 	name = "pill bottle (" + REAGENT_JUGGERNOG + ")"
 	desc = "Contains experimental pills good for letting folks keep standing underneath relentless pummeling."
-	starts_with = list(/obj/item/reagent_containers/pill/juggernog = 7)
+	starts_with = list(/obj/item/reagent_containers/pill/juggernog = 12)
 	wrapper_color = COLOR_RED
 
 /obj/item/storage/pill_bottle/curea
 	name = "pill bottle (" + REAGENT_CUREA + ")"
 	desc = "Contains experimental pills, very effective for frostfly and poisonfly hunting."
-	starts_with = list(/obj/item/reagent_containers/pill/curea = 7)
+	starts_with = list(/obj/item/reagent_containers/pill/curea = 12)
 	wrapper_color = COLOR_BLUE
 
 /obj/item/storage/pill_bottle/souldew
 	name = "pill bottle (" + REAGENT_SOULDEW + ")"
 	desc = "Contains experimental pills, for feeding the dead."
-	starts_with = list(/obj/item/reagent_containers/pill/souldew = 7)
+	starts_with = list(/obj/item/reagent_containers/pill/souldew = 12)
 	wrapper_color = COLOR_GREEN
 
 /obj/item/storage/pill_bottle/purifyingagent
 	name = "pill bottle (" + REAGENT_PURIFYINGAGENT + ")"
 	desc = "Contains experimental pills, having application as an anti-toxin."
-	starts_with = list(/obj/item/reagent_containers/pill/purifyingagent = 7)
+	starts_with = list(/obj/item/reagent_containers/pill/purifyingagent = 12)
 	wrapper_color = COLOR_GREEN
 
 /obj/item/storage/pill_bottle/methylphenidate
@@ -87,7 +87,7 @@
 
 /obj/item/reagent_containers/pill/neotane/Initialize(mapload)
 	. = ..()
-	reagents.add_reagent(REAGENT_ID_NEOTANE, 10)
+	reagents.add_reagent(REAGENT_ID_NEOTANE, 5)
 	color = reagents.get_color()
 
 /obj/item/reagent_containers/pill/burncard
@@ -97,7 +97,7 @@
 
 /obj/item/reagent_containers/pill/burncard/Initialize(mapload)
 	. = ..()
-	reagents.add_reagent(REAGENT_ID_BURNCARD, 10)
+	reagents.add_reagent(REAGENT_ID_BURNCARD, 5)
 	color = reagents.get_color()
 
 /obj/item/reagent_containers/pill/flamecure
