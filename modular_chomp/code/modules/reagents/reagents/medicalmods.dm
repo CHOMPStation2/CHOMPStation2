@@ -6,15 +6,14 @@
 	on_expired_text = span_notice("The surge subsides.")
 	stacks = MODIFIER_STACK_EXTEND
 	evasion = 20
-	accuracy = -30
 	attack_speed_percent = 0.75
 	siemens_coefficient = 3
 
 /datum/modifier/healingtide //carp
 	name = "Healing Tide"
-	desc = "You are filled with an overwhelming energy."
+	desc = "Your body is more receptive to chemicals."
 
-	on_created_text = span_critical("Your body begins to focus on recovering!")
+	on_created_text = span_critical("Your body is more receptive to chemicals!")
 	on_expired_text = span_notice("The healing subsides.")
 	stacks = MODIFIER_STACK_EXTEND
 
@@ -23,7 +22,7 @@
 
 /datum/modifier/radiationhide //deathclaw
 	name = "Radiation Hide"
-	desc = "Your body defensivly warps."
+	desc = "Your body is adorn with scales."
 
 	on_created_text = span_critical("Your body strangly mutates!")
 	on_expired_text = span_notice("Your body returns to normal.")
@@ -55,7 +54,7 @@
 
 /datum/modifier/protectivenumbing //spider
 	name = "Protective Numbing"
-	desc = "Your senses feel everything."
+	desc = "Your senses dull."
 
 	on_created_text = span_critical("Your body becomes numb!")
 	on_expired_text = span_notice("Sensation returns to your body.")
@@ -64,3 +63,15 @@
 	heat_protection = 1
 	cold_protection = 1
 	attack_speed_percent = 1.25
+
+/datum/modifier/juggernog
+	name = "Juggernog"
+	desc = "Your body is prepared for conflict."
+
+	on_created_text = span_critical("Your body becomes tougher!")
+	on_expired_text = span_notice("Your body returns to normal.")
+	stacks = MODIFIER_STACK_EXTEND
+
+	max_health_percent = 1.3
+	disable_duration_percent = 0.2
+
