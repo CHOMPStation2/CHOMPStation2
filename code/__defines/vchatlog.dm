@@ -17,7 +17,7 @@
  * * ckey - Ckey of the message receiver
  * * token - Randomized token
  */
-#define vchatlog_generate_token(ckey) VCHATLOG_CALL("generate_token", ckey)
+#define vchatlog_generate_token(ckey, round_id) VCHATLOG_CALL("generate_token", ckey, round_id)
 
 /**
  * Writes a new chatlog entry to the database. This function does not return anything.
@@ -27,7 +27,7 @@
  * * html - HTML of the received message
  * * round_id - Current ID of the round (library will resolve this to -1 if invalid or non-existant)
  */
-#define vchatlog_generate_token(ckey, round_id) VCHATLOG_CALL("generate_token", ckey, round_id)
+#define vchatlog_write(ckey, html, round_id, type) VCHATLOG_CALL("write_chatlog", ckey, html, round_id, type)
 
 /**
  * This function returns a list of the 10 most recent roundids that are available to be exported.
