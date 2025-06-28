@@ -2075,7 +2075,10 @@
 #include "code\modules\admin\secrets\random_events\trigger_cordical_borer_infestation.dm"
 #include "code\modules\admin\secrets\random_events\trigger_xenomorph_infestation.dm"
 #include "code\modules\admin\verb_datums\_admin_verb_datum.dm"
+<<<<<<< HEAD
 #include "code\modules\admin\verbs\admin_ch.dm"
+=======
+>>>>>>> f2b86cb5e3 (Ports ticket system overhaul from downstream (#17063))
 #include "code\modules\admin\verbs\adminjump.dm"
 #include "code\modules\admin\verbs\adminpm.dm"
 #include "code\modules\admin\verbs\adminsay.dm"
@@ -3134,7 +3137,10 @@
 #include "code\modules\media\media_tracks.dm"
 #include "code\modules\media\mediamanager.dm"
 #include "code\modules\media\walkpod.dm"
+<<<<<<< HEAD
 #include "code\modules\mentor\mentor.dm"
+=======
+>>>>>>> f2b86cb5e3 (Ports ticket system overhaul from downstream (#17063))
 #include "code\modules\metric\activity.dm"
 #include "code\modules\metric\count.dm"
 #include "code\modules\metric\department.dm"
@@ -4616,6 +4622,7 @@
 #include "code\modules\tgui\states\observer.dm"
 #include "code\modules\tgui\states\physical.dm"
 #include "code\modules\tgui\states\self.dm"
+#include "code\modules\tgui\states\ticket.dm"
 #include "code\modules\tgui\states\vorepanel_vr.dm"
 #include "code\modules\tgui\states\zlevel.dm"
 #include "code\modules\tgui_input\alert.dm"
@@ -4631,6 +4638,10 @@
 #include "code\modules\tgui_panel\external.dm"
 #include "code\modules\tgui_panel\telemetry.dm"
 #include "code\modules\tgui_panel\tgui_panel.dm"
+#include "code\modules\tickets\procs.dm"
+#include "code\modules\tickets\tickets.dm"
+#include "code\modules\tickets\tickets_player_ui.dm"
+#include "code\modules\tickets\tickets_ui.dm"
 #include "code\modules\tooltip\tooltip.dm"
 #include "code\modules\turbolift\_turbolift.dm"
 #include "code\modules\turbolift\turbolift.dm"

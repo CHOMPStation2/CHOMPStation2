@@ -52,19 +52,33 @@
 			to_chat(src, span_admin_pm_warning("Error: Admin-PM: Client not found."))
 		return
 
+<<<<<<< HEAD
 	var/datum/ticket/T = C.current_ticket // CHOMPedit - Ticket System
 
 	if(T) // CHOMPedit - Ticket System
+=======
+	var/datum/ticket/T = C.current_ticket
+
+	if(T)
+>>>>>>> f2b86cb5e3 (Ports ticket system overhaul from downstream (#17063))
 		message_admins(span_pm("[key_name_admin(src)] has started replying to [key_name(C, 0, 0)]'s admin help."))
 	var/msg = tgui_input_text(src,"Message:", "Private message to [key_name(C, 0, 0)]", multiline = TRUE)
 	if (!msg)
 		message_admins(span_pm("[key_name_admin(src)] has cancelled their reply to [key_name(C, 0, 0)]'s admin help."))
 		return
+<<<<<<< HEAD
 	cmd_admin_pm(whom, msg, T) // CHOMPedit - Ticket System
 
 //takes input from cmd_admin_pm_context, cmd_admin_pm_panel or /client/Topic and sends them a PM.
 //Fetching a message if needed. src is the sender and C is the target client
 /client/proc/cmd_admin_pm(whom, msg, datum/ticket/T) // CHOMPedit - Ticket System
+=======
+	cmd_admin_pm(whom, msg, T)
+
+//takes input from cmd_admin_pm_context, cmd_admin_pm_panel or /client/Topic and sends them a PM.
+//Fetching a message if needed. src is the sender and C is the target client
+/client/proc/cmd_admin_pm(whom, msg, datum/ticket/T)
+>>>>>>> f2b86cb5e3 (Ports ticket system overhaul from downstream (#17063))
 	if(prefs.muted & MUTE_ADMINHELP)
 		to_chat(src, span_admin_pm_warning("Error: Admin-PM: You are unable to use admin PM-s (muted)."))
 		return
@@ -170,7 +184,11 @@
 		else
 			if(holder)	//sender is an admin but recipient is not. Do BIG RED TEXT
 				if(!recipient.current_ticket)
+<<<<<<< HEAD
 					new /datum/ticket(msg, recipient, TRUE, 0) // CHOMPedit - Ticket System
+=======
+					new /datum/ticket(msg, recipient, TRUE, 1)
+>>>>>>> f2b86cb5e3 (Ports ticket system overhaul from downstream (#17063))
 
 				to_chat(recipient, span_admin_pm_warning(span_huge(span_bold("-- Administrator private message --"))))
 				to_chat(recipient, span_admin_pm_warning("Admin PM from-<b>[key_name(src, recipient, 0)]</b>: [msg]"))
@@ -217,7 +235,11 @@
 /proc/IrcPm(target,msg,sender)
 	var/client/C = GLOB.directory[target]
 
+<<<<<<< HEAD
 	var/datum/ticket/ticket = C ? C.current_ticket : GLOB.tickets.CKey2ActiveTicket(target) // CHOMPedit - Ticket System
+=======
+	var/datum/ticket/ticket = C ? C.current_ticket : GLOB.tickets.CKey2ActiveTicket(target)
+>>>>>>> f2b86cb5e3 (Ports ticket system overhaul from downstream (#17063))
 	var/compliant_msg = trim(lowertext(msg))
 	var/irc_tagged = "[sender](IRC)"
 	var/list/splits = splittext(compliant_msg, " ")

@@ -29,9 +29,14 @@
 		check_antagonists()
 		return
 
+<<<<<<< HEAD
 	// CHOMPedit Start - Tickets System
 	if(href_list["ticket"])
 		if(!check_rights(R_ADMIN|R_MOD|R_DEBUG|R_EVENT))
+=======
+	if(href_list["ticket"])
+		if(!check_rights(R_ADMIN|R_MOD|R_DEBUG|R_EVENT|R_MENTOR))
+>>>>>>> f2b86cb5e3 (Ports ticket system overhaul from downstream (#17063))
 			return
 
 		var/ticket_ref = href_list["ticket"]
@@ -44,9 +49,13 @@
 	else if(href_list["tickets"])
 		GLOB.tickets.BrowseTickets(text2num(href_list["tickets"]))
 
+<<<<<<< HEAD
 	// CHOMPedit End
 
 	// mentor_commands(href, href_list, src) // CHOMPedit - Skip this because client is already admin & contents already handled of code above
+=======
+	// mentor_commands(href, href_list, src) - Skip because client is already admin & contents handled above
+>>>>>>> f2b86cb5e3 (Ports ticket system overhaul from downstream (#17063))
 
 	if(href_list["dbsearchckey"] || href_list["dbsearchadmin"])
 
@@ -868,7 +877,10 @@
 					to_chat(M, span_filter_system(span_warning("No ban appeals URL has been set.")))
 				log_admin("[usr.client.ckey] has banned [M.ckey].\nReason: [reason]\nThis will be removed in [mins] minutes.")
 				message_admins(span_blue("[usr.client.ckey] has banned [M.ckey].\nReason: [reason]\nThis will be removed in [mins] minutes."))
+<<<<<<< HEAD
 				// CHOMPedit Start - Tickets System
+=======
+>>>>>>> f2b86cb5e3 (Ports ticket system overhaul from downstream (#17063))
 				var/datum/ticket/T = M.client ? M.client.current_ticket : null
 				if(T)
 					T.Resolve()
@@ -898,11 +910,17 @@
 				message_admins(span_blue("[usr.client.ckey] has banned [M.ckey].\nReason: [reason]\nThis is a permanent ban."))
 				feedback_inc("ban_perma",1)
 				DB_ban_record(BANTYPE_PERMA, M, -1, reason)
+<<<<<<< HEAD
 				// CHOMPedit Start - Tickets System
 				var/datum/ticket/T = M.client ? M.client.current_ticket : null
 				if(T)
 					T.Resolve()
 				// CHOMPedit End
+=======
+				var/datum/ticket/T = M.client ? M.client.current_ticket : null
+				if(T)
+					T.Resolve()
+>>>>>>> f2b86cb5e3 (Ports ticket system overhaul from downstream (#17063))
 				qdel(M.client)
 				//qdel(M)
 			if("Cancel")
