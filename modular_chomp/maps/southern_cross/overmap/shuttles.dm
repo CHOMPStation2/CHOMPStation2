@@ -158,7 +158,7 @@
 	name = "short jump console"
 	shuttle_tag = "Junker"
 
-//POI
+/*POI Temp removal so I can properly add it in it's own PR
 /datum/shuttle/autodock/overmap/phoenix
 	name = "Phoenix"
 	warmup_time = 4
@@ -178,3 +178,5 @@
 /obj/machinery/computer/shuttle_control/explore/phoenix
 	name = "short jump console"
 	shuttle_tag = "phoenix"
+*/
+

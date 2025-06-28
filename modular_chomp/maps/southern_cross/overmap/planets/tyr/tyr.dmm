@@ -2245,7 +2245,7 @@
 	dir = 1
 	},
 /turf/simulated/shuttle/plating/airless/carry,
-/area/shuttle/phoenix)
+/area/surface/tyr/wrecked_shipF)
 "if" = (
 /turf/simulated/wall/r_concrete,
 /area/surface/tyr/eclipse_stronghold/cargo)
@@ -2277,7 +2277,7 @@
 /area/surface/tyr/eclipse_stronghold/cargo)
 "il" = (
 /turf/simulated/wall/pshull,
-/area/shuttle/phoenix)
+/area/surface/tyr/wrecked_shipF)
 "im" = (
 /obj/structure/grille,
 /obj/structure/window/plastitanium{
@@ -2319,16 +2319,10 @@
 "iu" = (
 /obj/machinery/portable_atmospherics/canister/oxygen,
 /turf/simulated/shuttle/plating,
-/area/shuttle/phoenix)
+/area/surface/tyr/wrecked_shipF)
 "iv" = (
-/obj/machinery/computer/ship/engines{
-	dir = 1
-	},
 /turf/simulated/shuttle/plating,
-/area/shuttle/phoenix)
-"iw" = (
-/turf/simulated/shuttle/plating,
-/area/shuttle/phoenix)
+/area/surface/tyr/wrecked_shipF)
 "ix" = (
 /obj/machinery/light/small,
 /turf/simulated/floor/tiled/steel_ridged,
@@ -2340,9 +2334,8 @@
 /turf/simulated/floor/wmarble,
 /area/surface/tyr/eclipse_stronghold/science)
 "iz" = (
-/obj/machinery/shipsensors/weak,
 /turf/simulated/shuttle/floor/voidcraft/tyr,
-/area/shuttle/phoenix)
+/area/surface/tyr/wrecked_shipF)
 "iA" = (
 /obj/structure/fuel_port/heavy{
 	pixel_y = 24
@@ -2365,13 +2358,6 @@
 /mob/living/simple_mob/mechanical/mecha/eclipse/engimecha,
 /turf/simulated/floor/reinforced,
 /area/surface/tyr/eclipse_stronghold/engineering)
-"iD" = (
-/obj/machinery/computer/ship/helm{
-	dir = 1;
-	req_one_access = null
-	},
-/turf/simulated/shuttle/plating,
-/area/shuttle/phoenix)
 "iE" = (
 /turf/simulated/wall/r_concrete,
 /area/surface/tyr/eclipse_stronghold/command)
@@ -2405,7 +2391,7 @@
 "iL" = (
 /obj/structure/table/steel,
 /turf/simulated/shuttle/plating,
-/area/shuttle/phoenix)
+/area/surface/tyr/wrecked_shipF)
 "iM" = (
 /turf/simulated/floor/carpet/tealcarpet,
 /area/surface/tyr/eclipse_stronghold/command)
@@ -2443,12 +2429,6 @@
 	},
 /turf/simulated/floor/bmarble,
 /area/surface/tyr/eclipse_stronghold/cargo)
-"iR" = (
-/obj/machinery/computer/ship/navigation{
-	dir = 1
-	},
-/turf/simulated/shuttle/plating,
-/area/shuttle/phoenix)
 "iS" = (
 /obj/structure/disposalpipe/segment{
 	dir = 2;
@@ -2469,9 +2449,6 @@
 /obj/machinery/light/small,
 /turf/simulated/floor/carpet/bcarpet,
 /area/surface/tyr/eclipse_stronghold/science)
-"iV" = (
-/turf/simulated/shuttle/floor/voidcraft/tyr,
-/area/shuttle/phoenix)
 "iW" = (
 /obj/effect/floor_decal/corner/orange/border,
 /turf/simulated/floor/wmarble,
@@ -2494,7 +2471,7 @@
 	req_one_access = null
 	},
 /turf/simulated/shuttle/plating,
-/area/shuttle/phoenix)
+/area/surface/tyr/wrecked_shipF)
 "ja" = (
 /mob/living/simple_mob/humanoid/eclipse/lunar/bulletstorm,
 /turf/simulated/floor/carpet/tealcarpet,
@@ -2502,7 +2479,7 @@
 "jb" = (
 /mob/living/simple_mob/mechanical/hivebot/eclipse,
 /turf/simulated/shuttle/plating,
-/area/shuttle/phoenix)
+/area/surface/tyr/wrecked_shipF)
 "jc" = (
 /obj/effect/zone_divider,
 /turf/simulated/floor/wmarble,
@@ -2545,11 +2522,7 @@
 	},
 /obj/structure/fans/hardlight,
 /turf/simulated/shuttle/plating,
-/area/shuttle/phoenix)
-"jj" = (
-/obj/effect/overmap/visitable/ship/landable/phoenix,
-/turf/simulated/shuttle/plating,
-/area/shuttle/phoenix)
+/area/surface/tyr/wrecked_shipF)
 "jk" = (
 /obj/machinery/power/port_gen/pacman/mrs,
 /turf/simulated/floor/wood,
@@ -2569,29 +2542,6 @@
 /obj/machinery/light/small,
 /turf/simulated/floor/carpet/tealcarpet,
 /area/surface/tyr/eclipse_stronghold/cargo)
-"jn" = (
-/obj/effect/shuttle_landmark{
-	base_area = /area/surface/tyr/junkyard;
-	base_turf = /turf/simulated/floor/outdoors/desert_planet/sand/tyr;
-	landmark_tag = "tyrshuttle";
-	name = "Crashed Shuttle"
-	},
-/turf/simulated/shuttle/plating,
-/area/shuttle/phoenix)
-"jo" = (
-/obj/structure/fans/hardlight,
-/obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1380;
-	id_tag = "phoenix";
-	pixel_y = -25
-	},
-/obj/effect/map_helper/airlock/door/simple,
-/obj/machinery/door/airlock/hatch{
-	id_tag = "phoenix_outer";
-	req_one_access = null
-	},
-/turf/simulated/shuttle/plating,
-/area/shuttle/phoenix)
 "jp" = (
 /obj/machinery/door/airlock/silver,
 /turf/simulated/floor/carpet,
@@ -2665,10 +2615,6 @@
 "jD" = (
 /turf/simulated/floor/outdoors/desert_planet/deep_grass/tyr,
 /area/surface/tyr/northern_wilderness)
-"jE" = (
-/obj/machinery/computer/shuttle_control/explore/phoenix,
-/turf/simulated/shuttle/plating,
-/area/shuttle/phoenix)
 "jF" = (
 /obj/machinery/power/apc/high{
 	dir = 4;
@@ -2676,7 +2622,7 @@
 	pixel_y = 0
 	},
 /turf/simulated/shuttle/plating,
-/area/shuttle/phoenix)
+/area/surface/tyr/wrecked_shipF)
 "jG" = (
 /mob/living/simple_mob/humanoid/eclipse/solar/disablernoodle,
 /turf/simulated/floor/tiled/dark,
@@ -2705,10 +2651,6 @@
 /obj/structure/window/plastitanium,
 /turf/simulated/floor/wmarble,
 /area/surface/tyr/eclipse_stronghold/sec)
-"jL" = (
-/obj/machinery/computer/ship/sensors,
-/turf/simulated/shuttle/plating,
-/area/shuttle/phoenix)
 "jM" = (
 /obj/structure/grille,
 /obj/structure/window/plastitanium{
@@ -2716,7 +2658,7 @@
 	},
 /obj/structure/window/plastitanium,
 /turf/simulated/shuttle/floor/voidcraft/tyr,
-/area/shuttle/phoenix)
+/area/surface/tyr/wrecked_shipF)
 "jN" = (
 /obj/structure/cable/orange{
 	icon_state = "1-2"
@@ -2743,7 +2685,7 @@
 /obj/structure/bed,
 /obj/item/bedsheet/orange,
 /turf/simulated/shuttle/plating,
-/area/shuttle/phoenix)
+/area/surface/tyr/wrecked_shipF)
 "jS" = (
 /obj/structure/reagent_dispensers/watertank/high,
 /obj/machinery/light/small{
@@ -54557,15 +54499,15 @@ bw
 bw
 dQ
 dQ
-iV
+iz
 il
-iw
-iw
+iv
+iv
 iZ
-iw
-iw
-iw
-iw
+iv
+iv
+iv
+iv
 iu
 il
 ic
@@ -54817,13 +54759,13 @@ dQ
 dQ
 il
 il
-iw
-iw
+iv
+iv
 il
 iL
 iL
-iw
-iw
+iv
+iv
 iv
 il
 ic
@@ -55072,7 +55014,7 @@ bw
 bw
 dQ
 dQ
-iV
+iz
 il
 il
 il
@@ -55332,12 +55274,12 @@ dQ
 dQ
 il
 il
-iw
-iw
-iw
+iv
+iv
+iv
 iZ
-iw
-iw
+iv
+iv
 il
 il
 dQ
@@ -55589,13 +55531,13 @@ dQ
 dQ
 dQ
 jM
-jE
-iw
+iv
+iv
 iL
-iw
+iv
 il
-iw
-iw
+iv
+iv
 il
 dQ
 dQ
@@ -55847,13 +55789,13 @@ dQ
 dQ
 dQ
 jM
-iw
-iw
-iw
+iv
+iv
+iv
 jb
 il
-iw
-iw
+iv
+iv
 il
 iz
 dQ
@@ -56360,16 +56302,16 @@ bw
 bw
 dQ
 dQ
-iV
+iz
 il
-iw
-iw
-iw
-iw
+iv
+iv
+iv
+iv
 il
 il
-iw
-iw
+iv
+iv
 iL
 il
 il
@@ -56620,16 +56562,16 @@ dQ
 dQ
 il
 il
-iw
-iw
-iw
-iw
+iv
+iv
+iv
+iv
 il
 iL
-iw
-iw
-iw
-iD
+iv
+iv
+iv
+iv
 il
 ic
 dQ
@@ -56878,15 +56820,15 @@ dQ
 dQ
 il
 jR
-iw
-iw
+iv
+iv
 iL
-iw
+iv
 il
-iw
-iw
-iw
-iw
+iv
+iv
+iv
+iv
 iL
 il
 ic
@@ -57136,15 +57078,15 @@ dQ
 dQ
 il
 jR
-iw
-iw
+iv
+iv
 iL
-iw
+iv
 il
-iw
-iw
+iv
+iv
 jb
-iw
+iv
 iL
 il
 ic
@@ -57394,16 +57336,16 @@ dQ
 dQ
 il
 il
-iw
-iw
-iw
-iw
+iv
+iv
+iv
+iv
 il
 iL
-iw
-iw
-iw
-iR
+iv
+iv
+iv
+iv
 il
 ic
 dQ
@@ -57650,16 +57592,16 @@ bw
 bw
 dQ
 dQ
-iV
+iz
 il
-iw
+iv
 jF
-iw
-iw
+iv
+iv
 il
 il
-iw
-iw
+iv
+iv
 iL
 il
 il
@@ -58169,15 +58111,15 @@ dQ
 dQ
 dQ
 jM
-iw
+iv
 jb
-iw
-iw
+iv
+iv
 il
-iw
-iw
+iv
+iv
 il
-iV
+iz
 dQ
 dQ
 dQ
@@ -58427,13 +58369,13 @@ dQ
 dQ
 dQ
 jM
-jL
-iw
+iv
+iv
 iL
-iw
+iv
 il
-iw
-iw
+iv
+iv
 il
 dQ
 dQ
@@ -58686,12 +58628,12 @@ dQ
 dQ
 il
 il
-iw
-iw
-iw
+iv
+iv
+iv
 iZ
-iw
-iw
+iv
+iv
 il
 il
 dQ
@@ -58942,7 +58884,7 @@ bw
 bw
 dQ
 dQ
-iV
+iz
 il
 il
 il
@@ -59203,13 +59145,13 @@ dQ
 dQ
 il
 il
-iw
-jj
+iv
+iv
 il
 iL
 iL
-iw
-iw
+iv
+iv
 iv
 il
 ic
@@ -59459,15 +59401,15 @@ bw
 bw
 dQ
 dQ
-iV
+iz
 il
-iw
-jn
+iv
+iv
 iZ
-iw
-iw
-iw
-iw
+iv
+iv
+iv
+iv
 iu
 il
 ic
@@ -59720,7 +59662,7 @@ dQ
 dQ
 il
 il
-jo
+iv
 il
 il
 il
