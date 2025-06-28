@@ -1139,6 +1139,10 @@
 /obj/effect/zone_divider,
 /turf/simulated/floor/carpet/purcarpet,
 /area/surface/tyr/eclipse_stronghold/science)
+"ee" = (
+/obj/effect/zone_divider,
+/turf/simulated/wall/r_concrete,
+/area/surface/tyr/north_caverns)
 "ef" = (
 /obj/machinery/button/remote/blast_door{
 	id = "tyrbonuspuzzlethree"
@@ -45158,23 +45162,23 @@ Mz
 "}
 (138,1,1) = {"
 Vr
-Zy
-Zy
-Zy
-Zy
-Zy
-Zy
-Zy
-Zy
-Zy
-Zy
-Zy
-Zy
-Zy
-Zy
-Zy
-Zy
-Zy
+bE
+bE
+bE
+bE
+bE
+bE
+bE
+bE
+bE
+bE
+bE
+bE
+bE
+bE
+bE
+bE
+bE
 Zy
 Zy
 Zy
@@ -45416,6 +45420,7 @@ Mz
 "}
 (139,1,1) = {"
 Vr
+bE
 Zy
 Zy
 Zy
@@ -45431,8 +45436,7 @@ Zy
 Zy
 Zy
 Zy
-Zy
-Zy
+bE
 Zy
 Zy
 Zy
@@ -45674,6 +45678,7 @@ Mz
 "}
 (140,1,1) = {"
 Vr
+bE
 Zy
 Zy
 Zy
@@ -45689,8 +45694,7 @@ Zy
 Zy
 Zy
 Zy
-Zy
-Zy
+bE
 Zy
 Zy
 Zy
@@ -45932,6 +45936,7 @@ Mz
 "}
 (141,1,1) = {"
 Vr
+bE
 Zy
 Zy
 Zy
@@ -45947,8 +45952,7 @@ Zy
 Zy
 Zy
 Zy
-Zy
-Zy
+bE
 Zy
 Zy
 Zy
@@ -46190,6 +46194,7 @@ Mz
 "}
 (142,1,1) = {"
 Vr
+bE
 Zy
 Zy
 Zy
@@ -46205,8 +46210,7 @@ Zy
 Zy
 Zy
 Zy
-Zy
-Zy
+bE
 Zy
 Zy
 Zy
@@ -46448,6 +46452,7 @@ Mz
 "}
 (143,1,1) = {"
 Vr
+bE
 Zy
 Zy
 Zy
@@ -46463,8 +46468,7 @@ Zy
 Zy
 Zy
 Zy
-Zy
-Zy
+bE
 Zy
 Zy
 Zy
@@ -46706,6 +46710,7 @@ Mz
 "}
 (144,1,1) = {"
 Vr
+bE
 Zy
 Zy
 Zy
@@ -46721,8 +46726,7 @@ Zy
 Zy
 Zy
 Zy
-Zy
-Zy
+bE
 Zy
 Zy
 Zy
@@ -46964,7 +46968,7 @@ Mz
 "}
 (145,1,1) = {"
 Vr
-Zy
+bE
 Zy
 Zy
 Zy
@@ -47222,7 +47226,7 @@ Mz
 "}
 (146,1,1) = {"
 Vr
-Zy
+bE
 Zy
 Zy
 Zy
@@ -47480,7 +47484,7 @@ Mz
 "}
 (147,1,1) = {"
 Vr
-Zy
+bE
 Zy
 Zy
 Zy
@@ -47738,7 +47742,7 @@ Mz
 "}
 (148,1,1) = {"
 Vr
-Zy
+bE
 Zy
 Zy
 Zy
@@ -47996,9 +48000,9 @@ Mz
 "}
 (149,1,1) = {"
 Qr
-an
-an
-an
+ee
+ee
+ee
 Eg
 Eg
 Eg
