@@ -2490,7 +2490,9 @@
 /turf/simulated/floor/bmarble,
 /area/surface/tyr/eclipse_stronghold/science)
 "iZ" = (
-/obj/effect/overmap/visitable/ship/landable/phoenix,
+/obj/machinery/door/airlock/hatch{
+	req_one_access = null
+	},
 /turf/simulated/shuttle/plating,
 /area/shuttle/phoenix)
 "ja" = (
@@ -2498,9 +2500,7 @@
 /turf/simulated/floor/carpet/tealcarpet,
 /area/surface/tyr/eclipse_stronghold/command)
 "jb" = (
-/obj/machinery/door/airlock/hatch{
-	req_one_access = null
-	},
+/mob/living/simple_mob/mechanical/hivebot/eclipse,
 /turf/simulated/shuttle/plating,
 /area/shuttle/phoenix)
 "jc" = (
@@ -2540,14 +2540,14 @@
 /turf/simulated/floor/tiled,
 /area/surface/tyr/eclipse_stronghold/cargo)
 "ji" = (
-/mob/living/simple_mob/mechanical/hivebot/eclipse,
-/turf/simulated/shuttle/plating,
-/area/shuttle/phoenix)
-"jj" = (
 /obj/machinery/door/airlock/hatch{
 	req_one_access = null
 	},
 /obj/structure/fans/hardlight,
+/turf/simulated/shuttle/plating,
+/area/shuttle/phoenix)
+"jj" = (
+/obj/effect/overmap/visitable/ship/landable/phoenix,
 /turf/simulated/shuttle/plating,
 /area/shuttle/phoenix)
 "jk" = (
@@ -54288,7 +54288,7 @@ dQ
 dQ
 il
 il
-jj
+ji
 il
 il
 il
@@ -54547,7 +54547,7 @@ iV
 il
 iw
 iw
-jb
+iZ
 iw
 iw
 iw
@@ -55062,7 +55062,7 @@ iV
 il
 il
 il
-jb
+iZ
 il
 il
 il
@@ -55321,7 +55321,7 @@ il
 iw
 iw
 iw
-jb
+iZ
 iw
 iw
 il
@@ -55836,7 +55836,7 @@ jL
 iw
 iw
 iw
-ji
+jb
 il
 iw
 iw
@@ -56093,11 +56093,11 @@ il
 il
 il
 il
-jb
+iZ
 il
 il
 il
-jb
+iZ
 il
 il
 dQ
@@ -57129,7 +57129,7 @@ iw
 il
 iw
 iw
-ji
+jb
 iw
 iL
 il
@@ -57899,11 +57899,11 @@ il
 il
 il
 il
-jb
+iZ
 il
 il
 il
-jb
+iZ
 il
 il
 dQ
@@ -58156,7 +58156,7 @@ dQ
 dQ
 jL
 iw
-ji
+jb
 iw
 iw
 il
@@ -58675,7 +58675,7 @@ il
 iw
 iw
 iw
-jb
+iZ
 iw
 iw
 il
@@ -58932,7 +58932,7 @@ iV
 il
 il
 il
-jb
+iZ
 il
 il
 il
@@ -59190,7 +59190,7 @@ dQ
 il
 il
 iw
-iZ
+jj
 il
 iL
 iL
@@ -59449,7 +59449,7 @@ iV
 il
 iw
 jn
-jb
+iZ
 iw
 iw
 iw
@@ -59706,7 +59706,7 @@ dQ
 dQ
 il
 il
-jj
+ji
 il
 il
 il
