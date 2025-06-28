@@ -1,13 +1,3 @@
-<<<<<<< HEAD:code/modules/admin/verbs/adminhelp.dm
-/*
-
-CHOMPedit - This file has been excluded from the compilation.
-Reason: Replaced with "Tickets System". Main logic has been moved to: modular_chomp/modules/tickets/tickets.dm
-
-*/
-
-/client/var/datum/admin_help/current_ticket	//the current ticket the (usually) not-admin client is dealing with
-=======
 /client/var/datum/ticket/current_ticket	//the current ticket the (usually) not-admin client is dealing with
 /client/var/datum/ticket/selected_ticket //the current ticket being viewed in the Tickets Panel (usually) admin/mentor client
 
@@ -29,28 +19,7 @@ Reason: Replaced with "Tickets System". Main logic has been moved to: modular_ch
 		world.TgsChatBroadcast(message,ahelp_channel)
 	else
 		world.TgsTargetedChatBroadcast(message,TRUE)
->>>>>>> f2b86cb5e3 (Ports ticket system overhaul from downstream (#17063)):code/modules/tickets/tickets.dm
 
-//CHOMPEdit Begin
-/proc/get_ahelp_channel()
-	var/datum/tgs_api/v5/api = TGS_READ_GLOBAL(tgs)
-	if(istype(api) && config.ahelp_channel_tag)
-		for(var/datum/tgs_chat_channel/channel in api.chat_channels)
-			if(channel.custom_tag == config.ahelp_channel_tag)
-				return list(channel)
-	return 0
-
-/proc/ahelp_discord_message(var/message)
-	if(!message)
-		return
-	if(config.discord_ahelps_disabled)
-		return
-	var/datum/tgs_chat_channel/ahelp_channel = get_ahelp_channel()
-	if(ahelp_channel)
-		world.TgsChatBroadcast(message,ahelp_channel)
-	else
-		world.TgsTargetedChatBroadcast(message,TRUE)
-//CHOMPEdit End
 //TICKET MANAGER
 //
 
@@ -342,29 +311,16 @@ INITIALIZE_IMMEDIATE(/obj/effect/statclick/ticket_list)
 		var/admin_number_present = send2irc_adminless_only(initiator_ckey, name)
 		log_admin("Ticket #[id]: [key_name(initiator)]: [name] - heard by [admin_number_present] non-AFK admins who have +BAN.")
 		if(admin_number_present <= 0)
-<<<<<<< HEAD:code/modules/admin/verbs/adminhelp.dm
-			to_chat(C, span_admin_pm_notice("No active admins are online, your adminhelp was sent to the admin discord."))		//VOREStation Edit
-	send2adminchat() //VOREStation Add
-	//YW EDIT START
-=======
 			to_chat(C, span_notice("No active admins are online, your adminhelp was sent to the admin discord."))
 	send2adminchat()
 
->>>>>>> f2b86cb5e3 (Ports ticket system overhaul from downstream (#17063)):code/modules/tickets/tickets.dm
 	var/list/adm = get_admin_counts()
 	var/list/activemins = adm["present"]
 	var activeMins = activemins.len
 	if(is_bwoink)
-<<<<<<< HEAD:code/modules/admin/verbs/adminhelp.dm
-		ahelp_discord_message("ADMINHELP: FROM: [key_name_admin(usr)] TO [initiator_ckey]/[initiator_key_name] - MSG: **[msg]** - Heard by [activeMins] NON-AFK staff members.") //CHOMPEdit
-	else
-		ahelp_discord_message("ADMINHELP: FROM: [initiator_ckey]/[initiator_key_name] - MSG: **[msg]** - Heard by [activeMins] NON-AFK staff members.") //CHOMPEdit
-	//YW EDIT END
-=======
 		ahelp_discord_message("ADMINHELP: FROM: [key_name_admin(usr)] TO [initiator_ckey]/[initiator_key_name] - MSG: **[msg]** - Heard by [activeMins] NON-AFK staff members.")
 	else
 		ahelp_discord_message("ADMINHELP: FROM: [initiator_ckey]/[initiator_key_name] - MSG: **[msg]** - Heard by [activeMins] NON-AFK staff members.")
->>>>>>> f2b86cb5e3 (Ports ticket system overhaul from downstream (#17063)):code/modules/tickets/tickets.dm
 
 		// Also send it to discord since that's the hip cool thing now.
 		SSwebhooks.send(
@@ -391,13 +347,6 @@ INITIALIZE_IMMEDIATE(/obj/effect/statclick/ticket_list)
 	GLOB.tickets.resolved_tickets -= src
 	return ..()
 
-<<<<<<< HEAD:code/modules/admin/verbs/adminhelp.dm
-/datum/admin_help/proc/AddInteraction(formatted_message)
-	var/curinteraction = "[gameTimestamp()]: [formatted_message]"
-	if(config.discord_ahelps_all)	//CHOMPEdit
-		ahelp_discord_message("ADMINHELP: TICKETID:[id] [strip_html_properly(curinteraction)]") //CHOMPEdit
-	_interactions += curinteraction
-=======
 /datum/ticket/proc/AddInteraction(formatted_message)
 	var/curinteraction = "[gameTimestamp()]: [formatted_message]"
 	if(CONFIG_GET(flag/discord_ahelps_all))
@@ -406,7 +355,6 @@ INITIALIZE_IMMEDIATE(/obj/effect/statclick/ticket_list)
 
 /datum/ticket/proc/TicketPanel()
 	tgui_interact(usr.client.mob)
->>>>>>> f2b86cb5e3 (Ports ticket system overhaul from downstream (#17063)):code/modules/tickets/tickets.dm
 
 //private
 /datum/ticket/proc/FullMonty(ref_src, admin = FALSE)
@@ -460,15 +408,6 @@ INITIALIZE_IMMEDIATE(/obj/effect/statclick/ticket_list)
 	AddInteraction(span_red("[LinkedReplyName(ref_src)]: [msg]"))
 	//send this msg to all admins
 
-<<<<<<< HEAD:code/modules/admin/verbs/adminhelp.dm
-	for(var/client/X in GLOB.admins)
-//		if(!check_rights_for(X, R_ADMIN)) //CHOMP Remove let everyone hear the ahelp
-//			continue //CHOMP Remove let everyone hear the ahelp
-		if(X.prefs?.read_preference(/datum/preference/toggle/holder/play_adminhelp_ping))
-			X << 'sound/effects/adminhelp.ogg'
-		window_flash(X)
-		to_chat(X, chat_msg)
-=======
 	if(level == 0)
 		for (var/client/C in GLOB.admins)
 			if (C.prefs?.read_preference(/datum/preference/toggle/play_mentorhelp_ping))
@@ -494,7 +433,6 @@ INITIALIZE_IMMEDIATE(/obj/effect/statclick/ticket_list)
 	message_mentors(msg)
 	log_admin(msg)
 	*/
->>>>>>> f2b86cb5e3 (Ports ticket system overhaul from downstream (#17063)):code/modules/tickets/tickets.dm
 
 //Reopen a closed ticket
 /datum/ticket/proc/Reopen()

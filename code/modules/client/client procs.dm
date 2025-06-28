@@ -259,11 +259,7 @@
 	initialize_commandbar_spy()
 	tgui_panel = new(src, "browseroutput")
 
-<<<<<<< HEAD
-	GLOB.tickets.ClientLogin(src) // CHOMPedit - Tickets System
-=======
 	GLOB.tickets.ClientLogin(src)
->>>>>>> f2b86cb5e3 (Ports ticket system overhaul from downstream (#17063))
 
 	//Admin Authorisation
 	holder = GLOB.admin_datums[ckey]
@@ -375,13 +371,9 @@
 		gc_destroyed = world.time
 		if (!QDELING(src))
 			stack_trace("Client does not purport to be QDELING, this is going to cause bugs in other places!")
-<<<<<<< HEAD
-		GLOB.tickets.ClientLogout(src) // CHOMPedit - Tickets System
-=======
 
 		GLOB.tickets.ClientLogout(src)
 
->>>>>>> f2b86cb5e3 (Ports ticket system overhaul from downstream (#17063))
 		// Yes this is the same as what's found in qdel(). Yes it does need to be here
 		// Get off my back
 		SEND_SIGNAL(src, COMSIG_PARENT_QDELETING, TRUE)

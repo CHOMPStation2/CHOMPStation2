@@ -11,22 +11,9 @@ ADMIN_VERB(cmd_admin_say, R_ADMIN, "ASay", "Send a message to other admins", "Ad
 
 	feedback_add_details("admin_verb","M") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
-<<<<<<< HEAD
-/client/proc/cmd_mod_say(msg as text)
-	set category = "Admin.Chat"
-	set name = "Msay"
-	set hidden = 1
-
-	if(!check_rights(R_ADMIN|R_MOD|R_EVENT)) //VOREStation Edit //CHOMP Removal: Removed R_SERVER because it wasn't necessary.
-		return
-
-	msg = sanitize(msg)
-	log_modsay(msg,src)
-=======
 ADMIN_VERB(cmd_mod_say, (R_ADMIN|R_MOD|R_SERVER), "Msay", "Send a message to other mod", "Admin.Chat", message as text)
 	var/msg = sanitize(message)
 	log_modsay(msg, user)
->>>>>>> f2b86cb5e3 (Ports ticket system overhaul from downstream (#17063))
 
 	if (!msg)
 		return
@@ -40,22 +27,9 @@ ADMIN_VERB(cmd_mod_say, (R_ADMIN|R_MOD|R_SERVER), "Msay", "Send a message to oth
 
 	feedback_add_details("admin_verb","MS") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
-<<<<<<< HEAD
-/client/proc/cmd_event_say(msg as text)
-	set category = "Admin.Chat"
-	set name = "Esay"
-	set hidden = 1
-
-	if(!check_rights(R_ADMIN|R_MOD|R_EVENT|R_EVENT)) //CHOMP Removal: Removed R_SERVER because it wasn't necessary.
-		return
-
-	msg = sanitize(msg)
-	log_eventsay(msg,src)
-=======
 ADMIN_VERB(cmd_event_say, (R_ADMIN|R_MOD|R_EVENT|R_SERVER), "Esay", "Send a message to other event manager", "Admin.Chat", message as text)
 	var/msg = sanitize(message)
 	log_eventsay(msg, user)
->>>>>>> f2b86cb5e3 (Ports ticket system overhaul from downstream (#17063))
 
 	if (!msg)
 		return
