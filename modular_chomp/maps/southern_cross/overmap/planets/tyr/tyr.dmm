@@ -2323,6 +2323,9 @@
 "iv" = (
 /turf/simulated/shuttle/plating,
 /area/surface/tyr/wrecked_shipF)
+"iw" = (
+/turf/simulated/shuttle/floor/voidcraft/tyr,
+/area/surface/tyr/wrecked_shipF)
 "ix" = (
 /obj/machinery/light/small,
 /turf/simulated/floor/tiled/steel_ridged,
@@ -2334,7 +2337,8 @@
 /turf/simulated/floor/wmarble,
 /area/surface/tyr/eclipse_stronghold/science)
 "iz" = (
-/turf/simulated/shuttle/floor/voidcraft/tyr,
+/obj/structure/table/steel,
+/turf/simulated/shuttle/plating,
 /area/surface/tyr/wrecked_shipF)
 "iA" = (
 /obj/structure/fuel_port/heavy{
@@ -2358,6 +2362,12 @@
 /mob/living/simple_mob/mechanical/mecha/eclipse/engimecha,
 /turf/simulated/floor/reinforced,
 /area/surface/tyr/eclipse_stronghold/engineering)
+"iD" = (
+/obj/machinery/door/airlock/hatch{
+	req_one_access = null
+	},
+/turf/simulated/shuttle/plating,
+/area/surface/tyr/wrecked_shipF)
 "iE" = (
 /turf/simulated/wall/r_concrete,
 /area/surface/tyr/eclipse_stronghold/command)
@@ -2389,7 +2399,7 @@
 /turf/simulated/floor,
 /area/surface/tyr/eclipse_stronghold/science)
 "iL" = (
-/obj/structure/table/steel,
+/mob/living/simple_mob/mechanical/hivebot/eclipse,
 /turf/simulated/shuttle/plating,
 /area/surface/tyr/wrecked_shipF)
 "iM" = (
@@ -2429,6 +2439,13 @@
 	},
 /turf/simulated/floor/bmarble,
 /area/surface/tyr/eclipse_stronghold/cargo)
+"iR" = (
+/obj/machinery/door/airlock/hatch{
+	req_one_access = null
+	},
+/obj/structure/fans/hardlight,
+/turf/simulated/shuttle/plating,
+/area/surface/tyr/wrecked_shipF)
 "iS" = (
 /obj/structure/disposalpipe/segment{
 	dir = 2;
@@ -2449,6 +2466,14 @@
 /obj/machinery/light/small,
 /turf/simulated/floor/carpet/bcarpet,
 /area/surface/tyr/eclipse_stronghold/science)
+"iV" = (
+/obj/machinery/power/apc/high{
+	dir = 4;
+	pixel_x = 24;
+	pixel_y = 0
+	},
+/turf/simulated/shuttle/plating,
+/area/surface/tyr/wrecked_shipF)
 "iW" = (
 /obj/effect/floor_decal/corner/orange/border,
 /turf/simulated/floor/wmarble,
@@ -2467,19 +2492,20 @@
 /turf/simulated/floor/bmarble,
 /area/surface/tyr/eclipse_stronghold/science)
 "iZ" = (
-/obj/machinery/door/airlock/hatch{
-	req_one_access = null
+/obj/structure/grille,
+/obj/structure/window/plastitanium{
+	dir = 1
 	},
-/turf/simulated/shuttle/plating,
+/obj/structure/window/plastitanium,
+/turf/simulated/shuttle/floor/voidcraft/tyr,
 /area/surface/tyr/wrecked_shipF)
 "ja" = (
 /mob/living/simple_mob/humanoid/eclipse/lunar/bulletstorm,
 /turf/simulated/floor/carpet/tealcarpet,
 /area/surface/tyr/eclipse_stronghold/command)
 "jb" = (
-/mob/living/simple_mob/mechanical/hivebot/eclipse,
-/turf/simulated/shuttle/plating,
-/area/surface/tyr/wrecked_shipF)
+/turf/simulated/shuttle/floor/voidcraft/tyr,
+/area/surface/tyr/junkyard)
 "jc" = (
 /obj/effect/zone_divider,
 /turf/simulated/floor/wmarble,
@@ -2517,12 +2543,14 @@
 /turf/simulated/floor/tiled,
 /area/surface/tyr/eclipse_stronghold/cargo)
 "ji" = (
-/obj/machinery/door/airlock/hatch{
-	req_one_access = null
-	},
-/obj/structure/fans/hardlight,
+/obj/structure/bed,
+/obj/item/bedsheet/orange,
 /turf/simulated/shuttle/plating,
 /area/surface/tyr/wrecked_shipF)
+"jj" = (
+/obj/random/obstruction,
+/turf/simulated/floor/wmarble,
+/area/surface/tyr/eclipse_stronghold/mining)
 "jk" = (
 /obj/machinery/power/port_gen/pacman/mrs,
 /turf/simulated/floor/wood,
@@ -2542,6 +2570,12 @@
 /obj/machinery/light/small,
 /turf/simulated/floor/carpet/tealcarpet,
 /area/surface/tyr/eclipse_stronghold/cargo)
+"jn" = (
+/turf/simulated/floor/wmarble,
+/area/surface/tyr/eclipse_stronghold/mining)
+"jo" = (
+/turf/simulated/floor/bmarble,
+/area/surface/tyr/eclipse_stronghold/mining)
 "jp" = (
 /obj/machinery/door/airlock/silver,
 /turf/simulated/floor/carpet,
@@ -2615,14 +2649,14 @@
 "jD" = (
 /turf/simulated/floor/outdoors/desert_planet/deep_grass/tyr,
 /area/surface/tyr/northern_wilderness)
+"jE" = (
+/obj/machinery/light/small,
+/turf/simulated/floor/wmarble,
+/area/surface/tyr/eclipse_stronghold/mining)
 "jF" = (
-/obj/machinery/power/apc/high{
-	dir = 4;
-	pixel_x = 24;
-	pixel_y = 0
-	},
-/turf/simulated/shuttle/plating,
-/area/surface/tyr/wrecked_shipF)
+/obj/machinery/light/small,
+/turf/simulated/floor/bmarble,
+/area/surface/tyr/eclipse_stronghold/mining)
 "jG" = (
 /mob/living/simple_mob/humanoid/eclipse/solar/disablernoodle,
 /turf/simulated/floor/tiled/dark,
@@ -2651,14 +2685,18 @@
 /obj/structure/window/plastitanium,
 /turf/simulated/floor/wmarble,
 /area/surface/tyr/eclipse_stronghold/sec)
-"jM" = (
-/obj/structure/grille,
-/obj/structure/window/plastitanium{
-	dir = 1
+"jL" = (
+/obj/machinery/light/small{
+	dir = 8
 	},
-/obj/structure/window/plastitanium,
-/turf/simulated/shuttle/floor/voidcraft/tyr,
-/area/surface/tyr/wrecked_shipF)
+/turf/simulated/floor/wmarble,
+/area/surface/tyr/eclipse_stronghold/mining)
+"jM" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/simulated/floor/wmarble,
+/area/surface/tyr/eclipse_stronghold/mining)
 "jN" = (
 /obj/structure/cable/orange{
 	icon_state = "1-2"
@@ -2666,8 +2704,11 @@
 /turf/simulated/floor/wood,
 /area/surface/tyr/eclipse_stronghold/cargo)
 "jO" = (
-/turf/simulated/shuttle/floor/voidcraft/tyr,
-/area/surface/tyr/junkyard)
+/obj/structure/fans/hardlight/colorable/abductor{
+	color = "#FF3300"
+	},
+/turf/simulated/floor/bmarble,
+/area/surface/tyr/eclipse_stronghold/mining)
 "jP" = (
 /mob/living/simple_mob/humanoid/eclipse/solar/clockspear,
 /turf/simulated/floor/bmarble,
@@ -2682,10 +2723,11 @@
 /turf/simulated/floor/wmarble,
 /area/surface/tyr/eclipse_stronghold/science)
 "jR" = (
-/obj/structure/bed,
-/obj/item/bedsheet/orange,
-/turf/simulated/shuttle/plating,
-/area/surface/tyr/wrecked_shipF)
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/simulated/floor/bmarble,
+/area/surface/tyr/eclipse_stronghold/mining)
 "jS" = (
 /obj/structure/reagent_dispensers/watertank/high,
 /obj/machinery/light/small{
@@ -2720,11 +2762,15 @@
 /turf/simulated/floor/tiled/white,
 /area/surface/tyr/eclipse_stronghold/sec)
 "jX" = (
-/obj/random/obstruction,
+/obj/structure/fans/hardlight/colorable/abductor{
+	color = "#FF3300"
+	},
 /turf/simulated/floor/wmarble,
 /area/surface/tyr/eclipse_stronghold/mining)
 "jY" = (
-/turf/simulated/floor/wmarble,
+/obj/effect/zone_divider,
+/obj/structure/foamedmetal,
+/turf/simulated/floor,
 /area/surface/tyr/eclipse_stronghold/mining)
 "jZ" = (
 /obj/structure/closet,
@@ -2739,7 +2785,8 @@
 /turf/simulated/floor/tiled/steel,
 /area/surface/tyr/eclipse_stronghold/science)
 "ka" = (
-/turf/simulated/floor/bmarble,
+/obj/structure/foamedmetal,
+/turf/simulated/floor,
 /area/surface/tyr/eclipse_stronghold/mining)
 "kb" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
@@ -2748,8 +2795,8 @@
 /turf/simulated/floor/wood,
 /area/surface/tyr/eclipse_stronghold/cargo)
 "kc" = (
-/obj/machinery/light/small,
-/turf/simulated/floor/wmarble,
+/mob/living/simple_mob/mechanical/mecha/eclipse/excavate_head,
+/turf/simulated/floor/bmarble,
 /area/surface/tyr/eclipse_stronghold/mining)
 "kd" = (
 /obj/structure/table/fancyblack,
@@ -2814,8 +2861,8 @@
 /turf/simulated/floor/carpet/tealcarpet,
 /area/surface/tyr/eclipse_stronghold/medical)
 "ko" = (
-/obj/machinery/light/small,
-/turf/simulated/floor/bmarble,
+/obj/effect/zone_divider,
+/turf/simulated/floor/wmarble,
 /area/surface/tyr/eclipse_stronghold/mining)
 "kp" = (
 /obj/effect/floor_decal/corner/yellow/border{
@@ -2884,10 +2931,8 @@
 /turf/simulated/floor,
 /area/surface/tyr/eclipse_stronghold/engineering)
 "kB" = (
-/obj/machinery/light/small{
-	dir = 8
-	},
-/turf/simulated/floor/wmarble,
+/obj/effect/zone_divider,
+/turf/simulated/floor/bmarble,
 /area/surface/tyr/eclipse_stronghold/mining)
 "kC" = (
 /mob/living/simple_mob/humanoid/eclipse/lunar/abyssdiver,
@@ -2910,11 +2955,9 @@
 /turf/simulated/floor/tiled/white,
 /area/surface/tyr/eclipse_stronghold/medical)
 "kG" = (
-/obj/machinery/light/small{
-	dir = 4
-	},
-/turf/simulated/floor/wmarble,
-/area/surface/tyr/eclipse_stronghold/mining)
+/mob/living/simple_mob/mechanical/mecha/eclipse/antipersonal_unit,
+/turf/simulated/floor/outdoors/desert_planet/deep_grass/tyr,
+/area/surface/tyr/eclipse_stronghold/science)
 "kH" = (
 /obj/effect/floor_decal/corner/yellow/border{
 	dir = 8
@@ -2952,16 +2995,16 @@
 /turf/simulated/floor/tiled/hydro,
 /area/surface/tyr/eclipse_stronghold/sec)
 "kO" = (
-/obj/structure/fans/hardlight/colorable/abductor{
-	color = "#FF3300"
+/obj/machinery/light/small{
+	dir = 1
 	},
 /turf/simulated/floor/bmarble,
 /area/surface/tyr/eclipse_stronghold/mining)
 "kP" = (
 /obj/machinery/light/small{
-	dir = 4
+	dir = 1
 	},
-/turf/simulated/floor/bmarble,
+/turf/simulated/floor/wmarble,
 /area/surface/tyr/eclipse_stronghold/mining)
 "kQ" = (
 /obj/structure/closet/toolcloset,
@@ -2992,11 +3035,9 @@
 /turf/simulated/floor/concrete,
 /area/surface/tyr/eclipse_stronghold/sec)
 "kU" = (
-/obj/structure/fans/hardlight/colorable/abductor{
-	color = "#FF3300"
-	},
-/turf/simulated/floor/wmarble,
-/area/surface/tyr/eclipse_stronghold/mining)
+/obj/structure/foamedmetal,
+/turf/simulated/floor,
+/area/surface/tyr/eclipse_stronghold/sec)
 "kV" = (
 /mob/living/simple_mob/humanoid/eclipse/solar/froststalker,
 /turf/simulated/floor/carpet,
@@ -3014,10 +3055,9 @@
 /turf/simulated/floor/wmarble,
 /area/surface/tyr/eclipse_stronghold/cargo)
 "kY" = (
-/obj/effect/zone_divider,
-/obj/structure/foamedmetal,
-/turf/simulated/floor,
-/area/surface/tyr/eclipse_stronghold/mining)
+/mob/living/simple_mob/mechanical/mecha/eclipse/antipersonal_unit,
+/turf/simulated/floor/outdoors/desert_planet/deep_grass/tyr,
+/area/surface/tyr/eclipse_stronghold/cargo)
 "kZ" = (
 /obj/machinery/vending/nukie,
 /turf/simulated/floor/carpet/bcarpet,
@@ -3032,17 +3072,34 @@
 /turf/simulated/floor/tiled/white,
 /area/surface/tyr/eclipse_stronghold/medical)
 "lb" = (
-/obj/structure/foamedmetal,
+/obj/structure/window/plastitanium,
+/obj/structure/window/plastitanium{
+	dir = 8
+	},
+/obj/item/circuitboard/pacman,
+/obj/structure/table/rack,
+/obj/item/circuitboard/firework_launcher,
+/obj/item/circuitboard/pointdefense,
 /turf/simulated/floor,
-/area/surface/tyr/eclipse_stronghold/mining)
+/area/surface/tyr/eclipse_stronghold/cargo)
 "lc" = (
-/mob/living/simple_mob/mechanical/mecha/eclipse/excavate_head,
-/turf/simulated/floor/bmarble,
-/area/surface/tyr/eclipse_stronghold/mining)
+/obj/structure/window/plastitanium,
+/obj/item/circuitboard/pacman/super,
+/obj/structure/table/rack,
+/obj/item/circuitboard/shield_gen,
+/turf/simulated/floor,
+/area/surface/tyr/eclipse_stronghold/cargo)
 "ld" = (
-/obj/effect/zone_divider,
-/turf/simulated/floor/wmarble,
-/area/surface/tyr/eclipse_stronghold/mining)
+/obj/structure/window/plastitanium,
+/obj/item/circuitboard/pacman/super,
+/obj/structure/table/rack,
+/obj/item/circuitboard/autolathe,
+/obj/item/circuitboard/grounding_rod,
+/obj/item/circuitboard/jukebox,
+/obj/item/circuitboard/pointdefense,
+/obj/item/circuitboard/quantumpad,
+/turf/simulated/floor,
+/area/surface/tyr/eclipse_stronghold/cargo)
 "le" = (
 /obj/machinery/light/small{
 	dir = 4
@@ -3156,9 +3213,13 @@
 /turf/simulated/floor/wmarble,
 /area/surface/tyr/eclipse_stronghold/cargo)
 "lu" = (
-/obj/effect/zone_divider,
-/turf/simulated/floor/bmarble,
-/area/surface/tyr/eclipse_stronghold/mining)
+/obj/structure/window/plastitanium{
+	dir = 1
+	},
+/obj/structure/table/rack,
+/obj/effect/spawner/parts/t3,
+/turf/simulated/floor,
+/area/surface/tyr/eclipse_stronghold/cargo)
 "lv" = (
 /obj/machinery/light/small{
 	dir = 1
@@ -3214,15 +3275,25 @@
 /turf/simulated/floor/carpet/bcarpet,
 /area/surface/tyr/eclipse_stronghold/command)
 "lE" = (
-/mob/living/simple_mob/mechanical/mecha/eclipse/antipersonal_unit,
-/turf/simulated/floor/outdoors/desert_planet/deep_grass/tyr,
-/area/surface/tyr/eclipse_stronghold/science)
-"lF" = (
-/obj/machinery/light/small{
+/obj/structure/window/plastitanium{
 	dir = 1
 	},
-/turf/simulated/floor/bmarble,
-/area/surface/tyr/eclipse_stronghold/mining)
+/obj/structure/table/rack,
+/obj/item/stock_parts/micro_laser/omni,
+/obj/item/stock_parts/scanning_module/hyper,
+/obj/item/stock_parts/manipulator/omni,
+/turf/simulated/floor,
+/area/surface/tyr/eclipse_stronghold/cargo)
+"lF" = (
+/obj/structure/window/plastitanium{
+	dir = 1
+	},
+/obj/structure/table/rack,
+/obj/item/stock_parts/micro_laser/hyper,
+/obj/item/stock_parts/scanning_module/omni,
+/obj/item/stock_parts/manipulator/hyper,
+/turf/simulated/floor,
+/area/surface/tyr/eclipse_stronghold/cargo)
 "lG" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
 	dir = 4
@@ -3230,15 +3301,24 @@
 /turf/simulated/floor/wood,
 /area/surface/tyr/eclipse_stronghold/cargo)
 "lH" = (
-/obj/machinery/light/small{
+/obj/structure/window/plastitanium{
 	dir = 1
 	},
-/turf/simulated/floor/wmarble,
-/area/surface/tyr/eclipse_stronghold/mining)
-"lI" = (
-/obj/structure/foamedmetal,
+/obj/structure/table/rack,
+/obj/effect/spawner/parts/t2,
 /turf/simulated/floor,
-/area/surface/tyr/eclipse_stronghold/sec)
+/area/surface/tyr/eclipse_stronghold/cargo)
+"lI" = (
+/obj/structure/window/plastitanium{
+	dir = 1
+	},
+/obj/structure/window/plastitanium{
+	dir = 4
+	},
+/obj/structure/table/rack,
+/obj/effect/spawner/parts/t3,
+/turf/simulated/floor,
+/area/surface/tyr/eclipse_stronghold/cargo)
 "lJ" = (
 /mob/living/simple_mob/humanoid/eclipse/lunar/bulletstorm,
 /turf/simulated/floor/tiled/old_tile/yellow,
@@ -3262,9 +3342,9 @@
 /turf/simulated/floor/tiled/old_tile/gray,
 /area/surface/tyr/eclipse_stronghold/cargo)
 "lN" = (
-/mob/living/simple_mob/mechanical/mecha/eclipse/antipersonal_unit,
-/turf/simulated/floor/outdoors/desert_planet/deep_grass/tyr,
-/area/surface/tyr/eclipse_stronghold/cargo)
+/mob/living/simple_mob/mechanical/mecha/eclipse/darkmatter_assualt/armored,
+/turf/simulated/shuttle/floor/alien,
+/area/surface/tyr/eclipse_stronghold/sectorfinale)
 "lO" = (
 /mob/living/simple_mob/humanoid/eclipse/solar/plant,
 /turf/simulated/floor/wood,
@@ -3285,42 +3365,17 @@
 /turf/simulated/floor/tiled,
 /area/surface/tyr/eclipse_stronghold/cargo)
 "lS" = (
-/obj/structure/window/plastitanium,
-/obj/structure/window/plastitanium{
-	dir = 8
-	},
-/obj/item/circuitboard/pacman,
-/obj/structure/table/rack,
-/obj/item/circuitboard/firework_launcher,
-/obj/item/circuitboard/pointdefense,
-/turf/simulated/floor,
-/area/surface/tyr/eclipse_stronghold/cargo)
+/obj/effect/zone_divider,
+/turf/simulated/wall/r_concrete,
+/area/surface/tyr/north_caverns)
 "lT" = (
 /obj/machinery/vending/altevian,
 /turf/simulated/floor/carpet/bcarpet,
 /area/surface/tyr/eclipse_stronghold/command)
-"lU" = (
-/obj/structure/window/plastitanium,
-/obj/item/circuitboard/pacman/super,
-/obj/structure/table/rack,
-/obj/item/circuitboard/shield_gen,
-/turf/simulated/floor,
-/area/surface/tyr/eclipse_stronghold/cargo)
 "lV" = (
 /obj/machinery/vending/bepis,
 /turf/simulated/floor/carpet/bcarpet,
 /area/surface/tyr/eclipse_stronghold/command)
-"lW" = (
-/obj/structure/window/plastitanium,
-/obj/item/circuitboard/pacman/super,
-/obj/structure/table/rack,
-/obj/item/circuitboard/autolathe,
-/obj/item/circuitboard/grounding_rod,
-/obj/item/circuitboard/jukebox,
-/obj/item/circuitboard/pointdefense,
-/obj/item/circuitboard/quantumpad,
-/turf/simulated/floor,
-/area/surface/tyr/eclipse_stronghold/cargo)
 "lX" = (
 /obj/fire,
 /obj/item/clothing/head/helmet/space/void/merc/fire,
@@ -3331,42 +3386,14 @@
 /mob/living/simple_mob/humanoid/eclipse/solar/disablernoodle,
 /turf/simulated/floor/wmarble,
 /area/surface/tyr/eclipse_stronghold/cargo)
-"lZ" = (
-/obj/structure/window/plastitanium{
-	dir = 1
-	},
-/obj/structure/table/rack,
-/obj/effect/spawner/parts/t3,
-/turf/simulated/floor,
-/area/surface/tyr/eclipse_stronghold/cargo)
 "ma" = (
 /obj/effect/floor_decal/corner_steel_grid/diagonal,
 /turf/simulated/floor/tiled/freezer,
 /area/surface/tyr/eclipse_stronghold/science)
-"mb" = (
-/obj/structure/window/plastitanium{
-	dir = 1
-	},
-/obj/structure/table/rack,
-/obj/item/stock_parts/micro_laser/omni,
-/obj/item/stock_parts/scanning_module/hyper,
-/obj/item/stock_parts/manipulator/omni,
-/turf/simulated/floor,
-/area/surface/tyr/eclipse_stronghold/cargo)
 "mc" = (
 /obj/machinery/vending/loadout/overwear,
 /turf/simulated/floor/carpet/bcarpet,
 /area/surface/tyr/eclipse_stronghold/science)
-"md" = (
-/obj/structure/window/plastitanium{
-	dir = 1
-	},
-/obj/structure/table/rack,
-/obj/item/stock_parts/micro_laser/hyper,
-/obj/item/stock_parts/scanning_module/omni,
-/obj/item/stock_parts/manipulator/hyper,
-/turf/simulated/floor,
-/area/surface/tyr/eclipse_stronghold/cargo)
 "me" = (
 /mob/living/simple_mob/mechanical/mecha/eclipse/mining_guard,
 /turf/simulated/floor/reinforced,
@@ -3376,14 +3403,6 @@
 /obj/structure/disposalpipe/trunk{
 	dir = 8
 	},
-/turf/simulated/floor,
-/area/surface/tyr/eclipse_stronghold/cargo)
-"mg" = (
-/obj/structure/window/plastitanium{
-	dir = 1
-	},
-/obj/structure/table/rack,
-/obj/effect/spawner/parts/t2,
 /turf/simulated/floor,
 /area/surface/tyr/eclipse_stronghold/cargo)
 "mh" = (
@@ -3406,17 +3425,6 @@
 /mob/living/simple_mob/humanoid/eclipse/solar/disablernoodle,
 /turf/simulated/floor/carpet/bcarpet,
 /area/surface/tyr/eclipse_stronghold/command)
-"mk" = (
-/obj/structure/window/plastitanium{
-	dir = 1
-	},
-/obj/structure/window/plastitanium{
-	dir = 4
-	},
-/obj/structure/table/rack,
-/obj/effect/spawner/parts/t3,
-/turf/simulated/floor,
-/area/surface/tyr/eclipse_stronghold/cargo)
 "ml" = (
 /obj/structure/table/steel,
 /obj/item/handcuffs/legcuffs,
@@ -3465,10 +3473,6 @@
 	},
 /turf/simulated/floor/bmarble,
 /area/surface/tyr/eclipse_stronghold/cargo)
-"ms" = (
-/mob/living/simple_mob/mechanical/mecha/eclipse/darkmatter_assualt/armored,
-/turf/simulated/shuttle/floor/alien,
-/area/surface/tyr/eclipse_stronghold/sectorfinale)
 "mt" = (
 /obj/effect/floor_decal/corner/lime/border{
 	dir = 4
@@ -3496,10 +3500,6 @@
 /mob/living/simple_mob/humanoid/eclipse/solar/froststalker,
 /turf/simulated/floor/wmarble,
 /area/surface/tyr/eclipse_stronghold/cargo)
-"my" = (
-/obj/effect/zone_divider,
-/turf/simulated/wall/r_concrete,
-/area/surface/tyr/north_caverns)
 "mz" = (
 /obj/structure/window/plastitanium{
 	dir = 4
@@ -16034,7 +16034,7 @@ iF
 iF
 iF
 iF
-lE
+kG
 iF
 iF
 iF
@@ -32035,11 +32035,11 @@ ai
 ai
 ai
 ag
-kO
-kU
-kO
-kU
-kO
+jO
+jX
+jO
+jX
+jO
 bb
 bb
 bb
@@ -32293,16 +32293,16 @@ Bd
 Bd
 Bd
 ag
-jY
-ka
-jY
-ka
-jY
+jn
+jo
+jn
+jo
+jn
 bb
-jX
-jX
-jX
-jX
+jj
+jj
+jj
+jj
 bb
 Uo
 Uo
@@ -32551,16 +32551,16 @@ Bd
 Bd
 Bd
 ag
-ka
-jY
-ka
-jY
-ka
+jo
+jn
+jo
+jn
+jo
 bb
-jX
-jX
-jX
-jX
+jj
+jj
+jj
+jj
 bb
 Uo
 Uo
@@ -32809,16 +32809,16 @@ Bd
 Bd
 Bd
 ag
-jY
-ka
-jY
-ka
-jY
+jn
+jo
+jn
+jo
+jn
 bb
-jX
-jX
-jX
-jX
+jj
+jj
+jj
+jj
 bb
 Uo
 Uo
@@ -33067,16 +33067,16 @@ Bd
 Bd
 Bd
 ag
-ka
-jY
-ka
-jY
-ka
+jo
+jn
+jo
+jn
+jo
 bb
-jX
-jX
-jX
-jX
+jj
+jj
+jj
+jj
 bb
 Uo
 Uo
@@ -33325,11 +33325,11 @@ ai
 ai
 ai
 ag
-jY
-ka
-jY
-ka
-jY
+jn
+jo
+jn
+jo
+jn
 bb
 bb
 bb
@@ -33578,21 +33578,21 @@ jB
 jA
 jB
 jA
-jY
-ka
-kB
-ka
-ld
-ka
-jY
-ka
-jY
-ka
-jY
-ka
-kB
-ka
-jY
+jn
+jo
+jL
+jo
+ko
+jo
+jn
+jo
+jn
+jo
+jn
+jo
+jL
+jo
+jn
 bb
 bb
 bb
@@ -33836,21 +33836,21 @@ jA
 jB
 jA
 jB
-ka
-jY
-ka
-jY
-lu
-jY
-ka
-jY
-ka
-jY
-ka
-jY
-ka
-jY
-ka
+jo
+jn
+jo
+jn
+kB
+jn
+jo
+jn
+jo
+jn
+jo
+jn
+jo
+jn
+jo
 bb
 bb
 bb
@@ -34094,21 +34094,21 @@ jB
 jA
 jB
 jA
-jY
-ka
-jY
-ka
-ld
-ka
-jY
-ka
-jY
-ka
-jY
-ka
-jY
-ka
-kc
+jn
+jo
+jn
+jo
+ko
+jo
+jn
+jo
+jn
+jo
+jn
+jo
+jn
+jo
+jE
 bb
 bb
 bb
@@ -34352,21 +34352,21 @@ jA
 jB
 jA
 jB
-ka
-jY
-ka
-jY
-lu
-jY
-ka
-jY
-ka
-jY
-ka
-jY
-ka
-jY
-ka
+jo
+jn
+jo
+jn
+kB
+jn
+jo
+jn
+jo
+jn
+jo
+jn
+jo
+jn
+jo
 bb
 bb
 bb
@@ -34610,21 +34610,21 @@ jB
 jA
 jB
 jA
-jY
-ka
-jY
-ka
-ld
-ka
-jY
-ka
-jY
-ka
-jY
-ka
-jY
-ka
-jY
+jn
+jo
+jn
+jo
+ko
+jo
+jn
+jo
+jn
+jo
+jn
+jo
+jn
+jo
+jn
 bb
 bb
 bb
@@ -34868,21 +34868,21 @@ jA
 jB
 jA
 jB
-ka
-jY
-ka
-jY
-lu
-jY
-ka
-jY
-ka
-jY
-ka
-jY
-ka
-jY
-ko
+jo
+jn
+jo
+jn
+kB
+jn
+jo
+jn
+jo
+jn
+jo
+jn
+jo
+jn
+jF
 bb
 bb
 bb
@@ -35126,21 +35126,21 @@ jB
 jA
 jB
 jA
-jY
-ka
-jY
-ka
-ld
-ka
-jY
-ka
-jY
-ka
-jY
-ka
-jY
-ka
-jY
+jn
+jo
+jn
+jo
+ko
+jo
+jn
+jo
+jn
+jo
+jn
+jo
+jn
+jo
+jn
 bb
 bb
 bb
@@ -35384,21 +35384,21 @@ jA
 jB
 jA
 jB
-ka
-jY
-ka
-jY
-lu
-jY
-ka
-jY
-ka
-jY
-ka
-jY
-ka
-jY
-ka
+jo
+jn
+jo
+jn
+kB
+jn
+jo
+jn
+jo
+jn
+jo
+jn
+jo
+jn
+jo
 bb
 bb
 bb
@@ -35642,21 +35642,21 @@ jB
 jA
 jB
 ai
-jY
-ka
-jY
-ka
-ld
-ka
-jY
-ka
-jY
-ka
-jY
-ka
-jY
-ka
-jY
+jn
+jo
+jn
+jo
+ko
+jo
+jn
+jo
+jn
+jo
+jn
+jo
+jn
+jo
+jn
 bb
 bb
 bb
@@ -35900,21 +35900,21 @@ jA
 jB
 jA
 ai
-lF
-jY
-ka
-jY
-lu
-jY
-ka
-jY
-ka
-jY
-ka
-jY
-ka
-jY
-ko
+kO
+jn
+jo
+jn
+kB
+jn
+jo
+jn
+jo
+jn
+jo
+jn
+jo
+jn
+jF
 bb
 bb
 bb
@@ -36158,21 +36158,21 @@ jB
 jA
 jB
 ai
-jY
-ka
-jY
-ka
-ld
-ka
-jY
-ka
-jY
-ka
-jY
-ka
-jY
-ka
-jY
+jn
+jo
+jn
+jo
+ko
+jo
+jn
+jo
+jn
+jo
+jn
+jo
+jn
+jo
+jn
 bb
 bb
 bb
@@ -36416,21 +36416,21 @@ jA
 jB
 jA
 ai
-ka
-jY
-ka
-jY
-lu
-jY
-ka
-jY
-ka
-jY
-ka
-jY
-ka
-jY
-ka
+jo
+jn
+jo
+jn
+kB
+jn
+jo
+jn
+jo
+jn
+jo
+jn
+jo
+jn
+jo
 bb
 bb
 bb
@@ -36674,21 +36674,21 @@ Sq
 Sq
 Sq
 Sq
-lH
-ka
-jY
-ka
-ld
-ka
-jY
-ka
-jY
-ka
-jY
-ka
-jY
-ka
-kc
+kP
+jo
+jn
+jo
+ko
+jo
+jn
+jo
+jn
+jo
+jn
+jo
+jn
+jo
+jE
 bb
 bb
 bb
@@ -36932,21 +36932,21 @@ DC
 Xj
 Xj
 Sq
-ka
-jY
-ka
-jY
-lu
-jY
-ka
-jY
-ka
-jY
-ka
-jY
-ka
-jY
-ka
+jo
+jn
+jo
+jn
+kB
+jn
+jo
+jn
+jo
+jn
+jo
+jn
+jo
+jn
+jo
 bb
 bb
 bb
@@ -37190,21 +37190,21 @@ Xj
 Xj
 Xj
 Sq
-jY
-ka
-kG
-ka
-ld
-kP
-jY
-lc
-jY
-kP
-jY
-ka
-kG
-ka
-jY
+jn
+jo
+jM
+jo
+ko
+jR
+jn
+kc
+jn
+jR
+jn
+jo
+jM
+jo
+jn
 bb
 bb
 bb
@@ -37454,9 +37454,9 @@ bc
 bc
 bc
 bc
-kY
-kY
-kY
+jY
+jY
+jY
 bc
 bc
 bc
@@ -37712,9 +37712,9 @@ bb
 bb
 bc
 bb
-lb
-lb
-lb
+ka
+ka
+ka
 bb
 bb
 bb
@@ -37970,9 +37970,9 @@ bb
 bb
 bc
 bb
-lb
-lb
-lb
+ka
+ka
+ka
 bb
 bb
 bb
@@ -39770,9 +39770,9 @@ Xj
 Xj
 Xj
 Xj
-lI
-lb
-lb
+kU
+ka
+ka
 bs
 gj
 bs
@@ -40028,9 +40028,9 @@ Xj
 Xj
 jq
 Xj
-lI
-lb
-lb
+kU
+ka
+ka
 bs
 gj
 bs
@@ -40286,9 +40286,9 @@ Xj
 Xj
 Xj
 Uz
-lI
-lb
-lb
+kU
+ka
+ka
 bs
 gj
 bs
@@ -42808,7 +42808,7 @@ CW
 CW
 CW
 wY
-ms
+lN
 CW
 CW
 xg
@@ -47954,9 +47954,9 @@ Mz
 "}
 (149,1,1) = {"
 Qr
-my
-my
-my
+lS
+lS
+lS
 Eg
 Eg
 Eg
@@ -52661,7 +52661,7 @@ if
 lP
 Yn
 lP
-lS
+lb
 lP
 if
 kk
@@ -52917,7 +52917,7 @@ mF
 pw
 if
 lP
-lZ
+lu
 lP
 Yt
 lP
@@ -53175,7 +53175,7 @@ pw
 mF
 if
 lP
-mb
+lE
 lP
 UJ
 lP
@@ -53433,9 +53433,9 @@ mF
 pw
 if
 lP
-md
+lF
 lP
-lU
+lc
 lP
 if
 ij
@@ -53691,9 +53691,9 @@ pw
 mF
 if
 lP
-mg
+lH
 lP
-lW
+ld
 lP
 if
 ij
@@ -53701,7 +53701,7 @@ ij
 ij
 ij
 ij
-lN
+kY
 ij
 ij
 ij
@@ -53949,7 +53949,7 @@ lY
 Oz
 if
 lP
-mk
+lI
 lP
 je
 lP
@@ -54244,7 +54244,7 @@ dQ
 dQ
 il
 il
-ji
+iR
 il
 il
 il
@@ -54499,11 +54499,11 @@ bw
 bw
 dQ
 dQ
-iz
+iw
 il
 iv
 iv
-iZ
+iD
 iv
 iv
 iv
@@ -54762,8 +54762,8 @@ il
 iv
 iv
 il
-iL
-iL
+iz
+iz
 iv
 iv
 iv
@@ -55014,11 +55014,11 @@ bw
 bw
 dQ
 dQ
-iz
+iw
 il
 il
 il
-iZ
+iD
 il
 il
 il
@@ -55277,7 +55277,7 @@ il
 iv
 iv
 iv
-iZ
+iD
 iv
 iv
 il
@@ -55530,10 +55530,10 @@ bw
 dQ
 dQ
 dQ
-jM
+iZ
 iv
 iv
-iL
+iz
 iv
 il
 iv
@@ -55788,16 +55788,16 @@ dQ
 dQ
 dQ
 dQ
-jM
+iZ
 iv
 iv
 iv
-jb
+iL
 il
 iv
 iv
 il
-iz
+iw
 dQ
 dQ
 dQ
@@ -56049,11 +56049,11 @@ il
 il
 il
 il
-iZ
+iD
 il
 il
 il
-iZ
+iD
 il
 il
 dQ
@@ -56302,17 +56302,17 @@ bw
 bw
 dQ
 dQ
+iw
+il
+iv
+iv
+iv
+iv
+il
+il
+iv
+iv
 iz
-il
-iv
-iv
-iv
-iv
-il
-il
-iv
-iv
-iL
 il
 il
 dQ
@@ -56567,7 +56567,7 @@ iv
 iv
 iv
 il
-iL
+iz
 iv
 iv
 iv
@@ -56819,17 +56819,17 @@ bw
 dQ
 dQ
 il
-jR
+ji
 iv
 iv
-iL
+iz
 iv
 il
 iv
 iv
 iv
 iv
-iL
+iz
 il
 ic
 dQ
@@ -57077,17 +57077,17 @@ bw
 dQ
 dQ
 il
-jR
+ji
 iv
 iv
-iL
+iz
 iv
 il
 iv
 iv
-jb
-iv
 iL
+iv
+iz
 il
 ic
 dQ
@@ -57341,7 +57341,7 @@ iv
 iv
 iv
 il
-iL
+iz
 iv
 iv
 iv
@@ -57592,17 +57592,17 @@ bw
 bw
 dQ
 dQ
+iw
+il
+iv
+iV
+iv
+iv
+il
+il
+iv
+iv
 iz
-il
-iv
-jF
-iv
-iv
-il
-il
-iv
-iv
-iL
 il
 il
 dQ
@@ -57855,11 +57855,11 @@ il
 il
 il
 il
-iZ
+iD
 il
 il
 il
-iZ
+iD
 il
 il
 dQ
@@ -58110,16 +58110,16 @@ dQ
 dQ
 dQ
 dQ
-jM
+iZ
 iv
-jb
-iv
-iv
-il
+iL
 iv
 iv
 il
-iz
+iv
+iv
+il
+iw
 dQ
 dQ
 dQ
@@ -58368,10 +58368,10 @@ bw
 dQ
 dQ
 dQ
-jM
+iZ
 iv
 iv
-iL
+iz
 iv
 il
 iv
@@ -58631,7 +58631,7 @@ il
 iv
 iv
 iv
-iZ
+iD
 iv
 iv
 il
@@ -58884,11 +58884,11 @@ bw
 bw
 dQ
 dQ
-iz
+iw
 il
 il
 il
-iZ
+iD
 il
 il
 il
@@ -59148,8 +59148,8 @@ il
 iv
 iv
 il
-iL
-iL
+iz
+iz
 iv
 iv
 iv
@@ -59401,11 +59401,11 @@ bw
 bw
 dQ
 dQ
-iz
+iw
 il
 iv
 iv
-iZ
+iD
 iv
 iv
 iv
@@ -69456,12 +69456,12 @@ bw
 ds
 ds
 ds
-jO
-jO
-jO
-jO
-jO
-jO
+jb
+jb
+jb
+jb
+jb
+jb
 dQ
 dQ
 bw
@@ -69712,11 +69712,11 @@ bw
 bw
 ds
 ds
-jO
-jO
-jO
-jO
-jO
+jb
+jb
+jb
+jb
+jb
 dQ
 dQ
 dQ
@@ -69969,16 +69969,16 @@ bw
 bw
 bw
 ds
-jO
-jO
-jO
-jO
-jO
-jO
-jO
+jb
+jb
+jb
+jb
+jb
+jb
+jb
 dQ
 dQ
-jO
+jb
 dQ
 bw
 bw
@@ -70227,14 +70227,14 @@ bw
 bw
 bw
 ds
-jO
-jO
-jO
-jO
-jO
-jO
-jO
-jO
+jb
+jb
+jb
+jb
+jb
+jb
+jb
+jb
 dQ
 dQ
 ds
@@ -70485,14 +70485,14 @@ bw
 bw
 bw
 ds
-jO
-jO
-jO
-jO
-jO
-jO
+jb
+jb
+jb
+jb
+jb
+jb
 dQ
-jO
+jb
 dQ
 dQ
 dQ
@@ -70744,12 +70744,12 @@ bw
 bw
 ds
 ds
-jO
-jO
-jO
-jO
-jO
-jO
+jb
+jb
+jb
+jb
+jb
+jb
 dQ
 dQ
 dQ
@@ -71004,12 +71004,12 @@ bw
 ds
 ds
 ds
-jO
-jO
-jO
-jO
-jO
-jO
+jb
+jb
+jb
+jb
+jb
+jb
 dQ
 ds
 bw
