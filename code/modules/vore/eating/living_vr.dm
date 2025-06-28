@@ -889,7 +889,7 @@
 		to_chat(src, span_notice("You are not holding anything."))
 		return
 
-	if(is_type_in_list(I,edible_trash) || adminbus_trash || is_type_in_list(I,edible_tech) && isSynthetic()) // adds edible tech for synth
+	if(is_type_in_list(I, GLOB.edible_trash) || adminbus_trash || is_type_in_list(I,edible_tech) && isSynthetic()) // adds edible tech for synth
 		if(!I.on_trash_eaten(src)) // shows object's rejection message itself
 			return
 		drop_item()
@@ -1411,7 +1411,12 @@
 	if(!RTB)
 		return FALSE
 
-	to_chat(src, span_vnotice("[RTB] has [RTB.reagents.total_volume] units of liquid."))
+	var/total_report = span_vnotice("[RTB] has [RTB.reagents.total_volume] units of liquid.")
+	if(RTB.reagents.total_volume > 0)
+		for(var/datum/reagent/R in RTB.reagents.reagent_list)
+			total_report += "<br>"
+			total_report += span_info("  -[R.name]: [R.volume]u")
+	to_chat(src, total_report)
 
 /mob/living/proc/vore_transfer_reagents()
 	set name = "Transfer Liquid (Vore)"

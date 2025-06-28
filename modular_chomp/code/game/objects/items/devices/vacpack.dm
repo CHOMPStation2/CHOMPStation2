@@ -170,7 +170,7 @@
 			playsound(src, 'sound/machines/kitchen/candymaker/candymaker-mid1.ogg', auto_setting * 20, 1, -1)
 			var/vac_conga = 0
 			for(var/atom/movable/F in suckables)
-				if(is_type_in_list(F,item_vore_blacklist) || F.loc != target)
+				if(is_type_in_list(F, GLOB.item_vore_blacklist) || F.loc != target)
 					continue
 				if(istype(F,/obj/effect/decal/cleanable))
 					if(isbelly(output_dest))
@@ -209,7 +209,7 @@
 		return
 	if(istype(target,/obj/item))
 		var/obj/item/I = target
-		if(is_type_in_list(I,item_vore_blacklist) || I.w_class >= ITEMSIZE_HUGE)
+		if(is_type_in_list(I, GLOB.item_vore_blacklist) || I.w_class >= ITEMSIZE_HUGE)
 			return
 		if(vac_power > I.w_class)
 			if(vac_power == 7)

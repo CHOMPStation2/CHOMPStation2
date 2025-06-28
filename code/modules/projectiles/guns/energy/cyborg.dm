@@ -257,13 +257,16 @@
 		var/mob/living/carbon/human/H = target
 		H.forcesay(GLOB.hit_appends)
 
+/obj/item/melee/robotic/proc/refresh_light(clear)
+	return
+
 /obj/item/melee/robotic/blade //For downstreams that use blade
 	name = "Robotic Blade"
 	desc = "A glowing blade. It appears to be extremely sharp."
 	borg_flags = COUNTS_AS_ROBOTIC_MELEE | COUNTS_AS_ROBOT_BLADE
 	icon = 'icons/mob/dogborg_vr.dmi'
 	icon_state = "swordtail"
-	force = 35 //Takes 3 hits to 100-0
+	force = 0
 	armor_penetration = 70
 	sharp = TRUE
 	edge = TRUE
@@ -271,21 +274,69 @@
 	hitsound = 'sound/weapons/blade1.ogg'
 	attack_verb = list("slashed", "stabbed", "jabbed", "mauled", "sliced")
 	w_class = ITEMSIZE_NORMAL
+	var/active_force = 35
+	var/active = 0 //Off by default.
+	var/lcolor = "#38e541"
 
-/obj/item/melee/robotic/dagger //For downstreams that use dagger
+/obj/item/melee/robotic/blade/attack_self(mob/user)
+	if(active) //turning off
+		playsound(src, 'sound/weapons/saberoff.ogg', 50, 1)
+		force = 0
+	else //turning on
+		playsound(src, 'sound/weapons/saberon.ogg', 50, 1)
+		force = active_force
+	active = !active
+	to_chat(user, span_notice("[src] is now [active ? "on" : "off"]."))
+	update_icon()
+
+/obj/item/melee/robotic/blade/update_icon()
+	cut_overlays()		//So that it doesn't keep stacking overlays non-stop on top of each other
+	if(active)
+		var/mutable_appearance/blade_overlay = mutable_appearance(icon, "[icon_state]_blade")
+		blade_overlay.color = lcolor
+		add_overlay(blade_overlay)
+	refresh_light()
+
+/obj/item/melee/robotic/blade/refresh_light(clear)
+	if(active)
+		if(clear)
+			set_light(0)
+		set_light(2, 2, lcolor)
+	else
+		set_light(0)
+
+/obj/item/melee/robotic/blade/AltClick(mob/living/user)
+	if(!in_range(src, user))	//Basic checks to prevent abuse
+		return
+	if(user.incapacitated() || !istype(user))
+		to_chat(user, span_warning("You can't do that right now!"))
+		return
+
+	if(tgui_alert(user, "Are you sure you want to recolor your blade?", "Confirm Recolor", list("Yes", "No")) == "Yes")
+		var/energy_color_input = tgui_color_picker(user,"","Choose Energy Color",lcolor)
+		if(energy_color_input)
+			lcolor = sanitize_hexcolor(energy_color_input)
+		update_icon()
+
+/obj/item/melee/robotic/blade/examine(mob/user)
+	. = ..()
+	. += span_notice("Alt-click to recolor it.")
+
+///Syndicate version. Just had a red glow.
+/obj/item/melee/robotic/blade/syndicate
+	lcolor = "#ff0000"
+
+///Ninja version. Has more damage and 100% armor pen, along with parry chance.
+/obj/item/melee/robotic/blade/ninja
+	lcolor = "#38e541"
+	active_force = 40
+	armor_penetration = 100
+	projectile_parry_chance = 60
+
+/obj/item/melee/robotic/blade/dagger //For downstreams that use dagger
 	name = "Robotic Dagger"
 	desc = "A glowing dagger. It appears to be extremely sharp."
 	borg_flags = COUNTS_AS_ROBOTIC_MELEE | COUNTS_AS_ROBOT_DAGGER
-	icon = 'icons/mob/dogborg_vr.dmi'
-	icon_state = "swordtail"
-	force = 35 //Takes 3 hits to 100-0
-	armor_penetration = 70
-	sharp = TRUE
-	edge = TRUE
-	throwforce = 0 //This shouldn't be thrown in the first place.
-	hitsound = 'sound/weapons/blade1.ogg'
-	attack_verb = list("slashed", "stabbed", "jabbed", "mauled", "sliced")
-	w_class = ITEMSIZE_NORMAL
 
 /obj/item/melee/robotic/blade/ionic
 	name = "ionic rapier"
@@ -329,7 +380,7 @@
 	name = "stunbaton"
 	desc = "A stun baton for incapacitating people with."
 	icon = 'icons/obj/weapons.dmi'
-	icon_state = "stunbaton_active"
+	icon_state = "stunbaton"
 	item_state = "baton"
 	slot_flags = SLOT_BELT
 	force = 15
@@ -344,7 +395,7 @@
 	var/stunforce = 0
 	var/agonyforce = 60
 	var/hitcost = 500
-	var/status = 1 //On by default.
+	var/status = 0 //Off by default.
 	var/lightcolor = "#FF6A00"
 	borg_flags = COUNTS_AS_ROBOTIC_MELEE
 
@@ -353,7 +404,12 @@
 		icon_state = "[initial(name)]_active"
 	else
 		icon_state = "[initial(name)]"
+	refresh_light()
+
+/obj/item/melee/robotic/baton/refresh_light(clear)
 	if(icon_state == "[initial(name)]_active")
+		if(clear)
+			set_light(0)
 		set_light(2, 1, lightcolor)
 	else
 		set_light(0)
