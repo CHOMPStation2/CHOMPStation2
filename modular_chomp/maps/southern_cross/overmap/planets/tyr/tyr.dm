@@ -61,24 +61,45 @@
 	icon_state = "green"
 	outdoors = OUTDOORS_YES
 
-/area/surface/tyr/medical_center
-	name = "Lost Toww Medical Center"
-	icon_state = "away"
-	outdoors = OUTDOORS_NO
 
-/area/surface/tyr/mining_depot
-	name = "Wreckage Town - Barn"
-	icon_state = "away"
-	outdoors = OUTDOORS_NO
-
-/area/surface/tyr/town_hall
+/area/surface/tyr/church
 	name = "Wreckage Town - Church"
 	icon_state = "away"
 	outdoors = OUTDOORS_NO
 
-/area/surface/tyr/huntery
+/area/surface/tyr/startshuttle
 	name = "Wreckage Town - Shuttle"
-	icon_state = "away"
+	icon_state = "blublacir"
+	outdoors = OUTDOORS_NO
+
+/area/surface/tyr/wrecked_shipA
+	name = "Wrecked Shuttle"
+	icon_state = "blublasqu"
+	outdoors = OUTDOORS_NO
+
+/area/surface/tyr/wrecked_shipB
+	name = "Demolished Shuttle"
+	icon_state = "blublatri"
+	outdoors = OUTDOORS_NO
+
+/area/surface/tyr/wrecked_shipC
+	name = "Crashed Shuttle"
+	icon_state = "cyablacir"
+	outdoors = OUTDOORS_NO
+
+/area/surface/tyr/wrecked_shipD
+	name = "Scraped Shuttle"
+	icon_state = "cyablasqu"
+	outdoors = OUTDOORS_NO
+
+/area/surface/tyr/wrecked_shipE
+	name = "Dead Shuttle"
+	icon_state = "cyablatri"
+	outdoors = OUTDOORS_NO
+
+/area/surface/tyr/wrecked_shipF
+	name = "Sleeping Shuttle"
+	icon_state = "magblacir"
 	outdoors = OUTDOORS_NO
 
 /area/surface/tyr/northern_wilderness
@@ -89,6 +110,11 @@
 
 /area/surface/tyr/southern_wilderness
 	name = "Tyr Wilderness"
+	icon_state = "green"
+	outdoors = OUTDOORS_YES
+
+/area/surface/tyr/junkyard
+	name = "Tyr Junkyard"
 	icon_state = "green"
 	outdoors = OUTDOORS_YES
 
@@ -150,9 +176,13 @@
 	name = "Base Neon - Cargo Branch"
 	icon_state = "dark"
 
+/area/surface/tyr/eclipse_stronghold/mining
+	name = "Base Neon - Digsight"
+	icon_state = "outpost_mine_main"
+
 /area/surface/tyr/eclipse_stronghold/sectorfinale
 	name = "Precursor Ruins"
-	icon_state = "away"
+	icon_state = "outside1"
 
 
 /area/surface/tyr/precursorruins
@@ -224,6 +254,12 @@
 	outdoors = OUTDOORS_AREA
 
 /turf/simulated/floor/outdoors/desert_planet/mud/tyr
+	oxygen		= TYR_MOL_O2
+	nitrogen	= TYR_MOL_N2
+	temperature	= TYR_AVG_TEMP
+	outdoors = OUTDOORS_AREA
+
+/turf/simulated/shuttle/floor/voidcraft/tyr
 	oxygen		= TYR_MOL_O2
 	nitrogen	= TYR_MOL_N2
 	temperature	= TYR_AVG_TEMP

@@ -2763,3 +2763,10 @@ var/list/the_station_areas = list (
 	name = "\improper Junker"
 	icon_state = "shuttlered"
 	requires_power = 1
+
+//chompADD
+/area/shuttle/phoenix
+	name = "\improper phoenix"
+	icon_state = "shuttlered"
+	requires_power = 1
+//ChompADD end
