@@ -1028,10 +1028,6 @@
 /obj/machinery/portable_atmospherics/hydroponics/soil,
 /turf/simulated/floor/outdoors/desert_planet/gravel/tyr,
 /area/surface/tyr)
-"dH" = (
-/mob/living/simple_mob/mechanical/mecha/eclipse/darkmatter_assualt/armored,
-/turf/simulated/shuttle/floor/alien,
-/area/surface/tyr/eclipse_stronghold/sectorfinale)
 "dI" = (
 /obj/structure/table/standard,
 /obj/item/material/minihoe,
@@ -1139,10 +1135,6 @@
 /obj/effect/zone_divider,
 /turf/simulated/floor/carpet/purcarpet,
 /area/surface/tyr/eclipse_stronghold/science)
-"ee" = (
-/obj/effect/zone_divider,
-/turf/simulated/wall/r_concrete,
-/area/surface/tyr/north_caverns)
 "ef" = (
 /obj/machinery/button/remote/blast_door{
 	id = "tyrbonuspuzzlethree"
@@ -3471,6 +3463,10 @@
 /mob/living/simple_mob/humanoid/eclipse/solar/disablernoodle,
 /turf/simulated/floor/carpet/bcarpet,
 /area/surface/tyr/eclipse_stronghold/command)
+"mk" = (
+/mob/living/simple_mob/mechanical/mecha/eclipse/darkmatter_assualt/armored,
+/turf/simulated/shuttle/floor/alien,
+/area/surface/tyr/eclipse_stronghold/sectorfinale)
 "ml" = (
 /obj/structure/table/steel,
 /obj/item/handcuffs/legcuffs,
@@ -3519,6 +3515,10 @@
 	},
 /turf/simulated/floor/bmarble,
 /area/surface/tyr/eclipse_stronghold/cargo)
+"ms" = (
+/obj/effect/zone_divider,
+/turf/simulated/wall/r_concrete,
+/area/surface/tyr/north_caverns)
 "mt" = (
 /obj/effect/floor_decal/corner/lime/border{
 	dir = 4
@@ -42854,7 +42854,7 @@ CW
 CW
 CW
 wY
-dH
+mk
 CW
 CW
 xg
@@ -48000,9 +48000,9 @@ Mz
 "}
 (149,1,1) = {"
 Qr
-ee
-ee
-ee
+ms
+ms
+ms
 Eg
 Eg
 Eg
