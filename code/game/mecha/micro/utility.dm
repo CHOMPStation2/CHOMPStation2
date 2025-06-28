@@ -1,5 +1,3 @@
-/* //CHOMPedit commented micromech stuff, because fuck this trash
-
 /obj/mecha/micro/utility/gopher //small digging creature, to keep the theme
 	desc = "A tough little utility mech for micro crewmembers, based on a miner borg chassis."
 	name = "Gopher"
@@ -20,4 +18,3 @@
 /obj/effect/decal/mecha_wreckage/micro/utility/gopher
 	name = "Gopher wreckage"
 	icon_state = "gopher-broken"
-*/

@@ -116,7 +116,7 @@
 		to_chat(usr,span_warning("The device beeps a warning that the target is already sentient!"))
 		return
 
-	if(is_type_in_list(item, item_vore_blacklist))
+	if(is_type_in_list(item, GLOB.item_vore_blacklist))
 		to_chat(usr,span_danger("The item resists your transfer attempt!"))
 		return
 

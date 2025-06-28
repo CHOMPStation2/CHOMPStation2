@@ -826,7 +826,7 @@ CHOMP Remove end */
 /proc/detect_room_buildmode(var/turf/first, var/allowedAreas = AREA_SPACE)
 	if(!istype(first))
 		return
-	var/list/turf/found = new
+	var/list/turf/found = list()
 	var/list/turf/pending = list(first)
 	while(pending.len)
 		var/turf/T = pending[1]
@@ -861,11 +861,11 @@ CHOMP Remove end */
 	if(A.outdoors)
 		return AREA_SPACE
 
-	for (var/type in BUILDABLE_AREA_TYPES)
+	for (var/type in GLOB.BUILDABLE_AREA_TYPES)
 		if ( istype(A,type) )
 			return AREA_SPACE
 
-	for (var/type in SPECIALS)
+	for (var/type in GLOB.SPECIALS)
 		if ( istype(A,type) )
 			return AREA_SPECIAL
 	return AREA_STATION

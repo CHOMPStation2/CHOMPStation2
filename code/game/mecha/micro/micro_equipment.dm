@@ -3,7 +3,6 @@
 /////////////////////////////
 ////    WEAPONS BELOW    ////
 /////////////////////////////
-/* //CHOMPedit commented micromech stuff, because fuck this trash
 /obj/item/mecha_parts/mecha_equipment/weapon/energy/microlaser
 	w_class = ITEMSIZE_LARGE
 	desc = "A mounted micro laser-carbine for micro mechs." //CHOMPedit
@@ -225,4 +224,4 @@
 		O.loc = src.loc
 	to_chat(usr, span_info("You empty the ore box"))
 
-	return */
+	return

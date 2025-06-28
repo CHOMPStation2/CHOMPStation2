@@ -156,7 +156,7 @@
 /datum/map_template/shelter/dark_portal/New()
 	. = ..()
 	blacklisted_turfs = typecacheof(list(/turf/unsimulated))
-	blacklisted_areas = typecacheof(list(/area/centcom, /area/shadekin))
+	GLOB.blacklisted_areas = typecacheof(list(/area/centcom, /area/shadekin))
 
 /obj/effect/abstract/dark_maw
 	var/mob/living/owner = null

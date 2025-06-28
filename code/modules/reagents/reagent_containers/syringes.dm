@@ -167,7 +167,7 @@
 					to_chat(user, span_notice("[target] is empty."))
 					return
 
-				if(!target.is_open_container() && !istype(target, /obj/structure/reagent_dispensers) && !istype(target, /obj/item/slime_extract) && !istype(target, /obj/item/reagent_containers/food))
+				if(!target.is_open_container() && !istype(target, /obj/structure/reagent_dispensers) && !istype(target, /obj/item/slime_extract) && !istype(target, /obj/item/reagent_containers/food) && !istype(target, /obj/item/reagent_containers/blood))
 					to_chat(user, span_notice("You cannot directly remove reagents from this object."))
 					return
 
@@ -503,7 +503,7 @@
 /obj/item/reagent_containers/syringe/old/Initialize(mapload)
 	. = ..()
 	if(prob(75))
-		var/datum/disease/advance/new_disease = new /datum/disease/advance/random(rand(1, 3), rand(7, 9), 2)
+		var/datum/disease/advance/new_disease = new /datum/disease/advance/random(rand(1, 3), rand(7, 9), 2, infected = src)
 		src.viruses += new_disease
 
 #undef SYRINGE_DRAW
