@@ -70,6 +70,7 @@ mob/living/carbon/proc/charmed() //TODO
 	metabolism = REM * 0.8
 	color = "#8A0829"
 	scannable = 0
+	wiki_flag = WIKI_SPOILER
 
 /datum/reagent/succubi_aphrodisiac/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(prob(3))
