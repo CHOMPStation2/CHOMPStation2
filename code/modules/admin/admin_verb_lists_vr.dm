@@ -82,7 +82,6 @@ var/list/admin_verbs_admin = list(
 	/client/proc/view_chemical_reaction_logs,
 	/client/proc/makepAI,
 	/datum/admins/proc/paralyze_mob,
-	/datum/admins/proc/quick_nif, //VOREStation Add,
 	/datum/admins/proc/quick_authentic_nif, //CHOMPStation add
 	/datum/admins/proc/set_uplink, //VOREStation Add,
 	/datum/admins/proc/sendFax,
@@ -239,7 +238,6 @@ var/list/admin_verbs_debug = list(
 	/datum/admins/proc/view_feedback,
 	/client/proc/stop_sounds,
 	/client/proc/spawn_reagent,
-	/datum/admins/proc/quick_nif, //CHOMPStation Add,
 	/datum/admins/proc/quick_authentic_nif, //CHOMPStation add
 	/client/proc/reload_jobwhitelist, //ChompADD
 	/client/proc/reload_alienwhitelist, //ChompADD
@@ -350,7 +348,6 @@ var/list/admin_verbs_mod = list(
 	/datum/admins/proc/sendFax,
 	/datum/admins/proc/view_persistent_data,
 	/client/proc/start_vote,
-	/datum/admins/proc/quick_nif, //CHOMPStation Add,
 	/client/proc/reload_jobwhitelist, //ChompADD
 	/client/proc/reload_alienwhitelist //ChompADD
 )
@@ -494,7 +491,6 @@ var/list/admin_verbs_event_manager = list(
 	/client/proc/hide_motion_tracker_feedback,
 	/client/proc/modify_event_collector,
 	/client/proc/induce_malfunction,
-	/datum/admins/proc/quick_nif, //CHOMPStation Add,
 	/datum/admins/proc/quick_authentic_nif, //CHOMPStation add
 	/client/proc/reload_jobwhitelist, //ChompADD
 	/client/proc/reload_alienwhitelist //ChompADD
