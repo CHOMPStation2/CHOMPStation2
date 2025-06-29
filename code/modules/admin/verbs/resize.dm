@@ -1,17 +1,8 @@
-<<<<<<< HEAD
-/client/proc/resize(var/mob/living/L in mob_list)
-	set name = "Resize"
-	set desc = "Resizes any living mob without any restrictions on size."
-	set category = "Fun.Event Kit"
-	if(!check_rights(R_ADMIN|R_FUN|R_VAREDIT))
-		return
 
+ADMIN_VERB(resize, (R_ADMIN|R_FUN|R_VAREDIT), "Resize", "Resizes any living mob without any restrictions on size.", "Fun.Event Kit", mob/living/L in mob_list)
 	do_resize(L) //CHOMPEdit
 
 /client/proc/do_resize(var/mob/living/L) //CHOMPEdit
-=======
-ADMIN_VERB(resize, (R_ADMIN|R_FUN|R_VAREDIT), "Resize", "Resizes any living mob without any restrictions on size.", "Fun.Event Kit", mob/living/L in mob_list)
->>>>>>> 8e7345eb2e (More admin verb conversion & Secrets panel overhaul (#17893))
 	var/size_multiplier = tgui_input_number(usr, "Input size multiplier.", "Resize", 1, round_value=FALSE)
 	if(!size_multiplier)
 		return //cancelled

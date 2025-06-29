@@ -82,12 +82,8 @@ var/list/admin_verbs_admin = list(
 	/client/proc/view_chemical_reaction_logs,
 	/client/proc/makepAI,
 	/datum/admins/proc/paralyze_mob,
-<<<<<<< HEAD
-	/client/proc/fixatmos,
 	/datum/admins/proc/quick_nif, //VOREStation Add,
 	/datum/admins/proc/quick_authentic_nif, //CHOMPStation add
-=======
->>>>>>> 8e7345eb2e (More admin verb conversion & Secrets panel overhaul (#17893))
 	/datum/admins/proc/set_uplink, //VOREStation Add,
 	/datum/admins/proc/sendFax,
 	/client/proc/despawn_player,
@@ -128,11 +124,7 @@ var/list/admin_verbs_fun = list(
 //	/client/proc/smite,  //Replaced by player_effects
 	/client/proc/player_effects,
 	/client/proc/admin_lightning_strike,
-<<<<<<< HEAD
-	/client/proc/resize, //VOREStation Add,
 	/client/proc/tgui_admin_lists, //CHOMPStation Add
-=======
->>>>>>> 8e7345eb2e (More admin verb conversion & Secrets panel overhaul (#17893))
 	/client/proc/cmd_admin_droppod_deploy,
 	/client/proc/adminorbit, //VOREStation Add
 	/client/proc/getPlayerStatus, //VORESTation Add

@@ -2052,11 +2052,7 @@
 #include "code\modules\admin\verbs\custom_event.dm"
 #include "code\modules\admin\verbs\deadsay.dm"
 #include "code\modules\admin\verbs\debug.dm"
-<<<<<<< HEAD
 #include "code\modules\admin\verbs\debug_ch.dm"
-#include "code\modules\admin\verbs\debug_vr.dm"
-=======
->>>>>>> 8e7345eb2e (More admin verb conversion & Secrets panel overhaul (#17893))
 #include "code\modules\admin\verbs\diagnostics.dm"
 #include "code\modules\admin\verbs\dice.dm"
 #include "code\modules\admin\verbs\entity_narrate.dm"
