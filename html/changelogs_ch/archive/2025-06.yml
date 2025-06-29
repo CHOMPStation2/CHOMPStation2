@@ -316,3 +316,22 @@
       at the ore vendor.
   Will:
   - qol: Borgs can now examine items to know if any of their grippers can hold it.
+2025-06-29:
+  CHOMPStation2StaffMirrorBot:
+  - code_imp: Reagent unit-test is more strict about duplicated reagent names
+  - qol: You can extract blood from blood bags using a syringe
+  - bugfix: dna block injectors no longer show their entire genome, and instead just
+      the relevant block. Doesn't affect full sequence injectors.
+  - bugfix: dna resequencers from the body record console should not do radiation
+      damage
+  Diana:
+  - bugfix: Xenochimera, spider, diona, shadekin, and alraune now process traits properly.
+  FluffMedic:
+  - rscadd: 4 new tyr ants. Diamond, Uranium, Tritium, Verd
+  - rscadd: New Tyr boss, and reworked tyr boss code
+  - balance: altered several experimental chems
+  zeskorion:
+  - rscadd: two new traits, one for synthetics, one for xenochimerae
+  - rscadd: xenochimera can now break free of cuffs,damage borgs, etc when feral
+  - rscadd: new YR3 monitor icons
+  - rscdel: removed some bad monitor icon sprites

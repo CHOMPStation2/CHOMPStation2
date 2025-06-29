@@ -1,7 +1,0 @@
-author: "zeskorion"
-delete-after: True
-changes:
-  - rscadd: "two new traits, one for synthetics, one for xenochimerae"
-  - rscadd: "xenochimera can now break free of cuffs,damage borgs, etc when feral"
-  - rscadd: "new YR3 monitor icons"
-  - rscdel: "removed some bad monitor icon sprites"
