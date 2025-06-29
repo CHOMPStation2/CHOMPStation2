@@ -247,10 +247,7 @@
 	vis_height = 64
 	icon_x = 64
 	icon_y = 64
-<<<<<<< HEAD
-=======
 	dogborg_sprites = FALSE
->>>>>>> 9b4ca1839c (Multibelt fixes and QoL (#17925))
 
 // Default module sprite
 

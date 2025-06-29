@@ -439,9 +439,6 @@ var/global/list/light_type_cache = list()
 
 	update()
 
-<<<<<<< HEAD
-//VOREstation Edit End
-
 //CHOMPStation Edit Start
 /obj/machinery/light/proc/set_alert_engineering()
 	if(!shows_alerts)
@@ -450,11 +447,8 @@ var/global/list/light_type_cache = list()
 	light_color = "#ff9900"
 	brightness_color = "#ff9900"
 	update()
-
 // CHOMPStation Edit End
 
-=======
->>>>>>> 9b4ca1839c (Multibelt fixes and QoL (#17925))
 // update lighting
 /obj/machinery/light/proc/update(var/trigger = 1)
 	update_icon()

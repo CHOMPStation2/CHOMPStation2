@@ -158,10 +158,6 @@
 
 	if(!has_custom_equipment_sprites)
 		return
-<<<<<<< HEAD
-	..()
-=======
->>>>>>> 9b4ca1839c (Multibelt fixes and QoL (#17925))
 
 	var/obj/item/shockpaddles/robot/jumper/J = locate() in module.modules
 	if(J)
