@@ -79,6 +79,7 @@ will need these:
 - `tools/build/build tgui-clean` - Clean up tgui folder.
 
 > With Juke Build, you can run multiple targets together, e.g.:
+>
 > ```
 > tools/build/build tgui tgui-lint tgui-tsc tgui-test
 > ```
@@ -190,12 +191,8 @@ Inspection". You can then f12 to open the standard chrome dev tools.
 
 ## License
 
-<<<<<<< HEAD
-Source code is covered by CHOMPStation's parent license - **AGPL-3.0** (see the main [README](../README.md)), unless otherwise indicated.
-=======
 Source code is covered by /tg/station's parent license - **AGPL-3.0** (see the
 main [README](../README.md)), unless otherwise indicated.
->>>>>>> 97bd12b862 (removes tgui sonar, dev server oversights (#17929))
 
 Some files are annotated with a copyright header, which explicitly states the
 copyright holder and license of the file. Most of the core tgui source code is
