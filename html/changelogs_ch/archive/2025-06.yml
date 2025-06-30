@@ -335,3 +335,25 @@
   - rscadd: xenochimera can now break free of cuffs,damage borgs, etc when feral
   - rscadd: new YR3 monitor icons
   - rscdel: removed some bad monitor icon sprites
+2025-06-30:
+  CHOMPStation2StaffMirrorBot:
+  - rscdel: tgui-sonar
+  - bugfix: bunch of right issues with the new ticket system and mentors
+  - admin: More verbs moved to the new subsystem
+  - admin: Secrets panel overhauled
+  Diana:
+  - rscadd: Starlight will come through windows and illuminate areas exposed to space!
+  - rscadd: borgs now have a basic melee weapon (puppy jaws/knife)
+  - rscadd: Light fixtures can now directly be interfaced via multitool.
+  - bugfix: Fixes a bunch of bugs with the multibelt and borg gripper
+  - qol: Borg material dispenser can now pick up materials
+  - qol: Borg multibelt & Gripper can now open the radial menu via Ctrl-Z
+  - qol: Borg default crowbar changed to borg jaws
+  - bugfix: Borg welder no longer passively drains battery
+  - qol: Borg gripper will now select the final slot when first spawned, allowing
+      you to pick up until the gripper is full.
+  - bugfix: Gargoyle statues now regenerate energy properly
+  - balance: Gargoyle statues now burn under extreme temperatures (>1600C)
+  - balance: Gargoyle statues now regenerate health VERY slowly when in statue state
+      (150 hp will take 50 minutes)
+  - code_imp: Gargoyle code quality increased in general.
