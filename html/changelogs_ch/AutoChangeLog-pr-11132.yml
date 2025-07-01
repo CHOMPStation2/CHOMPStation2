@@ -1,0 +1,6 @@
+author: "TheCaramelion"
+delete-after: True
+changes:
+  - bugfix: "Fixed Teshari being too healthy"
+  - bugfix: "Fixed Teshari being too brittle/flammable"
+  - bugfix: "Fixed Teshari holder sprites"
