@@ -1,0 +1,7 @@
+2025-07-02:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: Fixed virus databases breaking in Medical Computers
+  TheCaramelion:
+  - bugfix: Fixed Teshari being too healthy
+  - bugfix: Fixed Teshari being too brittle/flammable
+  - bugfix: Fixed Teshari holder sprites
