@@ -76,7 +76,7 @@
 	id = REAGENT_ID_WATER
 	result = REAGENT_ID_WATER
 	required_reagents = list(REAGENT_ID_OXYGEN = 1, REAGENT_ID_HYDROGEN = 2)
-	inhibitors = list(REAGENT_ID_SODIUM = 1) // So it doesnt turn into water when you try to make lye.
+	inhibitors = list(REAGENT_ID_SODIUM = 1, REAGENT_ID_CARBON = 1) // So it doesnt turn into water when you try to make lye. // CHOMPEdit
 	result_amount = 1
 
 /decl/chemical_reaction/instant/thermite
