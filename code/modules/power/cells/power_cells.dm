@@ -193,8 +193,8 @@
 /obj/item/cell/emergency_light
 	name = "miniature power cell"
 	desc = "A tiny power cell with a very low power capacity. Used in light fixtures to power them in the event of an outage."
-	charge = 360 // CHOMPEdit
-	maxcharge = 360 //Emergency lights use 0.2 W per tick, meaning ~30 minutes of emergency power from a cell // CHOMPEdit
+	charge = 720
+	maxcharge = 720 //Emergency lights use 0.2 W per tick, meaning ~60 minutes of emergency power from a cell
 	matter = list(MAT_GLASS = 20)
 	icon_state = "em_light"
 	connector_type = "emergency"
