@@ -12,19 +12,17 @@
 	if(using_map && using_map.full_name)
 		map_name = using_map.full_name
 
-	for(var/X in GLOB.clients)
-		var/client/C = X
-		if(C)
-			counts++
-		if(C && !(isnewplayer(C.mob) || istype(C.mob, /mob/observer)))
-			if(C && C.mob && isbelly(C.mob.loc))
+	for(var/client/C in GLOB.clients)
+		counts++
+		if(!(isnewplayer(C.mob) || istype(C.mob, /mob/observer)))
+			if(C.mob && isbelly(C.mob.loc))
 				bellied++
 		if(C.is_afk())
 			afks++
 		else
 			active++
 
-	return "Current server status:\n**Web Manifest:** <https://vore-station.net/manifest.php>\n**Players:** [counts]\n**Active:** [active]\n**AFK:** [afks]\n**Bellied:** [bellied]\n\n**Round Duration:** [roundduration2text()]\n**Current Map:** [map_name]"
+	return "Current server status:\n**Web Manifest:** <http://manifest.chompstation13.net/>\n**Players:** [counts]\n**Active:** [active]\n**Bar Statues:** [afks]\n**Bellied:** [bellied]\n\n**Round Duration:** [roundduration2text()]\n**Current Map:** [map_name]" // CHOMPEdit
 
 /datum/tgs_chat_command/parsetest
 	name = "parsetest"
