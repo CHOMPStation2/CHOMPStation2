@@ -1,4 +1,4 @@
-// Simple app meant to test chompstation's TGS integration given a fresh TGS install with the default account
+// Simple app meant to test tgstation's TGS integration given a fresh TGS install with the default account
 //
 // Args: Repository Owner/Name, TGS instance path, TGS API port, Pushed commit hash (For .tgs.yml access), GitHub Token, (OPTIONAL) PR Number
 
@@ -176,7 +176,7 @@ try
 		new InstanceCreateRequest
 		{
 			ConfigurationType = ConfigurationType.HostWrite,
-			Name = "chompstation",
+			Name = "tgstation",
 			Path = instancePath
 		},
 		default);

@@ -1,3 +1,7 @@
+#define RESTART_COUNTER_PATH "data/round_counter.txt"
+
+GLOBAL_VAR(restart_counter)
+
 #define RECOMMENDED_VERSION 513
 /world/New()
 	world_startup_time = world.timeofday
@@ -32,7 +36,7 @@
 	if(byond_version < RECOMMENDED_VERSION)
 		to_world_log("Your server's byond version does not meet the recommended requirements for this server. Please update BYOND")
 
-	TgsNew(new /datum/tgs_event_handler/impl, TGS_SECURITY_TRUSTED) // CHOMPEdit - tgs event handler
+	InitTgs()
 
 	config.Load(params[OVERRIDE_CONFIG_DIRECTORY_PARAMETER])
 
@@ -40,7 +44,6 @@
 
 	ConfigLoaded()
 	makeDatumRefLists()
-	VgsNew()
 
 	var servername = CONFIG_GET(string/servername)
 	if(config && servername != null && CONFIG_GET(flag/server_suffix) && world.port > 0)
@@ -103,6 +106,11 @@
 
 	return
 
+/// Initializes TGS and loads the returned revising info into GLOB.revdata
+/world/proc/InitTgs()
+	TgsNew(new /datum/tgs_event_handler/impl, TGS_SECURITY_TRUSTED)
+	GLOB.revdata.load_tgs_info()
+
 /// Runs after config is loaded but before Master is initialized
 /world/proc/ConfigLoaded()
 	// Everything in here is prioritized in a very specific way.
@@ -119,12 +127,15 @@
 		else //probably windows, if not this should work anyway
 			CONFIG_SET(string/python_path, "python")
 
+	if(fexists(RESTART_COUNTER_PATH))
+		GLOB.restart_counter = text2num(trim(file2text(RESTART_COUNTER_PATH)))
+		fdel(RESTART_COUNTER_PATH)
+
 var/world_topic_spam_protect_ip = "0.0.0.0"
 var/world_topic_spam_protect_time = world.timeofday
 
 /world/Topic(T, addr, master, key)
-	VGS_TOPIC // VOREStation Edit - VGS //CHOMP Edit swapped lines around
-	TGS_TOPIC //CHOMP Edit swapped lines around
+	TGS_TOPIC
 	log_topic("\"[T]\", from:[addr], master:[master], key:[key]")
 
 	if (T == "ping")
@@ -275,8 +286,8 @@ var/world_topic_spam_protect_time = world.timeofday
 		return list2params(positions)
 
 	else if(T == "revision")
-		if(GLOB.revdata.revision)
-			return list2params(list(branch = GLOB.revdata.branch, date = GLOB.revdata.date, revision = GLOB.revdata.revision))
+		if(GLOB.revdata.commit)
+			return list2params(list(testmerge = GLOB.revdata.testmerge, date = GLOB.revdata.date, commit = GLOB.revdata.commit, originmastercommit = GLOB.revdata.originmastercommit))
 		else
 			return "unknown"
 
@@ -457,6 +468,25 @@ var/world_topic_spam_protect_time = world.timeofday
 		else
 			return "Database connection failed or not set up"
 
+/// Returns TRUE if the world should do a TGS hard reboot.
+/world/proc/check_hard_reboot()
+	if(!TgsAvailable())
+		return FALSE
+	// byond-tracy can't clean up itself, and thus we should always hard reboot if its enabled, to avoid an infinitely growing trace.
+	//if(Tracy?.enabled)
+	//	return TRUE
+	var/ruhr = CONFIG_GET(number/rounds_until_hard_restart)
+	switch(ruhr)
+		if(-1)
+			return FALSE
+		if(0)
+			return TRUE
+		else
+			if(GLOB.restart_counter >= ruhr)
+				return TRUE
+			else
+				text2file("[++GLOB.restart_counter]", RESTART_COUNTER_PATH)
+				return FALSE
 
 /world/Reboot(reason = 0, fast_track = FALSE)
 	/*spawn(0)
@@ -476,6 +506,14 @@ var/world_topic_spam_protect_time = world.timeofday
 		for(var/client/C in GLOB.clients)
 			if(CONFIG_GET(string/server))	//if you set a server location in config.txt, it sends you there instead of trying to reconnect to the same world address. -- NeoFite
 				C << link("byond://[CONFIG_GET(string/server)]")
+
+	if(check_hard_reboot())
+		log_world("World hard rebooted at [time_stamp()]")
+		//shutdown_logging() // See comment below.
+		//QDEL_NULL(Tracy)
+		//QDEL_NULL(Debugger)
+		TgsEndProcess()
+		return ..()
 
 	TgsReboot()
 	log_world("World rebooted at [time_stamp()]")
@@ -774,3 +812,5 @@ var/global/game_id = null
 	if (debug_server)
 		call_ext(debug_server, "auxtools_shutdown")()
 	. = ..()
+
+#undef RESTART_COUNTER_PATH
