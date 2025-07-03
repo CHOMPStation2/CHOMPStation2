@@ -151,7 +151,10 @@
 			log_and_message_admins("[ckey] has registered their Discord ID. Their Discord snowflake ID is: [their_id]", src) //YW EDIT
 			admin_chat_message(message = "[ckey] has registered their Discord ID. Their Discord is: <@[their_id]>", color = "#4eff22") //YW EDIT
 			notes_add(ckey, "Discord ID: [their_id]")
-			world.VgsAddMemberRole(their_id)
+			var/port = CONFIG_GET(number/register_server_port)
+			if(port)
+				// Designed to be used with `tools/registration`
+				world.Export("http://127.0.0.1:[port]?member=[url_encode(json_encode(their_id))]")
 		else
 			to_chat(src, span_warning("There was an error registering your Discord ID in the database. Contact an administrator."))
 			log_and_message_admins("[ckey] failed to register their Discord ID. Their Discord snowflake ID is: [their_id]. Is the database connected?", src)
@@ -352,6 +355,8 @@
 			alert = TRUE
 		if(alert)
 			for(var/client/X in GLOB.admins)
+				if(!check_rights_for(X, R_HOLDER))
+					continue
 				if(X.prefs?.read_preference(/datum/preference/toggle/holder/play_adminhelp_ping))
 					X << 'sound/voice/bcriminal.ogg' //ChompEDIT - back to beepsky
 				window_flash(X)

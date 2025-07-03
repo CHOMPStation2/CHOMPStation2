@@ -116,3 +116,15 @@
 
 /datum/tgs_chat_command/vore/Run(datum/tgs_chat_user/sender, params)
 	return "vore"
+
+// - FAX
+/datum/tgs_chat_command/readfax
+	name = "readfax"
+	help_text = "Reads a fax with specified faxid"
+	admin_only = TRUE
+
+/datum/tgs_chat_command/readfax/Run(sender, params)
+	var/list/all_params = splittext(params, " ")
+	var/faxid = all_params[1]
+	var/faxmsg = return_file_text("[CONFIG_GET(string/fax_export_dir)]/fax_[faxid].html")
+	return "FAX: ```[strip_html_properly(faxmsg)]```"

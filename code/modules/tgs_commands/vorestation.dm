@@ -8,23 +8,21 @@
 	var/afks = 0
 	var/active = 0
 	var/bellied = 0
-//	var/map_name = "n/a" //CHOMP Remove we don't use this and it is causing problems with the dmb compiler.
-//	if(using_map && using_map.full_name)
-//		map_name = using_map.full_name
+	var/map_name = "n/a"
+	if(using_map && using_map.full_name)
+		map_name = using_map.full_name
 
-	for(var/X in GLOB.clients)
-		var/client/C = X
-		if(C)
-			counts++
-			if(!(isnewplayer(C.mob) || istype(C.mob, /mob/observer)))
-				if(C.mob && isbelly(C.mob.loc))
-					bellied++
-			if(C.is_afk())
-				afks++
-			else
-				active++
+	for(var/client/C in GLOB.clients)
+		counts++
+		if(!(isnewplayer(C.mob) || istype(C.mob, /mob/observer)))
+			if(C.mob && isbelly(C.mob.loc))
+				bellied++
+		if(C.is_afk())
+			afks++
+		else
+			active++
 
-	return "Current server status:\n**Web Manifest:** <http://manifest.chompstation13.net/>\n**Players:** [counts]\n**Active:** [active]\n**Bar Statues:** [afks]\n**Bellied:** [bellied]\n\n**Round Duration:** [roundduration2text()]" //CHOMPEdit
+	return "Current server status:\n**Web Manifest:** <http://manifest.chompstation13.net/>\n**Players:** [counts]\n**Active:** [active]\n**Bar Statues:** [afks]\n**Bellied:** [bellied]\n\n**Round Duration:** [roundduration2text()]\n**Current Map:** [map_name]" // CHOMPEdit
 
 /datum/tgs_chat_command/parsetest
 	name = "parsetest"
@@ -140,21 +138,3 @@ GLOBAL_LIST_EMPTY(pending_discord_registrations)
 	GLOB.pending_discord_registrations[GLOB.pending_discord_registrations.len] = list("ckey" = key_to_find, "id" = sender.id, "time" = world.realtime)
 
 	return "[sender.friendly_name], I've sent you a message in-game. Please verify your username there to complete your registration within 10 minutes."
-
-/*//YW Commands //CHOMP Commenting this out for now. Should now be using Virgo's version.
-//Status
-/datum/tgs_chat_command/status/Run(datum/tgs_chat_user/sender, params)
-	return "Current server status:**Players:** [TGS_CLIENT_COUNT]\n**Round Duration:** [roundduration2text()]"
-*/
-// - FAX
-/datum/tgs_chat_command/readfax
-	name = "readfax"
-	help_text = "Reads a fax with specified faxid"
-	//required_parameters = 1 Is not a thing
-	admin_only = TRUE
-
-/datum/tgs_chat_command/readfax/Run(sender, params)
-	var/list/all_params = splittext(params, " ")
-	var/faxid = all_params[1]
-	var/faxmsg = return_file_text("[CONFIG_GET(string/fax_export_dir)]/fax_[faxid].html") // CHOMPEdit
-	return "FAX: ```[strip_html_properly(faxmsg)]```"
