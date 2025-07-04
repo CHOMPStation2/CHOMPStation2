@@ -1,4 +1,4 @@
-/mob/living/carbon/human/ai_controlled/greytide/Initialize(mapload)
+/mob/living/carbon/human/ai_controlled/greytide/Initialize(mapload, new_species)
 	to_wear_r_hand = pick(
 		prob(20); /obj/item/storage/toolbox/electrical,
 		prob(20); /obj/item/storage/toolbox/mechanical,
