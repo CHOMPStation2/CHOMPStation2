@@ -148,5 +148,5 @@
 
 //CHOMPEdit Start: Emotes!
 /mob/living/voice/get_available_emotes()
-	. |= global._simple_mob_default_emotes.Copy()
+	LAZYOR(., global._simple_mob_default_emotes)
 //CHOMPEdit End
