@@ -12,3 +12,6 @@
       mechanic)
   Tost:
   - bugfix: Emergency lights no longer blow up on activation.
+2025-07-04:
+  Tost:
+  - balance: Emergency lights now last longer
