@@ -147,8 +147,13 @@ var/global/list/valid_ringtones = list(
 	data["pda_type"] = pdachoicelist[pref.pdachoice]
 	data["communicator_visibility"] = pref.communicator_visibility // boolean
 	data["ringtone"] = pref.ringtone
+<<<<<<< HEAD
 	// data["shoes"] = pref.shoe_hater
 	data["jacket"] = pref.no_jacket
+=======
+	data["shoes"] = !pref.shoe_hater
+	data["jacket"] = !pref.no_jacket
+>>>>>>> 3735a31e05 (Fix a bunch of issues and runtimes (#17951))
 
 	return data
 
