@@ -198,12 +198,8 @@
 #include "code\__defines\wires.dm"
 #include "code\__defines\xenoarcheaology.dm"
 #include "code\__defines\ZAS.dm"
-<<<<<<< HEAD
 #include "code\__defines\_flags\turf_flags_ch.dm"
-#include "code\__defines\dcs\flags.dm"
-=======
 #include "code\__defines\dcs\declarations.dm"
->>>>>>> 47564346fb (View Variables Update (2) (#17946))
 #include "code\__defines\dcs\helpers.dm"
 #include "code\__defines\dcs\signals.dm"
 #include "code\__defines\dcs\signals\signals_client.dm"
@@ -246,11 +242,8 @@
 #include "code\_helpers\announcements.dm"
 #include "code\_helpers\atmospherics.dm"
 #include "code\_helpers\atom_movables.dm"
-<<<<<<< HEAD
-#include "code\_helpers\distance_ch.dm"
-=======
 #include "code\_helpers\datums.dm"
->>>>>>> 47564346fb (View Variables Update (2) (#17946))
+#include "code\_helpers\distance_ch.dm"
 #include "code\_helpers\events.dm"
 #include "code\_helpers\files.dm"
 #include "code\_helpers\filters.dm"
@@ -2057,11 +2050,7 @@
 #include "code\modules\admin\callproc\callproc.dm"
 #include "code\modules\admin\DB ban\functions.dm"
 #include "code\modules\admin\verb_datums\_admin_verb_datum.dm"
-<<<<<<< HEAD
 #include "code\modules\admin\verbs\admin_ch.dm"
-=======
-#include "code\modules\admin\verbs\adminfun.dm"
->>>>>>> 47564346fb (View Variables Update (2) (#17946))
 #include "code\modules\admin\verbs\adminjump.dm"
 #include "code\modules\admin\verbs\adminpm.dm"
 #include "code\modules\admin\verbs\adminsay.dm"
