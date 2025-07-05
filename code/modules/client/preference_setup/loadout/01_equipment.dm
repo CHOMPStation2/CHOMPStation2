@@ -147,8 +147,8 @@ var/global/list/valid_ringtones = list(
 	data["pda_type"] = pdachoicelist[pref.pdachoice]
 	data["communicator_visibility"] = pref.communicator_visibility // boolean
 	data["ringtone"] = pref.ringtone
-	// data["shoes"] = pref.shoe_hater
-	data["jacket"] = pref.no_jacket
+	// data["shoes"] = !pref.shoe_hater // CHOMPRemove
+	data["jacket"] = !pref.no_jacket
 
 	return data
 
