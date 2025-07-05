@@ -67,7 +67,7 @@
 	|| species.name == SPECIES_PROTEAN \
 	|| species.name == SPECIES_REPLICANT)
 		return FALSE
-	if(mind && mind.changeling)
+	if(is_changeling(src))
 		return FALSE
 
 	var/obj/item/organ/internal/malignant/neworgan = new type_path( src, TRUE)
