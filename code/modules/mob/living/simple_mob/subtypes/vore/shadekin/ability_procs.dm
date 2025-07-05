@@ -1,20 +1,22 @@
 // Phase shifting procs (and related procs)
-/mob/living/simple_mob/shadekin/proc/phase_shift()
+/mob/living/simple_mob/shadekin/phase_shift()
 	var/turf/T = get_turf(src)
-	var/area/A = T.loc	//RS Port #658
+	var/area/A = T.loc
 	if(!T.CanPass(src,T) || loc != T)
 		to_chat(src,span_warning("You can't use that here!"))
 		return FALSE
+<<<<<<< HEAD
 	//CHOMPAdd Start
 	if((get_area(src).flags & PHASE_SHIELDED))
 		to_chat(src,span_warning("This area is preventing you from phasing!"))
 		return FALSE
 	//CHOMPAdd End
 	//RS Port #658 Start
+=======
+>>>>>>> 5917c7bdee (Completes the /datum/component/shadekin work (#17895))
 	if(!client?.holder && A.flag_check(AREA_BLOCK_PHASE_SHIFT))
 		to_chat(src,span_warning("You can't use that here!"))
 		return FALSE
-	//RS Port #658 End
 
 	else if(doing_phase)
 		to_chat(src, span_warning("You are already trying to phase!"))
@@ -22,13 +24,14 @@
 
 	doing_phase = TRUE
 	//Shifting in
-	if(ability_flags & AB_PHASE_SHIFTED)
+	if(comp.in_phase)
 		phase_in(T)
 	//Shifting out
 	else
 		phase_out(T)
 	doing_phase = FALSE
 
+<<<<<<< HEAD
 /mob/living/simple_mob/shadekin/proc/phase_in(var/turf/T)
 	if(ability_flags & AB_PHASE_SHIFTED)
 
@@ -138,20 +141,22 @@
 		density = FALSE
 		force_max_speed = TRUE
 
+=======
+>>>>>>> 5917c7bdee (Completes the /datum/component/shadekin work (#17895))
 /mob/living/simple_mob/shadekin/UnarmedAttack()
-	if(ability_flags & AB_PHASE_SHIFTED)
+	if(comp.in_phase)
 		return FALSE //Nope.
 
 	. = ..()
 
 /mob/living/simple_mob/shadekin/can_fall()
-	if(ability_flags & AB_PHASE_SHIFTED)
+	if(comp.in_phase)
 		return FALSE //Nope!
 
 	return ..()
 
 /mob/living/simple_mob/shadekin/zMove(direction)
-	if(ability_flags & AB_PHASE_SHIFTED)
+	if(comp.in_phase)
 		var/turf/destination = (direction == UP) ? GetAbove(src) : GetBelow(src)
 		if(destination)
 			forceMove(destination)

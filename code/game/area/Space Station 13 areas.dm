@@ -2693,6 +2693,7 @@ var/list/the_station_areas = list (
 	dynamic_lighting = 0
 	requires_power = 0
 
+<<<<<<< HEAD
 
 //CHOMPSTATION AREAS
 //Moved hangars to here from Southern cross areas.
@@ -2770,3 +2771,11 @@ var/list/the_station_areas = list (
 	icon_state = "shuttlered"
 	requires_power = 1
 //ChompADD end
+=======
+/area/shadekin
+	name = "\improper Shadekin Retreat"
+	icon_state = "blue"
+	requires_power = 0
+	ambience = AMBIENCE_OTHERWORLDLY
+	flags = RAD_SHIELDED | AREA_FLAG_IS_NOT_PERSISTENT | BLUE_SHIELDED | AREA_ALLOW_LARGE_SIZE | AREA_LIMIT_DARK_RESPITE | AREA_ALLOW_CLOCKOUT
+>>>>>>> 5917c7bdee (Completes the /datum/component/shadekin work (#17895))

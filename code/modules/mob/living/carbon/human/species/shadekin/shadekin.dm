@@ -72,7 +72,6 @@
 	breath_type = null
 	poison_type = null
 	water_breather = TRUE	//They don't quite breathe
-	var/doing_phase = FALSE // Prevent bugs when spamming phase button
 
 	vision_flags = SEE_SELF|SEE_MOBS
 	appearance_flags = HAS_HAIR_COLOR | HAS_LIPS | HAS_SKIN_COLOR | HAS_EYE_COLOR | HAS_UNDERWEAR
@@ -105,6 +104,7 @@
 		BP_R_FOOT = list("path" = /obj/item/organ/external/foot/right)
 		)
 
+<<<<<<< HEAD
 	//SHADEKIN-UNIQUE STUFF GOES HERE
 	var/list/shadekin_abilities = list(/datum/power/shadekin/phase_shift,
 									   /datum/power/shadekin/regenerate_other,
@@ -131,6 +131,10 @@
 		shadekin_ability_datums.Add(SKP)
 
 //CHOMPEdit Begin - Actually phase to the Dark on death
+=======
+	species_component = /datum/component/shadekin
+
+>>>>>>> 5917c7bdee (Completes the /datum/component/shadekin work (#17895))
 /datum/species/shadekin/handle_death(var/mob/living/carbon/human/H)
 	H.clear_dark_maws() //CHOMPEdit - clear dark maws on death or similar
 	if(respite_activating)
@@ -270,6 +274,7 @@
 /datum/species/shadekin/get_random_name()
 	return "shadekin"
 
+<<<<<<< HEAD
 /datum/species/shadekin/handle_environment_special(var/mob/living/carbon/human/H)
 	handle_shade(H)
 	..()
@@ -456,13 +461,18 @@
 
 	return eyecolor_type
 
+=======
+>>>>>>> 5917c7bdee (Completes the /datum/component/shadekin work (#17895))
 /datum/species/shadekin/post_spawn_special(var/mob/living/carbon/human/H)
 	.=..()
 
-	var/eyecolor_type = get_shadekin_eyecolor(H)
+	var/datum/component/shadekin/SK = H.get_shadekin_component()
+	if(!SK)
+		CRASH("A shadekin [H] somehow is missing their shadekin component post-spawn!")
 
-	switch(eyecolor_type)
+	switch(SK.eye_color)
 		if(BLUE_EYES)
+<<<<<<< HEAD
 			total_health = 75 //ChompEDIT - balance tweaks
 			energy_light = 0.5
 			energy_dark = 0.5
@@ -492,19 +502,26 @@
 			energy_light = -0.5
 			energy_dark = 0.5 //ChompEDIT
 			nutrition_conversion_scaling = 1.5 //CHOMPEdit - Add nutrition <-> dark energy conversion
+=======
+			total_health = 100
+		if(RED_EYES)
+			total_health = 200
+		if(PURPLE_EYES)
+			total_health = 150
+		if(YELLOW_EYES)
+			total_health = 100
+		if(GREEN_EYES)
+			total_health = 100
+		if(ORANGE_EYES)
+			total_health = 175
+>>>>>>> 5917c7bdee (Completes the /datum/component/shadekin work (#17895))
 
 	H.maxHealth = total_health
 
 	H.health = H.getMaxHealth()
 
 /datum/species/shadekin/produceCopy(var/list/traits, var/mob/living/carbon/human/H, var/custom_base, var/reset_dna = TRUE) // Traitgenes reset_dna flag required, or genes get reset on resleeve
-
 	var/datum/species/shadekin/new_copy = ..()
-
 	new_copy.total_health = total_health
-
-	new_copy.energy_light = energy_light
-
-	new_copy.energy_dark = energy_dark
 
 	return new_copy
