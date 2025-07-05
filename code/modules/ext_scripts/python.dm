@@ -25,10 +25,6 @@
 	if(world.system_type == MS_WINDOWS)
 		script = replacetext(script, "/", "\\")
 
-<<<<<<< HEAD
-	var/command = CONFIG_GET(string/python_path) + " " + script + " " + args // CHOMPEdit
-=======
-	var/command = config.python_path + " " + script + " " + arguments
->>>>>>> 3735a31e05 (Fix a bunch of issues and runtimes (#17951))
+	var/command = CONFIG_GET(string/python_path) + " " + script + " " + arguments
 	return shell(command)
 	*/

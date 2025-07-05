@@ -423,15 +423,9 @@ GLOBAL_LIST_EMPTY(text_tag_cache)
 	t = replacetext(t, "\[/grid\]", "</td></tr></table>")
 	t = replacetext(t, "\[row\]", "</td><tr>")
 	t = replacetext(t, "\[cell\]", "<td>")
-<<<<<<< HEAD
-	t = replacetext(t, "\[logo\]", "<img src = https://raw.githubusercontent.com/CHOMPStation2/CHOMPStation2/master/html/images/ntlogo.png>") //CHOMPEdit
-	t = replacetext(t, "\[redlogo\]", "<img src = https://raw.githubusercontent.com/CHOMPStation2/CHOMPStation2/master/html/images/redntlogo.png>") //CHOMPEdit
-	t = replacetext(t, "\[sglogo\]", "<img src = https://raw.githubusercontent.com/CHOMPStation2/CHOMPStation2/master/html/images/sglogo.png>") //CHOMPEdit
-=======
 	t = replacetext(t, "\[logo\]", "<img src=\ref['html/images/ntlogo.png']")
 	t = replacetext(t, "\[redlogo\]", "<img src=\ref['html/images/redntlogo.png']>")
 	t = replacetext(t, "\[sglogo\]", "<img src=\ref['html/images/sglogo.png']")
->>>>>>> 3735a31e05 (Fix a bunch of issues and runtimes (#17951))
 	t = replacetext(t, "\[editorbr\]", "")
 	return t
 
