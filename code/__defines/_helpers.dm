@@ -1,5 +1,3 @@
-/// Takes a datum as input, returns its ref string
-#define text_ref(datum) ref(datum)
 // Stuff that is relatively "core" and is used in other defines/helpers
 
 /**
@@ -15,8 +13,6 @@
 /// The Y/Height dimension of ICON_SIZE. This will more than likely be the smaller axis.
 #define ICON_SIZE_Y 32
 
-<<<<<<< HEAD
-=======
 /// Takes a datum as input, returns its ref string
 #define text_ref(datum) ref(datum)
 
@@ -27,5 +23,4 @@
 
 /// A null statement to guard against EmptyBlock lint without necessitating the use of pass()
 /// Used to avoid proc-call overhead. But use sparingly. Probably pointless in most places.
->>>>>>> 47564346fb (View Variables Update (2) (#17946))
 #define EMPTY_BLOCK_GUARD ;

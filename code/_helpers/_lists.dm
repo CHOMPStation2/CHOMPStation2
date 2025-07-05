@@ -10,22 +10,6 @@
  * Misc
  */
 
-<<<<<<< HEAD
-//CHOMPEdit Begin
-///compare two lists, returns TRUE if they are the same
-/proc/compare_list(list/l,list/d)
-	if(!islist(l) || !islist(d))
-		return FALSE
-
-	if(l.len != d.len)
-		return FALSE
-
-	for(var/i in 1 to l.len)
-		if(l[i] != d[i])
-			return FALSE
-
-	return TRUE
-=======
 /*
  * ## Lazylists
  *
@@ -61,14 +45,12 @@
 #define LAZYINITLIST(L) if (!L) { L = list(); }
 ///Returns the key of the submitted item in the list
 #define LAZYFIND(L, V) (L ? L.Find(V) : 0)
->>>>>>> 47564346fb (View Variables Update (2) (#17946))
 
 /// Returns the top (last) element from the list, does not remove it from the list. Stack functionality.
 /proc/peek(list/target_list)
 	var/list_length = length(target_list)
 	if(list_length != 0)
 		return target_list[list_length]
-//CHOMPEdit End
 
 //Returns a list in plain english as a string
 /proc/english_list(var/list/input, nothing_text = "nothing", and_text = " and ", comma_text = ", ", final_comma_text = ",")
@@ -1054,4 +1036,18 @@ var/global/list/json_cache = list()
 				return_list += bit
 
 	return return_list
+
+///compare two lists, returns TRUE if they are the same
+/proc/compare_list(list/l,list/d)
+	if(!islist(l) || !islist(d))
+		return FALSE
+
+	if(l.len != d.len)
+		return FALSE
+
+	for(var/i in 1 to l.len)
+		if(l[i] != d[i])
+			return FALSE
+
+	return TRUE
 //CHOMPAdd end
