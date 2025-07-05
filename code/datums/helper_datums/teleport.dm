@@ -6,7 +6,7 @@ var/bluespace_item_types = newlist(/obj/item/storage/backpack/holding,
 )
 
 //wrapper
-/proc/do_teleport(ateleatom, adestination, aprecision=0, afteleport=1, aeffectin=null, aeffectout=null, asoundin=null, asoundout=null, local=TRUE, bohsafe=FALSE) //CHOMPStation Edit
+/proc/do_teleport(ateleatom, adestination, aprecision=0, afteleport=1, aeffectin=null, aeffectout=null, asoundin=null, asoundout=null, local=TRUE, bohsafe=FALSE)
 	new /datum/teleport/instant/science(arglist(args))
 	return
 
@@ -19,17 +19,17 @@ var/bluespace_item_types = newlist(/obj/item/storage/backpack/holding,
 	var/soundin //soundfile to play before teleportation
 	var/soundout //soundfile to play after teleportation
 	var/force_teleport = 1 //if false, teleport will use Move() proc (dense objects will prevent teleportation)
-	var/local = TRUE //VOREStation Add - If false, can teleport from/to any z-level
-	var/bohsafe = FALSE //CHOMP Add - if true, can teleport safely with a BoH
+	var/local = TRUE //If false, can teleport from/to any z-level
+	var/bohsafe = FALSE //If true, can teleport safely with a BoH
 
 
-/datum/teleport/New(ateleatom, adestination, aprecision=0, afteleport=1, aeffectin=null, aeffectout=null, asoundin=null, asoundout=null, local=TRUE, bohsafe=FALSE) //CHOMPStation Edit
+/datum/teleport/New(ateleatom, adestination, aprecision=0, afteleport=1, aeffectin=null, aeffectout=null, asoundin=null, asoundout=null, local=TRUE, bohsafe=FALSE)
 	..()
 	if(!initTeleport(arglist(args)))
 		return 0
 	return 1
 
-/datum/teleport/proc/initTeleport(ateleatom,adestination,aprecision,afteleport,aeffectin,aeffectout,asoundin,asoundout,local,bohsafe) //CHOMPStation Edit
+/datum/teleport/proc/initTeleport(ateleatom,adestination,aprecision,afteleport,aeffectin,aeffectout,asoundin,asoundout,local,bohsafe)
 	if(!setTeleatom(ateleatom))
 		return 0
 	if(!setDestination(adestination))
@@ -40,7 +40,7 @@ var/bluespace_item_types = newlist(/obj/item/storage/backpack/holding,
 	setEffects(aeffectin,aeffectout)
 	setForceTeleport(afteleport)
 	setSounds(asoundin,asoundout)
-	src.local = local // VOREStation Add
+	src.local = local
 	return 1
 
 //must succeed
@@ -123,7 +123,7 @@ var/bluespace_item_types = newlist(/obj/item/storage/backpack/holding,
 		var/mob/living/L = teleatom
 		if(L.buckled)
 			C = L.buckled
-	if(attempt_vr(src,"try_televore",args)) return //VOREStation Edit - Telenoms.
+	if(attempt_vr(src,"try_televore",args)) return
 	if(force_teleport)
 		teleatom.forceMove(destturf)
 		playSpecials(destturf,effectout,soundout)
@@ -142,7 +142,7 @@ var/bluespace_item_types = newlist(/obj/item/storage/backpack/holding,
 
 /datum/teleport/instant //teleports when datum is created
 
-/datum/teleport/instant/New(ateleatom, adestination, aprecision=0, afteleport=1, bohsafe=0, aeffectin=null, aeffectout=null, asoundin=null, asoundout=null) //CHOMP edit
+/datum/teleport/instant/New(ateleatom, adestination, aprecision=0, afteleport=1, bohsafe=0, aeffectin=null, aeffectout=null, asoundin=null, asoundout=null)
 	if(..())
 		teleport()
 	return
@@ -152,20 +152,18 @@ var/bluespace_item_types = newlist(/obj/item/storage/backpack/holding,
 	if(!aeffectin || !aeffectout)
 		var/datum/effect/effect/system/spark_spread/aeffect = new
 		aeffect.set_up(5, 1, teleatom)
-		//CHOMP add start
 		var/datum/effect/effect/system/spark_spread/aeffect2 = new
-		aeffect2.set_up(5, 1, teleatom)		//This  looks stupid, but it doesn't work unless I do
-		//CHOMP add end
+		aeffect2.set_up(5, 1, teleatom)
 		effectin = effectin || aeffect
-		effectout = effectout || aeffect2 //CHOMP edit
+		effectout = effectout || aeffect2
 		return 1
 	else
 		return ..()
 
 /datum/teleport/instant/science/setPrecision(aprecision)
 	..()
-	if(bohsafe) //CHOMPedit
-		return 1 //CHOMPedit
+	if(bohsafe)
+		return 1
 
 	var/list/bluespace_things = newlist()
 
@@ -174,14 +172,12 @@ var/bluespace_item_types = newlist(/obj/item/storage/backpack/holding,
 			precision = rand(1, 100)
 		bluespace_things |= teleatom.search_contents_for(item)
 
-	//VOREStation Addition Start: Prevent taurriding abuse
 	if(isliving(teleatom))
 		var/mob/living/L = teleatom
 		if(LAZYLEN(L.buckled_mobs))
 			for(var/mob/rider in L.buckled_mobs)
 				for (var/item in bluespace_item_types)
 					bluespace_things |= rider.search_contents_for(item)
-	//VOREStation Addition End: Prevent taurriding abuse
 
 	if(bluespace_things.len)
 		precision = max(rand(1,100)*bluespace_things.len,100)
@@ -202,17 +198,6 @@ var/bluespace_item_types = newlist(/obj/item/storage/backpack/holding,
 		else
 			teleatom.visible_message(span_danger("\The [teleatom] bounces off of the portal!"))
 		return 0
-	/* VOREStation Removal
-	if(destination.z in using_map.admin_levels) //CentCom z-level
-		if(istype(teleatom, /obj/mecha))
-			var/obj/mecha/MM = teleatom
-			to_chat(MM.occupant, span_danger("\The [MM] would not survive the jump to a location so far away!"))
-			return 0
-		if(!isemptylist(teleatom.search_contents_for(/obj/item/storage/backpack/holding)))
-			teleatom.visible_message(span_danger("\The [teleatom] bounces off of the portal!"))
-			return 0
-	*/ //VOREStation Removal End
-	//VOREStation Edit Start
 	var/obstructed = 0
 	var/turf/dest_turf = get_turf(destination)
 	if(local && !(dest_turf.z in using_map.player_levels))
@@ -239,4 +224,3 @@ var/bluespace_item_types = newlist(/obj/item/storage/backpack/holding,
 		return 0
 	else
 		return 1
-	//VOREStation Edit End
