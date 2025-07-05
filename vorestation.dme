@@ -2051,6 +2051,7 @@
 #include "code\modules\admin\DB ban\functions.dm"
 #include "code\modules\admin\verb_datums\_admin_verb_datum.dm"
 #include "code\modules\admin\verbs\admin_ch.dm"
+#include "code\modules\admin\verbs\adminfun.dm"
 #include "code\modules\admin\verbs\adminjump.dm"
 #include "code\modules\admin\verbs\adminpm.dm"
 #include "code\modules\admin\verbs\adminsay.dm"
