@@ -65,7 +65,7 @@
 	///Eyecolor
 	var/eye_color = BLUE_EYES
 	///For downstream. Enables some extra verbs. Causes things to drop in hand when you phase.
-	var/extended_kin = FALSE
+	var/extended_kin = TRUE
 
 /datum/component/shadekin/phase_only
 	shadekin_abilities = list(/datum/power/shadekin/phase_shift)

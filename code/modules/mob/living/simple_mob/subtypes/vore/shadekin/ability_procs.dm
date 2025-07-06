@@ -5,15 +5,6 @@
 	if(!T.CanPass(src,T) || loc != T)
 		to_chat(src,span_warning("You can't use that here!"))
 		return FALSE
-<<<<<<< HEAD
-	//CHOMPAdd Start
-	if((get_area(src).flags & PHASE_SHIELDED))
-		to_chat(src,span_warning("This area is preventing you from phasing!"))
-		return FALSE
-	//CHOMPAdd End
-	//RS Port #658 Start
-=======
->>>>>>> 5917c7bdee (Completes the /datum/component/shadekin work (#17895))
 	if(!client?.holder && A.flag_check(AREA_BLOCK_PHASE_SHIFT))
 		to_chat(src,span_warning("You can't use that here!"))
 		return FALSE
@@ -31,118 +22,6 @@
 		phase_out(T)
 	doing_phase = FALSE
 
-<<<<<<< HEAD
-/mob/living/simple_mob/shadekin/proc/phase_in(var/turf/T)
-	if(ability_flags & AB_PHASE_SHIFTED)
-
-		// pre-change
-		forceMove(T)
-		var/original_canmove = canmove
-		SetStunned(0)
-		SetWeakened(0)
-		if(buckled)
-			buckled.unbuckle_mob()
-		if(pulledby)
-			pulledby.stop_pulling()
-		stop_pulling()
-		canmove = FALSE
-
-		// change
-		ability_flags &= ~AB_PHASE_SHIFTED
-		throwpass = FALSE
-		name = real_name
-		for(var/obj/belly/B as anything in vore_organs)
-			B.escapable = initial(B.escapable)
-
-		cut_overlays()
-		alpha = initial(alpha)
-		invisibility = initial(invisibility)
-		see_invisible = initial(see_invisible)
-		incorporeal_move = initial(incorporeal_move)
-		density = initial(density)
-		force_max_speed = initial(force_max_speed)
-
-		//Cosmetics mostly
-		flick("tp_in",src)
-		automatic_custom_emote(VISIBLE_MESSAGE,"phases in!")
-
-		addtimer(CALLBACK(src, PROC_REF(shadekin_complete_phase_in), original_canmove), 5, TIMER_DELETE_ME)
-
-
-/mob/living/simple_mob/shadekin/proc/shadekin_complete_phase_in(var/original_canmove)
-	canmove = original_canmove
-
-	//Potential phase-in vore
-	if(can_be_drop_pred) //Toggleable in vore panel
-		var/list/potentials = living_mobs(0)
-		if(potentials.len)
-			var/mob/living/target = pick(potentials)
-			if(istype(target) && target.devourable && target.can_be_drop_prey && vore_selected)
-				target.forceMove(vore_selected)
-				to_chat(target,span_vwarning("\The [src] phases in around you, [vore_selected.vore_verb]ing you into their [vore_selected.name]!"))
-
-	// Do this after the potential vore, so we get the belly
-	update_icon()
-
-	/* CHOMPRemove Start
-	//Affect nearby lights
-	var/destroy_lights = 0
-	if(eye_state == RED_EYES)
-		destroy_lights = 80
-	if(eye_state == PURPLE_EYES)
-		destroy_lights = 25
-
-	for(var/obj/machinery/light/L in GLOB.machines)
-		if(L.z != z || get_dist(src,L) > 10)
-			continue
-
-		if(prob(destroy_lights))
-			addtimer(CALLBACK(L, TYPE_PROC_REF(/obj/machinery/light, broken)), rand(5,25), TIMER_DELETE_ME)
-		else
-			L.flicker(10)
-	*/// CHOMPRemove End
-	handle_phasein_flicker() // CHOMPEdit, special handle for phase-in light flicker
-
-/mob/living/simple_mob/shadekin/proc/phase_out(var/turf/T)
-	if(!(ability_flags & AB_PHASE_SHIFTED))
-
-		// pre-change
-		forceMove(T)
-		var/original_canmove = canmove
-		SetStunned(0)
-		SetWeakened(0)
-		if(buckled)
-			buckled.unbuckle_mob()
-		if(pulledby)
-			pulledby.stop_pulling()
-		stop_pulling()
-		canmove = FALSE
-
-		// change
-		ability_flags |= AB_PHASE_SHIFTED
-		throwpass = TRUE
-		automatic_custom_emote(VISIBLE_MESSAGE,"phases out!")
-		real_name = name
-		name = "Something"
-
-		for(var/obj/belly/B as anything in vore_organs)
-			B.escapable = FALSE
-
-		cut_overlays()
-		flick("tp_out",src)
-		sleep(5)
-		invisibility = INVISIBILITY_LEVEL_TWO
-		see_invisible = INVISIBILITY_LEVEL_TWO
-		update_icon()
-		alpha = 127
-
-		canmove = original_canmove
-		incorporeal_move = TRUE
-		density = FALSE
-		force_max_speed = TRUE
-
-=======
->>>>>>> 5917c7bdee (Completes the /datum/component/shadekin work (#17895))
 /mob/living/simple_mob/shadekin/UnarmedAttack()
 	if(comp.in_phase)
 		return FALSE //Nope.

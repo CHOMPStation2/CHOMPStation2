@@ -568,11 +568,11 @@ GLOBAL_DATUM(spoiler_obfuscation_image, /image)
 		return
 	if(!isliving(ourmob))
 		return
-	if(ourmob.client?.holder)
+	if(check_rights_for(ourmob.client, R_HOLDER)) //If we're an admin, we don't get affected by phase blockers.
 		return
 	var/datum/component/shadekin/SK = ourmob.get_shadekin_component()
 	if(SK && SK.in_phase)
-		ourmob.phase_in(ourmob.loc, SK)
+		SK.attack_dephase(ourmob.loc, src)
 
 /area/proc/isAlwaysIndoors()
 	return FALSE

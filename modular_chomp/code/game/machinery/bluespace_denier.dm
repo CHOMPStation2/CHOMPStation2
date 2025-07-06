@@ -57,13 +57,11 @@
 	last_pulse = world.time
 	use_power(1500)
 
-	for (var/mob/O in viewers(src, null))
-		if(get_dist(src, O) > range)
+	for(var/mob/living/O in range(range, src))
+		var/datum/component/shadekin/SK = O.get_shadekin_component()
+		if(!SK)
 			continue
-		if(ishuman(O))
-			var/mob/living/carbon/human/H = O
-			if(H.get_species() == SPECIES_SHADEKIN && (H.ability_flags & AB_PHASE_SHIFTED))
-				H.attack_dephase(null, src)
+		SK.attack_dephase(null, src) //Won't dephase them if they're not in phase. It has built in checks.
 
 /obj/machinery/bluespace_denier/emp_act(severity)
 	if(stat & (BROKEN|NOPOWER))
