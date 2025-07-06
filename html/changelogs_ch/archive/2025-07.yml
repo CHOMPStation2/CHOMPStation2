@@ -15,3 +15,36 @@
 2025-07-04:
   Tost:
   - balance: Emergency lights now last longer
+2025-07-06:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: distillery target temperature can no longer be set to null
+  - bugfix: maint lurkers not spawning with their languages
+  - bugfix: protean rigs can no longer get stripped in bellies
+  - bugfix: contractor IDs now take over mining and survey points
+  - bugfix: show and jacket spawn selection being inverted
+  - bugfix: paper icons for 516
+  - bugfix: food tray should update properly on item removal
+  - bugfix: transfer fluids from target
+  - qol: vore bellies now load instantly
+  - admin: fix server log rights
+  - admin: fix deadmin verb
+  - admin: adds missing space to some atom narrate messages
+  - code_imp: clean up some mob hooks
+  Diana:
+  - bugfix: 3 color wolf (Fat vwag) fixed. No longer has broken sprites.
+  - qol: Cyborg gripper will now smartly stack material stacks.
+  - qol: Cyborg gripper will no longer unselect stacks when used
+  - bugfix: Cyborg surgical and botany multibelt no longer have offset
+  - bugfix: Antags will now properly get antag-only text when examining things.
+  Diana, Kash:
+  - rscadd: Changelings can now absorb via VORE.
+  - refactor: Changeling is now a component
+  - balance: Changelings now get a genetic point upon absorbing someone
+  - balance: Changelings don't mc-die from epi
+  - balance: Changeling spacesuit is now free
+  - balance: A lot of changeling perks adjusted in minor ways. More to come.
+  - rscdel: Changeling death sting deleted.
+  - balance: Changeling unfat sting now reduces nutrition by 85% or 100 nutrition,
+      whatever's higher.
+  - qol: Changeling evolution menu is now TGUI
+  - code_imp: General code cleanup in Changeling code. Now runs smoother.
