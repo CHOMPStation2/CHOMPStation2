@@ -13,6 +13,7 @@
 
 	tail_alt = TAIL_UPPER_LAYER // not a toggle for humans but a pointer for what layer the tail should be when facing North/East/West
 
+<<<<<<< HEAD
 /mob/living/carbon/human/proc/shadekin_get_energy()
 	var/datum/species/shadekin/SK = species
 
@@ -52,3 +53,6 @@
 		return 0
 
 	SK.set_energy(src, SK.get_energy(src) + amount)
+=======
+	var/list/body_writing // assoc list by BP_ key
+>>>>>>> d3a54514ca (Add Body Writing to humans (#17963))
