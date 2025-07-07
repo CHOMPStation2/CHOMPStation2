@@ -569,7 +569,7 @@ GLOBAL_DATUM(spoiler_obfuscation_image, /image)
 		return
 	if(!isliving(ourmob))
 		return
-	if(ourmob.client?.holder)
+	if(check_rights_for(ourmob.client, R_HOLDER))
 		return
 	if(issimplekin(ourmob))
 		var/mob/living/simple_mob/shadekin/SK = ourmob
