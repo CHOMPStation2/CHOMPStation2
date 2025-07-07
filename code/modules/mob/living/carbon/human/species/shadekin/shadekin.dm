@@ -101,6 +101,7 @@
 		)
 
 	species_component = /datum/component/shadekin/full //CHOMPEdit: Enabling full shadekin.
+	component_requires_late_recalc = TRUE
 
 /datum/species/shadekin/handle_death(var/mob/living/carbon/human/H)
 	var/special_handling = TRUE //varswitch for downstream //CHOMPEdit - Enable.
