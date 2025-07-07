@@ -148,9 +148,9 @@
 			I.damage = 0
 			I.status = 0
 			if(I.organ_tag == O_EYES)
-				target.sdisabilities &= ~BLIND
+				H.sdisabilities &= ~BLIND
 			if(I.organ_tag == O_LUNGS)
-				target.SetLosebreath(0)
+				H.SetLosebreath(0)
 		H.nutrition = 0
 		H.invisibility = INVISIBILITY_SHADEKIN
 		BITRESET(H.hud_updateflag, HEALTH_HUD)
