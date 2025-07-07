@@ -38,6 +38,8 @@
 	var/normal_phase = TRUE
 	///If we drop items on phase.
 	var/drop_items_on_phase = FALSE
+	///If only humans count as watchers
+	var/human_only_watchers = TRUE
 
 	//Dark Respite Vars (Unused on Virgo)
 	///If we are in dark respite or not
