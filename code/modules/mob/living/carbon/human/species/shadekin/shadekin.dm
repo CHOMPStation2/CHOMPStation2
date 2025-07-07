@@ -225,17 +225,17 @@
 
 	switch(SK.eye_color)
 		if(BLUE_EYES)
-			total_health = 100
+			total_health = 75 //CHOMPEdit
 		if(RED_EYES)
-			total_health = 200
+			total_health = 150 //CHOMPEdit
 		if(PURPLE_EYES)
 			total_health = 150
 		if(YELLOW_EYES)
-			total_health = 100
+			total_health = 50 //CHOMPEdit
 		if(GREEN_EYES)
 			total_health = 100
 		if(ORANGE_EYES)
-			total_health = 175
+			total_health = 125 //CHOMPEdit
 
 	H.maxHealth = total_health
 
