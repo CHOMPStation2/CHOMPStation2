@@ -48,3 +48,20 @@
       whatever's higher.
   - qol: Changeling evolution menu is now TGUI
   - code_imp: General code cleanup in Changeling code. Now runs smoother.
+2025-07-07:
+  CHOMPStation2StaffMirrorBot:
+  - rscadd: Added subsystem for handling admin verbs
+  - rscadd: Added particle editor
+  - rscadd: Added filter editor
+  - rscadd: Added matrix editor
+  - rscadd: Added new vv dropdown options for atoms
+  - admin: '''modify transform'' dropdown option'
+  - admin: '''spin animation'' dropdown option'
+  - admin: '''stop all animations'' dropdown option'
+  - admin: '''edit filters'' dropdown option'
+  - admin: '''test matrices'' dropdown option'
+  - refactor: The tgui admin state can now take one or multiple permissions that are
+      allowed to view said state
+  - refactor: Updated vv code
+  - refactor: Moved a few verbs from the old admin verb system to the new one
+  - qol: moves robot sprite setting to the visual tab
