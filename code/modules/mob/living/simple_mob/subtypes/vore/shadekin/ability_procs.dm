@@ -5,17 +5,13 @@
 	if(!T.CanPass(src,T) || loc != T)
 		to_chat(src,span_warning("You can't use that here!"))
 		return FALSE
-<<<<<<< HEAD
 	//CHOMPAdd Start
 	if((get_area(src).flags & PHASE_SHIELDED))
 		to_chat(src,span_warning("This area is preventing you from phasing!"))
 		return FALSE
 	//CHOMPAdd End
 	//RS Port #658 Start
-	if(!client?.holder && A.flag_check(AREA_BLOCK_PHASE_SHIFT))
-=======
 	if(!check_rights_for(client, R_HOLDER) && A.flag_check(AREA_BLOCK_PHASE_SHIFT))
->>>>>>> 1890a567f1 (mass refactor of holder checks (#17967))
 		to_chat(src,span_warning("You can't use that here!"))
 		return FALSE
 	//RS Port #658 End
