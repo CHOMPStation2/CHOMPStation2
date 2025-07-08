@@ -33,7 +33,7 @@
 	var/to_wear_l_hand = null
 	var/to_wear_r_hand = /obj/item/melee/baton
 
-/mob/living/carbon/human/ai_controlled/Initialize(mapload)
+/mob/living/carbon/human/ai_controlled/Initialize(mapload, new_species)
 	if(generate_gender)
 		gender = pick(list(MALE, FEMALE, PLURAL, NEUTER))
 
