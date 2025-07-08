@@ -13,6 +13,8 @@
 
 	tail_alt = TAIL_UPPER_LAYER // not a toggle for humans but a pointer for what layer the tail should be when facing North/East/West
 
+	var/list/body_writing // assoc list by BP_ key
+
 /mob/living/carbon/human/proc/shadekin_get_energy()
 	var/datum/species/shadekin/SK = species
 
