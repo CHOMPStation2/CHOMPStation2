@@ -68,7 +68,7 @@
 
 	if(wielded) //Trying to unwield it
 		unwield()
-		user << span_notice("You are now carrying the [name] with one hand.")
+		to_chat(user, span_notice("You are now carrying the [name] with one hand."))
 		if (src.unwieldsound)
 			playsound(src.loc, unwieldsound, 50, 1)
 
@@ -78,10 +78,10 @@
 
 	else //Trying to wield it
 		if(user.get_inactive_hand())
-			user << span_warning("You need your other hand to be empty")
+			to_chat(user, span_warning("You need your other hand to be empty"))
 			return
 		wield()
-		user << span_notice("You grab the [initial(name)] with both hands.")
+		to_chat(user, span_notice("You grab the [initial(name)] with both hands."))
 		if (src.wieldsound)
 			playsound(src.loc, wieldsound, 50, 1)
 
