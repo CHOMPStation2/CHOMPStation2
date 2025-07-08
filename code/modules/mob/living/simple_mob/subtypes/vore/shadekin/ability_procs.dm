@@ -11,7 +11,7 @@
 		return FALSE
 	//CHOMPAdd End
 	//RS Port #658 Start
-	if(!client?.holder && A.flag_check(AREA_BLOCK_PHASE_SHIFT))
+	if(!check_rights_for(client, R_HOLDER) && A.flag_check(AREA_BLOCK_PHASE_SHIFT))
 		to_chat(src,span_warning("You can't use that here!"))
 		return FALSE
 	//RS Port #658 End
