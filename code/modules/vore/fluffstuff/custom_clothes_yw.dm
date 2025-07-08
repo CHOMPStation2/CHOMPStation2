@@ -24,12 +24,12 @@
 			icon_state = "[initial(icon_state)]_open"
 			item_state = "[initial(item_state)]_open"
 			unbuttoned = 1
-			usr << "You unbutton the coat."
+			to_chat(usr, span_notice("You unbutton the coat."))
 		if(1)
 			icon_state = "[initial(icon_state)]"
 			item_state = "[initial(item_state)]"
 			unbuttoned = 0
-			usr << "You button up the coat."
+			to_chat(usr, span_notice("You button up the coat."))
 	usr.update_inv_wear_suit()
 
 
@@ -64,12 +64,12 @@
 			icon_state = "[initial(icon_state)]_open"
 			item_state = "[initial(item_state)]_open"
 			unbuttoned = 1
-			usr << "You unbutton the coat."
+			to_chat(usr, span_notice("You unbutton the coat."))
 		if(1)
 			icon_state = "[initial(icon_state)]"
 			item_state = "[initial(item_state)]"
 			unbuttoned = 0
-			usr << "You button up the coat."
+			to_chat(usr, span_notice("You button up the coat."))
 	usr.update_inv_wear_suit()
 
 /obj/item/clothing/under/fluff/redax_2
@@ -185,12 +185,12 @@
 			icon_state = "[initial(icon_state)]_open"
 			item_state = "[initial(item_state)]_open"
 			unbuttoned = 1
-			usr << "You unbutton the coat."
+			to_chat(usr, span_notice("You unbutton the coat."))
 		if(1)
 			icon_state = "[initial(icon_state)]"
 			item_state = "[initial(item_state)]"
 			unbuttoned = 0
-			usr << "You button up the coat."
+			to_chat(usr, span_notice("You button up the coat."))
 	usr.update_inv_wear_suit()
 
 /obj/item/clothing/mask/fluff/lucerna_1 //Doesn't work for some reason
@@ -377,14 +377,14 @@
 		set_slowdown(0)
 		force = 3
 		if(icon_base) icon_state = "[icon_base]0"
-		user << "You disable the mag-pulse traction system."
+		to_chat(user, span_notice("You disable the mag-pulse traction system."))
 	else
 		item_flags |= NOSLIP
 		magpulse = 1
 		set_slowdown(3)
 		force = 5
 		if(icon_base) icon_state = "[icon_base]1"
-		user << "You enable the mag-pulse traction system."
+		to_chat(user, span_notice("You enable the mag-pulse traction system."))
 	user.update_inv_shoes()	//so our mob-overlays update
 	user.update_action_buttons()
 
@@ -639,14 +639,14 @@
 		set_slowdown(0)
 		force = 3
 		if(icon_base) icon_state = "[icon_base]0"
-		user << "You disable the mag-pulse traction system."
+		to_chat(user, span_notice("You disable the mag-pulse traction system."))
 	else
 		item_flags |= NOSLIP
 		magpulse = 1
 		set_slowdown(3)
 		force = 5
 		if(icon_base) icon_state = "[icon_base]1"
-		user << "You enable the mag-pulse traction system."
+		to_chat(user, span_notice("You enable the mag-pulse traction system."))
 	user.update_inv_shoes()	//so our mob-overlays update
 	user.update_action_buttons()
 
@@ -866,12 +866,12 @@
 			icon_state = "[initial(icon_state)]"
 			item_state = "[initial(item_state)]"
 			hoodup = 1
-			usr << "You take off the hood."
+			to_chat(usr, span_notice("You take off the hood."))
 		if(1)
 			icon_state = "[initial(icon_state)]_up"
 			item_state = "[initial(item_state)]_up"
 			hoodup= 0
-			usr << "You put on the hood."
+			to_chat(usr, span_notice("You put on the hood."))
 	usr.update_inv_wear_suit()
 
 //Kita
@@ -1116,11 +1116,11 @@
 	if(src.icon_state == "ushanka2down")
 		src.icon_state = "ushanka2up"
 		src.item_state = "ushanka2up"
-		user << "You raise the ear flaps on the ushanka."
+		to_chat(user, span_notice("You raise the ear flaps on the ushanka."))
 	else
 		src.icon_state = "ushanka2down"
 		src.item_state = "ushanka2down"
-		user << "You lower the ear flaps on the ushanka."
+		to_chat(user, span_notice("You lower the ear flaps on the ushanka."))
 
 // ******
 // Benl8561
@@ -1211,11 +1211,11 @@
 	if(ring_on)
 		icon_state = "[base_icon]"
 		ring_on = 0
-		usr << span_notice("You remove the right earring.")
+		to_chat(usr, span_notice("You remove the right earring."))
 	else
 		icon_state = "[base_icon]_on"
 		ring_on = 1
-		usr << span_notice("You put on the right earring.")
+		to_chat(usr, span_notice("You put on the right earring."))
 
 	update_clothing_icon()
 

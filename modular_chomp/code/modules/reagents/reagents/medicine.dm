@@ -61,7 +61,7 @@
 			if (alert(M,"This chemical will change your gender, proceed?", "Warning", "Yes", "No") == "Yes")
 				M.change_gender_identity(gender_change)
 				M.change_gender(gender_change)
-				M << span_warning("You feel like a new person.") //success
+				to_chat(M, span_warning("You feel like a new person."))
 
 //Chemist expansion
 //deathblood

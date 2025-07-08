@@ -219,14 +219,14 @@
 			var/mob/living/carbon/human/H = M
 			if(H == user)
 				if(icon_state == "scrap" && H.check_has_mouth()) //YW Edit Start
-					user << span_warning("You begin to stuff \the [src] into your mouth!")
+					to_chat(user, span_warning("You begin to stuff \the [src] into your mouth!"))
 					if(do_after(user, 30))
-						user << span_warning("You stuff \the [src] into your mouth!")
+						to_chat(user, span_warning("You stuff \the [src] into your mouth!"))
 						H.ingested.add_reagent("paper", 10)
 						H.adjustOxyLoss(10)
 						qdel(src)
 				else
-					user << span_notice("You wipe off the lipstick with [src].")
+					to_chat(user, span_notice("You wipe off the lipstick with [src]."))
 					H.lip_style = null
 					H.update_icons_body()
 			else
