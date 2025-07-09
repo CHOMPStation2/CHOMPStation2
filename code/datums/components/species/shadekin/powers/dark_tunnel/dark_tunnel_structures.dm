@@ -1,11 +1,8 @@
-// Kind of like a combination of all the teleporter stuff all in one package.
-// And without the power requirements or accuracy loss,
-//   though it requires a shadekin to open the minion portals.
-
-// Also yes this needs to be outside of modular chomp because there are variables that have to be map overriden.
+GLOBAL_LIST_BOILERPLATE(all_darkportal_hubs, /obj/structure/dark_portal/hub)
+GLOBAL_LIST_BOILERPLATE(all_darkportal_minions, /obj/structure/dark_portal/minion)
 /obj/structure/dark_portal
 	name = "Dark portal"
-	icon = 'modular_chomp/icons/obj/shadekin_portal.dmi'
+	icon = 'icons/obj/shadekin_portal.dmi'
 	density = TRUE
 	anchored = TRUE
 	var/locked = null
@@ -16,51 +13,15 @@
 /obj/structure/dark_portal/proc/close_portal()
 	return
 
-/obj/structure/dark_portal/proc/is_shadekin(mob/shade_maybe)
-	if(istype(shade_maybe, /mob/living/simple_mob/shadekin))
-		return TRUE
-	else if(istype(shade_maybe, /mob/living/carbon/human))
-		var/mob/living/carbon/human/carbonkin_maybe = shade_maybe
-		if(carbonkin_maybe.get_species() == SPECIES_SHADEKIN)
-			return TRUE
-	return FALSE
-
-/obj/structure/dark_portal/proc/get_ability_flags(mob/shade_maybe)
-	if(istype(shade_maybe, /mob/living/simple_mob/shadekin))
-		var/mob/living/simple_mob/shadekin/shadekin = shade_maybe
-		return shadekin.ability_flags
-	else if(istype(shade_maybe, /mob/living/carbon/human))
-		var/mob/living/carbon/human/carbonkin_maybe = shade_maybe
-		return carbonkin_maybe.ability_flags
-	return 0
-
-/obj/structure/dark_portal/proc/get_shadekin_energy(mob/shade_maybe)
-	if(istype(shade_maybe, /mob/living/simple_mob/shadekin))
-		var/mob/living/simple_mob/shadekin/shadekin = shade_maybe
-		return shadekin.comp.dark_energy
-	else if(istype(shade_maybe, /mob/living/carbon/human))
-		var/mob/living/carbon/human/carbonkin_maybe = shade_maybe
-		return carbonkin_maybe.shadekin_get_energy()
-	return 0
-
-/obj/structure/dark_portal/proc/adjust_shadekin_energy(mob/shade_maybe, amount)
-	if(istype(shade_maybe, /mob/living/simple_mob/shadekin))
-		var/mob/living/simple_mob/shadekin/shadekin = shade_maybe
-		shadekin.comp.dark_energy += amount
-		return
-	else if(istype(shade_maybe, /mob/living/carbon/human))
-		var/mob/living/carbon/human/carbonkin_maybe = shade_maybe
-		return carbonkin_maybe.shadekin_adjust_energy(amount)
-	return 0
-
 /obj/structure/dark_portal/proc/teleport(atom/movable/M as mob|obj)
 	if(!locked)
 		return
-	if(is_shadekin(M))
-		if(get_ability_flags(M) & AB_DARK_RESPITE)
+	if(isliving(M))
+		var/mob/living/to_check = M
+		var/datum/component/shadekin/SK = to_check.GetComponent(/datum/component/shadekin)
+		if(SK && SK.in_dark_respite)
 			to_chat(M, span_warning("You can't go through this portal so soon after an emergency warp!"))
-			var/mob/living/user = M
-			user.Stun(10)
+			to_check.Stun(10)
 			return
 
 	do_teleport(M, locked, precision, local = FALSE, bohsafe = TRUE)
@@ -77,8 +38,6 @@
 	var/list/destination_station_areas // Override this in map files!
 	var/list/destination_wilderness_areas // Override this in map files!
 
-GLOBAL_LIST_BOILERPLATE(all_darkportal_hubs, /obj/structure/dark_portal/hub)
-
 /obj/structure/dark_portal/hub/Initialize(mapload)
 	. = ..()
 	locked = src
@@ -93,12 +52,15 @@ GLOBAL_LIST_BOILERPLATE(all_darkportal_hubs, /obj/structure/dark_portal/hub)
 	locked_name = src.name
 	precision = 1
 
-/obj/structure/dark_portal/hub/attack_hand(mob/user)
-	if(is_shadekin(user))
-		if(get_ability_flags(user) & AB_DARK_RESPITE)
+/obj/structure/dark_portal/hub/attack_hand(mob/living/user)
+	if(!isliving(user))
+		return
+	var/datum/component/shadekin/SK = user.GetComponent(/datum/component/shadekin)
+	if(SK)
+		if(SK.in_dark_respite)
 			to_chat(user, span_warning("You can't use this so soon after an emergency warp!"))
 			return
-		if(get_ability_flags(user) & AB_PHASE_SHIFTED)
+		if(SK.in_phase)
 			to_chat(user, span_warning("You can't use this while phase shifted!"))
 			return
 		if(locked != src)
@@ -172,20 +134,21 @@ GLOBAL_LIST_BOILERPLATE(all_darkportal_hubs, /obj/structure/dark_portal/hub)
 /obj/structure/dark_portal/minion
 	icon_state = "minion0"
 
-GLOBAL_LIST_BOILERPLATE(all_darkportal_minions, /obj/structure/dark_portal/minion)
-
 /obj/structure/dark_portal/minion/close_portal()
 	locked = null
 	locked_name = ""
 	precision = 1
 	icon_state = "minion0"
 
-/obj/structure/dark_portal/minion/attack_hand(mob/user)
-	if(is_shadekin(user))
-		if(get_ability_flags(user) & AB_DARK_RESPITE)
+/obj/structure/dark_portal/minion/attack_hand(mob/living/user)
+	if(!isliving(user))
+		return
+	var/datum/component/shadekin/SK = user.GetComponent(/datum/component/shadekin)
+	if(SK)
+		if(SK.in_dark_respite)
 			to_chat(user, span_warning("You can't use this so soon after an emergency warp!"))
 			return FALSE
-		if(get_ability_flags(user) & AB_PHASE_SHIFTED)
+		if(SK.in_phase)
 			to_chat(user, span_warning("You can't use this while phase shifted!"))
 			return FALSE
 		if(icon_state == "minion1")
@@ -195,21 +158,19 @@ GLOBAL_LIST_BOILERPLATE(all_darkportal_minions, /obj/structure/dark_portal/minio
 			if(confirm == "Yes")
 				close_portal()
 				return
-		if(get_shadekin_energy(user) < 10)
+		if(SK.shadekin_get_energy() < 10)
 			to_chat(user, span_warning("Not enough energy to open up the portal! (10 required)"))
 			return
 		if(!LAZYLEN(GLOB.all_darkportal_hubs))
 			to_chat(user, span_warning("No hub portals exist!"))
 			return
 		if(LAZYLEN(GLOB.all_darkportal_hubs) == 1)
-			adjust_shadekin_energy(user, -10)
+			SK.shadekin_adjust_energy(user, -10)
 			var/obj/structure/dark_portal/target = GLOB.all_darkportal_hubs[1]
 			locked = target
 			locked_name = target.name
 			icon_state = "minion1"
-			spawn(3000)
-				if(locked == target)
-					close_portal()
+			addtimer(CALLBACK(src, PROC_REF(check_to_close),target), 5 MINUTES, TIMER_DELETE_ME)
 			return
 		var/list/L = list()
 		for(var/obj/structure/dark_portal/hub/H in GLOB.all_darkportal_hubs)
@@ -220,15 +181,22 @@ GLOBAL_LIST_BOILERPLATE(all_darkportal_minions, /obj/structure/dark_portal/minio
 		locked = L[desc]
 		locked_name = desc
 		icon_state = "minion1"
-		spawn(3000)
-			if(locked == L[desc])
-				close_portal()
+		addtimer(CALLBACK(src, PROC_REF(check_to_close_desc),locked), 5 MINUTES, TIMER_DELETE_ME)
+		return
 	else if(!istype(user, /mob/living))
 		return
 	else if(icon_state == "minion0")
 		to_chat(user, span_notice("You touch the portal... nothing happens."))
 	else
 		to_chat(user, span_notice("You touch the portal, your hand able to pass through without harm."))
+
+/obj/structure/dark_portal/proc/check_to_close(var/obj/structure/dark_portal/target)
+	if(locked == target)
+		close_portal()
+
+/obj/structure/dark_portal/proc/check_to_close_desc(var/old_locked)
+	if(locked == old_locked)
+		close_portal()
 
 /obj/structure/dark_portal/minion/Bumped(M as mob|obj)
 	spawn()
