@@ -70,3 +70,8 @@
   - bugfix: Virologists can change the name of their viruses now
   FluffMedic:
   - balance: voidsuits should no longer breach
+2025-07-09:
+  CHOMPStation2StaffMirrorBot:
+  - rscadd: You can now write messages on people with a pen~ A shower cleans them
+      off.
+  - bugfix: mining voucher can no longer be redeemed multiple times
