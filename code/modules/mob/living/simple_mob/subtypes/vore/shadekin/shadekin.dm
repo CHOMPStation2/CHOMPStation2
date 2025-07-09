@@ -128,11 +128,6 @@
 	if(eye_desc)
 		desc += " This one has [eye_desc]!"
 
-	var/list/ability_types = subtypesof(/obj/effect/shadekin_ability)
-	shadekin_abilities = list()
-	for(var/type in ability_types)
-		shadekin_abilities += new type(src)
-
 	update_icon()
 
 	add_verb(src, /mob/proc/adjust_hive_range)
@@ -233,22 +228,6 @@
 	add_overlay(tailimage)
 	add_overlay(eye_icon_state)
 
-/mob/living/simple_mob/shadekin/update_misc_tabs()
-	..()
-	var/list/L = list()
-	for(var/obj/effect/shadekin_ability/A as anything in shadekin_abilities)
-		var/client/C = client
-		var/img
-		if(C && istype(C)) //sanity checks
-			if(A.ability_name in C.misc_cache)
-				img = C.misc_cache[A.ability_name]
-			else
-				img = icon2html(A,C,sourceonly=TRUE)
-				C.misc_cache[A.ability_name] = img
-
-		L[++L.len] = list("[A.ability_name]", A.ability_name, img, A.atom_button_text(), REF(A))
-	misc_tabs["Shadekin"] = L
-
 //They phase back to the dark when killed
 /mob/living/simple_mob/shadekin/death(gibbed, deathmessage = "phases to somewhere far away!")
 	//CHOMPEdit Begin - Dark Respite
@@ -319,8 +298,39 @@
 			forceMove(pick(GLOB.latejoin_thedark))
 			update_icon()
 			flick("tp_in",src)
+<<<<<<< HEAD
 			invisibility = initial(invisibility)
 			respite_activating = FALSE
+=======
+			comp.respite_activating = FALSE
+			comp.in_dark_respite = TRUE
+			belly.owner.handle_belly_update()
+			clear_fullscreen("belly")
+			if(hud_used)
+				if(!hud_used.hud_shown)
+					toggle_hud_vis()
+			stop_sound_channel(CHANNEL_PREYLOOP)
+
+			addtimer(CALLBACK(src, PROC_REF(can_leave_dark)), 10 MINUTES, TIMER_DELETE_ME)
+		else
+			addtimer(CALLBACK(src, PROC_REF(enter_the_dark)), 1 SECOND, TIMER_DELETE_ME)
+			addtimer(CALLBACK(src, PROC_REF(can_leave_dark)), 15 MINUTES, TIMER_DELETE_ME)
+
+/mob/living/simple_mob/shadekin/enter_the_dark()
+	comp.respite_activating = FALSE
+	comp.in_dark_respite = TRUE
+
+	forceMove(pick(GLOB.latejoin_thedark))
+	update_icon()
+	flick("tp_in",src)
+	invisibility = initial(invisibility)
+	comp.respite_activating = FALSE
+
+/mob/living/simple_mob/shadekin/can_leave_dark()
+	comp.in_dark_respite = FALSE
+	movement_cooldown = initial(movement_cooldown)
+	to_chat(src, span_notice("You feel like you can leave the Dark again"))
+>>>>>>> 41ce944736 (Minor fixes (#17966))
 
 		spawn(15 MINUTES)
 			ability_flags &= ~AB_DARK_RESPITE
@@ -342,7 +352,33 @@
 //They reach nutritional equilibrium (important for blue-eyes healbelly)
 /mob/living/simple_mob/shadekin/Life()
 	if((. = ..()))
+<<<<<<< HEAD
 		handle_shade()
+=======
+		comp.handle_comp()
+
+/mob/living/simple_mob/shadekin/proc/set_eye_energy()
+	switch(eye_state)
+		//Blue has constant, steady (slow) regen and ignores darkness.
+		if(BLUE_EYES)
+			comp.set_light_and_darkness(0.75,0.75)
+			comp.nutrition_conversion_scaling = 0.5
+		if(RED_EYES)
+			comp.set_light_and_darkness(-0.5,0.5)
+			comp.nutrition_conversion_scaling = 2
+		if(PURPLE_EYES)
+			comp.set_light_and_darkness(-0.5,1)
+			comp.nutrition_conversion_scaling = 1
+		if(YELLOW_EYES)
+			comp.set_light_and_darkness(-2,3)
+			comp.nutrition_conversion_scaling = 0.5
+		if(GREEN_EYES)
+			comp.set_light_and_darkness(0.125,2)
+			comp.nutrition_conversion_scaling = 0.5
+		if(ORANGE_EYES)
+			comp.set_light_and_darkness(-0.25,0.75)
+			comp.nutrition_conversion_scaling = 1.5
+>>>>>>> 41ce944736 (Minor fixes (#17966))
 
 /mob/living/simple_mob/shadekin/is_incorporeal()
 	if(ability_flags & AB_PHASE_SHIFTED)

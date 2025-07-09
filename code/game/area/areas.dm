@@ -141,21 +141,17 @@ GLOBAL_LIST_EMPTY(areas_by_type)
 	if(fire || party || atmosalm)
 		firedoors_close()
 		arfgs_activate()
-		// VOREStation Edit - Make the lights colored!
 		if(fire)
 			for(var/obj/machinery/light/L in src)
 				L.set_alert_fire()
 		else if(atmosalm)
 			for(var/obj/machinery/light/L in src)
 				L.set_alert_atmos()
-		// VOREStation Edit End
 	else
 		firedoors_open()
 		arfgs_deactivate()
-		// VOREStation Edit - Put the lights back!
 		for(var/obj/machinery/light/L in src)
 			L.reset_alert()
-		// VOREStation Edit End
 
 // Close all firedoors in the area
 /area/proc/firedoors_close()
@@ -396,7 +392,7 @@ var/list/mob/living/forced_ambiance_list = list()
 	play_ambience(L, initial = TRUE)
 	if(flag_check(AREA_NO_SPOILERS))
 		L.disable_spoiler_vision()
-	check_phase_shift(M)	//RS Port #658
+	check_phase_shift(M)
 
 	// Update the area's color grading
 	if(L.client && L.client.color != get_color_tint()) // Try to check if we should bother changing before doing blending
@@ -452,7 +448,7 @@ var/list/mob/living/forced_ambiance_list = list()
 			return // Being buckled to something solid keeps you in place.
 		if(istype(H.shoes, /obj/item/clothing/shoes/magboots) && (H.shoes.item_flags & NOSLIP))
 			return
-		if(H.is_incorporeal()) // VOREstation edit - Phaseshifted beings should not be affected by gravity
+		if(H.is_incorporeal()) // Phaseshifted beings should not be affected by gravity
 			return
 		if(H.species.can_zero_g_move || H.species.can_space_freemove)
 			return
@@ -569,8 +565,9 @@ GLOBAL_DATUM(spoiler_obfuscation_image, /image)
 		return
 	if(!isliving(ourmob))
 		return
-	if(check_rights_for(ourmob.client, R_HOLDER))
+	if(check_rights_for(ourmob.client, R_HOLDER)) //If we're an admin, we don't get affected by phase blockers.
 		return
+<<<<<<< HEAD
 	if(issimplekin(ourmob))
 		var/mob/living/simple_mob/shadekin/SK = ourmob
 		if(SK.ability_flags & AB_PHASE_SHIFTED)
@@ -580,6 +577,11 @@ GLOBAL_DATUM(spoiler_obfuscation_image, /image)
 		if(SK.ability_flags & AB_PHASE_SHIFTED)
 			SK.phase_in(SK.loc)
 // RS Port #658 End
+=======
+	var/datum/component/shadekin/SK = ourmob.get_shadekin_component()
+	if(SK && SK.in_phase)
+		SK.attack_dephase(ourmob.loc, src)
+>>>>>>> 41ce944736 (Minor fixes (#17966))
 
 /area/proc/isAlwaysIndoors()
 	return FALSE

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #define NOT_WHILE_SHIFTED 1
 #define ONLY_WHILE_SHIFTED 2
 #define SHIFTED_OR_NOT 3
@@ -8,6 +9,8 @@
 #define AB_DARK_TUNNEL    0x40 //CHOMPEdit Add - Dark Tunneling
 #define AB_DARK_RESPITE		0x80 //CHOMPEdit Add - Dark Respite
 
+=======
+>>>>>>> 41ce944736 (Minor fixes (#17966))
 //Porting over the type system of the mobs
 #define BLUE_EYES 1
 #define RED_EYES 2
