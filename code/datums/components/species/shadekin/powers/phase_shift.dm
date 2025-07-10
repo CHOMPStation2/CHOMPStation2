@@ -101,7 +101,6 @@
 	else
 		phase_out(T, SK)
 
-
 /mob/living/proc/phase_in(var/turf/T, var/datum/component/shadekin/SK)
 	if(SK.in_phase)
 

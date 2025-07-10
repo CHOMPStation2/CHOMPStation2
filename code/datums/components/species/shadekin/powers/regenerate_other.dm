@@ -17,7 +17,7 @@
 	var/datum/component/shadekin/SK = get_shadekin_component()
 	if(!SK)
 		return FALSE
-	if(SK.special_considerations())
+	if(SK.special_considerations(TRUE))
 		return FALSE
 	if(stat)
 		to_chat(src, span_warning("Can't use that ability in your state!"))
