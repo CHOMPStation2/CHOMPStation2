@@ -39,6 +39,15 @@ rykkastormheart - Xenochimera
 rubyflamewing - Protean
 radiantaurora - Protean
 ryumi - Protean
+<<<<<<< HEAD
+=======
+ryumi - Xenochimera
+ryumi - Black-Eyed Shadekin
+satinisle - Black-Eyed Shadekin
+satinisle - Protean
+scoutisafolflol - Xenochimera
+seagha - Vox
+>>>>>>> 58a50c544f (ALIENS ARE REAL?!?! (not clickbait) (#17985))
 seiga - Vox
 sepulchre - Vox
 silvertalismen - Diona
