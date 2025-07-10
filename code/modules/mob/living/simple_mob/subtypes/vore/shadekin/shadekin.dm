@@ -71,16 +71,11 @@
 	var/datum/component/shadekin/comp = /datum/component/shadekin //Component that holds all the shadekin vars.
 	var/dark_gains = 0 //Last tick's change in energy
 	var/ability_flags = 0 //Flags for active abilities
-	var/obj/screen/darkhud //Holder to update this icon
-	var/obj/screen/energyhud //Holder to update this icon
 
 	var/list/shadekin_abilities
 	var/check_for_observer = FALSE
 	var/check_timer = 0
 	var/doing_phase = FALSE // Prevent bugs when spamming phase button
-
-	var/respite_activating = FALSE //CHOMPEdit - Dark Respite
-	var/list/active_dark_maws = list()
 
 /mob/living/simple_mob/shadekin/Initialize(mapload)
 	//You spawned the prototype, and want a totally random one.
@@ -100,6 +95,7 @@
 		flags |= ATOM_INITIALIZED
 		return INITIALIZE_HINT_QDEL
 	comp = LoadComponent(comp)
+	set_eye_energy()
 
 	if(icon_state == "map_example")
 		icon_state = pick("white","dark","brown")
@@ -199,11 +195,11 @@
 
 /mob/living/simple_mob/shadekin/Life()
 	. = ..()
-	if(ability_flags & AB_PHASE_SHIFTED)
+	if(comp.in_phase)
 		density = FALSE
 
 	//Convert spare nutrition into energy at a certain ratio
-	if(. && nutrition > initial(nutrition) && comp.dark_energy < 100 && !(ability_flags | AB_DARK_RESPITE))  //CHOMPEdit - Dark Respite
+	if(. && nutrition > initial(nutrition) && comp.dark_energy < 100)
 		nutrition = max(0, nutrition-5)
 		comp.dark_energy = min(100,comp.dark_energy+1)
 	if(!client && check_for_observer && check_timer++ > 5)
@@ -213,9 +209,9 @@
 			if(!issimplekin(M))
 				non_kin_count ++
 		// Technically can be combined with ||, they call the same function, but readability is poor
-		if(!non_kin_count && (ability_flags & AB_PHASE_SHIFTED))
+		if(!non_kin_count && (comp.in_phase))
 			phase_shift() // shifting back in, nobody present
-		else if (non_kin_count && !(ability_flags & AB_PHASE_SHIFTED))
+		else if (non_kin_count && !(comp.in_phase))
 			phase_shift() // shifting out, scaredy
 
 /mob/living/simple_mob/shadekin/update_icon()
@@ -230,78 +226,60 @@
 
 //They phase back to the dark when killed
 /mob/living/simple_mob/shadekin/death(gibbed, deathmessage = "phases to somewhere far away!")
-	//CHOMPEdit Begin - Dark Respite
-	if(respite_activating)
-		return
-	//CHOMPEdit End
-	cut_overlays()
-	flick("tp_out",src)
-
-	//CHOMPEdit Begin - Actually phase to the dark on death
-	var/area/current_area = get_area(src)
-	if((ability_flags & AB_DARK_RESPITE) || current_area.flag_check(AREA_LIMIT_DARK_RESPITE))
+	var/special_handling = TRUE //varswitch for downstream
+	if(!special_handling)
+		cut_overlays()
 		icon_state = ""
-		spawn(1 SECOND)
-			qdel(src) //Back from whence you came!
-
-		return ..(FALSE, deathmessage)
-
-
-	if(!LAZYLEN(GLOB.latejoin_thedark))
-		log_and_message_admins("[src] died outside of the dark but there were no valid floors to warp to")
-		icon_state = ""
-		spawn(1 SECOND)
-			qdel(src) //Back from whence you came!
-
-		return ..(FALSE, deathmessage)
-
-	src.visible_message("<b>\The [src.name]</b> [deathmessage]")
-	respite_activating = TRUE
-
-	drop_l_hand()
-	drop_r_hand()
-
-	comp.dark_energy = 0
-	ability_flags |= AB_DARK_RESPITE
-	invisibility = INVISIBILITY_LEVEL_TWO
-
-	adjustFireLoss(-(getFireLoss() / 2))
-	adjustBruteLoss(-(getBruteLoss() / 2))
-	adjustToxLoss(-(getToxLoss() / 2))
-	Stun(10)
-	movement_cooldown = 5
-	nutrition = 0
-
-	if(istype(src.loc, /obj/belly))
-		//Yay digestion... presumably...
-		var/obj/belly/belly = src.loc
-		add_attack_logs(belly.owner, src, "Digested in [lowertext(belly.name)]")
-		to_chat(belly.owner, span_notice("\The [src.name] suddenly vanishes within your [belly.name]"))
-		forceMove(pick(GLOB.latejoin_thedark))
-		flick("tp_in",src)
-		respite_activating = FALSE
-		belly.owner.handle_belly_update() // CHOMPEdit
-		clear_fullscreen("belly")
-		if(hud_used)
-			if(!hud_used.hud_shown)
-				toggle_hud_vis()
-		stop_sound_channel(CHANNEL_PREYLOOP)
-
-
-		spawn(10 MINUTES)
-			ability_flags &= ~AB_DARK_RESPITE
-			movement_cooldown = initial(movement_cooldown)
-			to_chat(src, span_notice("You feel like you can leave the Dark again"))
+		flick("tp_out",src)
+		QDEL_IN(src, 1 SECOND)
+		. = ..(FALSE, deathmessage)
 	else
-		spawn(1 SECOND)
-			respite_activating = FALSE
+		if(comp.respite_activating)
+			return
+		cut_overlays()
+		flick("tp_out",src)
+
+		var/area/current_area = get_area(src)
+		if((comp.in_dark_respite) || current_area.flag_check(AREA_LIMIT_DARK_RESPITE))
+			icon_state = ""
+			spawn(1 SECOND)
+				qdel(src) //Back from whence you came!
+
+			return ..(FALSE, deathmessage)
+
+
+		if(!LAZYLEN(GLOB.latejoin_thedark))
+			log_and_message_admins("[src] died outside of the dark but there were no valid floors to warp to")
+			icon_state = ""
+			spawn(1 SECOND)
+				qdel(src) //Back from whence you came!
+
+			return ..(FALSE, deathmessage)
+
+		visible_message("<b>\The [src.name]</b> [deathmessage]")
+		comp.respite_activating = TRUE
+
+		drop_l_hand()
+		drop_r_hand()
+
+		comp.dark_energy = 0
+		comp.in_dark_respite = TRUE
+		invisibility = INVISIBILITY_LEVEL_TWO
+
+		adjustFireLoss(-(getFireLoss() / 2))
+		adjustBruteLoss(-(getBruteLoss() / 2))
+		adjustToxLoss(-(getToxLoss() / 2))
+		Stun(10)
+		movement_cooldown = 5
+		nutrition = 0
+
+		if(istype(src.loc, /obj/belly))
+			//Yay digestion... presumably...
+			var/obj/belly/belly = src.loc
+			add_attack_logs(belly.owner, src, "Digested in [lowertext(belly.name)]")
+			to_chat(belly.owner, span_notice("\The [src.name] suddenly vanishes within your [belly.name]"))
 			forceMove(pick(GLOB.latejoin_thedark))
-			update_icon()
 			flick("tp_in",src)
-<<<<<<< HEAD
-			invisibility = initial(invisibility)
-			respite_activating = FALSE
-=======
 			comp.respite_activating = FALSE
 			comp.in_dark_respite = TRUE
 			belly.owner.handle_belly_update()
@@ -330,13 +308,7 @@
 	comp.in_dark_respite = FALSE
 	movement_cooldown = initial(movement_cooldown)
 	to_chat(src, span_notice("You feel like you can leave the Dark again"))
->>>>>>> 41ce944736 (Minor fixes (#17966))
 
-		spawn(15 MINUTES)
-			ability_flags &= ~AB_DARK_RESPITE
-			movement_cooldown = initial(movement_cooldown)
-			to_chat(src, span_notice("You feel like you can leave the Dark again"))
-	//CHOMPEdit End
 
 /* //VOREStation AI Temporary Removal
 //Blue-eyes want to nom people to heal them
@@ -352,9 +324,6 @@
 //They reach nutritional equilibrium (important for blue-eyes healbelly)
 /mob/living/simple_mob/shadekin/Life()
 	if((. = ..()))
-<<<<<<< HEAD
-		handle_shade()
-=======
 		comp.handle_comp()
 
 /mob/living/simple_mob/shadekin/proc/set_eye_energy()
@@ -378,101 +347,17 @@
 		if(ORANGE_EYES)
 			comp.set_light_and_darkness(-0.25,0.75)
 			comp.nutrition_conversion_scaling = 1.5
->>>>>>> 41ce944736 (Minor fixes (#17966))
 
 /mob/living/simple_mob/shadekin/is_incorporeal()
-	if(ability_flags & AB_PHASE_SHIFTED)
+	if(comp.in_phase)
 		return TRUE
 	return FALSE
 
 /mob/living/simple_mob/shadekin/handle_atmos()
-	if(ability_flags & AB_PHASE_SHIFTED)
+	if(comp.in_phase)
 		return
 	else
 		return .=..()
-
-/mob/living/simple_mob/shadekin/proc/handle_shade()
-	//Shifted kin don't gain/lose energy (and save time if we're at the cap)
-	var/darkness = 1
-
-
-	var/turf/T = get_turf(src)
-	if(!T)
-		dark_gains = 0
-		return
-
-	var/brightness = T.get_lumcount() //Brightness in 0.0 to 1.0
-	darkness = 1-brightness //Invert
-
-	if(ability_flags & AB_PHASE_SHIFTED)
-		dark_gains = 0
-	else
-		//Heal (very) slowly in good darkness
-		if(darkness >= 0.75)
-			adjustFireLoss(-0.05)
-			adjustBruteLoss(-0.05)
-			adjustToxLoss(-0.05)
-
-		switch(eye_state)
-			//Blue has constant, steady (slow) regen and ignores darkness.
-			if(BLUE_EYES)
-				dark_gains = 0.5
-			//Red has extremely tiny energy buildup in dark, none in light, and hunts for energy.
-			if(RED_EYES)
-				if(darkness >= 0.75)
-					dark_gains = 0.25
-			//Purple eyes have moderate gains in darkness and loss in light.
-			if(PURPLE_EYES)
-				dark_gains = round((darkness - 0.5) * 2, 0.1)
-			//Yellow has extreme gains in darkness and loss in light.
-			if(YELLOW_EYES)
-				dark_gains = round((darkness - 0.5) * 4, 0.1)
-			//Similar to blues, but passive is less, and affected by dark
-			if(GREEN_EYES)
-				dark_gains = 0.25
-				dark_gains += round((darkness - 0.5), 0.1)
-			//More able to get energy out of the dark, worse attack gains tho
-			if(ORANGE_EYES)
-				if(darkness >= 0.65)
-					dark_gains = 0.30
-
-	comp.dark_energy = max(0,min(initial(comp.dark_energy),comp.dark_energy + dark_gains))
-
-	//CHOMPEdit Begin - Dark Respite
-	if(ability_flags & AB_DARK_RESPITE)
-		comp.dark_energy = 0
-	//CHOMPEdit End
-	if(comp.dark_energy_infinite)
-		comp.dark_energy = 100
-
-	//Update turf darkness hud
-	if(darkhud)
-		switch(darkness)
-			if(0.80 to 1.00)
-				darkhud.icon_state = "dark2"
-			if(0.60 to 0.80)
-				darkhud.icon_state = "dark1"
-			if(0.40 to 0.60)
-				darkhud.icon_state = "dark"
-			if(0.20 to 0.40)
-				darkhud.icon_state = "dark-1"
-			if(0.00 to 0.20)
-				darkhud.icon_state = "dark-2"
-
-	//Update energy storage hud
-	if(energyhud)
-		switch(comp.dark_energy)
-			if(80 to INFINITY)
-				energyhud.icon_state = "energy0"
-			if(60 to 80)
-				energyhud.icon_state = "energy1"
-			if(40 to 60)
-				energyhud.icon_state = "energy2"
-			if(20 to 40)
-				energyhud.icon_state = "energy3"
-			if(0 to 20)
-				energyhud.icon_state = "energy4"
-
 /* //VOREStation AI Removal
 //Friendly ones wander towards people, maybe shy-ly if they are set to shy
 /mob/living/simple_mob/shadekin/handle_wander_movement()
@@ -554,26 +439,6 @@
 					gains = 5
 
 			comp.dark_energy += gains
-
-//Special hud elements for darkness and energy gains
-/mob/living/simple_mob/shadekin/extra_huds(var/datum/hud/hud,var/icon/ui_style,var/list/hud_elements)
-	//Darkness hud
-	darkhud = new /obj/screen()
-	darkhud.icon = ui_style
-	darkhud.icon_state = "dark"
-	darkhud.name = "darkness"
-	darkhud.screen_loc = "CENTER-2:16,SOUTH:5" //Left of the left hand
-	darkhud.alpha = 150
-	hud_elements |= darkhud
-
-	//Energy hud
-	energyhud = new /obj/screen()
-	energyhud.icon = ui_style
-	energyhud.icon_state = "energy0"
-	energyhud.name = "energy"
-	energyhud.screen_loc = "CENTER+1:16,SOUTH:5" //Right of the right hand
-	energyhud.alpha = 150
-	hud_elements |= energyhud
 
 // When someone clicks us with an empty hand
 /mob/living/simple_mob/shadekin/attack_hand(mob/living/carbon/human/M as mob)
