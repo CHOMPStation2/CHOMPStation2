@@ -50,6 +50,8 @@
 		return 1
 	if (src && usr && usr.machine == src)
 		usr << browse(null, "window=stack")
+	if(islist(synths))
+		synths.Cut()
 	return ..()
 
 /obj/item/stack/update_icon()
@@ -417,7 +419,11 @@
 	return
 
 /obj/item/stack/attackby(obj/item/W as obj, mob/user as mob)
-	if (istype(W, /obj/item/stack))
+	if(istype(W, /obj/item/gripper))
+		var/obj/item/gripper/G = W
+		G.consolidate_stacks(src)
+
+	else if(istype(W, /obj/item/stack))
 		var/obj/item/stack/S = W
 		src.transfer_to(S)
 

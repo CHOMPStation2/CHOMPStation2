@@ -56,7 +56,7 @@
 
 //CHOMPAdd Start
 /mob/living/simple_mob/animal/passive/mouse/Destroy()
-	active_ghost_pods -= src
+	GLOB.active_ghost_pods -= src
 	return ..()
 //CHOMPAdd End
 
@@ -65,7 +65,7 @@
 	//CHOMPAdd Start
 	ghostjoin = 1
 	ghostjoin_icon()
-	active_ghost_pods += src
+	GLOB.active_ghost_pods += src
 	//CHOMPAdd End
 
 	add_verb(src, /mob/living/proc/ventcrawl)
@@ -98,7 +98,7 @@
 
 	if(prob(40))
 		LAZYINITLIST(rat_diseases)
-		rat_diseases += new /datum/disease/advance/random(rand(1, 5), 9, 1)
+		rat_diseases += new /datum/disease/advance/random(rand(1, 5), 9, 1, infected = src)
 
 /mob/living/simple_mob/animal/passive/mouse/extrapolator_act(mob/living/user, obj/item/extrapolator/extrapolator, dry_run = FALSE)
 	. = ..()
@@ -243,10 +243,10 @@
 	desc = "A small white rodent, often found in Virology. This one isn't quite the nuisance!"
 
 /mob/living/simple_mob/animal/passive/mouse/white/virology/Initialize(mapload)
-	..()
+	. = ..()
 	name = initial(name)
 	desc = initial(desc)
-	rat_diseases += new /datum/disease/advance/random(2, 2, 1)
+	rat_diseases += new /datum/disease/advance/random(2, 2, 1, infected = src)
 
 /mob/living/simple_mob/animal/passive/mouse/white/virology/Crossed(atom/movable/AM)
 	. = ..()

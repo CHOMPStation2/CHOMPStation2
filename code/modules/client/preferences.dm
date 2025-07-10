@@ -121,9 +121,6 @@ var/list/preferences_datums = list()
 	var/lastnews // Hash of last seen lobby news content.
 	var/lastlorenews //ID of last seen lore news article.
 
-	var/examine_text_mode = 0 // Just examine text, include usage (description_info), switch to examine panel.
-	var/multilingual_mode = 0 // Default behaviour, delimiter-key-space, delimiter-key-delimiter, off
-
 	// THIS IS NOT SAVED
 	// WE JUST HAVE NOWHERE ELSE TO STORE IT
 	var/list/action_button_screen_locs
@@ -404,9 +401,10 @@ var/list/preferences_datums = list()
 
 	if(tgui_alert(user, "Are you sure you want to override slot [slotnum], [choice]'s savedata?", "Confirm Override", list("No", "Yes")) == "Yes")
 		overwrite_character(slotnum)
-		sanitize_preferences()
 		save_character()
 		save_preferences()
+		load_preferences(TRUE)
+		load_character()
 		attempt_vr(user.client?.prefs_vr,"load_vore","")
 		ShowChoices(user)
 

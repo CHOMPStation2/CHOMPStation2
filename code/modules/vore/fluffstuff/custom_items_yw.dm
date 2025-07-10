@@ -87,7 +87,7 @@
 
 /obj/item/toy/bosunwhistle/fluff/strix/attack_self(mob/user as mob)
 	if(cooldown < world.time - 15)
-		user << span_notice("You blow on [src], creating an ear-splitting noise!")
+		to_chat(user, span_notice("You blow on [src], creating an ear-splitting noise!"))
 		playsound(user, 'sound/misc/boatswain.ogg', 25, 1)
 		cooldown = world.time
 

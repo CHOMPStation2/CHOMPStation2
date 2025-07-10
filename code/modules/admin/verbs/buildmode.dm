@@ -583,7 +583,7 @@ CHOMP Remove end */
 						AI.wander = FALSE
 				if(pa.Find("alt") && isatom(object))
 					to_chat(user, span_notice("Adding [object] to Entity Narrate List!"))
-					user.client.add_mob_for_narration(object)
+					SSadmin_verbs.dynamic_invoke_verb(user.client, /datum/admin_verb/add_mob_for_narration, object)
 
 
 			if(pa.Find("right"))
@@ -861,11 +861,11 @@ CHOMP Remove end */
 	if(A.outdoors)
 		return AREA_SPACE
 
-	for (var/type in BUILDABLE_AREA_TYPES)
+	for (var/type in GLOB.BUILDABLE_AREA_TYPES)
 		if ( istype(A,type) )
 			return AREA_SPACE
 
-	for (var/type in SPECIALS)
+	for (var/type in GLOB.SPECIALS)
 		if ( istype(A,type) )
 			return AREA_SPECIAL
 	return AREA_STATION

@@ -31,7 +31,7 @@
 	name = REAGENT_NEOTANE
 	id = REAGENT_ID_NEOTANE
 	result = REAGENT_ID_NEOTANE
-	required_reagents = list(REAGENT_ID_NEOLIQUIDFIRE = 1, REAGENT_ID_KELOTANE = 1, REAGENT_ID_IRON = 1)
+	required_reagents = list(REAGENT_ID_LIQUIDFIRE = 1, REAGENT_ID_KELOTANE = 1, REAGENT_ID_IRON = 1)
 	result_amount = 2
 
 /decl/chemical_reaction/instant/bloodsealer
@@ -71,12 +71,14 @@
 	result_amount = 3
 
 //tier 2
+/*
 /decl/chemical_reaction/instant/juggernog
 	name = REAGENT_JUGGERNOG
 	id = REAGENT_ID_JUGGERNOG
 	result = REAGENT_ID_JUGGERNOG
 	required_reagents = list(REAGENT_ID_PARACETAMOL = 1, REAGENT_ID_TRAMADOL = 1, REAGENT_ID_SYNAPTIZINE = 1, REAGENT_ID_MERCURY = 1)
 	result_amount = 4
+*/
 
 /decl/chemical_reaction/instant/curea
 	name = REAGENT_CUREA

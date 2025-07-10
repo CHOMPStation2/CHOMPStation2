@@ -238,3 +238,122 @@
   - qol: Reagent hoses have feedback on connection and disconnection
   - qol: Reagent hoses drop on disconnection instead of being destroyed
   - qol: Reagent hoses change colors as reagents are pumped through them
+2025-06-17:
+  CHOMPStation2StaffMirrorBot:
+  - rscadd: Xenoarch's Radiocarbon Spectrometer has been rewritten to be more engaging.
+  Will:
+  - rscadd: reagent hoses can be used to inflate and drain other human mobs in various
+      ways
+  - rscadd: borgs now have hose connectors that go to their current vore belly
+  - qol: Show belly fluid verb now shows composition of belly fluids and not just
+      amount
+  - code_imp: reagents that enter someone's belly become belly reagents to respect
+      prefs
+2025-06-19:
+  CHOMPStation2StaffMirrorBot:
+  - rscadd: New process option, "Break Bone".
+  - qol: If you have digestion pain turned on, you will receive broken bone notifications
+      even inside a stomach.
+  - bugfix: Forensics data merging on objects without data but with data on the merging
+      object, no longer crash on merge
+  - bugfix: reagent dispenser tanks no longer perform alchemy, turning all reagents
+      into fuel spills
+  - rscadd: Voodoo dolls now render things all scrungly
+  - rscadd: Remote scene tools have some new utility verbs
+  - qol: Remote scene tools now show the status of their counterpart's wearer on examine
+  - bugfix: Various typos have been fixed for the recycler and recycling vendor
+  - bugfix: The maint recycler doesn't nuke your points after getting to 999 anymore.
+      whoops.
+  - rscadd: Viruses now spawn with random names, depending on the symptoms, source,
+      and random factors.
+  - rscadd: Added medical names to all the common diseases
+  - rscadd: Examines now embed extra information that used to be examine tab exclusive.
+      This is a preference, so can be configured to remain as the old behavior.
+  - rscdel: Removed the old verb for setting examine mode
+  - refactor: Examine Mode is now a TG preference
+  - bugfix: Fixed janitor shutter buttons on the tether.
+  - code_imp: more browse to datum browser
+  - code_imp: tgui-core 4.3.1
+  - bugfix: blood without dna from simple mobs will track onto shoes, floors and hands
+      again
+  Diana:
+  - bugfix: arglasses can be properly selected in the loadout
+2025-06-20:
+  CHOMPStation2StaffMirrorBot:
+  - code_imp: gene conflict list uses much less memory
+2025-06-21:
+  Diana, Kash:
+  - rscadd: Borgs now have toolbelts instead of various misc tools in their inventory.
+  - rscadd: Borgs now have a Material Dispenser that holds all the various materials
+      they can make, instead of being scattered throughout your inventory
+  - rscadd: Grippers are now consolidated and have 5 inventory slots each. No more
+      guessing 'What gripper is used for what'
+  - rscdel: tool bloat
+  Kash Guti Will:
+  - rscadd: Adds genes and diseases to bingle's database so symptoms and genetics
+      stuff can be looked up ingame
+  - code_imp: added unit test for virus names and trait names to prevent tgui issues
+2025-06-22:
+  CHOMPStation2StaffMirrorBot:
+  - balance: Changed the level that you can use backup batteries as a synth to 150
+      nutrition, and it also gives you 150 nutrition back. This means you can use
+      it as soon as you reach slowdown levels of hunger and it fills you up a decent
+      amount.
+  Will:
+  - code_imp: moves sql death reporting to SSmobs as a single massinsert
+  - refactor: turns object climbing code into a component
+  - qol: many more objects are climbable, preventing softlocks, especially for engineers
+      and miners
+2025-06-23:
+  CHOMPStation2StaffMirrorBot:
+  - spellcheck: removed all strucutres from the game
+  - rscadd: Hoses can connect to sinks for endless water, or as an endless drain
+2025-06-24:
+  CHOMPStation2StaffMirrorBot:
+  - qol: climbable objects being pulled up or down stairs no longer knock you around
+  Diana:
+  - rscadd: Miners now start with a voucher that can be redeemed for various loadouts
+      at the ore vendor.
+  Will:
+  - qol: Borgs can now examine items to know if any of their grippers can hold it.
+2025-06-29:
+  CHOMPStation2StaffMirrorBot:
+  - code_imp: Reagent unit-test is more strict about duplicated reagent names
+  - qol: You can extract blood from blood bags using a syringe
+  - bugfix: dna block injectors no longer show their entire genome, and instead just
+      the relevant block. Doesn't affect full sequence injectors.
+  - bugfix: dna resequencers from the body record console should not do radiation
+      damage
+  Diana:
+  - bugfix: Xenochimera, spider, diona, shadekin, and alraune now process traits properly.
+  FluffMedic:
+  - rscadd: 4 new tyr ants. Diamond, Uranium, Tritium, Verd
+  - rscadd: New Tyr boss, and reworked tyr boss code
+  - balance: altered several experimental chems
+  zeskorion:
+  - rscadd: two new traits, one for synthetics, one for xenochimerae
+  - rscadd: xenochimera can now break free of cuffs,damage borgs, etc when feral
+  - rscadd: new YR3 monitor icons
+  - rscdel: removed some bad monitor icon sprites
+2025-06-30:
+  CHOMPStation2StaffMirrorBot:
+  - rscdel: tgui-sonar
+  - bugfix: bunch of right issues with the new ticket system and mentors
+  - admin: More verbs moved to the new subsystem
+  - admin: Secrets panel overhauled
+  Diana:
+  - rscadd: Starlight will come through windows and illuminate areas exposed to space!
+  - rscadd: borgs now have a basic melee weapon (puppy jaws/knife)
+  - rscadd: Light fixtures can now directly be interfaced via multitool.
+  - bugfix: Fixes a bunch of bugs with the multibelt and borg gripper
+  - qol: Borg material dispenser can now pick up materials
+  - qol: Borg multibelt & Gripper can now open the radial menu via Ctrl-Z
+  - qol: Borg default crowbar changed to borg jaws
+  - bugfix: Borg welder no longer passively drains battery
+  - qol: Borg gripper will now select the final slot when first spawned, allowing
+      you to pick up until the gripper is full.
+  - bugfix: Gargoyle statues now regenerate energy properly
+  - balance: Gargoyle statues now burn under extreme temperatures (>1600C)
+  - balance: Gargoyle statues now regenerate health VERY slowly when in statue state
+      (150 hp will take 50 minutes)
+  - code_imp: Gargoyle code quality increased in general.

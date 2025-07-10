@@ -33,6 +33,12 @@
 	RefreshParts()
 	update_icon()
 
+	AddElement(/datum/element/climbable)
+
+/obj/machinery/pump/Destroy()
+	QDEL_NULL(cell)
+	. = ..()
+
 /obj/machinery/pump/RefreshParts()
 	var/obj/item/stock_parts/manipulator/SM = locate() in component_parts
 	active_power_usage = initial(active_power_usage) / SM.rating
@@ -88,8 +94,7 @@
 	T.pump_reagents(reagents, reagents_per_cycle)
 	update_icon()
 
-	var/datum/component/hose_connector/HC = GetComponent(/datum/component/hose_connector)
-	HC.force_pump()
+	SEND_SIGNAL(src, COMSIG_HOSE_FORCEPUMP)
 
 // Sets the power state, if possible.
 // Returns TRUE/FALSE on power state changing
