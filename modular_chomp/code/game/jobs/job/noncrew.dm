@@ -45,7 +45,7 @@
 
 /datum/alt_title/bounty_hunter
 	title = "Bounty Hunter"
-	//title_outfit = /decl/hierarchy/outfit/noncrew/bounty_hunter // Doesn't exist yet, still working out the details.
+	title_outfit = /decl/hierarchy/outfit/noncrew/bounty_hunter
 
 /datum/alt_title/camper
 	title = "Camper"
@@ -53,11 +53,11 @@
 
 /datum/alt_title/local_fisher
 	title = "Local Fisher"
-	title_outfit = /decl/hierarchy/outfit/job/assistant/entrepreneur/fisher // Placeholder, might do something slightly better than this later.
+	title_outfit = /decl/hierarchy/outfit/job/assistant/entrepreneur/fisher
 
 /datum/alt_title/scavenger
 	title = "Scavenger"
-	title_outfit = /decl/hierarchy/outfit/job/assistant/entrepreneur/tradesperson // Placeholder, might do something slightly better than this later.
+	title_outfit = /decl/hierarchy/outfit/job/assistant/entrepreneur/tradesperson
 
 /datum/alt_title/spacefarer
 	title = "Spacefarer"
