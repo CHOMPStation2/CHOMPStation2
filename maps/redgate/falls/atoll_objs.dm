@@ -29,9 +29,13 @@
 /obj/structure/railing/overhang/waterless
 	icon_modifier = "wbronze_"
 	icon_state = "wbronze_railing0"
-	climbable = 0
 	layer = MOB_LAYER + 0.3
 	plane = MOB_PLANE //im so sorry
+
+/obj/structure/railing/overhang/waterless/Initialize(mapload)
+	. = ..()
+	// Not climbable!
+	RemoveElement(/datum/element/climbable)
 
 /obj/structure/railing/overhang/waterless/under
 	plane = OBJ_PLANE
@@ -261,7 +265,7 @@
 	desc = "A prismatic field of... energy, probably. You should definitely rub your face in it."
 	icon = 'maps/redgate/falls/icons/decals/marble_decals.dmi'
 	icon_state = "teleporter"
-	invisibility = 0
+	invisibility = INVISIBILITY_NONE
 
 //teleport_z must be populated but this is a gateway map
 //switching between tether or another map will change the z

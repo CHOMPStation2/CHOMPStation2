@@ -197,7 +197,7 @@
 /mob/living/simple_mob/mechanical/mecha/eclipse/proc/omega_three(atom/target, var/next_cycle)
 	if(!target)
 		return
-	addtimer(CALLBACK(src, PROC_REF(omega_three), target, next_cycle), 1.5 SECONDS, TIMER_DELETE_ME)
+	addtimer(CALLBACK(src, PROC_REF(omega_four), target, next_cycle), 1.5 SECONDS, TIMER_DELETE_ME)
 	uptwo_leftfour(target)
 	downtwo_leftfour(target)
 	uptwo_rightfour(target)
@@ -331,7 +331,7 @@
 	submunition_spread_max = 900
 	submunition_spread_min = 150
 	spread_submunition_damage = FALSE
-	submunitions = list(/obj/item/projectile/energy/hazardmover/omni = 1, /obj/item/projectile/energy/wallbreaker/boss = 1, /obj/item/projectile/energy/burninglaser/boss = 1)
+	submunitions = list(/obj/item/projectile/energy/hazardmover/omni = 1, /obj/item/projectile/energy/wallbreaker/boss = 1)
 
 /obj/item/projectile/bullet/nanodyson/on_range()
 	qdel(src)
@@ -369,7 +369,6 @@
 				addtimer(CALLBACK(src, PROC_REF(omega), A, 3), 1 SECOND, TIMER_DELETE_ME)
 				attackcycle = 0
 			else if(attackcycle == 3)
-				projectiletype = /obj/item/projectile/energy/burninglaser/boss
 				addtimer(CALLBACK(src, PROC_REF(alpha_slash), A, 4), 1 SECOND, TIMER_DELETE_ME)
 				attackcycle = 0
 			else if(attackcycle == 4)

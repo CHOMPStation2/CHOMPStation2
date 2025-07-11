@@ -45,10 +45,10 @@
 
 
 /obj/item/stack/material/weathered_agate
-	name = "weathered agate"
+	name = MAT_WAGATE
 	icon_state = "sheet-void_opal"
 	singular_name = "weathered agate"
-	default_type = "weathered agate"
+	default_type = MAT_WAGATE
 
 /obj/item/reagent_containers/food/snacks/weatherlily
 	name = "strange leaves"
@@ -70,7 +70,6 @@
 	icon = 'modular_chomp/icons/obj/tribal_gear.dmi'
 	density = TRUE
 	throwpass = 1
-	climbable = TRUE
 	anchored = TRUE
 	icon_state = "outcrop"
 	mindrop = 3
@@ -281,3 +280,26 @@
 	color = "#FF3300"
 	high_color = "#FF3300"
 	low_color = "#F08F4F"
+
+
+//other Tyr Loot
+/obj/item/melee/energy/sword/top_shield
+	name = "energy spike shield"
+	desc = "A makeshift shield."
+	icon = 'modular_chomp/icons/mob/tribal_gear.dmi'
+	icon_state = "topshield"
+	item_state = "topshield"
+	active_force = 10
+	active_armourpen = 60
+	active_throwforce = 40
+	throw_speed = 1
+	throw_range = 7
+	slowdown = 2
+	defend_chance = 70
+	projectile_parry_chance = 70
+	active_w_class = ITEMSIZE_HUGE
+	w_class = ITEMSIZE_HUGE
+	item_icons = list(
+		slot_l_hand_str = 'modular_chomp/icons/obj/guns/precursor/lefthand.dmi',
+		slot_r_hand_str = 'modular_chomp/icons/obj/guns/precursor/righthand.dmi',
+		)

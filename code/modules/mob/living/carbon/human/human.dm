@@ -31,7 +31,6 @@
 	var/list/teleporters = list() //Used for lleill abilities
 
 	var/rest_dir = 0					//To lay down in a specific direction
-	var/gutdeathpressure = 0			//For GIBBING trait
 	var/list/datum/genetics/side_effect/genetic_side_effects = list()	//For any genetic side effects we currently have.
 
 /mob/living/carbon/human/Initialize(mapload, var/new_species = null)
@@ -70,6 +69,7 @@
 	regenerate_icons()
 
 	AddComponent(/datum/component/personal_crafting)
+	AddComponent(/datum/component/hose_connector/inflation) // Comment out to disable all human mob inflation mechanics
 
 	// Chicken Stuff
 	var/animal = pick("cow","chicken_brown", "chicken_black", "chicken_white", "chick", "mouse_brown", "mouse_gray", "mouse_white", "lizard", "cat2", "goose", "penguin")
@@ -123,11 +123,11 @@
 		if(suit.cell) cell_status = "[suit.cell.charge]/[suit.cell.maxcharge]"
 		. += "Suit charge: [cell_status]"
 
-	if(mind)
-		if(mind.changeling)
-			. += "Chemical Storage: [mind.changeling.chem_charges]"
-			. += "Genetic Damage Time: [mind.changeling.geneticdamage]"
-			. += "Re-Adaptations: [mind.changeling.readapts]/[mind.changeling.max_readapts]"
+	var/datum/component/antag/changeling/comp = is_changeling(src)
+	if(comp)
+		. += "Chemical Storage: [comp.chem_charges]"
+		. += "Genetic Damage Time: [comp.geneticdamage]"
+		. += "Re-Adaptations: [comp.readapts]/[comp.max_readapts]"
 	if(species)
 		species.get_status_tab_items(src)
 
@@ -332,12 +332,13 @@
 			return if_no_id
 
 //repurposed proc. Now it combines get_id_name() and get_face_name() to determine a mob's name variable. Made into a seperate proc as it'll be useful elsewhere
-/mob/living/carbon/human/proc/get_visible_name()
-	if(ability_flags & AB_PHASE_SHIFTED)
+/mob/living/carbon/human/get_visible_name()
+	var/datum/component/shadekin/SK = get_shadekin_component()
+	if(SK && SK.in_phase)
 		return "Something"	// Something
-	if( wear_mask && (wear_mask.flags_inv&HIDEFACE) )	//Wearing a mask which hides our face, use id-name if possible
+	if(wear_mask && (wear_mask.flags_inv&HIDEFACE))	//Wearing a mask which hides our face, use id-name if possible
 		return get_id_name("Unknown")
-	if( head && (head.flags_inv&HIDEFACE) )
+	if(head && (head.flags_inv&HIDEFACE))
 		return get_id_name("Unknown")		//Likewise for hats
 	var/face_name = get_face_name()
 	var/id_name = get_id_name("")
@@ -832,7 +833,7 @@
 	return 1
 
 /mob/living/carbon/human/IsAdvancedToolUser(var/silent)
-	if(feral)
+	if(get_feralness())
 		to_chat(src, span_warning("Your primitive mind can't grasp the concept of that thing."))
 		return 0
 	if(species.has_fine_manipulation)
@@ -1138,8 +1139,7 @@
 		return 0
 	//if this blood isn't already in the list, add it
 	if(istype(M))
-		if(!blood_DNA[M.dna.unique_enzymes])
-			blood_DNA[M.dna.unique_enzymes] = M.dna.b_type
+		add_blooddna(M.dna,M)
 	hand_blood_color = blood_color
 	update_bloodied()
 	add_verb(src, /mob/living/carbon/human/proc/bloody_doodle)
@@ -1150,26 +1150,25 @@
 		return
 	return md5(dna.uni_identity)
 
-/mob/living/carbon/human/clean_blood(var/washshoes)
+/mob/living/carbon/human/wash(clean_types)
 	. = ..()
 
-	gunshot_residue = null
+	LAZYCLEARLIST(body_writing)
 
 	//Always do hands (or whatever's on our hands)
 	if(gloves)
-		gloves.clean_blood()
+		gloves.wash(clean_types)
 		update_inv_gloves()
 		gloves.germ_level = 0
 	else
 		bloody_hands = 0
 		germ_level = 0
 
-	//Sometimes do shoes if asked (or feet if no shoes)
-	if(washshoes && shoes)
-		shoes.clean_blood()
+	if(shoes)
+		shoes.wash(clean_types)
 		update_inv_shoes()
 		shoes.germ_level = 0
-	else if(washshoes && (feet_blood_color || LAZYLEN(feet_blood_DNA)))
+	else if(feet_blood_color || LAZYLEN(feet_blood_DNA))
 		LAZYCLEARLIST(feet_blood_DNA)
 		feet_blood_DNA = null
 		feet_blood_color = null
@@ -1311,6 +1310,7 @@
 
 	species.create_organs(src)
 
+	species.apply_components(src)
 
 	maxHealth = species.total_health
 	hunger_rate = species.hunger_factor
@@ -1320,15 +1320,6 @@
 	pixel_x = default_pixel_x
 	pixel_y = default_pixel_y
 	center_offset = species.center_offset
-
-	if(LAZYLEN(descriptors))
-		descriptors = null
-
-	if(LAZYLEN(species.descriptors))
-		descriptors = list()
-		for(var/desctype in species.descriptors)
-			var/datum/mob_descriptor/descriptor = species.descriptors[desctype]
-			descriptors[desctype] = descriptor.default_value
 
 	if(vessel)
 		initialize_vessel()
@@ -1872,3 +1863,163 @@
 
 /mob/living/carbon/human/get_digestion_efficiency_modifier()
 	return species.digestion_efficiency
+
+/mob/living/carbon/human/verb/hide_headset()
+	set name = "Show/Hide Headset"
+	set category = "IC.Settings"
+	set desc = "Toggle headset worn icon visibility."
+	hide_headset = !hide_headset
+	update_inv_ears()
+
+/mob/living/carbon/human/verb/hide_glasses()
+	set name = "Show/Hide Glasses"
+	set category = "IC.Settings"
+	set desc = "Toggle glasses worn icon visibility."
+	hide_glasses = !hide_glasses
+	update_inv_glasses()
+
+///mob/living/carbon/human/vv_edit_var(var_name, var_value)
+//	if(var_name == NAMEOF(src, mob_height))
+//		// you wanna edit this one not that one
+//		var_name = NAMEOF(src, base_mob_height)
+//	. = ..()
+//	if(!.)
+//		return .
+//	if(var_name == NAMEOF(src, base_mob_height))
+//		update_mob_height()
+
+/mob/living/carbon/human/vv_get_dropdown()
+	. = ..()
+	VV_DROPDOWN_OPTION("", "---------")
+	//VV_DROPDOWN_OPTION(VV_HK_COPY_OUTFIT, "Copy Outfit")
+	//VV_DROPDOWN_OPTION(VV_HK_MOD_MUTATIONS, "Add/Remove Mutation")
+	//VV_DROPDOWN_OPTION(VV_HK_MOD_QUIRKS, "Add/Remove Quirks")
+	VV_DROPDOWN_OPTION(VV_HK_SET_SPECIES, "Set Species")
+	//VV_DROPDOWN_OPTION(VV_HK_PURRBATION, "Toggle Purrbation")
+	//VV_DROPDOWN_OPTION(VV_HK_APPLY_DNA_INFUSION, "Apply DNA Infusion")
+	//VV_DROPDOWN_OPTION(VV_HK_TURN_INTO_MMI, "Turn into MMI")
+
+/mob/living/carbon/human/vv_do_topic(list/href_list)
+	. = ..()
+
+	if(!.)
+		return
+
+	/*
+	if(href_list[VV_HK_COPY_OUTFIT])
+		if(!check_rights(R_SPAWN))
+			return
+		copy_outfit()
+
+	if(href_list[VV_HK_MOD_MUTATIONS])
+		if(!check_rights(R_SPAWN))
+			return
+		var/list/options = list("Clear"="Clear")
+		for(var/x in subtypesof(/datum/mutation))
+			var/datum/mutation/mut = x
+			var/name = initial(mut.name)
+			options[dna.check_mutation(mut) ? "[name] (Remove)" : "[name] (Add)"] = mut
+		var/result = tgui_input_list(usr, "Choose mutation to add/remove","Mutation Mod", sort_list(options))
+		if(result)
+			if(result == "Clear")
+				for(var/datum/mutation/mutation as anything in dna.mutations)
+					dna.remove_mutation(mutation, mutation.sources)
+			else
+				var/mut = options[result]
+				if(dna.check_mutation(mut))
+					var/datum/mutation/mutation = dna.get_mutation(mut)
+					dna.remove_mutation(mut, mutation.sources)
+				else
+					dna.add_mutation(mut, MUTATION_SOURCE_VV)
+
+	if(href_list[VV_HK_MOD_QUIRKS])
+		if(!check_rights(R_SPAWN))
+			return
+		var/list/options = list("Clear"="Clear")
+		for(var/type in subtypesof(/datum/quirk))
+			var/datum/quirk/quirk_type = type
+			if(initial(quirk_type.abstract_parent_type) == type)
+				continue
+			var/qname = initial(quirk_type.name)
+			options[has_quirk(quirk_type) ? "[qname] (Remove)" : "[qname] (Add)"] = quirk_type
+		var/result = tgui_input_list(usr, "Choose quirk to add/remove","Quirk Mod", sort_list(options))
+		if(result)
+			if(result == "Clear")
+				for(var/datum/quirk/q in quirks)
+					remove_quirk(q.type)
+			else
+				var/T = options[result]
+				if(has_quirk(T))
+					remove_quirk(T)
+				else
+					add_quirk(T)
+	*/
+
+	if(href_list[VV_HK_SET_SPECIES])
+		if(!check_rights(R_SPAWN))
+			return
+		var/result = tgui_input_list(usr, "Please choose a new species","Species", sortTim(GLOB.all_species, GLOBAL_PROC_REF(cmp_text_asc)))
+		if(result)
+			var/newtype = GLOB.all_species[result]
+			admin_ticket_log("[key_name_admin(usr)] has modified the bodyparts of [src] to [result]")
+			set_species(newtype)
+
+	/*
+	if(href_list[VV_HK_PURRBATION])
+		if(!check_rights(R_SPAWN))
+			return
+		if(!ishuman(src))
+			to_chat(usr, "This can only be done to human species at the moment.")
+			return
+		var/success = purrbation_toggle(src)
+		if(success)
+			to_chat(usr, "Put [src] on purrbation.")
+			log_admin("[key_name(usr)] has put [key_name(src)] on purrbation.")
+			var/msg = span_notice("[key_name_admin(usr)] has put [key_name(src)] on purrbation.")
+			message_admins(msg)
+			admin_ticket_log(src, msg)
+		else
+			to_chat(usr, "Removed [src] from purrbation.")
+			log_admin("[key_name(usr)] has removed [key_name(src)] from purrbation.")
+			var/msg = span_notice("[key_name_admin(usr)] has removed [key_name(src)] from purrbation.")
+			message_admins(msg)
+			admin_ticket_log(src, msg)
+
+	if(href_list[VV_HK_APPLY_DNA_INFUSION])
+		if(!check_rights(R_SPAWN))
+			return
+		if(!ishuman(src))
+			to_chat(usr, "This can only be done to human species.")
+			return
+		var/result = usr.client.grant_dna_infusion(src)
+		if(result)
+			to_chat(usr, "Successfully applied DNA Infusion [result] to [src].")
+			log_admin("[key_name(usr)] has applied DNA Infusion [result] to [key_name(src)].")
+		else
+			to_chat(usr, "Failed to apply DNA Infusion to [src].")
+			log_admin("[key_name(usr)] failed to apply a DNA Infusion to [key_name(src)].")
+
+	if(href_list[VV_HK_TURN_INTO_MMI])
+		if(!check_rights(R_DEBUG))
+			return
+
+		var/result = tgui_alert(usr, "This will delete the mob, are you sure?", "Turn into MMI", list("Yes", "No"))
+		if(result != "Yes")
+			return
+
+		var/obj/item/organ/brain/target_brain = get_organ_slot(ORGAN_SLOT_BRAIN)
+
+		if(isnull(target_brain))
+			to_chat(usr, "This mob has no brain to insert into an MMI.")
+			return
+
+		var/obj/item/mmi/new_mmi = new(get_turf(src))
+
+		target_brain.Remove(src)
+		new_mmi.force_brain_into(target_brain)
+
+		to_chat(usr, "Turned [src] into an MMI.")
+		log_admin("[key_name(usr)] turned [key_name_and_tag(src)] into an MMI.")
+
+		qdel(src)
+	*/

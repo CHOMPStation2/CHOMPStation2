@@ -216,7 +216,7 @@
 	nodamage = 1
 	damage_type = HALLOSS
 	speed = 2
-	var/power = 35				//How hard it will hit for with electrocute_act(), decreases with each bounce.
+	var/power = 20				//How hard it will hit for with electrocute_act(), decreases with each bounce.
 
 /obj/item/projectile/energy/lightingspark/attack_mob(var/mob/living/target_mob, var/distance, var/miss_modifier=0)
 	//First we shock the guy we just hit.
@@ -243,21 +243,22 @@
 	check_armour = "laser"
 	damage = 30
 	armor_penetration = 20
+	penetrating = 2
 	speed = 2
+	crawl_destroy = TRUE
 
-//The normal laser is easier to guard, but can chain screw ups easier
+//The normal laser respects more armor, but deals more damage if you don't have it.precursor will thwack folks equally.
 /obj/item/projectile/energy/eclipse/lorge
-	damage = 50
-	armor_penetration = 20
-	eyeblur = 3
+	damage = 60
+	armor_penetration = 30
 	icon_state = "mega_laser"
-	speed = 15
+	speed = 10
 
 /obj/item/projectile/energy/eclipse/lorgealien
-	damage = 50
-	armor_penetration = 40
+	damage = 20
+	armor_penetration = 60
 	icon_state = "mega_laser_p"
-	speed = 15
+	speed = 10
 
 /obj/item/projectile/bullet/crystalineburst
 	use_submunitions = 1
@@ -267,3 +268,32 @@
 	submunition_spread_max = 120
 	submunition_spread_min = 60
 	submunitions = list(/obj/item/projectile/bullet/crystaline = 5)
+
+/obj/item/projectile/energy/eclipse/janusjavelin //This will end you
+	name = "energy javelin"
+	icon_state = "javelin"
+	damage_type = SEARING
+	check_armour = "bullet"
+	damage = 45
+	armor_penetration = 95
+	speed = 10
+
+/obj/item/projectile/energy/eclipse/chillingwind
+	name = "ice winds"
+	icon_state = "ice_wind"
+	damage = 15
+	armor_penetration = 70
+	speed = 10
+	modifier_type_to_apply = /datum/modifier/cryogelled
+	modifier_duration = 0.25 MINUTE
+
+/obj/item/projectile/energy/eclipse/mining
+	name = "drill"
+	icon_state = "drill"
+	damage_type = BRUTE
+	check_armour = "bullet"
+	damage = 40
+	armor_penetration = 30
+	speed = 10
+	excavation_amount = 100
+

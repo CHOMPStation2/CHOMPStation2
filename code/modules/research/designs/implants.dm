@@ -61,7 +61,7 @@
 	materials = list(MAT_STEEL = 6000, MAT_GLASS = 6000, MAT_SILVER = 1000)
 	build_path = /obj/item/organ/internal/augment/armmounted/hand/blade
 	sort_string = "JVACK"
-	department = LATHE_SCIENCE // CHOMPAdd
+	department = LATHE_ALL | LATHE_SCIENCE // CHOMPAdd
 
 /datum/design/item/organ/internal/augment/armmounted/shoulder/blade
 	desc = "A large implant that fits into a subject's arm. It deploys a large, bladed weapon."
@@ -70,7 +70,7 @@
 	materials = list(MAT_STEEL = 6000, MAT_GLASS = 6000, MAT_SILVER = 1000, MAT_GOLD = 2000)
 	build_path = /obj/item/organ/internal/augment/armmounted/shoulder/blade
 	sort_string = "JVACL"
-	department = LATHE_SCIENCE // CHOMPAdd
+	department = LATHE_ALL | LATHE_SCIENCE // CHOMPAdd
 
 /datum/design/item/organ/internal/augment/armmounted/hand/sword
 	desc = "A large implant that fits into a subject's hand. It deploys a large, energetic weapon."
@@ -79,7 +79,7 @@
 	materials = list(MAT_STEEL = 6000, MAT_GLASS = 6000, MAT_SILVER = 1000, MAT_GOLD = 2000, MAT_DIAMOND = 2000)
 	build_path = /obj/item/organ/internal/augment/armmounted/hand/sword
 	sort_string = "JVACM"
-	department = LATHE_SCIENCE // CHOMPAdd
+	department = LATHE_ALL | LATHE_SCIENCE // CHOMPAdd
 
 /datum/design/item/organ/internal/augment/armmounted/dartbow
 	desc = "A large implant that fits into a subject's arm. It creates a dartbow when activated."
@@ -88,7 +88,7 @@
 	materials = list(MAT_STEEL = 6000, MAT_GLASS = 6000, MAT_PHORON = 4000, MAT_GOLD = 4000, MAT_DIAMOND = 6000)
 	build_path = /obj/item/organ/internal/augment/armmounted/dartbow
 	sort_string = "JVACN"
-	department = LATHE_SCIENCE // CHOMPAdd
+	department = LATHE_ALL | LATHE_SCIENCE // CHOMPAdd
 
 /datum/design/item/organ/internal/augment/armmounted/taser
 	desc = "A large implant that fits into a subject's arm. It turns into a taser when activated."
@@ -97,7 +97,7 @@
 	materials = list(MAT_STEEL = 6000, MAT_GLASS = 6000, MAT_SILVER = 2000, MAT_GOLD = 1000)
 	build_path = /obj/item/organ/internal/augment/armmounted/taser
 	sort_string = "JVACO"
-	department = LATHE_SCIENCE // CHOMPAdd
+	department = LATHE_ALL | LATHE_SCIENCE // CHOMPAdd
 
 /datum/design/item/organ/internal/augment/armmounted/laser
 	desc = "A large implant that fits into a subject's arm. It turns into a laser when activated."
@@ -106,7 +106,7 @@
 	materials = list(MAT_STEEL = 6000, MAT_GLASS = 6000, MAT_SILVER = 6000, MAT_GOLD = 4000, MAT_DIAMOND = 4000, MAT_PHORON = 2000)
 	build_path = /obj/item/organ/internal/augment/armmounted
 	sort_string = "JVACP"
-	department = LATHE_SCIENCE // CHOMPAdd
+	department = LATHE_ALL | LATHE_SCIENCE // CHOMPAdd
 
 /datum/design/item/organ/internal/augment/armmounted/shoulder/surge
 	desc = "A large implant that fits into a subject's arm. It floods the subject with stimulants to speed them up."
@@ -115,7 +115,7 @@
 	materials = list(MAT_STEEL = 6000, MAT_GLASS = 6000, MAT_PHORON = 1000, MAT_GOLD = 2000)
 	build_path = /obj/item/organ/internal/augment/armmounted/shoulder/surge
 	sort_string = "JVACQ"
-	department = LATHE_SCIENCE // CHOMPAdd
+	department = LATHE_ALL | LATHE_SCIENCE // CHOMPAdd
 
 /datum/design/item/internal/augment/bioaugment/thermalshades
 	desc = "A large implant that fits into a subject's eyes. It allows them to see through walls."
@@ -124,4 +124,4 @@
 	materials = list(MAT_STEEL = 6000, MAT_GLASS = 6000, MAT_PHORON = 10000, MAT_GOLD = 2000, MAT_DIAMOND = 10000, MAT_SILVER = 4000, MAT_TITANIUM = 1000) //this is thermals. this is expensive, yo.
 	build_path = /obj/item/organ/internal/augment/bioaugment/thermalshades
 	sort_string = "JVACR"
-	department = LATHE_SCIENCE // CHOMPAdd
+	department = LATHE_ALL | LATHE_SCIENCE // CHOMPAdd

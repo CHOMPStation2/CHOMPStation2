@@ -119,7 +119,7 @@
 	S.set_up(R, 30, 0, droploc)
 	spawn(0)
 		S.start()*/
-	..()
+	. = ..()
 
 //What about if someone's in it? Well here you go.
 /mob/living/simple_mob/humanoid/possessed/Login()

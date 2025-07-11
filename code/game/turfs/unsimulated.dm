@@ -6,9 +6,6 @@
 	flags = TURF_ACID_IMMUNE
 
 /turf/unsimulated/Initialize(mapload)
-	if(skip_init)
-		flags |= ATOM_INITIALIZED
-		return INITIALIZE_HINT_NORMAL
 	. = ..()
 
 //VOREStation Add

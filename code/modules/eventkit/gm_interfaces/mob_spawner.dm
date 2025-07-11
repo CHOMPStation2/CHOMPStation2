@@ -26,7 +26,7 @@
 	. = ..()
 
 /datum/eventkit/mob_spawner/tgui_state(mob/user)
-	return GLOB.tgui_admin_state
+	return ADMIN_STATE(R_ADMIN|R_EVENT|R_DEBUG)
 
 /datum/eventkit/mob_spawner/tgui_static_data(mob/user)
 	var/list/data = list()
@@ -65,7 +65,7 @@
 					intent  = (L.a_intent ? L.a_intent : I_HELP)
 					new_path = FALSE
 
-					data["max_health"] = L.maxHealth
+					data["max_health"] = L.getMaxHealth()
 					data["health"] = L.health
 					if(isanimal(L))
 						var/mob/living/simple_mob/S = L

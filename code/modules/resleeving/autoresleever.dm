@@ -157,6 +157,7 @@
 		new_character.dna.ResetUIFrom(new_character)
 		new_character.sync_dna_traits(TRUE) // Traitgenes Sync traits to genetics if needed
 		new_character.sync_organ_dna()
+	new_character.sync_addictions() // These are addicitions our profile wants... May as well give them!
 	new_character.initialize_vessel()
 	if(ghost.mind)
 		ghost.mind.transfer_to(new_character)
@@ -164,6 +165,7 @@
 	new_character.key = player_key
 
 	//Were they any particular special role? If so, copy.
+
 	if(new_character.mind)
 		new_character.mind.loaded_from_ckey = picked_ckey
 		new_character.mind.loaded_from_slot = picked_slot
@@ -171,6 +173,8 @@
 		if(antag_data)
 			antag_data.add_antagonist(new_character.mind)
 			antag_data.place_mob(new_character)
+		if(new_character.mind.antag_holder)
+			new_character.mind.antag_holder.apply_antags(new_character)
 
 	for(var/lang in ghost_client.prefs.alternate_languages)
 		var/datum/language/chosen_language = GLOB.all_languages[lang]
@@ -186,6 +190,8 @@
 		var/datum/language/def_lang = GLOB.all_languages[ghost_client.prefs.preferred_language]
 		if(def_lang)
 			new_character.default_language = def_lang
+
+	SEND_SIGNAL(new_character, COMSIG_HUMAN_DNA_FINALIZED)
 
 	//If desired, apply equipment.
 	if(equip_body)

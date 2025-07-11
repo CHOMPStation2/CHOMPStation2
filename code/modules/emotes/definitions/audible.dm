@@ -157,7 +157,7 @@
 	key = "bhiss"
 	emote_message_3p_target = "hisses at TARGET."
 	emote_message_3p = "hisses."
-	emote_sound = 'sound/voice/BugHiss.ogg'
+	emote_sound = 'sound/voice/bughiss.ogg'
 
 /decl/emote/audible/bug_buzz
 	key = "bbuzz"
@@ -167,7 +167,7 @@
 /decl/emote/audible/bug_chitter
 	key = "chitter"
 	emote_message_3p = "chitters."
-	emote_sound = 'sound/voice/Bug.ogg'
+	emote_sound = 'sound/voice/bug.ogg'
 
 /decl/emote/audible/roar
 	key = "roar"
@@ -287,3 +287,41 @@
 	emote_message_1p_target = "You prbt at TARGET."
 	emote_message_3p_target = "prbts at TARGET."
 	emote_sound = 'sound/voice/prbt.ogg'
+
+//Some Spooky sounds.
+/decl/emote/audible/evil_laugh
+	key = "evillaugh"
+	emote_message_3p = "laughs!"
+	emote_sound = 'sound/mob/spooky/laugh.ogg'
+
+/decl/emote/audible/evil_no
+	key = "evilno"
+	emote_message_3p = "says no!"
+	emote_sound = 'sound/mob/spooky/no.ogg'
+
+/decl/emote/audible/evil_breathing
+	key = "evilbreath"
+	emote_message_3p = "breaths heavily!"
+	emote_sound = 'sound/mob/spooky/breath1.ogg'
+
+/decl/emote/audible/evil_breathing_2
+	key = "evilbreath2"
+	emote_message_3p = "breaths heavily!"
+	emote_sound = 'sound/mob/spooky/breath2.ogg'
+
+/decl/emote/audible/goodripsound
+	key = "goodripsound"
+	emote_message_3p = "drips goo."
+
+/decl/emote/audible/goodripsound/do_extra(var/mob/user)
+	..()
+	var/goo_sounds = list (
+			'sound/mob/spooky/decay1.ogg',
+			'sound/mob/spooky/decay2.ogg',
+			'sound/mob/spooky/decay3.ogg',
+			'sound/mob/spooky/corrosion1.ogg',
+			'sound/mob/spooky/corrosion2.ogg',
+			'sound/mob/spooky/corrosion3.ogg'
+			)
+	var/sound = pick(goo_sounds)
+	playsound(user.loc, sound, 100, 1)

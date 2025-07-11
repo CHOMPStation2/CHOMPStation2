@@ -1,12 +1,5 @@
-/client/proc/edit_admin_permissions()
-	set category = "Admin.Secrets"
-	set name = "Permissions Panel"
-	set desc = "Edit admin permissions"
-
-	if(!check_rights(R_PERMISSIONS))
-		return
-
-	usr.client.holder.edit_admin_permissions()
+ADMIN_VERB(edit_admin_permissions, R_PERMISSIONS, "Permissions Panel", "Edit admin permissions.", "Admin.Secrets")
+	user.holder.edit_admin_permissions()
 
 /datum/admins/proc/edit_admin_permissions(action, target, operation, page)
 	if(!check_rights(R_PERMISSIONS))
@@ -133,7 +126,10 @@
 		output += "</table></div><div id='top'><b>Search:</b> <input type='text' id='filter' value='' style='width:70%;' onkeyup='updateSearch();'></div></body>"
 	if(QDELETED(usr))
 		return
-	usr << browse("<!DOCTYPE html><html>[jointext(output, "")]</html>","window=editrights;size=1000x650")
+
+	var/datum/browser/popup = new(owner, "editrights", "Edit Rights", 1000, 650)
+	popup.set_content(jointext(output, ""))
+	popup.open()
 
 /datum/admins/proc/edit_rights_topic(list/href_list)
 	if(!check_rights(R_PERMISSIONS))
@@ -227,7 +223,7 @@
 	if(admin_ckey)
 		. = admin_ckey
 	else
-		admin_key = input("New admin's key","Admin key") as text|null
+		admin_key = tgui_input_text(usr, "New admin's key","Admin key")
 		. = ckey(admin_key)
 	if(!.)
 		return FALSE
@@ -337,7 +333,7 @@
 			if (!(rank_name in display_rank_names))
 				display_rank_names += rank_name
 
-		var/next_rank = input("Please select a rank, or select [RANK_DONE] if you are finished.") as null|anything in display_rank_names
+		var/next_rank = tgui_input_list(usr, "Please select a rank, or select [RANK_DONE] if you are finished.", "Pick Rank", display_rank_names)
 
 		if (isnull(next_rank))
 			return
@@ -354,7 +350,7 @@
 			continue
 
 		if (next_rank == "*New Rank*")
-			var/new_rank_name = input("Please input a new rank", "New custom rank") as text|null
+			var/new_rank_name = tgui_input_text(usr, "Please input a new rank", "New custom rank")
 			if (!new_rank_name)
 				return
 
@@ -459,7 +455,13 @@
 
 #undef RANK_DONE
 
+/// Changes, for this round only, the flags a particular admin gets to use
 /datum/admins/proc/change_admin_flags(admin_ckey, admin_key, datum/admins/admin_holder)
+	if(!check_rights(R_PERMISSIONS))
+		return
+	if(IsAdminAdvancedProcCall())
+		to_chat(usr, span_adminprefix("Rank Modification blocked: Advanced ProcCall detected."), confidential = TRUE)
+		return
 	var/new_flags = input_bitfield(
 		usr,
 		"Admin rights<br>This will affect only the current admin [admin_key]",
@@ -467,8 +469,10 @@
 		admin_holder.rank_flags(),
 		350,
 		590,
-		allowed_edit_list = usr.client.holder.can_edit_rights_flags(),
+		allowed_edit_field = usr.client.holder.can_edit_rights_flags(),
 	)
+	if(isnull(new_flags))
+		return
 
 	admin_holder.disassociate()
 

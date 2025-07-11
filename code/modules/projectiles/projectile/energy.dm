@@ -275,7 +275,7 @@
 /obj/item/projectile/energy/blue_pellet
 	name = "suppressive pellet"
 	icon_state = "blue_pellet"
-	fire_sound = 'sound/weapons/Laser4.ogg'
+	fire_sound = 'sound/weapons/laser5.ogg'
 	damage = 5
 	armor_penetration = 75
 	pass_flags = PASSTABLE | PASSGLASS | PASSGRILLE
@@ -294,24 +294,20 @@
 	icon_state = "phase"
 	range = 13 //Chompedit This range was still awful
 	damage = 5
-	SA_bonus_damage = 45	// 50 total on animals
-	SA_vulnerability = list(SA_ANIMAL, MOB_CLASS_SYNTHETIC, MOB_CLASS_ABERRATION, MOB_CLASS_HUMANOID) //CHOMP Edit expand this list
+	mob_bonus_damage = 45
 	hud_state = "laser_heat"
 
 /obj/item/projectile/energy/phase/light
-	range = 11 //Chompedit This range was absolutely pathetic
-	SA_bonus_damage = 35	// 40 total on animals
+	range = 4
 	hud_state = "laser_heat"
 
 /obj/item/projectile/energy/phase/heavy
-	range = 16 //Chompedit This range was not great
-	SA_bonus_damage = 55	// 60 total on animals
+	range = 8
 	hud_state = "laser_heat"
 
 /obj/item/projectile/energy/phase/heavy/cannon
 	range = 20 //Chompedit This range was mediocre, but not worth a cannon.
 	damage = 15
-	SA_bonus_damage = 60	// 75 total on animals
 	hud_state = "laser_heat"
 */
 

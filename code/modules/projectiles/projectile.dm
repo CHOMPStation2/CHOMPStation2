@@ -103,8 +103,7 @@
 
 	var/damage = 10
 	var/damage_type = BRUTE //BRUTE, BURN, TOX, OXY, CLONE, HALLOSS, ELECTROCUTE, BIOACID, SEARING are the only things that should be in here
-	var/SA_bonus_damage = 0 // Some bullets inflict extra damage on simple animals.
-	var/SA_vulnerability = null // What kind of simple animal the above bonus damage should be applied to. Set to null to apply to all SAs.
+	var/mob_bonus_damage = 0 // Some bullets inflict extra damage on simple animals.
 	var/nodamage = 0 //Determines if the projectile will skip any damage inflictions
 	var/taser_effect = 0 //If set then the projectile will apply it's agony damage using stun_effect_act() to mobs it hits, and other damage will be ignored
 	var/check_armour = "bullet" //Defines what armor to use when it hits things.  Must be set to bullet, laser, energy,or bomb	//Cael - bio and rad are also valid
@@ -129,7 +128,7 @@
 
 	embed_chance = 0	//Base chance for a projectile to embed
 
-	var/fire_sound = 'sound/weapons/Gunshot1.ogg' // Can be overriden in gun.dm's fire_sound var. It can also be null but I don't know why you'd ever want to do that. -Ace
+	var/fire_sound = 'sound/weapons/gunshot_old.ogg' // Can be overriden in gun.dm's fire_sound var. It can also be null but I don't know why you'd ever want to do that. -Ace
 
 	var/vacuum_traversal = TRUE //Determines if the projectile can exist in vacuum, if false, the projectile will be deleted if it enters vacuum.
 
@@ -146,6 +145,8 @@
 	var/hud_state_empty = "unknown" // The empty state. DON'T USE _FLASH IN THE NAME OF THE EMPTY STATE STRING, THAT IS ADDED BY THE CODE.
 
 	var/obj/item/ammo_casing/my_case = null
+
+	var/crawl_destroy = FALSE //chompADD: Making bullet hell lite mobs, need something to add to their projectiles to destroy laying folks
 
 
 /obj/item/projectile/Initialize(mapload)
@@ -554,6 +555,8 @@
 			// So we'll check before, just in case. Lying might gives a chance to dodge, however.
 			if(L.GetComponent(/datum/component/swarming) && L.stat != DEAD && !L.lying)
 				return TRUE
+			if(crawl_destroy == TRUE) //chompADD
+				return TRUE
 			if(!L.density)
 				return FALSE
 	return TRUE
@@ -667,7 +670,7 @@
 
 /obj/item/projectile/proc/get_structure_damage()
 	if(damage_type == BRUTE || damage_type == BURN)
-		return damage + SA_bonus_damage //CHOMP Edit: Added SA_bonus_damage to the returned value so that phaser can do damage against shields.
+		return damage + mob_bonus_damage //CHOMP Edit: Added mob_bonus_damage to the returned value so that phaser can do damage against shields.
 	return 0
 
 //return 1 if the projectile should be allowed to pass through after all, 0 if not.

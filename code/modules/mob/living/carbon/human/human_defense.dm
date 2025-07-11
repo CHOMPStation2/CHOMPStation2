@@ -427,8 +427,8 @@ emp_act
 		var/obj/O = AM
 		if(stat != DEAD && istype(O,/obj/item) && trash_catching && vore_selected) //Ported from chompstation
 			var/obj/item/I = O
-			if(adminbus_trash || is_type_in_list(I,edible_trash) && I.trash_eatable && !is_type_in_list(I,item_vore_blacklist))
-				visible_message(span_vwarning("[I] is thrown directly into [src]'s [lowertext(vore_selected.name)]!")) //CHOMPEdit
+			if(adminbus_trash || is_type_in_list(I, GLOB.edible_trash) && I.trash_eatable && !is_type_in_list(I, GLOB.item_vore_blacklist))
+				visible_message(span_vwarning("[I] is thrown directly into [src]'s [lowertext(vore_selected.name)]!"))
 				I.throwing = 0
 				I.forceMove(vore_selected)
 				return
@@ -577,11 +577,9 @@ emp_act
 		var/obj/item/clothing/gloves/gl = gloves
 		gl.add_blood(source)
 		gl.transfer_blood = amount
-		gl.bloody_hands_mob = source
 	else
 		add_blood(source)
 		bloody_hands = amount
-		bloody_hands_mob = source
 	update_inv_gloves()		//updates on-mob overlays for bloody hands and/or bloody gloves
 
 /mob/living/carbon/human/proc/bloody_body(var/mob/living/source)

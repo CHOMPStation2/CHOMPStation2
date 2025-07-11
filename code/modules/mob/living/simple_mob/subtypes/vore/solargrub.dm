@@ -107,7 +107,7 @@ var/global/moth_amount = 0 // CHOMPEnable, Rykka waz here. *pawstamp*
 		//CHOMPEnable Start
 		if(prob(1) && charge >= 32000 && can_evolve == 1 && moth_amount < 1) //it's reading from the moth_amount global list to determine if it can evolve. There should only ever be a maxcap of 1 existing solar moth alive at any time. TODO: make the code decrease the list after 1 has spawned this shift.
 			anchored = 0
-			PN = attached.powernet
+			PN = null
 			release_vore_contents()
 			if(prey_excludes)
 				prey_excludes.Cut()
@@ -139,7 +139,7 @@ var/global/moth_amount = 0 // CHOMPEnable, Rykka waz here. *pawstamp*
 		var/mob/living/L = A
 		if(prob(shock_chance))
 			A.emp_act(4) //The weakest strength of EMP
-			playsound(src, 'sound/weapons/Egloves.ogg', 75, 1)
+			playsound(src, 'sound/weapons/egloves.ogg', 75, 1)
 			L.Weaken(4)
 			L.Stun(4)
 			L.stuttering = max(L.stuttering, 4)

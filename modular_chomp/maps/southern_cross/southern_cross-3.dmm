@@ -17148,7 +17148,7 @@
 /turf/simulated/floor/plating,
 /area/maintenance/central)
 "bdg" = (
-/turf/unsimulated/mask,
+/turf/simulated/open,
 /area/hallway/primary/seconddeck/apcenter)
 "bdh" = (
 /turf/simulated/floor/plating,
@@ -26560,7 +26560,7 @@
 /turf/simulated/floor/tiled,
 /area/hallway/primary/seconddeck/port)
 "bGl" = (
-/turf/unsimulated/mask,
+/turf/simulated/open,
 /area/hallway/primary/seconddeck/port)
 "bGm" = (
 /obj/machinery/light{
@@ -28848,7 +28848,7 @@
 /turf/simulated/floor/tiled,
 /area/security/lobby)
 "bOQ" = (
-/turf/unsimulated/mask,
+/turf/simulated/open,
 /area/quartermaster/office)
 "bPb" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -57017,7 +57017,7 @@
 /turf/simulated/floor/plating,
 /area/maintenance/research)
 "kQH" = (
-/obj/machinery/r_n_d/protolathe/science,
+/obj/machinery/r_n_d/protolathe,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/reagent_dispensers/acid{
 	pixel_x = -30
@@ -69463,7 +69463,7 @@
 /turf/simulated/wall/r_wall,
 /area/hallway/primary/seconddeck/starboard)
 "sql" = (
-/turf/unsimulated/mask,
+/turf/simulated/open,
 /area/hallway/primary/seconddeck/starboard)
 "sqJ" = (
 /obj/structure/reagent_dispensers/fueltank,

@@ -7,7 +7,7 @@
 	total_spawns = 2
 	destructible = 0
 	anchored = 1
-	invisibility = 101
+	invisibility = INVISIBILITY_ABSTRACT
 	spawn_types = list(
 		/mob/living/simple_mob/vore/bat = 70,
 		/mob/living/simple_mob/animal/passive/cockroach = 60,

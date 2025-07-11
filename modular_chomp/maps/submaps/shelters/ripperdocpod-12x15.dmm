@@ -1,0 +1,669 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/turf/template_noop,
+/area/template_noop)
+"b" = (
+/obj/item/stool{
+	dir = 4
+	},
+/obj/random/trash,
+/turf/simulated/floor/tiled/steel_dirty,
+/area/survivalpod/superpose/ripperdocpod)
+"c" = (
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/tiled/steel_dirty,
+/area/survivalpod/superpose/ripperdocpod)
+"d" = (
+/obj/machinery/door/blast/gate/thin/open{
+	id = "ripperdoc"
+	},
+/obj/effect/floor_decal/industrial/warning/cee{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor/grid/turfpack,
+/area/survivalpod/superpose/ripperdocpod)
+"e" = (
+/obj/machinery/door/airlock/glass,
+/turf/simulated/floor/tiled/old_tile/gray,
+/area/survivalpod/superpose/ripperdocpod)
+"f" = (
+/obj/effect/wingrille_spawn/reinforced/polarized{
+	id = "ripperdoc"
+	},
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/ripperdocpod)
+"g" = (
+/obj/machinery/oxygen_pump/mobile/anesthetic,
+/obj/machinery/light/small/flicker{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/ripperdocpod)
+"h" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/item/reagent_containers/blood/prelabeled/OMinus,
+/obj/machinery/iv_drip,
+/obj/structure/closet/crate/freezer,
+/obj/item/reagent_containers/blood/prelabeled/OMinus,
+/obj/item/reagent_containers/blood/prelabeled/OMinus,
+/obj/item/reagent_containers/blood/prelabeled/OMinus,
+/obj/item/reagent_containers/blood/prelabeled/OMinus,
+/obj/machinery/button/windowtint{
+	id = "ripperdoc";
+	pixel_x = -11;
+	pixel_y = -22
+	},
+/obj/machinery/button/remote/blast_door{
+	id = "ripperdoc";
+	pixel_x = 7;
+	dir = 4;
+	pixel_y = -23
+	},
+/turf/simulated/floor/tiled/techfloor/grid/turfpack,
+/area/survivalpod/superpose/ripperdocpod)
+"j" = (
+/turf/simulated/floor/tiled/steel_dirty,
+/area/survivalpod/superpose/ripperdocpod)
+"k" = (
+/obj/machinery/light/small/neon/nif1{
+	pixel_y = -28
+	},
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/tiled/steel_dirty,
+/area/survivalpod/superpose/ripperdocpod)
+"l" = (
+/obj/machinery/atm{
+	pixel_x = -28
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/ripperdocpod)
+"m" = (
+/obj/machinery/computer/operating,
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/ripperdocpod)
+"n" = (
+/obj/structure/table/reinforced,
+/obj/machinery/light/small{
+	dir = 4
+	},
+/obj/machinery/recharger,
+/obj/item/soap/syndie,
+/obj/machinery/newscaster{
+	pixel_x = 30
+	},
+/turf/simulated/floor/tiled/techfloor/grid/turfpack,
+/area/survivalpod/superpose/ripperdocpod)
+"o" = (
+/obj/structure/cable{
+	icon_state = "0-4"
+	},
+/obj/machinery/power/rtg/advanced,
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/ripperdocpod)
+"p" = (
+/obj/structure/table/reinforced,
+/obj/item/reagent_containers/glass/bottle/cyanide{
+	pixel_y = -2
+	},
+/obj/item/reagent_containers/glass/bottle/pacid{
+	pixel_y = -3;
+	pixel_x = -8
+	},
+/obj/item/storage/quickdraw/syringe_case,
+/obj/item/reagent_containers/glass/beaker/vial/tricordrazine{
+	pixel_x = 10
+	},
+/obj/item/storage/pill_bottle/tramadol,
+/obj/item/storage/pill_bottle/paracetamol,
+/obj/item/reagent_containers/glass/bottle/oxycodone{
+	pixel_y = 8;
+	pixel_x = -8
+	},
+/turf/simulated/floor/tiled/techfloor/grid/turfpack,
+/area/survivalpod/superpose/ripperdocpod)
+"q" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 4
+	},
+/obj/machinery/smartfridge/survival_pod{
+	icon = 'icons/obj/vending.dmi';
+	icon_base = "fridge_sci";
+	icon_contents = "chem";
+	icon_state = "fridge_sci";
+	name = "Advanced storage";
+	pixel_y = 0
+	},
+/obj/item/organ/internal/augment/armmounted,
+/obj/item/organ/internal/augment/armmounted,
+/obj/item/organ/internal/augment/armmounted/dartbow,
+/obj/item/organ/internal/augment/armmounted/dartbow,
+/obj/item/organ/internal/augment/armmounted/hand,
+/obj/item/organ/internal/augment/armmounted/hand,
+/obj/item/organ/internal/augment/armmounted/hand/blade,
+/obj/item/organ/internal/augment/armmounted/hand/blade,
+/obj/item/organ/internal/augment/armmounted/hand/sword,
+/obj/item/organ/internal/augment/armmounted/hand/sword,
+/obj/item/organ/internal/augment/armmounted/shoulder/multiple,
+/obj/item/organ/internal/augment/armmounted/shoulder/multiple,
+/obj/item/organ/internal/augment/armmounted/shoulder/multiple/medical,
+/obj/item/organ/internal/augment/armmounted/shoulder/blade,
+/obj/item/organ/internal/augment/armmounted/shoulder/surge,
+/obj/item/organ/internal/augment/armmounted/shoulder/surge,
+/obj/item/organ/internal/augment/armmounted/shoulder/blade,
+/obj/item/organ/internal/augment/armmounted/shoulder/multiple/medical,
+/obj/item/organ/internal/augment/bioaugment/sprint_enhance,
+/obj/item/organ/internal/augment/armmounted/taser,
+/obj/item/organ/internal/augment/armmounted/taser,
+/obj/item/organ/internal/augment/bioaugment/sprint_enhance,
+/obj/item/organ/internal/augment/bioaugment/thermalshades,
+/obj/item/organ/internal/augment/bioaugment/thermalshades,
+/obj/item/nif/bad,
+/obj/item/nif/bad,
+/obj/item/nif/bad,
+/obj/item/nif/bad,
+/obj/machinery/light/small/neon/import{
+	pixel_y = 21
+	},
+/turf/simulated/floor/tiled/techfloor/grid/turfpack,
+/area/survivalpod/superpose/ripperdocpod)
+"r" = (
+/obj/structure/cable{
+	icon_state = "1-8"
+	},
+/obj/structure/cable,
+/obj/machinery/power/rtg/advanced,
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/ripperdocpod)
+"s" = (
+/obj/machinery/light/small/neon/pharmacy{
+	pixel_x = -30
+	},
+/turf/template_noop,
+/area/survivalpod/superpose/ripperdocpod)
+"t" = (
+/obj/structure/cable{
+	icon_state = "0-4"
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/machinery/power/rtg/advanced,
+/turf/simulated/floor/plating,
+/area/survivalpod/superpose/ripperdocpod)
+"u" = (
+/obj/random/trash,
+/obj/structure/table/reinforced,
+/obj/item/reagent_containers/glass/bottle/bicaridine{
+	pixel_y = -6;
+	pixel_x = -8
+	},
+/obj/item/reagent_containers/glass/bottle/antitoxin{
+	pixel_y = -1;
+	pixel_x = -8
+	},
+/obj/item/reagent_containers/glass/bottle/dermaline{
+	pixel_y = 4;
+	pixel_x = -8
+	},
+/obj/item/reagent_containers/glass/bottle/dexalinp{
+	pixel_y = 8;
+	pixel_x = -8
+	},
+/obj/item/reagent_containers/glass/bottle/spaceacillin{
+	pixel_y = -6;
+	pixel_x = 9
+	},
+/obj/item/reagent_containers/glass/bottle/tramadol{
+	pixel_y = -1;
+	pixel_x = 8
+	},
+/obj/item/healthanalyzer{
+	pixel_y = -9
+	},
+/obj/item/clothing/accessory/stethoscope,
+/obj/item/flashlight/pen,
+/turf/simulated/floor/tiled/techfloor/grid/turfpack,
+/area/survivalpod/superpose/ripperdocpod)
+"w" = (
+/obj/structure/table/reinforced,
+/obj/structure/sign/poster/custom{
+	dir = 1
+	},
+/obj/item/ammo_magazine/m9mm,
+/obj/item/ammo_magazine/m9mm,
+/obj/item/ammo_magazine/m9mm,
+/obj/item/ammo_magazine/m9mm,
+/obj/item/ammo_magazine/m9mm,
+/obj/item/ammo_magazine/ammo_box/b9mm,
+/obj/item/ammo_magazine/ammo_box/b9mm,
+/obj/item/ammo_magazine/ammo_box/b9mm,
+/obj/machinery/alarm{
+	pixel_y = 23
+	},
+/turf/simulated/floor/tiled/old_tile/gray,
+/area/survivalpod/superpose/ripperdocpod)
+"x" = (
+/obj/structure/table/reinforced,
+/obj/item/gun/projectile/serdy_pistols/vp70m{
+	pixel_y = -7;
+	pixel_x = -1
+	},
+/obj/item/reagent_containers/pill/dexalin_plus{
+	pixel_x = 5;
+	pixel_y = 8
+	},
+/obj/item/gun/projectile/serdy_pistols/vp70m{
+	pixel_y = -7;
+	pixel_x = -1
+	},
+/obj/item/reagent_containers/pill/bicaridine{
+	pixel_x = -7;
+	pixel_y = 8
+	},
+/obj/structure/cable{
+	icon_state = "2-4"
+	},
+/turf/simulated/floor/tiled/techfloor/grid/turfpack,
+/area/survivalpod/superpose/ripperdocpod)
+"y" = (
+/obj/machinery/vending/nukie,
+/turf/simulated/floor/tiled/techfloor/grid/turfpack,
+/area/survivalpod/superpose/ripperdocpod)
+"z" = (
+/obj/structure/table/reinforced,
+/obj/item/surgical/scalpel/ripper,
+/obj/item/storage/firstaid/surgery,
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/ripperdocpod)
+"A" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/techfloor/grid/turfpack,
+/area/survivalpod/superpose/ripperdocpod)
+"C" = (
+/obj/random/trash,
+/turf/simulated/floor/tiled/steel_dirty,
+/area/survivalpod/superpose/ripperdocpod)
+"D" = (
+/obj/machinery/space_heater,
+/obj/machinery/power/apc{
+	dir = 4;
+	name = "east bump";
+	pixel_x = 24
+	},
+/obj/structure/cable{
+	icon_state = "0-8"
+	},
+/turf/simulated/floor/tiled/techfloor/grid/turfpack,
+/area/survivalpod/superpose/ripperdocpod)
+"E" = (
+/obj/item/stool{
+	dir = 2
+	},
+/turf/simulated/floor/tiled/steel_dirty,
+/area/survivalpod/superpose/ripperdocpod)
+"F" = (
+/obj/effect/decal/cleanable/blood/old,
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/ripperdocpod)
+"H" = (
+/obj/machinery/light/small/neon/nif2{
+	pixel_y = -1;
+	pixel_x = -21
+	},
+/turf/simulated/floor/tiled/steel_dirty,
+/area/survivalpod/superpose/ripperdocpod)
+"I" = (
+/obj/item/disk/species/diona,
+/obj/item/disk/species/skrell,
+/obj/item/disk/species/tajaran,
+/obj/item/disk/species/teshari,
+/obj/item/disk/species/unathi,
+/obj/item/disk/species/zaddat,
+/obj/item/disk/limb/dsi_vulpkanin,
+/obj/item/disk/limb/dsi_teshari,
+/obj/structure/closet/crate/freezer,
+/turf/simulated/floor/tiled/techfloor/grid/turfpack,
+/area/survivalpod/superpose/ripperdocpod)
+"K" = (
+/obj/structure/sign/poster{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/steel_dirty,
+/area/survivalpod/superpose/ripperdocpod)
+"L" = (
+/obj/machinery/light/small/neon/cross{
+	pixel_y = 28
+	},
+/obj/machinery/light/small{
+	dir = 4
+	},
+/obj/random/trash,
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/tiled/steel_dirty,
+/area/survivalpod/superpose/ripperdocpod)
+"M" = (
+/obj/machinery/mecha_part_fabricator/pros,
+/obj/fiftyspawner/steel,
+/obj/fiftyspawner/glass,
+/obj/structure/sign/poster/custom{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor/grid/turfpack,
+/area/survivalpod/superpose/ripperdocpod)
+"O" = (
+/turf/simulated/wall/concrete,
+/area/survivalpod/superpose/ripperdocpod)
+"P" = (
+/obj/random/trash,
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/tiled/steel_dirty,
+/area/survivalpod/superpose/ripperdocpod)
+"Q" = (
+/obj/structure/table/reinforced,
+/obj/item/nif/glitch{
+	pixel_y = -4
+	},
+/obj/item/clothing/glasses/sunglasses/aviator{
+	pixel_y = 5
+	},
+/obj/machinery/light/small,
+/turf/simulated/floor/tiled/techfloor/grid/turfpack,
+/area/survivalpod/superpose/ripperdocpod)
+"R" = (
+/obj/machinery/door/blast/gate/thin/open{
+	id = "ripperdoc"
+	},
+/obj/effect/floor_decal/industrial/warning/cee{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techfloor/grid/turfpack,
+/area/survivalpod/superpose/ripperdocpod)
+"S" = (
+/obj/structure/table/reinforced,
+/obj/item/modular_computer/laptop/preset/custom_loadout/advanced,
+/obj/structure/sign/poster/custom{
+	dir = 4
+	},
+/obj/machinery/computer/security/telescreen/entertainment{
+	pixel_x = 32
+	},
+/turf/simulated/floor/tiled/techfloor/grid/turfpack,
+/area/survivalpod/superpose/ripperdocpod)
+"U" = (
+/obj/random/trash,
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/techfloor/grid/turfpack,
+/area/survivalpod/superpose/ripperdocpod)
+"V" = (
+/obj/structure/closet/crate/freezer,
+/obj/item/organ/internal/heart,
+/obj/item/organ/internal/heart,
+/obj/item/organ/internal/kidneys,
+/obj/machinery/light/small/neon/generic_green{
+	pixel_y = 25
+	},
+/obj/item/reagent_containers/blood/prelabeled/OMinus,
+/obj/item/reagent_containers/blood/prelabeled/OMinus,
+/obj/item/organ/internal/eyes/robot,
+/obj/item/organ/internal/eyes/robot,
+/obj/item/organ/internal/heart/machine,
+/obj/random/organ,
+/obj/random/organ,
+/obj/random/organ,
+/obj/random/organ,
+/obj/random/organ,
+/obj/random/organ,
+/turf/simulated/floor/tiled/old_tile/gray,
+/area/survivalpod/superpose/ripperdocpod)
+"W" = (
+/obj/structure/table/reinforced,
+/obj/item/disk/limb/morpheus,
+/obj/item/disk/limb/eggnerdltd,
+/obj/item/disk/limb/hephaestus,
+/obj/item/disk/limb/cenilimicybernetics,
+/obj/item/robotanalyzer,
+/obj/item/storage/toolbox/mechanical{
+	pixel_y = 13
+	},
+/turf/simulated/floor/tiled/techfloor/grid/turfpack,
+/area/survivalpod/superpose/ripperdocpod)
+"X" = (
+/obj/machinery/optable{
+	name = "Rusty Operating Table";
+	surgery_odds = 99;
+	desc = "This table doesnt look as reliable as the others."
+	},
+/obj/effect/decal/cleanable/blood/old,
+/turf/simulated/floor/tiled/techfloor,
+/area/survivalpod/superpose/ripperdocpod)
+"Y" = (
+/obj/machinery/vending/weeb{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/techfloor/grid/turfpack,
+/area/survivalpod/superpose/ripperdocpod)
+"Z" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/obj/effect/floor_decal/rust,
+/obj/item/radio/intercom{
+	dir = 4;
+	pixel_x = 21
+	},
+/turf/simulated/floor/tiled/steel_dirty,
+/area/survivalpod/superpose/ripperdocpod)
+
+(1,1,1) = {"
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+"}
+(2,1,1) = {"
+a
+a
+O
+O
+O
+O
+O
+O
+O
+O
+a
+a
+a
+a
+a
+"}
+(3,1,1) = {"
+a
+a
+O
+p
+j
+g
+l
+j
+Y
+O
+o
+a
+a
+a
+a
+"}
+(4,1,1) = {"
+a
+a
+O
+u
+C
+X
+F
+C
+y
+O
+t
+a
+a
+a
+a
+"}
+(5,1,1) = {"
+a
+a
+O
+I
+j
+m
+z
+j
+Q
+O
+t
+a
+a
+a
+a
+"}
+(6,1,1) = {"
+a
+a
+O
+W
+c
+P
+c
+E
+x
+f
+r
+a
+a
+a
+a
+"}
+(7,1,1) = {"
+a
+a
+O
+M
+Z
+c
+P
+P
+h
+O
+O
+O
+O
+a
+a
+"}
+(8,1,1) = {"
+a
+a
+O
+O
+O
+V
+c
+c
+A
+R
+H
+K
+O
+a
+a
+"}
+(9,1,1) = {"
+a
+a
+a
+a
+O
+w
+b
+c
+U
+d
+c
+P
+O
+a
+a
+"}
+(10,1,1) = {"
+a
+a
+a
+a
+O
+q
+n
+S
+D
+O
+L
+k
+O
+a
+a
+"}
+(11,1,1) = {"
+a
+a
+a
+a
+O
+O
+O
+O
+O
+O
+O
+e
+O
+a
+a
+"}
+(12,1,1) = {"
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+s
+a
+a
+"}

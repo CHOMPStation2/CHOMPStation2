@@ -46,7 +46,7 @@
 	if(!.)
 		return
 
-	return preferences.client.holder
+	return check_rights_for(preferences.client, R_HOLDER)
 
 /datum/preference/toggle/holder/play_adminhelp_ping
 	category = PREFERENCE_CATEGORY_GAME_PREFERENCES
@@ -69,6 +69,18 @@
 /datum/preference/toggle/holder/show_staff_dsay
 	category = PREFERENCE_CATEGORY_GAME_PREFERENCES
 	savefile_key = "CHAT_ADSAY"
+	default_value = TRUE
+	savefile_identifier = PREFERENCE_PLAYER
+
+/datum/preference/toggle/holder/vv_dark
+	category = PREFERENCE_CATEGORY_GAME_PREFERENCES
+	savefile_key = "vvdark"
+	default_value = TRUE
+	savefile_identifier = PREFERENCE_PLAYER
+
+/datum/preference/toggle/holder/vv_gfi
+	category = PREFERENCE_CATEGORY_GAME_PREFERENCES
+	savefile_key = "vvgfi"
 	default_value = TRUE
 	savefile_identifier = PREFERENCE_PLAYER
 

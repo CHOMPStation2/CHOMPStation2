@@ -5,35 +5,6 @@
  */
 
 /**
- * Returns a range of numbers from start to end, exclusively.
- * For example, range(0, 5) will return [0, 1, 2, 3, 4].
- */
-export const range = (start: number, end: number): number[] =>
-  new Array(end - start).fill(null).map((_, index) => index + start);
-
-type ReduceFunction = {
-  <T, U>(
-    array: T[],
-    reducerFn: (
-      accumulator: U,
-      currentValue: T,
-      currentIndex: number,
-      array: T[],
-    ) => U,
-    initialValue: U,
-  ): U;
-  <T>(
-    array: T[],
-    reducerFn: (
-      accumulator: T,
-      currentValue: T,
-      currentIndex: number,
-      array: T[],
-    ) => T,
-  ): T;
-};
-
-/**
  * Creates a duplicate-free version of an array, using SameValueZero for
  * equality comparisons, in which only the first occurrence of each element
  * is kept. The order of result values is determined by the order they occur

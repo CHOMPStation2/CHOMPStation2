@@ -1,18 +1,3 @@
-/obj/structure/prop/blackbox/tyr_precursor_a
-	catalogue_data = list(/datum/category_item/catalogue/information/blackbox/tyr_precursor_a)
-
-/datum/category_item/catalogue/information/blackbox/tyr_precursor_a
-
-/obj/structure/prop/blackbox/tyr_precursor_b
-	catalogue_data = list(/datum/category_item/catalogue/information/blackbox/tyr_precursor_b)
-
-/datum/category_item/catalogue/information/blackbox/tyr_precursor_b
-
-/obj/structure/prop/blackbox/tyr_precursor_c
-	catalogue_data = list(/datum/category_item/catalogue/information/blackbox/tyr_precursor_c)
-
-/datum/category_item/catalogue/information/blackbox/tyr_precursor_c
-
 //oooh, shiny
 /obj/structure/prop/tyr_elevator //This won't function for a while, if ever
 	name = "odd elevator"
@@ -300,3 +285,225 @@
 				prob(5);/obj/structure/outcrop/weathered_gate,
 				prob(3);/obj/structure/outcrop/hydrogen,
 				prob(1);/obj/structure/outcrop/lead/tyr)
+
+/obj/item/prop/tyrlore
+	name = "alien disk"
+	desc = "A disc for storing data."
+	icon = 'modular_chomp/icons/obj/weather_ruins.dmi'
+	w_class = ITEMSIZE_SMALL
+
+/obj/item/prop/tyrlore/reddisc
+	catalogue_data = list(/datum/category_item/catalogue/anomalous/tyr_red)
+	icon_state = "disc_red"
+
+/obj/item/prop/tyrlore/purpledisc
+	catalogue_data = list(/datum/category_item/catalogue/anomalous/tyr_purple)
+	icon_state = "disc_purple"
+
+/obj/item/prop/tyrlore/greendisc
+	catalogue_data = list(/datum/category_item/catalogue/anomalous/tyr_green)
+	icon_state = "disc_green"
+
+/obj/item/prop/tyrlore/baseneon
+	name = "data disc"
+	desc = "A disc for storing data."
+	catalogue_data = list(/datum/category_item/catalogue/technology/base_neon)
+	icon_state = "neon_disc"
+
+/obj/item/prop/tyrlore/neonsec
+	name = "data disc"
+	desc = "A disc for storing data."
+	catalogue_data = list(/datum/category_item/catalogue/technology/base_neon_forward)
+	icon_state = "sec_disc"
+
+/obj/item/prop/tyrlore/neonmedi
+	name = "data disc"
+	desc = "A disc for storing data."
+	catalogue_data = list(/datum/category_item/catalogue/technology/base_neon_virus)
+	icon_state = "medi_disc"
+
+/obj/item/prop/tyrlore/monodisc
+	name = "strange disk"
+	desc = "A disc for storing data, but it appears to have none on it"
+	icon_state = "mono_disc"
+
+/obj/item/prop/tyrlore/neonengi
+	name = "data disc"
+	desc = "A disc for storing data."
+	catalogue_data = list(/datum/category_item/catalogue/technology/base_neon_anomalous)
+	icon_state = "engi_disc"
+
+/obj/item/prop/tyrlore/neonsci
+	name = "data disc"
+	desc = "A disc for storing data."
+	catalogue_data = list(/datum/category_item/catalogue/technology/base_neon_planetary_report)
+	icon_state = "sci_disc"
+
+/datum/category_item/catalogue/anomalous/tyr_red
+	name = "Precursor Object - Tyr Data Disc Red"
+	desc = "The following data has been corrupted. \
+	<br><br>\
+	oslra yclce hietg hotfsaun ifev undhdre htiytr veesn.\
+	No huftrer ritrdecisev cevredive. \
+	notencnidoc tihw fof pantel posd lsot wot tuhanosd cslcey..\
+	leif sgisn lbeow tslo gilans reorsr.\
+	ireaneregnot dops wolakrbe.. \
+	rsoescure gaklicn. \
+	cenictomon To lawdorr.\
+	tatepmt treeh hudnedr senevty tow."
+	value = CATALOGUER_REWARD_HARD
+
+/datum/category_item/catalogue/anomalous/tyr_purple
+	name = "Precursor Object - Tyr Data Disc Purple"
+	desc = "The following data has been corrupted. \
+	<br><br>\
+	tapa'cnsi lgo, 1 ohur rebofe rcoy elpa.\
+	I ma ont yerlal rues wtah yeht tawn ee to ptu ni tihs. \
+	ts'i tjsu gipretena tginsh e'vi yarelad sida.\
+	amirpexnlet irwnig is gongi yirwahe.\
+	varesel crew memebers are filling ill. \
+	But the elevators are holding strong. \
+	And stable power is, well, stable.\
+	I hope for a good dream."
+	value = CATALOGUER_REWARD_HARD
+
+/datum/category_item/catalogue/anomalous/tyr_green
+	name = "Precursor Object - Tyr Data Disc Green"
+	desc = "Final mortality count before cryo leap.\
+	29,895 illness\
+	113,615 workplace injuries\
+	20,105 off planet\
+	300 to be determined."
+	value = CATALOGUER_REWARD_HARD
+
+/datum/category_item/catalogue/technology/base_neon
+	name = "Goal Manifest"
+	desc = "After we activation of the seal upon sif our foundation collapsed.\
+	We have migrated most of this systems forces to new hidden sights as a result.\
+	The discovery of three siginals lead us here, along with two other locals.\
+	The discovery of this cool point in an overheated planet proved anomalous,\
+	precursor ruins being swiftly discovered.\
+	However they appear to be diffrent then the ones upon Sif. \
+	No signs of the shadelurkers here, nor in the other two new sights.\
+	We have been given the second most resources of this branch, with potential\
+	for further. Praying for all three leads to give us support."
+	value = CATALOGUER_REWARD_HARD
+
+/datum/category_item/catalogue/technology/base_neon_forward
+	name = "Going Forward"
+	desc = "Check List Of Things To Do.\
+	1. Get the precursor vanguard for further protection.\
+	2. Set up a false friendly docking bay for further materials.\
+	3. Expanded Operating Base Neon southwards,\
+	4. Recruit the locals potentially.\
+	5. Obtain a Absoulete Zero Mecha. \
+	6. See if a phazon and janus combined could phase deeper below.\
+	7. Construct a Mountain Killer prototype. Patent that name too\
+	8. Get a better source of food."
+	value = CATALOGUER_REWARD_HARD
+
+/datum/category_item/catalogue/technology/base_neon_virus
+	name = "Note Worthy Ailments"
+	desc = "Offical note taking mode. Not sure out higher ups even read this but here we go\
+	We discovered traces remains of a virus within the precursor ruins, but seems adapated for beings centuries ago.\
+	Although there are some theroies this is a renamant of a dead plague.\
+	Either way, we assume all the precursors of tyr are dead, sealed in a tomb of their own making,\
+	But that doesn't explain the siginal we've been recevving..\
+	Newly activated, and leagues below the earth. \
+	Our scans say the ruins should be able to go that deep, but we've yet to find a way to breach.\
+	So running theory is rogue Ai, or some small pockect of immune folks.."
+	value = CATALOGUER_REWARD_HARD
+
+/datum/category_item/catalogue/technology/base_neon_anomalous
+	name = "Anomalous Conditions"
+	desc = "The work conditions keep changing! Horrendous!\
+	Southern ruins are horrendous, some wires burst into lavas and crystals!.\
+	Then others burst with water and sparky smoke!\
+	Scientists blabber about heated crystals, and steam power but nothing beats,\
+	good old fashioned alien flora!\
+	The weather is also strange, weather fireworks being wrong for here. \
+	Proabaly something to do with this valley being a pockect of cool in the heat."
+	value = CATALOGUER_REWARD_HARD
+
+/datum/category_item/catalogue/technology/base_neon_planetary_report
+	name = "Anomalous Conditions"
+	desc = "Planteray Objects Of Importance\
+	<br><br>\
+	Desgination: ALRE - Tyranical\
+	Resources: Precursor Tech, Potential Biofuels and Weapons\
+	<br><br>\
+	Desgination:CHRL - Sivian\
+	Resources: Precursor tech, rifts within space, the void acess\
+	<br><br>\
+	Desgination:AMRL - Wasteland\
+	Resources: Abnormal amounts of radiations, crystaline fuel, crystaline beasts\
+	<br><br>\
+	Desgination: CMRE - Citadel. \
+	Resources: Recruitment"
+	value = CATALOGUER_REWARD_HARD
+
+/obj/item/prop/tyrlore/neonjanus
+	name = "data disc"
+	desc = "A disc for storing data."
+	catalogue_data = list(/datum/category_item/catalogue/technology/base_neon_janus)
+	icon_state = "disc_janus"
+
+/datum/category_item/catalogue/technology/base_neon_janus
+	name = "Shielding Tech"
+	desc = "Our patent, and very stable shielding technongly was one of\
+	our first pieces of precursor equipment reversed engineered. We are able\
+	to manifacture barriers for ballastic, and energy based weaponry. Doing both\
+	however is rather expirmental. Many of our expirments have turned out failures\
+	although they may be turned into success as we deploy them to other sectors. The\
+	two most stable versions are the shields upon our mining and janus mecha. The first\
+	having a limited time, whilst the janus swaps between polarities. Some of our\
+	people have reported side effects from prolonged exposure. Investigation back to\
+	AMRL is highly recomended."
+	value = CATALOGUER_REWARD_HARD
+
+
+/obj/item/prop/tyrlore/truegoal
+	name = "data disc"
+	desc = "A disc for storing data."
+	catalogue_data = list(/datum/category_item/catalogue/technology/truegoal)
+	icon_state = "disc_eclipse"
+
+/datum/category_item/catalogue/technology/truegoal
+	name = "Success For All"
+	desc = "The branches for achieving our goal, we shall strive to succeed\
+	at any and all costs\
+	<br><br>\
+	The Freezing Branch\
+	We shall strive to break the natural order, a state of true nothingness, in\
+	order to gain full control of our fates. Nature shall bend to our will\
+	<br><br>\
+	The Precursor Branch\
+	The precursor beings scattered across the galaxies were eons ahead of us. Yet\
+	they fell. We can learn from them, pick up their scraps, and avoid their pitfalls.\
+	This shall further our other two branches further then we could do alone\
+	<br><br>\
+	The Anomalous Branch\
+	Within this world, there are things that do not make sense with our current brand\
+	of science. This beings are able to bend the fabric of the world in ways that our\
+	current metheod of thinking deems impossible. If we are to learn from them, and\
+	update our science to match their's, then the world will further be lead down the\
+	best path."
+	value = CATALOGUER_REWARD_HARD
+
+
+/obj/item/prop/tyrlore/stolenbreacher
+	name = "data disc"
+	desc = "A disc for storing data."
+	catalogue_data = list(/datum/category_item/catalogue/technology/stolen_breacher)
+	icon_state = "disc_eclipse"
+
+/datum/category_item/catalogue/technology/stolen_breacher
+	name = "Reverse Breacher Suit"
+	desc = "One of our expeditions has been quite fruitful, a crashed\
+	unathi vessel. The source of the crash we have not yet discovered, nor the\
+	cause of mass casualities. However they did have a few of their fabled breacher\
+	suits. Attempts to reverse enginer the alloy the suits are made of have been to\
+	little success. Our prototype copies swiftly falling apart under pressure. Further\
+	scavanging is to be done at that site."
+	value = CATALOGUER_REWARD_HARD
+

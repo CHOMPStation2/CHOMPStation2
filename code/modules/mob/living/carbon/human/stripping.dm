@@ -70,12 +70,10 @@
 	var/obj/item/held = user.get_active_hand()
 	if(!istype(held) || is_robot_module(held))
 		stripping = TRUE
-		//CHOMPEdit Start - Let borg grippers put stuff on.
 		if(is_robot_module(held) && istype(held, /obj/item/gripper))
 			var/obj/item/gripper/G = held
 			if(istype(G.wrapped))
 				stripping = FALSE
-		//CHOMPEdit End
 	else
 		var/obj/item/holder/holder = held
 		if(istype(holder) && src == holder.held_mob)
@@ -92,19 +90,17 @@
 			to_chat(user, span_warning("You cannot remove \the [src]'s [target_slot.name]."))
 			return
 		visible_message(span_danger("\The [user] is trying to remove \the [src]'s [target_slot.name]!"))
-	else if(!istype(held, /obj/item/gripper)) //CHOMPEdit - Let borg grippers put stuff on.
+	else if(!istype(held, /obj/item/gripper))
 		if(slot_to_strip == slot_wear_mask && istype(held, /obj/item/grenade))
 			visible_message(span_danger("\The [user] is trying to put \a [held] in \the [src]'s mouth!"))
 		else
 			visible_message(span_danger("\The [user] is trying to put \a [held] on \the [src]!"))
-	//CHOMPEdit Start - Let borg grippers put stuff on.
 	else
 		var/obj/item/gripper/G = held
 		if(slot_to_strip == slot_wear_mask && istype(G.wrapped, /obj/item/grenade))
 			visible_message(span_danger("\The [user] is trying to put \a [G.wrapped] in \the [src]'s mouth!"))
 		else
 			visible_message(span_danger("\The [user] is trying to put \a [G.wrapped] on \the [src]!"))
-	//CHOMPEdit End
 
 	if(!do_after(user,HUMAN_STRIP_DELAY,src))
 		return
@@ -120,14 +116,14 @@
 	if(stripping)
 		add_attack_logs(user,src,"Removed equipment from slot [target_slot]")
 		unEquip(target_slot)
-	//CHOMPEdit Start - Let borg grippers put stuff on.
 	else if(is_robot_module(held) && istype(held, /obj/item/gripper))
 		var/obj/item/gripper/G = held
 		var/obj/item/wrapped = G.wrapped
 		if(istype(wrapped))
-			G.drop_item_nm()
-			equip_to_slot_if_possible(wrapped, text2num(slot_to_strip), 0, 1, 1)
-	//CHOMPEdit End
+			if(equip_to_slot_if_possible(wrapped, text2num(slot_to_strip), 0, 1, 1))
+				G.wrapped = null
+				G.generate_icons()
+				G.current_pocket = pick(G.pockets)
 	else if(user.unEquip(held))
 		equip_to_slot_if_possible(held, text2num(slot_to_strip), 0, 1, 1)
 		if(held.loc != src)

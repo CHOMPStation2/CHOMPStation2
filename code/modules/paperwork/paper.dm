@@ -219,14 +219,14 @@
 			var/mob/living/carbon/human/H = M
 			if(H == user)
 				if(icon_state == "scrap" && H.check_has_mouth()) //YW Edit Start
-					user << span_warning("You begin to stuff \the [src] into your mouth!")
+					to_chat(user, span_warning("You begin to stuff \the [src] into your mouth!"))
 					if(do_after(user, 30))
-						user << span_warning("You stuff \the [src] into your mouth!")
+						to_chat(user, span_warning("You stuff \the [src] into your mouth!"))
 						H.ingested.add_reagent("paper", 10)
 						H.adjustOxyLoss(10)
 						qdel(src)
 				else
-					user << span_notice("You wipe off the lipstick with [src].")
+					to_chat(user, span_notice("You wipe off the lipstick with [src]."))
 					H.lip_style = null
 					H.update_icons_body()
 			else
@@ -357,15 +357,13 @@
 		t = replacetext(t, "\[grid\]", "<table>")
 		t = replacetext(t, "\[/grid\]", "</td></tr></table>")
 		t = replacetext(t, "\[row\]", "</td><tr>")
-		t = replacetext(t, "\[/row\]", "") //CHOMPEDIT: nuking closing statements for rows.
+		t = replacetext(t, "\[/row\]", "")
 		t = replacetext(t, "\[cell\]", "<td>")
-		t = replacetext(t, "\[/cell\]", "") //CHOMPEDIT: nuking closing statements for cells.
-		//CHOMPEdit Start
-		t = replacetext(t, "\[logo\]", "<img src = https://raw.githubusercontent.com/CHOMPStation2/CHOMPStation2/master/html/images/ntlogo.png>")
-		t = replacetext(t, "\[sglogo\]", "<img src = https://raw.githubusercontent.com/CHOMPStation2/CHOMPStation2/master/html/images/sglogo.png>")
-		t = replacetext(t, "\[trlogo\]", "<img src = https://raw.githubusercontent.com/CHOMPStation2/CHOMPStation2/master/html/images/trader.png>")
-		t = replacetext(t, "\[pclogo\]", "<img src = https://raw.githubusercontent.com/CHOMPStation2/CHOMPStation2/master/html/images/pclogo.png>")
-		//CHOMPEdit End
+		t = replacetext(t, "\[/cell\]", "")
+		t = replacetext(t, "\[logo\]", "<img src=\ref['html/images/ntlogo.png']>")
+		t = replacetext(t, "\[sglogo\]", "<img src=\ref['html/images/sglogo.png']>")
+		t = replacetext(t, "\[trlogo\]", "<img src=\ref['html/images/trader.png']>")
+		t = replacetext(t, "\[pclogo\]", "<img src=\ref['html/images/pclogo.png']>") // Not available on virgo // CHOMPEnable
 
 		t = "<font face=\"[deffont]\" color=[P ? P.colour : "black"]>[t]</font>"
 	else // If it is a crayon, and he still tries to use these, make them empty!
@@ -379,8 +377,8 @@
 		t = replacetext(t, "\[/table\]", "")
 		t = replacetext(t, "\[row\]", "")
 		t = replacetext(t, "\[cell\]", "")
-		t = replacetext(t, "\[/cell\]", "") //CHOMPEDIT: nuking closing statements for cells.
-		t = replacetext(t, "\[/row\]", "") //CHOMPEDIT: nuking closing statements for rows.
+		t = replacetext(t, "\[/cell\]", "")
+		t = replacetext(t, "\[/row\]", "")
 		t = replacetext(t, "\[logo\]", "")
 		t = replacetext(t, "\[sglogo\]", "")
 

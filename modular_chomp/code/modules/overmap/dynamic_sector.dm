@@ -15,7 +15,7 @@ GLOBAL_VAR_INIT(dynamic_sector_master, null)
 	name = "DO NOT USE IN MAPS"
 	known = FALSE
 	scannable = FALSE
-	invisibility = 101
+	invisibility = INVISIBILITY_ABSTRACT
 	in_space = FALSE //This prevents you from walking off the edge and getting soft-locked into the infinispace layer
 	scanner_desc = "You should not see this."
 	var/generated_z = FALSE
@@ -130,7 +130,7 @@ GLOBAL_VAR_INIT(dynamic_sector_master, null)
 	unknown_state = "poi"
 	known = FALSE
 	scannable = TRUE
-	invisibility = 0
+	invisibility = INVISIBILITY_NONE
 	in_space = TRUE
 	map_z = list(null) // Override parent value
 	active_pois = null

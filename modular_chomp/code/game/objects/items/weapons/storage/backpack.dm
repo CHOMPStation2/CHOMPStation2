@@ -1,8 +1,8 @@
 /obj/item/storage/backpack/saddlebag_common/lightweight
 	name = "Taur Saddlebags (Light)"
 	desc = "A saddle that holds items. Lighter than its heavier cousin, as the cost of storage space."
-	max_storage_space = INVENTORY_DUFFLEBAG_SPACE //Saddlebags can hold more, like dufflebags
-	slowdown = 0 //And are slower, too...
+	max_storage_space = INVENTORY_STANDARD_SPACE
+	slowdown = 0
 
 /obj/item/storage/backpack/saddlebag_common/robust/lightweight
 	name = "Lightweight Saddlebags"

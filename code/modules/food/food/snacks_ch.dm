@@ -165,7 +165,7 @@
 /obj/item/reagent_containers/food/snacks/steamtealeaf/attackby(obj/item/W as obj, mob/user as mob)
 	if(istype(W,/obj/item/material/kitchen/rollingpin))
 		new /obj/item/reagent_containers/food/snacks/steamrolltealeaf(src)
-		user << "You roll the steamed tea leaf."
+		to_chat(user, span_notice("You roll the steamed tea leaf."))
 		qdel(src)
 
 /obj/item/reagent_containers/food/snacks/steamrolltealeaf

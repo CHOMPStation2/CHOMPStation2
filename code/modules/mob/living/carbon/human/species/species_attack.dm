@@ -153,24 +153,28 @@
 /datum/unarmed_attack/claws/shadekin/apply_effects(var/mob/living/carbon/human/user, var/mob/living/carbon/human/target, var/zone, var/attack_damage)
 	..()
 	if(!(target == user))
-		user.shadekin_adjust_energy(attack_damage)
+		var/datum/component/shadekin/SK = user.get_shadekin_component()
+		if(SK)
+			SK.shadekin_adjust_energy(attack_damage)
 
 /datum/unarmed_attack/bite/sharp/shadekin
 
 /datum/unarmed_attack/bite/sharp/shadekin/apply_effects(var/mob/living/carbon/human/user, var/mob/living/carbon/human/target, var/zone, var/attack_damage)
 	..()
 	if(!(target == user))
-		user.shadekin_adjust_energy(attack_damage)
+		var/datum/component/shadekin/SK = user.get_shadekin_component()
+		if(SK)
+			SK.shadekin_adjust_energy(attack_damage)
 
 /datum/unarmed_attack/claws/chimera //special feral attack that gets stronger as they get angrier
 
 /datum/unarmed_attack/claws/chimera/get_unarmed_damage(var/mob/living/carbon/human/user)
-	return user.feral/5
+	return user.get_feralness()/5
 
 /datum/unarmed_attack/claws/chimera/apply_effects(var/mob/living/carbon/human/user,var/mob/living/carbon/human/target,var/armour,var/attack_damage,var/zone)
 	..()
-	if(user.feral && !(target == user))
-		var/selfdamage = ((user.feral/10)-7.5)
+	if(user.get_feralness() && !(target == user))
+		var/selfdamage = ((user.get_feralness()/10)-7.5)
 		if(selfdamage > 0)
 			var/selfdamagezone = null
 			if (user.hand)

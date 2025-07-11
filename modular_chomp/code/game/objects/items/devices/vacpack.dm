@@ -170,7 +170,7 @@
 			playsound(src, 'sound/machines/kitchen/candymaker/candymaker-mid1.ogg', auto_setting * 20, 1, -1)
 			var/vac_conga = 0
 			for(var/atom/movable/F in suckables)
-				if(is_type_in_list(F,item_vore_blacklist) || F.loc != target)
+				if(is_type_in_list(F, GLOB.item_vore_blacklist) || F.loc != target)
 					continue
 				if(istype(F,/obj/effect/decal/cleanable))
 					if(isbelly(output_dest))
@@ -203,13 +203,13 @@
 					var/obj/belly/B = output_dest
 					B.owner_adjust_nutrition((T.dirt - 50) / 10) //Max tile dirt is 101. so about 5 nutrition from a disgusting floor, I think that's okay.
 				T.dirt = 0
-				T.clean_blood()
+				T.wash(CLEAN_WASH)
 		return
 	if(!isturf(target.loc))
 		return
 	if(istype(target,/obj/item))
 		var/obj/item/I = target
-		if(is_type_in_list(I,item_vore_blacklist) || I.w_class >= ITEMSIZE_HUGE)
+		if(is_type_in_list(I, GLOB.item_vore_blacklist) || I.w_class >= ITEMSIZE_HUGE)
 			return
 		if(vac_power > I.w_class)
 			if(vac_power == 7)
