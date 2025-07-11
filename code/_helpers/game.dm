@@ -219,14 +219,13 @@
 
 	return hear
 
-//CHOMPEdit - entire proc changed basically to use recursive listening
 /proc/get_mobs_in_radio_ranges(var/list/obj/item/radio/radios)
 
 	. = list()
 	// Returns a list of mobs who can hear any of the radios given in @radios
 	for(var/obj/item/radio/R as anything in radios)
 		if(get_turf(R))
-			for(var/turf/T in R.can_broadcast_to())	//CHOMPEdit
+			for(var/turf/T in R.can_broadcast_to())
 				for (var/atom/movable/hearing in T)
 					if (hearing.recursive_listeners)
 						. |= hearing.recursive_listeners

@@ -548,7 +548,7 @@
 	pixel_x = -16
 	pixel_y = 0
 
-	movement_sound = 'modular_chomp/sound/effects/carrev.ogg'
+	movement_sound = 'sound/effects/carrev.ogg'
 
 	min_oxy = 0
 	max_oxy = 0
@@ -803,7 +803,7 @@ GLOBAL_LIST_INIT(obelisk_lure_messages, list(
 				return
 
 /datum/looping_sound/obelisk ///thanks to BM for helpin' me make this work <3
-	mid_sounds = 'modular_chomp/sound/effects/monolith_ambience.ogg'
+	mid_sounds = 'sound/effects/monolith_ambience.ogg'
 	mid_length = 50
 	chance = 100
 	volume = 35
@@ -843,7 +843,7 @@ GLOBAL_LIST_INIT(obelisk_lure_messages, list(
 /mob/living/simple_mob/vore/blackhole_obelisk/death()
 	..()
 	visible_message("[src] flashes brightly, crumbling as its psychic influence suddenly vanishes from the minds of those nearby...")
-	playsound(src, 'modular_chomp/sound/effects/monolith_death.ogg', 100)
+	playsound(src, 'sound/effects/monolith_death.ogg', 100)
 
 #undef OBELISK_LURE
 

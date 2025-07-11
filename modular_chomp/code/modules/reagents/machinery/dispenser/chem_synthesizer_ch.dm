@@ -644,7 +644,7 @@
 	// After all this mess of code, we reach the line where the magic happens.
 	C.reagents.trans_to_holder(src.reagents, quantity)
 	update_icon() // Update underlays.
-	playsound(src, 'modular_chomp/sound/machines/HPLC_binary_pump.ogg', 15, 1)
+	playsound(src, 'sound/machines/HPLC_binary_pump.ogg', 15, 1)
 
 	// Advance to the next step in the recipe. If this is outside of the recipe's index, we're finished. Otherwise, proceed to next step.
 	step += 2

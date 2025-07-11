@@ -28,26 +28,16 @@
 			to_chat(user,span_danger("The target's mind is too complex to be affected!"))
 			return
 
-		/* CHOMPRemove Start, we have a vore pref for that
-		if(ishuman(M))
-			var/mob/living/carbon/human/H = M
-			if(H.resleeve_lock && user.ckey != H.resleeve_lock)
-				to_chat(src, span_danger("[H] cannot be impersonated!"))
-				return
-		*///CHOMPRemove End
-
 		if(M.stat == DEAD) //Are they dead?
 			to_chat(user,span_warning("A warning pops up on the device, informing you that [M] is dead, and, as such, the mind transfer can not be done."))
 			return
 
 		var/choice = tgui_alert(user,"This will swap your mind with the target's mind. This will result in them controlling your body, and you controlling their body. Continue?","Confirmation",list("Continue","Cancel"))
 		if(choice == "Continue" && user.get_active_hand() == src && user.Adjacent(M))
-			//CHOMPAdd Start - Admin logging for Body Snatcher usage
 			if(M.ckey && !M.client)
 				log_and_message_admins("attempted to body swap with [key_name(M)] while they were SSD!")
 			else
 				log_and_message_admins("attempted to body swap with [key_name(M)].")
-			//CHOMPAdd End
 			user.visible_message(span_warning("[user] pushes the device up their forehead and [M]'s head, the device beginning to let out a series of light beeps!"),span_notice("You begin swap minds with [M]!"))
 			if(do_after(user,35 SECONDS,M))
 				if(user.mind && M.mind && M.stat != DEAD && user.stat != DEAD)
@@ -58,14 +48,12 @@
 					var/target_ooc_notes = M.ooc_notes
 					var/target_likes = M.ooc_notes_likes
 					var/target_dislikes = M.ooc_notes_dislikes
-					//CHOMPEdit Start
 					var/target_favs = M.ooc_notes_favs
 					var/target_maybes = M.ooc_notes_maybes
 					var/target_style = M.ooc_notes_style
 					var/user_favs = user.ooc_notes_favs
 					var/user_maybes = user.ooc_notes_maybes
 					var/user_style = user.ooc_notes_style
-					//CHOMPEdit End
 					var/user_ooc_notes = user.ooc_notes
 					var/user_likes = user.ooc_notes_likes
 					var/user_dislikes = user.ooc_notes_dislikes
@@ -82,7 +70,6 @@
 					M.ooc_notes = user_ooc_notes //Let's keep their OOC notes over to their new body.
 					M.ooc_notes_likes = user_likes
 					M.ooc_notes_dislikes = user_dislikes
-					//CHOMPEdit Start
 					M.ooc_notes_favs = user_favs
 					M.ooc_notes_maybes = user_maybes
 					M.ooc_notes_style = user_style
@@ -97,7 +84,6 @@
 						user.tf_mob_holder = null
 					else
 						user.tf_mob_holder = M
-					//CHOMPEdit End
 					user.ooc_notes = target_ooc_notes
 					user.ooc_notes_likes = target_likes
 					user.ooc_notes_dislikes = target_dislikes

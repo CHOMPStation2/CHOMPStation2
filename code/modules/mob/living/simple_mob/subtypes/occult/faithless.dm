@@ -42,8 +42,8 @@
 	max_n2 = 0
 	minbodytemp = 0
 
-	can_be_drop_prey = FALSE //CHOMP Add
-	can_pain_emote = FALSE // CHOMPEdit: Can't feel pain
+	can_be_drop_prey = FALSE
+	can_pain_emote = FALSE
 
 /mob/living/simple_mob/faithless/Process_Spacemove(var/check_drift = 0)
 	return 1

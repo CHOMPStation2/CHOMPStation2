@@ -57017,9 +57017,7 @@
 /turf/simulated/floor/plating,
 /area/maintenance/research)
 "kQH" = (
-/obj/machinery/r_n_d/protolathe{
-	name = "Core R&D Protolathe"
-	},
+/obj/machinery/r_n_d/protolathe/science,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/reagent_dispensers/acid{
 	pixel_x = -30

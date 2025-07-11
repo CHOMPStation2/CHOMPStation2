@@ -77,7 +77,7 @@ GLOBAL_LIST_BOILERPLATE(pointdefense_turrets, /obj/machinery/pointdefense)
 	if(id_tag)
 		var/list/connected_z_levels = GetConnectedZlevels(get_z(src))
 		for(var/i = 1 to LAZYLEN(GLOB.pointdefense_turrets))
-			var/obj/machinery/pointdefense/PD = GLOB.pointdefense_turrets[i]
+			var/obj/machinery/pointdefense/PD = GLOB.pointdefense_turrets[i] //CHOMPEDIT - Whatever this is, needs to be sent upstream. I stumbled upon this deconflicting and it was uncommented. Bad.
 			if(!(PD.id_tag == id_tag && (get_z(PD) in connected_z_levels)))
 				continue
 			var/list/turret = list()

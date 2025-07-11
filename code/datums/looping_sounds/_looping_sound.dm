@@ -34,9 +34,9 @@
 	var/extra_range
 	var/opacity_check
 	var/pref_check
-	var/volume_chan //CHOMPedit
 	var/exclusive
 	var/falloff // CHOMPEdit: Add Falloff
+	var/volume_chan
 
 	var/timerid
 	var/started

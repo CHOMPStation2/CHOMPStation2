@@ -30,8 +30,7 @@
 	var/can_infest = FALSE
 	var/is_infesting = FALSE
 
-	can_pain_emote = FALSE // CHOMPEdit: Can't feel pain
-
+	can_pain_emote = FALSE
 /datum/say_list/spore
 	emote_see = list("sways", "inflates briefly")
 

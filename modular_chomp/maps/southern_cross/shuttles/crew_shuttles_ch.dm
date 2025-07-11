@@ -7,7 +7,7 @@ GLOBAL_LIST_EMPTY(shuttdisp_list)
 /obj/machinery/computer/shuttle_control/web/shuttle3
 	name = "shuttle control console"
 	shuttle_tag = "Shuttle 3"
-	req_access = list(access_pilot)
+	//req_access = list(access_pilot)
 
 /datum/shuttle/autodock/web_shuttle/shuttle3
 	name = "Shuttle 3"

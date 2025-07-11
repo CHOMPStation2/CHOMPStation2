@@ -8,6 +8,7 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
 */
 #define TRAIT_DREAMING			"currently_dreaming" // CHOMPAdd
 #define TRAIT_MUTE				"mute"
+#define TRAIT_CAN_SEE_WIRES		"wire_seerr"
 /*
 #define TRAIT_EMOTEMUTE			"emotemute"
 #define TRAIT_DEAF				"deaf"
