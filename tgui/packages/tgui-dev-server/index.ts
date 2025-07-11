@@ -6,15 +6,16 @@
 
 import fs from 'node:fs';
 
-import { reloadByondCache } from './reloader';
-import { createCompiler } from './webpack';
+import { RspackCompiler } from './reloader';
 
 const reloadOnce = process.argv.includes('--reload');
 
 async function setupServer() {
   fs.mkdirSync('./public/.tmp', { recursive: true });
 
-  const compiler = await createCompiler({ mode: 'development', hot: true });
+  const compiler = new RspackCompiler();
+
+  await compiler.setup();
 
   // Reload cache once
   if (reloadOnce) {
