@@ -194,6 +194,7 @@
 	desc = "A roll of treated canvas used for wrapping claws or paws"
 	icon_state = "clothwrap"
 	item_state = "clothwrap"
+	blocks_footsteps = FALSE
 	force = 0
 	w_class = ITEMSIZE_SMALL
 	species_restricted = null

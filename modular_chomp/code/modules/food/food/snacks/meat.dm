@@ -87,3 +87,82 @@
 	center_of_mass_y= 16 //CHOMPEdit
 	nutriment_amt = 3
 	nutriment_desc = list(REAGENT_ID_PROTEIN = 24)
+
+
+//ant meats
+/obj/item/reagent_containers/food/snacks/copperant
+	name = "Bronze Ant Slice"
+	desc = "A slice from a ant"
+	icon_state = "meat"
+	center_of_mass_x = 17 //CHOMPEdit
+	center_of_mass_y= 16 //CHOMPEdit
+	nutriment_amt = 3
+	nutriment_desc = list(REAGENT_ID_PROTEIN = 3, REAGENT_ID_SHOCKCHEM = 3)
+	bitesize = 1
+
+/obj/item/reagent_containers/food/snacks/copperant/Initialize(mapload)
+	. = ..()
+	reagents.add_reagent(REAGENT_ID_PROTEIN, 3)
+	reagents.add_reagent(REAGENT_ID_SHOCKCHEM, 3)
+
+/obj/item/reagent_containers/food/snacks/painiteant
+	name = "Painite Ant Slice"
+	desc = "A slice from a ant"
+	icon_state = "meat"
+	center_of_mass_x = 17 //CHOMPEdit
+	center_of_mass_y= 16 //CHOMPEdit
+	nutriment_amt = 3
+	nutriment_desc = list(REAGENT_ID_PROTEIN = 3, REAGENT_ID_NEOLIQUIDFIRE = 3)
+	bitesize = 1
+
+/obj/item/reagent_containers/food/snacks/painiteant/Initialize(mapload)
+	. = ..()
+	reagents.add_reagent(REAGENT_ID_PROTEIN, 3)
+	reagents.add_reagent(REAGENT_ID_NEOLIQUIDFIRE,  3)
+
+
+/obj/item/reagent_containers/food/snacks/bronzeant
+	name = "Bronze Ant Slice"
+	desc = "A slice from a ant"
+	icon_state = "meat"
+	center_of_mass_x = 17 //CHOMPEdit
+	center_of_mass_y= 16 //CHOMPEdit
+	nutriment_amt = 3
+	nutriment_desc = list(REAGENT_ID_PROTEIN = 3, REAGENT_ID_LIQUIDFIRE = 3)
+	bitesize = 1
+
+/obj/item/reagent_containers/food/snacks/bronzeant/Initialize(mapload)
+	. = ..()
+	reagents.add_reagent(REAGENT_ID_PROTEIN, 3)
+	reagents.add_reagent(REAGENT_ID_LIQUIDFIRE, 3)
+
+/obj/item/reagent_containers/food/snacks/quartzant
+	name = "Bronze Ant Slice"
+	desc = "A slice from a ant"
+	icon_state = "meat"
+	center_of_mass_x = 17 //CHOMPEdit
+	center_of_mass_y= 16 //CHOMPEdit
+	nutriment_amt = 3
+	nutriment_desc = list(REAGENT_ID_PROTEIN = 3, REAGENT_ID_DEATHBLOOD = 3)
+	bitesize = 1
+
+/obj/item/reagent_containers/food/snacks/quartzant/Initialize(mapload)
+	. = ..()
+	reagents.add_reagent(REAGENT_ID_PROTEIN, 3)
+	reagents.add_reagent(REAGENT_ID_DEATHBLOOD, 3)
+
+/obj/item/reagent_containers/food/snacks/agateant
+	name = "Bronze Ant Slice"
+	desc = "A slice from a ant"
+	icon_state = "meat"
+	center_of_mass_x = 17 //CHOMPEdit
+	center_of_mass_y= 16 //CHOMPEdit
+	nutriment_amt = 3
+	nutriment_desc = list(REAGENT_ID_PROTEIN = 3, REAGENT_ID_LIQUIDLIFE = 3)
+	bitesize = 1
+
+/obj/item/reagent_containers/food/snacks/agateant/Initialize(mapload)
+	. = ..()
+	reagents.add_reagent(REAGENT_ID_PROTEIN, 3)
+	reagents.add_reagent(REAGENT_ID_LIQUIDLIFE, 3)
+

@@ -29,7 +29,7 @@
 		to_chat(user, span_warning("Pressure: [round(pressure,0.1)] kPa"))
 	if(total_moles)
 		for(var/g in environment.gas)
-			to_chat(user, span_notice("[gas_data.name[g]]: [round((environment.gas[g] / total_moles) * 100)]%"))
+			to_chat(user, span_notice("[GLOB.gas_data.name[g]]: [round((environment.gas[g] / total_moles) * 100)]%"))
 		to_chat(user, span_notice("Temperature: [round(environment.temperature-T0C,0.1)]&deg;C ([round(environment.temperature,0.1)]K)"))
 
 /obj/item/boop_module/afterattack(obj/O, mob/user as mob, proximity)
@@ -233,7 +233,7 @@
 			water.use_charge(5)
 			var/obj/effect/decal/cleanable/C = locate() in target
 			qdel(C)
-			target.clean_blood()
+			target.wash(CLEAN_WASH)
 		busy = 0
 		//CHOMPADD End
 	else if(ishuman(target))
@@ -248,7 +248,7 @@
 			L.apply_effect(STUTTER, 1)
 			L.visible_message(span_danger("[user] has shocked [L] with its tongue!"), \
 								span_userdanger("[user] has shocked you with its tongue! You can feel the betrayal."))
-			playsound(src, 'sound/weapons/Egloves.ogg', 50, 1, -1)
+			playsound(src, 'sound/weapons/egloves.ogg', 50, 1, -1)
 		else
 			user.visible_message(span_notice("\The [user] affectionately licks all over \the [target]'s face!"), span_notice("You affectionately lick all over \the [target]'s face!"))
 			playsound(src, 'sound/effects/attackblob.ogg', 50, 1)
@@ -264,7 +264,7 @@
 			to_chat(user, span_notice("You clean \the [target.name]."))
 			var/obj/effect/decal/cleanable/C = locate() in target
 			qdel(C)
-			target.clean_blood()
+			target.wash(CLEAN_WASH)
 			water.use_charge(5)
 			if(istype(target, /turf/simulated))
 				var/turf/simulated/T = target
@@ -417,9 +417,10 @@
 
 	if(get_dist(get_turf(T), get_turf(src)) > leap_distance) return
 
-	if(ishuman(T))
-		var/mob/living/carbon/human/H = T
-		if(H.get_species() == SPECIES_SHADEKIN && (H.ability_flags & AB_PHASE_SHIFTED))
+	if(isliving(T))
+		var/mob/living/M = T
+		var/datum/component/shadekin/SK = M.get_shadekin_component()
+		if(SK && SK.in_phase)
 			power_cost *= 2
 
 	if(!use_direct_power(power_cost, minimum_power - power_cost))

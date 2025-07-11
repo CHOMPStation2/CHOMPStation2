@@ -253,8 +253,9 @@
 		unbuckle_mob(buckled_mob)
 		unalert_slug(buckled_mob)
 
-/obj/effect/slug_glue/clean_blood(var/ignore = 0) //Remove with space cleaner.
-	if(!ignore)
+/obj/effect/slug_glue/wash(clean_types) // Needs proper scrubbing
+	. = ..()
+	if (. || (clean_types & CLEAN_SCRUB))
 		qdel(src)
-		return
-	..()
+		return TRUE
+	return .

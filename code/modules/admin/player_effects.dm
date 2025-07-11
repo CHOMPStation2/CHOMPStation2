@@ -37,7 +37,7 @@
 	return data
 
 /datum/eventkit/player_effects/tgui_state(mob/user)
-	return GLOB.tgui_admin_state
+	return ADMIN_STATE(R_ADMIN|R_EVENT|R_DEBUG)
 
 /datum/eventkit/player_effects/tgui_act(action, list/params, datum/tgui/ui)
 	. = ..()
@@ -164,7 +164,7 @@
 			shadekin.dir = SOUTH
 			shadekin.ability_flags |= 0x1
 			shadekin.phase_shift() //Homf
-			shadekin.energy = initial(shadekin.energy)
+			shadekin.comp.dark_energy = initial(shadekin.comp.dark_energy)
 			//For fun
 			sleep(1 SECOND)
 			shadekin.dir = WEST
@@ -325,6 +325,11 @@
 			spawned_obj.unacidable = !M.digestable
 			M.forceMove(possessed_voice)
 
+		if("elder_smite")
+			if(!target.ckey)
+				return
+			target.overlay_fullscreen("scrolls", /obj/screen/fullscreen/scrolls, 1)
+			addtimer(CALLBACK(target, TYPE_PROC_REF(/mob, clear_fullscreen), "scrolls"), 20 SECONDS)
 
 		////////MEDICAL//////////////
 
@@ -618,7 +623,7 @@
 			var/mob/living/carbon/human/Tar = target
 			if(!istype(Tar))
 				return
-			if(!user.client.holder)
+			if(!check_rights_for(user.client, R_HOLDER))
 				return
 			var/obj/item/X = user.client.holder.marked_datum
 			if(!istype(X))
@@ -629,7 +634,7 @@
 			var/mob/living/carbon/human/Tar = target
 			if(!istype(Tar))
 				return
-			if(!user.client.holder)
+			if(!check_rights_for(user.client, R_HOLDER))
 				return
 			var/obj/item/X = user.client.holder.marked_datum
 			if(!istype(X))
@@ -676,7 +681,7 @@
 			log_and_message_admins("Quick NIF'd [Tar.real_name] with a [input_NIF].", user)
 
 		if("resize")
-			user.client.resize(target)
+			SSadmin_verbs.dynamic_invoke_verb(user.client, /datum/admin_verb/resize, target)
 
 		if("teleport")
 			var/where = tgui_alert(user, "Where to teleport?", "Where?", list("To Me", "To Mob", "To Area", "Cancel"))
@@ -719,7 +724,7 @@
 			user.client.cmd_admin_direct_narrate(target)
 
 		if("player_panel")
-			user.client.holder.show_player_panel(target)
+			SSadmin_verbs.dynamic_invoke_verb(user, /datum/admin_verb/show_player_panel, target)
 
 		if("view_variables")
 			user.client.debug_variables(target)

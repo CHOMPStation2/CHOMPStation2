@@ -67,6 +67,7 @@
 	//SIF - Planet
 	#include "overmap/sectors_sc.dm" //This is actually the sector for SC.
 	#include "overmap/sectors_sif.dm" //This is actually the sector for Sif.
+	#include "overmap/space/carrier.dm" //Explo carrier
 	#include "overmap/planets/kara/kara_OM_only.dm" //Kara, but just an OM icon
 	/* //Disabled due to low usage. These are heavy mini-station-like Z layers too.
 	//KARA - Planet

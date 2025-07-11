@@ -203,21 +203,26 @@
 /datum/trait/positive/weaver
 	name = "Weaver"
 	desc = "You can produce silk and create various articles of clothing and objects."
-	category = 0 //CHOMPEdit making weaver a neutral trait instead
-	cost = 0 //Also not worth 2 points, wtf, this is literally just fluff
-	var_changes = list("is_weaver" = 1)
-//	allowed_species = list(SPECIES_HANNER, SPECIES_CUSTOM) //So it only shows up for custom species and hanner CHOMPedit: We allowed further access of this.
-	custom_only = FALSE
-	has_preferences = list("silk_production" = list(TRAIT_PREF_TYPE_BOOLEAN, "Silk production on spawn", TRAIT_VAREDIT_TARGET_SPECIES), \
-							"silk_color" = list(TRAIT_PREF_TYPE_COLOR, "Silk color", TRAIT_VAREDIT_TARGET_SPECIES))
+	// CHOMPEdit Start, making weaver a neutral trait instead, 2 -> 0 cost
+	category = 0
+	cost = 0
+	// CHOMPEdit End
+	// allowed_species = list(SPECIES_HANNER, SPECIES_CUSTOM) //So it only shows up for custom species and hanner // CHOMPRemove
 
-/datum/trait/positive/weaver/apply(var/datum/species/S,var/mob/living/carbon/human/H)
+	custom_only = FALSE
+	has_preferences = list("silk_production" = list(TRAIT_PREF_TYPE_BOOLEAN, "Silk production on spawn", TRAIT_NO_VAREDIT_TARGET), \
+							"silk_color" = list(TRAIT_PREF_TYPE_COLOR, "Silk color", TRAIT_NO_VAREDIT_TARGET))
+	added_component_path = /datum/component/weaver
+
+/datum/trait/positive/weaver/apply(var/datum/species/S,var/mob/living/carbon/human/H, var/list/trait_prefs)
 	..()
-	add_verb(H, /mob/living/carbon/human/proc/check_silk_amount)
-	add_verb(H, /mob/living/carbon/human/proc/toggle_silk_production)
-	add_verb(H, /mob/living/carbon/human/proc/weave_structure)
-	add_verb(H, /mob/living/carbon/human/proc/weave_item)
-	add_verb(H, /mob/living/carbon/human/proc/set_silk_color)
+	var/datum/component/weaver/W = H.GetComponent(added_component_path)
+	if(S.get_bodytype() == SPECIES_VASILISSAN)
+		W.silk_reserve = 500
+		W.silk_max_reserve = 1000
+	if(trait_prefs)
+		W.silk_production = trait_prefs["silk_production"]
+		W.silk_color = lowertext(trait_prefs["silk_color"])
 
 /datum/trait/positive/aquatic
 	name = "Aquatic"
@@ -354,7 +359,7 @@
 
 /datum/trait/positive/table_passer/apply(var/datum/species/S,var/mob/living/carbon/human/H, var/list/trait_prefs)
 	..()
-	if (trait_prefs?["pass_table"] || !trait_prefs)
+	if(trait_prefs?["pass_table"] || !trait_prefs)
 		H.pass_flags |= PASSTABLE
 	add_verb(H,/mob/living/proc/toggle_pass_table)
 
@@ -370,8 +375,8 @@
 	name = "Photosynthesis"
 	desc = "Your body is able to produce nutrition from being in light."
 	cost = 3
-	var_changes = list("photosynthesizing" = TRUE)
 	can_take = ORGANICS|SYNTHETICS //Synths actually use nutrition, just with a fancy covering.
+	added_component_path = /datum/component/photosynth
 
 /datum/trait/positive/rad_resistance
 	name = "Radiation Resistance"
@@ -488,3 +493,11 @@
 	desc = "Allows you to build a cocoon around yourself, using it to transform your body if you desire."
 	cost = 0
 	category = 0
+
+/datum/trait/positive/virus_immune
+	name = "Virus Immune"
+	desc = "You are immune to viruses."
+	cost = 1
+
+	can_take = ORGANICS
+	var_changes = list("virus_immune" = TRUE)

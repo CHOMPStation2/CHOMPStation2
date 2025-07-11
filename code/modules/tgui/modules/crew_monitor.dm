@@ -3,8 +3,9 @@
 	tgui_id = "CrewMonitor"
 
 /datum/tgui_module/crew_monitor/ui_assets(mob/user)
-	. = ..()
-	. += get_asset_datum(/datum/asset/simple/nanomaps)
+	return list(
+		get_asset_datum(/datum/asset/simple/holo_nanomap),
+	)
 
 /datum/tgui_module/crew_monitor/tgui_act(action, params, datum/tgui/ui)
 	if(..())
@@ -45,10 +46,6 @@
 		ui = new(user, src, tgui_id, name)
 		ui.autoupdate = TRUE
 		ui.open()
-
-/datum/tgui_module/crew_monitor/tgui_static_data(mob/user)
-	. = ..()
-	.["zoomScale"] = world.maxx + world.maxy
 
 /datum/tgui_module/crew_monitor/tgui_data(mob/user)
 	var/data[0]

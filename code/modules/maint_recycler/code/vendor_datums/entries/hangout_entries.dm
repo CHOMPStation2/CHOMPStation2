@@ -11,14 +11,25 @@
 
 /datum/maint_recycler_vendor_entry/DIY_HardWood //this one writes itself
 	name = "Hard... Knotty Wood... "
-	desc = "Seriously! this tree sucked! Unusuable for professional construction due to how hard the knots are, the savings are passed onto YOU!!!"
+	desc = "Seriously! this tree sucked! unsuitable for professional construction due to how hard the knots are, the savings (and various aches and pains) are passed onto YOU!!!"
 	tagline = "Hehehehehe"
 	ad_message = "🤤"
 	icon_state = "knotty_wood"
 	vendor_category = MAINTVENDOR_CONSTRUCTION
 	per_person_cap = 1
 	per_round_cap = 3 //limited supply!
+	object_type_to_spawn = /obj/item/stack/material/wood/hard{amount = 20}
 
+
+/datum/maint_recycler_vendor_entry/cardboard
+	vendor_category = MAINTVENDOR_CONSTRUCTION
+	name = "C.A.R.D.B.O.A.R.D"
+	ad_message = "5 sheets!"
+	desc = "Not an acronym (maybe?), we just asked the person in charge of designating stationbounds to make this listing, we have no idea what it means!"
+	object_type_to_spawn = /obj/item/stack/material/cardboard{amount = 5}
+	item_cost = 10 //not too pricy
+	per_person_cap = 1
+	per_round_cap = 3 //limited supply!
 
 /datum/maint_recycler_vendor_entry/DIY_Steel
 	vendor_category = MAINTVENDOR_CONSTRUCTION

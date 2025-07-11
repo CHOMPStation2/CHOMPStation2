@@ -89,8 +89,7 @@
 	fire_sound = 'sound/weapons/spiderlunge.ogg'
 	damage = 15
 	damage_type = BURN
-	SA_bonus_damage = 45
-	SA_vulnerability = list(MOB_CLASS_DEMONIC,MOB_CLASS_ILLUSION)
+	mob_bonus_damage = 45
 	check_armour = "laser"
 	armor_penetration = 60
 	light_range = 2

@@ -289,8 +289,7 @@
 	return ..()
 
 /obj/machinery/porta_turret/Destroy()
-	qdel(spark_system)
-	spark_system = null
+	QDEL_NULL(spark_system)
 	return ..()
 
 /obj/machinery/porta_turret/update_icon()
@@ -373,7 +372,7 @@
 			lethal_projectile = /obj/item/projectile/beam/xray
 			projectile = /obj/item/projectile/beam/stun // Otherwise we fire xrays on both modes.
 			lethal_shot_sound = 'sound/weapons/eluger.ogg'
-			shot_sound = 'sound/weapons/Taser.ogg'
+			shot_sound = 'sound/weapons/taser.ogg'
 
 /obj/machinery/porta_turret/proc/isLocked(mob/user)
 	if(locked && !issilicon(user))
@@ -588,7 +587,7 @@
 
 	health -= force
 	if(force > 5 && prob(45))
-		spark_system.start()
+		spark_system?.start()
 	if(health <= 0)
 		die()	//the death process :(
 

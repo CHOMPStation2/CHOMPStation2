@@ -119,9 +119,9 @@ var/global/list/runlevel_flags = list(RUNLEVEL_LOBBY, RUNLEVEL_SETUP, RUNLEVEL_G
 // Subsystem init_order, from highest priority to lowest priority
 // Subsystems shutdown in the reverse of the order they initialize in
 // The numbers just define the ordering, they are meaningless otherwise.
-#define INIT_ORDER_TITLE			99	//CHOMPEdit
 #define INIT_ORDER_SERVER_MAINT		93
 #define INIT_ORDER_ADMIN_VERBS 		84 // needs to be pretty high, admins can't do much without it
+#define INIT_ORDER_LOBBY			82
 #define INIT_ORDER_WEBHOOKS			50
 #define INIT_ORDER_SQLITE			41
 #define INIT_ORDER_GARBAGE			40
@@ -141,15 +141,16 @@ var/global/list/runlevel_flags = list(RUNLEVEL_LOBBY, RUNLEVEL_SETUP, RUNLEVEL_G
 #define INIT_ORDER_ALARM			16 // Must initialize before atoms.
 #define INIT_ORDER_TRANSCORE		15
 #define INIT_ORDER_ATOMS			14
-#define INIT_ORDER_POIS				13
+#define INIT_ORDER_HOLOMAPS			13
+#define INIT_ORDER_POIS				12
 #define INIT_ORDER_MACHINES			10
+#define INIT_ORDER_STARMOVER		4
 #define INIT_ORDER_SHUTTLES			3
 #define INIT_ORDER_TIMER			1
 #define INIT_ORDER_DEFAULT			0
 #define INIT_ORDER_LIGHTING			0
 #define INIT_ORDER_AIR				-1
-#define INIT_ORDER_ASSETS			-3
-#define INIT_ORDER_HOLOMAPS			-5
+#define INIT_ORDER_ASSETS			-5
 #define INIT_ORDER_NIGHTSHIFT		-6
 #define INIT_ORDER_OVERLAY			-7
 #define INIT_ORDER_XENOARCH			-20
@@ -183,6 +184,7 @@ var/global/list/runlevel_flags = list(RUNLEVEL_LOBBY, RUNLEVEL_SETUP, RUNLEVEL_G
 #define FIRE_PRIORITY_PING			10
 #define FIRE_PRIORITY_SERVER_MAINT	10
 #define FIRE_PRIORITY_AI			10
+#define FIRE_PRIORITY_STARMOVER		11
 #define FIRE_PRIORITY_GARBAGE		15
 #define FIRE_PRIORITY_ASSETS 		20
 #define FIRE_PRIORITY_POIS	 		20
@@ -196,6 +198,7 @@ var/global/list/runlevel_flags = list(RUNLEVEL_LOBBY, RUNLEVEL_SETUP, RUNLEVEL_G
 #define FIRE_PRIORITY_TICKER		60
 #define FIRE_PRIORITY_PLANETS		75
 #define FIRE_PRIORITY_MACHINES		100
+#define FIRE_PRIORITY_MOBS			100
 #define FIRE_PRIORITY_TGUI			110
 #define FIRE_PRIORITY_PROJECTILES	150
 #define FIRE_PRIORITY_STATPANEL		390

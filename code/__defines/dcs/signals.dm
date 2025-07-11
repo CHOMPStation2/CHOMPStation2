@@ -34,28 +34,6 @@
 /// Signal that gets sent when a ghost query is completed
 #define COMSIG_GHOST_QUERY_COMPLETE "ghost_query_complete"
 
-// /datum signals
-/// when a component is added to a datum: (/datum/component)
-#define COMSIG_COMPONENT_ADDED "component_added"
-/// before a component is removed from a datum because of RemoveComponent: (/datum/component)
-#define COMSIG_COMPONENT_REMOVING "component_removing"
-/// before a datum's Destroy() is called: (force), returning a nonzero value will cancel the qdel operation
-#define COMSIG_PARENT_PREQDELETED "parent_preqdeleted"
-/// just before a datum's Destroy() is called: (force), at this point none of the other components chose to interrupt qdel and Destroy will be called
-#define COMSIG_PARENT_QDELETING "parent_qdeleting"
-/// generic topic handler (usr, href_list)
-#define COMSIG_TOPIC "handle_topic"
-/// from datum tgui_act (usr, action)
-#define COMSIG_UI_ACT "COMSIG_UI_ACT"
-/// from datum tgui_fallback (payload)
-#define COMSIG_UI_FALLBACK "COMSIG_UI_FALLBACK"
-
-
-/// fires on the target datum when an element is attached to it (/datum/element)
-#define COMSIG_ELEMENT_ATTACH "element_attach"
-/// fires on the target datum when an element is attached to it  (/datum/element)
-#define COMSIG_ELEMENT_DETACH "element_detach"
-
 // /atom signals
 ///from base of atom/proc/Initialize(): sent any time a new atom is created
 #define COMSIG_ATOM_CREATED "atom_created"
@@ -278,7 +256,6 @@
 	/* #define HEARING_RADIO_FREQ 5
 	#define HEARING_SPANS 6
 	#define HEARING_MESSAGE_MODE 7 */
-
 ///from /datum/controller/subsystem/motion_tracker/notice() (/datum/weakref/source_atom,/turf/echo_turf_location)
 #define COMSIG_MOVABLE_MOTIONTRACKER "move_motiontracker"
 
@@ -377,6 +354,10 @@
 #define COMSIG_MOB_CLIENT_LOGIN "comsig_mob_client_login"
 ///sent from borg mobs to itself, for tools to catch an upcoming destroy() due to safe decon (rather than detonation)
 #define COMSIG_BORG_SAFE_DECONSTRUCT "borg_safe_decon"
+///From living/Life().
+#define COMSIG_LIVING_LIFE "living_life"
+///From /living/handle_disabilities().
+#define COMSIG_HANDLE_DISABILITIES "handle_disabilities"
 
 //ALL OF THESE DO NOT TAKE INTO ACCOUNT WHETHER AMOUNT IS 0 OR LOWER AND ARE SENT REGARDLESS!
 
@@ -426,6 +407,13 @@
 #define COMSIG_OBJ_HIDE	"obj_hide"
 ///called in /obj/update_icon()
 #define COMSIG_OBJ_UPDATE_ICON "obj_update_icon"
+
+// climbable signals
+
+///called when a mob is mousedropped onto, or uses a verb to climb an object
+#define COMSIG_CLIMBABLE_START_CLIMB "starting_climb_action"
+///called when an object is considered unsafe to climb on
+#define COMSIG_CLIMBABLE_SHAKE_CLIMBERS "shaking_climbing_mobs"
 
 // /obj/machinery signals
 
@@ -589,6 +577,8 @@
 #define COMSIG_HUMAN_DISARM_HIT	"human_disarm_hit"
 ///Whenever EquipRanked is called, called after job is set
 #define COMSIG_JOB_RECEIVED "job_received"
+///When the mob's dna and species have been fully applied
+#define COMSIG_HUMAN_DNA_FINALIZED "human_dna_finished"
 
 // /datum/species signals
 
@@ -611,8 +601,6 @@
 #define COMSIG_TURF_IS_WET "check_turf_wet"
 ///(max_strength, immediate, duration_decrease = INFINITY): Returns bool.
 #define COMSIG_TURF_MAKE_DRY "make_turf_try"
-///called on an object to clean it of cleanables. Usualy with soap: (num/strength)
-#define COMSIG_COMPONENT_CLEAN_ACT "clean_act"
 
 //Creamed
 
@@ -828,6 +816,34 @@
 #define COMSIG_BELLY_UPDATE_PREY_LOOP "update_prey_loop"
 /// COMSIG used to get messages where they need to go
 #define COMSIG_VISIBLE_MESSAGE "visible_message"
+
+// Weaver Component
+///from /mob/living/proc/check_silk_amount()
+#define COMSIG_CHECK_SILK_AMOUNT "check_silk_amount"
+///from /mob/living/proc/weave_structure()
+#define COMSIG_WEAVE_STRUCTURE "weave_structure"
+///from /mob/living/proc/toggle_silk_production()
+#define COMSIG_TOGGLE_SILK_PRODUCTION "toggle_silk_production"
+///from /mob/living/proc/weave_item()
+#define COMSIG_WEAVE_ITEM "weave_item"
+///from /mob/living/proc/set_silk_color()
+#define COMSIG_SET_SILK_COLOR "set_silk_color"
+
+// Gargoyle Component
+///from /mob/living/carbon/human/proc/gargoyle_transformation()
+#define COMSIG_GARGOYLE_TRANSFORMATION "gargoyle_transformation"
+///from /mob/living/carbon/human/proc/gargoyle_pause()
+#define COMSIG_GARGOYLE_PAUSE "gargoyle_pause"
+///from /mob/living/carbon/human/proc/gargoyle_checkenergy()
+#define COMSIG_GARGOYLE_CHECK_ENERGY "gargoyle_check_energy"
+
+// Species Components
+///from /datum/species/proc/handle_species_components()
+#define COMSIG_XENOCHIMERA_COMPONENT "xenochimera_component"
+#define COMSIG_SHADEKIN_COMPONENT "shadekin_component"
+
+// Hose Connector Component
+#define COMSIG_HOSE_FORCEPUMP "hose_force_pump"
 
 //Unittest data update
 #ifdef UNIT_TEST

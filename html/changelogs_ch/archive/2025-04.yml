@@ -346,3 +346,41 @@
   - maptweak: Use the correct protolathes this time for science.
   - qol: Supply console, Robotics Fabs, and Pilot consoles no longer have hard access
       locks.
+2025-04-28:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: muffle items not always working
+  - bugfix: matrix recolor not usable in char setup
+  - bugfix: item tf spawn points not assignable
+  - code_imp: move invisibility to defines
+  - admin: invisimin can no longer be used if your invis level is above the observer
+      level
+  - bugfix: RIGs no longer get stuck loading
+  - qol: Air alarms show if they are controlled by an area's main alarm, or are the
+      main alarm themselves. So you can tell when all air alarms in an area are deconstructed
+  - bugfix: Air alarm settings now propagate to all other air alarms in an area
+  - rscadd: Air alarms do nothing if the main air alarm in an area is shorted
+  - qol: PAI may now climb up and down ladders, lattices, and move freely up and down
+      in zeroG
+  FluffMedic:
+  - rscadd: A few lore discs, new mobs to battle
+  - balance: Some Eclipse mobs nerfed, Janus boss reworked
+  - maptweak: Tyr Precursor ruins is altered, and a new
+  tacoguy7765093:
+  - bugfix: Fixes science protolathe being too restricted.
+2025-04-29:
+  CHOMPStation2StaffMirrorBot:
+  - rscadd: Added new lobby screen and new player experience.
+  - bugfix: Title screens work better
+  Kashargul:
+  - bugfix: fast eater not being custom
+  tacoguy7765093:
+  - rscadd: Added a new outsider pod called the RipperDocPod for all your cyberpunk
+      needs.
+2025-04-30:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: Loadout items no longer disappear during migrations
+  - code_imp: tgui-core 3.1.3
+  - code_imp: Adjustment on self surgery proc to allow synthetics to commit self surgery.
+  - rscadd: Wearing specific types of footwear preserves barefoot stepping sounds
+  - bugfix: Lobby screen is less colorbandy
+  - bugfix: fixed recyclers fucking up every button ever in tgui

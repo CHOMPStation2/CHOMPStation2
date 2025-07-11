@@ -1762,9 +1762,6 @@
 	},
 /turf/simulated/wall,
 /area/crew_quarters/Gym)
-"acQ" = (
-/turf/unsimulated/mask,
-/area/hallway/Stairwell_Aft)
 "acR" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
@@ -18125,9 +18122,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/Deck2_Science_StarCorridor1)
-"aTa" = (
-/turf/unsimulated/mask,
-/area/hallway/Central_2_Deck_Hall)
 "aTb" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -23340,7 +23334,7 @@
 /turf/simulated/floor/tiled,
 /area/hallway/Port_2_Deck_Corridor_2)
 "bkB" = (
-/obj/machinery/r_n_d/protolathe/science,
+/obj/machinery/r_n_d/protolathe,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/firealarm{
 	dir = 8;
@@ -50195,9 +50189,6 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/Gallery)
-"eCc" = (
-/turf/unsimulated/mask,
-/area/maintenance/Deck2_Cargo_AftCorridor2)
 "eCo" = (
 /obj/item/book/codex,
 /obj/structure/disposalpipe/segment,
@@ -65856,7 +65847,7 @@
 /turf/simulated/floor/tiled,
 /area/quartermaster/Breakroom)
 "ixK" = (
-/turf/unsimulated/mask,
+/turf/simulated/open,
 /area/hallway/Star_2_Deck_Stairwell)
 "ixX" = (
 /obj/structure/table/rack/shelf/steel,
@@ -75023,7 +75014,7 @@
 	},
 /area/hallway/Port_Transit_Foyer)
 "ldn" = (
-/turf/unsimulated/mask,
+/turf/simulated/open,
 /area/hallway/Port_2_Deck_Stairwell)
 "ldq" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
@@ -100709,7 +100700,7 @@
 /turf/simulated/floor/plating,
 /area/maintenance/Deck2_Civilian_AftCorridor1)
 "sqR" = (
-/turf/unsimulated/mask,
+/turf/simulated/open,
 /area/hallway/For_2_Deck_Stairwell)
 "sqT" = (
 /obj/structure/cable/green{
@@ -136223,11 +136214,11 @@ xxE
 xzm
 cFK
 krZ
-eCc
-eCc
-eCc
-eCc
-eCc
+apt
+apt
+apt
+apt
+apt
 iOV
 piF
 pMs
@@ -136481,11 +136472,11 @@ fOY
 pHf
 xet
 bKY
-eCc
-eCc
-eCc
-eCc
-eCc
+apt
+apt
+apt
+apt
+apt
 iOV
 qut
 oEG
@@ -136739,11 +136730,11 @@ tKo
 byX
 cam
 gKw
-eCc
-eCc
-eCc
-eCc
-eCc
+apt
+apt
+apt
+apt
+apt
 iOV
 dJr
 oEG
@@ -136997,11 +136988,11 @@ nYf
 epi
 bxb
 uuS
-eCc
-eCc
-eCc
-eCc
-eCc
+apt
+apt
+apt
+apt
+apt
 iOV
 xkX
 fug
@@ -137255,11 +137246,11 @@ xMI
 nSV
 aWn
 chp
-eCc
-eCc
-eCc
-eCc
-eCc
+apt
+apt
+apt
+apt
+apt
 iOV
 vBb
 nSM
@@ -150647,11 +150638,11 @@ rCc
 hff
 ala
 aji
-aTa
-aTa
-aTa
-aTa
-aTa
+bdd
+bdd
+bdd
+bdd
+bdd
 pDh
 ayH
 dlL
@@ -150712,11 +150703,11 @@ qXc
 adA
 mdZ
 cmu
-acQ
-acQ
-acQ
-acQ
-acQ
+tkz
+tkz
+tkz
+tkz
+tkz
 cuG
 kij
 mAe
@@ -150905,11 +150896,11 @@ wfN
 alp
 mhU
 apJ
-aTa
-aTa
-aTa
-aTa
-aTa
+bdd
+bdd
+bdd
+bdd
+bdd
 aZm
 bbq
 aiZ
@@ -150970,11 +150961,11 @@ qXc
 afi
 fhX
 cmu
-acQ
-acQ
-acQ
-acQ
-acQ
+tkz
+tkz
+tkz
+tkz
+tkz
 mnK
 kRq
 mAe
@@ -151163,11 +151154,11 @@ vft
 alq
 ala
 aqY
-aTa
-aTa
-aTa
-aTa
-aTa
+bdd
+bdd
+bdd
+bdd
+bdd
 ahr
 ayL
 wfl
@@ -151228,11 +151219,11 @@ qXc
 ady
 xha
 cmu
-acQ
-acQ
-acQ
-acQ
-acQ
+tkz
+tkz
+tkz
+tkz
+tkz
 bXA
 yic
 pKB
@@ -151421,11 +151412,11 @@ owj
 alr
 akl
 gVv
-aTa
-aTa
-aTa
-aTa
-aTa
+bdd
+bdd
+bdd
+bdd
+bdd
 bMy
 mPt
 aiZ
@@ -151486,11 +151477,11 @@ qXc
 afn
 vSv
 cmu
-acQ
-acQ
-acQ
-acQ
-acQ
+tkz
+tkz
+tkz
+tkz
+tkz
 cjy
 fyL
 mAe
@@ -151679,11 +151670,11 @@ nqB
 als
 ala
 akP
-aTa
-aTa
-aTa
-aTa
-aTa
+bdd
+bdd
+bdd
+bdd
+bdd
 sMt
 bbr
 ajd
@@ -151744,11 +151735,11 @@ qXc
 ady
 afi
 cmu
-acQ
-acQ
-acQ
-acQ
-acQ
+tkz
+tkz
+tkz
+tkz
+tkz
 cmu
 kqn
 mAe

@@ -56,7 +56,7 @@
 
 // Invisible object that blocks z transfer to/from its turf and the turf above.
 /obj/effect/ceiling
-	invisibility = 101 // nope cant see this
+	invisibility = INVISIBILITY_ABSTRACT // nope cant see this
 	anchored = 1
 
 /obj/effect/ceiling/CheckExit(atom/movable/O as mob|obj, turf/target as turf)

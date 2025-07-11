@@ -22,8 +22,7 @@
 /datum/species/shadekin_yw
 	spawn_flags = SPECIES_IS_RESTRICTED
 
-/datum/species/shadekin
-	digi_allowed = TRUE
+// /datum/species/shadekin
 	//spawn_flags = SPECIES_IS_RESTRICTED
 
 //datum/species/protean
@@ -40,10 +39,3 @@
 /datum/species/vox
 	spawn_flags = SPECIES_CAN_JOIN | SPECIES_IS_WHITELISTED | SPECIES_WHITELIST_SELECTABLE
 */
-
-//Can use digitigrade flags
-/datum/species/shapeshifter/promethean
-	digi_allowed = TRUE
-
-/datum/species/protean
-	digi_allowed = TRUE

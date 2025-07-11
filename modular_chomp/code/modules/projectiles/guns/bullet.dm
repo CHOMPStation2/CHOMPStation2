@@ -37,7 +37,7 @@
 
 /obj/item/projectile/bullet/rifle/a545/hunter
 	damage = 15
-	SA_bonus_damage = 35 // 50 total on animals.
+	mob_bonus_damage = 35 // 50 total on animals.
 	SA_vulnerability = SA_ANIMAL
 	hud_state = "rifle_heavy"
 
@@ -124,7 +124,7 @@
 
 /obj/item/projectile/bullet/rifle/a762/hunter
 	damage = 10
-	SA_bonus_damage = 30
+	mob_bonus_damage = 30
 
 /obj/item/projectile/bullet/rifle/a545
 	damage = 20
@@ -140,7 +140,7 @@
 
 /obj/item/projectile/bullet/rifle/a545/hunter
 	damage = 5
-	SA_bonus_damage = 25
+	mob_bonus_damage = 25
 
 /obj/item/projectile/bullet/rifle/a145
 	damage = 60

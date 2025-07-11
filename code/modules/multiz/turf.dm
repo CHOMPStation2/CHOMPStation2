@@ -58,7 +58,6 @@ GLOBAL_DATUM_INIT(openspace_backdrop_one_for_all, /atom/movable/openspace_backdr
 	can_build_into_floor = TRUE
 	can_dirty = FALSE // It's open space
 	can_start_dirty = FALSE
-	turf_path_danger = TURF_PATH_DANGER_FALL //CHOMPEdit
 
 /turf/simulated/open/vacuum
 	oxygen = 0
@@ -111,7 +110,7 @@ GLOBAL_DATUM_INIT(openspace_backdrop_one_for_all, /atom/movable/openspace_backdr
 		var/obj/item/stack/rods/R = C
 		if (R.use(1))
 			to_chat(user, span_notice("Constructing support lattice ..."))
-			playsound(src, 'sound/weapons/Genhit.ogg', 50, 1)
+			playsound(src, 'sound/weapons/genhit.ogg', 50, 1)
 			ReplaceWithLattice()
 		return
 
@@ -122,7 +121,7 @@ GLOBAL_DATUM_INIT(openspace_backdrop_one_for_all, /atom/movable/openspace_backdr
 			if (S.get_amount() < 1)
 				return
 			qdel(L)
-			playsound(src, 'sound/weapons/Genhit.ogg', 50, 1)
+			playsound(src, 'sound/weapons/genhit.ogg', 50, 1)
 			S.use(1)
 			ChangeTurf(/turf/simulated/floor/airless)
 			return

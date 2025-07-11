@@ -1,10 +1,7 @@
 /obj/screen/shadekin
 	name = "shadekin status"
 	icon = 'icons/mob/shadekin_hud.dmi'
-	invisibility = 101
-
-
-
+	invisibility = INVISIBILITY_ABSTRACT
 
 /obj/screen/movable/ability_master/shadekin
 	name = "Shadekin Abilities"
@@ -29,6 +26,7 @@
 /obj/screen/ability/verb_based/shadekin
 	icon_state = "grey_spell_base"
 	background_base_state = "grey"
+	icon = 'icons/mob/shadekin_abilities.dmi'
 
 /obj/screen/movable/ability_master/proc/add_shadekin_ability(var/object_given, var/verb_given, var/name_given, var/ability_icon_given, var/arguments)
 	if(!object_given)

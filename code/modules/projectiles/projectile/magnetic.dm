@@ -37,8 +37,7 @@
 /obj/item/projectile/bullet/magnetic/flechette/hunting
 	name = "shredder slug"
 	armor_penetration = 30
-	SA_bonus_damage = 40
-	SA_vulnerability = SA_ANIMAL
+	mob_bonus_damage = 40
 	hud_state = "alloy_spike"
 
 /obj/item/projectile/bullet/magnetic/heated
@@ -182,7 +181,7 @@
 	return damage * 3 //made for boring holes
 
 /obj/item/projectile/bullet/magnetic/bore/Bump(atom/A, forced=0)
-	if(istype(A, /turf/simulated/mineral))
+	if(ismineralturf(A))
 		var/turf/simulated/mineral/MI = A
 		loc = get_turf(A) // Careful.
 		permutated.Add(A)

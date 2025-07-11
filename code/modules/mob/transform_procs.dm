@@ -10,7 +10,7 @@
 	canmove = 0
 	stunned = 1
 	icon = null
-	invisibility = 101
+	invisibility = INVISIBILITY_ABSTRACT
 	for(var/t in organs)
 		qdel(t)
 	var/atom/movable/overlay/animation = new /atom/movable/overlay( loc )
@@ -64,7 +64,7 @@
 	transforming = 1
 	canmove = 0
 	icon = null
-	invisibility = 101
+	invisibility = INVISIBILITY_ABSTRACT
 	return ..()
 
 /mob/proc/AIize(var/move = TRUE)
@@ -95,7 +95,7 @@
 		newloc = loc_landmark.loc
 
 	var/mob/living/silicon/ai/O = new (newloc, FALSE, using_map.default_law_type, null, 1)//No MMI but safety is in effect.
-	O.invisibility = 0
+	O.invisibility = INVISIBILITY_NONE
 	O.aiRestorePowerRoutine = 0
 
 	if(mind)
@@ -151,14 +151,14 @@
 	transforming = 1
 	canmove = 0
 	icon = null
-	invisibility = 101
+	invisibility = INVISIBILITY_ABSTRACT
 	for(var/t in organs)
 		qdel(t)
 
 	var/mob/living/silicon/robot/O = new /mob/living/silicon/robot(loc)
 
 	O.gender = gender
-	O.invisibility = 0
+	O.invisibility = INVISIBILITY_NONE
 
 	if(mind)		//TODO
 		mind.transfer_to(O)
@@ -205,7 +205,7 @@
 	transforming = 1
 	canmove = 0
 	icon = null
-	invisibility = 101
+	invisibility = INVISIBILITY_ABSTRACT
 	for(var/t in organs)
 		qdel(t)
 
@@ -229,7 +229,7 @@
 	transforming = 1
 	canmove = 0
 	icon = null
-	invisibility = 101
+	invisibility = INVISIBILITY_ABSTRACT
 	for(var/t in organs)	//this really should not be necessary
 		qdel(t)
 
@@ -259,7 +259,7 @@
 	transforming = 1
 	canmove = 0
 	icon = null
-	invisibility = 101
+	invisibility = INVISIBILITY_ABSTRACT
 
 	for(var/t in organs)
 		qdel(t)
