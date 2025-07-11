@@ -93,3 +93,18 @@
       0.75D) (RESK: -1D -> -0.5D)'
   - bugfix: Fixes mobs dying from no-atmos
   - bugfix: 8 year bug that causes ability master to disappear upon aghost/relog
+2025-07-11:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: Set Voice verb uses correct list of voices
+  - bugfix: Spyndrome symptom can be found again
+  Diana:
+  - bugfix: Xenochimera component can be applied midround
+  - bugfix: Grippers can insert items into protolathes
+  Diana, Kash:
+  - rscadd: Shadekin light toggle now has a TGUI.
+  - bugfix: Borg grippers don't delete items
+  - bugfix: A lot of borg gripper exploits/bugs fixed
+  - qol: Borgs can reinforce girders at a speed of 1.5 seconds instead of the normal
+      4
+  - code_imp: Two hours spent to optimize shadekin phase code and save an average
+      of ~4 ms of CPU time per phase in extreme conditions!
