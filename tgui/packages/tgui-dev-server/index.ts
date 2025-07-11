@@ -6,7 +6,8 @@
 
 import fs from 'node:fs';
 
-import { RspackCompiler } from './reloader';
+import { reloadByondCache } from './reloader';
+import { RspackCompiler } from './webpack';
 
 const reloadOnce = process.argv.includes('--reload');
 
