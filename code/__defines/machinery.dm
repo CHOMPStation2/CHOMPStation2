@@ -68,7 +68,6 @@ var/global/defer_powernet_rebuild = 0      // True if net rebuild will be called
 #define NETWORK_INTERROGATION "Interrogation"
 #define NETWORK_TELECOM "Telecomms"
 #define NETWORK_TCOMMS "Telecommunications"	//YW ADD: needs to be defined here or it freaks out
-#define NETWORK_OUTSIDE "Outside"		//YW ADD: ditto
 #define NETWORK_SUBSTATIONS "Substations"	//YW ADD: and again
 #define NETWORK_EXPLORATION "Exploration"
 #define NETWORK_XENOBIO "Xenobiology"

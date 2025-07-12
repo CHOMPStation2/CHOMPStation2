@@ -36,7 +36,7 @@
 
 /datum/map_z_level/sc_lateload/gateway_destination
 	name = "Gateway Destination"
-	z = Z_LEVEL_GATEWAY
+	z = Z_LEVEL_SC_GATEWAY
 
 #include "gateway/snowfield_ch.dm" //CHOMPEDIT - Use the good one instead
 /datum/map_template/sc_lateload/gateway/snowfield
@@ -98,7 +98,7 @@
 
 /datum/map_z_level/sc_lateload/vr_world
 	name = "VR World"
-	z = Z_LEVEL_VR_REALM
+	z = Z_LEVEL_SC_VR_REALM
 
 /datum/map_template/sc_lateload/thor
 	name = "Thor Surface"
@@ -154,9 +154,6 @@
 	name = ""
 	icon = 'icons/effects/effects.dmi'
 	icon_state = "1"
-
-/obj/effect/step_trigger/zlevel_fall/beach
-	var/static/target_z
 
 /obj/effect/step_trigger/zlevel_fall //Don't ever use this, only use subtypes.Define a new var/static/target_z on each
 	affect_ghosts = 1

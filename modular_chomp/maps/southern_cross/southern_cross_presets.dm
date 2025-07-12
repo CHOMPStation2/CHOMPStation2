@@ -39,46 +39,46 @@ var/const/NETWORK_MAINT_DECK = "Maintenance Deck" // CHOMPEdit - Maintenance dec
 // Telecomms doesn't know about connected z-levels, so we need relays even for the other surface levels.
 /obj/machinery/telecomms/relay/preset/southerncross/d1
 	id = "Station Relay 1"
-	listening_level = Z_LEVEL_STATION_ONE
+	listening_level = Z_LEVEL_SC_STATION_ONE
 	autolinkers = list("d1_relay")
 
 /obj/machinery/telecomms/relay/preset/southerncross/d2
 	id = "Station Relay 2"
-	listening_level = Z_LEVEL_STATION_TWO
+	listening_level = Z_LEVEL_SC_STATION_TWO
 	autolinkers = list("d2_relay")
 
 /obj/machinery/telecomms/relay/preset/southerncross/d3
 	id = "Station Relay 3"
-	listening_level = Z_LEVEL_STATION_THREE
+	listening_level = Z_LEVEL_SC_STATION_THREE
 	autolinkers = list("d3_relay")
 
 /obj/machinery/telecomms/relay/preset/southerncross/planet
 	id = "Planet Relay"
-	listening_level = Z_LEVEL_SURFACE
+	listening_level = Z_LEVEL_SC_SURFACE
 	autolinkers = list("pnt_relay")
 
 /obj/machinery/telecomms/relay/preset/southerncross/cave
 	id = "Cave Relay"
-	listening_level = Z_LEVEL_SURFACE_MINE
+	listening_level = Z_LEVEL_SC_SURFACE_MINE
 	autolinkers = list("cve_relay")
 
 /obj/machinery/telecomms/relay/preset/southerncross/wild
 	id = "Wild Relay"
-	listening_level = Z_LEVEL_SURFACE_WILD
+	listening_level = Z_LEVEL_SC_SURFACE_WILD
 	autolinkers = list("wld_relay")
 
 /obj/machinery/telecomms/relay/preset/southerncross/transit
 	id = "Transit Relay"
-	listening_level = Z_LEVEL_TRANSIT
+	listening_level = Z_LEVEL_SC_TRANSIT
 	autolinkers = list("tns_relay")
 
 /obj/machinery/telecomms/relay/preset/southerncross/explorer //CHOMPedit: Tcomms relay for exploration carrier
-	listening_level = Z_LEVEL_MISC
+	listening_level = Z_LEVEL_SC_MISC
 	autolinkers = list("exp_relay")
 
 /obj/machinery/telecomms/relay/preset/southerncross/d0
 	id = "Station Relay 0"
-	listening_level = Z_LEVEL_STATION_MAINTS
+	listening_level = Z_LEVEL_SC_STATION_MAINTS
 	autolinkers = list("d0_relay")
 
 /* //Sky islands removal due to lack of use
@@ -103,7 +103,7 @@ var/const/NETWORK_MAINT_DECK = "Maintenance Deck" // CHOMPEdit - Maintenance dec
 
 /obj/machinery/telecomms/relay/preset/southerncross/centcomm
 	id = "Centcom Relay"
-	listening_level = Z_LEVEL_CENTCOM
+	listening_level = Z_LEVEL_SC_CENTCOM
 	autolinkers = list("cnt_relay")
 
 // #### Telecomms ####
