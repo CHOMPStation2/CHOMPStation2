@@ -108,3 +108,10 @@
       4
   - code_imp: Two hours spent to optimize shadekin phase code and save an average
       of ~4 ms of CPU time per phase in extreme conditions!
+2025-07-12:
+  CHOMPStation2StaffMirrorBot:
+  - code_imp: improve tg chat performance
+  - bugfix: removed 2 pixels on the veymed female torso sprite to make it actually
+      fit into any clothes at all that aren't skirts.
+  - qol: Replaced the funky alt-click turf examine menu with a separate TGUI window
+      called the Lootpanel

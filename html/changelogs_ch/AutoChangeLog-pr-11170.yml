@@ -1,4 +1,0 @@
-author: "CHOMPStation2StaffMirrorBot"
-delete-after: True
-changes:
-  - qol: "Replaced the funky alt-click turf examine menu with a separate TGUI window called the Lootpanel"
