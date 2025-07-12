@@ -116,9 +116,5 @@
 		peeb += dat
 		peeb += span_notice("For more detailed information on the patient's condition, utilize a body scanner at the closest medical bay.")
 
-<<<<<<< HEAD
-	user.show_message(peeb, 1)
-//CHOMPedit end.
-=======
 		user.show_message(peeb, 1)
->>>>>>> fe5556d2dc (up ports a bunch of TGS commands (#17961))
+//CHOMPedit end.
