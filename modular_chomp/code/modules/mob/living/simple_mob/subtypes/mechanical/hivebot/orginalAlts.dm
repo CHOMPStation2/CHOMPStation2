@@ -58,7 +58,7 @@
 		attackcycle = 0
 	else if(attackcycle == 3)
 		specialattackprojectile = /obj/item/projectile/energy/spikeenergy_ball/boss
-		addtimer(CALLBACK(src, PROC_REF(dual_spin), A, 4), 1 SECOND, TIMER_DELETE_ME)
+		addtimer(CALLBACK(src, PROC_REF(dual_spin), A, 4, 25), 1 SECOND, TIMER_DELETE_ME)
 		attackcycle = 0
 	else if(attackcycle == 4)
 		specialattackprojectile = /obj/item/projectile/energy/spikeenergy_ball/boss
@@ -124,7 +124,7 @@
 		specialattackprojectile = /obj/item/projectile/energy/wallbreaker/boss
 		rng_cycle = rand(1,4)
 		say("PROTOCOL: PRECISION. SWEEP.")
-		addtimer(CALLBACK(src, PROC_REF(dual_spin), A, rng_cycle), 2 SECONDS, TIMER_DELETE_ME)
+		addtimer(CALLBACK(src, PROC_REF(dual_spin), A, rng_cycle, 25), 2 SECONDS, TIMER_DELETE_ME)
 		attackcycle = 0
 	else if(attackcycle == 3)
 		specialattackprojectile = /obj/item/projectile/energy/lightingspark/nanoweave
