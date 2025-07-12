@@ -792,22 +792,12 @@ macro "hotkeymode"
 	elem "ctrlshiftsubtract"
 		name = "CTRL+SHIFT+SUBTRACT"
 		command = "planedown"
-<<<<<<< HEAD
 //	elem	// CHOMPREMOVE Start
 //		name = "Space"
 //		command = ".throwon"
 //	elem
 //		name = "Space+UP"
 //		command = ".throwoff" // CHOMPREMOVE End
-=======
-	elem "space"
-		name = "Space"
-		command = ".throwon"
-	elem "spaceup"
-		name = "Space+UP"
-		command = ".throwoff"
-
->>>>>>> b7969a971d (Replace the alt click menu with the RPG Lootpanel (#17938))
 macro "borgmacro"
 	elem "tab"
 		name = "TAB"
