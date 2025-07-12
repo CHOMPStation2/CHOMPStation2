@@ -17,7 +17,11 @@
 	var/static/list/locked = list()
 
 
+<<<<<<< HEAD
 /datum/datacore/proc/get_manifest(monochrome, OOC,var/snowflake = FALSE) //CHOMPStation Edit
+=======
+/datum/datacore/proc/get_manifest(monochrome, OOC,var/snowflake = FALSE)
+>>>>>>> fe5556d2dc (up ports a bunch of TGS commands (#17961))
 	var/list/heads = new()
 	var/list/sec = new()
 	var/list/eng = new()
