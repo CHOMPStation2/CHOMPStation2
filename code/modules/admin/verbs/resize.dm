@@ -1,8 +1,12 @@
+<<<<<<< HEAD
 
 ADMIN_VERB(resize, (R_ADMIN|R_FUN|R_VAREDIT), "Resize", "Resizes any living mob without any restrictions on size.", "Fun.Event Kit", mob/living/L in mob_list)
 	user.do_resize(L) //CHOMPEdit
 
 /client/proc/do_resize(var/mob/living/L) //CHOMPEdit
+=======
+ADMIN_VERB_AND_CONTEXT_MENU(resize, (R_ADMIN|R_FUN|R_VAREDIT), "Resize", "Resizes any living mob without any restrictions on size.", "Fun.Event Kit", mob/living/L in mob_list)
+>>>>>>> 34e92c0fe7 (some fixes (#17997))
 	var/size_multiplier = tgui_input_number(usr, "Input size multiplier.", "Resize", 1, round_value=FALSE)
 	if(!size_multiplier)
 		return //cancelled
