@@ -12,9 +12,17 @@
 	special_attack_cooldown = 10 //This things attack soley via speical attacks hence basically no cooldown
 	grab_resist = 100
 	shock_resist = -0.2
+	deflect_chance = 0
 	movement_cooldown = 10
 	var/specialattackprojectile = /obj/item/projectile/energy/phase/bolt
 	var/attackcycle = 1
+
+/mob/living/simple_mob/mechanical/mecha/eclipse/handle_special()
+	if(stat != DEAD)
+		src.SetStunned(0)
+		src.SetWeakened(0)
+		src.SetParalysis(0)
+	..()
 
 /mob/living/simple_mob/mechanical/mecha/eclipse/do_special_attack(atom/A)
 	bullet_heck(A, 3, 3)
@@ -423,11 +431,9 @@
 	name = "eclipse cryo top"
 	icon_state = "mecha_top"
 	icon_living = "mecha_top"
-	armor = list(melee = 20, bullet = 20, laser = 20, energy = 20, bomb = 80, bio = 100, rad = 100) //Smol armor to compensate for the gimmick
-	deflect_chance = 100 //yes, this looks absurd
 	wreckage = /obj/item/melee/energy/sword/top_shield
 	specialattackprojectile = /obj/item/projectile/energy/eclipse/chillingwind
-	desc = "It appears to be spinning at rapid speeds; enough to deflect projectiles. The air around it feels frigid.."
+	desc = "It appears to be spinning at rapid speeds. The air around it feels frigid."
 
 /mob/living/simple_mob/mechanical/mecha/eclipse/battle_top/do_special_attack(atom/A)
 	var/rng_cycle
@@ -440,16 +446,15 @@
 		addtimer(CALLBACK(src, PROC_REF(dual_spin), A, rng_cycle, 15), 0.5 SECONDS, TIMER_DELETE_ME)
 		attackcycle = 0
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/battle_top/bullet_act(obj/item/projectile/P)
+/mob/living/simple_mob/mechanical/mecha/eclipse/battle_top/handle_special()
+	if(stat != DEAD)
+		frozen_aura()
 	..()
-	if(deflect_chance > 30)
-		visible_message(span_cult("The mecha is deflecting most projectiles!."))
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/battle_top/attackby(var/obj/item/O as obj, var/mob/user as mob) //but melees lowers the deflect chance
-	.=..()
-	if(deflect_chance > 10)
-		to_chat(user, span_cult("The strike slows down the mecha!."))
-		deflect_chance -= 10
+/mob/living/simple_mob/mechanical/mecha/eclipse/battle_top/proc/frozen_aura()
+	for(var/mob/living/L in view(src, 14))
+		if(!IIsAlly(L))
+			L.add_modifier(/datum/modifier/chilled, 3, src)
 
 /mob/living/simple_mob/mechanical/mecha/eclipse/excavate_head
 	name = "Xenoarch Lead"

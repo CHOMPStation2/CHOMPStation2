@@ -24,6 +24,7 @@
 	loot_list = list(/obj/structure/foamedmetal = 100
 			)
 	pass_flags = PASSTABLE
+	hovering = TRUE
 	movement_cooldown = -3
 	icon_state = "janitor"
 	icon_living = "janitor"
@@ -39,7 +40,7 @@
 	maxHealth = 500
 	health = 500
 	wreckage = /obj/item/prop/tyrlore/reddisc
-	ai_holder_type = /datum/ai_holder/simple_mob/intentional/three_phases/nomove
+	ai_holder_type = /datum/ai_holder/simple_mob/intentional/three_phases
 	anchored = 1
 	armor = list(melee = 40, bullet = 40, laser = 80, energy = 80, bomb = 50, bio = 100, rad = 100)
 
