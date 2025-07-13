@@ -1,5 +1,4 @@
-
-ADMIN_VERB(resize, (R_ADMIN|R_FUN|R_VAREDIT), "Resize", "Resizes any living mob without any restrictions on size.", "Fun.Event Kit", mob/living/L in mob_list)
+ADMIN_VERB_AND_CONTEXT_MENU(resize, (R_ADMIN|R_FUN|R_VAREDIT), "Resize", "Resizes any living mob without any restrictions on size.", "Fun.Event Kit", mob/living/L in mob_list)
 	user.do_resize(L) //CHOMPEdit
 
 /client/proc/do_resize(var/mob/living/L) //CHOMPEdit
