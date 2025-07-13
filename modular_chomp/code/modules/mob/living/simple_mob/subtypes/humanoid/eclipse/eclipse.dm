@@ -1050,3 +1050,6 @@
 			to_chat(M, span_critical("The skin on your [parse_zone(target)] feels like it's ripping apart, and a stream of blood flies out."))
 			var/blood_to_remove = (rand(10,30))
 			M.remove_blood(blood_to_remove)
+
+
+
