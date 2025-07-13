@@ -115,3 +115,6 @@
       fit into any clothes at all that aren't skirts.
   - qol: Replaced the funky alt-click turf examine menu with a separate TGUI window
       called the Lootpanel
+2025-07-13:
+  FluffMedic:
+  - bugfix: sif hivebot bosses regained delay for their spinny attack
