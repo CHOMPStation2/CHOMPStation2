@@ -1,4 +1,12 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aa" = (
+/obj/effect/recycler_vendor_beacon,
+/turf/simulated/floor/plating/turfpack/station,
+/area/maintenance/abcargo)
+"ab" = (
+/obj/effect/recycler_beacon,
+/turf/simulated/floor/plating/turfpack/station,
+/area/maintenance/thrift)
 "ac" = (
 /obj/effect/floor_decal/industrial/arrows/yellow{
 	dir = 8
@@ -18,6 +26,14 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/zerocent)
+"ae" = (
+/obj/effect/recycler_vendor_beacon,
+/turf/simulated/floor/plating/turfpack/station,
+/area/maintenance/zerocent)
+"af" = (
+/obj/effect/recycler_beacon,
+/turf/simulated/floor/plating/turfpack/station,
+/area/maintenance/zerocent)
 "ag" = (
 /obj/structure/cable{
 	icon_state = "1-4"
@@ -31,6 +47,15 @@
 /obj/structure/foamedmetal,
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/zeroport)
+"ai" = (
+/obj/effect/floor_decal/rust,
+/obj/effect/recycler_vendor_beacon,
+/turf/simulated/floor/plating/turfpack/station,
+/area/maintenance/thrift)
+"aj" = (
+/obj/effect/recycler_beacon,
+/turf/simulated/floor/wood/turfpack/station,
+/area/maintenance/zerobar)
 "ak" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
@@ -55,6 +80,10 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/zerocent)
+"an" = (
+/obj/effect/recycler_vendor_beacon,
+/turf/simulated/floor/wood/turfpack/station,
+/area/maintenance/zerobar)
 "ao" = (
 /obj/machinery/atmospherics/binary/pump/on{
 	dir = 8;
@@ -111,6 +140,11 @@
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/backuppowerlobby)
+"au" = (
+/obj/effect/floor_decal/rust,
+/obj/effect/recycler_beacon,
+/turf/simulated/floor/plating/turfpack/station,
+/area/maintenance/ragecage)
 "av" = (
 /obj/structure/railing/grey{
 	dir = 4
@@ -9956,6 +9990,7 @@
 	dir = 5
 	},
 /obj/effect/decal/cleanable/cobweb2,
+/obj/effect/recycler_beacon,
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/abcargo)
 "Rh" = (
@@ -36229,7 +36264,7 @@ gv
 KS
 qn
 VL
-zu
+aa
 zu
 zu
 WO
@@ -39034,7 +39069,7 @@ wZ
 wZ
 wZ
 gr
-Vb
+aj
 Vb
 as
 Vb
@@ -39550,7 +39585,7 @@ Yk
 Yk
 Yk
 gr
-Vb
+an
 Vb
 In
 Vb
@@ -44465,7 +44500,7 @@ Gb
 sa
 bq
 wn
-xS
+ae
 Sb
 Sb
 xS
@@ -46013,7 +46048,7 @@ Lc
 Lc
 WY
 wn
-xS
+af
 HL
 Sb
 kd
@@ -49090,7 +49125,7 @@ wZ
 wZ
 HE
 HE
-ij
+au
 sD
 RF
 RF
@@ -57378,7 +57413,7 @@ AR
 wS
 AR
 DR
-AR
+ab
 OG
 py
 hz
@@ -58135,7 +58170,7 @@ wZ
 Fv
 Fv
 xs
-Xc
+ai
 AR
 ZL
 fl
