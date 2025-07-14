@@ -1,0 +1,5 @@
+author: "FluffMedic"
+delete-after: True
+changes:
+  - rscadd: "New environmental hazard to replace lava and zappy clouds, 4 new mobs for tyr, and"
+  - balance: "Eclipse cryo top has been reworked"
