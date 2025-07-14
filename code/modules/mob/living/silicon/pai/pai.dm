@@ -26,6 +26,7 @@
 	var/obj/item/communicator/integrated/communicator	// Our integrated communicator.
 
 	var/chassis = "pai-repairbot"   // A record of your chosen chassis.
+<<<<<<< HEAD
 	var/list/possible_chassis = list( //CHOMPEDIT: This doesnt need to be /Global/ and actually makes us unable to make unique children
 		"Drone" = "pai-repairbot",
 		"Cat" = "pai-cat",
@@ -71,6 +72,8 @@
 		"Canine" = list("yaps","barks","woofs"),
 		"Rodent" = list("squeaks", "SQUEAKS", "sqiks")	//VOREStation Edit
 		)
+=======
+>>>>>>> 84dc5535dc (var/global/list -> GLOB. conversion (#17928))
 
 	var/obj/item/pai_cable/cable		// The cable we produce and use when door or camera jacking
 
@@ -331,6 +334,7 @@
 
 	close_up()
 
+<<<<<<< HEAD
 /* //VOREStation Removal Start
 /mob/living/silicon/pai/proc/choose_chassis()
 	set category = "Abilities.pAI Commands"
@@ -347,14 +351,16 @@
 //VOREStation Removal End
 */
 
+=======
+>>>>>>> 84dc5535dc (var/global/list -> GLOB. conversion (#17928))
 /mob/living/silicon/pai/proc/choose_verbs()
 	set category = "Abilities.pAI Commands"
 	set name = "Choose Speech Verbs"
 
-	var/choice = tgui_input_list(src,"What theme would you like to use for your speech verbs?","Theme Choice", possible_say_verbs)
+	var/choice = tgui_input_list(src,"What theme would you like to use for your speech verbs?","Theme Choice", GLOB.possible_say_verbs)
 	if(!choice) return
 
-	var/list/sayverbs = possible_say_verbs[choice]
+	var/list/sayverbs = GLOB.possible_say_verbs[choice]
 	speak_statement = sayverbs[1]
 	speak_exclamation = sayverbs[(sayverbs.len>1 ? 2 : sayverbs.len)]
 	speak_query = sayverbs[(sayverbs.len>2 ? 3 : sayverbs.len)]

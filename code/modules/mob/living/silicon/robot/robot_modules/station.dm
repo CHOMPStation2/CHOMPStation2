@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 var/global/list/robot_modules = list(
 	"Standard"		= /obj/item/robot_module/robot/standard,
 	"Service" 		= /obj/item/robot_module/robot/clerical/butler,
@@ -20,6 +21,8 @@ var/global/list/robot_modules = list(
 	"Combat Medic"	= /obj/item/robot_module/robot/syndicate/combat_medic
 	)
 
+=======
+>>>>>>> 84dc5535dc (var/global/list -> GLOB. conversion (#17928))
 /obj/item/robot_module
 	name = "robot module"
 	icon = 'icons/obj/module.dmi'

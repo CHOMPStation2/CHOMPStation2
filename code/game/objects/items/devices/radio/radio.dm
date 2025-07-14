@@ -1,4 +1,5 @@
 #define CANBROADCAST_INNERBOX 0.7071067811865476	//This is sqrt(2)/2
+<<<<<<< HEAD
 // Access check is of the type requires one. These have been carefully selected to avoid allowing the janitor to see channels he shouldn't
 var/global/list/default_internal_channels = list(
 	num2text(PUB_FREQ) = list(),
@@ -24,6 +25,8 @@ var/global/list/default_medbay_channels = list(
 	num2text(MED_FREQ) = list(),
 	num2text(MED_I_FREQ) = list()
 )
+=======
+>>>>>>> 84dc5535dc (var/global/list -> GLOB. conversion (#17928))
 
 /obj/item/radio
 	icon = 'icons/obj/radio_vr.dmi'
@@ -85,8 +88,8 @@ var/global/list/default_medbay_channels = list(
 		secure_radio_connections[ch_name] = radio_controller.add_object(src, radiochannels[ch_name],  RADIO_CHAT)
 
 	wires = new(src)
-	internal_channels = default_internal_channels.Copy()
-	listening_objects += src
+	internal_channels = GLOB.default_internal_channels.Copy()
+	GLOB.listening_objects += src
 
 	if(bluespace_radio && (bs_tx_preload_id || bs_rx_preload_id))
 		return INITIALIZE_HINT_LATELOAD
@@ -130,7 +133,7 @@ var/global/list/default_medbay_channels = list(
 /obj/item/radio/Destroy()
 	qdel(wires)
 	wires = null
-	listening_objects -= src
+	GLOB.listening_objects -= src
 	if(radio_controller)
 		radio_controller.remove_object(src, frequency)
 		for (var/ch_name in channels)
@@ -768,7 +771,7 @@ GLOBAL_DATUM(autospeaker, /mob/living/silicon/ai/announcer)
 
 /obj/item/radio/phone/medbay/Initialize(mapload)
 	. = ..()
-	internal_channels = default_medbay_channels.Copy()
+	internal_channels = GLOB.default_medbay_channels.Copy()
 
 /obj/item/radio/proc/can_broadcast_to()
 	var/list/output = list()

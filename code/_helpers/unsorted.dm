@@ -350,7 +350,7 @@ Turf and target are seperate in case you want to teleport some distance from a t
 				return	//took too long
 			newname = sanitizeName(newname, ,allow_numbers)	//returns null if the name doesn't meet some basic requirements. Tidies up a few other things like bad-characters.
 
-			for(var/mob/living/M in player_list)
+			for(var/mob/living/M in GLOB.player_list)
 				if(M == src)
 					continue
 				if(!newname || M.real_name == newname)
@@ -385,7 +385,7 @@ Turf and target are seperate in case you want to teleport some distance from a t
 /proc/freeborg()
 	var/select = null
 	var/list/borgs = list()
-	for (var/mob/living/silicon/robot/A in player_list)
+	for (var/mob/living/silicon/robot/A in GLOB.player_list)
 		if (A.stat == 2 || A.connected_ai || A.scrambledcodes || istype(A,/mob/living/silicon/robot/drone))
 			continue
 		var/name = "[A.real_name] ([A.modtype] [A.braintype])"
@@ -399,7 +399,7 @@ Turf and target are seperate in case you want to teleport some distance from a t
 //When a borg is activated, it can choose which AI it wants to be slaved to
 /proc/active_ais()
 	. = list()
-	for(var/mob/living/silicon/ai/A in living_mob_list)
+	for(var/mob/living/silicon/ai/A in GLOB.living_mob_list)
 		if(A.stat == DEAD)
 			continue
 		if(A.control_disabled == 1)
@@ -426,11 +426,12 @@ Turf and target are seperate in case you want to teleport some distance from a t
 
 //Returns a list of all mobs with their name
 /proc/getmobs()
-	return observe_list_format(sortmobs())
+	return observe_list_format(sort_mobs())
 
 //Orders mobs by type then by name
-/proc/sortmobs()
+/proc/sort_mobs()
 	var/list/moblist = list()
+<<<<<<< HEAD
 	var/list/sortmob = sortAtom(mob_list)
 	var/list/after_simplemob_minded = list() //CHOMPEdit
 	for(var/mob/observer/eye/M in sortmob)
@@ -478,11 +479,31 @@ Turf and target are seperate in case you want to teleport some distance from a t
 			after_simplemob_minded.Add(M)
 			continue
 		moblist.Add(M)
+=======
+	var/list/sortmob = sort_names(GLOB.mob_list)
+	for(var/mob/observer/eye/M in sortmob)
+		moblist += M
+	for(var/mob/observer/blob/M in sortmob)
+		moblist += M
+	for(var/mob/living/silicon/ai/M in sortmob)
+		moblist += M
+	for(var/mob/living/silicon/pai/M in sortmob)
+		moblist += M
+	for(var/mob/living/silicon/robot/M in sortmob)
+		moblist += M
+	for(var/mob/living/carbon/human/M in sortmob)
+		moblist += M
+	for(var/mob/living/carbon/brain/M in sortmob)
+		moblist += M
+	for(var/mob/living/carbon/alien/M in sortmob)
+		moblist += M
+>>>>>>> 84dc5535dc (var/global/list -> GLOB. conversion (#17928))
 	for(var/mob/observer/dead/M in sortmob)
-		moblist.Add(M)
+		moblist += M
 	for(var/mob/new_player/M in sortmob)
-		moblist.Add(M)
+		moblist += M
 	for(var/mob/living/simple_mob/M in sortmob)
+<<<<<<< HEAD
 		if (!M.client && !M.disconnect_time) //CHOMPEdit Addition
 			after_simplemob_minded.Add(M)
 			continue
@@ -490,14 +511,11 @@ Turf and target are seperate in case you want to teleport some distance from a t
 	moblist.Add(after_simplemob_minded) //CHOMPEdit
 	after_simplemob_minded.Cut()
 	//VOREStation Addition Start
+=======
+		moblist += M
+>>>>>>> 84dc5535dc (var/global/list -> GLOB. conversion (#17928))
 	for(var/mob/living/dominated_brain/M in sortmob)
-		moblist.Add(M)
-	//VOREStation Addition End
-
-//	for(var/mob/living/silicon/hivebot/M in sortmob)
-//		mob_list.Add(M)
-//	for(var/mob/living/silicon/hive_mainframe/M in sortmob)
-//		mob_list.Add(M)
+		moblist += M
 	return moblist
 
 /proc/observe_list_format(input_list)
@@ -1014,7 +1032,7 @@ Turf and target are seperate in case you want to teleport some distance from a t
 
 /proc/get_mob_with_client_list()
 	var/list/mobs = list()
-	for(var/mob/M in mob_list)
+	for(var/mob/M in GLOB.mob_list)
 		if (M.client)
 			mobs += M
 	return mobs
@@ -1047,7 +1065,7 @@ Turf and target are seperate in case you want to teleport some distance from a t
 
 
 //Quick type checks for some tools
-var/global/list/common_tools = list(
+GLOBAL_LIST_INIT(common_tools, list(
 /obj/item/stack/cable_coil,
 /obj/item/tool/wrench,
 /obj/item/weldingtool,
@@ -1055,10 +1073,10 @@ var/global/list/common_tools = list(
 /obj/item/tool/wirecutters,
 /obj/item/multitool,
 /obj/item/tool/crowbar,
-/obj/item/tool/transforming)
+/obj/item/tool/transforming))
 
 /proc/istool(O)
-	if(O && is_type_in_list(O, common_tools))
+	if(O && is_type_in_list(O, GLOB.common_tools))
 		return 1
 	return 0
 
@@ -1269,16 +1287,16 @@ var/mob/dview/dview_mob
 /mob/dview/Initialize(mapload)
 	. = ..()
 	// We don't want to be in any mob lists; we're a dummy not a mob.
-	mob_list -= src
+	GLOB.mob_list -= src
 	if(stat == DEAD)
-		dead_mob_list -= src
+		GLOB.dead_mob_list -= src
 	else
-		living_mob_list -= src
+		GLOB.living_mob_list -= src
 
 /mob/dview/Life()
-	mob_list -= src
-	dead_mob_list -= src
-	living_mob_list -= src
+	GLOB.mob_list -= src
+	GLOB.dead_mob_list -= src
+	GLOB.living_mob_list -= src
 
 /mob/dview/Destroy(var/force)
 	stack_trace("Attempt to delete the dview_mob: [log_info_line(src)]")

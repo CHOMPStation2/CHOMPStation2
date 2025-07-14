@@ -344,9 +344,14 @@
 		else
 			to_chat(M, span_psay(span_bold("You think \"[message]\"")))	//To us if we are the pred
 			if(M.read_preference(/datum/preference/toggle/subtle_sounds))
+<<<<<<< HEAD
 				if(voice_sounds_list)	//CHOMPEdit, changes subtle emote sound to use mob voice instead
 					M << sound(pick(voice_sounds_list), volume = 25)
 		for (var/mob/G in player_list)
+=======
+				M << sound('sound/talksounds/subtle_sound.ogg', volume = 50)
+		for (var/mob/G in GLOB.player_list)
+>>>>>>> 84dc5535dc (var/global/list -> GLOB. conversion (#17928))
 			if (isnewplayer(G))
 				continue
 			else if(isobserver(G) &&  G.client?.prefs?.read_preference(/datum/preference/toggle/ghost_ears) && \
@@ -449,9 +454,14 @@
 		else
 			to_chat(M, span_pemote(span_bold("\The [M] [message]")))	//To us if we are the pred
 			if(M.read_preference(/datum/preference/toggle/subtle_sounds))
+<<<<<<< HEAD
 				if(voice_sounds_list)	//CHOMPEdit, changes subtle emote sound to use mob voice instead
 					M << sound(pick(voice_sounds_list), volume = 25)
 		for (var/mob/G in player_list)
+=======
+				M << sound('sound/talksounds/subtle_sound.ogg', volume = 50)
+		for (var/mob/G in GLOB.player_list)
+>>>>>>> 84dc5535dc (var/global/list -> GLOB. conversion (#17928))
 			if (isnewplayer(G))
 				continue
 			else if(isobserver(G) && G.client?.prefs?.read_preference(/datum/preference/toggle/ghost_ears) && \

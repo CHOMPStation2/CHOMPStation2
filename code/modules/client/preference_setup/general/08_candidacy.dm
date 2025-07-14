@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 var/global/list/special_roles = list( //keep synced with the defines BE_* in setup.dm --rastaf
 //some autodetection here.
 // Change these to 0 if the equivalent mode is disabled for whatever reason!
@@ -33,6 +34,8 @@ var/global/list/special_roles = list( //keep synced with the defines BE_* in set
 	//VOREStation Add End
 )
 
+=======
+>>>>>>> 84dc5535dc (var/global/list -> GLOB. conversion (#17928))
 /datum/category_item/player_setup_item/general/candidacy
 	name = "Candidacy"
 	sort_order = 8
@@ -68,8 +71,8 @@ var/global/list/special_roles = list( //keep synced with the defines BE_* in set
 
 	var/list/special_data = list()
 	var/n = 0
-	for(var/i in special_roles)
-		if(special_roles[i])
+	for(var/i in GLOB.special_roles)
+		if(GLOB.special_roles[i])
 			var/banned = FALSE
 			if(jobban_isbanned(user, i) || (i == "positronic brain" && jobban_isbanned(user, JOB_AI) && jobban_isbanned(user, JOB_CYBORG)) || (i == "pAI candidate" && jobban_isbanned(user, JOB_PAI)))
 				banned = TRUE

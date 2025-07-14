@@ -106,8 +106,13 @@
 		return list()
 
 	var/datum/trackable/TB = new()
+<<<<<<< HEAD
 	for(var/mob/living/M in mob_list)
 		if(M == src) //ChompEDIT usr --> src
+=======
+	for(var/mob/living/M in GLOB.mob_list)
+		if(M == usr)
+>>>>>>> 84dc5535dc (var/global/list -> GLOB. conversion (#17928))
 			continue
 		if(M.tracking_status() != TRACKING_POSSIBLE)
 			continue

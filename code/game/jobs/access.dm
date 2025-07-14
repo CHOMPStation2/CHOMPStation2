@@ -190,7 +190,7 @@
 /proc/get_all_jobs()
 	var/list/all_jobs = list()
 	var/list/all_datums = typesof(/datum/job)
-	all_datums -= exclude_jobs
+	all_datums -= GLOB.exclude_jobs
 	var/datum/job/jobdatum
 	for(var/jobtype in all_datums)
 		jobdatum = new jobtype
@@ -237,7 +237,7 @@
 		return C.registered_name
 
 /proc/get_all_job_icons() //For all existing HUD icons
-	return joblist + GLOB.alt_titles_with_icons + list("Prisoner")
+	return GLOB.joblist + GLOB.alt_titles_with_icons + list("Prisoner")
 
 /obj/proc/GetJobName() //Used in secHUD icon generation
 	var/obj/item/card/id/I = GetID()
