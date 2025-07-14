@@ -953,3 +953,103 @@
 			return -1 // complete projectile permutation
 
 	return (..(P))
+
+//mining zone
+/mob/living/simple_mob/humanoid/eclipse/solar/miner
+	name = "Solar Eclipse Miner"
+	desc = "A miner wearing orange armor, shielding itself from lasers and energy."
+	icon_state = "solar_miner"
+	icon_state = "solar_miner"
+
+	projectiletype = null
+	melee_damage_lower = 20
+	melee_damage_upper = 20
+	attack_armor_pen = 30
+
+	loot_list = list(/obj/item/slime_extract/sepia  = 1,
+		/obj/item/bone/skull = 100,
+		/obj/item/plastique = 10,
+		/obj/item/pickaxe/anamolous = 30
+			)
+
+/mob/living/simple_mob/humanoid/eclipse/solar/miner/do_special_attack(atom/A)
+	summon_drones(A, 2, 1)
+
+/mob/living/simple_mob/humanoid/eclipse/solar/xenoarch
+	name = "Solar Eclipse Antiquarian"
+	desc = "An indivual wearing orange armor, shielding itself from lasers and energy. Lighting is crackling around them"
+	icon_state = "solar_anomalous"
+	icon_living = "solar_anomalous"
+
+	projectiletype = /obj/item/projectile/energy/lightingspark
+	specialattackprojectile = /obj/item/projectile/beam/lightning/slime
+
+	reload_max = 2
+	reload_time = 3 SECONDS
+
+	loot_list = list(/obj/item/slime_extract/sepia  = 1,
+		/obj/item/bone/skull = 100,
+		/obj/item/research_sample/rare = 10,
+		/obj/item/stack/nanopaste/advanced = 30
+			)
+
+/mob/living/simple_mob/humanoid/eclipse/solar/xenoarch/do_special_attack(atom/A)
+	Beam(A, icon_state = "holo_beam", time = 5 SECONDS, maxdistance = INFINITY)
+	addtimer(CALLBACK(src, PROC_REF(special_projectile), A), 5.5 SECONDS, TIMER_DELETE_ME)
+
+/mob/living/simple_mob/humanoid/eclipse/solar/xenoarch/bullet_act(obj/item/projectile/P, atom/A)
+	..()
+	if(istype(P, /obj/item/projectile/energy) || istype(P, /obj/item/projectile/beam))
+		special_projectile(A)
+
+/mob/living/simple_mob/humanoid/eclipse/lunar/miner
+	name = "Lunar Eclipse Drill Tech"
+	desc = "An indivual wearing red and purple armor, shielding itself from bullets and physical trauma."
+	icon_state = "lunar_miner"
+	icon_state = "lunar_miner"
+
+	projectiletype = null
+	melee_damage_lower = 20
+	melee_damage_upper = 20
+	attack_armor_pen = 30
+	specialattackprojectile = /obj/item/projectile/energy/eclipse/mining
+
+	loot_list = list(/obj/item/slime_extract/sepia  = 1,
+		/obj/item/bone/skull = 100,
+		/obj/item/stack/material/void_opal = 10,
+		/obj/item/stack/material/mhydrogen = 70
+			)
+
+/mob/living/simple_mob/humanoid/eclipse/lunar/miner/do_special_attack(atom/A)
+	Beam(A, icon_state = "holo_beam", time = 1 SECOND, maxdistance = INFINITY)
+	addtimer(CALLBACK(src, PROC_REF(special_projectile), A), 1.5 SECONDS, TIMER_DELETE_ME)
+
+/mob/living/simple_mob/humanoid/eclipse/lunar/xenoarch
+	name = "Lunar Eclipse Xenoarcholgist"
+	desc = "An indivual wearing red and purple armor, shielding itself from bullets and physical trauma."
+	icon_state = "lunar_anomalous"
+	icon_living = "lunar_anomalous"
+
+	loot_list = list(/obj/item/slime_extract/sepia  = 1,
+		/obj/item/bone/skull = 100,
+		/obj/item/research_sample/rare = 10,
+		/obj/item/extraction_pack = 30
+			)
+
+/mob/living/simple_mob/humanoid/eclipse/lunar/xenoarch/do_special_attack(atom/A)
+	Beam(A, icon_state = "drain_life_grey", time = 1 SECOND, maxdistance = 4)
+	addtimer(CALLBACK(src, PROC_REF(blood_siphon), A), 1.5 SECONDS, TIMER_DELETE_ME)
+
+/mob/living/simple_mob/humanoid/eclipse/proc/blood_siphon(atom/A, var/mob/living/carbon/human/M)
+	if(!A)
+		return
+	if(A in view(src, 4))
+		if(ishuman(M))
+			var/target = pick(M.organs_by_name)
+			M.apply_damage(rand(5, 10), SEARING, target)
+			to_chat(M, span_critical("The skin on your [parse_zone(target)] feels like it's ripping apart, and a stream of blood flies out."))
+			var/blood_to_remove = (rand(10,30))
+			M.remove_blood(blood_to_remove)
+
+
+
