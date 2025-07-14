@@ -64,6 +64,15 @@
 /obj/effect/landmark/event_spawn/morphspawn,
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/forestarboard)
+"aah" = (
+/obj/effect/recycler_vendor_beacon,
+/turf/simulated/floor/plating,
+/area/maintenance/firstdeck/foreport)
+"aai" = (
+/obj/structure/catwalk,
+/obj/effect/recycler_beacon,
+/turf/simulated/floor/plating,
+/area/maintenance/firstdeck/forestarboard)
 "aaj" = (
 /obj/effect/wingrille_spawn/reinforced,
 /obj/machinery/door/firedoor/border_only,
@@ -122,6 +131,10 @@
 /obj/structure/catwalk,
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/centralport)
+"aar" = (
+/obj/effect/recycler_beacon,
+/turf/simulated/floor/plating,
+/area/maintenance/firstdeck/forestarboard)
 "aas" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
@@ -60556,7 +60569,7 @@ vOZ
 dVV
 aiY
 aiY
-ajn
+aah
 afN
 aMJ
 gwv
@@ -69065,7 +69078,7 @@ cHi
 aCd
 ppy
 bnt
-bnt
+aar
 abT
 aaa
 aaa
@@ -71647,7 +71660,7 @@ bXo
 aMh
 dkj
 dTJ
-dWf
+aai
 dXp
 dYv
 dkj
