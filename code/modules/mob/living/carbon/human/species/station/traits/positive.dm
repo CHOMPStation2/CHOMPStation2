@@ -33,7 +33,7 @@
 	desc = "Your unarmed attacks deal more damage"
 	cost = 2
 	custom_only = FALSE
-	hidden = TRUE //Disabled on Virgo.
+	hidden = FALSE //Disabled on Virgo. // CHOMPEdit
 	var_changes = list("unarmed_bonus" = 5)
 	banned_species = list(SPECIES_TESHARI)
 
@@ -42,7 +42,7 @@
 	desc = "Your unarmed attacks deal high damage, and you're capable of escaping most restraints"
 	cost = 6
 	custom_only = FALSE
-	hidden = TRUE //Disabled on Virgo.
+	hidden = FALSE //Disabled on Virgo. // CHOMPEdit
 	var_changes = list("unarmed_bonus" = 10, "shredding" = TRUE)
 	banned_species = list(SPECIES_TESHARI, SPECIES_VOX)
 
@@ -51,7 +51,7 @@
 	desc = "Your unarmed attacks deal more damage, and you can carry heavy equipment with less slowdown."
 	cost = 3
 	custom_only = FALSE
-	hidden = TRUE //Disabled on Virgo.
+	hidden = FALSE //Disabled on Virgo. // CHOMPEdit
 	var_changes = list("unarmed_bonus" = 5, "item_slowdown_mod" = 0.5)
 	excludes = list(/datum/trait/positive/punchdamage, /datum/trait/positive/hardy)
 	banned_species = list(SPECIES_ALRAUNE, SPECIES_TESHARI, SPECIES_UNATHI, SPECIES_DIONA, SPECIES_PROMETHEAN, SPECIES_PROTEAN)
@@ -61,7 +61,7 @@
 	desc = "You are unreasonably strong. Your unarmed attacks do high damage, you experience almost no slowdown from heavy equipment, and you can escape most restraints with ease."
 	cost = 8
 	custom_only = FALSE
-	hidden = TRUE //Disabled on Virgo.
+	hidden = FALSE //Disabled on Virgo. // CHOMPEdit
 	var_changes = list("unarmed_bonus" = 10, "shredding" = TRUE, "item_slowdown_mod" = 0.25)
 	excludes = list(/datum/trait/positive/punchdamage, /datum/trait/positive/hardy, /datum/trait/positive/punchdamageplus, /datum/trait/positive/hardy_plus)
 	banned_species = list(SPECIES_ALRAUNE, SPECIES_TESHARI, SPECIES_UNATHI, SPECIES_DIONA, SPECIES_PROMETHEAN, SPECIES_PROTEAN, SPECIES_VOX)
