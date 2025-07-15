@@ -176,11 +176,7 @@
 			// place due to a Crossed, Bumped, etc. call will interrupt
 			// the second half of the diagonal movement, or the second attempt
 			// at a first half if step() fails because we hit something.
-<<<<<<< HEAD
-			glide_for(movetime * SQRT_2) //CHOMPEDIT - proper diagonal movement
-=======
 			glide_for(movetime * SQRT_2)
->>>>>>> bbe983481e (fix diag movement (#18004))
 			if (direct & NORTH)
 				if (direct & EAST)
 					if (step(src, NORTH) && moving_diagonally)
@@ -253,11 +249,6 @@
 	for (var/datum/light_source/light as anything in light_sources) // Cycle through the light sources on this atom and tell them to update.
 		light.source_atom.update_light()
 
-<<<<<<< HEAD
-	//SEND_SIGNAL(src, COMSIG_MOVABLE_MOVED, old_loc, direction) CHOMPEdit - Why was this comsig here twice?
-
-=======
->>>>>>> bbe983481e (fix diag movement (#18004))
 	return TRUE
 
 /atom/movable/set_dir(newdir)
