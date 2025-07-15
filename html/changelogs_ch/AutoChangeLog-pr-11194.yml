@@ -1,0 +1,4 @@
+author: "CHOMPStation2StaffMirrorBot"
+delete-after: True
+changes:
+  - qol: "active belly settings tabs are now static and no longer scroll out of view"
