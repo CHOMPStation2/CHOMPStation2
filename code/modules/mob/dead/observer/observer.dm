@@ -337,7 +337,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 	if(!admin_ghosted)
 		announce_ghost_joinleave(mind, 0, "They now occupy their body again.")
 	if(admin_ghosted)
-		log_and_message_admins("Admin [key_name(src)] re-entered their body.") // CHOMPEdit - Add logging.
+		log_and_message_admins("Admin [key_name(src)] re-entered their body.")
 	return 1
 
 /mob/observer/dead/verb/toggle_medHUD()
