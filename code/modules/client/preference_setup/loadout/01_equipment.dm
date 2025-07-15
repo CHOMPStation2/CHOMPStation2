@@ -160,8 +160,13 @@ var/global/list/valid_ringtones = list(
 	var/list/data = ..()
 
 	data["headsetlist"] = GLOB.headsetlist
+<<<<<<< HEAD
 	data["backbaglist"] = backbaglist
 	data["pdachoicelist"] = pdachoicelist
+=======
+	data["backbaglist"] = GLOB.backbaglist
+	data["pdachoicelist"] = GLOB.pdachoicelist
+>>>>>>> 298c7878de (Fix GLOB. replacement error (#18007))
 
 	return data
 
