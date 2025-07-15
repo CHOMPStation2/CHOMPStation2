@@ -53,7 +53,7 @@
 	custom_only = FALSE
 	hidden = FALSE //Disabled on Virgo. // CHOMPEdit
 	var_changes = list("unarmed_bonus" = 5, "item_slowdown_mod" = 0.5)
-	excludes = list(/datum/trait/positive/punchdamage, /datum/trait/positive/hardy)
+	excludes = list(/datum/trait/positive/punchdamage, /datum/trait/positive/hardy, /datum/trait/positive/speed_fast) // CHOMPEdit
 	banned_species = list(SPECIES_ALRAUNE, SPECIES_TESHARI, SPECIES_UNATHI, SPECIES_DIONA, SPECIES_PROMETHEAN, SPECIES_PROTEAN)
 
 /datum/trait/positive/strengthplus //see above comment
@@ -63,7 +63,7 @@
 	custom_only = FALSE
 	hidden = FALSE //Disabled on Virgo. // CHOMPEdit
 	var_changes = list("unarmed_bonus" = 10, "shredding" = TRUE, "item_slowdown_mod" = 0.25)
-	excludes = list(/datum/trait/positive/punchdamage, /datum/trait/positive/hardy, /datum/trait/positive/punchdamageplus, /datum/trait/positive/hardy_plus)
+	excludes = list(/datum/trait/positive/punchdamage, /datum/trait/positive/hardy, /datum/trait/positive/punchdamageplus, /datum/trait/positive/hardy_plus, /datum/trait/positive/speed_fast) // CHOMPEdit
 	banned_species = list(SPECIES_ALRAUNE, SPECIES_TESHARI, SPECIES_UNATHI, SPECIES_DIONA, SPECIES_PROMETHEAN, SPECIES_PROTEAN, SPECIES_VOX)
 
 /datum/trait/positive/hardy
