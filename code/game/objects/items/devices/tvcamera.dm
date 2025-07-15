@@ -180,10 +180,10 @@
 
 /obj/item/clothing/accessory/bodycam/Initialize(mapload)
 	. = ..()
-	listening_objects += src
+	GLOB.listening_objects += src
 
 /obj/item/clothing/accessory/bodycam/Destroy()
-	listening_objects -= src
+	GLOB.listening_objects -= src
 	qdel(bcamera)
 	qdel(bradio)
 	bcamera = null

@@ -17,21 +17,6 @@
 
 	//These are types that can only spawn once, and then will be removed from this list.
 	//Alpha and beta lists are in their respective procs.
-<<<<<<< HEAD
-	var/global/list/unique_gamma = list(
-		/obj/item/perfect_tele,
-		/obj/item/bluespace_harpoon,
-		/obj/item/clothing/glasses/thermal/syndi,
-		/obj/item/gun/energy/netgun,
-		/obj/item/gun/projectile/pirate, //CHOMP Add
-		/obj/item/gun/projectile/dartgun,
-		/obj/item/clothing/gloves/black/bloodletter,
-		/obj/item/gun/energy/mouseray/metamorphosis
-		)
-
-	var/global/list/allocated_gamma = list()
-=======
->>>>>>> 84dc5535dc (var/global/list -> GLOB. conversion (#17928))
 
 /obj/structure/trash_pile/Initialize(mapload)
 	. = ..()

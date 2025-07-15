@@ -431,8 +431,7 @@ Turf and target are seperate in case you want to teleport some distance from a t
 //Orders mobs by type then by name
 /proc/sort_mobs()
 	var/list/moblist = list()
-<<<<<<< HEAD
-	var/list/sortmob = sortAtom(mob_list)
+	var/list/sortmob = sort_names(GLOB.mob_list)
 	var/list/after_simplemob_minded = list() //CHOMPEdit
 	for(var/mob/observer/eye/M in sortmob)
 		if (!M.client && !M.disconnect_time) //CHOMPEdit Addition
@@ -479,31 +478,11 @@ Turf and target are seperate in case you want to teleport some distance from a t
 			after_simplemob_minded.Add(M)
 			continue
 		moblist.Add(M)
-=======
-	var/list/sortmob = sort_names(GLOB.mob_list)
-	for(var/mob/observer/eye/M in sortmob)
-		moblist += M
-	for(var/mob/observer/blob/M in sortmob)
-		moblist += M
-	for(var/mob/living/silicon/ai/M in sortmob)
-		moblist += M
-	for(var/mob/living/silicon/pai/M in sortmob)
-		moblist += M
-	for(var/mob/living/silicon/robot/M in sortmob)
-		moblist += M
-	for(var/mob/living/carbon/human/M in sortmob)
-		moblist += M
-	for(var/mob/living/carbon/brain/M in sortmob)
-		moblist += M
-	for(var/mob/living/carbon/alien/M in sortmob)
-		moblist += M
->>>>>>> 84dc5535dc (var/global/list -> GLOB. conversion (#17928))
 	for(var/mob/observer/dead/M in sortmob)
 		moblist += M
 	for(var/mob/new_player/M in sortmob)
 		moblist += M
 	for(var/mob/living/simple_mob/M in sortmob)
-<<<<<<< HEAD
 		if (!M.client && !M.disconnect_time) //CHOMPEdit Addition
 			after_simplemob_minded.Add(M)
 			continue
@@ -511,9 +490,6 @@ Turf and target are seperate in case you want to teleport some distance from a t
 	moblist.Add(after_simplemob_minded) //CHOMPEdit
 	after_simplemob_minded.Cut()
 	//VOREStation Addition Start
-=======
-		moblist += M
->>>>>>> 84dc5535dc (var/global/list -> GLOB. conversion (#17928))
 	for(var/mob/living/dominated_brain/M in sortmob)
 		moblist += M
 	return moblist

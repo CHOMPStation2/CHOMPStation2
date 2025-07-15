@@ -69,7 +69,7 @@
 		ionBorgs = FALSE
 
 	if(ionBorgs)	// Making sure an AI hasn't been given an Ion law...
-		for (var/mob/living/silicon/target in silicon_mob_list)
+		for (var/mob/living/silicon/target in GLOB.silicon_mob_list)
 			if(!(target.z in affecting_z) || prob(33))
 				continue
 			if(istype(target,/mob/living/silicon/robot))

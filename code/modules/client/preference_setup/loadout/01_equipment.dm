@@ -33,37 +33,6 @@
 	//save_data["shoe_hater"] 				= pref.shoe_hater //CHOMPRemove, remove RS No shoes
 	save_data["no_jacket"]					= pref.no_jacket
 
-<<<<<<< HEAD
-var/global/list/valid_ringtones = list(
-		"beep",
-		"boom",
-		"slip",
-		"honk",
-		"SKREE",
-		"xeno",
-		"dust", // CHOMPEdit - Keeps dust as ringtone
-		"spark",
-		"rad",
-		"servo",
-		// "buh-boop", // CHOMPEdit - No.
-		"trombone",
-		"whistle",
-		"chirp",
-		"slurp",
-		"pwing",
-		"clack",
-		"bzzt",
-		"chimes",
-		"prbt",
-		"bark",
-		"bork",
-		"roark",
-		"chitter",
-		"squish"
-		)
-
-=======
->>>>>>> 84dc5535dc (var/global/list -> GLOB. conversion (#17928))
 // Moved from /datum/preferences/proc/copy_to()
 /datum/category_item/player_setup_item/loadout/equipment/copy_to_mob(var/mob/living/carbon/human/character)
 	character.all_underwear.Cut()

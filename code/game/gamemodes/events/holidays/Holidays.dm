@@ -101,13 +101,8 @@ GLOBAL_LIST_EMPTY(Holiday) //Holidays are lists now, so we can have more than on
 				if(1)
 					GLOB.Holiday["Interstellar Workers' Day"] = "This holiday celebrates the work of laborers and the working class."
 				if(18)
-<<<<<<< HEAD
-					Holiday["Remembrance Day"] = "Remembrance Day (or, as it is more informally known, Armistice Day) is a confederation-wide holiday \
-					mostly observed by its member states since late 2520. Officially, it is a day of remembering the men and women who died in various armed conflicts \
-=======
 					GLOB.Holiday["Remembrance Day"] = "Remembrance Day (or, as it is more informally known, Armistice Day) is a confederation-wide holiday \
-					mostly observed by its member states since late 2280. Officially, it is a day of remembering the men and women who died in various armed conflicts \
->>>>>>> 84dc5535dc (var/global/list -> GLOB. conversion (#17928))
+					mostly observed by its member states since late 2520. Officially, it is a day of remembering the men and women who died in various armed conflicts \
 					throughout human history. Unofficially, however, it is commonly treated as a holiday honoring the victims of the Human-Unathi war. \
 					Observance of this day varies throughout human space, but most common traditions are the act of bringing flowers to graves,\
 					attending parades, and the wearing of poppies (either paper or real) in one's clothing."
@@ -142,15 +137,6 @@ GLOBAL_LIST_EMPTY(Holiday) //Holidays are lists now, so we can have more than on
 
 		if(8)	//Aug
 			switch(DD)
-<<<<<<< HEAD
-=======
-				if(8)
-					GLOB.Holiday["Vore Day"] = "A holiday representing the innate desire in all/most/some/a few of us to devour each other or be devoured. \
-					That's probably why you're here, isn't it? Get to it, then!"
-/*				if(10)
-					GLOB.Holiday["S'randarr's Day"] = "A Tajaran holiday that occurs on the longest day of the year in summer,
-					on Ahdomai. It is named after the Tajaran deity of Light, and huge celebrations are common."
->>>>>>> 84dc5535dc (var/global/list -> GLOB. conversion (#17928))
 				if(11)
 					GLOB.Holiday["Tajaran Contact Day"] = "The anniversary of first contact between SolGov and the tajaran species, widely observed\
 					throughout tajaran and human space. Marks the date that in 2513, a human exploration team investigating electromagnetic \

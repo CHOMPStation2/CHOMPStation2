@@ -111,7 +111,7 @@ GLOBAL_VAR_INIT(dynamic_sector_master, null)
 	if(!index)
 		index = 1
 	testing("Checking if sector at [map_z[index]] has no players.")
-	for(var/mob/M in global.player_list)
+	for(var/mob/M in GLOB.player_list)
 		if(M != observer && (M.z == map_z[index]))
 			testing("There are people on it.")
 			return FALSE

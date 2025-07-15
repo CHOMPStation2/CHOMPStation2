@@ -107,32 +107,14 @@
 	announce_newscaster_news(news)
 
 /datum/announcement/proc/PlaySound(var/message_sound, var/list/zlevels)
-<<<<<<< HEAD
 	if(!message_sound)
 		return
 
-	for(var/mob/M in player_list)
-		if(zlevels && !(M.z in zlevels))
-			continue
-		if(!isnewplayer(M) && !isdeaf(M))
-			M << message_sound
-=======
 	for(var/mob/M in GLOB.player_list)
 		if(zlevels && !(M.z in zlevels))
 			continue
 		if(!isnewplayer(M) && !isdeaf(M))
-			M << 'sound/AI/preamble.ogg'
-
-	if(!message_sound)
-		return
-
-	spawn(22) // based on length of preamble.ogg + arbitrary delay
-		for(var/mob/M in GLOB.player_list)
-			if(zlevels && !(M.z in zlevels))
-				continue
-			if(!isnewplayer(M) && !isdeaf(M))
-				M << message_sound
->>>>>>> 84dc5535dc (var/global/list -> GLOB. conversion (#17928))
+			M << message_sound
 
 /datum/announcement/proc/Sound(var/message_sound, var/list/zlevels)
 	PlaySound(message_sound, zlevels)

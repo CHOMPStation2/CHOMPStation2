@@ -50,13 +50,8 @@ GLOBAL_LIST_EMPTY(event_last_fired)
 	//possibleEvents[/datum/event/mundane_news] = 300
 	possibleEvents[/datum/event/lore_news] = 300 // up this if the above ones get removed as they damn well should
 
-<<<<<<< HEAD
-	possibleEvents[/datum/event/pda_spam] = max(min(25, player_list.len) * 4, 200)
-	possibleEvents[/datum/event/money_lotto] = max(min(5, player_list.len), 50)
-=======
-	//possibleEvents[/datum/event/pda_spam] = max(min(25, GLOB.player_list.len) * 4, 200)
-	possibleEvents[/datum/event/money_lotto] = max(min(5, GLOB.player_list.len), 50)
->>>>>>> 84dc5535dc (var/global/list -> GLOB. conversion (#17928))
+	possibleEvents[/datum/event/pda_spam] = max(min(25,  GLOB.player_list.len) * 4, 200) // CHOMPEnable
+	possibleEvents[/datum/event/money_lotto] = max(min(5,  GLOB.player_list.len), 50)
 	if(GLOB.account_hack_attempted)
 		possibleEvents[/datum/event/money_hacker] = max(min(25, GLOB.player_list.len) * 4, 200)
 

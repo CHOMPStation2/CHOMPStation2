@@ -358,12 +358,7 @@ GLOBAL_LIST_EMPTY(legacy_globals)
 	GLOB.legacy_globals["visual_nets"] = visual_nets
 	GLOB.legacy_globals["cameranet"] = cameranet
 	GLOB.legacy_globals["cultnet"] = cultnet
-<<<<<<< HEAD
-	GLOB.legacy_globals["item_tf_spawnpoints"] = item_tf_spawnpoints
-	GLOB.legacy_globals["existing_solargrubs"] = GLOB.existing_solargrubs
 	*/
-=======
->>>>>>> 84dc5535dc (var/global/list -> GLOB. conversion (#17928))
 
 GLOBAL_LIST_INIT(selectable_footstep, list(
 	"Default" = FOOTSTEP_MOB_HUMAN,
@@ -476,13 +471,8 @@ GLOBAL_LIST_INIT(vr_mob_tf_options, list(
 	"Abyss lurker" = /mob/living/simple_mob/vore/vore_hostile/abyss_lurker,
 	"Abyss leaper" = /mob/living/simple_mob/vore/vore_hostile/leaper,
 	"Gelatinous cube" = /mob/living/simple_mob/vore/vore_hostile/gelatinous_cube,
-<<<<<<< HEAD
 	"Gryphon" = /mob/living/simple_mob/vore/gryphon //TODO: Port from Downstream //CHOMPStation Enable
-	)
-=======
-	//"Gryphon" = /mob/living/simple_mob/vore/gryphon //TODO: Port from Downstream
 	))
->>>>>>> 84dc5535dc (var/global/list -> GLOB. conversion (#17928))
 
 GLOBAL_LIST_INIT(vr_mob_spawner_options, list(
 	"Parrot" = /mob/living/simple_mob/animal/passive/bird/parrot,
@@ -599,6 +589,7 @@ GLOBAL_LIST_INIT(unique_gamma, list(
 	/obj/item/bluespace_harpoon,
 	/obj/item/clothing/glasses/thermal/syndi,
 	/obj/item/gun/energy/netgun,
+	/obj/item/gun/projectile/pirate, // CHOMPAdd
 	/obj/item/gun/projectile/dartgun,
 	/obj/item/clothing/gloves/black/bloodletter,
 	/obj/item/gun/energy/mouseray/metamorphosis
@@ -676,6 +667,7 @@ GLOBAL_LIST_INIT(radio_channels_by_freq, list(
 	num2text(ENG_FREQ) = CHANNEL_ENGINEERING,
 	num2text(MED_FREQ) = CHANNEL_MEDICAL,
 	num2text(MED_I_FREQ)=CHANNEL_MEDICAL_1,
+	num2text(BDCM_FREQ) =CHANNEL_BODYCAM, // CHOMPEdit
 	num2text(SEC_FREQ) = CHANNEL_SECURITY,
 	num2text(SEC_I_FREQ)=CHANNEL_SECURITY_1,
 	num2text(SCI_FREQ) = CHANNEL_SCIENCE,
@@ -696,12 +688,13 @@ GLOBAL_LIST_INIT(default_internal_channels, list(
 	num2text(ENG_FREQ) = list(access_engine_equip, access_atmospherics),
 	num2text(MED_FREQ) = list(access_medical_equip),
 	num2text(MED_I_FREQ)=list(access_medical_equip),
+	num2text(BDCM_FREQ) =list(access_security), // CHOMPAdd
 	num2text(SEC_FREQ) = list(access_security),
 	num2text(SEC_I_FREQ)=list(access_security),
 	num2text(SCI_FREQ) = list(access_tox, access_robotics, access_xenobiology),
 	num2text(SUP_FREQ) = list(access_cargo, access_mining_station),
 	num2text(SRV_FREQ) = list(access_janitor, access_library, access_hydroponics, access_bar, access_kitchen),
-	num2text(EXP_FREQ) = list(access_explorer)
+	num2text(EXP_FREQ) = list(access_explorer, access_pilot) // CHOMPEdit
 ))
 
 GLOBAL_LIST_INIT(default_medbay_channels, list(
@@ -717,10 +710,11 @@ GLOBAL_LIST_INIT(valid_ringtones, list(
 		"honk",
 		"SKREE",
 		"xeno",
+		"dust", // CHOMPEdit - Keeps dust as ringtone
 		"spark",
 		"rad",
 		"servo",
-		"buh-boop",
+		// "buh-boop", // CHOMPEdit - No.
 		"trombone",
 		"whistle",
 		"chirp",
@@ -743,17 +737,13 @@ GLOBAL_LIST_EMPTY(seen_factions)
 GLOBAL_LIST_EMPTY(seen_religions)
 
 GLOBAL_LIST_INIT(citizenship_choices, list(
-	"Greater Human Diaspora",
-	"Commonwealth of Sol-Procyon",
-	"Skrell Consensus",
-	"Moghes Hegemony",
-	"Tajaran Diaspora",
-	"Unitary Alliance of Salthan Fyrds",
-	"Elysian Colonies",
-	"Third Ares Confederation",
-	"Teshari Union",
-	"Altevian Hegemony",
-	"Kosaky Fleets"
+	"Earth",
+	"Mars",
+	"Sif",
+	"Binma",
+	"Moghes",
+	"Meralar",
+	"Qerr'balak"
 	))
 
 GLOBAL_LIST_INIT(home_system_choices, list(
@@ -797,6 +787,7 @@ GLOBAL_LIST_INIT(home_system_choices, list(
 	))
 
 GLOBAL_LIST_INIT(faction_choices, list(
+	"Sol Central", // CHOMPAdd
 	"NanoTrasen Incorporated",
 	"Hephaestus Industries",
 	"Vey-Medical",
@@ -976,7 +967,7 @@ GLOBAL_LIST_INIT(special_roles, list(
 	"pAI candidate" = 1,								// 15
 	"lost drone" = 1,									// 16
 	"maint pred" = 1,									// 17
-	"maint lurker" = 1,									// 18
+	"stowaway" = 1,										// 18 // CHOMPEdit
 	"morph" = 1,										// 19
 	"corgi" = 1,										// 20
 	"cursed sword" = 1,									// 21

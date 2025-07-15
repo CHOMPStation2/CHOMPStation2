@@ -23,13 +23,4 @@
 
 	sorter.timSort(fromIndex, toIndex)
 
-<<<<<<< HEAD
-		SI.L = L
-		SI.cmp = cmp
-		SI.associative = associative
-
-		SI.timSort(fromIndex, toIndex)
-	return L
-=======
 	return to_sort
->>>>>>> 84dc5535dc (var/global/list -> GLOB. conversion (#17928))

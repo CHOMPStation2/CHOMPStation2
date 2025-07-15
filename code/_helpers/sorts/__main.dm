@@ -8,9 +8,6 @@
 	//When we get into galloping mode, we stay there until both runs win less often than MIN_GALLOP consecutive times.
 #define MIN_GALLOP 7
 
-<<<<<<< HEAD
-//This is a global instance to allow much of this code to be reused. The interfaces are kept separately
-=======
 /// Helper for the sorting procs. Prevents some code duplication. Creates /datum/sort_instance/sorter
 #define CREATE_SORT_INSTANCE(to_sort, cmp, associative, fromIndex, toIndex) \
 	if(length(to_sort) < 2) { \
@@ -32,8 +29,7 @@
 	sorter.cmp = cmp; \
 	sorter.associative = associative;
 
-	//This is a global instance to allow much of this code to be reused. The interfaces are kept separately
->>>>>>> 84dc5535dc (var/global/list -> GLOB. conversion (#17928))
+//This is a global instance to allow much of this code to be reused. The interfaces are kept separately
 GLOBAL_DATUM_INIT(sortInstance, /datum/sort_instance, new())
 /datum/sort_instance
 	//The array being sorted.

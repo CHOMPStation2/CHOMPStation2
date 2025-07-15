@@ -995,7 +995,11 @@ GLOBAL_LIST_EMPTY(json_cache)
 		UNTYPED_LIST_ADD(keys, key)
 	return keys
 
-<<<<<<< HEAD
+//TG sort_list
+///uses sort_list() but uses the var's name specifically. This should probably be using mergeAtom() instead
+/proc/sort_names(list/list_to_sort, order=1)
+	return sortTim(list_to_sort.Copy(), order >= 0 ? GLOBAL_PROC_REF(cmp_name_asc) : GLOBAL_PROC_REF(cmp_name_dsc))
+
 //CHOMPAdd start
 /proc/pick_weight(list/list_to_pick)
 	var/total = 0
@@ -1045,9 +1049,3 @@ GLOBAL_LIST_EMPTY(json_cache)
 
 	return TRUE
 //CHOMPAdd end
-=======
-//TG sort_list
-///uses sort_list() but uses the var's name specifically. This should probably be using mergeAtom() instead
-/proc/sort_names(list/list_to_sort, order=1)
-	return sortTim(list_to_sort.Copy(), order >= 0 ? GLOBAL_PROC_REF(cmp_name_asc) : GLOBAL_PROC_REF(cmp_name_dsc))
->>>>>>> 84dc5535dc (var/global/list -> GLOB. conversion (#17928))

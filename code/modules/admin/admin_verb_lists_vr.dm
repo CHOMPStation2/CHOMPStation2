@@ -80,12 +80,8 @@ var/list/admin_verbs_admin = list(
 	/client/proc/view_chemical_reaction_logs,
 	/client/proc/makepAI,
 	/datum/admins/proc/paralyze_mob,
-<<<<<<< HEAD
 	/datum/admins/proc/quick_authentic_nif, //CHOMPStation add
-	/datum/admins/proc/set_uplink, //VOREStation Add,
-=======
 	/datum/admins/proc/set_uplink,
->>>>>>> 84dc5535dc (var/global/list -> GLOB. conversion (#17928))
 	/datum/admins/proc/sendFax,
 	/client/proc/despawn_player,
 	/datum/admins/proc/view_feedback,
