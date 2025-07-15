@@ -135,3 +135,14 @@
   - bugfix: Whitelisted items can be selected if you're the shape of that species
       if not that species exactly.
   - bugfix: Normal labcoats become teshari sprites when worn by a teshari
+2025-07-15:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: a server crash on high deflect mobs
+  FluffMedic:
+  - rscadd: New environmental hazard to replace lava and zappy clouds, 4 new mobs
+      for tyr, and
+  - balance: Eclipse cryo top has been reworked
+  Guti:
+  - maptweak: Added the maintenance recycler and vendor all around Southern Cross
+  TheGreatKitsune:
+  - bugfix: fixed the admin size gun
