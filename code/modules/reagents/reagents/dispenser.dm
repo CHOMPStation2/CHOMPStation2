@@ -442,7 +442,7 @@
 	if(ishuman(M) && !isbelly(M.loc)) //CHOMPEdit Start
 		var/mob/living/carbon/human/H = M
 		if(H.head)
-			if(H.head.unacidable || is_type_in_list(H.head,item_digestion_blacklist))
+			if(H.head.unacidable || is_type_in_list(H.head, GLOB.item_digestion_blacklist))
 				to_chat(H, span_danger("Your [H.head] protects you from the acid."))
 				remove_self(volume)
 				return
@@ -456,7 +456,7 @@
 			return
 
 		if(H.wear_mask)
-			if(H.wear_mask.unacidable || is_type_in_list(H.wear_mask,item_digestion_blacklist))
+			if(H.wear_mask.unacidable || is_type_in_list(H.wear_mask, GLOB.item_digestion_blacklist))
 				to_chat(H, span_danger("Your [H.wear_mask] protects you from the acid."))
 				remove_self(volume)
 				return
@@ -470,7 +470,7 @@
 			return
 
 		if(H.glasses)
-			if(H.glasses.unacidable || is_type_in_list(H.glasses,item_digestion_blacklist))
+			if(H.glasses.unacidable || is_type_in_list(H.glasses, GLOB.item_digestion_blacklist))
 				to_chat(H, span_danger("Your [H.glasses] partially protect you from the acid!"))
 				removed /= 2
 			else if(removed > meltdose)
@@ -523,7 +523,7 @@
 				B.owner_adjust_nutrition((B.nutrition_percent / 100) * 5 * spent_amt)
 			return
 	..()
-	if(O.unacidable || is_type_in_list(O,item_digestion_blacklist)) //CHOMPEdit End
+	if(O.unacidable || is_type_in_list(O, GLOB.item_digestion_blacklist)) //CHOMPEdit End
 		return
 	if((istype(O, /obj/item) || istype(O, /obj/effect/plant)) && (volume > meltdose))
 		var/obj/effect/decal/cleanable/molten_item/I = new/obj/effect/decal/cleanable/molten_item(O.loc)
