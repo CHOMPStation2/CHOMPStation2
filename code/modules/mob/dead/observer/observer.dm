@@ -41,6 +41,7 @@
 	var/ghost_sprite = null
 	var/last_revive_notification = null // world.time of last notification, used to avoid spamming players from defibs or cloners.
 	var/cleanup_timer // Refernece to a timer that will delete this mob if no client returns
+	var/selecting_ghostrole = FALSE
 
 	invisibility = INVISIBILITY_OBSERVER
 	layer = BELOW_MOB_LAYER
@@ -654,6 +655,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 		var/rads = SSradiation.get_rads_at_turf(t)
 		to_chat(src, span_notice("Radiation level: [rads ? rads : "0"] Bq."))
 
+<<<<<<< HEAD
 
 /mob/observer/dead/verb/become_mouse()
 	set name = "Become mouse"
@@ -709,6 +711,8 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 		host.add_ventcrawl(vent_found)
 		to_chat(host, span_info("You are now a mouse. Try to avoid interaction with players, and do not give hints away that you are more than a simple rodent."))
 
+=======
+>>>>>>> 426b24d37e (simple ghost pod find (#17909))
 /mob/observer/dead/verb/view_manfiest()
 	set name = "Show Crew Manifest"
 	set category = "Ghost.Game"
@@ -922,7 +926,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 		return 0
 	if(mind && mind.current && mind.current.stat != DEAD && can_reenter_corpse)
 		if(feedback)
-			to_chat(src, span_warning("Your non-dead body prevent you from respawning."))
+			to_chat(src, span_warning("Your non-dead body prevents you from respawning."))
 		return 0
 	if(CONFIG_GET(flag/antag_hud_restricted) && has_enabled_antagHUD == 1)
 		if(feedback)

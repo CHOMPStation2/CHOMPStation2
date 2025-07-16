@@ -102,12 +102,20 @@
 	var/list/cameras = list()
 
 /mob/living/silicon/ai/proc/trackable_mobs()
+<<<<<<< HEAD
 	if(src.stat == 2) //ChompEDIT usr --> src
+=======
+	if(src.stat == 2)
+>>>>>>> 426b24d37e (simple ghost pod find (#17909))
 		return list()
 
 	var/datum/trackable/TB = new()
 	for(var/mob/living/M in GLOB.mob_list)
+<<<<<<< HEAD
 		if(M == src) //ChompEDIT usr --> src
+=======
+		if(M == src)
+>>>>>>> 426b24d37e (simple ghost pod find (#17909))
 			continue
 		if(M.tracking_status() != TRACKING_POSSIBLE)
 			continue
