@@ -6,17 +6,10 @@
 	density = TRUE
 	anchored = TRUE
 
+	var/busy = FALSE				// Used so you can't spamclick to loot.
 	var/list/searchedby	= list()// Characters that have searched this trashpile, with values of searched time.
 	var/mob/living/hider		// A simple animal that might be hiding in the pile
-
 	var/obj/structure/mob_spawner/mouse_nest/mouse_nest = null
-
-	var/chance_alpha	= 79	// Alpha list is junk items and normal random stuff.
-	var/chance_beta		= 20	// Beta list is actually maybe some useful illegal items. If it's not alpha or gamma, it's beta.
-	var/chance_gamma	= 1		// Gamma list is unique items only, and will only spawn one of each. This is a sub-chance of beta chance.
-
-	//These are types that can only spawn once, and then will be removed from this list.
-	//Alpha and beta lists are in their respective procs.
 
 /obj/structure/trash_pile/Initialize(mapload)
 	. = ..()
@@ -33,6 +26,7 @@
 		"trashbag",
 		"brokecomp")
 	mouse_nest = new(src)
+	AddElement(/datum/element/lootable/trash_pile)
 	AddElement(/datum/element/climbable)
 
 /obj/structure/trash_pile/Destroy()
@@ -42,14 +36,12 @@
 
 /obj/structure/trash_pile/attackby(obj/item/W as obj, mob/user as mob)
 	var/w_type = W.type
-	if(w_type in GLOB.allocated_gamma)
+	if(w_type in GLOB.allocated_gamma_loot)
 		to_chat(user,span_notice("You feel \the [W] slip from your hand, and disappear into the trash pile."))
 		user.unEquip(W)
 		W.forceMove(src)
-		GLOB.allocated_gamma -= w_type
-		GLOB.unique_gamma += w_type
+		restore_gamma_loot(w_type)
 		qdel(W)
-
 	else
 		return ..()
 
@@ -77,11 +69,9 @@
 		to_chat(user, span_warning("Spawning as a mouse is currently disabled."))
 		return
 
-	//VOREStation Add Start
 	if(jobban_isbanned(user, JOB_GHOSTROLES))
 		to_chat(user, span_warning("You cannot become a mouse because you are banned from playing ghost roles."))
 		return
-	//VOREStation Add End
 
 	if(!user.MayRespawn(1))
 		return
@@ -119,26 +109,26 @@
 	//Human mob
 	if(ishuman(user))
 		var/mob/living/carbon/human/H = user
+
+		if(busy)
+			to_chat(H, span_warning("\The [src] is already being searched."))
+			return
+
 		H.visible_message("[user] searches through \the [src].",span_notice("You search through \the [src]."))
 		if(hider)
 			to_chat(hider,span_warning("[user] is searching the trash pile you're in!"))
 
 		//Do the searching
+		busy = TRUE
 		if(do_after(user,rand(4 SECONDS,6 SECONDS),src))
-
-			//If there was a hider, chance to reveal them
 			if(hider && prob(50))
+				//If there was a hider, chance to reveal them
 				to_chat(hider,span_danger("You've been discovered!"))
 				hider.forceMove(get_turf(src))
 				hider = null
 				to_chat(user,span_danger("Some sort of creature leaps out of \the [src]!"))
-
-			//You already searched this one bruh
-			else if(user.ckey in searchedby)
-				to_chat(H,span_warning("There's nothing else for you in \the [src]!"))
-
-			//You found an item!
 			else
+<<<<<<< HEAD
 				var/luck = rand(1,100)
 				var/obj/item/I
 				if(luck <= chance_alpha)
@@ -348,6 +338,13 @@
 	else
 		return produce_beta_item()
 
+=======
+				SEND_SIGNAL(src,COMSIG_LOOT_REWARD,user,searchedby)
+		busy = FALSE
+	else
+		return ..()
+
+>>>>>>> bb85116cb9 (Looting element for trash piles and more (#17896))
 /obj/structure/mob_spawner/mouse_nest
 	name = "trash"
 	desc = "A small heap of trash, perfect for mice and other pests to nest in."
