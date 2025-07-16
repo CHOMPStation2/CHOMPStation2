@@ -146,3 +146,12 @@
   - maptweak: Added the maintenance recycler and vendor all around Southern Cross
   TheGreatKitsune:
   - bugfix: fixed the admin size gun
+2025-07-16:
+  CHOMPStation2StaffMirrorBot:
+  - qol: active belly settings tabs are now static and no longer scroll out of view
+  - rscadd: Hanner no longer get outed by medical scanners.
+  - bugfix: Removed copying of bloodtype from vanity TF procs, as if the user actually
+      has blood it will cause organ failure.
+  - bugfix: Added secondary ears to copy form ability.
+  - bugfix: fixed the recycler deciding plebeians weren't allowed to use it after
+      someone tried to buy an access locked item.
