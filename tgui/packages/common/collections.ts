@@ -4,6 +4,7 @@
  * @license MIT
  */
 
+<<<<<<< HEAD
 /**
  * Creates a duplicate-free version of an array, using SameValueZero for
  * equality comparisons, in which only the first occurrence of each element
@@ -79,6 +80,8 @@ export const zip = <T extends unknown[][]>(...arrays: T): Zip<T> => {
   return result;
 };
 
+=======
+>>>>>>> 452aaffd8b (another update and es-toolkit (#18010))
 const binarySearch = <T, U = unknown>(
   getKey: (value: T) => U,
   collection: readonly T[],
