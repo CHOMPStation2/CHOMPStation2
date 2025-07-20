@@ -1247,19 +1247,6 @@ End Chompstation Edit*/
 /area/shuttle/cryo/transit
 	icon_state = "shuttle"
 
-// Fishing CHOMPstation edit
-
-/area/surface/outpost/fishing
-	name = "\improper Fishing Outpost"
-	icon_state = "recreation_area"
-
-/area/surface/outpost/fishing/smes
-	name = "\improper Fishing SMES Maintenance"
-	icon_state = "substation"
-	ambience = AMBIENCE_SUBSTATION //CHOMP Addition
-
-//Shuttle 3 CHOMPedit
-
 /area/shuttle/shuttle3
 	name = "\improper Hangar Deck"
 	icon_state = "yellow"

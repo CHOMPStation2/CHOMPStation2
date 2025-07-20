@@ -50,6 +50,14 @@
 	name = "Outpost Perimeter"
 	icon_state = "green"
 
+/area/surface/outside/plains/outpost/outdoors_area
+	outdoors = OUTDOORS_AREA
+
+/area/surface/outside/plains/outpost/sky
+	name = "The sky"
+	dynamic_lighting = 0
+	icon_state = "bluenew
+
 // Rest of the 'plains' Z-level, for POIs.
 /area/surface/outside/plains/normal
 	name = "Plains"
@@ -76,9 +84,17 @@
 	name = "Wilderness"
 	icon_state = "yellow"
 
+/area/surface/outside/wilderness/seaside
+	name = "Shorelines"
+	icon_state = "darkred"
+
 /area/surface/outside/wilderness/deep
 	name = "Deep Wilderness"
 	icon_state = "red"
+
+/area/surface/outside/wilderness/islands
+	name = "Unexplored Island"
+	icon_state = "green"
 
 // So POIs don't get embedded in rock.
 /area/surface/outside/wilderness/mountains
@@ -109,8 +125,24 @@
 	name = "Sea"
 	icon_state = "bluenew"
 
+/area/surface/outside/ocean/chesapeake
+	name = "Chesapeake Sea"
+	icon_state = "bluenew"
+
+/area/surface/outside/ocean/greenway
+	name = "Greenway Basin"
+	icon_state = "bluenew"
+
 /area/surface/outside/river
 	name = "River"
+	icon_state = "bluenew"
+
+/area/surface/outside/river/raritan
+	name = "Raritan River"
+	icon_state = "bluenew"
+
+/area/surface/outside/river/sesquehanna
+	name = "Sesquehanna River"
 	icon_state = "bluenew"
 
 /area/surface/outside/river/faxalven
@@ -156,7 +188,9 @@
 	name = "Depths"
 	icon_state = "unexplored_deep"
 
-
+/area/surface/underground/in_da_walls
+	name = "Unknown Area (Maintenance)"
+	icon_state = "unexplored_deep"
 
 //Surface Outposts
 
@@ -219,6 +253,9 @@
 	name = "North Mining Outpost Exterior"
 	icon_state = "outpost_mine_main"
 	outdoors = OUTDOORS_YES
+
+/area/surface/outpost/mining_main/exterior/pad
+	name = "Surface Mines Operations Pad"
 
 /area/surface/outpost/mining_main/crew_area
 	name = "North Mining Crew Area"
@@ -391,6 +428,18 @@
 	name = "\improper Main Outpost Shuttle Landing"
 	icon_state = "hangar"
 
+/area/surface/outpost/main/landing/one
+	name = "\improper Landing Pad One"
+	icon_state = "hangar"
+
+/area/surface/outpost/main/landing/two
+	name = "\improper Landing Pad Two"
+	icon_state = "hangar"
+
+/area/surface/outpost/main/landing/three
+	name = "\improper Landing Pad Three"
+	icon_state = "hangar"
+
 /area/surface/outpost/main/gen_room
 	name = "\improper Main Outpost SMES"
 	icon_state = "substation"
@@ -426,6 +475,10 @@
 
 /area/surface/outpost/main/garage
 	name = "\improper Main Outpost Garage"
+	icon_state = "storage"
+
+/area/surface/outpost/main/gardening_tools
+	name = "\improper Gardening Storage"
 	icon_state = "storage"
 
 /area/surface/outpost/main/crew_quarters
@@ -465,10 +518,6 @@
 	icon_state = "teleporter"
 	music = "signal"
 
-/area/surface/outpost/main/gateway
-	name = "\improper Main Outpost Gateway"
-	icon_state = "teleporter"
-
 /area/surface/outpost/main/corridor
 	name = "\improper Main Outpost Corridor"
 	icon_state = "dk_yellow"
@@ -491,28 +540,70 @@
 /area/surface/outpost/main/bar
 	name = "\improper Main Outpost Bar"
 	icon_state = "bar"
-/*
+
 /area/surface/outpost/main/dorms
 	name = "\improper Main Outpost Dorms"
 
 /area/surface/outpost/main/dorms/dorm_1
-	name = "\improper Main Outpost Dorm One"
+	name = "\improper Apartment One"
 
 /area/surface/outpost/main/dorms/dorm_2
-	name = "\improper Main Outpost Dorm Two"
+	name = "\improper Apartment Two"
 
 /area/surface/outpost/main/dorms/dorm_3
-	name = "\improper Main Outpost Dorm Three"
+	name = "\improper Apartment Three"
 
 /area/surface/outpost/main/dorms/dorm_4
-	name = "\improper Main Outpost Dorm Four"
+	name = "\improper Apartment Four"
 
 /area/surface/outpost/main/dorms/dorm_5
-	name = "\improper Main Outpost Dorm Five"
+	name = "\improper Apartment Five"
 
 /area/surface/outpost/main/dorms/dorm_6
-	name = "\improper Main Outpost Dorm Six"
-*/
+	name = "\improper Apartment Six"
+
+/area/surface/outpost/main/dorms/dorm_7
+	name = "\improper Apartment Seven"
+
+/area/surface/outpost/main/dorms/dorm_8
+	name = "\improper Apartment Eight"
+
+/area/surface/outpost/main/dorms/dorm_9
+	name = "\improper Apartment Nine"
+
+/area/surface/outpost/main/dorms/dorm_10
+	name = "\improper Apartment Ten"
+
+/area/surface/outpost/main/dorms/dorm_1/upstairs
+	name = "\improper Apartment One Upper Level"
+
+/area/surface/outpost/main/dorms/dorm_2/upstairs
+	name = "\improper Apartment Two Upper Level"
+
+/area/surface/outpost/main/dorms/dorm_3/upstairs
+	name = "\improper Apartment Three Upper Level"
+
+/area/surface/outpost/main/dorms/dorm_4/upstairs
+	name = "\improper Apartment Four Upper Level"
+
+/area/surface/outpost/main/dorms/dorm_5/upstairs
+	name = "\improper Apartment Five Upper Level"
+
+/area/surface/outpost/main/dorms/dorm_6/upstairs
+	name = "\improper Apartment Six Upper Level"
+
+/area/surface/outpost/main/dorms/dorm_7/upstairs
+	name = "\improper Apartment Seven Upper Level"
+
+/area/surface/outpost/main/dorms/dorm_8/upstairs
+	name = "\improper Apartment Eight Upper Level"
+
+/area/surface/outpost/main/dorms/dorm_9/upstairs
+	name = "\improper Apartment Nine Upper Level"
+
+/area/surface/outpost/main/dorms/dorm_10/upstairs
+	name = "\improper Apartment Ten Upper Level"
+
 /area/surface/outpost/main/airlock
 	name = "\improper Main Outpost Airlock"
 	icon_state = "red"
@@ -611,7 +702,32 @@
 /area/surface/outpost/security/smes
 	name = "\improper Security Outpost SMES"
 	icon_state = "substation"
-	ambience = AMBIENCE_SUBSTATION //CHOMP Edit
+	ambience = AMBIENCE_SUBSTATION
+
+//Fishing outpost
+
+/area/surface/outpost/fishing
+	name = "\improper Fishing Outpost"
+	icon_state = "recreation_area"
+
+/area/surface/outpost/fishing/smes
+	name = "\improper Fishing SMES Maintenance"
+	icon_state = "substation"
+	ambience = AMBIENCE_SUBSTATION
+
+/area/surface/outpost/civilian/fishing
+	name = "\improper Private Cabin"
+	icon_state = "storage"
+
+/area/surface/outpost/civilian/pool
+	name = "\improper Pool"
+	icon_state = "pool"
+
+/area/surface/outpost/civilian/sauna
+	name = "\improper Sauna"
+
+/area/surface/outpost/civilian/sauna/cryosauna
+	name = "\improper Cryosauna"
 
 //Mining Station
 
@@ -629,7 +745,7 @@
 /area/outpost/mining_station/gen_station
 	name = "Mining Station Generator Room"
 	icon_state = "substation"
-	ambience = AMBIENCE_SUBSTATION //CHOMP Edit
+	ambience = AMBIENCE_SUBSTATION
 
 /area/outpost/mining_station/crew_area
 	name = "Mining Station Crew Area"
