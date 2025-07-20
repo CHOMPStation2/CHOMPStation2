@@ -163,6 +163,11 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/maintenance/abfirstaid)
+"ax" = (
+/obj/effect/floor_decal/rust,
+/obj/effect/landmark/start/ghost_roles,
+/turf/simulated/floor/plating/turfpack/station,
+/area/maintenance/zeroport)
 "ay" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/floor_decal/industrial/arrows/yellow{
@@ -175,6 +180,28 @@
 /obj/item/tape/atmos,
 /turf/simulated/floor/tiled/techmaint,
 /area/maintenance/zeroaft)
+"az" = (
+/obj/effect/landmark/start/ghost_roles,
+/turf/simulated/floor/plating/turfpack/station,
+/area/maintenance/thrift)
+"aA" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/effect/landmark/start/ghost_roles,
+/turf/simulated/floor/plating/turfpack/station,
+/area/maintenance/zerostarboard)
+"aB" = (
+/obj/random/trash,
+/obj/effect/landmark/start/ghost_roles,
+/turf/simulated/floor/plating/turfpack/station,
+/area/maintenance/zerofore)
 "aC" = (
 /obj/effect/floor_decal/rust,
 /obj/structure/table/rack,
@@ -32389,7 +32416,7 @@ sV
 sV
 ua
 Nc
-PK
+ax
 ua
 TJ
 TJ
@@ -43709,7 +43736,7 @@ wZ
 wZ
 wZ
 Qy
-TY
+aB
 je
 Lc
 IH
@@ -54550,7 +54577,7 @@ wZ
 wZ
 Ky
 JA
-MZ
+aA
 sW
 CP
 KM
@@ -58180,7 +58207,7 @@ XE
 AR
 TG
 Pd
-AR
+az
 wX
 vp
 wS

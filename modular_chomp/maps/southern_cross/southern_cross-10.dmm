@@ -15,6 +15,10 @@
 "ae" = (
 /turf/simulated/floor/outdoors/grass/sif/forest/planetuse,
 /area/surface/outside/wilderness/deep)
+"af" = (
+/obj/effect/landmark/start/ghost_roles,
+/turf/simulated/floor/outdoors/grass/sif/planetuse,
+/area/surface/outside/wilderness/normal)
 "ag" = (
 /obj/effect/zone_divider,
 /turf/simulated/floor/outdoors/grass/sif/forest/planetuse,
@@ -32,6 +36,10 @@
 /obj/effect/zone_divider,
 /turf/simulated/mineral/sif,
 /area/surface/outside/wilderness/mountains)
+"al" = (
+/obj/effect/landmark/start/ghost_roles,
+/turf/simulated/floor/outdoors/grass/sif/forest/planetuse,
+/area/surface/outside/wilderness/normal)
 "am" = (
 /turf/simulated/floor/water,
 /area/surface/outside/river/svartan)
@@ -5178,7 +5186,7 @@ at
 at
 at
 at
-at
+al
 ac
 ac
 ac
@@ -5435,7 +5443,7 @@ at
 at
 at
 at
-at
+al
 at
 ac
 ac
@@ -59875,7 +59883,7 @@ aM
 aM
 aM
 aM
-aG
+af
 ac
 ac
 ac
