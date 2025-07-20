@@ -123,11 +123,6 @@
 	name = "\improper Xenoflora Isolation"
 	icon_state = "xeno_f_store"
 
-/area/crew_quarters/heads/sc/sd
-	name = "\improper Command - Station Director's Office"
-	icon_state = "captain"
-	sound_env = MEDIUM_SOFTFLOOR
-	holomap_color = HOLOMAP_AREACOLOR_COMMAND
 // Shuttles
 
 // Centcom Transport Shuttle
@@ -1288,6 +1283,3 @@
 /area/rnd/Deck2_Corridor
 	name = "\improper 2 Deck Corridor"
 	icon_state = "research"
-
-
-//COMMONS AREAS

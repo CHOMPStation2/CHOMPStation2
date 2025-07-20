@@ -90,21 +90,6 @@
 
 //Deck One (Z-1)
 
-/*
-//KSC - CHOMPStation Edit 1/19/21 - Moving this to the second-deck
-/area/crew_quarters/firstdeck/gym
-	name = "\improper Station Gym"
-	icon_state = "fitness"
-*/
-
-
-/area/crew_quarters/toilet/firstdeck
-	name = "\improper First Deck Restroom"
-
-
-
-
-
 /area/security/checkpoint3
 	name = "\improper Security - Auxiliary Checkpoint"
 	icon_state = "security"
@@ -155,9 +140,6 @@
 /area/construction/seconddeck/construction1
 	name = "\improper Second Deck Engineering Construction Area 1"
 
-/area/crew_quarters/seconddeck/locker
-	name = "\improper Locker Room"
-	icon_state = "locker"
 
 //CHOMPStation Edit Start KSC 1/19/21 - Added area for new GYM
 
@@ -298,38 +280,12 @@
 	icon_state = "ai_server"
 	sound_env = SMALL_ENCLOSED
 
-/area/crew_quarters/heads/sc/sd
-	name = "\improper Command - Station Director's Office"
-	icon_state = "captain"
-	sound_env = MEDIUM_SOFTFLOOR
-	holomap_color = HOLOMAP_AREACOLOR_COMMAND
 
-/area/crew_quarters/heads/sc/hop/quarters
-	name = "\improper Command - HoP's Quarters"
-	icon_state = "head_quarters"
 
-/area/crew_quarters/heads/sc/hor/quarters
-	name = "\improper Research - RD's Quarters"
-	icon_state = "research"
 
-/area/crew_quarters/heads/sc/chief/quarters
-	name = "\improper Engineering - CE's Quarters"
-	icon_state = "engine"
 
-/area/crew_quarters/heads/sc/hos/quarters
-	name = "\improper Security - HoS' Quarters"
-	icon_state = "security"
 
-/area/crew_quarters/heads/sc/cmo/quarters
-	name = "\improper Medbay - CMO's Quarters"
-	icon_state = "medbay"
 
-/area/crew_quarters/heads/sc/restroom
-	name = "\improper Command - Restroom"
-	icon_state = "toilet"
-
-/area/crew_quarters/heads/sc/bs
-	name = "\improper Command - Secretary Quarters"
 
 
 
