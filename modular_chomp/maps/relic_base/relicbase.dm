@@ -5,12 +5,11 @@
 	// CHOMPStation Edits Start: Disabling specific includes as vorestation.dme has them already loading via #includes there. UPDATE THIS if that chang
 	#include "relicbase_defines.dm"
 	#include "turfs/outdoors.dm"
-	#include "overmap/sectors.dm"
 
 	// Map exclusive
 	#include "relicbase_things.dm"
 	#include "relicbase_overrides.dm"
-	#include "shuttles/crew_shuttles_ch.dm"es.
+	#include "shuttles/crew_shuttles_ch.dm"
 	#include "relicbase_areas.dm"
 	#include "relicbase_presets.dm"
 

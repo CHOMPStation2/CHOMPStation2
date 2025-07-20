@@ -34,14 +34,6 @@
 
 	#include "../southern_cross/submaps/_southern_cross_submaps.dm" //This contains VR world and gateway stuff
 
-
-//PLANETS, installations, sectors, ships, etc for the overmap, I want put here. Add new comments and includes when you make new planets
-	//SIF - Planet
-	#include "overmap/sectors_sn.dm" //This is actually the sector for SN.
-
-
-
-
 	#define USING_MAP_DATUM /datum/map/soluna_nexus
 
 	// todo: map.dmm-s here
