@@ -655,64 +655,6 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 		var/rads = SSradiation.get_rads_at_turf(t)
 		to_chat(src, span_notice("Radiation level: [rads ? rads : "0"] Bq."))
 
-<<<<<<< HEAD
-
-/mob/observer/dead/verb/become_mouse()
-	set name = "Become mouse"
-	set category = "Ghost.Join"
-
-	if(CONFIG_GET(flag/disable_player_mice))
-		to_chat(src, span_warning("Spawning as a mouse is currently disabled."))
-		return
-
-	//VOREStation Add Start
-	if(jobban_isbanned(src, JOB_GHOSTROLES))
-		to_chat(src, span_warning("You cannot become a mouse because you are banned from playing ghost roles."))
-		return
-	//VOREStation Add End
-
-	if(!MayRespawn(1))
-		return
-
-	var/turf/T = get_turf(src)
-	if(!T || (T.z in using_map.admin_levels))
-		to_chat(src, span_warning("You may not spawn as a mouse on this Z-level."))
-		return
-
-	var/timedifference = world.time - client.time_died_as_mouse
-	if(client.time_died_as_mouse && timedifference <= CONFIG_GET(number/mouse_respawn_time) MINUTES)
-		var/timedifference_text
-		timedifference_text = time2text(CONFIG_GET(number/mouse_respawn_time) MINUTES - timedifference,"mm:ss")
-		to_chat(src, span_warning("You may only spawn again as a mouse more than [CONFIG_GET(number/mouse_respawn_time)] minutes after your death. You have [timedifference_text] left."))
-		return
-
-	var/response = tgui_alert(src, "Are you -sure- you want to become a mouse? You will have no rights or OOC protections.","Are you sure you want to squeek? You will have no rights or OOC protections.",list("Squeek!","Nope!")) //CHOMP Edit
-	if(response != "Squeek!") return  //Hit the wrong key...again.
-
-
-	//find a viable mouse candidate
-	var/mob/living/simple_mob/animal/passive/mouse/host
-	var/obj/machinery/atmospherics/unary/vent_pump/vent_found
-	var/list/found_vents = list()
-	for(var/obj/machinery/atmospherics/unary/vent_pump/v in GLOB.machines)
-		if(!v.welded && v.z == T.z && v.network && v.network.normal_members.len > 20)
-			found_vents.Add(v)
-	if(found_vents.len)
-		vent_found = pick(found_vents)
-		host = new /mob/living/simple_mob/animal/passive/mouse(vent_found)
-	else
-		to_chat(src, span_warning("Unable to find any unwelded vents to spawn mice at."))
-
-	if(host)
-		if(CONFIG_GET(flag/uneducated_mice))
-			host.universal_understand = 0
-		announce_ghost_joinleave(src, 0, "They are now a mouse.")
-		host.ckey = src.ckey
-		host.add_ventcrawl(vent_found)
-		to_chat(host, span_info("You are now a mouse. Try to avoid interaction with players, and do not give hints away that you are more than a simple rodent."))
-
-=======
->>>>>>> 426b24d37e (simple ghost pod find (#17909))
 /mob/observer/dead/verb/view_manfiest()
 	set name = "Show Crew Manifest"
 	set category = "Ghost.Game"

@@ -96,13 +96,10 @@
 	name = JOB_TALON_PILOT
 /obj/effect/landmark/start/talonminer
 	name = JOB_TALON_MINER
-<<<<<<< HEAD
+
+/obj/effect/landmark/start/ghost_roles
+	name = JOB_GHOSTROLES
 /obj/effect/landmark/start/outsider
 	name = JOB_OUTSIDER
 /obj/effect/landmark/start/anomaly
 	name = JOB_ANOMALY
-=======
-
-/obj/effect/landmark/start/ghost_roles
-	name = JOB_GHOSTROLES
->>>>>>> 426b24d37e (simple ghost pod find (#17909))

@@ -4958,7 +4958,6 @@
 #include "modular_chomp\code\game\turfs\simulated\outdoors\valley.dm"
 #include "modular_chomp\code\modules\admin\functions\modify_traits.dm"
 #include "modular_chomp\code\modules\admin\verbs\debug.dm"
-#include "modular_chomp\code\modules\admin\verbs\tgui_verbs.dm"
 #include "modular_chomp\code\modules\artifice\deadringer.dm"
 #include "modular_chomp\code\modules\awaymissions\tank.dm"
 #include "modular_chomp\code\modules\casino\casino_book.dm"
