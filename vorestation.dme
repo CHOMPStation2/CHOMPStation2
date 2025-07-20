@@ -5313,7 +5313,6 @@
 #include "modular_chomp\maps\common_submaps\thor\thor_defines.dm"
 #include "modular_chomp\maps\common_submaps\tyr\tyr_defines.dm"
 #include "modular_chomp\maps\overmap\aegis_carrier\aegis_objs.dm"
-#include "modular_chomp\maps\overmap\om_sectors\sector_globals.dm"
 #include "modular_chomp\maps\overmap\om_ships\offmap.dm"
 #include "modular_chomp\maps\overmap\space_pois\space_areas.dm"
 #include "modular_chomp\maps\overmap\space_pois\space_pois.dm"
