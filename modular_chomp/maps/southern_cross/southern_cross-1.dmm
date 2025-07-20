@@ -165,8 +165,8 @@
 /area/maintenance/abfirstaid)
 "ax" = (
 /obj/structure/ghost_pod/ghost_activated/maintpred/no_announce,
-/turf/simulated/floor/plating/turfpack/station,
-/area/maintenance/abcargo)
+/turf/simulated/floor/wood/turfpack/station,
+/area/maintenance/zerobar)
 "ay" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/floor_decal/industrial/arrows/yellow{
@@ -180,19 +180,17 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/maintenance/zeroaft)
 "az" = (
-/obj/effect/decal/cleanable/flour,
+/obj/structure/ghost_pod/ghost_activated/maintpred/no_announce,
+/turf/simulated/floor/tiled/white,
+/area/maintenance/abscience)
+"aA" = (
+/obj/structure/ghost_pod/ghost_activated/maintpred/no_announce,
+/turf/simulated/floor/plating,
+/area/maintenance/ragecage)
+"aB" = (
 /obj/structure/ghost_pod/ghost_activated/maintpred/no_announce,
 /turf/simulated/floor/plating/turfpack/station,
-/area/maintenance/abchemistry)
-"aA" = (
-/obj/effect/floor_decal/rust,
-/obj/effect/landmark/start/ghost_roles,
-/turf/simulated/floor/plating/turfpack/station,
-/area/maintenance/zeroport)
-"aB" = (
-/obj/effect/landmark/start/ghost_roles,
-/turf/simulated/floor/plating/turfpack/station,
-/area/maintenance/thrift)
+/area/maintenance/abcargo)
 "aC" = (
 /obj/effect/floor_decal/rust,
 /obj/structure/table/rack,
@@ -215,18 +213,10 @@
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/zeroport)
 "aE" = (
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/effect/landmark/start/ghost_roles,
+/obj/effect/decal/cleanable/flour,
+/obj/structure/ghost_pod/ghost_activated/maintpred/no_announce,
 /turf/simulated/floor/plating/turfpack/station,
-/area/maintenance/zerostarboard)
+/area/maintenance/abchemistry)
 "aF" = (
 /obj/effect/floor_decal/techfloor/corner{
 	dir = 5
@@ -239,16 +229,20 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/engineering/gravgen)
 "aG" = (
-/obj/random/trash,
+/obj/effect/floor_decal/rust,
 /obj/effect/landmark/start/ghost_roles,
 /turf/simulated/floor/plating/turfpack/station,
-/area/maintenance/zerofore)
+/area/maintenance/zeroport)
 "aH" = (
 /obj/structure/bed/chair/sofa/right/beige{
 	dir = 4
 	},
 /turf/simulated/floor/wood/alt/parquet/turfpack/station,
 /area/maintenance/lookout)
+"aI" = (
+/obj/effect/landmark/start/ghost_roles,
+/turf/simulated/floor/plating/turfpack/station,
+/area/maintenance/thrift)
 "aJ" = (
 /obj/machinery/light{
 	dir = 8;
@@ -256,6 +250,24 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/gravgen)
+"aK" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/effect/landmark/start/ghost_roles,
+/turf/simulated/floor/plating/turfpack/station,
+/area/maintenance/zerostarboard)
+"aL" = (
+/obj/random/trash,
+/obj/effect/landmark/start/ghost_roles,
+/turf/simulated/floor/plating/turfpack/station,
+/area/maintenance/zerofore)
 "aM" = (
 /obj/effect/floor_decal/rust,
 /obj/structure/catwalk,
@@ -2991,10 +3003,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/maintenance/abchemistry)
-"mt" = (
-/obj/structure/ghost_pod/ghost_activated/maintpred/no_announce,
-/turf/simulated/floor/plating,
-/area/maintenance/ragecage)
 "mv" = (
 /obj/structure/bed/chair/wood,
 /obj/structure/cable{
@@ -4188,10 +4196,6 @@
 /obj/machinery/door/firedoor/border_only,
 /turf/simulated/floor/plating,
 /area/maintenance/engineering/gravgen)
-"qX" = (
-/obj/structure/ghost_pod/ghost_activated/maintpred/no_announce,
-/turf/simulated/floor/wood/turfpack/station,
-/area/maintenance/zerobar)
 "rc" = (
 /obj/machinery/hologram/holopad,
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
@@ -7182,10 +7186,6 @@
 	},
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/zeroport)
-"Ex" = (
-/obj/structure/ghost_pod/ghost_activated/maintpred/no_announce,
-/turf/simulated/floor/tiled/white,
-/area/maintenance/abscience)
 "Ez" = (
 /obj/structure/smolebuilding/houses,
 /turf/simulated/floor/plating/turfpack/station,
@@ -32438,7 +32438,7 @@ sV
 sV
 ua
 Nc
-aA
+aG
 ua
 TJ
 TJ
@@ -35775,7 +35775,7 @@ oY
 EP
 ly
 In
-qX
+ax
 UP
 wq
 tm
@@ -36571,7 +36571,7 @@ gv
 ls
 gK
 qn
-ax
+aB
 Re
 qh
 xl
@@ -39147,7 +39147,7 @@ PJ
 XP
 qi
 xf
-az
+aE
 xf
 Sd
 sr
@@ -42732,8 +42732,8 @@ WY
 LU
 br
 Nz
-Ex
-Ex
+az
+az
 GF
 Hy
 wZ
@@ -43758,7 +43758,7 @@ wZ
 wZ
 wZ
 Qy
-aG
+aL
 je
 Lc
 IH
@@ -47889,7 +47889,7 @@ tj
 Is
 zZ
 Is
-mt
+aA
 RF
 RF
 Is
@@ -54599,7 +54599,7 @@ wZ
 wZ
 Ky
 JA
-aE
+aK
 sW
 CP
 KM
@@ -58229,7 +58229,7 @@ XE
 AR
 TG
 Pd
-aB
+aI
 wX
 vp
 wS
