@@ -236,9 +236,6 @@
 	desc = "A series of islands out in the ocean."
 	mappath = "maps/redgate/islands_underwater.dmm"
 
-/obj/effect/landmark/map_data/islands
-	height = 2
-
 /datum/map_template/thor_lateload/redgate/train
 	name = "Redgate - Moving Train"
 	desc = "A long train travelling to who-knows-where."
@@ -249,9 +246,6 @@
 	desc = "A long train travelling to who-knows-where."
 	mappath = "maps/redgate/train_upper.dmm"
 
-/obj/effect/landmark/map_data/train
-	height = 2
-
 /datum/map_template/thor_lateload/redgate/fantasy
 	name = "Redgate - Fantasy Town"
 	desc = "A fantasy town full of low tech stuff."
@@ -261,9 +255,6 @@
 	name = "Redgate - Fantasy Dungeon"
 	desc = "A fantasy dungeon with lots of monsters and loot."
 	mappath = "modular_chomp/maps/relic_base/submaps/redgate/fantasy_dungeon.dmm"
-
-/obj/effect/landmark/map_data/fantasy
-	height = 2
 
 /datum/map_template/thor_lateload/redgate/laserdome
 	name = "Redgate - Laserdome"
@@ -284,9 +275,6 @@
 	name = "Redgate - Jungle Underground"
 	desc = "A fantasy dungeon with lots of monsters and loot."
 	mappath = "modular_chomp/maps/relic_base/submaps/redgate/jungle_underground.dmm"
-
-/obj/effect/landmark/map_data/jungle
-	height = 2
 
 //////////////////////////////////////////////////////////////////////////////////////
 // Code Shenanigans for lateload maps
@@ -310,137 +298,3 @@
 	if(mapZ && !z)
 		z = mapZ
 	return ..(map)
-
-/turf/unsimulated/wall/seperator //to block vision between transit zones
-	name = ""
-	icon = 'icons/effects/effects.dmi'
-	icon_state = "1"
-
-/obj/effect/step_trigger/zlevel_fall //Don't ever use this, only use subtypes.Define a new var/static/target_z on each
-	affect_ghosts = 1
-
-/obj/effect/step_trigger/zlevel_fall/Initialize(mapload)
-	. = ..()
-
-	if(istype(get_turf(src), /turf/simulated/floor))
-		src:target_z = z
-		return INITIALIZE_HINT_QDEL
-
-/obj/effect/step_trigger/zlevel_fall/Trigger(var/atom/movable/A) //mostly from /obj/effect/step_trigger/teleporter/planetary_fall, step_triggers.dm L160
-	if(!src:target_z)
-		return
-
-	var/attempts = 100
-	var/turf/simulated/T
-	while(attempts && !T)
-		var/turf/simulated/candidate = locate(rand(5,world.maxx-5),rand(5,world.maxy-5),src:target_z)
-		if(candidate.density)
-			attempts--
-			continue
-
-		T = candidate
-		break
-
-	if(!T)
-		return
-
-	if(isobserver(A))
-		A.forceMove(T) // Harmlessly move ghosts.
-		return
-
-	A.forceMove(T)
-	if(isliving(A)) // Someday, implement parachutes.  For now, just turbomurder whoever falls.
-		message_admins("\The [A] fell out of the sky.")
-		var/mob/living/L = A
-		L.fall_impact(T, 42, 90, FALSE, TRUE)	//You will not be defibbed from this.
-
-
-/////////////////////////////////////////////////////////////////////////////////////
-// Add objects that will be used in ALL away missions. Keep area specific stuff separate.
-
-/obj/structure/old_roboprinter
-	name = "old drone fabricator"
-	desc = "Built like a tank, still working after so many years."
-	icon = 'icons/obj/machines/drone_fab.dmi'
-	icon_state = "drone_fab_idle"
-	anchored = TRUE
-	density = TRUE
-
-/obj/sc_away_spawner
-	name = "RENAME ME, JERK"
-	desc = "Spawns the mobs!"
-	icon = 'icons/mob/screen1.dmi'
-	icon_state = "x"
-	invisibility = INVISIBILITY_ABSTRACT
-	mouse_opacity = 0
-	density = 0
-	anchored = 1
-
-	//Weighted with values (not %chance, but relative weight)
-	//Can be left value-less for all equally likely
-	var/list/mobs_to_pick_from
-
-	//When the below chance fails, the spawner is marked as depleted and stops spawning
-	var/prob_spawn = 100	//Chance of spawning a mob whenever they don't have one
-	var/prob_fall = 5		//Above decreases by this much each time one spawns
-
-	//Settings to help mappers/coders have their mobs do what they want in this case
-	var/faction				//To prevent infighting if it spawns various mobs, set a faction
-	var/atmos_comp			//TRUE will set all their survivability to be within 20% of the current air
-	//var/guard				//# will set the mobs to remain nearby their spawn point within this dist
-
-	//Internal use only
-	var/mob/living/simple_mob/my_mob
-	var/depleted = FALSE
-
-/obj/sc_away_spawner/Initialize(mapload)
-	. = ..()
-
-	if(!LAZYLEN(mobs_to_pick_from))
-		error("Mob spawner at [x],[y],[z] ([get_area(src)]) had no mobs_to_pick_from set on it!")
-		flags |= ATOM_INITIALIZED
-		return INITIALIZE_HINT_QDEL
-	START_PROCESSING(SSobj, src)
-
-/obj/sc_away_spawner/process()
-	if(my_mob && my_mob.stat != DEAD)
-		return //No need
-
-	if(LAZYLEN(loc.human_mobs(world.view)))
-		return //I'll wait.
-
-	if(prob(prob_spawn))
-		prob_spawn -= prob_fall
-		var/picked_type = pickweight(mobs_to_pick_from)
-		my_mob = new picked_type(get_turf(src))
-		my_mob.low_priority = TRUE
-
-		if(faction)
-			my_mob.faction = faction
-
-		if(atmos_comp)
-			var/turf/T = get_turf(src)
-			var/datum/gas_mixture/env = T.return_air()
-			if(env)
-				my_mob.minbodytemp = env.temperature * 0.8
-				my_mob.maxbodytemp = env.temperature * 1.2
-
-				var/list/gaslist = env.gas
-				my_mob.min_oxy = gaslist[GAS_O2] * 0.8
-				my_mob.min_tox = gaslist[GAS_PHORON] * 0.8
-				my_mob.min_n2 = gaslist[GAS_N2] * 0.8
-				my_mob.min_co2 = gaslist[GAS_CO2] * 0.8
-				my_mob.max_oxy = gaslist[GAS_O2] * 1.2
-				my_mob.max_tox = gaslist[GAS_PHORON] * 1.2
-				my_mob.max_n2 = gaslist[GAS_N2] * 1.2
-				my_mob.max_co2 = gaslist[GAS_CO2] * 1.2
-/* //VORESTATION AI TEMPORARY REMOVAL
-		if(guard)
-			my_mob.returns_home = TRUE
-			my_mob.wander_distance = guard
-*/
-		return
-	else
-		STOP_PROCESSING(SSobj, src)
-		depleted = TRUE
-		return

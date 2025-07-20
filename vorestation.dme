@@ -5284,6 +5284,7 @@
 #include "modular_chomp\maps\common\common_shuttles_heist.dm"
 #include "modular_chomp\maps\common\common_shuttles_merc.dm"
 #include "modular_chomp\maps\common\common_shuttles_ninja.dm"
+#include "modular_chomp\maps\common\common_things.dm"
 #include "modular_chomp\maps\common\common_turfs.dm"
 #include "modular_chomp\maps\common\common_wildlife_encounter.dm"
 #include "modular_chomp\maps\common_areas\expoutpost.dm"

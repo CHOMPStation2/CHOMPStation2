@@ -58,3 +58,8 @@
 // default shuttle roof type - blanket define our shuttle area ceiling type, we have multi-Zs and the default is none.
 /turf/simulated/floor/reinforced/airless/shuttleroof
 	// A special type just to make sure we don't delete airless reinforced when shuttles depart
+
+/turf/unsimulated/wall/seperator //to block vision between transit zones
+	name = ""
+	icon = 'icons/effects/effects.dmi'
+	icon_state = "1"

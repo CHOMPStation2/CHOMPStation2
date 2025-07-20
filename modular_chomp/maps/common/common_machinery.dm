@@ -28,3 +28,14 @@
 		)
 	else
 		return 0
+
+/obj/machinery/suit_cycler/exploration
+	name = "Explorer suit cycler"
+	model_text = "Exploration"
+	req_one_access = list(access_pilot,access_explorer)
+
+/obj/machinery/suit_cycler/pilot
+	name = "Pilot suit cycler"
+	model_text = "Pilot"
+	req_access = null
+	req_one_access = list(access_pilot,access_explorer)

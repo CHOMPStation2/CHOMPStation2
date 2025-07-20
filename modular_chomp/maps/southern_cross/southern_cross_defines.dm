@@ -283,17 +283,6 @@ but they don't actually change anything about the load order
 	holomap_offset_x = HOLOMAP_ICON_SIZE - SOUTHERN_CROSS_HOLOMAP_MARGIN_X - SOUTHERN_CROSS_MAP_SIZE - 40
 	holomap_offset_y = SOUTHERN_CROSS_HOLOMAP_MARGIN_Y + SOUTHERN_CROSS_MAP_SIZE*1
 
-/obj/machinery/suit_cycler/exploration
-	name = "Explorer suit cycler"
-	model_text = "Exploration"
-	req_one_access = list(access_pilot,access_explorer)
-
-/obj/machinery/suit_cycler/pilot
-	name = "Pilot suit cycler"
-	model_text = "Pilot"
-	req_access = null
-	req_one_access = list(access_pilot,access_explorer)
-
 /datum/map/southern_cross/get_map_info()
 	. = list()
 	. +=  "The NLS [full_name] is a small waystation in orbit of the frozen garden world of Sif, jewel of the Vir system.<br>"

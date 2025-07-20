@@ -277,17 +277,6 @@ but they don't actually change anything about the load order
 	flags = MAP_LEVEL_PLAYER|MAP_LEVEL_SEALED
 	base_turf = /turf/simulated/floor/outdoors/rocks
 
-/obj/machinery/suit_cycler/exploration
-	name = "Explorer suit cycler"
-	model_text = "Exploration"
-	req_one_access = list(access_pilot,access_explorer)
-
-/obj/machinery/suit_cycler/pilot
-	name = "Pilot suit cycler"
-	model_text = "Pilot"
-	req_access = null
-	req_one_access = list(access_pilot,access_explorer)
-
 /datum/map/soluna_nexus/get_map_info()
 	. = list()
 	. +=  "The NLS [full_name] is a small waystation in orbit of the frozen garden world of Sif, jewel of the Vir system.<br>"
