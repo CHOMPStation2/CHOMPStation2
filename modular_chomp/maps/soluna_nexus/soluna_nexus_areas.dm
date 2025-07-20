@@ -1,42 +1,4 @@
-
-/*
-/datum/map/southern_cross
-
-	post_round_safe_areas = list (
-		/area/centcom,
-		/area/shuttle/escape/centcom,
-		/area/shuttle/escape_pod1/centcom,
-		/area/shuttle/escape_pod2/centcom,
-		/area/shuttle/escape_pod3/centcom,
-		/area/shuttle/escape_pod5/centcom,
-		/area/shuttle/transport1/centcom,
-		/area/shuttle/administration/centcom,
-		/area/shuttle/response_ship,
-	)
-*/
-
 //Turbolift
-
-/area/turbolift
-	name = "\improper Turbolift"
-	icon_state = "shuttle"
-	requires_power = 0
-	dynamic_lighting = 1
-
-/area/turbolift/start
-	name = "\improper Turbolift Start"
-
-/area/turbolift/firstdeck
-	name = "\improper first deck"
-	base_turf = /turf/simulated/floor/plating
-
-/area/turbolift/seconddeck
-	name = "\improper second deck"
-	base_turf = /turf/simulated/open
-
-/area/turbolift/thirddeck
-	name = "\improper third deck"
-	base_turf = /turf/simulated/open
 
 // Elevator areas.
 // CHOMPEdit - Maintenance Deck
@@ -327,33 +289,6 @@
 /area/skipjack_station/arrivals_dock
 	name = "\improper docked with Southern Cross"
 	icon_state = "shuttle"
-
-// Ninja areas
-/area/ninja_dojo
-	name = "\improper Ninja Base"
-	icon_state = "green"
-	requires_power = 0
-	flags = RAD_SHIELDED
-	ambience = AMBIENCE_HIGHSEC
-
-/area/ninja_dojo/dojo
-	name = "\improper Clan Dojo"
-	dynamic_lighting = 0
-
-/area/shuttle/ninja
-	name = "\improper Ninja Shuttle"
-	icon_state = "shuttlered"
-
-//Trade Ship
-
-/area/shuttle/merchant
-	icon_state = "shuttle"
-
-/area/shuttle/merchant/home
-	name = "\improper Merchant Vessel - Home"
-
-/area/shuttle/merchant/away
-	name = "\improper Merchant Vessel - Away"
 
 //Small Escape Pods
 
@@ -908,31 +843,6 @@
 /area/expoutpost/hangarsix
 	name = "\improper Exploration Carrier Hangar Six"
 	icon_state = "hangar"
-
-//CHOMPedit: Exploration backup shuttle. For now this is a placeholder for future expedition content.
-
-/area/shuttle/shuttlebackup
-	name = "\improper Hangar Deck"
-	icon_state = "yellow"
-	requires_power = 0
-	dynamic_lighting = 1
-	flags = RAD_SHIELDED
-
-/area/shuttle/shuttlebackup/start
-	name = "\improper Expedition Backup Shuttle Docks"
-	icon_state = "shuttlered"
-
-// Misc
-
-/area/wreck/ufoship
-	name = "\improper Wreck"
-	icon_state = "storage"
-	ambience = AMBIENCE_OTHERWORLDLY
-
-/area/wreck/supplyshuttle
-	name = "\improper Wreck"
-	icon_state = "storage"
-	ambience = AMBIENCE_RUINS
 
 /area/shuttle/overmap/sif
 	name = "wilderness site"

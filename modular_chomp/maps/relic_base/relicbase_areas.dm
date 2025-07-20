@@ -32,32 +32,12 @@
 /area/surface/outpost/civilian/emergency_storage
 	name = "\improper Abandoned Barracks"
 
+// ^^^^^Areas above this area alread moved. Those are unique names for this map
 // TODO
 
 //// ALL THE AREAS BELOW ARE NOT YET CHECKED!!!!!
 
 //Turbolift
-
-/area/turbolift
-	name = "\improper Turbolift"
-	icon_state = "shuttle"
-	requires_power = 0
-	dynamic_lighting = 1
-
-/area/turbolift/start
-	name = "\improper Turbolift Start"
-
-/area/turbolift/firstdeck
-	name = "\improper first deck"
-	base_turf = /turf/simulated/floor/plating
-
-/area/turbolift/seconddeck
-	name = "\improper second deck"
-	base_turf = /turf/simulated/open
-
-/area/turbolift/thirddeck
-	name = "\improper third deck"
-	base_turf = /turf/simulated/open
 
 // Elevator areas.
 /area/turbolift/port_deck_one
@@ -88,24 +68,6 @@
 	icon_state = "fitness"
 */
 
-/area/construction/firstdeck/
-	name = "\improper Engineering Construction Area"
-	icon_state = "construction"
-
-/area/construction/firstdeck/construction1
-	name = "\improper First Deck Engineering Construction Area 1"
-
-/area/construction/firstdeck/construction2
-	name = "\improper First Deck Engineering Construction Area 2"
-
-/area/construction/firstdeck/construction3
-	name = "\improper First Deck Engineering Construction Area 3"
-
-/area/construction/firstdeck/construction4
-	name = "\improper First Deck Engineering Construction Area 4"
-
-/area/construction/firstdeck/construction5
-	name = "\improper First Deck Engineering Construction Area 5"
 
 /area/crew_quarters/toilet/firstdeck
 	name = "\improper First Deck Restroom"
@@ -246,34 +208,7 @@
 /area/hallway/secondary/firstdeck/research_access
 	name = "\improper First Deck Research Access Hallway"
 	icon_state = "hallS"
-//CHOMPStation Edit End
-/* Moving hangars to Space Station 13 areas.dm
-/area/hangar
-	name = "\improper First Deck Hangar"
-	icon_state = "hangar"
-	sound_env = LARGE_ENCLOSED
 
-/area/hangar/one
-	name = "\improper Hangar One"
-
-/area/hangar/lockerroomone
-	name = "\improper Exploration Locker Room One"
-	icon_state = "hangarcontrol"
-
-/area/hangar/two
-	name = "\improper Hangar Two"
-
-/area/hangar/lockerroomtwo
-	name = "\improper Exploration Locker Room Two"
-	icon_state = "hangarcontrol"
-
-/area/hangar/three
-	name = "\improper Hangar Three"
-
-/area/hangar/lockerroomthree
-	name = "\improper Exploration Locker Room Three"
-	icon_state = "hangarcontrol"
-*/
 /area/security/checkpoint3
 	name = "\improper Security - Auxiliary Checkpoint"
 	icon_state = "security"
@@ -1045,33 +980,6 @@
 	name = "\improper docked with Southern Cross"
 	icon_state = "shuttle"
 
-// Ninja areas
-/area/ninja_dojo
-	name = "\improper Ninja Base"
-	icon_state = "green"
-	requires_power = 0
-	flags = RAD_SHIELDED
-	ambience = AMBIENCE_HIGHSEC
-
-/area/ninja_dojo/dojo
-	name = "\improper Clan Dojo"
-	dynamic_lighting = 0
-
-/area/shuttle/ninja
-	name = "\improper Ninja Shuttle"
-	icon_state = "shuttlered"
-
-//Trade Ship
-
-/area/shuttle/merchant
-	icon_state = "shuttle"
-
-/area/shuttle/merchant/home
-	name = "\improper Merchant Vessel - Home"
-
-/area/shuttle/merchant/away
-	name = "\improper Merchant Vessel - Away"
-
 // Escape Shuttle
 
 /area/shuttle/escape/station/simulated_grid
@@ -1450,81 +1358,3 @@
 /area/maintenance/expoutpost/innerportmaint
 	name = "\improper Exploration Carrier Port Maintenance"
 	icon_state = "pmaint"
-
-//CHOMPedit: Exploration backup shuttle. For now this is a placeholder for future expedition content.
-
-/area/shuttle/shuttlebackup
-	name = "\improper Hangar Deck"
-	icon_state = "yellow"
-	requires_power = 0
-	dynamic_lighting = 1
-	flags = RAD_SHIELDED
-
-/area/shuttle/shuttlebackup/start
-	name = "\improper Expedition Backup Shuttle Docks"
-	icon_state = "shuttlered"
-
-// Misc
-
-/area/wreck/ufoship
-	name = "\improper Wreck"
-	icon_state = "storage"
-	ambience = AMBIENCE_OTHERWORLDLY
-
-/area/wreck/supplyshuttle
-	name = "\improper Wreck"
-	icon_state = "storage"
-	ambience = AMBIENCE_RUINS
-
-//Temp Removal TFF 15/2/20
-/*
-// CHOMP-Edit: This is the Belt Mining addition
-// Belt Mining Areas
-/area/mine/unexplored/belt_miner
-	name = "\improper Belt Mining"
-	base_turf = /turf/space
-/area/mine/explored/belt_miner
-	name = "\improper Belt Mining"
-	base_turf = /turf/space
-
-// Belt Mining outpost areas
-/area/outpost/mining_main/passage
-	name = "\improper Mining Outpost Passage"
-/area/outpost/mining_main/hangar
-	name = "\improper Mining Outpost Belt Miner Hangar"
-/area/outpost/mining_main/belt_outpost // Master area for "Belt Outpost", all sub-areas follow this one's preset
-	name = "\improper Belt Mining Outpost"
-	sound_env = ASTEROID
-	forced_ambience = list('sound/ambience/ruins/ruins1.ogg')
-	lightswitch = 0
-/area/outpost/mining_main/belt_outpost/airlock
-	name = "\improper Belt Mining Airlock"
-/area/outpost/mining_main/belt_outpost/dorms
-	name = "\improper Belt Mining Dorms"
-	forced_ambience = list('sound/ambience/generic/generic1.ogg')
-/area/outpost/mining_main/belt_outpost/substation
-	name = "\improper Belt Mining Substation"
-	ambience = list('sound/ambience/engineering/engineering1.ogg')
-/area/outpost/mining_main/belt_outpost/atmos
-	name = "\improper Belt Mining Atmos"
-	ambience = list('sound/ambience/ambiatm1.ogg')
-/area/outpost/mining_main/belt_outpost/solars
-	name = "\improper Belt Mining Solars"
-/area/outpost/mining_main/belt_outpost/tank_storage
-	name = "\improper Belt Mining Tank Holding and Console Access"
-
-// Belter 2.0 Areas!
-/area/shuttle/beltferry/station
-	name = "Belter M2.0 Landed"
-	icon_state = "shuttle2"
-	base_turf = /turf/simulated/floor/reinforced
-
-/area/shuttle/beltferry/belt // This is our "dock" area for the Belter M2.0
-	name = "Belter M2.0 Holding Position"
-	icon_state = "shuttle2"
-	base_turf = /turf/space
-
-/area/shuttle/beltferry/transit // Transit Area - the in-between.
-	name = "Belter M2.0 Transit"
-	icon_state = "shuttle2"
-*/
