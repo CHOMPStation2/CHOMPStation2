@@ -13,7 +13,7 @@
 	ambience = AMBIENCE_OUTPOST
 
 /area/expoutpost/prep
-	name = "\improper Exploration Carrier
+	name = "\improper Exploration Carrier"
 
 /area/expoutpost/prep/recovery
 	name = "\improper Exploration Carrier Recovery"
