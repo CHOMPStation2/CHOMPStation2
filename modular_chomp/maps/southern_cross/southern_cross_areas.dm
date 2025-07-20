@@ -157,12 +157,6 @@
 
 
 
-/area/engineering/hallway/atmos_hallway
-	name = "\improper Atmospherics Hallway"
-
-/area/engineering/hallway/engineer_hallway
-	name = "\improper Engineering Hallway"
-	icon_state = "engineering_aft_hallway"
 
 /area/medical/foyer
 	name = "\improper Medbay Foyer"
@@ -327,16 +321,6 @@
 //NT response shuttle
 
 
-// Centcom Transport Shuttle
-/area/shuttle/transport1
-	icon_state = "shuttle"
-	name = "\improper Transport Shuttle"
-
-// Centcom Admin Shuttle
-
-/area/shuttle/administration
-	name = "\improper Administration Shuttle"
-	icon_state = "shuttlered"
 
 //Merc
 
@@ -461,218 +445,9 @@
 	icon_state = "shuttle"
 
 
-//Small Escape Pods
-
-/area/shuttle/escape_pod1
-	name = "\improper Escape Pod One"
-	music = "music/escape.ogg"
-
-/area/shuttle/escape_pod1/station
-	icon_state = "shuttle2"
-	base_turf = /turf/simulated/floor/airless
-
-/area/shuttle/escape_pod1/centcom
-	icon_state = "shuttle"
-
-/area/shuttle/escape_pod1/transit
-	icon_state = "shuttle"
-
-/area/shuttle/escape_pod2
-	name = "\improper Escape Pod Two"
-	music = "music/escape.ogg"
-
-/area/shuttle/escape_pod2/station
-	icon_state = "shuttle2"
-	base_turf = /turf/simulated/floor/airless
-
-/area/shuttle/escape_pod2/centcom
-	icon_state = "shuttle"
-
-/area/shuttle/escape_pod2/transit
-	icon_state = "shuttle"
-
-/area/shuttle/escape_pod3
-	name = "\improper Escape Pod Three"
-	music = "music/escape.ogg"
-
-/area/shuttle/escape_pod3/station
-	icon_state = "shuttle2"
-	base_turf = /turf/simulated/floor/airless
-
-/area/shuttle/escape_pod3/centcom
-	icon_state = "shuttle"
-
-/area/shuttle/escape_pod3/transit
-	icon_state = "shuttle"
-
-/area/shuttle/escape_pod4
-	name = "\improper Escape Pod Four"
-	music = "music/escape.ogg"
-
-/area/shuttle/escape_pod4/station
-	icon_state = "shuttle2"
-	base_turf = /turf/simulated/floor/airless
-
-/area/shuttle/escape_pod4/centcom
-	icon_state = "shuttle"
-
-/area/shuttle/escape_pod4/transit
-	icon_state = "shuttle"
-
-/area/shuttle/escape_pod5
-	name = "\improper Escape Pod Five"
-	music = "music/escape.ogg"
-
-/area/shuttle/escape_pod5/station
-	icon_state = "shuttle2"
-	base_turf = /turf/simulated/floor/airless
-
-/area/shuttle/escape_pod5/centcom
-	icon_state = "shuttle"
-
-/area/shuttle/escape_pod5/transit
-	icon_state = "shuttle"
-
-/area/shuttle/escape_pod6
-	name = "\improper Escape Pod Six"
-	music = "music/escape.ogg"
-
-/area/shuttle/escape_pod6/station
-	icon_state = "shuttle2"
-	base_turf = /turf/simulated/floor/airless
-
-/area/shuttle/escape_pod6/centcom
-	icon_state = "shuttle"
-
-/area/shuttle/escape_pod6/transit
-	icon_state = "shuttle"
-
-/area/shuttle/escape_pod7
-	name = "\improper Escape Pod Seven"
-	music = "music/escape.ogg"
-
-/area/shuttle/escape_pod7/station
-	icon_state = "shuttle2"
-	base_turf = /turf/simulated/floor/reinforced/airless
-
-/area/shuttle/escape_pod7/centcom
-	icon_state = "shuttle"
-
-/area/shuttle/escape_pod7/transit
-	icon_state = "shuttle"
-
-/area/shuttle/escape_pod8
-	name = "\improper Escape Pod Eight"
-	music = "music/escape.ogg"
-
-/area/shuttle/escape_pod8/station
-	icon_state = "shuttle2"
-	base_turf = /turf/simulated/floor/reinforced/airless
-
-/area/shuttle/escape_pod8/centcom
-	icon_state = "shuttle"
-
-/area/shuttle/escape_pod8/transit
-	icon_state = "shuttle"
+//Small Escape Podsxx
 
 //Large Escape Pods
-
-/area/shuttle/large_escape_pod1
-	name = "\improper Large Escape Pod One"
-	music = "music/escape.ogg"
-
-/area/shuttle/large_escape_pod1/station
-	icon_state = "shuttle2"
-	base_turf = /turf/simulated/floor/airless
-
-/area/shuttle/large_escape_pod1/centcom
-	icon_state = "shuttle"
-
-/area/shuttle/large_escape_pod1/transit
-	icon_state = "shuttle"
-
-/area/shuttle/large_escape_pod2
-	name = "\improper Large Escape Pod Two"
-	music = "music/escape.ogg"
-
-/area/shuttle/large_escape_pod2/station
-	icon_state = "shuttle2"
-	base_turf = /turf/simulated/floor/airless
-
-/area/shuttle/large_escape_pod2/centcom
-	icon_state = "shuttle"
-
-/area/shuttle/large_escape_pod2/transit
-	icon_state = "shuttle"
-
-/area/shuttle/cryo
-	name = "\improper Cryogenic Storage"
-
-/area/shuttle/cryo/station
-	icon_state = "shuttle2"
-	base_turf = /turf/simulated/floor/airless
-
-/area/shuttle/cryo/centcom
-	icon_state = "shuttle"
-
-/area/shuttle/cryo/transit
-	icon_state = "shuttle"
-
-/area/shuttle/shuttle3
-	name = "\improper Hangar Deck"
-	icon_state = "yellow"
-	requires_power = 0
-	dynamic_lighting = 1
-	flags = RAD_SHIELDED
-
-/area/shuttle/shuttle3/start
-	name = "\improper Expedition Hangar One"
-	icon_state = "shuttlered"
-	base_turf = /turf/simulated/floor/reinforced
-
-/area/shuttle/shuttle3/seconddeck
-	name = "south of second deck"
-	icon_state = "south"
-
-/area/shuttle/shuttle3/stationhangar3
-	name = "\improper Hangar Three"
-	icon_state = "shuttlered"
-	base_turf = /turf/simulated/floor/reinforced
-
-/area/shuttle/shuttle3/mining
-	name = "wilderness site"
-	icon_state = "shuttlered"
-
-/area/shuttle/shuttle3/transit
-	name = "transit"
-	icon_state = "shuttlered"
-	base_turf = /turf/space/transit/north
-
-/area/shuttle/shuttle3/orbit
-	name = "in orbit of Sif"
-	icon_state = "shuttlegrn"
-	base_turf = /turf/space
-
-/area/shuttle/shuttle3/sky
-	name = "hovering over skies of sif"
-	icon_state = "shuttlegrn"
-	base_turf = /turf/simulated/sky
-
-/area/shuttle/shuttle3/sky_transit
-	name = "in flight over sif"
-	icon_state = "shuttlered"
-	base_turf = /turf/simulated/sky/moving
-
-//CHOMPedit: Exploration outpost ferry shuttle
-
-/area/shuttle/expoutpost/site
-	name = "\improper Exploration Sling"
-	icon_state = "shuttle2"
-
-/area/shuttle/expoutpost/station
-	name = "\improper Exploration Sling"
-	icon_state = "shuttle2"
-	base_turf = /turf/simulated/floor/reinforced/airless
 
 //CHOMPedit: New Explo Carrier Areas.
 
@@ -905,20 +680,4 @@
 
 // Misc
 
-/area/shuttle/overmap/sif
-	name = "wilderness site"
-	icon_state = "shuttlered"
-
 // CHOMPAdd Start - Maintenance Deck Areas
-
-/area/engineering/lowlobby
-	name = "Engineering Deck 0 Lobby"
-	icon_state = "maint_pumpstation"
-
-/area/engineering/backuppowerlobby
-	name = "Engineering Backup Power Lobby"
-	icon_state = "engineering"
-
-/area/engineering/backuppower
-	name = "Engineering Backup Power"
-	icon_state = "engineering"

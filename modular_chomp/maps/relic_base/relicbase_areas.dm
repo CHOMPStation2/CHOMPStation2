@@ -56,7 +56,14 @@
 /area/hallway/primary/seconddeck/dockhallway
 	name = "\improper Departures Tram Station"
 
+/area/shuttle/shuttle3/start
+	name = "\improper Landing Pad Four"
 
+/area/shuttle/shuttle3/stationhangar3
+	name = "\improper Landing Pad Three"
+
+/area/shuttle/expoutpost/stationx
+	base_turf = /turf/simulated/floor/reinforced
 
 
 
@@ -146,12 +153,6 @@
 //CHOMPStation Edit End
 
 
-/area/engineering/hallway/atmos_hallway
-	name = "\improper Atmospherics Hallway"
-
-/area/engineering/hallway/engineer_hallway
-	name = "\improper Engineering Hallway"
-	icon_state = "engineering_aft_hallway"
 
 
 /area/medical/foyer
@@ -431,16 +432,6 @@
 	icon_state = "shuttlered"
 	base_turf = /turf/simulated/sky/moving
 
-// Centcom Transport Shuttle
-/area/shuttle/transport1
-	icon_state = "shuttle"
-	name = "\improper Transport Shuttle"
-
-// Centcom Admin Shuttle
-
-/area/shuttle/administration
-	name = "\improper Administration Shuttle"
-	icon_state = "shuttlered"
 
 //Merc
 
@@ -580,162 +571,9 @@
 /area/shuttle/arrival/station/simulated_grid
 	base_turf = /turf/simulated/floor/tiled/techfloor/grid
 
-//Small Escape Pods
 
-/area/shuttle/escape_pod1
-	name = "\improper Escape Pod One"
-	music = "music/escape.ogg"
-
-/area/shuttle/escape_pod1/station
-	icon_state = "shuttle2"
-	base_turf = /turf/simulated/floor/airless
-
-/area/shuttle/escape_pod1/centcom
-	icon_state = "shuttle"
-
-/area/shuttle/escape_pod1/transit
-	icon_state = "shuttle"
-
-/area/shuttle/escape_pod2
-	name = "\improper Escape Pod Two"
-	music = "music/escape.ogg"
-
-/area/shuttle/escape_pod2/station
-	icon_state = "shuttle2"
-	base_turf = /turf/simulated/floor/airless
-
-/area/shuttle/escape_pod2/centcom
-	icon_state = "shuttle"
-
-/area/shuttle/escape_pod2/transit
-	icon_state = "shuttle"
-
-/area/shuttle/escape_pod3
-	name = "\improper Escape Pod Three"
-	music = "music/escape.ogg"
-
-/area/shuttle/escape_pod3/station
-	icon_state = "shuttle2"
-	base_turf = /turf/simulated/floor/airless
-
-/area/shuttle/escape_pod3/centcom
-	icon_state = "shuttle"
-
-/area/shuttle/escape_pod3/transit
-	icon_state = "shuttle"
-
-/area/shuttle/escape_pod4
-	name = "\improper Escape Pod Four"
-	music = "music/escape.ogg"
-
-/area/shuttle/escape_pod4/station
-	icon_state = "shuttle2"
-	base_turf = /turf/simulated/floor/airless
-
-/area/shuttle/escape_pod4/centcom
-	icon_state = "shuttle"
-
-/area/shuttle/escape_pod4/transit
-	icon_state = "shuttle"
-
-/area/shuttle/escape_pod5
-	name = "\improper Escape Pod Five"
-	music = "music/escape.ogg"
-
-/area/shuttle/escape_pod5/station
-	icon_state = "shuttle2"
-	base_turf = /turf/simulated/floor/airless
-
-/area/shuttle/escape_pod5/centcom
-	icon_state = "shuttle"
-
-/area/shuttle/escape_pod5/transit
-	icon_state = "shuttle"
-
-/area/shuttle/escape_pod6
-	name = "\improper Escape Pod Six"
-	music = "music/escape.ogg"
-
-/area/shuttle/escape_pod6/station
-	icon_state = "shuttle2"
-	base_turf = /turf/simulated/floor/airless
-
-/area/shuttle/escape_pod6/centcom
-	icon_state = "shuttle"
-
-/area/shuttle/escape_pod6/transit
-	icon_state = "shuttle"
-
-/area/shuttle/escape_pod7
-	name = "\improper Escape Pod Seven"
-	music = "music/escape.ogg"
-
-/area/shuttle/escape_pod7/station
-	icon_state = "shuttle2"
-	base_turf = /turf/simulated/floor/reinforced/airless
-
-/area/shuttle/escape_pod7/centcom
-	icon_state = "shuttle"
-
-/area/shuttle/escape_pod7/transit
-	icon_state = "shuttle"
-
-/area/shuttle/escape_pod8
-	name = "\improper Escape Pod Eight"
-	music = "music/escape.ogg"
-
-/area/shuttle/escape_pod8/station
-	icon_state = "shuttle2"
-	base_turf = /turf/simulated/floor/reinforced/airless
-
-/area/shuttle/escape_pod8/centcom
-	icon_state = "shuttle"
-
-/area/shuttle/escape_pod8/transit
-	icon_state = "shuttle"
 
 //Large Escape Pods
-
-/area/shuttle/large_escape_pod1
-	name = "\improper Large Escape Pod One"
-	music = "music/escape.ogg"
-
-/area/shuttle/large_escape_pod1/station
-	icon_state = "shuttle2"
-	base_turf = /turf/simulated/floor/airless
-
-/area/shuttle/large_escape_pod1/centcom
-	icon_state = "shuttle"
-
-/area/shuttle/large_escape_pod1/transit
-	icon_state = "shuttle"
-
-/area/shuttle/large_escape_pod2
-	name = "\improper Large Escape Pod Two"
-	music = "music/escape.ogg"
-
-/area/shuttle/large_escape_pod2/station
-	icon_state = "shuttle2"
-	base_turf = /turf/simulated/floor/airless
-
-/area/shuttle/large_escape_pod2/centcom
-	icon_state = "shuttle"
-
-/area/shuttle/large_escape_pod2/transit
-	icon_state = "shuttle"
-
-/area/shuttle/cryo
-	name = "\improper Cryogenic Storage"
-
-/area/shuttle/cryo/station
-	icon_state = "shuttle2"
-	base_turf = /turf/simulated/floor/airless
-
-/area/shuttle/cryo/centcom
-	icon_state = "shuttle"
-
-/area/shuttle/cryo/transit
-	icon_state = "shuttle"
 
 // Fishing CHOMPstation edit
 
@@ -748,69 +586,10 @@
 	icon_state = "substation"
 	ambience = AMBIENCE_SUBSTATION //CHOMP Addition
 
-//Shuttle 3 CHOMPedit
+//Shuttle 3 CHOMPeditx
 
-/area/shuttle/shuttle3
-	name = "\improper Hangar Deck"
-	icon_state = "yellow"
-	requires_power = 0
-	dynamic_lighting = 1
-	flags = RAD_SHIELDED
-
-/area/shuttle/shuttle3/start
-	name = "\improper Landing Pad Four"
-	icon_state = "shuttlered"
-	base_turf = /turf/simulated/floor/reinforced
-
-/area/shuttle/shuttle3/seconddeck
-	name = "south of second deck"
-	icon_state = "south"
-
-/area/shuttle/shuttle3/stationhangar3
-	name = "\improper Landing Pad Three"
-	icon_state = "shuttlered"
-	base_turf = /turf/simulated/floor/reinforced
-
-/area/shuttle/shuttle3/expedition
-	name = "\improper Expedition Hangar One"
-	icon_state = "shuttlered"
-	base_turf = /turf/simulated/floor/reinforced
-
-/area/shuttle/shuttle3/mining
-	name = "wilderness site"
-	icon_state = "shuttlered"
-
-/area/shuttle/shuttle3/transit
-	name = "transit"
-	icon_state = "shuttlered"
-	base_turf = /turf/space/transit/north
-
-/area/shuttle/shuttle3/orbit
-	name = "in orbit of Sif"
-	icon_state = "shuttlegrn"
-	base_turf = /turf/space
-
-/area/shuttle/shuttle3/sky
-	name = "hovering over skies of sif"
-	icon_state = "shuttlegrn"
-	base_turf = /turf/simulated/sky
-
-/area/shuttle/shuttle3/sky_transit
-	name = "in flight over sif"
-	icon_state = "shuttlered"
-	base_turf = /turf/simulated/sky/moving
 
 //CHOMPedit: Exploration outpost ferry shuttle
-
-/area/shuttle/expoutpost/site
-	name = "\improper Exploration Sling"
-	icon_state = "shuttle2"
-
-/area/shuttle/expoutpost/station
-	name = "\improper Exploration Sling"
-	icon_state = "shuttle2"
-	base_turf = /turf/simulated/floor/reinforced
-
 //mining elevator areas
 
 /area/shuttle/minoutpost/site

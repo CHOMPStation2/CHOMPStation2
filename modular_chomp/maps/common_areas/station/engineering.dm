@@ -66,7 +66,6 @@
 	name = "\improper GravGen Room"
 	icon_state = "engineering"
 
-
 /area/engineering/Reception
 	name = "\improper Reception"
 	icon_state = "engineering"
@@ -239,3 +238,26 @@
 	icon_state = "engineering"
 	ambience = AMBIENCE_SPACE
 	dynamic_lighting = 0
+
+/area/engineering/hallway/atmos_hallway
+	name = "\improper Atmospherics Hallway"
+
+/area/engineering/hallway/engineer_hallway
+	name = "\improper Engineering Hallway"
+	icon_state = "engineering_aft_hallway"
+
+/area/engineering/lowlobby
+	name = "Engineering Deck 0 Lobby"
+	icon_state = "maint_pumpstation"
+
+/area/engineering/backuppowerlobby
+	name = "Engineering Backup Power Lobby"
+	icon_state = "engineering"
+
+/area/engineering/backuppower
+	name = "Engineering Backup Power"
+	icon_state = "engineering"
+
+/area/engineering/gravgen
+	name = "Gravity Generator"
+	icon_state = "engineering"
