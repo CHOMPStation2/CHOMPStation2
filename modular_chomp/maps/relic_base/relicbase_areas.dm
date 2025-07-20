@@ -32,6 +32,39 @@
 /area/surface/outpost/civilian/emergency_storage
 	name = "\improper Abandoned Barracks"
 
+/area/maintenance/firstdeck
+	name = "Maintenance Level - Central"
+
+/area/maintenance/firstdeck/centralstarboard
+	name = "Maintenance Level - East"
+
+/area/maintenance/firstdeck/centralport
+	name = "Maintenance Level - West"
+
+/area/maintenance/firstdeck/aftstarboard
+	name = "Maintenance Level - Southeast"
+
+/area/maintenance/firstdeck/aftportsolar
+	name = "Maintenance Level - Southwest"
+
+/area/maintenance/firstdeck/forestarboard
+	name = "Maintenance Level - Northeast"
+
+/area/maintenance/firstdeck/foreport
+	name = "Maintenance Level - Northwest"
+
+
+
+
+
+
+
+
+
+
+
+
+
 // ^^^^^Areas above this area alread moved. Those are unique names for this map
 // TODO
 
@@ -55,12 +88,6 @@
 
 //Deck One (Z-1)
 
-/area/engineering/auxiliary_engineering
-	name = "\improper Auxiliary Engineering Station"
-	sound_env = SMALL_ENCLOSED
-/area/engineering/external_lights
-	name = "\improper External Lighting"
-	sound_env = SMALL_ENCLOSED
 /*
 //KSC - CHOMPStation Edit 1/19/21 - Moving this to the second-deck
 /area/crew_quarters/firstdeck/gym
@@ -72,74 +99,10 @@
 /area/crew_quarters/toilet/firstdeck
 	name = "\improper First Deck Restroom"
 
-/area/maintenance/firstdeck
-	name = "Maintenance Level - Central"
-	icon_state = "maintcentral"
 
-/area/maintenance/firstdeck/simulated_caves
-	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 
-/area/maintenance/firstdeck/aft
-	name = "Maintenance Level - South"
-	icon_state = "amaint"
 
-/area/maintenance/firstdeck/aft/simulated_caves
-	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 
-/area/maintenance/firstdeck/aftstarboard
-	name = "Maintenance Level - Southeast"
-	icon_state = "asmaint"
-
-/area/maintenance/firstdeck/aftstarboard/simulated_caves
-	base_turf = /turf/simulated/floor/outdoors/rocks/caves
-
-/area/maintenance/firstdeck/aftport
-	name = "Maintenance Level - Southwest"
-	icon_state = "apmaint"
-
-/area/maintenance/firstdeck/aftport/simulated_caves
-	base_turf = /turf/simulated/floor/outdoors/rocks/caves
-
-/area/maintenance/firstdeck/fore
-	name = "Maintenance Level - North"
-	icon_state = "fmaint"
-
-/area/maintenance/firstdeck/fore/simulated_caves
-	base_turf = /turf/simulated/floor/outdoors/rocks/caves
-
-/area/maintenance/firstdeck/forestarboard
-	name = "Maintenance Level - Northeast"
-	icon_state = "fsmaint"
-
-/area/maintenance/firstdeck/forestarboard/simulated_caves
-	base_turf = /turf/simulated/floor/outdoors/rocks/caves
-
-/area/maintenance/firstdeck/foreport
-	name = "Maintenance Level - Northwest"
-	icon_state = "fpmaint"
-
-/area/maintenance/firstdeck/foreport/simulated_caves
-	base_turf = /turf/simulated/floor/outdoors/rocks/caves
-
-/area/maintenance/firstdeck/centralstarboard
-	name = "Maintenance Level - East"
-	icon_state = "smaint"
-
-/area/maintenance/firstdeck/centralstarboard/simulated_caves
-	base_turf = /turf/simulated/floor/outdoors/rocks/caves
-
-/area/maintenance/firstdeck/centralport
-	name = "Maintenance Level - West"
-	icon_state = "pmaint"
-
-/area/maintenance/firstdeck/centralport/simulated_caves
-	base_turf = /turf/simulated/floor/outdoors/rocks/caves
-
-/area/maintenance/substation/firstdeck
-	name = "First Deck Utility Access"
-
-/area/maintenance/substation/firstdeck/cargo
-	name = "First Deck Cargo Substation"
 
 /area/hallway/primary/firstdeck/elevator
 	name = "\improper First Deck Central Elevator Access"
@@ -251,40 +214,8 @@
 
 //Deck Two (Z-2)
 
-/area/maintenance/substation/atmospherics
-	name = "Atmospherics Substation"
-	ambience = AMBIENCE_SUBSTATION //CHOMP Addition
 
-/area/maintenance/substation/atmospherics/exploration
-	name = "Exploration Substation"
-
-/area/maintenance/emergencyeva
-	name = "\improper Emergency EVA Maintenance"
-	icon_state = "maint_eva"
-
-/area/maintenance/substation/central // n/a
-	name = "Central Substation"
-	ambience = AMBIENCE_SUBSTATION //CHOMP Addition
-
-//CHOMPStation Edit Start TFF 6/2/20 - Added substation
-
-/area/maintenance/substation/dorms
-	name = "Substation"
-	icon_state = "substation"
-	sound_env = SMALL_ENCLOSED
-	ambience = AMBIENCE_SUBSTATION //CHOMP Addition
-
-//CHOMPStation Edit End
-
-/area/maintenance/robotics
-	name = "Robotics Maintenance"
-	icon_state = "maint_research"
-
-/area/maintenance/research_medical
-	name = "Research Medical Maintenance"
-	icon_state = "maint_research"
-
-/area/construction/seconddeck/
+/area/construction/seconddeck
 	name = "\improper Second Deck Engineering Construction Area"
 	icon_state = "construction"
 
@@ -297,60 +228,8 @@
 
 //CHOMPStation Edit Start KSC 1/19/21 - Added area for new GYM
 
-/area/crew_quarters/seconddeck/gym
-	name = "\improper Station Gym"
-	icon_state = "fitness"
-
 //CHOMPStation Edit End
 
-/area/crew_quarters/seconddeck/locker/locker_toilet
-	name = "\improper Locker Toilets"
-	icon_state = "toilet"
-	sound_env = SMALL_ENCLOSED
-
-/area/crew_quarters/seconddeck/barrestroom
-	name = "\improper Bar Restroom"
-	icon_state = "bar"
-
-/area/crew_quarters/heads/sc/
-	name = "\improper Command - Head Office"
-	icon_state = "head_quarters"
-	flags = RAD_SHIELDED | AREA_FORBID_SINGULO
-	sound_env = MEDIUM_SOFTFLOOR
-
-/area/crew_quarters/heads/sc/hop
-	name = "\improper Command - HoP's Office"
-	icon_state = "head_quarters"
-	holomap_color = HOLOMAP_AREACOLOR_COMMAND
-
-/area/crew_quarters/heads/sc/hor
-	name = "\improper Research - RD's Office"
-	icon_state = "head_quarters"
-	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
-
-/area/crew_quarters/heads/sc/chief
-	name = "\improper Engineering - CE's Office"
-	icon_state = "head_quarters"
-	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
-
-/area/crew_quarters/heads/sc/hos
-	name = "\improper Security - HoS' Office"
-	icon_state = "head_quarters"
-	holomap_color = HOLOMAP_AREACOLOR_SECURITY
-
-/area/crew_quarters/heads/sc/cmo
-	name = "\improper Medbay - CMO's Office"
-	icon_state = "head_quarters"
-	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
-
-/area/engineering/engineer_eva
-	name = "\improper Engineering EVA"
-	icon_state = "engine_eva"
-
-/area/engineering/engi_restroom
-	name = "\improper Engineering Restroom"
-	icon_state = "toilet"
-	sound_env = SMALL_ENCLOSED
 
 /area/engineering/hallway/atmos_hallway
 	name = "\improper Atmospherics Hallway"
@@ -599,21 +478,6 @@
 	name = "\improper Third Deck Aft Doorm Hallway"
 	icon_state = "docking_hallway"
 
-/area/maintenance/thirddeck/dormsport
-	name = "Third Deck Aft Starboard Maintenance"
-	icon_state = "asmaint"
-
-/area/maintenance/thirddeck/dormsstarboard
-	name = "Third Deck Aft Starboard Maintenance"
-	icon_state = "asmaint"
-
-/area/maintenance/thirddeck/dormsaft
-	name = "Third Deck Aft Starboard Maintenance"
-	icon_state = "asmaint"
-
-/area/maintenance/thirddeck/dormsatmos
-	name = "Third Deck Dorm's Atmospherics"
-	icon_state = "asmaint"
 
 //CHOMPStation Edit Start TFF 6/2/20 KC - Added new First Aid station.
 
@@ -623,49 +487,8 @@
 
 //CHOMPStation Edit -- Relic Base/Forbearance Catacombs Area ~ Serdy
 
-/area/maintenance/underground/catacombs
-	name = "Catacombs"
-	icon_state = "asmaint"
-	flags = RAD_SHIELDED
 
 //CHOMPStation Edit End
-
-/area/maintenance/thirddeck/aftstarboard
-	name = "Third Deck Aft Starboard Maintenance"
-	icon_state = "asmaint"
-
-/area/maintenance/thirddeck/aftport
-	name = "Third Deck Aft Port Maintenance"
-	icon_state = "apmaint"
-
-/area/maintenance/thirddeck/forestarboard
-	name = "Third  Deck Fore Starboard Maintenance"
-	icon_state = "fsmaint"
-
-/area/maintenance/thirddeck/foreport
-	name = "Third  Deck Fore Port Maintenance"
-	icon_state = "fpmaint"
-
-/area/maintenance/solars
-	icon_state = "SolarcontrolA"
-	sound_env = SMALL_ENCLOSED
-	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
-
-/area/maintenance/solars/aftportsolar
-	name = "Solar Maintenance - Aft Port"
-	icon_state = "SolarcontrolP"
-
-/area/maintenance/solars/aftstarboardsolar
-	name = "Solar Maintenance - Aft Starboard"
-	icon_state = "SolarcontrolS"
-
-/area/maintenance/solars/foreportsolar
-	name = "Solar Maintenance - Fore Port"
-	icon_state = "SolarcontrolP"
-
-/area/maintenance/solars/forestarboardsolar
-	name = "Solar Maintenance - Fore Starboard"
-	icon_state = "SolarcontrolS"
 
 /area/solar
 	requires_power = 1
@@ -1276,39 +1099,3 @@
 /area/solar/expportsolar
 	name = "\improper Exploration Carrier Port Solars"
 	icon_state = "panelsP"
-
-/area/maintenance/solars/expstarboardsolar
-	name = "\improper Exploration Carrier Starbound Solar Control"
-	icon_state = "SolarcontrolS"
-
-/area/maintenance/solars/expportsolar
-	name = "\improper Exploration Carrier Port Solar Control"
-	icon_state = "SolarcontrolP"
-
-/area/maintenance/expoutpost/atmospherics
-	name = "\improper Exploration Carrier Atmospherics"
-	icon_state = "smaint"
-
-/area/maintenance/expoutpost/portmaint
-	name = "\improper Exploration Carrier Port Maintenance"
-	icon_state = "pmaint"
-
-/area/maintenance/expoutpost/telecomms
-	name = "\improper Exploration Carrier Telecomms"
-	icon_state = "pmaint"
-
-/area/maintenance/expoutpost/innerstarboardmaint
-	name = "\improper Exploration Starboard Carrier Maintenance"
-	icon_state = "smaint"
-
-/area/maintenance/expoutpost/outerstarboardmaint
-	name = "\improper Exploration Starboard Carrier Maintenance"
-	icon_state = "smaint"
-
-/area/maintenance/expoutpost/outerportmaint
-	name = "\improper Exploration Carrier Port Maintenance"
-	icon_state = "pmaint"
-
-/area/maintenance/expoutpost/innerportmaint
-	name = "\improper Exploration Carrier Port Maintenance"
-	icon_state = "pmaint"

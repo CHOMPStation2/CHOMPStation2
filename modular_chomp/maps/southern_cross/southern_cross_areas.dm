@@ -73,39 +73,7 @@
 /area/crew_quarters/toilet/firstdeck
 	name = "\improper First Deck Restroom"
 
-/area/maintenance/firstdeck
-	name = "First Deck Maintenance"
-	icon_state = "maintcentral"
 
-/area/maintenance/firstdeck/aftstarboard
-	name = "First Deck Aft Starboard Maintenance"
-	icon_state = "asmaint"
-
-/area/maintenance/firstdeck/aftport
-	name = "First Deck Aft Port Maintenance"
-	icon_state = "apmaint"
-
-/area/maintenance/firstdeck/forestarboard
-	name = "First Deck Fore Starboard Maintenance"
-	icon_state = "fsmaint"
-
-/area/maintenance/firstdeck/foreport
-	name = "First Deck Fore Port Maintenance"
-	icon_state = "fpmaint"
-
-/area/maintenance/firstdeck/centralstarboard
-	name = "First Deck Starboard Maintenance"
-	icon_state = "smaint"
-
-/area/maintenance/firstdeck/centralport
-	name = "First Deck Port Maintenance"
-	icon_state = "pmaint"
-
-/area/maintenance/substation/firstdeck
-	name = "First Deck Utility Access"
-
-/area/maintenance/substation/firstdeck/cargo
-	name = "First Deck Cargo Substation"
 
 /area/hallway/primary/firstdeck/elevator
 	name = "\improper First Deck Central Elevator Access"
@@ -238,40 +206,6 @@
 
 //Deck Two (Z-2)
 
-/area/maintenance/substation/atmospherics
-	name = "Atmospherics Substation"
-	ambience = AMBIENCE_SUBSTATION //CHOMP Addition
-
-/area/maintenance/substation/maintenance
-	name = "Maintenance Substation"
-	ambience = AMBIENCE_SUBSTATION
-
-/area/maintenance/emergencyeva
-	name = "\improper Emergency EVA Maintenance"
-	icon_state = "maint_eva"
-
-/area/maintenance/substation/central // n/a
-	name = "Central Substation"
-	ambience = AMBIENCE_SUBSTATION //CHOMP Addition
-
-//CHOMPStation Edit Start TFF 6/2/20 - Added substation
-
-/area/maintenance/substation/dorms
-	name = "Substation"
-	icon_state = "substation"
-	sound_env = SMALL_ENCLOSED
-	ambience = AMBIENCE_SUBSTATION //CHOMP Addition
-
-//CHOMPStation Edit End
-
-/area/maintenance/robotics
-	name = "Robotics Maintenance"
-	icon_state = "maint_research"
-
-/area/maintenance/research_medical
-	name = "Research Medical Maintenance"
-	icon_state = "maint_research"
-
 /area/construction/seconddeck/
 	name = "\improper Second Deck Engineering Construction Area"
 	icon_state = "construction"
@@ -282,12 +216,6 @@
 /area/crew_quarters/seconddeck/locker
 	name = "\improper Locker Room"
 	icon_state = "locker"
-
-//CHOMPStation Edit Start KSC 1/19/21 - Added area for new GYM
-
-/area/crew_quarters/seconddeck/gym
-	name = "\improper Station Gym"
-	icon_state = "fitness"
 
 //CHOMPstation Edit 8/8/22 - Added a Art Gallery and some missing areas Kassc wanted me to add
 /area/crew_quarters/seconddeck/artgallery
@@ -310,53 +238,8 @@
 
 //CHOMPStation Edit End
 
-/area/crew_quarters/seconddeck/locker/locker_toilet
-	name = "\improper Locker Toilets"
-	icon_state = "toilet"
-	sound_env = SMALL_ENCLOSED
 
-/area/crew_quarters/seconddeck/barrestroom
-	name = "\improper Bar Restroom"
-	icon_state = "bar"
 
-/area/crew_quarters/heads/sc/
-	name = "\improper Command - Head Office"
-	icon_state = "head_quarters"
-	sound_env = MEDIUM_SOFTFLOOR
-
-/area/crew_quarters/heads/sc/hop
-	name = "\improper Command - HoP's Office"
-	icon_state = "head_quarters"
-	holomap_color = HOLOMAP_AREACOLOR_COMMAND
-
-/area/crew_quarters/heads/sc/hor
-	name = "\improper Research - RD's Office"
-	icon_state = "head_quarters"
-	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
-
-/area/crew_quarters/heads/sc/chief
-	name = "\improper Engineering - CE's Office"
-	icon_state = "head_quarters"
-	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
-
-/area/crew_quarters/heads/sc/hos
-	name = "\improper Security - HoS' Office"
-	icon_state = "head_quarters"
-	holomap_color = HOLOMAP_AREACOLOR_SECURITY
-
-/area/crew_quarters/heads/sc/cmo
-	name = "\improper Medbay - CMO's Office"
-	icon_state = "head_quarters"
-	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
-
-/area/engineering/engineer_eva
-	name = "\improper Engineering EVA"
-	icon_state = "engine_eva"
-
-/area/engineering/engi_restroom
-	name = "\improper Engineering Restroom"
-	icon_state = "toilet"
-	sound_env = SMALL_ENCLOSED
 
 /area/engineering/hallway/atmos_hallway
 	name = "\improper Atmospherics Hallway"
@@ -591,31 +474,11 @@
 	name = "\improper Third Deck Aft Doorm Hallway"
 	icon_state = "docking_hallway"
 
-/area/maintenance/thirddeck/dormsport
-	name = "Third Deck Aft Port Maintenance"
-	icon_state = "asmaint"
-
-/area/maintenance/thirddeck/dormsstarboard
-	name = "Third Deck Aft Starboard Maintenance"
-	icon_state = "asmaint"
 
 //CHOMPedit Giving a maint bar its own APC
-/area/maintenance/thirddeck/dormsstarboard/maintbar
-	name = "Third Deck Aft Starboard Speakeasy"
-	icon_state = "asmaint"
 
 //CHOMPedit end
-/area/maintenance/thirddeck/dormsaft
-	name = "Third Deck Aft Maintenance"
-	icon_state = "asmaint"
 
-/area/maintenance/thirddeck/hiddenkitchen
-	name = "Third Deck Hidden Kitchen"
-	icon_state = "asmaint"
-
-/area/maintenance/thirddeck/dormsatmos
-	name = "Third Deck Dorm's Atmospherics"
-	icon_state = "asmaint"
 
 //CHOMPStation Edit Start TFF 6/2/20 KC - Added new First Aid station.
 
@@ -624,43 +487,6 @@
 	icon_state = "medbay2"
 
 //CHOMPStation Edit End
-
-/area/maintenance/thirddeck/aftstarboard
-	name = "Third Deck Aft Starboard Maintenance"
-	icon_state = "asmaint"
-
-/area/maintenance/thirddeck/aftport
-	name = "Third Deck Aft Port Maintenance"
-	icon_state = "apmaint"
-
-/area/maintenance/thirddeck/forestarboard
-	name = "Third  Deck Fore Starboard Maintenance"
-	icon_state = "fsmaint"
-
-/area/maintenance/thirddeck/foreport
-	name = "Third  Deck Fore Port Maintenance"
-	icon_state = "fpmaint"
-
-/area/maintenance/solars
-	icon_state = "SolarcontrolA"
-	sound_env = SMALL_ENCLOSED
-	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
-
-/area/maintenance/solars/aftportsolar
-	name = "Solar Maintenance - Aft Port"
-	icon_state = "SolarcontrolP"
-
-/area/maintenance/solars/aftstarboardsolar
-	name = "Solar Maintenance - Aft Starboard"
-	icon_state = "SolarcontrolS"
-
-/area/maintenance/solars/foreportsolar
-	name = "Solar Maintenance - Fore Port"
-	icon_state = "SolarcontrolP"
-
-/area/maintenance/solars/forestarboardsolar
-	name = "Solar Maintenance - Fore Starboard"
-	icon_state = "SolarcontrolS"
 
 /area/solar
 	requires_power = 1
@@ -1276,42 +1102,6 @@
 	icon_state = "shuttlered"
 
 // CHOMPAdd Start - Maintenance Deck Areas
-/area/maintenance/abcargo
-	name = "Abandoned Cargo"
-	icon_state = "maint_cargo"
-
-/area/maintenance/abmedical
-	name = "Abandoned Medical"
-	icon_state = "maint_medbay"
-
-/area/maintenance/abfirstaid
-	name = "Abandoned First Aid Station"
-	icon_state = "maint_medbay"
-
-/area/maintenance/abchemistry
-	name = "Abandoned Chemistry"
-	icon_state = "maint_medbay"
-
-/area/maintenance/abscience
-	name = "Abandoned Science"
-	icon_state = "asmaint"
-
-/area/maintenance/absgenetics
-	name = "Abandoned Genetics"
-	icon_state = "asmaint"
-
-/area/maintenance/thrift
-	name = "Abandoned Thrift Store"
-	icon_state = "mid_civilian_hallway"
-
-/area/maintenance/abtheatre
-	name = "Abandoned Theatre"
-	icon_state = "Theatre"
-	sound_env = LARGE_SOFTFLOOR
-
-/area/maintenance/ragecage
-	name = "Rage Cage"
-	icon_state = "nuke_storage"
 
 /area/engineering/lowlobby
 	name = "Engineering Deck 0 Lobby"
@@ -1324,69 +1114,3 @@
 /area/engineering/backuppower
 	name = "Engineering Backup Power"
 	icon_state = "engineering"
-
-/area/maintenance/substation/gravgen
-	name = "Gravity Generator Substation"
-	icon_state = "engineering"
-
-/area/maintenance/engineering/gravgen
-	name = "Gravity Generator Maintenance"
-
-/area/maintenance/fieldhallway
-	name = "Maintenance Deck Field Hallway"
-/area/maintenance/fieldthrift
-	name = "Maintenance Deck Thrift Store Hallway"
-
-/area/maintenance/abhydroponicssupp
-	name = "Abandoned Botany Supplies"
-
-/area/maintenance/abhydroponics
-	name = "Abandoned Botany"
-
-/area/maintenance/smoleroom
-	name = "Smole Room"
-
-/area/maintenance/janitoral
-	name = "Maintenance Deck Janitoral"
-
-/area/maintenance/lookout
-	name = "Maintenance Deck Lookout"
-
-/area/maintenance/bar/dorms
-	name = "Maintenance Bar Dorms"
-	icon_state = "Sleep"
-	flags = RAD_SHIELDED | AREA_SOUNDPROOF |AREA_ALLOW_LARGE_SIZE | AREA_BLOCK_SUIT_SENSORS | AREA_BLOCK_TRACKING | AREA_ALLOW_CLOCKOUT
-
-/area/maintenance/bar/dorms/dorm_1
-	name = "Maintenance Deck Bar Dorms 1"
-
-/area/maintenance/bar/dorms/dorm_2
-	name = "Maintenance Deck Bar Dorms 2"
-
-/area/maintenance/zerocent
-	name = "Maintenance Deck Central"
-	icon_state = "maintcentral"
-
-/area/maintenance/zeroport
-	name = "Maintenance Deck Port"
-	icon_state = "pmaint"
-
-/area/maintenance/zeroaft
-	name = "Maintenance Deck Aft"
-	icon_state = "amaint"
-
-/area/maintenance/zerostarboard
-	name = "Maintenance Deck Starboard"
-	icon_state = "smaint"
-
-/area/maintenance/zerofore
-	name = "Maintenance Deck Fore"
-	icon_state = "fmaint"
-
-/area/maintenance/gravlobby
-	name = "Gravity Generator Lobby"
-	icon_state = "engineering"
-
-/area/maintenance/zerobar
-	name = "Abandoned Bar"
-	icon_state = "maint_bar"

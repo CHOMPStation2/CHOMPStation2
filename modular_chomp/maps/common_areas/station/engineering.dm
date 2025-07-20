@@ -40,3 +40,202 @@
 	icon_state = "engineering"
 	ambience = AMBIENCE_AI
 	lightswitch = 1
+
+/area/engineering/auxiliary_engineering
+	name = "\improper Auxiliary Engineering Station"
+	sound_env = SMALL_ENCLOSED
+
+/area/engineering/external_lights
+	name = "\improper External Lighting"
+	sound_env = SMALL_ENCLOSED
+
+//ENGINEERING AREAS
+/area/engineering
+	icon_state = "engineering"
+	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
+	ambience = AMBIENCE_ENGINEERING
+	sound_env = LARGE_ENCLOSED
+	lightswitch = 0
+
+/area/engineering/Central_Engineering_Post
+	name = "\improper Central Engineering Post"
+	icon_state = "engineering"
+	lightswitch = 1
+
+/area/engineering/GravGen_Room
+	name = "\improper GravGen Room"
+	icon_state = "engineering"
+
+
+/area/engineering/Reception
+	name = "\improper Reception"
+	icon_state = "engineering"
+
+/area/engineering/Engineering_EVA
+	name = "\improper Engineering EVA"
+	icon_state = "engineering"
+
+/area/engineering/Locker_Room
+	name = "\improper Locker Room"
+	icon_state = "engineering"
+
+/area/engineering/Engineering_Workshop
+	name = "\improper Engineering Workshop"
+	icon_state = "engineering"
+
+/area/engineering/Deck2_1_Corridor
+	name = "\improper 2 Deck 1 Corridor"
+	icon_state = "engineering"
+
+/area/engineering/Deck2_2_Corridor
+	name = "\improper 2 Deck 2 Corridor"
+	icon_state = "engineering"
+
+/area/engineering/Deck2_Evac_Corridor
+	name = "\improper 2 Deck Evac Corridor"
+	icon_state = "engineering"
+
+/area/engineering/Storage
+	name = "\improper Storage"
+	icon_state = "engineering"
+
+/area/engineering/Drone_Fab
+	name = "\improper Drone Fab"
+	icon_state = "engineering"
+
+/area/engineering/Canister_Storage
+	name = "\improper Canister Storage"
+	icon_state = "engineering"
+
+/area/engineering/Mech_Bay
+	name = "\improper Mech Bay"
+	icon_state = "engineering"
+
+/area/engineering/Technical_Storage
+	name = "\improper Technical Storage"
+	icon_state = "engineering"
+
+/area/engineering/CE_Office
+	name = "\improper CE Office"
+	icon_state = "engineering"
+
+/area/engineering/Deck3_1_Corridor
+	name = "\improper 3 Deck 1 Corridor"
+	icon_state = "engineering"
+
+/area/engineering/Deck3_2_Corridor
+	name = "\improper 3 Deck 2 Corridor"
+	icon_state = "engineering"
+
+/area/engineering/Atmospherics_Chamber
+	name = "\improper Atmospherics Chamber"
+	icon_state = "engineering"
+	ambience = AMBIENCE_ATMOS
+
+/area/engineering/Atmospherics_Control_Room
+	name = "\improper Atmospherics Control Room"
+	icon_state = "engineering"
+
+/area/engineering/Atmospherics_Substation
+	name = "\improper Atmospherics Substation"
+	icon_state = "engineering"
+
+/area/engineering/Engine1_Chamber
+	name = "\improper 1 Engine Chamber"
+	icon_state = "engineering"
+
+/area/engineering/Engine1_Control_Room
+	name = "\improper 1 Engine Control Room"
+	icon_state = "engineering"
+
+/area/engineering/Engine1_Access_Hall
+	name = "\improper 1 Engine Access Hall"
+	icon_state = "engineering"
+
+/area/engineering/Engine1_Substation
+	name = "\improper 1 Engine Substation"
+	icon_state = "engineering"
+
+/area/engineering/Engine2_Chamber
+	name = "\improper 2 Engine Chamber"
+	icon_state = "engineering"
+
+/area/engineering/Engine3_Control_Room
+	name = "\improper 2 Engine Control Room"
+	icon_state = "engineering"
+
+/area/engineering/Engine2_Access_Hall
+	name = "\improper 2 Engine Access Hall"
+	icon_state = "engineering"
+
+/area/engineering/Engine2_Substation
+	name = "\improper 2 Engine Substation"
+	icon_state = "engineering"
+
+/area/engineering/Engine2_Canister_Storage
+	name = "\improper 2 Engine Canister Storage"
+	icon_state = "engineering"
+
+/area/engineering/Engine2_Waste_Handling
+	name = "\improper 2 Engine Waste Handling"
+	icon_state = "engineering"
+
+/area/engineering/Construction_Area
+	name = "\improper Construction Area"
+	icon_state = "engineering"
+
+/area/engineering/Airlock_Access
+	name = "\improper Airlock Access"
+	icon_state = "engineering"
+
+/area/engineering/Engine_Tech_Storage
+	name = "\improper Engine Tech Storage"
+	icon_state = "engineering"
+
+/area/engineering/Breakroom
+	name = "\improper Engineering Breakroom"
+	icon_state = "engineering"
+
+/area/engineering/Solar_Control_ForPort
+	name = "\improper Solar Control ForPort"
+	icon_state = "engineering"
+	ambience = AMBIENCE_SPACE
+
+/area/engineering/Solar_Control_ForStar
+	name = "\improper Solar Control ForStar"
+	icon_state = "engineering"
+	ambience = AMBIENCE_SPACE
+
+/area/engineering/Solar_Control_AftPort
+	name = "\improper Solar Control AftPort"
+	icon_state = "engineering"
+	ambience = AMBIENCE_SPACE
+
+/area/engineering/Solar_Control_AftStar
+	name = "\improper Solar Control AftStar"
+	icon_state = "engineering"
+	ambience = AMBIENCE_SPACE
+
+/area/engineering/Solar_Array_ForPort
+	name = "\improper Solar Array ForPort"
+	icon_state = "engineering"
+	ambience = AMBIENCE_SPACE
+	dynamic_lighting = 0
+
+/area/engineering/Solar_Array_ForStar
+	name = "\improper Solar Array ForStar"
+	icon_state = "engineering"
+	ambience = AMBIENCE_SPACE
+	dynamic_lighting = 0
+
+/area/engineering/Solar_Array_AftPort
+	name = "\improper Solar Array AftPort"
+	icon_state = "engineering"
+	ambience = AMBIENCE_SPACE
+	dynamic_lighting = 0
+
+/area/engineering/Solar_Array_AftStar
+	name = "\improper Solar Array AftStar"
+	icon_state = "engineering"
+	ambience = AMBIENCE_SPACE
+	dynamic_lighting = 0

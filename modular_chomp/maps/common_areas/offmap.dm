@@ -34,3 +34,40 @@
 	name = "\improper Wreck"
 	icon_state = "storage"
 	ambience = AMBIENCE_RUINS
+
+// Maintenance
+/area/maintenance/solars/expstarboardsolar
+	name = "\improper Exploration Carrier Starbound Solar Control"
+	icon_state = "SolarcontrolS"
+
+/area/maintenance/solars/expportsolar
+	name = "\improper Exploration Carrier Port Solar Control"
+	icon_state = "SolarcontrolP"
+
+/area/maintenance/expoutpost/atmospherics
+	name = "\improper Exploration Carrier Atmospherics"
+	icon_state = "smaint"
+
+/area/maintenance/expoutpost/portmaint
+	name = "\improper Exploration Carrier Port Maintenance"
+	icon_state = "pmaint"
+
+/area/maintenance/expoutpost/telecomms
+	name = "\improper Exploration Carrier Telecomms"
+	icon_state = "pmaint"
+
+/area/maintenance/expoutpost/innerstarboardmaint
+	name = "\improper Exploration Starboard Carrier Maintenance"
+	icon_state = "smaint"
+
+/area/maintenance/expoutpost/outerstarboardmaint
+	name = "\improper Exploration Starboard Carrier Maintenance"
+	icon_state = "smaint"
+
+/area/maintenance/expoutpost/outerportmaint
+	name = "\improper Exploration Carrier Port Maintenance"
+	icon_state = "pmaint"
+
+/area/maintenance/expoutpost/innerportmaint
+	name = "\improper Exploration Carrier Port Maintenance"
+	icon_state = "pmaint"
