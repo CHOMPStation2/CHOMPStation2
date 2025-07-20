@@ -7,6 +7,14 @@
 	..()
 	add_verb(H,/mob/living/proc/mobegglaying) //CHOMPEdit TGPanel
 
+//CHOMPEdit - make sharp melee a free neutral trait
+/datum/trait/neutral/melee_attack
+	name = "Special Attack: Sharp Melee" // Trait Organization for easier browsing. TODO: Proper categorization of 'health/ability/resist/etc'
+	desc = "Provides sharp melee attacks that wound more easily." //CHOMPEdit - more accurate description
+	cost = 0
+	var_changes = list("unarmed_types" = list(/datum/unarmed_attack/stomp, /datum/unarmed_attack/kick, /datum/unarmed_attack/claws, /datum/unarmed_attack/bite/sharp))
+//End CHOMPEdit
+
 /datum/trait/neutral/succubus_bite
 	name = "Succubus Bite"
 	desc = "Allows you to inject your prey with poison, much like a venemous snake."
