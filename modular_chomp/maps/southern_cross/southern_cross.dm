@@ -3,7 +3,6 @@
 #if !defined(USING_MAP_DATUM)
 
 	#include "southern_cross_defines.dm"
-	#include "southern_cross_elevator.dm"
 	#include "southern_cross_presets.dm"
 
 	#include "turfs/outdoors.dm"

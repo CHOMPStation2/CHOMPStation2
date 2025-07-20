@@ -3,7 +3,6 @@
 #if !defined(USING_MAP_DATUM)
 
 	#include "soluna_nexus_defines.dm"
-	#include "soluna_nexus_elevator.dm"
 	#include "soluna_nexus_presets.dm"
 
 	#include "../southern_cross/turfs/outdoors.dm"

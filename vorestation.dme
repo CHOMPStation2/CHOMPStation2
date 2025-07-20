@@ -5270,6 +5270,7 @@
 #include "modular_chomp\code\ZAS\Fire_acts.dm"
 #include "modular_chomp\icons\turf\flooring\flooring_premade.dm"
 #include "modular_chomp\maps\common\common_defines.dm"
+#include "modular_chomp\maps\common\common_elevators.dm"
 #include "modular_chomp\maps\common\common_events.dm"
 #include "modular_chomp\maps\common\common_loadout.dm"
 #include "modular_chomp\maps\common\common_machinery.dm"
