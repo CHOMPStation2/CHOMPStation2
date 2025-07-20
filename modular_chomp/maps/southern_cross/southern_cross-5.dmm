@@ -3189,7 +3189,7 @@
 	},
 /obj/machinery/atmospherics/unary/outlet_injector{
 	dir = 1;
-	frequency = 1438;
+	frequency = 1433;
 	id = "rust_cooling_in";
 	name = "Coolant Injector";
 	pixel_y = 1;
@@ -4486,7 +4486,7 @@
 	dir = 6
 	},
 /obj/machinery/air_sensor{
-	frequency = 1438;
+	frequency = 1433;
 	id_tag = "rustengine_sensor";
 	output = 63
 	},
@@ -19155,7 +19155,7 @@
 	dir = 1;
 	external_pressure_bound = 100;
 	external_pressure_bound_default = 0;
-	frequency = 1438;
+	frequency = 1433;
 	icon_state = "map_vent_in";
 	id_tag = "rust_cooling_out";
 	initialize_directions = 1;

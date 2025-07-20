@@ -1158,7 +1158,7 @@
 	name = "Escape Pod 10";
 	id_tag = "escape_pod_10_berth_hatch";
 	req_access = null;
-	frequency = 1380
+	frequency = 1381
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/hallway/Port_2_Deck_Corridor_1)
@@ -1971,7 +1971,7 @@
 /obj/machinery/door/airlock/angled_tgmc/pod{
 	dir = 8;
 	name = "Escape Pod 9";
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "escape_pod_9_hatch"
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -2657,7 +2657,7 @@
 	pixel_y = -32
 	},
 /obj/machinery/embedded_controller/radio/simple_docking_controller/escape_pod{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "escape_pod_10";
 	pixel_y = 24;
 	tag_door = "escape_pod_10_hatch"
@@ -4088,7 +4088,7 @@
 	dir = 1
 	},
 /obj/machinery/embedded_controller/radio/simple_docking_controller/escape_pod{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "large_escape_pod_3";
 	pixel_y = -24;
 	tag_door = "large_escape_pod_3_hatch";
@@ -7845,7 +7845,7 @@
 	name = "Escape Pod 9";
 	id_tag = "escape_pod_9_berth_hatch";
 	req_access = null;
-	frequency = 1380
+	frequency = 1381
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/hallway/Port_2_Deck_Corridor_2)
@@ -8503,7 +8503,7 @@
 	pixel_y = -32
 	},
 /obj/machinery/embedded_controller/radio/simple_docking_controller/escape_pod{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "escape_pod_9";
 	pixel_y = 24;
 	tag_door = "escape_pod_9_hatch"
@@ -14133,7 +14133,7 @@
 	name = "Medical EscapePod";
 	req_access = null;
 	id_tag = "large_escape_pod_4_berth_hatch";
-	frequency = 1380
+	frequency = 1381
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/medical/Deck2_Evac_Corridor)
@@ -20655,7 +20655,7 @@
 "bcc" = (
 /obj/machinery/computer/general_air_control{
 	dir = 1;
-	frequency = 1430;
+	frequency = 1431;
 	name = "Mixing Chamber Monitor";
 	sensors = list("toxins_mixing_exterior"="Mixing                                                                                                                                                                                                                                                                Chamber                                                                                                                                                                                                                                                                -                                                                                                                                                                                                                                                                Exterior","toxins_mixing_interior"="Mixing                                                                                                                                                                                                                                                                Chamber                                                                                                                                                                                                                                                                -                                                                                                                                                                                                                                                                Interior")
 	},
@@ -23855,7 +23855,7 @@
 	icon_state = "door_locked";
 	locked = 1;
 	name = "Engineering EscapePod";
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "large_escape_pod_3_hatch"
 	},
 /obj/effect/map_helper/airlock/door/simple,
@@ -24759,7 +24759,7 @@
 /area/security/Prison_Wing)
 "bqr" = (
 /obj/machinery/air_sensor{
-	frequency = 1430;
+	frequency = 1431;
 	id_tag = "toxins_mixing_exterior";
 	output = 63
 	},
@@ -26417,7 +26417,7 @@
 	pixel_y = 32
 	},
 /obj/machinery/embedded_controller/radio/simple_docking_controller/escape_pod{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "escape_pod_12";
 	pixel_y = -24;
 	tag_door = "escape_pod_12_hatch";
@@ -30547,7 +30547,7 @@
 /obj/machinery/door/airlock/angled_tgmc/pod{
 	dir = 8;
 	name = "Escape Pod 12";
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "escape_pod_12_hatch"
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -30573,7 +30573,7 @@
 	name = "Escape Pod 12";
 	id_tag = "escape_pod_12_berth_hatch";
 	req_access = null;
-	frequency = 1380
+	frequency = 1381
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/hallway/Star_2_Deck_Corridor_1)
@@ -36712,7 +36712,7 @@
 	pixel_y = 32
 	},
 /obj/machinery/embedded_controller/radio/simple_docking_controller/escape_pod{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "escape_pod_11";
 	pixel_y = -24;
 	tag_door = "escape_pod_11_hatch";
@@ -36866,7 +36866,7 @@
 	name = "Escape Pod 11";
 	id_tag = "escape_pod_11_berth_hatch";
 	req_access = null;
-	frequency = 1380
+	frequency = 1381
 	},
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/tiled/techmaint,
@@ -37742,7 +37742,7 @@
 /obj/machinery/door/airlock/angled_tgmc/pod{
 	dir = 8;
 	name = "Escape Pod 11";
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "escape_pod_11_hatch"
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -48302,7 +48302,7 @@
 /obj/machinery/door/airlock/angled_tgmc/pod{
 	dir = 8;
 	name = "Escape Pod 10";
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "escape_pod_10_hatch"
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -48472,7 +48472,7 @@
 	dir = 4
 	},
 /obj/machinery/embedded_controller/radio/simple_docking_controller/escape_pod_berth{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "large_escape_pod_4_berth";
 	tag_door = "large_escape_pod_4_berth_hatch";
 	dir = 1;
@@ -62335,7 +62335,7 @@
 	icon_state = "door_locked";
 	locked = 1;
 	name = "Medical EscapePod";
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "large_escape_pod_4_hatch"
 	},
 /obj/effect/map_helper/airlock/door/simple,
@@ -68265,7 +68265,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/disposalpipe/segment,
 /obj/machinery/embedded_controller/radio/simple_docking_controller/escape_pod_berth{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "escape_pod_9_berth";
 	pixel_x = 24;
 	tag_door = "escape_pod_9_berth_hatch";
@@ -69295,7 +69295,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/disposalpipe/segment,
 /obj/machinery/embedded_controller/radio/simple_docking_controller/escape_pod_berth{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "escape_pod_10_berth";
 	pixel_x = 24;
 	tag_door = "escape_pod_10_berth_hatch";
@@ -83565,7 +83565,7 @@
 "nHe" = (
 /obj/structure/bed/chair/bay/shuttle,
 /obj/machinery/embedded_controller/radio/simple_docking_controller/escape_pod{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "large_escape_pod_4";
 	pixel_y = 24;
 	tag_door = "large_escape_pod_4_hatch"
@@ -89106,7 +89106,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/disposalpipe/segment,
 /obj/machinery/embedded_controller/radio/simple_docking_controller/escape_pod_berth{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "escape_pod_12_berth";
 	pixel_x = -24;
 	tag_door = "escape_pod_12_berth_hatch";
@@ -89373,7 +89373,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/disposalpipe/segment,
 /obj/machinery/embedded_controller/radio/simple_docking_controller/escape_pod_berth{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "escape_pod_11_berth";
 	pixel_x = -24;
 	tag_door = "escape_pod_11_berth_hatch";
@@ -98195,7 +98195,7 @@
 /area/hallway/Aft_2_Deck_Central_Corridor_1)
 "rHy" = (
 /obj/machinery/air_sensor{
-	frequency = 1430;
+	frequency = 1431;
 	id_tag = "toxins_mixing_interior";
 	output = 63
 	},
@@ -107704,7 +107704,7 @@
 	name = "Engineering EscapePod";
 	req_access = null;
 	id_tag = "large_escape_pod_3_berth_hatch";
-	frequency = 1380
+	frequency = 1381
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/engineering/Deck2_Evac_Corridor)
@@ -116899,7 +116899,7 @@
 /area/maintenance/Medical_Substation)
 "wXR" = (
 /obj/machinery/embedded_controller/radio/simple_docking_controller/escape_pod_berth{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "large_escape_pod_3_berth";
 	tag_door = "large_escape_pod_3_berth_hatch";
 	pixel_y = 24

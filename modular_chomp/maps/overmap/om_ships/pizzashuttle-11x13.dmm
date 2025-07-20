@@ -118,7 +118,7 @@
 "o" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 4;
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "expshuttle_vent"
 	},
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
@@ -128,7 +128,7 @@
 	},
 /obj/effect/map_helper/airlock/sensor/chamber_sensor,
 /obj/machinery/embedded_controller/radio/airlock/docking_port{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "pizza_shuttle_docker";
 	pixel_y = 28;
 	pixel_x = 7
@@ -138,7 +138,7 @@
 "p" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 4;
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "expshuttle_vent"
 	},
 /obj/effect/map_helper/airlock/atmos/chamber_pump,

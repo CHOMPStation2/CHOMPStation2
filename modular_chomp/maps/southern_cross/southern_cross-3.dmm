@@ -15209,7 +15209,7 @@
 "aWF" = (
 /obj/machinery/atmospherics/unary/outlet_injector{
 	dir = 4;
-	frequency = 1438;
+	frequency = 1433;
 	id = "cooling_in";
 	name = "Coolant Injector";
 	pixel_y = 1;
@@ -16458,7 +16458,7 @@
 	dir = 4;
 	external_pressure_bound = 100;
 	external_pressure_bound_default = 0;
-	frequency = 1438;
+	frequency = 1433;
 	icon_state = "map_vent_in";
 	id_tag = "cooling_out";
 	initialize_directions = 1;
@@ -42424,7 +42424,7 @@
 	},
 /obj/machinery/embedded_controller/radio/airlock/docking_port{
 	dir = 1;
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "d2_w3_d_airlock";
 	pixel_y = -27;
 	req_one_access = list(13)
@@ -42546,7 +42546,7 @@
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 1;
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "dock3_south_pump"
 	},
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
@@ -43267,7 +43267,7 @@
 /area/hallway/primary/seconddeck/aft)
 "dwh" = (
 /obj/machinery/embedded_controller/radio/simple_docking_controller/escape_pod{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "cryostorage_shuttle";
 	name = "cryostorage controller";
 	pixel_x = -26;
@@ -45683,7 +45683,7 @@
 	},
 /obj/machinery/airlock_sensor{
 	dir = 4;
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = null;
 	pixel_x = -27
 	},
@@ -46053,7 +46053,7 @@
 	dir = 4
 	},
 /obj/machinery/embedded_controller/radio/airlock/docking_port{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "d2_w1_a_airlock";
 	pixel_y = 27;
 	req_one_access = list(13)
@@ -46761,7 +46761,7 @@
 	id_tag = null
 	},
 /obj/machinery/embedded_controller/radio/airlock/docking_port{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "d2_w3_c_airlock";
 	pixel_y = 27;
 	req_one_access = list(13)
@@ -47146,7 +47146,7 @@
 	dir = 9
 	},
 /obj/machinery/embedded_controller/radio/airlock/docking_port_multi{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "escape_dock_snorth_airlock";
 	master_tag = "escape_dock";
 	pixel_y = 27;
@@ -49667,7 +49667,7 @@
 /area/hallway/primary/seconddeck/fpcenter)
 "gUd" = (
 /obj/machinery/embedded_controller/radio/airlock/docking_port_multi{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "arrivals_dock_north_airlock";
 	master_tag = "arrivals_dock";
 	pixel_y = 27;
@@ -50815,7 +50815,7 @@
 "hCW" = (
 /obj/machinery/embedded_controller/radio/airlock/docking_port_multi{
 	dir = 1;
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "arrivals_dock_south_airlock";
 	master_tag = "arrivals_dock";
 	pixel_y = -27;
@@ -51211,7 +51211,7 @@
 	id = "tox_airlock_pump"
 	},
 /obj/machinery/air_sensor{
-	frequency = 1430;
+	frequency = 1431;
 	id_tag = "toxins_mixing_interior";
 	output = 63;
 	pixel_x = -8;
@@ -51241,7 +51241,7 @@
 /area/hallway/secondary/entry/D2)
 "hMv" = (
 /obj/machinery/air_sensor{
-	frequency = 1430;
+	frequency = 1431;
 	id_tag = "toxins_mixing_exterior";
 	output = 63
 	},
@@ -54143,7 +54143,7 @@
 "jmu" = (
 /obj/machinery/computer/general_air_control{
 	dir = 4;
-	frequency = 1430;
+	frequency = 1431;
 	name = "Mixing Chamber Monitor";
 	sensors = list("toxins_mixing_exterior"="Mixing Chamber - Exterior","toxins_mixing_interior"="Mixing Chamber - Interior")
 	},
@@ -55447,7 +55447,7 @@
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 1;
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "dock3_south_pump"
 	},
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
@@ -56570,7 +56570,7 @@
 	},
 /obj/machinery/embedded_controller/radio/airlock/docking_port_multi{
 	dir = 1;
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "escape_dock_south_airlock";
 	master_tag = "escape_dock";
 	pixel_y = -27;
@@ -57894,7 +57894,7 @@
 	},
 /obj/machinery/embedded_controller/radio/airlock/docking_port{
 	dir = 4;
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "d2_w2_e_airlock";
 	pixel_x = -27;
 	req_one_access = list(13)
@@ -58180,7 +58180,7 @@
 	},
 /obj/machinery/embedded_controller/radio/airlock/docking_port{
 	dir = 8;
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "d2_w1_e_airlock";
 	pixel_x = 27;
 	req_one_access = list(13)
@@ -58350,7 +58350,7 @@
 	pixel_y = -27
 	},
 /obj/machinery/embedded_controller/radio/airlock/docking_port{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "d2_w1_c_airlock";
 	pixel_y = 27;
 	req_one_access = list(13)
@@ -59688,7 +59688,7 @@
 /area/space)
 "myg" = (
 /obj/machinery/embedded_controller/radio/airlock/docking_port{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "d2_w3_b_airlock";
 	pixel_y = 27;
 	req_one_access = list(13)
@@ -60206,7 +60206,7 @@
 	dir = 1
 	},
 /obj/machinery/embedded_controller/radio/simple_docking_controller/escape_pod_berth{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "cryostorage_shuttle_berth";
 	name = "cryostorage shuttle berth controller";
 	pixel_x = -26;
@@ -61438,7 +61438,7 @@
 	},
 /obj/machinery/embedded_controller/radio/airlock/docking_port_multi{
 	dir = 1;
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "escape_dock_ssouth_airlock";
 	master_tag = "escape_dock";
 	pixel_y = -27;
@@ -64434,7 +64434,7 @@
 	},
 /obj/machinery/airlock_sensor{
 	dir = 1;
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "escape_dock_north_sensor";
 	pixel_y = -27
 	},
@@ -64502,7 +64502,7 @@
 	dir = 5
 	},
 /obj/machinery/airlock_sensor{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "escape_dock_south_sensor";
 	pixel_y = 27
 	},
@@ -68959,7 +68959,7 @@
 	},
 /obj/machinery/embedded_controller/radio/airlock/docking_port{
 	dir = 8;
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "d2_w3_e_airlock";
 	pixel_x = 27;
 	req_one_access = list(13)
@@ -69117,7 +69117,7 @@
 /area/hallway/secondary/entry/D2)
 "seD" = (
 /obj/machinery/door/airlock/external{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "cryostorage_shuttle_hatch";
 	name = "Cryogenic Storage Hatch"
 	},
@@ -71384,7 +71384,7 @@
 /area/medical/medbay_primary_storage)
 "tBz" = (
 /obj/machinery/air_sensor{
-	frequency = 1438;
+	frequency = 1433;
 	id_tag = "engine_sensor";
 	output = 63
 	},
@@ -73209,7 +73209,7 @@
 	dir = 5
 	},
 /obj/machinery/embedded_controller/radio/airlock/docking_port_multi{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "escape_dock_north_airlock";
 	master_tag = "escape_dock";
 	pixel_y = 27;
@@ -76634,7 +76634,7 @@
 	dir = 8
 	},
 /obj/machinery/embedded_controller/radio/airlock/docking_port{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "d2_w3_a_airlock";
 	pixel_y = 27;
 	req_one_access = list(13)

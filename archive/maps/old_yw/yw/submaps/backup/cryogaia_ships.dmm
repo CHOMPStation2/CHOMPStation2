@@ -1724,13 +1724,13 @@
 /area/shuttle/cruiser/cruiser)
 "eB" = (
 /obj/machinery/airlock_sensor{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "cruiser_shuttle_bay_sensor";
 	pixel_x = -11;
 	pixel_y = 28
 	},
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "cruiser_shuttle_bay";
 	pixel_x = 0;
 	pixel_y = 28;
@@ -1945,7 +1945,7 @@
 /area/houseboat)
 "fl" = (
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "cruiser_shuttle";
 	pixel_x = 25;
 	pixel_y = 0;
@@ -2083,7 +2083,7 @@
 /area/houseboat)
 "fC" = (
 /obj/machinery/door/airlock/glass_external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	id_tag = null;
 	locked = 1;
@@ -2093,7 +2093,7 @@
 /area/shuttle/cruiser/cruiser)
 "fD" = (
 /obj/machinery/door/airlock/glass_external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	id_tag = "cruiser_shuttle_hatch";
 	locked = 1;

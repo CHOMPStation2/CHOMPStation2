@@ -239,4 +239,4 @@
 
 /obj/item/radio/intercom/locked/confessional
 	name = "confessional intercom"
-	frequency = 1480
+	frequency = 1481

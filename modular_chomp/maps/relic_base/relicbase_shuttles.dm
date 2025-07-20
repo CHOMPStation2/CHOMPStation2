@@ -169,8 +169,6 @@
 /datum/shuttle/autodock/ferry/emergency/centcom
 	var/tag_door_station = "escape_shuttle_hatch"
 	var/tag_door_offsite = "escape_shuttle_hatch"
-	var/frequency = 1380 // Why this frequency? BECAUSE! Thats what someone decided once.
-	var/datum/radio_frequency/radio_connection
 	move_direction = NORTH
 	name = "Escape"
 	shuttle_area = /area/shuttle/escape/centcom
@@ -207,8 +205,6 @@
 /datum/shuttle/autodock/ferry/arrivals/relicbase
 	var/tag_door_station = "arrivals_shuttle_hatch"
 	var/tag_door_offsite = "arrivals_shuttle_hatch"
-	var/frequency = 1380
-	var/datum/radio_frequency/radio_connection
 	move_direction = NORTH
 	name = "Arrivals"
 	location = FERRY_LOCATION_OFFSITE

@@ -8980,7 +8980,7 @@
 	pixel_y = 32
 	},
 /obj/machinery/embedded_controller/radio/simple_docking_controller/escape_pod{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "escape_pod_7";
 	pixel_y = -25;
 	tag_door = "escape_pod_7_hatch"
@@ -9065,7 +9065,7 @@
 /area/maintenance/thirddeck/forestarboard)
 "hkY" = (
 /obj/machinery/door/airlock/glass_external{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "escape_pod_7_berth_hatch";
 	name = "Escape Pod 7";
 	req_one_access = null
@@ -9077,7 +9077,7 @@
 	dir = 8
 	},
 /obj/machinery/embedded_controller/radio/simple_docking_controller/escape_pod_berth{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "escape_pod_7_berth";
 	pixel_x = -25;
 	pixel_y = 30;
@@ -9485,7 +9485,7 @@
 	dir = 4
 	},
 /obj/machinery/embedded_controller/radio/simple_docking_controller/escape_pod_berth{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "escape_pod_8_berth";
 	pixel_x = 25;
 	pixel_y = 30;
@@ -9507,7 +9507,7 @@
 /area/maintenance/thirddeck/forestarboard)
 "hDw" = (
 /obj/machinery/door/airlock/glass_external{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "escape_pod_8_berth_hatch";
 	name = "Escape Pod 8";
 	req_one_access = null
@@ -9559,7 +9559,7 @@
 	pixel_y = -32
 	},
 /obj/machinery/embedded_controller/radio/simple_docking_controller/escape_pod{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "escape_pod_8";
 	pixel_y = 25;
 	tag_door = "escape_pod_8_hatch"

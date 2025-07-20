@@ -4826,7 +4826,7 @@
 	},
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
 	pixel_y = -25;
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "junker"
 	},
 /obj/effect/map_helper/airlock/door/simple,
@@ -5343,7 +5343,7 @@
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
 	name = "shuttle bay controller";
 	pixel_y = 26;
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "spacebus_jungle"
 	},
 /turf/simulated/floor/outdoors/grass/forest/thor{

@@ -2430,7 +2430,7 @@
 /area/library)
 "bow" = (
 /obj/machinery/door/airlock/glass_external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	id_tag = "rsr_ele_door";
 	locked = 1;
@@ -11638,11 +11638,11 @@
 /area/shuttle/needle)
 "faQ" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "needle_pump"
 	},
 /obj/machinery/embedded_controller/radio/airlock/docking_port{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "needle";
 	pixel_y = 26;
 	tag_airpump = "needle_pump";
@@ -16342,7 +16342,7 @@
 /area/engineering/engi_restroom)
 "hbc" = (
 /obj/machinery/door/airlock/glass_external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	id_tag = "rsr_base_door";
 	locked = 1;
@@ -17818,7 +17818,7 @@
 	dir = 10
 	},
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "car_mining_base";
 	name = "shuttle bay controller";
 	pixel_x = -2;
@@ -19373,7 +19373,7 @@
 /area/rnd/misc_lab)
 "ipw" = (
 /obj/machinery/door/airlock/external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	id_tag = "car_mining_door";
 	locked = 1;
@@ -30252,7 +30252,7 @@
 "nfe" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/airlock/external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	id_tag = "car_mining_base_door";
 	locked = 1;
@@ -34501,14 +34501,14 @@
 /area/surface/outpost/main/garage)
 "phY" = (
 /obj/machinery/door/airlock/voidcraft/vertical{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "needle_inner";
 	locked = 1;
 	name = "Internal Access"
 	},
 /obj/machinery/access_button{
 	command = "cycle_interior";
-	frequency = 1380;
+	frequency = 1381;
 	master_tag = "needle";
 	name = "interior access button";
 	pixel_y = 26
@@ -35406,7 +35406,7 @@
 	layer = 3
 	},
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "rsr_base";
 	pixel_y = -32;
 	req_one_access = list(47);
@@ -35483,14 +35483,14 @@
 /area/medical/cryo/autoresleeve)
 "pAU" = (
 /obj/machinery/door/airlock/voidcraft/vertical{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "needle_outer";
 	locked = 1;
 	name = "External Access"
 	},
 /obj/machinery/access_button{
 	command = "cycle_exterior";
-	frequency = 1380;
+	frequency = 1381;
 	master_tag = "needle";
 	name = "exterior access button";
 	pixel_y = 26
@@ -41117,7 +41117,7 @@
 /obj/effect/floor_decal/industrial/warning/cee,
 /obj/machinery/light,
 /obj/machinery/airlock_sensor{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "needle_sensor";
 	pixel_x = -28;
 	pixel_y = -1
@@ -45194,7 +45194,7 @@
 	dir = 4
 	},
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "needle_dock";
 	pixel_x = -26
 	},
@@ -49104,7 +49104,7 @@
 	layer = 3
 	},
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "rsr_elevator";
 	pixel_x = 25;
 	pixel_y = -8;
@@ -52190,7 +52190,7 @@
 	dir = 1
 	},
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "car_mining";
 	pixel_x = 25;
 	pixel_y = -8;
