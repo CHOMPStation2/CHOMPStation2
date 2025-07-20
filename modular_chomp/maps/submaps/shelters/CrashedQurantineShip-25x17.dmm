@@ -802,7 +802,7 @@
 "cj" = (
 /obj/machinery/door/airlock/external{
 	desc = "It opens and closes. It is stamped with the logo of Major Bill's Transportation";
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	id_tag = null;
 	locked = 1;
@@ -869,7 +869,7 @@
 "su" = (
 /obj/machinery/door/airlock/external{
 	desc = "It opens and closes. It is stamped with the logo of Major Bill's Transportation";
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	id_tag = null;
 	locked = 1;

@@ -1,11 +1,8 @@
 // Formerly /datum/shuttle/ferry/emergency
 /datum/shuttle/autodock/ferry/emergency
 	category = /datum/shuttle/autodock/ferry/emergency
-<<<<<<< HEAD
-=======
 	var/frequency = 1381 // Why this frequency? BECAUSE! Thats what someone decided once.
 	var/datum/radio_frequency/radio_connection
->>>>>>> a2a4ad5210 (frequencies must be odd (#18009))
 
 /datum/shuttle/autodock/ferry/emergency/New()
 	..()

@@ -1224,7 +1224,7 @@
 "dv" = (
 /obj/machinery/access_button{
 	command = "cycle_exterior";
-	frequency = 448;
+	frequency = 449;
 	master_tag = "guttersite_northlock";
 	name = "exterior access button";
 	pixel_x = -5;
@@ -1348,7 +1348,7 @@
 /area/tether_away/guttersite/office)
 "dI" = (
 /obj/machinery/embedded_controller/radio/airlock/docking_port{
-	frequency = 448;
+	frequency = 449;
 	id_tag = "guttersite_northlock";
 	name = "Airlock controller";
 	pixel_x = -25;
@@ -1412,11 +1412,11 @@
 "dP" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 4;
-	frequency = 448;
+	frequency = 449;
 	id_tag = "guttersite_northlock_pump"
 	},
 /obj/machinery/airlock_sensor{
-	frequency = 448;
+	frequency = 449;
 	id_tag = "guttersite_northlock_sensor";
 	pixel_x = 0;
 	pixel_y = -25
@@ -2750,17 +2750,17 @@
 "gG" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 4;
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "dock_d2a2_pump"
 	},
 /obj/machinery/light/small,
 /obj/machinery/embedded_controller/radio/airlock/docking_port{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "guttersite_sshuttle";
 	pixel_y = 28
 	},
 /obj/machinery/airlock_sensor{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "dock_d2a2_sensor";
 	pixel_x = 0;
 	pixel_y = -25
@@ -3465,7 +3465,7 @@
 	},
 /obj/machinery/access_button{
 	command = "cycle_interior";
-	frequency = 1380;
+	frequency = 1381;
 	master_tag = "guttersite_sshuttle";
 	name = "interior access button";
 	pixel_x = -28;
@@ -3733,7 +3733,7 @@
 /area/tether_away/guttersite/docking)
 "iQ" = (
 /obj/machinery/embedded_controller/radio/airlock/docking_port{
-	frequency = 1276;
+	frequency = 1277;
 	id_tag = "guttersite_lshuttle";
 	name = "Airlock controller";
 	pixel_x = -25;
@@ -4865,7 +4865,7 @@
 "mn" = (
 /obj/machinery/access_button{
 	command = "cycle_interior";
-	frequency = 448;
+	frequency = 449;
 	master_tag = "guttersite_northlock";
 	name = "interior access button";
 	pixel_x = -28;
@@ -5064,11 +5064,11 @@
 "mI" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 4;
-	frequency = 1276;
+	frequency = 1277;
 	id_tag = "guttersite_lshuttle_pump"
 	},
 /obj/machinery/airlock_sensor{
-	frequency = 1276;
+	frequency = 1277;
 	id_tag = "guttersite_lshuttle_sensor";
 	pixel_x = 0;
 	pixel_y = -25
@@ -5122,7 +5122,7 @@
 "mP" = (
 /obj/machinery/access_button{
 	command = "cycle_interior";
-	frequency = 1276;
+	frequency = 1277;
 	master_tag = "guttersite_lshuttle";
 	name = "interior access button";
 	pixel_x = -28;
@@ -5379,7 +5379,7 @@
 "nD" = (
 /obj/machinery/access_button{
 	command = "cycle_interior";
-	frequency = 1990;
+	frequency = 1991;
 	master_tag = "guttersite_mshuttle";
 	name = "interior access button";
 	pixel_x = -28;
@@ -5408,7 +5408,7 @@
 /area/tether_away/guttersite/docking)
 "nF" = (
 /obj/machinery/embedded_controller/radio/airlock/docking_port{
-	frequency = 1990;
+	frequency = 1991;
 	id_tag = "guttersite_mshuttle";
 	name = "Airlock controller";
 	pixel_x = -25;
@@ -5438,7 +5438,7 @@
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 4;
-	frequency = 1990;
+	frequency = 1991;
 	id_tag = "guttersite_mshuttle_pump"
 	},
 /obj/machinery/light{
@@ -5448,7 +5448,7 @@
 /area/tether_away/guttersite/docking)
 "nJ" = (
 /obj/machinery/airlock_sensor{
-	frequency = 1990;
+	frequency = 1991;
 	id_tag = "guttersite_mshuttle_sensor";
 	pixel_x = 0;
 	pixel_y = -25
@@ -5480,7 +5480,7 @@
 "nM" = (
 /obj/machinery/access_button{
 	command = "cycle_exterior";
-	frequency = 1990;
+	frequency = 1991;
 	master_tag = "guttersite_mshuttle";
 	name = "exterior access button";
 	pixel_x = 26;
@@ -5817,7 +5817,7 @@
 "Uv" = (
 /obj/machinery/access_button{
 	command = "cycle_exterior";
-	frequency = 1276;
+	frequency = 1277;
 	master_tag = "guttersite_lshuttle";
 	name = "exterior access button";
 	pixel_x = 26;
@@ -5829,7 +5829,7 @@
 "Yg" = (
 /obj/machinery/access_button{
 	command = "cycle_exterior";
-	frequency = 1380;
+	frequency = 1381;
 	master_tag = "guttersite_sshuttle";
 	name = "exterior access button";
 	pixel_x = -5;

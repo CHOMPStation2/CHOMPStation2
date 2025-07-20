@@ -2164,7 +2164,7 @@
 /area/derelict/crew_quarters)
 "jK" = (
 /obj/machinery/door/airlock/external{
-	frequency = 1502;
+	frequency = 1503;
 	id_tag = "rus_inner_2"
 	},
 /obj/structure/cable{
@@ -2182,7 +2182,7 @@
 /obj/machinery/light/small,
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 8;
-	frequency = 1502;
+	frequency = 1503;
 	id_tag = "rus_pump_2"
 	},
 /turf/simulated/floor/plating,
@@ -2192,7 +2192,7 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/door/airlock/external{
-	frequency = 1502;
+	frequency = 1503;
 	id_tag = "rus_outer_2"
 	},
 /turf/simulated/floor/plating,
@@ -2545,7 +2545,7 @@
 	},
 /obj/machinery/access_button{
 	command = "cycle_exterior";
-	frequency = 1502;
+	frequency = 1503;
 	master_tag = "rus_airlock_2";
 	name = "exterior access button";
 	pixel_x = -25
@@ -2672,7 +2672,7 @@
 	dir = 4
 	},
 /obj/machinery/door/airlock/external{
-	frequency = 1502;
+	frequency = 1503;
 	id_tag = "rus_inner_2"
 	},
 /turf/simulated/floor/plating,
@@ -2685,12 +2685,12 @@
 	dir = 1
 	},
 /obj/machinery/airlock_sensor{
-	frequency = 1502;
+	frequency = 1503;
 	id_tag = "rus_sensor_2";
 	pixel_y = 27
 	},
 /obj/machinery/embedded_controller/radio/airlock/airlock_controller{
-	frequency = 1502;
+	frequency = 1503;
 	id_tag = "rus_airlock_2";
 	pixel_y = -25;
 	tag_airpump = "rus_pump_2";
@@ -2700,14 +2700,14 @@
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 8;
-	frequency = 1502;
+	frequency = 1503;
 	id_tag = "rus_pump_2"
 	},
 /turf/simulated/floor/plating,
 /area/derelict/crew_quarters)
 "lq" = (
 /obj/machinery/door/airlock/external{
-	frequency = 1502;
+	frequency = 1503;
 	id_tag = "rus_outer_2"
 	},
 /obj/structure/cable{
@@ -2797,7 +2797,7 @@
 	},
 /obj/machinery/access_button{
 	command = "cycle_interior";
-	frequency = 1502;
+	frequency = 1503;
 	master_tag = "rus_airlock_2";
 	name = "interior access button";
 	pixel_x = 25

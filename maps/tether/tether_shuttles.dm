@@ -45,8 +45,6 @@
 /datum/shuttle/autodock/ferry/emergency
 	var/tag_door_station = "escape_shuttle_hatch_station"
 	var/tag_door_offsite = "escape_shuttle_hatch_offsite"
-	var/frequency = 1380 // Why this frequency? BECAUSE! Thats what someone decided once.
-	var/datum/radio_frequency/radio_connection
 	move_direction = NORTH
 
 /datum/shuttle/autodock/ferry/emergency/New()
