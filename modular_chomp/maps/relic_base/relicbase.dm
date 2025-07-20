@@ -2,7 +2,6 @@
 
 #if !defined(USING_MAP_DATUM)
 
-	// CHOMPStation Edits Start: Disabling specific includes as vorestation.dme has them already loading via #includes there. UPDATE THIS if that chang
 	#include "relicbase_defines.dm"
 	#include "turfs/outdoors.dm"
 
