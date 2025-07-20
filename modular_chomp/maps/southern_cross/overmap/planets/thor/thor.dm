@@ -298,3 +298,84 @@
 
 	grass = "thor_real"
 	. = ..()
+
+/turf/simulated/floor/outdoors/grass/heavy/randomgen
+	initial_flooring = /decl/flooring/grass/heavy
+	name = "heavy grass"
+	icon_state = "grass-heavy0"
+	edge_blending_priority = 4
+	demote_to = /turf/simulated/floor/outdoors/dirt
+	grass_chance = 25
+
+	grass = "thor_real"
+
+	animal_chance = 0.5
+
+	animals = "thor_real"
+
+/turf/simulated/floor/outdoors/snow/thor/planetuse
+	name = "snow"
+	icon_state = "snow"
+	edge_blending_priority = 6
+	movement_cost = 2
+	initial_flooring = /decl/flooring/snow
+	demote_to = /turf/simulated/floor/outdoors/dirt
+
+/turf/simulated/floor/outdoors/snow/thor/planetuse/Entered(atom/A)
+	if(isliving(A))
+		var/mob/living/L = A
+		if(L.hovering) // Flying things shouldn't make footprints.
+			return ..()
+		var/mdir = "[A.dir]"
+		crossed_dirs[mdir] = 1
+		update_icon()
+	. = ..()
+
+/turf/simulated/floor/outdoors/snow/thor/planetuse/update_icon()
+	..()
+	for(var/d in crossed_dirs)
+		add_overlay(image(icon = 'icons/turf/outdoors.dmi', icon_state = "snow_footprints", dir = text2num(d)))
+
+/turf/simulated/floor/outdoors/snow/thor/planetuse/attackby(var/obj/item/W, var/mob/user)
+	if(istype(W, /obj/item/shovel))
+		to_chat(user, span_notice("You begin to remove \the [src] with your [W]."))
+		if(do_after(user, 4 SECONDS * W.toolspeed))
+			to_chat(user, span_notice("\The [src] has been dug up, and now lies in a pile nearby."))
+			new /obj/item/stack/material/snow(src)
+			demote()
+		else
+			to_chat(user, span_notice("You decide to not finish removing \the [src]."))
+	else
+		..()
+
+/turf/simulated/floor/outdoors/snow/thor/planetuse/attack_hand(mob/user as mob)
+	visible_message("[user] starts scooping up some snow.", "You start scooping up some snow.")
+	if(do_after(user, 1 SECOND))
+		var/obj/S = new /obj/item/stack/material/snow(user.loc)
+		user.put_in_hands(S)
+		visible_message("[user] scoops up a pile of snow.", "You scoop up a pile of snow.")
+	return
+
+/obj/effect/step_trigger/teleporter/planetary_fall/thor/find_planet()
+	planet = planet_thor
+
+// Space mineral tiles are now not the default, so they get demoted to subtype status.
+/turf/simulated/mineral/thor/vacuum
+	oxygen = 0
+	nitrogen = 0
+	temperature = TCMB
+
+/turf/simulated/mineral/thor/ignore_mapgen/vacuum
+	oxygen = 0
+	nitrogen = 0
+	temperature = TCMB
+
+/turf/simulated/mineral/thor/floor/vacuum
+	oxygen = 0
+	nitrogen = 0
+	temperature = TCMB
+
+/turf/simulated/mineral/thor/floor/ignore_mapgen/vacuum
+	oxygen = 0
+	nitrogen = 0
+	temperature = TCMB

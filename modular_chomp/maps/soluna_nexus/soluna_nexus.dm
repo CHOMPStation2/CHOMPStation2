@@ -4,13 +4,13 @@
 
 	#include "soluna_nexus_defines.dm"
 
-	#include "../southern_cross/turfs/outdoors.dm"
 
 	// Map specific
 	#include "../southern_cross/southern_cross_overrides.dm"
 	#include "../southern_cross/southern_cross_shuttles.dm"
 	#include "soluna_nexus_areas.dm"
 	#include "soluna_nexus_presets.dm"
+	#include "../southern_cross/turfs/outdoors.dm"
 
 
 	#ifndef AWAY_MISSION_TEST //Don't include these for just testing away missions if the flag is set to true in /code/_away_mission_tests.dm

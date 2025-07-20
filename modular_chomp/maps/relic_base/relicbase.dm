@@ -3,7 +3,6 @@
 #if !defined(USING_MAP_DATUM)
 
 	#include "relicbase_defines.dm"
-	#include "turfs/outdoors.dm"
 
 	// Map exclusive
 	#include "relicbase_things.dm"
@@ -11,6 +10,7 @@
 	#include "shuttles/crew_shuttles_ch.dm"
 	#include "relicbase_areas.dm"
 	#include "relicbase_presets.dm"
+	#include "turfs/outdoors.dm"
 
 
 	#include "relicbase-1.dmm" //Catacombs - Z1
