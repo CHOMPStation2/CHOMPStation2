@@ -5289,6 +5289,8 @@
 #include "modular_chomp\maps\common_areas\station\cargo.dm"
 #include "modular_chomp\maps\common_areas\station\droms.dm"
 #include "modular_chomp\maps\common_areas\station\engineering.dm"
+#include "modular_chomp\maps\common_areas\station\hallway.dm"
+#include "modular_chomp\maps\common_areas\station\harbor.dm"
 #include "modular_chomp\maps\common_areas\station\maints.dm"
 #include "modular_chomp\maps\common_areas\station\station.dm"
 #include "modular_chomp\maps\common_areas\station\turbolift.dm"

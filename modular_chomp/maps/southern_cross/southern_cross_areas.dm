@@ -73,83 +73,6 @@
 /area/crew_quarters/toilet/firstdeck
 	name = "\improper First Deck Restroom"
 
-
-
-/area/hallway/primary/firstdeck/elevator
-	name = "\improper First Deck Central Elevator Access"
-	icon_state = "hallC"
-
-/area/hallway/primary/firstdeck/fore
-	name = "\improper First Deck Fore Hallway"
-	icon_state = "hallF"
-
-/area/hallway/primary/firstdeck/fpcenter
-	name = "\improper First Deck Fore Port Central Hallway"
-	icon_state = "hallC1"
-
-/area/hallway/primary/firstdeck/fscenter
-	name = "\improper First Deck Fore Starboard Central Hallway"
-	icon_state = "hallC2"
-
-/area/hallway/primary/firstdeck/apcenter
-	name = "\improper First Deck Aft Port Central Hallway"
-	icon_state = "hallC3"
-
-/area/hallway/primary/firstdeck/ascenter
-	name = "\improper First Deck Aft Starboard Central Hallway"
-	icon_state = "hallC4"
-
-/area/hallway/primary/firstdeck/aft
-	name = "\improper First Deck Aft Hallway"
-	icon_state = "hallA"
-
-/area/hallway/primary/firstdeck/port
-	name = "\improper First Deck Port Hallway"
-	icon_state = "hallP"
-
-/area/hallway/primary/firstdeck/starboard
-	name = "\improper First Deck Starboard Hallway"
-	icon_state = "hallS"
-
-/area/hallway/primary/firstdeck/auxdockaft
-	name = "\improper First Deck Aft Auxiliary Dock"
-	icon_state = "docking_hallway"
-	flags = AREA_FORBID_EVENTS | AREA_ALLOW_CLOCKOUT
-
-/area/hallway/primary/firstdeck/auxdockfore
-	name = "\improper First Deck Fore Auxiliary Dock"
-	icon_state = "docking_hallway"
-
-//CHOMPStation Edit. Two new areas for the vault.
-/area/hallway/primary/firstdeck/vaultcheckpoint
-	name = "\improper Vault Checkpoint"
-	icon_state = "nuke_storage"
-
-/area/hallway/primary/firstdeck/vaultlobby
-	name = "\improper Vault Lobby"
-	icon_state = "nuke_storage"
-
-//CHOMPStation Edit Start TFF 4/5/20 - One of these ain't the same thing, bruh. Escape Pod 1, Escape Pod 2, Research Access Hallway.
-/area/hallway/secondary/escape/firstdeck/ep_port
-	name = "\improper Large Escape Pod 2 Port"
-	icon_state = "escape_pod"
-
-/area/hallway/secondary/escape/firstdeck/ep_starboard
-	name = "\improper Large Escape Pod 2 Starboard"
-	icon_state = "escape_pod"
-
-/area/hallway/secondary/escape/firstdeck/ep_aftport
-	name = "\improper Escape Pods Aft Port"
-	icon_state = "escape_pod"
-
-/area/hallway/secondary/escape/firstdeck/ep_aftstarboard
-	name = "\improper Escape Pods Aft Starboard"
-	icon_state = "escape_pod"
-
-/area/hallway/secondary/firstdeck/research_access
-	name = "\improper First Deck Research Access Hallway"
-	icon_state = "hallS"
-
 /area/security/checkpoint3
 	name = "\improper Security - Auxiliary Checkpoint"
 	icon_state = "security"
@@ -247,50 +170,6 @@
 /area/engineering/hallway/engineer_hallway
 	name = "\improper Engineering Hallway"
 	icon_state = "engineering_aft_hallway"
-
-/area/hallway/primary/seconddeck/stairwell
-	name = "\improper Second Deck Central Stairwell Access"
-	icon_state = "hallC"
-
-/area/hallway/primary/seconddeck/fore
-	name = "\improper Second Deck Fore Hallway"
-	icon_state = "hallF"
-
-/area/hallway/primary/seconddeck/fpcenter
-	name = "\improper Second Deck Fore Port Central Hallway"
-	icon_state = "hallC1"
-
-/area/hallway/primary/seconddeck/fscenter
-	name = "\improper Second Deck Fore Starboard Central Hallway"
-	icon_state = "hallC2"
-
-/area/hallway/primary/seconddeck/apcenter
-	name = "\improper Second Deck Aft Port Central Hallway"
-	icon_state = "hallC3"
-
-/area/hallway/primary/seconddeck/ascenter
-	name = "\improper Second Deck Aft Starboard Central Hallway"
-	icon_state = "hallC4"
-
-/area/hallway/primary/seconddeck/aft
-	name = "\improper Second Deck Aft Hallway"
-	icon_state = "hallA"
-
-/area/hallway/primary/seconddeck/port
-	name = "\improper Second Deck Port Hallway"
-	icon_state = "hallP"
-
-/area/hallway/primary/seconddeck/starboard
-	name = "\improper Second Deck Starboard Hallway"
-	icon_state = "hallS"
-
-/area/hallway/primary/seconddeck/dockhallway
-	name = "\improper Shuttle Dock Hallway"
-	icon_state = "docking_hallway"
-
-/area/hallway/secondary/seconddeck/research_medical
-	name = "Research Medical Hallway"
-	icon_state = "hallS"
 
 /area/medical/foyer
 	name = "\improper Medbay Foyer"
@@ -439,40 +318,8 @@
 
 /area/crew_quarters/heads/sc/bs
 	name = "\improper Command - Secretary Quarters"
+x
 
-/area/hallway/primary/thirddeck/central
-	name = "\improper Third Deck Port Hallway"
-	icon_state = "hallC"
-
-/area/hallway/primary/thirddeck/port
-	name = "\improper Third Deck Port Hallway"
-	icon_state = "hallP"
-
-/area/hallway/primary/thirddeck/starboard
-	name = "\improper Third Deck Starboard Hallway"
-	icon_state = "hallS"
-
-//CHOMPStation Edit Start TFF 6/2/20 KC - Added new hallway for dorms. 11/20/20 KC - Added more areas for gateway and halls.
-
-/area/hallway/primary/thirddeck/aftportcentral
-	name = "\improper Third Deck Central Aft Port Hallway"
-	icon_state = "hallC"
-
-/area/hallway/primary/thirddeck/aftstarboardcentral
-	name = "\improper Third Deck Central Aft Starboard Hallway"
-	icon_state = "hallC"
-
-/area/hallway/primary/thirddeck/stationgateway
-	name = "\improper Third Deck Central Gateway"
-	icon_state = "teleporter"
-
-/area/hallway/primary/thirddeck/aft
-	name = "\improper Third Deck Aft Hallway"
-	icon_state = "hallA"
-
-/area/hallway/primary/thirddeck/aftdoorm
-	name = "\improper Third Deck Aft Doorm Hallway"
-	icon_state = "docking_hallway"
 
 
 //CHOMPedit Giving a maint bar its own APC
