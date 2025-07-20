@@ -248,37 +248,6 @@
 	icon_state = "eva"
 //Chompstation Edit End
 
-/area/tcomm/
-	icon_state = "tcomsatcham"
-	holomap_color = HOLOMAP_AREACOLOR_COMMAND
-
-/area/tcomm/entrance
-	name = "\improper Telecomms Teleporter"
-	icon_state = "tcomsatentrance"
-
-/area/tcomm/tcomfoyer
-	name = "\improper Telecomms Foyer"
-	icon_state = "tcomsatfoyer"
-
-/area/tcomm/chamber
-	name = "\improper Telecomms Central Compartment"
-	icon_state = "tcomsatcham"
-
-/area/tcomm/tcomstorage
-	name = "\improper Telecomms Storage"
-	icon_state = "tcomsatstore"
-
-/area/tcomm/computer
-	name = "\improper Telecomms Control Room"
-	icon_state = "tcomsatcomp"
-
-/area/quartermaster/hallway
-	name = "\improper Cargo Bay Hallway"
-	icon_state = "quart"
-
-/area/quartermaster/mininglockerroom
-	name = "\improper Mining Locker Room"
-	icon_state = "mining"
 
 //Deck Two (Z-2)
 
@@ -531,10 +500,6 @@
 /area/rnd/mixing/simulated_caves
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
 
-/area/quartermaster/lockerroom
-	name = "\improper Cargo Locker Room"
-	icon_state = "quart"
-
 /area/security/security_hallway
 	name = "\improper Security Hallway"
 	icon_state = "security"
@@ -730,17 +695,6 @@
 
 // Shuttles
 
-//NT response shuttle
-
-/area/shuttle/response_ship
-	name = "\improper Response Team Ship"
-	icon_state = "shuttlered"
-	requires_power = 0
-	flags = RAD_SHIELDED
-	ambience = AMBIENCE_HIGHSEC
-
-/area/shuttle/response_ship/simulated_reinforced
-	base_turf = /turf/simulated/floor/reinforced
 
 //Shuttle One
 

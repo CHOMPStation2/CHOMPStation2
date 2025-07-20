@@ -19,7 +19,6 @@
 	name = "\improper First Deck Engineering Construction Area 5"
 
 //Exploration backup shuttle. For now this is a placeholder for future expedition content.
-
 /area/shuttle/shuttlebackup
 	name = "\improper Hangar Deck"
 	icon_state = "yellow"
@@ -30,3 +29,14 @@
 /area/shuttle/shuttlebackup/start
 	name = "\improper Expedition Backup Shuttle Docks"
 	icon_state = "shuttlered"
+
+//NT response shuttle
+/area/shuttle/response_ship
+	name = "\improper Response Team Ship"
+	icon_state = "shuttlered"
+	requires_power = 0
+	flags = RAD_SHIELDED
+	ambience = AMBIENCE_HIGHSEC
+
+/area/shuttle/response_ship/simulated_reinforced
+	base_turf = /turf/simulated/floor/reinforced

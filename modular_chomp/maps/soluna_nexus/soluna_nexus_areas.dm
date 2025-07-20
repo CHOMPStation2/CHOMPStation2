@@ -145,15 +145,6 @@
 	holomap_color = HOLOMAP_AREACOLOR_COMMAND
 // Shuttles
 
-//NT response shuttle
-
-/area/shuttle/response_ship
-	name = "\improper Response Team Ship"
-	icon_state = "shuttlered"
-	requires_power = 0
-	flags = RAD_SHIELDED
-	ambience = AMBIENCE_HIGHSEC
-
 // Centcom Transport Shuttle
 /area/shuttle/transport1
 	icon_state = "shuttle"
@@ -1415,21 +1406,6 @@
 	name = "\improper GravGen Room"
 	icon_state = "engineering"
 
-/area/engineering/Telecomms_Foyer
-	name = "\improper Telecomms Foyer"
-	icon_state = "engineering"
-	ambience = AMBIENCE_AI
-
-/area/engineering/Telecomms_Control_Room
-	name = "\improper Telecomms Control Room"
-	icon_state = "engineering"
-	ambience = AMBIENCE_AI
-
-/area/engineering/Telecomms_Network
-	name = "\improper Telecomms Network"
-	icon_state = "engineering"
-	ambience = AMBIENCE_AI
-	lightswitch = 1
 
 /area/engineering/Reception
 	name = "\improper Reception"
@@ -1604,92 +1580,7 @@
 	ambience = AMBIENCE_SPACE
 	dynamic_lighting = 0
 
-//CARGO AREAS
 
-/area/quartermaster
-	icon_state = "quart"
-	holomap_color = HOLOMAP_AREACOLOR_CARGO
-	ambience = AMBIENCE_HANGAR
-	sound_env = SOUND_ENVIRONMENT_HANGAR
-	lightswitch = 0
-
-/area/quartermaster/For_Tool_Storage
-	name = "\improper For Tool Storage"
-	icon_state = "quart"
-
-/area/quartermaster/Star_Tool_Storage
-	name = "\improper Star Tool Storage"
-	icon_state = "quart"
-
-/area/quartermaster/Aft_Tool_Storage
-	name = "\improper Aft Tool Storage"
-	icon_state = "quart"
-
-/area/quartermaster/Reception
-	name = "\improper Reception"
-	icon_state = "quart"
-
-/area/quartermaster/Packaging_Room
-	name = "\improper Packaging Room"
-	icon_state = "quart"
-
-/area/quartermaster/Recycling
-	name = "\improper Recycling"
-	icon_state = "quart"
-
-/area/quartermaster/Warehouse
-	name = "\improper Warehouse"
-	icon_state = "quart"
-
-/area/quartermaster/Deck2_Stairwell
-	name = "\improper 2 Deck Stairwell"
-	icon_state = "quart"
-
-/area/quartermaster/Deck1_Stairwell
-	name = "\improper 1 Deck Stairwell"
-	icon_state = "quart"
-
-/area/quartermaster/Supply_Ship_Bay
-	name = "\improper Supply Ship Bay"
-	icon_state = "quart"
-	ambience = AMBIENCE_HANGAR
-
-/area/quartermaster/Depot1
-	name = "\improper 1 Depot"
-	icon_state = "quart"
-
-/area/quartermaster/Depot2
-	name = "\improper 2 Depot"
-	icon_state = "quart"
-
-/area/quartermaster/Mining_Ship_Bay
-	name = "\improper Mining Ship Bay"
-	icon_state = "quart"
-	ambience = AMBIENCE_HANGAR
-
-/area/quartermaster/Mining_EVA
-	name = "\improper Mail Room"
-	icon_state = "quart"
-
-/area/quartermaster/Waste_Disposals
-	name = "\improper Waste Disposals"
-	icon_state = "quart"
-
-/area/quartermaster/QM_Office
-	name = "\improper QM Office"
-	icon_state = "quart"
-
-/area/quartermaster/Mail_Room
-	name = "\improper Mail Room"
-	icon_state = "quart"
-
-/area/quartermaster/Deck1_Corridor
-	name = "\improper Mail Room"
-	icon_state = "quart"
-
-/area/quartermaster/Breakroom
-	name = "\improper Cargo Breakroom"
-	icon_state = "quart"
 
 //DOMICILE AREAS
 
