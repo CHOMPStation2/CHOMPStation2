@@ -56,7 +56,7 @@
 /area/surface/outside/plains/outpost/sky
 	name = "The sky"
 	dynamic_lighting = 0
-	icon_state = "bluenew
+	icon_state = "bluenew"
 
 // Rest of the 'plains' Z-level, for POIs.
 /area/surface/outside/plains/normal
