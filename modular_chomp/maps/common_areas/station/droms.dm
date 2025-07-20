@@ -331,3 +331,20 @@
 
 /area/crew_quarters/toilet/firstdeck
 	name = "\improper First Deck Restroom"
+
+/area/crew_quarters/thirddeck/vrroom
+	name = "\improper Virtual Reality Room"
+	icon_state = "gaming"
+	flags = RAD_SHIELDED | AREA_FORBID_EVENTS | AREA_FORBID_SINGULO | AREA_ALLOW_CLOCKOUT
+
+/area/crew_quarters/seconddeck/artgallery
+	name = "\improper Art Gallery"
+	icon_state = "art"
+
+/area/crew_quarters/seconddeck/artsupplies
+	name = "\improper Art Supplies"
+	icon_state = "artsupply"
+
+/area/crew_quarters/seconddeck/gameroom
+	name = "\improper Game Room"
+	icon_state = "gaming"

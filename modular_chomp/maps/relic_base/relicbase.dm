@@ -2,8 +2,7 @@
 
 #if !defined(USING_MAP_DATUM)
 
-	// CHOMPStation Edits Start: Disabling specific includes as vorestation.dme has them already loading via #includes there. UPDATE THIS if that changes.
-	#include "relicbase_areas.dm"
+	// CHOMPStation Edits Start: Disabling specific includes as vorestation.dme has them already loading via #includes there. UPDATE THIS if that chang
 	#include "relicbase_defines.dm"
 	#include "relicbase_elevator.dm"
 	#include "relicbase_presets.dm"
@@ -13,7 +12,8 @@
 	// Map exclusive
 	#include "relicbase_things.dm"
 	#include "relicbase_overrides.dm"
-	#include "shuttles/crew_shuttles_ch.dm"
+	#include "shuttles/crew_shuttles_ch.dm"es.
+	#include "relicbase_areas.dm"
 
 
 	#include "relicbase-1.dmm" //Catacombs - Z1
