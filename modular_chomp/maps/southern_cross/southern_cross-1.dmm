@@ -248,10 +248,6 @@
 	},
 /turf/simulated/floor/wood/alt/parquet/turfpack/station,
 /area/maintenance/lookout)
-"aI" = (
-/obj/structure/ghost_pod/ghost_activated/maintpred/no_announce,
-/turf/simulated/floor/plating,
-/area/maintenance/ragecage)
 "aJ" = (
 /obj/machinery/light{
 	dir = 8;
@@ -259,6 +255,15 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/gravgen)
+"aK" = (
+/obj/structure/ghost_pod/ghost_activated/maintpred/no_announce,
+/turf/simulated/floor/plating/turfpack/station,
+/area/maintenance/abcargo)
+"aL" = (
+/obj/effect/decal/cleanable/flour,
+/obj/structure/ghost_pod/ghost_activated/maintpred/no_announce,
+/turf/simulated/floor/plating/turfpack/station,
+/area/maintenance/abchemistry)
 "aM" = (
 /obj/effect/floor_decal/rust,
 /obj/structure/catwalk,
@@ -36562,7 +36567,7 @@ gv
 ls
 gK
 qn
-zu
+aK
 Re
 qh
 xl
@@ -39138,7 +39143,7 @@ PJ
 XP
 qi
 xf
-xz
+aL
 xf
 Sd
 sr
@@ -42723,8 +42728,8 @@ WY
 LU
 br
 Nz
-hA
 aG
+hA
 GF
 Hy
 wZ
@@ -47880,7 +47885,7 @@ tj
 Is
 zZ
 Is
-aI
+RF
 RF
 RF
 Is
