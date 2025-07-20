@@ -164,9 +164,10 @@
 /turf/simulated/floor/tiled/white,
 /area/maintenance/abfirstaid)
 "ax" = (
-/obj/structure/ghost_pod/ghost_activated/maintpred/no_announce,
-/turf/simulated/floor/wood/turfpack/station,
-/area/maintenance/zerobar)
+/obj/effect/floor_decal/rust,
+/obj/effect/landmark/start/ghost_roles,
+/turf/simulated/floor/plating/turfpack/station,
+/area/maintenance/zeroport)
 "ay" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/floor_decal/industrial/arrows/yellow{
@@ -180,17 +181,27 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/maintenance/zeroaft)
 "az" = (
-/obj/structure/ghost_pod/ghost_activated/maintpred/no_announce,
-/turf/simulated/floor/tiled/white,
-/area/maintenance/abscience)
-"aA" = (
-/obj/structure/ghost_pod/ghost_activated/maintpred/no_announce,
-/turf/simulated/floor/plating,
-/area/maintenance/ragecage)
-"aB" = (
-/obj/structure/ghost_pod/ghost_activated/maintpred/no_announce,
+/obj/effect/landmark/start/ghost_roles,
 /turf/simulated/floor/plating/turfpack/station,
-/area/maintenance/abcargo)
+/area/maintenance/thrift)
+"aA" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/effect/landmark/start/ghost_roles,
+/turf/simulated/floor/plating/turfpack/station,
+/area/maintenance/zerostarboard)
+"aB" = (
+/obj/random/trash,
+/obj/effect/landmark/start/ghost_roles,
+/turf/simulated/floor/plating/turfpack/station,
+/area/maintenance/zerofore)
 "aC" = (
 /obj/effect/floor_decal/rust,
 /obj/structure/table/rack,
@@ -213,10 +224,9 @@
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/zeroport)
 "aE" = (
-/obj/effect/decal/cleanable/flour,
 /obj/structure/ghost_pod/ghost_activated/maintpred/no_announce,
-/turf/simulated/floor/plating/turfpack/station,
-/area/maintenance/abchemistry)
+/turf/simulated/floor/wood/turfpack/station,
+/area/maintenance/zerobar)
 "aF" = (
 /obj/effect/floor_decal/techfloor/corner{
 	dir = 5
@@ -229,20 +239,15 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/engineering/gravgen)
 "aG" = (
-/obj/effect/floor_decal/rust,
-/obj/effect/landmark/start/ghost_roles,
-/turf/simulated/floor/plating/turfpack/station,
-/area/maintenance/zeroport)
+/obj/structure/ghost_pod/ghost_activated/maintpred/no_announce,
+/turf/simulated/floor/tiled/white,
+/area/maintenance/abscience)
 "aH" = (
 /obj/structure/bed/chair/sofa/right/beige{
 	dir = 4
 	},
 /turf/simulated/floor/wood/alt/parquet/turfpack/station,
 /area/maintenance/lookout)
-"aI" = (
-/obj/effect/landmark/start/ghost_roles,
-/turf/simulated/floor/plating/turfpack/station,
-/area/maintenance/thrift)
 "aJ" = (
 /obj/machinery/light{
 	dir = 8;
@@ -251,23 +256,14 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/gravgen)
 "aK" = (
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/effect/landmark/start/ghost_roles,
+/obj/structure/ghost_pod/ghost_activated/maintpred/no_announce,
 /turf/simulated/floor/plating/turfpack/station,
-/area/maintenance/zerostarboard)
+/area/maintenance/abcargo)
 "aL" = (
-/obj/random/trash,
-/obj/effect/landmark/start/ghost_roles,
+/obj/effect/decal/cleanable/flour,
+/obj/structure/ghost_pod/ghost_activated/maintpred/no_announce,
 /turf/simulated/floor/plating/turfpack/station,
-/area/maintenance/zerofore)
+/area/maintenance/abchemistry)
 "aM" = (
 /obj/effect/floor_decal/rust,
 /obj/structure/catwalk,
@@ -32438,7 +32434,7 @@ sV
 sV
 ua
 Nc
-aG
+ax
 ua
 TJ
 TJ
@@ -35775,7 +35771,7 @@ oY
 EP
 ly
 In
-ax
+aE
 UP
 wq
 tm
@@ -36571,7 +36567,7 @@ gv
 ls
 gK
 qn
-aB
+aK
 Re
 qh
 xl
@@ -39147,7 +39143,7 @@ PJ
 XP
 qi
 xf
-aE
+aL
 xf
 Sd
 sr
@@ -42732,8 +42728,8 @@ WY
 LU
 br
 Nz
-az
-az
+aG
+hA
 GF
 Hy
 wZ
@@ -43758,7 +43754,7 @@ wZ
 wZ
 wZ
 Qy
-aL
+aB
 je
 Lc
 IH
@@ -47889,7 +47885,7 @@ tj
 Is
 zZ
 Is
-aA
+RF
 RF
 RF
 Is
@@ -54599,7 +54595,7 @@ wZ
 wZ
 Ky
 JA
-aK
+aA
 sW
 CP
 KM
@@ -58229,7 +58225,7 @@ XE
 AR
 TG
 Pd
-aI
+az
 wX
 vp
 wS
