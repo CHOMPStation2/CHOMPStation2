@@ -1,4 +1,4 @@
-#if !defined(CITESTING) && !defined(SPACEMAN_DMM)
+#if !defined(CITESTING)
 
 /*********************/
 /* MAP SELECTION     */
