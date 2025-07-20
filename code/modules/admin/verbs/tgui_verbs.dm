@@ -9,7 +9,7 @@
 	var/list/modification_options = list(TGUI_VIEW_ATTACK_LOGS, TGUI_VIEW_DIALOG_LOGS, TGUI_RESIZE)
 
 
-	var/tgui_list_choice = tgui_input_list(usr, "Select the verb you would like to use with a tgui input","Choice", modification_options)
+	var/tgui_list_choice = tgui_input_list(src, "Select the verb you would like to use with a tgui input","Choice", modification_options)
 	if(!tgui_list_choice || tgui_list_choice == "Cancel")
 		return
 
@@ -18,12 +18,12 @@
 
 	switch(tgui_list_choice)
 		if(TGUI_VIEW_ATTACK_LOGS)
-			var/mob/living/L = tgui_input_list(usr, "Check a player's attack logs.", "Check Player Attack Logs", GLOB.mob_list)
+			var/mob/living/L = tgui_input_list(src, "Check a player's attack logs.", "Check Player Attack Logs", GLOB.mob_list)
 			show_cmd_admin_check_player_logs(L)
 		if(TGUI_VIEW_DIALOG_LOGS)
-			var/mob/living/L = tgui_input_list(usr, "Check a player's dialogue logs.", "Check Player Dialogue Logs", GLOB.mob_list)
+			var/mob/living/L = tgui_input_list(src, "Check a player's dialogue logs.", "Check Player Dialogue Logs", GLOB.mob_list)
 			show_cmd_admin_check_dialogue_logs(L)
 		if(TGUI_RESIZE)
-			var/mob/living/L = tgui_input_list(usr, "Resizes any living mob without any restrictions on size.", "Resize", GLOB.mob_list)
+			var/mob/living/L = tgui_input_list(src, "Resizes any living mob without any restrictions on size.", "Resize", GLOB.mob_list)
 			if(L)
 				do_resize(L)

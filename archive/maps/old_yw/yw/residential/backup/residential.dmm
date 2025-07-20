@@ -2724,7 +2724,7 @@
 	dir = 8
 	},
 /obj/machinery/embedded_controller/radio/airlock/docking_port{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "residential_shuttle_offsite";
 	pixel_y = 28
 	},
@@ -2743,7 +2743,7 @@
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 4;
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "specops_dock_pump"
 	},
 /obj/effect/map_helper/airlock/atmos/chamber_pump,

@@ -57,7 +57,7 @@
 "dQ" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 4;
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "expshuttle_vent"
 	},
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
@@ -118,7 +118,7 @@
 "hn" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 4;
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "expshuttle_vent"
 	},
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
@@ -138,7 +138,7 @@
 /obj/machinery/embedded_controller/radio/airlock/docking_port{
 	id_tag = "sdfc_dock_con2";
 	pixel_y = 24;
-	frequency = 1380
+	frequency = 1381
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/sdf_corvette2)
@@ -161,7 +161,7 @@
 "lI" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 8;
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "expshuttle_vent"
 	},
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
@@ -317,7 +317,7 @@
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 4;
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "expshuttle_vent"
 	},
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
@@ -383,7 +383,7 @@
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 8;
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "expshuttle_vent"
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -483,7 +483,7 @@
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 4;
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "expshuttle_vent"
 	},
 /obj/effect/map_helper/airlock/atmos/chamber_pump,

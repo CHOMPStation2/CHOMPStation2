@@ -645,7 +645,7 @@
 /area/space)
 "Pk" = (
 /obj/machinery/door/airlock/angled_tgmc/wide/generic{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "arrivals_shuttle_hatch";
 	locked = 1;
 	name = "Arrivals Tram"
@@ -794,7 +794,7 @@
 	dir = 9
 	},
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "arrivals_shuttle";
 	pixel_y = 25;
 	req_one_access = list(13);

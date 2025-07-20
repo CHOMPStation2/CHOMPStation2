@@ -1,6 +1,8 @@
 // Formerly /datum/shuttle/ferry/emergency
 /datum/shuttle/autodock/ferry/emergency
 	category = /datum/shuttle/autodock/ferry/emergency
+	var/frequency = 1381 // Why this frequency? BECAUSE! Thats what someone decided once.
+	var/datum/radio_frequency/radio_connection
 
 /datum/shuttle/autodock/ferry/emergency/New()
 	..()

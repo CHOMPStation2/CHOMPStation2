@@ -111,7 +111,7 @@
 /area/outpost/mining_main/belt_outpost/airlock)
 "ap" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	frequency = 2252;
+	frequency = 2253;
 	id_tag = "belt_airlock_vent"
 	},
 /obj/structure/grille,
@@ -336,14 +336,14 @@
 /area/outpost/mining_main/belt_outpost/airlock)
 "aS" = (
 /obj/machinery/airlock_sensor{
-	frequency = 2252;
+	frequency = 2253;
 	id_tag = "belt_miner_airlock_sensor";
 	pixel_x = 25;
 	pixel_y = -10
 	},
 /obj/machinery/embedded_controller/radio/airlock/airlock_controller{
 	cycle_to_external_air = 1;
-	frequency = 2252;
+	frequency = 2253;
 	id_tag = "belt_miner_airlock";
 	pixel_x = 25;
 	tag_airpump = "belt_airlock_vent";
@@ -373,7 +373,7 @@
 /obj/structure/grille,
 /obj/structure/railing,
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	frequency = 2252;
+	frequency = 2253;
 	id_tag = "belt_airlock_vent"
 	},
 /obj/structure/railing{
@@ -406,7 +406,7 @@
 	pixel_x = 0
 	},
 /obj/machinery/door/airlock/glass_external{
-	frequency = 2252;
+	frequency = 2253;
 	icon_state = "door_locked";
 	id_tag = "belt_outpost_airlock_inner";
 	locked = 1;
@@ -414,13 +414,13 @@
 	req_one_access = list(48)
 	},
 /obj/machinery/access_button/airlock_interior{
-	frequency = 2252;
+	frequency = 2253;
 	master_tag = "belt_miner_airlock";
 	pixel_y = -25;
 	req_one_access = list(48)
 	},
 /obj/machinery/access_button/airlock_interior{
-	frequency = 2252;
+	frequency = 2253;
 	master_tag = "belt_miner_airlock";
 	pixel_y = 25;
 	req_one_access = list(48)
@@ -532,7 +532,7 @@
 "bl" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 1;
-	frequency = 2252;
+	frequency = 2253;
 	id_tag = "belt_airlock_vent"
 	},
 /obj/structure/grille,
@@ -890,7 +890,7 @@
 /area/outpost/mining_main/belt_outpost/dorms)
 "bV" = (
 /obj/machinery/door/airlock/mining{
-	frequency = 1480;
+	frequency = 1481;
 	id_tag = "beltferry_belt_doors"
 	},
 /obj/machinery/door/firedoor,
@@ -1103,7 +1103,7 @@
 /area/mine/explored/belt_miner)
 "cq" = (
 /obj/machinery/door/airlock/glass_external{
-	frequency = 2252;
+	frequency = 2253;
 	icon_state = "door_locked";
 	id_tag = "belt_outpost_airlock_outer";
 	locked = 1;
@@ -1111,13 +1111,13 @@
 	req_one_access = list(48)
 	},
 /obj/machinery/access_button/airlock_exterior{
-	frequency = 2252;
+	frequency = 2253;
 	master_tag = "belt_miner_airlock";
 	pixel_y = -25;
 	req_one_access = list(48)
 	},
 /obj/machinery/access_button/airlock_exterior{
-	frequency = 2252;
+	frequency = 2253;
 	master_tag = "belt_miner_airlock";
 	pixel_y = 25;
 	req_one_access = list(48)
@@ -1894,7 +1894,7 @@
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 1;
-	frequency = 2252;
+	frequency = 2253;
 	id_tag = "belt_airlock_vent"
 	},
 /obj/structure/railing{
@@ -2398,7 +2398,7 @@
 /area/outpost/mining_main/belt_outpost/solars)
 "eV" = (
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1480;
+	frequency = 1481;
 	id_tag = "beltferry_beltpost";
 	name = "Belter Station Controller";
 	pixel_y = -25;
