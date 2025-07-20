@@ -33,8 +33,6 @@
 /datum/shuttle/autodock/ferry/arrivals/relicbase
 	var/tag_door_station = "arrivals_shuttle_hatch"
 	var/tag_door_offsite = "arrivals_shuttle_hatch"
-	var/frequency = 1380
-	var/datum/radio_frequency/radio_connection
 	move_direction = NORTH
 	shuttle_area = /area/shuttle/arrival/pre_game
 	var/base_turf = /turf/simulated/floor/reinforced

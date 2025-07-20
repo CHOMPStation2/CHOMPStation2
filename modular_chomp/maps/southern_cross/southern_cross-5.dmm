@@ -808,6 +808,10 @@
 	},
 /turf/simulated/floor/wood,
 /area/surface/outpost/main/dorms/dorm_2)
+"bA" = (
+/obj/effect/landmark/start/ghost_roles,
+/turf/simulated/floor/outdoors/grass/sif/forest/planetuse,
+/area/surface/outside/plains/normal)
 "bB" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -818,6 +822,10 @@
 /obj/machinery/hologram/holopad,
 /turf/simulated/floor/wood,
 /area/surface/outpost/civilian/sauna)
+"bC" = (
+/obj/effect/landmark/start/ghost_roles,
+/turf/simulated/floor/outdoors/grass/sif/planetuse,
+/area/surface/outside/plains/normal)
 "bD" = (
 /obj/structure/bed/chair/comfy/black{
 	dir = 1
@@ -835,6 +843,10 @@
 /obj/item/extinguisher/mini,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/mining_main)
+"bF" = (
+/obj/effect/landmark/start/ghost_roles,
+/turf/simulated/floor/outdoors/dirt/sif/planetuse,
+/area/surface/outside/plains/normal)
 "bG" = (
 /obj/effect/floor_decal/industrial/outline/red,
 /turf/simulated/floor/tiled/monotile,
@@ -3177,7 +3189,7 @@
 	},
 /obj/machinery/atmospherics/unary/outlet_injector{
 	dir = 1;
-	frequency = 1438;
+	frequency = 1433;
 	id = "rust_cooling_in";
 	name = "Coolant Injector";
 	pixel_y = 1;
@@ -4474,7 +4486,7 @@
 	dir = 6
 	},
 /obj/machinery/air_sensor{
-	frequency = 1438;
+	frequency = 1433;
 	id_tag = "rustengine_sensor";
 	output = 63
 	},
@@ -19143,7 +19155,7 @@
 	dir = 1;
 	external_pressure_bound = 100;
 	external_pressure_bound_default = 0;
-	frequency = 1438;
+	frequency = 1433;
 	icon_state = "map_vent_in";
 	id_tag = "rust_cooling_out";
 	initialize_directions = 1;
@@ -29066,7 +29078,7 @@ yj
 yj
 yj
 yj
-yj
+bA
 XE
 XE
 XE
@@ -43777,7 +43789,7 @@ yj
 yj
 yj
 yj
-yj
+bA
 XE
 Vg
 "}
@@ -67770,7 +67782,7 @@ yT
 yT
 Ey
 Ey
-Ey
+bC
 bv
 bv
 rV
@@ -88923,7 +88935,7 @@ yT
 yT
 yT
 yT
-yT
+bF
 XE
 XE
 XE

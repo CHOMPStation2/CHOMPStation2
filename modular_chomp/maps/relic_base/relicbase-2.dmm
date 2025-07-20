@@ -4409,7 +4409,7 @@
 /area/hallway/primary/firstdeck/auxdockaft/simulated_caves)
 "eFF" = (
 /obj/machinery/embedded_controller/radio/airlock/docking_port_multi{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "arrivals_dock_south_airlock";
 	master_tag = "arrivals_dock";
 	pixel_y = 24;
@@ -12069,7 +12069,7 @@
 /obj/effect/floor_decal/rust,
 /obj/machinery/embedded_controller/radio/airlock/docking_port_multi{
 	dir = 4;
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "escape_dock_ssouth_airlock";
 	master_tag = "escape_dock";
 	req_one_access = list(13);
@@ -16438,7 +16438,7 @@
 	id = "tox_airlock_pump"
 	},
 /obj/machinery/air_sensor{
-	frequency = 1430;
+	frequency = 1431;
 	id_tag = "toxins_mixing_interior";
 	output = 63;
 	pixel_x = -8;
@@ -16460,7 +16460,7 @@
 /area/rnd/mixing/simulated_caves)
 "vuJ" = (
 /obj/machinery/air_sensor{
-	frequency = 1430;
+	frequency = 1431;
 	id_tag = "toxins_mixing_exterior";
 	output = 63
 	},
@@ -16692,7 +16692,7 @@
 "vQm" = (
 /obj/machinery/computer/general_air_control{
 	dir = 1;
-	frequency = 1430;
+	frequency = 1431;
 	name = "Mixing Chamber Monitor";
 	sensors = list("toxins_mixing_exterior" = "Mixing Chamber - Exterior", "toxins_mixing_interior" = "Mixing Chamber - Interior")
 	},

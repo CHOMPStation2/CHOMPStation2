@@ -10043,7 +10043,7 @@
 "aqw" = (
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/glass_research{
-	frequency = 1392;
+	frequency = 1393;
 	icon_state = "door_locked";
 	id_tag = "xenobiology_north_airlock_inner";
 	locked = 1;
@@ -10053,7 +10053,7 @@
 	dir = 1
 	},
 /obj/machinery/access_button/airlock_interior{
-	frequency = 1392;
+	frequency = 1393;
 	master_tag = "xenobiology_north_airlock_control";
 	name = "Xenobiology Access Control";
 	pixel_y = 24;
@@ -10488,7 +10488,7 @@
 	},
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/glass_research{
-	frequency = 1392;
+	frequency = 1393;
 	icon_state = "door_locked";
 	id_tag = "xenobiology_north_airlock_outer";
 	locked = 1;
@@ -10496,7 +10496,7 @@
 	},
 /obj/machinery/access_button/airlock_interior{
 	command = "cycle_exterior";
-	frequency = 1392;
+	frequency = 1393;
 	master_tag = "xenobiology_north_airlock_control";
 	name = "Xenobiology Access Control";
 	pixel_y = 24;
@@ -16585,7 +16585,7 @@
 /obj/machinery/door/firedoor/glass,
 /obj/effect/floor_decal/borderfloorblack,
 /obj/machinery/door/airlock/glass_research{
-	frequency = 1392;
+	frequency = 1393;
 	icon_state = "door_locked";
 	id_tag = "xenobiology_north_airlock_inner";
 	locked = 1;
@@ -16598,7 +16598,7 @@
 	dir = 4
 	},
 /obj/machinery/access_button/airlock_interior{
-	frequency = 1392;
+	frequency = 1393;
 	master_tag = "xenobiology_north_airlock_control";
 	name = "Xenobiology Access Control";
 	pixel_y = -24;
@@ -16838,7 +16838,7 @@
 	icon_state = "1-4"
 	},
 /obj/machinery/embedded_controller/radio/airlock/access_controller{
-	frequency = 1392;
+	frequency = 1393;
 	id_tag = "xenobiology_north_airlock_control";
 	name = "Xenobiology Access Controller";
 	pixel_y = -24;
@@ -18601,7 +18601,7 @@
 	},
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/glass_research{
-	frequency = 1392;
+	frequency = 1393;
 	icon_state = "door_locked";
 	id_tag = "xenobiology_north_airlock_outer";
 	locked = 1;
@@ -18618,7 +18618,7 @@
 	},
 /obj/machinery/access_button/airlock_interior{
 	command = "cycle_exterior";
-	frequency = 1392;
+	frequency = 1393;
 	master_tag = "xenobiology_north_airlock_control";
 	name = "Xenobiology Access Control";
 	pixel_y = -24;
@@ -19220,7 +19220,7 @@
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/research{
 	autoclose = 0;
-	frequency = 1382;
+	frequency = 1383;
 	icon_state = "door_locked";
 	id_tag = "xenobiology_airlock_outer";
 	locked = 1;
@@ -19229,7 +19229,7 @@
 	},
 /obj/machinery/access_button/airlock_interior{
 	command = "cycle_exterior";
-	frequency = 1382;
+	frequency = 1383;
 	master_tag = "xenobiology_airlock_control";
 	name = "Xenobiology Access Control";
 	pixel_x = -24;
@@ -19279,7 +19279,7 @@
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/research{
 	autoclose = 0;
-	frequency = 1382;
+	frequency = 1383;
 	icon_state = "door_locked";
 	id_tag = "xenobiology_airlock_outer";
 	locked = 1;
@@ -19288,7 +19288,7 @@
 	},
 /obj/machinery/access_button/airlock_interior{
 	command = "cycle_exterior";
-	frequency = 1382;
+	frequency = 1383;
 	master_tag = "xenobiology_airlock_control";
 	name = "Xenobiology Access Control";
 	pixel_x = 24;
@@ -20433,7 +20433,7 @@
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/research{
 	autoclose = 0;
-	frequency = 1382;
+	frequency = 1383;
 	icon_state = "door_locked";
 	id_tag = "xenobiology_airlock_inner";
 	locked = 1;
@@ -20441,7 +20441,7 @@
 	req_one_access = list(47,55)
 	},
 /obj/machinery/access_button/airlock_interior{
-	frequency = 1382;
+	frequency = 1383;
 	master_tag = "xenobiology_airlock_control";
 	name = "Xenobiology Access Control";
 	pixel_x = -24;
@@ -20454,7 +20454,7 @@
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/research{
 	autoclose = 0;
-	frequency = 1382;
+	frequency = 1383;
 	icon_state = "door_locked";
 	id_tag = "xenobiology_airlock_inner";
 	locked = 1;
@@ -20462,7 +20462,7 @@
 	req_one_access = list(47,55)
 	},
 /obj/machinery/access_button/airlock_interior{
-	frequency = 1382;
+	frequency = 1383;
 	master_tag = "xenobiology_airlock_control";
 	name = "Xenobiology Access Control";
 	pixel_x = 24;
@@ -20830,7 +20830,7 @@
 	},
 /obj/effect/floor_decal/industrial/warning,
 /obj/machinery/embedded_controller/radio/airlock/access_controller{
-	frequency = 1382;
+	frequency = 1383;
 	id_tag = "xenobiology_airlock_control";
 	name = "Xenobiology Access Controller";
 	pixel_x = 25;
@@ -22377,13 +22377,13 @@
 	dir = 4
 	},
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "tether_pad_airlock";
 	pixel_y = 28;
 	tag_door = "tether_pad_hatch"
 	},
 /obj/machinery/airlock_sensor{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "tether_pad_sensor";
 	pixel_x = -11;
 	pixel_y = 28
@@ -22916,7 +22916,7 @@
 	dir = 8
 	},
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "tether_shuttle";
 	pixel_x = 25;
 	tag_door = "tether_shuttle_hatch"
@@ -23048,7 +23048,7 @@
 /area/tether/surfacebase/medical/uppersouthstairwell)
 "aNz" = (
 /obj/machinery/door/airlock/glass_external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	id_tag = "tether_shuttle_hatch";
 	locked = 1;
@@ -31338,7 +31338,7 @@
 	},
 /obj/item/radio/intercom{
 	dir = 4;
-	frequency = 1532;
+	frequency = 1533;
 	name = "Stagehand Speaker";
 	pixel_x = 24;
 	pixel_y = 24
@@ -31424,7 +31424,7 @@
 	},
 /obj/item/radio/intercom{
 	dir = 8;
-	frequency = 1532;
+	frequency = 1533;
 	name = "Stagehand Mic";
 	pixel_x = -24
 	},
@@ -31715,7 +31715,7 @@
 "bdT" = (
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
 	dir = 8;
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "tourbus_docker";
 	pixel_x = 28
 	},
@@ -36226,7 +36226,7 @@
 	dir = 8
 	},
 /obj/machinery/door/airlock/glass_external/public{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "tourbus_right"
 	},
 /obj/structure/cable/orange{
@@ -37558,7 +37558,7 @@
 /obj/effect/floor_decal/borderfloorblack,
 /obj/effect/floor_decal/industrial/danger,
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "tourbus_pad";
 	pixel_y = 24
 	},
@@ -38417,7 +38417,7 @@
 /obj/machinery/computer/general_air_control/fuel_injection{
 	device_tag = "riot_inject";
 	dir = 8;
-	frequency = 1442;
+	frequency = 1443;
 	name = "Riot Control Console"
 	},
 /turf/simulated/floor/wood,

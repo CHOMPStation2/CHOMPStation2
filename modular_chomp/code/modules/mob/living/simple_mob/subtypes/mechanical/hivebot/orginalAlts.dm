@@ -24,6 +24,7 @@
 	loot_list = list(/obj/structure/foamedmetal = 100
 			)
 	pass_flags = PASSTABLE
+	hovering = TRUE
 	movement_cooldown = -3
 	icon_state = "janitor"
 	icon_living = "janitor"
@@ -39,7 +40,7 @@
 	maxHealth = 500
 	health = 500
 	wreckage = /obj/item/prop/tyrlore/reddisc
-	ai_holder_type = /datum/ai_holder/simple_mob/intentional/three_phases/nomove
+	ai_holder_type = /datum/ai_holder/simple_mob/intentional/three_phases
 	anchored = 1
 	armor = list(melee = 40, bullet = 40, laser = 80, energy = 80, bomb = 50, bio = 100, rad = 100)
 
@@ -58,7 +59,7 @@
 		attackcycle = 0
 	else if(attackcycle == 3)
 		specialattackprojectile = /obj/item/projectile/energy/spikeenergy_ball/boss
-		addtimer(CALLBACK(src, PROC_REF(dual_spin), A, 4), 1 SECOND, TIMER_DELETE_ME)
+		addtimer(CALLBACK(src, PROC_REF(dual_spin), A, 4, 25), 1 SECOND, TIMER_DELETE_ME)
 		attackcycle = 0
 	else if(attackcycle == 4)
 		specialattackprojectile = /obj/item/projectile/energy/spikeenergy_ball/boss
@@ -124,7 +125,7 @@
 		specialattackprojectile = /obj/item/projectile/energy/wallbreaker/boss
 		rng_cycle = rand(1,4)
 		say("PROTOCOL: PRECISION. SWEEP.")
-		addtimer(CALLBACK(src, PROC_REF(dual_spin), A, rng_cycle), 2 SECONDS, TIMER_DELETE_ME)
+		addtimer(CALLBACK(src, PROC_REF(dual_spin), A, rng_cycle, 25), 2 SECONDS, TIMER_DELETE_ME)
 		attackcycle = 0
 	else if(attackcycle == 3)
 		specialattackprojectile = /obj/item/projectile/energy/lightingspark/nanoweave

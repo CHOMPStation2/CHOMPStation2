@@ -3653,7 +3653,7 @@
 "hW" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 8;
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "casino2_pump"
 	},
 /obj/machinery/light/small{
@@ -5501,7 +5501,7 @@
 "lW" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 8;
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "casino1_pump"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -11093,7 +11093,7 @@
 "SF" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 8;
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "casino1_pump"
 	},
 /obj/machinery/light/small{
@@ -11164,7 +11164,7 @@
 "Tr" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 8;
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "casino2_pump"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,

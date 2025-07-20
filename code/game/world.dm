@@ -8,7 +8,6 @@ GLOBAL_VAR(restart_counter)
 	rollover_safety_date = world.realtime - world.timeofday // 00:00 today (ish, since floating point error with world.realtime) of today
 	to_world_log("Map Loading Complete")
 	//logs
-	//VOREStation Edit Start
 	GLOB.log_directory += time2text(world.realtime, "YYYY/MM-Month/DD-Day/round-hh-mm-ss")
 	GLOB.diary = start_log("[GLOB.log_directory].log")
 	GLOB.href_logfile = start_log("[GLOB.log_directory]-hrefs.htm")
@@ -16,7 +15,6 @@ GLOBAL_VAR(restart_counter)
 	GLOB.sql_error_log = start_log("[GLOB.log_directory]-sql-error.log")
 	GLOB.query_debug_log = start_log("[GLOB.log_directory]-query-debug.log")
 	GLOB.debug_log = start_log("[GLOB.log_directory]-debug.log")
-	//VOREStation Edit End
 
 	var/latest_changelog = file("[global.config.directory]/../html/changelogs_ch/archive/" + time2text(world.timeofday, "YYYY-MM") + ".yml") // CHOMPEdit - changelogs_ch
 	GLOB.changelog_hash = fexists(latest_changelog) ? md5(latest_changelog) : "" //for telling if the changelog has changed recently
@@ -146,7 +144,7 @@ var/world_topic_spam_protect_time = world.timeofday
 
 	else if(T == "players")
 		var/n = 0
-		for(var/mob/M in player_list)
+		for(var/mob/M in GLOB.player_list)
 			if(M.client)
 				n++
 		return n
@@ -229,7 +227,7 @@ var/world_topic_spam_protect_time = world.timeofday
 
 			var/department = 0
 			var/active = 0	//CHOMPStation Edit Begin
-			for(var/mob/M in player_list)
+			for(var/mob/M in GLOB.player_list)
 				if(M.real_name == name && M.client && M.client.inactivity <= 10 MINUTES)
 					active = 1
 					break
@@ -251,7 +249,7 @@ var/world_topic_spam_protect_time = world.timeofday
 			var/real_rank = make_list_rank(t.fields["real_rank"])
 
 			var/active = 0	//CHOMPStation Edit Begin
-			for(var/mob/M in player_list)
+			for(var/mob/M in GLOB.player_list)
 				if(M.real_name == name && M.client && M.client.inactivity <= 10 MINUTES)
 					active = 1
 					break
@@ -264,12 +262,12 @@ var/world_topic_spam_protect_time = world.timeofday
 				positions["off"][name] = list(rank,isactive)
 
 		// Synthetics don't have actual records, so we will pull them from here.
-		for(var/mob/living/silicon/ai/ai in mob_list)
+		for(var/mob/living/silicon/ai/ai in GLOB.mob_list)
 			var/isactive = (ai.client && ai.client.inactivity <= 10 MINUTES) ? "Active" : "Inactive"
 			if(!positions["bot"])
 				positions["bot"] = list()
 			positions["bot"][ai.name] = list("Artificial Intelligence",isactive)
-		for(var/mob/living/silicon/robot/robot in mob_list)
+		for(var/mob/living/silicon/robot/robot in GLOB.mob_list)
 			// No combat/syndicate cyborgs, no drones, and no AI shells.
 			var/isactive = (robot.client && robot.client.inactivity <= 10 MINUTES) ? "Active" : "Inactive"
 			if(robot.shell)
@@ -480,7 +478,7 @@ var/world_topic_spam_protect_time = world.timeofday
 		features += "AI allowed"
 
 	var/n = 0
-	for (var/mob/M in player_list)
+	for (var/mob/M in GLOB.player_list)
 		if (M.client)
 			n++
 

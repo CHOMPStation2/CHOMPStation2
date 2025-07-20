@@ -53,7 +53,7 @@
 	Log(message, message_title)
 
 /datum/announcement/proc/Message(message as text, message_title as text, var/list/zlevels)
-	for(var/mob/M in player_list)
+	for(var/mob/M in GLOB.player_list)
 		if(!isnewplayer(M) && !isdeaf(M))
 			to_chat(M, "<h2 class='alert'>[title]</h2>")
 			to_chat(M, span_alert("[message]"))
@@ -79,7 +79,7 @@
 
 	command += "<br>[span_alert(message)]<br>"
 	command += "<br>"
-	for(var/mob/M in player_list)
+	for(var/mob/M in GLOB.player_list)
 		if(zlevels && !(get_z(M) in zlevels))
 			continue
 		if(!isnewplayer(M) && !isdeaf(M))
@@ -110,7 +110,7 @@
 	if(!message_sound)
 		return
 
-	for(var/mob/M in player_list)
+	for(var/mob/M in GLOB.player_list)
 		if(zlevels && !(M.z in zlevels))
 			continue
 		if(!isnewplayer(M) && !isdeaf(M))

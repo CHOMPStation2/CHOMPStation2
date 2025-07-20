@@ -346,7 +346,7 @@
 			if(M.read_preference(/datum/preference/toggle/subtle_sounds))
 				if(voice_sounds_list)	//CHOMPEdit, changes subtle emote sound to use mob voice instead
 					M << sound(pick(voice_sounds_list), volume = 25)
-		for (var/mob/G in player_list)
+		for (var/mob/G in GLOB.player_list)
 			if (isnewplayer(G))
 				continue
 			else if(isobserver(G) &&  G.client?.prefs?.read_preference(/datum/preference/toggle/ghost_ears) && \
@@ -451,7 +451,7 @@
 			if(M.read_preference(/datum/preference/toggle/subtle_sounds))
 				if(voice_sounds_list)	//CHOMPEdit, changes subtle emote sound to use mob voice instead
 					M << sound(pick(voice_sounds_list), volume = 25)
-		for (var/mob/G in player_list)
+		for (var/mob/G in GLOB.player_list)
 			if (isnewplayer(G))
 				continue
 			else if(isobserver(G) && G.client?.prefs?.read_preference(/datum/preference/toggle/ghost_ears) && \

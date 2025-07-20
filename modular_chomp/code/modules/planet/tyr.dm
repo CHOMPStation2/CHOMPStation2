@@ -12,7 +12,7 @@ var/datum/planet/tyr/planet_tyr = null
 
 /datum/planet/tyr/New()
 	..()
-	planet_thor = src
+	planet_tyr = src
 	weather_holder = new /datum/weather_holder/tyr(src)
 
 /datum/planet/tyr/update_sun()
@@ -392,6 +392,23 @@ var/datum/planet/tyr/planet_tyr = null
 /turf/unsimulated/wall/planetary/normal/tyr
 	name = "vast desert"
 	alpha = 0
+
+/turf/simulated/tyracid
+	name = "fuel"
+	icon = 'icons/goonstation/turf/timeholefull.dmi'
+	icon_state = "timehole"
+	color = "#FF3100"
+	var/acidlevel = 1
+
+/turf/simulated/tyracid/Entered(atom/movable/AM, atom/oldloc)
+	if(isliving(AM))
+		var/mob/living/L = AM
+		if(L.hovering || L.flying || L.throwing || L.is_incorporeal())
+			return 0
+		acidlevel *= 1 - L.get_water_protection()
+		if(acidlevel > 0)
+			L.adjustFireLoss(acidlevel)
+
 
 /*
 WEATHER_BLIZZARD	= new (),

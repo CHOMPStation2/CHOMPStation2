@@ -369,7 +369,7 @@
 "Tw" = (
 /obj/random/junk,
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "mining_dock_1";
 	name = "shuttle bay controller";
 	pixel_y = -26;
@@ -388,7 +388,7 @@
 /obj/item/banner/virgov,
 /obj/machinery/light/small,
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "mining_dock_3";
 	name = "shuttle bay controller";
 	pixel_y = -26;
@@ -399,7 +399,7 @@
 "UN" = (
 /obj/machinery/space_heater,
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "mining_dock_2";
 	name = "shuttle bay controller";
 	pixel_y = -26;

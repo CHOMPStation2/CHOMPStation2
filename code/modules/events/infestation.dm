@@ -97,7 +97,7 @@
 
 	/* //Chomp REMOVE - in upstream file, not used here
 	// Check if any landmarks exist!
-	for(var/obj/effect/landmark/C in landmarks_list)
+	for(var/obj/effect/landmark/C in GLOB.landmarks_list)
 		if(C.name == "verminstart")
 			spawn_locations.Add(C.loc)
 	*/ //Chomp REMOVE END
