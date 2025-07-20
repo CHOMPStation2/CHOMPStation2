@@ -79,7 +79,6 @@ GLOBAL_LIST_INIT(maint_mob_pred_options, list(
 	"Statue of Temptation" = /mob/living/simple_mob/vore/devil,
 	"Meowl" = /mob/living/simple_mob/vore/meowl,
 	"Synx" = /mob/living/simple_mob/animal/synx,
-	"SCP-939" = /mob/living/simple_mob/animal/synx/scp,
 	"Reindeer" = /mob/living/simple_mob/vore/reindeer,
 	"Lion/Lioness" = /mob/living/simple_mob/vore/retaliate/lion,
 	"Abyss Leaper" = /mob/living/simple_mob/vore/vore_hostile/leaper,

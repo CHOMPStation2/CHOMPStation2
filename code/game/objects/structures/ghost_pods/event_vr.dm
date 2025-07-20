@@ -15,7 +15,7 @@
 	invisibility = INVISIBILITY_OBSERVER
 	spawn_active = TRUE
 	var/announce_prob = 35
-	/* //Chompstation REMOVAL - Use Global List maint_mob_pred_options for this.
+	/* // CHOMPRemove Start.
 	var/list/possible_mobs = list("Rabbit" = /mob/living/simple_mob/vore/rabbit,
 								  "Red Panda" = /mob/living/simple_mob/vore/redpanda,
 								  "Fennec" = /mob/living/simple_mob/vore/fennec,
@@ -89,7 +89,7 @@
 								  "Statue of Temptation" = /mob/living/simple_mob/vore/devil
 								  )
 
-	*/
+	*/ //CHOMPRemove End
 
 /obj/structure/ghost_pod/ghost_activated/maintpred/create_occupant(var/mob/M)
 	..()
@@ -106,7 +106,7 @@
 		return
 
 	while(finalized != "Yes" && M.client)
-		choice = tgui_input_list(M, "What type of predator do you want to play as?", "Maintpred Choice", GLOB.maint_mob_pred_options) //CHOMPStation Edit - Use Global List - ORIGINAL - tgui_input_list(M, "What type of predator do you want to play as?", "Maintpred Choice", possible_mobs)
+		choice = tgui_input_list(M, "What type of predator do you want to play as?", "Maintpred Choice", GLOB.maint_mob_pred_options) //CHOMPStation Edit
 		if(!choice)	//We probably pushed the cancel button on the mob selection. Let's just put the ghost pod back in the list.
 			to_chat(M, span_notice("No mob selected, cancelling."))
 			reset_ghostpod()
@@ -119,7 +119,7 @@
 		reset_ghostpod()
 		return
 
-	var/mobtype = GLOB.maint_mob_pred_options[choice] //CHOMPStation Edit - Use Global List - ORIGINAL - var/mobtype = possible_mobs[choice]
+	var/mobtype = GLOB.maint_mob_pred_options[choice] //CHOMPStation Edit
 	var/mob/living/simple_mob/newPred = new mobtype(get_turf(src))
 	qdel(newPred.ai_holder)
 	newPred.ai_holder = null
