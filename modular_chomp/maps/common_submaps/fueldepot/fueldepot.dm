@@ -42,7 +42,6 @@
 	icon_state = "dark"
 	lightswitch = TRUE
 
-
 // -- Landmarks -- //
 
 /obj/effect/shuttle_landmark/premade/fueldepot/east
