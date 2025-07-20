@@ -11,6 +11,7 @@
 	#include "relicbase_areas.dm"
 	#include "relicbase_presets.dm"
 	#include "turfs/outdoors.dm"
+	#include "relicbase_shuttles.dm"
 
 
 	#include "relicbase-1.dmm" //Catacombs - Z1
