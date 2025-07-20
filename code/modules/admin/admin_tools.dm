@@ -47,7 +47,6 @@
 	set desc = "Check a player's dialogue logs."
 	show_cmd_admin_check_dialogue_logs(M)
 
-/client/proc/show_cmd_admin_check_dialogue_logs(mob/living/M)
 //Views specific dialogue logs belonging to one player.
 /client/proc/show_cmd_admin_check_dialogue_logs(mob/living/M)
 	var/dat = span_bold("[M]'s Dialogue Log:<HR>")
