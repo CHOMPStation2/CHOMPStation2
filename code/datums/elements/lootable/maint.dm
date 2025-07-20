@@ -12,6 +12,7 @@
 		/obj/item/cell,
 		/obj/item/cell/device,
 		/obj/item/clothing/mask/gas,
+		/obj/item/clothing/mask/gas/clear, // CHOMPAdd
 		/obj/item/clothing/mask/gas/half,
 		/obj/item/clothing/mask/breath,
 		/obj/item/reagent_containers/glass/rag,

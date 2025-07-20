@@ -34,7 +34,7 @@ GLOBAL_LIST_INIT(unique_gamma_loot,list(\
 	UnregisterSignal(target, COMSIG_LOOT_REWARD)
 
 /// Calculates and drops loot, the source's turf is where it will be dropped, L is the searching mob, and searched_by is a passed list for storing who has searched a loot pile.
-/datum/element/lootable/proc/loot(atom/source,mob/living/L,var/list/searched_by)
+/datum/element/lootable/proc/loot(atom/source,mob/living/L,var/list/searched_by, wake_chance)
 	SIGNAL_HANDLER
 	// The loot's all gone.
 	if(loot_depletion && loot_left <= 0)
