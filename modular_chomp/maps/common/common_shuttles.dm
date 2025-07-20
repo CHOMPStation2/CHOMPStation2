@@ -428,6 +428,8 @@ ESCAPE_POD(14)
 	landmark_station = "arrivals_station"
 	docking_controller_tag = "arrivals_shuttle"
 	move_time = SHUTTLE_TRANSIT_DURATION_RETURN
+	var/frequency = 1381
+	var/datum/radio_frequency/radio_connection
 
 /datum/shuttle/autodock/ferry/arrivals/relicbase/New()
 	radio_connection = radio_controller.add_object(src, frequency, null)
