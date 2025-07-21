@@ -47,7 +47,7 @@ const SeedStatus = (props) => {
           <LabeledList.Item label="Name">{seedname}</LabeledList.Item>
           {health < 100 ? (
             <LabeledList.Item label="Genetic Integrity">
-              {100 - health + '%'}
+              {`${100 - health}%`}
             </LabeledList.Item>
           ) : (
             <LabeledList.Item label="Genetic Integrity">
@@ -119,7 +119,7 @@ const BiochemEditor = (props) => {
     <LabeledList>
       {health < 100 ? (
         <LabeledList.Item label="Genetic Integrity">
-          {100 - health + '%'}
+          {`${100 - health}%`}
         </LabeledList.Item>
       ) : (
         <LabeledList.Item label="Genetic Integrity">
