@@ -1714,7 +1714,7 @@
 /turf/simulated/shuttle/floor/white,
 /area/vr/powered/cult)
 "bzc" = (
-/mob/living/simple_mob/animal/passive/raccoon_ch,
+/mob/living/simple_mob/animal/passive/raccoon,
 /turf/simulated/floor/outdoors/grass/heavy/thor,
 /area/vr/outdoors/powered)
 "bzi" = (
@@ -10999,7 +10999,7 @@
 /turf/simulated/floor/bmarble,
 /area/vr/powered/mall)
 "jnx" = (
-/mob/living/simple_mob/animal/passive/raccoon_ch,
+/mob/living/simple_mob/animal/passive/raccoon,
 /turf/simulated/floor/tiled/white,
 /area/vr/powered)
 "jnE" = (

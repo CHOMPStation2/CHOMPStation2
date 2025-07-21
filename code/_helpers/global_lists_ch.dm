@@ -5,7 +5,7 @@ GLOBAL_LIST_INIT(maint_mob_pred_options, list(
 	"Fennix" = /mob/living/simple_mob/vore/fennix,
 	"Fox" = /mob/living/simple_mob/animal/passive/fox,
 	"Syndi-Fox" = /mob/living/simple_mob/animal/passive/fox/syndicate,
-	"Raccoon" = /mob/living/simple_mob/animal/passive/raccoon_ch,
+	"Raccoon" = /mob/living/simple_mob/animal/passive/raccoon,
 	"Cat" = /mob/living/simple_mob/animal/passive/cat,
 	"Space Bumblebee" = /mob/living/simple_mob/vore/bee,
 	"Space Bear" = /mob/living/simple_mob/animal/space/bear,

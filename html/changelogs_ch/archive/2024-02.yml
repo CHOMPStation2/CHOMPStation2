@@ -1,302 +1,330 @@
 2024-02-01:
   Aroliacue:
-  - bugfix: Corrected a misplaced chompedit that removed code necessary for cyborgs
-      to navigate in space.
+    - bugfix:
+        Corrected a misplaced chompedit that removed code necessary for cyborgs
+        to navigate in space.
   FluffMedic:
-  - rscadd: A New gateway
-  - rscadd: Strange random bits to xenobio
-  - bugfix: teshari rigsuits sprites work for the precursor, and aegis rigsuits
-  - rscadd: New vault and maintence
+    - rscadd: A New gateway
+    - rscadd: Strange random bits to xenobio
+    - bugfix: teshari rigsuits sprites work for the precursor, and aegis rigsuits
+    - rscadd: New vault and maintence
   Kashargul:
-  - bugfix: '"Transfer to Shell" AI verb'
+    - bugfix: '"Transfer to Shell" AI verb'
   Missile597:
-  - rscadd: Cinnamon seeds added to the seed storages in garden and xenobotany
-  - rscadd: Added emergency shutters that were missing on the south part of deck 1
-  - rscdel: Removed two shutter doors in the dorms corridor that were cutting off
-      certain areas from a scrubber or a pump when closed due to an alarm
-  - qol: Moved a space heater that was blocking a trash pile
-  - bugfix: Fixed the airlock on the Ninja shuttle so the airlock helper doesn't panic
-      when loading up the round. Also moved the button so that it doesn't get left
-      behind when the shuttle jumps (not that it gets used)
+    - rscadd: Cinnamon seeds added to the seed storages in garden and xenobotany
+    - rscadd: Added emergency shutters that were missing on the south part of deck 1
+    - rscdel:
+        Removed two shutter doors in the dorms corridor that were cutting off
+        certain areas from a scrubber or a pump when closed due to an alarm
+    - qol: Moved a space heater that was blocking a trash pile
+    - bugfix:
+        Fixed the airlock on the Ninja shuttle so the airlock helper doesn't panic
+        when loading up the round. Also moved the button so that it doesn't get left
+        behind when the shuttle jumps (not that it gets used)
 2024-02-02:
   FluffMedic:
-  - bugfix: adds a missing wire
+    - bugfix: adds a missing wire
   Upstream:
-  - rscadd: Added Vertical Nom, submit to prey and dominate prey verbs to borgs
+    - rscadd: Added Vertical Nom, submit to prey and dominate prey verbs to borgs
 2024-02-03:
   FluffMedic:
-  - bugfix: walls in a gateway being the wrong type
-  - bugfix: Missing sprites for a mob
-  - bugfix: Adds a default set of sprites for a gun
+    - bugfix: walls in a gateway being the wrong type
+    - bugfix: Missing sprites for a mob
+    - bugfix: Adds a default set of sprites for a gun
   Fracshun:
-  - rscadd: Mind Binder can now target gargoyles in their stone form
-  - rscadd: Renaming a plushie also updates the name of the one turned into it
-  - bugfix: Auto resleever can now properly be used after being destroyed as an item
-  - bugfix: Using the Mind Binder on a scooped mob now targets the mob in the holder,
-      not the holder item
-  - qol: Digesting as an item now lets you use the belly digested respawn timer
+    - rscadd: Mind Binder can now target gargoyles in their stone form
+    - rscadd: Renaming a plushie also updates the name of the one turned into it
+    - bugfix: Auto resleever can now properly be used after being destroyed as an item
+    - bugfix:
+        Using the Mind Binder on a scooped mob now targets the mob in the holder,
+        not the holder item
+    - qol: Digesting as an item now lets you use the belly digested respawn timer
   Kashargul:
-  - qol: girders now refund a stack of 2 steel sheets
+    - qol: girders now refund a stack of 2 steel sheets
 2024-02-05:
   FluffMedic:
-  - bugfix: Eclipse foes should all have some form of remains now
-  - bugfix: The hades mecha should now be buildable in it's gateway
-  - bugfix: the elemental gun should properly swap sprites and have the intended burst
-      for each mode
-  - bugfix: The crystal rigsuit should be using the proper sprites
+    - bugfix: Eclipse foes should all have some form of remains now
+    - bugfix: The hades mecha should now be buildable in it's gateway
+    - bugfix:
+        the elemental gun should properly swap sprites and have the intended burst
+        for each mode
+    - bugfix: The crystal rigsuit should be using the proper sprites
   Kashargul:
-  - rscadd: phasing vore pref
-  - rscadd: stripping pref for prey
-  - rscadd: apply liquids pref for prey
-  - rscadd: temporary/saving auto accept for pred / prey spwan, 0-30 seconds until
-      accept (requires tgui input framework enabled)
-  - rscadd: shadekin spont prey, phase into preds if prefs align
-  - qol: reworked the vorepanel settings page into categories
-  - qol: reworked the examine mechanical prefs to hide unapplyable subprefs
-  - qol: selective mode now shows current selection and is colour coded
-  - qol: reagents are now colour coded, neutral (blue), feedable (teal), beneficial
-      (green), acids (red), damaging to some livings (orange)
-  - qol: liquid splash message shows now always when liquids are inside the belly
-  - qol: liquid settings only apply when the main toggle is on now
-  - bugfix: heal belly pref will now prevent healing from healing bellies (and beneficial
-      reagents)
-  - bugfix: save prefs not showing on belly liquid changes
-  - bugfix: some prefs in examine mechanical prefs not updating without saving the
-      preferences
-  - bugfix: some prefs not saving / transferring properly
-  - bugfix: spawn as mob with vorebellies proc locking until a belly is selected
-  - bugfix: space cleaner reagent missing in selection
-  - bugfix: a runtime on robot liquid generation if no powercell is installed
-  - balance: simple mobs are no longer vore belly stripable
-  - balance: adds inaprovaline to the explohound sleeper
+    - rscadd: phasing vore pref
+    - rscadd: stripping pref for prey
+    - rscadd: apply liquids pref for prey
+    - rscadd:
+        temporary/saving auto accept for pred / prey spwan, 0-30 seconds until
+        accept (requires tgui input framework enabled)
+    - rscadd: shadekin spont prey, phase into preds if prefs align
+    - qol: reworked the vorepanel settings page into categories
+    - qol: reworked the examine mechanical prefs to hide unapplyable subprefs
+    - qol: selective mode now shows current selection and is colour coded
+    - qol:
+        reagents are now colour coded, neutral (blue), feedable (teal), beneficial
+        (green), acids (red), damaging to some livings (orange)
+    - qol: liquid splash message shows now always when liquids are inside the belly
+    - qol: liquid settings only apply when the main toggle is on now
+    - bugfix:
+        heal belly pref will now prevent healing from healing bellies (and beneficial
+        reagents)
+    - bugfix: save prefs not showing on belly liquid changes
+    - bugfix:
+        some prefs in examine mechanical prefs not updating without saving the
+        preferences
+    - bugfix: some prefs not saving / transferring properly
+    - bugfix: spawn as mob with vorebellies proc locking until a belly is selected
+    - bugfix: space cleaner reagent missing in selection
+    - bugfix: a runtime on robot liquid generation if no powercell is installed
+    - balance: simple mobs are no longer vore belly stripable
+    - balance: adds inaprovaline to the explohound sleeper
   Raeschen:
-  - rscadd: '''Hide'' neutral trait.'
+    - rscadd: "'Hide' neutral trait."
   TheCaramelion:
-  - bugfix: Virus event will no longer pick immune species
+    - bugfix: Virus event will no longer pick immune species
 2024-02-07:
   Raeschen:
-  - balance: global projectile speed increased from 3.0 to 1.5 (Lower is faster)
+    - balance: global projectile speed increased from 3.0 to 1.5 (Lower is faster)
 2024-02-08:
   HatArchAzel:
-  - rscadd: Two new markings, though they're just variants of each other to have support
-      for both plantigrade and digitigrade characters in case a plantigrade character
-      is using the model's torso/groin.
+    - rscadd:
+        Two new markings, though they're just variants of each other to have support
+        for both plantigrade and digitigrade characters in case a plantigrade character
+        is using the model's torso/groin.
   Kashargul:
-  - bugfix: strip preference should now save properly
+    - bugfix: strip preference should now save properly
   Upstream:
-  - rscadd: Added new 18th century outfit as requested by eldzen
-  - rscadd: ports fox ears from skyrat
-  - bugfix: fixes bonnie alt and bonnie alt long (i forgot to upload all their sprites
-      when i ported them oops)
+    - rscadd: Added new 18th century outfit as requested by eldzen
+    - rscadd: ports fox ears from skyrat
+    - bugfix:
+        fixes bonnie alt and bonnie alt long (i forgot to upload all their sprites
+        when i ported them oops)
 2024-02-09:
   Upstream:
-  - qol: Updated prettier version
-  - rscdel: Removed Internet Explorer 8 support
-  - qol: tgui 5.0 update
+    - qol: Updated prettier version
+    - rscdel: Removed Internet Explorer 8 support
+    - qol: tgui 5.0 update
 2024-02-10:
   FluffMedic:
-  - rscadd: The hidden slimes should be useable and benefical
+    - rscadd: The hidden slimes should be useable and benefical
   ItsSelis:
-  - qol: maps now also properly compile on change with the tool
-  - rscadd: added icon_cutter tool from tg
-  - bugfix: fixed some unicode encoding for some descriptions
+    - qol: maps now also properly compile on change with the tool
+    - rscadd: added icon_cutter tool from tg
+    - bugfix: fixed some unicode encoding for some descriptions
   Missile597:
-  - bugfix: Removed access levels from buttons and doors on SurvivalSecurity shelter,
-      allowing outsiders to access their own capsule
-  - bugfix: Fixed the starting atmos on the skipjack plating parts of the SurvivalSecurity
-      shelter so that it's breathable and not just Nitrogen.
+    - bugfix:
+        Removed access levels from buttons and doors on SurvivalSecurity shelter,
+        allowing outsiders to access their own capsule
+    - bugfix:
+        Fixed the starting atmos on the skipjack plating parts of the SurvivalSecurity
+        shelter so that it's breathable and not just Nitrogen.
   Raeschen:
-  - balance: Shadekin HP nerfs (Per eye color)
-  - balance: Bluespace crystals dephase shadekin that step on them
-  - balance: Bluespace crystals will dephase shadekin in a 3 tile radius when thrown.
+    - balance: Shadekin HP nerfs (Per eye color)
+    - balance: Bluespace crystals dephase shadekin that step on them
+    - balance: Bluespace crystals will dephase shadekin in a 3 tile radius when thrown.
   TheCaramelion:
-  - rscdel: Removed "Viral Infection" from the rotation.
-  - rscadd: Added "Infected Room" to the rotation.
-  - code_imp: event_manager.ch should be easier to read now.
-  - bugfix: Blood, vomit and mucus containing viruses will now spread it.
+    - rscdel: Removed "Viral Infection" from the rotation.
+    - rscadd: Added "Infected Room" to the rotation.
+    - code_imp: event_manager.ch should be easier to read now.
+    - bugfix: Blood, vomit and mucus containing viruses will now spread it.
   WolvesAndOwls:
-  - rscadd: Mice are now ghostpods
+    - rscadd: Mice are now ghostpods
   cadyn:
-  - bugfix: fixed horrible awful code for mob spawners
+    - bugfix: fixed horrible awful code for mob spawners
 2024-02-11:
   Kashargul:
-  - bugfix: chemMaster / ChemSynthesizer, color mate interface and some vorePanel
-      code style
+    - bugfix:
+        chemMaster / ChemSynthesizer, color mate interface and some vorePanel
+        code style
   cadyn:
-  - bugfix: mouse spawners
+    - bugfix: mouse spawners
 2024-02-12:
   Kashargul:
-  - bugfix: fixes some crashing chem UIs
+    - bugfix: fixes some crashing chem UIs
   Upstream:
-  - admin: added "Short Stacker" admin item
-  - rscadd: Added a new variant of the size collar (Created by using wrench to break
-      crystal => Prevents user from changing the size manually and triggering the
-      collar with signal flips the wearer back and forth between a random size and
-      their original size)
-  - rscadd: Added a new verb "Spin Size Dial" to size guns (random size)
-  - rscadd: Added alt-click effect to gradual size guns (toggling size-trading mode)
-  - admin: new eventkit verb that allows eventmanagers/admins to create fake PDA conversations
-      (or props for them) without actually having to spawn a PDA/PDA Server (including
-      PDA Identities)
+    - admin: added "Short Stacker" admin item
+    - rscadd:
+        Added a new variant of the size collar (Created by using wrench to break
+        crystal => Prevents user from changing the size manually and triggering the
+        collar with signal flips the wearer back and forth between a random size and
+        their original size)
+    - rscadd: Added a new verb "Spin Size Dial" to size guns (random size)
+    - rscadd: Added alt-click effect to gradual size guns (toggling size-trading mode)
+    - admin:
+        new eventkit verb that allows eventmanagers/admins to create fake PDA conversations
+        (or props for them) without actually having to spawn a PDA/PDA Server (including
+        PDA Identities)
 2024-02-13:
   Raeschen:
-  - admin: PDA identities 'Eventkit' --> 'fun', tab clutter
+    - admin: PDA identities 'Eventkit' --> 'fun', tab clutter
   Upstream:
-  - bugfix: fixed the user interface for the CharacterDirectory.
+    - bugfix: fixed the user interface for the CharacterDirectory.
   tacoguy7765093:
-  - qol: Makes more neutral traits be able to be taken by non-custom species.
+    - qol: Makes more neutral traits be able to be taken by non-custom species.
 2024-02-14:
   Fracshun:
-  - qol: Enabled logging on interactions with the Mind Binder and Body Snatcher
-  - balance: Increased the time to bind minds into mobs up to 30 seconds
-  - balance: whitelists only specific mobs
-  - balance: blacklists key items
+    - qol: Enabled logging on interactions with the Mind Binder and Body Snatcher
+    - balance: Increased the time to bind minds into mobs up to 30 seconds
+    - balance: whitelists only specific mobs
+    - balance: blacklists key items
   Raeschen:
-  - rscadd: Guidelines for shadekin and outsider, linked on spawn.
+    - rscadd: Guidelines for shadekin and outsider, linked on spawn.
 2024-02-15:
   ItsSelis:
-  - rscadd: Added round_id
+    - rscadd: Added round_id
 2024-02-16:
   FluffMedic:
-  - rscadd: Vending machines in the hidden mountain area
+    - rscadd: Vending machines in the hidden mountain area
   Raeschen:
-  - rscadd: configurable role-request/fax to discord settings.
-  - rscadd: role request will ping if configured
-  - admin: Adminsent faxes include the body (if any)
-  - rscadd: Faxes to discord via TGS discord chatbot config
+    - rscadd: configurable role-request/fax to discord settings.
+    - rscadd: role request will ping if configured
+    - admin: Adminsent faxes include the body (if any)
+    - rscadd: Faxes to discord via TGS discord chatbot config
   Sharkmare:
-  - rscadd: Recorder into loadout
-  - rscadd: Saxophone into loadout
-  - bugfix: loadout names for Trombone
+    - rscadd: Recorder into loadout
+    - rscadd: Saxophone into loadout
+    - bugfix: loadout names for Trombone
   TheCaramelion:
-  - rscadd: Common diseases for the Infected Room event
-  - balance: Infected Room is now slightly more common
-  - code_imp: Added makedisease proc, to build custom viruses.
+    - rscadd: Common diseases for the Infected Room event
+    - balance: Infected Room is now slightly more common
+    - code_imp: Added makedisease proc, to build custom viruses.
   cadyn:
-  - bugfix: Fix floating bullets
-  - refactor: DBCore updated to match TGStation
-  - server: TGS DMAPI Updated
-  - server: RUST-G Updated alongwith its DMAPI
+    - bugfix: Fix floating bullets
+    - refactor: DBCore updated to match TGStation
+    - server: TGS DMAPI Updated
+    - server: RUST-G Updated alongwith its DMAPI
 2024-02-17:
   Aroliacue:
-  - rscadd: Reenabled doorbells on airlocks and knocking on regular doors. This can
-      be done by leftalt-clicking on a door.
+    - rscadd:
+        Reenabled doorbells on airlocks and knocking on regular doors. This can
+        be done by leftalt-clicking on a door.
   FluffMedic:
-  - rscadd: More traits!
+    - rscadd: More traits!
   Missile597:
-  - rscadd: Added a missing shutter on deck one docking area
-  - rscadd: Added airlock tanks and station to the broken airlock by the vault and
-      connected it to distro, so this should function properly now.
-  - rscadd: Added some missing shutters from airlocks for consistency
-  - rscdel: Deleted some unnecessary emergency shutters on airlock windows for consistency
-  - rscdel: Deleted a random extra vent in deck 1 security checkpoint
-  - rscdel: Deleted unused wiring and scrubber pipework that used to go to the old
-      vault through maints. The vault now pulls from elsewhere.
-  - bugfix: Fixed the positioning of the fire alarms on the restaurant and bar outsider
-      shelter
-  - bugfix: Fixed the access levels on the trading ship airlock and suit cycler
-  - bugfix: 'Fixed the airlock on the trading ship so that the buttons and control
-      panel operate the doors. KNOWN BUG: Trying to cycle the airlock results in one
-      tick of cycled air before the vents shut down. I''m unsure how to fix this but
-      the doors can still be overridden and manually cycled. There''s atmos shields
-      on the doors either way to prevent air loss'
-  - bugfix: Rotates the pressure regulators on deck one to face the right direction,
-      no longer cutting off half of deck 1 from distro. This loop is probably in need
-      of improvements but it works.
+    - rscadd: Added a missing shutter on deck one docking area
+    - rscadd:
+        Added airlock tanks and station to the broken airlock by the vault and
+        connected it to distro, so this should function properly now.
+    - rscadd: Added some missing shutters from airlocks for consistency
+    - rscdel: Deleted some unnecessary emergency shutters on airlock windows for consistency
+    - rscdel: Deleted a random extra vent in deck 1 security checkpoint
+    - rscdel:
+        Deleted unused wiring and scrubber pipework that used to go to the old
+        vault through maints. The vault now pulls from elsewhere.
+    - bugfix:
+        Fixed the positioning of the fire alarms on the restaurant and bar outsider
+        shelter
+    - bugfix: Fixed the access levels on the trading ship airlock and suit cycler
+    - bugfix:
+        "Fixed the airlock on the trading ship so that the buttons and control
+        panel operate the doors. KNOWN BUG: Trying to cycle the airlock results in one
+        tick of cycled air before the vents shut down. I'm unsure how to fix this but
+        the doors can still be overridden and manually cycled. There's atmos shields
+        on the doors either way to prevent air loss"
+    - bugfix:
+        Rotates the pressure regulators on deck one to face the right direction,
+        no longer cutting off half of deck 1 from distro. This loop is probably in need
+        of improvements but it works.
   TheCaramelion:
-  - rscadd: Added a quiet gateway to The Dark
-  - rscadd: Added a quiet gateway to Sif
+    - rscadd: Added a quiet gateway to The Dark
+    - rscadd: Added a quiet gateway to Sif
 2024-02-18:
   Kashargul:
-  - bugfix: fixes the character Directory
+    - bugfix: fixes the character Directory
 2024-02-19:
   Kashargul:
-  - rscadd: the item digest blacklist to belly reagents
-  - rscadd: the drone board to the list to prevent round removing of lost drones in
-      vore encounters
-  - bugfix: fixes the runtime in the liquid system hopefully fully this time
+    - rscadd: the item digest blacklist to belly reagents
+    - rscadd:
+        the drone board to the list to prevent round removing of lost drones in
+        vore encounters
+    - bugfix: fixes the runtime in the liquid system hopefully fully this time
   KotetsuRedwood:
-  - rscadd: Added Welder's Originals as a cookable food.
-  - rscadd: Added Hot Butter Ice Cream as a cookable food.
-  - spellcheck: Removed description of cream topping from the butterscotch pie.
-  - rscadd: Added *gwah and *wawa as sound emotes.
-  - sound: Added sounds for *gwah and *wawa emotes.
+    - rscadd: Added Welder's Originals as a cookable food.
+    - rscadd: Added Hot Butter Ice Cream as a cookable food.
+    - spellcheck: Removed description of cream topping from the butterscotch pie.
+    - rscadd: Added *gwah and *wawa as sound emotes.
+    - sound: Added sounds for *gwah and *wawa emotes.
 2024-02-20:
   ItsSelis:
-  - qol: developers no longer have to generate a javascript bundle when changing the
-      user interface
-  - rscadd: Added CI workflow to test out TGS based changes.
+    - qol:
+        developers no longer have to generate a javascript bundle when changing the
+        user interface
+    - rscadd: Added CI workflow to test out TGS based changes.
   Kashargul:
-  - bugfix: the character directory sorting table for react
+    - bugfix: the character directory sorting table for react
   KotetsuRedwood:
-  - bugfix: Changed the recipe for hot butter ice cream to use ice instead of milk.
-  - bugfix: Gives Butterscotch and Hot Butter Ice Cream trash items when eaten. You
-      have to eat the bowls deliberately now.
+    - bugfix: Changed the recipe for hot butter ice cream to use ice instead of milk.
+    - bugfix:
+        Gives Butterscotch and Hot Butter Ice Cream trash items when eaten. You
+        have to eat the bowls deliberately now.
   Raeschen:
-  - bugfix: optimisation on particle accelerator
-  - bugfix: outdated callback syntax
-  - bugfix: fixed high CPU usage in turf/simulated/wet_floor
-  - code_imp: stop qdelling progressbars
-  - bugfix: Bigdragon noms didn't autotransfer
+    - bugfix: optimisation on particle accelerator
+    - bugfix: outdated callback syntax
+    - bugfix: fixed high CPU usage in turf/simulated/wet_floor
+    - code_imp: stop qdelling progressbars
+    - bugfix: Bigdragon noms didn't autotransfer
   tacoguy7765093:
-  - bugfix: Fixed a corrupted overmap POI map crashing.
+    - bugfix: Fixed a corrupted overmap POI map crashing.
 2024-02-21:
   Raeschen:
-  - rscadd: Emergency closet shelter in the tcomms supplies room
-  - bugfix: No qdelling hud element and selected_image /images
-  - rscdel: Remove hallucination 'fake_attacker'
+    - rscadd: Emergency closet shelter in the tcomms supplies room
+    - bugfix: No qdelling hud element and selected_image /images
+    - rscdel: Remove hallucination 'fake_attacker'
   cadyn:
-  - bugfix: fix VV number inputs
+    - bugfix: fix VV number inputs
 2024-02-22:
   FluffMedic:
-  - bugfix: Several odd materials use the proper numbers
+    - bugfix: Several odd materials use the proper numbers
   Kashargul:
-  - code_imp: editing the chomp specific UIs to be react compliant
-  - rscadd: miasma for the chem grenade that some mobs spawn on loading
+    - code_imp: editing the chomp specific UIs to be react compliant
+    - rscadd: miasma for the chem grenade that some mobs spawn on loading
   Raeschen:
-  - rscadd: Wilderness shelter now flattened, thank you Bib bob
-  - rscdel: sky islands removed
-  - rscdel: Removed 2x Kara Z layers (Aerostat, Mines)
+    - rscadd: Wilderness shelter now flattened, thank you Bib bob
+    - rscdel: sky islands removed
+    - rscdel: Removed 2x Kara Z layers (Aerostat, Mines)
 2024-02-23:
   Delams-The-SM:
-  - rscadd: Ability to dominate mob via dominate predator
-  - rscadd: Ability to dominate body without player's mind  (The same way one can
-      do via mind binder)
-  - code_imp: Mob whitelist from mind binder became a global list var/global/list/mob_takeover_whitelist
+    - rscadd: Ability to dominate mob via dominate predator
+    - rscadd:
+        Ability to dominate body without player's mind  (The same way one can
+        do via mind binder)
+    - code_imp: Mob whitelist from mind binder became a global list var/global/list/mob_takeover_whitelist
 2024-02-24:
   Kashargul:
-  - bugfix: a runtime in the tgs status command
-  - rscadd: modified AR-Visor for teshari
+    - bugfix: a runtime in the tgs status command
+    - rscadd: modified AR-Visor for teshari
 2024-02-25:
   KotetsuRedwood:
-  - rscadd: Adds a "big nostrils" marking for characters with huge noses.
+    - rscadd: Adds a "big nostrils" marking for characters with huge noses.
   Raeschen:
-  - bugfix: Synths no longer infinitely get a rename prompt on MMI insertion
-  - code_imp: Atmos scrubbers kill the final trace left behind after their minimum
-      threshold for scrubbing is passed.
+    - bugfix: Synths no longer infinitely get a rename prompt on MMI insertion
+    - code_imp:
+        Atmos scrubbers kill the final trace left behind after their minimum
+        threshold for scrubbing is passed.
   TheCaramelion:
-  - bugfix: Added an amount of meat to drop to metroids
+    - bugfix: Added an amount of meat to drop to metroids
 2024-02-26:
   ItsSelis:
-  - rscadd: Added TGS event handler to notify of updates
-  - admin: Added TGS event handler to notify/warn for specific server events
-  - server: Updates DMAPI to version 5.9.0
+    - rscadd: Added TGS event handler to notify of updates
+    - admin: Added TGS event handler to notify/warn for specific server events
+    - server: Updates DMAPI to version 5.9.0
   TheCaramelion:
-  - qol: Grand piano can be moved around now
+    - qol: Grand piano can be moved around now
 2024-02-28:
   Raeschen:
-  - bugfix: fixed datumcomponents
-  - bugfix: Hiding no longer resets after moving.
+    - bugfix: fixed datumcomponents
+    - bugfix: Hiding no longer resets after moving.
   cadyn:
-  - refactor: 515 Compatability
-  - refactor: Nuke observer datums in favor of comsigs
-  - refactor: GC Update
-  - refactor: Mob stale references dealt with and set to GC normally
-  - refactor: bicon and /icon ditched in favor of icon2html
-  - refactor: Asset delivery redone
+    - refactor: 515 Compatability
+    - refactor: Nuke observer datums in favor of comsigs
+    - refactor: GC Update
+    - refactor: Mob stale references dealt with and set to GC normally
+    - refactor: bicon and /icon ditched in favor of icon2html
+    - refactor: Asset delivery redone
 2024-02-29:
   ItsSelis:
-  - server: DMAPI updated to version 7.1.1 to solve a very rare infinite hang bug
-      on world startup.
+    - server:
+        DMAPI updated to version 7.1.1 to solve a very rare infinite hang bug
+        on world startup.
   Raeschen:
-  - bugfix: prevents mind-bound items crashing the MC
+    - bugfix: prevents mind-bound items crashing the MC

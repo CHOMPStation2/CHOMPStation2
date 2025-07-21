@@ -1,154 +1,172 @@
 2023-09-01:
   Aroliacue:
-  - rscadd: Added in a new Xenomorph Hybrid species, with unique stats and Xenomorph-centric
-      abilities.
-  - rscadd: Added Xenolingua and Hivemind as selectable languages. Hivemind requires
-      you to be a Xenomorph Hybrid.
-  - qol: Gave Zaddat the ability to move much faster with their special Shroud voidsuits.
+    - rscadd:
+        Added in a new Xenomorph Hybrid species, with unique stats and Xenomorph-centric
+        abilities.
+    - rscadd:
+        Added Xenolingua and Hivemind as selectable languages. Hivemind requires
+        you to be a Xenomorph Hybrid.
+    - qol: Gave Zaddat the ability to move much faster with their special Shroud voidsuits.
 2023-09-02:
   Aroliacue:
-  - rscadd: Added in some new skinsuit types and digitigrade variations.
+    - rscadd: Added in some new skinsuit types and digitigrade variations.
 2023-09-03:
   Verkister:
-  - rscadd: Added giant lab rat mob
-  - rscadd: Added event/shenanigans vareditable shapeshifter mechanic
-  - rscadd: Added some recyclable material to more things.
+    - rscadd: Added giant lab rat mob
+    - rscadd: Added event/shenanigans vareditable shapeshifter mechanic
+    - rscadd: Added some recyclable material to more things.
 2023-09-04:
   FluffMedic:
-  - maptweak: The Lab gateway and contents has been tweaked. One of many
+    - maptweak: The Lab gateway and contents has been tweaked. One of many
   Razgriz1032:
-  - bugfix: A couple upstream bugs with the modular shiny clothes set
-  - maptweak: Added more items to the hidden crate on deck 2
+    - bugfix: A couple upstream bugs with the modular shiny clothes set
+    - maptweak: Added more items to the hidden crate on deck 2
   Upstream:
-  - rscadd: New tesla coil types for tesla engines
+    - rscadd: New tesla coil types for tesla engines
 2023-09-05:
   Darlantanis:
-  - rscadd: Replaces booleans in configuration_ch.dm with TRUE/FALSE defines
-  - rscadd: Tweaks whitelisted positions
-  - rscadd: Adds whitelist_only vars in new job_whitelist_overrides.dm file
-  - rscadd: Comments out return value of guest_jobbans proc which broke the jobwhitelist
-      system.
-  - rscadd: Adds numerous missing CHOMPedit comments
-  - rscadd: Adds jobwhitelist.txt to gitignore
+    - rscadd: Replaces booleans in configuration_ch.dm with TRUE/FALSE defines
+    - rscadd: Tweaks whitelisted positions
+    - rscadd: Adds whitelist_only vars in new job_whitelist_overrides.dm file
+    - rscadd:
+        Comments out return value of guest_jobbans proc which broke the jobwhitelist
+        system.
+    - rscadd: Adds numerous missing CHOMPedit comments
+    - rscadd: Adds jobwhitelist.txt to gitignore
   Verkister:
-  - rscadd: BS compostor can now recycle materials too.
-  - bugfix: Fixed multiplayer shapeshifter vorgan reversion issue.
+    - rscadd: BS compostor can now recycle materials too.
+    - bugfix: Fixed multiplayer shapeshifter vorgan reversion issue.
 2023-09-07:
   Aroliacue:
-  - admin: All staff can now cancel the evac shuttle.
+    - admin: All staff can now cancel the evac shuttle.
 2023-09-08:
   Verkister:
-  - rscadd: Added visual effect and shared nutrition to mob TF mechanics.
-  - bugfix: Fixed mob TF with uninitialized voremobs overwriting user's main vorgan
-      with the mob's own settings.
-  - bugfix: Stored reverted non-multiplayer tf_forms no longer cause double cryo announcements
-      when user leaves round.
-  - qol: Fixed highlight icon inconsistencies on Polaris hairs.
-  - rscadd: Big Leggies can now *vwag into digilegs stance.
+    - rscadd: Added visual effect and shared nutrition to mob TF mechanics.
+    - bugfix:
+        Fixed mob TF with uninitialized voremobs overwriting user's main vorgan
+        with the mob's own settings.
+    - bugfix:
+        Stored reverted non-multiplayer tf_forms no longer cause double cryo announcements
+        when user leaves round.
+    - qol: Fixed highlight icon inconsistencies on Polaris hairs.
+    - rscadd: Big Leggies can now *vwag into digilegs stance.
 2023-09-10:
   Aroliacue:
-  - rscadd: Xenomorph Hybrids now have some exclusive traits to change up their playstyle,
-      found in the Neutral tab.
-  - rscadd: Xenomorph Hybrids can now use Protean Rigs.
-  - rscadd: Vests and the bluespace badge no longer have specific role/job requirements,
-      to facilitate more character customization.
-  - rscadd: 'Added in a new holster option: left leg holsters. These just visibly
-      sit on your left leg.'
-  - balance: Increased the loadout cost of vests and drop pouches from 1 to 2, as
-      they carry more than the simple webbing.
-  - bugfix: Fixed black holster sprites not showing up on mob correctly, and also
-      not showing up in the loadout.
+    - rscadd:
+        Xenomorph Hybrids now have some exclusive traits to change up their playstyle,
+        found in the Neutral tab.
+    - rscadd: Xenomorph Hybrids can now use Protean Rigs.
+    - rscadd:
+        Vests and the bluespace badge no longer have specific role/job requirements,
+        to facilitate more character customization.
+    - rscadd:
+        "Added in a new holster option: left leg holsters. These just visibly
+        sit on your left leg."
+    - balance:
+        Increased the loadout cost of vests and drop pouches from 1 to 2, as
+        they carry more than the simple webbing.
+    - bugfix:
+        Fixed black holster sprites not showing up on mob correctly, and also
+        not showing up in the loadout.
   UniquaSa:
-  - bugfix: You should be able to play as a tallborg in security and service..
+    - bugfix: You should be able to play as a tallborg in security and service..
   Verkister:
-  - bugfix: Fixed cloth and fiber materials missing sheet type definitions.
-  - bugfix: Fixed a bellysprite update lag bug.
+    - bugfix: Fixed cloth and fiber materials missing sheet type definitions.
+    - bugfix: Fixed a bellysprite update lag bug.
   tacoguy7765093:
-  - rscadd: Added new gateway into rotation
-  - rscadd: Added a mob and a weapon for use in the gateway.
+    - rscadd: Added new gateway into rotation
+    - rscadd: Added a mob and a weapon for use in the gateway.
 2023-09-11:
   tacoguy7765093:
-  - bugfix: VR works again
+    - bugfix: VR works again
 2023-09-12:
   Upstream:
-  - rscadd: Various bird related markings
+    - rscadd: Various bird related markings
 2023-09-18:
   HatArchAzel:
-  - rscadd: Added a modular system cloned from the big dragon one on live to simplemob
-      synx, allowing customization of the body, eyes, facial markings, and horns.
-  - rscdel: Commented out some old OC insert content in the synx code as per content
-      standards.
-  - balance: Tweaked some factors such as movement to make synx a little bit more
-      accurate. Overall, they're probably a little weaker now, but should encourage
-      roleplaying them more accurately when playing as one and allow for a few nice
-      QoL changes in the process.
-  - bugfix: Fixed several bugs in synx code.
-  - imageadd: Added 'transformed' and 'stomach distended' synx sprites, replacing
-      the previous placeholders.
+    - rscadd:
+        Added a modular system cloned from the big dragon one on live to simplemob
+        synx, allowing customization of the body, eyes, facial markings, and horns.
+    - rscdel:
+        Commented out some old OC insert content in the synx code as per content
+        standards.
+    - balance:
+        Tweaked some factors such as movement to make synx a little bit more
+        accurate. Overall, they're probably a little weaker now, but should encourage
+        roleplaying them more accurately when playing as one and allow for a few nice
+        QoL changes in the process.
+    - bugfix: Fixed several bugs in synx code.
+    - imageadd:
+        Added 'transformed' and 'stomach distended' synx sprites, replacing
+        the previous placeholders.
   TheGreatKitsune:
-  - rscadd: New on duty signs for robotics and chemistry
-  - maptweak: Added on duty signs and buttons for turning them on to Robotics and
-      Chemistry
+    - rscadd: New on duty signs for robotics and chemistry
+    - maptweak:
+        Added on duty signs and buttons for turning them on to Robotics and
+        Chemistry
   Upstream:
-  - rscadd: adds 'Health & Damage' section in mob spawner
+    - rscadd: adds 'Health & Damage' section in mob spawner
   Verkister:
-  - rscadd: Flushing too much/big stuff can now glog toilets. Also un-bluespaced non-station
-      ones can be flushed too (much weaker tho and not connected to station systems)
-  - bugfix: Fixed flushing ignoring mob size_multiplier.
-  - rscadd: Added belly-specific toggle setting for entrance logs.
-  - bugfix: Fixed runtime spam with vore footsteps.
-  - bugfix: Symmetry scaling no longer un-symmetrifies the side views.
+    - rscadd:
+        Flushing too much/big stuff can now glog toilets. Also un-bluespaced non-station
+        ones can be flushed too (much weaker tho and not connected to station systems)
+    - bugfix: Fixed flushing ignoring mob size_multiplier.
+    - rscadd: Added belly-specific toggle setting for entrance logs.
+    - bugfix: Fixed runtime spam with vore footsteps.
+    - bugfix: Symmetry scaling no longer un-symmetrifies the side views.
   tacoguy7765093:
-  - balance: Synth limb HP is 60 instead of 30 now, just like organics.
+    - balance: Synth limb HP is 60 instead of 30 now, just like organics.
 2023-09-19:
   FluffMedic:
-  - rscadd: MoL's VR area has a small expansion
+    - rscadd: MoL's VR area has a small expansion
   Verkister:
-  - rscadd: Added vorgan-specific noise pitch/frequency setting for belly noises.
+    - rscadd: Added vorgan-specific noise pitch/frequency setting for belly noises.
 2023-09-20:
   Fracshun:
-  - rscadd: Added new belly option to allow auto-transfer of absorbed creatures
+    - rscadd: Added new belly option to allow auto-transfer of absorbed creatures
   TheGreatKitsune:
-  - rscadd: Liquid belly sloshing noises now work for robots
+    - rscadd: Liquid belly sloshing noises now work for robots
 2023-09-21:
   Verkister:
-  - bugfix: Fixed exonet_node runtime spam.
-  - bugfix: Fixed vorepanel export missing a lot of the newer vars.
+    - bugfix: Fixed exonet_node runtime spam.
+    - bugfix: Fixed vorepanel export missing a lot of the newer vars.
 2023-09-22:
   FluffMedic:
-  - qol: Removed phoron from the base of size chems, replacing clonedex with cryptobiolin
+    - qol: Removed phoron from the base of size chems, replacing clonedex with cryptobiolin
   Verkister:
-  - bugfix: Fixed other missing exportpanel vars.
+    - bugfix: Fixed other missing exportpanel vars.
 2023-09-26:
   FluffMedic:
-  - qol: curea now uses spacechillin instead of dylvo, and iron instead of carbon
-  - bugfix: fire bird chem can properly be made
-  - bugfix: chemical imbalances in several meats
+    - qol: curea now uses spacechillin instead of dylvo, and iron instead of carbon
+    - bugfix: fire bird chem can properly be made
+    - bugfix: chemical imbalances in several meats
   Fracshun:
-  - rscadd: Added new filtering options for auto-transfer
+    - rscadd: Added new filtering options for auto-transfer
   TheGreatKitsune:
-  - bugfix: Posibrains and similar not being able to use ' or such
-  - qol: A few more traits opened up to non-custom species
+    - bugfix: Posibrains and similar not being able to use ' or such
+    - qol: A few more traits opened up to non-custom species
   Theonewhowaits:
-  - balance: rebalances combat mobs health alongside weapon damage
+    - balance: rebalances combat mobs health alongside weapon damage
   Verkister:
-  - bugfix: Fixed Unathi Big Horns ear style.
-  - qol: Food item digestion now uses gradual item digestion rather than instant qdel.
-      Also reagent content no longer nerfed to half.
-  - bugfix: Fixed vorepanel sound previews not using custom noise freq.
-  - bugfix: Fixed runtime spam caused by putting cake hat on Torta.
-  - rscadd: SWOOPIE XL suck mechanics overhaul with integrated hands-free Vac-Pack
-      implementation.
-  - rscadd: Added mush overlay settings for ingested metabolism stuff.
-  - qol: Reworked how vore fx preview stuff works.
-  - bugfix: Adjusted wonky resting pose vertical offset.
+    - bugfix: Fixed Unathi Big Horns ear style.
+    - qol:
+        Food item digestion now uses gradual item digestion rather than instant qdel.
+        Also reagent content no longer nerfed to half.
+    - bugfix: Fixed vorepanel sound previews not using custom noise freq.
+    - bugfix: Fixed runtime spam caused by putting cake hat on Torta.
+    - rscadd:
+        SWOOPIE XL suck mechanics overhaul with integrated hands-free Vac-Pack
+        implementation.
+    - rscadd: Added mush overlay settings for ingested metabolism stuff.
+    - qol: Reworked how vore fx preview stuff works.
+    - bugfix: Adjusted wonky resting pose vertical offset.
   tacoguy7765093:
-  - rscadd: Players can now create an area innately for off-station construction.
+    - rscadd: Players can now create an area innately for off-station construction.
 2023-09-27:
   TheCaramelion:
-  - bugfix: mail per minute 2 to 0.75
-  - bugfix: mailbag capacity changed to 21
-  - bugfix: envelopes now have department colours
+    - bugfix: mail per minute 2 to 0.75
+    - bugfix: mailbag capacity changed to 21
+    - bugfix: envelopes now have department colours
   Verkister:
-  - bugfix: Fixed vorgan nutrition percent not affecting food/drink reagent gains.
-  - bugfix: Fixed vorgan overlays not showing up for prey.
+    - bugfix: Fixed vorgan nutrition percent not affecting food/drink reagent gains.
+    - bugfix: Fixed vorgan overlays not showing up for prey.
