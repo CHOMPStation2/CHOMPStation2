@@ -38,5 +38,5 @@ export type OccupationData = {
   jobs: Job[];
 };
 
-export type OccupationDataStatic = {};
-export type OccupationDataConstant = {};
+export type OccupationDataStatic = undefined;
+export type OccupationDataConstant = undefined;
