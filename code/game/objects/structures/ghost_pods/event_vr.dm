@@ -22,7 +22,7 @@
 								  "Fennix" = /mob/living/simple_mob/vore/fennix,
 								  "Fox" = /mob/living/simple_mob/animal/passive/fox,//CHOMPedit: more mobs
 								  "Syndi-Fox" = /mob/living/simple_mob/animal/passive/fox/syndicate,//CHOMPedit: more mobs
-								  "Raccoon" = /mob/living/simple_mob/animal/passive/raccoon_ch,//CHOMPedit: more mobs
+								  "Raccoon" = /mob/living/simple_mob/animal/passive/raccoon,//CHOMPedit: more mobs
 								  "Cat" = /mob/living/simple_mob/animal/passive/cat,//CHOMPedit: more mobs
 								  "Space Bumblebee" = /mob/living/simple_mob/vore/bee,
 								  "Space Bear" = /mob/living/simple_mob/animal/space/bear,
