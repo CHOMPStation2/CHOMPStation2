@@ -155,3 +155,28 @@
   - bugfix: Added secondary ears to copy form ability.
   - bugfix: fixed the recycler deciding plebeians weren't allowed to use it after
       someone tried to buy an access locked item.
+2025-07-21:
+  CHOMPStation2StaffMirrorBot:
+  - qol: default browser background follows light / dark mode
+  - rscadd: maplint for bad frequencies
+  - balance: rng of trashpiles altered
+  - code_imp: trash piles and loot piles now use a unified looting element for handling
+      drops and rarity. Not limited to just loot piles.
+  - rscadd: Adds three more admin duckies.
+  - rscadd: new traits that increase unarmed damage. Traits have been added that combine
+      with respective tiers of Hardy, to simulate high strength for species that should
+      be inhumanly strong
+  - bugfix: simplemobs should now take extra damage from hulk/knuckles
+  - code_imp: tgui dependency update
+  - qol: moves find ghost pod, vorespawn and some other join options from tgui list
+      to a tgui datum
+  - rscadd: additional ghost spawn options (2 slots), requires multiple /obj/effect/landmark/start/ghost_roles
+      to be mapped in
+  - maptweak: Replaced telecomms machines in the facility redgate map with props that
+      look like them instead.
+  Diana:
+  - qol: Proteans are less squishy to EMPs
+  - qol: Veymed limbs are less squishy to EMPs.
+  UniquaSa:
+  - rscadd: Added new maintenance preds mobs
+  - maptweak: Added some Maint Pred Spawns in deck 0
