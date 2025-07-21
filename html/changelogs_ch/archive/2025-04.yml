@@ -1,386 +1,438 @@
 2025-04-01:
   CHOMPStation2StaffMirrorBot:
-  - bugfix: xenoarch organ spawn
+    - bugfix: xenoarch organ spawn
   Diana:
-  - bugfix: Removes the yawn edit that removed Fennec's ability to use rig gauntlets
-      or helmet (This made fennecs unable to use any rigsuits)
+    - bugfix:
+        Removes the yawn edit that removed Fennec's ability to use rig gauntlets
+        or helmet (This made fennecs unable to use any rigsuits)
   Kashargul:
-  - bugfix: more dark turf stuff
+    - bugfix: more dark turf stuff
 2025-04-02:
   FluffMedic:
-  - rscadd: more event things
+    - rscadd: more event things
 2025-04-03:
   CHOMPStation2StaffMirrorBot:
-  - rscadd: admin verb to modify the shift end
+    - rscadd: admin verb to modify the shift end
   Kashargul:
-  - rscadd: The dark spawnpoint
+    - rscadd: The dark spawnpoint
 2025-04-04:
   CHOMPStation2StaffMirrorBot:
-  - qol: spawning carbon mobs is less laggy
-  - refactor: dna datum cloning per organ removed in favor of a organ_data datum
-  - bugfix: Proteans can select icon base again
-  - code_imp: tgui core to 1.8.4
-  - rscdel: vchat
+    - qol: spawning carbon mobs is less laggy
+    - refactor: dna datum cloning per organ removed in favor of a organ_data datum
+    - bugfix: Proteans can select icon base again
+    - code_imp: tgui core to 1.8.4
+    - rscdel: vchat
 2025-04-05:
   CHOMPStation2StaffMirrorBot:
-  - code_imp: update dependencies
+    - code_imp: update dependencies
   Diana & Kash:
-  - balance: Monkey gun adjusted to be mid-tier material cost.
-  - bugfix: Blood runtime fix
-  - bugfix: Deadringer runtime fix
-  - bugfix: Deadringer duplication fix
-  - bugfix: Deadringer now properly deathgasps at the right time
-  - balance: Deadringer slightly more invisible\
-  - bugfix: 'Spawn: Arrivals will no longer make you spawn inside the landmark itself.
-      (Removes landmark vore)'
-  - bugfix: Transit tubes properly spawn with air in them.
-  - bugfix: Bingle properly shows the Ore Page now
-  - bugfix: Talon spawn no longer runtimes
+    - balance: Monkey gun adjusted to be mid-tier material cost.
+    - bugfix: Blood runtime fix
+    - bugfix: Deadringer runtime fix
+    - bugfix: Deadringer duplication fix
+    - bugfix: Deadringer now properly deathgasps at the right time
+    - balance: Deadringer slightly more invisible\
+    - bugfix:
+        "Spawn: Arrivals will no longer make you spawn inside the landmark itself.
+        (Removes landmark vore)"
+    - bugfix: Transit tubes properly spawn with air in them.
+    - bugfix: Bingle properly shows the Ore Page now
+    - bugfix: Talon spawn no longer runtimes
   FluffMedic:
-  - rscadd: New tyr layout, WIP due to active edge issues
-  - qol: stargazer eclipse space boss glows in a large area
+    - rscadd: New tyr layout, WIP due to active edge issues
+    - qol: stargazer eclipse space boss glows in a large area
 2025-04-07:
   CHOMPStation2StaffMirrorBot:
-  - rscadd: explo chassis 'bulwark'
-  - bugfix: phased entities are no longer effected by weather effects
-  - bugfix: planetary weather effects
-  - bugfix: examine on admin spawned mobs
-  - bugfix: liquid examine
-  - bugfix: Fixed mail thinking you're a different person after resleeving
-  - bugfix: Fixed mail being sent to various crewmember's bodyparts
-  - bugfix: Fixed mail containing power tools disguised as common tools
-  - refactor: Refactored some of the mail code, using mind instead of mob
-  - bugfix: added vox to the unusual gait species exclude list (they were supposed
-      to be there but I forgor)
+    - rscadd: explo chassis 'bulwark'
+    - bugfix: phased entities are no longer effected by weather effects
+    - bugfix: planetary weather effects
+    - bugfix: examine on admin spawned mobs
+    - bugfix: liquid examine
+    - bugfix: Fixed mail thinking you're a different person after resleeving
+    - bugfix: Fixed mail being sent to various crewmember's bodyparts
+    - bugfix: Fixed mail containing power tools disguised as common tools
+    - refactor: Refactored some of the mail code, using mind instead of mob
+    - bugfix:
+        added vox to the unusual gait species exclude list (they were supposed
+        to be there but I forgor)
   tacoguy7765093:
-  - maptweak: Atmospherics tweaks for active edges.
+    - maptweak: Atmospherics tweaks for active edges.
 2025-04-08:
   CHOMPStation2StaffMirrorBot:
-  - rscadd: teshari alternative tail (the fluffy one) has been converted to be used
-      with demi-teshari or really anyone human shaped
-  - image: added the demitesh flufftail sprite states to taurs.dmi
-  - code_imp: update browser window
-  - code_imp: migrate vendor icons to icon forge
-  - code_imp: Sprites no longer break the resize cap when resized, unless uncapped
-      is set to TRUE
-  - code_imp: Robot sprite_decals are now generated before stomachs
-  - bugfix: Runechat will properly appear above sprites.
+    - rscadd:
+        teshari alternative tail (the fluffy one) has been converted to be used
+        with demi-teshari or really anyone human shaped
+    - image: added the demitesh flufftail sprite states to taurs.dmi
+    - code_imp: update browser window
+    - code_imp: migrate vendor icons to icon forge
+    - code_imp:
+        Sprites no longer break the resize cap when resized, unless uncapped
+        is set to TRUE
+    - code_imp: Robot sprite_decals are now generated before stomachs
+    - bugfix: Runechat will properly appear above sprites.
   Diana:
-  - qol: Defib now informs you WHY it's failing, so you can properly fix the problem.
-  - balance: CPR can now REVIVE people if their HP is above a threshold with a 10%
-      chance per CPR usage.
-  - balance: CPR will cause the recipient to metabolize reagents.
-  - balance: CPR now has a small chance of causing brute damage and rib fractures
-      to the chest.
-  - balance: Patient Stabilizer will cause the patient to metabolize reagents if dead.
-  - bugfix: Breaking a bone now has its random chance to jostle when broken for the
-      first time.
-  - bugfix: Shadekin no longer runtime if created (mannequins) during pre-init.
-  - bugfix: ore bag can fit on the mining satchel
-  - bugfix: You can no longer double-leave on the tram
-  - bugfix: Vital organs now properly calculate drop chance. Chance goes UP the more
-      damaged you are, not DOWN
+    - qol: Defib now informs you WHY it's failing, so you can properly fix the problem.
+    - balance:
+        CPR can now REVIVE people if their HP is above a threshold with a 10%
+        chance per CPR usage.
+    - balance: CPR will cause the recipient to metabolize reagents.
+    - balance:
+        CPR now has a small chance of causing brute damage and rib fractures
+        to the chest.
+    - balance: Patient Stabilizer will cause the patient to metabolize reagents if dead.
+    - bugfix:
+        Breaking a bone now has its random chance to jostle when broken for the
+        first time.
+    - bugfix: Shadekin no longer runtime if created (mannequins) during pre-init.
+    - bugfix: ore bag can fit on the mining satchel
+    - bugfix: You can no longer double-leave on the tram
+    - bugfix:
+        Vital organs now properly calculate drop chance. Chance goes UP the more
+        damaged you are, not DOWN
 2025-04-09:
   CHOMPStation2StaffMirrorBot:
-  - bugfix: You will no longer pick up burning micros, or try to do CPR on someone
-      that is on fire
+    - bugfix:
+        You will no longer pick up burning micros, or try to do CPR on someone
+        that is on fire
   Diana:
-  - rscdel: missing every other shot you made against mobs
-  - rscadd: hitting every shot you make against mobs
-  - bugfix: Evasion now properly is calculated and doesn't have a 30% chance of being
-      nullified.
-  - bugfix: Scoped weapons now have their accuracy stat properly applied.
-  - balance: Bad Shot/Eagle Eye work by increasing/decreasing the target's evasion.
-      Only applies if the target HAS evasion in the first place.
-  - balance: Evasion now works in PvP melee. (Blue-Grabbing or making a high evasion
-      target prone nullifies their evasion)
-  - balance: Mobs now have chances to randomize/miss the zone they were shooting for
-      on Player Characters
-  - balance: Point blank shots will still always 100% hit Player Characters no matter
-      your evasion. Just a reminder!
+    - rscdel: missing every other shot you made against mobs
+    - rscadd: hitting every shot you make against mobs
+    - bugfix:
+        Evasion now properly is calculated and doesn't have a 30% chance of being
+        nullified.
+    - bugfix: Scoped weapons now have their accuracy stat properly applied.
+    - balance:
+        Bad Shot/Eagle Eye work by increasing/decreasing the target's evasion.
+        Only applies if the target HAS evasion in the first place.
+    - balance:
+        Evasion now works in PvP melee. (Blue-Grabbing or making a high evasion
+        target prone nullifies their evasion)
+    - balance:
+        Mobs now have chances to randomize/miss the zone they were shooting for
+        on Player Characters
+    - balance:
+        Point blank shots will still always 100% hit Player Characters no matter
+        your evasion. Just a reminder!
 2025-04-10:
   CHOMPStation2StaffMirrorBot:
-  - code_imp: tgui core 2.0
-  - bugfix: Fixed mail scanner not working
+    - code_imp: tgui core 2.0
+    - bugfix: Fixed mail scanner not working
   Diana:
-  - rscdel: bad code
-  - rscadd: good code (questionable)
-  - bugfix: VR Sleepers properly exit you if EMP'd, depowered, or someone tries to
-      pull you out of it
-  - bugfix: Ghostspawns no longer multiply SECONDS by SECONDS
+    - rscdel: bad code
+    - rscadd: good code (questionable)
+    - bugfix:
+        VR Sleepers properly exit you if EMP'd, depowered, or someone tries to
+        pull you out of it
+    - bugfix: Ghostspawns no longer multiply SECONDS by SECONDS
   Tost:
-  - rscadd: Adds a variant of the roboticist labcoat to Suits and Overwear
-  - rscadd: Adds "traffic officer's jacket" to Suits and Overwear
-  - rscadd: Adds the option to bring a rubber ducky with you to the loadout on General
-  - rscadd: Adds the waiter's outfit to the loadout on Casual Dress
+    - rscadd: Adds a variant of the roboticist labcoat to Suits and Overwear
+    - rscadd: Adds "traffic officer's jacket" to Suits and Overwear
+    - rscadd: Adds the option to bring a rubber ducky with you to the loadout on General
+    - rscadd: Adds the waiter's outfit to the loadout on Casual Dress
 2025-04-11:
   CHOMPStation2StaffMirrorBot:
-  - qol: Added an animation when dropping items on tables
+    - qol: Added an animation when dropping items on tables
   Cerami:
-  - balance: Venom bite now warns players that it is being used.
+    - balance: Venom bite now warns players that it is being used.
 2025-04-12:
   CHOMPStation2StaffMirrorBot:
-  - rscadd: Space heaters can now be crafted
-  - rscadd: Space heaters can now be upgraded to cool/heat faster (Uses micro_laser,
-      manipulator, and capacitor to upgrade various parts)
-  - maptweak: Moved the medical kiosk from the west side of the medbay lobby over
-      to the east corner, near chemistry.
-  - rscadd: moves eye layer under bellies for borgs
+    - rscadd: Space heaters can now be crafted
+    - rscadd:
+        Space heaters can now be upgraded to cool/heat faster (Uses micro_laser,
+        manipulator, and capacitor to upgrade various parts)
+    - maptweak:
+        Moved the medical kiosk from the west side of the medbay lobby over
+        to the east corner, near chemistry.
+    - rscadd: moves eye layer under bellies for borgs
   Cameron-The-Raven:
-  - bugfix: guitar loadout now properly gives you a guitar
+    - bugfix: guitar loadout now properly gives you a guitar
   Drathek:
-  - code_imp: DMI merge hook will now try to retain positioning of sprites when handling
-      some conflicts
+    - code_imp:
+        DMI merge hook will now try to retain positioning of sprites when handling
+        some conflicts
 2025-04-13:
   CHOMPStation2StaffMirrorBot:
-  - rscadd: Silicon are now able to be picked up, with a toggle in their abilities
-      section to preserve petting.
-  - bugfix: Fixes some bad destroys
-  - bugfix: RPD interface
-  - code_imp: tgui-core to 3.0.4
-  - rscadd: Added IDs to the list of edible trash eater items. Just like PDA's they
-      require the owner to be watching when they're eaten.
-  - bugfix: Fixed PDA eating warning messages not being visible.
-  - bugfix: runechat offset delta being applied twice in some cases
-  - rscadd: Added the recolour ability to beast form transformations, allowing them
-      to recolour themselves once per transformation.
+    - rscadd:
+        Silicon are now able to be picked up, with a toggle in their abilities
+        section to preserve petting.
+    - bugfix: Fixes some bad destroys
+    - bugfix: RPD interface
+    - code_imp: tgui-core to 3.0.4
+    - rscadd:
+        Added IDs to the list of edible trash eater items. Just like PDA's they
+        require the owner to be watching when they're eaten.
+    - bugfix: Fixed PDA eating warning messages not being visible.
+    - bugfix: runechat offset delta being applied twice in some cases
+    - rscadd:
+        Added the recolour ability to beast form transformations, allowing them
+        to recolour themselves once per transformation.
   Diana:
-  - bugfix: Exit VR now properly lets you exit vr
+    - bugfix: Exit VR now properly lets you exit vr
 2025-04-14:
   CHOMPStation2StaffMirrorBot:
-  - bugfix: chat messages not querying
-  - bugfix: color picker layout
-  - qol: we no longer reset the value on blur, we only validate input or onEnter
-  - rscadd: marker beacon to mining robots
-  - bugfix: modal inputs
-  - rscadd: Added Special teleporter vorebellies.
-  - code_imp: Added support for vorebellies to be marked as unsavable, preventing
-      them from being saved to characters.
+    - bugfix: chat messages not querying
+    - bugfix: color picker layout
+    - qol: we no longer reset the value on blur, we only validate input or onEnter
+    - rscadd: marker beacon to mining robots
+    - bugfix: modal inputs
+    - rscadd: Added Special teleporter vorebellies.
+    - code_imp:
+        Added support for vorebellies to be marked as unsavable, preventing
+        them from being saved to characters.
   Diana:
-  - bugfix: Stumblevore and flight vore should now work properly.
+    - bugfix: Stumblevore and flight vore should now work properly.
   tacoguy7765093:
-  - maptweak: Ore-Rich-Geyser POI active edge fix.
-  - rscadd: Thor turfpack for mappers
-  - maptweak: Operating Rooms contain patient stabilizers for post mortem blood pumping!
+    - maptweak: Ore-Rich-Geyser POI active edge fix.
+    - rscadd: Thor turfpack for mappers
+    - maptweak: Operating Rooms contain patient stabilizers for post mortem blood pumping!
 2025-04-15:
   Diana:
-  - bugfix: Shoulder augments can now be installed the first time without having to
-      screwdriver them twice
+    - bugfix:
+        Shoulder augments can now be installed the first time without having to
+        screwdriver them twice
 2025-04-18:
   CHOMPStation2StaffMirrorBot:
-  - rscadd: NIF commlinks auto-initialize if the relevant preference is set in character
-      creation
-  - refactor: converts a bunch of global variables/lists to managed global variables/lists
-  - bugfix: samples no longer generate infinite tech level lists
-  - code_imp: finishes new to init
+    - rscadd:
+        NIF commlinks auto-initialize if the relevant preference is set in character
+        creation
+    - refactor: converts a bunch of global variables/lists to managed global variables/lists
+    - bugfix: samples no longer generate infinite tech level lists
+    - code_imp: finishes new to init
   MeepleMuncher:
-  - rscadd: Customizable dragon plushies
+    - rscadd: Customizable dragon plushies
   sunofang:
-  - rscadd: NanoTrasen shipwrights have now made the carrier actually capable of interplanetary
-      travel
-  - maptweak: New bridge for the carrier
+    - rscadd:
+        NanoTrasen shipwrights have now made the carrier actually capable of interplanetary
+        travel
+    - maptweak: New bridge for the carrier
 2025-04-19:
   CHOMPStation2StaffMirrorBot:
-  - bugfix: highlight input size
+    - bugfix: highlight input size
 2025-04-20:
   sunofang:
-  - maptweak: Carrier engines fixed, and access reworked
+    - maptweak: Carrier engines fixed, and access reworked
 2025-04-22:
   CHOMPStation2StaffMirrorBot:
-  - code_imp: tgui core 3.1.2
-  - qol: Xenobio monkey gun (bio6 bluespace5) now only requires gold and silver.
-  - qol: Portable slime processor (magnet 4 bio 5) now only requires  silver and gold.
-  - sound: Surgery tools now make proper melee attack noises.
-  - qol: Changed blood splatters and subtypes such as oil to no longer interact with
-      someone flying, hovering or floating over them.
-  - rscadd: Added sleeveless variant of the colourable duster.
-  - bugfix: tgui say focus
-  - bugfix: Rings and Bracelets won't slow you down anymore
-  - rscadd: breastplate, eye cover, and loincloth overlays to the 'decal' menu on
-      borgs for dullahans
-  - rscadd: ability to use overlays on resting borgs(lights etc.).
-  - rscadd: dullahan v1/2 -> dullahan
-  - rscadd: condensed dullahan versions into one single unit, v3 is still seperate
-      due to being a different size and coloration.
-  - rscadd: You can now configure the messages used by the trash eater perk on a per
-      vorebelly basis.
-  - bugfix: several prefs could not be cleared
-  - refactor: Moved all global vars from the code/global.dm to code/_global_vars/
-  - code_imp: fix multiple runtimes
-  - qol: FBPs will no longer go blind when a welder is used.
+    - code_imp: tgui core 3.1.2
+    - qol: Xenobio monkey gun (bio6 bluespace5) now only requires gold and silver.
+    - qol: Portable slime processor (magnet 4 bio 5) now only requires  silver and gold.
+    - sound: Surgery tools now make proper melee attack noises.
+    - qol:
+        Changed blood splatters and subtypes such as oil to no longer interact with
+        someone flying, hovering or floating over them.
+    - rscadd: Added sleeveless variant of the colourable duster.
+    - bugfix: tgui say focus
+    - bugfix: Rings and Bracelets won't slow you down anymore
+    - rscadd:
+        breastplate, eye cover, and loincloth overlays to the 'decal' menu on
+        borgs for dullahans
+    - rscadd: ability to use overlays on resting borgs(lights etc.).
+    - rscadd: dullahan v1/2 -> dullahan
+    - rscadd:
+        condensed dullahan versions into one single unit, v3 is still seperate
+        due to being a different size and coloration.
+    - rscadd:
+        You can now configure the messages used by the trash eater perk on a per
+        vorebelly basis.
+    - bugfix: several prefs could not be cleared
+    - refactor: Moved all global vars from the code/global.dm to code/_global_vars/
+    - code_imp: fix multiple runtimes
+    - qol: FBPs will no longer go blind when a welder is used.
   Diana:
-  - bugfix: turrets no longer have 100% baymiss chance
-  - bugfix: Fragmines will no longer do 400 damage when you step on them.
-  - qol: The Rapid Material Synthesizer (RMS) has been MASSIVELY buffed and reworked.
-      Check it out!
-  - qol: RMS prices MASSIVELY decreased.
-  - qol: RMS randomize mode can now randomize ANY MATERIAL in the game. Feeling lucky?
-  - bugfix: RMS will no longer drain any battery you use it on to 0
-  - bugfix: RMS will now properly detonate rigged batteries
-  - rscdel: RMS no longer has any emag interactions
-  - rscadd: Added a secret 1 in a million interaction with the RMS :)
-  - bugfix: Spaceacillin and other ABX will work with the patient stabilizer
-  - rscadd: The patient stabilizer now plays sound to the deceased individual
-  - qol: Bodyscanner now tells you when someone is missing an organ instead of omitting
-      it entirely
-  - rscadd: Adds a LOT of tails and taur tails from downstream. Large shark, Husky
-      taur, orca tail, more bug abdomens, leopard tail, tyranid, among others!
-  - rscadd: Adds a new melee focused PSG that prevents the usage of guns while giving
-      buffs for melee combat
-  - qol: Makes PSGs more acquirable
-  - spellcheck: Standardizes the PSG names (PSG Variant-XXX)
-  - rscadd: Adds the PSG-BIO to the CMO's locker and CMO supply crate(Just reduces
-      toxin/oxygen/clone attack damage taken)
-  - rscadd: Adds the PSG-Melee to the Pathfinder locker (And pathfinder supply crate)
-  - rscadd: Adds the PSG-BIO to the Pathfinder Medic locker
-  - rscadd: Adds the PSG-S to HoS locker (and HoS supply pack)
-  - rscadd: Makes it so the Exploration shield cargo pack has a melee and upgraded
-      mining (mob combat) PSG
-  - rscadd: Mining vendor will now happily sell you a holster for your machete
+    - bugfix: turrets no longer have 100% baymiss chance
+    - bugfix: Fragmines will no longer do 400 damage when you step on them.
+    - qol:
+        The Rapid Material Synthesizer (RMS) has been MASSIVELY buffed and reworked.
+        Check it out!
+    - qol: RMS prices MASSIVELY decreased.
+    - qol: RMS randomize mode can now randomize ANY MATERIAL in the game. Feeling lucky?
+    - bugfix: RMS will no longer drain any battery you use it on to 0
+    - bugfix: RMS will now properly detonate rigged batteries
+    - rscdel: RMS no longer has any emag interactions
+    - rscadd: Added a secret 1 in a million interaction with the RMS :)
+    - bugfix: Spaceacillin and other ABX will work with the patient stabilizer
+    - rscadd: The patient stabilizer now plays sound to the deceased individual
+    - qol:
+        Bodyscanner now tells you when someone is missing an organ instead of omitting
+        it entirely
+    - rscadd:
+        Adds a LOT of tails and taur tails from downstream. Large shark, Husky
+        taur, orca tail, more bug abdomens, leopard tail, tyranid, among others!
+    - rscadd:
+        Adds a new melee focused PSG that prevents the usage of guns while giving
+        buffs for melee combat
+    - qol: Makes PSGs more acquirable
+    - spellcheck: Standardizes the PSG names (PSG Variant-XXX)
+    - rscadd:
+        Adds the PSG-BIO to the CMO's locker and CMO supply crate(Just reduces
+        toxin/oxygen/clone attack damage taken)
+    - rscadd: Adds the PSG-Melee to the Pathfinder locker (And pathfinder supply crate)
+    - rscadd: Adds the PSG-BIO to the Pathfinder Medic locker
+    - rscadd: Adds the PSG-S to HoS locker (and HoS supply pack)
+    - rscadd:
+        Makes it so the Exploration shield cargo pack has a melee and upgraded
+        mining (mob combat) PSG
+    - rscadd: Mining vendor will now happily sell you a holster for your machete
   Guti:
-  - rscadd: Extrapolator, to allow virologists to extract diseases from plenty of
-      sources.
-  - rscadd: Virus thresholds, allowing viruses to do more when one of these thresholds
-      is reached.
-  - rscadd: SBG Syndrome
-  - rscadd: Mice, old vomit, blood, and other crewmembers may contain diseases now,
-      allowing virologists to scan and take them.
-  - rscadd: Added Fleming to all Virology areas
-  - rscadd: Added an extrapolator to all Virology areas
-  - balance: Symptoms are now slower, with different times to activate between them.
-  - balance: Reduced the base infectivity chance
-  - balance: Spread can now be by blood, fluids, or contact. Airborne diseases can
-      be achieved with some thresholds.
-  - qol: Refactored the PanDEMIC's interface
-  - refactor: Refactored how diseases spread, now needing airborne specific symptoms
-      to allow the to be airborne.
-  - refactor: Refactored ContractDisease proc to check body zones more clearly
-  - refactor: Refactored CanContractDisease proc to check better for organs
-  - refactor: Added various getters and setters for viruses, some of their vars were
-      changed to private.
-  - refactor: Refactored the various viruses flag names
-  - refactor: Refactored advanced diseases
-  - refactor: Refactored symptoms into the new advanced diseases
-  - refactor: Refactored vomit code
-  - code_imp: Added AirborneContractDisease for airborne diseases
-  - code_imp: Added extrapolator_act
-  - code_imp: Added is_mouth_covered proc
+    - rscadd:
+        Extrapolator, to allow virologists to extract diseases from plenty of
+        sources.
+    - rscadd:
+        Virus thresholds, allowing viruses to do more when one of these thresholds
+        is reached.
+    - rscadd: SBG Syndrome
+    - rscadd:
+        Mice, old vomit, blood, and other crewmembers may contain diseases now,
+        allowing virologists to scan and take them.
+    - rscadd: Added Fleming to all Virology areas
+    - rscadd: Added an extrapolator to all Virology areas
+    - balance: Symptoms are now slower, with different times to activate between them.
+    - balance: Reduced the base infectivity chance
+    - balance:
+        Spread can now be by blood, fluids, or contact. Airborne diseases can
+        be achieved with some thresholds.
+    - qol: Refactored the PanDEMIC's interface
+    - refactor:
+        Refactored how diseases spread, now needing airborne specific symptoms
+        to allow the to be airborne.
+    - refactor: Refactored ContractDisease proc to check body zones more clearly
+    - refactor: Refactored CanContractDisease proc to check better for organs
+    - refactor:
+        Added various getters and setters for viruses, some of their vars were
+        changed to private.
+    - refactor: Refactored the various viruses flag names
+    - refactor: Refactored advanced diseases
+    - refactor: Refactored symptoms into the new advanced diseases
+    - refactor: Refactored vomit code
+    - code_imp: Added AirborneContractDisease for airborne diseases
+    - code_imp: Added extrapolator_act
+    - code_imp: Added is_mouth_covered proc
   sunofang:
-  - maptweak: Carrier starts on now.
+    - maptweak: Carrier starts on now.
 2025-04-23:
   CHOMPStation2StaffMirrorBot:
-  - rscadd: Added a new AllergyPen autoinjector, available via the loadout (1 point)
-      and medical vendors.
-  - balance: Reduced the plastic cost of large autoinjectors in the injector maker
-      from 1500 to 250, and smaller ones from 30 to 25.
+    - rscadd:
+        Added a new AllergyPen autoinjector, available via the loadout (1 point)
+        and medical vendors.
+    - balance:
+        Reduced the plastic cost of large autoinjectors in the injector maker
+        from 1500 to 250, and smaller ones from 30 to 25.
   Cerami:
-  - bugfix: Change how Dark Respite chooses locations to send kin.
-  - bugfix: Your loadout items won't poof
+    - bugfix: Change how Dark Respite chooses locations to send kin.
+    - bugfix: Your loadout items won't poof
   Kashargul:
-  - bugfix: title showing too late
+    - bugfix: title showing too late
 2025-04-24:
   tacoguy7765093:
-  - balance: Mercenary firerate nerfed, some magazine sizes reduced on them,
-  - balance: Sniper merc fires 1 second faster
-  - balance: Spider HP massively nerfed.
+    - balance: Mercenary firerate nerfed, some magazine sizes reduced on them,
+    - balance: Sniper merc fires 1 second faster
+    - balance: Spider HP massively nerfed.
 2025-04-25:
   CHOMPStation2StaffMirrorBot:
-  - bugfix: resting causing an error
-  - code_imp: some less usr
+    - bugfix: resting causing an error
+    - code_imp: some less usr
 2025-04-26:
   CHOMPStation2StaffMirrorBot:
-  - bugfix: name loading for robot module selection
-  - bugfix: tgui say unsupported channels are no longer black on black in dark mode
-  - qol: Virus extrapolator can now identify stealthy viruses
-  - rscdel: Removed "old vomit" spreading viruses
-  - bugfix: Makes vaccines work again
+    - bugfix: name loading for robot module selection
+    - bugfix: tgui say unsupported channels are no longer black on black in dark mode
+    - qol: Virus extrapolator can now identify stealthy viruses
+    - rscdel: Removed "old vomit" spreading viruses
+    - bugfix: Makes vaccines work again
 2025-04-27:
   CHOMPStation2StaffMirrorBot:
-  - rscadd: Added old blood
-  - qol: Extrapolator can isolate symptoms now
-  - bugfix: Fixed Pandemic not saving the name of named diseases
-  - bugfix: Fixed Pandemic not printing the "virus release" notice
-  - rscadd: Microwave UI is prettier now~
-  - rscadd: Added some new machines in maint, go find them!
-  - rscadd: Added some remote scene tools - bluespace stickers, and the voodoo kit.
-      They let you ahr pea - but remotely.
-  - rscdel: Removed some maint-trader spawn locations
-  - maptweak: Maint Recyclers and Maint Vendors both have several spawn locations
-      in maint
-  - refactor: fixed the logout commsig never getting sent
-  - rscadd: Slightly prettier Canister UI.
-  - qol: RIGSuit UI made prettier and more usable!
-  - rscadd: adds dullahan taurs
-  - rscadd: /tg/'s fonts added, maptext now uses Grand9K Pixel.
-  - rscadd: You can now crawl while down!
-  - rscadd: Species now have specific sounds and gendered sounds.
-  - qol: Weather can now be turned up/down in the character preferences
-  - balance: Xenochimera have licking wounds
-  - qol: Bellyrubbing is now an emote
-  - rscadd: Wolves now have vore stomachs
-  - qol: Staff can see when each other log out
-  - bugfix: runtime on bad runes in persistent files
-  - bugfix: Fixed Resistance not being calculated properly
-  - rscadd: naga wings
-  - rscadd: naga ears
-  - bugfix: Fixed an old programming error that caused hell ramen and soemmerfire
-      to continuously increase the body temperature of the mob that ingested it.
-  - rscadd: More immersive photocopier
-  - rscadd: Pretty UI for the algae farm
-  - rscadd: vassilian autohiss
-  - rscadd: yingish autohiss
-  - code_imp: autohiss unit testing
-  - rscadd: You can now set your Favorite and Maybe OOC prefs.
-  - rscadd: You can now set your Sexuality and Gender in the Character Directory
-  - rscadd: Even more RIG startup screens
-  - rscadd: Adds Xenoarch access to the SD's EVA shuttle
-  - code_imp: Added missing SIGNAL_HANDLER lines to many RegisterSignal() proc refs.
-  - bugfix: a crash when an empty regular expression was used in highlight blacklists
-  - rscadd: TEG has pretty spinning fans
-  - rscadd: Disposal bin UI overhauled to be more skeuomorphic
+    - rscadd: Added old blood
+    - qol: Extrapolator can isolate symptoms now
+    - bugfix: Fixed Pandemic not saving the name of named diseases
+    - bugfix: Fixed Pandemic not printing the "virus release" notice
+    - rscadd: Microwave UI is prettier now~
+    - rscadd: Added some new machines in maint, go find them!
+    - rscadd:
+        Added some remote scene tools - bluespace stickers, and the voodoo kit.
+        They let you ahr pea - but remotely.
+    - rscdel: Removed some maint-trader spawn locations
+    - maptweak:
+        Maint Recyclers and Maint Vendors both have several spawn locations
+        in maint
+    - refactor: fixed the logout commsig never getting sent
+    - rscadd: Slightly prettier Canister UI.
+    - qol: RIGSuit UI made prettier and more usable!
+    - rscadd: adds dullahan taurs
+    - rscadd: /tg/'s fonts added, maptext now uses Grand9K Pixel.
+    - rscadd: You can now crawl while down!
+    - rscadd: Species now have specific sounds and gendered sounds.
+    - qol: Weather can now be turned up/down in the character preferences
+    - balance: Xenochimera have licking wounds
+    - qol: Bellyrubbing is now an emote
+    - rscadd: Wolves now have vore stomachs
+    - qol: Staff can see when each other log out
+    - bugfix: runtime on bad runes in persistent files
+    - bugfix: Fixed Resistance not being calculated properly
+    - rscadd: naga wings
+    - rscadd: naga ears
+    - bugfix:
+        Fixed an old programming error that caused hell ramen and soemmerfire
+        to continuously increase the body temperature of the mob that ingested it.
+    - rscadd: More immersive photocopier
+    - rscadd: Pretty UI for the algae farm
+    - rscadd: vassilian autohiss
+    - rscadd: yingish autohiss
+    - code_imp: autohiss unit testing
+    - rscadd: You can now set your Favorite and Maybe OOC prefs.
+    - rscadd: You can now set your Sexuality and Gender in the Character Directory
+    - rscadd: Even more RIG startup screens
+    - rscadd: Adds Xenoarch access to the SD's EVA shuttle
+    - code_imp: Added missing SIGNAL_HANDLER lines to many RegisterSignal() proc refs.
+    - bugfix: a crash when an empty regular expression was used in highlight blacklists
+    - rscadd: TEG has pretty spinning fans
+    - rscadd: Disposal bin UI overhauled to be more skeuomorphic
   Kash:
-  - bugfix: Fixes a bug where reagents would show up twice in the chem dispenser
+    - bugfix: Fixes a bug where reagents would show up twice in the chem dispenser
   Tost:
-  - rscadd: Adds colour selection to earrings
+    - rscadd: Adds colour selection to earrings
   tacoguy7765093:
-  - maptweak: Use the correct protolathes this time for science.
-  - qol: Supply console, Robotics Fabs, and Pilot consoles no longer have hard access
-      locks.
+    - maptweak: Use the correct protolathes this time for science.
+    - qol:
+        Supply console, Robotics Fabs, and Pilot consoles no longer have hard access
+        locks.
 2025-04-28:
   CHOMPStation2StaffMirrorBot:
-  - bugfix: muffle items not always working
-  - bugfix: matrix recolor not usable in char setup
-  - bugfix: item tf spawn points not assignable
-  - code_imp: move invisibility to defines
-  - admin: invisimin can no longer be used if your invis level is above the observer
-      level
-  - bugfix: RIGs no longer get stuck loading
-  - qol: Air alarms show if they are controlled by an area's main alarm, or are the
-      main alarm themselves. So you can tell when all air alarms in an area are deconstructed
-  - bugfix: Air alarm settings now propagate to all other air alarms in an area
-  - rscadd: Air alarms do nothing if the main air alarm in an area is shorted
-  - qol: PAI may now climb up and down ladders, lattices, and move freely up and down
-      in zeroG
+    - bugfix: muffle items not always working
+    - bugfix: matrix recolor not usable in char setup
+    - bugfix: item tf spawn points not assignable
+    - code_imp: move invisibility to defines
+    - admin:
+        invisimin can no longer be used if your invis level is above the observer
+        level
+    - bugfix: RIGs no longer get stuck loading
+    - qol:
+        Air alarms show if they are controlled by an area's main alarm, or are the
+        main alarm themselves. So you can tell when all air alarms in an area are deconstructed
+    - bugfix: Air alarm settings now propagate to all other air alarms in an area
+    - rscadd: Air alarms do nothing if the main air alarm in an area is shorted
+    - qol:
+        PAI may now climb up and down ladders, lattices, and move freely up and down
+        in zeroG
   FluffMedic:
-  - rscadd: A few lore discs, new mobs to battle
-  - balance: Some Eclipse mobs nerfed, Janus boss reworked
-  - maptweak: Tyr Precursor ruins is altered, and a new
+    - rscadd: A few lore discs, new mobs to battle
+    - balance: Some Eclipse mobs nerfed, Janus boss reworked
+    - maptweak: Tyr Precursor ruins is altered, and a new
   tacoguy7765093:
-  - bugfix: Fixes science protolathe being too restricted.
+    - bugfix: Fixes science protolathe being too restricted.
 2025-04-29:
   CHOMPStation2StaffMirrorBot:
-  - rscadd: Added new lobby screen and new player experience.
-  - bugfix: Title screens work better
+    - rscadd: Added new lobby screen and new player experience.
+    - bugfix: Title screens work better
   Kashargul:
-  - bugfix: fast eater not being custom
+    - bugfix: fast eater not being custom
   tacoguy7765093:
-  - rscadd: Added a new outsider pod called the RipperDocPod for all your cyberpunk
-      needs.
+    - rscadd:
+        Added a new outsider pod called the RipperDocPod for all your cyberpunk
+        needs.
 2025-04-30:
   CHOMPStation2StaffMirrorBot:
-  - bugfix: Loadout items no longer disappear during migrations
-  - code_imp: tgui-core 3.1.3
-  - code_imp: Adjustment on self surgery proc to allow synthetics to commit self surgery.
-  - rscadd: Wearing specific types of footwear preserves barefoot stepping sounds
-  - bugfix: Lobby screen is less colorbandy
-  - bugfix: fixed recyclers fucking up every button ever in tgui
+    - bugfix: Loadout items no longer disappear during migrations
+    - code_imp: tgui-core 3.1.3
+    - code_imp: Adjustment on self surgery proc to allow synthetics to commit self surgery.
+    - rscadd: Wearing specific types of footwear preserves barefoot stepping sounds
+    - bugfix: Lobby screen is less colorbandy
+    - bugfix: fixed recyclers fucking up every button ever in tgui

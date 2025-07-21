@@ -3,13 +3,13 @@
 # The file names and locations are VERY important here
 # DO NOT EDIT THIS UNLESS YOU KNOW WHAT YOU ARE DOING
 # -aa
-name: 'Render Nanomaps'
+name: "Render Nanomaps"
 on:
   push:
     branches:
       - master
     paths:
-      - 'modular_chomp/maps/**'
+      - "modular_chomp/maps/**"
   workflow_dispatch:
 
 permissions: {}

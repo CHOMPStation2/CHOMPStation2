@@ -1,286 +1,314 @@
 2024-01-01:
   Kashargul:
-  - bugfix: Explohound repair multiproc
+    - bugfix: Explohound repair multiproc
   TheCaramelion:
-  - bugfix: Step messages when stepping over a smaller, phased shadekin
-  - bugfix: Shadekin catching items when phased
-  - bugfix: Thrown item displaying messages and harming phased shadekin
-  - bugfix: Slashing affecting phased shadekins
-  - bugfix: Listening in, licking and smelling picking phased shadekin as targets
-  - bugfix: Vines buckling phased shadekin
-  - bugfix: Rogue vending machines targeting phased shadekin
-  - bugfix: Mobs attacking phased shadekin
-  - bugfix: Mobs eating laying down phased shadekin
-  - bugfix: Thermals exposing phased shadekin
-  - bugfix: Water and lava affecting phased shadekin
-  - bugfix: Moving from space to station tile affecting phased shadekin
-  - bugfix: Shadekin sliping on wet tiles
-  - bugfix: Targeting a gun to a shadekin doesn't break when they phase out
-  - bugfix: Phased shadekin squishing cockroaches
-  - bugfix: Phased shadekin hallucinating if they stare at the SM
-  - maptweak: Previous sorting office has been split.
-  - maptweak: Trash Sorting now replaces the Sorting Office.
-  - maptweak: Delivery Office replaced Construction Zone on Deck 1.
+    - bugfix: Step messages when stepping over a smaller, phased shadekin
+    - bugfix: Shadekin catching items when phased
+    - bugfix: Thrown item displaying messages and harming phased shadekin
+    - bugfix: Slashing affecting phased shadekins
+    - bugfix: Listening in, licking and smelling picking phased shadekin as targets
+    - bugfix: Vines buckling phased shadekin
+    - bugfix: Rogue vending machines targeting phased shadekin
+    - bugfix: Mobs attacking phased shadekin
+    - bugfix: Mobs eating laying down phased shadekin
+    - bugfix: Thermals exposing phased shadekin
+    - bugfix: Water and lava affecting phased shadekin
+    - bugfix: Moving from space to station tile affecting phased shadekin
+    - bugfix: Shadekin sliping on wet tiles
+    - bugfix: Targeting a gun to a shadekin doesn't break when they phase out
+    - bugfix: Phased shadekin squishing cockroaches
+    - bugfix: Phased shadekin hallucinating if they stare at the SM
+    - maptweak: Previous sorting office has been split.
+    - maptweak: Trash Sorting now replaces the Sorting Office.
+    - maptweak: Delivery Office replaced Construction Zone on Deck 1.
   Upstream:
-  - bugfix: adjusts the spawn location of the paper to get picked after the animation
-  - bugfix: omni key allowing to listening in to merc channels
+    - bugfix: adjusts the spawn location of the paper to get picked after the animation
+    - bugfix: omni key allowing to listening in to merc channels
   tacoguy7765093:
-  - maptweak: The shuttle docking systems in the carrier docks are now functional.
-  - maptweak: Nerfs shadekin retreat vending machines.
+    - maptweak: The shuttle docking systems in the carrier docks are now functional.
+    - maptweak: Nerfs shadekin retreat vending machines.
 2024-01-04:
   FluffMedic:
-  - rscadd: New event, and function to some strange mobs
+    - rscadd: New event, and function to some strange mobs
   Kashargul:
-  - rscadd: The soundproof bool to all our dorms
-  - rscadd: The suit sensor blocking bool to all our dorms
-  - rscadd: The camera blocking bool to all our dorms
-  - rscadd: The radshielded flag to all our dorms
+    - rscadd: The soundproof bool to all our dorms
+    - rscadd: The suit sensor blocking bool to all our dorms
+    - rscadd: The camera blocking bool to all our dorms
+    - rscadd: The radshielded flag to all our dorms
   TheCaramelion:
-  - bugfix: Makes glacial lettuce obtainable
+    - bugfix: Makes glacial lettuce obtainable
   Upstream:
-  - qol: Adds privacy for borgs in dorms
+    - qol: Adds privacy for borgs in dorms
 2024-01-06:
   Missile597:
-  - rscdel: Removed some excessive pipework causing redundant loops and potential
-      "stuck" trash
-  - bugfix: Fixed some disposals junction's orientations so that the trash flows correctly
-      towards the disposals sorting room
-  - bugfix: Connected a couple of disposals bins to the loop that were previously
-      not connected
-  - maptweak: Added a disposals bin in the gateway prep room, and connected it to
-      the dead end pipework that was heading in that direction
-  - rscadd: Added a recharger station for QoL to allow shadekin to recharge cells
-      at the hideout
-  - maptweak: Added a missing disposal pipe segment to complete the loop.
-  - bugfix: Fixed the Large Alien Ship shelter to be spawnable
-  - bugfix: Fixed the inventories of the Garden and Xenobotany seed storages to have
-      the correct list of seeds at round start (from seed_storage_vr.dm)
-  - maptweak: Added a missing air alarm to Chemistry Distillery
+    - rscdel:
+        Removed some excessive pipework causing redundant loops and potential
+        "stuck" trash
+    - bugfix:
+        Fixed some disposals junction's orientations so that the trash flows correctly
+        towards the disposals sorting room
+    - bugfix:
+        Connected a couple of disposals bins to the loop that were previously
+        not connected
+    - maptweak:
+        Added a disposals bin in the gateway prep room, and connected it to
+        the dead end pipework that was heading in that direction
+    - rscadd:
+        Added a recharger station for QoL to allow shadekin to recharge cells
+        at the hideout
+    - maptweak: Added a missing disposal pipe segment to complete the loop.
+    - bugfix: Fixed the Large Alien Ship shelter to be spawnable
+    - bugfix:
+        Fixed the inventories of the Garden and Xenobotany seed storages to have
+        the correct list of seeds at round start (from seed_storage_vr.dm)
+    - maptweak: Added a missing air alarm to Chemistry Distillery
   tacoguy7765093:
-  - maptweak: Landing zones have been tweaked to allow landing of Overmap Ships
-  - imageadd: Southern Cross's overmap icon has their own sprite now.
-  - maptweak: Space POIs are more functional now
+    - maptweak: Landing zones have been tweaked to allow landing of Overmap Ships
+    - imageadd: Southern Cross's overmap icon has their own sprite now.
+    - maptweak: Space POIs are more functional now
 2024-01-07:
   TheGreatKitsune:
-  - rscadd: A new set of ears
+    - rscadd: A new set of ears
   Upstream:
-  - qol: Allows to temporarily disable textlimit warnings for the vorepanel belly
-      texts
-  - bugfix: the self resize verb now can be used even if resizing through others is
-      disabled
-  - qol: Ignore bellied players in the appendicitis events
+    - qol:
+        Allows to temporarily disable textlimit warnings for the vorepanel belly
+        texts
+    - bugfix:
+        the self resize verb now can be used even if resizing through others is
+        disabled
+    - qol: Ignore bellied players in the appendicitis events
   tacoguy7765093:
-  - imageadd: added large snake tail for teshari
+    - imageadd: added large snake tail for teshari
 2024-01-08:
   tacoguy7765093:
-  - rscdel: Removed spawn of a pulse rifle
-  - maptweak: Minor fixes in The Dark
+    - rscdel: Removed spawn of a pulse rifle
+    - maptweak: Minor fixes in The Dark
 2024-01-10:
   EtheoBoxxman:
-  - bugfix: fixes buns/bunbun cooking by fixing chaos cake interference
+    - bugfix: fixes buns/bunbun cooking by fixing chaos cake interference
   FluffMedic:
-  - bugfix: some mob features should now be on the proper type path
-  - bugfix: solar moths should be less theoretical
-  - bugfix: Re-enables an accidentally disabled event
-  - maptweak: MoL has been altered
+    - bugfix: some mob features should now be on the proper type path
+    - bugfix: solar moths should be less theoretical
+    - bugfix: Re-enables an accidentally disabled event
+    - maptweak: MoL has been altered
   UniquaSa:
-  - imageadd: added another new big leggies
+    - imageadd: added another new big leggies
 2024-01-11:
   Aroliacue:
-  - maptweak: All major departments now have clothing vendors.
-  - maptweak: Added roundstart fultons to medical.
-  - maptweak: Added an extra surgery kit and some resleever circuit boards to the
-      medical storage room.
-  - maptweak: Added tools to the science circuit workshop.
-  - maptweak: Added a prebuilt hidden resleever setup to deck three.
+    - maptweak: All major departments now have clothing vendors.
+    - maptweak: Added roundstart fultons to medical.
+    - maptweak:
+        Added an extra surgery kit and some resleever circuit boards to the
+        medical storage room.
+    - maptweak: Added tools to the science circuit workshop.
+    - maptweak: Added a prebuilt hidden resleever setup to deck three.
   FluffMedic:
-  - rscadd: Two new OM POIs
-  - rscadd: A hidden area with traders
-  - rscadd: Some new mobs
-  - rscadd: Some strange content for engi and xenobio, obtained from the traders
-  - rscadd: New type of netgun added to cargo
+    - rscadd: Two new OM POIs
+    - rscadd: A hidden area with traders
+    - rscadd: Some new mobs
+    - rscadd: Some strange content for engi and xenobio, obtained from the traders
+    - rscadd: New type of netgun added to cargo
   Kashargul:
-  - rscadd: robot multibelly support
-  - bugfix: tgui bundle building skipping jsx files
-  - balance: increased SM delam explosion range by 50 % (MIN 8 -> 12. MAX 16 -> 24)
-  - bugfix: fixed a runtime in the alarm system.
+    - rscadd: robot multibelly support
+    - bugfix: tgui bundle building skipping jsx files
+    - balance: increased SM delam explosion range by 50 % (MIN 8 -> 12. MAX 16 -> 24)
+    - bugfix: fixed a runtime in the alarm system.
   TheCaramelion:
-  - maptweak: Bridge blast doors require Command access now
+    - maptweak: Bridge blast doors require Command access now
 2024-01-14:
   FluffMedic:
-  - bugfix: starhunter trader code should function now
-  - bugfix: starhunter's desc isn't default and have names.
+    - bugfix: starhunter trader code should function now
+    - bugfix: starhunter's desc isn't default and have names.
   Fracshun:
-  - rscadd: Added the Metamorphosis Ray to science's protolathe designs
+    - rscadd: Added the Metamorphosis Ray to science's protolathe designs
   Missile597:
-  - bugfix: Added water as a catalyst to the "nutriment from sap" reaction as a workaround
-      to prevent black sapbeans from losing their reagents on harvest. Recipe now
-      requires 5u water before the three saps react.
-  - rscdel: Buggy camera in the shadekin hideout deleted
+    - bugfix:
+        Added water as a catalyst to the "nutriment from sap" reaction as a workaround
+        to prevent black sapbeans from losing their reagents on harvest. Recipe now
+        requires 5u water before the three saps react.
+    - rscdel: Buggy camera in the shadekin hideout deleted
   TheCaramelion:
-  - balance: Mailbag capacity changed from 21 to 28
-  - bugfix: Mailbag can now pick up envelopes off the tile
-  - bugfix: Spamming click on an envelope won't trigger opening it multiple times
+    - balance: Mailbag capacity changed from 21 to 28
+    - bugfix: Mailbag can now pick up envelopes off the tile
+    - bugfix: Spamming click on an envelope won't trigger opening it multiple times
   Upstream:
-  - bugfix: nurse spiders no longer spawning unexpectetly (to prevent snowballing)
-      from random sources
-  - rscadd: Added emag functionality on SleeveMate
+    - bugfix:
+        nurse spiders no longer spawning unexpectetly (to prevent snowballing)
+        from random sources
+    - rscadd: Added emag functionality on SleeveMate
 2024-01-15:
   Missile597:
-  - rscadd: New lost and found bins added to dorms bathrooms, the bathroom near the
-      qpad, the bathroom near the bar and the bathroom near the gym, to allow for
-      easier and more discreet item returns. These connect to the lost and found loop
-      and also clean prey items.
-  - rscdel: Removed the junk on the shelves in Autoresleeving so you don't have to
-      go digging through random junk to get your stuff. Removed one shelf to make
-      room for chute.
-  - maptweak: Moved the lost and found exit out of the wall, so any players summarily
-      "tossed" into a bin don't get wall-stuck. Aimed the chute at a wall so that
-      there's no risk of any window breaking if hit excessively.
+    - rscadd:
+        New lost and found bins added to dorms bathrooms, the bathroom near the
+        qpad, the bathroom near the bar and the bathroom near the gym, to allow for
+        easier and more discreet item returns. These connect to the lost and found loop
+        and also clean prey items.
+    - rscdel:
+        Removed the junk on the shelves in Autoresleeving so you don't have to
+        go digging through random junk to get your stuff. Removed one shelf to make
+        room for chute.
+    - maptweak:
+        Moved the lost and found exit out of the wall, so any players summarily
+        "tossed" into a bin don't get wall-stuck. Aimed the chute at a wall so that
+        there's no risk of any window breaking if hit excessively.
   tacoguy7765093:
-  - bugfix: No more fatal heartburn to organic crew with stronger acids.
+    - bugfix: No more fatal heartburn to organic crew with stronger acids.
   zeskorion:
-  - rscadd: adds new bodymarkings, "ears", and wings.
+    - rscadd: adds new bodymarkings, "ears", and wings.
   null:
-  - bugfix: no more multiproccs on butchering
+    - bugfix: no more multiproccs on butchering
 2024-01-16:
   Aroliacue:
-  - maptweak: Made some fixes/improvements to the 'Survival Luxury Home' superpose
-      capsule, including better lighting, labeled doors, openable curtains, a light
-      switch and proper floor tiles in spots it was missing.
+    - maptweak:
+        Made some fixes/improvements to the 'Survival Luxury Home' superpose
+        capsule, including better lighting, labeled doors, openable curtains, a light
+        switch and proper floor tiles in spots it was missing.
   Raeschen:
-  - bugfix: Increase default welcome window height to remove scrollbar
+    - bugfix: Increase default welcome window height to remove scrollbar
 2024-01-18:
   FluffMedic:
-  - bugfix: slime horde requires dead explorers
-  - balance: Nerfs the abilities of the Paradox rift gen
+    - bugfix: slime horde requires dead explorers
+    - balance: Nerfs the abilities of the Paradox rift gen
   Fracshun:
-  - rscadd: VoreFX now applies to those indirectly in a belly. Such as those being
-      held by someone or in a item inside a belly.
+    - rscadd:
+        VoreFX now applies to those indirectly in a belly. Such as those being
+        held by someone or in a item inside a belly.
   Kashargul:
-  - bugfix: donksoft cyborg blaster not working
+    - bugfix: donksoft cyborg blaster not working
   TheCaramelion:
-  - rscadd: Quiet portal and airlock that won't announce leaving over Common.
-  - maptweak: Photocopier changed to paper shredder in the mail room
-  - rscadd: Added modern labcoat to the labcoat selection
+    - rscadd: Quiet portal and airlock that won't announce leaving over Common.
+    - maptweak: Photocopier changed to paper shredder in the mail room
+    - rscadd: Added modern labcoat to the labcoat selection
   Upstream:
-  - code_imp: Custom indexeddb store. Tgui related settings like themes might reset.
-  - bugfix: '"Hotkey Toggle" button now respecting the set theme.'
-  - bugfix: Typo in sprite_accessories.dm
-  - qol: Adds adjustable visual limits for displayed messages
-  - qol: Adds the option to modify the combining time and skipped messages in between
-  - qol: Adds the currently stored message count to the export tab
-  - qol: Heavily optimized message logging. This should lessen a lot of strain and
-      delay the OOMs until Selis gets to implementing a maximum round retention setting.
-  - qol: Allows to reorder chat tabs
-  - qol: Chat Export will now respect the actively selected tab filters
-  - qol: Disconnect banner can now be dismissed directly until the next disconnect
-      / lag
-  - rscadd: Export verb for the chatlogs
-  - bugfix: Main tab can no longer be deleted (requires the deletion of all tabs once
-      for existing chat tabs)
-  - bugfix: Purge message archive not working in some cases
-  - bugfix: emotesubtle colour in vchat themes
-  - bugfix: fixes interference with vore filter on examine
+    - code_imp: Custom indexeddb store. Tgui related settings like themes might reset.
+    - bugfix: '"Hotkey Toggle" button now respecting the set theme.'
+    - bugfix: Typo in sprite_accessories.dm
+    - qol: Adds adjustable visual limits for displayed messages
+    - qol: Adds the option to modify the combining time and skipped messages in between
+    - qol: Adds the currently stored message count to the export tab
+    - qol:
+        Heavily optimized message logging. This should lessen a lot of strain and
+        delay the OOMs until Selis gets to implementing a maximum round retention setting.
+    - qol: Allows to reorder chat tabs
+    - qol: Chat Export will now respect the actively selected tab filters
+    - qol:
+        Disconnect banner can now be dismissed directly until the next disconnect
+        / lag
+    - rscadd: Export verb for the chatlogs
+    - bugfix:
+        Main tab can no longer be deleted (requires the deletion of all tabs once
+        for existing chat tabs)
+    - bugfix: Purge message archive not working in some cases
+    - bugfix: emotesubtle colour in vchat themes
+    - bugfix: fixes interference with vore filter on examine
 2024-01-19:
   HatArchAzel:
-  - rscadd: Adds new aeromorph wings to character setup.
+    - rscadd: Adds new aeromorph wings to character setup.
   Upstream:
-  - bugfix: fixes runtimes in the laundry basket which led to duplication of the off-hand
-  - rscadd: "/\U0001F191"
-  - rscadd: '[issue link stripped]'
-  - rscadd: Added tanktop and yellow jacket to loadout
-  - qol: Microwaves are now OOC escapable
-  - balance: Nerfs foam durasteel greatsword
-  - bugfix: Fixes memory leak with codexes
-  - bugfix: Fixes bug which bricks codex "go back" button
-  - bugfix: Reimplements footstep sounds for rock turfs
-  - bugfix: Fixes edge-case which sometimes repeatedly spawned POI's on top of each
-      other
-  - rscadd: Adds more PDA notes, adds copy and print function to PDA note app
-  - bugfix: Zombie powder makes hearts appear stopped again
-  - bugfix: Highlander mode no longer crashes the server, and also doesn't delete
-      your organs anymore
-  - bugfix: Conveyor belts no longer move flashlight light cones
-  - bugfix: Particle accelerator properly applies radiation to bumped mobs again
-  - rscadd: Adds missing surgery names
-  - bugfix: Healthy tesh no longer appear hurt on photographs and dogborg sleepers
-  - bugfix: Organs no longer get stuck to the HUD
-  - bugfix: Organ butchering works again
-  - qol: added GPS into Triangulating device design names, so that people find it
-      when only searching for GPS
-  - qol: changed the wording on the organ treatment, from dress to treat. Fixed a
-      typo in Detach.
-  - rscadd: 'Downstream: Needs manual changes as we somehow never took over the naming
-      on those steps. DO NOT MERGE right away!'
+    - bugfix: fixes runtimes in the laundry basket which led to duplication of the off-hand
+    - rscadd: "/\U0001F191"
+    - rscadd: "[issue link stripped]"
+    - rscadd: Added tanktop and yellow jacket to loadout
+    - qol: Microwaves are now OOC escapable
+    - balance: Nerfs foam durasteel greatsword
+    - bugfix: Fixes memory leak with codexes
+    - bugfix: Fixes bug which bricks codex "go back" button
+    - bugfix: Reimplements footstep sounds for rock turfs
+    - bugfix:
+        Fixes edge-case which sometimes repeatedly spawned POI's on top of each
+        other
+    - rscadd: Adds more PDA notes, adds copy and print function to PDA note app
+    - bugfix: Zombie powder makes hearts appear stopped again
+    - bugfix:
+        Highlander mode no longer crashes the server, and also doesn't delete
+        your organs anymore
+    - bugfix: Conveyor belts no longer move flashlight light cones
+    - bugfix: Particle accelerator properly applies radiation to bumped mobs again
+    - rscadd: Adds missing surgery names
+    - bugfix: Healthy tesh no longer appear hurt on photographs and dogborg sleepers
+    - bugfix: Organs no longer get stuck to the HUD
+    - bugfix: Organ butchering works again
+    - qol:
+        added GPS into Triangulating device design names, so that people find it
+        when only searching for GPS
+    - qol:
+        changed the wording on the organ treatment, from dress to treat. Fixed a
+        typo in Detach.
+    - rscadd:
+        "Downstream: Needs manual changes as we somehow never took over the naming
+        on those steps. DO NOT MERGE right away!"
 2024-01-21:
   Aroliacue:
-  - rscadd: Fultons can now be used anywhere, making them suitable for medical extraction
-      and sending objects back to the station. Using them on a living creature will
-      stun them for a significant amount of time, and combined with their limited
-      uses and cost, this should discourage using them as an alternative to teleportation.
-  - rscadd: Added bluespace fultons to the 'Misc' tab and added the Surgical Kit to
-      the 'medical' tab in cargo.
-  - soundadd: Increased the volume of bonebreaks.
-  - imageadd: Added new icons for the bluespace fulton beacon.
+    - rscadd:
+        Fultons can now be used anywhere, making them suitable for medical extraction
+        and sending objects back to the station. Using them on a living creature will
+        stun them for a significant amount of time, and combined with their limited
+        uses and cost, this should discourage using them as an alternative to teleportation.
+    - rscadd:
+        Added bluespace fultons to the 'Misc' tab and added the Surgical Kit to
+        the 'medical' tab in cargo.
+    - soundadd: Increased the volume of bonebreaks.
+    - imageadd: Added new icons for the bluespace fulton beacon.
   ItsSelis:
-  - bugfix: fixed changelog path
+    - bugfix: fixed changelog path
 2024-01-22:
   EtheoBoxxman:
-  - rscadd: Bodycams, configurable in hand and attachable to suits
-  - rscadd: Added a unique monitor for bodycams, constructable like entertainment
-      monitors.
-  - rscadd: Adds a bodycam to security lockers, and to SecTech vendors.
-  - maptweak: 'Adds bodycam monitors to sec desk, hos office, warden office, and security
-      briefing room.
+    - rscadd: Bodycams, configurable in hand and attachable to suits
+    - rscadd:
+        Added a unique monitor for bodycams, constructable like entertainment
+        monitors.
+    - rscadd: Adds a bodycam to security lockers, and to SecTech vendors.
+    - maptweak:
+        "Adds bodycam monitors to sec desk, hos office, warden office, and security
+        briefing room.
 
-      :cl:
+        :cl:
 
-      <!-- Both :cl:''s are required for the changelog to work! You can put your name
-      to the right of the first :cl: if you want to overwrite your GitHub username
-      as author ingame. -->
+        <!-- Both :cl:'s are required for the changelog to work! You can put your name
+        to the right of the first :cl: if you want to overwrite your GitHub username
+        as author ingame. -->
 
-      <!-- You can use multiple of the same prefix (they''re only used for the icon
-      ingame) and delete the unneeded ones. Despite some of the tags, changelogs should
-      generally represent how a player might be affected by the changes rather than
-      a summary of the PR''s contents. -->'
+        <!-- You can use multiple of the same prefix (they're only used for the icon
+        ingame) and delete the unneeded ones. Despite some of the tags, changelogs should
+        generally represent how a player might be affected by the changes rather than
+        a summary of the PR's contents. -->"
   Missile597:
-  - maptweak: Isolation ward exterior windows made electrochromatic
+    - maptweak: Isolation ward exterior windows made electrochromatic
   Raeschen:
-  - qol: Allows carpets to be painted
+    - qol: Allows carpets to be painted
   TheCaramelion:
-  - bugfix: Ghosts won't delete pAIs if they close the tgui pop-ups anymore
+    - bugfix: Ghosts won't delete pAIs if they close the tgui pop-ups anymore
   Upstream:
-  - rscadd: Added new trait (Bad Swimmer)
+    - rscadd: Added new trait (Bad Swimmer)
 2024-01-26:
   Darlantanis:
-  - qol: Adjust turf edges priority
-  - qol: Tweaks windgrille spawner layer
-  - bugfix: Makes wingrille spawners work after roundstart
+    - qol: Adjust turf edges priority
+    - qol: Tweaks windgrille spawner layer
+    - bugfix: Makes wingrille spawners work after roundstart
   EtheoBoxxman:
-  - rscadd: Adds breathless trait
-  - rscadd: Adds shadekin bodytype for custom species
-  - rscadd: Adds marish language
+    - rscadd: Adds breathless trait
+    - rscadd: Adds shadekin bodytype for custom species
+    - rscadd: Adds marish language
   FluffMedic:
-  - rscadd: Added Anomaly role, aka new shadekin role
-  - rscadd: Added an outsider radio
-  - qol: Shadekin and outsiders are now separate
-  - bugfix: Anomaly getting mail, and should be announcing
-  - bugfix: fixed a spawnpoint
+    - rscadd: Added Anomaly role, aka new shadekin role
+    - rscadd: Added an outsider radio
+    - qol: Shadekin and outsiders are now separate
+    - bugfix: Anomaly getting mail, and should be announcing
+    - bugfix: fixed a spawnpoint
   Kashargul:
-  - bugfix: runtime during belly acid reagent applications on robot robot noms
-  - bugfix: runtime during acid reagent application on destructible objects
+    - bugfix: runtime during belly acid reagent applications on robot robot noms
+    - bugfix: runtime during acid reagent application on destructible objects
   Missile597:
-  - maptweak: Replaced the secret console with a working resleever console
-  - maptweak: Replaced the secret cloning pod with a sleeve growing pod
+    - maptweak: Replaced the secret console with a working resleever console
+    - maptweak: Replaced the secret cloning pod with a sleeve growing pod
   Raeschen:
-  - rscdel: Removes stripping from jelly blob vore
+    - rscdel: Removes stripping from jelly blob vore
   TheCaramelion:
-  - bugfix: Solar grubs can now evolve
-  - maptweak: Solar moth re-added to the valley
-  - bugfix: Only shadekin can pick the Anomaly role
+    - bugfix: Solar grubs can now evolve
+    - maptweak: Solar moth re-added to the valley
+    - bugfix: Only shadekin can pick the Anomaly role
   TheGreatKitsune:
-  - rscadd: New ability for shadekin
+    - rscadd: New ability for shadekin
 2024-01-27:
   FluffMedic:
-  - bugfix: Outsiders should be silent again
+    - bugfix: Outsiders should be silent again
