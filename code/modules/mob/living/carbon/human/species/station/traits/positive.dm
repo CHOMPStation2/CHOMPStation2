@@ -42,6 +42,7 @@
 	name = "Crushing Attacks"
 	desc = "Your unarmed attacks deal high damage. (+10 per attack)"
 	cost = 2
+<<<<<<< HEAD
 	custom_only = FALSE
 	hidden = FALSE //Disabled on Virgo. //CHOMPEdit
 	var_changes = list("unarmed_bonus" = 10)
@@ -53,6 +54,19 @@
 	desc = "Your unarmed attacks can break windows, APCs, deal massive damage to synthetics, and you can break out of restraints 24 times faster."
 	cost = 6
 	custom_only = FALSE
+=======
+	custom_only = FALSE
+	hidden = TRUE //Disabled on Virgo.
+	var_changes = list("unarmed_bonus" = 10)
+	excludes = list(/datum/trait/positive/punchdamage)
+	banned_species = list(SPECIES_TESHARI, SPECIES_VOX)
+
+/datum/trait/positive/shredding_attacks //Variant of plus
+	name = "Shredding Attacks"
+	desc = "Your unarmed attacks can break windows, APCs, deal massive damage to synthetics, and you can break out of restraints 24 times faster."
+	cost = 6
+	custom_only = FALSE
+>>>>>>> 6bf0d6e27d (Update positive.dm (#18016))
 	hidden = TRUE
 	var_changes = list("shredding" = TRUE)
 	banned_species = list(SPECIES_TESHARI, SPECIES_VOX)
@@ -64,7 +78,11 @@
 	custom_only = FALSE
 	hidden = FALSE //Disabled on Virgo. //CHOMPEdit
 	var_changes = list("unarmed_bonus" = 5, "item_slowdown_mod" = 0.5)
+<<<<<<< HEAD
 	excludes = list(/datum/trait/positive/punchdamage, /datum/trait/positive/hardy, /datum/trait/positive/hardy_plus, /datum/trait/positive/speed_fast) //CHOMPEdit
+=======
+	excludes = list(/datum/trait/positive/punchdamage, /datum/trait/positive/hardy, /datum/trait/positive/hardy_plus)
+>>>>>>> 6bf0d6e27d (Update positive.dm (#18016))
 	banned_species = list(SPECIES_ALRAUNE, SPECIES_TESHARI, SPECIES_UNATHI, SPECIES_DIONA, SPECIES_PROMETHEAN, SPECIES_PROTEAN)
 
 /datum/trait/positive/strengthplus //see above comment
@@ -72,9 +90,15 @@
 	desc = "You are unreasonably strong. Your unarmed attacks do high damage (+10), you experience much less slowdown from heavy equipment (75% less)."
 	cost = 4
 	custom_only = FALSE
+<<<<<<< HEAD
 	hidden = FALSE //Disabled on Virgo. //CHOMPEdit
 	var_changes = list("unarmed_bonus" = 10, "item_slowdown_mod" = 0.25)
 	excludes = list(/datum/trait/positive/punchdamage, /datum/trait/positive/hardy, /datum/trait/positive/punchdamageplus, /datum/trait/positive/hardy_plus, /datum/trait/positive/speed_fast) //CHOMPEdit
+=======
+	hidden = TRUE //Disabled on Virgo.
+	var_changes = list("unarmed_bonus" = 10, "item_slowdown_mod" = 0.25)
+	excludes = list(/datum/trait/positive/punchdamage, /datum/trait/positive/hardy, /datum/trait/positive/punchdamageplus, /datum/trait/positive/hardy_plus)
+>>>>>>> 6bf0d6e27d (Update positive.dm (#18016))
 	banned_species = list(SPECIES_ALRAUNE, SPECIES_TESHARI, SPECIES_UNATHI, SPECIES_DIONA, SPECIES_PROMETHEAN, SPECIES_PROTEAN, SPECIES_VOX)
 
 /datum/trait/positive/hardy
