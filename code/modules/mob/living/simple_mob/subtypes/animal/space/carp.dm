@@ -211,7 +211,6 @@
 	icon_dead = "megacarp_dead"
 	icon_living = "megacarp"
 	icon_state = "megacarp"
-	vore_active = 1 //CHOMPSTATION ADDITION
 	vore_icons = SA_ICON_LIVING //CHOMPSTATION ADDITION
 
 	maxHealth = 230
