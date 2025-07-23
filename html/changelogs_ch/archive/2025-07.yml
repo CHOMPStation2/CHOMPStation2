@@ -183,3 +183,12 @@
 2025-07-22:
   Kashargul:
   - code_imp: replace eslint with biome
+2025-07-23:
+  CHOMPStation2StaffMirrorBot:
+  - code_imp: Gamma loot global list moved to proper file
+  Diana:
+  - bugfix: Bunny taur will no longer hide all worn clothing
+  - bugfix: Empty Contents no longer shows up on ore satchels
+  - bugfix: feline 3color taur fat vwag is fixed
+  - bugfix: Emotes now can be used the first time someone emotes instead of *help
+      having to be used
