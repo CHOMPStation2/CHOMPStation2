@@ -161,11 +161,10 @@
 /mob/living/simple_mob/animal/space/carp/large
 	name = "elder carp"
 	desc = "An older, more matured carp. Few survive to this age due to their aggressiveness."
-	icon = 'icons/mob/vore64x32.dmi' //CHOMPSTATION EDIT
+	icon = 'icons/mob/64x32.dmi'
 	icon_state = "shark"
 	icon_living = "shark"
 	icon_dead = "shark_dead"
-	vore_icons = SA_ICON_LIVING //CHOMPSTATION EDIT
 
 	maxHealth = 50
 	health = 50
