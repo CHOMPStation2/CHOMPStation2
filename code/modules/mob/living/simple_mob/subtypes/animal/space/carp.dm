@@ -43,7 +43,7 @@
 	density = FALSE
 
 	vore_active = TRUE
-	vore_icons = SA_ICON_LIVING
+	vore_icons = 0 //CHOMPSTATION EDIT - Require new sprites
 	response_help = "pets"
 	response_disarm = "gently pushes aside"
 	response_harm = "hits"
@@ -161,11 +161,11 @@
 /mob/living/simple_mob/animal/space/carp/large
 	name = "elder carp"
 	desc = "An older, more matured carp. Few survive to this age due to their aggressiveness."
-	icon = 'icons/mob/64x32.dmi'
+	icon = 'icons/mob/vore64x32.dmi' //CHOMPSTATION EDIT
 	icon_state = "shark"
 	icon_living = "shark"
 	icon_dead = "shark_dead"
-	vore_icons = FALSE
+	vore_icons = SA_ICON_LIVING //CHOMPSTATION EDIT
 
 	maxHealth = 50
 	health = 50
@@ -183,11 +183,11 @@
 /mob/living/simple_mob/animal/space/carp/large/huge
 	name = "great white carp"
 	desc = "A very rare breed of carp- and a very aggressive one."
-	icon = 'icons/mob/64x64.dmi'
+	icon = 'icons/mob/vore64x64.dmi' //CHOMPSTATION EDIT
 	icon_dead = "megacarp_dead"
 	icon_living = "megacarp"
 	icon_state = "megacarp"
-	vore_icons = FALSE
+	vore_icons = SA_ICON_LIVING //CHOMPSTATION EDIT
 
 	maxHealth = 230
 	health = 230
@@ -208,10 +208,12 @@
 /mob/living/simple_mob/animal/space/carp/large/huge/vorny
 	name = "great white carp"
 	desc = "A very rare breed of carp- and a very hungry one."
-	icon = 'icons/mob/64x64.dmi'
+	icon = 'icons/mob/vore64x64.dmi' //CHOMPSTATION EDIT
 	icon_dead = "megacarp_dead"
 	icon_living = "megacarp"
 	icon_state = "megacarp"
+	vore_active = 1 //CHOMPSTATION ADDITION
+	vore_icons = SA_ICON_LIVING //CHOMPSTATION ADDITION
 
 	maxHealth = 230
 	health = 230
