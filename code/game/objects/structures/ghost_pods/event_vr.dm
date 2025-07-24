@@ -15,6 +15,7 @@
 	invisibility = INVISIBILITY_OBSERVER
 	spawn_active = TRUE
 	var/announce_prob = 35
+<<<<<<< HEAD
 	/* // CHOMPRemove Start.
 	var/list/possible_mobs = list("Rabbit" = /mob/living/simple_mob/vore/rabbit,
 								  "Red Panda" = /mob/living/simple_mob/vore/redpanda,
@@ -88,6 +89,8 @@
 								  "kururak" = /mob/living/simple_mob/animal/sif/kururak,
 								  "Statue of Temptation" = /mob/living/simple_mob/vore/devil
 								  )
+=======
+>>>>>>> 873827d5f5 (fix simple mob bellies on admin spawn (#18036))
 
 	*/ //CHOMPRemove End
 
@@ -106,7 +109,11 @@
 		return
 
 	while(finalized != "Yes" && M.client)
+<<<<<<< HEAD
 		choice = tgui_input_list(M, "What type of predator do you want to play as?", "Maintpred Choice", GLOB.maint_mob_pred_options) //CHOMPStation Edit
+=======
+		choice = tgui_input_list(M, "What type of predator do you want to play as?", "Maintpred Choice", GLOB.maint_mob_pred_options)
+>>>>>>> 873827d5f5 (fix simple mob bellies on admin spawn (#18036))
 		if(!choice)	//We probably pushed the cancel button on the mob selection. Let's just put the ghost pod back in the list.
 			to_chat(M, span_notice("No mob selected, cancelling."))
 			reset_ghostpod()
@@ -119,12 +126,14 @@
 		reset_ghostpod()
 		return
 
+<<<<<<< HEAD
 	var/mobtype = GLOB.maint_mob_pred_options[choice] //CHOMPStation Edit
+=======
+	var/mobtype = GLOB.maint_mob_pred_options[choice]
+>>>>>>> 873827d5f5 (fix simple mob bellies on admin spawn (#18036))
 	var/mob/living/simple_mob/newPred = new mobtype(get_turf(src))
 	qdel(newPred.ai_holder)
 	newPred.ai_holder = null
-	newPred.voremob_loaded = TRUE // On-demand belly loading.
-	newPred.init_vore() // On-demand belly loading.
 	//newPred.movement_cooldown = 0			// The "needless artificial speed cap" exists for a reason
 	if(M.mind)
 		M.mind.transfer_to(newPred)
@@ -136,6 +145,10 @@
 	newPred.ckey = M.ckey
 	newPred.visible_message(span_warning("[newPred] emerges from somewhere!"))
 	log_and_message_admins("successfully entered \a [src] and became a [newPred].")
+	if(tgui_alert(newPred, "Do you want to load the vore bellies from your current slot?", "Load Bellies", list("Yes", "No")) == "Yes")
+		newPred.copy_from_prefs_vr()
+		if(LAZYLEN(newPred.vore_organs))
+			newPred.vore_selected = newPred.vore_organs[1]
 	qdel(src)
 
 /obj/structure/ghost_pod/ghost_activated/maintpred/no_announce
@@ -163,7 +176,6 @@
 
 	var/mob/living/simple_mob/vore/morph/newMorph = new /mob/living/simple_mob/vore/morph(get_turf(src))
 	newMorph.voremob_loaded = TRUE // On-demand belly loading.
-	newMorph.init_vore() // On-demand belly loading.
 	if(M.mind)
 		M.mind.transfer_to(newMorph)
 	to_chat(M, span_notice("You are a " + span_bold("Morph") + ", somehow having gotten aboard the station in your wandering. \
@@ -178,6 +190,10 @@
 	newMorph.ckey = M.ckey
 	newMorph.visible_message(span_warning("A morph appears to crawl out of somewhere."))
 	log_and_message_admins("successfully entered \a [src] and became a Morph.")
+	if(tgui_alert(newMorph, "Do you want to load the vore bellies from your current slot?", "Load Bellies", list("Yes", "No")) == "Yes")
+		newMorph.copy_from_prefs_vr()
+		if(LAZYLEN(newMorph.vore_organs))
+			newMorph.vore_selected = newMorph.vore_organs[1]
 	qdel(src)
 
 /obj/structure/ghost_pod/ghost_activated/morphspawn/no_announce

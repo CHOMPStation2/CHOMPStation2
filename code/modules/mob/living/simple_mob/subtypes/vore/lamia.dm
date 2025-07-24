@@ -78,12 +78,16 @@
 			else if(((stat == UNCONSCIOUS) || resting || incapacitated(INCAPACITATION_DISABLED) ) && icon_rest)
 				icon_state = "[icon_rest]_vore_[upper_shows]_[tail_shows]"
 
+<<<<<<< HEAD
 
 /mob/living/simple_mob/vore/lamia/init_vore()
 	if(!voremob_loaded)
 		return
 	if(LAZYLEN(vore_organs))
 		return
+=======
+/mob/living/simple_mob/vore/lamia/load_default_bellies()
+>>>>>>> 873827d5f5 (fix simple mob bellies on admin spawn (#18036))
 	. = ..()
 	var/obj/belly/B = vore_selected
 

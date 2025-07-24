@@ -34,11 +34,15 @@
 	catalogue_data = list(/datum/category_item/catalogue/fauna/wolf)
 
 	allow_mind_transfer = TRUE
+	vore_active = TRUE
+	vore_capacity = 1
+	vore_icons = SA_ICON_LIVING
 
 	can_be_drop_prey = FALSE
 	species_sounds = "Canine"
 	pain_emote_1p = list("yelp", "whine", "bark", "growl")
 	pain_emote_3p = list("yelps", "whines", "barks", "growls")
+<<<<<<< HEAD
 	vore_icons = SA_ICON_LIVING
 
 /mob/living/simple_mob/animal/wolf/init_vore()
@@ -46,6 +50,10 @@
 		return
 	if(LAZYLEN(vore_organs))
 		return
+=======
+
+/mob/living/simple_mob/animal/vore/wolf/load_default_bellies()
+>>>>>>> 873827d5f5 (fix simple mob bellies on admin spawn (#18036))
 	. = ..()
 
 	var/obj/belly/B = vore_selected
