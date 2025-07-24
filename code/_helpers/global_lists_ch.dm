@@ -5,6 +5,7 @@ GLOBAL_LIST_INIT(maint_mob_pred_options, list(
 	"Fennix" = /mob/living/simple_mob/vore/fennix,
 	"Fox" = /mob/living/simple_mob/animal/passive/fox,
 	"Syndi-Fox" = /mob/living/simple_mob/animal/passive/fox/syndicate,
+	"Horse" = /mob/living/simple_mob/vore/horse/big,
 	"Raccoon" = /mob/living/simple_mob/animal/passive/raccoon,
 	"Cat" = /mob/living/simple_mob/animal/passive/cat,
 	"Space Bumblebee" = /mob/living/simple_mob/vore/bee,
@@ -85,5 +86,10 @@ GLOBAL_LIST_INIT(maint_mob_pred_options, list(
 	"Abyss Lurker" = /mob/living/simple_mob/vore/vore_hostile/abyss_lurker,
 	"Swoopie XL" = /mob/living/simple_mob/vore/aggressive/corrupthound/swoopie,
 	"Teppie" = /datum/category_item/catalogue/fauna/teppi,
-	"Frostlit Lamp" = /mob/living/simple_mob/animal/passive/gaslamp/snow
+	"Frostlit Lamp" = /mob/living/simple_mob/animal/passive/gaslamp/snow,
+	"Voidwalker" = /mob/living/simple_mob/vore/demon,
+	"Super Metroid" = /mob/living/simple_mob/metroid/juvenile/super,
+	"Space Carp" = /mob/living/simple_mob/animal/space/carp,
+	"Great White Carp" = /mob/living/simple_mob/animal/space/carp/large/huge/vorny,
+	"Giant Bat" = /mob/living/simple_mob/vore/bat
 	))
