@@ -42,18 +42,8 @@
 	species_sounds = "Canine"
 	pain_emote_1p = list("yelp", "whine", "bark", "growl")
 	pain_emote_3p = list("yelps", "whines", "barks", "growls")
-<<<<<<< HEAD
-	vore_icons = SA_ICON_LIVING
-
-/mob/living/simple_mob/animal/wolf/init_vore()
-	if(!voremob_loaded)
-		return
-	if(LAZYLEN(vore_organs))
-		return
-=======
 
 /mob/living/simple_mob/animal/vore/wolf/load_default_bellies()
->>>>>>> 873827d5f5 (fix simple mob bellies on admin spawn (#18036))
 	. = ..()
 
 	var/obj/belly/B = vore_selected

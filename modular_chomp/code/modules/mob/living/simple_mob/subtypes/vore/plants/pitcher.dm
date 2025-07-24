@@ -74,12 +74,8 @@ GLOBAL_LIST_INIT(pitcher_plant_lure_messages, list(
 	vore_ignores_undigestable = 0
 	vore_default_mode = DM_DIGEST
 
-/mob/living/simple_mob/vore/pitcher_plant/init_vore()
-	if(!voremob_loaded)
-		return
-	if(LAZYLEN(vore_organs))
-		return
-	.=..()
+/mob/living/simple_mob/vore/pitcher_plant/load_default_bellies()
+	. = ..()
 	var/obj/belly/B = vore_selected
 	B.desc	= "You leaned a little too close to the pitcher plant, stumbling over the lip and splashing into a puddle of liquid filling the bottom of the cramped pitcher. You squirm madly, righting yourself and scrabbling at the walls in vain as the slick surface offers no purchase. The dim light grows dark as the pitcher's cap lowers, silently sealing the exit. With a sinking feeling, you realize you won't be able to push the exit open even if you could somehow climb that high, leaving you helplessly trapped in the slick, tingling fluid. The ONLY POSSIBLE WAY OUT is if someone either kills this thing or lowers a lifeline down to help. Maybe some string, a wire, or a good rope would do the trick..."
 	B.digest_burn = 0.1 // Sloowwwwww churns

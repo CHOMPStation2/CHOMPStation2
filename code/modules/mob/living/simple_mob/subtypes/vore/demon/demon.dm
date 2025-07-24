@@ -47,17 +47,9 @@
 	var/last_shift = 0
 	var/is_shifting = FALSE
 
-<<<<<<< HEAD
 	can_be_drop_prey = FALSE //CHOMP Add
 
-/mob/living/simple_mob/vore/demon/init_vore()
-	if(!voremob_loaded)
-		return
-	if(LAZYLEN(vore_organs))
-		return
-=======
 /mob/living/simple_mob/vore/demon/load_default_bellies()
->>>>>>> 873827d5f5 (fix simple mob bellies on admin spawn (#18036))
 	. = ..()
 	var/obj/belly/B = vore_selected
 	B.name = "Stomach"

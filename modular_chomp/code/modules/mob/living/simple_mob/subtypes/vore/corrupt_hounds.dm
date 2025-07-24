@@ -138,12 +138,8 @@
 /mob/living/simple_mob/vore/retaliate/corrupthound/janihound/space/Process_Spacemove(var/check_drift = 0)
 	return TRUE
 
-/mob/living/simple_mob/vore/retaliate/corrupthound/janihound/init_vore()
-	if(!voremob_loaded)
-		return
-	if(LAZYLEN(vore_organs))
-		return
-	.=..()
+/mob/living/simple_mob/vore/retaliate/corrupthound/janihound/load_default_bellies()
+	. = ..()
 	var/obj/belly/B = vore_selected
 	B.vore_sound = "Tauric Swallow"				// CHOMPedit - Fancy Vore Sounds
 	B.release_sound = "Pred Escape"				// CHOMPedit - Fancy Vore Sounds

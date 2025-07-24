@@ -56,12 +56,8 @@
 	swallowTime = 100 //10 seconds. Easy to crawl away from when knocked over.
 	vore_default_mode = DM_DIGEST
 
-/mob/living/simple_mob/vore/slug/init_vore()
-	if(!voremob_loaded)
-		return
-	if(LAZYLEN(vore_organs))
-		return
-	.=..()
+/mob/living/simple_mob/vore/slug/load_default_bellies()
+	. = ..()
 	var/obj/belly/B = vore_selected
 	B.desc	= "Somehow you remained still just long enough for the slug to wrap its radula around your body and gradually draw you into its pharynx. The slug moves with agonizing slowness and devours prey at a snail's pace; inch by inch you're crammed down its gullet and squishes and squeezed into the slug's gizzard. Thick walls bear down, covered with shallow, toothy ridges. The slimy moss in here suggests you're not the slug's diet but the gizzard seems intent on churning and scraping over you regardless..."
 	B.digest_burn = 0.1
