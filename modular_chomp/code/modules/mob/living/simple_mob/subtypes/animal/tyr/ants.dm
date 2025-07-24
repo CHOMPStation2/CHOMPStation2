@@ -42,12 +42,8 @@
 	vore_standing_too = TRUE
 	unacidable = TRUE
 
-/mob/living/simple_mob/animal/tyr/mineral_ants/init_vore()
-	if(!voremob_loaded)
-		return
-	if(LAZYLEN(vore_organs))
-		return
-	.=..()
+/mob/living/simple_mob/animal/tyr/mineral_ants/load_default_bellies()
+	. = ..()
 	var/obj/belly/B = vore_selected
 	B.name = "stomach"
 	B.mode_flags = DM_FLAG_THICKBELLY | DM_FLAG_NUMBING

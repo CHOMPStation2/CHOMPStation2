@@ -106,12 +106,8 @@
 	. = ..()
 	break_cloak()
 
-/mob/living/simple_mob/vore/aggressive/panther/init_vore()
-	if(!voremob_loaded)
-		return
-	if(LAZYLEN(vore_organs))
-		return
-	.=..()
+/mob/living/simple_mob/vore/aggressive/panther/load_default_bellies()
+	. = ..()
 	var/obj/belly/B = vore_selected
 	B.vore_sound = "Tauric Swallow"
 	B.release_sound = "Pred Escape"

@@ -87,7 +87,7 @@
 	muffinmonster = new /mob/living/simple_mob/vore/aggressive/corrupthound/muffinmonster(src)
 	muffinmonster.name = "Activate Muffin Monster"
 	muffinmonster.voremob_loaded = TRUE
-	muffinmonster.init_vore()
+	muffinmonster.init_vore(TRUE)
 	return ..()
 
 /obj/structure/biowaste_tank/AllowDrop()
