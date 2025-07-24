@@ -15517,7 +15517,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/hallway/Star_1Deck_Central_Corridor_1)
 "dix" = (
-/obj/effect/overmap/visitable/sector/Southern_Cross,
+/obj/effect/overmap/visitable/sector/Soluna_Nexus,
 /turf/space,
 /area/space)
 "diy" = (

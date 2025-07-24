@@ -82,9 +82,6 @@ GLOBAL_LIST_INIT(engineering_networks, list(
 /obj/machinery/camera/network/northern_star
 	network = list(NETWORK_NORTHERN_STAR)
 
-/obj/machinery/camera/network/outside
-	network = list(NETWORK_OUTSIDE)
-
 /obj/machinery/camera/network/prison
 	network = list(NETWORK_PRISON)
 

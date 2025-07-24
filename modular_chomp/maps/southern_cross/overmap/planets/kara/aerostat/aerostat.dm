@@ -98,24 +98,6 @@
 		/mob/living/simple_mob/vore/aggressive/corrupthound = 1
 	)
 
-/obj/structure/old_roboprinter
-	name = "old drone fabricator"
-	desc = "Built like a tank, still working after so many years."
-	icon = 'icons/obj/machines/drone_fab.dmi'
-	icon_state = "drone_fab_idle"
-	anchored = TRUE
-	density = TRUE
-
-/obj/structure/metal_edge
-	name = "metal underside"
-	desc = "A metal wall that extends downwards."
-	icon = 'icons/turf/cliff.dmi'
-	icon_state = "metal"
-	anchored = TRUE
-	density = FALSE
-
-
-
 // -- Turfs -- //
 // Most turfs moved to kara.dm for use in future kara maps.
 

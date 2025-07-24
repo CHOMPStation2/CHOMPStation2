@@ -32497,7 +32497,7 @@
 	},
 /obj/machinery/portable_atmospherics/canister/nitrogen,
 /turf/simulated/floor/tiled/white,
-/area/medical/distillery)
+/area/medical/Distillery)
 "ccl" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -41369,7 +41369,7 @@
 /obj/item/assembly_holder/timer_igniter,
 /obj/item/assembly_holder/timer_igniter,
 /turf/simulated/floor/tiled/white,
-/area/medical/distillery)
+/area/medical/Distillery)
 "cEI" = (
 /obj/machinery/portable_atmospherics/canister/carbon_dioxide,
 /obj/effect/floor_decal/industrial/hatch/yellow,
@@ -45802,7 +45802,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/white,
-/area/medical/distillery)
+/area/medical/Distillery)
 "eOG" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -45916,7 +45916,7 @@
 /area/chapel/main)
 "eSw" = (
 /turf/simulated/floor/tiled/white,
-/area/medical/distillery)
+/area/medical/Distillery)
 "eSF" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/purple{
 	dir = 4
@@ -49769,7 +49769,7 @@
 "gWj" = (
 /obj/machinery/atmospherics/unary/heater,
 /turf/simulated/floor/reinforced,
-/area/medical/distillery)
+/area/medical/Distillery)
 "gWC" = (
 /obj/machinery/atmospherics/pipe/tank/air{
 	dir = 1;
@@ -50280,7 +50280,7 @@
 	pixel_x = -23
 	},
 /turf/simulated/floor/tiled/white,
-/area/medical/distillery)
+/area/medical/Distillery)
 "hlX" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -50650,7 +50650,7 @@
 /obj/effect/wingrille_spawn/reinforced,
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/plating,
-/area/medical/distillery)
+/area/medical/Distillery)
 "hzq" = (
 /obj/structure/cable/green{
 	icon_state = "2-8"
@@ -50723,7 +50723,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/white,
-/area/medical/distillery)
+/area/medical/Distillery)
 "hzX" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -51054,7 +51054,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/white,
-/area/medical/distillery)
+/area/medical/Distillery)
 "hJg" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/shield_diffuser,
@@ -51432,7 +51432,7 @@
 	dir = 6
 	},
 /turf/simulated/floor/tiled/white,
-/area/medical/distillery)
+/area/medical/Distillery)
 "hPV" = (
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/steel,
@@ -51443,7 +51443,7 @@
 	},
 /obj/machinery/atmospherics/pipe/manifold4w/hidden,
 /turf/simulated/floor/tiled/white,
-/area/medical/distillery)
+/area/medical/Distillery)
 "hQg" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4;
@@ -51760,7 +51760,7 @@
 	dir = 5
 	},
 /turf/simulated/floor/tiled/white,
-/area/medical/distillery)
+/area/medical/Distillery)
 "hXY" = (
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 8
@@ -52203,7 +52203,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/white,
-/area/medical/distillery)
+/area/medical/Distillery)
 "ijU" = (
 /obj/random/trash,
 /turf/simulated/floor,
@@ -56476,7 +56476,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/white,
-/area/medical/distillery)
+/area/medical/Distillery)
 "kDd" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -58419,7 +58419,7 @@
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/wall/r_wall,
-/area/medical/distillery)
+/area/medical/Distillery)
 "lMn" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 10
@@ -60442,7 +60442,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/white,
-/area/medical/distillery)
+/area/medical/Distillery)
 "mUi" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
@@ -62550,7 +62550,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/white,
-/area/medical/distillery)
+/area/medical/Distillery)
 "ogN" = (
 /obj/machinery/door/firedoor/glass,
 /obj/effect/wingrille_spawn/reinforced,
@@ -65818,7 +65818,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
-/area/medical/distillery)
+/area/medical/Distillery)
 "pXi" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
@@ -66683,7 +66683,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/steel_grid,
-/area/medical/distillery)
+/area/medical/Distillery)
 "qxU" = (
 /obj/machinery/door/blast/regular{
 	density = 0;
@@ -67750,7 +67750,7 @@
 /obj/random/medical,
 /obj/random/medical,
 /turf/simulated/floor/tiled/white,
-/area/medical/distillery)
+/area/medical/Distillery)
 "rrh" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/wingrille_spawn/reinforced,
@@ -68853,7 +68853,7 @@
 /area/medical/medbay)
 "rYl" = (
 /turf/simulated/wall/r_wall,
-/area/medical/distillery)
+/area/medical/Distillery)
 "rYB" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -69417,7 +69417,7 @@
 	req_access = list(33)
 	},
 /turf/simulated/floor/tiled/steel_grid,
-/area/medical/distillery)
+/area/medical/Distillery)
 "snD" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
@@ -69634,7 +69634,7 @@
 /area/security/aid_station)
 "swS" = (
 /turf/simulated/wall,
-/area/medical/distillery)
+/area/medical/Distillery)
 "sxa" = (
 /obj/structure/sign/warning/hot_exhaust,
 /turf/simulated/wall/r_wall,
@@ -71101,7 +71101,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/white,
-/area/medical/distillery)
+/area/medical/Distillery)
 "tpu" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -71630,7 +71630,7 @@
 "tHW" = (
 /obj/machinery/atmospherics/unary/freezer,
 /turf/simulated/floor/reinforced,
-/area/medical/distillery)
+/area/medical/Distillery)
 "tIv" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 5
@@ -72072,7 +72072,7 @@
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/floor/plating,
-/area/medical/distillery)
+/area/medical/Distillery)
 "ubU" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -72320,7 +72320,7 @@
 /obj/effect/floor_decal/borderfloorwhite/corner,
 /obj/effect/floor_decal/corner/paleblue/bordercorner,
 /turf/simulated/floor/tiled/white,
-/area/medical/distillery)
+/area/medical/Distillery)
 "uhF" = (
 /obj/machinery/computer/operating{
 	dir = 8
@@ -73188,7 +73188,7 @@
 	dir = 5
 	},
 /turf/simulated/floor/tiled/white,
-/area/medical/distillery)
+/area/medical/Distillery)
 "uOZ" = (
 /obj/effect/floor_decal/chapel{
 	dir = 8
@@ -74415,7 +74415,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
-/area/medical/distillery)
+/area/medical/Distillery)
 "vGp" = (
 /obj/effect/floor_decal/borderfloorwhite/corner,
 /obj/effect/floor_decal/corner/paleblue/bordercorner,
@@ -74718,7 +74718,7 @@
 /obj/machinery/portable_atmospherics/powered/reagent_distillery/industrial,
 /obj/machinery/atmospherics/portables_connector,
 /turf/simulated/floor/reinforced,
-/area/medical/distillery)
+/area/medical/Distillery)
 "vSv" = (
 /obj/structure/reagent_dispensers/fueltank,
 /obj/effect/floor_decal/borderfloor{
@@ -75086,7 +75086,7 @@
 	name = "1E-light fixture"
 	},
 /turf/simulated/floor/tiled/white,
-/area/medical/distillery)
+/area/medical/Distillery)
 "wdx" = (
 /obj/structure/table/glass,
 /obj/machinery/computer/med_data/laptop,
@@ -75114,7 +75114,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
-/area/medical/distillery)
+/area/medical/Distillery)
 "weK" = (
 /obj/machinery/vending/nifsoft_shop{
 	dir = 1
@@ -76431,7 +76431,7 @@
 	dir = 6
 	},
 /turf/simulated/floor/tiled/white,
-/area/medical/distillery)
+/area/medical/Distillery)
 "wXZ" = (
 /obj/structure/closet/secure_closet/paramedic,
 /obj/machinery/ai_status_display{
@@ -77026,7 +77026,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/white,
-/area/medical/distillery)
+/area/medical/Distillery)
 "xnj" = (
 /obj/structure/disposalpipe/segment{
 	dir = 2;
