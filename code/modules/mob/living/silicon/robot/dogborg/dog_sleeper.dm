@@ -592,7 +592,9 @@
 		var/volume = 0 //CHOMPAdd
 		for(var/mob/living/T in (touchable_items))
 			touchable_items -= T //Exclude mobs from loose item picking.
-			if((T.status_flags & GODMODE) || !T.digestable)
+			if(SEND_SIGNAL(T, COMSIG_CHECK_FOR_GODMODE) & COMSIG_GODMODE_CANCEL)
+				items_preserved |= T
+			else if(!T.digestable)
 				items_preserved |= T
 			else
 				var/old_brute = T.getBruteLoss()

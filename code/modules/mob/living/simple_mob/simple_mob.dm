@@ -379,10 +379,6 @@
 		else if((h / getMaxHealth()) >= threshold)			// If our health has gone up somehow, and we're over our threshold percentage now, reset it to full
 			injury_level = 0								// Reset to no slowdown
 
-/mob/living/simple_mob/updatehealth()	// We don't want to fully override the check, just hook our own code in
-	get_injury_level()					// We check how injured we are, then actually update the mob on how hurt we are.
-	. = ..() 							// Calling parent here, actually updating our mob on how hurt we are.
-
 /mob/living/simple_mob/proc/ColorMate()
 	set name = "Recolour"
 	set category = "Abilities.Settings"
