@@ -9,7 +9,7 @@
 /turf/simulated/shuttle/floor/voidcraft,
 /area/survivalpod/superpose/SurvivalMechFab)
 "b" = (
-/obj/machinery/r_n_d/circuit_imprinter,
+/obj/machinery/rnd/production/circuit_imprinter,
 /turf/simulated/shuttle/floor/voidcraft,
 /area/survivalpod/superpose/SurvivalMechFab)
 "c" = (
@@ -216,7 +216,7 @@
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/SurvivalMechFab)
 "w" = (
-/obj/machinery/r_n_d/server/core{
+/obj/machinery/rnd/server/master{
 	req_access = null
 	},
 /turf/simulated/shuttle/floor/voidcraft,
@@ -316,7 +316,7 @@
 /turf/simulated/shuttle/floor/voidcraft,
 /area/survivalpod/superpose/SurvivalMechFab)
 "R" = (
-/obj/machinery/mecha_part_fabricator/pros{
+/obj/machinery/mecha_part_fabricator_tg/prosthetics{
 	req_access = null
 	},
 /turf/simulated/shuttle/floor/voidcraft,

@@ -12720,10 +12720,6 @@
 	},
 /turf/simulated/floor/reinforced,
 /area/surface/outpost/main/landing/one)
-"fwx" = (
-/obj/machinery/computer/rdconsole/robotics,
-/turf/simulated/floor/tiled/white,
-/area/assembly/robotics)
 "fxb" = (
 /obj/structure/window/reinforced{
 	dir = 4
@@ -18591,7 +18587,7 @@
 /turf/simulated/floor/outdoors/grass/heavy,
 /area/engineering/external_lights)
 "hYx" = (
-/obj/machinery/r_n_d/circuit_imprinter,
+/obj/machinery/rnd/production/circuit_imprinter,
 /obj/item/reagent_containers/glass/beaker/sulphuric,
 /turf/simulated/floor/tiled,
 /area/rnd/lab)
@@ -24586,7 +24582,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/security/lobby)
 "kEH" = (
-/obj/machinery/mecha_part_fabricator,
+/obj/machinery/mecha_part_fabricator_tg,
 /turf/simulated/floor/tiled,
 /area/assembly/robotics)
 "kEK" = (
@@ -32812,7 +32808,7 @@
 /turf/simulated/floor/water/contaminated,
 /area/surface/outpost/civilian/emergency_storage)
 "otk" = (
-/obj/machinery/r_n_d/server/core,
+/obj/machinery/rnd/server/master,
 /turf/simulated/floor/bluegrid{
 	name = "Server Base";
 	nitrogen = 500;
@@ -41082,7 +41078,7 @@
 	},
 /area/surface/outside/plains/outpost)
 "rVb" = (
-/obj/machinery/mecha_part_fabricator/pros,
+/obj/machinery/mecha_part_fabricator_tg/prosthetics,
 /obj/machinery/camera/network/research{
 	c_tag = "SCI - Robotics Fore"
 	},
@@ -41397,7 +41393,7 @@
 /obj/effect/floor_decal/corner/green/bordercorner{
 	dir = 1
 	},
-/obj/machinery/r_n_d/circuit_imprinter,
+/obj/machinery/rnd/production/circuit_imprinter,
 /obj/item/reagent_containers/glass/beaker/sulphuric,
 /turf/simulated/floor/tiled/dark,
 /area/rnd/workshop)
@@ -50422,7 +50418,7 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/engineering/foyer)
 "vHD" = (
-/obj/machinery/r_n_d/server/robotics,
+/obj/machinery/rnd/server,
 /turf/simulated/floor/bluegrid{
 	name = "Server Base";
 	nitrogen = 500;
@@ -50500,7 +50496,7 @@
 /turf/simulated/floor/outdoors/dirt,
 /area/engineering/foyer)
 "vJP" = (
-/obj/machinery/r_n_d/circuit_imprinter,
+/obj/machinery/rnd/production/circuit_imprinter,
 /obj/item/reagent_containers/glass/beaker/large,
 /turf/simulated/floor/tiled/white,
 /area/assembly/robotics)
@@ -98493,7 +98489,7 @@ odJ
 oAi
 edc
 sQk
-fwx
+bhC
 bhC
 oEs
 pBN

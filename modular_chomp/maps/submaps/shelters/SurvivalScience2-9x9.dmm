@@ -93,7 +93,7 @@
 /obj/structure/window/reinforced/survival_pod{
 	dir = 1
 	},
-/obj/machinery/r_n_d/server/core,
+/obj/machinery/rnd/server/master,
 /obj/machinery/light{
 	dir = 4
 	},
@@ -109,7 +109,7 @@
 /turf/simulated/shuttle/plating,
 /area/survivalpod/superpose/SurvivalScienceV2)
 "j" = (
-/obj/machinery/r_n_d/circuit_imprinter,
+/obj/machinery/rnd/production/circuit_imprinter,
 /obj/item/reagent_containers/glass/beaker{
 	pixel_x = 9;
 	pixel_y = 8
@@ -384,7 +384,7 @@
 /turf/simulated/shuttle/floor/voidcraft/dark,
 /area/survivalpod/superpose/SurvivalScienceV2)
 "B" = (
-/obj/machinery/mecha_part_fabricator/pros{
+/obj/machinery/mecha_part_fabricator_tg/prosthetics{
 	req_access = null
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
@@ -459,7 +459,7 @@
 /turf/simulated/shuttle/wall/voidcraft/survival/hard_corner,
 /area/survivalpod/superpose/SurvivalScienceV2)
 "M" = (
-/obj/machinery/r_n_d/server/robotics,
+/obj/machinery/rnd/server,
 /turf/simulated/floor/bluegrid{
 	name = "Server Base";
 	nitrogen = 500;

@@ -349,7 +349,7 @@
 /turf/simulated/floor/tiled/steel_dirty,
 /area/survivalpod/superpose/ripperdocpod)
 "M" = (
-/obj/machinery/mecha_part_fabricator/pros,
+/obj/machinery/mecha_part_fabricator_tg/prosthetics,
 /obj/fiftyspawner/steel,
 /obj/fiftyspawner/glass,
 /obj/structure/sign/poster/custom{

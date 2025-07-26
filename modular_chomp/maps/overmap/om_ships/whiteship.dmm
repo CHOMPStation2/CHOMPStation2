@@ -298,7 +298,7 @@
 /turf/simulated/floor/plating,
 /area/shuttle/whiteshipOM)
 "lu" = (
-/obj/machinery/r_n_d/circuit_imprinter,
+/obj/machinery/rnd/production/circuit_imprinter,
 /obj/item/reagent_containers/glass/beaker{
 	pixel_x = 9;
 	pixel_y = 8

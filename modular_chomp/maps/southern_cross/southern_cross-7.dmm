@@ -9098,7 +9098,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/expoutpost/engoffice)
 "hwZ" = (
-/obj/machinery/r_n_d/circuit_imprinter,
+/obj/machinery/rnd/production/circuit_imprinter,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/item/reagent_containers/glass/beaker/large,
 /turf/simulated/floor/tiled,
@@ -18280,7 +18280,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/expoutpost/lowersternhallway)
 "oMc" = (
-/obj/machinery/mecha_part_fabricator,
+/obj/machinery/mecha_part_fabricator_tg,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled,
 /area/expoutpost/rnd)
@@ -29548,7 +29548,7 @@
 /turf/simulated/floor,
 /area/expoutpost/portexplomaint)
 "xKO" = (
-/obj/machinery/mecha_part_fabricator/pros,
+/obj/machinery/mecha_part_fabricator_tg/prosthetics,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled,
 /area/expoutpost/rnd)

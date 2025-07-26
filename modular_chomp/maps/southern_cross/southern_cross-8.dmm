@@ -1592,13 +1592,6 @@
 /obj/effect/overlay/palmtree_l,
 /turf/unsimulated/beach/sand,
 /area/beach)
-"aWV" = (
-/obj/machinery/r_n_d/server/centcom,
-/turf/unsimulated/floor{
-	dir = 5;
-	icon_state = "vault"
-	},
-/area/centcom/main_hall)
 "aWW" = (
 /obj/structure/table/steel_reinforced,
 /obj/item/organ/internal/stack,
@@ -14793,7 +14786,7 @@
 /turf/simulated/shuttle/wall/voidcraft/red,
 /area/shuttle/syndicate)
 "nhS" = (
-/obj/machinery/mecha_part_fabricator,
+/obj/machinery/mecha_part_fabricator_tg,
 /obj/machinery/status_display{
 	layer = 4;
 	pixel_y = 32
@@ -44149,7 +44142,7 @@ wcp
 hsZ
 bWp
 tkj
-aWV
+vut
 lFl
 vFi
 vFi

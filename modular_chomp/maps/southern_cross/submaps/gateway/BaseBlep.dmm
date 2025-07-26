@@ -282,7 +282,7 @@
 	},
 /area/awaymission/baseblep/caynon)
 "li" = (
-/obj/machinery/mecha_part_fabricator/pros,
+/obj/machinery/mecha_part_fabricator_tg/prosthetics,
 /turf/simulated/floor/tiled/eris/steel,
 /area/awaymission/baseblep/base)
 "lu" = (
@@ -320,7 +320,7 @@
 	},
 /area/awaymission/baseblep/cavern)
 "mf" = (
-/obj/machinery/mecha_part_fabricator,
+/obj/machinery/mecha_part_fabricator_tg,
 /turf/simulated/floor/tiled/eris/steel,
 /area/awaymission/baseblep/base)
 "mi" = (
@@ -388,7 +388,7 @@
 /turf/simulated/floor/tiled/eris/steel,
 /area/awaymission/baseblep/base)
 "pd" = (
-/obj/machinery/r_n_d/circuit_imprinter,
+/obj/machinery/rnd/production/circuit_imprinter,
 /turf/simulated/floor/tiled/eris/steel,
 /area/awaymission/baseblep/base)
 "pf" = (

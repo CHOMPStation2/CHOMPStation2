@@ -1079,7 +1079,7 @@
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/MechFabShip)
 "HC" = (
-/obj/machinery/mecha_part_fabricator/pros,
+/obj/machinery/mecha_part_fabricator_tg/prosthetics,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/effect/floor_decal/techfloor{
 	dir = 8
@@ -1576,7 +1576,7 @@
 /area/survivalpod/superpose/MechFabShip)
 "SW" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
-/obj/machinery/r_n_d/circuit_imprinter,
+/obj/machinery/rnd/production/circuit_imprinter,
 /obj/item/reagent_containers/glass/beaker/large,
 /obj/structure/sign/department/robo{
 	pixel_y = 32

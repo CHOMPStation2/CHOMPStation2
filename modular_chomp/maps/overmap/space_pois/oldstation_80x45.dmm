@@ -1275,7 +1275,7 @@
 	},
 /area/submap/oldstation_tox)
 "oi" = (
-/obj/machinery/mecha_part_fabricator,
+/obj/machinery/mecha_part_fabricator_tg,
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/tiled/old_tile/blue,
 /area/submap/oldstation_tox)
@@ -4373,7 +4373,7 @@
 	},
 /area/submap/oldstation_power)
 "Yo" = (
-/obj/machinery/r_n_d/circuit_imprinter,
+/obj/machinery/rnd/production/circuit_imprinter,
 /turf/simulated/floor/tiled/old_tile/blue,
 /area/submap/oldstation_tox)
 "Yr" = (

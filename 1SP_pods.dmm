@@ -800,7 +800,7 @@
 /turf/simulated/floor/tiled/steel_grid,
 /area/survivalpod/superpose/HydroCave)
 "aBF" = (
-/obj/machinery/r_n_d/server/core,
+/obj/machinery/rnd/server/master,
 /obj/machinery/light/small,
 /turf/simulated/floor/bluegrid{
 	name = "Server Base";
@@ -4545,7 +4545,7 @@
 /turf/simulated/shuttle/floor/voidcraft,
 /area/template_noop)
 "dxl" = (
-/obj/machinery/mecha_part_fabricator/pros,
+/obj/machinery/mecha_part_fabricator_tg/prosthetics,
 /obj/structure/window/reinforced/survival_pod{
 	dir = 1
 	},
@@ -7129,7 +7129,7 @@
 /obj/structure/window/reinforced/survival_pod{
 	dir = 1
 	},
-/obj/machinery/r_n_d/server/core,
+/obj/machinery/rnd/server/master,
 /obj/machinery/light{
 	dir = 4
 	},
@@ -14248,7 +14248,7 @@
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/HydroCave)
 "khM" = (
-/obj/machinery/mecha_part_fabricator/pros{
+/obj/machinery/mecha_part_fabricator_tg/prosthetics{
 	req_access = null
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
@@ -14750,7 +14750,7 @@
 /obj/structure/window/reinforced/survival_pod{
 	opacity = 1
 	},
-/obj/machinery/r_n_d/circuit_imprinter,
+/obj/machinery/rnd/production/circuit_imprinter,
 /obj/item/reagent_containers/glass/beaker{
 	pixel_x = 9;
 	pixel_y = 8
@@ -17654,7 +17654,7 @@
 /turf/simulated/shuttle/floor/voidcraft/dark,
 /area/survivalpod/superpose/CultShip)
 "mtx" = (
-/obj/machinery/r_n_d/server/core,
+/obj/machinery/rnd/server/master,
 /obj/structure/window/reinforced/survival_pod{
 	dir = 8
 	},
@@ -18554,7 +18554,7 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/template_noop)
 "nbt" = (
-/obj/machinery/mecha_part_fabricator/pros,
+/obj/machinery/mecha_part_fabricator_tg/prosthetics,
 /turf/simulated/floor/tiled/steel_dirty,
 /area/survivalpod/superpose/FieldLab)
 "nbF" = (
@@ -18891,7 +18891,7 @@
 /turf/simulated/floor/tiled/hydro,
 /area/survivalpod)
 "npj" = (
-/obj/machinery/r_n_d/server/robotics,
+/obj/machinery/rnd/server,
 /obj/structure/window/reinforced/survival_pod{
 	dir = 8
 	},
@@ -18914,7 +18914,7 @@
 /turf/simulated/shuttle/floor/voidcraft/light,
 /area/template_noop)
 "nqN" = (
-/obj/machinery/mecha_part_fabricator/pros{
+/obj/machinery/mecha_part_fabricator_tg/prosthetics{
 	req_access = list(300)
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
@@ -20277,7 +20277,7 @@
 /turf/simulated/shuttle/floor/voidcraft/dark,
 /area/survivalpod/superpose/TradingShip)
 "osB" = (
-/obj/machinery/mecha_part_fabricator,
+/obj/machinery/mecha_part_fabricator_tg,
 /turf/simulated/shuttle/floor/voidcraft,
 /area/template_noop)
 "otf" = (
@@ -21534,7 +21534,7 @@
 /turf/simulated/floor/cult,
 /area/template_noop)
 "paG" = (
-/obj/machinery/r_n_d/circuit_imprinter,
+/obj/machinery/rnd/production/circuit_imprinter,
 /obj/item/reagent_containers/glass/beaker{
 	pixel_x = 9;
 	pixel_y = 8
@@ -25300,7 +25300,7 @@
 /turf/simulated/floor/tiled/steel_grid,
 /area/survivalpod/superpose/ScienceShip)
 "qBE" = (
-/obj/machinery/r_n_d/circuit_imprinter,
+/obj/machinery/rnd/production/circuit_imprinter,
 /obj/item/reagent_containers/glass/beaker{
 	pixel_x = 9;
 	pixel_y = 8
@@ -26967,7 +26967,7 @@
 /turf/simulated/floor/outdoors/dirt,
 /area/survivalpod/superpose/LoneHome)
 "saF" = (
-/obj/machinery/r_n_d/circuit_imprinter,
+/obj/machinery/rnd/production/circuit_imprinter,
 /obj/item/reagent_containers/glass/beaker/sulphuric,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/shuttle/floor/voidcraft,
@@ -27452,7 +27452,7 @@
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/GrandLibrary)
 "sql" = (
-/obj/machinery/r_n_d/server/core,
+/obj/machinery/rnd/server/master,
 /turf/simulated/shuttle/floor/voidcraft,
 /area/template_noop)
 "sqB" = (
@@ -28349,7 +28349,7 @@
 /turf/simulated/floor/tiled/steel_dirty,
 /area/survivalpod/superpose/FieldLab)
 "taZ" = (
-/obj/machinery/r_n_d/server/robotics,
+/obj/machinery/rnd/server,
 /turf/simulated/floor/bluegrid{
 	name = "Server Base";
 	nitrogen = 500;
@@ -29878,7 +29878,7 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/survivalpod/superpose/CrashedInfestedShip)
 "uhP" = (
-/obj/machinery/r_n_d/circuit_imprinter,
+/obj/machinery/rnd/production/circuit_imprinter,
 /turf/simulated/shuttle/floor/voidcraft,
 /area/template_noop)
 "uhQ" = (
@@ -31120,7 +31120,7 @@
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/GrandLibrary)
 "vgJ" = (
-/obj/machinery/mecha_part_fabricator,
+/obj/machinery/mecha_part_fabricator_tg,
 /obj/structure/window/reinforced/survival_pod{
 	dir = 1
 	},
@@ -34101,7 +34101,7 @@
 /turf/simulated/shuttle/floor/voidcraft/dark,
 /area/template_noop)
 "xkk" = (
-/obj/machinery/mecha_part_fabricator/pros,
+/obj/machinery/mecha_part_fabricator_tg/prosthetics,
 /turf/simulated/shuttle/floor/voidcraft,
 /area/template_noop)
 "xkx" = (

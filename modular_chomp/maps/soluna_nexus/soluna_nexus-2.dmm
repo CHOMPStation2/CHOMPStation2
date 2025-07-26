@@ -7937,7 +7937,7 @@
 /turf/simulated/wall/r_wall,
 /area/security/Prison_Wing)
 "anf" = (
-/obj/machinery/r_n_d/circuit_imprinter,
+/obj/machinery/rnd/production/circuit_imprinter,
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/tiled/techfloor,
 /area/rnd/Robotics_Lab)
@@ -29316,7 +29316,7 @@
 /obj/effect/floor_decal/corner/purple/bordercorner{
 	dir = 1
 	},
-/obj/machinery/r_n_d/circuit_imprinter,
+/obj/machinery/rnd/production/circuit_imprinter,
 /obj/item/reagent_containers/glass/beaker/sulphuric{
 	pixel_y = 8;
 	pixel_x = 7
@@ -40951,7 +40951,7 @@
 	},
 /area/rnd/Server_Room)
 "cyv" = (
-/obj/machinery/r_n_d/server/robotics,
+/obj/machinery/rnd/server,
 /turf/simulated/floor/bluegrid{
 	name = "Server Base";
 	nitrogen = 500;
@@ -42483,7 +42483,7 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/rnd/Robotics_Lab)
 "cEg" = (
-/obj/machinery/mecha_part_fabricator,
+/obj/machinery/mecha_part_fabricator_tg,
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/light{
 	dir = 1
@@ -42610,7 +42610,7 @@
 /turf/simulated/floor/plating,
 /area/rnd/Server_Room)
 "cEr" = (
-/obj/machinery/r_n_d/server/core,
+/obj/machinery/rnd/server/master,
 /turf/simulated/floor/bluegrid{
 	name = "Server Base";
 	nitrogen = 500;
@@ -52935,7 +52935,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/hallway/ForPort_2_Deck_Observatory)
 "flC" = (
-/obj/machinery/mecha_part_fabricator/pros,
+/obj/machinery/mecha_part_fabricator_tg/prosthetics,
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -54574,7 +54574,7 @@
 /turf/simulated/floor/tiled,
 /area/security/Deck2_2_Corridor)
 "fGb" = (
-/obj/machinery/r_n_d/circuit_imprinter,
+/obj/machinery/rnd/production/circuit_imprinter,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/reagent_dispensers/acid{
 	pixel_y = 28
@@ -77319,7 +77319,7 @@
 /turf/simulated/floor/plating,
 /area/maintenance/Deck2_Security_ForCorridor1)
 "lOw" = (
-/obj/machinery/r_n_d/circuit_imprinter,
+/obj/machinery/rnd/production/circuit_imprinter,
 /obj/item/radio/intercom{
 	dir = 8;
 	pixel_x = -22

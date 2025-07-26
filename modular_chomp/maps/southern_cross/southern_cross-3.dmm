@@ -11732,7 +11732,7 @@
 	dir = 8
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
-/obj/machinery/r_n_d/circuit_imprinter,
+/obj/machinery/rnd/production/circuit_imprinter,
 /turf/simulated/floor/tiled,
 /area/engineering/workshop)
 "aLw" = (
@@ -53528,7 +53528,6 @@
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/entry/D3)
 "iYs" = (
-/obj/machinery/computer/rdconsole/robotics,
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 1
 	},
@@ -53541,7 +53540,7 @@
 /turf/simulated/floor/tiled/white,
 /area/assembly/robotics)
 "iYD" = (
-/obj/machinery/r_n_d/circuit_imprinter,
+/obj/machinery/rnd/production/circuit_imprinter,
 /obj/item/reagent_containers/glass/beaker/large,
 /obj/item/radio/intercom{
 	dir = 1;
@@ -58496,7 +58495,7 @@
 /turf/simulated/floor/plating,
 /area/maintenance/research)
 "lOW" = (
-/obj/machinery/r_n_d/circuit_imprinter,
+/obj/machinery/rnd/production/circuit_imprinter,
 /obj/item/reagent_containers/glass/beaker/sulphuric,
 /obj/machinery/light{
 	dir = 8
@@ -58731,7 +58730,7 @@
 /turf/simulated/floor/tiled/steel,
 /area/quartermaster/warehouse)
 "lTB" = (
-/obj/machinery/mecha_part_fabricator,
+/obj/machinery/mecha_part_fabricator_tg,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled,
 /area/assembly/robotics)
@@ -58813,7 +58812,7 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/ward)
 "lUZ" = (
-/obj/machinery/mecha_part_fabricator/pros,
+/obj/machinery/mecha_part_fabricator_tg/prosthetics,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled,
 /area/assembly/robotics)
@@ -62509,7 +62508,7 @@
 /turf/simulated/floor/tiled,
 /area/crew_quarters/seconddeck/artsupplies)
 "oev" = (
-/obj/machinery/r_n_d/server/robotics,
+/obj/machinery/rnd/server,
 /turf/simulated/floor/bluegrid{
 	name = "Server Base";
 	nitrogen = 500;
@@ -62572,7 +62571,7 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay2)
 "ohF" = (
-/obj/machinery/r_n_d/server/core,
+/obj/machinery/rnd/server/master,
 /turf/simulated/floor/bluegrid{
 	name = "Server Base";
 	nitrogen = 500;
@@ -65207,7 +65206,7 @@
 /obj/effect/floor_decal/corner/green/bordercorner{
 	dir = 1
 	},
-/obj/machinery/r_n_d/circuit_imprinter,
+/obj/machinery/rnd/production/circuit_imprinter,
 /obj/item/reagent_containers/glass/beaker/sulphuric,
 /turf/simulated/floor/tiled/dark,
 /area/rnd/workshop)
