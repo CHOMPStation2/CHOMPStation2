@@ -1,8 +1,20 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aaa" = (
+/obj/machinery/autolathe,
+/turf/simulated/floor/tiled,
+/area/rnd/lab)
 "aab" = (
 /obj/effect/map_effect/portal/master/side_a/caves_to_wilderness,
 /turf/unsimulated/wall/planetary/normal/thor,
 /area/surface/outpost/wall/checkpoint)
+"aac" = (
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/machinery/rnd/production/protolathe/department/engineering,
+/turf/simulated/floor/tiled/techmaint,
+/area/engineering/workshop)
 "aah" = (
 /obj/effect/map_effect/portal/line/side_a{
 	dir = 4
@@ -4056,9 +4068,6 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/maintenance/substation/engineering)
 "ceG" = (
-/obj/structure/table/steel_reinforced,
-/obj/item/hand_labeler,
-/obj/item/hand_labeler,
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 5
 	},
@@ -4069,6 +4078,9 @@
 	c_tag = "CRG - Cargo Office North";
 	name = "security camera"
 	},
+/obj/machinery/autolathe,
+/obj/fiftyspawner/glass,
+/obj/fiftyspawner/steel,
 /turf/simulated/floor/tiled,
 /area/quartermaster/foyer)
 "ceN" = (
@@ -6861,13 +6873,11 @@
 /area/surface/outpost/mining_main/refinery)
 "dgc" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
-/obj/effect/decal/cleanable/blood/oil/streak{
-	amount = 0
-	},
-/obj/machinery/autolathe,
 /obj/structure/window/reinforced{
 	dir = 4
 	},
+/obj/structure/closet/toolcloset,
+/obj/item/flashlight,
 /turf/simulated/floor/tiled/techmaint,
 /area/engineering/workshop)
 "dgk" = (
@@ -10335,7 +10345,6 @@
 /turf/simulated/wall/r_wall,
 /area/quartermaster/hallway)
 "evZ" = (
-
 /turf/simulated/floor/tiled,
 /area/rnd/lab)
 "ewo" = (
@@ -20835,16 +20844,8 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
-/obj/structure/table/steel,
 /obj/effect/floor_decal/industrial/outline/yellow,
-/obj/item/floor_painter,
-/obj/item/multitool{
-	pixel_x = 5
-	},
-/obj/item/t_scanner,
-/obj/item/reagent_containers/spray/cleaner,
-/obj/random/tech_supply,
-/obj/random/tech_supply,
+/obj/machinery/autolathe,
 /turf/simulated/floor/tiled/techmaint,
 /area/engineering/workshop)
 "iUT" = (
@@ -31414,6 +31415,8 @@
 /obj/effect/floor_decal/corner/beige/border{
 	dir = 4
 	},
+/obj/item/hand_labeler,
+/obj/item/hand_labeler,
 /turf/simulated/floor/tiled,
 /area/quartermaster/foyer)
 "nJv" = (
@@ -32430,6 +32433,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/machinery/rnd/production/protolathe/department/security,
 /turf/simulated/floor/tiled/dark,
 /area/security/security_hallway)
 "ogk" = (
@@ -32720,17 +32724,13 @@
 /turf/simulated/floor/tiled/white,
 /area/assembly/robotics)
 "oqR" = (
-/obj/structure/table/standard,
 /obj/machinery/light{
 	dir = 1
 	},
 /obj/structure/cable/green{
 	icon_state = "1-8"
 	},
-/obj/item/fulton_core,
-/obj/item/extraction_pack,
-/obj/item/extraction_pack,
-/obj/item/extraction_pack,
+/obj/machinery/rnd/production/protolathe/department/medical,
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay_primary_storage)
 "orh" = (
@@ -32801,6 +32801,10 @@
 	dir = 1;
 	pixel_y = 21
 	},
+/obj/item/extraction_pack,
+/obj/item/extraction_pack,
+/obj/item/extraction_pack,
+/obj/item/fulton_core,
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay_primary_storage)
 "otg" = (
@@ -34288,7 +34292,6 @@
 /turf/simulated/floor/wood,
 /area/surface/outpost/main/dorms/dorm_8)
 "pcj" = (
-/obj/machinery/autolathe,
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 5
 	},
@@ -38632,7 +38635,6 @@
 /turf/simulated/floor/plating,
 /area/engineering/hallway/atmos_hallway)
 "qUJ" = (
-/obj/machinery/autolathe,
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 1
 	},
@@ -38648,8 +38650,7 @@
 /obj/machinery/firealarm{
 	pixel_y = 24
 	},
-/obj/fiftyspawner/steel,
-/obj/fiftyspawner/glass,
+/obj/machinery/rnd/production/protolathe/department/cargo,
 /turf/simulated/floor/tiled,
 /area/quartermaster/foyer)
 "qUN" = (
@@ -40966,9 +40967,6 @@
 /obj/machinery/light,
 /turf/simulated/shuttle/plating,
 /area/shuttle/needle)
-"rSf" = (
-/turf/simulated/floor/tiled,
-/area/rnd/lab)
 "rSn" = (
 /obj/effect/landmark/start{
 	name = "Explorer"
@@ -46316,13 +46314,13 @@
 /turf/simulated/floor/tiled/hydro,
 /area/hydroponics)
 "uhQ" = (
-/obj/machinery/portable_atmospherics/hydroponics,
 /obj/machinery/alarm{
 	dir = 1;
 	pixel_y = -25
 	},
 /obj/effect/floor_decal/borderfloorblack,
 /obj/effect/floor_decal/corner/lime/border,
+/obj/machinery/rnd/production/protolathe/department/service,
 /turf/simulated/floor/tiled/hydro,
 /area/hydroponics)
 "uhR" = (
@@ -76361,7 +76359,7 @@ qiX
 tWF
 lNx
 iUy
-wru
+aac
 wru
 kxf
 tiw
@@ -98737,7 +98735,7 @@ xEk
 xUM
 nFg
 cKM
-rSf
+evZ
 vQm
 oie
 dCU
@@ -98994,7 +98992,7 @@ xEk
 xUM
 nFg
 ble
-evZ
+aaa
 vQm
 oie
 cIY
