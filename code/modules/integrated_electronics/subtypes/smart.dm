@@ -31,8 +31,7 @@
 
 	set_pin_data(IC_OUTPUT, 1, desired_dir)
 	push_data()
-<<<<<<< HEAD
-	activate_pin(2) //CHOMPEdit
+	activate_pin(2)
 
 //CHOMPEdit Begin
 /obj/item/integrated_circuit/smart/advanced_pathfinder
@@ -80,8 +79,6 @@
 		push_data()
 		activate_pin(2)
 //CHOMPEdit End
-=======
-	activate_pin(2)
 
 /obj/item/integrated_circuit/smart/targeted_pathfinder
 	name = "targeted pathfinder"
