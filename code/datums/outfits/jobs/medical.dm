@@ -86,6 +86,7 @@
 	satchel_one = /obj/item/storage/backpack/satchel/gen
 	id_type = /obj/item/card/id/medical/geneticist
 	pda_type = /obj/item/pda/geneticist
+	belt = /obj/item/gene_scanner
 
 	// CHOMPAdd Start - Geneticists get their cool headset
 	headset = /obj/item/radio/headset/headset_medsci
