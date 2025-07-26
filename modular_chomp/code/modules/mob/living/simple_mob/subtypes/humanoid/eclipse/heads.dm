@@ -147,12 +147,12 @@
 		/obj/item/hand_tele = 10,
 		/obj/item/bone/skull = 100
 			)
-	var/fullshield = 4
-	var/shieldrage = 4
+	var/fullshield = 140
+	var/shieldrage = 3
 
 /mob/living/simple_mob/humanoid/eclipse/head/tyrlead/bullet_act(obj/item/projectile/P) //Projectiles will be absorbed by the shield. Note to self do funky sprite. 4 hits to remove
 	if(fullshield > 0)
-		fullshield--
+		fullshield -= P.damage
 		if(P == /obj/item/projectile/ion)
 			fullshield = 0
 			visible_message(span_boldwarning(span_orange("[P] breaks the shield!!.")))
@@ -166,8 +166,8 @@
 		..()
 		shieldrage--
 		if(shieldrage == 0)
-			shieldrage = 4
-			fullshield = 4
+			shieldrage = 3
+			fullshield = 140
 			visible_message(span_boldwarning(span_orange("The shield reactivates!!.")))
 			icon_state = "overseer_shield"
 
