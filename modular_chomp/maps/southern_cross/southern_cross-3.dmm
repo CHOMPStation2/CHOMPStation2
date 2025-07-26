@@ -12695,7 +12695,6 @@
 /obj/machinery/newscaster{
 	pixel_y = -30
 	},
-/obj/structure/table/steel_reinforced,
 /turf/simulated/floor/tiled/dark,
 /area/engineering/workshop)
 "aOL" = (
