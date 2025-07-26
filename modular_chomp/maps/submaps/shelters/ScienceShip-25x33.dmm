@@ -191,8 +191,7 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/survivalpod/superpose/ScienceShip)
 "hb" = (
-/obj/machinery/rnd/production/protolathe/department/science
-,
+/obj/machinery/rnd/production/protolathe/department/science,
 /obj/screen/alert/highpressure,
 /turf/simulated/shuttle/floor/purple,
 /area/survivalpod/superpose/ScienceShip)

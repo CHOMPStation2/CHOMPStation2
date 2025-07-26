@@ -605,8 +605,7 @@
 /turf/simulated/wall,
 /area/submap/oldstation_beta)
 "gt" = (
-/obj/machinery/rnd/production/protolathe/department/science
-,
+/obj/machinery/rnd/production/protolathe/department/science,
 /turf/simulated/floor/tiled/old_tile/blue,
 /area/submap/oldstation_tox)
 "gu" = (

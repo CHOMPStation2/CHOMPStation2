@@ -6067,8 +6067,7 @@
 /turf/simulated/floor/tiled/steel_grid,
 /area/mothership/rnd)
 "mP" = (
-/obj/machinery/rnd/production/protolathe/department/science
-,
+/obj/machinery/rnd/production/protolathe/department/science,
 /turf/simulated/floor/tiled/steel_grid,
 /area/mothership/rnd)
 "mQ" = (

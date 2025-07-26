@@ -674,8 +674,7 @@
 /turf/simulated/floor/tiled/eris/steel,
 /area/awaymission/baseblep/base)
 "Dh" = (
-/obj/machinery/rnd/production/protolathe/department/science
-,
+/obj/machinery/rnd/production/protolathe/department/science,
 /turf/simulated/floor/tiled/eris/steel,
 /area/awaymission/baseblep/base)
 "Dj" = (
