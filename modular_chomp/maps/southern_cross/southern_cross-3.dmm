@@ -1166,6 +1166,14 @@
 /obj/effect/recycler_beacon,
 /turf/simulated/floor/plating,
 /area/maintenance/engineering)
+"acb" = (
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/machinery/autolathe,
+/turf/simulated/floor/tiled,
+/area/engineering/workshop)
 "ack" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 10
@@ -5121,8 +5129,25 @@
 /obj/structure/extinguisher_cabinet{
 	pixel_y = -30
 	},
-/obj/structure/closet/toolcloset,
-/obj/item/flashlight,
+/obj/structure/table/steel_reinforced,
+/obj/item/stack/cable_coil{
+	pixel_x = 3;
+	pixel_y = 3
+	},
+/obj/item/stack/cable_coil/cyan{
+	pixel_x = -3;
+	pixel_y = 3
+	},
+/obj/item/stack/cable_coil/cyan{
+	pixel_x = -3;
+	pixel_y = 3
+	},
+/obj/item/stack/cable_coil{
+	pixel_x = 3;
+	pixel_y = 3
+	},
+/obj/random/tech_supply,
+/obj/random/tech_supply,
 /turf/simulated/floor/tiled/dark,
 /area/engineering/workshop)
 "aoU" = (
@@ -11096,10 +11121,8 @@
 	health = 1e+006
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
-/obj/effect/decal/cleanable/blood/oil/streak{
-	amount = 0
-	},
-/obj/machinery/autolathe,
+/obj/structure/closet/toolcloset,
+/obj/item/flashlight,
 /turf/simulated/floor/tiled,
 /area/engineering/workshop)
 "aJE" = (
@@ -12672,24 +12695,7 @@
 /obj/machinery/newscaster{
 	pixel_y = -30
 	},
-/obj/random/tech_supply,
-/obj/random/tech_supply,
-/obj/item/stack/cable_coil/cyan{
-	pixel_x = -3;
-	pixel_y = 3
-	},
-/obj/item/stack/cable_coil/cyan{
-	pixel_x = -3;
-	pixel_y = 3
-	},
-/obj/item/stack/cable_coil{
-	pixel_x = 3;
-	pixel_y = 3
-	},
-/obj/item/stack/cable_coil{
-	pixel_x = 3;
-	pixel_y = 3
-	},
+/obj/structure/table/steel_reinforced,
 /turf/simulated/floor/tiled/dark,
 /area/engineering/workshop)
 "aOL" = (
@@ -22707,6 +22713,7 @@
 /obj/effect/floor_decal/corner/red/bordercorner{
 	dir = 1
 	},
+/obj/machinery/rnd/production/protolathe/department/security,
 /turf/simulated/floor/tiled,
 /area/security/security_hallway)
 "buW" = (
@@ -22750,7 +22757,6 @@
 /obj/effect/floor_decal/corner/red/border{
 	dir = 5
 	},
-/obj/machinery/rnd/production/protolathe/department/security,
 /turf/simulated/floor/tiled,
 /area/security/security_hallway)
 "bva" = (
@@ -27083,6 +27089,8 @@
 /obj/item/clothing/head/soft,
 /obj/item/clothing/head/soft,
 /obj/machinery/light,
+/obj/item/storage/belt/utility,
+/obj/fiftyspawner/steel,
 /turf/simulated/floor/tiled/dark,
 /area/quartermaster/office)
 "bId" = (
@@ -49154,9 +49162,6 @@
 	},
 /turf/simulated/floor/lino,
 /area/chapel/office)
-"gFZ" = (
-/turf/simulated/floor/tiled,
-/area/quartermaster/office)
 "gGj" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -49536,13 +49541,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/foyer)
-"gQB" = (
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/obj/effect/floor_decal/industrial/outline/yellow,
-/turf/simulated/floor/tiled,
-/area/engineering/workshop)
 "gQR" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
@@ -52957,13 +52955,16 @@
 /turf/simulated/floor/tiled/white,
 /area/rnd/lab)
 "iKA" = (
-/obj/machinery/autolathe,
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 1
 	},
 /obj/effect/floor_decal/corner/purple/border{
 	dir = 1
 	},
+/obj/structure/table/standard,
+/obj/item/cell/high,
+/obj/machinery/cell_charger,
+/obj/item/cell/high,
 /turf/simulated/floor/tiled/white,
 /area/rnd/lab)
 "iKC" = (
@@ -53142,10 +53143,6 @@
 /turf/simulated/floor/tiled/dark,
 /area/hallway/secondary/entry/D3)
 "iNs" = (
-/obj/structure/table/standard,
-/obj/machinery/cell_charger,
-/obj/item/cell/high,
-/obj/item/cell/high,
 /obj/item/radio/intercom{
 	dir = 1;
 	name = "Station Intercom (General)";
@@ -55313,6 +55310,7 @@
 /obj/machinery/light/small{
 	dir = 1
 	},
+/obj/machinery/ore_silo,
 /turf/simulated/floor/tiled/steel,
 /area/quartermaster/warehouse)
 "jVI" = (
@@ -57044,7 +57042,7 @@
 /turf/simulated/floor/tiled,
 /area/rnd/lab)
 "kRu" = (
-
+/obj/machinery/autolathe,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled,
 /area/rnd/lab)
@@ -65467,12 +65465,6 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/sc_patient_b)
 "pOW" = (
-/obj/structure/table/steel,
-/obj/fiftyspawner/steel,
-/obj/fiftyspawner/glass,
-/obj/item/storage/belt/utility,
-/obj/item/storage/belt/utility,
-/obj/item/multitool,
 /obj/machinery/camera/network/cargo{
 	c_tag = "CRG - Cargo Office Port";
 	name = "security camera"
@@ -65484,6 +65476,7 @@
 /obj/effect/floor_decal/corner/brown/bordercorner{
 	dir = 4
 	},
+/obj/machinery/rnd/production/protolathe/department/cargo,
 /turf/simulated/floor/tiled,
 /area/quartermaster/office)
 "pPd" = (
@@ -69773,6 +69766,9 @@
 	pixel_y = 3
 	},
 /obj/item/hand_labeler,
+/obj/item/storage/belt/utility,
+/obj/fiftyspawner/glass,
+/obj/item/multitool,
 /turf/simulated/floor/tiled/dark,
 /area/quartermaster/office)
 "sBG" = (
@@ -77264,10 +77260,6 @@
 /obj/item/reagent_containers/food/drinks/britcup,
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay2)
-"xxY" = (
-/obj/machinery/rnd/production/protolathe/department/cargo,
-/turf/simulated/floor/tiled,
-/area/quartermaster/office)
 "xyp" = (
 /obj/structure/table/glass,
 /obj/machinery/light,
@@ -98399,8 +98391,8 @@ aaD
 aLy
 jwT
 alu
+acb
 lsm
-gQB
 aLv
 aoS
 aPY
@@ -100748,7 +100740,7 @@ bEJ
 bCU
 bCU
 bCU
-xxY
+bCU
 bQz
 bHV
 bQu
@@ -101006,7 +100998,7 @@ aUN
 bzn
 bAM
 bdQ
-gFZ
+bCU
 bQz
 bQz
 bJJ
