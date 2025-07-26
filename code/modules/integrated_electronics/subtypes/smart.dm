@@ -208,4 +208,3 @@
 			activate_pin(3)
 	else
 		activate_pin(3)
->>>>>>> 99a81b5a7b (Pathfinding circuitry and ID lockable assemblies (#18048))
