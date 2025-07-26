@@ -21745,7 +21745,7 @@
 	name = "Kalipso Blast Shielding";
 	opacity = 0
 	},
-/obj/machinery/computer/rdconsole/core{
+/obj/machinery/computer/rdconsole_tg{
 	dir = 4;
 	req_access = null
 	},

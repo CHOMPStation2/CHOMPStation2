@@ -14382,14 +14382,14 @@
 /turf/simulated/floor/plating,
 /area/maintenance/Deck2_Civilian_AftPortCorridor1)
 "aGg" = (
-/obj/machinery/computer/rdconsole/core{
+/obj/machinery/computer/rdconsole_tg{
 	dir = 8
 	},
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/tiled/techfloor,
 /area/rnd/Research_Lab)
 "aGh" = (
-/obj/machinery/r_n_d/protolathe/engineering,
+/obj/machinery/rnd/production/protolathe/department/engineering,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/plating,
 /area/engineering/Technical_Storage)
@@ -19292,7 +19292,7 @@
 /turf/simulated/floor/tiled/airless,
 /area/rnd/Testing_Chamber)
 "aWB" = (
-/obj/machinery/computer/rdconsole/core,
+/obj/machinery/computer/rdconsole_tg,
 /obj/item/radio/intercom{
 	dir = 8;
 	pixel_x = -22
@@ -24049,7 +24049,7 @@
 /turf/simulated/floor/tiled,
 /area/hallway/ForPort_2_Deck_Observatory)
 "bnC" = (
-/obj/machinery/r_n_d/destructive_analyzer,
+
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/tiled/techfloor,
 /area/rnd/Research_Lab)
@@ -52683,17 +52683,6 @@
 	pixel_x = 2;
 	pixel_y = 11
 	},
-/obj/item/circuitboard/rdserver{
-	pixel_x = 1;
-	pixel_y = 7
-	},
-/obj/item/circuitboard/protolathe{
-	pixel_y = 3
-	},
-/obj/item/circuitboard/destructive_analyzer{
-	pixel_x = -1;
-	pixel_y = -1
-	},
 /turf/simulated/floor/plating,
 /area/engineering/Technical_Storage)
 "fhX" = (
@@ -65942,7 +65931,7 @@
 /turf/simulated/floor/plating,
 /area/harbor/Star_2_Deck_Airlock_Access)
 "izw" = (
-/obj/machinery/r_n_d/protolathe/security,
+/obj/machinery/rnd/production/protolathe/department/security,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 9
@@ -92671,7 +92660,7 @@
 /turf/simulated/floor/plating,
 /area/maintenance/Distro_Civilian)
 "qkR" = (
-/obj/machinery/r_n_d/protolathe/service,
+/obj/machinery/rnd/production/protolathe/department/service,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/light{
 	dir = 1

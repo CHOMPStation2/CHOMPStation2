@@ -87,7 +87,7 @@
 /turf/simulated/shuttle/plating,
 /area/survivalpod/superpose/SurvivalScience)
 "gW" = (
-/obj/machinery/r_n_d/destructive_analyzer,
+
 /turf/simulated/shuttle/floor/voidcraft/light,
 /area/survivalpod/superpose/SurvivalScience)
 "gY" = (

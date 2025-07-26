@@ -341,7 +341,7 @@
 /turf/simulated/shuttle/floor/voidcraft/light,
 /area/survivalpod/superpose/SurvivalScienceV2)
 "w" = (
-/obj/machinery/r_n_d/destructive_analyzer,
+
 /obj/structure/window/reinforced/survival_pod{
 	dir = 4
 	},

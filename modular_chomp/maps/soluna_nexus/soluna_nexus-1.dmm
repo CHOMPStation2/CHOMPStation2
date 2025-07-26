@@ -43474,7 +43474,7 @@
 /obj/effect/floor_decal/corner/mauve/border{
 	dir = 4
 	},
-/obj/machinery/r_n_d/protolathe/service,
+/obj/machinery/rnd/production/protolathe/department/service,
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/Custodial_Office)
 "mOM" = (
@@ -49497,7 +49497,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 9
 	},
-/obj/machinery/r_n_d/protolathe/cargo,
+/obj/machinery/rnd/production/protolathe/department/cargo,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/effect/floor_decal/borderfloor{
 	dir = 4

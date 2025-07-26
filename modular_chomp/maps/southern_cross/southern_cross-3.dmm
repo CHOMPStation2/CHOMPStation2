@@ -22750,7 +22750,7 @@
 /obj/effect/floor_decal/corner/red/border{
 	dir = 5
 	},
-/obj/machinery/r_n_d/protolathe/security,
+/obj/machinery/rnd/production/protolathe/department/security,
 /turf/simulated/floor/tiled,
 /area/security/security_hallway)
 "bva" = (
@@ -24748,9 +24748,6 @@
 /obj/effect/floor_decal/corner/red/bordercorner{
 	dir = 4
 	},
-/obj/machinery/computer/rdconsole/security{
-	dir = 8
-	},
 /turf/simulated/floor/tiled,
 /area/security/security_hallway)
 "bAm" = (
@@ -25789,9 +25786,6 @@
 /obj/effect/floor_decal/corner/paleblue/border{
 	dir = 8
 	},
-/obj/machinery/computer/rdconsole/medical{
-	dir = 4
-	},
 /obj/machinery/alarm{
 	dir = 4;
 	pixel_x = -23
@@ -26266,7 +26260,7 @@
 /obj/effect/floor_decal/corner/paleblue/border{
 	dir = 8
 	},
-/obj/machinery/r_n_d/protolathe/medical,
+/obj/machinery/rnd/production/protolathe/department/medical,
 /obj/machinery/light{
 	dir = 8;
 	name = "1E-light fixture"
@@ -31471,9 +31465,6 @@
 /obj/machinery/light{
 	dir = 4;
 	layer = 3
-	},
-/obj/machinery/computer/rdconsole/service{
-	dir = 8
 	},
 /turf/simulated/floor/tiled/hydro,
 /area/hydroponics)
@@ -39844,7 +39835,7 @@
 "cAu" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/purple/border,
-/obj/machinery/r_n_d/protolathe/service,
+/obj/machinery/rnd/production/protolathe/department/service,
 /turf/simulated/floor/tiled,
 /area/janitor)
 "cAv" = (
@@ -39858,9 +39849,6 @@
 	},
 /obj/effect/floor_decal/corner/purple/border{
 	dir = 6
-	},
-/obj/machinery/computer/rdconsole/service{
-	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/janitor)
@@ -49167,9 +49155,6 @@
 /turf/simulated/floor/lino,
 /area/chapel/office)
 "gFZ" = (
-/obj/machinery/computer/rdconsole/cargo{
-	dir = 1
-	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/office)
 "gGj" = (
@@ -49556,9 +49541,6 @@
 	dir = 8
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
-/obj/machinery/computer/rdconsole/engineering{
-	dir = 4
-	},
 /turf/simulated/floor/tiled,
 /area/engineering/workshop)
 "gQR" = (
@@ -57051,7 +57033,7 @@
 /turf/simulated/floor/plating,
 /area/maintenance/research)
 "kQH" = (
-/obj/machinery/r_n_d/protolathe,
+/obj/machinery/rnd/production/protolathe/department/science,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/reagent_dispensers/acid{
 	pixel_x = -30
@@ -57062,7 +57044,7 @@
 /turf/simulated/floor/tiled,
 /area/rnd/lab)
 "kRu" = (
-/obj/machinery/r_n_d/destructive_analyzer,
+
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled,
 /area/rnd/lab)
@@ -57803,7 +57785,7 @@
 	dir = 8
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
-/obj/machinery/r_n_d/protolathe/engineering,
+/obj/machinery/rnd/production/protolathe/department/engineering,
 /turf/simulated/floor/tiled,
 /area/engineering/workshop)
 "lsH" = (
@@ -58519,7 +58501,7 @@
 /turf/simulated/floor/tiled/monotile,
 /area/rnd/lab)
 "lPI" = (
-/obj/machinery/computer/rdconsole/core{
+/obj/machinery/computer/rdconsole_tg{
 	dir = 8
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
@@ -62650,7 +62632,7 @@
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/entry/D2)
 "ojj" = (
-/obj/machinery/computer/rdconsole/core,
+/obj/machinery/computer/rdconsole_tg,
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 9
 	},
@@ -69424,7 +69406,7 @@
 /obj/effect/floor_decal/corner/lime/border{
 	dir = 4
 	},
-/obj/machinery/r_n_d/protolathe/service,
+/obj/machinery/rnd/production/protolathe/department/service,
 /turf/simulated/floor/tiled/hydro,
 /area/hydroponics)
 "soy" = (
@@ -77283,7 +77265,7 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay2)
 "xxY" = (
-/obj/machinery/r_n_d/protolathe/cargo,
+/obj/machinery/rnd/production/protolathe/department/cargo,
 /turf/simulated/floor/tiled,
 /area/quartermaster/office)
 "xyp" = (

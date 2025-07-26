@@ -2374,7 +2374,7 @@
 /turf/simulated/floor/plating,
 /area/submap/oldstation_hiveboat)
 "Ar" = (
-/obj/machinery/computer/rdconsole/core,
+/obj/machinery/computer/rdconsole_tg,
 /turf/simulated/floor/tiled/old_tile/blue,
 /area/submap/oldstation_tox)
 "AK" = (
@@ -4501,7 +4501,7 @@
 /turf/template_noop,
 /area/template_noop)
 "ZM" = (
-/obj/machinery/r_n_d/destructive_analyzer,
+
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/tiled/old_tile/blue,
 /area/submap/oldstation_tox)

@@ -5402,7 +5402,7 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/expoutpost/midsternhallway)
 "etp" = (
-/obj/machinery/computer/rdconsole/core,
+/obj/machinery/computer/rdconsole_tg,
 /obj/effect/floor_decal/milspec/color/purple,
 /turf/simulated/floor/tiled/milspec,
 /area/shuttle/ursula)
@@ -6844,7 +6844,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/expoutpost/eva)
 "fyp" = (
-/obj/machinery/r_n_d/protolathe,
+/obj/machinery/rnd/production/protolathe/department/science,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled,
 /area/expoutpost/rnd)
@@ -9279,9 +9279,6 @@
 /turf/simulated/floor/tiled,
 /area/expoutpost/explobriefroom)
 "hEI" = (
-/obj/machinery/computer/rdconsole/robotics{
-	dir = 8
-	},
 /obj/structure/reagent_dispensers/acid{
 	pixel_x = 30
 	},
@@ -20875,7 +20872,7 @@
 /turf/simulated/floor,
 /area/expoutpost/portuppermaint)
 "qWZ" = (
-/obj/machinery/r_n_d/destructive_analyzer,
+
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled,
 /area/expoutpost/rnd)
@@ -27430,7 +27427,7 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
-/obj/machinery/computer/rdconsole/core{
+/obj/machinery/computer/rdconsole_tg{
 	dir = 4
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
@@ -30008,7 +30005,7 @@
 /turf/simulated/floor,
 /area/expoutpost/reactoraccess)
 "xZQ" = (
-/obj/machinery/r_n_d/destructive_analyzer,
+
 /obj/effect/floor_decal/milspec/color/purple,
 /turf/simulated/floor/tiled/milspec,
 /area/shuttle/ursula)

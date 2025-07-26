@@ -1004,7 +1004,7 @@
 /area/survivalpod/superpose/ScienceShip)
 "Cz" = (
 /obj/screen/alert/highpressure,
-/obj/machinery/r_n_d/destructive_analyzer,
+
 /turf/simulated/shuttle/floor/purple,
 /area/survivalpod/superpose/ScienceShip)
 "CW" = (

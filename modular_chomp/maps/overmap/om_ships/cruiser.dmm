@@ -5815,11 +5815,11 @@
 /turf/simulated/wall/rpshull,
 /area/mothership/rnd)
 "mj" = (
-/obj/machinery/r_n_d/destructive_analyzer,
+
 /turf/simulated/floor/tiled/steel_grid,
 /area/mothership/rnd)
 "mk" = (
-/obj/machinery/computer/rdconsole/core,
+/obj/machinery/computer/rdconsole_tg,
 /turf/simulated/floor/tiled/steel_grid,
 /area/mothership/rnd)
 "ml" = (

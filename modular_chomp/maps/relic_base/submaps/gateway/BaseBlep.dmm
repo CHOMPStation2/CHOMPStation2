@@ -937,7 +937,7 @@
 /turf/simulated/shuttle/floor/darkred,
 /area/awaymission/baseblep/hivebotsphere)
 "OM" = (
-/obj/machinery/computer/rdconsole/core{
+/obj/machinery/computer/rdconsole_tg{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/eris/steel,
@@ -985,7 +985,7 @@
 	},
 /area/awaymission/baseblep/cavern)
 "Qg" = (
-/obj/machinery/r_n_d/destructive_analyzer,
+
 /turf/simulated/floor/tiled/eris/steel,
 /area/awaymission/baseblep/base)
 "Qk" = (

@@ -19293,7 +19293,7 @@
 /turf/simulated/floor,
 /area/expoutpost/portuppermaint)
 "qWZ" = (
-/obj/machinery/r_n_d/destructive_analyzer,
+
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled,
 /area/expoutpost/rnd)
@@ -25629,7 +25629,7 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
-/obj/machinery/computer/rdconsole/core{
+/obj/machinery/computer/rdconsole_tg{
 	dir = 4
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,

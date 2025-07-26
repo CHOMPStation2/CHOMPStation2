@@ -29476,17 +29476,6 @@
 	pixel_x = 2;
 	pixel_y = 11
 	},
-/obj/item/circuitboard/rdserver{
-	pixel_x = 1;
-	pixel_y = 7
-	},
-/obj/item/circuitboard/protolathe{
-	pixel_y = 3
-	},
-/obj/item/circuitboard/destructive_analyzer{
-	pixel_x = -1;
-	pixel_y = -1
-	},
 /turf/simulated/floor/plating,
 /area/storage/tech)
 "uKA" = (

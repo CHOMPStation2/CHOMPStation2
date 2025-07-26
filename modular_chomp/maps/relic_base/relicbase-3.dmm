@@ -2230,7 +2230,7 @@
 /turf/simulated/wall/r_wall,
 /area/surface/outpost/main/landing/one)
 "ble" = (
-/obj/machinery/computer/rdconsole/core{
+/obj/machinery/computer/rdconsole_tg{
 	dir = 8
 	},
 /obj/machinery/light{
@@ -10335,7 +10335,7 @@
 /turf/simulated/wall/r_wall,
 /area/quartermaster/hallway)
 "evZ" = (
-/obj/machinery/r_n_d/destructive_analyzer,
+
 /turf/simulated/floor/tiled,
 /area/rnd/lab)
 "ewo" = (
@@ -54458,7 +54458,7 @@
 /turf/simulated/floor/wood,
 /area/crew_quarters/bar)
 "xsk" = (
-/obj/machinery/computer/rdconsole/core,
+/obj/machinery/computer/rdconsole_tg,
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 9
 	},
