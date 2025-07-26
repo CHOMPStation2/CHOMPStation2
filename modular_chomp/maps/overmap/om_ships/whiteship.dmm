@@ -984,7 +984,6 @@
 /area/shuttle/whiteshipOM)
 "Cz" = (
 /obj/screen/alert/highpressure,
-
 /turf/simulated/shuttle/floor/purple,
 /area/shuttle/whiteshipOM)
 "CW" = (
