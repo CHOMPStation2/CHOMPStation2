@@ -18612,7 +18612,8 @@
 /turf/simulated/floor/tiled/dark,
 /area/security/Internal_Affairs_Office)
 "aUw" = (
-/obj/machinery/r_n_d/protolathe,
+/obj/machinery/rnd/production/protolathe/department/science
+,
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/item/radio/intercom{
 	dir = 4;
@@ -23334,7 +23335,8 @@
 /turf/simulated/floor/tiled,
 /area/hallway/Port_2_Deck_Corridor_2)
 "bkB" = (
-/obj/machinery/r_n_d/protolathe,
+/obj/machinery/rnd/production/protolathe/department/science
+,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/firealarm{
 	dir = 8;
@@ -24775,7 +24777,6 @@
 "bqy" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/computer/rdconsole/service,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled/kafel_full/green,
 /area/crew_quarters/Public_Hydroponics)
@@ -39068,9 +39069,6 @@
 /turf/simulated/floor/plating/turfpack/airless,
 /area/harbor/Port_Shuttlebay)
 "cso" = (
-/obj/machinery/computer/rdconsole/security{
-	dir = 4
-	},
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 8
@@ -56682,9 +56680,6 @@
 /turf/simulated/floor/wood/sif,
 /area/crew_quarters/Chomp_Dinner_2)
 "gdV" = (
-/obj/machinery/computer/rdconsole/robotics{
-	dir = 8
-	},
 /obj/machinery/light{
 	dir = 4
 	},
@@ -110265,9 +110260,6 @@
 /obj/machinery/alarm{
 	dir = 8;
 	pixel_x = 22
-	},
-/obj/machinery/computer/rdconsole/engineering{
-	dir = 8
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/plating,

@@ -17485,9 +17485,6 @@
 "dQu" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/computer/rdconsole/cargo{
-	dir = 8
-	},
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
@@ -67089,9 +67086,6 @@
 	},
 /obj/effect/floor_decal/corner/mauve/border{
 	dir = 4
-	},
-/obj/machinery/computer/rdconsole/service{
-	dir = 8
 	},
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/Custodial_Office)

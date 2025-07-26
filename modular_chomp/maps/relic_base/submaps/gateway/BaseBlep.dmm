@@ -657,9 +657,6 @@
 	},
 /area/awaymission/baseblep/caynon)
 "Cy" = (
-/obj/machinery/computer/rdconsole/robotics{
-	dir = 1
-	},
 /turf/simulated/floor/tiled/eris/steel,
 /area/awaymission/baseblep/base)
 "CJ" = (
@@ -677,7 +674,8 @@
 /turf/simulated/floor/tiled/eris/steel,
 /area/awaymission/baseblep/base)
 "Dh" = (
-/obj/machinery/r_n_d/protolathe,
+/obj/machinery/rnd/production/protolathe/department/science
+,
 /turf/simulated/floor/tiled/eris/steel,
 /area/awaymission/baseblep/base)
 "Dj" = (

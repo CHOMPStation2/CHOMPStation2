@@ -6134,7 +6134,8 @@
 /turf/simulated/floor/tiled/dark,
 /area/expoutpost/eva)
 "fyp" = (
-/obj/machinery/r_n_d/protolathe,
+/obj/machinery/rnd/production/protolathe/department/science
+,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled,
 /area/expoutpost/rnd)
@@ -8421,9 +8422,6 @@
 /turf/simulated/floor/tiled,
 /area/expoutpost/explobriefroom)
 "hEI" = (
-/obj/machinery/computer/rdconsole/robotics{
-	dir = 8
-	},
 /obj/structure/reagent_dispensers/acid{
 	pixel_x = 30
 	},

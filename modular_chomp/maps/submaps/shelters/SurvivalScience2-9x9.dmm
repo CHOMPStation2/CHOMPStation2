@@ -160,7 +160,8 @@
 /turf/simulated/shuttle/wall/voidcraft/survival/hard_corner,
 /area/survivalpod/superpose/SurvivalScienceV2)
 "o" = (
-/obj/machinery/r_n_d/protolathe,
+/obj/machinery/rnd/production/protolathe/department/science
+,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/shuttle/floor/voidcraft/dark,
 /area/survivalpod/superpose/SurvivalScienceV2)

@@ -4448,7 +4448,8 @@
 /turf/simulated/floor/tiled/dark,
 /area/security/security_hallway)
 "cml" = (
-/obj/machinery/r_n_d/protolathe,
+/obj/machinery/rnd/production/protolathe/department/science
+,
 /turf/simulated/floor/tiled,
 /area/rnd/lab)
 "cmx" = (

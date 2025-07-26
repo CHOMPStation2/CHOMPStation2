@@ -181,7 +181,8 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/shuttle/whiteshipOM)
 "hb" = (
-/obj/machinery/r_n_d/protolathe,
+/obj/machinery/rnd/production/protolathe/department/science
+,
 /obj/screen/alert/highpressure,
 /turf/simulated/shuttle/floor/purple,
 /area/shuttle/whiteshipOM)

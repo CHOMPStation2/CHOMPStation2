@@ -107,7 +107,8 @@
 /turf/simulated/shuttle/floor/voidcraft/light,
 /area/survivalpod/superpose/SurvivalScience)
 "hW" = (
-/obj/machinery/r_n_d/protolathe,
+/obj/machinery/rnd/production/protolathe/department/science
+,
 /obj/structure/sign/periodic{
 	pixel_y = 29
 	},
