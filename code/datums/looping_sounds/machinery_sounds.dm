@@ -116,6 +116,7 @@
 	end_sound = 'sound/machines/vehicle/engine_end.ogg'
 	volume = 20
 
+<<<<<<< HEAD
 // CHOMPAdd: Fridges!
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -150,3 +151,15 @@
 	volume_chan = VOLUME_CHANNEL_MACHINERY
 	exclusive = TRUE
 	extra_range = 10
+=======
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+/datum/looping_sound/lathe_print
+	mid_sounds = list('sound/machines/lathe/lathe_print.ogg')
+	mid_length = 2 SECONDS
+	volume = 50
+	vary = TRUE
+	// ignore_walls = FALSE
+	// falloff_distance = 1
+	// mid_length_vary = 1 SECONDS
+>>>>>>> b60cd47309 (Techwebs & Experi-Sci (#17987))
