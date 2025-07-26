@@ -9285,7 +9285,6 @@
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 4
 	},
-/obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled/milspec/raised,
 /area/expoutpost/rnd)
 "hEM" = (
@@ -20871,11 +20870,6 @@
 /obj/structure/railing,
 /turf/simulated/floor,
 /area/expoutpost/portuppermaint)
-"qWZ" = (
-
-/obj/effect/floor_decal/industrial/outline/yellow,
-/turf/simulated/floor/tiled,
-/area/expoutpost/rnd)
 "qXk" = (
 /obj/effect/wingrille_spawn/reinforced/polarized{
 	id = "aeg_surgery_tint"
@@ -30004,11 +29998,6 @@
 	},
 /turf/simulated/floor,
 /area/expoutpost/reactoraccess)
-"xZQ" = (
-
-/obj/effect/floor_decal/milspec/color/purple,
-/turf/simulated/floor/tiled/milspec,
-/area/shuttle/ursula)
 "yad" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 9
@@ -60203,7 +60192,7 @@ bYa
 bYa
 bYa
 cPL
-xZQ
+mmL
 fQz
 phx
 nVg
@@ -68257,7 +68246,7 @@ iNm
 gWG
 fyp
 kMk
-qWZ
+kMk
 sUH
 pcO
 uki

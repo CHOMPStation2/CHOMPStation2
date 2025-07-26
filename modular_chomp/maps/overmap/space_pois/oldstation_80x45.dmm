@@ -4500,11 +4500,6 @@
 /obj/item/solar_assembly,
 /turf/template_noop,
 /area/template_noop)
-"ZM" = (
-
-/obj/effect/floor_decal/rust,
-/turf/simulated/floor/tiled/old_tile/blue,
-/area/submap/oldstation_tox)
 "ZS" = (
 /obj/structure/table/standard,
 /obj/item/material/kitchen/utensil/fork,
@@ -7622,7 +7617,7 @@ Yj
 HM
 pk
 ox
-ZM
+mo
 gD
 Yo
 gD
