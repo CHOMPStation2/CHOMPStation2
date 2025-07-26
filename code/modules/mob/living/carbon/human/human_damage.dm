@@ -20,7 +20,6 @@
 		health = getMaxHealth()
 	var/initialhealth = health // CHOMPEdit: Getting our health before this check
 	health = getMaxHealth() - getOxyLoss() - getToxLoss() - getCloneLoss() - total_burn - total_brute
-<<<<<<< HEAD
 	if(can_feel_pain() || ((isSynthetic() && synth_cosmetic_pain))) // Are we capable of feeling pain?
 		if(health < initialhealth) // Did we lose health?
 			// Yes. How much by?
@@ -43,8 +42,6 @@
 						emote("pain")
 	// CHOMPEdit End: Pain
 
-=======
->>>>>>> 18db172f87 (Signals and God (#18031))
 	//TODO: fix husking
 	if( ((getMaxHealth() - total_burn) < (-getMaxHealth()) * huskmodifier) && stat == DEAD)
 		ChangeToHusk()
