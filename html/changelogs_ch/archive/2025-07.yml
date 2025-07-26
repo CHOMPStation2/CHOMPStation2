@@ -244,3 +244,17 @@
   - qol: EQUAL and NOT EQUAL gate now compare strings correctly.
   - qol: Textpad can now write messages longer than 58 characters.
   - bugfix: Textpad now supports special characters.
+2025-07-26:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: Hose connectors that force pump no longer pump if no hose is connected
+  - bugfix: Fixed some symptoms doing doing nothing and added a couple more options.
+  Diana:
+  - bugfix: Removing a shadekin's shadekin properties properly removes their shadekin
+      UI elements.
+  - rscadd: Shadekin can toggle if they wish to return to the Retreat upon death.
+      This is round persistent.
+  - qol: Adjust Tail Layer now persists per character between rounds.
+  - qol: Shadekin nutrition adjustment is now in the Shadekin Control Panel instead
+      of it's own separate proc. This is also round persistent as well.
+  - code_imp: The shadekin component now has framework to have abilities added/removed
+      from it at will.
