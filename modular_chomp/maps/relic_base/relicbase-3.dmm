@@ -1,13 +1,5 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "aaa" = (
-/obj/machinery/autolathe,
-/turf/simulated/floor/tiled,
-/area/rnd/lab)
-"aab" = (
-/obj/effect/map_effect/portal/master/side_a/caves_to_wilderness,
-/turf/unsimulated/wall/planetary/normal/thor,
-/area/surface/outpost/wall/checkpoint)
-"aac" = (
 /obj/structure/window/reinforced{
 	dir = 8
 	},
@@ -15,6 +7,10 @@
 /obj/machinery/rnd/production/protolathe/department/engineering,
 /turf/simulated/floor/tiled/techmaint,
 /area/engineering/workshop)
+"aab" = (
+/obj/effect/map_effect/portal/master/side_a/caves_to_wilderness,
+/turf/unsimulated/wall/planetary/normal/thor,
+/area/surface/outpost/wall/checkpoint)
 "aah" = (
 /obj/effect/map_effect/portal/line/side_a{
 	dir = 4
@@ -10345,6 +10341,7 @@
 /turf/simulated/wall/r_wall,
 /area/quartermaster/hallway)
 "evZ" = (
+/obj/machinery/autolathe,
 /turf/simulated/floor/tiled,
 /area/rnd/lab)
 "ewo" = (
@@ -40967,6 +40964,9 @@
 /obj/machinery/light,
 /turf/simulated/shuttle/plating,
 /area/shuttle/needle)
+"rSf" = (
+/turf/simulated/floor/tiled,
+/area/rnd/lab)
 "rSn" = (
 /obj/effect/landmark/start{
 	name = "Explorer"
@@ -76359,7 +76359,7 @@ qiX
 tWF
 lNx
 iUy
-aac
+aaa
 wru
 kxf
 tiw
@@ -98735,7 +98735,7 @@ xEk
 xUM
 nFg
 cKM
-evZ
+rSf
 vQm
 oie
 dCU
@@ -98992,7 +98992,7 @@ xEk
 xUM
 nFg
 ble
-aaa
+evZ
 vQm
 oie
 cIY

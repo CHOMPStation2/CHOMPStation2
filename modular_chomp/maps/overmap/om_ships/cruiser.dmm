@@ -5814,9 +5814,6 @@
 "mi" = (
 /turf/simulated/wall/rpshull,
 /area/mothership/rnd)
-"mj" = (
-/turf/simulated/floor/tiled/steel_grid,
-/area/mothership/rnd)
 "mk" = (
 /obj/machinery/computer/rdconsole_tg,
 /turf/simulated/floor/tiled/steel_grid,
@@ -5962,6 +5959,9 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 4
 	},
+/turf/simulated/floor/tiled/steel_grid,
+/area/mothership/rnd)
+"mC" = (
 /turf/simulated/floor/tiled/steel_grid,
 /area/mothership/rnd)
 "mD" = (
@@ -17974,11 +17974,11 @@ lh
 lt
 lJ
 kl
-mj
+mC
 mz
 mO
 nf
-mj
+mC
 nN
 mi
 oo
@@ -18401,7 +18401,7 @@ lw
 lL
 kl
 mm
-mj
+mC
 mQ
 nh
 nC
@@ -18543,7 +18543,7 @@ lw
 lM
 kl
 mn
-mj
+mC
 mR
 ni
 nC
@@ -18685,9 +18685,9 @@ lw
 lN
 kl
 mo
-mj
-mj
-mj
+mC
+mC
+mC
 nC
 nR
 mi
@@ -18827,7 +18827,7 @@ lx
 lO
 lZ
 mp
-mj
+mC
 mS
 nj
 nC
