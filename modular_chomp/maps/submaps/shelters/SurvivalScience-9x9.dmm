@@ -86,9 +86,6 @@
 	},
 /turf/simulated/shuttle/plating,
 /area/survivalpod/superpose/SurvivalScience)
-"gW" = (
-/turf/simulated/shuttle/floor/voidcraft/light,
-/area/survivalpod/superpose/SurvivalScience)
 "gY" = (
 /obj/structure/fans/tiny,
 /obj/effect/floor_decal/industrial/danger/full,
@@ -314,6 +311,9 @@
 /obj/item/disk/design_disk,
 /obj/item/disk/tech_disk,
 /obj/item/disk/tech_disk,
+/turf/simulated/shuttle/floor/voidcraft/light,
+/area/survivalpod/superpose/SurvivalScience)
+"Ct" = (
 /turf/simulated/shuttle/floor/voidcraft/light,
 /area/survivalpod/superpose/SurvivalScience)
 "Cz" = (
@@ -669,18 +669,18 @@ AB
 Vp
 Cz
 HB
-gW
+Ct
 oQ
 zR
 "}
 (4,1,1) = {"
 ku
-gW
-gW
+Ct
+Ct
 xx
 gN
 uq
-gW
+Ct
 TY
 CX
 "}

@@ -982,10 +982,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/shuttle/whiteshipOM)
-"Cz" = (
-/obj/screen/alert/highpressure,
-/turf/simulated/shuttle/floor/purple,
-/area/shuttle/whiteshipOM)
 "CW" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 10
@@ -2226,7 +2222,7 @@ sH
 Bn
 fg
 hb
-Cz
+TF
 TF
 fg
 Bn

@@ -1,9 +1,4 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
-"aa" = (
-/obj/screen/alert/highpressure,
-/obj/machinery/rnd/production/protolathe/department/science,
-/turf/simulated/shuttle/floor/purple,
-/area/survivalpod/superpose/ScienceShip)
 "ae" = (
 /obj/structure/window/reinforced/survival_pod{
 	dir = 8
@@ -1004,6 +999,7 @@
 /area/survivalpod/superpose/ScienceShip)
 "Cz" = (
 /obj/screen/alert/highpressure,
+/obj/machinery/rnd/production/protolathe/department/science,
 /turf/simulated/shuttle/floor/purple,
 /area/survivalpod/superpose/ScienceShip)
 "CW" = (
@@ -1841,6 +1837,10 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/survivalpod/superpose/ScienceShip)
+"TF" = (
+/obj/screen/alert/highpressure,
+/turf/simulated/shuttle/floor/purple,
+/area/survivalpod/superpose/ScienceShip)
 "Ug" = (
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/structure/extinguisher_cabinet{
@@ -2252,9 +2252,9 @@ Eq
 oX
 Bn
 Dp
+TF
 Cz
-aa
-Cz
+TF
 Dp
 Bn
 fg
