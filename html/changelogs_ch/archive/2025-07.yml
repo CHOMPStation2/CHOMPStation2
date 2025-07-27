@@ -258,3 +258,28 @@
       of it's own separate proc. This is also round persistent as well.
   - code_imp: The shadekin component now has framework to have abilities added/removed
       from it at will.
+2025-07-27:
+  CHOMPStation2StaffMirrorBot:
+  - rscadd: Added the ability to use alt-clicks in advanced build mode to open VV
+      or call proc.
+  - rscadd: Added the ability to spawn someone with a custom job title from Spawn
+      Character.
+  - rscadd: Added the ability to give ColorMate to Simple Mobs or Borgs through player
+      effects.
+  - rscadd: Added the ability to health scan any living mobs from player effects.
+  - balance: Proteans can now use some implants.
+  Diana:
+  - qol: Damage now updates immediately, instead of waiting for the next life tick.
+  - code_imp: Godmode works better now
+  FluffMedic:
+  - balance: Some tyr things are altered. Mostly ants are a smidge more deadly
+  Zizzi:
+  - rscadd: Targeted pathfinding circuit
+  - rscadd: Pathfinding locomotion circuit
+  - rscadd: Ability to ID lock circuit assemblies
+  - rscadd: ID access circuit
+  - rscadd: Added a new circuitry assembly.
+  - rscadd: Added two new circuits
+  - rscadd: Added unique speaker to electronic earpiece.
+  - bugfix: Fixed reagent circuitry not supporting reagent storage circuits.
+  - bugfix: Fixed text pad input buffer size
