@@ -412,12 +412,8 @@
 		if(selection)
 			fruit_gland.fruit_type = selection
 		add_verb(src, /mob/living/carbon/human/proc/alraune_fruit_pick)
-<<<<<<< HEAD
-		// remove_verb(src, /mob/living/carbon/human/proc/alraune_fruit_select) // CHOMPRemove
-=======
 		add_verb(src, /mob/living/carbon/human/proc/alraune_fruit_reagent)
 //		remove_verb(src, /mob/living/carbon/human/proc/alraune_fruit_select)  //We are allowing them to switch fruits now.
->>>>>>> 195aa07b3a (Unexpected Alraune Love (#18077))
 		fruit_gland.organ_owner = src
 		fruit_gland.emote_descriptor = list("fruit right off of [fruit_gland.organ_owner]!", "a fruit from [fruit_gland.organ_owner]!")
 
