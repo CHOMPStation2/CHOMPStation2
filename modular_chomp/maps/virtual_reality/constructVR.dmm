@@ -14308,9 +14308,6 @@
 	dir = 8
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
-/obj/machinery/mecha_part_fabricator{
-	req_access = null
-	},
 /turf/simulated/floor/tiled/techmaint,
 /area/vr/powered/space/sciship)
 "lSq" = (

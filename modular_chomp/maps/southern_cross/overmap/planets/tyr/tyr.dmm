@@ -9499,11 +9499,6 @@
 	},
 /turf/simulated/floor/tiled/old_tile/beige,
 /area/surface/tyr/eclipse_stronghold/cargo)
-"So" = (
-/obj/structure/table/standard,
-/obj/item/portable_scanner,
-/turf/simulated/floor/tiled/old_tile/beige,
-/area/surface/tyr/eclipse_stronghold/cargo)
 "Sq" = (
 /turf/simulated/wall/r_concrete,
 /area/surface/tyr/eclipse_stronghold/sec)
@@ -10231,11 +10226,6 @@
 	color = "#FF3300"
 	},
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/surface/tyr/eclipse_stronghold/cargo)
-"YI" = (
-/obj/structure/table/standard,
-/obj/item/portable_destructive_analyzer,
-/turf/simulated/floor/tiled/old_tile/beige,
 /area/surface/tyr/eclipse_stronghold/cargo)
 "YL" = (
 /obj/effect/floor_decal/corner/white/diagonal,
@@ -65647,7 +65637,7 @@ if
 AC
 zC
 AC
-So
+zR
 nj
 zC
 ea
@@ -65906,7 +65896,7 @@ jS
 AC
 zC
 sX
-YI
+zR
 AC
 PS
 if
