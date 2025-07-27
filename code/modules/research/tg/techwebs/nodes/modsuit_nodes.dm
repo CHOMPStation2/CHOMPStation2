@@ -32,7 +32,7 @@
 		"rig_device_flash",
 		"rig_device_plasmacutter",
 		"rig_device_healthanalyzer",
-		"rig_gun_sizegun",
+		// "rig_gun_sizegun", // CHOMPRenove Micro Mech
 		"rig_siphon",
 		"rig_component_datajack",
 		// "modlink_scryer",
@@ -56,7 +56,7 @@
 	prereq_ids = list(TECHWEB_NODE_MOD_SUIT, TECHWEB_NODE_CHEM_SYNTHESIS)
 	design_ids = list(
 		"rig_component_chemicals",
-		"rig_component_rescuepharm",
+		// "rig_component_rescuepharm", // CHOMPRenove Micro Mech
 		// "mod_plating_medical",
 		// "mod_quick_carry",
 		// "mod_injector",

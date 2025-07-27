@@ -33,6 +33,7 @@
 		"vehicle_chassis_spacebike",
 		"vehicle_chassis_quadbike",
 		"vehicle_chassis_snowmobile",
+		/* CHOMPRenove Start Micro Mech
 		"gopher_main",
 		"gopher_peri",
 		"gopher_chassis",
@@ -60,6 +61,7 @@
 		"weasel_right_arm",
 		"weasel_right_leg",
 		"weasel_head",
+		*/// CHOMPRenove End Micro Mech
 	)
 
 /datum/techweb_node/mech_equipment
@@ -118,8 +120,8 @@
 	prereq_ids = list(TECHWEB_NODE_MECH_EQUIPMENT, TECHWEB_NODE_MINING)
 	design_ids = list(
 		"mech_drill",
-		"micro_drill",
-		"ore_scoop",
+		// "micro_drill", // CHOMPRenove Micro Mech
+		// "ore_scoop", // CHOMPRenove Micro Mech
 		"mech_diamond_drill",
 		"mech_ground_drill",
 		"mech_ore_scanner",
