@@ -49,7 +49,7 @@
 /turf/simulated/floor/tiled,
 /area/submap/Rockybase)
 "ch" = (
-/obj/machinery/mecha_part_fabricator/pros,
+/obj/machinery/mecha_part_fabricator_tg/prosthetics,
 /turf/simulated/floor/tiled,
 /area/submap/Rockybase)
 "ck" = (
@@ -464,7 +464,7 @@
 /turf/template_noop,
 /area/template_noop)
 "yc" = (
-/obj/machinery/mecha_part_fabricator,
+/obj/machinery/mecha_part_fabricator_tg,
 /turf/simulated/floor/tiled,
 /area/submap/Rockybase)
 "yf" = (

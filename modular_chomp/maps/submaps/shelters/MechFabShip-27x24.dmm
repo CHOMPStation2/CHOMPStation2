@@ -641,18 +641,16 @@
 /obj/effect/floor_decal/techfloor{
 	dir = 4
 	},
-/obj/machinery/mecha_part_fabricator{
-	req_access = null
-	},
 /obj/effect/floor_decal/industrial/outline/yellow,
+/obj/machinery/mecha_part_fabricator_tg,
 /turf/simulated/floor/tiled/yellow,
 /area/survivalpod/superpose/MechFabShip)
 "qY" = (
-/obj/machinery/computer/rdconsole/public,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/light/poi{
 	dir = 1
 	},
+/obj/machinery/rnd/production/protolathe/department/science,
 /turf/simulated/floor/tiled/techmaint,
 /area/survivalpod/superpose/MechFabShip)
 "rr" = (
@@ -1079,7 +1077,7 @@
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/MechFabShip)
 "HC" = (
-/obj/machinery/mecha_part_fabricator/pros,
+/obj/machinery/mecha_part_fabricator_tg/prosthetics,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/effect/floor_decal/techfloor{
 	dir = 8
@@ -1335,7 +1333,6 @@
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/MechFabShip)
 "Nr" = (
-/obj/machinery/r_n_d/destructive_analyzer,
 /obj/effect/floor_decal/techfloor{
 	dir = 4
 	},
@@ -1576,7 +1573,7 @@
 /area/survivalpod/superpose/MechFabShip)
 "SW" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
-/obj/machinery/r_n_d/circuit_imprinter,
+/obj/machinery/rnd/production/circuit_imprinter,
 /obj/item/reagent_containers/glass/beaker/large,
 /obj/structure/sign/department/robo{
 	pixel_y = 32

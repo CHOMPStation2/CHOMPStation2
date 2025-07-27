@@ -181,7 +181,7 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/shuttle/whiteshipOM)
 "hb" = (
-/obj/machinery/r_n_d/protolathe,
+/obj/machinery/rnd/production/protolathe/department/science,
 /obj/screen/alert/highpressure,
 /turf/simulated/shuttle/floor/purple,
 /area/shuttle/whiteshipOM)
@@ -298,7 +298,7 @@
 /turf/simulated/floor/plating,
 /area/shuttle/whiteshipOM)
 "lu" = (
-/obj/machinery/r_n_d/circuit_imprinter,
+/obj/machinery/rnd/production/circuit_imprinter,
 /obj/item/reagent_containers/glass/beaker{
 	pixel_x = 9;
 	pixel_y = 8
@@ -981,11 +981,6 @@
 	pixel_x = -24
 	},
 /turf/simulated/floor/plating,
-/area/shuttle/whiteshipOM)
-"Cz" = (
-/obj/screen/alert/highpressure,
-/obj/machinery/r_n_d/destructive_analyzer,
-/turf/simulated/shuttle/floor/purple,
 /area/shuttle/whiteshipOM)
 "CW" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
@@ -1811,9 +1806,6 @@
 /area/shuttle/whiteshipOM)
 "TF" = (
 /obj/screen/alert/highpressure,
-/obj/machinery/computer/rdconsole/public{
-	dir = 4
-	},
 /turf/simulated/shuttle/floor/purple,
 /area/shuttle/whiteshipOM)
 "Ug" = (
@@ -2230,7 +2222,7 @@ sH
 Bn
 fg
 hb
-Cz
+TF
 TF
 fg
 Bn

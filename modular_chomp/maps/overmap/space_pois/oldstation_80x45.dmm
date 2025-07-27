@@ -605,7 +605,7 @@
 /turf/simulated/wall,
 /area/submap/oldstation_beta)
 "gt" = (
-/obj/machinery/r_n_d/protolathe,
+/obj/machinery/rnd/production/protolathe/department/science,
 /turf/simulated/floor/tiled/old_tile/blue,
 /area/submap/oldstation_tox)
 "gu" = (
@@ -1275,7 +1275,7 @@
 	},
 /area/submap/oldstation_tox)
 "oi" = (
-/obj/machinery/mecha_part_fabricator,
+/obj/machinery/mecha_part_fabricator_tg,
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/tiled/old_tile/blue,
 /area/submap/oldstation_tox)
@@ -2374,7 +2374,7 @@
 /turf/simulated/floor/plating,
 /area/submap/oldstation_hiveboat)
 "Ar" = (
-/obj/machinery/computer/rdconsole/core,
+/obj/machinery/computer/rdconsole_tg,
 /turf/simulated/floor/tiled/old_tile/blue,
 /area/submap/oldstation_tox)
 "AK" = (
@@ -4373,7 +4373,7 @@
 	},
 /area/submap/oldstation_power)
 "Yo" = (
-/obj/machinery/r_n_d/circuit_imprinter,
+/obj/machinery/rnd/production/circuit_imprinter,
 /turf/simulated/floor/tiled/old_tile/blue,
 /area/submap/oldstation_tox)
 "Yr" = (
@@ -4500,11 +4500,6 @@
 /obj/item/solar_assembly,
 /turf/template_noop,
 /area/template_noop)
-"ZM" = (
-/obj/machinery/r_n_d/destructive_analyzer,
-/obj/effect/floor_decal/rust,
-/turf/simulated/floor/tiled/old_tile/blue,
-/area/submap/oldstation_tox)
 "ZS" = (
 /obj/structure/table/standard,
 /obj/item/material/kitchen/utensil/fork,
@@ -7622,7 +7617,7 @@ Yj
 HM
 pk
 ox
-ZM
+mo
 gD
 Yo
 gD

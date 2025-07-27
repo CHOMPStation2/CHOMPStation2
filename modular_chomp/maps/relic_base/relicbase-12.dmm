@@ -1753,13 +1753,6 @@
 /obj/machinery/portable_atmospherics/canister/oxygen,
 /turf/simulated/shuttle/floor/darkred,
 /area/shuttle/skipjack)
-"aWV" = (
-/obj/machinery/r_n_d/server/centcom,
-/turf/unsimulated/floor{
-	dir = 5;
-	icon_state = "vault"
-	},
-/area/centcom/main_hall)
 "aWW" = (
 /obj/structure/table/steel_reinforced,
 /obj/item/organ/internal/stack,
@@ -12310,7 +12303,7 @@
 	},
 /area/syndicate_mothership/elite_squad)
 "nhS" = (
-/obj/machinery/mecha_part_fabricator,
+/obj/machinery/mecha_part_fabricator_tg,
 /obj/machinery/status_display{
 	layer = 4;
 	pixel_y = 32
@@ -39607,7 +39600,7 @@ wcp
 hsZ
 bWp
 tkj
-aWV
+vut
 lFl
 xUf
 xUf

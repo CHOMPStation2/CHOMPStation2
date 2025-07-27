@@ -5834,7 +5834,7 @@
 /turf/simulated/floor/tiled/steel_grid,
 /area/mothership/rnd)
 "mm" = (
-/obj/machinery/mecha_part_fabricator/pros,
+/obj/machinery/mecha_part_fabricator_tg/prosthetics,
 /turf/simulated/floor/tiled/steel_grid,
 /area/mothership/rnd)
 "mn" = (
@@ -5846,7 +5846,7 @@
 /turf/simulated/floor/tiled/steel_grid,
 /area/mothership/rnd)
 "mo" = (
-/obj/machinery/mecha_part_fabricator,
+/obj/machinery/mecha_part_fabricator_tg,
 /turf/simulated/floor/tiled/steel_grid,
 /area/mothership/rnd)
 "mp" = (
@@ -6074,7 +6074,7 @@
 /turf/simulated/floor/tiled/steel_grid,
 /area/mothership/armory)
 "mO" = (
-/obj/machinery/r_n_d/circuit_imprinter,
+/obj/machinery/rnd/production/circuit_imprinter,
 /obj/item/reagent_containers/glass/beaker/sulphuric,
 /turf/simulated/floor/tiled/steel_grid,
 /area/mothership/rnd)
@@ -7805,7 +7805,6 @@
 /turf/simulated/floor/greengrid,
 /area/mothership/telecomms2)
 "qo" = (
-/obj/machinery/r_n_d/server/centcom,
 /turf/simulated/floor/greengrid,
 /area/mothership/telecomms2)
 "qp" = (

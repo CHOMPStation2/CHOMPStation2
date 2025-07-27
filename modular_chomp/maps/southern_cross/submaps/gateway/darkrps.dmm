@@ -16387,7 +16387,7 @@
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/centerwarehouse)
 "uWN" = (
-/obj/machinery/mecha_part_fabricator/pros{
+/obj/machinery/mecha_part_fabricator_tg/prosthetics{
 	req_access = null
 	},
 /turf/simulated/floor/tiled,

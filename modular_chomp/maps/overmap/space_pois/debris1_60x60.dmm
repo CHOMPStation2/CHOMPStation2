@@ -341,7 +341,7 @@
 /turf/simulated/floor/plating,
 /area/submap/debris1)
 "uh" = (
-/obj/machinery/mecha_part_fabricator,
+/obj/machinery/mecha_part_fabricator_tg,
 /turf/simulated/floor/tiled/airless,
 /area/submap/debris1)
 "uj" = (
@@ -402,7 +402,7 @@
 /turf/template_noop,
 /area/submap/debris1)
 "yk" = (
-/obj/machinery/mecha_part_fabricator/pros,
+/obj/machinery/mecha_part_fabricator_tg/prosthetics,
 /turf/simulated/floor/tiled/airless,
 /area/submap/debris1)
 "yv" = (

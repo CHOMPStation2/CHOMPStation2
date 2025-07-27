@@ -5814,12 +5814,8 @@
 "mi" = (
 /turf/simulated/wall/rpshull,
 /area/mothership/rnd)
-"mj" = (
-/obj/machinery/r_n_d/destructive_analyzer,
-/turf/simulated/floor/tiled/steel_grid,
-/area/mothership/rnd)
 "mk" = (
-/obj/machinery/computer/rdconsole/core,
+/obj/machinery/computer/rdconsole_tg,
 /turf/simulated/floor/tiled/steel_grid,
 /area/mothership/rnd)
 "ml" = (
@@ -5828,7 +5824,7 @@
 /turf/simulated/floor/tiled/steel_grid,
 /area/mothership/rnd)
 "mm" = (
-/obj/machinery/mecha_part_fabricator/pros,
+/obj/machinery/mecha_part_fabricator_tg/prosthetics,
 /turf/simulated/floor/tiled/steel_grid,
 /area/mothership/rnd)
 "mn" = (
@@ -5840,7 +5836,7 @@
 /turf/simulated/floor/tiled/steel_grid,
 /area/mothership/rnd)
 "mo" = (
-/obj/machinery/mecha_part_fabricator,
+/obj/machinery/mecha_part_fabricator_tg,
 /turf/simulated/floor/tiled/steel_grid,
 /area/mothership/rnd)
 "mp" = (
@@ -6062,12 +6058,12 @@
 /turf/simulated/floor/tiled/steel_grid,
 /area/mothership/armory)
 "mO" = (
-/obj/machinery/r_n_d/circuit_imprinter,
+/obj/machinery/rnd/production/circuit_imprinter,
 /obj/item/reagent_containers/glass/beaker/sulphuric,
 /turf/simulated/floor/tiled/steel_grid,
 /area/mothership/rnd)
 "mP" = (
-/obj/machinery/r_n_d/protolathe,
+/obj/machinery/rnd/production/protolathe/department/science,
 /turf/simulated/floor/tiled/steel_grid,
 /area/mothership/rnd)
 "mQ" = (
@@ -7788,7 +7784,6 @@
 /turf/simulated/floor/greengrid,
 /area/mothership/telecomms2)
 "qo" = (
-/obj/machinery/r_n_d/server/centcom,
 /turf/simulated/floor/greengrid,
 /area/mothership/telecomms2)
 "qp" = (
@@ -17979,7 +17974,7 @@ lh
 lt
 lJ
 kl
-mj
+mC
 mz
 mO
 nf

@@ -5864,7 +5864,7 @@
 /turf/simulated/floor/plating,
 /area/space)
 "dXo" = (
-/obj/machinery/r_n_d/server/core,
+/obj/machinery/rnd/server/master,
 /obj/machinery/light/small,
 /turf/simulated/floor/bluegrid{
 	name = "Server Base";
@@ -6866,7 +6866,7 @@
 /obj/structure/window/reinforced/survival_pod{
 	opacity = 1
 	},
-/obj/machinery/r_n_d/circuit_imprinter,
+/obj/machinery/rnd/production/circuit_imprinter,
 /obj/item/reagent_containers/glass/beaker{
 	pixel_x = 9;
 	pixel_y = 8
@@ -9794,7 +9794,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/space)
 "gMt" = (
-/obj/machinery/mecha_part_fabricator,
+/obj/machinery/mecha_part_fabricator_tg,
 /obj/structure/window/reinforced/survival_pod{
 	dir = 1
 	},
@@ -14858,7 +14858,7 @@
 /turf/simulated/floor/wood/sif,
 /area/space)
 "kcO" = (
-/obj/machinery/mecha_part_fabricator/pros,
+/obj/machinery/mecha_part_fabricator_tg/prosthetics,
 /obj/structure/window/reinforced/survival_pod{
 	dir = 1
 	},
@@ -17574,7 +17574,7 @@
 /turf/simulated/shuttle/wall/alien/blue,
 /area/space)
 "lTt" = (
-/obj/machinery/r_n_d/server/robotics,
+/obj/machinery/rnd/server,
 /obj/structure/window/reinforced/survival_pod{
 	dir = 8
 	},
@@ -17767,7 +17767,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/space)
 "lYv" = (
-/obj/machinery/r_n_d/circuit_imprinter,
+/obj/machinery/rnd/production/circuit_imprinter,
 /obj/item/reagent_containers/glass/beaker{
 	pixel_x = 9;
 	pixel_y = 8
@@ -20642,7 +20642,7 @@
 /turf/simulated/floor/outdoors/dirt,
 /area/space)
 "nMg" = (
-/obj/machinery/r_n_d/server/core,
+/obj/machinery/rnd/server/master,
 /obj/structure/window/reinforced/survival_pod{
 	dir = 8
 	},

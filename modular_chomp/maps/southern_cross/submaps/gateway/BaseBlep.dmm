@@ -282,7 +282,7 @@
 	},
 /area/awaymission/baseblep/caynon)
 "li" = (
-/obj/machinery/mecha_part_fabricator/pros,
+/obj/machinery/mecha_part_fabricator_tg/prosthetics,
 /turf/simulated/floor/tiled/eris/steel,
 /area/awaymission/baseblep/base)
 "lu" = (
@@ -320,7 +320,7 @@
 	},
 /area/awaymission/baseblep/cavern)
 "mf" = (
-/obj/machinery/mecha_part_fabricator,
+/obj/machinery/mecha_part_fabricator_tg,
 /turf/simulated/floor/tiled/eris/steel,
 /area/awaymission/baseblep/base)
 "mi" = (
@@ -388,7 +388,7 @@
 /turf/simulated/floor/tiled/eris/steel,
 /area/awaymission/baseblep/base)
 "pd" = (
-/obj/machinery/r_n_d/circuit_imprinter,
+/obj/machinery/rnd/production/circuit_imprinter,
 /turf/simulated/floor/tiled/eris/steel,
 /area/awaymission/baseblep/base)
 "pf" = (
@@ -656,12 +656,6 @@
 	temperature = 300
 	},
 /area/awaymission/baseblep/caynon)
-"Cy" = (
-/obj/machinery/computer/rdconsole/robotics{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/eris/steel,
-/area/awaymission/baseblep/base)
 "CJ" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced{
@@ -677,7 +671,7 @@
 /turf/simulated/floor/tiled/eris/steel,
 /area/awaymission/baseblep/base)
 "Dh" = (
-/obj/machinery/r_n_d/protolathe,
+/obj/machinery/rnd/production/protolathe/department/science,
 /turf/simulated/floor/tiled/eris/steel,
 /area/awaymission/baseblep/base)
 "Dj" = (
@@ -937,7 +931,7 @@
 /turf/simulated/shuttle/floor/darkred,
 /area/awaymission/baseblep/hivebotsphere)
 "OM" = (
-/obj/machinery/computer/rdconsole/core{
+/obj/machinery/computer/rdconsole_tg{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/eris/steel,
@@ -984,10 +978,6 @@
 	temperature = 300
 	},
 /area/awaymission/baseblep/cavern)
-"Qg" = (
-/obj/machinery/r_n_d/destructive_analyzer,
-/turf/simulated/floor/tiled/eris/steel,
-/area/awaymission/baseblep/base)
 "Qk" = (
 /obj/machinery/power/rad_collector,
 /obj/structure/cable/yellow{
@@ -7626,7 +7616,7 @@ ct
 ct
 ac
 gY
-Qg
+gY
 OM
 gY
 ct
@@ -8148,7 +8138,7 @@ gY
 ct
 Bx
 gY
-Cy
+gY
 ct
 Dq
 gY
