@@ -12,6 +12,7 @@
 #define TECHWEB_NODE_BASIC_ARMS "basic_arms"
 #define TECHWEB_NODE_BCI "bci"
 #define TECHWEB_NODE_BEAM_WEAPONS "beam_weapons"
+#define TECHWEB_NODE_PHASE_WEAPONS "phase_weapons" //CHOMPEDIT ADD - Adds Phase Weaponry
 #define TECHWEB_NODE_BIO_SCAN "bio_scan"
 #define TECHWEB_NODE_BITRUNNING "bitrunning"
 #define TECHWEB_NODE_MECH_EQUIP_BLUESPACE "mech_equip_bluespace"

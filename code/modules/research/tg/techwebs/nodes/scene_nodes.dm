@@ -38,5 +38,6 @@
 	prereq_ids = list(TECHWEB_NODE_SCENE_TOOLS, TECHWEB_NODE_SEC_EQUIP)
 	design_ids = list(
 		"bodysnatcher",
+		"mindbinder", //CHOMPEDIT - Adds Mindbinder to illegal techweb.
 	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_3_POINTS)
