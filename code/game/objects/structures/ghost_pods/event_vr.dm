@@ -88,8 +88,8 @@
 								  "kururak" = /mob/living/simple_mob/animal/sif/kururak,
 								  "Statue of Temptation" = /mob/living/simple_mob/vore/devil
 								  )
-	*/ //CHOMPRemove End
 
+	*/ //CHOMPRemove End
 
 /obj/structure/ghost_pod/ghost_activated/maintpred/create_occupant(var/mob/M)
 	..()
