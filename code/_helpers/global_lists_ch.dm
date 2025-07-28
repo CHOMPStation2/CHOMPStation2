@@ -85,7 +85,7 @@ GLOBAL_LIST_INIT(maint_mob_pred_options, list(
 	"Abyss Leaper" = /mob/living/simple_mob/vore/vore_hostile/leaper,
 	"Abyss Lurker" = /mob/living/simple_mob/vore/vore_hostile/abyss_lurker,
 	"Swoopie XL" = /mob/living/simple_mob/vore/aggressive/corrupthound/swoopie,
-	"Teppie" = /datum/category_item/catalogue/fauna/teppi,
+	"Teppie" = /mob/living/simple_mob/vore/alienanimals/teppi,
 	"Frostlit Lamp" = /mob/living/simple_mob/animal/passive/gaslamp/snow,
 	"Voidwalker" = /mob/living/simple_mob/vore/demon,
 	"Super Metroid" = /mob/living/simple_mob/metroid/juvenile/super,
