@@ -12,7 +12,6 @@
 #define TECHWEB_NODE_BASIC_ARMS "basic_arms"
 #define TECHWEB_NODE_BCI "bci"
 #define TECHWEB_NODE_BEAM_WEAPONS "beam_weapons"
-#define TECHWEB_NODE_PHASE_WEAPONS "phase_weapons" //CHOMPEDIT ADD - Adds Phase Weaponry
 #define TECHWEB_NODE_BIO_SCAN "bio_scan"
 #define TECHWEB_NODE_BITRUNNING "bitrunning"
 #define TECHWEB_NODE_MECH_EQUIP_BLUESPACE "mech_equip_bluespace"
@@ -133,3 +132,16 @@
 #define TECHWEB_NODE_TELECOMS "telecoms"
 #define TECHWEB_NODE_UNREGULATED_BLUESPACE "unregulated_bluespace"
 #define TECHWEB_NODE_XENOBIOLOGY "xenobiology"
+
+//CHOMPEDIT Start - Chomp Specific techwebs.
+#define TECHWEB_NODE_PHASE_WEAPONS "phase_weapons" //CHOMPEDIT ADD - Adds Phase Weaponry
+#define TECHWEB_NODE_PARTS_EMP_PROOF "parts_empproof" //CHOMPEDIT - Adds EMP-Proof Parts
+#define TECHWEB_NODE_PARTS_RECHARGING "parts_recharging" //CHOMPEDIT - Adds recharging Parts
+#define TECHWEB_NODE_TELEPORTER "teleporter" //CHOMPEDIT - Adds Teleporter
+#define TECHWEB_NODE_CONFETTI "confetti" //CHOMPEDIT Add - Adds Confetti Cannon
+#define TECHWEB_NODE_CRYOGUN "cryogun" //CHOMPEDIT Add - Adds Cryogun
+#define TECHWEB_NODE_CASELESS_RIFLE "caseless_rifle" //CHOMPEDIT Add - Adds Caseless Rifle
+#define TECHWEB_NODE_METAMORPHOSIS_RAY "metamorphosis_ray" //CHOMPEDIT Add - Adds Caseless Rifle
+#define TECHWEB_NODE_MOD_ANOMALY_SUIT "mod_anomaly_suit" //CHOMPEDIT Add - Adds Anomaly RIGs
+#define TECHWEB_NODE_MECH_SHIELDS "mech_shields" //CHOMPEDIT Add - Adds Mech Shields
+//CHOMPEDIT End - Chomp Specific techwebs.

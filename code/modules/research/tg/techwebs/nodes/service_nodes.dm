@@ -10,6 +10,8 @@
 		"ear_translator",
 		"walkpod",
 		"juke_remote",
+		"mail_scanner", //CHOMPEdit Add - Adds Mail Scanner
+		"floor_painter", //CHOMPEdit Add - Adds Floor Painter
 		// "fax",
 		// "sec_pen",
 		// "handlabel",
@@ -242,6 +244,8 @@
 		"fryer_board",
 		"cerealmaker_board",
 		"candymachine_board",
+		"food_replicator", //CHOMPEDIT Add - Adds Food Replicator
+		"borgos1", //CHOMPEDIT Add - Adds Borgos
 		// "range",
 		// "souppot",
 		// "processor",
@@ -258,3 +262,14 @@
 	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_2_POINTS)
 	announce_channels = list(CHANNEL_SERVICE)
+
+/datum/techweb_node/confetti_cannon //CHOMPEdit Start - Adds Confetti Cannon
+	id = TECHWEB_NODE_CONFETTI
+	display_name = "Confetti Cannon"
+	description = "Less explosive than fireworks yet more messy!"
+	prereq_ids = list(TECHWEB_NODE_PARTS_ADV)
+	design_ids = list(
+		"confetti_cannon",
+	)
+	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_1_POINTS)
+	announce_channels = list(CHANNEL_COMMON) //CHOMPEdit End - Adds Confetti Cannon

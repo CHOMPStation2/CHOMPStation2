@@ -304,6 +304,7 @@
 		"mech_ion-r",
 		"mech_laser_xray",
 		"mech_laser_xray-r",
+		"mech_phoron_bore", //CHOMPEDIT Add - Phoron Bore
 	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_4_POINTS)
 	announce_channels = list(CHANNEL_SCIENCE)
@@ -359,3 +360,15 @@
 	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_5_POINTS)
 	announce_channels = list(CHANNEL_SCIENCE)
+
+/datum/techweb_node/mech_shields //CHOMPEdit Start - Adds Mech Shields
+	id = TECHWEB_NODE_MECH_SHIELDS
+	display_name = "Exosuit Shields"
+	description = "Exosuit shield technology that allows for absorbing high-velocity impacts without any harm to the mech itself."
+	prereq_ids = list(TECHWEB_NODE_MECH_COMBAT, TECHWEB_NODE_ELECTRIC_WEAPONS)
+	design_ids = list(
+		"mech_shield_omni",
+		"mech_shield_droid",
+	)
+	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_4_POINTS)
+	announce_channels = list(CHANNEL_SCIENCE) //CHOMPEdit End - Adds Mech Shields

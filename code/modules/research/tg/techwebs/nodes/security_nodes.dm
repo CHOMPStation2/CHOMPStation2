@@ -186,3 +186,36 @@
 	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_2_POINTS) //They mostly work on mobs.
 	announce_channels = list(CHANNEL_SECURITY) //CHOMPEdit End - Adds Phase Weaponry
+
+/datum/techweb_node/cryogun //CHOMPEdit Start
+	id = TECHWEB_NODE_CRYOGUN
+	display_name = "Cryogenic Gun"
+	description = "Specialized gun that allows for cooling down a target."
+	prereq_ids = list(TECHWEB_NODE_EXPLOSIVES)
+	design_ids = list(
+		"cryogun",
+	)
+	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_2_POINTS) //It's actually laughably weak.
+	announce_channels = list(CHANNEL_SECURITY)
+
+/datum/techweb_node/caseless_rifle
+	id = TECHWEB_NODE_CASELESS_RIFLE
+	display_name = "Caseless rifle"
+	description = "A Specialized gun that allows for covert operations, leaving no shells behind."
+	prereq_ids = list(TECHWEB_NODE_EXOTIC_AMMO)
+	design_ids = list(
+		"caselessrifle",
+	)
+	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_5_POINTS)
+	announce_channels = list(CHANNEL_SECURITY)
+
+/datum/techweb_node/metamorphosis_ray
+	id = TECHWEB_NODE_METAMORPHOSIS_RAY
+	display_name = "Metamorposis Ray"
+	description = "A Specialized weapon that allows transforming the target into various simple creatures."
+	prereq_ids = list(TECHWEB_NODE_EXOTIC_AMMO)
+	design_ids = list(
+		"metamorphosisray",
+	)
+	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_5_POINTS)
+	announce_channels = list(CHANNEL_SECURITY) //CHOMPEdit End

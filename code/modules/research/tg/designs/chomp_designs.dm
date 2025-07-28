@@ -83,13 +83,12 @@
 
 /datum/design_techweb/board/food_replicator
 	name = "Food Replicator"
-	id = "food replicator"
+	id = "food_replicator"
 	build_path = /obj/item/circuitboard/food_replicator
-	departmental_flags = DEPARTMENT_BITFLAG_ENGINEERING
 	category = list(
 		RND_CATEGORY_MACHINE
 	)
-	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE
+	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE | DEPARTMENT_BITFLAG_ENGINEERING
 
 /datum/design_techweb/floor_painter
 	name = "Floor Painter"
@@ -187,17 +186,6 @@
 /*
 //Device Cells
 */
-/datum/design_techweb/cell_device
-	name = "Device Cell"
-	build_type = PROTOLATHE
-	id = "device"
-	materials = list(MAT_STEEL = 350, MAT_GLASS = 25)
-	build_path = /obj/item/cell/device
-	build_type = PROTOLATHE
-	category = list(
-		RND_CATEGORY_STOCK_PARTS + RND_SUBCATEGORY_STOCK_PARTS_1
-	)
-	departmental_flags = DEPARTMENT_BITFLAG_ENGINEERING
 
 /datum/design_techweb/cell_device_empproof
 	name = "Device Cell, EMP-Proof"
@@ -206,18 +194,7 @@
 	build_path = /obj/item/cell/device/empproof
 	build_type = PROTOLATHE
 	category = list(
-		RND_CATEGORY_STOCK_PARTS + RND_SUBCATEGORY_STOCK_PARTS_1
-	)
-	departmental_flags = DEPARTMENT_BITFLAG_ENGINEERING
-
-/datum/design_techweb/cell_advance_device
-	name = "Device Cell, Advanced"
-	id = "advance_device"
-	materials = list(MAT_STEEL = 700, MAT_GLASS = 50)
-	build_path = /obj/item/cell/device/weapon
-	build_type = PROTOLATHE
-	category = list(
-		RND_CATEGORY_STOCK_PARTS + RND_SUBCATEGORY_STOCK_PARTS_2
+		RND_CATEGORY_STOCK_PARTS + RND_SUBCATEGORY_STOCK_PARTS_3
 	)
 	departmental_flags = DEPARTMENT_BITFLAG_ENGINEERING
 
@@ -228,7 +205,7 @@
 	build_path = /obj/item/cell/device/weapon/empproof
 	build_type = PROTOLATHE
 	category = list(
-		RND_CATEGORY_STOCK_PARTS + RND_SUBCATEGORY_STOCK_PARTS_2
+		RND_CATEGORY_STOCK_PARTS + RND_SUBCATEGORY_STOCK_PARTS_4
 	)
 	departmental_flags = DEPARTMENT_BITFLAG_ENGINEERING
 
@@ -239,7 +216,7 @@
 	build_path = /obj/item/cell/device/weapon/recharge
 	build_type = PROTOLATHE
 	category = list(
-		RND_CATEGORY_STOCK_PARTS + RND_SUBCATEGORY_STOCK_PARTS_2
+		RND_CATEGORY_STOCK_PARTS + RND_SUBCATEGORY_STOCK_PARTS_5
 	)
 	departmental_flags = DEPARTMENT_BITFLAG_ENGINEERING
 
@@ -284,7 +261,7 @@
 	build_path = /obj/item/cell/device/weapon/recharge/alien/omni
 	build_type = PROTOLATHE
 	category = list(
-		RND_CATEGORY_STOCK_PARTS + RND_SUBCATEGORY_STOCK_PARTS_1
+		RND_CATEGORY_STOCK_PARTS + RND_SUBCATEGORY_STOCK_PARTS_5
 	)
 	departmental_flags = DEPARTMENT_BITFLAG_ENGINEERING
 
@@ -310,6 +287,7 @@
 	category = list(
 		RND_CATEGORY_WEAPONS
 	)
+	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE | DEPARTMENT_BITFLAG_SECURITY
 
 //Phase weapon with lock safeties.
 /datum/design_techweb/phase_pistol

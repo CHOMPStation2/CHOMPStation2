@@ -56,6 +56,7 @@
 	prereq_ids = list(TECHWEB_NODE_MOD_SUIT, TECHWEB_NODE_CHEM_SYNTHESIS)
 	design_ids = list(
 		"rig_component_chemicals",
+		"rig_defib", //CHOMPEDIT Add - Defibrillator RIG module
 		// "rig_component_rescuepharm", // CHOMPRenove Micro Mech
 		// "mod_plating_medical",
 		// "mod_quick_carry",
@@ -100,6 +101,7 @@
 		"rig_component_voice",
 		"rig_gun_egun",
 		"rig_component_sprinter",
+		"rig_gun_phase", //CHOMPEDIT Add - Phase guns
 		// "mod_mirage_grenade",
 		// "mod_plating_security",
 		// "mod_stealth",
@@ -145,3 +147,14 @@
 	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_4_POINTS)
 	announce_channels = list(CHANNEL_SCIENCE)
+
+/datum/techweb_node/mod_anomaly_suit //CHOMPEdit Start - Precursor suit
+	id = TECHWEB_NODE_MOD_ANOMALY_SUIT
+	display_name = "Anomalous RIG Suit"
+	description = "Anomalous RIGsuits made of alien materials. Can completely nullify attacks"
+	prereq_ids = list(TECHWEB_NODE_MOD_EQUIP)
+	design_ids = list(
+		"rigmodule_precursor",
+	)
+	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_5_POINTS)
+	announce_channels = list(CHANNEL_SCIENCE, CHANNEL_SECURITY) //CHOMPEdit End - Precursor suit
