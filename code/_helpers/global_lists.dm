@@ -986,23 +986,16 @@ GLOBAL_LIST_INIT(maint_mob_pred_options, list(
 	"Space Bumblebee" = /mob/living/simple_mob/vore/bee,
 	"Space Bear" = /mob/living/simple_mob/animal/space/bear,
 	"Voracious Lizard" = /mob/living/simple_mob/vore/aggressive/dino,
-	"Lizardman" = /mob/living/simple_mob/vore/aggressive/lizardman, // CHOMPAdd
 	"Giant Frog" = /mob/living/simple_mob/vore/aggressive/frog,
 	"Giant Rat" = /mob/living/simple_mob/vore/aggressive/rat,
-	"Giant Lab Rat" = /mob/living/simple_mob/vore/aggressive/rat/labrat, // CHOMPAdd
 	"Jelly Blob" = /mob/living/simple_mob/vore/jelly,
 	"Wolf" = /mob/living/simple_mob/vore/wolf,
 	"Dire Wolf" = /mob/living/simple_mob/vore/wolf/direwolf,
 	"Large Dog" = /mob/living/simple_mob/vore/wolf/direwolf/dog,
-	"Hyena" = /mob/living/simple_mob/animal/hyena, // CHOMPAdd
 	"Juvenile Solargrub" = /mob/living/simple_mob/vore/solargrub,
 	"Sect Queen" = /mob/living/simple_mob/vore/sect_queen,
 	"Sect Drone" = /mob/living/simple_mob/vore/sect_drone,
 	"Defanged Xenomorph" = /mob/living/simple_mob/vore/xeno_defanged,
-	"Xenomorph Hunter" = /mob/living/simple_mob/xeno_ch/hunter, // CHOMPAdd
-	"Xenomorph Sentinel" = /mob/living/simple_mob/xeno_ch/sentinel, // CHOMPAdd
-	"Xenomorph Queen" = /mob/living/simple_mob/xeno_ch/queen, // CHOMPAdd
-	"Xenomorph Maid Queen" = /mob/living/simple_mob/xeno_ch/queen/maid, // CHOMPAdd
 	"Panther" = /mob/living/simple_mob/vore/aggressive/panther,
 	"Giant Snake" = /mob/living/simple_mob/vore/aggressive/giant_snake,
 	"Deathclaw" = /mob/living/simple_mob/vore/aggressive/deathclaw,
@@ -1012,12 +1005,8 @@ GLOBAL_LIST_INIT(maint_mob_pred_options, list(
 	"Chubby Mutated Otie" = /mob/living/simple_mob/vore/otie/feral/chubby,
 	"Red Otie" = /mob/living/simple_mob/vore/otie/red,
 	"Chubby Red Otie" = /mob/living/simple_mob/vore/otie/red/chubby,
-	"Zorgoia" = /mob/living/simple_mob/vore/zorgoia, // CHOMPAdd
 	"Corrupt Hound" = /mob/living/simple_mob/vore/aggressive/corrupthound,
 	"Corrupt Corrupt Hound" = /mob/living/simple_mob/vore/aggressive/corrupthound/prettyboi,
-	"Corrupt JaniHound" = /mob/living/simple_mob/vore/retaliate/corrupthound/janihound, // CHOMPAdd
-	"Corrupt Old JaniHound" = /mob/living/simple_mob/vore/retaliate/corrupthound/janihound/old, // CHOMPAdd
-	"Corrupt MediHound" = /mob/living/simple_mob/vore/retaliate/corrupthound/janihound/medihound, // CHOMPAdd
 	"Hunter Giant Spider" = /mob/living/simple_mob/animal/giant_spider/hunter,
 	"Lurker Giant Spider" = /mob/living/simple_mob/animal/giant_spider/lurker,
 	"Pepper Giant Spider" = /mob/living/simple_mob/animal/giant_spider/pepper,
@@ -1030,9 +1019,7 @@ GLOBAL_LIST_INIT(maint_mob_pred_options, list(
 	"Phoron Dragon" = /mob/living/simple_mob/vore/aggressive/dragon/virgo3b,
 	"Space Dragon" = /mob/living/simple_mob/vore/aggressive/dragon/space,
 	"Crypt Drake" = /mob/living/simple_mob/vore/cryptdrake,
-	"Gryphon" = /mob/living/simple_mob/vore/gryphon, // CHOMPAdd
 	"Weretiger" = /mob/living/simple_mob/vore/weretiger,
-	"Lesser Large Dragon" = /mob/living/simple_mob/vore/bigdragon/friendly/maintpred, // CHOMPAdd
 	"Catslug" = /mob/living/simple_mob/vore/alienanimals/catslug,
 	"Squirrel" = /mob/living/simple_mob/vore/squirrel/big,
 	"Pakkun" =/mob/living/simple_mob/vore/pakkun,
@@ -1054,14 +1041,35 @@ GLOBAL_LIST_INIT(maint_mob_pred_options, list(
 	"kururak" = /mob/living/simple_mob/animal/sif/kururak,
 	"Statue of Temptation" = /mob/living/simple_mob/vore/devil,
 	"Meowl" = /mob/living/simple_mob/vore/meowl,
-	"Synx" = /mob/living/simple_mob/animal/synx, // CHOMPAdd
-	"Reindeer" = /mob/living/simple_mob/vore/reindeer, // CHOMPAdd
-	"Lion/Lioness" = /mob/living/simple_mob/vore/retaliate/lion, // CHOMPAdd
 	"Abyss Leaper" = /mob/living/simple_mob/vore/vore_hostile/leaper,
 	"Abyss Lurker" = /mob/living/simple_mob/vore/vore_hostile/abyss_lurker,
-	"Swoopie XL" = /mob/living/simple_mob/vore/aggressive/corrupthound/swoopie, // CHOMPAdd
-	"Teppie" = /datum/category_item/catalogue/fauna/teppi, // CHOMPAdd
-	"Frostlit Lamp" = /mob/living/simple_mob/animal/passive/gaslamp/snow // CHOMPAdd
+	// CHOMPAdd Start
+	"Horse" = /mob/living/simple_mob/vore/horse/big,
+	"Lizardman" = /mob/living/simple_mob/vore/aggressive/lizardman,
+	"Giant Lab Rat" = /mob/living/simple_mob/vore/aggressive/rat/labrat,
+	"Hyena" = /mob/living/simple_mob/animal/hyena,
+	"Xenomorph Hunter" = /mob/living/simple_mob/xeno_ch/hunter,
+	"Xenomorph Sentinel" = /mob/living/simple_mob/xeno_ch/sentinel,
+	"Xenomorph Queen" = /mob/living/simple_mob/xeno_ch/queen,
+	"Xenomorph Maid Queen" = /mob/living/simple_mob/xeno_ch/queen/maid,
+	"Corrupt JaniHound" = /mob/living/simple_mob/vore/retaliate/corrupthound/janihound,
+	"Corrupt Old JaniHound" = /mob/living/simple_mob/vore/retaliate/corrupthound/janihound/old,
+	"Corrupt MediHound" = /mob/living/simple_mob/vore/retaliate/corrupthound/janihound/medihound,
+	"Lesser Large Dragon" = /mob/living/simple_mob/vore/bigdragon/friendly/maintpred,
+	"Zorgoia" = /mob/living/simple_mob/vore/zorgoia,
+	"Gryphon" = /mob/living/simple_mob/vore/gryphon,
+	"Synx" = /mob/living/simple_mob/animal/synx,
+	"Reindeer" = /mob/living/simple_mob/vore/reindeer,
+	"Lion/Lioness" = /mob/living/simple_mob/vore/retaliate/lion,
+	"Swoopie XL" = /mob/living/simple_mob/vore/aggressive/corrupthound/swoopie,
+	"Teppie" = /mob/living/simple_mob/vore/alienanimals/teppi,
+	"Frostlit Lamp" = /mob/living/simple_mob/animal/passive/gaslamp/snow,
+	"Voidwalker" = /mob/living/simple_mob/vore/demon,
+	"Super Metroid" = /mob/living/simple_mob/metroid/juvenile/super,
+	"Space Carp" = /mob/living/simple_mob/animal/space/carp,
+	"Great White Carp" = /mob/living/simple_mob/animal/space/carp/large/huge/vorny,
+	"Giant Bat" = /mob/living/simple_mob/vore/bat
+	// CHOMPAdd End
 	))
 
 // GLOB.alldirs in global.dm is the same list of directions, but since
