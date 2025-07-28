@@ -1,0 +1,6 @@
+author: "UniquaSa"
+delete-after: True
+changes:
+  - rscadd: "Added a few new mobs to the maintenance predator list"
+  - bugfix: "Fixed a issue with space carp turning invisible when eating someone"
+  - maptweak: "Replaced two of the maintenance predator spawners into morphs spawners in deck 0"
