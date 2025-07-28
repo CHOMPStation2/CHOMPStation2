@@ -6,6 +6,11 @@
 
 	var/supply_conversion_value = 0 //CHOMPedit Selling Engineered Organs
 
+/obj/item/organ/internal/Initialize(mapload, internal)  //CHOMPEdit Start - Selling Engineered Organs
+	. = ..()
+	if(supply_conversion_value)
+		AddElement(/datum/element/sellable/organ) //CHOMPEdit End - Selling Engineered Organs
+
 /obj/item/organ/internal/die()
 	..()
 	if((status & ORGAN_DEAD) && dead_icon)

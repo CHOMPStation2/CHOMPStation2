@@ -11,6 +11,11 @@
 	w_class = ITEMSIZE_NORMAL
 	var/worth = 100
 
+/obj/item/salvage/Initialize(mapload) //CHOMPEdit Start - Selling Salvage
+	. = ..()
+	if(worth)
+		AddElement(/datum/element/sellable/salvage) //CHOMPEdit End - Selling Salvage
+
 /obj/item/salvage/examine(mob/user)
 	. = ..()
 	. += span_notice("This could fetch a good price...")
