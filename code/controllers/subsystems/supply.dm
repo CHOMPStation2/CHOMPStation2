@@ -87,9 +87,10 @@ SUBSYSTEM_DEF(supply)
 				points += CR.points_per_crate
 				if(CR.points_per_crate)
 					base_value = CR.points_per_crate
-				var/find_slip = 1
 
+				// For each thing in the crate, get the value and quantity
 				for(var/atom/A in CR)
+<<<<<<< HEAD
 					EC.contents[++EC.contents.len] = list(
 							"object" = "\proper[A.name]",
 							"value" = 0,
@@ -178,10 +179,13 @@ SUBSYSTEM_DEF(supply)
 
 
 			// Make a log of it, but it wasn't shipped properly, and so isn't worth anything
+=======
+					SEND_SIGNAL(A,COMSIG_ITEM_SOLD,EC,TRUE)
+>>>>>>> 117778812c (Cargo sale element (#18066))
 			else
-				EC.contents = list(
-						"error" = "Error: Product was improperly packaged. Payment rendered null under terms of agreement."
-					)
+				// Selling things that are not in crates.
+				// Usually it just makes a log that it wasn't shipped properly, and so isn't worth anything
+				SEND_SIGNAL(MA,COMSIG_ITEM_SOLD,EC,FALSE)
 
 			exported_crates += EC
 			points += EC.value
