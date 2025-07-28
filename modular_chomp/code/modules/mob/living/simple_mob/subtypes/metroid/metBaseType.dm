@@ -87,12 +87,8 @@
 	stand_down_sound = 'sound/metroid/metroiddetach.ogg'
 
 
-/mob/living/simple_mob/metroid/init_vore()
-	if(!voremob_loaded)
-		return
-	if(LAZYLEN(vore_organs))
-		return
-	.=..()
+/mob/living/simple_mob/metroid/load_default_bellies()
+	. = ..()
 	var/obj/belly/B = vore_selected
 	B.digest_brute = 1
 	B.digest_burn = 1

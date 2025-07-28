@@ -107,12 +107,8 @@
 	ai_holder_type = /datum/ai_holder/simple_mob/retaliate
 
 
-/mob/living/simple_mob/animal/synx/init_vore()
-	if(!voremob_loaded)
-		return
-	if(LAZYLEN(vore_organs))
-		return
-	.=..()
+/mob/living/simple_mob/animal/synx/load_default_bellies()
+	. = ..()
 	var/obj/belly/B = vore_selected
 	//B.human_prey_swallow_time = 6 SECONDS //doesnt work
 	//B.nonhuman_prey_swallow_time = 3 SECONDS //doesnt work
@@ -141,12 +137,8 @@
 	B.mode_flags = DM_FLAG_NUMBING	//Prey are more docile when it doesn't hurt.
 
 /* //OC-insert mob removals. Commenting out instead of full removal as there's some good detail here.
-/mob/living/simple_mob/animal/synx/ai/pet/asteri/init_vore()
-	if(!voremob_loaded)
-		return
-	if(LAZYLEN(vore_organs))
-		return
-	.=..()
+/mob/living/simple_mob/animal/synx/ai/pet/asteri/load_default_bellies()
+	. = ..()
 	var/obj/belly/B = vore_selected
 	B.desc    = "The synx eagerly swallows you, taking you from its gullet into its long, serpentine stomach. The internals around you greedily press into your from all sides, keeping you coated in a slick coat of numbing fluids..."
 	B.digest_burn = 2
@@ -560,23 +552,15 @@
 	glow_toggle = 1
 	player_msg = "You aren't supposed to be in this. Wrong mob."
 
-/mob/living/simple_mob/animal/synx/ai/pet/init_vore()
-	if(!voremob_loaded)
-		return
-	if(LAZYLEN(vore_organs))
-		return
-	.=..()
+/mob/living/simple_mob/animal/synx/ai/pet/load_default_bellies()
+	. = ..()
 	var/obj/belly/B = vore_selected
 	B.vore_verb = "swallow"
 	B.digest_burn = 1
 	B.digest_brute = 0
 
-/mob/living/simple_mob/animal/synx/ai/pet/holo/init_vore()
-	if(!voremob_loaded)
-		return
-	if(LAZYLEN(vore_organs))
-		return
-	.=..()
+/mob/living/simple_mob/animal/synx/ai/pet/holo/load_default_bellies()
+	. = ..()
 	var/obj/belly/B = vore_selected
 	B.vore_verb = "swallow"
 	B.digest_burn = 5

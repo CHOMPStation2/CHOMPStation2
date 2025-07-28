@@ -61,12 +61,8 @@ GLOBAL_VAR_INIT(queen_amount, 0) //We only gonna want 1 queen in the world.
 	vore_pounce_chance = 25
 	vore_icons = SA_ICON_LIVING
 
-/mob/living/simple_mob/metroid/mine/init_vore()
-	if(!voremob_loaded)
-		return
-	if(LAZYLEN(vore_organs))
-		return
-	.=..()
+/mob/living/simple_mob/metroid/mine/load_default_bellies()
+	. = ..()
 	var/obj/belly/B = vore_selected
 	B.digest_burn = 0.5
 	B.digest_brute = 0
