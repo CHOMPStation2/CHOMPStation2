@@ -210,9 +210,16 @@
 	. = ..()
 	if(Adjacent(user))
 		for(var/obj/item/integrated_circuit/IC in contents)
+<<<<<<< HEAD
 			var/external_examine = IC.external_examine(user)
 			if (external_examine != null)
 				. += external_examine
+=======
+			// Make sure there's actually examine text to prevent empty lines being printed for EVERY component!
+			var/examine_text = IC.external_examine(user)
+			if (length(examine_text))
+				. += examine_text
+>>>>>>> ca143bc6e1 (Cleans circuit assembly examine text (#18087))
 		if(opened)
 			tgui_interact(user)
 
