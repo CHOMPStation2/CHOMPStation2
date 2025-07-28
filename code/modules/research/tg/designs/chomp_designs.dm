@@ -1,19 +1,7 @@
 /datum/design_techweb/custom_circuit_assembly_drone_a
-	name = "type-a electronic drone assembly"
-	desc = "A customizable assembly optimized for autonomous devices."
-	id = "assembly-drone-a"
-	materials = list(MAT_STEEL = 30000)
-	build_path = /obj/item/electronic_assembly/drone
-	build_type = PROTOLATHE
-	category = list(
-		RND_CATEGORY_CIRCUITRY
-	)
-	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE
-
-/datum/design_techweb/custom_circuit_assembly_drone_b
 	name = "type-b electronic drone assembly"
 	desc = "It's a case, for building mobile electronics with. This one is armed and dangerous."
-	id = "assembly-drone-b"
+	id = "assembly-drone-a"
 	materials = list(MAT_STEEL = 30000)
 	build_path = /obj/item/electronic_assembly/drone/arms
 	build_type = PROTOLATHE
@@ -22,10 +10,10 @@
 	)
 	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE
 
-/datum/design_techweb/custom_circuit_assembly_drone_c
+/datum/design_techweb/custom_circuit_assembly_drone_b
 	name = "type-c electronic drone assembly"
 	desc = "It's a case, for building mobile electronics with. This one resembles a Securitron."
-	id = "assembly-drone-c"
+	id = "assembly-drone-b"
 	materials = list(MAT_STEEL = 30000)
 	build_path = /obj/item/electronic_assembly/drone/secbot
 	build_type = PROTOLATHE
@@ -34,10 +22,10 @@
 	)
 	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE
 
-/datum/design_techweb/custom_circuit_assembly_drone_d
+/datum/design_techweb/custom_circuit_assembly_drone_c
 	name = "type-d electronic drone assembly"
 	desc = "It's a case, for building mobile electronics with. This one resembles a Medibot"
-	id = "assembly-drone-d"
+	id = "assembly-drone-c"
 	materials = list(MAT_STEEL = 30000)
 	build_path = /obj/item/electronic_assembly/drone/medbot
 	build_type = PROTOLATHE
@@ -46,10 +34,10 @@
 	)
 	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE
 
-/datum/design_techweb/custom_circuit_assembly_drone_e
+/datum/design_techweb/custom_circuit_assembly_drone_d
 	name = "type-e electronic drone assembly"
 	desc = "It's a case, for building mobile electronics with. This one has a generic bot design."
-	id = "assembly-drone-e"
+	id = "assembly-drone-d"
 	materials = list(MAT_STEEL = 30000)
 	build_path = /obj/item/electronic_assembly/drone/genbot
 	build_type = PROTOLATHE
@@ -58,10 +46,10 @@
 	)
 	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE
 
-/datum/design_techweb/custom_circuit_assembly_drone_f
+/datum/design_techweb/custom_circuit_assembly_drone_e
 	name = "type-f electronic drone assembly"
 	desc = "It's a case, for building mobile electronics with. This one has a hominoid design."
-	id = "assembly-drone-f"
+	id = "assembly-drone-e"
 	materials = list(MAT_STEEL = 30000)
 	build_path = /obj/item/electronic_assembly/drone/android
 	build_type = PROTOLATHE

@@ -33,5 +33,10 @@
 	prereq_ids = list(TECHWEB_NODE_CIRCUIT_SHELLS)
 	design_ids = list(
 		"assembly-drone",
+		"assembly-drone-a", //CHOMPEdit Start - More Movable Shells
+		"assembly-drone-b",
+		"assembly-drone-c",
+		"assembly-drone-d",
+		"assembly-drone-e", //CHOMPEdit Start - More Movable Shells
 	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_2_POINTS)
