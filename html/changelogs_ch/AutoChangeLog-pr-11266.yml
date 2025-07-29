@@ -1,0 +1,4 @@
+author: "ItsSelis"
+delete-after: True
+changes:
+  - code_imp: "Removes sleep() in modular computer uis"
