@@ -308,3 +308,16 @@
   - bugfix: Fixed common diseases losing their dormant flag when applied
   - spellcheck: Roanoake to Roanoke
   - qol: Geneticist now spawn with a gene scanner
+2025-07-29:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: fixed circuit assemblies printing empty lines on examine.
+  - bugfix: Dev disabled styles removed from randomized rolls.
+  UniquaSa:
+  - rscadd: Added a few new mobs to the maintenance predator list
+  - bugfix: Fixed a issue with space carp turning invisible when eating someone
+  - maptweak: Replaced two of the maintenance predator spawners into morphs spawners
+      in deck 0
+  WIll:
+  - rscadd: Items that can be sold by cargo now state it at the end of their description
+  - rscadd: Multiple stamped manifests can be sent in the same crate
+  - code_imp: Moved cargo item selling code to an element
