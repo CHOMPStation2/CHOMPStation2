@@ -55309,7 +55309,6 @@
 /obj/machinery/light/small{
 	dir = 1
 	},
-/obj/machinery/ore_silo,
 /turf/simulated/floor/tiled/steel,
 /area/quartermaster/warehouse)
 "jVI" = (

@@ -52679,6 +52679,29 @@
 	pixel_x = 2;
 	pixel_y = 11
 	},
+/obj/item/circuitboard/machine/protolathe/department/cargo{
+	pixel_y = 7;
+	pixel_x = 1
+	},
+/obj/item/circuitboard/machine/protolathe/department/engineering{
+	pixel_y = 3
+	},
+/obj/item/circuitboard/machine/protolathe/department/medical{
+	pixel_x = -1;
+	pixel_y = -1
+	},
+/obj/item/circuitboard/machine/protolathe/department/science{
+	pixel_x = -2;
+	pixel_y = -5
+	},
+/obj/item/circuitboard/machine/protolathe/department/security{
+	pixel_x = -3;
+	pixel_y = -9
+	},
+/obj/item/circuitboard/machine/protolathe/department/service{
+	pixel_x = -4;
+	pixel_y = -13
+	},
 /turf/simulated/floor/plating,
 /area/engineering/Technical_Storage)
 "fhX" = (
@@ -63883,6 +63906,7 @@
 /obj/effect/floor_decal/corner/blue/border{
 	dir = 6
 	},
+/obj/machinery/ore_silo,
 /turf/simulated/floor/tiled/dark,
 /area/bridge/Vault)
 "hZN" = (
@@ -92561,7 +92585,6 @@
 /obj/machinery/status_display/supply_display{
 	pixel_x = 32
 	},
-/obj/machinery/ore_silo,
 /turf/simulated/floor/tiled/techmaint,
 /area/quartermaster/Warehouse)
 "qjZ" = (
@@ -97878,6 +97901,10 @@
 	},
 /obj/effect/floor_decal/corner/lightorange/border{
 	dir = 10
+	},
+/obj/item/circuitboard/machine/ore_silo{
+	pixel_x = -2;
+	pixel_y = -5
 	},
 /turf/simulated/floor/tiled/dark,
 /area/engineering/CE_Office)
