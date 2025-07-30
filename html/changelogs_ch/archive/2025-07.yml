@@ -321,3 +321,11 @@
   - rscadd: Items that can be sold by cargo now state it at the end of their description
   - rscadd: Multiple stamped manifests can be sent in the same crate
   - code_imp: Moved cargo item selling code to an element
+2025-07-30:
+  CHOMPStation2StaffMirrorBot:
+  - qol: rust-g updated to 4.0.0
+  Diana:
+  - rscadd: Purple Robes in the loadout now has a teshari variant!
+  - rscadd: Purple robes can now be unbuttoned!
+  ItsSelis:
+  - code_imp: Removes sleep() in modular computer uis
