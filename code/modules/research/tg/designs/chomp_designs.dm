@@ -99,7 +99,7 @@
 	category = list(
 		RND_CATEGORY_MACHINE
 	)
-	departmental_flags = DEPARTMENT_BITFLAG_SERVICE
+	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE | DEPARTMENT_BITFLAG_SERVICE
 
 /datum/design_techweb/medical_holosign
 	name = "Medical Holosign"
@@ -110,7 +110,7 @@
 	category = list(
 		RND_CATEGORY_MACHINE
 	)
-	departmental_flags = DEPARTMENT_BITFLAG_MEDICAL
+	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE | DEPARTMENT_BITFLAG_MEDICAL
 
 /datum/design_techweb/atmos_holosign
 	name = "Atmos Holosign"
@@ -121,7 +121,7 @@
 	category = list(
 		RND_CATEGORY_MACHINE
 	)
-	departmental_flags = DEPARTMENT_BITFLAG_ENGINEERING
+	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE | DEPARTMENT_BITFLAG_ENGINEERING
 
 /datum/design_techweb/mail_scanner
 	name = "Mail Scanner"
@@ -132,7 +132,7 @@
 	category = list(
 		RND_CATEGORY_MACHINE
 	)
-	departmental_flags = DEPARTMENT_BITFLAG_CARGO
+	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE | DEPARTMENT_BITFLAG_CARGO
 
 /datum/design_techweb/borgos
 	name = "Borg-O's Recipe"
@@ -144,7 +144,7 @@
 	category = list(
 		RND_CATEGORY_EQUIPMENT
 	)
-	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE
+	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE | DEPARTMENT_BITFLAG_SCIENCE
 
 /datum/design_techweb/mindbinder
 	name = "Mind Binder"
@@ -155,7 +155,7 @@
 	category = list(
 		RND_CATEGORY_EQUIPMENT
 	)
-	departmental_flags = DEPARTMENT_BITFLAG_MEDICAL
+	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE | DEPARTMENT_BITFLAG_MEDICAL
 
 
 /*
@@ -196,7 +196,7 @@
 	category = list(
 		RND_CATEGORY_STOCK_PARTS + RND_SUBCATEGORY_STOCK_PARTS_3
 	)
-	departmental_flags = DEPARTMENT_BITFLAG_ENGINEERING
+	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE | DEPARTMENT_BITFLAG_ENGINEERING
 
 /datum/design_techweb/cell_advance_device_empproof
 	name = "Device Cell, Advanced EMP-Proof"
@@ -207,7 +207,7 @@
 	category = list(
 		RND_CATEGORY_STOCK_PARTS + RND_SUBCATEGORY_STOCK_PARTS_4
 	)
-	departmental_flags = DEPARTMENT_BITFLAG_ENGINEERING
+	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE | DEPARTMENT_BITFLAG_ENGINEERING
 
 /datum/design_techweb/cell_advance_device_recharge
 	name = "Device Cell, Advanced Recharging"
@@ -218,7 +218,7 @@
 	category = list(
 		RND_CATEGORY_STOCK_PARTS + RND_SUBCATEGORY_STOCK_PARTS_5
 	)
-	departmental_flags = DEPARTMENT_BITFLAG_ENGINEERING
+	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE | DEPARTMENT_BITFLAG_ENGINEERING
 
 /datum/design_techweb/cell_super_device
 	name = "Device Cell, Super"
@@ -229,7 +229,7 @@
 	category = list(
 		RND_CATEGORY_STOCK_PARTS + RND_SUBCATEGORY_STOCK_PARTS_3
 	)
-	departmental_flags = DEPARTMENT_BITFLAG_ENGINEERING
+	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE | DEPARTMENT_BITFLAG_ENGINEERING
 
 /datum/design_techweb/cell_hype_device
 	name = "Device Cell, Hyper"
@@ -240,7 +240,7 @@
 	category = list(
 		RND_CATEGORY_STOCK_PARTS + RND_SUBCATEGORY_STOCK_PARTS_4
 	)
-	departmental_flags = DEPARTMENT_BITFLAG_ENGINEERING
+	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE | DEPARTMENT_BITFLAG_ENGINEERING
 
 /datum/design_techweb/cell_giga_device
 	name = "Device Cell, Giga"
@@ -251,7 +251,7 @@
 	category = list(
 		RND_CATEGORY_STOCK_PARTS + RND_SUBCATEGORY_STOCK_PARTS_5
 	)
-	departmental_flags = DEPARTMENT_BITFLAG_ENGINEERING
+	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE | DEPARTMENT_BITFLAG_ENGINEERING
 
 /datum/design_techweb/cell_omni_device
 	name = "Device Cell, Omni"
@@ -263,7 +263,7 @@
 	category = list(
 		RND_CATEGORY_STOCK_PARTS + RND_SUBCATEGORY_STOCK_PARTS_5
 	)
-	departmental_flags = DEPARTMENT_BITFLAG_ENGINEERING
+	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE | DEPARTMENT_BITFLAG_ENGINEERING
 
 //Misc weapons
 /datum/design_techweb/confetti_cannon
@@ -276,7 +276,7 @@
 	category = list(
 		RND_CATEGORY_TOOLS
 	)
-	departmental_flags = DEPARTMENT_BITFLAG_SERVICE
+	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE | DEPARTMENT_BITFLAG_SERVICE
 
 /datum/design_techweb/metamorphosisray
 	name = "metamorphosis ray"
@@ -299,7 +299,7 @@
 	category = list(
 		RND_CATEGORY_WEAPONS
 	)
-	departmental_flags = DEPARTMENT_BITFLAG_SECURITY
+	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE | DEPARTMENT_BITFLAG_SECURITY
 
 /datum/design_techweb/phase_carbine
 	name = "Phase Carbine"
@@ -310,7 +310,7 @@
 	category = list(
 		RND_CATEGORY_WEAPONS
 	)
-	departmental_flags = DEPARTMENT_BITFLAG_SECURITY
+	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE | DEPARTMENT_BITFLAG_SECURITY
 
 /datum/design_techweb/phase_rifle
 	name = "Phase Rifle"
@@ -321,7 +321,7 @@
 	category = list(
 		RND_CATEGORY_WEAPONS
 	)
-	departmental_flags = DEPARTMENT_BITFLAG_SECURITY
+	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE | DEPARTMENT_BITFLAG_SECURITY
 
 /datum/design_techweb/phase_cannon
 	name = "Phase Cannon"
@@ -332,7 +332,7 @@
 	category = list(
 		RND_CATEGORY_WEAPONS
 	)
-	departmental_flags = DEPARTMENT_BITFLAG_SECURITY
+	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE | DEPARTMENT_BITFLAG_SECURITY
 
 /datum/design_techweb/frontier_holdout
 	name = "Frontier Phase Pistol"
@@ -343,7 +343,7 @@
 	category = list(
 		RND_CATEGORY_WEAPONS
 	)
-	departmental_flags = DEPARTMENT_BITFLAG_SECURITY
+	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE | DEPARTMENT_BITFLAG_SECURITY
 
 /datum/design_techweb/frontier_phaser
 	name = "Frontier Phaser"
@@ -354,7 +354,7 @@
 	category = list(
 		RND_CATEGORY_WEAPONS
 	)
-	departmental_flags = DEPARTMENT_BITFLAG_SECURITY
+	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE | DEPARTMENT_BITFLAG_SECURITY
 
 /datum/design_techweb/frontier_carbine
 	name = "Frontier Phase Carbine"
@@ -365,7 +365,7 @@
 	category = list(
 		RND_CATEGORY_WEAPONS
 	)
-	departmental_flags = DEPARTMENT_BITFLAG_SECURITY
+	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE | DEPARTMENT_BITFLAG_SECURITY
 
 /datum/design_techweb/frontier_rifle
 	name = "Frontier Marksman Phase Rifle"
@@ -376,7 +376,7 @@
 	category = list(
 		RND_CATEGORY_WEAPONS
 	)
-	departmental_flags = DEPARTMENT_BITFLAG_SECURITY
+	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE | DEPARTMENT_BITFLAG_SECURITY
 
 /datum/design_techweb/frontier_handbow
 	name = "Frontier Phase Handbow"
@@ -387,7 +387,7 @@
 	category = list(
 		RND_CATEGORY_WEAPONS
 	)
-	departmental_flags = DEPARTMENT_BITFLAG_SECURITY
+	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE | DEPARTMENT_BITFLAG_SECURITY
 
 //Leathals And any new CHOMP weapons.
 /datum/design_techweb/caselessrifle_prototype
@@ -399,7 +399,7 @@
 	category = list(
 		RND_CATEGORY_WEAPONS
 	)
-	departmental_flags = DEPARTMENT_BITFLAG_SECURITY
+	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE | DEPARTMENT_BITFLAG_SECURITY
 
 /datum/design_techweb/lasercannon
 	name = "Laser Cannon"
@@ -411,7 +411,7 @@
 	category = list(
 		RND_CATEGORY_WEAPONS
 	)
-	departmental_flags = DEPARTMENT_BITFLAG_SECURITY
+	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE | DEPARTMENT_BITFLAG_SECURITY
 
 /datum/design_techweb/cyrogun
 	name = "Cryo Gun"
@@ -423,7 +423,7 @@
 	category = list(
 		RND_CATEGORY_WEAPONS
 	)
-	departmental_flags = DEPARTMENT_BITFLAG_SECURITY
+	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE | DEPARTMENT_BITFLAG_SECURITY
 
 /datum/design_techweb/mechfab/modsuit/phase
 	name = "hardsuit phase rifle"
@@ -434,7 +434,6 @@
 	category = list(
 		RND_CATEGORY_MODSUIT_MODULES
 	)
-	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE
 
 /datum/design_techweb/mechfab/modsuit/defib
 	name = "hardsuit defib unit"
@@ -445,7 +444,6 @@
 	category = list(
 		RND_CATEGORY_MODSUIT_MODULES
 	)
-	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE
 
 /datum/design_techweb/mechfab/phoron_bore
 	name = "PB-23 \"Phobos\" Phoron Bore"
@@ -455,13 +453,11 @@
 	category = list(
 		RND_CATEGORY_MECHFAB_EQUIPMENT
 	)
-	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE
 
 /datum/design_techweb/mechfab/scarab
 	category = list(
 		RND_CATEGORY_MECHFAB_SCARAB
 	)
-	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE
 
 /datum/design_techweb/mechfab/scarab/chassis
 	name = "Scarab Chassis"
@@ -509,7 +505,6 @@
 	category = list(
 		RND_CATEGORY_MECHFAB_PHAZON
 	)
-	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE
 
 /datum/design_techweb/mechfab/phazon/chassis
 	name = "Phazon Chassis"
@@ -562,4 +557,3 @@
 	category = list(
 		RND_CATEGORY_MODSUITS
 	)
-	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE
