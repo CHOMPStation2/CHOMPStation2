@@ -42,12 +42,10 @@
 /obj/item/grenade/spawnergrenade/casino/chicken
 	desc = "It is set to detonate in 5 seconds. It will release a chicken that has been won from the golden goose casino!"
 	name = "Casino Creature Container (Chicken)"
-	spawner_type = /mob/living/simple_mob/animal/passive/chicken
 
 /obj/item/grenade/spawnergrenade/casino/cow
 	desc = "It is set to detonate in 5 seconds. It will release a cow that has been won from the golden goose casino!"
 	name = "Casino Creature Container (Cow)"
-	spawner_type = /mob/living/simple_mob/animal/passive/cow
 
 /obj/item/grenade/spawnergrenade/casino/corgi
 	desc = "It is set to detonate in 5 seconds. It will release a corgi that has been won from the golden goose casino!"
@@ -57,7 +55,6 @@
 /obj/item/grenade/spawnergrenade/casino/fox
 	desc = "It is set to detonate in 5 seconds. It will release a fox that has been won from the golden goose casino!"
 	name = "Casino Creature Container (Fox)"
-	spawner_type = /mob/living/simple_mob/animal/passive/fox
 
 /obj/item/grenade/spawnergrenade/casino/lizard
 	desc = "It is set to detonate in 5 seconds. It will release a lizard that has been won from the golden goose casino!"
@@ -67,12 +64,10 @@
 /obj/item/grenade/spawnergrenade/casino/penguin
 	desc = "It is set to detonate in 5 seconds. It will release a penguin that has been won from the golden goose casino!"
 	name = "Casino Creature Container (Penguin)"
-	spawner_type = /mob/living/simple_mob/animal/passive/penguin
 
 /obj/item/grenade/spawnergrenade/casino/snake
 	desc = "It is set to detonate in 5 seconds. It will release a snake that has been won from the golden goose casino!"
 	name = "Casino Creature Container (Snake)"
-	spawner_type = /mob/living/simple_mob/animal/passive/snake
 
 /obj/item/grenade/spawnergrenade/casino/yithian
 	desc = "It is set to detonate in 5 seconds. It will release a yithian that has been won from the golden goose casino!"
@@ -87,12 +82,10 @@
 /obj/item/grenade/spawnergrenade/casino/fennec
 	desc = "It is set to detonate in 5 seconds. It will release a fennec that has been won from the golden goose casino!"
 	name = "Casino Creature Container (Fennec)"
-	spawner_type = /mob/living/simple_mob/vore/fennec
 
 /obj/item/grenade/spawnergrenade/casino/redpanda
 	desc = "It is set to detonate in 5 seconds. It will release a red panda that has been won from the golden goose casino!"
 	name = "Casino Creature Container (Red panda)"
-	spawner_type = /mob/living/simple_mob/vore/redpanda
 
 /obj/item/grenade/spawnergrenade/casino/horse
 	desc = "It is set to detonate in 5 seconds. It will release a horse that has been won from the golden goose casino!"
@@ -102,7 +95,6 @@
 /obj/item/grenade/spawnergrenade/casino/otie
 	desc = "It is set to detonate in 5 seconds. It will release a otie that has been won from the golden goose casino!"
 	name = "Casino Creature Container (Otie)"
-	spawner_type = /mob/living/simple_mob/vore/otie/friendly
 
 /obj/item/grenade/spawnergrenade/casino/otie/chubby
 	desc = "It is set to detonate in 5 seconds. It will release a chonker otie that has been won from the golden goose casino!"
@@ -114,18 +106,11 @@
 	name = "Casino Creature Container (Zorgoia)"
 	spawner_type = /mob/living/simple_mob/vore/zorgoia/tamed
 
-/obj/item/grenade/spawnergrenade/casino/gygax
-	desc = "You feel great power inside this small round sphere, with great powers comes great responsibilities!"
-	name = "Mysterious Grenade"
-	spawner_type = /obj/mecha/combat/gygax/dark
-
 /obj/item/grenade/spawnergrenade/casino/gygax/mining
 	name = "Casino Mech Container (Mining Ripley)"
-	spawner_type = /obj/mecha/working/ripley/mining
 
 /obj/item/grenade/spawnergrenade/casino/gygax/firefighter
 	name = "Casino Mech Container (Firefighter Ripley)"
-	spawner_type = /obj/mecha/working/ripley/firefighter
 
 /obj/item/grenade/spawnergrenade/casino/gygax/serenity
 	name = "Casino Mech Container (Serenity)"
@@ -133,7 +118,6 @@
 
 /obj/item/grenade/spawnergrenade/casino/gygax/Odysseus
 	name = "Casino Mech Container (Odysseus)"
-	spawner_type = /obj/mecha/medical/odysseus/loaded
 
 /obj/item/grenade/spawnergrenade/casino/gygax/scree
 	name = "Casino Mech Container (Phazon Scuttlebug)"
@@ -153,7 +137,6 @@
 
 /obj/item/grenade/spawnergrenade/casino/gygax/shuttlepod
 	name = "Casino Mech Container (Shuttlepod)"
-	spawner_type = /obj/mecha/working/hoverpod/shuttlepod
 
 /obj/item/grenade/spawnergrenade/casino/gygax/shuttlecraft
 	name = "Casino Mech Container (Shuttlecraft)"
