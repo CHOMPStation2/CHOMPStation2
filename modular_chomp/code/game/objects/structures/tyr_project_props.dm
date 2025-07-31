@@ -507,3 +507,19 @@
 	scavanging is to be done at that site."
 	value = CATALOGUER_REWARD_HARD
 
+
+/obj/item/material/barbedwire/plastic/active
+	anchored = 1
+	icon_state = "barbedwire-out"
+
+
+/obj/item/material/barbedwire/vopal
+	name = "crystal shards"
+	default_material = MAT_VOPAL
+
+/obj/item/material/barbedwire/vopal/active
+	anchored = 1
+	icon_state = "barbedwire-out"
+
+
+

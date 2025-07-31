@@ -7,7 +7,7 @@ import type { BooleanLike } from 'tgui-core/react';
 
 type Data = {
   showing_archived: BooleanLike;
-  article: { title: String; cover: string; content: string } | null;
+  article: { title: string; cover: string; content: string } | null;
   all_articles: { name: string; uid: number; archived: BooleanLike }[];
 };
 
@@ -42,7 +42,7 @@ const SelectedArticle = (props) => {
 
   return (
     <Section
-      title={'Viewing: ' + title}
+      title={`Viewing: ${title}`}
       buttons={
         <Button icon="times" onClick={() => act('PRG_reset')}>
           Close

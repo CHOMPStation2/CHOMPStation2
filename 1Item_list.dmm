@@ -31441,7 +31441,7 @@
 	},
 /area/survivalpod)
 "jkQ" = (
-/mob/living/simple_mob/animal/passive/raccoon_ch{
+/mob/living/simple_mob/animal/passive/raccoon{
 	ai_holder_type = null
 	},
 /turf/simulated/floor/atoll,

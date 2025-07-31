@@ -136,8 +136,7 @@
 /obj/structure/biowaste_tank/Initialize(mapload)
 	muffinmonster = new /mob/living/simple_mob/vore/aggressive/corrupthound/muffinmonster(src)
 	muffinmonster.name = "Activate Muffin Monster"
-	muffinmonster.voremob_loaded = TRUE
-	muffinmonster.init_vore()
+	muffinmonster.init_vore(TRUE)
 	crusher = locate(/obj/machinery/recycling/crusher)
 	return ..()
 
@@ -206,12 +205,8 @@
 	has_eye_glow = FALSE
 	vore_default_item_mode = IM_DIGEST
 
-/mob/living/simple_mob/vore/aggressive/corrupthound/muffinmonster/init_vore()
-	if(!voremob_loaded)
-		return
-	if(LAZYLEN(vore_organs))
-		return
-	.=..()
+/mob/living/simple_mob/vore/aggressive/corrupthound/muffinmonster/load_default_bellies()
+	. = ..()
 	var/obj/belly/B = vore_selected
 	B.name = "waste hopper"
 	B.desc = "With a resounding CRUNCH, your form has gotten snagged by the Muffin Monster's rotational interlocking cutters indiscriminately crunching away at anything unlucky enough to end up in its hopper, only for the insatiable machine to grind it all down into a slurry mulch fine enough to pass through the narrow sewage lines trouble-free..."

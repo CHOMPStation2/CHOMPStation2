@@ -1,9 +1,10 @@
-/datum/disease/roanoake
-	name = "Roanoake Syndrome"
+/datum/disease/roanoke
+	name = "Roanoke Syndrome"
+	medical_name = "Roanoke Syndrome"
 	max_stages = 6
 	stage_prob = 2
 	spread_text = "Blood and close contact"
-	spread_flags = BLOOD
+	spread_flags = DISEASE_SPREAD_BLOOD
 	cure_text = REAGENT_SPACEACILLIN
 	agent = "Chimera cells"
 	cures = list(REAGENT_ID_SPACEACILLIN)
@@ -11,19 +12,19 @@
 	viable_mobtypes = list(/mob/living/carbon/human)
 	desc = "If left untreated, subject will become a xenochimera upon perishing."
 	danger = DISEASE_BIOHAZARD
-	disease_flags = CURABLE
-	//allow_dead = TRUE //Unused
+	disease_flags = CURABLE | CAN_CARRY | CAN_NOT_POPULATE
+	virus_modifiers = BYPASSES_IMMUNITY | SPREAD_DEAD
 
 	var/list/obj/item/organ/organ_list = list()
 	var/obj/item/organ/O
 
-/datum/disease/roanoake/Start()
+/datum/disease/roanoke/Start()
 	var/mob/living/carbon/human/M = affected_mob
 
 	organ_list += M.organs
 	organ_list += M.internal_organs
 
-/datum/disease/roanoake/stage_act()
+/datum/disease/roanoke/stage_act()
 	if(!..())
 		return FALSE
 	var/mob/living/carbon/human/M = affected_mob
@@ -82,11 +83,11 @@
 				var/datum/wound/W = new /datum/wound/internal_bleeding(5)
 				E.wounds += W
 
-			if(M.stat == DEAD)
-				M.species = /datum/species/xenochimera
+			if(M.stat == DEAD || M.allow_spontaneous_tf)
+				M.LoadComponent(/datum/component/xenochimera)
 				cure()
 	return
 
-/datum/disease/roanoake/proc/fever(var/mob/living/M, var/datum/disease/D)
+/datum/disease/roanoke/proc/fever(var/mob/living/M, var/datum/disease/D)
 	M.bodytemperature = min(M.bodytemperature + (2 * stage), BODYTEMP_HEAT_DAMAGE_LIMIT - 1)
 	return TRUE

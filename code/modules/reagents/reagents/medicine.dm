@@ -1053,7 +1053,7 @@
 /datum/reagent/ethylredoxrazine/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
 	if(alien == IS_DIONA)
 		return
-	M.dizziness = 0
+	M.clear_dizzy()
 	M.drowsyness = 0
 	M.stuttering = 0
 	M.SetConfused(0)
@@ -1065,7 +1065,7 @@
 /datum/reagent/ethylredoxrazine/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(alien == IS_DIONA)
 		return
-	M.dizziness = 0
+	M.clear_dizzy()
 	M.drowsyness = 0
 	M.stuttering = 0
 	M.SetConfused(0)

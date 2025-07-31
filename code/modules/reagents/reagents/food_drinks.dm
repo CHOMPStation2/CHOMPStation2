@@ -999,7 +999,7 @@
 	if(!(M.species.allergens & allergen_type))
 		var/bonus = M.food_preference(allergen_type)
 		M.adjust_nutrition((nutrition + bonus) * removed)
-	M.dizziness = max(0, M.dizziness + adj_dizzy)
+	M.make_dizzy(adj_dizzy)
 	M.drowsyness = max(0, M.drowsyness + adj_drowsy)
 	M.AdjustSleeping(adj_sleepy)
 	if(adj_temp > 0 && M.bodytemperature < 310) // 310 is the normal bodytemp. 310.055
@@ -2203,7 +2203,7 @@
 	M.add_chemical_effect(CE_SPEEDBOOST, 1)
 	M.make_jittery(20)
 	M.druggy = max(M.druggy, 30)
-	M.dizziness += 5
+	M.make_dizzy(5)
 	M.drowsyness = 0
 
 /datum/reagent/drink/grenadine 	//Description implies that the grenadine we would be working with does not contain fruit, so no allergens.
@@ -2515,8 +2515,7 @@
 	M.adjustOxyLoss(-4 * removed)
 	M.heal_organ_damage(2 * removed, 2 * removed)
 	M.adjustToxLoss(-2 * removed)
-	if(M.dizziness)
-		M.dizziness = max(0, M.dizziness - 15)
+	M.make_dizzy(-15)
 	if(M.confused)
 		M.Confuse(-5)
 
@@ -3073,7 +3072,7 @@
 		if(alien == IS_DIONA)
 			return
 		M.adjust_nutrition((M.food_preference(allergen_type) / 2) * removed) //RS edit
-		M.jitteriness = max(M.jitteriness - 3, 0)
+		M.make_jittery(-3)
 
 /datum/reagent/ethanol/beer/lite
 	name = REAGENT_LITEBEER
@@ -3134,7 +3133,7 @@
 	if(alien == IS_DIONA)
 		return
 	if(M.species.robo_ethanol_drunk || !(M.isSynthetic()))
-		M.dizziness +=5
+		M.make_dizzy(5)
 
 /datum/reagent/ethanol/firepunch
 	name = REAGENT_FIREPUNCH
@@ -3172,7 +3171,7 @@
 		if(alien == IS_DIONA)
 			return
 		..()
-		M.dizziness = max(0, M.dizziness - 5)
+		M.make_dizzy(-5)
 		M.drowsyness = max(0, M.drowsyness - 3)
 		M.AdjustSleeping(-2)
 		if(M.bodytemperature > 310)

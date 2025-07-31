@@ -1,6 +1,6 @@
 /mob/living/simple_mob/mechanical/mecha/eclipse
-	health = 875
-	maxHealth = 875
+	health = 600
+	maxHealth = 600
 	faction = FACTION_ECLIPSE
 	icon = 'modular_chomp/icons/mob/eclipse.dmi'
 	has_repair_droid = TRUE
@@ -16,6 +16,7 @@
 	movement_cooldown = 10
 	var/specialattackprojectile = /obj/item/projectile/energy/phase/bolt
 	var/attackcycle = 1
+	var/artidrop = /obj/effect/artillery_attack
 
 /mob/living/simple_mob/mechanical/mecha/eclipse/handle_special()
 	if(stat != DEAD)
@@ -370,8 +371,8 @@
 /mob/living/simple_mob/mechanical/mecha/eclipse/darkmatter_assualt/phasetwo //we ain't done yet
 	name = "Collapsing Janus"
 	armor = list(melee = 30, bullet = 30, laser = 30, energy = 30, bomb = 80, bio = 100, rad = 100) //our shielding is gone
-	health = 425
-	maxHealth = 425
+	health = 400
+	maxHealth = 400
 	desc = "The mecha is smoking, it's drone and shield is broken, but it's pilot is pushing it further."
 	specialattackprojectile = /obj/item/projectile/energy/eclipse/janusjavelin
 	wreckage = /obj/item/prop/tyrlore/neonjanus
@@ -431,21 +432,57 @@
 	name = "eclipse cryo top"
 	icon_state = "mecha_top"
 	icon_living = "mecha_top"
-	armor = list(melee = 20, bullet = 20, laser = 20, energy = 20, bomb = 80, bio = 100, rad = 100) //Smol armor to compensate for the gimmick
 	wreckage = /obj/item/melee/energy/sword/top_shield
 	specialattackprojectile = /obj/item/projectile/energy/eclipse/chillingwind
 	desc = "It appears to be spinning at rapid speeds; enough to deflect projectiles. The air around it feels frigid.."
+	artidrop = /obj/item/material/barbedwire/vopal/active
 
 /mob/living/simple_mob/mechanical/mecha/eclipse/battle_top/do_special_attack(atom/A)
 	var/rng_cycle
-	if(attackcycle == 1)
-		rng_cycle = rand(1,2)
-		addtimer(CALLBACK(src, PROC_REF(quad_random_firing), A, 20, rng_cycle, 25), 0.5 SECONDS, TIMER_DELETE_ME)
-		attackcycle = 0
-	else if(attackcycle == 2)
-		rng_cycle = rand(1,2)
-		addtimer(CALLBACK(src, PROC_REF(dual_spin), A, rng_cycle, 15), 0.5 SECONDS, TIMER_DELETE_ME)
-		attackcycle = 0
+	switch(a_intent)
+		if(I_DISARM) //phase3
+			if(attackcycle == 1)
+				rng_cycle = rand(1,3)
+				addtimer(CALLBACK(src, PROC_REF(quad_random_firing), A, 20, rng_cycle, 20), 0.5 SECONDS, TIMER_DELETE_ME)
+				attackcycle = 0
+			else if(attackcycle == 2)
+				rng_cycle = rand(1,3)
+				addtimer(CALLBACK(src, PROC_REF(bomb_chaos), A, rng_cycle), 2.5 SECONDS, TIMER_DELETE_ME)
+				attackcycle = 0
+			else if(attackcycle == 3)
+				rng_cycle = rand(1,3)
+				addtimer(CALLBACK(src, PROC_REF(dual_spin), A, rng_cycle, 15), 0.5 SECONDS, TIMER_DELETE_ME)
+				attackcycle = 0
+
+		if(I_HURT) //phase1
+			if(attackcycle == 1)
+				rng_cycle = rand(1,3)
+				addtimer(CALLBACK(src, PROC_REF(random_firing), A, 20, rng_cycle, 20), 0.5 SECONDS, TIMER_DELETE_ME)
+				attackcycle = 0
+			else if(attackcycle == 2)
+				rng_cycle = rand(1,3)
+				addtimer(CALLBACK(src, PROC_REF(bomb_lines), A, rng_cycle), 2.5 SECONDS, TIMER_DELETE_ME)
+				attackcycle = 0
+			else if(attackcycle == 3)
+				rng_cycle = rand(1,3)
+				addtimer(CALLBACK(src, PROC_REF(cross_spin), A, rng_cycle, 15), 0.5 SECONDS, TIMER_DELETE_ME)
+				attackcycle = 0
+
+		if(I_GRAB) // Phase 2
+			if(attackcycle == 1)
+				rng_cycle = rand(1,3)
+				addtimer(CALLBACK(src, PROC_REF(quad_random_firing), A, 20, rng_cycle, 25), 0.5 SECONDS, TIMER_DELETE_ME)
+				attackcycle = 0
+			else if(attackcycle == 2)
+				rng_cycle = rand(1,3)
+				addtimer(CALLBACK(src, PROC_REF(bomb_lines), A, rng_cycle), 2.5 SECONDS, TIMER_DELETE_ME)
+				attackcycle = 0
+			else if(attackcycle == 3)
+				rng_cycle = rand(1,3)
+				addtimer(CALLBACK(src, PROC_REF(cross_spin), A, rng_cycle, 15), 0.5 SECONDS, TIMER_DELETE_ME)
+				attackcycle = 0
+
+
 
 /mob/living/simple_mob/mechanical/mecha/eclipse/battle_top/handle_special()
 	if(stat != DEAD)

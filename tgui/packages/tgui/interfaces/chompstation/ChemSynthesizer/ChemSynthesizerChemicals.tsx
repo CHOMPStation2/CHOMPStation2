@@ -33,7 +33,7 @@ export const ChemSynthesizerChemicals = (props) => {
                 align="flex-start"
                 disabled={1}
               >
-                {c.title + ' (' + c.amount + ')'}
+                {`${c.title} (${c.amount})`}
               </Button>
             </Stack.Item>
           ))}

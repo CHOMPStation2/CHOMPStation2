@@ -78,7 +78,7 @@
 	system_select(user)
 
 //Vore
-/mob/living/silicon/pai/flipper/init_vore()
+/mob/living/silicon/pai/flipper/init_vore(force)
 	var/obj/belly/B = new /obj/belly/flipper/maw(src)
 	B.affects_vore_sprites = FALSE
 	B.emote_lists[DM_HOLD] = list(
@@ -105,7 +105,7 @@
 		"The warm and inviting embrace of [name]'s stomach envelops you in its comforting embrace.",
 		"[name]'s stomach compresses tightly around you, its powerful systems working aroud you.",
 		"[name]'s stomach hums and churns around you.")
-	.=..()
+	. = ..()
 
 //Belly stuff
 /obj/belly/flipper

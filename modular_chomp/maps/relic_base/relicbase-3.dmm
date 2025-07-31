@@ -19109,7 +19109,7 @@
 /turf/simulated/floor/wood,
 /area/crew_quarters/bar)
 "iiF" = (
-/mob/living/simple_mob/animal/passive/raccoon_ch,
+/mob/living/simple_mob/animal/passive/raccoon,
 /obj/structure/railing,
 /obj/structure/flora/ausbushes/grassybush{
 	opacity = 1
@@ -32821,7 +32821,7 @@
 	},
 /area/server)
 "otx" = (
-/mob/living/simple_mob/animal/passive/raccoon_ch,
+/mob/living/simple_mob/animal/passive/raccoon,
 /turf/simulated/floor/outdoors/dirt,
 /area/surface/outside/path/plains)
 "otF" = (
@@ -34544,7 +34544,7 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/medical/cryo/autoresleeve)
 "piU" = (
-/mob/living/simple_mob/animal/passive/raccoon_ch,
+/mob/living/simple_mob/animal/passive/raccoon,
 /turf/simulated/floor/outdoors/dirt,
 /area/surface/outside/plains/outpost)
 "pjq" = (
@@ -39784,7 +39784,7 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/surface/outpost/mining_main)
 "rrk" = (
-/mob/living/simple_mob/animal/passive/raccoon_ch,
+/mob/living/simple_mob/animal/passive/raccoon,
 /obj/structure/flora/ausbushes/lavendergrass,
 /turf/simulated/floor/outdoors/grass/heavy,
 /area/surface/outside/plains/outpost)

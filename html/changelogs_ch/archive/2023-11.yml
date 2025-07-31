@@ -1,242 +1,274 @@
 2023-11-01:
   ReoDaProtovali:
-  - rscadd: SWOOPIE XL catalouge data
-  - bugfix: fixes swoopies checking if they were dead to do stuff when they should've
-      been checking if they were alive
+    - rscadd: SWOOPIE XL catalouge data
+    - bugfix:
+        fixes swoopies checking if they were dead to do stuff when they should've
+        been checking if they were alive
 2023-11-04:
   FluffMedic:
-  - maptweak: weird lab gateway be different
+    - maptweak: weird lab gateway be different
 2023-11-05:
   ReoDaProtovali:
-  - bugfix: Fixes swoopie AI behavior when player controlled
+    - bugfix: Fixes swoopie AI behavior when player controlled
   TheGreatKitsune:
-  - bugfix: Hitting X to close reset prompt is no longer counted as hitting yes.
+    - bugfix: Hitting X to close reset prompt is no longer counted as hitting yes.
   purplefoxy27:
-  - rscadd: Add weight mechanics to remaining gym machines and punching bags.
+    - rscadd: Add weight mechanics to remaining gym machines and punching bags.
 2023-11-07:
   Aroliacue:
-  - qol: Ported storage reach, allowing you to pull out items from a storage slot
-      inside of another storage slot. For example, pulling out medkit equipment from
-      your bag without holding the medkit.
+    - qol:
+        Ported storage reach, allowing you to pull out items from a storage slot
+        inside of another storage slot. For example, pulling out medkit equipment from
+        your bag without holding the medkit.
   FluffMedic:
-  - rscadd: Some new crafting things.
-  - bugfix: fixed a few POIs, and missed balance alterations
-  - rscdel: Removed a gateway thing due to a bug
+    - rscadd: Some new crafting things.
+    - bugfix: fixed a few POIs, and missed balance alterations
+    - rscdel: Removed a gateway thing due to a bug
   ItsSelis:
-  - code_imp: fixed mirror conflict of the upstream port of the confetti cannon
-  - bugfix: fixes players having infinite reach
+    - code_imp: fixed mirror conflict of the upstream port of the confetti cannon
+    - bugfix: fixes players having infinite reach
 2023-11-08:
   Aroliacue:
-  - qol: Ported storage reach, allowing you to pull out items from a storage slot
-      inside of another storage slot. For example, pulling out medkit equipment from
-      your bag without holding the medkit.
-  - bugfix: Storage reach no longer gives you telekinesis.
+    - qol:
+        Ported storage reach, allowing you to pull out items from a storage slot
+        inside of another storage slot. For example, pulling out medkit equipment from
+        your bag without holding the medkit.
+    - bugfix: Storage reach no longer gives you telekinesis.
 2023-11-10:
   Missile597:
-  - rscadd: Added storage tanks to deck three Atmos maintenance for waste gasses to
-      scrub to.
-  - rscadd: Connected dorms area scrubbers to the new waste tanks so that these areas
-      can scrub, which should prevent atmos issues on long shifts in this area. Scrubbers
-      are still isolated from the rest of the station for protection from spiderlings.
-  - qol: Added connectors to the air and scrubber loops in deck three atmos maintenance,
-      to allow a pump and scrubber to be filled/emptied here in case of emergency.
-  - bugfix: Fixed various air alarms across deck 3 and Sif outpost, and one on deck
-      one which had the incorrect frequency set for some reason. This should resolve
-      the issue with air alarms being unable to communicate and change settings on
-      vents and scrubbers in the area.
-  - maptweak: Atmos Maintenance on deck three has been made a bit wider, to fit the
-      added tanks and pipework in.
+    - rscadd:
+        Added storage tanks to deck three Atmos maintenance for waste gasses to
+        scrub to.
+    - rscadd:
+        Connected dorms area scrubbers to the new waste tanks so that these areas
+        can scrub, which should prevent atmos issues on long shifts in this area. Scrubbers
+        are still isolated from the rest of the station for protection from spiderlings.
+    - qol:
+        Added connectors to the air and scrubber loops in deck three atmos maintenance,
+        to allow a pump and scrubber to be filled/emptied here in case of emergency.
+    - bugfix:
+        Fixed various air alarms across deck 3 and Sif outpost, and one on deck
+        one which had the incorrect frequency set for some reason. This should resolve
+        the issue with air alarms being unable to communicate and change settings on
+        vents and scrubbers in the area.
+    - maptweak:
+        Atmos Maintenance on deck three has been made a bit wider, to fit the
+        added tanks and pipework in.
 2023-11-11:
   FluffMedic:
-  - bugfix: fixes a few non-functional shadekin blockers
-  - rscadd: 'rebalance: Pummeler has been nerfed further, mostly with a nerf I thought
-      I did ages ago. Also did weird bola stuff.'
-  - qol: Eclipse tells you when you're hitting them with the wrong damage type.
+    - bugfix: fixes a few non-functional shadekin blockers
+    - rscadd:
+        "rebalance: Pummeler has been nerfed further, mostly with a nerf I thought
+        I did ages ago. Also did weird bola stuff."
+    - qol: Eclipse tells you when you're hitting them with the wrong damage type.
   ItsSelis:
-  - rscadd: added http_request datum to properly use rust-g based http requests (including
-      async ones).
-  - code_imp: byond 515 support defines for rust-g definitions
+    - rscadd:
+        added http_request datum to properly use rust-g based http requests (including
+        async ones).
+    - code_imp: byond 515 support defines for rust-g definitions
   Verkister:
-  - bugfix: Fixed item digestion logs not working on recycled stuff
+    - bugfix: Fixed item digestion logs not working on recycled stuff
   tacoguy7765093:
-  - balance: Heart Damage is no longer debilitating at decimal values.
+    - balance: Heart Damage is no longer debilitating at decimal values.
 2023-11-12:
   FluffMedic:
-  - rscadd: Glow to the the radiation eclipse critter
-  - maptweak: Makes the Eclipse POI I forgot to make fancy, fancy
+    - rscadd: Glow to the the radiation eclipse critter
+    - maptweak: Makes the Eclipse POI I forgot to make fancy, fancy
 2023-11-13:
   FluffMedic:
-  - rscadd: New chems to the distiller
+    - rscadd: New chems to the distiller
   ItsSelis:
-  - code_imp: slightly changed GitHub issue templates
-  - rscadd: added new way of generating tgui bundles, compiling the game & launching
-      a server
-  - rscdel: removed the old executables to compile new tgui bundles
-  - bugfix: enforcing text mode and LF line breaks in specific file endings
-  - code_imp: improved .gitignore once more
+    - code_imp: slightly changed GitHub issue templates
+    - rscadd:
+        added new way of generating tgui bundles, compiling the game & launching
+        a server
+    - rscdel: removed the old executables to compile new tgui bundles
+    - bugfix: enforcing text mode and LF line breaks in specific file endings
+    - code_imp: improved .gitignore once more
   Upstream:
-  - rscadd: added a new PDA type
-  - imageadd: added new PDA sprites for the new type
+    - rscadd: added a new PDA type
+    - imageadd: added new PDA sprites for the new type
 2023-11-14:
   TheGreatKitsune:
-  - bugfix: Vox engineering suit now properly has modules
-  - imageadd: Added in sprites for wearing vox suits
+    - bugfix: Vox engineering suit now properly has modules
+    - imageadd: Added in sprites for wearing vox suits
 2023-11-15:
   Drathek:
-  - code_imp: Renamed node/expression/operator to node/expression/op to resolve parsing
-      issues with spacemandmm and strongdmm
+    - code_imp:
+        Renamed node/expression/operator to node/expression/op to resolve parsing
+        issues with spacemandmm and strongdmm
   FluffMedic:
-  - maptweak: Makes MoL look nicer
+    - maptweak: Makes MoL look nicer
   ItsSelis:
-  - code_imp: changed the filing cabinet design
+    - code_imp: changed the filing cabinet design
   Kashargul:
-  - rscadd: pounce to command and explo borg on emag
-  - rscadd: the chameleon pen to command borgs on emag
-  - rscadd: 'changes: exploration hound now has a dedicated sleeper for items and
-      one person. Limit 4 items or 3+1 Person. It can be upgraded to up to 8 slots.'
-  - rscadd: 'changes: reverted the offset removal for the tall borgs'
-  - rscadd: 'changes: implemented the upstream borgs where possible'
-  - rscadd: 'changes: removed the modular chomp overwrites where no longer needed'
-  - rscadd: 'changes: moved some modular chomp borgs into /ch not to interfere with
-      the upstream borgs'
-  - rscadd: '"fixes #6996"'
-  - bugfix: borgbellies not showing for some borgs
-  - bugfix: borgpanels not showing upon opening the panel on some borgs
-  - bugfix: ERT bogs not showing at all
-  - bugfix: Explorationborg not being selectable
-  - bugfix: ServicehoundV2 - Alt going invisible on missing rest sprites. Only default
-      is now available
-  - bugfix: 'worm eyes/panel, including #7224 from Verkister to prevent conflicts'
-  - bugfix: eyes / lights where available on the chomp tall/wide robot
-  - rscadd: 'removes: deprecated tools from clownborg, exploborg, widerobot standard'
+    - rscadd: pounce to command and explo borg on emag
+    - rscadd: the chameleon pen to command borgs on emag
+    - rscadd:
+        "changes: exploration hound now has a dedicated sleeper for items and
+        one person. Limit 4 items or 3+1 Person. It can be upgraded to up to 8 slots."
+    - rscadd: "changes: reverted the offset removal for the tall borgs"
+    - rscadd: "changes: implemented the upstream borgs where possible"
+    - rscadd: "changes: removed the modular chomp overwrites where no longer needed"
+    - rscadd:
+        "changes: moved some modular chomp borgs into /ch not to interfere with
+        the upstream borgs"
+    - rscadd: '"fixes #6996"'
+    - bugfix: borgbellies not showing for some borgs
+    - bugfix: borgpanels not showing upon opening the panel on some borgs
+    - bugfix: ERT bogs not showing at all
+    - bugfix: Explorationborg not being selectable
+    - bugfix:
+        ServicehoundV2 - Alt going invisible on missing rest sprites. Only default
+        is now available
+    - bugfix: "worm eyes/panel, including #7224 from Verkister to prevent conflicts"
+    - bugfix: eyes / lights where available on the chomp tall/wide robot
+    - rscadd: "removes: deprecated tools from clownborg, exploborg, widerobot standard"
   Upstream:
-  - rscdel: removed the last _ in emote_subtle
-  - bugfix: "changed the timestamp insert regex as it was causing issues with multiline\
-      \ subtle / emote to also include matches on \n"
-  - qol: small change to the flavor input verb for robots to allow multiline flavor
-      texts to be added or edited for the round directly
+    - rscdel: removed the last _ in emote_subtle
+    - bugfix:
+        "changed the timestamp insert regex as it was causing issues with multiline\
+        \ subtle / emote to also include matches on \n"
+    - qol:
+        small change to the flavor input verb for robots to allow multiline flavor
+        texts to be added or edited for the round directly
 2023-11-16:
   Darlantanis:
-  - rscadd: Adds casino gear dispensers for mapping
-  - rscadd: Adds casino areas
-  - rscadd: Moves and comments out older casino areas
+    - rscadd: Adds casino gear dispensers for mapping
+    - rscadd: Adds casino areas
+    - rscadd: Moves and comments out older casino areas
   Kashargul:
-  - bugfix: hotfix for the raptorborgs
+    - bugfix: hotfix for the raptorborgs
 2023-11-17:
   Aroliacue:
-  - rscadd: Added in two new marking specific Xenomorph Queen heads and a new Xenomorph
-      backplate.
+    - rscadd:
+        Added in two new marking specific Xenomorph Queen heads and a new Xenomorph
+        backplate.
   ItsSelis:
-  - code_imp: some more changes in the CI suite
+    - code_imp: some more changes in the CI suite
   Upstream:
-  - rscdel: removed skin element "browserwindow" and "browser"
-  - rscadd: Added a way to make parquet wood flooring using hardwood planks
-  - bugfix: fixed typo in the vorepanel tgui, resulting in "Item Vorebelly Size Mult"
-      not being changeabale
-  - bugfix: fixed a wrong variable use which could lead to broken sprites in case
-      the "Mob Vorebelly Size Mult" was set to 0.
-  - rscadd: added VTEC toggle. (This adds a Verb under Abilities once VTEC has been
-      installed to allow robots to turn it off / on on a whim)
-  - code_imp: 'Changed the robot paper dispenser to an actual paperwork printer and
-      added the first set of forms (command, medical, some research and security mostly)
-      [Other contributors to the forms: Guti, Skol, Vee]'
-  - rscadd: 'Added a new module for robohounds: "Robohound Capability Expansion Module",
-      Material 5, Engineering 4. This module allows sleeper bellies to ingest items
-      and doubles their capacity. Due to this, a sleeper belly can in combination
-      with the "Robohound Capacity Expansion Module" (1 x2 x2) have a total of 4 slots.
-      At all times, only one "patient" can be ingested. With the new module though,
-      the space can be used for items. This allows robots to get their paws on some
-      kind of "trash eating" if they want it for scening without simply adding the
-      ability by default towards the sleeper modules.'
+    - rscdel: removed skin element "browserwindow" and "browser"
+    - rscadd: Added a way to make parquet wood flooring using hardwood planks
+    - bugfix:
+        fixed typo in the vorepanel tgui, resulting in "Item Vorebelly Size Mult"
+        not being changeabale
+    - bugfix:
+        fixed a wrong variable use which could lead to broken sprites in case
+        the "Mob Vorebelly Size Mult" was set to 0.
+    - rscadd:
+        added VTEC toggle. (This adds a Verb under Abilities once VTEC has been
+        installed to allow robots to turn it off / on on a whim)
+    - code_imp:
+        "Changed the robot paper dispenser to an actual paperwork printer and
+        added the first set of forms (command, medical, some research and security mostly)
+        [Other contributors to the forms: Guti, Skol, Vee]"
+    - rscadd:
+        'Added a new module for robohounds: "Robohound Capability Expansion Module",
+        Material 5, Engineering 4. This module allows sleeper bellies to ingest items
+        and doubles their capacity. Due to this, a sleeper belly can in combination
+        with the "Robohound Capacity Expansion Module" (1 x2 x2) have a total of 4 slots.
+        At all times, only one "patient" can be ingested. With the new module though,
+        the space can be used for items. This allows robots to get their paws on some
+        kind of "trash eating" if they want it for scening without simply adding the
+        ability by default towards the sleeper modules.'
 2023-11-18:
   CHOMPStation2:
-  - rscadd: Added yet more highly compressed artificial delights from rat world
+    - rscadd: Added yet more highly compressed artificial delights from rat world
   Kashargul:
-  - rscadd: added ability for borgs to play in the casino by holding chips with the
-      "misc gripper".
+    - rscadd:
+        added ability for borgs to play in the casino by holding chips with the
+        "misc gripper".
 2023-11-19:
   Aroliacue:
-  - qol: Casino Chip Exchanger now tells you the exchange rate on examine.
-  - qol: Casino Chip Exchanger now fully exchanges chips back to thalers instead of
-      deleting 25% of the value.
-  - imageadd: Added new xenomorph queen backplate and xenomorph teeth markings.
-  - imageadd: Resprited xenomorph body parts to try and give a slightly more glossy
-      look.
-  - imageadd: Resprited the royal xenomorph headcrest to blend slightly better.
+    - qol: Casino Chip Exchanger now tells you the exchange rate on examine.
+    - qol:
+        Casino Chip Exchanger now fully exchanges chips back to thalers instead of
+        deleting 25% of the value.
+    - imageadd: Added new xenomorph queen backplate and xenomorph teeth markings.
+    - imageadd:
+        Resprited xenomorph body parts to try and give a slightly more glossy
+        look.
+    - imageadd: Resprited the royal xenomorph headcrest to blend slightly better.
   Kashargul:
-  - bugfix: raptor - crisis sprite
-  - qol: medical robot overwrite code clean-up
+    - bugfix: raptor - crisis sprite
+    - qol: medical robot overwrite code clean-up
   Upstream:
-  - bugfix: fixes the naming of the medraptor sprites to have them show again.
+    - bugfix: fixes the naming of the medraptor sprites to have them show again.
 2023-11-20:
   Aroliacue:
-  - soundadd: Added new xenomorph talksounds.
-  - soundadd: Added three new xenomorph emotes - xenogrowl, xenohiss and xenopurr.
+    - soundadd: Added new xenomorph talksounds.
+    - soundadd: Added three new xenomorph emotes - xenogrowl, xenohiss and xenopurr.
 2023-11-21:
   FluffMedic:
-  - bugfix: Janitor Rig is FREE of access
+    - bugfix: Janitor Rig is FREE of access
 2023-11-23:
   FluffMedic:
-  - maptweak: Tweaks two tiles to make a cloner not spawn things
+    - maptweak: Tweaks two tiles to make a cloner not spawn things
   ItsSelis:
-  - bugfix: Including 'modular_chomp' in build system to make code changes actually
-      be detected
+    - bugfix:
+        Including 'modular_chomp' in build system to make code changes actually
+        be detected
   Kashargul:
-  - balance: changed borg nutrition purge to only reduce nutrition to 1000 instead
-      of 0
+    - balance:
+        changed borg nutrition purge to only reduce nutrition to 1000 instead
+        of 0
   WinterDarkraven:
-  - rscadd: Demonic halos
-  - imageadd: Demonic halo icons
+    - rscadd: Demonic halos
+    - imageadd: Demonic halo icons
   theXDkidoflol:
-  - balance: Size and compliance NIFs drain durability much less.
+    - balance: Size and compliance NIFs drain durability much less.
 2023-11-25:
   Aroliacue:
-  - rscadd: Xenomorph Queen trait, with experimental buff ability
-  - qol: Xenomorph Hybrids can now clear weeds by harm intent clicking
-  - bugfix: Engineers can now spawn with AR-E Glasses
-  - soundadd: New SFX for entering mechs.
-  - soundadd: mechsteps now use different logic for future additions.
+    - rscadd: Xenomorph Queen trait, with experimental buff ability
+    - qol: Xenomorph Hybrids can now clear weeds by harm intent clicking
+    - bugfix: Engineers can now spawn with AR-E Glasses
+    - soundadd: New SFX for entering mechs.
+    - soundadd: mechsteps now use different logic for future additions.
   FluffMedic:
-  - bugfix: Adds code to sawn-off shot guns that should allow reloading
-  - bugfix: Disables staves melee immunity.
-  - bugfix: Temp. raising to cryogel's mixing to allow it to be made.
+    - bugfix: Adds code to sawn-off shot guns that should allow reloading
+    - bugfix: Disables staves melee immunity.
+    - bugfix: Temp. raising to cryogel's mixing to allow it to be made.
   ItsSelis:
-  - code_imp: Skips the CI for autochangelogs
+    - code_imp: Skips the CI for autochangelogs
   Upstream:
-  - rscadd: Added vorebelly sprites to the V2 service hound and V2 dark service hound
-  - rscdel: Removed sleep toxin from tofurkey
-  - qol: Devoured are ignored in greater and lesser virus selection
-  - qol: Devoured can no longer be event & admin infected
-  - rscadd: Added the Xenobiology Bag to the standard Level 3 Science locker
-  - code_imp: tgchat code (part 1)
+    - rscadd: Added vorebelly sprites to the V2 service hound and V2 dark service hound
+    - rscdel: Removed sleep toxin from tofurkey
+    - qol: Devoured are ignored in greater and lesser virus selection
+    - qol: Devoured can no longer be event & admin infected
+    - rscadd: Added the Xenobiology Bag to the standard Level 3 Science locker
+    - code_imp: tgchat code (part 1)
 2023-11-26:
   Verkister:
-  - qol: Buffed flushies glog limits.
+    - qol: Buffed flushies glog limits.
 2023-11-28:
   Upstream:
-  - bugfix: fixed DNA bounds defines that previously broke toggling genetic powers
-      in the admin player planel
+    - bugfix:
+        fixed DNA bounds defines that previously broke toggling genetic powers
+        in the admin player planel
 2023-11-29:
   Aroliacue:
-  - rscadd: Added Concentrated Radium and Tricordrazine as selectable liquid types
-      for the vore panel. Concentrated Radium builds up radiation damage for themed
-      digestion, and Tricordrazine heals.
-  - qol: Curabitur cannon and macrobattery descriptions improved to provide more information
-      on what they actually do.
-  - balance: Significantly reduced the recharge time of the Curabitur cannon macrobattery
-      cells. Previously regular mediguns were significantly more efficient despite
-      being readily available, whereas the Curabitur is very rare.
+    - rscadd:
+        Added Concentrated Radium and Tricordrazine as selectable liquid types
+        for the vore panel. Concentrated Radium builds up radiation damage for themed
+        digestion, and Tricordrazine heals.
+    - qol:
+        Curabitur cannon and macrobattery descriptions improved to provide more information
+        on what they actually do.
+    - balance:
+        Significantly reduced the recharge time of the Curabitur cannon macrobattery
+        cells. Previously regular mediguns were significantly more efficient despite
+        being readily available, whereas the Curabitur is very rare.
 2023-11-30:
   FluffMedic:
-  - rscadd: Enabled three new things for genetics
+    - rscadd: Enabled three new things for genetics
   TheCaramelion:
-  - rscadd: Alternative Cargo Technician title
-  - imageadd: Mailman suit and hat
-  - balance: Less mail per minute
-  - balance: Less junk mail per crate
-  - balance: NT mugs and money chances reduced
-  - bugfix: Junk mail has stamps again
-  - bugfix: Reagents will be added to beakers now
-  - bugfix: Event antags no longer gets mail
+    - rscadd: Alternative Cargo Technician title
+    - imageadd: Mailman suit and hat
+    - balance: Less mail per minute
+    - balance: Less junk mail per crate
+    - balance: NT mugs and money chances reduced
+    - bugfix: Junk mail has stamps again
+    - bugfix: Reagents will be added to beakers now
+    - bugfix: Event antags no longer gets mail
   Upstream:
-  - bugfix: naming of the sleeper sprite of the v2 clerical hound
+    - bugfix: naming of the sleeper sprite of the v2 clerical hound

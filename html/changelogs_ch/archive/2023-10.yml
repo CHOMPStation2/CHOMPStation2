@@ -1,133 +1,147 @@
 2023-10-04:
   FluffMedic:
-  - qol: Adds descriptions to experimental firstaid kit's pill bottles.
-  - qol: Made speedloaders 18, because revolvers hold six.
-  - bugfix: turrets where missed in the refactor, well their health
+    - qol: Adds descriptions to experimental firstaid kit's pill bottles.
+    - qol: Made speedloaders 18, because revolvers hold six.
+    - bugfix: turrets where missed in the refactor, well their health
   Razgriz1032:
-  - rscdel: Removed Among Us slugcats
+    - rscdel: Removed Among Us slugcats
   Verkister:
-  - bugfix: Fixed disabled autotransfer un-disabling itself when aghosted/SSD
-  - rscadd: Added bellysprites for sergal and skunk taurs.
-  - rscadd: Added a verb for synths to plug their leaking stomach.
-  - bugfix: Fixed vorgan overlay preview removing the owner's hud if hud hiding setting
-      is enabled.
-  - bugfix: Fixed prey vorgan overlay updates requiring 5u of liquid.
-  - balance: Excess borg nutrition now causes slowdown.
-  - bugfix: Fixed logged out ghosts getting timeout deleted while still on manifest.
-  - bugfix: Fixed unintentional glogged toilet spammability.
-  - rscadd: Added intentional glogged toilet spammability (harm intent panic mode)
+    - bugfix: Fixed disabled autotransfer un-disabling itself when aghosted/SSD
+    - rscadd: Added bellysprites for sergal and skunk taurs.
+    - rscadd: Added a verb for synths to plug their leaking stomach.
+    - bugfix:
+        Fixed vorgan overlay preview removing the owner's hud if hud hiding setting
+        is enabled.
+    - bugfix: Fixed prey vorgan overlay updates requiring 5u of liquid.
+    - balance: Excess borg nutrition now causes slowdown.
+    - bugfix: Fixed logged out ghosts getting timeout deleted while still on manifest.
+    - bugfix: Fixed unintentional glogged toilet spammability.
+    - rscadd: Added intentional glogged toilet spammability (harm intent panic mode)
   purplefoxy27:
-  - spellcheck: Fixed a few typos in inshoe steppies, proteans, outsider capsules
-      and a few other miscs.
+    - spellcheck:
+        Fixed a few typos in inshoe steppies, proteans, outsider capsules
+        and a few other miscs.
   tacoguy7765093:
-  - maptweak: Botany fridges are now semi-persistent, have fun farming!
+    - maptweak: Botany fridges are now semi-persistent, have fun farming!
 2023-10-05:
   tacoguy7765093:
-  - bugfix: Fixes some guns appearing invisible
+    - bugfix: Fixes some guns appearing invisible
 2023-10-12:
   Darlantanis:
-  - rscadd: Reduces codex memory usage, also fixing a memory leak.
-  - rscadd: Fixes bug with "go back" button in codexes.
-  - rscadd: Adds a cooking codex which algorithmically documents all cooking recipes.
-  - rscadd: Adds .dmi for new manual. Doesn't actually make new sprites.
-  - rscadd: Doubles cooking burn time.
+    - rscadd: Reduces codex memory usage, also fixing a memory leak.
+    - rscadd: Fixes bug with "go back" button in codexes.
+    - rscadd: Adds a cooking codex which algorithmically documents all cooking recipes.
+    - rscadd: Adds .dmi for new manual. Doesn't actually make new sprites.
+    - rscadd: Doubles cooking burn time.
   TheCaramelion:
-  - rscadd: Colours for each department
-  - qol: Removed random colours for junk mail
-  - qol: Bigger money quantities are a little bit more rare now
+    - rscadd: Colours for each department
+    - qol: Removed random colours for junk mail
+    - qol: Bigger money quantities are a little bit more rare now
   Verkister:
-  - bugfix: Fixed special clicks not working for player-controlled swoopies while
-      vac is powered.
-  - bugfix: Fixed synth metabolism processing toggle.
-  - bugfix: Fixed simplemobs being unable to use handheld ID cards.
-  - bugfix: Fixed ghost body re-entering bug.
+    - bugfix:
+        Fixed special clicks not working for player-controlled swoopies while
+        vac is powered.
+    - bugfix: Fixed synth metabolism processing toggle.
+    - bugfix: Fixed simplemobs being unable to use handheld ID cards.
+    - bugfix: Fixed ghost body re-entering bug.
 2023-10-17:
   FluffMedic:
-  - rscadd: Walls that are breakable that have the looks of some shuttle walls
+    - rscadd: Walls that are breakable that have the looks of some shuttle walls
   Kazzc:
-  - rscadd: Deck 2, finally fixed pipes shuttle lounge area.
-  - rscadd: Deck 2, Fixed some inconsistent tiles.
-  - rscadd: Deck 3, new hidden kitchen.
-  - rscadd: Added a new area for the hidden kitchen.
+    - rscadd: Deck 2, finally fixed pipes shuttle lounge area.
+    - rscadd: Deck 2, Fixed some inconsistent tiles.
+    - rscadd: Deck 3, new hidden kitchen.
+    - rscadd: Added a new area for the hidden kitchen.
 2023-10-21:
   FluffMedic:
-  - rscadd: Eclipse lore and more stuff in the valley
+    - rscadd: Eclipse lore and more stuff in the valley
 2023-10-24:
   FluffMedic:
-  - rscadd: Two minor traits that mess with how much air your character needs to breath.
+    - rscadd: Two minor traits that mess with how much air your character needs to breath.
 2023-10-25:
   FluffMedic:
-  - bugfix: event spiders deleting themselves
-  - balance: changes projectile speed from 0.8 to 3.
-  - rscadd: A handful more sprites added for precursor and Aegis rigsuits, well teshari
-      sprites.
-  - bugfix: cryogel is makeable
+    - bugfix: event spiders deleting themselves
+    - balance: changes projectile speed from 0.8 to 3.
+    - rscadd:
+        A handful more sprites added for precursor and Aegis rigsuits, well teshari
+        sprites.
+    - bugfix: cryogel is makeable
   TheCaramelion:
-  - bugfix: Stamps no longer get colours on them.
-  - bugfix: NT stamp no longer goes past the edges of the envelopes.
-  - qol: The mail colours have been revamped
-  - rscdel: Removed unused variables
+    - bugfix: Stamps no longer get colours on them.
+    - bugfix: NT stamp no longer goes past the edges of the envelopes.
+    - qol: The mail colours have been revamped
+    - rscdel: Removed unused variables
   TheGreatKitsune:
-  - rscadd: Verb in IC to clear nutrition as a borg.
-  - rscadd: new verb for shadekin to toggle off nutrition <-> energy convversion
-  - balance: shadekin no longer count as observers for phasing
+    - rscadd: Verb in IC to clear nutrition as a borg.
+    - rscadd: new verb for shadekin to toggle off nutrition <-> energy convversion
+    - balance: shadekin no longer count as observers for phasing
   Upstream:
-  - rscadd: added ability to toggle conveyor speed (slow/fast)
-  - bugfix: fixed tool usage on conveyor switches
-  - rscadd: added a new proc that imitates the leapers lunge attack, which can be
-      given to mobs to use as an ability when player controlled.
-  - rscadd: added the lunge ability to player controlled scel.
-  - bugfix: fixed scel going invisible when they eat more than one prey.
-  - bugfix: fixed scel automatically and randomly using special attacks when controlled
-      by a player.
+    - rscadd: added ability to toggle conveyor speed (slow/fast)
+    - bugfix: fixed tool usage on conveyor switches
+    - rscadd:
+        added a new proc that imitates the leapers lunge attack, which can be
+        given to mobs to use as an ability when player controlled.
+    - rscadd: added the lunge ability to player controlled scel.
+    - bugfix: fixed scel going invisible when they eat more than one prey.
+    - bugfix:
+        fixed scel automatically and randomly using special attacks when controlled
+        by a player.
   Verkister:
-  - rscadd: Added vorgan setting for item digestion logs.
-  - bugfix: Fixed bug with affect-worn item digestion with liquids.
-  - rscadd: Adjacent users can now borrow Swoopie's vac tube.
-  - bugfix: Fixed non-swoopie users being able to accidentally link swoopie's vac
-      to their own vorgans.
-  - bugfix: Borrowed vac-packs can now maintain vorgan connection with held/contained
-      vorgan owners.
-  - qol: Jukebox default volume reduced to a more sensible level.
+    - rscadd: Added vorgan setting for item digestion logs.
+    - bugfix: Fixed bug with affect-worn item digestion with liquids.
+    - rscadd: Adjacent users can now borrow Swoopie's vac tube.
+    - bugfix:
+        Fixed non-swoopie users being able to accidentally link swoopie's vac
+        to their own vorgans.
+    - bugfix:
+        Borrowed vac-packs can now maintain vorgan connection with held/contained
+        vorgan owners.
+    - qol: Jukebox default volume reduced to a more sensible level.
   tacoguy7765093:
-  - rscadd: The overmap shuttles now got enough budget to deploy distress beacons
-  - rscadd: SMESs on the missing shuttles, no more losing power.
+    - rscadd: The overmap shuttles now got enough budget to deploy distress beacons
+    - rscadd: SMESs on the missing shuttles, no more losing power.
 2023-10-26:
   Verkister:
-  - rscadd: Added more autotransfer filters.
-  - rscadd: Added a right-click verb to toggle item's digestability.
-  - rscadd: Recycling mode can now churn loose ores into an ore chunk.
-  - bugfix: Fixed a bug with client-less teleop messages breaking chat.
+    - rscadd: Added more autotransfer filters.
+    - rscadd: Added a right-click verb to toggle item's digestability.
+    - rscadd: Recycling mode can now churn loose ores into an ore chunk.
+    - bugfix: Fixed a bug with client-less teleop messages breaking chat.
 2023-10-30:
   TheGreatKitsune:
-  - rscadd: Toggle for liquids automatically applying to prey
+    - rscadd: Toggle for liquids automatically applying to prey
 2023-10-31:
   FluffMedic:
-  - rscadd: Teppi is public use
-  - rscadd: Added new plants
-  - rscadd: Added a seed to seed vendors
+    - rscadd: Teppi is public use
+    - rscadd: Added new plants
+    - rscadd: Added a seed to seed vendors
   ReoDaProtovali:
-  - rscadd: Added spawn message for player swoopies that let them know how to control
-      the suck birb
-  - rscadd: Moved the description part informing the player how to use swoopie's vac
-      pack to a description_info section as well as adding information about how to
-      use the swoopie like a normal vaccum
-  - rscadd: also gave swoopies a muffling belly by default
-  - rscdel: Removed contaminates from swoopie's neck bellies. Their belly is the messy
-      place
-  - qol: made swoopies' integrated vac-pack only trigger while they're on grab intent
-  - balance: rebalanced something
-  - qol: made swoopie's neck bellies not have entrance logs by default. This should
-      reduce message spam when sucking down stuff.
-  - bugfix: Fixed swoopies being able to suck while dead
-  - bugfix: Fixed swoopies AI returning to the mob and being able to vaccum the ground
-      while the player was dead and ghosted (also presumably fixing pure AI swoopies
-      from doing this too)
-  - code_imp: changed swoopies from using speedy_mob_processing to using TURBO MODE
-      belly flags. It does the same thing, but TURBO MODE is ingame accessable without
-      varedit, so I think that's the proper implementation that should be used going
-      forward
+    - rscadd:
+        Added spawn message for player swoopies that let them know how to control
+        the suck birb
+    - rscadd:
+        Moved the description part informing the player how to use swoopie's vac
+        pack to a description_info section as well as adding information about how to
+        use the swoopie like a normal vaccum
+    - rscadd: also gave swoopies a muffling belly by default
+    - rscdel:
+        Removed contaminates from swoopie's neck bellies. Their belly is the messy
+        place
+    - qol: made swoopies' integrated vac-pack only trigger while they're on grab intent
+    - balance: rebalanced something
+    - qol:
+        made swoopie's neck bellies not have entrance logs by default. This should
+        reduce message spam when sucking down stuff.
+    - bugfix: Fixed swoopies being able to suck while dead
+    - bugfix:
+        Fixed swoopies AI returning to the mob and being able to vaccum the ground
+        while the player was dead and ghosted (also presumably fixing pure AI swoopies
+        from doing this too)
+    - code_imp:
+        changed swoopies from using speedy_mob_processing to using TURBO MODE
+        belly flags. It does the same thing, but TURBO MODE is ingame accessable without
+        varedit, so I think that's the proper implementation that should be used going
+        forward
   TheCaramelion:
-  - rscadd: 3 new stage 1 symptoms, 2 new stage 2 symptoms
+    - rscadd: 3 new stage 1 symptoms, 2 new stage 2 symptoms
   tacoguy7765093:
-  - rscdel: Removed those rusty bolts off oxygen lockers.
+    - rscdel: Removed those rusty bolts off oxygen lockers.
