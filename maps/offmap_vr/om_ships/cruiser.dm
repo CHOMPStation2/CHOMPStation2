@@ -119,12 +119,14 @@
 	name = "Daedalus - Hangar 2"
 	has_gravity = 0
 
-/* Non functional map
 /datum/map_template/om_ships/cruiser
 	name = "OM Ship - Daedalus (New Z)"
 	desc = "A large NT cruiser."
 	mappath = "maps/offmap_vr/om_ships/cruiser.dmm"
-*/
+
+/obj/machinery/computer/HolodeckControl/holodorm/warship
+	name = "warship holodeck control"
+	projection_area = /area/mothership/holodeck/holo
 
 /obj/effect/overmap/visitable/ship/cruiser
 	name = "NDV Daedalus"
