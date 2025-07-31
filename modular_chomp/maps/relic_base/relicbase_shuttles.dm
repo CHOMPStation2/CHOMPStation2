@@ -29,3 +29,21 @@
 		return radio_connection.post_signal(src, signal, filter)
 	else
 		qdel(signal)
+
+/datum/shuttle/autodock/ferry/mining
+	name = "Mining"
+	warmup_time = 10
+	location = FERRY_LOCATION_STATION
+	shuttle_area = /area/shuttle/minoutpost/base
+	landmark_offsite = "mining_undermines"
+	landmark_station = "mining_base"
+	docking_controller_tag = "car_mining"
+
+/datum/shuttle/autodock/ferry/research
+	name = "Research"
+	warmup_time = 10
+	location = FERRY_LOCATION_STATION
+	shuttle_area = /area/shuttle/research/station
+	landmark_offsite = "rsr_undermines"
+	landmark_station = "rsr_base"
+	docking_controller_tag = "rsr_elevator"
