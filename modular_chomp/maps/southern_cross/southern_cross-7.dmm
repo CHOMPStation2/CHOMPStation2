@@ -30000,7 +30000,10 @@
 /obj/structure/cable/cyan{
 	icon_state = "1-2"
 	},
-/obj/machinery/power/sensor,
+/obj/machinery/power/sensor{
+	name = "Powernet Sensor - Carrier Reactor Power";
+	name_tag = "Carrier Reactor Power"
+	},
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/engineering{
 	name = "R-UST Access"
