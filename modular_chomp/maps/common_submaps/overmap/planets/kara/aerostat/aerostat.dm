@@ -1,16 +1,14 @@
 //Parent of this place is kara.dm
 // -- Datums -- //
 
-/datum/map_template/sc_lateload/away_aerostat
-	name = "Kara Aerostat - Z1 Aerostat"
+/datum/map_template/common_lateload/away_aerostat
+	name = Z_NAME_KARA_AEROSTAT_CH
 	desc = "The Kara Aerostat away mission."
 	mappath = "maps/southern_cross/overmap/planets/kara/aerostat/aerostat.dmm"
-	associated_map_datum = /datum/map_z_level/sc_lateload/away_aerostat
+	associated_map_datum = /datum/map_z_level/common_lateload/away_aerostat
 
-/datum/map_z_level/sc_lateload/away_aerostat
+/datum/map_z_level/common_lateload/away_aerostat
 	name = "Away Mission - Aerostat"
-	z = Z_LEVEL_AEROSTAT
-
 
 // -- Overmap -- //
 /* // Moved to kara.dm as this is part of the planet and future planet z-levels are planned. Also seems important for overmap to run properly.

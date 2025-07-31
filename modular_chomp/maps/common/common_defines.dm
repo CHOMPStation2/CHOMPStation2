@@ -11,10 +11,10 @@
 
 #define Z_NAME_SC_SURFACE					"Southern Cross - Surface"
 #define Z_NAME_SC_SURFACE_MINE				"Southern Cross - Surface Mines"
+#define Z_NAME_SC_SURFACE_WILD				"Southern Cross - Surface Wild"
 #define Z_NAME_SC_MISC						"Southern Cross - Misc" // Aliased to Z_NAME_ALIAS_MISC
 #define Z_NAME_SC_CENTCOM					"Southern Cross - Central Command" // Aliased to Z_NAME_ALIAS_CENTCOM
 #define Z_NAME_SC_TRANSIT					"Southern Cross - Transit"
-#define Z_NAME_SC_SURFACE_WILD				"Southern Cross - Surface Wild"
 
 // Soluna Nexus
 #define Z_LEVEL_SN_STATION_ONE				1
@@ -46,6 +46,8 @@
 
 // Named Lateload Submaps
 #define Z_NAME_FUELDEPOT_CH					"Offmap - Fueldepot CH"
+#define Z_NAME_KARA_AEROSTAT_CH				"Offmap - Kara Aerostat - Z1 Aerostat CG"
+#define Z_NAME_KARA_NSTAR_MINES_CH			"Offmap - Kara - Z1 Northern Star"
 #define Z_NAME_VR_WORLD_CH					"VR - VR World CH"
 #define Z_NAME_PLANET_THOR_CH				"Planet - Thor Surface CH"
 #define Z_NAME_PLANET_TYR_CH				"Planet - Desert Valley CH"

@@ -106,7 +106,7 @@ but they don't actually change anything about the load order
 			)
 
 	lateload_gateway = list(
-		list(Z_NAME_REDGATE_SNOW_FIELD_CH),
+		list(Z_NAME_GATEWAY_SNOW_FIELD_CH),
 		list(Z_NAME_GATEWAY_MADNESS_LAB_CH),
 		list(Z_NAME_GATEWAY_ABANDONED_CITY_CH),
 		list(Z_NAME_GATEWAY_SKYSCRAPER_CH)
@@ -195,16 +195,13 @@ but they don't actually change anything about the load order
 	base_turf = /turf/simulated/floor/outdoors/rocks
 
 /datum/map_z_level/southern_cross/misc
-	z = Z_NAME_SC_MISC
-	name = "Misc"
+	name = Z_NAME_SC_MISC
 	flags = MAP_LEVEL_PLAYER|MAP_LEVEL_VORESPAWN
 	transit_chance = 15
-	name_alias = Z_NAME_ALIAS_MISC
 
 /datum/map_z_level/southern_cross/centcom
 	name = Z_NAME_SC_CENTCOM
 	flags = MAP_LEVEL_ADMIN|MAP_LEVEL_CONTACT
-	name_alias = Z_NAME_ALIAS_CENTCOM
 
 /datum/map_z_level/southern_cross/transit
 	name = Z_NAME_SC_TRANSIT

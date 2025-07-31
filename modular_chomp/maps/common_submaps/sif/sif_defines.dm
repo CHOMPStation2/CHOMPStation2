@@ -1,8 +1,8 @@
 /datum/planet/sif
 	expected_z_levels = list(
-		Z_LEVEL_SC_SURFACE,
-		Z_LEVEL_SC_SURFACE_MINE,
-		Z_LEVEL_SC_SURFACE_WILD,
+		Z_NAME_SC_SURFACE,
+		Z_NAME_SC_SURFACE_MINE,
+		Z_NAME_SC_SURFACE_WILD,
 		//Z_LEVEL_SURFACE_SKYLANDS, //Sky islands removal due to lack of use
 		//Z_LEVEL_SURFACE_VALLEY //Replaced with Tyr
 	)

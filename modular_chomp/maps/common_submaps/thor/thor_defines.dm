@@ -1,4 +1,4 @@
 /datum/planet/thor
 	expected_z_levels = list(
-		Z_LEVEL_SC_JUNGLE
+		Z_NAME_PLANET_THOR_CH
 	)

@@ -25,7 +25,7 @@
 	desc = "A planet with a high amount of minerals"
 	scanner_desc = @{"[i]Stellar Body[/i]: Tyr"}
 
-	map_z = list(Z_LEVEL_SC_DEATH_VALLEY)
+	map_z = list(Z_NAME_PLANET_TYR_CH)
 	initial_generic_waypoints = list("valley_e", "valley_w")
 	start_x  = 3
 	start_y  = 5

@@ -1,16 +1,15 @@
 // -- Datums -- //
 
-/datum/map_template/sc_lateload/northern_star
-	name = "Kara - Z1 Northern Star"
+/datum/map_template/common_lateload/northern_star
+	name = Z_NAME_KARA_NSTAR_MINES_CH
 	desc = "The Northern Star mines."
 	mappath = "maps/southern_cross/overmap/planets/kara/northern_star/northern_star_mine.dmm"
-	associated_map_datum = /datum/map_z_level/sc_lateload/northern_star
+	associated_map_datum = /datum/map_z_level/common_lateload/northern_star
 
-/datum/map_z_level/sc_lateload/northern_star
+/datum/map_z_level/common_lateload/northern_star
 	name = "Northern Star mines"
-	z = Z_LEVEL_NS_MINE
 
-/datum/map_template/sc_lateload/northern_star/on_map_loaded(z)
+/datum/map_template/common_lateload/northern_star/on_map_loaded(z)
 	. = ..()
 	new /datum/random_map/automata/cave_system/no_cracks(null, 1, 1, Z_LEVEL_NS_MINE, world.maxx, world.maxy) // Create caves.
 	new /datum/random_map/noise/ore(null, 1, 1, Z_LEVEL_NS_MINE, 64, 64)         // Create the mining ore distribution map.
