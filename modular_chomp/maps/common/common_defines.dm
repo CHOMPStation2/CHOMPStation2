@@ -8,6 +8,8 @@
 #define Z_LEVEL_SC_STATION_ONE				2
 #define Z_LEVEL_SC_STATION_TWO				3
 #define Z_LEVEL_SC_STATION_THREE			4
+
+// TODO move to name
 #define Z_LEVEL_SC_SURFACE					5
 #define Z_LEVEL_SC_SURFACE_MINE				6
 #define Z_LEVEL_SC_MISC						7 //Carrier, actually
@@ -21,6 +23,8 @@
 #define Z_LEVEL_SN_STATION_ONE				1
 #define Z_LEVEL_SN_STATION_TWO				2
 #define Z_LEVEL_SN_STATION_THREE			3
+
+// TODO move to name
 #define Z_LEVEL_SN_SURFACE					4
 #define Z_LEVEL_SN_SURFACE_MINE				5
 #define Z_LEVEL_SN_MISC						6 //Carrier, actually
@@ -36,6 +40,9 @@
 #define Z_LEVEL_RB_SURFACE					3
 #define Z_LEVEL_RB_UPPER_FLOORS				4
 #define Z_LEVEL_RB_THE_SKY					5
+
+
+// TODO move to name
 #define Z_LEVEL_RB_UNDERMINES				6
 #define Z_LEVEL_RB_SURFACE_WILDS			7
 #define Z_LEVEL_RB_WILDERNESS_SKY			8
@@ -47,11 +54,13 @@
 #define Z_LEVEL_RB_GATEWAY					15
 #define Z_LEVEL_RB_REDGATE					16
 
-// Named Submaps
+// Named Lateload Submaps
 #define Z_NAME_FUELDEPOT_CH					"Fueldepot CH"
 #define Z_NAME_VR_WORLD_CH					"VR World CH"
 #define Z_NAME_THOR							"Thor Surface CH"
 #define Z_NAME_TYR							"Desert Valley CH"
+
+// Todo Redgate maps
 
 // Camera Network Additions
 #define NETWORK_EXTERIOR "Exterior" // Exterior Cameras
