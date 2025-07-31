@@ -4,7 +4,7 @@
 /datum/map_template/common_lateload/away_aerostat
 	name = Z_NAME_KARA_AEROSTAT_CH
 	desc = "The Kara Aerostat away mission."
-	mappath = "maps/southern_cross/overmap/planets/kara/aerostat/aerostat.dmm"
+	mappath = "modular_chomp/maps/common_submaps/overmap/planets/kara/aerostat/aerostat.dmm"
 	associated_map_datum = /datum/map_z_level/common_lateload/away_aerostat
 
 /datum/map_z_level/common_lateload/away_aerostat
