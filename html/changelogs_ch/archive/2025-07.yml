@@ -329,3 +329,14 @@
   - rscadd: Purple robes can now be unbuttoned!
   ItsSelis:
   - code_imp: Removes sleep() in modular computer uis
+2025-07-31:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: Fixed vaccines not giving vaccine bottles
+  - rscadd: Added a variant of neck fur that doesn't have a north-facing sprite.
+  Will:
+  - rscadd: New particle smasher recipes
+  - code_imp: Moves dizzy and jitter code to components.
+  - bugfix: Fixed a major runtime in the resleeving computer when a bodyrecord becomes
+      outdated
+  - bugfix: Synthfab not being able to spawn bodies properly
+  - bugfix: Teshari can no longer pass through deployed security barriers
