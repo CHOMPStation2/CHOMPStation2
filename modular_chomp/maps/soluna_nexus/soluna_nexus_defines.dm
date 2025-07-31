@@ -103,7 +103,7 @@ but they don't actually change anything about the load order
 			)
 
 	lateload_gateway = list(
-		list(Z_NAME_REDGATE_SNOW_FIELD_CH),
+		list(Z_NAME_GATEWAY_SNOW_FIELD_CH),
 		list(Z_NAME_GATEWAY_MADNESS_LAB_CH),
 		list(Z_NAME_GATEWAY_ABANDONED_CITY_CH),
 		list(Z_NAME_GATEWAY_SKYSCRAPER_CH)
@@ -125,8 +125,8 @@ but they don't actually change anything about the load order
 	// If Space submaps are made, add a line to make them here as well.
 
 	// Now for the tunnels. (This decides the load order of ore generation and cave generation. Check Random_Map to see % )
-	new /datum/random_map/automata/cave_system/(null, 1, 1, Z_LEVEL_SN_SURFACE_MINE, world.maxx, world.maxy) // Create the mining Z-level.
-	new /datum/random_map/noise/ore(null, 1, 1, Z_LEVEL_SN_SURFACE_MINE, 64, 64)         // Create the mining ore distribution map.
+	new /datum/random_map/automata/cave_system/(null, 1, 1, Z_NAME_SN_SURFACE_MINE, world.maxx, world.maxy) // Create the mining Z-level.
+	new /datum/random_map/noise/ore(null, 1, 1, Z_NAME_SN_SURFACE_MINE, 64, 64)         // Create the mining ore distribution map.
 	// Todo: Forest generation.
 	return 1
 
@@ -177,7 +177,7 @@ but they don't actually change anything about the load order
 	transit_chance = 60
 */
 /datum/map_z_level/soluna_nexus/surface
-	name = Z_LEVEL_SN_SURFACE
+	name = Z_NAME_SN_SURFACE
 	flags = MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER|MAP_LEVEL_SEALED|MAP_LEVEL_CONSOLES|MAP_LEVEL_VORESPAWN
 	base_turf = /turf/simulated/floor/outdoors/rocks
 
@@ -195,12 +195,10 @@ but they don't actually change anything about the load order
 	name = Z_NAME_SN_MISC
 	flags = MAP_LEVEL_PLAYER|MAP_LEVEL_VORESPAWN
 	transit_chance = 15
-	name_alias = Z_NAME_ALIAS_MISC
 
 /datum/map_z_level/soluna_nexus/centcom
 	name = Z_NAME_SN_CENTCOM
 	flags = MAP_LEVEL_ADMIN|MAP_LEVEL_CONTACT
-	name_alias = Z_NAME_ALIAS_CENTCOM
 
 /datum/map_z_level/soluna_nexus/transit
 	name = Z_NAME_SN_TRANSIT
