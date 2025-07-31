@@ -102,7 +102,7 @@
 	base_area = /area/space
 	base_turf = /turf/space
 
-/datum/shuttle/autodock/ferry/emergency/centcom
+/datum/shuttle/autodock/ferry/emergency
 	name = "Escape"
 	location = FERRY_LOCATION_OFFSITE
 	warmup_time = 10
@@ -136,11 +136,6 @@
 	name = "SC Dock 2-C/D"
 	landmark_tag = "arrivals_station"
 	docking_controller = "arrivals_dock"
-
-/obj/machinery/computer/shuttle_control/arrivalstram
-	name = "Arrivals Tram Control Console"
-	shuttle_tag = "Arrivals"
-
 
 //Exploration carrier
 /obj/machinery/computer/shuttle_control/exploration
@@ -234,17 +229,6 @@
 
 // Escape Pods - Save me from typing this eight billion times
 #define ESCAPE_POD(NUMBER) \
-/datum/shuttle/autodock/ferry/escape_pod/escape_pod##NUMBER { \
-	name = "Escape Pod " + #NUMBER; \
-	location = FERRY_LOCATION_STATION; \
-	warmup_time = 0; \
-	shuttle_area = /area/shuttle/escape_pod##NUMBER/station; \
-	docking_controller_tag = "escape_pod_" + #NUMBER; \
-	landmark_station = "escape_pod_"+ #NUMBER +"_station"; \
-	landmark_offsite = "escape_pod_"+ #NUMBER +"_offsite"; \
-	landmark_transition = "escape_pod_"+ #NUMBER +"_transit"; \
-	move_time = SHUTTLE_TRANSIT_DURATION_RETURN; \
-} \
 /obj/effect/shuttle_landmark/southern_cross/escape_pod##NUMBER/station { \
 	name = "Station"; \
 	landmark_tag = "escape_pod_"+ #NUMBER +"_station"; \
@@ -363,17 +347,6 @@ ESCAPE_POD(14)
 	landmark_tag = "large_escape_pod2_transit"
 	flags = SLANDMARK_FLAG_AUTOSET
 
-/datum/shuttle/autodock/ferry/escape_pod/large_escape_pod3
-	name = "Large Escape Pod 3"
-	location = FERRY_LOCATION_STATION
-	warmup_time = 0
-	shuttle_area = /area/shuttle/large_escape_pod3/station
-	landmark_station = "large_escape_pod3_station"
-	landmark_offsite = "large_escape_pod3_offsite"
-	landmark_transition = "large_escape_pod3_transit"
-	docking_controller_tag = "large_escape_pod_3"
-	move_time = SHUTTLE_TRANSIT_DURATION_RETURN
-
 /obj/effect/shuttle_landmark/southern_cross/large_escape_pod3/station
 	name = "Station"
 	landmark_tag = "large_escape_pod3_station"
@@ -390,17 +363,6 @@ ESCAPE_POD(14)
 	landmark_tag = "large_escape_pod3_transit"
 	flags = SLANDMARK_FLAG_AUTOSET
 
-/datum/shuttle/autodock/ferry/escape_pod/large_escape_pod4
-	name = "Large Escape Pod 4"
-	location = FERRY_LOCATION_STATION
-	warmup_time = 0
-	shuttle_area = /area/shuttle/large_escape_pod4/station
-	landmark_station = "large_escape_pod4_station"
-	landmark_offsite = "large_escape_pod4_offsite"
-	landmark_transition = "large_escape_pod4_transit"
-	docking_controller_tag = "large_escape_pod_4"
-	move_time = SHUTTLE_TRANSIT_DURATION_RETURN
-
 /obj/effect/shuttle_landmark/southern_cross/large_escape_pod4/station
 	name = "Station"
 	landmark_tag = "large_escape_pod4_station"
@@ -416,47 +378,6 @@ ESCAPE_POD(14)
 /obj/effect/shuttle_landmark/southern_cross/large_escape_pod4/transit
 	landmark_tag = "large_escape_pod4_transit"
 	flags = SLANDMARK_FLAG_AUTOSET
-// Destination datums
-
-/datum/shuttle/autodock/ferry/arrivals/relicbase
-	var/tag_door_station = "arrivals_shuttle_hatch"
-	var/tag_door_offsite = "arrivals_shuttle_hatch"
-	move_direction = NORTH
-	shuttle_area = /area/shuttle/arrival/pre_game
-	var/base_turf = /turf/simulated/floor/reinforced
-	landmark_offsite = "arrivals_offsite"
-	landmark_station = "arrivals_station"
-	docking_controller_tag = "arrivals_shuttle"
-	move_time = SHUTTLE_TRANSIT_DURATION_RETURN
-	var/frequency = 1381
-	var/datum/radio_frequency/radio_connection
-
-/datum/shuttle/autodock/ferry/arrivals/relicbase/New()
-	radio_connection = radio_controller.add_object(src, frequency, null)
-	..()
-
-/datum/shuttle/autodock/ferry/arrivals/relicbase/dock()
-	..()
-	// Open Doorsunes
-	var/datum/signal/signal = new
-	signal.data["tag"] = location ? tag_door_offsite : tag_door_station
-	signal.data["command"] = "secure_open"
-	post_signal(signal)
-
-/datum/shuttle/autodock/ferry/arrivals/relicbase/undock()
-	..()
-	// Close Doorsunes
-	var/datum/signal/signal = new
-	signal.data["tag"] = location ? tag_door_offsite : tag_door_station
-	signal.data["command"] = "secure_close"
-	post_signal(signal)
-
-/datum/shuttle/autodock/ferry/arrivals/relicbase/proc/post_signal(datum/signal/signal, var/filter = null)
-	signal.transmission_method = TRANSMISSION_RADIO
-	if(radio_connection)
-		return radio_connection.post_signal(src, signal, filter)
-	else
-		qdel(signal)
 
 // Arrivals ''''Shuttle''''
 /obj/effect/shuttle_landmark/relicbase/arrivals/offsite
