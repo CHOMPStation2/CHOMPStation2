@@ -137,7 +137,6 @@
 	reagents.add_reagent(REAGENT_ID_HEALINGNANITES, 30)
 	color = reagents.get_color()
 
-/*CHOMPStation removal begin
 /obj/item/reagent_containers/pill/sleevingcure
 	name = REAGENT_SLEEVINGCURE + " (1u)"
 	desc = "A rare cure provided by Vey-Med that helps counteract negative side effects of using imperfect resleeving machinery."
@@ -147,7 +146,6 @@
 	. = ..()
 	reagents.add_reagent(REAGENT_ID_SLEEVINGCURE, 1)
 	color = reagents.get_color()
-*/ //CHOMPStation removal end
 
 /obj/item/reagent_containers/pill/airlock
 	name = "\'Airlock\' Pill"
