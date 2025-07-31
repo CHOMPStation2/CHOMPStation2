@@ -102,16 +102,9 @@
 	base_area = /area/space
 	base_turf = /turf/space
 
-/datum/shuttle/autodock/ferry/emergency
-	name = "Escape"
-	location = FERRY_LOCATION_OFFSITE
-	warmup_time = 10
+/datum/shuttle/autodock/ferry/emergency/escape
 	shuttle_area = /area/shuttle/escape/centcom
 	landmark_offsite = "escape_offsite"
-	landmark_station = "escape_station"
-	landmark_transition = "escape_transit"
-	docking_controller_tag = "escape_shuttle"
-	move_time = SHUTTLE_TRANSIT_DURATION_RETURN
 
 /obj/effect/shuttle_landmark/southern_cross/escape/offsite
 	name = "Centcom"
