@@ -12,9 +12,9 @@
 // This is for integration tests only.
 // Always add any new away missions/gateways/lateloaded maps that are not PoIs here.
 #ifdef AWAY_MISSION_TEST
-#include "overmap/space/fueldepot.dmm"
-#include "overmap/planets/thor/thor.dmm" //The datum is in southern_cross_defines.dm
-#include "overmap/planets/tyr/tyr.dmm"
+#include "../overmap/space/fueldepot.dmm"
+#include "../overmap/planets/thor/thor.dmm" //The datum is in southern_cross_defines.dm
+#include "../overmap/planets/tyr/tyr.dmm"
 #include "gateway/BaseBlep.dmm"
 #include "gateway/maddnesslab.dmm"
 #include "gateway/snowfield.dmm"
@@ -28,44 +28,44 @@
 /datum/map_template/common_lateload/gateway/snowfield_ch
 	name = Z_NAME_GATEWAY_SNOW_FIELD_CH
 	desc = "An old base in middle of snowy wasteland"
-	mappath = "modular_chomp/maps/southern_cross/submaps/gateway/snowfield.dmm"
+	mappath = "modular_chomp/maps/common_submaps/gateway/snowfield.dmm"
 
 #include "gateway/darkrps.dm"
 /datum/map_template/common_lateload/gateway/darkrps
 	name = Z_NAME_GATEWAY_ABANDONED_CITY_CH
 	desc = "An abandoned city overrun with piracy and mercernaries."
-	mappath = "modular_chomp/maps/southern_cross/submaps/gateway/darkrps.dmm"
+	mappath = "modular_chomp/maps/common_submaps/gateway/darkrps.dmm"
 
 #include "gateway/diescraper.dm"
 /datum/map_template/common_lateload/gateway/diescraper
 	name = Z_NAME_GATEWAY_SKYSCRAPER_CH
 	desc = "A skyscraper of various businesses, apartments, and recreations. Do not fall"
-	mappath = "modular_chomp/maps/southern_cross/submaps/gateway/diescraper.dmm"
+	mappath = "modular_chomp/maps/common_submaps/gateway/diescraper.dmm"
 
 #include "gateway/BaseBlep.dm"
 /datum/map_template/common_lateload/gateway/baseblep
 	name = Z_NAME_GATEWAY_BASE_BLEP_CH
 	desc = "A brand new but already lost base at the end of a squishy canyon"
 
-	mappath = "modular_chomp/maps/southern_cross/submaps/gateway/BaseBlep.dmm"
+	mappath = "modular_chomp/maps/common_submaps/gateway/BaseBlep.dmm"
 
 #include "gateway/maddnesslab.dm"
 /datum/map_template/common_lateload/gateway/maddnesslab
 	name = Z_NAME_GATEWAY_MADNESS_LAB_CH
 	desc = "An ancient base brimming with creations of maddness"
-	mappath = "modular_chomp/maps/southern_cross/submaps/gateway/maddnesslab.dmm"
+	mappath = "modular_chomp/maps/common_submaps/gateway/maddnesslab.dmm"
 
 #include "gateway/carpfarm.dm"
 /datum/map_template/common_lateload/gateway/carpfarm_ch
 	name = Z_NAME_GATEWAY_CARP_FARM_CH
 	desc = "Asteroid base surrounded by carp"
-	mappath = "modular_chomp/maps/southern_cross/submaps/gateway/carpfarm.dmm"
+	mappath = "modular_chomp/maps/common_submaps/gateway/carpfarm.dmm"
 /*
 #include "gateway/hiddeneclipse.dm"
 /datum/map_template/common_lateload/gateway/hiddeneclipse
 	name = Z_NAME_GATEWAY_HIDDEN_ECLIPSE_CH
 	desc = "Asteroid mining facility, lost to unknown horrors"
-	mappath = "modular_chomp/maps/southern_cross/submaps/gateway/hiddeneclipse.dmm"
+	mappath = "modular_chomp/maps/common_submaps/gateway/hiddeneclipse.dmm"
 */
 //VR maps go here, tell me if theres a better way to load this
 // #include "virtual_reality/constructVR.dm" Virtual Reality areas included by default.
@@ -73,7 +73,7 @@
 /datum/map_template/common_lateload/vr_world
 	name = Z_NAME_VR_WORLD_CH
 	desc = "A dynamic, virtual world."
-	mappath = "modular_chomp/maps/virtual_reality/constructVR.dmm" //Use modular
+	mappath = "modular_chomp/maps/common_submaps/virtual_reality/constructVR.dmm" //Use modular
 	associated_map_datum = /datum/map_z_level/common_lateload/vr_world
 
 /datum/map_z_level/common_lateload/vr_world
@@ -82,13 +82,13 @@
 /datum/map_template/common_lateload/thor
 	name = Z_NAME_PLANET_THOR_CH
 	desc = "The jungle like surface of Sif's moon"
-	mappath = "modular_chomp/maps/southern_cross/overmap/planets/thor/thor.dmm"
+	mappath = "modular_chomp/maps/common_submaps/overmap/planets/thor/thor.dmm"
 	associated_map_datum = /datum/planet/thor
 
 /datum/map_template/common_lateload/tyr
 	name = Z_NAME_PLANET_TYR_CH
 	desc = "An anomalous valley within tyr"
-	mappath = "modular_chomp/maps/southern_cross/overmap/planets/tyr/tyr.dmm"
+	mappath = "modular_chomp/maps/common_submaps/overmap/planets/tyr/tyr.dmm"
 	associated_map_datum = /datum/planet/tyr
 
 //////////////////////////////////////////////////////////////////////////////////////
