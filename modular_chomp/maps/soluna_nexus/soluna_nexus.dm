@@ -8,7 +8,6 @@
 	// Map specific
 	#include "../southern_cross/southern_cross_overrides.dm"
 	#include "soluna_nexus_areas.dm"
-	#include "soluna_nexus_presets.dm"
 	#include "soluna_nexus_shuttles.dm"
 	#include "../southern_cross/turfs/outdoors.dm"
 

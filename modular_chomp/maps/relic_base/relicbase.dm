@@ -9,7 +9,6 @@
 	#include "relicbase_overrides.dm"
 	#include "shuttles/crew_shuttles_ch.dm"
 	#include "relicbase_areas.dm"
-	#include "relicbase_presets.dm"
 	#include "turfs/outdoors.dm"
 	#include "relicbase_shuttles.dm"
 
