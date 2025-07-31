@@ -15,9 +15,6 @@
 #define Z_LEVEL_SC_TRANSIT					9
 #define Z_LEVEL_SC_SURFACE_WILD				10
 //#define Z_LEVEL_SC_SURFACE_VALLEY 			11 //CHOMpedit: Repalcing with Tyr
-#define Z_LEVEL_SC_VR_REALM					11
-#define Z_LEVEL_SC_JUNGLE					13
-#define Z_LEVEL_SC_DEATH_VALLEY				14
 #define Z_LEVEL_SC_GATEWAY					15
 
 // Soluna Nexus
@@ -31,9 +28,6 @@
 #define Z_LEVEL_SN_TRANSIT					8
 #define Z_LEVEL_SN_SURFACE_WILD				9
 //#define Z_LEVEL_SN_SURFACE_VALLEY 			10 Re comment once valley is added
-#define Z_LEVEL_SN_VR_REALM					10
-#define Z_LEVEL_SN_JUNGLE					12
-#define Z_LEVEL_SN_DEATH_VALLEY				13
 #define Z_LEVEL_SN_GATEWAY					14
 
 // Relic Base
@@ -55,11 +49,9 @@
 
 // Named Submaps
 #define Z_NAME_FUELDEPOT_CH					"Fueldepot CH"
-#define Z_NAME_TRANSIT_CH					"Transit CH"
-#define Z_NAME_MISC_CH						"Misc CH"
-#define Z_NAME_SURFACE_CH					"Surface CH"
-#define Z_NAME_SURFACE_MINE_CH				"Surface Mine CH"
-#define Z_NAME_SURFACE_WILD_CH				"Surface Wild CH"
+#define Z_NAME_VR_WORLD_CH					"VR World CH"
+#define Z_NAME_THOR							"Thor Surface CH"
+#define Z_NAME_TYR							"Desert Valley CH"
 
 // Camera Network Additions
 #define NETWORK_EXTERIOR "Exterior" // Exterior Cameras

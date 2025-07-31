@@ -91,41 +91,25 @@
 // #include "virtual_reality/constructVR.dm" Virtual Reality areas included by default.
 //#include "maps/virtual_reality/constructVR.dm" //Included in .dme
 /datum/map_template/sc_lateload/vr_world
-	name = "VR World"
+	name = Z_NAME_VR_WORLD_CH
 	desc = "A dynamic, virtual world."
 	mappath = "modular_chomp/maps/virtual_reality/constructVR.dmm" //Use modular
 	associated_map_datum = /datum/map_z_level/sc_lateload/vr_world
 
 /datum/map_z_level/sc_lateload/vr_world
 	name = "VR World"
-	z = Z_LEVEL_SC_VR_REALM
 
 /datum/map_template/sc_lateload/thor
-	name = "Thor Surface"
+	name = Z_NAME_THOR
 	desc = "The jungle like surface of Sif's moon"
 	mappath = "modular_chomp/maps/southern_cross/overmap/planets/thor/thor.dmm"
 	associated_map_datum = /datum/planet/thor
 
 /datum/map_template/sc_lateload/tyr
-	name = "Desert Valley"
+	name = Z_NAME_TYR
 	desc = "An anomalous valley within tyr"
 	mappath = "modular_chomp/maps/southern_cross/overmap/planets/tyr/tyr.dmm"
 	associated_map_datum = /datum/planet/tyr
-
-
-//Space submaps/sectors/POIs/whatever you wanna freaking call it, go here.
-/* Pretty sure we don't use this.
-#include "../../expedition_vr/space/_fueldepot.dm"
-/datum/map_template/sc_lateload/away_fueldepot
-	name = "Fuel Depot - Z1 Space"
-	desc = "An unmanned fuel depot floating in space."
-	mappath = "maps/expedition_vr/space/fueldepot.dmm"
-	associated_map_datum = /datum/map_z_level/sc_lateload/away_fueldepot
-
-/datum/map_z_level/sc_lateload/away_fueldepot
-	name = "Away Mission - Fuel Depot"
-	z = Z_LEVEL_FUELDEPOT
-*/
 
 //////////////////////////////////////////////////////////////////////////////////////
 // Code Shenanigans for lateload maps

@@ -88,7 +88,7 @@
 
 	// Framework for porting Tether's lateload Z-Level system
 	lateload_z_levels = list(
-			list("Fuel Depot - Z1 Space") //Stock lateload maps
+			list(Z_NAME_FUELDEPOT_CH) //Stock lateload maps
 			)
 
 	//CHOMPStation Edit Start  - Adds Virgo's gateways and comments the small ones

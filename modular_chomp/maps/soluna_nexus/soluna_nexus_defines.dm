@@ -96,10 +96,10 @@ but they don't actually change anything about the load order
 
 	// Framework for porting Tether's lateload Z-Level system //Stock lateload maps
 	lateload_z_levels = list(
-			list("VR World"),
-			list("Fuel Depot - Z1 Space"),
-			list("Thor Surface"),
-			list("Desert Valley")
+			list(Z_NAME_VR_WORLD_CH),
+			list(Z_NAME_FUELDEPOT_CH),
+			list(Z_NAME_THOR),
+			list(Z_NAME_TYR)
 			//list("Kara Aerostat - Z1 Aerostat"), //Remove Kara Z layers
 			//list("Kara - Z1 Northern Star") //Remove Kara Z layers
 			)
@@ -266,14 +266,12 @@ but they don't actually change anything about the load order
 
 //Thor Z-Level
 /datum/map_z_level/soluna_nexus/thor
-	z = Z_LEVEL_SN_JUNGLE
-	name = "Thor Surface"
+	name = Z_NAME_THOR
 	flags = MAP_LEVEL_PLAYER|MAP_LEVEL_SEALED
 	base_turf = /turf/simulated/floor/outdoors/rocks
 
 /datum/map_z_level/soluna_nexus/valley
-	z = Z_LEVEL_SN_DEATH_VALLEY
-	name = "Desert Valley"
+	name = Z_NAME_TYR
 	flags = MAP_LEVEL_PLAYER|MAP_LEVEL_SEALED
 	base_turf = /turf/simulated/floor/outdoors/rocks
 
