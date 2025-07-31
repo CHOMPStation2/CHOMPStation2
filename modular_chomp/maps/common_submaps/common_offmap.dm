@@ -12,77 +12,63 @@
 // This is for integration tests only.
 // Always add any new away missions/gateways/lateloaded maps that are not PoIs here.
 #ifdef AWAY_MISSION_TEST
-//#include "../overmap/planets/kara/aerostat/aerostat.dmm" //Disabled due to low usage
-//#include "../overmap/planets/kara/northern_star/northern_star_mine.dmm" //Disabled due to low usage
-#include "../overmap/space/fueldepot.dmm"
-#include "../overmap/planets/thor/thor.dmm" //The datum is in southern_cross_defines.dm
-#include "../overmap/planets/tyr/tyr.dmm"
+#include "overmap/space/fueldepot.dmm"
+#include "overmap/planets/thor/thor.dmm" //The datum is in southern_cross_defines.dm
+#include "overmap/planets/tyr/tyr.dmm"
 #include "gateway/BaseBlep.dmm"
 #include "gateway/maddnesslab.dmm"
 #include "gateway/snowfield.dmm"
-// #include "gateway/hiddeneclipse.dmm" //needs remaping and energy is low.
-#include "../../virtual_reality/constructVR.dmm"
+#include "virtual_reality/constructVR.dmm"
 #endif
 
 
 //////////////////////////////////////////////////////////////////////////////////////
-
 // Gateway submaps go here
-/datum/map_template/sc_lateload/gateway
-	name = "Gateway Submap"
-	desc = "Please do not use this."
-	mappath = null
-	associated_map_datum = null
-
-/datum/map_z_level/sc_lateload/gateway_destination
-	name = "Gateway Destination"
-	z = Z_LEVEL_SC_GATEWAY
-
 #include "gateway/snowfield_ch.dm" //CHOMPEDIT - Use the good one instead
-/datum/map_template/sc_lateload/gateway/snowfield
-	name = "Snow Field"
+/datum/map_template/common_lateload/gateway/snowfield_ch
+	name = Z_NAME_REDGATE_SNOW_FIELD_CH
 	desc = "An old base in middle of snowy wasteland"
 	mappath = "modular_chomp/maps/southern_cross/submaps/gateway/snowfield.dmm"
 
 #include "gateway/darkrps.dm"
-/datum/map_template/sc_lateload/gateway/darkrps
-	name = "Abandoned City"
+/datum/map_template/common_lateload/gateway/darkrps
+	name = Z_NAME_REDGATE_ABANDONED_CITY_CH
 	desc = "An abandoned city overrun with piracy and mercernaries."
 	mappath = "modular_chomp/maps/southern_cross/submaps/gateway/darkrps.dmm"
 	associated_map_datum = /datum/map_z_level/sc_lateload/gateway_destination
 
 #include "gateway/diescraper.dm"
-/datum/map_template/sc_lateload/gateway/diescraper
-	name = "Skyscraper"
+/datum/map_template/common_lateload/gateway/diescraper
+	name = Z_NAME_SKYSCRAPER_CH
 	desc = "A skyscraper of various businesses, apartments, and recreations. Do not fall"
 	mappath = "modular_chomp/maps/southern_cross/submaps/gateway/diescraper.dmm"
 	associated_map_datum = /datum/map_z_level/sc_lateload/gateway_destination
 
 #include "gateway/BaseBlep.dm"
-/datum/map_template/sc_lateload/gateway/baseblep
-	name = "Base Blep"
+/datum/map_template/common_lateload/gateway/baseblep
+	name = Z_NAME_GATEWAY_BASE_BLEP_CH
 	desc = "A brand new but already lost base at the end of a squishy canyon"
 
 	mappath = "modular_chomp/maps/southern_cross/submaps/gateway/BaseBlep.dmm"
 	associated_map_datum = /datum/map_z_level/sc_lateload/gateway_destination
 
 #include "gateway/maddnesslab.dm"
-/datum/map_template/sc_lateload/gateway/maddnesslab
-	name = "Maddness Lab"
+/datum/map_template/common_lateload/gateway/maddnesslab
+	name = Z_NAME_GATEWAY_MADNESS_LAB_CH
 	desc = "An ancient base brimming with creations of maddness"
 	mappath = "modular_chomp/maps/southern_cross/submaps/gateway/maddnesslab.dmm"
 	associated_map_datum = /datum/map_z_level/sc_lateload/gateway_destination
 
 #include "gateway/carpfarm.dm"
-/datum/map_template/sc_lateload/gateway/carpfarm
-	name = "Carp Farm"
+/datum/map_template/common_lateload/gateway/carpfarm
+	name = Z_NAME_GATEWAY_CARP_FARM_CH
 	desc = "Asteroid base surrounded by carp"
 	mappath = "modular_chomp/maps/southern_cross/submaps/gateway/carpfarm.dmm"
 	associated_map_datum = /datum/map_z_level/sc_lateload/gateway_destination
 /*
 #include "gateway/hiddeneclipse.dm"
-/datum/map_template/sc_lateload/gateway/hiddeneclipse
-	name = "Distant Mining Facility"
+/datum/map_template/common_lateload/gateway/hiddeneclipse
+	name = Z_NAME_GATEWAY_HIDDEN_ECLIPSE_CH
 	desc = "Asteroid mining facility, lost to unknown horrors"
 	mappath = "modular_chomp/maps/southern_cross/submaps/gateway/hiddeneclipse.dmm"
 	associated_map_datum = /datum/map_z_level/sc_lateload/gateway_destination
@@ -100,13 +86,13 @@
 	name = "VR World"
 
 /datum/map_template/sc_lateload/thor
-	name = Z_NAME_THOR
+	name = Z_NAME_PLANET_THOR
 	desc = "The jungle like surface of Sif's moon"
 	mappath = "modular_chomp/maps/southern_cross/overmap/planets/thor/thor.dmm"
 	associated_map_datum = /datum/planet/thor
 
 /datum/map_template/sc_lateload/tyr
-	name = Z_NAME_TYR
+	name = Z_NAME_PLANET_TYR
 	desc = "An anomalous valley within tyr"
 	mappath = "modular_chomp/maps/southern_cross/overmap/planets/tyr/tyr.dmm"
 	associated_map_datum = /datum/planet/tyr

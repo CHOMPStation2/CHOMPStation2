@@ -5322,6 +5322,7 @@
 #include "modular_chomp\maps\common_areas\station\storage.dm"
 #include "modular_chomp\maps\common_areas\station\syndicate.dm"
 #include "modular_chomp\maps\common_areas\station\turbolift.dm"
+#include "modular_chomp\maps\common_submaps\common_offmap.dm"
 #include "modular_chomp\maps\common_submaps\sif\sif_defines.dm"
 #include "modular_chomp\maps\common_submaps\thor\thor_defines.dm"
 #include "modular_chomp\maps\common_submaps\tyr\tyr_defines.dm"

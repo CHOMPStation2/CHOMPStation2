@@ -27,8 +27,6 @@
 		// #include "southern_cross-13.dmm" //Valley z11 seemingly. For stranger critters and POIs.
 	#endif
 
-	#include "submaps/_southern_cross_submaps.dm" //This contains VR world and gateway stuff
-
 	#define USING_MAP_DATUM /datum/map/southern_cross
 
 	// todo: map.dmm-s here

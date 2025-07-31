@@ -9,30 +9,24 @@
 #define Z_LEVEL_SC_STATION_TWO				3
 #define Z_LEVEL_SC_STATION_THREE			4
 
-// TODO move to name
-#define Z_LEVEL_SC_SURFACE					5
-#define Z_LEVEL_SC_SURFACE_MINE				6
-#define Z_LEVEL_SC_MISC						7 //Carrier, actually
-#define Z_LEVEL_SC_CENTCOM					8
-#define Z_LEVEL_SC_TRANSIT					9
-#define Z_LEVEL_SC_SURFACE_WILD				10
-//#define Z_LEVEL_SC_SURFACE_VALLEY 			11 //CHOMpedit: Repalcing with Tyr
-#define Z_LEVEL_SC_GATEWAY					15
+#define Z_NAME_SC_SURFACE					"Southern Cross - Surface"
+#define Z_NAME_SC_SURFACE_MINE				"Southern Cross - Surface Mines"
+#define Z_NAME_SC_MISC						"Southern Cross - Misc" // Aliased to Z_NAME_ALIAS_MISC
+#define Z_NAME_SC_CENTCOM					"Southern Cross - Central Command" // Aliased to Z_NAME_ALIAS_CENTCOM
+#define Z_NAME_SC_TRANSIT					"Southern Cross - Transit"
+#define Z_NAME_SC_SURFACE_WILD				"Southern Cross - Surface Wild"
 
 // Soluna Nexus
 #define Z_LEVEL_SN_STATION_ONE				1
 #define Z_LEVEL_SN_STATION_TWO				2
 #define Z_LEVEL_SN_STATION_THREE			3
 
-// TODO move to name
-#define Z_LEVEL_SN_SURFACE					4
-#define Z_LEVEL_SN_SURFACE_MINE				5
-#define Z_LEVEL_SN_MISC						6 //Carrier, actually
-#define Z_LEVEL_SN_CENTCOM					7
-#define Z_LEVEL_SN_TRANSIT					8
-#define Z_LEVEL_SN_SURFACE_WILD				9
-//#define Z_LEVEL_SN_SURFACE_VALLEY 			10 Re comment once valley is added
-#define Z_LEVEL_SN_GATEWAY					14
+#define Z_NAME_SN_SURFACE					"Soluna Nexus - Surface"
+#define Z_NAME_SN_SURFACE_MINE				"Soluna Nexus - Mines"
+#define Z_NAME_SN_MISC						"Soluna Nexus - Misc" // Aliased to Z_NAME_ALIAS_MISC
+#define Z_NAME_SN_CENTCOM					"Soluna Nexus - Central Command" // Aliased to Z_NAME_ALIAS_CENTCOM
+#define Z_NAME_SN_TRANSIT					"Soluna Nexus - Transit"
+#define Z_NAME_SN_SURFACE_WILD				"Soluna Nexus - Surface Wild"
 
 // Relic Base
 #define Z_LEVEL_RB_CATACOMBS				1
@@ -41,26 +35,29 @@
 #define Z_LEVEL_RB_UPPER_FLOORS				4
 #define Z_LEVEL_RB_THE_SKY					5
 
-
-// TODO move to name
-#define Z_LEVEL_RB_UNDERMINES				6
-#define Z_LEVEL_RB_SURFACE_WILDS			7
-#define Z_LEVEL_RB_WILDERNESS_SKY			8
-#define Z_LEVEL_RB_SURFACE_OCEAN			9
-#define Z_LEVEL_RB_SURFACE_MINES			10
-#define Z_LEVEL_RB_CARRIER 					11
-#define Z_LEVEL_RB_CENTCOM					12
-#define Z_LEVEL_RB_TRANSIT					13
-#define Z_LEVEL_RB_GATEWAY					15
-#define Z_LEVEL_RB_REDGATE					16
+#define Z_NAME_RB_UNDERMINES				"Relic Base - Undermines"
+#define Z_NAME_RB_SURFACE_WILDS				"Relic Base - Surface Wilds"
+#define Z_NAME_RB_WILDERNESS_SKY			"Relic Base - Wilderness Sky"
+#define Z_NAME_RB_SURFACE_OCEAN				"Relic Base - Surface Ocean"
+#define Z_NAME_RB_SURFACE_MINES				"Relic Base - Surface Mines"
+#define Z_NAME_RB_CARRIER 					"Relic Base - Misc" // Aliased to Z_NAME_ALIAS_MISC
+#define Z_NAME_RB_CENTCOM					"Relic Base - Central Command" // Aliased to Z_NAME_ALIAS_CENTCOM
+#define Z_NAME_RB_TRANSIT					"Relic Base - Transit"
 
 // Named Lateload Submaps
-#define Z_NAME_FUELDEPOT_CH					"Fueldepot CH"
-#define Z_NAME_VR_WORLD_CH					"VR World CH"
-#define Z_NAME_THOR							"Thor Surface CH"
-#define Z_NAME_TYR							"Desert Valley CH"
+#define Z_NAME_FUELDEPOT_CH					"Offmap - Fueldepot CH"
+#define Z_NAME_VR_WORLD_CH					"VR - VR World CH"
+#define Z_NAME_PLANET_THOR_CH				"Planet - Thor Surface CH"
+#define Z_NAME_PLANET_TYR_CH				"Planet - Desert Valley CH"
 
-// Todo Redgate maps
+// Gateways
+#define Z_NAME_GATEWAY_SNOW_FIELD_CH		"Gateway - Snow Field CH"
+#define Z_NAME_GATEWAY_ABANDONED_CITY_CH	"Gateway - Abandoned City CH"
+#define Z_NAME_GATEWAY_SKYSCRAPER_CH		"Gateway - Skyscraper CH"
+#define Z_NAME_GATEWAY_BASE_BLEP_CH			"Gateway - Base Blep CH"
+#define Z_NAME_GATEWAY_MADNESS_LAB_CH		"Gateway - Maddness Lab CH"
+#define Z_NAME_GATEWAY_CARP_FARM_CH			"Gateway - Carp Farm CH"
+#define Z_NAME_GATEWAY_HIDDEN_ECLIPSE_CH	"Gateway - Hidden Eclipse CH"
 
 // Camera Network Additions
 #define NETWORK_EXTERIOR "Exterior" // Exterior Cameras

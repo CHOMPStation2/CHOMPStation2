@@ -73,16 +73,16 @@
 	planet_datums_to_make = list(/datum/planet/thor) //This must be added to load maps at round start otherwise they will have weather or sun.
 
 	map_levels = list(
+			Z_LEVEL_RB_CATACOMBS,
 			Z_LEVEL_RB_UNDERGROUND,
 			Z_LEVEL_RB_SURFACE,
 			Z_LEVEL_RB_UPPER_FLOORS,
-			Z_LEVEL_RB_UNDERMINES,
-			Z_LEVEL_RB_SURFACE_WILDS,
-			Z_LEVEL_RB_SURFACE_MINES,
-			Z_LEVEL_RB_WILDERNESS_SKY,
-			Z_LEVEL_RB_SURFACE_OCEAN,
 			Z_LEVEL_RB_THE_SKY,
-			Z_LEVEL_RB_CATACOMBS
+			Z_NAME_RB_UNDERMINES,
+			Z_NAME_RB_SURFACE_WILDS,
+			Z_NAME_RB_WILDERNESS_SKY,
+			Z_NAME_RB_SURFACE_OCEAN,
+			Z_NAME_RB_SURFACE_MINES
 		)
 
 
@@ -91,36 +91,33 @@
 			list(Z_NAME_FUELDEPOT_CH) //Stock lateload maps
 			)
 
-	//CHOMPStation Edit Start  - Adds Virgo's gateways and comments the small ones
+	// Gateways
 	lateload_gateway = list(
-		// list("Gateway - Carp Farm"),
-		list("Gateway - Snow Field"),
-		// list("Gateway - Listening Post"),
-		list(list("Gateway - Honleth Highlands A", "Gateway - Honleth Highlands B")),
-		list("Gateway - Arynthi Lake Underground A","Gateway - Arynthi Lake A"),
-		list("Gateway - Arynthi Lake Underground B","Gateway - Arynthi Lake B"),
-		list("Gateway - Wild West"),
-		list("Maddness Lab"),
-		list("Gateway - Abandoned City"),
-		list("Distant Mining Facility")
-		) //TorchStation Edit
+		list(Z_NAME_GATEWAY_SNOW_FIELD_CH),
+		list(list(Z_NAME_GATEWAY_HONLETH_A, Z_NAME_GATEWAY_HONLETH_B)),
+		list(Z_NAME_GATEWAY_ARYNTHI_CAVE_A, Z_NAME_GATEWAY_ARYNTHI_A),
+		list(Z_NAME_GATEWAY_ARYNTHI_CAVE_B, Z_NAME_GATEWAY_ARYNTHI_B),
+		list(Z_NAME_GATEWAY_WILD_WEST),
+		list(Z_NAME_GATEWAY_MADNESS_LAB_CH),
+		list(Z_NAME_REDGATE_ABANDONED_CITY_CH)
+		)
 
 	lateload_gateway = null
 
 	lateload_redgate = list(
-		list("Redgate - Teppi Ranch"),
-		list("Redgate - Innland"),
-		list("Redgate - Dark Adventure"),
-		list("Redgate - Eggnog Town Underground","Redgate - Eggnog Town"),
-		list("Redgate - Star Dog"),
-		list("Redgate - Hotsprings"),
-		list("Redgate - Rain City"),
-		list("Redgate - Islands Underwater","Redgate - Islands"),
-		list("Redgate - Moving Train", "Redgate - Moving Train Upper Level"),
-		list("Redgate - Fantasy Dungeon", "Redgate - Fantasy Town"),
-		list("Redgate - Laserdome"),
-		list("Redgate - Cascading Falls"),
-		list("Redgate - Jungle Underground", "Redgate - Jungle")
+		list(Z_NAME_REDGATE_TEPPI_RANCH),
+		list(Z_NAME_REDGATE_INNLAND),
+		list(Z_NAME_REDGATE_DARK_ADVENTURE),
+		list(Z_NAME_REDGATE_EGGNOG_CAVE, Z_NAME_REDGATE_EGGNOG_TOWN),
+		list(Z_NAME_REDGATE_STAR_DOG),
+		list(Z_NAME_REDGATE_HOTSPRINGS),
+		list(Z_NAME_REDGATE_RAIN_CITY),
+		list(Z_NAME_REDGATE_ISLANDS_UNDERWATER, Z_NAME_REDGATE_ISLANDS),
+		list(Z_NAME_REDGATE_MOVING_TRAIN, Z_NAME_REDGATE_MOVING_TRAIN_UPPER),
+		list(Z_NAME_REDGATE_FANTASY_DUNGEON, Z_NAME_REDGATE_FANTASY_TOWN),
+		list(Z_NAME_REDGATE_LASERDOME),
+		list(Z_NAME_REDGATE_CASCADING_FALLS),
+		list(Z_NAME_REDGATE_JUNGLE_CAVE, Z_NAME_REDGATE_JUNGLE)
 		)
 
 

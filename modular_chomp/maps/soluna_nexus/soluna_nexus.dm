@@ -32,8 +32,6 @@
 	#endif
 //	#include "southern_cross-casino.dmm" //CHOMPedit: Disabled to save resources and loaded in during events - Jack
 
-	#include "../southern_cross/submaps/_southern_cross_submaps.dm" //This contains VR world and gateway stuff
-
 	#define USING_MAP_DATUM /datum/map/soluna_nexus
 
 	// todo: map.dmm-s here
