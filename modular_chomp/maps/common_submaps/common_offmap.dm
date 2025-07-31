@@ -21,6 +21,7 @@
 #include "virtual_reality/constructVR.dmm"
 #endif
 
+#include "fueldepot/fueldepot.dm"
 
 //////////////////////////////////////////////////////////////////////////////////////
 // Gateway submaps go here
