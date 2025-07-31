@@ -56,7 +56,7 @@
 	mappath = "modular_chomp/maps/southern_cross/submaps/gateway/maddnesslab.dmm"
 
 #include "gateway/carpfarm.dm"
-/datum/map_template/common_lateload/gateway/carpfarm
+/datum/map_template/common_lateload/gateway/carpfarm_ch
 	name = Z_NAME_GATEWAY_CARP_FARM_CH
 	desc = "Asteroid base surrounded by carp"
 	mappath = "modular_chomp/maps/southern_cross/submaps/gateway/carpfarm.dmm"
