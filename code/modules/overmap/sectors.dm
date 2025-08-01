@@ -109,6 +109,14 @@
 	//at the moment only used for the OM location renamer. Initializing here in case we want shuttles incl as well in future. Also proc definition convenience.
 	GLOB.visitable_overmap_object_instances += src
 
+	for(var/i in 1 to length(levels_for_distress))
+		var/current = levels_for_distress[i]
+		if(isnum(current))
+			continue
+		levels_for_distress[i] = GLOB.map_templates_loaded[current]
+	if(!levels_for_distress)
+		levels_for_distress = list(1)
+
 //To be used by GMs and calling through var edits for the overmap object
 //It causes the overmap object to "reinitialize" its real_appearance for known = FALSE objects
 //Includes an argument that allows GMs/Admins to set a previously known sector to unknown. Set to any value except 0/False/Null to activate
@@ -142,8 +150,17 @@
 /obj/effect/overmap/visitable/proc/find_z_levels()
 	if(!LAZYLEN(map_z)) // If map_z is already populated use it as-is, otherwise start with connected z-levels.
 		map_z = GetConnectedZlevels(z)
-	if(LAZYLEN(extra_z_levels))
-		map_z |= extra_z_levels
+
+	// extra_z_levels may need to be resolved
+	for(var/extra_z in extra_z_levels)
+		if(isnum(extra_z))
+			map_z |= extra_z
+			continue
+		var/resolved_z = GLOB.map_templates_loaded[extra_z]
+		if(resolved_z)
+			map_z |= resolved_z
+		else
+			admin_notice(span_danger("[src] could not find z_level [extra_z]!"), R_DEBUG)
 
 /obj/effect/overmap/visitable/proc/register_z_levels()
 	for(var/zlevel in map_z)
@@ -268,8 +285,6 @@
 	This message will repeat one time in 5 minutes. Thank you for your urgent assistance."
 	//CHOMPedit end
 
-	if(!levels_for_distress)
-		levels_for_distress = list(1)
 	for(var/zlevel in levels_for_distress)
 		priority_announcement.Announce(message, new_title = "Automated Distress Signal", new_sound = 'sound/AI/sos_ch.ogg', zlevel = zlevel) //CHOMPedit, changed sound
 

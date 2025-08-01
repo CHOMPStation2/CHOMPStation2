@@ -234,7 +234,6 @@
 	desc = "Miniature medical robots that swiftly restore bodily damage."
 	starts_with = list(/obj/item/reagent_containers/pill/healing_nanites = 14)
 
-/*CHOMPStation removal begin
 /obj/item/storage/pill_bottle/sleevingcure
 	name = "pill bottle (" + REAGENT_SLEEVINGCURE + ")"
 	desc = "A rare cure provided by Vey-Medical that helps counteract negative side effects of using imperfect resleeving machinery."
@@ -242,7 +241,6 @@
 
 /obj/item/storage/pill_bottle/sleevingcure/full
 	starts_with = list(/obj/item/reagent_containers/pill/sleevingcure = 14)
-*/ //CHOMPStation removal end
 
 /obj/item/storage/mrebag/pill
 	name = "vacuum-sealed pill"

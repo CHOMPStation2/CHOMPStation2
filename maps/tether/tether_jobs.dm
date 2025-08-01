@@ -1,5 +1,6 @@
 ///////////////////////////////////
 //// Talon Jobs
+/* CHOMPRemove Start
 /datum/department/talon
 	name = DEPARTMENT_TALON
 	short_name = "Talon"
@@ -168,6 +169,7 @@
 
 /datum/alt_title/talon_excavator
 	title = JOB_ALT_TALON_EXCAVATOR
+*/// CHMOMPRemove End
 
 //////////////////////TALON OUTFITS//////////////////////
 

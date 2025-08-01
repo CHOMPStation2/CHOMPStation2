@@ -207,7 +207,7 @@
 	)
 
 //CHOMPedit: Exploration outpost ambience. Current tracks taken from Rainworld and Natural Selection 2.
-#define AMBIENCE_EXPOUTPOST list(\
+#define AMBIENCE_OUTPOST list(\
 	'sound/ambience/expoutpost/expoutpost1.ogg',\
 	'sound/ambience/expoutpost/expoutpost2.ogg',\
 	'sound/ambience/expoutpost/expoutpost3.ogg',\

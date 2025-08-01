@@ -14,7 +14,7 @@
 	start_x  = 10
 	start_y  = 11
 
-/area/sc_away/fueldepot
+/area/tether_away/fueldepot
 	name = "Away Mission - Fuel Depot"
 	icon = 'icons/turf/areas_vr.dmi'
 	icon_state = "dark"
