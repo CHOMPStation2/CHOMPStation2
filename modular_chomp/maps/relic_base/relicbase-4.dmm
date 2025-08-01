@@ -3224,6 +3224,10 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
+/obj/effect/landmark{
+	name = "xeno_spawn";
+	pixel_x = -1
+	},
 /turf/simulated/floor/redgrid,
 /area/security/nuke_storage)
 "dfB" = (
@@ -23734,10 +23738,7 @@
 	},
 /area/surface/outpost/civilian/pool)
 "uKR" = (
-/obj/effect/landmark{
-	name = "xeno_spawn";
-	pixel_x = -1
-	},
+/obj/machinery/ore_silo,
 /turf/simulated/floor/bmarble,
 /area/security/nuke_storage)
 "uKV" = (

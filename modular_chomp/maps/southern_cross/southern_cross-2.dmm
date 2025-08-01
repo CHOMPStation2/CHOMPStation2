@@ -5999,6 +5999,10 @@
 	pixel_x = -1;
 	pixel_y = -1
 	},
+/obj/item/circuitboard/machine/ore_silo{
+	pixel_x = -2;
+	pixel_y = -5
+	},
 /turf/simulated/floor/tiled/dark,
 /area/storage/tech)
 "aFf" = (
@@ -24567,6 +24571,7 @@
 /area/hallway/secondary/firstdeck/research_access)
 "pDD" = (
 /obj/machinery/atmospherics/unary/vent_pump/on,
+/obj/machinery/ore_silo,
 /turf/simulated/floor/tiled/dark,
 /area/security/nuke_storage)
 "pEp" = (
@@ -29476,16 +29481,24 @@
 	pixel_x = 2;
 	pixel_y = 11
 	},
-/obj/item/circuitboard/rdserver{
-	pixel_x = 1;
-	pixel_y = 7
+/obj/item/circuitboard/machine/protolathe/department/engineering{
+	pixel_y = 7;
+	pixel_x = 1
 	},
-/obj/item/circuitboard/protolathe{
+/obj/item/circuitboard/machine/protolathe/department/medical{
 	pixel_y = 3
 	},
-/obj/item/circuitboard/destructive_analyzer{
+/obj/item/circuitboard/machine/protolathe/department/science{
 	pixel_x = -1;
 	pixel_y = -1
+	},
+/obj/item/circuitboard/machine/protolathe/department/security{
+	pixel_y = -5;
+	pixel_x = -2
+	},
+/obj/item/circuitboard/machine/protolathe/department/service{
+	pixel_x = -3;
+	pixel_y = -9
 	},
 /turf/simulated/floor/plating,
 /area/storage/tech)

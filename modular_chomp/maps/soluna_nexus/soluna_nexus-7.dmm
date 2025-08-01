@@ -6477,13 +6477,6 @@
 	},
 /turf/simulated/floor/tiled/steel_dirty,
 /area/shadekin)
-"fvD" = (
-/obj/machinery/r_n_d/server/centcom,
-/turf/unsimulated/floor{
-	dir = 5;
-	icon_state = "vault"
-	},
-/area/centcom/main_hall)
 "fvI" = (
 /obj/structure/table/reinforced,
 /obj/item/storage/firstaid/clotting{
@@ -15602,7 +15595,7 @@
 /turf/simulated/shuttle/wall/voidcraft/red,
 /area/shuttle/syndicate)
 "nhS" = (
-/obj/machinery/mecha_part_fabricator,
+/obj/machinery/mecha_part_fabricator_tg,
 /obj/machinery/status_display{
 	layer = 4;
 	pixel_y = 32
@@ -45960,7 +45953,7 @@ fgE
 hsZ
 nRK
 pnb
-fvD
+vut
 jSQ
 vFi
 vFi
