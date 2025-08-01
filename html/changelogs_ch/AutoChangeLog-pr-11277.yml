@@ -1,0 +1,6 @@
+author: "FluffMedic"
+delete-after: True
+changes:
+  - balance: "The doorway bosses to base Neon have a bit less HP."
+  - bugfix: "Tyr ants stop infighting"
+  - bugfix: "The Tyr precursor bosses first and second attacks function properly now"
