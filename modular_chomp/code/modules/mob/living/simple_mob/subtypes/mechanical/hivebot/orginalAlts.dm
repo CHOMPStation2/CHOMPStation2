@@ -70,7 +70,7 @@
 /mob/living/simple_mob/mechanical/mecha/eclipse/hivebot/tyr/proc/summon_janitor(atom/target, var/amount, var/next_cycle)
 	if(!target)
 		return
-	new /mob/living/simple_mob/mechanical/hivebot/tyr (src.loc)
+	new /mob/living/simple_mob/mechanical/hivebot/tyr(src.loc)
 	amount--
 	if(amount > 0)
 		addtimer(CALLBACK(src, PROC_REF(summon_janitor), target, amount, next_cycle), 0.5 SECONDS, TIMER_DELETE_ME)
