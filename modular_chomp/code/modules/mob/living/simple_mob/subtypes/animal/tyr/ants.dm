@@ -402,14 +402,14 @@ ANT STRUCTURES
 	/mob/living/simple_mob/animal/tyr/mineral_ants/verdantium,
 	/mob/living/simple_mob/animal/tyr/mineral_ants/tritium,
 	/mob/living/simple_mob/animal/tyr/mineral_ants/uranium)
-	faction = FACTION_TYR
+	faction = FACTION_TYR_ANT
 
 /obj/effect/ant_structure/webbarrier
 	name = "weblike barrier"
 	icon_state = "web"
 
 /obj/effect/ant_structure/webbarrier/CanPass(atom/movable/mover, turf/target)
-	if(istype(mover, /mob/living/simple_mob/animal/giant_spider))
+	if(istype(mover, /mob/living/simple_mob/animal/tyr/mineral_ants))
 		return TRUE
 	else if(istype(mover, /mob/living))
 		if(prob(80))
