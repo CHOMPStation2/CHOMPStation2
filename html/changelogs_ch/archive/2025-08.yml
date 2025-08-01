@@ -1,0 +1,4 @@
+2025-08-01:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: Fixes an error occuring when tgs is compiling the rust itself.
+  - image: Made the body scanner actually show an outline of the person inside it.
