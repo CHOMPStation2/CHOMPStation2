@@ -645,6 +645,22 @@
 	bullet_heck(target, -2, 4)
 	bullet_heck(target, -3, 4)
 	bullet_heck(target, -4, 4)
+	bullet_heck(target, -4, 3)
+	bullet_heck(target, -4, 2)
+	bullet_heck(target, -4, 1)
+	bullet_heck(target, -4, 0)
+	bullet_heck(target, -4, -1)
+	bullet_heck(target, -4, -2)
+	bullet_heck(target, -4, -3)
+	bullet_heck(target, -4, -4)
+
+
+
+
+
+
+
+
 
 /mob/living/simple_mob/mechanical/mecha/eclipse/proc/checker_board(atom/target, var/next_cycle)
 	bullet_heck(target, -1, 1)

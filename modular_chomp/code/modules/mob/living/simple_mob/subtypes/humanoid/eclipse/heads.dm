@@ -299,7 +299,7 @@
 		if(2)
 			new /mob/living/simple_mob/mechanical/hivebot/swarm/eclipse (src.loc)
 		if(3)
-			new /mob/living/simple_mob/mechanical/combat_drone/artillery
+			new /mob/living/simple_mob/mechanical/combat_drone/artillery (src.loc)
 	amount--
 	if(amount > 0)
 		addtimer(CALLBACK(src, PROC_REF(summon_drones), target, amount, fire_delay), fire_delay, TIMER_DELETE_ME)
