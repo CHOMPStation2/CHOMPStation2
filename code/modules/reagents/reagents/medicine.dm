@@ -327,18 +327,14 @@
 	reagent_state = LIQUID
 	color = "#8040FF"
 	scannable = 1
-<<<<<<< HEAD
-	//YW ADDITIONS START
-	overdose = REAGENTS_OVERDOSE * 4 //120 overdose
-/datum/reagent/tricordrazine/overdose(var/mob/living/carbon/M, var/alien)
-	..()
-	M.druggy = max(M.druggy, 5)
-	M.Confuse(5)
-	//YW ADDITIONS END
-=======
+	overdose = REAGENTS_OVERDOSE * 4 //YW EDIT - TRICORD FUCKING KILLS YOU
 	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
 	industrial_use = REFINERYEXPORT_REASON_DRUG
->>>>>>> f67d095338 (Reagent Refinery (#17955))
+
+/datum/reagent/tricordrazine/overdose(var/mob/living/carbon/M, var/alien) //YW EDIT START
+	..()
+	M.druggy = max(M.druggy, 5)
+	M.Confuse(5) //YW EDIT END
 
 /datum/reagent/tricordrazine/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(alien != IS_DIONA)

@@ -7,6 +7,15 @@
 		if(remaining_volume <= 0)
 			break
 
+		//CHOMPedit start
+		if(istype(O,/obj/item/stack/material/supermatter))
+			var/regrets = 0
+			for(var/obj/item/stack/material/supermatter/S in holdingitems)
+				regrets += S.get_amount()
+			puny_protons(regrets, R.my_atom, holdingitems)
+			return
+		//CHOMPedit end
+
 		if(GLOB.sheet_reagents[O.type])
 			var/obj/item/stack/stack = O
 			if(istype(stack))
@@ -53,3 +62,24 @@
 			qdel(O)
 
 	return (R.total_volume > start_volume)
+
+// CHOMPedit start: Repurposed coffee grinders and supermatter do not mix.
+/proc/puny_protons(regrets = 0, var/atom/our_atom, var/list/holdingitems)
+	our_atom.set_light(0)
+	if(regrets > 0) // If you thought grinding supermatter would end well. Values taken from ex_act() for the supermatter stacks.
+		SSradiation.radiate(get_turf(our_atom), 15 + regrets * 4)
+		explosion(get_turf(our_atom), round(regrets / 12) , round(regrets / 6), round(regrets / 3), round(regrets / 25))
+		qdel(our_atom)
+		return
+
+	else // If you added supermatter but didn't try grinding it, or somehow this is negative.
+		for(var/obj/item/stack/material/supermatter/S in holdingitems)
+			S.loc = our_atom.loc
+			holdingitems -= S
+			regrets += S.get_amount()
+		SSradiation.radiate(get_turf(our_atom), 15 + regrets)
+		our_atom.visible_message(span_warning("\The [our_atom] glows brightly, bursting into flames and flashing into ash."),\
+		span_warning("You hear an unearthly shriek, burning heat washing over you."))
+		new /obj/effect/decal/cleanable/ash(our_atom.loc)
+		qdel(our_atom)
+// CHOMPedit end

@@ -123,28 +123,6 @@
 /datum/element/sellable/vaccine/calculate_sell_value(obj/source)
 	return 5
 
-<<<<<<< HEAD
-//CHOMPEdit Start
-/datum/element/sellable/salvage //For selling /obj/item/salvage
-
-/datum/element/sellable/salvage/calculate_sell_value(obj/source)
-	var/obj/item/salvage/salvagedStuff = source
-	return salvagedStuff.worth
-
-/datum/element/sellable/organ //For selling /obj/item/organ/internal
-/datum/element/sellable/organ/calculate_sell_value(obj/source)
-	var/obj/item/organ/internal/organ_stuff = source
-	return organ_stuff.supply_conversion_value
-
-/datum/element/sellable/organ/sell_error(obj/source)
-	if(!istype(source.loc, /obj/structure/closet/crate/freezer))
-		return "Error: Product was improperly packaged. Send contents in freezer crate to preserve contents for transport."
-	var/obj/item/organ/internal/organ_stuff = source
-	if(organ_stuff.health != initial(organ_stuff.health) )
-		return "Error: Product was damaged on arrival."
-	return null
-//CHOMPEdit End
-=======
 
 // Refinery chemical tanks
 /datum/element/sellable/trolley_tank
@@ -194,4 +172,24 @@
 			else
 				GLOB.refined_chems_sold[R.industrial_use]["units"] += FLOOR(R.volume, 1)
 				GLOB.refined_chems_sold[R.industrial_use]["value"] += reagent_value
->>>>>>> f67d095338 (Reagent Refinery (#17955))
+
+//CHOMPEdit Start
+/datum/element/sellable/salvage //For selling /obj/item/salvage
+
+/datum/element/sellable/salvage/calculate_sell_value(obj/source)
+	var/obj/item/salvage/salvagedStuff = source
+	return salvagedStuff.worth
+
+/datum/element/sellable/organ //For selling /obj/item/organ/internal
+/datum/element/sellable/organ/calculate_sell_value(obj/source)
+	var/obj/item/organ/internal/organ_stuff = source
+	return organ_stuff.supply_conversion_value
+
+/datum/element/sellable/organ/sell_error(obj/source)
+	if(!istype(source.loc, /obj/structure/closet/crate/freezer))
+		return "Error: Product was improperly packaged. Send contents in freezer crate to preserve contents for transport."
+	var/obj/item/organ/internal/organ_stuff = source
+	if(organ_stuff.health != initial(organ_stuff.health) )
+		return "Error: Product was damaged on arrival."
+	return null
+//CHOMPEdit End

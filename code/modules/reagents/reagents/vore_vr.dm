@@ -138,12 +138,9 @@
 	description = "A base medical concoction, capable of rapidly altering genetic and physical structure of the body. Requires extra processing to allow for a targeted transformation."
 	reagent_state = LIQUID
 	color = "#AAAAAA"
-<<<<<<< HEAD
-=======
 	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
 	industrial_use = REFINERYEXPORT_REASON_MEDSCI
 
->>>>>>> f67d095338 (Reagent Refinery (#17955))
 /datum/reagent/androrovir
 	name = REAGENT_ANDROROVIR
 	id = REAGENT_ID_ANDROROVIR

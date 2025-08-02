@@ -8,6 +8,8 @@
 	taste_description = "this shouldn't be here" //unobtainable ingame
 	color = "#7F0000"
 	var/gender_change = null //set the gender variable here so we can set it to others in varients
+	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
+	industrial_use = REFINERYEXPORT_REASON_MEDSCI
 
 /datum/reagent/change_drug/male //inherits base chemical properties listed above
 	name = REAGENT_ANDROROVIR

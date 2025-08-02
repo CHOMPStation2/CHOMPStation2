@@ -283,18 +283,13 @@
 //not directly injected into the contents. It first calls touch, then the appropriate trans_to_*() or splash_mob().
 //If for some reason touch effects are bypassed (e.g. injecting stuff directly into a reagent container or person),
 //call the appropriate trans_to_*() proc.
-<<<<<<< HEAD
-/datum/reagents/proc/trans_to(var/atom/target, var/amount = 1, var/multiplier = 1, var/copy = 0)
+/datum/reagents/proc/trans_to(var/atom/target, var/amount = 1, var/multiplier = 1, var/copy = 0, var/force_open_container = FALSE)
 	//CHOMPEdit Start, do not splash brains!
 	if(ismob(target) && !isbrain(target))
 		return splash_mob(target, amount * multiplier, copy)
 	//CHOMPEdit End
 	touch(target, amount * multiplier) //First, handle mere touch effects
-=======
-/datum/reagents/proc/trans_to(var/atom/target, var/amount = 1, var/multiplier = 1, var/copy = 0, var/force_open_container = FALSE)
-	touch(target) //First, handle mere touch effects
 
->>>>>>> f67d095338 (Reagent Refinery (#17955))
 	if(ismob(target))
 		return splash_mob(target, amount * multiplier, copy) //Touch effects handled by splash_mob
 	if(isturf(target))
