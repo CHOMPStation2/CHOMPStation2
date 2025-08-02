@@ -83,6 +83,8 @@
 
 	glass_name = REAGENT_SLIMEDRINK
 	glass_desc = "Slime thats safe to drink (relatively)"
+	supply_conversion_value = REFINERYEXPORT_VALUE_COMMON
+	industrial_use = REFINERYEXPORT_REASON_FOOD
 
 /datum/reagent/drink/soda
 	ingest_met = REM * 5 //Makes it so soda metabolizes faster, since without this increase, the nutrients it currently gives does nothing. Also, metabolises faster then normal nutrients due to being soda.
