@@ -1,5 +1,4 @@
 /obj/machinery/reagentgrinder
-
 	name = "All-In-One Grinder"
 	desc = "Grinds stuff into itty bitty bits."
 	icon = 'icons/obj/kitchen.dmi'
@@ -205,6 +204,7 @@
 		inuse = 0
 
 	// Process.
+<<<<<<< HEAD
 	for (var/obj/item/O in holdingitems)
 		//CHOMPedit start
 		if(istype(O,/obj/item/stack/material/supermatter))
@@ -258,6 +258,9 @@
 				qdel(O)
 			if (beaker.reagents.total_volume >= beaker.reagents.maximum_volume)
 				break
+=======
+	grind_items_to_reagents(holdingitems,beaker.reagents)
+>>>>>>> f67d095338 (Reagent Refinery (#17955))
 
 /obj/machinery/reagentgrinder/proc/replace_beaker(mob/living/user, obj/item/reagent_containers/new_beaker)
 	if(!user)
