@@ -8,6 +8,9 @@
 	reagent_state = LIQUID
 	color = "#FF9999"
 	scannable = 1
+	supply_conversion_value = REFINERYEXPORT_VALUE_RARE
+	industrial_use = REFINERYEXPORT_REASON_DRUG
+
 
 /datum/reagent/aphrodisiac/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(!M)	return
@@ -22,6 +25,8 @@
 	reagent_state = LIQUID
 	color = "#10881A"
 	overdose = REAGENTS_OVERDOSE
+	supply_conversion_value = REFINERYEXPORT_VALUE_RARE
+	industrial_use = REFINERYEXPORT_REASON_ILLDRUG
 
 /datum/reagent/sorbitol/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	M.make_dizzy(1)
