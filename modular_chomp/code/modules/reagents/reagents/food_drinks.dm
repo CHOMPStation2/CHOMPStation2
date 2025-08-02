@@ -507,6 +507,8 @@
 
 	glass_name = "infused arachnid slammer"
 	glass_desc = "A pint of metabolized Arachnid Slammer. Even if its flat it still somehow foams and sparkles as well as bubbles more actively when spiders are nearby."
+	supply_conversion_value = EXPORT_VALUE_COMMON
+	industrial_use = EXPORT_REASON_FOOD
 
 /datum/reagent/infusedarachnidslammer/enragedarachnidslammer
 	name = REAGENT_ENRAGEDARACHNIDSLAMMER
@@ -516,6 +518,8 @@
 
 	glass_name = "enraged arachnid slammer"
 	glass_desc = "A pint of Enraged Arachnid Slammer. It bubbles and sparkles fiercly as if it was in a berserking state!"
+	supply_conversion_value = EXPORT_VALUE_COMMON
+	industrial_use = EXPORT_REASON_DRUG
 
 /datum/reagent/infusedarachnidslammer/enragedarachnidslammer/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	var/chem_effective = 1 * M.species.chem_strength_heal
@@ -693,3 +697,5 @@
 	description = "A dry mix for making delicious blondies."
 	reagent_state = SOLID
 	color = "#f3b44e"
+	supply_conversion_value = EXPORT_VALUE_COMMON
+	industrial_use = EXPORT_REASON_FOOD
