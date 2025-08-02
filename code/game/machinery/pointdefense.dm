@@ -13,9 +13,15 @@ GLOBAL_LIST_BOILERPLATE(pointdefense_turrets, /obj/machinery/pointdefense)
 	description_info = "To connect the mainframe to turrets, use a multitool to set the ident tag to that of the turrets."
 	icon = 'icons/obj/pointdefense.dmi'
 	icon_state = "control"
+<<<<<<< HEAD
 	power_channel = EQUIP // CHOMPStation Edit Starts
 	use_power = USE_POWER_ACTIVE
 	active_power_usage = 5 KILOWATTS // CHOMPStation Edit Ends
+=======
+	power_channel = EQUIP
+	use_power = USE_POWER_ACTIVE
+	active_power_usage = 5 KILOWATTS
+>>>>>>> 19eb84c107 (Point Defense Turret Adjustments (#18126))
 	density = TRUE
 	anchored = TRUE
 	circuit = /obj/item/circuitboard/pointdefense_control
@@ -77,7 +83,11 @@ GLOBAL_LIST_BOILERPLATE(pointdefense_turrets, /obj/machinery/pointdefense)
 	if(id_tag)
 		var/list/connected_z_levels = GetConnectedZlevels(get_z(src))
 		for(var/i = 1 to LAZYLEN(GLOB.pointdefense_turrets))
+<<<<<<< HEAD
 			var/obj/machinery/pointdefense/PD = GLOB.pointdefense_turrets[i] //CHOMPEDIT - Whatever this is, needs to be sent upstream. I stumbled upon this deconflicting and it was uncommented. Bad.
+=======
+			var/obj/machinery/pointdefense/PD = GLOB.pointdefense_turrets[i]
+>>>>>>> 19eb84c107 (Point Defense Turret Adjustments (#18126))
 			if(!(PD.id_tag == id_tag && (get_z(PD) in connected_z_levels)))
 				continue
 			var/list/turret = list()
@@ -118,7 +128,10 @@ GLOBAL_LIST_BOILERPLATE(pointdefense_turrets, /obj/machinery/pointdefense)
 // The acutal point defense battery
 //
 
+<<<<<<< HEAD
 // CHOMPStation Edits Begin: PD Turrets won't use power now, only the PD Control Mainframe. These edits go to the end of the file.
+=======
+>>>>>>> 19eb84c107 (Point Defense Turret Adjustments (#18126))
 /obj/machinery/pointdefense
 	name = "\improper point defense battery"
 	icon = 'icons/obj/pointdefense.dmi'
@@ -128,8 +141,11 @@ GLOBAL_LIST_BOILERPLATE(pointdefense_turrets, /obj/machinery/pointdefense)
 	density = TRUE
 	anchored = TRUE
 	circuit = /obj/item/circuitboard/pointdefense
+<<<<<<< HEAD
 	//idle_power_usage = 0.1 KILOWATTS // CHOMPStation Edit
 	//active_power_usage = 1 KILOWATTS // CHOMPStation Edit
+=======
+>>>>>>> 19eb84c107 (Point Defense Turret Adjustments (#18126))
 	appearance_flags = PIXEL_SCALE
 	var/active = TRUE
 	var/charge_cooldown = 1 SECOND  //time between it can fire at different targets
@@ -175,7 +191,7 @@ GLOBAL_LIST_BOILERPLATE(pointdefense_turrets, /obj/machinery/pointdefense)
 	if(W?.has_tool_quality(TOOL_MULTITOOL))
 		var/new_ident = tgui_input_text(user, "Enter a new ident tag.", "[src]", id_tag, MAX_NAME_LEN)
 		new_ident = sanitize(new_ident,MAX_NAME_LEN)
-		if(new_ident && new_ident != id_tag && user.Adjacent(src) && CanInteract(user, GLOB.tgui_physical_state))
+		if(new_ident && new_ident != id_tag && user.Adjacent(src))
 			to_chat(user, span_notice("You register [src] with the [new_ident] network."))
 			id_tag = new_ident
 		return
@@ -220,11 +236,19 @@ GLOBAL_LIST_BOILERPLATE(pointdefense_turrets, /obj/machinery/pointdefense)
 		return
 	//We throw a laser but it doesnt have to hit for meteor to explode
 	var/obj/item/projectile/beam/coildefense/coil = new(get_turf(src))
+<<<<<<< HEAD
 	playsound(src, fire_sounds, 75, 1, 40, pressure_affected = FALSE, ignore_walls = TRUE) // CHOMPEdit: Pew
 	use_power_oneoff(idle_power_usage * 10)
 	coil.launch_projectile(target = M.loc, user = src) // CHOMPEdit: Changing "beam" var to "coil" for the new coilgun type point defense turrets (to match the coilgun sprite and sfx names)
 	spawn(10)
 		playsound(src, fire_sounds, 75, 1, 40, pressure_affected = FALSE, ignore_walls = TRUE) // CHOMPEdit: Pew
+=======
+	playsound(src, fire_sounds, 75, 1, 40, pressure_affected = FALSE, ignore_walls = TRUE)
+	use_power_oneoff(idle_power_usage * 10)
+	coil.launch_projectile(target = M.loc, user = src)
+	spawn(10)
+		playsound(src, fire_sounds, 75, 1, 40, pressure_affected = FALSE, ignore_walls = TRUE)
+>>>>>>> 19eb84c107 (Point Defense Turret Adjustments (#18126))
 
 /obj/machinery/pointdefense/process()
 	..()
@@ -309,7 +333,10 @@ GLOBAL_LIST_BOILERPLATE(pointdefense_turrets, /obj/machinery/pointdefense)
 		return FALSE
 
 	playsound(src, 'sound/weapons/flash.ogg', 100, 0)
+<<<<<<< HEAD
 	//update_use_power(USE_POWER_IDLE)
+=======
+>>>>>>> 19eb84c107 (Point Defense Turret Adjustments (#18126))
 	active = TRUE
 	update_icon()
 	return TRUE
@@ -318,7 +345,10 @@ GLOBAL_LIST_BOILERPLATE(pointdefense_turrets, /obj/machinery/pointdefense)
 	if(!active)
 		return FALSE
 	playsound(src, 'sound/machines/apc_nopower.ogg', 50, 0)
+<<<<<<< HEAD
 	//update_use_power(USE_POWER_OFF)
+=======
+>>>>>>> 19eb84c107 (Point Defense Turret Adjustments (#18126))
 	active = FALSE
 	update_icon()
 	return TRUE
