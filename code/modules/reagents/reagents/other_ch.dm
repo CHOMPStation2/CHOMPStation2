@@ -17,8 +17,8 @@
 	var/spiders_min = 6
 	var/spiders_max = 24
 	var/spider_type = /obj/effect/spider/spiderling
-	supply_conversion_value = EXPORT_VALUE_NO
-	industrial_use = EXPORT_REASON_BIOHAZARD
+	supply_conversion_value = REFINERYEXPORT_VALUE_NO
+	industrial_use = REFINERYEXPORT_REASON_BIOHAZARD
 
 /datum/reagent/liquidspideregg/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(prob(1))
