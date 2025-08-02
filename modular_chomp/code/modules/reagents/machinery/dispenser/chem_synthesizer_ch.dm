@@ -1,8 +1,8 @@
 #define SYNTHESIZER_MAX_CARTRIDGES 40
 #define SYNTHESIZER_MAX_RECIPES 20
 #define SYNTHESIZER_MAX_QUEUE 40
-#define RECIPE_MAX_STRING 160
-#define RECIPE_MAX_STEPS 16
+#define RECIPE_MAX_STRING 240
+#define RECIPE_MAX_STEPS 20
 
 // Recipes are stored as a list which alternates between chemical id's and volumes to add, e.g. 1 = 'Carbon', 2 = 20, 3 = 'Silicon', 4 = 20
 /obj/machinery/chemical_synthesizer
@@ -484,7 +484,7 @@
 		to_chat(user, "Please provide a unique recipe name!")
 		return
 
-	var/steps = 2 * tgui_input_number(user, "How many steps does your recipe contain (16 max)?", "Steps", 1, RECIPE_MAX_STEPS, 1) // Round to get a whole integer, clamp to ensure proper range.
+	var/steps = 2 * tgui_input_number(user, "How many steps does your recipe contain ([RECIPE_MAX_STEPS] max)?", "Steps", 1, RECIPE_MAX_STEPS, 1) // Round to get a whole integer, clamp to ensure proper range.
 	if(!steps)
 		to_chat(user, "Please input a valid number of steps!")
 		return
