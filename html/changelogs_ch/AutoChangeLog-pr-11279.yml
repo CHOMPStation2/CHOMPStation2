@@ -1,4 +1,0 @@
-author: "CHOMPStation2StaffMirrorBot"
-delete-after: True
-changes:
-  - code_imp: "weak_reference added to blacklisted copyvars"
