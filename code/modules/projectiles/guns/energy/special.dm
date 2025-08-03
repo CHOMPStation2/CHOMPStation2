@@ -35,6 +35,7 @@
 /obj/item/gun/energy/decloner
 	name = "biological demolecularisor"
 	desc = "A gun that discharges high amounts of controlled radiation to slowly break a target into component elements."
+	icon = 'icons/obj/gun.dmi' // CHOMPEdit: Gun Sprites
 	icon_state = "decloner"
 	item_state = "decloner"
 	origin_tech = list(TECH_COMBAT = 5, TECH_MATERIAL = 4, TECH_POWER = 3)
@@ -173,6 +174,7 @@
 /obj/item/gun/energy/toxgun
 	name = "phoron pistol"
 	desc = "A specialized firearm designed to fire lethal bolts of phoron."
+	icon = 'icons/obj/gun.dmi'
 	icon_state = "toxgun"
 	w_class = ITEMSIZE_NORMAL
 	origin_tech = list(TECH_COMBAT = 5, TECH_PHORON = 4)

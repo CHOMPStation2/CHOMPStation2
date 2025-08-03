@@ -6134,7 +6134,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/expoutpost/eva)
 "fyp" = (
-/obj/machinery/r_n_d/protolathe,
+/obj/machinery/rnd/production/protolathe/department/science,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled,
 /area/expoutpost/rnd)
@@ -8248,7 +8248,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/expoutpost/engoffice)
 "hwZ" = (
-/obj/machinery/r_n_d/circuit_imprinter,
+/obj/machinery/rnd/production/circuit_imprinter,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/item/reagent_containers/glass/beaker/large,
 /turf/simulated/floor/tiled,
@@ -8421,16 +8421,12 @@
 /turf/simulated/floor/tiled,
 /area/expoutpost/explobriefroom)
 "hEI" = (
-/obj/machinery/computer/rdconsole/robotics{
-	dir = 8
-	},
 /obj/structure/reagent_dispensers/acid{
 	pixel_x = 30
 	},
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 4
 	},
-/obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled/milspec/raised,
 /area/expoutpost/rnd)
 "hEM" = (
@@ -16929,7 +16925,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/expoutpost/lowersternhallway)
 "oMc" = (
-/obj/machinery/mecha_part_fabricator,
+/obj/machinery/mecha_part_fabricator_tg,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled,
 /area/expoutpost/rnd)
@@ -19292,11 +19288,6 @@
 /obj/structure/railing,
 /turf/simulated/floor,
 /area/expoutpost/portuppermaint)
-"qWZ" = (
-/obj/machinery/r_n_d/destructive_analyzer,
-/obj/effect/floor_decal/industrial/outline/yellow,
-/turf/simulated/floor/tiled,
-/area/expoutpost/rnd)
 "qXk" = (
 /obj/effect/wingrille_spawn/reinforced/polarized{
 	id = "aeg_surgery_tint"
@@ -25629,7 +25620,7 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
-/obj/machinery/computer/rdconsole/core{
+/obj/machinery/computer/rdconsole_tg{
 	dir = 4
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
@@ -27695,7 +27686,7 @@
 /turf/simulated/floor,
 /area/expoutpost/portexplomaint)
 "xKO" = (
-/obj/machinery/mecha_part_fabricator/pros,
+/obj/machinery/mecha_part_fabricator_tg/prosthetics,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled,
 /area/expoutpost/rnd)
@@ -66390,7 +66381,7 @@ iNm
 gWG
 fyp
 kMk
-qWZ
+kMk
 sUH
 pcO
 uki

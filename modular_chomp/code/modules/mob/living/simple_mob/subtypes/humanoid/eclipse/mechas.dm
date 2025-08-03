@@ -53,6 +53,8 @@
 //This one however, is the simplest one, more meant as an intro
 /mob/living/simple_mob/mechanical/mecha/eclipse/antipersonal_unit //Melts folks with lasers
 	name = "Eclipse Expirmental Anti-Infantary Unit"
+	health = 400
+	maxHealth = 400
 	specialattackprojectile = /obj/item/projectile/energy/eclipse/lorge
 	armor = list(melee = 60, bullet = 60, laser = 60, energy = 60, bomb = 90, bio = 100, rad = 100)
 	icon_state = "orb"
@@ -435,7 +437,6 @@
 	wreckage = /obj/item/melee/energy/sword/top_shield
 	specialattackprojectile = /obj/item/projectile/energy/eclipse/chillingwind
 	desc = "It appears to be spinning at rapid speeds; enough to deflect projectiles. The air around it feels frigid.."
-	artidrop = /obj/item/material/barbedwire/vopal/active
 
 /mob/living/simple_mob/mechanical/mecha/eclipse/battle_top/do_special_attack(atom/A)
 	var/rng_cycle

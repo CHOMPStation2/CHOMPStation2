@@ -388,13 +388,6 @@
 /obj/effect/alien/weeds,
 /turf/simulated/floor/plating/turfpack/sif,
 /area/submap/XenoHive)
-"Hx" = (
-/obj/item/portable_destructive_analyzer,
-/obj/effect/alien/weeds,
-/turf/simulated/floor/outdoors/dirt/turfpack/sif{
-	outdoors = 0
-	},
-/area/submap/XenoHive)
 "Hz" = (
 /obj/effect/alien/weeds,
 /obj/structure/simple_door/resin,
@@ -653,7 +646,7 @@ sy
 xB
 xB
 Tv
-Hx
+rL
 dm
 Is
 xB

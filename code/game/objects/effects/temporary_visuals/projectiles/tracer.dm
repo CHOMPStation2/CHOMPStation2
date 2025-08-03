@@ -149,11 +149,8 @@
 	light_power = 1
 	light_color = "#ffffff"
 
-//CHOMPStation add coilgun pointdefense
 /obj/effect/projectile/tracer/coildefense
-	icon = 'icons/obj/projectiles_tracer_ch.dmi'
 	icon_state = "tracer_coildef"
 	light_range = 1
 	light_power = 2
 	light_color = "#FFFFFF"
-//CHOMPStation add end <3

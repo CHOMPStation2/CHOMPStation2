@@ -3,10 +3,8 @@
 /turf/simulated/shuttle/wall/voidcraft/survival/hard_corner,
 /area/survivalpod/superpose/SurvivalScienceV2)
 "b" = (
-/obj/machinery/mecha_part_fabricator{
-	req_access = null
-	},
 /obj/effect/floor_decal/industrial/outline/yellow,
+/obj/machinery/mecha_part_fabricator_tg,
 /turf/simulated/shuttle/floor/voidcraft/dark,
 /area/survivalpod/superpose/SurvivalScienceV2)
 "c" = (
@@ -93,7 +91,7 @@
 /obj/structure/window/reinforced/survival_pod{
 	dir = 1
 	},
-/obj/machinery/r_n_d/server/core,
+/obj/machinery/rnd/server/master,
 /obj/machinery/light{
 	dir = 4
 	},
@@ -109,7 +107,7 @@
 /turf/simulated/shuttle/plating,
 /area/survivalpod/superpose/SurvivalScienceV2)
 "j" = (
-/obj/machinery/r_n_d/circuit_imprinter,
+/obj/machinery/rnd/production/circuit_imprinter,
 /obj/item/reagent_containers/glass/beaker{
 	pixel_x = 9;
 	pixel_y = 8
@@ -144,10 +142,6 @@
 /turf/simulated/shuttle/floor/voidcraft/light,
 /area/survivalpod/superpose/SurvivalScienceV2)
 "m" = (
-/obj/machinery/computer/rdconsole/public{
-	dir = 4
-	},
-/obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/light{
 	dir = 8
 	},
@@ -160,7 +154,7 @@
 /turf/simulated/shuttle/wall/voidcraft/survival/hard_corner,
 /area/survivalpod/superpose/SurvivalScienceV2)
 "o" = (
-/obj/machinery/r_n_d/protolathe,
+/obj/machinery/rnd/production/protolathe/department/science,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/shuttle/floor/voidcraft/dark,
 /area/survivalpod/superpose/SurvivalScienceV2)
@@ -341,11 +335,9 @@
 /turf/simulated/shuttle/floor/voidcraft/light,
 /area/survivalpod/superpose/SurvivalScienceV2)
 "w" = (
-/obj/machinery/r_n_d/destructive_analyzer,
 /obj/structure/window/reinforced/survival_pod{
 	dir = 4
 	},
-/obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/shuttle/floor/voidcraft/dark,
 /area/survivalpod/superpose/SurvivalScienceV2)
 "x" = (
@@ -384,7 +376,7 @@
 /turf/simulated/shuttle/floor/voidcraft/dark,
 /area/survivalpod/superpose/SurvivalScienceV2)
 "B" = (
-/obj/machinery/mecha_part_fabricator/pros{
+/obj/machinery/mecha_part_fabricator_tg/prosthetics{
 	req_access = null
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
@@ -459,7 +451,7 @@
 /turf/simulated/shuttle/wall/voidcraft/survival/hard_corner,
 /area/survivalpod/superpose/SurvivalScienceV2)
 "M" = (
-/obj/machinery/r_n_d/server/robotics,
+/obj/machinery/rnd/server,
 /turf/simulated/floor/bluegrid{
 	name = "Server Base";
 	nitrogen = 500;

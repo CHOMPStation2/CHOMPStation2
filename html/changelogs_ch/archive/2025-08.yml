@@ -1,0 +1,50 @@
+2025-08-01:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: Fixes an error occuring when tgs is compiling the rust itself.
+  - image: Made the body scanner actually show an outline of the person inside it.
+2025-08-02:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: loadout system not working until you switch back and forth
+  - code_imp: weak_reference added to blacklisted copyvars
+  FluffMedic:
+  - balance: The doorway bosses to base Neon have a bit less HP.
+  - bugfix: Tyr ants stop infighting
+  - bugfix: The Tyr precursor bosses first and second attacks function properly now
+  ShadowLarkens:
+  - balance: Completely rewrote R&D to be made up of "techweb nodes" that you research
+      with experiments + passive point generation. This turns it from a question of
+      how to max all levels as fast as possible, to figuring out what paths you want
+      to go down and unlock with a time gate.
+2025-08-03:
+  CHOMPStation2StaffMirrorBot:
+  - qol: Added the ability to use "Transfer Liquids (Vore)" with prey inside of your
+      bellies.
+  - rscadd: Added ethanol as an option for liquid belly reagents.
+  - qol: Zorren now have the option to switch between light furred and dark furred
+      base sprites using "Custom Species Icon" in character setup. The now default
+      light furred sprite is very lightly shaded and mostly white, allowing it to
+      be easily customised for light coloured characters. The dark furred zorren option
+      is same as the old base sprite for those that want to preserve their original
+      sprites and shading. Thank you to tt2 for helping get this to work.
+  - bugfix: Fixed medical issues not proccing for species that can't be infected.
+  - bugfix: Fixed medical issues so that they can be cured by ingested reagents too.
+  - bugfix: admin ticket replies not being relayed to the chat
+  - code_imp: tgui-core 5.0.0
+  Kashargul:
+  - qol: Chem Synthesizer allows up to 240 characters and 20 steps to make up for
+      some more inhibitor changes on chems
+  Will:
+  - rscadd: Reagent refinery machines
+  - rscadd: Gas cracks for fracking that should be made into pois for caves. Deep
+      drills make them produce gas, fluid pumps get reagents.
+  - rscadd: Re-enabled old ores for future use with the refinery
+  - rscadd: '''Metallic'' shades of paint using titanium dioxide'
+  - rscadd: distillation reactions for making ink, to turn into paint
+  - rscadd: various distillation reactions for reagents previously inaccessible, or
+      only obtainable through other means
+  - rscadd: various "condensing" distillation reactions that turn atmo gas into reagents
+      using coolant
+  - refactor: Distillation reactions are now required to be done under specific atmospheres.
+      The original distillation reactions can be done under normal atmosphere.
+  - bugfix: add missing fluid pump research
+  - code_imp: Extended unit-test for reagents to respect new distillation

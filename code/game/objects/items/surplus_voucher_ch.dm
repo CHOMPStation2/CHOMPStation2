@@ -52,8 +52,7 @@
 	spawn_item(get_turf(src))
 
 /obj/item/surplus_voucher/eng/proc/spawn_item(var/turf/T)
-	var/path = pick(prob(2);/datum/design/item/powercell/high,
-					prob(2);/obj/item/storage/briefcase/inflatable,
+	var/path = pick(prob(2);/obj/item/storage/briefcase/inflatable,
 					prob(2);/obj/item/clamp,
 					prob(3);/obj/item/extinguisher,
 					prob(3);/obj/item/weldingtool/largetank,

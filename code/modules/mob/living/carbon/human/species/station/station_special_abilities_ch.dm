@@ -71,6 +71,8 @@ mob/living/carbon/proc/charmed() //TODO
 	color = "#8A0829"
 	scannable = 0
 	wiki_flag = WIKI_SPOILER
+	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
+	industrial_use = REFINERYEXPORT_REASON_MATSCI
 
 /datum/reagent/succubi_aphrodisiac/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(prob(3))
@@ -86,6 +88,8 @@ mob/living/carbon/proc/charmed() //TODO
 	metabolism = REM * 0.5
 	color = "#41029B"
 	scannable = 0
+	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
+	industrial_use = REFINERYEXPORT_REASON_MATSCI
 
 /datum/reagent/succubi_numbing/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 
@@ -104,6 +108,8 @@ mob/living/carbon/proc/charmed() //TODO
 	metabolism= REM * 0.5
 	color = "#41029B"
 	scannable = 0
+	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
+	industrial_use = REFINERYEXPORT_REASON_MATSCI
 
 /datum/reagent/succubi_paralize/affect_blood(var/mob/living/carbon/M, var/alien, var/removed) //will first keep it like that.  lets see what it changes. if nothing, than I will rework the effect again
 

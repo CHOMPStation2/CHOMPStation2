@@ -20,6 +20,8 @@ var/induromol_code = rand(1, 50)
 	name = REAGENT_MUTAGENX
 	description = "Seems as if it would induce instant, random mutations in a living humanoid"
 	color = "#20E7F5"
+	supply_conversion_value = REFINERYEXPORT_VALUE_COMMON
+	industrial_use = REFINERYEXPORT_REASON_MATSCI
 
 /datum/reagent/phororeagent/extreme_mutagen/on_mob_life(var/mob/living/M as mob)
 	spawn(20) //give time to inject entire syringe if wanted
@@ -76,6 +78,8 @@ var/induromol_code = rand(1, 50)
 	id = REAGENT_ID_GENEDRAZINE
 	name = REAGENT_GENEDRAZINE
 	description = "Seems as if it would heal very quickly, but at the cost of genetic damage"
+	supply_conversion_value = REFINERYEXPORT_VALUE_COMMON
+	industrial_use = REFINERYEXPORT_REASON_MATSCI
 
 /datum/reagent/phororeagent/genedrazine/on_mob_life(var/mob/living/M as mob, var/alien)
 	var/healedDamage = 0
@@ -533,6 +537,8 @@ var/induromol_code = rand(1, 50)
 	description = "Structure indicates it could purge living cells of non-essential reagents"
 	color = "#8C4C3E"
 	var/message_given = 0
+	supply_conversion_value = REFINERYEXPORT_VALUE_COMMON
+	industrial_use = REFINERYEXPORT_REASON_MATSCI
 
 /datum/reagent/phororeagent/expulsicol/on_mob_life(var/mob/living/M as mob, var/alien)
 	if(!message_given)
@@ -619,6 +625,8 @@ var/induromol_code = rand(1, 50)
 	name = REAGENT_SAPOFORMATOR
 	description = "Enough units splashed on the ground would appear to have great cleaning effects"
 	color = "#EEE139"
+	supply_conversion_value = REFINERYEXPORT_VALUE_COMMON
+	industrial_use = REFINERYEXPORT_REASON_MATSCI
 
 /datum/reagent/phororeagent/sapoformator/reaction_obj(var/obj/O, var/volume)
 	if(istype(O,/obj/effect/decal/cleanable))
@@ -833,6 +841,8 @@ var/induromol_code = rand(1, 50)
 	name = REAGENT_OBSCURITOL
 	description = "Exhibits strange electromagnetic properties"
 	color = "#5D505E"
+	supply_conversion_value = REFINERYEXPORT_VALUE_COMMON
+	industrial_use = REFINERYEXPORT_REASON_MATSCI
 
 /datum/reagent/phororeagent/obscuritol/initial_reaction(var/obj/item/reagent_containers/container, var/turf/T, var/volume, var/message)
 	var/obj/machinery/light/L
@@ -869,6 +879,8 @@ var/induromol_code = rand(1, 50)
 	color = "#540E5C"
 	metabolism = 5 * REM
 	overdose = 15
+	supply_conversion_value = REFINERYEXPORT_VALUE_COMMON
+	industrial_use = REFINERYEXPORT_REASON_MATSCI
 
 /datum/reagent/phororeagent/oxyphoromin/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	M.add_chemical_effect(CE_PAINKILLER, 600)
@@ -1141,6 +1153,8 @@ nocturnol //Should give night vision, does not seem to work using this method of
 	name = REAGENT_NOCTURNOL
 	description = "Reagent bears strong resemblance to enzymes found in feline eyes"
 	color = "#61E34F"
+	supply_conversion_value = REFINERYEXPORT_VALUE_COMMON
+	industrial_use = REFINERYEXPORT_REASON_MATSCI
 
 	on_mob_life(var/mob/living/M as mob, var/alien)
 		M.see_in_dark = 50

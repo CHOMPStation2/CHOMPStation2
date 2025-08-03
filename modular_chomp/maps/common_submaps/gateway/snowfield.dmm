@@ -2318,8 +2318,6 @@
 	dir = 8;
 	layer = 2.9
 	},
-/obj/item/circuitboard/destructive_analyzer,
-/obj/item/circuitboard/protolathe,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled/techfloor,
 /area/awaymission/snowfield/engineering/tech_storage)

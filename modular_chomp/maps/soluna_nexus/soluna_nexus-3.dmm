@@ -56813,10 +56813,6 @@
 "svw" = (
 /obj/effect/floor_decal/borderfloorblack,
 /obj/effect/floor_decal/corner/paleblue/border,
-/obj/machinery/computer/rdconsole/medical{
-	dir = 1
-	},
-/obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled/dark,
 /area/medical/Surgery_Storage)
 "svN" = (
@@ -69329,7 +69325,7 @@
 /obj/effect/floor_decal/corner/paleblue/border{
 	dir = 10
 	},
-/obj/machinery/r_n_d/protolathe/medical,
+/obj/machinery/rnd/production/protolathe/department/medical,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled/dark,
 /area/medical/Surgery_Storage)
