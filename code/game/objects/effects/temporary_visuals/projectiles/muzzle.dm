@@ -122,11 +122,8 @@
 	light_power = 1
 	light_color = "#ffffff"
 
-//CHOMPStation add coilgun pointdefense
 /obj/effect/projectile/muzzle/coildefense
-	icon = 'icons/obj/projectiles_muzzle_ch.dmi'
 	icon_state = "muzzle_coildef"
 	light_range = 3
 	light_power = 1
 	light_color = "#FFFFFF"
-//CHOMPStation add end <3
