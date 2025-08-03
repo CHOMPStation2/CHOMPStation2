@@ -110,18 +110,8 @@
 	light_power = 1
 	light_color = "#ffffff"
 
-<<<<<<< HEAD
-	//CHOMPStation add coilgun pointdefense
 /obj/effect/projectile/impact/coildefense
-	icon = 'icons/obj/projectiles_impact_ch.dmi'
-=======
-/obj/effect/projectile/impact/coildefense
->>>>>>> 19eb84c107 (Point Defense Turret Adjustments (#18126))
 	icon_state = "impact_coildef"
 	light_range = 2
 	light_power = 3
 	light_color = "#FFFFFF"
-<<<<<<< HEAD
-//CHOMPStation add end <3
-=======
->>>>>>> 19eb84c107 (Point Defense Turret Adjustments (#18126))
