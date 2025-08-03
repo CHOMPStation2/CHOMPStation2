@@ -5112,6 +5112,7 @@
 #include "modular_chomp\code\game\objects\structures\crate_lockers\largecrate.dm"
 #include "modular_chomp\code\game\turfs\simulated\alien.dm"
 #include "modular_chomp\code\game\turfs\simulated\blackholeturfs.dm"
+#include "modular_chomp\code\game\turfs\simulated\cetus.dm"
 #include "modular_chomp\code\game\turfs\simulated\shuttlewall_types.dm"
 #include "modular_chomp\code\game\turfs\simulated\shuttlewalls.dm"
 #include "modular_chomp\code\game\turfs\simulated\shuttlewalls_attacks.dm"

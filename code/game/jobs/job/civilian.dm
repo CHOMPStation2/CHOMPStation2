@@ -392,8 +392,8 @@
 	spawn_positions = 4
 	supervisors = "the " + JOB_HEAD_OF_PERSONNEL
 	selection_color = "#515151"
-	access = list()
-	minimal_access = list()
+	access = list(access_entertainment)
+	minimal_access = list(access_entertainment)
 	pto_type = PTO_CIVILIAN
 
 	outfit_type = /decl/hierarchy/outfit/job/assistant/entrepreneur
