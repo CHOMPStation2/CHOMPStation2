@@ -133,7 +133,7 @@
 				return
 
 			var/timeout = world.time + 600
-			var/reason = sanitize(tgui_input_text(user, "Reason:","Why do you require this item?",""))
+			var/reason = tgui_input_text(user, "Reason:","Why do you require this item?","", MAX_MESSAGE_LEN)
 			if(world.time > timeout)
 				to_chat(user, span_warning("Error. Request timed out."))
 				return
@@ -155,7 +155,7 @@
 			return
 
 		if(href_list["edit"])
-			var/new_val = sanitize(tgui_input_text(user, href_list["edit"], "Enter the new value for this field:", href_list["default"]))
+			var/new_val = tgui_input_text(user, href_list["edit"], "Enter the new value for this field:", href_list["default"], MAX_MESSAGE_LEN)
 			if(!new_val)
 				return
 
@@ -221,7 +221,7 @@
 			if(href_list["edit"])
 				var/field = tgui_alert(user, "Select which field to edit", "Field?", list("Name", "Quantity", "Value"))
 
-				var/new_val = sanitize(tgui_input_text(user, href_list["edit"], "Enter the new value for this field:", href_list["default"]))
+				var/new_val = tgui_input_text(user, href_list["edit"], "Enter the new value for this field:", href_list["default"])
 				if(!new_val)
 					return
 
@@ -244,7 +244,7 @@
 
 		// Else clause means they're editing/deleting the whole export report, rather than a specific item in it
 		else if(href_list["edit"])
-			var/new_val = sanitize(tgui_input_text(user, href_list["edit"], "Enter the new value for this field:", href_list["default"]))
+			var/new_val = tgui_input_text(user, href_list["edit"], "Enter the new value for this field:", href_list["default"])
 			if(!new_val)
 				return
 
@@ -291,7 +291,7 @@
 			post_status("alert", href_list["alert"])
 			internal_data["stat_display_special"] = href_list["alert"]
 		if("setmsg")
-			internal_data["stat_display_line[href_list["line"]]"] = reject_bad_text(sanitize(tgui_input_text(usr, "Line 1", "Enter Message Text", internal_data["stat_display_line[href_list["line"]]"], 40), 40), 40)
+			internal_data["stat_display_line[href_list["line"]]"] = reject_bad_text(tgui_input_text(usr, "Line 1", "Enter Message Text", internal_data["stat_display_line[href_list["line"]]"], 40), 40)
 		else
 			post_status(href_list["stat_display"])
 			internal_data["stat_display_special"] = href_list["stat_display"]
