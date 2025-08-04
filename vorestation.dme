@@ -3667,6 +3667,7 @@
 #include "code\modules\mob\living\simple_mob\subtypes\glamour\fluffball.dm"
 #include "code\modules\mob\living\simple_mob\subtypes\glamour\homunculus.dm"
 #include "code\modules\mob\living\simple_mob\subtypes\glamour\unicorn.dm"
+<<<<<<< HEAD
 #include "code\modules\mob\living\simple_mob\subtypes\horror\bradley.dm"
 #include "code\modules\mob\living\simple_mob\subtypes\horror\Eddy.dm"
 #include "code\modules\mob\living\simple_mob\subtypes\horror\horror .dm"
@@ -3678,6 +3679,9 @@
 #include "code\modules\mob\living\simple_mob\subtypes\horror\Steve.dm"
 #include "code\modules\mob\living\simple_mob\subtypes\horror\timling.dm"
 #include "code\modules\mob\living\simple_mob\subtypes\horror\Willy.dm"
+=======
+#include "code\modules\mob\living\simple_mob\subtypes\glamour\ysbryd.dm"
+>>>>>>> ec44f9afc8 (Invisibility GM tool and Glamour Mob (#18095))
 #include "code\modules\mob\living\simple_mob\subtypes\humanoid\clown.dm"
 #include "code\modules\mob\living\simple_mob\subtypes\humanoid\cultist_ch.dm"
 #include "code\modules\mob\living\simple_mob\subtypes\humanoid\humanoid.dm"
