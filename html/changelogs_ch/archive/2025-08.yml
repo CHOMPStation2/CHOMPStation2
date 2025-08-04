@@ -48,3 +48,15 @@
       The original distillation reactions can be done under normal atmosphere.
   - bugfix: add missing fluid pump research
   - code_imp: Extended unit-test for reagents to respect new distillation
+2025-08-04:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: Science can now make mop tech
+  - bugfix: Fixed Dark Furred Zorren not being able to use sprite accessories.
+  - sound: Point Defense Turrets now make sounds when they fire
+  - rscadd: Point Defense Turrets now have a new effect when they fire
+  - qol: Point defense turrets now only pull energy from the turret matrix.
+  - balance: Point defense turrets now turn slower. They can still hit meteors just
+      fine. Upgrading the turrets is also now more worthwhile!
+  - maptweak: Mappers no longer need to have cables running out to point turrets
+  - bugfix: fixes a bug where turrets could not be adjusted if they were in an unpowered
+      area
