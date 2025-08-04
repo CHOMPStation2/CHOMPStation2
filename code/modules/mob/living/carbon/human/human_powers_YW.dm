@@ -3,7 +3,7 @@
 	set desc = "Talk telepathically to someone over a distance."
 	set category = "Abilities.General" //CHOMPEdit
 
-	var/msg = sanitize(tgui_input_text(src, "Message:", "Project mind"))
+	var/msg = tgui_input_text(src, "Message:", "Project mind", max_length = MAX_MESSAGE_LEN)
 	if(msg)
 		var/mob/living/carbon/human/H = M
 		log_say("(GreyTP to [key_name(M)]) [msg]", src)
