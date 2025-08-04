@@ -18,6 +18,7 @@
 
 	var/savefile/F = new(NEWSFILE)
 	if(F)
+<<<<<<< HEAD
 		//ChompEDIT start - handle reads correctly
 		var/title
 		F["title"] >> title //This is done twice on purpose. For some reason BYOND misses the first read, if performed before the world starts
@@ -28,12 +29,17 @@
 		//ChompEDIT end
 
 		var/new_title = sanitize(tgui_input_text(src,"Write a good title for the news update.  Note: HTML is NOT supported.","Write News", title), extra = 0)
+=======
+		var/title = F["title"]
+		var/body = html2paper_markup(F["body"])
+		var/new_title = tgui_input_text(src,"Write a good title for the news update.  Note: HTML is NOT supported.","Write News", title, MAX_MESSAGE_LEN)
+>>>>>>> 39a0bcd60e (Encode changes (#18052))
 		if(!new_title)
 			return
-		var/new_body = sanitize(tgui_input_text(src,"Write the body of the news update here. Note: HTML is NOT supported, however paper markup is supported.  \n\
+		var/new_body = tgui_input_text(src,"Write the body of the news update here. Note: HTML is NOT supported, however paper markup is supported.  \n\
 		Hitting enter will automatically add a line break.  \n\
 		Valid markup includes: \[b\], \[i\], \[u\], \[large\], \[h1\], \[h2\], \[h3\]\ \[*\], \[hr\], \[small\], \[list\], \[table\], \[grid\], \
-		\[row\], \[cell\], \[logo\], \[sglogo\].","Write News", body, multiline = TRUE, prevent_enter = TRUE), extra = 0)
+		\[row\], \[cell\], \[logo\], \[sglogo\].","Write News", body, MAX_MESSAGE_LEN, TRUE, prevent_enter = TRUE)
 
 		new_body = paper_markup2html(new_body)
 
