@@ -153,7 +153,11 @@
 	if(choice)
 		var/obj/item/communicator/chosen_communicator = choice
 		var/mob/observer/dead/O = src
+<<<<<<< HEAD
 		var/text_message = sanitize(tgui_input_text(src, "What do you want the message to say?", multiline = TRUE))
+=======
+		var/text_message = sanitize(tgui_input_text(src, "What do you want the message to say?", encode = FALSE, multiline = TRUE), MAX_MESSAGE_LEN, FALSE, FALSE, TRUE)
+>>>>>>> 7afc661c59 (some oversights (#18157))
 		if(text_message && O.exonet)
 			O.exonet.send_message(chosen_communicator.exonet.address, "text", text_message)
 
