@@ -1,4 +1,3 @@
-//CHOMP Disabled in DME in favor of modular_chomp folder
 /obj/item/cell/spike
 	name = "modified power cell"
 	desc = "A modified power cell sitting in a highly conductive chassis."
