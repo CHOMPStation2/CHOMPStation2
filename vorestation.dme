@@ -2282,6 +2282,7 @@
 #include "code\modules\busy_space\organizations.dm"
 #include "code\modules\casino\boxes_casino.dm"
 #include "code\modules\casino\casino.dm"
+#include "code\modules\casino\casino_book.dm"
 #include "code\modules\casino\casino_prize_vendor.dm"
 #include "code\modules\casino\headset_casino.dm"
 #include "code\modules\casino\premium_vendors.dm"
