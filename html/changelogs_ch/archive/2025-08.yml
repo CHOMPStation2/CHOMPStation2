@@ -60,3 +60,59 @@
   - maptweak: Mappers no longer need to have cables running out to point turrets
   - bugfix: fixes a bug where turrets could not be adjusted if they were in an unpowered
       area
+2025-08-05:
+  CHOMPStation2StaffMirrorBot:
+  - rscadd: a circuit for honey_extractors in the Autolathe
+  - rscadd: A construction path for the Honey_extractor
+  - rscadd: A texture for when you open the panel.
+  - rscadd: A floral Disk able to be printed with the new way protalathes works.
+  - code_imp: made the honey_extractor anchorable.
+  - bugfix: "ensured the honey_extractor can\u2019t run when the maintenance panel\
+      \ is open."
+  - bugfix: "honey_extractor can now lose power and can\u2019t run when so."
+  - qol: 'honey_extractor will now use power 5*200watts for processing 1 honey_frame.
+
+      (can be easily changed if needed)'
+  - rscadd: appropriorate messages for the new states.
+  - rscadd: appropriorate icons and overlays for the new states.
+  - rscadd: Added a new plane for event use, with the intent of making it so that
+      only specific players can see things on it.
+  - rscadd: Added two new buttons to player effects, one to make something move to  the
+      new invisible plane and another to allow a player to see things on that plane.
+  - rscadd: Added a new mob that takes advantage of this new plane to be only visible
+      to one player at a time.
+  - qol: moves the vore examine messages into a dropdown, hiding them by default
+  - rscadd: Added a preset for glamour doors, tables and racks, for mapping purposes.
+  - bugfix: Infinite material glitch with autolathes
+  - bugfix: Everything using the old ExosuitFabricator's Material display, now uses
+      MaterialAccessBar
+  - rscdel: Research node announcements silenced.
+  - bugfix: Guaranteed-correct icons for every material, instead of best-guess.
+  - balance: Cells now spawn empty
+  - rscadd: Sheetsnatchers now dump happily into material storages
+  Diana:
+  - bugfix: you will no longer have to beat the snot out of a limb you want to fix
+      internal bleeding on with bicard or myelamine
+  Tost:
+  - bugfix: Bloodsucker hanners now get the right hunger alerts.
+  Will:
+  - bugfix: AI holograms will rotate to face toward where you click like most mobs
+      do.
+  - bugfix: Frost oil, plasticide and concrete no longer causes runtimes by producing
+      stacks of sheets with illegal quantities
+  - bugfix: Mobs that glow will hide their light while ventcrawling
+  - rscadd: If not hidden inside a container, tape recorders will make a click sound
+      when they stop recording
+  - bugfix: Sheets used in bags will no longer leave a lingering icon locked up on
+      the hud
+  - bugfix: Mobs dragged onto a operating table will be released from pulling, as
+      if they were buckled.
+  - bugfix: Phased shadekin and flying mobs no longer interact with water turfs
+  - bugfix: Shadekin no longer calculate turf slowdown while phased
+  - rscadd: Deep drill boreholes can be fracked with fluid pumps
+  - rscadd: More sheet types can be grinded
+  - rscadd: Refinery grinder can accept conveyor fed input
+  - rscadd: grinding rods, logs, and hulls
+  - bugfix: Reagent scanner can get the reagents inside refinery machines even if
+      they are sealed
+  - bugfix: Replacing a fluidpumps powercell now actually works
