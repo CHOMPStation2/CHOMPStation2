@@ -6,6 +6,7 @@
 	prereq_ids = list(TECHWEB_NODE_ROBOTICS)
 	design_ids = list(
 		"rigmodule_belt_basic",
+		"zero_rig_module",
 		"rig_device_pen",
 		"rig_device_paperdispenser",
 		// "suit_storage_unit",
@@ -55,6 +56,7 @@
 	description = "Medical RIGsuits for quick rescue purposes."
 	prereq_ids = list(TECHWEB_NODE_MOD_SUIT, TECHWEB_NODE_CHEM_SYNTHESIS)
 	design_ids = list(
+		"medical_rig_module",
 		"rig_component_chemicals",
 		"rig_defib", //CHOMPEDIT Add - Defibrillator RIG module
 		// "rig_component_rescuepharm", // CHOMPRenove Micro Mech
@@ -64,7 +66,8 @@
 		// "mod_organizer",
 		// "mod_patienttransport",
 	)
-	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_2_POINTS)
+	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_3_POINTS)
+	discount_experiments = list(/datum/experiment/scanning/points/basic_med_rig = TECHWEB_TIER_2_POINTS)
 	announce_channels = list(CHANNEL_SCIENCE, CHANNEL_MEDICAL)
 
 /datum/techweb_node/mod_engi
@@ -73,18 +76,21 @@
 	description = "Engineering suits, for powered engineers."
 	prereq_ids = list(TECHWEB_NODE_MOD_EQUIP)
 	design_ids = list(
+		"eva_rig_module",
 		"rig_device_rcd",
 		"rig_component_meson",
-		"rig_component_material",
 		"rig_component_radshield",
+		"rig_component_atmosshield",
 		"rig_component_aicontainer",
+		"rig_component_faradayshield",
 		// "mod_plating_engineering",
 		// "mod_t_ray",
 		// "mod_magboot",
 		// "mod_constructor",
 		// "mod_mister_atmos",
 	)
-	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_2_POINTS)
+	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_3_POINTS)
+	discount_experiments = list(/datum/experiment/scanning/points/basic_engi_rig = TECHWEB_TIER_2_POINTS)
 	announce_channels = list(CHANNEL_SCIENCE, CHANNEL_ENGINEERING)
 
 /datum/techweb_node/mod_security
@@ -93,6 +99,7 @@
 	description = "Security suits for space crime handling."
 	prereq_ids = list(TECHWEB_NODE_MOD_EQUIP)
 	design_ids = list(
+		"hazard_rig_module",
 		"rig_grenade_metalfoam",
 		"rig_grenade_flashbang",
 		"rig_grenade_cleanfoam",
@@ -101,7 +108,11 @@
 		"rig_component_voice",
 		"rig_gun_egun",
 		"rig_component_sprinter",
+<<<<<<< HEAD
 		"rig_gun_phase", //CHOMPEDIT Add - Phase guns
+=======
+		"rig_component_pat",
+>>>>>>> 0c7358369c (Science Expansion Pck-1: Hardsuits (#18123))
 		// "mod_mirage_grenade",
 		// "mod_plating_security",
 		// "mod_stealth",
@@ -112,7 +123,8 @@
 		// "mod_projectile_dampener",
 		// "mod_criminalcapture",
 	)
-	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_2_POINTS)
+	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_5_POINTS)
+	discount_experiments = list(/datum/experiment/scanning/points/basic_sec_rig = TECHWEB_TIER_2_POINTS)
 	announce_channels = list(CHANNEL_SCIENCE, CHANNEL_SECURITY)
 
 /datum/techweb_node/mod_engi_adv
@@ -121,16 +133,18 @@
 	description = "Advanced Engineering suits, for advanced powered engineers."
 	prereq_ids = list(TECHWEB_NODE_MOD_ENGI)
 	design_ids = list(
+		"advanced_eva_rig_module",
 		"rig_component_radshield_adv",
+		"rig_component_atmosshield_adv",
+		"rig_component_faradayshield_adv",
 		"rig_thrusters",
-		"rig_component_atmosshield",
 		// "mod_plating_atmospheric",
 		// "mod_jetpack",
 		// "mod_rad_protection",
 		// "mod_emp_shield",
 		// "mod_storage_expanded",
 	)
-	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_3_POINTS)
+	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_4_POINTS)
 	announce_channels = list(CHANNEL_SCIENCE, CHANNEL_ENGINEERING)
 
 /datum/techweb_node/mod_anomaly
@@ -139,15 +153,16 @@
 	description = "Modules for RIGsuits that are designed to research anomalies."
 	prereq_ids = list(TECHWEB_NODE_MOD_ENGI_ADV, TECHWEB_NODE_ANOMALY_RESEARCH)
 	design_ids = list(
+		"ami_rig_module",
 		"rig_component_teleport",
-		"rig_device_drill",
 		"rig_device_excdrill",
 		"rig_device_anomscanner",
-		"rig_device_orescanner",
 	)
-	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_4_POINTS)
+	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_5_POINTS)
+	discount_experiments = list(/datum/experiment/scanning/points/basic_sci_rig = TECHWEB_TIER_2_POINTS)
 	announce_channels = list(CHANNEL_SCIENCE)
 
+<<<<<<< HEAD
 /datum/techweb_node/mod_anomaly_suit //CHOMPEdit Start - Precursor suit
 	id = TECHWEB_NODE_MOD_ANOMALY_SUIT
 	display_name = "Anomalous RIG Suit"
@@ -158,3 +173,19 @@
 	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_5_POINTS)
 	announce_channels = list(CHANNEL_SCIENCE, CHANNEL_SECURITY) //CHOMPEdit End - Precursor suit
+=======
+/datum/techweb_node/mod_supply
+	id = TECHWEB_NODE_MOD_SUPPLY
+	display_name = "Industrial RIG Suit"
+	description = "Modules for RIGsuits that are designed to mine for ores."
+	prereq_ids = list(TECHWEB_NODE_MOD_ENGI_ADV, TECHWEB_NODE_MINING)
+	design_ids = list(
+		"industrial_rig_module",
+		"rig_device_drill",
+		"rig_device_orescanner",
+		"rig_component_material",
+	)
+	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_5_POINTS)
+	discount_experiments = list(/datum/experiment/scanning/points/basic_min_rig = TECHWEB_TIER_2_POINTS)
+	announce_channels = list(CHANNEL_SCIENCE, CHANNEL_SUPPLY)
+>>>>>>> 0c7358369c (Science Expansion Pck-1: Hardsuits (#18123))
