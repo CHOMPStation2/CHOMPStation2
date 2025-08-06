@@ -116,3 +116,23 @@
   - bugfix: Reagent scanner can get the reagents inside refinery machines even if
       they are sealed
   - bugfix: Replacing a fluidpumps powercell now actually works
+2025-08-06:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: Reagent hoses can only connect to one connector at a time
+  - bugfix: Refinery runtime when checking empty conveyors
+  - bugfix: Pain simulation now simulates traumatic shock
+  Diana:
+  - bugfix: Changelings will no longer suffer organ rejection upon transformation.
+  - rscadd: Changelings now have a new test to confirm if they are a changeling.
+  Will:
+  - rscadd: Ports an emote interaction
+  - code_imp: Scalpel uses a clamp_chance var instead of typechecking during surgery
+  - bugfix: smoke effects no longer choke you if you have the no breathing mutation
+  - bugfix: TODO - FIX ME, finally fixed. Cosmetic menus properly hides illegal cosmetics.
+  - bugfix: Admins removing the wizard antag role from someone now also removes their
+      spells
+  - rscadd: Cows can be milked with reagent hoses
+  - rscadd: Toilets can be used as reagent hose drains like sinks
+  - rscadd: Fence gates can be lockpicked
+  - bugfix: Borgs can open fence gates
+  - bugfix: Mapper anchored flashers start active when the round begins
