@@ -335,7 +335,6 @@
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_2_POINTS)
 	announce_channels = list(CHANNEL_ENGINEERING,CHANNEL_MEDICAL)
 
-<<<<<<< HEAD
 /datum/techweb_node/cells_empproof //CHOMPEdit Start - EMP proof cells and Recharging Cells and teleporter
 	id = TECHWEB_NODE_PARTS_EMP_PROOF
 	display_name = "EMP-Proof Parts"
@@ -371,7 +370,7 @@
 	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_3_POINTS)
 	announce_channels = list(CHANNEL_ENGINEERING) //CHOMPEdit End
-=======
+
 /datum/techweb_node/thermal_vision
 	id = TECHWEB_NODE_THERMAL_VISION
 	display_name = "Thermal Visor Technology"
@@ -414,4 +413,3 @@
 	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_4_POINTS)
 	announce_channels = list(CHANNEL_SECURITY, CHANNEL_SCIENCE)
->>>>>>> 0c7358369c (Science Expansion Pck-1: Hardsuits (#18123))

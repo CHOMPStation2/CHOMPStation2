@@ -33,7 +33,7 @@
 		"rig_device_flash",
 		"rig_device_plasmacutter",
 		"rig_device_healthanalyzer",
-		// "rig_gun_sizegun", // CHOMPRenove Micro Mech
+		"rig_gun_sizegun",
 		"rig_siphon",
 		"rig_component_datajack",
 		// "modlink_scryer",
@@ -59,7 +59,7 @@
 		"medical_rig_module",
 		"rig_component_chemicals",
 		"rig_defib", //CHOMPEDIT Add - Defibrillator RIG module
-		// "rig_component_rescuepharm", // CHOMPRenove Micro Mech
+		"rig_component_rescuepharm",
 		// "mod_plating_medical",
 		// "mod_quick_carry",
 		// "mod_injector",
@@ -108,11 +108,8 @@
 		"rig_component_voice",
 		"rig_gun_egun",
 		"rig_component_sprinter",
-<<<<<<< HEAD
 		"rig_gun_phase", //CHOMPEDIT Add - Phase guns
-=======
 		"rig_component_pat",
->>>>>>> 0c7358369c (Science Expansion Pck-1: Hardsuits (#18123))
 		// "mod_mirage_grenade",
 		// "mod_plating_security",
 		// "mod_stealth",
@@ -162,7 +159,6 @@
 	discount_experiments = list(/datum/experiment/scanning/points/basic_sci_rig = TECHWEB_TIER_2_POINTS)
 	announce_channels = list(CHANNEL_SCIENCE)
 
-<<<<<<< HEAD
 /datum/techweb_node/mod_anomaly_suit //CHOMPEdit Start - Precursor suit
 	id = TECHWEB_NODE_MOD_ANOMALY_SUIT
 	display_name = "Anomalous RIG Suit"
@@ -173,7 +169,7 @@
 	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_5_POINTS)
 	announce_channels = list(CHANNEL_SCIENCE, CHANNEL_SECURITY) //CHOMPEdit End - Precursor suit
-=======
+
 /datum/techweb_node/mod_supply
 	id = TECHWEB_NODE_MOD_SUPPLY
 	display_name = "Industrial RIG Suit"
@@ -188,4 +184,3 @@
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_5_POINTS)
 	discount_experiments = list(/datum/experiment/scanning/points/basic_min_rig = TECHWEB_TIER_2_POINTS)
 	announce_channels = list(CHANNEL_SCIENCE, CHANNEL_SUPPLY)
->>>>>>> 0c7358369c (Science Expansion Pck-1: Hardsuits (#18123))

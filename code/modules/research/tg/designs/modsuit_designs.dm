@@ -74,28 +74,6 @@
 		RND_CATEGORY_MODSUIT_MODULES
 	)
 
-<<<<<<< HEAD
-// /datum/design_techweb/mechfab/modsuit/rescuepharm
-// 	name = "hardsuit mounted rescue pharmacy"
-// 	desc = "A suit mounted rescue drug dispenser."
-// 	id = "rig_component_rescuepharm"
-// 	//req_tech = list(TECH_MATERIAL = 5, TECH_ENGINEERING = 5, TECH_MAGNET = 5, TECH_BIO = 4)
-// 	materials = list(MAT_PLASTEEL = 3000, MAT_GRAPHITE = 2000, MAT_PLASTIC = 3500, MAT_SILVER = 1750, MAT_GOLD = 1250)
-// 	build_path = /obj/item/rig_module/rescue_pharm
-// 	category = list(
-// 		RND_CATEGORY_MODSUIT_MODULES + RND_SUBCATEGORY_MODSUIT_MODULES_MEDICAL
-// 	)
-// 	departmental_flags = DEPARTMENT_BITFLAG_MEDICAL
-
-// /datum/design_techweb/mechfab/modsuit/mounted_sizegun
-// 	name = "hardsuit mounted size gun"
-// 	desc = "A suit mounted size gun. Features interface-based target size adjustment for hands-free size-altering shenanigans."
-// 	id = "rig_gun_sizegun"
-// 	//req_tech = list(TECH_COMBAT = 3, TECH_MATERIAL = 3, TECH_POWER = 2)
-// 	materials = list(MAT_STEEL = 3000, MAT_GLASS = 2000, MAT_URANIUM = 2000)
-// 	build_path = /obj/item/rig_module/mounted/sizegun
-// 	//Not giving this a department flag intentionally.
-=======
 /datum/design_techweb/mechfab/modsuit/rescuepharm
 	name = "hardsuit mounted rescue pharmacy"
 	desc = "A suit mounted rescue drug dispenser."
@@ -114,7 +92,7 @@
 	id = "rig_component_pat"
 	//req_tech = list(TECH_MATERIAL = 5, TECH_ENGINEERING = 5, TECH_MAGNET = 5, TECH_BIO = 4)
 	materials = list(MAT_PLASTEEL = 3000, MAT_GRAPHITE = 2000, MAT_SILVER = 1750, MAT_GOLD = 1250, MAT_OSMIUM = 2000)
-	build_path = /obj/item/rig_module/rescue_pharm
+	build_path = /obj/item/rig_module/pat_module
 	category = list(
 		RND_CATEGORY_MODSUIT_MODULES + RND_SUBCATEGORY_MODSUIT_MODULES_MEDICAL
 	)
@@ -128,7 +106,6 @@
 	materials = list(MAT_STEEL = 3000, MAT_GLASS = 2000, MAT_URANIUM = 2000)
 	build_path = /obj/item/rig_module/mounted/sizegun
 	//Not giving this a department flag intentionally.tIT
->>>>>>> 0c7358369c (Science Expansion Pck-1: Hardsuits (#18123))
 
 /datum/design_techweb/mechfab/modsuit/modules/jetpack
 	name = "hardsuit maneuvering jets"
