@@ -1175,13 +1175,9 @@
 /obj/structure/window/reinforced{
 	dir = 1
 	},
+/obj/structure/window/reinforced,
 /obj/structure/window/reinforced{
-	health = 1e+006;
-	req_access = list(5)
-	},
-/obj/structure/window/reinforced{
-	dir = 4;
-	health = 1e+006
+	dir = 4
 	},
 /turf/simulated/floor/tiled/milspec/raised,
 /area/sc_away/fueldepotspawn)
@@ -1534,20 +1530,20 @@
 	pixel_x = -8
 	},
 /obj/item/spaceflare{
-	pixel_y = 12;
-	pixel_x = 4
+	pixel_x = 4;
+	pixel_y = 12
 	},
 /obj/item/spaceflare{
-	pixel_y = 0;
-	pixel_x = 4
+	pixel_x = 4;
+	pixel_y = 0
 	},
 /obj/item/spaceflare{
-	pixel_y = 4;
-	pixel_x = 4
+	pixel_x = 4;
+	pixel_y = 4
 	},
 /obj/item/spaceflare{
-	pixel_y = 8;
-	pixel_x = 4
+	pixel_x = 4;
+	pixel_y = 8
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/sc_away/fueldepotspawn)
@@ -1788,8 +1784,8 @@
 	name = "JoinLateFuelDepot"
 	},
 /obj/machinery/power/apc{
-	dir = 4;
 	name = "east bump";
+	dir = 4;
 	pixel_x = 24
 	},
 /obj/structure/cable/green{
