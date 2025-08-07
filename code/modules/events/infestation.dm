@@ -98,8 +98,8 @@
 
 		if(VERM_MOTHROACH)
 			spawn_types = /mob/living/simple_mob/animal/passive/mothroach
-			prep_size_min = 1
-			prep_size_max = 3
+			min_number = 1 //CHOMP edit
+			max_number = 3 //CHOMP edit
 			vermstring = "mothroaches"
 	// Check if any landmarks exist!
 	/* //Chomp REMOVE - in upstream file, not used here
