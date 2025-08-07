@@ -76,8 +76,6 @@
 	var/list/spawn_types = list()
 	var/min_number //CHOMP Add
 	var/max_number
-=======
->>>>>>> ab48dd459c (Mothroaches <3 (#18169))
 	vermin = rand(0,2)
 	switch(vermin)
 		if(VERM_MICE)
