@@ -61,7 +61,7 @@ GLOBAL_LIST_EMPTY(station_waypoints) //Create global list for station waypoints,
 			Z_LEVEL_SN_STATION_ONE,
 			Z_LEVEL_SN_STATION_TWO,
 			Z_LEVEL_SN_STATION_THREE,
-			Z_NAME_SC_MISC)
+			GLOB.map_templates_loaded[Z_NAME_ALIAS_MISC])
 
 /obj/effect/overmap/visitable/sector/Soluna_Nexus/Crossed(var/atom/movable/AM)
 	. = ..()
@@ -145,7 +145,7 @@ GLOBAL_LIST_EMPTY(station_waypoints) //Create global list for station waypoints,
 			Z_LEVEL_SC_STATION_ONE,
 			Z_LEVEL_SC_STATION_TWO,
 			Z_LEVEL_SC_STATION_THREE,
-			Z_NAME_SC_MISC)
+			GLOB.map_templates_loaded[Z_NAME_ALIAS_MISC])
 
 /obj/effect/overmap/visitable/sector/Southern_Cross/Crossed(var/atom/movable/AM)
 	. = ..()
@@ -238,7 +238,7 @@ GLOBAL_LIST_EMPTY(station_waypoints) //Create global list for station waypoints,
 	. = ..()
 
 /obj/effect/overmap/visitable/planet/Thor/get_space_zlevels()
-	return list(Z_NAME_RB_CARRIER)
+	return list(GLOB.map_templates_loaded[Z_NAME_RB_CARRIER])
 
 /obj/effect/overmap/visitable/planet/Thor/Initialize(mapload)
 	. = ..()

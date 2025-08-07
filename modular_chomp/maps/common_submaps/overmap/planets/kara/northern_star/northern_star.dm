@@ -11,8 +11,9 @@
 
 /datum/map_template/common_lateload/northern_star/on_map_loaded(z)
 	. = ..()
-	new /datum/random_map/automata/cave_system/no_cracks(null, 1, 1, Z_LEVEL_NS_MINE, world.maxx, world.maxy) // Create caves.
-	new /datum/random_map/noise/ore(null, 1, 1, Z_LEVEL_NS_MINE, 64, 64)         // Create the mining ore distribution map.
+	var/ns_mine_z = GLOB.map_templates_loaded[Z_NAME_KARA_NSTAR_MINES_CH]
+	new /datum/random_map/automata/cave_system/no_cracks(null, 1, 1, ns_mine_z, world.maxx, world.maxy) // Create caves.
+	new /datum/random_map/noise/ore(null, 1, 1, ns_mine_z, 64, 64)         // Create the mining ore distribution map.
 
 // -- Overmap -- //
 //This is actually in kara.dm one folder back.
@@ -30,11 +31,12 @@
 	known = TRUE
 	start_x  = 14
 	start_y  = 14
-	extra_z_levels = list(Z_LEVEL_AEROSTAT) // Should inform the overmap that kara and NS are in the same sector despite being different locations.
+	extra_z_levels = list(Z_NAME_KARA_AEROSTAT_CH) // Should inform the overmap that kara and NS are in the same sector despite being different locations.
 	initial_generic_waypoints = list("northern_star_mine_dock", "northern_star_mine_echidna_dock") //northern_star.dm landmarks
+	map_z = list(Z_NAME_KARA_NSTAR_MINES_CH)
 
 /obj/effect/overmap/visitable/sector/northern_star_mines/get_space_zlevels()//These are the primary levels that our space station resides in. This also indicates what levels astronauts can drift into.
-	return list(Z_LEVEL_NS_MINE) //May add more later
+	return list(GLOB.map_templates_loaded[Z_NAME_KARA_NSTAR_MINES_CH]) //May add more later
 
 // -- Areas -- //
 
