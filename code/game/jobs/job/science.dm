@@ -27,13 +27,8 @@
 						access_explorer, access_pathfinder, access_xenobotany) //YW Edit access_gateway, _explorer, _pathfinder, and _xenobotany
 
 	minimum_character_age = 25
-<<<<<<< HEAD
 	minimal_player_age = 31 //ChompEDIT
-	min_age_by_species = list(SPECIES_UNATHI = 70, "mechanical" = 10, SPECIES_HUMAN_VATBORN = 14)
-=======
-	minimal_player_age = 14
 	min_age_by_species = list(SPECIES_UNATHI = 70, FBP_MECHANICAL = 10, SPECIES_HUMAN_VATBORN = 14)
->>>>>>> 811e20de12 (move fbp to defines (#18183))
 	ideal_character_age = 50
 	ideal_age_by_species = list(SPECIES_UNATHI = 140, FBP_MECHANICAL = 20, SPECIES_HUMAN_VATBORN = 20)
 	banned_job_species = list(SPECIES_TESHARI, SPECIES_DIONA, SPECIES_PROMETHEAN, SPECIES_ZADDAT, FBP_DIGITAL)
