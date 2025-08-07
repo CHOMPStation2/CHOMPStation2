@@ -458,13 +458,13 @@ var/list/channel_to_radio_key = list()
 		preference = sound_preference,
 	) //CHOMPEDIT - Ignore_walls set to TRUE and preference set to = sound_preference
 
-/mob/living/proc/blooploop(message, extrarange = 0, volume)
+/mob/living/proc/blooploop(message, extrarange = 0, volume, sound_preference = /datum/preference/toggle/say_sounds)
 	var/bloopers = min(round((LAZYLEN(message) / BLOOPER_SPEED)) + 1, BLOOPER_MAX_BLOOPERS)
 	var/total_delay
 	for(var/i in 1 to bloopers)
 		if(total_delay > BLOOPER_MAX_TIME)
 			break
-		addtimer(CALLBACK(src, PROC_REF(blooper), extrarange, volume), total_delay)
+		addtimer(CALLBACK(src, PROC_REF(blooper), extrarange, volume, sound_preference), total_delay)
 		total_delay += rand(\
 			DS2TICKS(BLOOPER_SPEED / BLOOPER_SPEED_BASELINE), \
 			DS2TICKS(BLOOPER_SPEED / BLOOPER_SPEED_BASELINE) + DS2TICKS(BLOOPER_SPEED / BLOOPER_SPEED_BASELINE)) TICKS
