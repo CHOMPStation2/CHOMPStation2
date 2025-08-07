@@ -269,7 +269,8 @@ GLOBAL_LIST_EMPTY(station_waypoints) //Create global list for station waypoints,
 		"wilderness_s",
 		"wilderness_se",
 		"wilderness_w",
-		"wilderness_n"
+		"wilderness_n",
+		"wilderness_outpost",
 		)
 
 	in_space = 0
