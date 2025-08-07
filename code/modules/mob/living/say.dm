@@ -424,13 +424,13 @@ var/list/channel_to_radio_key = list()
 		message = "([message_mode == "headset" ? "Common" : capitalize(message_mode)]) [message]" //Adds radio keys used if available
 	if(whispering)
 		if(do_sound && message)
-			blooploop(message, extrarange = -6, volume = 25, preference = /datum/preference/toggle/whisper_sounds) //CHOMPEdit - Use whisper sounds pref
+			blooploop(message, extrarange = -6, volume = 25)
 			// playsound(T, pick(voice_sounds_list), 25, TRUE, extrarange = -6, falloff = 1 , is_global = TRUE, frequency = voice_freq, ignore_walls = TRUE, preference = /datum/preference/toggle/whisper_sounds)	//CHOMPEdit - Use say sound prefs
 
 		log_whisper(message, src)
 	else
 		if(do_sound && message)
-			blooploop(message, volume = 75, ignore_walls = TRUE) //Voices ignore walls
+			blooploop(message, volume = 75)
 			// playsound(T, pick(voice_sounds_list), 75, TRUE, falloff = 1 , is_global = TRUE, frequency = voice_freq, ignore_walls = TRUE, preference = /datum/preference/toggle/say_sounds)
 		log_say(message, src)
 	return 1
@@ -454,9 +454,9 @@ var/list/channel_to_radio_key = list()
 		falloff = 1,\
 		is_global = TRUE,\
 		frequency = voice_freq > 0 ? voice_freq : null,\
-		ignore_walls = FALSE,\
+		ignore_walls = TRUE,\
 		preference = /datum/preference/toggle/say_sounds,
-	)
+	) //CHOMPEDIT - Ignore_walls set to TRUE
 
 /mob/living/proc/blooploop(message, extrarange = 0, volume)
 	var/bloopers = min(round((LAZYLEN(message) / BLOOPER_SPEED)) + 1, BLOOPER_MAX_BLOOPERS)
