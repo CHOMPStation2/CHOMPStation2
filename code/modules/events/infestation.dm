@@ -13,7 +13,11 @@
 
 #define VERM_MICE 0
 #define VERM_LIZARDS 1
+<<<<<<< HEAD
 #define VERM_SPIDERS 2
+=======
+#define VERM_MOTHROACH 2
+>>>>>>> ab48dd459c (Mothroaches <3 (#18169))
 
 /datum/event/infestation
 	announceWhen = 10
@@ -24,6 +28,7 @@
 	var/vermstring
 
 /datum/event/infestation/start()
+<<<<<<< HEAD
 //CHOMP Edit changed for Southern Cross areas
 	location = rand(0,9)
 	var/list/turf/simulated/floor/turfs = list()
@@ -75,6 +80,8 @@
 	var/list/spawn_types = list()
 	var/min_number //CHOMP Add
 	var/max_number
+=======
+>>>>>>> ab48dd459c (Mothroaches <3 (#18169))
 	vermin = rand(0,2)
 	switch(vermin)
 		if(VERM_MICE)
@@ -87,6 +94,7 @@
 			min_number = 2 //CHOMP Add
 			max_number = 6
 			vermstring = "lizards"
+<<<<<<< HEAD
 
 		// ChompEDIT Begin
 		if(VERM_SPIDERS)
@@ -96,6 +104,13 @@
 			vermstring = "spiders"
 
 	/* //Chomp REMOVE - in upstream file, not used here
+=======
+		if(VERM_MOTHROACH)
+			spawn_types = /mob/living/simple_mob/animal/passive/mothroach
+			prep_size_min = 1
+			prep_size_max = 3
+			vermstring = "mothroaches"
+>>>>>>> ab48dd459c (Mothroaches <3 (#18169))
 	// Check if any landmarks exist!
 	for(var/obj/effect/landmark/C in GLOB.landmarks_list)
 		if(C.name == "verminstart")
@@ -171,4 +186,8 @@
 
 #undef VERM_MICE
 #undef VERM_LIZARDS
+<<<<<<< HEAD
 #undef VERM_SPIDERS // Chomp EDIT
+=======
+#undef VERM_MOTHROACH
+>>>>>>> ab48dd459c (Mothroaches <3 (#18169))
