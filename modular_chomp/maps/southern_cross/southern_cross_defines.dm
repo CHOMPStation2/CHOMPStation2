@@ -110,16 +110,16 @@
 	// First, place a bunch of submaps. This comes before tunnel/forest generation as to not interfere with the submap.(This controls POI limit generation, increase or lower its values to have more or less POI's)
 
 	// Cave submaps are first.
-	var/surface_mine_z = GLOB.map_templates_loaded[Z_NAME_SC_SURFACE_MINE]
+	var/surface_mine_z = GLOB.map_templates_loaded[Z_NAME_ALIAS_SURFACE_MINES]
 	seed_submaps(list(surface_mine_z), 140, /area/surface/cave/unexplored/normal, /datum/map_template/surface/mountains/normal)  //CHOMPEdit bumped up from 60 to 80
 	seed_submaps(list(surface_mine_z), 140, /area/surface/cave/unexplored/deep, /datum/map_template/surface/mountains/deep)  //CHOMPEdit bumped up from 60 to 80
 
 	// Plains to make them less plain.
-	var/surface_z = GLOB.map_templates_loaded[Z_NAME_SC_SURFACE]
+	var/surface_z = GLOB.map_templates_loaded[Z_NAME_ALIAS_SURFACE]
 	seed_submaps(list(surface_z), 220, /area/surface/outside/plains/normal, /datum/map_template/surface/plains) // Center area is WIP until map editing settles down.  //CHOMPEdit bumped up from 80 to 140
 
 	// Wilderness is next.
-	var/surface_wild_z = GLOB.map_templates_loaded[Z_NAME_SC_SURFACE_WILD]
+	var/surface_wild_z = GLOB.map_templates_loaded[Z_NAME_ALIAS_SURFACE_WILDS]
 	seed_submaps(list(surface_wild_z), 240, /area/surface/outside/wilderness/normal, /datum/map_template/surface/wilderness/normal)  //CHOMPEdit bumped up from 60 to 150
 	seed_submaps(list(surface_wild_z), 240, /area/surface/outside/wilderness/deep, /datum/map_template/surface/wilderness/deep)  //CHOMPEdit bumped up from 60 to 150
 	// If Space submaps are made, add a line to make them here as well.
@@ -210,6 +210,7 @@
 
 /datum/map_template/southern_cross_lateload/surface
 	name = Z_NAME_SC_SURFACE
+	name_alias = Z_NAME_ALIAS_SURFACE
 	mappath = "modular_chomp/maps/southern_cross/southern_cross-5.dmm"
 	associated_map_datum = /datum/map_z_level/southern_cross_lateload/surface
 
@@ -221,6 +222,7 @@
 
 /datum/map_template/southern_cross_lateload/surface_mine
 	name = Z_NAME_SC_SURFACE_MINE
+	name_alias = Z_NAME_ALIAS_SURFACE_MINES
 	mappath = "modular_chomp/maps/southern_cross/southern_cross-6.dmm"
 	associated_map_datum = /datum/map_z_level/southern_cross_lateload/surface_mine
 
@@ -232,6 +234,7 @@
 
 /datum/map_template/southern_cross_lateload/surface_wild
 	name = Z_NAME_SC_SURFACE_WILD
+	name_alias = Z_NAME_ALIAS_SURFACE_WILDS
 	mappath = "modular_chomp/maps/southern_cross/southern_cross-10.dmm"
 	associated_map_datum = /datum/map_z_level/southern_cross_lateload/surface_wild
 

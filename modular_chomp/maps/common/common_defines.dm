@@ -9,9 +9,9 @@
 #define Z_LEVEL_SC_STATION_TWO				3
 #define Z_LEVEL_SC_STATION_THREE			4
 
-#define Z_NAME_SC_SURFACE					"Southern Cross - Surface"
-#define Z_NAME_SC_SURFACE_MINE				"Southern Cross - Surface Mines"
-#define Z_NAME_SC_SURFACE_WILD				"Southern Cross - Surface Wild"
+#define Z_NAME_SC_SURFACE					"Southern Cross - Surface" // Aliased to Z_NAME_ALIAS_SURFACE
+#define Z_NAME_SC_SURFACE_MINE				"Southern Cross - Surface Mines" // Aliased to Z_NAME_ALIAS_SURFACE_MINES
+#define Z_NAME_SC_SURFACE_WILD				"Southern Cross - Surface Wild" // Aliased to Z_NAME_ALIAS_SURFACE_WILDS
 #define Z_NAME_SC_MISC						"Southern Cross - Misc" // Aliased to Z_NAME_ALIAS_MISC
 #define Z_NAME_SC_CENTCOM					"Southern Cross - Central Command" // Aliased to Z_NAME_ALIAS_CENTCOM
 #define Z_NAME_SC_TRANSIT					"Southern Cross - Transit"
@@ -33,10 +33,10 @@
 #define Z_LEVEL_RB_THE_SKY					5
 
 #define Z_NAME_RB_UNDERMINES				"Relic Base - Undermines"
-#define Z_NAME_RB_SURFACE_WILDS				"Relic Base - Surface Wilds"
+#define Z_NAME_RB_SURFACE_WILDS				"Relic Base - Surface Wilds" // Aliased to Z_NAME_ALIAS_SURFACE_WILDS
 #define Z_NAME_RB_WILDERNESS_SKY			"Relic Base - Wilderness Sky"
-#define Z_NAME_RB_SURFACE_OCEAN				"Relic Base - Surface Ocean"
-#define Z_NAME_RB_SURFACE_MINES				"Relic Base - Surface Mines"
+#define Z_NAME_RB_SURFACE_OCEAN				"Relic Base - Surface Ocean" // Aliased to Z_NAME_ALIAS_SURFACE
+#define Z_NAME_RB_SURFACE_MINES				"Relic Base - Surface Mines" // Aliased to Z_NAME_ALIAS_SURFACE_MINES
 #define Z_NAME_RB_CARRIER 					"Relic Base - Misc" // Aliased to Z_NAME_ALIAS_MISC
 #define Z_NAME_RB_CENTCOM					"Relic Base - Central Command" // Aliased to Z_NAME_ALIAS_CENTCOM
 #define Z_NAME_RB_TRANSIT					"Relic Base - Transit"
@@ -48,6 +48,11 @@
 #define Z_NAME_VR_WORLD_CH					"VR - VR World CH"
 #define Z_NAME_PLANET_THOR_CH				"Planet - Thor Surface CH"
 #define Z_NAME_PLANET_TYR_CH				"Planet - Desert Valley CH"
+
+// Common
+#define Z_NAME_ALIAS_SURFACE				"SURFACE"
+#define Z_NAME_ALIAS_SURFACE_MINES			"SURFACE MINES"
+#define Z_NAME_ALIAS_SURFACE_WILDS			"SURFACE WILDS"
 
 // Gateways (Aliased to Z_NAME_ALIAS_GATEWAY)
 #define Z_NAME_GATEWAY_SNOW_FIELD_CH		"Gateway - Snow Field CH"

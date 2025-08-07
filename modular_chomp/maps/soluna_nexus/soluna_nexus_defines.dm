@@ -108,16 +108,16 @@
 	// First, place a bunch of submaps. This comes before tunnel/forest generation as to not interfere with the submap.(This controls POI limit generation, increase or lower its values to have more or less POI's)
 
 	// Cave submaps are first.
-	var/surface_mine_z = GLOB.map_templates_loaded[Z_NAME_SC_SURFACE_MINE]
+	var/surface_mine_z = GLOB.map_templates_loaded[Z_NAME_ALIAS_SURFACE_MINES]
 	seed_submaps(list(surface_mine_z), 140, /area/surface/cave/unexplored/normal, /datum/map_template/surface/mountains/normal)
 	seed_submaps(list(surface_mine_z), 140, /area/surface/cave/unexplored/deep, /datum/map_template/surface/mountains/deep)
 
 	// Plains to make them less plain.
-	var/surface_z = GLOB.map_templates_loaded[Z_NAME_SC_SURFACE]
+	var/surface_z = GLOB.map_templates_loaded[Z_NAME_ALIAS_SURFACE]
 	seed_submaps(list(surface_z), 220, /area/surface/outside/plains/normal, /datum/map_template/surface/plains) // Center area is WIP until map editing settles down.
 
 	// Wilderness is next.
-	var/surface_wild_z = GLOB.map_templates_loaded[Z_NAME_SC_SURFACE_WILD]
+	var/surface_wild_z = GLOB.map_templates_loaded[Z_NAME_ALIAS_SURFACE_WILDS]
 	seed_submaps(list(surface_wild_z), 240, /area/surface/outside/wilderness/normal, /datum/map_template/surface/wilderness/normal)
 	seed_submaps(list(surface_wild_z), 240, /area/surface/outside/wilderness/deep, /datum/map_template/surface/wilderness/deep)
 	// If Space submaps are made, add a line to make them here as well.
@@ -201,7 +201,7 @@
 	transit_chance = 60
 */
 
-// Surface Z-Level
+// Surface Z-Level (overlaps with /datum/map_z_level/southern_cross_lateload/surface so could instead be a common map)
 /datum/map_z_level/soluna_nexus_lateload/surface
 	name = Z_NAME_SC_SURFACE
 	flags = MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER|MAP_LEVEL_SEALED|MAP_LEVEL_CONSOLES|MAP_LEVEL_VORESPAWN
@@ -209,10 +209,11 @@
 
 /datum/map_template/soluna_nexus_lateload/surface
 	name = Z_NAME_SC_SURFACE
+	name_alias = Z_NAME_ALIAS_SURFACE
 	mappath = "modular_chomp/maps/southern_cross/southern_cross-5.dmm"
 	associated_map_datum = /datum/map_z_level/soluna_nexus_lateload/surface
 
-// Surface Mine Z-Level
+// Surface Mine Z-Level (overlaps with /datum/map_z_level/southern_cross_lateload/surface_mine so could instead be a common map)
 /datum/map_z_level/soluna_nexus_lateload/surface_mine
 	name = Z_NAME_SC_SURFACE_MINE
 	flags = MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER|MAP_LEVEL_SEALED|MAP_LEVEL_CONSOLES
@@ -220,10 +221,11 @@
 
 /datum/map_template/soluna_nexus_lateload/surface_mine
 	name = Z_NAME_SC_SURFACE_MINE
+	name_alias = Z_NAME_ALIAS_SURFACE_MINES
 	mappath = "modular_chomp/maps/southern_cross/southern_cross-6.dmm"
 	associated_map_datum = /datum/map_z_level/soluna_nexus_lateload/surface_mine
 
-// Surface Wild Z-Level
+// Surface Wild Z-Level (overlaps with /datum/map_z_level/southern_cross_lateload/surface_wild so could instead be a common map)
 /datum/map_z_level/soluna_nexus_lateload/surface_wild
 	name = Z_NAME_SC_SURFACE_WILD
 	flags = MAP_LEVEL_PLAYER|MAP_LEVEL_SEALED|MAP_LEVEL_CONTACT|MAP_LEVEL_CONSOLES
@@ -231,6 +233,7 @@
 
 /datum/map_template/soluna_nexus_lateload/surface_wild
 	name = Z_NAME_SC_SURFACE_WILD
+	name_alias = Z_NAME_ALIAS_SURFACE_WILDS
 	mappath = "modular_chomp/maps/southern_cross/southern_cross-10.dmm"
 	associated_map_datum = /datum/map_z_level/soluna_nexus_lateload/surface_wild
 
