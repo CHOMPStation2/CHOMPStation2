@@ -74,7 +74,7 @@
 	usable_email_tlds = list("freemail.nt")
 	allowed_spawns = list("Arrivals Shuttle","Gateway", "Cryogenic Storage", "Cyborg Storage", "Station gateway", "Sif plains", "Fuel Depot", "Tyr Wreckage", "The Dark")
 	default_skybox = /datum/skybox_settings/southern_cross
-	unit_test_exempt_areas = list(/area/ninja_dojo, /area/shuttle/ninja, /area/thirddeck/roof)
+	unit_test_exempt_areas = list(/area/ninja_dojo, /area/shuttle/ninja, /area/thirddeck/roof, /area/hallway/secondary/entry/D2/arrivals)
 	unit_test_exempt_from_atmos = list(/area/tcomm/chamber)
 
 	planet_datums_to_make = list(/datum/planet/sif, /datum/planet/thor, /datum/planet/tyr) //This must be added to load maps at round start otherwise they will have weather or sun.

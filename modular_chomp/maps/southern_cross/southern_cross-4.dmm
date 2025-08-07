@@ -15271,11 +15271,6 @@
 /turf/simulated/floor/wood,
 /area/bridge/meeting_room)
 "mXD" = (
-/obj/machinery/power/apc{
-	dir = 8;
-	name = "west bump";
-	pixel_x = -24
-	},
 /obj/structure/cable/green{
 	icon_state = "0-2"
 	},
