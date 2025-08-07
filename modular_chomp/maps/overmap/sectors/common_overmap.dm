@@ -16,7 +16,7 @@ GLOBAL_LIST_EMPTY(station_waypoints) //Create global list for station waypoints,
 	start_y =  10
 	known = 1 // lets Sectors appear on shuttle navigation for easy finding.
 
-	extra_z_levels = list(Z_NAME_SN_TRANSIT, Z_NAME_SN_MISC, Z_NAME_SN_SURFACE, Z_NAME_SN_SURFACE_MINE, Z_NAME_SN_SURFACE_WILD) //This should allow for comms to reach people from the station. Basically this defines all the areas of Southern Cross and the Sif local system on the overmap.
+	extra_z_levels = list(Z_NAME_SN_TRANSIT, Z_NAME_SN_MISC, Z_NAME_SC_SURFACE, Z_NAME_SC_SURFACE_MINE, Z_NAME_SC_SURFACE_WILD) //This should allow for comms to reach people from the station. Basically this defines all the areas of Southern Cross and the Sif local system on the overmap.
 	// "Z_LEVEL_SURFACE_SKYLANDS, " //removed due to lack of use
 	mob_announce_cooldown = 0
 

@@ -21,9 +21,6 @@
 #define Z_LEVEL_SN_STATION_TWO				2
 #define Z_LEVEL_SN_STATION_THREE			3
 
-#define Z_NAME_SN_SURFACE					"Soluna Nexus - Surface"
-#define Z_NAME_SN_SURFACE_MINE				"Soluna Nexus - Mines"
-#define Z_NAME_SN_SURFACE_WILD				"Soluna Nexus - Surface Wild"
 #define Z_NAME_SN_MISC						"Soluna Nexus - Misc" // Aliased to Z_NAME_ALIAS_MISC
 #define Z_NAME_SN_CENTCOM					"Soluna Nexus - Central Command" // Aliased to Z_NAME_ALIAS_CENTCOM
 #define Z_NAME_SN_TRANSIT					"Soluna Nexus - Transit"

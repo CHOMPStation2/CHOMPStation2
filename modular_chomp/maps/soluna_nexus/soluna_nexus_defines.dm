@@ -85,9 +85,9 @@
 		)
 
 	lateload_z_levels = list(
-		list(Z_NAME_SN_SURFACE),
-		list(Z_NAME_SN_SURFACE_MINE),
-		list(Z_NAME_SN_SURFACE_WILD),
+		list(Z_NAME_SC_SURFACE),
+		list(Z_NAME_SC_SURFACE_MINE),
+		list(Z_NAME_SC_SURFACE_WILD),
 		list(Z_NAME_SN_MISC),
 		list(Z_NAME_SN_CENTCOM),
 		list(Z_NAME_SN_TRANSIT),
@@ -108,16 +108,16 @@
 	// First, place a bunch of submaps. This comes before tunnel/forest generation as to not interfere with the submap.(This controls POI limit generation, increase or lower its values to have more or less POI's)
 
 	// Cave submaps are first.
-	var/surface_mine_z = GLOB.map_templates_loaded[Z_NAME_SN_SURFACE_MINE]
+	var/surface_mine_z = GLOB.map_templates_loaded[Z_NAME_SC_SURFACE_MINE]
 	seed_submaps(list(surface_mine_z), 140, /area/surface/cave/unexplored/normal, /datum/map_template/surface/mountains/normal)
 	seed_submaps(list(surface_mine_z), 140, /area/surface/cave/unexplored/deep, /datum/map_template/surface/mountains/deep)
 
 	// Plains to make them less plain.
-	var/surface_z = GLOB.map_templates_loaded[Z_NAME_SN_SURFACE]
+	var/surface_z = GLOB.map_templates_loaded[Z_NAME_SC_SURFACE]
 	seed_submaps(list(surface_z), 220, /area/surface/outside/plains/normal, /datum/map_template/surface/plains) // Center area is WIP until map editing settles down.
 
 	// Wilderness is next.
-	var/surface_wild_z = GLOB.map_templates_loaded[Z_NAME_SN_SURFACE_WILD]
+	var/surface_wild_z = GLOB.map_templates_loaded[Z_NAME_SC_SURFACE_WILD]
 	seed_submaps(list(surface_wild_z), 240, /area/surface/outside/wilderness/normal, /datum/map_template/surface/wilderness/normal)
 	seed_submaps(list(surface_wild_z), 240, /area/surface/outside/wilderness/deep, /datum/map_template/surface/wilderness/deep)
 	// If Space submaps are made, add a line to make them here as well.
@@ -203,34 +203,34 @@
 
 // Surface Z-Level
 /datum/map_z_level/soluna_nexus_lateload/surface
-	name = Z_NAME_SN_SURFACE
+	name = Z_NAME_SC_SURFACE
 	flags = MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER|MAP_LEVEL_SEALED|MAP_LEVEL_CONSOLES|MAP_LEVEL_VORESPAWN
 	base_turf = /turf/simulated/floor/outdoors/rocks
 
 /datum/map_template/soluna_nexus_lateload/surface
-	name = Z_NAME_SN_SURFACE
+	name = Z_NAME_SC_SURFACE
 	mappath = "modular_chomp/maps/southern_cross/southern_cross-5.dmm"
 	associated_map_datum = /datum/map_z_level/soluna_nexus_lateload/surface
 
 // Surface Mine Z-Level
 /datum/map_z_level/soluna_nexus_lateload/surface_mine
-	name = Z_NAME_SN_SURFACE_MINE
+	name = Z_NAME_SC_SURFACE_MINE
 	flags = MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER|MAP_LEVEL_SEALED|MAP_LEVEL_CONSOLES
 	base_turf = /turf/simulated/floor/outdoors/rocks
 
 /datum/map_template/soluna_nexus_lateload/surface_mine
-	name = Z_NAME_SN_SURFACE_MINE
+	name = Z_NAME_SC_SURFACE_MINE
 	mappath = "modular_chomp/maps/southern_cross/southern_cross-6.dmm"
 	associated_map_datum = /datum/map_z_level/soluna_nexus_lateload/surface_mine
 
 // Surface Wild Z-Level
 /datum/map_z_level/soluna_nexus_lateload/surface_wild
-	name = Z_NAME_SN_SURFACE_WILD
+	name = Z_NAME_SC_SURFACE_WILD
 	flags = MAP_LEVEL_PLAYER|MAP_LEVEL_SEALED|MAP_LEVEL_CONTACT|MAP_LEVEL_CONSOLES
 	base_turf = /turf/simulated/floor/outdoors/rocks
 
 /datum/map_template/soluna_nexus_lateload/surface_wild
-	name = Z_NAME_SN_SURFACE_WILD
+	name = Z_NAME_SC_SURFACE_WILD
 	mappath = "modular_chomp/maps/southern_cross/southern_cross-10.dmm"
 	associated_map_datum = /datum/map_z_level/soluna_nexus_lateload/surface_wild
 
