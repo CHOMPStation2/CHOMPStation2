@@ -48,3 +48,119 @@
       The original distillation reactions can be done under normal atmosphere.
   - bugfix: add missing fluid pump research
   - code_imp: Extended unit-test for reagents to respect new distillation
+2025-08-04:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: Science can now make mop tech
+  - bugfix: Fixed Dark Furred Zorren not being able to use sprite accessories.
+  - sound: Point Defense Turrets now make sounds when they fire
+  - rscadd: Point Defense Turrets now have a new effect when they fire
+  - qol: Point defense turrets now only pull energy from the turret matrix.
+  - balance: Point defense turrets now turn slower. They can still hit meteors just
+      fine. Upgrading the turrets is also now more worthwhile!
+  - maptweak: Mappers no longer need to have cables running out to point turrets
+  - bugfix: fixes a bug where turrets could not be adjusted if they were in an unpowered
+      area
+2025-08-05:
+  CHOMPStation2StaffMirrorBot:
+  - rscadd: a circuit for honey_extractors in the Autolathe
+  - rscadd: A construction path for the Honey_extractor
+  - rscadd: A texture for when you open the panel.
+  - rscadd: A floral Disk able to be printed with the new way protalathes works.
+  - code_imp: made the honey_extractor anchorable.
+  - bugfix: "ensured the honey_extractor can\u2019t run when the maintenance panel\
+      \ is open."
+  - bugfix: "honey_extractor can now lose power and can\u2019t run when so."
+  - qol: 'honey_extractor will now use power 5*200watts for processing 1 honey_frame.
+
+      (can be easily changed if needed)'
+  - rscadd: appropriorate messages for the new states.
+  - rscadd: appropriorate icons and overlays for the new states.
+  - rscadd: Added a new plane for event use, with the intent of making it so that
+      only specific players can see things on it.
+  - rscadd: Added two new buttons to player effects, one to make something move to  the
+      new invisible plane and another to allow a player to see things on that plane.
+  - rscadd: Added a new mob that takes advantage of this new plane to be only visible
+      to one player at a time.
+  - qol: moves the vore examine messages into a dropdown, hiding them by default
+  - rscadd: Added a preset for glamour doors, tables and racks, for mapping purposes.
+  - bugfix: Infinite material glitch with autolathes
+  - bugfix: Everything using the old ExosuitFabricator's Material display, now uses
+      MaterialAccessBar
+  - rscdel: Research node announcements silenced.
+  - bugfix: Guaranteed-correct icons for every material, instead of best-guess.
+  - balance: Cells now spawn empty
+  - rscadd: Sheetsnatchers now dump happily into material storages
+  Diana:
+  - bugfix: you will no longer have to beat the snot out of a limb you want to fix
+      internal bleeding on with bicard or myelamine
+  Tost:
+  - bugfix: Bloodsucker hanners now get the right hunger alerts.
+  Will:
+  - bugfix: AI holograms will rotate to face toward where you click like most mobs
+      do.
+  - bugfix: Frost oil, plasticide and concrete no longer causes runtimes by producing
+      stacks of sheets with illegal quantities
+  - bugfix: Mobs that glow will hide their light while ventcrawling
+  - rscadd: If not hidden inside a container, tape recorders will make a click sound
+      when they stop recording
+  - bugfix: Sheets used in bags will no longer leave a lingering icon locked up on
+      the hud
+  - bugfix: Mobs dragged onto a operating table will be released from pulling, as
+      if they were buckled.
+  - bugfix: Phased shadekin and flying mobs no longer interact with water turfs
+  - bugfix: Shadekin no longer calculate turf slowdown while phased
+  - rscadd: Deep drill boreholes can be fracked with fluid pumps
+  - rscadd: More sheet types can be grinded
+  - rscadd: Refinery grinder can accept conveyor fed input
+  - rscadd: grinding rods, logs, and hulls
+  - bugfix: Reagent scanner can get the reagents inside refinery machines even if
+      they are sealed
+  - bugfix: Replacing a fluidpumps powercell now actually works
+2025-08-06:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: Reagent hoses can only connect to one connector at a time
+  - bugfix: Refinery runtime when checking empty conveyors
+  - bugfix: Pain simulation now simulates traumatic shock
+  Diana:
+  - bugfix: Changelings will no longer suffer organ rejection upon transformation.
+  - rscadd: Changelings now have a new test to confirm if they are a changeling.
+  Will:
+  - rscadd: Ports an emote interaction
+  - code_imp: Scalpel uses a clamp_chance var instead of typechecking during surgery
+  - bugfix: smoke effects no longer choke you if you have the no breathing mutation
+  - bugfix: TODO - FIX ME, finally fixed. Cosmetic menus properly hides illegal cosmetics.
+  - bugfix: Admins removing the wizard antag role from someone now also removes their
+      spells
+  - rscadd: Cows can be milked with reagent hoses
+  - rscadd: Toilets can be used as reagent hose drains like sinks
+  - rscadd: Fence gates can be lockpicked
+  - bugfix: Borgs can open fence gates
+  - bugfix: Mapper anchored flashers start active when the round begins
+2025-08-07:
+  Diana:
+  - code_imp: Grippers should be less buggy. Please keep reporting any gripper bugs.
+  - admin: R_DEBUG is now required to apply/remove components/elements.
+  - code_imp: component/shadekin now fails when applied to silicons
+  Jordhin Xenshire:
+  - rscadd: Added Industrial Hardsuit for printing at the Exo-Suit Lathe
+  - rscadd: ' Added EVA and Advanced EVA Hardsuit for printing at the Exo-Suit Lathe'
+  - rscadd: ' Added Rescue Hardsuit for printing at the Exo-Suit Lathe'
+  - rscadd: ' Added Hazard Suit for printing at the Exo-Suit Lathe'
+  - rscadd: ' Added AMI Hardsuit for printing at the Exo-Suit Lathe'
+  - rscadd: ' Added Null Hardsuit for printing at the Exo-Suit Lathe'
+  - rscadd: ' Added Thermal, Graviton Visors, Multi-Visor for printing at the Exo-Suit
+      Lathe.'
+  - rscadd: P.A.T. (Point Access Tunneling)  for printing at the Exo-Suit Lathe.
+  - rscadd: ' Added F.P.S. (Faraday Protective Shielding) hardsuit, and Advanced F.P.S.
+      which protects from electrical hazards,  but not EMPs. You will be completely
+      insulated from Teslas, Electrical wiring, lightning strikes, and the wrath of
+      zeus.'
+  - rscadd: Added Advanced Atmospheric Protection Suite. A more energy efficient version
+      of A.P.S.
+  - qol: Tweaked AMI bomb resistance from 80 to 100. Like the EOD Suit, it will not
+      keep you alive. But your body won't be gibbed.
+  - balance: Tier-1 RIG suit research now has increased cost and a discount experiment
+  - bugfix: Protean RIG Suit pressure resistance not correctly copying from assimilated
+      rig.
+  - bugfix: Protean Rig Suit's thermal resistance dropping to 375K instead of the
+      expected 5000K when removing an assimilated rig.

@@ -1207,8 +1207,8 @@
 	update_clothing_icon()
 
 /obj/item/clothing/under/rank/Initialize(mapload)
-	. = ..()
 	sensor_mode = pick(0,1,2,3)
+	. = ..()
 
 /obj/item/clothing/Destroy()
 	STOP_PROCESSING(SSobj, src)
