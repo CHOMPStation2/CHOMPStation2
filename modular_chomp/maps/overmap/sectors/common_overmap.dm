@@ -238,7 +238,7 @@ GLOBAL_LIST_EMPTY(station_waypoints) //Create global list for station waypoints,
 	. = ..()
 
 /obj/effect/overmap/visitable/planet/Thor/get_space_zlevels()
-	return list(GLOB.map_templates_loaded[Z_NAME_RB_CARRIER])
+	return list(GLOB.map_templates_loaded[Z_NAME_ALIAS_MISC])
 
 /obj/effect/overmap/visitable/planet/Thor/Initialize(mapload)
 	. = ..()
