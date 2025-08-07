@@ -30,8 +30,6 @@
 
 //	#include "southern_cross-casino.dmm" //CHOMPedit: Disabled to save resources and loaded in during events - Jack
 
-	#include "submaps/_relicbase_submaps.dm"
-
 	#define USING_MAP_DATUM /datum/map/relicbase
 
 	// todo: map.dmm-s here

@@ -10,7 +10,8 @@
 	holomap_smoosh = list(list(
 		Z_LEVEL_RB_UNDERGROUND,
 		Z_LEVEL_RB_SURFACE,
-		Z_LEVEL_RB_UPPER_FLOORS))
+		Z_LEVEL_RB_UPPER_FLOORS,
+		))
 
 	zlevel_datum_type = /datum/map_z_level/relicbase
 
@@ -51,7 +52,7 @@
 							NETWORK_ROBOTS,
 							NETWORK_PRISON,
 							NETWORK_SECURITY,
-							NETWORK_TELECOM
+							NETWORK_TELECOM,
 							) //CHOMPedit: add "NETWORK_CARRIER" for exploration outpost cams
 	// Camera networks that exist, but don't show on regular camera monitors.
 	secondary_networks = list(
@@ -62,7 +63,7 @@
 							NETWORK_ALARM_ATMOS,
 							NETWORK_ALARM_POWER,
 							NETWORK_ALARM_FIRE,
-							NETWORK_SUPPLY
+							NETWORK_SUPPLY,
 							)
 	usable_email_tlds = list("freemail.nt")
 	allowed_spawns = list("Arrivals Shuttle","Gateway", "Cryogenic Storage", "Cyborg Storage", "Station gateway")
@@ -72,26 +73,26 @@
 
 	planet_datums_to_make = list(/datum/planet/thor) //This must be added to load maps at round start otherwise they will have weather or sun.
 
-	map_levels = list(
-			Z_LEVEL_RB_CATACOMBS,
-			Z_LEVEL_RB_UNDERGROUND,
-			Z_LEVEL_RB_SURFACE,
-			Z_LEVEL_RB_UPPER_FLOORS,
-			Z_LEVEL_RB_THE_SKY,
-			Z_NAME_RB_UNDERMINES,
-			Z_NAME_RB_SURFACE_WILDS,
-			Z_NAME_RB_WILDERNESS_SKY,
-			Z_NAME_RB_SURFACE_OCEAN,
-			Z_NAME_RB_SURFACE_MINES
+	unit_test_z_levels = list(
+		Z_LEVEL_RB_CATACOMBS,
+		Z_LEVEL_RB_UNDERGROUND,
+		Z_LEVEL_RB_SURFACE,
+		Z_LEVEL_RB_UPPER_FLOORS,
+		Z_LEVEL_RB_THE_SKY,
 		)
 
-
-	// Framework for porting Tether's lateload Z-Level system
 	lateload_z_levels = list(
-			list(Z_NAME_FUELDEPOT_CH) //Stock lateload maps
-			)
+		list(Z_NAME_RB_UNDERMINES),
+		list(Z_NAME_RB_SURFACE_WILDS),
+		list(Z_NAME_RB_WILDERNESS_SKY),
+		list(Z_NAME_RB_SURFACE_OCEAN),
+		list(Z_NAME_RB_SURFACE_MINES),
+		list(Z_NAME_RB_CARRIER),
+		list(Z_NAME_RB_CENTCOM),
+		list(Z_NAME_RB_TRANSIT),
+		list(Z_NAME_FUELDEPOT_CH),
+		)
 
-	// Gateways
 	lateload_gateway = list(
 		list(Z_NAME_GATEWAY_SNOW_FIELD_CH),
 		list(list(Z_NAME_GATEWAY_HONLETH_A, Z_NAME_GATEWAY_HONLETH_B)),
@@ -99,10 +100,8 @@
 		list(Z_NAME_GATEWAY_ARYNTHI_CAVE_B, Z_NAME_GATEWAY_ARYNTHI_B),
 		list(Z_NAME_GATEWAY_WILD_WEST),
 		list(Z_NAME_GATEWAY_MADNESS_LAB_CH),
-		list(Z_NAME_REDGATE_ABANDONED_CITY_CH)
+		list(Z_NAME_GATEWAY_ABANDONED_CITY_CH),
 		)
-
-	lateload_gateway = null
 
 	lateload_redgate = list(
 		list(Z_NAME_REDGATE_TEPPI_RANCH),
@@ -117,7 +116,7 @@
 		list(Z_NAME_REDGATE_FANTASY_DUNGEON, Z_NAME_REDGATE_FANTASY_TOWN),
 		list(Z_NAME_REDGATE_LASERDOME),
 		list(Z_NAME_REDGATE_CASCADING_FALLS),
-		list(Z_NAME_REDGATE_JUNGLE_CAVE, Z_NAME_REDGATE_JUNGLE)
+		list(Z_NAME_REDGATE_JUNGLE_CAVE, Z_NAME_REDGATE_JUNGLE),
 		)
 
 
@@ -149,40 +148,77 @@
 	// First, place a bunch of submaps. This comes before tunnel/forest generation as to not interfere with the submap.(This controls POI limit generation, increase or lower its values to have more or less POI's)
 
 	// Cave submaps are first.
-	seed_submaps(list(Z_LEVEL_RB_UNDERMINES), 140, /area/surface/cave/unexplored/normal, /datum/map_template/surface/mountains/normal)
-	seed_submaps(list(Z_LEVEL_RB_UNDERMINES), 140, /area/surface/cave/unexplored/deep, /datum/map_template/surface/mountains/deep)
-	seed_submaps(list(Z_LEVEL_RB_SURFACE_MINES), 140, /area/surface/outside/wilderness/mountains, /datum/map_template/surface/mountains/normal)
+	var/undermines_z = GLOB.map_templates_loaded[Z_NAME_RB_UNDERMINES]
+	var/surface_mines_z = GLOB.map_templates_loaded[Z_NAME_RB_SURFACE_MINES]
+	seed_submaps(list(undermines_z), 140, /area/surface/cave/unexplored/normal, /datum/map_template/surface/mountains/normal)
+	seed_submaps(list(undermines_z), 140, /area/surface/cave/unexplored/deep, /datum/map_template/surface/mountains/deep)
+	seed_submaps(list(surface_mines_z), 140, /area/surface/outside/wilderness/mountains, /datum/map_template/surface/mountains/normal)
+
 	// Plains to make them less plain.
+	var/surface_ocean_z = GLOB.map_templates_loaded[Z_NAME_RB_SURFACE_OCEAN]
 	seed_submaps(list(Z_LEVEL_RB_SURFACE), 220, /area/surface/outside/plains/normal, /datum/map_template/surface/plains) // Both of these will need a massive POI overhaul. The framework is in, and tiles will be mass-edited to match, but better POIs are wanted.
-	seed_submaps(list(Z_LEVEL_RB_SURFACE_OCEAN), 220, /area/surface/outside/plains/normal, /datum/map_template/surface/plains) // Both of these will need a massive POI overhaul. The framework is in, and tiles will be mass-edited to match, but better POIs are wanted.
+	seed_submaps(list(surface_ocean_z), 220, /area/surface/outside/plains/normal, /datum/map_template/surface/plains) // Both of these will need a massive POI overhaul. The framework is in, and tiles will be mass-edited to match, but better POIs are wanted.
 
 	// Wilderness is next.
-	seed_submaps(list(Z_LEVEL_RB_SURFACE_WILDS), 240, /area/surface/outside/wilderness/normal, /datum/map_template/surface/wilderness/normal)
-	seed_submaps(list(Z_LEVEL_RB_SURFACE_WILDS), 240, /area/surface/outside/wilderness/deep, /datum/map_template/surface/wilderness/deep)
+	var/surface_wilds_z = GLOB.map_templates_loaded[Z_NAME_RB_SURFACE_WILDS]
+	seed_submaps(list(surface_wilds_z), 240, /area/surface/outside/wilderness/normal, /datum/map_template/surface/wilderness/normal)
+	seed_submaps(list(surface_wilds_z), 240, /area/surface/outside/wilderness/deep, /datum/map_template/surface/wilderness/deep)
 	// If Space submaps are made, add a line to make them here as well.
 
 	// Now for the tunnels. (This decides the load order of ore generation and cave generation. Check Random_Map to see % )
-	new /datum/random_map/automata/cave_system/no_cracks(null, 1, 1, Z_LEVEL_RB_UNDERMINES, world.maxx, world.maxy) // Create the mining Z-level.
-	new /datum/random_map/noise/ore(null, 1, 1, Z_LEVEL_RB_UNDERMINES, 64, 64)         // Create the mining ore distribution map.
-	new /datum/random_map/automata/cave_system/no_cracks(null, 1, 1, Z_LEVEL_RB_SURFACE_MINES, world.maxx, world.maxy) // Create the mining Z-level.
-	new /datum/random_map/noise/ore(null, 1, 1, Z_LEVEL_RB_SURFACE_MINES, 64, 64)
+	new /datum/random_map/automata/cave_system/no_cracks(null, 1, 1, undermines_z, world.maxx, world.maxy) // Create the mining Z-level.
+	new /datum/random_map/noise/ore(null, 1, 1, undermines_z, 64, 64)         // Create the mining ore distribution map.
+	new /datum/random_map/automata/cave_system/no_cracks(null, 1, 1, surface_mines_z, world.maxx, world.maxy) // Create the mining Z-level.
+	new /datum/random_map/noise/ore(null, 1, 1, surface_mines_z, 64, 64)
 	// Todo: Forest generation.
 	return 1
+
+/datum/map/relicbase/get_map_info()
+	. = list()
+	. +=  "The NTCS [full_name] is a small mining colony on Sif's lush, earthlike moon, Thor. NTCS [full_name] was previously an SGC Military installation, established originally in 2405.<br>"
+	. +=  "Though Vir is typically peaceful, the system has seen its fair share of conflict in the face of technological extremists, rogue drone intelligence, and worse.<br>"
+	. +=  "As an employee of NanoTrasen, operators of the Relic Base and one of the galaxy's largest research corporations, you're probably just here to do a job."
+	return jointext(., "<br>")
 
 // Skybox Settings
 /datum/skybox_settings/relicbase
 	icon_state = "dyable"
 	random_color = TRUE
+
+// Lateload handling
+/datum/map_template/relicbase_lateload
+	allow_duplicates = FALSE
+	var/associated_map_datum
+
+/datum/map_template/relicbase_lateload/on_map_loaded(z)
+	if(!associated_map_datum || !ispath(associated_map_datum))
+		log_game("Extra z-level [src] has no associated map datum")
+		return
+
+	new associated_map_datum(using_map, z)
+	return ..()
+
+/datum/map_z_level/relicbase_lateload/New(datum/map/map, mapZ)
+	z = mapZ
+	return ..(map)
+
 // For making the 6-in-1 holomap, we calculate some offsets
 #define SOUTHERN_CROSS_MAP_SIZE 160 // Width and height of compiled in Southern Cross z levels.
 #define SOUTHERN_CROSS_HOLOMAP_CENTER_GUTTER 40 // 40px central gutter between columns
 #define SOUTHERN_CROSS_HOLOMAP_MARGIN_X ((HOLOMAP_ICON_SIZE - (2*SOUTHERN_CROSS_MAP_SIZE) - SOUTHERN_CROSS_HOLOMAP_CENTER_GUTTER) / 2) // 100
 #define SOUTHERN_CROSS_HOLOMAP_MARGIN_Y ((HOLOMAP_ICON_SIZE - (3*SOUTHERN_CROSS_MAP_SIZE)) / 2) // 60
 
+// Station Z-Levels
 /datum/map_z_level/relicbase/station
 	flags = MAP_LEVEL_STATION|MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER|MAP_LEVEL_CONSOLES|MAP_LEVEL_VORESPAWN|MAP_LEVEL_XENOARCH_EXEMPT
 	holomap_legend_x = 220
 	holomap_legend_y = 160
+
+/datum/map_z_level/relicbase/station/catacombs
+	z = Z_LEVEL_RB_CATACOMBS
+	name = "Catacombs"
+	base_turf = /turf/simulated/mineral/floor/cave
+	transit_chance = 10
 
 /datum/map_z_level/relicbase/station/station_one
 	z = Z_LEVEL_RB_UNDERGROUND
@@ -190,7 +226,7 @@
 	base_turf = /turf/simulated/mineral/floor/cave
 	transit_chance = 10
 	holomap_offset_x = SOUTHERN_CROSS_HOLOMAP_MARGIN_X - 40
-	holomap_offset_y = SOUTHERN_CROSS_HOLOMAP_MARGIN_Y + SOUTHERN_CROSS_MAP_SIZE*0
+	holomap_offset_y = SOUTHERN_CROSS_HOLOMAP_MARGIN_Y //+ SOUTHERN_CROSS_MAP_SIZE*0
 
 /datum/map_z_level/relicbase/station/station_two
 	z = Z_LEVEL_RB_SURFACE
@@ -198,7 +234,7 @@
 	base_turf = /turf/simulated/open
 	transit_chance = 10
 	holomap_offset_x = SOUTHERN_CROSS_HOLOMAP_MARGIN_X - 40
-	holomap_offset_y = SOUTHERN_CROSS_HOLOMAP_MARGIN_Y + SOUTHERN_CROSS_MAP_SIZE*1
+	holomap_offset_y = SOUTHERN_CROSS_HOLOMAP_MARGIN_Y + SOUTHERN_CROSS_MAP_SIZE
 
 /datum/map_z_level/relicbase/station/station_three
 	z = Z_LEVEL_RB_UPPER_FLOORS
@@ -206,7 +242,13 @@
 	base_turf = /turf/simulated/open
 	transit_chance = 10
 	holomap_offset_x = HOLOMAP_ICON_SIZE - SOUTHERN_CROSS_HOLOMAP_MARGIN_X - SOUTHERN_CROSS_MAP_SIZE - 40
-	holomap_offset_y = SOUTHERN_CROSS_HOLOMAP_MARGIN_Y + SOUTHERN_CROSS_MAP_SIZE*1
+	holomap_offset_y = SOUTHERN_CROSS_HOLOMAP_MARGIN_Y + SOUTHERN_CROSS_MAP_SIZE
+
+/datum/map_z_level/relicbase/station/thesky
+	z = Z_LEVEL_RB_THE_SKY
+	name = "Sky"
+	base_turf = /turf/simulated/open
+	transit_chance = 10
 
 /* //CHOMPedit: Disabling empty space map level as overmap generation now generates this as needed.
 /datum/map_z_level/southern_cross/empty_space
@@ -223,75 +265,104 @@
 	base_turf = /turf/simulated/floor/outdoors/rocks
 */
 
-/datum/map_z_level/relicbase/undeground_mine
-	z = Z_LEVEL_RB_UNDERMINES
-	name = "Underground Mines"
+// Underground Mine Z-Level
+/datum/map_z_level/relicbase_lateload/undeground_mine
+	name = Z_NAME_RB_UNDERMINES //"Underground Mines"
 	flags = MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER|MAP_LEVEL_SEALED|MAP_LEVEL_CONSOLES
 	base_turf = /turf/simulated/floor/outdoors/rocks
 
-/datum/map_z_level/relicbase/surface_mine
-	z = Z_LEVEL_RB_SURFACE_MINES
-	name = "Surface Mines"
+/datum/map_template/relicbase_lateload/undeground_mine
+	name = Z_NAME_RB_UNDERMINES
+	mappath = "modular_chomp/maps/relic_base/relicbase-6.dmm"
+	associated_map_datum = /datum/map_z_level/relicbase_lateload/undeground_mine
+
+// Surface Wilds Z-Level
+/datum/map_z_level/relicbase_lateload/surface_wild
+	name = Z_NAME_RB_SURFACE_WILDS //"Wilderness"
+	flags = MAP_LEVEL_PLAYER|MAP_LEVEL_SEALED|MAP_LEVEL_CONTACT|MAP_LEVEL_CONSOLES|MAP_LEVEL_VORESPAWN|MAP_LEVEL_XENOARCH_EXEMPT
+	base_turf = /turf/simulated/floor/outdoors/rocks
+
+/datum/map_template/relicbase_lateload/surface_wild
+	name = Z_NAME_RB_SURFACE_WILDS
+	mappath = "modular_chomp/maps/relic_base/relicbase-7.dmm"
+	associated_map_datum = /datum/map_z_level/relicbase_lateload/surface_wild
+
+// Wilderness Sky Z-Level
+/datum/map_z_level/relicbase_lateload/wilderness_sky
+	name = Z_NAME_RB_WILDERNESS_SKY //"Wilderness Sky"
+	flags = MAP_LEVEL_PLAYER|MAP_LEVEL_SEALED|MAP_LEVEL_XENOARCH_EXEMPT
+	base_turf = /turf/simulated/open
+
+/datum/map_template/relicbase_lateload/wilderness_sky
+	name = Z_NAME_RB_WILDERNESS_SKY
+	mappath = "modular_chomp/maps/relic_base/relicbase-8.dmm"
+	associated_map_datum = /datum/map_z_level/relicbase_lateload/wilderness_sky
+
+// Surface Ocean Z-Level
+/datum/map_z_level/relicbase_lateload/surface_ocean
+	name = Z_NAME_RB_SURFACE_OCEAN //"Ocean"
+	flags = MAP_LEVEL_PLAYER|MAP_LEVEL_SEALED|MAP_LEVEL_CONTACT|MAP_LEVEL_CONSOLES|MAP_LEVEL_VORESPAWN|MAP_LEVEL_XENOARCH_EXEMPT
+	base_turf = /turf/simulated/floor/outdoors/rocks
+
+/datum/map_template/relicbase_lateload/surface_ocean
+	name = Z_NAME_RB_SURFACE_OCEAN
+	mappath = "modular_chomp/maps/relic_base/relicbase-9.dmm"
+	associated_map_datum = /datum/map_z_level/relicbase_lateload/surface_ocean
+
+// Surface Mine Z-Level
+/datum/map_z_level/relicbase_lateload/surface_mine
+	name = Z_NAME_RB_SURFACE_MINES //"Surface Mines"
 	flags = MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER|MAP_LEVEL_SEALED|MAP_LEVEL_CONSOLES
 	base_turf = /turf/simulated/floor/outdoors/rocks
 
-/datum/map_z_level/relicbase/surface_wild
-	z = Z_LEVEL_RB_SURFACE_WILDS
-	name = "Wilderness"
-	flags = MAP_LEVEL_PLAYER|MAP_LEVEL_SEALED|MAP_LEVEL_CONTACT|MAP_LEVEL_CONSOLES|MAP_LEVEL_VORESPAWN|MAP_LEVEL_XENOARCH_EXEMPT
-	base_turf = /turf/simulated/floor/outdoors/rocks
+/datum/map_template/relicbase_lateload/surface_mine
+	name = Z_NAME_RB_SURFACE_MINES
+	mappath = "modular_chomp/maps/relic_base/relicbase-10.dmm"
+	associated_map_datum = /datum/map_z_level/relicbase_lateload/surface_mine
 
-/datum/map_z_level/relicbase/surface_ocean
-	z = Z_LEVEL_RB_SURFACE_OCEAN
-	name = "Ocean"
-	flags = MAP_LEVEL_PLAYER|MAP_LEVEL_SEALED|MAP_LEVEL_CONTACT|MAP_LEVEL_CONSOLES|MAP_LEVEL_VORESPAWN|MAP_LEVEL_XENOARCH_EXEMPT
-	base_turf = /turf/simulated/floor/outdoors/rocks
-
-/datum/map_z_level/relicbase/carrier
-	z = Z_LEVEL_RB_CARRIER
-	name = "Misc"
+// Misc Z-Level
+/datum/map_z_level/relicbase_lateload/carrier
+	name = Z_NAME_RB_CARRIER //"Misc"
 	flags = MAP_LEVEL_PLAYER|MAP_LEVEL_VORESPAWN
 	transit_chance = 10
 
-/datum/map_z_level/relicbase/centcom
-	z = Z_LEVEL_RB_CENTCOM
-	name = "Centcom"
+/datum/map_template/relicbase_lateload/carrier
+	name = Z_NAME_RB_CARRIER
+	name_alias = Z_NAME_ALIAS_MISC
+	mappath = "modular_chomp/maps/relic_base/relicbase-11.dmm"
+	associated_map_datum = /datum/map_z_level/relicbase_lateload/carrier
+
+// Centcom Z-Level
+/datum/map_z_level/relicbase_lateload/centcom
+	name = Z_NAME_RB_CENTCOM //"Centcom"
 	flags = MAP_LEVEL_ADMIN|MAP_LEVEL_CONTACT|MAP_LEVEL_XENOARCH_EXEMPT
 
-/datum/map_z_level/relicbase/transit
-	z = Z_LEVEL_RB_TRANSIT
-	name = "Transit"
+/datum/map_template/relicbase_lateload/centcom
+	name = Z_NAME_RB_CENTCOM
+	name_alias = Z_NAME_ALIAS_CENTCOM
+	mappath = "modular_chomp/maps/relic_base/relicbase-12.dmm"
+	associated_map_datum = /datum/map_z_level/relicbase_lateload/centcom
+
+// Transit Z-Level
+/datum/map_z_level/relicbase_lateload/transit
+	name = Z_NAME_RB_TRANSIT //"Transit"
 	flags = MAP_LEVEL_ADMIN|MAP_LEVEL_SEALED|MAP_LEVEL_PLAYER|MAP_LEVEL_CONTACT|MAP_LEVEL_XENOARCH_EXEMPT
 
-/datum/map_z_level/relicbase/station/catacombs
-	z = Z_LEVEL_RB_CATACOMBS
-	name = "Catacombs"
-	base_turf = /turf/simulated/mineral/floor/cave
-	transit_chance = 10
-
-/datum/map_z_level/relicbase/station/thesky
-	z = Z_LEVEL_RB_THE_SKY
-	name = "Sky"
-	base_turf = /turf/simulated/open
-	transit_chance = 10
+/datum/map_template/relicbase_lateload/transit
+	name = Z_NAME_RB_TRANSIT
+	mappath = "modular_chomp/maps/relic_base/relicbase-13.dmm"
+	associated_map_datum = /datum/map_z_level/relicbase_lateload/transit
 
 /datum/planet/thor
 	expected_z_levels = list(
-		Z_LEVEL_RB_SURFACE,
+		Z_LEVEL_RB_CATACOMBS,
 		Z_LEVEL_RB_UNDERGROUND,
+		Z_LEVEL_RB_SURFACE,
 		Z_LEVEL_RB_UPPER_FLOORS,
-		Z_LEVEL_RB_SURFACE_WILDS,
-		Z_LEVEL_RB_SURFACE_MINES,
-		Z_LEVEL_RB_WILDERNESS_SKY,
-		Z_LEVEL_RB_UNDERMINES,
-		Z_LEVEL_RB_SURFACE_OCEAN,
 		Z_LEVEL_RB_THE_SKY,
-		Z_LEVEL_RB_CATACOMBS
+		Z_NAME_RB_UNDERMINES,
+		Z_NAME_RB_SURFACE_WILDS,
+		Z_NAME_RB_WILDERNESS_SKY,
+		Z_NAME_RB_SURFACE_OCEAN,
+		Z_NAME_RB_SURFACE_MINES,
 	)
-
-/datum/map/relicbase/get_map_info()
-	. = list()
-	. +=  "The NTCS [full_name] is a small mining colony on Sif's lush, earthlike moon, Thor. NTCS [full_name] was previously an SGC Military installation, established originally in 2405.<br>"
-	. +=  "Though Vir is typically peaceful, the system has seen its fair share of conflict in the face of technological extremists, rogue drone intelligence, and worse.<br>"
-	. +=  "As an employee of NanoTrasen, operators of the Relic Base and one of the galaxy's largest research corporations, you're probably just here to do a job."
-	return jointext(., "<br>")

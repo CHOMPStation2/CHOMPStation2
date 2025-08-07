@@ -37,7 +37,7 @@
 /area/expoutpost/hangaroneprep
 	name = "\improper Exploration Carrier Hangar One Prep"
 
-/area/expoutpost/nukestoragex
+/area/expoutpost/nukestorage
 	name = "\improper Exploration Carrier Secure Storage"
 	icon_state = "nuke_storage"
 
