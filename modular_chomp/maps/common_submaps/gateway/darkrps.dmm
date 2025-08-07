@@ -12861,9 +12861,7 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
-/obj/machinery/mecha_part_fabricator{
-	req_access = null
-	},
+/obj/machinery/mecha_part_fabricator_tg,
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/downtownempty)
 "qrv" = (
