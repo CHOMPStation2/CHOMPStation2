@@ -23,10 +23,10 @@
 
 #define Z_NAME_SN_SURFACE					"Soluna Nexus - Surface"
 #define Z_NAME_SN_SURFACE_MINE				"Soluna Nexus - Mines"
+#define Z_NAME_SN_SURFACE_WILD				"Soluna Nexus - Surface Wild"
 #define Z_NAME_SN_MISC						"Soluna Nexus - Misc" // Aliased to Z_NAME_ALIAS_MISC
 #define Z_NAME_SN_CENTCOM					"Soluna Nexus - Central Command" // Aliased to Z_NAME_ALIAS_CENTCOM
 #define Z_NAME_SN_TRANSIT					"Soluna Nexus - Transit"
-#define Z_NAME_SN_SURFACE_WILD				"Soluna Nexus - Surface Wild"
 
 // Relic Base
 #define Z_LEVEL_RB_CATACOMBS				1
@@ -52,14 +52,14 @@
 #define Z_NAME_PLANET_THOR_CH				"Planet - Thor Surface CH"
 #define Z_NAME_PLANET_TYR_CH				"Planet - Desert Valley CH"
 
-// Gateways
+// Gateways (Aliased to Z_NAME_ALIAS_GATEWAY)
 #define Z_NAME_GATEWAY_SNOW_FIELD_CH		"Gateway - Snow Field CH"
 #define Z_NAME_GATEWAY_ABANDONED_CITY_CH	"Gateway - Abandoned City CH"
 #define Z_NAME_GATEWAY_SKYSCRAPER_CH		"Gateway - Skyscraper CH"
 #define Z_NAME_GATEWAY_BASE_BLEP_CH			"Gateway - Base Blep CH"
 #define Z_NAME_GATEWAY_MADNESS_LAB_CH		"Gateway - Maddness Lab CH"
 #define Z_NAME_GATEWAY_CARP_FARM_CH			"Gateway - Carp Farm CH"
-#define Z_NAME_GATEWAY_HIDDEN_ECLIPSE_CH	"Gateway - Hidden Eclipse CH"
+#define Z_NAME_GATEWAY_HIDDEN_ECLIPSE_CH	"Gateway - Hidden Eclipse CH" // Commented out
 
 // Camera Network Additions
 #define NETWORK_EXTERIOR "Exterior" // Exterior Cameras
