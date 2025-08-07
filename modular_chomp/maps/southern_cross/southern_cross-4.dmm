@@ -8675,10 +8675,6 @@
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/plating,
 /area/crew_quarters/heads/sc/chief/quarters)
-"gQO" = (
-/obj/structure/lattice,
-/turf/space,
-/area)
 "gRp" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -48271,7 +48267,7 @@ dgt
 dgt
 dgt
 dgt
-gQO
+aqj
 aqj
 lQR
 dgt
