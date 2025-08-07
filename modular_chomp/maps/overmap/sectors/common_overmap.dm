@@ -16,7 +16,7 @@ GLOBAL_LIST_EMPTY(station_waypoints) //Create global list for station waypoints,
 	start_y =  10
 	known = 1 // lets Sectors appear on shuttle navigation for easy finding.
 
-	extra_z_levels = list(Z_NAME_SN_TRANSIT, Z_NAME_SN_MISC, Z_NAME_SC_SURFACE, Z_NAME_SC_SURFACE_MINE, Z_NAME_SC_SURFACE_WILD) //This should allow for comms to reach people from the station. Basically this defines all the areas of Southern Cross and the Sif local system on the overmap.
+	extra_z_levels = list(Z_NAME_SN_TRANSIT, Z_NAME_ALIAS_MISC, Z_NAME_SC_SURFACE, Z_NAME_SC_SURFACE_MINE, Z_NAME_SC_SURFACE_WILD) //This should allow for comms to reach people from the station. Basically this defines all the areas of Southern Cross and the Sif local system on the overmap.
 	// "Z_LEVEL_SURFACE_SKYLANDS, " //removed due to lack of use
 	mob_announce_cooldown = 0
 
@@ -104,7 +104,7 @@ GLOBAL_LIST_EMPTY(station_waypoints) //Create global list for station waypoints,
 	start_y =  10
 	known = 1 // lets Sectors appear on shuttle navigation for easy finding.
 
-	extra_z_levels = list(Z_NAME_SC_TRANSIT, Z_NAME_SC_MISC, Z_NAME_SC_SURFACE, Z_NAME_SC_SURFACE_MINE, Z_NAME_SC_SURFACE_WILD) //This should allow for comms to reach people from the station. Basically this defines all the areas of Southern Cross and the Sif local system on the overmap.
+	extra_z_levels = list(Z_NAME_SC_TRANSIT, Z_NAME_ALIAS_MISC, Z_NAME_SC_SURFACE, Z_NAME_SC_SURFACE_MINE, Z_NAME_SC_SURFACE_WILD) //This should allow for comms to reach people from the station. Basically this defines all the areas of Southern Cross and the Sif local system on the overmap.
 	// "Z_LEVEL_SURFACE_SKYLANDS, " //removed due to lack of use
 	mob_announce_cooldown = 0
 
@@ -209,7 +209,7 @@ GLOBAL_LIST_EMPTY(station_waypoints) //Create global list for station waypoints,
 [b]Notice[/b]: The Vir government welcomes you to this world."}
 
 	// Set map_z to your levels for a planetary base. If you're ever going to split this up/add more Z's to Thor, imitate SC. THESE MUST BE DEFINED FOR SENSORS + SUCH TO WORK.
-	map_z = list(Z_LEVEL_RB_CATACOMBS, Z_LEVEL_RB_UNDERGROUND, Z_LEVEL_RB_SURFACE, Z_LEVEL_RB_UPPER_FLOORS, Z_NAME_RB_SURFACE_WILDS, Z_NAME_RB_SURFACE_OCEAN, Z_NAME_RB_CARRIER)
+	map_z = list(Z_LEVEL_RB_CATACOMBS, Z_LEVEL_RB_UNDERGROUND, Z_LEVEL_RB_SURFACE, Z_LEVEL_RB_UPPER_FLOORS, Z_NAME_RB_SURFACE_WILDS, Z_NAME_RB_SURFACE_OCEAN, Z_NAME_ALIAS_MISC)
 
 	initial_generic_waypoints = list(
 		"baby_mammoth_dock",
