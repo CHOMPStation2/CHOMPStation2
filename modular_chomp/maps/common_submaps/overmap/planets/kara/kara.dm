@@ -30,7 +30,6 @@
 [i]Transponder[/i]: Transmitting (CIV), Vir IFF
 [b]Notice[/b]: CONDEMNED! NO ENTRY! -Vir System Authority"}
 
-	map_z = list(Z_NAME_KARA_AEROSTAT_CH) // Using the aerostat as the map as it is the only z-level in the atmosphere. Located in /maps/southern_cross/overmap/planets/kara/aerostat/
 	initial_generic_waypoints = list("northern_star_mine_dock", "northern_star_mine_echidna_dock", "aerostat_west","aerostat_east","aerostat_south","aerostat_northwest","aerostat_northeast") //northern_star.dm landmarks
 	start_x  = 14
 	start_y  = 14
@@ -44,6 +43,12 @@
 	icon_state = "chlorine"
 	known = 1
 
+/obj/effect/overmap/visitable/planet/kara/Initialize(mapload)
+	// If our map is actually loaded, then set it
+	var/resolved_z = GLOB.map_templates_loaded[Z_NAME_KARA_AEROSTAT_CH]
+	if(isnum(resolved_z))
+		map_z = list(Z_NAME_KARA_AEROSTAT_CH) // Using the aerostat as the map as it is the only z-level in the atmosphere. Located in /maps/southern_cross/overmap/planets/kara/aerostat/
+	return ..()
 
 /obj/effect/overmap/visitable/planet/kara/get_skybox_representation()
 	var/image/tmp = ..()

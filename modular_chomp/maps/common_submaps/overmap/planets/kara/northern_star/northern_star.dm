@@ -27,13 +27,14 @@
 [i]Transponder[/i]: Transmitting (NT), NanoTrasen IFF
 [i]Habitability[/i]: Low (High Pressure, Toxic Atmosphere). Habitats in orbit.
 [b]Notice[/b]: NT security is currently restricting free flights to Northern Star."}
+
+	map_z = list(Z_NAME_KARA_NSTAR_MINES_CH)
 	in_space = 1
 	known = TRUE
 	start_x  = 14
 	start_y  = 14
 	extra_z_levels = list(Z_NAME_KARA_AEROSTAT_CH) // Should inform the overmap that kara and NS are in the same sector despite being different locations.
 	initial_generic_waypoints = list("northern_star_mine_dock", "northern_star_mine_echidna_dock") //northern_star.dm landmarks
-	map_z = list(Z_NAME_KARA_NSTAR_MINES_CH)
 
 /obj/effect/overmap/visitable/sector/northern_star_mines/get_space_zlevels()//These are the primary levels that our space station resides in. This also indicates what levels astronauts can drift into.
 	return list(GLOB.map_templates_loaded[Z_NAME_KARA_NSTAR_MINES_CH]) //May add more later
