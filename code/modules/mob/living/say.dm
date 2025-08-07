@@ -425,7 +425,11 @@ var/list/channel_to_radio_key = list()
 	if(whispering)
 		if(do_sound && message)
 			blooploop(message, extrarange = -6, volume = 25, sound_preference = /datum/preference/toggle/whisper_sounds)
+<<<<<<< HEAD
 			// playsound(T, pick(voice_sounds_list), 25, TRUE, extrarange = -6, falloff = 1 , is_global = TRUE, frequency = voice_freq, ignore_walls = TRUE, preference = /datum/preference/toggle/whisper_sounds)	//CHOMPEdit - ignore_walls = TRUE
+=======
+			// playsound(T, pick(voice_sounds_list), 25, TRUE, extrarange = -6, falloff = 1 , is_global = TRUE, frequency = ourfreq, ignore_walls = FALSE, preference = /datum/preference/toggle/whisper_sounds)
+>>>>>>> 914d140ca2 (these too (#18195))
 
 		log_whisper(message, src)
 	else
@@ -454,9 +458,15 @@ var/list/channel_to_radio_key = list()
 		falloff = 1,\
 		is_global = TRUE,\
 		frequency = voice_freq > 0 ? voice_freq : null,\
+<<<<<<< HEAD
 		ignore_walls = TRUE,\
 		preference = sound_preference,
 	) //CHOMPEDIT - Ignore_walls set to TRUE
+=======
+		ignore_walls = FALSE,\
+		preference = sound_preference,
+	)
+>>>>>>> 914d140ca2 (these too (#18195))
 
 /mob/living/proc/blooploop(message, extrarange = 0, volume, sound_preference = /datum/preference/toggle/say_sounds)
 	var/bloopers = min(round((LAZYLEN(message) / BLOOPER_SPEED)) + 1, BLOOPER_MAX_BLOOPERS)
