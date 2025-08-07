@@ -5369,7 +5369,6 @@
 #include "modular_chomp\maps\common_areas\station\turbolift.dm"
 #include "modular_chomp\maps\common_submaps\common_offmap.dm"
 #include "modular_chomp\maps\common_submaps\overmap\planets\kara\kara.dm"
-#include "modular_chomp\maps\common_submaps\overmap\planets\kara\kara_OM_only.dm"
 #include "modular_chomp\maps\common_submaps\overmap\planets\kara\aerostat\aerostat.dm"
 #include "modular_chomp\maps\common_submaps\overmap\planets\kara\northern_star\northern_star.dm"
 #include "modular_chomp\maps\common_submaps\overmap\planets\thor\thor.dm"
