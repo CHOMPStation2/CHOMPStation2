@@ -419,35 +419,19 @@ var/list/channel_to_radio_key = list()
 					C.images -= I
 			qdel(I)
 
-<<<<<<< HEAD
-	/*	CHOMPEdit - Not needed if you set your defaults right
-	var/ourfreq = null
-	if(voice_freq > 0 )
-		ourfreq = voice_freq
-	*/
-=======
->>>>>>> 2e942b076c (Simplified version of bloopers (#18173))
 	//Log the message to file
 	if(message_mode)
 		message = "([message_mode == "headset" ? "Common" : capitalize(message_mode)]) [message]" //Adds radio keys used if available
 	if(whispering)
 		if(do_sound && message)
-<<<<<<< HEAD
-			playsound(T, pick(voice_sounds_list), 25, TRUE, extrarange = -6, falloff = 1 , is_global = TRUE, frequency = voice_freq, ignore_walls = TRUE, preference = /datum/preference/toggle/whisper_sounds)	//CHOMPEdit - Use say sound prefs
-=======
-			blooploop(message, extrarange = -6, volume = 25)
-			// playsound(T, pick(voice_sounds_list), 25, TRUE, extrarange = -6, falloff = 1 , is_global = TRUE, frequency = ourfreq, ignore_walls = FALSE, preference = /datum/preference/toggle/whisper_sounds)
->>>>>>> 2e942b076c (Simplified version of bloopers (#18173))
+			blooploop(message, extrarange = -6, volume = 25, preference = /datum/preference/toggle/whisper_sounds) //CHOMPEdit - Use whisper sounds pref
+			// playsound(T, pick(voice_sounds_list), 25, TRUE, extrarange = -6, falloff = 1 , is_global = TRUE, frequency = voice_freq, ignore_walls = TRUE, preference = /datum/preference/toggle/whisper_sounds)	//CHOMPEdit - Use say sound prefs
 
 		log_whisper(message, src)
 	else
 		if(do_sound && message)
-<<<<<<< HEAD
-			playsound(T, pick(voice_sounds_list), 75, TRUE, falloff = 1 , is_global = TRUE, frequency = voice_freq, ignore_walls = TRUE, preference = /datum/preference/toggle/say_sounds)	//CHOMPEdit - tiny fix
-=======
-			blooploop(message, volume = 75)
-			// playsound(T, pick(voice_sounds_list), 75, TRUE, falloff = 1 , is_global = TRUE, frequency = ourfreq, ignore_walls = FALSE, preference = /datum/preference/toggle/say_sounds)
->>>>>>> 2e942b076c (Simplified version of bloopers (#18173))
+			blooploop(message, volume = 75, ignore_walls = TRUE) //Voices ignore walls
+			// playsound(T, pick(voice_sounds_list), 75, TRUE, falloff = 1 , is_global = TRUE, frequency = voice_freq, ignore_walls = TRUE, preference = /datum/preference/toggle/say_sounds)
 		log_say(message, src)
 	return 1
 
