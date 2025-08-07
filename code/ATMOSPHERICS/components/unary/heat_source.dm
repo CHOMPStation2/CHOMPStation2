@@ -159,12 +159,8 @@
 
 	max_power_rating = initial(max_power_rating) * cap_rating / 2
 	max_temperature = max(initial(max_temperature) - T20C, 0) * ((bin_rating * 4 + cap_rating) / 5) + T20C
-<<<<<<< HEAD
-	air_contents?.volume = max(initial(internal_volume) - 200, 0) + 200 * bin_rating
-=======
 	air_contents.volume = max(initial(internal_volume) - 200, 0) + 200 * bin_rating
 	heating_efficiency = max(initial(heating_efficiency), (laser_rating-1))
->>>>>>> c81f5b697f (Reagent cooled atmo machines (#18178))
 	set_power_level(power_setting)
 
 /obj/machinery/atmospherics/unary/heater/proc/set_power_level(var/new_power_setting)
