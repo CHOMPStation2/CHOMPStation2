@@ -155,7 +155,7 @@
 	belly_capacity_list = list("sleeper" = 3, "throat" = 2)
 	module_type = list("Standard", "Engineering", "Surgeon", "Crisis", "Miner", "Janitor", "Service", "Clerical", "Security", "Research")
 	sprite_flags = ROBOT_HAS_DISABLER_SPRITE | ROBOT_HAS_LASER_SPRITE | ROBOT_HAS_SHIELD_SPRITE
-	is_whitelisted = TRUE
-	whitelist_ckey = "thesharkenning"
+	//is_whitelisted = TRUE
+	//whitelist_ckey = "thesharkenning"
 
 #undef CUSTOM_BORGSPRITE
