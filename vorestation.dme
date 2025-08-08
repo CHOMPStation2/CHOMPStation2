@@ -162,11 +162,8 @@
 #include "code\__defines\span.dm"
 #include "code\__defines\species_flags.dm"
 #include "code\__defines\species_languages.dm"
-<<<<<<< HEAD
 #include "code\__defines\species_languages_vr.dm"
 #include "code\__defines\species_languages_YW.dm"
-=======
->>>>>>> 8b8b981515 (Allergic Reaction Element (And direct_say proc) (#18131))
 #include "code\__defines\species_traits.dm"
 #include "code\__defines\speech_channels.dm"
 #include "code\__defines\spells.dm"
