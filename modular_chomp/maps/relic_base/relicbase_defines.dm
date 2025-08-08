@@ -149,18 +149,18 @@
 
 	// Cave submaps are first.
 	var/undermines_z = GLOB.map_templates_loaded[Z_NAME_RB_UNDERMINES]
-	var/surface_mines_z = GLOB.map_templates_loaded[Z_NAME_RB_SURFACE_MINES]
+	var/surface_mines_z = GLOB.map_templates_loaded[Z_NAME_ALIAS_SURFACE_MINES]
 	seed_submaps(list(undermines_z), 140, /area/surface/cave/unexplored/normal, /datum/map_template/surface/mountains/normal)
 	seed_submaps(list(undermines_z), 140, /area/surface/cave/unexplored/deep, /datum/map_template/surface/mountains/deep)
 	seed_submaps(list(surface_mines_z), 140, /area/surface/outside/wilderness/mountains, /datum/map_template/surface/mountains/normal)
 
 	// Plains to make them less plain.
-	var/surface_ocean_z = GLOB.map_templates_loaded[Z_NAME_RB_SURFACE_OCEAN]
+	var/surface_ocean_z = GLOB.map_templates_loaded[Z_NAME_ALIAS_SURFACE]
 	seed_submaps(list(Z_LEVEL_RB_SURFACE), 220, /area/surface/outside/plains/normal, /datum/map_template/surface/plains) // Both of these will need a massive POI overhaul. The framework is in, and tiles will be mass-edited to match, but better POIs are wanted.
 	seed_submaps(list(surface_ocean_z), 220, /area/surface/outside/plains/normal, /datum/map_template/surface/plains) // Both of these will need a massive POI overhaul. The framework is in, and tiles will be mass-edited to match, but better POIs are wanted.
 
 	// Wilderness is next.
-	var/surface_wilds_z = GLOB.map_templates_loaded[Z_NAME_RB_SURFACE_WILDS]
+	var/surface_wilds_z = GLOB.map_templates_loaded[Z_NAME_ALIAS_SURFACE_WILDS]
 	seed_submaps(list(surface_wilds_z), 240, /area/surface/outside/wilderness/normal, /datum/map_template/surface/wilderness/normal)
 	seed_submaps(list(surface_wilds_z), 240, /area/surface/outside/wilderness/deep, /datum/map_template/surface/wilderness/deep)
 	// If Space submaps are made, add a line to make them here as well.
@@ -284,6 +284,7 @@
 
 /datum/map_template/relicbase_lateload/surface_wild
 	name = Z_NAME_RB_SURFACE_WILDS
+	name_alias = Z_NAME_ALIAS_SURFACE_WILDS
 	mappath = "modular_chomp/maps/relic_base/relicbase-7.dmm"
 	associated_map_datum = /datum/map_z_level/relicbase_lateload/surface_wild
 
@@ -306,6 +307,7 @@
 
 /datum/map_template/relicbase_lateload/surface_ocean
 	name = Z_NAME_RB_SURFACE_OCEAN
+	name_alias = Z_NAME_ALIAS_SURFACE
 	mappath = "modular_chomp/maps/relic_base/relicbase-9.dmm"
 	associated_map_datum = /datum/map_z_level/relicbase_lateload/surface_ocean
 
@@ -317,6 +319,7 @@
 
 /datum/map_template/relicbase_lateload/surface_mine
 	name = Z_NAME_RB_SURFACE_MINES
+	name_alias = Z_NAME_ALIAS_SURFACE_MINES
 	mappath = "modular_chomp/maps/relic_base/relicbase-10.dmm"
 	associated_map_datum = /datum/map_z_level/relicbase_lateload/surface_mine
 
@@ -361,8 +364,8 @@
 		Z_LEVEL_RB_UPPER_FLOORS,
 		Z_LEVEL_RB_THE_SKY,
 		Z_NAME_RB_UNDERMINES,
-		Z_NAME_RB_SURFACE_WILDS,
+		Z_NAME_ALIAS_SURFACE_WILDS,
 		Z_NAME_RB_WILDERNESS_SKY,
-		Z_NAME_RB_SURFACE_OCEAN,
-		Z_NAME_RB_SURFACE_MINES,
+		Z_NAME_ALIAS_SURFACE,
+		Z_NAME_ALIAS_SURFACE_MINES,
 	)

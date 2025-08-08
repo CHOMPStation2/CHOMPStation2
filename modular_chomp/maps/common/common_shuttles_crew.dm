@@ -142,9 +142,9 @@ GLOBAL_LIST_EMPTY(shuttdisp_list)
 			last_z = Z_LEVEL_SC_STATION_ONE
 			location_desc = "docked on the station"
 
-		else if(my_shuttle.current_location.z == GLOB.map_templates_loaded[Z_NAME_SC_SURFACE])
+		else if(my_shuttle.current_location.z == GLOB.map_templates_loaded[Z_NAME_ALIAS_SURFACE])
 			message2 = "Outp"
-			last_z = GLOB.map_templates_loaded[Z_NAME_SC_SURFACE]
+			last_z = GLOB.map_templates_loaded[Z_NAME_ALIAS_SURFACE]
 			location_desc =	"docked on the outpost"
 
 		else
@@ -152,7 +152,7 @@ GLOBAL_LIST_EMPTY(shuttdisp_list)
 				message2 = "STS-O"
 				location_desc = "travelling to the outpost"
 
-			if(last_z == GLOB.map_templates_loaded[Z_NAME_SC_SURFACE])
+			if(last_z == GLOB.map_templates_loaded[Z_NAME_ALIAS_SURFACE])
 				message2 = "STS-S"
 				location_desc = "travelling to the station"
 
