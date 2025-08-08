@@ -1,5 +1,0 @@
-author: "Diana"
-delete-after: True
-changes:
-  - bugfix: "Borg grippers will no longer delete power cells"
-  - bugfix: "Drippy is now a proper color."

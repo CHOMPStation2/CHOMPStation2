@@ -1,4 +1,4 @@
 author: "CHOMPStation2StaffMirrorBot"
 delete-after: True
 changes:
-  - rscadd: "New borg model: Myomer"
+  - bugfix: "several bad encodings"
