@@ -1,9 +1,7 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "aa" = (
 /obj/structure/simple_door/sifwood,
-/turf/simulated/floor/wood/sif{
-	oxygen = 0
-	},
+/turf/simulated/floor/wood/sif/turfpack/sif,
 /area/submap/DeathDen)
 "aj" = (
 /obj/item/stool/padded,
@@ -215,7 +213,9 @@
 /area/submap/DeathDen)
 "rn" = (
 /obj/structure/simple_door/sifwood,
-/turf/simulated/floor/wood/sif/turfpack/sif,
+/turf/simulated/floor/wood/sif{
+	oxygen = 0
+	},
 /area/submap/DeathDen)
 "rO" = (
 /obj/effect/decal/cleanable/dirt,
@@ -809,11 +809,11 @@ MV
 MV
 MV
 MV
-rn
-MV
-MV
-MV
 aa
+MV
+MV
+MV
+rn
 MV
 MV
 MV
@@ -844,7 +844,7 @@ Is
 "}
 (10,1,1) = {"
 Is
-rn
+aa
 Yr
 Ps
 Xy
