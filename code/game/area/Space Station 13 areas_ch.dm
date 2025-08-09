@@ -32,6 +32,9 @@
 /area/crew_quarters/coffee_shop
 	flags = RAD_SHIELDED | AREA_ALLOW_CLOCKOUT
 
+/area/crew_quarters/coffee_shop/lib
+	name = "\improper Coffee Shop Lib"
+
 /area/crew_quarters/kitchen
 	flags = RAD_SHIELDED
 

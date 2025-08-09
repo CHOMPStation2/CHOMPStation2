@@ -5022,7 +5022,6 @@
 	desc = "Built for close quarters combat, the Hesphaistos Industries KS-40 is widely regarded as a weapon of choice for repelling boarders. This one has 'Property of the Warden' inscribed on the stock.";
 	name = "warden's shotgun"
 	},
-/obj/item/book/manual/security_space_law,
 /obj/structure/closet/secure_closet/nanotrasen_warden,
 /obj/machinery/power/apc{
 	alarms_hidden = 1;
@@ -5738,8 +5737,6 @@
 /obj/item/ammo_magazine/ammo_box/b12g/stunshell,
 /obj/item/ammo_magazine/ammo_box/b12g/beanbag,
 /obj/item/ammo_magazine/ammo_box/b12g/beanbag,
-/obj/item/storage/box/empshells/large,
-/obj/item/storage/box/empshells/large,
 /obj/item/ammo_magazine/ammo_box/b12g,
 /obj/item/ammo_magazine/ammo_box/b12g,
 /obj/item/ammo_magazine/ammo_box/b12g,
@@ -5820,12 +5817,8 @@
 "mi" = (
 /turf/simulated/wall/rpshull,
 /area/mothership/rnd)
-"mj" = (
-/obj/machinery/r_n_d/destructive_analyzer,
-/turf/simulated/floor/tiled/steel_grid,
-/area/mothership/rnd)
 "mk" = (
-/obj/machinery/computer/rdconsole/core,
+/obj/machinery/computer/rdconsole_tg,
 /turf/simulated/floor/tiled/steel_grid,
 /area/mothership/rnd)
 "ml" = (
@@ -6079,7 +6072,7 @@
 /turf/simulated/floor/tiled/steel_grid,
 /area/mothership/rnd)
 "mP" = (
-/obj/machinery/r_n_d/protolathe,
+/obj/machinery/rnd/production/protolathe/department/science,
 /turf/simulated/floor/tiled/steel_grid,
 /area/mothership/rnd)
 "mQ" = (
@@ -17995,7 +17988,7 @@ lh
 lt
 lJ
 kl
-mj
+mC
 mz
 mO
 nf

@@ -124,6 +124,10 @@
 	desc = "A large NT cruiser."
 	mappath = "maps/offmap_vr/om_ships/cruiser.dmm"
 
+/obj/machinery/computer/HolodeckControl/holodorm/warship
+	name = "warship holodeck control"
+	projection_area = /area/mothership/holodeck/holo
+
 /obj/effect/overmap/visitable/ship/cruiser
 	name = "NDV Daedalus"
 	icon_state = "oberth_destroyer_g"

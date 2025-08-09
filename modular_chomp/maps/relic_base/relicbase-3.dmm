@@ -32115,7 +32115,7 @@
 /turf/simulated/floor/outdoors/grass/heavy,
 /area/surface/outside/plains/outpost)
 "nWX" = (
-/obj/turbolift_map_holder/southern_cross/port,
+/obj/turbolift_map_holder/relic_base/port,
 /turf/simulated/wall/elevator,
 /area/quartermaster/delivery)
 "nXu" = (
