@@ -1,11 +1,93 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aa" = (
+/obj/structure/bonfire/permanent,
+/obj/structure/grille/cult,
+/turf/simulated/floor/cult,
+/area/submap/DemonPool)
+"ab" = (
+/obj/fire,
+/turf/simulated/floor/cult,
+/area/submap/DemonPool)
+"ac" = (
+/obj/effect/decal/cleanable/blood/gibs/body,
+/obj/fire,
+/turf/simulated/floor/cult,
+/area/submap/DemonPool)
+"ad" = (
+/obj/fire,
+/obj/fire,
+/obj/fire,
+/turf/simulated/floor/outdoors/rocks{
+	outdoors = 0
+	},
+/area/submap/DemonPool)
+"ae" = (
+/obj/effect/gibspawner/human/xenochimera,
+/obj/fire,
+/turf/simulated/floor/cult,
+/area/submap/DemonPool)
+"af" = (
+/obj/effect/decal/cleanable/blood/gibs/limb,
+/obj/fire,
+/turf/simulated/floor/cult,
+/area/submap/DemonPool)
 "ag" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/submap/DemonPool)
+"ah" = (
+/obj/effect/decal/cleanable/blood/gibs/body,
+/obj/fire,
+/obj/fire,
+/obj/fire,
+/obj/fire,
+/obj/fire,
+/turf/simulated/floor/cult,
+/area/submap/DemonPool)
+"ai" = (
+/obj/fire,
+/obj/fire,
+/turf/simulated/floor/cult,
+/area/submap/DemonPool)
 "aj" = (
 /obj/structure/sign/warning/fire,
 /turf/simulated/wall/cult,
+/area/submap/DemonPool)
+"ak" = (
+/obj/fire,
+/turf/simulated/floor,
+/area/submap/DemonPool)
+"al" = (
+/obj/fire,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor,
+/area/submap/DemonPool)
+"am" = (
+/obj/fire,
+/turf/simulated/floor/outdoors/dirt{
+	outdoors = 0
+	},
+/area/submap/DemonPool)
+"an" = (
+/turf/simulated/floor/outdoors/dirt{
+	outdoors = 0
+	},
+/area/template_noop)
+"ao" = (
+/obj/fire,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/outdoors/dirt,
+/area/submap/DemonPool)
+"ap" = (
+/obj/fire,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/outdoors/dirt{
+	outdoors = 0
+	},
+/area/submap/DemonPool)
+"aq" = (
+/obj/fire,
+/turf/simulated/floor/outdoors/dirt,
 /area/submap/DemonPool)
 "ay" = (
 /obj/structure/girder/cult,
@@ -371,6 +453,7 @@
 /area/submap/DemonPool)
 "NI" = (
 /obj/effect/gibspawner/human,
+/obj/fire,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/cult,
 /area/submap/DemonPool)
@@ -381,6 +464,10 @@
 /area/submap/DemonPool)
 "OK" = (
 /obj/structure/simple_door/cult,
+/obj/fire,
+/obj/fire,
+/obj/fire,
+/obj/fire,
 /turf/simulated/floor,
 /area/submap/DemonPool)
 "Pu" = (
@@ -537,10 +624,10 @@ Jo
 Jo
 Jo
 YF
-vJ
+aq
 mU
 hZ
-YF
+am
 Jo
 Jo
 Jo
@@ -565,7 +652,7 @@ vJ
 Jo
 Jo
 YF
-RP
+ap
 RP
 zZ
 Jo
@@ -765,7 +852,7 @@ Jo
 eR
 eR
 yW
-pH
+aa
 yW
 eR
 eR
@@ -838,7 +925,7 @@ oi
 qc
 Jo
 LD
-oi
+ab
 Zj
 Jo
 eR
@@ -866,12 +953,12 @@ Jo
 Jo
 eR
 vw
-oi
+ai
 aj
 eR
-hO
+ae
 qb
-oi
+ab
 si
 ay
 KR
@@ -892,13 +979,13 @@ LL
 Jo
 Jo
 Qz
-ag
-oi
+al
+ai
 OK
-si
-on
-oi
-on
+af
+ac
+ab
+ac
 si
 jt
 oi
@@ -919,13 +1006,13 @@ Jo
 Jo
 qa
 NI
-oi
-vw
-on
+ab
+ak
+ah
 ZU
-oi
+ab
 hO
-on
+ac
 zj
 on
 lo
@@ -949,7 +1036,7 @@ Jo
 Jo
 Jo
 aj
-oi
+ab
 pH
 pH
 pH
@@ -979,7 +1066,7 @@ eR
 eR
 eR
 CY
-lG
+ad
 CY
 eR
 eR
@@ -1099,14 +1186,14 @@ eW
 (23,1,1) = {"
 eW
 eW
-jv
+an
 eW
 YF
 Hb
 CV
 Jo
 Jo
-JM
+ao
 RP
 RP
 VK
@@ -1132,10 +1219,10 @@ eW
 eW
 eW
 VK
-vJ
+aq
 YF
 md
-YF
+am
 VK
 jv
 eW
@@ -1161,7 +1248,7 @@ eW
 eW
 eW
 eW
-jv
+an
 eW
 jv
 eW
