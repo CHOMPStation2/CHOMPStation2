@@ -7,15 +7,6 @@
 /obj/structure/sign/warning/fire,
 /turf/simulated/wall/cult,
 /area/submap/DemonPool)
-"au" = (
-/obj/effect/decal/cleanable/blood/gibs/body,
-/obj/fire,
-/obj/fire,
-/obj/fire,
-/obj/fire,
-/obj/fire,
-/turf/simulated/floor/cult,
-/area/submap/DemonPool)
 "ay" = (
 /obj/structure/girder/cult,
 /turf/simulated/floor/cult,
@@ -41,10 +32,6 @@
 	outdoors = 0
 	},
 /area/submap/DemonPool)
-"de" = (
-/obj/fire,
-/turf/simulated/floor,
-/area/submap/DemonPool)
 "dG" = (
 /obj/structure/simple_door,
 /turf/simulated/floor/outdoors/dirt{
@@ -63,11 +50,6 @@
 /area/submap/DemonPool)
 "eR" = (
 /turf/simulated/wall/cult,
-/area/submap/DemonPool)
-"eV" = (
-/obj/structure/bonfire/permanent,
-/obj/structure/grille/cult,
-/turf/simulated/floor/cult,
 /area/submap/DemonPool)
 "eW" = (
 /turf/template_noop,
@@ -90,11 +72,6 @@
 	outdoors = 0
 	},
 /area/template_noop)
-"hr" = (
-/obj/fire,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/outdoors/dirt,
-/area/submap/DemonPool)
 "hF" = (
 /obj/effect/gibspawner/human,
 /obj/effect/decal/cleanable/dirt,
@@ -132,11 +109,6 @@
 /obj/effect/rune,
 /turf/simulated/floor/cult,
 /area/submap/DemonPool)
-"jK" = (
-/obj/fire,
-/obj/fire,
-/turf/simulated/floor/cult,
-/area/submap/DemonPool)
 "jS" = (
 /obj/structure/grille/cult,
 /turf/simulated/floor/outdoors/rocks{
@@ -170,12 +142,6 @@
 	outdoors = 0
 	},
 /area/submap/DemonPool)
-"mp" = (
-/obj/fire,
-/turf/simulated/floor/outdoors/dirt{
-	outdoors = 0
-	},
-/area/submap/DemonPool)
 "mO" = (
 /obj/effect/gibspawner/human,
 /obj/item/clothing/head/culthood/alt,
@@ -196,11 +162,6 @@
 "on" = (
 /obj/effect/decal/cleanable/blood/gibs/body,
 /turf/simulated/floor/cult,
-/area/submap/DemonPool)
-"pb" = (
-/obj/fire,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor,
 /area/submap/DemonPool)
 "pi" = (
 /obj/effect/decal/cleanable/blood/gibs/body,
@@ -232,10 +193,6 @@
 /mob/living/simple_mob/vore/demonAI/wendigo,
 /turf/simulated/floor/cult,
 /area/submap/DemonPool)
-"qQ" = (
-/obj/fire,
-/turf/simulated/floor/cult,
-/area/submap/DemonPool)
 "sb" = (
 /obj/item/clothing/shoes/cult,
 /obj/item/melee/energy/sword/red,
@@ -254,11 +211,6 @@
 /turf/simulated/floor/outdoors/rocks{
 	outdoors = 0
 	},
-/area/submap/DemonPool)
-"vv" = (
-/obj/effect/gibspawner/human/xenochimera,
-/obj/fire,
-/turf/simulated/floor/cult,
 /area/submap/DemonPool)
 "vw" = (
 /turf/simulated/floor,
@@ -326,14 +278,6 @@
 "AH" = (
 /obj/structure/cult/tome,
 /turf/simulated/floor/cult,
-/area/submap/DemonPool)
-"Bb" = (
-/obj/fire,
-/obj/fire,
-/obj/fire,
-/turf/simulated/floor/outdoors/rocks{
-	outdoors = 0
-	},
 /area/submap/DemonPool)
 "CV" = (
 /obj/random/junk,
@@ -403,29 +347,13 @@
 /obj/structure/flora/tree/sif,
 /turf/simulated/floor/outdoors/dirt,
 /area/template_noop)
-"JP" = (
-/obj/effect/decal/cleanable/blood/gibs/limb,
-/obj/fire,
-/turf/simulated/floor/cult,
-/area/submap/DemonPool)
 "JV" = (
 /obj/structure/loot_pile/maint/trash,
 /turf/simulated/floor/outdoors/dirt,
 /area/submap/DemonPool)
-"KM" = (
-/obj/fire,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/outdoors/dirt{
-	outdoors = 0
-	},
-/area/submap/DemonPool)
 "KR" = (
 /obj/effect/gibspawner/human,
 /turf/simulated/floor/cult,
-/area/submap/DemonPool)
-"Lu" = (
-/obj/fire,
-/turf/simulated/floor/outdoors/dirt,
 /area/submap/DemonPool)
 "LD" = (
 /obj/structure/bonfire/permanent,
@@ -448,7 +376,6 @@
 /area/submap/DemonPool)
 "NI" = (
 /obj/effect/gibspawner/human,
-/obj/fire,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/cult,
 /area/submap/DemonPool)
@@ -459,10 +386,6 @@
 /area/submap/DemonPool)
 "OK" = (
 /obj/structure/simple_door/cult,
-/obj/fire,
-/obj/fire,
-/obj/fire,
-/obj/fire,
 /turf/simulated/floor,
 /area/submap/DemonPool)
 "Pu" = (
@@ -534,11 +457,6 @@
 /turf/simulated/floor/outdoors/dirt{
 	outdoors = 0
 	},
-/area/submap/DemonPool)
-"XB" = (
-/obj/effect/decal/cleanable/blood/gibs/body,
-/obj/fire,
-/turf/simulated/floor/cult,
 /area/submap/DemonPool)
 "XJ" = (
 /obj/effect/decal/cleanable/blood/gibs/limb,
@@ -624,10 +542,10 @@ Jo
 Jo
 Jo
 YF
-Lu
+vJ
 mU
 hZ
-mp
+YF
 Jo
 Jo
 Jo
@@ -652,7 +570,7 @@ vJ
 Jo
 Jo
 YF
-KM
+RP
 RP
 zZ
 Jo
@@ -852,7 +770,7 @@ Jo
 eR
 eR
 yW
-eV
+pH
 yW
 eR
 eR
@@ -925,7 +843,7 @@ oi
 qc
 Jo
 LD
-qQ
+oi
 Zj
 Jo
 eR
@@ -953,12 +871,12 @@ Jo
 Jo
 eR
 vw
-jK
+oi
 aj
 eR
-vv
+hO
 qb
-qQ
+oi
 si
 ay
 KR
@@ -979,13 +897,13 @@ LL
 Jo
 Jo
 Qz
-pb
-jK
+ag
+oi
 OK
-JP
-XB
-qQ
-XB
+si
+on
+oi
+on
 si
 jt
 oi
@@ -1006,13 +924,13 @@ Jo
 Jo
 qa
 NI
-qQ
-de
-au
+oi
+vw
+on
 ZU
-qQ
+oi
 hO
-XB
+on
 zj
 on
 lo
@@ -1036,7 +954,7 @@ Jo
 Jo
 Jo
 aj
-qQ
+oi
 pH
 pH
 pH
@@ -1066,7 +984,7 @@ eR
 eR
 eR
 CY
-Bb
+lG
 CY
 eR
 eR
@@ -1193,7 +1111,7 @@ Hb
 CV
 Jo
 Jo
-hr
+JM
 RP
 RP
 VK
@@ -1219,10 +1137,10 @@ eW
 eW
 eW
 VK
-Lu
+vJ
 YF
 md
-mp
+YF
 VK
 jv
 eW
