@@ -572,7 +572,7 @@
 /obj/item/storage/box/explorerkeys
 	name = "box of volunteer headsets"
 	desc = "A box full of volunteer headsets, for issuing out to exploration volunteers."
-	starts_with = list(/obj/item/radio/headset/explorer = 7)
+	starts_with = list(/obj/item/radio/headset/volunteer = 7)  //CHOMPEdit - explo keep
 
 /obj/item/storage/box/commandkeys
 	name = "box of command keys"

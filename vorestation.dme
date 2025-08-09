@@ -1785,11 +1785,7 @@
 #include "code\game\objects\items\weapons\storage\belt_vr.dm"
 #include "code\game\objects\items\weapons\storage\bible.dm"
 #include "code\game\objects\items\weapons\storage\boxes.dm"
-<<<<<<< HEAD
 #include "code\game\objects\items\weapons\storage\boxes_ch.dm"
-#include "code\game\objects\items\weapons\storage\boxes_vr.dm"
-=======
->>>>>>> 3864dee9c5 (upport petcubes (#18166))
 #include "code\game\objects\items\weapons\storage\briefcase.dm"
 #include "code\game\objects\items\weapons\storage\egg_vr.dm"
 #include "code\game\objects\items\weapons\storage\fancy.dm"

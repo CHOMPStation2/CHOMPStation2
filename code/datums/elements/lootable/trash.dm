@@ -157,10 +157,7 @@
 		/obj/item/gun/energy/mouseray,
 		/obj/item/clothing/accessory/collar/shock/bluespace/modified,
 		/obj/item/gun/energy/sizegun/backfire,
-<<<<<<< HEAD
-		/obj/item/grenade/spawnergrenade/clustaur) // CHOMPAdd
-=======
+		/obj/item/grenade/spawnergrenade/clustaur, // CHOMPAdd
 		/obj/item/storage/box/monkeycubes,
 		/obj/item/storage/box/monkeycubes/pets/NT_standard,
 		/obj/item/storage/box/monkeycubes/pets/NT_special)
->>>>>>> 3864dee9c5 (upport petcubes (#18166))
