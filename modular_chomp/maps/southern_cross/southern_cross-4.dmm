@@ -4321,9 +4321,6 @@
 	name = "east bump";
 	pixel_x = 24
 	},
-/obj/structure/cable/green{
-	icon_state = "0-2"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/structure/catwalk,
 /obj/structure/disposalpipe/segment,
@@ -4710,9 +4707,6 @@
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/forestarboard)
 "dUZ" = (
-/obj/structure/cable/green{
-	icon_state = "1-2"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/structure/catwalk,
 /obj/structure/disposalpipe/segment,
@@ -5162,9 +5156,6 @@
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/forestarboard)
 "ejh" = (
-/obj/structure/cable/green{
-	icon_state = "1-2"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 10
@@ -5452,9 +5443,6 @@
 /turf/simulated/floor/carpet,
 /area/crew_quarters/heads/sc/hor/quarters)
 "esF" = (
-/obj/structure/cable/green{
-	icon_state = "1-2"
-	},
 /obj/machinery/light/small{
 	dir = 4
 	},
@@ -8687,10 +8675,6 @@
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/plating,
 /area/crew_quarters/heads/sc/chief/quarters)
-"gQO" = (
-/obj/structure/lattice,
-/turf/space,
-/area)
 "gRp" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -15287,11 +15271,6 @@
 /turf/simulated/floor/wood,
 /area/bridge/meeting_room)
 "mXD" = (
-/obj/machinery/power/apc{
-	dir = 8;
-	name = "west bump";
-	pixel_x = -24
-	},
 /obj/structure/cable/green{
 	icon_state = "0-2"
 	},
@@ -15750,9 +15729,6 @@
 "nmK" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 10
-	},
-/obj/structure/cable{
-	icon_state = "2-8"
 	},
 /obj/structure/cable{
 	icon_state = "2-8"
@@ -27922,9 +27898,6 @@
 /area/maintenance/thirddeck/dormsstarboard)
 "wPw" = (
 /obj/random/trash,
-/obj/structure/cable{
-	icon_state = "1-8"
-	},
 /obj/structure/cable{
 	icon_state = "1-8"
 	},
@@ -48289,7 +48262,7 @@ dgt
 dgt
 dgt
 dgt
-gQO
+aqj
 aqj
 lQR
 dgt

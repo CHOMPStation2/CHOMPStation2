@@ -5569,7 +5569,7 @@
 	req_one_access = list(101);
 	tag_door = "trade_shuttle_hatch"
 	},
-/obj/effect/shuttle_landmark/relicbase/merchant_offsite,
+/obj/effect/shuttle_landmark/southern_cross/merchant_offsite,
 /turf/simulated/shuttle/floor/black,
 /area/shuttle/merchant)
 "fti" = (

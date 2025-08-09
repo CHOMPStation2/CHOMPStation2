@@ -1626,8 +1626,8 @@
 /obj/effect/shuttle_landmark/automatic/clearing{
 	base_area = /area/surface/outside/plains/normal;
 	base_turf = /turf/simulated/floor/outdoors/grass/sif/planetuse;
-	landmark_tag = "outpost_nw";
-	name = "Northwest Outpost Perimiter"
+	landmark_tag = "wilderness_outpost";
+	name = "Wilderness Outpost"
 	},
 /turf/simulated/floor/outdoors/dirt/sif/planetuse,
 /area/surface/outside/wilderness/normal)
