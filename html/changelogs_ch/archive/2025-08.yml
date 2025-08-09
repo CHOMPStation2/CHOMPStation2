@@ -196,3 +196,18 @@
   - rscadd: Coolant tanks can now be ordered from Cargo
   - code_imp: reagents now have a cooling factor for machine efficiency calculations
   - qol: Heaters can have micro-lasers installed in them, allowing them to heat faster.
+2025-08-09:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: several bad encodings
+  - qol: Added a preference for "Multiple Say Sounds", which is enabled by default.
+      If you have it enabled it plays multiple say sounds for long sentences as normal.
+      If disabled it will play only one say sound, if say sounds are enabled. It does
+      mean there's an extra bloop at the beginning now, but it doesn't change the
+      effect much in my testing.
+  - bugfix: Dullataur chat bubble will appear in the proper place
+  - image: Dullataur .dmi 32x64->64x64
+  Kashargul:
+  - bugfix: juke not detecting changes in modular chomp
+  Will:
+  - rscadd: Changeling blood test
+  - rscadd: Ambulant blood genetrait
