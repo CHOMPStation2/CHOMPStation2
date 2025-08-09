@@ -67,11 +67,6 @@
 	outdoors = 0
 	},
 /area/submap/DemonPool)
-"gF" = (
-/turf/simulated/floor/outdoors/dirt{
-	outdoors = 0
-	},
-/area/template_noop)
 "hF" = (
 /obj/effect/gibspawner/human,
 /obj/effect/decal/cleanable/dirt,
@@ -1104,7 +1099,7 @@ eW
 (23,1,1) = {"
 eW
 eW
-gF
+jv
 eW
 YF
 Hb
@@ -1166,7 +1161,7 @@ eW
 eW
 eW
 eW
-gF
+jv
 eW
 jv
 eW
