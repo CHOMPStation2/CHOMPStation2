@@ -48179,14 +48179,6 @@
 	},
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/security/Forensics_Office)
-"dWM" = (
-/obj/structure/table/bench/wooden,
-/obj/effect/floor_decal/spline/fancy/wood{
-	dir = 4
-	},
-/obj/item/bikehorn/fluff/chew_ire,
-/turf/simulated/floor/wood/alt/panel,
-/area/crew_quarters/Gym_Sauna)
 "dWN" = (
 /obj/structure/bed/pillowpilefront/green,
 /turf/simulated/floor/wood,
@@ -106932,7 +106924,6 @@
 /turf/simulated/floor/tiled/dark,
 /area/security/Processing_Room)
 "uet" = (
-/obj/item/toy/bosunwhistle/fluff/strix,
 /obj/structure/table/rack/shelf/steel,
 /obj/item/toy/colorballoon,
 /obj/item/toy/colorballoon,
@@ -155884,7 +155875,7 @@ pMu
 ker
 uOF
 uOF
-dWM
+uOF
 uOF
 xXo
 ctj
