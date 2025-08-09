@@ -177,6 +177,7 @@ export const DmTarget = new Juke.Target({
     'interface/**',
     'sound/**',
     'tgui/public/tgui.html',
+    'modular_chomp/**', // CHOMPAdd
     `${DME_NAME}.dme`,
     NamedVersionFile,
   ],
