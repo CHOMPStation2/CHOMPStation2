@@ -1,4 +1,10 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aa" = (
+/obj/structure/simple_door/sifwood,
+/turf/simulated/floor/wood/sif{
+	oxygen = 0
+	},
+/area/submap/DeathDen)
 "aj" = (
 /obj/item/stool/padded,
 /obj/item/clothing/suit/storage/fluff/techpriestrobes,
@@ -83,9 +89,7 @@
 "hJ" = (
 /mob/living/simple_mob/humanoid/clown,
 /obj/effect/gibspawner/human,
-/turf/simulated/floor/tiled/freezer{
-	oxygen = 0
-	},
+/turf/simulated/floor/tiled/freezer,
 /area/submap/DeathDen)
 "hL" = (
 /obj/structure/table/wooden_reinforced,
@@ -136,9 +140,7 @@
 	pixel_x = -12;
 	pixel_y = 2
 	},
-/turf/simulated/floor/tiled/freezer{
-	oxygen = 0
-	},
+/turf/simulated/floor/tiled/freezer,
 /area/submap/DeathDen)
 "mC" = (
 /obj/structure/table/fancyblack,
@@ -191,9 +193,7 @@
 "nG" = (
 /obj/structure/windoor_assembly,
 /obj/random/trash,
-/turf/simulated/floor/tiled/freezer{
-	oxygen = 0
-	},
+/turf/simulated/floor/tiled/freezer,
 /area/submap/DeathDen)
 "pz" = (
 /obj/item/reagent_containers/food/snacks/candy_corn{
@@ -304,9 +304,7 @@
 /obj/structure/table/wooden_reinforced,
 /obj/random/soap,
 /obj/item/flame/candle/everburn,
-/turf/simulated/floor/tiled/freezer{
-	oxygen = 0
-	},
+/turf/simulated/floor/tiled/freezer,
 /area/submap/DeathDen)
 "yA" = (
 /obj/item/reagent_containers/food/snacks/candy_corn,
@@ -326,9 +324,7 @@
 "zS" = (
 /obj/random/soap,
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/tiled/freezer{
-	oxygen = 0
-	},
+/turf/simulated/floor/tiled/freezer,
 /area/submap/DeathDen)
 "Ay" = (
 /obj/structure/table/wooden_reinforced,
@@ -384,9 +380,7 @@
 /turf/simulated/floor/wood/sif/turfpack/sif,
 /area/submap/DeathDen)
 "CZ" = (
-/turf/simulated/floor/tiled/freezer{
-	oxygen = 0
-	},
+/turf/simulated/floor/tiled/freezer,
 /area/submap/DeathDen)
 "Dt" = (
 /obj/structure/grille/broken/rustic,
@@ -517,16 +511,12 @@
 /obj/structure/window/reinforced/tinted/frosted{
 	dir = 8
 	},
-/turf/simulated/floor/tiled/freezer{
-	oxygen = 0
-	},
+/turf/simulated/floor/tiled/freezer,
 /area/submap/DeathDen)
 "MI" = (
 /obj/structure/windoor_assembly,
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/tiled/freezer{
-	oxygen = 0
-	},
+/turf/simulated/floor/tiled/freezer,
 /area/submap/DeathDen)
 "MV" = (
 /turf/simulated/wall/sifwood,
@@ -628,9 +618,7 @@
 /obj/structure/toilet{
 	dir = 4
 	},
-/turf/simulated/floor/tiled/freezer{
-	oxygen = 0
-	},
+/turf/simulated/floor/tiled/freezer,
 /area/submap/DeathDen)
 "Tm" = (
 /turf/simulated/wall/cult,
@@ -825,7 +813,7 @@ rn
 MV
 MV
 MV
-rn
+aa
 MV
 MV
 MV
