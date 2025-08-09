@@ -238,7 +238,7 @@ CRYOGAIA_TURF_CREATE(/turf/simulated/mineral/floor)
 
 /turf/simulated/sky/snowscroll
 	name = "snow transit"
-	icon = 'icons/turf/transit_yw.dmi'
+	icon = 'icons/turf/transit_yw.dmi' //Moved to archive
 	icon_state = "snow_ns"
 
 

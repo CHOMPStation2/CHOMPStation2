@@ -24,7 +24,7 @@
 	src.emag = new /obj/item/reagent_containers/spray(src)
 	src.emag.reagents.add_reagent(REAGENT_ID_LUBE, 250)
 	src.emag.name = "Lube spray"
-	R.icon 		 = 'icons/mob/robots_yw.dmi'
+	R.icon 		 = 'icons/mob/robots_yw.dmi' //Moved to archive
 	R.hands.icon = 'icons/mob/screen1_robot_vr.dmi'
 	. = ..()
 
@@ -59,7 +59,7 @@
 	src.modules += new /obj/item/tool/crowbar(src)
 	src.emag = new /obj/item/pickaxe/plasmacutter(src)
 	src.emag 	 = new /obj/item/gun/energy/laser/mounted(src) //Emag. Not a big problem.
-	R.icon 		 = 'icons/mob/widerobot_yw.dmi'
+	R.icon 		 = 'icons/mob/widerobot_yw.dmi' //Moved to archive
 	R.hands.icon = 'icons/mob/screen1_robot_vr.dmi'
 	R.pixel_x 	 = -16
 	R.old_x 	 = -16
