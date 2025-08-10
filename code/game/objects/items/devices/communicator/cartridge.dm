@@ -323,7 +323,7 @@
 // Copied from /obj/item/cartridge/proc/post_status(),
 // code/game/objects/items/PDA/cart.dm, line 251
 /obj/item/commcard/proc/post_status(var/command, var/data1, var/data2)
-	var/datum/radio_frequency/frequency = radio_controller.return_frequency(1435)
+	var/datum/radio_frequency/frequency = SSradio.return_frequency(1435)
 	if(!frequency)
 		return
 
@@ -620,12 +620,12 @@
 
 /obj/item/commcard/head/Initialize(mapload)
 	// Have to register the commcard with the Radio controller to receive updates to the status displays
-	radio_controller.add_object(src, 1435)
+	SSradio.add_object(src, 1435)
 	. = ..()
 
 /obj/item/commcard/head/Destroy()
 	// Have to unregister the commcard for proper bookkeeping
-	radio_controller.remove_object(src, 1435)
+	SSradio.remove_object(src, 1435)
 	..()
 
 /obj/item/commcard/head/get_data()
