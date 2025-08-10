@@ -10579,25 +10579,6 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /turf/simulated/floor/tiled,
 /area/hallway/For_2_Deck_Central_Corridor_1)
-"asq" = (
-/obj/random/junk,
-/obj/structure/cable/green{
-	icon_state = "1-4"
-	},
-/turf/simulated/floor/plating,
-/area/maintenance/Deck2_Security_ForCorridor3)
-"asr" = (
-/obj/machinery/door/firedoor/border_only,
-/obj/effect/floor_decal/industrial/arrows/red{
-	dir = 1
-	},
-/obj/effect/floor_decal/industrial/arrows/red,
-/obj/machinery/door/airlock/maintenance/sec,
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
-/turf/simulated/floor/tiled/techmaint,
-/area/maintenance/Deck2_Security_ForCorridor3)
 "ass" = (
 /obj/machinery/atmospherics/binary/pump{
 	dir = 1
@@ -10605,19 +10586,10 @@
 /obj/effect/catwalk_plated,
 /turf/simulated/floor/airless,
 /area/harbor/Aft_Shuttlebay)
-"ast" = (
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
-/turf/simulated/floor/plating,
-/area/maintenance/Deck2_Security_ForCorridor3)
 "asu" = (
 /obj/structure/girder/reinforced,
 /obj/structure/cable/green{
 	icon_state = "1-4"
-	},
-/obj/structure/cable/green{
-	icon_state = "4-8"
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/Deck2_Security_ForCorridor3)
@@ -10646,17 +10618,6 @@
 "asx" = (
 /obj/structure/cable/green{
 	icon_state = "2-8"
-	},
-/turf/simulated/floor/plating,
-/area/maintenance/Deck2_Security_ForCorridor3)
-"asy" = (
-/obj/structure/cable/green{
-	icon_state = "0-2"
-	},
-/obj/machinery/power/apc{
-	dir = 1;
-	name = "north bump";
-	pixel_y = 24
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/Deck2_Security_ForCorridor3)
@@ -56831,9 +56792,6 @@
 	pixel_y = -22
 	},
 /obj/random/obstruction,
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
 /turf/simulated/floor/plating,
 /area/maintenance/Deck2_Security_ForCorridor3)
 "gel" = (
@@ -146264,8 +146222,8 @@ aaa
 lrX
 eco
 lrX
-asy
-asq
+cGa
+gER
 qyM
 wzK
 nnD
@@ -146523,7 +146481,7 @@ lrX
 lrX
 lrX
 qyM
-asr
+jbr
 aXJ
 aXJ
 aXJ
@@ -146781,7 +146739,7 @@ jRi
 jRi
 uHU
 sZC
-ast
+cGa
 aXJ
 aYD
 eHX
@@ -147039,7 +146997,7 @@ rBJ
 qHU
 uHU
 ktR
-ast
+cGa
 aXJ
 bcR
 sKq
@@ -147555,7 +147513,7 @@ fHB
 asA
 ewf
 asz
-ast
+cGa
 aXJ
 rty
 wdI
