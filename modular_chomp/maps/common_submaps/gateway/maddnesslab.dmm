@@ -1,8 +1,8 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "aa" = (
 /obj/item/aliencoin{
-	name = "Very useful Collectable";
-	desc = "It will make a nice collection number go up, increasing your completion percentage."
+	desc = "It will make a nice collection number go up, increasing your completion percentage.";
+	name = "Very useful Collectable"
 	},
 /turf/simulated/floor/wood{
 	outdoors = 1
@@ -55,8 +55,8 @@
 "ar" = (
 /obj/structure/table/steel,
 /obj/item/paper{
-	name = "Help Me";
-	info = "It won't get out of my head. It won't let me leave. I changed the blast doors to try and seal it away, but it refuses to let me make it unreachable. No matter how many barriers I try, if it gets the hint of being sealed permeantly, it makes me undo it. Please, if you read this. just leave. Just go. Don't try to kill it, you'll just be claimed too."
+	info = "It won't get out of my head. It won't let me leave. I changed the blast doors to try and seal it away, but it refuses to let me make it unreachable. No matter how many barriers I try, if it gets the hint of being sealed permeantly, it makes me undo it. Please, if you read this. just leave. Just go. Don't try to kill it, you'll just be claimed too.";
+	name = "Help Me"
 	},
 /turf/simulated/floor,
 /area/awaymission/mol/headdorms)
@@ -158,8 +158,8 @@
 /area/awaymission/mol/realitycore)
 "bb" = (
 /obj/item/paper{
-	name = "Dev Notes Secert";
-	info = "I promised my nephew to put his level into this game. If you found it, uhh congrats. Didn't test it."
+	info = "I promised my nephew to put his level into this game. If you found it, uhh congrats. Didn't test it.";
+	name = "Dev Notes Secert"
 	},
 /turf/simulated/floor/bmarble,
 /area/awaymission/mol/vr/shattered)
@@ -185,8 +185,8 @@
 /area/awaymission/mol/kitchen)
 "bh" = (
 /obj/item/aliencoin{
-	name = "Very useful Collectable";
-	desc = "It will make a nice collection number go up, increasing your completion percentage."
+	desc = "It will make a nice collection number go up, increasing your completion percentage.";
+	name = "Very useful Collectable"
 	},
 /turf/simulated/floor/grass2{
 	outdoors = 1
@@ -323,8 +323,8 @@
 /area/awaymission/mol/vistortunnel)
 "ch" = (
 /turf/simulated/floor/outdoors/dirt{
-	oxygen = 21.8366;
 	nitrogen = 82.1472;
+	oxygen = 21.8366;
 	temperature = 293.15
 	},
 /area/awaymission/mol/mines)
@@ -401,10 +401,6 @@
 /obj/effect/floor_decal/corner/green/diagonal,
 /turf/simulated/floor/bmarble,
 /area/awaymission/mol/vistortunnel)
-"cL" = (
-/obj/effect/map_helper/no_phaseshift,
-/turf/simulated/floor/carpet/blue,
-/area/awaymission/mol/vistortunnel/blue)
 "cM" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -440,8 +436,8 @@
 /area/awaymission/mol/crumblingmaze)
 "cW" = (
 /turf/simulated/floor/water{
-	oxygen = 21.8366;
 	nitrogen = 82.1472;
+	oxygen = 21.8366;
 	temperature = 293.15
 	},
 /area/awaymission/mol/vr/shattered)
@@ -477,8 +473,8 @@
 "di" = (
 /obj/structure/table/standard,
 /obj/item/paper{
-	name = "Notes";
-	info = "We just pulled a cultist from the void. They were sleeping so we just nudge them into their room and prayed."
+	info = "We just pulled a cultist from the void. They were sleeping so we just nudge them into their room and prayed.";
+	name = "Notes"
 	},
 /obj/machinery/light{
 	dir = 1
@@ -590,8 +586,8 @@
 	dir = 2
 	},
 /turf/simulated/floor/outdoors/dirt{
-	oxygen = 21.8366;
 	nitrogen = 82.1472;
+	oxygen = 21.8366;
 	temperature = 293.15
 	},
 /area/awaymission/mol/mines)
@@ -654,17 +650,17 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/asteroid_steel{
-	temperature = 293.15;
+	nitrogen = 82.1472;
 	oxygen = 21.8366;
-	nitrogen = 82.1472
+	temperature = 293.15
 	},
 /area/awaymission/mol/entrancetunnel)
 "ei" = (
 /obj/structure/bonfire/permanent,
 /obj/item/material/sword,
 /turf/simulated/floor/outdoors/dirt{
-	oxygen = 21.8366;
 	nitrogen = 82.1472;
+	oxygen = 21.8366;
 	temperature = 293.15
 	},
 /area/awaymission/mol/mines)
@@ -691,10 +687,6 @@
 	},
 /turf/simulated/floor/carpet/blue,
 /area/awaymission/mol/dorms)
-"et" = (
-/obj/effect/map_helper/no_phaseshift/area,
-/turf/simulated/floor/carpet/green,
-/area/awaymission/mol/vistortunnel/green)
 "ex" = (
 /obj/structure/table/hardwoodtable,
 /turf/simulated/floor/carpet/green,
@@ -702,8 +694,8 @@
 "ey" = (
 /obj/machinery/crystal/ice,
 /turf/simulated/floor/outdoors/dirt{
-	oxygen = 21.8366;
 	nitrogen = 82.1472;
+	oxygen = 21.8366;
 	temperature = 293.15
 	},
 /area/awaymission/mol/mines)
@@ -752,9 +744,9 @@
 	dir = 6
 	},
 /turf/simulated/floor/tiled/asteroid_steel{
-	temperature = 293.15;
+	nitrogen = 82.1472;
 	oxygen = 21.8366;
-	nitrogen = 82.1472
+	temperature = 293.15
 	},
 /area/awaymission/mol/entrancetunnel)
 "fe" = (
@@ -845,8 +837,8 @@
 "fD" = (
 /obj/structure/table/standard,
 /obj/item/paper{
-	name = "Notes";
-	info = "Vistor Purple has the capability to manpulate light, turning itself seemingly invisible to the naked eye."
+	info = "Vistor Purple has the capability to manpulate light, turning itself seemingly invisible to the naked eye.";
+	name = "Notes"
 	},
 /obj/random/maintenance/research,
 /turf/simulated/floor/wmarble,
@@ -856,10 +848,6 @@
 /obj/effect/floor_decal/corner/black/diagonal,
 /turf/simulated/floor/bmarble,
 /area/awaymission/mol/vr/observation)
-"fN" = (
-/obj/effect/map_helper/no_phaseshift/area,
-/turf/simulated/floor/carpet/bcarpet,
-/area/awaymission/mol/vistortunnel/yellow)
 "fQ" = (
 /obj/effect/floor_decal/corner/grey/diagonal,
 /obj/structure/table/steel,
@@ -877,8 +865,8 @@
 /obj/random/outcrop,
 /obj/random/outcrop,
 /turf/simulated/floor/outdoors/dirt{
-	oxygen = 21.8366;
 	nitrogen = 82.1472;
+	oxygen = 21.8366;
 	temperature = 293.15
 	},
 /area/awaymission/mol/mines)
@@ -905,11 +893,6 @@
 	},
 /turf/simulated/wall/solidrock,
 /area/awaymission/mol/vr/observation)
-"gh" = (
-/obj/effect/map_helper/no_phaseshift/area,
-/obj/effect/floor_decal/corner/black/diagonal,
-/turf/simulated/floor/bmarble,
-/area/awaymission/mol/entrancetunnel)
 "gn" = (
 /obj/machinery/conveyor,
 /turf/simulated/floor/tiled/kafel_full/white,
@@ -1116,8 +1099,8 @@
 /area/awaymission/mol/mines)
 "hz" = (
 /obj/item/paper{
-	name = "Good Bye";
-	info = "We have fallen. The ash fills our view. We can hear the creatures scurring in the dark. Dave has already given up, and while I try to keep him moving with promises of salvation, I know he's right. We're both dead down here. Once we fell off the lift, we were goners."
+	info = "We have fallen. The ash fills our view. We can hear the creatures scurring in the dark. Dave has already given up, and while I try to keep him moving with promises of salvation, I know he's right. We're both dead down here. Once we fell off the lift, we were goners.";
+	name = "Good Bye"
 	},
 /turf/simulated/floor/outdoors/grass/smokestar,
 /area/awaymission/mol/mines)
@@ -1153,10 +1136,6 @@
 /obj/structure/table/hardwoodtable,
 /turf/simulated/floor/carpet/bcarpet,
 /area/awaymission/mol/vistortunnel/yellow)
-"hJ" = (
-/obj/effect/map_helper/no_phaseshift/area,
-/turf/simulated/floor/weird_things/dark,
-/area/awaymission/mol/realitycore)
 "hL" = (
 /obj/random/obstruction,
 /turf/simulated/floor/bmarble,
@@ -1260,11 +1239,6 @@
 /obj/structure/grille,
 /turf/simulated/floor/wmarble,
 /area/awaymission/mol/vistortunnel)
-"io" = (
-/obj/effect/floor_decal/corner/grey/diagonal,
-/obj/effect/map_helper/no_phaseshift/area,
-/turf/simulated/floor/bmarble,
-/area/awaymission/mol/scraptunnels/room1)
 "ip" = (
 /obj/machinery/conveyor{
 	id = "Candy Zone"
@@ -1327,8 +1301,8 @@
 "iL" = (
 /mob/living/simple_mob/vr/frostwiz,
 /turf/simulated/floor/water{
-	oxygen = 21.8366;
 	nitrogen = 82.1472;
+	oxygen = 21.8366;
 	temperature = 293.15
 	},
 /area/awaymission/mol/vr/shattered)
@@ -1521,10 +1495,6 @@
 	can_open = 1
 	},
 /area/awaymission/mol/kitchen)
-"kf" = (
-/obj/effect/map_helper/no_phaseshift,
-/turf/simulated/floor/carpet/green,
-/area/awaymission/mol/vistortunnel/green)
 "kg" = (
 /obj/structure/table/marble,
 /obj/structure/disposalpipe/segment{
@@ -1621,10 +1591,6 @@
 /obj/item/gun/energy/vepr/plasma,
 /turf/simulated/floor/tiled/red,
 /area/awaymission/mol/security)
-"kF" = (
-/obj/effect/map_helper/no_phaseshift/area,
-/turf/simulated/wall/r_wall,
-/area/awaymission/mol/securitycheckpoint)
 "kH" = (
 /obj/effect/floor_decal/corner/red/bordercorner{
 	dir = 4
@@ -1633,9 +1599,9 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/asteroid_steel{
-	temperature = 293.15;
+	nitrogen = 82.1472;
 	oxygen = 21.8366;
-	nitrogen = 82.1472
+	temperature = 293.15
 	},
 /area/awaymission/mol/entrancetunnel)
 "kJ" = (
@@ -1673,19 +1639,14 @@
 	},
 /turf/simulated/floor,
 /area/awaymission/mol/crumblingmaze)
-"kV" = (
-/obj/effect/floor_decal/corner/mauve/diagonal,
-/obj/effect/map_helper/no_phaseshift,
-/turf/simulated/floor/bmarble,
-/area/awaymission/mol/vistortunnel)
 "kX" = (
 /obj/effect/floor_decal/corner/red/border{
 	dir = 1
 	},
 /turf/simulated/floor/tiled/asteroid_steel{
-	temperature = 293.15;
+	nitrogen = 82.1472;
 	oxygen = 21.8366;
-	nitrogen = 82.1472
+	temperature = 293.15
 	},
 /area/awaymission/mol/entrancetunnel)
 "kZ" = (
@@ -1744,8 +1705,8 @@
 /area/awaymission/mol/kitchen/chamberA)
 "ln" = (
 /turf/simulated/floor/outdoors/dirt{
-	oxygen = 21.8366;
 	nitrogen = 82.1472;
+	oxygen = 21.8366;
 	temperature = 293.15
 	},
 /area/awaymission/mol/vr/observation)
@@ -1864,10 +1825,6 @@
 /mob/living/simple_mob/mechanical/cyber_horror/grey,
 /turf/simulated/floor/bmarble,
 /area/awaymission/mol/scraptunnels/room3)
-"lZ" = (
-/obj/effect/map_helper/no_phaseshift/area,
-/turf/simulated/floor/carpet/brown,
-/area/awaymission/mol/vistortunnel/orange)
 "ma" = (
 /obj/effect/floor_decal/corner/yellow/border{
 	dir = 8
@@ -1924,11 +1881,6 @@
 /obj/item/gun/energy/imperial,
 /turf/simulated/floor/tiled/red,
 /area/awaymission/mol/security)
-"mq" = (
-/obj/effect/floor_decal/corner/grey/diagonal,
-/obj/effect/map_helper/no_phaseshift,
-/turf/simulated/floor/bmarble,
-/area/awaymission/mol/scraptunnels/room3)
 "mt" = (
 /obj/structure/table/standard,
 /obj/random/maintenance/research,
@@ -1944,9 +1896,9 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/asteroid_steel{
-	temperature = 293.15;
+	nitrogen = 82.1472;
 	oxygen = 21.8366;
-	nitrogen = 82.1472
+	temperature = 293.15
 	},
 /area/awaymission/mol/entrancetunnel)
 "mz" = (
@@ -2014,9 +1966,9 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/asteroid_steel{
-	temperature = 293.15;
+	nitrogen = 82.1472;
 	oxygen = 21.8366;
-	nitrogen = 82.1472
+	temperature = 293.15
 	},
 /area/awaymission/mol/entrancetunnel)
 "mR" = (
@@ -2029,8 +1981,8 @@
 /area/awaymission/mol/vistortunnel)
 "mS" = (
 /obj/item/paper{
-	name = "Dev Notes 6";
-	info = "We would have a boss here but we're a very low budget team. 1,000 k thalers barely let us set up shop. Jim is living out of his shuttle craft."
+	info = "We would have a boss here but we're a very low budget team. 1,000 k thalers barely let us set up shop. Jim is living out of his shuttle craft.";
+	name = "Dev Notes 6"
 	},
 /turf/simulated/floor/dungeon,
 /area/awaymission/mol/vr/shattered)
@@ -2046,11 +1998,6 @@
 /obj/structure/disposalpipe/trunk,
 /turf/simulated/floor,
 /area/awaymission/mol/crumblingmaze)
-"mY" = (
-/obj/effect/floor_decal/corner/grey/diagonal,
-/obj/effect/map_helper/no_phaseshift,
-/turf/simulated/floor/bmarble,
-/area/awaymission/mol/scraptunnels)
 "mZ" = (
 /obj/structure/table/standard,
 /obj/random/maintenance/research,
@@ -2106,8 +2053,8 @@
 "nq" = (
 /obj/structure/table/gold,
 /obj/item/paper{
-	name = "Just Stop";
-	info = "Boss man is gone. I sent a syndi distress signal, and I hope they tear this place apart before anyone finds it. And if you get past them, and all our mistakes, you're not going to be able to use it. Just give up and go home."
+	info = "Boss man is gone. I sent a syndi distress signal, and I hope they tear this place apart before anyone finds it. And if you get past them, and all our mistakes, you're not going to be able to use it. Just give up and go home.";
+	name = "Just Stop"
 	},
 /obj/machinery/light{
 	dir = 1
@@ -2237,11 +2184,6 @@
 /mob/living/simple_mob/vore/candy/yellowcabold,
 /turf/simulated/floor/tiled/kafel_full/purple,
 /area/awaymission/mol/kitchen/chamberC)
-"on" = (
-/obj/effect/map_helper/no_phaseshift/area,
-/obj/effect/floor_decal/corner/black/diagonal,
-/turf/simulated/floor/bmarble,
-/area/awaymission/mol/medical)
 "oo" = (
 /turf/simulated/floor/tiled/milspec/raised,
 /area/awaymission/mol/serverroom)
@@ -2295,9 +2237,9 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/asteroid_steel{
-	temperature = 293.15;
+	nitrogen = 82.1472;
 	oxygen = 21.8366;
-	nitrogen = 82.1472
+	temperature = 293.15
 	},
 /area/awaymission/mol/entrancetunnel)
 "oM" = (
@@ -2485,11 +2427,6 @@
 "qb" = (
 /turf/simulated/floor/tiled/kafel_full/red,
 /area/awaymission/mol/kitchen/chamberC)
-"qc" = (
-/obj/effect/floor_decal/corner/black/diagonal,
-/obj/effect/map_helper/no_phaseshift,
-/turf/simulated/floor/bmarble,
-/area/awaymission/mol/mines)
 "qd" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4;
@@ -2538,10 +2475,6 @@
 /obj/structure/disposalpipe/segment,
 /turf/simulated/wall/solidrock,
 /area/awaymission/mol/headdorms)
-"qp" = (
-/obj/effect/map_helper/no_phaseshift/area,
-/turf/simulated/wall/solidrock,
-/area/awaymission/mol/mines)
 "qq" = (
 /obj/effect/floor_decal/corner/yellow/bordercorner{
 	dir = 8
@@ -2607,8 +2540,8 @@
 /area/awaymission/mol/vistortunnel)
 "qO" = (
 /obj/machinery/conveyor{
-	id = "Candy Zone";
-	dir = 8
+	dir = 8;
+	id = "Candy Zone"
 	},
 /obj/machinery/light{
 	dir = 1
@@ -2636,12 +2569,6 @@
 	},
 /turf/simulated/floor/tiled/kafel_full/purple,
 /area/awaymission/mol/kitchen/chamberC)
-"qV" = (
-/obj/effect/map_helper/no_phaseshift,
-/obj/structure/disposalpipe/segment,
-/obj/effect/floor_decal/corner/black/diagonal,
-/turf/simulated/floor/bmarble,
-/area/awaymission/mol/entrancetunnel)
 "qW" = (
 /obj/structure/table/rack,
 /obj/structure/window/reinforced{
@@ -2796,8 +2723,8 @@
 /area/awaymission/mol/kitchen/chamberC)
 "rW" = (
 /obj/item/paper{
-	name = "Dev Notes 4";
-	info = "Now you see, the sea level is a tad harder then the forsest, but you also have less of the next area to clear. Unless you want to full clear but who wants to do that."
+	info = "Now you see, the sea level is a tad harder then the forsest, but you also have less of the next area to clear. Unless you want to full clear but who wants to do that.";
+	name = "Dev Notes 4"
 	},
 /turf/simulated/floor/bmarble,
 /area/awaymission/mol/vr/shattered)
@@ -2856,11 +2783,6 @@
 "sq" = (
 /turf/simulated/wall/r_wall,
 /area/awaymission/mol/vr/observation)
-"ss" = (
-/obj/effect/map_helper/no_phaseshift/area,
-/obj/effect/floor_decal/corner/black/diagonal,
-/turf/simulated/floor/bmarble,
-/area/awaymission/mol/conveyorcontrol)
 "sz" = (
 /obj/structure/janitorialcart,
 /obj/effect/floor_decal/corner/paleblue/border,
@@ -2950,9 +2872,9 @@
 	dir = 6
 	},
 /turf/simulated/floor/tiled/asteroid_steel{
-	temperature = 293.15;
+	nitrogen = 82.1472;
 	oxygen = 21.8366;
-	nitrogen = 82.1472
+	temperature = 293.15
 	},
 /area/awaymission/mol/entrancetunnel)
 "tl" = (
@@ -2967,8 +2889,8 @@
 /obj/structure/ghost_pod/manual/corgi,
 /obj/item/stack/animalhide/corgi,
 /turf/simulated/floor/outdoors/dirt{
-	oxygen = 21.8366;
 	nitrogen = 82.1472;
+	oxygen = 21.8366;
 	temperature = 293.15
 	},
 /area/awaymission/mol/mines)
@@ -2982,9 +2904,9 @@
 	},
 /obj/structure/curtain/open/shower,
 /turf/simulated/floor/tiled/asteroid_steel{
-	temperature = 293.15;
+	nitrogen = 82.1472;
 	oxygen = 21.8366;
-	nitrogen = 82.1472
+	temperature = 293.15
 	},
 /area/awaymission/mol/entrancetunnel)
 "tu" = (
@@ -3009,16 +2931,16 @@
 /area/awaymission/mol/medical)
 "tB" = (
 /obj/item/aliencoin{
-	name = "Very useful Collectable";
-	desc = "It will make a nice collection number go up, increasing your completion percentage."
+	desc = "It will make a nice collection number go up, increasing your completion percentage.";
+	name = "Very useful Collectable"
 	},
 /turf/unsimulated/ai_visible,
 /area/awaymission/mol/vr/shattered)
 "tD" = (
 /obj/structure/flora/ausbushes/leafybush,
 /obj/item/aliencoin{
-	name = "Very useful Collectable";
-	desc = "It will make a nice collection number go up, increasing your completion percentage."
+	desc = "It will make a nice collection number go up, increasing your completion percentage.";
+	name = "Very useful Collectable"
 	},
 /turf/simulated/floor/grass2{
 	outdoors = 1
@@ -3043,8 +2965,8 @@
 "tL" = (
 /obj/random/outcrop,
 /turf/simulated/floor/outdoors/dirt{
-	oxygen = 21.8366;
 	nitrogen = 82.1472;
+	oxygen = 21.8366;
 	temperature = 293.15
 	},
 /area/awaymission/mol/mines)
@@ -3108,8 +3030,8 @@
 /mob/living/simple_mob/vr/frostwiz,
 /mob/living/simple_mob/vr/firewiz,
 /turf/simulated/floor/water{
-	oxygen = 21.8366;
 	nitrogen = 82.1472;
+	oxygen = 21.8366;
 	temperature = 293.15
 	},
 /area/awaymission/mol/vr/shattered)
@@ -3135,11 +3057,6 @@
 	},
 /turf/simulated/floor/tiled/kafel_full/yellow,
 /area/awaymission/mol/kitchen/chamberC)
-"uh" = (
-/obj/effect/map_helper/no_phaseshift/area,
-/obj/effect/floor_decal/industrial/warning,
-/turf/simulated/floor/wmarble,
-/area/awaymission/mol/vistortunnel)
 "ui" = (
 /obj/effect/map_helper/no_tele,
 /turf/simulated/wall/solidrock,
@@ -3149,10 +3066,6 @@
 /mob/living/simple_mob/mechanical/cyber_horror/corgi,
 /turf/simulated/floor/bmarble,
 /area/awaymission/mol/scraptunnels/room2)
-"ul" = (
-/obj/effect/map_helper/no_phaseshift,
-/turf/simulated/wall/solidrock,
-/area/awaymission/mol/mines)
 "um" = (
 /obj/structure/disposalpipe/segment{
 	dir = 8;
@@ -3241,15 +3154,6 @@
 /obj/effect/floor_decal/corner/black/diagonal,
 /turf/simulated/floor/bmarble,
 /area/awaymission/mol/entrancetunnel)
-"uS" = (
-/obj/effect/floor_decal/corner/grey/diagonal,
-/obj/effect/map_helper/no_phaseshift,
-/obj/structure/table/marble,
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/turf/simulated/floor/bmarble,
-/area/awaymission/mol/scraptunnels/room1)
 "uU" = (
 /obj/effect/decal/mecha_wreckage/mauler,
 /obj/effect/floor_decal/corner/black/diagonal,
@@ -3262,11 +3166,6 @@
 /obj/effect/floor_decal/corner/grey/diagonal,
 /turf/simulated/wall/r_wall,
 /area/awaymission/mol/scraptunnels/room2)
-"va" = (
-/obj/effect/map_helper/no_phaseshift,
-/obj/effect/map_helper/no_phaseshift,
-/turf/simulated/floor/carpet/purple,
-/area/awaymission/mol/vistortunnel/purple)
 "vb" = (
 /obj/effect/decal/mecha_wreckage/phazon,
 /obj/effect/floor_decal/corner/black/diagonal,
@@ -3291,11 +3190,6 @@
 	},
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/awaymission/mol/kitchen)
-"ve" = (
-/obj/effect/floor_decal/corner/grey/diagonal,
-/obj/effect/map_helper/no_phaseshift/area,
-/turf/simulated/floor/bmarble,
-/area/awaymission/mol/scraptunnels/room3)
 "vh" = (
 /mob/living/simple_mob/vore/candy/marshmellowserpent,
 /turf/simulated/floor/tiled/kafel_full/blue,
@@ -3336,9 +3230,9 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/asteroid_steel{
-	temperature = 293.15;
+	nitrogen = 82.1472;
 	oxygen = 21.8366;
-	nitrogen = 82.1472
+	temperature = 293.15
 	},
 /area/awaymission/mol/entrancetunnel)
 "vH" = (
@@ -3438,11 +3332,6 @@
 	outdoors = 1
 	},
 /area/awaymission/mol/vr/shattered)
-"wm" = (
-/obj/effect/map_helper/no_phaseshift/area,
-/obj/effect/floor_decal/corner/black/diagonal,
-/turf/simulated/floor/bmarble,
-/area/awaymission/mol/vr/observation)
 "wn" = (
 /obj/machinery/autolathe,
 /obj/effect/floor_decal/corner/orange/diagonal,
@@ -3470,9 +3359,9 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/asteroid_steel{
-	temperature = 293.15;
+	nitrogen = 82.1472;
 	oxygen = 21.8366;
-	nitrogen = 82.1472
+	temperature = 293.15
 	},
 /area/awaymission/mol/entrancetunnel)
 "wx" = (
@@ -3556,10 +3445,6 @@
 /obj/machinery/door/airlock/medical,
 /turf/simulated/floor/bmarble,
 /area/awaymission/mol/medical)
-"wY" = (
-/obj/effect/map_helper/no_phaseshift/area,
-/turf/simulated/floor/carpet/purple,
-/area/awaymission/mol/vistortunnel/purple)
 "xd" = (
 /turf/unsimulated/ai_visible,
 /area/awaymission/mol/vr/shattered)
@@ -3651,10 +3536,6 @@
 	can_open = 1
 	},
 /area/awaymission/mol/crumblingmaze)
-"xv" = (
-/obj/effect/map_helper/no_phaseshift,
-/turf/simulated/floor/carpet/brown,
-/area/awaymission/mol/vistortunnel/orange)
 "xw" = (
 /obj/structure/table/borosilicate,
 /obj/machinery/button/remote/blast_door{
@@ -3740,9 +3621,9 @@
 	dir = 10
 	},
 /turf/simulated/floor/tiled/asteroid_steel{
-	temperature = 293.15;
+	nitrogen = 82.1472;
 	oxygen = 21.8366;
-	nitrogen = 82.1472
+	temperature = 293.15
 	},
 /area/awaymission/mol/entrancetunnel)
 "ye" = (
@@ -3825,10 +3706,6 @@
 /mob/living/simple_mob/vore/candy/purplecabold,
 /turf/simulated/floor/tiled/kafel_full/yellow,
 /area/awaymission/mol/kitchen/chamberC)
-"yH" = (
-/obj/effect/map_helper/no_phaseshift/area,
-/turf/simulated/floor/bmarble,
-/area/awaymission/mol/scraptunnels/room2)
 "yI" = (
 /mob/living/simple_mob/vore/candy/marshmellowserpent,
 /obj/effect/floor_decal/corner/white/diagonal,
@@ -3922,9 +3799,9 @@
 /obj/vehicle/bike/built,
 /obj/machinery/mech_recharger,
 /turf/simulated/floor/tiled/asteroid_steel{
-	temperature = 293.15;
+	nitrogen = 82.1472;
 	oxygen = 21.8366;
-	nitrogen = 82.1472
+	temperature = 293.15
 	},
 /area/awaymission/mol/entrancetunnel)
 "zl" = (
@@ -3942,9 +3819,9 @@
 "zo" = (
 /turf/simulated/floor/outdoors/shelfice{
 	nitrogen = 82.1472;
+	outdoors = -1;
 	oxygen = 21.8366;
-	temperature = 293.15;
-	outdoors = -1
+	temperature = 293.15
 	},
 /area/awaymission/mol/vr/shattered)
 "zq" = (
@@ -4117,9 +3994,9 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/asteroid_steel{
-	temperature = 293.15;
+	nitrogen = 82.1472;
 	oxygen = 21.8366;
-	nitrogen = 82.1472
+	temperature = 293.15
 	},
 /area/awaymission/mol/entrancetunnel)
 "At" = (
@@ -4194,11 +4071,6 @@
 /obj/machinery/light,
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/awaymission/mol/kitchen)
-"Bc" = (
-/obj/effect/floor_decal/corner/lightorange/diagonal,
-/obj/effect/map_helper/no_phaseshift/area,
-/turf/simulated/floor/bmarble,
-/area/awaymission/mol/vistortunnel)
 "Bf" = (
 /obj/machinery/light{
 	dir = 8
@@ -4208,8 +4080,8 @@
 "Bh" = (
 /mob/living/simple_mob/vr/firewiz,
 /turf/simulated/floor/water{
-	oxygen = 21.8366;
 	nitrogen = 82.1472;
+	oxygen = 21.8366;
 	temperature = 293.15
 	},
 /area/awaymission/mol/vr/shattered)
@@ -4593,9 +4465,9 @@
 	},
 /obj/structure/curtain/open/shower,
 /turf/simulated/floor/tiled/asteroid_steel{
-	temperature = 293.15;
+	nitrogen = 82.1472;
 	oxygen = 21.8366;
-	nitrogen = 82.1472
+	temperature = 293.15
 	},
 /area/awaymission/mol/entrancetunnel)
 "Dq" = (
@@ -4615,8 +4487,8 @@
 /area/awaymission/mol/scraptunnels/room2)
 "Du" = (
 /obj/machinery/porta_turret/poi{
-	faction = "syndicate";
 	check_weapons = 1;
+	faction = "syndicate";
 	installation = /obj/item/gun/energy/lasershotgun
 	},
 /obj/machinery/light{
@@ -4625,12 +4497,6 @@
 	},
 /turf/simulated/floor/bmarble,
 /area/awaymission/mol/securitycheckpoint)
-"Dv" = (
-/obj/structure/table/marble,
-/obj/machinery/recharger,
-/obj/effect/map_helper/no_phaseshift/area,
-/turf/simulated/floor/tiled/red,
-/area/awaymission/mol/security)
 "Dw" = (
 /obj/machinery/light{
 	dir = 1
@@ -4654,8 +4520,8 @@
 "DI" = (
 /mob/living/simple_mob/vr/glitch,
 /turf/simulated/floor/water{
-	oxygen = 21.8366;
 	nitrogen = 82.1472;
+	oxygen = 21.8366;
 	temperature = 293.15
 	},
 /area/awaymission/mol/vr/shattered)
@@ -4701,8 +4567,8 @@
 "DR" = (
 /obj/structure/table/standard,
 /obj/item/paper{
-	name = "Notes";
-	info = "I feel I may be drugged after seeing vistor orange."
+	info = "I feel I may be drugged after seeing vistor orange.";
+	name = "Notes"
 	},
 /obj/machinery/light,
 /obj/random/maintenance/research,
@@ -4759,8 +4625,8 @@
 	dir = 6
 	},
 /turf/simulated/floor/outdoors/dirt{
-	oxygen = 21.8366;
 	nitrogen = 82.1472;
+	oxygen = 21.8366;
 	temperature = 293.15
 	},
 /area/awaymission/mol/mines)
@@ -4822,9 +4688,9 @@
 	},
 /obj/structure/curtain/open/shower,
 /turf/simulated/floor/tiled/asteroid_steel{
-	temperature = 293.15;
+	nitrogen = 82.1472;
 	oxygen = 21.8366;
-	nitrogen = 82.1472
+	temperature = 293.15
 	},
 /area/awaymission/mol/entrancetunnel)
 "EH" = (
@@ -4841,10 +4707,6 @@
 /obj/effect/floor_decal/corner/white/diagonal,
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/awaymission/mol/kitchen/ChamberD)
-"EM" = (
-/obj/effect/map_helper/no_phaseshift/area,
-/turf/simulated/floor/reinforced,
-/area/awaymission/mol/audiotorium)
 "EO" = (
 /obj/structure/closet/jcloset,
 /obj/item/soap/rainbow_soap,
@@ -4909,8 +4771,8 @@
 	dir = 4
 	},
 /turf/simulated/floor/outdoors/dirt{
-	oxygen = 21.8366;
 	nitrogen = 82.1472;
+	oxygen = 21.8366;
 	temperature = 293.15
 	},
 /area/awaymission/mol/mines)
@@ -4946,9 +4808,9 @@
 "Fk" = (
 /obj/effect/floor_decal/corner/red/bordercorner,
 /turf/simulated/floor/tiled/asteroid_steel{
-	temperature = 293.15;
+	nitrogen = 82.1472;
 	oxygen = 21.8366;
-	nitrogen = 82.1472
+	temperature = 293.15
 	},
 /area/awaymission/mol/entrancetunnel)
 "Fl" = (
@@ -4966,9 +4828,9 @@
 	},
 /obj/structure/curtain/open/shower,
 /turf/simulated/floor/tiled/asteroid_steel{
-	temperature = 293.15;
+	nitrogen = 82.1472;
 	oxygen = 21.8366;
-	nitrogen = 82.1472
+	temperature = 293.15
 	},
 /area/awaymission/mol/entrancetunnel)
 "Fp" = (
@@ -4998,9 +4860,9 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/asteroid_steel{
-	temperature = 293.15;
+	nitrogen = 82.1472;
 	oxygen = 21.8366;
-	nitrogen = 82.1472
+	temperature = 293.15
 	},
 /area/awaymission/mol/entrancetunnel)
 "Fu" = (
@@ -5084,8 +4946,8 @@
 "Gi" = (
 /obj/item/flame/candle/everburn,
 /turf/simulated/floor/outdoors/dirt{
-	oxygen = 21.8366;
 	nitrogen = 82.1472;
+	oxygen = 21.8366;
 	temperature = 293.15
 	},
 /area/awaymission/mol/mines)
@@ -5144,19 +5006,11 @@
 /obj/structure/disposalpipe/segment,
 /turf/simulated/wall/solidrock,
 /area/awaymission/mol/themaze)
-"GB" = (
-/obj/effect/floor_decal/corner/grey/diagonal,
-/obj/machinery/light{
-	dir = 4
-	},
-/obj/effect/map_helper/no_phaseshift,
-/turf/simulated/floor/bmarble,
-/area/awaymission/mol/scraptunnels/room2)
 "GC" = (
 /obj/structure/ghost_pod/manual/cursedblade,
 /turf/simulated/floor/outdoors/dirt{
-	oxygen = 21.8366;
 	nitrogen = 82.1472;
+	oxygen = 21.8366;
 	temperature = 293.15
 	},
 /area/awaymission/mol/mines)
@@ -5223,8 +5077,8 @@
 /obj/effect/floor_decal/corner/grey/diagonal,
 /obj/structure/table/marble,
 /obj/item/paper{
-	name = "Farewell";
-	info = "Farewell our strange form of garbage collection. No idea why we used metal eating beetles, and robot spiders that dragged the gear back out, but heh. Have fun with my slime plush and the button to boss."
+	info = "Farewell our strange form of garbage collection. No idea why we used metal eating beetles, and robot spiders that dragged the gear back out, but heh. Have fun with my slime plush and the button to boss.";
+	name = "Farewell"
 	},
 /turf/simulated/floor/bmarble,
 /area/awaymission/mol/scraptunnels/room1)
@@ -5297,9 +5151,9 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/asteroid_steel{
-	temperature = 293.15;
+	nitrogen = 82.1472;
 	oxygen = 21.8366;
-	nitrogen = 82.1472
+	temperature = 293.15
 	},
 /area/awaymission/mol/entrancetunnel)
 "Ht" = (
@@ -5320,14 +5174,6 @@
 /obj/effect/floor_decal/corner/black/diagonal,
 /turf/simulated/floor/bmarble,
 /area/awaymission/mol/mines)
-"HA" = (
-/obj/effect/map_helper/no_phaseshift/area,
-/turf/simulated/floor/outdoors/desert_planet/deep_sand{
-	nitrogen = 82.1472;
-	oxygen = 21.8366;
-	temperature = 293.15
-	},
-/area/awaymission/mol/outside)
 "HF" = (
 /turf/simulated/wall/r_wall,
 /area/awaymission/mol/scraptunnels)
@@ -5347,9 +5193,9 @@
 	dir = 9
 	},
 /turf/simulated/floor/tiled/asteroid_steel{
-	temperature = 293.15;
+	nitrogen = 82.1472;
 	oxygen = 21.8366;
-	nitrogen = 82.1472
+	temperature = 293.15
 	},
 /area/awaymission/mol/entrancetunnel)
 "HP" = (
@@ -5365,8 +5211,8 @@
 	name = "McGuffin"
 	},
 /obj/item/paper{
-	name = "Dev Notes 7";
-	info = "And at the end of the dungeon, we would have an epic boss fight, the main plot would kick off with the discovery of this item. Oh and you unlock the massive multli player open world bit. Please fund us."
+	info = "And at the end of the dungeon, we would have an epic boss fight, the main plot would kick off with the discovery of this item. Oh and you unlock the massive multli player open world bit. Please fund us.";
+	name = "Dev Notes 7"
 	},
 /turf/unsimulated/ai_visible,
 /area/awaymission/mol/vr/shattered)
@@ -5593,8 +5439,8 @@
 /obj/item/flame/candle/everburn,
 /obj/item/flame/candle/everburn,
 /turf/simulated/floor/outdoors/dirt{
-	oxygen = 21.8366;
 	nitrogen = 82.1472;
+	oxygen = 21.8366;
 	temperature = 293.15
 	},
 /area/awaymission/mol/mines)
@@ -5613,9 +5459,9 @@
 	},
 /obj/machinery/door/airlock/gold,
 /turf/simulated/floor/tiled/asteroid_steel{
-	temperature = 293.15;
+	nitrogen = 82.1472;
 	oxygen = 21.8366;
-	nitrogen = 82.1472
+	temperature = 293.15
 	},
 /area/awaymission/mol/entrancetunnel)
 "Jo" = (
@@ -5674,9 +5520,9 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/asteroid_steel{
-	temperature = 293.15;
+	nitrogen = 82.1472;
 	oxygen = 21.8366;
-	nitrogen = 82.1472
+	temperature = 293.15
 	},
 /area/awaymission/mol/entrancetunnel)
 "JM" = (
@@ -5779,9 +5625,9 @@
 	dir = 10
 	},
 /turf/simulated/floor/tiled/asteroid_steel{
-	temperature = 293.15;
+	nitrogen = 82.1472;
 	oxygen = 21.8366;
-	nitrogen = 82.1472
+	temperature = 293.15
 	},
 /area/awaymission/mol/entrancetunnel)
 "KK" = (
@@ -5790,11 +5636,6 @@
 	},
 /turf/simulated/floor/bmarble,
 /area/awaymission/mol/medical)
-"KN" = (
-/obj/effect/map_helper/no_phaseshift/area,
-/obj/effect/floor_decal/corner/black/diagonal,
-/turf/simulated/floor/bmarble,
-/area/awaymission/mol/vr/observationroom)
 "KP" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4;
@@ -5877,10 +5718,6 @@
 /obj/item/storage/firstaid/experimental,
 /turf/simulated/floor/tiled/red,
 /area/awaymission/mol/security)
-"Lm" = (
-/obj/effect/map_helper/no_phaseshift/area,
-/turf/simulated/floor/carpet/retro_red,
-/area/awaymission/mol/vistortunnel/red)
 "Lq" = (
 /obj/structure/cryofeed{
 	dir = 4
@@ -5910,11 +5747,6 @@
 	outdoors = 1
 	},
 /area/awaymission/mol/vr/shattered)
-"LJ" = (
-/obj/effect/floor_decal/corner/black/diagonal,
-/obj/effect/map_helper/no_phaseshift,
-/turf/simulated/floor/bmarble,
-/area/awaymission/mol/serverroom)
 "LK" = (
 /obj/structure/bed,
 /obj/item/bedsheet/blue,
@@ -5964,8 +5796,8 @@
 /area/awaymission/mol/security)
 "LV" = (
 /obj/item/paper{
-	name = "Dev Notes 5";
-	info = "After dealing with fog and limited vision, you're brought to this cavern with limited movement and vision. But don't worry, this is the best and maybe only entrance you can use to get all the goodies."
+	info = "After dealing with fog and limited vision, you're brought to this cavern with limited movement and vision. But don't worry, this is the best and maybe only entrance you can use to get all the goodies.";
+	name = "Dev Notes 5"
 	},
 /turf/simulated/floor/bmarble,
 /area/awaymission/mol/vr/shattered)
@@ -6007,7 +5839,6 @@
 /area/awaymission/mol/kitchen/chamberC)
 "Mg" = (
 /mob/living/simple_mob/mechanical/mecha/vistor/vistoryellow,
-/obj/effect/map_helper/no_phaseshift,
 /turf/simulated/floor/carpet/bcarpet,
 /area/awaymission/mol/vistortunnel/yellow)
 "Mi" = (
@@ -6102,8 +5933,8 @@
 /area/awaymission/mol/mines)
 "MT" = (
 /turf/simulated/floor/water{
-	oxygen = 21.8366;
 	nitrogen = 82.1472;
+	oxygen = 21.8366;
 	temperature = 293.15
 	},
 /area/awaymission/mol/mines)
@@ -6192,10 +6023,6 @@
 /obj/effect/floor_decal/industrial/warning/corner,
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/awaymission/mol/kitchen)
-"Nv" = (
-/obj/effect/map_helper/no_phaseshift,
-/turf/simulated/floor/tiled/neutral,
-/area/awaymission/mol/audiotorium)
 "Nx" = (
 /obj/machinery/door/airlock,
 /obj/machinery/door/blast/puzzle{
@@ -6254,8 +6081,8 @@
 /area/awaymission/mol/entrancetunnel)
 "NP" = (
 /obj/item/paper{
-	name = "Dev Notes 1";
-	info = "Alright, so we are running out of budget, hence this papers instead of proper NPCs, or more interactive voice acted way. But here we start the player with a bit of story and a choice of four weapons."
+	info = "Alright, so we are running out of budget, hence this papers instead of proper NPCs, or more interactive voice acted way. But here we start the player with a bit of story and a choice of four weapons.";
+	name = "Dev Notes 1"
 	},
 /turf/simulated/mineral/floor/icey{
 	nitrogen = 82.1472;
@@ -6271,9 +6098,9 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/asteroid_steel{
-	temperature = 293.15;
+	nitrogen = 82.1472;
 	oxygen = 21.8366;
-	nitrogen = 82.1472
+	temperature = 293.15
 	},
 /area/awaymission/mol/entrancetunnel)
 "NR" = (
@@ -6331,9 +6158,9 @@
 "Oo" = (
 /obj/effect/floor_decal/corner/red/border,
 /turf/simulated/floor/tiled/asteroid_steel{
-	temperature = 293.15;
+	nitrogen = 82.1472;
 	oxygen = 21.8366;
-	nitrogen = 82.1472
+	temperature = 293.15
 	},
 /area/awaymission/mol/entrancetunnel)
 "Op" = (
@@ -6354,9 +6181,9 @@
 	dir = 10
 	},
 /turf/simulated/floor/tiled/asteroid_steel{
-	temperature = 293.15;
+	nitrogen = 82.1472;
 	oxygen = 21.8366;
-	nitrogen = 82.1472
+	temperature = 293.15
 	},
 /area/awaymission/mol/entrancetunnel)
 "Ov" = (
@@ -6377,8 +6204,8 @@
 /area/awaymission/mol/kitchen)
 "Oz" = (
 /obj/item/paper{
-	name = "Dev Notes 3";
-	info = "Now here we give the player a choice, head to some islands, or a forest. Each with their own mechanics. Head to the forest and you need to deal with hefty foliage. Head to the sea and you need to be careful about waves and shifting tides. They also have their own side quests. Well on the planning board they do."
+	info = "Now here we give the player a choice, head to some islands, or a forest. Each with their own mechanics. Head to the forest and you need to deal with hefty foliage. Head to the sea and you need to be careful about waves and shifting tides. They also have their own side quests. Well on the planning board they do.";
+	name = "Dev Notes 3"
 	},
 /turf/simulated/floor/bmarble,
 /area/awaymission/mol/vr/shattered)
@@ -6398,8 +6225,8 @@
 "OI" = (
 /obj/structure/cliff/automatic,
 /turf/simulated/floor/outdoors/dirt{
-	oxygen = 21.8366;
 	nitrogen = 82.1472;
+	oxygen = 21.8366;
 	temperature = 293.15
 	},
 /area/awaymission/mol/mines)
@@ -6573,8 +6400,8 @@
 /area/awaymission/mol/kitchen/chamberB)
 "PJ" = (
 /obj/machinery/porta_turret/poi{
-	faction = "syndicate";
 	check_weapons = 1;
+	faction = "syndicate";
 	installation = /obj/item/gun/energy/lasershotgun
 	},
 /obj/machinery/light,
@@ -6583,8 +6410,8 @@
 "PM" = (
 /mob/living/simple_mob/vr/lightingwiz,
 /turf/simulated/floor/water{
-	oxygen = 21.8366;
 	nitrogen = 82.1472;
+	oxygen = 21.8366;
 	temperature = 293.15
 	},
 /area/awaymission/mol/vr/shattered)
@@ -6674,8 +6501,8 @@
 /area/awaymission/mol/kitchen/chamberC)
 "Qu" = (
 /obj/item/paper{
-	name = "Dev Notes 2";
-	info = "Now we start off the game with some story and a thrilling encounter. Due to time restraints and budget no cut scenes yet. But later, we promise."
+	info = "Now we start off the game with some story and a thrilling encounter. Due to time restraints and budget no cut scenes yet. But later, we promise.";
+	name = "Dev Notes 2"
 	},
 /turf/simulated/floor/bmarble,
 /area/awaymission/mol/vr/shattered)
@@ -6700,8 +6527,8 @@
 	icon_state = "pipe-c"
 	},
 /turf/simulated/floor/outdoors/dirt{
-	oxygen = 21.8366;
 	nitrogen = 82.1472;
+	oxygen = 21.8366;
 	temperature = 293.15
 	},
 /area/awaymission/mol/mines)
@@ -6846,8 +6673,8 @@
 /area/awaymission/mol/mines)
 "RH" = (
 /obj/machinery/conveyor{
-	id = "Candy Zone";
-	dir = 8
+	dir = 8;
+	id = "Candy Zone"
 	},
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/awaymission/mol/kitchen)
@@ -6863,9 +6690,9 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/asteroid_steel{
-	temperature = 293.15;
+	nitrogen = 82.1472;
 	oxygen = 21.8366;
-	nitrogen = 82.1472
+	temperature = 293.15
 	},
 /area/awaymission/mol/entrancetunnel)
 "RP" = (
@@ -6960,8 +6787,8 @@
 "Sy" = (
 /obj/structure/table/standard,
 /obj/item/paper{
-	name = "Notes";
-	info = "Vistor from the green specturem is higly toxic, creating spores that create a mess in a large area."
+	info = "Vistor from the green specturem is higly toxic, creating spores that create a mess in a large area.";
+	name = "Notes"
 	},
 /obj/random/maintenance/research,
 /turf/simulated/floor/wmarble,
@@ -7046,9 +6873,9 @@
 	},
 /obj/machinery/door/airlock/gold,
 /turf/simulated/floor/tiled/asteroid_steel{
-	temperature = 293.15;
+	nitrogen = 82.1472;
 	oxygen = 21.8366;
-	nitrogen = 82.1472
+	temperature = 293.15
 	},
 /area/awaymission/mol/entrancetunnel)
 "Tg" = (
@@ -7088,9 +6915,9 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/asteroid_steel{
-	temperature = 293.15;
+	nitrogen = 82.1472;
 	oxygen = 21.8366;
-	nitrogen = 82.1472
+	temperature = 293.15
 	},
 /area/awaymission/mol/entrancetunnel)
 "Tw" = (
@@ -7165,14 +6992,6 @@
 /obj/item/bedsheet/blue,
 /turf/simulated/floor/carpet/purple,
 /area/awaymission/mol/vistortunnel/purple)
-"TN" = (
-/obj/effect/floor_decal/corner/grey/diagonal,
-/obj/machinery/light{
-	dir = 8
-	},
-/obj/effect/map_helper/no_phaseshift/area,
-/turf/simulated/floor/bmarble,
-/area/awaymission/mol/scraptunnels)
 "TO" = (
 /turf/simulated/floor/wood,
 /area/awaymission/mol/audiotorium)
@@ -7216,9 +7035,9 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/asteroid_steel{
-	temperature = 293.15;
+	nitrogen = 82.1472;
 	oxygen = 21.8366;
-	nitrogen = 82.1472
+	temperature = 293.15
 	},
 /area/awaymission/mol/entrancetunnel)
 "Ub" = (
@@ -7247,11 +7066,6 @@
 	outdoors = 1
 	},
 /area/awaymission/mol/vr/shattered)
-"Ul" = (
-/obj/effect/map_helper/no_phaseshift,
-/obj/effect/floor_decal/corner/black/diagonal,
-/turf/simulated/floor/bmarble,
-/area/awaymission/mol/vr/observationroom)
 "Um" = (
 /obj/structure/disposaloutlet,
 /obj/structure/disposalpipe/trunk,
@@ -7269,9 +7083,9 @@
 	dir = 5
 	},
 /turf/simulated/floor/tiled/asteroid_steel{
-	temperature = 293.15;
+	nitrogen = 82.1472;
 	oxygen = 21.8366;
-	nitrogen = 82.1472
+	temperature = 293.15
 	},
 /area/awaymission/mol/entrancetunnel)
 "Uu" = (
@@ -7349,9 +7163,9 @@
 	},
 /obj/structure/curtain/open/shower,
 /turf/simulated/floor/tiled/asteroid_steel{
-	temperature = 293.15;
+	nitrogen = 82.1472;
 	oxygen = 21.8366;
-	nitrogen = 82.1472
+	temperature = 293.15
 	},
 /area/awaymission/mol/entrancetunnel)
 "UN" = (
@@ -7394,15 +7208,15 @@
 /area/awaymission/mol/mines)
 "Vc" = (
 /obj/item/aliencoin{
-	name = "Very useful Collectable";
-	desc = "It will make a nice collection number go up, increasing your completion percentage."
+	desc = "It will make a nice collection number go up, increasing your completion percentage.";
+	name = "Very useful Collectable"
 	},
 /turf/simulated/floor/flock,
 /area/awaymission/mol/vr/shattered)
 "Vd" = (
 /obj/machinery/conveyor{
-	id = "Candy Zone";
-	dir = 8
+	dir = 8;
+	id = "Candy Zone"
 	},
 /obj/machinery/light{
 	dir = 1;
@@ -7415,8 +7229,8 @@
 	dir = 4
 	},
 /turf/simulated/floor/outdoors/dirt{
-	oxygen = 21.8366;
 	nitrogen = 82.1472;
+	oxygen = 21.8366;
 	temperature = 293.15
 	},
 /area/awaymission/mol/mines)
@@ -7474,13 +7288,6 @@
 	},
 /turf/simulated/floor/tiled/kafel_full/green,
 /area/awaymission/mol/kitchen/chamberA)
-"Vx" = (
-/obj/machinery/door/blast/puzzle{
-	id = "FinaleGate4"
-	},
-/obj/effect/map_helper/no_phaseshift,
-/turf/simulated/floor/bmarble,
-/area/awaymission/mol/medical)
 "Vz" = (
 /obj/effect/floor_decal/corner/yellow/border{
 	dir = 9
@@ -7725,10 +7532,6 @@
 /obj/structure/loot_pile/surface/bones,
 /turf/simulated/floor/tiled/kafel_full/yellow,
 /area/awaymission/mol/kitchen/chamberC)
-"WU" = (
-/obj/effect/map_helper/no_phaseshift,
-/turf/simulated/floor/carpet/retro_red,
-/area/awaymission/mol/vistortunnel/red)
 "WV" = (
 /obj/machinery/light{
 	dir = 8
@@ -7753,8 +7556,8 @@
 /area/awaymission/mol/kitchen)
 "Xb" = (
 /obj/item/aliencoin{
-	name = "Very useful Collectable";
-	desc = "It will make a nice collection number go up, increasing your completion percentage."
+	desc = "It will make a nice collection number go up, increasing your completion percentage.";
+	name = "Very useful Collectable"
 	},
 /turf/simulated/floor/beach/sand,
 /area/awaymission/mol/vr/shattered)
@@ -7993,8 +7796,8 @@
 "Yr" = (
 /obj/structure/table/standard,
 /obj/item/paper{
-	name = "Notes";
-	info = "The vistor from the blue region is quite spooked, and highly defensive. All projectile weaponry seems ineffective, however Bob was able to grab it and drag it into containment. Bob is currently undergoing medical treatment."
+	info = "The vistor from the blue region is quite spooked, and highly defensive. All projectile weaponry seems ineffective, however Bob was able to grab it and drag it into containment. Bob is currently undergoing medical treatment.";
+	name = "Notes"
 	},
 /obj/random/maintenance/research,
 /turf/simulated/floor/wmarble,
@@ -8042,10 +7845,6 @@
 	},
 /turf/simulated/floor,
 /area/awaymission/mol/vistortunnel)
-"YQ" = (
-/obj/effect/map_helper/no_phaseshift,
-/turf/simulated/floor/bmarble,
-/area/awaymission/mol/vr/observation)
 "YT" = (
 /obj/effect/floor_decal/corner/orange/diagonal,
 /obj/structure/table/rack/shelf,
@@ -8058,9 +7857,9 @@
 /area/awaymission/mol/security)
 "YW" = (
 /turf/simulated/floor/tiled/asteroid_steel{
-	temperature = 293.15;
+	nitrogen = 82.1472;
 	oxygen = 21.8366;
-	nitrogen = 82.1472
+	temperature = 293.15
 	},
 /area/awaymission/mol/entrancetunnel)
 "YX" = (
@@ -8115,11 +7914,6 @@
 /obj/item/clothing/gloves/yellow,
 /turf/simulated/floor/bmarble,
 /area/awaymission/mol/engi)
-"Zn" = (
-/obj/effect/floor_decal/corner/black/diagonal,
-/obj/effect/map_helper/no_phaseshift/area,
-/turf/simulated/floor/bmarble,
-/area/awaymission/mol/serverroom)
 "Zo" = (
 /turf/simulated/floor/tiled/kafel_full/beige,
 /area/awaymission/mol/kitchen/chamberB)
@@ -8465,7 +8259,7 @@ Nh
 Nh
 Nh
 Nh
-ul
+Nh
 "}
 (2,1,1) = {"
 Nh
@@ -14786,7 +14580,7 @@ Ek
 Ek
 Ek
 Ek
-wm
+Ek
 Ek
 sq
 Nh
@@ -16334,7 +16128,7 @@ Nh
 Nh
 sq
 Yp
-YQ
+Yp
 Yp
 sq
 Nh
@@ -16381,7 +16175,7 @@ em
 nN
 em
 FH
-qc
+em
 vb
 em
 em
@@ -17623,7 +17417,7 @@ Nh
 Lb
 Ur
 nu
-LJ
+ZH
 nu
 ZH
 nu
@@ -18141,7 +17935,7 @@ oo
 nu
 ZH
 Af
-Zn
+ZH
 nu
 oo
 Lb
@@ -19220,7 +19014,7 @@ zv
 zv
 FB
 zv
-mY
+zv
 zv
 FB
 zv
@@ -21495,7 +21289,7 @@ Ph
 lC
 EA
 EA
-KN
+EA
 XM
 Nh
 Nh
@@ -22267,7 +22061,7 @@ Ri
 EA
 EA
 EA
-Ul
+EA
 QX
 PV
 XM
@@ -24379,7 +24173,7 @@ Ta
 HX
 zu
 zu
-mq
+HX
 Ta
 zu
 HX
@@ -25419,7 +25213,7 @@ HX
 HX
 zu
 HX
-ve
+HX
 zu
 HX
 Zc
@@ -30826,7 +30620,7 @@ dc
 dc
 dc
 Cy
-GB
+Rj
 dc
 dc
 Rj
@@ -32379,7 +32173,7 @@ ZU
 AC
 pN
 pN
-yH
+ZU
 pN
 ZU
 ZU
@@ -33929,7 +33723,7 @@ qv
 zv
 zv
 zv
-TN
+qv
 zv
 zv
 zv
@@ -35200,7 +34994,7 @@ WQ
 WQ
 xx
 xx
-uS
+gX
 GX
 xx
 xx
@@ -35461,7 +35255,7 @@ WQ
 NL
 WQ
 WQ
-io
+WQ
 WQ
 WQ
 qE
@@ -36500,7 +36294,7 @@ rt
 rt
 rt
 rt
-gh
+rt
 rt
 rt
 rt
@@ -38600,7 +38394,7 @@ HK
 Hs
 Ou
 Ae
-qp
+Nh
 Nh
 Nh
 Nh
@@ -39402,7 +39196,7 @@ Ib
 Ib
 Ib
 Ib
-HA
+Ib
 Ib
 Ib
 Ib
@@ -39849,7 +39643,7 @@ oM
 oM
 Fq
 Fq
-Vx
+YY
 YY
 Fq
 Fq
@@ -40108,7 +39902,7 @@ rn
 rn
 rn
 rn
-on
+rn
 rn
 rn
 Fq
@@ -40159,7 +39953,7 @@ Ib
 Ib
 Ib
 Ib
-HA
+Ib
 Ib
 Ib
 Ib
@@ -40268,7 +40062,7 @@ HI
 HI
 HI
 HI
-EM
+HI
 ze
 zm
 zm
@@ -40836,7 +40630,7 @@ iA
 WZ
 WZ
 iA
-Dv
+WZ
 WZ
 iA
 We
@@ -42078,7 +41872,7 @@ zm
 eb
 zm
 zm
-Nv
+zm
 zm
 eb
 zm
@@ -43829,7 +43623,7 @@ Nh
 mI
 DE
 kj
-hJ
+kj
 kj
 kj
 kj
@@ -43957,7 +43751,7 @@ Cs
 uo
 uo
 kS
-ss
+Sv
 Sv
 Sv
 Sv
@@ -43981,7 +43775,7 @@ lo
 lo
 lo
 lo
-qV
+lo
 lo
 KG
 lo
@@ -46159,7 +45953,7 @@ Nh
 Nh
 Nh
 Nh
-ul
+Nh
 Nh
 Nh
 Nh
@@ -47062,7 +46856,7 @@ Wp
 VI
 Im
 Wv
-kF
+Wp
 yB
 To
 yB
@@ -47465,7 +47259,7 @@ Nh
 Nh
 Nh
 Nh
-qp
+Nh
 Nh
 Nh
 Nh
@@ -52375,7 +52169,7 @@ Nh
 Nh
 Nh
 Nh
-ul
+Nh
 Nh
 Nh
 Nh
@@ -52728,8 +52522,8 @@ is
 Fu
 fr
 fr
-xv
-lZ
+fr
+fr
 fr
 ME
 we
@@ -52752,7 +52546,7 @@ Xk
 Nq
 ps
 ps
-cL
+ps
 ps
 ps
 qG
@@ -53507,7 +53301,7 @@ Fu
 Fu
 Fu
 ov
-Bc
+we
 we
 we
 lF
@@ -58147,7 +57941,7 @@ BA
 fY
 fY
 fY
-WU
+fY
 fY
 BA
 gR
@@ -58170,7 +57964,7 @@ nj
 oN
 BG
 BG
-kf
+BG
 BG
 BG
 oN
@@ -58418,7 +58212,7 @@ Gm
 QI
 Tx
 QI
-uh
+mk
 xh
 nj
 nj
@@ -58920,7 +58714,7 @@ is
 BA
 fY
 fY
-Lm
+fY
 fY
 fY
 GQ
@@ -58944,7 +58738,7 @@ nj
 tT
 BG
 BG
-et
+BG
 BG
 BG
 oN
@@ -64597,7 +64391,7 @@ DZ
 Zx
 Zx
 Zx
-va
+Zx
 Zx
 Hd
 At
@@ -64606,7 +64400,7 @@ At
 At
 At
 At
-kV
+At
 At
 kr
 Hr
@@ -64853,7 +64647,7 @@ Av
 is
 DZ
 aK
-wY
+Zx
 jg
 Zx
 GI
@@ -65393,7 +65187,7 @@ Hr
 Hr
 VD
 lD
-fN
+lD
 lD
 lD
 lD

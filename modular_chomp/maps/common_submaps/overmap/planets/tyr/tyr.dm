@@ -191,7 +191,8 @@
 	outdoors = OUTDOORS_NO
 
 /area/surface/tyr/precursorruins/finale
-	name = "Training Final Assesment Chamber"
+	name = "Advanced Mass Production"
+	flags = RAD_SHIELDED | AREA_FLAG_IS_NOT_PERSISTENT | AREA_SECRET_NAME | AREA_FORBID_EVENTS | PHASE_SHIELDED
 
 /area/surface/tyr/precursorruins/southeast
 	name = "Relax Training Chamber"

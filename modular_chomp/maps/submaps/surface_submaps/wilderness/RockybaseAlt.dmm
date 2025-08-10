@@ -685,10 +685,6 @@
 /mob/living/simple_mob/mechanical/mining_drone,
 /turf/simulated/floor/tiled,
 /area/submap/Rockybase)
-"Jh" = (
-/obj/effect/map_helper/no_phaseshift/area,
-/turf/simulated/floor/tiled,
-/area/submap/Rockybase)
 "Jm" = (
 /obj/structure/bed,
 /obj/item/bedsheet,
@@ -1612,7 +1608,7 @@ eO
 eO
 Vz
 Vf
-Jh
+MW
 Hf
 pk
 gZ
