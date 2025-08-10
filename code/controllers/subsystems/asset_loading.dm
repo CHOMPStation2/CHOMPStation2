@@ -13,13 +13,7 @@ SUBSYSTEM_DEF(asset_loading)
 	while(length(generate_queue))
 		var/datum/asset/to_load = generate_queue[generate_queue.len]
 
-<<<<<<< HEAD
-		to_load.queued_generation()
-=======
->>>>>>> d9787e171e (Fix multiple pref issues (#18083))
 
-		if(MC_TICK_CHECK)
-			return
 		last_queue_len = length(generate_queue)
 		generate_queue.len--
 
