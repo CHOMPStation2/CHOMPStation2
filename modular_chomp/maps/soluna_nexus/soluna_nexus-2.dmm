@@ -1762,6 +1762,13 @@
 	},
 /turf/simulated/wall,
 /area/crew_quarters/Gym)
+"acQ" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/crew_quarters/Gym)
 "acR" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
@@ -9382,6 +9389,12 @@
 /obj/random/tank,
 /turf/simulated/floor/plating,
 /area/maintenance/Deck2_Civilian_AftPortCorridor1)
+"apT" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/crew_quarters/Gym)
 "apU" = (
 /obj/structure/loot_pile/maint/technical,
 /obj/random/trash,
@@ -10509,6 +10522,12 @@
 	},
 /turf/simulated/floor/plating/turfpack/airless,
 /area/harbor/Port_Shuttlebay)
+"asj" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/turf/simulated/floor/wood/alt/panel,
+/area/crew_quarters/Gym_Sauna)
 "ask" = (
 /obj/machinery/door/firedoor/glass/hidden/steel,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -10521,6 +10540,12 @@
 "asl" = (
 /turf/simulated/wall,
 /area/hallway/Port_2_Deck_Corridor_2)
+"asm" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
+	},
+/turf/simulated/floor/wood/alt/panel,
+/area/crew_quarters/Gym_Sauna)
 "aso" = (
 /obj/structure/table/steel,
 /obj/random/maintenance/cargo,
@@ -50683,6 +50708,9 @@
 	id_tint = "sc-WTsauna";
 	id_tag = "sc-DBsauna"
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/crew_quarters/Gym_Sauna)
 "eIQ" = (
@@ -84560,6 +84588,9 @@
 	dir = 6;
 	pixel_x = -1
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
 /turf/simulated/floor/wood/alt/panel,
 /area/crew_quarters/Gym_Sauna)
 "nXl" = (
@@ -93846,6 +93877,9 @@
 "qAH" = (
 /obj/effect/floor_decal/steeldecal/steel_decals6{
 	dir = 5
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/Gym)
@@ -154590,7 +154624,7 @@ mrK
 oNL
 oNL
 cXg
-oNL
+acQ
 iqR
 aZI
 vjh
@@ -154848,7 +154882,7 @@ skI
 lRO
 aPa
 wMK
-cvh
+apT
 gUm
 qPt
 lxe
@@ -155880,7 +155914,7 @@ vqB
 hTF
 reH
 pMu
-pMu
+asj
 ker
 uOF
 uOF
@@ -156138,7 +156172,7 @@ gdA
 hTF
 reH
 orB
-pMu
+asj
 ufT
 olH
 olH
@@ -156396,7 +156430,7 @@ gdA
 aLH
 xXo
 jYe
-pMu
+asj
 ufT
 olH
 olH
@@ -156654,7 +156688,7 @@ gdA
 ikm
 reH
 avl
-pMu
+asj
 ufT
 olH
 olH
@@ -156912,7 +156946,7 @@ gdA
 tHp
 reH
 ckP
-pMu
+asm
 ufT
 olH
 olH

@@ -11442,9 +11442,6 @@
 /turf/simulated/floor/plating,
 /area/medical/Virology)
 "dvc" = (
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
 /obj/machinery/atmospherics/binary/passive_gate{
 	dir = 4;
 	regulate_mode = 0;
@@ -23285,9 +23282,6 @@
 /turf/simulated/floor/tiled,
 /area/medical/Lounge)
 "hgB" = (
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
 /obj/effect/floor_decal/industrial/outline/blue,
 /obj/structure/cable{
 	icon_state = "4-8"
