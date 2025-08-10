@@ -57216,20 +57216,6 @@
 /obj/effect/floor_decal/corner/beige/border{
 	dir = 9
 	},
-/obj/machinery/button/remote/airlock{
-	desc = "A remote control switch for the medbay foyer.";
-	id = "chemwindow";
-	name = "Chemistry Windows";
-	pixel_y = 33;
-	pixel_x = -5
-	},
-/obj/machinery/button/remote/airlock{
-	desc = "A remote control switch for the medbay foyer.";
-	id = "chemcounter";
-	name = "Chemistry Counter";
-	pixel_y = 33;
-	pixel_x = 5
-	},
 /turf/simulated/floor/tiled/white,
 /area/medical/chemistry)
 "kXk" = (
@@ -69163,8 +69149,19 @@
 	pixel_y = 37;
 	dir = 2
 	},
-/obj/machinery/injector_maker{
-	pixel_y = 24
+/obj/machinery/button/remote/airlock{
+	desc = "A remote control switch for the medbay foyer.";
+	id = "chemwindow";
+	name = "Chemistry Windows";
+	pixel_y = 28;
+	pixel_x = -5
+	},
+/obj/machinery/button/remote/airlock{
+	desc = "A remote control switch for the medbay foyer.";
+	id = "chemcounter";
+	name = "Chemistry Counter";
+	pixel_y = 28;
+	pixel_x = 5
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/chemistry)
@@ -70384,6 +70381,9 @@
 	},
 /obj/effect/floor_decal/corner/beige/border{
 	dir = 1
+	},
+/obj/machinery/injector_maker{
+	pixel_y = 24
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/chemistry)
