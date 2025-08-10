@@ -751,11 +751,6 @@
 /obj/item/storage/box/donut,
 /turf/simulated/floor/wood/sif/turfpack/sif,
 /area/submap/DeathDen)
-"Rd" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/map_helper/no_phaseshift/area,
-/turf/simulated/floor/wood/sif/turfpack/sif,
-/area/submap/DeathDen)
 "Rs" = (
 /obj/structure/table/bench/wooden,
 /obj/effect/floor_decal/carpet,
@@ -784,7 +779,6 @@
 "Up" = (
 /obj/structure/windoor_assembly,
 /obj/random/trash,
-/obj/effect/map_helper/no_phaseshift,
 /turf/simulated/floor/tiled/freezer,
 /area/submap/DeathDen)
 "UR" = (
@@ -964,7 +958,7 @@ Th
 Th
 Th
 HZ
-Rd
+ph
 ph
 HZ
 Th

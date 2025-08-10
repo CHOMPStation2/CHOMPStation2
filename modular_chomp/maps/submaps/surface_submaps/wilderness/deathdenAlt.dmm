@@ -159,15 +159,6 @@
 	oxygen = 0
 	},
 /area/submap/DeathDen)
-"mR" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/item/reagent_containers/food/snacks/candy_corn{
-	pixel_x = 6;
-	pixel_y = 4
-	},
-/obj/effect/map_helper/no_phaseshift/area,
-/turf/simulated/floor/wood/sif/turfpack/sif,
-/area/submap/DeathDen)
 "nl" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/wood/sif/broken/turfpack/sif,
@@ -641,11 +632,6 @@
 	},
 /turf/simulated/floor/wood/sif/turfpack/sif,
 /area/submap/DeathDen)
-"Yr" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/map_helper/no_phaseshift,
-/turf/simulated/floor/wood/sif/turfpack/sif,
-/area/submap/DeathDen)
 "YA" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/wood/sif/turfpack/sif,
@@ -829,7 +815,7 @@ Sf
 Ps
 JE
 ex
-mR
+Ps
 GU
 YA
 MV
@@ -845,7 +831,7 @@ Is
 (10,1,1) = {"
 Is
 aa
-Yr
+YA
 Ps
 Xy
 Ps
