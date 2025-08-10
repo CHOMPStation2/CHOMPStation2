@@ -211,3 +211,32 @@
   Will:
   - rscadd: Changeling blood test
   - rscadd: Ambulant blood genetrait
+2025-08-10:
+  CHOMPStation2StaffMirrorBot:
+  - spellcheck: fain -> gain in the belly tooltips for nutrition
+  - maptweak: 'Added privacy features to the redgate train: Shutters, windows tints,
+      and privacy switches.'
+  - bugfix: missing fragmentation grenade iconstate
+  - rscadd: You can now make decaf tea using decaffeinated tea powder and water
+  Diana:
+  - bugfix: Whisper will now be the correct volume
+  Drathek:
+  - maptweak: Changed metal turfs to outdoor variants on boombase and deathden POIs
+      to hopefully address active edges
+  - refactor: Reworked map includes for ground base, stellar delight, and tether to
+      have all paths included simultaneously
+  Will:
+  - rscadd: Offices chairs now spin when you spin
+  - rscadd: Petcube boxes with dehydrated backup department pets
+  - rscadd: Adds petcube boxes to the HOP's locker
+  - rscadd: Adds monkeycubes and petcubes to trashpiles
+  - rscadd: Pollen allergy
+  - rscadd: Salt allergy
+  - rscadd: coughing allergic reaction
+  - rscadd: sneezing allergic reaction
+  - rscadd: gibbing allergic  reaction (disabled on virgo)
+  - bugfix: Mushroom allergy reacts to more foods
+  - code_imp: allergic reaction handling code moved to an element
+  - code_imp: added missing SIGNAL_HANDLER macros to other elements
+  - code_imp: split say() into a second nonblocking half, direct_say()
+  - code_imp: telecomms uses timers instead of sleep for transmission delay
