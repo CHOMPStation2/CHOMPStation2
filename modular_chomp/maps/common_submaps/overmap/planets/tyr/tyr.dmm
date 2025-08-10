@@ -452,7 +452,6 @@
 /area/surface/tyr/wrecked_shipA)
 "bR" = (
 /mob/living/simple_mob/mechanical/mecha/eclipse/hivebot/tyr,
-/obj/effect/map_helper/no_phaseshift/area,
 /turf/simulated/shuttle/floor/alien,
 /area/surface/tyr/precursorruins/finale)
 "bS" = (

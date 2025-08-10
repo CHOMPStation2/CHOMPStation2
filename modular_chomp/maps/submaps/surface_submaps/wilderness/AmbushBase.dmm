@@ -8,9 +8,9 @@
 	faction = "syndicate"
 	},
 /turf/simulated/floor/plating{
+	nitrogen = 93.7835;
 	oxygen = 20.7263;
-	temperature = 243.15;
-	nitrogen = 93.7835
+	temperature = 243.15
 	},
 /area/submap/DugOutMercs)
 "bg" = (
@@ -61,8 +61,8 @@
 /obj/item/oar,
 /obj/item/oar,
 /turf/simulated/floor/wood{
-	oxygen = 20.7263;
 	nitrogen = 93.7835;
+	oxygen = 20.7263;
 	temperature = 243.15
 	},
 /area/submap/DugOutMercs)
@@ -78,8 +78,8 @@
 "cj" = (
 /obj/machinery/light,
 /turf/simulated/floor/wood{
-	oxygen = 20.7263;
 	nitrogen = 93.7835;
+	oxygen = 20.7263;
 	temperature = 243.15
 	},
 /area/submap/DugOutMercs)
@@ -88,9 +88,9 @@
 /obj/structure/table/woodentable,
 /obj/item/storage/toolbox/lunchbox/syndicate/filled,
 /turf/simulated/floor/tiled/hydro{
-	temperature = 243.15;
+	nitrogen = 93.7835;
 	oxygen = 20.7263;
-	nitrogen = 93.7835
+	temperature = 243.15
 	},
 /area/submap/DugOutMercs)
 "dh" = (
@@ -151,9 +151,9 @@
 /obj/item/reagent_containers/food/snacks/monkfishfillet,
 /obj/item/reagent_containers/food/snacks/monkfishfillet,
 /turf/simulated/floor/tiled/hydro{
-	temperature = 243.15;
+	nitrogen = 93.7835;
 	oxygen = 20.7263;
-	nitrogen = 93.7835
+	temperature = 243.15
 	},
 /area/submap/DugOutMercs)
 "fL" = (
@@ -196,8 +196,8 @@
 "iq" = (
 /obj/random/mob/merc/armored,
 /turf/simulated/floor/wood{
-	oxygen = 20.7263;
 	nitrogen = 93.7835;
+	oxygen = 20.7263;
 	temperature = 243.15
 	},
 /area/submap/DugOutMercs)
@@ -291,9 +291,9 @@
 /obj/effect/floor_decal/corner/lightgrey/diagonal,
 /obj/random/mob/merc/all,
 /turf/simulated/floor/tiled/hydro{
-	temperature = 243.15;
+	nitrogen = 93.7835;
 	oxygen = 20.7263;
-	nitrogen = 93.7835
+	temperature = 243.15
 	},
 /area/submap/DugOutMercs)
 "my" = (
@@ -383,9 +383,9 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/hydro{
-	temperature = 243.15;
+	nitrogen = 93.7835;
 	oxygen = 20.7263;
-	nitrogen = 93.7835
+	temperature = 243.15
 	},
 /area/submap/DugOutMercs)
 "qR" = (
@@ -457,9 +457,9 @@
 "sc" = (
 /obj/effect/floor_decal/corner/lightgrey/diagonal,
 /turf/simulated/floor/tiled/hydro{
-	temperature = 243.15;
+	nitrogen = 93.7835;
 	oxygen = 20.7263;
-	nitrogen = 93.7835
+	temperature = 243.15
 	},
 /area/submap/DugOutMercs)
 "so" = (
@@ -469,9 +469,9 @@
 /obj/item/material/fishing_net,
 /obj/item/material/fishing_net,
 /turf/simulated/floor/tiled/hydro{
-	temperature = 243.15;
+	nitrogen = 93.7835;
 	oxygen = 20.7263;
-	nitrogen = 93.7835
+	temperature = 243.15
 	},
 /area/submap/DugOutMercs)
 "sO" = (
@@ -485,8 +485,8 @@
 /obj/structure/table/sifwooden_reinforced,
 /obj/item/oar,
 /turf/simulated/floor/wood{
-	oxygen = 20.7263;
 	nitrogen = 93.7835;
+	oxygen = 20.7263;
 	temperature = 243.15
 	},
 /area/submap/DugOutMercs)
@@ -524,9 +524,9 @@
 /obj/item/material/fishing_rod/modern/built,
 /obj/item/material/fishing_rod/modern/built,
 /turf/simulated/floor/tiled/hydro{
-	temperature = 243.15;
+	nitrogen = 93.7835;
 	oxygen = 20.7263;
-	nitrogen = 93.7835
+	temperature = 243.15
 	},
 /area/submap/DugOutMercs)
 "uv" = (
@@ -535,8 +535,8 @@
 "uF" = (
 /obj/structure/barricade,
 /turf/simulated/floor/wood{
-	oxygen = 20.7263;
 	nitrogen = 93.7835;
+	oxygen = 20.7263;
 	temperature = 243.15
 	},
 /area/submap/DugOutMercs)
@@ -713,8 +713,8 @@
 /obj/structure/table/sifwooden_reinforced,
 /obj/item/material/fishing_rod/modern/built,
 /turf/simulated/floor/wood{
-	oxygen = 20.7263;
 	nitrogen = 93.7835;
+	oxygen = 20.7263;
 	temperature = 243.15
 	},
 /area/submap/DugOutMercs)
@@ -729,8 +729,8 @@
 /obj/structure/table/sifwooden_reinforced,
 /obj/item/material/fishing_net,
 /turf/simulated/floor/wood{
-	oxygen = 20.7263;
 	nitrogen = 93.7835;
+	oxygen = 20.7263;
 	temperature = 243.15
 	},
 /area/submap/DugOutMercs)
@@ -832,9 +832,9 @@
 /obj/item/reagent_containers/food/snacks/carpmeat/sif/murkfish,
 /obj/item/reagent_containers/food/snacks/carpmeat/sif/murkfish,
 /turf/simulated/floor/tiled/hydro{
-	temperature = 243.15;
+	nitrogen = 93.7835;
 	oxygen = 20.7263;
-	nitrogen = 93.7835
+	temperature = 243.15
 	},
 /area/submap/DugOutMercs)
 "Ia" = (
@@ -918,9 +918,9 @@
 /mob/living/simple_mob/humanoid/merc/ranged/grenadier/poi,
 /obj/effect/floor_decal/corner/lightgrey/diagonal,
 /turf/simulated/floor/tiled/hydro{
-	temperature = 243.15;
+	nitrogen = 93.7835;
 	oxygen = 20.7263;
-	nitrogen = 93.7835
+	temperature = 243.15
 	},
 /area/submap/DugOutMercs)
 "Mi" = (
@@ -944,9 +944,9 @@
 /obj/machinery/light,
 /obj/effect/floor_decal/corner/lightgrey/diagonal,
 /turf/simulated/floor/tiled/hydro{
-	temperature = 243.15;
+	nitrogen = 93.7835;
 	oxygen = 20.7263;
-	nitrogen = 93.7835
+	temperature = 243.15
 	},
 /area/submap/DugOutMercs)
 "Nr" = (
@@ -1132,8 +1132,8 @@
 /obj/item/storage/mre/random,
 /obj/item/binoculars,
 /turf/simulated/floor/wood{
-	oxygen = 20.7263;
 	nitrogen = 93.7835;
+	oxygen = 20.7263;
 	temperature = 243.15
 	},
 /area/submap/DugOutMercs)
@@ -1172,9 +1172,9 @@
 /obj/item/reagent_containers/food/snacks/carpmeat/fish/sharkmeat,
 /obj/item/reagent_containers/food/snacks/carpmeat/fish/sharkmeat,
 /turf/simulated/floor/tiled/hydro{
-	temperature = 243.15;
+	nitrogen = 93.7835;
 	oxygen = 20.7263;
-	nitrogen = 93.7835
+	temperature = 243.15
 	},
 /area/submap/DugOutMercs)
 "WY" = (
@@ -1183,8 +1183,8 @@
 /area/submap/DugOutMercs)
 "Yg" = (
 /turf/simulated/floor/wood{
-	oxygen = 20.7263;
 	nitrogen = 93.7835;
+	oxygen = 20.7263;
 	temperature = 243.15
 	},
 /area/submap/DugOutMercs)
@@ -1210,8 +1210,8 @@
 	},
 /mob/living/simple_mob/humanoid/merc/ranged/sniper,
 /turf/simulated/floor/wood{
-	oxygen = 20.7263;
 	nitrogen = 93.7835;
+	oxygen = 20.7263;
 	temperature = 243.15
 	},
 /area/submap/DugOutMercs)
@@ -1232,15 +1232,10 @@
 	dir = 1
 	},
 /turf/simulated/floor/wood{
-	oxygen = 20.7263;
 	nitrogen = 93.7835;
+	oxygen = 20.7263;
 	temperature = 243.15
 	},
-/area/submap/DugOutMercs)
-"Zs" = (
-/obj/effect/floor_decal/borderfloor,
-/obj/effect/map_helper/no_phaseshift/area,
-/turf/simulated/floor/tiled,
 /area/submap/DugOutMercs)
 "Zt" = (
 /obj/effect/floor_decal/corner/blue/border{
@@ -1836,7 +1831,7 @@ sc
 sc
 uv
 nZ
-Zs
+yG
 pg
 Eh
 Eh

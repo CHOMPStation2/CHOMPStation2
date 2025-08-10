@@ -3,16 +3,18 @@
 /obj/effect/floor_decal/corner/grey/diagonal,
 /turf/simulated/floor/concrete/turfpack/sif,
 /area/submap/BountyHunters)
+"ab" = (
+/obj/structure/cable/green{
+	icon_state = "0-8"
+	},
+/obj/effect/floor_decal/corner/grey/diagonal,
+/turf/simulated/floor/concrete/turfpack/sif,
+/area/submap/BountyHunters)
 "aB" = (
 /obj/structure/table/steel,
 /obj/machinery/recharger,
 /obj/effect/floor_decal/corner/grey/diagonal,
 /obj/random/material/precious,
-/turf/simulated/floor/concrete,
-/area/submap/BountyHunters)
-"aF" = (
-/obj/effect/floor_decal/corner/grey/diagonal,
-/obj/effect/map_helper/no_phaseshift/area,
 /turf/simulated/floor/concrete,
 /area/submap/BountyHunters)
 "be" = (
@@ -705,7 +707,7 @@ VQ
 rC
 WC
 mf
-zu
+ab
 WF
 aa
 xt
@@ -837,7 +839,7 @@ rC
 rC
 rC
 be
-aF
+rC
 rC
 rC
 eY

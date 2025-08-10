@@ -128,9 +128,9 @@
 /area/submap/AbandonedLab)
 "gP" = (
 /mob/living/simple_mob/mechanical/hivebot/ranged_damage/strong{
-	size_multiplier = 1.2;
 	health = 240;
-	loot_list = list(/obj/item/gun/energy/laser = 5, /obj/item/gun/energy/laser/sleek = 5, /obj/item/gun/energy/gun = 5, /obj/item/gun/energy/sniperrifle = 5)
+	loot_list = list(/obj/item/gun/energy/laser = 5, /obj/item/gun/energy/laser/sleek = 5, /obj/item/gun/energy/gun = 5, /obj/item/gun/energy/sniperrifle = 5);
+	size_multiplier = 1.2
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/submap/AbandonedLab)
@@ -956,10 +956,6 @@
 /obj/effect/decal/cleanable/generic,
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/submap/AbandonedLab)
-"Sd" = (
-/obj/effect/map_helper/no_phaseshift/area,
-/turf/simulated/mineral/ignore_mapgen,
-/area/submap/AbandonedLab)
 "Sx" = (
 /obj/effect/wingrille_spawn,
 /turf/simulated/floor/plating,
@@ -1157,7 +1153,7 @@ Dh
 ku
 ku
 ku
-Sd
+ku
 ku
 Dh
 "}
