@@ -1169,6 +1169,18 @@
 "acb" = (
 /turf/simulated/wall,
 /area/crew_quarters/coffee_shop/lib)
+"acc" = (
+/obj/item/organ/internal/appendix{
+	pixel_x = -3;
+	pixel_y = 6
+	},
+/obj/effect/gibspawner/human,
+/obj/item/reagent_containers/glass/beaker/vial/culture/macrophages{
+	pixel_x = 8;
+	pixel_y = -6
+	},
+/turf/simulated/floor/plating,
+/area/medical/virology)
 "ack" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 10
@@ -4264,6 +4276,10 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/cable/green{
 	icon_state = "1-2"
+	},
+/obj/item/book/manual/chem_refinery{
+	pixel_x = 6;
+	pixel_y = 5
 	},
 /turf/simulated/floor/carpet,
 /area/engineering/break_room)
@@ -21663,7 +21679,8 @@
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/glass_security{
 	name = "Briefing Room";
-	req_access = list(1)
+	req_access = list(63);
+	req_one_access = null
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/security/main)
@@ -39074,6 +39091,11 @@
 	dir = 4;
 	pixel_x = 11
 	},
+/obj/item/radio/intercom{
+	dir = 4;
+	name = "Station Intercom (General)";
+	pixel_x = 21
+	},
 /turf/simulated/floor/tiled,
 /area/janitor)
 "cxQ" = (
@@ -39821,10 +39843,7 @@
 "cAc" = (
 /obj/effect/floor_decal/borderfloor/corner,
 /obj/effect/floor_decal/corner/purple/bordercorner,
-/obj/structure/janitorialcart,
-/obj/item/reagent_containers/glass/bucket,
-/obj/structure/mopbucket,
-/obj/item/mop,
+/obj/vehicle/train/engine/janicart,
 /turf/simulated/floor/tiled,
 /area/janitor)
 "cAq" = (
@@ -39834,21 +39853,20 @@
 "cAu" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/purple/border,
-/obj/machinery/rnd/production/protolathe/department/service,
+/obj/structure/janitorialcart,
+/obj/structure/mopbucket,
+/obj/item/mop,
+/obj/item/reagent_containers/glass/bucket,
 /turf/simulated/floor/tiled,
 /area/janitor)
 "cAv" = (
-/obj/item/radio/intercom{
-	dir = 4;
-	name = "Station Intercom (General)";
-	pixel_x = 21
-	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 6
 	},
 /obj/effect/floor_decal/corner/purple/border{
 	dir = 6
 	},
+/obj/machinery/rnd/production/protolathe/department/service,
 /turf/simulated/floor/tiled,
 /area/janitor)
 "cAw" = (
@@ -44498,23 +44516,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/engineering)
-"ehT" = (
-/obj/structure/table/reinforced,
-/obj/item/reagent_containers/dropper,
-/obj/item/clothing/glasses/science{
-	pixel_y = 6
-	},
-/obj/effect/floor_decal/borderfloorwhite{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/beige/border{
-	dir = 1
-	},
-/obj/machinery/injector_maker{
-	pixel_y = 24
-	},
-/turf/simulated/floor/tiled/white,
-/area/medical/chemistry)
 "eia" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 6
@@ -50624,12 +50625,6 @@
 /obj/effect/floor_decal/corner/purple/border,
 /turf/simulated/floor/tiled/white,
 /area/rnd/research)
-"hyq" = (
-/obj/machinery/door/firedoor/border_only,
-/obj/effect/wingrille_spawn/reinforced,
-/obj/structure/disposalpipe/segment,
-/turf/simulated/floor/plating,
-/area/medical/Distillery)
 "hzq" = (
 /obj/structure/cable/green{
 	icon_state = "2-8"
@@ -53563,7 +53558,7 @@
 	pixel_x = 12;
 	pixel_y = 25
 	},
-/mob/living/simple_mob/animal/passive/mouse/white/virology,
+/obj/structure/closet/l3closet/virology,
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
 "iYZ" = (
@@ -57221,6 +57216,20 @@
 /obj/effect/floor_decal/corner/beige/border{
 	dir = 9
 	},
+/obj/machinery/button/remote/airlock{
+	desc = "A remote control switch for the medbay foyer.";
+	id = "chemwindow";
+	name = "Chemistry Windows";
+	pixel_y = 33;
+	pixel_x = -5
+	},
+/obj/machinery/button/remote/airlock{
+	desc = "A remote control switch for the medbay foyer.";
+	id = "chemcounter";
+	name = "Chemistry Counter";
+	pixel_y = 33;
+	pixel_x = 5
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/chemistry)
 "kXk" = (
@@ -58393,9 +58402,9 @@
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/kitchen)
 "lMf" = (
-/obj/machinery/door/firedoor/border_only,
 /obj/effect/wingrille_spawn/reinforced,
-/turf/simulated/wall/r_wall,
+/obj/machinery/door/firedoor/border_only,
+/turf/simulated/floor/plating,
 /area/medical/Distillery)
 "lMn" = (
 /obj/effect/floor_decal/borderfloor{
@@ -58635,7 +58644,6 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/medical_lockerroom)
 "lRO" = (
-/obj/structure/table/marble,
 /obj/effect/floor_decal/corner/grey/diagonal{
 	dir = 4
 	},
@@ -58645,9 +58653,12 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/obj/structure/disposalpipe/junction{
-	dir = 4
+/obj/structure/disposalpipe/sortjunction{
+	dir = 4;
+	name = "Cafeteria";
+	sortType = "Hydroponics"
 	},
+/obj/structure/table/marble,
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/cafeteria)
 "lSA" = (
@@ -59880,14 +59891,6 @@
 /obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/floor/plating,
 /area/medical/chemistry)
-"mEJ" = (
-/obj/machinery/door/firedoor/border_only,
-/obj/machinery/door/airlock/maintenance{
-	name = "Central Maintenance Access";
-	req_one_access = list(12,19)
-	},
-/turf/simulated/floor/plating,
-/area/maintenance/central)
 "mEM" = (
 /obj/machinery/light,
 /obj/effect/floor_decal/borderfloorwhite,
@@ -60327,6 +60330,10 @@
 	},
 /obj/effect/floor_decal/corner/purple/bordercorner{
 	dir = 1
+	},
+/obj/machinery/light_switch{
+	pixel_x = 11;
+	pixel_y = 24
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/research_foyer)
@@ -61304,6 +61311,10 @@
 	pixel_x = -12;
 	id = "sc-ChimeMed";
 	name = "Medbay Doorbell"
+	},
+/obj/machinery/light_switch{
+	pixel_x = 11;
+	pixel_y = 24
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/foyer)
@@ -67296,7 +67307,20 @@
 /obj/effect/floor_decal/corner/paleblue/border{
 	dir = 10
 	},
-/obj/structure/closet/l3closet/virology,
+/obj/structure/dogbed{
+	name = "\improper Fleming's bed"
+	},
+/mob/living/simple_mob/animal/passive/mouse/white/virology,
+/obj/machinery/door/window/eastright,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 8;
+	health = 1e+006
+	},
+/obj/structure/window/reinforced{
+	dir = 1;
+	health = 1e+06
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
 "qZn" = (
@@ -69139,19 +69163,8 @@
 	pixel_y = 37;
 	dir = 2
 	},
-/obj/machinery/button/remote/airlock{
-	desc = "A remote control switch for the medbay foyer.";
-	id = "chemcounter";
-	name = "Chemistry Counter";
-	pixel_y = 24;
-	pixel_x = 5
-	},
-/obj/machinery/button/remote/airlock{
-	desc = "A remote control switch for the medbay foyer.";
-	id = "chemwindow";
-	name = "Chemistry Windows";
-	pixel_y = 24;
-	pixel_x = -5
+/obj/machinery/injector_maker{
+	pixel_y = 24
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/chemistry)
@@ -70365,9 +70378,6 @@
 /obj/item/reagent_containers/dropper,
 /obj/item/clothing/glasses/science{
 	pixel_y = 6
-	},
-/obj/machinery/injector_maker{
-	pixel_y = 24
 	},
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 1
@@ -74181,6 +74191,11 @@
 	},
 /obj/machinery/ai_status_display{
 	pixel_y = 32
+	},
+/obj/item/gene_scanner,
+/obj/item/gene_scanner{
+	pixel_x = 6;
+	pixel_y = 6
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/genetics)
@@ -109750,7 +109765,7 @@ qkK
 bdc
 bIq
 bIq
-mEJ
+abB
 bmX
 bmX
 wRC
@@ -124462,7 +124477,7 @@ sql
 pzW
 uHn
 eCW
-ehT
+sSp
 bCJ
 rHH
 rHH
@@ -126274,7 +126289,7 @@ vGd
 cEH
 rra
 hPS
-hyq
+lMf
 wmE
 thu
 lNS
@@ -128334,7 +128349,7 @@ gyD
 jjH
 jjH
 jjH
-hBo
+acc
 aIr
 mFN
 hai

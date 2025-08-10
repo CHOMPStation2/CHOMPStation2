@@ -50,15 +50,6 @@
 	outdoors = 0
 	},
 /area/surface/outside/thor/beach)
-"ae" = (
-/mob/living/simple_mob/vore/lamia/cobra/bra,
-/turf/simulated/floor/wood{
-	temperature = 313;
-	oxygen = 34.1451;
-	nitrogen = 63.4124;
-	outdoors = 0
-	},
-/area/surface/outside/thor/beach)
 "af" = (
 /turf/simulated/mineral/floor/cave/thor,
 /area/surface/outside/thor/jungle)
@@ -83,10 +74,6 @@
 /obj/item/melee/umbrella/random,
 /turf/simulated/floor/outdoors/desert_planet/gravel/thor,
 /area/surface/outside/thor/outpost)
-"an" = (
-/mob/living/simple_mob/vore/catgirl,
-/turf/simulated/floor/wood/alt,
-/area/surface/thor/kitchen)
 "ao" = (
 /obj/structure/bonfire,
 /turf/simulated/floor/outdoors/grass/forest/thor{
@@ -106,10 +93,6 @@
 /obj/effect/decal/remains/ribcage,
 /turf/simulated/mineral/floor/cave/thor,
 /area/surface/outside/thor/jungle)
-"ar" = (
-/mob/living/simple_mob/vore/succubus,
-/turf/simulated/floor/wood,
-/area/surface/thor/bar)
 "as" = (
 /obj/structure/table/woodentable,
 /obj/item/reagent_containers/food/snacks/waffles{
@@ -144,13 +127,6 @@
 	outdoors = 0
 	},
 /area/surface/outside/thor/pool)
-"ax" = (
-/mob/living/simple_mob/vore/wolftaur/brownclothed,
-/obj/effect/floor_decal/corner/grey/diagonal{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/white,
-/area/surface/thor/kitchen)
 "ay" = (
 /obj/structure/curtain/black{
 	name = "privacy curtain";
@@ -202,30 +178,6 @@
 	},
 /obj/item/reagent_containers/food/snacks/sharkmeatcooked,
 /turf/simulated/floor/tiled/white,
-/area/surface/thor/kitchen)
-"aD" = (
-/mob/living/simple_mob/vore/catgirl,
-/obj/item/stool/padded{
-	dir = 1
-	},
-/turf/simulated/floor/wood{
-	temperature = 313;
-	oxygen = 34.1451;
-	nitrogen = 63.4124;
-	outdoors = 1
-	},
-/area/surface/thor/kitchen)
-"aE" = (
-/mob/living/simple_mob/vore/catgirl,
-/obj/item/stool/padded{
-	dir = 4
-	},
-/turf/simulated/floor/wood{
-	temperature = 313;
-	oxygen = 34.1451;
-	nitrogen = 63.4124;
-	outdoors = 1
-	},
 /area/surface/thor/kitchen)
 "aF" = (
 /obj/item/stool/padded{
@@ -316,11 +268,6 @@
 /obj/structure/flora/ausbushes/grassybush,
 /turf/simulated/floor/outdoors/dirt/thor/planetuse,
 /area/surface/thor/abandonedhouse)
-"aQ" = (
-/mob/living/simple_mob/vore/wolftaur/whiteclothed,
-/obj/effect/floor_decal/corner/paleblue/diagonal,
-/turf/simulated/floor/tiled/old_tile/white,
-/area/surface/thor/med)
 "aR" = (
 /obj/structure/flora/ausbushes/palebush,
 /turf/simulated/floor/outdoors/grass/forest/thor,
@@ -2285,18 +2232,6 @@
 	nitrogen = 63.4124
 	},
 /area/surface/outside/thor/jungle/deep)
-"rq" = (
-/mob/living/simple_mob/vore/catgirl,
-/obj/item/stool/padded{
-	dir = 8
-	},
-/turf/simulated/floor/wood{
-	temperature = 313;
-	oxygen = 34.1451;
-	nitrogen = 63.4124;
-	outdoors = 1
-	},
-/area/surface/thor/kitchen)
 "rs" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -2730,7 +2665,6 @@
 /turf/simulated/floor/tiled/asteroid_steel/outdoors/thor,
 /area/surface/outside/thor/landingpad)
 "wY" = (
-/mob/living/simple_mob/vore/wolftaur/blackclothed,
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/surface/thor/janitor)
 "xb" = (
@@ -3504,7 +3438,6 @@
 /turf/simulated/floor/water/beach,
 /area/surface/outside/thor/jungle)
 "FU" = (
-/mob/living/simple_mob/vore/wolftaur/redclothed,
 /obj/structure/mirror{
 	dir = 4;
 	pixel_x = -27
@@ -32108,7 +32041,7 @@ dL
 oL
 TQ
 oy
-rq
+aF
 oy
 rf
 rf
@@ -32629,7 +32562,7 @@ oy
 aA
 hh
 Vo
-ax
+Vo
 Vo
 Vo
 Vo
@@ -32881,7 +32814,7 @@ oy
 oy
 dL
 oL
-aD
+TQ
 oy
 oy
 aB
@@ -32894,7 +32827,7 @@ Vo
 ka
 MX
 It
-an
+YO
 NV
 qL
 ka
@@ -33645,7 +33578,7 @@ PA
 mA
 RS
 Me
-aQ
+Me
 Me
 QU
 mA
@@ -33913,7 +33846,7 @@ pJ
 aF
 oy
 oy
-aE
+VG
 oy
 oy
 rf
@@ -37795,7 +37728,7 @@ sT
 wu
 SN
 IQ
-ar
+xu
 xu
 xu
 jj
@@ -38311,7 +38244,7 @@ sT
 wu
 SN
 BC
-ar
+xu
 xu
 xu
 VM
@@ -59498,7 +59431,7 @@ vZ
 vZ
 VN
 oW
-ae
+bn
 bn
 bn
 VN

@@ -264,6 +264,10 @@
 /obj/structure/ghost_pod/ghost_activated/maintpred/no_announce,
 /turf/simulated/floor/tiled/white,
 /area/maintenance/abscience)
+"aL" = (
+/obj/machinery/maint_vendor,
+/turf/simulated/floor/tiled/techmaint,
+/area/maintenance/gravlobby)
 "aM" = (
 /obj/effect/floor_decal/rust,
 /obj/structure/catwalk,
@@ -289,6 +293,12 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/janitoral)
+"aP" = (
+/mob/living/simple_mob/animal/passive/mimepet{
+	name = "potted plant"
+	},
+/turf/simulated/floor/plating/turfpack/station,
+/area/maintenance/zerocent)
 "aQ" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -298,6 +308,10 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/zeroaft)
+"aR" = (
+/mob/living/simple_mob/animal/passive/mothroach/bar,
+/turf/simulated/floor/lino,
+/area/maintenance/zerobar)
 "aS" = (
 /obj/machinery/firealarm{
 	layer = 3.3;
@@ -9526,6 +9540,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
+/obj/machinery/maint_recycler,
 /turf/simulated/floor/tiled/techmaint,
 /area/maintenance/gravlobby)
 "OM" = (
@@ -10925,6 +10940,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 10
 	},
+/mob/living/bot/medbot/mysterious,
 /turf/simulated/floor/tiled/white,
 /area/maintenance/abfirstaid)
 "Vr" = (
@@ -35766,7 +35782,7 @@ In
 Kr
 Uq
 Xq
-fW
+aR
 oY
 EP
 ly
@@ -45855,7 +45871,7 @@ ND
 IR
 Km
 ez
-Kc
+aL
 OY
 Kc
 yo
@@ -47646,7 +47662,7 @@ wn
 lv
 It
 jv
-xS
+aP
 KQ
 pt
 uU
