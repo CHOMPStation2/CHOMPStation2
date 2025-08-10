@@ -1219,16 +1219,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/kafel_full/blue,
 /area/crew_quarters/Port_Restroom)
-"abS" = (
-/obj/machinery/power/apc{
-	name = "south bump";
-	pixel_y = -24
-	},
-/obj/structure/cable/green{
-	icon_state = "0-8"
-	},
-/turf/simulated/floor/tiled/techmaint,
-/area/hallway/Aft_2_Deck_Stairwell)
 "abT" = (
 /obj/effect/floor_decal/steeldecal/steel_decals10{
 	dir = 5
@@ -10546,6 +10536,18 @@
 	},
 /turf/simulated/floor/wood/alt/panel,
 /area/crew_quarters/Gym_Sauna)
+"asn" = (
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/green/border{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/dark,
+/area/crew_quarters/Holodeck)
 "aso" = (
 /obj/structure/table/steel,
 /obj/random/maintenance/cargo,
@@ -18943,9 +18945,6 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/For_Medical_Post)
 "aUZ" = (
-/obj/structure/cable/green{
-	icon_state = "1-2"
-	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
 	},
@@ -34921,9 +34920,6 @@
 /turf/simulated/floor/tiled/dark,
 /area/medical/EMT_Bay)
 "cdC" = (
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
 /turf/simulated/floor/tiled/techmaint,
 /area/hallway/Aft_2_Deck_Stairwell)
 "cdG" = (
@@ -41051,9 +41047,6 @@
 /obj/machinery/firealarm{
 	pixel_y = -25;
 	dir = 1
-	},
-/obj/structure/cable/green{
-	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/hallway/Aft_2_Deck_Stairwell)
@@ -50346,9 +50339,6 @@
 	name = "Science Master Substation";
 	req_one_access = null;
 	req_access = list(47)
-	},
-/obj/structure/cable/green{
-	icon_state = "4-8"
 	},
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -63000,9 +62990,6 @@
 /obj/effect/floor_decal/spline/fancy{
 	dir = 9
 	},
-/obj/structure/cable/green{
-	icon_state = "1-2"
-	},
 /obj/machinery/camera/network/security{
 	dir = 5;
 	c_tag = "D2-Com-Aft Elevator1";
@@ -63391,9 +63378,6 @@
 /area/rnd/Research_Lab)
 "hSQ" = (
 /obj/effect/floor_decal/borderfloor,
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
 /obj/effect/floor_decal/corner/lightgrey/border,
 /turf/simulated/floor/tiled,
 /area/hallway/Aft_2_Deck_Stairwell)
@@ -77532,13 +77516,6 @@
 /obj/effect/floor_decal/steeldecal/steel_decals4,
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/Gallery)
-"lRj" = (
-/obj/structure/cable/green{
-	icon_state = "1-4"
-	},
-/obj/structure/closet/emcloset,
-/turf/simulated/floor/tiled/techmaint,
-/area/hallway/Aft_2_Deck_Stairwell)
 "lRD" = (
 /obj/structure/window/basic{
 	dir = 1
@@ -84295,9 +84272,6 @@
 "nSJ" = (
 /obj/machinery/light{
 	dir = 8
-	},
-/obj/structure/cable/green{
-	icon_state = "1-2"
 	},
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 8
@@ -99647,9 +99621,6 @@
 	dir = 10
 	},
 /obj/structure/window/basic,
-/obj/structure/cable/green{
-	icon_state = "1-2"
-	},
 /turf/simulated/floor/carpet/turcarpet,
 /area/hallway/Aft_2_Deck_Stairwell)
 "sbL" = (
@@ -109368,18 +109339,6 @@
 /obj/random/toolbox,
 /turf/simulated/floor/wood/broken,
 /area/maintenance/ab_TeshDen)
-"uQN" = (
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
-/obj/effect/floor_decal/steeldecal/steel_decals10{
-	dir = 5
-	},
-/obj/effect/floor_decal/steeldecal/steel_decals10{
-	dir = 6
-	},
-/turf/simulated/floor/tiled/techmaint,
-/area/hallway/Aft_2_Deck_Stairwell)
 "uQU" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 10
@@ -120332,9 +120291,6 @@
 /obj/structure/cable/green{
 	icon_state = "1-8"
 	},
-/obj/structure/cable/green{
-	icon_state = "1-2"
-	},
 /obj/effect/floor_decal/steeldecal/steel_decals6{
 	dir = 9
 	},
@@ -121384,9 +121340,6 @@
 /turf/simulated/floor/tiled,
 /area/hallway/Aft_2_Deck_Lobby)
 "ylQ" = (
-/obj/structure/cable/green{
-	icon_state = "1-2"
-	},
 /obj/effect/floor_decal/steeldecal/steel_decals6{
 	dir = 6;
 	pixel_x = -1
@@ -149457,7 +149410,7 @@ cus
 mga
 cwV
 ygf
-ygf
+asn
 nds
 gpB
 acl
@@ -149981,7 +149934,7 @@ nSJ
 aUZ
 hMR
 sbK
-lRj
+abY
 svD
 wuI
 gDg
@@ -150239,7 +150192,7 @@ mAe
 mAe
 nnG
 pEH
-uQN
+abT
 abv
 tQg
 eae
@@ -152045,7 +151998,7 @@ ack
 deb
 acc
 aMC
-abS
+cdC
 svD
 svD
 svD
