@@ -9,7 +9,7 @@
 			/obj/item/clothing/accessory/armor/groinpad,
 			/obj/item/clothing/shoes/footguards_modarm,
 			/obj/item/clothing/gloves/handguards_modarm,
-			/obj/item/clothing/accessory/storage/pouches/large,
+			/obj/item/clothing/accessory/storage/pouches/large
 			)
 	cost = 40
 	containertype = /obj/structure/closet/crate/secure/gear
