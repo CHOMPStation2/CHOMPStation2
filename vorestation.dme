@@ -5088,6 +5088,7 @@
 #include "modular_chomp\code\modules\datums\supplypacks\medical.dm"
 #include "modular_chomp\code\modules\datums\supplypacks\munitions.dm"
 #include "modular_chomp\code\modules\datums\supplypacks\science.dm"
+#include "modular_chomp\code\modules\datums\supplypacks\security.dm"
 #include "modular_chomp\code\modules\economy\vending_machines_vr.dm"
 #include "modular_chomp\code\modules\emotes\definitions\audiable.dm"
 #include "modular_chomp\code\modules\emotes\definitions\audible_pain.dm"
