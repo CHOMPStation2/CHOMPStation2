@@ -45,10 +45,10 @@ jobs:
       - name: Compile POIs
         run: tools/ci/compile_and_run.sh
         env:
-          EXTRA_ARGS: "-DMAP_TEST -D${{ inputs.map }}" # CHOMPEdit
+          EXTRA_ARGS: "-DMAP_TEST -D${{ inputs.map }}"
           RUN: "0"
       - name: Compile away missions
         run: tools/ci/compile_and_run.sh
         env:
-          EXTRA_ARGS: "-DAWAY_MISSION_TEST -D${{ inputs.map }}" # CHOMPEdit
+          EXTRA_ARGS: "-DAWAY_MISSION_TEST -D${{ inputs.map }}"
           RUN: "0"
