@@ -658,13 +658,6 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/submap/DogBase)
-"Pm" = (
-/obj/structure/bed/chair{
-	dir = 1
-	},
-/obj/effect/map_helper/no_phaseshift/area,
-/turf/simulated/floor/tiled/dark,
-/area/submap/DogBase)
 "PB" = (
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 1
@@ -1302,7 +1295,7 @@ LP
 Yr
 VG
 Ok
-Pm
+wI
 re
 lX
 Bk
