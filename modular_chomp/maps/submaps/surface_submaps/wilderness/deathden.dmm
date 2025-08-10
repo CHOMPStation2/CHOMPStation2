@@ -1,17 +1,4 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
-"aa" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/wood/sif/turfpack/sif,
-/area/submap/DeathDen)
-"ab" = (
-/turf/simulated/floor/wood/sif/turfpack/sif,
-/area/submap/DeathDen)
-"ac" = (
-/obj/structure/window/plastitanium/full,
-/obj/structure/grille/rustic,
-/obj/structure/barricade,
-/turf/simulated/floor/wood/sif/turfpack/sif,
-/area/submap/DeathDen)
 "au" = (
 /mob/living/simple_mob/vore/aggressive/deathclaw{
 	health = 100;
@@ -73,7 +60,7 @@
 	},
 /obj/random/maintenance/engineering,
 /obj/random/junk,
-/turf/simulated/floor/wood/sif/turfpack/sif,
+/turf/simulated/floor/wood/sif,
 /area/submap/DeathDen)
 "ez" = (
 /obj/item/material/shard/plastitaniumglass{
@@ -93,7 +80,7 @@
 	pixel_x = 1;
 	pixel_y = 6
 	},
-/turf/simulated/floor/wood/sif/turfpack/sif,
+/turf/simulated/floor/tiled/asteroid_steel,
 /area/submap/DeathDen)
 "fg" = (
 /obj/effect/decal/cleanable/dirt,
@@ -118,20 +105,20 @@
 /obj/random/meat,
 /obj/random/meat,
 /obj/random/meat,
-/turf/simulated/floor/wood/sif/turfpack/sif,
+/turf/simulated/floor/wood/sif,
 /area/submap/DeathDen)
 "fS" = (
 /obj/structure/table/wooden_reinforced,
 /obj/item/pizzabox/meat,
 /obj/random/junk,
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/wood/sif/turfpack/sif,
+/turf/simulated/floor/wood/sif,
 /area/submap/DeathDen)
 "fV" = (
 /obj/structure/bed/chair/wood{
 	dir = 4
 	},
-/turf/simulated/floor/wood/sif/turfpack/sif,
+/turf/simulated/floor/wood/sif/broken,
 /area/submap/DeathDen)
 "gB" = (
 /obj/effect/decal/cleanable/dirt,
@@ -145,7 +132,7 @@
 /area/submap/DeathDen)
 "hr" = (
 /obj/random/trash,
-/turf/simulated/floor/wood/sif/turfpack/sif,
+/turf/simulated/floor/wood/sif/broken,
 /area/submap/DeathDen)
 "hK" = (
 /obj/item/material/shard/plastitaniumglass{
@@ -242,7 +229,7 @@
 /obj/structure/bed/chair/wood{
 	dir = 8
 	},
-/turf/simulated/floor/wood/sif/turfpack/sif,
+/turf/simulated/floor/wood/sif,
 /area/submap/DeathDen)
 "lP" = (
 /obj/item/gun/projectile/colt,
@@ -263,7 +250,7 @@
 	melee_damage_upper = 15;
 	name = "young deathclaw"
 	},
-/turf/simulated/floor/wood/sif/turfpack/sif,
+/turf/simulated/floor/wood/sif,
 /area/submap/DeathDen)
 "mu" = (
 /obj/structure/toilet{
@@ -366,7 +353,7 @@
 	pixel_x = 7;
 	pixel_y = 8
 	},
-/turf/simulated/floor/wood/sif/turfpack/sif,
+/turf/simulated/floor/tiled/asteroid_steel,
 /area/submap/DeathDen)
 "qc" = (
 /turf/simulated/floor/wood/sif/broken,
@@ -467,6 +454,11 @@
 /obj/machinery/power/supermatter/shard,
 /turf/simulated/floor/wood/sif,
 /area/submap/DeathDen)
+"vD" = (
+/obj/structure/table/wooden_reinforced,
+/obj/item/shreddedp,
+/turf/simulated/floor/wood/sif,
+/area/submap/DeathDen)
 "wm" = (
 /turf/template_noop,
 /area/submap/DeathDen)
@@ -527,7 +519,7 @@
 "yL" = (
 /obj/structure/table/wooden_reinforced,
 /obj/item/flame/candle/everburn,
-/turf/simulated/floor/wood/sif/turfpack/sif,
+/turf/simulated/floor/wood/sif,
 /area/submap/DeathDen)
 "yS" = (
 /obj/item/reagent_containers/food/snacks/candy_corn{
@@ -700,6 +692,12 @@
 "MO" = (
 /turf/simulated/mineral/ignore_mapgen,
 /area/submap/DeathDen)
+"Nu" = (
+/obj/structure/bed/chair/wood{
+	dir = 4
+	},
+/turf/simulated/floor/wood/sif,
+/area/submap/DeathDen)
 "NS" = (
 /obj/item/material/shard/plastitaniumglass{
 	pixel_x = 7;
@@ -732,7 +730,7 @@
 "Qb" = (
 /obj/structure/table/wooden_reinforced,
 /obj/item/shreddedp,
-/turf/simulated/floor/wood/sif/turfpack/sif,
+/turf/simulated/floor/wood/sif/broken,
 /area/submap/DeathDen)
 "Qe" = (
 /turf/simulated/mineral/ignore_mapgen,
@@ -751,7 +749,7 @@
 /obj/item/trash/plate,
 /obj/item/storage/box/cups,
 /obj/item/storage/box/donut,
-/turf/simulated/floor/wood/sif/turfpack/sif,
+/turf/simulated/floor/wood/sif,
 /area/submap/DeathDen)
 "Rd" = (
 /obj/effect/decal/cleanable/dirt,
@@ -798,7 +796,7 @@
 /obj/effect/gibspawner/human,
 /obj/random/junk,
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/wood/sif/turfpack/sif,
+/turf/simulated/floor/wood/sif,
 /area/submap/DeathDen)
 "Zb" = (
 /obj/item/reagent_containers/food/snacks/candy_corn{
@@ -862,7 +860,7 @@ Qe
 cf
 HZ
 Th
-ac
+hq
 pu
 Th
 Th
@@ -881,7 +879,7 @@ Qe
 (4,1,1) = {"
 Ic
 Th
-fV
+Nu
 fV
 ey
 QK
@@ -901,9 +899,9 @@ Qe
 (5,1,1) = {"
 iR
 eS
-Qb
+vD
 fS
-aa
+ph
 fG
 Th
 DH
@@ -920,11 +918,11 @@ gB
 "}
 (6,1,1) = {"
 cf
-ac
+hq
 yL
 Qb
 WH
-aa
+ph
 Aw
 Zg
 sh
@@ -944,7 +942,7 @@ Th
 md
 lw
 hr
-ab
+bk
 Th
 bk
 dr

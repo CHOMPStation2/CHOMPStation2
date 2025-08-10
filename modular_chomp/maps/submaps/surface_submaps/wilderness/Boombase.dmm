@@ -23,7 +23,7 @@
 "ag" = (
 /obj/structure/girder,
 /obj/item/stack/rods,
-/turf/simulated/floor/plating/sif/planetuse,
+/turf/simulated/floor/plating,
 /area/submap/BoomBase)
 "ah" = (
 /obj/item/stack/rods,
@@ -32,17 +32,23 @@
 "ai" = (
 /obj/structure/closet/crate/secure/phoron,
 /obj/fiftyspawner/phoron,
-/turf/simulated/floor/plating/sif/planetuse,
+/turf/simulated/floor/plating,
 /area/submap/BoomBase)
 "aj" = (
 /obj/structure/closet/crate/secure/phoron,
 /obj/fiftyspawner/phoron,
 /turf/simulated/floor/tiled/steel,
 /area/submap/BoomBase)
+"ak" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/steel{
+	icon_state = "burned1"
+	},
+/area/submap/BoomBase)
 "al" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/ash,
-/turf/simulated/floor/tiled/steel/sif/planetuse,
+/turf/simulated/floor/tiled/steel,
 /area/submap/BoomBase)
 "am" = (
 /obj/effect/decal/cleanable/dirt,
@@ -52,103 +58,143 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/spider,
 /obj/item/material/shard,
-/turf/simulated/floor/tiled/steel/sif/planetuse,
+/turf/simulated/floor/tiled/steel,
 /area/submap/BoomBase)
 "ao" = (
-/turf/simulated/floor/tiled/steel/sif/planetuse,
+/turf/simulated/floor/tiled/steel,
 /area/submap/BoomBase)
 "ap" = (
 /mob/living/simple_mob/animal/giant_spider/phorogenic,
-/turf/simulated/floor/tiled/steel/sif/planetuse,
+/turf/simulated/floor/tiled/steel,
 /area/submap/BoomBase)
 "aq" = (
 /obj/machinery/portable_atmospherics/canister/empty/phoron,
-/turf/simulated/floor/tiled/steel/sif/planetuse,
+/turf/simulated/floor/tiled/steel{
+	icon_state = "steel_dirty"
+	},
 /area/submap/BoomBase)
 "ar" = (
 /obj/machinery/portable_atmospherics/canister/empty/phoron,
 /obj/item/material/shard,
-/turf/simulated/floor/tiled/steel/sif/planetuse,
+/turf/simulated/floor/tiled/steel{
+	icon_state = "steel_dirty"
+	},
 /area/submap/BoomBase)
 "as" = (
 /obj/item/material/shard,
-/turf/simulated/floor/plating/sif/planetuse,
+/turf/simulated/floor/plating,
 /area/submap/BoomBase)
 "at" = (
 /obj/effect/spider/stickyweb,
-/turf/simulated/floor/plating/sif/planetuse,
+/turf/simulated/floor/plating,
 /area/submap/BoomBase)
 "au" = (
 /turf/simulated/floor/outdoors/dirt,
 /area/submap/BoomBase)
 "av" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/plating/sif/planetuse,
+/turf/simulated/floor/plating,
 /area/submap/BoomBase)
 "aw" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/random/mob/spider/mutant,
 /turf/simulated/floor/tiled/steel,
 /area/submap/BoomBase)
+"ax" = (
+/turf/simulated/floor/tiled/steel{
+	icon_state = "burned1"
+	},
+/area/submap/BoomBase)
 "ay" = (
 /obj/effect/decal/remains/human,
-/turf/simulated/floor/tiled/steel/sif/planetuse,
+/turf/simulated/floor/tiled/steel,
+/area/submap/BoomBase)
+"az" = (
+/turf/simulated/floor/tiled/steel{
+	icon_state = "steel_dirty"
+	},
+/area/submap/BoomBase)
+"aA" = (
+/turf/simulated/floor/tiled/steel{
+	icon_state = "broken0"
+	},
 /area/submap/BoomBase)
 "aB" = (
 /turf/simulated/floor/plating,
 /area/submap/BoomBase)
 "aC" = (
 /obj/structure/flora/tree/dead,
-/turf/simulated/floor/outdoors/dirt/sif/planetuse,
+/turf/simulated/floor/outdoors/dirt,
 /area/submap/BoomBase)
 "aD" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/outdoors/dirt/sif/planetuse,
+/turf/simulated/floor/outdoors/dirt,
 /area/submap/BoomBase)
 "aE" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/spider/stickyweb,
-/turf/simulated/floor/tiled/steel/sif/planetuse,
+/turf/simulated/floor/tiled/steel,
+/area/submap/BoomBase)
+"aF" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/steel{
+	icon_state = "broken1"
+	},
+/area/submap/BoomBase)
+"aG" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/tiled/steel{
+	icon_state = "burned2"
+	},
 /area/submap/BoomBase)
 "aH" = (
 /obj/effect/decal/cleanable/ash,
-/turf/simulated/floor/outdoors/dirt/sif/planetuse,
+/turf/simulated/floor/outdoors/dirt,
 /area/submap/BoomBase)
 "aI" = (
 /obj/random/mob/spider/mutant,
-/turf/simulated/floor/outdoors/dirt/sif/planetuse,
+/turf/simulated/floor/outdoors/dirt,
 /area/submap/BoomBase)
 "aJ" = (
 /obj/structure/table,
-/turf/simulated/floor/tiled/steel/sif/planetuse,
+/turf/simulated/floor/tiled/steel,
 /area/submap/BoomBase)
 "aK" = (
 /obj/effect/decal/cleanable/dirt,
 /mob/living/simple_mob/animal/giant_spider/phorogenic,
-/turf/simulated/floor/tiled/steel/sif/planetuse,
+/turf/simulated/floor/tiled/steel,
+/area/submap/BoomBase)
+"aL" = (
+/turf/simulated/floor/tiled/steel{
+	icon_state = "burned2"
+	},
 /area/submap/BoomBase)
 "aM" = (
-/turf/simulated/floor/outdoors/rocks/sif/planetuse,
+/turf/simulated/floor/outdoors/rocks,
 /area/submap/BoomBase)
 "aN" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/table/standard,
 /obj/item/tank/phoron,
 /obj/item/fuel_assembly/phoron,
-/turf/simulated/floor/tiled/steel/sif/planetuse,
+/turf/simulated/floor/tiled/steel,
 /area/submap/BoomBase)
 "aO" = (
 /obj/effect/decal/remains/human,
 /obj/effect/decal/cleanable/ash,
-/turf/simulated/floor/tiled/steel/sif/planetuse,
+/turf/simulated/floor/tiled/steel{
+	icon_state = "steel_dirty"
+	},
 /area/submap/BoomBase)
 "aP" = (
 /obj/item/material/shard,
-/turf/simulated/floor/tiled/steel/sif/planetuse,
+/turf/simulated/floor/tiled/steel{
+	icon_state = "steel_dirty"
+	},
 /area/submap/BoomBase)
 "aQ" = (
 /obj/item/transfer_valve,
-/turf/simulated/floor/outdoors/rocks/sif/planetuse,
+/turf/simulated/floor/outdoors/rocks,
 /area/submap/BoomBase)
 "aR" = (
 /obj/item/material/shard,
@@ -156,26 +202,28 @@
 /area/submap/BoomBase)
 "aS" = (
 /obj/effect/decal/cleanable/ash,
-/turf/simulated/floor/plating/sif/planetuse,
+/turf/simulated/floor/plating,
 /area/submap/BoomBase)
 "aT" = (
 /obj/effect/decal/cleanable/ash,
-/turf/simulated/floor/tiled/steel/sif/planetuse,
+/turf/simulated/floor/tiled/steel,
 /area/submap/BoomBase)
 "aU" = (
 /obj/effect/spider/stickyweb,
 /obj/item/material/shard,
-/turf/simulated/floor/tiled/steel/sif/planetuse,
+/turf/simulated/floor/tiled/steel,
 /area/submap/BoomBase)
 "aV" = (
 /obj/effect/spider/stickyweb,
 /obj/random/mob/spider/mutant,
-/turf/simulated/floor/tiled/steel/sif/planetuse,
+/turf/simulated/floor/tiled/steel,
 /area/submap/BoomBase)
 "aW" = (
 /obj/effect/spider/stickyweb,
 /obj/effect/decal/cleanable/ash,
-/turf/simulated/floor/tiled/steel/sif/planetuse,
+/turf/simulated/floor/tiled/steel{
+	icon_state = "burned1"
+	},
 /area/submap/BoomBase)
 "aX" = (
 /obj/effect/decal/remains/human,
@@ -185,20 +233,6 @@
 "aY" = (
 /obj/structure/flora/tree/dead,
 /turf/template_noop,
-/area/submap/BoomBase)
-"aZ" = (
-/turf/simulated/floor/outdoors/dirt/sif/planetuse,
-/area/submap/BoomBase)
-"ba" = (
-/turf/simulated/floor/plating/sif/planetuse,
-/area/submap/BoomBase)
-"bb" = (
-/obj/structure/girder,
-/turf/simulated/floor/plating/sif/planetuse,
-/area/submap/BoomBase)
-"bc" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/tiled/steel/sif/planetuse,
 /area/submap/BoomBase)
 
 (1,1,1) = {"
@@ -341,14 +375,14 @@ ae
 av
 av
 aE
-bc
-bc
+am
+am
 aJ
 aN
 ao
 aB
 aT
-ba
+aB
 ab
 ab
 ab
@@ -363,17 +397,17 @@ ai
 av
 av
 av
-bc
-bc
+aF
+am
 aK
 aO
 aP
-ao
-ao
+aA
+az
 ag
-ba
-bb
-ba
+aB
+af
+aB
 ab
 aa
 "}
@@ -388,14 +422,14 @@ av
 av
 aD
 aD
-aZ
-aZ
-aZ
-aZ
+au
+au
+au
+au
 ab
 ab
-ba
-bb
+aB
+af
 aY
 aa
 "}
@@ -403,19 +437,19 @@ aa
 aa
 ab
 ae
-bc
+ak
 aw
 am
 av
-bb
+af
 aD
-ao
-aZ
-aZ
-aZ
-aZ
-aZ
-aZ
+aL
+au
+au
+au
+au
+au
+au
 ab
 ab
 ab
@@ -426,20 +460,20 @@ aa
 ab
 ae
 al
-bc
+am
 av
 aD
-bc
+aG
 aD
-aZ
-aZ
-aZ
-aZ
-aZ
-aZ
-aZ
+au
+au
+au
+au
+au
+au
+au
 ae
-aZ
+au
 ab
 aa
 "}
@@ -447,20 +481,20 @@ aa
 aa
 ab
 ae
-bc
+am
 av
-bb
+af
 aD
 aD
-aZ
-aZ
-aZ
-aZ
-aZ
-aZ
-aZ
-aZ
-ba
+au
+au
+au
+au
+au
+au
+au
+au
+aB
 ae
 ab
 aa
@@ -473,16 +507,16 @@ an
 av
 aD
 aD
-aZ
-aZ
-aZ
+au
+au
+au
 aM
 au
 au
 au
-aZ
-aZ
-ba
+au
+au
+aB
 ae
 ab
 aa
@@ -492,20 +526,20 @@ aa
 ab
 ae
 ao
-ao
-aZ
-aZ
-aZ
-aZ
-aZ
+ax
+au
+au
+au
+au
+au
 aM
 aM
 aM
 aM
-aZ
-aZ
-ba
-ba
+au
+au
+aB
+aB
 ab
 aa
 "}
@@ -515,18 +549,18 @@ ab
 ae
 ap
 ay
-aZ
-aZ
-aZ
+au
+au
+au
 aH
 aM
 aM
 aM
 aM
-aZ
-aZ
-aZ
-aZ
+au
+au
+au
+au
 ab
 ab
 aa
@@ -536,21 +570,21 @@ aa
 ad
 ae
 aq
-ao
-aZ
-aZ
-aZ
-aZ
+az
+au
+au
+au
+au
 aM
 aM
 aQ
 aM
-aZ
-aZ
-aZ
-aZ
-aZ
-aZ
+au
+au
+au
+au
+au
+au
 aa
 "}
 (17,1,1) = {"
@@ -558,21 +592,21 @@ aa
 ab
 ae
 ar
-ao
-aZ
-aZ
-aZ
+aA
+au
+au
+au
 aI
-aZ
+au
 aM
 aR
 aM
-aZ
-aZ
-aZ
-aZ
-aZ
-aZ
+au
+au
+au
+au
+au
+au
 aa
 "}
 (18,1,1) = {"
@@ -580,20 +614,20 @@ aa
 ab
 ae
 as
-ba
-aZ
-aZ
-aZ
-aZ
-aZ
-aZ
-aZ
-aZ
-aZ
-aZ
-aZ
-aZ
-aZ
+aB
+au
+au
+au
+au
+au
+au
+au
+au
+au
+au
+au
+au
+au
 ab
 aa
 "}
@@ -602,20 +636,20 @@ aa
 ab
 ae
 at
-aZ
-aZ
-aZ
-aZ
-aZ
-aZ
-aZ
-aZ
-aZ
-aZ
-aZ
-aZ
-ba
-ba
+au
+au
+au
+au
+au
+au
+au
+au
+au
+au
+au
+au
+aB
+aB
 ab
 aa
 "}
@@ -624,19 +658,19 @@ aa
 ab
 ae
 ag
-aZ
-aZ
-aZ
-aZ
-aZ
-aZ
-aZ
-aZ
-aZ
-aZ
-aZ
-ba
-ba
+au
+au
+au
+au
+au
+au
+au
+au
+au
+au
+au
+aB
+aB
 ae
 ab
 aa
@@ -646,18 +680,18 @@ aa
 ab
 ae
 ab
-aZ
-aZ
-aZ
-aZ
-aZ
-aZ
-aZ
-aZ
-aZ
-aZ
-aZ
-ba
+au
+au
+au
+au
+au
+au
+au
+au
+au
+au
+au
+aB
 aW
 ae
 ab
@@ -666,11 +700,11 @@ aa
 (22,1,1) = {"
 aa
 ab
-bb
+af
 ab
 ab
-aZ
-aZ
+au
+au
 ae
 ae
 ae
@@ -678,7 +712,7 @@ ae
 ae
 ab
 ab
-ba
+aB
 aV
 aX
 ah
@@ -690,16 +724,16 @@ aa
 ab
 ag
 ab
-aZ
-aZ
-aZ
-ba
-bb
-bb
-bb
-bb
+au
+au
+au
+aB
+af
+af
+af
+af
 ab
-ba
+aB
 aU
 ao
 ae
@@ -713,13 +747,13 @@ ac
 ab
 au
 aC
-aZ
-aZ
-aZ
+au
+au
+au
 aC
-aZ
-bb
-ba
+au
+af
+aB
 ab
 ab
 ab
