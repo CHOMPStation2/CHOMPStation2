@@ -39,16 +39,13 @@ jobs:
     name: Extra Map Tests
     needs: start_gate
     uses: ./.github/workflows/run_extra_map_tests.yml
+    with: # CHOMPEdit
+      maps: '{"paths":["USE_MAP_SOUTHERN_CROSS","USE_MAP_SOLUNA_NEXUS"]}' # CHOMPEdit
 
   completion_gate: # Serves as a non-moving target for branch rulesets
     if: always() && !cancelled()
     name: Completion Gate
-    needs:
-      [
-        run_all_tests,
-        run_extra_map_tests,
-        run_linters,
-      ]
+    needs: [run_all_tests, run_extra_map_tests, run_linters]
     runs-on: ubuntu-24.04
     steps:
       - name: Decide whether the needed jobs succeeded or failed

@@ -3,6 +3,9 @@ name: Run Extra Map Tests
 on:
   workflow_call:
     inputs:
+      map:
+        required: true
+        type: string
       major:
         required: false
         type: string
@@ -17,7 +20,7 @@ jobs:
     #
     # Otherwise, it will output `Run Tests (map; max)`.
     # For example, `Run Tests (runtimestation; 515)`.
-    name: Run Extra Map Tests (${{ inputs.major && format('{0}.{1}; ', inputs.major, inputs.minor) || '' }})
+    name: Run Extra Map Tests (${{ inputs.major && format('{0}.{1}; ', inputs.major, inputs.minor) || '' }}${{ inputs.map }})
     runs-on: ubuntu-24.04
     timeout-minutes: 15
 
@@ -42,10 +45,10 @@ jobs:
       - name: Compile POIs
         run: tools/ci/compile_and_run.sh
         env:
-          EXTRA_ARGS: "-DMAP_TEST"
+          EXTRA_ARGS: "-DMAP_TEST -D${{ inputs.map }}" # CHOMPEdit
           RUN: "0"
       - name: Compile away missions
         run: tools/ci/compile_and_run.sh
         env:
-          EXTRA_ARGS: "-DAWAY_MISSION_TEST" # CHOMPEdit
+          EXTRA_ARGS: "-DAWAY_MISSION_TEST -D${{ inputs.map }}" # CHOMPEdit
           RUN: "0"
