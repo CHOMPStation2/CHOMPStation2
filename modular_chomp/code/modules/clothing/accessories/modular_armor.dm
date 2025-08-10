@@ -1,4 +1,4 @@
-#define ACCESSORY_SLOT_ARMOR_G  0x8000
+///#define ACCESSORY_SLOT_ARMOR_G  0x8000 ///too lazy to move this upstream
 
 /obj/item/clothing/suit/armor/pcarrier/modarm
 	name = "modular plate carrier"
@@ -139,7 +139,8 @@
 	default_worn_icon = "groinpad"
 	gender = PLURAL
 	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0)
-	slot = ACCESSORY_SLOT_ARMOR_G
+	slot = ACCESSORY_SLOT_ARMOR_M
+	///slot = ACCESSORY_SLOT_ARMOR_G ///too lazy to move this upstream
 
 ///helmet
 
@@ -187,7 +188,7 @@
 	starting_accessories = list(/obj/item/clothing/accessory/armor/armorplate/medium, /obj/item/clothing/accessory/armor/armguards/modarm, /obj/item/clothing/accessory/armor/legguards/modarm, /obj/item/clothing/accessory/armor/groinpad, /obj/item/clothing/accessory/storage/pouches/large)
 
 /obj/item/clothing/suit/armor/pcarrier/modarm/sec
-	starting_accessories = list(/obj/item/clothing/accessory/armor/armorplate/security, /obj/item/clothing/accessory/armor/tag/nt, /obj/item/clothing/accessory/storage/pouches/large)
+	starting_accessories = list(/obj/item/clothing/accessory/armor/armorplate/security, /obj/item/clothing/accessory/storage/pouches/large)
 
 /obj/item/clothing/suit/armor/pcarrier/modarm/full/sec
-	starting_accessories = list(/obj/item/clothing/accessory/armor/armorplate/security, /obj/item/clothing/accessory/armor/armguards/modarm, /obj/item/clothing/accessory/armor/legguards/modarm, /obj/item/clothing/accessory/armor/groinpad, /obj/item/clothing/accessory/armor/tag/nt, /obj/item/clothing/accessory/storage/pouches/large)
+	starting_accessories = list(/obj/item/clothing/accessory/armor/armorplate/security, /obj/item/clothing/accessory/armor/armguards/modarm, /obj/item/clothing/accessory/armor/legguards/modarm, /obj/item/clothing/accessory/armor/groinpad, /obj/item/clothing/accessory/storage/pouches/large)
