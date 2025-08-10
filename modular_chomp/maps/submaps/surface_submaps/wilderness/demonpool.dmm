@@ -3,6 +3,11 @@
 /obj/fire,
 /turf/simulated/floor/cult/turfpack/sif,
 /area/submap/DemonPool)
+"ab" = (
+/obj/effect/decal/cleanable/dirt,
+/mob/living/simple_mob/vore/demonAI,
+/turf/simulated/floor/outdoors/dirt,
+/area/submap/DemonPool)
 "ag" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
@@ -502,10 +507,6 @@
 	outdoors = 0
 	},
 /area/submap/DemonPool)
-"RZ" = (
-/mob/living/simple_mob/vore/demonAI,
-/turf/simulated/floor/outdoors/dirt,
-/area/submap/DemonPool)
 "Vf" = (
 /mob/living/simple_mob/animal/space/bats/cult/strong{
 	faction = "demon"
@@ -716,8 +717,8 @@ Jo
 Jo
 Jo
 JV
-RZ
-JM
+vJ
+ab
 JM
 JM
 lr
