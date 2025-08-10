@@ -38442,9 +38442,6 @@
 /obj/machinery/atmospheric_field_generator/perma/underdoors{
 	color = "Yellow"
 	},
-/obj/structure/cable/cyan{
-	icon_state = "4-8"
-	},
 /turf/simulated/floor/tiled/techmaint,
 /area/engineering/Engine1_Access_Hall)
 "mlO" = (

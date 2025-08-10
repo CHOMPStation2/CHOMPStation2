@@ -28,7 +28,8 @@
 						/area/vacant/vacant_shop,
 						/area/rnd/research_storage, // This should probably be fixed,
 						/area/security/riot_control, // This should probably be fixed,
-						/area/hallway/Stairwell_Aft, //CHOMPEdit - open space/stairwell
+						/area/hallway/Stairwell_Aft, //CHOMPEdit Start - SN areas - open space/stairwell
+						/area/harbor/Aft_Shuttlebay, //CHOMPEdit - maint area
 						)
 
 	var/list/exempt_from_apc = typesof(/area/construction,
