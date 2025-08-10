@@ -30,12 +30,34 @@
 						/area/security/riot_control, // This should probably be fixed,
 						/area/hallway/Stairwell_Aft, //CHOMPEdit Start - SN areas - open space/stairwell
 						/area/harbor/Aft_Shuttlebay, //CHOMPEdit - maint area
+						/area/harbor/Port_3_Deck_Airlock_Access, //CHOMPEdit - maint area
+						/area/rnd/Testing_Chamber, //CHOMPEdit - Bomb range
+						/area/harbor/Port_Shuttlebay, //CHOMPEdit - shuttlebay
+						/area/harbor/Star_Shuttlebay, //CHOMPEdit - shuttlebay
+						/area/harbor/For_Shuttlebay, //CHOMPEdit - shuttlebay
+						/area/engineering/Solar_Array_AftPort, //CHOMPEdit - Solars
+						/area/engineering/Solar_Array_AftStar, //CHOMPEdit - Solars
+						/area/engineering/Solar_Control_AftPort, //CHOMPEdit - Solar Control
+						/area/engineering/Solar_Control_AftStar, //CHOMPEdit - Solar Control
+						/area/engineering/Solar_Control_ForPort, //CHOMPEdit - Solar Control
+						/area/engineering/Solar_Control_ForStar, //CHOMPEdit - Solar Control
+						/area/hallway/Star_3_Deck_Stairwell, //CHOMPEdit - Area is 100% glass, unable to put down atmos tiles.
+						/area/harbor/Star_3_Deck_Airlock_Access, //CHOMPEdit - maint area
+						/area/engineering/Central_Engineering_Post, //CHOMPEdit - maint area
+						/area/engineering/Solar_Array_ForStar, //CHOMPEdit - Solars
+						/area/engineering/Solar_Array_ForPort, //CHOMPEdit - Solars
 						)
 
 	var/list/exempt_from_apc = typesof(/area/construction,
 						/area/medical/genetics,
 						/area/mine,
-						/area/vacant/vacant_shop
+						/area/vacant/vacant_shop, //CHOMPEdit Start - SN areas
+						/area/maintenance/ab_Chapel, //CHOMPEdit - maint area
+						/area/rnd/Testing_Chamber, //CHOMPEdit - Bomb range
+						/area/engineering/Solar_Array_AftPort, //CHOMPEdit - Solars
+						/area/engineering/Solar_Array_AftStar, //CHOMPEdit - Solars
+						/area/engineering/Solar_Array_ForStar, //CHOMPEdit - Solars
+						/area/engineering/Solar_Array_ForPort, //CHOMPEdit - Solars
 						)
 
 	// Some maps have areas specific to the map, so include those.
