@@ -141,6 +141,46 @@
 	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0)
 	slot = ACCESSORY_SLOT_ARMOR_G
 
+///helmet
+
+/obj/item/clothing/head/helmet/riot/modarm
+	name = "visored helmet"
+	desc = "It's a heavy plasteel visored helmet designed for security work, and light combat."
+	icon_override = 'modular_chomp/icons/obj/modular_armor.dmi'
+	icon = 'modular_chomp/icons/obj/modular_armor.dmi'
+	icon_state = "modhelm"
+	item_state = "modhelm"
+	armor = list(melee = 50, bullet = 50, laser = 50, energy = 30, bomb = 30, bio = 10, rad = 0)
+	actions_types = list(/datum/action/item_action/toggle_visor)
+
+/obj/item/clothing/head/helmet/riot/modarm/attack_self(mob/user as mob)
+	if(src.icon_state == initial(icon_state))
+		src.icon_state = "modhelmup"
+		src.item_state = "modhelmup"
+		to_chat(user, "You raise the visor on the visored helmet.")
+	else
+		src.icon_state = initial(icon_state)
+		src.item_state = initial(icon_state)
+		to_chat(user, "You lower the visor on the visored helmet.")
+	update_clothing_icon()
+
+/obj/item/clothing/head/helmet/riot/modarm/killa
+	name = "striped visored helmet"
+	desc = "It's a heavy plasteel visored helmet designed for security work, and light combat. This one has three menacing white stripes."
+	icon_state = "modhelm_killa"
+	item_state = "modhelm_killa"
+
+/obj/item/clothing/head/helmet/riot/modarm/killa/attack_self(mob/user as mob)
+	if(src.icon_state == initial(icon_state))
+		src.icon_state = "modhelm_killaup"
+		src.item_state = "modhelm_killaup"
+		to_chat(user, "You raise the visor on the visored helmet.")
+	else
+		src.icon_state = initial(icon_state)
+		src.item_state = initial(icon_state)
+		to_chat(user, "You lower the visor on the visored helmet.")
+	update_clothing_icon()
+
 ///presets
 
 /obj/item/clothing/suit/armor/pcarrier/modarm/full
