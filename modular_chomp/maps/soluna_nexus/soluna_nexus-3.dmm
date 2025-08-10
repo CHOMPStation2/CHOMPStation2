@@ -52933,9 +52933,6 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
 /turf/simulated/floor/plating,
 /area/engineering/Solar_Control_AftPort)
 "reI" = (
