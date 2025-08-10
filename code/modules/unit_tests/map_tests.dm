@@ -45,7 +45,7 @@
 						/area/harbor/Star_3_Deck_Airlock_Access, //CHOMPEdit - maint area
 						/area/engineering/Central_Engineering_Post, //CHOMPEdit - maint area
 						/area/engineering/Solar_Array_ForStar, //CHOMPEdit - Solars
-						/area/engineering/Solar_Array_ForPort, //CHOMPEdit - Solars
+						/area/engineering/Solar_Array_ForPort, //CHOMPEdit End - Solars
 						)
 
 	var/list/exempt_from_apc = typesof(/area/construction,
@@ -57,7 +57,7 @@
 						/area/engineering/Solar_Array_AftPort, //CHOMPEdit - Solars
 						/area/engineering/Solar_Array_AftStar, //CHOMPEdit - Solars
 						/area/engineering/Solar_Array_ForStar, //CHOMPEdit - Solars
-						/area/engineering/Solar_Array_ForPort, //CHOMPEdit - Solars
+						/area/engineering/Solar_Array_ForPort, //CHOMPEdit End - Solars
 						)
 
 	// Some maps have areas specific to the map, so include those.
