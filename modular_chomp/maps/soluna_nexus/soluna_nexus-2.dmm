@@ -1219,18 +1219,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/kafel_full/blue,
 /area/crew_quarters/Port_Restroom)
-"abS" = (
-/obj/effect/floor_decal/borderfloor{
-	dir = 4
-	},
-/obj/effect/floor_decal/corner/mauve/border{
-	dir = 4
-	},
-/obj/machinery/atmospherics/unary/vent_pump/on{
-	dir = 1
-	},
-/turf/simulated/floor/tiled,
-/area/hallway/For_2_Deck_Central_Corridor_1)
 "abT" = (
 /obj/effect/floor_decal/steeldecal/steel_decals10{
 	dir = 5
@@ -10576,9 +10564,28 @@
 /obj/effect/floor_decal/corner/mauve/border{
 	dir = 4
 	},
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/hallway/For_2_Deck_Central_Corridor_1)
+"asq" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/mauve/border{
+	dir = 4
+	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /turf/simulated/floor/tiled,
 /area/hallway/For_2_Deck_Central_Corridor_1)
+"asr" = (
+/obj/structure/girder/reinforced,
+/obj/structure/cable/green{
+	icon_state = "1-4"
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/Deck2_Security_ForCorridor3)
 "ass" = (
 /obj/machinery/atmospherics/binary/pump{
 	dir = 1
@@ -10586,19 +10593,24 @@
 /obj/effect/catwalk_plated,
 /turf/simulated/floor/airless,
 /area/harbor/Aft_Shuttlebay)
-"asu" = (
-/obj/structure/girder/reinforced,
+"ast" = (
 /obj/structure/cable/green{
 	icon_state = "1-4"
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/Deck2_Security_ForCorridor3)
+"asu" = (
+/obj/structure/cable/green{
+	icon_state = "2-8"
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/Deck2_Security_ForCorridor3)
 "asv" = (
 /obj/structure/cable/green{
 	icon_state = "1-4"
-	},
-/obj/structure/cable/green{
-	icon_state = "4-8"
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/Deck2_Security_ForCorridor3)
@@ -10616,18 +10628,6 @@
 /turf/simulated/wall,
 /area/security/Equipment_Storage)
 "asx" = (
-/obj/structure/cable/green{
-	icon_state = "2-8"
-	},
-/turf/simulated/floor/plating,
-/area/maintenance/Deck2_Security_ForCorridor3)
-"asz" = (
-/obj/structure/cable/green{
-	icon_state = "1-4"
-	},
-/turf/simulated/floor/plating,
-/area/maintenance/Deck2_Security_ForCorridor3)
-"asA" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
@@ -147510,9 +147510,9 @@ aaa
 lrX
 ifP
 fHB
-asA
+asx
 ewf
-asz
+asv
 cGa
 aXJ
 rty
@@ -147770,8 +147770,8 @@ jRi
 ybP
 jRi
 uHU
-asx
 asu
+asr
 aXJ
 anM
 iNa
@@ -148029,7 +148029,7 @@ rBJ
 qHU
 uHU
 kWR
-asv
+ast
 aXJ
 aXJ
 aXJ
@@ -148287,7 +148287,7 @@ cvz
 uHU
 uHU
 sZC
-asx
+asu
 jCB
 lnR
 lnR
@@ -152228,9 +152228,9 @@ bfW
 ans
 xwd
 alK
-asp
+asq
 xPM
-abS
+asp
 alK
 alK
 alK
