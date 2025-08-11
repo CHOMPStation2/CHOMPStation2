@@ -392,6 +392,10 @@
 /obj/structure/table/wooden_reinforced,
 /turf/simulated/floor/wood/sif/turfpack/sif,
 /area/submap/DeathDen)
+"tr" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/outdoors/dirt/sif,
+/area/submap/DeathDen)
 "tN" = (
 /obj/effect/decal/cleanable/dirt,
 /mob/living/simple_mob/vore/aggressive/deathclaw/den{
@@ -433,10 +437,6 @@
 	opened = 0
 	},
 /turf/template_noop,
-/area/submap/DeathDen)
-"vr" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/outdoors/dirt/sif,
 /area/submap/DeathDen)
 "vu" = (
 /mob/living/simple_mob/vore/aggressive/deathclaw,
@@ -852,8 +852,8 @@ oX
 hq
 HZ
 nr
-vr
-vr
+tr
+tr
 MO
 Qe
 "}
@@ -873,7 +873,7 @@ dV
 Th
 MO
 nr
-vr
+tr
 au
 Qe
 "}
@@ -893,8 +893,8 @@ uP
 Th
 MO
 MO
-vr
-vr
+tr
+tr
 gB
 "}
 (6,1,1) = {"
@@ -1041,7 +1041,7 @@ Qe
 cf
 cf
 nr
-vr
+tr
 nr
 MO
 Th
@@ -1062,7 +1062,7 @@ cf
 nr
 nr
 nr
-vr
+tr
 MO
 MO
 MO
@@ -1082,7 +1082,7 @@ cf
 cf
 Qe
 Qe
-vr
+tr
 au
 Qe
 Qe
@@ -1103,7 +1103,7 @@ Qe
 Qe
 Qe
 nr
-vr
+tr
 Qe
 Qe
 MO

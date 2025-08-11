@@ -182,8 +182,7 @@
 /obj/random/maintenance/medical,
 /turf/simulated/floor/wood/sif/turfpack/sif,
 /area/submap/DeathDen)
-"rO" = (
-/obj/effect/decal/cleanable/dirt,
+"si" = (
 /turf/simulated/floor/outdoors/dirt/sif,
 /area/template_noop)
 "td" = (
@@ -346,6 +345,10 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/wood/sif/turfpack/sif,
 /area/submap/DeathDen)
+"FN" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/outdoors/dirt/sif,
+/area/template_noop)
 "Gc" = (
 /obj/structure/table/bench/wooden,
 /obj/effect/decal/cleanable/dirt,
@@ -406,9 +409,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/wood/sif/turfpack/sif,
 /area/submap/DeathDen)
-"KP" = (
-/turf/simulated/floor/outdoors/dirt/sif,
-/area/template_noop)
 "KS" = (
 /obj/structure/table/fancyblack,
 /obj/effect/floor_decal/carpet{
@@ -601,8 +601,8 @@ Is
 Is
 Is
 Is
-KP
-KP
+si
+si
 Ct
 Ct
 "}
@@ -620,9 +620,9 @@ td
 QS
 Sy
 QF
-KP
-rO
-rO
+si
+FN
+FN
 Ct
 Ct
 "}
@@ -641,8 +641,8 @@ MV
 MV
 MV
 Ct
-KP
-rO
+si
+FN
 xh
 Ct
 "}
@@ -662,9 +662,9 @@ lx
 MV
 Ct
 Ct
-rO
-rO
-rO
+FN
+FN
+FN
 "}
 (6,1,1) = {"
 Is
@@ -682,8 +682,8 @@ hJ
 MV
 Ct
 Ct
-KP
-KP
+si
+si
 Is
 "}
 (7,1,1) = {"
@@ -703,7 +703,7 @@ bK
 Ct
 Ct
 Ct
-KP
+si
 Is
 "}
 (8,1,1) = {"
@@ -809,9 +809,9 @@ Ct
 (13,1,1) = {"
 Is
 Is
-KP
-rO
-KP
+si
+FN
+si
 Ct
 MV
 MV
@@ -828,10 +828,10 @@ Ct
 "}
 (14,1,1) = {"
 Is
-KP
-KP
-KP
-rO
+si
+si
+si
+FN
 Ct
 Ct
 Ct
@@ -851,7 +851,7 @@ Is
 Is
 Ct
 Ct
-rO
+FN
 xh
 Ct
 Ct
@@ -871,8 +871,8 @@ Is
 Ct
 Ct
 Ct
-KP
-rO
+si
+FN
 Ct
 Ct
 Ct
@@ -891,9 +891,9 @@ Is
 Ct
 Ct
 Ct
-KP
-KP
-KP
+si
+si
+si
 Ct
 Ct
 Ct
@@ -911,7 +911,7 @@ Is
 Is
 Is
 Is
-KP
+si
 Is
 Is
 Is
