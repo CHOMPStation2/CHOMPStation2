@@ -14,187 +14,163 @@
 /turf/template_noop,
 /area/submap/BoomBase)
 "ae" = (
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall/r_wall/turfpack/sif,
 /area/submap/BoomBase)
 "af" = (
 /obj/structure/girder,
-/turf/simulated/floor/plating/sif/planetuse,
+/turf/simulated/floor/plating/turfpack/sif,
 /area/submap/BoomBase)
 "ag" = (
 /obj/structure/girder,
 /obj/item/stack/rods,
-/turf/simulated/floor/plating/sif/planetuse,
+/turf/simulated/floor/plating/turfpack/sif,
 /area/submap/BoomBase)
 "ah" = (
 /obj/item/stack/rods,
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall/r_wall/turfpack/sif,
 /area/submap/BoomBase)
 "ai" = (
 /obj/structure/closet/crate/secure/phoron,
 /obj/fiftyspawner/phoron,
-/turf/simulated/floor/plating/sif/planetuse,
+/turf/simulated/floor/plating/turfpack/sif,
 /area/submap/BoomBase)
 "aj" = (
 /obj/structure/closet/crate/secure/phoron,
 /obj/fiftyspawner/phoron,
-/turf/simulated/floor/tiled/steel/sif/planetuse,
-/area/submap/BoomBase)
-"ak" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/tiled/steel/sif/planetuse{
-	icon_state = "burned1"
-	},
+/turf/simulated/floor/tiled/steel/turfpack/sif,
 /area/submap/BoomBase)
 "al" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/ash,
-/turf/simulated/floor/tiled/steel/sif/planetuse,
+/turf/simulated/floor/tiled/steel/turfpack/sif,
 /area/submap/BoomBase)
 "am" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/tiled/steel/sif/planetuse,
+/turf/simulated/floor/tiled/steel/turfpack/sif,
 /area/submap/BoomBase)
 "an" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/spider,
 /obj/item/material/shard,
-/turf/simulated/floor/tiled/steel/sif/planetuse,
+/turf/simulated/floor/tiled/steel/turfpack/sif,
 /area/submap/BoomBase)
 "ao" = (
-/turf/simulated/floor/tiled/steel/sif/planetuse,
+/turf/simulated/floor/tiled/steel/turfpack/sif,
 /area/submap/BoomBase)
 "ap" = (
 /mob/living/simple_mob/animal/giant_spider/phorogenic,
-/turf/simulated/floor/tiled/steel/sif/planetuse,
+/turf/simulated/floor/tiled/steel/turfpack/sif,
 /area/submap/BoomBase)
 "aq" = (
 /obj/machinery/portable_atmospherics/canister/empty/phoron,
-/turf/simulated/floor/tiled/steel/sif/planetuse{
-	icon_state = "steel_dirty"
-	},
+/turf/simulated/floor/tiled/steel/turfpack/sif,
 /area/submap/BoomBase)
 "ar" = (
 /obj/machinery/portable_atmospherics/canister/empty/phoron,
 /obj/item/material/shard,
-/turf/simulated/floor/tiled/steel/sif/planetuse{
-	icon_state = "steel_dirty"
-	},
+/turf/simulated/floor/tiled/steel/turfpack/sif,
 /area/submap/BoomBase)
 "as" = (
 /obj/item/material/shard,
-/turf/simulated/floor/plating/sif/planetuse,
+/turf/simulated/floor/plating/turfpack/sif,
 /area/submap/BoomBase)
 "at" = (
 /obj/effect/spider/stickyweb,
-/turf/simulated/floor/plating/sif/planetuse,
+/turf/simulated/floor/plating/turfpack/sif,
 /area/submap/BoomBase)
 "au" = (
-/turf/simulated/floor/outdoors/dirt/sif/planetuse,
+/turf/simulated/floor/outdoors/dirt/turfpack/sif,
 /area/submap/BoomBase)
 "av" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/plating/sif/planetuse,
+/turf/simulated/floor/plating/turfpack/sif,
 /area/submap/BoomBase)
 "aw" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/random/mob/spider/mutant,
-/turf/simulated/floor/tiled/steel/sif/planetuse,
-/area/submap/BoomBase)
-"ax" = (
-/turf/simulated/floor/tiled/steel/sif/planetuse{
-	icon_state = "burned1"
-	},
+/turf/simulated/floor/tiled/steel/turfpack/sif,
 /area/submap/BoomBase)
 "ay" = (
 /obj/effect/decal/remains/human,
-/turf/simulated/floor/tiled/steel/sif/planetuse,
-/area/submap/BoomBase)
-"az" = (
-/turf/simulated/floor/tiled/steel/sif/planetuse{
-	icon_state = "steel_dirty"
-	},
+/turf/simulated/floor/tiled/steel/turfpack/sif,
 /area/submap/BoomBase)
 "aA" = (
-/turf/simulated/floor/tiled/steel/sif/planetuse{
+/turf/simulated/floor/tiled/steel/turfpack/sif{
 	icon_state = "broken0"
 	},
 /area/submap/BoomBase)
 "aB" = (
-/turf/simulated/floor/plating/sif/planetuse,
+/turf/simulated/floor/plating/turfpack/sif,
 /area/submap/BoomBase)
 "aC" = (
 /obj/structure/flora/tree/dead,
-/turf/simulated/floor/outdoors/dirt/sif/planetuse,
+/turf/simulated/floor/outdoors/dirt/turfpack/sif,
 /area/submap/BoomBase)
 "aD" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/outdoors/dirt/sif/planetuse,
+/turf/simulated/floor/outdoors/dirt/turfpack/sif,
 /area/submap/BoomBase)
 "aE" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/spider/stickyweb,
-/turf/simulated/floor/tiled/steel/sif/planetuse,
+/turf/simulated/floor/tiled/steel/turfpack/sif,
 /area/submap/BoomBase)
 "aF" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/tiled/steel/sif/planetuse{
+/turf/simulated/floor/tiled/steel/turfpack/sif{
 	icon_state = "broken1"
 	},
 /area/submap/BoomBase)
 "aG" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/tiled/steel/sif/planetuse{
-	icon_state = "burned2"
+/turf/simulated/floor/tiled/steel/turfpack/sif{
+	icon_state = "burned1"
 	},
 /area/submap/BoomBase)
 "aH" = (
 /obj/effect/decal/cleanable/ash,
-/turf/simulated/floor/outdoors/dirt/sif/planetuse,
+/turf/simulated/floor/outdoors/dirt/turfpack/sif,
 /area/submap/BoomBase)
 "aI" = (
 /obj/random/mob/spider/mutant,
-/turf/simulated/floor/outdoors/dirt/sif/planetuse,
+/turf/simulated/floor/outdoors/dirt/turfpack/sif,
 /area/submap/BoomBase)
 "aJ" = (
 /obj/structure/table,
-/turf/simulated/floor/tiled/steel/sif/planetuse,
+/turf/simulated/floor/tiled/steel/turfpack/sif,
 /area/submap/BoomBase)
 "aK" = (
 /obj/effect/decal/cleanable/dirt,
 /mob/living/simple_mob/animal/giant_spider/phorogenic,
-/turf/simulated/floor/tiled/steel/sif/planetuse,
+/turf/simulated/floor/tiled/steel/turfpack/sif,
 /area/submap/BoomBase)
 "aL" = (
-/turf/simulated/floor/tiled/steel/sif/planetuse{
-	icon_state = "burned2"
+/turf/simulated/floor/tiled/steel/turfpack/sif{
+	icon_state = "burned1"
 	},
 /area/submap/BoomBase)
 "aM" = (
-/turf/simulated/floor/outdoors/rocks/sif/planetuse,
+/turf/simulated/floor/outdoors/rocks/sif/turfpack/sif,
 /area/submap/BoomBase)
 "aN" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/table/standard,
 /obj/item/tank/phoron,
 /obj/item/fuel_assembly/phoron,
-/turf/simulated/floor/tiled/steel/sif/planetuse,
+/turf/simulated/floor/tiled/steel/turfpack/sif,
 /area/submap/BoomBase)
 "aO" = (
 /obj/effect/decal/remains/human,
 /obj/effect/decal/cleanable/ash,
-/turf/simulated/floor/tiled/steel/sif/planetuse{
-	icon_state = "steel_dirty"
-	},
+/turf/simulated/floor/tiled/steel/turfpack/sif,
 /area/submap/BoomBase)
 "aP" = (
 /obj/item/material/shard,
-/turf/simulated/floor/tiled/steel/sif/planetuse{
-	icon_state = "steel_dirty"
-	},
+/turf/simulated/floor/tiled/steel/turfpack/sif,
 /area/submap/BoomBase)
 "aQ" = (
 /obj/item/transfer_valve,
-/turf/simulated/floor/outdoors/rocks/sif/planetuse,
+/turf/simulated/floor/outdoors/rocks/sif/turfpack/sif,
 /area/submap/BoomBase)
 "aR" = (
 /obj/item/material/shard,
@@ -202,26 +178,26 @@
 /area/submap/BoomBase)
 "aS" = (
 /obj/effect/decal/cleanable/ash,
-/turf/simulated/floor/plating/sif/planetuse,
+/turf/simulated/floor/plating/turfpack/sif,
 /area/submap/BoomBase)
 "aT" = (
 /obj/effect/decal/cleanable/ash,
-/turf/simulated/floor/tiled/steel/sif/planetuse,
+/turf/simulated/floor/tiled/steel/turfpack/sif,
 /area/submap/BoomBase)
 "aU" = (
 /obj/effect/spider/stickyweb,
 /obj/item/material/shard,
-/turf/simulated/floor/tiled/steel/sif/planetuse,
+/turf/simulated/floor/tiled/steel/turfpack/sif,
 /area/submap/BoomBase)
 "aV" = (
 /obj/effect/spider/stickyweb,
 /obj/random/mob/spider/mutant,
-/turf/simulated/floor/tiled/steel/sif/planetuse,
+/turf/simulated/floor/tiled/steel/turfpack/sif,
 /area/submap/BoomBase)
 "aW" = (
 /obj/effect/spider/stickyweb,
 /obj/effect/decal/cleanable/ash,
-/turf/simulated/floor/tiled/steel/sif/planetuse{
+/turf/simulated/floor/tiled/steel/turfpack/sif{
 	icon_state = "burned1"
 	},
 /area/submap/BoomBase)
@@ -403,7 +379,7 @@ aK
 aO
 aP
 aA
-az
+ao
 ag
 aB
 af
@@ -437,7 +413,7 @@ aa
 aa
 ab
 ae
-ak
+aG
 aw
 am
 av
@@ -526,7 +502,7 @@ aa
 ab
 ae
 ao
-ax
+aL
 au
 au
 au
@@ -570,7 +546,7 @@ aa
 ad
 ae
 aq
-az
+ao
 au
 au
 au
