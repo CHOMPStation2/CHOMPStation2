@@ -703,35 +703,6 @@ GLOBAL_LIST_INIT(default_medbay_channels, list(
 	num2text(MED_I_FREQ) = list()
 ))
 
-<<<<<<< HEAD
-GLOBAL_LIST_INIT(valid_ringtones, list(
-		"beep",
-		"boom",
-		"slip",
-		"honk",
-		"SKREE",
-		"xeno",
-		"dust", // CHOMPEdit - Keeps dust as ringtone
-		"spark",
-		"rad",
-		"servo",
-		// "buh-boop", // CHOMPEdit - No.
-		"trombone",
-		"whistle",
-		"chirp",
-		"slurp",
-		"pwing",
-		"clack",
-		"bzzt",
-		"chimes",
-		"prbt",
-		"bark",
-		"bork",
-		"roark",
-		"chitter",
-		"squish"
-		))
-=======
 GLOBAL_LIST_INIT(device_ringtones, list("beep" = 'sound/machines/twobeep.ogg',
 										"boom" = 'sound/effects/explosionfar.ogg',
 										"slip" = 'sound/misc/slip.ogg',
@@ -739,11 +710,11 @@ GLOBAL_LIST_INIT(device_ringtones, list("beep" = 'sound/machines/twobeep.ogg',
 										"SKREE" = 'sound/voice/shriek1.ogg',
 										// "holy" = 'sound/items/PDA/ambicha4-short.ogg',
 										"xeno" = 'sound/voice/hiss1.ogg',
-										// "dust" = 'sound/effects/supermatter.ogg',
+										"dust" = 'sound/effects/supermatter.ogg', // CHOMPEdit
 										"spark" = 'sound/effects/sparks4.ogg',
 										"rad" = 'sound/items/geiger/high1.ogg',
 										"servo" = 'sound/machines/rig/rigservo.ogg',
-										"buh-boop" = 'sound/misc/buh-boop.ogg',
+										// "buh-boop" = 'sound/misc/buh-boop.ogg', // CHOMPRemove
 										"trombone" = 'sound/misc/sadtrombone.ogg',
 										"whistle" = 'sound/misc/boatswain.ogg',
 										"chirp" = 'sound/misc/nymphchirp.ogg',
@@ -769,7 +740,6 @@ GLOBAL_LIST_INIT(device_ringtones, list("beep" = 'sound/machines/twobeep.ogg',
 										"ratchet" = 'sound/items/Ratchet.ogg',
 										"tether" = 'sound/items/tinytether.ogg'
 										))
->>>>>>> 1195c11cb6 (Moves Ringtones To A Unified List (#18207))
 
 GLOBAL_LIST_EMPTY(seen_citizenships)
 GLOBAL_LIST_EMPTY(seen_systems)

@@ -219,11 +219,6 @@
 				pref.ringtone = choice
 			return TOPIC_REFRESH
 
-<<<<<<< HEAD
-		// if("toggle_shoes")
-		// 	pref.shoe_hater = !pref.shoe_hater
-		// 	return TOPIC_REFRESH
-=======
 		if("test_ringtone")
 			var/S = 'sound/machines/twobeep.ogg'
 			if(pref.ringtone in GLOB.device_ringtones)
@@ -231,10 +226,9 @@
 			SEND_SOUND(user.client, S)
 			return TOPIC_NOACTION
 
-		if("toggle_shoes")
-			pref.shoe_hater = !pref.shoe_hater
-			return TOPIC_REFRESH
->>>>>>> 1195c11cb6 (Moves Ringtones To A Unified List (#18207))
+		// if("toggle_shoes")
+		// 	pref.shoe_hater = !pref.shoe_hater
+		// 	return TOPIC_REFRESH
 
 		if("toggle_jacket")
 			pref.no_jacket = !pref.no_jacket
