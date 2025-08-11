@@ -30,7 +30,7 @@
 /area/submap/DeathDen)
 "bK" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/wall/sifwood,
+/turf/simulated/wall/sifwood/turfpack/sif,
 /area/submap/DeathDen)
 "cQ" = (
 /mob/living/simple_mob/vore/aggressive/deathclaw{
@@ -67,7 +67,7 @@
 "hq" = (
 /obj/structure/window/plastitanium/full,
 /obj/structure/grille/rustic,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel/turfpack/sif,
 /area/submap/DeathDen)
 "hz" = (
 /obj/effect/decal/cleanable/dirt,
@@ -183,7 +183,7 @@
 /turf/simulated/floor/wood/sif/turfpack/sif,
 /area/submap/DeathDen)
 "si" = (
-/turf/simulated/floor/outdoors/dirt/sif,
+/turf/simulated/floor/outdoors/dirt/turfpack/sif,
 /area/template_noop)
 "td" = (
 /obj/structure/gravemarker,
@@ -245,7 +245,7 @@
 	name = "young deathclaw"
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/outdoors/dirt/sif,
+/turf/simulated/floor/outdoors/dirt/turfpack/sif,
 /area/template_noop)
 "xw" = (
 /obj/structure/table/wooden_reinforced,
@@ -347,7 +347,7 @@
 /area/submap/DeathDen)
 "FN" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/outdoors/dirt/sif,
+/turf/simulated/floor/outdoors/dirt/turfpack/sif,
 /area/template_noop)
 "Gc" = (
 /obj/structure/table/bench/wooden,
@@ -442,7 +442,7 @@
 /turf/simulated/floor/tiled/freezer/turfpack/sif,
 /area/submap/DeathDen)
 "MV" = (
-/turf/simulated/wall/sifwood,
+/turf/simulated/wall/sifwood/turfpack/sif,
 /area/submap/DeathDen)
 "OB" = (
 /obj/item/flame/lighter/zippo/gonzo,
@@ -534,7 +534,7 @@
 /turf/simulated/floor/tiled/freezer/turfpack/sif,
 /area/submap/DeathDen)
 "Tm" = (
-/turf/simulated/wall/cult,
+/turf/simulated/wall/cult/turfpack/sif,
 /area/submap/DeathDen)
 "Tx" = (
 /obj/machinery/power/supermatter/shard,
