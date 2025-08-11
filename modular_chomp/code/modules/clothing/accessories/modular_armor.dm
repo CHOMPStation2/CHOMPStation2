@@ -27,6 +27,22 @@
 		|ACCESSORY_SLOT_ARMBAND)
 	blood_overlay_type = "armor"
 
+/obj/item/clothing/suit/armor/pcarrier/modarm/green
+	item_state = "pcarrierG"
+	icon_state = "pcarrierG"
+
+/obj/item/clothing/suit/armor/pcarrier/modarm/blue
+	item_state = "pcarrierB"
+	icon_state = "pcarrierB"
+
+/obj/item/clothing/suit/armor/pcarrier/modarm/tan
+	item_state = "pcarrierT"
+	icon_state = "pcarrierT"
+
+/obj/item/clothing/suit/armor/pcarrier/modarm/lightblue
+	item_state = "pcarrierU"
+	icon_state = "pcarrierU"
+
 ///snowflake armor plates
 
 /obj/item/clothing/accessory/armor/armorplate/security
@@ -94,7 +110,7 @@
 
 /obj/item/clothing/accessory/armor/legguards/modarm
 	name = "modular leg guards"
-	desc = "A pair of armored leg pads, in black. Attaches to a plate carrier."
+	desc = "A pair of armored leg pads. Attaches to a plate carrier."
 	icon = 'modular_chomp/icons/obj/modular_armor.dmi'
 	icon_override = 'modular_chomp/icons/obj/modular_armor.dmi'
 	icon_state = "legguards"
@@ -108,11 +124,31 @@
 	slot = ACCESSORY_SLOT_ARMOR_L
 	update_icon_define_digi = 'modular_chomp/icons/obj/modular_armor_digi.dmi' ///this doesn't work, not sure why
 
+/obj/item/clothing/accessory/armor/legguards/modarm/green
+	icon_state = "legguardsG"
+	item_state = "legguardsG"
+	default_worn_icon = "legguardsG"
+
+/obj/item/clothing/accessory/armor/legguards/modarm/blue
+	icon_state = "legguardsB"
+	item_state = "legguardsB"
+	default_worn_icon = "legguardsB"
+
+/obj/item/clothing/accessory/armor/legguards/modarm/tan
+	icon_state = "legguardsT"
+	item_state = "legguardsT"
+	default_worn_icon = "legguardsT"
+
+/obj/item/clothing/accessory/armor/legguards/modarm/lightblue
+	icon_state = "legguardsU"
+	item_state = "legguardsU"
+	default_worn_icon = "legguardsU"
+
 ///snowflake arm guards
 
 /obj/item/clothing/accessory/armor/armguards/modarm
 	name = "modular arm guards"
-	desc = "A pair of black arm pads reinforced with armor plating. Attaches to a plate carrier."
+	desc = "A pair of arm pads reinforced with armor plating. Attaches to a plate carrier."
 	icon = 'modular_chomp/icons/obj/modular_armor.dmi'
 	icon_override = 'modular_chomp/icons/obj/modular_armor.dmi'
 	icon_state = "armguards"
@@ -124,6 +160,27 @@
 	cold_protection = ARMS
 	armor = list(melee = 40, bullet = 40, laser = 40, energy = 25, bomb = 30, bio = 0, rad = 0)
 	slot = ACCESSORY_SLOT_ARMOR_A
+
+/obj/item/clothing/accessory/armor/armguards/modarm/green
+	icon_state = "armguardsG"
+	item_state = "armguardsG"
+	default_worn_icon = "armguardsG"
+
+/obj/item/clothing/accessory/armor/armguards/modarm/blue
+	icon_state = "armguardsB"
+	item_state = "armguardsB"
+	default_worn_icon = "armguardsB"
+
+/obj/item/clothing/accessory/armor/armguards/modarm/tan
+	icon_state = "armguardsT"
+	item_state = "armguardsT"
+	default_worn_icon = "armguardsT"
+
+/obj/item/clothing/accessory/armor/armguards/modarm/lightblue
+	icon_state = "armguardsU"
+	item_state = "armguardsU"
+	default_worn_icon = "armguardsU"
+
 
 ///snowflake groinpad (it's actually a tag because i can't code x_x)
 
@@ -140,6 +197,26 @@
 	slot = ACCESSORY_SLOT_ARMOR_M
 	///slot = ACCESSORY_SLOT_ARMOR_G ///too lazy to move this upstream
 
+/obj/item/clothing/accessory/armor/groinpad/green
+	icon_state = "groinpadG"
+	item_state = "groinpadG"
+	default_worn_icon = "groinpadG"
+
+/obj/item/clothing/accessory/armor/groinpad/blue
+	icon_state = "groinpadB"
+	item_state = "groinpadB"
+	default_worn_icon = "groinpadB"
+
+/obj/item/clothing/accessory/armor/groinpad/tan
+	icon_state = "groinpadT"
+	item_state = "groinpadT"
+	default_worn_icon = "groinpadT"
+
+/obj/item/clothing/accessory/armor/groinpad/lightblue
+	icon_state = "groinpadU"
+	item_state = "groinpadU"
+	default_worn_icon = "groinpadU"
+
 ///helmet
 
 /obj/item/clothing/head/helmet/riot/modarm
@@ -151,6 +228,12 @@
 	item_state = "modhelm"
 	armor = list(melee = 50, bullet = 50, laser = 50, energy = 30, bomb = 30, bio = 10, rad = 0)
 	actions_types = list(/datum/action/item_action/toggle_visor)
+
+	sprite_sheets = list(
+		SPECIES_VULPKANIN = 'modular_chomp/icons/mob/species/vulpkanin/head.dmi',
+		SPECIES_TAJARAN = 'modular_chomp/icons/mob/species/tajaran/head.dmi',
+		SPECIES_SERGAL = 'modular_chomp/icons/mob/species/tajaran/head.dmi',
+		SPECIES_UNATHI = 'modular_chomp/icons/mob/species/unathi/head.dmi')
 
 /obj/item/clothing/head/helmet/riot/modarm/attack_self(mob/user as mob)
 	if(src.icon_state == initial(icon_state))
@@ -179,6 +262,7 @@
 		src.item_state = initial(icon_state)
 		to_chat(user, "You lower the visor on the visored helmet.")
 	update_clothing_icon()
+
 
 ///presets
 
