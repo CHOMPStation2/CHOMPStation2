@@ -150,19 +150,19 @@
 	// Cave submaps are first.
 	var/undermines_z = GLOB.map_templates_loaded[Z_NAME_RB_UNDERMINES]
 	var/surface_mines_z = GLOB.map_templates_loaded[Z_NAME_ALIAS_SURFACE_MINES]
-	seed_submaps(list(undermines_z), 140, /area/surface/cave/unexplored/normal, /datum/map_template/surface/mountains/normal)
-	seed_submaps(list(undermines_z), 140, /area/surface/cave/unexplored/deep, /datum/map_template/surface/mountains/deep)
-	seed_submaps(list(surface_mines_z), 140, /area/surface/outside/wilderness/mountains, /datum/map_template/surface/mountains/normal)
+	seed_submaps(list(undermines_z), 140, /area/surface/cave/unexplored/normal, datum/map_template/surface/mountain_ch/normal)
+	seed_submaps(list(undermines_z), 140, /area/surface/cave/unexplored/deep, datum/map_template/surface/mountain_ch/deep)
+	seed_submaps(list(surface_mines_z), 140, /area/surface/outside/wilderness/mountains, datum/map_template/surface/mountain_ch/normal)
 
 	// Plains to make them less plain.
 	var/surface_ocean_z = GLOB.map_templates_loaded[Z_NAME_ALIAS_SURFACE]
-	seed_submaps(list(Z_LEVEL_RB_SURFACE), 220, /area/surface/outside/plains/normal, /datum/map_template/surface/plains) // Both of these will need a massive POI overhaul. The framework is in, and tiles will be mass-edited to match, but better POIs are wanted.
-	seed_submaps(list(surface_ocean_z), 220, /area/surface/outside/plains/normal, /datum/map_template/surface/plains) // Both of these will need a massive POI overhaul. The framework is in, and tiles will be mass-edited to match, but better POIs are wanted.
+	seed_submaps(list(Z_LEVEL_RB_SURFACE), 220, /area/surface/outside/plains/normal, /datum/map_template/surface/plains_ch) // Both of these will need a massive POI overhaul. The framework is in, and tiles will be mass-edited to match, but better POIs are wanted.
+	seed_submaps(list(surface_ocean_z), 220, /area/surface/outside/plains/normal, /datum/map_template/surface/plains_ch) // Both of these will need a massive POI overhaul. The framework is in, and tiles will be mass-edited to match, but better POIs are wanted.
 
 	// Wilderness is next.
 	var/surface_wilds_z = GLOB.map_templates_loaded[Z_NAME_ALIAS_SURFACE_WILDS]
-	seed_submaps(list(surface_wilds_z), 240, /area/surface/outside/wilderness/normal, /datum/map_template/surface/wilderness/normal)
-	seed_submaps(list(surface_wilds_z), 240, /area/surface/outside/wilderness/deep, /datum/map_template/surface/wilderness/deep)
+	seed_submaps(list(surface_wilds_z), 240, /area/surface/outside/wilderness/normal, /datum/map_template/surface/wilderness_ch/normal)
+	seed_submaps(list(surface_wilds_z), 240, /area/surface/outside/wilderness/deep, /datum/map_template/surface/wilderness_ch/deep)
 	// If Space submaps are made, add a line to make them here as well.
 
 	// Now for the tunnels. (This decides the load order of ore generation and cave generation. Check Random_Map to see % )
