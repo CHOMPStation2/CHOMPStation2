@@ -89,7 +89,7 @@
 /turf/simulated/floor/plating/sif/planetuse,
 /area/submap/BoomBase)
 "au" = (
-/turf/simulated/floor/outdoors/dirt,
+/turf/simulated/floor/outdoors/dirt/sif/planetuse,
 /area/submap/BoomBase)
 "av" = (
 /obj/effect/decal/cleanable/dirt,
@@ -124,11 +124,11 @@
 /area/submap/BoomBase)
 "aC" = (
 /obj/structure/flora/tree/dead,
-/turf/simulated/floor/outdoors/dirt,
+/turf/simulated/floor/outdoors/dirt/sif/planetuse,
 /area/submap/BoomBase)
 "aD" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/outdoors/dirt,
+/turf/simulated/floor/outdoors/dirt/sif/planetuse,
 /area/submap/BoomBase)
 "aE" = (
 /obj/effect/decal/cleanable/dirt,
@@ -149,11 +149,11 @@
 /area/submap/BoomBase)
 "aH" = (
 /obj/effect/decal/cleanable/ash,
-/turf/simulated/floor/outdoors/dirt,
+/turf/simulated/floor/outdoors/dirt/sif/planetuse,
 /area/submap/BoomBase)
 "aI" = (
 /obj/random/mob/spider/mutant,
-/turf/simulated/floor/outdoors/dirt,
+/turf/simulated/floor/outdoors/dirt/sif/planetuse,
 /area/submap/BoomBase)
 "aJ" = (
 /obj/structure/table,
@@ -170,7 +170,7 @@
 	},
 /area/submap/BoomBase)
 "aM" = (
-/turf/simulated/floor/outdoors/rocks,
+/turf/simulated/floor/outdoors/rocks/sif/planetuse,
 /area/submap/BoomBase)
 "aN" = (
 /obj/effect/decal/cleanable/dirt,
@@ -194,7 +194,7 @@
 /area/submap/BoomBase)
 "aQ" = (
 /obj/item/transfer_valve,
-/turf/simulated/floor/outdoors/rocks,
+/turf/simulated/floor/outdoors/rocks/sif/planetuse,
 /area/submap/BoomBase)
 "aR" = (
 /obj/item/material/shard,
