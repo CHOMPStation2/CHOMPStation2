@@ -24,11 +24,19 @@
 // The Magazine //
 /obj/item/ammo_magazine/cell_mag/combat
 	name = "microbattery magazine"
+<<<<<<< HEAD
 	desc = "A microbattery holder for the \'NSCW\'"
 	icon_state = "nsfw_mag"
 	max_ammo = 4
 	x_offset = 4
 	description_info = "This magazine holds NSCW microbatteries to power the NSCW handgun. Up to three can be loaded at once, and each provides four shots of their respective energy type. Loading multiple of the same type will provide additional shots of that type. The batteries can be recharged in a normal recharger."
+=======
+	desc = "A microbattery holder for the \'NSFW\'."
+	icon_state = "nsfw_mag"
+	max_ammo = 4
+	x_offset = 4
+	description_info = "This magazine holds NSFW microbatteries to power the NSFW handgun. Up to four can be loaded at once, and each provides four shots of their respective energy type. Loading multiple of the same type will provide additional shots of that type. The batteries can be recharged in a normal recharger."
+>>>>>>> 6395622a22 (Cell-Loaded Revolver Update (#18235))
 	ammo_type = /obj/item/ammo_casing/microbattery/combat
 
 /obj/item/ammo_magazine/cell_mag/combat/prototype
