@@ -68,7 +68,8 @@
 	var/belly_overall_mult = 1	//Multiplier applied ontop of any other specific multipliers
 	var/private_struggle = FALSE			// If struggles are made public or not
 	var/prevent_saving = FALSE				// Can this belly be saved? For special bellies that mobs and adminbus might have.
-
+	var/absorbedrename_enabled = FALSE		// If absorbed prey are renamed.
+	var/absorbedrename_name = "%pred's %belly"	// What absorbed prey are renamed to.
 
 	var/vore_sprite_flags = DM_FLAG_VORESPRITE_BELLY
 	var/tmp/static/list/vore_sprite_flag_list= list(
@@ -439,6 +440,8 @@
 	"entrance_logs",
 	"noise_freq",
 	"private_struggle",
+	"absorbedrename_enabled",
+	"absorbedrename_name",
 	"item_digest_logs",
 	"show_fullness_messages",
 	"digest_max",
