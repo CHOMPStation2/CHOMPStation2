@@ -6895,12 +6895,6 @@
 	icon_state = "vault"
 	},
 /area/survivalpod)
-"cbc" = (
-/obj/item/clothing/under/fluff/techpriestunder,
-/turf/simulated/fitness{
-	icon_state = "vault"
-	},
-/area/survivalpod)
 "cbg" = (
 /obj/item/clothing/under/teshari/smock/yellow,
 /turf/simulated/fitness{
@@ -18156,12 +18150,6 @@
 /area/survivalpod)
 "fsA" = (
 /obj/item/clothing/accessory/solgov/department/supply,
-/turf/simulated/fitness{
-	icon_state = "vault"
-	},
-/area/survivalpod)
-"fsQ" = (
-/obj/item/clothing/accessory/fluff/zeta_blackwell_1,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -40795,12 +40783,6 @@
 	icon_state = "vault"
 	},
 /area/survivalpod)
-"lVY" = (
-/obj/item/clothing/shoes/boots/jackboots/fluff/techpriestboots,
-/turf/simulated/fitness{
-	icon_state = "vault"
-	},
-/area/survivalpod)
 "lWa" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/red,
 /turf/simulated/fitness{
@@ -45782,12 +45764,6 @@
 /area/survivalpod)
 "nsY" = (
 /obj/item/clothing/suit/storage/fluff/takirasuit,
-/turf/simulated/fitness{
-	icon_state = "vault"
-	},
-/area/survivalpod)
-"nta" = (
-/obj/item/clothing/gloves/fluff/techpriestgloves,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -107136,7 +107112,7 @@ gJd
 iYE
 pKx
 rpk
-lVY
+bSW
 qhi
 uzy
 cRv
@@ -107325,14 +107301,14 @@ vQv
 iDV
 vUn
 xGQ
-fsQ
+bSW
 xvY
 mil
 cxS
 gLx
 mrd
 aRK
-nta
+bSW
 qhf
 psW
 cbR
@@ -107356,7 +107332,7 @@ qom
 pIL
 bup
 iCb
-cbc
+bSW
 wef
 tGu
 ceA
