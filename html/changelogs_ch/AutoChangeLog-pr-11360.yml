@@ -1,4 +1,0 @@
-author: "Drathek"
-delete-after: True
-changes:
-  - maptweak: "Changed metal turfs to outdoor variants on boombase and deathden POIs to hopefully address active edges"

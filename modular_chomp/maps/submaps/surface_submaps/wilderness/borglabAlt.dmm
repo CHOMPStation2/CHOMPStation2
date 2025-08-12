@@ -699,11 +699,11 @@
 /area/submap/BorgLab)
 "Ds" = (
 /mob/living/simple_mob/vore/aggressive/corrupthound/prettyboi{
+	faction = "synthtide";
 	health = 300;
 	maxHealth = 300;
 	melee_damage_lower = 15;
-	melee_damage_upper = 25;
-	faction = "synthtide"
+	melee_damage_upper = 25
 	},
 /turf/simulated/floor/reinforced,
 /area/submap/BorgLab)
@@ -1099,7 +1099,6 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
 	},
-/obj/effect/map_helper/no_phaseshift/area,
 /turf/simulated/floor/tiled,
 /area/submap/BorgLab)
 "Oy" = (

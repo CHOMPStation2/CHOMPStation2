@@ -211,3 +211,70 @@
   Will:
   - rscadd: Changeling blood test
   - rscadd: Ambulant blood genetrait
+2025-08-10:
+  CHOMPStation2StaffMirrorBot:
+  - spellcheck: fain -> gain in the belly tooltips for nutrition
+  - maptweak: 'Added privacy features to the redgate train: Shutters, windows tints,
+      and privacy switches.'
+  - bugfix: missing fragmentation grenade iconstate
+  - rscadd: You can now make decaf tea using decaffeinated tea powder and water
+  Diana:
+  - bugfix: Whisper will now be the correct volume
+  Drathek:
+  - maptweak: Changed metal turfs to outdoor variants on boombase and deathden POIs
+      to hopefully address active edges
+  - refactor: Reworked map includes for ground base, stellar delight, and tether to
+      have all paths included simultaneously
+  Will:
+  - rscadd: Offices chairs now spin when you spin
+  - rscadd: Petcube boxes with dehydrated backup department pets
+  - rscadd: Adds petcube boxes to the HOP's locker
+  - rscadd: Adds monkeycubes and petcubes to trashpiles
+  - rscadd: Pollen allergy
+  - rscadd: Salt allergy
+  - rscadd: coughing allergic reaction
+  - rscadd: sneezing allergic reaction
+  - rscadd: gibbing allergic  reaction (disabled on virgo)
+  - bugfix: Mushroom allergy reacts to more foods
+  - code_imp: allergic reaction handling code moved to an element
+  - code_imp: added missing SIGNAL_HANDLER macros to other elements
+  - code_imp: split say() into a second nonblocking half, direct_say()
+  - code_imp: telecomms uses timers instead of sleep for transmission delay
+2025-08-11:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: tail layering pref breaking the entire character
+  - bugfix: several issues with accidental pref saves
+  Diana:
+  - bugfix: Eating a prey with Drippy will not longer make you drip them.
+  - bugfix: white chocolate will not annihilate you if you're allergic to chocolate
+  FluffMedic:
+  - maptweak: Behind the scene map things
+  Will:
+  - rscadd: Pai death alarm software
+  - bugfix: Hippo death sprites fixed
+  - bugfix: Hippos no longer pretend to be squids when eating you
+2025-08-12:
+  CHOMPStation2StaffMirrorBot:
+  - qol: sorts cyborg modules again
+  - rscadd: Added circuit debugger and circuit wirer to the integrated circuit printer
+      supply pack
+  - rscadd: removed one of the two circuit printers in the integrated circuit printer
+      supply pack to keep the point cost reasonable
+  - admin: Added admin logging to ghosts for when they make their sprite invisible,
+      so that they can be tracked if needs be.
+  - balance: Tweaked some glamour mobs to make better use of them in dangerous environments,
+      and make them not perma-locked by magnetic weapons. Includes a stronger version
+      of the ddraig, more suited for tough boss encounters.
+  - qol: Added a vore death privacy pref, which prevents "X has died at Y [jump]"
+      from popping up to ghosts when you die in a belly.
+  - rscadd: Added a range of AR mantles, essentially reskinned AR glasses
+  - bugfix: fixed the description for tracking implants in loadouts
+  - bugfix: fixed being able to "shade" the AR-VZR which just made it disappear instead
+  Diana:
+  - bugfix: Agoraphobia no longer makes you hallucinate and lose your mind while in
+      a tummy
+  - rscadd: Slimes can be eaten if they are obedient to the point that you can command
+      them and you discipline them OR you make them harmless with a docility potion
+  Will:
+  - rscadd: Deconstructing ladders
+  - bugfix: Illegal initialize call from ladder assemblies.
