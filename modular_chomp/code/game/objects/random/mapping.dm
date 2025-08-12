@@ -1,8 +1,5 @@
 //Buncha mapping helpers to make some map work easier
 
-//idk where better to put this lmao
-#define Z_TURFS(ZLEVEL) block(locate(1,1,ZLEVEL), locate(world.maxx, world.maxy, ZLEVEL))
-
 /obj/effect/map_helper
 	icon = 'icons/misc/map_helpers.dmi'
 
