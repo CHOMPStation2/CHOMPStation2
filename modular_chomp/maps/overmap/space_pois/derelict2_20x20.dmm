@@ -64,7 +64,6 @@
 "m" = (
 /obj/structure/table/standard,
 /obj/item/storage/fancy/heartbox,
-/obj/item/toy/bosunwhistle/fluff/strix,
 /turf/simulated/floor/tiled/asteroid_steel/airless,
 /area/submap/derelict2)
 "n" = (

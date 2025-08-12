@@ -286,7 +286,6 @@
 /obj/item/clothing/shoes/dress{
 	pixel_y = -9
 	},
-/obj/item/clothing/mask/fluff/lucerna_1,
 /obj/structure/curtain/black,
 /obj/random/medical/pillbottle,
 /turf/simulated/floor/tiled/techfloor,
