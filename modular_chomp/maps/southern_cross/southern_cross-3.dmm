@@ -44519,6 +44519,23 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/engineering)
+"ehT" = (
+/obj/structure/table/reinforced,
+/obj/item/reagent_containers/dropper,
+/obj/item/clothing/glasses/science{
+	pixel_y = 6
+	},
+/obj/effect/floor_decal/borderfloorwhite{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/beige/border{
+	dir = 1
+	},
+/obj/machinery/injector_maker{
+	pixel_y = 24
+	},
+/turf/simulated/floor/tiled/white,
+/area/medical/chemistry)
 "eia" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 6
@@ -70365,23 +70382,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/seconddeck/starboard)
-"sSp" = (
-/obj/structure/table/reinforced,
-/obj/item/reagent_containers/dropper,
-/obj/item/clothing/glasses/science{
-	pixel_y = 6
-	},
-/obj/effect/floor_decal/borderfloorwhite{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/beige/border{
-	dir = 1
-	},
-/obj/machinery/injector_maker{
-	pixel_y = 24
-	},
-/turf/simulated/floor/tiled/white,
-/area/medical/chemistry)
 "sTb" = (
 /obj/effect/floor_decal/borderfloorwhite,
 /obj/effect/floor_decal/corner/lime/border,
@@ -123440,7 +123440,7 @@ wrf
 xhM
 tUA
 eCW
-sSp
+ehT
 bCJ
 rHH
 rHH
@@ -124472,7 +124472,7 @@ sql
 pzW
 uHn
 eCW
-sSp
+ehT
 bCJ
 rHH
 rHH

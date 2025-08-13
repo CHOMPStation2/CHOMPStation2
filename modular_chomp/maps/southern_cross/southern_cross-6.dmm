@@ -3138,8 +3138,8 @@
 /turf/simulated/floor/plating,
 /area/surface/outpost/research/xenoarcheology/smes)
 "gy" = (
-/turf/simulated/mineral/floor/ignore_mapgen/sif,
-/area/surface/outpost/mining_main/cave)
+/turf/simulated/wall/r_wall,
+/area/surface/outpost/engineering/refinery/atmos)
 "gz" = (
 /obj/machinery/meter,
 /obj/machinery/atmospherics/pipe/manifold/visible/yellow{
@@ -3435,10 +3435,9 @@
 /turf/simulated/floor/plating,
 /area/surface/outpost/research/xenoarcheology/smes)
 "hi" = (
-/turf/simulated/floor/water{
-	outdoors = 0
-	},
-/area/surface/outpost/mining_main/cave)
+/obj/effect/zone_divider,
+/turf/simulated/wall/r_wall,
+/area/surface/outpost/engineering/refinery/atmos)
 "hj" = (
 /obj/machinery/atmospherics/omni/atmos_filter{
 	tag_north = 1;
@@ -3624,11 +3623,8 @@
 /turf/simulated/floor/plating,
 /area/surface/outpost/research/xenoarcheology/smes)
 "hD" = (
-/mob/living/simple_mob/animal/passive/fish/koi/poisonous,
-/turf/simulated/floor/water{
-	outdoors = 0
-	},
-/area/surface/outpost/mining_main/cave)
+/turf/simulated/wall/r_wall,
+/area/surface/outpost/engineering/refinery/lobby)
 "hE" = (
 /obj/structure/curtain/open/shower,
 /obj/structure/window/reinforced{
@@ -4075,7 +4071,7 @@
 /area/surface/cave/explored/trader)
 "iG" = (
 /turf/simulated/wall/r_wall,
-/area/surface/outpost/engineering/refinery/atmos)
+/area/surface/outpost/engineering/refinery/smes)
 "iH" = (
 /obj/effect/map_effect/portal/master/side_b/caves_to_plains/river{
 	dir = 1
@@ -4083,21 +4079,11 @@
 /turf/simulated/wall/solidrock,
 /area/surface/cave/unexplored/normal)
 "iI" = (
-/obj/effect/zone_divider,
-/turf/simulated/wall/r_wall,
-/area/surface/outpost/engineering/refinery/atmos)
-"iJ" = (
-/turf/simulated/wall/r_wall,
-/area/surface/outpost/engineering/refinery/lobby)
-"iK" = (
-/turf/simulated/wall/r_wall,
-/area/surface/outpost/engineering/refinery/smes)
-"iL" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/portable_atmospherics/canister/nitrogen,
 /turf/simulated/floor/tiled/techmaint,
 /area/surface/outpost/engineering/refinery/atmos)
-"iM" = (
+"iJ" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/yellow/border,
 /obj/effect/floor_decal/industrial/warning{
@@ -4109,19 +4095,19 @@
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/engineering/refinery/atmos)
-"iN" = (
+"iK" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/yellow/border,
 /obj/machinery/light,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/engineering/refinery/atmos)
-"iO" = (
+"iL" = (
 /obj/effect/zone_divider,
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/yellow/border,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/engineering/refinery/atmos)
-"iP" = (
+"iM" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 6
 	},
@@ -4134,7 +4120,7 @@
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/engineering/refinery/atmos)
-"iQ" = (
+"iN" = (
 /obj/machinery/floodlight,
 /obj/effect/floor_decal/borderfloor{
 	dir = 10
@@ -4144,13 +4130,13 @@
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/engineering/refinery/lobby)
-"iR" = (
+"iO" = (
 /obj/machinery/floodlight,
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/yellow/border,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/engineering/refinery/lobby)
-"iS" = (
+"iP" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/yellow/border,
 /obj/machinery/firealarm{
@@ -4159,12 +4145,21 @@
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/engineering/refinery/lobby)
-"iT" = (
+"iQ" = (
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/corner/yellow/border,
+/obj/item/radio/intercom{
+	name = "Station Intercom (General)";
+	pixel_y = -21
+	},
+/turf/simulated/floor/tiled,
+/area/surface/outpost/engineering/refinery/lobby)
+"iR" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/yellow/border,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/engineering/refinery/lobby)
-"iU" = (
+"iS" = (
 /obj/structure/cable/blue,
 /obj/machinery/power/apc{
 	name = "south bump";
@@ -4179,7 +4174,7 @@
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/engineering/refinery/lobby)
-"iV" = (
+"iT" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 6
 	},
@@ -4197,13 +4192,13 @@
 /obj/random/powercell,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/engineering/refinery/lobby)
-"iW" = (
+"iU" = (
 /obj/machinery/atmospherics/pipe/tank/air{
 	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/engineering/refinery/smes)
-"iX" = (
+"iV" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/cyan,
 /obj/item/radio/intercom{
 	name = "Station Intercom (General)";
@@ -4211,7 +4206,7 @@
 	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/engineering/refinery/smes)
-"iY" = (
+"iW" = (
 /obj/machinery/atmospherics/pipe/simple/visible/cyan{
 	dir = 8
 	},
@@ -4221,7 +4216,7 @@
 	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/engineering/refinery/smes)
-"iZ" = (
+"iX" = (
 /obj/structure/cable/blue,
 /obj/machinery/power/apc{
 	name = "south bump";
@@ -4237,29 +4232,29 @@
 	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/engineering/refinery/smes)
-"ja" = (
+"iY" = (
 /obj/structure/closet/emcloset,
 /turf/simulated/floor/plating,
 /area/surface/outpost/engineering/refinery/smes)
-"jb" = (
+"iZ" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/portable_atmospherics/canister/carbon_dioxide,
 /turf/simulated/floor/tiled/techmaint,
 /area/surface/outpost/engineering/refinery/atmos)
-"jc" = (
+"ja" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/engineering/refinery/atmos)
-"jd" = (
+"jb" = (
 /turf/simulated/floor/tiled,
 /area/surface/outpost/engineering/refinery/atmos)
-"je" = (
+"jc" = (
 /obj/effect/zone_divider,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/engineering/refinery/atmos)
-"jf" = (
+"jd" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
 	},
@@ -4268,7 +4263,7 @@
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/engineering/refinery/atmos)
-"jg" = (
+"je" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
 	},
@@ -4277,16 +4272,16 @@
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/engineering/refinery/lobby)
-"jh" = (
+"jf" = (
 /turf/simulated/floor/tiled,
 /area/surface/outpost/engineering/refinery/lobby)
-"ji" = (
+"jg" = (
 /obj/structure/cable/blue{
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/engineering/refinery/lobby)
-"jj" = (
+"jh" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
 	},
@@ -4295,7 +4290,7 @@
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/engineering/refinery/lobby)
-"jk" = (
+"ji" = (
 /obj/machinery/portable_atmospherics/canister/empty,
 /obj/effect/floor_decal/industrial/outline,
 /obj/machinery/atmospherics/portables_connector{
@@ -4303,30 +4298,30 @@
 	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/engineering/refinery/smes)
-"jl" = (
+"jj" = (
 /obj/machinery/atmospherics/pipe/manifold/visible{
 	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/engineering/refinery/smes)
-"jm" = (
+"jk" = (
 /turf/simulated/floor/plating,
 /area/surface/outpost/engineering/refinery/smes)
-"jn" = (
+"jl" = (
 /obj/structure/cable/blue{
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/cyan,
 /turf/simulated/floor/plating,
 /area/surface/outpost/engineering/refinery/smes)
-"jo" = (
+"jm" = (
 /obj/structure/closet/crate,
 /obj/item/stack/material/phoron{
 	amount = 25
 	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/engineering/refinery/smes)
-"jp" = (
+"jn" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/portable_atmospherics/canister,
 /obj/effect/floor_decal/industrial/warning,
@@ -4335,7 +4330,7 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/surface/outpost/engineering/refinery/atmos)
-"jq" = (
+"jo" = (
 /obj/machinery/atmospherics/pipe/simple/visible{
 	dir = 9
 	},
@@ -4344,14 +4339,14 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/surface/outpost/engineering/refinery/atmos)
-"jr" = (
+"jp" = (
 /obj/effect/zone_divider,
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/engineering/refinery/atmos)
-"js" = (
+"jq" = (
 /obj/machinery/power/apc{
 	dir = 4;
 	name = "east bump";
@@ -4365,7 +4360,7 @@
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/engineering/refinery/atmos)
-"jt" = (
+"jr" = (
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 8
 	},
@@ -4377,13 +4372,13 @@
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/engineering/refinery/lobby)
-"ju" = (
+"js" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/engineering/refinery/lobby)
-"jv" = (
+"jt" = (
 /obj/effect/floor_decal/borderfloor/corner,
 /obj/effect/floor_decal/corner/yellow/bordercorner,
 /obj/machinery/light{
@@ -4391,11 +4386,11 @@
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/engineering/refinery/lobby)
-"jw" = (
+"ju" = (
 /obj/machinery/atmospherics/pipe/simple/visible,
 /turf/simulated/floor/plating,
 /area/surface/outpost/engineering/refinery/smes)
-"jx" = (
+"jv" = (
 /obj/structure/cable/blue{
 	icon_state = "1-2"
 	},
@@ -4405,19 +4400,19 @@
 	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/engineering/refinery/smes)
-"jy" = (
+"jw" = (
 /obj/machinery/power/port_gen/pacman,
 /obj/structure/cable/blue,
 /turf/simulated/floor/plating,
 /area/surface/outpost/engineering/refinery/smes)
-"jz" = (
+"jx" = (
 /obj/machinery/atmospherics/unary/heater{
 	dir = 4;
 	icon_state = "heater"
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/surface/outpost/engineering/refinery/atmos)
-"jA" = (
+"jy" = (
 /obj/machinery/atmospherics/pipe/manifold/visible{
 	dir = 4
 	},
@@ -4427,12 +4422,12 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/surface/outpost/engineering/refinery/atmos)
-"jB" = (
+"jz" = (
 /obj/effect/floor_decal/industrial/outline/grey,
 /obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/engineering/refinery/atmos)
-"jC" = (
+"jA" = (
 /obj/effect/zone_divider,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
@@ -4442,7 +4437,7 @@
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/engineering/refinery/atmos)
-"jD" = (
+"jB" = (
 /obj/structure/cable/blue{
 	icon_state = "1-8";
 	dir = 1
@@ -4459,7 +4454,7 @@
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/engineering/refinery/atmos)
-"jE" = (
+"jC" = (
 /obj/machinery/door/airlock/glass_atmos{
 	name = "Refinery Atmospherics";
 	req_one_access = list(10,52)
@@ -4475,7 +4470,7 @@
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/engineering/refinery/atmos)
-"jF" = (
+"jD" = (
 /obj/structure/cable/blue{
 	icon_state = "4-8"
 	},
@@ -4493,7 +4488,34 @@
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/engineering/refinery/lobby)
+"jE" = (
+/obj/structure/cable/blue{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/surface/outpost/engineering/refinery/lobby)
+"jF" = (
+/obj/structure/cable/blue{
+	icon_state = "4-8"
+	},
+/obj/machinery/hologram/holopad,
+/obj/effect/floor_decal/industrial/outline/grey,
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/surface/outpost/engineering/refinery/lobby)
 "jG" = (
+/obj/structure/cable/blue{
+	icon_state = "2-4"
+	},
 /obj/structure/cable/blue{
 	icon_state = "4-8"
 	},
@@ -4509,33 +4531,6 @@
 /obj/structure/cable/blue{
 	icon_state = "4-8"
 	},
-/obj/machinery/hologram/holopad,
-/obj/effect/floor_decal/industrial/outline/grey,
-/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
-/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
-	dir = 1
-	},
-/turf/simulated/floor/tiled,
-/area/surface/outpost/engineering/refinery/lobby)
-"jI" = (
-/obj/structure/cable/blue{
-	icon_state = "2-4"
-	},
-/obj/structure/cable/blue{
-	icon_state = "4-8"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/turf/simulated/floor/tiled,
-/area/surface/outpost/engineering/refinery/lobby)
-"jJ" = (
-/obj/structure/cable/blue{
-	icon_state = "4-8"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
@@ -4548,7 +4543,7 @@
 /obj/effect/floor_decal/steeldecal/steel_decals4,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/engineering/refinery/lobby)
-"jK" = (
+"jI" = (
 /obj/structure/cable/blue{
 	icon_state = "4-8"
 	},
@@ -4564,7 +4559,7 @@
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/engineering/refinery/smes)
-"jL" = (
+"jJ" = (
 /obj/structure/cable/blue{
 	icon_state = "4-8"
 	},
@@ -4576,7 +4571,7 @@
 	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/engineering/refinery/smes)
-"jM" = (
+"jK" = (
 /obj/structure/cable/blue{
 	icon_state = "4-8"
 	},
@@ -4585,13 +4580,13 @@
 	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/engineering/refinery/smes)
-"jN" = (
+"jL" = (
 /obj/structure/cable/blue{
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/engineering/refinery/smes)
-"jO" = (
+"jM" = (
 /obj/structure/cable/blue{
 	icon_state = "4-8"
 	},
@@ -4602,7 +4597,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/universal,
 /turf/simulated/floor/plating,
 /area/surface/outpost/engineering/refinery/smes)
-"jP" = (
+"jN" = (
 /obj/structure/cable/blue{
 	icon_state = "1-8"
 	},
@@ -4615,14 +4610,17 @@
 /obj/machinery/portable_atmospherics/powered/scrubber,
 /turf/simulated/floor/plating,
 /area/surface/outpost/engineering/refinery/smes)
-"jQ" = (
+"jO" = (
+/turf/simulated/mineral/floor/ignore_mapgen/sif,
+/area/surface/outpost/mining_main/cave)
+"jP" = (
 /obj/machinery/atmospherics/unary/freezer{
 	dir = 4;
 	icon_state = "freezer"
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/surface/outpost/engineering/refinery/atmos)
-"jR" = (
+"jQ" = (
 /obj/machinery/atmospherics/pipe/simple/visible{
 	dir = 10
 	},
@@ -4631,12 +4629,12 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/surface/outpost/engineering/refinery/atmos)
-"jS" = (
+"jR" = (
 /obj/effect/zone_divider,
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/engineering/refinery/atmos)
-"jT" = (
+"jS" = (
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 4
 	},
@@ -4645,37 +4643,37 @@
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/engineering/refinery/atmos)
+"jT" = (
+/obj/effect/floor_decal/borderfloor/corner{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/yellow/bordercorner{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/surface/outpost/engineering/refinery/lobby)
 "jU" = (
 /obj/structure/table/marble,
 /obj/item/reagent_containers/food/drinks/bottle/specialwhiskey,
 /turf/simulated/floor/concrete,
 /area/surface/cave/explored/trader)
 "jV" = (
-/obj/effect/floor_decal/borderfloor/corner{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/yellow/bordercorner{
-	dir = 1
-	},
-/turf/simulated/floor/tiled,
-/area/surface/outpost/engineering/refinery/lobby)
-"jW" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/engineering/refinery/lobby)
-"jX" = (
+"jW" = (
 /obj/structure/window/reinforced{
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/engineering/refinery/lobby)
-"jY" = (
+"jX" = (
 /obj/structure/bed/chair/office/light{
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/engineering/refinery/lobby)
-"jZ" = (
+"jY" = (
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 4
 	},
@@ -4684,7 +4682,7 @@
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/engineering/refinery/lobby)
-"ka" = (
+"jZ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/light/small{
@@ -4692,21 +4690,21 @@
 	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/engineering/refinery/smes)
-"kb" = (
+"ka" = (
 /obj/structure/cable{
 	icon_state = "1-4"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/universal,
 /turf/simulated/floor/plating,
 /area/surface/outpost/engineering/refinery/smes)
-"kc" = (
+"kb" = (
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
 /obj/machinery/space_heater,
 /turf/simulated/floor/plating,
 /area/surface/outpost/engineering/refinery/smes)
-"kd" = (
+"kc" = (
 /obj/machinery/power/terminal{
 	dir = 4
 	},
@@ -4716,7 +4714,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/plating,
 /area/surface/outpost/engineering/refinery/smes)
-"ke" = (
+"kd" = (
 /obj/machinery/power/smes/buildable/outpost_substation{
 	RCon_tag = "Outpost - Xenoarch";
 	charge = 500000;
@@ -4729,21 +4727,21 @@
 	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/engineering/refinery/smes)
-"kf" = (
+"ke" = (
 /obj/effect/floor_decal/industrial/warning{
 	layer = 3;
 	dir = 1
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/surface/outpost/engineering/refinery/atmos)
-"kg" = (
+"kf" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 5
 	},
 /obj/machinery/camera/network/engineering_outpost,
 /turf/simulated/floor/tiled/techmaint,
 /area/surface/outpost/engineering/refinery/atmos)
-"kh" = (
+"kg" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
 	},
@@ -4755,7 +4753,7 @@
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/engineering/refinery/atmos)
-"ki" = (
+"kh" = (
 /obj/effect/zone_divider,
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
@@ -4769,7 +4767,7 @@
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/engineering/refinery/atmos)
-"kj" = (
+"ki" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 5
 	},
@@ -4780,7 +4778,7 @@
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/engineering/refinery/atmos)
-"kk" = (
+"kj" = (
 /obj/machinery/vending/tool,
 /obj/effect/floor_decal/borderfloor{
 	dir = 9
@@ -4790,7 +4788,7 @@
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/engineering/refinery/lobby)
-"kl" = (
+"kk" = (
 /obj/machinery/partslathe,
 /obj/machinery/alarm{
 	frequency = 1441;
@@ -4804,7 +4802,7 @@
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/engineering/refinery/lobby)
-"km" = (
+"kl" = (
 /obj/structure/closet/crate,
 /obj/fiftyspawner/glass,
 /obj/fiftyspawner/steel,
@@ -4819,7 +4817,7 @@
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/engineering/refinery/lobby)
-"kn" = (
+"km" = (
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 4
 	},
@@ -4832,7 +4830,7 @@
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/engineering/refinery/lobby)
-"ko" = (
+"kn" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
 	},
@@ -4855,7 +4853,7 @@
 /obj/machinery/camera/network/engineering_outpost,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/engineering/refinery/lobby)
-"kp" = (
+"ko" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 5
 	},
@@ -4865,7 +4863,7 @@
 /obj/machinery/smart_centrifuge,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/engineering/refinery/lobby)
-"kq" = (
+"kp" = (
 /obj/machinery/alarm{
 	frequency = 1441;
 	pixel_y = 22
@@ -4881,7 +4879,7 @@
 /obj/random/tool,
 /turf/simulated/floor/plating,
 /area/surface/outpost/engineering/refinery/smes)
-"kr" = (
+"kq" = (
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
@@ -4893,23 +4891,28 @@
 	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/engineering/refinery/smes)
-"ks" = (
+"kr" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/engineering/refinery/smes)
-"kt" = (
+"ks" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 10
 	},
 /obj/machinery/camera/network/engineering_outpost,
 /turf/simulated/floor/plating,
 /area/surface/outpost/engineering/refinery/smes)
-"ku" = (
+"kt" = (
 /obj/machinery/portable_atmospherics/powered/pump/filled,
 /turf/simulated/floor/plating,
 /area/surface/outpost/engineering/refinery/smes)
+"ku" = (
+/turf/simulated/floor/water{
+	outdoors = 0
+	},
+/area/surface/outpost/mining_main/cave)
 "kv" = (
 /obj/machinery/door/airlock/glass_engineering{
 	name = "Refinery Lobby"
@@ -5084,15 +5087,21 @@
 	},
 /area/surface/outpost/engineering/refinery)
 "kW" = (
+/mob/living/simple_mob/animal/passive/fish/koi/poisonous,
+/turf/simulated/floor/water{
+	outdoors = 0
+	},
+/area/surface/outpost/mining_main/cave)
+"kX" = (
+/turf/simulated/wall/solidrock,
+/area/surface/outpost/wall/checkpoint)
+"kY" = (
 /obj/machinery/reagent_refinery/hub,
 /turf/simulated/floor/tiled/asteroid_steel{
 	temperature = 243.15
 	},
 /area/surface/outpost/engineering/refinery)
-"kX" = (
-/turf/simulated/wall/solidrock,
-/area/surface/outpost/wall/checkpoint)
-"kY" = (
+"kZ" = (
 /obj/machinery/reagent_refinery/hub{
 	dir = 1
 	},
@@ -5100,7 +5109,7 @@
 	temperature = 243.15
 	},
 /area/surface/outpost/engineering/refinery)
-"kZ" = (
+"la" = (
 /obj/machinery/reagent_refinery/hub{
 	dir = 1
 	},
@@ -5111,23 +5120,14 @@
 	temperature = 243.15
 	},
 /area/surface/outpost/engineering/refinery)
-"la" = (
+"lb" = (
 /obj/machinery/reagent_refinery/filter,
 /turf/simulated/floor/tiled/asteroid_steel{
 	temperature = 243.15
 	},
 /area/surface/outpost/engineering/refinery)
-"lb" = (
-/obj/machinery/reagent_refinery/grinder,
-/turf/simulated/floor/tiled/asteroid_steel{
-	temperature = 243.15
-	},
-/area/surface/outpost/engineering/refinery)
 "lc" = (
-/obj/effect/floor_decal/industrial/warning/dust{
-	dir = 1
-	},
-/obj/machinery/floodlight,
+/obj/machinery/reagent_refinery/grinder,
 /turf/simulated/floor/tiled/asteroid_steel{
 	temperature = 243.15
 	},
@@ -5138,6 +5138,15 @@
 /turf/simulated/mineral/sif,
 /area/surface/cave/unexplored/normal)
 "le" = (
+/obj/effect/floor_decal/industrial/warning/dust{
+	dir = 1
+	},
+/obj/machinery/floodlight,
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 243.15
+	},
+/area/surface/outpost/engineering/refinery)
+"lf" = (
 /obj/structure/table/steel,
 /obj/machinery/cell_charger,
 /obj/effect/floor_decal/industrial/warning/dust{
@@ -5152,7 +5161,7 @@
 	temperature = 243.15
 	},
 /area/surface/outpost/engineering/refinery)
-"lf" = (
+"lg" = (
 /obj/effect/floor_decal/industrial/warning/dust{
 	dir = 1
 	},
@@ -5160,15 +5169,6 @@
 	temperature = 243.15
 	},
 /area/surface/outpost/engineering/refinery)
-"lg" = (
-/obj/effect/floor_decal/borderfloor,
-/obj/effect/floor_decal/corner/yellow/border,
-/obj/item/radio/intercom{
-	name = "Station Intercom (General)";
-	pixel_y = -21
-	},
-/turf/simulated/floor/tiled,
-/area/surface/outpost/engineering/refinery/lobby)
 "lV" = (
 /obj/effect/zone_divider,
 /obj/effect/zone_divider,
@@ -29314,14 +29314,14 @@ kz
 ae
 ae
 ae
-iG
-iG
-iG
-iG
-iG
-iG
-iG
-iG
+gy
+gy
+gy
+gy
+gy
+gy
+gy
+gy
 aa
 "}
 (93,1,1) = {"
@@ -29572,14 +29572,14 @@ kz
 kz
 kz
 ae
-iG
-kf
-jQ
-jz
-jp
-jb
-iL
-iG
+gy
+ke
+jP
+jx
+jn
+iZ
+iI
+gy
 aa
 "}
 (94,1,1) = {"
@@ -29830,14 +29830,14 @@ kz
 kz
 kz
 kz
-iG
-kg
-jR
-jA
-jq
-jc
-iM
-iG
+gy
+kf
+jQ
+jy
+jo
+ja
+iJ
+gy
 aa
 "}
 (95,1,1) = {"
@@ -30088,14 +30088,14 @@ kz
 kz
 kz
 kz
-iG
-kh
-jd
-jB
-jd
-jd
-iN
-iG
+gy
+kg
+jb
+jz
+jb
+jb
+iK
+gy
 aa
 "}
 (96,1,1) = {"
@@ -30346,14 +30346,14 @@ kK
 kK
 kE
 kA
-iI
-ki
-jS
-jC
-jr
-je
-iO
-iI
+hi
+kh
+jR
+jA
+jp
+jc
+iL
+hi
 ex
 "}
 (97,1,1) = {"
@@ -30589,7 +30589,7 @@ ae
 ae
 kz
 kz
-lc
+le
 kL
 kL
 kL
@@ -30604,14 +30604,14 @@ kL
 kL
 kF
 kz
-iG
-kj
-jT
-jD
-js
-jf
-iP
-iG
+gy
+ki
+jS
+jB
+jq
+jd
+iM
+gy
 aa
 "}
 (98,1,1) = {"
@@ -30847,11 +30847,11 @@ ae
 ae
 kz
 kz
-le
+lf
 kL
+lc
 lb
-la
-kY
+kZ
 kL
 kL
 kL
@@ -30862,14 +30862,14 @@ kL
 kL
 kF
 kz
-iG
-iG
-iG
-jE
-iG
-iG
-iG
-iG
+gy
+gy
+gy
+jC
+gy
+gy
+gy
+gy
 aa
 "}
 (99,1,1) = {"
@@ -31105,11 +31105,11 @@ ae
 kz
 kz
 kz
-lf
+lg
 kL
 kN
 kO
-kZ
+la
 kL
 kN
 kL
@@ -31120,14 +31120,14 @@ kN
 kL
 kF
 kz
-iJ
-kk
-jV
-jF
-jt
-jg
-iQ
-iJ
+hD
+kj
+jT
+jD
+jr
+je
+iN
+hD
 aa
 "}
 (100,1,1) = {"
@@ -31363,7 +31363,7 @@ kz
 kz
 kz
 kz
-lf
+lg
 kL
 kL
 kL
@@ -31378,14 +31378,14 @@ kL
 kL
 kF
 kz
-iJ
-kl
-jh
-jG
-jh
-jh
-iR
-iJ
+hD
+kk
+jf
+jE
+jf
+jf
+iO
+hD
 aa
 "}
 (101,1,1) = {"
@@ -31621,7 +31621,7 @@ kz
 kz
 kz
 kz
-lf
+lg
 kL
 kL
 kL
@@ -31636,14 +31636,14 @@ kL
 kL
 kF
 kz
-iJ
-km
-jh
-jG
-jh
-jh
-iS
-iJ
+hD
+kl
+jf
+jE
+jf
+jf
+iP
+hD
 aa
 "}
 (102,1,1) = {"
@@ -31879,7 +31879,7 @@ kz
 kz
 kz
 kz
-lf
+lg
 kL
 kL
 kL
@@ -31887,7 +31887,7 @@ kL
 kL
 kL
 kL
-kW
+kY
 kU
 kO
 kL
@@ -31895,13 +31895,13 @@ kL
 kF
 kz
 kv
-jh
-jW
-jH
-ju
-jh
-lg
-iJ
+jf
+jV
+jF
+js
+jf
+iQ
+hD
 aa
 "}
 (103,1,1) = {"
@@ -32137,7 +32137,7 @@ kz
 kz
 kz
 kz
-lf
+lg
 kL
 kL
 kL
@@ -32152,14 +32152,14 @@ kL
 kL
 kF
 kz
-iJ
-kn
-jX
-jG
-jh
-jh
-iT
-iJ
+hD
+km
+jW
+jE
+jf
+jf
+iR
+hD
 aa
 "}
 (104,1,1) = {"
@@ -32395,7 +32395,7 @@ ae
 kz
 kz
 kz
-le
+lf
 kL
 kN
 kL
@@ -32410,14 +32410,14 @@ kN
 kL
 kF
 kz
-iJ
-ko
-jY
-jI
-ji
-ji
-iU
-iJ
+hD
+kn
+jX
+jG
+jg
+jg
+iS
+hD
 aa
 "}
 (105,1,1) = {"
@@ -32653,7 +32653,7 @@ ae
 kz
 kz
 kz
-lc
+le
 kL
 kL
 kL
@@ -32668,14 +32668,14 @@ kL
 kL
 kF
 kz
-iJ
-kp
-jZ
-jJ
-jv
-jj
-iV
-iJ
+hD
+ko
+jY
+jH
+jt
+jh
+iT
+hD
 aa
 "}
 (106,1,1) = {"
@@ -32926,14 +32926,14 @@ kM
 kM
 kG
 kz
-iK
-iK
-iK
-jK
-iK
-iK
-iK
-iK
+iG
+iG
+iG
+jI
+iG
+iG
+iG
+iG
 aa
 "}
 (107,1,1) = {"
@@ -33184,14 +33184,14 @@ kz
 kz
 kH
 kz
-iK
-kq
-ka
-jL
-jm
+iG
+kp
+jZ
+jJ
 jk
-iW
-iK
+ji
+iU
+iG
 aa
 "}
 (108,1,1) = {"
@@ -33443,13 +33443,13 @@ kB
 kI
 kB
 kw
-kr
-kb
-jM
-jw
-jl
-iX
-iK
+kq
+ka
+jK
+ju
+jj
+iV
+iG
 aa
 "}
 (109,1,1) = {"
@@ -33700,14 +33700,14 @@ kz
 kz
 kz
 kz
-iK
-ks
-kc
-jN
-jm
-jm
-iY
-iK
+iG
+kr
+kb
+jL
+jk
+jk
+iW
+iG
 aa
 "}
 (110,1,1) = {"
@@ -33958,14 +33958,14 @@ kz
 ae
 ae
 ae
-iK
-kt
-kd
-jO
-jx
-jn
-iZ
-iK
+iG
+ks
+kc
+jM
+jv
+jl
+iX
+iG
 aa
 "}
 (111,1,1) = {"
@@ -34216,14 +34216,14 @@ ae
 ae
 ae
 ae
-iK
-ku
-ke
-jP
-jy
-jo
-ja
-iK
+iG
+kt
+kd
+jN
+jw
+jm
+iY
+iG
 aa
 "}
 (112,1,1) = {"
@@ -34466,22 +34466,22 @@ ae
 ae
 ae
 ae
-gy
-gy
-gy
+jO
+jO
+jO
 kT
 kJ
 kJ
 kJ
 kC
-iK
-iK
-iK
-iK
-iK
-iK
-iK
-iK
+iG
+iG
+iG
+iG
+iG
+iG
+iG
+iG
 aa
 "}
 (113,1,1) = {"
@@ -34722,17 +34722,17 @@ ae
 ae
 ae
 ae
-gy
-gy
-gy
-hi
-hi
-gy
-gy
-gy
-gy
+jO
+jO
+jO
+ku
+ku
+jO
+jO
+jO
+jO
 kD
-gy
+jO
 ae
 ae
 ae
@@ -34979,19 +34979,19 @@ ae
 ae
 ae
 ae
-gy
-gy
-gy
-hi
-hi
-hi
-hi
-hi
-gy
-gy
+jO
+jO
+jO
+ku
+ku
+ku
+ku
+ku
+jO
+jO
 kD
-gy
-gy
+jO
+jO
 ae
 ae
 ae
@@ -35236,21 +35236,21 @@ ae
 ae
 ae
 ae
-gy
-gy
-gy
-hi
-hi
-hi
-hD
-hi
-hi
-hi
-gy
+jO
+jO
+jO
+ku
+ku
+ku
+kW
+ku
+ku
+ku
+jO
 kD
-gy
-hi
-gy
+jO
+ku
+jO
 ae
 ae
 ae
@@ -35494,21 +35494,21 @@ ae
 ae
 ae
 ae
-gy
-gy
-gy
-gy
-gy
-hi
-hi
-hi
-gy
-gy
-gy
+jO
+jO
+jO
+jO
+jO
+ku
+ku
+ku
+jO
+jO
+jO
 kD
-hi
-hi
-gy
+ku
+ku
+jO
 ae
 ae
 ae
@@ -35752,22 +35752,22 @@ ae
 ae
 ae
 ae
-gy
-gy
-gy
-gy
-gy
-gy
-gy
-gy
-gy
-gy
-gy
+jO
+jO
+jO
+jO
+jO
+jO
+jO
+jO
+jO
+jO
+jO
 kD
-gy
-gy
-gy
-gy
+jO
+jO
+jO
+jO
 ae
 ae
 ae
@@ -36009,8 +36009,8 @@ ae
 ae
 ae
 ae
-gy
-gy
+jO
+jO
 cv
 gp
 gs
@@ -36023,9 +36023,9 @@ gs
 gs
 ii
 cv
-gy
-gy
-gy
+jO
+jO
+jO
 ae
 ae
 ae
@@ -36267,8 +36267,8 @@ ae
 ae
 ae
 ae
-gy
-gy
+jO
+jO
 dD
 im
 im
@@ -36281,8 +36281,8 @@ ir
 im
 ix
 iz
-gy
-gy
+jO
+jO
 ae
 ae
 ae
@@ -36525,8 +36525,8 @@ ae
 ae
 ae
 ae
-gy
-gy
+jO
+jO
 dV
 im
 im
@@ -36539,8 +36539,8 @@ is
 im
 ix
 iz
-gy
-gy
+jO
+jO
 ae
 ae
 ae
@@ -36784,7 +36784,7 @@ ae
 ae
 ae
 ae
-gy
+jO
 dJ
 im
 im

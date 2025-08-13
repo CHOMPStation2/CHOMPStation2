@@ -265,9 +265,11 @@
 /turf/simulated/floor/tiled/white,
 /area/maintenance/abscience)
 "aL" = (
-/obj/machinery/maint_vendor,
-/turf/simulated/floor/tiled/techmaint,
-/area/maintenance/gravlobby)
+/obj/structure/sign/directions/teleporter{
+	dir = 5
+	},
+/turf/simulated/wall/turfpack/station,
+/area/maintenance/zerocent)
 "aM" = (
 /obj/effect/floor_decal/rust,
 /obj/structure/catwalk,
@@ -294,10 +296,10 @@
 /turf/simulated/floor/plating,
 /area/maintenance/janitoral)
 "aP" = (
-/mob/living/simple_mob/animal/passive/mimepet{
-	name = "potted plant"
+/obj/structure/sign/directions/teleporter{
+	dir = 9
 	},
-/turf/simulated/floor/plating/turfpack/station,
+/turf/simulated/wall/turfpack/station,
 /area/maintenance/zerocent)
 "aQ" = (
 /obj/structure/cable{
@@ -309,9 +311,9 @@
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/zeroaft)
 "aR" = (
-/mob/living/simple_mob/animal/passive/mothroach/bar,
-/turf/simulated/floor/lino,
-/area/maintenance/zerobar)
+/obj/machinery/maint_vendor,
+/turf/simulated/floor/tiled/techmaint,
+/area/maintenance/gravlobby)
 "aS" = (
 /obj/machinery/firealarm{
 	layer = 3.3;
@@ -373,10 +375,8 @@
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/zeroaft)
 "aW" = (
-/obj/structure/sign/directions/teleporter{
-	dir = 5
-	},
-/turf/simulated/wall/turfpack/station,
+/obj/machinery/light/small/flicker,
+/turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/zerocent)
 "aX" = (
 /obj/structure/table/marble,
@@ -439,13 +439,15 @@
 /turf/simulated/floor/plating,
 /area/maintenance/ragecage)
 "be" = (
-/obj/structure/sign/directions/teleporter{
-	dir = 9
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4
 	},
-/turf/simulated/wall/turfpack/station,
+/turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/zerocent)
 "bf" = (
-/obj/machinery/light/small/flicker,
+/mob/living/simple_mob/animal/passive/mimepet{
+	name = "potted plant"
+	},
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/zerocent)
 "bg" = (
@@ -464,11 +466,9 @@
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/zerostarboard)
 "bh" = (
-/obj/effect/floor_decal/industrial/warning{
-	dir = 4
-	},
-/turf/simulated/floor/plating/turfpack/station,
-/area/maintenance/zerocent)
+/mob/living/simple_mob/animal/passive/mothroach/bar,
+/turf/simulated/floor/lino,
+/area/maintenance/zerobar)
 "bi" = (
 /obj/structure/table/rack/shelf,
 /obj/random/soap,
@@ -35805,7 +35805,7 @@ In
 Kr
 Uq
 Xq
-aR
+bh
 oY
 EP
 ly
@@ -45894,7 +45894,7 @@ ND
 IR
 Km
 ez
-aL
+aR
 OY
 Kc
 yo
@@ -46668,8 +46668,8 @@ Bo
 Km
 Km
 Dr
-bf
 aW
+aL
 Nm
 xS
 su
@@ -47183,9 +47183,9 @@ YD
 Yp
 YD
 Km
-bh
-Dr
 be
+Dr
+aP
 xS
 Sb
 rU
@@ -47685,7 +47685,7 @@ wn
 lv
 It
 jv
-aP
+bf
 KQ
 pt
 uU
