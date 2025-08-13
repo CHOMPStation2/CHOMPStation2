@@ -3,7 +3,6 @@
 	holomap_color = HOLOMAP_AREACOLOR_COMMAND
 	ambience = AMBIENCE_ARRIVALS
 	sound_env = LARGE_ENCLOSED
-	lightswitch = 0
 
 /area/bridge/HoP_Office
 	name = "\improper HoP Office"

@@ -55,7 +55,6 @@
 	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
 	ambience = AMBIENCE_ENGINEERING
 	sound_env = LARGE_ENCLOSED
-	lightswitch = 0
 
 /area/engineering/Central_Engineering_Post
 	name = "\improper Central Engineering Post"

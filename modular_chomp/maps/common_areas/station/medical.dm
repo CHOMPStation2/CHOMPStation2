@@ -3,7 +3,6 @@
 	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
 	ambience = AMBIENCE_GENERIC
 	sound_env = STANDARD_STATION
-	lightswitch = 0
 
 /area/medical/For_Medical_Post
 	name = "\improper For Medical Post"

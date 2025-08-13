@@ -3,7 +3,6 @@
 	holomap_color = HOLOMAP_AREACOLOR_SECURITY
 	ambience = AMBIENCE_HIGHSEC
 	sound_env = STANDARD_STATION
-	lightswitch = 0
 
 /area/security/Aft_Security_Post
 	name = "\improper Aft Security Post"
