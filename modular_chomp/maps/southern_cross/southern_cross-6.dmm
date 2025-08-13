@@ -4438,10 +4438,6 @@
 /turf/simulated/floor/tiled,
 /area/surface/outpost/engineering/refinery/atmos)
 "jB" = (
-/obj/structure/cable/blue{
-	icon_state = "1-8";
-	dir = 1
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
@@ -4451,6 +4447,9 @@
 /obj/effect/floor_decal/steeldecal/steel_decals4,
 /obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 10
+	},
+/obj/structure/cable/blue{
+	icon_state = "2-4"
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/engineering/refinery/atmos)
@@ -4514,9 +4513,6 @@
 /area/surface/outpost/engineering/refinery/lobby)
 "jG" = (
 /obj/structure/cable/blue{
-	icon_state = "2-4"
-	},
-/obj/structure/cable/blue{
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -4524,6 +4520,9 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
+	},
+/obj/structure/cable/blue{
+	icon_state = "2-4"
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/engineering/refinery/lobby)
@@ -4590,11 +4589,10 @@
 /obj/structure/cable/blue{
 	icon_state = "4-8"
 	},
-/obj/structure/cable/blue{
-	icon_state = "1-8";
-	dir = 1
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/universal,
+/obj/structure/cable/blue{
+	icon_state = "2-4"
+	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/engineering/refinery/smes)
 "jN" = (
