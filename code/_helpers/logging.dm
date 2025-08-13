@@ -285,7 +285,7 @@
 		WRITE_LOG(GLOB.diary, "TOPIC: [text]")
 
 /proc/log_unit_test(text)
-	to_world_log("## UNIT_TEST: [text]")
+	to_world_log("## UNIT_TESTS: [text]")
 
 #ifdef REFERENCE_TRACKING_LOG
 #define log_reftracker(msg) WRITE_LOG(GLOB.diary, "## REF SEARCH [msg]")
