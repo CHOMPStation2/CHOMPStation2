@@ -151,12 +151,12 @@ GLOBAL_LIST_INIT(grass_animals,list(
 		/mob/living/simple_mob/vore/redpanda = 6,
 		/mob/living/simple_mob/vore/meowl = 6,
 		/mob/living/simple_mob/vore/fennec = 2,
-		/mob/living/simple_mob/vore/lamia = 2, // Sure I could just use the 'random' version, but I want them all to be naked in the wilderness.
+		/*/mob/living/simple_mob/vore/lamia = 2, // Sure I could just use the 'random' version, but I want them all to be naked in the wilderness.
 		/mob/living/simple_mob/vore/lamia/cobra = 2,
 		/mob/living/simple_mob/vore/lamia/copper = 2,
 		/mob/living/simple_mob/vore/lamia/green = 2,
 		/mob/living/simple_mob/vore/lamia/zebra = 2,
-		/mob/living/simple_mob/vore/lamia/albino = 2,
+		/mob/living/simple_mob/vore/lamia/albino = 2,*/
 		/mob/living/simple_mob/vore/aggressive/rat = 1,
 		/mob/living/simple_mob/vore/aggressive/giant_snake = 1,
 		/mob/living/simple_mob/tomato = 1, // just a silly lil' guy, hanging out
@@ -187,7 +187,7 @@ GLOBAL_LIST_INIT(grass_animals,list(
 		/mob/living/simple_mob/vore/redpanda = 6,
 		/mob/living/simple_mob/vore/meowl = 6,
 		/mob/living/simple_mob/vore/fennec = 2,
-		/mob/living/simple_mob/vore/lamia/random = 4, // More civilized, so they wear clothes.
+		//mob/living/simple_mob/vore/lamia/random = 4, // More civilized, so they wear clothes.
 		/mob/living/simple_mob/tomato = 1
 		)
 ))

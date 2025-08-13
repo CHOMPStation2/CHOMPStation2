@@ -264,6 +264,12 @@
 /obj/structure/ghost_pod/ghost_activated/maintpred/no_announce,
 /turf/simulated/floor/tiled/white,
 /area/maintenance/abscience)
+"aL" = (
+/obj/structure/sign/directions/teleporter{
+	dir = 5
+	},
+/turf/simulated/wall/turfpack/station,
+/area/maintenance/zerocent)
 "aM" = (
 /obj/effect/floor_decal/rust,
 /obj/structure/catwalk,
@@ -289,6 +295,12 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/janitoral)
+"aP" = (
+/obj/structure/sign/directions/teleporter{
+	dir = 9
+	},
+/turf/simulated/wall/turfpack/station,
+/area/maintenance/zerocent)
 "aQ" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -298,6 +310,10 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/zeroaft)
+"aR" = (
+/obj/machinery/maint_vendor,
+/turf/simulated/floor/tiled/techmaint,
+/area/maintenance/gravlobby)
 "aS" = (
 /obj/machinery/firealarm{
 	layer = 3.3;
@@ -358,6 +374,10 @@
 	},
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/zeroaft)
+"aW" = (
+/obj/machinery/light/small/flicker,
+/turf/simulated/floor/plating/turfpack/station,
+/area/maintenance/zerocent)
 "aX" = (
 /obj/structure/table/marble,
 /obj/random/drinksoft,
@@ -418,6 +438,18 @@
 /obj/random/trash,
 /turf/simulated/floor/plating,
 /area/maintenance/ragecage)
+"be" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4
+	},
+/turf/simulated/floor/plating/turfpack/station,
+/area/maintenance/zerocent)
+"bf" = (
+/mob/living/simple_mob/animal/passive/mimepet{
+	name = "potted plant"
+	},
+/turf/simulated/floor/plating/turfpack/station,
+/area/maintenance/zerocent)
 "bg" = (
 /obj/machinery/alarm{
 	pixel_y = 22
@@ -433,6 +465,10 @@
 	},
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/zerostarboard)
+"bh" = (
+/mob/living/simple_mob/animal/passive/mothroach/bar,
+/turf/simulated/floor/lino,
+/area/maintenance/zerobar)
 "bi" = (
 /obj/structure/table/rack/shelf,
 /obj/random/soap,
@@ -8582,6 +8618,7 @@
 "Kl" = (
 /obj/effect/floor_decal/rust,
 /obj/effect/decal/cleanable/cobweb2,
+/obj/machinery/cryopod/robot/door/gateway/quiet,
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/zerocent)
 "Km" = (
@@ -9526,6 +9563,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
+/obj/machinery/maint_recycler,
 /turf/simulated/floor/tiled/techmaint,
 /area/maintenance/gravlobby)
 "OM" = (
@@ -10925,6 +10963,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 10
 	},
+/mob/living/bot/medbot/mysterious,
 /turf/simulated/floor/tiled/white,
 /area/maintenance/abfirstaid)
 "Vr" = (
@@ -35766,7 +35805,7 @@ In
 Kr
 Uq
 Xq
-fW
+bh
 oY
 EP
 ly
@@ -45855,7 +45894,7 @@ ND
 IR
 Km
 ez
-Kc
+aR
 OY
 Kc
 yo
@@ -46629,8 +46668,8 @@ Bo
 Km
 Km
 Dr
-xS
-wn
+aW
+aL
 Nm
 xS
 su
@@ -47144,9 +47183,9 @@ YD
 Yp
 YD
 Km
-xS
+be
 Dr
-wn
+aP
 xS
 Sb
 rU
@@ -47646,7 +47685,7 @@ wn
 lv
 It
 jv
-xS
+bf
 KQ
 pt
 uU
