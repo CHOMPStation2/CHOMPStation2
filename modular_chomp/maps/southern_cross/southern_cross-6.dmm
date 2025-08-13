@@ -4103,6 +4103,10 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
 	},
+/obj/item/radio/intercom{
+	name = "Station Intercom (General)";
+	pixel_y = -21
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/engineering/refinery/atmos)
 "iN" = (
@@ -4201,6 +4205,10 @@
 /area/surface/outpost/engineering/refinery/smes)
 "iX" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/cyan,
+/obj/item/radio/intercom{
+	name = "Station Intercom (General)";
+	pixel_y = -21
+	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/engineering/refinery/smes)
 "iY" = (
@@ -5152,6 +5160,15 @@
 	temperature = 243.15
 	},
 /area/surface/outpost/engineering/refinery)
+"lg" = (
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/corner/yellow/border,
+/obj/item/radio/intercom{
+	name = "Station Intercom (General)";
+	pixel_y = -21
+	},
+/turf/simulated/floor/tiled,
+/area/surface/outpost/engineering/refinery/lobby)
 "lV" = (
 /obj/effect/zone_divider,
 /obj/effect/zone_divider,
@@ -31883,7 +31900,7 @@ jW
 jH
 ju
 jh
-iT
+lg
 iJ
 aa
 "}
