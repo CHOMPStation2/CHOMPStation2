@@ -372,6 +372,12 @@
 	},
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/zeroaft)
+"aW" = (
+/obj/structure/sign/directions/teleporter{
+	dir = 5
+	},
+/turf/simulated/wall/turfpack/station,
+/area/maintenance/zerocent)
 "aX" = (
 /obj/structure/table/marble,
 /obj/random/drinksoft,
@@ -432,6 +438,16 @@
 /obj/random/trash,
 /turf/simulated/floor/plating,
 /area/maintenance/ragecage)
+"be" = (
+/obj/structure/sign/directions/teleporter{
+	dir = 9
+	},
+/turf/simulated/wall/turfpack/station,
+/area/maintenance/zerocent)
+"bf" = (
+/obj/machinery/light/small/flicker,
+/turf/simulated/floor/plating/turfpack/station,
+/area/maintenance/zerocent)
 "bg" = (
 /obj/machinery/alarm{
 	pixel_y = 22
@@ -447,6 +463,12 @@
 	},
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/zerostarboard)
+"bh" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4
+	},
+/turf/simulated/floor/plating/turfpack/station,
+/area/maintenance/zerocent)
 "bi" = (
 /obj/structure/table/rack/shelf,
 /obj/random/soap,
@@ -8596,6 +8618,7 @@
 "Kl" = (
 /obj/effect/floor_decal/rust,
 /obj/effect/decal/cleanable/cobweb2,
+/obj/machinery/cryopod/robot/door/gateway/quiet,
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/zerocent)
 "Km" = (
@@ -46645,8 +46668,8 @@ Bo
 Km
 Km
 Dr
-xS
-wn
+bf
+aW
 Nm
 xS
 su
@@ -47160,9 +47183,9 @@ YD
 Yp
 YD
 Km
-xS
+bh
 Dr
-wn
+be
 xS
 Sb
 rU

@@ -1473,6 +1473,11 @@
 /obj/structure/cable{
 	icon_state = "0-2"
 	},
+/obj/machinery/light_switch{
+	dir = 4;
+	pixel_x = -25;
+	pixel_y = 11
+	},
 /turf/simulated/floor/tiled/dark,
 /area/security/nuke_storage)
 "agl" = (
@@ -1486,6 +1491,11 @@
 	},
 /obj/structure/cable{
 	icon_state = "0-2"
+	},
+/obj/machinery/light_switch{
+	dir = 4;
+	pixel_x = -25;
+	pixel_y = 11
 	},
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/firstdeck/vaultcheckpoint)
@@ -4758,6 +4768,11 @@
 	},
 /obj/structure/cable{
 	icon_state = "0-4"
+	},
+/obj/machinery/light_switch{
+	dir = 4;
+	pixel_x = -25;
+	pixel_y = 11
 	},
 /turf/simulated/floor/wood,
 /area/hallway/primary/firstdeck/vaultlobby)
@@ -10056,6 +10071,10 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
+/obj/machinery/light_switch{
+	pixel_x = 11;
+	pixel_y = 24
+	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/firstdeck/auxdockaft)
 "bLd" = (
@@ -10462,9 +10481,6 @@
 /turf/simulated/floor/tiled/monotile,
 /area/hangar/two)
 "cdC" = (
-/obj/machinery/light_switch{
-	pixel_x = -36
-	},
 /obj/item/radio/intercom{
 	dir = 8;
 	name = "Station Intercom (General)";
@@ -11734,6 +11750,10 @@
 	},
 /obj/effect/floor_decal/borderfloor/corner,
 /obj/effect/floor_decal/corner/pink/bordercorner,
+/obj/machinery/light_switch{
+	pixel_x = 11;
+	pixel_y = -24
+	},
 /turf/simulated/floor/tiled,
 /area/expoutpost/stationshuttle)
 "dtt" = (
@@ -22860,6 +22880,10 @@
 /obj/machinery/power/apc{
 	dir = 1;
 	name = "north bump";
+	pixel_y = 24
+	},
+/obj/machinery/light_switch{
+	pixel_x = 11;
 	pixel_y = 24
 	},
 /turf/simulated/floor/wood,

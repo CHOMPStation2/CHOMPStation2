@@ -35780,6 +35780,9 @@
 	name = "Station Intercom (General)";
 	pixel_y = -20
 	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 5
+	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/seconddeck/artgallery)
 "cmE" = (
@@ -53514,7 +53517,6 @@
 /area/assembly/robotics)
 "iYD" = (
 /obj/machinery/rnd/production/circuit_imprinter,
-/obj/item/reagent_containers/glass/beaker/large,
 /obj/item/radio/intercom{
 	dir = 1;
 	name = "Station Intercom (General)";
@@ -57026,9 +57028,6 @@
 "kQH" = (
 /obj/machinery/rnd/production/protolathe/department/science,
 /obj/effect/floor_decal/industrial/outline/yellow,
-/obj/structure/reagent_dispensers/acid{
-	pixel_x = -30
-	},
 /turf/simulated/floor/tiled,
 /area/rnd/lab)
 "kQV" = (
@@ -58469,7 +58468,6 @@
 /area/maintenance/research)
 "lOW" = (
 /obj/machinery/rnd/production/circuit_imprinter,
-/obj/item/reagent_containers/glass/beaker/sulphuric,
 /obj/machinery/light{
 	dir = 8
 	},
@@ -63672,9 +63670,6 @@
 /area/quartermaster/warehouse)
 "oTP" = (
 /obj/structure/table/standard,
-/obj/structure/reagent_dispensers/acid{
-	pixel_y = -30
-	},
 /obj/machinery/recharger,
 /obj/item/storage/toolbox/mechanical,
 /obj/item/storage/toolbox/mechanical,
@@ -69149,19 +69144,19 @@
 	pixel_y = 37;
 	dir = 2
 	},
-/obj/machinery/button/remote/airlock{
-	desc = "A remote control switch for the medbay foyer.";
-	id = "chemwindow";
-	name = "Chemistry Windows";
-	pixel_y = 28;
-	pixel_x = -5
-	},
-/obj/machinery/button/remote/airlock{
-	desc = "A remote control switch for the medbay foyer.";
+/obj/machinery/button/remote/blast_door{
+	desc = "A remote control-switch for shutters.";
 	id = "chemcounter";
 	name = "Chemistry Counter";
-	pixel_y = 28;
-	pixel_x = 5
+	pixel_x = 5;
+	pixel_y = 28
+	},
+/obj/machinery/button/remote/blast_door{
+	desc = "A remote control-switch for shutters.";
+	id = "chemwindow";
+	name = "Desk Privacy Shutter";
+	pixel_x = -5;
+	pixel_y = 28
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/chemistry)
