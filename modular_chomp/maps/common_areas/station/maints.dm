@@ -1008,19 +1008,16 @@
 	name = "\improper Research Substation"
 	icon_state = "engineering"
 	ambience = AMBIENCE_SUBSTATION
-	lightswitch = 1
 
 /area/maintenance/Medical_Substation
 	name = "\improper Medical Substation"
 	icon_state = "engineering"
 	ambience = AMBIENCE_SUBSTATION
-	lightswitch = 1
 
 /area/maintenance/Dorms_Substation
 	name = "\improper Dorms Substation"
 	icon_state = "engineering"
 	ambience = AMBIENCE_SUBSTATION
-	lightswitch = 1
 
 /area/maintenance/Domicile_Substation
 	name = "\improper Domicile Substation"

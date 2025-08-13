@@ -3,7 +3,6 @@
 	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
 	ambience = AMBIENCE_ENGINEERING
 	sound_env = LARGE_SOFTFLOOR
-	lightswitch = 0
 
 /area/rnd/Research_Lab
 	name = "\improper Research Lab"

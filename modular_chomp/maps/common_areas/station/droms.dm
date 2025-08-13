@@ -5,7 +5,6 @@
 	icon_state = "gaming"
 	ambience = AMBIENCE_GENERIC
 	sound_env = SOUND_ENVIRONMENT_HALLWAY
-	lightswitch = 0
 
 /area/crew_quarters/Holodeck
 	name = "\improper Holodeck"

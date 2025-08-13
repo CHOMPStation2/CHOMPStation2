@@ -3,7 +3,6 @@
 	holomap_color = HOLOMAP_AREACOLOR_CARGO
 	ambience = AMBIENCE_HANGAR
 	sound_env = SOUND_ENVIRONMENT_HANGAR
-	lightswitch = 0
 
 /area/quartermaster/For_Tool_Storage
 	name = "\improper For Tool Storage"
