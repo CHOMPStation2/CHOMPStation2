@@ -1473,6 +1473,11 @@
 /obj/structure/cable{
 	icon_state = "0-2"
 	},
+/obj/machinery/light_switch{
+	dir = 4;
+	pixel_x = -25;
+	pixel_y = 11
+	},
 /turf/simulated/floor/tiled/dark,
 /area/security/nuke_storage)
 "agl" = (
@@ -1486,6 +1491,11 @@
 	},
 /obj/structure/cable{
 	icon_state = "0-2"
+	},
+/obj/machinery/light_switch{
+	dir = 4;
+	pixel_x = -25;
+	pixel_y = 11
 	},
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/firstdeck/vaultcheckpoint)
@@ -4225,23 +4235,14 @@
 /turf/simulated/wall,
 /area/hallway/primary/firstdeck/fore)
 "avf" = (
-/obj/machinery/door/airlock/vault/bolted{
-	autoclose = 0;
-	frequency = 1969;
-	id_tag = "vault_interior";
-	req_access = list(53)
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/obj/machinery/access_button{
-	command = "cycle_interior";
-	frequency = 1969;
-	master_tag = "vault_airlock_control";
-	name = "Vault Access Button";
-	pixel_x = -26
+/obj/machinery/door/airlock/highsecurity{
+	req_one_access = list(58,41);
+	name = "Vault Airlock"
 	},
 /obj/machinery/door/firedoor/border_only,
 /obj/machinery/door/blast/regular/open{
@@ -4767,6 +4768,11 @@
 	},
 /obj/structure/cable{
 	icon_state = "0-4"
+	},
+/obj/machinery/light_switch{
+	dir = 4;
+	pixel_x = -25;
+	pixel_y = 11
 	},
 /turf/simulated/floor/wood,
 /area/hallway/primary/firstdeck/vaultlobby)
@@ -10065,6 +10071,10 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
+/obj/machinery/light_switch{
+	pixel_x = 11;
+	pixel_y = 24
+	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/firstdeck/auxdockaft)
 "bLd" = (
@@ -10471,9 +10481,6 @@
 /turf/simulated/floor/tiled/monotile,
 /area/hangar/two)
 "cdC" = (
-/obj/machinery/light_switch{
-	pixel_x = -36
-	},
 /obj/item/radio/intercom{
 	dir = 8;
 	name = "Station Intercom (General)";
@@ -11743,6 +11750,10 @@
 	},
 /obj/effect/floor_decal/borderfloor/corner,
 /obj/effect/floor_decal/corner/pink/bordercorner,
+/obj/machinery/light_switch{
+	pixel_x = 11;
+	pixel_y = -24
+	},
 /turf/simulated/floor/tiled,
 /area/expoutpost/stationshuttle)
 "dtt" = (
@@ -16666,7 +16677,6 @@
 	},
 /obj/machinery/turretid/lethal{
 	ailock = 1;
-	check_synth = 1;
 	control_area = "\improper Telecomms Storage";
 	desc = "A firewall prevents AIs from interacting with this device.";
 	name = "Telecoms lethal turret control";
@@ -20446,6 +20456,10 @@
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 1
 	},
+/obj/machinery/light_switch{
+	pixel_x = 11;
+	pixel_y = 24
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/cryo/autoresleeve)
 "kTs" = (
@@ -22866,6 +22880,10 @@
 /obj/machinery/power/apc{
 	dir = 1;
 	name = "north bump";
+	pixel_y = 24
+	},
+/obj/machinery/light_switch{
+	pixel_x = 11;
 	pixel_y = 24
 	},
 /turf/simulated/floor/wood,
@@ -32044,6 +32062,10 @@
 /obj/effect/floor_decal/corner/red/border,
 /obj/structure/disposalpipe/segment{
 	dir = 4
+	},
+/obj/machinery/light_switch{
+	pixel_x = 12;
+	pixel_y = -24
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/escape/firstdeck/ep_starboard)

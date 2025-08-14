@@ -8246,6 +8246,9 @@
 /obj/effect/floor_decal/corner/blue/border{
 	dir = 4
 	},
+/obj/machinery/light_switch{
+	pixel_x = 36
+	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/thirddeck/central)
 "gsS" = (
@@ -8440,6 +8443,10 @@
 /obj/structure/cable/green,
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/blue/border,
+/obj/machinery/light_switch{
+	pixel_x = 11;
+	pixel_y = -24
+	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/thirddeck/starboard)
 "gEG" = (
@@ -12896,6 +12903,9 @@
 	pixel_x = 24
 	},
 /obj/structure/cable/green,
+/obj/machinery/light_switch{
+	pixel_x = 36
+	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/thirddeck/aft)
 "kQk" = (
@@ -17646,6 +17656,9 @@
 /obj/structure/cable/green{
 	icon_state = "0-2"
 	},
+/obj/machinery/light_switch{
+	pixel_x = 36
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/hallway/primary/thirddeck/stationgateway)
 "oOk" = (
@@ -17735,6 +17748,10 @@
 	},
 /obj/effect/floor_decal/corner/white/border{
 	dir = 1
+	},
+/obj/machinery/light_switch{
+	pixel_x = 11;
+	pixel_y = 24
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/thirddeck/aftportcentral)
@@ -17834,6 +17851,10 @@
 	},
 /obj/effect/floor_decal/corner/blue/border{
 	dir = 1
+	},
+/obj/machinery/light_switch{
+	pixel_x = 11;
+	pixel_y = 24
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/thirddeck/aftstarboardcentral)
@@ -22355,6 +22376,9 @@
 	pixel_x = 24
 	},
 /obj/structure/cable/green,
+/obj/machinery/light_switch{
+	pixel_x = 36
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/crew_quarters/thirddeck/vrroom)
 "sHc" = (
@@ -24898,6 +24922,10 @@
 	pixel_y = -24
 	},
 /obj/structure/cable/green,
+/obj/machinery/light_switch{
+	pixel_x = 11;
+	pixel_y = -24
+	},
 /turf/simulated/floor/tiled/freezer,
 /area/crew_quarters/toilet)
 "uNf" = (

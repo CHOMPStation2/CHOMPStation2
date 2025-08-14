@@ -292,6 +292,22 @@
 	name = "North Mining Outpost Cave"
 	icon_state = "outpost_mine_main"
 
+/area/surface/outpost/engineering/refinery
+	name = "Chemical Refinery"
+	icon_state = "engineering"
+
+/area/surface/outpost/engineering/refinery/lobby
+	name = "Chemical Refinery Lobby"
+
+/area/surface/outpost/engineering/refinery/atmos
+	name = "Chemical Refinery Atmospherics"
+
+/area/surface/outpost/engineering/refinery/smes
+	name = "\improper Refinery SMES Maintenance"
+	icon_state = "substation"
+	sound_env = SMALL_ENCLOSED
+	ambience = AMBIENCE_SUBSTATION
+
 //Rust-Engine Outpost CHOMPedit - ksc
 
 /area/surface/outpost/engineering/atmos_room
