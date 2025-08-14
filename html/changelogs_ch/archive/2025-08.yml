@@ -296,3 +296,38 @@
   - rscadd: Adds some downstream ringtones
   - code_imp: Moves ringtones to a shared global list
   - bugfix: Typo in communicator loadout
+2025-08-14:
+  CHOMPStation2StaffMirrorBot:
+  - rscadd: rig usage for crew kin
+  - bugfix: Slimes are devourable again
+  - bugfix: Loyalty potions make slimes able to be spont vored.
+  Diana:
+  - qol: You can swap between character slots mid-round once more.
+  - qol: Tail layering is now selectable in Character Setup
+  - bugfix: Fixes pref saving issue where it'd save preferences to the slot you had
+      selected instead of the slot you spawned in as
+  - bugfix: Tail Layering adjustments in-game will no longer cause character data
+      to be lost.
+  - bugfix: Updating someone's records in game has been hotfixed. Now informs the
+      user to swap to their played slot to prevent savefile corruption.
+  - bugfix: Shadekin Control Panel will inform you when your selected savefile does
+      not match your current savefile and inform you to change it.
+  Fracshun:
+  - rscadd: Absorbed prey can now be renamed
+  Guti:
+  - maptweak: Fixed Chemistry shutters not working
+  - maptweak: Added a silent teleporter on Deck 0
+  - maptweak: Added both recycler machines across the map
+  - maptweak: Added various lightswitches across multiple decks
+  - maptweak: Fixed Chemistry's Distillery windows having walls in them
+  - maptweak: Removed some mobs from Thor
+  - maptweak: Added the refinery planet-side
+  - maptweak: Added a couple of easter eggs on a couple of decks
+  - maptweak: Added a round-start janicart
+  - maptweak: Added a sorting junction to the Cafeteria
+  - maptweak: Added a nice little bed for Fleming in Virology
+  - maptweak: Added a couple of round-start genescanners to Genetics
+  - maptweak: Removed Sulfuric Acid dispensers in both Science and Robotics
+  - maptweak: Fixed the Vault being innacesible
+  Kashargul:
+  - maptweak: less darkness
