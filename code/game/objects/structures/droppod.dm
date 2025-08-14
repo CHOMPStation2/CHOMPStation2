@@ -18,15 +18,11 @@
 	if(A)
 		A.forceMove(src) // helo
 		podfall(auto_open)
-<<<<<<< HEAD
-		air = new(1000)
-=======
 		air = new
 
 /obj/structure/drop_pod/Destroy()
 	. = ..()
 	QDEL_NULL(air)
->>>>>>> 9685826f7f (some more grep checks (#18249))
 
 /obj/structure/drop_pod/proc/podfall(auto_open)
 	var/turf/T = get_turf(src)

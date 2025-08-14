@@ -44,6 +44,6 @@
 		H.adjust_nutrition(10)
 		if(!implant.durability)
 			implant.unimplant(H)
-			qdel_null(implant)
+			QDEL_NULL(implant)
 			H.adjust_nutrition(100)
 			to_chat(H, span_critical("Your NIF lets out one last sputter as it finally gives out"))

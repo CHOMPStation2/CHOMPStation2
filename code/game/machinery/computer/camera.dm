@@ -233,8 +233,8 @@ GLOBAL_LIST_EMPTY(bodycamera_screens) // CHOMPEdit
 	if(showing)
 		stop_showing()
 	vis_contents.Cut()
-	qdel_null(bpinboard)
-	qdel_null(bradio)
+	QDEL_NULL(bpinboard)
+	QDEL_NULL(bradio)
 	return ..()
 
 /obj/machinery/computer/security/telescreen/bodycamera/proc/bodycam_toggle()
