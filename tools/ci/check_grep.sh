@@ -136,9 +136,22 @@ if $grep -i 'var/list/static/.*' $code_files; then
 	st=1
 fi;
 
+part "changelog"
+#Checking for a change to html/changelogs/example.yml
+md5sum -c - <<< "0c56937110d88f750a32d9075ddaab8b *html/changelogs/example.yml"
+retVal=$?
+if [ $retVal -ne 0 ]; then
+	echo -e "${RED}Do not modify the example.yml changelog file.${NC}"
+	FAILED=1
+fi;
+
 part "color macros"
 #Checking for color macros
+<<<<<<< HEAD
 (num=`$grep -n '\\\\(red|blue|green|black|b|i[^mnct])' $code_files | wc -l`; echo "$num escapes (expecting ${MACRO_COUNT} or less)"; [ $num -le ${MACRO_COUNT} ]) # CHOMPEdit, we alos need to ignore item paths
+=======
+(num=`$grep -n '\\\\(red|blue|green|black|b|i[^mnct])' $code_files | wc -l`; echo "$num escapes (expecting ${MACRO_COUNT} or less)"; [ $num -le ${MACRO_COUNT} ])
+>>>>>>> 9685826f7f (some more grep checks (#18249))
 retVal=$?
 if [ $retVal -ne 0 ]; then
 	echo -e "${RED}Do not use any byond color macros (such as \blue), they are deprecated.${NC}"
