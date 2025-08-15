@@ -104,6 +104,7 @@
 		list(Z_NAME_GATEWAY_MADNESS_LAB_CH),
 		list(Z_NAME_GATEWAY_ABANDONED_CITY_CH),
 		list(Z_NAME_GATEWAY_SKYSCRAPER_CH),
+		list(Z_NAME_GATEWAY_HIDDEN_ECLIPSE_CH)
 		)
 
 /datum/map/southern_cross/perform_map_generation()

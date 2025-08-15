@@ -67,14 +67,14 @@
 	name_alias = Z_NAME_ALIAS_GATEWAY
 	desc = "Asteroid base surrounded by carp"
 	mappath = "modular_chomp/maps/common_submaps/gateway/carpfarm.dmm"
-/*
+
 #include "gateway/hiddeneclipse.dm"
 /datum/map_template/common_lateload/gateway/hiddeneclipse
 	name = Z_NAME_GATEWAY_HIDDEN_ECLIPSE_CH
 	name_alias = Z_NAME_ALIAS_GATEWAY
 	desc = "Asteroid mining facility, lost to unknown horrors"
 	mappath = "modular_chomp/maps/common_submaps/gateway/hiddeneclipse.dmm"
-*/
+
 //VR maps go here, tell me if theres a better way to load this
 // #include "virtual_reality/constructVR.dm" Virtual Reality areas included by default.
 //#include "maps/virtual_reality/constructVR.dm" //Included in .dme

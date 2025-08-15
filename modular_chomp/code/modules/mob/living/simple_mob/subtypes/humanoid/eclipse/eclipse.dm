@@ -391,40 +391,9 @@
 		/obj/item/xenobio/monkey_gun = 15
 			)
 
-/mob/living/simple_mob/humanoid/eclipse/solar/medicalsquish/bullet_act(var/obj/item/projectile/P, var/def_zone)
-	if(reflectmode == 1)
-		if(istype(P,/obj/item/projectile/beam) || istype(P, /obj/item/projectile/energy))
-			visible_message(span_danger("\The [src] reflects \the [P]!"))
-
-			// Find a turf near or on the original location to bounce to
-			var/new_x = P.starting.x + pick(0, 0, 0, -1, 1, -2, 2)
-			var/new_y = P.starting.y + pick(0, 0, 0, -1, 1, -2, 2)
-			var/turf/curloc = get_turf(src)
-
-			// redirect the projectile
-			P.redirect(new_x, new_y, curloc, src)
-			P.reflected = TRUE
-			return PROJECTILE_CONTINUE // complete projectile permutation
-		else
-			..()
-	else
-		..()
-
 /mob/living/simple_mob/humanoid/eclipse/solar/medicalsquish/do_special_attack(atom/A)
-	. = TRUE // So we don't fire a bolt as well.
-	switch(a_intent)
-		if(I_DISARM)
-			visible_message(span_warning("\The [src] turns silver!!"))
-			icon_state = "silver"
-			icon_living = "silver"
-			reflectmode = 1
-			addtimer(CALLBACK(src, PROC_REF(change_back), A), 5 SECONDS, TIMER_DELETE_ME)
-		else
-			visible_message(span_warning("\The [src] regenerates!!")) //completly lying the mob does nothing in single player mode
+	visible_message(span_warning("\The [src] regenerates!!")) //completly lying the mob does nothing in single player mode
 
-/mob/living/simple_mob/humanoid/eclipse/solar/medicalsquish/proc/change_back()
-	icon_state = "guardian"
-	icon_living = "guardian"
 
 /mob/living/simple_mob/humanoid/eclipse/solar/medicalsquish/handle_special()
 	if(stat != DEAD)
