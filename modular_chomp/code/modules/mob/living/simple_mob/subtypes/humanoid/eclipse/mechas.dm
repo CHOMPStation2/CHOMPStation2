@@ -598,13 +598,13 @@
 		/obj/item/stock_parts/scanning_module/omni = 80,
 		/obj/item/stock_parts/micro_laser/omni = 80,
 		/obj/item/stock_parts/capacitor/omni = 80,
-		 /obj/item/stock_parts/manipulator/omni = 80,
-		 /obj/item/stock_parts/matter_bin/omni = 80,
-		 /obj/item/stock_parts/scanning_module/hyper = 80,
+		/obj/item/stock_parts/manipulator/omni = 80,
+		/obj/item/stock_parts/matter_bin/omni = 80,
+		/obj/item/stock_parts/scanning_module/hyper = 80,
 		/obj/item/stock_parts/micro_laser/hyper = 80,
 		/obj/item/stock_parts/capacitor/hyper = 80,
-		 /obj/item/stock_parts/manipulator/hyper = 80,
-		 /obj/item/stock_parts/matter_bin/hyper = 80,
+		/obj/item/stock_parts/manipulator/hyper = 80,
+		/obj/item/stock_parts/matter_bin/hyper = 80,
 		)
 
 /mob/living/simple_mob/mechanical/mecha/eclipse/tankyboss/load_default_bellies()
