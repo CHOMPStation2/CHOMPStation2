@@ -324,10 +324,37 @@
 		return 1
 	else
 		return 0
-//CHOMPEdit Begin
+
+// Show a message to all mobs and objects in sight of this atom
+// Use for objects performing visible actions
+// message is output to anyone who can see, e.g. "The [src] does something!"
+// blind_message (optional) is what blind people will hear e.g. "You hear something!"
 /atom/proc/visible_message(var/message, var/blind_message, var/list/exclude_mobs, var/range = world.view, var/runemessage = "<span style='font-size: 1.5em'>👁</span>")
-	SEND_GLOBAL_SIGNAL(COMSIG_VISIBLE_MESSAGE, src, message, blind_message, exclude_mobs, range, runemessage, isbelly(loc))
-//CHOMPEdit End
+
+	//VOREStation Edit
+	var/list/see
+	if(isbelly(loc))
+		var/obj/belly/B = loc
+		see = B.get_mobs_and_objs_in_belly()
+	else
+		see = get_mobs_and_objs_in_view_fast(get_turf(src), range, remote_ghosts = FALSE)
+	//VOREStation Edit End
+
+	var/list/seeing_mobs = see["mobs"]
+	var/list/seeing_objs = see["objs"]
+	if(LAZYLEN(exclude_mobs))
+		seeing_mobs -= exclude_mobs
+
+	for(var/obj/O as anything in seeing_objs)
+		O.show_message(message, VISIBLE_MESSAGE, blind_message, AUDIBLE_MESSAGE)
+	for(var/mob/M as anything in seeing_mobs)
+		if(M.see_invisible >= invisibility && MOB_CAN_SEE_PLANE(M, plane))
+			M.show_message(message, VISIBLE_MESSAGE, blind_message, AUDIBLE_MESSAGE)
+			if(runemessage != -1)
+				M.create_chat_message(src, "[runemessage]", FALSE, list("emote"), audible = FALSE)
+		else if(blind_message)
+			M.show_message(blind_message, AUDIBLE_MESSAGE)
+
 // Show a message to all mobs and objects in earshot of this atom
 // Use for objects performing audible actions
 // message is the message output to anyone who can hear.
