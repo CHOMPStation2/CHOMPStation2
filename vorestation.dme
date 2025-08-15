@@ -4979,7 +4979,6 @@
 #include "modular_chomp\code\datums\autolathe\engineering_ch.dm"
 #include "modular_chomp\code\datums\autolathe\general_ch.dm"
 #include "modular_chomp\code\datums\components\dry.dm"
-#include "modular_chomp\code\datums\components\hearer.dm"
 #include "modular_chomp\code\datums\components\squeak.dm"
 #include "modular_chomp\code\datums\components\xenoqueen.dm"
 #include "modular_chomp\code\datums\crafting\items.dm"
