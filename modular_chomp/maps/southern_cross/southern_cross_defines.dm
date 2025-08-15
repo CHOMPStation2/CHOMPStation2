@@ -175,13 +175,14 @@
 	z = Z_LEVEL_SC_STATION_MAINTS
 	name = "Maintenance Deck"
 	transit_chance = 15
+	base_turf = /turf/space
 	holomap_offset_x = HOLOMAP_ICON_SIZE - SOUTHERN_CROSS_HOLOMAP_MARGIN_X - SOUTHERN_CROSS_MAP_SIZE - 40
 	holomap_offset_y = SOUTHERN_CROSS_HOLOMAP_MARGIN_Y //+ SOUTHERN_CROSS_MAP_SIZE*0
 
 /datum/map_z_level/southern_cross/station/station_one
 	z = Z_LEVEL_SC_STATION_ONE
 	name = "Deck 1"
-	base_turf = /turf/space
+	base_turf = /turf/simulated/open
 	transit_chance = 15
 	holomap_offset_x = SOUTHERN_CROSS_HOLOMAP_MARGIN_X - 40
 	holomap_offset_y = SOUTHERN_CROSS_HOLOMAP_MARGIN_Y //+ SOUTHERN_CROSS_MAP_SIZE*0
