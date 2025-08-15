@@ -482,6 +482,13 @@
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/plating,
 /area/maintenance/fieldhallway)
+"bk" = (
+/obj/structure/mob_spawner/mouse_nest/mousehole,
+/obj/machinery/computer/cryopod/gateway{
+	pixel_y = 32
+	},
+/turf/simulated/floor/plating/turfpack/station,
+/area/maintenance/zerocent)
 "bl" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
@@ -46925,7 +46932,7 @@ gp
 Yp
 YD
 Km
-fb
+bk
 xS
 xS
 xS
