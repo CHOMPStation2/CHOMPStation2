@@ -2,65 +2,40 @@
 	name = "Strange Place"
 	icon_state = "red"
 
-/area/awaymission/hiddeneclipse/miningzonea
-	name = "Distant Mining Site"
-
 /area/awaymission/hiddeneclipse/miningzonea/depature
 	requires_power = 0
 
-/area/awaymission/hiddeneclipse/miningzoneb
+/area/awaymission/hiddeneclipse/mainzone
 	name = "Distant Mining Site"
 
-/area/awaymission/hiddeneclipse/eclipsecarrier
-	name = "Midnight Pantheon"
-	requires_power = 0 //someone bap me if I ever figure out to do rad collectors.
-
-/area/awaymission/hiddeneclipse/eclipsecarrier/kitchen
-	name = "Midnight Pantheon - Kitchen"
-
-/area/awaymission/hiddeneclipse/eclipsecarrier/cafe
-		name = "Midnight Pantheon - Cafe"
-
-/area/awaymission/hiddeneclipse/eclipsecarrier/armory
-	name = "Midnight Pantheon - Armory"
-
-/area/awaymission/hiddeneclipse/eclipsecarrier/engine
-	name = "Midnight Pantheon - Engine Room"
-
-/area/awaymission/hiddeneclipse/eclipsecarrier/prison
-	name = "Midnight Pantheon - Prison"
-
-/area/awaymission/hiddeneclipse/eclipsecarrier/dorms
-	name = "Midnight Pantheon - Dorm"
-
-/area/awaymission/hiddeneclipse/eclipsecarrier/cargobay
-	name = "Midnight Pantheon - Cargo Bay"
-
-/area/awaymission/hiddeneclipse/eclipsecarrier/helm
-	name = "Midnight Pantheon - Helm"
-
-/area/awaymission/hiddeneclipse/eclipsecarrier/camera
-	name = "Midnight Pantheon - Camera Room"
-
-/area/awaymission/hiddeneclipse/eclipsecarrier/science
-	name = "Midnight Pantheon - Research and Development"
-
-/area/awaymission/hiddeneclipse/eclipsecarrier/vipdefense
-	name = "Midnight Pantheon - VIP Guard"
-
-/area/awaymission/hiddeneclipse/eclipsecarrier/vipchamber
-	name = "Midnight Pantheon - VIP Chamber"
-
-/area/awaymission/hiddeneclipse/eclipsecarrier/enginemonitoring
-	name = "Midnight Pantheon - Enginering Monitoring"
-
-/area/awaymission/hiddeneclipse/eclipsecarrier/canon
-	name = "Midnight Pantheon - Cannon Control"
-
-/area/awaymission/hiddeneclipse/precursortemple
+/area/awaymission/hiddeneclipse/baseneon
 	name = "Strange Temple"
 	requires_power = 0
 
-/area/awaymission/hiddeneclipse/theabyss
-	name = "Strange Void"
-	requires_power = 0
+/area/awaymission/hiddeneclipse/baseneon/sec
+	name = "Base Neon - Security Branch"
+	icon_state = "red"
+
+/area/awaymission/hiddeneclipse/baseneon/engineering
+	name = "Base Neon - Enginering Branch"
+	icon_state = "yellow"
+
+/area/awaymission/hiddeneclipse/baseneon/science
+	name = "Base Neon - Science Branch"
+	icon_state = "purple"
+
+/area/awaymission/hiddeneclipse/baseneon/medical
+	name = "Base Neon - Medical Branch"
+	icon_state = "blue2"
+
+/area/awaymission/hiddeneclipse/baseneon/command
+	name = "Base Neon - Command Branch"
+	icon_state = "green"
+
+/area/awaymission/hiddeneclipse/baseneon/cargo
+	name = "Base Neon - Cargo Branch"
+	icon_state = "dark"
+
+/area/awaymission/hiddeneclipse/baseneon/mining
+	name = "Base Neon - Digsight"
+	icon_state = "outpost_mine_main"

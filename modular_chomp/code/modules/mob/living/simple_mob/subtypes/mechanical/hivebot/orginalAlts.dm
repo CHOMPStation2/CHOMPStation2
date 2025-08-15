@@ -28,13 +28,14 @@
 	movement_cooldown = -3
 	icon_state = "janitor"
 	icon_living = "janitor"
+	faction = FACTION_TYR
 
 /mob/living/simple_mob/mechanical/mecha/eclipse/hivebot/tyr
 	name = "ai control center"
 	desc = "A large, very important looking ai. Plating appears similiar to albative plating."
 	icon_state = "powertower"
 	icon_living = "powertower"
-	faction = FACTION_HIVEBOT
+	faction = FACTION_TYR
 	movement_cooldown = 10
 	size_multiplier = 2
 	maxHealth = 500
@@ -50,18 +51,15 @@
 /mob/living/simple_mob/mechanical/mecha/eclipse/hivebot/tyr/do_special_attack(atom/A)
 	. = TRUE // So we don't fire a bolt as well.
 	if(attackcycle == 1)
-		addtimer(CALLBACK(src, PROC_REF(summon_janitor), A, 5, 2), 0.5 SECONDS, TIMER_DELETE_ME)
-		attackcycle = 0
-	else if(attackcycle == 2)
 		say("Prepare. Area. Cleanse. Radiation.")
 		specialattackprojectile = /obj/item/projectile/beam/gamma
-		addtimer(CALLBACK(src, PROC_REF(giant_burst), A, 3), 6 SECONDS, TIMER_DELETE_ME)
+		addtimer(CALLBACK(src, PROC_REF(giant_burst), A, 2), 6 SECONDS, TIMER_DELETE_ME)
+		attackcycle = 0
+	else if(attackcycle == 2)
+		specialattackprojectile = /obj/item/projectile/energy/spikeenergy_ball/boss
+		addtimer(CALLBACK(src, PROC_REF(dual_spin), A, 3, 15), 1 SECOND, TIMER_DELETE_ME)
 		attackcycle = 0
 	else if(attackcycle == 3)
-		specialattackprojectile = /obj/item/projectile/energy/spikeenergy_ball/boss
-		addtimer(CALLBACK(src, PROC_REF(dual_spin), A, 4, 20), 1 SECOND, TIMER_DELETE_ME)
-		attackcycle = 0
-	else if(attackcycle == 4)
 		specialattackprojectile = /obj/item/projectile/energy/spikeenergy_ball/boss
 		addtimer(CALLBACK(src, PROC_REF(quad_random_firing), A, 12, 1, 0.5 SECONDS), 1 SECOND, TIMER_DELETE_ME)
 		attackcycle = 0

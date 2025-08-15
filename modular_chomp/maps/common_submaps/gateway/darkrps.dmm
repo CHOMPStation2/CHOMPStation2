@@ -201,8 +201,8 @@
 "asp" = (
 /obj/structure/table/woodentable,
 /obj/item/tool/screwdriver{
-	pixel_y = -5;
-	pixel_x = 9
+	pixel_x = 9;
+	pixel_y = -5
 	},
 /obj/item/syndie/c4explosive/heavy/super_heavy,
 /obj/effect/decal/cleanable/dirt,
@@ -310,10 +310,10 @@
 /area/awaymission/darkrp/downtowncenter)
 "axQ" = (
 /obj/machinery/button/remote/blast_door{
+	dir = 4;
 	id = "warehouse2";
 	name = "Warehouse Shutters Button";
 	pixel_x = -4;
-	dir = 4;
 	pixel_y = 27
 	},
 /obj/machinery/recharger,
@@ -933,8 +933,8 @@
 /area/awaymission/darkrp/ghettohouse2)
 "boG" = (
 /obj/item/stock_parts/scanning_module{
-	pixel_y = 11;
-	pixel_x = 11
+	pixel_x = 11;
+	pixel_y = 11
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/neutral,
@@ -947,8 +947,8 @@
 "bps" = (
 /obj/random/trash,
 /turf/simulated/floor/outdoors/rocks{
-	temperature = 293.15;
-	outdoors = -1
+	outdoors = -1;
+	temperature = 293.15
 	},
 /area/awaymission/darkrp/sewers)
 "bpu" = (
@@ -1182,8 +1182,8 @@
 	icon_state = "1-2"
 	},
 /obj/structure/sign/redcross{
-	pixel_x = -32;
-	icon_state = "lifestar"
+	icon_state = "lifestar";
+	pixel_x = -32
 	},
 /turf/simulated/floor/outdoors/sidewalk/side{
 	icon_state = "sidewalk";
@@ -1296,9 +1296,9 @@
 /area/awaymission/darkrp/ghettosouthwarehouse)
 "bMP" = (
 /obj/machinery/door/blast/shutters{
+	dir = 2;
 	id = "centralbuilding22";
-	name = "Garage Door";
-	dir = 2
+	name = "Garage Door"
 	},
 /obj/structure/table/reinforced,
 /turf/simulated/floor/tiled/neutral,
@@ -1375,26 +1375,26 @@
 "bTR" = (
 /obj/structure/table/steel_reinforced,
 /obj/item/ammo_casing/a145{
-	pixel_y = 5;
-	pixel_x = 5
+	pixel_x = 5;
+	pixel_y = 5
 	},
 /obj/item/ammo_casing/a145{
-	pixel_y = -4;
+	dir = 1;
 	pixel_x = -4;
-	dir = 1
+	pixel_y = -4
 	},
 /obj/item/ammo_casing/a145{
-	pixel_y = 4;
-	pixel_x = -4
+	pixel_x = -4;
+	pixel_y = 4
 	},
 /obj/item/ammo_casing/a145{
-	pixel_y = 3;
+	dir = 8;
 	pixel_x = 4;
-	dir = 8
+	pixel_y = 3
 	},
 /obj/item/ammo_casing/a145{
-	pixel_y = -1;
-	pixel_x = 5
+	pixel_x = 5;
+	pixel_y = -1
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/awaymission/darkrp/reference)
@@ -2104,8 +2104,8 @@
 /area/awaymission/darkrp/ghettosouthwarehouse)
 "cPB" = (
 /obj/machinery/chemical_dispenser/bar_soft/full{
-	pixel_y = -2;
-	dir = 1
+	dir = 1;
+	pixel_y = -2
 	},
 /obj/structure/table/marble,
 /turf/simulated/floor/wood,
@@ -2171,26 +2171,26 @@
 "cVE" = (
 /obj/structure/table/steel_reinforced,
 /obj/item/ammo_casing/a145{
-	pixel_y = 5;
-	pixel_x = 5
+	pixel_x = 5;
+	pixel_y = 5
 	},
 /obj/item/ammo_casing/a145{
-	pixel_y = -4;
+	dir = 1;
 	pixel_x = -4;
-	dir = 1
+	pixel_y = -4
 	},
 /obj/item/ammo_casing/a145{
-	pixel_y = 4;
-	pixel_x = -4
+	pixel_x = -4;
+	pixel_y = 4
 	},
 /obj/item/ammo_casing/a145{
-	pixel_y = 3;
+	dir = 8;
 	pixel_x = 4;
-	dir = 8
+	pixel_y = 3
 	},
 /obj/item/ammo_casing/a145{
-	pixel_y = -1;
-	pixel_x = 5
+	pixel_x = 5;
+	pixel_y = -1
 	},
 /obj/machinery/light/small{
 	dir = 8
@@ -2361,8 +2361,8 @@
 	icon_state = "1-2"
 	},
 /mob/living/simple_mob/humanoid/merc/ranged/sniper{
-	special_attack_max_range = 15;
-	ai_holder_type = /datum/ai_holder/simple_mob/merc/eclipse/ranged/sniper
+	ai_holder_type = /datum/ai_holder/simple_mob/merc/eclipse/ranged/sniper;
+	special_attack_max_range = 15
 	},
 /turf/simulated/floor/concrete{
 	outdoors = 1
@@ -2847,10 +2847,10 @@
 /area/awaymission/darkrp/outside)
 "dNE" = (
 /obj/machinery/button/remote/blast_door{
+	dir = 4;
 	id = "warehouse3";
 	name = "Warehouse Shutters Button";
 	pixel_x = -4;
-	dir = 4;
 	pixel_y = -24
 	},
 /turf/simulated/floor/tiled,
@@ -3058,10 +3058,10 @@
 /area/awaymission/darkrp/downtownempty)
 "egt" = (
 /obj/machinery/button/remote/blast_door{
+	dir = 4;
 	id = "warehouse1";
 	name = "Warehouse Shutters Button";
 	pixel_x = -4;
-	dir = 4;
 	pixel_y = 27
 	},
 /mob/living/simple_mob/humanoid/merc/melee/poi,
@@ -3206,10 +3206,10 @@
 /area/awaymission/darkrp/ghettoapartments)
 "eqa" = (
 /obj/machinery/button/remote/blast_door{
+	dir = 4;
 	id = "bank";
 	name = "Shutters Button";
 	pixel_x = 1;
-	dir = 4;
 	pixel_y = 24;
 	req_one_access = list(150)
 	},
@@ -3240,8 +3240,8 @@
 "esi" = (
 /obj/structure/table/wooden_reinforced,
 /obj/item/paper/crumpled{
-	pixel_y = -3;
-	pixel_x = -4
+	pixel_x = -4;
+	pixel_y = -3
 	},
 /obj/item/reagent_containers/food/condiment/cornoil{
 	pixel_x = 5
@@ -3325,10 +3325,10 @@
 /area/awaymission/darkrp/outside/suburbs)
 "eyi" = (
 /obj/machinery/button/remote/blast_door{
+	dir = 4;
 	id = "bank";
 	name = "Shutters Button";
 	pixel_x = 1;
-	dir = 4;
 	pixel_y = -25
 	},
 /obj/structure/table/standard,
@@ -3798,26 +3798,26 @@
 "fav" = (
 /obj/structure/table/steel_reinforced,
 /obj/item/ammo_casing/a145{
-	pixel_y = 5;
-	pixel_x = 5
+	pixel_x = 5;
+	pixel_y = 5
 	},
 /obj/item/ammo_casing/a145{
-	pixel_y = -4;
+	dir = 1;
 	pixel_x = -4;
-	dir = 1
+	pixel_y = -4
 	},
 /obj/item/ammo_casing/a145{
-	pixel_y = 4;
-	pixel_x = -4
+	pixel_x = -4;
+	pixel_y = 4
 	},
 /obj/item/ammo_casing/a145{
-	pixel_y = 3;
+	dir = 8;
 	pixel_x = 4;
-	dir = 8
+	pixel_y = 3
 	},
 /obj/item/ammo_casing/a145{
-	pixel_y = -1;
-	pixel_x = 5
+	pixel_x = 5;
+	pixel_y = -1
 	},
 /obj/machinery/light/small{
 	dir = 4
@@ -3883,26 +3883,26 @@
 "fec" = (
 /obj/structure/table/steel_reinforced,
 /obj/item/ammo_casing/a145{
-	pixel_y = 5;
-	pixel_x = 5
+	pixel_x = 5;
+	pixel_y = 5
 	},
 /obj/item/ammo_casing/a145{
-	pixel_y = -4;
+	dir = 1;
 	pixel_x = -4;
-	dir = 1
+	pixel_y = -4
 	},
 /obj/item/ammo_casing/a145{
-	pixel_y = 4;
-	pixel_x = -4
+	pixel_x = -4;
+	pixel_y = 4
 	},
 /obj/item/ammo_casing/a145{
-	pixel_y = 3;
+	dir = 8;
 	pixel_x = 4;
-	dir = 8
+	pixel_y = 3
 	},
 /obj/item/ammo_casing/a145{
-	pixel_y = -1;
-	pixel_x = 5
+	pixel_x = 5;
+	pixel_y = -1
 	},
 /turf/simulated/floor/bmarble,
 /area/awaymission/darkrp/reference)
@@ -3919,8 +3919,8 @@
 	},
 /obj/structure/table/marble,
 /obj/machinery/microwave{
-	pixel_y = 3;
-	pixel_x = 2
+	pixel_x = 2;
+	pixel_y = 3
 	},
 /turf/simulated/floor/tiled/white,
 /area/awaymission/darkrp/ghettoeats)
@@ -4217,8 +4217,8 @@
 /obj/structure/table/woodentable,
 /obj/machinery/light/small,
 /obj/machinery/microwave{
-	pixel_y = -3;
-	pixel_x = 2
+	pixel_x = 2;
+	pixel_y = -3
 	},
 /turf/simulated/floor/wood,
 /area/awaymission/darkrp/subcondo)
@@ -4648,9 +4648,9 @@
 /area/awaymission/darkrp/subapartments)
 "git" = (
 /obj/machinery/door/blast/shutters{
+	dir = 2;
 	id = "warehouse2";
-	name = "Warehouse Garage Door";
-	dir = 2
+	name = "Warehouse Garage Door"
 	},
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -4722,10 +4722,10 @@
 /area/awaymission/darkrp/warehouseshack)
 "gmZ" = (
 /obj/machinery/button/remote/blast_door{
+	dir = 4;
 	id = "spawnwarehouse";
 	name = "Shutters Button";
 	pixel_x = 1;
-	dir = 4;
 	pixel_y = -25
 	},
 /obj/structure/cable/green{
@@ -4784,10 +4784,10 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/button/remote/blast_door{
+	dir = 4;
 	id = "spawnwarehouse";
 	name = "Shutters Button";
 	pixel_x = 1;
-	dir = 4;
 	pixel_y = 25
 	},
 /turf/simulated/floor/outdoors/sidewalk/side{
@@ -4986,9 +4986,9 @@
 /area/awaymission/darkrp/sewers)
 "gBz" = (
 /obj/machinery/door/blast/shutters{
+	dir = 8;
 	id = "garhouse";
-	name = "Garage Door";
-	dir = 8
+	name = "Garage Door"
 	},
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -5035,10 +5035,10 @@
 /area/awaymission/darkrp/sewers)
 "gGT" = (
 /obj/machinery/button/remote/blast_door{
+	dir = 4;
 	id = "toll2";
 	name = "Toll Booth Gates";
 	pixel_x = -4;
-	dir = 4;
 	pixel_y = 24
 	},
 /turf/simulated/floor/tiled,
@@ -5758,8 +5758,8 @@
 /area/awaymission/darkrp/ghettobank)
 "hFq" = (
 /obj/structure/showcase/sign{
-	name = "CITY LIMITS CLOSED DUE TO PIRACY";
-	desc = "This appears to be a sign warning people that the city is closed due to a takeover of various different anomalies and pirates"
+	desc = "This appears to be a sign warning people that the city is closed due to a takeover of various different anomalies and pirates";
+	name = "CITY LIMITS CLOSED DUE TO PIRACY"
 	},
 /turf/simulated/floor/concrete{
 	outdoors = 1
@@ -5819,10 +5819,10 @@
 /area/awaymission/darkrp/downtownresturaunt)
 "hMI" = (
 /obj/machinery/button/remote/blast_door{
+	dir = 4;
 	id = "centralbuilding1";
 	name = "Shutters Button";
 	pixel_x = 1;
-	dir = 4;
 	pixel_y = 24
 	},
 /obj/structure/table/standard,
@@ -6125,9 +6125,9 @@
 "icH" = (
 /obj/structure/table/reinforced,
 /obj/machinery/door/blast/shutters{
+	dir = 2;
 	id = "bank";
-	name = "Security Shutter";
-	dir = 2
+	name = "Security Shutter"
 	},
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/ghettobank)
@@ -6273,9 +6273,9 @@
 /area/awaymission/darkrp/centersidehouse)
 "ikY" = (
 /obj/machinery/door/blast/shutters{
+	dir = 2;
 	id = "warehouse3";
-	name = "Warehouse Garage Door";
-	dir = 2
+	name = "Warehouse Garage Door"
 	},
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/warehouse3)
@@ -6390,10 +6390,10 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/button/remote/blast_door{
+	dir = 8;
 	id = "centralbuilding3";
 	name = "Shutters Button";
 	pixel_x = 1;
-	dir = 8;
 	pixel_y = 25
 	},
 /turf/simulated/floor/outdoors/sidewalk/side{
@@ -6758,20 +6758,20 @@
 	req_access = list(5)
 	},
 /obj/item/gun/projectile/automatic/serdy/m16a2{
-	pixel_y = -1;
-	pixel_x = -12
+	pixel_x = -12;
+	pixel_y = -1
 	},
 /obj/item/gun/projectile/automatic/serdy/m16a2{
-	pixel_y = -1;
-	pixel_x = -12
+	pixel_x = -12;
+	pixel_y = -1
 	},
 /obj/item/gun/projectile/automatic/serdy/m16a2{
-	pixel_y = -1;
-	pixel_x = -12
+	pixel_x = -12;
+	pixel_y = -1
 	},
 /obj/item/gun/projectile/automatic/serdy/m16a2{
-	pixel_y = -1;
-	pixel_x = -12
+	pixel_x = -12;
+	pixel_y = -1
 	},
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/pd)
@@ -7088,20 +7088,20 @@
 "jwX" = (
 /obj/structure/table/standard,
 /obj/item/reagent_containers/glass/beaker/large{
-	pixel_y = 1;
-	pixel_x = -5
+	pixel_x = -5;
+	pixel_y = 1
 	},
 /obj/item/reagent_containers/dropper,
 /obj/item/storage/pill_bottle/dexalin_plus{
-	pixel_y = -13;
-	pixel_x = -7
+	pixel_x = -7;
+	pixel_y = -13
 	},
 /obj/item/storage/pill_bottle/combat{
 	pixel_y = -13
 	},
 /obj/item/storage/pill_bottle/osteodaxon{
-	pixel_y = -13;
-	pixel_x = 6
+	pixel_x = 6;
+	pixel_y = -13
 	},
 /turf/simulated/floor/wood,
 /area/awaymission/darkrp/downtownpharmacy)
@@ -7197,18 +7197,18 @@
 /obj/structure/closet/medical,
 /obj/item/card/id/medical{
 	access = list(696);
-	name = "Medical Staff ID Card";
-	desc = "A card issued to the downtown medical staff."
+	desc = "A card issued to the downtown medical staff.";
+	name = "Medical Staff ID Card"
 	},
 /obj/item/card/id/medical{
 	access = list(696);
-	name = "Medical Staff ID Card";
-	desc = "A card issued to the downtown medical staff."
+	desc = "A card issued to the downtown medical staff.";
+	name = "Medical Staff ID Card"
 	},
 /obj/item/card/id/medical{
 	access = list(696);
-	name = "Medical Staff ID Card";
-	desc = "A card issued to the downtown medical staff."
+	desc = "A card issued to the downtown medical staff.";
+	name = "Medical Staff ID Card"
 	},
 /obj/item/clothing/suit/storage/toggle/labcoat,
 /obj/item/clothing/suit/storage/toggle/labcoat,
@@ -7234,8 +7234,8 @@
 /area/awaymission/darkrp/downtownempty)
 "jIk" = (
 /obj/machinery/microwave{
-	pixel_y = 3;
-	pixel_x = 2
+	pixel_x = 2;
+	pixel_y = 3
 	},
 /obj/structure/table/marble,
 /turf/simulated/floor/wood,
@@ -7334,8 +7334,8 @@
 "jOf" = (
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/outdoors/rocks{
-	temperature = 293.15;
-	outdoors = -1
+	outdoors = -1;
+	temperature = 293.15
 	},
 /area/awaymission/darkrp/sewers)
 "jOS" = (
@@ -7541,9 +7541,9 @@
 /area/awaymission/darkrp/outside/park)
 "kcd" = (
 /obj/machinery/door/blast/shutters{
+	dir = 2;
 	id = "centralbuilding3";
-	name = "Garage Door";
-	dir = 2
+	name = "Garage Door"
 	},
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -7998,8 +7998,8 @@
 	icon_state = "1-2"
 	},
 /obj/item/toy/minigibber{
-	name = "\improper Cutie Mulcher";
-	desc = "It is a normal sized item."
+	desc = "It is a normal sized item.";
+	name = "\improper Cutie Mulcher"
 	},
 /turf/simulated/floor/tiled/white,
 /area/awaymission/darkrp/ghettoeats)
@@ -8197,10 +8197,10 @@
 /area/awaymission/darkrp/subgas)
 "kXy" = (
 /obj/machinery/button/remote/blast_door{
+	dir = 4;
 	id = "jailrp";
 	name = "Prison Bars";
 	pixel_x = -4;
-	dir = 4;
 	pixel_y = 27;
 	req_one_access = list(860)
 	},
@@ -8243,8 +8243,8 @@
 	pixel_y = 3
 	},
 /obj/item/stock_parts/scanning_module{
-	pixel_y = -2;
-	pixel_x = 4
+	pixel_x = 4;
+	pixel_y = -2
 	},
 /obj/item/stock_parts/scanning_module{
 	pixel_x = -4;
@@ -8267,9 +8267,9 @@
 /area/awaymission/darkrp/subhouse2)
 "lby" = (
 /obj/machinery/door/blast/shutters{
+	dir = 2;
 	id = "centralbuilding1";
-	name = "Garage Door";
-	dir = 2
+	name = "Garage Door"
 	},
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/downtowncenter)
@@ -8375,8 +8375,8 @@
 /area/awaymission/darkrp/sewers)
 "lis" = (
 /obj/machinery/door/airlock{
-	req_one_access = list(720);
-	name = "Gun Store"
+	name = "Gun Store";
+	req_one_access = list(720)
 	},
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/downtowngunshop)
@@ -8563,12 +8563,12 @@
 	pixel_y = -5
 	},
 /obj/random/action_figure{
-	pixel_y = 5;
-	pixel_x = -5
+	pixel_x = -5;
+	pixel_y = 5
 	},
 /obj/random/action_figure{
-	pixel_y = -5;
-	pixel_x = -5
+	pixel_x = -5;
+	pixel_y = -5
 	},
 /turf/simulated/floor/wood,
 /area/awaymission/darkrp/centersidehouse)
@@ -8736,8 +8736,8 @@
 /area/awaymission/darkrp/outside/plaza)
 "lDC" = (
 /mob/living/simple_mob/humanoid/merc/ranged/sniper{
-	special_attack_max_range = 15;
-	ai_holder_type = /datum/ai_holder/simple_mob/merc/eclipse/ranged/sniper
+	ai_holder_type = /datum/ai_holder/simple_mob/merc/eclipse/ranged/sniper;
+	special_attack_max_range = 15
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/awaymission/darkrp/sewers)
@@ -8846,28 +8846,28 @@
 	dir = 1
 	},
 /obj/item/stack/medical/advanced/bruise_pack{
-	pixel_y = 10;
-	pixel_x = 10
+	pixel_x = 10;
+	pixel_y = 10
 	},
 /obj/item/stack/medical/advanced/bruise_pack{
-	pixel_y = -5;
-	pixel_x = 10
+	pixel_x = 10;
+	pixel_y = -5
 	},
 /obj/item/stack/medical/advanced/bruise_pack{
-	pixel_y = 3;
-	pixel_x = 10
+	pixel_x = 10;
+	pixel_y = 3
 	},
 /obj/item/stack/medical/advanced/ointment{
-	pixel_y = 10;
-	pixel_x = -4
+	pixel_x = -4;
+	pixel_y = 10
 	},
 /obj/item/stack/medical/advanced/ointment{
-	pixel_y = -5;
-	pixel_x = -4
+	pixel_x = -4;
+	pixel_y = -5
 	},
 /obj/item/stack/medical/advanced/ointment{
-	pixel_y = 3;
-	pixel_x = -4
+	pixel_x = -4;
+	pixel_y = 3
 	},
 /turf/simulated/floor/tiled/neutral,
 /area/awaymission/darkrp/downtownwarehouse)
@@ -8924,8 +8924,8 @@
 /area/awaymission/darkrp/ghettowarehouse)
 "lPA" = (
 /obj/structure/toilet/prison{
-	pixel_y = 6;
-	dir = 4
+	dir = 4;
+	pixel_y = 6
 	},
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/pd)
@@ -9045,8 +9045,8 @@
 "lXu" = (
 /obj/structure/table/woodentable,
 /obj/item/reagent_containers/food/snacks/pancakes{
-	pixel_y = -2;
-	pixel_x = 3
+	pixel_x = 3;
+	pixel_y = -2
 	},
 /turf/simulated/floor/wood,
 /area/awaymission/darkrp/downtownbar)
@@ -9156,9 +9156,9 @@
 /area/awaymission/darkrp/outside/downtown)
 "mhT" = (
 /obj/machinery/door/blast/shutters{
+	dir = 8;
 	id = "smallpharmacy1";
-	name = "Garage Door";
-	dir = 8
+	name = "Garage Door"
 	},
 /obj/structure/table/reinforced,
 /turf/simulated/floor/wood,
@@ -9453,8 +9453,8 @@
 /area/awaymission/darkrp/plazarecroom)
 "mAV" = (
 /turf/simulated/floor/outdoors/rocks{
-	temperature = 293.15;
-	outdoors = -1
+	outdoors = -1;
+	temperature = 293.15
 	},
 /area/awaymission/darkrp/sewers)
 "mBB" = (
@@ -10000,8 +10000,8 @@
 	pixel_x = -5
 	},
 /turf/simulated/floor/outdoors/rocks{
-	temperature = 293.15;
-	outdoors = -1
+	outdoors = -1;
+	temperature = 293.15
 	},
 /area/awaymission/darkrp/sewers)
 "nmd" = (
@@ -10120,8 +10120,8 @@
 /area/awaymission/darkrp/outside/ghetto)
 "nsw" = (
 /obj/machinery/button/remote/blast_door{
-	id = "boss";
-	dir = 8
+	dir = 8;
+	id = "boss"
 	},
 /obj/effect/floor_decal/industrial/warning/color/full/red,
 /turf/simulated/floor/bluegrid,
@@ -10575,8 +10575,8 @@
 /area/awaymission/darkrp/warehouse3)
 "nQZ" = (
 /turf/simulated/floor/water/pool{
-	temperature = 293.15;
-	outdoors = 1
+	outdoors = 1;
+	temperature = 293.15
 	},
 /area/awaymission/darkrp/outside/plaza)
 "nRZ" = (
@@ -10632,8 +10632,8 @@
 "nUx" = (
 /obj/structure/table/woodentable,
 /obj/machinery/microwave{
-	pixel_y = 6;
-	pixel_x = 2
+	pixel_x = 2;
+	pixel_y = 6
 	},
 /turf/simulated/floor/wood,
 /area/awaymission/darkrp/subapartments)
@@ -10790,12 +10790,12 @@
 	dir = 1
 	},
 /obj/machinery/button/remote/noemag{
-	req_one_access = list(887);
 	desc = "A heavy and old button that appears to be access locked by a special ID found elsewhere.";
+	dir = 4;
 	id = "ultrasecret2";
 	name = "Slab Button II";
 	pixel_y = 26;
-	dir = 4
+	req_one_access = list(887)
 	},
 /turf/simulated/floor/bmarble,
 /area/awaymission/darkrp/reference)
@@ -10871,8 +10871,8 @@
 "okd" = (
 /obj/structure/table/steel_reinforced,
 /obj/machinery/door/blast/shutters{
-	id = "gunshop";
-	dir = 2
+	dir = 2;
+	id = "gunshop"
 	},
 /obj/machinery/door/window/northright,
 /obj/machinery/door/window/southleft,
@@ -10891,15 +10891,15 @@
 "okL" = (
 /obj/structure/table/standard,
 /obj/machinery/button/remote/blast_door{
+	dir = 8;
 	id = "lockdown1";
 	name = "Lockdown Button";
 	pixel_x = 6;
-	dir = 8;
 	pixel_y = 7
 	},
 /obj/item/reagent_containers/food/drinks/coffee{
-	pixel_y = 3;
-	pixel_x = -5
+	pixel_x = -5;
+	pixel_y = 3
 	},
 /turf/simulated/floor/tiled/dark,
 /area/awaymission/darkrp/lockdown1)
@@ -10935,8 +10935,8 @@
 "opj" = (
 /obj/structure/table/wooden_reinforced,
 /obj/item/reagent_containers/food/drinks/coffee{
-	pixel_y = 6;
-	pixel_x = 5
+	pixel_x = 5;
+	pixel_y = 6
 	},
 /obj/item/reagent_containers/food/snacks/soydope,
 /turf/simulated/floor/wood,
@@ -11007,9 +11007,9 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/door/blast/shutters{
+	dir = 2;
 	id = "ghettoware1";
-	name = "Garage Door";
-	dir = 2
+	name = "Garage Door"
 	},
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/ghettosouthwarehouse)
@@ -11058,9 +11058,9 @@
 /area/awaymission/darkrp/outside/plaza)
 "ozh" = (
 /obj/machinery/door/blast/shutters{
+	dir = 2;
 	id = "ghettoware1";
-	name = "Garage Door";
-	dir = 2
+	name = "Garage Door"
 	},
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/ghettosouthwarehouse)
@@ -11532,16 +11532,16 @@
 	pixel_y = 1
 	},
 /obj/item/storage/box/glasses/rocks{
-	pixel_y = 1;
-	pixel_x = -6
+	pixel_x = -6;
+	pixel_y = 1
 	},
 /obj/item/storage/box/glasses/pint{
-	pixel_y = 11;
-	pixel_x = -6
+	pixel_x = -6;
+	pixel_y = 11
 	},
 /obj/item/storage/box/glasses/meta/metapint{
-	pixel_y = 11;
-	pixel_x = 9
+	pixel_x = 9;
+	pixel_y = 11
 	},
 /turf/simulated/floor/wood,
 /area/awaymission/darkrp/downtownbar)
@@ -11665,26 +11665,26 @@
 "pgl" = (
 /obj/structure/table/steel_reinforced,
 /obj/item/ammo_casing/a145{
-	pixel_y = 5;
-	pixel_x = 5
+	pixel_x = 5;
+	pixel_y = 5
 	},
 /obj/item/ammo_casing/a145{
-	pixel_y = -4;
+	dir = 1;
 	pixel_x = -4;
-	dir = 1
+	pixel_y = -4
 	},
 /obj/item/ammo_casing/a145{
-	pixel_y = 4;
-	pixel_x = -4
+	pixel_x = -4;
+	pixel_y = 4
 	},
 /obj/item/ammo_casing/a145{
-	pixel_y = 3;
+	dir = 8;
 	pixel_x = 4;
-	dir = 8
+	pixel_y = 3
 	},
 /obj/item/ammo_casing/a145{
-	pixel_y = -1;
-	pixel_x = 5
+	pixel_x = 5;
+	pixel_y = -1
 	},
 /obj/machinery/light/small{
 	dir = 8
@@ -11706,11 +11706,11 @@
 	},
 /obj/machinery/button/remote/noemag{
 	desc = "A heavy and old button that appears to be access locked by a special ID found elsewhere.";
+	dir = 4;
 	id = "ultrasecret1";
 	name = "Slab Button I";
-	req_one_access = list(886);
 	pixel_y = 24;
-	dir = 4
+	req_one_access = list(886)
 	},
 /turf/simulated/mineral/floor/ignore_mapgen/cave,
 /area/awaymission/darkrp/reference)
@@ -11938,12 +11938,12 @@
 /obj/structure/table/wooden_reinforced,
 /obj/item/material/kitchen/utensil/fork,
 /obj/item/reagent_containers/pill/happy{
-	pixel_y = 6;
-	pixel_x = 7
+	pixel_x = 7;
+	pixel_y = 6
 	},
 /obj/item/reagent_containers/pill/diet{
-	pixel_y = 2;
-	pixel_x = 4
+	pixel_x = 4;
+	pixel_y = 2
 	},
 /obj/item/reagent_containers/food/condiment/soysauce,
 /turf/simulated/floor/wood,
@@ -12156,11 +12156,11 @@
 "pBW" = (
 /obj/structure/bed/double/padded,
 /obj/item/disk/tech_disk{
-	pixel_y = 2;
-	pixel_x = 10;
+	desc = "A perfect replica of the station's most protected asset, ages 7 and up. Does not function.";
 	icon_state = "nucleardisk";
 	name = "toy nuclear authentucation disk";
-	desc = "A perfect replica of the station's most protected asset, ages 7 and up. Does not function."
+	pixel_x = 10;
+	pixel_y = 2
 	},
 /obj/item/bedsheet/greendouble,
 /turf/simulated/floor/lino,
@@ -12460,10 +12460,10 @@
 /area/awaymission/darkrp/downtownwarehouse)
 "pVt" = (
 /obj/machinery/button/remote/blast_door{
+	dir = 4;
 	id = "centralbuilding3";
 	name = "Shutters Button";
 	pixel_x = 1;
-	dir = 4;
 	pixel_y = -25
 	},
 /obj/structure/cable/green{
@@ -12590,8 +12590,8 @@
 /area/awaymission/darkrp/plazashop)
 "qcK" = (
 /obj/effect/decal/cleanable/blood/drip{
-	pixel_y = 9;
-	pixel_x = 4
+	pixel_x = 4;
+	pixel_y = 9
 	},
 /turf/simulated/floor/concrete{
 	outdoors = 1
@@ -13095,10 +13095,10 @@
 /area/awaymission/darkrp/subapartments)
 "qJv" = (
 /obj/machinery/button/remote/blast_door{
+	dir = 1;
 	id = "sewers1";
 	pixel_x = -22;
-	pixel_y = -7;
-	dir = 1
+	pixel_y = -7
 	},
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/plating,
@@ -13192,9 +13192,9 @@
 	icon_state = "0-4"
 	},
 /obj/machinery/power/smes/buildable{
+	input_attempt = 1;
 	inputting = 1;
-	outputting = 1;
-	input_attempt = 1
+	outputting = 1
 	},
 /turf/simulated/floor/outdoors/sidewalk/slab{
 	movement_cost = 0;
@@ -13210,10 +13210,10 @@
 /area/awaymission/darkrp/ghettosouthwarehouse)
 "qPH" = (
 /obj/machinery/button/remote/blast_door{
+	dir = 4;
 	id = "centralbuilding2";
 	name = "Warehouse Shutters Button";
 	pixel_x = -4;
-	dir = 4;
 	pixel_y = 27
 	},
 /turf/simulated/floor/tiled/neutral,
@@ -13614,8 +13614,8 @@
 	},
 /obj/effect/decal/remains,
 /turf/simulated/floor/outdoors/rocks{
-	temperature = 293.15;
-	outdoors = -1
+	outdoors = -1;
+	temperature = 293.15
 	},
 /area/awaymission/darkrp/sewers)
 "rtk" = (
@@ -14595,8 +14595,8 @@
 /obj/structure/table/marble,
 /obj/item/card/id/medical{
 	access = list(696);
-	name = "Medical Staff ID Card";
-	desc = "A card issued to the downtown medical staff."
+	desc = "A card issued to the downtown medical staff.";
+	name = "Medical Staff ID Card"
 	},
 /turf/simulated/floor/wood,
 /area/awaymission/darkrp/plazacoffee)
@@ -14609,8 +14609,8 @@
 	dir = 1
 	},
 /obj/machinery/microwave{
-	pixel_y = 3;
-	pixel_x = 2
+	pixel_x = 2;
+	pixel_y = 3
 	},
 /turf/simulated/floor/wood,
 /area/awaymission/darkrp/subcondo)
@@ -14812,8 +14812,8 @@
 	},
 /obj/effect/decal/remains,
 /turf/simulated/floor/outdoors/rocks{
-	temperature = 293.15;
-	outdoors = -1
+	outdoors = -1;
+	temperature = 293.15
 	},
 /area/awaymission/darkrp/sewers)
 "sVs" = (
@@ -14914,20 +14914,20 @@
 "tcE" = (
 /obj/structure/table/rack/shelf/steel,
 /obj/item/reagent_containers/food/drinks/cans/waterbottle{
-	pixel_y = -1;
-	pixel_x = 9
+	pixel_x = 9;
+	pixel_y = -1
 	},
 /obj/item/reagent_containers/food/drinks/cans/waterbottle{
-	pixel_y = -1;
-	pixel_x = -6
+	pixel_x = -6;
+	pixel_y = -1
 	},
 /obj/item/reagent_containers/food/drinks/cans/waterbottle{
-	pixel_y = -1;
-	pixel_x = -1
+	pixel_x = -1;
+	pixel_y = -1
 	},
 /obj/item/reagent_containers/food/drinks/cans/waterbottle{
-	pixel_y = -1;
-	pixel_x = 4
+	pixel_x = 4;
+	pixel_y = -1
 	},
 /obj/machinery/light{
 	dir = 8
@@ -15595,10 +15595,10 @@
 /area/awaymission/darkrp/downtownshop)
 "tRU" = (
 /obj/machinery/button/remote/blast_door{
+	dir = 4;
 	id = "centralbuilding22";
 	name = "Warehouse Shutters Button";
 	pixel_x = -4;
-	dir = 4;
 	pixel_y = 27
 	},
 /obj/structure/table/reinforced,
@@ -15728,9 +15728,9 @@
 	},
 /obj/effect/decal/cleanable/blood,
 /obj/machinery/gibber{
+	desc = "It is a huge-sized item.";
 	emagged = 1;
-	name = "\improper Cutie Mulcher";
-	desc = "It is a huge-sized item."
+	name = "\improper Cutie Mulcher"
 	},
 /obj/random/meat,
 /turf/simulated/floor/tiled/white,
@@ -16221,11 +16221,11 @@
 /area/awaymission/darkrp/outside/suburbs)
 "uJt" = (
 /obj/machinery/button/remote/blast_door{
+	dir = 1;
 	id = "smallpharmacy1";
 	name = "Shutters Button";
 	pixel_x = -25;
-	pixel_y = -6;
-	dir = 1
+	pixel_y = -6
 	},
 /turf/simulated/floor/wood,
 /area/awaymission/darkrp/downtownpharmacy)
@@ -16443,9 +16443,9 @@
 /area/awaymission/darkrp/ghettoapartments)
 "uZa" = (
 /obj/machinery/door/blast/shutters{
+	dir = 2;
 	id = "warehouse1";
-	name = "Warehouse Garage Door";
-	dir = 2
+	name = "Warehouse Garage Door"
 	},
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/warehouse1)
@@ -16736,8 +16736,8 @@
 "vtl" = (
 /obj/effect/map_effect/perma_light/concentrated,
 /obj/effect/map_effect/portal/master/side_b{
-	portal_id = "Gsewer3";
-	dir = 1
+	dir = 1;
+	portal_id = "Gsewer3"
 	},
 /obj/effect/floor_decal/stairs,
 /turf/simulated/floor/tiled,
@@ -16750,9 +16750,9 @@
 /area/awaymission/darkrp/centersidehouse)
 "vtz" = (
 /obj/machinery/door/blast/shutters{
+	dir = 2;
 	id = "centralbuilding3";
-	name = "Garage Door";
-	dir = 2
+	name = "Garage Door"
 	},
 /obj/structure/table/steel,
 /obj/item/tape/police,
@@ -17019,9 +17019,9 @@
 /area/awaymission/darkrp/warehouse2)
 "vNT" = (
 /obj/machinery/door/blast/shutters{
+	dir = 4;
 	id = "centralbuilding2";
-	name = "Garage Door";
-	dir = 4
+	name = "Garage Door"
 	},
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/downtownwarehouse)
@@ -17532,10 +17532,10 @@
 /area/awaymission/darkrp/centerwarehouse)
 "wsF" = (
 /obj/machinery/button/remote/blast_door{
+	dir = 4;
 	id = "toll1";
 	name = "Toll Booth Gates";
 	pixel_x = -4;
-	dir = 4;
 	pixel_y = -24
 	},
 /turf/simulated/floor/tiled,
@@ -17562,17 +17562,17 @@
 	pixel_x = -6
 	},
 /obj/item/reagent_containers/food/snacks/pancakes{
-	pixel_y = -6;
-	pixel_x = 12
+	pixel_x = 12;
+	pixel_y = -6
 	},
 /turf/simulated/floor/wood,
 /area/awaymission/darkrp/downtownbar)
 "wuR" = (
 /obj/machinery/button/remote/blast_door{
+	dir = 4;
 	id = "ghettoware1";
 	name = "Shutters Button";
 	pixel_x = 1;
-	dir = 4;
 	pixel_y = 24
 	},
 /turf/simulated/floor/tiled,
@@ -17788,9 +17788,9 @@
 /area/awaymission/darkrp/outside)
 "wKE" = (
 /obj/machinery/door/blast/shutters{
+	dir = 2;
 	id = "warehouse1";
-	name = "Warehouse Garage Door";
-	dir = 2
+	name = "Warehouse Garage Door"
 	},
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -17942,9 +17942,9 @@
 /area/awaymission/darkrp/subapartments)
 "wXd" = (
 /obj/machinery/door/blast/shutters{
+	dir = 8;
 	id = "garhouse";
-	name = "Garage Door";
-	dir = 8
+	name = "Garage Door"
 	},
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/subgarage)
@@ -18005,26 +18005,26 @@
 "xhk" = (
 /obj/structure/table/steel_reinforced,
 /obj/item/ammo_casing/a145{
-	pixel_y = 5;
-	pixel_x = 5
+	pixel_x = 5;
+	pixel_y = 5
 	},
 /obj/item/ammo_casing/a145{
-	pixel_y = -4;
+	dir = 1;
 	pixel_x = -4;
-	dir = 1
+	pixel_y = -4
 	},
 /obj/item/ammo_casing/a145{
-	pixel_y = 4;
-	pixel_x = -4
+	pixel_x = -4;
+	pixel_y = 4
 	},
 /obj/item/ammo_casing/a145{
-	pixel_y = 3;
+	dir = 8;
 	pixel_x = 4;
-	dir = 8
+	pixel_y = 3
 	},
 /obj/item/ammo_casing/a145{
-	pixel_y = -1;
-	pixel_x = 5
+	pixel_x = 5;
+	pixel_y = -1
 	},
 /obj/machinery/light/small{
 	dir = 4
@@ -18431,10 +18431,10 @@
 /area/awaymission/darkrp/outside)
 "xIQ" = (
 /obj/machinery/button/remote/blast_door{
+	dir = 4;
 	id = "garhouse";
 	name = "Shutters Button";
 	pixel_x = -4;
-	dir = 4;
 	pixel_y = 27
 	},
 /obj/effect/decal/cleanable/blood/oil,
@@ -18803,8 +18803,8 @@
 	pixel_x = 5
 	},
 /obj/item/storage/box/wormcan/deluxe{
-	pixel_y = -1;
-	pixel_x = -6
+	pixel_x = -6;
+	pixel_y = -1
 	},
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/downtowngunshop)
@@ -18854,9 +18854,9 @@
 /area/awaymission/darkrp/sewers)
 "yiA" = (
 /obj/machinery/door/blast/shutters{
+	dir = 2;
 	id = "warehouse2";
-	name = "Warehouse Garage Door";
-	dir = 2
+	name = "Warehouse Garage Door"
 	},
 /turf/simulated/floor/tiled,
 /area/awaymission/darkrp/warehouse2)

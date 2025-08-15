@@ -953,5 +953,46 @@
 		new artidrop(dropspot)
 	attackcycle = next_cycle
 
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/rising_star(atom/target, var/next_cycle, var/fire_delay)
+	bullet_heck(target, 7, 0)
+	bullet_heck(target, -7, 0)
+	bullet_heck(target, 0, 7)
+	bullet_heck(target, 0, -7)
+	bullet_heck(target, 7, 7)
+	bullet_heck(target, 7, -7)
+	bullet_heck(target, -7, 7)
+	bullet_heck(target, -7, -7)
+	addtimer(CALLBACK(src, PROC_REF(rising_starA), target, next_cycle, fire_delay), fire_delay, TIMER_DELETE_ME)
 
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/rising_starA(atom/target, var/next_cycle, var/fire_delay)
+	bullet_heck(target, 7, -4)
+	bullet_heck(target, -7, 4)
+	bullet_heck(target, 4, 7)
+	bullet_heck(target, -4, -7)
+	bullet_heck(target, 7, -4)
+	bullet_heck(target, -7, 4)
+	bullet_heck(target, 4, 7)
+	bullet_heck(target, -4, -7)
+	addtimer(CALLBACK(src, PROC_REF(rising_starB), target, next_cycle, fire_delay), fire_delay, TIMER_DELETE_ME)
 
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/rising_starB(atom/target, var/next_cycle, var/fire_delay)
+	bullet_heck(target, 7, -1)
+	bullet_heck(target, -7, 1)
+	bullet_heck(target, 1, 7)
+	bullet_heck(target, -1, -7)
+	bullet_heck(target, 5, 7)
+	bullet_heck(target, 7, -5)
+	bullet_heck(target, -5, 7)
+	bullet_heck(target, -7, -5)
+	attackcycle = next_cycle
+
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/gattlingfire(atom/target, var/next_cycle, var/amount, var/fire_delay)
+	if(!target)
+		return
+	var/obj/item/projectile/P = new specialattackprojectile(get_turf(src))
+	P.launch_projectile(target, BP_TORSO, src)
+	amount--
+	if(amount > 0)
+		addtimer(CALLBACK(src, PROC_REF(gattlingfire), target, next_cycle, fire_delay, amount), fire_delay, TIMER_DELETE_ME)
+	else
+		attackcycle = next_cycle

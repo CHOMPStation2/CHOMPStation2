@@ -566,3 +566,199 @@
 				addtimer(CALLBACK(src, PROC_REF(singleproj), A, rng_cycle), 1 SECONDS, TIMER_DELETE_ME)
 				attackcycle = 0
 
+//Awoken Tyr Update
+/mob/living/simple_mob/mechanical/mecha/eclipse/tankyboss
+	health = 1000
+	maxHealth = 1000 //I don't like four digits, but the intended weapon has 30 damage, and desired player count is 3 with a length of 3 mins, doing the math adds up to 1080 but going to do 1k
+	faction = FACTION_TYR
+	movement_cooldown = 40
+	swallowTime = 0.5 SECONDS
+	vore_active = 1
+	vore_capacity = 1
+	vore_bump_chance = 10
+	vore_stomach_name = "Stomach"
+	vore_default_item_mode = IM_DIGEST
+	vore_pounce_chance = 50
+	vore_pounce_cooldown = 10
+	vore_pounce_successrate	= 75
+	vore_pounce_falloff = 0
+	vore_pounce_maxhealth = 100
+	vore_standing_too = TRUE
+	unacidable = TRUE
+
+	loot_list = list(/obj/item/projectile/energy/wp_shotgun  = 30,
+		/obj/item/gun/energy/energyballchain  = 30,
+		/obj/item/tool/wirecutters/hybrid/alien  = 30,
+		/obj/item/tool/wrench/hybrid/alien  = 30,
+		/obj/item/tool/crowbar/hybrid/alien  = 30,
+		/obj/item/tool/screwdriver/hybrid/alien  = 30,
+		/obj/item/pickaxe/diamonddrill/alien = 30,
+		/obj/item/melee/energy/sword/dualsaber = 30,
+		/obj/item/shield_projector/rectangle/automatic/tyrvault = 0.01,
+		/obj/item/stock_parts/scanning_module/omni = 80,
+		/obj/item/stock_parts/micro_laser/omni = 80,
+		/obj/item/stock_parts/capacitor/omni = 80,
+		/obj/item/stock_parts/manipulator/omni = 80,
+		/obj/item/stock_parts/matter_bin/omni = 80,
+		/obj/item/stock_parts/scanning_module/hyper = 80,
+		/obj/item/stock_parts/micro_laser/hyper = 80,
+		/obj/item/stock_parts/capacitor/hyper = 80,
+		/obj/item/stock_parts/manipulator/hyper = 80,
+		/obj/item/stock_parts/matter_bin/hyper = 80,
+		)
+
+/mob/living/simple_mob/mechanical/mecha/eclipse/tankyboss/load_default_bellies()
+	. = ..()
+	var/obj/belly/B = vore_selected
+	B.name = "stomach"
+	B.mode_flags = DM_FLAG_THICKBELLY | DM_FLAG_NUMBING
+	B.digest_brute = 1
+	B.digest_burn = 1
+	B.digestchance = 0
+	B.absorbchance = 0
+	B.escapechance = 25
+
+/mob/living/simple_mob/mechanical/mecha/eclipse/tankyboss/chambera //poison boss
+	name = "expirement 20"
+	specialattackprojectile = /obj/item/projectile/energy/eclipse/poisonwind
+	icon_state = "poison_boss"
+	icon_living = "poison_boss"
+
+/mob/living/simple_mob/mechanical/mecha/eclipse/tankyboss/chambera/apply_melee_effects(var/atom/A)
+	if(isliving(A))
+		var/mob/living/L = A
+		L.add_modifier(/datum/modifier/poisoned, 120 SECONDS)
+
+/mob/living/simple_mob/mechanical/mecha/eclipse/tankyboss/chambera/do_special_attack(atom/A)
+	var/rng_cycle = rand(1,6)
+	if(attackcycle == 1)
+		addtimer(CALLBACK(src, PROC_REF(quad_random_firing), A, 20, rng_cycle, 20), 0.5 SECONDS, TIMER_DELETE_ME)
+		attackcycle = 0
+	else if(attackcycle == 2)
+		addtimer(CALLBACK(src, PROC_REF(dual_spin), A, rng_cycle, 15), 0.5 SECONDS, TIMER_DELETE_ME)
+		attackcycle = 0
+	else if(attackcycle == 3)
+		addtimer(CALLBACK(src, PROC_REF(cross_spin), A, rng_cycle, 15), 0.5 SECONDS, TIMER_DELETE_ME)
+		attackcycle = 0
+	else if(attackcycle == 4)
+		addtimer(CALLBACK(src, PROC_REF(hole_in_wall), A, rng_cycle, 15), 0.5 SECONDS, TIMER_DELETE_ME)
+		attackcycle = 0
+	else if(attackcycle == 5)
+		addtimer(CALLBACK(src, PROC_REF(bomb_lines), A, rng_cycle), 2.5 SECONDS, TIMER_DELETE_ME)
+		attackcycle = 0
+	else if(attackcycle == 6)
+		addtimer(CALLBACK(src, PROC_REF(bomb_chaos), A, rng_cycle), 2.5 SECONDS, TIMER_DELETE_ME)
+		attackcycle = 0
+
+/mob/living/simple_mob/mechanical/mecha/eclipse/tankyboss/chamberb //knock back boss
+	name = "expirement 3"
+	specialattackprojectile = /obj/item/projectile/knockback/slow
+	icon_state = "sonic_boss"
+	icon_living = "sonic_boss"
+	projectiletype = /obj/item/projectile/knockback/slow
+
+/obj/item/projectile/knockback/slow
+	speed = 10
+
+/mob/living/simple_mob/mechanical/mecha/eclipse/tankyboss/chamberb/do_special_attack(atom/A)
+	var/rng_cycle = rand(1,6)
+	if(attackcycle == 1)
+		addtimer(CALLBACK(src, PROC_REF(quad_random_firing), A, 20, rng_cycle, 10), 0.5 SECONDS, TIMER_DELETE_ME)
+		attackcycle = 0
+	else if(attackcycle == 2)
+		addtimer(CALLBACK(src, PROC_REF(dual_spin), A, rng_cycle, 5), 0.5 SECONDS, TIMER_DELETE_ME)
+		attackcycle = 0
+	else if(attackcycle == 3)
+		addtimer(CALLBACK(src, PROC_REF(cross_spin), A, rng_cycle, 10), 0.5 SECONDS, TIMER_DELETE_ME)
+		attackcycle = 0
+	else if(attackcycle == 4)
+		addtimer(CALLBACK(src, PROC_REF(hole_in_wall), A, rng_cycle, 10), 0.5 SECONDS, TIMER_DELETE_ME)
+		attackcycle = 0
+	else if(attackcycle == 5)
+		addtimer(CALLBACK(src, PROC_REF(bomb_lines), A, rng_cycle), 2.5 SECONDS, TIMER_DELETE_ME)
+		attackcycle = 0
+	else if(attackcycle == 6)
+		addtimer(CALLBACK(src, PROC_REF(bomb_chaos), A, rng_cycle), 2.5 SECONDS, TIMER_DELETE_ME)
+		attackcycle = 0
+
+/mob/living/simple_mob/mechanical/mecha/eclipse/tankyboss/chamberc //wierd shields
+	name = "expirement 7"
+	specialattackprojectile = /obj/item/projectile/energy/eclipse/tyrjavelin
+	health = 400
+	maxHealth = 400 //shield mechanic
+	icon_state = "UPshield_boss"
+	icon_living = "UPshield_boss"
+	projectiletype = /obj/item/projectile/energy/eclipse/tyrjavelin
+	var/fullshield = 300
+	var/shieldrage = 3
+
+/mob/living/simple_mob/mechanical/mecha/eclipse/tankyboss/chamberc/bullet_act(obj/item/projectile/P) //Projectiles will be absorbed by the shield. Note to self do funky sprite. 4 hits to remove
+	if(fullshield > 0)
+		fullshield -= P.damage
+		if(P == /obj/item/projectile/ion)
+			fullshield = 0
+			visible_message(span_boldwarning(span_orange("[P] breaks the shield!!.")))
+			icon_state = "shield_boss"
+		if(fullshield > 0)
+			visible_message(span_boldwarning(span_orange("[P] is absorbed by the shield!.")))
+		else
+			visible_message(span_boldwarning(span_orange("[P] breaks the shield!!.")))
+			icon_state = "shield_boss"
+	else
+		..()
+		shieldrage--
+		if(shieldrage == 0)
+			shieldrage = 3
+			fullshield = 300
+			visible_message(span_boldwarning(span_orange("The shield reactivates!!.")))
+			icon_state = "UPshield_boss"
+
+/mob/living/simple_mob/mechanical/mecha/eclipse/tankyboss/chamberc/do_special_attack(atom/A)
+	var/rng_cycle = rand(1,5)
+	if(attackcycle == 1)
+		addtimer(CALLBACK(src, PROC_REF(quad_random_firing), A, 20, rng_cycle, 20), 0.5 SECONDS, TIMER_DELETE_ME)
+		attackcycle = 0
+	else if(attackcycle == 2)
+		addtimer(CALLBACK(src, PROC_REF(dual_spin), A, rng_cycle, 15), 0.5 SECONDS, TIMER_DELETE_ME)
+		attackcycle = 0
+	else if(attackcycle == 3)
+		addtimer(CALLBACK(src, PROC_REF(hole_in_wall), A, rng_cycle, 15), 0.5 SECONDS, TIMER_DELETE_ME)
+		attackcycle = 0
+	else if(attackcycle == 4)
+		addtimer(CALLBACK(src, PROC_REF(rising_star), A, rng_cycle, 15), 0.5 SECONDS, TIMER_DELETE_ME)
+		attackcycle = 0
+	else if(attackcycle == 4)
+		attackcycle = 0
+		addtimer(CALLBACK(src, PROC_REF(gattlingfire), A, rng_cycle, 8, 7), 0.5 SECONDS, TIMER_DELETE_ME)
+
+/mob/living/simple_mob/mechanical/mecha/eclipse/tankyboss/chamberd //the wall
+	name = "expirement 12"
+	health = 600 //summoner boss so reduced health
+	maxHealth = 600 //summoner boss so reduced health
+	specialattackprojectile = /obj/item/projectile/arc/explosive_rocket/big
+	artidrop = /mob/living/simple_mob/mechanical/hivebot/tyr
+	icon_state = "spawn_boss"
+	icon_living = "spawn_boss"
+
+/mob/living/simple_mob/mechanical/mecha/eclipse/tankyboss/chamberd/do_special_attack(atom/A)
+	var/rng_cycle = rand(1,5)
+	if(attackcycle == 1)
+		specialattackprojectile = /obj/item/projectile/arc/explosive_rocket/big
+		addtimer(CALLBACK(src, PROC_REF(singleproj), A, rng_cycle), 1 SECOND, TIMER_DELETE_ME)
+		attackcycle = 0
+	else if(attackcycle == 2)
+		specialattackprojectile = /obj/item/projectile/arc/explosive_rocket/big
+		addtimer(CALLBACK(src, PROC_REF(cross_spin), A, rng_cycle, 15), 0.5 SECONDS, TIMER_DELETE_ME)
+		attackcycle = 0
+	else if(attackcycle == 3)
+		artidrop = /mob/living/simple_mob/mechanical/hivebot/tyr
+		addtimer(CALLBACK(src, PROC_REF(bomb_chaos), A, rng_cycle), 1.5 SECONDS, TIMER_DELETE_ME)
+		attackcycle = 0
+	else if(attackcycle == 4)
+		artidrop = /obj/item/material/barbedwire/plastic/active
+		addtimer(CALLBACK(src, PROC_REF(bomb_chaos), A, rng_cycle), 1.5 SECONDS, TIMER_DELETE_ME)
+		attackcycle = 0
+	else if(attackcycle == 5)
+		specialattackprojectile = /obj/item/projectile/energy/eclipse/tyrjavelin
+		addtimer(CALLBACK(src, PROC_REF(quad_random_firing), A, 20, rng_cycle, 25), 0.5 SECONDS, TIMER_DELETE_ME)
+		attackcycle = 0
