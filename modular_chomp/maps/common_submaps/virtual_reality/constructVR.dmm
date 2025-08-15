@@ -2272,10 +2272,7 @@
 /area/vr/outdoors/powered)
 "bTZ" = (
 /obj/structure/table/darkglass,
-/obj/item/clothing/gloves/fluff/techpriestgloves,
 /obj/item/clothing/head/hood/techpriest,
-/obj/item/clothing/shoes/boots/jackboots/fluff/techpriestboots,
-/obj/item/clothing/under/fluff/techpriestunder,
 /obj/item/clothing/suit/storage/hooded/techpriest,
 /turf/simulated/shuttle/floor/voidcraft/dark,
 /area/vr/powered/cult)
@@ -5580,7 +5577,6 @@
 /obj/item/storage/pouch/holding,
 /obj/item/storage/backpack/holding,
 /obj/item/storage/belt/soulstone/full,
-/obj/item/clothing/accessory/fluff/zeta_blackwell_1,
 /turf/simulated/floor/cult,
 /area/vr/powered/cult)
 "eFl" = (
@@ -6833,10 +6829,6 @@
 /obj/item/mecha_parts/mecha_equipment/weapon/energy/medigun,
 /turf/simulated/floor/airless,
 /area/vr/space)
-"fBZ" = (
-/obj/item/clothing/accessory/fluff/zeta_blackwell_1,
-/turf/simulated/floor/cult,
-/area/vr/powered/cult)
 "fCr" = (
 /obj/structure/table/fancyblack,
 /obj/item/reagent_containers/food/snacks/risotto,
@@ -20352,12 +20344,10 @@
 /obj/item/ore/marble,
 /obj/item/ore/osmium,
 /obj/item/ore/rutile,
-/obj/item/toy/bosunwhistle/fluff/strix,
 /obj/item/toy/character/wizard,
 /obj/item/reagent_containers/hypospray/autoinjector/biginjector/mindbreaker/unidentified,
 /obj/item/reagent_containers/hypospray/autoinjector/biginjector/mindbreaker/unidentified,
 /obj/item/fluff/squeezetoy,
-/obj/item/fluff/zekewatch,
 /obj/item/fluff/fidgetspinner/red,
 /obj/item/storage/pill_bottle/dice_nerd,
 /turf/simulated/floor/wood,
@@ -29501,7 +29491,6 @@
 /obj/item/clothing/shoes/footwraps,
 /obj/item/clothing/shoes/footwraps,
 /obj/item/clothing/shoes/footwraps,
-/obj/item/toy/bosunwhistle/fluff/strix,
 /obj/item/blobcore_chunk,
 /obj/item/towel/random,
 /obj/item/towel/random,
@@ -76191,7 +76180,7 @@ dzW
 ftV
 dBO
 mXq
-fBZ
+ftV
 eyI
 axe
 ftV

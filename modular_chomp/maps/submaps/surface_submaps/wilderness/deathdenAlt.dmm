@@ -5,7 +5,6 @@
 /area/submap/DeathDen)
 "aj" = (
 /obj/item/stool/padded,
-/obj/item/clothing/suit/storage/fluff/techpriestrobes,
 /turf/simulated/floor/wood/sif/turfpack/sif,
 /area/submap/DeathDen)
 "as" = (
