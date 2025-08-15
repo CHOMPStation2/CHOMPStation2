@@ -331,3 +331,13 @@
   - maptweak: Fixed the Vault being innacesible
   Kashargul:
   - maptweak: less darkness
+2025-08-15:
+  CHOMPStation2StaffMirrorBot:
+  - code_imp: tgui style cleanup
+  - code_imp: more grep checks, tgui dependency up
+  - qol: chat examines are now also spoilered
+  - rscadd: Added a new mining points reward - a deluxe cabin shelter capsule! Complete
+      with a kitchen and privacy-enabled dorms and bathrooms for private scenes! Buy
+      today for 10,000 mining points!
+  Will:
+  - bugfix: Boombase and death den active edges fixed.
