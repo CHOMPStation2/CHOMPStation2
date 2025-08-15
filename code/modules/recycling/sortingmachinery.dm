@@ -426,14 +426,8 @@
 		M.loc = src
 	src.flush()
 
-<<<<<<< HEAD
-//Chompadd: Autocatch for stuff being thrown into disposal chutes..
-/obj/machinery/disposal/deliveryChute/hitby(atom/movable/AM)
-	if((istype(AM, /obj/item) || istype(AM, /mob/living)) && !istype(AM, /obj/item/projectile))
-=======
 /obj/machinery/disposal/deliveryChute/hitby(atom/movable/AM)
 	if(!QDELETED(AM) || (istype(AM, /obj/item) || istype(AM, /mob/living)) && !istype(AM, /obj/item/projectile))
->>>>>>> 0050cb8509 (Fixes runtimes (#18260))
 		switch(dir)
 			if(NORTH)
 				if(AM.loc.y != src.loc.y+1) return ..()
@@ -445,10 +439,6 @@
 				if(AM.loc.x != src.loc.x-1) return ..()
 		AM.forceMove(src)
 		src.flush()
-<<<<<<< HEAD
-//Chompadd end
-=======
->>>>>>> 0050cb8509 (Fixes runtimes (#18260))
 
 /obj/machinery/disposal/deliveryChute/flush()
 	flushing = 1
