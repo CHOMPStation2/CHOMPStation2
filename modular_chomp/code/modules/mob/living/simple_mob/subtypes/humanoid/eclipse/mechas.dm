@@ -586,6 +586,27 @@
 	vore_standing_too = TRUE
 	unacidable = TRUE
 
+	loot_list = list(/obj/item/projectile/energy/wp_shotgun  = 30,
+		/obj/item/gun/energy/energyballchain  = 30,
+		/obj/item/tool/wirecutters/hybrid/alien  = 30,
+		/obj/item/tool/wrench/hybrid/alien  = 30,
+		/obj/item/tool/crowbar/hybrid/alien  = 30,
+		/obj/item/tool/screwdriver/hybrid/alien  = 30,
+		/obj/item/pickaxe/diamonddrill/alien = 30,
+		/obj/item/melee/energy/sword/dualsaber = 30,
+		/obj/item/shield_projector/rectangle/automatic/tyrvault = 0.01,
+		/obj/item/stock_parts/scanning_module/omni = 80,
+		/obj/item/stock_parts/micro_laser/omni = 80,
+		/obj/item/stock_parts/capacitor/omni = 80,
+		 /obj/item/stock_parts/manipulator/omni = 80,
+		 /obj/item/stock_parts/matter_bin/omni = 80,
+		 /obj/item/stock_parts/scanning_module/hyper = 80,
+		/obj/item/stock_parts/micro_laser/hyper = 80,
+		/obj/item/stock_parts/capacitor/hyper = 80,
+		 /obj/item/stock_parts/manipulator/hyper = 80,
+		 /obj/item/stock_parts/matter_bin/hyper = 80,
+		)
+
 /mob/living/simple_mob/mechanical/mecha/eclipse/tankyboss/load_default_bellies()
 	. = ..()
 	var/obj/belly/B = vore_selected
