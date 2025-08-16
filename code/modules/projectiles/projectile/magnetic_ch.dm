@@ -26,7 +26,7 @@
 	hud_state = "rocket_thermobaric"
 
 /obj/item/projectile/bullet/magnetic/fuelrod/blitz/on_impact(var/atom/A)
-	if(is_turf(loc))
+	if(isturf(loc))
 		explosion(loc, 3, 4, 5, 10)
 	..(A)
 
@@ -34,7 +34,7 @@
 	var/mob/living/M = target
 	if(istype(M) && M.maxHealth<=200)
 		M.dust()
-	if(is_turf(loc))
+	if(isturf(loc))
 		explosion(loc, 3, 4, 5, 10)
 	visible_message(span_warning("\The [src] impacts energetically with its target and shatters in a violent explosion!"))
 	..(target, blocked, def_zone)
