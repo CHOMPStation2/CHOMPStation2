@@ -84,7 +84,7 @@
 		"organ_ripper",
 		"bone_clamp",
 		"roller_bed",
-		"medical_holosign", //CHOMPEDIT Add - Medical Holosign
+		"medical_holosign",
 		// "smoke_machine",
 		// "healthanalyzer_advanced",
 		// "mod_health_analyzer",

@@ -5270,8 +5270,6 @@
 #include "modular_chomp\code\modules\planet\tyr.dm"
 #include "modular_chomp\code\modules\planet\smokestar\turf.dm"
 #include "modular_chomp\code\modules\player_tips\player_tips_list.dm"
-#include "modular_chomp\code\modules\power\cells\device_cells.dm"
-#include "modular_chomp\code\modules\power\cells\power_cells.dm"
 #include "modular_chomp\code\modules\projectiles\gun.dm"
 #include "modular_chomp\code\modules\projectiles\mob.dm"
 #include "modular_chomp\code\modules\projectiles\projectile.dm"
