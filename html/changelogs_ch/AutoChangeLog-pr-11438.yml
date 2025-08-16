@@ -1,0 +1,5 @@
+author: "CHOMPStation2StaffMirrorBot"
+delete-after: True
+changes:
+  - rscdel: "removed some of the old (non-functional) irc code"
+  - code_imp: "removed some unticked DM files"
