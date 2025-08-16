@@ -5,8 +5,13 @@
 /obj/item/cell
 	name = "power cell"
 	desc = "A rechargable electrochemical power cell."
+<<<<<<< HEAD
 	icon = 'modular_chomp/icons/obj/power_cells.dmi' //CHOMP Edit using modular folders now
 	icon_state = "b_st" //CHOMP Edit
+=======
+	icon = 'icons/obj/power_cells_old.dmi' //swap to 'icons/obj/power_cells_.dmi' for new sprites.
+	icon_state = "b_st"
+>>>>>>> 9284d48a9d (New batteries (#18193))
 	item_state = "cell"
 	origin_tech = list(TECH_POWER = 1)
 	force = 5.0
