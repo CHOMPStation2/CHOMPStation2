@@ -397,7 +397,7 @@ GLOBAL_LIST_EMPTY(additional_antag_types)
 	if(escaped_on_cryopod > 0) //CHOMP Add
 		feedback_set("escaped_on_cryopod",escaped_on_cryopod)
 
-	send2mainirc("A round of [src.name] has ended - [surviving_total] survivors, [ghosts] ghosts.")
+	// send2mainirc("A round of [src.name] has ended - [surviving_total] survivors, [ghosts] ghosts.")
 	SSwebhooks.send(
 		WEBHOOK_ROUNDEND,
 		list(
