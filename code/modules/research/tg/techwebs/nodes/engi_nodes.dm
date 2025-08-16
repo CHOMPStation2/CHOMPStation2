@@ -58,7 +58,11 @@
 		"phasic_sensor",
 		"ultra_micro_laser",
 		"hyper_cell",
+<<<<<<< HEAD
 		"super_device", //CHOMPEDIT Add - Adds super device cell.
+=======
+		"hyper_device_cell",
+>>>>>>> f10c130c0d (More techweb adjustments (#18191))
 		"arped",
 	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_3_POINTS)
