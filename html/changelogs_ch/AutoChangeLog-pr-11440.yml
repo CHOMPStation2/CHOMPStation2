@@ -1,0 +1,4 @@
+author: "Willburd"
+delete-after: True
+changes:
+  - bugfix: "roundstart loyalty implant code will no longer ignore the config file"
