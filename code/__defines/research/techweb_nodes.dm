@@ -111,6 +111,8 @@
 #define TECHWEB_NODE_PARTS_HYPER "parts_hyper"
 #define TECHWEB_NODE_PARTS_OMNI "parts_omni"
 #define TECHWEB_NODE_PARTS_UPG "parts_upg"
+#define TECHWEB_NODE_PARTS_EMP_PROOF "parts_empproof"
+#define TECHWEB_NODE_PARTS_RECHARGING "parts_recharging"
 #define TECHWEB_NODE_PASSIVE_IMPLANTS "passive_implants"
 #define TECHWEB_NODE_PLASMA_CONTROL "plasma_control"
 #define TECHWEB_NODE_PLASMA_MINING "plasma_mining"
@@ -139,13 +141,11 @@
 #define TECHWEB_NODE_TELECOMS "telecoms"
 #define TECHWEB_NODE_UNREGULATED_BLUESPACE "unregulated_bluespace"
 #define TECHWEB_NODE_XENOBIOLOGY "xenobiology"
+#define TECHWEB_NODE_TELEPORTER "teleporter"
+#define TECHWEB_NODE_CONFETTI "confetti"
 
 //CHOMPEDIT Start - Chomp Specific techwebs.
 #define TECHWEB_NODE_PHASE_WEAPONS "phase_weapons" //CHOMPEDIT ADD - Adds Phase Weaponry
-#define TECHWEB_NODE_PARTS_EMP_PROOF "parts_empproof" //CHOMPEDIT - Adds EMP-Proof Parts
-#define TECHWEB_NODE_PARTS_RECHARGING "parts_recharging" //CHOMPEDIT - Adds recharging Parts
-#define TECHWEB_NODE_TELEPORTER "teleporter" //CHOMPEDIT - Adds Teleporter
-#define TECHWEB_NODE_CONFETTI "confetti" //CHOMPEDIT Add - Adds Confetti Cannon
 #define TECHWEB_NODE_CRYOGUN "cryogun" //CHOMPEDIT Add - Adds Cryogun
 #define TECHWEB_NODE_CASELESS_RIFLE "caseless_rifle" //CHOMPEDIT Add - Adds Caseless Rifle
 #define TECHWEB_NODE_METAMORPHOSIS_RAY "metamorphosis_ray" //CHOMPEDIT Add - Adds Caseless Rifle
