@@ -1,0 +1,5 @@
+author: "CHOMPStation2StaffMirrorBot"
+delete-after: True
+changes:
+  - qol: "Cargo can make batteries"
+  - rscadd: "Hyper device cell can be researched and created"
