@@ -357,7 +357,7 @@
 				log_admin("[key_name_admin(usr)] has de-loyalty implanted [current].")
 			if("add")
 				to_chat(H, span_danger(span_large("You somehow have become the recepient of a loyalty transplant, and it just activated!")))
-				H.implant_loyalty(override = TRUE)
+				H.implant_loyalty(TRUE)
 				log_admin("[key_name_admin(usr)] has loyalty implanted [current].")
 
 	else if (href_list["silicon"])
