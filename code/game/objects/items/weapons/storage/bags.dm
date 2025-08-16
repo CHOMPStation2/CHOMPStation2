@@ -448,7 +448,12 @@
 	max_storage_space = 200
 	w_class = ITEMSIZE_LARGE
 	slowdown = 1 //you probably shouldn't be running with chemicals
+<<<<<<< HEAD
 	can_hold = list(/obj/item/reagent_containers/pill,/obj/item/reagent_containers/glass/beaker,/obj/item/reagent_containers/glass/bottle, /obj/item/reagent_containers/hypospray/autoinjector/) // CHOMPEdit - Adds autoinjectors to the bag
+=======
+	can_hold = list(/obj/item/reagent_containers/pill,/obj/item/reagent_containers/glass/beaker,/obj/item/reagent_containers/glass/bottle)
+	slot_flags = null
+>>>>>>> f6fe07eac8 (clothing _vr dmi cleanup: backpacks, bags, and belts (#18232))
 
 // -----------------------------
 //           Xeno Bag
