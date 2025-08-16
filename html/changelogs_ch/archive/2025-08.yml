@@ -341,3 +341,30 @@
       today for 10,000 mining points!
   Will:
   - bugfix: Boombase and death den active edges fixed.
+2025-08-16:
+  CHOMPStation2StaffMirrorBot:
+  - code_imp: cleans up tgui again
+  - qol: adds spellcheck pref
+  Cameron-The-Raven:
+  - bugfix: Optimizes visible_message code. Massively improves server performance.
+  Diana:
+  - bugfix: C-shift clowns will properly delete their component on death.
+  - bugfix: Walls will no longer runtime when spam-clicked with tools.
+  - bugfix: Grippers will no longer delete things when your inventory is full
+  - code_imp: Gripper code is more readable.
+  FluffMedic:
+  - rscadd: New Gateway added
+  - rscadd: Tyr is now different, having four new bosses currently with more to come,
+      alongside a slow expansion to the ship graveyard, but nothing new in that regard.
+      You will need a friend
+  Guti:
+  - bugfix: Fixes hands becoming white after washed when blodied
+  Kash:
+  - code_imp: Chat spritesheet now instantly loads, preventing a double generation
+      on slower CPUs
+  TheCaramelion:
+  - maptweak: Fixed Deck 0's discreet teleporter
+  Will:
+  - rscadd: Refinery mixing machine for use with refinery pumps
+  - bugfix: Refinery machines use the sending machine's transfer value and not the
+      receiving machine
