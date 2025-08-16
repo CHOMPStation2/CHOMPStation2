@@ -921,6 +921,18 @@
 	)
 	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE | DEPARTMENT_BITFLAG_SERVICE
 
+
+/datum/design_techweb/floor_painter
+	name = "Floor Painter"
+	id = "floor_painter"
+	materials = list(MAT_STEEL = 3000, MAT_GLASS = 500)
+	build_path = /obj/item/floor_painter
+	build_type = PROTOLATHE
+	category = list(
+		RND_CATEGORY_MACHINE
+	)
+	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE | DEPARTMENT_BITFLAG_SERVICE
+
 /datum/design_techweb/medical_holosign
 	name = "Medical Holosign"
 	id = "medical_holosign"
