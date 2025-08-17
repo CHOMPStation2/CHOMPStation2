@@ -1,0 +1,4 @@
+author: "Drathek"
+delete-after: True
+changes:
+  - code_imp: "Energy weapons now use cached_icon_states for fallback icon behavior"
