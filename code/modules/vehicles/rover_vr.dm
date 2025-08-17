@@ -38,15 +38,9 @@
 	icon_state = "dunebug"
 
 /obj/item/key/rover
-<<<<<<< HEAD
 	name = "\improper ignition key" //CHOMPedit: Name update
 	desc = "A universal electronic tri-key for starting most Nanotrasen vehicles." //CHOMPedit: Desc update
-	icon = 'icons/obj/vehicles_vr.dmi'
-=======
-	name = "The Rover key"
-	desc = "The Rover key used to start it."
 	icon = 'icons/obj/vehicles.dmi'
->>>>>>> 0e24446f12 (Icon Fixup [IDB IGNORE] (#18284))
 	icon_state = "securikey"
 	w_class = ITEMSIZE_TINY
 

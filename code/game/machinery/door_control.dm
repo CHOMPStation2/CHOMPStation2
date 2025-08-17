@@ -152,7 +152,7 @@
 //CHOMP Add start
 /obj/machinery/button/remote/blast_door/bear
 	name = "stuffed bear"
-	icon = 'icons/obj/stationobjs_vr.dmi'
+	icon = 'icons/obj/stationobjs.dmi'
 	icon_state = "stuffedbear"
 	desc = "A stuffed and mounted bear. Quite a statement piece, but holds a curious glare."
 	density = 1
@@ -194,9 +194,8 @@
 /obj/machinery/button/remote/emitter/trigger(mob/user as mob)
 	for(var/obj/machinery/power/emitter/E in GLOB.machines)
 		if(E.id == id)
-			spawn(0)
-				E.activate(user)
-				return
+			E.activate(user)
+			return
 
 /*
 	Mass driver remote control
@@ -213,9 +212,8 @@
 
 	for(var/obj/machinery/door/blast/M in GLOB.machines)
 		if(M.id == id)
-			spawn(0)
-				M.open()
-				return
+			M.open()
+			return
 
 	sleep(20)
 
@@ -227,9 +225,8 @@
 
 	for(var/obj/machinery/door/blast/M in GLOB.machines)
 		if(M.id == id)
-			spawn(0)
-				M.close()
-				return
+			M.close()
+			return
 
 	icon_state = "launcherbtt"
 	update_icon()
