@@ -47,3 +47,8 @@
 	//damage = 5
 	mob_bonus_damage = 35
 	armor_penetration = 0
+
+/obj/item/gun/energy/Initialize(mapload)
+	if(icon == 'icons/obj/gun_ch.dmi' && !(icon_state in cached_icon_states('icons/obj/gun_ch.dmi')))
+		icon = 'icons/obj/gun.dmi'
+	return ..()

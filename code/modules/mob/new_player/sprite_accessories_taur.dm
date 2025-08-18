@@ -576,7 +576,7 @@
 /datum/sprite_accessory/tail/taur/feline
 	name = "Feline (Taur)"
 	icon_state = "feline_s"
-	suit_sprites = 'icons/mob/taursuits_feline.dmi'
+	suit_sprites = 'icons/mob/taursuits_deer.dmi'
 	icon_sprite_tag = "feline"
 	can_loaf = TRUE
 	icon_loaf = 'icons/mob/vore/taurs_loaf.dmi'
@@ -658,7 +658,7 @@
 /datum/sprite_accessory/tail/taur/tiger
 	name = "Tiger (Taur)"
 	icon_state = "tiger_s"
-	suit_sprites = 'icons/mob/taursuits_feline.dmi'
+	suit_sprites = 'icons/mob/taursuits_deer.dmi'
 	icon_sprite_tag = "feline"
 	extra_overlay = "tiger_markings"
 	extra_overlay2 = "tiger_markings_2"
@@ -710,7 +710,7 @@
 /datum/sprite_accessory/tail/taur/slug
 	name = "Slug (Taur)"
 	icon_state = "slug_s"
-	suit_sprites = 'icons/mob/taursuits_slug.dmi'
+	suit_sprites = 'icons/mob/taursuits_deer.dmi' //Yes it sounds odd, but they share the same sprites.
 	icon_sprite_tag = "slug"
 	vore_tail_sprite_variant = "Slug"
 	fullness_icons = 1
