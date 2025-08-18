@@ -104,7 +104,7 @@
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_3_POINTS)
 	announce_channels = list(CHANNEL_SCIENCE)
 
-/* Decided that we were not keen on this being able to be printed freely as we immediately saw undesirable behaviour
+// Decided that we were not keen on this being able to be printed freely as we immediately saw undesirable behaviour //CHOMPEdit - Re-enable
 /datum/techweb_node/telekinetics
 	id = TECHWEB_NODE_TELEKINETIC_RESEARCH
 	display_name = "Applied Telekinetics Research"
@@ -115,4 +115,4 @@
 	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_4_POINTS)
 	announce_channels = list(CHANNEL_SCIENCE)
-*/
+// //CHOMPEdit - Re-enable
