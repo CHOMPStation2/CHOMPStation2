@@ -4143,6 +4143,9 @@
 	dir = 1;
 	pixel_y = -26
 	},
+/obj/vehicle/train/engine{
+	dir = 1
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/engineering/refinery/lobby)
 "iQ" = (
@@ -4152,11 +4155,13 @@
 	name = "Station Intercom (General)";
 	pixel_y = -21
 	},
+/obj/vehicle/train/trolley_tank,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/engineering/refinery/lobby)
 "iR" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/yellow/border,
+/obj/vehicle/train/trolley_tank,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/engineering/refinery/lobby)
 "iS" = (
@@ -4199,10 +4204,12 @@
 /turf/simulated/floor/plating,
 /area/surface/outpost/engineering/refinery/smes)
 "iV" = (
-/obj/machinery/atmospherics/pipe/manifold/visible/cyan,
 /obj/item/radio/intercom{
 	name = "Station Intercom (General)";
 	pixel_y = -21
+	},
+/obj/machinery/atmospherics/pipe/simple/visible/cyan{
+	dir = 8
 	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/engineering/refinery/smes)
@@ -4270,6 +4277,20 @@
 /obj/effect/floor_decal/corner/yellow/border{
 	dir = 8
 	},
+/obj/machinery/power/thermoregulator/southerncross{
+	name = "Thermal Regulator";
+	dir = 4;
+	pixel_x = -30
+	},
+/obj/structure/closet/crate{
+	name = "frame crate"
+	},
+/obj/item/frame,
+/obj/item/frame,
+/obj/item/frame,
+/obj/item/frame,
+/obj/item/frame,
+/obj/structure/cable/blue,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/engineering/refinery/lobby)
 "jf" = (
@@ -4288,19 +4309,20 @@
 /obj/effect/floor_decal/corner/yellow/border{
 	dir = 4
 	},
+/obj/machinery/pump,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/engineering/refinery/lobby)
 "ji" = (
-/obj/machinery/portable_atmospherics/canister/empty,
 /obj/effect/floor_decal/industrial/outline,
 /obj/machinery/atmospherics/portables_connector{
 	dir = 4
 	},
+/obj/machinery/portable_atmospherics/canister/empty,
 /turf/simulated/floor/plating,
 /area/surface/outpost/engineering/refinery/smes)
 "jj" = (
-/obj/machinery/atmospherics/pipe/manifold/visible{
-	dir = 4
+/obj/machinery/atmospherics/pipe/simple/visible{
+	dir = 9
 	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/engineering/refinery/smes)
@@ -4370,6 +4392,9 @@
 /obj/machinery/light{
 	dir = 8
 	},
+/obj/structure/cable/blue{
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/engineering/refinery/lobby)
 "js" = (
@@ -4384,6 +4409,7 @@
 /obj/machinery/light{
 	dir = 4
 	},
+/obj/machinery/pump_relay,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/engineering/refinery/lobby)
 "ju" = (
@@ -4467,6 +4493,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
+/obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/engineering/refinery/atmos)
 "jD" = (
@@ -4484,6 +4511,9 @@
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 1
+	},
+/obj/structure/cable/blue{
+	icon_state = "2-4"
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/engineering/refinery/lobby)
@@ -4556,6 +4586,7 @@
 	name = "Generator Room";
 	req_one_access = list(12,47)
 	},
+/obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/engineering/refinery/smes)
 "jJ" = (
@@ -4699,7 +4730,6 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/obj/machinery/space_heater,
 /turf/simulated/floor/plating,
 /area/surface/outpost/engineering/refinery/smes)
 "kc" = (
@@ -4813,6 +4843,7 @@
 /obj/structure/sign/nosmoking_1{
 	pixel_y = 32
 	},
+/obj/fiftyspawner/plastic,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/engineering/refinery/lobby)
 "km" = (
@@ -4900,6 +4931,7 @@
 	dir = 10
 	},
 /obj/machinery/camera/network/engineering_outpost,
+/obj/machinery/space_heater,
 /turf/simulated/floor/plating,
 /area/surface/outpost/engineering/refinery/smes)
 "kt" = (
@@ -4915,6 +4947,7 @@
 /obj/machinery/door/airlock/glass_engineering{
 	name = "Refinery Lobby"
 	},
+/obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/tiled,
 /area/surface/outpost/engineering/refinery/lobby)
 "kw" = (
@@ -4944,19 +4977,23 @@
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
 	},
-/turf/simulated/mineral/floor/ignore_mapgen/sif,
+/turf/simulated/floor/plating{
+	icon_state = "asteroidplating2";
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/surface/outpost/engineering/refinery)
 "kC" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "1-4"
 	},
-/turf/simulated/mineral/floor/ignore_mapgen/sif,
-/area/surface/outpost/mining_main/cave)
-"kD" = (
-/obj/structure/cable/heavyduty{
-	icon_state = "4-8"
+/turf/simulated/floor/plating{
+	icon_state = "asteroidplating2";
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
 	},
-/turf/simulated/mineral/floor/ignore_mapgen/sif,
 /area/surface/outpost/mining_main/cave)
 "kE" = (
 /obj/effect/zone_divider,
@@ -4980,7 +5017,15 @@
 /obj/structure/cable/heavyduty{
 	icon_state = "0-4"
 	},
-/turf/simulated/mineral/floor/ignore_mapgen/sif,
+/obj/machinery/light_switch{
+	pixel_x = -36
+	},
+/turf/simulated/floor/plating{
+	icon_state = "asteroidplating2";
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/surface/outpost/engineering/refinery)
 "kI" = (
 /obj/structure/cable/heavyduty{
@@ -4989,14 +5034,13 @@
 /obj/structure/cable/heavyduty{
 	icon_state = "1-8"
 	},
-/turf/simulated/mineral/floor/ignore_mapgen/sif,
-/area/surface/outpost/engineering/refinery)
-"kJ" = (
-/obj/structure/cable/heavyduty{
-	icon_state = "1-2"
+/turf/simulated/floor/plating{
+	icon_state = "asteroidplating2";
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
 	},
-/turf/simulated/mineral/floor/ignore_mapgen/sif,
-/area/surface/outpost/mining_main/cave)
+/area/surface/outpost/engineering/refinery)
 "kK" = (
 /obj/effect/zone_divider,
 /obj/effect/floor_decal/industrial/warning/dust{
@@ -5053,19 +5097,34 @@
 /obj/structure/cable/heavyduty{
 	icon_state = "2-4"
 	},
-/turf/simulated/mineral/floor/ignore_mapgen/sif,
+/turf/simulated/floor/plating{
+	icon_state = "asteroidplating2";
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/surface/outpost/engineering/refinery)
 "kS" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
 	},
-/turf/simulated/mineral/floor/ignore_mapgen/sif,
+/turf/simulated/floor/plating{
+	icon_state = "asteroidplating2";
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/surface/outpost/engineering/refinery)
 "kT" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "2-8"
 	},
-/turf/simulated/mineral/floor/ignore_mapgen/sif,
+/turf/simulated/floor/plating{
+	icon_state = "asteroidplating2";
+	nitrogen = 93.7835;
+	oxygen = 20.7263;
+	temperature = 243.15
+	},
 /area/surface/outpost/mining_main/cave)
 "kU" = (
 /obj/machinery/reagent_refinery/reactor,
@@ -5162,6 +5221,31 @@
 "lg" = (
 /obj/effect/floor_decal/industrial/warning/dust{
 	dir = 1
+	},
+/turf/simulated/floor/tiled/asteroid_steel{
+	temperature = 243.15
+	},
+/area/surface/outpost/engineering/refinery)
+"lh" = (
+/obj/item/storage/box,
+/turf/simulated/floor/tiled,
+/area/surface/outpost/engineering/refinery/lobby)
+"li" = (
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 9
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/surface/outpost/engineering/refinery/lobby)
+"lj" = (
+/obj/machinery/pump,
+/turf/simulated/mineral/floor/ignore_mapgen/sif,
+/area/surface/outpost/engineering/refinery)
+"lk" = (
+/obj/machinery/reagent_refinery/pump{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/asteroid_steel{
 	temperature = 243.15
@@ -31367,7 +31451,7 @@ kL
 kL
 kL
 kL
-kL
+lk
 kL
 kL
 kL
@@ -31378,7 +31462,7 @@ kF
 kz
 hD
 kk
-jf
+lh
 jE
 jf
 jf
@@ -31893,7 +31977,7 @@ kL
 kF
 kz
 kv
-jf
+li
 jV
 jF
 js
@@ -33952,7 +34036,7 @@ ae
 kz
 kz
 kS
-kz
+lj
 ae
 ae
 ae
@@ -34468,9 +34552,9 @@ jO
 jO
 jO
 kT
-kJ
-kJ
-kJ
+in
+in
+in
 kC
 iG
 iG
@@ -34729,7 +34813,7 @@ jO
 jO
 jO
 jO
-kD
+VK
 jO
 ae
 ae
@@ -34987,7 +35071,7 @@ ku
 ku
 jO
 jO
-kD
+VK
 jO
 jO
 ae
@@ -35245,7 +35329,7 @@ ku
 ku
 ku
 jO
-kD
+VK
 jO
 ku
 jO
@@ -35503,7 +35587,7 @@ ku
 jO
 jO
 jO
-kD
+VK
 ku
 ku
 jO
@@ -35761,7 +35845,7 @@ jO
 jO
 jO
 jO
-kD
+VK
 jO
 jO
 jO
