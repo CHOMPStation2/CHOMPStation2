@@ -26,11 +26,7 @@ GLOBAL_LIST_EMPTY(solars_list)
 	var/turn_angle = 0
 	var/obj/machinery/power/solar_control/control = null
 	var/glass_type = /obj/item/stack/material/glass
-<<<<<<< HEAD
-	var/SOLAR_MAX_DIST = 60		//VOREStation Addition //ChompEDIT - ours are >40 away
-=======
-	var/SOLAR_MAX_DIST = 40
->>>>>>> ae98b3b736 (Goodbye sun (#18291))
+	var/SOLAR_MAX_DIST = 60 //ChompEDIT - ours are >40 away
 
 /obj/machinery/power/solar/drain_power()
 	return -1
