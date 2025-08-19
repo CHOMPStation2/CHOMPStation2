@@ -1,137 +1,146 @@
 2023-07-17:
   Aroliacue:
-  - rscadd: 'Adds alt job title for secretary: Bridge Officer'
-  - rscadd: Adds some start gear for Bridge Officer title
+    - rscadd: "Adds alt job title for secretary: Bridge Officer"
+    - rscadd: Adds some start gear for Bridge Officer title
 2023-07-18:
   Aroliacue:
-  - qol: Upped Cyborg job limit from 4 to 8.
+    - qol: Upped Cyborg job limit from 4 to 8.
   FluffMedic:
-  - bugfix: fixes the coloring of a medkit.
-  - rscadd: 'Balance: Swaps an item to the proper version'
+    - bugfix: fixes the coloring of a medkit.
+    - rscadd: "Balance: Swaps an item to the proper version"
   FoxglovePurpur:
-  - bugfix: Fix a typo in 'posessed'
+    - bugfix: Fix a typo in 'posessed'
   Jesseman1:
-  - rscadd: Added new orca tail and markings.
-  - bugfix: Updated female orca markings to display as intended.
+    - rscadd: Added new orca tail and markings.
+    - bugfix: Updated female orca markings to display as intended.
   Raeschen:
-  - bugfix: change 'Show Game Updates' button to 'Show Server News'
-  - rscadd: Adds changelog button to new_player screen, with highlight behavior if
-      there are new changes since you last viewed
-  - bugfix: fix bug with 'changelog_hash' var not being set properly
-  - bugfix: fix changelog tgui links to be correct
-  - bugfix: remove species-locked customisaiton options for xeno heads(hair) and shadekin
-      hair
-  - bugfix: removes some missed fluff items
+    - bugfix: change 'Show Game Updates' button to 'Show Server News'
+    - rscadd:
+        Adds changelog button to new_player screen, with highlight behavior if
+        there are new changes since you last viewed
+    - bugfix: fix bug with 'changelog_hash' var not being set properly
+    - bugfix: fix changelog tgui links to be correct
+    - bugfix:
+        remove species-locked customisaiton options for xeno heads(hair) and shadekin
+        hair
+    - bugfix: removes some missed fluff items
   Scarlet-Oduko:
-  - rscadd: adds a new cult faction
+    - rscadd: adds a new cult faction
   UniquaSa:
-  - imageadd: Tallborgs finally receive some bellies, Thank you Kcin!
+    - imageadd: Tallborgs finally receive some bellies, Thank you Kcin!
   Upstream:
-  - bugfix: PDA records missing linebreaks & fixes communicator weather app gibberish
+    - bugfix: PDA records missing linebreaks & fixes communicator weather app gibberish
 2023-07-19:
   Raeschen:
-  - bugfix: start menu consistency/redesign
-  - bugfix: Show server news (NEW) now resets on read
-  - bugfix: fix a runtime in inducer.vr
-  - bugfix: fixed weird savefile behavior when done before roundstart
+    - bugfix: start menu consistency/redesign
+    - bugfix: Show server news (NEW) now resets on read
+    - bugfix: fix a runtime in inducer.vr
+    - bugfix: fixed weird savefile behavior when done before roundstart
   Upstream:
-  - rscadd: adds ui buttons for language panel, pose, move up, move down, and using
-      objects on self
+    - rscadd:
+        adds ui buttons for language panel, pose, move up, move down, and using
+        objects on self
   VictorZisthus:
-  - rscadd: HoS now has a fun new gun at round-start!
-  - bugfix: fixed a few missing things from several closets.
+    - rscadd: HoS now has a fun new gun at round-start!
+    - bugfix: fixed a few missing things from several closets.
 2023-07-20:
   Aroliacue:
-  - rscadd: 'balance: Stun Batons can now disrupt solargrubs infesting machinery,
-      similar to a multitool.'
-  - balance: Combined the medical borg and surgeon borg modules into one.
-  - balance: Doubled medical borg's medicine capacity from 15,000 to 30,000.
-  - balance: medical borgs now have access to more basic chems from their hyposprays.
-  - balance: medihound hypospray no longer requires water to function.
-  - qol: Gave the medihound access to the remote crew monitor, which it was lacking.
+    - rscadd:
+        "balance: Stun Batons can now disrupt solargrubs infesting machinery,
+        similar to a multitool."
+    - balance: Combined the medical borg and surgeon borg modules into one.
+    - balance: Doubled medical borg's medicine capacity from 15,000 to 30,000.
+    - balance: medical borgs now have access to more basic chems from their hyposprays.
+    - balance: medihound hypospray no longer requires water to function.
+    - qol: Gave the medihound access to the remote crew monitor, which it was lacking.
   FluffMedic:
-  - rscadd: 'adds: a new event'
-  - rscadd: 'adds: 3 new mobs similiar to solar moth, tied with the event'
-  - rscadd: 'adds: Event_container_CH, disabled the VR version'
+    - rscadd: "adds: a new event"
+    - rscadd: "adds: 3 new mobs similiar to solar moth, tied with the event"
+    - rscadd: "adds: Event_container_CH, disabled the VR version"
   Raeschen:
-  - rscadd: xeno & a few shadekin hairstyles unlocked for all
+    - rscadd: xeno & a few shadekin hairstyles unlocked for all
   Upstream:
-  - rscadd: Adds 'twin drills long' hair
-  - bugfix: Renames custom subtle back to subtle (Custom)
-  - rscadd: cooldown on 'use item on self' UI button (not the hotkey)
-  - bugfix: mouse-hole interactions
-  - rscadd: adds a recolorable flannel jacket to loadout
+    - rscadd: Adds 'twin drills long' hair
+    - bugfix: Renames custom subtle back to subtle (Custom)
+    - rscadd: cooldown on 'use item on self' UI button (not the hotkey)
+    - bugfix: mouse-hole interactions
+    - rscadd: adds a recolorable flannel jacket to loadout
 2023-07-21:
   Raeschen:
-  - bugfix: fixed a bad MekaSCI iconstate
-  - bugfix: fix a bad tallborg icon_state
-  - bugfix: '''No shoes'' loadout option is now specie-unrestricted.'
+    - bugfix: fixed a bad MekaSCI iconstate
+    - bugfix: fix a bad tallborg icon_state
+    - bugfix: "'No shoes' loadout option is now specie-unrestricted."
 2023-07-22:
   FluffMedic:
-  - balance: Made it so hadzardzone and it's alts are less lethal and their safes
-      are more rewarding.
+    - balance:
+        Made it so hadzardzone and it's alts are less lethal and their safes
+        are more rewarding.
   kcin2001:
-  - bugfix: pixelshifting not working right on wideborgs
-  - bugfix: boozehound sprite changing not working
-  - rscadd: Added gold tag collar to looty inc.
-  - bugfix: fixed silver tag collar being the wrong item in looty inc.
+    - bugfix: pixelshifting not working right on wideborgs
+    - bugfix: boozehound sprite changing not working
+    - rscadd: Added gold tag collar to looty inc.
+    - bugfix: fixed silver tag collar being the wrong item in looty inc.
 2023-07-23:
   kcin2001:
-  - bugfix: reset module being borg
+    - bugfix: reset module being borg
 2023-07-24:
   FluffMedic:
-  - bugfix: volcanic tiles not showing up in map edit
-  - rscadd: sergal sprites to the xenotech/xenoweave/precursor rig
+    - bugfix: volcanic tiles not showing up in map edit
+    - rscadd: sergal sprites to the xenotech/xenoweave/precursor rig
   kcin2001:
-  - bugfix: crisis borg being broken
+    - bugfix: crisis borg being broken
 2023-07-25:
   FluffMedic:
-  - imageadd: Teshari now have a precursor rig sprite
+    - imageadd: Teshari now have a precursor rig sprite
   Raeschen:
-  - bugfix: criminal detected
+    - bugfix: criminal detected
   UniquaSa:
-  - rscadd: Unity MEKA is now a thing
+    - rscadd: Unity MEKA is now a thing
 2023-07-26:
   Raeschen:
-  - rscadd: mgeow
-  - soundadd: mgeow
+    - rscadd: mgeow
+    - soundadd: mgeow
   UniquaSa:
-  - rscadd: Unity NIKA and NIKO has been added
-  - bugfix: Fixed cargo NIKA's eyes and MEKA's eyes when their lights are switched
-      on.
+    - rscadd: Unity NIKA and NIKO has been added
+    - bugfix:
+        Fixed cargo NIKA's eyes and MEKA's eyes when their lights are switched
+        on.
   VictorZisthus:
-  - bugfix: Fixed an issue where Promethean's were taking toxins when consuming blood.
-      Eat away at it now!
+    - bugfix:
+        Fixed an issue where Promethean's were taking toxins when consuming blood.
+        Eat away at it now!
 2023-07-27:
   Verkister:
-  - bugfix: Fixed grille sprites being jank and ugly
-  - bugfix: fixed missing grille subtype icons
+    - bugfix: Fixed grille sprites being jank and ugly
+    - bugfix: fixed missing grille subtype icons
 2023-07-28:
   kcin2001:
-  - bugfix: fancy raptor using wrong sprite
+    - bugfix: fancy raptor using wrong sprite
 2023-07-29:
   Jesseman1:
-  - rscadd: Radiation Immunity positive trait
+    - rscadd: Radiation Immunity positive trait
 2023-07-30:
   Upstream:
-  - rscadd: recolorable fingerless gloves
-  - rscadd: HYPER boxers, briefs
-  - admin: Adds AI reinitialisation/editing in VV menu
-  - admin: '''Triggerable landmarks'' for events'
-  - rscadd: Adds staves. Craftable from most metal sheets.
+    - rscadd: recolorable fingerless gloves
+    - rscadd: HYPER boxers, briefs
+    - admin: Adds AI reinitialisation/editing in VV menu
+    - admin: "'Triggerable landmarks' for events"
+    - rscadd: Adds staves. Craftable from most metal sheets.
   Verkister:
-  - rscadd: Added dynamic belly mush overlay system.
-  - rscadd: Added per-belly setting buttons for custom liquid/mush colors and transparency.
-  - rscadd: Added a simple vorepanel prey interaction for a basic health/maxhealth
-      check.
-  - bugfix: fixed liquidbelly reagents getting erased by swallowed sauce packets and
-      such.
+    - rscadd: Added dynamic belly mush overlay system.
+    - rscadd: Added per-belly setting buttons for custom liquid/mush colors and transparency.
+    - rscadd:
+        Added a simple vorepanel prey interaction for a basic health/maxhealth
+        check.
+    - bugfix:
+        fixed liquidbelly reagents getting erased by swallowed sauce packets and
+        such.
 2023-07-31:
   Aroliacue:
-  - rscadd: New Exploration Carrier.
-  - rscadd: New sound effects for phase weapons.
-  - rscadd: New Humvee for exploration.
+    - rscadd: New Exploration Carrier.
+    - rscadd: New sound effects for phase weapons.
+    - rscadd: New Humvee for exploration.
   Upstream:
-  - rscadd: 'tweak: Make staves only able to block melee attacks'
+    - rscadd: "tweak: Make staves only able to block melee attacks"
   Verkister:
-  - rscadd: Added liquidbelly setting for maximum liquid overlay level.
+    - rscadd: Added liquidbelly setting for maximum liquid overlay level.

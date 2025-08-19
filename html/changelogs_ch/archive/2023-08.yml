@@ -1,232 +1,259 @@
 2023-08-01:
   FoxglovePurpur:
-  - qol: Lunchbox Loadout cost from 2 to 0
-  - rscadd: Pocket sized double nitrogen tank (Customs)
-  - rscadd: Pocket sized double phoron tank (Vox, Customs)
-  - rscadd: A Syringe Case in the CMO's office for "Clonemed". The case has three
-      injectors.
-  - rscadd: Syringe Gun Shelf in Secondary Storage as well as BrainSnax for taking
-      care of feral xenochimeras.
-  - qol: Gave Security Visors proper AR vision.
-  - maptweak: Moved the camera and sink in Medical Secondary Storage.
-  - maptweak: Replaced the Visible pipes with Hidden pipes and cleaned up a bit.
+    - qol: Lunchbox Loadout cost from 2 to 0
+    - rscadd: Pocket sized double nitrogen tank (Customs)
+    - rscadd: Pocket sized double phoron tank (Vox, Customs)
+    - rscadd:
+        A Syringe Case in the CMO's office for "Clonemed". The case has three
+        injectors.
+    - rscadd:
+        Syringe Gun Shelf in Secondary Storage as well as BrainSnax for taking
+        care of feral xenochimeras.
+    - qol: Gave Security Visors proper AR vision.
+    - maptweak: Moved the camera and sink in Medical Secondary Storage.
+    - maptweak: Replaced the Visible pipes with Hidden pipes and cleaned up a bit.
   Seris02:
-  - qol: improved language scrambling with punctuation, etc
-  - bugfix: fixed mech/in-object targetting
+    - qol: improved language scrambling with punctuation, etc
+    - bugfix: fixed mech/in-object targetting
   Verkister:
-  - rscadd: Added support for simple taur bellysprites.
-  - rscadd: Added a bunch of those simple bellysprites.
-  - bugfix: Fixed another case of certain reagent containers erasing liquidbelly contents.
+    - rscadd: Added support for simple taur bellysprites.
+    - rscadd: Added a bunch of those simple bellysprites.
+    - bugfix: Fixed another case of certain reagent containers erasing liquidbelly contents.
 2023-08-02:
   FoxglovePurpur:
-  - qol: Engine Side SMES Maintenance now starts unbolted.
+    - qol: Engine Side SMES Maintenance now starts unbolted.
   Verkister:
-  - admin: Changed Remote LOOC logs to use a different color from normal LOOC logs.
-  - rscadd: Added belly overlay setting for contained items to affect the mush level.
-  - bugfix: Fixed belly overlay item mush level not working when starved to 0.
-  - bugfix: fixed drake taur belly bulge alignment.
+    - admin: Changed Remote LOOC logs to use a different color from normal LOOC logs.
+    - rscadd: Added belly overlay setting for contained items to affect the mush level.
+    - bugfix: Fixed belly overlay item mush level not working when starved to 0.
+    - bugfix: fixed drake taur belly bulge alignment.
 2023-08-03:
   Verkister:
-  - bugfix: fixed a bunch of janky mechanics around liquidbelly acid mechanics.
-  - rscadd: Added Big Leggies.
+    - bugfix: fixed a bunch of janky mechanics around liquidbelly acid mechanics.
+    - rscadd: Added Big Leggies.
 2023-08-04:
   Razgriz1032:
-  - rscadd: Riot control is now rad shielded.
-  - rscdel: Removed maint access and atmos access from riot control atmos door.
+    - rscadd: Riot control is now rad shielded.
+    - rscdel: Removed maint access and atmos access from riot control atmos door.
   Verkister:
-  - qol: Rearranged belly overlay color/preview buttons for better convenience.
+    - qol: Rearranged belly overlay color/preview buttons for better convenience.
 2023-08-05:
   FluffMedic:
-  - maptweak: changed SC's maint bar's empety dispenser to a filled one.
-  - maptweak: Added two straight jackets to medical's storage
-  - maptweak: Turned Hydro's caves turrets to buildable ones
+    - maptweak: changed SC's maint bar's empety dispenser to a filled one.
+    - maptweak: Added two straight jackets to medical's storage
+    - maptweak: Turned Hydro's caves turrets to buildable ones
   TheGreatKitsune:
-  - rscadd: Carbonkin will now automatically convert excess dark energy into nutrition,
-      and excess nutrition into dark energy
-  - rscadd: Bellies are now dark for shadekin
-  - rscadd: '<!-- Both :cl:''s are required for the changelog to work! You can put
-      your name to the right of the first :cl: if you want to overwrite your GitHub
-      username as author ingame. -->'
-  - rscadd: <!-- You can use multiple of the same prefix (they're only used for the
-      icon ingame) and delete the unneeded ones. Despite some of the tags, changelogs
-      should generally represent how a player might be affected by the changes rather
-      than a summary of the PR's contents. -->
+    - rscadd:
+        Carbonkin will now automatically convert excess dark energy into nutrition,
+        and excess nutrition into dark energy
+    - rscadd: Bellies are now dark for shadekin
+    - rscadd:
+        "<!-- Both :cl:'s are required for the changelog to work! You can put
+        your name to the right of the first :cl: if you want to overwrite your GitHub
+        username as author ingame. -->"
+    - rscadd:
+        <!-- You can use multiple of the same prefix (they're only used for the
+        icon ingame) and delete the unneeded ones. Despite some of the tags, changelogs
+        should generally represent how a player might be affected by the changes rather
+        than a summary of the PR's contents. -->
   Verkister:
-  - refactor: Reworked how egg belly mode functions.
-  - qol: More borg vore charge gains converted for nutrition. Also new ability verb
-      to check nutrition level.
-  - bugfix: Fixed belly icons not updating when transfering contents to iconless belly
-      and optimized fullness update call stacking.
+    - refactor: Reworked how egg belly mode functions.
+    - qol:
+        More borg vore charge gains converted for nutrition. Also new ability verb
+        to check nutrition level.
+    - bugfix:
+        Fixed belly icons not updating when transfering contents to iconless belly
+        and optimized fullness update call stacking.
 2023-08-06:
   BlackMajor:
-  - qol: RCD's have been given a significant useability tweak, including numerous
-      new construction modes and the capacity to deconstruct way more things.
-  - qol: RCD can now be reloaded with steel/plasteel/glass/reinforced glass/rods/tiles/borosilicate/reinforced
-      borosilicate
-  - qol: RCD can now construct everything a frame can when applied to a wall
-  - qol: RCD can now deconstruct those same wall mounted machines
-  - qol: RCD can now construct/deconstruct firelocks
-  - qol: RCD can now customise an airlock before deploying it
-  - qol: RCD can now construct/deconstruct conveyors
-  - qol: RCD can now place directional glass windows as well as full ones
-  - qol: RCD can now construct/deconstruct windoors
-  - qol: RCD can now place machine/computer frames
-  - qol: RCD will now target the grille/girder on the target turf when in the respective
-      mode instead of doing nothing
-  - rscadd: Added a janitorial holosign projector to the janitorial closet
-  - rscadd: Added an atmospherics holofan projector to the atmospherics lockers
-  - rscadd: Added an advanced RCD to the chief engineers locker
-  - bugfix: Fixed jank involving radial menu scaling and layering. Making them always
-      render at the proper scale, luminosity and plane.
+    - qol:
+        RCD's have been given a significant useability tweak, including numerous
+        new construction modes and the capacity to deconstruct way more things.
+    - qol:
+        RCD can now be reloaded with steel/plasteel/glass/reinforced glass/rods/tiles/borosilicate/reinforced
+        borosilicate
+    - qol: RCD can now construct everything a frame can when applied to a wall
+    - qol: RCD can now deconstruct those same wall mounted machines
+    - qol: RCD can now construct/deconstruct firelocks
+    - qol: RCD can now customise an airlock before deploying it
+    - qol: RCD can now construct/deconstruct conveyors
+    - qol: RCD can now place directional glass windows as well as full ones
+    - qol: RCD can now construct/deconstruct windoors
+    - qol: RCD can now place machine/computer frames
+    - qol:
+        RCD will now target the grille/girder on the target turf when in the respective
+        mode instead of doing nothing
+    - rscadd: Added a janitorial holosign projector to the janitorial closet
+    - rscadd: Added an atmospherics holofan projector to the atmospherics lockers
+    - rscadd: Added an advanced RCD to the chief engineers locker
+    - bugfix:
+        Fixed jank involving radial menu scaling and layering. Making them always
+        render at the proper scale, luminosity and plane.
   Verkister:
-  - bugfix: fixed belly reagent digestion generation overflow giving 4.5x more nutrition
-      than supposed to.
+    - bugfix:
+        fixed belly reagent digestion generation overflow giving 4.5x more nutrition
+        than supposed to.
 2023-08-07:
   FluffMedic:
-  - balance: made the eclipse mobs have slower projectiles. Some have new special
-      attacks, or special effects to their attacks.
+    - balance:
+        made the eclipse mobs have slower projectiles. Some have new special
+        attacks, or special effects to their attacks.
   ItsSelis:
-  - rscdel: player-side ticket ui has been temporarily disabled until an issue related
-      to it's interface has been mitigated.
-  - admin: the order of the interaction log in all ticket ui's has been turned around
-      for better readability.
+    - rscdel:
+        player-side ticket ui has been temporarily disabled until an issue related
+        to it's interface has been mitigated.
+    - admin:
+        the order of the interaction log in all ticket ui's has been turned around
+        for better readability.
   Verkister:
-  - bugfix: Fixed egg mode bug with item digestion/preservation modes.
-  - bugfix: Fixed TF items spitting out visible voice ghosts when despawned via cryo/gateway/etc.
-  - rscadd: Added big leggies with fox tail and snake tail.
+    - bugfix: Fixed egg mode bug with item digestion/preservation modes.
+    - bugfix: Fixed TF items spitting out visible voice ghosts when despawned via cryo/gateway/etc.
+    - rscadd: Added big leggies with fox tail and snake tail.
 2023-08-08:
   UniquaSa:
-  - rscadd: Added Mob Spawner
-  - bugfix: Added Squirrel sprites
+    - rscadd: Added Mob Spawner
+    - bugfix: Added Squirrel sprites
 2023-08-10:
   Aroliacue:
-  - balance: Parry shield belt to last twice as long, but takes an extra second to
-      recharge.
-  - bugfix: Cell can no longer be removed from the parry shield belt.
+    - balance:
+        Parry shield belt to last twice as long, but takes an extra second to
+        recharge.
+    - bugfix: Cell can no longer be removed from the parry shield belt.
   Seris02:
-  - rscadd: adds user_vars_to_edit (for events and stuff or just fun)
+    - rscadd: adds user_vars_to_edit (for events and stuff or just fun)
   TheGreatKitsune:
-  - rscadd: click dragging things into rechargers
-  - bugfix: being able to click-drag guns at all
-  - rscadd: '<!-- Both :cl:''s are required for the changelog to work! You can put
-      your name to the right of the first :cl: if you want to overwrite your GitHub
-      username as author ingame. -->'
-  - rscadd: <!-- You can use multiple of the same prefix (they're only used for the
-      icon ingame) and delete the unneeded ones. Despite some of the tags, changelogs
-      should generally represent how a player might be affected by the changes rather
-      than a summary of the PR's contents. -->
+    - rscadd: click dragging things into rechargers
+    - bugfix: being able to click-drag guns at all
+    - rscadd:
+        "<!-- Both :cl:'s are required for the changelog to work! You can put
+        your name to the right of the first :cl: if you want to overwrite your GitHub
+        username as author ingame. -->"
+    - rscadd:
+        <!-- You can use multiple of the same prefix (they're only used for the
+        icon ingame) and delete the unneeded ones. Despite some of the tags, changelogs
+        should generally represent how a player might be affected by the changes rather
+        than a summary of the PR's contents. -->
   Upstream:
-  - rscadd: Zone based marking customisation
+    - rscadd: Zone based marking customisation
   Verkister:
-  - bugfix: Fixed too fast mob digestion failing to update belly sprites.
-  - balance: Cockroaches now carry the same drainable nutrition value as mice do.
-  - balance: Borg nutrition recharge now uses smaller increments with higher frequency.
-  - qol: Lick/Smell verbs can now be used on held mobs and yourself.
-  - rscadd: Added bellysprites for big leggies (3 sizes, "taur" belly).
-  - rscadd: Added bird big leggies.
-  - bugfix: Fixed digest_act proc not working properly for non-belly use (acid turfs
-      etc.)
-  - bugfix: Trasheater toy tease messages are no longer oral-specific.
-  - qol: Vore nutrition is no longer useless for borgs.
+    - bugfix: Fixed too fast mob digestion failing to update belly sprites.
+    - balance: Cockroaches now carry the same drainable nutrition value as mice do.
+    - balance: Borg nutrition recharge now uses smaller increments with higher frequency.
+    - qol: Lick/Smell verbs can now be used on held mobs and yourself.
+    - rscadd: Added bellysprites for big leggies (3 sizes, "taur" belly).
+    - rscadd: Added bird big leggies.
+    - bugfix:
+        Fixed digest_act proc not working properly for non-belly use (acid turfs
+        etc.)
+    - bugfix: Trasheater toy tease messages are no longer oral-specific.
+    - qol: Vore nutrition is no longer useless for borgs.
 2023-08-11:
   Seris02:
-  - bugfix: fixes the input for customized markings not defaulting to their color
-  - bugfix: fixes the vanity_copy_to proc which broke with the new marking customization
+    - bugfix: fixes the input for customized markings not defaulting to their color
+    - bugfix: fixes the vanity_copy_to proc which broke with the new marking customization
   Upstream:
-  - refactor: OOC notes reworked into a panel
-  - rscadd: Custom URL link for examine text
+    - refactor: OOC notes reworked into a panel
+    - rscadd: Custom URL link for examine text
   Verkister:
-  - bugfix: Fixed Big Leggies belly sprites.
+    - bugfix: Fixed Big Leggies belly sprites.
 2023-08-14:
   FirstSgtDan:
-  - rscadd: Added a box of Pilot NIFsoft to Sling Carrier exploration briefing room.
-  - rscadd: 'tweak: Rearranged boxes on the table with death alarms to fit the new
-      box.'
+    - rscadd: Added a box of Pilot NIFsoft to Sling Carrier exploration briefing room.
+    - rscadd:
+        "tweak: Rearranged boxes on the table with death alarms to fit the new
+        box."
   Seris02:
-  - bugfix: fixes up the transparency/marking customization toggling in modular code
+    - bugfix: fixes up the transparency/marking customization toggling in modular code
   Upstream:
-  - refactor: Changed borg/dogborg system entirely. Dogborg sprites are now merged
-      with normal borg modules.
-  - refactor: Puppy jaws and crowbar are merged
-  - refactor: All borgs have belly modules now, not just dogborgs
-  - refactor: All borgs have boop modules
-  - refactor: Pounce is now a emag / scrambled equip item
-  - refactor: Boozerhound belly color customisation moved to 'Customise appearance'
-      verb
-  - rscadd: More vore screen overlays
-  - rscadd: Automated job/staff request in fax machines
+    - refactor:
+        Changed borg/dogborg system entirely. Dogborg sprites are now merged
+        with normal borg modules.
+    - refactor: Puppy jaws and crowbar are merged
+    - refactor: All borgs have belly modules now, not just dogborgs
+    - refactor: All borgs have boop modules
+    - refactor: Pounce is now a emag / scrambled equip item
+    - refactor:
+        Boozerhound belly color customisation moved to 'Customise appearance'
+        verb
+    - rscadd: More vore screen overlays
+    - rscadd: Automated job/staff request in fax machines
   Verkister:
-  - bugfix: Actually fixed Big Leggies belly sprites.
+    - bugfix: Actually fixed Big Leggies belly sprites.
   kcin2001:
-  - rscadd: Readd all chomp-specific borg changes to the new overhauled code
+    - rscadd: Readd all chomp-specific borg changes to the new overhauled code
 2023-08-15:
   FoxglovePurpur:
-  - qol: Adds the ability to lock the Shadekin Dorm Rooms
-  - imageadd: Adds locked open door sprites to TGMC Angled doors.
-  - rscdel: Removes nonfunctional Haste, Minor trait.
+    - qol: Adds the ability to lock the Shadekin Dorm Rooms
+    - imageadd: Adds locked open door sprites to TGMC Angled doors.
+    - rscdel: Removes nonfunctional Haste, Minor trait.
   Verkister:
-  - bugfix: Fixed sect drone taur bellysprites.
-  - rscadd: Added recycling feature for vorebellies (found in options tab). Produces
-      mixed matter piles that can be recycled in cargo/autolathes. (mechanically similar
-      to trash grinder output stuff)
-  - qol: Cargo trash grinder now merges existing matter piles on the output tile instead
-      of spawning a new one for each item.
-  - bugfix: Fixed cargo trash grinder ignoring sheet amount on stack items.
+    - bugfix: Fixed sect drone taur bellysprites.
+    - rscadd:
+        Added recycling feature for vorebellies (found in options tab). Produces
+        mixed matter piles that can be recycled in cargo/autolathes. (mechanically similar
+        to trash grinder output stuff)
+    - qol:
+        Cargo trash grinder now merges existing matter piles on the output tile instead
+        of spawning a new one for each item.
+    - bugfix: Fixed cargo trash grinder ignoring sheet amount on stack items.
 2023-08-16:
   TheCaramelion:
-  - rscadd: 55 sprites for digitigrade legs for the neo uniforms
-  - rscadd: neo_gorka sprites for each department
-  - qol: Rearranged sprites to follow mob.dmi order
+    - rscadd: 55 sprites for digitigrade legs for the neo uniforms
+    - rscadd: neo_gorka sprites for each department
+    - qol: Rearranged sprites to follow mob.dmi order
   Upstream:
-  - rscadd: Seagull mob
+    - rscadd: Seagull mob
 2023-08-17:
   TheCaramelion:
-  - rscadd: Sprites for uniforms with jeans for all the departments.
-  - rscadd: Sprites for the a variety of pants and their alternative versions.
-  - qol: Revamped the galoshes sprite.
-  - bugfix: Misaligned sprites on some of the uniforms.
+    - rscadd: Sprites for uniforms with jeans for all the departments.
+    - rscadd: Sprites for the a variety of pants and their alternative versions.
+    - qol: Revamped the galoshes sprite.
+    - bugfix: Misaligned sprites on some of the uniforms.
   Verkister:
-  - bugfix: Fixed throw vore mobvore prey pref check being in wrong place and bricking
-      the feature for mob preds.
+    - bugfix:
+        Fixed throw vore mobvore prey pref check being in wrong place and bricking
+        the feature for mob preds.
 2023-08-20:
   TheCaramelion:
-  - rscadd: Digitigrade sprites for a variety of uniforms
-  - rscadd: Digitigrade sprites for some of the skirts and dresses
-  - qol: Fixed some misaligned and sprite mistakes.
+    - rscadd: Digitigrade sprites for a variety of uniforms
+    - rscadd: Digitigrade sprites for some of the skirts and dresses
+    - qol: Fixed some misaligned and sprite mistakes.
   Upstream:
-  - rscadd: Scugs can now have hats. Click with hat to put on, click with grab intent
-      to remove.
+    - rscadd:
+        Scugs can now have hats. Click with hat to put on, click with grab intent
+        to remove.
   Verkister:
-  - bugfix: Fixed borg nutrition recharge stuff.
+    - bugfix: Fixed borg nutrition recharge stuff.
 2023-08-22:
   Upstream:
-  - rscadd: Fox and kitsune taurs
-  - qol: modernized pray input dialog
-  - qol: prayer message filter added to vchat
-  - admin: enables pray logging
+    - rscadd: Fox and kitsune taurs
+    - qol: modernized pray input dialog
+    - qol: prayer message filter added to vchat
+    - admin: enables pray logging
 2023-08-23:
   FluffMedic:
-  - maptweak: the hadzard zone POI areas have better placed smoke clouds, and better
-      loot.
+    - maptweak:
+        the hadzard zone POI areas have better placed smoke clouds, and better
+        loot.
   Upstream:
-  - rscadd: Adds food-vore (putting micros in food-objects)
-  - rscadd: vwag ringtail
-  - rscadd: raccoon tail
+    - rscadd: Adds food-vore (putting micros in food-objects)
+    - rscadd: vwag ringtail
+    - rscadd: raccoon tail
   tacoguy7765093:
-  - maptweak: VR map improvements
+    - maptweak: VR map improvements
 2023-08-25:
   Upstream:
-  - bugfix: fixes 'bad href token' message when trying to view a new fax
+    - bugfix: fixes 'bad href token' message when trying to view a new fax
 2023-08-27:
   Verkister:
-  - qol: New and improved wormborg sprites with wrecks and bulges.
-  - bugfix: Fixed borgs spawning with extra nutrition for roundstart overcharge.
-  - bugfix: Fixed borg belly icons not working with our vorebelly icon system.
+    - qol: New and improved wormborg sprites with wrecks and bulges.
+    - bugfix: Fixed borgs spawning with extra nutrition for roundstart overcharge.
+    - bugfix: Fixed borg belly icons not working with our vorebelly icon system.
 2023-08-29:
   Seris02:
-  - bugfix: container sounds now correctly play
+    - bugfix: container sounds now correctly play
   Verkister:
-  - rscadd: Added Slippery Reflexes trait.
+    - rscadd: Added Slippery Reflexes trait.
 2023-08-31:
   Aroliacue:
-  - rscadd: Ported over some new Xenomorph markings and backplates from Citadel.
+    - rscadd: Ported over some new Xenomorph markings and backplates from Citadel.

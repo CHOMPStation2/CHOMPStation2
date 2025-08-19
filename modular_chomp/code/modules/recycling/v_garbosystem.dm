@@ -96,7 +96,7 @@
 						spawn(15)
 							if(A.loc == loc)
 								A.forceMove(src)
-								if(!is_type_in_list(A,item_digestion_blacklist))
+								if(!is_type_in_list(A, GLOB.item_digestion_blacklist))
 									crusher.take_item(A) //Force feed the poor bastard.
 						items_taken++
 					else

@@ -1,4 +1,12 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aa" = (
+/obj/effect/recycler_vendor_beacon,
+/turf/simulated/floor/plating/turfpack/station,
+/area/maintenance/abcargo)
+"ab" = (
+/obj/effect/recycler_beacon,
+/turf/simulated/floor/plating/turfpack/station,
+/area/maintenance/thrift)
 "ac" = (
 /obj/effect/floor_decal/industrial/arrows/yellow{
 	dir = 8
@@ -18,6 +26,14 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/zerocent)
+"ae" = (
+/obj/effect/recycler_vendor_beacon,
+/turf/simulated/floor/plating/turfpack/station,
+/area/maintenance/zerocent)
+"af" = (
+/obj/effect/recycler_beacon,
+/turf/simulated/floor/plating/turfpack/station,
+/area/maintenance/zerocent)
 "ag" = (
 /obj/structure/cable{
 	icon_state = "1-4"
@@ -31,6 +47,15 @@
 /obj/structure/foamedmetal,
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/zeroport)
+"ai" = (
+/obj/effect/floor_decal/rust,
+/obj/effect/recycler_vendor_beacon,
+/turf/simulated/floor/plating/turfpack/station,
+/area/maintenance/thrift)
+"aj" = (
+/obj/effect/recycler_beacon,
+/turf/simulated/floor/wood/turfpack/station,
+/area/maintenance/zerobar)
 "ak" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
@@ -55,6 +80,10 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/zerocent)
+"an" = (
+/obj/effect/recycler_vendor_beacon,
+/turf/simulated/floor/wood/turfpack/station,
+/area/maintenance/zerobar)
 "ao" = (
 /obj/machinery/atmospherics/binary/pump/on{
 	dir = 8;
@@ -111,6 +140,11 @@
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/backuppowerlobby)
+"au" = (
+/obj/effect/floor_decal/rust,
+/obj/effect/recycler_beacon,
+/turf/simulated/floor/plating/turfpack/station,
+/area/maintenance/ragecage)
 "av" = (
 /obj/structure/railing/grey{
 	dir = 4
@@ -129,6 +163,11 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/maintenance/abfirstaid)
+"ax" = (
+/obj/effect/floor_decal/rust,
+/obj/effect/landmark/start/ghost_roles,
+/turf/simulated/floor/plating/turfpack/station,
+/area/maintenance/zeroport)
 "ay" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/floor_decal/industrial/arrows/yellow{
@@ -141,6 +180,28 @@
 /obj/item/tape/atmos,
 /turf/simulated/floor/tiled/techmaint,
 /area/maintenance/zeroaft)
+"az" = (
+/obj/effect/landmark/start/ghost_roles,
+/turf/simulated/floor/plating/turfpack/station,
+/area/maintenance/thrift)
+"aA" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/effect/landmark/start/ghost_roles,
+/turf/simulated/floor/plating/turfpack/station,
+/area/maintenance/zerostarboard)
+"aB" = (
+/obj/random/trash,
+/obj/effect/landmark/start/ghost_roles,
+/turf/simulated/floor/plating/turfpack/station,
+/area/maintenance/zerofore)
 "aC" = (
 /obj/effect/floor_decal/rust,
 /obj/structure/table/rack,
@@ -162,6 +223,10 @@
 	},
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/zeroport)
+"aE" = (
+/obj/structure/ghost_pod/ghost_activated/maintpred/no_announce,
+/turf/simulated/floor/plating/turfpack/station,
+/area/maintenance/abcargo)
 "aF" = (
 /obj/effect/floor_decal/techfloor/corner{
 	dir = 5
@@ -173,12 +238,21 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/engineering/gravgen)
+"aG" = (
+/obj/effect/decal/cleanable/flour,
+/obj/structure/ghost_pod/ghost_activated/morphspawn/no_announce,
+/turf/simulated/floor/plating/turfpack/station,
+/area/maintenance/abchemistry)
 "aH" = (
 /obj/structure/bed/chair/sofa/right/beige{
 	dir = 4
 	},
 /turf/simulated/floor/wood/alt/parquet/turfpack/station,
 /area/maintenance/lookout)
+"aI" = (
+/obj/structure/ghost_pod/ghost_activated/maintpred/no_announce,
+/turf/simulated/floor/wood/turfpack/station,
+/area/maintenance/zerobar)
 "aJ" = (
 /obj/machinery/light{
 	dir = 8;
@@ -186,6 +260,16 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/gravgen)
+"aK" = (
+/obj/structure/ghost_pod/ghost_activated/maintpred/no_announce,
+/turf/simulated/floor/tiled/white,
+/area/maintenance/abscience)
+"aL" = (
+/obj/structure/sign/directions/teleporter{
+	dir = 5
+	},
+/turf/simulated/wall/turfpack/station,
+/area/maintenance/zerocent)
 "aM" = (
 /obj/effect/floor_decal/rust,
 /obj/structure/catwalk,
@@ -211,6 +295,12 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/janitoral)
+"aP" = (
+/obj/structure/sign/directions/teleporter{
+	dir = 9
+	},
+/turf/simulated/wall/turfpack/station,
+/area/maintenance/zerocent)
 "aQ" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -220,6 +310,10 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/zeroaft)
+"aR" = (
+/obj/machinery/maint_vendor,
+/turf/simulated/floor/tiled/techmaint,
+/area/maintenance/gravlobby)
 "aS" = (
 /obj/machinery/firealarm{
 	layer = 3.3;
@@ -280,6 +374,10 @@
 	},
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/zeroaft)
+"aW" = (
+/obj/machinery/light/small/flicker,
+/turf/simulated/floor/plating/turfpack/station,
+/area/maintenance/zerocent)
 "aX" = (
 /obj/structure/table/marble,
 /obj/random/drinksoft,
@@ -340,6 +438,18 @@
 /obj/random/trash,
 /turf/simulated/floor/plating,
 /area/maintenance/ragecage)
+"be" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4
+	},
+/turf/simulated/floor/plating/turfpack/station,
+/area/maintenance/zerocent)
+"bf" = (
+/mob/living/simple_mob/animal/passive/mimepet{
+	name = "potted plant"
+	},
+/turf/simulated/floor/plating/turfpack/station,
+/area/maintenance/zerocent)
 "bg" = (
 /obj/machinery/alarm{
 	pixel_y = 22
@@ -355,6 +465,10 @@
 	},
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/zerostarboard)
+"bh" = (
+/mob/living/simple_mob/animal/passive/mothroach/bar,
+/turf/simulated/floor/lino,
+/area/maintenance/zerobar)
 "bi" = (
 /obj/structure/table/rack/shelf,
 /obj/random/soap,
@@ -368,6 +482,13 @@
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/plating,
 /area/maintenance/fieldhallway)
+"bk" = (
+/obj/structure/mob_spawner/mouse_nest/mousehole,
+/obj/machinery/computer/cryopod/gateway{
+	pixel_y = 32
+	},
+/turf/simulated/floor/plating/turfpack/station,
+/area/maintenance/zerocent)
 "bl" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
@@ -4339,6 +4460,7 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
+/obj/structure/ghost_pod/ghost_activated/morphspawn/no_announce,
 /turf/simulated/floor/tiled/white,
 /area/maintenance/abfirstaid)
 "rZ" = (
@@ -8503,6 +8625,7 @@
 "Kl" = (
 /obj/effect/floor_decal/rust,
 /obj/effect/decal/cleanable/cobweb2,
+/obj/machinery/cryopod/robot/door/gateway/quiet,
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/zerocent)
 "Km" = (
@@ -9447,6 +9570,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
+/obj/machinery/maint_recycler,
 /turf/simulated/floor/tiled/techmaint,
 /area/maintenance/gravlobby)
 "OM" = (
@@ -9956,6 +10080,7 @@
 	dir = 5
 	},
 /obj/effect/decal/cleanable/cobweb2,
+/obj/effect/recycler_beacon,
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/abcargo)
 "Rh" = (
@@ -10845,6 +10970,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 10
 	},
+/mob/living/bot/medbot/mysterious,
 /turf/simulated/floor/tiled/white,
 /area/maintenance/abfirstaid)
 "Vr" = (
@@ -32354,7 +32480,7 @@ sV
 sV
 ua
 Nc
-PK
+ax
 ua
 TJ
 TJ
@@ -35686,12 +35812,12 @@ In
 Kr
 Uq
 Xq
-fW
+bh
 oY
 EP
 ly
 In
-Vb
+aI
 UP
 wq
 tm
@@ -36229,7 +36355,7 @@ gv
 KS
 qn
 VL
-zu
+aa
 zu
 zu
 WO
@@ -36487,7 +36613,7 @@ gv
 ls
 gK
 qn
-zu
+aE
 Re
 qh
 xl
@@ -39034,7 +39160,7 @@ wZ
 wZ
 wZ
 gr
-Vb
+aj
 Vb
 as
 Vb
@@ -39063,7 +39189,7 @@ PJ
 XP
 qi
 xf
-xz
+aG
 xf
 Sd
 sr
@@ -39550,7 +39676,7 @@ Yk
 Yk
 Yk
 gr
-Vb
+an
 Vb
 In
 Vb
@@ -42648,7 +42774,7 @@ WY
 LU
 br
 Nz
-hA
+aK
 hA
 GF
 Hy
@@ -43674,7 +43800,7 @@ wZ
 wZ
 wZ
 Qy
-TY
+aB
 je
 Lc
 IH
@@ -44465,7 +44591,7 @@ Gb
 sa
 bq
 wn
-xS
+ae
 Sb
 Sb
 xS
@@ -45775,7 +45901,7 @@ ND
 IR
 Km
 ez
-Kc
+aR
 OY
 Kc
 yo
@@ -46013,7 +46139,7 @@ Lc
 Lc
 WY
 wn
-xS
+af
 HL
 Sb
 kd
@@ -46549,8 +46675,8 @@ Bo
 Km
 Km
 Dr
-xS
-wn
+aW
+aL
 Nm
 xS
 su
@@ -46806,7 +46932,7 @@ gp
 Yp
 YD
 Km
-fb
+bk
 xS
 xS
 xS
@@ -47064,9 +47190,9 @@ YD
 Yp
 YD
 Km
-xS
+be
 Dr
-wn
+aP
 xS
 Sb
 rU
@@ -47566,7 +47692,7 @@ wn
 lv
 It
 jv
-xS
+bf
 KQ
 pt
 uU
@@ -49090,7 +49216,7 @@ wZ
 wZ
 HE
 HE
-ij
+au
 sD
 RF
 RF
@@ -54515,7 +54641,7 @@ wZ
 wZ
 Ky
 JA
-MZ
+aA
 sW
 CP
 KM
@@ -57378,7 +57504,7 @@ AR
 wS
 AR
 DR
-AR
+ab
 OG
 py
 hz
@@ -58135,7 +58261,7 @@ wZ
 Fv
 Fv
 xs
-Xc
+ai
 AR
 ZL
 fl
@@ -58145,7 +58271,7 @@ XE
 AR
 TG
 Pd
-AR
+az
 wX
 vp
 wS

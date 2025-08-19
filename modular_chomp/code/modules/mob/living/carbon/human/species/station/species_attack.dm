@@ -2,7 +2,7 @@
 	damage = 3
 
 /datum/unarmed_attack/punch/chimera/get_unarmed_damage(var/mob/living/carbon/human/user)
-	return damage + user.get_feralness() / 5
+	return damage + user.species.unarmed_bonus + (user.get_feralness() / 5)
 
 /datum/unarmed_attack/punch/chimera/apply_effects(var/mob/living/carbon/human/user,var/mob/living/carbon/human/target,var/armour,var/attack_damage,var/zone)
 	..()

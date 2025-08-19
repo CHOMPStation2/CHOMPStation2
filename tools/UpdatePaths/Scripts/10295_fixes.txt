@@ -1,0 +1,1 @@
+/obj/machinery/mecha_part_fabricator : /obj/machinery/mecha_part_fabricator_tg

@@ -8,7 +8,6 @@
 	icon 		= 'icons/mob/pets.dmi'
 	icon_state 	= "syndifox"
 	chassis = "syndifox"
-	possible_chassis = list("Fox"="syndifox")
 	var/gut1 //Custom voregut temp vars
 	var/gut2
 
@@ -79,7 +78,7 @@
 	system_select(user)
 
 //Vore
-/mob/living/silicon/pai/flipper/init_vore()
+/mob/living/silicon/pai/flipper/init_vore(force)
 	var/obj/belly/B = new /obj/belly/flipper/maw(src)
 	B.affects_vore_sprites = FALSE
 	B.emote_lists[DM_HOLD] = list(
@@ -106,7 +105,7 @@
 		"The warm and inviting embrace of [name]'s stomach envelops you in its comforting embrace.",
 		"[name]'s stomach compresses tightly around you, its powerful systems working aroud you.",
 		"[name]'s stomach hums and churns around you.")
-	.=..()
+	. = ..()
 
 //Belly stuff
 /obj/belly/flipper
@@ -188,7 +187,7 @@
 		to_chat(usr,span_warning("You cannot join a pAI card when you are banned from playing as a pAI."))
 		return
 
-	for(var/ourkey in paikeys)
+	for(var/ourkey in GLOB.paikeys)
 		if(ourkey == user.ckey)
 			to_chat(usr, span_warning("You can't just rejoin any old pAI card!!! Your card still exists."))
 			return
@@ -210,7 +209,7 @@
 		var/obj/item/paicard/flipper/card = new(location)
 		var/mob/living/silicon/pai/flipper/new_pai = new(card)
 		new_pai.key = user.key
-		paikeys |= new_pai.ckey
+		GLOB.paikeys |= new_pai.ckey
 		card.setPersonality(new_pai)
 		new_pai.SetName(actual_pai_name)
 
@@ -218,7 +217,7 @@
 		var/obj/item/paicard/flipper/card = new(location)
 		var/mob/living/silicon/pai/flipper/new_pai = new(card)
 		new_pai.key = user.key
-		paikeys |= new_pai.ckey
+		GLOB.paikeys |= new_pai.ckey
 		card.setPersonality(new_pai)
 		if(!new_pai.savefile_load(new_pai))
 			var/pai_name = "Vix"//tgui_input_text(new_pai, "Choose your character's name", "Character Name")
@@ -235,11 +234,12 @@
 	set name = "Choose Chassis"
 	var/choice
 
-	choice = tgui_input_list(usr, "What would you like to use for your mobile chassis icon?", "Chassis Choice", possible_chassis)
-	if(!choice) return
+	choice = tgui_alert(src, "What would you like to use for your mobile chassis icon (Fox)?", "Chassis Choice", list("Yes", "No"))
+	if(choice != "Yes")
+		return
 	var/oursize = size_multiplier
 	resize(1, FALSE, TRUE, TRUE, FALSE)		//We resize ourselves to normal here for a moment to let the vis_height get reset
-	chassis = possible_chassis[choice]
+	chassis = "syndifox"
 	vore_capacity = 1
 	vore_capacity_ex = list("stomach" = 1)
 	resize(oursize, FALSE, TRUE, TRUE, FALSE)	//And then back again now that we're sure the vis_height is correct.

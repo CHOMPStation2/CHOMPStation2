@@ -972,7 +972,7 @@
 /obj/item/radio/intercom{
 	broadcasting = 1;
 	dir = 1;
-	frequency = 1480;
+	frequency = 1481;
 	name = "Confessional Intercom";
 	pixel_y = 27
 	},
@@ -10145,7 +10145,7 @@
 /obj/item/radio/intercom{
 	broadcasting = 1;
 	dir = 1;
-	frequency = 1480;
+	frequency = 1481;
 	name = "Confessional Intercom";
 	pixel_y = 27
 	},

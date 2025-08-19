@@ -877,6 +877,14 @@
 		if("b_private_struggle")
 			host.vore_selected.private_struggle = !host.vore_selected.private_struggle
 			. = TRUE
+		if("b_absorbedrename_enabled")
+			host.vore_selected.absorbedrename_enabled = !host.vore_selected.absorbedrename_enabled
+			. = TRUE
+		if("b_absorbedrename_name")
+			var/new_absorbedrename_name = sanitize(params["val"], MAX_MESSAGE_LEN, FALSE, TRUE, FALSE)
+			if(new_absorbedrename_name)
+				host.vore_selected.absorbedrename_name = new_absorbedrename_name
+			. = TRUE
 		if("b_vorespawn_blacklist")
 			host.vore_selected.vorespawn_blacklist = !host.vore_selected.vorespawn_blacklist
 			. = TRUE
@@ -986,7 +994,7 @@
 			. = TRUE
 		if("b_tail_to_change_to")
 			var/tail_choice = params["val"]
-			if(!(tail_choice in global.tail_styles_list))
+			if(!(tail_choice in GLOB.tail_styles_list))
 				return FALSE
 			host.vore_selected.tail_to_change_to = tail_choice
 			. = TRUE

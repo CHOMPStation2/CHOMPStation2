@@ -1,7 +1,7 @@
 /obj/structure/bed/chair	//YES, chairs are a type of bed, which are a type of stool. This works, believe me.	-Pete
 	name = "chair"
 	desc = "You sit in this. Either by will or force."
-	icon = 'icons/obj/furniture_vr.dmi' //VOREStation Edit - Using Eris furniture
+	icon = 'icons/obj/furniture.dmi'
 	icon_state = "chair_preview"
 	color = "#666666"
 	base_icon = "chair"
@@ -43,14 +43,14 @@
 	..()
 	if(has_buckled_mobs())
 		var/cache_key = "[base_icon]-armrest-[padding_material ? padding_material.name : "no_material"]"
-		if(isnull(stool_cache[cache_key]))
+		if(isnull(GLOB.stool_cache[cache_key]))
 			var/image/I = image(icon, "[base_icon]_armrest")
 			I.plane = MOB_PLANE
 			I.layer = ABOVE_MOB_LAYER
 			if(padding_material)
 				I.color = padding_material.icon_colour
-			stool_cache[cache_key] = I
-		add_overlay(stool_cache[cache_key])
+			GLOB.stool_cache[cache_key] = I
+		add_overlay(GLOB.stool_cache[cache_key])
 
 /obj/structure/bed/chair/proc/update_layer()
 	if(src.dir == NORTH)
@@ -329,14 +329,14 @@
 /obj/structure/bed/chair/sofa/corner/update_icon()
 	..()
 	var/cache_key = "[base_icon]-armrest-[padding_material ? padding_material.name : "no_material"]-permanent"
-	if(isnull(stool_cache[cache_key]))
+	if(isnull(GLOB.stool_cache[cache_key]))
 		var/image/I = image(icon, "[base_icon]_armrest")
 		I.plane = MOB_PLANE
 		I.layer = ABOVE_MOB_LAYER
 		if(padding_material)
 			I.color = padding_material.icon_colour
-		stool_cache[cache_key] = I
-	add_overlay(stool_cache[cache_key])
+		GLOB.stool_cache[cache_key] = I
+	add_overlay(GLOB.stool_cache[cache_key])
 
 // Wooden nonsofa - no corners
 /obj/structure/bed/chair/sofa/pew

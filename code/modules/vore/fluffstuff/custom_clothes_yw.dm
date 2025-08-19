@@ -1,3 +1,5 @@
+//'icons/vore/custom_clothes_yw.dmi' was moved to archive.
+
 // **************
 // Unleashed_Mana
 // **************
@@ -1243,13 +1245,13 @@
 // ******
 
 //Harpsong
-
+/*
 /obj/item/clothing/suit/armor/vest/harpsong
 	name = "Kentauri Uniform (Tac)"
 	desc = "A typical Kentauri uniform worn by those in Command, Tactical and Security disciplines. It is crafted specifically to fit the typically overweight body of the average Kentauri, and its colours match up with those of station security."
 	species_restricted = null //Species restricted since all it cares about is a taur half
-	icon = 'icons/vore/rigs_taur_yw.dmi'
-	icon_override = 'icons/vore/rigs_taur_yw.dmi'
+	icon = 'icons/vore/rigs_taur_yw.dmi'  //Moved to archive\icons\vore
+	icon_override = 'icons/vore/rigs_taur_yw.dmi'  //Moved to archive\icons\vore
 	icon_state = "kentauri_uniform"
 	item_state = "kentauri_uniform"
 
@@ -1266,6 +1268,7 @@
 	result.pixel_x = -16
 	result.layer = BODY_LAYER + 15
 	return result
+*/
 
 // *****
 // SASOperative

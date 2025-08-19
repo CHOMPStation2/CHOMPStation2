@@ -12,7 +12,7 @@
 /obj/structure/cable/green{
 	icon_state = "0-4"
 	},
-/obj/machinery/power/pointdefense{
+/obj/machinery/pointdefense{
 	id_tag = "talon_pd"
 	},
 /turf/simulated/floor/hull/airless,
@@ -1638,7 +1638,7 @@
 "ht" = (
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
 	dir = 8;
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "talonboat_docker";
 	pixel_x = 28
 	},
@@ -2317,7 +2317,7 @@
 /turf/simulated/floor/tiled/eris/dark/orangecorner,
 /area/space)
 "qo" = (
-/obj/machinery/power/pointdefense{
+/obj/machinery/pointdefense{
 	id_tag = "talon_pd"
 	},
 /obj/effect/floor_decal/techfloor{
@@ -2545,7 +2545,7 @@
 /turf/simulated/floor/tiled/eris/dark/cyancorner,
 /area/space)
 "uo" = (
-/obj/machinery/power/pointdefense{
+/obj/machinery/pointdefense{
 	id_tag = "talon_pd"
 	},
 /obj/effect/floor_decal/techfloor{
@@ -3016,7 +3016,7 @@
 /turf/space,
 /area/space)
 "AN" = (
-/obj/machinery/power/pointdefense{
+/obj/machinery/pointdefense{
 	id_tag = "talon_pd"
 	},
 /obj/effect/floor_decal/techfloor{
@@ -4638,7 +4638,7 @@
 /turf/simulated/floor/tiled/eris/techmaint_panels,
 /area/space)
 "UU" = (
-/obj/machinery/power/pointdefense{
+/obj/machinery/pointdefense{
 	id_tag = "talon_pd"
 	},
 /obj/effect/floor_decal/techfloor{
@@ -4794,7 +4794,7 @@
 "WF" = (
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
 	dir = 8;
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "talon_boatbay";
 	pixel_x = 28
 	},

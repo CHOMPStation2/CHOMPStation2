@@ -96,6 +96,9 @@
 	name = JOB_TALON_PILOT
 /obj/effect/landmark/start/talonminer
 	name = JOB_TALON_MINER
+
+/obj/effect/landmark/start/ghost_roles
+	name = JOB_GHOSTROLES
 /obj/effect/landmark/start/outsider
 	name = JOB_OUTSIDER
 /obj/effect/landmark/start/anomaly

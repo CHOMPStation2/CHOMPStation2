@@ -596,7 +596,7 @@
 	},
 /obj/machinery/access_button{
 	command = "cycle_exterior";
-	frequency = 1380;
+	frequency = 1381;
 	master_tag = "tabiranth_airlock";
 	name = "exterior access button";
 	pixel_x = -5;
@@ -658,16 +658,16 @@
 "aK" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 4;
-	frequency = 1380
+	frequency = 1381
 	},
 /obj/machinery/embedded_controller/radio/airlock/docking_port{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "tabiranth_airlock";
 	pixel_y = -32;
 	req_one_access = list(101)
 	},
 /obj/machinery/airlock_sensor{
-	frequency = 1380;
+	frequency = 1381;
 	pixel_y = 25
 	},
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
@@ -694,7 +694,7 @@
 	},
 /obj/machinery/access_button{
 	command = "cycle_interior";
-	frequency = 1380;
+	frequency = 1381;
 	master_tag = "tabiranth_airlock";
 	pixel_x = 5;
 	pixel_y = 26
@@ -716,7 +716,7 @@
 	},
 /obj/machinery/access_button{
 	command = "cycle_interior";
-	frequency = 1380;
+	frequency = 1381;
 	master_tag = "tabiranth_docker";
 	pixel_x = -5;
 	pixel_y = 26
@@ -732,18 +732,18 @@
 "aO" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 8;
-	frequency = 1380
+	frequency = 1381
 	},
 /obj/machinery/light/small{
 	icon_state = "bulb1";
 	dir = 1
 	},
 /obj/machinery/airlock_sensor{
-	frequency = 1380;
+	frequency = 1381;
 	pixel_y = 25
 	},
 /obj/machinery/embedded_controller/radio/airlock/docking_port{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "tabiranth_docker";
 	pixel_y = -32;
 	req_one_access = list(101)
@@ -922,7 +922,7 @@
 /obj/effect/map_helper/airlock/door/ext_door,
 /obj/machinery/access_button{
 	command = "cycle_exterior";
-	frequency = 1380;
+	frequency = 1381;
 	master_tag = "tabiranth_docker";
 	name = "exterior access button";
 	pixel_x = 5;

@@ -1203,13 +1203,13 @@
 /area/civilian/atrium/upper)
 "cY" = (
 /obj/machinery/airlock_sensor{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "expshuttle_sensor";
 	master_tag = "expshuttle_docker";
 	pixel_y = 28
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "expshuttle_docker_pump_out_internal"
 	},
 /obj/structure/handrail,
@@ -1220,13 +1220,13 @@
 	dir = 1
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "expshuttle_vent"
 	},
 /obj/structure/handrail,
 /obj/machinery/embedded_controller/radio/airlock/docking_port{
 	cycle_to_external_air = 1;
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "expshuttle_docker";
 	pixel_y = 26;
 	req_one_access = list(19,43,67);
@@ -1240,7 +1240,7 @@
 /area/shuttle/excursion)
 "da" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "expshuttle_vent"
 	},
 /obj/structure/handrail,
@@ -1416,14 +1416,14 @@
 /area/shuttle/excursion)
 "dw" = (
 /obj/machinery/door/airlock/glass_external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	id_tag = "expshuttle_door_Ro";
 	locked = 1
 	},
 /obj/machinery/airlock_sensor/airlock_exterior/shuttle{
 	dir = 10;
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "expshuttle_exterior_sensor";
 	master_tag = "expshuttle_docker";
 	pixel_x = 4;
@@ -1472,14 +1472,14 @@
 /area/shuttle/excursion)
 "dC" = (
 /obj/machinery/door/airlock/glass_external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	id_tag = "expshuttle_door_Ri";
 	locked = 1
 	},
 /obj/machinery/access_button{
 	command = "cycle_interior";
-	frequency = 1380;
+	frequency = 1381;
 	master_tag = "expshuttle_docker";
 	pixel_y = -24
 	},
@@ -1520,7 +1520,7 @@
 /area/shuttle/excursion)
 "dG" = (
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "expshuttle_dock";
 	pixel_x = -32;
 	req_one_access = list(19,43,67)
@@ -1668,7 +1668,7 @@
 "dX" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 1;
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "expshuttle_vent"
 	},
 /obj/machinery/oxygen_pump{
@@ -2691,7 +2691,7 @@
 "gy" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 1;
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "expshuttle_docker_pump_out_internal"
 	},
 /obj/machinery/oxygen_pump{
@@ -10205,7 +10205,7 @@
 /obj/effect/floor_decal/industrial/warning,
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 1;
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "expshuttle_vent"
 	},
 /obj/structure/cable/cyan,
@@ -11302,7 +11302,7 @@
 "QS" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 4;
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "expshuttle_docker_pump_out_external"
 	},
 /obj/effect/floor_decal/industrial/warning/full,

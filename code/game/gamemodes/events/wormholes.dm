@@ -16,7 +16,7 @@
 				if(A.flag_check(AREA_FORBID_EVENTS)) // CHOMPEdit - No spawning in dorms
 					continue
 		// CHOMPAdd Start - Chance to end up in a belly. Fun (:
-		for(var/mob/living/mob in player_list)
+		for(var/mob/living/mob in GLOB.player_list)
 			if(mob.can_be_drop_pred && isfloor(mob.loc))
 				var/turf/simulated/floor/T = get_turf(mob.loc)
 				if(!T.block_tele)

@@ -65,7 +65,7 @@ export const TguiFeedback = (props) => {
               </Button>
             </>
           )}
-          : {<>Please select an open window on the left!</>}
+          : Please select an open window on the left!
         </Stack.Item>
       </Stack>
     </Window>

@@ -13,7 +13,8 @@
 
 #define VERM_MICE 0
 #define VERM_LIZARDS 1
-#define VERM_SPIDERS 2
+#define VERM_MOTHROACH 2
+#define VERM_SPIDERS 3 //CHOMPEdit - This edit wasn't commented >:(
 
 /datum/event/infestation
 	announceWhen = 10
@@ -24,7 +25,7 @@
 	var/vermstring
 
 /datum/event/infestation/start()
-//CHOMP Edit changed for Southern Cross areas
+//CHOMPEdit changed for Southern Cross areas
 	location = rand(0,9)
 	var/list/turf/simulated/floor/turfs = list()
 	var/spawn_area_type
@@ -95,9 +96,14 @@
 			max_number = 8 //CHOMP edit
 			vermstring = "spiders"
 
-	/* //Chomp REMOVE - in upstream file, not used here
+		if(VERM_MOTHROACH)
+			spawn_types = /mob/living/simple_mob/animal/passive/mothroach
+			min_number = 1 //CHOMP edit
+			max_number = 3 //CHOMP edit
+			vermstring = "mothroaches"
 	// Check if any landmarks exist!
-	for(var/obj/effect/landmark/C in landmarks_list)
+	/* //Chomp REMOVE - in upstream file, not used here
+	for(var/obj/effect/landmark/C in GLOB.landmarks_list)
 		if(C.name == "verminstart")
 			spawn_locations.Add(C.loc)
 	*/ //Chomp REMOVE END
@@ -172,3 +178,4 @@
 #undef VERM_MICE
 #undef VERM_LIZARDS
 #undef VERM_SPIDERS // Chomp EDIT
+#undef VERM_MOTHROACH

@@ -226,7 +226,7 @@
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 1;
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "shuttle4_pump_crashpoi"
 	},
 /obj/machinery/light,
@@ -248,14 +248,14 @@
 /area/submap/crashedexplo)
 "qn" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "shuttle4_pump_crashpoi"
 	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 5
 	},
 /obj/machinery/airlock_sensor{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "shuttle4_sensor_crashpoi";
 	pixel_y = 28
 	},
@@ -354,13 +354,13 @@
 	},
 /obj/machinery/access_button{
 	command = "cycle_interior";
-	frequency = 1380;
+	frequency = 1381;
 	master_tag = "shuttle4_shuttle_crashpoi";
 	name = "interior access button";
 	pixel_y = 26
 	},
 /obj/machinery/door/airlock/voidcraft/vertical{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "shuttle4_inner_crashpoi";
 	locked = 1;
 	name = "Internal Access"
@@ -429,14 +429,14 @@
 /area/submap/crashedexplo)
 "zO" = (
 /obj/machinery/door/airlock/voidcraft/vertical{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "shuttle4_outer_crashpoi";
 	locked = 1;
 	name = "External Access"
 	},
 /obj/machinery/access_button{
 	command = "cycle_exterior";
-	frequency = 1380;
+	frequency = 1381;
 	master_tag = "shuttle4_shuttle_crashpoi";
 	name = "exterior access button";
 	pixel_y = 26
@@ -480,14 +480,14 @@
 /area/submap/crashedexplo)
 "AK" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "shuttle4_pump_crashpoi"
 	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 9
 	},
 /obj/machinery/embedded_controller/radio/airlock/docking_port{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "shuttle4_shuttle_crashpoi";
 	pixel_y = 26;
 	tag_airpump = "shuttle4_pump_crashpoi";
@@ -642,7 +642,7 @@
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 1;
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "shuttle4_pump_crashpoi"
 	},
 /obj/structure/closet/emcloset,

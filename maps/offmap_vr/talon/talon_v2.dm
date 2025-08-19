@@ -1,12 +1,12 @@
 ///////////////////////////
 //// Spawning and despawning
-var/global/list/latejoin_talon = list()
+GLOBAL_LIST_EMPTY(latejoin_talon)
 /obj/effect/landmark/talon
 	name = "JoinLateTalon"
 	delete_me = 1
 
 /obj/effect/landmark/talon/Initialize(mapload)
-	latejoin_talon += loc // Register this turf as tram latejoin.
+	GLOB.latejoin_talon += loc // Register this turf as tram latejoin.
 	. = ..()
 
 /datum/spawnpoint/talon
@@ -17,7 +17,7 @@ var/global/list/latejoin_talon = list()
 
 /datum/spawnpoint/talon/New()
 	..()
-	turfs = latejoin_talon
+	turfs = GLOB.latejoin_talon
 
 /obj/machinery/cryopod/talon
 	announce_channel = "Talon"
@@ -54,7 +54,7 @@ var/global/list/latejoin_talon = list()
 	skybox_pixel_x = 270
 	skybox_pixel_y = 60
 
-	levels_for_distress = list(1, Z_LEVEL_BEACH, Z_LEVEL_AEROSTAT, Z_LEVEL_DEBRISFIELD, Z_LEVEL_FUELDEPOT)
+	levels_for_distress = list(1, Z_NAME_BEACH, Z_NAME_AEROSTAT, Z_NAME_DEBRISFIELD, Z_NAME_FUELDEPOT)
 	unowned_areas = list(/area/shuttle/talonboat,/area/shuttle/talonpod)
 
 // The shuttle's 'shuttle' computer
@@ -70,7 +70,7 @@ var/global/list/latejoin_talon = list()
 	vessel_size = SHIP_SIZE_TINY
 	shuttle = "Talon's Shuttle"
 
-	levels_for_distress = list(1, Z_LEVEL_BEACH, Z_LEVEL_AEROSTAT, Z_LEVEL_DEBRISFIELD, Z_LEVEL_FUELDEPOT)
+	levels_for_distress = list(1, Z_NAME_BEACH, Z_NAME_AEROSTAT, Z_NAME_DEBRISFIELD, Z_NAME_FUELDEPOT)
 
 // A shuttle lateloader landmark
 /obj/effect/shuttle_landmark/shuttle_initializer/talonboat
@@ -113,7 +113,7 @@ var/global/list/latejoin_talon = list()
 	vessel_size = SHIP_SIZE_TINY
 	shuttle = "Talon's Escape Pod"
 
-	levels_for_distress = list(1, Z_LEVEL_BEACH, Z_LEVEL_AEROSTAT, Z_LEVEL_DEBRISFIELD, Z_LEVEL_FUELDEPOT)
+	levels_for_distress = list(1, Z_NAME_BEACH, Z_NAME_AEROSTAT, Z_NAME_DEBRISFIELD, Z_NAME_FUELDEPOT)
 
 // A shuttle lateloader landmark
 /obj/effect/shuttle_landmark/shuttle_initializer/talonpod

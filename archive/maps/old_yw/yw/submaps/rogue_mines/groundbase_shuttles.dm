@@ -65,8 +65,6 @@
 	move_direction = EAST
 
 /datum/shuttle/autodock/ferry/emergency
-	var/frequency = 1380 // Why this frequency? BECAUSE! Thats what someone decided once.
-	var/datum/radio_frequency/radio_connection
 	move_direction = EAST
 
 /datum/shuttle/autodock/ferry/emergency/New()

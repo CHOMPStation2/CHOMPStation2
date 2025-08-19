@@ -70,11 +70,7 @@
 	vore_default_mode = DM_HOLD
 	vore_icons = SA_ICON_LIVING
 
-/mob/living/simple_mob/vore/fennec/init_vore() // CHOMPEdit - Allow for customizing bellies on vorecritters
-	if(!voremob_loaded)
-		return
-	if(LAZYLEN(vore_organs))
-		return
+/mob/living/simple_mob/vore/fennec/load_default_bellies()
 	. = ..()
 
 	var/obj/belly/B = vore_selected
@@ -152,11 +148,7 @@
 	. = ..()
 	add_overlay(bigshadow)
 
-/mob/living/simple_mob/vore/fennec/huge/init_vore()
-	if(!voremob_loaded)
-		return
-	if(LAZYLEN(vore_organs))
-		return
+/mob/living/simple_mob/vore/fennec/huge/load_default_bellies()
 	. = ..()
 	var/obj/belly/B = vore_selected
 	B.name = "Stomach"

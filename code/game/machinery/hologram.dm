@@ -59,7 +59,7 @@ var/const/HOLOPAD_MODE = RANGE_BASED
 			last_request = world.time
 			to_chat(user, span_notice("You request an AI's presence."))
 			var/area/area = get_area(src)
-			for(var/mob/living/silicon/ai/AI in living_mob_list)
+			for(var/mob/living/silicon/ai/AI in GLOB.living_mob_list)
 				if(!AI.client)	continue
 				to_chat(AI, span_info("Your presence is requested at <a href='byond://?src=\ref[AI];jumptoholopad=\ref[src]'>\the [area]</a>."))
 		else
@@ -192,7 +192,7 @@ For the other part of the code, check silicon say.dm. Particularly robot talk.*/
  */
 
 /obj/machinery/hologram
-	icon = 'icons/obj/stationobjs_vr.dmi' //VOREStation Edit
+	icon = 'icons/obj/stationobjs.dmi'
 	anchored = TRUE
 	use_power = USE_POWER_IDLE
 	idle_power_usage = 5
@@ -243,7 +243,7 @@ Holographic project of everything else.
 /obj/machinery/hologram/projector
 	name = "hologram projector"
 	desc = "It makes a hologram appear...with magnets or something..."
-	icon = 'icons/obj/stationobjs_vr.dmi' //VOREStation Edit
+	icon = 'icons/obj/stationobjs.dmi'
 	icon_state = "hologram0"
 
 

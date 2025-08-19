@@ -297,3 +297,26 @@
 	speed = 10
 	excavation_amount = 100
 
+//technically not eclipse but honary
+
+/obj/item/projectile/energy/eclipse/poisonwind
+	name = "anomalous winds"
+	icon_state = "ice_wind"
+	damage = 10
+	armor_penetration = 70
+	speed = 10
+	color = "#003300"
+	modifier_type_to_apply = /datum/modifier/poisoned //main threat right here, Will two tap most players if untreated
+	modifier_duration = 1 MINUTE
+
+/obj/item/projectile/energy/eclipse/tyrjavelin //Four hits ought to end you
+	name = "energy javelin"
+	icon_state = "javelin"
+	damage_type = SEARING
+	check_armour = "bullet"
+	damage = 20
+	armor_penetration = 60
+	speed = 10
+	color = "#FF6600"
+	modifier_type_to_apply = /datum/modifier/deep_wounds //reduced healing
+	modifier_duration = 1 MINUTE

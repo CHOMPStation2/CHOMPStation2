@@ -138,7 +138,7 @@
 
 /obj/item/Destroy()
 	if(item_tf_spawn_allowed)
-		item_tf_spawnpoints -= src
+		GLOB.item_tf_spawnpoints -= src
 	if(ismob(loc))
 		var/mob/m = loc
 		m.drop_from_inventory(src)
@@ -905,7 +905,7 @@ modules/mob/living/carbon/human/life.dm if you die, you will be zoomed out.
 
 	// testing("[src] (\ref[src]) - Slot: [slot_name], Inhands: [inhands], Worn Icon:[icon2use], Worn State:[state2use], Worn Layer:[layer2use]")
 	// Send icon data to unit test when it is running, hello old testing(). I'm like, your great great grandkid! THE FUTURE IS NOW OLD MAN!
-	#ifdef UNIT_TEST
+	#ifdef UNIT_TESTS
 	var/mob/living/carbon/human/H = loc
 	if(ishuman(H))
 		SEND_SIGNAL(H, COMSIG_UNITTEST_DATA, list("set_slot",slot_name,icon2use,state2use,inhands,type,H.species?.name))
@@ -1123,12 +1123,12 @@ Note: This proc can be overwritten to allow for different types of auto-alignmen
 /obj/item/proc/item_tf_spawnpoint_set()
 	if(!item_tf_spawn_allowed)
 		item_tf_spawn_allowed = TRUE
-		item_tf_spawnpoints += src
+		GLOB.item_tf_spawnpoints += src
 
 /obj/item/proc/item_tf_spawnpoint_used()
 	if(item_tf_spawn_allowed)
 		item_tf_spawn_allowed = FALSE
-		item_tf_spawnpoints -= src
+		GLOB.item_tf_spawnpoints -= src
 
 // Ported from TG, used when dropping items on tables/closets.
 /obj/item/proc/do_drop_animation(atom/moving_from)

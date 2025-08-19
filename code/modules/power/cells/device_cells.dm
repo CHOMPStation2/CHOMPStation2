@@ -1,11 +1,10 @@
-//CHOMP Disabled in DME in favor of modular_chomp folder
 /*
  * Device
  */
 /obj/item/cell/device
 	name = "device power cell"
 	desc = "A small power cell designed to power handheld devices."
-	icon_state = "device_cell"
+	icon_state = "m_st"
 	item_state = "egg6"
 	w_class = ITEMSIZE_SMALL
 	force = 0
@@ -45,9 +44,10 @@
 /obj/item/cell/device/hyper
 	name = "hyper device power cell"
 	desc = "A small power cell designed to power handheld devices. Has a better charge than a standard device cell."
-	icon_state = "hype_device_cell"
-	charge = 600
-	maxcharge = 600
+	icon_state = "meb_m_st"
+	charge = 4800
+	maxcharge = 4800
+	charge_amount = 20
 	matter = list(MAT_STEEL = 400, MAT_GLASS = 60)
 
 /obj/item/cell/device/hyper/empty
@@ -59,7 +59,7 @@
 /obj/item/cell/device/empproof
 	name = "shielded device power cell"
 	desc = "A small power cell designed to power handheld devices. Shielded from EMPs."
-	icon_state = "up_device_cell"
+	icon_state = "s_st"
 	matter = list(MAT_STEEL = 400, MAT_GLASS = 60)
 	emp_proof = TRUE
 
@@ -70,9 +70,11 @@
  * Weapon
  */
 /obj/item/cell/device/weapon
-	name = "weapon power cell"
-	desc = "A small power cell designed to power handheld weaponry."
-	icon_state = "weapon_cell"
+	// CHOMPEdit Start
+	name = "advanced device power cell" //This was a yawn change. I quite like this, makes more sense.
+	desc = "A small upgraded power cell designed to power handheld devices."
+	// CHOMPEdit End
+	icon_state = "m_sup"
 	charge = 2400
 	maxcharge = 2400
 	charge_amount = 20
@@ -80,64 +82,13 @@
 /obj/item/cell/device/weapon/empty
 	charge = 0
 
-//Yawn Changes
-/obj/item/cell/device/weapon //Aka adv
-	name = "advanced device power cell" //This was a yawn change. I quite like this, makes more sense.
-	desc = "A small upgraded power cell designed to power handheld devices."
-	icon_state = "weapon_cell"
-	maxcharge = 2400
-	charge_amount = 20
-	origin_tech = list(TECH_POWER = 2)
-
-/obj/item/cell/device/super
-	name = "super device power cell"
-	desc = "A small upgraded power cell designed to power handheld devices."
-	icon_state = "sc_weapon_cell" //CHOMP Add
-	maxcharge = 3600
-	charge_amount = 20
-	origin_tech = list(TECH_POWER = 3)
-
-/obj/item/cell/device/super/empty/Initialize(mapload)
-	. = ..()
-	charge = 0
-	update_icon()
-
-/obj/item/cell/device/hyper
-	name = "hyper device power cell"
-	desc = "A small upgraded power cell designed to hold much more power for handheld devices."
-	icon_state = "cap_weapon_cell" //CHOMP Add
-	maxcharge = 4800
-	charge_amount = 20
-	origin_tech = list(TECH_POWER = 4)
-
-/obj/item/cell/device/hyper/empty/Initialize(mapload)
-	. = ..()
-	charge = 0
-	update_icon()
-//End of Yawn changes
-
-//CHOMP Add begin
-/obj/item/cell/device/giga //CHOMP Add: Why not? Lets add a new one. Lets put the new sprites to use.
-	name = "giga device power cell"
-	desc = "A small power cell that holds a blistering amount of energy, constructed by clever scientists using secrets gleaned from alien technology."
-	icon_state = "cap_weapon_cell"
-	maxcharge = 6000
-	charge_amount = 20
-	origin_tech = list(TECH_POWER = 5, TECH_PRECURSOR = 1)
-
-/obj/item/cell/device/giga/empty/Initialize(mapload)
-	. = ..()
-	charge = 0
-	update_icon()
-//CHOMP Add end
-
 /*
  * EMP Proof Weapon
  */
 /obj/item/cell/device/weapon/empproof
 	name = "shielded weapon power cell"
 	desc = "A small power cell designed to power handheld weaponry. Shielded from EMPs."
-	icon_state = "emp_weapon_cell"
+	icon_state = "s_hi"
 	matter = list(MAT_STEEL = 400, MAT_GLASS = 60)
 	emp_proof = TRUE
 
@@ -150,17 +101,18 @@
 /obj/item/cell/device/weapon/recharge
 	name = "self-charging weapon power cell"
 	desc = "A small power cell designed to power handheld weaponry. This one recharges itself."
-	icon_state = "sc_weapon_cell"
+	icon_state = "meb_m_nu"
 	matter = list(MAT_STEEL = 400, MAT_GLASS = 80)
 	self_recharge = TRUE
-	charge_amount = 120
+	charge_amount = 60 //2.5% // CHOMPEdit
 	charge_delay = 75
+	origin_tech = list(TECH_POWER = 5, TECH_ARCANE = 1)
 
 /*
  * Captain's Self-charging Weapon
  */
 /obj/item/cell/device/weapon/recharge/captain
-	icon_state = "cap_weapon_cell"
+	icon_state = "infinite_m"
 	matter = list(MAT_STEEL = 400, MAT_GLASS = 100)
 	charge_amount = 160	//Recharges a lot more quickly...
 	charge_delay = 100	//... but it takes a while to get started
@@ -188,9 +140,11 @@
 	catalogue_data = list(/datum/category_item/catalogue/anomalous/precursor_a/alien_void_cell)
 	icon = 'icons/obj/abductor.dmi'
 	icon_state = "cell"
-	charge_amount = 120 // 5%.
-	charge_delay = 50 // Every five seconds, bit faster than the default.
-	origin_tech = list(TECH_POWER = 8, TECH_ENGINEERING = 6)
+	charge = 5000
+	maxcharge = 5000
+	charge_amount = 130
+	charge_delay = 50
+	origin_tech = list(TECH_POWER = 7, TECH_ENGINEERING = 6, TECH_PHORON = 6, TECH_ARCANE = 2, TECH_PRECURSOR = 2)
 	var/swaps_to = /obj/item/cell/void
 	standard_overlays = FALSE
 
@@ -198,6 +152,8 @@
 	return // No overlays please.
 
 /obj/item/cell/device/weapon/recharge/alien/attack_self(var/mob/user)
+	if(!swaps_to)
+		return
 	user.remove_from_mob(src)
 	to_chat(user, span_notice("You swap [src] to 'machinery cell' mode."))
 	var/obj/item/cell/newcell = new swaps_to(null)
@@ -213,15 +169,42 @@
 	icon_state = "cellb"
 	swaps_to = /obj/item/cell/void/hybrid
 
-//YAWN Addtion
 /obj/item/cell/device/weapon/recharge/alien/omni
 	name = "omni weapon power cell"
-	desc = "A mix between alien technology and phoron tech. Seems to fit in almost any cell slot..."
-	charge_amount = 90 // 5%.
-	charge = 1800
-	maxcharge = 1800
-	charge_delay = 50 SECONDS
-	origin_tech = list(TECH_POWER = 6, TECH_ENGINEERING = 4, TECH_PHORON = 3)
+	desc = "A mix between alien technology and phoron-based tech. Not quite as good as a true void cell though."
+	charge_amount = 90 // 2.5%.
+	charge = 3600
+	maxcharge = 3600
+	charge_delay = 50
+	swaps_to = null
+	origin_tech = list(TECH_POWER = 8, TECH_ENGINEERING = 6, TECH_PHORON = 6, TECH_ARCANE = 1, TECH_PRECURSOR = 1)
 
 /obj/item/cell/device/weapon/recharge/alien/omni/empty
+	charge = 0
+
+/*
+ * Giga
+ */
+/obj/item/cell/device/giga
+	name = "giga device power cell"
+	desc = "A small power cell that holds a blistering amount of energy, constructed by clever scientists using secrets gleaned from alien technology."
+	icon_state = "meb_m_hi"
+	charge = 10000
+	maxcharge = 10000
+	charge_amount = 20
+	origin_tech = list(TECH_POWER = 8)
+
+/obj/item/cell/device/giga/empty
+	charge = 0
+
+/obj/item/cell/device/super
+	name = "super device power cell"
+	desc = "A small upgraded power cell designed to power handheld devices."
+	icon_state = "m_hy"
+	charge = 3600
+	maxcharge = 3600
+	charge_amount = 20
+	origin_tech = list(TECH_POWER = 3)
+
+/obj/item/cell/device/super/empty
 	charge = 0

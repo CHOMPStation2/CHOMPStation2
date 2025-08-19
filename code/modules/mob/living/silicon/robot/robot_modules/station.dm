@@ -1,25 +1,3 @@
-var/global/list/robot_modules = list(
-	"Standard"		= /obj/item/robot_module/robot/standard,
-	"Service" 		= /obj/item/robot_module/robot/clerical/butler,
-	"Clerical" 		= /obj/item/robot_module/robot/clerical/general,
-	"Clown"			= /obj/item/robot_module/robot/clerical/honkborg,
-	"Command"		= /obj/item/robot_module/robot/chound,
-	"Research" 		= /obj/item/robot_module/robot/research,
-	"Miner" 		= /obj/item/robot_module/robot/miner,
-	"Crisis" 		= /obj/item/robot_module/robot/medical/crisis,
-//	"Surgeon" 		= /obj/item/robot_module/robot/medical/surgeon, // CHOMPedit: Surgeon module removal.
-	"Security" 		= /obj/item/robot_module/robot/security/general,
-	"Combat" 		= /obj/item/robot_module/robot/security/combat,
-	"Exploration"	= /obj/item/robot_module/robot/exploration,
-	"Engineering"	= /obj/item/robot_module/robot/engineering,
-	"Janitor" 		= /obj/item/robot_module/robot/janitor,
-	"Gravekeeper"	= /obj/item/robot_module/robot/gravekeeper,
-	"Lost"			= /obj/item/robot_module/robot/lost,
-	"Protector" 	= /obj/item/robot_module/robot/syndicate/protector,
-	"Mechanist" 	= /obj/item/robot_module/robot/syndicate/mechanist,
-	"Combat Medic"	= /obj/item/robot_module/robot/syndicate/combat_medic
-	)
-
 /obj/item/robot_module
 	name = "robot module"
 	icon = 'icons/obj/module.dmi'
@@ -245,7 +223,6 @@ var/global/list/robot_modules = list(
 	pto_type = PTO_MEDICAL
 	supported_upgrades = list(/obj/item/borg/upgrade/restricted/bellycapupgrade)
 
-/* CHOMPedit start: Removal of Surgeon module. *
 //This is a constant back and forth debate. 11 years ago, the 'medical' borg was split into surgery and crisis.
 //Two years ago(?), they were combined into Crisis elsewhere and the idea seems to be well appreciated.
 //However, given this seems as though it will remain a hot topic for as long as SS13 exists, we are going to leave the surgeon module here in the event that we split them. Again.
@@ -308,8 +285,6 @@ var/global/list/robot_modules = list(
 		PS.reagents.add_reagent(REAGENT_ID_PACID, 2 * amount)
 
 	..()
-
-* CHOMPedit end: Removal of Surgeon module. */
 
 /obj/item/robot_module/robot/medical/crisis
 	name = "crisis robot module"
@@ -704,7 +679,7 @@ var/global/list/robot_modules = list(
 
 /obj/item/robot_module/robot/research/create_equipment(var/mob/living/silicon/robot/robot)
 	..()
-	src.modules += new /obj/item/portable_destructive_analyzer(src)
+	src.modules += new /obj/item/experi_scanner(src)
 	src.modules += new /obj/item/robotanalyzer(src)
 	src.modules += new /obj/item/card/robot(src)
 	src.modules += new /obj/item/gripper/research(src)

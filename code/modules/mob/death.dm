@@ -8,7 +8,7 @@
 	icon = null
 	invisibility = INVISIBILITY_ABSTRACT
 	update_canmove()
-	dead_mob_list -= src
+	GLOB.dead_mob_list -= src
 
 	var/atom/movable/overlay/animation = null
 	animation = new(loc)
@@ -42,7 +42,7 @@
 	flick(anim, animation)
 	new remains(loc)
 
-	dead_mob_list -= src
+	GLOB.dead_mob_list -= src
 	spawn(15)
 		if(animation)	qdel(animation)
 		if(src)			qdel(src)
@@ -62,7 +62,7 @@
 
 	flick(anim, animation)
 
-	dead_mob_list -= src
+	GLOB.dead_mob_list -= src
 	spawn(15)
 		if(animation)	qdel(animation)
 		if(src)			qdel(src)
@@ -89,9 +89,6 @@
 
 	update_canmove()
 
-	dizziness = 0
-	jitteriness = 0
-
 	layer = MOB_LAYER
 
 	sight |= SEE_TURFS|SEE_MOBS|SEE_OBJS
@@ -117,16 +114,16 @@
 
 	timeofdeath = world.time
 	if(mind) mind.store_memory("Time of death: [stationtime2text()]", 0)
-	living_mob_list -= src
-	dead_mob_list |= src
+	GLOB.living_mob_list -= src
+	GLOB.dead_mob_list |= src
 
 	set_respawn_timer()
 	update_icon()
 	handle_regular_hud_updates()
 	handle_vision()
 
-	if(ticker && ticker.mode)
-		ticker.mode.check_win()
+	if(SSticker && SSticker.mode)
+		SSticker.mode.check_win()
 
 	if(reagents)
 		for(var/datum/reagent/R in reagents.reagent_list)

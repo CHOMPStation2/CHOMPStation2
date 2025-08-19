@@ -30,6 +30,7 @@ export type reagent = {
 export type modalData = {
   id: string;
   text: string;
+  // biome-ignore lint/complexity/noBannedTypes: In this case we got any type of Object
   args: {};
   type: string;
 };

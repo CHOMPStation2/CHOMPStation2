@@ -1206,7 +1206,7 @@
 /area/outpost/research/mixing)
 "cT" = (
 /obj/machinery/air_sensor{
-	frequency = 1430;
+	frequency = 1431;
 	id_tag = "toxins_mixing_exterior";
 	output = 63
 	},
@@ -1232,7 +1232,7 @@
 	id = "tox_airlock_pump"
 	},
 /obj/machinery/air_sensor{
-	frequency = 1430;
+	frequency = 1431;
 	id_tag = "toxins_mixing_interior";
 	output = 63;
 	pixel_x = -8;
@@ -1790,7 +1790,7 @@
 /area/outpost/research/mixing)
 "dN" = (
 /obj/machinery/computer/general_air_control{
-	frequency = 1430;
+	frequency = 1431;
 	name = "Mixing Chamber Monitor";
 	sensors = list("toxins_mixing_exterior" = "Mixing Chamber - Exterior", "toxins_mixing_interior" = "Mixing Chamber - Interior")
 	},
@@ -6735,7 +6735,7 @@
 "nZ" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 4;
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "research_outpost_pump"
 	},
 /obj/effect/floor_decal/industrial/warning{
@@ -6757,7 +6757,7 @@
 	dir = 5
 	},
 /obj/machinery/embedded_controller/radio/airlock/docking_port{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "research_outpost_dock";
 	pixel_x = 0;
 	pixel_y = 30;
@@ -7102,7 +7102,7 @@
 /area/mine/explored)
 "oM" = (
 /obj/machinery/door/airlock/external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	id_tag = "research_outpost_outer";
 	locked = 1;
@@ -7111,7 +7111,7 @@
 	},
 /obj/machinery/access_button{
 	command = "cycle_exterior";
-	frequency = 1380;
+	frequency = 1381;
 	master_tag = "research_outpost_dock";
 	name = "exterior access button";
 	pixel_x = -6;
@@ -7129,7 +7129,7 @@
 /area/outpost/research/dock)
 "oP" = (
 /obj/machinery/door/airlock/external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	id_tag = "research_outpost_inner";
 	locked = 1;
@@ -7140,7 +7140,7 @@
 "oQ" = (
 /obj/machinery/access_button{
 	command = "cycle_interior";
-	frequency = 1380;
+	frequency = 1381;
 	master_tag = "research_outpost_dock";
 	name = "interior access button";
 	pixel_x = -26;
@@ -7564,7 +7564,7 @@
 "pB" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 4;
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "research_outpost_pump"
 	},
 /obj/effect/floor_decal/industrial/warning{
@@ -7579,7 +7579,7 @@
 	icon_state = "intact"
 	},
 /obj/machinery/airlock_sensor{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "research_outpost_sensor";
 	pixel_x = 0;
 	pixel_y = -25
@@ -10552,7 +10552,7 @@
 /area/outpost/mining_main/north_hall)
 "vC" = (
 /obj/machinery/door/airlock/external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	id_tag = "mining_outpost_outer";
 	locked = 1;
@@ -10561,7 +10561,7 @@
 	},
 /obj/machinery/access_button{
 	command = "cycle_exterior";
-	frequency = 1380;
+	frequency = 1381;
 	master_tag = "mining_outpost_airlock";
 	name = "exterior access button";
 	pixel_x = -30;
@@ -10672,7 +10672,7 @@
 	icon_state = "map"
 	},
 /obj/machinery/airlock_sensor{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "mining_outpost_sensor";
 	pixel_x = -28;
 	pixel_y = 0
@@ -10694,7 +10694,7 @@
 	icon_state = "intact"
 	},
 /obj/machinery/embedded_controller/radio/airlock/docking_port{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "mining_outpost_airlock";
 	pixel_x = 28;
 	pixel_y = 0;
@@ -10818,7 +10818,7 @@
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 1;
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "mining_outpost_pump"
 	},
 /obj/effect/floor_decal/industrial/warning{
@@ -10836,7 +10836,7 @@
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 1;
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "mining_outpost_pump"
 	},
 /obj/effect/floor_decal/industrial/warning{
@@ -10962,7 +10962,7 @@
 /area/outpost/mining_main/north_hall)
 "wu" = (
 /obj/machinery/door/airlock/external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	id_tag = "mining_outpost_inner";
 	locked = 1;
@@ -11220,7 +11220,7 @@
 "wR" = (
 /obj/machinery/access_button{
 	command = "cycle_interior";
-	frequency = 1380;
+	frequency = 1381;
 	master_tag = "mining_outpost_airlock";
 	name = "interior access button";
 	pixel_x = -30;
@@ -17255,7 +17255,7 @@
 "JN" = (
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/machinery/door/airlock/external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	id_tag = "edock_inner";
 	locked = 1;
@@ -17384,7 +17384,7 @@
 	icon_state = "intact"
 	},
 /obj/machinery/airlock_sensor{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "eoutpost_solar_sensor";
 	pixel_x = 25;
 	pixel_y = 0
@@ -17469,7 +17469,7 @@
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 1;
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "edock_pump"
 	},
 /turf/simulated/floor/tiled,
@@ -17481,11 +17481,11 @@
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 1;
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "edock_pump"
 	},
 /obj/machinery/embedded_controller/radio/airlock/docking_port{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "edock_airlock";
 	pixel_x = 30;
 	pixel_y = 0;
@@ -17547,7 +17547,7 @@
 /area/outpost/engineering/hallway)
 "Kn" = (
 /obj/machinery/door/airlock/external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	id_tag = "edock_outer";
 	locked = 1;

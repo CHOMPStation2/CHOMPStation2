@@ -800,7 +800,7 @@
 /turf/simulated/floor/tiled/steel_grid,
 /area/survivalpod/superpose/HydroCave)
 "aBF" = (
-/obj/machinery/r_n_d/server/core,
+/obj/machinery/rnd/server/master,
 /obj/machinery/light/small,
 /turf/simulated/floor/bluegrid{
 	name = "Server Base";
@@ -4545,7 +4545,7 @@
 /turf/simulated/shuttle/floor/voidcraft,
 /area/template_noop)
 "dxl" = (
-/obj/machinery/mecha_part_fabricator/pros,
+/obj/machinery/mecha_part_fabricator_tg/prosthetics,
 /obj/structure/window/reinforced/survival_pod{
 	dir = 1
 	},
@@ -5802,14 +5802,14 @@
 "eko" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 1;
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "estrella_pump"
 	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 6
 	},
 /obj/machinery/airlock_sensor{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "estrella_sensor";
 	pixel_y = -28
 	},
@@ -6026,7 +6026,7 @@
 /obj/machinery/atmospherics/pipe/simple/visible,
 /obj/machinery/access_button{
 	command = "cycle_interior";
-	frequency = 1380;
+	frequency = 1381;
 	master_tag = "estrella";
 	name = "interior access button";
 	pixel_y = 26
@@ -7129,7 +7129,7 @@
 /obj/structure/window/reinforced/survival_pod{
 	dir = 1
 	},
-/obj/machinery/r_n_d/server/core,
+/obj/machinery/rnd/server/master,
 /obj/machinery/light{
 	dir = 4
 	},
@@ -8103,7 +8103,7 @@
 "fKG" = (
 /obj/machinery/door/airlock/external{
 	desc = "It opens and closes. It is stamped with the logo of Major Bill's Transportation";
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	id_tag = null;
 	locked = 1;
@@ -12626,12 +12626,10 @@
 /obj/item/ore/marble,
 /obj/item/ore/osmium,
 /obj/item/ore/rutile,
-/obj/item/toy/bosunwhistle/fluff/strix,
 /obj/item/toy/character/wizard,
 /obj/item/reagent_containers/hypospray/autoinjector/biginjector/mindbreaker/unidentified,
 /obj/item/reagent_containers/hypospray/autoinjector/biginjector/mindbreaker/unidentified,
 /obj/item/fluff/squeezetoy,
-/obj/item/fluff/zekewatch,
 /obj/item/fluff/fidgetspinner/red,
 /obj/item/storage/pill_bottle/dice_nerd,
 /turf/simulated/floor/wood,
@@ -14031,7 +14029,6 @@
 /obj/item/clothing/shoes/footwraps,
 /obj/item/clothing/shoes/footwraps,
 /obj/item/clothing/shoes/footwraps,
-/obj/item/toy/bosunwhistle/fluff/strix,
 /obj/item/blobcore_chunk,
 /obj/item/towel/random,
 /obj/item/towel/random,
@@ -14248,7 +14245,7 @@
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/HydroCave)
 "khM" = (
-/obj/machinery/mecha_part_fabricator/pros{
+/obj/machinery/mecha_part_fabricator_tg/prosthetics{
 	req_access = null
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
@@ -14750,7 +14747,7 @@
 /obj/structure/window/reinforced/survival_pod{
 	opacity = 1
 	},
-/obj/machinery/r_n_d/circuit_imprinter,
+/obj/machinery/rnd/production/circuit_imprinter,
 /obj/item/reagent_containers/glass/beaker{
 	pixel_x = 9;
 	pixel_y = 8
@@ -16842,7 +16839,7 @@
 	dir = 9
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "estrella_pump"
 	},
 /turf/simulated/shuttle/plating,
@@ -17654,7 +17651,7 @@
 /turf/simulated/shuttle/floor/voidcraft/dark,
 /area/survivalpod/superpose/CultShip)
 "mtx" = (
-/obj/machinery/r_n_d/server/core,
+/obj/machinery/rnd/server/master,
 /obj/structure/window/reinforced/survival_pod{
 	dir = 8
 	},
@@ -18517,7 +18514,7 @@
 "nah" = (
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
 	dir = 4;
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "trade_shuttle";
 	pixel_x = -25;
 	req_one_access = list(101);
@@ -18554,7 +18551,7 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/template_noop)
 "nbt" = (
-/obj/machinery/mecha_part_fabricator/pros,
+/obj/machinery/mecha_part_fabricator_tg/prosthetics,
 /turf/simulated/floor/tiled/steel_dirty,
 /area/survivalpod/superpose/FieldLab)
 "nbF" = (
@@ -18891,7 +18888,7 @@
 /turf/simulated/floor/tiled/hydro,
 /area/survivalpod)
 "npj" = (
-/obj/machinery/r_n_d/server/robotics,
+/obj/machinery/rnd/server,
 /obj/structure/window/reinforced/survival_pod{
 	dir = 8
 	},
@@ -18914,7 +18911,7 @@
 /turf/simulated/shuttle/floor/voidcraft/light,
 /area/template_noop)
 "nqN" = (
-/obj/machinery/mecha_part_fabricator/pros{
+/obj/machinery/mecha_part_fabricator_tg/prosthetics{
 	req_access = list(300)
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
@@ -19621,7 +19618,6 @@
 /obj/item/clothing/shoes/dress{
 	pixel_y = -9
 	},
-/obj/item/clothing/mask/fluff/lucerna_1,
 /obj/structure/curtain/black,
 /obj/random/medical/pillbottle,
 /turf/simulated/floor/tiled/techfloor,
@@ -20277,7 +20273,7 @@
 /turf/simulated/shuttle/floor/voidcraft/dark,
 /area/survivalpod/superpose/TradingShip)
 "osB" = (
-/obj/machinery/mecha_part_fabricator,
+/obj/machinery/mecha_part_fabricator_tg,
 /turf/simulated/shuttle/floor/voidcraft,
 /area/template_noop)
 "otf" = (
@@ -21188,7 +21184,7 @@
 "oPi" = (
 /obj/machinery/door/airlock/multi_tile/metal/mait{
 	dir = 1;
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	id_tag = "estrella_outer";
 	locked = 1;
@@ -21534,7 +21530,7 @@
 /turf/simulated/floor/cult,
 /area/template_noop)
 "paG" = (
-/obj/machinery/r_n_d/circuit_imprinter,
+/obj/machinery/rnd/production/circuit_imprinter,
 /obj/item/reagent_containers/glass/beaker{
 	pixel_x = 9;
 	pixel_y = 8
@@ -23859,7 +23855,7 @@
 "pDj" = (
 /obj/machinery/door/airlock/multi_tile/metal/mait{
 	dir = 1;
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	id_tag = "estrella_inner";
 	locked = 1;
@@ -24070,7 +24066,7 @@
 "pKP" = (
 /obj/machinery/access_button{
 	command = "cycle_exterior";
-	frequency = 1380;
+	frequency = 1381;
 	master_tag = "estrella";
 	name = "exterior access button";
 	pixel_y = 26
@@ -25300,7 +25296,7 @@
 /turf/simulated/floor/tiled/steel_grid,
 /area/survivalpod/superpose/ScienceShip)
 "qBE" = (
-/obj/machinery/r_n_d/circuit_imprinter,
+/obj/machinery/rnd/production/circuit_imprinter,
 /obj/item/reagent_containers/glass/beaker{
 	pixel_x = 9;
 	pixel_y = 8
@@ -26967,7 +26963,7 @@
 /turf/simulated/floor/outdoors/dirt,
 /area/survivalpod/superpose/LoneHome)
 "saF" = (
-/obj/machinery/r_n_d/circuit_imprinter,
+/obj/machinery/rnd/production/circuit_imprinter,
 /obj/item/reagent_containers/glass/beaker/sulphuric,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/shuttle/floor/voidcraft,
@@ -27452,7 +27448,7 @@
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/GrandLibrary)
 "sql" = (
-/obj/machinery/r_n_d/server/core,
+/obj/machinery/rnd/server/master,
 /turf/simulated/shuttle/floor/voidcraft,
 /area/template_noop)
 "sqB" = (
@@ -27598,11 +27594,11 @@
 /area/survivalpod/superpose/HydroCave)
 "sxJ" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "estrella_pump"
 	},
 /obj/machinery/embedded_controller/radio/airlock/docking_port{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "estrella";
 	pixel_y = 26;
 	tag_airpump = "estrella_pump";
@@ -28349,7 +28345,7 @@
 /turf/simulated/floor/tiled/steel_dirty,
 /area/survivalpod/superpose/FieldLab)
 "taZ" = (
-/obj/machinery/r_n_d/server/robotics,
+/obj/machinery/rnd/server,
 /turf/simulated/floor/bluegrid{
 	name = "Server Base";
 	nitrogen = 500;
@@ -29878,7 +29874,7 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/survivalpod/superpose/CrashedInfestedShip)
 "uhP" = (
-/obj/machinery/r_n_d/circuit_imprinter,
+/obj/machinery/rnd/production/circuit_imprinter,
 /turf/simulated/shuttle/floor/voidcraft,
 /area/template_noop)
 "uhQ" = (
@@ -30883,7 +30879,7 @@
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 1;
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "estrella_pump"
 	},
 /turf/simulated/shuttle/plating,
@@ -31120,7 +31116,7 @@
 /turf/simulated/floor/wood,
 /area/survivalpod/superpose/GrandLibrary)
 "vgJ" = (
-/obj/machinery/mecha_part_fabricator,
+/obj/machinery/mecha_part_fabricator_tg,
 /obj/structure/window/reinforced/survival_pod{
 	dir = 1
 	},
@@ -34101,7 +34097,7 @@
 /turf/simulated/shuttle/floor/voidcraft/dark,
 /area/template_noop)
 "xkk" = (
-/obj/machinery/mecha_part_fabricator/pros,
+/obj/machinery/mecha_part_fabricator_tg/prosthetics,
 /turf/simulated/shuttle/floor/voidcraft,
 /area/template_noop)
 "xkx" = (

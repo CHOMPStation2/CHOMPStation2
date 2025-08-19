@@ -291,7 +291,7 @@
 	name = "Whiteship Master Docking Controller";
 	pixel_y = -15;
 	pixel_x = 21;
-	frequency = 1380
+	frequency = 1381
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/firealarm{
@@ -1108,7 +1108,7 @@
 	dir = 1;
 	id_tag = "whiteship_docking_aft";
 	name = "Aft Airlock Control";
-	frequency = 1380;
+	frequency = 1381;
 	pixel_y = -23
 	},
 /obj/structure/cable{
@@ -1240,7 +1240,7 @@
 	id_tag = "whiteship_docking_star";
 	name = "Starboard Airlock Control";
 	pixel_x = -22;
-	frequency = 1380
+	frequency = 1381
 	},
 /obj/machinery/airlock_sensor{
 	dir = 8;
@@ -1249,7 +1249,7 @@
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 1;
-	frequency = 1380
+	frequency = 1381
 	},
 /obj/effect/map_helper/airlock/sensor/chamber_sensor,
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
@@ -1901,7 +1901,7 @@
 	req_one_access = null
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	frequency = 1380
+	frequency = 1381
 	},
 /obj/effect/map_helper/airlock/sensor/chamber_sensor,
 /obj/effect/map_helper/airlock/atmos/chamber_pump,

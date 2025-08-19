@@ -94,12 +94,8 @@
 			PounceTarget(user, pounce_chance)
 
 // CHOMPEdit start: More voremob bellies!
-/mob/living/simple_mob/vore/rabbit/init_vore()
-	if(!voremob_loaded)
-		return
-	if(LAZYLEN(vore_organs))
-		return
-	.=..()
+/mob/living/simple_mob/vore/rabbit/load_default_bellies()
+	. = ..()
 
 	var/obj/belly/B = vore_selected
 	B.name = "stomach"

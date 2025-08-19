@@ -16,10 +16,10 @@
 
 /obj/item/tvcamera/Initialize(mapload)
 	. = ..()
-	listening_objects += src
+	GLOB.listening_objects += src
 
 /obj/item/tvcamera/Destroy()
-	listening_objects -= src
+	GLOB.listening_objects -= src
 	qdel(camera)
 	qdel(radio)
 	camera = null
@@ -69,7 +69,6 @@
 		return 1
 	if(href_list["channel"])
 		var/nc = tgui_input_text(usr, "Channel name", "Select new channel name", channel, MAX_NAME_LEN)
-		nc = sanitize(nc,MAX_NAME_LEN)
 		if(nc)
 			channel = nc
 			camera.c_tag = channel
@@ -180,10 +179,10 @@
 
 /obj/item/clothing/accessory/bodycam/Initialize(mapload)
 	. = ..()
-	listening_objects += src
+	GLOB.listening_objects += src
 
 /obj/item/clothing/accessory/bodycam/Destroy()
-	listening_objects -= src
+	GLOB.listening_objects -= src
 	qdel(bcamera)
 	qdel(bradio)
 	bcamera = null

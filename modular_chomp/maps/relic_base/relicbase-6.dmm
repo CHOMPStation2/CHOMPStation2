@@ -1793,7 +1793,7 @@
 "st" = (
 /obj/effect/floor_decal/industrial/warning,
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "car_mining_undermines";
 	name = "shuttle bay controller";
 	pixel_y = -32;
@@ -2329,7 +2329,7 @@
 "wZ" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/airlock/external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	id_tag = "car_mining_undermines_door";
 	locked = 1;
@@ -2708,7 +2708,7 @@
 /area/surface/outpost/research/xenoarcheology/medical)
 "CM" = (
 /obj/machinery/door/airlock/external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	id_tag = "rsr_undermines_door";
 	locked = 1;
@@ -3906,7 +3906,7 @@
 	dir = 4
 	},
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "rsr_undermines";
 	name = "shuttle bay controller";
 	pixel_y = -32;

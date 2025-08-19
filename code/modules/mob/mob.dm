@@ -1,9 +1,9 @@
 /mob/Destroy()//This makes sure that mobs withGLOB.clients/keys are not just deleted from the game.
 	SSmobs.currentrun -= src
-	mob_list -= src
-	dead_mob_list -= src
-	living_mob_list -= src
-	player_list -= src
+	GLOB.mob_list -= src
+	GLOB.dead_mob_list -= src
+	GLOB.living_mob_list -= src
+	GLOB.player_list -= src
 	unset_machine()
 	clear_fullscreen()
 	if(client)
@@ -44,8 +44,9 @@
 	if(mind)
 		if(mind.current == src)
 			mind.current = null
-		if(mind.original == src)
-			mind.original = null
+		var/mob/living/original = mind.original_character?.resolve()
+		if(original && original == src)
+			mind.original_character = null
 
 	. = ..()
 	update_client_z(null)
@@ -69,11 +70,11 @@
 	zone_sel = null
 
 /mob/Initialize(mapload)
-	mob_list += src
+	GLOB.mob_list += src
 	if(stat == DEAD)
-		dead_mob_list += src
+		GLOB.dead_mob_list += src
 	else
-		living_mob_list += src
+		GLOB.living_mob_list += src
 	lastarea = get_area(src)
 	set_focus(src) // VOREStation Add - Key Handling
 	update_transform() // Some mobs may start bigger or smaller than normal.
@@ -176,7 +177,7 @@
 			M.create_chat_message(src, "[runemessage || message]", FALSE, list("emote"), audible = FALSE)
 
 /mob/proc/findname(msg)
-	for(var/mob/M in mob_list)
+	for(var/mob/M in GLOB.mob_list)
 		if (M.real_name == text("[]", msg))
 			return M
 	return 0
@@ -311,7 +312,7 @@
 	set src in usr
 	if(usr != src)
 		to_chat(src, "No.")
-	var/msg = sanitize(tgui_input_text(src,"Set the flavor text in your 'examine' verb.","Flavor Text",html_decode(flavor_text), multiline = TRUE, prevent_enter = TRUE), extra = 0)	//VOREStation Edit: separating out OOC notes
+	var/msg = tgui_input_text(src,"Set the flavor text in your 'examine' verb.","Flavor Text",html_decode(flavor_text), MAX_MESSAGE_LEN, TRUE, prevent_enter = TRUE)
 
 	if(msg != null)
 		flavor_text = msg
@@ -340,7 +341,7 @@
 	// Try to figure out what time to use
 
 	// Special cases, can never respawn
-	if(ticker?.mode?.deny_respawn)
+	if(SSticker?.mode?.deny_respawn)
 		time = -1
 	else if(!CONFIG_GET(flag/abandon_allowed))
 		time = -1
@@ -348,7 +349,7 @@
 		time = -1
 
 	// Special case for observing before game start
-	else if(ticker?.current_state <= GAME_STATE_SETTING_UP)
+	else if(SSticker?.current_state <= GAME_STATE_SETTING_UP)
 		time = 1 MINUTE
 
 	// Wasn't given a time, use the config time
@@ -377,7 +378,7 @@
 		to_chat(src, span_boldnotice("You are already in the lobby!"))
 		return
 
-	if(stat != DEAD || !ticker)
+	if(stat != DEAD || !SSticker)
 		to_chat(src, span_boldnotice("You must be dead to use this!"))
 		return
 
@@ -486,7 +487,7 @@
 	targets += observe_list_format(GLOB.nuke_disks)
 	targets += observe_list_format(GLOB.all_singularities)
 	targets += getmobs()
-	targets += observe_list_format(sortAtom(mechas_list))
+	targets += observe_list_format(sort_names(GLOB.mechas_list))
 	targets += observe_list_format(SSshuttles.ships)
 
 	client.perspective = EYE_PERSPECTIVE
@@ -1574,7 +1575,7 @@ GLOBAL_LIST_EMPTY_TYPED(living_players_by_zlevel, /list)
 			qdel(ai_holder_old)	//Only way I could make #TESTING - Unable to be GC'd to stop. del() logs show it works.
 		L.ai_holder_type = tgui_input_list(usr, "Choose AI holder", "AI Type", typesof(/datum/ai_holder/))
 		L.initialize_ai_holder()
-		L.faction = sanitize(tgui_input_text(usr, "Please input AI faction", "AI faction", "neutral"))
+		L.faction = tgui_input_text(usr, "Please input AI faction", "AI faction", "neutral", MAX_MESSAGE_LEN)
 		L.a_intent = tgui_input_list(usr, "Please choose AI intent", "AI intent", list(I_HURT, I_HELP))
 		if(tgui_alert(usr, "Make mob wake up? This is needed for carbon mobs.", "Wake mob?", list("Yes", "No")) == "Yes")
 			L.AdjustSleeping(-100)

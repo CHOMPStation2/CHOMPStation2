@@ -65,14 +65,6 @@
 	outdoors = 0
 	},
 /area/submap/XenoHive)
-"co" = (
-/obj/effect/alien/weeds,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/map_helper/no_phaseshift,
-/turf/simulated/floor/outdoors/rocks{
-	outdoors = 0
-	},
-/area/submap/XenoHive)
 "dm" = (
 /obj/effect/alien/weeds,
 /obj/machinery/portable_atmospherics/powered/reagent_distillery/industrial,
@@ -139,12 +131,6 @@
 	dir = 1
 	},
 /turf/simulated/floor/plating/turfpack/sif,
-/area/submap/XenoHive)
-"iX" = (
-/obj/effect/alien/weeds,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/map_helper/no_phaseshift/area,
-/turf/simulated/floor/tiled/steel_dirty/turfpack/sif,
 /area/submap/XenoHive)
 "jY" = (
 /obj/effect/alien/weeds,
@@ -387,13 +373,6 @@
 /obj/structure/table/rack/shelf/steel,
 /obj/effect/alien/weeds,
 /turf/simulated/floor/plating/turfpack/sif,
-/area/submap/XenoHive)
-"Hx" = (
-/obj/item/portable_destructive_analyzer,
-/obj/effect/alien/weeds,
-/turf/simulated/floor/outdoors/dirt/turfpack/sif{
-	outdoors = 0
-	},
 /area/submap/XenoHive)
 "Hz" = (
 /obj/effect/alien/weeds,
@@ -653,7 +632,7 @@ sy
 xB
 xB
 Tv
-Hx
+rL
 dm
 Is
 xB
@@ -722,7 +701,7 @@ zm
 Gw
 tA
 Vg
-iX
+Tb
 LB
 zU
 LB
@@ -825,7 +804,7 @@ Et
 Et
 Et
 AB
-co
+HJ
 Or
 va
 AB

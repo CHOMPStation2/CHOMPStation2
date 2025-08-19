@@ -148,11 +148,7 @@
 	if(ai_holder)
 		ai_holder.remove_target()
 
-/mob/living/simple_mob/vore/pakkun/init_vore()
-	if(!voremob_loaded)
-		return
-	if(LAZYLEN(vore_organs))
-		return
+/mob/living/simple_mob/vore/pakkun/load_default_bellies()
 	. = ..()
 	var/obj/belly/B = vore_selected
 	if(isbelly(B)) //ChompEDIT - fix a runtime
@@ -277,11 +273,7 @@
 		petters -= pick(petters)
 	..()
 
-/mob/living/simple_mob/vore/pakkun/snapdragon/snappy/init_vore()
-	if(!voremob_loaded)
-		return
-	if(LAZYLEN(vore_organs))
-		return
+/mob/living/simple_mob/vore/pakkun/snapdragon/snappy/load_default_bellies()
 	. = ..()
 	var/obj/belly/B = vore_selected
 	if(isbelly(B)) //ChompEDIT - fix a runtime

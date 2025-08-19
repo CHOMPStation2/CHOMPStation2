@@ -1747,7 +1747,7 @@
 /area/holodeck/source_emptycourt)
 "iw" = (
 /obj/machinery/door/airlock/external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	id_tag = "trade_shuttle_hatch";
 	locked = 1;
@@ -2312,7 +2312,7 @@
 /area/syndicate_mothership/elite_squad)
 "kR" = (
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "arrivals_shuttle";
 	pixel_y = 25;
 	req_one_access = list(13);
@@ -2622,7 +2622,7 @@
 /area/wizard_station)
 "mv" = (
 /obj/machinery/door/airlock/external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	id_tag = "arrivals_shuttle_hatch";
 	locked = 1;
@@ -6197,7 +6197,7 @@
 /area/holodeck/holodorm/source_beach)
 "EJ" = (
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "trade_shuttle_bay";
 	name = "shuttle bay controller";
 	pixel_x = 25;
@@ -8689,7 +8689,7 @@
 /area/shuttle/trade/centcom)
 "QA" = (
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "trade_shuttle";
 	pixel_x = -25;
 	req_one_access = list(101);
@@ -9518,7 +9518,7 @@
 /area/shuttle/trade/centcom)
 "Vn" = (
 /obj/machinery/door/airlock/external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	id_tag = "trade_shuttle_bay_door";
 	locked = 1

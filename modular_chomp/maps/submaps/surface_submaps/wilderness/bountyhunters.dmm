@@ -3,6 +3,13 @@
 /obj/effect/floor_decal/corner/grey/diagonal,
 /turf/simulated/floor/concrete/turfpack/sif,
 /area/submap/BountyHunters)
+"ab" = (
+/obj/structure/cable/green{
+	icon_state = "0-8"
+	},
+/obj/effect/floor_decal/corner/grey/diagonal,
+/turf/simulated/floor/concrete/turfpack/sif,
+/area/submap/BountyHunters)
 "aH" = (
 /obj/machinery/button/remote/blast_door{
 	id = "bountycellA"
@@ -69,11 +76,6 @@
 	dir = 8
 	},
 /obj/effect/floor_decal/corner/grey/diagonal,
-/turf/simulated/floor/concrete,
-/area/submap/BountyHunters)
-"hU" = (
-/obj/effect/floor_decal/corner/grey/diagonal,
-/obj/effect/map_helper/no_phaseshift/area,
 /turf/simulated/floor/concrete,
 /area/submap/BountyHunters)
 "jO" = (
@@ -826,7 +828,7 @@ qG
 qG
 qG
 qG
-hU
+qG
 oV
 qG
 Yd
@@ -964,7 +966,7 @@ qQ
 qG
 RC
 zl
-PP
+ab
 Gi
 aa
 NE

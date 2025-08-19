@@ -79,7 +79,7 @@
 #define SAFE   0x10
 
 /obj/machinery/button/remote/airlock
-	icon = 'icons/obj/stationobjs_vr.dmi' // VOREStation Edit
+	icon = 'icons/obj/stationobjs.dmi'
 	name = "remote door-control"
 	desc = "It controls doors, remotely."
 
@@ -133,7 +133,7 @@
 	Blast door remote control
 */
 /obj/machinery/button/remote/blast_door
-	icon = 'icons/obj/stationobjs_vr.dmi'
+	icon = 'icons/obj/stationobjs.dmi'
 	name = "remote blast door-control"
 	desc = "It controls blast doors, remotely."
 
@@ -152,7 +152,7 @@
 //CHOMP Add start
 /obj/machinery/button/remote/blast_door/bear
 	name = "stuffed bear"
-	icon = 'icons/obj/stationobjs_vr.dmi'
+	icon = 'icons/obj/stationobjs.dmi'
 	icon_state = "stuffedbear"
 	desc = "A stuffed and mounted bear. Quite a statement piece, but holds a curious glare."
 	density = 1
@@ -194,9 +194,8 @@
 /obj/machinery/button/remote/emitter/trigger(mob/user as mob)
 	for(var/obj/machinery/power/emitter/E in GLOB.machines)
 		if(E.id == id)
-			spawn(0)
-				E.activate(user)
-				return
+			E.activate(user)
+			return
 
 /*
 	Mass driver remote control
@@ -213,9 +212,8 @@
 
 	for(var/obj/machinery/door/blast/M in GLOB.machines)
 		if(M.id == id)
-			spawn(0)
-				M.open()
-				return
+			M.open()
+			return
 
 	sleep(20)
 
@@ -227,9 +225,8 @@
 
 	for(var/obj/machinery/door/blast/M in GLOB.machines)
 		if(M.id == id)
-			spawn(0)
-				M.close()
-				return
+			M.close()
+			return
 
 	icon_state = "launcherbtt"
 	update_icon()
@@ -248,7 +245,7 @@
 /obj/machinery/button/remote/shields
 	name = "remote shield control"
 	desc = "It controls shields, remotely."
-	icon = 'icons/obj/stationobjs_vr.dmi' // VOREStation Edit
+	icon = 'icons/obj/stationobjs.dmi'
 
 /obj/machinery/button/remote/shields/trigger(var/mob/user)
 	for(var/obj/machinery/shield_gen/SG in GLOB.machines)

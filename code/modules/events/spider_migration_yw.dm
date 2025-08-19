@@ -18,7 +18,7 @@
 
 /datum/event/spider_migration/start()
 	if(severity == EVENT_LEVEL_MAJOR)
-		spawn_spider(landmarks_list.len)
+		spawn_spider(GLOB.landmarks_list.len)
 	else if(severity == EVENT_LEVEL_MODERATE)
 		spawn_spider(rand(4, 6)) 			//12 to 30 spider, in small groups
 	else
@@ -27,7 +27,7 @@
 /datum/event/spider_migration/proc/spawn_spider(var/num_groups, var/group_size_min=3, var/group_size_max=5)
 	var/list/spawn_locations = list()
 
-	for(var/obj/effect/landmark/C in landmarks_list)
+	for(var/obj/effect/landmark/C in GLOB.landmarks_list)
 		if(C.name == "carpspawn")
 			spawn_locations.Add(C.loc)
 	spawn_locations = shuffle(spawn_locations)

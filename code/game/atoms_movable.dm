@@ -1,7 +1,8 @@
 /atom/movable
 	layer = OBJ_LAYER
-	appearance_flags = TILE_BOUND|PIXEL_SCALE|KEEP_TOGETHER|LONG_GLIDE
 	glide_size = 8
+	appearance_flags = TILE_BOUND|PIXEL_SCALE|KEEP_TOGETHER|LONG_GLIDE
+
 	var/last_move = null //The direction the atom last moved
 	var/anchored = FALSE
 	// var/elevation = 2    - not used anywhere
@@ -176,7 +177,7 @@
 			// place due to a Crossed, Bumped, etc. call will interrupt
 			// the second half of the diagonal movement, or the second attempt
 			// at a first half if step() fails because we hit something.
-			glide_for(movetime * SQRT_2) //CHOMPEDIT - proper diagonal movement
+			glide_for(movetime * SQRT_2)
 			if (direct & NORTH)
 				if (direct & EAST)
 					if (step(src, NORTH) && moving_diagonally)
@@ -248,8 +249,6 @@
 		riding_datum.handle_vehicle_offsets()
 	for (var/datum/light_source/light as anything in light_sources) // Cycle through the light sources on this atom and tell them to update.
 		light.source_atom.update_light()
-
-	//SEND_SIGNAL(src, COMSIG_MOVABLE_MOVED, old_loc, direction) CHOMPEdit - Why was this comsig here twice?
 
 	return TRUE
 
@@ -514,8 +513,8 @@
 			new_y = TRANSITIONEDGE + 1
 			new_x = rand(TRANSITIONEDGE + 2, world.maxx - TRANSITIONEDGE - 2)
 
-		if(ticker && istype(ticker.mode, /datum/game_mode/nuclear)) //only really care if the game mode is nuclear
-			var/datum/game_mode/nuclear/G = ticker.mode
+		if(SSticker && istype(SSticker.mode, /datum/game_mode/nuclear)) //only really care if the game mode is nuclear
+			var/datum/game_mode/nuclear/G = SSticker.mode
 			G.check_nuke_disks()
 
 		var/turf/T = locate(new_x, new_y, new_z)

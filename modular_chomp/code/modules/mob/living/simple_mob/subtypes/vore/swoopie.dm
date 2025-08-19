@@ -84,11 +84,7 @@
 		return
 	. = ..() //if not vaccable, just do what it normally does
 
-/mob/living/simple_mob/vore/aggressive/corrupthound/swoopie/init_vore()
-	if(!voremob_loaded)
-		return
-	if(LAZYLEN(vore_organs))
-		return TRUE
+/mob/living/simple_mob/vore/aggressive/corrupthound/swoopie/load_default_bellies()
 	add_verb(src,/mob/living/proc/eat_trash) //CHOMPEdit TGPanel
 	add_verb(src,/mob/living/proc/toggle_trash_catching) //CHOMPEdit TGPanel
 	add_verb(src,/mob/living/proc/restrict_trasheater) //CHOMPEdit TGPanel
@@ -163,12 +159,6 @@
 	B.fancy_vore = 1
 	B.vore_sound = "Stomach Move"
 	B.sound_volume = 20
-
-	// This needs to go here as swoopies can't call simple mob init_vore...They shouldn't be a subtype of corrupt hound.
-	AddElement(/datum/element/slosh)
-
-	if(!soulgem)
-		soulgem = new(src)
 
 /obj/belly/longneck
 	affects_vore_sprites = TRUE

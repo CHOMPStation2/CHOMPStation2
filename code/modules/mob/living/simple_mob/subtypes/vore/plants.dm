@@ -38,11 +38,7 @@
 	vore_bump_emote = "encloses on"
 	var/list/eaten_mobs = list()
 
-/mob/living/simple_mob/vore/mantrap/init_vore()
-	if(!voremob_loaded)
-		return
-	if(LAZYLEN(vore_organs))
-		return
+/mob/living/simple_mob/vore/mantrap/load_default_bellies()
 	. = ..()
 	var/obj/belly/B = vore_selected
 	B.name = "trap"
@@ -81,7 +77,7 @@
 		if(L in eaten_mobs)
 			return
 		if(L.devourable && L.allowmobvore && (src.vore_fullness < src.vore_capacity))
-			perform_the_nom(src,L,src,src.vore_selected,-1)
+			begin_instant_nom(src,L,src,src.vore_selected)
 			eaten_mobs += L
 
 
@@ -131,11 +127,7 @@
 	projectiletype = /obj/item/projectile/beam/appendage
 	projectilesound = 'sound/effects/slime_squish.ogg'
 
-/mob/living/simple_mob/vore/pitcher/init_vore()
-	if(!voremob_loaded)
-		return
-	if(LAZYLEN(vore_organs))
-		return
+/mob/living/simple_mob/vore/pitcher/load_default_bellies()
 	. = ..()
 	var/obj/belly/B = vore_selected
 	B.name = "stomach"

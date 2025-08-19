@@ -38,15 +38,17 @@
 	var/h_style = "Bald"
 
 	var/list/valid_hairstyles = list()
-	for(var/hairstyle in hair_styles_list)
-		var/datum/sprite_accessory/S = hair_styles_list[hairstyle]
+	for(var/hairstyle in GLOB.hair_styles_list)
+		var/datum/sprite_accessory/S = GLOB.hair_styles_list[hairstyle]
 		if(gender == MALE && S.gender == FEMALE)
 			continue
 		if(gender == FEMALE && S.gender == MALE)
 			continue
+		if(S.name == DEVELOPER_WARNING_NAME)
+			continue
 		if( !(species in S.species_allowed))
 			continue
-		valid_hairstyles[hairstyle] = hair_styles_list[hairstyle]
+		valid_hairstyles[hairstyle] = GLOB.hair_styles_list[hairstyle]
 
 	if(valid_hairstyles.len)
 		h_style = pick(valid_hairstyles)
@@ -57,16 +59,18 @@
 	var/f_style = "Shaved"
 
 	var/list/valid_facialhairstyles = list()
-	for(var/facialhairstyle in facial_hair_styles_list)
-		var/datum/sprite_accessory/S = facial_hair_styles_list[facialhairstyle]
+	for(var/facialhairstyle in GLOB.facial_hair_styles_list)
+		var/datum/sprite_accessory/S = GLOB.facial_hair_styles_list[facialhairstyle]
 		if(gender == MALE && S.gender == FEMALE)
 			continue
 		if(gender == FEMALE && S.gender == MALE)
 			continue
+		if(S.name == DEVELOPER_WARNING_NAME)
+			continue
 		if( !(species in S.species_allowed))
 			continue
 
-		valid_facialhairstyles[facialhairstyle] = facial_hair_styles_list[facialhairstyle]
+		valid_facialhairstyles[facialhairstyle] = GLOB.facial_hair_styles_list[facialhairstyle]
 
 	if(valid_facialhairstyles.len)
 		f_style = pick(valid_facialhairstyles)
@@ -88,9 +92,9 @@
 
 	if(!current_species || current_species.name_language == null)
 		if(gender==FEMALE)
-			return capitalize(pick(first_names_female)) + " " + capitalize(pick(last_names))
+			return capitalize(pick(GLOB.first_names_female)) + " " + capitalize(pick(GLOB.last_names))
 		else
-			return capitalize(pick(first_names_male)) + " " + capitalize(pick(last_names))
+			return capitalize(pick(GLOB.first_names_male)) + " " + capitalize(pick(GLOB.last_names))
 	else
 		return current_species.get_random_name(gender)
 
@@ -290,6 +294,8 @@ Proc for attack log creation, because really why not
 	if (progress)
 		progbar = new(user, delay, target)
 
+	SEND_SIGNAL(user, COMSIG_DO_AFTER_BEGAN)
+
 	var/endtime = world.time + delay
 	var/starttime = world.time
 
@@ -342,6 +348,7 @@ Proc for attack log creation, because really why not
 
 	if(progbar)
 		qdel(progbar)
+	SEND_SIGNAL(user, COMSIG_DO_AFTER_ENDED)
 
 /atom/proc/living_mobs(var/range = world.view, var/count_held = FALSE) //CHOMPEdit Start
 	var/list/viewers = oviewers(src,range)
