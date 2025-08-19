@@ -424,3 +424,27 @@
   - image: Deletes a lot of duplicate icon states.
   - code_imp: Makes egg code better, just swaps to _open instead of changing the icon.
   - maptweak: Removes hardcoded icon varset from redgate map
+2025-08-19:
+  CHOMPStation2StaffMirrorBot:
+  - refactor: cleaned up icon files for headsets and ear-things - there shouldn't
+      be any player-facing changes, but please report any invisible or bugged clothes
+      in appropriate channels
+  - rscdel: Disabled the telekinesis node in techwebs for the time being.
+  Diana:
+  - spellcheck: Removed the SSsun mentions from solar panels.
+  - bugfix: we no longer have the curent grid
+  - qol: Borgs can now pick up reagent hoses
+  - bugfix: Weavers can walk through weaver walls
+  Guti:
+  - maptweak: Added a few more goodies upon the Refinery
+  - maptweak: Added some platings to the wire leading to the Refinery's APCs
+  - maptweak: Added a cargo tank tug to the Refinery
+  - maptweak: Added a large room to the Refinery
+  Will:
+  - bugfix: Crates will no longer make flashlight beams vanish when closed over them
+  - bugfix: Crates closed on flashlights and other directional light sources no longer
+      leave the light floating in place where it was closed
+  Will, Diana:
+  - qol: Clang event will now increase security level to blue for the duration of
+      the CLANG event, getting people's attention even if alt-tabbed.
+  - code_imp: Clang event is now better on the backend
