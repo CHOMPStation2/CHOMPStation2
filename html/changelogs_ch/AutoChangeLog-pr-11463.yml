@@ -1,0 +1,5 @@
+author: "CHOMPStation2StaffMirrorBot"
+delete-after: True
+changes:
+  - bugfix: "Telekinesis range exploits"
+  - bugfix: "Telekinesis and remote viewing in any form no longer work together"
