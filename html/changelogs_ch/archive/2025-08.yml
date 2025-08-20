@@ -448,3 +448,17 @@
   - qol: Clang event will now increase security level to blue for the duration of
       the CLANG event, getting people's attention even if alt-tabbed.
   - code_imp: Clang event is now better on the backend
+2025-08-20:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: Telekinesis range exploits
+  - bugfix: Telekinesis and remote viewing in any form no longer work together
+  - bugfix: vending machines allowing to purchase non available items
+  - bugfix: Fixes lleill sparking and losing energy when choosing no option when trying
+      teleport to a ring.
+  - bugfix: Seismic charges and plastique explosive blast distance fixed for new explosion
+      subsystem
+  - spellcheck: cannisters are now cantisters and have been spellcorrected to be the
+      proper word
+  - bugfix: Fixes doppler sprite missing
+  Diana:
+  - qol: Makes it so jetpacks function inside voidsuits/suit storage
