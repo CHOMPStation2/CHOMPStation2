@@ -176,7 +176,6 @@
 #include "code\__defines\speech_channels.dm"
 #include "code\__defines\spells.dm"
 #include "code\__defines\sprite_sheets.dm"
-#include "code\__defines\sprite_sheets_ch.dm"
 #include "code\__defines\sqlite_defines.dm"
 #include "code\__defines\stat_tracking.dm"
 #include "code\__defines\statpanel.dm"
