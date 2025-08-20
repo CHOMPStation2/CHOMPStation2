@@ -12,7 +12,7 @@ SPECIES_NEVREAN = 'icons/inventory/suit/mob_sergal.dmi',\
 SPECIES_VULPKANIN = 'icons/inventory/suit/mob_vulpkanin.dmi',\
 SPECIES_ZORREN_HIGH = 'icons/inventory/suit/mob_vulpkanin.dmi',\
 SPECIES_FENNEC = 'icons/inventory/suit/mob_vulpkanin.dmi',\
-SPECIES_ALTEVIAN = 'icons/inventory/suit/mob_altevian.dmi',\ //CHOMPEdit - Adding Xenohybrid
+SPECIES_ALTEVIAN = 'icons/inventory/suit/mob_altevian.dmi',\
 SPECIES_XENOMORPH_HYBRID = 'modular_chomp/icons/inventory/suit/mob_xenomorph_hybrid.dmi') //CHOMPEdit - Adding Xenohybrid
 #define VR_SPECIES_SPRITE_SHEETS_HEAD_MOB list(\
 SPECIES_HUMAN = 'icons/inventory/head/mob.dmi',\
