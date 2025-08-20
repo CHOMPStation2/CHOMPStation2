@@ -25,11 +25,7 @@
 
 /obj/item/clothing/suit/radiation
 	sprite_sheets = list(
-<<<<<<< HEAD
-		SPECIES_TESHARI = 'icons/inventory/suit/mob_ch_teshari.dmi', //CHOMPstation edit, using our overwrite icons
-=======
 		SPECIES_TESHARI = 'icons/inventory/suit/mob_teshari.dmi',
->>>>>>> cc246f5c85 (Metamorphic suits [IDB IGNORE] (#18259))
 		SPECIES_VOX = 'icons/inventory/suit/mob_vox.dmi',
 		SPECIES_WEREBEAST = 'icons/inventory/suit/mob_werebeast.dmi'
 		)
