@@ -172,11 +172,7 @@
 	idle_power_usage = 0;
 	locked = 1;
 	name = "Energy Cannon";
-<<<<<<< HEAD
-	req_access_txt = "100";
-=======
 	req_access = list(100);
->>>>>>> ac909f0138 (rid of legacy vars (#18305))
 	state = 2;
 	use_power = 0
 	},
@@ -217,11 +213,7 @@
 	idle_power_usage = 0;
 	locked = 1;
 	name = "Energy Cannon";
-<<<<<<< HEAD
-	req_access_txt = "100";
-=======
 	req_access = list(100);
->>>>>>> ac909f0138 (rid of legacy vars (#18305))
 	state = 2;
 	use_power = 0
 	},
@@ -250,11 +242,7 @@
 	idle_power_usage = 0;
 	locked = 1;
 	name = "Energy Cannon";
-<<<<<<< HEAD
-	req_access_txt = "100";
-=======
 	req_access = list(100);
->>>>>>> ac909f0138 (rid of legacy vars (#18305))
 	state = 2;
 	use_power = 0
 	},
@@ -287,11 +275,7 @@
 	idle_power_usage = 0;
 	locked = 1;
 	name = "Energy Cannon";
-<<<<<<< HEAD
-	req_access_txt = "100";
-=======
 	req_access = list(100);
->>>>>>> ac909f0138 (rid of legacy vars (#18305))
 	state = 2;
 	use_power = 0
 	},
@@ -371,11 +355,7 @@
 	idle_power_usage = 0;
 	locked = 1;
 	name = "Energy Cannon";
-<<<<<<< HEAD
-	req_access_txt = "100";
-=======
 	req_access = list(100);
->>>>>>> ac909f0138 (rid of legacy vars (#18305))
 	state = 2;
 	use_power = 0
 	},
@@ -411,11 +391,7 @@
 	idle_power_usage = 0;
 	locked = 1;
 	name = "Energy Cannon";
-<<<<<<< HEAD
-	req_access_txt = "100";
-=======
 	req_access = list(100);
->>>>>>> ac909f0138 (rid of legacy vars (#18305))
 	state = 2;
 	use_power = 0
 	},
@@ -440,11 +416,7 @@
 	idle_power_usage = 0;
 	locked = 1;
 	name = "Energy Cannon";
-<<<<<<< HEAD
-	req_access_txt = "100";
-=======
 	req_access = list(100);
->>>>>>> ac909f0138 (rid of legacy vars (#18305))
 	state = 2;
 	use_power = 0
 	},
@@ -463,11 +435,7 @@
 	idle_power_usage = 0;
 	locked = 1;
 	name = "Energy Cannon";
-<<<<<<< HEAD
-	req_access_txt = "100";
-=======
 	req_access = list(100);
->>>>>>> ac909f0138 (rid of legacy vars (#18305))
 	state = 2;
 	use_power = 0
 	},
@@ -489,11 +457,7 @@
 	idle_power_usage = 0;
 	locked = 1;
 	name = "Energy Cannon";
-<<<<<<< HEAD
-	req_access_txt = "100";
-=======
 	req_access = list(100);
->>>>>>> ac909f0138 (rid of legacy vars (#18305))
 	state = 2;
 	use_power = 0
 	},
@@ -575,11 +539,7 @@
 	idle_power_usage = 0;
 	locked = 1;
 	name = "Energy Cannon";
-<<<<<<< HEAD
-	req_access_txt = "100";
-=======
 	req_access = list(100);
->>>>>>> ac909f0138 (rid of legacy vars (#18305))
 	state = 2;
 	use_power = 0
 	},
@@ -632,11 +592,7 @@
 	idle_power_usage = 0;
 	locked = 1;
 	name = "Energy Cannon";
-<<<<<<< HEAD
-	req_access_txt = "100";
-=======
 	req_access = list(100);
->>>>>>> ac909f0138 (rid of legacy vars (#18305))
 	state = 2;
 	use_power = 0
 	},
@@ -654,11 +610,7 @@
 	idle_power_usage = 0;
 	locked = 1;
 	name = "Energy Cannon";
-<<<<<<< HEAD
-	req_access_txt = "100";
-=======
 	req_access = list(100);
->>>>>>> ac909f0138 (rid of legacy vars (#18305))
 	state = 2;
 	use_power = 0
 	},
@@ -719,11 +671,7 @@
 	idle_power_usage = 0;
 	locked = 1;
 	name = "Energy Cannon";
-<<<<<<< HEAD
-	req_access_txt = "100";
-=======
 	req_access = list(100);
->>>>>>> ac909f0138 (rid of legacy vars (#18305))
 	state = 2;
 	use_power = 0
 	},
@@ -741,11 +689,7 @@
 	idle_power_usage = 0;
 	locked = 1;
 	name = "Energy Cannon";
-<<<<<<< HEAD
-	req_access_txt = "100";
-=======
 	req_access = list(100);
->>>>>>> ac909f0138 (rid of legacy vars (#18305))
 	state = 2;
 	use_power = 0
 	},
@@ -760,11 +704,7 @@
 	idle_power_usage = 0;
 	locked = 1;
 	name = "Energy Cannon";
-<<<<<<< HEAD
-	req_access_txt = "100";
-=======
 	req_access = list(100);
->>>>>>> ac909f0138 (rid of legacy vars (#18305))
 	state = 2;
 	use_power = 0
 	},
@@ -782,11 +722,7 @@
 	idle_power_usage = 0;
 	locked = 1;
 	name = "Energy Cannon";
-<<<<<<< HEAD
-	req_access_txt = "100";
-=======
 	req_access = list(100);
->>>>>>> ac909f0138 (rid of legacy vars (#18305))
 	state = 2;
 	use_power = 0
 	},
@@ -875,11 +811,7 @@
 	name = "Gateway Lockdown";
 	pixel_x = -4;
 	pixel_y = 26;
-<<<<<<< HEAD
-	req_access_txt = "0"
-=======
 	req_access = null
->>>>>>> ac909f0138 (rid of legacy vars (#18305))
 	},
 /turf/simulated/floor/carpet,
 /area/awaymission/challenge/end)
@@ -937,11 +869,7 @@
 /obj/machinery/door/airlock/centcom{
 	name = "Airlock";
 	opacity = 1;
-<<<<<<< HEAD
-	req_access_txt = "109"
-=======
 	req_access = list(109)
->>>>>>> ac909f0138 (rid of legacy vars (#18305))
 	},
 /turf/simulated/floor/plating,
 /area/awaymission/challenge/end)
@@ -1053,11 +981,7 @@
 /obj/machinery/door/airlock/centcom{
 	name = "Security";
 	opacity = 1;
-<<<<<<< HEAD
-	req_access_txt = "109"
-=======
 	req_access = list(109)
->>>>>>> ac909f0138 (rid of legacy vars (#18305))
 	},
 /turf/simulated/floor{
 	icon_state = "dark"
@@ -1087,11 +1011,7 @@
 /obj/machinery/door/airlock/centcom{
 	name = "Administrator";
 	opacity = 1;
-<<<<<<< HEAD
-	req_access_txt = "109"
-=======
 	req_access = list(109)
->>>>>>> ac909f0138 (rid of legacy vars (#18305))
 	},
 /turf/simulated/floor{
 	icon_state = "dark"
@@ -1336,11 +1256,6 @@
 /area/awaymission/challenge/end)
 "dd" = (
 /obj/structure/cable{
-<<<<<<< HEAD
-=======
-	d1 = 1;
-	d2 = 2;
->>>>>>> ac909f0138 (rid of legacy vars (#18305))
 	icon_state = "1-2";
 	pixel_y = 0
 	},
@@ -1388,11 +1303,6 @@
 /area/awaymission/challenge/end)
 "di" = (
 /obj/structure/cable{
-<<<<<<< HEAD
-=======
-	d1 = 1;
-	d2 = 2;
->>>>>>> ac909f0138 (rid of legacy vars (#18305))
 	icon_state = "1-2";
 	pixel_y = 0
 	},
@@ -1436,11 +1346,7 @@
 /obj/machinery/door/airlock/centcom{
 	name = "Gateway Access";
 	opacity = 1;
-<<<<<<< HEAD
-	req_access_txt = "109"
-=======
 	req_access = list(109)
->>>>>>> ac909f0138 (rid of legacy vars (#18305))
 	},
 /turf/simulated/floor{
 	icon_state = "dark"
@@ -1461,20 +1367,10 @@
 /area/awaymission/challenge/end)
 "do" = (
 /obj/structure/cable{
-<<<<<<< HEAD
-=======
-	d1 = 1;
-	d2 = 2;
->>>>>>> ac909f0138 (rid of legacy vars (#18305))
 	icon_state = "1-2";
 	pixel_y = 0
 	},
 /obj/structure/cable{
-<<<<<<< HEAD
-=======
-	d1 = 1;
-	d2 = 4;
->>>>>>> ac909f0138 (rid of legacy vars (#18305))
 	icon_state = "1-4"
 	},
 /mob/living/simple_animal/hostile/syndicate{
@@ -1486,11 +1382,6 @@
 /area/awaymission/challenge/end)
 "dp" = (
 /obj/structure/cable{
-<<<<<<< HEAD
-=======
-	d1 = 2;
-	d2 = 8;
->>>>>>> ac909f0138 (rid of legacy vars (#18305))
 	icon_state = "2-8"
 	},
 /turf/simulated/floor{
