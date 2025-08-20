@@ -393,6 +393,7 @@
 	late_choices_dialog.tgui_interact(src)
 
 /mob/new_player/proc/create_character(var/turf/T)
+	SHOULD_NOT_SLEEP(TRUE)
 	spawning = 1
 	close_spawn_windows()
 
