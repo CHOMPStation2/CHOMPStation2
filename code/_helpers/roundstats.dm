@@ -72,11 +72,7 @@ GLOBAL_LIST_EMPTY(refined_chems_sold)
 				good_num = 0
 
 	if(GLOB.prey_eaten_roundstat > 0)
-<<<<<<< HEAD:code/datums/roundstats/roundstats.dm
-		valid_stats_list.Add("Individuals were eaten a total of [GLOB.prey_eaten_roundstat] times today!") //CHOMPEdit
-=======
 		valid_stats_list.Add("Individuals were eaten a total of [GLOB.prey_eaten_roundstat] times today!")
->>>>>>> d8f472289d (ticker followup (#18275)):code/_helpers/roundstats.dm
 	if(GLOB.prey_digested_roundstat > 0)
 		valid_stats_list.Add("A total of [GLOB.prey_digested_roundstat] individuals were digested today!")
 	if(GLOB.prey_absorbed_roundstat > 0)
