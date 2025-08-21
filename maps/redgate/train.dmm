@@ -452,7 +452,11 @@
 	dir = 4
 	},
 /obj/effect/step_trigger/death/train_crush,
+<<<<<<< HEAD
 /turf/simulated/floor/tiled/techfloor/grid,
+=======
+/turf/unsimulated/floor/techfloor_grid/outdoors_tansit,
+>>>>>>> fd0a7cfffd (Fixes map issues found in #18285 [MDB IGNORE] [IDB IGNORE] (#18289))
 /area/redgate/train/overboard)
 "iX" = (
 /obj/effect/floor_decal/transit/orange{
@@ -462,7 +466,11 @@
 	dir = 8
 	},
 /obj/effect/step_trigger/death/train_lost,
+<<<<<<< HEAD
 /turf/simulated/floor/tiled/techfloor/grid,
+=======
+/turf/unsimulated/floor/techfloor_grid/outdoors_tansit,
+>>>>>>> fd0a7cfffd (Fixes map issues found in #18285 [MDB IGNORE] [IDB IGNORE] (#18289))
 /area/redgate/train/overboard)
 "ja" = (
 /obj/structure/closet/walllocker/emerglocker{
@@ -513,7 +521,11 @@
 	dir = 8
 	},
 /obj/effect/step_trigger/death/train_lost,
+<<<<<<< HEAD
 /turf/simulated/floor/tiled/techfloor/grid,
+=======
+/turf/unsimulated/floor/techfloor_grid/outdoors_tansit,
+>>>>>>> fd0a7cfffd (Fixes map issues found in #18285 [MDB IGNORE] [IDB IGNORE] (#18289))
 /area/redgate/train/overboard)
 "jL" = (
 /mob/living/simple_mob/vore/alienanimals/teppi/baby,
@@ -592,7 +604,11 @@
 /obj/structure/railing{
 	dir = 8
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/tiled/techfloor/grid,
+=======
+/turf/unsimulated/floor/techfloor_grid/outdoors_tansit,
+>>>>>>> fd0a7cfffd (Fixes map issues found in #18285 [MDB IGNORE] [IDB IGNORE] (#18289))
 /area/redgate/train/overboard)
 "lL" = (
 /turf/simulated/shuttle/floor/white{
@@ -634,7 +650,11 @@
 	stopper = 0;
 	tiles = 0
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/tiled/techfloor/grid,
+=======
+/turf/unsimulated/floor/techfloor_grid/outdoors_tansit,
+>>>>>>> fd0a7cfffd (Fixes map issues found in #18285 [MDB IGNORE] [IDB IGNORE] (#18289))
 /area/redgate/train/overboard)
 "mw" = (
 /obj/structure/railing{
@@ -642,7 +662,11 @@
 	},
 /obj/effect/step_trigger/death/train_crush,
 /obj/structure/railing/grey,
+<<<<<<< HEAD
 /turf/simulated/floor/tiled/techfloor/grid,
+=======
+/turf/unsimulated/floor/techfloor_grid/outdoors_tansit,
+>>>>>>> fd0a7cfffd (Fixes map issues found in #18285 [MDB IGNORE] [IDB IGNORE] (#18289))
 /area/redgate/train/overboard)
 "mG" = (
 /obj/effect/step_trigger/death/train_crush,
@@ -653,7 +677,11 @@
 	desc = "This is a train in motion. Do not try to stand on the outside of the train. Take caution near railings. Do not attempt to fly from the moving train. Falling is guaranteed death, your body will not be recoverable.";
 	pixel_y = 31
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/tiled/techfloor/grid,
+=======
+/turf/unsimulated/floor/techfloor_grid/outdoors_tansit,
+>>>>>>> fd0a7cfffd (Fixes map issues found in #18285 [MDB IGNORE] [IDB IGNORE] (#18289))
 /area/redgate/train/overboard)
 "mQ" = (
 /obj/structure/bed/chair/shuttle{
@@ -680,7 +708,11 @@
 /obj/structure/railing{
 	dir = 4
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/tiled/techfloor/grid,
+=======
+/turf/unsimulated/floor/techfloor_grid/outdoors_tansit,
+>>>>>>> fd0a7cfffd (Fixes map issues found in #18285 [MDB IGNORE] [IDB IGNORE] (#18289))
 /area/redgate/train/overboard)
 "mY" = (
 /obj/structure/fence/door,
@@ -737,7 +769,11 @@
 /obj/structure/railing/grey{
 	dir = 1
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/maglev,
+=======
+/turf/unsimulated/floor/maglev/transit,
+>>>>>>> fd0a7cfffd (Fixes map issues found in #18285 [MDB IGNORE] [IDB IGNORE] (#18289))
 /area/redgate/train/overboard)
 "nv" = (
 /obj/structure/ladder/up{
@@ -769,7 +805,11 @@
 /obj/structure/railing/grey{
 	dir = 4
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/tiled/techfloor/grid,
+=======
+/turf/unsimulated/floor/techfloor_grid/outdoors_tansit,
+>>>>>>> fd0a7cfffd (Fixes map issues found in #18285 [MDB IGNORE] [IDB IGNORE] (#18289))
 /area/redgate/train/overboard)
 "nK" = (
 /obj/structure/closet/walllocker/emerglocker{
@@ -825,7 +865,11 @@
 /obj/structure/railing/grey{
 	dir = 8
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/tiled/techfloor/grid,
+=======
+/turf/unsimulated/floor/techfloor_grid/outdoors_tansit,
+>>>>>>> fd0a7cfffd (Fixes map issues found in #18285 [MDB IGNORE] [IDB IGNORE] (#18289))
 /area/redgate/train/overboard)
 "ph" = (
 /obj/effect/floor_decal/industrial/outline/blue,
@@ -844,7 +888,11 @@
 /obj/structure/railing{
 	dir = 4
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/tiled/techfloor/grid,
+=======
+/turf/unsimulated/floor/techfloor_grid/outdoors_tansit,
+>>>>>>> fd0a7cfffd (Fixes map issues found in #18285 [MDB IGNORE] [IDB IGNORE] (#18289))
 /area/redgate/train/overboard)
 "pM" = (
 /obj/structure/closet/walllocker_double/misc_civ/north,
@@ -972,7 +1020,11 @@
 	dir = 4
 	},
 /obj/effect/step_trigger/death/train_lost,
+<<<<<<< HEAD
 /turf/simulated/floor/tiled/techfloor/grid,
+=======
+/turf/unsimulated/floor/techfloor_grid/outdoors_tansit,
+>>>>>>> fd0a7cfffd (Fixes map issues found in #18285 [MDB IGNORE] [IDB IGNORE] (#18289))
 /area/redgate/train/overboard)
 "sa" = (
 /obj/machinery/door/airlock/glass{
@@ -990,7 +1042,11 @@
 	desc = "This is a train in motion. Do not try to stand on the outside of the train. Take caution near railings. Do not attempt to fly from the moving train. Falling is guaranteed death, your body will not be recoverable.";
 	pixel_y = 31
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/tiled/techfloor/grid,
+=======
+/turf/unsimulated/floor/techfloor_grid/outdoors_tansit,
+>>>>>>> fd0a7cfffd (Fixes map issues found in #18285 [MDB IGNORE] [IDB IGNORE] (#18289))
 /area/redgate/train/overboard)
 "se" = (
 /obj/structure/bed/chair/shuttle,
@@ -1114,10 +1170,7 @@
 /area/redgate/train/casino)
 "uf" = (
 /obj/effect/step_trigger/death/train_lost,
-/turf/unsimulated/floor/maglev{
-	icon = 'icons/turf/transit_vr.dmi';
-	outdoors = 1
-	},
+/turf/unsimulated/floor/maglev/transit,
 /area/redgate/train/overboard)
 "us" = (
 /obj/random/mob/semirandom_mob_spawner/vore/retaliate,
@@ -1159,11 +1212,7 @@
 /area/redgate/train/bar)
 "vS" = (
 /obj/effect/step_trigger/death/train_lost,
-/turf/unsimulated/mineral{
-	icon = 'icons/turf/transit_vr.dmi';
-	icon_state = "rock";
-	outdoors = 1
-	},
+/turf/unsimulated/mineral/moving/outdoors,
 /area/redgate/train/overboard)
 "wb" = (
 /obj/structure/fence/door,
@@ -1209,7 +1258,11 @@
 /obj/structure/railing/grey{
 	dir = 1
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/tiled/techfloor/grid,
+=======
+/turf/unsimulated/floor/techfloor_grid/outdoors_tansit,
+>>>>>>> fd0a7cfffd (Fixes map issues found in #18285 [MDB IGNORE] [IDB IGNORE] (#18289))
 /area/redgate/train/overboard)
 "wX" = (
 /obj/structure/bed/chair/shuttle{
@@ -1248,7 +1301,11 @@
 /obj/structure/railing{
 	dir = 1
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/maglev,
+=======
+/turf/unsimulated/floor/maglev/transit,
+>>>>>>> fd0a7cfffd (Fixes map issues found in #18285 [MDB IGNORE] [IDB IGNORE] (#18289))
 /area/redgate/train/overboard)
 "xz" = (
 /obj/structure/reagent_dispensers/fueltank/barrel/two{
@@ -1264,14 +1321,22 @@
 "xU" = (
 /obj/effect/step_trigger/death/train_crush,
 /obj/structure/railing/grey,
+<<<<<<< HEAD
 /turf/simulated/floor/maglev,
+=======
+/turf/unsimulated/floor/maglev/transit,
+>>>>>>> fd0a7cfffd (Fixes map issues found in #18285 [MDB IGNORE] [IDB IGNORE] (#18289))
 /area/redgate/train/overboard)
 "yc" = (
 /obj/effect/floor_decal/transit/orange{
 	dir = 4
 	},
 /obj/effect/step_trigger/death/train_lost,
+<<<<<<< HEAD
 /turf/simulated/floor/tiled/techfloor/grid,
+=======
+/turf/unsimulated/floor/techfloor_grid/outdoors_tansit,
+>>>>>>> fd0a7cfffd (Fixes map issues found in #18285 [MDB IGNORE] [IDB IGNORE] (#18289))
 /area/redgate/train/overboard)
 "yf" = (
 /obj/effect/floor_decal/transit/orange{
@@ -1289,7 +1354,11 @@
 /obj/structure/railing/grey{
 	dir = 4
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/tiled/techfloor/grid,
+=======
+/turf/unsimulated/floor/techfloor_grid/outdoors_tansit,
+>>>>>>> fd0a7cfffd (Fixes map issues found in #18285 [MDB IGNORE] [IDB IGNORE] (#18289))
 /area/redgate/train/overboard)
 "yj" = (
 /obj/effect/floor_decal/spline/fancy/wood{
@@ -1303,7 +1372,11 @@
 /obj/structure/railing/grey{
 	dir = 8
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/tiled/techfloor/grid,
+=======
+/turf/unsimulated/floor/techfloor_grid/outdoors_tansit,
+>>>>>>> fd0a7cfffd (Fixes map issues found in #18285 [MDB IGNORE] [IDB IGNORE] (#18289))
 /area/redgate/train/overboard)
 "yq" = (
 /obj/item/stool/padded,
@@ -1333,7 +1406,11 @@
 /obj/structure/railing/grey{
 	dir = 1
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/tiled/techfloor/grid,
+=======
+/turf/unsimulated/floor/techfloor_grid/outdoors_tansit,
+>>>>>>> fd0a7cfffd (Fixes map issues found in #18285 [MDB IGNORE] [IDB IGNORE] (#18289))
 /area/redgate/train/overboard)
 "yx" = (
 /obj/machinery/light{
@@ -1422,7 +1499,11 @@
 	stopper = 0;
 	tiles = 0
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/tiled/techfloor/grid,
+=======
+/turf/unsimulated/floor/techfloor_grid/outdoors_tansit,
+>>>>>>> fd0a7cfffd (Fixes map issues found in #18285 [MDB IGNORE] [IDB IGNORE] (#18289))
 /area/redgate/train/overboard)
 "zp" = (
 /obj/structure/table/standard,
@@ -1597,7 +1678,11 @@
 	stopper = 0;
 	tiles = 0
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/tiled/techfloor/grid,
+=======
+/turf/unsimulated/floor/techfloor_grid/outdoors_tansit,
+>>>>>>> fd0a7cfffd (Fixes map issues found in #18285 [MDB IGNORE] [IDB IGNORE] (#18289))
 /area/redgate/train/overboard)
 "Ch" = (
 /turf/simulated/shuttle/wall/voidcraft,
@@ -1614,11 +1699,7 @@
 /turf/simulated/floor/outdoors/newdirt,
 /area/redgate/train/animals)
 "Co" = (
-/turf/unsimulated/mineral{
-	icon = 'icons/turf/transit_vr.dmi';
-	icon_state = "rock";
-	outdoors = 1
-	},
+/turf/unsimulated/mineral/moving/outdoors,
 /area/redgate/train/overboard)
 "Cu" = (
 /obj/random/forgotten_tram,
@@ -1672,7 +1753,11 @@
 	stopper = 0;
 	tiles = 0
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/maglev,
+=======
+/turf/unsimulated/floor/maglev/transit,
+>>>>>>> fd0a7cfffd (Fixes map issues found in #18285 [MDB IGNORE] [IDB IGNORE] (#18289))
 /area/redgate/train/overboard)
 "Da" = (
 /obj/machinery/light{
@@ -1749,10 +1834,7 @@
 /turf/simulated/shuttle/wall/voidcraft,
 /area/redgate/train/bar)
 "EJ" = (
-/turf/unsimulated/wall{
-	icon = 'icons/turf/transit_vr.dmi';
-	outdoors = 1
-	},
+/turf/unsimulated/wall/transit/outdoors,
 /area/redgate/train/overboard)
 "EL" = (
 /mob/living/simple_mob/vore/alienanimals/catslug{
@@ -1877,7 +1959,11 @@
 /obj/structure/railing/grey{
 	dir = 4
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/tiled/techfloor/grid,
+=======
+/turf/unsimulated/floor/techfloor_grid/outdoors_tansit,
+>>>>>>> fd0a7cfffd (Fixes map issues found in #18285 [MDB IGNORE] [IDB IGNORE] (#18289))
 /area/redgate/train/overboard)
 "GU" = (
 /obj/structure/bed/chair/shuttle{
@@ -1913,7 +1999,11 @@
 	stopper = 0;
 	tiles = 0
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/tiled/techfloor/grid,
+=======
+/turf/unsimulated/floor/techfloor_grid/outdoors_tansit,
+>>>>>>> fd0a7cfffd (Fixes map issues found in #18285 [MDB IGNORE] [IDB IGNORE] (#18289))
 /area/redgate/train/overboard)
 "Hs" = (
 /turf/simulated/shuttle/wall/voidcraft,
@@ -1931,7 +2021,11 @@
 	stopper = 0;
 	tiles = 0
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/tiled/techfloor/grid,
+=======
+/turf/unsimulated/floor/techfloor_grid/outdoors_tansit,
+>>>>>>> fd0a7cfffd (Fixes map issues found in #18285 [MDB IGNORE] [IDB IGNORE] (#18289))
 /area/redgate/train/overboard)
 "HF" = (
 /obj/machinery/light{
@@ -2003,7 +2097,11 @@
 	desc = "This is a train in motion. Do not try to stand on the outside of the train. Take caution near railings. Do not attempt to fly from the moving train. Falling is guaranteed death, your body will not be recoverable.";
 	pixel_y = 31
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/maglev,
+=======
+/turf/unsimulated/floor/techfloor_grid/outdoors_tansit,
+>>>>>>> fd0a7cfffd (Fixes map issues found in #18285 [MDB IGNORE] [IDB IGNORE] (#18289))
 /area/redgate/train/overboard)
 "In" = (
 /obj/structure/grille,
@@ -2135,7 +2233,11 @@
 /obj/structure/railing{
 	dir = 8
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/tiled/techfloor/grid,
+=======
+/turf/unsimulated/floor/techfloor_grid/outdoors_tansit,
+>>>>>>> fd0a7cfffd (Fixes map issues found in #18285 [MDB IGNORE] [IDB IGNORE] (#18289))
 /area/redgate/train/overboard)
 "Kl" = (
 /obj/structure/table/standard,
@@ -2212,7 +2314,11 @@
 	stopper = 0;
 	tiles = 0
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/tiled/techfloor/grid,
+=======
+/turf/unsimulated/floor/techfloor_grid/outdoors_tansit,
+>>>>>>> fd0a7cfffd (Fixes map issues found in #18285 [MDB IGNORE] [IDB IGNORE] (#18289))
 /area/redgate/train/overboard)
 "KZ" = (
 /obj/machinery/light{
@@ -2344,14 +2450,22 @@
 /area/redgate/train/meeting)
 "LY" = (
 /obj/effect/step_trigger/death/train_lost,
+<<<<<<< HEAD
 /turf/simulated/floor/tiled/techfloor/grid,
+=======
+/turf/unsimulated/floor/techfloor_grid/outdoors_tansit,
+>>>>>>> fd0a7cfffd (Fixes map issues found in #18285 [MDB IGNORE] [IDB IGNORE] (#18289))
 /area/redgate/train/overboard)
 "Mj" = (
 /turf/simulated/shuttle/wall/voidcraft,
 /area/redgate/train/rear)
 "Mo" = (
 /obj/effect/step_trigger/death/train_crush,
+<<<<<<< HEAD
 /turf/simulated/floor/maglev,
+=======
+/turf/unsimulated/floor/maglev/transit,
+>>>>>>> fd0a7cfffd (Fixes map issues found in #18285 [MDB IGNORE] [IDB IGNORE] (#18289))
 /area/redgate/train/overboard)
 "MJ" = (
 /obj/structure/bed/chair/shuttle{
@@ -2373,7 +2487,11 @@
 /area/redgate/train/wood)
 "Nd" = (
 /obj/effect/step_trigger/death/train_crush,
+<<<<<<< HEAD
 /turf/simulated/floor/tiled/techfloor/grid,
+=======
+/turf/unsimulated/floor/techfloor_grid/outdoors_tansit,
+>>>>>>> fd0a7cfffd (Fixes map issues found in #18285 [MDB IGNORE] [IDB IGNORE] (#18289))
 /area/redgate/train/overboard)
 "Ne" = (
 /turf/simulated/shuttle/floor/black,
@@ -2497,7 +2615,11 @@
 	stopper = 0;
 	tiles = 0
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/tiled/techfloor/grid,
+=======
+/turf/unsimulated/floor/techfloor_grid/outdoors_tansit,
+>>>>>>> fd0a7cfffd (Fixes map issues found in #18285 [MDB IGNORE] [IDB IGNORE] (#18289))
 /area/redgate/train/overboard)
 "Pf" = (
 /obj/machinery/vending/coffee,
@@ -2516,7 +2638,11 @@
 /obj/structure/railing/grey{
 	dir = 8
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/tiled/techfloor/grid,
+=======
+/turf/unsimulated/floor/techfloor_grid/outdoors_tansit,
+>>>>>>> fd0a7cfffd (Fixes map issues found in #18285 [MDB IGNORE] [IDB IGNORE] (#18289))
 /area/redgate/train/overboard)
 "Pp" = (
 /obj/structure/railing{
@@ -2607,7 +2733,11 @@
 /obj/structure/railing/grey{
 	dir = 8
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/tiled/techfloor/grid,
+=======
+/turf/unsimulated/floor/techfloor_grid/outdoors_tansit,
+>>>>>>> fd0a7cfffd (Fixes map issues found in #18285 [MDB IGNORE] [IDB IGNORE] (#18289))
 /area/redgate/train/overboard)
 "Qw" = (
 /obj/effect/floor_decal/spline/fancy/wood,
@@ -2676,7 +2806,11 @@
 /obj/structure/railing{
 	dir = 1
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/maglev,
+=======
+/turf/unsimulated/floor/maglev/transit,
+>>>>>>> fd0a7cfffd (Fixes map issues found in #18285 [MDB IGNORE] [IDB IGNORE] (#18289))
 /area/redgate/train/overboard)
 "RC" = (
 /obj/effect/step_trigger/thrower{
@@ -2685,7 +2819,11 @@
 	stopper = 0;
 	tiles = 0
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/tiled/techfloor/grid,
+=======
+/turf/unsimulated/floor/techfloor_grid/outdoors_tansit,
+>>>>>>> fd0a7cfffd (Fixes map issues found in #18285 [MDB IGNORE] [IDB IGNORE] (#18289))
 /area/redgate/train/overboard)
 "RE" = (
 /obj/machinery/smartfridge/drinks,
@@ -2774,7 +2912,11 @@
 	stopper = 0;
 	tiles = 0
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/tiled/techfloor/grid,
+=======
+/turf/unsimulated/floor/techfloor_grid/outdoors_tansit,
+>>>>>>> fd0a7cfffd (Fixes map issues found in #18285 [MDB IGNORE] [IDB IGNORE] (#18289))
 /area/redgate/train/overboard)
 "SQ" = (
 /turf/simulated/shuttle/wall/voidcraft/hard_corner,
@@ -2997,11 +3139,7 @@
 	stopper = 0;
 	tiles = 0
 	},
-/turf/unsimulated/mineral{
-	icon = 'icons/turf/transit_vr.dmi';
-	icon_state = "rock";
-	outdoors = 1
-	},
+/turf/unsimulated/mineral/moving/outdoors,
 /area/redgate/train/overboard)
 "Wr" = (
 /obj/structure/table/standard,
@@ -3024,7 +3162,11 @@
 	dir = 8
 	},
 /obj/effect/step_trigger/death/train_crush,
+<<<<<<< HEAD
 /turf/simulated/floor/tiled/techfloor/grid,
+=======
+/turf/unsimulated/floor/techfloor_grid/outdoors_tansit,
+>>>>>>> fd0a7cfffd (Fixes map issues found in #18285 [MDB IGNORE] [IDB IGNORE] (#18289))
 /area/redgate/train/overboard)
 "WM" = (
 /obj/effect/step_trigger/death/train_lost,
@@ -3087,7 +3229,11 @@
 	},
 /obj/effect/step_trigger/death/train_crush,
 /obj/structure/railing/grey,
+<<<<<<< HEAD
 /turf/simulated/floor/tiled/techfloor/grid,
+=======
+/turf/unsimulated/floor/techfloor_grid/outdoors_tansit,
+>>>>>>> fd0a7cfffd (Fixes map issues found in #18285 [MDB IGNORE] [IDB IGNORE] (#18289))
 /area/redgate/train/overboard)
 "YC" = (
 /obj/machinery/light{
@@ -3147,7 +3293,11 @@
 /obj/structure/railing{
 	dir = 1
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/tiled/techfloor/grid,
+=======
+/turf/unsimulated/floor/techfloor_grid/outdoors_tansit,
+>>>>>>> fd0a7cfffd (Fixes map issues found in #18285 [MDB IGNORE] [IDB IGNORE] (#18289))
 /area/redgate/train/overboard)
 "Zj" = (
 /obj/structure/fence/corner{
@@ -3208,7 +3358,11 @@
 /obj/structure/railing/grey{
 	dir = 4
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/tiled/techfloor/grid,
+=======
+/turf/unsimulated/floor/techfloor_grid/outdoors_tansit,
+>>>>>>> fd0a7cfffd (Fixes map issues found in #18285 [MDB IGNORE] [IDB IGNORE] (#18289))
 /area/redgate/train/overboard)
 "ZK" = (
 /obj/structure/railing{
@@ -3224,7 +3378,11 @@
 	desc = "This is a train in motion. Do not try to stand on the outside of the train. Take caution near railings. Do not attempt to fly from the moving train. Falling is guaranteed death, your body will not be recoverable.";
 	pixel_y = 31
 	},
+<<<<<<< HEAD
 /turf/simulated/floor/tiled/techfloor/grid,
+=======
+/turf/unsimulated/floor/techfloor_grid/outdoors_tansit,
+>>>>>>> fd0a7cfffd (Fixes map issues found in #18285 [MDB IGNORE] [IDB IGNORE] (#18289))
 /area/redgate/train/overboard)
 "ZO" = (
 /obj/random/mob/semirandom_mob_spawner/vore/retaliate,

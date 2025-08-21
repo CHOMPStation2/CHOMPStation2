@@ -2,7 +2,7 @@
 	listening = 0 //CHOMP Edit: Temporary bandaid fix for comms lag.
 	name = "station intercom (General)"
 	desc = "Talk through this."
-	icon = 'icons/obj/radio_vr.dmi'
+	icon = 'icons/obj/radio.dmi'
 	icon_state = "intercom"
 	layer = ABOVE_WINDOW_LAYER
 	anchored = TRUE
