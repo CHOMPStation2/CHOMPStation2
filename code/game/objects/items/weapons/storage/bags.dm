@@ -449,7 +449,6 @@
 	w_class = ITEMSIZE_LARGE
 	slowdown = 1 //you probably shouldn't be running with chemicals
 	can_hold = list(/obj/item/reagent_containers/pill,/obj/item/reagent_containers/glass/beaker,/obj/item/reagent_containers/glass/bottle, /obj/item/reagent_containers/hypospray/autoinjector)
-	slot_flags = null
 
 // -----------------------------
 //           Xeno Bag
