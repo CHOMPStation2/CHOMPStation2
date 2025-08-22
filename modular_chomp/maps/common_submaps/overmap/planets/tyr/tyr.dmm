@@ -141,9 +141,6 @@
 	},
 /turf/simulated/shuttle/floor/alien,
 /area/surface/tyr/precursorruins/finale)
-"bw" = (
-/turf/simulated/floor/outdoors/desert_planet/sand/tyr,
-/area/surface/tyr/junkyard)
 "bA" = (
 /turf/simulated/floor/outdoors/desert_planet/gravel/tyr,
 /area/surface/tyr/southern_wilderness)
@@ -39932,7 +39929,7 @@ vI
 vI
 vI
 vI
-vI
+Mz
 vI
 vI
 vI
@@ -40190,7 +40187,7 @@ vI
 vI
 vI
 vI
-vI
+Mz
 vI
 vI
 vI
@@ -40448,7 +40445,7 @@ vI
 vI
 vI
 vI
-vI
+Mz
 vI
 vI
 vI
@@ -40706,7 +40703,7 @@ vI
 vI
 vI
 vI
-vI
+Mz
 vI
 vI
 vI
@@ -40964,7 +40961,7 @@ vI
 vI
 vI
 vI
-vI
+Mz
 vI
 vI
 vI
@@ -41222,7 +41219,7 @@ vI
 vI
 vI
 vI
-vI
+Mz
 vI
 vI
 vI
@@ -41480,7 +41477,7 @@ vI
 vI
 vI
 vI
-vI
+Mz
 vI
 vI
 vI
@@ -41738,7 +41735,7 @@ vI
 vI
 vI
 vI
-vI
+Mz
 vI
 vI
 vI
@@ -41996,7 +41993,7 @@ vI
 vI
 vI
 vI
-vI
+Mz
 vI
 vI
 vI
@@ -42254,7 +42251,7 @@ vI
 vI
 vI
 vI
-vI
+Mz
 vI
 vI
 vI
@@ -42512,7 +42509,7 @@ vI
 vI
 vI
 vI
-vI
+Mz
 vI
 vI
 vI
@@ -42770,7 +42767,7 @@ vI
 vI
 vI
 vI
-vI
+Mz
 vI
 vI
 vI
@@ -43028,7 +43025,7 @@ vI
 vI
 vI
 vI
-vI
+Mz
 vI
 vI
 vI
@@ -43286,7 +43283,7 @@ vI
 vI
 vI
 vI
-vI
+Mz
 vI
 vI
 vI
@@ -43544,7 +43541,7 @@ vI
 vI
 vI
 vI
-vI
+Mz
 vI
 vI
 vI
@@ -43802,7 +43799,7 @@ vI
 vI
 vI
 vI
-vI
+Mz
 vI
 vI
 vI
@@ -44060,7 +44057,7 @@ vI
 vI
 vI
 vI
-vI
+Mz
 vI
 vI
 vI
@@ -44318,7 +44315,7 @@ vI
 vI
 vI
 vI
-vI
+Mz
 vI
 vI
 vI
@@ -44576,7 +44573,7 @@ vI
 vI
 vI
 vI
-vI
+Mz
 vI
 vI
 vI
@@ -48339,7 +48336,7 @@ Uo
 Uo
 Uo
 Uo
-bw
+Uo
 jL
 jL
 Uo
@@ -48597,7 +48594,7 @@ Uo
 Uo
 Uo
 Uo
-bw
+Uo
 jL
 eg
 jL
