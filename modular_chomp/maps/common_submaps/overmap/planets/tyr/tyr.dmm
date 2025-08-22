@@ -96,7 +96,7 @@
 	},
 /turf/simulated/shuttle/floor/alien,
 /area/surface/tyr/precursorruins/finale)
-"ao" = (
+"an" = (
 /mob/living/simple_mob/mechanical/mecha/eclipse/tankyboss/chamberg,
 /obj/structure/catwalk,
 /turf/simulated/tyracid,
@@ -44299,7 +44299,7 @@ ag
 ag
 ag
 ag
-ao
+an
 ag
 ag
 ag
