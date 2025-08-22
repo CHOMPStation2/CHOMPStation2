@@ -96,15 +96,8 @@
 	},
 /turf/simulated/shuttle/floor/alien,
 /area/surface/tyr/precursorruins/finale)
-"an" = (
-/obj/structure/catwalk,
-/obj/structure/catwalk,
-/turf/simulated/tyracid,
-/area/surface/tyr/precursorruins/finale)
 "ao" = (
 /mob/living/simple_mob/mechanical/mecha/eclipse/tankyboss/chamberg,
-/obj/structure/catwalk,
-/obj/structure/catwalk,
 /obj/structure/catwalk,
 /turf/simulated/tyracid,
 /area/surface/tyr/precursorruins/finale)
@@ -44051,7 +44044,7 @@ dH
 dH
 ag
 ag
-an
+ag
 ag
 ag
 dH
@@ -44308,9 +44301,9 @@ Th
 ag
 ag
 ag
-an
+ag
 ao
-an
+ag
 ag
 ag
 ag
@@ -44567,7 +44560,7 @@ dH
 dH
 ag
 ag
-an
+ag
 ag
 ag
 dH
