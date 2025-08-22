@@ -55,11 +55,7 @@
 	say_list_type = /datum/say_list/lamia
 	ai_holder_type = /datum/ai_holder/simple_mob/passive
 
-<<<<<<< HEAD
-	can_be_drop_prey = FALSE //CHOMP Add
-=======
 	can_be_drop_prey = FALSE
->>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))
 
 /mob/living/simple_mob/vore/lamia/update_icon()
 	. = ..()
@@ -110,17 +106,9 @@
 	tail.nonhuman_prey_swallow_time = swallowTime
 	tail.vore_verb = "stuff"
 	tail.belly_sprite_to_affect = "tail"
-<<<<<<< HEAD
-	// CHOMPEdit Start
 	tail.belly_fullscreen = "VBOanim_snakebelly1"
 	tail.belly_fullscreen_color = "#823232"
 	tail.belly_fullscreen_color2 = "#232300"
-	// CHOMPEdit End
-=======
-	tail.belly_fullscreen = "VBOanim_snakebelly1"
-	tail.belly_fullscreen_color = "#823232"
-	tail.belly_fullscreen_color2 = "#232300"
->>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))
 
 	// Belly Lines by killerdragn (@kilo.ego on discord) from Rogue Star
 	B.emote_lists[DM_HOLD] = list(

@@ -281,11 +281,7 @@
 	switch(M.a_intent)
 		if(I_HELP)
 			if(health > 0)
-<<<<<<< HEAD
-				if(M.zone_sel.selecting == BP_GROIN) //CHOMPEdit
-=======
 				if(M.zone_sel.selecting == BP_GROIN)
->>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))
 					if(M.vore_bellyrub(src))
 						return
 				M.visible_message(span_notice("[M] [response_help] \the [src]."))

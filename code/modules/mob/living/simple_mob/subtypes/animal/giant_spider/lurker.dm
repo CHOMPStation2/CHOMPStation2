@@ -102,11 +102,7 @@
 	if(cloaked)
 		if(isliving(A))
 			var/mob/living/L = A
-<<<<<<< HEAD
-			L.add_modifier(/datum/modifier/entangled, 2 SECONDS) //L.Weaken(cloaked_weaken_amount) CHOMPEdit: Trying to remove hardstuns
-=======
 			L.add_modifier(/datum/modifier/entangled, 2 SECONDS) //L.Weaken(cloaked_weaken_amount)
->>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))
 			to_chat(L, span_danger("\The [src] ambushes you!"))
 			playsound(src, 'sound/weapons/spiderlunge.ogg', 75, 1)
 	uncloak()

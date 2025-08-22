@@ -28,13 +28,8 @@
 	response_disarm = "pushes"
 	response_harm   = "punches"
 
-<<<<<<< HEAD
-	has_langs = list(LANGUAGE_MOUSE)//CHOMPADD they're basically mice, why cant they speak it
-	universal_understand = 1 //CHOMPADD and mice can understand all languages too so.. why not dustjumpers too
-=======
 	has_langs = list(LANGUAGE_MOUSE)
 	universal_understand = 1
->>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))
 
 	melee_damage_lower = 1
 	melee_damage_upper = 2

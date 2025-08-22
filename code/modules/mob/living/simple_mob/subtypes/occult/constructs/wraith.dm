@@ -7,10 +7,6 @@
 	real_name = "Wraith"
 	construct_type = "wraith"
 	desc = "A wicked bladed shell contraption piloted by a bound spirit."
-<<<<<<< HEAD
-	//icon = 'icons/mob/mob.dmi'	//CHOMPRemove
-=======
->>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))
 	icon_state = "floating"
 	icon_living = "floating"
 	maxHealth = 200

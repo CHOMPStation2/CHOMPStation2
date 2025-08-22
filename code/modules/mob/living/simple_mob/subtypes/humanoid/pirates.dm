@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-/* CHOMPEdit - Overridden basically everything in pirates_ch.dm
-=======
 ///////////////////////////////
 //	Yargh Yargh Fiddle De Di
 ///////////////////////////////
@@ -18,7 +15,6 @@
 ///////////////////////////////
 //		Knife Priate
 ///////////////////////////////
->>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))
 /mob/living/simple_mob/humanoid/pirate
 	name = "Pirate"
 	desc = "Does what he wants cause a pirate is free."
@@ -447,9 +443,6 @@
 
 	corpse = /obj/effect/landmark/mobcorpse/pirate/ranged
 
-<<<<<<< HEAD
-*/
-=======
 	loot_list = list(/obj/item/gun/energy/zip = 100, /obj/item/gun/energy/zip = 100, /obj/item/gun/energy/zip = 100, /obj/item/gun/energy/zip = 100) //Belt of pistols
 
 	var/obj/item/shield_projector/shields = null
@@ -510,4 +503,3 @@
 	has_repair_droid = TRUE		//But has repair drone
 	pilot_type = /mob/living/simple_mob/humanoid/possessed/merc/feral	//Possessed rig suit piloting a mech. Tremble in fear
 	movement_shake_radius = 5
->>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))

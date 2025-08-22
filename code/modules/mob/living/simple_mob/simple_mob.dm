@@ -111,15 +111,10 @@
 	var/melee_attack_delay = 2			// If set, the mob will do a windup animation and can miss if the target moves out of the way.
 	var/ranged_attack_delay = null
 	var/special_attack_delay = null
-<<<<<<< HEAD
-	var/ranged_cooldown = 0 //CHOMP Addition. This is part of a timer in combat.dm.
-	var/ranged_cooldown_time = 0 //CHOMP Addition: This variable can be thrown into mob variables in order to allow the mob to move AND shoot at the same time. The previous "ranged_attack_delay" is a dumb way of handling ranged attacks because it sleeps the entire mob - this one uses an internalized timer so it is slightly smarter.
-=======
 	var/ranged_cooldown = 0
 	var/ranged_cooldown_time = 0
 	var/picked_color = FALSE
 	var/picked_size = FALSE
->>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))
 
 	//Special attacks
 //	var/special_attack_prob = 0				// The chance to ATTEMPT a special_attack_target(). If it fails, it will do a regular attack instead.
@@ -212,17 +207,10 @@
 	if(has_eye_glow)
 		add_eyes()
 
-<<<<<<< HEAD
-	if(vore_active)	//CHOMPSTATION edit: Moved here so the verb is useable before initialising vorgans.
-		add_verb(src,/mob/living/simple_mob/proc/animal_nom) //CHOMPEdit TGPanel
-		add_verb(src,/mob/living/proc/shred_limb) //CHOMPEdit TGPanel
-	add_verb(src,/mob/living/simple_mob/proc/nutrition_heal) //CHOMPEdit TGPanel //CHOMPSTATION edit
-=======
 	if(vore_active)	// Moved here so the verb is useable before initialising vorgans.
 		add_verb(src,/mob/living/simple_mob/proc/animal_nom)
 		add_verb(src,/mob/living/proc/shred_limb)
 	add_verb(src,/mob/living/simple_mob/proc/nutrition_heal)
->>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))
 
 	if(organ_names)
 		organ_names = GET_DECL(organ_names)

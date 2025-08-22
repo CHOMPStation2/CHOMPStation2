@@ -62,11 +62,7 @@
 
 	vore_active = TRUE
 	vore_capacity = 1
-<<<<<<< HEAD
-	vore_pounce_chance = 65 // CHOMPEdit: Higher pounce chance to omf.
-=======
 	vore_pounce_chance = 65
->>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))
 	vore_icons = SA_ICON_LIVING | SA_ICON_REST
 
 	var/life_since_foodscan = 0
@@ -74,11 +70,7 @@
 	say_list_type = /datum/say_list/rat
 	ai_holder_type = /datum/ai_holder/simple_mob/melee/rat
 
-<<<<<<< HEAD
-	can_be_drop_prey = FALSE //CHOMP Add
-=======
 	can_be_drop_prey = FALSE
->>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))
 	allow_mind_transfer = TRUE
 
 /mob/living/simple_mob/vore/aggressive/rat/load_default_bellies()
@@ -86,19 +78,11 @@
 	var/obj/belly/B = vore_selected
 	B.name = "stomach"
 	B.desc = "In a cruel game of cat-and-mouse gone horribly wrong, you struggle to breathe clearly as the giant rat holds your head in its jaws, the rest of its bulk pinning you to the ground. Slimy slurps and its own muffled squeaking fill your senses as it simultaneously tosses its head while backing up. Quickly, ravenously consuming you, bit by bit, packing you down its gullet no matter how you struggle. Passing by its excited heartbeat, your thoroughly slickened head pushes out into its awaiting stomach, a dark and humid hammock eager to accept the rest of you. Soon, those too-warm, plush walls clench and squeeze around you with undeniable need! A need for mere filling, or, perhaps, a proper meal?"
-<<<<<<< HEAD
-	B.vore_sound = "Tauric Swallow"				// CHOMPedit - Fancy Vore Sounds
-	B.release_sound = "Pred Escape"				// CHOMPedit - Fancy Vore Sounds
-	B.fancy_vore = 1							// CHOMPedit - Fancy Vore Sounds
-	B.belly_fullscreen_color = "#c47cb4" 		// CHOMPedit - Belly Fullscreen
-	B.belly_fullscreen = "anim_belly" 			// CHOMPedit - Belly Fullscreen
-=======
 	B.vore_sound = "Tauric Swallow"
 	B.release_sound = "Pred Escape"
 	B.fancy_vore = TRUE
 	B.belly_fullscreen_color = "#c47cb4"
 	B.belly_fullscreen = "anim_belly"
->>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))
 
 	B.emote_lists[DM_HOLD] = list(
 		"As time passes, the massive rat's stomach slowly churns and squeezes down around you, packing you into an easier to carry bundle amidst that oddly soothing massage.",

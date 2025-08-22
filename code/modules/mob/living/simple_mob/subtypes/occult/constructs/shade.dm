@@ -6,10 +6,6 @@
 	name = "Shade"
 	real_name = "Shade"
 	desc = "A bound spirit"
-<<<<<<< HEAD
-	//icon = 'icons/mob/mob.dmi'	CHOMPRemove
-=======
->>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))
 	icon_state = "shade"
 	icon_living = "shade"
 	icon_dead = "shade_dead"

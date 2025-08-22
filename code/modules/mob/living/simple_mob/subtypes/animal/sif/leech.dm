@@ -33,11 +33,7 @@
 
 	status_flags = CANPUSH
 	pass_flags = PASSTABLE
-<<<<<<< HEAD
-	minbodytemp = 175 //yw edit, Makes mobs survive cryogaia temps
-=======
 	minbodytemp = 175
->>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))
 	maxHealth = 100
 	health = 100
 

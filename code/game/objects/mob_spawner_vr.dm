@@ -269,8 +269,6 @@ It also makes it so a ghost wont know where all the goodies/mobs are.
 	spawn_types = list(
 	/mob/living/simple_mob/animal/space/alien/queen = 5,
 	)
-<<<<<<< HEAD
-=======
 
 /obj/structure/mob_spawner/scanner/mining_animals
 	name = "Mining Lazy Spawner"
@@ -340,5 +338,3 @@ It also makes it so a ghost wont know where all the goodies/mobs are.
 	simultaneous_spawns = 6
 	spawn_delay = 300
 	spawn_types = list(/mob/living/simple_mob/mechanical/hivebot/swarm = 200, /mob/living/simple_mob/mechanical/hivebot/ranged_damage/basic = 50, /mob/living/simple_mob/mechanical/hivebot/ranged_damage/laser = 25, /mob/living/simple_mob/mechanical/hivebot/ranged_damage/ion = 10, /mob/living/simple_mob/mechanical/hivebot/tank/meatshield = 10)
-
->>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))

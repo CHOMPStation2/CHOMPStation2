@@ -48,19 +48,10 @@
 
 	nom_mob = TRUE
 
-<<<<<<< HEAD
-	can_be_drop_prey = FALSE //CHOMP Add
-	// CHOMPAdd: :c
-	pain_sound = canine_pain_sounds
-	pain_emote_1p = list("yelp", "whine", "bark", "growl")
-	pain_emote_3p = list("yelps", "whines", "barks", "growls")
-	death_sound = canine_death_sounds
-=======
 	can_be_drop_prey = FALSE
 	species_sounds = "Canine" // Argue about whether it should have canine or feline later
 	pain_emote_1p = list("yelp", "whine", "bark", "growl")
 	pain_emote_3p = list("yelps", "whines", "barks", "growls")
->>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))
 
 /datum/category_item/catalogue/fauna/leopardmander
 	name = "Sivian Fauna - Va'aen Drake"

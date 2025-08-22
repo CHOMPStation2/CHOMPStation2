@@ -69,11 +69,7 @@
 	if(isliving(A))
 		var/mob/living/L = A
 		if(prob(knockdown_chance))
-<<<<<<< HEAD
-			L.add_modifier(/datum/modifier/entangled, 4 SECONDS) //CHOMPedit, replacing weaken/slowdown with slow down
-=======
 			L.add_modifier(/datum/modifier/entangled, 4 SECONDS) // replacing weaken/slowdown with slow down
->>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))
 			L.visible_message(span_danger("\The [src] buffets \the [L]!"))
 			src.ai_holder.remove_target()
 			L.visible_message(span_notice("\The [src] seems to lose interest in \the [L]..."))

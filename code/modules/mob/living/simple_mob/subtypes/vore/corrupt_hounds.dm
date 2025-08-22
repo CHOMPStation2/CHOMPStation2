@@ -53,11 +53,7 @@
 	max_co2 = 0
 	min_n2 = 0
 	max_n2 = 0
-<<<<<<< HEAD
-	minbodytemp = 0 //CHOMP Edit
-=======
 	minbodytemp = 0
->>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))
 	maxbodytemp = 900
 
 	say_list_type = /datum/say_list/corrupthound
@@ -79,11 +75,7 @@
 
 	loot_list = list(/obj/item/borg/upgrade/basic/syndicate = 6, /obj/item/borg/upgrade/basic/vtec = 6, /obj/item/material/knife/ritual = 6, /obj/item/disk/nifsoft/compliance = 6)
 
-<<<<<<< HEAD
-	can_be_drop_prey = FALSE //CHOMP Add
-=======
 	can_be_drop_prey = FALSE
->>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))
 	allow_mind_transfer = TRUE
 
 /mob/living/simple_mob/vore/aggressive/corrupthound/prettyboi

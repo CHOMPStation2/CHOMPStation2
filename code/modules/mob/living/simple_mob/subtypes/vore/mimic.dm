@@ -20,11 +20,7 @@
 	desc = "A rectangular steel crate. This one looks particularly unstable."
 	var/mimic_chance = 30
 	var/mimic_active = TRUE
-<<<<<<< HEAD
-	var/nest = null	//CHOMPAdd
-=======
 	var/nest = null
->>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))
 
 /obj/structure/closet/crate/mimic/open()
 	if(src.opened)
@@ -32,17 +28,9 @@
 	if(!src.can_open())
 		return 0
 
-<<<<<<< HEAD
-	//CHOMPAdd Start
 	if(istype(nest, /obj/structure/mob_spawner))
 		var/obj/structure/mob_spawner/S = nest
 		S.get_used_report(src)
-	//CHOMPAdd End
-=======
-	if(istype(nest, /obj/structure/mob_spawner))
-		var/obj/structure/mob_spawner/S = nest
-		S.get_used_report(src)
->>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))
 
 	if(mimic_active)
 		mimic_active = FALSE
@@ -53,11 +41,7 @@
 			new_mimic.real_crate = src
 			new_mimic.name = name
 			new_mimic.desc = desc
-<<<<<<< HEAD
-			//new_mimic.icon = icon CHOMPEdit
-=======
 			//new_mimic.icon = icon
->>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))
 			new_mimic.icon_state = "open"
 			new_mimic.icon_living = "open"
 		else
@@ -95,17 +79,9 @@
 	name = "crate"
 	desc = "A rectangular steel crate."
 
-<<<<<<< HEAD
-	//CHOMPEdit Start
-	icon_state = "open"
-	icon_living = "open"
-	icon = 'modular_chomp/icons/mob/animal_ch.dmi'
-	// CHOMPEdit End
-=======
 	icon_state = "open"
 	icon_living = "open"
 	icon = 'icons/mob/mimic.dmi'
->>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))
 
 	faction = FACTION_MIMIC
 
@@ -148,11 +124,7 @@
 	swallowTime = 3 SECONDS
 	vore_capacity = 1
 	vore_default_mode = DM_DIGEST
-<<<<<<< HEAD
-	can_be_drop_prey = FALSE //CHOMP Add
-=======
 	can_be_drop_prey = FALSE
->>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))
 
 /datum/ai_holder/mimic
 	wander = FALSE

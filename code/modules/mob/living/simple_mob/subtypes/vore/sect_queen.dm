@@ -15,13 +15,9 @@
 	inconsistent. A sect queen can vary from hostile to docile depending on certain factors that scientists have \
 	yet to uncover. \
 	<br>\
-<<<<<<< HEAD
-	The lack flesh on the underside of its abdomen is very elastic and stretchable, \
-=======
 	The flesh on the underside of its abdomen is very elastic and stretchable, \
->>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))
 	allowing the queen to carry multiple large prey inside of its stomach with ease. There is no know limit to home much \
-	prey a single specimen can carry and scientists are wary to find said limit." //CHOMPedit
+	prey a single specimen can carry and scientists are wary to find said limit."
 	value = CATALOGUER_REWARD_MEDIUM
 
 /mob/living/simple_mob/vore/sect_queen

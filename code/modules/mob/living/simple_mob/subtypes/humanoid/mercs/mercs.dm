@@ -74,13 +74,8 @@
 	var/obj/item/grenade/G = new grenade_type(get_turf(src))
 	if(istype(G))
 		G.throw_at(A, G.throw_range, G.throw_speed, src)
-<<<<<<< HEAD
-		G.det_time = grenade_timer	//CHOMPEdit
-		G.activate(src)	//CHOMPEdit
-=======
 		G.det_time = grenade_timer
 		G.activate(src)
->>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))
 		special_attack_charges = max(special_attack_charges-1, 0)
 
 	set_AI_busy(FALSE)

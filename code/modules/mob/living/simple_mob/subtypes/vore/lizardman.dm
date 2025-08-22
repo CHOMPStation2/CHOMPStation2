@@ -3,11 +3,7 @@
 	desc = "That is one buff, angry lizard."
 	tt_desc = "E Anolis cuvieri muscular"
 
-<<<<<<< HEAD
-	icon = 'modular_chomp/icons/mob/vore32x64_ch.dmi'
-=======
 	icon = 'icons/mob/vore32x64.dmi'
->>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))
 	icon_state = "lizardman"
 	icon_living = "lizardman"
 	icon_dead = "lizardman-dead"
@@ -37,13 +33,8 @@
 	say_list_type = /datum/say_list/lizardman
 	ai_holder_type = /datum/ai_holder/simple_mob/melee
 
-<<<<<<< HEAD
-	can_be_drop_prey = FALSE //CHOMP Add
-	allow_mind_transfer = TRUE //CHOMPAdd
-=======
 	can_be_drop_prey = FALSE
 	allow_mind_transfer = TRUE
->>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))
 
 
 /datum/say_list/lizardman

@@ -82,11 +82,7 @@
 		var/mob/living/L = A
 		if(!L.stat)
 			return ..()
-<<<<<<< HEAD
-		else //CHOMPStation edit: no infinite spider glitch for buckled mobs
-=======
 		else
->>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))
 			if (L.anchored && L.buckled && !(L.pulledby || L.buckled.pulledby)) //don't have them trying to unbuckle someone on something that's being pulled because that's just annoying as fuck esp for a medic or something
 				L.buckled.unbuckle_mob(L)
 			if (!L.anchored)
@@ -105,11 +101,7 @@
 /mob/living/simple_mob/animal/giant_spider/nurse/proc/spin_cocoon(atom/movable/AM)
 	if(!istype(AM))
 		return FALSE // We can't cocoon walls sadly.
-<<<<<<< HEAD
-	if(istype(AM, /mob/living/simple_mob/animal/giant_spider)) //CHOMPEdit addition
-=======
 	if(istype(AM, /mob/living/simple_mob/animal/giant_spider))
->>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))
 		return FALSE
 	visible_message(span_notice("\The [src] begins to secrete a sticky substance around \the [AM]."))
 
@@ -279,19 +271,11 @@
 /datum/ai_holder/simple_mob/melee/nurse_spider/can_attack(atom/movable/the_target, var/vision_required = TRUE)
 	. = ..()
 	if(!.) // Parent returned FALSE.
-<<<<<<< HEAD
-		if (istype(the_target, /mob/living/simple_mob/animal/giant_spider)) //CHOMPEdit addition
-			var/mob/living/L = the_target
-			if (L.stat)
-				return FALSE
-		if(istype(the_target, /obj) && (!vision_required || can_see_target(the_target))) //CHOMPEdit - they should be passing the can_see_target check
-=======
 		if (istype(the_target, /mob/living/simple_mob/animal/giant_spider))
 			var/mob/living/L = the_target
 			if (L.stat)
 				return FALSE
 		if(istype(the_target, /obj) && (!vision_required || can_see_target(the_target)))
->>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))
 			var/obj/O = the_target
 			if(!O.anchored)
 				return TRUE

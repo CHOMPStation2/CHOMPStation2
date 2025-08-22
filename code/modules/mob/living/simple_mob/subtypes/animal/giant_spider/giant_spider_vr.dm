@@ -55,17 +55,10 @@
 
 	egg_type = /obj/effect/spider/eggcluster/royal
 
-<<<<<<< HEAD
-/mob/living/simple_mob/animal/giant_spider/webslinger/event // YW CHANGE
-	ai_holder_type = /datum/ai_holder/simple_mob/event
-
-/mob/living/simple_mob/animal/giant_spider/nurse/queen/event // YW CHANGE
-=======
 /mob/living/simple_mob/animal/giant_spider/webslinger/event
 	ai_holder_type = /datum/ai_holder/simple_mob/event
 
 /mob/living/simple_mob/animal/giant_spider/nurse/queen/event
->>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))
 	ai_holder_type = /datum/ai_holder/simple_mob/event
 
 /mob/living/simple_mob/animal/giant_spider/nurse

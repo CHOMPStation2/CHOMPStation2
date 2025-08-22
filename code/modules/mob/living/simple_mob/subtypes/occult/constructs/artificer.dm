@@ -7,10 +7,6 @@
 	real_name = "Artificer"
 	construct_type = "artificer"
 	desc = "A bulbous construct dedicated to building and maintaining temples to their otherworldly lords."
-<<<<<<< HEAD
-	//icon = 'icons/mob/mob.dmi'	//CHOMPEdit
-=======
->>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))
 	icon_state = "artificer"
 	icon_living = "artificer"
 	maxHealth = 100	//CHOMPEdit - Adjusting values since they have AI now

@@ -48,31 +48,10 @@
 	say_list_type = /datum/say_list/snake
 	ai_holder_type = /datum/ai_holder/simple_mob/passive
 
-<<<<<<< HEAD
-	// CHOMPEdit Start - New sprites & Added vore
-	/*
-	icon_state = "python"
-	icon_living = "python"
-	icon_dead = "python_dead"
-	icon = 'icons/mob/snake_vr.dmi'
-	*/
-	icon_state = "snek"
-	icon_living = "snek"
-	icon_dead = "snek_dead"
-	icon_rest = "snek_rest"
-	icon = 'modular_chomp/icons/mob/animal_ch.dmi'
-	// CHOMPEdit End
-=======
->>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))
-
 	vore_active = 1
 	vore_capacity = 1
 	vore_default_mode = DM_DIGEST
-<<<<<<< HEAD
-	vore_icons = SA_ICON_LIVING | SA_ICON_REST // CHOMPEdit
-=======
 	vore_icons = SA_ICON_LIVING | SA_ICON_REST
->>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))
 	vore_escape_chance = 20
 	swallowTime = 50
 	vore_bump_chance = 10

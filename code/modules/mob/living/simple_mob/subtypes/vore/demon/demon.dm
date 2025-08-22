@@ -1,13 +1,6 @@
-//CHOMPedit;KAS I commented this out, our demons are in 'demon_ch.dm"
-/*
-
 /mob/living/simple_mob/vore/demon
 	name = "Rift Walker"
-<<<<<<< HEAD
-	desc = "A large bipedal creature, its body has a mixture of dark fur and scales. Marks on the creature's body pulse slowly with red light." // CHOMPEdit: TYPOS.
-=======
 	desc = "A large bipedal creature, its body has a mixture of dark fur and scales. Marks on the creature's body pulse slowly with red light."
->>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))
 
 	icon_state = "boxfox"
 	icon_living = "boxfox"
@@ -63,15 +56,11 @@
 	var/blood_spawn = 0
 	var/is_shifting = FALSE
 
-<<<<<<< HEAD
-	can_be_drop_prey = FALSE //CHOMP Add
-=======
 	var/enable_autolaugh = FALSE //Whether user controlled mob will laugh when interacting automatically.
 	var/laugh = 'sound/misc/demonlaugh.ogg' //Yknow maybe someone wants a custom laugh, you never know.
 	injury_enrages = TRUE
 
 	var/list/alt_demon_appearances = list("boxfox","eater","engorge","wendigo","zellic","avarn","covern","ira","ire","laxel","lutra","brutola","ignia") // Allow extra decals
->>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))
 
 /mob/living/simple_mob/vore/demon/load_default_bellies()
 	. = ..()
@@ -118,9 +107,6 @@
 	else
 		return ..()
 
-<<<<<<< HEAD
-*/
-=======
 /mob/living/simple_mob/vore/demon/apply_melee_effects(var/atom/A)
 	if(isliving(A))
 		var/mob/living/L = A
@@ -220,4 +206,3 @@
 			icon_dead = "[alternate_selection]_dead"
 			icon = 'icons/mob/demon_alt.dmi'
 	update_icon()
->>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))

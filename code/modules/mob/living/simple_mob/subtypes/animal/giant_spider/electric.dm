@@ -61,9 +61,5 @@
 			return 1
 	return ..() // Do ranged if possible otherwise.
 
-<<<<<<< HEAD
-/mob/living/simple_mob/animal/giant_spider/electric/event // YW CHANGE
-=======
 /mob/living/simple_mob/animal/giant_spider/electric/event
->>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))
 	ai_holder_type = /datum/ai_holder/simple_mob/event

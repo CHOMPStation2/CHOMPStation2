@@ -8,13 +8,7 @@
 	icon_state = "mfloor1"
 	var/basecolor="#030303"
 	desc = ""
-<<<<<<< HEAD
-	throwforce = 0
 	w_class = ITEMSIZE_NORMAL
-	matter = list(DEFAULT_WALL_MATERIAL = 18750)
-=======
-	w_class = ITEMSIZE_NORMAL
->>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))
 	var/deployed = 1
 	anchored = 1
 

@@ -17,15 +17,9 @@
 			if(isliving(A))
 				var/mob/living/L = A
 				if(istype(L) && (!has_hands || !L.attempt_to_scoop(src)))
-<<<<<<< HEAD
-					if(src.zone_sel.selecting == BP_GROIN) //CHOMPEdit
-						if(src.vore_bellyrub(A)) //ChompEDIT
-							return //ChompEDIT
-=======
 					if(src.zone_sel.selecting == BP_GROIN)
 						if(src.vore_bellyrub(A))
 							return
->>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))
 					automatic_custom_emote(VISIBLE_MESSAGE,"[pick(friendly)] \the [A]!", check_stat = TRUE)
 			if(istype(A,/obj/structure/micro_tunnel))	//Allows simplemobs to click on mouse holes, mice should be allowed to go in mouse holes, and other mobs
 				var/obj/structure/micro_tunnel/t = A	//should be allowed to drag the mice out of the mouse holes!

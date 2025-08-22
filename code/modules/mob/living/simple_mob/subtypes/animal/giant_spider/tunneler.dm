@@ -116,11 +116,7 @@
 
 		visible_message(span_danger("\The [src] erupts from underneath, and hits \the [L]!"))
 		playsound(src, 'sound/weapons/heavysmash.ogg', 75, 1)
-<<<<<<< HEAD
-		L.add_modifier(/datum/modifier/entangled, 3 SECONDS) //L.Weaken(3) CHOMPedit: Removal of stuns
-=======
 		L.add_modifier(/datum/modifier/entangled, 3 SECONDS) //L.Weaken(3)
->>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))
 		overshoot = FALSE
 
 	if(!overshoot) // We hit the target, or something, at destination, so we're done.

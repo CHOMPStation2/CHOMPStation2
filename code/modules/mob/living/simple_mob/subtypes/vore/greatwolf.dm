@@ -130,13 +130,8 @@
 	B.vore_verb = "slurp"
 	B.contamination_color = "grey"
 	B.contamination_flavor = "Wet"
-<<<<<<< HEAD
-	B.belly_fullscreen_color = "#c47cb4" 		// CHOMPedit - Belly Fullscreen
-	B.belly_fullscreen = "anim_belly" 			// CHOMPedit - Belly Fullscreen
-=======
 	B.belly_fullscreen_color = "#c47cb4"
 	B.belly_fullscreen = "anim_belly"
->>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))
 
 	B.emote_lists[DM_HOLD] = list(
 		"The wolf's idle wandering helps its stomach gently churn around you, slimily squelching against your figure.",

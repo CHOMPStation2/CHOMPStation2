@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-//CHOMPedit;KAS I commented this out, our demons_subtypes are in 'demons_subtypes_ch.dm"
-/*
-=======
 /mob/living/simple_mob/vore/demon/wendigo
 	name = "Wendigo"
 
@@ -11,7 +7,6 @@
 	icon_rest = "wendigo_rest"
 
 	vore_icons = SA_ICON_LIVING
->>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))
 
 /mob/living/simple_mob/vore/demon/engorge
 	name = "Engorge"
@@ -33,9 +28,6 @@
 
 	vore_icons = null
 
-<<<<<<< HEAD
-*/
-=======
 /mob/living/simple_mob/vore/demon/avarn
 	name = "Avarn"
 
@@ -95,4 +87,3 @@
 	icon_rest = null
 
 	vore_icons = null
->>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))

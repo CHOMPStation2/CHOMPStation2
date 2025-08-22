@@ -54,23 +54,14 @@ I think I covered everything.
 	catalogue_data = list(/datum/category_item/catalogue/fauna/bigdragon)
 	tt_desc = "S Draco Ignis"
 	icon = 'icons/mob/vore128x64.dmi'
-<<<<<<< HEAD
-	icon_state = "dragon_bodyScaled"	//CHOMPEdit - So mappers can see it. Gets removed in Initialize()
-=======
 	icon_state = "dragon_bodyScaled"
->>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))
 	icon_rest = "dragon_maneNone"
 	icon_living = "dragon_maneNone"
 	player_msg = "You can perform a charge attack by disarm intent clicking somewhere. Grab intent clicking will perform a tail sweep and fling any nearby mobs. You can fire breath with harm intent. Your attacks have cooldowns associated with them. You can heal slowly by resting. Check your abilities tab for other functions!"
 	meat_amount = 40
 	meat_type = /obj/item/reagent_containers/food/snacks/meat
-<<<<<<< HEAD
-	pixel_x = -48 //CHOMPEdit
-	default_pixel_x = -48 //CHOMPEdit
-=======
 	pixel_x = -48
 	default_pixel_x = -48
->>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))
 	old_x = -48
 	old_y = 0
 	vis_height = 92
@@ -117,11 +108,7 @@ I think I covered everything.
 	special_attack_max_range = 10
 	special_attack_cooldown = 80
 
-<<<<<<< HEAD
-	plane = MOB_PLANE //CHOMPEdit
-=======
 	plane = MOB_PLANE
->>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))
 
 	//Dragon vars
 	var/notame
@@ -274,11 +261,7 @@ I think I covered everything.
 	add_language(LANGUAGE_DRUDAKAR)
 	add_language(LANGUAGE_UNATHI)
 	mob_radio = new /obj/item/radio/headset/mob_headset(src)	//We always give radios to spawned mobs anyway
-<<<<<<< HEAD
-	icon_state = "dragon_maneNone" //CHOMPEdit
-=======
 	icon_state = "dragon_maneNone"
->>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))
 
 /mob/living/simple_mob/vore/bigdragon/MouseDrop_T(mob/living/M, mob/living/user)
 	return
@@ -373,87 +356,55 @@ I think I covered everything.
 		eyes = pick(eye_styles)
 		overlay_colors["Eyes"] = get_random_colour(1)
 
-<<<<<<< HEAD
-	var/image/I = image(icon, "dragon_under[under][resting? "-rest" : (vore_fullness? "-[vore_fullness]" : null)]") //CHOMPEdit
-=======
 	var/image/I = image(icon, "dragon_under[under][resting? "-rest" : (vore_fullness? "-[vore_fullness]" : null)]")
->>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))
 	I.color = overlay_colors["Underbelly"]
 	I.appearance_flags |= (RESET_COLOR|PIXEL_SCALE)
 	I.plane = MOB_PLANE
 	I.layer = MOB_LAYER
 	add_overlay(I)
 
-<<<<<<< HEAD
-	I = image(icon, "dragon_body[body][resting? "-rest" : null]") //CHOMPEdit
-=======
 	I = image(icon, "dragon_body[body][resting? "-rest" : null]")
->>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))
 	I.color = overlay_colors["Body"]
 	I.appearance_flags |= (RESET_COLOR|PIXEL_SCALE)
 	I.plane = MOB_PLANE
 	I.layer = MOB_LAYER
 	add_overlay(I)
 
-<<<<<<< HEAD
-	I = image(icon, "dragon_ears[ears][resting? "-rest" : null]") //CHOMPEdit
-=======
 	I = image(icon, "dragon_ears[ears][resting? "-rest" : null]")
->>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))
 	I.color = overlay_colors["Ears"]
 	I.appearance_flags |= (RESET_COLOR|PIXEL_SCALE)
 	I.plane = MOB_PLANE
 	I.layer = MOB_LAYER
 	add_overlay(I)
 
-<<<<<<< HEAD
-	I = image(icon, "dragon_mane[mane][resting? "-rest" : null]") //CHOMPEdit
-=======
 	I = image(icon, "dragon_mane[mane][resting? "-rest" : null]")
->>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))
 	I.color = overlay_colors["Mane"]
 	I.appearance_flags |= (RESET_COLOR|PIXEL_SCALE)
 	I.plane = MOB_PLANE
 	I.layer = MOB_LAYER
 	add_overlay(I)
 
-<<<<<<< HEAD
-	I = image(icon, "dragon_horns[horns][resting? "-rest" : null]") //CHOMPEdit
-=======
 	I = image(icon, "dragon_horns[horns][resting? "-rest" : null]")
->>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))
 	I.color = overlay_colors["Horns"]
 	I.appearance_flags |= (RESET_COLOR|PIXEL_SCALE)
 	I.plane = MOB_PLANE
 	I.layer = MOB_LAYER
 	add_overlay(I)
 
-<<<<<<< HEAD
-	I = image(icon, "dragon_eyes[eyes][resting? "-rest" : null]") //CHOMPEdit
-=======
 	I = image(icon, "dragon_eyes[eyes][resting? "-rest" : null]")
->>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))
 	I.color = overlay_colors["Eyes"]
 	I.appearance_flags |= (RESET_COLOR|PIXEL_SCALE)
 	I.plane = PLANE_LIGHTING_ABOVE
 	add_overlay(I)
 
 	if(enraged)
-<<<<<<< HEAD
-		I = image(icon, "dragon_rage") //CHOMPEdit
-=======
 		I = image(icon, "dragon_rage")
->>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))
 		I.appearance_flags |= PIXEL_SCALE
 		I.plane = MOB_PLANE
 		I.layer = MOB_LAYER
 		add_overlay(I)
 	if(flames)
-<<<<<<< HEAD
-		I = image(icon, "dragon_flame[resting? "-rest" : null]") //CHOMPEdit
-=======
 		I = image(icon, "dragon_flame[resting? "-rest" : null]")
->>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))
 		I.appearance_flags |= PIXEL_SCALE
 		I.plane = PLANE_LIGHTING_ABOVE
 		add_overlay(I)
@@ -616,11 +567,7 @@ I think I covered everything.
 /obj/belly/dragon
 	autotransferchance = 50
 	autotransferwait = 150
-<<<<<<< HEAD
-	autotransfer_enabled = TRUE // CHOMPAdd
-=======
 	autotransfer_enabled = TRUE
->>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))
 	escapable = TRUE
 	escapechance = 100
 	escapetime = 15
@@ -628,11 +575,7 @@ I think I covered everything.
 	contamination_color = "grey"
 	contamination_flavor = "Wet"
 	vore_verb = "slurp"
-<<<<<<< HEAD
-	belly_fullscreen_color = "#711e1e" //CHOMPedit
-=======
 	belly_fullscreen_color = "#711e1e"
->>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))
 
 /obj/belly/dragon/maw
 	name = "Maw"
@@ -986,11 +929,7 @@ I think I covered everything.
 		if(H.will_eat(P))
 			if(issilicon(P))
 				return
-<<<<<<< HEAD
-			if(!iscarbon(P))	//CHOMPEdit. Makes healbelly mobs target synths now. Man.. feels weird writing chompedit on my own code from chomp.
-=======
 			if(!iscarbon(P))	//Makes healbelly mobs target synths now.
->>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))
 				if(!P.client)	//Don't target simple mobs that aren't player controlled
 					return
 			if(P.stat == DEAD)

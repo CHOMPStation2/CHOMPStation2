@@ -36,10 +36,5 @@
 			L.throw_at(get_edge_target_turf(L, throw_dir), throw_dist, 1, src)
 		else
 			to_chat(L, span_warning("\The [src] punches you with incredible force, but you remain in place."))
-<<<<<<< HEAD
-			visible_message(span_danger("\The [src] slams it's mechanized fist into \the [L] with incredible force, to no visible effect!")) // CHOMPEdit: Mechpunch visible/audible feedback for *resisting* the punch.
-			playsound(src, "punch", 50, 1) // CHOMPEdit: Mechpunch visible/audible feedback for *resisting* the punch.
-=======
 			visible_message(span_danger("\The [src] slams it's mechanized fist into \the [L] with incredible force, to no visible effect!"))
 			playsound(src, "punch", 50, 1)
->>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))

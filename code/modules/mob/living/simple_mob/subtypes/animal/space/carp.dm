@@ -43,11 +43,7 @@
 	density = FALSE
 
 	vore_active = TRUE
-<<<<<<< HEAD
-	vore_icons = 0 //CHOMPSTATION EDIT - Require new sprites
-=======
 	vore_icons = 0
->>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))
 	response_help = "pets"
 	response_disarm = "gently pushes aside"
 	response_harm = "hits"
@@ -90,11 +86,7 @@
 	var/static/list/carp_colors_rare = list(\
 	"silver" = "#fdfbf3", \
 	)
-<<<<<<< HEAD
-	can_be_drop_prey = FALSE //CHOMP Add
-=======
 	can_be_drop_prey = FALSE
->>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))
 
 /mob/living/simple_mob/animal/space/carp/Initialize(mapload)
 	. = ..()
@@ -156,11 +148,7 @@
 	if(isliving(A))
 		var/mob/living/L = A
 		if(prob(knockdown_chance))
-<<<<<<< HEAD
-			L.add_modifier(/datum/modifier/entangled, 4 SECONDS) //CHOMPedit, replacing weaken/slowdown with slow down
-=======
 			L.add_modifier(/datum/modifier/entangled, 4 SECONDS) // replacing weaken/slowdown with slow down
->>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))
 			L.visible_message(span_danger("\The [src] knocks down \the [L]!"))
 
 /mob/living/simple_mob/animal/space/carp/load_default_bellies()
@@ -232,19 +220,11 @@
 /mob/living/simple_mob/animal/space/carp/large/huge
 	name = "great white carp"
 	desc = "A very rare breed of carp- and a very aggressive one."
-<<<<<<< HEAD
-	icon = 'icons/mob/vore64x64.dmi' //CHOMPSTATION EDIT
-	icon_dead = "megacarp_dead"
-	icon_living = "megacarp"
-	icon_state = "megacarp"
-	vore_icons = SA_ICON_LIVING //CHOMPSTATION EDIT
-=======
 	icon = 'icons/mob/vore64x64.dmi'
 	icon_dead = "megacarp_dead"
 	icon_living = "megacarp"
 	icon_state = "megacarp"
 	vore_icons = SA_ICON_LIVING
->>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))
 
 	maxHealth = 230
 	health = 230
@@ -265,14 +245,6 @@
 /mob/living/simple_mob/animal/space/carp/large/huge/vorny
 	name = "great white carp"
 	desc = "A very rare breed of carp- and a very hungry one."
-<<<<<<< HEAD
-	icon = 'icons/mob/vore64x64.dmi' //CHOMPSTATION EDIT
-	icon_dead = "megacarp_dead"
-	icon_living = "megacarp"
-	icon_state = "megacarp"
-	vore_icons = SA_ICON_LIVING //CHOMPSTATION ADDITION
-=======
->>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))
 
 	maxHealth = 230
 	health = 230
@@ -297,10 +269,6 @@
 	B.name = "stomach"
 	B.desc = "You've been swallowed whole and alive by a massive white carp! The stomach around you is oppressively tight, squeezing and grinding wrinkled walls across your body, making it hard to make any movement at all. The chamber is flooded with fluids that completely overwhelm you."
 	B.mode_flags = DM_FLAG_THICKBELLY
-<<<<<<< HEAD
-	//B.belly_fullscreen = "yet_another_tumby" //Chompedit - Belly Fullscreen change
-=======
->>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))
 	B.digest_brute = 2
 	B.digest_burn = 2
 	B.digest_oxy = 1

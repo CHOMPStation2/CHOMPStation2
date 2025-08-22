@@ -43,10 +43,6 @@
 	recycles = FALSE
 */
 
-<<<<<<< HEAD
-//CHOMPEdit Start
-=======
->>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))
 /obj/item/dogborg/sleeper/compactor/supply //Miner borg belly
 	name = "Supply Storage"
 	desc = "A mounted survival unit with fuel processor, helpful with both deliveries and assisting injured miners."
@@ -97,10 +93,6 @@
 		to_chat(user, span_notice("You empty the satchel into the box."))
 		return
 	..()
-<<<<<<< HEAD
-//CHOMPEdit End
-=======
->>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))
 
 /obj/item/dogborg/sleeper/compactor/brewer
 	name = "Brew Belly"
@@ -119,10 +111,6 @@
 	max_item_count = 10
 	recycles = FALSE
 
-<<<<<<< HEAD
-// CHOMPAdd Start
-=======
->>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))
 /obj/item/dogborg/sleeper/compactor/brewer/inject_chem(mob/user, chem)
 	if(patient && patient.reagents)
 		if((chem in injection_chems) + REAGENT_ID_INAPROVALINE)
@@ -136,10 +124,6 @@
 				drain(100) //-100 charge per injection
 			var/units = round(patient.reagents.get_reagent_amount(chem))
 			to_chat(hound, span_notice("Injecting [units] unit\s into occupant.")) //If they were immersed, the reagents wouldn't leave with them.
-<<<<<<< HEAD
-// CHOMPAdd End
-=======
->>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))
 
 /obj/item/dogborg/sleeper/K9/ert
 	name = "Emergency Storage"

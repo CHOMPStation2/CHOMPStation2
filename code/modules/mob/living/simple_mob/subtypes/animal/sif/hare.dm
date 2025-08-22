@@ -65,11 +65,7 @@
 
 	say_list_type = /datum/say_list/hare
 
-<<<<<<< HEAD
-	can_be_drop_prey = TRUE //CHOMP Add
-=======
 	can_be_drop_prey = TRUE
->>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))
 
 /datum/say_list/hare
 	speak = list("Snrf...","Crk!")

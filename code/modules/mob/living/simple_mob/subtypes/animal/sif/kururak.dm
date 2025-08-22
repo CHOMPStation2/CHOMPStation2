@@ -33,11 +33,7 @@
 
 	default_pixel_x = -16
 	pixel_x = -16
-<<<<<<< HEAD
-	minbodytemp = 175 //yw edit, Makes mobs survive cryogaia temps
-=======
 	minbodytemp = 175
->>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))
 	maxHealth = 200
 	health = 200
 

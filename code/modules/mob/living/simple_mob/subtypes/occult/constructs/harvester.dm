@@ -7,16 +7,8 @@
 	real_name = "Harvester"
 	construct_type = "harvester"
 	desc = "A tendril-laden construct piloted by a chained mind."
-<<<<<<< HEAD
-	//icon = 'icons/mob/mob.dmi' CHOMPEdit
 	icon_state = "harvester"
 	icon_living = "harvester"
-	maxHealth = 100	//CHOMPEdit
-	health = 100	//CHOMPEdit
-=======
-	icon_state = "harvester"
-	icon_living = "harvester"
->>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))
 	melee_damage_lower = 20
 	melee_damage_upper = 25
 	attack_sharp = TRUE

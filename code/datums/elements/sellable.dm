@@ -173,10 +173,6 @@
 				GLOB.refined_chems_sold[R.industrial_use]["units"] += FLOOR(R.volume, 1)
 				GLOB.refined_chems_sold[R.industrial_use]["value"] += reagent_value
 
-<<<<<<< HEAD
-//CHOMPEdit Start
-=======
->>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))
 /datum/element/sellable/salvage //For selling /obj/item/salvage
 
 /datum/element/sellable/salvage/calculate_sell_value(obj/source)
@@ -195,7 +191,3 @@
 	if(organ_stuff.health != initial(organ_stuff.health) )
 		return "Error: Product was damaged on arrival."
 	return null
-<<<<<<< HEAD
-//CHOMPEdit End
-=======
->>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))

@@ -1,11 +1,7 @@
 // The following procs are used to grab players for mobs produced by a seed (mostly for dionaea).
 /datum/seed/proc/handle_living_product(var/mob/living/host)
 
-<<<<<<< HEAD
-	if(!host || !istype(host) || ai_mob_product) return //CHOMPedit: ai_mob_product var to allow ai mobs to spawn from plants.
-=======
 	if(!host || !istype(host) || ai_mob_product) return
->>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))
 
 	if(apply_color_to_mob)
 		host.color = traits[TRAIT_PRODUCT_COLOUR]

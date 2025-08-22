@@ -8,11 +8,7 @@
 		to_chat(src,span_warning("You can't use that here!"))
 		return FALSE
 
-<<<<<<< HEAD
-	if((get_area(src).flags & PHASE_SHIELDED))	//CHOMPAdd - Mapping tools to control phasing
-=======
 	if((get_area(src).flags & PHASE_SHIELDED))
->>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))
 		to_chat(src,span_warning("This area is preventing you from phasing!"))
 		return FALSE
 

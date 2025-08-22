@@ -76,19 +76,11 @@
 	var/obj/belly/B = vore_selected
 	B.name = "stomach"
 	B.desc = "Warm, slick, and wet. You're somewhere hot, tight, and very cramped, unless you happen to somehow be smaller than the fennec you're in! It's hard to see, as rippling pink walls clench and smother over your form. If you don't want to be here, a newspaper from a friend ought to get you out. ...right?"
-<<<<<<< HEAD
-	B.vore_sound = "Tauric Swallow"				// CHOMPedit - Fancy Vore Sounds
-	B.release_sound = "Pred Escape"				// CHOMPedit - Fancy Vore Sounds
-	B.fancy_vore = 1							// CHOMPedit - Fancy Vore Sounds
-	B.belly_fullscreen_color = "#c47cb4" 		// CHOMPedit - Belly Fullscreen
-	B.belly_fullscreen = "anim_belly" 			// CHOMPedit - Belly Fullscreen
-=======
 	B.vore_sound = "Tauric Swallow"
 	B.release_sound = "Pred Escape"
 	B.fancy_vore = TRUE
 	B.belly_fullscreen_color = "#c47cb4"
 	B.belly_fullscreen = "anim_belly"
->>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))
 
 /datum/say_list/fennec
 	speak = list("SKREEEE!","Chrp?","Ararrrararr.")

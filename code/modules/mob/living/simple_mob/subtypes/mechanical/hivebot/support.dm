@@ -40,11 +40,7 @@
 
 	disable_duration_percent = 0.7
 	outgoing_melee_damage_percent = 1.3
-<<<<<<< HEAD
-	attack_speed_percent = 0.7 // CHOMPedit: It was actually slowing it down, lol
-=======
 	attack_speed_percent = 0.7
->>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))
 	accuracy = 30
 	slowdown = -1
 	evasion = 30

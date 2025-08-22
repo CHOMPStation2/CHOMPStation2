@@ -45,11 +45,7 @@
 	heat_resist = -0.50
 	cold_resist = 0.75
 	movement_cooldown = -1
-<<<<<<< HEAD
-	minbodytemp = 175 //yw edit, Makes mobs survive cryogaia temps
-=======
 	minbodytemp = 175
->>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))
 	melee_damage_lower = 6
 	melee_damage_upper = 14
 	base_attack_cooldown = 1 SECOND

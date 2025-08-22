@@ -381,10 +381,6 @@
 	edge_blending_priority = 4
 	initial_flooring = /decl/flooring/fur
 	can_dig = FALSE
-<<<<<<< HEAD
-	//turf_layers = list() CHOMP Removal
-=======
->>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))
 	var/tree_chance = 25
 	var/tree_color = null
 	var/tree_type = /obj/structure/flora/tree/fur
@@ -1535,20 +1531,12 @@
 				GLOB.prey_digested_roundstat++
 			qdel(H)	//glorp
 			return
-<<<<<<< HEAD
-		H.burn_skin(damage) //CHOMPEdit Start
-=======
 		H.burn_skin(damage)
->>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))
 		if(linked_mob)
 			var/how_much = (damage * H.size_multiplier) * H.get_digestion_nutrition_modifier() * linked_mob.get_digestion_efficiency_modifier()
 			if(!H.ckey)
 				how_much = how_much / 10	//Braindead mobs are worth less
-<<<<<<< HEAD
-			linked_mob.adjust_nutrition(how_much) //CHOMPEdit End
-=======
 			linked_mob.adjust_nutrition(how_much)
->>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))
 	else if (isliving(thing))
 		var/mob/living/L = thing
 		if(!L)

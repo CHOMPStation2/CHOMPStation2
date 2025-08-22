@@ -13,11 +13,7 @@
 
 	maxHealth = 1
 	health = 1
-<<<<<<< HEAD
-	nutrition = 20 //CHOMPEdit
-=======
 	nutrition = 20
->>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))
 
 	movement_cooldown = -1
 

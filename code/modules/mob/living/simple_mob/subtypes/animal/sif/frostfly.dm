@@ -34,11 +34,7 @@
 
 	maxHealth = 65
 	health = 65
-<<<<<<< HEAD
-	minbodytemp = 175 //yw edit, Makes mobs survive cryogaia temps
-=======
 	minbodytemp = 175
->>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))
 	pass_flags = PASSTABLE
 
 	var/energy = 100

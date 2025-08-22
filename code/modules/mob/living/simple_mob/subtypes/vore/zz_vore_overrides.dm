@@ -215,17 +215,9 @@
 	response_disarm = "gently pushes aside"
 	response_harm = "hits"
 
-<<<<<<< HEAD
-// Chomp EDIT
 /mob/living/simple_mob/hostile/carp/pike
 	vore_active = 1
 	// NO VORE SPRITES
-// Chomp EDIT END
-=======
-/mob/living/simple_mob/hostile/carp/pike
-	vore_active = 1
-	// NO VORE SPRITES
->>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))
 
 /mob/living/simple_mob/animal/space/carp/holographic
 	vore_icons = 0 // NO VORE SPRITES
