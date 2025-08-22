@@ -114,7 +114,7 @@
 	. = TRUE // So we don't fire a bolt as well.
 	var/rng_cycle
 	if(attackcycle == 1)
-		specialattackprojectile = /obj/item/projectile/beam/burstlaser
+		specialattackprojectile = /obj/item/projectile/beam/midlaser/shortrange
 		rng_cycle = rand(1,4)
 		say("PROTOCOL: CROSS X.")
 		addtimer(CALLBACK(src, PROC_REF(star_burst), A, rng_cycle), 2 SECONDS, TIMER_DELETE_ME)

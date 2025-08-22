@@ -309,14 +309,17 @@
 	modifier_type_to_apply = /datum/modifier/poisoned //main threat right here, Will two tap most players if untreated
 	modifier_duration = 1 MINUTE
 
-/obj/item/projectile/energy/eclipse/tyrjavelin //Four hits ought to end you
+/obj/item/projectile/energy/eclipse/tyrjavelin //Five hits ought to end you
 	name = "energy javelin"
 	icon_state = "javelin"
 	damage_type = SEARING
-	check_armour = "bullet"
-	damage = 20
-	armor_penetration = 60
+	check_armour = "melee"
+	damage = 23
+	armor_penetration = 30
 	speed = 10
 	color = "#FF6600"
 	modifier_type_to_apply = /datum/modifier/deep_wounds //reduced healing
 	modifier_duration = 1 MINUTE
+
+/obj/item/projectile/energy/eclipse/tyrjavelin/speed
+	speed = 7
