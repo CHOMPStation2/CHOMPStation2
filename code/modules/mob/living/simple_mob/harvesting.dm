@@ -18,10 +18,17 @@
 /mob/living/simple_mob/examine(mob/user)
 	. = ..()
 	if(stat != DEAD && user && harvest_tool && (get_dist(user, src) <= 3))
+<<<<<<< HEAD
 		. += span_notice("\The [src] can be [harvest_verb] with a [initial(harvest_tool.name)] every [harvest_cooldown / 600] minutes.") //CHOMPEdit Please do math better
 		var/time_to_harvest = (harvest_recent + harvest_cooldown) - world.time
 		if(time_to_harvest > 0)
 			. += span_notice("It can be [harvest_verb] in [(time_to_harvest)] second(s).") //CHOMPEdit This is as good as I can get for now, I intend to make it better later
+=======
+		. += span_notice("\The [src] can be [harvest_verb] with a [initial(harvest_tool.name)] every [harvest_cooldown / 600] minutes.")
+		var/time_to_harvest = (harvest_recent + harvest_cooldown) - world.time
+		if(time_to_harvest > 0)
+			. += span_notice("It can be [harvest_verb] in [(time_to_harvest)] second(s).")
+>>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))
 		else
 			. += span_notice("It can be [harvest_verb] now.")
 

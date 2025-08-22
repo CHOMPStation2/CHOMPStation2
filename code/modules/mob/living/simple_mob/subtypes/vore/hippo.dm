@@ -50,7 +50,11 @@
 	say_list_type = /datum/say_list/hippo
 	ai_holder_type = /datum/ai_holder/simple_mob/retaliate
 
+<<<<<<< HEAD
 	can_be_drop_prey = FALSE //CHOMP Add
+=======
+	can_be_drop_prey = FALSE
+>>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))
 
 // Activate Noms!
 /mob/living/simple_mob/vore/hippo //I don't know why it's in a seperate line but everyone does it so i do it

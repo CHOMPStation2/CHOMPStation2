@@ -92,6 +92,9 @@
 #define PLANT_WURMWOAD "wurmwoad"
 #define PLANT_MICROM "microm"
 #define PLANT_MEGAM "megam"
+#define PLANT_TEA "tea"
+#define PLANT_PITCHERPLANT "pitcher plant"
+#define PLANT_NULLHARDLIGHT "Type NULL Hardlight Generator"
 
 // CHompAdd Start
 #define PLANT_VOLTATO "voltato"

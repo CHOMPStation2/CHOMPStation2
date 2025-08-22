@@ -24,14 +24,24 @@
 	species_sounds = "Human Male" // Yes, we should allow them to differ based on gender, but if someone's making a custom humanoid later:tm: - set your humanoid's species_sounds to match, or var-edit it after spawn.
 
 
+<<<<<<< HEAD
 	can_be_drop_prey = FALSE //CHOMP Add
+=======
+	can_be_drop_prey = FALSE
+>>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))
 
 /mob/living/simple_mob/humanoid/death()
 	..()
 	if(corpse)
+<<<<<<< HEAD
 		var/mob/new_corpse = new corpse(src.loc) //CHOMPEdit
 		if(istype(new_corpse)) //CHOMPEdit
 			new_corpse.low_priority = TRUE //CHOMPEdit
+=======
+		var/mob/new_corpse = new corpse(src.loc)
+		if(istype(new_corpse))
+			new_corpse.low_priority = TRUE
+>>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))
 	qdel(src)
 	return
 

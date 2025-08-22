@@ -30,7 +30,11 @@
 
 	maxHealth = 125
 	health = 125
+<<<<<<< HEAD
 	minbodytemp = 175 //yw edit, Makes mobs survive cryogaia temps
+=======
+	minbodytemp = 175
+>>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))
 	movement_cooldown = -1
 	heat_resist = -0.50
 	cold_resist = 0.75

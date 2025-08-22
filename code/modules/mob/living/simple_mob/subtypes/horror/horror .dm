@@ -4,7 +4,11 @@
 	icon = 'icons/mob/horror_show/GHPS.dmi'
 	icon_gib = "generic_gib"
 
+<<<<<<< HEAD
 	can_pain_emote = FALSE // CHOMPEdit: Can't feel pain
+=======
+	can_pain_emote = FALSE
+>>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))
 
 /datum/ai_holder/simple_mob/horror
 	hostile = TRUE // The majority of simplemobs are hostile, gaslamps are nice.
@@ -28,4 +32,8 @@
 	minbodytemp = 0
 	maxbodytemp = 700
 
+<<<<<<< HEAD
 	can_be_drop_prey = FALSE //CHOMP Add
+=======
+	can_be_drop_prey = FALSE
+>>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))

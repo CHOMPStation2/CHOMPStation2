@@ -60,7 +60,10 @@
 
 	allow_mind_transfer = TRUE
 
+<<<<<<< HEAD
 	//var/picked_color = FALSE //CHOMPEdit - now on simplemob.
+=======
+>>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))
 
 	can_enter_vent_with = list(
 		/obj/item/implant,
@@ -121,7 +124,10 @@
 	B.name = "stomach"
 	B.desc = "The hot slick gut of a catslug!! Copious slime smears over you as you’re packed away into the gloom and oppressive humidity of this churning gastric sac. The pressure around you is intense, the squashy flesh bends and forms to your figure, clinging to you insistently! There’s basically no free space at all as your ears are filled with the slick slide of flesh against flesh and the burbling of gastric juices glooping all around you. The thumping of a heart booms from somewhere nearby, making everything pulse in against you in time with it! This is it! You’ve been devoured by a catslug!!!"
 	B.mode_flags = 40
+<<<<<<< HEAD
 //	B.belly_fullscreen = "yet_another_tumby" //Chompedit - Belly Fullscreen change
+=======
+>>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))
 	B.digest_brute = 0.5
 	B.digest_burn = 0.5
 	B.digestchance = 10

@@ -24,7 +24,11 @@ They're also cool, and Rykka/Nyria wrote this uwu
 	tt_desc = "Crocuta crocuta"
 	catalogue_data = list(/datum/category_item/catalogue/fauna/hyena)
 
+<<<<<<< HEAD
 	icon = 'modular_chomp/icons/mob/animals48x32_ch.dmi'
+=======
+	icon = 'icons/mob/hyena.dmi'
+>>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))
 	icon_state = "yeen"
 	icon_living = "yeen"
 	icon_dead = "yeen_dead"
@@ -82,7 +86,11 @@ They're also cool, and Rykka/Nyria wrote this uwu
 
 	say_list_type = /datum/say_list/hyena
 
+<<<<<<< HEAD
 	allow_mind_transfer = TRUE //CHOMPAdd
+=======
+	allow_mind_transfer = TRUE
+>>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))
 
 	var/obj/item/clothing/head/hat = null // The hat the yeen is wearing when initialized, var will update with the chosen hat.
 
@@ -90,7 +98,11 @@ They're also cool, and Rykka/Nyria wrote this uwu
 /mob/living/simple_mob/animal/hyena/verb/remove_hat()
 	set name = "Remove Hat"
 	set desc = "Remove the yeen's hat. You monster. ;~;"
+<<<<<<< HEAD
 	set category = "Abilities.Hyena" //CHOMPEdit
+=======
+	set category = "Abilities.Hyena"
+>>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))
 	set src in view(1)
 
 	drop_hat(usr)
@@ -113,7 +125,11 @@ They're also cool, and Rykka/Nyria wrote this uwu
 /mob/living/simple_mob/animal/hyena/verb/give_hat()
 	set name = "Give Hat"
 	set desc = "Give the yeen a hat. You wonderful bean. <3"
+<<<<<<< HEAD
 	set category = "Abilities.Hyena" //CHOMPEdit
+=======
+	set category = "Abilities.Hyena"
+>>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))
 	set src in view(1)
 
 	take_hat(usr)

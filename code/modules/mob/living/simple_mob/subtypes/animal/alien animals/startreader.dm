@@ -86,7 +86,11 @@
 	var/flipped = FALSE
 	var/flip_cooldown = 0
 
+<<<<<<< HEAD
 	can_be_drop_prey = FALSE //CHOMP Add
+=======
+	can_be_drop_prey = FALSE
+>>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))
 
 /datum/say_list/startreader
 	emote_see = list("bobs", "digs around","gnashes at something","yawns","snaps at something")

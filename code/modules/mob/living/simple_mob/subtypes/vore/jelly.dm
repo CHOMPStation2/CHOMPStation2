@@ -28,7 +28,11 @@
 	say_list_type = /datum/say_list/jelly
 	ai_holder_type = /datum/ai_holder/simple_mob/retaliate/jelly
 
+<<<<<<< HEAD
 	can_be_drop_prey = FALSE //CHOMP Add
+=======
+	can_be_drop_prey = FALSE
+>>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))
 
 	min_oxy = 0
 	max_oxy = 0
@@ -64,11 +68,17 @@
 	B.digest_brute = 0.3
 	B.digest_burn = 0.3
 	B.escapechance = 10 // You were dumb enough to walk into it or stand still, now good luck escaping.
+<<<<<<< HEAD
 	// CHOMPAdd Start
 	B.contaminates = 1
 	B.contamination_flavor = "Slimy"
 	B.contamination_color = "green"
 	// CHOMPAdd End
+=======
+	B.contaminates = TRUE
+	B.contamination_flavor = "Slimy"
+	B.contamination_color = "green"
+>>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))
 	B.item_digest_mode = IM_HOLD
 	B.belly_fullscreen = "VBOanim_belly1"
 	B.belly_fullscreen_color = "#823232"

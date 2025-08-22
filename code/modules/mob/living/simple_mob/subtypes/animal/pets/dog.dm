@@ -113,7 +113,11 @@
 	name = "Bockscar"
 	real_name = "Bockscar"
 
+<<<<<<< HEAD
 /mob/living/simple_mob/animal/passive/dog/corgi/puppy/wiggle //yw addition
+=======
+/mob/living/simple_mob/animal/passive/dog/corgi/puppy/wiggle
+>>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))
 	name = "Mister Wiggles"
 	real_name = "Mister Wiggles"
 	desc = "An emotional support corgi! He gets along with everyone, even Runtime."

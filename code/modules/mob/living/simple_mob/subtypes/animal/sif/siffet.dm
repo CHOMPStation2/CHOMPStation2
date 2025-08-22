@@ -58,10 +58,16 @@
 
 /mob/living/simple_mob/animal/sif/siffet/IIsAlly(mob/living/L)
 	. = ..()
+<<<<<<< HEAD
 	//CHOMPAdd START: Compatibility with structures
+=======
+>>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))
 	if(!. && !istype(L, /mob/living))
 		return TRUE
 	else
 		if(!. && L.mob_size > 10) //Attacks things it considers small enough to take on, otherwise only attacks if attacked.
 			return TRUE
+<<<<<<< HEAD
 	//CHOMPAdd END
+=======
+>>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))

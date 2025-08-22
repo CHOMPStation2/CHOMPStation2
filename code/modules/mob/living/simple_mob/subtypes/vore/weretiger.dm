@@ -31,7 +31,11 @@
 
 	has_hands = 1
 
+<<<<<<< HEAD
 	can_be_drop_prey = FALSE //CHOMP Add
+=======
+	can_be_drop_prey = FALSE
+>>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))
 	allow_mind_transfer = TRUE
 
 // Nomnomn

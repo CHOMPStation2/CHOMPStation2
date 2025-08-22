@@ -118,7 +118,11 @@
 #define FACTION_WORM "worm"
 #define FACTION_XENO "xeno"
 #define FACTION_CORGI "corgi"
+<<<<<<< HEAD
 #define FACTION_ZORGOIA "zorgoia" // CHOMPAdd
+=======
+#define FACTION_ZORGOIA "zorgoia"
+>>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))
 
 #define FACTION_PLANTS "plants"
 

@@ -38,11 +38,19 @@
 		return
 
 	// Advance plant age.
+<<<<<<< HEAD
 	if(prob(30)) //CHOMPedit start: I have to push the age increase down for a line for this to work with the compiler.
 		age += 1 * HYDRO_SPEED_MULTIPLIER
 		if(age_mod >= 1) //Age reagents double the speed of plant growth in sufficient quantities
 			age += 1 * HYDRO_SPEED_MULTIPLIER
 			age_mod -= 1 //CHOMPedit end
+=======
+	if(prob(30))
+		age += 1 * HYDRO_SPEED_MULTIPLIER
+		if(age_mod >= 1) //Age reagents double the speed of plant growth in sufficient quantities
+			age += 1 * HYDRO_SPEED_MULTIPLIER
+			age_mod -= 1
+>>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))
 
 	//Highly mutable plants have a chance of mutating every tick.
 	if(seed.get_trait(TRAIT_IMMUTABLE) == -1)

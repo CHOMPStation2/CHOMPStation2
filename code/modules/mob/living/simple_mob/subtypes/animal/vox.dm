@@ -8,11 +8,17 @@
 	min_n2 = 0 //breathe N2
 	max_n2 = 0
 
+<<<<<<< HEAD
 	// CHOMPAdd: Pain sounds
 	species_sounds = "Vox"
 	pain_emote_1p = list("shriek")
 	pain_emote_3p = list("shrieks")
 	// CHOMPAdd End
+=======
+	species_sounds = "Vox"
+	pain_emote_1p = list("shriek")
+	pain_emote_3p = list("shrieks")
+>>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))
 
 /mob/living/simple_mob/vox/armalis
 	name = "serpentine alien"
@@ -29,7 +35,10 @@
 	melee_damage_upper = 40
 	attacktext = "slammed its enormous claws into"
 	movement_cooldown = 2
+<<<<<<< HEAD
 //	environment_smash_flags = SMASH_LIGHT_STRUCTURES | SMASH_CONTAINERS | SMASH_WALLS // WALLS Temporary commenting, YW - Hv3
+=======
+>>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))
 	attack_sound = 'sound/weapons/bladeslice.ogg'
 	status_flags = 0
 	max_oxy = 0

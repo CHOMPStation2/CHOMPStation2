@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 #define AGE_MOD_MAX 10 //CHOMPedit: Define for age_mod sanity check as a define to allow for easy tweaking.
+=======
+#define AGE_MOD_MAX 10 // Define for age_mod sanity check as a define to allow for easy tweaking.
+>>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))
 
 /obj/machinery/portable_atmospherics/hydroponics
 	name = "hydroponics tray"
@@ -32,7 +36,11 @@
 	var/toxins = 0             // Toxicity in the tray?
 	var/mutation_level = 0     // When it hits 100, the plant mutates.
 	var/tray_light = 1         // Supplied lighting.
+<<<<<<< HEAD
 	var/age_mod = 0            //CHOMPedit: Variable for chems which speed up plant growth. On average, every 3 age mod reduces growing time by 2.5 minutes.
+=======
+	var/age_mod = 0            // Variable for chems which speed up plant growth. On average, every 3 age mod reduces growing time by 2.5 minutes.
+>>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))
 
 	// Mechanical concerns.
 	var/health = 0             // Plant health.
@@ -136,11 +144,17 @@
 		REAGENT_ID_MUTAGEN = 15
 		)
 
+<<<<<<< HEAD
 	//CHOMPedit: Reagents which double plant growth speed.
 	var/static/list/age_reagents = list(
 	REAGENT_ID_PITCHERNECTAR =  1
 	)
 	//CHOMPedit end
+=======
+	var/static/list/age_reagents = list(
+	REAGENT_ID_PITCHERNECTAR =  1
+	)
+>>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))
 
 /obj/machinery/portable_atmospherics/hydroponics/AltClick(var/mob/living/user)
 	if(!istype(user))
@@ -317,10 +331,15 @@
 			else if(toxic_reagents[R.id])
 				toxins += toxic_reagents[R.id] * reagent_total
 
+<<<<<<< HEAD
 			//CHOMPedit: Agents which speed up plant growth
 			if(age_reagents[R.id])
 				age_mod += age_reagents[R.id]  * reagent_total
 			//CHOMPedit end
+=======
+			if(age_reagents[R.id])
+				age_mod += age_reagents[R.id]  * reagent_total
+>>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))
 
 		//Handle some general level adjustments. These values are independent of plants existing.
 		if(weedkiller_reagents[R.id])
@@ -373,7 +392,11 @@
 		age = 0
 		sampled = 0
 		mutation_mod = 0
+<<<<<<< HEAD
 		age_mod = 0 //CHOMPedit
+=======
+		age_mod = 0
+>>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))
 
 	check_health()
 	return
@@ -392,7 +415,11 @@
 	age = 0
 	yield_mod = 0
 	mutation_mod = 0
+<<<<<<< HEAD
 	age_mod = 0 //CHOMPedit
+=======
+	age_mod = 0
+>>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))
 
 	to_chat(user, span_filter_notice("You remove the dead plant."))
 	lastproduce = 0
@@ -412,7 +439,11 @@
 
 	dead = 0
 	age = 0
+<<<<<<< HEAD
 	age_mod = 0 //CHOMPedit
+=======
+	age_mod = 0
+>>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))
 	health = seed.get_trait(TRAIT_ENDURANCE)
 	lastcycle = world.time
 	harvest = 0
@@ -489,7 +520,11 @@
 	pestlevel =      max(0,min(pestlevel,10))
 	weedlevel =      max(0,min(weedlevel,10))
 	toxins =         max(0,min(toxins,10))
+<<<<<<< HEAD
 	age_mod =        max(0,min(age_mod,AGE_MOD_MAX)) //CHOMPedit: age_mod sanity check
+=======
+	age_mod =        max(0,min(age_mod,AGE_MOD_MAX)) // age_mod sanity check
+>>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))
 
 /obj/machinery/portable_atmospherics/hydroponics/proc/mutate_species()
 
@@ -726,4 +761,8 @@
 	to_chat(user, span_filter_notice("You [closed_system ? "close" : "open"] the tray's lid."))
 	update_icon()
 
+<<<<<<< HEAD
 #undef AGE_MOD_MAX //CHOMPedit
+=======
+#undef AGE_MOD_MAX
+>>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))

@@ -44,7 +44,11 @@
 	special_attack_max_range = 5
 	special_attack_cooldown = 100
 
+<<<<<<< HEAD
 	can_be_drop_prey = FALSE //CHOMP Add
+=======
+	can_be_drop_prey = FALSE
+>>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))
 	allow_mind_transfer = TRUE
 
 // Pepe is love, not hate.

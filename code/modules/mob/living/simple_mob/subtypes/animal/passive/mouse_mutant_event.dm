@@ -17,14 +17,26 @@
 	else
 		bigger = new /mob/living/simple_mob/vore/aggressive/chungus(get_turf(src))
 
+<<<<<<< HEAD
 	if(istype(loc,/obj/belly)){
 		var/obj/belly/B = loc
 		B.owner.visible_message(span_warning("<b>Something grows inside [B.owner]'s [lowertext(B.name)]!</b>"))
+=======
+	if(istype(loc,/obj/belly))
+		var/obj/belly/B = loc
+		B.owner.visible_message(span_boldwarning("Something grows inside [B.owner]'s [lowertext(B.name)]!"))
+>>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))
 		to_chat(B.owner, span_warning("\The [src] suddenly evolves inside your [lowertext(B.name)]!"))
 		B.release_specific_contents(src, TRUE)
 		B.nom_mob(bigger, null)
 		qdel(src)
+<<<<<<< HEAD
 	}else{
 		visible_message(span_warning("\The [src] suddenly evolves!"))
 		qdel(src)
 	}
+=======
+	else
+		visible_message(span_warning("\The [src] suddenly evolves!"))
+		qdel(src)
+>>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))

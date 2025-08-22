@@ -93,13 +93,17 @@
 		if(pounce_chance)
 			PounceTarget(user, pounce_chance)
 
+<<<<<<< HEAD
 // CHOMPEdit start: More voremob bellies!
+=======
+>>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))
 /mob/living/simple_mob/vore/rabbit/load_default_bellies()
 	. = ..()
 
 	var/obj/belly/B = vore_selected
 	B.name = "stomach"
 	B.desc = "With a sudden pounce, the rabbit begins swallowing you down with ease! A pink maw and surprisingly unintimidating teeth give way to the thing's pink, tight throat, until you're crammed down inside it's gut! Unless you happen to be drastically smaller than it, the inside of this thing's gut is incredibly cramped, as the fleshy pink walls undulate over your form. It's clearly still able to move with you inside somehow, despite the tiny size of the thing, as gastric sounds flood your ears. You've been bested by a RABBIT of all things!"
+<<<<<<< HEAD
 	B.vore_sound = "Tauric Swallow"				// CHOMPedit - Fancy Vore Sounds
 	B.release_sound = "Pred Escape"				// CHOMPedit - Fancy Vore Sounds
 	B.fancy_vore = 1							// CHOMPedit - Fancy Vore Sounds
@@ -119,6 +123,13 @@
 	*/
 
 // CHOMPEdit end: More voremob bellies!
+=======
+	B.vore_sound = "Tauric Swallow"
+	B.release_sound = "Pred Escape"
+	B.fancy_vore = TRUE
+	B.belly_fullscreen_color = "#b15aac"
+	B.belly_fullscreen = "anim_belly"
+>>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))
 
 /datum/say_list/rabbit
 	speak = list("chrrrs.")

@@ -59,7 +59,11 @@
 	var/maw_cooldown = 30 SECONDS
 	var/open_maw = FALSE	// Are we trying to eat things?
 
+<<<<<<< HEAD
 	can_be_drop_prey = FALSE //CHOMP Add
+=======
+	can_be_drop_prey = FALSE
+>>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))
 
 /mob/living/simple_mob/animal/space/space_worm/head
 	name = "space worm"

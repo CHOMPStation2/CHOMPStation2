@@ -15,8 +15,12 @@ List of things solar grubs should be able to do:
 	Therefore, if you see the grubs, kill them while they're small, or things might escalate." // TODO: PORT SOLAR MOTHS - Rykka
 	value = CATALOGUER_REWARD_EASY
 
+<<<<<<< HEAD
 var/global/moth_amount = 0 // CHOMPEnable, Rykka waz here. *pawstamp*
 // Ace was here too. Vorestation doesn't have solar moths yet! Uncomment this if someone else adds them. I don't know if Vorestation will like them.
+=======
+GLOBAL_VAR_INIT(moth_amount, 0)
+>>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))
 
 /mob/living/simple_mob/vore/solargrub
 	name = "juvenile solargrub"
@@ -28,10 +32,17 @@ var/global/moth_amount = 0 // CHOMPEnable, Rykka waz here. *pawstamp*
 	icon_dead = "solargrub-dead"
 
 	var/charge = null // The amount of power we sucked off, in K as in THOUSANDS.
+<<<<<<< HEAD
 	// CHOMPEdit Start
 	var/can_evolve = 1 // To decide whether this subspecies is allowed to become a queen, which Ace has set as 0 because there's no evolution form yet.
 	var/adult_forms = "/mob/living/simple_mob/vore/solarmoth" // This decides what mob the queen form is. ex adult_forms = /mob/living/simple_mob/subtypes/vore/solarmoth
 	// CHOMPEdit End
+=======
+
+	var/can_evolve = 1 // To decide whether this subspecies is allowed to become a queen, which Ace has set as 0 because there's no evolution form yet.
+	var/adult_forms = "/mob/living/simple_mob/vore/solarmoth" // This decides what mob the queen form is. ex adult_forms = /mob/living/simple_mob/subtypes/vore/solarmoth
+
+>>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))
 	// Don't leave that as null if you add solar moths.
 
 	faction = FACTION_GRUBS
@@ -62,7 +73,11 @@ var/global/moth_amount = 0 // CHOMPEnable, Rykka waz here. *pawstamp*
 	var/powerdraw = 100000
 	var/tracked = FALSE
 
+<<<<<<< HEAD
 	can_be_drop_prey = FALSE //CHOMP Add
+=======
+	can_be_drop_prey = FALSE
+>>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))
 	allow_mind_transfer = TRUE
 	glow_override = TRUE
 
@@ -104,16 +119,25 @@ var/global/moth_amount = 0 // CHOMPEnable, Rykka waz here. *pawstamp*
 		else if(!attached && anchored)
 			anchored = FALSE
 			PN = null
+<<<<<<< HEAD
 		//CHOMPEnable Start
 		if(prob(1) && charge >= 32000 && can_evolve == 1 && moth_amount < 1) //it's reading from the moth_amount global list to determine if it can evolve. There should only ever be a maxcap of 1 existing solar moth alive at any time. TODO: make the code decrease the list after 1 has spawned this shift.
+=======
+		if(prob(1) && charge >= 32000 && can_evolve == 1 && GLOB.moth_amount < 1) //it's reading from the moth_amount global list to determine if it can evolve. There should only ever be a maxcap of 1 existing solar moth alive at any time. TODO: make the code decrease the list after 1 has spawned this shift.
+>>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))
 			anchored = 0
 			PN = null
 			release_vore_contents()
 			if(prey_excludes)
 				prey_excludes.Cut()
+<<<<<<< HEAD
 			moth_amount = moth_amount + 1
 			death_star()
 		// CHOMPEnable End
+=======
+			GLOB.moth_amount = GLOB.moth_amount + 1
+			death_star()
+>>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))
 
 /mob/living/simple_mob/vore/solargrub/proc/death_star()
 	visible_message(span_warning("\The [src]'s shell rips open and evolves!"))
@@ -204,7 +228,11 @@ var/global/moth_amount = 0 // CHOMPEnable, Rykka waz here. *pawstamp*
 		"The solargrub chitters in irritation at your continued solidity, followed by a string of crushingly tight stomach clenches that grind its caustic stomach ooze into your body!",
 		"The deceptively severe heat trapped within the solargrub works in tandem with its inner muscles and your tingling, prickling stomach juice bath to weaken you!")
 
+<<<<<<< HEAD
 /datum/ai_holder/simple_mob/retaliate/solargrub/react_to_attack(atom/movable/attacker)
+=======
+/datum/ai_holder/simple_mob/retaliate/solargrub/react_to_attack(atom/movable/attacker, ignore_timers)
+>>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))
 	holder.anchored = FALSE
 	holder.set_AI_busy(FALSE)
 	..()

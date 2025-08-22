@@ -15,9 +15,14 @@
 /mob/living/simple_mob/animal/giant_spider/frost/broodling/death()
 	new /obj/effect/decal/cleanable/spiderling_remains(src.loc)
 
+<<<<<<< HEAD
 	spawn(1)
 		if(!QDELETED(src))
 			qdel(src)
+=======
+	if(!QDELETED(src))
+		qdel(src)
+>>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))
 
 /mob/living/simple_mob/animal/giant_spider/electric/broodling
 	maxHealth = 30
@@ -36,9 +41,14 @@
 /mob/living/simple_mob/animal/giant_spider/electric/broodling/death()
 	new /obj/effect/decal/cleanable/spiderling_remains(src.loc)
 
+<<<<<<< HEAD
 	spawn(1)
 		if(!QDELETED(src))
 			qdel(src)
+=======
+	if(!QDELETED(src))
+		qdel(src)
+>>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))
 
 /mob/living/simple_mob/animal/giant_spider/hunter/broodling
 	maxHealth = 40
@@ -54,9 +64,14 @@
 /mob/living/simple_mob/animal/giant_spider/hunter/broodling/death()
 	new /obj/effect/decal/cleanable/spiderling_remains(src.loc)
 
+<<<<<<< HEAD
 	spawn(1)
 		if(!QDELETED(src))
 			qdel(src)
+=======
+	if(!QDELETED(src))
+		qdel(src)
+>>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))
 
 /mob/living/simple_mob/animal/giant_spider/lurker/broodling
 	maxHealth = 40
@@ -72,9 +87,14 @@
 /mob/living/simple_mob/animal/giant_spider/lurker/broodling/death()
 	new /obj/effect/decal/cleanable/spiderling_remains(src.loc)
 
+<<<<<<< HEAD
 	spawn(1)
 		if(!QDELETED(src))
 			qdel(src)
+=======
+	if(!QDELETED(src))
+		qdel(src)
+>>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))
 
 /mob/living/simple_mob/animal/giant_spider/nurse/broodling
 	maxHealth = 60
@@ -91,9 +111,14 @@
 /mob/living/simple_mob/animal/giant_spider/nurse/broodling/death()
 	new /obj/effect/decal/cleanable/spiderling_remains(src.loc)
 
+<<<<<<< HEAD
 	spawn(1)
 		if(!QDELETED(src))
 			qdel(src)
+=======
+	if(!QDELETED(src))
+		qdel(src)
+>>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))
 
 /mob/living/simple_mob/animal/giant_spider/pepper/broodling
 	maxHealth = 40
@@ -109,9 +134,14 @@
 /mob/living/simple_mob/animal/giant_spider/pepper/broodling/death()
 	new /obj/effect/decal/cleanable/spiderling_remains(src.loc)
 
+<<<<<<< HEAD
 	spawn(1)
 		if(!QDELETED(src))
 			qdel(src)
+=======
+	if(!QDELETED(src))
+		qdel(src)
+>>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))
 
 /mob/living/simple_mob/animal/giant_spider/thermic/broodling
 	maxHealth = 40
@@ -130,9 +160,14 @@
 /mob/living/simple_mob/animal/giant_spider/thermic/broodling/death()
 	new /obj/effect/decal/cleanable/spiderling_remains(src.loc)
 
+<<<<<<< HEAD
 	spawn(1)
 		if(!QDELETED(src))
 			qdel(src)
+=======
+	if(!QDELETED(src))
+		qdel(src)
+>>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))
 
 /mob/living/simple_mob/animal/giant_spider/tunneler/broodling
 	maxHealth = 40
@@ -148,9 +183,14 @@
 /mob/living/simple_mob/animal/giant_spider/tunneler/broodling/death()
 	new /obj/effect/decal/cleanable/spiderling_remains(src.loc)
 
+<<<<<<< HEAD
 	spawn(1)
 		if(!QDELETED(src))
 			qdel(src)
+=======
+	if(!QDELETED(src))
+		qdel(src)
+>>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))
 
 /mob/living/simple_mob/animal/giant_spider/webslinger/broodling
 	maxHealth = 30
@@ -168,9 +208,14 @@
 /mob/living/simple_mob/animal/giant_spider/webslinger/broodling/death()
 	new /obj/effect/decal/cleanable/spiderling_remains(src.loc)
 
+<<<<<<< HEAD
 	spawn(1)
 		if(!QDELETED(src))
 			qdel(src)
+=======
+	if(!QDELETED(src))
+		qdel(src)
+>>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))
 
 /mob/living/simple_mob/animal/giant_spider/broodling
 	maxHealth = 60
@@ -197,6 +242,11 @@
 /mob/living/simple_mob/animal/giant_spider/broodling/death()
 	new /obj/effect/decal/cleanable/spiderling_remains(src.loc)
 
+<<<<<<< HEAD
 	spawn(1)
 		if(!QDELETED(src))
 			qdel(src)
+=======
+	if(!QDELETED(src))
+		qdel(src)
+>>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))

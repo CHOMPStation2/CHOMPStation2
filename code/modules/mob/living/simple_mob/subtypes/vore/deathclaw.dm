@@ -24,10 +24,17 @@
 	tt_desc = "Trioceros dominus"
 	catalogue_data = list(/datum/category_item/catalogue/fauna/deathclaw)
 
+<<<<<<< HEAD
 	icon_dead = "deathclaw-dead"
 	icon_living = "deathclaw"
 	icon_state = "deathclaw"
 	icon = 'modular_chomp/icons/mob/vore64x64_ch.dmi' //CHOMPEdit changed filepath
+=======
+	icon_dead = "deathclaw_new-dead"
+	icon_living = "deathclaw_new"
+	icon_state = "deathclaw_new"
+	icon = 'icons/mob/vore64x64.dmi'
+>>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))
 	vis_height = 64
 
 	attacktext = list("mauled")
@@ -70,7 +77,11 @@
 	vore_pounce_chance = 0 // Beat them into crit before eating.
 	vore_icons = SA_ICON_LIVING
 
+<<<<<<< HEAD
 	can_be_drop_prey = FALSE //CHOMP Add
+=======
+	can_be_drop_prey = FALSE
+>>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))
 
 /mob/living/simple_mob/vore/aggressive/deathclaw/Login()
 	. = ..()
@@ -109,7 +120,10 @@
 	can_breakthrough = TRUE
 	violent_breakthrough = TRUE
 
+<<<<<<< HEAD
 //YW Addition
+=======
+>>>>>>> 6f1d6c524d (Simple mob port [IDB IGNORE] (#18236))
 /mob/living/simple_mob/vore/aggressive/deathclaw/den
 
 	maxHealth = 400
