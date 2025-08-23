@@ -59,7 +59,6 @@
 /mob/living/simple_mob/animal/passive/mouse/white/apple/Initialize(mapload, keep_parent_data)
 	. = ..(mapload, TRUE)
 
-
 /obj/item/holder/mouse/attack_self(mob/living/carbon/user)
 	user.setClickCooldown(user.get_attack_speed())
 	for(var/L in contents)

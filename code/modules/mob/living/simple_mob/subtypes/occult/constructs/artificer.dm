@@ -9,8 +9,10 @@
 	desc = "A bulbous construct dedicated to building and maintaining temples to their otherworldly lords."
 	icon_state = "artificer"
 	icon_living = "artificer"
-	maxHealth = 100	//CHOMPEdit - Adjusting values since they have AI now
-	health = 100	//CHOMPEdit
+	// CHOMPEdit Start
+	maxHealth = 100
+	health = 100
+	// CHOMPEdit End
 	response_harm = "viciously beaten"
 	harm_intent_damage = 5
 	melee_damage_lower = 15 //It's not the strongest of the bunch, but that doesn't mean it can't hurt you.

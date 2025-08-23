@@ -35,16 +35,16 @@
 	can_buckle = TRUE
 	buckle_movable = TRUE
 	buckle_lying = FALSE
-	vore_icons = SA_ICON_LIVING
 	vore_bump_chance = 50
 	vore_pounce_chance = 100
 	vore_active = 1
-	vore_icons = 4
+	vore_icons = SA_ICON_LIVING|SA_ICON_REST
 	vore_capacity = 4
 	swallowTime = 100
 	vore_default_mode = DM_HEAL
 	vore_pounce_maxhealth = 125
 	vore_bump_emote = "tries to snap up"
+	max_tox = 0 // for virgo3b survivability
 
 	nom_mob = TRUE
 
@@ -152,6 +152,7 @@
 	icon_dead = "leopardmander_blue-dead"
 	icon_living = "leopardmander_blue"
 	icon_state = "leopardmander_blue"
+	icon_rest = "leopardmander_blue-rest"
 
 /mob/living/simple_mob/vore/leopardmander/exotic
 	name = "glass-belly leopardmander"
@@ -160,6 +161,7 @@
 	icon_dead = "leopardmander_exotic-dead"
 	icon_living = "leopardmander_exotic"
 	icon_state = "leopardmander_exotic"
+	icon_rest = "leopardmander_exotic-rest"
 
 	glow_toggle = TRUE //Glow!
 	glow_range = 2

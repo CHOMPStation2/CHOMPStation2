@@ -59,7 +59,6 @@
 
 	say_list_type = /datum/say_list/shantak
 
-
 /datum/say_list/shantak
 	speak = list("Shuhn.","Shrunnph?","Shunpf.")
 	emote_see = list("scratches the ground", "shakes out its mane", "clinks gently as it moves")

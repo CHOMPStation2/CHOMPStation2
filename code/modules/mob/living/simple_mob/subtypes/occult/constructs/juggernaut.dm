@@ -10,8 +10,10 @@
 	icon = 'icons/mob/mob.dmi'
 	icon_state = "behemoth"
 	icon_living = "behemoth"
-	maxHealth = 200	//CHOMPEdit
-	health = 200	//CHOMPEdit
+	// CHOMPEdit Start
+	maxHealth = 200
+	health = 200
+	// CHOMPEdit End
 	response_harm   = "harmlessly punches"
 	harm_intent_damage = 0
 	melee_damage_lower = 30
@@ -51,7 +53,7 @@
 	..()
 
 /mob/living/simple_mob/construct/juggernaut/bullet_act(var/obj/item/projectile/P)
-	var/reflectchance = 100 - round(P.damage*2) //chompEDIT: We have lower damage values now
+	var/reflectchance = 100 - round(P.damage*2) // CHOMPEdit: We have lower damage values now
 	if(prob(reflectchance))
 		var/damage_mod = rand(2,4)
 		var/projectile_dam_type = P.damage_type
@@ -99,8 +101,10 @@
 	name = "Behemoth"
 	real_name = "Behemoth"
 	desc = "The pinnacle of occult technology, Behemoths are nothing shy of both an Immovable Object, and Unstoppable Force."
-	maxHealth = 600	//CHOMPEdit
-	health = 600	//CHOMPEdit
+	// CHOMPEdit Start
+	maxHealth = 600
+	health = 600
+	// CHOMPEdit End
 	speak_emote = list("rumbles")
 	melee_damage_lower = 50
 	melee_damage_upper = 50
@@ -126,7 +130,7 @@
 							)
 
 /mob/living/simple_mob/construct/juggernaut/behemoth/bullet_act(var/obj/item/projectile/P)
-	var/reflectchance = 100 - round(P.damage*2) //chompEDIT: We have lower damage values now
+	var/reflectchance = 100 - round(P.damage*2) //CHOMPEdit: We have lower damage values now
 	if(prob(reflectchance))
 		visible_message(span_danger("The [P.name] gets reflected by [src]'s shell!"), \
 						span_userdanger("The [P.name] gets reflected by [src]'s shell!"))

@@ -156,7 +156,6 @@
 	if(needs_reload)
 		reload_count++
 
-
 //	if(distance >= special_attack_min_range && distance <= special_attack_max_range)
 //		return TRUE
 

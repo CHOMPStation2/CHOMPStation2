@@ -11,8 +11,10 @@ TODO: Make them light up and heat the air when exposed to oxygen.
 */
 
 /datum/category_item/catalogue/fauna/gaslamp		//TODO: VIRGO_LORE_WRITING_WIP
+	//  CHOMPEdit Start
 	name = "Frosted Gaslamp"
 	desc = "A light floating medusola life form, not an endemic specimen to Sif but throughout illegal handling and DNA modification for the production of nitrogen, it is now found as an invasive specimen on sections around planet Sif."
+	// CHOMPEdit End
 	value = CATALOGUER_REWARD_TRIVIAL
 
 /mob/living/simple_mob/animal/passive/gaslamp

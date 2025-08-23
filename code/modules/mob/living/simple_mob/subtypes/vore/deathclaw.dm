@@ -15,7 +15,7 @@
 	female deathclaws will lay eggs in clusters, sired by the strongest male deathclaws in the pack, typically the alpha male.\
 	<br>\
 	These creatures are considered an invasive species, and thus hunters are encouraged to hunt them \
-	although they are cautioned when doing so due to the danger that the creature poses." //CHOMPedit
+	although they are cautioned when doing so due to the danger that the creature poses."
 	value = CATALOGUER_REWARD_HARD
 
 /mob/living/simple_mob/vore/aggressive/deathclaw
@@ -32,7 +32,7 @@
 
 	attacktext = list("mauled")
 
-	faction = FACTION_AWAYMISSION //makes away mobs fuckin' be on the same side.
+	faction = FACTION_AWAYMISSION // CHOMPEdit
 
 	maxHealth = 200
 	health = 200

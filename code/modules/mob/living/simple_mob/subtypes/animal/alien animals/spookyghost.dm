@@ -86,6 +86,7 @@
 	reload_max = 1
 	reload_count = 0
 	reload_time = 7 SECONDS
+
 	can_be_drop_prey = FALSE
 
 

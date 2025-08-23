@@ -148,7 +148,7 @@
 	icon_state = "direwolfs"
 	icon_rest = "direwolfs_rest"
 
-/* //ChompEDIT START - disable unique user-related content
+/* CHOMPRemove Start - disable unique user-related content
 /mob/living/simple_mob/vore/wolf/direwolf/rykka
 	name = "Rykka"
 	desc = "This big canine looks like a GSD. It has a collar tagged, 'Bitch'"
@@ -182,7 +182,8 @@
 	vore_pounce_maxhealth = 100
 	vore_stomach_name = "Gut"
 	vore_stomach_flavor = "A black-and-purple veined gut, pulsing warmly around you. Loud gurgles sound around you as the gut squishes inwards and attempts to crush you - Rykka seems intent on digesting you, like the meat you are."
-*/ //ChompEDIT END
+*/// CHOMPRemove End
+
 /mob/living/simple_mob/vore/wolf/direwolf/andrews
 	name = "andrewsarchus"
 	desc = "That's one massive mean-looking piece of long extinct megafauna."

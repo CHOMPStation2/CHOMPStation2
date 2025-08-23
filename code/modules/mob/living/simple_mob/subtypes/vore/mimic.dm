@@ -12,7 +12,7 @@
 	months at a time - the main reason that they prey on humanoids to begin with. They reproduce asexually \
 	by splitting their mass, the young growing to adulthood within a few years time.\
 	<br>\
-	Mimics have no concerns beyond surviving and acquiring food." //CHOMPedit
+	Mimics have no concerns beyond surviving and acquiring food."
 	value = CATALOGUER_REWARD_HARD
 
 /obj/structure/closet/crate/mimic
@@ -68,6 +68,9 @@
 
 /obj/structure/closet/crate/mimic/guaranteed
 	mimic_chance = 100
+
+/obj/structure/closet/crate/mimic/guaranteed/chest
+	icon = 'icons/obj/closets/chest.dmi'
 
 /obj/structure/closet/crate/mimic/dangerous
 	mimic_chance = 70

@@ -43,6 +43,7 @@
 	var/has_reproduced = FALSE
 	var/used_dominate							// world.time when the dominate power was last used.
 	var/datum/ghost_query/Q						// Used to unregister our signal
+
 	can_be_drop_prey = FALSE
 
 /mob/living/simple_mob/animal/borer/roundstart

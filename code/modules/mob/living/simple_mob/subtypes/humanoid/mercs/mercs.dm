@@ -5,8 +5,8 @@
 // Probably shouldn't use this directly, there are a bunch of sub-classes that are more complete.
 /mob/living/simple_mob/humanoid/merc
 	name = "mercenary"
-	tt_desc = "E Homo sapiens"
 	desc = "A tough looking individual armed with only a knife." //CHOMPEdit
+	tt_desc = "E Homo sapiens"
 	icon_state = "syndicate"
 	icon_living = "syndicate"
 	icon_dead = "syndicate_dead"
@@ -25,7 +25,8 @@
 	harm_intent_damage = 5
 	melee_damage_lower = 15		//Tac Knife damage
 	melee_damage_upper = 15
-	attack_sharp = 1	//CHOMPEdit
+	attack_armor_pen = 20
+	attack_sharp = TRUE
 	attack_edge = 1
 	attacktext = list("slashed", "stabbed")
 	armor = list(melee = 40, bullet = 30, laser = 30, energy = 10, bomb = 10, bio = 100, rad = 100)	// Same armor values as the vest they drop, plus simple mob immunities
@@ -42,7 +43,6 @@
 	var/grenade_timer = 50
 	special_attack_min_range = 2
 	special_attack_max_range = 7
-
 
 ////////////////////////////////
 //		Grenade Attack
@@ -125,7 +125,7 @@
 	melee_damage_lower = 30
 	melee_damage_upper = 30
 	attack_armor_pen = 50
-	attack_sharp = 1	//CHOMPEdit
+	attack_sharp = TRUE
 	attack_edge = 1
 	attacktext = list("slashed")
 
@@ -216,12 +216,14 @@
 
 /mob/living/simple_mob/humanoid/merc/ranged/rifle/mag
 	loot_list = list(/obj/item/gun/magnetic/railgun/flechette = 100)
-	projectiletype = /obj/item/projectile/bullet/magnetic/flechette/rapid // Who thought rapid fire 20 damage with 100% armor pen was a good idea? CH edit
+	projectiletype = /obj/item/projectile/bullet/magnetic/flechette/rapid // CHOMPEdit Who thought rapid fire 20 damage with 100% armor pen was a good idea?
 
 	projectilesound = 'sound/weapons/rapidslice.ogg'
+	// CHOMPAdd Start
 	projectile_dispersion = 5
 	projectile_accuracy = -20
 	base_attack_cooldown = 15
+	// CHOMPAdd End
 	reload_max = 10
 
 // Laser Rifle
@@ -309,7 +311,7 @@
 
 	ai_holder_type = /datum/ai_holder/simple_mob/merc/ranged/sniper
 
-	ranged_attack_delay = 2.5 SECONDS // CHOMPStation Removal: Ranged attack delay is stupid.//CHOMPStation ReRemoval: Instant kill hitscan is stupid.
+	ranged_attack_delay = 2.5 SECONDS
 
 	loot_list = list(/obj/item/sniper_rifle_part/barrel = 50,
 		/obj/item/sniper_rifle_part/stock = 50,
