@@ -19900,7 +19900,6 @@
 	anchored = 1;
 	canhear_range = 1;
 	frequency = 1487;
-	icon = 'icons/obj/items.dmi';
 	icon_state = "red_phone";
 	name = "Reception Emergency Phone";
 	pixel_x = -5
@@ -21056,7 +21055,6 @@
 	anchored = 1;
 	canhear_range = 1;
 	frequency = 1487;
-	icon = 'icons/obj/items.dmi';
 	icon_state = "red_phone";
 	name = "Reception Emergency Phone"
 	},
@@ -28465,13 +28463,10 @@
 /area/medical/ward)
 "bNQ" = (
 /obj/structure/table/glass,
-/obj/item/radio{
+/obj/item/radio/redphone{
+	name = "Surgery Emergency Phone";
 	anchored = 1;
-	canhear_range = 7;
-	frequency = 1487;
-	icon = 'icons/obj/items.dmi';
-	icon_state = "red_phone";
-	name = "Surgery Emergency Phone"
+	canhear_range = 7
 	},
 /obj/random/medical,
 /obj/random/medical,
@@ -57489,11 +57484,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/rnd/mixing)
 "lhH" = (
-/turf/simulated/shuttle/wall/no_join{
-	base_state = "orange";
-	icon = 'icons/turf/shuttle_orange.dmi';
-	icon_state = "orange"
-	},
+/turf/simulated/shuttle/wall/no_join/orange,
 /area/shuttle/cryo/station)
 "lhV" = (
 /obj/effect/floor_decal/industrial/outline/yellow,

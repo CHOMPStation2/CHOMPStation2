@@ -1198,9 +1198,7 @@
 /turf/simulated/floor/bmarble,
 /area/awaymission/diescraper/indoors/floor1)
 "dG" = (
-/obj/effect/simple_portal/coords{
-	icon = 'icons/obj/machines/gateway.dmi';
-	icon_state = "on";
+/obj/effect/simple_portal/coords/gateway_on{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/milspec/raised,
@@ -1907,17 +1905,11 @@
 /turf/simulated/floor/plating,
 /area/awaymission/diescraper/indoors/floor6)
 "fP" = (
-/obj/effect/simple_portal/linked{
-	portal_id = 6666;
-	icon = 'icons/obj/machines/gateway.dmi';
-	icon_state = "oncenter"
+/obj/effect/simple_portal/linked/gateway{
+	portal_id = 6666
 	},
 /obj/effect/map_effect/perma_light/gateway,
-/obj/effect/simple_portal/coords{
-	icon = 'icons/obj/machines/gateway.dmi';
-	icon_state = "oncenter";
-	density = 0
-	},
+/obj/effect/simple_portal/coords/old_sprite,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/awaymission/diescraper/indoors/floor4second)
 "fQ" = (
@@ -4327,9 +4319,7 @@
 /turf/simulated/floor/plating,
 /area/awaymission/diescraper/indoors/floor2)
 "nh" = (
-/obj/effect/simple_portal/coords{
-	icon = 'icons/obj/machines/gateway.dmi';
-	icon_state = "on";
+/obj/effect/simple_portal/coords/gateway_on{
 	dir = 1
 	},
 /turf/simulated/floor/tiled/milspec/raised,
@@ -5124,9 +5114,7 @@
 /turf/simulated/floor/tiled,
 /area/awaymission/diescraper/indoors/floor4second)
 "pu" = (
-/obj/effect/simple_portal/coords{
-	icon = 'icons/obj/machines/gateway.dmi';
-	icon_state = "on";
+/obj/effect/simple_portal/coords/gateway_on{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/milspec/raised,
@@ -5799,7 +5787,6 @@
 /obj/structure/table/rack/shelf/steel,
 /obj/item/gun/projectile/revolver/toy/big_iron,
 /obj/item/toy/plushie/green_fox{
-	icon = 'icons/obj/surgery_vr.dmi';
 	name = "The most beautiful plushie ever";
 	desc = "A small toy plushie. You feel like you forgot to install something."
 	},
@@ -11478,9 +11465,7 @@
 /turf/unsimulated/floor/tiled/milspec,
 /area/awaymission/diescraper/indoors/floor6)
 "Hn" = (
-/obj/effect/simple_portal/coords{
-	icon = 'icons/obj/machines/gateway.dmi';
-	icon_state = "on";
+/obj/effect/simple_portal/coords/gateway_on{
 	dir = 4
 	},
 /obj/effect/floor_decal/techfloor/orange{
@@ -11709,17 +11694,11 @@
 /turf/simulated/floor/wood,
 /area/awaymission/diescraper/indoors/floor2)
 "HW" = (
-/obj/effect/simple_portal/linked{
-	portal_id = 6666;
-	icon = 'icons/obj/machines/gateway.dmi';
-	icon_state = "oncenter"
+/obj/effect/simple_portal/linked/gateway{
+	portal_id = 6666
 	},
 /obj/effect/map_effect/perma_light/gateway,
-/obj/effect/simple_portal/coords{
-	icon = 'icons/obj/machines/gateway.dmi';
-	icon_state = "oncenter";
-	density = 0
-	},
+/obj/effect/simple_portal/coords/old_sprite,
 /turf/simulated/floor/tiled/milspec/raised,
 /area/awaymission/diescraper/indoors/floor2)
 "HX" = (
@@ -13904,9 +13883,7 @@
 /turf/unsimulated/floor/tiled/techfloor,
 /area/awaymission/diescraper/indoors/floor6)
 "On" = (
-/obj/effect/simple_portal/coords{
-	icon = 'icons/obj/machines/gateway.dmi';
-	icon_state = "on";
+/obj/effect/simple_portal/coords/gateway_on{
 	dir = 1
 	},
 /obj/effect/floor_decal/techfloor/orange{
@@ -14368,9 +14345,7 @@
 	},
 /area/awaymission/diescraper/indoors/floor5)
 "PI" = (
-/obj/effect/simple_portal/coords{
-	icon = 'icons/obj/machines/gateway.dmi';
-	icon_state = "on";
+/obj/effect/simple_portal/coords/gateway_on{
 	dir = 8
 	},
 /obj/effect/floor_decal/techfloor/orange{
@@ -15073,13 +15048,7 @@
 /turf/simulated/shuttle/wall/voidcraft/hard_corner,
 /area/awaymission/diescraper/outside)
 "Sf" = (
-/mob/living/simple_mob/vore/alienanimals/startreader{
-	icon_living = "cutout_basic";
-	icon_dead = "cutout_basic";
-	icon_state = "cutout_basic";
-	icon = 'icons/obj/cardboard_cutout.dmi';
-	name = "stand-up figure?"
-	},
+/mob/living/simple_mob/vore/alienanimals/startreader/cutout,
 /turf/simulated/floor/plating,
 /area/awaymission/diescraper/indoors/floor4second)
 "Sg" = (

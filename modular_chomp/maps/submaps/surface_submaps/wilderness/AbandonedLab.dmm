@@ -196,12 +196,8 @@
 /turf/simulated/shuttle/floor/voidcraft,
 /area/submap/AbandonedLab)
 "iv" = (
-/obj/effect/decal/cleanable/blood/tracks{
-	color = "red";
-	desc = "Your instincts say you shouldn't be following these.";
-	dir = 1;
-	icon = 'icons/effects/blood.dmi';
-	icon_state = "tracks"
+/obj/effect/decal/cleanable/blood/tracks/suspicious{
+	dir = 1
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/floor_decal/industrial/warning,
@@ -213,12 +209,8 @@
 /turf/simulated/floor/reinforced,
 /area/submap/AbandonedLab)
 "iL" = (
-/obj/effect/decal/cleanable/blood/tracks{
-	color = "red";
-	desc = "Your instincts say you shouldn't be following these.";
-	dir = 5;
-	icon = 'icons/effects/blood.dmi';
-	icon_state = "tracks"
+/obj/effect/decal/cleanable/blood/tracks/suspicious{
+	dir = 5
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/floor_decal/borderfloorblack{

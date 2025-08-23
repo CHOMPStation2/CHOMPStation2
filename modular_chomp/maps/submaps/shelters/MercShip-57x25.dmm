@@ -1,11 +1,6 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "aj" = (
-/obj/machinery/smartfridge/survival_pod{
-	icon = 'icons/obj/vending.dmi';
-	icon_base = "fridge_sci";
-	icon_contents = "chem";
-	icon_state = "fridge_sci";
-	name = "Advanced storage";
+/obj/machinery/smartfridge/survival_pod/scifridge{
 	pixel_y = 0
 	},
 /obj/random/maintenance/clean,
@@ -87,12 +82,7 @@
 /turf/simulated/shuttle/floor/voidcraft,
 /area/survivalpod/superpose/MercShip)
 "aM" = (
-/obj/machinery/smartfridge/survival_pod{
-	icon = 'icons/obj/vending.dmi';
-	icon_base = "fridge_sci";
-	icon_contents = "chem";
-	icon_state = "fridge_sci";
-	name = "Advanced storage";
+/obj/machinery/smartfridge/survival_pod/scifridge{
 	pixel_y = 0
 	},
 /obj/random/maintenance/clean,
@@ -204,12 +194,7 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/survivalpod/superpose/MercShip)
 "cH" = (
-/obj/machinery/smartfridge/survival_pod{
-	icon = 'icons/obj/vending.dmi';
-	icon_base = "fridge_sci";
-	icon_contents = "chem";
-	icon_state = "fridge_sci";
-	name = "Advanced storage";
+/obj/machinery/smartfridge/survival_pod/scifridge{
 	pixel_y = 0
 	},
 /obj/random/maintenance/clean,
@@ -1077,12 +1062,7 @@
 /obj/item/clothing/accessory/storage/black_drop_pouches,
 /obj/item/storage/belt,
 /obj/item/clothing/accessory/poncho/thermal,
-/obj/machinery/smartfridge/survival_pod{
-	icon = 'icons/obj/vending.dmi';
-	icon_base = "fridge_sci";
-	icon_contents = "chem";
-	icon_state = "fridge_sci";
-	name = "Advanced storage";
+/obj/machinery/smartfridge/survival_pod/scifridge{
 	pixel_y = 0
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -2015,12 +1995,7 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/survivalpod/superpose/MercShip)
 "Hc" = (
-/obj/machinery/smartfridge/survival_pod{
-	icon = 'icons/obj/vending.dmi';
-	icon_base = "fridge_sci";
-	icon_contents = "chem";
-	icon_state = "fridge_sci";
-	name = "Advanced storage";
+/obj/machinery/smartfridge/survival_pod/scifridge{
 	pixel_y = 0
 	},
 /obj/random/maintenance/clean,
@@ -2151,12 +2126,7 @@
 /turf/simulated/floor/carpet/blue,
 /area/survivalpod/superpose/MercShip)
 "Ke" = (
-/obj/machinery/smartfridge/survival_pod{
-	icon = 'icons/obj/vending.dmi';
-	icon_base = "fridge_sci";
-	icon_contents = "chem";
-	icon_state = "fridge_sci";
-	name = "Advanced storage";
+/obj/machinery/smartfridge/survival_pod/scifridge{
 	pixel_y = 0
 	},
 /obj/random/maintenance/clean,

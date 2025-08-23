@@ -247,12 +247,7 @@
 /turf/template_noop,
 /area/template_noop)
 "iD" = (
-/obj/machinery/smartfridge/survival_pod{
-	icon = 'icons/obj/vending.dmi';
-	icon_base = "fridge_sci";
-	icon_contents = "chem";
-	icon_state = "fridge_sci";
-	name = "Advanced storage";
+/obj/machinery/smartfridge/survival_pod/scifridge{
 	pixel_y = 0
 	},
 /obj/item/stock_parts/micro_laser/ultra,
@@ -1123,12 +1118,8 @@
 /obj/structure/sign/electricshock{
 	pixel_y = 32
 	},
-/obj/machinery/cryopod/robot{
-	base_icon_state = "borg_pod_closed";
-	dir = 4;
-	icon = 'icons/obj/structures.dmi';
-	icon_state = "borg_pod_closed";
-	occupied_icon_state = "borg_pod_opened"
+/obj/machinery/cryopod/robot/borg_pod{
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/MechFabShip)
@@ -1358,12 +1349,7 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/survivalpod/superpose/MechFabShip)
 "Py" = (
-/obj/machinery/smartfridge/survival_pod{
-	icon = 'icons/obj/vending.dmi';
-	icon_base = "fridge_sci";
-	icon_contents = "chem";
-	icon_state = "fridge_sci";
-	name = "Advanced storage";
+/obj/machinery/smartfridge/survival_pod/scifridge{
 	pixel_y = 0
 	},
 /obj/item/stack/material/durasteel{

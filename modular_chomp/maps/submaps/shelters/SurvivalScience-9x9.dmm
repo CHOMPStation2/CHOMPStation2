@@ -266,12 +266,7 @@
 /obj/structure/window/reinforced/survival_pod{
 	opacity = 1
 	},
-/obj/machinery/smartfridge/survival_pod{
-	icon = 'icons/obj/vending.dmi';
-	icon_base = "smartfridge";
-	icon_contents = "boxes";
-	icon_state = "smartfridge";
-	name = "Advanced storage";
+/obj/machinery/smartfridge/survival_pod/boxes{
 	pixel_y = -1
 	},
 /obj/item/stock_parts/micro_laser,
@@ -366,12 +361,7 @@
 /turf/simulated/shuttle/wall/voidcraft/lightblue,
 /area/survivalpod/superpose/SurvivalScience)
 "HB" = (
-/obj/machinery/smartfridge/survival_pod{
-	icon = 'icons/obj/vending.dmi';
-	icon_base = "smartfridge";
-	icon_contents = "boxes";
-	icon_state = "smartfridge";
-	name = "Advanced storage";
+/obj/machinery/smartfridge/survival_pod/boxes{
 	pixel_y = -1
 	},
 /obj/item/storage/toolbox/mechanical{

@@ -5937,11 +5937,7 @@
 /turf/simulated/floor/plating,
 /area/surface/outpost/security/maa)
 "lA" = (
-/turf/simulated/wall/dungeon{
-	icon = 'icons/obj/doors/shuttledoors.dmi';
-	icon_state = "door_locked";
-	name = "Wall Gate"
-	},
+/turf/simulated/wall/dungeon/gate,
 /area/surface/outpost/wall)
 "lB" = (
 /obj/structure/cable/blue{

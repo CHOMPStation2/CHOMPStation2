@@ -354,12 +354,7 @@
 	dir = 4;
 	pixel_y = -8
 	},
-/obj/effect/decal/cleanable/blood/tracks{
-	color = "red";
-	desc = "Your instincts say you shouldn't be following these.";
-	icon = 'icons/effects/blood.dmi';
-	icon_state = "tracks"
-	},
+/obj/effect/decal/cleanable/blood/tracks/suspicious,
 /turf/simulated/floor/tiled/freezer,
 /area/submap/deepstorage)
 "aM" = (
@@ -438,12 +433,7 @@
 /obj/machinery/shower{
 	dir = 8
 	},
-/obj/effect/decal/cleanable/blood/tracks{
-	color = "red";
-	desc = "Your instincts say you shouldn't be following these.";
-	icon = 'icons/effects/blood.dmi';
-	icon_state = "tracks"
-	},
+/obj/effect/decal/cleanable/blood/tracks/suspicious,
 /turf/simulated/floor/tiled/freezer,
 /area/submap/deepstorage)
 "aV" = (
@@ -974,12 +964,8 @@
 /area/submap/deepstorage)
 "sF" = (
 /obj/effect/floor_decal/rust,
-/obj/effect/decal/cleanable/blood/tracks{
-	color = "red";
-	desc = "Your instincts say you shouldn't be following these.";
-	dir = 4;
-	icon = 'icons/effects/blood.dmi';
-	icon_state = "tracks"
+/obj/effect/decal/cleanable/blood/tracks/suspicious{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/asteroid_steel{
 	temperature = 295.15
@@ -1102,11 +1088,7 @@
 /area/submap/deepstorage)
 "CA" = (
 /obj/effect/floor_decal/rust,
-/obj/effect/decal/cleanable/blood/tracks{
-	color = "red";
-	desc = "Your instincts say you shouldn't be following these.";
-	icon = 'icons/effects/blood.dmi';
-	icon_state = "tracks";
+/obj/effect/decal/cleanable/blood/tracks/suspicious{
 	dir = 10
 	},
 /turf/simulated/floor/tiled/asteroid_steel{
@@ -1183,12 +1165,8 @@
 /area/submap/deepstorage)
 "Lm" = (
 /obj/effect/floor_decal/rust,
-/obj/effect/decal/cleanable/blood/tracks{
-	color = "red";
-	desc = "Your instincts say you shouldn't be following these.";
-	dir = 5;
-	icon = 'icons/effects/blood.dmi';
-	icon_state = "tracks"
+/obj/effect/decal/cleanable/blood/tracks/suspicious{
+	dir = 5
 	},
 /turf/simulated/floor/tiled/asteroid_steel{
 	temperature = 295.15
@@ -1315,12 +1293,8 @@
 /turf/simulated/floor/tiled,
 /area/submap/deepstorage)
 "Zi" = (
-/obj/effect/decal/cleanable/blood/tracks{
-	color = "red";
-	desc = "Your instincts say you shouldn't be following these.";
-	dir = 4;
-	icon = 'icons/effects/blood.dmi';
-	icon_state = "tracks"
+/obj/effect/decal/cleanable/blood/tracks/suspicious{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/asteroid_steel{
 	temperature = 295.15

@@ -2095,11 +2095,7 @@
 /area/maintenance/Deck2_Engineering_ForStarChamber2)
 "adw" = (
 /obj/structure/sign/warning/evac,
-/turf/simulated/shuttle/wall/no_join{
-	base_state = "orange";
-	icon = 'icons/turf/shuttle_orange.dmi';
-	icon_state = "orange"
-	},
+/turf/simulated/shuttle/wall/no_join/orange,
 /area/shuttle/escape_pod9/station)
 "adx" = (
 /obj/effect/catwalk_plated/techmaint,
@@ -11016,11 +11012,7 @@
 /area/shuttle/escape_pod9/station)
 "atW" = (
 /obj/structure/sign/nanotrasen,
-/turf/simulated/shuttle/wall/no_join{
-	base_state = "orange";
-	icon = 'icons/turf/shuttle_orange.dmi';
-	icon_state = "orange"
-	},
+/turf/simulated/shuttle/wall/no_join/orange,
 /area/shuttle/large_escape_pod4/station)
 "atX" = (
 /obj/machinery/door/firedoor/border_only,
@@ -13894,7 +13886,6 @@
 	anchored = 1;
 	canhear_range = 1;
 	frequency = 1487;
-	icon = 'icons/obj/items.dmi';
 	icon_state = "red_phone";
 	name = "Reception Emergency Phone";
 	pixel_y = 2
@@ -16720,9 +16711,7 @@
 "aNL" = (
 /obj/structure/lattice,
 /obj/effect/catwalk_plated/white,
-/obj/machinery/mech_recharger{
-	icon = 'icons/turf/shuttle_alien_blue.dmi'
-	},
+/obj/machinery/mech_recharger/alien,
 /obj/mecha/combat/fighter/baron{
 	dir = 1
 	},
@@ -30099,11 +30088,7 @@
 /area/shuttle/escape_pod10/station)
 "bLi" = (
 /obj/structure/sign/nanotrasen,
-/turf/simulated/shuttle/wall/no_join{
-	base_state = "orange";
-	icon = 'icons/turf/shuttle_orange.dmi';
-	icon_state = "orange"
-	},
+/turf/simulated/shuttle/wall/no_join/orange,
 /area/shuttle/escape_pod10/station)
 "bLj" = (
 /turf/simulated/wall/rthull,
@@ -31048,9 +31033,7 @@
 "bOH" = (
 /obj/structure/lattice,
 /obj/effect/catwalk_plated/white,
-/obj/machinery/mech_recharger{
-	icon = 'icons/turf/shuttle_alien_blue.dmi'
-	},
+/obj/machinery/mech_recharger/alien,
 /turf/space,
 /area/harbor/Aft_Shuttlebay)
 "bOK" = (
@@ -35860,11 +35843,7 @@
 /area/engineering/Drone_Fab)
 "cgf" = (
 /obj/structure/sign/nanotrasen,
-/turf/simulated/shuttle/wall/no_join{
-	base_state = "orange";
-	icon = 'icons/turf/shuttle_orange.dmi';
-	icon_state = "orange"
-	},
+/turf/simulated/shuttle/wall/no_join/orange,
 /area/shuttle/escape_pod9/station)
 "cgg" = (
 /turf/simulated/wall/r_wall,
@@ -36105,11 +36084,7 @@
 /area/security/Wardens_Office)
 "chc" = (
 /obj/structure/sign/nanotrasen,
-/turf/simulated/shuttle/wall/no_join{
-	base_state = "orange";
-	icon = 'icons/turf/shuttle_orange.dmi';
-	icon_state = "orange"
-	},
+/turf/simulated/shuttle/wall/no_join/orange,
 /area/shuttle/escape_pod11/station)
 "chd" = (
 /obj/structure/closet/lasertag/red,
@@ -46363,11 +46338,7 @@
 /area/maintenance/Deck2_Civilian_AftPortCorridor1)
 "dzn" = (
 /obj/structure/sign/warning/evac,
-/turf/simulated/shuttle/wall/no_join{
-	base_state = "orange";
-	icon = 'icons/turf/shuttle_orange.dmi';
-	icon_state = "orange"
-	},
+/turf/simulated/shuttle/wall/no_join/orange,
 /area/shuttle/large_escape_pod4/station)
 "dzw" = (
 /obj/effect/floor_decal/industrial/hatch/red,
@@ -61476,9 +61447,7 @@
 "hmH" = (
 /obj/structure/lattice,
 /obj/effect/catwalk_plated/white,
-/obj/machinery/mech_recharger{
-	icon = 'icons/turf/shuttle_alien_blue.dmi'
-	},
+/obj/machinery/mech_recharger/alien,
 /turf/space,
 /area/harbor/Star_Shuttlebay)
 "hnd" = (
@@ -62994,11 +62963,7 @@
 /area/quartermaster/Aft_Tool_Storage)
 "hMh" = (
 /obj/structure/sign/warning/evac,
-/turf/simulated/shuttle/wall/no_join{
-	base_state = "orange";
-	icon = 'icons/turf/shuttle_orange.dmi';
-	icon_state = "orange"
-	},
+/turf/simulated/shuttle/wall/no_join/orange,
 /area/shuttle/escape_pod10/station)
 "hMv" = (
 /obj/effect/floor_decal/industrial/arrows{
@@ -70905,9 +70870,7 @@
 "jUJ" = (
 /obj/structure/lattice,
 /obj/effect/catwalk_plated/white,
-/obj/machinery/mech_recharger{
-	icon = 'icons/turf/shuttle_alien_blue.dmi'
-	},
+/obj/machinery/mech_recharger/alien,
 /turf/space,
 /area/harbor/For_Shuttlebay)
 "jUU" = (
@@ -74783,11 +74746,7 @@
 /area/maintenance/Deck2_Medical_AftCorridor2)
 "kZB" = (
 /obj/structure/sign/nanotrasen,
-/turf/simulated/shuttle/wall/no_join{
-	base_state = "orange";
-	icon = 'icons/turf/shuttle_orange.dmi';
-	icon_state = "orange"
-	},
+/turf/simulated/shuttle/wall/no_join/orange,
 /area/shuttle/large_escape_pod3/station)
 "kZG" = (
 /obj/structure/girder,
@@ -79855,11 +79814,7 @@
 /turf/simulated/floor/tiled,
 /area/hallway/Port_2_Deck_Central_Corridor_1)
 "mBX" = (
-/turf/simulated/shuttle/wall/no_join{
-	base_state = "orange";
-	icon = 'icons/turf/shuttle_orange.dmi';
-	icon_state = "orange"
-	},
+/turf/simulated/shuttle/wall/no_join/orange,
 /area/shuttle/large_escape_pod3/station)
 "mBY" = (
 /obj/machinery/door/firedoor/glass,
@@ -81121,11 +81076,7 @@
 /area/maintenance/Deck2_Civilian_StarChamber2)
 "mQX" = (
 /obj/structure/sign/nanotrasen,
-/turf/simulated/shuttle/wall/no_join{
-	base_state = "orange";
-	icon = 'icons/turf/shuttle_orange.dmi';
-	icon_state = "orange"
-	},
+/turf/simulated/shuttle/wall/no_join/orange,
 /area/shuttle/escape_pod12/station)
 "mQY" = (
 /obj/structure/table/rack/shelf,
@@ -92367,11 +92318,7 @@
 /area/engineering/CE_Office)
 "qfw" = (
 /obj/structure/sign/warning/evac,
-/turf/simulated/shuttle/wall/no_join{
-	base_state = "orange";
-	icon = 'icons/turf/shuttle_orange.dmi';
-	icon_state = "orange"
-	},
+/turf/simulated/shuttle/wall/no_join/orange,
 /area/shuttle/large_escape_pod3/station)
 "qfA" = (
 /obj/item/towel/random{
@@ -92812,11 +92759,7 @@
 /turf/simulated/floor/tiled,
 /area/security/Visitation_Room)
 "qli" = (
-/turf/simulated/shuttle/wall/no_join{
-	base_state = "orange";
-	icon = 'icons/turf/shuttle_orange.dmi';
-	icon_state = "orange"
-	},
+/turf/simulated/shuttle/wall/no_join/orange,
 /area/shuttle/large_escape_pod4/station)
 "qlp" = (
 /obj/structure/table/woodentable,
@@ -98315,11 +98258,7 @@
 /area/hallway/Central_2_Deck_Hall)
 "rHN" = (
 /obj/structure/sign/warning/evac,
-/turf/simulated/shuttle/wall/no_join{
-	base_state = "orange";
-	icon = 'icons/turf/shuttle_orange.dmi';
-	icon_state = "orange"
-	},
+/turf/simulated/shuttle/wall/no_join/orange,
 /area/shuttle/escape_pod12/station)
 "rHO" = (
 /obj/effect/catwalk_plated/techmaint,
@@ -107184,11 +107123,7 @@
 /area/hallway/Port_2_Deck_Central_Corridor_1)
 "ugY" = (
 /obj/structure/sign/warning/evac,
-/turf/simulated/shuttle/wall/no_join{
-	base_state = "orange";
-	icon = 'icons/turf/shuttle_orange.dmi';
-	icon_state = "orange"
-	},
+/turf/simulated/shuttle/wall/no_join/orange,
 /area/shuttle/escape_pod11/station)
 "uhk" = (
 /obj/machinery/door/firedoor/border_only,
@@ -119226,9 +119161,7 @@
 "xHj" = (
 /obj/structure/lattice,
 /obj/effect/catwalk_plated/white,
-/obj/machinery/mech_recharger{
-	icon = 'icons/turf/shuttle_alien_blue.dmi'
-	},
+/obj/machinery/mech_recharger/alien,
 /turf/space,
 /area/harbor/Port_Shuttlebay)
 "xHq" = (

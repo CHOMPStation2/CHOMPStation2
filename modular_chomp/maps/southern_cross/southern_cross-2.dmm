@@ -2448,11 +2448,7 @@
 /turf/simulated/wall,
 /area/maintenance/firstdeck/foreport)
 "akp" = (
-/turf/simulated/shuttle/wall/no_join{
-	base_state = "orange";
-	icon = 'icons/turf/shuttle_orange.dmi';
-	icon_state = "orange"
-	},
+/turf/simulated/shuttle/wall/no_join/orange,
 /area/shuttle/escape_pod1/station)
 "akw" = (
 /obj/structure/bed/chair{
@@ -2469,11 +2465,7 @@
 /turf/simulated/shuttle/floor,
 /area/shuttle/escape_pod2/station)
 "akx" = (
-/turf/simulated/shuttle/wall/no_join{
-	base_state = "orange";
-	icon = 'icons/turf/shuttle_orange.dmi';
-	icon_state = "orange"
-	},
+/turf/simulated/shuttle/wall/no_join/orange,
 /area/shuttle/escape_pod2/station)
 "aky" = (
 /obj/machinery/embedded_controller/radio/airlock/airlock_controller{
@@ -7857,11 +7849,7 @@
 /turf/simulated/floor/tiled,
 /area/expoutpost/stationshuttle)
 "aPF" = (
-/turf/simulated/shuttle/wall/no_join{
-	base_state = "orange";
-	icon = 'icons/turf/shuttle_orange.dmi';
-	icon_state = "orange"
-	},
+/turf/simulated/shuttle/wall/no_join/orange,
 /area/shuttle/escape_pod5/station)
 "aPL" = (
 /obj/structure/cable{
@@ -8014,11 +8002,7 @@
 /turf/simulated/wall/r_wall,
 /area/quartermaster/mininglockerroom)
 "aQY" = (
-/turf/simulated/shuttle/wall/no_join{
-	base_state = "orange";
-	icon = 'icons/turf/shuttle_orange.dmi';
-	icon_state = "orange"
-	},
+/turf/simulated/shuttle/wall/no_join/orange,
 /area/shuttle/escape_pod6/station)
 "aRa" = (
 /obj/effect/floor_decal/borderfloor/corner{
@@ -10364,11 +10348,7 @@
 /turf/simulated/floor/tiled/steel,
 /area/hangar/three)
 "bYO" = (
-/turf/simulated/shuttle/wall/no_join{
-	base_state = "orange";
-	icon = 'icons/turf/shuttle_orange.dmi';
-	icon_state = "orange"
-	},
+/turf/simulated/shuttle/wall/no_join/orange,
 /area/shuttle/escape_pod3/station)
 "bZv" = (
 /obj/structure/table/standard,
@@ -15723,11 +15703,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/firstdeck/elevator)
 "fBA" = (
-/turf/simulated/shuttle/wall/no_join{
-	base_state = "orange";
-	icon = 'icons/turf/shuttle_orange.dmi';
-	icon_state = "orange"
-	},
+/turf/simulated/shuttle/wall/no_join/orange,
 /area/shuttle/escape_pod4/station)
 "fBB" = (
 /obj/structure/table/glass,

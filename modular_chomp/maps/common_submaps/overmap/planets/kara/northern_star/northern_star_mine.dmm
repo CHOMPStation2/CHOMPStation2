@@ -14055,13 +14055,10 @@
 /area/outpost/medical/rec)
 "Do" = (
 /obj/structure/table/standard,
-/obj/item/radio{
+/obj/item/radio/redphone{
+	name = "Medical Emergency Phone";
 	anchored = 1;
-	canhear_range = 1;
-	frequency = 1487;
-	icon = 'icons/obj/items.dmi';
-	icon_state = "red_phone";
-	name = "Medical Emergency Phone"
+	canhear_range = 1
 	},
 /turf/simulated/floor/tiled/white,
 /area/outpost/medical/rec)

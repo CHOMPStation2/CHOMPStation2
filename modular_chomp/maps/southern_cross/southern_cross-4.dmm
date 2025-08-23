@@ -8529,11 +8529,7 @@
 /turf/simulated/shuttle/wall,
 /area/shuttle/escape_pod7/station)
 "gJN" = (
-/turf/simulated/shuttle/wall/no_join{
-	base_state = "orange";
-	icon = 'icons/turf/shuttle_orange.dmi';
-	icon_state = "orange"
-	},
+/turf/simulated/shuttle/wall/no_join/orange,
 /area/shuttle/escape_pod7/station)
 "gKj" = (
 /obj/structure/disposalpipe/segment{
@@ -8953,11 +8949,7 @@
 /turf/simulated/floor/tiled,
 /area/maintenance/thirddeck/dormsstarboard/maintbar)
 "hgE" = (
-/turf/simulated/shuttle/wall/no_join{
-	base_state = "orange";
-	icon = 'icons/turf/shuttle_orange.dmi';
-	icon_state = "orange"
-	},
+/turf/simulated/shuttle/wall/no_join/orange,
 /area/shuttle/escape_pod8/station)
 "hgN" = (
 /obj/structure/bed/chair{
