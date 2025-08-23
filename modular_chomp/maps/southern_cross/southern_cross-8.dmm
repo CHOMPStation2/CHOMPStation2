@@ -8889,8 +8889,9 @@
 	name = "voxstart"
 	},
 /turf/unsimulated/floor/wood{
-	    icon_state = "wood-broken2"
-	}/area/skipjack_station)
+	icon_state = "wood-broken2"
+	},
+/area/skipjack_station)
 "hUU" = (
 /obj/structure/table/woodentable,
 /obj/item/flashlight/lamp/green{
