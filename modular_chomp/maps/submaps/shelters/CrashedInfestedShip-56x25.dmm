@@ -1007,13 +1007,7 @@
 /area/survivalpod/superpose/CrashedInfestedShip)
 "tr" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
-/obj/machinery/power/smes/buildable{
-	icon = 'icons/obj/alien_smes.dmi';
-	icon_state = "unit";
-	input_level = 950000;
-	name = "Alien Royal Capacitor";
-	output_level = 950000
-	},
+/obj/machinery/power/smes/buildable/alien_royal,
 /obj/machinery/light/poi,
 /turf/simulated/floor,
 /area/survivalpod/superpose/CrashedInfestedShip)
@@ -2351,13 +2345,7 @@
 /area/survivalpod/superpose/CrashedInfestedShip)
 "Up" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
-/obj/machinery/power/smes/buildable{
-	icon = 'icons/obj/alien_smes.dmi';
-	icon_state = "unit";
-	input_level = 950000;
-	name = "Alien Royal Capacitor";
-	output_level = 950000
-	},
+/obj/machinery/power/smes/buildable/alien_royal,
 /obj/structure/cable/cyan{
 	icon_state = "0-2"
 	},

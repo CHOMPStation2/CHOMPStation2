@@ -16,13 +16,12 @@
 	icon_state = "dispenser_2way"
 	name = "Implant-Co"
 
-/obj/machinery/smartfridge/survival_pod
-	desc = "A mysterious machine which can fabricate many tools for acquiring test subjects."
-	icon = 'icons/obj/abductor.dmi'
-	icon_state = "dispenser"
-	name = "Garmentier"
-	pixel_y = 0
-	req_access = list(777)
+/obj/machinery/smartfridge/survival_pod/boxes
+	icon = 'icons/obj/vending.dmi';
+	icon_base = "smartfridge"
+	icon_contents = "boxes"
+	icon_state = "smartfridge"
+	name = "Advanced storage"
 
 /obj/machinery/smartfridge/survival_pod/dispenser1
 	desc = "A mysterious machine which can fabricate many tools for acquiring test subjects."
@@ -59,3 +58,9 @@
 	icon_state = "pulse"
 	name = "Expirmental Pulse Rifle"
 	firemodes = list(list("mode_name" = "normal", "fire_delay" = 8, "projectile_type" = /obj/item/projectile/beam/midlaser, "charge_cost" = 120),list("mode_name" = "suppressive", "fire_delay" = 5, "projectile_type" = /obj/item/projectile/beam/weaklaser, "charge_cost" = 30))
+
+/obj/item/radio/med_emergency
+	frequency = 1487
+	icon = 'icons/obj/items.dmi'
+	icon_state = "red_phone"
+	name = "Medical Emergency Phone"

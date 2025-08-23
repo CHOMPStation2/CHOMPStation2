@@ -1142,13 +1142,7 @@
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/LargeAlienShip)
 "xs" = (
-/obj/machinery/power/smes/buildable{
-	icon = 'icons/obj/alien_smes.dmi';
-	icon_state = "unit";
-	input_level = 950000;
-	name = "Alien Royal Capacitor";
-	output_level = 950000
-	},
+/obj/machinery/power/smes/buildable/alien_royal,
 /obj/structure/cable,
 /turf/simulated/floor/tiled/techmaint,
 /area/survivalpod/superpose/LargeAlienShip)

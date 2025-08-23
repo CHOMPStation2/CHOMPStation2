@@ -130,12 +130,7 @@
 /obj/effect/floor_decal/techfloor{
 	dir = 4
 	},
-/obj/machinery/smartfridge/survival_pod{
-	icon = 'icons/obj/vending.dmi';
-	icon_base = "fridge_sci";
-	icon_contents = "chem";
-	icon_state = "fridge_sci";
-	name = "Advanced storage";
+/obj/machinery/smartfridge/survival_pod/scifridge{
 	pixel_y = 0
 	},
 /obj/item/organ/internal/augment/armmounted,
