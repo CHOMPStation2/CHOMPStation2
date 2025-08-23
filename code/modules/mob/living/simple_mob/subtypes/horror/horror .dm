@@ -4,7 +4,7 @@
 	icon = 'icons/mob/horror_show/GHPS.dmi'
 	icon_gib = "generic_gib"
 
-	can_pain_emote = FALSE // CHOMPEdit: Can't feel pain
+	can_pain_emote = FALSE
 
 /datum/ai_holder/simple_mob/horror
 	hostile = TRUE // The majority of simplemobs are hostile, gaslamps are nice.
@@ -28,4 +28,4 @@
 	minbodytemp = 0
 	maxbodytemp = 700
 
-	can_be_drop_prey = FALSE //CHOMP Add
+	can_be_drop_prey = FALSE

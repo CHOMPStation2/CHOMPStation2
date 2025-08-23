@@ -82,13 +82,11 @@ var/list/_slime_default_emotes = list(
 
 	can_enter_vent_with = list(/obj/item/clothing/head, /obj/soulgem)
 
-	can_be_drop_prey = FALSE //CHOMP Add
+	can_be_drop_prey = FALSE
 
-	// CHOMPAdd: Pain Sounds
 	species_sounds = "Slime"
 	pain_emote_1p = list("squish", "squelch")
 	pain_emote_3p = list("squishes", "squelches")
-	// CHOMPAdd End
 
 /mob/living/simple_mob/slime/get_available_emotes()
 	return global._slime_default_emotes.Copy()

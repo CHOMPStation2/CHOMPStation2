@@ -13,7 +13,7 @@
 
 	maxHealth = 1
 	health = 1
-	nutrition = 20 //CHOMPEdit
+	nutrition = 20
 
 	movement_cooldown = -1
 

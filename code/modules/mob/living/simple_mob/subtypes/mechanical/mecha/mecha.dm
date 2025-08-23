@@ -95,7 +95,7 @@
 
 /mob/living/simple_mob/mechanical/mecha/bullet_act()
 	. = ..()
-	sparks?.start()
+	sparks.start()
 
 /mob/living/simple_mob/mechanical/mecha/speech_bubble_appearance()
 	return pilot_type ? "" : ..()

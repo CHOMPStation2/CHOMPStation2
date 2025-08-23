@@ -1,7 +1,3 @@
-// Gas
-#define REAGENT_MIASMA "Miasma"
-#define REAGENT_ID_MIASMA "miasma"
-
 // Drugs
 #define REAGENT_CLEANSINGAGENT "Cleansing Agent"
 #define REAGENT_ID_CLEANSINGAGENT "cleansingagent"
@@ -33,8 +29,6 @@
 #define REAGENT_ID_PHOENIXBREATH "phoenixbreath"
 #define REAGENT_DRYAGENT "Dry Agent"
 #define REAGENT_ID_DRYAGENT "dryagent"
-#define REAGENT_APHRODISIAC "Aphrodisiac"
-#define REAGENT_ID_APHRODISIAC "aphrodisiac"
 #define REAGENT_SORBITOL "Sorbitol"
 #define REAGENT_ID_SORBITOL "sorbitol"
 #define REAGENT_CLARIDYL "Claridyl Natural Remedy"
@@ -97,8 +91,6 @@
 #define REAGENT_ID_FRESHTEA "freshtea"
 #define REAGENT_FRESHGREENTEA "Refreshing green tea"
 #define REAGENT_ID_FRESHTEAGREEN "freshteagreen"
-#define REAGENT_TEAMUSH "Tea mush"
-#define REAGENT_ID_TEAMUSH "teamush"
 #define REAGENT_INSTANTTEAPOWDERGREEN "Instant green tea powder"
 #define REAGENT_ID_INSTANTTEAPOWDERGREEN "instantteapowdergreen"
 #define REAGENT_INSTANTTEAGREEN "Instant green tea"
@@ -177,8 +169,6 @@
 #define REAGENT_ID_ALUMINUMNITRATE "aluminum_nitrate"
 #define REAGENT_SPIDEREGG "spider eggs"
 #define REAGENT_ID_SPIDEREGG "spideregg"
-#define REAGENT_PITCHERNECTAR "Pitcher Nectar"
-#define REAGENT_ID_PITCHERNECTAR "pitcher_nectar"
 #define REAGENT_BENZILATE  "Odd Goo"
 #define REAGENT_ID_BENZILATE "benzilate"
 #define REAGENT_PHENETHYLAMINE "Phenethylamine"
@@ -271,9 +261,3 @@
 #define REAGENT_ID_NEOLIQUIDFIRE "neoliquidfire"
 #define REAGENT_LIQUIDLIFE "Liquid Life"
 #define REAGENT_ID_LIQUIDLIFE "liquidlife"
-
-#define REAGENT_NUMBING_FLUID "Numbing Fluid"
-#define REAGENT_ID_NUMBING_FLUID "succubi_numbing"
-#define REAGENT_PARALYZE_FLUID "Paralyzing Fluid"
-#define REAGENT_ID_PARALYZE_FLUID "succubi_paralize"
-#define REAGENT_ID_APHRODIAC_FLUID "succubi_aphrodisiac"

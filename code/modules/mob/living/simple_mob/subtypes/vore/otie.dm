@@ -281,7 +281,7 @@
 	switch(M.a_intent)
 		if(I_HELP)
 			if(health > 0)
-				if(M.zone_sel.selecting == BP_GROIN) //CHOMPEdit
+				if(M.zone_sel.selecting == BP_GROIN)
 					if(M.vore_bellyrub(src))
 						return
 				M.visible_message(span_notice("[M] [response_help] \the [src]."))
