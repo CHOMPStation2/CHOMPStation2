@@ -501,8 +501,7 @@
 	icon_state = "cursor_guard"
 	icon_living = "cursor_guard"
 	armor = list(melee = 80, bullet = 80, laser = 80, energy = 80, bomb = 80, bio = 100, rad = 100)
-	pilot_type = /obj/item/prop/tyrlore/stolenbreacher
-	wreckage = /obj/item/pickaxe/diamonddrill/alien
+	wreckage = /obj/item/prop/tyrlore/stolenbreacher
 	specialattackprojectile = /obj/item/projectile/energy/eclipse/mining
 	desc = "A being wearing what appears to be a modified breacher outfit."
 	projectiletype = /obj/item/projectile/arc/explosive_rocket
