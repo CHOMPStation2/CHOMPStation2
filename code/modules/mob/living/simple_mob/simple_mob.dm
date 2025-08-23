@@ -111,8 +111,10 @@
 	var/melee_attack_delay = 2			// If set, the mob will do a windup animation and can miss if the target moves out of the way.
 	var/ranged_attack_delay = null
 	var/special_attack_delay = null
-	var/ranged_cooldown = 0 //CHOMP Addition. This is part of a timer in combat.dm.
-	var/ranged_cooldown_time = 0 //CHOMP Addition: This variable can be thrown into mob variables in order to allow the mob to move AND shoot at the same time. The previous "ranged_attack_delay" is a dumb way of handling ranged attacks because it sleeps the entire mob - this one uses an internalized timer so it is slightly smarter.
+	var/ranged_cooldown = 0
+	var/ranged_cooldown_time = 0
+	var/picked_color = FALSE
+	var/picked_size = FALSE
 
 	//Special attacks
 //	var/special_attack_prob = 0				// The chance to ATTEMPT a special_attack_target(). If it fails, it will do a regular attack instead.
@@ -205,10 +207,10 @@
 	if(has_eye_glow)
 		add_eyes()
 
-	if(vore_active)	//CHOMPSTATION edit: Moved here so the verb is useable before initialising vorgans.
-		add_verb(src,/mob/living/simple_mob/proc/animal_nom) //CHOMPEdit TGPanel
-		add_verb(src,/mob/living/proc/shred_limb) //CHOMPEdit TGPanel
-	add_verb(src,/mob/living/simple_mob/proc/nutrition_heal) //CHOMPEdit TGPanel //CHOMPSTATION edit
+	if(vore_active)	// Moved here so the verb is useable before initialising vorgans.
+		add_verb(src,/mob/living/simple_mob/proc/animal_nom)
+		add_verb(src,/mob/living/proc/shred_limb)
+	add_verb(src,/mob/living/simple_mob/proc/nutrition_heal)
 
 	if(organ_names)
 		organ_names = GET_DECL(organ_names)
@@ -241,11 +243,47 @@
 //Client attached
 /mob/living/simple_mob/Login()
 	. = ..()
+	add_verb(src,/mob/living/simple_mob/proc/pick_size)
+	add_verb(src,/mob/living/simple_mob/proc/pick_color)
 	to_chat(src,span_boldnotice("You are \the [src].") + " [player_msg]")
 	if(vore_active && !voremob_loaded)
 		init_vore(TRUE)
 	if(hasthermals)
 		add_verb(src, /mob/living/simple_mob/proc/hunting_vision) //So that maint preds can see prey through walls, to make it easier to find them.
+
+
+/mob/living/simple_mob/proc/pick_size()
+	set name = "Pick Size"
+	set category = "Abilities.Settings"
+
+	if(picked_size)
+		to_chat(src, span_notice("You have already picked a size! If you picked the wrong size, ask an admin to change your picked_size variable to 0."))
+		return
+	if(!resizable)
+		to_chat(src, span_warning("You are immune to resizing!"))
+		return
+
+	var/nagmessage = "Pick a size between [RESIZE_MINIMUM * 100] to [RESIZE_MAXIMUM * 100]%. (Only usable once!)"
+	var/new_size = tgui_input_number(src, nagmessage, "Pick a Size", size_multiplier*100, RESIZE_MAXIMUM * 100, RESIZE_MINIMUM * 100)
+	if(size_range_check(new_size))
+		resize(new_size/100, uncapped = has_large_resize_bounds(), ignore_prefs = TRUE)
+		picked_size = TRUE
+		if(temporary_form)	//resizing both our forms
+			var/mob/living/L = temporary_form
+			L.resize(new_size/100, uncapped = has_large_resize_bounds(), ignore_prefs = TRUE)
+
+/mob/living/simple_mob/proc/pick_color()
+	set name = "Pick Color"
+	set category = "Abilities.Settings"
+	set desc = "You can set your color!"
+	if(picked_color)
+		to_chat(src, span_notice("You have already picked a color! If you picked the wrong color, ask an admin to change your picked_color variable to 0."))
+		return
+	var/newcolor = tgui_color_picker(usr, "Choose a color.", "", color)
+	if(newcolor)
+		color = newcolor
+	picked_color = TRUE
+	update_icon()
 
 /mob/living/simple_mob/SelfMove(turf/n, direct, movetime)
 	var/turf/old_turf = get_turf(src)

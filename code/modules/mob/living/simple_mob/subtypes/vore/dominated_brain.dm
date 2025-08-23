@@ -205,11 +205,6 @@
 		to_chat(prey, span_notice("You are not inside anyone."))
 		return
 
-//CHOMPRemove - this check is handled in "CHOMPEdit start - Ability to use dominate pred trait against whitelisted mobs"
-//	if(!pred.ckey)
-//		to_chat(prey, span_notice("\The [pred] isn't able to be dominated."))
-//		return
-
 	if(prey.stat == DEAD)
 		to_chat(prey, span_warning("You cannot do that in your current state."))
 		return

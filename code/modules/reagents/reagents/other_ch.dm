@@ -38,15 +38,6 @@
 			if(O)
 				O.implants += spiderling
 
-/datum/reagent/nutriment/pitcher_nectar //Pitcher plant reagent, doubles plant growth speed.
-	name = REAGENT_ID_PITCHERNECTAR
-	id = REAGENT_ID_PITCHERNECTAR
-	description = "An odd, sticky slurry which promotes rapid plant growth."
-	taste_description = "pineapple"
-	reagent_state = LIQUID
-	nutriment_factor = 60
-	color = "#a839a2"
-
 //New reagent definitions/overrides. If some of these get added upstream and cause a conflict later they might need deleting.
 /datum/reagent/toxin/plantbgone/touch_mob(var/mob/living/L, amount) //Plantbgone override to damage plant mobs. Part of pitcher plants, touch_mob doesn't exist for plantbgone at the time of writing.
 	if(istype(L) && L.faction)

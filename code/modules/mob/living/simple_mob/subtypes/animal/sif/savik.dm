@@ -30,7 +30,7 @@
 
 	maxHealth = 125
 	health = 125
-	minbodytemp = 175 //yw edit, Makes mobs survive cryogaia temps
+	minbodytemp = 175
 	movement_cooldown = -1
 	heat_resist = -0.50
 	cold_resist = 0.75
@@ -55,7 +55,6 @@
 
 	say_list_type = /datum/say_list/savik
 	ai_holder_type = /datum/ai_holder/simple_mob/savik
-
 
 /datum/say_list/savik
 	speak = list("Hruuugh!","Hrunnph")

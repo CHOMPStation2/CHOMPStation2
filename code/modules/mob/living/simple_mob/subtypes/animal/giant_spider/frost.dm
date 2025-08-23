@@ -36,5 +36,5 @@
 	desc = "Icy and blue, it makes you shudder to look at it. This one has brilliant blue eyes. \
 	It isn't native to Sif."
 
-/mob/living/simple_mob/animal/giant_spider/frost/event // YW CHANGE
+/mob/living/simple_mob/animal/giant_spider/frost/event
 	ai_holder_type = /datum/ai_holder/simple_mob/event

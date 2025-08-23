@@ -41,7 +41,6 @@
 	say_list_type = /datum/say_list/siffet
 	ai_holder_type = /datum/ai_holder/simple_mob/siffet
 
-
 /datum/say_list/siffet
 	speak = list("Yap!", "Heh!", "Huff.")
 	emote_see = list("sniffs its surroundings","flicks its ears", "scratches the ground")
@@ -58,10 +57,8 @@
 
 /mob/living/simple_mob/animal/sif/siffet/IIsAlly(mob/living/L)
 	. = ..()
-	//CHOMPAdd START: Compatibility with structures
 	if(!. && !istype(L, /mob/living))
 		return TRUE
 	else
 		if(!. && L.mob_size > 10) //Attacks things it considers small enough to take on, otherwise only attacks if attacked.
 			return TRUE
-	//CHOMPAdd END

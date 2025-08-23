@@ -117,6 +117,7 @@
 		riding_datum = new /datum/riding/simple_mob(src)
 	add_verb(src, /mob/living/simple_mob/proc/animal_mount)
 	add_verb(src, /mob/living/proc/toggle_rider_reins)
+	add_verb(src,/mob/living/simple_mob/proc/pick_color)
 	movement_cooldown = -1
 
 /mob/living/simple_mob/vore/wolf/direwolf/MouseDrop_T(mob/living/M, mob/living/user)
@@ -147,7 +148,7 @@
 	icon_state = "direwolfs"
 	icon_rest = "direwolfs_rest"
 
-/* //ChompEDIT START - disable unique user-related content
+/* CHOMPRemove Start - disable unique user-related content
 /mob/living/simple_mob/vore/wolf/direwolf/rykka
 	name = "Rykka"
 	desc = "This big canine looks like a GSD. It has a collar tagged, 'Bitch'"
@@ -181,6 +182,7 @@
 	vore_pounce_maxhealth = 100
 	vore_stomach_name = "Gut"
 	vore_stomach_flavor = "A black-and-purple veined gut, pulsing warmly around you. Loud gurgles sound around you as the gut squishes inwards and attempts to crush you - Rykka seems intent on digesting you, like the meat you are."
+*/// CHOMPRemove End
 
 /mob/living/simple_mob/vore/wolf/direwolf/andrews
 	name = "andrewsarchus"
@@ -193,4 +195,3 @@
 	icon_rest = "andrews_rest"
 
 	mount_offset_y = 17
-*/ //ChompEDIT END

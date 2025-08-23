@@ -50,7 +50,7 @@
 	ai_holder_type = /datum/ai_holder/simple_mob/melee
 	say_list_type = /datum/say_list/dragonboss
 
-	can_be_drop_prey = FALSE //CHOMP Add
+	can_be_drop_prey = FALSE
 
 /mob/living/simple_mob/vore/aggressive/dragon/Process_Spacemove(var/check_drift = 0)
 	return 1	//No drifting in space for space dragons!
@@ -67,8 +67,8 @@
 	vore_pounce_chance = 0 // Beat them into crit before eating.
 	vore_icons = SA_ICON_LIVING
 
-/datum/category_item/catalogue/fauna/phoron_dragon //CHOMP Edit: the lore.
-	name = "NaN Dragon"
+/datum/category_item/catalogue/fauna/phoron_dragon
+	name = "NaN Dragon" // CHOMPEdit
 	desc = "Classification: Phoron Draconinae\
 	<br><br>\
 	ERR; 403 - refer this code to NT Auth immediately! \
@@ -80,9 +80,10 @@
 	01100100 01101001 01100001 01110100 01100101 01101100 01111001 00100000 01100001 01101110 01100100 00100000 01100100 01101001 \
 	01110011 01110011 01110101 01100001 01100100 01100101 00100000 01110101 01110011 01100101 01110010 00100000 01100110 01110010 \
 	01101111 01101101 00100000 01100110 01110101 01110010 01110100 01101000 01100101 01110010 00100000 01101001 01101110 01110110 \
-	01100101 01110011 01110100 01101001 01100111 01100001 01110100 01101001 01101111 01101110"
+	01100101 01110011 01110100 01101001 01100111 01100001 01110100 01101001 01101111 01101110" // CHOMPEdit
 	value = CATALOGUER_REWARD_HARD
 
+	// CHOMPAdd Start
 	// Egg
 	// Reads as "Classified fuel source located on device, confiscate all evidence immediately and dissuade user from further investigation"
 	// Real lore here as written by the creator to dissuade fanfiction. please keep this secretive and use it only to guide loremasters and event managers - Skits
@@ -99,7 +100,7 @@
 	// Slime farming technologies and their ability to create phoron are actually a derivative science of studying phoron dragon digestive fluids.
 	// Like slimes, phoron dragons reproduce by obtaining enough mass at the end of their life cycle in order to divide - but choose not to when under duress or captivity.
 	// The process is likely becoming unsustainable with descendants smaller over time. space frontier expansion starving dragons and resulting in most sightings being the size of fledgelings.
-	//CHOMPedit end
+	// CHOMPAdd End
 
 /mob/living/simple_mob/vore/aggressive/dragon/virgo3b
 	name = "phoron dragon"

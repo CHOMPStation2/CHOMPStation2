@@ -65,7 +65,7 @@
 
 	say_list_type = /datum/say_list/hare
 
-	can_be_drop_prey = TRUE //CHOMP Add
+	can_be_drop_prey = TRUE
 
 /datum/say_list/hare
 	speak = list("Snrf...","Crk!")

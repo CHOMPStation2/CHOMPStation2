@@ -46,27 +46,22 @@
 
 	var/list/datum/disease/rat_diseases
 
-	//CHOMP Addition: Added these vore variables in and swapped the booleans from their defaults too.
 	can_be_drop_prey = TRUE
 	can_be_drop_pred = FALSE
 	species_sounds = "Mouse"
 
-	pain_emote_1p = list("squeak", "squik") // CHOMP Addition: Pain/etc sounds
-	pain_emote_1p = list("squeaks", "squiks") // CHOMP Addition: Pain/etc sounds
+	pain_emote_1p = list("squeak", "squik")
+	pain_emote_1p = list("squeaks", "squiks")
 
-//CHOMPAdd Start
 /mob/living/simple_mob/animal/passive/mouse/Destroy()
 	GLOB.active_ghost_pods -= src
 	return ..()
-//CHOMPAdd End
 
 /mob/living/simple_mob/animal/passive/mouse/Initialize(mapload, keep_parent_data)
 	. = ..()
-	//CHOMPAdd Start
-	ghostjoin = 1
+	ghostjoin = TRUE
 	ghostjoin_icon()
 	GLOB.active_ghost_pods += src
-	//CHOMPAdd End
 
 	add_verb(src, /mob/living/proc/ventcrawl)
 	add_verb(src, /mob/living/proc/hide)
@@ -220,10 +215,9 @@
 	emote_hear = list("squeeks","squeaks","squiks")
 	emote_see = list("runs in a circle", "shakes", "scritches at something")
 
-// CHOMPAdd - Verb for mice colour changing
 /mob/living/simple_mob/animal/passive/mouse/verb/set_mouse_colour()
 	set name = "Set Mouse Colour"
-	set category = "Abilities.Mouse" //CHOMPEdit
+	set category = "Abilities.Mouse"
 	set desc = "Set the colour of your mouse."
 	var/new_mouse_colour = tgui_input_list(usr, "Set Mouse Colour", "Pick a colour", list("brown","gray","white","black"))
 	if(!new_mouse_colour) return
@@ -235,8 +229,7 @@
 	desc = "A small [new_mouse_colour] rodent, often seen hiding in maintenance areas and making a nuisance of itself."
 	holder_type = text2path("/obj/item/holder/mouse/[new_mouse_colour]")
 	to_chat(src, span_notice("You are now a [new_mouse_colour] mouse!"))
-	remove_verb(src,/mob/living/simple_mob/animal/passive/mouse/verb/set_mouse_colour) //CHOMPEdit TGPanel
-// CHOMPAdd End
+	remove_verb(src,/mob/living/simple_mob/animal/passive/mouse/verb/set_mouse_colour)
 
 /mob/living/simple_mob/animal/passive/mouse/white/virology
 	name = "Fleming"

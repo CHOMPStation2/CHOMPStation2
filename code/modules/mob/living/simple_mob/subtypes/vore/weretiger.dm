@@ -31,7 +31,7 @@
 
 	has_hands = 1
 
-	can_be_drop_prey = FALSE //CHOMP Add
+	can_be_drop_prey = FALSE
 	allow_mind_transfer = TRUE
 
 // Nomnomn

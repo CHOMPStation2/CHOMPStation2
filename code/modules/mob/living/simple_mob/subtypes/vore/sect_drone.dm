@@ -14,7 +14,7 @@
 	yet to uncover. \
 	<br>\
 	The lack of chitin on the underside of its abdomen is very elastic and stretchable, \
-	allowing the drone to carry multiple large prey inside of its stomach with relative ease." //CHOMPedit
+	allowing the drone to carry multiple large prey inside of its stomach with relative ease."
 	value = CATALOGUER_REWARD_MEDIUM
 
 /mob/living/simple_mob/vore/sect_drone

@@ -151,17 +151,16 @@
 /mob/living/simple_mob/vore/pakkun/load_default_bellies()
 	. = ..()
 	var/obj/belly/B = vore_selected
-	if(isbelly(B)) //ChompEDIT - fix a runtime
-		B.name = "stomach"
-		B.desc = "you land with a soft bump in what can only be described as a big soft slimy sack, the walls effortlessly stretching to match your every move with no sign of reaching any kind of elastic \
-		limit - and to add insult to injury, it seems the thing is... pressing on you, kneading over the lump you make in its midsection, as though rubbing in the fact that you've just been caught."
-		B.absorbed_desc = "the endless smooshing and kneading has taken its toll, your form softening and sinking into the body of the greedy little reptile. It seems like you might be here for some time - \
-		assuming you ever get out at all. For now though, you're stuck as some extra softness padding out a cute little lizard."
-		B.belly_fullscreen = "a_tumby"
-		B.escapechance = 25
-		B.absorbchance = 0
-		B.digestchance = 0
-		B.digest_mode = DM_SELECT
+	B.name = "stomach"
+	B.desc = "you land with a soft bump in what can only be described as a big soft slimy sack, the walls effortlessly stretching to match your every move with no sign of reaching any kind of elastic \
+	limit - and to add insult to injury, it seems the thing is... pressing on you, kneading over the lump you make in its midsection, as though rubbing in the fact that you've just been caught."
+	B.absorbed_desc = "the endless smooshing and kneading has taken its toll, your form softening and sinking into the body of the greedy little reptile. It seems like you might be here for some time - \
+	assuming you ever get out at all. For now though, you're stuck as some extra softness padding out a cute little lizard."
+	B.belly_fullscreen = "a_tumby"
+	B.escapechance = 25
+	B.absorbchance = 0
+	B.digestchance = 0
+	B.digest_mode = DM_SELECT
 
 /mob/living/simple_mob/vore/pakkun/attackby(var/obj/item/O, var/mob/user) //if they're newspapered, they'll spit out any junk they've eaten for whatever reason
 	if(istype(O, /obj/item/newspaper) && !ckey && isturf(user.loc))
@@ -276,9 +275,8 @@
 /mob/living/simple_mob/vore/pakkun/snapdragon/snappy/load_default_bellies()
 	. = ..()
 	var/obj/belly/B = vore_selected
-	if(isbelly(B)) //ChompEDIT - fix a runtime
-		B.digest_mode = DM_HOLD
-		B.desc = "the lizard gently yet insistently stuffs you down her gullet - evidently enjoying this moment of playtime as you land in a sprawled heap in the stretchy, clinging sack that makes up \
-		most of her girth. Your movements are rewarded only with squeezing from outside, the skin of the reptile easily stretching out to match your movements no matter how hard you try to push. If anything, \
-		wriggling about just seems to prompt the playful creature to mess with you more, mooshing her paws into the bulges you make, wrapping both arms around you and squeezing you tight, making it absolutely \
-		plain that she's more than happy to just keep you in there - and is more than capable of doing so if she so chooses."
+	B.digest_mode = DM_HOLD
+	B.desc = "the lizard gently yet insistently stuffs you down her gullet - evidently enjoying this moment of playtime as you land in a sprawled heap in the stretchy, clinging sack that makes up \
+	most of her girth. Your movements are rewarded only with squeezing from outside, the skin of the reptile easily stretching out to match your movements no matter how hard you try to push. If anything, \
+	wriggling about just seems to prompt the playful creature to mess with you more, mooshing her paws into the bulges you make, wrapping both arms around you and squeezing you tight, making it absolutely \
+	plain that she's more than happy to just keep you in there - and is more than capable of doing so if she so chooses."

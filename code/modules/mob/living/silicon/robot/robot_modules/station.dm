@@ -427,6 +427,7 @@
 	src.modules += new /obj/item/reagent_containers/spray/pepper(src)
 	src.modules += new /obj/item/gripper/security(src)
 	src.modules += new /obj/item/gun/energy/robotic/phasegun(src) // CHOMPedit: Phasegun for regular sec cyborg.
+	src.modules += new /obj/item/ticket_printer(src)
 	src.emag += new /obj/item/gun/energy/robotic/laser/rifle(src)
 
 	src.modules += new /obj/item/dogborg/sleeper/K9(src) //Eat criminals. Bring them to the brig.
