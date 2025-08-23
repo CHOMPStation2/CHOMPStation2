@@ -101,3 +101,98 @@
 	icon_state = "cutout_basic"
 	icon = 'icons/obj/cardboard_cutout.dmi'
 	name = "stand-up figure?"
+
+/turf/simulated/wall/dungeon/gate
+	icon = 'icons/obj/doors/shuttledoors.dmi'
+	icon_state = "door_locked"
+	name = "Wall Gate"
+
+/obj/structure/showcase/AI
+	desc = "So that's how the shuttle moves on its own."
+	icon = 'icons/mob/AI.dmi'
+	icon_state = "ai-red"
+	name = "Arrivals Announcement Computer"
+
+/obj/structure/showcase/hos
+	desc = "It looks almost lifelike."
+	icon = 'icons/obj/statue.dmi'
+	icon_state = "hos"
+	name = "Statue"
+
+/obj/effect/floor_decal/sign/small_8/decal
+	icon = 'icons/turf/flooring/decals.dmi'
+
+/obj/effect/floor_decal/sign/small_7/decal
+	icon = 'icons/turf/flooring/decals.dmi'
+
+/obj/effect/floor_decal/sign/small_6/decal
+	icon = 'icons/turf/flooring/decals.dmi'
+
+/obj/effect/floor_decal/sign/small_5/decal
+	icon = 'icons/turf/flooring/decals.dmi'
+
+/obj/effect/floor_decal/sign/small_4/decal
+	icon = 'icons/turf/flooring/decals.dmi'
+
+/obj/effect/floor_decal/sign/small_3/decal
+	icon = 'icons/turf/flooring/decals.dmi'
+
+/obj/effect/floor_decal/sign/small_2/decal
+	icon = 'icons/turf/flooring/decals.dmi'
+
+/obj/effect/floor_decal/sign/small_1/decal
+	icon = 'icons/turf/flooring/decals.dmi'
+
+/obj/effect/floor_decal/sign/small_a/decal
+	icon = 'icons/turf/flooring/decals.dmi'
+
+/obj/effect/floor_decal/sign/small_b/decal
+	icon = 'icons/turf/flooring/decals.dmi'
+
+/obj/effect/floor_decal/sign/small_c/decal
+	icon = 'icons/turf/flooring/decals.dmi'
+
+/obj/effect/floor_decal/sign/small_d/decal
+	icon = 'icons/turf/flooring/decals.dmi'
+
+/obj/effect/floor_decal/sign/small_e/decal
+	icon = 'icons/turf/flooring/decals.dmi'
+
+/obj/effect/floor_decal/sign/small_f/decal
+	icon = 'icons/turf/flooring/decals.dmi'
+
+/obj/effect/floor_decal/sign/small_g/decal
+	icon = 'icons/turf/flooring/decals.dmi'
+
+/obj/effect/floor_decal/sign/small_h/decal
+	icon = 'icons/turf/flooring/decals.dmi'
+
+/turf/unsimulated/floor/snow_new
+	icon = 'icons/turf/snow_new.dmi'
+	icon_state = "snow"
+	name = "snow"
+
+/turf/unsimulated/wall/shuttle_bay
+	desc = "That looks like it doesn't open easily."
+	icon = 'icons/obj/doors/rapid_pdoor.dmi'
+	icon_state = "pdoor1"
+	name = "Shuttle Bay Blast Door"
+
+/turf/unsimulated/wall/door_maint
+	icon = 'icons/obj/doors/Doormaint.dmi'
+	icon_state = "door_closed"
+	name = "Sealed Door"
+
+/turf/unsimulated/floor/wood
+	icon = 'icons/turf/flooring/wood.dmi'
+
+/turf/unsimulated/wall/fake_dark
+	desc = "It's a strange, impenetrable darkness."
+	icon = 'icons/turf/flooring/weird_vr.dmi'
+	icon_state = "dark"
+	name = "dark"
+
+/turf/unsimulated/wall/fake_uranium
+	icon = 'icons/obj/doors/Dooruranium.dmi'
+	icon_state = "door_closed"
+	name = "Sealed Door"
