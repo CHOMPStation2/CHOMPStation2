@@ -28463,7 +28463,8 @@
 /area/medical/ward)
 "bNQ" = (
 /obj/structure/table/glass,
-/obj/item/radio/surgery_emergency{
+/obj/item/radio/redphone{
+	    name = "Surgery Emergency Phone";
 	anchored = 1;
 	canhear_range = 7
 	},

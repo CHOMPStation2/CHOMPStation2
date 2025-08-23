@@ -14055,7 +14055,8 @@
 /area/outpost/medical/rec)
 "Do" = (
 /obj/structure/table/standard,
-/obj/item/radio/med_emergency{
+/obj/item/radio/redphone{
+	    name = "Medical Emergency Phone";
 	anchored = 1;
 	canhear_range = 1
 	},
