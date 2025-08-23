@@ -4478,7 +4478,6 @@
 /area/shuttle/merchant)
 "dFq" = (
 /obj/effect/floor_decal/sign/small_f/decal,
-},
 /turf/simulated/floor/holofloor/wood,
 /area/holodeck/source_chess)
 "dFB" = (
