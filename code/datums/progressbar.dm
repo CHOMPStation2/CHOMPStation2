@@ -71,22 +71,9 @@
 				continue
 			progress_bar.listindex--
 
-<<<<<<< HEAD
-	var/list/bars = user.progressbars[bar.loc]
-	bars.Remove(src)
-	if(!bars.len)
-		LAZYREMOVE(user.progressbars, bar.loc)
-	animate(bar, alpha = 0, time = 5)
-	spawn(5)
-		if(client)
-			client.images -= bar
-		QDEL_NULL(bar)
-	. = ..()
-=======
 			progress_bar.bar.pixel_z = ICON_SIZE_Y + offset_y + (PROGRESSBAR_HEIGHT * (progress_bar.listindex - 1))
 			var/dist_to_travel = ICON_SIZE_Y + offset_y + (PROGRESSBAR_HEIGHT * (progress_bar.listindex - 1)) - PROGRESSBAR_HEIGHT
 			animate(progress_bar.bar, pixel_z = dist_to_travel, time = PROGRESSBAR_ANIMATION_TIME, easing = SINE_EASING)
->>>>>>> b3fb00d70d (Refactors do_after w/ TG's do_after (#18282))
 
 		LAZYREMOVEASSOC(user.progressbars, bar_loc, src)
 		user = null

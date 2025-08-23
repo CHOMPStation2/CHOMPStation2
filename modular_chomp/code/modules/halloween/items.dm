@@ -206,7 +206,7 @@
 	costumes = typesof(/obj/item/storage/box/halloween/)
 
 /obj/structure/boxpile/attack_hand(mob/living/user)
-	if(!do_after(user, 5 SECONDS, exclusive = TASK_USER_EXCLUSIVE))
+	if(!do_after(user, 5 SECONDS))
 		return
 	if(!user.ckey)
 		return
