@@ -5719,8 +5719,7 @@
 /area/awaymission/darkrp/outside)
 "hDU" = (
 /obj/effect/decal/cleanable/blood/tracks/suspicious{
-	dir = 5;
-	
+	dir = 5
 	},
 /turf/simulated/floor/carpet/blue,
 /area/awaymission/darkrp/plazahotel)
