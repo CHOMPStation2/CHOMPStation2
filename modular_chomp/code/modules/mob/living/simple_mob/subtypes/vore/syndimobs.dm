@@ -4,7 +4,7 @@
 	name = "commandotie"
 	desc = "The classic bioengineered longdog, now in treacherous anarchist flavor!"
 	tt_desc = "Otus robustus"
-	icon = 'modular_chomp/icons/mob/vore64x32_ch.dmi'
+	icon = 'icons/mob/vore64x32_ch.dmi'
 	icon_state = "syndotie_std"
 	icon_living = "syndotie_std"
 	icon_dead = "syndotie_std-dead"
@@ -76,7 +76,7 @@
 	name = "chubby commandotie"
 	desc = "The classic bioengineered longdog, now in treacherous anarchist flavor! This one is an absolute unit, too."
 	tt_desc = "Otus robustus"
-	icon = 'modular_chomp/icons/mob/vore64x32_ch.dmi'
+	icon = 'icons/mob/vore64x32_ch.dmi'
 	icon_state = "syndcotie_std"
 	icon_living = "syndcotie_std"
 	icon_dead = "syndcotie_std-dead"
@@ -164,7 +164,7 @@
 	name = "mercenary commandoggo"
 	desc = "A huge white furred wolfdog, wearing a blood red combat harness. They look ravenously hungry, too..."
 	tt_desc = "Canis maxdirus"
-	icon = 'modular_chomp/icons/mob/vore64x32_ch.dmi'
+	icon = 'icons/mob/vore64x32_ch.dmi'
 	faction = "syndicate"
 	icon_dead = "synddog_wht-dead"
 	icon_living = "synddog_wht"
@@ -213,7 +213,7 @@
 	name = "mercenary commandoggo"
 	desc = "A huge black furred wolfdog, wearing a blood red combat harness. They look ravenously hungry, too..."
 	tt_desc = "Canis maxdirus"
-	icon = 'modular_chomp/icons/mob/vore64x32_ch.dmi'
+	icon = 'icons/mob/vore64x32_ch.dmi'
 	faction = "syndicate"
 	icon_dead = "synddog_blk-dead"
 	icon_living = "synddog_blk"
@@ -259,7 +259,7 @@
 /mob/living/simple_mob/vore/wolftaur/syndicate
 	name = "mercenary commando"
 	desc = "A tough looking armored canid creature armed with a battle rifle."
-	icon = 'modular_chomp/icons/mob/vore64x32_ch.dmi'
+	icon = 'icons/mob/vore64x32_ch.dmi'
 	faction = "syndicate"
 	icon_dead = "synditaur"
 	icon_living = "synditaur"
