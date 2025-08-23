@@ -7842,9 +7842,7 @@
 /obj/mecha/combat/fighter/pinnace{
 	dir = 8
 	},
-/obj/machinery/mech_recharger{
-	icon = 'icons/turf/shuttle_alien_blue.dmi'
-	},
+/obj/machinery/mech_recharger/alien,
 /turf/simulated/floor/reinforced,
 /area/space)
 "fue" = (

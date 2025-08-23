@@ -16719,9 +16719,7 @@
 "aNL" = (
 /obj/structure/lattice,
 /obj/effect/catwalk_plated/white,
-/obj/machinery/mech_recharger{
-	icon = 'icons/turf/shuttle_alien_blue.dmi'
-	},
+/obj/machinery/mech_recharger/alien,
 /obj/mecha/combat/fighter/baron{
 	dir = 1
 	},
@@ -31047,9 +31045,7 @@
 "bOH" = (
 /obj/structure/lattice,
 /obj/effect/catwalk_plated/white,
-/obj/machinery/mech_recharger{
-	icon = 'icons/turf/shuttle_alien_blue.dmi'
-	},
+/obj/machinery/mech_recharger/alien,
 /turf/space,
 /area/harbor/Aft_Shuttlebay)
 "bOK" = (
@@ -61475,9 +61471,7 @@
 "hmH" = (
 /obj/structure/lattice,
 /obj/effect/catwalk_plated/white,
-/obj/machinery/mech_recharger{
-	icon = 'icons/turf/shuttle_alien_blue.dmi'
-	},
+/obj/machinery/mech_recharger/alien,
 /turf/space,
 /area/harbor/Star_Shuttlebay)
 "hnd" = (
@@ -70904,9 +70898,7 @@
 "jUJ" = (
 /obj/structure/lattice,
 /obj/effect/catwalk_plated/white,
-/obj/machinery/mech_recharger{
-	icon = 'icons/turf/shuttle_alien_blue.dmi'
-	},
+/obj/machinery/mech_recharger/alien,
 /turf/space,
 /area/harbor/For_Shuttlebay)
 "jUU" = (
@@ -119225,9 +119217,7 @@
 "xHj" = (
 /obj/structure/lattice,
 /obj/effect/catwalk_plated/white,
-/obj/machinery/mech_recharger{
-	icon = 'icons/turf/shuttle_alien_blue.dmi'
-	},
+/obj/machinery/mech_recharger/alien,
 /turf/space,
 /area/harbor/Port_Shuttlebay)
 "xHq" = (
