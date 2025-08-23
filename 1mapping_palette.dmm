@@ -23937,7 +23937,6 @@
 	pixel_y = 5
 	},
 /obj/machinery/smartfridge/survival_pod/abductor{
-	dir = 4;
 	name = "Ross-Traints";
 	req_access = list(777)
 	},
@@ -27831,7 +27830,6 @@
 /obj/item/radio/electropack,
 /obj/item/clothing/accessory/collar/shock,
 /obj/machinery/smartfridge/survival_pod/abductor{
-	dir = 4;
 	name = "Ross-Traints";
 	req_access = list(777)
 	},
@@ -31400,7 +31398,7 @@
 /obj/item/radio/electropack,
 /obj/item/clothing/accessory/collar/shock,
 /obj/machinery/smartfridge/survival_pod{
-	    dir = 2;
+	dir = 2;
 	name = "Ross-Traints";
 	req_access = list(777)
 	},
@@ -32302,7 +32300,7 @@
 /area/space)
 "vAo" = (
 /obj/machinery/smartfridge/survival_pod{
-	    dir = 2;
+	dir = 2;
 	name = "Scrap-Storage"
 	},
 /turf/simulated/floor/tiled/techfloor,

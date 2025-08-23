@@ -60628,7 +60628,7 @@
 "tKl" = (
 /obj/structure/table/glass,
 /obj/item/radio/redphone{
-	    name = "Virology Emergency Phone";
+	name = "Virology Emergency Phone";
 	anchored = 1;
 	canhear_range = 7;
 	pixel_y = 3

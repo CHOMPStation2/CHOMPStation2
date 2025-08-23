@@ -625,7 +625,7 @@
 	pixel_y = 8
 	},
 /obj/item/radio/redphone{
-	    name = "Virology Emergency Phone";
+	name = "Virology Emergency Phone";
 	anchored = 1;
 	canhear_range = 7;
 	pixel_x = -6;

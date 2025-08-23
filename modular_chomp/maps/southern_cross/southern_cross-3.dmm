@@ -28464,7 +28464,7 @@
 "bNQ" = (
 /obj/structure/table/glass,
 /obj/item/radio/redphone{
-	    name = "Surgery Emergency Phone";
+	name = "Surgery Emergency Phone";
 	anchored = 1;
 	canhear_range = 7
 	},

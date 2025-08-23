@@ -14056,7 +14056,7 @@
 "Do" = (
 /obj/structure/table/standard,
 /obj/item/radio/redphone{
-	    name = "Medical Emergency Phone";
+	name = "Medical Emergency Phone";
 	anchored = 1;
 	canhear_range = 1
 	},
