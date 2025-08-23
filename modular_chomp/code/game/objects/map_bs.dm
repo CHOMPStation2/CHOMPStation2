@@ -78,6 +78,12 @@
 	icon_state = "red_phone"
 	name = "Medical Emergency Phone"
 
+/obj/item/radio/surgery_emergency
+	frequency = 1487
+	icon = 'icons/obj/items.dmi'
+	icon_state = "red_phone"
+	name = "Surgery Emergency Phone"
+
 /obj/machinery/portable_atmospherics/powered/scrubber/huge/stationary/fluff_fan
 	desc = "A large machine releasing a constant gust of air."
 	icon = 'icons/obj/survival_pod.dmi'
