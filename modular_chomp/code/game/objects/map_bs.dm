@@ -53,3 +53,9 @@
 /turf/unsimulated/wall/concrete/turfpack/station/yellow
 	color = "#ebcd7c"
 	icon = 'icons/turf/wall_masks.dmi'
+
+/obj/item/gun/energy/laser/experimental_shit
+	icon = 'icons/obj/gun.dmi'
+	icon_state = "pulse"
+	name = "Expirmental Pulse Rifle"
+	firemodes = list(list("mode_name" = "normal", "fire_delay" = 8, "projectile_type" = /obj/item/projectile/beam/midlaser, "charge_cost" = 120),list("mode_name" = "suppressive", "fire_delay" = 5, "projectile_type" = /obj/item/projectile/beam/weaklaser, "charge_cost" = 30))
