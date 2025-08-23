@@ -1174,12 +1174,7 @@
 		I.exploit_for = WEAKREF(src)
 
 
-<<<<<<< HEAD
-/obj/Destroy()
-	// CHOMPEdit Start
-=======
 /obj/item/Destroy()
->>>>>>> 37779acf01 (Gets rid of hasvar usage and moves up some vars (#18262))
 	if(exploit_for)
 		var/mob/exploited = exploit_for.resolve()
 		exploited?.exploit_addons -= src
