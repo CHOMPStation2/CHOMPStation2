@@ -228,7 +228,7 @@
 		//CHOMPAdd Start
 		user.visible_message(span_filter_notice("[user] begins to lick \the [target.name] clean..."), span_notice("You begin to lick \the [target.name] clean..."))
 		busy = 1
-		if(do_after(user, 50, exclusive = TRUE))
+		if(do_after(user, 50))
 			to_chat(user, span_notice("You clean \the [target.name]."))
 			water.use_charge(5)
 			var/obj/effect/decal/cleanable/C = locate() in target
