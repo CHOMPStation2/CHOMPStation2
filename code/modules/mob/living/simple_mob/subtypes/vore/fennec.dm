@@ -55,12 +55,6 @@
 	pain_emote_3p = list("yelps", "whines", "barks", "growls")
 	species_sounds = "Vulpine"
 
-	// CHOMPAdd: Start :c
-	pain_emote_1p = list("yelp", "whine", "bark", "growl")
-	pain_emote_3p = list("yelps", "whines", "barks", "growls")
-	species_sounds = "Vulpine"
-	//CHOMPAdd End
-
 // Activate Noms!
 /mob/living/simple_mob/vore/fennec
 	vore_active = 1

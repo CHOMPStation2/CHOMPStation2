@@ -42,17 +42,6 @@
 	damage_type = BURN
 	check_armour = "laser"
 
-/obj/item/projectile/energy/inversion
-	name = "inversion blast"
-	icon = 'icons/obj/projectiles_impact.dmi'
-	icon_state = "impact_invert"
-	damage = 30 //old 15
-	armor_penetration = 60
-	damage_type = BURN
-	check_armour = "laser"
-	color = "#ffffff"
-	fire_sound = 'sound/weapons/spiderlunge.ogg'
-
 /obj/item/projectile/energy/mob/electric_spider
 	name = "stun beam"
 	icon_state = "impact_stun"
