@@ -2993,7 +2993,7 @@
 "cgL" = (
 /obj/item/target/alien,
 /turf/unsimulated/floor/wood{
-	    icon_state = "wood-broken2"
+	icon_state = "wood-broken2"
 	},
 /area/ninja_dojo/dojo)
 "chd" = (
