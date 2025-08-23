@@ -1,7 +1,3 @@
-//Variables to make certain things work. Consider sending upstream.
-/datum/seed
-	var/ai_mob_product = 0 //This variable determines whether or not a mob product is meant to be ai-controlled. If set to 0, mob products die without a player to control them.
-
 //////CHOMP PLANTS//////
 
 /datum/seed/soybean/sapbean
