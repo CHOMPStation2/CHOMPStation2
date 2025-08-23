@@ -617,9 +617,7 @@
 /turf/simulated/shuttle/floor/black,
 /area/shuttle/merchant)
 "agc" = (
-/obj/machinery/door/airlock{
-	icon = 'icons/obj/doors/Dooruranium.dmi'
-	},
+/obj/machinery/door/airlock/uranium_appearance,
 /turf/unsimulated/floor{
 	dir = 8;
 	icon_state = "wood"
@@ -1443,9 +1441,7 @@
 /turf/simulated/floor/wood/alt/parquet,
 /area/centcom/terminal)
 "aFi" = (
-/obj/machinery/door/airlock{
-	icon = 'icons/obj/doors/Dooruranium.dmi'
-	},
+/obj/machinery/door/airlock/uranium_appearance,
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
@@ -4064,9 +4060,7 @@
 /turf/simulated/floor/tiled/eris/cafe,
 /area/centcom/bar)
 "dCy" = (
-/obj/machinery/door/airlock{
-	icon = 'icons/obj/doors/Dooruranium.dmi'
-	},
+/obj/machinery/door/airlock/uranium_appearance,
 /turf/unsimulated/floor{
 	icon_state = "white"
 	},
@@ -10833,9 +10827,7 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/centcom/specops)
 "lxX" = (
-/obj/machinery/door/airlock{
-	icon = 'icons/obj/doors/Dooruranium.dmi'
-	},
+/obj/machinery/door/airlock/uranium_appearance,
 /turf/unsimulated/floor{
 	icon_state = "plating";
 	name = "plating"
@@ -10853,11 +10845,7 @@
 	},
 /area/skipjack_station)
 "lzn" = (
-/turf/unsimulated/wall{
-	icon = 'icons/obj/doors/Dooruranium.dmi';
-	icon_state = "door_closed";
-	name = "Sealed Door"
-	},
+/turf/unsimulated/wall/fake_uranium,
 /area/ninja_dojo/dojo)
 "lzv" = (
 /turf/unsimulated/floor{
