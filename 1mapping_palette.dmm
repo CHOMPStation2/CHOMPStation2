@@ -2810,12 +2810,8 @@
 /turf/simulated/floor/tiled,
 /area/space)
 "bUv" = (
-/obj/effect/decal/cleanable/blood/tracks{
-	color = "red";
-	desc = "Your instincts say you shouldn't be following these.";
-	dir = 4;
-	icon = 'icons/effects/blood.dmi';
-	icon_state = "tracks"
+/obj/effect/decal/cleanable/blood/tracks/suspicious{
+	dir = 4
 	},
 /turf/simulated/floor/outdoors/dirt,
 /area/space)
@@ -4831,15 +4827,6 @@
 /obj/structure/shuttle/engine/heater,
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/yellow,
 /turf/simulated/shuttle/wall/voidcraft/green,
-/area/space)
-"dmp" = (
-/obj/effect/decal/cleanable/blood/tracks{
-	color = "red";
-	desc = "Your instincts say you shouldn't be following these.";
-	icon = 'icons/effects/blood.dmi';
-	icon_state = "tracks"
-	},
-/turf/simulated/floor/outdoors/dirt,
 /area/space)
 "dmw" = (
 /turf/template_noop,
@@ -17908,12 +17895,8 @@
 /turf/simulated/floor/tiled/dark,
 /area/space)
 "mdx" = (
-/obj/effect/decal/cleanable/blood/tracks{
-	color = "red";
-	desc = "Your instincts say you shouldn't be following these.";
-	dir = 5;
-	icon = 'icons/effects/blood.dmi';
-	icon_state = "tracks"
+/obj/effect/decal/cleanable/blood/tracks/suspicious{
+	dir = 5
 	},
 /turf/simulated/floor/outdoors/dirt,
 /area/space)
@@ -28437,12 +28420,9 @@
 /turf/simulated/shuttle/floor/alienplating,
 /area/space)
 "sVQ" = (
-/obj/effect/decal/cleanable/blood/tracks{
-	color = "red";
-	desc = "Your instincts say you shouldn't be following these.";
+/obj/effect/decal/cleanable/blood/tracks/suspicious{
 	dir = 6;
-	icon = 'icons/effects/blood.dmi';
-	icon_state = "tracks"
+	
 	},
 /turf/simulated/floor/outdoors/dirt,
 /area/space)
@@ -41975,7 +41955,7 @@ noS
 uGy
 mYY
 mYY
-dmp
+bUv
 bUv
 sVQ
 mdx

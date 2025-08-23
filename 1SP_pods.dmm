@@ -8685,12 +8685,8 @@
 /obj/effect/decal/cleanable/blood/splatter{
 	color = "red"
 	},
-/obj/effect/decal/cleanable/blood/tracks{
-	color = "red";
-	desc = "Your instincts say you shouldn't be following these.";
-	dir = 4;
-	icon = 'icons/effects/blood.dmi';
-	icon_state = "tracks"
+/obj/effect/decal/cleanable/blood/tracks/suspicious{
+	dir = 4
 	},
 /turf/simulated/mineral/floor/ignore_mapgen/cave,
 /area/survivalpod/superpose/HydroCave)
@@ -12242,12 +12238,8 @@
 /turf/simulated/shuttle/floor/white,
 /area/template_noop)
 "iMp" = (
-/obj/effect/decal/cleanable/blood/tracks{
-	color = "red";
-	desc = "Your instincts say you shouldn't be following these.";
-	dir = 4;
-	icon = 'icons/effects/blood.dmi';
-	icon_state = "tracks"
+/obj/effect/decal/cleanable/blood/tracks/suspicious{
+	dir = 4
 	},
 /turf/simulated/floor/outdoors/dirt,
 /area/survivalpod/superpose/DragonCave)
@@ -27582,12 +27574,8 @@
 /area/survivalpod/superpose/CrashedInfestedShip)
 "sxA" = (
 /obj/structure/barricade,
-/obj/effect/decal/cleanable/blood/tracks{
-	color = "red";
-	desc = "Your instincts say you shouldn't be following these.";
-	dir = 4;
-	icon = 'icons/effects/blood.dmi';
-	icon_state = "tracks"
+/obj/effect/decal/cleanable/blood/tracks/suspicious{
+	dir = 4
 	},
 /turf/simulated/mineral/floor/ignore_mapgen/cave,
 /area/survivalpod/superpose/HydroCave)
@@ -28511,12 +28499,8 @@
 /turf/simulated/shuttle/plating/skipjack,
 /area/template_noop)
 "tiZ" = (
-/obj/effect/decal/cleanable/blood/tracks{
-	color = "red";
-	desc = "Your instincts say you shouldn't be following these.";
-	dir = 4;
-	icon = 'icons/effects/blood.dmi';
-	icon_state = "tracks"
+/obj/effect/decal/cleanable/blood/tracks/suspicious{
+	dir = 4
 	},
 /turf/simulated/floor/outdoors/rocks,
 /area/survivalpod/superpose/DragonCave)
@@ -31474,12 +31458,8 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/template_noop)
 "vvE" = (
-/obj/effect/decal/cleanable/blood/tracks{
-	color = "red";
-	desc = "Your instincts say you shouldn't be following these.";
-	dir = 4;
-	icon = 'icons/effects/blood.dmi';
-	icon_state = "tracks"
+/obj/effect/decal/cleanable/blood/tracks/suspicious{
+	dir = 4
 	},
 /turf/simulated/mineral/floor/ignore_mapgen/cave,
 /area/template_noop)

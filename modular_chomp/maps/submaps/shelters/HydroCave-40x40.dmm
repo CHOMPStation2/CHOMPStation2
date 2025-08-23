@@ -1925,12 +1925,8 @@
 /turf/simulated/floor/tiled,
 /area/survivalpod/superpose/HydroCave)
 "YE" = (
-/obj/effect/decal/cleanable/blood/tracks{
-	color = "red";
-	desc = "Your instincts say you shouldn't be following these.";
-	dir = 4;
-	icon = 'icons/effects/blood.dmi';
-	icon_state = "tracks"
+/obj/effect/decal/cleanable/blood/tracks/suspicious{
+	dir = 4
 	},
 /turf/simulated/mineral/floor/ignore_mapgen/cave,
 /area/template_noop)
