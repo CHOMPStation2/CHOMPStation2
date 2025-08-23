@@ -23,7 +23,6 @@
 	name = "Garmentier"
 	pixel_y = 0
 	req_access = list(777)
-	},
 
 /obj/machinery/smartfridge/survival_pod/dispenser1
 	desc = "A mysterious machine which can fabricate many tools for acquiring test subjects."
