@@ -208,3 +208,10 @@
 	icon = 'icons/obj/doors/Dooruranium.dmi'
 	icon_state = "door_closed"
 	name = "Sealed Door"
+
+/turf/simulated/floor/tiled/techfloor/grid/train
+	base_name = "maglev rails"
+	desc = "Train go brrrr."
+	icon = 'icons/turf/flooring/maglevs.dmi'
+	icon_state = "maglevup"
+	name = "maglev rails"
