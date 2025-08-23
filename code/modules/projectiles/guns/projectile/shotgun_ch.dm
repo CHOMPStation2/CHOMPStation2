@@ -32,4 +32,3 @@
 
 /obj/item/gun/projectile/shotgun/doublebarrel/sawn/alt/holy
 	ammo_type = /obj/item/ammo_casing/a12g/silver
-	holy = 1
