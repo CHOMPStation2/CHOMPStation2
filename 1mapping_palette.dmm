@@ -3468,12 +3468,8 @@
 /obj/item/cell/void,
 /obj/item/cell/void,
 /obj/item/gun/energy/sickshot,
-/obj/machinery/smartfridge/survival_pod{
-	desc = "A mysterious machine which can fabricate many tools for acquiring test subjects.";
-	icon = 'icons/obj/abductor_vr.dmi';
-	icon_base = "dispenser_2way";
-	icon_state = "dispenser_2way";
-	name = "Ro-Bust-Us"
+/obj/machinery/smartfridge/survival_pod/abductor{
+	dir = 2
 	},
 /obj/item/storage/box/handcuffs,
 /obj/item/storage/box/handcuffs,
@@ -3550,12 +3546,8 @@
 /turf/simulated/floor/wood/sif,
 /area/space)
 "cuj" = (
-/obj/machinery/smartfridge/survival_pod{
-	desc = "A mysterious machine which can fabricate many tools for acquiring test subjects.";
-	icon = 'icons/obj/abductor_vr.dmi';
-	icon_base = "dispenser_2way";
-	icon_state = "dispenser_2way";
-	name = "Implant-Co"
+/obj/machinery/smartfridge/survival_pod/abductor{
+	dir = 2
 	},
 /obj/item/implantcase/taser,
 /obj/item/implantcase/taser,
@@ -4152,12 +4144,7 @@
 /obj/item/radio/headset/syndicate,
 /obj/item/radio/headset/syndicate,
 /obj/item/radio/headset/syndicate,
-/obj/machinery/smartfridge/survival_pod{
-	desc = "A mysterious machine which can fabricate many tools for acquiring test subjects.";
-	dir = 4;
-	icon = 'icons/obj/abductor_vr.dmi';
-	icon_base = "dispenser_2way";
-	icon_state = "dispenser_2way";
+/obj/machinery/smartfridge/survival_pod/abductor{
 	name = "ID-Mart"
 	},
 /obj/item/card/id/casino{
@@ -5853,12 +5840,7 @@
 /obj/item/clothing/accessory/collar/shock,
 /obj/item/radio/electropack,
 /obj/item/clothing/accessory/collar/shock,
-/obj/machinery/smartfridge/survival_pod{
-	desc = "A mysterious machine which can fabricate many tools for acquiring test subjects.";
-	dir = 4;
-	icon = 'icons/obj/abductor_vr.dmi';
-	icon_base = "dispenser_2way";
-	icon_state = "dispenser_2way";
+/obj/machinery/smartfridge/survival_pod/abductor{
 	name = "Ross-Traints";
 	req_access = list(777)
 	},
@@ -7678,12 +7660,7 @@
 /obj/item/radio/bluespacehandset/linked/talon_prelinked,
 /obj/item/radio/bluespacehandset/linked/talon_prelinked,
 /obj/item/radio/bluespacehandset/linked/talon_prelinked,
-/obj/machinery/smartfridge/survival_pod{
-	desc = "A mysterious machine which can fabricate many tools for acquiring test subjects.";
-	dir = 4;
-	icon = 'icons/obj/abductor_vr.dmi';
-	icon_base = "dispenser_2way";
-	icon_state = "dispenser_2way";
+/obj/machinery/smartfridge/survival_pod/abductor{
 	name = "Translocate-R-US"
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -9321,12 +9298,8 @@
 /obj/structure/window/reinforced/survival_pod{
 	opacity = 1
 	},
-/obj/machinery/smartfridge/survival_pod{
-	desc = "A mysterious machine which can fabricate many tools for acquiring test subjects.";
-	icon = 'icons/obj/abductor_vr.dmi';
-	icon_base = "dispenser_2way";
-	icon_state = "dispenser_2way";
-	name = "Implant-Co"
+/obj/machinery/smartfridge/survival_pod/abductor{
+	dir = 2
 	},
 /obj/effect/floor_decal/techfloor{
 	dir = 6
@@ -11178,13 +11151,8 @@
 /obj/item/implanter,
 /obj/item/implanter,
 /obj/item/implanter,
-/obj/machinery/smartfridge/survival_pod{
-	desc = "A mysterious machine which can fabricate many tools for acquiring test subjects.";
-	dir = 4;
-	icon = 'icons/obj/abductor_vr.dmi';
-	icon_base = "dispenser_2way";
-	icon_state = "dispenser_2way";
-	name = "Implant-Co"
+/obj/machinery/smartfridge/survival_pod/abductor{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/space)
@@ -14618,11 +14586,7 @@
 	},
 /obj/item/handcuffs/legcuffs/fuzzy,
 /obj/item/handcuffs/legcuffs/fuzzy,
-/obj/machinery/smartfridge/survival_pod{
-	desc = "A mysterious machine which can fabricate many tools for acquiring test subjects.";
-	icon = 'icons/obj/abductor_vr.dmi';
-	icon_base = "dispenser_2way";
-	icon_state = "dispenser_2way";
+/obj/machinery/smartfridge/survival_pod/abductor{
 	name = "Ross-Traints";
 	req_access = list(777)
 	},
@@ -16013,11 +15977,8 @@
 /turf/simulated/floor/outdoors/dirt,
 /area/space)
 "kOg" = (
-/obj/machinery/smartfridge/survival_pod{
-	desc = "A mysterious machine which can fabricate many tools for acquiring test subjects.";
-	icon = 'icons/obj/abductor_vr.dmi';
-	icon_base = "dispenser_2way";
-	icon_state = "dispenser_2way";
+/obj/machinery/smartfridge/survival_pod/abductor{
+	    dir = 2;
 	name = "Translocate-R-US"
 	},
 /obj/item/gps/syndie,
@@ -18547,11 +18508,8 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/space)
 "mxW" = (
-/obj/machinery/smartfridge/survival_pod{
-	desc = "A mysterious machine which can fabricate many tools for acquiring test subjects.";
-	icon = 'icons/obj/abductor_vr.dmi';
-	icon_base = "dispenser_2way";
-	icon_state = "dispenser_2way";
+/obj/machinery/smartfridge/survival_pod/abductor{
+	dir = 2;
 	name = "ID-Mart"
 	},
 /obj/item/encryptionkey/syndicate,
@@ -18814,12 +18772,7 @@
 	pixel_x = -2;
 	pixel_y = 5
 	},
-/obj/machinery/smartfridge/survival_pod{
-	desc = "A mysterious machine which can fabricate many tools for acquiring test subjects.";
-	dir = 4;
-	icon = 'icons/obj/abductor_vr.dmi';
-	icon_base = "dispenser_2way";
-	icon_state = "dispenser_2way";
+/obj/machinery/smartfridge/survival_pod/abductor{
 	name = "Ross-Traints";
 	req_access = list(777)
 	},
@@ -23210,12 +23163,7 @@
 /obj/item/tank/emergency/oxygen/double,
 /obj/item/tank/emergency/oxygen/double,
 /obj/item/gun/energy/sickshot,
-/obj/machinery/smartfridge/survival_pod{
-	desc = "A mysterious machine which can fabricate many tools for acquiring test subjects.";
-	dir = 4;
-	icon = 'icons/obj/abductor_vr.dmi';
-	icon_base = "dispenser_2way";
-	icon_state = "dispenser_2way";
+/obj/machinery/smartfridge/survival_pod/abductor{
 	name = "UP-Duction";
 	req_access = list(777)
 	},
@@ -23988,12 +23936,8 @@
 	pixel_x = -2;
 	pixel_y = 5
 	},
-/obj/machinery/smartfridge/survival_pod{
-	desc = "A mysterious machine which can fabricate many tools for acquiring test subjects.";
+/obj/machinery/smartfridge/survival_pod/abductor{
 	dir = 4;
-	icon = 'icons/obj/abductor_vr.dmi';
-	icon_base = "dispenser_2way";
-	icon_state = "dispenser_2way";
 	name = "Ross-Traints";
 	req_access = list(777)
 	},
@@ -27886,12 +27830,8 @@
 /obj/item/clothing/accessory/collar/shock,
 /obj/item/radio/electropack,
 /obj/item/clothing/accessory/collar/shock,
-/obj/machinery/smartfridge/survival_pod{
-	desc = "A mysterious machine which can fabricate many tools for acquiring test subjects.";
+/obj/machinery/smartfridge/survival_pod/abductor{
 	dir = 4;
-	icon = 'icons/obj/abductor_vr.dmi';
-	icon_base = "dispenser_2way";
-	icon_state = "dispenser_2way";
 	name = "Ross-Traints";
 	req_access = list(777)
 	},
@@ -28404,14 +28344,7 @@
 /obj/structure/window/reinforced/survival_pod{
 	opacity = 1
 	},
-/obj/machinery/smartfridge/survival_pod{
-	desc = "A mysterious machine which can fabricate many tools for acquiring test subjects.";
-	dir = 4;
-	icon = 'icons/obj/abductor_vr.dmi';
-	icon_base = "dispenser_2way";
-	icon_state = "dispenser_2way";
-	name = "Implant-Co"
-	},
+/obj/machinery/smartfridge/survival_pod/abductor,
 /obj/effect/floor_decal/techfloor{
 	dir = 10
 	},
@@ -29907,13 +29840,7 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/space)
 "tSl" = (
-/obj/machinery/smartfridge/survival_pod{
-	desc = "A mysterious machine which can fabricate many tools for acquiring test subjects.";
-	icon = 'icons/obj/abductor_vr.dmi';
-	icon_base = "dispenser_2way";
-	icon_state = "dispenser_2way";
-	name = "Implant-Co"
-	},
+/obj/machinery/smartfridge/survival_pod/abductor,
 /obj/item/implantcase/taser,
 /obj/item/implantcase/taser,
 /obj/item/implantcase/taser,
@@ -31473,10 +31400,7 @@
 /obj/item/radio/electropack,
 /obj/item/clothing/accessory/collar/shock,
 /obj/machinery/smartfridge/survival_pod{
-	desc = "A mysterious machine which can fabricate many tools for acquiring test subjects.";
-	icon = 'icons/obj/abductor_vr.dmi';
-	icon_base = "dispenser_2way";
-	icon_state = "dispenser_2way";
+	    dir = 2;
 	name = "Ross-Traints";
 	req_access = list(777)
 	},
@@ -32378,10 +32302,7 @@
 /area/space)
 "vAo" = (
 /obj/machinery/smartfridge/survival_pod{
-	desc = "A mysterious machine which can fabricate many tools for acquiring test subjects.";
-	icon = 'icons/obj/abductor.dmi';
-	icon_base = "dispenser_2way";
-	icon_state = "dispenser";
+	    dir = 2;
 	name = "Scrap-Storage"
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -35063,10 +34984,7 @@
 /obj/item/healthanalyzer/phasic,
 /obj/item/healthanalyzer/phasic,
 /obj/machinery/smartfridge/survival_pod{
-	desc = "A mysterious machine which can fabricate many tools for acquiring test subjects.";
-	icon = 'icons/obj/abductor_vr.dmi';
-	icon_base = "dispenser_2way";
-	icon_state = "dispenser_2way";
+	dir = 2;
 	name = "Ross-Traints";
 	req_access = list(777)
 	},

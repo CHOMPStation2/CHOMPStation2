@@ -75,11 +75,7 @@
 /obj/item/coin/phoron,
 /obj/item/coin/phoron,
 /obj/item/coin/phoron,
-/obj/machinery/smartfridge/survival_pod{
-	icon = 'icons/obj/vending.dmi';
-	icon_base = "fridge_sci";
-	icon_contents = "chem";
-	icon_state = "fridge_sci";
+/obj/machinery/smartfridge/survival_pod/scifridge{
 	name = "Phoron storage";
 	pixel_y = 0
 	},

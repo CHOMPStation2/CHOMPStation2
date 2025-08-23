@@ -5500,11 +5500,8 @@
 /turf/simulated/floor/plating,
 /area/vr/powered/material)
 "eEr" = (
-/obj/machinery/smartfridge/survival_pod{
-	desc = "A mysterious machine which can fabricate many tools for acquiring test subjects.";
-	icon_base = "dispenser_2way";
-	icon_state = "dispenser_2way";
-	name = "Implant-Co"
+/obj/machinery/smartfridge/survival_pod/abductor{
+	dir = 2
 	},
 /obj/item/implanter,
 /obj/item/implanter,
@@ -20979,11 +20976,8 @@
 /obj/structure/window/reinforced/survival_pod{
 	opacity = 1
 	},
-/obj/machinery/smartfridge/survival_pod{
-	desc = "A mysterious machine which can fabricate many tools for acquiring test subjects.";
-	icon_base = "dispenser_2way";
-	icon_state = "dispenser_2way";
-	name = "Implant-Co"
+/obj/machinery/smartfridge/survival_pod/abductor{
+	dir = 2
 	},
 /obj/effect/floor_decal/techfloor{
 	dir = 6

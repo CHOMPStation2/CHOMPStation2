@@ -1530,12 +1530,8 @@
 /obj/item/clothing/accessory/storage/black_drop_pouches,
 /obj/item/storage/belt,
 /obj/item/clothing/accessory/poncho/thermal,
-/obj/machinery/smartfridge/survival_pod{
-	desc = "A mysterious machine which can fabricate many tools for acquiring test subjects.";
-	icon = 'icons/obj/abductor_vr.dmi';
-	icon_base = "dispenser_2way";
-	icon_state = "dispenser_2way";
-	name = "Implant-Co"
+/obj/machinery/smartfridge/survival_pod/abductor{
+	dir = 2
 	},
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/LargeAlienShip)
