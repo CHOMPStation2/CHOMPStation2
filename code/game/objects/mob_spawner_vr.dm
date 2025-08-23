@@ -289,7 +289,7 @@ It also makes it so a ghost wont know where all the goodies/mobs are.
 		/mob/living/simple_mob/vore/aggressive/rat = 30,
 		/mob/living/simple_mob/animal/passive/mouse = 30,
 		/mob/living/simple_mob/animal/passive/mouse/rat = 25,
-		// /mob/living/simple_mob/metroid/mine = 25, // Downstream
+		/mob/living/simple_mob/metroid/mine = 25, // Downstream //CHOMPEnable
 		/mob/living/simple_mob/vore/oregrub = 25,
 		/mob/living/simple_mob/vore/aggressive/dino = 20,
 		/mob/living/simple_mob/animal/space/carp = 20,
