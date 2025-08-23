@@ -203,12 +203,7 @@
 /turf/simulated/floor/reinforced,
 /area/shuttle/tabiranth)
 "af" = (
-/obj/machinery/portable_atmospherics/powered/scrubber/huge/stationary{
-	desc = "A large machine releasing a constant gust of air.";
-	icon = 'icons/obj/survival_pod.dmi';
-	icon_state = "fans";
-	name = "enviornmental regulation system"
-	},
+/obj/machinery/portable_atmospherics/powered/scrubber/huge/stationary/fluff_fan,
 /turf/simulated/floor/reinforced,
 /area/shuttle/tabiranth)
 "ag" = (
@@ -1628,34 +1623,10 @@
 /obj/item/storage/secure/briefcase/nsfw_pack_hybrid,
 /obj/item/ammo_casing/microbattery/medical/corpse_mend,
 /obj/item/ammo_casing/microbattery/medical/corpse_mend,
-/obj/item/cell/slime{
-	description_info = "This 'cell' holds a max charge of 20k and self recharges over time.";
-	icon = 'icons/obj/power.dmi';
-	icon_state = "icell";
-	maxcharge = 20000;
-	name = "slime core cell"
-	},
-/obj/item/cell/slime{
-	description_info = "This 'cell' holds a max charge of 20k and self recharges over time.";
-	icon = 'icons/obj/power.dmi';
-	icon_state = "icell";
-	maxcharge = 20000;
-	name = "slime core cell"
-	},
-/obj/item/cell/slime{
-	description_info = "This 'cell' holds a max charge of 20k and self recharges over time.";
-	icon = 'icons/obj/power.dmi';
-	icon_state = "icell";
-	maxcharge = 20000;
-	name = "slime core cell"
-	},
-/obj/item/cell/slime{
-	description_info = "This 'cell' holds a max charge of 20k and self recharges over time.";
-	icon = 'icons/obj/power.dmi';
-	icon_state = "icell";
-	maxcharge = 20000;
-	name = "slime core cell"
-	},
+/obj/item/cell/slime,
+/obj/item/cell/slime,
+/obj/item/cell/slime,
+/obj/item/cell/slime,
 /obj/item/slime_extract/pink,
 /obj/item/slime_extract/pink,
 /obj/item/slime_extract/pink,

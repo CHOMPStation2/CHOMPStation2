@@ -44,6 +44,19 @@
 	icon = 'icons/obj/machines/gateway_vr.dmi'
 	icon_state = "offcenter"
 
+/obj/effect/simple_portal/coords/old_sprite
+	icon = 'icons/obj/machines/gateway.dmi'
+	icon_state = "oncenter"
+	density = 0
+
+/obj/effect/simple_portal/coords/gateway_on
+	icon = 'icons/obj/machines/gateway.dmi'
+	icon_state = "on"
+
+/obj/effect/simple_portal/linked/gateway
+	icon = 'icons/obj/machines/gateway.dmi'
+	icon_state = "oncenter"
+
 /turf/simulated/shuttle/wall/no_join/orange
 	base_state = "orange"
 	icon = 'icons/turf/shuttle_orange.dmi'
@@ -64,3 +77,27 @@
 	icon = 'icons/obj/items.dmi'
 	icon_state = "red_phone"
 	name = "Medical Emergency Phone"
+
+/obj/machinery/portable_atmospherics/powered/scrubber/huge/stationary/fluff_fan
+	desc = "A large machine releasing a constant gust of air."
+	icon = 'icons/obj/survival_pod.dmi'
+	icon_state = "fans"
+	name = "enviornmental regulation system"
+
+/obj/machinery/computer/crew/abductor
+	icon = 'icons/obj/abductor.dmi'
+	icon_screen = null
+	icon_state = "console-c"
+
+/obj/machinery/cryopod/robot/borg_pod
+	base_icon_state = "borg_pod_closed"
+	icon = 'icons/obj/structures.dmi'
+	icon_state = "borg_pod_closed"
+	occupied_icon_state = "borg_pod_opened"
+
+/mob/living/simple_mob/vore/alienanimals/startreader/cutout
+	icon_living = "cutout_basic"
+	icon_dead = "cutout_basic"
+	icon_state = "cutout_basic"
+	icon = 'icons/obj/cardboard_cutout.dmi'
+	name = "stand-up figure?"

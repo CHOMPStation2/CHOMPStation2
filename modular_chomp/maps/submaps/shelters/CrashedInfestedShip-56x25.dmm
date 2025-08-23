@@ -2062,11 +2062,7 @@
 /turf/simulated/shuttle/floor/voidcraft,
 /area/survivalpod/superpose/CrashedInfestedShip)
 "PT" = (
-/obj/machinery/computer/crew{
-	icon = 'icons/obj/abductor_vr.dmi';
-	icon_screen = null;
-	icon_state = "console-c"
-	},
+/obj/machinery/computer/crew/abductor,
 /obj/effect/floor_decal/techfloor{
 	dir = 1
 	},
