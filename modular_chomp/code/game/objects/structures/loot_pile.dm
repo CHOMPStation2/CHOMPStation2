@@ -1,5 +1,5 @@
 /obj/structure/loot_pile/mecha/ripley/pirate
-	icon = 'modular_chomp/icons/mob/animal_ch.dmi'
+	icon = 'icons/mob/pirates.dmi'
 	icon_state = "pirate-broken"
 
 /obj/structure/loot_pile/maint/technical
