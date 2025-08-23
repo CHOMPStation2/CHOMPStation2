@@ -5296,7 +5296,6 @@
 #include "modular_chomp\code\modules\reagents\reagents\modapply.dm"
 #include "modular_chomp\code\modules\reagents\reagents\toxin.dm"
 #include "modular_chomp\code\modules\recycling\v_garbosystem.dm"
-#include "modular_chomp\code\modules\salvage\bags.dm"
 #include "modular_chomp\code\modules\shieldgen\shield_capacitor.dm"
 #include "modular_chomp\code\modules\shieldgen\shield_gen.dm"
 #include "modular_chomp\code\modules\spells\spells.dm"
