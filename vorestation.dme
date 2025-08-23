@@ -5014,7 +5014,6 @@
 #include "modular_chomp\code\game\mecha\secert\hades.dm"
 #include "modular_chomp\code\game\objects\items.dm"
 #include "modular_chomp\code\game\objects\map_bs.dm"
-#include "modular_chomp\code\game\objects\mob_spawner.dm"
 #include "modular_chomp\code\game\objects\trash_eating.dm"
 #include "modular_chomp\code\game\objects\effects\dark_growth.dm"
 #include "modular_chomp\code\game\objects\effects\explosion.dm"
