@@ -44,6 +44,7 @@
 	var/lights = 0
 	var/lights_power = 6
 	var/force = 0
+	var/damage_type = BRUTE
 
 	var/mech_faction = null
 	var/firstactivation = 0 			//It's simple. If it's 0, no one entered it yet. Otherwise someone entered it at least once.
@@ -1001,7 +1002,7 @@
 ////////  Health related procs  ////////
 ////////////////////////////////////////
 
-/obj/mecha/take_damage(amount, type="brute")
+/obj/mecha/take_damage(amount, type=BRUTE)
 	update_damage_alerts()
 	if(amount)
 		var/damage = absorbDamage(amount,type)
@@ -1150,10 +1151,9 @@
 		if(isliving(A))
 			var/mob/living/M = A
 			M.take_organ_damage(10)
-	else if(istype(A, /obj))
-		var/obj/O = A
+	else if(istype(A, /obj/item))
+		var/obj/item/O = A
 		if(O.throwforce)
-
 			var/pass_damage = O.throwforce
 			var/pass_damage_reduc_mod
 			if(pass_damage <= damage_minimum)//Too little to go through. //CHOMPedit temp_damage_mininum -> damage_minimum
