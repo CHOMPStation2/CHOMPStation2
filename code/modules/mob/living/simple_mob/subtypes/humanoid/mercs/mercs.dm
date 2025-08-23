@@ -38,7 +38,6 @@
 
 	// Grenade special attack vars
 	var/grenade_type = /obj/item/grenade/concussion
-	var/grenade_timer = 50	//CHOMPEdit
 	special_attack_cooldown = 45 SECONDS
 	var/grenade_timer = 50
 	special_attack_min_range = 2
