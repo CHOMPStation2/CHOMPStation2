@@ -1095,7 +1095,7 @@
 //=============================
 
 //Suslug's below
-
+/* CHOMPRemove Start Removing among us meme
 /mob/living/simple_mob/vore/alienanimals/catslug/suslug
 	name = "suslug"
 	desc = "A noodley bodied creature wearing a colorful space suit. Suspicious..."
@@ -1232,3 +1232,4 @@
 
 /mob/living/simple_mob/vore/alienanimals/catslug/suslug/color/light_yellow
 	color = COLOR_WHEAT
+*/// CHOMPRemove End
