@@ -5,3 +5,5 @@
 /obj/item/clothing/suit/space/emergency
 	can_breach = 1
 
+/obj/item/clothing/suit/space/void
+	can_breach = 0
