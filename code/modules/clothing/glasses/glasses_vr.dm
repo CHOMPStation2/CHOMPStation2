@@ -74,14 +74,7 @@
 	name = "tactical AR visor"
 	desc = "Special AR visor designed for security teams, protects your eyes and provides useful data. The red lights provide extra style and intimidation."
 	icon_state = "tacsecvis1"
-<<<<<<< HEAD
-	icon = 'icons/inventory/eyes/item_vr.dmi'
-	icon_override = 'icons/inventory/eyes/mob_vr.dmi'
-	enables_planes = list(VIS_CH_ID,VIS_CH_HEALTH_VR,VIS_CH_WANTED,VIS_CH_IMPTRACK,VIS_CH_IMPLOYAL,VIS_CH_IMPCHEM,VIS_AUGMENTED) // CHOMP EDIT Adding AR to the- well, AR visors. :3
-=======
-	enables_planes = list(VIS_CH_ID,VIS_CH_WANTED,VIS_CH_IMPTRACK,VIS_CH_IMPLOYAL,VIS_CH_IMPCHEM)
->>>>>>> 0efa9edee4 (clothing _vr dmi cleanup: eyewear and masks (#18292))
-	flash_protection = FLASH_PROTECTION_MODERATE
+	enables_planes = list(VIS_CH_ID,VIS_CH_HEALTH_VR,VIS_CH_WANTED,VIS_CH_IMPTRACK,VIS_CH_IMPLOYAL,VIS_CH_IMPCHEM,VIS_AUGMENTED) // CHOMP EDIT Adding AR to the- well, AR visors. :3	flash_protection = FLASH_PROTECTION_MODERATE
 	item_flags = AIRTIGHT
 	body_parts_covered = EYES
 	actions_types = list(/datum/action/item_action/hands_free/change_scanning_pattern)
@@ -121,11 +114,7 @@
 	item_state = "tajblind"
 	prescription = TRUE
 	body_parts_covered = EYES
-<<<<<<< HEAD
 	glasses_layer_above = TRUE //ChompEDIT
-	sprite_sheets = list(SPECIES_VOX = 'icons/inventory/eyes/mob_vox.dmi')
-=======
->>>>>>> 0efa9edee4 (clothing _vr dmi cleanup: eyewear and masks (#18292))
 
 /obj/item/clothing/glasses/hud/health/tajblind
 	name = "lightweight veil"
