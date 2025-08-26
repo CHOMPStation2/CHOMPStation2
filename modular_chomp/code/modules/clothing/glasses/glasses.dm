@@ -1,8 +1,6 @@
 /obj/item/clothing/glasses/omnihud/visor/tesh
 	name = "AR V-visor"
 	desc = "A modified VZR-AR visor refitted for Teshari."
-	icon = 'modular_chomp/icons/inventory/eyes/mob.dmi'
-	icon_override = 'modular_chomp/icons/inventory/eyes/mob.dmi'
 	icon_state = "AR_visor_tesh"
 	item_state = "AR_visor_tesh"
 	sprite_sheets = list(SPECIES_TESHARI = 'icons/inventory/eyes/mob_teshari.dmi')
@@ -10,11 +8,9 @@
 
 /obj/item/clothing/glasses/darksight
 	name = "voidviewer goggles"
-	desc = "Cryptic goggles designed for seeing beyond the viel of normality."
-
-	icon = 'modular_chomp/icons/inventory/eyes/glasses.dmi'
-	icon_override = 'modular_chomp/icons/inventory/eyes/mob.dmi'
+	desc = "Cryptic goggles designed for seeing beyond the veil of normality."
 	icon_state = "darksight"
+	item_state = "darksight"
 
 	actions_types = list(/datum/action/item_action/toggle_goggles)
 
