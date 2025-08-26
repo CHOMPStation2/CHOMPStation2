@@ -56,6 +56,7 @@
 		src.visible_message(span_red("\The [src] moves a little!"))
 		to_chat(user, span_red("You throw yourself against the inside of \the [src]!"))
 
+<<<<<<< HEAD
 //Mask
 /obj/item/clothing/mask
 	name = "mask"
@@ -88,6 +89,8 @@
 
 //"Spider" 		= 'icons/inventory/mask/mob_spider.dmi' Add this later when they have custom mask sprites and everything.
 
+=======
+>>>>>>> 0efa9edee4 (clothing _vr dmi cleanup: eyewear and masks (#18292))
 /obj/item/clothing/under
 	sensor_mode = 3
 	var/sensorpref = 5
