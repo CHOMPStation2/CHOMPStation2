@@ -381,7 +381,11 @@
 	src.modules += new /obj/item/rcd/electric/mounted/borg(src)
 	src.modules += new /obj/item/pickaxe/plasmacutter/borg(src)
 	src.modules += new /obj/item/dogborg/stasis_clamp(src)
+<<<<<<< HEAD
 	src.modules += new /obj/item/holosign_creator/combifan(src) //CHOMPAdd
+=======
+	src.modules += new /obj/item/storage/pouch/eng_parts/borg(src)
+>>>>>>> 7541b443aa (storage to part install (#18311))
 
 	var/datum/matter_synth/metal = new /datum/matter_synth/metal(40000)
 	var/datum/matter_synth/glass = new /datum/matter_synth/glass(40000)
