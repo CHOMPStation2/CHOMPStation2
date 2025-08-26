@@ -54,25 +54,13 @@
 
 /obj/item/clothing/under/solgov/utility/army/olive
 	name = "olive fatigues"
-<<<<<<< HEAD
 	desc = "An olive version of the USDF marine utility uniform, made from durable material." //YW EDIT: TCG to USDF
-	icon = 'icons/inventory/uniform/item_vr.dmi'
-	icon_override = 'icons/inventory/uniform/mob_vr.dmi'
-=======
-	desc = "An olive version of the TCG marine utility uniform, made from durable material."
->>>>>>> 3e6f781a71 (clothing _vr dmi cleanup: undersuits [IDB IGNORE] (#18295))
 	icon_state = "bdu_olive"
 	item_state = "bdu_olive"
 
 /obj/item/clothing/under/solgov/utility/army/desert
 	name = "desert fatigues"
-<<<<<<< HEAD
 	desc = "A desert version of the USDF marine utility uniform, made from durable material." //YW EDIT: TCG to USDF
-	icon = 'icons/inventory/uniform/item_vr.dmi'
-	icon_override = 'icons/inventory/uniform/mob_vr.dmi'
-=======
-	desc = "A desert version of the TCG marine utility uniform, made from durable material."
->>>>>>> 3e6f781a71 (clothing _vr dmi cleanup: undersuits [IDB IGNORE] (#18295))
 	icon_state = "bdu_olive"
 	item_state = "bdu_olive"
 
