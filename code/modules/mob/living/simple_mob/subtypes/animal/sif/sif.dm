@@ -10,4 +10,4 @@
 	/obj/item/reagent_containers/food/snacks/meat = 10
 	)
 
-	can_be_drop_prey = FALSE //CHOMP Add
+	can_be_drop_prey = FALSE

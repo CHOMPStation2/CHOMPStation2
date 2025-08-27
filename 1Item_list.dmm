@@ -6895,12 +6895,6 @@
 	icon_state = "vault"
 	},
 /area/survivalpod)
-"cbc" = (
-/obj/item/clothing/under/fluff/techpriestunder,
-/turf/simulated/fitness{
-	icon_state = "vault"
-	},
-/area/survivalpod)
 "cbg" = (
 /obj/item/clothing/under/teshari/smock/yellow,
 /turf/simulated/fitness{
@@ -9957,12 +9951,6 @@
 /area/survivalpod)
 "cVr" = (
 /obj/item/clothing/under/croptop,
-/turf/simulated/fitness{
-	icon_state = "vault"
-	},
-/area/survivalpod)
-"cVu" = (
-/obj/item/fluff/zekewatch,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -18162,12 +18150,6 @@
 /area/survivalpod)
 "fsA" = (
 /obj/item/clothing/accessory/solgov/department/supply,
-/turf/simulated/fitness{
-	icon_state = "vault"
-	},
-/area/survivalpod)
-"fsQ" = (
-/obj/item/clothing/accessory/fluff/zeta_blackwell_1,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -29828,20 +29810,8 @@
 	icon_state = "vault"
 	},
 /area/survivalpod)
-"iMb" = (
-/obj/item/clothing/mask/fluff/lucerna_1,
-/turf/simulated/fitness{
-	icon_state = "vault"
-	},
-/area/survivalpod)
 "iMf" = (
 /obj/item/gun/projectile/p92x/large/preban,
-/turf/simulated/fitness{
-	icon_state = "vault"
-	},
-/area/survivalpod)
-"iMh" = (
-/obj/item/clothing/accessory/medal/fluff/rindeimos,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -40813,12 +40783,6 @@
 	icon_state = "vault"
 	},
 /area/survivalpod)
-"lVY" = (
-/obj/item/clothing/shoes/boots/jackboots/fluff/techpriestboots,
-/turf/simulated/fitness{
-	icon_state = "vault"
-	},
-/area/survivalpod)
 "lWa" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/red,
 /turf/simulated/fitness{
@@ -45800,12 +45764,6 @@
 /area/survivalpod)
 "nsY" = (
 /obj/item/clothing/suit/storage/fluff/takirasuit,
-/turf/simulated/fitness{
-	icon_state = "vault"
-	},
-/area/survivalpod)
-"nta" = (
-/obj/item/clothing/gloves/fluff/techpriestgloves,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -52633,12 +52591,6 @@
 	icon_state = "vault"
 	},
 /area/survivalpod)
-"psB" = (
-/obj/item/clothing/suit/storage/fluff/techpriestrobes,
-/turf/simulated/fitness{
-	icon_state = "vault"
-	},
-/area/survivalpod)
 "psL" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/fitness{
@@ -58653,12 +58605,6 @@
 /area/survivalpod)
 "rlr" = (
 /obj/item/storage/box/syndie_kit/imp_aug/surge,
-/turf/simulated/fitness{
-	icon_state = "vault"
-	},
-/area/survivalpod)
-"rlt" = (
-/obj/item/toy/bosunwhistle/fluff/strix,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -75024,12 +74970,6 @@
 /area/survivalpod)
 "wan" = (
 /obj/item/clothing/under/color/aqua,
-/turf/simulated/fitness{
-	icon_state = "vault"
-	},
-/area/survivalpod)
-"war" = (
-/obj/item/clothing/under/swimsuit/fluff/zara_uniform,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -97395,7 +97335,7 @@ szS
 cQS
 naL
 xOD
-iMh
+bSW
 jFu
 ycT
 dsN
@@ -103866,7 +103806,7 @@ bSW
 uad
 xBi
 kSr
-psB
+bSW
 hax
 iEf
 ctD
@@ -105968,7 +105908,7 @@ hJY
 aKf
 idO
 vNP
-war
+bSW
 vDi
 uwB
 fmD
@@ -107146,7 +107086,7 @@ fzb
 nUa
 hro
 reS
-cVu
+bSW
 ovU
 bMs
 tFx
@@ -107172,7 +107112,7 @@ gJd
 iYE
 pKx
 rpk
-lVY
+bSW
 qhi
 uzy
 cRv
@@ -107361,14 +107301,14 @@ vQv
 iDV
 vUn
 xGQ
-fsQ
+bSW
 xvY
 mil
 cxS
 gLx
 mrd
 aRK
-nta
+bSW
 qhf
 psW
 cbR
@@ -107392,7 +107332,7 @@ qom
 pIL
 bup
 iCb
-cbc
+bSW
 wef
 tGu
 ceA
@@ -107775,7 +107715,7 @@ fVo
 vQT
 gSA
 eQD
-iMb
+bSW
 geU
 wyH
 mPI
@@ -107952,7 +107892,7 @@ brz
 dvK
 uhk
 iNY
-rlt
+bSW
 raD
 ujS
 xzZ

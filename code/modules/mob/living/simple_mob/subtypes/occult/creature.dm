@@ -33,8 +33,8 @@
 	can_pain_emote = FALSE
 
 
-	can_be_drop_prey = FALSE //CHOMP Add
-	can_pain_emote = FALSE // CHOMPEdit: Can't feel pain
+	can_be_drop_prey = FALSE
+	can_pain_emote = FALSE
 
 // Strong Variant
 /mob/living/simple_mob/creature/strong

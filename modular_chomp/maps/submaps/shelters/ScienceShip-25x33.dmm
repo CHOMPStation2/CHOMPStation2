@@ -566,11 +566,7 @@
 /turf/simulated/floor/tiled/steel_grid,
 /area/survivalpod/superpose/ScienceShip)
 "sH" = (
-/turf/simulated/shuttle/wall/no_join{
-	base_state = "orange";
-	icon = 'icons/turf/shuttle_orange.dmi';
-	icon_state = "orange"
-	},
+/turf/simulated/shuttle/wall/no_join/orange,
 /area/survivalpod/superpose/ScienceShip)
 "sI" = (
 /obj/structure/salvageable/console_os{
@@ -742,7 +738,6 @@
 /obj/item/clothing/shoes/footwraps,
 /obj/item/clothing/shoes/footwraps,
 /obj/item/clothing/shoes/footwraps,
-/obj/item/toy/bosunwhistle/fluff/strix,
 /obj/item/blobcore_chunk,
 /obj/item/towel/random,
 /obj/item/towel/random,
@@ -2079,12 +2074,10 @@
 /obj/item/ore/marble,
 /obj/item/ore/osmium,
 /obj/item/ore/rutile,
-/obj/item/toy/bosunwhistle/fluff/strix,
 /obj/item/toy/character/wizard,
 /obj/item/reagent_containers/hypospray/autoinjector/biginjector/mindbreaker/unidentified,
 /obj/item/reagent_containers/hypospray/autoinjector/biginjector/mindbreaker/unidentified,
 /obj/item/fluff/squeezetoy,
-/obj/item/fluff/zekewatch,
 /obj/item/fluff/fidgetspinner/red,
 /obj/item/storage/pill_bottle/dice_nerd,
 /turf/simulated/floor/wood,

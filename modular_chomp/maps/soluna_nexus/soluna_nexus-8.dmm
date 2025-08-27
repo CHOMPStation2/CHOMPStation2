@@ -807,12 +807,7 @@
 /turf/simulated/shuttle/wall,
 /area/shuttle/arrival/pre_game)
 "Xz" = (
-/obj/structure/showcase{
-	desc = "So that's how the shuttle moves on its own.";
-	icon = 'icons/mob/AI.dmi';
-	icon_state = "ai-red";
-	name = "Arrivals Announcement Computer"
-	},
+/obj/structure/showcase/AI,
 /turf/simulated/shuttle/floor{
 	icon_state = "floor_red"
 	},

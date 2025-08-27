@@ -14,17 +14,39 @@
 	icon = 'icons/turf/flooring/techfloor.dmi'
 	icon_state = "techfloor_grid"
 
+///Used for train.dmm
+/turf/unsimulated/floor/techfloor_grid/outdoors_tansit
+	icon = 'icons/turf/transit_vr.dmi'
+	outdoors = TRUE
+
 /turf/unsimulated/floor/maglev
 	name = "maglev track"
 	desc = "Magnetic levitation tram tracks. Caution! Electrified!"
 	icon = 'icons/turf/flooring/maglevs.dmi'
 	icon_state = "maglevup"
 
+/turf/unsimulated/floor/maglev/transit
+	icon = 'icons/turf/transit_vr.dmi'
+	outdoors = TRUE
+
 /turf/unsimulated/wall/transit
 	icon = 'icons/turf/transit_vr.dmi'
 
+/turf/unsimulated/wall/transit/outdoors
+	outdoors = TRUE
+
 /turf/unsimulated/floor/transit
 	icon = 'icons/turf/transit_vr.dmi'
+
+//Unsim turf to constantly fill the atmos in the area. Made for v5_outpost_build
+/turf/unsimulated/floor/steel/v5_snow
+	carbon_dioxide = 75
+	icon = 'icons/turf/outdoors.dmi'
+	icon_state = "snow"
+	nitrogen = 17
+	outdoors = 1
+	oxygen = 8
+	temperature = 150
 
 /obj/effect/floor_decal/transit/orange
 	icon = 'icons/turf/transit_vr.dmi'
@@ -41,10 +63,12 @@ VIRGO3B_TURF_CREATE(/turf/simulated/floor/outdoors/dirt)
 
 VIRGO3B_TURF_CREATE(/turf/simulated/floor/outdoors/grass/sif)
 /turf/simulated/floor/outdoors/grass/sif
+	/* CHOMPRemove Start
 	turf_layers = list(
 		/turf/simulated/floor/outdoors/rocks/virgo3b,
 		/turf/simulated/floor/outdoors/dirt/virgo3b
 		)
+	*/// CHOMPRemove End
 
 VIRGO3B_TURF_CREATE(/turf/simulated/floor/outdoors/rocks)
 VIRGO3B_TURF_CREATE(/turf/simulated/floor/tiled/steel_dirty)
@@ -196,3 +220,9 @@ VIRGO2_TURF_CREATE(/turf/simulated/floor/hull)
 	VIRGO3B_SET_ATMOS
 /turf/simulated/floor/virgo3b_indoors/update_graphic(list/graphic_add = null, list/graphic_remove = null)
 	return 0
+
+/turf/simulated/floor/virgo3b_indoors/dirt
+	desc = "Quite dirty!"
+	icon = 'icons/turf/outdoors.dmi'
+	icon_state = "dirt-dark"
+	name = "dirt"

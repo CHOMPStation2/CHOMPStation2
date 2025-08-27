@@ -40,14 +40,14 @@
 /obj/item/key/rover
 	name = "\improper ignition key" //CHOMPedit: Name update
 	desc = "A universal electronic tri-key for starting most Nanotrasen vehicles." //CHOMPedit: Desc update
-	icon = 'icons/obj/vehicles_vr.dmi'
+	icon = 'icons/obj/vehicles.dmi'
 	icon_state = "securikey"
 	w_class = ITEMSIZE_TINY
 
 /obj/vehicle/train/rover/trolley
 	name = "Train trolley"
 	desc = "A trolley designed to transport security equipment to a scene."
-	icon = 'icons/obj/vehicles_vr.dmi'
+	icon = 'icons/obj/vehicles.dmi'
 	icon_state = "secitemcarrierbot"
 	anchored = FALSE
 	passenger_allowed = 0

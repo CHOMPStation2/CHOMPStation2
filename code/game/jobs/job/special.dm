@@ -28,7 +28,7 @@
 /datum/job/centcom_officer/equip(var/mob/living/carbon/human/H)
 	. = ..()
 	if(.)
-		H.implant_loyalty(src)
+		H.implant_loyalty()
 //YW UNCOMMENTING END
 
 /*/datum/job/centcom_visitor //For Pleasure // You mean for admin abuse... -Ace

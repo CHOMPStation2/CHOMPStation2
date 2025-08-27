@@ -86,5 +86,5 @@
 
 	swarmling_type = /mob/living/simple_mob/animal/giant_spider/carrier/recursive
 
-/mob/living/simple_mob/animal/giant_spider/carrier/event // YW CHANGE
+/mob/living/simple_mob/animal/giant_spider/carrier/event
 	ai_holder_type = /datum/ai_holder/simple_mob/event

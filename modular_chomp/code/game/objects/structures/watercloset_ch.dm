@@ -95,7 +95,7 @@
 	else
 		var/list/bs_things = list()
 		var/bs_error = FALSE
-		for(var/item in bluespace_item_types)
+		for(var/item in GLOB.bluespace_item_types)
 			if(istype(F, item))
 				bs_error = TRUE
 			else

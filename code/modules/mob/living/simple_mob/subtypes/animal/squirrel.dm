@@ -50,7 +50,7 @@
 
 	var/static/list/overlays_cache = list()
 	var/do_seasons = TRUE
-	picked_color = FALSE //CHOMPedit: removed "var/" since we already have this defined for all simple_mobs.
+	picked_color = FALSE
 
 	allow_mind_transfer = TRUE
 
@@ -75,7 +75,6 @@
 	B.name = "stomach"
 	B.digest_mode = DM_SELECT
 	B.mode_flags = DM_FLAG_THICKBELLY
-//	B.belly_fullscreen = "yet_another_tumby" //Chompedit - Belly Fullscreen change
 	B.digest_brute = 1
 	B.digest_burn = 1
 	B.escapechance = 35

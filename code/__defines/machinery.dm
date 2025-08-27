@@ -1,5 +1,3 @@
-var/global/defer_powernet_rebuild = 0      // True if net rebuild will be called manually after an event.
-
 #define CELLRATE 0.002 // Multiplier for watts per tick <> cell storage (e.g., 0.02 means if there is a load of 1000 watts, 20 units will be taken from a cell per second)
 					// It's a conversion constant. power_used*CELLRATE = charge_provided, or charge_used/CELLRATE = power_provided
 #define SMESRATE 0.03333 // Same for SMESes. A different number for some reason.
@@ -68,7 +66,6 @@ var/global/defer_powernet_rebuild = 0      // True if net rebuild will be called
 #define NETWORK_INTERROGATION "Interrogation"
 #define NETWORK_TELECOM "Telecomms"
 #define NETWORK_TCOMMS "Telecommunications"	//YW ADD: needs to be defined here or it freaks out
-#define NETWORK_OUTSIDE "Outside"		//YW ADD: ditto
 #define NETWORK_SUBSTATIONS "Substations"	//YW ADD: and again
 #define NETWORK_EXPLORATION "Exploration"
 #define NETWORK_XENOBIO "Xenobiology"
@@ -80,6 +77,16 @@ var/global/defer_powernet_rebuild = 0      // True if net rebuild will be called
 #define NETWORK_ALARM_FIRE "Fire Alarms"
 #define NETWORK_TALON_HELMETS "TalonHelmets" //VOREStation Add
 #define NETWORK_TALON_SHIP "TalonShip" //VOREStation Add
+
+// CHOMPAdd Start
+#define NETWORK_THIRD_DECK "Third Deck"
+#define NETWORK_SECOND_DECK "Second Deck"
+#define NETWORK_FIRST_DECK "First Deck"
+#define NETWORK_SUPPLY "Supply"
+#define NETWORK_MAIN_OUTPOST "Main Outpost"
+#define NETWORK_CARRIER "Exploration Carrier"
+#define NETWORK_MAINT_DECK "Maintenance Deck"
+// CHHOMPAdd End
 
 // Those networks can only be accessed by pre-existing terminals. AIs and new terminals can't use them.
 var/list/restricted_camera_networks = list(NETWORK_ERT,NETWORK_MERCENARY,"Secret", NETWORK_COMMUNICATORS, NETWORK_EXPLORATION)

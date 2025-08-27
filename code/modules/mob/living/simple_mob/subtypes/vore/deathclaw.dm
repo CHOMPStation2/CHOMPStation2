@@ -15,7 +15,7 @@
 	female deathclaws will lay eggs in clusters, sired by the strongest male deathclaws in the pack, typically the alpha male.\
 	<br>\
 	These creatures are considered an invasive species, and thus hunters are encouraged to hunt them \
-	although they are cautioned when doing so due to the danger that the creature poses." //CHOMPedit
+	although they are cautioned when doing so due to the danger that the creature poses."
 	value = CATALOGUER_REWARD_HARD
 
 /mob/living/simple_mob/vore/aggressive/deathclaw
@@ -24,15 +24,15 @@
 	tt_desc = "Trioceros dominus"
 	catalogue_data = list(/datum/category_item/catalogue/fauna/deathclaw)
 
-	icon_dead = "deathclaw-dead"
-	icon_living = "deathclaw"
-	icon_state = "deathclaw"
-	icon = 'modular_chomp/icons/mob/vore64x64_ch.dmi' //CHOMPEdit changed filepath
+	icon_dead = "deathclaw_new-dead"
+	icon_living = "deathclaw_new"
+	icon_state = "deathclaw_new"
+	icon = 'icons/mob/vore64x64.dmi'
 	vis_height = 64
 
 	attacktext = list("mauled")
 
-	faction = FACTION_AWAYMISSION //makes away mobs fuckin' be on the same side.
+	faction = FACTION_AWAYMISSION // CHOMPEdit
 
 	maxHealth = 200
 	health = 200
@@ -70,7 +70,7 @@
 	vore_pounce_chance = 0 // Beat them into crit before eating.
 	vore_icons = SA_ICON_LIVING
 
-	can_be_drop_prey = FALSE //CHOMP Add
+	can_be_drop_prey = FALSE
 
 /mob/living/simple_mob/vore/aggressive/deathclaw/Login()
 	. = ..()
@@ -109,7 +109,6 @@
 	can_breakthrough = TRUE
 	violent_breakthrough = TRUE
 
-//YW Addition
 /mob/living/simple_mob/vore/aggressive/deathclaw/den
 
 	maxHealth = 400

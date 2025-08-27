@@ -1,36 +1,6 @@
 ###Files and folders specified here will never be tracked.
 
-#ignore misc VOREStation specified files
-vchat.db
-vchat.db*
-*.before
-*.pid
-
-#Ignore everything in datafolder and subdirectories
-/data/**/*
-/tmp/**/*
-/cache/**/*
-
-#Ignore byond config folder.
-/cfg/**/*
-
-#Ignore IDE files we don't need in the repo.
-/.vs/**/*
-/tgstation/FileContentIndex/**/*
-/FileContentIndex/**/*
-/v17/**/*
-/v18/**/*
-/v19/**/*
-/v20/**/*
-/v21/**/*
-/v22/**/*
-
-# Ignore compiled linux libs in the root folder, e.g. librust_g.so
-/*.so
-
 #Ignore compiled files and other files generated during compilation.
-*.mdme
-*.mdme.*
 *.dmb
 *.rsc
 *.m.dme
@@ -39,86 +9,9 @@ vchat.db*
 *.int
 *.backup
 
-### https://raw.github.com/github/gitignore/cc542de017c606138a87ee4880e5f06b3a306def/Global/Linux.gitignore
-
-*~
-
-# temporary files which can be created if a process still has a handle open of a deleted file
-.fuse_hidden*
-
-# KDE directory preferences
-.directory
-
-# Linux trash folder which might appear on any partition or disk
-.Trash-*
-
-
-### https://raw.github.com/github/gitignore/cc542de017c606138a87ee4880e5f06b3a306def/Global/Vim.gitignore
-
-# swap
-[._]*.s[a-w][a-z]
-[._]s[a-w][a-z]
-# session
-Session.vim
-# temporary
-.netrwhist
-*~
-# auto-generated tag files
-tags
-
-
-### https://raw.github.com/github/gitignore/cc542de017c606138a87ee4880e5f06b3a306def/Python.gitignore
-
-# Byte-compiled / optimized / DLL files
-__pycache__/
-*.py[cod]
-*$py.class
-
-# PyInstaller
-#  Usually these files are written by a python script from a template
-#  before PyInstaller builds the exe, so as to inject date/other infos into it.
-*.manifest
-*.spec
-
-# Installer logs
-pip-*.txt
-
-# Unit test / coverage reports
-.cache
-
-# pyenv
-.python-version
-
-# dotenv
-.env
-
-# IntelliJ IDEA / PyCharm (with plugin)
-.idea
-
-### https://raw.github.com/github/gitignore/cc542de017c606138a87ee4880e5f06b3a306def/Global/Windows.gitignore
-
-# Windows image file caches
+#ignore misc BYOND files
 Thumbs.db
-ehthumbs.db
-
-# Folder config file
-Desktop.ini
-
-# Recycle Bin used on file shares
-$RECYCLE.BIN/
-
-# Windows shortcuts
-*.lnk
-
-### https://raw.github.com/github/gitignore/cc542de017c606138a87ee4880e5f06b3a306def/Global/OSX.gitignore
-
-.DS_Store
-.AppleDouble
-.LSOverride
-
-#Sublime
-*.sublime-project
-*.sublime-workspace
+*.log
 *.before
 *.pyc
 *.pid
@@ -155,6 +48,9 @@ temp.dmi
 # JavaScript tools
 **/node_modules
 package-lock.json
+
+# CBT Things
+.cache
 
 # named byond versions config
 /tools/build/dm_versions.json

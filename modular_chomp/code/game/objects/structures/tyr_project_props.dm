@@ -521,5 +521,20 @@
 	anchored = 1
 	icon_state = "barbedwire-out"
 
+/obj/item/prop/tyrlore/expirmentvenom
+	name = "data disc"
+	desc = "An alien disc for storing data."
+	catalogue_data = list(/datum/category_item/catalogue/technology/tyr_expirment_poison)
+	icon_state = "old_sci_disc"
 
-
+/datum/category_item/catalogue/technology/tyr_expirment_poison
+	name = "Precursor Object - Tyr Data Disc Venom"
+	desc = "The following data has been corrupted. \
+	<br><br>\
+	Tseitgn rPeodi ahs ccnocuddle.\
+	nUti vporse to eb xetayodrriarn nuop rocagni boantcamts. \
+	Sirliam bio-erpeisxmnet fall to it's porses.\
+	Hoverew reyverco tdsen to be wfits, and otseh muenim or tihw a ucer rovep to be sunursabspale.\
+	Ntxe pets is to gntritea retfurh henenac the sosrpe, and deruce teh sethynict koovleor. \
+	Recommendation for integration with the Astral Sea protocols."
+	value = CATALOGUER_REWARD_HARD

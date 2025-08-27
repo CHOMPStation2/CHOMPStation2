@@ -253,12 +253,7 @@
 /obj/effect/floor_decal/corner/white/border{
 	dir = 1
 	},
-/obj/structure/showcase{
-	desc = "So that's how the shuttle moves on its own.";
-	icon = 'icons/mob/AI.dmi';
-	icon_state = "ai-red";
-	name = "Arrivals Announcement Computer"
-	},
+/obj/structure/showcase/ai,
 /turf/simulated/shuttle/floor/white,
 /area/shuttle/arrival/pre_game/simulated_grid)
 "qR" = (

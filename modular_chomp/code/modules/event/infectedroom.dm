@@ -13,7 +13,8 @@
 		/area/engineering/gravgen,
 		/area/maintenance,
 		/area/medical,
-		/area/rnd/test_area
+		/area/rnd/test_area,
+		/area/solar
 		)
 
 /datum/event/disease_outbreak/floor/setup()
@@ -73,6 +74,6 @@
 			V = new(pick_n_take(target_turfs))
 			V.viruses |= chosen_disease
 		else
-			var/obj/effect/decal/cleanable/mucus/M
+			var/mob/living/simple_mob/vore/aggressive/macrophage/M
 			M = new(pick_n_take(target_turfs))
-			M.viruses |= chosen_disease
+			M.infections |= chosen_disease

@@ -6,6 +6,7 @@
 
 /datum/shuttle/autodock/ferry/emergency/New()
 	..()
+	radio_connection = SSradio.add_object(src, frequency, null)
 	if(emergency_shuttle.shuttle)
 		CRASH("An emergency shuttle has already been defined.")
 	emergency_shuttle.shuttle = src
@@ -108,6 +109,17 @@
 
 	..(user)
 
+/datum/shuttle/autodock/ferry/emergency/escape
+	name = "Escape"
+	location = FERRY_LOCATION_OFFSITE
+	shuttle_area = /area/shuttle/escape
+	warmup_time = 10
+	landmark_offsite = "escape_cc"
+	landmark_station = "escape_station"
+	landmark_transition = "escape_transit"
+	move_time = SHUTTLE_TRANSIT_DURATION_RETURN
+	move_direction = SOUTH
+	docking_controller_tag = "escape_shuttle"
 
 
 /obj/machinery/computer/shuttle_control/emergency

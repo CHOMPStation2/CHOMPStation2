@@ -25,4 +25,4 @@
 /datum/job/blueshield/equip(var/mob/living/carbon/human/H)
 	. = ..()
 	if(.)
-		H.implant_loyalty(src)
+		H.implant_loyalty()

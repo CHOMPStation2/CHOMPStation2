@@ -179,7 +179,7 @@
 /obj/item/gun/energy/icelauncher
 	name = "Strange Pistol"
 	desc = "A homemade and somehow functional icicle launcher."
-	icon = 'icons/obj/gun_ch.dmi'
+	icon = 'icons/obj/gun.dmi'
 	icon_state = "ziplas"
 	item_state = "ziplas"
 	color = "#0000CC"

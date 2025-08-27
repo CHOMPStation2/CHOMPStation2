@@ -1528,9 +1528,7 @@
 /turf/simulated/floor/tiled/steel_ridged,
 /area/shuttle/tabiranth)
 "bO" = (
-/obj/machinery/mech_recharger{
-	icon = 'icons/turf/shuttle_alien_blue.dmi'
-	},
+/obj/machinery/mech_recharger/alien,
 /obj/mecha/combat/fighter/baron/loaded{
 	ground_capable = 1;
 	health = 600;
@@ -1612,34 +1610,10 @@
 /obj/item/storage/secure/briefcase/nsfw_pack_hybrid,
 /obj/item/ammo_casing/microbattery/medical/corpse_mend,
 /obj/item/ammo_casing/microbattery/medical/corpse_mend,
-/obj/item/cell/slime{
-	description_info = "This 'cell' holds a max charge of 20k and self recharges over time.";
-	icon = 'icons/obj/power.dmi';
-	icon_state = "icell";
-	maxcharge = 20000;
-	name = "slime core cell"
-	},
-/obj/item/cell/slime{
-	description_info = "This 'cell' holds a max charge of 20k and self recharges over time.";
-	icon = 'icons/obj/power.dmi';
-	icon_state = "icell";
-	maxcharge = 20000;
-	name = "slime core cell"
-	},
-/obj/item/cell/slime{
-	description_info = "This 'cell' holds a max charge of 20k and self recharges over time.";
-	icon = 'icons/obj/power.dmi';
-	icon_state = "icell";
-	maxcharge = 20000;
-	name = "slime core cell"
-	},
-/obj/item/cell/slime{
-	description_info = "This 'cell' holds a max charge of 20k and self recharges over time.";
-	icon = 'icons/obj/power.dmi';
-	icon_state = "icell";
-	maxcharge = 20000;
-	name = "slime core cell"
-	},
+/obj/item/cell/slime,
+/obj/item/cell/slime,
+/obj/item/cell/slime,
+/obj/item/cell/slime,
 /obj/item/slime_extract/pink,
 /obj/item/slime_extract/pink,
 /obj/item/slime_extract/pink,

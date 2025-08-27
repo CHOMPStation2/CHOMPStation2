@@ -122,14 +122,14 @@
 /obj/item/assembly/signaler/proc/set_frequency(new_frequency)
 	if(!frequency)
 		return
-	if(!radio_controller)
+	if(!SSradio)
 		addtimer(CALLBACK(src, PROC_REF(radio_checkup), new_frequency), 2 SECONDS)
 		return
 	set_radio(new_frequency)
 
 /obj/item/assembly/signaler/proc/radio_checkup(new_frequency)
 	PROTECTED_PROC(TRUE)
-	if(!radio_controller)
+	if(!SSradio)
 		return
 	set_radio(new_frequency)
 
@@ -137,9 +137,9 @@
 /obj/item/assembly/signaler/proc/set_radio(new_frequency)
 	PROTECTED_PROC(TRUE)
 	SHOULD_NOT_OVERRIDE(TRUE)
-	radio_controller.remove_object(src, frequency)
+	SSradio.remove_object(src, frequency)
 	frequency = new_frequency
-	radio_connection = radio_controller.add_object(src, frequency, RADIO_CHAT)
+	radio_connection = SSradio.add_object(src, frequency, RADIO_CHAT)
 //CHOMPedit BEGIN re-adds stealth removal
 /obj/item/assembly/signaler/process()
 	if(!deadman)
@@ -164,7 +164,7 @@
 //CHOMPedit end
 
 /obj/item/assembly/signaler/Destroy()
-	if(radio_controller)
-		radio_controller.remove_object(src,frequency)
+	if(SSradio)
+		SSradio.remove_object(src,frequency)
 	frequency = 0
 	. = ..()

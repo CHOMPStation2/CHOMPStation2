@@ -27,7 +27,7 @@
 /obj/item/reagent_containers/food/drinks/textmug
 	name = "mug with text"
 	desc = "A mug with something written on it."
-	icon = 'icons/obj/drinks_vr.dmi'
+	icon = 'icons/obj/drinks.dmi'
 	icon_state = "textmug"
 	volume = 30
 	center_of_mass_x = 15
@@ -134,12 +134,10 @@
 	desc = "A black and blue coffee mug decorated with the logo of Oculum Broadcast."
 	base_icon = "coffeecup_oculum"
 
-/* //CHOMPedit
 /obj/item/reagent_containers/food/drinks/glass2/coffeemug/talon
 	name = "\improper Talon coffee mug"
 	desc = "A teal colored coffee mug with the Talon star logo on its face."
 	base_icon = "coffeecup_talon"
-*/
 
 // Symbols, markings
 /obj/item/reagent_containers/food/drinks/glass2/coffeemug/one

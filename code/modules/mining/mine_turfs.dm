@@ -16,6 +16,14 @@ var/list/mining_overlay_cache = list()
 	icon_state = "Icerock"
 //YW add end
 
+//For the tram
+/turf/unsimulated/mineral/moving
+	icon = 'icons/turf/transit_vr.dmi'
+	icon_state = "rock"
+
+/turf/unsimulated/mineral/moving/outdoors
+	outdoors = TRUE
+
 /turf/simulated/mineral //wall piece
 	name = "rock"
 	icon = 'icons/turf/walls.dmi'
@@ -179,7 +187,7 @@ var/list/mining_overlay_cache = list()
 
 /turf/simulated/mineral/proc/update_general()
 	recalculate_directional_opacity()
-	if(ticker && ticker.current_state == GAME_STATE_PLAYING)
+	if(SSticker && SSticker.current_state == GAME_STATE_PLAYING)
 		reconsider_lights()
 		if(SSair)
 			SSair.mark_for_update(src)

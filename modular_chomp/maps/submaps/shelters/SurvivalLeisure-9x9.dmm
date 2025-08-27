@@ -20,12 +20,7 @@
 /obj/structure/fans{
 	pixel_y = 16
 	},
-/obj/machinery/smartfridge/survival_pod{
-	icon = 'icons/obj/vending.dmi';
-	icon_base = "smartfridge";
-	icon_contents = "boxes";
-	icon_state = "smartfridge";
-	name = "Advanced storage";
+/obj/machinery/smartfridge/survival_pod/boxes{
 	pixel_y = -14
 	},
 /obj/structure/table/reinforced,

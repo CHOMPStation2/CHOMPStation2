@@ -251,7 +251,7 @@
 /datum/job/lawyer/equip(var/mob/living/carbon/human/H)
 	. = ..()
 	if(.)
-		H.implant_loyalty(H)
+		H.implant_loyalty()
 //YW UNCOMMENTING END
 
 /datum/alt_title/ia_liaison

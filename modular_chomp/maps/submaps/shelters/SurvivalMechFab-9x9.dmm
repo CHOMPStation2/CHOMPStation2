@@ -1,8 +1,6 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "a" = (
-/obj/machinery/mecha_part_fabricator{
-	req_access = null
-	},
+/obj/machinery/mecha_part_fabricator_tg,
 /obj/machinery/light{
 	dir = 1
 	},

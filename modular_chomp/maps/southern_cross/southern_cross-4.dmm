@@ -4321,9 +4321,6 @@
 	name = "east bump";
 	pixel_x = 24
 	},
-/obj/structure/cable/green{
-	icon_state = "0-2"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/structure/catwalk,
 /obj/structure/disposalpipe/segment,
@@ -4710,9 +4707,6 @@
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/forestarboard)
 "dUZ" = (
-/obj/structure/cable/green{
-	icon_state = "1-2"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/structure/catwalk,
 /obj/structure/disposalpipe/segment,
@@ -5162,9 +5156,6 @@
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/forestarboard)
 "ejh" = (
-/obj/structure/cable/green{
-	icon_state = "1-2"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 10
@@ -5452,9 +5443,6 @@
 /turf/simulated/floor/carpet,
 /area/crew_quarters/heads/sc/hor/quarters)
 "esF" = (
-/obj/structure/cable/green{
-	icon_state = "1-2"
-	},
 /obj/machinery/light/small{
 	dir = 4
 	},
@@ -8258,6 +8246,9 @@
 /obj/effect/floor_decal/corner/blue/border{
 	dir = 4
 	},
+/obj/machinery/light_switch{
+	pixel_x = 36
+	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/thirddeck/central)
 "gsS" = (
@@ -8452,6 +8443,10 @@
 /obj/structure/cable/green,
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/blue/border,
+/obj/machinery/light_switch{
+	pixel_x = 11;
+	pixel_y = -24
+	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/thirddeck/starboard)
 "gEG" = (
@@ -8534,11 +8529,7 @@
 /turf/simulated/shuttle/wall,
 /area/shuttle/escape_pod7/station)
 "gJN" = (
-/turf/simulated/shuttle/wall/no_join{
-	base_state = "orange";
-	icon = 'icons/turf/shuttle_orange.dmi';
-	icon_state = "orange"
-	},
+/turf/simulated/shuttle/wall/no_join/orange,
 /area/shuttle/escape_pod7/station)
 "gKj" = (
 /obj/structure/disposalpipe/segment{
@@ -8687,10 +8678,6 @@
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/plating,
 /area/crew_quarters/heads/sc/chief/quarters)
-"gQO" = (
-/obj/structure/lattice,
-/turf/space,
-/area)
 "gRp" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -8962,11 +8949,7 @@
 /turf/simulated/floor/tiled,
 /area/maintenance/thirddeck/dormsstarboard/maintbar)
 "hgE" = (
-/turf/simulated/shuttle/wall/no_join{
-	base_state = "orange";
-	icon = 'icons/turf/shuttle_orange.dmi';
-	icon_state = "orange"
-	},
+/turf/simulated/shuttle/wall/no_join/orange,
 /area/shuttle/escape_pod8/station)
 "hgN" = (
 /obj/structure/bed/chair{
@@ -11722,7 +11705,6 @@
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/dormsatmos)
 "jKZ" = (
-/obj/item/toy/bosunwhistle/fluff/strix,
 /obj/structure/table/rack/shelf/steel,
 /obj/item/toy/colorballoon,
 /obj/item/toy/colorballoon,
@@ -12913,6 +12895,9 @@
 	pixel_x = 24
 	},
 /obj/structure/cable/green,
+/obj/machinery/light_switch{
+	pixel_x = 36
+	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/thirddeck/aft)
 "kQk" = (
@@ -15287,11 +15272,6 @@
 /turf/simulated/floor/wood,
 /area/bridge/meeting_room)
 "mXD" = (
-/obj/machinery/power/apc{
-	dir = 8;
-	name = "west bump";
-	pixel_x = -24
-	},
 /obj/structure/cable/green{
 	icon_state = "0-2"
 	},
@@ -15750,9 +15730,6 @@
 "nmK" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 10
-	},
-/obj/structure/cable{
-	icon_state = "2-8"
 	},
 /obj/structure/cable{
 	icon_state = "2-8"
@@ -17671,6 +17648,9 @@
 /obj/structure/cable/green{
 	icon_state = "0-2"
 	},
+/obj/machinery/light_switch{
+	pixel_x = 36
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/hallway/primary/thirddeck/stationgateway)
 "oOk" = (
@@ -17760,6 +17740,10 @@
 	},
 /obj/effect/floor_decal/corner/white/border{
 	dir = 1
+	},
+/obj/machinery/light_switch{
+	pixel_x = 11;
+	pixel_y = 24
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/thirddeck/aftportcentral)
@@ -17859,6 +17843,10 @@
 	},
 /obj/effect/floor_decal/corner/blue/border{
 	dir = 1
+	},
+/obj/machinery/light_switch{
+	pixel_x = 11;
+	pixel_y = 24
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/thirddeck/aftstarboardcentral)
@@ -22380,6 +22368,9 @@
 	pixel_x = 24
 	},
 /obj/structure/cable/green,
+/obj/machinery/light_switch{
+	pixel_x = 36
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/crew_quarters/thirddeck/vrroom)
 "sHc" = (
@@ -24923,6 +24914,10 @@
 	pixel_y = -24
 	},
 /obj/structure/cable/green,
+/obj/machinery/light_switch{
+	pixel_x = 11;
+	pixel_y = -24
+	},
 /turf/simulated/floor/tiled/freezer,
 /area/crew_quarters/toilet)
 "uNf" = (
@@ -27922,9 +27917,6 @@
 /area/maintenance/thirddeck/dormsstarboard)
 "wPw" = (
 /obj/random/trash,
-/obj/structure/cable{
-	icon_state = "1-8"
-	},
 /obj/structure/cable{
 	icon_state = "1-8"
 	},
@@ -48289,7 +48281,7 @@ dgt
 dgt
 dgt
 dgt
-gQO
+aqj
 aqj
 lQR
 dgt

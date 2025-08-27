@@ -5,19 +5,14 @@
 /area/submap/DeathDen)
 "aj" = (
 /obj/item/stool/padded,
-/obj/item/clothing/suit/storage/fluff/techpriestrobes,
-/turf/simulated/floor/wood/sif{
-	oxygen = 0
-	},
+/turf/simulated/floor/wood/sif/turfpack/sif,
 /area/submap/DeathDen)
 "as" = (
 /obj/structure/table/bench/wooden,
 /obj/effect/floor_decal/carpet{
 	dir = 1
 	},
-/turf/simulated/floor/wood/sif{
-	oxygen = 0
-	},
+/turf/simulated/floor/wood/sif/turfpack/sif,
 /area/submap/DeathDen)
 "av" = (
 /obj/structure/table/fancyblack,
@@ -30,13 +25,11 @@
 /obj/effect/floor_decal/carpet{
 	dir = 6
 	},
-/turf/simulated/floor/wood/sif{
-	oxygen = 0
-	},
+/turf/simulated/floor/wood/sif/turfpack/sif,
 /area/submap/DeathDen)
 "bK" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/wall/sifwood,
+/turf/simulated/wall/sifwood/turfpack/sif,
 /area/submap/DeathDen)
 "cQ" = (
 /mob/living/simple_mob/vore/aggressive/deathclaw{
@@ -50,9 +43,7 @@
 "dx" = (
 /obj/item/ammo_magazine/ammo_box/b12g/pellet,
 /obj/item/ammo_magazine/ammo_box/b12g/pellet,
-/turf/simulated/floor/wood/sif{
-	oxygen = 0
-	},
+/turf/simulated/floor/wood/sif/turfpack/sif,
 /area/submap/DeathDen)
 "ex" = (
 /obj/item/reagent_containers/food/snacks/candy_corn{
@@ -70,14 +61,12 @@
 /area/submap/DeathDen)
 "he" = (
 /obj/effect/gibspawner/human,
-/turf/simulated/floor/wood/sif{
-	oxygen = 0
-	},
+/turf/simulated/floor/wood/sif/turfpack/sif,
 /area/submap/DeathDen)
 "hq" = (
 /obj/structure/window/plastitanium/full,
 /obj/structure/grille/rustic,
-/turf/simulated/floor/tiled/asteroid_steel,
+/turf/simulated/floor/tiled/asteroid_steel/turfpack/sif,
 /area/submap/DeathDen)
 "hz" = (
 /obj/effect/decal/cleanable/dirt,
@@ -87,7 +76,7 @@
 "hJ" = (
 /mob/living/simple_mob/humanoid/clown,
 /obj/effect/gibspawner/human,
-/turf/simulated/floor/tiled/freezer,
+/turf/simulated/floor/tiled/freezer/turfpack/sif,
 /area/submap/DeathDen)
 "hL" = (
 /obj/structure/table/wooden_reinforced,
@@ -120,17 +109,13 @@
 /obj/effect/floor_decal/carpet{
 	dir = 10
 	},
-/turf/simulated/floor/wood/sif{
-	oxygen = 0
-	},
+/turf/simulated/floor/wood/sif/turfpack/sif,
 /area/submap/DeathDen)
 "jW" = (
 /obj/effect/floor_decal/carpet{
 	dir = 1
 	},
-/turf/simulated/floor/wood/sif{
-	oxygen = 0
-	},
+/turf/simulated/floor/wood/sif/turfpack/sif,
 /area/submap/DeathDen)
 "lx" = (
 /obj/structure/sink{
@@ -138,7 +123,7 @@
 	pixel_x = -12;
 	pixel_y = 2
 	},
-/turf/simulated/floor/tiled/freezer,
+/turf/simulated/floor/tiled/freezer/turfpack/sif,
 /area/submap/DeathDen)
 "mC" = (
 /obj/structure/table/fancyblack,
@@ -155,17 +140,6 @@
 	dir = 5
 	},
 /obj/item/storage/bible,
-/turf/simulated/floor/wood/sif{
-	oxygen = 0
-	},
-/area/submap/DeathDen)
-"mR" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/item/reagent_containers/food/snacks/candy_corn{
-	pixel_x = 6;
-	pixel_y = 4
-	},
-/obj/effect/map_helper/no_phaseshift/area,
 /turf/simulated/floor/wood/sif/turfpack/sif,
 /area/submap/DeathDen)
 "nl" = (
@@ -184,23 +158,19 @@
 	dir = 9
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/wood/sif{
-	oxygen = 0
-	},
+/turf/simulated/floor/wood/sif/turfpack/sif,
 /area/submap/DeathDen)
 "nG" = (
 /obj/structure/windoor_assembly,
 /obj/random/trash,
-/turf/simulated/floor/tiled/freezer,
+/turf/simulated/floor/tiled/freezer/turfpack/sif,
 /area/submap/DeathDen)
 "pz" = (
 /obj/item/reagent_containers/food/snacks/candy_corn{
 	pixel_x = 6;
 	pixel_y = 4
 	},
-/turf/simulated/floor/wood/sif{
-	oxygen = 0
-	},
+/turf/simulated/floor/wood/sif/turfpack/sif,
 /area/submap/DeathDen)
 "pE" = (
 /obj/effect/decal/cleanable/dirt,
@@ -211,20 +181,8 @@
 /obj/random/maintenance/medical,
 /turf/simulated/floor/wood/sif/turfpack/sif,
 /area/submap/DeathDen)
-"rn" = (
-/obj/structure/simple_door/sifwood,
-/turf/simulated/floor/wood/sif{
-	oxygen = 0
-	},
-/area/submap/DeathDen)
-"rO" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/outdoors/dirt{
-	outdoors = 0
-	},
-/area/template_noop)
 "si" = (
-/turf/simulated/floor/outdoors/dirt,
+/turf/simulated/floor/outdoors/dirt/turfpack/sif,
 /area/template_noop)
 "td" = (
 /obj/structure/gravemarker,
@@ -276,9 +234,7 @@
 	dir = 1
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/wood/sif{
-	oxygen = 0
-	},
+/turf/simulated/floor/wood/sif/turfpack/sif,
 /area/submap/DeathDen)
 "xh" = (
 /mob/living/simple_mob/vore/aggressive/deathclaw{
@@ -288,9 +244,7 @@
 	name = "young deathclaw"
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/outdoors/dirt{
-	outdoors = 0
-	},
+/turf/simulated/floor/outdoors/dirt/turfpack/sif,
 /area/template_noop)
 "xw" = (
 /obj/structure/table/wooden_reinforced,
@@ -304,7 +258,7 @@
 /obj/structure/table/wooden_reinforced,
 /obj/random/soap,
 /obj/item/flame/candle/everburn,
-/turf/simulated/floor/tiled/freezer,
+/turf/simulated/floor/tiled/freezer/turfpack/sif,
 /area/submap/DeathDen)
 "yA" = (
 /obj/item/reagent_containers/food/snacks/candy_corn,
@@ -314,9 +268,7 @@
 /obj/effect/floor_decal/carpet,
 /obj/effect/gibspawner/human,
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/wood/sif{
-	oxygen = 0
-	},
+/turf/simulated/floor/wood/sif/turfpack/sif,
 /area/submap/DeathDen)
 "zd" = (
 /turf/simulated/floor/wood/sif/turfpack/sif,
@@ -324,7 +276,7 @@
 "zS" = (
 /obj/random/soap,
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/tiled/freezer,
+/turf/simulated/floor/tiled/freezer/turfpack/sif,
 /area/submap/DeathDen)
 "Ay" = (
 /obj/structure/table/wooden_reinforced,
@@ -340,15 +292,11 @@
 	pixel_x = -6;
 	pixel_y = 6
 	},
-/turf/simulated/floor/wood/sif{
-	oxygen = 0
-	},
+/turf/simulated/floor/wood/sif/turfpack/sif,
 /area/submap/DeathDen)
 "AS" = (
 /obj/item/reagent_containers/food/snacks/candy_corn,
-/turf/simulated/floor/wood/sif{
-	oxygen = 0
-	},
+/turf/simulated/floor/wood/sif/turfpack/sif,
 /area/submap/DeathDen)
 "Bx" = (
 /obj/effect/decal/cleanable/dirt,
@@ -361,7 +309,7 @@
 /turf/simulated/floor/wood/sif/turfpack/sif,
 /area/submap/DeathDen)
 "Ct" = (
-/turf/simulated/mineral/ignore_mapgen,
+/turf/simulated/mineral/ignore_mapgen/sif,
 /area/template_noop)
 "Cv" = (
 /obj/structure/table/bench/wooden,
@@ -369,9 +317,7 @@
 /obj/random/maintenance/engineering,
 /obj/random/junk,
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/wood/sif{
-	oxygen = 0
-	},
+/turf/simulated/floor/wood/sif/turfpack/sif,
 /area/submap/DeathDen)
 "CJ" = (
 /obj/random/junk,
@@ -380,18 +326,11 @@
 /turf/simulated/floor/wood/sif/turfpack/sif,
 /area/submap/DeathDen)
 "CZ" = (
-/turf/simulated/floor/tiled/freezer,
+/turf/simulated/floor/tiled/freezer/turfpack/sif,
 /area/submap/DeathDen)
 "Dt" = (
 /obj/structure/grille/broken/rustic,
-/turf/simulated/floor/wood/sif{
-	oxygen = 0
-	},
-/area/submap/DeathDen)
-"EJ" = (
-/turf/simulated/floor/wood/sif{
-	oxygen = 0
-	},
+/turf/simulated/floor/wood/sif/turfpack/sif,
 /area/submap/DeathDen)
 "Fe" = (
 /obj/item/reagent_containers/food/snacks/candy_corn{
@@ -403,27 +342,21 @@
 	},
 /obj/random/maintenance/engineering,
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/wood/sif{
-	oxygen = 0
-	},
+/turf/simulated/floor/wood/sif/turfpack/sif,
 /area/submap/DeathDen)
 "FN" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/outdoors/dirt,
+/turf/simulated/floor/outdoors/dirt/turfpack/sif,
 /area/template_noop)
 "Gc" = (
 /obj/structure/table/bench/wooden,
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/wood/sif{
-	oxygen = 0
-	},
+/turf/simulated/floor/wood/sif/turfpack/sif,
 /area/submap/DeathDen)
 "Gr" = (
 /obj/item/clothing/head/psy_crown/gluttony,
 /obj/random/junk,
-/turf/simulated/floor/wood/sif{
-	oxygen = 0
-	},
+/turf/simulated/floor/wood/sif/turfpack/sif,
 /area/submap/DeathDen)
 "GT" = (
 /obj/effect/decal/cleanable/dirt,
@@ -451,9 +384,7 @@
 "IE" = (
 /obj/effect/floor_decal/carpet,
 /obj/random/maintenance/engineering,
-/turf/simulated/floor/wood/sif{
-	oxygen = 0
-	},
+/turf/simulated/floor/wood/sif/turfpack/sif,
 /area/submap/DeathDen)
 "JE" = (
 /obj/random/trash,
@@ -475,24 +406,15 @@
 	},
 /obj/random/trash,
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/wood/sif{
-	oxygen = 0
-	},
+/turf/simulated/floor/wood/sif/turfpack/sif,
 /area/submap/DeathDen)
-"KP" = (
-/turf/simulated/floor/outdoors/dirt{
-	outdoors = 0
-	},
-/area/template_noop)
 "KS" = (
 /obj/structure/table/fancyblack,
 /obj/effect/floor_decal/carpet{
 	dir = 4
 	},
 /obj/item/scrying,
-/turf/simulated/floor/wood/sif{
-	oxygen = 0
-	},
+/turf/simulated/floor/wood/sif/turfpack/sif,
 /area/submap/DeathDen)
 "Lb" = (
 /obj/structure/table/wooden_reinforced,
@@ -511,28 +433,26 @@
 /obj/structure/window/reinforced/tinted/frosted{
 	dir = 8
 	},
-/turf/simulated/floor/tiled/freezer,
+/turf/simulated/floor/tiled/freezer/turfpack/sif,
 /area/submap/DeathDen)
 "MI" = (
 /obj/structure/windoor_assembly,
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/tiled/freezer,
+/turf/simulated/floor/tiled/freezer/turfpack/sif,
 /area/submap/DeathDen)
 "MV" = (
-/turf/simulated/wall/sifwood,
+/turf/simulated/wall/sifwood/turfpack/sif,
 /area/submap/DeathDen)
 "OB" = (
 /obj/item/flame/lighter/zippo/gonzo,
 /obj/random/trash,
 /obj/random/junk,
-/turf/simulated/floor/wood/sif{
-	oxygen = 0
-	},
+/turf/simulated/floor/wood/sif/turfpack/sif,
 /area/submap/DeathDen)
 "Pj" = (
 /obj/structure/simple_door/sifwood,
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/plating/sif/planetuse,
+/turf/simulated/floor/wood/sif/turfpack/sif,
 /area/submap/DeathDen)
 "Ps" = (
 /obj/effect/decal/cleanable/dirt,
@@ -544,9 +464,7 @@
 /area/submap/DeathDen)
 "Qa" = (
 /obj/structure/table/bench/wooden,
-/turf/simulated/floor/wood/sif{
-	oxygen = 0
-	},
+/turf/simulated/floor/wood/sif/turfpack/sif,
 /area/submap/DeathDen)
 "QF" = (
 /obj/structure/gravemarker,
@@ -590,12 +508,6 @@
 /obj/item/storage/box/donut,
 /turf/simulated/floor/wood/sif/turfpack/sif,
 /area/submap/DeathDen)
-"RZ" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/wood/sif{
-	oxygen = 0
-	},
-/area/submap/DeathDen)
 "Sf" = (
 /obj/structure/table/wooden_reinforced,
 /obj/item/flame/candle/everburn,
@@ -618,16 +530,14 @@
 /obj/structure/toilet{
 	dir = 4
 	},
-/turf/simulated/floor/tiled/freezer,
+/turf/simulated/floor/tiled/freezer/turfpack/sif,
 /area/submap/DeathDen)
 "Tm" = (
-/turf/simulated/wall/cult,
+/turf/simulated/wall/cult/turfpack/sif,
 /area/submap/DeathDen)
 "Tx" = (
 /obj/machinery/power/supermatter/shard,
-/turf/simulated/floor/wood/sif{
-	oxygen = 0
-	},
+/turf/simulated/floor/wood/sif/turfpack/sif,
 /area/submap/DeathDen)
 "Xy" = (
 /obj/effect/decal/cleanable/dirt,
@@ -641,11 +551,6 @@
 	},
 /turf/simulated/floor/wood/sif/turfpack/sif,
 /area/submap/DeathDen)
-"Yr" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/map_helper/no_phaseshift,
-/turf/simulated/floor/wood/sif/turfpack/sif,
-/area/submap/DeathDen)
 "YA" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/wood/sif/turfpack/sif,
@@ -657,9 +562,7 @@
 	pixel_y = 4
 	},
 /obj/item/gun/projectile/deagle,
-/turf/simulated/floor/wood/sif{
-	oxygen = 0
-	},
+/turf/simulated/floor/wood/sif/turfpack/sif,
 /area/submap/DeathDen)
 
 (1,1,1) = {"
@@ -718,7 +621,7 @@ Sy
 QF
 si
 FN
-rO
+FN
 Ct
 Ct
 "}
@@ -737,8 +640,8 @@ MV
 MV
 MV
 Ct
-KP
-rO
+si
+FN
 xh
 Ct
 "}
@@ -758,8 +661,8 @@ lx
 MV
 Ct
 Ct
-rO
-rO
+FN
+FN
 FN
 "}
 (6,1,1) = {"
@@ -778,7 +681,7 @@ hJ
 MV
 Ct
 Ct
-KP
+si
 si
 Is
 "}
@@ -813,7 +716,7 @@ aa
 MV
 MV
 MV
-rn
+aa
 MV
 MV
 MV
@@ -829,13 +732,13 @@ Sf
 Ps
 JE
 ex
-mR
+Ps
 GU
 YA
 MV
 pz
 Kg
-RZ
+YA
 pz
 AQ
 MV
@@ -845,7 +748,7 @@ Is
 (10,1,1) = {"
 Is
 aa
-Yr
+YA
 Ps
 Xy
 Ps
@@ -875,7 +778,7 @@ YA
 MV
 OB
 wa
-RZ
+YA
 yA
 AS
 MV
@@ -906,8 +809,8 @@ Ct
 Is
 Is
 si
-rO
-KP
+FN
+si
 Ct
 MV
 MV
@@ -915,7 +818,7 @@ MV
 MV
 he
 jW
-EJ
+zd
 IE
 dx
 MV
@@ -926,18 +829,18 @@ Ct
 Is
 si
 si
-KP
-rO
+si
+FN
 Ct
 Ct
 Ct
 Ct
 MV
-EJ
+zd
 mC
 KS
 av
-EJ
+zd
 MV
 Ct
 Ct
@@ -947,7 +850,7 @@ Is
 Is
 Ct
 Ct
-rO
+FN
 xh
 Ct
 Ct
@@ -957,7 +860,7 @@ ZG
 AS
 aj
 Gr
-EJ
+zd
 MV
 Ct
 Ct
@@ -967,8 +870,8 @@ Is
 Ct
 Ct
 Ct
-KP
-rO
+si
+FN
 Ct
 Ct
 Ct
@@ -987,7 +890,7 @@ Is
 Ct
 Ct
 Ct
-KP
+si
 si
 si
 Ct

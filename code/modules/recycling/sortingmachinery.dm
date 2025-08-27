@@ -407,7 +407,7 @@
 	return
 
 /obj/machinery/disposal/deliveryChute/Bumped(var/atom/movable/AM) //Go straight into the chute
-	if(istype(AM, /obj/item/projectile) || istype(AM, /obj/effect) || istype(AM, /obj/mecha))	return
+	if(QDELETED(AM) || istype(AM, /obj/item/projectile) || istype(AM, /obj/effect) || istype(AM, /obj/mecha))	return
 	switch(dir)
 		if(NORTH)
 			if(AM.loc.y != src.loc.y+1) return
@@ -426,9 +426,8 @@
 		M.loc = src
 	src.flush()
 
-//Chompadd: Autocatch for stuff being thrown into disposal chutes..
 /obj/machinery/disposal/deliveryChute/hitby(atom/movable/AM)
-	if((istype(AM, /obj/item) || istype(AM, /mob/living)) && !istype(AM, /obj/item/projectile))
+	if(!QDELETED(AM) || (istype(AM, /obj/item) || istype(AM, /mob/living)) && !istype(AM, /obj/item/projectile))
 		switch(dir)
 			if(NORTH)
 				if(AM.loc.y != src.loc.y+1) return ..()
@@ -440,7 +439,6 @@
 				if(AM.loc.x != src.loc.x-1) return ..()
 		AM.forceMove(src)
 		src.flush()
-//Chompadd end
 
 /obj/machinery/disposal/deliveryChute/flush()
 	flushing = 1

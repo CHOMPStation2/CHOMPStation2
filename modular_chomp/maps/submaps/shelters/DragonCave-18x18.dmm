@@ -43,12 +43,8 @@
 /turf/simulated/floor/outdoors/newdirt,
 /area/survivalpod/superpose/DragonCave)
 "dc" = (
-/obj/effect/decal/cleanable/blood/tracks{
-	color = "red";
-	desc = "Your instincts say you shouldn't be following these.";
-	dir = 4;
-	icon = 'icons/effects/blood.dmi';
-	icon_state = "tracks"
+/obj/effect/decal/cleanable/blood/tracks/suspicious{
+	dir = 4
 	},
 /turf/simulated/floor/outdoors/rocks,
 /area/survivalpod/superpose/DragonCave)
@@ -218,12 +214,7 @@
 /area/survivalpod/superpose/DragonCave)
 "wy" = (
 /obj/effect/decal/cleanable/filth,
-/obj/effect/decal/cleanable/blood/tracks{
-	color = "red";
-	desc = "Your instincts say you shouldn't be following these.";
-	icon = 'icons/effects/blood.dmi';
-	icon_state = "tracks"
-	},
+/obj/effect/decal/cleanable/blood/tracks/suspicious,
 /turf/simulated/floor/outdoors/dirt,
 /area/survivalpod/superpose/DragonCave)
 "xc" = (
@@ -234,12 +225,7 @@
 /turf/simulated/floor/outdoors/newdirt,
 /area/survivalpod/superpose/DragonCave)
 "xL" = (
-/obj/effect/decal/cleanable/blood/tracks{
-	color = "red";
-	desc = "Your instincts say you shouldn't be following these.";
-	icon = 'icons/effects/blood.dmi';
-	icon_state = "tracks"
-	},
+/obj/effect/decal/cleanable/blood/tracks/suspicious,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/outdoors/dirt,
 /area/survivalpod/superpose/DragonCave)
@@ -268,21 +254,11 @@
 /turf/simulated/floor/outdoors/dirt,
 /area/survivalpod/superpose/DragonCave)
 "zp" = (
-/obj/effect/decal/cleanable/blood/tracks{
-	color = "red";
-	desc = "Your instincts say you shouldn't be following these.";
-	icon = 'icons/effects/blood.dmi';
-	icon_state = "tracks"
-	},
+/obj/effect/decal/cleanable/blood/tracks/suspicious,
 /turf/simulated/floor/outdoors/dirt,
 /area/survivalpod/superpose/DragonCave)
 "AK" = (
-/obj/effect/decal/cleanable/blood/tracks{
-	color = "red";
-	desc = "Your instincts say you shouldn't be following these.";
-	icon = 'icons/effects/blood.dmi';
-	icon_state = "tracks"
-	},
+/obj/effect/decal/cleanable/blood/tracks/suspicious,
 /turf/simulated/floor/outdoors/rocks,
 /area/survivalpod/superpose/DragonCave)
 "Bh" = (
@@ -301,12 +277,8 @@
 /turf/simulated/floor/outdoors/dirt,
 /area/survivalpod/superpose/DragonCave)
 "DI" = (
-/obj/effect/decal/cleanable/blood/tracks{
-	color = "red";
-	desc = "Your instincts say you shouldn't be following these.";
-	dir = 4;
-	icon = 'icons/effects/blood.dmi';
-	icon_state = "tracks"
+/obj/effect/decal/cleanable/blood/tracks/suspicious{
+	dir = 4
 	},
 /turf/simulated/floor/outdoors/dirt,
 /area/survivalpod/superpose/DragonCave)

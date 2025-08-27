@@ -19497,7 +19497,6 @@
 	anchored = 1;
 	canhear_range = 1;
 	frequency = 1487;
-	icon = 'icons/obj/items.dmi';
 	icon_state = "red_phone";
 	name = "Reception Emergency Phone";
 	pixel_x = -5
@@ -32115,7 +32114,7 @@
 /turf/simulated/floor/outdoors/grass/heavy,
 /area/surface/outside/plains/outpost)
 "nWX" = (
-/obj/turbolift_map_holder/southern_cross/port,
+/obj/turbolift_map_holder/relic_base/port,
 /turf/simulated/wall/elevator,
 /area/quartermaster/delivery)
 "nXu" = (
