@@ -20,7 +20,37 @@ hollifex - Diona
 inuzari - Diona
 jademanique - Xenochimera
 ktccd - Diona
+<<<<<<< HEAD
 khanivore - Protean
+=======
+kyrendragon - Black-Eyed Shadekin
+lavenderrs - Teppi
+lazzar - Black-Eyed Shadekin
+lazzar - Hanner
+lewzharri - Hanner
+lewzharri - Glamour Speak
+lianvee - Black-Eyed Shadekin
+lillianfyre - Xenochimera
+liquidfirefly - Protean
+lizehrd - Xenochimera
+looptyloo - Protean
+lordlag - Black-Eyed Shadekin
+lorgenz - Protean
+losstinspess - Protean
+losstinspess - Xenochimera
+lykojeyot - Black-Eyed Shadekin
+negatist - Protean
+madmulk9 - Protean
+magpiemayhem - Vox
+magpiemayhem - Xenochimera
+makkinindorn - Protean
+malfestio - Protean
+malfestio - Xenochimera
+marcobarko - Black-Eyed Shadekin
+marcobarko - Protean
+maxcaliber50 - Protean
+maxine64 - Xenochimera
+>>>>>>> 84e80164dc (Language whitelist (#18336))
 mewchild - Diona
 mewchild - Vox
 mrsebbi - Xenochimera
