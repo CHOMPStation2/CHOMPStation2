@@ -255,9 +255,6 @@ Thus, the two variables affect pump operation are set in New():
 			"You hear ratchet.")
 		deconstruct()
 
-<<<<<<< HEAD
-
-
 //CHOMPEdit Start - Adds TGStation keybinds to save our engineers some time.
 /obj/machinery/atmospherics/binary/pump/AltClick(mob/user)
 	user.setClickCooldown(DEFAULT_ATTACK_COOLDOWN)
@@ -282,7 +279,7 @@ Thus, the two variables affect pump operation are set in New():
 	else
 		to_chat(user, span_warning("Access denied."))
 //CHOMPEdit End
-=======
+
 /obj/machinery/atmospherics/binary/pump/high_power
 	icon = 'icons/atmos/volume_pump.dmi'
 	icon_state = "map_off"
@@ -304,4 +301,4 @@ Thus, the two variables affect pump operation are set in New():
 		icon_state = "off"
 	else
 		icon_state = "[use_power ? "on" : "off"]"
->>>>>>> f51a0f4d4d (Atmospheric Device Changes, Added Volume Pump (#18261))
+
