@@ -489,3 +489,18 @@
       rounded chairs
   - rscadd: Deep mining scanner will show some or all fluid pump fracking results
       depending on if advanced type or not
+2025-08-28:
+  CHOMPStation2StaffMirrorBot:
+  - qol: Made it so that you can Alt click reagent containers to set transfer volume.
+  - refactor: Changed transfer amounts to be set by number input rather than lists.
+  - rscadd: Made the luxury cabin capsules more feature-complete with fully privacy-enabled
+      dorms, as well as generally polishing and moving around a few things in them.
+  Diana:
+  - bugfix: Organ printer now shows left arms
+  - bugfix: Unattaching your left arm will now show a proper sprite
+  - bugfix: 'Skrell stomachs no longer require you to download Counter Strike: Source'
+  - bugfix: Loyalty potions now allow slime spawn to be eaten easily
+  - bugfix: Loyalty potion now immediately triggers a slime's mood changing, making
+      them able to be eaten.
+  Guti:
+  - bugfix: Fixed body scanner consoles lights staying on forever
