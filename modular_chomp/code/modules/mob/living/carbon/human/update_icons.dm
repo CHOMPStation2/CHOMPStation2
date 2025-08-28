@@ -34,9 +34,3 @@
 
 	apply_layer(SHOES_LAYER)
 	apply_layer(SHOES_LAYER_ALT)
-
-
-
-/mob/living/carbon/human/update_tail_showing()
-	. = ..()
-	update_vore_tail_sprite()
