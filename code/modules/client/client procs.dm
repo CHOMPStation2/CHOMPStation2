@@ -355,8 +355,8 @@
 					X << 'sound/voice/bcriminal.ogg' //ChompEDIT - back to beepsky
 				window_flash(X)
 		//VOREStation Edit end.
-	fully_created = TRUE
 	attempt_auto_fit_viewport()
+	fully_created = TRUE
 
 	// Now that we're fully initialized, use our prefs
 	if(prefs?.read_preference(/datum/preference/toggle/browser_dev_tools))
