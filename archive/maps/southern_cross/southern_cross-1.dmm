@@ -53770,7 +53770,7 @@
 /turf/simulated/floor/plating,
 /area/maintenance/research)
 "caR" = (
-/obj/structure/closet/secure_closet/RD,
+/obj/structure/closet/secure_closet/research_director,
 /obj/machinery/firealarm{
 	pixel_y = 24
 	},
@@ -75313,7 +75313,7 @@
 /turf/simulated/floor/plating,
 /area/maintenance/medbay)
 "cRs" = (
-/obj/structure/closet/secure_closet/CMO,
+/obj/structure/closet/secure_closet/chief_medical_officer,
 /obj/machinery/ai_status_display{
 	pixel_x = -32
 	},

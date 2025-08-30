@@ -23,7 +23,11 @@
 	icon_keyboard = "tech_key"
 	icon_screen = "supply"
 	light_color = "#b88b2e"
+<<<<<<< HEAD
 	//req_access = list(access_cargo) //CHOMPedit, removing hard access locks.
+=======
+	req_access = list(ACCESS_CARGO)
+>>>>>>> e956d13a6b (jobs, access and radio to defines (#18297))
 	circuit = /obj/item/circuitboard/supplycomp/control
 	authorization = SUP_SEND_SHUTTLE | SUP_ACCEPT_ORDERS
 

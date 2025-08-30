@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 /*
 Frequency range: 1200 to 1600
@@ -66,6 +67,9 @@ var/const/CSN_FREQ = 1365 //VOREStation Add
 var/const/OUT_FREQ = 1367 //CHOMPstation Add
 
 var/list/radiochannels = list(
+=======
+GLOBAL_LIST_INIT(radiochannels, list(
+>>>>>>> e956d13a6b (jobs, access and radio to defines (#18297))
 	CHANNEL_COMMON			= PUB_FREQ,
 	CHANNEL_SCIENCE			= SCI_FREQ,
 	CHANNEL_COMMAND			= COMM_FREQ,
@@ -86,8 +90,12 @@ var/list/radiochannels = list(
 	CHANNEL_SECURITY_1		= SEC_I_FREQ,
 	CHANNEL_TALON			= TALON_FREQ, //VOREStation Add
 	CHANNEL_CASINO			= CSN_FREQ,
+<<<<<<< HEAD
 	CHANNEL_OUTSIDER		= OUT_FREQ //CHOMPstation Add
 )
+=======
+))
+>>>>>>> e956d13a6b (jobs, access and radio to defines (#18297))
 
 // Hey, if anyone ever needs to update tgui/packages/tgui/constants.js with new radio channels
 // I've kept this around just for you.
@@ -96,8 +104,8 @@ var/list/radiochannels = list(
 	set category = "Generate TGUI Radio Constants"
 	var/list/channel_info = list()
 	for(var/i in RADIO_LOW_FREQ to RADIO_HIGH_FREQ)
-		for(var/key in radiochannels)
-			if(i == radiochannels[key])
+		for(var/key in GLOB.radiochannels)
+			if(i == GLOB.radiochannels[key])
 				channel_info.Add(list(list("name" = key, "freq" = i, "color" = frequency_span_class(i))))
 	for(var/list/channel in channel_info)
 		switch(channel["color"])
@@ -170,21 +178,3 @@ var/list/OFFMAP_FREQS = list(TALON_FREQ, CSN_FREQ, OUT_FREQ) //VOREStation Add C
 		return "expradio"
 	//VOREStation Add End
 	return "radio"
-
-/* filters */
-//When devices register with the radio controller, they might register under a certain filter.
-//Other devices can then choose to send signals to only those devices that belong to a particular filter.
-//This is done for performance, so we don't send signals to lots of machines unnecessarily.
-
-//This filter is special because devices belonging to default also recieve signals sent to any other filter.
-var/const/RADIO_DEFAULT = "radio_default"
-
-var/const/RADIO_TO_AIRALARM = "radio_airalarm" //air alarms
-var/const/RADIO_FROM_AIRALARM = "radio_airalarm_rcvr" //devices interested in recieving signals from air alarms
-var/const/RADIO_CHAT = "radio_telecoms"
-var/const/RADIO_ATMOSIA = "radio_atmos"
-var/const/RADIO_NAVBEACONS = "radio_navbeacon"
-var/const/RADIO_AIRLOCK = "radio_airlock"
-var/const/RADIO_SECBOT = "radio_secbot"
-var/const/RADIO_MULEBOT = "radio_mulebot"
-var/const/RADIO_MAGNETS = "radio_magnet"

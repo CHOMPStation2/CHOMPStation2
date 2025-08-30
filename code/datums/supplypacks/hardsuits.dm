@@ -16,10 +16,16 @@
 	cost = 150
 	containertype = /obj/structure/closet/crate/secure/gear
 	containername = "eva hardsuit crate"
+<<<<<<< HEAD
 	access = list(access_mining,
 				  access_eva,
 				  access_explorer, // CHOMP explo keep
 				  access_pilot)
+=======
+	access = list(ACCESS_MINING,
+				  ACCESS_EVA,
+				  ACCESS_PILOT)
+>>>>>>> e956d13a6b (jobs, access and radio to defines (#18297))
 	one_access = TRUE
 
 /datum/supply_pack/hardsuits/mining_rig
@@ -31,8 +37,8 @@
 	cost = 150
 	containertype = /obj/structure/closet/crate/secure/gear
 	containername = "industrial hardsuit crate"
-	access = list(access_mining,
-				  access_eva)
+	access = list(ACCESS_MINING,
+				  ACCESS_EVA)
 	one_access = TRUE
 
 /datum/supply_pack/hardsuits/medical_rig
@@ -44,7 +50,7 @@
 	cost = 150
 	containertype = /obj/structure/closet/crate/secure/gear
 	containername = "medical hardsuit crate"
-	access = access_medical
+	access = ACCESS_MEDICAL
 
 /datum/supply_pack/hardsuits/security_rig
 	name = "hazard hardsuit (empty)"
@@ -55,7 +61,7 @@
 	cost = 150
 	containertype = /obj/structure/closet/crate/secure/gear
 	containername = "hazard hardsuit crate"
-	access = access_armory
+	access = ACCESS_ARMORY
 
 /datum/supply_pack/hardsuits/science_rig
 	name = "ami hardsuit (empty)"
@@ -66,7 +72,7 @@
 	cost = 150
 	containertype = /obj/structure/closet/crate/secure/gear
 	containername = "ami hardsuit crate"
-	access = access_rd
+	access = ACCESS_RD
 
 /datum/supply_pack/hardsuits/ce_rig
 	name = "advanced hardsuit (empty)"
@@ -77,7 +83,7 @@
 	cost = 150
 	containertype = /obj/structure/closet/crate/secure/gear
 	containername = "advanced hardsuit crate"
-	access = access_ce
+	access = ACCESS_CE
 
 // CHOMPStation EDIT Start: Change Commonwealth to Solgov
 /datum/supply_pack/misc/solgov_medical_rig
@@ -88,8 +94,13 @@
 			)
 	cost = 250
 	containertype = /obj/structure/closet/crate/secure/gear
+<<<<<<< HEAD
 	containername = "Solgov medical hardsuit crate"
 	access = access_medical
+=======
+	containername = "Commonwealth medical hardsuit crate"
+	access = ACCESS_MEDICAL
+>>>>>>> e956d13a6b (jobs, access and radio to defines (#18297))
 
 /datum/supply_pack/misc/solgov_engineering_rig
 	name = "solgov engineering hardsuit (loaded)"
@@ -99,8 +110,13 @@
 			)
 	cost = 250
 	containertype = /obj/structure/closet/crate/secure/gear
+<<<<<<< HEAD
 	containername = "Solgov engineering hardsuit crate"
 	access = access_engine
+=======
+	containername = "Commonwealth engineering hardsuit crate"
+	access = ACCESS_ENGINE
+>>>>>>> e956d13a6b (jobs, access and radio to defines (#18297))
 
 // CHOMPStation EDIT End
 
@@ -113,7 +129,7 @@
 	cost = 250
 	containertype = /obj/structure/closet/crate/secure/gear
 	containername = "unathi breacher hardsuit crate"
-	access = access_armory
+	access = ACCESS_ARMORY
 
 /datum/supply_pack/hardsuits/zero_rig
 	name = "null hardsuit (jets)"

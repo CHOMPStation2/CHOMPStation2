@@ -126,9 +126,9 @@
 
 /datum/job/clown/get_access()
 	if(CONFIG_GET(flag/assistant_maint))
-		return list(access_maint_tunnels, access_entertainment, access_clown, access_tomfoolery)
+		return list(ACCESS_MAINT_TUNNELS, ACCESS_ENTERTAINMENT, ACCESS_CLOWN, ACCESS_TOMFOOLERY)
 	else
-		return list(access_entertainment, access_clown, access_tomfoolery)
+		return list(ACCESS_ENTERTAINMENT, ACCESS_CLOWN, ACCESS_TOMFOOLERY)
 
 /datum/job/mime
 	title = JOB_MIME
@@ -154,10 +154,14 @@
 
 /datum/job/mime/get_access()
 	if(CONFIG_GET(flag/assistant_maint))
-		return list(access_maint_tunnels, access_entertainment, access_tomfoolery, access_mime)
+		return list(ACCESS_MAINT_TUNNELS, ACCESS_ENTERTAINMENT, ACCESS_TOMFOOLERY, ACCESS_MIME)
 	else
+<<<<<<< HEAD
 		return list(access_entertainment, access_tomfoolery, access_mime)
 */ //CHOMPEDIT: END remove Mime/clown defines (These are alt titles of Entertainer on our codebase)
+=======
+		return list(ACCESS_ENTERTAINMENT, ACCESS_TOMFOOLERY, ACCESS_MIME)
+>>>>>>> e956d13a6b (jobs, access and radio to defines (#18297))
 
 /obj/item/card/id/civilian/lurker
 	desc = "A rather old and scuffed-looking ID. It seems legit, but something also seems very off somehow. Say, what's the issue/expiry date..?"
@@ -178,5 +182,5 @@
 	latejoin_only = 1
 	requestable = FALSE
 	outfit_type = /decl/hierarchy/outfit/maint_lurker
-	access = list(access_maint_tunnels)
-	minimal_access = list(access_maint_tunnels)
+	access = list(ACCESS_MAINT_TUNNELS)
+	minimal_access = list(ACCESS_MAINT_TUNNELS)

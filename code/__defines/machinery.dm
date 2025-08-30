@@ -78,6 +78,7 @@
 #define NETWORK_TALON_HELMETS "TalonHelmets" //VOREStation Add
 #define NETWORK_TALON_SHIP "TalonShip" //VOREStation Add
 
+<<<<<<< HEAD
 // CHOMPAdd Start
 #define NETWORK_THIRD_DECK "Third Deck"
 #define NETWORK_SECOND_DECK "Second Deck"
@@ -87,6 +88,12 @@
 #define NETWORK_CARRIER "Exploration Carrier"
 #define NETWORK_MAINT_DECK "Maintenance Deck"
 // CHHOMPAdd End
+=======
+//Camera networks
+#define NETWORK_TETHER "Tether"
+#define NETWORK_OUTSIDE "Outside"
+#define NETWORK_HALLS "Halls"
+>>>>>>> e956d13a6b (jobs, access and radio to defines (#18297))
 
 // Those networks can only be accessed by pre-existing terminals. AIs and new terminals can't use them.
 var/list/restricted_camera_networks = list(NETWORK_ERT,NETWORK_MERCENARY,"Secret", NETWORK_COMMUNICATORS, NETWORK_EXPLORATION)
