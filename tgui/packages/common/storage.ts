@@ -11,12 +11,16 @@ export const IMPL_HUB_STORAGE = 1;
 
 type StorageImplementation = typeof IMPL_MEMORY | typeof IMPL_HUB_STORAGE;
 
+<<<<<<< HEAD
 const INDEXED_DB_VERSION = 1;
 const INDEXED_DB_NAME = 'chomp'; // CHOMPEdit - CHOMPStation Localstore
 const INDEXED_DB_STORE_NAME = 'storage-v1';
 
 const READ_ONLY = 'readonly';
 const READ_WRITE = 'readwrite';
+=======
+const KEY_NAME = 'virgo';
+>>>>>>> 68ae666b21 (cleans up the storage  defines properly (#18373))
 
 type StorageBackend = {
   impl: StorageImplementation;
@@ -46,7 +50,11 @@ class HubStorageBackend implements StorageBackend {
   }
 
   async get(key: string): Promise<any> {
+<<<<<<< HEAD
     const value = await window.hubStorage.getItem(`chomp-${key}`); // CHOMPEdit
+=======
+    const value = await window.hubStorage.getItem(`${KEY_NAME}-${key}`);
+>>>>>>> 68ae666b21 (cleans up the storage  defines properly (#18373))
     if (typeof value === 'string') {
       return JSON.parse(value);
     }
@@ -54,11 +62,19 @@ class HubStorageBackend implements StorageBackend {
   }
 
   async set(key: string, value: any): Promise<void> {
+<<<<<<< HEAD
     window.hubStorage.setItem(`chomp-${key}`, JSON.stringify(value)); // CHOMPEdit
   }
 
   async remove(key: string): Promise<void> {
     window.hubStorage.removeItem(`chomp-${key}`); // CHOMPEdit
+=======
+    window.hubStorage.setItem(`${KEY_NAME}-${key}`, JSON.stringify(value));
+  }
+
+  async remove(key: string): Promise<void> {
+    window.hubStorage.removeItem(`${KEY_NAME}-${key}`);
+>>>>>>> 68ae666b21 (cleans up the storage  defines properly (#18373))
   }
 
   async clear(): Promise<void> {
