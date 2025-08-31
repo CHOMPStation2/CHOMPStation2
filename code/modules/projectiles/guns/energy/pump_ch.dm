@@ -82,7 +82,7 @@
 
 //Gun Locking Mechanism
 /obj/item/gun/energy/locked
-	req_access = list(access_armory) //for toggling safety
+	req_access = list(ACCESS_ARMORY) //for toggling safety
 	var/locked = 1
 	var/lockable = 1
 

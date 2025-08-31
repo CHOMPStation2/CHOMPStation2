@@ -17,7 +17,7 @@
 //Admin
 /obj/machinery/computer/shuttle_control/multi/administration
 	name = "shuttle control console"
-	req_access = list(access_cent_general)
+	req_access = list(ACCESS_CENT_GENERAL)
 	shuttle_tag = "Administration Shuttle"
 
 /datum/shuttle/autodock/multi/administration
@@ -47,7 +47,7 @@
 
 /obj/machinery/computer/shuttle_control/multi/centcom
 	name = "shuttle control console"
-	req_access = list(access_cent_general)
+	req_access = list(ACCESS_CENT_GENERAL)
 	shuttle_tag = "Centcom Transport Shuttle"
 
 /datum/shuttle/autodock/multi/centcom

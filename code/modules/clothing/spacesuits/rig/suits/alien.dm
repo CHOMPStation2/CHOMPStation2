@@ -101,7 +101,7 @@
 	armor = list(melee = 60, bullet = 50, laser = 40, energy = 15, bomb = 30, bio = 100, rad = 50)
 	emp_protection = 40 //change this to 30 if too high.
 
-	req_access = list(access_syndicate)
+	req_access = list(ACCESS_SYNDICATE)
 
 	cell_type =  /obj/item/cell/hyper
 
@@ -121,7 +121,7 @@
 	armor = list(melee = 40, bullet = 30, laser = 30, energy = 15, bomb = 30, bio = 100, rad = 50)
 	emp_protection = 40 //change this to 30 if too high.
 
-	req_access = list(access_syndicate)
+	req_access = list(ACCESS_SYNDICATE)
 
 	cell_type =  /obj/item/cell/hyper
 

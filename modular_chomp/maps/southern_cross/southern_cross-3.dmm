@@ -27225,7 +27225,7 @@
 /turf/simulated/floor/plating,
 /area/maintenance/substation/medical)
 "bIJ" = (
-/obj/structure/closet/secure_closet/CMO,
+/obj/structure/closet/secure_closet/chief_medical_officer,
 /obj/machinery/ai_status_display{
 	pixel_x = -32
 	},
@@ -40506,7 +40506,7 @@
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/heads/sc/hor)
 "cCK" = (
-/obj/structure/closet/secure_closet/RD,
+/obj/structure/closet/secure_closet/research_director,
 /obj/machinery/firealarm{
 	pixel_y = 24
 	},

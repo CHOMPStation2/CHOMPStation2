@@ -126,9 +126,9 @@
 
 /datum/job/clown/get_access()
 	if(CONFIG_GET(flag/assistant_maint))
-		return list(access_maint_tunnels, access_entertainment, access_clown, access_tomfoolery)
+		return list(ACCESS_MAINT_TUNNELS, ACCESS_ENTERTAINMENT, ACCESS_CLOWN, ACCESS_TOMFOOLERY)
 	else
-		return list(access_entertainment, access_clown, access_tomfoolery)
+		return list(ACCESS_ENTERTAINMENT, ACCESS_CLOWN, ACCESS_TOMFOOLERY)
 
 /datum/job/mime
 	title = JOB_MIME
@@ -154,9 +154,9 @@
 
 /datum/job/mime/get_access()
 	if(CONFIG_GET(flag/assistant_maint))
-		return list(access_maint_tunnels, access_entertainment, access_tomfoolery, access_mime)
+		return list(ACCESS_MAINT_TUNNELS, ACCESS_ENTERTAINMENT, ACCESS_TOMFOOLERY, ACCESS_MIME)
 	else
-		return list(access_entertainment, access_tomfoolery, access_mime)
+		return list(ACCESS_ENTERTAINMENT, ACCESS_TOMFOOLERY, ACCESS_MIME)
 */ //CHOMPEDIT: END remove Mime/clown defines (These are alt titles of Entertainer on our codebase)
 
 /obj/item/card/id/civilian/lurker
@@ -178,5 +178,5 @@
 	latejoin_only = 1
 	requestable = FALSE
 	outfit_type = /decl/hierarchy/outfit/maint_lurker
-	access = list(access_maint_tunnels)
-	minimal_access = list(access_maint_tunnels)
+	access = list(ACCESS_MAINT_TUNNELS)
+	minimal_access = list(ACCESS_MAINT_TUNNELS)

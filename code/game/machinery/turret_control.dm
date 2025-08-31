@@ -32,7 +32,8 @@
 	var/ailock = FALSE 	//Silicons cannot use this
 
 	var/syndicate = FALSE
-	req_access = list(access_ai_upload)
+
+	req_access = list(ACCESS_AI_UPLOAD)
 
 /obj/machinery/turretid/stun
 	enabled = TRUE

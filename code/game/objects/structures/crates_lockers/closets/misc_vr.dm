@@ -17,14 +17,14 @@
  */
 /obj/structure/closet/secure_closet/guncabinet/sidearm
 	name = "emergency weapon cabinet"
-	req_one_access = list(access_armory,access_captain)
+	req_one_access = list(ACCESS_ARMORY,ACCESS_CAPTAIN)
 
 	starts_with = list(
 		/obj/item/gun/energy/gun = 4)
 
 /obj/structure/closet/secure_closet/guncabinet/rifle
 	name = "rifle cabinet"
-	req_one_access = list(access_explorer,access_brig) //CHOMP explo keep
+	req_one_access = list(ACCESS_EXPLORER,ACCESS_BRIG) //CHOMP explo keep
 
 	starts_with = list(
 		/obj/item/ammo_magazine/clip/c762/hunter = 9,
@@ -39,7 +39,7 @@
 
 /obj/structure/closet/secure_closet/guncabinet/phase
 	name = "explorer weapon cabinet" //CHOMP explo keep
-	req_one_access = list(access_explorer,access_brig) //CHOMP explo keep
+	req_one_access = list(ACCESS_EXPLORER,ACCESS_BRIG) //CHOMP explo keep
 
 	starts_with = list(
 		/obj/item/gun/energy/locked/phasegun = 2,
@@ -52,7 +52,7 @@
  */
 /obj/structure/closet/secure_closet/explorer
 	name = "explorer locker" //CHOMP explo keep
-	req_access = list(access_explorer) //CHOMP explo keep
+	req_access = list(ACCESS_EXPLORER)
 	closet_appearance = /decl/closet_appearance/secure_closet/expedition/explorer
 
 	starts_with = list(
@@ -93,7 +93,7 @@
  */
 /obj/structure/closet/secure_closet/pathfinder
 	name = "pathfinder locker"
-	req_access = list(access_pathfinder) //CHOMP explo keep
+	req_access = list(ACCESS_PATHFINDER) //CHOMP explo keep
 	closet_appearance = /decl/closet_appearance/secure_closet/expedition/pathfinder
 
 	starts_with = list(
@@ -141,7 +141,7 @@
 /obj/structure/closet/secure_closet/sar
 	name = "field medic locker"
 	desc = "Supplies for a wilderness first responder."
-	req_access = list(access_medical_equip)
+	req_access = list(ACCESS_MEDICAL_EQUIP)
 	closet_appearance = /decl/closet_appearance/secure_closet/expedition/sar
 
 	starts_with = list(
@@ -193,7 +193,7 @@
  */
 /obj/structure/closet/secure_closet/pilot
 	name = "pilot locker"
-	req_access = list(access_pilot)
+	req_access = list(ACCESS_PILOT)
 	closet_appearance = /decl/closet_appearance/secure_closet/expedition/pilot
 
 	starts_with = list(

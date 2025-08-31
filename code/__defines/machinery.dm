@@ -78,6 +78,11 @@
 #define NETWORK_TALON_HELMETS "TalonHelmets" //VOREStation Add
 #define NETWORK_TALON_SHIP "TalonShip" //VOREStation Add
 
+//Camera networks
+#define NETWORK_TETHER "Tether"
+#define NETWORK_OUTSIDE "Outside"
+#define NETWORK_HALLS "Halls"
+
 // CHOMPAdd Start
 #define NETWORK_THIRD_DECK "Third Deck"
 #define NETWORK_SECOND_DECK "Second Deck"

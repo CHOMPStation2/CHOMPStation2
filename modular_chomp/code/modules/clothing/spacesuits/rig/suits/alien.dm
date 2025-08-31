@@ -42,7 +42,7 @@
 	rigsuit_min_pressure = 0							  // Min pressure the rig protects against when sealed
 
 	req_one_access = list()
-	req_access = list(access_engine)
+	req_access = list(ACCESS_ENGINE)
 	allowed = list(POCKET_GENERIC, POCKET_ALL_TANKS, POCKET_SECURITY, POCKET_SUIT_REGULATORS)
 	offline_vision_restriction = 1
 

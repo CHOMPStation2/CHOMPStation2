@@ -7,7 +7,7 @@
 	desc = "A large vending machine stocked with surplus uniforms, armor and pouches for exploration members."
 	vend_delay = 1
 	icon_state = "sec" // Placeholder
-	req_one_access = list(access_explorer,access_pilot,access_medical_equip)
+	req_one_access = list(ACCESS_EXPLORER,ACCESS_PILOT,ACCESS_MEDICAL_EQUIP)
 	products = list(
 				// Clothing
 					/obj/item/clothing/under/explorer = 10,
@@ -37,7 +37,7 @@
 	desc = "A large vending machine stocked with surplus phase, laser and ballistic weaponry for exploration members."
 	vend_delay = 1
 	icon_state = "sec" // Placeholder
-	req_one_access = list(access_explorer,access_pilot,access_medical_equip)
+	req_one_access = list(ACCESS_EXPLORER,ACCESS_PILOT,ACCESS_MEDICAL_EQUIP)
 	products = list(
 				// Phase
 					/obj/item/gun/energy/locked/phasegun/pistol = 10,
@@ -66,7 +66,7 @@
 	desc = "A large vending machine stocked with an assortment of miscellaneous equipment handy for explorers."
 	vend_delay = 1
 	icon_state = "sec" // Placeholder
-	req_one_access = list(access_explorer,access_pilot,access_medical_equip)
+	req_one_access = list(ACCESS_EXPLORER,ACCESS_PILOT,ACCESS_MEDICAL_EQUIP)
 	products = list(
 				/obj/item/cataloguer = 10,
 				/obj/item/cell/device = 10,
@@ -84,7 +84,7 @@
 	desc = "A large vending machine stocked with surplus uniforms and equipment for pilots."
 	vend_delay = 1
 	icon_state = "sec" // Placeholder
-	req_access = list(access_pilot)
+	req_access = list(ACCESS_PILOT)
 	products = list(
 				// Clothing
 					/obj/item/clothing/under/rank/pilot1 = 5,
@@ -103,7 +103,7 @@
 	desc = "A large vending machine stocked with surplus uniforms and equipment for field medics."
 	vend_delay = 1
 	icon_state = "sec" // Placeholder
-	req_access = list(access_medical_equip)
+	req_access = list(ACCESS_MEDICAL_EQUIP)
 	products = list(
 				// Clothing
 					/obj/item/clothing/under/explorer = 5,
@@ -202,5 +202,5 @@
 
 //Some stuff to let sec do things
 /obj/machinery/vending/nifsoft_shop
-	req_log_access = access_security
+	req_log_access = ACCESS_SECURITY
 	has_logs = 1

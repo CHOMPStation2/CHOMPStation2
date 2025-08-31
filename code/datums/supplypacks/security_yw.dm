@@ -6,4 +6,4 @@
 	cost = 100
 	containertype = /obj/structure/closet/crate/secure/gear
 	containername = "Loyalty Implants Lockbox crate"
-	access = access_heads
+	access = ACCESS_HEADS

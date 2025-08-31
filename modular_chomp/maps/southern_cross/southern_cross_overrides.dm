@@ -1,13 +1,8 @@
 /mob/living/silicon/robot/platform/explorer
-	req_access = list(access_explorer)
+	req_access = list(ACCESS_EXPLORER)
 
 /mob/living/silicon/robot/platform/cargo
-	req_access = list(access_cargo_bot)
-
-/obj/item/card/id/platform/Initialize(mapload)
-	. = ..()
-	// access |= access_explorer
-	// access |= access_pilot
+	req_access = list(ACCESS_CARGO_BOT)
 
 /obj/structure/dark_portal/hub
 	destination_station_areas = list(/area/hallway/primary/firstdeck/elevator)

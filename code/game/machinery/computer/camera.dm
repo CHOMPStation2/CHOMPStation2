@@ -327,7 +327,7 @@ GLOBAL_LIST_EMPTY(bodycamera_screens) // CHOMPEdit
 	desc = "Used to watch over mining operations."
 	icon_keyboard = "mining_key"
 	icon_screen = "mining"
-	network = list("Mining Outpost")
+	network = list(NETWORK_MINE)
 	circuit = /obj/item/circuitboard/security/mining
 	light_color = "#F9BBFC"
 
