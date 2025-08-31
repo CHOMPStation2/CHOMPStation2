@@ -567,3 +567,30 @@
   - bugfix: Fixes a bug where heat and cold discomfort alerts were cleared instantly
       outside of bellies.
   - bugfix: Fixes a SmartVend UI alphabetical ordering to use modern code.
+2025-08-31:
+  CHOMPStation2StaffMirrorBot:
+  - qol: bellies now have a display name option as their object names are unique
+  - qol: alters some message handling with owner struggle messages
+  - bugfix: size netgun build path
+  - maptweak: (Stellar Delight) Fixed a missing scrubber pipe in the Engineering Workshop.
+  - maptweak: (Stellar Delight) Fixed a misshapen air distro pipe in exploration.
+  - maptweak: (Stellar Delight) Fixed exploration disposals' pipes spitting items
+      out into each other.
+  - bugfix: program manager not properly reopening the main UI
+  - bugfix: stating robot laws failing
+  Will:
+  - rscadd: 'Bunsen burner, a table machine for simple distilling reactions in chemistry
+
+      add:chemical analyzer circuitboard'
+  - balance: chemical analyzer and smart centrifuge moved to their own techweb entry
+  - bugfix: chemical analyzer can be properly deconstructed
+  - bugfix: tin added to dexalin reaction as a possible inhibitor, to fix an issue
+      in the chemical refinery
+  - bugfix: reduce sodium distillation reaction no longer produces twice as much sodium
+      as it should, it also does not require a specific atmosphere anymore
+  - bugfix: vitals monitor techweb entry no longer accidentally overwritten by rtg
+      techweb entry
+  - code_imp: handle_reaction() properly returns true or false if the reaction was
+      successful or not
+  Zizzi:
+  - rscadd: Circuitry cloning.
