@@ -16,16 +16,10 @@
 	cost = 150
 	containertype = /obj/structure/closet/crate/secure/gear
 	containername = "eva hardsuit crate"
-<<<<<<< HEAD
-	access = list(access_mining,
-				  access_eva,
-				  access_explorer, // CHOMP explo keep
-				  access_pilot)
-=======
 	access = list(ACCESS_MINING,
 				  ACCESS_EVA,
+				  ACCESS_EXPLORER, // CHOMP explo keep
 				  ACCESS_PILOT)
->>>>>>> e956d13a6b (jobs, access and radio to defines (#18297))
 	one_access = TRUE
 
 /datum/supply_pack/hardsuits/mining_rig
@@ -94,13 +88,8 @@
 			)
 	cost = 250
 	containertype = /obj/structure/closet/crate/secure/gear
-<<<<<<< HEAD
 	containername = "Solgov medical hardsuit crate"
-	access = access_medical
-=======
-	containername = "Commonwealth medical hardsuit crate"
 	access = ACCESS_MEDICAL
->>>>>>> e956d13a6b (jobs, access and radio to defines (#18297))
 
 /datum/supply_pack/misc/solgov_engineering_rig
 	name = "solgov engineering hardsuit (loaded)"
@@ -110,13 +99,8 @@
 			)
 	cost = 250
 	containertype = /obj/structure/closet/crate/secure/gear
-<<<<<<< HEAD
 	containername = "Solgov engineering hardsuit crate"
-	access = access_engine
-=======
-	containername = "Commonwealth engineering hardsuit crate"
 	access = ACCESS_ENGINE
->>>>>>> e956d13a6b (jobs, access and radio to defines (#18297))
 
 // CHOMPStation EDIT End
 

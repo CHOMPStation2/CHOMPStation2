@@ -277,11 +277,7 @@
 	cost = 25
 	containertype = /obj/structure/closet/crate/secure/science
 	containername = "APLU \"Weasel\" Circuit Crate"
-<<<<<<< HEAD
-	access = access_robotics */
-=======
-	access = ACCESS_ROBOTICS
->>>>>>> e956d13a6b (jobs, access and radio to defines (#18297))
+	access = ACCESS_ROBOTICS */
 
 /datum/supply_pack/robotics/some_robolimbs
 	name = "Basic Robolimb Blueprints"

@@ -1,82 +1,11 @@
-<<<<<<< HEAD
-
-/*
-Frequency range: 1200 to 1600
-Radiochat range: 1441 to 1489 (most devices refuse to be tune to other frequency, even during mapmaking)
-Radio:
-1459 - standard radio chat
-1351 - Science
-1353 - Command
-1355 - Medical
-1357 - Engineering
-1359 - Security
-1341 - deathsquad
-1443 - Confession Intercom
-1347 - Cargo techs
-1349 - Service people
-Devices:
-1451 - tracking implant
-1457 - RSD default
-On the map:
-1311 for prison shuttle console (in fact, it is not used)
-1433 for engine components
-1435 for status displays
-1437 for atmospherics/fire alerts
-1439 for air pumps, air scrubbers, atmo control
-1441 for atmospherics - supply tanks
-1443 for atmospherics - distribution loop/mixed air tank
-1445 for bot nav beacons
-1447 for mulebot, secbot and ed209 control
-1449 for airlock controls, electropack, magnets
-1451 for toxin lab access
-1453 for engineering access
-1455 for AI access
-*/
-
-var/const/RADIO_LOW_FREQ	= 1200
-var/const/PUBLIC_LOW_FREQ	= 1441
-var/const/PUBLIC_HIGH_FREQ	= 1489
-var/const/RADIO_HIGH_FREQ	= 1600
-
-var/const/BOT_FREQ	= 1447
-var/const/COMM_FREQ = 1353
-var/const/ERT_FREQ	= 1345
-var/const/AI_FREQ	= 1343
-var/const/DTH_FREQ	= 1341
-var/const/SYND_FREQ = 1213
-var/const/RAID_FREQ	= 1277
-var/const/ENT_FREQ	= 1461 //entertainment frequency. This is not a diona exclusive frequency.
-var/const/BDCM_FREQ	= 1481 // CHOMPEdit
-
-// department channels
-var/const/PUB_FREQ = 1459
-var/const/SEC_FREQ = 1359
-var/const/ENG_FREQ = 1357
-var/const/MED_FREQ = 1355
-var/const/SCI_FREQ = 1351
-var/const/SRV_FREQ = 1349
-var/const/SUP_FREQ = 1347
-var/const/EXP_FREQ = 1361
-
-// internal department channels
-var/const/MED_I_FREQ = 1485
-var/const/SEC_I_FREQ = 1475
-
-var/const/TALON_FREQ = 1363 //VOREStation Add
-var/const/CSN_FREQ = 1365 //VOREStation Add
-var/const/OUT_FREQ = 1367 //CHOMPstation Add
-
-var/list/radiochannels = list(
-=======
 GLOBAL_LIST_INIT(radiochannels, list(
->>>>>>> e956d13a6b (jobs, access and radio to defines (#18297))
 	CHANNEL_COMMON			= PUB_FREQ,
 	CHANNEL_SCIENCE			= SCI_FREQ,
 	CHANNEL_COMMAND			= COMM_FREQ,
 	CHANNEL_MEDICAL			= MED_FREQ,
 	CHANNEL_ENGINEERING		= ENG_FREQ,
 	CHANNEL_SECURITY		= SEC_FREQ,
-	CHANNEL_BODYCAM			= BDCM_FREQ, // CHOMPEdit
+	CHANNEL_BODYCAM			= BDCM_FREQ, // CHOMPAdd
 	CHANNEL_RESPONSE_TEAM	= ERT_FREQ,
 	CHANNEL_SPECIAL_OPS		= DTH_FREQ,
 	CHANNEL_MERCENARY		= SYND_FREQ,
@@ -90,12 +19,8 @@ GLOBAL_LIST_INIT(radiochannels, list(
 	CHANNEL_SECURITY_1		= SEC_I_FREQ,
 	CHANNEL_TALON			= TALON_FREQ, //VOREStation Add
 	CHANNEL_CASINO			= CSN_FREQ,
-<<<<<<< HEAD
-	CHANNEL_OUTSIDER		= OUT_FREQ //CHOMPstation Add
-)
-=======
+	CHANNEL_OUTSIDER		= OUT_FREQ // CHOMPAdd
 ))
->>>>>>> e956d13a6b (jobs, access and radio to defines (#18297))
 
 // Hey, if anyone ever needs to update tgui/packages/tgui/constants.js with new radio channels
 // I've kept this around just for you.

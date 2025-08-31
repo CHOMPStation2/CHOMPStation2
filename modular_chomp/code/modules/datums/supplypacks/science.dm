@@ -4,4 +4,4 @@
 	containertype = /obj/structure/largecrate/animal/bugsect
 	containername = "EXTREMELY Dangerous Bug crate"
 	contraband = 1
-	access = access_xenobiology
+	access = ACCESS_XENOBIOLOGY

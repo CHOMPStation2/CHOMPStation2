@@ -260,18 +260,11 @@
 	cost = 75
 	containertype = /obj/structure/closet/crate/secure/gear
 	containername = "jetpack crate"
-<<<<<<< HEAD
-	access = list(access_mining,
-				  access_xenoarch,
-				  access_eva,
-				  access_explorer, //CHOMP explo keep
-				  access_pilot)
-=======
 	access = list(ACCESS_MINING,
 				  ACCESS_XENOARCH,
 				  ACCESS_EVA,
+				  ACCESS_EXPLORER, // CHOMP explo keep
 				  ACCESS_PILOT)
->>>>>>> e956d13a6b (jobs, access and radio to defines (#18297))
 	one_access = TRUE
 
 /datum/supply_pack/randomised/misc/explorer_shield
@@ -287,14 +280,9 @@
 	cost = 75
 	containertype = /obj/structure/closet/crate/secure/gear
 	containername = "exploration shield crate"
-<<<<<<< HEAD
-	access = list(access_explorer, //CHOMP explo keep
-				  access_eva,
-				  access_pilot)
-=======
-	access = list(ACCESS_EVA,
+	access = list(ACCESS_EXPLORER, // CHOMP explo keep
+				  ACCESS_EVA,
 				  ACCESS_PILOT)
->>>>>>> e956d13a6b (jobs, access and radio to defines (#18297))
 	one_access = TRUE
 
 /datum/supply_pack/misc/music_players
@@ -327,15 +315,9 @@
 	containertype = /obj/structure/closet/crate/secure/gear
 	containername = "exploration radio headsets crate"
 	access = list(
-<<<<<<< HEAD
-		access_explorer, //CHOMP explo keep
-		access_eva,
-		access_pilot
-=======
 		ACCESS_EXPLORER,
 		ACCESS_EVA,
 		ACCESS_PILOT
->>>>>>> e956d13a6b (jobs, access and radio to defines (#18297))
 	)
 	one_access = TRUE
 

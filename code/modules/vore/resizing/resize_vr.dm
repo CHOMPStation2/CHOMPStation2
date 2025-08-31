@@ -128,20 +128,12 @@
 			var/datum/species/S = H.species
 			special_x = S.icon_scale_x
 			special_y = S.icon_scale_y
-<<<<<<< HEAD
-			if(fuzzy || offset_override) //CHOMPEdit Start
-=======
 			if(fuzzy || offset_override)
->>>>>>> e956d13a6b (jobs, access and radio to defines (#18297))
 				center_offset = 0
 			else
 				center_offset = S.center_offset
 		resize.Scale(new_size * icon_scale_x * special_x, new_size * icon_scale_y * special_y) //Change the size of the matrix
-<<<<<<< HEAD
-		resize.Translate(center_offset * size_multiplier * icon_scale_x * special_x, (vis_height/2) * (new_size - 1)) //Move the player up in the tile so their feet align with the bottom //CHOMPEdit End
-=======
 		resize.Translate(center_offset * size_multiplier * icon_scale_x * special_x, (vis_height/2) * (new_size - 1)) //Move the player up in the tile so their feet align with the bottom
->>>>>>> e956d13a6b (jobs, access and radio to defines (#18297))
 		animate(src, transform = resize, time = duration) //Animate the player resizing
 
 		if(aura_animation)
@@ -187,17 +179,10 @@
 	var/new_size = tgui_input_number(src, nagmessage, "Pick a Size", default, 600, 1)
 	if(size_range_check(new_size))
 		resize(new_size/100, uncapped = has_large_resize_bounds(), ignore_prefs = TRUE)
-<<<<<<< HEAD
-		if(temporary_form)	//CHOMPEdit - resizing both our forms
-			var/mob/living/L = temporary_form
-			L.resize(new_size/100, uncapped = has_large_resize_bounds(), ignore_prefs = TRUE)
-		//CHOMPEDIT - I don't need to be informed every time a prommie changes sizes
-=======
 		if(temporary_form)
 			var/mob/living/L = temporary_form
 			L.resize(new_size/100, uncapped = has_large_resize_bounds(), ignore_prefs = TRUE)
-		log_admin("[key_name(src)] used the resize command in-game to be [new_size]% size. [src ? ADMIN_JMP(src) : "null"]")
->>>>>>> e956d13a6b (jobs, access and radio to defines (#18297))
+		// log_admin("[key_name(src)] used the resize command in-game to be [new_size]% size. [src ? ADMIN_JMP(src) : "null"]") // CHOMPRemove
 
 /**
  * Attempt to scoop up this mob up into M's hands, if the size difference is large enough.

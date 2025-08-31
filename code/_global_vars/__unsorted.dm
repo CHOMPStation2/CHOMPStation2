@@ -17,7 +17,6 @@ GLOBAL_LIST(global_map)
 // Noises made when hit while typing.
 GLOBAL_LIST_INIT(hit_appends, list("-OOF", "-ACK", "-UGH", "-HRNK", "-HURGH", "-GLORF"))
 
-<<<<<<< HEAD
 // var/station_name		= "Northern Star"
 // var/const/station_orig	= "Northern Star" //station_name can't be const due to event prefix/suffix
 // var/const/station_short	= "Northern Star"
@@ -30,9 +29,6 @@ GLOBAL_LIST_INIT(hit_appends, list("-OOF", "-ACK", "-UGH", "-HRNK", "-HURGH", "-
 // var/const/starsys_name	= "Vir"
 GLOBAL_VAR_INIT(servernews_hash, "") //ChompADD - news hash gen
 GLOBAL_VAR_INIT(game_year, (text2num(time2text(world.realtime, "YYYY")) + 544)) // CHOMPEdit
-=======
-GLOBAL_VAR_INIT(game_year, (text2num(time2text(world.realtime, "YYYY")) + 300))
->>>>>>> e956d13a6b (jobs, access and radio to defines (#18297))
 GLOBAL_VAR_INIT(round_progressing, TRUE)
 
 GLOBAL_VAR_INIT(master_mode, "extended") // "extended"

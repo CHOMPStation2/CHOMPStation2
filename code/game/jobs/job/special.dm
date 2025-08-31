@@ -156,12 +156,8 @@
 	if(CONFIG_GET(flag/assistant_maint))
 		return list(ACCESS_MAINT_TUNNELS, ACCESS_ENTERTAINMENT, ACCESS_TOMFOOLERY, ACCESS_MIME)
 	else
-<<<<<<< HEAD
-		return list(access_entertainment, access_tomfoolery, access_mime)
-*/ //CHOMPEDIT: END remove Mime/clown defines (These are alt titles of Entertainer on our codebase)
-=======
 		return list(ACCESS_ENTERTAINMENT, ACCESS_TOMFOOLERY, ACCESS_MIME)
->>>>>>> e956d13a6b (jobs, access and radio to defines (#18297))
+*/ //CHOMPEDIT: END remove Mime/clown defines (These are alt titles of Entertainer on our codebase)
 
 /obj/item/card/id/civilian/lurker
 	desc = "A rather old and scuffed-looking ID. It seems legit, but something also seems very off somehow. Say, what's the issue/expiry date..?"

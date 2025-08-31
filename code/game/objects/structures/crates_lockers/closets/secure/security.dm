@@ -79,13 +79,8 @@
 
 /obj/structure/closet/secure_closet/hos
 	name = "head of security's locker"
-<<<<<<< HEAD
-	req_access = list(access_hos)
-	storage_capacity = 2.5 * MOB_MEDIUM
-=======
 	req_access = list(ACCESS_HOS)
 	storage_capacity = 2.6 * MOB_MEDIUM
->>>>>>> e956d13a6b (jobs, access and radio to defines (#18297))
 	closet_appearance = /decl/closet_appearance/secure_closet/security/hos
 
 	starts_with = list(

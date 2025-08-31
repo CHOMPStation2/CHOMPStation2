@@ -102,19 +102,6 @@ var/const/NETWORK_MAIN_OUTPOST = "Main Outpost"
 		num2text(PUB_FREQ) = list(),
 		num2text(AI_FREQ)  = list(ACCESS_SYNTH),
 		num2text(ENT_FREQ) = list(),
-<<<<<<< HEAD
-		num2text(ERT_FREQ) = list(access_cent_specops),
-		num2text(COMM_FREQ)= list(access_heads),
-		num2text(ENG_FREQ) = list(access_engine_equip, access_atmospherics),
-		num2text(MED_FREQ) = list(access_medical_equip),
-		num2text(MED_I_FREQ)=list(access_medical_equip),
-		num2text(SEC_FREQ) = list(access_security),
-		num2text(SEC_I_FREQ)=list(access_security),
-		num2text(SCI_FREQ) = list(access_tox,access_robotics,access_xenobiology),
-		num2text(SUP_FREQ) = list(access_cargo),
-		num2text(SRV_FREQ) = list(access_janitor, access_hydroponics),
-		num2text(EXP_FREQ) = list(access_explorer)
-=======
 		num2text(ERT_FREQ) = list(ACCESS_CENT_SPECOPS),
 		num2text(COMM_FREQ)= list(ACCESS_HEADS),
 		num2text(ENG_FREQ) = list(ACCESS_ENGINE_EQUIP, ACCESS_ATMOSPHERICS),
@@ -126,5 +113,4 @@ var/const/NETWORK_MAIN_OUTPOST = "Main Outpost"
 		num2text(SUP_FREQ) = list(ACCESS_CARGO),
 		num2text(SRV_FREQ) = list(ACCESS_JANITOR, ACCESS_HYDROPONICS),
 		num2text(EXP_FREQ) = list(ACCESS_EXPLORER)
->>>>>>> e956d13a6b (jobs, access and radio to defines (#18297))
 	)

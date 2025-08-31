@@ -52,7 +52,7 @@
 		/obj/item/storage/backpack,
 		)
 
-	req_access = list(access_hos)
+	req_access = list(ACCESS_HOS)
 	req_one_access = list()
 
 /obj/item/rig/ch/pursuit/equipped

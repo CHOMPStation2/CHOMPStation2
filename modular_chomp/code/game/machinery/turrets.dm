@@ -18,7 +18,7 @@
 /obj/machinery/porta_turret/industrial/teleport_defense
 	name = "defense turret"
 	desc = "This variant appears to be much more durable, with a rugged outer coating."
-	req_one_access = list(access_heads)
+	req_one_access = list(ACCESS_HEADS)
 	installation = /obj/item/gun/energy/gun/burst
 	health = 125
 	maxhealth = 125
@@ -45,7 +45,7 @@
 	idle_power_usage = 50000		//when inactive, this turret takes up constant 50 Equipment power
 	active_power_usage = 150000	//when active, this turret takes up constant 300 Equipment power
 	power_channel = EQUIP	//drains power from the EQUIPMENT channel
-	req_one_access = list(access_heads)
+	req_one_access = list(ACCESS_HEADS)
 	blocks_emissive = EMISSIVE_BLOCK_UNIQUE
 
 

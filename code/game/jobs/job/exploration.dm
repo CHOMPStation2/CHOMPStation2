@@ -74,8 +74,8 @@
 	economic_modifier = 5
 	minimal_player_age = 3
 	pto_type = PTO_EXPLORATION
-	access = list(access_pilot, access_external_airlocks, access_eva,access_explorer) //CHOMPedit gave pilot a little more access
-	minimal_access = list(access_pilot, access_external_airlocks, access_eva,access_explorer) //CHOMPedit gave pilot a little more access
+	access = list(ACCESS_PILOT, ACCESS_EXTERNAL_AIRLOCKS, ACCESS_EVA, ACCESS_EXPLORER) //CHOMPedit gave pilot a little more access
+	minimal_access = list(ACCESS_PILOT, ACCESS_EXTERNAL_AIRLOCKS, ACCESS_EVA, ACCESS_EXPLORER) //CHOMPedit gave pilot a little more access
 	outfit_type = /decl/hierarchy/outfit/job/pilot
 	job_description = "A Pilot flies the various shuttles in the Vir System." //CHOMPedit: Replaces Virgo reference with Vir.
 	alt_titles = list("Co-Pilot" = /datum/alt_title/co_pilot, "Navigator" = /datum/alt_title/navigator, "Helmsman" = /datum/alt_title/helmsman)
@@ -131,13 +131,8 @@
 	economic_modifier = 6
 	minimal_player_age = 3
 	pto_type = PTO_EXPLORATION
-<<<<<<< HEAD
-	access = list(access_medical, access_medical_equip, access_morgue, access_eva, access_maint_tunnels, access_external_airlocks,access_explorer) // CHOMPedit: No more pilot, surgery or chemistry access.
-	minimal_access = list(access_medical, access_medical_equip, access_morgue,access_explorer) // CHOMPedit: No more pilot access.
-=======
-	access = list(ACCESS_MEDICAL, ACCESS_MEDICAL_EQUIP, ACCESS_MORGUE, ACCESS_SURGERY, ACCESS_CHEMISTRY, ACCESS_EVA, ACCESS_MAINT_TUNNELS, ACCESS_EXTERNAL_AIRLOCKS, ACCESS_PILOT)
-	minimal_access = list(ACCESS_MEDICAL, ACCESS_MEDICAL_EQUIP, ACCESS_MORGUE, ACCESS_PILOT)
->>>>>>> e956d13a6b (jobs, access and radio to defines (#18297))
+	access = list(ACCESS_MEDICAL, ACCESS_MEDICAL_EQUIP, ACCESS_MORGUE, ACCESS_EVA, ACCESS_MAINT_TUNNELS, ACCESS_EXTERNAL_AIRLOCKS,ACCESS_EXPLORER) // CHOMPedit: No more pilot, surgery or chemistry access.
+	minimal_access = list(ACCESS_MEDICAL, ACCESS_MEDICAL_EQUIP, ACCESS_MORGUE,ACCESS_EXPLORER) // CHOMPedit: No more pilot access.
 	outfit_type = /decl/hierarchy/outfit/job/medical/sar
 	job_description = "A " + JOB_FIELD_MEDIC + " works as the field doctor of expedition teams."
 	alt_titles = list(JOB_ALT_EXPEDITION_MEDIC = /datum/alt_title/expedition_medic, JOB_ALT_OFFSITE_MEDIC = /datum/alt_title/offsite_medic)

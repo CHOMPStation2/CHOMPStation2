@@ -224,12 +224,7 @@
 	id = ACCESS_EXPLORER
 	desc = JOB_EXPLORER
 	region = ACCESS_REGION_GENERAL
-<<<<<<< HEAD
 //CHOMP explo keep removed a wide comment field on this line
-/var/const/access_pathfinder = 44
-=======
-/*
->>>>>>> e956d13a6b (jobs, access and radio to defines (#18297))
 /datum/access/pathfinder
 	id = ACCESS_PATHFINDER
 	desc = JOB_PATHFINDER

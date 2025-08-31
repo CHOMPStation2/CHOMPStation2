@@ -15,25 +15,14 @@
 	selection_color = "#026865"
 	req_admin_notify = 1
 	economic_modifier = 10
-<<<<<<< HEAD
-	access = list(access_medical, access_medical_equip, access_morgue, access_genetics, access_heads,
-			access_chemistry, access_virology, access_cmo, access_surgery, access_RC_announce, access_teleporter, //CHOMPEdit
-			access_keycard_auth, access_psychiatrist, access_eva, access_external_airlocks, access_maint_tunnels, access_gateway)
-
-	minimal_access = list(access_medical, access_medical_equip, access_morgue, access_genetics, access_heads,
-			access_chemistry, access_virology, access_cmo, access_surgery, access_RC_announce, access_teleporter,//CHOMPEdit
-			access_keycard_auth, access_psychiatrist, access_eva, access_external_airlocks, access_maint_tunnels, access_gateway)
-	alt_titles = list(JOB_ALT_CHIEF_PHYSICIAN = /datum/alt_title/chief_physician, JOB_ALT_MEDICAL_DIRECTOR = /datum/alt_title/medical_director, /*CHOMPEdit RemovalJOB_ALT_HEALTHCARE_MANAGER = /datum/alt_title/healthcare_manager*/)
-=======
 	access = list(ACCESS_MEDICAL, ACCESS_MEDICAL_EQUIP, ACCESS_MORGUE, ACCESS_GENETICS, ACCESS_HEADS,
-				ACCESS_CHEMISTRY, ACCESS_VIROLOGY, ACCESS_CMO, ACCESS_SURGERY, ACCESS_RC_ANNOUNCE,
+				ACCESS_CHEMISTRY, ACCESS_VIROLOGY, ACCESS_CMO, ACCESS_SURGERY, ACCESS_RC_ANNOUNCE, ACCESS_TELEPORTER, //CHOMPEdit
 				ACCESS_KEYCARD_AUTH, ACCESS_PSYCHIATRIST, ACCESS_EVA, ACCESS_EXTERNAL_AIRLOCKS, ACCESS_MAINT_TUNNELS, ACCESS_GATEWAY)
 
 	minimal_access = list(ACCESS_MEDICAL, ACCESS_MEDICAL_EQUIP, ACCESS_MORGUE, ACCESS_GENETICS, ACCESS_HEADS,
-				ACCESS_CHEMISTRY, ACCESS_VIROLOGY, ACCESS_CMO, ACCESS_SURGERY, ACCESS_RC_ANNOUNCE,
+				ACCESS_CHEMISTRY, ACCESS_VIROLOGY, ACCESS_CMO, ACCESS_SURGERY, ACCESS_RC_ANNOUNCE, ACCESS_TELEPORTER, //CHOMPEdit
 				ACCESS_KEYCARD_AUTH, ACCESS_PSYCHIATRIST, ACCESS_EVA, ACCESS_EXTERNAL_AIRLOCKS, ACCESS_MAINT_TUNNELS, ACCESS_GATEWAY)
-	alt_titles = list(JOB_ALT_CHIEF_PHYSICIAN = /datum/alt_title/chief_physician, JOB_ALT_MEDICAL_DIRECTOR = /datum/alt_title/medical_director, JOB_ALT_HEALTHCARE_MANAGER = /datum/alt_title/healthcare_manager)
->>>>>>> e956d13a6b (jobs, access and radio to defines (#18297))
+	alt_titles = list(JOB_ALT_CHIEF_PHYSICIAN = /datum/alt_title/chief_physician, JOB_ALT_MEDICAL_DIRECTOR = /datum/alt_title/medical_director, /*CHOMPEdit RemovalJOB_ALT_HEALTHCARE_MANAGER = /datum/alt_title/healthcare_manager*/)
 
 	minimum_character_age = 25
 	min_age_by_species = list(SPECIES_UNATHI = 70, FBP_MECHANICAL = 10, SPECIES_HUMAN_VATBORN = 14)
@@ -248,15 +237,10 @@
 	pto_type = PTO_MEDICAL
 	supervisors = "the " + JOB_CHIEF_MEDICAL_OFFICER
 	selection_color = "#013D3B"
-<<<<<<< HEAD
-	economic_modifier = 5	//CHOMPstation edit - "Makes Parameds make as much as offduty medical."
-	access = list(access_medical, access_medical_equip, access_morgue, access_surgery, access_chemistry, access_virology, access_eva, access_maint_tunnels, access_external_airlocks, access_psychiatrist)
-	minimal_access = list(access_medical, access_medical_equip, access_morgue, access_eva, access_maint_tunnels, access_external_airlocks)
-=======
 	economic_modifier = 4
+	economic_modifier = 5	// CHOMPAdd - "Makes Parameds make as much as offduty medical."
 	access = list(ACCESS_MEDICAL, ACCESS_MEDICAL_EQUIP, ACCESS_MORGUE, ACCESS_SURGERY, ACCESS_CHEMISTRY, ACCESS_VIROLOGY, ACCESS_EVA, ACCESS_MAINT_TUNNELS, ACCESS_EXTERNAL_AIRLOCKS, ACCESS_PSYCHIATRIST)
 	minimal_access = list(ACCESS_MEDICAL, ACCESS_MEDICAL_EQUIP, ACCESS_MORGUE, ACCESS_EVA, ACCESS_MAINT_TUNNELS, ACCESS_EXTERNAL_AIRLOCKS)
->>>>>>> e956d13a6b (jobs, access and radio to defines (#18297))
 	outfit_type = /decl/hierarchy/outfit/job/medical/paramedic
 	job_description = "A " + JOB_PARAMEDIC + " is primarily concerned with the recovery of patients who are unable to make it to the Medical Department on their own. \
 						They may also be called upon to keep patients stable when Medical is busy or understaffed."

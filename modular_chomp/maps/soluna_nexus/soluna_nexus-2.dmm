@@ -44492,7 +44492,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/Chapel_Lobby)
 "cXZ" = (
-/obj/structure/closet/secure_closet/RD,
+/obj/structure/closet/secure_closet/research_director,
 /obj/random_multi/single_item/hand_tele,
 /obj/machinery/firealarm{
 	pixel_y = 25
@@ -79754,7 +79754,7 @@
 /turf/simulated/floor/plating,
 /area/maintenance/Deck2_Civilian_PortChamber2)
 "mAU" = (
-/obj/structure/closet/secure_closet/CMO,
+/obj/structure/closet/secure_closet/chief_medical_officer,
 /obj/item/defib_kit/compact/combat/loaded,
 /obj/item/cmo_disk_holder,
 /obj/item/denecrotizer/medical,

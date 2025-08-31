@@ -167,11 +167,7 @@
 	cost = 10
 	containertype = /obj/structure/closet/crate/secure/einstein
 	containername = "Emitter crate"
-<<<<<<< HEAD
-	access = access_engine //CHOMPedit
-=======
-	access = ACCESS_CE
->>>>>>> e956d13a6b (jobs, access and radio to defines (#18297))
+	access = ACCESS_ENGINE //CHOMPedit
 
 /datum/supply_pack/eng/engine/field_gen
 	name = "Field Generator crate"
@@ -219,12 +215,8 @@
 			)
 	containertype = /obj/structure/closet/crate/secure/einstein
 	containername = "Particle Accelerator crate"
-<<<<<<< HEAD
-	access = list(access_ce, access_research) // CHOMPEdit
+	access = list(ACCESS_CE, ACCESS_RESEARCH) // CHOMPEdit
 	one_access = TRUE //CHOMPAdd
-=======
-	access = ACCESS_CE
->>>>>>> e956d13a6b (jobs, access and radio to defines (#18297))
 
 /datum/supply_pack/eng/shield_gen
 	contains = list(/obj/item/circuitboard/shield_gen)

@@ -27,11 +27,9 @@
 #define CHANNEL_TALON "Talon"
 #define CHANNEL_CASINO "Casino"
 
-<<<<<<< HEAD
 // CHOMPAdd Channels
 #define CHANNEL_BODYCAM "Bodycam"
 #define CHANNEL_OUTSIDER "Outsider"
-=======
 
 /*
 Frequency range: 1200 to 1600
@@ -93,6 +91,9 @@ On the map:
 #define RAID_FREQ 1277
 #define ENT_FREQ 1461 //entertainment frequency. This is not a diona exclusive frequency.
 
+#define BDCM_FREQ 1483 // CHOMPAdd
+#define OUT_FREQ 1367 // CHOMPAdd
+
 #define LOCKED_COM_FREQ 1481
 
 // department channels
@@ -129,4 +130,3 @@ On the map:
 #define RADIO_SECBOT "radio_secbot"
 #define RADIO_MULEBOT "radio_mulebot"
 #define RADIO_MAGNETS "radio_magnet"
->>>>>>> e956d13a6b (jobs, access and radio to defines (#18297))

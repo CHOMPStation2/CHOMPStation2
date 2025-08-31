@@ -24,11 +24,7 @@
 
 /obj/structure/closet/secure_closet/guncabinet/rifle
 	name = "rifle cabinet"
-<<<<<<< HEAD
-	req_one_access = list(access_explorer,access_brig) //CHOMP explo keep
-=======
-	req_one_access = list(ACCESS_BRIG)
->>>>>>> e956d13a6b (jobs, access and radio to defines (#18297))
+	req_one_access = list(ACCESS_EXPLORER,ACCESS_BRIG) //CHOMP explo keep
 
 	starts_with = list(
 		/obj/item/ammo_magazine/clip/c762/hunter = 9,
@@ -42,13 +38,8 @@
 	return ..()
 
 /obj/structure/closet/secure_closet/guncabinet/phase
-<<<<<<< HEAD
 	name = "explorer weapon cabinet" //CHOMP explo keep
-	req_one_access = list(access_explorer,access_brig) //CHOMP explo keep
-=======
-	name = "away team weapon cabinet"
-	req_one_access = list(ACCESS_BRIG)
->>>>>>> e956d13a6b (jobs, access and radio to defines (#18297))
+	req_one_access = list(ACCESS_EXPLORER,ACCESS_BRIG) //CHOMP explo keep
 
 	starts_with = list(
 		/obj/item/gun/energy/locked/phasegun = 2,
@@ -60,13 +51,8 @@
  * Explorer
  */
 /obj/structure/closet/secure_closet/explorer
-<<<<<<< HEAD
 	name = "explorer locker" //CHOMP explo keep
-	req_access = list(access_explorer) //CHOMP explo keep
-=======
-	name = "away team locker"
 	req_access = list(ACCESS_EXPLORER)
->>>>>>> e956d13a6b (jobs, access and radio to defines (#18297))
 	closet_appearance = /decl/closet_appearance/secure_closet/expedition/explorer
 
 	starts_with = list(
@@ -107,11 +93,7 @@
  */
 /obj/structure/closet/secure_closet/pathfinder
 	name = "pathfinder locker"
-<<<<<<< HEAD
-	req_access = list(access_pathfinder) //CHOMP explo keep
-=======
-	req_access = list(ACCESS_EXPLORER)
->>>>>>> e956d13a6b (jobs, access and radio to defines (#18297))
+	req_access = list(ACCESS_PATHFINDER) //CHOMP explo keep
 	closet_appearance = /decl/closet_appearance/secure_closet/expedition/pathfinder
 
 	starts_with = list(

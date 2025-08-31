@@ -470,6 +470,7 @@
 #define ATMOSTECH (1<<7)
 #define AI_DEPT (1<<8)
 #define CYBORG (1<<9)
+#define BRIGPHYS (1<<10) // CHOMPAdd - Brig Physician
 #define CLOWN (1<<13)
 #define MIME (1<<14)
 #define INTERN (1<<15)
@@ -491,6 +492,7 @@
 #define EXPLORER (1<<12)
 #define SAR (1<<13)
 #define XENOBOTANIST (1<<14)
+#define PILOT (1<<15) //ChompEDIT - ours is with the other explo jobs.
 
 #define CIVILIAN (1<<2)
 
@@ -507,7 +509,7 @@
 #define CHAPLAIN (1<<10)
 #define ASSISTANT (1<<11)
 #define BRIDGE (1<<12)
-#define PILOT (1<<13)
+// #define PILOT (1<<13) // CHOMPRemove
 #define ENTERTAINER (1<<14)
 #define ENTREPRENEUR (1<<15)
 
@@ -531,6 +533,6 @@ GLOBAL_LIST_INIT(command_positions, list(
 	JOB_CHIEF_ENGINEER,
 	JOB_RESEARCH_DIRECTOR,
 	JOB_CHIEF_MEDICAL_OFFICER,
-	JOB_COMMAND_SECRETARY
-	//JOB_BLUESHIELD_GUARD
+	JOB_COMMAND_SECRETARY,
+	JOB_BLUESHIELD_GUARD // CHOMPEnable
 ))

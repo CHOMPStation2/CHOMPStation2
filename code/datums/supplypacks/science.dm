@@ -124,14 +124,9 @@
 	cost = 55
 	containertype = /obj/structure/largecrate/animal/weretiger
 	containername = "Weretiger crate"
-<<<<<<< HEAD
-	access = access_xenobiology
+	access = ACCESS_XENOBIOLOGY
 
 //CHOMPEdit Start, enable this
-=======
-	access = ACCESS_XENOBIOLOGY
-/*
->>>>>>> e956d13a6b (jobs, access and radio to defines (#18297))
 /datum/supply_pack/sci/otie
 	name = "VARMAcorp adoptable reject (Dangerous!)"
 	cost = 100
@@ -144,10 +139,5 @@
 	cost = 200
 	containertype = /obj/structure/largecrate/animal/otie/phoron
 	containername = "VARMAcorp adaptive beta subject (Experimental)"
-<<<<<<< HEAD
-	access = access_xenobiology
-//CHOMEdit End
-=======
 	access = ACCESS_XENOBIOLOGY
-*/ //VORESTATION AI TEMPORARY REMOVAL. Oties commented out cuz broke.
->>>>>>> e956d13a6b (jobs, access and radio to defines (#18297))
+//CHOMEdit End

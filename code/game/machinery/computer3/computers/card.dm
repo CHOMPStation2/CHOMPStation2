@@ -1,3 +1,82 @@
+var/list/engineering_positions = list(
+	JOB_CHIEF_ENGINEER,
+	JOB_ENGINEER,
+	JOB_ATMOSPHERIC_TECHNICIAN
+)
+
+
+var/list/medical_positions = list(
+	JOB_CHIEF_MEDICAL_OFFICER,
+	JOB_MEDICAL_DOCTOR,
+	JOB_GENETICIST,
+	JOB_PSYCHIATRIST,
+	JOB_CHEMIST,
+	JOB_PARAMEDIC
+)
+
+
+var/list/science_positions = list(
+	JOB_RESEARCH_DIRECTOR,
+	JOB_SCIENTIST,
+	JOB_GENETICIST,	//Part of both medical and science
+	JOB_ROBOTICIST,
+	JOB_XENOBIOLOGIST
+)
+
+//BS12 EDIT
+var/list/cargo_positions = list(
+	JOB_QUARTERMASTER,
+	JOB_CARGO_TECHNICIAN,
+	JOB_SHAFT_MINER
+)
+
+var/list/civilian_positions = list(
+	JOB_HEAD_OF_PERSONNEL,
+	JOB_BARTENDER,
+	JOB_BOTANIST,
+	JOB_CHEF,
+	JOB_JANITOR,
+	JOB_LIBRARIAN,
+	JOB_ENTREPRENEUR,
+	JOB_CHAPLAIN,
+	JOB_ALT_VISITOR, //VOREStation Edit - Visitor not Assistant
+	JOB_INTERN //VOREStation Edit - Intern
+)
+
+
+var/list/security_positions = list(
+	JOB_HEAD_OF_SECURITY,
+	JOB_WARDEN,
+	JOB_DETECTIVE,
+	JOB_SECURITY_OFFICER
+)
+
+
+var/list/planet_positions = list(
+	JOB_PATHFINDER, // VOREStation Edit - Added Pathfinder
+	JOB_EXPLORER,
+	JOB_PILOT,
+	JOB_FIELD_MEDIC // VOREStation Edit - Field Medic
+)
+
+
+var/list/nonhuman_positions = list(
+	JOB_AI,
+	JOB_CYBORG,
+	JOB_PAI
+)
+
+var/list/whitelisted_positions = list(
+	JOB_SITE_MANAGER,
+	JOB_HEAD_OF_PERSONNEL,
+	JOB_HEAD_OF_SECURITY,
+	JOB_CHIEF_ENGINEER,
+	JOB_RESEARCH_DIRECTOR,
+	JOB_CHIEF_MEDICAL_OFFICER,
+	JOB_INTERNAL_AFFAIRS_AGENT,
+	JOB_AI
+)
+
 /obj/machinery/computer3/card
 	default_prog = /datum/file/program/card_comp
 	spawn_parts = list(/obj/item/part/computer/storage/hdd,/obj/item/part/computer/cardslot/dual)

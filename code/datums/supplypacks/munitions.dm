@@ -291,14 +291,7 @@
 	cost = 50
 	containertype = /obj/structure/closet/crate/secure/weapon
 	containername = "Energy ammunition crate"
-<<<<<<< HEAD
-	access = access_security
-	containertype = /obj/structure/closet/crate
-	containername = "Beanbag shells"
-	access = null
-=======
 	access = ACCESS_SECURITY
->>>>>>> e956d13a6b (jobs, access and radio to defines (#18297))
 
 /datum/supply_pack/randomised/munitions/yw_revolver
 	name = "Revolver Crate"
@@ -314,7 +307,7 @@
 	cost = 150
 	containertype = /obj/structure/closet/crate/secure
 	containername = "Revolver Crate"
-	access = access_armory
+	access = ACCESS_ARMORY
 
 /datum/supply_pack/randomised/munitions/yw_assault
 	name = "Assault rifle crate"
@@ -327,7 +320,7 @@
 	cost = 250
 	containertype = /obj/structure/closet/crate/secure
 	containername = "Assault rifle crate"
-	access = access_armory
+	access = ACCESS_ARMORY
 
 /datum/supply_pack/randomised/munitions/yw_smg
 	name = "Smg crate"
@@ -339,7 +332,7 @@
 	cost = 100
 	containertype = /obj/structure/closet/crate/secure
 	containername = "Smg crate"
-	access = access_armory
+	access = ACCESS_ARMORY
 
 /datum/supply_pack/munitions/munitions/yw_mg
 	name = "Light machine gun crate"
@@ -357,13 +350,8 @@
 			)
 	cost = 35
 	containertype = /obj/structure/closet/crate/secure
-<<<<<<< HEAD
 	containername = "phasegun crate"
-	access = access_explorer
-=======
-	containername = "frontier phaser crate"
-	access = ACCESS_SECURITY
->>>>>>> e956d13a6b (jobs, access and radio to defines (#18297))
+	access = ACCESS_EXPLORER
 
 /datum/supply_pack/munitions/expeditioncannon
 	name = "Exploration phasecannon (station-locked) crate"
@@ -372,15 +360,9 @@
 			)
 	cost = 50
 	containertype = /obj/structure/closet/crate/secure
-<<<<<<< HEAD
 	containername = "phasegun cannon crate"
-	access = access_explorer
+	access = ACCESS_EXPLORER
 //CHOMP Edit end
-=======
-	containername = "phaser handbow crate"
-	access = ACCESS_SECURITY
-*/
->>>>>>> e956d13a6b (jobs, access and radio to defines (#18297))
 
 /datum/supply_pack/munitions/ofd_charge_emp
 	name = "OFD Charge - EMP"

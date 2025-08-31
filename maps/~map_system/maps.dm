@@ -277,22 +277,6 @@ var/list/all_maps = list()
 // This list needs to be purged but people insist on adding more cruft to the radio.
 /datum/map/proc/default_internal_channels()
 	return list(
-<<<<<<< HEAD
-		num2text(PUB_FREQ)   = list(),
-		num2text(AI_FREQ)	= list(access_synth),
-		num2text(ENT_FREQ)   = list(),
-		num2text(ERT_FREQ)   = list(access_cent_specops),
-		num2text(COMM_FREQ)  = list(access_heads),
-		num2text(ENG_FREQ)   = list(access_engine_equip, access_atmospherics),
-		num2text(MED_FREQ)   = list(access_medical_equip),
-		num2text(MED_I_FREQ) = list(access_medical_equip),
-		num2text(BDCM_FREQ)  = list(access_security), // CHOMPEdit
-		num2text(SEC_FREQ)   = list(access_security),
-		num2text(SEC_I_FREQ) = list(access_security),
-		num2text(SCI_FREQ)   = list(access_tox,access_robotics,access_xenobiology),
-		num2text(SUP_FREQ)   = list(access_cargo),
-		num2text(SRV_FREQ)   = list(access_janitor, access_hydroponics),
-=======
 		num2text(PUB_FREQ)	= list(),
 		num2text(AI_FREQ)	= list(ACCESS_SYNTH),
 		num2text(ENT_FREQ)	= list(),
@@ -301,12 +285,12 @@ var/list/all_maps = list()
 		num2text(ENG_FREQ)	= list(ACCESS_ENGINE_EQUIP, ACCESS_ATMOSPHERICS),
 		num2text(MED_FREQ)	= list(ACCESS_MEDICAL_EQUIP),
 		num2text(MED_I_FREQ)= list(ACCESS_MEDICAL_EQUIP),
+		num2text(BDCM_FREQ)	= list(ACCESS_SECURITY), // CHOMPAdd
 		num2text(SEC_FREQ)	= list(ACCESS_SECURITY),
 		num2text(SEC_I_FREQ)= list(ACCESS_SECURITY),
 		num2text(SCI_FREQ)	= list(ACCESS_TOX,ACCESS_ROBOTICS,ACCESS_XENOBIOLOGY),
 		num2text(SUP_FREQ)	= list(ACCESS_CARGO),
 		num2text(SRV_FREQ)	= list(ACCESS_JANITOR, ACCESS_HYDROPONICS),
->>>>>>> e956d13a6b (jobs, access and radio to defines (#18297))
 	)
 
 /datum/map/proc/get_skybox_datum(z)

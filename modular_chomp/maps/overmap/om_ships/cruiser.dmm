@@ -5281,7 +5281,7 @@
 /turf/simulated/floor/tiled/steel_grid,
 /area/mothership/warden)
 "lh" = (
-/obj/structure/closet/secure_closet/CMO,
+/obj/structure/closet/secure_closet/chief_medical_officer,
 /turf/simulated/floor/tiled/white,
 /area/mothership/medical)
 "li" = (
@@ -6232,7 +6232,7 @@
 /turf/simulated/floor/tiled/steel_grid,
 /area/mothership/rnd)
 "nh" = (
-/obj/structure/closet/secure_closet/RD,
+/obj/structure/closet/secure_closet/research_director,
 /turf/simulated/floor/tiled/steel_grid,
 /area/mothership/rnd)
 "ni" = (

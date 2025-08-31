@@ -27236,7 +27236,7 @@
 /turf/simulated/floor/tiled/old_tile/blue,
 /area/bridge/blueshield)
 "lrZ" = (
-/obj/structure/closet/secure_closet/RD,
+/obj/structure/closet/secure_closet/research_director,
 /obj/item/clothing/glasses/omnihud/rnd,
 /obj/effect/floor_decal/corner_oldtile/gray/diagonal{
 	dir = 4
@@ -36353,7 +36353,7 @@
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway)
 "pau" = (
-/obj/structure/closet/secure_closet/CMO,
+/obj/structure/closet/secure_closet/chief_medical_officer,
 /obj/item/pda/heads/cmo,
 /obj/item/cmo_disk_holder,
 /obj/item/defib_kit/compact/combat/loaded,

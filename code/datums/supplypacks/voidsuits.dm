@@ -262,7 +262,7 @@
 	cost = 200  //Crap breacher suit, shouldn't be as expensive.
 	containertype = /obj/structure/closet/crate/secure
 	containername = "NT Unathi breacher chassis crate"
-	access = access_armory
+	access = ACCESS_ARMORY
 
 /datum/supply_pack/voidsuits/unathi_bs_Auth
 	name = "Authentic Unathi breacher chassis"
@@ -270,7 +270,7 @@
 	cost = 400  //Better, costs more.
 	containertype = /obj/structure/closet/crate/secure
 	containername = "Authentic Unathi breacher chassis crate"
-	access = access_armory
+	access = ACCESS_ARMORY
 
 /datum/supply_pack/voidsuits/voxeng
 	name = "Vox Engineering Hardsuit"
@@ -285,7 +285,7 @@
 	cost = 90
 	containertype = /obj/structure/closet/crate/secure/heph
 	containername = "Vox security Rigsuit Crate"
-	access = access_security
+	access = ACCESS_SECURITY
 //ChompEdit End
 
 /datum/supply_pack/voidsuits/explorer
@@ -301,11 +301,7 @@
 	cost = 45
 	containertype = /obj/structure/closet/crate/secure
 	containername = JOB_EXPLORER + "voidsuit crate"
-<<<<<<< HEAD
-	access = access_explorer //CHOMP explo keep
-=======
-	access = list(ACCESS_EVA, ACCESS_EXPLORER)
->>>>>>> e956d13a6b (jobs, access and radio to defines (#18297))
+	access = ACCESS_EXPLORER //CHOMP explo keep
 
 /datum/supply_pack/voidsuits/explorer_medic
 	name = JOB_FIELD_MEDIC + " voidsuits"
@@ -348,13 +344,8 @@
 	)
 	cost = 150
 	containertype = /obj/structure/closet/crate/secure
-<<<<<<< HEAD
 	name = "Solgov mining voidsuit crate" //CHOMP explo keep
-	access = access_mining
-=======
-	name = "Commonwealth mining voidsuit crate"
 	access = ACCESS_MINING
->>>>>>> e956d13a6b (jobs, access and radio to defines (#18297))
 
 /datum/supply_pack/voidsuits/solgov_anomaly //CHOMP explo keep
 	name = "Solgov anomaly suit" //CHOMP explo keep
@@ -365,13 +356,8 @@
 	)
 	cost = 150
 	containertype = /obj/structure/closet/crate/secure
-<<<<<<< HEAD
 	name = "Solgov anomaly suit crate" //CHOMP explo keep
-	access = access_xenoarch
-=======
-	name = "Commonwealth anomaly suit crate"
 	access = ACCESS_XENOARCH
->>>>>>> e956d13a6b (jobs, access and radio to defines (#18297))
 
 /datum/supply_pack/voidsuits/solgov_riot //CHOMP explo keep
 	name = "Solgov riot voidsuit" //CHOMP explo keep
@@ -382,13 +368,8 @@
 	)
 	cost = 150
 	containertype = /obj/structure/closet/crate/secure
-<<<<<<< HEAD
 	name = "Solgov riot voidsuit crate"
-	access = access_brig
-=======
-	name = "Commonwealth riot voidsuit crate"
-	access = ACCESS_ARMORY
->>>>>>> e956d13a6b (jobs, access and radio to defines (#18297))
+	access = ACCESS_BRIG // CHOMPEdit
 
 /datum/supply_pack/voidsuits/solgov_pilot //CHOMP explo keep
 	name = "Solgov pilot voidsuit" //CHOMP explo keep
@@ -399,13 +380,8 @@
 	)
 	cost = 150
 	containertype = /obj/structure/closet/crate/secure
-<<<<<<< HEAD
 	name = "Solgov pilot voidsuit crate" //CHOMP explo keep
-	access = access_pilot
-=======
-	name = "Commonwealth pilot voidsuit crate"
 	access = ACCESS_PILOT
->>>>>>> e956d13a6b (jobs, access and radio to defines (#18297))
 
 /datum/supply_pack/voidsuits/solgov_medical //CHOMP explo keep
 	name = "Solgov medical voidsuit" //CHOMP explo keep
@@ -416,12 +392,8 @@
 	)
 	cost = 150
 	containertype = /obj/structure/closet/crate/secure
-<<<<<<< HEAD
 	name = "Solgov medical voidsuit crate"
-=======
-	name = "Commonwealth medical voidsuit crate"
 	access = ACCESS_MEDICAL
->>>>>>> e956d13a6b (jobs, access and radio to defines (#18297))
 
 /datum/supply_pack/voidsuits/solgov_explore //CHOMP explo keep
 	name = "Solgov exploration voidsuit" //CHOMP explo keep
@@ -432,13 +404,8 @@
 	)
 	cost = 150
 	containertype = /obj/structure/closet/crate/secure
-<<<<<<< HEAD
 	name = "Solgov exploration voidsuit crate"  //CHOMP explo keep
-	access = access_explorer //CHOMP explo keep
-=======
-	name = "Commonwealth exploration voidsuit crate"
-	access = list(ACCESS_EVA, ACCESS_EXPLORER)
->>>>>>> e956d13a6b (jobs, access and radio to defines (#18297))
+	access = ACCESS_EXPLORER //CHOMP explo keep
 
 /datum/supply_pack/voidsuits/solgov_engineer //CHOMP explo keep
 	name = "Solgov engineering voidsuit" //CHOMP explo keep
@@ -449,13 +416,8 @@
 	)
 	cost = 150
 	containertype = /obj/structure/closet/crate/secure
-<<<<<<< HEAD
 	name = "Solgov engineering voidsuit crate" //CHOMP explo keep
-	access = access_engine
-=======
-	name = "Commonwealth engineering voidsuit crate"
 	access = ACCESS_ENGINE
->>>>>>> e956d13a6b (jobs, access and radio to defines (#18297))
 
 /datum/supply_pack/voidsuits/solgov_atmos //CHOMP explo keep
 	name = "Solgov atmos voidsuit" //CHOMP explo keep
@@ -466,13 +428,8 @@
 	)
 	cost = 150
 	containertype = /obj/structure/closet/crate/secure
-<<<<<<< HEAD
 	name = "Solgov atmos voidsuit crate" //CHOMP explo keep
-	access = access_atmospherics
-=======
-	name = "Commonwealth atmos voidsuit crate"
 	access = ACCESS_ATMOSPHERICS
->>>>>>> e956d13a6b (jobs, access and radio to defines (#18297))
 
 /datum/supply_pack/voidsuits/solgov_captain //CHOMP explo keep
 	name = "Solgov captain voidsuit" //CHOMP explo keep
@@ -483,14 +440,9 @@
 	)
 	cost = 150
 	containertype = /obj/structure/closet/crate/secure
-<<<<<<< HEAD
 	name = "Solgov captain voidsuit crate" //CHOMP explo keep
-	access = access_captain
-// CHOMPStation EDIT End
-=======
-	name = "Commonwealth captain voidsuit crate"
 	access = ACCESS_CAPTAIN
->>>>>>> e956d13a6b (jobs, access and radio to defines (#18297))
+// CHOMPStation EDIT End
 
 /datum/supply_pack/voidsuits/csc_breaker
 	name = "Shipbreaker's Industrial Suit (inc. jetpack)"

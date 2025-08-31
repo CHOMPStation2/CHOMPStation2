@@ -208,11 +208,7 @@
 	cost=25
 	containertype = /obj/structure/closet/crate/secure/xion
 	containername = JOB_EXPLORER + " equipment"
-<<<<<<< HEAD
-	access = access_explorer //CHOMP explo keep
-=======
-	access = list(ACCESS_EVA, ACCESS_EXPLORER)
->>>>>>> e956d13a6b (jobs, access and radio to defines (#18297))
+	access = ACCESS_EXPLORER //CHOMP explo keep
 
 /datum/supply_pack/pilotgear
 	name= JOB_PILOT + " gear"

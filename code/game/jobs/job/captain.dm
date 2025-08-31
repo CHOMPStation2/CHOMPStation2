@@ -162,13 +162,8 @@ var/datum/announcement/minor/captain_announcement = new(do_newscast = 1)
 						JOB_ALT_BRIDGE_OFFICER = /datum/alt_title/bridge_officer //ChompEDIT add bridge officer
 						)
 
-<<<<<<< HEAD
-	access = list(access_heads, access_keycard_auth, access_RC_announce) //YAWN EDIT
-	minimal_access = list(access_heads, access_keycard_auth, access_RC_announce)//YAWN EDIT
-=======
-	access = list(ACCESS_HEADS, ACCESS_KEYCARD_AUTH)
-	minimal_access = list(ACCESS_HEADS, ACCESS_KEYCARD_AUTH)
->>>>>>> e956d13a6b (jobs, access and radio to defines (#18297))
+	access = list(ACCESS_HEADS, ACCESS_KEYCARD_AUTH, ACCESS_RC_ANNOUNCE) //YAWN EDIT
+	minimal_access = list(ACCESS_HEADS, ACCESS_KEYCARD_AUTH, ACCESS_RC_ANNOUNCE)//YAWN EDIT
 
 	outfit_type = /decl/hierarchy/outfit/job/secretary
 	job_description = "A " + JOB_COMMAND_SECRETARY + " handles paperwork duty for the Heads of Staff, so they can better focus on managing their departments. \

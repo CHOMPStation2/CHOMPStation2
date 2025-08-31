@@ -683,32 +683,18 @@ GLOBAL_LIST_INIT(default_internal_channels, list(
 	num2text(PUB_FREQ) = list(),
 	num2text(AI_FREQ)  = list(ACCESS_SYNTH),
 	num2text(ENT_FREQ) = list(),
-<<<<<<< HEAD
-	num2text(ERT_FREQ) = list(access_cent_specops),
-	num2text(COMM_FREQ)= list(access_heads),
-	num2text(ENG_FREQ) = list(access_engine_equip, access_atmospherics),
-	num2text(MED_FREQ) = list(access_medical_equip),
-	num2text(MED_I_FREQ)=list(access_medical_equip),
-	num2text(BDCM_FREQ) =list(access_security), // CHOMPAdd
-	num2text(SEC_FREQ) = list(access_security),
-	num2text(SEC_I_FREQ)=list(access_security),
-	num2text(SCI_FREQ) = list(access_tox, access_robotics, access_xenobiology),
-	num2text(SUP_FREQ) = list(access_cargo, access_mining_station),
-	num2text(SRV_FREQ) = list(access_janitor, access_library, access_hydroponics, access_bar, access_kitchen),
-	num2text(EXP_FREQ) = list(access_explorer, access_pilot) // CHOMPEdit
-=======
 	num2text(ERT_FREQ) = list(ACCESS_CENT_SPECOPS),
 	num2text(COMM_FREQ)= list(ACCESS_HEADS),
 	num2text(ENG_FREQ) = list(ACCESS_ENGINE_EQUIP, ACCESS_ATMOSPHERICS),
 	num2text(MED_FREQ) = list(ACCESS_MEDICAL_EQUIP),
 	num2text(MED_I_FREQ)=list(ACCESS_MEDICAL_EQUIP),
+	num2text(BDCM_FREQ) =list(ACCESS_SECURITY), // CHOMPAdd
 	num2text(SEC_FREQ) = list(ACCESS_SECURITY),
 	num2text(SEC_I_FREQ)=list(ACCESS_SECURITY),
 	num2text(SCI_FREQ) = list(ACCESS_TOX, ACCESS_ROBOTICS, ACCESS_XENOBIOLOGY),
 	num2text(SUP_FREQ) = list(ACCESS_CARGO, ACCESS_MINING_STATION),
 	num2text(SRV_FREQ) = list(ACCESS_JANITOR, ACCESS_LIBRARY, ACCESS_HYDROPONICS, ACCESS_BAR, ACCESS_KITCHEN),
-	num2text(EXP_FREQ) = list(ACCESS_EXPLORER)
->>>>>>> e956d13a6b (jobs, access and radio to defines (#18297))
+	num2text(EXP_FREQ) = list(ACCESS_EXPLORER, ACCESS_PILOT) // CHOMPEdit
 ))
 
 GLOBAL_LIST_INIT(default_medbay_channels, list(

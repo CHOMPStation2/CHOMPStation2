@@ -1,7 +1,7 @@
 // Heist shuttles
 /obj/machinery/computer/shuttle_control/multi/heist
 	name = "skipjack control console"
-	req_access = list(access_syndicate)
+	req_access = list(ACCESS_SYNDICATE)
 	shuttle_tag = "Skipjack"
 
 /datum/shuttle/autodock/multi/heist

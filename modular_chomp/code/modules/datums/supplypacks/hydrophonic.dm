@@ -9,7 +9,7 @@
 	cost = 25
 	containertype = /obj/structure/largecrate/animal/sheep
 	containername = "Goat crate"
-	access = access_hydroponics
+	access = ACCESS_HYDROPONICS
 
 /datum/supply_pack/hydro/woofdog
 	name = "Dog crate"
