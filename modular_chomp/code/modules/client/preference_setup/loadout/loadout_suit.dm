@@ -12,7 +12,12 @@
 	"Blue Plate Carrier" = /obj/item/clothing/suit/armor/pcarrier/blue,
 	"Light Blue Plate Carrier" = /obj/item/clothing/suit/armor/pcarrier/press,
 	"Green Plate Carrier" = /obj/item/clothing/suit/armor/pcarrier/green,
-	"Tan Plate Carrier" = /obj/item/clothing/suit/armor/pcarrier/tan
+	"Tan Plate Carrier" = /obj/item/clothing/suit/armor/pcarrier/tan,
+	"Alternate Black Plate Carrier" = /obj/item/clothing/suit/armor/pcarrier/modarm,
+	"Alternate Tan Plate Carrier" = /obj/item/clothing/suit/armor/pcarrier/modarm/tan,
+	"Alternate Green Plate Carrier" = /obj/item/clothing/suit/armor/pcarrier/modarm/green,
+	"Alternate Navy Plate Carrier" = /obj/item/clothing/suit/armor/pcarrier/modarm/blue,
+	"Alternate Light Blue Plate Carrier" = /obj/item/clothing/suit/armor/pcarrier/modarm/lightblue
 	)
 	gear_tweaks += new/datum/gear_tweak/path(pcarriers)
 
