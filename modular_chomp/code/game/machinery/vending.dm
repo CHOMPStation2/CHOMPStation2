@@ -1,5 +1,6 @@
 /* CONTAINS:
 	Explo equipment vending machines
+	Sec equipment vending machines
 */
 
 /obj/machinery/vending/exploration_armor
@@ -43,13 +44,8 @@
 					/obj/item/gun/energy/locked/phasegun/pistol = 10,
 					/obj/item/gun/energy/locked/phasegun = 10,
 					/obj/item/gun/energy/locked/phasegun/rifle = 5,
-				// Laser
-					/obj/item/gun/energy/laser = 5,
-				// Ballistic
-					/obj/item/gun/projectile/colt = 5,
 				// Ammo
 					/obj/item/cell/device/weapon = 25,
-					/obj/item/ammo_magazine/m45 = 25,
 				// Melee
 					/obj/item/material/knife/tacknife/survival = 10,
 					/obj/item/material/knife/machete = 10,
@@ -125,6 +121,38 @@
 					/obj/item/fulton_core = 1
 				)
 
+/obj/machinery/vending/security_armor
+	name = "Security Plate Carrier Vendor"
+	desc = "A large vending machine stocked with a variety of plate carriers and accessories to accompany them."
+	vend_delay = 1
+	icon_state = "sec"
+	req_access = list(ACCESS_SECURITY)
+	products = list(
+				// The vests. No green, don't want to confuse exploration
+					/obj/item/clothing/suit/armor/pcarrier = 5,
+					/obj/item/clothing/suit/armor/pcarrier/blue = 5,
+					/obj/item/clothing/suit/armor/pcarrier/tan = 5,
+					/obj/item/clothing/suit/armor/pcarrier/navy = 5,
+				// Accessories
+					/obj/item/clothing/accessory/armor/tag/nt = 5,
+					/obj/item/clothing/accessory/armor/tag/sec = 5,
+					/obj/item/clothing/accessory/storage/pouches/large = 5,
+					/obj/item/clothing/accessory/storage/pouches/large/blue = 5,
+					/obj/item/clothing/accessory/storage/pouches/large/tan = 5,
+					/obj/item/clothing/accessory/storage/pouches/large/navy = 5,
+				// Armor fittings
+					/obj/item/clothing/accessory/armor/armguards = 5,
+					/obj/item/clothing/accessory/armor/armguards/blue = 5,
+					/obj/item/clothing/accessory/armor/armguards/tan = 5,
+					/obj/item/clothing/accessory/armor/armguards/navy = 5,
+					/obj/item/clothing/accessory/armor/armguards/merc = 5,
+					/obj/item/clothing/accessory/armor/legguards = 5,
+					/obj/item/clothing/accessory/armor/legguards/blue = 5,
+					/obj/item/clothing/accessory/armor/legguards/tan = 5,
+					/obj/item/clothing/accessory/armor/legguards/navy = 5,
+					/obj/item/clothing/accessory/armor/legguards/merc = 5,
+					/obj/item/clothing/accessory/armor/armorplate/tactical = 5
+				)
 
 
 //Temp Starhunter Fix

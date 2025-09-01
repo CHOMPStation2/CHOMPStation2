@@ -16863,6 +16863,7 @@
 	},
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/red/border,
+/obj/machinery/vending/security_armor,
 /turf/simulated/floor/tiled,
 /area/security/main)
 "bbW" = (
