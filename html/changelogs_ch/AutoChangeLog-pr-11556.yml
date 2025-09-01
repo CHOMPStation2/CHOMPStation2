@@ -1,0 +1,6 @@
+author: "Aroliacue"
+delete-after: True
+changes:
+  - rscadd: "New vending machines with equipment for Exploration (weapons, armor, and miscellaneous gear) and Security (currently just plate carriers and accessories for them)"
+  - maptweak: "Added Exploration vending machines to deck 1, in the room below the northern landing pad."
+  - maptweak: "Added a new Security vending machine to the Briefing Room."
