@@ -19,6 +19,7 @@
 	barefootstep = FOOTSTEP_HARD_BAREFOOT
 	clawfootstep = FOOTSTEP_HARD_CLAW
 	watercolor = "black"
+	reagent_type = REAGENT_ID_LIQUIDPROTEAN
 	var/digesting = FALSE
 	var/active = FALSE
 	var/usesmes = TRUE
