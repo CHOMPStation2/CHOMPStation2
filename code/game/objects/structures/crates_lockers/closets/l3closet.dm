@@ -17,10 +17,17 @@
 	closet_appearance = /decl/closet_appearance/bio/virology
 
 	starts_with = list(
+<<<<<<< HEAD
 		/obj/item/clothing/suit/bio_suit/virology = 2, // CHOMP Block Edit Start
 		/obj/item/clothing/head/bio_hood/virology = 2,
 		/obj/item/clothing/mask/gas/clear = 2, //CHOMPEdit: Clear gas mask implementation
 		/obj/item/tank/oxygen = 2) // CHOMP Block Edit End
+=======
+		/obj/item/clothing/suit/bio_suit/virology,
+		/obj/item/clothing/head/bio_hood/virology,
+		/obj/item/clothing/mask/gas/clear,
+		/obj/item/tank/oxygen)
+>>>>>>> 9e9fdfe1ff (Returns the clear masks. (#18413))
 
 
 /obj/structure/closet/l3closet/security
@@ -38,7 +45,11 @@
 	starts_with = list(
 		/obj/item/clothing/suit/bio_suit/janitor = 2,
 		/obj/item/clothing/head/bio_hood/janitor = 2,
+<<<<<<< HEAD
 		/obj/item/clothing/mask/gas/clear = 2, //CHOMPEdit: Clear gas mask implementation
+=======
+		/obj/item/clothing/mask/gas/clear = 2,
+>>>>>>> 9e9fdfe1ff (Returns the clear masks. (#18413))
 		/obj/item/tank/emergency/oxygen/engi = 2)
 
 
@@ -68,5 +79,9 @@
 	starts_with = list(
 		/obj/item/clothing/suit/bio_suit/general = 3,
 		/obj/item/clothing/head/bio_hood/general = 3,
+<<<<<<< HEAD
 		/obj/item/clothing/mask/gas/clear = 3, // CHOMP Block Edit Start //CHOMPEdit: Clear gas mask implementation
 		/obj/item/tank/oxygen = 3) // CHOMP Block Edit End
+=======
+		/obj/item/clothing/mask/gas/clear = 3)
+>>>>>>> 9e9fdfe1ff (Returns the clear masks. (#18413))
