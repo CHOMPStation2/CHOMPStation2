@@ -330,11 +330,7 @@
 			/obj/item/clothing/suit/bio_suit/cmo,
 			/obj/item/clothing/head/bio_hood/cmo,
 			/obj/item/clothing/shoes/white = 4,
-<<<<<<< HEAD
-			/obj/item/clothing/mask/gas/clear = 4, //ChompEdit: Proper implementation of clear gas masks
-=======
 			/obj/item/clothing/mask/gas/clear = 4,
->>>>>>> 9e9fdfe1ff (Returns the clear masks. (#18413))
 			/obj/item/tank/oxygen = 4,
 			/obj/item/storage/box/masks,
 			/obj/item/storage/box/gloves
@@ -416,11 +412,7 @@
 	contains = list(
 			/obj/item/clothing/suit/bio_suit/virology = 3,
 			/obj/item/clothing/head/bio_hood/virology = 3,
-<<<<<<< HEAD
-			/obj/item/clothing/mask/gas/clear = 3, //ChompEdit: Proper implementation of clear gas masks
-=======
 			/obj/item/clothing/mask/gas/clear = 3,
->>>>>>> 9e9fdfe1ff (Returns the clear masks. (#18413))
 			/obj/item/tank/oxygen = 3,
 			/obj/item/storage/box/masks,
 			/obj/item/storage/box/gloves
