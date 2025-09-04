@@ -37,3 +37,7 @@
   - rscadd: added an alternative plate carrier type, and a helmet
   Tost:
   - bugfix: boat cloak, colorable can have its description and name changed on loadout.
+2025-09-04:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: ar visor being invisible
+  - bugfix: ghost pods in some cases not spawning a charger
