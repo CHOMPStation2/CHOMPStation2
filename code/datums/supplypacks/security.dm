@@ -705,7 +705,7 @@
 			/obj/item/clothing/under/rank/security = 3,
 			/obj/item/clothing/suit/bio_suit/security = 3,
 			/obj/item/clothing/shoes/white = 3,
-			/obj/item/clothing/mask/gas/clear = 3, //Chompedit: implementation of clear gas masks
+			/obj/item/clothing/mask/gas/clear = 3,
 			/obj/item/tank/oxygen = 3,
 			/obj/item/clothing/gloves/sterile/latex,
 			/obj/item/storage/box/gloves

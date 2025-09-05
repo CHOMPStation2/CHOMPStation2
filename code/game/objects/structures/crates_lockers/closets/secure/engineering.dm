@@ -99,7 +99,7 @@
 		/obj/item/radio/headset/alt/headset_eng,
 		/obj/item/radio/headset/earbud/headset_eng,
 		/obj/item/clothing/suit/storage/hazardvest,
-		/obj/item/clothing/mask/gas,
+		/obj/item/clothing/mask/gas/clear,
 		/obj/item/clothing/glasses/meson,
 		/obj/item/cartridge/engineering,
 		/obj/item/taperoll/engineering,
@@ -137,7 +137,7 @@
 		/obj/item/radio/headset/alt/headset_eng,
 		/obj/item/radio/headset/earbud/headset_eng,
 		/obj/item/clothing/suit/storage/hazardvest/atmos,	//VOREStation edit. Eng locker gets regular haz-vest, atmos gets the themed one of their own
-		/obj/item/clothing/mask/gas,
+		/obj/item/clothing/mask/gas/clear,
 		/obj/item/cartridge/atmos,
 		/obj/item/taperoll/atmos,
 		/obj/item/clothing/suit/storage/hooded/wintercoat/engineering/atmos,

@@ -38,7 +38,7 @@
 /obj/structure/closet/secure_closet/hydroponics/sci/Initialize(mapload)
 	starts_with += /obj/item/clothing/head/bio_hood/scientist
 	starts_with += /obj/item/clothing/suit/bio_suit/scientist
-	starts_with += /obj/item/clothing/mask/gas/clear			// VOREStation Edit: Gasmasks we use are different //Chompedit: not anymore!
+	starts_with += /obj/item/clothing/mask/gas/clear					// VOREStation Edit: Gasmasks we use are different
 
 	if(prob(1))
 		starts_with += /obj/item/chainsaw
