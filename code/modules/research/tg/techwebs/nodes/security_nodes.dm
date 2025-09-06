@@ -165,7 +165,7 @@
 		"nsfw_cell_ion",
 		"nsfw_cell_shotstun",
 		"nsfw_cell_xray",
-		"nsfw_cell_stripper",
+		// "nsfw_cell_stripper", // CHOMPRemove
 	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_3_POINTS)
 
