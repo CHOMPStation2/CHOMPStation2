@@ -1,0 +1,4 @@
+author: "Kashargul"
+delete-after: True
+changes:
+  - rscdel: "disables the stripper cell of the nsfw gun"
