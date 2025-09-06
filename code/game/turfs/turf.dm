@@ -11,6 +11,8 @@
 	var/carbon_dioxide = 0
 	var/nitrogen = 0
 	var/phoron = 0
+	var/nitrous_oxide = 0
+	var/methane = 0
 
 	//CHOMPEdit Begin
 	//* Movement / Pathfinding
