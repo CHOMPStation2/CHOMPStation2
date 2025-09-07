@@ -285,3 +285,41 @@
 	brightness_color = LIGHT_COLOR_YELLOW
 	brightness_power = 0.5
 	init_brightness_power = 0.5
+
+/turf/simulated/mineral/cetus
+	desc = "Solid rock"
+	floor_name = "rocks"
+	outdoors = FALSE
+	ignore_cavegen = TRUE
+	ignore_mapgen = TRUE
+	sand_icon_path = 'icons/turf/outdoors.dmi'
+	sand_icon_state = "rock_brown"
+	oxygen		= MOLES_O2STANDARD
+	nitrogen	= MOLES_N2STANDARD
+	temperature = T20C
+
+/turf/simulated/floor/outdoors/rocks/cetus
+	name = "rocks"
+	outdoors = FALSE
+	icon_state = "rock_brown"
+	oxygen		= MOLES_O2STANDARD
+	nitrogen	= MOLES_N2STANDARD
+	temperature = T20C
+
+/turf/simulated/mineral/cetus/edge
+	name = "cold rock"
+	desc = "Solid rock. It's cool to the touch. Digging through this will probably expose the area to hard vacuum!"
+	outdoors = TRUE
+	sand_icon_path = 'icons/turf/outdoors.dmi'
+	sand_icon_state = "rock_brown"
+	icon_state = "rock-dark"
+	oxygen = 0
+	nitrogen = 0
+	temperature = TCMB
+
+/turf/simulated/floor/outdoors/rocks/cetus/edge
+	outdoors = TRUE
+	icon_state = "rock_brown"
+	oxygen = 0
+	nitrogen = 0
+	temperature = TCMB
