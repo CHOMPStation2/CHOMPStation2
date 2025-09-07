@@ -211,12 +211,7 @@
 		if(M.id == id)
 			M.open()
 			return
-<<<<<<< HEAD
-
-	sleep(20)
-=======
 	addtimer(CALLBACK(src, PROC_REF(trigger_step_one)), 2 SECONDS, TIMER_DELETE_ME|TIMER_UNIQUE)
->>>>>>> b18d87e97f (some sleep cleanup (#18381))
 
 /obj/machinery/button/remote/driver/proc/trigger_step_one()
 	PRIVATE_PROC(TRUE)
