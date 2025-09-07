@@ -536,7 +536,7 @@
 /turf/simulated/wall/cult/turfpack/sif,
 /area/submap/DeathDen)
 "Tx" = (
-/obj/machinery/power/supermatter/shard,
+/obj/item/flame/lighter/supermatter,
 /turf/simulated/floor/wood/sif/turfpack/sif,
 /area/submap/DeathDen)
 "Xy" = (
