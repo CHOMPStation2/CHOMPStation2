@@ -214,7 +214,7 @@
 			span_notice(" [user] holds up a paper and shows it to [M]. "))
 		M.examinate(src)
 
-	else if(user.zone_sel.selecting == O_MOUTH) // lipstick wiping and paper eating
+	else if(user.zone_sel.selecting == O_MOUTH) // lipstick wiping
 		if(ishuman(M))
 			var/mob/living/carbon/human/H = M
 			if(H == user)
@@ -229,24 +229,6 @@
 											span_notice("You wipe off [H]'s lipstick."))
 					H.lip_style = null
 					H.update_icons_body()
-			else
-				if(icon_state == "scrap" && H.check_has_mouth())
-					user.visible_message(span_warning("[user] begins to stuff \the [src] into [H]'s mouth!"), \
-											span_warning("You begin to stuff \the [src] into [H]'s mouth!"),)
-					if(do_after(user, 30, H))
-						user.visible_message(span_warning("[user] stuffs \the [src] into [H]'s mouth!"),\
-												span_warning("You stuff \the [src] into [H]'s mouth!"))
-						H.ingested.add_reagent("paper", 10)
-						H.adjustOxyLoss(10)
-						qdel(src)
-				else
-					user.visible_message(span_warning("[user] begins to wipe [H]'s lipstick off with \the [src]."), \
-											span_notice("You begin to wipe off [H]'s lipstick."))
-					if(do_after(user, 10, H))
-						user.visible_message(span_notice("[user] wipes [H]'s lipstick off with \the [src]."), \
-												span_notice("You wipe off [H]'s lipstick."))
-						H.lip_style = null
-						H.update_icons_body() //YW Edit End
 
 /obj/item/paper/proc/set_content(text,title)
 	if(title)
