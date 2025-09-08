@@ -5252,6 +5252,7 @@
 #include "modular_chomp\code\modules\overmap\dynamic_sector.dm"
 #include "modular_chomp\code\modules\paperwork\faxmachine.dm"
 #include "modular_chomp\code\modules\paperwork\filingcabinet.dm"
+#include "modular_chomp\code\modules\paperwork\paper.dm"
 #include "modular_chomp\code\modules\paperwork\pen.dm"
 #include "modular_chomp\code\modules\pda\core_apps.dm"
 #include "modular_chomp\code\modules\planet\sif.dm"
