@@ -69,3 +69,6 @@
       get_gas_mixture_default_scan_data() to get their data and format it
   - bugfix: nitrous oxide is now weighed when checking if the gasses in a zone are
       different
+2025-09-08:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: robot material cable colors
