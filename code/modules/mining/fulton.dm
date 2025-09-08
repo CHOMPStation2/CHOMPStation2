@@ -143,13 +143,9 @@
 	icon_state = "extraction_pointoff"
 
 /obj/item/fulton_core/attack_self(mob/user)
-<<<<<<< HEAD
-	if(do_after(user,15,target = user) && !QDELETED(src))
-=======
 	var/turf/T = get_turf(user)
 	var/outdoors = T.is_outdoors()
 	if(do_after(user, 15, target = user) && !QDELETED(src) && outdoors)
->>>>>>> d73f6b8dbd (Makes uses of do_after sane (#18334))
 		new /obj/structure/extraction_point(get_turf(user))
 		qdel(src)
 

@@ -336,13 +336,9 @@
 					else
 						to_chat(user, span_notice("You need more welding fuel to complete this task."))
 						return
-<<<<<<< HEAD
-			if(do_after(user, 20 * S.toolspeed))
+			if(do_after(user, 2 SECONDS * S.toolspeed, target = src))
 				if(opened) //ChompEDIT - cancel weld if opened mid-progress to prevent welder-traps
 					return //ChompEDIT
-=======
-			if(do_after(user, 2 SECONDS * S.toolspeed, target = src))
->>>>>>> d73f6b8dbd (Makes uses of do_after sane (#18334))
 				playsound(src, S.usesound, 50)
 				sealed = !sealed
 				update_icon()
