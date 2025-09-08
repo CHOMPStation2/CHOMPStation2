@@ -5077,7 +5077,6 @@
 #include "modular_chomp\code\modules\client\preference_setup\loadout\loadout_general.dm"
 #include "modular_chomp\code\modules\client\preference_setup\loadout\loadout_gloves_ch.dm"
 #include "modular_chomp\code\modules\client\preference_setup\loadout\loadout_head.dm"
-#include "modular_chomp\code\modules\client\preference_setup\loadout\loadout_mask.dm"
 #include "modular_chomp\code\modules\client\preference_setup\loadout\loadout_shoes.dm"
 #include "modular_chomp\code\modules\client\preference_setup\loadout\loadout_suit.dm"
 #include "modular_chomp\code\modules\client\preferences\types\misc.dm"
