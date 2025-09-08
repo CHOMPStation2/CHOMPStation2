@@ -33,8 +33,8 @@
 	cost = 0 // Originally was -2
 	custom_only = FALSE
 
-	is_genetrait = FALSE
-	hidden = TRUE
+	is_genetrait = TRUE //CHOMPEdit - Enable tourettes
+	hidden = FALSE //CHOMPEdit - Enable tourettes
 
 	activation_message="You twitch."
 	primitive_expression_messages=list("twitches and chitters.")
