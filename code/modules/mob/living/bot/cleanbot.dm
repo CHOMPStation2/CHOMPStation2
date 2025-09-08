@@ -120,7 +120,7 @@
 		cleantime = istype(D, /obj/effect/decal/cleanable/dirt) ? 10 : 50
 		if(prob(20))
 			automatic_custom_emote(AUDIBLE_MESSAGE, "begins to clean up \the [D]")
-		if(do_after(src, cleantime * cTimeMult))
+		if(do_after(src, cleantime * cTimeMult, target = D))
 			if(istype(loc, /turf/simulated))
 				var/turf/simulated/f = loc
 				f.dirt = 0
@@ -139,7 +139,7 @@
 		if(cleantime != 0)
 			if(prob(20))
 				automatic_custom_emote(AUDIBLE_MESSAGE, "begins to clean up \the [loc]")
-			if(do_after(src, cleantime * cTimeMult))
+			if(do_after(src, cleantime * cTimeMult, target = loc))
 				if(blood)
 					wash(CLEAN_TYPE_BLOOD)
 				if(istype(loc, /turf/simulated))
