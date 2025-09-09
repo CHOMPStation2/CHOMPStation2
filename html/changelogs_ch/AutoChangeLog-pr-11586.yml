@@ -1,4 +1,4 @@
 author: "CHOMPStation2StaffMirrorBot"
 delete-after: True
 changes:
-  - balance: "Made the dud implants free in the loadout"
+  - rscadd: "Added gas masks to the loadout options"

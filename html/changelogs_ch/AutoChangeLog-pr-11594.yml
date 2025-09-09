@@ -1,0 +1,4 @@
+author: "VictorZisthus"
+delete-after: True
+changes:
+  - bugfix: "Fixes a missing power cable under the Third Deck Fore Starboard Maintenance APC."
