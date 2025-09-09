@@ -349,12 +349,8 @@
 /obj/item/hand
 	name = "hand of cards"
 	desc = "Some playing cards."
-<<<<<<< HEAD
-	icon = 'icons/obj/playing_cards_ch.dmi' //CHOMPEDIT quickest solution to having custom chomp cards - Jack
-=======
 	description_info = "Alt click to remove a card, Ctrl click to discard cards."
 	icon = 'icons/obj/playing_cards.dmi'
->>>>>>> 41969fe83d (Gamble buffs (#18403))
 	icon_state = "empty"
 	drop_sound = 'sound/items/drop/paper.ogg'
 	pickup_sound = 'sound/items/pickup/paper.ogg'
