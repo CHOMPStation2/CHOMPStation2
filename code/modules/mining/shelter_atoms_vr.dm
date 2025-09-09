@@ -16,8 +16,6 @@ GLOBAL_LIST_EMPTY(unique_deployable)
 	name = "\improper Emergency Shelter Bathroom"
 	icon_state = "away2"
 
-<<<<<<< HEAD
-=======
 /area/survivalpod/redspace
 	name = "\improper Redspace Capsule Shelter"
 	icon_state = "darkred"
@@ -31,7 +29,6 @@ GLOBAL_LIST_EMPTY(unique_deployable)
 /area/survivalpod/dorms/holly
 	name = "\improper Holly's Emergency Shelter Dorm"
 
->>>>>>> f76eb26592 (Big fucking shelter capsule update (#18391))
 //Survival Capsule
 /obj/item/survivalcapsule
 	name = "surfluid shelter capsule"
@@ -198,7 +195,6 @@ GLOBAL_LIST_EMPTY(unique_deployable)
 	desc = "A cozy cabin; crammed into a survival capsule."
 	template_id = "shelter_cab"
 
-<<<<<<< HEAD
 //CHOMPKeep Start
 /obj/item/survivalcapsule/dropship
 	name = "dropship surfluid shelter capsule"
@@ -208,7 +204,7 @@ GLOBAL_LIST_EMPTY(unique_deployable)
 	is_ship = TRUE
 	w_class = ITEMSIZE_SMALL
 //CHOMPKeep End
-=======
+
 /obj/item/survivalcapsule/recroom
 	name = "pop-out rec room shelter capsule"
 	desc = "A recreational room stuffed into a survival capsule."
@@ -223,7 +219,6 @@ GLOBAL_LIST_EMPTY(unique_deployable)
 	name = "pop-out cafe shelter capsule"
 	desc = "A cozy cafe stuffed into a survival capsule."
 	template_id = "shelter_cafe"
->>>>>>> f76eb26592 (Big fucking shelter capsule update (#18391))
 
 //Custom Shelter Capsules
 /obj/item/survivalcapsule/tabiranth
@@ -232,8 +227,6 @@ GLOBAL_LIST_EMPTY(unique_deployable)
 	template_id = "shelter_phi"
 	unique_id = "shelter_a"
 
-<<<<<<< HEAD
-=======
 /obj/item/survivalcapsule/holly
 	name = "vaguely festive surfluid shelter capsule"
 	desc = "A \"homemade\" luxury suite crammed into a capsule. There's a license for use printed on the bottom. For some reason, the license's text is written in festive colors."
@@ -320,7 +313,6 @@ GLOBAL_LIST_EMPTY(unique_deployable)
 	ret += ("\n" + span_boldwarning("Do not."))
 	return ret
 
->>>>>>> f76eb26592 (Big fucking shelter capsule update (#18391))
 //Pod objects
 //Walls
 /turf/simulated/shuttle/wall/voidcraft/survival

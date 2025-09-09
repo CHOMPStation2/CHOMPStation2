@@ -1,3 +1,75 @@
+//Moved hangars to here from Southern cross areas.
+/area/hangar
+	name = "\improper First Deck Hangar"
+	icon_state = "hangar"
+	sound_env = LARGE_ENCLOSED
+	ambience = AMBIENCE_HANGAR
+
+/area/hangar/one
+	name = "\improper Hangar One"
+
+/area/hangar/lockerroomone
+	name = "\improper Exploration Locker Room One"
+	icon_state = "hangarcontrol"
+
+/area/hangar/two
+	name = "\improper Hangar Two"
+
+/area/hangar/lockerroomtwo
+	name = "\improper Exploration Locker Room Two"
+	icon_state = "hangarcontrol"
+
+/area/hangar/three
+	name = "\improper Hangar Three"
+
+/area/hangar/lockerroomthree
+	name = "\improper Exploration Locker Room Three"
+	icon_state = "hangarcontrol"
+
+/area/engineering/gravgen
+	name = "Gravity Generator"
+	icon_state = "engineering"
+
+/area/shuttle/stargazer
+	name = "\improper Stargazer"
+	icon_state = "shuttlered"
+	requires_power = TRUE
+
+/area/shuttle/echidna
+	name = "\improper Echidna"
+	icon_state = "shuttlered"
+	requires_power = TRUE
+
+/area/shuttle/ursula
+	name = "\improper Ursula"
+	icon_state = "shuttlered"
+	requires_power = TRUE
+
+/area/shuttle/needle
+	name = "\improper Needle"
+	icon_state = "shuttlered"
+	requires_power = TRUE
+
+/area/shuttle/baby_mammoth
+	name = "\improper Baby_mammoth"
+	icon_state = "shuttlered"
+	requires_power = TRUE
+
+/area/shuttle/spacebus
+	name = "\improper Space Bus"
+	icon_state = "shuttlered"
+	requires_power = TRUE
+
+/area/shuttle/junker
+	name = "\improper Junker"
+	icon_state = "shuttlered"
+	requires_power = TRUE
+
+/area/shuttle/phoenix
+	name = "\improper phoenix"
+	icon_state = "shuttlered"
+	requires_power = TRUE
+
 /area/surface/outpost/main/dorms
 	name = "\improper Main Outpost Dorms"
 	flags = RAD_SHIELDED | AREA_SOUNDPROOF | AREA_FORBID_EVENTS | AREA_ALLOW_LARGE_SIZE | AREA_BLOCK_SUIT_SENSORS | AREA_BLOCK_TRACKING | AREA_FORBID_SINGULO | AREA_ALLOW_CLOCKOUT

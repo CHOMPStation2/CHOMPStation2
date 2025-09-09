@@ -120,8 +120,6 @@
 		to no contact, the expense of these shelters have prevented them \
 		from seeing common use."
 	mappath = "maps/submaps/shelters/shelter_a.dmm"
-<<<<<<< HEAD
-=======
 
 /datum/map_template/shelter/chi
 	name = "Shelter Chi"
@@ -253,4 +251,3 @@
 	name = "Shelter Candlelit Dinner"
 	shelter_id = "shelter_candlelit_dinner"
 	mappath = "maps/submaps/shelters/randomshelters/shelter_candlelit_dinner.dmm"
->>>>>>> f76eb26592 (Big fucking shelter capsule update (#18391))
