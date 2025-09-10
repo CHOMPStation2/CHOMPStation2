@@ -1061,11 +1061,7 @@
 	var/image/standing = ..()
 	if(taurized) //Special snowflake var on suits
 		standing.pixel_x = -16
-<<<<<<< HEAD
-		standing.layer = BODY_LAYER + 18 // 18 is above tail layer, so will not be covered by taurbody. TAIL_UPPER_LAYER +1 //CHOMPEDIT - CHECK human/update_icons.dm BEFORE YOU CHANGE THIS.
-=======
 		standing.layer = BODY_LAYER + TAIL_UPPER_LAYER + 1
->>>>>>> f66067eebe (Taur Coat Fix (#18409))
 	return standing
 
 /obj/item/clothing/suit/apply_accessories(var/image/standing)
