@@ -1,0 +1,4 @@
+author: "VictorZisthus"
+delete-after: True
+changes:
+  - maptweak: "Fixes Xenoarch SMES terminal for power input having the wrong wire underneath, preventing charging."
