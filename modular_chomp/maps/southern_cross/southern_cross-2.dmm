@@ -1680,21 +1680,21 @@
 	dir = 4
 	},
 /obj/structure/closet/crate/mail,
-/obj/item/mail/blank,
-/obj/item/mail/blank,
-/obj/item/mail/blank,
-/obj/item/mail/blank,
-/obj/item/mail/blank,
-/obj/item/mail/blank,
-/obj/item/mail/blank,
-/obj/item/mail/blank,
-/obj/item/mail/blank,
-/obj/item/mail/blank,
-/obj/item/mail/blank,
-/obj/item/mail/blank,
-/obj/item/mail/blank,
-/obj/item/mail/blank,
-/obj/item/mail/blank,
+/obj/item/mail/junkmail,
+/obj/item/mail/junkmail,
+/obj/item/mail/junkmail,
+/obj/item/mail/junkmail,
+/obj/item/mail/junkmail,
+/obj/item/mail/junkmail,
+/obj/item/mail/junkmail,
+/obj/item/mail/junkmail,
+/obj/item/mail/junkmail,
+/obj/item/mail/junkmail,
+/obj/item/mail/junkmail,
+/obj/item/mail/junkmail,
+/obj/item/mail/junkmail,
+/obj/item/mail/junkmail,
+/obj/item/mail/junkmail,
 /turf/simulated/floor/tiled,
 /area/quartermaster/delivery)
 "ahk" = (
@@ -29859,7 +29859,7 @@
 	pixel_x = -5;
 	pixel_y = -5
 	},
-/obj/item/mail/blank,
+/obj/item/mail/junkmail,
 /obj/item/mail_scanner{
 	pixel_x = -5;
 	pixel_y = 5
