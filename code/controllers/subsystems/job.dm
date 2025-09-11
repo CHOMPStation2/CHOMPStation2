@@ -149,6 +149,7 @@ SUBSYSTEM_DEF(job)
 
 /datum/controller/subsystem/job/proc/job_debug_message(message)
 	if(debug_messages)
+<<<<<<< HEAD
 		log_debug("JOB DEBUG: [message]")
 
 //CHOMPadd start
@@ -171,3 +172,6 @@ SUBSYSTEM_DEF(job)
 	if(!fexists(savepath))
 		log_debug("Saving: failed to save [savepath]")
 //CHOMPadd end
+=======
+		log_world("JOB DEBUG: [message]")
+>>>>>>> b0f0f4685f (JSON Logging Refactor (#18252))

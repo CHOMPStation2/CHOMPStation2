@@ -158,8 +158,13 @@
 
 		else
 			icon = 'icons/obj/pda_old.dmi'
+<<<<<<< HEAD
 			log_debug("Invalid switch for PDA, defaulting to old PDA icons. [pdachoice] chosen.")
 	//add_overlay("pda-pen") //ChompEDIT no icon ops on New
+=======
+			log_runtime("Invalid switch for PDA, defaulting to old PDA icons. [pdachoice] chosen.")
+	add_overlay("pda-pen")
+>>>>>>> b0f0f4685f (JSON Logging Refactor (#18252))
 	start_program(find_program(/datum/data/pda/app/main_menu))
 
 //ChompEDIT START - move icon ops to initialize

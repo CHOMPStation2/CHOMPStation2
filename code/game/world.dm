@@ -87,8 +87,14 @@ GLOBAL_VAR(restart_counter)
 	Profile(PROFILE_RESTART)
 	Profile(PROFILE_RESTART, type = "sendmaps")
 
+	// Write everything to this log file until we get to SetupLogs() later
+	_initialize_log_files("data/logs/config_error.[GUID()].log")
+
 	// Init the debugger first so we can debug Master
 	Debugger = new
+
+	// Create the logger
+	logger = new
 
 	// THAT'S IT, WE'RE DONE, THE. FUCKING. END.
 	Master = new
@@ -124,10 +130,8 @@ GLOBAL_VAR(restart_counter)
 
 	world_startup_time = world.timeofday
 	rollover_safety_date = world.realtime - world.timeofday // 00:00 today (ish, since floating point error with world.realtime) of today
-	to_world_log("Map Loading Complete")
-	//logs
-	//VOREStation Edit Start
 
+<<<<<<< HEAD
 	var/override_dir = params[OVERRIDE_LOG_DIRECTORY_PARAMETER]
 	if(override_dir)
 		GLOB.log_directory = "data/logs/[override_dir]"
@@ -156,6 +160,8 @@ GLOBAL_VAR(restart_counter)
 	//ChompADD End
 
 	// First possible sleep()
+=======
+>>>>>>> b0f0f4685f (JSON Logging Refactor (#18252))
 	InitTgs()
 
 	config.Load(params[OVERRIDE_CONFIG_DIRECTORY_PARAMETER])
@@ -188,8 +194,8 @@ GLOBAL_VAR(restart_counter)
 	setup_season()	//VOREStation Addition
 
 #ifdef UNIT_TESTS
-	log_unit_test("Unit Tests Enabled.  This will destroy the world when testing is complete.")
-	log_unit_test("If you did not intend to enable this please check code/__defines/unit_testing.dm")
+	log_test("Unit Tests Enabled. This will destroy the world when testing is complete.")
+	log_test("If you did not intend to enable this please check code/__defines/unit_testing.dm")
 #endif
 
 	// This is kinda important. Set up details of what the hell things are made of.
@@ -231,6 +237,8 @@ GLOBAL_VAR(restart_counter)
 
 	// Try to set round ID
 	SSdbcore.InitializeRound()
+
+	SetupLogs()
 
 	load_admins(initial = TRUE)
 
@@ -276,6 +284,46 @@ GLOBAL_VAR(restart_counter)
 	data["time"] = world.time
 	data["timestamp"] = rustg_unix_timestamp()
 	return data
+
+/world/proc/SetupLogs()
+	var/override_dir = params[OVERRIDE_LOG_DIRECTORY_PARAMETER]
+	if(!override_dir)
+		var/realtime = world.realtime
+		var/texttime = time2text(realtime, "YYYY/MM/DD", TIMEZONE_UTC)
+		GLOB.log_directory = "data/logs/[texttime]/round-"
+		if(GLOB.round_id)
+			GLOB.log_directory += "[GLOB.round_id]"
+			//GLOB.picture_logging_prefix += "R_[GLOB.round_id]_"
+			//GLOB.picture_log_directory += "[GLOB.round_id]"
+		else
+			var/timestamp = replacetext(time_stamp(), ":", ".")
+			GLOB.log_directory += "[timestamp]"
+			//GLOB.picture_log_directory += "[timestamp]"
+			//GLOB.picture_logging_prefix += "T_[timestamp]_"
+	else
+		GLOB.log_directory = "data/logs/[override_dir]"
+		//GLOB.picture_logging_prefix = "O_[override_dir]_"
+		//GLOB.picture_log_directory = "data/picture_logs/[override_dir]"
+
+	logger.init_logging()
+
+	var/latest_changelog = file("[global.config.directory]/../html/changelogs/archive/" + time2text(world.timeofday, "YYYY-MM", TIMEZONE_UTC) + ".yml")
+	GLOB.changelog_hash = fexists(latest_changelog) ? md5(latest_changelog) : 0 //for telling if the changelog has changed recently
+
+	if(GLOB.round_id)
+		log_game("Round ID: [GLOB.round_id]")
+
+	// This was printed early in startup to the world log and config_error.log,
+	// but those are both private, so let's put the commit info in the runtime
+	// log which is ultimately public.
+	log_runtime(GLOB.revdata.get_log_message())
+
+#ifndef USE_CUSTOM_ERROR_HANDLER
+	world.log = file("[GLOB.log_directory]/dd.log")
+#else
+	if (TgsAvailable()) // why
+		world.log = file("[GLOB.log_directory]/dd.log") //not all runtimes trigger world/Error, so this is the only way to ensure we can see all of them.
+#endif
 
 var/world_topic_spam_protect_ip = "0.0.0.0"
 var/world_topic_spam_protect_time = world.timeofday
@@ -538,9 +586,10 @@ var/world_topic_spam_protect_time = world.timeofday
 		if (usr)
 			log_admin("[key_name(usr)] Has requested an immediate world restart via client side debugging tools")
 			message_admins("[key_name_admin(usr)] Has requested an immediate world restart via client side debugging tools")
-			to_world(span_boldannounce("[key_name_admin(usr)] has requested an immediate world restart via client side debugging tools"))
+			to_chat(world, span_boldannounce("[key_name_admin(usr)] has requested an immediate world restart via client side debugging tools"))
+
 		else
-			to_world(span_boldannounce("Rebooting world immediately due to host request"))
+			to_chat(world, span_boldannounce("Rebooting world immediately due to host request"))
 	else
 		Master.Shutdown()	//run SS shutdowns
 		for(var/client/C in GLOB.clients)
@@ -553,19 +602,19 @@ var/world_topic_spam_protect_time = world.timeofday
 	#else
 	if(check_hard_reboot())
 		log_world("World hard rebooted at [time_stamp()]")
-		//shutdown_logging() // See comment below.
+		shutdown_logging() // See comment below.
 		//QDEL_NULL(Tracy)
 		//QDEL_NULL(Debugger)
 		TgsEndProcess()
 		return ..()
 
-	TgsReboot()
 	log_world("World rebooted at [time_stamp()]")
 
+	shutdown_logging() // Past this point, no logging procs can be used, at risk of data loss.
 	QDEL_NULL(Tracy)
 	QDEL_NULL(Debugger)
 
-	TgsReboot()
+	TgsReboot() // TGS can decide to kill us right here, so it's important to do it last
 
 	..()
 	#endif
@@ -588,7 +637,7 @@ var/world_topic_spam_protect_time = world.timeofday
 	if(Lines.len)
 		if(Lines[1])
 			GLOB.master_mode = Lines[1]
-			log_misc("Saved mode is '[GLOB.master_mode]'")
+			log_world("## MISC Saved mode is '[GLOB.master_mode]'")
 
 /world/proc/save_mode(var/the_mode)
 	var/F = file("data/mode.txt")
@@ -603,7 +652,7 @@ var/world_topic_spam_protect_time = world.timeofday
 	if(CONFIG_GET(flag/admin_legacy_system))
 		var/text = file2text("config/moderators.txt")
 		if (!text)
-			error("Failed to load config/mods.txt")
+			log_world("Failed to load config/mods.txt")
 		else
 			var/list/lines = splittext(text, "\n")
 			for(var/line in lines)
@@ -684,10 +733,11 @@ var/failed_old_db_connections = 0
 
 /hook/startup/proc/connectDB()
 	if(!CONFIG_GET(flag/sql_enabled))
-		to_world_log("SQL connection disabled in config.")
+		log_sql("SQL connection disabled in config.")
 	else if(!setup_database_connection())
-		to_world_log("Your server failed to establish a connection with the feedback database.")
+		log_sql("Your server failed to establish a connection with the feedback database.")
 	else
+<<<<<<< HEAD
 		to_world_log("Feedback database connection established.")
 		// CHOMPEdit Begin - Truncating the temporary dialog/attacklog tables
 		var/datum/db_query/query_truncate = SSdbcore.NewQuery("TRUNCATE erro_dialog")
@@ -707,6 +757,9 @@ var/failed_old_db_connections = 0
 			log_admin("ERROR TRYING TO CLEAR erro_attacklog")
 		qdel(query_truncate2)
 		// CHOMPEdit End
+=======
+		log_sql("Feedback database connection established.")
+>>>>>>> b0f0f4685f (JSON Logging Refactor (#18252))
 	return 1
 
 /proc/setup_database_connection()
@@ -730,7 +783,7 @@ var/failed_old_db_connections = 0
 		failed_db_connections = 0	//If this connection succeeded, reset the failed connections counter.
 	else
 		failed_db_connections++		//If it failed, increase the failed connections counter.
-		to_world_log(SSdbcore.ErrorMsg())
+		log_sql(SSdbcore.ErrorMsg())
 
 	return .
 
@@ -765,7 +818,7 @@ var/failed_old_db_connections = 0
 			results += "FAIL: failed to connect to the database with setup_database_connection()"
 
 	results += "-- DB Reset End --"
-	to_world_log(results.Join("\n"))
+	log_sql(results.Join("\n"))
 
 // Things to do when a new z-level was just made.
 /world/proc/max_z_changed()

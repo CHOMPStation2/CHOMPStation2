@@ -424,12 +424,21 @@ var/list/channel_to_radio_key = list()
 			blooploop(message, extrarange = -6, volume = 25, sound_preference = /datum/preference/toggle/whisper_sounds)
 			// playsound(T, pick(voice_sounds_list), 25, TRUE, extrarange = -6, falloff = 1 , is_global = TRUE, frequency = voice_freq, ignore_walls = TRUE, preference = /datum/preference/toggle/whisper_sounds)	//CHOMPEdit - ignore_walls = TRUE
 
+<<<<<<< HEAD
 		INVOKE_ASYNC(GLOBAL_PROC, GLOBAL_PROC_REF(log_whisper), message, src) //CHOMP EDIT - TODO: FIX ME (selis logging pr)
 	else
 		if(do_sound && message)
 			blooploop(message, volume = 75)
 			// playsound(T, pick(voice_sounds_list), 75, TRUE, falloff = 1 , is_global = TRUE, frequency = voice_freq, ignore_walls = TRUE, preference = /datum/preference/toggle/say_sounds) //CHOMPEdit - ignore_walls = TRUE
 		INVOKE_ASYNC(GLOBAL_PROC, GLOBAL_PROC_REF(log_say), message, src) //CHOMP EDIT - TODO: FIX ME (selis logging pr)
+=======
+		log_talk(message, LOG_WHISPER)
+	else
+		if(do_sound && message)
+			blooploop(message, volume = 75)
+			// playsound(T, pick(voice_sounds_list), 75, TRUE, falloff = 1 , is_global = TRUE, frequency = ourfreq, ignore_walls = FALSE, preference = /datum/preference/toggle/say_sounds)
+		log_talk(message, LOG_SAY)
+>>>>>>> b0f0f4685f (JSON Logging Refactor (#18252))
 	return 1
 
 /*************************************************************************/
