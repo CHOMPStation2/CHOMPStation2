@@ -3351,22 +3351,6 @@
 	},
 /turf/space,
 /area/space)
-"dWQ" = (
-/obj/machinery/door/airlock/external{
-	icon_state = "door_locked";
-	locked = 1
-	},
-/obj/effect/forcefield{
-	desc = "You can't get in. Heh.";
-	invisibility = 60;
-	layer = 1;
-	name = "Blocker"
-	},
-/turf/unsimulated/floor{
-	dir = 5;
-	icon_state = "vault"
-	},
-/area/centcom/terminal)
 "dXh" = (
 /obj/effect/floor_decal/corner/green{
 	dir = 9
@@ -3917,12 +3901,7 @@
 /turf/simulated/floor/holofloor/wood,
 /area/holodeck/source_courtroom)
 "eDt" = (
-/obj/effect/forcefield{
-	desc = "You can't get in. Heh.";
-	invisibility = 60;
-	layer = 1;
-	name = "Blocker"
-	},
+/obj/effect/blocker,
 /turf/simulated/shuttle/floor/white,
 /area/centcom/main_hall)
 "eDu" = (
@@ -5784,12 +5763,7 @@
 /area/holodeck/source_theatre)
 "gGh" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
-/obj/effect/forcefield{
-	desc = "You can't get in. Heh.";
-	invisibility = 60;
-	layer = 1;
-	name = "Blocker"
-	},
+/obj/effect/blocker,
 /obj/machinery/door/airlock/external{
 	icon_state = "door_locked";
 	locked = 1
@@ -8506,11 +8480,7 @@
 /turf/simulated/shuttle/floor/red,
 /area/shuttle/administration/centcom)
 "jHW" = (
-/obj/effect/forcefield{
-	desc = "You can't get in. Heh.";
-	layer = 1;
-	name = "Blocker"
-	},
+/obj/effect/blocker,
 /obj/effect/wingrille_spawn/reinforced/crescent,
 /obj/machinery/atmospherics/pipe/simple/visible{
 	dir = 4
@@ -10148,11 +10118,7 @@
 	},
 /area/skipjack_station)
 "lpK" = (
-/obj/effect/forcefield{
-	desc = "You can't get in. Heh.";
-	layer = 1;
-	name = "Blocker"
-	},
+/obj/effect/blocker,
 /obj/effect/wingrille_spawn/reinforced/crescent,
 /turf/unsimulated/floor{
 	icon_state = "dark"
@@ -21399,11 +21365,7 @@
 	icon_state = "door_locked";
 	locked = 1
 	},
-/obj/effect/forcefield{
-	desc = "You can't get in. Heh.";
-	layer = 1;
-	name = "Blocker"
-	},
+/obj/effect/blocker,
 /turf/unsimulated/floor{
 	dir = 5;
 	icon_state = "vault"
@@ -31396,15 +31358,15 @@ lFQ
 xWO
 wCB
 wLi
-dWQ
-dWQ
+xuX
+xuX
 wLi
 eox
 lFQ
 eox
 wLi
-dWQ
-dWQ
+xuX
+xuX
 wLi
 wCB
 xWO
