@@ -20,6 +20,15 @@ LOG_ADMINCHAT
 ## log OOC channel
 LOG_OOC
 
+<<<<<<< HEAD
+=======
+## log LOOC channel
+LOG_LOOC
+
+## log prayers
+LOG_PRAYER
+
+>>>>>>> 352bd5e20c (Fixes looc log category (#18459))
 ## log client Say
 LOG_SAY
 
