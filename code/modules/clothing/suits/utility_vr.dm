@@ -16,11 +16,7 @@
 
 /obj/item/clothing/head/radiation
 	sprite_sheets = list(
-<<<<<<< HEAD
-		SPECIES_TESHARI = 'icons/inventory/head/mob_ch_teshari.dmi', //CHOMPstation edit, using our overwrite icons
-=======
 		SPECIES_TESHARI = 'icons/inventory/head/mob_teshari.dmi',
->>>>>>> 6e463de693 (clothing _vr dmi cleanup: hats and headwear [IDB IGNORE] (#18348))
 		SPECIES_VOX = 'icons/inventory/head/mob_vox.dmi',
 		SPECIES_WEREBEAST = 'icons/inventory/head/mob_werebeast.dmi'
 		)
