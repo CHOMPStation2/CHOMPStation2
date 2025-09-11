@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Disposal bin
 // Holds items for disposal into pipe system
 // Draws air from turf, gradually charges internal reservoir
@@ -684,8 +685,9 @@
 	active = 0
 	return ..()
 
+=======
+>>>>>>> 37a2e0151d (Disposal Connector Component (#18431))
 // Disposal pipes
-
 /obj/structure/disposalpipe
 	icon = 'icons/obj/pipes/disposal.dmi'
 	name = "disposal pipe"
@@ -715,8 +717,8 @@
 	var/obj/structure/disposalholder/H = locate() in src
 	if(H)
 		// holder was present
-		H.active = 0
-		var/turf/T = src.loc
+		H.active = FALSE
+		var/turf/T = get_turf(src)
 		if(T.density)
 			// deleting pipe is inside a dense turf (wall)
 			// this is unlikely, but just dump out everything into the turf in case
@@ -740,7 +742,6 @@
 
 // transfer the holder through this pipe segment
 // overriden for special behaviour
-//
 /obj/structure/disposalpipe/proc/transfer(var/obj/structure/disposalholder/H)
 	var/nextdir = nextdir(H.dir)
 	H.set_dir(nextdir)
@@ -763,7 +764,7 @@
 
 // update the icon_state to reflect hidden status
 /obj/structure/disposalpipe/proc/update()
-	var/turf/T = src.loc
+	var/turf/T = get_turf(src)
 	hide(!T.is_plating() && !istype(T,/turf/space))	// space never hides pipes
 
 // hide called by levelupdate if turf intact status changes
@@ -787,7 +788,7 @@
 
 // expel the held objects into a turf
 // called when there is a break in the pipe
-/obj/structure/disposalpipe/proc/expel(var/obj/structure/disposalholder/H, var/turf/T, var/direction)
+/obj/structure/disposalpipe/proc/expel(obj/structure/disposalholder/H, turf/T, direction)
 	if(!istype(H))
 		return
 
@@ -804,11 +805,9 @@
 		qdel(H)
 		return
 
-
 	if(!T.is_plating() && istype(T,/turf/simulated/floor)) //intact floor, pop the tile
 		var/turf/simulated/floor/F = T
-		F.break_tile()
-		new /obj/item/stack/tile(H)	// add to holder so it will be thrown with other stuff
+		F.make_plating(TRUE)
 
 	var/turf/target
 	if(direction)		// direction is specified
@@ -820,11 +819,12 @@
 		playsound(src, 'sound/machines/hiss.ogg', 50, 0, 0)
 		if(H)
 			for(var/atom/movable/AM in H)
+				if(QDELETED(AM))
+					continue
 				AM.forceMove(T)
 				AM.pipe_eject(direction)
-				spawn(1)
-					if(AM)
-						AM.throw_at(target, 100, 1)
+				AM.throw_at(target, 100, 1)
+
 			H.vent_gas(T)
 			qdel(H)
 
@@ -833,13 +833,12 @@
 		playsound(src, 'sound/machines/hiss.ogg', 50, 0, 0)
 		if(H)
 			for(var/atom/movable/AM in H)
+				if(QDELETED(AM))
+					continue
 				target = get_offset_target_turf(T, rand(5)-rand(5), rand(5)-rand(5))
-
 				AM.forceMove(T)
 				AM.pipe_eject(0)
-				spawn(1)
-					if(AM)
-						AM.throw_at(target, 5, 1)
+				AM.throw_at(target, 5, 1)
 
 			H.vent_gas(T)	// all gas vent to turf
 			qdel(H)
@@ -850,19 +849,19 @@
 // will expel any holder inside at the time
 // then delete the pipe
 // remains : set to leave broken pipe pieces in place
-/obj/structure/disposalpipe/proc/broken(var/remains = 0)
+/obj/structure/disposalpipe/proc/broken(remains = 0)
 	if(remains)
 		for(var/D in GLOB.cardinal)
 			if(D & dpdir)
-				var/obj/structure/disposalpipe/broken/P = new(src.loc)
+				var/obj/structure/disposalpipe/broken/P = new(get_turf(src))
 				P.set_dir(D)
 
-	src.invisibility = INVISIBILITY_ABSTRACT	// make invisible (since we won't delete the pipe immediately)
+	invisibility = INVISIBILITY_ABSTRACT	// make invisible (since we won't delete the pipe immediately)
 	var/obj/structure/disposalholder/H = locate() in src
 	if(H)
 		// holder was present
-		H.active = 0
-		var/turf/T = src.loc
+		H.active = FALSE
+		var/turf/T = get_turf(src)
 		if(T.density)
 			// broken pipe is inside a dense turf (wall)
 			// this is unlikely, but just dump out everything into the turf in case
@@ -898,7 +897,7 @@
 			return
 
 
-	// test health for brokenness
+// test health for brokenness
 /obj/structure/disposalpipe/proc/healthcheck()
 	if(health < -2)
 		broken(0)
@@ -906,15 +905,14 @@
 		broken(1)
 	return
 
-	//attack by item
-	//weldingtool: unfasten and convert to obj/disposalconstruct
+//attack by item
+//weldingtool: unfasten and convert to obj/disposalconstruct
+/obj/structure/disposalpipe/attackby(obj/item/I, mob/user)
 
-/obj/structure/disposalpipe/attackby(var/obj/item/I, var/mob/user)
-
-	var/turf/T = src.loc
+	var/turf/T = get_turf(src)
 	if(!T.is_plating())
 		return		// prevent interaction with T-scanner revealed pipes
-	src.add_fingerprint(user)
+	add_fingerprint(user)
 	if(I.has_tool_quality(TOOL_WELDER))
 		var/obj/item/weldingtool/W = I.get_welder()
 		if(W.remove_fuel(0,user))
@@ -930,10 +928,10 @@
 			to_chat(user, "You need more welding fuel to cut the pipe.")
 			return
 
-	// called when pipe is cut with welder
+// called when pipe is cut with welder
 /obj/structure/disposalpipe/proc/welded()
 
-	var/obj/structure/disposalconstruct/C = new (src.loc)
+	var/obj/structure/disposalconstruct/C = new (get_turf(src))
 	switch(base_icon_state)
 		if("pipe-s")
 			C.ptype = 0
@@ -963,8 +961,8 @@
 			C.ptype = 13
 		if("pipe-tagger-partial")
 			C.ptype = 14
-	C.subtype = src.subtype
-	src.transfer_fingerprints_to(C)
+	C.subtype = subtype
+	transfer_fingerprints_to(C)
 	C.set_dir(dir)
 	C.density = FALSE
 	C.anchored = TRUE
@@ -978,8 +976,8 @@
 	var/obj/structure/disposalholder/H = locate() in src
 	if(H)
 		// holder was present
-		H.active = 0
-		var/turf/T = src.loc
+		H.active = FALSE
+		var/turf/T = get_turf(src)
 		if(T.density)
 			// deleting pipe is inside a dense turf (wall)
 			// this is unlikely, but just dump out everything into the turf in case
@@ -1017,6 +1015,8 @@
 
 	update()
 
+
+
 ///// Z-Level stuff
 /obj/structure/disposalpipe/up
 	icon_state = "pipe-u"
@@ -1026,7 +1026,7 @@
 	dpdir = dir
 	update()
 
-/obj/structure/disposalpipe/up/nextdir(var/fromdir)
+/obj/structure/disposalpipe/up/nextdir(fromdir)
 	var/nextdir
 	if(fromdir == 11)
 		nextdir = dir
@@ -1034,7 +1034,7 @@
 		nextdir = 12
 	return nextdir
 
-/obj/structure/disposalpipe/up/transfer(var/obj/structure/disposalholder/H)
+/obj/structure/disposalpipe/up/transfer(obj/structure/disposalholder/H)
 	var/nextdir = nextdir(H.dir)
 	H.set_dir(nextdir)
 
@@ -1051,7 +1051,7 @@
 				P = F
 
 	else
-		T = get_step(src.loc, H.dir)
+		T = get_step(get_turf(src), H.dir)
 		P = H.findpipe(T)
 
 	if(P)
@@ -1075,7 +1075,7 @@
 	dpdir = dir
 	update()
 
-/obj/structure/disposalpipe/down/nextdir(var/fromdir)
+/obj/structure/disposalpipe/down/nextdir(fromdir)
 	var/nextdir
 	if(fromdir == 12)
 		nextdir = dir
@@ -1083,7 +1083,7 @@
 		nextdir = 11
 	return nextdir
 
-/obj/structure/disposalpipe/down/transfer(var/obj/structure/disposalholder/H)
+/obj/structure/disposalpipe/down/transfer(obj/structure/disposalholder/H)
 	var/nextdir = nextdir(H.dir)
 	H.dir = nextdir
 
@@ -1093,14 +1093,14 @@
 	if(nextdir == 11)
 		T = GetBelow(src)
 		if(!T)
-			H.forceMove(src.loc)
+			H.forceMove(get_turf(src))
 			return
 		else
 			for(var/obj/structure/disposalpipe/up/F in T)
 				P = F
 
 	else
-		T = get_step(src.loc, H.dir)
+		T = get_step(get_turf(src), H.dir)
 		P = H.findpipe(T)
 
 	if(P)
@@ -1115,354 +1115,8 @@
 		return null
 
 	return P
-///// Z-Level stuff
 
-/obj/structure/disposalpipe/junction/yjunction
-	icon_state = "pipe-y"
 
-//a three-way junction with dir being the dominant direction
-/obj/structure/disposalpipe/junction
-	icon_state = "pipe-j1"
-
-/obj/structure/disposalpipe/junction/Initialize(mapload)
-	. = ..()
-	if(icon_state == "pipe-j1")
-		dpdir = dir | turn(dir, -90) | turn(dir,180)
-	else if(icon_state == "pipe-j2")
-		dpdir = dir | turn(dir, 90) | turn(dir,180)
-	else // pipe-y
-		dpdir = dir | turn(dir,90) | turn(dir, -90)
-	update()
-	return
-
-
-// next direction to move
-// if coming in from secondary dirs, then next is primary dir
-// if coming in from primary dir, then next is equal chance of other dirs
-
-/obj/structure/disposalpipe/junction/nextdir(var/fromdir)
-	var/flipdir = turn(fromdir, 180)
-	if(flipdir != dir)	// came from secondary dir
-		return dir		// so exit through primary
-	else				// came from primary
-						// so need to choose either secondary exit
-		var/mask = ..(fromdir)
-
-		// find a bit which is set
-		var/setbit = 0
-		if(mask & NORTH)
-			setbit = NORTH
-		else if(mask & SOUTH)
-			setbit = SOUTH
-		else if(mask & EAST)
-			setbit = EAST
-		else
-			setbit = WEST
-
-		if(prob(50))	// 50% chance to choose the found bit or the other one
-			return setbit
-		else
-			return mask & (~setbit)
-
-
-/obj/structure/disposalpipe/tagger
-	name = "package tagger"
-	icon_state = "pipe-tagger"
-	var/sort_tag = ""
-	var/partial = 0
-
-/obj/structure/disposalpipe/tagger/proc/updatedesc()
-	desc = initial(desc)
-	if(sort_tag)
-		desc += "\nIt's tagging objects with the '[sort_tag]' tag."
-
-/obj/structure/disposalpipe/tagger/proc/updatename()
-	if(sort_tag)
-		name = "[initial(name)] ([sort_tag])"
-	else
-		name = initial(name)
-
-/obj/structure/disposalpipe/tagger/Initialize(mapload)
-	. = ..()
-	dpdir = dir | turn(dir, 180)
-	if(sort_tag) GLOB.tagger_locations |= list("[sort_tag]" = get_z(src))
-	updatename()
-	updatedesc()
-	update()
-
-/obj/structure/disposalpipe/tagger/attackby(var/obj/item/I, var/mob/user)
-	if(..())
-		return
-
-	if(istype(I, /obj/item/destTagger))
-		var/obj/item/destTagger/O = I
-
-		if(O.currTag)// Tag set
-			sort_tag = O.currTag
-			playsound(src, 'sound/machines/twobeep.ogg', 100, 1)
-			to_chat(user, span_blue("Changed tag to '[sort_tag]'."))
-			updatename()
-			updatedesc()
-
-/obj/structure/disposalpipe/tagger/transfer(var/obj/structure/disposalholder/H)
-	if(sort_tag)
-		if(partial)
-			H.setpartialtag(sort_tag)
-		else
-			H.settag(sort_tag)
-	return ..()
-
-/obj/structure/disposalpipe/tagger/partial //needs two passes to tag
-	name = "partial package tagger"
-	icon_state = "pipe-tagger-partial"
-	partial = 1
-
-//a three-way junction that sorts objects
-/obj/structure/disposalpipe/sortjunction
-	name = "sorting junction"
-	icon_state = "pipe-j1s"
-	desc = "An underfloor disposal pipe with a package sorting mechanism."
-
-	var/sortdir = 0
-
-	var/last_sort = FALSE
-	var/sort_scan = TRUE
-	var/panel_open = FALSE
-	var/datum/wires/wires = null // ...Why isnt this defined on /atom...
-
-/obj/structure/disposalpipe/sortjunction/proc/updatedesc()
-	desc = initial(desc)
-	if(sortType)
-		desc += "\nIt's filtering objects with the '[sortType]' tag."
-
-/obj/structure/disposalpipe/sortjunction/proc/updatename()
-	if(sortType)
-		name = "[initial(name)] ([sortType])"
-	else
-		name = initial(name)
-
-/obj/structure/disposalpipe/sortjunction/Destroy()
-	QDEL_NULL(wires)
-	. = ..()
-
-/obj/structure/disposalpipe/sortjunction/proc/updatedir()
-	var/negdir = turn(dir, 180)
-
-	if(icon_state == "pipe-j1s")
-		sortdir = turn(dir, -90)
-	else if(icon_state == "pipe-j2s")
-		sortdir = turn(dir, 90)
-
-	dpdir = sortdir | dir | negdir
-
-/obj/structure/disposalpipe/sortjunction/Initialize(mapload)
-	. = ..()
-	if(sortType) GLOB.tagger_locations |= list("[sortType]" = get_z(src))
-
-	wires = new /datum/wires/disposals(src)
-
-	updatedir()
-	updatename()
-	updatedesc()
-	update()
-
-/obj/structure/disposalpipe/sortjunction/attackby(var/obj/item/I, var/mob/user)
-	if(..())
-		return
-
-	if(I.has_tool_quality(TOOL_SCREWDRIVER)) //Who is screwdriver_act()?
-		panel_open = !panel_open
-		playsound(src, I.usesound, 100, 1)
-		to_chat(user, span_notice("You [panel_open ? "open" : "close"] the wire panel."))
-		update_icon()
-		return
-
-	if(panel_open && is_wire_tool(I))
-		wires.Interact(user)
-		return TRUE
-
-	if(istype(I, /obj/item/destTagger))
-		var/obj/item/destTagger/O = I
-
-		if(O.currTag)// Tag set
-			sortType = O.currTag
-			playsound(src, 'sound/machines/twobeep.ogg', 100, 1)
-			to_chat(user, span_blue("Changed filter to '[sortType]'."))
-			updatename()
-			updatedesc()
-
-/obj/structure/disposalpipe/sortjunction/proc/divert_check(var/checkTag)
-	return sortType == checkTag
-
-// next direction to move
-// if coming in from negdir then next is primary dir or sortdir
-// if coming in from dir, Then next is negdir or sortdir
-// if coming in from sortdir, always go to posdir
-
-/obj/structure/disposalpipe/sortjunction/nextdir(var/fromdir, var/sortTag)
-	if(sort_scan)
-		if(divert_check(sortTag))
-			if(!wires.is_cut(WIRE_SORT_SIDE))
-				last_sort = TRUE
-		else
-			if(!wires.is_cut(WIRE_SORT_FORWARD))
-				last_sort = FALSE
-	if(fromdir != sortdir && last_sort)
-		return sortdir
-		// so go with the flow to positive direction
-	return dir
-
-/obj/structure/disposalpipe/sortjunction/proc/reset_scan()
-	if(!wires.is_cut(WIRE_SORT_SCAN))
-		sort_scan = TRUE
-
-/obj/structure/disposalpipe/sortjunction/transfer(var/obj/structure/disposalholder/H)
-	var/nextdir = nextdir(H.dir, H.destinationTag)
-	H.set_dir(nextdir)
-	var/turf/T = H.nextloc()
-	var/obj/structure/disposalpipe/P = H.findpipe(T)
-
-	if(P)
-		// find other holder in next loc, if inactive merge it with current
-		var/obj/structure/disposalholder/H2 = locate() in P
-		if(H2 && !H2.active)
-			H.merge(H2)
-
-		H.forceMove(P)
-	else			// if wasn't a pipe, then set loc to turf
-		H.forceMove(T)
-		return null
-
-	return P
-
-/obj/structure/disposalpipe/sortjunction/update_icon()
-	cut_overlays()
-	. = ..()
-	if(panel_open)
-		add_overlay("[icon_state]-open")
-
-//a three-way junction that filters all wrapped and tagged items
-/obj/structure/disposalpipe/sortjunction/wildcard
-	name = "wildcard sorting junction"
-	desc = "An underfloor disposal pipe which filters all wrapped and tagged items."
-	subtype = 1
-
-/obj/structure/disposalpipe/sortjunction/wildcard/divert_check(var/checkTag)
-	return checkTag != ""
-
-//junction that filters all untagged items
-/obj/structure/disposalpipe/sortjunction/untagged
-	name = "untagged sorting junction"
-	desc = "An underfloor disposal pipe which filters all untagged items."
-	subtype = 2
-
-/obj/structure/disposalpipe/sortjunction/untagged/divert_check(var/checkTag)
-	return checkTag == ""
-
-/obj/structure/disposalpipe/sortjunction/flipped //for easier and cleaner mapping
-	icon_state = "pipe-j2s"
-
-/obj/structure/disposalpipe/sortjunction/wildcard/flipped
-	icon_state = "pipe-j2s"
-
-/obj/structure/disposalpipe/sortjunction/untagged/flipped
-	icon_state = "pipe-j2s"
-
-//a trunk joining to a disposal bin or outlet on the same turf
-/obj/structure/disposalpipe/trunk
-	icon_state = "pipe-t"
-	var/obj/linked 	// the linked obj/machinery/disposal or obj/disposaloutlet
-
-/obj/structure/disposalpipe/trunk/Initialize(mapload)
-	..()
-	dpdir = dir
-	return INITIALIZE_HINT_LATELOAD
-
-/obj/structure/disposalpipe/trunk/LateInitialize()
-	if(!linked)
-		getlinked()
-	update()
-
-/obj/structure/disposalpipe/trunk/Destroy()
-	if(linked)
-		if(istype(linked, /obj/machinery/disposal))
-
-			var/obj/machinery/disposal/D = linked
-			D.trunk = null
-	linked = null
-	return ..()
-
-/obj/structure/disposalpipe/trunk/proc/getlinked()
-	linked = null
-	var/obj/machinery/disposal/D = locate() in loc
-	if(D)
-		linked = D
-		if(!D.trunk)
-			D.trunk = src
-
-	var/obj/structure/disposaloutlet/O = locate() in loc
-	if(O)
-		linked = O
-
-// Override attackby so we disallow trunkremoval when somethings ontop
-/obj/structure/disposalpipe/trunk/attackby(var/obj/item/I, var/mob/user)
-	//Disposal constructors
-	var/obj/structure/disposalconstruct/C = locate() in src.loc
-	if(C && C.anchored)
-		return
-
-	var/turf/T = src.loc
-	if(!T.is_plating())
-		return		// prevent interaction with T-scanner revealed pipes
-	src.add_fingerprint(user)
-	if(I.has_tool_quality(TOOL_WELDER))
-		var/obj/item/weldingtool/W = I.get_welder()
-
-		if(W.remove_fuel(0,user))
-			playsound(src, W.usesound, 100, 1)
-			// check if anything changed over 2 seconds
-			var/turf/uloc = user.loc
-			var/atom/wloc = W.loc
-			to_chat(user, "Slicing the disposal pipe.")
-			sleep(30)
-			if(!W.isOn()) return
-			if(user.loc == uloc && wloc == W.loc)
-				welded()
-			else
-				to_chat(user, "You must stay still while welding the pipe.")
-		else
-			to_chat(user, "You need more welding fuel to cut the pipe.")
-			return
-
-	// would transfer to next pipe segment, but we are in a trunk
-	// if not entering from disposal bin,
-	// transfer to linked object (outlet or bin)
-
-/obj/structure/disposalpipe/trunk/transfer(var/obj/structure/disposalholder/H)
-
-	if(H.dir == DOWN)		// we just entered from a disposer
-		return ..()		// so do base transfer proc
-	// otherwise, go to the linked object
-	if(linked)
-		var/obj/structure/disposaloutlet/O = linked
-		if(istype(O) && (H))
-			O.expel(H)	// expel at outlet
-		else
-			var/obj/machinery/disposal/D = linked
-			if(H)
-				D.expel(H)	// expel at disposal
-	else
-		if(H)
-			src.expel(H, src.loc, 0)	// expel at turf
-	return null
-
-	// nextdir
-
-/obj/structure/disposalpipe/trunk/nextdir(var/fromdir)
-	if(fromdir == DOWN)
-		return dir
-	else
-		return 0
 
 // a broken pipe
 /obj/structure/disposalpipe/broken
@@ -1476,12 +1130,10 @@
 	update()
 
 // called when welded
-// for broken pipe, remove and turn into scrap
 /obj/structure/disposalpipe/broken/welded()
-//	var/obj/item/scrap/S = new(src.loc)
-//	S.set_components(200,0,0)
 	qdel(src)
 
+<<<<<<< HEAD
 // the disposal outlet machine
 
 /obj/structure/disposaloutlet
@@ -1567,38 +1219,32 @@
 			to_chat(user, "You need more welding fuel to complete this task.")
 			return
 
+=======
+>>>>>>> 37a2e0151d (Disposal Connector Component (#18431))
 // called when movable is expelled from a disposal pipe or outlet
 // by default does nothing, override for special behaviour
-
-/atom/movable/proc/pipe_eject(var/direction)
+/atom/movable/proc/pipe_eject(direction)
 	return
 
 // check if mob has client, if so restore client view on eject
 /mob/pipe_eject(var/direction)
-	if (src.client)
-		src.client.perspective = MOB_PERSPECTIVE
-		src.client.eye = src
-
+	if (client)
+		client.perspective = MOB_PERSPECTIVE
+		client.eye = src
 	return
 
-/obj/effect/decal/cleanable/blood/gibs/pipe_eject(var/direction)
+/obj/effect/decal/cleanable/blood/gibs/pipe_eject(direction)
 	var/list/dirs
 	if(direction)
 		dirs = list( direction, turn(direction, -45), turn(direction, 45))
 	else
 		dirs = GLOB.alldirs.Copy()
+	streak(dirs)
 
-	src.streak(dirs)
-
-/obj/effect/decal/cleanable/blood/gibs/robot/pipe_eject(var/direction)
+/obj/effect/decal/cleanable/blood/gibs/robot/pipe_eject(direction)
 	var/list/dirs
 	if(direction)
 		dirs = list( direction, turn(direction, -45), turn(direction, 45))
 	else
 		dirs = GLOB.alldirs.Copy()
-
-	src.streak(dirs)
-
-#undef SEND_PRESSURE
-#undef PRESSURE_TANK_VOLUME
-#undef PUMP_MAX_FLOW_RATE
+	streak(dirs)
