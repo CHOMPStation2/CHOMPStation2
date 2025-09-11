@@ -3,8 +3,13 @@
 /obj/item/holder/micro
 	name = "micro"
 	desc = "Another crewmember, small enough to fit in your hand."
+<<<<<<< HEAD
 	icon_state = "blank" //CHOMPEdit
 	icon_override = 'icons/inventory/head/mob_vr.dmi'
+=======
+	icon_state = "micro"
+	icon_override = 'icons/inventory/head/mob.dmi'
+>>>>>>> 6e463de693 (clothing _vr dmi cleanup: hats and headwear [IDB IGNORE] (#18348))
 	slot_flags = SLOT_FEET | SLOT_HEAD | SLOT_ID | SLOT_HOLSTER
 	w_class = ITEMSIZE_SMALL
 	item_icons = null // No in-hand sprites (for now, anyway, we could totally add some)
