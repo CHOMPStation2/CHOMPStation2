@@ -12180,7 +12180,6 @@
 /area/storage/emergency_storage/seconddeck/port_emergency)
 "aMP" = (
 /obj/structure/disposaloutlet{
-	launch_dist = 1;
 	pixel_y = -6
 	},
 /obj/structure/disposalpipe/trunk{
