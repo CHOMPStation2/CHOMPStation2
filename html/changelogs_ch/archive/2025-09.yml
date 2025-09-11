@@ -134,3 +134,24 @@
   Will:
   - rscadd: Character stats, abilities, and modifiers are now shown on the character
       creator's species info tab.
+2025-09-11:
+  CHOMPStation2StaffMirrorBot:
+  - rscadd: Added two tiers of high-tech smes coils acquirable through research nodes
+  - qol: moved holosign projectors and a couple other tools out of machine boards
+      and into tools where they belong
+  - bugfix: character editor, selection species now closes the selection
+  - bugfix: fixes multiple del issues with stacks
+  - image: Modified the security backpack to be more security-looking by using the
+      TG style 'radiopack', similar to the Teshari version.
+  - bugfix: fix taur suits from layering below taur tails
+  - bugfix: character editor crash
+  Ryumi:
+  - bugfix: Fighters will now correctly say whether or not you'll raise or lower their
+      landing gear.
+  - qol: Mining uses balloon alerts instead of spamming your chat with every little
+      mining attempt.
+  VictorZisthus:
+  - maptweak: Fixes Xenoarch SMES terminal for power input having the wrong wire underneath,
+      preventing charging.
+  Zizzi:
+  - bugfix: fixed circuit cloning printing invisible clothes
