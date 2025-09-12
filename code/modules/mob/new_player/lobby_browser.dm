@@ -146,7 +146,11 @@
 			handle_server_news()
 			return TRUE
 		if("give_feedback")
+<<<<<<< HEAD
 			if(!SSsqlite.can_submit_feedback(GLOB.directory[persistent_ckey]))
+=======
+			if(!SSsqlite.can_submit_feedback(persistent_client.client))
+>>>>>>> 05840f6d2b (fix bad persistent client handling (#18460))
 				return
 
 			if(client.feedback_form)

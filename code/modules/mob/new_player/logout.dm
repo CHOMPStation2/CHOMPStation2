@@ -17,6 +17,10 @@
 	return
 
 /mob/new_player/proc/disable_lobby_browser()
+<<<<<<< HEAD
 	var/client/exiting_client = GLOB.directory[persistent_ckey]
+=======
+	var/client/exiting_client = persistent_client.client
+>>>>>>> 05840f6d2b (fix bad persistent client handling (#18460))
 	if(exiting_client)
 		winset(exiting_client, "lobby_browser", "is-disabled=true;is-visible=false")

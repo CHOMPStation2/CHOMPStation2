@@ -21,6 +21,7 @@
 	GLOB.new_player_list += src
 
 	created_for = ckey
+	client.persistent_client.set_mob(src)
 
 	addtimer(CALLBACK(src, PROC_REF(do_after_login)), 4 SECONDS, TIMER_DELETE_ME)
 	initialize_lobby_screen()
