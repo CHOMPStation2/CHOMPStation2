@@ -155,3 +155,35 @@
       preventing charging.
   Zizzi:
   - bugfix: fixed circuit cloning printing invisible clothes
+2025-09-12:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: using accessories no longer drops items on spawn
+  - refactor: cleaned up icon files for hats and headwear - there shouldn't be any
+      player-facing changes, but please report any invisible or bugged clothes in
+      appropriate channels
+  - image: archives the non-digi gorka and inventory sprites as well for thoroughness
+  - rscadd: Added a fully sleeveless ("no sleeves") variant of the alt undersuits
+  - image: Added digi states for void alt undersuits
+  Diana:
+  - image: Archives some of the old gorka icons
+  - bugfix: Removes him (the blocker)
+  Ryumi:
+  - maptweak: Fixed the corner couch in the hotsprings redgate. Also made the beds
+      appropriately cozier.
+  - maptweak: Gave the Tether science outpost's all of the amenities of a proper dorm
+      room.
+  Tenryumi:
+  - bugfix: Cafe Capsule can be properly made in R&D now
+  Will:
+  - bugfix: Fracking in a location without deep resources no longer causes a runtime
+  - rscadd: disposal_system_connection component
+  - code_imp: COMSIG_DISPOSAL_FLUSH  signal
+  - code_imp: COMSIG_DISPOSAL_RECEIVING  signal
+  - code_imp: disposal code cleaned up, moved to their own files
+  - refactor: Sleep() removed from disposal packet movement, now uses timers
+  - refactor: disposal code no longer uses sleeps for actions, and properly uses do_after
+  - refactor: disposal code uses get_turf() instead of src.loc for moving things to
+      its turf
+  - bugfix: Being ejected from disposals while under floor paneling now properly breaks
+      and drops the correct floor tile stack, instead of an invisible null flooring
+      stack
