@@ -34,7 +34,7 @@
 /turf/simulated/floor/tiled,
 /area/space)
 "aar" = (
-/obj/structure/railing/overhang/waterless{
+/obj/structure/railing/overhang/bronze{
 	dir = 1
 	},
 /obj/machinery/light/small/fairylights{
@@ -2658,7 +2658,7 @@
 /turf/simulated/floor/tiled/white,
 /area/space)
 "awf" = (
-/obj/structure/railing/overhang/waterless/grey{
+/obj/structure/railing/overhang/grey{
 	dir = 4
 	},
 /obj/structure/railing/grey{
@@ -3786,7 +3786,7 @@
 /obj/structure/transit_tube{
 	icon_state = "N-SE"
 	},
-/obj/structure/railing/overhang/waterless/grey{
+/obj/structure/railing/overhang/grey{
 	dir = 8
 	},
 /turf/simulated/floor/plating/turfpack/airless,
@@ -4723,7 +4723,7 @@
 /turf/simulated/floor/plating,
 /area/space)
 "aQM" = (
-/obj/structure/railing/overhang/waterless/grey{
+/obj/structure/railing/overhang/grey{
 	dir = 1
 	},
 /turf/simulated/floor/outdoors/rocks/cetus,
@@ -5350,8 +5350,8 @@
 /turf/simulated/floor/tiled/dark,
 /area/space)
 "aXw" = (
-/obj/structure/railing/overhang/waterless/grey,
-/obj/structure/railing/overhang/waterless/grey{
+/obj/structure/railing/overhang/grey,
+/obj/structure/railing/overhang/grey{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -5377,7 +5377,7 @@
 /turf/simulated/floor/tiled/kafel_full,
 /area/space)
 "aXJ" = (
-/obj/structure/railing/overhang/waterless/grey{
+/obj/structure/railing/overhang/grey{
 	dir = 4
 	},
 /obj/machinery/atmospherics/unary/vent_pump/on{
@@ -5797,7 +5797,7 @@
 /turf/simulated/floor/plating,
 /area/space)
 "bbs" = (
-/obj/structure/railing/overhang/waterless{
+/obj/structure/railing/overhang/bronze{
 	dir = 1
 	},
 /turf/simulated/floor/carpet/bcarpet,
@@ -6050,7 +6050,7 @@
 /turf/simulated/floor/tiled,
 /area/space)
 "bdr" = (
-/obj/structure/railing/overhang/waterless/grey{
+/obj/structure/railing/overhang/grey{
 	dir = 4
 	},
 /obj/machinery/atmospherics/unary/vent_pump{
@@ -6823,7 +6823,7 @@
 /turf/simulated/floor/plating,
 /area/space)
 "bka" = (
-/obj/structure/railing/overhang/waterless{
+/obj/structure/railing/overhang/bronze{
 	dir = 8
 	},
 /obj/structure/cable/green{
@@ -7215,7 +7215,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/space)
 "bns" = (
-/obj/structure/railing/overhang/waterless/grey{
+/obj/structure/railing/overhang/grey{
 	dir = 1
 	},
 /turf/simulated/floor/tiled/white,
@@ -7239,10 +7239,10 @@
 /obj/effect/floor_decal/spline/plain/corner{
 	dir = 1
 	},
-/obj/structure/railing/overhang/waterless/grey{
+/obj/structure/railing/overhang/grey{
 	dir = 4
 	},
-/obj/structure/railing/overhang/waterless/grey{
+/obj/structure/railing/overhang/grey{
 	dir = 4
 	},
 /obj/structure/fans/tiny,
@@ -7806,7 +7806,7 @@
 /obj/structure/railing/overhang/hazard{
 	dir = 8
 	},
-/obj/structure/railing/overhang/waterless/grey{
+/obj/structure/railing/overhang/grey{
 	dir = 4
 	},
 /obj/structure/disposalpipe/segment{
@@ -8098,7 +8098,7 @@
 /turf/simulated/floor/plating,
 /area/space)
 "bwt" = (
-/obj/structure/railing/overhang/waterless{
+/obj/structure/railing/overhang/bronze{
 	dir = 1;
 	pixel_y = 7
 	},
@@ -9536,7 +9536,7 @@
 /turf/simulated/floor/tiled,
 /area/space)
 "bIF" = (
-/obj/structure/railing/overhang/waterless/grey{
+/obj/structure/railing/overhang/grey{
 	dir = 8
 	},
 /turf/simulated/floor/wood/broken,
@@ -11892,7 +11892,7 @@
 /turf/unsimulated/floor/dark,
 /area/space)
 "ceS" = (
-/obj/structure/railing/overhang/waterless/grey{
+/obj/structure/railing/overhang/grey{
 	dir = 4
 	},
 /turf/simulated/floor/outdoors/rocks/cetus,
@@ -15405,7 +15405,7 @@
 /turf/simulated/floor/tiled,
 /area/space)
 "cIe" = (
-/obj/structure/railing/overhang/waterless/grey,
+/obj/structure/railing/overhang/grey,
 /obj/structure/lattice,
 /turf/simulated/open,
 /area/space)
@@ -16370,7 +16370,7 @@
 /turf/simulated/floor/tiled/kafel_full,
 /area/space)
 "cRP" = (
-/obj/structure/railing/overhang/waterless/grey,
+/obj/structure/railing/overhang/grey,
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
@@ -17181,13 +17181,13 @@
 /turf/simulated/floor/tiled/white,
 /area/space)
 "cXK" = (
-/obj/structure/railing/overhang/waterless{
+/obj/structure/railing/overhang/bronze{
 	dir = 4
 	},
 /obj/structure/dummystairs/bronzeledge{
 	dir = 1
 	},
-/obj/structure/railing/overhang/waterless{
+/obj/structure/railing/overhang/bronze{
 	dir = 8
 	},
 /turf/simulated/floor/wood,
@@ -19264,7 +19264,7 @@
 /turf/simulated/floor/plating,
 /area/space)
 "drC" = (
-/obj/structure/railing/overhang/waterless/grey{
+/obj/structure/railing/overhang/grey{
 	dir = 8
 	},
 /obj/structure/table/marble,
@@ -19422,7 +19422,7 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/space)
 "dtv" = (
-/obj/structure/railing/overhang/waterless/grey{
+/obj/structure/railing/overhang/grey{
 	dir = 8
 	},
 /obj/structure/cable/green{
@@ -21023,7 +21023,7 @@
 /turf/simulated/floor/tiled,
 /area/space)
 "dIo" = (
-/obj/structure/railing/overhang/waterless/grey{
+/obj/structure/railing/overhang/grey{
 	dir = 8
 	},
 /obj/machinery/lapvend{
@@ -21241,7 +21241,7 @@
 /turf/simulated/open,
 /area/space)
 "dKA" = (
-/obj/structure/railing/overhang/waterless/grey{
+/obj/structure/railing/overhang/grey{
 	dir = 4
 	},
 /obj/structure/bed/chair/sofa/right/purp{
@@ -21532,7 +21532,7 @@
 /turf/simulated/floor/tiled/old_tile/gray,
 /area/space)
 "dNM" = (
-/obj/structure/railing/overhang/waterless/grey{
+/obj/structure/railing/overhang/grey{
 	dir = 4
 	},
 /obj/structure/bed/chair/sofa/left/purp{
@@ -21655,7 +21655,7 @@
 /area/space)
 "dOW" = (
 /obj/structure/dummystairs,
-/obj/structure/railing/overhang/waterless/grey{
+/obj/structure/railing/overhang/grey{
 	dir = 4
 	},
 /obj/structure/railing/grey{
@@ -22088,8 +22088,8 @@
 /turf/simulated/floor/tiled/old_tile,
 /area/space)
 "dSm" = (
-/obj/structure/railing/overhang/waterless/grey,
-/obj/structure/railing/overhang/waterless/grey{
+/obj/structure/railing/overhang/grey,
+/obj/structure/railing/overhang/grey{
 	dir = 8
 	},
 /obj/item/stool/padded{
@@ -26302,7 +26302,7 @@
 /turf/simulated/floor/reinforced/turfpack/airless,
 /area/space)
 "eBS" = (
-/obj/structure/railing/overhang/waterless/grey{
+/obj/structure/railing/overhang/grey{
 	dir = 4
 	},
 /obj/machinery/atmospherics/unary/vent_pump{
@@ -28056,7 +28056,7 @@
 /turf/simulated/floor/tiled,
 /area/space)
 "eTA" = (
-/obj/structure/railing/overhang/waterless/grey{
+/obj/structure/railing/overhang/grey{
 	dir = 8
 	},
 /turf/simulated/floor/wood,
@@ -31234,7 +31234,7 @@
 /turf/simulated/shuttle/floor/black,
 /area/space)
 "fyi" = (
-/obj/structure/railing/overhang/waterless/grey,
+/obj/structure/railing/overhang/grey,
 /obj/machinery/atmospherics/pipe/simple/hidden/black{
 	dir = 4
 	},
@@ -31885,7 +31885,7 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/space)
 "fEa" = (
-/obj/structure/railing/overhang/waterless/grey{
+/obj/structure/railing/overhang/grey{
 	dir = 8
 	},
 /obj/structure/bed/chair/sofa/left/blue{
@@ -34052,7 +34052,7 @@
 /obj/item/material/sword/foam,
 /obj/structure/table/rack/shelf,
 /obj/item/material/twohanded/baseballbat/foam,
-/obj/structure/railing/overhang/waterless/grey,
+/obj/structure/railing/overhang/grey,
 /turf/simulated/floor/tiled,
 /area/space)
 "fWy" = (
@@ -34401,7 +34401,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/structure/railing/overhang/waterless/grey{
+/obj/structure/railing/overhang/grey{
 	color = "#917448";
 	dir = 1;
 	name = "box";
@@ -35880,13 +35880,13 @@
 /turf/simulated/floor/tiled/old_tile/white,
 /area/space)
 "goW" = (
-/obj/structure/railing/overhang/waterless{
+/obj/structure/railing/overhang/bronze{
 	dir = 4
 	},
 /obj/structure/dummystairs/bronzeledge{
 	dir = 1
 	},
-/obj/structure/railing/overhang/waterless{
+/obj/structure/railing/overhang/bronze{
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
@@ -36722,10 +36722,10 @@
 /turf/simulated/floor/tiled/dark,
 /area/space)
 "gvG" = (
-/obj/structure/railing/overhang/waterless/grey{
+/obj/structure/railing/overhang/grey{
 	dir = 8
 	},
-/obj/structure/railing/overhang/waterless/grey,
+/obj/structure/railing/overhang/grey,
 /obj/structure/reagent_dispensers/water_cooler/full,
 /turf/simulated/floor/carpet/tealcarpet,
 /area/space)
@@ -37923,10 +37923,10 @@
 /turf/simulated/floor/tiled/dark,
 /area/space)
 "gJv" = (
-/obj/structure/railing/overhang/waterless/grey{
+/obj/structure/railing/overhang/grey{
 	dir = 8
 	},
-/obj/structure/railing/overhang/waterless/grey{
+/obj/structure/railing/overhang/grey{
 	dir = 4
 	},
 /obj/structure/dummystairs{
@@ -39472,7 +39472,7 @@
 /turf/simulated/floor/tiled/milspec/raised,
 /area/space)
 "gXc" = (
-/obj/structure/railing/overhang/waterless/grey{
+/obj/structure/railing/overhang/grey{
 	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -40314,7 +40314,7 @@
 	icon_state = "N-S";
 	density = 0
 	},
-/obj/structure/railing/overhang/waterless/grey{
+/obj/structure/railing/overhang/grey{
 	dir = 8
 	},
 /turf/simulated/floor/plating/turfpack/airless,
@@ -41576,7 +41576,7 @@
 /area/space)
 "hrm" = (
 /obj/structure/dummystairs,
-/obj/structure/railing/overhang/waterless/grey{
+/obj/structure/railing/overhang/grey{
 	dir = 8
 	},
 /obj/structure/railing/grey{
@@ -41862,7 +41862,7 @@
 	name = "Confession Booth (Chaplain)";
 	req_access = list(22)
 	},
-/obj/structure/railing/overhang/waterless,
+/obj/structure/railing/overhang/bronze,
 /turf/simulated/floor/wood,
 /area/space)
 "huA" = (
@@ -41953,7 +41953,7 @@
 /turf/simulated/floor/tiled,
 /area/space)
 "hvh" = (
-/obj/structure/railing/overhang/waterless/grey,
+/obj/structure/railing/overhang/grey,
 /obj/structure/railing/grey,
 /turf/simulated/floor/tiled/dark,
 /area/space)
@@ -42092,7 +42092,7 @@
 /obj/structure/transit_tube{
 	icon_state = "D-SW"
 	},
-/obj/structure/railing/overhang/waterless/grey{
+/obj/structure/railing/overhang/grey{
 	dir = 1
 	},
 /turf/simulated/floor/plating/turfpack/airless,
@@ -42775,7 +42775,7 @@
 /turf/simulated/floor/tiled,
 /area/space)
 "hDm" = (
-/obj/structure/railing/overhang/waterless/grey{
+/obj/structure/railing/overhang/grey{
 	dir = 8
 	},
 /obj/structure/bed/chair/sofa/right/blue{
@@ -42927,7 +42927,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/space)
 "hEE" = (
-/obj/structure/railing/overhang/waterless{
+/obj/structure/railing/overhang/bronze{
 	dir = 8
 	},
 /obj/machinery/atmospherics/unary/vent_pump/on{
@@ -43590,7 +43590,7 @@
 /turf/simulated/floor/wood/broken,
 /area/space)
 "hLy" = (
-/obj/structure/railing/overhang/waterless/grey{
+/obj/structure/railing/overhang/grey{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -44664,16 +44664,16 @@
 	icon_state = "N-S";
 	density = 0
 	},
-/obj/structure/railing/overhang/waterless/grey{
+/obj/structure/railing/overhang/grey{
 	dir = 4
 	},
-/obj/structure/railing/overhang/waterless/grey{
+/obj/structure/railing/overhang/grey{
 	dir = 8
 	},
 /turf/simulated/floor/plating/turfpack/airless,
 /area/space)
 "hTp" = (
-/obj/structure/railing/overhang/waterless/grey,
+/obj/structure/railing/overhang/grey,
 /obj/machinery/camera/network/civilian{
 	c_tag = "CIV -  Hot Tub";
 	dir = 10
@@ -44892,28 +44892,28 @@
 /turf/simulated/floor/outdoors/rocks/cetus/edge,
 /area/space)
 "hVI" = (
-/obj/structure/railing/overhang/waterless/grey{
+/obj/structure/railing/overhang/grey{
 	color = "#917448"
 	},
-/obj/structure/railing/overhang/waterless/grey{
+/obj/structure/railing/overhang/grey{
 	color = "#917448";
 	dir = 1;
 	name = "box";
 	desc = "The edge of a box. Despite looking like cardboard, it feels like it's made of steel"
 	},
-/obj/structure/railing/overhang/waterless/grey{
+/obj/structure/railing/overhang/grey{
 	color = "#917448";
 	dir = 8;
 	name = "box";
 	desc = "The edge of a box. Despite looking like cardboard, it feels like it's made of steel"
 	},
-/obj/structure/railing/overhang/waterless/grey{
+/obj/structure/railing/overhang/grey{
 	color = "#917448";
 	dir = 4;
 	name = "box";
 	desc = "The edge of a box. Despite looking like cardboard, it feels like it's made of steel"
 	},
-/obj/structure/railing/overhang/waterless/grey{
+/obj/structure/railing/overhang/grey{
 	color = "#917448";
 	name = "box";
 	desc = "The edge of a box. Despite looking like cardboard, it feels like it's made of steel"
@@ -45717,7 +45717,7 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/space)
 "icR" = (
-/obj/structure/railing/overhang/waterless/grey{
+/obj/structure/railing/overhang/grey{
 	dir = 1
 	},
 /turf/simulated/floor/plating,
@@ -46103,7 +46103,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/space)
 "igk" = (
-/obj/structure/railing/overhang/waterless/grey,
+/obj/structure/railing/overhang/grey,
 /obj/item/stool/padded{
 	dir = 1
 	},
@@ -46214,7 +46214,7 @@
 /turf/simulated/floor/tiled,
 /area/space)
 "ihG" = (
-/obj/structure/railing/overhang/waterless/grey{
+/obj/structure/railing/overhang/grey{
 	dir = 4
 	},
 /obj/structure/table/marble,
@@ -46995,7 +46995,7 @@
 /turf/simulated/floor/tiled,
 /area/space)
 "inP" = (
-/obj/structure/railing/overhang/waterless/grey{
+/obj/structure/railing/overhang/grey{
 	dir = 1
 	},
 /obj/structure/cable/green{
@@ -47235,10 +47235,10 @@
 /turf/simulated/floor/plating,
 /area/space)
 "iqg" = (
-/obj/structure/railing/overhang/waterless/grey{
+/obj/structure/railing/overhang/grey{
 	dir = 1
 	},
-/obj/structure/railing/overhang/waterless/grey{
+/obj/structure/railing/overhang/grey{
 	dir = 8
 	},
 /obj/structure/table/bench/wooden,
@@ -48256,10 +48256,10 @@
 /turf/simulated/floor/tiled/white,
 /area/space)
 "iAB" = (
-/obj/structure/railing/overhang/waterless/grey{
+/obj/structure/railing/overhang/grey{
 	dir = 4
 	},
-/obj/structure/railing/overhang/waterless/grey,
+/obj/structure/railing/overhang/grey,
 /obj/structure/bed/chair/sofa/left/black{
 	dir = 1
 	},
@@ -49686,10 +49686,10 @@
 /turf/simulated/floor/carpet/turcarpet,
 /area/space)
 "iMJ" = (
-/obj/structure/railing/overhang/waterless/grey{
+/obj/structure/railing/overhang/grey{
 	dir = 1
 	},
-/obj/structure/railing/overhang/waterless/grey{
+/obj/structure/railing/overhang/grey{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -49762,7 +49762,7 @@
 /turf/simulated/floor/wood,
 /area/space)
 "iNO" = (
-/obj/structure/railing/overhang/waterless/grey{
+/obj/structure/railing/overhang/grey{
 	dir = 8
 	},
 /obj/structure/disposalpipe/segment,
@@ -49905,7 +49905,7 @@
 /obj/structure/railing/overhang/hazard{
 	dir = 8
 	},
-/obj/structure/railing/overhang/waterless/grey{
+/obj/structure/railing/overhang/grey{
 	dir = 4
 	},
 /obj/structure/disposalpipe/junction{
@@ -50054,7 +50054,7 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/space)
 "iQG" = (
-/obj/structure/railing/overhang/waterless,
+/obj/structure/railing/overhang/bronze,
 /turf/simulated/floor/tiled/dark,
 /area/space)
 "iQO" = (
@@ -51315,7 +51315,7 @@
 /obj/structure/dummystairs/greyledge{
 	dir = 8
 	},
-/obj/structure/railing/overhang/waterless/grey,
+/obj/structure/railing/overhang/grey,
 /turf/simulated/floor/tiled,
 /area/space)
 "jbb" = (
@@ -52910,7 +52910,7 @@
 /turf/simulated/floor/tiled/white,
 /area/space)
 "jqn" = (
-/obj/structure/railing/overhang/waterless/grey{
+/obj/structure/railing/overhang/grey{
 	dir = 8
 	},
 /obj/structure/cable/green{
@@ -54444,7 +54444,7 @@
 /turf/simulated/floor/tiled/old_tile/gray,
 /area/space)
 "jDt" = (
-/obj/structure/railing/overhang/waterless/grey,
+/obj/structure/railing/overhang/grey,
 /obj/structure/dummystairs/greyledge{
 	dir = 8
 	},
@@ -57740,7 +57740,7 @@
 /turf/simulated/floor/tiled,
 /area/space)
 "kfJ" = (
-/obj/structure/railing/overhang/waterless/grey{
+/obj/structure/railing/overhang/grey{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -58067,7 +58067,7 @@
 /obj/structure/disposalpipe/trunk{
 	dir = 4
 	},
-/obj/structure/railing/overhang/waterless,
+/obj/structure/railing/overhang/bronze,
 /obj/structure/dummystairs/bronzeledge{
 	dir = 8
 	},
@@ -60510,7 +60510,7 @@
 /obj/structure/dummystairs/greyledge{
 	dir = 4
 	},
-/obj/structure/railing/overhang/waterless/grey,
+/obj/structure/railing/overhang/grey,
 /turf/simulated/floor/plating/turfpack/airless,
 /area/space)
 "kHz" = (
@@ -61312,7 +61312,7 @@
 /turf/simulated/floor/tiled/white,
 /area/space)
 "kMW" = (
-/obj/structure/railing/overhang/waterless{
+/obj/structure/railing/overhang/bronze{
 	dir = 1;
 	pixel_y = 7
 	},
@@ -64290,10 +64290,10 @@
 /turf/simulated/floor/tiled,
 /area/space)
 "lrp" = (
-/obj/structure/railing/overhang/waterless/grey{
+/obj/structure/railing/overhang/grey{
 	dir = 1
 	},
-/obj/structure/railing/overhang/waterless/grey{
+/obj/structure/railing/overhang/grey{
 	dir = 8
 	},
 /obj/item/radio/intercom{
@@ -66275,10 +66275,10 @@
 /turf/simulated/floor/tiled,
 /area/space)
 "lJj" = (
-/obj/structure/railing/overhang/waterless/grey{
+/obj/structure/railing/overhang/grey{
 	dir = 4
 	},
-/obj/structure/railing/overhang/waterless/grey{
+/obj/structure/railing/overhang/grey{
 	dir = 8
 	},
 /obj/structure/transit_tube{
@@ -66993,7 +66993,7 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/space)
 "lPs" = (
-/obj/structure/railing/overhang/waterless/grey,
+/obj/structure/railing/overhang/grey,
 /obj/structure/lattice,
 /obj/structure/railing/grey{
 	dir = 8
@@ -67828,8 +67828,8 @@
 /obj/structure/transit_tube{
 	icon_state = "D-NE"
 	},
-/obj/structure/railing/overhang/waterless/grey,
-/obj/structure/railing/overhang/waterless/grey{
+/obj/structure/railing/overhang/grey,
+/obj/structure/railing/overhang/grey{
 	dir = 8
 	},
 /turf/simulated/floor/plating/turfpack/airless,
@@ -76703,7 +76703,7 @@
 /area/space)
 "nxD" = (
 /obj/structure/railing,
-/obj/structure/railing/overhang/waterless/grey{
+/obj/structure/railing/overhang/grey{
 	dir = 8
 	},
 /obj/effect/mist,
@@ -77131,7 +77131,7 @@
 /obj/structure/dummystairs/greyledge{
 	dir = 4
 	},
-/obj/structure/railing/overhang/waterless/grey,
+/obj/structure/railing/overhang/grey,
 /turf/simulated/floor/tiled/techfloor,
 /area/space)
 "nBg" = (
@@ -77509,7 +77509,7 @@
 /obj/structure/dummystairs/greyledge{
 	dir = 8
 	},
-/obj/structure/railing/overhang/waterless/grey,
+/obj/structure/railing/overhang/grey,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
@@ -78448,7 +78448,7 @@
 /area/space)
 "nNt" = (
 /obj/structure/dummystairs,
-/obj/structure/railing/overhang/waterless/grey{
+/obj/structure/railing/overhang/grey{
 	dir = 4
 	},
 /turf/simulated/floor/smole,
@@ -78848,13 +78848,13 @@
 /turf/simulated/floor/tiled,
 /area/space)
 "nRb" = (
-/obj/structure/railing/overhang/waterless{
+/obj/structure/railing/overhang/bronze{
 	dir = 8
 	},
 /obj/structure/dummystairs/bronzeledge{
 	dir = 1
 	},
-/obj/structure/railing/overhang/waterless{
+/obj/structure/railing/overhang/bronze{
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
@@ -79483,7 +79483,7 @@
 /turf/simulated/floor/carpet/brown,
 /area/space)
 "nYa" = (
-/obj/structure/railing/overhang/waterless/grey{
+/obj/structure/railing/overhang/grey{
 	dir = 1
 	},
 /turf/simulated/floor/tiled/old_tile/gray,
@@ -79697,7 +79697,7 @@
 /turf/simulated/floor/tiled/white,
 /area/space)
 "nZQ" = (
-/obj/structure/railing/overhang/waterless/grey,
+/obj/structure/railing/overhang/grey,
 /turf/simulated/floor/tiled,
 /area/space)
 "nZZ" = (
@@ -81002,7 +81002,7 @@
 /turf/simulated/floor/tiled,
 /area/space)
 "oli" = (
-/obj/structure/railing/overhang/waterless/grey{
+/obj/structure/railing/overhang/grey{
 	dir = 1
 	},
 /obj/effect/landmark{
@@ -81319,10 +81319,10 @@
 /turf/simulated/floor/tiled,
 /area/space)
 "oov" = (
-/obj/structure/railing/overhang/waterless/grey{
+/obj/structure/railing/overhang/grey{
 	dir = 1
 	},
-/obj/structure/railing/overhang/waterless/grey,
+/obj/structure/railing/overhang/grey,
 /turf/simulated/floor/wood/broken,
 /area/space)
 "ooE" = (
@@ -82962,10 +82962,10 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/space)
 "oEZ" = (
-/obj/structure/railing/overhang/waterless/grey{
+/obj/structure/railing/overhang/grey{
 	dir = 1
 	},
-/obj/structure/railing/overhang/waterless/grey{
+/obj/structure/railing/overhang/grey{
 	dir = 8
 	},
 /turf/simulated/floor/outdoors/rocks/cetus,
@@ -84072,7 +84072,7 @@
 /turf/simulated/floor/bluegrid,
 /area/space)
 "oNX" = (
-/obj/structure/railing/overhang/waterless/grey{
+/obj/structure/railing/overhang/grey{
 	color = "#917448";
 	name = "box";
 	desc = "The edge of a box. Despite looking like cardboard, it feels like it's made of steel"
@@ -84363,7 +84363,7 @@
 /area/space)
 "oQV" = (
 /obj/structure/lattice,
-/obj/structure/railing/overhang/waterless/grey{
+/obj/structure/railing/overhang/grey{
 	dir = 4
 	},
 /obj/structure/catwalk,
@@ -84476,7 +84476,7 @@
 /turf/simulated/floor/plating,
 /area/space)
 "oSq" = (
-/obj/structure/railing/overhang/waterless/grey{
+/obj/structure/railing/overhang/grey{
 	dir = 4
 	},
 /obj/structure/dummystairs{
@@ -84530,7 +84530,7 @@
 /turf/simulated/floor/tiled/hydro,
 /area/space)
 "oTb" = (
-/obj/structure/railing/overhang/waterless/grey{
+/obj/structure/railing/overhang/grey{
 	dir = 1
 	},
 /obj/machinery/light/floortube,
@@ -84802,7 +84802,7 @@
 /turf/simulated/floor/plating,
 /area/space)
 "oVL" = (
-/obj/structure/railing/overhang/waterless/grey{
+/obj/structure/railing/overhang/grey{
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -86245,7 +86245,7 @@
 /turf/simulated/floor/tiled/milspec/raised,
 /area/space)
 "piB" = (
-/obj/structure/railing/overhang/waterless{
+/obj/structure/railing/overhang/bronze{
 	dir = 8;
 	pixel_y = 7;
 	pixel_x = -3
@@ -86294,7 +86294,7 @@
 /turf/simulated/floor/greengrid,
 /area/space)
 "pji" = (
-/obj/structure/railing/overhang/waterless/grey{
+/obj/structure/railing/overhang/grey{
 	color = "#917448";
 	dir = 1;
 	name = "box";
@@ -86870,7 +86870,7 @@
 /turf/simulated/floor/carpet/graycarpet,
 /area/space)
 "pnC" = (
-/obj/structure/railing/overhang/waterless/grey,
+/obj/structure/railing/overhang/grey,
 /obj/structure/dummystairs/greyledge{
 	dir = 8
 	},
@@ -86996,7 +86996,7 @@
 /turf/simulated/floor/plating,
 /area/space)
 "pov" = (
-/obj/structure/railing/overhang/waterless/grey,
+/obj/structure/railing/overhang/grey,
 /obj/structure/railing/grey,
 /obj/item/storage/box/donut,
 /obj/structure/table/reinforced,
@@ -88801,7 +88801,7 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/space)
 "pFh" = (
-/obj/structure/railing/overhang/waterless/grey{
+/obj/structure/railing/overhang/grey{
 	dir = 1
 	},
 /obj/machinery/alarm{
@@ -89643,7 +89643,7 @@
 /turf/simulated/floor/tiled/old_tile/gray,
 /area/space)
 "pMQ" = (
-/obj/structure/railing/overhang/waterless/grey{
+/obj/structure/railing/overhang/grey{
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
@@ -91151,7 +91151,7 @@
 /turf/simulated/floor/tiled/white,
 /area/space)
 "pZJ" = (
-/obj/structure/railing/overhang/waterless{
+/obj/structure/railing/overhang/bronze{
 	dir = 1
 	},
 /obj/structure/cable/green{
@@ -91323,7 +91323,7 @@
 /turf/simulated/floor/carpet/blucarpet,
 /area/space)
 "qbq" = (
-/obj/structure/railing/overhang/waterless/grey{
+/obj/structure/railing/overhang/grey{
 	color = "#917448";
 	dir = 4;
 	name = "box";
@@ -93238,7 +93238,7 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/space)
 "qqs" = (
-/obj/structure/railing/overhang/waterless/grey{
+/obj/structure/railing/overhang/grey{
 	dir = 1
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -94675,7 +94675,7 @@
 	icon_state = "N-S";
 	density = 0
 	},
-/obj/structure/railing/overhang/waterless/grey{
+/obj/structure/railing/overhang/grey{
 	dir = 4
 	},
 /turf/simulated/floor/plating/turfpack/airless,
@@ -94776,7 +94776,7 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/space)
 "qCB" = (
-/obj/structure/railing/overhang/waterless{
+/obj/structure/railing/overhang/bronze{
 	dir = 1
 	},
 /obj/machinery/light/small/fairylights{
@@ -98403,10 +98403,10 @@
 /turf/simulated/floor/tiled,
 /area/space)
 "riS" = (
-/obj/structure/railing/overhang/waterless/grey{
+/obj/structure/railing/overhang/grey{
 	dir = 8
 	},
-/obj/structure/railing/overhang/waterless/grey{
+/obj/structure/railing/overhang/grey{
 	dir = 4
 	},
 /obj/structure/dummystairs/greyledge{
@@ -98688,7 +98688,7 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/space)
 "rkP" = (
-/obj/structure/railing/overhang/waterless/grey,
+/obj/structure/railing/overhang/grey,
 /obj/structure/cable/green{
 	icon_state = "6-8"
 	},
@@ -99090,7 +99090,7 @@
 /obj/structure/railing/overhang/hazard{
 	dir = 8
 	},
-/obj/structure/railing/overhang/waterless/grey{
+/obj/structure/railing/overhang/grey{
 	dir = 4
 	},
 /obj/structure/disposalpipe/segment,
@@ -100290,10 +100290,10 @@
 /turf/simulated/floor/carpet/graycarpet,
 /area/space)
 "ryD" = (
-/obj/structure/railing/overhang/waterless/grey{
+/obj/structure/railing/overhang/grey{
 	dir = 1
 	},
-/obj/structure/railing/overhang/waterless/grey{
+/obj/structure/railing/overhang/grey{
 	dir = 4
 	},
 /turf/simulated/floor/carpet/purcarpet,
@@ -102693,7 +102693,7 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/space)
 "rUO" = (
-/obj/structure/railing/overhang/waterless/grey{
+/obj/structure/railing/overhang/grey{
 	dir = 1
 	},
 /obj/machinery/disposal{
@@ -103402,10 +103402,10 @@
 /turf/simulated/floor/tiled,
 /area/space)
 "sbF" = (
-/obj/structure/railing/overhang/waterless/grey{
+/obj/structure/railing/overhang/grey{
 	dir = 8
 	},
-/obj/structure/railing/overhang/waterless/grey,
+/obj/structure/railing/overhang/grey,
 /obj/item/stool/padded{
 	dir = 4
 	},
@@ -103599,7 +103599,7 @@
 /obj/effect/floor_decal/corner_steel_grid{
 	dir = 5
 	},
-/obj/structure/railing/overhang/waterless/grey{
+/obj/structure/railing/overhang/grey{
 	dir = 1
 	},
 /obj/structure/table/bench/glass,
@@ -105892,7 +105892,7 @@
 /turf/simulated/floor/carpet,
 /area/space)
 "szL" = (
-/obj/structure/railing/overhang/waterless/grey{
+/obj/structure/railing/overhang/grey{
 	dir = 4
 	},
 /obj/structure/dummystairs,
@@ -106434,7 +106434,7 @@
 /turf/simulated/open,
 /area/space)
 "sDJ" = (
-/obj/structure/railing/overhang/waterless/grey{
+/obj/structure/railing/overhang/grey{
 	dir = 1
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -107376,7 +107376,7 @@
 /turf/simulated/floor/plating,
 /area/space)
 "sKg" = (
-/obj/structure/railing/overhang/waterless/grey{
+/obj/structure/railing/overhang/grey{
 	dir = 8
 	},
 /obj/effect/floor_decal/borderfloorblack/corner2{
@@ -107843,7 +107843,7 @@
 /area/space)
 "sOK" = (
 /obj/structure/table/steel,
-/obj/structure/railing/overhang/waterless/grey,
+/obj/structure/railing/overhang/grey,
 /obj/effect/floor_decal/corner_steel_grid{
 	dir = 10
 	},
@@ -108510,7 +108510,7 @@
 /turf/simulated/floor/plating,
 /area/space)
 "sVj" = (
-/obj/structure/railing/overhang/waterless{
+/obj/structure/railing/overhang/bronze{
 	dir = 8;
 	pixel_y = 7;
 	pixel_x = -3
@@ -109475,7 +109475,7 @@
 /turf/simulated/floor/plating,
 /area/space)
 "teR" = (
-/obj/structure/railing/overhang/waterless/grey{
+/obj/structure/railing/overhang/grey{
 	color = "#917448";
 	dir = 8;
 	name = "box";
@@ -110352,7 +110352,7 @@
 /turf/simulated/open,
 /area/space)
 "tnh" = (
-/obj/structure/railing/overhang/waterless/grey{
+/obj/structure/railing/overhang/grey{
 	dir = 4
 	},
 /turf/simulated/floor/plating,
@@ -110957,10 +110957,10 @@
 /turf/simulated/floor/reinforced/turfpack/airless,
 /area/space)
 "ttf" = (
-/obj/structure/railing/overhang/waterless/grey{
+/obj/structure/railing/overhang/grey{
 	dir = 8
 	},
-/obj/structure/railing/overhang/waterless/grey,
+/obj/structure/railing/overhang/grey,
 /obj/structure/bed/chair/sofa/right/black{
 	dir = 1
 	},
@@ -111223,7 +111223,7 @@
 /turf/simulated/floor/tiled,
 /area/space)
 "tvq" = (
-/obj/structure/railing/overhang/waterless/grey{
+/obj/structure/railing/overhang/grey{
 	dir = 4
 	},
 /obj/machinery/firealarm{
@@ -112462,7 +112462,7 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/space)
 "tFt" = (
-/obj/structure/railing/overhang/waterless/grey,
+/obj/structure/railing/overhang/grey,
 /obj/structure/cable/green{
 	icon_state = "4-10"
 	},
@@ -112514,7 +112514,7 @@
 /turf/simulated/floor/tiled/hydro,
 /area/space)
 "tGg" = (
-/obj/structure/railing/overhang/waterless/grey{
+/obj/structure/railing/overhang/grey{
 	color = "#917448";
 	dir = 8;
 	name = "box";
@@ -112620,7 +112620,7 @@
 /turf/simulated/floor/tiled,
 /area/space)
 "tGx" = (
-/obj/structure/railing/overhang/waterless/grey{
+/obj/structure/railing/overhang/grey{
 	dir = 8
 	},
 /obj/structure/railing/grey{
@@ -113523,7 +113523,7 @@
 /turf/simulated/floor/tiled,
 /area/space)
 "tNU" = (
-/obj/structure/railing/overhang/waterless,
+/obj/structure/railing/overhang/bronze,
 /turf/simulated/floor/wood,
 /area/space)
 "tOb" = (
@@ -115459,7 +115459,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/space)
 "ugH" = (
-/obj/structure/railing/overhang/waterless/grey{
+/obj/structure/railing/overhang/grey{
 	dir = 8
 	},
 /turf/simulated/floor/outdoors/rocks/cetus,
@@ -115586,7 +115586,7 @@
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 8
 	},
-/obj/structure/railing/overhang/waterless{
+/obj/structure/railing/overhang/bronze{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/dark,
@@ -115918,7 +115918,7 @@
 /obj/effect/floor_decal/spline/fancy{
 	dir = 4
 	},
-/obj/structure/railing/overhang/waterless/grey{
+/obj/structure/railing/overhang/grey{
 	dir = 1
 	},
 /obj/machinery/alarm{
@@ -116283,7 +116283,7 @@
 /turf/simulated/floor/tiled/kafel_full,
 /area/space)
 "unX" = (
-/obj/structure/railing/overhang/waterless/grey{
+/obj/structure/railing/overhang/grey{
 	dir = 8
 	},
 /obj/structure/disposalpipe/segment,
@@ -117289,13 +117289,13 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/space)
 "uxf" = (
-/obj/structure/railing/overhang/waterless/grey{
+/obj/structure/railing/overhang/grey{
 	dir = 1
 	},
-/obj/structure/railing/overhang/waterless/grey{
+/obj/structure/railing/overhang/grey{
 	dir = 4
 	},
-/obj/structure/railing/overhang/waterless/grey{
+/obj/structure/railing/overhang/grey{
 	dir = 4
 	},
 /turf/simulated/floor/outdoors/rocks/cetus,
@@ -117856,7 +117856,7 @@
 /turf/simulated/floor/tiled/monotile,
 /area/space)
 "uCt" = (
-/obj/structure/railing/overhang/waterless/grey{
+/obj/structure/railing/overhang/grey{
 	dir = 8
 	},
 /obj/effect/decal/cleanable/vomit/old,
@@ -119428,7 +119428,7 @@
 /turf/simulated/floor/tiled,
 /area/space)
 "uQN" = (
-/obj/structure/railing/overhang/waterless/grey,
+/obj/structure/railing/overhang/grey,
 /obj/random/trash,
 /turf/simulated/floor/plating,
 /area/space)
@@ -119672,7 +119672,7 @@
 /turf/simulated/floor/plating/turfpack/airless,
 /area/space)
 "uTk" = (
-/obj/structure/railing/overhang/waterless/grey{
+/obj/structure/railing/overhang/grey{
 	dir = 8
 	},
 /obj/structure/disposalpipe/segment,
@@ -120097,13 +120097,13 @@
 /turf/simulated/floor/tiled/dark,
 /area/space)
 "uWY" = (
-/obj/structure/railing/overhang/waterless{
+/obj/structure/railing/overhang/bronze{
 	dir = 8
 	},
 /obj/structure/dummystairs/bronzeledge{
 	dir = 1
 	},
-/obj/structure/railing/overhang/waterless{
+/obj/structure/railing/overhang/bronze{
 	dir = 4
 	},
 /turf/simulated/floor/wood/broken,
@@ -122464,7 +122464,7 @@
 /turf/simulated/floor/carpet/graycarpet,
 /area/space)
 "vtr" = (
-/obj/structure/railing/overhang/waterless/grey,
+/obj/structure/railing/overhang/grey,
 /obj/random/junk,
 /turf/simulated/floor/plating,
 /area/space)
@@ -123438,10 +123438,10 @@
 /turf/unsimulated/wall/dark,
 /area/space)
 "vCN" = (
-/obj/structure/railing/overhang/waterless/grey{
+/obj/structure/railing/overhang/grey{
 	dir = 1
 	},
-/obj/structure/railing/overhang/waterless/grey{
+/obj/structure/railing/overhang/grey{
 	dir = 8
 	},
 /turf/simulated/floor/carpet/tealcarpet,
@@ -123658,7 +123658,7 @@
 /turf/simulated/floor/reinforced,
 /area/space)
 "vEe" = (
-/obj/structure/railing/overhang/waterless/grey{
+/obj/structure/railing/overhang/grey{
 	color = "#917448";
 	dir = 4;
 	name = "box";
@@ -124164,7 +124164,7 @@
 /obj/item/towel/random{
 	pixel_y = 8
 	},
-/obj/structure/railing/overhang/waterless/grey,
+/obj/structure/railing/overhang/grey,
 /turf/simulated/floor/tiled,
 /area/space)
 "vHK" = (
@@ -124468,7 +124468,7 @@
 	pixel_x = -4;
 	pixel_y = 6
 	},
-/obj/structure/railing/overhang/waterless/grey,
+/obj/structure/railing/overhang/grey,
 /turf/simulated/floor/tiled,
 /area/space)
 "vJP" = (
@@ -124628,8 +124628,8 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/space)
 "vKY" = (
-/obj/structure/railing/overhang/waterless/grey,
-/obj/structure/railing/overhang/waterless/grey{
+/obj/structure/railing/overhang/grey,
+/obj/structure/railing/overhang/grey{
 	dir = 4
 	},
 /obj/structure/table/marble,
@@ -125180,7 +125180,7 @@
 /turf/simulated/floor/tiled/kafel_full,
 /area/space)
 "vPB" = (
-/obj/structure/railing/overhang/waterless/grey,
+/obj/structure/railing/overhang/grey,
 /turf/simulated/floor/plating,
 /area/space)
 "vPF" = (
@@ -125476,16 +125476,16 @@
 /obj/structure/transit_tube{
 	icon_state = "N-S-Pass"
 	},
-/obj/structure/railing/overhang/waterless/grey{
+/obj/structure/railing/overhang/grey{
 	dir = 8
 	},
-/obj/structure/railing/overhang/waterless/grey{
+/obj/structure/railing/overhang/grey{
 	dir = 4
 	},
 /turf/simulated/floor/plating/turfpack/airless,
 /area/space)
 "vRV" = (
-/obj/structure/railing/overhang/waterless/grey{
+/obj/structure/railing/overhang/grey{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -125912,7 +125912,7 @@
 /turf/simulated/floor/tiled,
 /area/space)
 "vWa" = (
-/obj/structure/railing/overhang/waterless/grey{
+/obj/structure/railing/overhang/grey{
 	dir = 8
 	},
 /obj/machinery/porta_turret/crescent,
@@ -126365,7 +126365,7 @@
 /turf/simulated/floor/plating,
 /area/space)
 "wbv" = (
-/obj/structure/railing/overhang/waterless/grey{
+/obj/structure/railing/overhang/grey{
 	dir = 1
 	},
 /obj/machinery/firealarm{
@@ -126655,7 +126655,7 @@
 /turf/simulated/floor/wood,
 /area/space)
 "wep" = (
-/obj/structure/railing/overhang/waterless/grey,
+/obj/structure/railing/overhang/grey,
 /obj/effect/floor_decal/corner_steel_grid{
 	dir = 10
 	},
@@ -127364,7 +127364,7 @@
 /obj/structure/dummystairs/greyledge{
 	dir = 8
 	},
-/obj/structure/railing/overhang/waterless/grey,
+/obj/structure/railing/overhang/grey,
 /turf/simulated/floor/plating/turfpack/airless,
 /area/space)
 "wkd" = (
@@ -127798,7 +127798,7 @@
 /obj/structure/railing/overhang/hazard{
 	dir = 8
 	},
-/obj/structure/railing/overhang/waterless/grey{
+/obj/structure/railing/overhang/grey{
 	dir = 4
 	},
 /obj/structure/disposalpipe/sortjunction/wildcard{
@@ -127869,7 +127869,7 @@
 /turf/simulated/floor/tiled,
 /area/space)
 "wnP" = (
-/obj/structure/railing/overhang/waterless/grey,
+/obj/structure/railing/overhang/grey,
 /obj/structure/dummystairs{
 	dir = 4
 	},
@@ -128989,7 +128989,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/space)
 "wyY" = (
-/obj/structure/railing/overhang/waterless/grey{
+/obj/structure/railing/overhang/grey{
 	dir = 8
 	},
 /obj/structure/dummystairs/greyledge,
@@ -129087,7 +129087,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/space)
 "wzG" = (
-/obj/structure/railing/overhang/waterless/grey{
+/obj/structure/railing/overhang/grey{
 	dir = 4
 	},
 /obj/structure/transit_tube{
@@ -129163,7 +129163,7 @@
 /obj/structure/transit_tube{
 	icon_state = "D-NE"
 	},
-/obj/structure/railing/overhang/waterless/grey,
+/obj/structure/railing/overhang/grey,
 /turf/simulated/floor/plating/turfpack/airless,
 /area/space)
 "wAn" = (
@@ -129276,7 +129276,7 @@
 /turf/simulated/floor/tiled/old_tile/green,
 /area/space)
 "wAS" = (
-/obj/structure/railing/overhang/waterless,
+/obj/structure/railing/overhang/bronze,
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 4
 	},
@@ -129682,7 +129682,7 @@
 /turf/simulated/floor/plating,
 /area/space)
 "wEh" = (
-/obj/structure/railing/overhang/waterless/grey{
+/obj/structure/railing/overhang/grey{
 	dir = 8
 	},
 /turf/simulated/floor/plating,
@@ -130091,7 +130091,7 @@
 /obj/structure/dummystairs/greyledge{
 	dir = 4
 	},
-/obj/structure/railing/overhang/waterless/grey,
+/obj/structure/railing/overhang/grey,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
@@ -130152,7 +130152,7 @@
 /turf/simulated/floor/water/digestive_enzymes/nanites,
 /area/space)
 "wHJ" = (
-/obj/structure/railing/overhang/waterless{
+/obj/structure/railing/overhang/bronze{
 	dir = 1
 	},
 /obj/machinery/light/small/fairylights{
@@ -131619,7 +131619,7 @@
 /turf/simulated/floor/tiled/techfloor/turfpack,
 /area/space)
 "wVD" = (
-/obj/structure/railing/overhang/waterless/grey{
+/obj/structure/railing/overhang/grey{
 	dir = 4
 	},
 /obj/effect/floor_decal/borderfloorblack/corner2{
@@ -131729,7 +131729,7 @@
 /turf/simulated/floor/plating,
 /area/space)
 "wWx" = (
-/obj/structure/railing/overhang/waterless/grey{
+/obj/structure/railing/overhang/grey{
 	dir = 4
 	},
 /obj/machinery/porta_turret/crescent,
@@ -131756,7 +131756,7 @@
 /turf/simulated/floor/carpet/graycarpet,
 /area/space)
 "wWY" = (
-/obj/structure/railing/overhang/waterless{
+/obj/structure/railing/overhang/bronze{
 	dir = 1
 	},
 /obj/structure/cable/green{
@@ -131872,7 +131872,7 @@
 /turf/simulated/floor/tiled/kafel_full,
 /area/space)
 "wXQ" = (
-/obj/structure/railing/overhang/waterless/grey{
+/obj/structure/railing/overhang/grey{
 	dir = 4
 	},
 /obj/structure/table/rack{
@@ -132601,7 +132601,7 @@
 /turf/simulated/floor/plating,
 /area/space)
 "xej" = (
-/obj/structure/railing/overhang/waterless/grey,
+/obj/structure/railing/overhang/grey,
 /obj/structure/railing/grey,
 /obj/item/toy/sif{
 	pixel_y = 10
@@ -133257,7 +133257,7 @@
 /turf/simulated/floor/tiled,
 /area/space)
 "xkB" = (
-/obj/structure/railing/overhang/waterless/grey,
+/obj/structure/railing/overhang/grey,
 /turf/simulated/floor/outdoors/rocks/cetus,
 /area/space)
 "xkE" = (
@@ -133267,11 +133267,11 @@
 /turf/simulated/floor/tiled,
 /area/space)
 "xkJ" = (
-/obj/structure/railing/overhang/waterless{
+/obj/structure/railing/overhang/bronze{
 	dir = 1;
 	pixel_y = 7
 	},
-/obj/structure/railing/overhang/waterless{
+/obj/structure/railing/overhang/bronze{
 	dir = 8;
 	pixel_y = 7;
 	pixel_x = -3
@@ -133279,7 +133279,7 @@
 /turf/simulated/floor/lino,
 /area/space)
 "xkR" = (
-/obj/structure/railing/overhang/waterless/grey,
+/obj/structure/railing/overhang/grey,
 /turf/simulated/floor/wood/broken,
 /area/space)
 "xkW" = (
@@ -134250,7 +134250,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/space)
 "xst" = (
-/obj/structure/railing/overhang/waterless/grey,
+/obj/structure/railing/overhang/grey,
 /obj/effect/floor_decal/corner_steel_grid{
 	dir = 10
 	},
@@ -135503,7 +135503,7 @@
 /turf/simulated/floor/tiled,
 /area/space)
 "xEj" = (
-/obj/structure/railing/overhang/waterless/grey{
+/obj/structure/railing/overhang/grey{
 	dir = 1
 	},
 /turf/simulated/floor/wood,
@@ -136602,7 +136602,7 @@
 /turf/simulated/floor/water/pool,
 /area/space)
 "xNB" = (
-/obj/structure/railing/overhang/waterless/grey{
+/obj/structure/railing/overhang/grey{
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
@@ -138557,7 +138557,7 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/space)
 "yeD" = (
-/obj/structure/railing/overhang/waterless/grey{
+/obj/structure/railing/overhang/grey{
 	dir = 8
 	},
 /obj/structure/disposalpipe/segment,

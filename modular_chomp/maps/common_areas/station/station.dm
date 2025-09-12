@@ -36,3 +36,47 @@
 
 /area/teleporter/firstdeck/prep
 	name = "Teleporter Bay Prep"
+
+
+/area/hangar/cetus/one
+	name = "\improper Hangar One"
+	base_turf = /turf/simulated/floor/outdoors/rocks/cetus
+
+/area/hangar/cetus/explofoyer
+	name = "\improper Exploration Foyer"
+	icon_state = "hangarcontrol"
+
+/area/hangar/cetus/explolocker
+	name = "\improper Exploration Locker Room"
+	icon_state = "hangarcontrol"
+	base_turf = /turf/simulated/floor/outdoors/rocks/cetus
+
+/area/teleporter/arrivals
+	name = "\improper Arrivals Teleporter"
+
+/area/teleporter/departure
+	name = "\improper Departure Teleporter"
+
+
+/area/asteroid/cetus
+	flags = AREA_FORBID_EVENTS | AREA_FLAG_IS_NOT_PERSISTENT
+	icon_state = "away"
+
+/area/asteroid/cetus/d1
+	name = "\improper Primary Meteor Deck One"
+	base_turf = /turf/simulated/floor/outdoors/rocks/cetus
+
+/area/asteroid/cetus/d1/jr
+	name = "\improper Secondary Meteor Deck One"
+
+/area/asteroid/cetus/d2
+	name = "\improper Primary Meteor Deck Two"
+
+/area/asteroid/cetus/d2/jr
+	name = "\improper Secondary Meteor Deck Two"
+
+/area/asteroid/cetus/d3
+	name = "\improper Primary Meteor Deck Three"
+
+/area/asteroid/cetus/d3/jr
+	name = "\improper Secondary Meteor Deck Three"
