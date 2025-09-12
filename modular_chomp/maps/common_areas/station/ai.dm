@@ -24,3 +24,7 @@
 /area/ai_monitored/storage/eva/aux
 	name = "Auxiliary EVA Storage"
 	icon_state = "eva"
+
+/area/ai_monitored/aihall
+	name = "\improper AI Core Entry Hall"
+	icon_state = "ai_foyer"
