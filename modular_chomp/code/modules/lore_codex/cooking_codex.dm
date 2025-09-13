@@ -44,7 +44,7 @@
 	for(var/Rp in subtypesof(/datum/recipe))
 		var/datum/recipe/R = new Rp() // Datums must be initialized to read list vars
 		if(!istype(R))
-			log_debug("Recipe generation failed, recipe datum is [R].")
+			log_runtime("Recipe generation failed, recipe datum is [R].")
 			qdel(R)
 			continue
 

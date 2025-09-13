@@ -62,18 +62,6 @@ CREATE TABLE IF NOT EXISTS `erro_admin_log` (
 
 -- Data exporting was unselected.
 
--- Dumping structure for table ss13.erro_attacklog
-CREATE TABLE IF NOT EXISTS `erro_attacklog` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `time` datetime DEFAULT NULL,
-  `ckey` varchar(64) DEFAULT NULL,
-  `mob` varchar(128) DEFAULT NULL,
-  `message` varchar(1024) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=886 DEFAULT CHARSET=latin1;
-
--- Data exporting was unselected.
-
 -- Dumping structure for table ss13.erro_ban
 CREATE TABLE IF NOT EXISTS `erro_ban` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -114,19 +102,6 @@ CREATE TABLE IF NOT EXISTS `erro_connection_log` (
   `computerid` varchar(64) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=12353 DEFAULT CHARSET=latin1;
-
--- Data exporting was unselected.
-
--- Dumping structure for table ss13.erro_dialog
-CREATE TABLE IF NOT EXISTS `erro_dialog` (
-  `mid` int(11) NOT NULL AUTO_INCREMENT,
-  `time` datetime NOT NULL,
-  `ckey` varchar(32) NOT NULL,
-  `mob` varchar(128) DEFAULT NULL,
-  `type` varchar(32) NOT NULL,
-  `message` text NOT NULL,
-  PRIMARY KEY (`mid`)
-) ENGINE=InnoDB AUTO_INCREMENT=3345 DEFAULT CHARSET=latin1;
 
 -- Data exporting was unselected.
 

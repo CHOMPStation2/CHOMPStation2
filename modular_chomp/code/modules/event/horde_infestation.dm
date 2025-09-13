@@ -20,13 +20,13 @@
 				vents += temp_vent
 
 	if(prob(50)) //50/50 chance on spiders or metroids.
-		log_debug("Hord event, spiders selected.")
+		log_game("Hord event, spiders selected.")
 		spawncount = rand(4 * severity, 10 * severity)
 		sent_spiders_to_station = 0
 		spiders = TRUE
 
 	else
-		log_debug("Horde event, metroids selected.")
+		log_game("Horde event, metroids selected.")
 		spawncount = rand(2 * severity, 4 * severity)
 		metroids = TRUE
 
