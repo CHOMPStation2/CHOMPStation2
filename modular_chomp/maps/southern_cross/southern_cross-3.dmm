@@ -56046,19 +56046,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
-"kod" = (
-/obj/machinery/door/firedoor/border_only,
-/obj/machinery/smartfridge/sheets{
-	desc = "An industrial sized storage unit for materials. B-Shift's agreement to retain materials doesn't extend to this storage device, so you should probably only stock this with sheets you need.";
-	name = "\improper Non-Persistent Industrial Sheet Storage"
-	},
-/obj/structure/fans/tiny,
-/obj/structure/window/reinforced,
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/turf/simulated/floor/plating,
-/area/rnd/lab)
 "kot" = (
 /obj/machinery/light/small{
 	dir = 8
@@ -119031,7 +119018,7 @@ iOI
 jUw
 kSM
 aGg
-kod
+kTh
 nRd
 kTh
 aGg
