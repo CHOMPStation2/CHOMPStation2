@@ -20,13 +20,8 @@ var/datum/controller/transfer_controller/transfer_controller
 	currenttick = currenttick + 1
 	//VOREStation Edit START
 	if (round_duration_in_ds >= shift_last_vote - 2 MINUTES)
-<<<<<<< HEAD
 		shift_last_vote = 1000000000000 //Setting to a stupidly high number since it'll be not used again. //CHOMPEdit
-		to_world(span_world(span_notice("Warning: This upcoming round-extend vote will be your last chance to vote for shift extension. Wrap up your scenes in the next 60 minutes if the round is extended."))) //CHOMPStation Edit
-=======
-		shift_last_vote = 99999999 //Setting to a stupidly high number since it'll be not used again.
-		to_chat(world, span_world(span_notice("Warning: You have one hour left in the shift. Wrap up your scenes in the next 60 minutes before the transfer is called."))) //VOREStation Edit
->>>>>>> b0f0f4685f (JSON Logging Refactor (#18252))
+		to_chat(world, span_world(span_notice("Warning: This upcoming round-extend vote will be your last chance to vote for shift extension. Wrap up your scenes in the next 60 minutes if the round is extended."))) //CHOMPStation Edit
 	if (round_duration_in_ds >= shift_hard_end - 1 MINUTE)
 		init_shift_change(null, 1)
 		shift_hard_end = timerbuffer + CONFIG_GET(number/vote_autotransfer_interval) //If shuttle somehow gets recalled, let's force it to call again next time a vote would occur.

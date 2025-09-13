@@ -4,37 +4,8 @@ GLOBAL_VAR_INIT(total_runtimes_skipped, 0)
 #ifdef USE_CUSTOM_ERROR_HANDLER
 #define ERROR_USEFUL_LEN 2
 
-<<<<<<< HEAD
-// The ifdef needs to be down here, since the error viewer references total_runtimes
-#ifdef DEBUG
-/world/Error(var/exception/e, var/datum/e_src)
-	GLOB.total_runtimes++ //CHOMPEdit just moving this here to start counting right away
-	if(!istype(e)) // Something threw an unusual exception
-		log_error("\[[time_stamp()]] Uncaught exception: [e]")
-		return ..()
-
-	//CHOMP Edit Stealing this bit from TGStation to try to record OOM issues.
-	//this is snowflake because of a byond bug (ID:2306577), do not attempt to call non-builtin procs in this if
-	if(copytext(e.name,1,32) == "Maximum recursion level reached")
-		//log to world while intentionally triggering the byond bug.
-		log_world("runtime error: [e.name]\n[e.desc]")
-		//if we got to here without silently ending, the byond bug has been fixed.
-		log_world("The bug with recursion runtimes has been fixed. Please remove the snowflake check from world/Error in [__FILE__]:[__LINE__]")
-		return //this will never happen.
-
-	else if(copytext(e.name,1,18) == "Out of resources!")
-		log_world("BYOND out of memory.")
-		log_game("BYOND out of memory.")
-		return ..()
-	//CHOMP Edit end
-
-	if(!GLOB.error_last_seen) // A runtime is occurring too early in start-up initialization
-		return ..()
-
-=======
 /world/Error(exception/E, datum/e_src)
 	GLOB.total_runtimes++
->>>>>>> b0f0f4685f (JSON Logging Refactor (#18252))
 
 	if(!istype(E)) //Something threw an unusual exception
 		log_world("uncaught runtime error: [E]")

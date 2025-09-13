@@ -130,11 +130,7 @@
 	return (copytext(message, length(message)) == "!") ? 2 : 1
 
 /datum/language/proc/broadcast(var/mob/living/speaker,var/message,var/speaker_mask)
-<<<<<<< HEAD
-	INVOKE_ASYNC(GLOBAL_PROC, GLOBAL_PROC_REF(log_say), "(HIVE) [message]", speaker)  //CHOMP EDIT - TODO: FIX ME (selis logging pr)
-=======
 	speaker.log_talk("(HIVE) [message]", LOG_SAY)
->>>>>>> b0f0f4685f (JSON Logging Refactor (#18252))
 
 	add_verb(speaker, /mob/proc/adjust_hive_range)
 

@@ -42,13 +42,8 @@ var/global/narsie_cometh = 0
 /obj/singularity/narsie/large/Initialize(mapload)
 	. = ..()
 	if(announce)
-<<<<<<< HEAD
-		to_world(span_world(span_narsie(span_red("[uppertext(name)] HAS RISEN"))))
-		world << sound('sound/effects/weather/old_wind/wind_5_1.ogg')
-=======
 		to_chat(world, span_world(span_narsie(span_red("[uppertext(name)] HAS RISEN"))))
-		world << sound('sound/effects/weather/wind/wind_5_1.ogg')
->>>>>>> b0f0f4685f (JSON Logging Refactor (#18252))
+		world << sound('sound/effects/weather/old_wind/wind_5_1.ogg') // CHOMPEdit - For some reason different wind sound path
 
 	narsie_spawn_animation()
 

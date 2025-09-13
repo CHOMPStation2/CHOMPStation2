@@ -46,13 +46,8 @@ SUBSYSTEM_DEF(vote)
 		break
 
 	if(!players_are_in_round)
-<<<<<<< HEAD
-		log_debug("The crew transfer shuttle would have been called at vote time due to no players being present.") //YW Edit
-//		init_shift_change(null, 1)  //YW Edit
-=======
 		log_game("The crew transfer shuttle was automatically called at vote time due to no players being present.")
 		init_shift_change(null, 1)
->>>>>>> b0f0f4685f (JSON Logging Refactor (#18252))
 		return
 
 	initiate_vote(VOTE_CREW_TRANSFER, "the server", 1)

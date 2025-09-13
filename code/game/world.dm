@@ -131,23 +131,6 @@ GLOBAL_VAR(restart_counter)
 	world_startup_time = world.timeofday
 	rollover_safety_date = world.realtime - world.timeofday // 00:00 today (ish, since floating point error with world.realtime) of today
 
-<<<<<<< HEAD
-	var/override_dir = params[OVERRIDE_LOG_DIRECTORY_PARAMETER]
-	if(override_dir)
-		GLOB.log_directory = "data/logs/[override_dir]"
-	else
-		GLOB.log_directory += time2text(world.realtime, "YYYY/MM-Month/DD-Day/round-hh-mm-ss")
-	GLOB.diary = start_log("[GLOB.log_directory].log")
-	GLOB.href_logfile = start_log("[GLOB.log_directory]-hrefs.htm")
-	GLOB.error_log = start_log("[GLOB.log_directory]-error.log")
-	GLOB.sql_error_log = start_log("[GLOB.log_directory]-sql-error.log")
-	GLOB.query_debug_log = start_log("[GLOB.log_directory]-query-debug.log")
-	GLOB.debug_log = start_log("[GLOB.log_directory]-debug.log")
-
-	var/latest_changelog = file("[global.config.directory]/../html/changelogs_ch/archive/" + time2text(world.timeofday, "YYYY-MM") + ".yml") // CHOMPEdit - changelogs_ch
-	GLOB.changelog_hash = fexists(latest_changelog) ? md5(latest_changelog) : "" //for telling if the changelog has changed recently
-	to_world_log("Changelog Hash: '[GLOB.changelog_hash]' ([latest_changelog])")
-
 	//ChompADD Start - Newsfile
 	var/savefile/F = new(NEWSFILE)
 	if(F)
@@ -159,9 +142,6 @@ GLOBAL_VAR(restart_counter)
 		GLOB.servernews_hash = md5("[title]" + "[body]")
 	//ChompADD End
 
-	// First possible sleep()
-=======
->>>>>>> b0f0f4685f (JSON Logging Refactor (#18252))
 	InitTgs()
 
 	config.Load(params[OVERRIDE_CONFIG_DIRECTORY_PARAMETER])
@@ -307,7 +287,7 @@ GLOBAL_VAR(restart_counter)
 
 	logger.init_logging()
 
-	var/latest_changelog = file("[global.config.directory]/../html/changelogs/archive/" + time2text(world.timeofday, "YYYY-MM", TIMEZONE_UTC) + ".yml")
+	var/latest_changelog = file("[global.config.directory]/../html/changelogs_ch/archive/" + time2text(world.timeofday, "YYYY-MM", TIMEZONE_UTC) + ".yml") // CHOMPEdit - changelogs_ch
 	GLOB.changelog_hash = fexists(latest_changelog) ? md5(latest_changelog) : 0 //for telling if the changelog has changed recently
 
 	if(GLOB.round_id)
@@ -737,29 +717,7 @@ var/failed_old_db_connections = 0
 	else if(!setup_database_connection())
 		log_sql("Your server failed to establish a connection with the feedback database.")
 	else
-<<<<<<< HEAD
-		to_world_log("Feedback database connection established.")
-		// CHOMPEdit Begin - Truncating the temporary dialog/attacklog tables
-		var/datum/db_query/query_truncate = SSdbcore.NewQuery("TRUNCATE erro_dialog")
-		var/num_tries = 0
-		while(!query_truncate.Execute() && num_tries<5)
-			num_tries++
-
-		if(num_tries==5)
-			log_admin("ERROR TRYING TO CLEAR erro_dialog")
-		qdel(query_truncate)
-		var/datum/db_query/query_truncate2 = SSdbcore.NewQuery("TRUNCATE erro_attacklog")
-		num_tries = 0
-		while(!query_truncate2.Execute() && num_tries<5)
-			num_tries++
-
-		if(num_tries==5)
-			log_admin("ERROR TRYING TO CLEAR erro_attacklog")
-		qdel(query_truncate2)
-		// CHOMPEdit End
-=======
 		log_sql("Feedback database connection established.")
->>>>>>> b0f0f4685f (JSON Logging Refactor (#18252))
 	return 1
 
 /proc/setup_database_connection()

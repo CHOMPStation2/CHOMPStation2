@@ -63,21 +63,21 @@ SUBSYSTEM_DEF(pathfinder)
 			stoplag(1)
 			if(world.time > started + PATHFINDER_TIMEOUT)
 				stack_trace("pathfinder timeout; check debug logs.")
-				log_debug("pathfinder timeout of instance with debug variables [instance.debug_log_string()]")
+				log_runtime("pathfinder timeout of instance with debug variables [instance.debug_log_string()]")
 				return
 	else
 		while(pathfinding_mutex)
 			stoplag(3)
 			if(world.time > started + PATHFINDER_TIMEOUT)
 				stack_trace("pathfinder timeout; check debug logs.")
-				log_debug("pathfinder timeout of instance with debug variables [instance.debug_log_string()]")
+				log_runtime("pathfinder timeout of instance with debug variables [instance.debug_log_string()]")
 				return
 	--pathfinding_blocked
 	pathfinding_mutex = TRUE
 	. = instance.search()
 	if(world.time > started + PATHFINDER_TIMEOUT)
 		stack_trace("pathfinder timeout; check debug logs.")
-		log_debug("pathfinder timeout of instance with debug variables [instance.debug_log_string()]")
+		log_runtime("pathfinder timeout of instance with debug variables [instance.debug_log_string()]")
 	pathfinding_mutex = FALSE
 
 #undef PATHFINDER_TIMEOUT

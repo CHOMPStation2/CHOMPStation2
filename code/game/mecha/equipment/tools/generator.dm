@@ -29,13 +29,8 @@
 	if(!chassis)
 		set_ready_state(TRUE)
 		return PROCESS_KILL
-<<<<<<< HEAD
-	if(fuel_amount <= 0)
-		log_message("Deactivated - no fuel.")
-=======
-	if(fuel.get_amount() <= 0)
+	if(fuel_amount <= 0) // CHOMPEdit - Spam fix
 		src.mecha_log_message("Deactivated - no fuel.")
->>>>>>> b0f0f4685f (JSON Logging Refactor (#18252))
 		set_ready_state(TRUE)
 		return PROCESS_KILL
 	var/cur_charge = chassis.get_charge()
