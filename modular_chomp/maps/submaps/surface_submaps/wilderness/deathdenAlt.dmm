@@ -535,10 +535,6 @@
 "Tm" = (
 /turf/simulated/wall/cult/turfpack/sif,
 /area/submap/DeathDen)
-"Tx" = (
-/obj/machinery/power/supermatter/shard,
-/turf/simulated/floor/wood/sif/turfpack/sif,
-/area/submap/DeathDen)
 "Xy" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/item/reagent_containers/food/snacks/candy_corn{
@@ -898,7 +894,7 @@ Ct
 Ct
 Ct
 Tm
-Tx
+zd
 Tm
 Ct
 Ct
