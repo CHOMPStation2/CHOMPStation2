@@ -1115,14 +1115,8 @@
 
 /obj/mecha/hitby(atom/movable/source) //wrapper
 	..()
-<<<<<<< HEAD
-	src.log_message("Hit by [A].",1)
-	call((proc_res["dynhitby"]||src), "dynhitby")(A)
-	return
-=======
 	src.mecha_log_message("Hit by [source].",1)
 	call((proc_res["dynhitby"]||src), "dynhitby")(source)
->>>>>>> 0a2d3a8cf6 (Mop do_after multi use)
 
 //I think this is relative to throws.
 /obj/mecha/proc/dynhitby(atom/movable/A)
