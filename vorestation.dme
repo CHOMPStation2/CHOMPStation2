@@ -170,6 +170,7 @@
 #include "code\__defines\simple_mob.dm"
 #include "code\__defines\size.dm"
 #include "code\__defines\slosh.dm"
+#include "code\__defines\song.dm"
 #include "code\__defines\soulcatcher.dm"
 #include "code\__defines\sound.dm"
 #include "code\__defines\span.dm"
@@ -221,6 +222,7 @@
 #include "code\__defines\dcs\signals\signals_client.dm"
 #include "code\__defines\dcs\signals\signals_datum.dm"
 #include "code\__defines\dcs\signals\signals_material_container.dm"
+#include "code\__defines\dcs\signals\signals_music.dm"
 #include "code\__defines\dcs\signals\signals_object.dm"
 #include "code\__defines\dcs\signals\signals_subsystem.dm"
 #include "code\__defines\dcs\signals\signals_techweb.dm"
@@ -3001,7 +3003,11 @@
 #include "code\modules\identification\identification.dm"
 #include "code\modules\identification\item_procs.dm"
 #include "code\modules\instruments\items.dm"
+<<<<<<< HEAD
 #include "code\modules\instruments\items_ch.dm"
+=======
+#include "code\modules\instruments\piano_synth.dm"
+>>>>>>> 73a79b3a6f (Instrument Update (#18483))
 #include "code\modules\instruments\stationary.dm"
 #include "code\modules\instruments\instrument_data\_instrument_data.dm"
 #include "code\modules\instruments\instrument_data\_instrument_key.dm"
