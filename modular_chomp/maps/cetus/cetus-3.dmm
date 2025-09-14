@@ -109,6 +109,12 @@
 	name = "floor mat"
 	},
 /area/maintenance/cetus/sex)
+"acY" = (
+/obj/structure/prop/dark_node{
+	node_range = 2
+	},
+/turf/simulated/floor/outdoors/rocks/cetus,
+/area/maintenance/cetus/jrthreeport)
 "adx" = (
 /obj/structure/railing/grey{
 	dir = 8
@@ -128,8 +134,10 @@
 /obj/machinery/power/apc{
 	dir = 1;
 	name = "north bump";
-	operating = 0;
 	pixel_y = 24
+	},
+/obj/structure/cable{
+	icon_state = "0-4"
 	},
 /turf/simulated/open,
 /area/engineering/cetus/jointsubstation)
@@ -221,8 +229,21 @@
 /obj/structure/railing/grey{
 	dir = 4
 	},
-/turf/simulated/floor/water/digestive_enzymes/nanites,
+/turf/simulated/floor/water/digestive_enzymes/nanites{
+	id = "aichambernanite"
+	},
 /area/ai)
+"afP" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/catwalk,
+/obj/random/junk,
+/obj/machinery/light/small/yellowed{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/cetus/threeap)
 "afV" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/cable/cyan{
@@ -251,7 +272,8 @@
 	tag_airpump = "eva_port_pump";
 	tag_chamber_sensor = "eva_port_sensor";
 	tag_exterior_door = "eva_port_outer";
-	tag_interior_door = "eva_port_inner"
+	tag_interior_door = "eva_port_inner";
+	dir = 1
 	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 10
@@ -262,7 +284,6 @@
 /obj/machinery/power/apc{
 	dir = 1;
 	name = "north bump";
-	operating = 0;
 	pixel_y = 24
 	},
 /obj/machinery/light_switch{
@@ -323,6 +344,10 @@
 /obj/machinery/alarm{
 	pixel_y = 23
 	},
+/obj/item/storage/firstaid/regular{
+	pixel_x = 5;
+	pixel_y = 5
+	},
 /turf/simulated/floor/tiled/old_tile/gray,
 /area/maintenance/cetus/jrthreestar)
 "akq" = (
@@ -345,6 +370,10 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/old_tile,
 /area/maintenance/cetus/shallow/derilect/dock)
+"akN" = (
+/obj/machinery/light/small/yellowed,
+/turf/simulated/wall/r_wall,
+/area/maintenance/cetus/d3bar)
 "akS" = (
 /obj/structure/table/rack/wood,
 /obj/effect/landmark/costume/plaguedoctor,
@@ -497,7 +526,9 @@
 /obj/structure/railing/overhang/hazard/nanite{
 	dir = 8
 	},
-/turf/simulated/floor/water/digestive_enzymes/nanites,
+/turf/simulated/floor/water/digestive_enzymes/nanites{
+	id = "aichambernanite"
+	},
 /area/ai)
 "aog" = (
 /obj/structure/railing/grey{
@@ -665,7 +696,9 @@
 /obj/structure/railing/overhang/hazard/nanite{
 	dir = 4
 	},
-/turf/simulated/floor/water/digestive_enzymes/nanites,
+/turf/simulated/floor/water/digestive_enzymes/nanites{
+	id = "aichambernanite"
+	},
 /area/ai)
 "asG" = (
 /obj/random/trash_pile,
@@ -705,14 +738,18 @@
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/shallow/ap)
 "atV" = (
-/turf/simulated/floor/water/digestive_enzymes/nanites,
+/turf/simulated/floor/water/digestive_enzymes/nanites{
+	id = "aichambernanite"
+	},
 /area/ai)
 "auu" = (
 /obj/structure/railing/overhang/hazard/nanite{
 	dir = 8
 	},
 /obj/structure/railing/overhang/hazard/nanite,
-/turf/simulated/floor/water/digestive_enzymes/nanites,
+/turf/simulated/floor/water/digestive_enzymes/nanites{
+	id = "aichambernanite"
+	},
 /area/ai)
 "auz" = (
 /obj/structure/lattice,
@@ -751,6 +788,9 @@
 "awJ" = (
 /obj/machinery/door/window/holowindoor{
 	name = "Prizes"
+	},
+/obj/machinery/light/small/yellowed{
+	dir = 1
 	},
 /turf/simulated/floor/lino,
 /area/maintenance/cetus/arcade)
@@ -823,6 +863,16 @@
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled,
 /area/engineering/Atmospherics_Chamber)
+"aAT" = (
+/obj/machinery/alarm{
+	frequency = 1441;
+	pixel_y = 22
+	},
+/obj/machinery/light/small/yellowed{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/cetus/d3docks)
 "aBm" = (
 /obj/structure/disposalpipe/segment,
 /obj/machinery/door/firedoor/glass,
@@ -983,6 +1033,12 @@
 /obj/structure/catwalk,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/threefs)
+"aFf" = (
+/obj/machinery/light/small/yellowed{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/cetus/shallow/ap)
 "aFh" = (
 /obj/effect/floor_decal/spline/plain{
 	dir = 6
@@ -1075,6 +1131,11 @@
 	},
 /turf/simulated/floor/wood,
 /area/bridge/Captain_Office)
+"aIk" = (
+/obj/effect/floor_decal/rust,
+/obj/machinery/light/small/yellowed,
+/turf/simulated/floor/plating,
+/area/maintenance/cetus/threeap)
 "aIn" = (
 /obj/random/vendorfood{
 	dir = 4
@@ -1108,9 +1169,6 @@
 /turf/simulated/floor/tiled,
 /area/engineering/Atmospherics_Control_Room)
 "aJC" = (
-/obj/effect/floor_decal/spline/plain{
-	dir = 4
-	},
 /obj/effect/floor_decal/spline/plain{
 	dir = 8
 	},
@@ -1230,6 +1288,14 @@
 	name = "floor mat"
 	},
 /area/maintenance/cetus/jrthreestar)
+"aNk" = (
+/obj/structure/lattice,
+/obj/structure/catwalk,
+/obj/machinery/light/small/yellowed{
+	dir = 4
+	},
+/turf/simulated/open,
+/area/maintenance/cetus/d3docks)
 "aNs" = (
 /turf/simulated/floor/tiled,
 /area/crew_quarters/cetus/escapepodaft)
@@ -1599,7 +1665,6 @@
 /obj/machinery/power/apc{
 	dir = 1;
 	name = "north bump";
-	operating = 0;
 	pixel_y = 24
 	},
 /obj/machinery/button/windowtint{
@@ -1797,9 +1862,7 @@
 /area/crew_quarters/cetus/atrium/secondaryf3)
 "bjN" = (
 /obj/machinery/door/firedoor/glass,
-/obj/machinery/door/airlock/maintenance{
-	req_one_access = list(46,47)
-	},
+/obj/machinery/door/airlock/maintenance,
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
@@ -1902,6 +1965,13 @@
 	},
 /turf/simulated/floor/carpet/graycarpet,
 /area/maintenance/cetus/shallow/fp)
+"bmb" = (
+/obj/structure/lattice,
+/obj/machinery/light/small/yellowed{
+	dir = 1
+	},
+/turf/simulated/open,
+/area/maintenance/cetus/d3docks)
 "bmd" = (
 /obj/structure/table/bench/steel,
 /turf/simulated/floor/tiled,
@@ -1963,6 +2033,9 @@
 	icon_state = "0-8"
 	},
 /obj/structure/catwalk,
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/threeap)
 "bph" = (
@@ -1990,8 +2063,15 @@
 /turf/simulated/floor/wood,
 /area/bridge/sleep/Captain_Quarters)
 "bpy" = (
-/obj/machinery/scale,
-/turf/simulated/floor/tiled/old_tile/gray,
+/obj/machinery/light/yellowed{
+	dir = 8
+	},
+/obj/effect/floor_decal/spline/plain{
+	dir = 8
+	},
+/turf/simulated/floor/boxing{
+	name = "floor mat"
+	},
 /area/maintenance/cetus/jrthreestar)
 "bpF" = (
 /obj/effect/floor_decal/industrial/warning{
@@ -2059,6 +2139,7 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 6
 	},
+/obj/machinery/light/small/emergency,
 /turf/simulated/floor/plating,
 /area/engineering/Atmospherics_Chamber)
 "brI" = (
@@ -2258,6 +2339,9 @@
 	},
 /obj/structure/catwalk,
 /obj/random/trash,
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/threeap)
 "bzu" = (
@@ -2866,6 +2950,9 @@
 /area/maintenance/cetus/shallow/derilect/atmos)
 "bWw" = (
 /obj/effect/floor_decal/industrial/warning,
+/obj/machinery/light/small/yellowed{
+	dir = 4
+	},
 /turf/simulated/floor/plating,
 /area/engineering/cetus/portsubstation)
 "bWG" = (
@@ -3192,7 +3279,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 5
 	},
-/turf/simulated/floor/water/digestive_enzymes/nanites,
+/turf/simulated/floor/water/digestive_enzymes/nanites{
+	id = "nanitehall"
+	},
 /area/ai_monitored/aihall)
 "chp" = (
 /obj/structure/transit_tube{
@@ -3424,6 +3513,7 @@
 "cpt" = (
 /obj/structure/bed/pillowpile/yellow,
 /obj/structure/bed/pillowpilefront/orange,
+/obj/machinery/light/small/yellowed,
 /turf/simulated/floor/wood,
 /area/maintenance/cetus/badsnuggles)
 "cpV" = (
@@ -3470,7 +3560,9 @@
 /obj/structure/railing/grey{
 	dir = 1
 	},
-/turf/simulated/floor/water/pool,
+/turf/simulated/floor/water/pool/station{
+	name = "flooded tiles"
+	},
 /area/maintenance/cetus/shallow/flooded)
 "cru" = (
 /turf/simulated/floor/reinforced/turfpack/airless,
@@ -3610,9 +3702,7 @@
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
-/obj/machinery/door/airlock/maintenance{
-	req_one_access = list(46,47)
-	},
+/obj/machinery/door/airlock/maintenance,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
@@ -3676,9 +3766,7 @@
 /turf/simulated/floor/tiled/old_tile,
 /area/maintenance/cetus/shallow/derilect/medbay)
 "cAg" = (
-/obj/machinery/door/airlock/maintenance{
-	req_one_access = list(46,47)
-	},
+/obj/machinery/door/airlock/maintenance,
 /obj/machinery/door/firedoor/glass,
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -3990,9 +4078,7 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/door/firedoor/glass,
-/obj/machinery/door/airlock/maintenance{
-	req_one_access = list(46,47)
-	},
+/obj/machinery/door/airlock/maintenance,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/d3docks)
@@ -4161,9 +4247,7 @@
 	dir = 4
 	},
 /obj/machinery/door/firedoor/glass,
-/obj/machinery/door/airlock/maintenance{
-	req_one_access = list(46,47)
-	},
+/obj/machinery/door/airlock/maintenance,
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
@@ -4291,7 +4375,9 @@
 /obj/structure/railing/overhang/hazard/nanite{
 	dir = 4
 	},
-/turf/simulated/floor/water/digestive_enzymes/nanites,
+/turf/simulated/floor/water/digestive_enzymes/nanites{
+	id = "aichambernanite"
+	},
 /area/ai)
 "cRR" = (
 /obj/structure/cable{
@@ -4534,8 +4620,19 @@
 /area/bridge/Deck3_Corridor)
 "cZX" = (
 /obj/structure/railing/overhang/hazard/nanite,
-/turf/simulated/floor/water/digestive_enzymes/nanites,
+/turf/simulated/floor/water/digestive_enzymes/nanites{
+	id = "nanitehall"
+	},
 /area/ai_monitored/aihall)
+"dah" = (
+/obj/structure/dummystairs/hazardledge{
+	dir = 8
+	},
+/obj/structure/railing/overhang/hazard/nanite,
+/turf/simulated/floor/water/digestive_enzymes/nanites{
+	id = "ainanitethree"
+	},
+/area/ai)
 "daj" = (
 /obj/machinery/door/firedoor/glass,
 /obj/structure/cable{
@@ -4588,13 +4685,12 @@
 /turf/simulated/floor/carpet/graycarpet,
 /area/bridge/Deck3_Corridor)
 "daY" = (
-/obj/structure/cliff/automatic{
-	dir = 5
+/obj/effect/floor_decal/rust,
+/obj/machinery/light/small/yellowed{
+	dir = 1
 	},
-/turf/simulated/floor/boxing{
-	name = "floor mat"
-	},
-/area/maintenance/cetus/jrthreestar)
+/turf/simulated/floor/plating,
+/area/maintenance/cetus/threeap)
 "dbg" = (
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 5
@@ -4681,7 +4777,9 @@
 /obj/structure/railing/grey{
 	dir = 8
 	},
-/turf/simulated/floor/water/pool,
+/turf/simulated/floor/water/pool/station{
+	name = "flooded tiles"
+	},
 /area/maintenance/cetus/shallow/flooded)
 "dfw" = (
 /obj/structure/closet/firecloset,
@@ -4889,11 +4987,12 @@
 /turf/simulated/floor/tiled/milspec/raised,
 /area/ai)
 "dmd" = (
-/obj/item/bone/skull/unathi{
-	pixel_x = -12
+/obj/effect/floor_decal/rust,
+/obj/machinery/light/small/yellowed{
+	dir = 8
 	},
-/turf/simulated/wall,
-/area/crew_quarters/cetus/Galleryf2)
+/turf/simulated/floor/plating,
+/area/maintenance/cetus/shallow/flooded)
 "dmf" = (
 /obj/structure/lattice,
 /obj/machinery/atmospherics/pipe/manifold/hidden{
@@ -4922,6 +5021,9 @@
 /obj/structure/railing/grey,
 /obj/structure/cable{
 	icon_state = "6-8"
+	},
+/obj/machinery/light/small/yellowed{
+	dir = 4
 	},
 /turf/simulated/floor/outdoors/rocks/cetus,
 /area/engineering/cetus/aftsubstation)
@@ -5013,6 +5115,18 @@
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
 /obj/effect/map_helper/airlock/sensor/chamber_sensor,
 /obj/effect/floor_decal/industrial/warning/cee{
+	dir = 8
+	},
+/obj/machinery/embedded_controller/radio/airlock/airlock_controller{
+	id_tag = "derilect_aft_dock";
+	tag_airpump = "eva_port_pump";
+	tag_chamber_sensor = "eva_port_sensor";
+	tag_exterior_door = "eva_port_outer";
+	tag_interior_door = "eva_port_inner";
+	dir = 4;
+	pixel_x = -23
+	},
+/obj/machinery/light/small/emergency{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/old_tile,
@@ -5208,6 +5322,7 @@
 /turf/simulated/floor/tiled,
 /area/engineering/Atmospherics_Chamber)
 "dvj" = (
+/obj/machinery/door/airlock/maintenance,
 /turf/simulated/mineral/cetus,
 /area/hallway/primary/firstdeck/vaultlobby)
 "dvB" = (
@@ -5330,12 +5445,15 @@
 /turf/simulated/open,
 /area/hallway/cetus/stairwellf3)
 "dyn" = (
-/obj/item/melee/chainofcommand{
-	pixel_y = 5;
-	pixel_x = 21
+/obj/structure/railing/grey{
+	dir = 4
 	},
-/turf/simulated/wall/r_wall,
-/area/bridge/Captain_Office)
+/obj/structure/railing/grey{
+	dir = 1
+	},
+/obj/machinery/light/small/yellowed,
+/turf/simulated/open,
+/area/maintenance/cetus/threefp)
 "dyA" = (
 /obj/effect/floor_decal/spline/plain{
 	dir = 1
@@ -5901,9 +6019,7 @@
 "dTO" = (
 /obj/structure/disposalpipe/segment,
 /obj/machinery/door/firedoor/glass,
-/obj/machinery/door/airlock/maintenance{
-	req_one_access = list(46,47)
-	},
+/obj/machinery/door/airlock/maintenance,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/d3docks)
 "dTP" = (
@@ -5926,7 +6042,9 @@
 /area/engineering/Atmospherics_Chamber)
 "dUN" = (
 /obj/structure/curtain/medical,
-/turf/simulated/floor/water/pool,
+/turf/simulated/floor/water/pool/station{
+	name = "flooded tiles"
+	},
 /area/maintenance/cetus/shallow/flooded)
 "dVb" = (
 /obj/structure/lattice,
@@ -6502,7 +6620,9 @@
 	dir = 4
 	},
 /obj/structure/railing/overhang/hazard/nanite,
-/turf/simulated/floor/water/digestive_enzymes/nanites,
+/turf/simulated/floor/water/digestive_enzymes/nanites{
+	id = "aichambernanite"
+	},
 /area/ai)
 "ely" = (
 /turf/simulated/mineral/cetus/edge,
@@ -6808,6 +6928,16 @@
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
 /obj/effect/map_helper/airlock/sensor/chamber_sensor,
 /obj/effect/floor_decal/industrial/warning/full,
+/obj/machinery/embedded_controller/radio/airlock/airlock_controller{
+	id_tag = "derilect_port_dock";
+	pixel_y = 21;
+	tag_airpump = "eva_port_pump";
+	tag_chamber_sensor = "eva_port_sensor";
+	tag_exterior_door = "eva_port_outer";
+	tag_interior_door = "eva_port_inner";
+	pixel_x = 6
+	},
+/obj/machinery/light/small/emergency,
 /turf/simulated/floor/tiled/old_tile,
 /area/maintenance/cetus/shallow/derilect/dock)
 "etf" = (
@@ -6891,7 +7021,9 @@
 /obj/structure/railing/overhang/hazard/nanite{
 	dir = 8
 	},
-/turf/simulated/floor/water/digestive_enzymes/nanites,
+/turf/simulated/floor/water/digestive_enzymes/nanites{
+	id = "aichambernanite"
+	},
 /area/ai)
 "evu" = (
 /obj/machinery/atmospherics/pipe/simple/visible/green{
@@ -6918,9 +7050,7 @@
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/door/airlock/maintenance{
-	req_one_access = list(46,47)
-	},
+/obj/machinery/door/airlock/maintenance,
 /obj/structure/cable/green{
 	icon_state = "9-10"
 	},
@@ -7016,7 +7146,9 @@
 /obj/structure/railing/grey{
 	dir = 1
 	},
-/turf/simulated/floor/water/digestive_enzymes/nanites,
+/turf/simulated/floor/water/digestive_enzymes/nanites{
+	id = "aichambernanite"
+	},
 /area/ai)
 "eyP" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
@@ -7616,6 +7748,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 6
 	},
+/obj/machinery/light/small/yellowed{
+	dir = 8
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/d3bar)
 "eQb" = (
@@ -7657,22 +7792,19 @@
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/threeas)
 "eRy" = (
-/obj/effect/floor_decal/spline/plain/corner{
-	dir = 8
+/obj/structure/lattice,
+/obj/structure/catwalk,
+/obj/machinery/light/small/yellowed{
+	dir = 1
 	},
-/obj/effect/decal/cleanable/blood/old,
-/turf/simulated/floor/boxing{
-	name = "floor mat"
-	},
-/area/maintenance/cetus/jrthreestar)
+/turf/simulated/open,
+/area/maintenance/cetus/threefp)
 "eSp" = (
 /turf/simulated/wall,
 /area/rnd/cetus/entry)
 "eSu" = (
 /obj/machinery/door/firedoor/glass,
-/obj/machinery/door/airlock/maintenance{
-	req_one_access = list(46,47)
-	},
+/obj/machinery/door/airlock/maintenance,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/d3docks)
 "eSK" = (
@@ -8005,6 +8137,9 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
+/obj/machinery/light/small/yellowed{
+	dir = 4
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/jrthreeport)
 "ffN" = (
@@ -8137,6 +8272,9 @@
 	},
 /obj/item/radio/intercom/custom{
 	pixel_y = -21
+	},
+/obj/machinery/light/small/fluorescent{
+	dir = 4
 	},
 /turf/simulated/floor/greengrid,
 /area/ai)
@@ -8345,6 +8483,13 @@
 /obj/structure/ladder,
 /turf/simulated/open,
 /area/engineering/cetus/portsubstation)
+"foA" = (
+/obj/structure/railing/overhang/hazard/nanite,
+/obj/machinery/light/small/fluorescent,
+/turf/simulated/floor/water/digestive_enzymes/nanites{
+	id = "maintnanites"
+	},
+/area/maintenance/cetus/nanites)
 "foD" = (
 /obj/machinery/light/yellowed,
 /obj/structure/cable/green{
@@ -8977,7 +9122,9 @@
 /obj/machinery/camera/xray/command{
 	c_tag = "AI - Secondary Core"
 	},
-/turf/simulated/floor/water/digestive_enzymes/nanites,
+/turf/simulated/floor/water/digestive_enzymes/nanites{
+	id = "ainanitetwo"
+	},
 /area/ai)
 "fJj" = (
 /obj/machinery/button/remote/airlock{
@@ -9003,6 +9150,13 @@
 "fKg" = (
 /turf/simulated/wall/r_wall,
 /area/tcomm/tcomstorage)
+"fKl" = (
+/obj/random/obstruction,
+/obj/machinery/light/small/yellowed{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/cetus/d3docks)
 "fKr" = (
 /obj/structure/cable/green{
 	icon_state = "2-5"
@@ -9150,9 +9304,7 @@
 /area/maintenance/cetus/shallow/ap)
 "fOj" = (
 /obj/machinery/door/firedoor/glass,
-/obj/machinery/door/airlock/maintenance{
-	req_one_access = list(46,47)
-	},
+/obj/machinery/door/airlock/maintenance,
 /obj/structure/cable/green{
 	icon_state = "5-10"
 	},
@@ -9373,7 +9525,6 @@
 /obj/machinery/power/apc{
 	dir = 1;
 	name = "north bump";
-	operating = 0;
 	pixel_y = 24
 	},
 /obj/machinery/light_switch{
@@ -9536,7 +9687,9 @@
 /obj/structure/railing/grey{
 	dir = 4
 	},
-/turf/simulated/floor/water/pool,
+/turf/simulated/floor/water/pool/station{
+	name = "flooded tiles"
+	},
 /area/maintenance/cetus/shallow/flooded)
 "gdp" = (
 /obj/structure/disposalpipe/segment,
@@ -9737,6 +9890,17 @@
 /obj/random/forgotten_tram,
 /turf/simulated/floor/tiled/old_tile/gray,
 /area/maintenance/cetus/shallow/derilect/bridge)
+"gjw" = (
+/obj/structure/railing/overhang/hazard/nanite{
+	dir = 1
+	},
+/obj/structure/railing/overhang/hazard/nanite{
+	dir = 8
+	},
+/turf/simulated/floor/water/digestive_enzymes/nanites{
+	id = "maintnanites"
+	},
+/area/maintenance/cetus/nanites)
 "gjx" = (
 /obj/item/stool/padded{
 	dir = 8
@@ -10232,8 +10396,10 @@
 /obj/structure/railing/overhang/hazard/nanite{
 	dir = 8
 	},
-/turf/simulated/floor/water/digestive_enzymes/nanites,
-/area/maintenance/cetus/threeap)
+/turf/simulated/floor/water/digestive_enzymes/nanites{
+	id = "maintnanites"
+	},
+/area/maintenance/cetus/nanites)
 "gyw" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -11235,8 +11401,13 @@
 /turf/simulated/floor/tiled/old_tile/gray,
 /area/maintenance/cetus/shallow/derilect/hallway)
 "hbL" = (
-/turf/simulated/wall,
-/area/ai_upload_foyer)
+/obj/structure/railing/overhang/hazard/nanite{
+	dir = 1
+	},
+/turf/simulated/floor/water/digestive_enzymes/nanites{
+	id = "maintnanites"
+	},
+/area/maintenance/cetus/nanites)
 "hbT" = (
 /obj/structure/railing/overhang/hazard{
 	dir = 4
@@ -11269,7 +11440,9 @@
 /obj/structure/railing/overhang/hazard/nanite{
 	dir = 4
 	},
-/turf/simulated/floor/water/digestive_enzymes/nanites,
+/turf/simulated/floor/water/digestive_enzymes/nanites{
+	id = "aichambernanite"
+	},
 /area/ai)
 "hcS" = (
 /obj/structure/table/standard,
@@ -11618,7 +11791,6 @@
 /obj/machinery/power/apc{
 	dir = 8;
 	name = "west bump";
-	operating = 0;
 	pixel_x = -24;
 	pixel_y = -2
 	},
@@ -11760,9 +11932,7 @@
 /turf/simulated/floor/carpet/graycarpet,
 /area/maintenance/cetus/shallow/gamba)
 "hth" = (
-/obj/machinery/door/airlock/maintenance{
-	req_one_access = list(46,47)
-	},
+/obj/machinery/door/airlock/maintenance,
 /obj/machinery/door/firedoor/glass,
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/plating,
@@ -12030,7 +12200,9 @@
 /obj/structure/railing/overhang/hazard/nanite{
 	dir = 8
 	},
-/turf/simulated/floor/water/digestive_enzymes/nanites,
+/turf/simulated/floor/water/digestive_enzymes/nanites{
+	id = "aichambernanite"
+	},
 /area/ai)
 "hAX" = (
 /turf/simulated/floor/wood/broken,
@@ -12332,6 +12504,9 @@
 /area/bridge/sleep/HoP_Quarters)
 "hOe" = (
 /obj/structure/loot_pile/maint/trash,
+/obj/machinery/light/small/yellowed{
+	dir = 4
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/threefp)
 "hOo" = (
@@ -12415,9 +12590,7 @@
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/d3docks)
 "hPK" = (
-/obj/machinery/door/airlock/maintenance{
-	req_one_access = list(46,47)
-	},
+/obj/machinery/door/airlock/maintenance,
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/plating,
 /area/crew_quarters/cetus/Galleryf2)
@@ -12553,6 +12726,9 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/machinery/light/small/yellowed{
+	dir = 1
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/threeap)
 "hTd" = (
@@ -12660,6 +12836,16 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/cetus/jrfirstaid)
+"hUN" = (
+/obj/structure/railing/overhang/hazard/nanite,
+/obj/structure/railing/overhang/hazard/nanite{
+	dir = 4;
+	icon_state = "active_railing0"
+	},
+/turf/simulated/floor/water/digestive_enzymes/nanites{
+	id = "maintnanites"
+	},
+/area/maintenance/cetus/nanites)
 "hUS" = (
 /obj/structure/reagent_dispensers/watertank,
 /turf/simulated/floor/plating,
@@ -12845,12 +13031,14 @@
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/badsnuggles)
 "hYW" = (
-/obj/effect/floor_decal/spline/plain/corner{
-	dir = 8
+/obj/machinery/firealarm{
+	dir = 1;
+	pixel_y = -25
 	},
-/obj/structure/catwalk,
-/turf/simulated/floor/plating,
-/area/maintenance/cetus/threeap)
+/obj/machinery/power/smes/buildable,
+/obj/structure/cable/cyan,
+/turf/simulated/floor/tiled/techfloor,
+/area/ai_monitored/aihall)
 "hZi" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -12983,7 +13171,9 @@
 /obj/structure/railing/overhang/hazard/nanite{
 	dir = 8
 	},
-/turf/simulated/floor/water/digestive_enzymes/nanites,
+/turf/simulated/floor/water/digestive_enzymes/nanites{
+	id = "aichambernanite"
+	},
 /area/ai)
 "ien" = (
 /obj/structure/disposalpipe/segment,
@@ -12999,11 +13189,13 @@
 /turf/simulated/floor/bluegrid,
 /area/ai_server_room)
 "ieU" = (
-/obj/structure/cliff/automatic/corner,
-/turf/simulated/floor/boxing{
-	name = "floor mat"
+/obj/structure/disposalpipe/segment,
+/obj/structure/catwalk,
+/obj/machinery/light/small/yellowed{
+	dir = 4
 	},
-/area/maintenance/cetus/jrthreestar)
+/turf/simulated/floor/plating,
+/area/maintenance/cetus/threeap)
 "ieY" = (
 /obj/effect/landmark/start{
 	name = "Shaft Miner"
@@ -13091,7 +13283,6 @@
 /obj/machinery/power/apc{
 	dir = 1;
 	name = "north bump";
-	operating = 0;
 	pixel_y = 24
 	},
 /obj/structure/cable{
@@ -13484,7 +13675,9 @@
 /obj/structure/railing/overhang/hazard/nanite{
 	dir = 8
 	},
-/turf/simulated/floor/water/digestive_enzymes/nanites,
+/turf/simulated/floor/water/digestive_enzymes/nanites{
+	id = "aichambernanite"
+	},
 /area/ai)
 "izH" = (
 /obj/effect/floor_decal/asteroid,
@@ -13558,6 +13751,9 @@
 	},
 /obj/structure/catwalk,
 /obj/random/junk,
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/threeap)
 "iDF" = (
@@ -13714,7 +13910,9 @@
 /obj/machinery/camera/xray/command{
 	c_tag = "AI - Tertiary Core"
 	},
-/turf/simulated/floor/water/digestive_enzymes/nanites,
+/turf/simulated/floor/water/digestive_enzymes/nanites{
+	id = "ainanitethree"
+	},
 /area/ai)
 "iHa" = (
 /obj/machinery/atmospherics/pipe/simple/visible/green,
@@ -13730,7 +13928,9 @@
 /obj/structure/railing/overhang/hazard/nanite{
 	dir = 4
 	},
-/turf/simulated/floor/water/digestive_enzymes/nanites,
+/turf/simulated/floor/water/digestive_enzymes/nanites{
+	id = "aichambernanite"
+	},
 /area/ai)
 "iIM" = (
 /turf/simulated/floor/plating,
@@ -14423,14 +14623,14 @@
 /turf/simulated/floor/carpet/geo,
 /area/maintenance/cetus/arcade)
 "jaX" = (
-/obj/effect/floor_decal/spline/plain{
+/obj/structure/railing/overhang/hazard/nanite,
+/obj/structure/railing/overhang/hazard/nanite{
 	dir = 8
 	},
-/obj/structure/dummystairs/hazardledge{
-	dir = 8
+/turf/simulated/floor/water/digestive_enzymes/nanites{
+	id = "maintnanites"
 	},
-/turf/simulated/floor/water/digestive_enzymes/nanites,
-/area/maintenance/cetus/threeap)
+/area/maintenance/cetus/nanites)
 "jaY" = (
 /obj/machinery/atmospherics/omni/atmos_filter{
 	tag_east = 1;
@@ -14767,8 +14967,10 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/cetus/shallow/derilect/atmos)
 "jnw" = (
-/turf/simulated/floor/water/digestive_enzymes/nanites,
-/area/maintenance/cetus/threeap)
+/turf/simulated/floor/water/digestive_enzymes/nanites{
+	id = "maintnanites"
+	},
+/area/maintenance/cetus/nanites)
 "jnC" = (
 /obj/structure/railing/grey{
 	dir = 4
@@ -14776,7 +14978,9 @@
 /obj/structure/railing/grey{
 	dir = 8
 	},
-/turf/simulated/floor/water/pool,
+/turf/simulated/floor/water/pool/station{
+	name = "flooded tiles"
+	},
 /area/maintenance/cetus/shallow/flooded)
 "jnM" = (
 /obj/machinery/door/firedoor/glass,
@@ -14933,7 +15137,9 @@
 	dir = 8
 	},
 /obj/structure/railing/overhang/hazard/nanite,
-/turf/simulated/floor/water/digestive_enzymes/nanites,
+/turf/simulated/floor/water/digestive_enzymes/nanites{
+	id = "aichambernanite"
+	},
 /area/ai)
 "juG" = (
 /obj/structure/cliff/automatic/corner{
@@ -14950,6 +15156,7 @@
 /obj/item/bedsheet/pillow/green,
 /obj/structure/bed/pillowpilefront/green,
 /obj/random/plushie,
+/obj/machinery/light/small/yellowed,
 /turf/simulated/floor/carpet/geo,
 /area/maintenance/cetus/arcade)
 "juT" = (
@@ -15009,7 +15216,9 @@
 /obj/structure/railing/overhang/hazard/nanite{
 	dir = 4
 	},
-/turf/simulated/floor/water/digestive_enzymes/nanites,
+/turf/simulated/floor/water/digestive_enzymes/nanites{
+	id = "nanitehall"
+	},
 /area/ai_monitored/aihall)
 "jwB" = (
 /obj/machinery/atmospherics/pipe/simple/visible/cyan,
@@ -15179,6 +15388,9 @@
 /obj/machinery/alarm{
 	pixel_y = 23
 	},
+/obj/machinery/light/small/yellowed{
+	dir = 1
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/threecp)
 "jDs" = (
@@ -15257,6 +15469,7 @@
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
 /obj/effect/map_helper/airlock/sensor/chamber_sensor,
 /obj/effect/floor_decal/industrial/warning/full,
+/obj/machinery/light/small/emergency,
 /turf/simulated/floor/tiled/old_tile,
 /area/maintenance/cetus/shallow/derilect/dock)
 "jFa" = (
@@ -15314,7 +15527,7 @@
 	pixel_y = 23
 	},
 /turf/simulated/floor/plating,
-/area/maintenance/cetus/threeap)
+/area/maintenance/cetus/nanites)
 "jHa" = (
 /obj/structure/table/marble,
 /obj/structure/bed/chair{
@@ -15618,9 +15831,7 @@
 /turf/simulated/floor/carpet/graycarpet,
 /area/hallway/primary/firstdeck/vaultlobby)
 "jQm" = (
-/obj/machinery/door/airlock/maintenance{
-	req_one_access = list(46,47)
-	},
+/obj/machinery/door/airlock/maintenance,
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/shallow/starboard)
@@ -15629,6 +15840,9 @@
 /obj/structure/catwalk,
 /obj/structure/cable/green{
 	icon_state = "6-8"
+	},
+/obj/machinery/light/small/yellowed{
+	dir = 4
 	},
 /turf/simulated/open,
 /area/maintenance/cetus/d3bar)
@@ -15681,6 +15895,9 @@
 /obj/machinery/conveyor{
 	dir = 8;
 	id = "garbage"
+	},
+/obj/machinery/light/small/yellowed{
+	dir = 1
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/disposal)
@@ -15922,7 +16139,9 @@
 	dir = 8
 	},
 /obj/structure/railing/overhang/hazard/nanite,
-/turf/simulated/floor/water/digestive_enzymes/nanites,
+/turf/simulated/floor/water/digestive_enzymes/nanites{
+	id = "nanitehall"
+	},
 /area/ai_monitored/aihall)
 "kbD" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume,
@@ -16143,6 +16362,14 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/cetus/Galleryf2)
+"khz" = (
+/obj/structure/disposalpipe/segment,
+/obj/structure/catwalk,
+/obj/machinery/light/small/yellowed{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/cetus/d3docks)
 "khM" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -16342,9 +16569,7 @@
 	icon_state = "6-9"
 	},
 /obj/machinery/door/firedoor/glass,
-/obj/machinery/door/airlock/maintenance{
-	req_one_access = list(46,47)
-	},
+/obj/machinery/door/airlock/maintenance,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 8
 	},
@@ -16454,7 +16679,9 @@
 /area/tcomm/chamber)
 "knX" = (
 /obj/structure/railing/grey,
-/turf/simulated/floor/water/pool,
+/turf/simulated/floor/water/pool/station{
+	name = "flooded tiles"
+	},
 /area/maintenance/cetus/shallow/flooded)
 "kol" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
@@ -16533,12 +16760,15 @@
 /turf/simulated/wall/r_wall,
 /area/maintenance/cetus/badsnuggles)
 "ksc" = (
-/obj/machinery/door/firedoor/glass,
-/obj/machinery/door/airlock/maintenance{
-	req_one_access = list(46,47)
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/structure/catwalk,
+/obj/machinery/light/small/yellowed{
+	dir = 4
 	},
 /turf/simulated/floor/plating,
-/area/maintenance/cetus/threeap)
+/area/maintenance/cetus/jrthreestar)
 "ksl" = (
 /obj/effect/floor_decal/spline/fancy/wood/corner{
 	dir = 4
@@ -17044,7 +17274,9 @@
 	name = "north bump";
 	pixel_y = 24
 	},
-/turf/simulated/floor/water/digestive_enzymes/nanites,
+/turf/simulated/floor/water/digestive_enzymes/nanites{
+	id = "ainaniteone"
+	},
 /area/ai)
 "kIN" = (
 /obj/random/junk,
@@ -17291,9 +17523,7 @@
 /area/maintenance/cetus/shallow/derilect/hallway)
 "kQc" = (
 /obj/machinery/door/firedoor/glass,
-/obj/machinery/door/airlock/maintenance{
-	req_one_access = list(46,47)
-	},
+/obj/machinery/door/airlock/maintenance,
 /obj/structure/cable/green{
 	icon_state = "5-10"
 	},
@@ -18136,9 +18366,7 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
 	},
-/obj/machinery/door/airlock/maintenance{
-	req_one_access = list(46,47)
-	},
+/obj/machinery/door/airlock/maintenance,
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
@@ -18168,6 +18396,9 @@
 /obj/item/radio/intercom/custom{
 	dir = 1;
 	pixel_y = 21
+	},
+/obj/machinery/light/small/fluorescent{
+	dir = 8
 	},
 /turf/simulated/floor/greengrid,
 /area/ai)
@@ -18628,6 +18859,9 @@
 /obj/effect/floor_decal/spline/plain/corner{
 	dir = 4
 	},
+/obj/machinery/light/small/yellowed{
+	dir = 8
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/d3docks)
 "lzj" = (
@@ -18979,6 +19213,9 @@
 	dir = 8
 	},
 /obj/structure/lattice,
+/obj/machinery/light/small/yellowed{
+	dir = 1
+	},
 /turf/simulated/open,
 /area/maintenance/cetus/d3docks)
 "lIY" = (
@@ -19540,7 +19777,9 @@
 /obj/structure/railing/overhang/hazard/nanite{
 	dir = 1
 	},
-/turf/simulated/floor/water/digestive_enzymes/nanites,
+/turf/simulated/floor/water/digestive_enzymes/nanites{
+	id = "nanitehall"
+	},
 /area/ai_monitored/aihall)
 "lZM" = (
 /obj/machinery/light/yellowed{
@@ -19575,7 +19814,9 @@
 /obj/structure/railing/grey{
 	dir = 4
 	},
-/turf/simulated/floor/water/pool,
+/turf/simulated/floor/water/pool/station{
+	name = "flooded tiles"
+	},
 /area/maintenance/cetus/shallow/flooded)
 "mbu" = (
 /obj/effect/floor_decal/carpet,
@@ -19665,9 +19906,7 @@
 /area/bridge/sleep/Captain_Quarters)
 "mcw" = (
 /obj/machinery/door/firedoor/glass,
-/obj/machinery/door/airlock/maintenance{
-	req_one_access = list(46,47)
-	},
+/obj/machinery/door/airlock/maintenance,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/shallow/ap)
 "mcz" = (
@@ -19910,6 +20149,9 @@
 /turf/simulated/floor/outdoors/rocks/cetus,
 /area/bridge/sleep/Secretary_Quarters)
 "miq" = (
+/obj/machinery/light/small/yellowed{
+	dir = 4
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/threefs)
 "miM" = (
@@ -20106,9 +20348,7 @@
 	dir = 4
 	},
 /obj/machinery/door/firedoor/glass,
-/obj/machinery/door/airlock/maintenance{
-	req_one_access = list(46,47)
-	},
+/obj/machinery/door/airlock/maintenance,
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
@@ -20123,6 +20363,14 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/shallow/ap)
+"mnt" = (
+/obj/structure/catwalk,
+/obj/structure/lattice,
+/obj/machinery/light/small/yellowed{
+	dir = 4
+	},
+/turf/simulated/open,
+/area/maintenance/cetus/d3bar)
 "mnN" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -20277,7 +20525,7 @@
 /area/maintenance/cetus/shallow/ap)
 "mvd" = (
 /obj/structure/prop/dark_node/dust{
-	node_range = 2
+	node_range = 1
 	},
 /turf/simulated/floor/outdoors/rocks/cetus,
 /area/maintenance/cetus/jrthreeport)
@@ -20644,6 +20892,20 @@
 	icon_state = "solarpanel"
 	},
 /area/solar/aftportsolar)
+"mCD" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/structure/catwalk,
+/obj/machinery/light/small/yellowed,
+/turf/simulated/floor/plating,
+/area/maintenance/cetus/threefs)
 "mDp" = (
 /obj/machinery/light/small/emergency/flicker{
 	dir = 1
@@ -20912,6 +21174,17 @@
 /obj/random/mob/mouse,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/jrthreestar)
+"mOR" = (
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
+/obj/structure/catwalk,
+/obj/structure/cable/green{
+	icon_state = "1-8"
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/cetus/threeap)
 "mOS" = (
 /obj/machinery/light{
 	dir = 4
@@ -21039,6 +21312,12 @@
 	},
 /turf/simulated/floor/carpet/graycarpet,
 /area/maintenance/cetus/shallow/fp)
+"mTm" = (
+/obj/structure/prop/dark_node/dust{
+	node_range = 4
+	},
+/turf/simulated/floor/outdoors/rocks/cetus,
+/area/maintenance/cetus/jrthreeport)
 "mTD" = (
 /obj/structure/lattice,
 /obj/structure/catwalk,
@@ -21279,11 +21558,7 @@
 /area/maintenance/cetus/badsnuggles)
 "mZd" = (
 /obj/effect/floor_decal/spline/plain{
-	dir = 10
-	},
-/obj/item/storage/firstaid/regular{
-	pixel_x = 5;
-	pixel_y = 5
+	dir = 8
 	},
 /turf/simulated/floor/boxing{
 	name = "floor mat"
@@ -21433,6 +21708,9 @@
 /obj/structure/catwalk,
 /obj/structure/cable{
 	icon_state = "5-6"
+	},
+/obj/machinery/light/small/yellowed{
+	dir = 8
 	},
 /turf/simulated/open,
 /area/maintenance/cetus/d3bar)
@@ -21801,7 +22079,9 @@
 /obj/structure/railing/overhang/hazard/nanite{
 	dir = 8
 	},
-/turf/simulated/floor/water/digestive_enzymes/nanites,
+/turf/simulated/floor/water/digestive_enzymes/nanites{
+	id = "nanitehall"
+	},
 /area/ai_monitored/aihall)
 "npC" = (
 /obj/machinery/light{
@@ -22162,7 +22442,10 @@
 /turf/simulated/floor/outdoors/rocks/cetus,
 /area/maintenance/cetus/threeas)
 "nzS" = (
-/turf/simulated/floor/water/pool,
+/obj/effect/landmark/teleplumb_exit,
+/turf/simulated/floor/water/pool/station{
+	name = "flooded tiles"
+	},
 /area/maintenance/cetus/shallow/flooded)
 "nAn" = (
 /obj/structure/bed/chair/office/dark{
@@ -22932,6 +23215,10 @@
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /turf/simulated/floor/tiled/techfloor,
 /area/ai_upload_foyer)
+"nXn" = (
+/obj/structure/cliff/automatic,
+/turf/simulated/floor/outdoors/rocks/cetus,
+/area/maintenance/cetus/jrthreestar)
 "nXu" = (
 /obj/structure/cable{
 	icon_state = "5-10"
@@ -23030,9 +23317,17 @@
 /turf/simulated/floor/carpet/oracarpet,
 /area/bridge/sleep/CE_Quarters)
 "oal" = (
-/obj/structure/catwalk,
-/turf/simulated/floor/plating,
-/area/maintenance/cetus/threeap)
+/obj/structure/dummystairs/hazardledge{
+	dir = 1
+	},
+/obj/structure/railing/overhang/hazard/nanite{
+	dir = 4;
+	icon_state = "active_railing0"
+	},
+/turf/simulated/floor/water/digestive_enzymes/nanites{
+	id = "maintnanites"
+	},
+/area/maintenance/cetus/nanites)
 "oaB" = (
 /obj/machinery/door/firedoor/glass,
 /obj/structure/cable/green{
@@ -23097,6 +23392,9 @@
 	},
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/maintenance,
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/threeap)
 "ocp" = (
@@ -23166,6 +23464,9 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/d3bar)
+"odI" = (
+/turf/simulated/wall,
+/area/maintenance/cetus/nanites)
 "odM" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -23217,6 +23518,13 @@
 /obj/structure/bed/pillowpilefront/teal,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/badsnuggles)
+"oeI" = (
+/obj/effect/floor_decal/rust,
+/obj/machinery/light/small/yellowed{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/cetus/threeap)
 "ofo" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
@@ -23279,9 +23587,7 @@
 /area/bridge/sleep/CMO_Quarters)
 "ohp" = (
 /obj/machinery/door/firedoor/glass,
-/obj/machinery/door/airlock/maintenance{
-	req_one_access = list(46,47)
-	},
+/obj/machinery/door/airlock/maintenance,
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
@@ -23646,7 +23952,9 @@
 /obj/structure/railing/overhang/hazard/nanite{
 	dir = 1
 	},
-/turf/simulated/floor/water/digestive_enzymes/nanites,
+/turf/simulated/floor/water/digestive_enzymes/nanites{
+	id = "nanitehall"
+	},
 /area/ai_monitored/aihall)
 "oua" = (
 /obj/structure/bed/pillowpile/yellow,
@@ -23962,6 +24270,15 @@
 /obj/machinery/photocopier,
 /turf/simulated/floor/tiled/dark,
 /area/maintenance/cetus/shallow/law)
+"oCX" = (
+/obj/structure/dummystairs/hazardledge{
+	dir = 8
+	},
+/obj/structure/railing/overhang/hazard/nanite,
+/turf/simulated/floor/water/digestive_enzymes/nanites{
+	id = "ainaniteone"
+	},
+/area/ai)
 "oDq" = (
 /obj/structure/bed/chair/bay/shuttle{
 	dir = 4
@@ -24075,7 +24392,9 @@
 /obj/machinery/camera/xray/command{
 	c_tag = "AI - Core"
 	},
-/turf/simulated/floor/water/digestive_enzymes/nanites,
+/turf/simulated/floor/water/digestive_enzymes/nanites{
+	id = "ainaniteone"
+	},
 /area/ai)
 "oIp" = (
 /obj/random/trash,
@@ -24554,9 +24873,7 @@
 	dir = 4
 	},
 /obj/machinery/door/firedoor/glass,
-/obj/machinery/door/airlock/maintenance{
-	req_one_access = list(46,47)
-	},
+/obj/machinery/door/airlock/maintenance,
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
@@ -24669,6 +24986,19 @@
 /obj/random/junk,
 /turf/simulated/open,
 /area/maintenance/cetus/threecp)
+"pcU" = (
+/obj/machinery/light/small/emergency{
+	dir = 1
+	},
+/obj/effect/floor_decal/spline/plain{
+	dir = 4
+	},
+/obj/structure/catwalk,
+/obj/structure/cable/green{
+	icon_state = "2-4"
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/cetus/nanites)
 "pdh" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -24804,6 +25134,16 @@
 	},
 /turf/simulated/floor/plating/turfpack/airless,
 /area/solar/aftportsolar)
+"pjz" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/catwalk,
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/cetus/threeap)
 "pjD" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -24913,6 +25253,15 @@
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/cetus/Libraryf2)
+"pnq" = (
+/obj/structure/railing/overhang/hazard/nanite{
+	dir = 4;
+	icon_state = "active_railing0"
+	},
+/turf/simulated/floor/water/digestive_enzymes/nanites{
+	id = "maintnanites"
+	},
+/area/maintenance/cetus/nanites)
 "pox" = (
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/structure/sign/warning/airlock{
@@ -25509,9 +25858,7 @@
 /area/hallway/cetus/stairwellf3)
 "pHH" = (
 /obj/structure/disposalpipe/segment,
-/obj/machinery/door/airlock/maintenance{
-	req_one_access = list(46,47)
-	},
+/obj/machinery/door/airlock/maintenance,
 /obj/machinery/door/firedoor/glass,
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/tiled,
@@ -25689,6 +26036,10 @@
 	pixel_x = 15;
 	name = "bluespace cracker"
 	},
+/obj/item/clothing/mask/smokable/pipe{
+	pixel_y = 37;
+	pixel_x = 10
+	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/cetus/Galleryf2)
 "pMc" = (
@@ -25810,7 +26161,9 @@
 	dir = 1
 	},
 /obj/structure/curtain/medical,
-/turf/simulated/floor/water/pool,
+/turf/simulated/floor/water/pool/station{
+	name = "flooded tiles"
+	},
 /area/maintenance/cetus/shallow/flooded)
 "pQg" = (
 /obj/machinery/atmospherics/binary/pump/high_power{
@@ -25914,9 +26267,8 @@
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 1
 	},
-/obj/machinery/firealarm{
-	dir = 1;
-	pixel_y = -25
+/obj/structure/cable/cyan{
+	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/ai_monitored/aihall)
@@ -26165,7 +26517,7 @@
 /turf/unsimulated/floor/dark,
 /area/maintenance/cetus/jrthreeport)
 "pXO" = (
-/obj/structure/table,
+/obj/effect/decal/cleanable/blood/old,
 /turf/simulated/floor/tiled/old_tile/gray,
 /area/maintenance/cetus/jrthreestar)
 "pXT" = (
@@ -26554,9 +26906,9 @@
 /turf/simulated/wall,
 /area/bridge/sleep/Secretary_Quarters)
 "qiU" = (
-/obj/item/reagent_containers/food/drinks/cans/waterbottle/wataur,
 /obj/structure/table/standard,
-/turf/simulated/floor/plating,
+/obj/item/reagent_containers/food/drinks/cans/waterbottle/wataur,
+/turf/simulated/floor/tiled/old_tile/gray,
 /area/maintenance/cetus/jrthreestar)
 "qjg" = (
 /obj/structure/table/reinforced,
@@ -26730,11 +27082,17 @@
 /turf/simulated/floor/tiled,
 /area/engineering/Atmospherics_Chamber)
 "qpa" = (
-/obj/machinery/light/small/emergency{
+/obj/structure/railing/overhang/hazard/nanite{
+	dir = 4;
+	icon_state = "active_railing0"
+	},
+/obj/machinery/light/small/fluorescent{
 	dir = 4
 	},
-/turf/simulated/floor/water/digestive_enzymes/nanites,
-/area/maintenance/cetus/threeap)
+/turf/simulated/floor/water/digestive_enzymes/nanites{
+	id = "maintnanites"
+	},
+/area/maintenance/cetus/nanites)
 "qpB" = (
 /obj/effect/floor_decal/asteroid,
 /turf/simulated/floor/outdoors/rocks/cetus,
@@ -26762,6 +27120,9 @@
 /obj/effect/floor_decal/corner/blue/bordercorner,
 /obj/effect/floor_decal/corner/blue/bordercorner{
 	dir = 4
+	},
+/obj/structure/cable/cyan{
+	icon_state = "2-4"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/ai_monitored/aihall)
@@ -27037,6 +27398,14 @@
 	},
 /turf/simulated/floor/plating,
 /area/engineering/Solar_Control_AftPort)
+"qAc" = (
+/obj/structure/lattice,
+/obj/structure/catwalk,
+/obj/machinery/light/small/yellowed{
+	dir = 1
+	},
+/turf/simulated/open,
+/area/maintenance/cetus/threecp)
 "qAu" = (
 /obj/machinery/ore_silo,
 /obj/effect/floor_decal/industrial/warning{
@@ -27331,12 +27700,12 @@
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/shallow/fp)
 "qLV" = (
-/obj/machinery/door/firedoor/glass,
-/obj/machinery/door/airlock/maintenance{
-	req_one_access = list(46,47)
+/obj/structure/lattice,
+/obj/machinery/light/small/yellowed{
+	dir = 1
 	},
-/turf/simulated/floor/plating,
-/area/maintenance/cetus/threecp)
+/turf/simulated/open,
+/area/maintenance/cetus/threefp)
 "qMp" = (
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
@@ -27390,6 +27759,16 @@
 	},
 /turf/simulated/floor/carpet/graycarpet,
 /area/maintenance/cetus/shallow/backstage)
+"qNX" = (
+/obj/random/trash_pile,
+/obj/effect/floor_decal/spline/plain{
+	dir = 8
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/cetus/threeap)
 "qOg" = (
 /obj/structure/toilet,
 /obj/machinery/light/small{
@@ -27606,12 +27985,9 @@
 /turf/simulated/open,
 /area/maintenance/cetus/d3docks)
 "qVP" = (
-/obj/machinery/door/firedoor/glass,
-/obj/machinery/door/airlock/maintenance{
-	req_one_access = list(46,47)
-	},
+/obj/machinery/light/small/yellowed,
 /turf/simulated/floor/plating,
-/area/maintenance/cetus/shallow/fp)
+/area/maintenance/cetus/threefp)
 "qVS" = (
 /obj/structure/cable{
 	icon_state = "6-9";
@@ -27652,6 +28028,17 @@
 	},
 /turf/simulated/floor/carpet/geo,
 /area/maintenance/cetus/arcade)
+"qWz" = (
+/obj/effect/floor_decal/industrial/warning{
+	layer = 3;
+	dir = 1
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/machinery/light/small/yellowed,
+/turf/simulated/floor/plating,
+/area/maintenance/cetus/shallow/ap)
 "qWG" = (
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/glass{
@@ -28029,6 +28416,10 @@
 /area/bridge/Captain_Office)
 "rhw" = (
 /obj/structure/table/bench/wooden,
+/obj/item/melee/chainofcommand{
+	pixel_y = 35;
+	pixel_x = -15
+	},
 /turf/simulated/floor/carpet,
 /area/bridge/Captain_Office)
 "rhI" = (
@@ -28649,9 +29040,7 @@
 /area/maintenance/cetus/threecp)
 "ryU" = (
 /obj/machinery/door/firedoor,
-/obj/machinery/door/airlock/maintenance{
-	req_one_access = list(46,47)
-	},
+/obj/machinery/door/airlock/maintenance,
 /obj/effect/floor_decal/rust,
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -29116,7 +29505,9 @@
 	},
 /obj/structure/railing/overhang/hazard/nanite,
 /obj/structure/railing/grey,
-/turf/simulated/floor/water/digestive_enzymes/nanites,
+/turf/simulated/floor/water/digestive_enzymes/nanites{
+	id = "aichambernanite"
+	},
 /area/ai)
 "rRp" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/cyan{
@@ -29226,6 +29617,19 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/firstdeck/vaultcheckpoint)
+"rUb" = (
+/obj/machinery/atmospherics/pipe/simple/visible/cyan{
+	dir = 4
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/structure/catwalk,
+/obj/machinery/light/small/yellowed{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/cetus/threefs)
 "rUw" = (
 /obj/effect/floor_decal/corner/grey/diagonal{
 	dir = 4
@@ -29318,6 +29722,15 @@
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/carpet/graycarpet,
 /area/bridge/Deck3_Corridor)
+"rWm" = (
+/obj/structure/disposalpipe/segment,
+/obj/machinery/door/firedoor/glass,
+/obj/machinery/door/airlock/maintenance,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/cetus/threeap)
 "rWu" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/purple,
 /turf/simulated/floor/tiled/techmaint,
@@ -29614,7 +30027,9 @@
 	layer = 3.3;
 	pixel_y = 30
 	},
-/turf/simulated/floor/water/digestive_enzymes/nanites,
+/turf/simulated/floor/water/digestive_enzymes/nanites{
+	id = "nanitehall"
+	},
 /area/ai_monitored/aihall)
 "seU" = (
 /obj/structure/table/bench/wooden,
@@ -29861,9 +30276,7 @@
 	dir = 4
 	},
 /obj/machinery/door/firedoor/glass,
-/obj/machinery/door/airlock/maintenance{
-	req_one_access = list(46,47)
-	},
+/obj/machinery/door/airlock/maintenance,
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
@@ -30086,7 +30499,9 @@
 /obj/structure/railing/overhang/hazard/nanite{
 	dir = 8
 	},
-/turf/simulated/floor/water/digestive_enzymes/nanites,
+/turf/simulated/floor/water/digestive_enzymes/nanites{
+	id = "aichambernanite"
+	},
 /area/ai)
 "szq" = (
 /obj/machinery/alarm/alarms_hidden{
@@ -30133,9 +30548,7 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/door/firedoor/glass,
-/obj/machinery/door/airlock/maintenance{
-	req_one_access = list(46,47)
-	},
+/obj/machinery/door/airlock/maintenance,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/d3bar)
@@ -30182,7 +30595,9 @@
 /obj/structure/railing/overhang/hazard/nanite{
 	dir = 1
 	},
-/turf/simulated/floor/water/digestive_enzymes/nanites,
+/turf/simulated/floor/water/digestive_enzymes/nanites{
+	id = "aichambernanite"
+	},
 /area/ai)
 "sDo" = (
 /obj/random/obstruction,
@@ -30222,6 +30637,15 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/ai_monitored/aihall)
+"sEF" = (
+/obj/structure/dummystairs/hazardledge{
+	dir = 4
+	},
+/obj/structure/railing/overhang/hazard/nanite,
+/turf/simulated/floor/water/digestive_enzymes/nanites{
+	id = "aichambernanite"
+	},
+/area/ai)
 "sFm" = (
 /obj/structure/window/reinforced,
 /turf/simulated/mineral/cetus,
@@ -30409,9 +30833,7 @@
 /area/maintenance/cetus/shallow/derilect/dorms)
 "sMD" = (
 /obj/machinery/door/firedoor/glass,
-/obj/machinery/door/airlock/maintenance{
-	req_one_access = list(46,47)
-	},
+/obj/machinery/door/airlock/maintenance,
 /obj/structure/cable/green{
 	icon_state = "6-8"
 	},
@@ -30854,9 +31276,7 @@
 /turf/simulated/floor/plating/turfpack/airless,
 /area/solar/aftportsolar)
 "tcc" = (
-/obj/machinery/door/airlock/maintenance{
-	req_one_access = list(46,47)
-	},
+/obj/machinery/door/airlock/maintenance,
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/d3docks)
@@ -30967,7 +31387,9 @@
 /obj/structure/railing/grey{
 	dir = 8
 	},
-/turf/simulated/floor/water/digestive_enzymes/nanites,
+/turf/simulated/floor/water/digestive_enzymes/nanites{
+	id = "aichambernanite"
+	},
 /area/ai)
 "tgu" = (
 /obj/effect/landmark{
@@ -31085,7 +31507,9 @@
 /obj/machinery/light/fluorescent{
 	dir = 8
 	},
-/turf/simulated/floor/water/pool,
+/turf/simulated/floor/water/pool/station{
+	name = "flooded tiles"
+	},
 /area/maintenance/cetus/shallow/flooded)
 "tie" = (
 /obj/machinery/computer/borgupload,
@@ -31351,8 +31775,9 @@
 /turf/simulated/open,
 /area/maintenance/cetus/d3docks)
 "tps" = (
-/obj/effect/landmark/teleplumb_exit,
-/turf/simulated/floor/water/pool,
+/turf/simulated/floor/water/pool/station{
+	name = "flooded tiles"
+	},
 /area/maintenance/cetus/shallow/flooded)
 "tpF" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
@@ -31547,6 +31972,7 @@
 /obj/machinery/alarm{
 	pixel_y = 23
 	},
+/obj/machinery/light/small/yellowed,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/jrthreestar)
 "tsg" = (
@@ -31601,9 +32027,7 @@
 	dir = 8
 	},
 /obj/machinery/door/firedoor/glass,
-/obj/machinery/door/airlock/maintenance{
-	req_one_access = list(46,47)
-	},
+/obj/machinery/door/airlock/maintenance,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/shallow/ap)
 "tui" = (
@@ -31834,6 +32258,9 @@
 /obj/machinery/alarm{
 	pixel_y = 23
 	},
+/obj/machinery/light/small/yellowed{
+	dir = 8
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/threefp)
 "tyU" = (
@@ -31904,7 +32331,9 @@
 /obj/machinery/light/fluorescent{
 	dir = 1
 	},
-/turf/simulated/floor/water/pool,
+/turf/simulated/floor/water/pool/station{
+	name = "flooded tiles"
+	},
 /area/maintenance/cetus/shallow/flooded)
 "tBD" = (
 /obj/machinery/disposal/wall/cleaner{
@@ -32340,6 +32769,17 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/d3bar)
+"tQG" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
+/obj/structure/catwalk,
+/obj/machinery/light/small/yellowed{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/cetus/threeap)
 "tRt" = (
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 4
@@ -32410,9 +32850,7 @@
 "tSu" = (
 /obj/effect/floor_decal/industrial/warning,
 /obj/machinery/door/firedoor/glass,
-/obj/machinery/door/airlock/maintenance{
-	req_one_access = list(46,47)
-	},
+/obj/machinery/door/airlock/maintenance,
 /turf/simulated/floor/carpet/graycarpet,
 /area/maintenance/cetus/shallow/fp)
 "tSz" = (
@@ -33045,7 +33483,9 @@
 	dir = 4
 	},
 /obj/structure/railing/overhang/hazard/nanite,
-/turf/simulated/floor/water/digestive_enzymes/nanites,
+/turf/simulated/floor/water/digestive_enzymes/nanites{
+	id = "ainanitetwo"
+	},
 /area/ai)
 "upv" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/red{
@@ -33512,6 +33952,17 @@
 	},
 /turf/simulated/floor/bluegrid,
 /area/tcomm/chamber)
+"uAa" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/catwalk,
+/obj/random/mob/mouse,
+/obj/machinery/light/small/yellowed{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/cetus/d3docks)
 "uAg" = (
 /turf/simulated/wall/r_wall{
 	can_open = 1
@@ -33753,6 +34204,7 @@
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
 /obj/effect/floor_decal/industrial/warning/full,
 /obj/machinery/light/small/emergency,
+/obj/machinery/light/small/emergency,
 /turf/simulated/floor/plating,
 /area/engineering/Solar_Control_AftPort)
 "uId" = (
@@ -33768,9 +34220,7 @@
 	dir = 4
 	},
 /obj/machinery/door/firedoor/glass,
-/obj/machinery/door/airlock/maintenance{
-	req_one_access = list(46,47)
-	},
+/obj/machinery/door/airlock/maintenance,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/shallow/ap)
 "uIz" = (
@@ -33878,6 +34328,9 @@
 	dir = 4
 	},
 /obj/random/trash,
+/obj/machinery/light/small/yellowed{
+	dir = 1
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/d3docks)
 "uLg" = (
@@ -34046,6 +34499,15 @@
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/shallow/backstage)
+"uQQ" = (
+/obj/machinery/alarm{
+	pixel_y = 23
+	},
+/obj/machinery/light/small/yellowed{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/cetus/threeap)
 "uQR" = (
 /turf/simulated/wall,
 /area/maintenance/cetus/shallow/derilect/kitchen)
@@ -34378,7 +34840,9 @@
 /turf/simulated/floor/wood,
 /area/crew_quarters/cetus/Libraryf2)
 "vaF" = (
-/turf/simulated/floor/water/digestive_enzymes/nanites,
+/turf/simulated/floor/water/digestive_enzymes/nanites{
+	id = "nanitehall"
+	},
 /area/ai_monitored/aihall)
 "vbb" = (
 /obj/machinery/meter,
@@ -34514,6 +34978,10 @@
 	pixel_x = 35
 	},
 /obj/structure/disposalpipe/trunk,
+/obj/item/bone/skull/unathi{
+	pixel_x = -12;
+	pixel_y = 32
+	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/cetus/Galleryf2)
 "vee" = (
@@ -34561,6 +35029,12 @@
 	},
 /turf/simulated/floor/carpet/graycarpet,
 /area/bridge/Deck3_Corridor)
+"vfw" = (
+/obj/machinery/light/small/yellowed{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/cetus/d3docks)
 "vfy" = (
 /obj/machinery/ai_status_display{
 	pixel_y = 32
@@ -34574,7 +35048,9 @@
 "vgl" = (
 /obj/structure/railing/overhang/hazard/nanite,
 /obj/structure/railing/grey,
-/turf/simulated/floor/water/digestive_enzymes/nanites,
+/turf/simulated/floor/water/digestive_enzymes/nanites{
+	id = "aichambernanite"
+	},
 /area/ai)
 "vgm" = (
 /obj/structure/disposalpipe/segment{
@@ -35149,7 +35625,8 @@
 "vDY" = (
 /obj/structure/fireplace{
 	name = "decorative fireplace";
-	desc = "A fireplace with an integrated connection to the station's scrubber network."
+	desc = "A fireplace with an integrated connection to the station's scrubber network.";
+	density = 0
 	},
 /obj/structure/table/bench/wooden,
 /obj/item/storage/box/donut,
@@ -35461,10 +35938,7 @@
 	},
 /obj/structure/railing,
 /obj/machinery/light/small{
-	dir = 1;
-	nightshift_allowed = 0;
-	pixel_y = 24;
-	pixel_x = 10
+	dir = 1
 	},
 /turf/simulated/open,
 /area/engineering/Atmospherics_Control_Room)
@@ -35939,6 +36413,17 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/crew_quarters/cetus/escapepodstar)
+"vZG" = (
+/obj/structure/railing/overhang/hazard/nanite{
+	dir = 8
+	},
+/obj/machinery/light/small/fluorescent{
+	dir = 8
+	},
+/turf/simulated/floor/water/digestive_enzymes/nanites{
+	id = "maintnanites"
+	},
+/area/maintenance/cetus/nanites)
 "waf" = (
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/d3bar)
@@ -36306,6 +36791,9 @@
 	icon_state = "4-10"
 	},
 /obj/structure/catwalk,
+/obj/machinery/light/small/yellowed{
+	dir = 1
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/shallow/starboard)
 "wls" = (
@@ -36317,6 +36805,9 @@
 /obj/effect/floor_decal/industrial/warning,
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
+	},
+/obj/machinery/light/small/yellowed{
+	dir = 8
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/threefp)
@@ -36406,19 +36897,21 @@
 /area/engineering/cetus/jointsubstation)
 "woC" = (
 /obj/machinery/light/fluorescent,
-/turf/simulated/floor/water/pool,
+/turf/simulated/floor/water/pool/station{
+	name = "flooded tiles"
+	},
 /area/maintenance/cetus/shallow/flooded)
 "woH" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/old_tile/gray,
 /area/maintenance/cetus/shallow/derilect/dock)
 "woM" = (
-/obj/item/clothing/mask/smokable/pipe{
-	pixel_y = 5;
-	pixel_x = 10
+/obj/effect/floor_decal/rust,
+/obj/machinery/light/small/yellowed{
+	dir = 4
 	},
-/turf/simulated/wall,
-/area/crew_quarters/cetus/Galleryf2)
+/turf/simulated/floor/plating,
+/area/maintenance/cetus/threeap)
 "woP" = (
 /obj/machinery/ai_status_display{
 	pixel_y = -32
@@ -36577,6 +37070,10 @@
 	dir = 1;
 	name = "north bump";
 	pixel_y = 24
+	},
+/obj/machinery/light_switch{
+	pixel_x = 12;
+	pixel_y = 25
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/cetus/Galleryf2)
@@ -36828,7 +37325,6 @@
 /obj/machinery/power/apc{
 	dir = 1;
 	name = "north bump";
-	operating = 0;
 	pixel_y = 24
 	},
 /obj/structure/cable{
@@ -36877,9 +37373,7 @@
 /area/crew_quarters/cetus/atrium/primary)
 "wBc" = (
 /obj/machinery/door/firedoor/glass,
-/obj/machinery/door/airlock/maintenance{
-	req_one_access = list(46,47)
-	},
+/obj/machinery/door/airlock/maintenance,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/threeas)
 "wBl" = (
@@ -36969,7 +37463,6 @@
 /obj/machinery/power/apc{
 	dir = 1;
 	name = "north bump";
-	operating = 0;
 	pixel_y = 24
 	},
 /obj/structure/cable{
@@ -37012,6 +37505,25 @@
 	},
 /turf/simulated/floor/plating,
 /area/engineering/Atmospherics_Chamber)
+"wDj" = (
+/obj/effect/floor_decal/spline/plain/corner{
+	dir = 1
+	},
+/obj/structure/catwalk,
+/obj/machinery/power/apc{
+	dir = 4;
+	name = "east bump";
+	pixel_x = 24;
+	pixel_y = -1
+	},
+/obj/structure/cable/green,
+/obj/machinery/light_switch{
+	pixel_y = -12;
+	pixel_x = 22;
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/cetus/nanites)
 "wDo" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -37050,9 +37562,7 @@
 /area/tcomm/chamber)
 "wDZ" = (
 /obj/machinery/door/firedoor/glass,
-/obj/machinery/door/airlock/maintenance{
-	req_one_access = list(46,47)
-	},
+/obj/machinery/door/airlock/maintenance,
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
@@ -37269,7 +37779,9 @@
 /area/maintenance/cetus/shallow/derilect/dock)
 "wNl" = (
 /obj/structure/railing/overhang/hazard/nanite,
-/turf/simulated/floor/water/digestive_enzymes/nanites,
+/turf/simulated/floor/water/digestive_enzymes/nanites{
+	id = "aichambernanite"
+	},
 /area/ai)
 "wNn" = (
 /obj/machinery/light{
@@ -37288,6 +37800,7 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
 	},
+/obj/machinery/light/small/yellowed,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/threefp)
 "wOi" = (
@@ -37543,7 +38056,9 @@
 	dir = 8
 	},
 /obj/structure/railing/overhang/hazard/nanite,
-/turf/simulated/floor/water/digestive_enzymes/nanites,
+/turf/simulated/floor/water/digestive_enzymes/nanites{
+	id = "aichambernanite"
+	},
 /area/ai)
 "wXe" = (
 /obj/effect/floor_decal/spline/fancy/wood{
@@ -37947,6 +38462,7 @@
 	dir = 5
 	},
 /obj/structure/catwalk,
+/obj/machinery/light/small/yellowed,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/threefs)
 "xlj" = (
@@ -37995,10 +38511,12 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/ai_server_room)
 "xnR" = (
-/obj/machinery/light/yellowed{
-	dir = 8
+/obj/effect/floor_decal/spline/plain{
+	dir = 4
 	},
-/turf/simulated/floor/tiled/old_tile/gray,
+/turf/simulated/floor/boxing{
+	name = "floor mat"
+	},
 /area/maintenance/cetus/jrthreestar)
 "xnX" = (
 /obj/structure/dummystairs/hazardledge{
@@ -38006,7 +38524,9 @@
 	},
 /obj/structure/railing/overhang/hazard/nanite,
 /obj/structure/railing/grey,
-/turf/simulated/floor/water/digestive_enzymes/nanites,
+/turf/simulated/floor/water/digestive_enzymes/nanites{
+	id = "aichambernanite"
+	},
 /area/ai)
 "xnZ" = (
 /obj/structure/reagent_dispensers/fueltank,
@@ -38358,6 +38878,12 @@
 /obj/random/obstruction,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/d3docks)
+"xzF" = (
+/obj/machinery/light/small/yellowed{
+	dir = 4
+	},
+/turf/simulated/floor/carpet/geo,
+/area/maintenance/cetus/arcade)
 "xzG" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -38487,7 +39013,9 @@
 	dir = 8
 	},
 /obj/structure/railing/grey,
-/turf/simulated/floor/water/pool,
+/turf/simulated/floor/water/pool/station{
+	name = "flooded tiles"
+	},
 /area/maintenance/cetus/shallow/flooded)
 "xDU" = (
 /obj/effect/landmark{
@@ -38770,9 +39298,7 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/door/firedoor/glass,
-/obj/machinery/door/airlock/maintenance{
-	req_one_access = list(46,47)
-	},
+/obj/machinery/door/airlock/maintenance,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/shallow/ap)
 "xMY" = (
@@ -38780,9 +39306,7 @@
 	dir = 4
 	},
 /obj/machinery/door/firedoor/glass,
-/obj/machinery/door/airlock/maintenance{
-	req_one_access = list(46,47)
-	},
+/obj/machinery/door/airlock/maintenance,
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
@@ -38814,6 +39338,14 @@
 /obj/structure/bed/roller,
 /turf/simulated/shuttle/floor/white,
 /area/space)
+"xNV" = (
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/turf/simulated/wall{
+	can_open = 1
+	},
+/area/maintenance/cetus/nanites)
 "xNX" = (
 /obj/effect/wingrille_spawn/reinforced,
 /obj/machinery/door/firedoor/glass,
@@ -38904,6 +39436,19 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /turf/simulated/floor/tiled,
 /area/rnd/cetus/entry)
+"xQp" = (
+/obj/machinery/atmospherics/pipe/simple/visible/cyan,
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/catwalk,
+/obj/machinery/light/small/yellowed{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/cetus/threefs)
 "xQz" = (
 /obj/structure/railing,
 /turf/simulated/open,
@@ -39040,7 +39585,9 @@
 /turf/simulated/floor/plating,
 /area/solar/cetus/joint)
 "xUx" = (
-/obj/structure/prop/dark_node/dust,
+/obj/structure/prop/dark_node/dust{
+	node_range = 3
+	},
 /turf/unsimulated/floor/dark,
 /area/maintenance/cetus/jrthreeport)
 "xUO" = (
@@ -39058,6 +39605,10 @@
 	dir = 2;
 	icon_state = "pipe-c"
 	},
+/obj/structure/cable/green{
+	icon_state = "2-8"
+	},
+/obj/structure/catwalk,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/threeap)
 "xWM" = (
@@ -39425,7 +39976,9 @@
 /obj/structure/railing/grey{
 	dir = 1
 	},
-/turf/simulated/floor/water/digestive_enzymes/nanites,
+/turf/simulated/floor/water/digestive_enzymes/nanites{
+	id = "aichambernanite"
+	},
 /area/ai)
 "yhQ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -52973,7 +53526,7 @@ kwh
 kwh
 jlZ
 jlZ
-idn
+mTm
 kwh
 jlZ
 jlZ
@@ -55299,7 +55852,7 @@ jlZ
 jlZ
 jlZ
 kwh
-hVG
+acY
 kwh
 izH
 dSN
@@ -55808,10 +56361,10 @@ aib
 aib
 aib
 aib
-jlZ
 kwh
 kwh
-jlZ
+kwh
+kwh
 jlZ
 dSN
 kwh
@@ -56069,8 +56622,8 @@ gnS
 fcz
 oPC
 kwh
-jlZ
-jlZ
+kwh
+kwh
 dSN
 qcN
 qcN
@@ -56328,7 +56881,7 @@ rbU
 djw
 oPC
 kwh
-jlZ
+kwh
 dSN
 qcN
 qcN
@@ -56586,7 +57139,7 @@ rbU
 gnS
 lSK
 kwh
-jlZ
+kwh
 jlZ
 dSN
 qcN
@@ -56842,8 +57395,8 @@ gnS
 gnS
 rbU
 rbU
-djw
-oPC
+lSK
+kwh
 kwh
 jlZ
 jlZ
@@ -57100,8 +57653,8 @@ rbU
 rbU
 rbU
 rbU
-rbU
-lSK
+nXn
+kwh
 kwh
 jlZ
 jlZ
@@ -57376,7 +57929,7 @@ jyF
 jyF
 nad
 jyF
-jyF
+ksc
 jyF
 itm
 pNM
@@ -58911,12 +59464,12 @@ rbU
 tHf
 rbU
 duw
-daY
-ieU
-mZd
-xnR
-rIV
+rbU
+rak
 bpy
+mZd
+pxw
+qiU
 asv
 fAT
 jdd
@@ -59171,9 +59724,9 @@ qpB
 rbU
 rbU
 rak
-eRy
-pxw
-rIV
+dgI
+dgI
+bgw
 rIV
 asv
 lLJ
@@ -59430,8 +59983,8 @@ rbU
 rbU
 rak
 dgI
+dgI
 bgw
-rIV
 wjs
 fTR
 vMp
@@ -59687,10 +60240,10 @@ rbU
 rbU
 rbU
 rak
+dgI
 oZU
 aFh
-wjs
-pXO
+rIV
 asv
 gnS
 uez
@@ -59945,10 +60498,10 @@ rbU
 aMH
 kqd
 juG
+xnR
 vLV
 rIV
-rIV
-qiU
+wjs
 asv
 aib
 uee
@@ -60201,7 +60754,7 @@ aib
 asv
 rbU
 asv
-rIV
+pXO
 rtx
 rIV
 rIV
@@ -60791,7 +61344,7 @@ sQB
 uHL
 bFP
 fVG
-drp
+dyn
 sTO
 qrH
 bWw
@@ -61323,12 +61876,12 @@ awd
 cjF
 bnV
 gny
-uow
-uow
-uow
-uow
-tzf
-uow
+odI
+odI
+odI
+odI
+odI
+odI
 mhO
 qeV
 qvG
@@ -61559,7 +62112,7 @@ mco
 mco
 mco
 pBT
-uHL
+eRy
 uHL
 uHL
 uHL
@@ -61581,12 +62134,12 @@ vtH
 cjF
 iDi
 qCR
-uow
-jGG
-oal
-hYW
+odI
+gjw
+gyh
+vZG
 jaX
-uow
+odI
 tif
 iJU
 uow
@@ -61596,13 +62149,13 @@ pek
 abs
 nqN
 kBR
-nzS
-nzS
-nzS
-thY
-nzS
 tps
-nzS
+tps
+tps
+thY
+tps
+tps
+tps
 noW
 tgZ
 tgZ
@@ -61828,7 +62381,7 @@ heC
 gbY
 uHL
 sPg
-woM
+cjF
 pLU
 kkX
 dvB
@@ -61837,14 +62390,14 @@ sba
 sba
 uLg
 cjF
-qeV
-uow
-uow
-gyh
-gyh
-gyh
+pjz
+odI
+odI
+hbL
 jnw
-uow
+jnw
+foA
+odI
 suk
 qeV
 uow
@@ -61854,13 +62407,13 @@ lAp
 vUN
 nqN
 kBR
-nzS
+tps
 gKy
 gKy
 gKy
-nzS
-nzS
-nzS
+tps
+tps
+tps
 noW
 tgZ
 tgZ
@@ -62086,7 +62639,7 @@ qwE
 qWO
 uHL
 sPg
-dmd
+cjF
 vdW
 nWE
 wIX
@@ -62096,13 +62649,13 @@ pvF
 pFp
 cjF
 byQ
-uow
-jnw
-jnw
+odI
+jGG
+oal
+pnq
 qpa
-jnw
-jnw
-uow
+hUN
+odI
 mhO
 qeV
 uow
@@ -62112,7 +62665,7 @@ ivQ
 olO
 nqN
 kBR
-nzS
+tps
 jcf
 oFQ
 gKy
@@ -62353,14 +62906,14 @@ cjF
 hPK
 cjF
 cjF
-qeV
-uow
-jnw
-jnw
-uow
-uow
-uow
-uow
+pjz
+odI
+pcU
+wDj
+odI
+odI
+odI
+odI
 uow
 nbB
 hth
@@ -62368,7 +62921,7 @@ drz
 aCT
 uow
 uow
-mFy
+nqN
 kBR
 nzS
 jcf
@@ -62611,11 +63164,11 @@ ryI
 hrV
 uow
 pUM
-qeV
-uow
-tzf
-uow
-uow
+pjz
+odI
+xNV
+odI
+odI
 jUo
 kQZ
 sSY
@@ -62861,7 +63414,7 @@ lWJ
 tZP
 jVa
 mkH
-hrV
+qAc
 oPg
 mkH
 bTE
@@ -62871,7 +63424,7 @@ uow
 uow
 oci
 uow
-mhO
+qNX
 uow
 vwJ
 vwJ
@@ -62886,7 +63439,7 @@ uow
 cEF
 nqN
 uow
-cQY
+daY
 lCI
 lCI
 ptW
@@ -63126,10 +63679,10 @@ mTD
 jMe
 hrV
 uow
-xFz
+uQQ
 xWw
-pLD
-mdQ
+rWm
+mOR
 uow
 vwJ
 uow
@@ -63151,8 +63704,8 @@ bOQ
 gKy
 gKy
 gKy
-nzS
-nzS
+tps
+tps
 noW
 tgZ
 tgZ
@@ -63365,7 +63918,7 @@ iHb
 sda
 dIu
 chR
-auz
+qLV
 qWO
 qvB
 fnG
@@ -63394,7 +63947,7 @@ uBU
 mFy
 uow
 vwJ
-ksc
+hzH
 vwJ
 dnY
 vwJ
@@ -63409,7 +63962,7 @@ kBR
 amd
 amd
 gKy
-nzS
+tps
 woC
 noW
 tgZ
@@ -63667,8 +64220,8 @@ kBR
 amd
 amd
 gKy
-nzS
-nzS
+tps
+tps
 noW
 tgZ
 tgZ
@@ -64152,7 +64705,7 @@ tZP
 xUa
 voc
 xUa
-xUa
+qVP
 tZP
 hrV
 jMe
@@ -64430,11 +64983,11 @@ gMJ
 hEq
 mhO
 uow
-cQY
+daY
 mhO
 uow
 wrf
-cQY
+woM
 nqN
 mFy
 kBR
@@ -64696,8 +65249,8 @@ kBR
 kBR
 kBR
 kBR
-nzS
-nzS
+tps
+tps
 knX
 gKy
 gKy
@@ -64944,15 +65497,15 @@ qCR
 qeV
 uow
 lBJ
-cQY
+aIk
 uow
 wrf
 cQY
-cQY
+oeI
 cQY
 kBR
-nzS
-nzS
+tps
+tps
 mbr
 mbr
 mbr
@@ -65198,7 +65751,7 @@ kwp
 uow
 edV
 pLD
-drz
+ieU
 gmY
 uow
 mZq
@@ -65218,7 +65771,7 @@ shv
 raf
 kBR
 tBs
-nzS
+tps
 gKy
 noW
 tgZ
@@ -65454,7 +66007,7 @@ hrV
 aMA
 uow
 uow
-iDi
+afP
 uow
 uow
 uow
@@ -65475,8 +66028,8 @@ kBR
 kBR
 fmU
 kBR
-nzS
-nzS
+tps
+tps
 gKy
 noW
 tgZ
@@ -65733,8 +66286,8 @@ cqZ
 kBR
 oFQ
 kBR
-nzS
-nzS
+tps
+tps
 gKy
 noW
 tgZ
@@ -65991,8 +66544,8 @@ cqZ
 kBR
 kBR
 kBR
-nzS
-nzS
+tps
+tps
 noW
 noW
 tgZ
@@ -66236,7 +66789,7 @@ ooY
 aVY
 hOG
 aVY
-gYY
+tQG
 drz
 drz
 drz
@@ -66248,9 +66801,9 @@ gKy
 gcV
 mbr
 mbr
-nzS
-nzS
-nzS
+tps
+tps
+tps
 noW
 tgZ
 tgZ
@@ -66506,9 +67059,9 @@ gKy
 gKy
 gKy
 gKy
-nzS
-nzS
-nzS
+tps
+tps
+tps
 noW
 tgZ
 tgZ
@@ -66764,8 +67317,8 @@ kBR
 kBR
 kBR
 gKy
-nzS
-nzS
+tps
+tps
 woC
 noW
 tgZ
@@ -67024,7 +67577,7 @@ gKy
 gKy
 gKy
 gKy
-nzS
+tps
 noW
 tgZ
 tgZ
@@ -67282,7 +67835,7 @@ gKy
 kBR
 kzZ
 gKy
-nzS
+tps
 noW
 tgZ
 tgZ
@@ -67532,15 +68085,15 @@ cqt
 cqt
 kBR
 nAF
-nzS
-nzS
-nzS
-nzS
-nzS
+tps
+tps
+tps
+tps
+tps
 kBR
 gKy
 gKy
-nzS
+tps
 noW
 tgZ
 tgZ
@@ -67790,15 +68343,15 @@ cqt
 beU
 kBR
 nAF
-nzS
-nzS
+tps
+tps
 kBR
 kBR
 kBR
 kBR
 kBR
-nzS
-nzS
+tps
+tps
 noW
 tgZ
 tgZ
@@ -68048,15 +68601,15 @@ tsg
 gMJ
 kBR
 nAF
-nzS
-nzS
+tps
+tps
 kBR
-nzS
+tps
 ipN
 aIu
 kBR
-nzS
-nzS
+tps
+tps
 noW
 tgZ
 tgZ
@@ -68306,15 +68859,15 @@ tsg
 tsg
 kBR
 nAF
-nzS
-nzS
-nzS
-nzS
+tps
+tps
+tps
+tps
 kBR
 kBR
 kBR
 kBR
-nzS
+tps
 noW
 tgZ
 tgZ
@@ -68564,15 +69117,15 @@ pYj
 kfq
 kBR
 nAF
-nzS
-nzS
+tps
+tps
 kBR
-nzS
+tps
 kBR
-nzS
+tps
 dUN
-nzS
-nzS
+tps
+tps
 noW
 tgZ
 tgZ
@@ -68825,12 +69378,12 @@ aVY
 aVY
 irt
 kBR
-nzS
-nzS
-nzS
+tps
+tps
+tps
 pPZ
 kBR
-nzS
+tps
 noW
 tgZ
 tgZ
@@ -69056,9 +69609,9 @@ oiU
 svB
 fNC
 iHb
-qLV
+upy
 rzI
-qLV
+upy
 rzI
 mjH
 yiP
@@ -69313,7 +69866,7 @@ dIu
 iFS
 bMh
 mTj
-qVP
+nBA
 bMz
 bMz
 lkd
@@ -69342,7 +69895,7 @@ cHr
 cHr
 ryU
 mHQ
-vzc
+dmd
 oFQ
 oFQ
 oFQ
@@ -71141,7 +71694,7 @@ vDS
 vDS
 kCY
 pBW
-qGU
+qWz
 nJN
 jHZ
 cnW
@@ -72430,7 +72983,7 @@ aVY
 jzT
 fOg
 atU
-jNW
+aFf
 egD
 cvB
 udN
@@ -76040,7 +76593,7 @@ ooY
 ooY
 urO
 jiZ
-tsR
+mnt
 dOs
 tsR
 mYw
@@ -76498,7 +77051,7 @@ nUs
 roW
 uud
 eqa
-dyn
+bhd
 vDY
 yep
 oTP
@@ -77081,7 +77634,7 @@ cim
 jbe
 eIU
 vSJ
-djn
+akN
 kOk
 djn
 kOk
@@ -77092,7 +77645,7 @@ kOk
 djn
 nDg
 kxY
-jHc
+uAa
 bUf
 bUf
 mwF
@@ -77611,7 +78164,7 @@ kxY
 uwg
 rAY
 eJh
-aiH
+vfw
 aiH
 aiH
 oqv
@@ -77877,7 +78430,7 @@ rAY
 sqs
 sqs
 elE
-oVq
+aNk
 gJh
 rAY
 sqs
@@ -78393,7 +78946,7 @@ rAY
 wkL
 aTf
 xzh
-xzh
+fKl
 aiH
 rAY
 sqs
@@ -78906,7 +79459,7 @@ vvl
 fOk
 lyV
 dTO
-xuB
+khz
 xuB
 xuB
 obz
@@ -81492,7 +82045,7 @@ pQk
 sSw
 aiH
 rAY
-sqs
+bmb
 iba
 qUt
 kQc
@@ -81762,7 +82315,7 @@ rVV
 rVV
 rVV
 rVV
-rVV
+xzF
 rVV
 rVV
 rVV
@@ -82518,7 +83071,7 @@ mco
 mco
 mco
 kxY
-rXb
+aAT
 jDs
 xyy
 rAD
@@ -86077,7 +86630,7 @@ atV
 iHT
 asC
 mhT
-uoI
+sEF
 ihE
 cRt
 iHT
@@ -86092,7 +86645,7 @@ vxT
 mce
 qqj
 pRZ
-vxT
+hYW
 vxT
 rRw
 rRw
@@ -86351,7 +86904,7 @@ lgS
 diR
 lgS
 lgS
-hbL
+lgS
 rRw
 rRw
 nIu
@@ -86851,7 +87404,7 @@ akV
 imH
 bRe
 bRe
-jtM
+oCX
 bRe
 bRe
 qlb
@@ -89689,7 +90242,7 @@ idF
 ifh
 jSG
 bRe
-jtM
+dah
 bRe
 jSG
 rRw
@@ -95627,7 +96180,7 @@ bMO
 pFb
 mLA
 cNE
-qtb
+mCD
 rZz
 rHE
 rHE
@@ -96667,7 +97220,7 @@ rHE
 rHE
 rHE
 rZz
-wbJ
+rUb
 hcj
 rZz
 eoh
@@ -97168,7 +97721,7 @@ miq
 rSO
 eUt
 uCg
-wuF
+xQp
 huY
 wuF
 wuF

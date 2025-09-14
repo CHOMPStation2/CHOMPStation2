@@ -133,7 +133,7 @@
 
 /obj/turbolift_map_holder/cetus/atrium
 	name = "Cetus turbolift map placeholder - Atrium"
-	dir = SOUTH
+	dir = NORTH
 	wall_type = null
 
 	areas_to_use = list(
@@ -142,7 +142,7 @@
 		/area/turbolift/atrium_deck_three
 	)
 
-/obj/turbolift_map_holder/cetus/atrium
+/obj/turbolift_map_holder/cetus/utility
 	name = "Cetus turbolift map placeholder - Utility Atrium"
 	dir = WEST
 

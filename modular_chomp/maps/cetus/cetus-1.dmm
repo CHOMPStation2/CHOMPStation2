@@ -243,7 +243,7 @@
 	color = "White";
 	dir = 4
 	},
-/turf/simulated/floor/water/deep/pool,
+/turf/simulated/floor/water/deep/pool/station,
 /area/crew_quarters/cetus/meteor/pool)
 "afH" = (
 /obj/machinery/atmospherics/portables_connector{
@@ -449,7 +449,7 @@
 /obj/structure/railing/grey{
 	dir = 8
 	},
-/turf/simulated/floor/water/deep/indoors,
+/turf/simulated/floor/water/deep/indoors/station,
 /area/maintenance/cetus/meteor/central)
 "alg" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/black,
@@ -573,6 +573,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
 	},
+/obj/machinery/light/small/yellowed,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/meteor/jraft)
 "anR" = (
@@ -662,7 +663,6 @@
 /obj/machinery/power/apc{
 	dir = 1;
 	name = "north bump";
-	operating = 0;
 	pixel_y = 24
 	},
 /obj/machinery/light_switch{
@@ -900,7 +900,8 @@
 /area/engineering/cetus/meteor/engineroom)
 "aAA" = (
 /obj/structure/cliff/automatic{
-	dir = 5
+	dir = 5;
+	density = 0
 	},
 /obj/machinery/light/fluorescent{
 	dir = 8
@@ -989,7 +990,7 @@
 /area/hangar/cetus/one)
 "aDJ" = (
 /obj/effect/floor_decal/spline/fancy/wood/corner,
-/turf/simulated/floor/water/pool/turfpack/station,
+/turf/simulated/floor/water/pool/station,
 /area/crew_quarters/cetus/meteor/pool)
 "aDM" = (
 /obj/machinery/door/firedoor/glass,
@@ -1844,13 +1845,10 @@
 /area/crew_quarters/cetus/meteor/pool)
 "aYp" = (
 /obj/structure/cliff/automatic{
-	dir = 9
+	dir = 9;
+	density = 0
 	},
-/turf/simulated/floor/water/indoors{
-	movement_cost = 8;
-	name = "swampy water";
-	color = "#84c29b"
-	},
+/turf/simulated/floor/water/indoors/station,
 /area/maintenance/cetus/meteor/ragecage)
 "aYq" = (
 /obj/machinery/door/firedoor/glass,
@@ -2416,13 +2414,10 @@
 /area/maintenance/cetus/engine)
 "bra" = (
 /obj/structure/cliff/automatic/corner{
-	dir = 9
+	dir = 9;
+	density = 0
 	},
-/turf/simulated/floor/water/indoors{
-	movement_cost = 8;
-	name = "swampy water";
-	color = "#84c29b"
-	},
+/turf/simulated/floor/water/indoors/station,
 /area/maintenance/cetus/meteor/ragecage)
 "bre" = (
 /obj/machinery/vending/wardrobe/genedrobe,
@@ -3068,7 +3063,6 @@
 /obj/machinery/power/apc{
 	dir = 8;
 	name = "west bump";
-	operating = 0;
 	pixel_x = -24;
 	pixel_y = -2
 	},
@@ -3301,6 +3295,12 @@
 /obj/machinery/portable_atmospherics/powered/pump/filled,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/meteor/jraft)
+"bQc" = (
+/obj/machinery/light/small/yellowed{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/cetus/meteor/jrfore)
 "bQd" = (
 /obj/structure/flora/ausbushes/leafybush,
 /obj/structure/flora/ausbushes/fullgrass,
@@ -3601,11 +3601,7 @@
 /area/crew_quarters/sleep/cetus/meteor/dorm3)
 "bWR" = (
 /obj/structure/flora/underwater/grass1,
-/turf/simulated/floor/water/indoors{
-	movement_cost = 8;
-	name = "swampy water";
-	color = "#84c29b"
-	},
+/turf/simulated/floor/water/indoors/station,
 /area/maintenance/cetus/meteor/pond)
 "bXj" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
@@ -4112,7 +4108,7 @@
 	color = "White";
 	dir = 8
 	},
-/turf/simulated/floor/water/pool/turfpack/station,
+/turf/simulated/floor/water/pool/station,
 /area/crew_quarters/cetus/meteor/pool)
 "clf" = (
 /obj/random/trash,
@@ -4448,6 +4444,13 @@
 /obj/random/trash,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/aftmed)
+"cte" = (
+/obj/random/mob/mouse,
+/obj/machinery/light/small/yellowed{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/cetus/meteor/aftstar)
 "ctf" = (
 /obj/structure/cable/green{
 	icon_state = "6-9"
@@ -4871,6 +4874,24 @@
 /obj/structure/closet/secure_closet/personal/cabinet,
 /turf/simulated/floor/carpet/turcarpet,
 /area/crew_quarters/sleep/cetus/meteor/dorm3)
+"cIc" = (
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/disposalpipe/segment,
+/obj/structure/cable{
+	icon_state = "9-10"
+	},
+/obj/structure/catwalk{
+	pixel_x = -1
+	},
+/obj/machinery/light/small/yellowed{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/cetus/meteor/star)
 "cIk" = (
 /obj/structure/table/rack{
 	dir = 8;
@@ -4998,7 +5019,7 @@
 /obj/effect/floor_decal/spline/fancy/wood/corner{
 	color = "White"
 	},
-/turf/simulated/floor/water/pool/turfpack/station,
+/turf/simulated/floor/water/pool/station,
 /area/crew_quarters/cetus/meteor/pool)
 "cMA" = (
 /obj/machinery/floodlight{
@@ -5373,7 +5394,7 @@
 /area/security/cetus/meteor/hallway)
 "cVN" = (
 /obj/effect/floor_decal/spline/fancy,
-/turf/simulated/floor/water/pool/turfpack/station,
+/turf/simulated/floor/water/pool/station,
 /area/crew_quarters/cetus/meteor/pool)
 "cVT" = (
 /obj/item/storage/toolbox/mechanical,
@@ -5581,11 +5602,7 @@
 /obj/machinery/atmospherics/pipe/simple/visible{
 	dir = 4
 	},
-/turf/simulated/floor/water/indoors{
-	movement_cost = 8;
-	name = "swampy water";
-	color = "#84c29b"
-	},
+/turf/simulated/floor/water/indoors/station,
 /area/maintenance/cetus/meteor/pond)
 "daj" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
@@ -5816,11 +5833,7 @@
 /obj/structure/railing/grey{
 	dir = 4
 	},
-/turf/simulated/floor/water/indoors{
-	movement_cost = 8;
-	name = "swampy water";
-	color = "#84c29b"
-	},
+/turf/simulated/floor/water/indoors/station,
 /area/maintenance/cetus/meteor/ragecage)
 "dhn" = (
 /turf/simulated/floor/tiled/old_tile/gray,
@@ -6067,11 +6080,7 @@
 	dir = 8
 	},
 /obj/structure/flora/underwater/grass1,
-/turf/simulated/floor/water/indoors{
-	movement_cost = 8;
-	name = "swampy water";
-	color = "#84c29b"
-	},
+/turf/simulated/floor/water/indoors/station,
 /area/maintenance/cetus/meteor/ragecage)
 "dqW" = (
 /obj/structure/railing/overhang/hazard,
@@ -6218,7 +6227,7 @@
 /obj/structure/waterfall,
 /obj/structure/waterfall/mist,
 /obj/effect/mist,
-/turf/simulated/floor/water/deep/pool,
+/turf/simulated/floor/water/deep/pool/station,
 /area/crew_quarters/cetus/meteor/pool)
 "dvr" = (
 /obj/machinery/atmospherics/pipe/simple/visible/cyan{
@@ -6483,7 +6492,7 @@
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/construction)
 "dCQ" = (
-/turf/simulated/floor/water/deep/indoors,
+/turf/simulated/floor/water/deep/indoors/station,
 /area/engineering/cetus/meteor/refinery)
 "dCR" = (
 /obj/structure/disposalpipe/tagger{
@@ -6707,7 +6716,7 @@
 /obj/structure/railing/grey{
 	dir = 4
 	},
-/turf/simulated/floor/water/deep/indoors,
+/turf/simulated/floor/water/deep/indoors/station,
 /area/maintenance/cetus/meteor/central)
 "dNH" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -6722,7 +6731,6 @@
 /obj/machinery/power/apc{
 	dir = 1;
 	name = "north bump";
-	operating = 0;
 	pixel_y = 24
 	},
 /obj/structure/cable/green{
@@ -6859,13 +6867,14 @@
 	pixel_y = 13
 	},
 /obj/random/trash,
+/obj/machinery/light/small,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/d1port)
 "dSJ" = (
 /obj/machinery/light/fluorescent{
 	dir = 1
 	},
-/turf/simulated/floor/water/pool/turfpack/station,
+/turf/simulated/floor/water/pool/station,
 /area/crew_quarters/cetus/meteor/pool)
 "dTl" = (
 /obj/structure/disposalpipe/segment{
@@ -8577,11 +8586,7 @@
 /area/engineering/cetus/meteor/engineroom)
 "eOX" = (
 /obj/structure/flora/underwater/seaweed3,
-/turf/simulated/floor/water/indoors{
-	movement_cost = 8;
-	name = "swampy water";
-	color = "#84c29b"
-	},
+/turf/simulated/floor/water/indoors/station,
 /area/maintenance/cetus/meteor/pond)
 "ePc" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
@@ -9241,11 +9246,7 @@
 /obj/structure/railing/grey{
 	dir = 1
 	},
-/turf/simulated/floor/water/indoors{
-	movement_cost = 8;
-	name = "swampy water";
-	color = "#84c29b"
-	},
+/turf/simulated/floor/water/indoors/station,
 /area/maintenance/cetus/meteor/ragecage)
 "fhG" = (
 /obj/structure/dummystairs,
@@ -9342,7 +9343,7 @@
 /obj/effect/floor_decal/spline/fancy{
 	dir = 9
 	},
-/turf/simulated/floor/water/pool/turfpack/station,
+/turf/simulated/floor/water/pool/station,
 /area/crew_quarters/cetus/meteor/pool)
 "fmc" = (
 /obj/machinery/power/apc{
@@ -9505,7 +9506,6 @@
 /obj/machinery/power/apc{
 	dir = 1;
 	name = "north bump";
-	operating = 0;
 	pixel_y = 24
 	},
 /obj/structure/cable/green{
@@ -9612,7 +9612,7 @@
 /obj/effect/mist,
 /obj/structure/waterfall/top,
 /obj/structure/fans/tiny,
-/turf/simulated/floor/water/deep/indoors,
+/turf/simulated/floor/water/deep/indoors/station,
 /area/crew_quarters/cetus/meteor/pool)
 "frS" = (
 /obj/structure/dispenser/oxygen,
@@ -9689,10 +9689,8 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/water/indoors{
-	movement_cost = 8;
-	name = "swampy water";
-	color = "#84c29b"
+/turf/simulated/floor/water/indoors/station{
+	movement_cost = 1
 	},
 /area/maintenance/cetus/meteor/pond)
 "fuf" = (
@@ -10568,7 +10566,7 @@
 /obj/structure/railing/grey{
 	dir = 4
 	},
-/turf/simulated/floor/water/deep/indoors,
+/turf/simulated/floor/water/deep/indoors/station,
 /area/engineering/cetus/meteor/refinery)
 "fTm" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -11348,6 +11346,17 @@
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/cetus/meteor/cafeteriaf1)
+"gtm" = (
+/obj/structure/disposalpipe/segment,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/structure/catwalk,
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/cetus/meteor/foremed)
 "gtq" = (
 /obj/structure/table/bench/standard,
 /obj/effect/floor_decal/steeldecal/steel_decals10{
@@ -11487,6 +11496,9 @@
 /area/maintenance/cetus/cozyobservatory)
 "gws" = (
 /obj/random/trash,
+/obj/machinery/light/small/yellowed{
+	dir = 8
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/meteor/starsec)
 "gwQ" = (
@@ -12327,7 +12339,7 @@
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/meteor/starsec)
 "gZn" = (
-/turf/simulated/floor/water/pool/turfpack/station,
+/turf/simulated/floor/water/pool/station,
 /area/crew_quarters/cetus/meteor/pool)
 "gZo" = (
 /turf/simulated/floor/tiled/dark,
@@ -12843,6 +12855,13 @@
 "hkD" = (
 /turf/simulated/wall/r_wall,
 /area/medical/cetus/atriumd1)
+"hkJ" = (
+/obj/random/trash,
+/obj/machinery/light/small/yellowed{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/cetus/meteor/aftstar)
 "hkT" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/blue/border,
@@ -12914,7 +12933,7 @@
 /obj/machinery/light/fluorescent{
 	dir = 4
 	},
-/turf/simulated/floor/water/deep/pool,
+/turf/simulated/floor/water/deep/pool/station,
 /area/crew_quarters/cetus/meteor/pool)
 "hod" = (
 /obj/structure/sink{
@@ -13407,6 +13426,13 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/meteor/portsec)
+"hyT" = (
+/obj/random/junk,
+/obj/machinery/light/small/yellowed{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/cetus/meteor/aftstar)
 "hyW" = (
 /obj/structure/sign/warning/nosmoking_2,
 /turf/simulated/wall/r_wall,
@@ -13465,7 +13491,6 @@
 /obj/machinery/power/apc{
 	dir = 1;
 	name = "north bump";
-	operating = 0;
 	pixel_y = 24
 	},
 /obj/structure/cable/green{
@@ -14800,11 +14825,11 @@
 /obj/effect/floor_decal/spline/fancy{
 	dir = 6
 	},
-/turf/simulated/floor/water/pool/turfpack/station,
+/turf/simulated/floor/water/pool/station,
 /area/crew_quarters/cetus/meteor/pool)
 "igf" = (
 /obj/effect/mist,
-/turf/simulated/floor/water/pool/turfpack/station,
+/turf/simulated/floor/water/pool/station,
 /area/crew_quarters/cetus/meteor/pool)
 "igh" = (
 /obj/structure/table/rack/shelf,
@@ -15062,12 +15087,10 @@
 /turf/simulated/floor/tiled/old_tile/gray,
 /area/maintenance/cetus/hallway)
 "ipx" = (
-/obj/structure/cliff/automatic,
-/turf/simulated/floor/water/indoors{
-	movement_cost = 8;
-	name = "swampy water";
-	color = "#84c29b"
+/obj/structure/cliff/automatic{
+	density = 0
 	},
+/turf/simulated/floor/water/indoors/station,
 /area/maintenance/cetus/meteor/ragecage)
 "iqB" = (
 /obj/structure/bed/chair/wood,
@@ -15530,7 +15553,7 @@
 /obj/machinery/light/fluorescent{
 	dir = 8
 	},
-/turf/simulated/floor/water/deep/pool,
+/turf/simulated/floor/water/deep/pool/station,
 /area/crew_quarters/cetus/meteor/pool)
 "iAi" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/red{
@@ -15653,7 +15676,6 @@
 /obj/machinery/power/apc{
 	dir = 1;
 	name = "north bump";
-	operating = 0;
 	pixel_y = 24
 	},
 /obj/structure/cable/green{
@@ -16027,13 +16049,10 @@
 /area/engineering/cetus/starsubstation)
 "iOg" = (
 /obj/structure/cliff/automatic/corner{
-	dir = 6
+	dir = 6;
+	density = 0
 	},
-/turf/simulated/floor/water/indoors{
-	movement_cost = 8;
-	name = "swampy water";
-	color = "#84c29b"
-	},
+/turf/simulated/floor/water/indoors/station,
 /area/maintenance/cetus/meteor/ragecage)
 "iOh" = (
 /obj/effect/floor_decal/industrial/warning{
@@ -16150,11 +16169,7 @@
 /turf/simulated/wall/r_wall,
 /area/security/cetus/meteor/brig)
 "iTF" = (
-/turf/simulated/floor/water/indoors{
-	movement_cost = 8;
-	name = "swampy water";
-	color = "#84c29b"
-	},
+/turf/simulated/floor/water/indoors/station,
 /area/maintenance/cetus/meteor/ragecage)
 "iUi" = (
 /obj/structure/outcrop/iron,
@@ -16660,6 +16675,17 @@
 "jgV" = (
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/aftmed)
+"jgZ" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 9
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 9
+	},
+/obj/structure/catwalk,
+/obj/machinery/light/small/yellowed,
+/turf/simulated/floor/plating,
+/area/maintenance/cetus/meteor/starsec)
 "jhB" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
@@ -16842,11 +16868,7 @@
 /area/maintenance/cetus/meteor/starsec)
 "jmi" = (
 /obj/structure/flora/ausbushes/reedbush,
-/turf/simulated/floor/water/indoors{
-	movement_cost = 8;
-	name = "swampy water";
-	color = "#84c29b"
-	},
+/turf/simulated/floor/water/indoors/station,
 /area/maintenance/cetus/meteor/ragecage)
 "jmS" = (
 /obj/effect/floor_decal/borderfloor/corner{
@@ -17009,7 +17031,6 @@
 /obj/machinery/power/apc{
 	dir = 1;
 	name = "north bump";
-	operating = 0;
 	pixel_y = 24
 	},
 /obj/machinery/light_switch{
@@ -17275,6 +17296,9 @@
 "jxG" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/effect/landmark{
+	name = "lightsout"
+	},
 /turf/simulated/floor/tiled/old_tile/gray,
 /area/maintenance/ab_StripBar)
 "jxP" = (
@@ -17720,12 +17744,10 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/maintenance/cetus/fishery)
 "jHC" = (
-/obj/structure/cliff/automatic/corner,
-/turf/simulated/floor/water/indoors{
-	movement_cost = 8;
-	name = "swampy water";
-	color = "#84c29b"
+/obj/structure/cliff/automatic/corner{
+	density = 0
 	},
+/turf/simulated/floor/water/indoors/station,
 /area/maintenance/cetus/meteor/ragecage)
 "jHG" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/yellow{
@@ -18772,11 +18794,7 @@
 /area/crew_quarters/cetus/meteor/pool)
 "kev" = (
 /obj/structure/flora/underwater/plant1,
-/turf/simulated/floor/water/indoors{
-	movement_cost = 8;
-	name = "swampy water";
-	color = "#84c29b"
-	},
+/turf/simulated/floor/water/indoors/station,
 /area/maintenance/cetus/meteor/pond)
 "kfl" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -18896,6 +18914,7 @@
 	icon_state = "5-8"
 	},
 /obj/structure/catwalk,
+/obj/machinery/light/small/yellowed,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/meteor/starsec)
 "kiw" = (
@@ -19107,7 +19126,7 @@
 /turf/simulated/floor/plating,
 /area/crew_quarters/cetus/meteor/hallway1)
 "knr" = (
-/turf/simulated/floor/water/deep/indoors,
+/turf/simulated/floor/water/deep/indoors/station,
 /area/maintenance/cetus/meteor/central)
 "knz" = (
 /obj/structure/table/rack/holorack,
@@ -19345,11 +19364,7 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/cetus/meteor/techstorage)
 "ksd" = (
-/turf/simulated/floor/water/indoors{
-	movement_cost = 8;
-	name = "swampy water";
-	color = "#84c29b"
-	},
+/turf/simulated/floor/water/indoors/station,
 /area/maintenance/cetus/meteor/pond)
 "ksi" = (
 /obj/structure/cable/green{
@@ -20322,10 +20337,8 @@
 /area/crew_quarters/cetus/meteor/cafeteriaf1)
 "kVj" = (
 /obj/structure/lattice,
-/turf/simulated/floor/water/indoors{
-	movement_cost = 8;
-	name = "swampy water";
-	color = "#84c29b"
+/turf/simulated/floor/water/indoors/station{
+	movement_cost = 1
 	},
 /area/maintenance/cetus/meteor/pond)
 "kVz" = (
@@ -20548,7 +20561,7 @@
 /area/engineering/cetus/meteor/dronefab)
 "lcY" = (
 /obj/machinery/door/firedoor/glass,
-/turf/simulated/floor/water/deep/indoors,
+/turf/simulated/floor/water/deep/indoors/station,
 /area/maintenance/cetus/meteor/central)
 "ldg" = (
 /obj/machinery/door/firedoor/glass,
@@ -21237,11 +21250,7 @@
 /area/maintenance/cetus/meteor/portsec)
 "lst" = (
 /obj/structure/flora/underwater/seaweed3,
-/turf/simulated/floor/water/indoors{
-	movement_cost = 8;
-	name = "swampy water";
-	color = "#84c29b"
-	},
+/turf/simulated/floor/water/indoors/station,
 /area/maintenance/ab_Hydroponics)
 "lsN" = (
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
@@ -21387,16 +21396,13 @@
 /area/crew_quarters/cetus/meteor/pool)
 "lxR" = (
 /obj/structure/cliff/automatic{
-	dir = 10
+	dir = 10;
+	density = 0
 	},
 /obj/machinery/light/fluorescent{
 	dir = 1
 	},
-/turf/simulated/floor/water/indoors{
-	movement_cost = 8;
-	name = "swampy water";
-	color = "#84c29b"
-	},
+/turf/simulated/floor/water/indoors/station,
 /area/maintenance/cetus/meteor/ragecage)
 "lxU" = (
 /obj/structure/disposalpipe/segment{
@@ -21525,9 +21531,7 @@
 "lBf" = (
 /obj/structure/railing/grey,
 /obj/structure/lattice,
-/turf/simulated/floor/water/indoors{
-	movement_cost = 1
-	},
+/turf/simulated/floor/water/indoors/station,
 /area/engineering/cetus/meteor/refinery)
 "lBi" = (
 /obj/machinery/light/small{
@@ -21554,7 +21558,7 @@
 "lCa" = (
 /obj/structure/lattice,
 /obj/structure/catwalk,
-/turf/simulated/floor/water/indoors{
+/turf/simulated/floor/water/indoors/station{
 	movement_cost = 1
 	},
 /area/engineering/cetus/meteor/refinery)
@@ -22174,10 +22178,11 @@
 /turf/simulated/floor/tiled/milspec/raised,
 /area/crew_quarters/cetus/meteor/lounge)
 "lYv" = (
-/obj/machinery/light/small/emergency,
-/obj/random/trash,
+/obj/machinery/light/small/yellowed{
+	dir = 8
+	},
 /turf/simulated/floor/plating,
-/area/maintenance/cetus/d1port)
+/area/maintenance/cetus/meteor/jraft)
 "lYE" = (
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 8
@@ -22436,11 +22441,7 @@
 /area/engineering/cetus/meteor/techstorage)
 "mem" = (
 /obj/structure/flora/lily2,
-/turf/simulated/floor/water/indoors{
-	movement_cost = 8;
-	name = "swampy water";
-	color = "#84c29b"
-	},
+/turf/simulated/floor/water/indoors/station,
 /area/maintenance/cetus/meteor/pond)
 "meC" = (
 /obj/structure/table/standard,
@@ -22518,11 +22519,7 @@
 /area/maintenance/cetus/construction)
 "mhi" = (
 /obj/structure/flora/underwater/grass4,
-/turf/simulated/floor/water/indoors{
-	movement_cost = 8;
-	name = "swampy water";
-	color = "#84c29b"
-	},
+/turf/simulated/floor/water/indoors/station,
 /area/maintenance/ab_Hydroponics)
 "mhp" = (
 /obj/structure/cable/green{
@@ -23131,13 +23128,10 @@
 /area/asteroid/cetus/d1)
 "myK" = (
 /obj/structure/cliff/automatic{
-	dir = 5
+	dir = 5;
+	density = 0
 	},
-/turf/simulated/floor/water/indoors{
-	movement_cost = 8;
-	name = "swampy water";
-	color = "#84c29b"
-	},
+/turf/simulated/floor/water/indoors/station,
 /area/maintenance/cetus/meteor/ragecage)
 "myU" = (
 /obj/structure/bed/chair{
@@ -23459,6 +23453,7 @@
 	dir = 9
 	},
 /obj/structure/catwalk,
+/obj/machinery/light/small,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/aftmed)
 "mJa" = (
@@ -23611,7 +23606,6 @@
 /obj/machinery/power/apc{
 	dir = 8;
 	name = "west bump";
-	operating = 0;
 	pixel_x = -24;
 	pixel_y = -2
 	},
@@ -23768,7 +23762,7 @@
 /obj/structure/railing/grey{
 	dir = 4
 	},
-/turf/simulated/floor/water/deep/indoors,
+/turf/simulated/floor/water/deep/indoors/station,
 /area/maintenance/cetus/meteor/central)
 "mRV" = (
 /obj/machinery/light/broken{
@@ -24242,19 +24236,18 @@
 /turf/simulated/floor/plating,
 /area/engineering/cetus/meteor/enginewaste)
 "njO" = (
+/obj/structure/disposalpipe/segment,
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
-/obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/catwalk,
-/obj/machinery/light/small/emergency/flicker{
+/obj/machinery/light/small/yellowed{
 	dir = 4
 	},
-/obj/random/trash,
 /turf/simulated/floor/plating,
-/area/maintenance/cetus/d1port)
+/area/maintenance/cetus/meteor/jraft)
 "njU" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -24829,6 +24822,12 @@
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/plating,
 /area/engineering/cetus/meteor/refinery)
+"nxV" = (
+/obj/machinery/light/small/yellowed{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/cetus/meteor/star)
 "nxZ" = (
 /obj/machinery/light/small/emergency{
 	dir = 1
@@ -24948,11 +24947,7 @@
 /obj/machinery/light/fluorescent{
 	dir = 1
 	},
-/turf/simulated/floor/water/indoors{
-	movement_cost = 8;
-	name = "swampy water";
-	color = "#84c29b"
-	},
+/turf/simulated/floor/water/indoors/station,
 /area/maintenance/cetus/meteor/pond)
 "nCd" = (
 /obj/structure/cable/green{
@@ -25029,7 +25024,7 @@
 	color = "White";
 	dir = 4
 	},
-/turf/simulated/floor/water/pool/turfpack/station,
+/turf/simulated/floor/water/pool/station,
 /area/crew_quarters/cetus/meteor/pool)
 "nDP" = (
 /obj/structure/bed/chair{
@@ -25541,6 +25536,10 @@
 /obj/random/maintenance/foodstuff,
 /turf/simulated/floor/wood,
 /area/crew_quarters/sleep/cetus/meteor/dorm6)
+"nRl" = (
+/obj/machinery/light/small,
+/turf/simulated/floor/plating,
+/area/maintenance/cetus/d1port)
 "nRw" = (
 /obj/structure/table/rack/shelf,
 /obj/random/soap{
@@ -26474,9 +26473,6 @@
 /obj/random/tech_supply/component,
 /obj/random/technology_scanner,
 /obj/random/maintenance/engineering,
-/obj/effect/landmark{
-	name = "lightsout"
-	},
 /turf/simulated/floor/tiled/old_tile/yellow,
 /area/maintenance/cetus/workshop)
 "opl" = (
@@ -26504,6 +26500,14 @@
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/sleep/cetus/meteor/dorm9)
+"orx" = (
+/obj/structure/disposalpipe/segment,
+/obj/structure/catwalk,
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/cetus/meteor/foremed)
 "orD" = (
 /obj/structure/table/steel,
 /obj/structure/bedsheetbin,
@@ -26531,7 +26535,6 @@
 /obj/machinery/power/apc{
 	dir = 8;
 	name = "west bump";
-	operating = 0;
 	pixel_x = -24;
 	pixel_y = -2
 	},
@@ -26568,6 +26571,10 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/cetus/meteor/toxins)
+"ota" = (
+/obj/machinery/light/small,
+/turf/simulated/floor/plating,
+/area/maintenance/cetus/aftmed)
 "otf" = (
 /obj/structure/table/rack/shelf,
 /obj/random/soap{
@@ -26832,7 +26839,6 @@
 /obj/machinery/power/apc{
 	dir = 1;
 	name = "north bump";
-	operating = 0;
 	pixel_y = 24
 	},
 /obj/machinery/light_switch{
@@ -27315,6 +27321,10 @@
 	},
 /turf/simulated/floor/plating,
 /area/security/cetus/meteor/brig)
+"oMd" = (
+/obj/machinery/light/small,
+/turf/simulated/floor/plating,
+/area/maintenance/cetus/meteor/portsec)
 "oMk" = (
 /obj/machinery/station_map{
 	dir = 1;
@@ -27460,7 +27470,7 @@
 /obj/structure/railing/grey{
 	dir = 1
 	},
-/turf/simulated/floor/water/indoors,
+/turf/simulated/floor/water/indoors/station,
 /area/engineering/cetus/meteor/refinery)
 "oQf" = (
 /obj/machinery/bodyscanner,
@@ -27806,6 +27816,9 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
 	},
+/obj/machinery/light/small/yellowed{
+	dir = 4
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/meteor/star)
 "pbe" = (
@@ -28128,7 +28141,7 @@
 /area/security/cetus/meteor/brig)
 "pjv" = (
 /obj/machinery/pump,
-/turf/simulated/floor/water/deep/indoors,
+/turf/simulated/floor/water/deep/indoors/station,
 /area/engineering/cetus/meteor/refinery)
 "pjz" = (
 /obj/random/trash,
@@ -28463,11 +28476,7 @@
 /obj/machinery/light/fluorescent{
 	dir = 1
 	},
-/turf/simulated/floor/water/indoors{
-	movement_cost = 8;
-	name = "swampy water";
-	color = "#84c29b"
-	},
+/turf/simulated/floor/water/indoors/station,
 /area/maintenance/cetus/meteor/ragecage)
 "pwL" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden,
@@ -28993,7 +29002,7 @@
 /area/maintenance/cetus/meteor/jraft)
 "pLP" = (
 /obj/structure/railing/grey,
-/turf/simulated/floor/water/indoors,
+/turf/simulated/floor/water/indoors/station,
 /area/engineering/cetus/meteor/refinery)
 "pMs" = (
 /obj/random/junk,
@@ -29869,14 +29878,10 @@
 /area/engineering/cetus/meteor/engineroom)
 "qcj" = (
 /obj/structure/cliff/automatic/corner{
-	dir = 10
+	dir = 10;
+	density = 0
 	},
-/obj/structure/flora/underwater/grass1,
-/turf/simulated/floor/water/indoors{
-	movement_cost = 8;
-	name = "swampy water";
-	color = "#84c29b"
-	},
+/turf/simulated/floor/water/indoors/station,
 /area/maintenance/cetus/meteor/ragecage)
 "qcD" = (
 /obj/structure/closet/secure_closet/personal/cabinet,
@@ -29930,6 +29935,14 @@
 	},
 /turf/simulated/floor/plating,
 /area/rnd/cetus/meteor/dangerousspecimens)
+"qeK" = (
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/structure/catwalk,
+/obj/machinery/light/small,
+/turf/simulated/floor/plating,
+/area/maintenance/cetus/aftmed)
 "qfc" = (
 /obj/effect/floor_decal/steeldecal/steel_decals5{
 	dir = 8
@@ -29964,6 +29977,7 @@
 /obj/structure/cable/green{
 	icon_state = "16-0"
 	},
+/obj/machinery/light/small,
 /turf/simulated/floor/plating,
 /area/engineering/cetus/portsubstation)
 "qfv" = (
@@ -30673,20 +30687,13 @@
 /area/crew_quarters/cetus/meteor/pool)
 "qwh" = (
 /obj/structure/cliff/automatic{
-	dir = 8
+	dir = 8;
+	density = 0
 	},
-/turf/simulated/floor/water/indoors{
-	movement_cost = 8;
-	name = "swampy water";
-	color = "#84c29b"
-	},
+/turf/simulated/floor/water/indoors/station,
 /area/maintenance/cetus/meteor/ragecage)
 "qww" = (
-/turf/simulated/floor/water/indoors{
-	movement_cost = 8;
-	name = "swampy water";
-	color = "#84c29b"
-	},
+/turf/simulated/floor/water/indoors/station,
 /area/maintenance/ab_Hydroponics)
 "qwy" = (
 /obj/structure/table/steel,
@@ -30846,6 +30853,9 @@
 	dir = 4
 	},
 /obj/structure/catwalk,
+/obj/machinery/light/small{
+	dir = 4
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/d1port)
 "qyU" = (
@@ -30877,9 +30887,8 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/cetus/meteor/enginemonitor)
 "qAm" = (
-/obj/machinery/light/small/emergency,
-/turf/simulated/floor/plating,
-/area/maintenance/cetus/d1port)
+/turf/simulated/floor/water/indoors/station,
+/area/maintenance/cetus/meteor/central)
 "qAt" = (
 /obj/effect/floor_decal/industrial/warning{
 	layer = 3;
@@ -31599,11 +31608,7 @@
 	dir = 4;
 	pixel_x = 24
 	},
-/turf/simulated/floor/water/indoors{
-	movement_cost = 8;
-	name = "swampy water";
-	color = "#84c29b"
-	},
+/turf/simulated/floor/water/indoors/station,
 /area/maintenance/ab_Hydroponics)
 "qRB" = (
 /obj/structure/table/standard,
@@ -31743,11 +31748,7 @@
 "qVu" = (
 /obj/structure/flora/underwater/seaweed1,
 /obj/structure/flora/underwater/grass1,
-/turf/simulated/floor/water/indoors{
-	movement_cost = 8;
-	name = "swampy water";
-	color = "#84c29b"
-	},
+/turf/simulated/floor/water/indoors/station,
 /area/maintenance/cetus/meteor/pond)
 "qVy" = (
 /obj/machinery/atmospherics/pipe/simple/visible/black{
@@ -31855,6 +31856,9 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
 	},
+/obj/effect/landmark{
+	name = "lightsout"
+	},
 /turf/simulated/floor/tiled/old_tile/white,
 /area/maintenance/cetus/stylist)
 "qYM" = (
@@ -31893,7 +31897,7 @@
 /obj/machinery/light/small{
 	dir = 1
 	},
-/turf/simulated/floor/water/indoors,
+/turf/simulated/floor/water/indoors/station,
 /area/engineering/cetus/meteor/refinery)
 "qZU" = (
 /obj/effect/floor_decal/spline/plain{
@@ -32215,11 +32219,7 @@
 /area/rnd/cetus/meteor/carbonresearch)
 "rjy" = (
 /obj/structure/flora/underwater/plant2,
-/turf/simulated/floor/water/indoors{
-	movement_cost = 8;
-	name = "swampy water";
-	color = "#84c29b"
-	},
+/turf/simulated/floor/water/indoors/station,
 /area/maintenance/cetus/meteor/pond)
 "rkc" = (
 /mob/living/simple_mob/vore/pitcher{
@@ -32600,7 +32600,7 @@
 /obj/structure/railing/grey{
 	dir = 1
 	},
-/turf/simulated/floor/water/indoors,
+/turf/simulated/floor/water/indoors/station,
 /area/maintenance/cetus/meteor/central)
 "rsH" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
@@ -32953,11 +32953,7 @@
 /obj/structure/railing/grey{
 	dir = 4
 	},
-/turf/simulated/floor/water/indoors{
-	movement_cost = 8;
-	name = "swampy water";
-	color = "#84c29b"
-	},
+/turf/simulated/floor/water/indoors/station,
 /area/maintenance/cetus/meteor/ragecage)
 "rAx" = (
 /obj/random/maintenance/medical,
@@ -33119,11 +33115,7 @@
 /area/medical/cetus/atriumd1)
 "rEU" = (
 /obj/structure/flora/underwater/grass1,
-/turf/simulated/floor/water/indoors{
-	movement_cost = 8;
-	name = "swampy water";
-	color = "#84c29b"
-	},
+/turf/simulated/floor/water/indoors/station,
 /area/maintenance/cetus/meteor/ragecage)
 "rFl" = (
 /obj/structure/bed/chair/comfy/brown{
@@ -33157,21 +33149,12 @@
 /turf/simulated/floor/outdoors/rocks/cetus/edge,
 /area/rnd/cetus/meteor/toxins)
 "rGz" = (
+/obj/structure/waterfall,
+/obj/structure/waterfall/mist,
 /obj/structure/waterfall{
-	color = "#84c29b"
+	pixel_y = 32
 	},
-/obj/structure/waterfall/mist{
-	color = "#84c29b"
-	},
-/obj/structure/waterfall{
-	pixel_y = 32;
-	color = "#84c29b"
-	},
-/turf/simulated/floor/water/indoors{
-	movement_cost = 8;
-	name = "swampy water";
-	color = "#84c29b"
-	},
+/turf/simulated/floor/water/indoors/station,
 /area/maintenance/ab_Hydroponics)
 "rGJ" = (
 /obj/structure/table/marble,
@@ -33196,9 +33179,7 @@
 "rHv" = (
 /obj/structure/lattice,
 /obj/structure/catwalk,
-/turf/simulated/floor/water/deep/indoors{
-	movement_cost = 1
-	},
+/turf/simulated/floor/water/deep/indoors/station,
 /area/engineering/cetus/meteor/refinery)
 "rHD" = (
 /obj/effect/floor_decal/borderfloor/corner{
@@ -33233,11 +33214,7 @@
 "rJM" = (
 /obj/structure/flora/underwater/plant3,
 /obj/machinery/light/fluorescent,
-/turf/simulated/floor/water/indoors{
-	movement_cost = 8;
-	name = "swampy water";
-	color = "#84c29b"
-	},
+/turf/simulated/floor/water/indoors/station,
 /area/maintenance/cetus/meteor/pond)
 "rJZ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden,
@@ -33436,11 +33413,24 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/construction)
+"rRa" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/structure/catwalk,
+/obj/machinery/light/small/yellowed,
+/turf/simulated/floor/plating,
+/area/maintenance/cetus/meteor/starsec)
 "rRc" = (
 /obj/machinery/power/apc{
 	dir = 8;
 	name = "west bump";
-	operating = 0;
 	pixel_x = -24;
 	pixel_y = -2
 	},
@@ -33511,7 +33501,7 @@
 /obj/effect/floor_decal/spline/fancy{
 	dir = 8
 	},
-/turf/simulated/floor/water/pool/turfpack/station,
+/turf/simulated/floor/water/pool/station,
 /area/crew_quarters/cetus/meteor/pool)
 "rSK" = (
 /obj/structure/closet/l3closet/janitor,
@@ -33617,7 +33607,7 @@
 /turf/simulated/floor/tiled/old_tile/gray,
 /area/maintenance/cetus/hallway)
 "rWr" = (
-/turf/simulated/floor/water/deep/pool/turfpack/station,
+/turf/simulated/floor/water/deep/pool/station,
 /area/crew_quarters/cetus/meteor/pool)
 "rWw" = (
 /turf/simulated/mineral/cetus,
@@ -33705,12 +33695,13 @@
 /turf/simulated/floor/tiled/old_tile/gray,
 /area/maintenance/cetus/hallway)
 "sac" = (
-/obj/random/trash_pile,
-/obj/machinery/light/small/emergency{
-	dir = 1
+/obj/effect/floor_decal/rust,
+/obj/structure/cable/green{
+	icon_state = "4-8"
 	},
+/obj/machinery/light/small,
 /turf/simulated/floor/plating,
-/area/maintenance/cetus/d1port)
+/area/maintenance/cetus/meteor/portsec)
 "saO" = (
 /obj/structure/window/reinforced{
 	dir = 1
@@ -34168,9 +34159,6 @@
 	target_pressure = 200;
 	dir = 1
 	},
-/obj/machinery/light/small/emergency{
-	dir = 4
-	},
 /obj/random/trash,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/d1port)
@@ -34239,7 +34227,6 @@
 /obj/machinery/power/apc{
 	dir = 8;
 	name = "west bump";
-	operating = 0;
 	pixel_x = -24;
 	pixel_y = -2
 	},
@@ -34353,7 +34340,7 @@
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/meteor/starsec)
 "svQ" = (
-/turf/simulated/floor/water/indoors,
+/turf/simulated/floor/water/indoors/station,
 /area/engineering/cetus/meteor/refinery)
 "swr" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
@@ -34811,8 +34798,11 @@
 /turf/simulated/floor/carpet/retro,
 /area/crew_quarters/sleep/cetus/meteor/dorm2)
 "sEP" = (
-/turf/simulated/floor/water/deep/pool,
-/area/maintenance/cetus/meteor/central)
+/obj/machinery/light/small/yellowed{
+	dir = 4
+	},
+/turf/simulated/floor/outdoors/rocks/cetus,
+/area/maintenance/cetus/meteor/jrfore)
 "sEW" = (
 /obj/structure/railing/overhang/grey,
 /obj/structure/dummystairs/greyledge{
@@ -34890,6 +34880,7 @@
 /turf/simulated/floor/tiled,
 /area/crew_quarters/cetus/meteor/hallway1)
 "sGU" = (
+/obj/machinery/light/small/yellowed,
 /turf/simulated/floor/plating,
 /area/maintenance/substation/central)
 "sGX" = (
@@ -34918,7 +34909,7 @@
 "sIo" = (
 /obj/structure/lattice,
 /obj/vehicle/train/trolley_tank,
-/turf/simulated/floor/water/indoors,
+/turf/simulated/floor/water/indoors/station,
 /area/engineering/cetus/meteor/refinery)
 "sIp" = (
 /obj/structure/table/reinforced,
@@ -35025,6 +35016,13 @@
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/cetus/meteor/atriumdeck1)
+"sLn" = (
+/obj/machinery/atmospherics/pipe/simple/hidden,
+/obj/machinery/light/small/yellowed{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/cetus/meteor/jraft)
 "sLP" = (
 /turf/simulated/wall/r_wall,
 /area/medical/surgery_storage)
@@ -35351,7 +35349,6 @@
 /obj/machinery/power/apc{
 	dir = 1;
 	name = "north bump";
-	operating = 0;
 	pixel_y = 24
 	},
 /obj/structure/cable/green{
@@ -35386,7 +35383,6 @@
 /obj/machinery/power/apc{
 	dir = 8;
 	name = "west bump";
-	operating = 0;
 	pixel_x = -24;
 	pixel_y = -2
 	},
@@ -35457,7 +35453,7 @@
 /obj/structure/railing/grey{
 	dir = 1
 	},
-/turf/simulated/floor/water/deep/indoors,
+/turf/simulated/floor/water/deep/indoors/station,
 /area/maintenance/cetus/meteor/central)
 "sWz" = (
 /obj/effect/floor_decal/spline/plain{
@@ -38121,7 +38117,7 @@
 /obj/structure/waterfall,
 /obj/effect/mist,
 /obj/structure/waterfall/mist,
-/turf/simulated/floor/water/deep/pool,
+/turf/simulated/floor/water/deep/pool/station,
 /area/crew_quarters/cetus/meteor/pool)
 "uoQ" = (
 /turf/simulated/floor/tiled/dark,
@@ -38146,7 +38142,7 @@
 /area/crew_quarters/cetus/meteor/hallway2)
 "uqe" = (
 /obj/structure/railing/grey,
-/turf/simulated/floor/water/deep/indoors,
+/turf/simulated/floor/water/deep/indoors/station,
 /area/engineering/cetus/meteor/refinery)
 "uqh" = (
 /obj/structure/cable/green{
@@ -38924,18 +38920,15 @@
 /turf/simulated/floor/greengrid,
 /area/engineering/cetus/meteor/dronefab)
 "uIW" = (
-/obj/structure/cliff/automatic{
-	dir = 4
-	},
 /obj/machinery/alarm{
 	dir = 1;
 	pixel_y = -22
 	},
-/turf/simulated/floor/water/indoors{
-	movement_cost = 8;
-	name = "swampy water";
-	color = "#84c29b"
+/obj/structure/cliff/automatic{
+	dir = 4;
+	density = 0
 	},
+/turf/simulated/floor/water/indoors/station,
 /area/maintenance/cetus/meteor/ragecage)
 "uIX" = (
 /obj/effect/wingrille_spawn/reinforced,
@@ -38989,6 +38982,9 @@
 	dir = 4
 	},
 /obj/random/trash,
+/obj/machinery/light/small{
+	dir = 1
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/meteor/ragecage)
 "uKb" = (
@@ -39430,7 +39426,7 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/security/cetus/meteor/armory)
 "uUC" = (
-/obj/turbolift_map_holder/cetus/atrium,
+/obj/turbolift_map_holder/cetus/utility,
 /turf/simulated/floor/plating/eris/under,
 /area/crew_quarters/cetus/meteor/atrium)
 "uUH" = (
@@ -39552,6 +39548,7 @@
 /obj/structure/catwalk{
 	pixel_x = -1
 	},
+/obj/machinery/light/small/yellowed,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/meteor/star)
 "uXG" = (
@@ -39662,7 +39659,7 @@
 /obj/effect/floor_decal/spline/fancy{
 	dir = 10
 	},
-/turf/simulated/floor/water/pool/turfpack/station,
+/turf/simulated/floor/water/pool/station,
 /area/crew_quarters/cetus/meteor/pool)
 "vah" = (
 /obj/effect/floor_decal/borderfloor/corner,
@@ -39929,7 +39926,7 @@
 /area/rnd/cetus/meteor/toxtest)
 "viK" = (
 /obj/effect/mist,
-/turf/simulated/floor/water/deep/pool,
+/turf/simulated/floor/water/deep/pool/station,
 /area/crew_quarters/cetus/meteor/pool)
 "viM" = (
 /obj/effect/floor_decal/borderfloorblack/corner,
@@ -39941,7 +39938,6 @@
 /obj/machinery/power/apc{
 	dir = 1;
 	name = "north bump";
-	operating = 0;
 	pixel_y = 24
 	},
 /obj/structure/cable/green{
@@ -40164,7 +40160,7 @@
 /area/maintenance/cetus/meteor/pond)
 "vnr" = (
 /obj/structure/railing/grey,
-/turf/simulated/floor/water/deep/indoors,
+/turf/simulated/floor/water/deep/indoors/station,
 /area/maintenance/cetus/meteor/central)
 "vnx" = (
 /obj/effect/floor_decal/spline/fancy{
@@ -40173,7 +40169,7 @@
 /obj/machinery/camera/network/civilian{
 	c_tag = "CIV - Pool 2"
 	},
-/turf/simulated/floor/water/pool/turfpack/station,
+/turf/simulated/floor/water/pool/station,
 /area/crew_quarters/cetus/meteor/pool)
 "vnZ" = (
 /obj/effect/floor_decal/borderfloorblack/corner{
@@ -40509,10 +40505,8 @@
 "vuq" = (
 /obj/structure/lattice,
 /obj/structure/catwalk,
-/turf/simulated/floor/water/indoors{
-	movement_cost = 1;
-	name = "swampy water";
-	color = "#84c29b"
+/turf/simulated/floor/water/indoors/station{
+	movement_cost = 1
 	},
 /area/maintenance/cetus/meteor/ragecage)
 "vuC" = (
@@ -40778,6 +40772,9 @@
 /area/engineering/cetus/meteor/refinery)
 "vDi" = (
 /obj/structure/disposalpipe/segment,
+/obj/machinery/light/small{
+	dir = 4
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/d1port)
 "vDj" = (
@@ -42195,7 +42192,6 @@
 /obj/machinery/power/apc{
 	dir = 1;
 	name = "north bump";
-	operating = 0;
 	pixel_y = 24
 	},
 /obj/structure/cable/green{
@@ -42226,6 +42222,9 @@
 "wsC" = (
 /obj/structure/cable/green{
 	icon_state = "6-9"
+	},
+/obj/effect/landmark{
+	name = "lightsout"
 	},
 /turf/simulated/floor/tiled/old_tile/yellow,
 /area/maintenance/cetus/workshop)
@@ -42317,10 +42316,8 @@
 /obj/structure/cable/green{
 	icon_state = "4-9"
 	},
-/turf/simulated/floor/water/indoors{
-	movement_cost = 1;
-	name = "swampy water";
-	color = "#84c29b"
+/turf/simulated/floor/water/indoors/station{
+	movement_cost = 1
 	},
 /area/maintenance/cetus/meteor/ragecage)
 "wuY" = (
@@ -42559,12 +42556,7 @@
 /obj/machinery/light/fluorescent{
 	dir = 8
 	},
-/obj/structure/flora/underwater/grass1,
-/turf/simulated/floor/water/indoors{
-	movement_cost = 8;
-	name = "swampy water";
-	color = "#84c29b"
-	},
+/turf/simulated/floor/water/indoors/station,
 /area/maintenance/cetus/meteor/ragecage)
 "wze" = (
 /obj/machinery/door/firedoor/glass,
@@ -42981,6 +42973,10 @@
 	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/cetus/meteor/hallway2)
+"wJO" = (
+/obj/machinery/light/small/yellowed,
+/turf/simulated/floor/plating,
+/area/maintenance/cetus/meteor/jrfore)
 "wJV" = (
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/ab_StripBar)
@@ -43609,7 +43605,6 @@
 /obj/machinery/power/apc{
 	dir = 1;
 	name = "north bump";
-	operating = 0;
 	pixel_y = 24
 	},
 /obj/structure/cable/green{
@@ -43861,6 +43856,10 @@
 	},
 /turf/simulated/floor/plating,
 /area/engineering/cetus/meteor/engineroom)
+"xeE" = (
+/obj/machinery/light/small/yellowed,
+/turf/simulated/floor/plating,
+/area/maintenance/cetus/meteor/starsec)
 "xeX" = (
 /obj/machinery/firealarm{
 	dir = 8;
@@ -43894,7 +43893,8 @@
 /area/maintenance/substation/central)
 "xfr" = (
 /obj/structure/cliff/automatic{
-	dir = 2
+	dir = 2;
+	density = 0
 	},
 /obj/machinery/light/fluorescent{
 	dir = 1
@@ -44059,10 +44059,8 @@
 "xjN" = (
 /obj/structure/lattice,
 /obj/structure/flora/lily1,
-/turf/simulated/floor/water/indoors{
-	movement_cost = 8;
-	name = "swampy water";
-	color = "#84c29b"
+/turf/simulated/floor/water/indoors/station{
+	movement_cost = 1
 	},
 /area/maintenance/cetus/meteor/pond)
 "xjW" = (
@@ -44535,7 +44533,7 @@
 /turf/simulated/floor/tiled,
 /area/engineering/cetus/meteor/atriumdeck1)
 "xzU" = (
-/obj/turbolift_map_holder/cetus,
+/obj/turbolift_map_holder/cetus/atrium,
 /turf/simulated/floor/plating/eris/under,
 /area/crew_quarters/cetus/meteor/hallway2)
 "xAc" = (
@@ -44744,7 +44742,7 @@
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 6
 	},
-/turf/simulated/floor/water/pool/turfpack/station,
+/turf/simulated/floor/water/pool/station,
 /area/crew_quarters/cetus/meteor/pool)
 "xCL" = (
 /obj/effect/floor_decal/spline/plain,
@@ -44822,11 +44820,7 @@
 /area/maintenance/cetus/meteor/jraft)
 "xEp" = (
 /obj/structure/flora/underwater/grass1,
-/turf/simulated/floor/water/indoors{
-	movement_cost = 8;
-	name = "swampy water";
-	color = "#84c29b"
-	},
+/turf/simulated/floor/water/indoors/station,
 /area/maintenance/ab_Hydroponics)
 "xEZ" = (
 /obj/structure/table/steel,
@@ -44951,10 +44945,8 @@
 	dir = 4
 	},
 /obj/structure/catwalk,
-/turf/simulated/floor/water/indoors{
-	movement_cost = 1;
-	name = "swampy water";
-	color = "#84c29b"
+/turf/simulated/floor/water/indoors/station{
+	movement_cost = 1
 	},
 /area/maintenance/cetus/meteor/ragecage)
 "xIG" = (
@@ -45404,11 +45396,7 @@
 /obj/machinery/light/fluorescent{
 	dir = 4
 	},
-/turf/simulated/floor/water/indoors{
-	movement_cost = 8;
-	name = "swampy water";
-	color = "#84c29b"
-	},
+/turf/simulated/floor/water/indoors/station,
 /area/maintenance/cetus/meteor/ragecage)
 "xRu" = (
 /obj/random/trash,
@@ -45510,13 +45498,10 @@
 /area/crew_quarters/sleep/cetus/meteor/dorm7)
 "xTP" = (
 /obj/structure/cliff/automatic{
-	dir = 4
+	dir = 4;
+	density = 0
 	},
-/turf/simulated/floor/water/indoors{
-	movement_cost = 8;
-	name = "swampy water";
-	color = "#84c29b"
-	},
+/turf/simulated/floor/water/indoors/station,
 /area/maintenance/cetus/meteor/ragecage)
 "xUg" = (
 /obj/effect/floor_decal/spline/plain,
@@ -46072,11 +46057,7 @@
 /area/maintenance/cetus/d1port)
 "yiw" = (
 /obj/structure/flora/underwater/plant1,
-/turf/simulated/floor/water/indoors{
-	movement_cost = 8;
-	name = "swampy water";
-	color = "#84c29b"
-	},
+/turf/simulated/floor/water/indoors/station,
 /area/maintenance/ab_Hydroponics)
 "yiC" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -46123,7 +46104,7 @@
 "yiM" = (
 /obj/structure/lattice,
 /obj/structure/catwalk,
-/turf/simulated/floor/water/deep/indoors{
+/turf/simulated/floor/water/deep/indoors/station{
 	movement_cost = 1
 	},
 /area/maintenance/cetus/meteor/central)
@@ -46152,7 +46133,8 @@
 /area/maintenance/cetus/meteor/pond)
 "ykA" = (
 /obj/structure/cliff/automatic{
-	dir = 6
+	dir = 6;
+	density = 0
 	},
 /turf/simulated/floor/water/indoors{
 	movement_cost = 8;
@@ -46167,7 +46149,6 @@
 /obj/machinery/power/apc{
 	dir = 1;
 	name = "north bump";
-	operating = 0;
 	pixel_y = 24
 	},
 /obj/structure/cable/green{
@@ -46212,6 +46193,9 @@
 	dir = 9
 	},
 /obj/structure/catwalk,
+/obj/machinery/light/small/yellowed{
+	dir = 4
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/meteor/jraft)
 
@@ -59929,7 +59913,7 @@ iUi
 awK
 awK
 awK
-awK
+sEP
 awK
 qHL
 sRV
@@ -61228,7 +61212,7 @@ oLj
 tdT
 agX
 qTv
-gnL
+njO
 gnL
 fUR
 gnL
@@ -62763,7 +62747,7 @@ sVO
 sVO
 qHL
 exN
-exN
+wJO
 qHL
 cEy
 cEy
@@ -63035,7 +63019,7 @@ szq
 xCS
 aKV
 qzw
-ruU
+lYv
 oda
 esG
 khk
@@ -65353,7 +65337,7 @@ exN
 exN
 exN
 clf
-exN
+bQc
 eOh
 eDP
 dRw
@@ -65637,7 +65621,7 @@ yaQ
 uTR
 rkB
 wfz
-wfz
+sLn
 vZs
 wjF
 aKV
@@ -66200,7 +66184,7 @@ mzI
 tXf
 dBF
 gvp
-lYv
+htW
 iey
 cLp
 pMs
@@ -67242,7 +67226,7 @@ ews
 qyo
 ixE
 ixE
-njO
+cAN
 ixE
 kFi
 iuU
@@ -67493,7 +67477,7 @@ spi
 ddS
 iey
 qtu
-qAm
+tXf
 aeF
 qfp
 aeF
@@ -68292,7 +68276,7 @@ tXf
 olE
 tXf
 htW
-tXf
+nRl
 mzI
 qFw
 suH
@@ -68782,7 +68766,7 @@ iey
 tXf
 cLp
 iey
-sac
+cLp
 cLp
 iey
 gcK
@@ -71377,7 +71361,7 @@ vja
 hOs
 iLO
 iLO
-iLO
+gtm
 ugu
 wKl
 pSk
@@ -73424,7 +73408,7 @@ eKW
 bzB
 fgx
 xPi
-oGx
+sac
 xPi
 wuU
 xIE
@@ -74738,7 +74722,7 @@ sGm
 aMr
 sGm
 sGm
-sGm
+orx
 aMr
 cms
 dfc
@@ -74753,7 +74737,7 @@ qwB
 bkS
 kiw
 vYk
-jPG
+qeK
 vYk
 lSm
 cHz
@@ -75277,7 +75261,7 @@ ela
 sOA
 vYk
 jgV
-jgV
+ota
 vYk
 qFw
 qFw
@@ -78585,7 +78569,7 @@ sBa
 nYI
 nYI
 nYI
-tqS
+oMd
 jPN
 tzT
 tVP
@@ -80635,7 +80619,7 @@ qfZ
 slB
 wCA
 giO
-uQj
+jgZ
 cCA
 vgu
 kBp
@@ -81182,7 +81166,7 @@ flM
 rSB
 izN
 afp
-qsI
+rWr
 gZn
 ckY
 uZW
@@ -81437,10 +81421,10 @@ jeY
 nEB
 flM
 nDI
-qsI
-qsI
-qsI
-qsI
+rWr
+rWr
+rWr
+rWr
 qsI
 cMs
 ifi
@@ -81695,10 +81679,10 @@ gfb
 rSB
 nDI
 gZn
-qsI
-qsI
-qsI
-qsI
+rWr
+rWr
+rWr
+rWr
 wmG
 ifi
 wUa
@@ -81953,10 +81937,10 @@ gfb
 gZn
 gZn
 gZn
-qsI
-qsI
-qsI
-qsI
+rWr
+rWr
+rWr
+rWr
 aPE
 wUa
 jbH
@@ -82210,11 +82194,11 @@ sND
 gfb
 aiM
 gZn
-qsI
-qsI
-qsI
-qsI
-qsI
+rWr
+rWr
+rWr
+rWr
+rWr
 aPE
 lZu
 tjq
@@ -82469,10 +82453,10 @@ gfb
 fwq
 pVA
 kNf
-qsI
-qsI
-qsI
-qsI
+rWr
+rWr
+rWr
+rWr
 cVN
 lZu
 qwe
@@ -83246,7 +83230,7 @@ eOO
 kwv
 duF
 viK
-qsI
+rWr
 ckY
 uZW
 ken
@@ -83504,8 +83488,8 @@ eOO
 pbg
 duF
 viK
-qsI
-qsI
+rWr
+rWr
 ckY
 rSB
 tqY
@@ -83762,7 +83746,7 @@ eOO
 frH
 uoD
 viK
-qsI
+rWr
 rWr
 gZn
 aDJ
@@ -84014,13 +83998,13 @@ eAT
 nHa
 eOO
 cxj
-lLw
-lLw
+qAm
+qAm
 eOO
 knr
 eOO
 hny
-qsI
+rWr
 gZn
 aDJ
 xCr
@@ -84272,7 +84256,7 @@ ePw
 sAH
 vOz
 vOz
-lLw
+qAm
 knr
 knr
 knr
@@ -84529,7 +84513,7 @@ eOO
 eOO
 eOO
 eOO
-lLw
+qAm
 knr
 eOO
 eOO
@@ -84763,7 +84747,7 @@ hcE
 xwY
 xwY
 xwY
-she
+rRa
 aRi
 aRi
 wHB
@@ -86325,7 +86309,7 @@ aow
 pRO
 pRO
 pRO
-wev
+xeE
 hHz
 huB
 deU
@@ -87113,7 +87097,7 @@ ksN
 tob
 eOO
 knr
-lLw
+qAm
 eOO
 slB
 slB
@@ -87371,7 +87355,7 @@ fwY
 eOO
 eOO
 knr
-lLw
+qAm
 eOO
 slB
 slB
@@ -87605,7 +87589,7 @@ xwY
 xwY
 xwY
 xwY
-she
+rRa
 cCA
 hcE
 hcE
@@ -87886,7 +87870,7 @@ oZE
 ksN
 knr
 knr
-lLw
+qAm
 eOO
 slB
 slB
@@ -88144,7 +88128,7 @@ oZE
 ePw
 knr
 knr
-lLw
+qAm
 eOO
 slB
 slB
@@ -88401,8 +88385,8 @@ eOO
 eOO
 yiM
 sWg
-lLw
-lLw
+qAm
+qAm
 eOO
 eOO
 slB
@@ -88659,7 +88643,7 @@ eOO
 vnr
 yiM
 rsG
-lLw
+qAm
 ePw
 tob
 eOO
@@ -89417,8 +89401,8 @@ wQS
 hcE
 ePw
 eOO
-lLw
-lLw
+qAm
+qAm
 eOO
 hcE
 slB
@@ -89674,9 +89658,9 @@ slB
 slB
 hcE
 ePw
-lLw
-lLw
-lLw
+qAm
+qAm
+qAm
 eOO
 hcE
 eOO
@@ -89932,9 +89916,9 @@ slB
 slB
 hcE
 eOO
-lLw
-lLw
-lLw
+qAm
+qAm
+qAm
 eOO
 vOz
 eOO
@@ -90190,8 +90174,8 @@ slB
 slB
 slB
 eOO
-lLw
-lLw
+qAm
+qAm
 knr
 knr
 lcY
@@ -90448,7 +90432,7 @@ slB
 slB
 slB
 eOO
-lLw
+qAm
 knr
 knr
 eOO
@@ -91002,7 +90986,7 @@ slB
 slB
 slB
 idC
-gma
+hkJ
 idC
 slB
 slB
@@ -93290,7 +93274,7 @@ eOO
 eOO
 knr
 knr
-sEP
+knr
 eOO
 eOO
 slB
@@ -93319,7 +93303,7 @@ vOP
 alN
 qaQ
 ieM
-mYz
+hyT
 iGr
 iGr
 xRd
@@ -95646,7 +95630,7 @@ fnG
 iQm
 iQm
 idC
-xRd
+cte
 idC
 uAV
 qFw
@@ -102858,7 +102842,7 @@ erh
 sRw
 iQm
 nng
-phe
+nxV
 tla
 aJt
 nng
@@ -103609,7 +103593,7 @@ jiS
 xxd
 eJW
 gfC
-ufO
+cIc
 fNB
 ufO
 rCA
