@@ -120,7 +120,7 @@ GLOBAL_LIST_EMPTY(shuttdisp_list)
 /obj/machinery/status_display/shuttle_display/proc/get_my_shuttle() //Links the displays to their shuttles. Must be called after the shuttle datums exist.
 	var/datum/shuttle/autodock/shuttle = SSshuttles.shuttles[shuttle_tag]
 	if(!shuttle)
-		log_debug("Shuttle display could not find its shuttle!")
+		log_mapping("Shuttle display could not find its shuttle!")
 	else
 		my_shuttle = shuttle
 		GLOB.shuttdisp_list -= src //Remove the displays from the global list to reduce memory usage because it's only needed before shuttles initialize.

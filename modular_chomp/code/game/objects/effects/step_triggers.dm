@@ -5,7 +5,7 @@
 /obj/effect/step_trigger/teleporter/deathfall/Trigger(var/atom/movable/A)
 	var/turf/simulated/T = locate(teleport_x, teleport_y, teleport_z)
 	if(!istype(T))
-		log_debug("[src] failed to find destination turf.")
+		log_mapping("[src] failed to find destination turf.")
 		return
 	if(A.hovering)//Flying people dont fall
 		return

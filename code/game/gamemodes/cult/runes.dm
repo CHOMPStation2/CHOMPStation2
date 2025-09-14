@@ -197,8 +197,8 @@ var/list/sacrificed = list()
 			cultists.Add(M)
 	if(cultists.len >= 9)
 		if(!narsie_cometh)//so we don't initiate Hell more than one time.
-			to_world(span_narsie(span_red(span_bold("THE VEIL HAS BEEN SHATTERED!"))))
-			world << sound('sound/effects/weather/old_wind/wind_5_1.ogg')
+			to_chat(world, span_world(span_narsie(span_red("THE VEIL HAS BEEN SHATTERED!"))))
+			world << sound('sound/effects/weather/old_wind/wind_5_1.ogg') // CHOMPEdit - No idea why this wind is here now
 
 			SetUniversalState(/datum/universal_state/hell)
 			narsie_cometh = 1

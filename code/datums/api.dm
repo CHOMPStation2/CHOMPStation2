@@ -47,13 +47,13 @@ var/list/topic_commands_names = list()
 		var/list/param = params[key]
 		if(queryparams[key] == null)
 			if(param["req"] == 0)
-				log_debug("API: The following parameter is OPTIONAL and missing: [param["name"]] - [param["desc"]]")
+				log_world("API: The following parameter is OPTIONAL and missing: [param["name"]] - [param["desc"]]")
 			else
-				log_debug("API: The following parameter is REQUIRED but missing: [param["name"]] - [param["desc"]]")
+				log_world("API: The following parameter is REQUIRED but missing: [param["name"]] - [param["desc"]]")
 				errorcount ++
 				missing_params += param["name"]
 	if(errorcount)
-		log_debug("API: Request aborted. Required parameters missing")
+		log_world("API: Request aborted. Required parameters missing")
 		statuscode = 400
 		response = "Required params missing"
 		data = missing_params

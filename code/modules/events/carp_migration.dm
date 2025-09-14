@@ -7,7 +7,7 @@
 
 /datum/event/carp_migration/setup()
 	if(prob(50))
-		log_debug("Carp migration failed successfully.")
+		log_game("carp migration: event setup prob() failed, killing")
 		kill()
 		return
 	announceWhen = rand(30, 60) // 1 to 2 minutes
