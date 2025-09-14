@@ -90,12 +90,15 @@
 	take_damage(damage)
 	return
 
-/turf/simulated/shuttlewalls/hitby(AM as mob|obj, var/speed=THROWFORCE_SPEED_DIVISOR)
+/turf/simulated/shuttlewalls/hitby(atom/movable/source, var/speed=THROWFORCE_SPEED_DIVISOR)
 	..()
-	if(ismob(AM))
+	if(ismob(source))
 		return
 
-	var/tforce = AM:throwforce * (speed/THROWFORCE_SPEED_DIVISOR)
+	var/tforce = 0
+	if(isitem(source))
+		var/obj/item/O = source
+		tforce = O.throwforce * (speed/THROWFORCE_SPEED_DIVISOR)
 	if (tforce < 15)
 		return
 
