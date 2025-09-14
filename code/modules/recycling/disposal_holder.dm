@@ -123,9 +123,11 @@
 	if(!isliving(user))
 		return
 
+	/* CHOMPEdit: Clong, clong baby.
 	if(user.stat || user.last_special <= world.time)
 		return
 	user.last_special = world.time+100
+	*/
 
 	if(QDELETED(src))
 		return
