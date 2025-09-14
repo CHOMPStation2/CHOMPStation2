@@ -34,6 +34,10 @@
 
 /datum/trait/neutral/xenochimera_YR3/handle_environment_special(mob/living/carbon/human/H)
 	var/list/nanitereagents = list(REAGENT_HEALINGNANITES, REAGENT_SHREDDINGNANITES, REAGENT_IRRADIATEDNANITES, REAGENT_NEUROPHAGENANITES, REAGENT_NIFREPAIRNANITES)
+	if(istype(H.loc, /turf/simulated/floor/water/digestive_enzymes/nanites))
+		var/turf/simulated/floor/water/digestive_enzymes/nanites/N = H.loc
+		if(N.active)
+			N.toggle_all(FALSE)
 	for(var/reagent in nanitereagents)
 		if(H.reagents.has_reagent(reagent))
 			H.adjust_nutrition(H.reagents.get_reagent_amount(reagent))
