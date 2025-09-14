@@ -1,0 +1,4 @@
+author: "Aroliacue"
+delete-after: True
+changes:
+  - maptweak: "Removes the exposed SM Shard that can occasionally spawn within a POI on Sif."
