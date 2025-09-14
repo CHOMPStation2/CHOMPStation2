@@ -77,7 +77,7 @@
 
 	var/atom/movable/AM = WF.resolve()
 	if(isnull(AM))
-		log_debug("DEBUG: HasProximity called without reference on [src].")
+		log_runtime("DEBUG: HasProximity called without reference on [src].")
 		return
 
 	if(!anchored || (last_pulse && world.time < last_pulse + 150))

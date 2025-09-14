@@ -80,7 +80,7 @@
 /obj/machinery/photocopier/faxmachine/message_chat_admins(var/mob/sender, var/faxname, var/obj/item/sent, var/faxid, font_colour="#006100")
 	var/faxmsg
 	if(faxid && fexists("[CONFIG_GET(string/fax_export_dir)]/fax_[faxid].html"))
-		faxmsg = return_file_text("[CONFIG_GET(string/fax_export_dir)]/fax_[faxid].html")
+		faxmsg = file2text("[CONFIG_GET(string/fax_export_dir)]/fax_[faxid].html")
 
 	if(faxmsg)
 		fax_discord_message("A fax; '[faxname]' was sent.\nSender: [sender.name]\nFax name: [sent.name]\nFax ID: **[faxid]**\nFax: ```[strip_html_properly(faxmsg)]```")

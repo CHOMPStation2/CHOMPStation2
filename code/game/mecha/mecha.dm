@@ -233,7 +233,7 @@
 
 	add_cell()
 	removeVerb(/obj/mecha/verb/disconnect_from_port)
-	log_message("[src.name] created.")
+	src.mecha_log_message("[src.name] created.")
 	loc.Entered(src)
 	GLOB.mechas_list += src //global mech list
 
@@ -583,7 +583,7 @@
 		if("Toggle Airtank")
 			use_internal_tank = !use_internal_tank
 			occupant_message("Now taking air from [use_internal_tank?"internal airtank":"environment"].")
-			log_message("Now taking air from [use_internal_tank?"internal airtank":"environment"].")
+			src.mecha_log_message("Now taking air from [use_internal_tank?"internal airtank":"environment"].")
 		if("Toggle Light")
 			lights = !lights
 			if(lights)
@@ -591,7 +591,7 @@
 			else
 				set_light(light_range - lights_power)
 			occupant_message("Toggled lights [lights?"on":"off"].")
-			log_message("Toggled lights [lights?"on":"off"].")
+			src.mecha_log_message("Toggled lights [lights?"on":"off"].")
 			playsound(src, 'sound/mecha/heavylightswitch.ogg', 50, 1)
 		if("View Stats")
 			occupant << browse(src.get_stats_html(), "window=exosuit")
@@ -661,7 +661,7 @@
 /obj/mecha/proc/interface_action(obj/machinery/target)
 	if(istype(target, /obj/machinery/access_button))
 		src.occupant_message(span_notice("Interfacing with [target]."))
-		src.log_message("Interfaced with [target].")
+		src.mecha_log_message("Interfaced with [target].")
 		target.attack_hand(src.occupant)
 		return 1
 	if(istype(target, /obj/machinery/embedded_controller))
@@ -677,7 +677,7 @@
 			return STATUS_INTERACTIVE
 		if(src.Adjacent(src_object))
 			src.occupant_message(span_notice("Interfacing with [src_object]..."))
-			src.log_message("Interfaced with [src_object].")
+			src.mecha_log_message("Interfaced with [src_object].")
 			return STATUS_INTERACTIVE
 		if(src_object in view(2, src))
 			return STATUS_UPDATE //if they're close enough, allow the occupant to see the screen through the viewport or whatever.
@@ -872,7 +872,7 @@
 			if(!src.check_for_support())
 				float_direction = direction
 				start_process(MECHA_PROC_MOVEMENT)
-				src.log_message(span_warning("Movement control lost. Inertial movement started."))
+				src.mecha_log_message(span_warning("Movement control lost. Inertial movement started."))
 		if(do_after_action(get_step_delay()))
 			can_move = 1
 		return 1
@@ -1071,7 +1071,7 @@
 		return
 
 	user.setClickCooldown(user.get_attack_speed())
-	src.log_message("Attack by hand/paw. Attacker - [user].",1)
+	src.mecha_log_message("Attack by hand/paw. Attacker - [user].",1)
 
 	var/obj/item/mecha_parts/component/armor/ArmC = internal_components[MECH_ARMOR]
 
@@ -1115,8 +1115,9 @@
 
 /obj/mecha/hitby(atom/movable/source) //wrapper
 	..()
-	src.log_message("Hit by [source].",1) //CHOMPEdit - Don't have JSON logging yet.
-	call((proc_res["dynhitby"]||src), "dynhitby")(source) //CHOMPEdit - Don't have JSON logging yet.
+	src.mecha_log_message("Hit by [source].",1)
+	call((proc_res["dynhitby"]||src), "dynhitby")(source)
+	return
 
 //I think this is relative to throws.
 /obj/mecha/proc/dynhitby(atom/movable/A)
@@ -1187,7 +1188,7 @@
 		Test.hit |= occupant // Register a hit on the occupant, for things like turrets, or in simple-mob cases stopping friendly fire in firing line mode.
 		return
 
-	src.log_message("Hit by projectile. Type: [Proj.name]([Proj.check_armour]).",1)
+	src.mecha_log_message("Hit by projectile. Type: [Proj.name]([Proj.check_armour]).",1)
 	call((proc_res["dynbulletdamage"]||src), "dynbulletdamage")(Proj) //calls equipment
 	..()
 	return
@@ -1287,7 +1288,7 @@
 	else
 		temp_deflect_chance = round(ArmC.get_efficiency() * ArmC.deflect_chance + (defence_mode ? 25 : 0))
 
-	src.log_message("Affected by explosion of severity: [severity].",1)
+	src.mecha_log_message("Affected by explosion of severity: [severity].",1)
 	if(prob(temp_deflect_chance))
 		severity++
 		src.log_append_to_last("Armor saved, changing severity to [severity].")
@@ -1310,7 +1311,7 @@
 
 /*Will fix later -Sieve
 /obj/mecha/attack_blob(mob/user as mob)
-	src.log_message("Attack by blob. Attacker - [user].",1)
+	src.mecha_log_message("Attack by blob. Attacker - [user].",1)
 	if(!prob(src.deflect_chance))
 		src.take_damage(6)
 		src.check_for_internal_damage(list(MECHA_INT_TEMP_CONTROL,MECHA_INT_TANK_BREACH,MECHA_INT_CONTROL_LOST))
@@ -1334,21 +1335,21 @@
 	if(get_charge())
 		use_power((cell.charge/2)/severity)
 		take_damage(50 / severity,"energy")
-	src.log_message("EMP detected",1)
+	src.mecha_log_message("EMP detected",1)
 	if(prob(80))
 		check_for_internal_damage(list(MECHA_INT_FIRE,MECHA_INT_TEMP_CONTROL,MECHA_INT_CONTROL_LOST,MECHA_INT_SHORT_CIRCUIT),1)
 	return
 
 /obj/mecha/fire_act(datum/gas_mixture/air, exposed_temperature, exposed_volume)
 	if(exposed_temperature>src.max_temperature)
-		src.log_message("Exposed to dangerous temperature.",1)
+		src.mecha_log_message("Exposed to dangerous temperature.",1)
 		src.take_damage(5,"fire")	//The take_damage() proc handles armor values
 		src.check_for_internal_damage(list(MECHA_INT_FIRE, MECHA_INT_TEMP_CONTROL))
 	return
 
 /obj/mecha/proc/dynattackby(obj/item/W as obj, mob/user as mob)
 	user.setClickCooldown(user.get_attack_speed(W))
-	src.log_message("Attacked by [W]. Attacker - [user]")
+	src.mecha_log_message("Attacked by [W]. Attacker - [user]")
 	var/pass_damage_reduc_mod			//Modifer for failing to bring AP.
 
 	var/obj/item/mecha_parts/component/armor/ArmC = internal_components[MECH_ARMOR]
@@ -1506,7 +1507,7 @@
 			src.cell = null
 			state = MECHA_CELL_OUT
 			to_chat(user, "You unscrew and pry out the powercell.")
-			src.log_message("Powercell removed")
+			src.mecha_log_message("Powercell removed")
 		else if(state==MECHA_CELL_OUT && src.cell)
 			state=MECHA_CELL_OPEN
 			to_chat(user, "You screw the cell in place")
@@ -1517,11 +1518,11 @@
 			to_chat(user, "You attempt to eject the pilot using the maintenance controls.")
 			if(src.occupant.stat)
 				src.go_out()
-				src.log_message("[src.occupant] was ejected using the maintenance controls.")
+				src.mecha_log_message("[src.occupant] was ejected using the maintenance controls.")
 			else
 				to_chat(user, span_warning("Your attempt is rejected."))
 				src.occupant_message(span_warning("An attempt to eject you was made using the maintenance controls."))
-				src.log_message("Eject attempt made using maintenance controls - rejected.")
+				src.mecha_log_message("Eject attempt made using maintenance controls - rejected.")
 		return
 
 	else if(istype(W, /obj/item/cell))
@@ -1531,7 +1532,7 @@
 				user.drop_item()
 				W.forceMove(src)
 				src.cell = W
-				src.log_message("Powercell installed")
+				src.mecha_log_message("Powercell installed")
 			else
 				to_chat(user, "There's already a powercell installed.")
 		return
@@ -1607,7 +1608,7 @@
 	else
 		call((proc_res["dynattackby"]||src), "dynattackby")(W,user)
 /*
-		src.log_message("Attacked by [W]. Attacker - [user]")
+		src.mecha_log_message("Attacked by [W]. Attacker - [user]")
 		if(prob(src.deflect_chance))
 			to_chat(user, span_warning("\The [W] bounces off [src.name] armor."))
 			src.log_append_to_last("Armor saved.")
@@ -1693,7 +1694,7 @@
 		src.Move(src.loc)
 		update_icon()
 		set_dir(dir_in)
-		src.log_message("[mmi_as_oc] moved in as pilot.")
+		src.mecha_log_message("[mmi_as_oc] moved in as pilot.")
 		if(!hasInternalDamage())
 			src.occupant << sound('sound/mecha/nominal.ogg',volume=50)
 		update_icon()
@@ -1769,7 +1770,7 @@
 		network.gases += internal_tank.return_air()
 		network.update = 1
 	playsound(src, 'sound/mecha/gasconnected.ogg', 50, 1)
-	log_message("Connected to gas port.")
+	src.mecha_log_message("Connected to gas port.")
 	return 1
 
 /obj/mecha/proc/disconnect()
@@ -1783,7 +1784,7 @@
 	connected_port.connected_device = null
 	connected_port = null
 	playsound(src, 'sound/mecha/gasdisconnected.ogg', 50, 1)
-	src.log_message("Disconnected from gas port.")
+	src.mecha_log_message("Disconnected from gas port.")
 	return 1
 
 
@@ -1855,7 +1856,7 @@
 	if(lights)	set_light(light_range + lights_power)
 	else		set_light(light_range - lights_power)
 	src.occupant_message("Toggled lights [lights?"on":"off"].")
-	log_message("Toggled lights [lights?"on":"off"].")
+	src.mecha_log_message("Toggled lights [lights?"on":"off"].")
 	playsound(src, 'sound/mecha/heavylightswitch.ogg', 50, 1)
 	return
 
@@ -1882,7 +1883,7 @@
 
 	use_internal_tank = !use_internal_tank
 	src.occupant_message("Now taking air from [use_internal_tank?"internal airtank":"environment"].")
-	src.log_message("Now taking air from [use_internal_tank?"internal airtank":"environment"].")
+	src.mecha_log_message("Now taking air from [use_internal_tank?"internal airtank":"environment"].")
 	playsound(src, 'sound/mecha/gasdisconnected.ogg', 30, 1)
 	return
 
@@ -1899,7 +1900,7 @@
 		return
 	strafing = !strafing
 	src.occupant_message("Toggled strafing mode [strafing?"on":"off"].")
-	src.log_message("Toggled strafing mode [strafing?"on":"off"].")
+	src.mecha_log_message("Toggled strafing mode [strafing?"on":"off"].")
 	return
 
 /obj/mecha/MouseDrop_T(mob/O, mob/user)
@@ -1935,7 +1936,7 @@
 		to_chat(user, span_warning("You can't climb into the exosuit while buckled!"))
 		return
 
-	src.log_message("[user] tries to move in.")
+	src.mecha_log_message("[user] tries to move in.")
 	if(iscarbon(user))
 		var/mob/living/carbon/C = user
 		if(C.handcuffed)
@@ -2104,7 +2105,7 @@
 	else
 		return
 	if(mob_container.forceMove(src.loc))//ejecting mob container
-		log_message("[mob_container] moved out.")
+		src.mecha_log_message("[mob_container] moved out.")
 		occupant.reset_view()
 		occupant << browse(null, "window=exosuit")
 		if(occupant.client && cloaked_selfimage)
@@ -2452,7 +2453,7 @@
 			to_chat(src.occupant, "[icon2html(src, src.occupant.client)] [message]")
 	return
 
-/obj/mecha/proc/log_message(message as text,red=null)
+/obj/mecha/proc/mecha_log_message(message as text,red=null)
 	log.len++
 	if(red)
 		message = span_red(message)
@@ -2623,7 +2624,7 @@
 
 		user.visible_message(span_infoplain(span_bold("\The [user]") + " opens the hatch on \the [P] and removes [occupant]!"), span_notice("You open the hatch on \the [P] and remove [occupant]!"))
 		P.go_out()
-		P.log_message("[occupant] was removed.")
+		P.mecha_log_message("[occupant] was removed.")
 		return
 	if(href_list["add_req_access"] && add_req_access && top_filter.getObj("id_card"))
 		if(!in_range(src, usr))	return
@@ -2656,16 +2657,16 @@
 	if(href_list["repair_int_control_lost"])
 		if(usr != src.occupant)	return
 		src.occupant_message("Recalibrating coordination system.")
-		src.log_message("Recalibration of coordination system started.")
+		src.mecha_log_message("Recalibration of coordination system started.")
 		var/T = src.loc
 		if(do_after_action(100))
 			if(T == src.loc)
 				src.clearInternalDamage(MECHA_INT_CONTROL_LOST)
 				src.occupant_message(span_blue("Recalibration successful."))
-				src.log_message("Recalibration of coordination system finished with 0 errors.")
+				src.mecha_log_message("Recalibration of coordination system finished with 0 errors.")
 			else
 				src.occupant_message(span_red("Recalibration failed."))
-				src.log_message("Recalibration of coordination system failed with 1 error.",1)
+				src.mecha_log_message("Recalibration of coordination system failed with 1 error.",1)
 	if(href_list["drop_from_cargo"])
 		var/obj/O = locate(href_list["drop_from_cargo"])
 		if(O && (O in src.cargo))
@@ -2675,7 +2676,7 @@
 			var/turf/T = get_turf(O)
 			if(T)
 				T.Entered(O)
-			src.log_message("Unloaded [O]. Cargo compartment capacity: [cargo_capacity - src.cargo.len]")
+			src.mecha_log_message("Unloaded [O]. Cargo compartment capacity: [cargo_capacity - src.cargo.len]")
 	return
 
 	//debug
@@ -2802,7 +2803,7 @@
 	if(!damage)
 		return 0
 
-	src.log_message("Attacked. Attacker - [user].",1)
+	src.mecha_log_message("Attacked. Attacker - [user].",1)
 	user.do_attack_animation(src)
 
 	if(prob(temp_deflect_chance))//Deflected

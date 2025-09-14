@@ -1944,3 +1944,10 @@
 	ani_state = "nightstalker_diamondback_w"
 	extra_overlay = "nightstalker_diamondback_markings"
 	extra_overlay_w = "nightstalker_diamondback_markings_w"
+
+/datum/sprite_accessory/tail/xenotail_fullcolour_vwag
+	name = "xenomorph tail (fully colourable, vwag)"
+	desc = ""
+	icon_state = "xenotail_fullcolour_vwag"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
