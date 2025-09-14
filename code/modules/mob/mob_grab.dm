@@ -18,11 +18,7 @@
 	name = "grab"
 	icon = 'icons/mob/screen1.dmi'
 	icon_state = "reinforce"
-<<<<<<< HEAD
-	flags = 0
-=======
 	item_flags = DROPDEL | NOSTRIP
->>>>>>> 1fe94df762 (Moves destroy_on_drop to TG style and adds signal (#18454))
 	var/obj/screen/grab/hud = null
 	var/mob/living/affecting = null
 	var/mob/living/carbon/human/assailant = null
