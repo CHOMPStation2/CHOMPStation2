@@ -334,11 +334,11 @@ ANT STRUCTURES
 	name = "spore trap"
 	var/modifiertype = /datum/modifier/berserk
 
-/obj/effect/ant_structure/trap/Crossed(atom/movable/AM as mob|obj)
-	if(AM.is_incorporeal())
+/obj/effect/ant_structure/trap/Crossed(atom/movable/source)
+	if(source.is_incorporeal())
 		return
-	if(anchored && isliving(AM))
-		var/mob/living/L = AM
+	if(anchored && isliving(source))
+		var/mob/living/L = source
 		if(L == /mob/living/simple_mob/animal/tyr/mineral_ants)
 			return
 		else if(L.m_intent == I_RUN)
