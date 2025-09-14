@@ -531,13 +531,7 @@
 			if(ticker < burst)
 				addtimer(CALLBACK(src, PROC_REF(handle_gunfire),target, ++ticker, TRUE), burst_delay, TIMER_DELETE_ME)
 
-	var/target_for_log
-	if(ismob(target))
-		target_for_log = target
-	else
-		target_for_log = "[target.name]"
-
-	add_attack_logs("Unmanned",target_for_log,"Fired [src.name]")
+	add_attack_logs("Unmanned",target,"Fired [src.name]")
 
 
 //obtains the next projectile to fire
@@ -581,6 +575,7 @@
 			"You hear a [fire_sound_text]!"
 			)
 
+<<<<<<< HEAD
 	var/target_for_log
 	if(ismob(target))
 		target_for_log = target
@@ -588,6 +583,9 @@
 		target_for_log = "[target.name]"
 
 	add_attack_logs(user, target_for_log, "Fired gun '[src.name]' ([reflex ? "REFLEX" : "MANUAL"])")
+=======
+	add_attack_logs(user, target, "Fired gun '[src.name]' ([reflex ? "REFLEX" : "MANUAL"])")
+>>>>>>> a54756bf72 (more target (#18486))
 
 //called after successfully firing
 /obj/item/gun/proc/handle_post_fire(mob/user, atom/target, var/pointblank=0, var/reflex=0)
