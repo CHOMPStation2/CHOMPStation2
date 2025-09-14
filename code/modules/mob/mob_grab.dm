@@ -18,7 +18,11 @@
 	name = "grab"
 	icon = 'icons/mob/screen1.dmi'
 	icon_state = "reinforce"
+<<<<<<< HEAD
 	flags = 0
+=======
+	item_flags = DROPDEL | NOSTRIP
+>>>>>>> 1fe94df762 (Moves destroy_on_drop to TG style and adds signal (#18454))
 	var/obj/screen/grab/hud = null
 	var/mob/living/affecting = null
 	var/mob/living/carbon/human/assailant = null
@@ -33,7 +37,6 @@
 	abstract = 1
 	item_state = "nothing"
 	w_class = ITEMSIZE_HUGE
-	destroy_on_drop = TRUE	//VOREStation Edit
 
 
 /obj/item/grab/Initialize(mapload, mob/victim)
@@ -339,12 +342,6 @@
 
 				if(I_DISARM)
 					pin_down(affecting, assailant)
-
-/obj/item/grab/dropped(mob/user)
-	..()
-	loc = null
-	if(!QDELETED(src))
-		qdel(src)
 
 /obj/item/grab/proc/reset_kill_state()
 	if(state == GRAB_KILL)
