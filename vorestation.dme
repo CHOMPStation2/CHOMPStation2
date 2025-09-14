@@ -3003,11 +3003,8 @@
 #include "code\modules\identification\identification.dm"
 #include "code\modules\identification\item_procs.dm"
 #include "code\modules\instruments\items.dm"
-<<<<<<< HEAD
 #include "code\modules\instruments\items_ch.dm"
-=======
 #include "code\modules\instruments\piano_synth.dm"
->>>>>>> 73a79b3a6f (Instrument Update (#18483))
 #include "code\modules\instruments\stationary.dm"
 #include "code\modules\instruments\instrument_data\_instrument_data.dm"
 #include "code\modules\instruments\instrument_data\_instrument_key.dm"
