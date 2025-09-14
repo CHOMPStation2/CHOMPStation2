@@ -67,14 +67,6 @@
 	emote_message_3p_target = "gwahs at TARGET."
 	emote_sound = 'sound/voice/emotes/gwah.ogg'
 
-/decl/emote/audible/caw
-	key = "caw"
-	emote_message_1p = "You caw!"
-	emote_message_3p = "caws!"
-	emote_message_1p_target = "You caw at TARGET."
-	emote_message_3p_target = "caws at TARGET."
-	emote_sound = 'sound/voice/emotes/caw.ogg' // Copyright Sampling+ 1.0 Vixuxx (freesound.org) for the source audio.
-
 /decl/emote/audible/wawa
 	key = "wawa"
 	emote_message_1p = "You wawa."
