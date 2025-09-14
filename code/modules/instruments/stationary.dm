@@ -37,35 +37,8 @@
 
 	tgui_interact(M)
 
-<<<<<<< HEAD
-// CHOMPAdd - Grand piano moving
-
-/obj/structure/musician/attackby(obj/item/W as obj, mob/user as mob)
-	if(W.has_tool_quality(TOOL_WRENCH))
-		playsound(src, W.usesound, 100, 1)
-		if(anchored)
-			user.visible_message(span_filter_notice("[user] begins unsecuring \the [src] from the floor."), span_filter_notice("You start unsecuring \the [src] from the floor."))
-		else
-			user.visible_message(span_filter_notice("[user] begins securing \the [src] to the floor."), span_filter_notice("You start securing \the [src] to the floor."))
-
-		if(do_after(user, 20 * W.toolspeed))
-			if(!src) return
-			to_chat(user, span_notice("You [anchored? "un" : ""]secured \the [src]!"))
-			anchored = !anchored
-		return
-
-// CHOMPEnd
-
-/obj/structure/musician/proc/should_stop_playing(mob/user)
-	if(!(anchored || can_play_unanchored))
-		return TRUE
-	if(!user)
-		return FALSE
-	return !CanUseTopic(user)
-=======
 /obj/structure/musician/tgui_interact(mob/user)
 	return song.tgui_interact(user)
->>>>>>> 73a79b3a6f (Instrument Update (#18483))
 
 /* FIXME
 /obj/structure/musician/wrench_act(mob/living/user, obj/item/tool)
