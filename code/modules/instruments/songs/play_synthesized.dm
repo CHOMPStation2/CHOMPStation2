@@ -59,29 +59,6 @@
 	var/channel_text = num2text(channel)
 	channels_playing[channel_text] = 100
 	last_channel_played = channel_text
-<<<<<<< HEAD
-	var/turf/source = get_turf(parent)
-	for(var/mob/M as anything in hearing_mobs)
-		/* Maybe someday
-		if(user && HAS_TRAIT(user, TRAIT_MUSICIAN) && isliving(M))
-			var/mob/living/L = M
-			L.apply_status_effect(STATUS_EFFECT_GOOD_MUSIC)
-		*/
-		// Jeez
-		M.playsound_local(
-			turf_source = source,
-			soundin = null,
-			vol = volume,
-			vary = FALSE,
-			frequency = K.frequency,
-			falloff = FALLOFF_SOUNDS, //CHOMPEdit
-			is_global = null,
-			channel = channel,
-			pressure_affected = null,
-			S = copy,
-			preference = /datum/preference/toggle/instrument_toggle,
-			volume_channel = VOLUME_CHANNEL_INSTRUMENTS)
-=======
 	for(var/i in hearing_mobs)
 		var/mob/M = i
 		//if(player && HAS_TRAIT(player, TRAIT_MUSICIAN) && isliving(M))
@@ -91,7 +68,6 @@
 		if(!pref_volume)
 			continue
 		M.playsound_local(get_turf(parent), null, volume * (pref_volume/100), FALSE, K.frequency, null, channel, null, copy)
->>>>>>> 73a79b3a6f (Instrument Update (#18483))
 		// Could do environment and echo later but not for now
 
 /**
