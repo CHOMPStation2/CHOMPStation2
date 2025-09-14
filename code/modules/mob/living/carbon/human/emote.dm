@@ -177,6 +177,15 @@ var/list/_human_default_emotes = list(
 	/decl/emote/audible/croak_skrell,
 	/decl/emote/audible/roarbark,
 	/decl/emote/audible/dook,
+<<<<<<< HEAD
+=======
+	/decl/emote/audible/caw,
+	/decl/emote/audible/caw2,
+	/decl/emote/audible/caw_m,
+	/decl/emote/audible/gwah
+
+
+>>>>>>> 25130c53df (Bird up. Added 3 cawing emotes for the crows lover (#18469))
 	//VOREStation Add End
 	//CHOMP Add start
 	/decl/emote/audible/prbt2,
@@ -339,6 +348,7 @@ var/list/_simple_mob_default_emotes = list(
 	/decl/emote/audible/purr,
 	/decl/emote/audible/purrlong,
 	/decl/emote/audible/dook,
+<<<<<<< HEAD
 	//CHOMP Add start
 	/decl/emote/audible/prbt2,
 	/decl/emote/audible/pain,
@@ -351,6 +361,13 @@ var/list/_simple_mob_default_emotes = list(
 	/decl/emote/audible/tailthump,
 	/decl/emote/audible/squeal,
 	//CHOMP Add end
+=======
+	/decl/emote/audible/caw,
+	/decl/emote/audible/caw2,
+	/decl/emote/audible/caw_m,
+	/decl/emote/audible/gwah
+
+>>>>>>> 25130c53df (Bird up. Added 3 cawing emotes for the crows lover (#18469))
 	)
 	//VOREStation Add End
 
