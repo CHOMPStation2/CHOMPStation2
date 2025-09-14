@@ -624,10 +624,15 @@ ADMIN_VERB(cmd_assume_direct_control, (R_DEBUG|R_ADMIN|R_EVENT), "Assume Direct 
 	else
 		tgui_alert_async(usr, "Invalid mob")
 
+<<<<<<< HEAD
 /datum/admins/proc/view_runtimes()
 	set category = "Debug.Investigate"
 	set name = "View Runtimes"
 	set desc = "Open the Runtime Viewer"
+=======
+ADMIN_VERB(view_runtimes, R_DEBUG, "View Runtimes", "Opens the runtime viewer.", ADMIN_CATEGORY_DEBUG_INVESTIGATE)
+	GLOB.error_cache.show_to(user)
+>>>>>>> 6e3bb1efa0 (clean up flags (#18439))
 
 	if(!check_rights(R_DEBUG))
 		return

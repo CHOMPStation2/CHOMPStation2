@@ -478,7 +478,7 @@
 		icon_state = "[basestate]"
 		return
 	else
-		flags = 0 // Removes ON_BORDER and OPPOSITE_OPACITY
+		flags = NONE // Removes ON_BORDER and OPPOSITE_OPACITY
 	var/list/dirs = list()
 	if(anchored)
 		for(var/obj/structure/window/W in orange(src,1))
@@ -524,7 +524,7 @@
 	icon_state = "window-full"
 	maxhealth = 24
 	fulltile = TRUE
-	flags = 0
+	flags = NONE
 
 /obj/structure/window/phoronbasic
 	name = "phoron window"
@@ -542,7 +542,7 @@
 	icon_state = "phoronwindow-full"
 	maxhealth = 80
 	fulltile = TRUE
-	flags = 0
+	flags = NONE
 
 /obj/structure/window/phoronreinforced
 	name = "reinforced borosilicate window"
@@ -561,7 +561,7 @@
 	icon_state = "phoronrwindow-full"
 	maxhealth = 160
 	fulltile = TRUE
-	flags = 0
+	flags = NONE
 
 /obj/structure/window/reinforced
 	name = "reinforced window"
@@ -579,7 +579,7 @@
 	icon_state = "rwindow-full"
 	maxhealth = 80
 	fulltile = TRUE
-	flags = 0
+	flags = NONE
 
 /obj/structure/window/reinforced/tinted
 	name = "tinted window"
@@ -617,7 +617,7 @@
 	icon_state = "rwindow-full"
 	maxhealth = 80
 	fulltile = TRUE
-	flags = 0
+	flags = NONE
 
 /obj/structure/window/reinforced/polarized/attackby(obj/item/W as obj, mob/user as mob)
 	if(istype(W, /obj/item/multitool) && !anchored) // Only allow programming if unanchored!
