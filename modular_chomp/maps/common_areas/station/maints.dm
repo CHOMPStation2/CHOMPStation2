@@ -1079,22 +1079,6 @@
 	sound_env = SOUND_ENVIRONMENT_CARPETED_HALLWAY
 	ambience = AMBIENCE_RUINS
 
-/datum/turf_initializer/maintenance/shallow/InitializeTurf(var/turf/simulated/T)
-	if(T.density)
-		return
-	// Quick and dirty check to avoid placing things inside windows
-	if(locate(/obj/structure/grille, T))
-		return
-
-	var/cardinal_turfs = T.CardinalTurfs()
-
-	T.dirt = rand(10, 50) + rand(0, 50)
-	// If a neighbor is dirty, then we get dirtier.
-	var/how_dirty = dirty_neighbors(cardinal_turfs)
-	for(var/i = 0; i < how_dirty; i++)
-		T.dirt += rand(0,10)
-	T.update_dirt()
-
 /area/maintenance/cetus/meteor
 	base_turf = /turf/simulated/floor/outdoors/rocks/cetus
 
@@ -1186,6 +1170,10 @@
 /area/maintenance/cetus/janitorial
 	name = "\improper Abandoned Broom Closet"
 
+/area/maintenance/cetus/nanites
+	name = "\improper Nanite Storage"
+	ambience= AMBIENCE_HIGHSEC
+
 /area/maintenance/cetus/workshop
 	name = "\improper Abandoned Workshop"
 	icon_state = "maint_engineering"
@@ -1217,10 +1205,12 @@
 /area/maintenance/cetus/mainsupport
 	name = "\improper Main Support Structure"
 	ambience = AMBIENCE_SPACE
+	turf_initializer = null
 
 /area/maintenance/cetus/auxsupport
 	name = "\improper Auxilliary Support Structure"
 	ambience = AMBIENCE_SPACE
+	turf_initializer = null
 
 /area/maintenance/cetus/solars
 	name = "\improper Solars Maintenance"
