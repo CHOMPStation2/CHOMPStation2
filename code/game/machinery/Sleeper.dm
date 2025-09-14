@@ -497,12 +497,8 @@
 		occupant.client.eye = occupant.client.mob
 		occupant.client.perspective = MOB_PERSPECTIVE
 	occupant.Stasis(0)
-<<<<<<< HEAD
-	occupant.loc = src.loc
-	occupant.cozyloop.stop() // CHOMPStation Add: Cozy Music
-=======
 	occupant.forceMove(get_turf(src))
->>>>>>> a87fbbe3b1 (sleeper forcemove (#18491))
+	occupant.cozyloop.stop() // CHOMPStation Add: Cozy Music
 	occupant = null
 	for(var/atom/movable/A in src) // In case an object was dropped inside or something
 		if(A == beaker || A == circuit)
