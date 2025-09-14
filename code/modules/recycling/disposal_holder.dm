@@ -123,9 +123,10 @@
 	if(!isliving(user))
 		return
 
+
 	if(user.stat || user.last_special <= world.time)
 		return
-	user.last_special = world.time+100
+	user.last_special = world.time + (1 SECOND) // CHOMPEdit: Clong, clong baby.
 
 	if(QDELETED(src))
 		return

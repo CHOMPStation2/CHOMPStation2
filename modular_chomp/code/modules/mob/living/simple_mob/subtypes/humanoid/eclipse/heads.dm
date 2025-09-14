@@ -544,10 +544,10 @@
 	var/health = 5
 	var/modifiertype = /datum/modifier/poisoned/weak
 
-/obj/effect/slimeattack/Crossed(atom/movable/AM as mob|obj)
-	if(AM.is_incorporeal())
+/obj/effect/slimeattack/Crossed(atom/movable/source)
+	if(source.is_incorporeal())
 		return
-	Bumped(AM)
+	Bumped(source)
 
 /obj/effect/slimeattack/attackby(var/obj/item/W, var/mob/user)
 	user.setClickCooldown(user.get_attack_speed(W))

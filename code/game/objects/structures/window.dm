@@ -162,21 +162,21 @@
 		return !anchored // If it's anchored, it'll block air.
 	return TRUE // Don't stop airflow from the other sides.
 
-/obj/structure/window/hitby(AM as mob|obj)
+/obj/structure/window/hitby(atom/movable/source)
 	..()
-	visible_message(span_danger("[src] was hit by [AM]."))
+	visible_message(span_danger("[src] was hit by [source]."))
 	var/tforce = 0
-	if(ismob(AM))
+	if(ismob(source))
 		tforce = 40
-	else if(isobj(AM))
-		var/obj/item/I = AM
+	else if(isobj(source))
+		var/obj/item/I = source
 		tforce = I.throwforce
 	if(reinf) tforce *= 0.25
 	if(health - tforce <= 7 && !reinf)
 		anchored = FALSE
 		update_verbs()
 		update_nearby_icons()
-		step(src, get_dir(AM, src))
+		step(src, get_dir(source, src))
 	take_damage(tforce)
 
 /obj/structure/window/attack_tk(mob/user as mob)
@@ -348,49 +348,14 @@
 	take_damage(damage)
 	return
 
-
-/obj/structure/window/verb/rotate_counterclockwise()
-	set name = "Rotate Window Counterclockwise"
-	set category = "Object"
-	set src in oview(1)
-
-	if(usr.incapacitated())
-		return 0
-
+/obj/structure/window/handle_rotation_verbs(angle)
 	if(is_fulltile())
-		return 0
-
-	if(anchored)
-		to_chat(usr, "It is fastened to the floor therefore you can't rotate it!")
-		return 0
-
+		return FALSE
 	update_nearby_tiles(need_rebuild=1) //Compel updates before
-	src.set_dir(turn(src.dir, 90))
-	updateSilicate()
-	update_nearby_tiles(need_rebuild=1)
-	return
-
-
-/obj/structure/window/verb/rotate_clockwise()
-	set name = "Rotate Window Clockwise"
-	set category = "Object"
-	set src in oview(1)
-
-	if(usr.incapacitated())
-		return 0
-
-	if(is_fulltile())
-		return 0
-
-	if(anchored)
-		to_chat(usr, "It is fastened to the floor therefore you can't rotate it!")
-		return 0
-
-	update_nearby_tiles(need_rebuild=1) //Compel updates before
-	src.set_dir(turn(src.dir, 270))
-	updateSilicate()
-	update_nearby_tiles(need_rebuild=1)
-	return
+	. = ..()
+	if(.)
+		updateSilicate()
+		update_nearby_tiles(need_rebuild=1)
 
 /obj/structure/window/Initialize(mapload, start_dir=null, constructed=0)
 	. = ..()
@@ -402,7 +367,10 @@
 	if (constructed)
 		anchored = FALSE
 		state = 0
-		update_verbs()
+
+	// If we started anchored we'll need to disable rotation
+	AddElement(/datum/element/rotatable)
+	update_verbs()
 
 	health = maxhealth
 
@@ -456,11 +424,13 @@
 //Updates the availabiliy of the rotation verbs
 /obj/structure/window/proc/update_verbs()
 	if(anchored || is_fulltile())
-		verbs -= /obj/structure/window/verb/rotate_counterclockwise
-		verbs -= /obj/structure/window/verb/rotate_clockwise
+		verbs -= /atom/movable/proc/rotate_counterclockwise
+		verbs -= /atom/movable/proc/rotate_clockwise
+		verbs -= /atom/movable/proc/turn_around
 	else if(!is_fulltile())
-		verbs += /obj/structure/window/verb/rotate_counterclockwise
-		verbs += /obj/structure/window/verb/rotate_clockwise
+		verbs |= /atom/movable/proc/rotate_counterclockwise
+		verbs |= /atom/movable/proc/rotate_clockwise
+		verbs |= /atom/movable/proc/turn_around
 
 //merges adjacent full-tile windows into one (blatant ripoff from game/smoothwall.dm)
 /obj/structure/window/update_icon()

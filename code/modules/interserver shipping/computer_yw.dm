@@ -148,10 +148,10 @@
 	desc = "Push crate in, be amaze."
 	var/list/inserted = list()
 
-/obj/machinery/intershipreceiver/Bumped(atom/movable/AM as mob)
-	if(istype(AM, /obj/structure/closet/crate))
-		inserted += AM
-		AM.forceMove(src)
+/obj/machinery/intershipreceiver/Bumped(atom/movable/bumper)
+	if(istype(bumper, /obj/structure/closet/crate))
+		inserted += bumper
+		bumper.forceMove(src)
 
 /obj/machinery/intershipreceiver/proc/GetItems(var/index)
 	if(!isnull(inserted) && inserted.len > index)

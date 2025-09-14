@@ -25,11 +25,11 @@
 	name = "sandy pebble"
 	density = FALSE
 
-/obj/structure/prop/desert_rock/pebble/Crossed(atom/movable/AM as mob|obj)
-	if(AM.is_incorporeal())
+/obj/structure/prop/desert_rock/pebble/Crossed(atom/movable/source)
+	if(source.is_incorporeal())
 		return
-	if(istype(AM, /mob/living))
-		var/mob/living/M = AM
+	if(istype(source, /mob/living))
+		var/mob/living/M = source
 		if(M.m_intent == I_RUN && prob(5))
 			M.Weaken(2)
 			to_chat(M, "You trip over the [src]!")
