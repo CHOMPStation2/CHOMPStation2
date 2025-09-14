@@ -194,3 +194,11 @@
   - qol: Added short range radios (off by default) to emergency supply boxes.
   - qol: Changed APCs to allow the cover to be opened by anyone beneath 15% charge.
   - balance: Given APCs in SD comms rooms bigger cells.
+2025-09-14:
+  Aroliacue:
+  - maptweak: Removes the exposed SM Shard that can occasionally spawn within a POI
+      on Sif.
+  Guti:
+  - maptweak: Removed the nPISS from Southern Cross' R&D area
+  Will:
+  - code_imp: Chomp clothing uses define based pockets
