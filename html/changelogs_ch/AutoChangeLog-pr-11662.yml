@@ -1,0 +1,4 @@
+author: "Aroliacue"
+delete-after: True
+changes:
+  - maptweak: "Replaces Centcom Doors in the Carrier shuttles with regular voidcraft hatches. No more locked shuttles."
