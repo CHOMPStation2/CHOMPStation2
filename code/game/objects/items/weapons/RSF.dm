@@ -15,7 +15,7 @@ RSF
 	anchored = FALSE
 	matter = list(DEFAULT_WALL_MATERIAL = 25000)
 	var/stored_matter = 30
-	var/mode = 1
+	var/mode = "Container"
 	var/obj/item/reagent_containers/glasstype = /obj/item/reagent_containers/food/drinks/metaglass
 
 	var/list/container_types = list(
@@ -44,19 +44,19 @@ RSF
 	if (istype(W, /obj/item/rcd_ammo))
 
 		if ((stored_matter + 10) > 30)
-			to_chat(user, span_warning("The RSF can't hold any more matter."))
+			balloon_alert(user, "the fabricator can't hold any more matter.")
 			return
 
 		qdel(W)
 
 		stored_matter += 10
 		playsound(src, 'sound/machines/click.ogg', 10, 1)
-		to_chat(user,span_notice("The RSF now holds [stored_matter]/30 fabrication-units."))
+		balloon_alert(user,"the fabricator now holds [stored_matter]/30 fabrication-units.")
 		return
 
 /obj/item/rsf/CtrlClick(mob/living/user)
 	if(!Adjacent(user) || !istype(user))
-		to_chat(user,span_notice("You are too far away."))
+		balloon_alert(user,"you are too far away.")
 		return
 	var/glass_choice = tgui_input_list(user, "Please choose which type of glass you would like to produce.", "Glass Choice", container_types)
 
@@ -66,6 +66,7 @@ RSF
 		glasstype = /obj/item/reagent_containers/food/drinks/metaglass
 
 /obj/item/rsf/attack_self(mob/user as mob)
+<<<<<<< HEAD
 	playsound(src, 'sound/effects/pop.ogg', 50, 0)
 	if (mode == 1)
 		mode = 2
@@ -91,6 +92,14 @@ RSF
 		mode = 1
 		to_chat(user,span_notice("Changed dispensing mode to 'Cigarette'")) // YW Changes end
 		return
+=======
+	var/options = list("card deck", "card deck (big)", "casino chips (replica) x200", "cigarette", "container", "dice pack (d6)", "dice pack (gaming)", "paper", "pen")
+	var/choice = tgui_input_list(user, "Please choose what item you would like to synthesize.", "Rapid Service Fabricator", options, mode)
+	if(choice)
+		mode = choice
+		playsound(src, 'sound/effects/pop.ogg', 50, 0)
+		balloon_alert(user, "you will synthesize: [mode]")
+>>>>>>> 5fe09bb52f (Service borg buffs + QoL (#18502))
 
 /obj/item/rsf/afterattack(atom/A, mob/user as mob, proximity)
 
@@ -112,12 +121,22 @@ RSF
 	var/obj/product
 
 	switch(mode)
-		if(1)
+		if("card deck")
+			product = new /obj/item/deck/cards()
+			used_energy = 200
+		if("card deck (big)")
+			product = new /obj/item/deck/cards/triple()
+			used_energy = 600
+		if("casino chips (replica) x200")
+			product = new /obj/item/spacecasinocash_fake/c200()
+			used_energy = 400
+		if("cigarette")
 			product = new /obj/item/clothing/mask/smokable/cigarette()
 			used_energy = 10
-		if(2)
+		if("container")
 			product = new glasstype()
 			used_energy = 50
+<<<<<<< HEAD
 		if(3)
 			product = new /obj/item/reagent_containers/food/drinks/metaglass/metapint()	//YW Changes begin
 			used_energy = 50
@@ -128,10 +147,22 @@ RSF
 			product = new /obj/item/pen()
 			used_energy = 50
 		if(6) 																			//YW Changes end
+=======
+		if("dice pack (d6)")
+>>>>>>> 5fe09bb52f (Service borg buffs + QoL (#18502))
 			product = new /obj/item/storage/pill_bottle/dice()
 			used_energy = 200
+		if("dice pack (gaming)")
+			product = new /obj/item/storage/pill_bottle/dice_nerd()
+			used_energy = 200
+		if("paper")
+			product = new /obj/item/paper()
+			used_energy = 10
+		if("pen")
+			product = new /obj/item/pen()
+			used_energy = 50
 
-	to_chat(user,span_notice("Dispensing [product ? product : "product"]..."))
+	balloon_alert(user, "dispensing [product ? product : "product"]...")
 	product.loc = get_turf(A)
 
 	if(isrobot(user))
@@ -140,4 +171,4 @@ RSF
 			R.cell.use(used_energy)
 	else
 		stored_matter--
-		to_chat(user,span_notice("The RSF now holds [stored_matter]/30 fabrication-units."))
+		to_chat(user,span_notice("the fabricator now holds [stored_matter]/30 fabrication-units."))
