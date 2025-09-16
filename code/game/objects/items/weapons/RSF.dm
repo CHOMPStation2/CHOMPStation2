@@ -66,40 +66,12 @@ RSF
 		glasstype = /obj/item/reagent_containers/food/drinks/metaglass
 
 /obj/item/rsf/attack_self(mob/user as mob)
-<<<<<<< HEAD
-	playsound(src, 'sound/effects/pop.ogg', 50, 0)
-	if (mode == 1)
-		mode = 2
-		to_chat(user,span_notice("Changed dispensing mode to 'Container'."))
-		return
-	if(mode == 2)
-		mode = 3
-		to_chat(user,span_notice("Changed dispensing mode to 'Metamorphic Glass: Pint'")) //YW Changes begin
-		return
-	if(mode == 3)
-		mode = 4
-		to_chat(user,span_notice("Changed dispensing mode to 'Paper'"))
-		return
-	if(mode == 4)
-		mode = 5
-		to_chat(user,span_notice("Changed dispensing mode to 'Pen'"))
-		return
-	if(mode == 5)
-		mode = 6
-		to_chat(user,"Changed dispensing mode to 'Dice Pack'")
-		return
-	if(mode == 6)
-		mode = 1
-		to_chat(user,span_notice("Changed dispensing mode to 'Cigarette'")) // YW Changes end
-		return
-=======
-	var/options = list("card deck", "card deck (big)", "casino chips (replica) x200", "cigarette", "container", "dice pack (d6)", "dice pack (gaming)", "paper", "pen")
+	var/options = list("card deck", "card deck (big)", "casino chips (replica) x200", "cigarette", "container", "dice pack (d6)", "dice pack (gaming)", "paper", "pen", "pint glass") // CHOMPEdit
 	var/choice = tgui_input_list(user, "Please choose what item you would like to synthesize.", "Rapid Service Fabricator", options, mode)
 	if(choice)
 		mode = choice
 		playsound(src, 'sound/effects/pop.ogg', 50, 0)
 		balloon_alert(user, "you will synthesize: [mode]")
->>>>>>> 5fe09bb52f (Service borg buffs + QoL (#18502))
 
 /obj/item/rsf/afterattack(atom/A, mob/user as mob, proximity)
 
@@ -136,20 +108,7 @@ RSF
 		if("container")
 			product = new glasstype()
 			used_energy = 50
-<<<<<<< HEAD
-		if(3)
-			product = new /obj/item/reagent_containers/food/drinks/metaglass/metapint()	//YW Changes begin
-			used_energy = 50
-		if(4)
-			product = new /obj/item/paper()
-			used_energy = 10
-		if(5)
-			product = new /obj/item/pen()
-			used_energy = 50
-		if(6) 																			//YW Changes end
-=======
 		if("dice pack (d6)")
->>>>>>> 5fe09bb52f (Service borg buffs + QoL (#18502))
 			product = new /obj/item/storage/pill_bottle/dice()
 			used_energy = 200
 		if("dice pack (gaming)")
@@ -161,6 +120,11 @@ RSF
 		if("pen")
 			product = new /obj/item/pen()
 			used_energy = 50
+		// CHOMPAdd Start
+		if("pint glass")
+			product = new /obj/item/reagent_containers/food/drinks/metaglass/metapint()
+			used_energy = 50
+		// CHOMPAdd End
 
 	balloon_alert(user, "dispensing [product ? product : "product"]...")
 	product.loc = get_turf(A)
