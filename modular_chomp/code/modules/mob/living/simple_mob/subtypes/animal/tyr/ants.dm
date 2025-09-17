@@ -360,7 +360,7 @@ ANT STRUCTURES
 
 /obj/effect/ant_structure/trap/burn
 	icon_state = "burn_trap"
-	modifiertype = /datum/modifier/fire/weak
+	//No modifier.
 
 /obj/effect/ant_structure/trap/burn/attack_mob(mob/living/L)
 	L.adjust_fire_stacks(5)
