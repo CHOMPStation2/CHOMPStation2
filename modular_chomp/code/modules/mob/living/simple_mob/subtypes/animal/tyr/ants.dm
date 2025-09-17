@@ -362,6 +362,10 @@ ANT STRUCTURES
 	icon_state = "burn_trap"
 	modifiertype = /datum/modifier/fire/weak
 
+/obj/effect/ant_structure/trap/burn/attack_mob(mob/living/L)
+	L.adjust_fire_stacks(5)
+	L.ignite_mob()
+
 /obj/effect/ant_structure/trap/slowdown
 	icon_state = "slow_trap"
 	modifiertype = /datum/modifier/chilled

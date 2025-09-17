@@ -32,7 +32,8 @@
 /mob/living/simple_mob/slime/feral/orange/apply_melee_effects(var/atom/A)
 	if(isliving(A))
 		var/mob/living/L = A
-		L.add_modifier(/datum/modifier/fire, 5 SECONDS)
+		L.adjust_fire_stacks(5)
+		L.ignite_mob()
 
 
 /mob/living/simple_mob/slime/feral/blue

@@ -175,7 +175,8 @@
 /mob/living/simple_mob/animal/tyr/explode_beetle/apply_melee_effects(var/atom/A)
 	if(isliving(A))
 		var/mob/living/L = A
-		L.add_modifier(/datum/modifier/fire, 3 SECONDS)
+			L.adjust_fire_stacks(3)
+			L.ignite_mob()
 
 /mob/living/simple_mob/animal/tyr/glowing_beetle
 	name = "glowing beetle"
