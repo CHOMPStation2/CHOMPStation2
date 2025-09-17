@@ -318,6 +318,7 @@
 	icon_state = "engineering"
 	flags = RAD_SHIELDED
 	sound_env = SOUND_ENVIRONMENT_CAVE
+	lightswitch = FALSE
 
 /area/engineering/cetus/meteor/shieldgen
 	name = "\improper Shield Generator"

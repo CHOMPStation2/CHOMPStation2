@@ -566,12 +566,16 @@
 	},
 /area/centcom/medical)
 "abt" = (
-/obj/structure/shuttle/engine/propulsion{
-	dir = 1;
-	icon_state = "propulsion_r"
+/obj/machinery/door/airlock/external{
+	frequency = 1381;
+	icon_state = "door_locked";
+	id_tag = "escape_pod_1_recovery_hatch";
+	locked = 1;
+	name = "Recovery Shuttle Dock 1";
+	req_access = list(13)
 	},
-/turf/simulated/shuttle/plating/airless/carry,
-/area/space)
+/turf/simulated/shuttle/floor,
+/area/centcom/evac)
 "abu" = (
 /obj/machinery/computer/shuttle_control{
 	dir = 8;
@@ -589,12 +593,6 @@
 	},
 /turf/simulated/shuttle/floor/white,
 /area/centcom/evac)
-"abw" = (
-/obj/machinery/computer/station_alert{
-	dir = 1
-	},
-/turf/simulated/shuttle/floor/black,
-/area/space)
 "abx" = (
 /obj/machinery/door/airlock/hatch{
 	name = "Cockpit";
@@ -824,11 +822,6 @@
 /obj/effect/floor_decal/sign/small_7/decal,
 /turf/simulated/floor/holofloor/wood,
 /area/holodeck/source_chess)
-"akS" = (
-/obj/machinery/atmospherics/portables_connector,
-/obj/machinery/portable_atmospherics/canister/oxygen/prechilled,
-/turf/simulated/shuttle/floor/white,
-/area/space)
 "ala" = (
 /turf/simulated/floor/holofloor/wmarble,
 /area/holodeck/source_chess)
@@ -865,11 +858,8 @@
 	},
 /area/wizard_station)
 "aoc" = (
-/obj/structure/closet/secure_closet/security,
-/turf/simulated/shuttle/floor{
-	icon_state = "floor_red"
-	},
-/area/space)
+/turf/simulated/shuttle/plating,
+/area/shuttle/escape_pod1/centcom)
 "aoW" = (
 /obj/effect/floor_decal/corner/red/full{
 	dir = 8
@@ -1544,12 +1534,6 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/shadekin)
-"aUz" = (
-/obj/machinery/sleeper{
-	dir = 8
-	},
-/turf/simulated/shuttle/floor/white,
-/area/space)
 "aUC" = (
 /turf/simulated/shuttle/wall/voidcraft/green,
 /area/shuttle/ninja)
@@ -1812,14 +1796,16 @@
 	},
 /area/syndicate_station)
 "bgl" = (
-/obj/structure/window/reinforced{
-	dir = 1;
-	health = 1e+006
+/obj/machinery/door/airlock/external{
+	frequency = 1381;
+	icon_state = "door_locked";
+	id_tag = "escape_pod_5_recovery_hatch";
+	locked = 1;
+	name = "Recovery Shuttle Dock 5";
+	req_access = list(13)
 	},
-/obj/structure/table/rack,
-/obj/item/reagent_containers/spray/cleaner,
-/turf/simulated/shuttle/plating,
-/area/space)
+/turf/simulated/shuttle/floor,
+/area/centcom/evac)
 "bgS" = (
 /obj/effect/floor_decal/milspec/color/black,
 /obj/effect/floor_decal/techfloor{
@@ -1911,19 +1897,6 @@
 	icon_state = "steel"
 	},
 /area/shuttle/trade)
-"bkG" = (
-/obj/structure/closet/crate/freezer,
-/obj/item/reagent_containers/food/snacks/meat/syntiflesh,
-/obj/item/reagent_containers/food/snacks/meat/syntiflesh,
-/obj/item/reagent_containers/food/snacks/meat/syntiflesh,
-/obj/item/reagent_containers/food/snacks/meat/syntiflesh,
-/obj/item/reagent_containers/food/snacks/meat/syntiflesh,
-/obj/item/reagent_containers/food/snacks/meat/syntiflesh,
-/obj/item/reagent_containers/food/snacks/meat/syntiflesh,
-/obj/item/reagent_containers/food/snacks/meat/syntiflesh,
-/obj/item/reagent_containers/food/snacks/meat/syntiflesh,
-/turf/simulated/shuttle/floor/white,
-/area/space)
 "bkO" = (
 /obj/structure/table/reinforced,
 /obj/item/storage/firstaid/o2{
@@ -1974,10 +1947,6 @@
 	icon_state = "wood"
 	},
 /area/wizard_station)
-"bnf" = (
-/obj/machinery/recharge_station,
-/turf/simulated/shuttle/floor/white,
-/area/space)
 "bno" = (
 /obj/structure/table/rack,
 /obj/item/clothing/accessory/storage/white_vest,
@@ -2111,10 +2080,6 @@
 	},
 /turf/simulated/floor/holofloor/wmarble,
 /area/holodeck/source_chess)
-"bqP" = (
-/obj/structure/closet/secure_closet/personal,
-/turf/simulated/shuttle/floor,
-/area/space)
 "brR" = (
 /obj/item/reagent_containers/food/drinks/shaker,
 /obj/structure/table/marble{
@@ -2427,12 +2392,6 @@
 /obj/effect/floor_decal/carpet,
 /turf/simulated/floor/holofloor/carpet,
 /area/holodeck/source_theatre)
-"bIn" = (
-/obj/structure/bed/chair{
-	dir = 8
-	},
-/turf/simulated/shuttle/floor/black,
-/area/space)
 "bIz" = (
 /obj/effect/overlay/coconut,
 /turf/unsimulated/beach/sand,
@@ -2614,11 +2573,6 @@
 /obj/machinery/librarycomp,
 /turf/simulated/shuttle/floor/red,
 /area/shuttle/administration)
-"bPF" = (
-/obj/structure/mopbucket,
-/obj/item/mop,
-/turf/simulated/shuttle/plating,
-/area/space)
 "bQc" = (
 /obj/effect/floor_decal/corner/black/diagonal,
 /obj/item/stool/padded,
@@ -2668,17 +2622,6 @@
 	},
 /turf/simulated/shuttle/floor/white,
 /area/shuttle/escape/centcom)
-"bSA" = (
-/obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1381;
-	id_tag = "escape_pod_3_recovery";
-	pixel_x = -26;
-	pixel_y = 26;
-	req_one_access = list(13);
-	tag_door = "escape_pod_3_recovery_hatch"
-	},
-/turf/simulated/shuttle/floor/yellow,
-/area/space)
 "bSN" = (
 /obj/structure/table/rack,
 /obj/item/gun/projectile/automatic/sts35,
@@ -3240,8 +3183,8 @@
 /turf/simulated/shuttle/floor/black,
 /area/shuttle/merchant)
 "cuh" = (
-/obj/effect/shuttle_landmark/southern_cross/cryostorage_station,
-/turf/simulated/shuttle/plating,
+/obj/effect/shuttle_landmark/southern_cross/cryostorage_offsite,
+/turf/simulated/floor/airless,
 /area/shuttle/cryo/centcom)
 "cui" = (
 /obj/effect/floor_decal/corner/yellow{
@@ -3578,10 +3521,6 @@
 	icon_state = "dark"
 	},
 /area/syndicate_station)
-"cHI" = (
-/obj/machinery/door/airlock/glass,
-/turf/simulated/shuttle/floor/white,
-/area/space)
 "cIi" = (
 /obj/effect/floor_decal/milspec/color/orange,
 /obj/machinery/light{
@@ -3676,11 +3615,6 @@
 /obj/structure/reagent_dispensers/watertank/high,
 /turf/simulated/floor/tiled/steel_dirty,
 /area/shadekin)
-"cKC" = (
-/turf/simulated/shuttle/floor{
-	icon_state = "floor_red"
-	},
-/area/space)
 "cKD" = (
 /obj/effect/landmark/start{
 	name = "wizard"
@@ -3968,12 +3902,6 @@
 	},
 /turf/simulated/shuttle/floor/black,
 /area/shuttle/merchant)
-"dbi" = (
-/obj/structure/bed/chair{
-	dir = 4
-	},
-/turf/simulated/shuttle/floor/black,
-/area/space)
 "dbz" = (
 /obj/structure/closet/chefcloset,
 /obj/item/glass_jar,
@@ -4081,9 +4009,6 @@
 /obj/effect/shuttle_landmark/southern_cross/escape/offsite,
 /turf/simulated/shuttle/floor,
 /area/shuttle/escape/centcom)
-"deD" = (
-/turf/simulated/shuttle/wall/no_join/orange,
-/area/shuttle/escape_pod5/centcom)
 "dfN" = (
 /obj/machinery/door/window/holowindoor{
 	base_state = "right";
@@ -4547,18 +4472,6 @@
 	},
 /turf/simulated/shuttle/floor/red,
 /area/shuttle/response_ship)
-"dDY" = (
-/obj/machinery/vending/wallmed1{
-	name = "Emergency NanoMed";
-	pixel_x = -30
-	},
-/obj/structure/table/standard,
-/obj/item/defib_kit,
-/obj/item/defib_kit,
-/obj/machinery/recharger,
-/obj/item/tool/screwdriver,
-/turf/simulated/shuttle/floor/white,
-/area/space)
 "dEQ" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
@@ -4570,12 +4483,6 @@
 /obj/effect/floor_decal/sign/small_f/decal,
 /turf/simulated/floor/holofloor/wood,
 /area/holodeck/source_chess)
-"dFB" = (
-/obj/machinery/door/airlock/maintenance_hatch{
-	req_access = list(101)
-	},
-/turf/simulated/shuttle/floor/black,
-/area/space)
 "dFI" = (
 /obj/structure/table/steel_reinforced,
 /turf/unsimulated/floor{
@@ -4665,8 +4572,16 @@
 /turf/simulated/floor/carpet/retro_red,
 /area/shadekin)
 "dHC" = (
-/turf/simulated/shuttle/wall/hard_corner,
-/area/space)
+/obj/machinery/embedded_controller/radio/simple_docking_controller{
+	frequency = 1381;
+	id_tag = "cryostorage_shuttle_recovery";
+	req_one_access = list(13);
+	tag_door = "cryostorage_shuttle_recovery_hatch";
+	dir = 1;
+	pixel_y = -23
+	},
+/turf/simulated/shuttle/floor/yellow,
+/area/centcom/evac)
 "dIk" = (
 /obj/effect/floor_decal/sign/small_g/decal,
 /turf/simulated/floor/holofloor/wood,
@@ -4679,7 +4594,7 @@
 /turf/simulated/shuttle/floor/white,
 /area/shuttle/merchant)
 "dJm" = (
-/turf/simulated/shuttle/plating,
+/turf/simulated/floor/airless,
 /area/shuttle/cryo/centcom)
 "dJx" = (
 /obj/structure/bed/chair{
@@ -5079,17 +4994,6 @@
 	icon_state = "steel"
 	},
 /area/centcom/bar)
-"eac" = (
-/obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1381;
-	id_tag = "escape_pod_2_recovery";
-	pixel_x = -25;
-	pixel_y = 25;
-	req_one_access = list(13);
-	tag_door = "escape_pod_2_recovery_hatch"
-	},
-/turf/simulated/shuttle/floor/yellow,
-/area/space)
 "eay" = (
 /obj/effect/floor_decal/milspec/color/orange,
 /obj/effect/floor_decal/emblem/itgdauntless{
@@ -5402,14 +5306,6 @@
 /obj/structure/prop/statue/pillar/dark,
 /turf/simulated/floor/tiled/techmaint,
 /area/shadekin)
-"erU" = (
-/obj/structure/table/reinforced,
-/obj/item/paper_bin,
-/obj/item/pen,
-/turf/simulated/shuttle/floor{
-	icon_state = "floor_red"
-	},
-/area/space)
 "erZ" = (
 /obj/structure/table/rack,
 /obj/item/storage/secure/briefcase,
@@ -5441,11 +5337,6 @@
 /obj/item/toy/eight_ball,
 /turf/simulated/floor/wood/alt,
 /area/shadekin)
-"euj" = (
-/turf/unsimulated/wall/shuttle_bay{
-	dir = 8
-	},
-/area/space)
 "euq" = (
 /obj/structure/closet,
 /obj/random/maintenance/engineering,
@@ -5661,16 +5552,9 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/shadekin)
 "eGl" = (
-/obj/machinery/door/airlock/external{
-	frequency = 1381;
-	icon_state = "door_locked";
-	id_tag = "cryostorage_shuttle_recovery_hatch";
-	locked = 1;
-	name = "Recovery Shuttle Dock Cryostorage";
-	req_access = list(13)
-	},
-/turf/simulated/shuttle/floor/black,
-/area/space)
+/obj/effect/shuttle_landmark/southern_cross/escape_pod4/offsite,
+/turf/simulated/shuttle/plating,
+/area/shuttle/escape_pod4/centcom)
 "eGz" = (
 /obj/item/bedsheet/greendouble,
 /obj/item/bedsheet/hosdouble{
@@ -5714,15 +5598,6 @@
 	icon_state = "vault"
 	},
 /area/centcom/security)
-"eJn" = (
-/obj/structure/table/reinforced,
-/obj/item/storage/box/bodybags{
-	pixel_x = 2;
-	pixel_y = 2
-	},
-/obj/item/storage/box/bodybags,
-/turf/simulated/shuttle/floor/white,
-/area/space)
 "eKh" = (
 /obj/structure/undies_wardrobe,
 /turf/unsimulated/floor{
@@ -5786,9 +5661,6 @@
 	},
 /turf/simulated/wall/tgmc/darkwall,
 /area/shadekin)
-"eOK" = (
-/turf/simulated/shuttle/wall,
-/area/shuttle/escape_pod1/centcom)
 "eOM" = (
 /obj/item/bedsheet/double{
 	pixel_x = -9;
@@ -6477,19 +6349,11 @@
 	icon_state = "vault"
 	},
 /area/centcom/command)
-"fEC" = (
-/obj/machinery/atmospherics/pipe/manifold/visible,
-/turf/simulated/shuttle/floor/white,
-/area/space)
 "fEF" = (
 /turf/unsimulated/floor{
 	icon_state = "white"
 	},
 /area/syndicate_station)
-"fFG" = (
-/obj/structure/bed/chair,
-/turf/simulated/shuttle/floor/black,
-/area/space)
 "fGQ" = (
 /obj/effect/floor_decal/milspec/monotile,
 /obj/effect/floor_decal/milspec/stripe{
@@ -6596,12 +6460,6 @@
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/steel_dirty,
 /area/shadekin)
-"fLC" = (
-/obj/machinery/computer/shuttle{
-	dir = 1
-	},
-/turf/simulated/shuttle/floor/black,
-/area/space)
 "fME" = (
 /obj/structure/table/rack,
 /obj/item/clothing/suit/armor/vest/ert/command,
@@ -6687,10 +6545,9 @@
 /turf/unsimulated/wall,
 /area/centcom/security)
 "fRw" = (
-/obj/structure/grille,
-/obj/structure/shuttle/window,
+/obj/effect/shuttle_landmark/southern_cross/escape_pod3/offsite,
 /turf/simulated/shuttle/plating,
-/area/space)
+/area/shuttle/escape_pod3/centcom)
 "fRY" = (
 /obj/structure/holostool,
 /obj/effect/floor_decal/carpet,
@@ -6766,10 +6623,6 @@
 	icon_state = "steel"
 	},
 /area/centcom/bar)
-"fWK" = (
-/obj/structure/closet/emcloset,
-/turf/simulated/shuttle/floor/yellow,
-/area/space)
 "fXl" = (
 /obj/machinery/light{
 	dir = 4
@@ -6923,12 +6776,6 @@
 	},
 /turf/simulated/floor/carpet/retro,
 /area/shadekin)
-"gfe" = (
-/obj/machinery/door/airlock{
-	name = "Unisex Showers"
-	},
-/turf/simulated/shuttle/floor/white,
-/area/space)
 "ggh" = (
 /obj/structure/table/darkglass,
 /obj/effect/floor_decal/milspec/cargo,
@@ -7084,12 +6931,6 @@
 	icon_state = "lino"
 	},
 /area/tdome/tdomeadmin)
-"glQ" = (
-/obj/machinery/atmospherics/unary/freezer{
-	icon_state = "freezer"
-	},
-/turf/simulated/shuttle/floor/white,
-/area/space)
 "gmB" = (
 /obj/structure/shuttle/engine/heater,
 /obj/structure/window/reinforced{
@@ -7181,13 +7022,6 @@
 	},
 /turf/unsimulated/floor/dark,
 /area/shadekin)
-"gsX" = (
-/obj/machinery/door/airlock/glass_security{
-	name = "Escape Shuttle Cell";
-	req_access = list(1)
-	},
-/turf/simulated/shuttle/plating,
-/area/space)
 "guJ" = (
 /obj/machinery/light{
 	dir = 8
@@ -7416,10 +7250,6 @@
 	},
 /turf/simulated/floor/carpet/green,
 /area/shadekin)
-"gDO" = (
-/obj/structure/bed/chair,
-/turf/simulated/shuttle/floor,
-/area/space)
 "gEf" = (
 /obj/item/toy/plushie/marble_fox{
 	pixel_x = -17;
@@ -7476,45 +7306,6 @@
 	icon_state = "carpet"
 	},
 /area/skipjack_station)
-"gGr" = (
-/obj/structure/closet/crate/medical,
-/obj/item/storage/firstaid/regular{
-	pixel_x = -2;
-	pixel_y = 4
-	},
-/obj/item/storage/firstaid/regular{
-	pixel_x = -2;
-	pixel_y = 4
-	},
-/obj/item/bodybag/cryobag{
-	pixel_x = 5
-	},
-/obj/item/bodybag/cryobag{
-	pixel_x = 5
-	},
-/obj/item/storage/firstaid/o2{
-	layer = 2.8;
-	pixel_x = 4;
-	pixel_y = 6
-	},
-/obj/item/storage/box/masks,
-/obj/item/storage/box/gloves{
-	pixel_x = 3;
-	pixel_y = 4
-	},
-/obj/item/storage/firstaid/toxin,
-/obj/item/storage/firstaid/fire{
-	layer = 2.9;
-	pixel_x = 2;
-	pixel_y = 3
-	},
-/obj/item/storage/firstaid/adv{
-	pixel_x = -2
-	},
-/obj/item/reagent_containers/blood/empty,
-/obj/item/reagent_containers/blood/empty,
-/turf/simulated/shuttle/floor/white,
-/area/shuttle/escape_pod1/centcom)
 "gGS" = (
 /obj/effect/floor_decal/corner/red{
 	dir = 6
@@ -7740,17 +7531,6 @@
 	icon_state = "white"
 	},
 /area/syndicate_station)
-"gQV" = (
-/obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1381;
-	id_tag = "cryostorage_shuttle_recovery";
-	pixel_x = -26;
-	pixel_y = 26;
-	req_one_access = list(13);
-	tag_door = "cryostorage_shuttle_recovery_hatch"
-	},
-/turf/simulated/shuttle/floor,
-/area/space)
 "gRf" = (
 /obj/effect/floor_decal/spline/fancy{
 	icon_state = "spline_fancy_cee"
@@ -8181,17 +7961,6 @@
 	icon_state = "white"
 	},
 /area/centcom/medical)
-"hiW" = (
-/obj/machinery/door/airlock/external{
-	frequency = 1381;
-	icon_state = "door_locked";
-	id_tag = "escape_pod_7_recovery_hatch";
-	locked = 1;
-	name = "Recovery Shuttle Dock 7";
-	req_access = list(13)
-	},
-/turf/simulated/shuttle/floor/black,
-/area/space)
 "hjt" = (
 /obj/effect/floor_decal/corner/yellow,
 /turf/unsimulated/floor{
@@ -8549,11 +8318,8 @@
 	},
 /area/skipjack_station)
 "hvN" = (
-/obj/structure/table/rack,
-/turf/simulated/shuttle/floor{
-	icon_state = "floor_red"
-	},
-/area/space)
+/turf/simulated/shuttle/plating,
+/area/shuttle/escape_pod2/centcom)
 "hwq" = (
 /obj/item/xenos_claw,
 /obj/item/organ/internal/brain/vox,
@@ -8847,10 +8613,6 @@
 	},
 /turf/simulated/floor/holofloor/grass,
 /area/holodeck/source_picnicarea)
-"hLh" = (
-/obj/machinery/vending/coffee,
-/turf/simulated/shuttle/floor/yellow,
-/area/space)
 "hLw" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -8944,14 +8706,8 @@
 /turf/simulated/shuttle/floor/red,
 /area/shuttle/administration)
 "hQH" = (
-/obj/structure/table/standard,
-/obj/item/storage/firstaid/toxin{
-	pixel_x = -2;
-	pixel_y = 4
-	},
-/obj/item/storage/firstaid/toxin,
-/turf/simulated/shuttle/floor/white,
-/area/shuttle/escape_pod2/centcom)
+/turf/simulated/shuttle/plating,
+/area/shuttle/large_escape_pod1/centcom)
 "hQX" = (
 /obj/structure/table/steel_reinforced,
 /obj/random/toolbox,
@@ -8994,12 +8750,6 @@
 /obj/item/storage/firstaid/toxin,
 /turf/simulated/shuttle/floor/white,
 /area/centcom/evac)
-"hRz" = (
-/obj/machinery/computer/secure_data,
-/turf/simulated/shuttle/floor{
-	icon_state = "floor_red"
-	},
-/area/space)
 "hRE" = (
 /obj/structure/window/reinforced/survival_pod{
 	dir = 1
@@ -9289,9 +9039,6 @@
 	},
 /turf/simulated/shuttle/floor/black,
 /area/centcom/evac)
-"ifX" = (
-/turf/space,
-/area/shuttle/escape_pod5/centcom)
 "ifY" = (
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 5
@@ -9399,10 +9146,6 @@
 	},
 /turf/simulated/floor/tiled/milspec/sterile,
 /area/shadekin)
-"imv" = (
-/obj/effect/shuttle_landmark/southern_cross/escape_pod2/offsite,
-/turf/simulated/shuttle/plating,
-/area/space)
 "imM" = (
 /obj/structure/flora/ausbushes/brflowers,
 /obj/effect/floor_decal/spline/fancy/wood/corner,
@@ -9489,10 +9232,6 @@
 	},
 /turf/simulated/floor/holofloor/tiled,
 /area/holodeck/source_thunderdomecourt)
-"iro" = (
-/obj/effect/shuttle_landmark/southern_cross/escape_pod8/offsite,
-/turf/simulated/shuttle/plating,
-/area/space)
 "irq" = (
 /obj/structure/table/rack,
 /obj/item/clothing/suit/storage/vest/heavy/merc,
@@ -10127,10 +9866,6 @@
 	},
 /turf/simulated/shuttle/plating,
 /area/shuttle/merchant)
-"iRs" = (
-/obj/effect/shuttle_landmark/southern_cross/large_escape_pod2/offsite,
-/turf/simulated/shuttle/plating,
-/area/space)
 "iSl" = (
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
 	dir = 1;
@@ -10218,10 +9953,6 @@
 	},
 /turf/unsimulated/floor/dark,
 /area/shadekin)
-"iVs" = (
-/obj/structure/toilet,
-/turf/simulated/shuttle/floor/white,
-/area/space)
 "iVu" = (
 /obj/machinery/door/airlock/centcom{
 	name = "Kitchen";
@@ -10533,10 +10264,6 @@
 	name = "plating"
 	},
 /area/skipjack_station)
-"jkw" = (
-/obj/effect/shuttle_landmark/southern_cross/large_escape_pod1/offsite,
-/turf/simulated/shuttle/plating,
-/area/space)
 "jkB" = (
 /obj/effect/floor_decal/carpet{
 	dir = 4
@@ -10867,17 +10594,6 @@
 	name = "plating"
 	},
 /area/syndicate_station)
-"jyA" = (
-/obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1381;
-	id_tag = "escape_pod_5_recovery";
-	pixel_x = 26;
-	pixel_y = -26;
-	req_one_access = list(13);
-	tag_door = "escape_pod_5_recovery_hatch"
-	},
-/turf/simulated/shuttle/floor/yellow,
-/area/space)
 "jyH" = (
 /obj/machinery/atmospherics/pipe/simple/visible,
 /obj/machinery/meter,
@@ -10904,11 +10620,6 @@
 	icon_state = "white"
 	},
 /area/centcom/medical)
-"jBi" = (
-/obj/structure/reagent_dispensers/watertank,
-/obj/item/reagent_containers/glass/bucket,
-/turf/simulated/shuttle/plating,
-/area/space)
 "jCc" = (
 /obj/item/storage/box/syndie_kit/clerical,
 /obj/structure/table/standard,
@@ -11141,15 +10852,6 @@
 	},
 /turf/simulated/shuttle/plating,
 /area/shuttle/ninja)
-"jMa" = (
-/obj/item/reagent_containers/glass/beaker/cryoxadone{
-	pixel_x = -4
-	},
-/obj/item/tool/wrench,
-/obj/structure/table/reinforced,
-/obj/item/reagent_containers/glass/beaker/cryoxadone,
-/turf/simulated/shuttle/floor/white,
-/area/space)
 "jMh" = (
 /obj/structure/bed/chair/backed_red{
 	dir = 1
@@ -11408,17 +11110,6 @@
 	icon_state = "vault"
 	},
 /area/tdome)
-"jYR" = (
-/obj/machinery/door/airlock/external{
-	frequency = 1381;
-	icon_state = "door_locked";
-	id_tag = "escape_pod_3_recovery_hatch";
-	locked = 1;
-	name = "Recovery Shuttle Dock 3";
-	req_access = list(13)
-	},
-/turf/simulated/shuttle/floor/black,
-/area/space)
 "jZb" = (
 /obj/effect/floor_decal/corner/blue/full{
 	dir = 1
@@ -11489,11 +11180,6 @@
 	icon_state = "lino"
 	},
 /area/syndicate_station)
-"kbv" = (
-/obj/structure/bed/padded,
-/obj/item/bedsheet/medical,
-/turf/simulated/shuttle/floor,
-/area/space)
 "kbL" = (
 /obj/effect/floor_decal/milspec/color/silver,
 /turf/simulated/floor/tiled/milspec/sterile,
@@ -12119,10 +11805,6 @@
 	name = "plating"
 	},
 /area/skipjack_station)
-"kxd" = (
-/obj/structure/table/standard,
-/turf/simulated/shuttle/floor/yellow,
-/area/space)
 "kxt" = (
 /obj/structure/table/rack,
 /obj/structure/window/reinforced,
@@ -12397,12 +12079,6 @@
 	icon_state = "vault"
 	},
 /area/tdome)
-"kMC" = (
-/obj/machinery/computer/card,
-/turf/simulated/shuttle/floor{
-	icon_state = "floor_red"
-	},
-/area/space)
 "kME" = (
 /obj/effect/floor_decal/techfloor{
 	dir = 8
@@ -12446,11 +12122,17 @@
 /turf/simulated/floor/carpet/gaycarpet,
 /area/shadekin)
 "kOt" = (
-/obj/machinery/door/airlock{
-	name = "Unisex Restrooms"
+/obj/machinery/embedded_controller/radio/simple_docking_controller{
+	frequency = 1381;
+	id_tag = "escape_pod_2_recovery";
+	pixel_x = -25;
+	pixel_y = 25;
+	req_one_access = list(13);
+	tag_door = "escape_pod_2_recovery_hatch";
+	dir = 4
 	},
 /turf/simulated/shuttle/floor,
-/area/space)
+/area/centcom/evac)
 "kOE" = (
 /obj/structure/window/reinforced/survival_pod{
 	dir = 1
@@ -12493,14 +12175,6 @@
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/steel_dirty,
 /area/shadekin)
-"kPI" = (
-/obj/structure/window/reinforced{
-	dir = 1;
-	health = 1e+006
-	},
-/obj/machinery/portable_atmospherics/canister/oxygen,
-/turf/simulated/shuttle/plating,
-/area/space)
 "kPU" = (
 /obj/structure/table/rack,
 /obj/item/clothing/under/color/red,
@@ -12617,9 +12291,6 @@
 	},
 /turf/simulated/floor/reinforced,
 /area/shadekin)
-"kVS" = (
-/turf/unsimulated/wall/shuttle_bay,
-/area/space)
 "kWh" = (
 /obj/structure/closet/secure_closet/freezer/fridge,
 /obj/random/meat,
@@ -12930,10 +12601,6 @@
 	icon_state = "dark"
 	},
 /area/centcom/security)
-"lnd" = (
-/obj/machinery/portable_atmospherics/powered/pump,
-/turf/simulated/shuttle/plating,
-/area/space)
 "lnu" = (
 /obj/structure/bed/chair/backed_red{
 	dir = 1
@@ -12987,10 +12654,6 @@
 	},
 /turf/simulated/shuttle/floor,
 /area/shuttle/escape/centcom)
-"lqy" = (
-/obj/effect/shuttle_landmark/southern_cross/escape_pod5/offsite,
-/turf/simulated/shuttle/plating,
-/area/space)
 "lqC" = (
 /obj/machinery/shower{
 	dir = 8;
@@ -13036,12 +12699,6 @@
 	},
 /turf/simulated/shuttle/plating/airless/carry,
 /area/shuttle/administration)
-"ltA" = (
-/obj/structure/bed/chair,
-/turf/simulated/shuttle/floor{
-	icon_state = "floor_red"
-	},
-/area/space)
 "ltP" = (
 /obj/effect/floor_decal/milspec/color/black,
 /obj/effect/floor_decal/techfloor{
@@ -13132,14 +12789,6 @@
 "lyw" = (
 /turf/unsimulated/beach/water,
 /area/beach)
-"lza" = (
-/obj/structure/window/reinforced{
-	dir = 4;
-	health = 1e+006
-	},
-/obj/structure/closet/secure_closet/personal,
-/turf/simulated/shuttle/floor,
-/area/space)
 "lzn" = (
 /obj/structure/table/steel,
 /obj/item/radio/uplink,
@@ -13286,32 +12935,23 @@
 	},
 /area/syndicate_station)
 "lFQ" = (
-/obj/machinery/computer/crew,
-/turf/simulated/shuttle/floor/black,
-/area/space)
+/obj/machinery/embedded_controller/radio/simple_docking_controller{
+	frequency = 1381;
+	id_tag = "escape_pod_3_recovery";
+	pixel_x = 26;
+	pixel_y = 26;
+	req_one_access = list(13);
+	tag_door = "escape_pod_3_recovery_hatch";
+	dir = 8
+	},
+/turf/simulated/shuttle/floor,
+/area/centcom/evac)
 "lGa" = (
 /obj/item/antag_spawner/technomancer_apprentice,
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
 /area/wizard_station)
-"lGp" = (
-/obj/machinery/door/airlock/external{
-	frequency = 1381;
-	icon_state = "door_locked";
-	id_tag = "escape_pod_6_recovery_hatch";
-	locked = 1;
-	name = "Recovery Shuttle Dock 6";
-	req_access = list(13)
-	},
-/turf/simulated/shuttle/floor/black,
-/area/space)
-"lHw" = (
-/obj/structure/extinguisher_cabinet{
-	pixel_x = 28
-	},
-/turf/simulated/shuttle/floor/white,
-/area/space)
 "lHI" = (
 /obj/structure/table/standard,
 /obj/item/pda/syndicate,
@@ -13495,17 +13135,6 @@
 	icon_state = "dark"
 	},
 /area/wizard_station)
-"lPb" = (
-/obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1381;
-	id_tag = "large_escape_pod_2_recovery";
-	pixel_x = -25;
-	pixel_y = 25;
-	req_one_access = list(13);
-	tag_door = "large_escape_pod_2_recovery_hatch"
-	},
-/turf/simulated/shuttle/floor/yellow,
-/area/space)
 "lPr" = (
 /obj/structure/table/rack,
 /obj/item/suit_cooling_unit,
@@ -13534,9 +13163,6 @@
 	icon_state = "dark"
 	},
 /area/syndicate_station)
-"lPD" = (
-/turf/space,
-/area/shuttle/escape_pod1/centcom)
 "lPJ" = (
 /obj/structure/bed/chair/comfy/teal{
 	dir = 1
@@ -13571,13 +13197,6 @@
 "lRp" = (
 /turf/simulated/floor/holofloor/carpet,
 /area/holodeck/source_theatre)
-"lRs" = (
-/obj/structure/shuttle/engine/propulsion{
-	dir = 1;
-	icon_state = "propulsion_l"
-	},
-/turf/simulated/shuttle/plating/airless/carry,
-/area/space)
 "lRw" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -13608,9 +13227,6 @@
 /obj/effect/floor_decal/milspec/hatchmarks,
 /turf/simulated/floor/tiled/steel_dirty,
 /area/shadekin)
-"lSX" = (
-/turf/unsimulated/wall/shuttle_bay,
-/area/shuttle/escape_pod6/centcom)
 "lTh" = (
 /obj/effect/floor_decal/industrial/warning,
 /obj/effect/floor_decal/sign/dock/one,
@@ -13618,10 +13234,6 @@
 	icon_state = "steel"
 	},
 /area/centcom/terminal)
-"lTi" = (
-/obj/machinery/portable_atmospherics/powered/scrubber,
-/turf/simulated/shuttle/plating,
-/area/space)
 "lVa" = (
 /obj/effect/floor_decal/techfloor/orange{
 	dir = 5
@@ -13667,9 +13279,6 @@
 	icon_state = "vault"
 	},
 /area/wizard_station)
-"lXu" = (
-/turf/space,
-/area/shuttle/escape_pod6/centcom)
 "lXX" = (
 /obj/structure/lattice,
 /obj/structure/window/reinforced{
@@ -13728,9 +13337,6 @@
 /obj/item/clothing/accessory/medal/bronze_heart,
 /turf/simulated/shuttle/floor/black,
 /area/shuttle/merchant)
-"lZD" = (
-/turf/simulated/shuttle/floor/yellow,
-/area/space)
 "lZH" = (
 /obj/structure/window/reinforced/survival_pod{
 	dir = 8
@@ -13858,9 +13464,6 @@
 	},
 /turf/simulated/floor/tiled/steel_dirty,
 /area/shadekin)
-"mgi" = (
-/turf/simulated/shuttle/plating,
-/area/space)
 "mhz" = (
 /obj/structure/window/reinforced{
 	dir = 8
@@ -13971,11 +13574,16 @@
 /turf/simulated/floor/carpet/blucarpet,
 /area/shadekin)
 "mlz" = (
-/obj/machinery/computer/cloning{
-	dir = 1
+/obj/machinery/door/airlock/external{
+	frequency = 1381;
+	icon_state = "door_locked";
+	id_tag = "escape_pod_4_recovery_hatch";
+	locked = 1;
+	name = "Recovery Shuttle Dock 4";
+	req_access = list(13)
 	},
-/turf/simulated/shuttle/floor/white,
-/area/space)
+/turf/simulated/shuttle/floor,
+/area/centcom/evac)
 "mlA" = (
 /obj/item/stool/padded,
 /obj/effect/floor_decal/corner/yellow/diagonal,
@@ -14104,15 +13712,6 @@
 /obj/random/obstruction,
 /turf/simulated/floor,
 /area/shadekin)
-"mtY" = (
-/obj/structure/table/standard,
-/obj/item/storage/firstaid/fire,
-/obj/item/storage/firstaid/fire{
-	pixel_x = -2;
-	pixel_y = 4
-	},
-/turf/simulated/shuttle/floor/white,
-/area/shuttle/escape_pod2/centcom)
 "mui" = (
 /obj/structure/table/hardwoodtable,
 /obj/item/flame/candle/candelabra/everburn{
@@ -14408,17 +14007,6 @@
 /obj/structure/window/reinforced/full,
 /turf/simulated/shuttle/plating,
 /area/shuttle/merchant)
-"mHg" = (
-/obj/machinery/vending/engineering,
-/turf/simulated/shuttle/plating,
-/area/space)
-"mHK" = (
-/obj/machinery/door/airlock/medical{
-	name = "Morgue";
-	req_access = list(6)
-	},
-/turf/simulated/shuttle/floor/white,
-/area/space)
 "mIc" = (
 /obj/structure/table/woodentable/holotable,
 /obj/structure/window/reinforced/holowindow{
@@ -14429,13 +14017,6 @@
 	},
 /turf/simulated/floor/holofloor/wood,
 /area/holodeck/source_courtroom)
-"mIH" = (
-/obj/structure/bed/roller,
-/turf/simulated/shuttle/floor/white,
-/area/space)
-"mJq" = (
-/turf/simulated/shuttle/wall/dark/no_join,
-/area/space)
 "mJI" = (
 /obj/structure/frame/computer,
 /turf/unsimulated/floor{
@@ -14666,12 +14247,6 @@
 	icon_state = "white"
 	},
 /area/centcom/medical)
-"mUu" = (
-/obj/machinery/atmospherics/pipe/simple/visible{
-	dir = 9
-	},
-/turf/simulated/shuttle/floor/white,
-/area/space)
 "mUJ" = (
 /turf/unsimulated/ai_visible,
 /area/ai_multicam_room)
@@ -14805,13 +14380,6 @@
 	icon_state = "carpet"
 	},
 /area/centcom/command)
-"nbW" = (
-/turf/unsimulated/wall/shuttle_bay,
-/area/shuttle/escape_pod4/centcom)
-"ncy" = (
-/obj/item/bikehorn/rubberducky,
-/turf/simulated/shuttle/floor/white,
-/area/space)
 "ncE" = (
 /obj/machinery/atmospherics/pipe/simple/visible{
 	dir = 6
@@ -14831,10 +14399,6 @@
 	},
 /turf/simulated/floor/holofloor/tiled,
 /area/holodeck/source_thunderdomecourt)
-"neg" = (
-/obj/effect/shuttle_landmark/southern_cross/escape_pod3/offsite,
-/turf/simulated/shuttle/plating,
-/area/space)
 "neC" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 8
@@ -14893,17 +14457,6 @@
 	},
 /turf/simulated/floor/wood/sif,
 /area/shadekin)
-"nfn" = (
-/obj/structure/sink{
-	dir = 8;
-	pixel_x = -12;
-	pixel_y = 2
-	},
-/obj/structure/mirror{
-	pixel_x = -28
-	},
-/turf/simulated/shuttle/floor/white,
-/area/space)
 "nfr" = (
 /obj/machinery/door/blast/regular{
 	id = "ASSAULT-M";
@@ -14992,16 +14545,6 @@
 /obj/structure/table/bench/wooden,
 /turf/simulated/floor/carpet/tealcarpet,
 /area/shadekin)
-"nlq" = (
-/obj/machinery/door/airlock{
-	name = "Unit 1"
-	},
-/turf/simulated/shuttle/floor/white,
-/area/space)
-"nlx" = (
-/obj/machinery/sleep_console,
-/turf/simulated/shuttle/floor/white,
-/area/space)
 "nlG" = (
 /obj/machinery/atmospherics/pipe/tank/air,
 /turf/simulated/shuttle/floor/voidcraft,
@@ -15217,11 +14760,6 @@
 	},
 /turf/simulated/floor/tiled/steel_dirty,
 /area/shadekin)
-"nvl" = (
-/obj/structure/bed,
-/obj/item/bedsheet/orange,
-/turf/simulated/shuttle/plating,
-/area/space)
 "nvm" = (
 /obj/structure/holostool,
 /obj/effect/floor_decal/carpet{
@@ -15363,11 +14901,16 @@
 /turf/simulated/shuttle/floor/darkred,
 /area/shuttle/merchant)
 "nCN" = (
-/obj/structure/shuttle/engine/propulsion{
-	dir = 1
+/obj/machinery/door/airlock/external{
+	frequency = 1381;
+	icon_state = "door_locked";
+	id_tag = "escape_pod_6_recovery_hatch";
+	locked = 1;
+	name = "Recovery Shuttle Dock 6";
+	req_access = list(13)
 	},
-/turf/simulated/shuttle/plating/airless/carry,
-/area/space)
+/turf/simulated/shuttle/floor,
+/area/centcom/evac)
 "nEp" = (
 /obj/structure/bed/chair{
 	dir = 8
@@ -15718,10 +15261,6 @@
 	icon_state = "dark"
 	},
 /area/centcom/specops)
-"nVy" = (
-/obj/machinery/iv_drip,
-/turf/simulated/shuttle/floor/white,
-/area/space)
 "nWU" = (
 /obj/structure/disposalpipe/segment{
 	dir = 1
@@ -15831,17 +15370,6 @@
 	},
 /turf/simulated/wall/tgmc/darkwall,
 /area/shadekin)
-"oaZ" = (
-/obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1381;
-	id_tag = "escape_pod_7_recovery";
-	pixel_x = -26;
-	pixel_y = 26;
-	req_one_access = list(13);
-	tag_door = "escape_pod_7_recovery_hatch"
-	},
-/turf/simulated/shuttle/floor/yellow,
-/area/space)
 "oba" = (
 /obj/structure/window/reinforced/survival_pod{
 	dir = 1
@@ -16027,12 +15555,6 @@
 	},
 /turf/simulated/shuttle/floor/white,
 /area/centcom/evac)
-"ojy" = (
-/obj/machinery/atmospherics/unary/cryo_cell{
-	layer = 3.3
-	},
-/turf/simulated/shuttle/floor/white,
-/area/space)
 "okC" = (
 /obj/item/circuitboard/aiupload,
 /obj/item/circuitboard/borgupload,
@@ -16162,9 +15684,16 @@
 	},
 /area/centcom/medical)
 "osg" = (
-/obj/structure/table/standard,
+/obj/machinery/door/airlock/external{
+	frequency = 1381;
+	icon_state = "door_locked";
+	id_tag = "cryostorage_shuttle_recovery_hatch";
+	locked = 1;
+	name = "Recovery Shuttle Dock Cryostorage";
+	req_access = list(13)
+	},
 /turf/simulated/shuttle/floor,
-/area/space)
+/area/centcom/evac)
 "osz" = (
 /obj/effect/floor_decal/milspec/color/orange,
 /obj/effect/floor_decal/milspec/stripe{
@@ -16207,11 +15736,6 @@
 	},
 /turf/simulated/floor/reinforced,
 /area/shadekin)
-"ouF" = (
-/obj/structure/shuttle/window,
-/obj/structure/grille,
-/turf/simulated/shuttle/plating,
-/area/space)
 "ouL" = (
 /obj/effect/floor_decal/corner/red/full{
 	dir = 1
@@ -16428,16 +15952,9 @@
 	},
 /area/centcom/command)
 "oJC" = (
-/obj/machinery/door/airlock/external{
-	frequency = 1381;
-	icon_state = "door_locked";
-	id_tag = "escape_pod_5_recovery_hatch";
-	locked = 1;
-	name = "Recovery Shuttle Dock 5";
-	req_access = list(13)
-	},
-/turf/simulated/shuttle/floor/black,
-/area/space)
+/obj/effect/shuttle_landmark/southern_cross/escape_pod2/offsite,
+/turf/simulated/shuttle/plating,
+/area/shuttle/escape_pod2/centcom)
 "oJG" = (
 /obj/structure/shuttle/engine/propulsion{
 	dir = 4;
@@ -16452,9 +15969,6 @@
 	icon_state = "dark"
 	},
 /area/wizard_station)
-"oJZ" = (
-/turf/simulated/shuttle/wall/no_join/orange,
-/area/shuttle/escape_pod4/centcom)
 "oKR" = (
 /obj/machinery/hologram/holopad,
 /turf/simulated/shuttle/floor,
@@ -16474,12 +15988,6 @@
 	icon_state = "wood"
 	},
 /area/ninja_dojo/dojo)
-"oLT" = (
-/obj/structure/table/standard,
-/obj/item/radio/off,
-/obj/item/paper_bin,
-/turf/simulated/shuttle/floor/black,
-/area/space)
 "oMV" = (
 /obj/structure/bed/double{
 	pixel_x = 1
@@ -16638,9 +16146,6 @@
 	icon_state = "wood"
 	},
 /area/centcom/bar)
-"pcd" = (
-/turf/simulated/shuttle/floor,
-/area/space)
 "pcm" = (
 /obj/structure/reagent_dispensers/watertank/high,
 /obj/effect/floor_decal/techfloor{
@@ -16766,17 +16271,6 @@
 	icon_state = "white"
 	},
 /area/centcom/medical)
-"piP" = (
-/obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1381;
-	id_tag = "escape_pod_1_recovery";
-	pixel_x = -25;
-	pixel_y = 25;
-	req_one_access = list(13);
-	tag_door = "escape_pod_1_recovery_hatch"
-	},
-/turf/simulated/shuttle/floor/yellow,
-/area/space)
 "piQ" = (
 /obj/machinery/recharge_station,
 /turf/unsimulated/floor{
@@ -16813,10 +16307,6 @@
 /obj/effect/map_helper/airlock/button/int_button,
 /turf/simulated/shuttle/plating,
 /area/shuttle/skipjack)
-"pkB" = (
-/obj/machinery/computer/crew,
-/turf/simulated/shuttle/floor/white,
-/area/space)
 "pkK" = (
 /obj/effect/floor_decal/techfloor/orange{
 	dir = 1
@@ -16881,15 +16371,6 @@
 /obj/item/flashlight/lamp/green,
 /turf/simulated/floor/carpet,
 /area/shadekin)
-"pnC" = (
-/obj/machinery/door/airlock/glass_security{
-	name = "Security Processing";
-	req_access = list(1)
-	},
-/turf/simulated/shuttle/floor{
-	icon_state = "floor_red"
-	},
-/area/space)
 "pod" = (
 /obj/structure/closet/secure_closet/security,
 /obj/effect/floor_decal/corner/red{
@@ -16916,11 +16397,9 @@
 /turf/simulated/floor/tiled/freezer,
 /area/shadekin)
 "poR" = (
-/obj/machinery/bodyscanner{
-	dir = 8
-	},
-/turf/simulated/shuttle/floor/white,
-/area/space)
+/obj/effect/shuttle_landmark/southern_cross/escape_pod1/offsite,
+/turf/simulated/shuttle/plating,
+/area/shuttle/escape_pod1/centcom)
 "ppq" = (
 /obj/structure/table/woodentable/holotable,
 /turf/simulated/floor/holofloor/desert,
@@ -17132,17 +16611,6 @@
 	icon_state = "white"
 	},
 /area/centcom/medical)
-"pAY" = (
-/obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1381;
-	id_tag = "escape_pod_6_recovery";
-	pixel_x = 26;
-	pixel_y = -26;
-	req_one_access = list(13);
-	tag_door = "escape_pod_6_recovery_hatch"
-	},
-/turf/simulated/shuttle/floor/yellow,
-/area/space)
 "pBc" = (
 /obj/structure/closet/emcloset/legacy,
 /obj/effect/floor_decal/milspec/color/black/half{
@@ -17400,16 +16868,6 @@
 	icon_state = "carpet"
 	},
 /area/centcom/command)
-"pMJ" = (
-/obj/structure/window/reinforced{
-	dir = 1;
-	health = 1e+006
-	},
-/turf/simulated/shuttle/plating,
-/area/space)
-"pMU" = (
-/turf/unsimulated/wall/shuttle_bay,
-/area/shuttle/escape_pod5/centcom)
 "pNc" = (
 /turf/unsimulated/floor{
 	icon_state = "steel"
@@ -17531,10 +16989,6 @@
 	icon_state = "white"
 	},
 /area/centcom/medical)
-"pTz" = (
-/obj/effect/shuttle_landmark/southern_cross/escape_pod7/offsite,
-/turf/simulated/shuttle/plating,
-/area/space)
 "pTU" = (
 /obj/machinery/atmospherics/pipe/simple/visible,
 /turf/simulated/shuttle/plating,
@@ -17712,10 +17166,6 @@
 	},
 /turf/simulated/floor/tiled/steel_dirty,
 /area/shadekin)
-"qgE" = (
-/obj/machinery/vending/snack,
-/turf/simulated/shuttle/floor/yellow,
-/area/space)
 "qgG" = (
 /obj/structure/bed/chair/backed_grey{
 	dir = 8
@@ -17737,9 +17187,6 @@
 /obj/item/pinpointer/shuttle/heist,
 /turf/simulated/shuttle/floor/darkred,
 /area/shuttle/skipjack)
-"qiW" = (
-/turf/space,
-/area/centcom/evac)
 "qkf" = (
 /obj/structure/table/rack,
 /obj/item/storage/belt/utility/full,
@@ -17782,10 +17229,6 @@
 	},
 /turf/simulated/floor/reinforced,
 /area/shadekin)
-"qlH" = (
-/obj/machinery/vending/cola,
-/turf/simulated/shuttle/floor/yellow,
-/area/space)
 "qlL" = (
 /obj/machinery/disposal,
 /obj/structure/disposalpipe/trunk{
@@ -17919,9 +17362,6 @@
 /obj/item/card/emag,
 /turf/simulated/shuttle/plating,
 /area/shuttle/skipjack)
-"qrk" = (
-/turf/simulated/shuttle/wall/no_join/orange,
-/area/shuttle/escape_pod3/centcom)
 "qrl" = (
 /obj/machinery/telecomms/server/presets/centcomm,
 /turf/unsimulated/floor{
@@ -18086,9 +17526,6 @@
 /obj/machinery/portable_atmospherics/canister/air,
 /turf/simulated/floor/tiled/steel_dirty,
 /area/shadekin)
-"qAT" = (
-/turf/simulated/shuttle/floor/black,
-/area/space)
 "qAV" = (
 /obj/structure/table/steel_reinforced,
 /obj/machinery/button/remote/blast_door{
@@ -18221,17 +17658,6 @@
 "qOr" = (
 /turf/simulated/shuttle/floor/voidcraft/light,
 /area/shuttle/syndicate)
-"qOC" = (
-/obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1381;
-	id_tag = "escape_pod_8_recovery";
-	pixel_x = 26;
-	pixel_y = -26;
-	req_one_access = list(13);
-	tag_door = "escape_pod_8_recovery_hatch"
-	},
-/turf/simulated/shuttle/floor/yellow,
-/area/space)
 "qPq" = (
 /obj/machinery/light{
 	dir = 4
@@ -18263,12 +17689,6 @@
 	icon_state = "vault"
 	},
 /area/centcom/bar)
-"qRh" = (
-/obj/machinery/computer/operating{
-	dir = 4
-	},
-/turf/simulated/shuttle/floor/white,
-/area/shuttle/escape_pod1/centcom)
 "qRp" = (
 /obj/structure/bed/chair{
 	dir = 8
@@ -18525,17 +17945,6 @@
 	icon_state = "wood"
 	},
 /area/ninja_dojo/dojo)
-"rds" = (
-/obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1381;
-	id_tag = "large_escape_pod_1_recovery";
-	pixel_x = -25;
-	pixel_y = -25;
-	req_one_access = list(13);
-	tag_door = "large_escape_pod_1_recovery_hatch"
-	},
-/turf/simulated/shuttle/floor/yellow,
-/area/space)
 "rdA" = (
 /obj/structure/table/sifwooden_reinforced,
 /obj/item/starcaster_news,
@@ -18587,13 +17996,6 @@
 	},
 /turf/simulated/floor/wood/sif,
 /area/shadekin)
-"rfY" = (
-/obj/machinery/door/airlock/hatch{
-	name = "Cockpit";
-	req_access = list(109)
-	},
-/turf/simulated/shuttle/floor/black,
-/area/space)
 "rgl" = (
 /obj/structure/sign/directions/medical{
 	dir = 1;
@@ -18762,17 +18164,6 @@
 /obj/structure/window/reinforced/full,
 /turf/simulated/shuttle/plating,
 /area/shuttle/merchant)
-"rnQ" = (
-/obj/machinery/door/airlock/external{
-	frequency = 1381;
-	icon_state = "door_locked";
-	id_tag = "large_escape_pod_2_recovery_hatch";
-	locked = 1;
-	name = "Recovery Shuttle Dock 02";
-	req_access = list(13)
-	},
-/turf/simulated/shuttle/floor/black,
-/area/space)
 "rnX" = (
 /obj/structure/table/standard,
 /obj/item/storage/firstaid/fire,
@@ -19420,10 +18811,6 @@
 /obj/structure/holostool,
 /turf/simulated/floor/holofloor/carpet,
 /area/holodeck/source_theatre)
-"rQO" = (
-/obj/effect/shuttle_landmark/southern_cross/escape_pod4/offsite,
-/turf/simulated/shuttle/plating,
-/area/space)
 "rRo" = (
 /obj/structure/closet/secure_closet/brig,
 /turf/unsimulated/floor{
@@ -19910,12 +19297,16 @@
 /turf/simulated/floor/outdoors/grass/heavy,
 /area/shadekin)
 "slD" = (
-/obj/structure/shuttle/engine/heater{
-	dir = 1
+/obj/machinery/door/airlock/external{
+	frequency = 1381;
+	icon_state = "door_locked";
+	id_tag = "escape_pod_3_recovery_hatch";
+	locked = 1;
+	name = "Recovery Shuttle Dock 3";
+	req_access = list(13)
 	},
-/obj/structure/window/reinforced,
-/turf/simulated/shuttle/plating/airless,
-/area/space)
+/turf/simulated/shuttle/floor,
+/area/centcom/evac)
 "slP" = (
 /obj/item/robot_parts/l_leg,
 /turf/simulated/shuttle/plating,
@@ -20000,14 +19391,17 @@
 	},
 /area/centcom/bar)
 "sqk" = (
-/turf/simulated/shuttle/wall/no_join/orange,
-/area/space)
-"sqJ" = (
-/obj/structure/bed/chair{
-	dir = 1
+/obj/machinery/embedded_controller/radio/simple_docking_controller{
+	frequency = 1381;
+	id_tag = "escape_pod_4_recovery";
+	pixel_x = -26;
+	pixel_y = 26;
+	req_one_access = list(13);
+	tag_door = "escape_pod_4_recovery_hatch";
+	dir = 4
 	},
-/turf/simulated/shuttle/floor/white,
-/area/space)
+/turf/simulated/shuttle/floor,
+/area/centcom/evac)
 "sqP" = (
 /obj/machinery/smartfridge/drinks,
 /obj/effect/floor_decal/techfloor{
@@ -20126,17 +19520,6 @@
 	icon_state = "dark"
 	},
 /area/wizard_station)
-"sww" = (
-/obj/machinery/door/airlock/external{
-	frequency = 1381;
-	icon_state = "door_locked";
-	id_tag = "large_escape_pod_1_recovery_hatch";
-	locked = 1;
-	name = "Recovery Shuttle Dock 01";
-	req_access = list(13)
-	},
-/turf/simulated/shuttle/floor/black,
-/area/space)
 "swU" = (
 /obj/machinery/door/airlock/glass{
 	name = "Bar"
@@ -20441,9 +19824,6 @@
 	icon_state = "vault"
 	},
 /area/centcom/specops)
-"sLz" = (
-/turf/space,
-/area/shuttle/escape_pod2/centcom)
 "sLJ" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced{
@@ -20537,11 +19917,16 @@
 	},
 /area/centcom/terminal)
 "sRA" = (
-/obj/structure/morgue{
-	dir = 8
+/obj/machinery/door/airlock/external{
+	frequency = 1381;
+	icon_state = "door_locked";
+	id_tag = "large_escape_pod_1_recovery_hatch";
+	locked = 1;
+	name = "Recovery Shuttle Dock 01";
+	req_access = list(13)
 	},
-/turf/simulated/shuttle/floor/white,
-/area/space)
+/turf/simulated/shuttle/floor,
+/area/centcom/evac)
 "sTx" = (
 /obj/structure/bed/double,
 /obj/item/bedsheet/hosdouble,
@@ -20750,10 +20135,6 @@
 /obj/item/beartrap,
 /turf/simulated/shuttle/floor/darkred,
 /area/shuttle/skipjack)
-"taE" = (
-/obj/machinery/door/airlock,
-/turf/simulated/shuttle/floor,
-/area/space)
 "tbQ" = (
 /obj/structure/holostool,
 /turf/simulated/floor/holofloor/carpet,
@@ -20820,14 +20201,6 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shadekin)
-"tfp" = (
-/obj/machinery/shower{
-	dir = 4;
-	pixel_x = 5
-	},
-/obj/structure/curtain/open/shower,
-/turf/simulated/shuttle/floor/white,
-/area/space)
 "tfr" = (
 /obj/structure/table/standard,
 /obj/item/clothing/accessory/permit,
@@ -20916,14 +20289,6 @@
 	icon_state = "steel"
 	},
 /area/tdome)
-"tiQ" = (
-/obj/structure/closet{
-	name = "Evidence Closet"
-	},
-/turf/simulated/shuttle/floor{
-	icon_state = "floor_red"
-	},
-/area/space)
 "tiU" = (
 /obj/item/toy/plushie/tuxedo_cat{
 	pixel_x = 17;
@@ -20941,17 +20306,6 @@
 /obj/item/robot_parts/r_arm,
 /turf/simulated/shuttle/plating,
 /area/shuttle/skipjack)
-"tke" = (
-/obj/machinery/door/airlock/external{
-	frequency = 1381;
-	icon_state = "door_locked";
-	id_tag = "escape_pod_1_recovery_hatch";
-	locked = 1;
-	name = "Recovery Shuttle Dock 1";
-	req_access = list(13)
-	},
-/turf/simulated/shuttle/floor/black,
-/area/space)
 "tkj" = (
 /obj/machinery/computer/rdservercontrol{
 	badmin = 1;
@@ -20962,10 +20316,6 @@
 	icon_state = "vault"
 	},
 /area/centcom/main_hall)
-"tlX" = (
-/obj/machinery/clonepod,
-/turf/simulated/shuttle/floor/white,
-/area/space)
 "tmh" = (
 /obj/effect/floor_decal/industrial/warning/corner,
 /turf/unsimulated/floor{
@@ -21193,10 +20543,6 @@
 	},
 /turf/simulated/shuttle/floor/black,
 /area/shuttle/merchant)
-"tvj" = (
-/obj/machinery/body_scanconsole,
-/turf/simulated/shuttle/floor/white,
-/area/space)
 "tvl" = (
 /obj/structure/closet/emcloset,
 /turf/simulated/shuttle/floor/white,
@@ -21788,17 +21134,6 @@
 	},
 /turf/simulated/floor,
 /area/shadekin)
-"tYX" = (
-/obj/machinery/door/airlock/external{
-	frequency = 1381;
-	icon_state = "door_locked";
-	id_tag = "escape_pod_4_recovery_hatch";
-	locked = 1;
-	name = "Recovery Shuttle Dock 4";
-	req_access = list(13)
-	},
-/turf/simulated/shuttle/floor/black,
-/area/space)
 "tZi" = (
 /obj/structure/curtain/open/shower,
 /obj/machinery/shower{
@@ -22116,16 +21451,6 @@
 /obj/machinery/light/small,
 /turf/simulated/shuttle/floor/voidcraft/dark,
 /area/shuttle/syndicate)
-"ukV" = (
-/obj/structure/table/standard,
-/obj/item/towel,
-/obj/item/towel,
-/obj/item/towel,
-/obj/item/towel,
-/obj/random/soap,
-/obj/random/soap,
-/turf/simulated/shuttle/floor/white,
-/area/space)
 "ukZ" = (
 /obj/effect/floor_decal/milspec/color/black,
 /obj/effect/floor_decal/techfloor{
@@ -22148,10 +21473,6 @@
 /obj/item/toy/eight_ball/conch,
 /turf/simulated/floor/carpet/retro,
 /area/shadekin)
-"ulU" = (
-/obj/structure/morgue,
-/turf/simulated/shuttle/floor/white,
-/area/space)
 "unf" = (
 /obj/structure/table/steel_reinforced,
 /obj/machinery/cell_charger,
@@ -22285,9 +21606,6 @@
 	},
 /turf/simulated/floor/reinforced,
 /area/shadekin)
-"uup" = (
-/turf/simulated/shuttle/floor/white,
-/area/shuttle/escape_pod1/centcom)
 "uvq" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 9
@@ -22354,12 +21672,17 @@
 /turf/simulated/floor/wood/alt,
 /area/shadekin)
 "uxd" = (
-/obj/structure/table/standard,
-/obj/item/clipboard,
-/obj/item/pen,
-/obj/item/stamp/captain,
-/turf/simulated/shuttle/floor/black,
-/area/space)
+/obj/machinery/embedded_controller/radio/simple_docking_controller{
+	frequency = 1381;
+	id_tag = "escape_pod_1_recovery";
+	pixel_x = -25;
+	pixel_y = 25;
+	req_one_access = list(13);
+	tag_door = "escape_pod_1_recovery_hatch";
+	dir = 4
+	},
+/turf/simulated/shuttle/floor,
+/area/centcom/evac)
 "uxu" = (
 /obj/effect/floor_decal/industrial/warning,
 /turf/unsimulated/floor{
@@ -22503,24 +21826,10 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shadekin)
-"uIb" = (
-/turf/simulated/shuttle/wall,
-/area/shuttle/escape_pod3/centcom)
 "uIe" = (
-/obj/structure/bed/chair{
-	dir = 1
-	},
-/turf/simulated/shuttle/floor,
-/area/space)
-"uIK" = (
-/obj/machinery/shower{
-	dir = 8;
-	pixel_x = -5;
-	pixel_y = -1
-	},
-/obj/structure/curtain/open/shower,
-/turf/simulated/shuttle/floor/white,
-/area/space)
+/obj/effect/shuttle_landmark/southern_cross/large_escape_pod1/offsite,
+/turf/simulated/shuttle/plating,
+/area/shuttle/large_escape_pod1/centcom)
 "uIW" = (
 /obj/machinery/portable_atmospherics/hydroponics,
 /turf/simulated/shuttle/plating,
@@ -22551,17 +21860,6 @@
 /obj/structure/sign/warning/docking_area,
 /turf/unsimulated/wall,
 /area/centcom/terminal)
-"uKz" = (
-/obj/machinery/door/airlock/external{
-	frequency = 1381;
-	icon_state = "door_locked";
-	id_tag = "escape_pod_2_recovery_hatch";
-	locked = 1;
-	name = "Recovery Shuttle Dock 2";
-	req_access = list(13)
-	},
-/turf/simulated/shuttle/floor/black,
-/area/space)
 "uKP" = (
 /obj/item/storage/box/evidence,
 /obj/item/folder/red,
@@ -22831,15 +22129,17 @@
 	},
 /area/centcom/specops)
 "uXj" = (
-/obj/structure/table/reinforced,
-/obj/item/reagent_containers/blood/OMinus,
-/obj/item/reagent_containers/blood/OMinus,
-/obj/item/reagent_containers/blood/OMinus,
-/obj/item/reagent_containers/blood/OMinus,
-/obj/item/reagent_containers/blood/OMinus,
-/obj/item/reagent_containers/blood/OMinus,
-/turf/simulated/shuttle/floor/white,
-/area/shuttle/escape_pod2/centcom)
+/obj/machinery/embedded_controller/radio/simple_docking_controller{
+	frequency = 1381;
+	id_tag = "large_escape_pod_1_recovery";
+	pixel_x = -25;
+	pixel_y = -25;
+	req_one_access = list(13);
+	tag_door = "large_escape_pod_1_recovery_hatch";
+	dir = 1
+	},
+/turf/simulated/shuttle/floor,
+/area/centcom/evac)
 "uXk" = (
 /obj/effect/floor_decal/corner/red{
 	dir = 4
@@ -22951,9 +22251,6 @@
 	},
 /turf/simulated/floor/holofloor/carpet,
 /area/holodeck/source_meetinghall)
-"vcN" = (
-/turf/space,
-/area/shuttle/supply)
 "vcZ" = (
 /obj/item/mecha_parts/mecha_equipment/teleporter,
 /obj/item/mecha_parts/mecha_tracking,
@@ -23147,9 +22444,6 @@
 	icon_state = "steel"
 	},
 /area/centcom/bar)
-"vkK" = (
-/turf/simulated/shuttle/wall,
-/area/shuttle/escape_pod4/centcom)
 "vkZ" = (
 /obj/effect/floor_decal/corner/green{
 	dir = 10
@@ -23193,10 +22487,6 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shadekin)
-"vmJ" = (
-/obj/machinery/vending/cigarette,
-/turf/simulated/shuttle/floor/yellow,
-/area/space)
 "vne" = (
 /obj/structure/prop/statue/phoron,
 /turf/simulated/floor/outdoors/ice/dark_smooth{
@@ -23563,12 +22853,6 @@
 	icon_state = "white"
 	},
 /area/centcom/medical)
-"vBm" = (
-/obj/machinery/atmospherics/pipe/simple/visible{
-	dir = 5
-	},
-/turf/simulated/shuttle/floor/white,
-/area/space)
 "vBE" = (
 /obj/effect/floor_decal/corner/green/full{
 	dir = 1
@@ -23807,10 +23091,6 @@
 "vRO" = (
 /turf/simulated/floor/carpet/green,
 /area/shadekin)
-"vSt" = (
-/obj/effect/shuttle_landmark/southern_cross/escape_pod6/offsite,
-/turf/simulated/shuttle/plating,
-/area/space)
 "vSG" = (
 /obj/structure/table/rack,
 /obj/effect/floor_decal/industrial/warning{
@@ -23900,9 +23180,6 @@
 	icon_state = "white"
 	},
 /area/centcom/medical)
-"vWS" = (
-/turf/simulated/shuttle/wall/no_join/orange,
-/area/shuttle/escape_pod6/centcom)
 "vXb" = (
 /obj/structure/holohoop{
 	dir = 8
@@ -24311,13 +23588,6 @@
 	},
 /turf/simulated/shuttle/floor/red,
 /area/shuttle/escape/centcom)
-"wtC" = (
-/obj/effect/shuttle_landmark/southern_cross/cryostorage_offsite,
-/turf/simulated/shuttle/plating,
-/area/space)
-"wtL" = (
-/turf/simulated/shuttle/floor/white,
-/area/space)
 "wtW" = (
 /obj/effect/floor_decal/milspec/color/silver,
 /obj/structure/toilet/prison{
@@ -24346,10 +23616,6 @@
 	icon_state = "vault"
 	},
 /area/centcom/specops)
-"wul" = (
-/obj/machinery/door/airlock/glass,
-/turf/simulated/shuttle/floor,
-/area/space)
 "wuy" = (
 /obj/structure/table/standard,
 /obj/item/deck/cards,
@@ -24361,17 +23627,6 @@
 	name = "plating"
 	},
 /area/centcom/suppy)
-"wvH" = (
-/obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1381;
-	id_tag = "escape_pod_4_recovery";
-	pixel_x = -26;
-	pixel_y = 26;
-	req_one_access = list(13);
-	tag_door = "escape_pod_4_recovery_hatch"
-	},
-/turf/simulated/shuttle/floor/yellow,
-/area/space)
 "wvJ" = (
 /obj/machinery/computer/shuttle_control/multi/merchant{
 	dir = 4
@@ -25052,14 +24307,6 @@
 /obj/item/reagent_containers/syringe,
 /turf/simulated/shuttle/floor/white,
 /area/shuttle/skipjack)
-"xdL" = (
-/obj/structure/window/reinforced{
-	dir = 8;
-	health = 1e+006
-	},
-/obj/structure/closet/secure_closet/personal,
-/turf/simulated/shuttle/floor,
-/area/space)
 "xdP" = (
 /obj/machinery/door/airlock/glass{
 	name = "Arrivals Processing"
@@ -25079,10 +24326,6 @@
 	color = "teal"
 	},
 /area/holodeck/source_chess)
-"xfd" = (
-/obj/machinery/dna_scannernew,
-/turf/simulated/shuttle/floor/white,
-/area/space)
 "xfB" = (
 /obj/structure/bed/chair/backed_red{
 	dir = 1
@@ -25101,10 +24344,6 @@
 	},
 /turf/simulated/floor/carpet/geo,
 /area/shadekin)
-"xgm" = (
-/obj/machinery/door/airlock/external,
-/turf/simulated/shuttle/floor,
-/area/space)
 "xgL" = (
 /obj/effect/floor_decal/spline/plain{
 	dir = 4
@@ -25173,9 +24412,6 @@
 	},
 /turf/simulated/floor/carpet/retro_red,
 /area/shadekin)
-"xnQ" = (
-/turf/simulated/shuttle/floor/white,
-/area/shuttle/escape_pod2/centcom)
 "xom" = (
 /obj/machinery/status_display{
 	layer = 4;
@@ -25248,9 +24484,6 @@
 	icon_state = "vault"
 	},
 /area/centcom/specops)
-"xqk" = (
-/turf/simulated/shuttle/wall,
-/area/shuttle/escape_pod2/centcom)
 "xqZ" = (
 /obj/effect/floor_decal/milspec/color/silver,
 /obj/machinery/door/window/southright,
@@ -25259,11 +24492,6 @@
 	},
 /turf/simulated/floor/tiled/milspec/sterile,
 /area/shadekin)
-"xre" = (
-/obj/structure/table/standard,
-/obj/item/storage/lockbox,
-/turf/simulated/shuttle/floor/black,
-/area/space)
 "xrG" = (
 /obj/machinery/button/remote/blast_door{
 	id = "syndieshutters_infirmary";
@@ -25303,9 +24531,16 @@
 /turf/simulated/shuttle/floor/voidcraft/light,
 /area/shuttle/syndicate)
 "xsW" = (
-/obj/effect/shuttle_landmark/southern_cross/escape_pod1/offsite,
-/turf/simulated/shuttle/plating,
-/area/space)
+/obj/machinery/door/airlock/external{
+	frequency = 1381;
+	icon_state = "door_locked";
+	id_tag = "escape_pod_2_recovery_hatch";
+	locked = 1;
+	name = "Recovery Shuttle Dock 2";
+	req_access = list(13)
+	},
+/turf/simulated/shuttle/floor,
+/area/centcom/evac)
 "xsZ" = (
 /obj/structure/sink{
 	dir = 4;
@@ -25519,36 +24754,6 @@
 /obj/structure/holostool,
 /turf/simulated/floor/holofloor/tiled,
 /area/holodeck/source_emptycourt)
-"xCV" = (
-/obj/structure/closet/crate/medical,
-/obj/item/surgical/circular_saw,
-/obj/item/surgical/surgicaldrill,
-/obj/item/surgical/bonegel{
-	pixel_x = 4;
-	pixel_y = 3
-	},
-/obj/item/surgical/bonesetter,
-/obj/item/surgical/scalpel,
-/obj/item/surgical/retractor{
-	pixel_y = 6
-	},
-/obj/item/surgical/hemostat{
-	pixel_y = 4
-	},
-/obj/item/surgical/cautery{
-	pixel_y = 4
-	},
-/obj/item/surgical/FixOVein{
-	pixel_x = -6;
-	pixel_y = 1
-	},
-/obj/item/stack/nanopaste,
-/obj/item/tank/anesthetic,
-/obj/item/clothing/mask/breath/medical,
-/obj/item/clothing/mask/surgical,
-/obj/item/clothing/mask/surgical,
-/turf/simulated/shuttle/floor/white,
-/area/space)
 "xDc" = (
 /obj/structure/table/rack/gun_rack/steel,
 /obj/effect/floor_decal/milspec/cargo,
@@ -25687,17 +24892,6 @@
 	icon_state = "vault"
 	},
 /area/centcom/specops)
-"xJk" = (
-/obj/machinery/door/airlock/external{
-	frequency = 1381;
-	icon_state = "door_locked";
-	id_tag = "escape_pod_8_recovery_hatch";
-	locked = 1;
-	name = "Recovery Shuttle Dock 8";
-	req_access = list(13)
-	},
-/turf/simulated/shuttle/floor/black,
-/area/space)
 "xJn" = (
 /obj/structure/flora/tree/jungle,
 /turf/simulated/floor/outdoors/grass/heavy,
@@ -25919,10 +25113,6 @@
 	},
 /turf/simulated/shuttle/floor,
 /area/shuttle/transport1/centcom)
-"xSX" = (
-/obj/machinery/computer/communications,
-/turf/simulated/shuttle/floor/black,
-/area/space)
 "xUf" = (
 /obj/structure/reagent_dispensers/watertank/high,
 /obj/item/reagent_containers/glass/bucket,
@@ -26199,9 +25389,6 @@
 /obj/item/toy/chewtoy/tall,
 /turf/simulated/floor/reinforced,
 /area/shadekin)
-"ykq" = (
-/turf/unsimulated/wall/shuttle_bay,
-/area/shuttle/escape_pod3/centcom)
 "yku" = (
 /obj/item/mop,
 /obj/structure/mopbucket,
@@ -54025,7 +53212,7 @@ vFi
 vFi
 vFi
 vFi
-vcN
+vFi
 vFi
 vFi
 vFi
@@ -54283,7 +53470,7 @@ vFi
 vFi
 vFi
 vFi
-vcN
+vFi
 vFi
 vFi
 vFi
@@ -56870,8 +56057,8 @@ vFi
 vFi
 vFi
 vFi
-qiW
-qiW
+vFi
+vFi
 vFi
 vFi
 vFi
@@ -57128,8 +56315,8 @@ vFi
 vFi
 vFi
 vFi
-qiW
-qiW
+vFi
+vFi
 vFi
 vFi
 vFi
@@ -57157,13 +56344,13 @@ hOO
 kiA
 iJS
 bew
-nbW
-nbW
-oJZ
 bew
-ykq
-ykq
-qrk
+bew
+iJS
+bew
+bew
+bew
+iJS
 bew
 bew
 bew
@@ -57354,11 +56541,6 @@ vFi
 vFi
 vFi
 vFi
-sqk
-fSd
-xgm
-fSd
-sqk
 vFi
 vFi
 vFi
@@ -57386,8 +56568,13 @@ vFi
 vFi
 vFi
 vFi
-qiW
-qiW
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
 vFi
 vFi
 vFi
@@ -57414,17 +56601,17 @@ lkY
 veR
 abv
 hOO
-pmF
+aoc
+aoc
+aoc
+hOO
+hvN
+hvN
+hvN
+hOO
 eKr
 eKr
-vkK
-pmF
-xmx
-xmx
-uIb
-pmF
-pmF
-pmF
+eKr
 hOO
 pmF
 pmF
@@ -57606,26 +56793,6 @@ vFi
 vFi
 vFi
 vFi
-sqk
-kVS
-kVS
-kVS
-kVS
-kVS
-dHC
-pcd
-pcd
-pcd
-dHC
-kVS
-kVS
-kVS
-kVS
-kVS
-kVS
-kVS
-kVS
-sqk
 vFi
 vFi
 vFi
@@ -57644,8 +56811,28 @@ vFi
 vFi
 vFi
 vFi
-qiW
-qiW
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
 vFi
 vFi
 vFi
@@ -57672,17 +56859,17 @@ vpQ
 vpQ
 vpQ
 hOO
-pmF
+aoc
+aoc
+aoc
+hOO
+hvN
+hvN
+hvN
+hOO
 eKr
 eKr
-vkK
-pmF
-xmx
-xmx
-uIb
-pmF
-pmF
-pmF
+eKr
 hOO
 pmF
 pmF
@@ -57864,26 +57051,6 @@ vFi
 vFi
 vFi
 vFi
-fSd
-nvl
-mgi
-nvl
-mgi
-nvl
-fSd
-pcd
-pcd
-pcd
-fSd
-mgi
-mgi
-mgi
-mgi
-mgi
-mgi
-mgi
-mgi
-fSd
 vFi
 vFi
 vFi
@@ -57902,8 +57069,28 @@ vFi
 vFi
 vFi
 vFi
-qiW
-qiW
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
 vFi
 vFi
 vFi
@@ -57930,17 +57117,17 @@ vpQ
 vpQ
 pvW
 hOO
-pmF
+aoc
+aoc
+aoc
+hOO
+hvN
+hvN
+hvN
+hOO
 eKr
 eKr
-vkK
-pmF
-xmx
-xmx
-uIb
-pmF
-pmF
-pmF
+eKr
 hOO
 pmF
 kiA
@@ -58122,26 +57309,6 @@ vFi
 vFi
 vFi
 vFi
-fSd
-mgi
-mgi
-mgi
-mgi
-mgi
-fSd
-ouF
-xgm
-ouF
-fSd
-mgi
-mgi
-mgi
-mgi
-mgi
-mgi
-mgi
-mgi
-fSd
 vFi
 vFi
 vFi
@@ -58160,8 +57327,28 @@ vFi
 vFi
 vFi
 vFi
-qiW
-qiW
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
 vFi
 vFi
 vFi
@@ -58188,17 +57375,17 @@ vpQ
 vpQ
 izZ
 hOO
-pmF
+aoc
+poR
+aoc
+hOO
+hvN
+oJC
+hvN
+hOO
 eKr
+eGl
 eKr
-vkK
-pmF
-xmx
-xmx
-uIb
-pmF
-pmF
-pmF
 hOO
 pmF
 hOO
@@ -58380,26 +57567,6 @@ vFi
 vFi
 vFi
 vFi
-fSd
-nvl
-mgi
-mgi
-mgi
-nvl
-ouF
-lZD
-pcd
-lZD
-ouF
-mgi
-mgi
-mgi
-mgi
-mgi
-mgi
-mgi
-mgi
-fSd
 vFi
 vFi
 vFi
@@ -58417,9 +57584,29 @@ vFi
 vFi
 vFi
 vFi
-qiW
-qiW
-qiW
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
 vFi
 vFi
 vFi
@@ -58446,17 +57633,17 @@ vpQ
 vpQ
 vpQ
 hOO
-pmF
-pmF
-pmF
+aoc
+aoc
+aoc
 hOO
-pmF
-pmF
-pmF
+hvN
+hvN
+hvN
 hOO
-pmF
-pmF
-pmF
+eKr
+eKr
+eKr
 hOO
 pmF
 hOO
@@ -58629,55 +57816,55 @@ vFi
 vFi
 vFi
 vFi
-fSd
-fSd
-fSd
-fSd
-fSd
-dHC
-kVS
-kVS
-kVS
-fSd
-mJq
-ouF
-gsX
-ouF
-mJq
-fSd
-lZD
-pcd
-lZD
-fSd
-mgi
-mgi
-mgi
-mgi
-mgi
-mgi
-mgi
-mgi
-fSd
-kVS
-kVS
-kVS
-fSd
-kVS
-kVS
-kVS
-fSd
 vFi
 vFi
 vFi
 vFi
 vFi
-qiW
-qiW
-qiW
-qiW
-qiW
-qiW
-qiW
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
 vFi
 vFi
 vFi
@@ -58705,15 +57892,15 @@ wwb
 hOO
 hOO
 hOO
-hNb
+abt
 hOO
 iJS
 hOO
-hNb
+xsW
 hOO
 iJS
 hOO
-hNb
+mlz
 hOO
 iJS
 izl
@@ -58887,55 +58074,55 @@ vFi
 vFi
 vFi
 vFi
-abt
-slD
-bgl
-bPF
-jBi
-fSd
-mgi
-mgi
-mgi
-fSd
-aoc
-cKC
-cKC
-ltA
-kMC
-fSd
-lZD
-pcd
-lZD
-fSd
-mgi
-mgi
-mgi
-mgi
-mgi
-mgi
-mgi
-mgi
-fSd
-mgi
-mgi
-mgi
-fSd
-mgi
-mgi
-mgi
-fSd
-fSd
-fSd
-ouF
-fSd
-sqk
-iJS
-eOK
-eOK
-lPD
-lPD
-lPD
-qiW
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
 vFi
 vFi
 vFi
@@ -58963,19 +58150,19 @@ hNb
 hKM
 hKM
 hKM
-hNb
+uxd
 hKM
 hKM
 hKM
-hNb
+kOt
 hKM
 hKM
 hKM
+sqk
 hNb
 hNb
 hNb
-hNb
-hNb
+osg
 dJm
 dJm
 dJm
@@ -59145,55 +58332,55 @@ vFi
 vFi
 vFi
 vFi
-nCN
-slD
-pMJ
-mgi
-mgi
-fSd
-mgi
-mgi
-mgi
-fSd
-tiQ
-cKC
-cKC
-cKC
-cKC
-pnC
-lZD
-pcd
-lZD
-mJq
-mgi
-mgi
-mgi
-wtC
-mgi
-mgi
-mgi
-mgi
-fSd
-mgi
-mgi
-mgi
-fSd
-mgi
-mgi
-mgi
-fSd
-pkB
-sqJ
-wtL
-dDY
-xCV
-veR
-qRh
-eOK
-eOK
-lPD
-lPD
-qiW
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
 vFi
 vFi
 vFi
@@ -59232,7 +58419,7 @@ hNb
 hNb
 hNb
 hKM
-hKM
+dHC
 hOO
 dJm
 cuh
@@ -59403,55 +58590,55 @@ vFi
 vFi
 vFi
 vFi
-nCN
-slD
-pMJ
-mgi
-mgi
-fSd
-mgi
-mgi
-mgi
-fSd
-erU
-cKC
-cKC
-cKC
-cKC
-pnC
-lZD
-pcd
-lZD
-mJq
-mgi
-mgi
-mgi
-mgi
-mgi
-mgi
-mgi
-mgi
-fSd
-mgi
-mgi
-mgi
-fSd
-mgi
-mgi
-mgi
-fSd
-wtL
-wtL
-wtL
-wtL
-wtL
-vpQ
-uup
-gGr
-eOK
-lPD
-lPD
-qiW
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
 vFi
 vFi
 vFi
@@ -59479,7 +58666,7 @@ hNb
 hKM
 hKM
 hKM
-hNb
+lFQ
 hKM
 hKM
 hKM
@@ -59491,7 +58678,7 @@ hNb
 hNb
 hNb
 hNb
-hNb
+osg
 dJm
 dJm
 dJm
@@ -59661,55 +58848,55 @@ vFi
 vFi
 vFi
 vFi
-nCN
-slD
-pMJ
-mgi
-mgi
-fSd
-mgi
-pTz
-mgi
-fSd
-hvN
-cKC
-cKC
-ltA
-hRz
-fSd
-lZD
-pcd
-lZD
-fSd
-fSd
-fSd
-fSd
-eGl
-eGl
-fSd
-fSd
-fSd
-fSd
-mgi
-rQO
-mgi
-fSd
-mgi
-neg
-mgi
-fSd
-poR
-wtL
-wtL
-wtL
-wtL
-vpQ
-vpQ
-weS
-hOO
-qiW
-qiW
-qiW
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
 vFi
 vFi
 vFi
@@ -59737,15 +58924,15 @@ wwb
 hOO
 kiA
 hOO
-hNb
+slD
 hOO
 iJS
 hOO
-hNb
+bgl
 hOO
 iJS
 hOO
-hNb
+nCN
 hOO
 iJS
 izl
@@ -59919,55 +59106,55 @@ vFi
 vFi
 vFi
 vFi
-lRs
-slD
-pMJ
-mgi
-mgi
-fSd
-mgi
-mgi
-mgi
-fSd
-ouF
-ouF
-pnC
-ouF
-ouF
-fSd
-lZD
-pcd
-lZD
-fSd
-ukV
-nfn
-pcd
-gQV
-pcd
-mJq
-tfp
-tfp
-fSd
-mgi
-mgi
-mgi
-fSd
-mgi
-mgi
-mgi
-fSd
-tvj
-wtL
-wtL
-aUz
-mIH
-pvW
-xnQ
-mtY
-xqk
-sLz
-sLz
-qiW
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
 vFi
 vFi
 vFi
@@ -59994,9 +59181,9 @@ vpQ
 vpQ
 vpQ
 hOO
-pmF
-pmF
-pmF
+xmx
+xmx
+xmx
 hOO
 pmF
 pmF
@@ -60176,56 +59363,56 @@ vFi
 vFi
 vFi
 vFi
-fSd
-fSd
-fSd
-fSd
-dFB
-fSd
-fSd
-fSd
-hiW
-fSd
-fSd
-hvN
-cKC
-cKC
-cKC
-hvN
-fSd
-lZD
-pcd
-lZD
-fSd
-bnf
-lHw
-pcd
-pcd
-pcd
-mJq
-wtL
-ncy
-fSd
-fSd
-tYX
-fSd
-fSd
-fSd
-jYR
-fSd
-fSd
-fSd
-nVy
-wtL
-nlx
-wtL
-izZ
-xnQ
-hQH
-xqk
-sLz
-sLz
-qiW
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
 vFi
 vFi
 vFi
@@ -60252,9 +59439,9 @@ vpQ
 vpQ
 uam
 hOO
-pmF
-pmF
-pmF
+xmx
+fRw
+xmx
 hOO
 pmF
 pmF
@@ -60430,60 +59617,60 @@ vFi
 vFi
 vFi
 vFi
-fSd
-fSd
-fSd
-fSd
-fSd
-fSd
-fSd
-fWK
-lZD
-lZD
-lZD
-lZD
-oaZ
-lZD
-fSd
-hvN
-cKC
-cKC
-cKC
-hvN
-ouF
-fWK
-pcd
-fWK
-mJq
-mJq
-mJq
-pcd
-pcd
-pcd
-gfe
-wtL
-wtL
-mJq
-fWK
-wvH
-lZD
-lZD
-lZD
-bSA
-lZD
-qgE
-fSd
-nVy
-wtL
-wtL
-wtL
-vpQ
-xnQ
-uXj
-xqk
-sLz
-sLz
-qiW
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
 vFi
 vFi
 vFi
@@ -60510,9 +59697,9 @@ vpQ
 vpQ
 pdr
 hOO
-pmF
-pmF
-pmF
+xmx
+xmx
+xmx
 hOO
 pmF
 pmF
@@ -60688,60 +59875,60 @@ vFi
 vFi
 vFi
 vFi
-euj
-mgi
-mgi
-mgi
-mgi
-mgi
-fSd
-lZD
-pcd
-pcd
-pcd
-pcd
-pcd
-lZD
-fSd
-hvN
-cKC
-cKC
-cKC
-hvN
-fSd
-ouF
-wul
-ouF
-fSd
-iVs
-nlq
-pcd
-pcd
-pcd
-mJq
-uIK
-uIK
-fSd
-lZD
-pcd
-pcd
-pcd
-pcd
-pcd
-pcd
-hLh
-fSd
-ouF
-cHI
-ouF
-fSd
-hOO
-hOO
-hOO
-hOO
-qiW
-qiW
-qiW
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
 vFi
 vFi
 vFi
@@ -60768,9 +59955,9 @@ vpQ
 vpQ
 vpQ
 hOO
-pmF
-pmF
-pmF
+xmx
+xmx
+xmx
 hOO
 pmF
 pmF
@@ -60946,60 +60133,60 @@ vFi
 vFi
 vFi
 vFi
-euj
-mgi
-mgi
-mgi
-xsW
-mgi
-tke
-piP
-kbv
-kbv
-kbv
-kbv
-pcd
-lZD
-fSd
-fSd
-fSd
-fSd
-fSd
-fSd
-fSd
-lZD
-pcd
-lZD
-fSd
-fSd
-fSd
-fSd
-kOt
-kOt
-fSd
-fSd
-fSd
-fSd
-lZD
-pcd
-gDO
-osg
-osg
-uIe
-pcd
-lZD
-fSd
-fWK
-lZD
-lZD
-fSd
-lFQ
-qAT
-uxd
-fRw
-qiW
-qiW
-qiW
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
 vFi
 vFi
 vFi
@@ -61026,9 +60213,9 @@ lkY
 veR
 ddF
 hOO
-pmF
-pmF
-pmF
+xmx
+xmx
+xmx
 hOO
 pmF
 pmF
@@ -61204,60 +60391,60 @@ vFi
 vFi
 vFi
 vFi
-euj
-mgi
-mgi
-mgi
-mgi
-mgi
-fSd
-lZD
-xdL
-xdL
-xdL
-xdL
-pcd
-lZD
-lZD
-ouF
-lZD
-lZD
-lZD
-lZD
-lZD
-lZD
-pcd
-lZD
-lZD
-lZD
-lZD
-lZD
-lZD
-lZD
-lZD
-lZD
-ouF
-lZD
-lZD
-pcd
-gDO
-osg
-osg
-uIe
-pcd
-lZD
-lZD
-lZD
-pcd
-pcd
-ouF
-bIn
-fFG
-fLC
-fRw
 vFi
-qiW
-qiW
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
 vFi
 vFi
 vFi
@@ -61285,13 +60472,13 @@ hOO
 hOO
 iJS
 bew
-lSX
-lSX
-vWS
 bew
-pMU
-pMU
-deD
+bew
+iJS
+bew
+bew
+bew
+iJS
 bew
 bew
 bew
@@ -61462,60 +60649,60 @@ vFi
 vFi
 vFi
 vFi
-fSd
-fSd
-fSd
-fSd
-fSd
-fSd
-fSd
-lZD
-pcd
-pcd
-pcd
-pcd
-pcd
-pcd
-pcd
-wul
-pcd
-pcd
-pcd
-pcd
-pcd
-pcd
-pcd
-pcd
-pcd
-pcd
-pcd
-pcd
-pcd
-pcd
-pcd
-pcd
-wul
-pcd
-pcd
-pcd
-gDO
-osg
-osg
-uIe
-pcd
-pcd
-pcd
-pcd
-pcd
-pcd
-rfY
-qAT
-qAT
-xre
-fRw
 vFi
-qiW
-qiW
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
 vFi
 vFi
 vFi
@@ -61531,31 +60718,31 @@ lbF
 hNb
 hNb
 hOO
-pmF
-pmF
-pmF
-pmF
-pmF
-pmF
-pmF
-pmF
+hQH
+hQH
+hQH
+hQH
+hQH
+hQH
+hQH
+hQH
 pmF
 rkG
-qiW
-qiW
-lXu
-lXu
-lXu
-qiW
-ifX
-ifX
-ifX
-qiW
-qiW
-qiW
-qiW
-qiW
-qiW
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
 hOO
 kiA
 pmF
@@ -61720,60 +60907,60 @@ vFi
 vFi
 vFi
 vFi
-euj
-mgi
-mgi
-mgi
-mgi
-mgi
-fSd
-lZD
-lza
-lza
-lza
-lza
-pcd
-lZD
-lZD
-ouF
-lZD
-lZD
-lZD
-lZD
-lZD
-lZD
-pcd
-lZD
-lZD
-lZD
-lZD
-lZD
-lZD
-lZD
-lZD
-lZD
-ouF
-lZD
-lZD
-pcd
-gDO
-osg
-osg
-uIe
-pcd
-lZD
-lZD
-lZD
-pcd
-pcd
-ouF
-dbi
-fFG
-abw
-fRw
 vFi
-qiW
-qiW
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
 vFi
 vFi
 vFi
@@ -61789,32 +60976,32 @@ kpJ
 hNb
 hNb
 hOO
-pmF
-pmF
-pmF
-pmF
-pmF
-pmF
-pmF
-pmF
-pmF
+hQH
+hQH
+hQH
+hQH
+hQH
+hQH
+hQH
+hQH
+hQH
 rkG
-qiW
-qiW
-lXu
-lXu
-lXu
-qiW
-ifX
-ifX
-ifX
-qiW
-qiW
-qiW
-qiW
-qiW
-qiW
-qiW
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
 hOO
 kiA
 pmF
@@ -61978,60 +61165,60 @@ vFi
 vFi
 vFi
 vFi
-euj
-mgi
-mgi
-mgi
-imv
-mgi
-uKz
-eac
-kbv
-kbv
-kbv
-kbv
-pcd
-lZD
-fSd
-fSd
-fSd
-fSd
-fSd
-fSd
-fSd
-lZD
-pcd
-lZD
-fSd
-fSd
-fSd
-fSd
-fSd
-fSd
-fSd
-taE
-fSd
-fSd
-lZD
-pcd
-gDO
-osg
-osg
-uIe
-pcd
-lZD
-fSd
-fWK
-lZD
-lZD
-fSd
-xSX
-qAT
-oLT
-fRw
 vFi
-qiW
-qiW
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
 vFi
 vFi
 vFi
@@ -62045,35 +61232,35 @@ vFi
 hOO
 qRp
 hNb
-hNb
-hNb
-pmF
-pmF
-pmF
-pmF
-pmF
-pmF
-pmF
-pmF
-pmF
+uXj
+sRA
+hQH
+uIe
+hQH
+hQH
+hQH
+hQH
+hQH
+hQH
+hQH
 rkG
-qiW
-qiW
-lXu
-lXu
-lXu
-qiW
-ifX
-ifX
-ifX
-qiW
-qiW
-qiW
-qiW
-qiW
-qiW
-qiW
-qiW
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
 hOO
 hOO
 hOO
@@ -62236,60 +61423,60 @@ vFi
 vFi
 vFi
 vFi
-euj
-mgi
-mgi
-mgi
-mgi
-mgi
-fSd
-lZD
-pcd
-pcd
-pcd
-pcd
-pcd
-lZD
-fSd
-mgi
-mgi
-mgi
-mgi
-mgi
-fSd
-ouF
-wul
-ouF
-fSd
-mgi
-mgi
-mgi
-mgi
-mgi
-mJq
-pcd
-bqP
-fSd
-lZD
-pcd
-pcd
-pcd
-pcd
-pcd
-pcd
-qlH
-fSd
-ouF
-cHI
-ouF
-fSd
-fSd
-fSd
-fSd
-fSd
 vFi
-qiW
-qiW
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
 vFi
 vFi
 vFi
@@ -62305,34 +61492,34 @@ hKM
 hNb
 hNb
 hOO
-pmF
-pmF
-pmF
-pmF
-pmF
-pmF
-pmF
-pmF
-pmF
+hQH
+hQH
+hQH
+hQH
+hQH
+hQH
+hQH
+hQH
+hQH
 rkG
-qiW
-qiW
-lXu
-lXu
-lXu
-qiW
-ifX
-ifX
-ifX
-qiW
-qiW
-qiW
-qiW
-qiW
-qiW
-qiW
-qiW
-qiW
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
 vFi
 vFi
 vFi
@@ -62494,60 +61681,60 @@ vFi
 vFi
 vFi
 vFi
-fSd
-fSd
-fSd
-fSd
-fSd
-fSd
-fSd
-fWK
-lZD
-lZD
-lZD
-lZD
-qOC
-lZD
-fSd
-mgi
-mgi
-mgi
-mgi
-mgi
-ouF
-fWK
-pcd
-fWK
-ouF
-mgi
-mgi
-mgi
-mgi
-mgi
-mJq
-pcd
-kbv
-fSd
-fWK
-pAY
-lZD
-lZD
-lZD
-jyA
-lZD
-vmJ
-fSd
-mIH
-wtL
-wtL
-eJn
-mJq
-ulU
-ulU
-fSd
 vFi
-qiW
-qiW
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
 vFi
 vFi
 vFi
@@ -62563,26 +61750,26 @@ iJS
 hNb
 hNb
 hOO
-pmF
-pmF
-pmF
-pmF
-pmF
-pmF
-pmF
-pmF
+hQH
+hQH
+hQH
+hQH
+hQH
+hQH
+hQH
+hQH
 pmF
 rkG
-qiW
-qiW
-qiW
-qiW
-qiW
-qiW
-qiW
-qiW
-qiW
-qiW
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
 vFi
 vFi
 vFi
@@ -62756,53 +61943,53 @@ vFi
 vFi
 vFi
 vFi
-fSd
-fSd
-fSd
-fSd
-dFB
-fSd
-fSd
-fSd
-xJk
-fSd
-fSd
-mgi
-mgi
-mgi
-mgi
-mgi
-fSd
-lZD
-pcd
-lZD
-fSd
-mgi
-mgi
-mgi
-mgi
-mgi
-mJq
-pcd
-bqP
-fSd
-fSd
-lGp
-fSd
-fSd
-fSd
-oJC
-fSd
-fSd
-fSd
-jMa
-wtL
-wtL
-bkG
-mJq
-wtL
-wtL
-fSd
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
 vFi
 vFi
 vFi
@@ -62831,8 +62018,8 @@ hOO
 hOO
 hOO
 iJS
-qiW
-qiW
+vFi
+vFi
 vFi
 vFi
 vFi
@@ -63015,52 +62202,52 @@ vFi
 vFi
 vFi
 vFi
-abt
-slD
-pMJ
-mgi
-mHg
-fSd
-mgi
-mgi
-mgi
-fSd
-mgi
-mgi
-mgi
-mgi
-mgi
-fSd
-lZD
-pcd
-lZD
-fSd
-mgi
-mgi
-mgi
-mgi
-mgi
-mJq
-pcd
-kbv
-fSd
-mgi
-mgi
-mgi
-fSd
-mgi
-mgi
-mgi
-fSd
-akS
-vBm
-wtL
-wtL
-wtL
-mHK
-wtL
-wtL
-fSd
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
 vFi
 vFi
 vFi
@@ -63273,52 +62460,52 @@ vFi
 vFi
 vFi
 vFi
-nCN
-slD
-pMJ
-mgi
-mgi
-fSd
-mgi
-iro
-mgi
-fSd
-mgi
-mgi
-mgi
-mgi
-mgi
-fSd
-lZD
-pcd
-lZD
-fSd
-mgi
-mgi
-mgi
-mgi
-mgi
-mJq
-pcd
-bqP
-fSd
-mgi
-vSt
-mgi
-fSd
-mgi
-lqy
-mgi
-fSd
-ojy
-fEC
-wtL
-wtL
-tlX
-mJq
-wtL
-wtL
-fSd
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
 vFi
 vFi
 vFi
@@ -63531,52 +62718,52 @@ vFi
 vFi
 vFi
 vFi
-nCN
-slD
-pMJ
-mgi
-mgi
-fSd
-mgi
-mgi
-mgi
-fSd
-mgi
-mgi
-mgi
-iRs
-mgi
-rnQ
-lPb
-pcd
-rds
-sww
-mgi
-mgi
-mgi
-mgi
-mgi
-mJq
-pcd
-kbv
-fSd
-mgi
-mgi
-mgi
-fSd
-mgi
-mgi
-mgi
-fSd
-ojy
-fEC
-wtL
-wtL
-mlz
-mJq
-sRA
-sRA
-fSd
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
 vFi
 vFi
 vFi
@@ -63789,52 +62976,52 @@ vFi
 vFi
 vFi
 vFi
-nCN
-slD
-pMJ
-mgi
-mgi
-fSd
-mgi
-mgi
-mgi
-fSd
-mgi
-mgi
-mgi
-mgi
-mgi
-rnQ
-lZD
-pcd
-lZD
-sww
-mgi
-jkw
-mgi
-mgi
-mgi
-mJq
-pcd
-bqP
-fSd
-mgi
-mgi
-mgi
-fSd
-mgi
-mgi
-mgi
-fSd
-glQ
-mUu
-wtL
-wtL
-xfd
-mJq
-mJq
-fSd
-fSd
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
 vFi
 vFi
 vFi
@@ -64047,51 +63234,51 @@ vFi
 vFi
 vFi
 vFi
-lRs
-slD
-kPI
-lTi
-lnd
-fSd
-mgi
-mgi
-mgi
-fSd
-mgi
-mgi
-mgi
-mgi
-mgi
-fSd
-lZD
-pcd
-lZD
-fSd
-mgi
-mgi
-mgi
-mgi
-mgi
-mJq
-pcd
-kbv
-fSd
-mgi
-mgi
-mgi
-fSd
-mgi
-mgi
-mgi
-fSd
-fSd
-fSd
-ouF
-fSd
-sqk
-sqk
-fSd
-fSd
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
 vFi
 vFi
 vFi
@@ -64305,43 +63492,43 @@ vFi
 vFi
 vFi
 vFi
-fSd
-fSd
-fSd
-fSd
-fSd
-dHC
-kVS
-kVS
-kVS
-fSd
-mgi
-mgi
-mgi
-mgi
-mgi
-fSd
-lZD
-pcd
-lZD
-fSd
-mgi
-mgi
-mgi
-mgi
-mgi
-mJq
-pcd
-bqP
-fSd
-kVS
-kVS
-kVS
-fSd
-kVS
-kVS
-kVS
-fSd
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
 vFi
 vFi
 vFi
@@ -64572,26 +63759,26 @@ vFi
 vFi
 vFi
 vFi
-fSd
-mgi
-mgi
-mgi
-mgi
-mgi
-ouF
-lZD
-pcd
-lZD
-ouF
-mgi
-mgi
-mgi
-mgi
-mgi
-mJq
-pcd
-kbv
-fSd
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
 vFi
 vFi
 vFi
@@ -64830,26 +64017,26 @@ vFi
 vFi
 vFi
 vFi
-fSd
-mgi
-mgi
-mgi
-mgi
-mgi
-fSd
-kxd
-kxd
-kxd
-fSd
-mgi
-mgi
-mgi
-mgi
-mgi
-mJq
-pcd
-bqP
-fSd
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
 vFi
 vFi
 vFi
@@ -65088,26 +64275,26 @@ vFi
 vFi
 vFi
 vFi
-fSd
-mgi
-mgi
-mgi
-mgi
-mgi
-dHC
-ouF
-ouF
-ouF
-dHC
-mgi
-mgi
-mgi
-mgi
-mgi
-mJq
-pcd
-kbv
-fSd
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
 vFi
 vFi
 vFi
@@ -65346,26 +64533,26 @@ vFi
 vFi
 vFi
 vFi
-sqk
-kVS
-kVS
-kVS
-kVS
-kVS
-sqk
 vFi
 vFi
 vFi
-sqk
-kVS
-kVS
-kVS
-kVS
-kVS
-mJq
-mJq
-mJq
-sqk
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
+vFi
 vFi
 vFi
 vFi
