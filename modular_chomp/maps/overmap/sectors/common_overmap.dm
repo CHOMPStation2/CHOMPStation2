@@ -181,6 +181,91 @@ GLOBAL_LIST_EMPTY(station_waypoints) //Create global list for station waypoints,
 	GLOB.station_waypoints -= src
 	. = ..()
 
+/obj/effect/overmap/visitable/sector/Cetus
+	name = "Cetus"
+	icon = 'modular_chomp/icons/obj/overmap.dmi'
+	icon_state = "cetus"
+	desc = "Cetus station, orbiting Sif."
+	scanner_desc = @{"[i]Registration[/i]: NSS Cetus
+[i]Class[/i]: Installation
+[i]Transponder[/i]: Transmitting (NT), NanoTrasen IFF
+[b]Notice[/b]: NanoTrasen research station, authorized personnel only"}
+	base = 1
+	in_space = 1
+	start_x =  10
+	start_y =  10
+	known = 1 // lets Sectors appear on shuttle navigation for easy finding.
+
+	extra_z_levels = list(Z_NAME_CETUS_TRANSIT, Z_NAME_ALIAS_MISC, Z_NAME_ALIAS_SURFACE, Z_NAME_ALIAS_SURFACE_MINES, Z_NAME_ALIAS_SURFACE_WILDS) //This should allow for comms to reach people from the station. Basically this defines all the areas of Southern Cross and the Sif local system on the overmap.
+	// "Z_LEVEL_SURFACE_SKYLANDS, " //removed due to lack of use
+	mob_announce_cooldown = 0
+
+
+	initial_generic_waypoints = list(
+		"w1_a",
+		"w2_a",
+		"w3_a",
+		"w3_b",
+		"w3_c",
+		"andromeda",
+		"d1_near_jr",
+		"d1_near_se",
+		"d1_near_sw",
+		"hangar_2",
+		"d2_near_n",
+		"d2_near_se",
+		"d2_near_sw",
+		"d3_near_jr",
+		"d3_near_se",
+		"d3_near_sw",
+		"baby_mammoth_dock",
+		"ursula_dock",
+		"stargazer_dock",
+		"needle_dock",
+		"echidna_dock"
+		)
+
+/obj/effect/overmap/visitable/sector/Cetus/get_space_zlevels() //These are the primary levels that our space station resides in. This also indicates what levels astronauts can drift into.
+	return list(
+			Z_LEVEL_CETUS_STATION_ONE,
+			Z_LEVEL_CETUS_STATION_TWO,
+			Z_LEVEL_CETUS_STATION_THREE,
+			GLOB.map_templates_loaded[Z_NAME_ALIAS_MISC])
+
+/obj/effect/overmap/visitable/sector/Cetus/Crossed(var/atom/movable/AM)
+	. = ..()
+	announce_atc(AM,going = FALSE)
+
+/obj/effect/overmap/visitable/sector/Cetus/Uncrossed(var/atom/movable/AM)
+	. = ..()
+	announce_atc(AM,going = TRUE)
+
+/obj/effect/overmap/visitable/sector/Cetus/announce_atc(var/atom/movable/AM, var/going = FALSE)
+	if(istype(AM, /obj/effect/overmap/visitable/ship/simplemob))
+		if(world.time < mob_announce_cooldown)
+			return
+		else
+			mob_announce_cooldown = world.time + 5 MINUTES
+	var/message = "Sensor contact for vessel '[AM.name]' has [going ? "left" : "entered"] ATC control area."
+	//For landables, we need to see if their shuttle is cloaked
+	if(istype(AM, /obj/effect/overmap/visitable/ship/landable))
+		var/obj/effect/overmap/visitable/ship/landable/SL = AM //Phew
+		var/datum/shuttle/autodock/multi/shuttle = SSshuttles.shuttles[SL.shuttle]
+		if(!istype(shuttle) || !shuttle.cloaked) //Not a multishuttle (the only kind that can cloak) or not cloaked
+			SSatc.msg(message)
+
+	//For ships, it's safe to assume they're big enough to not be sneaky
+	else if(istype(AM, /obj/effect/overmap/visitable/ship))
+		SSatc.msg(message)
+
+/obj/effect/overmap/visitable/sector/Cetus/Initialize(mapload)
+	. = ..()
+	GLOB.station_waypoints += src
+
+/obj/effect/overmap/visitable/sector/Cetus/Destroy()
+	GLOB.station_waypoints -= src
+	. = ..()
+
 /obj/effect/overmap/visitable/ship/explo_carrier
 	name = "NEV Aegis"
 	icon_state = "nt_destroyer_g"

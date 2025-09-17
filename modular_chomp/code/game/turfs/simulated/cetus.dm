@@ -145,7 +145,7 @@ GLOBAL_LIST_BOILERPLATE(nanite_turfs, /turf/simulated/floor/water/digestive_enzy
 		return FALSE
 	if(isitem(AM))
 		var/obj/item/I = AM
-		if(I.unacidable || I.throwing || I.is_incorporeal())
+		if(I.unacidable || I.throwing || I.is_incorporeal() || !I)
 			return FALSE
 		var/food = FALSE
 		if(istype(I,/obj/item/reagent_containers/food))
@@ -201,7 +201,7 @@ GLOBAL_LIST_BOILERPLATE(nanite_turfs, /turf/simulated/floor/water/digestive_enzy
 /turf/simulated/floor/water/digestive_enzymes/nanites/digest_stuff(atom/movable/AM)	//copypasting the entire proc because we use an SMES instead of a linked mob
 	. = FALSE
 
-	var/damage = 1
+	var/damage = 2
 	var/list/stuff = list()
 	var/nutrients = 0
 	for(var/thing in src)
@@ -261,18 +261,21 @@ GLOBAL_LIST_BOILERPLATE(nanite_turfs, /turf/simulated/floor/water/digestive_enzy
 	give_nutrients(nutrients)
 
 /turf/simulated/floor/water/digestive_enzymes/nanites/proc/give_nutrients(var/amt)
+	if(smes)
+		smes.charge += (amt * 20)
+		return
 	if(nutrienttarget)
 		if(ishuman(nutrienttarget))
 			var/mob/living/carbon/human/H = nutrienttarget
 			if(H.isSynthetic())
-				H.adjust_nutrition(amt)
+				H.nutrition = H.nutrition+(10 * amt * (1-min(H.species.synthetic_food_coeff, 0.9)))
 				return
 		if(isrobot(nutrienttarget))
-			nutrienttarget.adjust_nutrition(amt * 2)
-			return
-	if(smes & loc)
-		if(loc == smes.loc.loc)
-			smes.charge += (amt * 20)
+			var/mob/living/silicon/robot/R = nutrienttarget
+			if(R.cell)
+				R.cell.give(amt * 20)
+				return
+
 
 /turf/simulated/floor/water/digestive_enzymes/nanites/return_air_for_internal_lifeform(var/mob/living/L)
 	if(!can_digest(L))
@@ -333,7 +336,7 @@ GLOBAL_LIST_BOILERPLATE(nanite_turfs, /turf/simulated/floor/water/digestive_enzy
 			stairs.icon_state = "stair_hazard_nanite"
 			stairs.update_icon()
 	for(var/atom/AM in src)
-		Entered(AM, src)
+		Entered(AM)
 	update_icon()
 
 /obj/structure/railing/overhang/hazard
@@ -364,50 +367,3 @@ GLOBAL_LIST_BOILERPLATE(nanite_turfs, /turf/simulated/floor/water/digestive_enzy
 
 /obj/structure/dummystairs/hazardledge
 	icon_state = "stair_hazard"
-
-/obj/machinery/light/fluorescent
-	name = "fluorescent light fixture"
-	nightshift_allowed = FALSE
-	overlay_color = LIGHT_COLOR_FLUORESCENT_TUBE
-	light_type = /obj/item/light/tube/fluorescent
-
-/obj/machinery/light/small/fluorescent
-	name = "fluorescent light fixture"
-	nightshift_allowed = FALSE
-	overlay_color = LIGHT_COLOR_FLUORESCENT_TUBE
-	light_type = /obj/item/light/bulb/fluorescent
-
-/obj/item/light/tube/fluorescent
-	desc = "A harsh, bright fluorescent light tube"
-	brightness_color = LIGHT_COLOR_FLUORESCENT_TUBE
-
-/obj/item/light/bulb/fluorescent
-	desc = "A harsh, bright fluorescent light tube"
-	brightness_color = LIGHT_COLOR_FLUORESCENT_TUBE
-
-/obj/machinery/light/yellowed
-	desc = "This light fixture displays a sickly yellow hue"
-	overlay_color = LIGHT_COLOR_YELLOW
-	nightshift_allowed = FALSE
-	light_type = /obj/item/light/tube/yellowed
-
-/obj/machinery/light/small/yellowed
-	desc = "This light fixture displays a sickly yellow hue"
-	overlay_color = LIGHT_COLOR_YELLOW
-	nightshift_allowed = FALSE
-	light_type = /obj/item/light/bulb/yellowed
-	brightness_power = 0.5
-
-/obj/item/light/tube/yellowed
-	desc = "An old, yellowed light tube."
-	color = COLOR_YELLOW
-	brightness_color = LIGHT_COLOR_YELLOW
-	brightness_power = 0.45
-	init_brightness_power = 0.45
-
-/obj/item/light/bulb/yellowed
-	desc = "An old, yellowed light bulb."
-	color = COLOR_YELLOW
-	brightness_color = LIGHT_COLOR_YELLOW
-	brightness_power = 0.5
-	init_brightness_power = 0.5

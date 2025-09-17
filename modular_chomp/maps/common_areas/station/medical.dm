@@ -227,3 +227,4 @@
 /area/medical/morgue/cetus
 	base_turf = /turf/simulated/floor/outdoors/rocks/cetus
 	ambience = AMBIENCE_GHOSTLY
+	lightswitch = FALSE

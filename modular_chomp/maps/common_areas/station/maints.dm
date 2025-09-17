@@ -1141,27 +1141,33 @@
 	name = "\improper Abandoned Private Physiology"
 	icon_state = "maint_medbay"
 	ambience = AMBIENCE_FOREBODING
+	lightswitch = FALSE
 
 /area/maintenance/cetus/dentist
 	name = "\improper Abandoned Dental"
 	icon_state = "maint_medbay"
 	ambience = AMBIENCE_GHOSTLY
+	lightswitch = FALSE
 
 /area/maintenance/cetus/stylist
 	name = "\improper Abandoned Barbershop"
+	lightswitch = FALSE
 
 /area/maintenance/cetus/mechbay
 	name = "\improper Abandoned Mechbay"
 	icon_state = "maint_research"
+	lightswitch = FALSE
 
 /area/maintenance/cetus/tech
 	name = "\improper Abandoned Technological Workshop"
 	icon_state = "maint_research"
 	ambience = AMBIENCE_HIGHSEC
+	lightswitch = FALSE
 
 /area/maintenance/cetus/cozyobservatory
 	name = "\improper Abandoned Observatory"
 	icon_state = "maint_dormitory"
+	lightswitch = FALSE
 
 /area/maintenance/cetus/hallway
 	name = "\improper Abandoned Primary Hallway"
@@ -1169,18 +1175,22 @@
 
 /area/maintenance/cetus/janitorial
 	name = "\improper Abandoned Broom Closet"
+	lightswitch = FALSE
 
 /area/maintenance/cetus/nanites
 	name = "\improper Nanite Storage"
 	ambience= AMBIENCE_HIGHSEC
+	lightswitch = FALSE
 
 /area/maintenance/cetus/workshop
 	name = "\improper Abandoned Workshop"
 	icon_state = "maint_engineering"
+	lightswitch = FALSE
 
 /area/maintenance/cetus/construction
 	name = "\improper Designation Not Set"
 	icon_state = "maint_engineering"
+	lightswitch = FALSE
 
 /area/maintenance/cetus/d1port
 	name = "\improper Deck One Port Maintenance"
@@ -1191,6 +1201,7 @@
 	icon_state = "maint_engineering"
 	ambience = AMBIENCE_SUBSTATION
 	sound_env = SOUND_ENVIRONMENT_CAVE
+	lightswitch = FALSE
 
 /area/maintenance/cetus/twojrport
 	name = "\improper Joint Research Deck Two Port Maintenance"
@@ -1273,6 +1284,7 @@
 /area/maintenance/cetus/sex
 	name = "\improper Accomodations Room"
 	icon_state = "maint_dormitory"
+	lightswitch = FALSE
 
 /area/maintenance/cetus/threefp
 	name = "\improper Deck Three Fore Port Maintenance"
@@ -1337,22 +1349,24 @@
 	icon_state = "arcade2"
 	ambience = AMBIENCE_AESTHETIC
 
-/area/maintenance/cetus/shallow/backstage
-	name = "\improper Theater Corridors"
-	icon_state = "maint"
 
 /area/maintenance/cetus/shallow/bodyguard
 	name = "\improper Private Security"
+	lightswitch = FALSE
 
 /area/maintenance/cetus/shallow/detective
 	name = "\improper Private Investigations"
+	lightswitch = FALSE
 
 /area/maintenance/cetus/shallow/law
 	name = "\improper Private Legal Office"
+	lightswitch = FALSE
 
 /area/maintenance/cetus/shallow/quack
 	name = "\improper Alternative Visions"
 	ambience = AMBIENCE_OTHERWORLDLY
+	lightswitch = FALSE
+
 
 /area/maintenance/cetus/shallow/derilect
 	sound_env = STANDARD_STATION
@@ -1403,9 +1417,11 @@
 /area/maintenance/cetus/shallow/gamba
 	name = "\improper Abandoned Gambling Den"
 	icon_state = "gaming"
+	lightswitch = FALSE
 
 /area/maintenance/cetus/fishery
 	name = "\improper Abandoned Bait and Tackle"
+	lightswitch = FALSE
 
 /area/maintenance/cetus/lobby
 	name = "\improper Commercial Hall Reception"
