@@ -108,7 +108,7 @@
 		if(on_fire) //Check if rag is on fire, if so igniting them and stopping.
 			user.visible_message(span_danger("\The [user] hits [target] with [src]!"),)
 			user.do_attack_animation(src)
-			M.IgniteMob()
+			M.ignite_mob()
 		else if(user.zone_sel.selecting == O_MOUTH) //Check player target location, provided the rag is not on fire. Then check if mouth is exposed.
 			if(ishuman(target)) //Added this since player species process reagents in majority of cases.
 				var/mob/living/carbon/human/H = target
@@ -198,7 +198,8 @@
 	update_name()
 	update_icon()
 
-/obj/item/reagent_containers/glass/rag/proc/extinguish()
+/obj/item/reagent_containers/glass/rag/extinguish()
+	. = ..()
 	STOP_PROCESSING(SSobj, src)
 	set_light(0)
 	on_fire = 0
@@ -220,7 +221,7 @@
 	//copied from matches
 	if(isliving(loc))
 		var/mob/living/M = loc
-		M.IgniteMob()
+		M.ignite_mob()
 	var/turf/location = get_turf(src)
 	if(location)
 		location.hotspot_expose(700, 5)

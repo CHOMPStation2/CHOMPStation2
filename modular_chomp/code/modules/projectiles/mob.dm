@@ -74,10 +74,15 @@
 	armor_penetration = 15
 	my_chems = list(REAGENT_ID_FUEL, REAGENT_ID_MOLD)
 	flammability = 0.25
-	modifier_type_to_apply = /datum/modifier/fire
-	modifier_duration = 6 SECONDS
 	color = "#38b9ff"
 	speed = 3.2
+
+/obj/item/projectile/energy/blob/moth/on_hit(atom/target, blocked = 0, def_zone)
+	. = ..()
+	if(isliving(target))
+		var/mob/living/L = target
+		L.adjust_fire_stacks(10)
+		L.ignite_mob()
 
 /obj/item/projectile/bullet/pistol/medium/ap/eclipse
 	ricochets = 1

@@ -173,7 +173,8 @@
 
 /obj/item/material/sword/rapier/solar/apply_hit_effect(mob/living/target, mob/living/user, var/hit_zone)
 	. = ..()
-	target.add_modifier(/datum/modifier/fire/weak, 12 SECONDS) //should be 12 damage?
+	target.adjust_fire_stacks(10)
+	target.ignite_mob()
 
 //Icicle
 /obj/item/gun/energy/icelauncher

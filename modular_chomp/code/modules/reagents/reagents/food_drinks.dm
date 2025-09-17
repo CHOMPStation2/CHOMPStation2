@@ -650,7 +650,7 @@
 /datum/reagent/ethanol/mauna_loa/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
 	if(prob(10))
 		M.adjust_fire_stacks(5*removed)
-		M.IgniteMob()
+		M.ignite_mob()
 
 /datum/reagent/ethanol/hiveminderaser
 	name = REAGENT_HIVEMINDERASER
