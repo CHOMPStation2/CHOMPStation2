@@ -352,6 +352,7 @@
 	name = "\improper Chapel Crypt"
 	base_turf = /turf/simulated/floor/outdoors/rocks/cetus
 	ambience = AMBIENCE_GHOSTLY
+	lightswitch = FALSE
 
 /area/crew_quarters/cetus
 	flags = RAD_SHIELDED | AREA_FORBID_EVENTS | AREA_FORBID_SINGULO | AREA_ALLOW_CLOCKOUT
@@ -359,18 +360,22 @@
 /area/crew_quarters/cetus/theater
 	name = "\improper Theater"
 	icon_state = "Theatre"
+	lightswitch = FALSE
 
 /area/crew_quarters/cetus/dressing
 	name = "\improper Dressing Room"
 	icon_state = "Theatre"
+	lightswitch = FALSE
 
 /area/crew_quarters/cetus/clown
 	name = "\improper Clown Dressing Room"
 	icon_state = "Theatre"
+	lightswitch = FALSE
 
 /area/crew_quarters/cetus/mime
 	name = "\improper Mime Dressing Room"
 	icon_state = "Theatre"
+	lightswitch = FALSE
 
 /area/crew_quarters/cetus/lounge
 	name = "\improper Overlook Lounge"
@@ -383,10 +388,12 @@
 /area/crew_quarters/cetus/Libraryf1
 	name = "\improper Library Ground Floor"
 	icon_state = "library"
+	lightswitch = FALSE
 
 /area/crew_quarters/cetus/Libraryf2
 	name = "\improper Library Loft"
 	icon_state = "library"
+	lightswitch = FALSE
 
 /area/crew_quarters/cetus/Galleryf1
 	name = "\improper Art Gallery"
@@ -395,6 +402,7 @@
 /area/crew_quarters/cetus/Galleryf2
 	name = "\improper Gallery Cafe"
 	icon_state = "coffee_shop"
+
 
 /area/crew_quarters/cetus/meteor
 	base_turf = /turf/simulated/floor/outdoors/rocks/cetus
@@ -462,6 +470,7 @@
 /area/crew_quarters/cetus/servicecloset
 	name = "\improper Service Closet"
 	icon_state = "storage"
+	lightswitch = FALSE
 
 /area/crew_quarters/cetus/docklock
 	name = "\improper Arrivals Locker Rooms"

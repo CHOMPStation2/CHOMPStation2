@@ -99,7 +99,7 @@
 /obj/item/storage/bag/circuits/basic{
 	pixel_y = 16
 	},
-/obj/machinery/light/flicker{
+/obj/machinery/light/yellowed{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/old_tile/yellow,
@@ -273,8 +273,8 @@
 /obj/structure/micro_tunnel/random{
 	dir = 1
 	},
-/turf/simulated/mineral/cetus,
-/area/engineering/cetus/meteor/refinery)
+/turf/simulated/floor/outdoors/rocks/cetus,
+/area/maintenance/cetus/meteor/foremed)
 "agI" = (
 /obj/structure/disposalpipe/segment,
 /obj/effect/floor_decal/borderfloor/corner{
@@ -359,13 +359,13 @@
 	dir = 8;
 	pixel_x = -24
 	},
+/obj/machinery/light{
+	dir = 8
+	},
 /turf/simulated/floor/lino,
 /area/crew_quarters/cetus/meteor/bar)
 "aiQ" = (
-/obj/machinery/shield_diffuser,
-/obj/structure/lattice,
-/obj/structure/lattice,
-/turf/space,
+/turf/simulated/floor/plating/turfpack/airless,
 /area/space)
 "ajK" = (
 /obj/structure/bed,
@@ -413,10 +413,6 @@
 "akw" = (
 /obj/machinery/media/jukebox,
 /obj/effect/floor_decal/steeldecal/steel_decals_central7,
-/obj/machinery/camera/network/civilian{
-	c_tag = "CIV - D1 Cafeteria 1";
-	dir = 8
-	},
 /obj/machinery/light{
 	dir = 4
 	},
@@ -431,7 +427,7 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 6
 	},
-/obj/machinery/light/small{
+/obj/machinery/light/small/emergency{
 	dir = 4
 	},
 /turf/simulated/floor/plating,
@@ -486,8 +482,11 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled,
-/area/hangar/cetus/one)
+/area/hangar/cetus/two)
 "amw" = (
 /obj/structure/disposalpipe/junction{
 	dir = 1
@@ -588,6 +587,9 @@
 	},
 /obj/machinery/shield_gen/external,
 /obj/effect/floor_decal/industrial/outline/yellow,
+/obj/machinery/light/small{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/cetus/meteor/shieldgen)
 "aou" = (
@@ -691,7 +693,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
-/area/hangar/cetus/one)
+/area/hangar/cetus/two)
 "aqK" = (
 /obj/structure/table/steel,
 /obj/random/drinkbottle,
@@ -883,6 +885,26 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/white,
 /area/medical/cetus/atriumd1)
+"azB" = (
+/obj/machinery/door/firedoor/multi_tile,
+/obj/effect/floor_decal/industrial/hatch,
+/obj/effect/floor_decal/industrial/arrows/blue,
+/obj/effect/floor_decal/industrial/arrows/blue{
+	dir = 1
+	},
+/obj/machinery/door/airlock/multi_tile/glass{
+	id_tag = "spacebus_south"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/yellow{
+	dir = 8
+	},
+/obj/structure/cable/blue{
+	icon_state = "1-2"
+	},
+/obj/effect/map_helper/airlock/door/simple,
+/obj/machinery/atmospheric_field_generator/perma/underdoors,
+/turf/simulated/shuttle/plating,
+/area/shuttle/spacebus)
 "aAa" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -899,18 +921,10 @@
 /turf/simulated/floor/plating,
 /area/engineering/cetus/meteor/engineroom)
 "aAA" = (
-/obj/structure/cliff/automatic{
-	dir = 5;
-	density = 0
-	},
 /obj/machinery/light/fluorescent{
 	dir = 8
 	},
-/turf/simulated/floor/water/indoors{
-	movement_cost = 8;
-	name = "swampy water";
-	color = "#84c29b"
-	},
+/turf/simulated/floor/water/indoors/station,
 /area/maintenance/cetus/meteor/ragecage)
 "aAC" = (
 /obj/random/obstruction,
@@ -920,6 +934,15 @@
 /obj/structure/railing/grey,
 /turf/simulated/floor/outdoors/rocks/cetus,
 /area/maintenance/cetus/meteor/ragecage)
+"aBf" = (
+/obj/effect/shuttle_landmark{
+	base_area = /area/space;
+	base_turf = /turf/space;
+	landmark_tag = "d1_near_se";
+	name = "Near Cetus - Deck 1 South East"
+	},
+/turf/space,
+/area/space)
 "aBA" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
@@ -987,7 +1010,7 @@
 /obj/effect/wingrille_spawn/reinforced,
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/plating,
-/area/hangar/cetus/one)
+/area/hangar/cetus/two)
 "aDJ" = (
 /obj/effect/floor_decal/spline/fancy/wood/corner,
 /turf/simulated/floor/water/pool/station,
@@ -1024,7 +1047,7 @@
 /obj/effect/floor_decal/industrial/warning/color/red{
 	dir = 8
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/airless,
 /area/space)
 "aEp" = (
 /obj/structure/cable/green{
@@ -1113,7 +1136,6 @@
 /area/crew_quarters/cetus/meteor/bar)
 "aFB" = (
 /obj/machinery/computer/arcade/clawmachine,
-/obj/machinery/light,
 /obj/machinery/firealarm{
 	dir = 4;
 	pixel_x = 24
@@ -1122,6 +1144,7 @@
 	dir = 1;
 	pixel_y = -22
 	},
+/obj/machinery/light/yellowed,
 /turf/simulated/floor/tiled/old_tile/gray,
 /area/maintenance/cetus/cozyobservatory)
 "aFD" = (
@@ -1263,7 +1286,7 @@
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/purple/border,
 /turf/simulated/floor/tiled,
-/area/hangar/cetus/one)
+/area/hangar/cetus/two)
 "aKf" = (
 /obj/structure/flora/ausbushes/sparsegrass,
 /obj/structure/flora/tree/jungle,
@@ -1798,6 +1821,16 @@
 	},
 /turf/simulated/floor/tiled/milspec/raised,
 /area/crew_quarters/cetus/meteor/hallway1)
+"aVU" = (
+/obj/machinery/door/window/survival_pod,
+/obj/structure/fuel_port{
+	pixel_y = 28
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/yellow{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/yellow,
+/area/shuttle/spacebus)
 "aWu" = (
 /obj/effect/floor_decal/rust,
 /obj/structure/reagent_dispensers/watertank/high,
@@ -1843,13 +1876,6 @@
 /obj/machinery/appliance/cooker/grill,
 /turf/simulated/floor/tiled,
 /area/crew_quarters/cetus/meteor/pool)
-"aYp" = (
-/obj/structure/cliff/automatic{
-	dir = 9;
-	density = 0
-	},
-/turf/simulated/floor/water/indoors/station,
-/area/maintenance/cetus/meteor/ragecage)
 "aYq" = (
 /obj/machinery/door/firedoor/glass,
 /obj/structure/disposalpipe/segment{
@@ -2016,6 +2042,23 @@
 /obj/structure/table/rack,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/meteor/starsec)
+"bcn" = (
+/obj/machinery/door/airlock/external{
+	icon_state = "door_locked";
+	locked = 1;
+	name = "External Airlock Access";
+	req_access = list(13)
+	},
+/obj/effect/map_helper/airlock/door/ext_door,
+/obj/machinery/access_button{
+	dir = 8;
+	name = "exterior access button";
+	pixel_y = -30;
+	pixel_x = -6
+	},
+/obj/effect/map_helper/airlock/button/ext_button,
+/turf/simulated/floor/plating,
+/area/maintenance/cetus/meteor/jraft)
 "bcr" = (
 /turf/simulated/floor/reinforced,
 /area/rnd/cetus/meteor/dangerousspecimens)
@@ -2315,6 +2358,12 @@
 /obj/effect/floor_decal/industrial/warning,
 /turf/simulated/floor/plating,
 /area/engineering/cetus/meteor/enginewaste)
+"bmN" = (
+/obj/machinery/computer/ship/navigation/telescreen{
+	pixel_y = -32
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/shuttle/spacebus)
 "bnX" = (
 /obj/machinery/vending/hydronutrients{
 	dir = 4;
@@ -2412,13 +2461,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/engine)
-"bra" = (
-/obj/structure/cliff/automatic/corner{
-	dir = 9;
-	density = 0
-	},
-/turf/simulated/floor/water/indoors/station,
-/area/maintenance/cetus/meteor/ragecage)
 "bre" = (
 /obj/machinery/vending/wardrobe/genedrobe,
 /turf/simulated/floor/tiled/white,
@@ -2473,6 +2515,45 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/old_tile/gray,
 /area/maintenance/cetus/hallway)
+"btz" = (
+/obj/structure/table/rack/shelf,
+/obj/item/bodybag/cryobag/robobag{
+	pixel_y = -5;
+	pixel_x = -5
+	},
+/obj/item/bodybag/cryobag/robobag{
+	pixel_y = -2;
+	pixel_x = -5
+	},
+/obj/item/bodybag/cryobag/robobag{
+	pixel_y = 1;
+	pixel_x = -5
+	},
+/obj/item/bodybag/cryobag{
+	pixel_y = -5;
+	pixel_x = 4
+	},
+/obj/item/bodybag/cryobag{
+	pixel_y = -2;
+	pixel_x = 4
+	},
+/obj/item/bodybag/cryobag{
+	pixel_y = 1;
+	pixel_x = 4
+	},
+/obj/item/healthanalyzer{
+	pixel_y = 9;
+	pixel_x = 4
+	},
+/obj/item/healthanalyzer{
+	pixel_y = 9;
+	pixel_x = -3
+	},
+/obj/structure/window/reinforced/survival_pod{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/white,
+/area/shuttle/spacebus)
 "bui" = (
 /obj/effect/landmark/start/ghost_roles,
 /turf/simulated/floor/outdoors/rocks/cetus,
@@ -2526,6 +2607,12 @@
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/cetus/meteor/pool)
+"bwS" = (
+/obj/machinery/light/floortube{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/shuttle/spacebus)
 "bxd" = (
 /obj/random/pottedplant,
 /obj/structure/disposalpipe/segment{
@@ -2751,7 +2838,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled,
-/area/hangar/cetus/one)
+/area/hangar/cetus/two)
 "bDW" = (
 /obj/structure/table/standard,
 /obj/machinery/cash_register/civilian{
@@ -2792,6 +2879,10 @@
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
+	},
+/obj/machinery/camera/network/engineering{
+	c_tag = "ENG - Hallway 2";
+	dir = 6
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/cetus/meteor/atriumdeck1)
@@ -3133,6 +3224,10 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
 /turf/simulated/floor/tiled/milspec/raised,
 /area/crew_quarters/cetus/meteor/hallway2)
+"bKQ" = (
+/obj/effect/overmap/visitable/ship/landable/spacebus,
+/turf/simulated/floor/tiled/dark,
+/area/shuttle/spacebus)
 "bLw" = (
 /obj/effect/floor_decal/borderfloorwhite/corner{
 	dir = 1
@@ -3167,6 +3262,23 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/cetus/mechbay)
+"bNb" = (
+/obj/machinery/door/airlock/external{
+	icon_state = "door_locked";
+	locked = 1;
+	name = "External Airlock Access";
+	req_access = list(13)
+	},
+/obj/effect/map_helper/airlock/door/ext_door,
+/obj/machinery/access_button{
+	dir = 8;
+	name = "exterior access button";
+	pixel_y = -30;
+	pixel_x = -6
+	},
+/obj/effect/map_helper/airlock/button/ext_button,
+/turf/simulated/floor/plating,
+/area/maintenance/cetus/d1port)
 "bNs" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/door/firedoor/glass,
@@ -3343,12 +3455,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/rnd/cetus/meteor/toxins)
-"bRU" = (
-/obj/structure/micro_tunnel/random{
-	dir = 1
-	},
-/turf/simulated/mineral/cetus,
-/area/maintenance/cetus/meteor/star)
 "bSb" = (
 /obj/effect/floor_decal/industrial/warning/tile,
 /obj/effect/floor_decal/industrial/warning/color/tile/red,
@@ -3792,6 +3898,12 @@
 	},
 /turf/simulated/floor/tiled/old_tile/gray,
 /area/maintenance/ab_StripBar)
+"cdr" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/yellow{
+	dir = 5
+	},
+/turf/simulated/wall/rthull,
+/area/shuttle/spacebus)
 "cds" = (
 /obj/machinery/computer/power_monitor,
 /obj/item/geiger/wall/east,
@@ -3834,6 +3946,7 @@
 /obj/structure/table/steel,
 /obj/item/storage/box/lights/mixed,
 /obj/random/maintenance/misc,
+/obj/item/champagne,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/meteor/star)
 "cez" = (
@@ -3860,7 +3973,7 @@
 /obj/effect/floor_decal/industrial/warning/color/corner/red{
 	dir = 4
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/airless,
 /area/space)
 "ceG" = (
 /obj/machinery/computer{
@@ -4172,7 +4285,7 @@
 /obj/structure/cable/yellow{
 	icon_state = "0-8"
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/airless,
 /area/space)
 "cms" = (
 /obj/structure/disposalpipe/segment{
@@ -4229,7 +4342,7 @@
 /area/rnd/cetus/meteor/toxins)
 "cnX" = (
 /obj/effect/wingrille_spawn/reinforced,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating/turfpack/airless,
 /area/rnd/test_area)
 "coA" = (
 /obj/machinery/power/breakerbox,
@@ -4293,7 +4406,7 @@
 /obj/structure/micro_tunnel/random{
 	dir = 1
 	},
-/turf/simulated/mineral/cetus,
+/turf/simulated/floor/outdoors/rocks/cetus,
 /area/maintenance/cetus/meteor/jrfore)
 "cqu" = (
 /obj/structure/disposalpipe/segment{
@@ -4382,7 +4495,7 @@
 /obj/effect/floor_decal/borderfloor/corner,
 /obj/effect/floor_decal/industrial/danger/corner,
 /turf/simulated/floor/tiled,
-/area/hangar/cetus/one)
+/area/hangar/cetus/two)
 "crH" = (
 /obj/machinery/iv_drip,
 /obj/effect/floor_decal/spline/fancy{
@@ -4395,7 +4508,7 @@
 /area/medical/cetus/atriumd1)
 "crL" = (
 /obj/machinery/ai_status_display,
-/turf/simulated/shuttle/wall,
+/turf/simulated/shuttle/wall/hard_corner,
 /area/shuttle/cryo/station)
 "crN" = (
 /obj/item/radio/intercom{
@@ -4492,6 +4605,21 @@
 /obj/machinery/partslathe,
 /turf/simulated/floor/tiled,
 /area/engineering/cetus/meteor/refinery)
+"cui" = (
+/obj/machinery/light/small/yellowed{
+	dir = 1
+	},
+/turf/simulated/floor/outdoors/rocks/cetus,
+/area/maintenance/cetus/meteor/central)
+"cun" = (
+/obj/machinery/atmospherics/binary/pump{
+	dir = 8
+	},
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/yellow,
+/area/shuttle/spacebus)
 "cuq" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -4638,6 +4766,23 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/meteor/central)
+"cxM" = (
+/obj/structure/window/plastitanium/full,
+/obj/structure/window/reinforced/survival_pod{
+	dir = 1
+	},
+/obj/structure/window/reinforced/survival_pod,
+/obj/structure/grille/rustic{
+	health = 25;
+	name = "reinforced grille"
+	},
+/obj/machinery/door/blast/regular/open{
+	dir = 8;
+	id = "baby_mammoth_blast";
+	name = "window blast shield"
+	},
+/turf/simulated/floor,
+/area/shuttle/spacebus)
 "cyp" = (
 /obj/structure/lattice,
 /obj/effect/floor_decal/rust,
@@ -4761,7 +4906,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled,
-/area/hangar/cetus/one)
+/area/hangar/cetus/two)
 "cEy" = (
 /turf/simulated/wall/r_wall,
 /area/rnd/cetus/meteor/dangerousspecimens)
@@ -4799,6 +4944,9 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 5
 	},
+/obj/machinery/light/fluorescent{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/airless,
 /area/rnd/test_area)
 "cGi" = (
@@ -4820,7 +4968,7 @@
 /turf/simulated/floor/tiled,
 /area/crew_quarters/cetus/meteor/pool)
 "cGK" = (
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating/turfpack/airless,
 /area/rnd/test_area)
 "cHl" = (
 /obj/effect/floor_decal/rust,
@@ -4966,9 +5114,11 @@
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/d1port)
 "cKu" = (
-/obj/structure/micro_tunnel/random,
-/turf/simulated/mineral/cetus,
-/area/maintenance/cetus/meteor/aftstar)
+/obj/structure/micro_tunnel/random{
+	dir = 1
+	},
+/turf/simulated/floor/outdoors/rocks/cetus,
+/area/maintenance/cetus/meteor/ragecage)
 "cKy" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -4992,12 +5142,11 @@
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/d1port)
 "cLy" = (
-/obj/machinery/light{
-	dir = 8;
-	layer = 3
-	},
 /obj/structure/cable/green{
 	icon_state = "1-2"
+	},
+/obj/machinery/light/yellowed{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/old_tile/gray,
 /area/maintenance/cetus/hallway)
@@ -5186,15 +5335,11 @@
 /turf/simulated/floor/tiled/dark,
 /area/rnd/cetus/meteor/stairwelljr1)
 "cPW" = (
-/obj/machinery/shield_diffuser,
-/obj/machinery/access_button{
-	dir = 8;
-	name = "exterior access button";
-	pixel_x = 26
+/obj/structure/panic_button{
+	pixel_y = 32
 	},
-/obj/effect/map_helper/airlock/button/ext_button,
-/turf/simulated/floor/plating,
-/area/space)
+/turf/simulated/floor/tiled/milspec,
+/area/shuttle/spacebus)
 "cQl" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -5255,10 +5400,6 @@
 "cST" = (
 /turf/simulated/wall,
 /area/crew_quarters/cetus/meteor/atrium)
-"cTu" = (
-/obj/structure/micro_tunnel/random,
-/turf/simulated/mineral/cetus,
-/area/maintenance/cetus/meteor/starsec)
 "cTB" = (
 /obj/structure/dummystairs/hazardledge{
 	dir = 4
@@ -5305,9 +5446,6 @@
 /area/engineering/cetus/meteor/atriumdeck1)
 "cUM" = (
 /obj/machinery/door/firedoor/glass,
-/obj/machinery/light{
-	dir = 4
-	},
 /obj/structure/cable/green{
 	icon_state = "6-10"
 	},
@@ -5403,6 +5541,21 @@
 /obj/item/packageWrap,
 /turf/simulated/floor/tiled/old_tile/gray,
 /area/maintenance/cetus/construction)
+"cWE" = (
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 8
+	},
+/obj/effect/floor_decal/industrial/danger{
+	dir = 8
+	},
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
+	},
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled,
+/area/hangar/cetus/two)
 "cXg" = (
 /obj/effect/landmark/start{
 	name = "Bartender"
@@ -5450,7 +5603,7 @@
 /obj/structure/cable/yellow{
 	icon_state = "0-4"
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/airless,
 /area/space)
 "cXA" = (
 /obj/machinery/atmospherics/pipe/simple/visible/black{
@@ -5496,7 +5649,7 @@
 /obj/effect/floor_decal/industrial/warning/color/red{
 	dir = 8
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/airless,
 /area/space)
 "cYh" = (
 /obj/effect/floor_decal/borderfloorblack{
@@ -5795,7 +5948,7 @@
 /obj/effect/floor_decal/industrial/warning/color/red{
 	dir = 8
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/airless,
 /area/space)
 "dgd" = (
 /obj/effect/floor_decal/borderfloorblack{
@@ -6072,6 +6225,9 @@
 	dir = 8;
 	layer = 3.3;
 	pixel_x = 26
+	},
+/obj/machinery/light/small{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/cetus/meteor/techstorage)
@@ -6366,7 +6522,7 @@
 "dyT" = (
 /obj/structure/sign/warning/secure_area,
 /turf/simulated/wall/r_wall,
-/area/hangar/cetus/one)
+/area/hangar/cetus/two)
 "dzh" = (
 /obj/machinery/button/remote/driver{
 	id = "toxinsdriver";
@@ -6387,6 +6543,15 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/cetus/meteor/toxtest)
+"dzr" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 10
+	},
+/obj/machinery/light/fluorescent{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/airless,
+/area/rnd/test_area)
 "dzw" = (
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 1
@@ -6512,7 +6677,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
-/area/hangar/cetus/one)
+/area/hangar/cetus/two)
 "dCZ" = (
 /obj/effect/floor_decal/corner_steel_grid{
 	dir = 5
@@ -6526,26 +6691,6 @@
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/cetus/meteor/pool)
-"dDW" = (
-/obj/structure/cable/yellow{
-	icon_state = "1-2"
-	},
-/obj/effect/floor_decal/industrial/warning{
-	dir = 4
-	},
-/obj/effect/floor_decal/industrial/warning{
-	dir = 8
-	},
-/obj/effect/floor_decal/industrial/warning/color/red{
-	dir = 4
-	},
-/obj/effect/floor_decal/industrial/warning/color/red{
-	dir = 8
-	},
-/turf/simulated/floor/plating{
-	icon_state = "dmg1"
-	},
-/area/space)
 "dEc" = (
 /obj/structure/window/reinforced{
 	dir = 4
@@ -6589,6 +6734,23 @@
 /obj/machinery/light/small,
 /turf/simulated/floor/tiled/dark,
 /area/chapel/chapel_morgue/cetus/crypt)
+"dFX" = (
+/obj/machinery/door/airlock/external{
+	icon_state = "door_locked";
+	locked = 1;
+	name = "External Airlock Access";
+	req_access = list(13)
+	},
+/obj/effect/map_helper/airlock/door/ext_door,
+/obj/machinery/access_button{
+	dir = 4;
+	name = "exterior access button";
+	pixel_x = 10;
+	pixel_y = 32
+	},
+/obj/effect/map_helper/airlock/button/ext_button,
+/turf/simulated/floor/plating,
+/area/maintenance/cetus/meteor/jraft)
 "dGG" = (
 /obj/machinery/alarm{
 	dir = 8;
@@ -6759,6 +6921,9 @@
 /obj/structure/sign/deck/first,
 /turf/simulated/wall,
 /area/crew_quarters/cetus/meteor/hallway2)
+"dOz" = (
+/turf/simulated/floor/tiled/milspec,
+/area/shuttle/spacebus)
 "dOE" = (
 /obj/effect/floor_decal/corner/green/bordercorner,
 /obj/effect/floor_decal/corner/green/bordercorner{
@@ -6808,6 +6973,14 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/cetus/meteor/carbonresearch)
+"dPX" = (
+/obj/structure/table/darkglass,
+/obj/machinery/light{
+	dir = 8;
+	layer = 3
+	},
+/turf/simulated/floor/tiled/dark,
+/area/shuttle/spacebus)
 "dQg" = (
 /obj/machinery/atmospherics/portables_connector{
 	dir = 4
@@ -7313,6 +7486,9 @@
 /obj/effect/floor_decal/spline/plain/corner{
 	dir = 1
 	},
+/obj/structure/micro_tunnel/random{
+	dir = 1
+	},
 /turf/simulated/floor/outdoors/rocks/cetus,
 /area/maintenance/cetus/meteor/central)
 "edD" = (
@@ -7374,6 +7550,19 @@
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/cetus/meteor/pool)
+"egz" = (
+/obj/structure/cable/blue{
+	icon_state = "2-8"
+	},
+/obj/effect/shuttle_landmark{
+	base_area = /area/hangar/two;
+	base_turf = /turf/simulated/floor/reinforced;
+	landmark_tag = "hangar_2";
+	name = "Hangar 2";
+	docking_controller = "hangar_2"
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/shuttle/spacebus)
 "egK" = (
 /obj/structure/table/rack,
 /obj/structure/window/reinforced,
@@ -7537,6 +7726,9 @@
 	pixel_x = -24
 	},
 /obj/structure/cable/green,
+/obj/structure/cable{
+	icon_state = "9-10"
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/meteor/aftstar)
 "enf" = (
@@ -7681,7 +7873,7 @@
 "eqX" = (
 /obj/machinery/shield_diffuser,
 /obj/effect/floor_decal/industrial/warning,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/airless,
 /area/space)
 "erh" = (
 /obj/structure/outcrop/uranium,
@@ -8066,7 +8258,7 @@
 /area/maintenance/cetus/meteor/foremed)
 "eBA" = (
 /obj/random/junk,
-/turf/simulated/floor/tiled/old_tile/gray,
+/turf/simulated/floor/tiled/old_tile/gray/turfpack/airless,
 /area/space)
 "eCj" = (
 /obj/machinery/light/small,
@@ -8133,6 +8325,33 @@
 /obj/machinery/floodlight,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/aftmed)
+"eEx" = (
+/obj/structure/closet/crate/engineering,
+/obj/fiftyspawner/steel,
+/obj/fiftyspawner/glass,
+/obj/item/tank/phoron,
+/obj/item/tank/phoron,
+/obj/item/storage/toolbox/mechanical,
+/obj/item/storage/toolbox/electrical,
+/obj/item/multitool,
+/obj/item/storage/briefcase/inflatable,
+/obj/item/geiger,
+/obj/item/clothing/glasses/goggles,
+/obj/item/clothing/glasses/goggles,
+/obj/item/t_scanner,
+/obj/item/clothing/glasses/welding,
+/obj/machinery/atmospherics/pipe/simple/hidden/yellow{
+	dir = 8
+	},
+/obj/machinery/power/apc/super{
+	pixel_y = 24;
+	dir = 1
+	},
+/obj/structure/cable/green{
+	icon_state = "0-2"
+	},
+/turf/simulated/floor/tiled/yellow,
+/area/shuttle/spacebus)
 "eFH" = (
 /obj/effect/floor_decal/borderfloorwhite/corner,
 /obj/effect/floor_decal/corner/paleblue/bordercorner,
@@ -8295,7 +8514,7 @@
 /area/maintenance/abmedical)
 "eJq" = (
 /obj/item/stack/rods,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/airless,
 /area/space)
 "eJu" = (
 /obj/machinery/atmospherics/unary/cryo_cell,
@@ -8441,6 +8660,23 @@
 	nitrogen = 82.1472
 	},
 /area/engineering/cetus/meteor/engineroom)
+"eLO" = (
+/obj/machinery/door/airlock/external{
+	icon_state = "door_locked";
+	locked = 1;
+	name = "External Airlock Access";
+	req_access = list(13)
+	},
+/obj/effect/map_helper/airlock/door/ext_door,
+/obj/machinery/access_button{
+	dir = 1;
+	name = "exterior access button";
+	pixel_x = -31;
+	pixel_y = 10
+	},
+/obj/effect/map_helper/airlock/button/ext_button,
+/turf/simulated/floor/plating,
+/area/maintenance/cetus/meteor/portsec)
 "eLU" = (
 /obj/structure/closet/crate,
 /obj/item/circuitboard/autolathe,
@@ -8863,6 +9099,26 @@
 	},
 /turf/simulated/floor/wood,
 /area/maintenance/cetus/stylist)
+"eVS" = (
+/obj/structure/window/plastitanium/full,
+/obj/structure/window/reinforced/survival_pod{
+	dir = 8
+	},
+/obj/structure/window/reinforced/survival_pod{
+	dir = 1
+	},
+/obj/structure/window/reinforced/survival_pod,
+/obj/structure/grille/rustic{
+	health = 25;
+	name = "reinforced grille"
+	},
+/obj/machinery/door/blast/regular/open{
+	dir = 8;
+	id = "baby_mammoth_blast";
+	name = "window blast shield"
+	},
+/turf/simulated/floor,
+/area/shuttle/spacebus)
 "eVW" = (
 /obj/structure/disposalpipe/segment{
 	dir = 1;
@@ -8882,7 +9138,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
-/area/hangar/cetus/one)
+/area/hangar/cetus/two)
 "eWJ" = (
 /obj/machinery/atmospherics/pipe/simple/visible/green,
 /obj/machinery/button/remote/blast_door{
@@ -8905,7 +9161,7 @@
 /area/engineering/cetus/meteor/engineroom)
 "eXe" = (
 /turf/simulated/wall/r_wall,
-/area/hangar/cetus/one)
+/area/hangar/cetus/two)
 "eXk" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 10
@@ -9015,7 +9271,7 @@
 "fbC" = (
 /obj/machinery/door/firedoor/glass,
 /obj/effect/wingrille_spawn/reinforced/polarized{
-	id = "hop_office"
+	id = "ward1"
 	},
 /obj/structure/cable/green{
 	icon_state = "0-6"
@@ -9076,7 +9332,7 @@
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 8
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/airless,
 /area/space)
 "fcO" = (
 /obj/machinery/power/generator{
@@ -9117,7 +9373,8 @@
 	master_tag = "toxins_airlock";
 	name = "interior access button";
 	req_one_access = list(8,13,65);
-	pixel_x = -24
+	pixel_x = -24;
+	dir = 4
 	},
 /obj/machinery/atmospherics/binary/pump/on{
 	dir = 1;
@@ -9607,7 +9864,7 @@
 	},
 /obj/effect/floor_decal/corner/purple/bordercee,
 /turf/simulated/floor/tiled,
-/area/hangar/cetus/one)
+/area/hangar/cetus/two)
 "frH" = (
 /obj/effect/mist,
 /obj/structure/waterfall/top,
@@ -9622,6 +9879,12 @@
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/meteor/jraft)
+"fsi" = (
+/obj/machinery/atmospherics/unary/engine/bigger{
+	dir = 1
+	},
+/turf/simulated/shuttle/plating/airless/carry,
+/area/shuttle/spacebus)
 "fsq" = (
 /obj/structure/bed,
 /obj/item/bedsheet/rainbow,
@@ -9671,7 +9934,7 @@
 /obj/effect/floor_decal/industrial/warning/color/red{
 	dir = 1
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/airless,
 /area/space)
 "ftI" = (
 /obj/structure/toilet/item{
@@ -9689,9 +9952,7 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/water/indoors/station{
-	movement_cost = 1
-	},
+/turf/simulated/floor/water/indoors/station,
 /area/maintenance/cetus/meteor/pond)
 "fuf" = (
 /obj/machinery/door/firedoor/glass,
@@ -9730,6 +9991,9 @@
 /obj/machinery/camera/network/exploration{
 	c_tag = "EXP - D1 Lockers";
 	dir = 5
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled,
 /area/hangar/cetus/explolocker)
@@ -9800,6 +10064,15 @@
 /obj/effect/floor_decal/asteroid,
 /turf/simulated/floor/outdoors/rocks/cetus,
 /area/crew_quarters/cetus/meteor/pool)
+"fwC" = (
+/obj/machinery/power/terminal{
+	dir = 8
+	},
+/obj/structure/cable/blue{
+	icon_state = "0-4"
+	},
+/turf/simulated/floor/tiled/yellow,
+/area/shuttle/spacebus)
 "fwY" = (
 /obj/machinery/alarm{
 	frequency = 1441;
@@ -10143,7 +10416,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled,
-/area/hangar/cetus/one)
+/area/hangar/cetus/two)
 "fGU" = (
 /obj/effect/floor_decal/spline/fancy{
 	dir = 1
@@ -10217,7 +10490,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
-/area/hangar/cetus/one)
+/area/hangar/cetus/two)
 "fJp" = (
 /obj/machinery/power/apc{
 	dir = 1;
@@ -10283,6 +10556,9 @@
 /obj/structure/ghost_pod/manual/lost_drone/dogborg,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
+	},
+/obj/machinery/light/yellowed{
+	dir = 1
 	},
 /turf/simulated/floor/tiled/milspec/raised,
 /area/maintenance/cetus/mechbay)
@@ -10586,7 +10862,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled,
-/area/hangar/cetus/one)
+/area/hangar/cetus/two)
 "fTQ" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/red{
 	dir = 8;
@@ -10678,7 +10954,7 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/airless,
 /area/space)
 "fXd" = (
 /obj/machinery/light/broken{
@@ -10744,8 +11020,11 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/cetus/mechbay)
 "gaG" = (
+/obj/machinery/light/yellowed{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/space)
+/area/maintenance/cetus/hallway)
 "gaJ" = (
 /obj/structure/cable/green{
 	icon_state = "6-9"
@@ -10975,6 +11254,9 @@
 	icon_state = "4-10"
 	},
 /obj/structure/catwalk,
+/obj/structure/micro_tunnel/random{
+	dir = 1
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/meteor/starsec)
 "gjh" = (
@@ -11077,7 +11359,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
-/area/hangar/cetus/one)
+/area/hangar/cetus/two)
 "gll" = (
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 8
@@ -11291,7 +11573,7 @@
 /obj/structure/cable/yellow{
 	icon_state = "1-4"
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/airless,
 /area/space)
 "grb" = (
 /obj/effect/wingrille_spawn/reinforced,
@@ -11568,7 +11850,7 @@
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/green/border,
 /turf/simulated/floor/tiled,
-/area/hangar/cetus/one)
+/area/hangar/cetus/two)
 "gxK" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -11823,7 +12105,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
-/area/hangar/cetus/one)
+/area/hangar/cetus/two)
 "gKo" = (
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/maintenance,
@@ -12185,7 +12467,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
-/area/hangar/cetus/one)
+/area/hangar/cetus/two)
 "gVF" = (
 /obj/machinery/door/firedoor/glass,
 /obj/structure/disposalpipe/segment{
@@ -12789,6 +13071,9 @@
 /obj/structure/disposalpipe/junction{
 	dir = 4
 	},
+/obj/structure/cable{
+	icon_state = "2-4"
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/cetus/meteor/gravsubstation)
 "hkh" = (
@@ -12873,6 +13158,13 @@
 	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/cetus/meteor/hallway1)
+"hlc" = (
+/obj/structure/bed/chair/bay/shuttle{
+	dir = 4
+	},
+/obj/structure/closet/walllocker/emerglocker/north,
+/turf/simulated/floor/tiled/milspec,
+/area/shuttle/spacebus)
 "hlV" = (
 /obj/effect/floor_decal/industrial/warning{
 	layer = 3;
@@ -13035,6 +13327,17 @@
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/cetus/meteor/atriumdeck1)
+"hoY" = (
+/obj/effect/floor_decal/industrial/arrows/blue,
+/obj/effect/floor_decal/industrial/arrows/blue{
+	dir = 1
+	},
+/obj/machinery/door/firedoor/glass,
+/obj/machinery/door/airlock/glass{
+	req_one_access = list(67)
+	},
+/turf/simulated/floor/tiled/dark,
+/area/shuttle/spacebus)
 "hpf" = (
 /obj/machinery/vending/nukie,
 /turf/simulated/floor/tiled/dark,
@@ -13179,6 +13482,9 @@
 	},
 /obj/structure/catwalk{
 	pixel_x = -1
+	},
+/obj/structure/cable{
+	icon_state = "5-9"
 	},
 /turf/simulated/floor/plating,
 /area/hangar/cetus/explolocker)
@@ -13538,7 +13844,7 @@
 "hBX" = (
 /obj/structure/sign/hangar/one,
 /turf/simulated/wall/r_wall,
-/area/hangar/cetus/one)
+/area/hangar/cetus/two)
 "hDH" = (
 /obj/effect/floor_decal/spline/plain{
 	dir = 4
@@ -13626,7 +13932,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
-/area/hangar/cetus/one)
+/area/hangar/cetus/two)
 "hFW" = (
 /obj/structure/table/woodentable,
 /obj/machinery/computer/security/telescreen/entertainment{
@@ -13678,7 +13984,7 @@
 	},
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/tiled,
-/area/hangar/cetus/one)
+/area/hangar/cetus/two)
 "hHm" = (
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
@@ -13876,7 +14182,7 @@
 /obj/effect/floor_decal/borderfloorblack/corner,
 /obj/effect/floor_decal/industrial/danger/corner,
 /turf/simulated/floor/tiled,
-/area/hangar/cetus/one)
+/area/hangar/cetus/two)
 "hLy" = (
 /obj/structure/table/hardwoodtable,
 /obj/item/deskbell{
@@ -14397,7 +14703,7 @@
 	dir = 6
 	},
 /turf/simulated/floor/tiled,
-/area/hangar/cetus/one)
+/area/hangar/cetus/two)
 "hWI" = (
 /turf/simulated/floor/plating,
 /area/engineering/cetus/meteor/shieldgen)
@@ -14722,6 +15028,9 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/light/small/yellowed{
+	dir = 8
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/meteor/central)
 "idC" = (
@@ -14786,7 +15095,7 @@
 	req_one_access = list(43,67)
 	},
 /turf/simulated/floor/plating,
-/area/hangar/cetus/one)
+/area/hangar/cetus/two)
 "ieO" = (
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 1
@@ -15045,6 +15354,10 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
 	},
+/obj/machinery/camera/network/civilian{
+	c_tag = "CIV - Bar Backroom";
+	dir = 8
+	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/cetus/meteor/bar)
 "ioI" = (
@@ -15086,12 +15399,6 @@
 	},
 /turf/simulated/floor/tiled/old_tile/gray,
 /area/maintenance/cetus/hallway)
-"ipx" = (
-/obj/structure/cliff/automatic{
-	density = 0
-	},
-/turf/simulated/floor/water/indoors/station,
-/area/maintenance/cetus/meteor/ragecage)
 "iqB" = (
 /obj/structure/bed/chair/wood,
 /obj/structure/disposalpipe/junction{
@@ -15120,6 +15427,10 @@
 "irA" = (
 /turf/simulated/wall/r_wall,
 /area/chapel/chapel_morgue/cetus/crypt)
+"irW" = (
+/obj/machinery/computer/ship/navigation,
+/turf/simulated/floor/tiled/dark,
+/area/shuttle/spacebus)
 "irY" = (
 /obj/structure/railing/overhang/bronze{
 	dir = 1;
@@ -15507,7 +15818,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
-/area/hangar/cetus/one)
+/area/hangar/cetus/two)
 "iyF" = (
 /obj/fiftyspawner/floor,
 /turf/simulated/floor/plating,
@@ -15518,6 +15829,12 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/cetus/meteor/enginemonitor)
+"izi" = (
+/obj/machinery/light/small{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/kafel_full,
+/area/security/cetus/meteor/brig)
 "izq" = (
 /obj/structure/cable/green{
 	icon_state = "5-8"
@@ -15589,6 +15906,29 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/engineering/cetus/meteor/enginemonitor)
+"iAX" = (
+/obj/structure/window/plastitanium/full,
+/obj/structure/window/reinforced/survival_pod{
+	dir = 4
+	},
+/obj/structure/window/reinforced/survival_pod{
+	dir = 8
+	},
+/obj/structure/window/reinforced/survival_pod{
+	dir = 1
+	},
+/obj/structure/window/reinforced/survival_pod,
+/obj/structure/grille/rustic{
+	health = 25;
+	name = "reinforced grille"
+	},
+/obj/machinery/door/blast/regular/open{
+	dir = 8;
+	id = "baby_mammoth_blast";
+	name = "window blast shield"
+	},
+/turf/simulated/floor,
+/area/shuttle/spacebus)
 "iBc" = (
 /obj/machinery/atmospherics/pipe/simple/visible/black{
 	dir = 5
@@ -15837,7 +16177,7 @@
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 1
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/airless,
 /area/space)
 "iJy" = (
 /obj/structure/undies_wardrobe,
@@ -16047,13 +16387,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/engineering/cetus/starsubstation)
-"iOg" = (
-/obj/structure/cliff/automatic/corner{
-	dir = 6;
-	density = 0
-	},
-/turf/simulated/floor/water/indoors/station,
-/area/maintenance/cetus/meteor/ragecage)
 "iOh" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
@@ -16150,7 +16483,7 @@
 /obj/structure/cable/yellow{
 	icon_state = "0-4"
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/airless,
 /area/space)
 "iQJ" = (
 /obj/machinery/door/airlock{
@@ -16242,6 +16575,14 @@
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled,
 /area/hangar/cetus/explolocker)
+"iUX" = (
+/obj/effect/wingrille_spawn/reinforced,
+/obj/machinery/door/firedoor/glass,
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/plating,
+/area/hangar/cetus/two)
 "iVh" = (
 /obj/effect/floor_decal/spline/plain{
 	dir = 4
@@ -16562,7 +16903,7 @@
 	pixel_y = 6
 	},
 /turf/simulated/floor/tiled,
-/area/hangar/cetus/one)
+/area/hangar/cetus/two)
 "jdY" = (
 /obj/machinery/disposal,
 /obj/structure/disposalpipe/trunk,
@@ -16646,6 +16987,14 @@
 /obj/effect/floor_decal/industrial/warning/cee,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/rnd/cetus/meteor/toxins)
+"jgD" = (
+/obj/machinery/embedded_controller/radio/simple_docking_controller{
+	frequency = 1381;
+	id_tag = "spacebus";
+	pixel_y = -25
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/shuttle/spacebus)
 "jgH" = (
 /obj/structure/table/reinforced,
 /obj/item/folder/red,
@@ -16808,11 +17157,9 @@
 /turf/simulated/floor/outdoors/rocks/cetus,
 /area/chapel/chapel_morgue/cetus/crypt)
 "jkO" = (
-/obj/structure/micro_tunnel/random{
-	dir = 1
-	},
-/turf/simulated/mineral/cetus,
-/area/maintenance/cetus/meteor/foremed)
+/obj/structure/micro_tunnel/random,
+/turf/simulated/floor/outdoors/rocks/cetus,
+/area/maintenance/cetus/meteor/aftstar)
 "jkZ" = (
 /obj/structure/table/rack/shelf,
 /obj/random/soap{
@@ -16886,7 +17233,7 @@
 /obj/effect/floor_decal/steeldecal/steel_decals_central5,
 /obj/effect/floor_decal/industrial/bot_outline/yellow,
 /turf/simulated/floor/tiled,
-/area/hangar/cetus/one)
+/area/hangar/cetus/two)
 "jmU" = (
 /obj/effect/floor_decal/borderfloorblack/corner{
 	dir = 4
@@ -16913,7 +17260,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
-/area/hangar/cetus/one)
+/area/hangar/cetus/two)
 "jok" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden{
 	dir = 1
@@ -17112,7 +17459,7 @@
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 8
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/airless,
 /area/space)
 "jqH" = (
 /obj/effect/floor_decal/corner/green/diagonal,
@@ -17145,6 +17492,10 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/security/cetus/meteor/brig)
+"jrA" = (
+/obj/structure/sign/nanotrasen,
+/turf/simulated/wall/rthull,
+/area/shuttle/spacebus)
 "jrY" = (
 /obj/random/junk,
 /turf/simulated/floor/plating,
@@ -17175,6 +17526,9 @@
 "jty" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 9
+	},
+/obj/machinery/light/fluorescent{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/airless,
 /area/rnd/test_area)
@@ -17630,7 +17984,7 @@
 /obj/effect/floor_decal/steeldecal/steel_decals_central5,
 /obj/effect/floor_decal/industrial/bot_outline/yellow,
 /turf/simulated/floor/tiled,
-/area/hangar/cetus/one)
+/area/hangar/cetus/two)
 "jFA" = (
 /obj/machinery/door/airlock{
 	name = "Restroom"
@@ -17688,10 +18042,10 @@
 /turf/simulated/floor/tiled/old_tile/white,
 /area/maintenance/cetus/stylist)
 "jGf" = (
-/obj/machinery/light/small/fluorescent{
+/obj/structure/kitchenspike,
+/obj/machinery/light/small/yellowed{
 	dir = 1
 	},
-/obj/structure/kitchenspike,
 /turf/simulated/floor/tiled/freezer,
 /area/maintenance/ab_Kitchen)
 "jGh" = (
@@ -17715,7 +18069,7 @@
 /obj/effect/floor_decal/industrial/warning/color/red{
 	dir = 8
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/airless,
 /area/space)
 "jGA" = (
 /obj/structure/bed/double/padded,
@@ -17743,12 +18097,6 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/maintenance/cetus/fishery)
-"jHC" = (
-/obj/structure/cliff/automatic/corner{
-	density = 0
-	},
-/turf/simulated/floor/water/indoors/station,
-/area/maintenance/cetus/meteor/ragecage)
 "jHG" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/yellow{
 	dir = 1
@@ -17902,6 +18250,12 @@
 /obj/effect/floor_decal/industrial/warning,
 /turf/simulated/floor/tiled/old_tile/gray,
 /area/maintenance/cetus/hallway)
+"jKi" = (
+/obj/structure/bed/chair/bay/comfy/green{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/dark,
+/area/shuttle/spacebus)
 "jKm" = (
 /obj/effect/floor_decal/borderfloorblack/corner2{
 	dir = 4
@@ -17999,6 +18353,10 @@
 	dir = 8
 	},
 /obj/random/vendordrink{
+	dir = 8
+	},
+/obj/machinery/camera/network/civilian{
+	c_tag = "CIV - D1 Cafeteria 1";
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
@@ -18141,6 +18499,10 @@
 /obj/machinery/alarm{
 	dir = 8;
 	pixel_x = 26
+	},
+/obj/machinery/camera/network/civilian{
+	c_tag = "CIV - Bar";
+	dir = 8
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/crew_quarters/cetus/meteor/bar)
@@ -18423,7 +18785,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
-/area/hangar/cetus/one)
+/area/hangar/cetus/two)
 "jUW" = (
 /obj/machinery/light,
 /obj/machinery/disposal/wall{
@@ -18448,6 +18810,13 @@
 /obj/structure/disposalpipe/segment,
 /obj/structure/cable/green{
 	icon_state = "1-2"
+	},
+/obj/machinery/light{
+	dir = 4;
+	light_color = "#DDFFD3"
+	},
+/obj/structure/cable{
+	icon_state = "6-8"
 	},
 /turf/simulated/floor/tiled,
 /area/hangar/cetus/explolocker)
@@ -18615,9 +18984,7 @@
 /turf/simulated/floor/tiled/white,
 /area/rnd/cetus/meteor/carbonresearch)
 "kbh" = (
-/obj/machinery/light{
-	layer = 3
-	},
+/obj/machinery/light/yellowed,
 /turf/simulated/floor/tiled/old_tile/gray,
 /area/maintenance/cetus/construction)
 "kbt" = (
@@ -18983,6 +19350,9 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/crew_quarters/cetus/meteor/vr)
 "kjv" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled,
 /area/hangar/cetus/explolocker)
 "kjx" = (
@@ -19248,6 +19618,12 @@
 	},
 /turf/simulated/floor/tiled,
 /area/security/cetus/meteor/brig)
+"kpI" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/yellow{
+	dir = 8
+	},
+/turf/simulated/wall/rthull,
+/area/shuttle/spacebus)
 "kqc" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -19436,8 +19812,14 @@
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/meteor/central)
 "ktO" = (
-/turf/simulated/floor/plating,
-/area/space)
+/obj/effect/floor_decal/industrial/warning{
+	dir = 6
+	},
+/obj/machinery/light/fluorescent{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/airless,
+/area/rnd/test_area)
 "ktS" = (
 /obj/effect/floor_decal/steeldecal/steel_decals_central5{
 	color = "#989898";
@@ -19550,7 +19932,7 @@
 "kzp" = (
 /obj/structure/sign/warning/radioactive,
 /turf/simulated/wall/r_wall,
-/area/hangar/cetus/one)
+/area/hangar/cetus/two)
 "kzK" = (
 /obj/machinery/alarm{
 	dir = 1;
@@ -19873,11 +20255,14 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/disposalpipe/segment,
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/cetus/meteor/gravsubstation)
 "kGW" = (
 /turf/simulated/floor/tiled,
-/area/hangar/cetus/one)
+/area/hangar/cetus/two)
 "kHr" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 4
@@ -19891,6 +20276,10 @@
 /obj/item/clothing/glasses/sunglasses,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/meteor/jrfore)
+"kIa" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/yellow,
+/turf/simulated/wall/rthull,
+/area/shuttle/spacebus)
 "kIe" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
@@ -19915,6 +20304,10 @@
 	name = "Hot Loop Waste-to-Canister pump"
 	},
 /obj/effect/floor_decal/industrial/outline/blue,
+/obj/machinery/camera/network/engine{
+	c_tag = "ENG - Waste Handling 2";
+	dir = 1
+	},
 /turf/simulated/floor/plating,
 /area/engineering/cetus/meteor/enginewaste)
 "kJe" = (
@@ -20156,6 +20549,10 @@
 	dir = 1;
 	pixel_y = 23
 	},
+/obj/machinery/light_switch{
+	pixel_x = 11;
+	pixel_y = 24
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/cetus/tech)
 "kPw" = (
@@ -20183,8 +20580,7 @@
 	layer = 3.3;
 	pixel_y = -3;
 	pixel_x = -5;
-	throw_speed = 1;
-	launch_dist = 1
+	throw_speed = 1
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/medical/morgue/cetus)
@@ -20337,9 +20733,7 @@
 /area/crew_quarters/cetus/meteor/cafeteriaf1)
 "kVj" = (
 /obj/structure/lattice,
-/turf/simulated/floor/water/indoors/station{
-	movement_cost = 1
-	},
+/turf/simulated/floor/water/indoors/station,
 /area/maintenance/cetus/meteor/pond)
 "kVz" = (
 /turf/simulated/wall,
@@ -20469,9 +20863,16 @@
 	can_open = 1
 	},
 /area/chapel/chapel_morgue/cetus/crypt)
+"lad" = (
+/obj/machinery/alarm{
+	pixel_y = 25;
+	name = "N-alarm"
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/shuttle/spacebus)
 "laT" = (
 /obj/random/obstruction,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/airless,
 /area/space)
 "laY" = (
 /obj/structure/cable/cyan{
@@ -20656,7 +21057,7 @@
 	desc = "A sign that warns of potential hazards of mailing personell through the pneumatic delivery system"
 	},
 /turf/simulated/wall/r_wall,
-/area/hangar/cetus/one)
+/area/hangar/cetus/two)
 "leW" = (
 /obj/structure/table/marble,
 /obj/machinery/door/blast/shutters{
@@ -20750,7 +21151,7 @@
 /obj/machinery/vending/radren{
 	dir = 4
 	},
-/obj/machinery/light,
+/obj/machinery/light/yellowed,
 /turf/simulated/floor/tiled/old_tile/gray,
 /area/maintenance/cetus/cozyobservatory)
 "liq" = (
@@ -20798,6 +21199,22 @@
 	},
 /turf/simulated/floor/plating,
 /area/engineering/cetus/meteor/atriumdeck1)
+"ljd" = (
+/obj/machinery/door/airlock/external{
+	icon_state = "door_locked";
+	locked = 1;
+	name = "External Airlock Access";
+	req_access = list(13)
+	},
+/obj/effect/map_helper/airlock/door/ext_door,
+/obj/machinery/access_button{
+	name = "exterior access button";
+	pixel_x = -28;
+	pixel_y = -8
+	},
+/obj/effect/map_helper/airlock/button/ext_button,
+/turf/simulated/floor/plating,
+/area/maintenance/cetus/engine)
 "ljx" = (
 /obj/structure/closet/crate,
 /obj/item/storage/box/lights/mixed,
@@ -20825,7 +21242,7 @@
 /area/medical/surgery_storage)
 "ljO" = (
 /obj/random/maintenance/engineering,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/airless,
 /area/space)
 "lks" = (
 /obj/machinery/power/apc{
@@ -21082,7 +21499,7 @@
 /obj/structure/cable/yellow{
 	icon_state = "0-8"
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/airless,
 /area/space)
 "lph" = (
 /obj/structure/disposalpipe/segment{
@@ -21189,17 +21606,11 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay_primary_storage)
 "lqB" = (
-/obj/machinery/access_button{
-	dir = 8;
-	name = "exterior access button";
-	pixel_x = 26
-	},
-/obj/effect/map_helper/airlock/button/ext_button,
 /obj/machinery/shield_diffuser,
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 4
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/airless,
 /area/space)
 "lqE" = (
 /obj/structure/cable/green{
@@ -21395,10 +21806,6 @@
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/cetus/meteor/pool)
 "lxR" = (
-/obj/structure/cliff/automatic{
-	dir = 10;
-	density = 0
-	},
 /obj/machinery/light/fluorescent{
 	dir = 1
 	},
@@ -21558,9 +21965,7 @@
 "lCa" = (
 /obj/structure/lattice,
 /obj/structure/catwalk,
-/turf/simulated/floor/water/indoors/station{
-	movement_cost = 1
-	},
+/turf/simulated/floor/water/indoors/station,
 /area/engineering/cetus/meteor/refinery)
 "lCw" = (
 /turf/simulated/wall,
@@ -21636,6 +22041,13 @@
 	},
 /turf/space,
 /area/space)
+"lDQ" = (
+/obj/structure/shuttle/engine/heater,
+/obj/machinery/atmospherics/pipe/manifold/hidden/yellow{
+	dir = 1
+	},
+/turf/simulated/wall/rthull,
+/area/shuttle/spacebus)
 "lDT" = (
 /obj/machinery/recharge_station,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -21758,7 +22170,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
-/area/hangar/cetus/one)
+/area/hangar/cetus/two)
 "lHh" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
@@ -21776,6 +22188,19 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/cetus/meteor/shieldgen)
+"lII" = (
+/obj/structure/window/reinforced/survival_pod{
+	dir = 4
+	},
+/obj/machinery/atmospherics/portables_connector{
+	dir = 1
+	},
+/obj/machinery/portable_atmospherics/canister/phoron,
+/obj/structure/cable/blue{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/yellow,
+/area/shuttle/spacebus)
 "lJe" = (
 /obj/effect/floor_decal/spline/plain/cee{
 	dir = 4
@@ -21901,6 +22326,18 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/cetus/meteor/barrestrooms)
+"lMP" = (
+/obj/effect/floor_decal/industrial/hatch,
+/obj/effect/floor_decal/industrial/arrows/blue,
+/obj/effect/floor_decal/industrial/arrows/blue{
+	dir = 1
+	},
+/obj/machinery/atmospheric_field_generator/perma/underdoors,
+/obj/machinery/atmospherics/pipe/simple/hidden/yellow{
+	dir = 8
+	},
+/turf/simulated/shuttle/plating,
+/area/shuttle/spacebus)
 "lNW" = (
 /obj/structure/cable/green{
 	icon_state = "1-10"
@@ -22045,6 +22482,12 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/meteor/jrfore)
+"lTf" = (
+/obj/structure/bed/chair/bay/shuttle{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/shuttle/spacebus)
 "lUm" = (
 /turf/simulated/floor/outdoors/rocks/cetus/edge,
 /area/space)
@@ -22278,7 +22721,7 @@
 /area/crew_quarters/cetus/meteor/cafeteriaf1)
 "lZX" = (
 /turf/simulated/mineral/cetus,
-/area/hangar/cetus/one)
+/area/hangar/cetus/two)
 "mac" = (
 /obj/item/stool/padded{
 	dir = 1
@@ -22437,6 +22880,7 @@
 	pixel_x = -2;
 	pixel_y = -5
 	},
+/obj/machinery/light/small,
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/cetus/meteor/techstorage)
 "mem" = (
@@ -22500,7 +22944,7 @@
 /obj/machinery/pointdefense{
 	id_tag = "PD Main"
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/airless,
 /area/space)
 "mgT" = (
 /obj/structure/flora/ausbushes/brflowers,
@@ -22634,6 +23078,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/machinery/light,
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/cetus/meteor/dronefab)
 "mlG" = (
@@ -22799,6 +23244,12 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/meteor/star)
+"mpN" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/reinforced,
+/area/hangar/cetus/two)
 "mqc" = (
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/multi_tile/glass{
@@ -22990,7 +23441,7 @@
 "mtM" = (
 /obj/structure/sign/warning/mail_delivery,
 /turf/simulated/wall/r_wall,
-/area/hangar/cetus/one)
+/area/hangar/cetus/two)
 "mtY" = (
 /obj/structure/reagent_dispensers/fueltank,
 /turf/simulated/floor/plating,
@@ -23100,7 +23551,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled,
-/area/hangar/cetus/one)
+/area/hangar/cetus/two)
 "mwB" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -23124,15 +23575,9 @@
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/meteor/starsec)
 "myf" = (
+/obj/machinery/light/small/yellowed,
 /turf/simulated/floor/outdoors/rocks/cetus,
-/area/asteroid/cetus/d1)
-"myK" = (
-/obj/structure/cliff/automatic{
-	dir = 5;
-	density = 0
-	},
-/turf/simulated/floor/water/indoors/station,
-/area/maintenance/cetus/meteor/ragecage)
+/area/maintenance/cetus/meteor/aftstar)
 "myU" = (
 /obj/structure/bed/chair{
 	dir = 1
@@ -23262,7 +23707,7 @@
 	pixel_x = -28
 	},
 /obj/machinery/button/windowtint{
-	id = "ward2";
+	id = "expsurgery";
 	range = 14;
 	name = "Surgery Tint";
 	pixel_y = -24;
@@ -23370,7 +23815,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
-/area/hangar/cetus/one)
+/area/hangar/cetus/two)
 "mGn" = (
 /obj/machinery/vending/boozeomat,
 /turf/simulated/wall/r_wall,
@@ -23394,6 +23839,15 @@
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /turf/simulated/floor/wood,
 /area/crew_quarters/sleep/cetus/meteor/dorm2)
+"mHk" = (
+/obj/structure/bed/chair/bay/shuttle{
+	dir = 8
+	},
+/obj/structure/window/reinforced/survival_pod{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/shuttle/spacebus)
 "mHm" = (
 /obj/structure/table/glass,
 /obj/item/reagent_containers/glass/beaker/cryoxadone{
@@ -23520,6 +23974,9 @@
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/meteor/central)
 "mKC" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/security/cetus/meteor/brig)
 "mKN" = (
@@ -23576,6 +24033,10 @@
 /obj/machinery/door/airlock/maintenance,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/meteor/central)
+"mMW" = (
+/obj/machinery/sleep_console,
+/turf/simulated/floor/tiled/white,
+/area/shuttle/spacebus)
 "mNa" = (
 /turf/simulated/wall/r_wall,
 /area/medical/Surgery_Room_1)
@@ -23868,7 +24329,7 @@
 /obj/effect/floor_decal/industrial/warning/color/red{
 	dir = 8
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/airless,
 /area/space)
 "mTu" = (
 /obj/structure/cable/green{
@@ -23968,6 +24429,13 @@
 	outdoors = -1
 	},
 /area/maintenance/cetus/meteor/pond)
+"mXW" = (
+/obj/structure/shuttle/engine/heater,
+/obj/machinery/atmospherics/pipe/simple/hidden/yellow{
+	dir = 10
+	},
+/turf/simulated/wall/rthull,
+/area/shuttle/spacebus)
 "mYz" = (
 /obj/random/junk,
 /turf/simulated/floor/plating,
@@ -24161,6 +24629,25 @@
 	},
 /turf/simulated/floor/plating,
 /area/medical/Surgery_Room_2)
+"ngx" = (
+/obj/structure/catwalk{
+	pixel_x = -1
+	},
+/obj/structure/cable/blue{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/obj/machinery/camera/network/engineering{
+	c_tag = "ENG - Hallway 3";
+	dir = 6
+	},
+/turf/simulated/floor/plating,
+/area/engineering/cetus/meteor/shieldgen)
 "ngD" = (
 /obj/effect/floor_decal/corner_techfloor_gray{
 	dir = 5
@@ -24208,6 +24695,7 @@
 /obj/effect/floor_decal/industrial/danger{
 	dir = 8
 	},
+/obj/machinery/light,
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/cetus/meteor/dronefab)
 "njh" = (
@@ -24252,7 +24740,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled,
-/area/hangar/cetus/one)
+/area/hangar/cetus/two)
 "njX" = (
 /obj/structure/table/rack/shelf/steel,
 /obj/item/wheelchair{
@@ -24580,8 +25068,11 @@
 /obj/effect/floor_decal/industrial/danger/corner{
 	dir = 1
 	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled,
-/area/hangar/cetus/one)
+/area/hangar/cetus/two)
 "nsH" = (
 /obj/machinery/power/apc{
 	dir = 1;
@@ -24656,7 +25147,7 @@
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals_central5,
 /turf/simulated/floor/tiled,
-/area/hangar/cetus/one)
+/area/hangar/cetus/two)
 "ntG" = (
 /obj/machinery/atmospherics/pipe/simple/visible/green{
 	dir = 4
@@ -24682,6 +25173,10 @@
 	},
 /turf/simulated/floor/plating,
 /area/engineering/cetus/meteor/engineroom)
+"ntX" = (
+/obj/machinery/computer/shuttle_control/explore/spacebus,
+/turf/simulated/floor/tiled/dark,
+/area/shuttle/spacebus)
 "nua" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 5
@@ -24699,6 +25194,9 @@
 /obj/item/clothing/glasses/meson,
 /obj/item/clothing/glasses/meson,
 /obj/item/pickaxe/drill,
+/obj/machinery/light/yellowed{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/cetus/mechbay)
 "nuG" = (
@@ -24737,10 +25235,7 @@
 /turf/simulated/floor/tiled/monotile,
 /area/crew_quarters/cetus/meteor/hallway1)
 "nvC" = (
-/obj/machinery/pointdefense{
-	id_tag = "PD Main"
-	},
-/turf/space,
+/turf/simulated/floor/airless,
 /area/space)
 "nwB" = (
 /obj/structure/cable/green{
@@ -25707,6 +26202,25 @@
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/sleep/cetus/meteor/dorm10)
+"nUO" = (
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/radio{
+	pixel_x = -5;
+	pixel_y = 5
+	},
+/obj/item/radio{
+	pixel_x = 5;
+	pixel_y = 5
+	},
+/obj/structure/closet/walllocker_double/kitchen/south{
+	name = "Ration Cabinet"
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/shuttle/spacebus)
 "nVc" = (
 /obj/structure/table/steel,
 /obj/random/maintenance/research,
@@ -26039,9 +26553,8 @@
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/meteor/jraft)
 "ods" = (
-/obj/structure/lattice,
-/obj/structure/lattice,
-/turf/space,
+/obj/machinery/shield_diffuser,
+/turf/simulated/floor/airless,
 /area/space)
 "odw" = (
 /obj/machinery/door/firedoor/glass,
@@ -26130,6 +26643,21 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/cetus/meteor/techstorage)
+"ofj" = (
+/obj/machinery/door/firedoor/multi_tile/glass,
+/obj/effect/floor_decal/industrial/arrows/blue,
+/obj/effect/floor_decal/industrial/arrows/blue{
+	dir = 1
+	},
+/obj/machinery/door/airlock/multi_tile/glass,
+/turf/simulated/floor/tiled/milspec,
+/area/shuttle/spacebus)
+"oga" = (
+/obj/machinery/light/small{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/dark,
+/area/chapel/chapel_morgue/cetus/crypt)
 "ogp" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -26143,7 +26671,7 @@
 	icon_state = "0-2"
 	},
 /turf/simulated/floor/tiled,
-/area/hangar/cetus/one)
+/area/hangar/cetus/two)
 "ogE" = (
 /obj/machinery/atmospherics/pipe/simple/heat_exchanging{
 	dir = 10
@@ -26191,6 +26719,7 @@
 	dir = 8
 	},
 /obj/random/junk,
+/obj/structure/micro_tunnel/random,
 /turf/simulated/floor/wood,
 /area/maintenance/cetus/meteor/starsec)
 "oiH" = (
@@ -26382,7 +26911,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
-/area/hangar/cetus/one)
+/area/hangar/cetus/two)
 "omn" = (
 /obj/structure/table/standard,
 /obj/random/tech_supply/component,
@@ -26434,7 +26963,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled,
-/area/hangar/cetus/one)
+/area/hangar/cetus/two)
 "oor" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
@@ -26500,6 +27029,26 @@
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/sleep/cetus/meteor/dorm9)
+"orc" = (
+/obj/structure/window/plastitanium/full,
+/obj/structure/window/reinforced/survival_pod{
+	dir = 4
+	},
+/obj/structure/window/reinforced/survival_pod{
+	dir = 1
+	},
+/obj/structure/window/reinforced/survival_pod,
+/obj/structure/grille/rustic{
+	health = 25;
+	name = "reinforced grille"
+	},
+/obj/machinery/door/blast/regular/open{
+	dir = 8;
+	id = "baby_mammoth_blast";
+	name = "window blast shield"
+	},
+/turf/simulated/floor,
+/area/shuttle/spacebus)
 "orx" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/catwalk,
@@ -27139,7 +27688,7 @@
 /obj/effect/floor_decal/industrial/warning/color/red{
 	dir = 8
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/airless,
 /area/space)
 "oHm" = (
 /obj/structure/cable/green{
@@ -27169,14 +27718,14 @@
 /obj/effect/floor_decal/industrial/warning/color/red{
 	dir = 8
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/airless,
 /area/space)
 "oHO" = (
 /obj/machinery/power/grounding_rod,
 /obj/structure/cable/yellow{
 	icon_state = "5-10"
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/airless,
 /area/space)
 "oHX" = (
 /obj/fiftyspawner/hardwood,
@@ -27294,6 +27843,15 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/cetus/meteor/carbonresearch)
+"oLm" = (
+/obj/structure/bed/chair/bay/shuttle{
+	dir = 4
+	},
+/obj/structure/window/reinforced/survival_pod{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/shuttle/spacebus)
 "oLw" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -27516,7 +28074,7 @@
 /obj/effect/floor_decal/industrial/warning/color/red{
 	dir = 8
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/airless,
 /area/space)
 "oQU" = (
 /obj/structure/table/standard,
@@ -27584,6 +28142,9 @@
 "oSo" = (
 /obj/structure/closet/emcloset,
 /obj/item/storage/toolbox/emergency,
+/obj/machinery/light/fluorescent{
+	dir = 1
+	},
 /turf/simulated/shuttle/floor,
 /area/shuttle/cryo/station)
 "oSC" = (
@@ -27658,6 +28219,7 @@
 	pixel_y = -27
 	},
 /obj/structure/loot_pile/maint/technical,
+/obj/machinery/light/yellowed,
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/cetus/mechbay)
 "oUh" = (
@@ -27696,6 +28258,7 @@
 	dir = 1;
 	pixel_y = -25
 	},
+/obj/machinery/light/small/yellowed,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/meteor/central)
 "oWj" = (
@@ -28012,7 +28575,7 @@
 	icon_state = "pipe-c"
 	},
 /turf/simulated/floor/tiled,
-/area/hangar/cetus/one)
+/area/hangar/cetus/two)
 "pfN" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -28060,6 +28623,7 @@
 	dir = 1
 	},
 /obj/random/junk,
+/obj/machinery/light/small/yellowed,
 /turf/simulated/floor/tiled/old_tile/green,
 /area/maintenance/cetus/janitorial)
 "phP" = (
@@ -28524,6 +29088,14 @@
 	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/cetus/meteor/atrium)
+"pyB" = (
+/obj/machinery/vending/wallmed1{
+	dir = 1;
+	pixel_y = -25;
+	name = "1S-NanoMed"
+	},
+/turf/simulated/floor/tiled/white,
+/area/shuttle/spacebus)
 "pyC" = (
 /obj/machinery/door/airlock/maintenance,
 /obj/machinery/door/firedoor/glass,
@@ -28605,7 +29177,8 @@
 	name = "exterior access button";
 	pixel_x = 28;
 	pixel_y = -22;
-	req_one_access = list(8,13,65)
+	req_one_access = list(8,13,65);
+	dir = 8
 	},
 /turf/simulated/floor/outdoors/rocks/cetus/edge,
 /area/space)
@@ -28641,16 +29214,8 @@
 /turf/simulated/shuttle/floor/black,
 /area/maintenance/cetus/meteor/pond)
 "pDL" = (
-/obj/machinery/access_button{
-	dir = 1;
-	name = "exterior access button";
-	pixel_y = -28
-	},
-/obj/effect/map_helper/airlock/button/ext_button,
-/obj/machinery/shield_diffuser,
-/obj/effect/floor_decal/industrial/warning/corner,
-/turf/simulated/floor/plating,
-/area/space)
+/turf/simulated/wall/rthull,
+/area/shuttle/spacebus)
 "pDN" = (
 /obj/structure/closet/radiation,
 /obj/item/clothing/suit/radiation/teshari,
@@ -28758,6 +29323,9 @@
 /area/medical/cetus/atriumd1)
 "pFv" = (
 /obj/structure/reagent_dispensers/watertank,
+/obj/structure/micro_tunnel/random{
+	dir = 1
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/meteor/jrfore)
 "pFF" = (
@@ -28967,6 +29535,16 @@
 /obj/random/junk,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/meteor/jraft)
+"pLq" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/light/yellowed,
+/turf/simulated/floor/tiled/techfloor,
+/area/maintenance/cetus/mechbay)
 "pLs" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -28986,7 +29564,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
-/area/hangar/cetus/one)
+/area/hangar/cetus/two)
 "pLI" = (
 /obj/machinery/alarm{
 	pixel_y = 23
@@ -29061,7 +29639,7 @@
 /obj/effect/floor_decal/industrial/warning/color/red{
 	dir = 8
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/airless,
 /area/space)
 "pNw" = (
 /obj/effect/floor_decal/industrial/warning,
@@ -29084,7 +29662,7 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled,
-/area/hangar/cetus/one)
+/area/hangar/cetus/two)
 "pNZ" = (
 /obj/structure/table/rack/holorack,
 /obj/item/circuitboard/telecomms/broadcaster{
@@ -29240,6 +29818,12 @@
 	},
 /turf/simulated/floor/lino,
 /area/maintenance/ab_StripBar)
+"pQb" = (
+/obj/structure/bed/chair/bay/shuttle{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/shuttle/spacebus)
 "pQz" = (
 /obj/machinery/firealarm{
 	layer = 3.3;
@@ -29281,7 +29865,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
-/area/hangar/cetus/one)
+/area/hangar/cetus/two)
 "pRi" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/kafel_full,
@@ -29390,12 +29974,6 @@
 	},
 /turf/simulated/floor/carpet/geo,
 /area/maintenance/cetus/cozyobservatory)
-"pTv" = (
-/obj/structure/micro_tunnel/random{
-	dir = 1
-	},
-/turf/simulated/mineral/cetus,
-/area/maintenance/cetus/meteor/ragecage)
 "pTA" = (
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 1
@@ -29481,6 +30059,9 @@
 "pVv" = (
 /obj/structure/flora/ausbushes/fullgrass,
 /obj/structure/flora/ausbushes/lavendergrass,
+/obj/structure/micro_tunnel/random{
+	dir = 1
+	},
 /turf/simulated/floor/outdoors/mud{
 	outdoors = -1
 	},
@@ -29591,6 +30172,18 @@
 	},
 /turf/simulated/floor/plating,
 /area/engineering/cetus/meteor/engineroom)
+"pXP" = (
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 8
+	},
+/obj/effect/floor_decal/industrial/danger{
+	dir = 8
+	},
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled,
+/area/hangar/cetus/two)
 "pXT" = (
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 1
@@ -29812,7 +30405,7 @@
 /area/maintenance/cetus/meteor/portsec)
 "qaL" = (
 /obj/machinery/power/grounding_rod,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/airless,
 /area/space)
 "qaQ" = (
 /obj/machinery/hologram/holopad,
@@ -29828,7 +30421,7 @@
 /obj/effect/floor_decal/corner/green/bordercorner,
 /obj/effect/floor_decal/spline/plain/three_quarters,
 /turf/simulated/floor/tiled/milspec/raised,
-/area/hangar/cetus/one)
+/area/hangar/cetus/two)
 "qaW" = (
 /obj/structure/catwalk{
 	pixel_x = -1
@@ -29861,6 +30454,10 @@
 /obj/structure/railing{
 	dir = 4
 	},
+/obj/machinery/light{
+	dir = 4;
+	light_color = "#DDFFD3"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/security/cetus/meteor/hallway)
 "qbP" = (
@@ -29876,13 +30473,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/engineering/cetus/meteor/engineroom)
-"qcj" = (
-/obj/structure/cliff/automatic/corner{
-	dir = 10;
-	density = 0
-	},
-/turf/simulated/floor/water/indoors/station,
-/area/maintenance/cetus/meteor/ragecage)
 "qcD" = (
 /obj/structure/closet/secure_closet/personal/cabinet,
 /turf/simulated/floor/carpet/bcarpet,
@@ -30181,6 +30771,21 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled,
 /area/crew_quarters/cetus/meteor/atrium)
+"qjO" = (
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 8
+	},
+/obj/effect/floor_decal/industrial/danger{
+	dir = 8
+	},
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 4
+	},
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled,
+/area/hangar/cetus/two)
 "qkf" = (
 /turf/simulated/wall/r_wall,
 /area/engineering/cetus/meteor/techstorage)
@@ -30422,6 +31027,10 @@
 /obj/structure/cable/orange{
 	icon_state = "0-10"
 	},
+/obj/machinery/camera/network/engineering{
+	c_tag = "ENG - Shield Gen";
+	dir = 6
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/cetus/meteor/shieldgen)
 "qou" = (
@@ -30511,6 +31120,9 @@
 	pixel_y = -1
 	},
 /obj/structure/cable/green,
+/obj/machinery/light/small/yellowed{
+	dir = 4
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/meteor/central)
 "qrH" = (
@@ -30685,13 +31297,6 @@
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/cetus/meteor/pool)
-"qwh" = (
-/obj/structure/cliff/automatic{
-	dir = 8;
-	density = 0
-	},
-/turf/simulated/floor/water/indoors/station,
-/area/maintenance/cetus/meteor/ragecage)
 "qww" = (
 /turf/simulated/floor/water/indoors/station,
 /area/maintenance/ab_Hydroponics)
@@ -30752,7 +31357,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
-/area/hangar/cetus/one)
+/area/hangar/cetus/two)
 "qxI" = (
 /obj/machinery/shield_diffuser,
 /obj/structure/cable/yellow{
@@ -30773,7 +31378,7 @@
 /obj/structure/cable/yellow{
 	icon_state = "1-8"
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/airless,
 /area/space)
 "qxP" = (
 /obj/structure/table/rack{
@@ -31159,7 +31764,7 @@
 /obj/effect/floor_decal/industrial/warning/color/corner/red{
 	dir = 1
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/airless,
 /area/space)
 "qGc" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
@@ -31261,6 +31866,18 @@
 /obj/item/stack/tile/floor/dark,
 /turf/simulated/floor/outdoors/rocks/cetus,
 /area/chapel/chapel_morgue/cetus/crypt)
+"qIC" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/embedded_controller/radio/simple_docking_controller{
+	frequency = 1381;
+	id_tag = "hangar_2";
+	name = "shuttle bay controller";
+	dir = 8;
+	pixel_x = 26
+	},
+/turf/simulated/floor/tiled,
+/area/hangar/cetus/two)
 "qJm" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
@@ -31413,7 +32030,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
-/area/hangar/cetus/one)
+/area/hangar/cetus/two)
 "qNt" = (
 /obj/random/pottedplant,
 /obj/structure/disposalpipe/segment{
@@ -31502,7 +32119,7 @@
 "qPj" = (
 /obj/structure/table/bench/steel,
 /turf/simulated/floor/tiled,
-/area/hangar/cetus/one)
+/area/hangar/cetus/two)
 "qPr" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -31893,6 +32510,13 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/medical/cetus/atriumd1)
+"qZp" = (
+/obj/effect/floor_decal/rust,
+/obj/machinery/light/small/yellowed{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/cetus/meteor/central)
 "qZO" = (
 /obj/machinery/light/small{
 	dir = 1
@@ -31940,7 +32564,7 @@
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals_central5,
 /turf/simulated/floor/tiled,
-/area/hangar/cetus/one)
+/area/hangar/cetus/two)
 "rbm" = (
 /obj/machinery/power/apc{
 	dir = 1;
@@ -32012,6 +32636,15 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/construction)
+"rep" = (
+/obj/effect/shuttle_landmark{
+	base_area = /area/space;
+	base_turf = /turf/space;
+	landmark_tag = "d1_near_sw";
+	name = "Near Cetus - Deck 1 South West"
+	},
+/turf/space,
+/area/space)
 "ret" = (
 /turf/simulated/mineral/cetus,
 /area/chapel/chapel_morgue/cetus/crypt)
@@ -32432,6 +33065,10 @@
 /obj/structure/disposalpipe/segment,
 /obj/effect/floor_decal/industrial/warning/full,
 /obj/effect/floor_decal/spline/plain/cee,
+/obj/machinery/camera/network/research{
+	c_tag = "SCI - Toxins Lab 2";
+	dir = 8
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/rnd/cetus/meteor/toxins)
 "rpW" = (
@@ -32494,7 +33131,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
-/area/hangar/cetus/one)
+/area/hangar/cetus/two)
 "rqP" = (
 /obj/structure/bed/chair{
 	dir = 1
@@ -32649,7 +33286,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
-/area/hangar/cetus/one)
+/area/hangar/cetus/two)
 "ruM" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/purple,
 /turf/simulated/wall/r_wall,
@@ -32927,6 +33564,15 @@
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/cetus/meteor/atriumdeck1)
+"rzd" = (
+/obj/machinery/sleeper{
+	dir = 8
+	},
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/white,
+/area/shuttle/spacebus)
 "rzi" = (
 /obj/structure/sign/warning/radioactive,
 /turf/simulated/wall/r_wall,
@@ -33003,7 +33649,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
-/area/hangar/cetus/one)
+/area/hangar/cetus/two)
 "rCc" = (
 /obj/structure/bed/chair{
 	dir = 1
@@ -33170,7 +33816,7 @@
 /area/maintenance/ab_Kitchen)
 "rHj" = (
 /obj/random/junk,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/airless,
 /area/space)
 "rHm" = (
 /obj/machinery/light/broken,
@@ -33222,6 +33868,9 @@
 /area/maintenance/cetus/meteor/jraft)
 "rKr" = (
 /obj/machinery/atmospherics/unary/vent_pump/on,
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled,
 /area/hangar/cetus/explolocker)
 "rLe" = (
@@ -33477,6 +34126,20 @@
 /obj/random/obstruction,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/aftmed)
+"rRS" = (
+/obj/structure/closet/crate,
+/obj/item/radio,
+/obj/item/radio,
+/obj/item/radio,
+/obj/item/radio,
+/obj/item/radio,
+/obj/item/melee/umbrella/random,
+/obj/item/melee/umbrella/random,
+/obj/item/melee/umbrella/random,
+/obj/item/melee/umbrella/random,
+/obj/item/melee/umbrella/random,
+/turf/simulated/floor/tiled/milspec,
+/area/shuttle/spacebus)
 "rRX" = (
 /obj/machinery/disposal/wall{
 	dir = 4;
@@ -33632,6 +34295,9 @@
 /obj/effect/floor_decal/corner/purple/bordercorner{
 	dir = 8
 	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled,
 /area/hangar/cetus/explolocker)
 "rXB" = (
@@ -33752,6 +34418,9 @@
 	pixel_x = -1
 	},
 /obj/machinery/door/airlock/maintenance/engi,
+/obj/structure/cable{
+	icon_state = "1-10"
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/meteor/aftstar)
 "sdC" = (
@@ -33876,6 +34545,32 @@
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/sleep/cetus/meteor/dorm3)
+"shc" = (
+/obj/structure/window/plastitanium/full,
+/obj/structure/window/reinforced/survival_pod{
+	dir = 4
+	},
+/obj/structure/window/reinforced/survival_pod{
+	dir = 8
+	},
+/obj/structure/window/reinforced/survival_pod{
+	dir = 1
+	},
+/obj/structure/window/reinforced/survival_pod,
+/obj/structure/grille/rustic{
+	health = 25;
+	name = "reinforced grille"
+	},
+/obj/machinery/door/blast/regular/open{
+	dir = 8;
+	id = "baby_mammoth_blast";
+	name = "window blast shield"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/yellow{
+	dir = 6
+	},
+/turf/simulated/floor,
+/area/shuttle/spacebus)
 "she" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -33970,8 +34665,11 @@
 	},
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/paleblue/border,
+/obj/structure/cable{
+	icon_state = "1-4"
+	},
 /turf/simulated/floor/tiled,
-/area/hangar/cetus/one)
+/area/hangar/cetus/two)
 "sks" = (
 /obj/structure/reagent_dispensers/water_cooler/full,
 /turf/simulated/floor/tiled/techmaint,
@@ -34136,10 +34834,6 @@
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/cetus/meteor/barrestrooms)
-"sni" = (
-/obj/structure/micro_tunnel/random,
-/turf/simulated/mineral/cetus,
-/area/maintenance/cetus/tech)
 "snO" = (
 /obj/random/pottedplant,
 /obj/structure/disposalpipe/segment{
@@ -34324,7 +35018,7 @@
 /obj/effect/floor_decal/borderfloorblack,
 /obj/effect/floor_decal/industrial/danger,
 /turf/simulated/floor/tiled,
-/area/hangar/cetus/one)
+/area/hangar/cetus/two)
 "svB" = (
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -34371,6 +35065,18 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/cetus/meteor/gravsubstation)
+"swB" = (
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 8
+	},
+/obj/effect/floor_decal/industrial/danger{
+	dir = 8
+	},
+/obj/structure/cable{
+	icon_state = "2-4"
+	},
+/turf/simulated/floor/tiled,
+/area/hangar/cetus/two)
 "swI" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -34906,6 +35612,12 @@
 	},
 /turf/simulated/shuttle/floor,
 /area/shuttle/cryo/station)
+"sIl" = (
+/obj/machinery/light/floortube{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/shuttle/spacebus)
 "sIo" = (
 /obj/structure/lattice,
 /obj/vehicle/train/trolley_tank,
@@ -34918,6 +35630,10 @@
 /obj/machinery/recharger,
 /obj/machinery/recharger/wallcharger{
 	pixel_x = 32
+	},
+/obj/machinery/light{
+	dir = 4;
+	light_color = "#DDFFD3"
 	},
 /turf/simulated/floor/tiled,
 /area/hangar/cetus/explolocker)
@@ -34934,6 +35650,7 @@
 /area/crew_quarters/sleep/cetus/meteor/dorm4)
 "sIT" = (
 /obj/structure/stairs/spawner/west,
+/obj/structure/railing,
 /turf/simulated/floor/tiled,
 /area/engineering/cetus/meteor/atriumdeck1)
 "sJa" = (
@@ -35049,7 +35766,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
-/area/hangar/cetus/one)
+/area/hangar/cetus/two)
 "sMj" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/cyan{
 	dir = 1
@@ -35223,7 +35940,7 @@
 /obj/effect/floor_decal/industrial/warning/color/red{
 	dir = 8
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/airless,
 /area/space)
 "sRn" = (
 /obj/structure/cable/yellow{
@@ -35330,7 +36047,7 @@
 	icon_state = "0-10"
 	},
 /obj/machinery/camera/network/engine{
-	c_tag = "ENG - Waste Handling";
+	c_tag = "ENG - Waste Handling 1";
 	dir = 9
 	},
 /obj/machinery/light_switch{
@@ -35767,7 +36484,7 @@
 	},
 /obj/effect/floor_decal/corner/red/bordercee,
 /turf/simulated/floor/tiled,
-/area/hangar/cetus/one)
+/area/hangar/cetus/two)
 "tgB" = (
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
 	dir = 5
@@ -35796,7 +36513,7 @@
 	dir = 4;
 	network = list("Research","Toxins Test Area")
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating/turfpack/airless,
 /area/rnd/test_area)
 "thS" = (
 /obj/effect/floor_decal/borderfloorwhite/corner,
@@ -35856,6 +36573,12 @@
 	pixel_x = 24;
 	pixel_y = -1
 	},
+/obj/machinery/light_switch{
+	name = "light switch ";
+	pixel_x = 26;
+	dir = 4;
+	pixel_y = -12
+	},
 /turf/simulated/floor/tiled,
 /area/engineering/cetus/meteor/refinery)
 "tiR" = (
@@ -35904,6 +36627,12 @@
 	},
 /obj/structure/catwalk{
 	pixel_x = -1
+	},
+/obj/machinery/light/small/yellowed{
+	dir = 8
+	},
+/obj/structure/cable{
+	icon_state = "9-10"
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/meteor/aftstar)
@@ -36072,15 +36801,10 @@
 /turf/simulated/wall,
 /area/maintenance/cetus/stylist)
 "tmq" = (
-/obj/machinery/shield_diffuser,
-/obj/machinery/access_button{
-	dir = 4;
-	name = "exterior access button";
-	pixel_x = -26
-	},
-/obj/effect/map_helper/airlock/button/ext_button,
+/obj/effect/catwalk_plated/dark,
+/obj/machinery/shipsensors,
 /turf/simulated/floor/plating,
-/area/space)
+/area/shuttle/spacebus)
 "tmO" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -36147,10 +36871,7 @@
 /turf/simulated/floor/outdoors/rocks/cetus,
 /area/maintenance/cetus/meteor/central)
 "toy" = (
-/obj/machinery/pointdefense{
-	id_tag = "PD Main"
-	},
-/turf/simulated/floor/airless,
+/turf/simulated/floor/tiled/old_tile/gray/turfpack/airless,
 /area/space)
 "toI" = (
 /obj/effect/floor_decal/spline/fancy/wood/corner,
@@ -36216,6 +36937,10 @@
 "tqS" = (
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/meteor/portsec)
+"tqU" = (
+/obj/machinery/computer/ship/sensors,
+/turf/simulated/floor/tiled/dark,
+/area/shuttle/spacebus)
 "tqY" = (
 /turf/simulated/mineral/cetus,
 /area/crew_quarters/cetus/meteor/pool)
@@ -36349,7 +37074,6 @@
 	dir = 10
 	},
 /obj/structure/lattice,
-/obj/structure/lattice,
 /turf/space,
 /area/space)
 "tvH" = (
@@ -36444,6 +37168,7 @@
 /obj/effect/floor_decal/spline/plain{
 	dir = 1
 	},
+/obj/structure/micro_tunnel/random,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/maintenance/cetus/tech)
 "tym" = (
@@ -36468,6 +37193,9 @@
 	dir = 6
 	},
 /obj/structure/disposalpipe/segment,
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/cetus/meteor/gravsubstation)
 "tzI" = (
@@ -37027,6 +37755,9 @@
 /area/maintenance/cetus/aftmed)
 "tPS" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled,
 /area/hangar/cetus/explolocker)
 "tQE" = (
@@ -37174,7 +37905,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
-/area/hangar/cetus/one)
+/area/hangar/cetus/two)
 "tVc" = (
 /obj/machinery/light/broken{
 	dir = 4
@@ -37308,6 +38039,9 @@
 /obj/item/pickaxe/drill,
 /obj/item/clothing/glasses/meson,
 /obj/effect/floor_decal/rust,
+/obj/structure/micro_tunnel/random{
+	dir = 1
+	},
 /turf/simulated/floor/plating,
 /area/engineering/cetus/meteor/refinery)
 "tYb" = (
@@ -38361,6 +39095,15 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/cetus/meteor/barrestrooms)
+"uuP" = (
+/obj/effect/shuttle_landmark{
+	base_area = /area/space;
+	base_turf = /turf/space;
+	landmark_tag = "d1_near_jr";
+	name = "Near Cetus - Deck 1 Joint Research"
+	},
+/turf/space,
+/area/space)
 "uvm" = (
 /obj/random/obstruction,
 /obj/random/trash,
@@ -38489,12 +39232,6 @@
 /obj/machinery/light/fluorescent,
 /turf/simulated/floor/plating,
 /area/engineering/cetus/meteor/engineroom)
-"uyF" = (
-/obj/structure/micro_tunnel/random{
-	dir = 1
-	},
-/turf/simulated/mineral/cetus,
-/area/maintenance/cetus/meteor/central)
 "uzg" = (
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 1
@@ -38514,7 +39251,7 @@
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/red/border,
 /turf/simulated/floor/tiled,
-/area/hangar/cetus/one)
+/area/hangar/cetus/two)
 "uAz" = (
 /obj/structure/cable/orange{
 	icon_state = "4-8"
@@ -38763,7 +39500,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
-/area/hangar/cetus/one)
+/area/hangar/cetus/two)
 "uFt" = (
 /obj/structure/cable/cyan{
 	icon_state = "4-8"
@@ -38825,6 +39562,9 @@
 /obj/effect/floor_decal/steeldecal/steel_decals_central5{
 	dir = 8
 	},
+/obj/machinery/light{
+	dir = 8
+	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/cetus/meteor/lounge)
 "uGu" = (
@@ -38839,7 +39579,7 @@
 "uGJ" = (
 /obj/machinery/shield_diffuser,
 /obj/effect/floor_decal/industrial/warning/corner,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/airless,
 /area/space)
 "uGN" = (
 /obj/effect/floor_decal/spline/plain{
@@ -38924,10 +39664,6 @@
 	dir = 1;
 	pixel_y = -22
 	},
-/obj/structure/cliff/automatic{
-	dir = 4;
-	density = 0
-	},
 /turf/simulated/floor/water/indoors/station,
 /area/maintenance/cetus/meteor/ragecage)
 "uIX" = (
@@ -38941,11 +39677,22 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/mechbay)
+"uIY" = (
+/obj/effect/floor_decal/industrial/arrows/blue,
+/obj/effect/floor_decal/industrial/arrows/blue{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/shuttle/spacebus)
 "uJf" = (
 /obj/machinery/firealarm{
 	dir = 8;
 	layer = 3.3;
 	pixel_x = 26
+	},
+/obj/machinery/camera/network/engineering{
+	c_tag = "ENG - Refinery";
+	dir = 8
 	},
 /turf/simulated/floor/plating,
 /area/engineering/cetus/meteor/refinery)
@@ -38996,6 +39743,31 @@
 	},
 /turf/simulated/floor/tiled/milspec/sterile,
 /area/medical/Surgery_Room_2)
+"uKt" = (
+/obj/machinery/iv_drip,
+/obj/item/reagent_containers/blood/prelabeled/OMinus{
+	pixel_y = 6;
+	pixel_x = 8
+	},
+/obj/item/reagent_containers/blood/prelabeled/OMinus{
+	pixel_y = 3;
+	pixel_x = 8
+	},
+/obj/item/reagent_containers/blood/empty{
+	pixel_y = -1;
+	pixel_x = 8
+	},
+/obj/item/reagent_containers/blood/empty{
+	pixel_y = -5;
+	pixel_x = 8
+	},
+/obj/item/storage/quickdraw/syringe_case{
+	pixel_y = 4;
+	pixel_x = -8
+	},
+/obj/structure/closet/walllocker_double/medical/east,
+/turf/simulated/floor/tiled/white,
+/area/shuttle/spacebus)
 "uKy" = (
 /obj/structure/stairs/spawner/east,
 /turf/simulated/floor/tiled/dark,
@@ -39154,10 +39926,6 @@
 /obj/item/radio/intercom{
 	name = "Station Intercom (General)";
 	pixel_y = -21
-	},
-/obj/machinery/camera/network/research{
-	c_tag = "SCI - Toxins Lab 2";
-	dir = 1
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/rnd/cetus/meteor/toxins)
@@ -39335,8 +40103,8 @@
 /obj/structure/micro_tunnel/random{
 	dir = 1
 	},
-/turf/simulated/mineral/cetus,
-/area/maintenance/cetus/meteor/pond)
+/turf/simulated/floor/outdoors/rocks/cetus,
+/area/maintenance/cetus/meteor/star)
 "uTr" = (
 /obj/effect/floor_decal/industrial/warning/cee{
 	dir = 1
@@ -39637,6 +40405,13 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/cetus/engine)
+"uYQ" = (
+/obj/structure/bed/chair/bay/shuttle{
+	dir = 8
+	},
+/obj/structure/closet/walllocker/emerglocker/north,
+/turf/simulated/floor/tiled/milspec,
+/area/shuttle/spacebus)
 "uZG" = (
 /turf/simulated/wall/r_wall,
 /area/crew_quarters/cetus/meteor/vr)
@@ -39809,6 +40584,14 @@
 /obj/structure/curtain/open/shower/medical,
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/cetus/meteor/showers)
+"vfj" = (
+/turf/simulated/shuttle/plating/airless/carry,
+/area/shuttle/spacebus)
+"vfr" = (
+/obj/machinery/power/smes/buildable/point_of_interest,
+/obj/structure/cable/green,
+/turf/simulated/floor/tiled/yellow,
+/area/shuttle/spacebus)
 "vfX" = (
 /obj/structure/lattice,
 /obj/machinery/camera/network/engine{
@@ -39861,7 +40644,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
-/area/hangar/cetus/one)
+/area/hangar/cetus/two)
 "vhk" = (
 /obj/machinery/bodyscanner{
 	dir = 4
@@ -39910,7 +40693,8 @@
 	tag_chamber_sensor = "toxins_sensor";
 	tag_exterior_door = "toxins_outer";
 	tag_interior_door = "toxins_inner";
-	pixel_y = -28
+	pixel_y = -28;
+	dir = 1
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	frequency = 1379;
@@ -39962,7 +40746,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
-/area/hangar/cetus/one)
+/area/hangar/cetus/two)
 "vjW" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 5
@@ -40505,9 +41289,7 @@
 "vuq" = (
 /obj/structure/lattice,
 /obj/structure/catwalk,
-/turf/simulated/floor/water/indoors/station{
-	movement_cost = 1
-	},
+/turf/simulated/floor/water/indoors/station,
 /area/maintenance/cetus/meteor/ragecage)
 "vuC" = (
 /obj/effect/floor_decal/borderfloorwhite/corner{
@@ -40610,18 +41392,14 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/crew_quarters/cetus/meteor/hallway2)
 "vzu" = (
-/obj/machinery/access_button{
-	name = "exterior access button";
-	pixel_y = 25;
-	req_access = list(13)
-	},
-/obj/effect/map_helper/airlock/button/ext_button,
-/obj/machinery/shield_diffuser,
-/obj/effect/floor_decal/industrial/warning/corner{
-	dir = 4
-	},
-/turf/simulated/floor/plating,
-/area/space)
+/obj/item/storage/firstaid/o2,
+/obj/item/storage/firstaid/fire,
+/obj/item/storage/firstaid/toxin,
+/obj/item/storage/firstaid/regular,
+/obj/item/roller,
+/obj/structure/closet/walllocker_double/medical/south,
+/turf/simulated/floor/tiled/milspec,
+/area/shuttle/spacebus)
 "vzz" = (
 /obj/machinery/atmospherics/pipe/simple/visible/universal{
 	dir = 4
@@ -41243,7 +42021,7 @@
 /area/maintenance/cetus/meteor/central)
 "vOP" = (
 /turf/simulated/floor/reinforced,
-/area/hangar/cetus/one)
+/area/hangar/cetus/two)
 "vOX" = (
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -41297,7 +42075,7 @@
 /obj/machinery/light,
 /obj/effect/floor_decal/steeldecal/steel_decals_central5,
 /turf/simulated/floor/tiled,
-/area/hangar/cetus/one)
+/area/hangar/cetus/two)
 "vQu" = (
 /obj/item/pickaxe,
 /turf/simulated/floor/outdoors/rocks/cetus,
@@ -41492,6 +42270,7 @@
 /obj/machinery/firealarm{
 	pixel_y = 24
 	},
+/obj/structure/railing,
 /turf/simulated/floor/tiled,
 /area/engineering/cetus/meteor/atriumdeck1)
 "vXm" = (
@@ -41789,7 +42568,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
-/area/hangar/cetus/one)
+/area/hangar/cetus/two)
 "wgi" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -41867,6 +42646,15 @@
 	},
 /turf/simulated/floor/lino,
 /area/crew_quarters/cetus/meteor/bar)
+"whp" = (
+/obj/structure/window/reinforced/survival_pod,
+/obj/structure/table/darkglass,
+/obj/machinery/light{
+	dir = 4;
+	light_color = "#DDFFD3"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/shuttle/spacebus)
 "wht" = (
 /obj/structure/catwalk{
 	pixel_x = -1
@@ -41981,7 +42769,7 @@
 	},
 /obj/effect/floor_decal/corner/paleblue/bordercee,
 /turf/simulated/floor/tiled,
-/area/hangar/cetus/one)
+/area/hangar/cetus/two)
 "wjq" = (
 /obj/structure/disposalpipe/segment{
 	dir = 2;
@@ -42316,9 +43104,7 @@
 /obj/structure/cable/green{
 	icon_state = "4-9"
 	},
-/turf/simulated/floor/water/indoors/station{
-	movement_cost = 1
-	},
+/turf/simulated/floor/water/indoors/station,
 /area/maintenance/cetus/meteor/ragecage)
 "wuY" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
@@ -42405,10 +43191,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/engineering/cetus/foresubstation)
-"wwI" = (
-/obj/item/reagent_containers/food/drinks/shaker,
-/turf/simulated/wall,
-/area/maintenance/ab_StripBar)
 "wwL" = (
 /obj/structure/closet/athletic_swimwear,
 /obj/structure/window/reinforced,
@@ -42549,15 +43331,9 @@
 	pixel_x = -3;
 	pixel_y = -9
 	},
+/obj/machinery/light/small,
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/cetus/meteor/techstorage)
-"wyT" = (
-/obj/structure/cliff/automatic/ramp,
-/obj/machinery/light/fluorescent{
-	dir = 8
-	},
-/turf/simulated/floor/water/indoors/station,
-/area/maintenance/cetus/meteor/ragecage)
 "wze" = (
 /obj/machinery/door/firedoor/glass,
 /obj/structure/disposalpipe/segment{
@@ -42710,8 +43486,8 @@
 /obj/structure/micro_tunnel/random{
 	dir = 1
 	},
-/turf/simulated/mineral/cetus,
-/area/maintenance/cetus/meteor/starsec)
+/turf/simulated/floor/outdoors/rocks/cetus,
+/area/maintenance/cetus/meteor/central)
 "wDc" = (
 /obj/machinery/disposal/wall{
 	pixel_y = 35
@@ -42779,7 +43555,7 @@
 /area/crew_quarters/cetus/meteor/pool)
 "wDM" = (
 /obj/machinery/shield_diffuser,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating/turfpack/airless,
 /area/space)
 "wEb" = (
 /obj/structure/table/glass,
@@ -42893,10 +43669,14 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/crew_quarters/sleep/cetus/meteor/dorm6)
+"wHC" = (
+/obj/machinery/recharge_station,
+/turf/simulated/floor/tiled/milspec,
+/area/shuttle/spacebus)
 "wHD" = (
 /obj/effect/floor_decal/steeldecal/steel_decals_central7,
 /turf/simulated/floor/tiled/monotile,
-/area/hangar/cetus/one)
+/area/hangar/cetus/two)
 "wHS" = (
 /obj/effect/floor_decal/industrial/warning/corner,
 /obj/structure/cable/green{
@@ -43027,6 +43807,12 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/dark,
 /area/medical/surgery_storage)
+"wKV" = (
+/obj/machinery/door/window/survival_pod{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/white,
+/area/shuttle/spacebus)
 "wLv" = (
 /obj/effect/floor_decal/borderfloorwhite/corner{
 	dir = 8
@@ -43377,7 +44163,7 @@
 "wSC" = (
 /obj/machinery/shield_diffuser,
 /obj/machinery/field_generator,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/airless,
 /area/space)
 "wTg" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -43543,7 +44329,7 @@
 "wXq" = (
 /obj/structure/closet/emcloset,
 /turf/simulated/floor/tiled,
-/area/hangar/cetus/one)
+/area/hangar/cetus/two)
 "wXP" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 5
@@ -43663,6 +44449,9 @@
 /obj/random/tech_supply,
 /obj/random/tool,
 /obj/random/tool/power,
+/obj/machinery/light/small{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/cetus/meteor/techstorage)
 "wZX" = (
@@ -43796,6 +44585,10 @@
 /obj/effect/floor_decal/industrial/outline/red,
 /turf/simulated/floor/tiled/techfloor,
 /area/security/cetus/meteor/hallway)
+"xdj" = (
+/obj/machinery/computer/ship/engines,
+/turf/simulated/floor/tiled/dark,
+/area/shuttle/spacebus)
 "xdv" = (
 /obj/machinery/embedded_controller/radio/airlock/airlock_controller{
 	id_tag = "Old_Engine";
@@ -43875,8 +44668,7 @@
 	dir = 1
 	},
 /obj/structure/disposaloutlet{
-	dir = 8;
-	launch_dist = 1
+	dir = 8
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/rnd/cetus/meteor/carbonresearch)
@@ -43891,20 +44683,6 @@
 /obj/effect/floor_decal/industrial/warning,
 /turf/simulated/floor/plating,
 /area/maintenance/substation/central)
-"xfr" = (
-/obj/structure/cliff/automatic{
-	dir = 2;
-	density = 0
-	},
-/obj/machinery/light/fluorescent{
-	dir = 1
-	},
-/turf/simulated/floor/water/indoors{
-	movement_cost = 8;
-	name = "swampy water";
-	color = "#84c29b"
-	},
-/area/maintenance/cetus/meteor/ragecage)
 "xft" = (
 /obj/structure/railing/grey{
 	dir = 8
@@ -44059,9 +44837,7 @@
 "xjN" = (
 /obj/structure/lattice,
 /obj/structure/flora/lily1,
-/turf/simulated/floor/water/indoors/station{
-	movement_cost = 1
-	},
+/turf/simulated/floor/water/indoors/station,
 /area/maintenance/cetus/meteor/pond)
 "xjW" = (
 /obj/structure/table/standard,
@@ -44432,7 +45208,7 @@
 /obj/effect/floor_decal/industrial/warning/color/red{
 	dir = 1
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/airless,
 /area/space)
 "xwY" = (
 /turf/simulated/floor/outdoors/rocks/cetus,
@@ -44500,7 +45276,7 @@
 	},
 /obj/effect/floor_decal/corner/green/bordercee,
 /turf/simulated/floor/tiled,
-/area/hangar/cetus/one)
+/area/hangar/cetus/two)
 "xzl" = (
 /turf/simulated/floor/tiled/old_tile/gray,
 /area/maintenance/cetus/hallway)
@@ -44556,7 +45332,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
-/area/hangar/cetus/one)
+/area/hangar/cetus/two)
 "xAk" = (
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 4
@@ -44565,7 +45341,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
-/area/hangar/cetus/one)
+/area/hangar/cetus/two)
 "xAO" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
@@ -44818,6 +45594,10 @@
 	},
 /turf/simulated/floor/tiled/old_tile/white,
 /area/maintenance/cetus/meteor/jraft)
+"xDV" = (
+/obj/effect/overmap/visitable/sector/Cetus,
+/turf/space,
+/area/space)
 "xEp" = (
 /obj/structure/flora/underwater/grass1,
 /turf/simulated/floor/water/indoors/station,
@@ -44834,7 +45614,7 @@
 	layer = 3;
 	dir = 1
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/airless,
 /area/space)
 "xFe" = (
 /obj/machinery/status_display,
@@ -44851,6 +45631,9 @@
 /obj/effect/floor_decal/borderfloorblack/corner,
 /obj/effect/floor_decal/industrial/danger/corner,
 /obj/structure/disposalpipe/segment,
+/obj/machinery/light/yellowed{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/old_tile/gray,
 /area/maintenance/cetus/hallway)
 "xFC" = (
@@ -44945,9 +45728,7 @@
 	dir = 4
 	},
 /obj/structure/catwalk,
-/turf/simulated/floor/water/indoors/station{
-	movement_cost = 1
-	},
+/turf/simulated/floor/water/indoors/station,
 /area/maintenance/cetus/meteor/ragecage)
 "xIG" = (
 /obj/machinery/atmospherics/pipe/simple/visible/cyan,
@@ -45180,8 +45961,11 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled,
-/area/hangar/cetus/one)
+/area/hangar/cetus/two)
 "xNg" = (
 /obj/structure/cable/cyan{
 	icon_state = "1-8"
@@ -45239,6 +46023,10 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/cetus/engine)
+"xOB" = (
+/obj/machinery/computer/ship/helm,
+/turf/simulated/floor/tiled/dark,
+/area/shuttle/spacebus)
 "xPi" = (
 /turf/simulated/wall/r_wall,
 /area/maintenance/cetus/meteor/portsec)
@@ -45496,13 +46284,6 @@
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/sleep/cetus/meteor/dorm7)
-"xTP" = (
-/obj/structure/cliff/automatic{
-	dir = 4;
-	density = 0
-	},
-/turf/simulated/floor/water/indoors/station,
-/area/maintenance/cetus/meteor/ragecage)
 "xUg" = (
 /obj/effect/floor_decal/spline/plain,
 /turf/simulated/floor/tiled/techfloor,
@@ -45929,8 +46710,11 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/structure/cable{
+	icon_state = "1-8"
+	},
 /turf/simulated/floor/tiled,
-/area/hangar/cetus/one)
+/area/hangar/cetus/two)
 "yfr" = (
 /obj/machinery/disposal,
 /obj/structure/disposalpipe/trunk{
@@ -46104,9 +46888,7 @@
 "yiM" = (
 /obj/structure/lattice,
 /obj/structure/catwalk,
-/turf/simulated/floor/water/deep/indoors/station{
-	movement_cost = 1
-	},
+/turf/simulated/floor/water/deep/indoors/station,
 /area/maintenance/cetus/meteor/central)
 "yiT" = (
 /obj/structure/table/steel,
@@ -46131,17 +46913,6 @@
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/meteor/pond)
-"ykA" = (
-/obj/structure/cliff/automatic{
-	dir = 6;
-	density = 0
-	},
-/turf/simulated/floor/water/indoors{
-	movement_cost = 8;
-	name = "swampy water";
-	color = "#84c29b"
-	},
-/area/maintenance/cetus/meteor/ragecage)
 "ykH" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -46170,6 +46941,9 @@
 	dir = 1
 	},
 /obj/structure/disposalpipe/segment,
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/cetus/meteor/gravsubstation)
 "ylp" = (
@@ -46455,7 +47229,7 @@ qFw
 qFw
 qFw
 qFw
-qFw
+xDV
 "}
 (2,1,1) = {"
 qFw
@@ -49349,7 +50123,7 @@ jty
 jUX
 xhH
 xhH
-dwj
+dzr
 cAo
 suH
 suH
@@ -50381,7 +51155,7 @@ cFZ
 jUX
 cGK
 xhH
-iKd
+ktO
 cAo
 suH
 suH
@@ -55532,7 +56306,7 @@ qFw
 qFw
 qFw
 suH
-mgM
+yke
 suH
 qFw
 qFw
@@ -56060,7 +56834,7 @@ qFw
 suH
 qFw
 suH
-mgM
+yke
 suH
 qFw
 qFw
@@ -56434,7 +57208,7 @@ qFw
 qFw
 qFw
 qFw
-qFw
+rep
 qFw
 qFw
 qFw
@@ -58366,7 +59140,7 @@ sVO
 sVO
 sVO
 sVO
-cqh
+pCK
 pFv
 xek
 qbI
@@ -61195,8 +61969,8 @@ sVO
 sVO
 sVO
 sVO
+pCK
 cqh
-awK
 pCK
 pCK
 awK
@@ -61251,7 +62025,7 @@ qFw
 qFw
 qFw
 suH
-mgM
+yke
 suH
 qFw
 qFw
@@ -61278,7 +62052,7 @@ qFw
 qFw
 qFw
 suH
-mgM
+yke
 suH
 qFw
 qFw
@@ -61290,7 +62064,7 @@ qFw
 qFw
 qFw
 suH
-mgM
+yke
 suH
 qFw
 qFw
@@ -61555,7 +62329,7 @@ suH
 suH
 suH
 dmn
-mgM
+yke
 suH
 qFw
 qFw
@@ -63817,8 +64591,8 @@ sVO
 sVO
 kps
 kps
-ktO
-cPW
+nvC
+ods
 qFw
 qFw
 suH
@@ -64075,7 +64849,7 @@ hAr
 hAr
 hAr
 aKV
-sGX
+bcn
 aKV
 qFw
 suH
@@ -64137,7 +64911,7 @@ dmn
 qFw
 suH
 qFw
-aiQ
+wPj
 suH
 wPj
 qFw
@@ -64395,8 +65169,8 @@ dmn
 qFw
 lyH
 qFw
-ods
-mgM
+suH
+yke
 suH
 qFw
 qFw
@@ -65694,7 +66468,7 @@ qFw
 qFw
 lyH
 lyH
-mgM
+yke
 suH
 qFw
 qFw
@@ -65936,7 +66710,7 @@ mzI
 mzI
 mzI
 lhJ
-lhJ
+bNb
 mzI
 qFw
 dmn
@@ -67253,7 +68027,7 @@ qFw
 qFw
 qFw
 suH
-mgM
+yke
 suH
 qFw
 qFw
@@ -67779,7 +68553,7 @@ qFw
 qFw
 lyH
 lyH
-mgM
+yke
 suH
 qFw
 qFw
@@ -67924,7 +68698,7 @@ cnq
 cnq
 cnq
 aKV
-sGX
+dFX
 sGX
 aKV
 kps
@@ -68181,9 +68955,9 @@ qFw
 qFw
 qFw
 qFw
-tmq
-ktO
-ktO
+wDM
+aiQ
+aiQ
 wDM
 qFw
 qFw
@@ -68968,7 +69742,7 @@ qFw
 qFw
 qFw
 vBs
-toy
+yke
 dmn
 dmn
 dmn
@@ -69723,7 +70497,7 @@ qFw
 qFw
 qFw
 suH
-nvC
+yke
 suH
 qFw
 qFw
@@ -69732,7 +70506,7 @@ qFw
 qFw
 qFw
 suH
-mgM
+yke
 suH
 qFw
 qFw
@@ -70100,7 +70874,7 @@ xzl
 fXd
 hbe
 pUz
-ktO
+nvC
 suH
 suH
 suH
@@ -70342,7 +71116,7 @@ ctf
 lPS
 xzl
 xzl
-nJd
+gaG
 bHT
 xzl
 xzl
@@ -70357,8 +71131,8 @@ rDD
 xzl
 xzl
 hbe
-ktO
-ktO
+nvC
+nvC
 ljO
 eBA
 eJq
@@ -70616,11 +71390,11 @@ xzl
 xzl
 hbe
 eBA
-gaG
-gaG
-ktO
-ktO
-ktO
+toy
+toy
+nvC
+aiQ
+nvC
 hjQ
 vBs
 suH
@@ -70875,8 +71649,8 @@ cUr
 cZO
 cUr
 cUr
-ktO
-gaG
+nvC
+toy
 rHj
 suH
 qcL
@@ -71134,7 +71908,7 @@ pPS
 kqr
 cUr
 cUr
-ktO
+nvC
 suH
 suH
 lyH
@@ -71355,7 +72129,7 @@ bMI
 gej
 xPD
 qQQ
-mJT
+pLq
 lit
 vja
 hOs
@@ -71394,7 +72168,7 @@ qaj
 cUr
 cUr
 suH
-gaG
+toy
 lyH
 qFw
 qFw
@@ -71816,7 +72590,7 @@ qFw
 qFw
 qFw
 suH
-mgM
+yke
 suH
 suH
 dmn
@@ -72158,7 +72932,7 @@ hkD
 hkD
 vYk
 tPI
-wwI
+uCA
 sEW
 wLE
 jWJ
@@ -72688,7 +73462,7 @@ suH
 suH
 suH
 lyH
-mgM
+yke
 suH
 qFw
 qFw
@@ -73081,7 +73855,7 @@ qFw
 qFw
 qFw
 qFw
-qFw
+uuP
 qFw
 qFw
 qFw
@@ -73930,11 +74704,11 @@ wlk
 bsy
 fpr
 bsy
-iOg
-xTP
-xTP
-xTP
-jHC
+iTF
+iTF
+iTF
+iTF
+iTF
 iTF
 iTF
 iTF
@@ -74188,12 +74962,12 @@ bsy
 wlk
 oSP
 wlk
-xfr
+lxR
 vzZ
 dHN
 dHN
-myK
-jHC
+iTF
+iTF
 iTF
 iTF
 ubV
@@ -74407,7 +75181,7 @@ qFw
 qFw
 qFw
 vBs
-toy
+yke
 dmn
 dmn
 dmn
@@ -74446,12 +75220,12 @@ bsy
 dHN
 aAJ
 aAA
-ykA
+iTF
 dHN
 wEx
 hLY
 gqe
-ipx
+iTF
 iTF
 jmi
 yfE
@@ -74685,7 +75459,7 @@ qFw
 qFw
 qFw
 qFw
-myf
+jNq
 vnk
 lbw
 ddJ
@@ -74709,7 +75483,7 @@ tjS
 dHN
 dHN
 yez
-ipx
+iTF
 iTF
 iTF
 rEU
@@ -74942,8 +75716,8 @@ qFw
 qFw
 qFw
 qFw
-myf
-myf
+jNq
+jNq
 fUz
 vRE
 kev
@@ -74959,15 +75733,15 @@ xPi
 tqS
 xPi
 bsy
-pTv
-dHN
+bsy
+cKu
 vDL
 hLY
 dHN
 tju
 dHN
 aqK
-ipx
+iTF
 iTF
 rEU
 iTF
@@ -75224,8 +75998,8 @@ gUL
 dHN
 dHN
 glP
-aYp
-bra
+iTF
+iTF
 iTF
 iTF
 yfE
@@ -75482,7 +76256,7 @@ lxR
 cJZ
 bJT
 tjS
-ipx
+iTF
 rEU
 iTF
 iTF
@@ -75735,12 +76509,12 @@ hyN
 rUt
 heO
 dHN
-wyT
-qcj
-qwh
-qwh
-qwh
-bra
+aAA
+iTF
+iTF
+iTF
+iTF
+iTF
 rEU
 xRm
 lWC
@@ -75976,7 +76750,7 @@ slB
 slB
 slB
 slB
-uTi
+bNw
 pVv
 hue
 ddJ
@@ -75994,9 +76768,9 @@ dif
 xPi
 dHN
 dHN
-myK
-xTP
-xTP
+iTF
+iTF
+iTF
 uIW
 wlk
 bsy
@@ -76042,7 +76816,7 @@ suH
 suH
 suH
 suH
-mgM
+yke
 suH
 qFw
 qFw
@@ -76466,7 +77240,7 @@ qFw
 qFw
 qFw
 vBs
-toy
+yke
 lyH
 lyH
 qFw
@@ -76522,8 +77296,8 @@ oTC
 ddn
 rnK
 oTC
-jkO
-ddn
+oTC
+afX
 jdq
 dUG
 dfc
@@ -77242,7 +78016,7 @@ qFw
 lyH
 qFw
 qFw
-pDL
+uGJ
 xPi
 xPi
 xPi
@@ -77501,7 +78275,7 @@ lyH
 qFw
 qFw
 eqX
-bdC
+eLO
 ooG
 aFc
 smc
@@ -77563,7 +78337,7 @@ jpp
 jmU
 rQy
 oNw
-oNw
+oga
 nDs
 jgL
 oNw
@@ -77841,7 +78615,7 @@ qFw
 suH
 qFw
 suH
-mgM
+yke
 suH
 qFw
 qFw
@@ -78345,13 +79119,13 @@ mCs
 hPY
 dwA
 qFw
-ktO
+nvC
 qFw
-ktO
+nvC
 qFw
-ktO
+nvC
 qFw
-ktO
+nvC
 qFw
 qFw
 lyH
@@ -78603,13 +79377,13 @@ mCs
 hPY
 dwA
 qFw
-ktO
+nvC
 qFw
-ktO
+nvC
 qFw
-ktO
+nvC
 qFw
-ktO
+nvC
 qFw
 qFw
 lyH
@@ -78861,13 +79635,13 @@ dFL
 irA
 irA
 qFw
-ktO
+nvC
 qFw
-ktO
+nvC
 qFw
-ktO
+nvC
 syg
-ktO
+nvC
 qFw
 qFw
 suH
@@ -79119,13 +79893,13 @@ ktS
 jqh
 ebz
 qFw
-wDM
+ods
 qFw
-wDM
+ods
 qFw
-wDM
+ods
 qFw
-wDM
+ods
 qFw
 qFw
 qFw
@@ -79824,7 +80598,7 @@ mmY
 fKV
 rFI
 txV
-sni
+svJ
 slB
 slB
 slB
@@ -80617,7 +81391,7 @@ cVI
 cVg
 qfZ
 slB
-wCA
+hcE
 giO
 jgZ
 cCA
@@ -81711,7 +82485,7 @@ cpM
 lnu
 lnu
 lnu
-qOU
+cpM
 qOU
 qFw
 qFw
@@ -81882,7 +82656,7 @@ qFw
 qFw
 iTy
 sYS
-mKC
+izi
 rmP
 far
 oCU
@@ -82392,7 +83166,7 @@ qFw
 qFw
 qFw
 vBs
-toy
+yke
 suH
 suH
 suH
@@ -82485,7 +83259,7 @@ rIx
 jxw
 jxw
 dxt
-qOU
+cpM
 qOU
 qFw
 qFw
@@ -82743,7 +83517,7 @@ jxw
 mNH
 mNH
 hBK
-qOU
+cpM
 qOU
 qFw
 qFw
@@ -83259,7 +84033,7 @@ cpM
 oDm
 oDm
 oDm
-qOU
+cpM
 qOU
 qFw
 qFw
@@ -83480,7 +84254,7 @@ eOO
 qgO
 ube
 eOO
-uyF
+eOO
 edq
 jdA
 rdr
@@ -85833,8 +86607,8 @@ xqt
 bUN
 nxy
 bBI
-uyF
-ePw
+eOO
+wCA
 eAT
 ePw
 eOO
@@ -86277,7 +87051,7 @@ vIL
 puC
 vIL
 oix
-cTu
+hcE
 hcE
 hcE
 xwY
@@ -86322,7 +87096,7 @@ oZE
 ePw
 yiM
 yiM
-sCy
+qZp
 ktm
 mMB
 oQE
@@ -87815,7 +88589,7 @@ qFw
 qFw
 qFw
 vBs
-toy
+yke
 lyH
 qFw
 qFw
@@ -88125,7 +88899,7 @@ fCw
 fCw
 fCw
 oZE
-ePw
+cui
 knr
 knr
 qAm
@@ -88648,8 +89422,8 @@ ePw
 tob
 eOO
 eOO
-uyF
-ePw
+eOO
+wCA
 ePw
 ePw
 eOO
@@ -90996,7 +91770,7 @@ suH
 suH
 suH
 lyH
-mgM
+yke
 suH
 qFw
 qFw
@@ -91239,7 +92013,7 @@ njU
 jmW
 jdX
 lZX
-lZX
+slB
 slB
 slB
 slB
@@ -91746,11 +92520,11 @@ vOP
 vOP
 vOP
 vOP
-vOP
-vOP
-vOP
-vOP
-vOP
+pDL
+shc
+kIa
+cdr
+pDL
 vOP
 gxw
 tUq
@@ -91999,17 +92773,17 @@ svo
 vOP
 vOP
 vOP
-vOP
-vOP
-vOP
-vOP
-vOP
-vOP
-vOP
-vOP
-vOP
-vOP
-vOP
+pDL
+pDL
+iAX
+iAX
+pDL
+pDL
+eEx
+vfr
+lDQ
+vfj
+fsi
 sLT
 omh
 uFo
@@ -92254,20 +93028,20 @@ slB
 eXe
 qMY
 svo
-vOP
-vOP
-vOP
-vOP
-vOP
-vOP
-vOP
-vOP
-vOP
-vOP
-vOP
-vOP
-vOP
-vOP
+pDL
+jrA
+pDL
+pDL
+hlc
+lTf
+lTf
+wHC
+pDL
+cun
+fwC
+lDQ
+vfj
+vfj
 uzg
 dCR
 tgq
@@ -92512,19 +93286,19 @@ slB
 lZX
 kGW
 svo
-vOP
-vOP
-vOP
-vOP
-vOP
-vOP
-vOP
-vOP
-vOP
-vOP
-vOP
-vOP
-vOP
+pDL
+ntX
+dPX
+pDL
+cPW
+bwS
+dOz
+vzu
+pDL
+aVU
+lII
+kpI
+pDL
 vOP
 aJI
 wfP
@@ -92734,7 +93508,7 @@ qFw
 qFw
 qFw
 suH
-mgM
+yke
 lyH
 lyH
 qFw
@@ -92770,20 +93544,20 @@ slB
 eXe
 mFU
 svo
-vOP
-vOP
-vOP
-vOP
-vOP
-vOP
-vOP
-vOP
-vOP
-vOP
-vOP
-vOP
-vOP
-vOP
+eVS
+xOB
+jKi
+pDL
+mHk
+mHk
+mHk
+dOz
+ofj
+dOz
+egz
+azB
+mpN
+mpN
 skn
 hFQ
 wiW
@@ -93028,18 +93802,18 @@ slB
 lZX
 kGW
 svo
-vOP
-vOP
-vOP
-vOP
-vOP
-vOP
-vOP
-vOP
-vOP
-vOP
-vOP
-vOP
+cxM
+irW
+bKQ
+hoY
+dOz
+dOz
+dOz
+dOz
+uIY
+dOz
+dOz
+lMP
 vOP
 vOP
 nsu
@@ -93286,19 +94060,19 @@ slB
 eXe
 rBv
 svo
-vOP
-vOP
-vOP
-vOP
-vOP
-vOP
-vOP
-vOP
-vOP
-vOP
-vOP
-vOP
-vOP
+orc
+tqU
+jKi
+pDL
+oLm
+oLm
+oLm
+bmN
+pDL
+lad
+jgD
+kpI
+tmq
 vOP
 alN
 qaQ
@@ -93544,19 +94318,19 @@ slB
 lZX
 kGW
 svo
-vOP
-vOP
-vOP
-vOP
-vOP
-vOP
-vOP
-vOP
-vOP
-vOP
-vOP
-vOP
-vOP
+pDL
+xdj
+whp
+pDL
+dOz
+sIl
+dOz
+nUO
+pDL
+btz
+wKV
+kpI
+pDL
 vOP
 alN
 ntB
@@ -93802,20 +94576,20 @@ slB
 eXe
 qMY
 svo
-vOP
-vOP
-vOP
-vOP
-vOP
-vOP
-vOP
-vOP
-vOP
-vOP
-vOP
-vOP
-vOP
-vOP
+pDL
+jrA
+pDL
+pDL
+uYQ
+pQb
+pQb
+rRS
+pDL
+rzd
+pyB
+lDQ
+vfj
+fsi
 alN
 qPj
 lZX
@@ -94063,17 +94837,17 @@ svo
 vOP
 vOP
 vOP
-vOP
-vOP
-vOP
-vOP
-vOP
-vOP
-vOP
-vOP
-vOP
-vOP
-vOP
+pDL
+pDL
+iAX
+iAX
+pDL
+pDL
+mMW
+uKt
+mXW
+vfj
+vfj
 alN
 vQs
 eXe
@@ -94326,11 +95100,11 @@ vOP
 vOP
 vOP
 vOP
-vOP
-vOP
-vOP
-vOP
-vOP
+pDL
+iAX
+pDL
+pDL
+pDL
 vOP
 alN
 qPj
@@ -94348,7 +95122,7 @@ suH
 suH
 suH
 lyH
-mgM
+yke
 suH
 qFw
 qFw
@@ -94583,13 +95357,13 @@ fJb
 fJb
 fJb
 fJb
-fJb
-fJb
-fJb
-fJb
-iys
-qxv
-fJb
+swB
+pXP
+pXP
+pXP
+qjO
+cWE
+pXP
 yfi
 rba
 eXe
@@ -94796,7 +95570,7 @@ qFw
 qFw
 qFw
 suH
-mgM
+yke
 lyH
 qFw
 qFw
@@ -94837,7 +95611,7 @@ kGW
 aqB
 eVZ
 cDP
-fGl
+qIC
 fGl
 ogp
 pNA
@@ -95099,7 +95873,7 @@ eXe
 kzp
 eXe
 aDG
-aDG
+iUX
 hGJ
 hBX
 eXe
@@ -96108,7 +96882,7 @@ uAV
 slB
 slB
 uQv
-oBI
+ngx
 uQv
 slB
 slB
@@ -96634,7 +97408,7 @@ fSR
 pjv
 svQ
 bIj
-afX
+bIj
 tXR
 iyF
 amz
@@ -97119,7 +97893,7 @@ qFw
 qFw
 qFw
 suH
-mgM
+yke
 lyH
 suH
 suH
@@ -97431,8 +98205,8 @@ fVH
 iQm
 tiw
 tiw
-tiw
-cKu
+jkO
+iQm
 slB
 slB
 slB
@@ -97954,7 +98728,7 @@ skU
 skU
 skU
 skU
-vzu
+lqB
 suH
 suH
 lyH
@@ -98211,7 +98985,7 @@ lhG
 skU
 xdv
 xYL
-cin
+ljd
 xFb
 lDB
 vei
@@ -98483,7 +99257,7 @@ jNV
 jNV
 jNV
 suH
-mgM
+yke
 suH
 qFw
 qFw
@@ -98922,7 +99696,7 @@ qFw
 qFw
 qFw
 suH
-mgM
+yke
 lyH
 suH
 suH
@@ -98990,13 +99764,13 @@ aEn
 jGn
 sRb
 cXM
-dDW
+sRb
 gqI
 sRb
 oHo
 aEn
 ceD
-wDM
+ods
 jNV
 jNV
 jNV
@@ -99245,14 +100019,14 @@ kLU
 bzO
 skU
 oHO
-ktO
-ktO
+nvC
+nvC
 cmh
-ktO
+nvC
 cmh
-ktO
+nvC
 lpg
-ktO
+nvC
 ftn
 qaL
 lDB
@@ -99492,7 +100266,7 @@ iQm
 tiw
 tiw
 iQm
-tiw
+myf
 lMg
 vzz
 qQE
@@ -99512,7 +100286,7 @@ qFw
 qFw
 qFw
 wSC
-wDM
+ods
 lyH
 lDB
 lDB
@@ -99696,7 +100470,7 @@ qFw
 qFw
 qFw
 suH
-mgM
+yke
 lyH
 suH
 suH
@@ -99770,7 +100544,7 @@ qFw
 qFw
 qFw
 qFw
-ktO
+nvC
 lyH
 lDB
 lyH
@@ -100028,7 +100802,7 @@ qFw
 qFw
 qFw
 qFw
-wDM
+ods
 lDB
 lDB
 lyH
@@ -100286,7 +101060,7 @@ suH
 qFw
 qFw
 qFw
-ktO
+nvC
 lyH
 lDB
 lyH
@@ -100539,16 +101313,16 @@ suH
 suH
 suH
 suH
-ktO
+nvC
 suH
 suH
 suH
 suH
-wDM
+ods
 lyH
 lDB
 lDB
-mgM
+yke
 suH
 qFw
 qFw
@@ -100728,7 +101502,7 @@ qFw
 qFw
 qFw
 suH
-mgM
+yke
 lyH
 suH
 suH
@@ -100802,7 +101576,7 @@ suH
 qFw
 qFw
 qFw
-ktO
+nvC
 lyH
 lDB
 lyH
@@ -101060,7 +101834,7 @@ qFw
 qFw
 qFw
 qFw
-wDM
+ods
 lDB
 lDB
 lyH
@@ -101318,7 +102092,7 @@ qFw
 qFw
 qFw
 qFw
-ktO
+nvC
 lyH
 lDB
 lyH
@@ -101502,7 +102276,7 @@ qFw
 qFw
 qFw
 suH
-mgM
+yke
 lyH
 suH
 suH
@@ -101576,7 +102350,7 @@ qFw
 qFw
 qFw
 wSC
-wDM
+ods
 lyH
 lDB
 lDB
@@ -101824,17 +102598,17 @@ eYG
 kLU
 vme
 skU
-ktO
-ktO
-ktO
+nvC
+nvC
+nvC
 cXz
-ktO
+nvC
 iQH
-ktO
+nvC
 iQH
-ktO
+nvC
 xwk
-ktO
+nvC
 lDB
 jNV
 jNV
@@ -102044,8 +102818,8 @@ cRM
 txF
 uPP
 oPi
-bRU
-fXm
+dba
+uTi
 hHK
 fXm
 fXm
@@ -102092,7 +102866,7 @@ dfQ
 oHf
 oQG
 qFD
-wDM
+ods
 jNV
 jNV
 jNV
@@ -102324,7 +103098,7 @@ idC
 iQm
 iQm
 iQm
-tiw
+myf
 nng
 dba
 vEK
@@ -102611,7 +103385,7 @@ jNV
 jNV
 jNV
 suH
-mgM
+yke
 suH
 qFw
 qFw
@@ -103302,7 +104076,7 @@ qFw
 qFw
 qFw
 suH
-mgM
+yke
 suH
 suH
 suH
@@ -103632,7 +104406,7 @@ lyH
 suH
 lyH
 suH
-mgM
+yke
 suH
 qFw
 qFw
@@ -104652,7 +105426,7 @@ qFw
 qFw
 lyH
 lyH
-mgM
+yke
 suH
 qFw
 qFw
@@ -105632,7 +106406,7 @@ qFw
 qFw
 qFw
 suH
-mgM
+yke
 lyH
 lyH
 qFw
@@ -105678,7 +106452,7 @@ qFw
 qFw
 qFw
 suH
-mgM
+yke
 suH
 qFw
 qFw
@@ -106699,7 +107473,7 @@ qFw
 qFw
 qFw
 suH
-mgM
+yke
 suH
 qFw
 qFw
@@ -107024,7 +107798,7 @@ qFw
 qFw
 qFw
 qFw
-qFw
+aBf
 qFw
 qFw
 qFw
@@ -107187,7 +107961,7 @@ qFw
 qFw
 qFw
 suH
-mgM
+yke
 suH
 qFw
 qFw
@@ -107712,7 +108486,7 @@ qFw
 qFw
 qFw
 suH
-mgM
+yke
 suH
 qFw
 qFw

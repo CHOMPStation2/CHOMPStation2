@@ -38,8 +38,8 @@
 	name = "Teleporter Bay Prep"
 
 
-/area/hangar/cetus/one
-	name = "\improper Hangar One"
+/area/hangar/cetus/two
+	name = "\improper Hangar Two"
 	base_turf = /turf/simulated/floor/outdoors/rocks/cetus
 
 /area/hangar/cetus/explofoyer
