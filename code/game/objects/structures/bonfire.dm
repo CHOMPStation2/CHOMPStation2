@@ -166,7 +166,8 @@
 	return TRUE
 
 
-/obj/structure/bonfire/proc/extinguish()
+/obj/structure/bonfire/extinguish()
+	. = ..()
 	if(burning)
 		burning = FALSE
 		update_icon()
@@ -193,7 +194,7 @@
 			var/mob/living/L = A
 			if(!(L.is_incorporeal()))
 				L.adjust_fire_stacks(get_fuel_amount() / 4)
-				L.IgniteMob()
+				L.ignite_mob()
 
 /obj/structure/bonfire/update_icon()
 	cut_overlays()
@@ -360,7 +361,8 @@
 		return FALSE
 	return TRUE
 
-/obj/structure/fireplace/proc/extinguish()
+/obj/structure/fireplace/extinguish()
+	. = ..()
 	if(burning)
 		burning = FALSE
 		update_icon()

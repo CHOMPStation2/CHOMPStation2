@@ -419,6 +419,7 @@
 	spawn(1) updatehealth()
 	return 1
 
+<<<<<<< HEAD
 /mob/living/proc/IgniteMob()
 	if(fire_stacks > 0 && !on_fire)
 		on_fire = 1
@@ -498,6 +499,8 @@
 		IgniteMob()
 */
 
+=======
+>>>>>>> a1322afa05 (Port /datum/status_effect and convert wetness and fire stacks to it (#18180))
 /mob/living/proc/get_cold_protection()
 	return 0
 
@@ -534,8 +537,7 @@
 // Called when touching a lava tile.
 // Does roughly 70 damage (30 instantly, up to ~40 over time) to unprotected mobs, and 10 to fully protected mobs.
 /mob/living/lava_act()
-	adjust_fire_stacks(1)
-	add_modifier(/datum/modifier/fire/stack_managed/intense, 8 SECONDS) // Around 40 total if left to burn and without fire protection per stack.
+	adjust_fire_stacks(4)
 	inflict_heat_damage(20) // Another 20, however this is instantly applied to unprotected mobs.
 	adjustFireLoss(10) // Lava cannot be 100% resisted with fire protection.
 
