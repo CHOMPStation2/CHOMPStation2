@@ -52,7 +52,7 @@
 /obj/item/gun/energy/gun/martin
 	name = "holdout energy gun"
 	desc = "The FS PDW E \"Martin\" is small holdout e-gun. Don't miss!"
-	icon_state = "PDW"
+	icon_state = "pdw"
 	item_state = "gun"
 	w_class = ITEMSIZE_SMALL
 	projectile_type = /obj/item/projectile/beam/stun
