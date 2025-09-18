@@ -2906,6 +2906,7 @@
 	map_pad_link_id = "cetus_sci_padout";
 	name = "Research and Development Q-Pad"
 	},
+/obj/structure/cable/green,
 /turf/simulated/floor/greengrid,
 /area/crew_quarters/cetus/jrhallway)
 "bao" = (
@@ -3749,6 +3750,7 @@
 	map_pad_link_id = "cetus_med_padout";
 	name = "Medical Bay Q-Pad"
 	},
+/obj/structure/cable/green,
 /turf/simulated/floor/bluegrid,
 /area/crew_quarters/cetus/jrhallway)
 "bnV" = (
@@ -7297,6 +7299,9 @@
 "cAj" = (
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/glass_medical,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/crew_quarters/cetus/jrhallway)
 "cAk" = (
@@ -7728,6 +7733,9 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/cetus/hall)
@@ -13427,6 +13435,9 @@
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 8
 	},
+/obj/structure/cable/green{
+	icon_state = "5-10"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/cetus/hall)
 "eID" = (
@@ -14295,6 +14306,9 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/structure/cable/green{
+	icon_state = "2-4"
+	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/cetus/jrhallway)
 "eYp" = (
@@ -14843,6 +14857,9 @@
 	dir = 1;
 	name = "Station Intercom (General)";
 	pixel_y = 22
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/cetus/hall)
@@ -18473,7 +18490,7 @@
 	icon_state = "16-0"
 	},
 /obj/machinery/light/small/yellowed{
-	dir = 1
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/substation/central)
@@ -20250,6 +20267,24 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/cetus/stairwellf2)
+"gZb" = (
+/obj/effect/wingrille_spawn/reinforced,
+/obj/machinery/door/firedoor/glass,
+/obj/machinery/door/blast/regular{
+	density = 0;
+	icon_state = "pdoor0";
+	id = "Prison Gate";
+	name = "Communal Brig Blast Door";
+	opacity = 0
+	},
+/obj/structure/cable/green{
+	icon_state = "0-6"
+	},
+/obj/structure/cable/green{
+	icon_state = "1-6"
+	},
+/turf/simulated/floor/plating,
+/area/security/Brig)
 "gZj" = (
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /obj/effect/floor_decal/borderfloorblack/corner{
@@ -21031,6 +21066,14 @@
 /obj/structure/catwalk,
 /turf/simulated/floor/plating/turfpack/airless,
 /area/maintenance/cetus/auxsupport)
+"hmx" = (
+/obj/structure/lattice,
+/obj/structure/grille,
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/turf/space,
+/area/space)
 "hmQ" = (
 /obj/effect/floor_decal/industrial/warning,
 /obj/structure/cable/green{
@@ -22410,6 +22453,9 @@
 	map_pad_id = "cetus_med_padout";
 	map_pad_link_id = "cetus_med_padin";
 	name = "Joint Research Q-Pad"
+	},
+/obj/structure/cable/green{
+	icon_state = "0-6"
 	},
 /turf/simulated/floor/bluegrid,
 /area/medical/cetus/hall)
@@ -26833,6 +26879,14 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/cetus/Galleryf1)
+"jqL" = (
+/obj/machinery/door/firedoor/glass,
+/obj/effect/wingrille_spawn/reinforced,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/plating/turfpack/airless,
+/area/maintenance/cetus/tech)
 "jqR" = (
 /obj/structure/closet/secure_closet/personal/cabinet,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -30675,6 +30729,9 @@
 "kLx" = (
 /obj/machinery/light,
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/cetus/hall)
 "kLy" = (
@@ -30816,6 +30873,9 @@
 	},
 /obj/machinery/alarm{
 	pixel_y = 22
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/cetus/hall)
@@ -31794,6 +31854,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/cetus/hall)
 "lhd" = (
@@ -32283,14 +32346,6 @@
 /obj/effect/floor_decal/industrial/warning/corner,
 /turf/simulated/floor/tiled/techfloor,
 /area/quartermaster/Recycling)
-"lpL" = (
-/obj/structure/lattice,
-/obj/structure/grille,
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
-/turf/space,
-/area/space)
 "lpM" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/airlock/glass_external{
@@ -33229,13 +33284,6 @@
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/cetus/jrrestrooms)
-"lHY" = (
-/obj/structure/lattice,
-/obj/structure/cable/green{
-	icon_state = "1-2"
-	},
-/turf/space,
-/area/space)
 "lIo" = (
 /turf/simulated/mineral/cetus,
 /area/crew_quarters/cetus/arcadestorage)
@@ -33604,6 +33652,9 @@
 "lPE" = (
 /obj/machinery/camera/network/research{
 	c_tag = "SCI - JR D2 Stairwell"
+	},
+/obj/effect/floor_decal/techfloor{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/rnd/cetus/jrhall)
@@ -34648,14 +34699,6 @@
 	},
 /turf/simulated/floor/outdoors/rocks/cetus,
 /area/maintenance/cetus/twojrport)
-"meE" = (
-/obj/machinery/door/firedoor/glass,
-/obj/effect/wingrille_spawn/reinforced,
-/obj/structure/cable/green{
-	icon_state = "1-2"
-	},
-/turf/simulated/floor/plating/turfpack/airless,
-/area/maintenance/cetus/tech)
 "meG" = (
 /obj/effect/floor_decal/corner/green/bordercorner,
 /obj/effect/floor_decal/corner/green/bordercorner{
@@ -36178,6 +36221,13 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/entry/D2)
+"mDS" = (
+/obj/structure/lattice,
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/turf/space,
+/area/space)
 "mFa" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
 	dir = 8
@@ -38713,6 +38763,9 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/industrial/warning,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/cetus/jrhallway)
 "nBW" = (
@@ -39472,6 +39525,9 @@
 	},
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 1
+	},
+/obj/structure/cable/green{
+	icon_state = "4-9"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/medical/cetus/hall)
@@ -40242,6 +40298,12 @@
 	},
 /turf/simulated/floor/tiled,
 /area/medical/medsci)
+"oeM" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/rnd/cetus/jrhall)
 "oeU" = (
 /obj/machinery/light/spot{
 	dir = 1
@@ -41461,6 +41523,9 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/industrial/warning,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/cetus/jrhallway)
 "oAB" = (
@@ -41515,14 +41580,6 @@
 "oBv" = (
 /turf/simulated/floor/reinforced,
 /area/rnd/Xenobiology_Lab)
-"oBH" = (
-/obj/structure/lattice,
-/obj/structure/grille,
-/obj/structure/cable/green{
-	icon_state = "2-4"
-	},
-/turf/space,
-/area/space)
 "oCc" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/effect/floor_decal/spline/plain/corner,
@@ -43422,6 +43479,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled/old_cargo/white,
 /area/medical/cetus/hall)
 "phv" = (
@@ -43769,6 +43829,14 @@
 	},
 /turf/simulated/floor/plating,
 /area/security/briefing_room)
+"pnd" = (
+/obj/effect/wingrille_spawn/reinforced,
+/obj/machinery/door/firedoor/glass,
+/obj/structure/cable/green{
+	icon_state = "4-10"
+	},
+/turf/simulated/floor/plating,
+/area/rnd/cetus/hall)
 "png" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
 	dir = 8
@@ -48812,13 +48880,6 @@
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled,
 /area/quartermaster/storage)
-"qRY" = (
-/obj/structure/lattice,
-/obj/structure/cable/green{
-	icon_state = "2-8"
-	},
-/turf/space,
-/area/space)
 "qRZ" = (
 /obj/machinery/alarm{
 	dir = 4;
@@ -53428,6 +53489,9 @@
 /obj/machinery/camera/network/civilian{
 	c_tag = "CIV -  JR Public Hallway 1"
 	},
+/obj/structure/cable/green{
+	icon_state = "2-4"
+	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/cetus/jrhallway)
 "svt" = (
@@ -53643,6 +53707,14 @@
 /obj/effect/floor_decal/corner/red/bordercorner,
 /turf/simulated/floor/tiled/dark,
 /area/rnd/Robotics_Lab)
+"syn" = (
+/obj/structure/lattice,
+/obj/structure/grille,
+/obj/structure/cable/green{
+	icon_state = "2-4"
+	},
+/turf/space,
+/area/space)
 "syw" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -55299,6 +55371,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/cetus/hall)
 "tce" = (
@@ -56811,6 +56886,9 @@
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/twoap)
 "tBK" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/rnd/cetus/jrhall)
 "tBQ" = (
@@ -57570,6 +57648,9 @@
 	map_pad_id = "cetus_sci_padout";
 	map_pad_link_id = "cetus_sci_padin";
 	name = "Joint Research Q-Pad"
+	},
+/obj/structure/cable/green{
+	icon_state = "0-5"
 	},
 /turf/simulated/floor/greengrid,
 /area/rnd/cetus/hall)
@@ -60706,6 +60787,13 @@
 /obj/effect/map_helper/airlock/button/ext_button,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/solars)
+"uSw" = (
+/obj/structure/lattice,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/turf/space,
+/area/space)
 "uSL" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
@@ -62713,24 +62801,6 @@
 	},
 /turf/simulated/floor/carpet/graycarpet,
 /area/tcomm/tcomfoyer)
-"vEu" = (
-/obj/effect/wingrille_spawn/reinforced,
-/obj/machinery/door/firedoor/glass,
-/obj/machinery/door/blast/regular{
-	density = 0;
-	icon_state = "pdoor0";
-	id = "Prison Gate";
-	name = "Communal Brig Blast Door";
-	opacity = 0
-	},
-/obj/structure/cable/green{
-	icon_state = "0-6"
-	},
-/obj/structure/cable/green{
-	icon_state = "1-6"
-	},
-/turf/simulated/floor/plating,
-/area/security/Brig)
 "vEx" = (
 /obj/structure/table/steel,
 /obj/item/storage/bag/circuits/basic,
@@ -65434,6 +65504,9 @@
 	pixel_x = 12;
 	pixel_y = 25
 	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/cetus/hall)
 "wCO" = (
@@ -66627,6 +66700,9 @@
 "wXM" = (
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/glass_research,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/crew_quarters/cetus/jrhallway)
 "wYc" = (
@@ -68420,6 +68496,13 @@
 /obj/structure/railing,
 /turf/simulated/open,
 /area/crew_quarters/cetus/atrium/primary)
+"xDg" = (
+/obj/structure/lattice,
+/obj/structure/cable/green{
+	icon_state = "2-8"
+	},
+/turf/space,
+/area/space)
 "xDL" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 6
@@ -68765,6 +68848,9 @@
 "xLU" = (
 /obj/machinery/firealarm{
 	pixel_y = 24
+	},
+/obj/effect/floor_decal/techfloor{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/rnd/cetus/jrhall)
@@ -69931,13 +70017,6 @@
 "ykC" = (
 /turf/simulated/wall/r_wall,
 /area/engineering/Engineering_Workshop)
-"ykM" = (
-/obj/structure/lattice,
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
-/turf/space,
-/area/space)
 "ykT" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/effect/floor_decal/industrial/arrows/yellow{
@@ -86348,7 +86427,7 @@ aRG
 iQC
 iQC
 xLU
-tBK
+oeM
 bAa
 xWG
 cKP
@@ -94134,7 +94213,7 @@ oJw
 oJw
 oJw
 jTo
-dJH
+pnd
 rlk
 kMA
 icM
@@ -103906,11 +103985,11 @@ oJw
 oJw
 oJw
 oJw
-oBH
-lHY
-lHY
-lHY
-meE
+syn
+uSw
+uSw
+uSw
+jqL
 nQo
 qXm
 nTR
@@ -104164,7 +104243,7 @@ oJw
 oJw
 oJw
 oJw
-lpL
+hmx
 oJw
 oJw
 oJw
@@ -104422,7 +104501,7 @@ oJw
 oJw
 oJw
 oJw
-ykM
+mDS
 oJw
 odB
 odB
@@ -104680,7 +104759,7 @@ oJw
 kmJ
 oJw
 oJw
-ykM
+mDS
 oJw
 odB
 fJS
@@ -104938,7 +105017,7 @@ kmJ
 cLh
 oJw
 oJw
-ykM
+mDS
 oJw
 tVn
 dcQ
@@ -105196,8 +105275,8 @@ lDx
 cLh
 kmJ
 kmJ
-qRY
-vEu
+xDg
+gZb
 iSM
 xcf
 uoN
