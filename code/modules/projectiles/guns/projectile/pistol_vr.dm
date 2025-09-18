@@ -16,7 +16,6 @@
 /obj/item/gun/projectile/lamia
 	name = "FS HG .44 \"Lamia\""
 	desc = "Uses .44 rounds."
-	icon = 'icons/obj/gun_vr.dmi'
 	icon_state = "Headdeagle"
 	item_state = "revolver"
 	caliber = ".44"
@@ -40,7 +39,6 @@
 /obj/item/gun/projectile/giskard
 	name = "\improper \"Giskard\" holdout pistol"
 	desc = "The FS HG .380 \"Giskard\" can even fit into the pocket! Uses .380 rounds."
-	icon = 'icons/obj/gun_vr.dmi'
 	icon_override = 'icons/obj/gun_vr.dmi'
 	icon_state = "giskardcivil"
 	item_state = "giskardcivil"

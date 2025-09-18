@@ -13,6 +13,7 @@
 	the Tajaran homeworld due to their excellent build quality, precision, and \
 	stopping power. Thier bolt-action rifles and brushguns are a staple amongst \
 	the rural communities that dot this infinite frontier."
+	icon = 'icons/obj/gun.dmi'
 	icon_state = "boltaction"
 	item_state = "boltaction"
 	fire_sound = 'sound/weapons/gunshot_generic_rifle.ogg'
