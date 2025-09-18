@@ -96,15 +96,22 @@ GLOBAL_VAR_INIT(Recycled_Items, 0)
 							break
 						if(L.stat == DEAD)
 							playsound(src, 'sound/effects/splat.ogg', 50, 1)
+							if(L.meat_amount && L.meat_type) // Get all the goobs outta this goober
+								while(L.meat_amount > 0)
+									var/obj/item/meat = new L.meat_type(src)
+									if(meat.reagents) // Reagents are set on init, might be randomized per meat chunk too so it needs to be done on a per case basis
+										transfer_reagent_to_tank(meat.reagents,1)
+									qdel(meat)
+									L.meat_amount--
 							L.gib()
 							items_taken++
-							transfer_organic_to_tank(5)
 							if(ishuman(L))
 								// Splorch
 								var/mob/living/carbon/human/H = L
 								transfer_reagent_to_tank(H.bloodstr,1)
 								transfer_reagent_to_tank(H.ingested,1)
 								transfer_reagent_to_tank(H.vessel,0.5)
+							transfer_sludge_to_tank(rand(4,9))
 						else
 							L.adjustBruteLoss(25)
 							items_taken++
@@ -176,16 +183,6 @@ GLOBAL_VAR_INIT(Recycled_Items, 0)
 		else
 			reagents.add_reagent(ore_components, REAGENTS_PER_ORE * multiplier)
 		transfer_sludge_to_tank(rand(1,5))
-
-/obj/machinery/v_garbosystem/proc/transfer_organic_to_tank(var/amt)
-	var/ratioA = FLOOR(amt*0.2,1)
-	var/ratioB = FLOOR(amt*0.8,1)
-	if(ratioA > 0)
-		reagents.add_reagent(REAGENT_ID_PROTEIN, ratioA)
-	if(ratioB > 0)
-		reagents.add_reagent(REAGENT_ID_TRIGLYCERIDE, ratioB)
-	if(ratioB > 0 || ratioA > 0)
-		transfer_sludge_to_tank(rand(4,9))
 
 /obj/machinery/v_garbosystem/proc/transfer_sludge_to_tank(var/amt)
 	if(prob(10) || amt >= 5)
