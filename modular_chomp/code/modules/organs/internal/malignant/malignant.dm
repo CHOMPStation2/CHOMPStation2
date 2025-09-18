@@ -326,7 +326,7 @@
 	var/count = rand(20,30)
 	while(count-- > 0)
 		var/picker = pick(/obj/item/clothing/mask/chewable/candy/gum,/obj/item/clothing/mask/chewable/candy/lolli,/obj/item/reagent_containers/food/snacks/candy/gummy,/obj/item/reagent_containers/food/snacks/candy_corn)
-		var/obj/item/newcandy = new picker(loc)
+		new picker(loc)
 
 	var/turf/T = loc
 	if(owner)
