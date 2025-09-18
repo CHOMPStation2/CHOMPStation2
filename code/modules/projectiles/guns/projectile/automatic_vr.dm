@@ -27,12 +27,7 @@
 // For general use
 /obj/item/gun/projectile/automatic/stg
 	name = "\improper Sturmgewehr"
-<<<<<<< HEAD
-	desc = "An STG-560 built by RauMauser. Experience the terror of the Siegfried line, redone for the 26th century! The Kaiser would be proud. Uses unique 7.92x33mm Kurz rounds."
-	icon = 'icons/obj/gun_vr.dmi'
-=======
-	desc = "An STG-560 built by RauMauser. Experience the terror of the Siegfried line, redone for the 24th century! The Kaiser would be proud. Uses unique 7.92x33mm Kurz rounds."
->>>>>>> dc34a164b2 (Adds new sprites for some guns, consolidates _vr file [IDB IGNORE] (#18306))
+	desc = "An STG-560 built by RauMauser. Experience the terror of the Siegfried line, redone for the 26th century! The Kaiser would be proud. Uses unique 7.92x33mm Kurz rounds." //CHOMPEdit: 24th->26th
 	icon_state = "stg60"
 	item_state = "arifle"
 	w_class = ITEMSIZE_LARGE
