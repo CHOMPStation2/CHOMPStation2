@@ -1,6 +1,7 @@
 /obj/item/gun/projectile/shotgun/doublebarrel/quad
 	name = "quad-barreled shotgun"
 	desc = "A shotgun pattern designed to make the most out of the limited machining capability of the frontier. 4 Whole barrels of death, loads using 12 gauge rounds."
+	icon = 'icons/obj/gun.dmi'
 	icon_state = "shotgun_q"
 	item_state = "qshotgun"
 	recoil = 2
@@ -24,6 +25,7 @@
 		)
 
 /obj/item/gun/projectile/shotgun/doublebarrel/sawn/alt
+	icon = 'icons/obj/gun.dmi'
 	sawn_off = 1
 	icon_state = "shotpistol"
 	accuracy = 40
