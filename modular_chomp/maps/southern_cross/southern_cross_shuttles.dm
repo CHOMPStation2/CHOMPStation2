@@ -31,32 +31,3 @@ ESCAPE_POD(7)
 ESCAPE_POD(8)
 
 #undef ESCAPE_POD
-
-
-// Large Escape Pod 2
-/datum/shuttle/autodock/ferry/escape_pod/large_escape_pod2
-	name = "Large Escape Pod 2"
-	location = FERRY_LOCATION_STATION
-	warmup_time = 0
-	shuttle_area = /area/shuttle/large_escape_pod2/station
-	landmark_station = "large_escape_pod2_station"
-	landmark_offsite = "large_escape_pod2_offsite"
-	landmark_transition = "large_escape_pod2_transit"
-	docking_controller_tag = "large_escape_pod_2"
-	move_time = SHUTTLE_TRANSIT_DURATION_RETURN
-
-/obj/effect/shuttle_landmark/southern_cross/large_escape_pod2/station
-	name = "Station"
-	landmark_tag = "large_escape_pod2_station"
-	docking_controller = "large_escape_pod_2_berth"
-	base_area = /area/maintenance/firstdeck/centralport
-	base_turf = /turf/simulated/floor/airless
-
-/obj/effect/shuttle_landmark/southern_cross/large_escape_pod2/offsite
-	name = "Recovery"
-	landmark_tag = "large_escape_pod2_offsite"
-	docking_controller = "large_escape_pod_2_recovery"
-
-/obj/effect/shuttle_landmark/southern_cross/large_escape_pod2/transit
-	landmark_tag = "large_escape_pod2_transit"
-	flags = SLANDMARK_FLAG_AUTOSET
