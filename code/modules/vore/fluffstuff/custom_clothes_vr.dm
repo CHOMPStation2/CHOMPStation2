@@ -242,12 +242,7 @@
 	name = "Modern Federation Uniform Jacket (Blue)"
 	desc = "A modern uniform jacket from the United Federation. Their Starfleet had recently started using these uniforms. Wearing this makes you feel like a scientist or a pilot."
 	icon_state = "fedmodernblue"
-<<<<<<< HEAD
-	item_state = "fedmodernblue"
-	armor = list(melee = 0, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 0, rad = 0)
-=======
 	armor = list(melee = 0, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 50, rad = 0)
->>>>>>> 7ebd318339 (Fluff icon fixes [IDB IGNORE] (#18420))
 
 /obj/item/clothing/suit/storage/fluff/modernfedcoat/modernfedeng
 	name = "Modern Federation Uniform Jacket (Yellow)"
@@ -2194,13 +2189,8 @@ Departamental Swimsuits, for general use
 	name = "champion's belt"
 	desc = "Cerise's hard-won belt from her glory days. Her skill might have waned since then, but her renown lives on."
 	icon_state = "champion"
-<<<<<<< HEAD
-	item_state = null // i swear to god this works - hatterhat
-	icon_override = 'icons/vore/custom_onmob_vr.dmi'
-=======
 
 	default_worn_icon = 'icons/vore/custom_clothes_mob.dmi'
->>>>>>> 7ebd318339 (Fluff icon fixes [IDB IGNORE] (#18420))
 
 //Sudate: Shea Corbett
 /obj/item/clothing/under/fluff/greek_dress
