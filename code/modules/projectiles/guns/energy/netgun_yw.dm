@@ -4,7 +4,6 @@
 	desc = "A Hephaestus-designed hybrid of a taser and the energy net gun, usually dubbed 'Hunter' stunner and energy net launcher, \
 			for when you want criminals to stop acting like they're on a 20th century British comedy sketch show."
 	catalogue_data = list(/datum/category_item/catalogue/information/organization/hephaestus)
-	icon = 'icons/obj/gun_vr.dmi'
 	icon_state = "hunter"
 	item_state = "gun" // Placeholder
 	mode_name = "stun"
