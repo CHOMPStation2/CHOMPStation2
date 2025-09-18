@@ -326,8 +326,7 @@
 	var/count = rand(20,30)
 	while(count-- > 0)
 		var/picker = pick(/obj/item/clothing/mask/chewable/candy/gum,/obj/item/clothing/mask/chewable/candy/lolli,/obj/item/reagent_containers/food/snacks/candy/gummy,/obj/item/reagent_containers/food/snacks/candy_corn)
-		var/obj/item/newcandy = new picker()
-		newcandy.loc = src.loc
+		var/obj/item/newcandy = new picker(loc)
 
 	var/turf/T = loc
 	if(owner)
@@ -501,21 +500,23 @@
 	playsound(src, 'sound/effects/snap.ogg', 50, 1)
 
 	// place a ton of money at location, then delete organ!
+	var/turf/T = get_turf(src)
 	while(thalers > 1000)
 		thalers -= 1000
-		spawn_money(1000, src.loc)
+		spawn_money(1000, T)
 	while(thalers > 500)
 		thalers -= 500
-		spawn_money(500, src.loc)
+		spawn_money(500, T)
 	while(thalers > 50)
 		thalers -= 50
-		spawn_money(50, src.loc)
+		spawn_money(50, T)
 	while(thalers > 5)
 		thalers -= 5
-		spawn_money(5, src.loc)
+		spawn_money(5, T)
 	while(thalers > 1)
 		thalers -= 1
-		spawn_money(1, src.loc)
+		spawn_money(1, T)
+
 	qdel(src)
 
 
@@ -567,7 +568,7 @@
 							"Why does security wear red? So your blood stains won't get noticed!", \
 							"I got some space wind for ya!", \
 							"Honk ya mother!", \
-							"Nice medbay! Now where's the survivors, doc?", \
+							"Nice medbay! Now where's the survivors, Doc?", \
 							"What's that borgi? The captain fell down the well!? Quickly, to the bar!")
 		owner.say((prob(40) ? ";" : "") + "[pick(jokelist)]")
 	return prob(5) && growth < 3
@@ -709,7 +710,7 @@
 /obj/item/organ/internal/malignant/engineered/chemorgan
 	name = "chem organ DO NOT USE THIS"
 	var/chemid = null
-	var/deg_chance = 2
+	var/deg_chance = 0.1
 	var/deg_intensity = 1
 	var/side_effect_multiplier = 1
 
@@ -748,7 +749,7 @@
 	name = "tramoketic gland"
 	icon_state = "chem_tramadol"
 	chemid = REAGENT_ID_TRAMADOL
-	deg_chance = 3
+	deg_chance = 0.25
 	deg_intensity = 2
 	side_effect_multiplier = 1
 
@@ -781,7 +782,7 @@
 	name = "dexalic gland"
 	icon_state = "chem_dexa"
 	chemid = REAGENT_ID_DEXALIN
-	deg_chance = 5
+	deg_chance = 0.5
 	deg_intensity = 1
 	side_effect_multiplier = 2
 
@@ -804,6 +805,6 @@
 	name = "euphorian"
 	icon_state = "chem_bliss"
 	chemid = REAGENT_ID_BLISS
-	deg_chance = 5
+	deg_chance = 1
 	deg_intensity = 3
 	side_effect_multiplier = 2
