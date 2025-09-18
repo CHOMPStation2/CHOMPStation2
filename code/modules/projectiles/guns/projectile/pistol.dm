@@ -81,7 +81,6 @@
 	desc = "The MT Mk58 is a cheap, ubiquitous sidearm, produced by MarsTech. Found pretty much everywhere humans are. Uses .45 rounds."
 	description_fluff = "The leading civilian-sector high-quality small arms brand of Hephaestus Industries, \
 	MarsTech has been the provider of choice for law enforcement and security forces for over 300 years."
-	icon = 'icons/obj/gun_ch.dmi'
 	icon_state = "secguncomp"
 	magazine_type = /obj/item/ammo_magazine/m45/rubber
 	allowed_magazines = list(/obj/item/ammo_magazine/m45)

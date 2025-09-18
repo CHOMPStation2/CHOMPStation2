@@ -1001,7 +1001,6 @@
 	move_delay = 0
 
 /obj/item/gun/projectile/serdy_pistols
-	icon = 'icons/obj/gun_ch.dmi'
 	bolt_name="slide"
 	bolt_release = "slide release"
 	auto_loading_type = CLOSED_BOLT | LOCK_OPEN_EMPTY
@@ -1076,7 +1075,6 @@
 /obj/item/gun/projectile/revolver/nagant
 	name = "nagant revolver"
 	desc = "A 7 shot, gas-seal revolver designed to have increased muzzle velocity by not allowing excess gasses to escape out of the sides of the cylinder. One of the few revolvers that can be suppressed. Good luck finding a suppressor for one, though. Chambered in .357."
-	icon = 'icons/obj/gun_ch.dmi'
 	icon_state = "nagant"
 	max_shells = 7
 	move_delay = 0 // CHOMPEdit: Pistols have move_delay of 0
@@ -1084,7 +1082,6 @@
 /obj/item/gun/projectile/revolver/saa
 	name = "Colt Single Action Army"
 	desc = "A Colt Single Action Army. The greatest handgun ever made. Six shots. More than enough to kill anything that moves... Chambered in .45 Long-Colt." //sue me -- Ocelot
-	icon = 'icons/obj/gun_ch.dmi'
 	caliber = ".45"
 	icon_state = "saa"
 	fire_delay = 0 //fastest gun in the west
@@ -1221,7 +1218,6 @@
 	is64x32 = FALSE
 	icon_expected_height = 32
 	icon_expected_width = 32
-	icon = 'icons/obj/gun.dmi'
 
 //caseless.dm
 /obj/item/gun/projectile/caseless
@@ -1240,7 +1236,6 @@
 	bolt_name="slide"
 	bolt_release = "slide release"
 	auto_loading_type = CLOSED_BOLT | LOCK_OPEN_EMPTY
-	icon = 'icons/obj/gun_ch.dmi'
 	icon_state = "m1911"
 
 /obj/item/gun/projectile/colt/Initialize(mapload)
@@ -1466,14 +1461,12 @@
 	slot_flags |= (SLOT_BELT|SLOT_HOLSTER) //but you can wear it on your belt (poorly concealed under a trenchcoat, ideally) - or in a holster, why not.
 	name = "sawn-off shotgun"
 	desc += " The barrel seems to be crudely sawn in half."
-	icon = 'icons/obj/gun_ch.dmi'
 	icon_state = "sawnshotgun[shotgun_variant]"
 	icon_expected_width = 32
 	update_icon()
 	update_transform()
 
 /obj/item/gun/projectile/shotgun/doublebarrel/sawn //Default sawn shotgun needs it's old icon path back
-	icon = 'icons/obj/gun.dmi'
 
 /obj/item/gun/projectile/shotgun/doublebarrel/Initialize(mapload)
 	. = ..()

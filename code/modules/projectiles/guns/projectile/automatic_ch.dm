@@ -16,7 +16,6 @@
 	desc = "The P90K Personal Defense Weapon is a MarsTech-assembled modernized variation of the ancient FN P90, a compact, high-capacity submachine gun of human origin. Its fierce reputation owes to its minimal recoil and ergonomic design. Chambered in 9mm rounds."
 	description_fluff = "The leading civilian-sector high-quality small arms subsidiary of Hephaestus Industries, MarsTech has been the provider of choice for law enforcement and security forces for over 300 years."
 
-	icon = 'icons/obj/gun_ch.dmi'
 	item_icons = list(
 		slot_l_hand_str = 'icons/mob/items/lefthand_guns_ch.dmi',
 		slot_r_hand_str = 'icons/mob/items/righthand_guns_ch.dmi',
@@ -103,7 +102,6 @@
 /obj/item/gun/projectile/automatic/fal
 	name = "FN-FAL"
 	desc = "A 20th century Assault Rifle originally designed by Fabrique National. Famous for its use by mercs in grinding proxy wars in backwater nations. This reproduction was probably made for similar purposes."
-	icon = 'icons/obj/gun_ch.dmi'
 	icon_state = "fal"
 	item_state = "fal"
 	w_class = ITEMSIZE_LARGE
