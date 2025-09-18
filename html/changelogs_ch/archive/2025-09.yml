@@ -314,3 +314,18 @@
       hands. Now station-bound entities can gamble and even be dealers!
   - qol: Service borgs now use an input list for their rapid fabricator, as well as
       cleaning up a lot of needless RSF log spam by replacing them with balloon alerts.
+2025-09-18:
+  CHOMPStation2StaffMirrorBot:
+  - refactor: Got rid of /datum/modifier/fire and converted fully to /datum/status_effect.
+  - rscadd: When you're on fire, you have some nice smoky firey particles come off
+      you.
+  - rscadd: You can now get wet, which inhibits fire and gives you pretty drippy particles.
+  - rscadd: You can now spread fire if you're on fire and you bump into another mob.
+  - rscadd: Added an extra bartender slot on request.
+  - admin: fix runtime viewer not working
+  - bugfix: a bunch of logging runtimes
+  - bugfix: lost drone law updates sometimes failing
+  Cameron-The-Raven:
+  - bugfix: Splashing a player with select reagents will no longer turn them into
+      a tile
+  - bugfix: Fire extinguishers now put out players again
