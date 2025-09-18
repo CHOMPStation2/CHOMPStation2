@@ -1,3 +1,5 @@
+GLOBAL_VAR_INIT(Recycled_Items, 0)
+
 /obj/machinery/v_garbosystem
 	icon = 'modular_chomp/icons/obj/machines/other.dmi'
 	icon_state = "cronchy_off"
@@ -37,9 +39,9 @@
 
 /obj/machinery/v_garbosystem/examine(mob/user, infix, suffix)
 	. = ..()
-	. += "The internal fluid tank reads: [reagents.total_volume]/[reagents.maximum_volume]"
+	. += span_infoplain("The internal fluid tank reads: [reagents.total_volume]/[reagents.maximum_volume]")
 	if(contents.len)
-		. += "There are items in the filter's trap!"
+		. += span_warning("There are items in the filter's trap!")
 
 /obj/machinery/v_garbosystem/attack_hand(mob/living/user as mob)
 	operating = !operating
@@ -149,12 +151,12 @@
 /obj/machinery/v_garbosystem/attackby(obj/item/W as obj, mob/user as mob)
 	if(W.is_crowbar())
 		if(!operating)
-			to_chat(user, "You crowbar the filter hatch open, releasing the items trapped within.")
+			to_chat(user, span_notice("You crowbar the filter hatch open, releasing the items trapped within."))
 			for(var/atom/movable/A in contents)
 				A.forceMove(loc)
 			return
 		else
-			to_chat(user, "Unable to empty filter while the machine is running.")
+			to_chat(user, span_warning("Unable to empty filter while the machine is running."))
 	return ..()
 
 /obj/machinery/v_garbosystem/proc/transfer_reagent_to_tank(var/datum/reagents/reg,var/multiplier)
@@ -190,6 +192,7 @@
 		reagents.add_reagent(REAGENT_ID_TOXIN, amt)
 		visible_message("\The [src] gurgles.")
 
+
 /obj/machinery/button/garbosystem
 	name = "garbage grinder switch"
 	desc = "A power button for the big grinder."
@@ -200,5 +203,3 @@
 /obj/machinery/button/garbosystem/attack_hand(mob/living/user as mob)
 	if(grinder)
 		return grinder.attack_hand(user)
-
-GLOBAL_VAR_INIT(Recycled_Items, 0)
