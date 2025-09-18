@@ -2,7 +2,6 @@
 /obj/item/gun/energy/imperial
 	name = "imperial energy pistol"
 	desc = "An elegant weapon developed by the Imperium Auream. Their weaponsmiths have cleverly found a way to make a gun that is only about the size of an average energy pistol, yet with the fire power of a laser carbine."
-	icon_override = 'icons/obj/gun_vr.dmi'
 	icon_state = "ge_pistol"
 	item_state = "ge_pistol"
 	slot_flags = SLOT_BELT
