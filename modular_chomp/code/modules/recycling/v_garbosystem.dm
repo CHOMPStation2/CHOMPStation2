@@ -1,3 +1,5 @@
+GLOBAL_VAR_INIT(Recycled_Items, 0)
+
 /obj/machinery/v_garbosystem
 	icon = 'modular_chomp/icons/obj/machines/other.dmi'
 	icon_state = "cronchy_off"
@@ -16,6 +18,8 @@
 
 /obj/machinery/v_garbosystem/Initialize(mapload)
 	. = ..()
+	create_reagents(CARGOTANKER_VOLUME * 2)
+	AddComponent(/datum/component/hose_connector/output)
 	for(var/dir in GLOB.cardinal)
 		src.crusher = locate(/obj/machinery/recycling/crusher, get_step(src, dir))
 		if(src.crusher)
@@ -27,6 +31,17 @@
 			button.grinder = src
 			break
 	return
+
+/obj/machinery/v_garbosystem/Destroy()
+	crusher = null
+	button = null
+	. = ..()
+
+/obj/machinery/v_garbosystem/examine(mob/user, infix, suffix)
+	. = ..()
+	. += span_infoplain("The internal fluid tank reads: [reagents.total_volume]/[reagents.maximum_volume]")
+	if(contents.len)
+		. += span_warning("There are items in the filter's trap!")
 
 /obj/machinery/v_garbosystem/attack_hand(mob/living/user as mob)
 	operating = !operating
@@ -81,8 +96,22 @@
 							break
 						if(L.stat == DEAD)
 							playsound(src, 'sound/effects/splat.ogg', 50, 1)
+							if(L.meat_amount && L.meat_type) // Get all the goobs outta this goober
+								while(L.meat_amount > 0)
+									var/obj/item/meat = new L.meat_type(src)
+									if(meat.reagents) // Reagents are set on init, might be randomized per meat chunk too so it needs to be done on a per case basis
+										transfer_reagent_to_tank(meat.reagents,1)
+									qdel(meat)
+									L.meat_amount--
 							L.gib()
 							items_taken++
+							if(ishuman(L))
+								// Splorch
+								var/mob/living/carbon/human/H = L
+								transfer_reagent_to_tank(H.bloodstr,1)
+								transfer_reagent_to_tank(H.ingested,1)
+								transfer_reagent_to_tank(H.vessel,0.5)
+							transfer_sludge_to_tank(rand(4,9))
 						else
 							L.adjustBruteLoss(25)
 							items_taken++
@@ -95,6 +124,10 @@
 						A.SpinAnimation(5,3)
 						spawn(15)
 							if(A.loc == loc)
+								if(A.reagents)
+									transfer_reagent_to_tank(A.reagents,1)
+								if(istype(A,/obj/item/ore))
+									transfer_ore_to_tank(A,1)
 								A.forceMove(src)
 								if(!is_type_in_list(A, GLOB.item_digestion_blacklist))
 									crusher.take_item(A) //Force feed the poor bastard.
@@ -104,6 +137,8 @@
 						spawn(15)
 							if(A)
 								A.forceMove(src)
+								if(A.reagents)
+									transfer_reagent_to_tank(A.reagents,1)
 								if(istype(A, /obj/structure/closet))
 									new /obj/item/stack/material/steel(loc, 2)
 								qdel(A)
@@ -123,13 +158,37 @@
 /obj/machinery/v_garbosystem/attackby(obj/item/W as obj, mob/user as mob)
 	if(W.is_crowbar())
 		if(!operating)
-			to_chat(user, "You crowbar the filter hatch open, releasing the items trapped within.")
+			to_chat(user, span_notice("You crowbar the filter hatch open, releasing the items trapped within."))
 			for(var/atom/movable/A in contents)
 				A.forceMove(loc)
 			return
 		else
-			to_chat(user, "Unable to empty filter while the machine is running.")
+			to_chat(user, span_warning("Unable to empty filter while the machine is running."))
 	return ..()
+
+/obj/machinery/v_garbosystem/proc/transfer_reagent_to_tank(var/datum/reagents/reg,var/multiplier)
+	var/volume_magic = reg.total_volume * multiplier
+	volume_magic -= rand(2,10) // reagent tax
+	if(volume_magic > 0)
+		reg.trans_to_holder( reagents, volume_magic)
+		transfer_sludge_to_tank(rand(1,5))
+
+/obj/machinery/v_garbosystem/proc/transfer_ore_to_tank(var/obj/item/ore/R,var/multiplier)
+	if(GLOB.ore_reagents[R.type])
+		var/list/ore_components = GLOB.ore_reagents[R.type]
+		if(islist(ore_components))
+			var/amount_to_take = (REAGENTS_PER_ORE/(ore_components.len))
+			for(var/i in ore_components)
+				reagents.add_reagent(i, amount_to_take * multiplier)
+		else
+			reagents.add_reagent(ore_components, REAGENTS_PER_ORE * multiplier)
+		transfer_sludge_to_tank(rand(1,5))
+
+/obj/machinery/v_garbosystem/proc/transfer_sludge_to_tank(var/amt)
+	if(prob(10) || amt >= 5)
+		reagents.add_reagent(REAGENT_ID_TOXIN, amt)
+		visible_message("\The [src] gurgles.")
+
 
 /obj/machinery/button/garbosystem
 	name = "garbage grinder switch"
@@ -141,5 +200,3 @@
 /obj/machinery/button/garbosystem/attack_hand(mob/living/user as mob)
 	if(grinder)
 		return grinder.attack_hand(user)
-
-GLOBAL_VAR_INIT(Recycled_Items, 0)
