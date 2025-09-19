@@ -27,6 +27,7 @@
 /obj/item/toy/plushie/dragon/customizable
 	name = "custom dragon plushie"
 	icon_state = "blankdurg"
+	icon = 'icons/obj/toy_ch.dmi'
 
 	var/base = "blankdurg"
 	var/underbelly = "blankdurg2"
