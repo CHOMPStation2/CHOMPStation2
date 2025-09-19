@@ -19,6 +19,96 @@
 	},
 /turf/simulated/shuttle/floor/alien/blue,
 /area/submap/XenoWeaveMajor)
+"ae" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 9
+	},
+/obj/effect/floor_decal/techfloor/orange/corner{
+	dir = 1
+	},
+/obj/effect/floor_decal/techfloor/orange{
+	dir = 6
+	},
+/obj/structure/foamedmetal,
+/turf/simulated/shuttle/floor/alienplating/blue,
+/area/submap/XenoWeaveMajor)
+"af" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 5
+	},
+/obj/effect/floor_decal/techfloor/orange/corner{
+	dir = 4
+	},
+/obj/effect/floor_decal/techfloor/orange{
+	dir = 10
+	},
+/obj/structure/foamedmetal,
+/turf/simulated/shuttle/floor/alienplating/blue,
+/area/submap/XenoWeaveMajor)
+"ag" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 9
+	},
+/obj/effect/floor_decal/techfloor/orange/corner{
+	dir = 1
+	},
+/obj/effect/floor_decal/techfloor/orange{
+	dir = 6
+	},
+/mob/living/simple_mob/mechanical/hivebot/nanoevent/pink,
+/turf/simulated/shuttle/floor/alienplating/blue,
+/area/submap/XenoWeaveMajor)
+"ah" = (
+/obj/effect/floor_decal/techfloor/orange{
+	dir = 4
+	},
+/obj/effect/floor_decal/techfloor/orange{
+	dir = 8
+	},
+/obj/structure/foamedmetal,
+/turf/simulated/shuttle/floor/alienplating/blue,
+/area/submap/XenoWeaveMajor)
+"ai" = (
+/obj/structure/foamedmetal,
+/turf/simulated/shuttle/floor/alien/blue,
+/area/submap/XenoWeaveMajor)
+"aj" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 5
+	},
+/obj/effect/floor_decal/techfloor/orange{
+	dir = 10
+	},
+/obj/effect/floor_decal/techfloor/orange/corner{
+	dir = 4
+	},
+/obj/structure/foamedmetal,
+/turf/simulated/shuttle/floor/alienplating/blue,
+/area/submap/XenoWeaveMajor)
+"ak" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 6
+	},
+/obj/effect/floor_decal/techfloor/orange/corner,
+/obj/effect/floor_decal/techfloor/orange{
+	dir = 9
+	},
+/obj/structure/foamedmetal,
+/turf/simulated/shuttle/floor/alienplating/blue,
+/area/submap/XenoWeaveMajor)
+"al" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 10
+	},
+/obj/effect/floor_decal/techfloor/orange/corner{
+	dir = 8
+	},
+/obj/effect/floor_decal/techfloor/orange{
+	dir = 5
+	},
+/obj/structure/foamedmetal,
+/turf/simulated/shuttle/floor/alienplating/blue,
+/area/submap/XenoWeaveMajor)
 "an" = (
 /mob/living/simple_mob/mechanical/mecha/eclipse/hivebot/nanoweavetower,
 /turf/simulated/shuttle/floor/alien/blue,
@@ -741,7 +831,7 @@ TP
 wC
 wC
 hg
-mJ
+ag
 Wj
 Wj
 Wj
@@ -885,9 +975,9 @@ wC
 wC
 wC
 wC
-XE
-mJ
-ed
+ak
+ae
+ai
 KM
 jV
 wC
@@ -937,8 +1027,8 @@ wC
 TR
 jb
 jb
-jb
-mJ
+ah
+ae
 wC
 wC
 dE
@@ -1917,8 +2007,8 @@ wC
 XE
 jb
 jb
-jb
-UV
+ah
+af
 wC
 wC
 dE
@@ -1963,9 +2053,9 @@ wC
 wC
 wC
 wC
-TR
-cB
-Wj
+al
+aj
+ai
 Wj
 dE
 wC

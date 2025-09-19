@@ -611,14 +611,22 @@
 
 /mob/living/simple_mob/mechanical/mecha/eclipse/tankyboss/chambera //poison boss
 	name = "experiment 20"
-	specialattackprojectile = /obj/item/projectile/energy/eclipse/poisonwind
 	icon_state = "poison_boss"
 	icon_living = "poison_boss"
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/tankyboss/chambera/apply_melee_effects(var/atom/A)
-	if(isliving(A))
-		var/mob/living/L = A
-		L.add_modifier(/datum/modifier/poisoned, 120 SECONDS)
+/mob/living/simple_mob/mechanical/mecha/eclipse/tankyboss/chamberc/bullet_act(obj/item/projectile/P)
+	if(istype(P,/obj/item/projectile/beam) || istype(P, /obj/item/projectile/energy))
+		nutrition += 5
+		if(size_multiplier > 1.95)
+			visible_message(span_boldwarning(span_orange("[P] heals the beast!.")))
+			adjustBruteLoss(-nutrition)
+			adjustFireLoss(-nutrition)
+			nutrition -= 5
+		else
+			size_multiplier += 0.05
+			..()
+	else
+		..()
 
 /mob/living/simple_mob/mechanical/mecha/eclipse/tankyboss/chambera/do_special_attack(atom/A)
 	var/rng_cycle = rand(1,6)
