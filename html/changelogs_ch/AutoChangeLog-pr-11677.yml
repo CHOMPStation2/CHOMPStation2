@@ -1,4 +1,0 @@
-author: "Will"
-delete-after: True
-changes:
-  - code_imp: "Ice and snow no longer runtime if demoted to baseturf during an explosion combined with a delayed action"

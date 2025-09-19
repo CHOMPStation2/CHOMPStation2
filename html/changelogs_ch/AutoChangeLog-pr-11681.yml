@@ -1,5 +1,0 @@
-author: "Will"
-delete-after: True
-changes:
-  - rscadd: "Garbage grinder can now grind reagents into a storage tank"
-  - bugfix: "Garbage grinder harddels"

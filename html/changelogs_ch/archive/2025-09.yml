@@ -329,3 +329,52 @@
   - bugfix: Splashing a player with select reagents will no longer turn them into
       a tile
   - bugfix: Fire extinguishers now put out players again
+2025-09-19:
+  CHOMPStation2StaffMirrorBot:
+  - rscadd: Added a general command uniform selector for all department heads.
+  - code_imp: Disposal sorter prefabs use defines instead of numbers
+  - rscadd: Added the coroner role as an alternative title to medical doctors
+  Diana:
+  - image: Updates Captains Laser, Energygun, Nagant, Makarov, Secgun, and stunrevolver
+      sprites
+  - code_imp: Removes unused lines of code where icon = gun.dmi was redefined
+  - image: Splits the _mob and icon files for fluff items into two files
+  - bugfix: Fixes a few broken fluff sprites
+  Guti:
+  - bugfix: fixed bluespace and chief engineer's belt not being able to hold onto
+      atmos combi-fans
+  Ryumi:
+  - rscadd: ALL cyborgs now start with a random number generator that lets them roll
+      virtual dice.
+  - balance: Misc. borg grippers can now hold card hands and fake casino chips.
+  - balance: Service borg grippers can now hold real casino chips.
+  - code_imp: Alphabetically sorted the hanner and lleil beast form lists.
+  Will:
+  - bugfix: Restored missing spellbook icon
+  - rscadd: Garbage grinder can now grind reagents into a storage tank
+  - bugfix: Garbage grinder harddels
+  - qol: Items can now be placed on casino tables with click precision, like normal
+      tables.
+  - rscadd: Catwalks mapped over maglev tracks will act as a bridge
+  - bugfix: Phased shadekin can no longer touch maglev tracks and get shocked
+  - bugfix: Cigar cases no longer violate spatial limitations by starting with 5 cigars
+      instead of 7 in a case that only holds 5
+  - bugfix: Santabag is now actually a bag
+  - code_imp: Allows mappers to place deployed mechanical traps properly
+  - code_imp: Ice and snow no longer runtime if demoted to baseturf during an explosion
+      combined with a delayed action
+  - bugfix: Flying and hovering properly checked when avoiding landmines
+  - bugfix: Phased shadekin no longer set off landmines
+  - bugfix: Vehicles set off landmines
+  - balance: Tiny mobs like mice no longer set off landmines
+  - qol: Medical body scanner now shows if a subject is experiencing withdrawal symptoms.
+  - refactor: transit tubes use forceMove() instead of directly setting loc
+  - code_imp: Adds atom disposal flushed signal, sent from items when they are flushed
+      into the disposal network
+  - bugfix: Medical kiosk can no longer do mind and body record scans in VR
+  - bugfix: Tracking implant fizzling no longer broken
+  - bugfix: Slugs can no longer apply slime to a turf already covered in their slime
+  - bugfix: Cortical borers cannot prod things adjacent to their host, while inside
+      of their host.
+  - bugfix: Prevents nonfunctioning malignant organ types from spawning as xenoarch
+      finds
