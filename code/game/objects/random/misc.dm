@@ -781,6 +781,7 @@
 							/obj/item/toy/plushie/borgplushie/drake/eng,
 							/obj/item/toy/plushie/borgplushie/drake/mine,
 							/obj/item/toy/plushie/borgplushie/drake/trauma)),
+<<<<<<< HEAD
 				//VOREStation Add End
 				//YawnWider Add Start
 				/obj/item/toy/plushie/teshari/_yw,
@@ -799,6 +800,15 @@
 				/obj/item/toy/plushie/teppi,
 				/obj/item/toy/plushie/teppi/alt)
 				//CHOMPStation Add End
+=======
+				pick(list(/obj/item/toy/plushie/dragon,
+							/obj/item/toy/plushie/dragon/green,
+							/obj/item/toy/plushie/dragon/purple,
+							/obj/item/toy/plushie/dragon/red_east,
+							/obj/item/toy/plushie/dragon/green_east,
+							/obj/item/toy/plushie/dragon/white_east,
+							/obj/item/toy/plushie/dragon/gold_east)))
+>>>>>>> aef1333726 (Dragon Plushie Upport (#18523))
 
 /obj/random/plushielarge
 	name = "random large plushie"
