@@ -1,0 +1,4 @@
+author: "Will"
+delete-after: True
+changes:
+  - bugfix: "Cigar cases no longer violate spatial limitations by starting with 5 cigars instead of 7 in a case that only holds 5"
