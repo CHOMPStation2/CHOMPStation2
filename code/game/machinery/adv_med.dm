@@ -623,15 +623,12 @@
 			dat += span_red("Cataracts detected.") + "<BR>"
 		if(occupant.disabilities & NEARSIGHTED)
 			dat += span_red("Retinal misalignment detected.") + "<BR>"
-<<<<<<< HEAD
 		//CHOMPedit begin - malignant organs
 		if(hasMalignants != "")
 			dat += span_red("Unknown anatomy detected!") + "<BR>[hasMalignants]"
 		//CHOMPedit end
-=======
 		if(has_withdrawl != "")
 			dat += span_red("Experiencing withdrawal symptoms!") + "<BR>[has_withdrawl]"
->>>>>>> 280229b234 (Addiction Withdrawal Shown On Body Scanners (#18531))
 		if(HUSK in occupant.mutations) // VOREstation edit
 			dat += span_red("Anatomical structure lost, resuscitation not possible!") + "<BR>"
 	else
