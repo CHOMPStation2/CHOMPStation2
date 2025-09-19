@@ -1,0 +1,5 @@
+author: "Will"
+delete-after: True
+changes:
+  - balance: "Greatly reduced the chance of engineered organs degrading"
+  - refactor: "Malignant organ code, some basic cleanup"
