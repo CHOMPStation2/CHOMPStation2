@@ -68,20 +68,11 @@
 						/obj/item/toy/plushie/otter,
 						/obj/item/toy/plushie/shark,
 						/obj/item/toy/plushie/tinytin,
-<<<<<<< HEAD
 						/obj/item/toy/plushie/tinytin_sec
 						//CHOMPStation Add Start
-						/obj/item/toy/plushie/dragon,
-						/obj/item/toy/plushie/dragon/green,
-						/obj/item/toy/plushie/dragon/purple,
-						/obj/item/toy/plushie/dragon/white_east,
-						/obj/item/toy/plushie/dragon/red_east,
-						/obj/item/toy/plushie/dragon/green_east,
-						/obj/item/toy/plushie/dragon/gold_east,
 						/obj/item/toy/plushie/teppi,
-						/obj/item/toy/plushie/teppi/alt
-						)//CHOMPStation Add End
-=======
+						/obj/item/toy/plushie/teppi/alt,
+						//CHOMPStation Add End
 						/obj/item/toy/plushie/tinytin_sec,
 						/obj/item/toy/plushie/dragon,
 						/obj/item/toy/plushie/dragon/green,
@@ -91,7 +82,6 @@
 						/obj/item/toy/plushie/dragon/white_east,
 						/obj/item/toy/plushie/dragon/gold_east
 						)
->>>>>>> aef1333726 (Dragon Plushie Upport (#18523))
 
 /obj/machinery/clawmachine/update_icon()
 	cut_overlays()
