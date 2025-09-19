@@ -1,0 +1,4 @@
+author: "VictorZisthus"
+delete-after: True
+changes:
+  - bugfix: "Fixes missing Air Alarm in Botany"
