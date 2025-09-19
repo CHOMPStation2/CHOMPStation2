@@ -51,9 +51,7 @@
 /mob/living/simple_mob/mechanical/mecha/eclipse/hivebot/tyr/do_special_attack(atom/A)
 	. = TRUE // So we don't fire a bolt as well.
 	if(attackcycle == 1)
-		say("Prepare. Area. Cleanse. Radiation.")
-		specialattackprojectile = /obj/item/projectile/beam/gamma
-		addtimer(CALLBACK(src, PROC_REF(giant_burst), A, 2), 6 SECONDS, TIMER_DELETE_ME)
+		addtimer(CALLBACK(src, PROC_REF(bomb_lines), A, 2), 2 SECONDS, TIMER_DELETE_ME)
 		attackcycle = 0
 	else if(attackcycle == 2)
 		specialattackprojectile = /obj/item/projectile/energy/spikeenergy_ball/boss
