@@ -136,6 +136,7 @@
 	name = "rounded chair"
 	desc = "It's a rounded chair. It looks comfy."
 	icon_state = "roundedchair"
+	icon = 'icons/obj/furniture.dmi' //CHOMP Edit - These need to be base dmi, chomp's does not have them.
 	base_icon = "roundedchair"
 
 /obj/structure/bed/chair/comfy/rounded/brown/Initialize(mapload, var/new_material, var/new_padding_material)
@@ -315,6 +316,7 @@
 	desc = "If they want you to go to church, why do they make these so uncomfortable?"
 	base_icon = "pewmiddle"
 	icon_state = "pewmiddle"
+	icon = 'icons/obj/furniture.dmi' //CHOMP Edit - These need to be base dmi, chomp's does not have them.
 	applies_material_colour = FALSE
 
 /obj/structure/bed/chair/sofa/pew/left
@@ -331,6 +333,7 @@
 	desc = "Almost as comfortable as waiting at a bus station for hours on end."
 	base_icon = "benchmiddle"
 	icon_state = "benchmiddle"
+	icon = 'icons/obj/furniture.dmi' //CHOMP Edit - These need to be base dmi, chomp's does not have them.
 	applies_material_colour = FALSE
 	color = null
 	var/padding_color = "#CC0000"
@@ -368,6 +371,7 @@
 	desc = "How corporate!"
 	base_icon = "corp_sofamiddle"
 	icon_state = "corp_sofamiddle"
+	icon = 'icons/obj/furniture.dmi' //CHOMP Edit - These need to be base dmi, chomp's does not have them.
 	applies_material_colour = FALSE
 
 /obj/structure/bed/chair/sofa/corp/left
