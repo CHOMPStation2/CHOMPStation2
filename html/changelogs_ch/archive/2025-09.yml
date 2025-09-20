@@ -378,3 +378,19 @@
       of their host.
   - bugfix: Prevents nonfunctioning malignant organ types from spawning as xenoarch
       finds
+2025-09-20:
+  CHOMPStation2StaffMirrorBot:
+  - qol: moves most law outputs to blocks
+  - rscadd: Dragon plushies!
+  FluffMedic:
+  - rscadd: Mhydro Ant, only spawnable via Queen Ant
+  - qol: Some Tyr Bosses made more forgiving
+  Guti:
+  - admin: Added admin logs to bear traps
+  VictorZisthus:
+  - bugfix: Fixes missing Air Alarm in Botany
+  Will:
+  - balance: Greatly reduced the chance of engineered organs degrading
+  - refactor: Malignant organ code, some basic cleanup
+  - bugfix: Changeling chameleon cloths no longer reveal lings by having suit sensors
+  - code_imp: clothing code uses suit_sensor defines instead of magic numbers
