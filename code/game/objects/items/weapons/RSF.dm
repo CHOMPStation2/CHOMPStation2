@@ -66,10 +66,6 @@ GLOBAL_LIST_INIT(robot_glass_options, list(
 		glasstype_name = glass_choice
 
 /obj/item/rsf/attack_self(mob/user as mob)
-<<<<<<< HEAD
-	var/options = list("card deck", "card deck (big)", "casino chips (replica) x200", "cigarette", "container", "dice pack (d6)", "dice pack (gaming)", "paper", "pen", "pint glass") // CHOMPEdit
-	var/choice = tgui_input_list(user, "Please choose what item you would like to synthesize.", "Rapid Service Fabricator", options, mode)
-=======
 	var/options = list(
 		"card deck" = image(icon = 'icons/obj/playing_cards.dmi', icon_state = "deck"),
 		"card deck (big)" = image(icon = 'icons/obj/playing_cards.dmi', icon_state = "deck"),
@@ -81,7 +77,6 @@ GLOBAL_LIST_INIT(robot_glass_options, list(
 		"paper" = image(icon = 'icons/obj/bureaucracy.dmi', icon_state = "paper"),
 		"pen" = image(icon = 'icons/obj/bureaucracy.dmi', icon_state = "pen"))
 	var/choice = show_radial_menu(user, user, options, radius = 40)
->>>>>>> 2e754edfb0 (Gives the borg service fabricator all radial menus (#18538))
 	if(choice)
 		mode = choice
 		playsound(src, 'sound/effects/pop.ogg', 50, 0)
@@ -135,11 +130,6 @@ GLOBAL_LIST_INIT(robot_glass_options, list(
 		if("pen")
 			product = new /obj/item/pen()
 			used_energy = 50
-		// CHOMPAdd Start
-		if("pint glass")
-			product = new /obj/item/reagent_containers/food/drinks/metaglass/metapint()
-			used_energy = 50
-		// CHOMPAdd End
 
 	balloon_alert(user, "dispensing [product ? product : "product"]...")
 	product.loc = get_turf(A)
