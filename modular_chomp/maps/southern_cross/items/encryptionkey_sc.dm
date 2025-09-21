@@ -6,7 +6,7 @@
 /obj/item/encryptionkey/explorer
 	name = "explorer radio encryption key"
 	icon_state = "com_cypherkey"
-	channels = list(CHANNEL_EXPLORATION = 1) // CHOMPEdit
+	channels = list(CHANNEL_EXPLORATION = 1)
 
 /obj/item/encryptionkey/sar
 	name = "sar's encryption key"
