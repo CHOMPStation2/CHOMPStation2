@@ -5934,10 +5934,6 @@
 "eSd" = (
 /turf/simulated/floor/plating,
 /area/vr/powered/space/mechfactory)
-"eSS" = (
-/atom/movable/alert/highpressure,
-/turf/space,
-/area/vr/space)
 "eTl" = (
 /obj/structure/bed/chair/sofa/right/brown{
 	dir = 1
@@ -17852,10 +17848,6 @@
 /obj/item/material/knife/butch,
 /turf/simulated/floor/wood/alt,
 /area/vr/powered/mall)
-"oDB" = (
-/atom/movable/alert/highpressure,
-/turf/simulated/shuttle/wall,
-/area/vr/powered/space/whiteship)
 "oDG" = (
 /obj/random/maintenance/engineering,
 /obj/structure/bed/chair{
@@ -20406,10 +20398,6 @@
 	temperature = 293.15
 	},
 /area/vr/outdoors/powered/lava)
-"qCn" = (
-/atom/movable/alert/highpressure,
-/turf/simulated/shuttle/wall/hard_corner,
-/area/vr/powered/space/whiteship)
 "qCt" = (
 /turf/simulated/floor/cult{
 	icon_state = "cult-narsie"
@@ -26164,7 +26152,6 @@
 	},
 /area/vr/powered/dungeon)
 "vBj" = (
-/atom/movable/alert/highpressure,
 /obj/structure/bed/chair/comfy/black{
 	dir = 8
 	},
@@ -79646,14 +79633,14 @@ ipY
 ipY
 ipY
 ipY
-eSS
-oDB
+ipY
+lze
 owa
 owa
 owa
-oDB
-eSS
-eSS
+lze
+ipY
+ipY
 ipY
 ipY
 ipY
@@ -79905,14 +79892,14 @@ ipY
 ipY
 lze
 owa
-qCn
+uKg
 vBj
 vBj
 vBj
-qCn
+uKg
 owa
-oDB
-eSS
+lze
+ipY
 ipY
 ipY
 ipY
@@ -80170,7 +80157,7 @@ iYS
 mKx
 xiz
 lze
-eSS
+ipY
 ipY
 ipY
 ipY

@@ -1127,7 +1127,6 @@
 /turf/simulated/floor/plating,
 /area/space)
 "aRk" = (
-/atom/movable/alert/highpressure,
 /obj/machinery/r_n_d/destructive_analyzer,
 /turf/simulated/shuttle/floor/purple,
 /area/space)
@@ -6864,10 +6863,6 @@
 /obj/structure/bed/chair/comfy/black,
 /turf/simulated/floor/carpet/bcarpet,
 /area/space)
-"eKu" = (
-/atom/movable/alert/highpressure,
-/turf/simulated/shuttle/wall/hard_corner,
-/area/space)
 "eKV" = (
 /obj/structure/extinguisher_cabinet{
 	pixel_y = 30
@@ -9826,7 +9821,6 @@
 /turf/simulated/shuttle/floor/yellow,
 /area/space)
 "gPK" = (
-/atom/movable/alert/highpressure,
 /obj/machinery/computer/rdconsole/core{
 	dir = 4
 	},
@@ -14536,7 +14530,6 @@
 /area/space)
 "jWp" = (
 /obj/machinery/r_n_d/protolathe,
-/atom/movable/alert/highpressure,
 /turf/simulated/shuttle/floor/purple,
 /area/space)
 "jWW" = (
@@ -24838,10 +24831,6 @@
 /obj/item/storage/box/flare,
 /turf/simulated/shuttle/floor/voidcraft/light,
 /area/space)
-"qGy" = (
-/atom/movable/alert/highpressure,
-/turf/simulated/shuttle/wall,
-/area/space)
 "qGE" = (
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/shuttle/wall/voidcraft/green,
@@ -30423,10 +30412,6 @@
 /obj/structure/artilleryplaceholder{
 	icon_state = "19"
 	},
-/turf/template_noop,
-/area/space)
-"uiZ" = (
-/atom/movable/alert/highpressure,
 /turf/template_noop,
 /area/space)
 "ujr" = (
@@ -61547,14 +61532,14 @@ nwG
 nwG
 nwG
 nwG
-uiZ
-qGy
+nwG
+git
 pmh
 pmh
 pmh
-qGy
-uiZ
-uiZ
+git
+nwG
+nwG
 nwG
 nwG
 nwG
@@ -61806,14 +61791,14 @@ nwG
 nwG
 git
 pmh
-eKu
+dTV
 jWp
 aRk
 gPK
-eKu
+dTV
 pmh
-qGy
-uiZ
+git
+nwG
 nwG
 nwG
 nwG
@@ -62071,7 +62056,7 @@ gfe
 sof
 lYv
 git
-uiZ
+nwG
 nwG
 nwG
 nwG

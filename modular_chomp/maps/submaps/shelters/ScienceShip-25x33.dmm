@@ -154,10 +154,6 @@
 /obj/structure/shuttle/engine/router,
 /turf/simulated/shuttle/wall,
 /area/survivalpod/superpose/ScienceShip)
-"fg" = (
-/atom/movable/alert/highpressure,
-/turf/simulated/shuttle/wall,
-/area/survivalpod/superpose/ScienceShip)
 "fs" = (
 /obj/machinery/door/airlock/maintenance/common,
 /obj/machinery/atmospherics/pipe/simple/hidden{
@@ -993,7 +989,6 @@
 /turf/simulated/shuttle/plating,
 /area/survivalpod/superpose/ScienceShip)
 "Cz" = (
-/atom/movable/alert/highpressure,
 /obj/machinery/rnd/production/protolathe/department/science,
 /turf/simulated/shuttle/floor/purple,
 /area/survivalpod/superpose/ScienceShip)
@@ -1017,10 +1012,6 @@
 	dir = 1
 	},
 /turf/simulated/shuttle/plating,
-/area/survivalpod/superpose/ScienceShip)
-"Dp" = (
-/atom/movable/alert/highpressure,
-/turf/simulated/shuttle/wall/hard_corner,
 /area/survivalpod/superpose/ScienceShip)
 "Ds" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
@@ -1461,10 +1452,6 @@
 /obj/random/soap,
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/ScienceShip)
-"Kx" = (
-/atom/movable/alert/highpressure,
-/turf/template_noop,
-/area/template_noop)
 "KD" = (
 /obj/machinery/atmospherics/unary/vent_pump{
 	dir = 1;
@@ -1831,10 +1818,6 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/techmaint,
-/area/survivalpod/superpose/ScienceShip)
-"TF" = (
-/atom/movable/alert/highpressure,
-/turf/simulated/shuttle/floor/purple,
 /area/survivalpod/superpose/ScienceShip)
 "Ug" = (
 /obj/machinery/atmospherics/pipe/simple/hidden,
@@ -2208,14 +2191,14 @@ Eq
 Eq
 Eq
 Eq
-Kx
-fg
+Eq
+oX
 Bn
 Bn
 Bn
-fg
-Kx
-Kx
+oX
+Eq
+Eq
 Eq
 Eq
 Eq
@@ -2244,14 +2227,14 @@ Eq
 Eq
 oX
 Bn
-Dp
-TF
+Ul
+ez
 Cz
-TF
-Dp
+ez
+Ul
 Bn
-fg
-Kx
+oX
+Eq
 Eq
 Eq
 Eq
@@ -2286,7 +2269,7 @@ ez
 JG
 lu
 oX
-Kx
+Eq
 Eq
 Eq
 Eq
