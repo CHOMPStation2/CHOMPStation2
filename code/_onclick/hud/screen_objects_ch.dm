@@ -3,11 +3,11 @@
 //So yeah this is why we now check if it is type of mob first...
 //Is this pretty? Fuck no, but its how i know to fix it -shark
 //Oh also the swap button on simple mob hands has hud set to null so we also need to catch that.
-/obj/screen/inventory/add_overlays()
+/atom/movable/screen/inventory/add_overlays()
 	if(!hud) //Simplemob swap hands button has this set to null :)
 		return
 	var/mob/user
-	if(istype(hud,/mob )) //Simplemob hands directly reference the mob in hud, dont ask me.
+	if(ismob(hud)) //Simplemob hands directly reference the mob in hud, dont ask me.
 		user = hud
 	else
 		user = hud.mymob //original intended behaviour

@@ -304,7 +304,6 @@
 	if(stat != DEAD && toggled_sleeping)
 		Sleeping(2)
 	if(sleeping)
-<<<<<<< HEAD
 		//CHOMPEdit Start
 		if(iscarbon(src))
 			var/mob/living/carbon/C = src
@@ -312,11 +311,7 @@
 		else
 			AdjustSleeping(-1)
 		//CHOMPEdit End
-		throw_alert("asleep", /obj/screen/alert/asleep)
-=======
-		AdjustSleeping(-1)
 		throw_alert("asleep", /atom/movable/screen/alert/asleep)
->>>>>>> 45bd1930ec (obj screen to atom movable screen (#18434))
 	else
 		clear_alert("asleep")
 	return sleeping

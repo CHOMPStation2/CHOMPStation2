@@ -133,18 +133,13 @@ The box in your backpack has an oxygen tank and breath mask in it."
 	desc = "You're not getting enough phoron. Find some good air before you pass out!"
 	icon_state = "not_enough_tox"
 
-<<<<<<< HEAD
-/obj/screen/alert/tox_in_air											// CHOMP EDIT : Oxygen is toxic to phoron breathers and nitrogen breathers. I'm tired of seeing "You're choking on phoron!" when it's not phoron.
-	name = "Choking (Toxic)"										// CHOMP EDIT
-	desc = "There's a dangerous toxin in the air and you're breathing it in. Find some fresh air. \
-Your emergency supply kit should have an air tank and gas mask in it!"						// CHOMP EDIT
-=======
+// CHOMPEdit Start Oxygen is toxic to phoron breathers and nitrogen breathers. I'm tired of seeing "You're choking on phoron!" when it's not phoron.
 /atom/movable/screen/alert/tox_in_air
-	name = "Choking (Phoron)"
-	desc = "There's highly flammable, toxic phoron in the air and you're breathing it in. Find some fresh air. \
-The box in your backpack has an oxygen tank and gas mask in it."
->>>>>>> 45bd1930ec (obj screen to atom movable screen (#18434))
+	name = "Choking (Toxic)"
+	desc = "There's a dangerous toxin in the air and you're breathing it in. Find some fresh air. \
+Your emergency supply kit should have an air tank and gas mask in it!"
 	icon_state = "too_much_tox"
+// CHOMPEdit End
 
 /atom/movable/screen/alert/not_enough_fuel
 	name = "Choking (No Volatile fuel)"
