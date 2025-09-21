@@ -5935,7 +5935,7 @@
 /turf/simulated/floor/plating,
 /area/vr/powered/space/mechfactory)
 "eSS" = (
-/obj/screen/alert/highpressure,
+/atom/movable/alert/highpressure,
 /turf/space,
 /area/vr/space)
 "eTl" = (
@@ -17853,7 +17853,7 @@
 /turf/simulated/floor/wood/alt,
 /area/vr/powered/mall)
 "oDB" = (
-/obj/screen/alert/highpressure,
+/atom/movable/alert/highpressure,
 /turf/simulated/shuttle/wall,
 /area/vr/powered/space/whiteship)
 "oDG" = (
@@ -20407,7 +20407,7 @@
 	},
 /area/vr/outdoors/powered/lava)
 "qCn" = (
-/obj/screen/alert/highpressure,
+/atom/movable/alert/highpressure,
 /turf/simulated/shuttle/wall/hard_corner,
 /area/vr/powered/space/whiteship)
 "qCt" = (
@@ -26164,7 +26164,7 @@
 	},
 /area/vr/powered/dungeon)
 "vBj" = (
-/obj/screen/alert/highpressure,
+/atom/movable/alert/highpressure,
 /obj/structure/bed/chair/comfy/black{
 	dir = 8
 	},

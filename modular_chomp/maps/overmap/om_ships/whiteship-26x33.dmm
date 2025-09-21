@@ -148,7 +148,7 @@
 /turf/simulated/wall/thull,
 /area/shuttle/whiteshipOM2)
 "fg" = (
-/obj/screen/alert/highpressure,
+/atom/movable/alert/highpressure,
 /turf/simulated/wall/thull,
 /area/shuttle/whiteshipOM2)
 "fs" = (
@@ -1465,7 +1465,7 @@
 /turf/simulated/floor/plating,
 /area/shuttle/whiteshipOM2)
 "Kx" = (
-/obj/screen/alert/highpressure,
+/atom/movable/alert/highpressure,
 /turf/template_noop,
 /area/template_noop)
 "KD" = (

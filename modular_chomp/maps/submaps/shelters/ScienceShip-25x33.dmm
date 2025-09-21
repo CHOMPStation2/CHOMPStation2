@@ -155,7 +155,7 @@
 /turf/simulated/shuttle/wall,
 /area/survivalpod/superpose/ScienceShip)
 "fg" = (
-/obj/screen/alert/highpressure,
+/atom/movable/alert/highpressure,
 /turf/simulated/shuttle/wall,
 /area/survivalpod/superpose/ScienceShip)
 "fs" = (
@@ -993,7 +993,7 @@
 /turf/simulated/shuttle/plating,
 /area/survivalpod/superpose/ScienceShip)
 "Cz" = (
-/obj/screen/alert/highpressure,
+/atom/movable/alert/highpressure,
 /obj/machinery/rnd/production/protolathe/department/science,
 /turf/simulated/shuttle/floor/purple,
 /area/survivalpod/superpose/ScienceShip)
@@ -1019,7 +1019,7 @@
 /turf/simulated/shuttle/plating,
 /area/survivalpod/superpose/ScienceShip)
 "Dp" = (
-/obj/screen/alert/highpressure,
+/atom/movable/alert/highpressure,
 /turf/simulated/shuttle/wall/hard_corner,
 /area/survivalpod/superpose/ScienceShip)
 "Ds" = (
@@ -1462,7 +1462,7 @@
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/ScienceShip)
 "Kx" = (
-/obj/screen/alert/highpressure,
+/atom/movable/alert/highpressure,
 /turf/template_noop,
 /area/template_noop)
 "KD" = (
@@ -1833,7 +1833,7 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/survivalpod/superpose/ScienceShip)
 "TF" = (
-/obj/screen/alert/highpressure,
+/atom/movable/alert/highpressure,
 /turf/simulated/shuttle/floor/purple,
 /area/survivalpod/superpose/ScienceShip)
 "Ug" = (

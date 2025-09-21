@@ -1127,7 +1127,7 @@
 /turf/simulated/floor/plating,
 /area/space)
 "aRk" = (
-/obj/screen/alert/highpressure,
+/atom/movable/alert/highpressure,
 /obj/machinery/r_n_d/destructive_analyzer,
 /turf/simulated/shuttle/floor/purple,
 /area/space)
@@ -6865,7 +6865,7 @@
 /turf/simulated/floor/carpet/bcarpet,
 /area/space)
 "eKu" = (
-/obj/screen/alert/highpressure,
+/atom/movable/alert/highpressure,
 /turf/simulated/shuttle/wall/hard_corner,
 /area/space)
 "eKV" = (
@@ -9826,7 +9826,7 @@
 /turf/simulated/shuttle/floor/yellow,
 /area/space)
 "gPK" = (
-/obj/screen/alert/highpressure,
+/atom/movable/alert/highpressure,
 /obj/machinery/computer/rdconsole/core{
 	dir = 4
 	},
@@ -14536,7 +14536,7 @@
 /area/space)
 "jWp" = (
 /obj/machinery/r_n_d/protolathe,
-/obj/screen/alert/highpressure,
+/atom/movable/alert/highpressure,
 /turf/simulated/shuttle/floor/purple,
 /area/space)
 "jWW" = (
@@ -24839,7 +24839,7 @@
 /turf/simulated/shuttle/floor/voidcraft/light,
 /area/space)
 "qGy" = (
-/obj/screen/alert/highpressure,
+/atom/movable/alert/highpressure,
 /turf/simulated/shuttle/wall,
 /area/space)
 "qGE" = (
@@ -30426,7 +30426,7 @@
 /turf/template_noop,
 /area/space)
 "uiZ" = (
-/obj/screen/alert/highpressure,
+/atom/movable/alert/highpressure,
 /turf/template_noop,
 /area/space)
 "ujr" = (

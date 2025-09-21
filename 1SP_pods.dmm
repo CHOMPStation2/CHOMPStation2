@@ -11760,7 +11760,7 @@
 /turf/simulated/shuttle/plating,
 /area/template_noop)
 "irG" = (
-/obj/screen/alert/highpressure,
+/atom/movable/alert/highpressure,
 /obj/machinery/r_n_d/destructive_analyzer,
 /turf/simulated/shuttle/floor/purple,
 /area/survivalpod/superpose/ScienceShip)
@@ -17818,7 +17818,7 @@
 /turf/simulated/floor/outdoors/grass/heavy,
 /area/survivalpod/superpose/LoneHome)
 "mEi" = (
-/obj/screen/alert/highpressure,
+/atom/movable/alert/highpressure,
 /turf/simulated/shuttle/wall/hard_corner,
 /area/survivalpod/superpose/ScienceShip)
 "mEk" = (
@@ -19429,7 +19429,7 @@
 /turf/simulated/floor/outdoors/dirt,
 /area/survivalpod/superpose/Dinner)
 "nMu" = (
-/obj/screen/alert/highpressure,
+/atom/movable/alert/highpressure,
 /obj/machinery/computer/rdconsole/core{
 	dir = 4
 	},
@@ -26052,7 +26052,7 @@
 /turf/simulated/shuttle/floor/voidcraft,
 /area/template_noop)
 "rlL" = (
-/obj/screen/alert/highpressure,
+/atom/movable/alert/highpressure,
 /turf/template_noop,
 /area/template_noop)
 "rmo" = (
@@ -30339,7 +30339,7 @@
 /turf/simulated/mineral/floor/ignore_mapgen,
 /area/survivalpod/superpose/CrashedQurantineShip)
 "uDN" = (
-/obj/screen/alert/highpressure,
+/atom/movable/alert/highpressure,
 /turf/simulated/shuttle/wall,
 /area/survivalpod/superpose/ScienceShip)
 "uDS" = (
@@ -34988,7 +34988,7 @@
 /area/survivalpod/superpose/WoodenCamp)
 "xZI" = (
 /obj/machinery/r_n_d/protolathe,
-/obj/screen/alert/highpressure,
+/atom/movable/alert/highpressure,
 /turf/simulated/shuttle/floor/purple,
 /area/survivalpod/superpose/ScienceShip)
 "yaE" = (
