@@ -1,4 +1,0 @@
-author: "Will"
-delete-after: True
-changes:
-  - bugfix: "Rounded chairs, pews, metal benches, and corporate couch are no longer invisible"

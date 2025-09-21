@@ -394,3 +394,9 @@
   - refactor: Malignant organ code, some basic cleanup
   - bugfix: Changeling chameleon cloths no longer reveal lings by having suit sensors
   - code_imp: clothing code uses suit_sensor defines instead of magic numbers
+2025-09-21:
+  Diana:
+  - bugfix: Borg shocker shows the appropriate on-off state
+  Will:
+  - bugfix: Rounded chairs, pews, metal benches, and corporate couch are no longer
+      invisible
