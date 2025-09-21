@@ -52,7 +52,7 @@
 								/obj/machinery/camera,
 								/obj/belly,
 								/obj/soulgem, // CHOMPAdd
-								/obj/screen,
+								/atom/movable/screen,
 								/atom/movable/emissive_blocker,
 								/obj/item/material,
 								/obj/item/melee,

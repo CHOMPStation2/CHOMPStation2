@@ -1,11 +1,11 @@
-/obj/screen/alert/open_ticket
+/atom/movable/alert/open_ticket
 	icon = 'modular_chomp/icons/logo.dmi'
 	name = "Admin Chat Request"
 	desc = "A Administrator would like to chat with you. \
 	Click here to begin."
 	icon_state = "32x32"
 
-/obj/screen/alert/open_ticket/Click()
+/atom/movable/alert/open_ticket/Click()
 	if(!usr || !usr.client) return
 
 	// Open a new chat with the user

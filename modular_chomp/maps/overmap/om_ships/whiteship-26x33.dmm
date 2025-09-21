@@ -147,10 +147,6 @@
 /obj/structure/shuttle/engine/router,
 /turf/simulated/wall/thull,
 /area/shuttle/whiteshipOM2)
-"fg" = (
-/obj/screen/alert/highpressure,
-/turf/simulated/wall/thull,
-/area/shuttle/whiteshipOM2)
 "fs" = (
 /obj/machinery/door/airlock/maintenance/common,
 /obj/machinery/atmospherics/pipe/simple/hidden{
@@ -1464,10 +1460,6 @@
 /obj/random/soap,
 /turf/simulated/floor/plating,
 /area/shuttle/whiteshipOM2)
-"Kx" = (
-/obj/screen/alert/highpressure,
-/turf/template_noop,
-/area/template_noop)
 "KD" = (
 /obj/machinery/atmospherics/unary/vent_pump{
 	dir = 1;
@@ -2252,14 +2244,14 @@ Eq
 Eq
 Eq
 Eq
-Kx
-fg
+Eq
+sH
 Bn
 Bn
 Bn
-fg
-Kx
-Kx
+sH
+Eq
+Eq
 Eq
 Eq
 Eq
@@ -2288,14 +2280,14 @@ Eq
 Eq
 sH
 Bn
-fg
+sH
 hb
 Cz
 TF
-fg
+sH
 Bn
-fg
-Kx
+sH
+Eq
 Eq
 Eq
 Eq
@@ -2330,7 +2322,7 @@ ez
 JG
 lu
 sH
-Kx
+Eq
 Eq
 Eq
 Eq
