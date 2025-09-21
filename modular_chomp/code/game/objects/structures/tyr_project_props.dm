@@ -290,19 +290,10 @@
 	name = "alien disk"
 	desc = "A disc for storing data."
 	icon = 'modular_chomp/icons/obj/weather_ruins.dmi'
+	icon_state = "disc_alter"
 	w_class = ITEMSIZE_SMALL
 
-/obj/item/prop/tyrlore/reddisc
-	catalogue_data = list(/datum/category_item/catalogue/anomalous/tyr_red)
-	icon_state = "disc_red"
-
-/obj/item/prop/tyrlore/purpledisc
-	catalogue_data = list(/datum/category_item/catalogue/anomalous/tyr_purple)
-	icon_state = "disc_purple"
-
-/obj/item/prop/tyrlore/greendisc
-	catalogue_data = list(/datum/category_item/catalogue/anomalous/tyr_green)
-	icon_state = "disc_green"
+//The following are for Base Neon
 
 /obj/item/prop/tyrlore/baseneon
 	name = "data disc"
@@ -338,43 +329,6 @@
 	desc = "A disc for storing data."
 	catalogue_data = list(/datum/category_item/catalogue/technology/base_neon_planetary_report)
 	icon_state = "sci_disc"
-
-/datum/category_item/catalogue/anomalous/tyr_red
-	name = "Precursor Object - Tyr Data Disc Red"
-	desc = "The following data has been corrupted. \
-	<br><br>\
-	oslra yclce hietg hotfsaun ifev undhdre htiytr veesn.\
-	No huftrer ritrdecisev cevredive. \
-	notencnidoc tihw fof pantel posd lsot wot tuhanosd cslcey..\
-	leif sgisn lbeow tslo gilans reorsr.\
-	ireaneregnot dops wolakrbe.. \
-	rsoescure gaklicn. \
-	cenictomon To lawdorr.\
-	tatepmt treeh hudnedr senevty tow."
-	value = CATALOGUER_REWARD_HARD
-
-/datum/category_item/catalogue/anomalous/tyr_purple
-	name = "Precursor Object - Tyr Data Disc Purple"
-	desc = "The following data has been corrupted. \
-	<br><br>\
-	tapa'cnsi lgo, 1 ohur rebofe rcoy elpa.\
-	I ma ont yerlal rues wtah yeht tawn ee to ptu ni tihs. \
-	ts'i tjsu gipretena tginsh e'vi yarelad sida.\
-	amirpexnlet irwnig is gongi yirwahe.\
-	varesel crew memebers are filling ill. \
-	But the elevators are holding strong. \
-	And stable power is, well, stable.\
-	I hope for a good dream."
-	value = CATALOGUER_REWARD_HARD
-
-/datum/category_item/catalogue/anomalous/tyr_green
-	name = "Precursor Object - Tyr Data Disc Green"
-	desc = "Final mortality count before cryo leap.\
-	29,895 illness\
-	113,615 workplace injuries\
-	20,105 off planet\
-	300 to be determined."
-	value = CATALOGUER_REWARD_HARD
 
 /datum/category_item/catalogue/technology/base_neon
 	name = "Goal Manifest"
@@ -521,20 +475,142 @@
 	anchored = 1
 	icon_state = "barbedwire-out"
 
-/obj/item/prop/tyrlore/expirmentvenom
-	name = "data disc"
-	desc = "An alien disc for storing data."
-	catalogue_data = list(/datum/category_item/catalogue/technology/tyr_expirment_poison)
-	icon_state = "old_sci_disc"
+/obj/item/prop/tyrlore/reddisc
+	catalogue_data = list(/datum/category_item/catalogue/anomalous/tyr_red)
+	color = "#FFFFFF"
 
-/datum/category_item/catalogue/technology/tyr_expirment_poison
-	name = "Precursor Object - Tyr Data Disc Venom"
+/datum/category_item/catalogue/anomalous/tyr_red
+	name = "Precursor Object - Tyr Data Disc Red"
 	desc = "The following data has been corrupted. \
 	<br><br>\
-	Tseitgn rPeodi ahs ccnocuddle.\
-	nUti vporse to eb xetayodrriarn nuop rocagni boantcamts. \
-	Sirliam bio-erpeisxmnet fall to it's porses.\
-	Hoverew reyverco tdsen to be wfits, and otseh muenim or tihw a ucer rovep to be sunursabspale.\
-	Ntxe pets is to gntritea retfurh henenac the sosrpe, and deruce teh sethynict koovleor. \
-	Recommendation for integration with the Astral Sea protocols."
+	oslra yclce hietg hotfsaun ifev undhdre htiytr veesn.\
+	No huftrer ritrdecisev cevredive. \
+	notencnidoc tihw fof pantel posd lsot wot tuhanosd cslcey..\
+	leif sgisn lbeow tslo gilans reorsr.\
+	ireaneregnot dops wolakrbe.. \
+	rsoescure gaklicn. \
+	cenictomon To lawdorr.\
+	tatepmt treeh hudnedr senevty tow."
+	value = CATALOGUER_REWARD_HARD
+
+/obj/item/prop/tyrlore/purpledisc
+	catalogue_data = list(/datum/category_item/catalogue/anomalous/tyr_purple)
+	color = "#530E31"
+
+/datum/category_item/catalogue/anomalous/tyr_purple
+	name = "Precursor Object - Tyr Data Disc Purple"
+	desc = "The following data has been corrupted. \
+	<br><br>\
+	tapa'cnsi lgo, 1 ohur rebofe rcoy elpa.\
+	I ma ont yerlal rues wtah yeht tawn ee to ptu ni tihs. \
+	ts'i tjsu gipretena tginsh e'vi yarelad sida.\
+	amirpexnlet irwnig is gongi yirwahe.\
+	varesel crew memebers are filling ill. \
+	But the elevators are holding strong. \
+	And stable power is, well, stable.\
+	I hope for a good dream."
+	value = CATALOGUER_REWARD_HARD
+
+/obj/item/prop/tyrlore/greendisc
+	catalogue_data = list(/datum/category_item/catalogue/anomalous/tyr_green)
+	color = "#530E31"
+
+/datum/category_item/catalogue/anomalous/tyr_green
+	name = "Precursor Object - Tyr Data Disc Green"
+	desc = "Final mortality count before cryo leap.\
+	29,895 illness\
+	113,615 workplace injuries\
+	20,105 off planet\
+	300 to be determined."
+	value = CATALOGUER_REWARD_HARD
+
+/obj/item/prop/tyrlore/basicflora
+	color = "#FF66CC"
+	catalogue_data = list(/datum/category_item/catalogue/anomalous/tyre_basicflora)
+
+/datum/category_item/catalogue/anomalous/tyre_basicflora
+	name = "Tyr Data - Flora Expirments"
+	desc = "Energy Siphon Unit Attempt\
+	Damage is retained until enough energy is accured\
+	Subject grows with the acculmated energy\
+	Transfering flora program from offense division to sabatoge\
+	Utility to be determined."
+	value = CATALOGUER_REWARD_HARD
+
+/obj/item/prop/tyrlore/basicshield
+	color = "#530E31"
+	catalogue_data = list(/datum/category_item/catalogue/anomalous/tyre_basicshield)
+
+/datum/category_item/catalogue/anomalous/tyre_basicshield
+	name = "Tyr Data - Barrier Expirments"
+	desc = "Barrier Unit Attempt\
+	Barrier is capable of limiting damage\
+	However the barrier will break under repeated stress\
+	Rebuilding the barrier is swift but costly\
+	Attempts to be made to incoperate Astral Sea warping."
+	value = CATALOGUER_REWARD_HARD
+
+/obj/item/prop/tyrlore/advanceshield
+	color = "#FF0000"
+	catalogue_data = list(/datum/category_item/catalogue/anomalous/tyre_advanceshield)
+
+/datum/category_item/catalogue/anomalous/tyre_advanceshield
+	name = "Tyr Data - Astral Barrier Expirments"
+	desc = "barrier Unit Attempt\
+	Low class damage is vanished\
+	Higher speed and energized projectiles bypass the barrier\
+	Unbonded Astral Sea projects slightly damaged due to this expirment\
+	Swapping Astral Sea useage from defensive to offensive\
+	Gravity to be utlized for further defensive expirments."
+	value = CATALOGUER_REWARD_HARD
+
+/obj/item/prop/tyrlore/basicsonic
+	color = "#CCCCFF"
+	catalogue_data = list(/datum/category_item/catalogue/anomalous/tyre_basicsonic)
+
+/datum/category_item/catalogue/anomalous/tyre_basicsonic
+	name = "Tyr Data - Shockwave Expirments"
+	desc = "Enforcer Unit Attempt\
+	Success upon creating a shockwave capable of throwing indivuals\
+	Damage is limited\
+	Force spreads out, launching subjects\
+	Further energy to be added before hand held weaponery expirments."
+	value = CATALOGUER_REWARD_HARD
+
+/obj/item/prop/tyrlore/basicpower
+	color = "#530E31"
+	catalogue_data = list(/datum/category_item/catalogue/anomalous/tyre_basicpower)
+
+/datum/category_item/catalogue/anomalous/tyre_basicpower
+	name = "Tyr Data - Liquid Flame Generators"
+	desc = "Utilization of underground liquid flames is succesful\
+	Power is stable\
+	Capable of further growth\
+	Further expansion recomended\
+	Awaiting approval."
+	value = CATALOGUER_REWARD_HARD
+
+/obj/item/prop/tyrlore/ants
+	color = "#993300"
+	catalogue_data = list(/datum/category_item/catalogue/anomalous/tyre_ants)
+
+/datum/category_item/catalogue/anomalous/tyre_ants
+	name = "Tyr Data - Living Mines Expirments"
+	desc = "Success Living Mines\
+	Minerants\
+	Insect like creatures capable of reproducing metallic and gemstone structures\
+	Highly useful for gemstone production\
+	Altering for wartime useage approved."
+	value = CATALOGUER_REWARD_HARD
+
+/obj/item/prop/tyrlore/drones
+	catalogue_data = list(/datum/category_item/catalogue/anomalous/tyre_drones)
+
+/datum/category_item/catalogue/anomalous/tyre_drones
+	name = "Tyr Data - Drones"
+	desc = "Success\
+	Drone Data Aquired\
+	Allies none the wise\
+	Further data siphoning to contunie\
+	Remodel based off their blueprints."
 	value = CATALOGUER_REWARD_HARD

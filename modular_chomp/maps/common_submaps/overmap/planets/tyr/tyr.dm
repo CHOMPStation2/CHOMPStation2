@@ -128,6 +128,11 @@
 	requires_power = FALSE
 	outdoors = OUTDOORS_NO
 
+/area/surface/tyr/eclipse_refinery
+	name = "Tyr refinery"
+	icon_state = "green"
+	outdoors = OUTDOORS_NO
+
 /area/surface/tyr/ancient_ruins/puzzlea
 
 /area/surface/tyr/ancient_ruins/puzzleb
@@ -219,6 +224,12 @@
 
 /turf/simulated/floor/water/tyr
 	color = "#505564"
+	oxygen		= TYR_MOL_O2
+	nitrogen	= TYR_MOL_N2
+	temperature	= TYR_AVG_TEMP
+	outdoors = OUTDOORS_AREA
+
+/turf/simulated/floor/lava/tyr
 	oxygen		= TYR_MOL_O2
 	nitrogen	= TYR_MOL_N2
 	temperature	= TYR_AVG_TEMP
