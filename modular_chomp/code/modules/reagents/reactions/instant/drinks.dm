@@ -346,6 +346,7 @@
 	id = REAGENT_ID_FRINGEWEAVER
 	result = REAGENT_ID_FRINGEWEAVER
 	required_reagents = list(REAGENT_ID_ETHANOL = 9, REAGENT_ID_SUGAR = 1)
+	inhibitors = list(REAGENT_ID_FUEL = 1)
 	result_amount = 10
 
 /decl/chemical_reaction/instant/drinks/crevice_spike
