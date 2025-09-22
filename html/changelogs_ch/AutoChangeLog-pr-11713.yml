@@ -1,9 +1,0 @@
-author: "FluffMedic"
-delete-after: True
-changes:
-  - rscadd: "More mining outcrops added to Tyr. Refinery pieces are upon Tyr"
-  - rscadd: "Tyr guns are now craftable by science. Requires 3 Tyr data discs to be scanned, and the precursor suit researched. More to be added"
-  - rscadd: "All Tyr bosses are capable of dropping lore discs"
-  - rscdel: "Deletes some unused tyr related sprites"
-  - balance: "Tyr Guns have been altered"
-  - maptweak: "First Tyr Boss Room forces you to learn the fuel mechanics."

@@ -400,3 +400,32 @@
   Will:
   - bugfix: Rounded chairs, pews, metal benches, and corporate couch are no longer
       invisible
+2025-09-22:
+  CHOMPStation2StaffMirrorBot:
+  - rscadd: Added a new scene item, shibari bindings!
+  - image: Added icons for human and digi shibari bindings.
+  - rscadd: Customizable dragon plushies!
+  - code_imp: moves color_matrix to a tgui_input
+  - code_imp: moves obj/screen to atom/movable/screen
+  FluffMedic:
+  - rscadd: More mining outcrops added to Tyr. Refinery pieces are upon Tyr
+  - rscadd: Tyr guns are now craftable by science. Requires 3 Tyr data discs to be
+      scanned, and the precursor suit researched. More to be added
+  - rscadd: All Tyr bosses are capable of dropping lore discs
+  - rscdel: Deletes some unused tyr related sprites
+  - balance: Tyr Guns have been altered
+  - maptweak: First Tyr Boss Room forces you to learn the fuel mechanics.
+  Ryumi:
+  - qol: Cyborg Rapid-Service-Fabricators now use radial menus for all of its selection
+      menus. Pretty pictures...
+  Will:
+  - code_imp: Reaction unittest strictness includes distillation reactions being blocked
+      by instant reactions
+  - code_imp: Implements COMSIG_REAGENTS_HOLDER_REACTED
+  - refactor: reagent holder handle_reactions() uses number of reactions that happened,
+      and not just completion of the proc for return value
+  - bugfix: peanut butter milkshake reaction no longer blocked by milkshake
+  - bugfix: aloe reaction no longer blocked by irish cream
+  - bugfix: instant beer reaction no longer blocked by corn cooking oil
+  - bugfix: biomass distilling reaction no longer blocked by virology mix 3
+  - bugfix: Disarming push attacks causing combat grabs to drop as items.
