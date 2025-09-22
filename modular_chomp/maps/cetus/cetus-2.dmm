@@ -10507,7 +10507,7 @@
 /turf/simulated/floor/reinforced{
 	name = "Holodeck Projector Floor"
 	},
-/area/crew_quarters/Holodeck)
+/area/holodeck/alphadeck)
 "dCT" = (
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/glass{
@@ -15439,7 +15439,8 @@
 	name = "Robotics Operating Computer";
 	dir = 4
 	},
-/obj/effect/floor_decal/spline/plain/corner{
+/obj/effect/floor_decal/spline/fancy/wood/corner{
+	color = "White";
 	dir = 1
 	},
 /turf/simulated/floor/bluegrid,
@@ -17790,7 +17791,8 @@
 /obj/machinery/button/windowtint{
 	id = "tabletop_window_tint";
 	pixel_x = 22;
-	pixel_y = 1
+	pixel_y = 1;
+	range = 10
 	},
 /turf/simulated/floor/carpet,
 /area/crew_quarters/cetus/Libraryf1)
@@ -29488,7 +29490,7 @@
 /turf/simulated/floor/reinforced{
 	name = "Holodeck Projector Floor"
 	},
-/area/crew_quarters/Holodeck)
+/area/holodeck/alphadeck)
 "kmX" = (
 /obj/random/mob/mouse,
 /turf/simulated/floor/plating,
@@ -33315,6 +33317,10 @@
 /obj/structure/window/reinforced/polarized{
 	id = "researchoffice";
 	dir = 4
+	},
+/obj/machinery/door/window/northright{
+	name = "Research and Development Desk";
+	req_one_access = list(18)
 	},
 /turf/simulated/floor/tiled/old_cargo/white,
 /area/rnd/Research_Lab)
@@ -50635,7 +50641,6 @@
 /obj/machinery/ai_status_display{
 	pixel_x = 32
 	},
-/obj/structure/catwalk,
 /turf/simulated/floor/tiled/white,
 /area/medical/reception)
 "rxt" = (
@@ -65051,7 +65056,7 @@
 /turf/simulated/floor/reinforced{
 	name = "Holodeck Projector Floor"
 	},
-/area/crew_quarters/Holodeck)
+/area/holodeck/alphadeck)
 "wwy" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -65980,6 +65985,10 @@
 	id = "researchoffice";
 	dir = 8
 	},
+/obj/machinery/door/window/northleft{
+	name = "Research and Development Desk";
+	req_one_access = list(18)
+	},
 /turf/simulated/floor/tiled/old_cargo/white,
 /area/rnd/Research_Lab)
 "wLh" = (
@@ -66099,11 +66108,6 @@
 /obj/effect/floor_decal/corner/paleblue/bordercorner{
 	dir = 8
 	},
-/obj/machinery/button/windowtint{
-	id = "resleever";
-	pixel_y = 26;
-	pixel_x = -11
-	},
 /obj/machinery/power/apc{
 	dir = 1;
 	name = "north bump";
@@ -66133,6 +66137,11 @@
 /obj/item/wheelchair,
 /obj/structure/cable/green{
 	icon_state = "0-6"
+	},
+/obj/machinery/button/windowtint/multitint{
+	id = "resleever";
+	pixel_x = -11;
+	pixel_y = 26
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/Resleeving)
@@ -82527,7 +82536,7 @@ iMO
 iMO
 iMO
 iMO
-bRa
+iMO
 bRa
 bRa
 ufw
@@ -82785,8 +82794,8 @@ iMO
 iMO
 iMO
 iMO
-bRa
-bRa
+iMO
+iMO
 bRa
 bRa
 ufw
