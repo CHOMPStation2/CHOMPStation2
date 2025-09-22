@@ -15839,7 +15839,6 @@
 /obj/effect/floor_decal/corner/blue/border{
 	dir = 10
 	},
-/obj/item/toy/xmastree,
 /turf/simulated/floor/tiled,
 /area/bridge)
 "nst" = (
@@ -17514,6 +17513,11 @@
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/crew_quarters/seconddeck/gym)
+"oHV" = (
+/obj/structure/table/marble,
+/obj/machinery/reagentgrinder,
+/turf/simulated/floor/plating,
+/area/maintenance/thirddeck/aftport)
 "oIl" = (
 /obj/machinery/floodlight,
 /obj/structure/disposalpipe/segment,
@@ -54516,7 +54520,7 @@ tcw
 tcw
 tld
 lcO
-qlf
+oHV
 dIo
 ppD
 ieB

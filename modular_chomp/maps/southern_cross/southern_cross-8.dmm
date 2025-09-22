@@ -670,7 +670,7 @@
 	},
 /area/syndicate_station)
 "aed" = (
-/obj/structure/bed/chair{
+/obj/structure/bed/chair/shuttle{
 	dir = 4
 	},
 /turf/simulated/shuttle/floor,
@@ -2122,6 +2122,12 @@
 	icon_state = "steel"
 	},
 /area/centcom/bar)
+"buf" = (
+/obj/structure/handrail{
+	dir = 8
+	},
+/turf/simulated/shuttle/floor,
+/area/shuttle/escape/centcom)
 "bum" = (
 /obj/structure/table/woodentable,
 /turf/unsimulated/floor{
@@ -2235,9 +2241,10 @@
 /turf/simulated/shuttle/floor/skipjack,
 /area/shuttle/syndicate_elite/mothership)
 "bAn" = (
-/obj/machinery/light{
+/obj/machinery/light/floortube{
 	dir = 1
 	},
+/obj/structure/handrail,
 /turf/simulated/shuttle/floor,
 /area/shuttle/transport1/centcom)
 "bAD" = (
@@ -2317,7 +2324,9 @@
 	},
 /area/shuttle/trade)
 "bGa" = (
-/obj/machinery/light,
+/obj/structure/handrail{
+	dir = 1
+	},
 /turf/simulated/shuttle/floor,
 /area/shuttle/escape/centcom)
 "bGq" = (
@@ -2336,7 +2345,7 @@
 	},
 /area/wizard_station)
 "bGs" = (
-/obj/machinery/light{
+/obj/machinery/light/floortube{
 	dir = 4
 	},
 /obj/structure/bed/chair/shuttle{
@@ -3111,6 +3120,12 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shadekin)
+"coU" = (
+/obj/structure/handrail{
+	dir = 1
+	},
+/turf/simulated/shuttle/floor/red,
+/area/shuttle/response_ship)
 "cpo" = (
 /obj/structure/bed/chair/comfy/black,
 /turf/simulated/shuttle/floor/black,
@@ -3333,10 +3348,12 @@
 	},
 /area/skipjack_station)
 "cAw" = (
-/obj/structure/bed/chair{
+/obj/structure/bed/chair/shuttle{
 	dir = 1
 	},
-/obj/machinery/light,
+/obj/machinery/light/floortube{
+	pixel_y = 4
+	},
 /turf/simulated/shuttle/floor,
 /area/shuttle/transport1/centcom)
 "cAy" = (
@@ -4206,7 +4223,12 @@
 	},
 /area/skipjack_station)
 "dsO" = (
-/obj/machinery/light,
+/obj/machinery/light/floortube{
+	pixel_y = 4
+	},
+/obj/structure/handrail{
+	dir = 1
+	},
 /turf/simulated/shuttle/floor,
 /area/shuttle/transport1/centcom)
 "dsR" = (
@@ -4321,6 +4343,7 @@
 	network = list("NETWORK_ERT");
 	pixel_y = 26
 	},
+/obj/structure/handrail,
 /turf/simulated/shuttle/floor/red,
 /area/shuttle/response_ship)
 "dzR" = (
@@ -5592,6 +5615,9 @@
 /area/wizard_station)
 "eHc" = (
 /obj/machinery/computer/communications,
+/obj/machinery/light/floortube{
+	dir = 1
+	},
 /turf/simulated/shuttle/floor/white,
 /area/shuttle/escape/centcom)
 "eHg" = (
@@ -6100,7 +6126,7 @@
 /obj/structure/bed/chair{
 	dir = 4
 	},
-/obj/machinery/light{
+/obj/machinery/light/floortube{
 	dir = 8
 	},
 /turf/simulated/shuttle/floor/red,
@@ -6555,6 +6581,15 @@
 	icon_state = "dark"
 	},
 /area/centcom/specops)
+"fQN" = (
+/obj/effect/landmark{
+	name = "Syndicate-Commando-Bomb"
+	},
+/obj/structure/handrail{
+	dir = 8
+	},
+/turf/simulated/shuttle/floor/skipjack,
+/area/shuttle/syndicate_elite/mothership)
 "fRb" = (
 /obj/structure/table/rack/shelf/steel,
 /turf/simulated/floor/carpet/green,
@@ -6602,6 +6637,12 @@
 	icon_state = "freezerfloor"
 	},
 /area/syndicate_station)
+"fSJ" = (
+/obj/structure/handrail{
+	dir = 8
+	},
+/turf/simulated/shuttle/floor/white,
+/area/shuttle/escape/centcom)
 "fSM" = (
 /obj/structure/sign/clock,
 /turf/simulated/wall/tgmc/darkwall,
@@ -7063,12 +7104,15 @@
 /turf/unsimulated/floor/dark,
 /area/shadekin)
 "guJ" = (
-/obj/machinery/light{
+/obj/machinery/light/floortube{
 	dir = 8
 	},
 /obj/structure/closet/emcloset,
 /obj/structure/window/reinforced{
 	dir = 1
+	},
+/obj/structure/handrail{
+	dir = 4
 	},
 /turf/simulated/shuttle/floor/white,
 /area/shuttle/escape/centcom)
@@ -7101,6 +7145,9 @@
 /area/centcom/bar)
 "gws" = (
 /obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/obj/structure/handrail{
 	dir = 1
 	},
 /turf/simulated/shuttle/floor/yellow,
@@ -7420,6 +7467,7 @@
 	},
 /obj/item/extinguisher,
 /obj/item/tool/crowbar,
+/obj/structure/handrail,
 /turf/simulated/shuttle/floor/white,
 /area/shuttle/escape/centcom)
 "gJV" = (
@@ -7477,6 +7525,12 @@
 	name = "plating"
 	},
 /area/wizard_station)
+"gLP" = (
+/obj/structure/handrail{
+	dir = 8
+	},
+/turf/simulated/shuttle/floor/skipjack,
+/area/shuttle/syndicate_elite/mothership)
 "gMu" = (
 /obj/structure/table/reinforced,
 /obj/structure/window/reinforced{
@@ -9170,6 +9224,7 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 10
 	},
+/obj/structure/handrail,
 /turf/simulated/shuttle/floor/yellow,
 /area/shuttle/transport1/centcom)
 "ijT" = (
@@ -9713,6 +9768,9 @@
 /area/shuttle/ninja)
 "iEF" = (
 /obj/machinery/computer/station_alert,
+/obj/machinery/light/floortube{
+	dir = 1
+	},
 /turf/simulated/shuttle/floor/white,
 /area/shuttle/escape/centcom)
 "iFp" = (
@@ -11855,7 +11913,7 @@
 	},
 /area/centcom/security)
 "kvT" = (
-/obj/machinery/light{
+/obj/machinery/light/floortube{
 	dir = 4
 	},
 /obj/machinery/status_display{
@@ -11865,6 +11923,9 @@
 /obj/structure/closet/emcloset,
 /obj/structure/window/reinforced{
 	dir = 1
+	},
+/obj/structure/handrail{
+	dir = 8
 	},
 /turf/simulated/shuttle/floor/white,
 /area/shuttle/escape/centcom)
@@ -11999,6 +12060,10 @@
 	icon_state = "vault"
 	},
 /area/centcom/specops)
+"kAq" = (
+/obj/structure/handrail,
+/turf/simulated/shuttle/floor/red,
+/area/shuttle/response_ship)
 "kAv" = (
 /obj/structure/sink{
 	dir = 8;
@@ -13158,6 +13223,7 @@
 /area/centcom/living)
 "lLZ" = (
 /obj/effect/floor_decal/industrial/warning,
+/obj/structure/handrail,
 /turf/simulated/shuttle/floor/yellow,
 /area/shuttle/transport1/centcom)
 "lMb" = (
@@ -13277,7 +13343,7 @@
 	},
 /area/centcom/command)
 "lPM" = (
-/obj/machinery/light{
+/obj/machinery/light/floortube{
 	dir = 8
 	},
 /obj/structure/bed/chair/shuttle{
@@ -14579,6 +14645,15 @@
 /obj/machinery/computer/crew,
 /turf/simulated/shuttle/floor,
 /area/shuttle/escape/centcom)
+"neH" = (
+/obj/effect/landmark{
+	name = "Syndicate-Commando-Bomb"
+	},
+/obj/structure/handrail{
+	dir = 4
+	},
+/turf/simulated/shuttle/floor/skipjack,
+/area/shuttle/syndicate_elite/mothership)
 "neI" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 4
@@ -15477,6 +15552,12 @@
 "nZC" = (
 /turf/simulated/shuttle/wall/dark/hard_corner,
 /area/centcom/specops)
+"nZI" = (
+/obj/structure/handrail{
+	dir = 4
+	},
+/turf/simulated/shuttle/floor/white,
+/area/shuttle/skipjack)
 "oal" = (
 /obj/item/material/knife{
 	pixel_x = 8
@@ -16527,6 +16608,9 @@
 	pixel_y = -27;
 	tag_door = "centcom_shuttle_hatch"
 	},
+/obj/structure/handrail{
+	dir = 1
+	},
 /turf/simulated/shuttle/floor,
 /area/shuttle/transport1/centcom)
 "pnA" = (
@@ -16723,7 +16807,7 @@
 	},
 /area/wizard_station)
 "pxp" = (
-/obj/structure/bed/chair{
+/obj/structure/bed/chair/shuttle{
 	dir = 1
 	},
 /turf/simulated/shuttle/floor,
@@ -17487,6 +17571,9 @@
 	req_one_access = list(13);
 	tag_door = "escape_shuttle_hatch"
 	},
+/obj/structure/handrail{
+	dir = 1
+	},
 /turf/simulated/shuttle/floor,
 /area/shuttle/escape/centcom)
 "qox" = (
@@ -17833,6 +17920,12 @@
 	},
 /turf/simulated/floor/carpet/turcarpet,
 /area/shadekin)
+"qKD" = (
+/obj/structure/handrail{
+	dir = 4
+	},
+/turf/simulated/shuttle/floor,
+/area/shuttle/escape/centcom)
 "qKM" = (
 /obj/structure/window/reinforced{
 	dir = 8
@@ -18699,6 +18792,7 @@
 	layer = 4;
 	pixel_x = 32
 	},
+/obj/structure/handrail,
 /turf/simulated/shuttle/floor/white,
 /area/shuttle/escape/centcom)
 "rBp" = (
@@ -19007,6 +19101,9 @@
 "rOR" = (
 /obj/machinery/atmospherics/pipe/simple/visible{
 	dir = 5
+	},
+/obj/structure/handrail{
+	dir = 4
 	},
 /turf/simulated/shuttle/floor/white,
 /area/shuttle/escape/centcom)
@@ -20758,7 +20855,9 @@
 	},
 /area/ninja_dojo/dojo)
 "tuj" = (
-/obj/machinery/light,
+/obj/machinery/light/floortube{
+	pixel_y = 4
+	},
 /turf/simulated/shuttle/floor/red,
 /area/shuttle/escape/centcom)
 "tum" = (
@@ -20787,6 +20886,7 @@
 /area/shuttle/merchant)
 "tvl" = (
 /obj/structure/closet/emcloset,
+/obj/structure/handrail,
 /turf/simulated/shuttle/floor/white,
 /area/shuttle/escape/centcom)
 "two" = (
@@ -21338,7 +21438,7 @@
 	},
 /area/shuttle/trade)
 "tXH" = (
-/obj/structure/bed/chair,
+/obj/structure/bed/chair/shuttle,
 /turf/simulated/shuttle/floor,
 /area/shuttle/transport1/centcom)
 "tXK" = (
@@ -21569,11 +21669,15 @@
 	layer = 4;
 	pixel_x = -32
 	},
+/obj/structure/handrail,
 /turf/simulated/shuttle/floor/white,
 /area/shuttle/escape/centcom)
 "uiI" = (
-/obj/machinery/light{
+/obj/machinery/light/floortube{
 	dir = 4
+	},
+/obj/structure/handrail{
+	dir = 1
 	},
 /turf/simulated/shuttle/floor/red,
 /area/shuttle/response_ship)
@@ -21842,6 +21946,9 @@
 "uvq" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 9
+	},
+/obj/structure/handrail{
+	dir = 1
 	},
 /turf/simulated/shuttle/floor/yellow,
 /area/shuttle/transport1/centcom)
@@ -22574,6 +22681,9 @@
 /area/shadekin)
 "vfs" = (
 /obj/machinery/sleep_console,
+/obj/machinery/light/floortube{
+	pixel_y = 4
+	},
 /turf/simulated/shuttle/floor/white,
 /area/shuttle/escape/centcom)
 "vfE" = (
@@ -22944,6 +23054,7 @@
 /obj/machinery/ai_status_display{
 	pixel_y = 32
 	},
+/obj/structure/handrail,
 /turf/simulated/shuttle/floor/white,
 /area/shuttle/escape/centcom)
 "vut" = (
@@ -24859,7 +24970,7 @@
 	name = "Emergency NanoMed";
 	pixel_x = 28
 	},
-/obj/machinery/light{
+/obj/machinery/light/floortube{
 	dir = 4
 	},
 /obj/structure/bed/chair,
@@ -24879,7 +24990,9 @@
 /obj/machinery/sleep_console{
 	dir = 4
 	},
-/obj/machinery/light,
+/obj/machinery/light/floortube{
+	pixel_y = 4
+	},
 /turf/simulated/shuttle/floor/white,
 /area/shuttle/escape/centcom)
 "xxL" = (
@@ -25252,6 +25365,9 @@
 	subspace_transmission = 1;
 	syndie = 1
 	},
+/obj/structure/handrail{
+	dir = 1
+	},
 /turf/simulated/shuttle/floor/voidcraft/light,
 /area/shuttle/syndicate)
 "xNh" = (
@@ -25391,8 +25507,8 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/shadekin)
 "xST" = (
-/obj/structure/bed/chair,
-/obj/machinery/light{
+/obj/structure/bed/chair/shuttle,
+/obj/machinery/light/floortube{
 	dir = 1
 	},
 /turf/simulated/shuttle/floor,
@@ -25532,6 +25648,9 @@
 /area/shuttle/response_ship)
 "ycK" = (
 /obj/structure/AIcore/deactivated,
+/obj/machinery/light/floortube{
+	pixel_y = 4
+	},
 /turf/simulated/shuttle/floor,
 /area/shuttle/escape/centcom)
 "ydh" = (
@@ -25732,6 +25851,9 @@
 /obj/item/reagent_containers/blood/OMinus,
 /obj/item/reagent_containers/blood/OMinus,
 /obj/item/reagent_containers/blood/OMinus,
+/obj/structure/handrail{
+	dir = 8
+	},
 /turf/simulated/shuttle/floor/white,
 /area/shuttle/escape/centcom)
 "ykT" = (
@@ -33970,8 +34092,8 @@ vFi
 dmo
 azl
 jsR
-uEv
-uEv
+qKD
+qKD
 kxV
 uEv
 uEv
@@ -34229,7 +34351,7 @@ boQ
 uiw
 lpt
 uEv
-uEv
+buf
 kKV
 uEv
 uEv
@@ -34498,7 +34620,7 @@ tCw
 tCw
 tCw
 uEv
-uEv
+bGa
 dmo
 dmo
 dmo
@@ -35261,7 +35383,7 @@ boQ
 rBj
 uBb
 uEv
-uEv
+qKD
 kKV
 uEv
 uEv
@@ -35518,8 +35640,8 @@ vFi
 dmo
 azl
 neF
-uEv
-uEv
+buf
+buf
 kxV
 uEv
 uEv
@@ -35791,7 +35913,7 @@ uEv
 uEv
 nPO
 ykB
-qLu
+fSJ
 bjw
 vNF
 szr
@@ -48076,7 +48198,7 @@ vHC
 vHC
 rJt
 mSP
-wqS
+kAq
 oWN
 aMH
 mSP
@@ -48334,7 +48456,7 @@ vHC
 vHC
 rJt
 mSP
-wqS
+kAq
 yfA
 gWd
 mSP
@@ -48592,7 +48714,7 @@ vHC
 vHC
 rJt
 mSP
-wqS
+kAq
 wqS
 dcJ
 mSP
@@ -48850,7 +48972,7 @@ vHC
 vHC
 rJt
 mSP
-wqS
+kAq
 wqS
 dcJ
 mSP
@@ -49110,7 +49232,7 @@ rJt
 mSP
 rMY
 wqS
-wqS
+coU
 mSP
 jlo
 vFi
@@ -49368,7 +49490,7 @@ rJt
 mSP
 gCg
 wqS
-wqS
+coU
 mSP
 jlo
 vFi
@@ -73506,7 +73628,7 @@ uUP
 vaG
 vaG
 wSS
-vaG
+nZI
 xVZ
 muP
 muP
@@ -87663,7 +87785,7 @@ vFi
 dtV
 akj
 aUi
-bzT
+neH
 cfK
 cfK
 dJx
@@ -88179,9 +88301,9 @@ vFi
 dtV
 apr
 aUi
-bzT
-cfK
-cfK
+fQN
+gLP
+gLP
 dJA
 dJA
 fWi

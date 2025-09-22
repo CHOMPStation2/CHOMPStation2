@@ -208,9 +208,10 @@
 /obj/item/roller{
 	pixel_y = 16
 	},
-/obj/machinery/light{
+/obj/machinery/light/floortube{
 	dir = 1
 	},
+/obj/structure/handrail,
 /turf/simulated/shuttle/floor/white,
 /area/shuttle/large_escape_pod2/station)
 "aaD" = (
@@ -303,6 +304,9 @@
 /obj/structure/bed/chair{
 	dir = 1
 	},
+/obj/machinery/light/floortube{
+	pixel_y = 4
+	},
 /turf/simulated/shuttle/floor/white,
 /area/shuttle/large_escape_pod2/station)
 "aaY" = (
@@ -315,6 +319,12 @@
 /obj/item/extinguisher,
 /obj/item/tool/crowbar,
 /obj/random/medical/lite,
+/obj/machinery/light/floortube{
+	pixel_y = 4
+	},
+/obj/structure/handrail{
+	dir = 1
+	},
 /turf/simulated/shuttle/floor/white,
 /area/shuttle/large_escape_pod2/station)
 "aba" = (
@@ -10329,7 +10339,7 @@
 /area/shuttle/spacebus)
 "bWN" = (
 /obj/structure/bed/chair,
-/obj/machinery/light{
+/obj/machinery/light/floortube{
 	dir = 1
 	},
 /turf/simulated/shuttle/floor/white,
@@ -10800,6 +10810,9 @@
 	dir = 1
 	},
 /obj/machinery/portable_atmospherics/canister/oxygen/prechilled,
+/obj/structure/handrail{
+	dir = 1
+	},
 /turf/simulated/shuttle/floor/white,
 /area/shuttle/large_escape_pod1/station)
 "csU" = (
@@ -16020,7 +16033,9 @@
 /obj/structure/bed/chair{
 	dir = 1
 	},
-/obj/machinery/light,
+/obj/machinery/light/floortube{
+	pixel_y = -3
+	},
 /turf/simulated/shuttle/floor/white,
 /area/shuttle/large_escape_pod1/station)
 "fRL" = (
@@ -16376,6 +16391,9 @@
 /area/shuttle/large_escape_pod1/station)
 "gia" = (
 /obj/structure/bed/chair,
+/obj/machinery/light/floortube{
+	dir = 1
+	},
 /turf/simulated/shuttle/floor/white,
 /area/shuttle/large_escape_pod2/station)
 "giJ" = (
@@ -21106,6 +21124,9 @@
 /obj/structure/closet/walllocker/emerglocker{
 	pixel_y = -32
 	},
+/obj/structure/handrail{
+	dir = 1
+	},
 /turf/simulated/shuttle/floor/white,
 /area/shuttle/large_escape_pod1/station)
 "lNd" = (
@@ -21744,6 +21765,7 @@
 /obj/structure/closet/walllocker/emerglocker{
 	pixel_y = 32
 	},
+/obj/structure/handrail,
 /turf/simulated/shuttle/floor/white,
 /area/shuttle/large_escape_pod1/station)
 "mvN" = (
@@ -27701,6 +27723,10 @@
 /area/hallway/primary/firstdeck/port)
 "tak" = (
 /obj/structure/bed/roller,
+/obj/machinery/light/floortube{
+	dir = 1
+	},
+/obj/structure/handrail,
 /turf/simulated/shuttle/floor/white,
 /area/shuttle/large_escape_pod1/station)
 "taw" = (
@@ -31084,7 +31110,12 @@
 /obj/item/reagent_containers/blood/empty,
 /obj/item/reagent_containers/blood/empty,
 /obj/item/reagent_containers/blood/empty,
-/obj/machinery/light,
+/obj/machinery/light/floortube{
+	pixel_y = -3
+	},
+/obj/structure/handrail{
+	dir = 1
+	},
 /turf/simulated/shuttle/floor/white,
 /area/shuttle/large_escape_pod1/station)
 "woI" = (

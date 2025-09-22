@@ -33946,6 +33946,7 @@
 	c_tag = "CIV - Hydroponics Starboard";
 	dir = 8
 	},
+/obj/item/multitool,
 /turf/simulated/floor/tiled/hydro,
 /area/hydroponics)
 "cgn" = (
@@ -43284,6 +43285,9 @@
 /obj/effect/landmark{
 	name = "JoinLateCryo"
 	},
+/obj/structure/handrail{
+	dir = 4
+	},
 /turf/simulated/shuttle/floor,
 /area/shuttle/cryo/station)
 "dwx" = (
@@ -43499,7 +43503,7 @@
 	},
 /obj/structure/table/woodentable,
 /obj/item/starcaster_news,
-/obj/item/clothing/accessory/scarf/christmas,
+/obj/item/clothing/accessory/scarf,
 /obj/effect/floor_decal/spline/plain{
 	dir = 1
 	},
@@ -52046,7 +52050,7 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
 	},
-/obj/machinery/light{
+/obj/machinery/light/floortube{
 	dir = 8
 	},
 /turf/simulated/shuttle/floor,
@@ -55567,7 +55571,7 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
 	},
-/obj/machinery/light{
+/obj/machinery/light/floortube{
 	dir = 8
 	},
 /turf/simulated/shuttle/floor,
@@ -67981,6 +67985,9 @@
 /obj/effect/landmark{
 	name = "JoinLateCryo"
 	},
+/obj/structure/handrail{
+	dir = 4
+	},
 /turf/simulated/shuttle/floor,
 /area/shuttle/cryo/station)
 "rxD" = (
@@ -71325,8 +71332,11 @@
 "tAj" = (
 /obj/structure/closet/emcloset,
 /obj/item/storage/toolbox/emergency,
-/obj/machinery/light{
+/obj/machinery/light/floortube{
 	dir = 4
+	},
+/obj/structure/handrail{
+	dir = 8
 	},
 /turf/simulated/shuttle/floor,
 /area/shuttle/cryo/station)
