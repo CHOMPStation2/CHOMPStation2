@@ -1104,11 +1104,7 @@
 	name = "\improper Deck One Central Maintenance"
 	icon_state = "maintcentral"
 	sound_env = SOUND_ENVIRONMENT_CAVE
-
-/area/maintenance/cetus/meteor/central
-	name = "\improper Deck One Central Maintenance"
-	icon_state = "maintcentral"
-	sound_env = SOUND_ENVIRONMENT_CAVE
+	flags = RAD_SHIELDED | AREA_FORBID_SINGULO | AREA_ALLOW_CLOCKOUT// no singulo here, meaning this section of maints protects dorms if tesla gets loose
 
 /area/maintenance/cetus/meteor/starsec
 	name = "\improper Deck One Starboard Security Maintenance"

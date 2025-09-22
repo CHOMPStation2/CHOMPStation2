@@ -14876,6 +14876,14 @@
 	},
 /turf/simulated/floor/plating,
 /area/engineering/Solar_Control_ForStar)
+"jfN" = (
+/obj/machinery/button/windowtint{
+	id = "theater";
+	pixel_y = -25;
+	pixel_x = 24
+	},
+/turf/simulated/floor/tiled,
+/area/crew_quarters/cetus/atrium/secondaryf3)
 "jfQ" = (
 /turf/simulated/mineral/cetus,
 /area/maintenance/cetus/shallow/gamba)
@@ -18637,9 +18645,10 @@
 	pixel_x = -1
 	},
 /obj/machinery/button/windowtint{
-	id = "robotoffice";
+	id = "theater";
 	pixel_y = -25;
-	pixel_x = 24
+	pixel_x = 24;
+	range = 8
 	},
 /obj/machinery/light_switch{
 	name = "light switch ";
@@ -95804,7 +95813,7 @@ bOu
 bOu
 oMe
 lAU
-sbU
+jfN
 sbU
 uwS
 sbU
