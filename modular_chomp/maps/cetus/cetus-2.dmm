@@ -885,6 +885,13 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/central_one)
+"aqm" = (
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/effect/floor_decal/cetus/cetus8,
+/turf/simulated/floor/tiled/techmaint,
+/area/crew_quarters/cetus/atrium/primary)
 "aqp" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -3422,6 +3429,7 @@
 	name = "Hot Tub";
 	id_tag = "hottub"
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/techmaint,
 /area/crew_quarters/sauna)
 "bhV" = (
@@ -3438,9 +3446,17 @@
 /turf/simulated/floor/tiled/freezer/cold,
 /area/crew_quarters/kitchen)
 "big" = (
-/obj/structure/window/reinforced,
-/turf/simulated/mineral/cetus,
-/area/asteroid/cetus/d2/jr)
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply,
+/obj/machinery/atmospherics/pipe/manifold4w/hidden/scrubbers,
+/obj/structure/catwalk,
+/turf/simulated/floor/plating,
+/area/hallway/primary/central_two)
 "bjh" = (
 /obj/machinery/photocopier,
 /obj/effect/floor_decal/borderfloorblack/corner{
@@ -6709,6 +6725,9 @@
 "coi" = (
 /obj/machinery/power/breakerbox/activated{
 	RCon_tag = "Central Substation Bypass"
+	},
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 1
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/substation/central)
@@ -11581,14 +11600,12 @@
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/twojrport)
 "eaw" = (
-/obj/structure/cable{
-	icon_state = "6-9"
+/obj/structure/disposalpipe/segment{
+	dir = 4
 	},
-/obj/structure/cable{
-	icon_state = "6-9"
-	},
-/turf/simulated/floor/plating/turfpack/airless,
-/area/maintenance/cetus/mainsupport)
+/obj/effect/floor_decal/cetus/cetus1,
+/turf/simulated/floor/tiled/techmaint,
+/area/crew_quarters/cetus/atrium/primary)
 "eaW" = (
 /obj/machinery/lapvend,
 /obj/structure/disposalpipe/segment{
@@ -11730,6 +11747,7 @@
 	pixel_x = 32;
 	dir = 1
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled,
 /area/crew_quarters/sauna)
 "ecy" = (
@@ -12299,9 +12317,6 @@
 "elX" = (
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/maintenance/int,
-/obj/structure/cable/green{
-	icon_state = "1-2"
-	},
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/twobar)
 "ema" = (
@@ -14999,6 +15014,7 @@
 	pump_direction = 0;
 	use_power = 1
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/sauna)
 "fir" = (
@@ -16184,6 +16200,7 @@
 	pixel_y = 6
 	},
 /obj/item/reagent_containers/glass/bucket/wood,
+/obj/machinery/atmospherics/unary/vent_scrubber/on,
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/sauna)
 "fFw" = (
@@ -16260,9 +16277,6 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/cetus/atriumd2)
 "fFY" = (
-/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
-	dir = 4
-	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 4
 	},
@@ -16283,6 +16297,7 @@
 /obj/structure/cable/green{
 	icon_state = "0-8"
 	},
+/obj/machinery/atmospherics/pipe/manifold4w/hidden/supply,
 /turf/simulated/floor/outdoors/rocks/cetus,
 /area/engineering/cetus/aftsubstation)
 "fGe" = (
@@ -20817,9 +20832,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 6
-	},
 /obj/structure/cable{
 	icon_state = "2-4"
 	},
@@ -20837,6 +20849,9 @@
 	},
 /obj/structure/cable/green{
 	icon_state = "0-6"
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 1
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/crew_quarters/cetus/atrium/primary)
@@ -21171,6 +21186,7 @@
 	icon_state = "1-2"
 	},
 /obj/random/trash,
+/obj/machinery/atmospherics/unary/vent_scrubber/on,
 /turf/simulated/floor/outdoors/rocks/cetus,
 /area/engineering/cetus/aftsubstation)
 "hoa" = (
@@ -31703,9 +31719,6 @@
 	},
 /obj/structure/cable{
 	icon_state = "2-8"
-	},
-/obj/structure/cable{
-	icon_state = "1-8"
 	},
 /obj/structure/cable{
 	icon_state = "1-8"
@@ -42579,6 +42592,7 @@
 /obj/structure/cable/green{
 	icon_state = "0-6"
 	},
+/obj/machinery/atmospherics/unary/vent_scrubber/on,
 /turf/simulated/floor/plating,
 /area/maintenance/substation/central)
 "oUw" = (
@@ -42712,12 +42726,6 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/cetus/atriumd2)
 "oWh" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
@@ -42726,6 +42734,10 @@
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 1
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/substation/central)
@@ -43936,6 +43948,9 @@
 /turf/simulated/floor/tiled,
 /area/storage/tools)
 "ppA" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 8
+	},
 /turf/simulated/floor/outdoors/rocks/cetus,
 /area/engineering/cetus/aftsubstation)
 "ppB" = (
@@ -44179,6 +44194,9 @@
 	},
 /obj/effect/floor_decal/corner/yellow/border{
 	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 5
 	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/cetus/atrium/primary)
@@ -46187,11 +46205,17 @@
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/twobar)
 "pXK" = (
-/obj/structure/cable/green{
-	icon_state = "2-8"
+/obj/structure/disposalpipe/segment{
+	dir = 4
 	},
-/turf/simulated/floor/plating,
-/area/maintenance/cetus/twobar)
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/corner/green/border,
+/obj/effect/floor_decal/corner_steel_grid{
+	dir = 5
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/simulated/floor/tiled,
+/area/hallway/primary/central_two)
 "pYb" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -46452,9 +46476,14 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/effect/floor_decal/cetus/cetus1,
-/turf/simulated/floor/tiled/techmaint,
-/area/crew_quarters/cetus/atrium/primary)
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/corner/green/border,
+/obj/effect/floor_decal/corner_steel_grid{
+	dir = 5
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/tiled,
+/area/hallway/primary/central_two)
 "qbX" = (
 /obj/effect/floor_decal/chapel{
 	dir = 1
@@ -47651,17 +47680,6 @@
 /turf/simulated/floor/tiled/dark,
 /area/rnd/cetus/jrhall)
 "qxe" = (
-/obj/machinery/power/apc{
-	name = "south bump";
-	pixel_y = -24
-	},
-/obj/machinery/light_switch{
-	pixel_x = 12;
-	pixel_y = -24
-	},
-/obj/structure/cable/green{
-	icon_state = "0-4"
-	},
 /obj/machinery/alarm{
 	dir = 4;
 	pixel_x = -22
@@ -49960,7 +49978,7 @@
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
-/obj/effect/floor_decal/cetus/cetus8,
+/obj/effect/floor_decal/cetus/cetus7,
 /turf/simulated/floor/tiled/techmaint,
 /area/crew_quarters/cetus/atrium/primary)
 "rkp" = (
@@ -53473,6 +53491,9 @@
 /obj/effect/floor_decal/corner/green/border{
 	dir = 1
 	},
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 1
+	},
 /turf/simulated/floor/tiled,
 /area/hangar/cetus/explofoyer)
 "svA" = (
@@ -53688,9 +53709,6 @@
 /turf/space,
 /area/space)
 "syw" = (
-/obj/structure/cable/green{
-	icon_state = "1-2"
-	},
 /obj/structure/catwalk,
 /obj/structure/cable/green{
 	icon_state = "2-8"
@@ -54219,9 +54237,6 @@
 /turf/simulated/floor/tiled,
 /area/engineering/Reception)
 "sKq" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
@@ -54235,6 +54250,7 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /turf/simulated/floor/outdoors/rocks/cetus,
 /area/engineering/cetus/aftsubstation)
 "sKv" = (
@@ -55237,12 +55253,17 @@
 /turf/simulated/floor/tiled/dark,
 /area/security/Brig)
 "taB" = (
-/obj/structure/cable/green{
-	icon_state = "4-8"
+/obj/effect/floor_decal/borderfloor{
+	dir = 1
 	},
-/obj/effect/floor_decal/cetus/cetus7,
-/turf/simulated/floor/tiled/techmaint,
-/area/crew_quarters/cetus/atrium/primary)
+/obj/effect/floor_decal/corner/green/border{
+	dir = 1
+	},
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/hangar/cetus/explofoyer)
 "taE" = (
 /turf/simulated/wall/r_wall,
 /area/rnd/workshop)
@@ -56936,6 +56957,10 @@
 /obj/effect/floor_decal/corner/yellow/bordercorner,
 /turf/simulated/floor/tiled,
 /area/engineering/cetus/atriumdeck2)
+"tDi" = (
+/obj/structure/window/reinforced,
+/turf/simulated/mineral/cetus,
+/area/asteroid/cetus/d2/jr)
 "tEr" = (
 /turf/simulated/wall,
 /area/maintenance/substation/central)
@@ -61964,6 +61989,15 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/Chemistry)
+"vqY" = (
+/obj/machinery/door/firedoor/glass,
+/obj/machinery/door/airlock/glass_research{
+	req_one_access = list(43,67);
+	name = "Exploration Foyer"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/simulated/floor/tiled/techmaint,
+/area/hangar/cetus/explofoyer)
 "vrh" = (
 /obj/effect/floor_decal/borderfloorwhite/corner{
 	dir = 1
@@ -66888,9 +66922,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
@@ -66898,6 +66929,9 @@
 	dir = 8;
 	sortType = "Drone Fabricators";
 	name = "Drone Fabricators"
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 1
 	},
 /obj/structure/catwalk,
 /turf/simulated/floor/plating,
@@ -67403,6 +67437,7 @@
 	req_one_access = list(43,67);
 	name = "Exploration Foyer"
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/techmaint,
 /area/hangar/cetus/explofoyer)
 "xoj" = (
@@ -93080,7 +93115,7 @@ oJw
 qoz
 qoz
 sty
-eaw
+jlD
 tYX
 jDz
 nCm
@@ -104212,7 +104247,7 @@ jYN
 xFJ
 jXa
 eMW
-big
+tDi
 pPf
 pPf
 uEf
@@ -106033,9 +106068,9 @@ iBT
 iBT
 uZS
 qWa
-qbU
+eaw
 pKq
-taB
+rkn
 qWa
 ivT
 qWu
@@ -106293,7 +106328,7 @@ dgQ
 pvG
 eQo
 kDZ
-rkn
+aqm
 aeH
 ivT
 qWu
@@ -111760,7 +111795,7 @@ eWb
 ohU
 gAj
 dEl
-pXK
+eWb
 elX
 syw
 iXL
@@ -118687,8 +118722,8 @@ ufc
 dfN
 hkF
 dgq
-tLM
-hiS
+big
+qbU
 xoc
 svt
 lXk
@@ -119720,9 +119755,9 @@ tTT
 hnw
 ahe
 xcz
-hiS
-xoc
-svt
+pXK
+vqY
+taB
 luB
 luB
 vav
