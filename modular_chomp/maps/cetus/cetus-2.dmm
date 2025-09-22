@@ -254,8 +254,20 @@
 /turf/simulated/floor/wood,
 /area/crew_quarters/sleep/cetus/jrdorm1)
 "aeH" = (
-/obj/structure/catwalk,
-/turf/simulated/floor/plating,
+/obj/machinery/hologram/holopad,
+/obj/effect/floor_decal/corner/blue/bordercorner,
+/obj/effect/floor_decal/corner/blue/bordercorner{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/blue/bordercorner{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/blue/bordercorner{
+	dir = 4
+	},
+/obj/effect/floor_decal/spline/plain/three_quarters,
+/obj/item/radio/beacon,
+/turf/simulated/floor/tiled/milspec/raised,
 /area/crew_quarters/cetus/atrium/primary)
 "aeS" = (
 /obj/effect/floor_decal/borderfloorblack/corner{
@@ -13863,6 +13875,7 @@
 	dir = 4
 	},
 /obj/structure/disposalpipe/segment,
+/obj/effect/floor_decal/cetus/cetus2,
 /turf/simulated/floor/tiled/techmaint,
 /area/crew_quarters/cetus/atrium/primary)
 "eQE" = (
@@ -13987,6 +14000,7 @@
 	dir = 4
 	},
 /obj/structure/disposalpipe/segment,
+/obj/effect/floor_decal/cetus/cetus3,
 /turf/simulated/floor/tiled/techmaint,
 /area/crew_quarters/cetus/atrium/primary)
 "eTI" = (
@@ -23000,6 +23014,13 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/cetus/hall)
+"hUQ" = (
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/effect/floor_decal/cetus/cetus8,
+/turf/simulated/floor/tiled/techmaint,
+/area/crew_quarters/cetus/atrium/primary)
 "hUU" = (
 /obj/structure/closet/l3closet/scientist,
 /obj/item/extinguisher,
@@ -30444,20 +30465,8 @@
 	dir = 8;
 	icon_state = "pipe-c"
 	},
-/obj/machinery/hologram/holopad,
-/obj/effect/floor_decal/corner/blue/bordercorner{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/blue/bordercorner{
-	dir = 4
-	},
-/obj/effect/floor_decal/corner/blue/bordercorner,
-/obj/effect/floor_decal/corner/blue/bordercorner{
-	dir = 8
-	},
-/obj/effect/floor_decal/spline/plain/three_quarters,
-/obj/item/radio/beacon,
-/turf/simulated/floor/tiled/milspec/raised,
+/obj/effect/floor_decal/cetus/cetus5,
+/turf/simulated/floor/tiled/techmaint,
 /area/crew_quarters/cetus/atrium/primary)
 "kEI" = (
 /obj/effect/floor_decal/borderfloorblack/corner{
@@ -36374,6 +36383,13 @@
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/entry/D2)
+"mIe" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/effect/floor_decal/cetus/cetus1,
+/turf/simulated/floor/tiled/techmaint,
+/area/crew_quarters/cetus/atrium/primary)
 "mIo" = (
 /turf/simulated/open,
 /area/maintenance/cetus/twocave)
@@ -40557,6 +40573,13 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/workshop)
+"okb" = (
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/effect/floor_decal/cetus/cetus7,
+/turf/simulated/floor/tiled/techmaint,
+/area/crew_quarters/cetus/atrium/primary)
 "okk" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
 	dir = 10
@@ -45375,6 +45398,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/effect/floor_decal/cetus/cetus4,
 /turf/simulated/floor/tiled/techmaint,
 /area/crew_quarters/cetus/atrium/primary)
 "pKP" = (
@@ -47840,6 +47864,7 @@
 	dir = 1;
 	icon_state = "pipe-c"
 	},
+/obj/effect/floor_decal/cetus/cetus6,
 /turf/simulated/floor/tiled/techmaint,
 /area/crew_quarters/cetus/atrium/primary)
 "qAm" = (
@@ -52668,6 +52693,7 @@
 /obj/structure/cable/green{
 	icon_state = "5-8"
 	},
+/obj/effect/floor_decal/cetus/cetus9,
 /turf/simulated/floor/tiled/techmaint,
 /area/crew_quarters/cetus/atrium/primary)
 "shE" = (
@@ -106102,9 +106128,9 @@ iBT
 iBT
 uZS
 qWa
-cNy
+mIe
 pKq
-kAQ
+okb
 qWa
 ivT
 qWu
@@ -106362,7 +106388,7 @@ dgQ
 pvG
 eQo
 kDZ
-kAQ
+hUQ
 aeH
 ivT
 qWu

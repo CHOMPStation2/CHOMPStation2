@@ -664,6 +664,10 @@
 /obj/structure/reagent_dispensers/fueltank,
 /turf/simulated/open,
 /area/maintenance/cetus/threefp)
+"arS" = (
+/obj/effect/floor_decal/cetus/andromeda3,
+/turf/simulated/floor/tiled/old_tile/gray,
+/area/maintenance/cetus/shallow/derilect/hallway)
 "arY" = (
 /obj/structure/table/wooden_reinforced,
 /obj/item/clipboard,
@@ -4783,6 +4787,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
+/obj/effect/floor_decal/cetus/andromeda6,
 /turf/simulated/floor/tiled/old_tile/gray,
 /area/maintenance/cetus/shallow/derilect/hallway)
 "ddK" = (
@@ -16273,6 +16278,15 @@
 	},
 /turf/simulated/floor/carpet/graycarpet,
 /area/maintenance/cetus/shallow/gamba)
+"kae" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/effect/floor_decal/cetus/andromeda2,
+/turf/simulated/floor/tiled/old_tile/gray,
+/area/maintenance/cetus/shallow/derilect/hallway)
 "kaf" = (
 /obj/machinery/door/firedoor/multi_tile,
 /turf/simulated/floor/carpet/graycarpet,
@@ -34597,6 +34611,7 @@
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
+/obj/effect/floor_decal/cetus/andromeda5,
 /turf/simulated/floor/tiled/old_tile/gray,
 /area/maintenance/cetus/shallow/derilect/hallway)
 "uIA" = (
@@ -37713,6 +37728,7 @@
 /obj/structure/cable{
 	icon_state = "0-2"
 	},
+/obj/effect/floor_decal/cetus/andromeda1,
 /turf/simulated/floor/tiled/old_tile/gray,
 /area/maintenance/cetus/shallow/derilect/hallway)
 "wAJ" = (
@@ -40191,6 +40207,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
+/obj/effect/floor_decal/cetus/andromeda4,
 /turf/simulated/floor/tiled/old_tile/gray,
 /area/maintenance/cetus/shallow/derilect/hallway)
 "ycS" = (
@@ -84742,7 +84759,7 @@ ejA
 wql
 oFq
 eTD
-qXs
+kae
 uIz
 nIu
 rRw
@@ -85000,7 +85017,7 @@ hIo
 lTd
 aol
 nIu
-ehF
+arS
 dcB
 nIu
 rRw

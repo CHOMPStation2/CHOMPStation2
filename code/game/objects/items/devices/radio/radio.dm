@@ -851,10 +851,3 @@ GLOBAL_DATUM(autospeaker, /mob/living/silicon/ai/announcer)
 	bs_tx_preload_id = "talon_aio" //Transmit to a receiver
 	bs_rx_preload_id = "talon_aio" //Recveive from a transmitter
 
-/obj/item/bluespaceradio/cetus_prelinked
-	name = "bluespace radio (cetus)"
-	handset = /obj/item/radio/bluespacehandset/linked/cetus_prelinked
-
-/obj/item/radio/bluespacehandset/linked/cetus_prelinked
-	bs_tx_preload_id = "Receiver A" //Transmit to a receiver
-	bs_rx_preload_id = "Broadcaster A" //Recveive from a transmitter
