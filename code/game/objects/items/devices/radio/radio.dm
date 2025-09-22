@@ -850,4 +850,3 @@ GLOBAL_DATUM(autospeaker, /mob/living/silicon/ai/announcer)
 /obj/item/radio/bluespacehandset/linked/talon_prelinked
 	bs_tx_preload_id = "talon_aio" //Transmit to a receiver
 	bs_rx_preload_id = "talon_aio" //Recveive from a transmitter
-
