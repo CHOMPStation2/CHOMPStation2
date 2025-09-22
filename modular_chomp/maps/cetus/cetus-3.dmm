@@ -346,7 +346,6 @@
 /area/maintenance/cetus/shallow/derilect/hallway)
 "ajp" = (
 /obj/machinery/vending/dinnerware,
-/obj/machinery/vending/dinnerware,
 /turf/simulated/floor/lino,
 /area/crew_quarters/cetus/Galleryf2)
 "ajO" = (
@@ -664,10 +663,6 @@
 /obj/structure/reagent_dispensers/fueltank,
 /turf/simulated/open,
 /area/maintenance/cetus/threefp)
-"arS" = (
-/obj/effect/floor_decal/cetus/andromeda3,
-/turf/simulated/floor/tiled/old_tile/gray,
-/area/maintenance/cetus/shallow/derilect/hallway)
 "arY" = (
 /obj/structure/table/wooden_reinforced,
 /obj/item/clipboard,
@@ -2952,12 +2947,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/Atmospherics_Chamber)
-"bVT" = (
-/obj/structure/catwalk,
-/obj/structure/catwalk,
-/obj/structure/lattice,
-/turf/simulated/open,
-/area/maintenance/cetus/threecp)
 "bWd" = (
 /obj/structure/dummystairs/bronzeledge{
 	dir = 4
@@ -3456,7 +3445,6 @@
 	pixel_x = 5
 	},
 /obj/structure/table/hardwoodtable,
-/obj/structure/table/hardwoodtable,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/shallow/ap)
 "clt" = (
@@ -3542,7 +3530,6 @@
 /area/maintenance/cetus/d3docks)
 "cpt" = (
 /obj/structure/bed/pillowpile/yellow,
-/obj/structure/bed/pillowpilefront/orange,
 /obj/machinery/light/small/yellowed,
 /turf/simulated/floor/wood,
 /area/maintenance/cetus/badsnuggles)
@@ -4610,11 +4597,10 @@
 /turf/simulated/floor/tiled,
 /area/engineering/Atmospherics_Chamber)
 "cXI" = (
-/obj/structure/cable{
-	icon_state = "6-9";
-	d1 = 6
-	},
 /obj/structure/table/standard,
+/obj/structure/cable{
+	icon_state = "6-9"
+	},
 /turf/simulated/floor/carpet/graycarpet,
 /area/bridge/Deck3_Corridor)
 "cYb" = (
@@ -4968,7 +4954,6 @@
 /turf/simulated/floor/outdoors/rocks/cetus,
 /area/maintenance/cetus/jrthreeport)
 "djO" = (
-/obj/structure/girder,
 /obj/structure/girder,
 /turf/simulated/floor/outdoors/rocks/cetus,
 /area/maintenance/cetus/jrthreestar)
@@ -8254,7 +8239,6 @@
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
 /obj/effect/floor_decal/industrial/warning/full,
 /obj/machinery/light/small/emergency,
-/obj/machinery/light/small/emergency,
 /turf/simulated/floor/plating,
 /area/engineering/Solar_Control_ForPort)
 "fgO" = (
@@ -8674,7 +8658,6 @@
 "fqE" = (
 /obj/random/plushie,
 /obj/structure/bed/pillowpile/teal,
-/obj/structure/bed/pillowpilefront/black,
 /turf/simulated/floor/wood,
 /area/maintenance/cetus/badsnuggles)
 "fqM" = (
@@ -9655,7 +9638,6 @@
 	dir = 1
 	},
 /obj/structure/catwalk,
-/obj/machinery/portable_atmospherics/powered/scrubber,
 /obj/machinery/portable_atmospherics/powered/scrubber,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/threefs)
@@ -11093,7 +11075,6 @@
 /area/bridge/Deck3_Corridor)
 "gRn" = (
 /obj/structure/bed/pillowpile/green,
-/obj/structure/bed/pillowpilefront/black,
 /obj/item/toy/plushie/possum,
 /turf/unsimulated/floor/dark,
 /area/maintenance/cetus/jrthreeport)
@@ -11830,7 +11811,6 @@
 /area/rnd/cetus/stairwelljr3)
 "hlR" = (
 /obj/structure/bed/pillowpile/orange,
-/obj/structure/bed/pillowpilefront/black,
 /obj/random/plushie,
 /obj/structure/micro_tunnel/random{
 	dir = 1
@@ -16069,10 +16049,6 @@
 	dir = 8;
 	id = "garbage"
 	},
-/obj/machinery/conveyor{
-	dir = 8;
-	id = "garbage"
-	},
 /obj/machinery/light/small/yellowed{
 	dir = 1
 	},
@@ -16278,15 +16254,6 @@
 	},
 /turf/simulated/floor/carpet/graycarpet,
 /area/maintenance/cetus/shallow/gamba)
-"kae" = (
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/effect/floor_decal/cetus/andromeda2,
-/turf/simulated/floor/tiled/old_tile/gray,
-/area/maintenance/cetus/shallow/derilect/hallway)
 "kaf" = (
 /obj/machinery/door/firedoor/multi_tile,
 /turf/simulated/floor/carpet/graycarpet,
@@ -17499,8 +17466,7 @@
 /area/maintenance/cetus/shallow/ap)
 "kJA" = (
 /obj/structure/cable{
-	icon_state = "6-9";
-	d1 = 6
+	icon_state = "6-9"
 	},
 /turf/simulated/floor/carpet/graycarpet,
 /area/bridge/Deck3_Corridor)
@@ -20513,7 +20479,6 @@
 /area/crew_quarters/cetus/Galleryf2)
 "mmO" = (
 /obj/structure/bed/pillowpile/black,
-/obj/structure/bed/pillowpilefront/teal,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/badsnuggles)
 "mnc" = (
@@ -21283,7 +21248,6 @@
 /area/quartermaster/mininglockerroom)
 "mJU" = (
 /obj/structure/bed/pillowpile/green,
-/obj/structure/bed/pillowpilefront/black,
 /turf/simulated/floor/wood,
 /area/maintenance/cetus/badsnuggles)
 "mKb" = (
@@ -21792,7 +21756,6 @@
 /area/maintenance/cetus/d3bar)
 "mYy" = (
 /obj/structure/bed/pillowpile/green,
-/obj/structure/bed/pillowpilefront/black,
 /obj/random/junk,
 /turf/simulated/floor/wood/broken,
 /area/maintenance/cetus/badsnuggles)
@@ -23801,7 +23764,6 @@
 /area/maintenance/cetus/d3bar)
 "oez" = (
 /obj/structure/bed/pillowpile/red,
-/obj/structure/bed/pillowpilefront/teal,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/badsnuggles)
 "oeI" = (
@@ -24263,7 +24225,6 @@
 /area/ai_monitored/aihall)
 "oua" = (
 /obj/structure/bed/pillowpile/yellow,
-/obj/structure/bed/pillowpilefront/black,
 /obj/item/toy/plushie/red_fox,
 /turf/unsimulated/floor/dark,
 /area/maintenance/cetus/jrthreeport)
@@ -24435,10 +24396,6 @@
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/shallow/ap)
 "oyV" = (
-/obj/structure/cable{
-	icon_state = "6-9";
-	d1 = 6
-	},
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
@@ -24450,6 +24407,9 @@
 	},
 /obj/structure/cable/green{
 	icon_state = "1-8"
+	},
+/obj/structure/cable{
+	icon_state = "6-9"
 	},
 /turf/simulated/floor/carpet/graycarpet,
 /area/bridge/Deck3_Corridor)
@@ -25036,7 +24996,6 @@
 /area/engineering/Atmospherics_Chamber)
 "oSK" = (
 /obj/structure/bed/pillowpile,
-/obj/structure/bed/pillowpilefront/black,
 /obj/item/toy/plushie/teshari,
 /obj/item/toy/plushie/mouse,
 /turf/unsimulated/floor/dark,
@@ -26039,7 +25998,6 @@
 /area/maintenance/cetus/d3docks)
 "pCR" = (
 /obj/structure/bed/pillowpile/red,
-/obj/structure/bed/pillowpilefront/teal,
 /obj/random/junk,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/badsnuggles)
@@ -26826,9 +26784,6 @@
 /obj/structure/bed/chair{
 	dir = 8
 	},
-/obj/structure/bed/chair{
-	dir = 8
-	},
 /obj/random/junk,
 /obj/random/trash,
 /obj/structure/cable{
@@ -26847,7 +26802,6 @@
 /area/maintenance/cetus/shallow/derilect/kitchen)
 "pXJ" = (
 /obj/structure/bed/pillowpile/teal,
-/obj/structure/bed/pillowpilefront/black,
 /obj/item/toy/plushie/robo_corgi,
 /turf/unsimulated/floor/dark,
 /area/maintenance/cetus/jrthreeport)
@@ -27492,11 +27446,10 @@
 /area/bridge/sleep/CMO_Quarters)
 "qsC" = (
 /obj/machinery/door/firedoor/glass,
-/obj/structure/cable{
-	icon_state = "6-9";
-	d1 = 6
-	},
 /obj/structure/disposalpipe/segment,
+/obj/structure/cable{
+	icon_state = "6-9"
+	},
 /turf/simulated/floor/carpet/graycarpet,
 /area/bridge/Deck3_Corridor)
 "qsS" = (
@@ -28329,12 +28282,11 @@
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/threefp)
 "qVS" = (
-/obj/structure/cable{
-	icon_state = "6-9";
-	d1 = 6
-	},
 /obj/structure/bed/chair/office/light{
 	dir = 8
+	},
+/obj/structure/cable{
+	icon_state = "6-9"
 	},
 /turf/simulated/floor/carpet/graycarpet,
 /area/bridge/Deck3_Corridor)
@@ -29497,11 +29449,9 @@
 /turf/simulated/floor/wood,
 /area/bridge/Captain_Office)
 "rBG" = (
-/obj/structure/lattice,
-/obj/structure/lattice,
-/obj/machinery/atmospherics/pipe/simple/visible/red,
-/turf/simulated/floor/outdoors/rocks/cetus/edge,
-/area/thirddeck/roof)
+/obj/effect/floor_decal/cetus/andromeda3,
+/turf/simulated/floor/tiled/old_tile/gray,
+/area/maintenance/cetus/shallow/derilect/hallway)
 "rBW" = (
 /obj/structure/sign/painting/public{
 	pixel_y = -32
@@ -29632,7 +29582,6 @@
 /turf/simulated/floor/carpet/graycarpet,
 /area/maintenance/cetus/shallow/fp)
 "rGM" = (
-/obj/structure/bed/chair/bay/chair,
 /obj/structure/bed/chair/bay/chair,
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -31130,7 +31079,6 @@
 /area/maintenance/cetus/shallow/derilect/dorms)
 "sLL" = (
 /obj/structure/bed/pillowpile/red,
-/obj/structure/bed/pillowpilefront/black,
 /obj/item/toy/plushie/otter,
 /turf/unsimulated/floor/dark,
 /area/maintenance/cetus/jrthreeport)
@@ -32027,7 +31975,6 @@
 /area/bridge/sleep/CMO_Quarters)
 "tme" = (
 /obj/structure/bed/pillowpile,
-/obj/structure/bed/pillowpilefront/red,
 /turf/simulated/floor/wood,
 /area/maintenance/cetus/badsnuggles)
 "tnw" = (
@@ -33332,7 +33279,6 @@
 "tYq" = (
 /obj/random/plushie,
 /obj/structure/bed/pillowpile/green,
-/obj/structure/bed/pillowpilefront/red,
 /obj/random/junk,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/badsnuggles)
@@ -33384,7 +33330,6 @@
 /area/maintenance/cetus/threeap)
 "uaZ" = (
 /obj/structure/bed/pillowpile/teal,
-/obj/structure/bed/pillowpilefront/yellow,
 /obj/random/trash,
 /turf/simulated/floor/wood,
 /area/maintenance/cetus/badsnuggles)
@@ -33525,7 +33470,6 @@
 /turf/simulated/floor/tiled,
 /area/engineering/Atmospherics_Chamber)
 "ueY" = (
-/obj/structure/bed/pillowpilefront/black,
 /obj/item/toy/plushie/teppi,
 /turf/simulated/floor/outdoors/rocks/cetus,
 /area/maintenance/cetus/jrthreeport)
@@ -34579,7 +34523,6 @@
 /obj/effect/map_helper/airlock/sensor/chamber_sensor,
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
 /obj/effect/floor_decal/industrial/warning/full,
-/obj/machinery/light/small/emergency,
 /obj/machinery/light/small/emergency,
 /turf/simulated/floor/plating,
 /area/engineering/Solar_Control_AftPort)
@@ -37542,15 +37485,14 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/obj/structure/cable{
-	icon_state = "6-9";
-	d1 = 6
-	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
 /obj/structure/cable/green{
 	icon_state = "4-8"
+	},
+/obj/structure/cable{
+	icon_state = "6-9"
 	},
 /turf/simulated/floor/carpet/graycarpet,
 /area/bridge/Deck3_Corridor)
@@ -38195,7 +38137,6 @@
 /area/bridge/Deck3_Corridor)
 "wOa" = (
 /obj/structure/bed/pillowpile/yellow,
-/obj/structure/bed/pillowpilefront/red,
 /obj/random/junk,
 /turf/simulated/floor/wood,
 /area/maintenance/cetus/badsnuggles)
@@ -40332,10 +40273,14 @@
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/threefs)
 "yfd" = (
-/obj/structure/table/standard,
-/obj/structure/table/standard,
-/turf/simulated/floor/carpet/graycarpet,
-/area/maintenance/cetus/shallow/ap)
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/effect/floor_decal/cetus/andromeda2,
+/turf/simulated/floor/tiled/old_tile/gray,
+/area/maintenance/cetus/shallow/derilect/hallway)
 "yfm" = (
 /obj/structure/transit_tube{
 	icon_state = "D-NE"
@@ -66158,7 +66103,7 @@ dIu
 dIu
 chR
 iYE
-bVT
+uyA
 uyA
 uyA
 uyA
@@ -68495,7 +68440,7 @@ rRw
 rRw
 aVY
 gFZ
-yfd
+byh
 ooY
 aVY
 aVY
@@ -84759,7 +84704,7 @@ ejA
 wql
 oFq
 eTD
-kae
+yfd
 uIz
 nIu
 rRw
@@ -85017,7 +84962,7 @@ hIo
 lTd
 aol
 nIu
-arS
+rBG
 dcB
 nIu
 rRw
@@ -91939,7 +91884,7 @@ oSA
 oSA
 jGu
 grE
-rBG
+oSA
 oSA
 oSA
 jGu

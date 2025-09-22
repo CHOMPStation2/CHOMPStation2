@@ -1223,6 +1223,37 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/plating,
 /area/engineering/cetus/jointsubstation)
+"aIj" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	dir = 4
+	},
+/obj/effect/map_helper/airlock/atmos/chamber_pump,
+/obj/machinery/airlock_sensor{
+	dir = 1;
+	pixel_y = -23;
+	pixel_x = 5;
+	req_access = list(13)
+	},
+/obj/effect/map_helper/airlock/sensor/chamber_sensor,
+/obj/machinery/embedded_controller/radio/airlock/airlock_controller{
+	id_tag = "aux_support_meteor";
+	dir = 1;
+	pixel_y = -24;
+	pixel_x = -6;
+	req_one_access = list(11, 24, 47, 5)
+	},
+/obj/machinery/light/small/emergency,
+/turf/simulated/floor/plating,
+/area/space)
 "aIl" = (
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/tiled/hydro,
@@ -1334,13 +1365,7 @@
 /turf/simulated/floor/carpet/graycarpet,
 /area/crew_quarters/cetus/meteor/hallway2)
 "aKY" = (
-/obj/machinery/atmospherics/pipe/simple/heat_exchanging{
-	dir = 5
-	},
-/obj/machinery/atmospherics/pipe/simple/heat_exchanging{
-	dir = 5
-	},
-/turf/space,
+/turf/simulated/wall,
 /area/space)
 "aLa" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
@@ -3952,6 +3977,29 @@
 /obj/item/champagne,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/meteor/star)
+"cen" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/door/airlock/glass_external{
+	frequency = 1379;
+	icon_state = "door_locked";
+	locked = 1;
+	name = "Internal Airlock Access";
+	req_access = list(13)
+	},
+/obj/effect/map_helper/airlock/door/int_door,
+/turf/simulated/floor/plating,
+/area/space)
 "cez" = (
 /obj/machinery/atmospherics/pipe/simple/heat_exchanging{
 	dir = 5
@@ -4427,19 +4475,31 @@
 /turf/simulated/floor/carpet/graycarpet,
 /area/crew_quarters/cetus/meteor/hallway2)
 "cqS" = (
-/obj/machinery/portable_atmospherics/canister/phoron,
-/obj/machinery/portable_atmospherics/canister/phoron,
-/obj/effect/floor_decal/industrial/warning{
-	layer = 3;
-	dir = 1
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
 	},
-/obj/effect/floor_decal/industrial/warning,
-/obj/effect/floor_decal/spline/plain,
-/obj/effect/floor_decal/spline/plain{
-	dir = 1
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
 	},
-/turf/simulated/floor/tiled/techmaint,
-/area/rnd/cetus/meteor/toxstorage)
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/door/airlock/external{
+	icon_state = "door_locked";
+	locked = 1;
+	name = "External Airlock Access";
+	req_access = list(13)
+	},
+/obj/effect/map_helper/airlock/door/ext_door,
+/obj/machinery/access_button{
+	dir = 8;
+	name = "exterior access button";
+	pixel_y = -30;
+	pixel_x = -6
+	},
+/obj/effect/map_helper/airlock/button/ext_button,
+/turf/simulated/floor/plating,
+/area/space)
 "cqV" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 9
@@ -9370,19 +9430,17 @@
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/sleep/cetus/meteor/dorm1)
 "fdT" = (
-/obj/machinery/access_button{
-	command = "cycle_interior";
-	frequency = 1379;
-	master_tag = "toxins_airlock";
-	name = "interior access button";
-	req_one_access = list(8,13,65);
-	pixel_x = -24;
-	dir = 4
-	},
 /obj/machinery/atmospherics/binary/pump/on{
 	dir = 1;
 	target_pressure = 200
 	},
+/obj/machinery/access_button{
+	dir = 4;
+	name = "interior access button";
+	req_one_access = list(11, 24, 47, 5);
+	pixel_x = -24
+	},
+/obj/effect/map_helper/airlock/button/int_button,
 /turf/simulated/floor/tiled/dark,
 /area/rnd/cetus/meteor/toxtest)
 "feb" = (
@@ -11776,7 +11834,6 @@
 /area/engineering/cetus/meteor/enginemonitor)
 "gwd" = (
 /obj/structure/bed/pillowpile/green,
-/obj/structure/bed/pillowpilefront/teal,
 /turf/simulated/floor/carpet/geo,
 /area/maintenance/cetus/cozyobservatory)
 "gws" = (
@@ -11874,14 +11931,9 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/cetus/meteor/techstorage)
 "gzz" = (
-/obj/machinery/atmospherics/pipe/simple/visible/yellow{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/visible/yellow{
-	dir = 4
-	},
+/obj/structure/closet/emcloset,
 /turf/simulated/floor/plating,
-/area/engineering/cetus/meteor/engineroom)
+/area/space)
 "gzS" = (
 /obj/structure/dancepole,
 /obj/random/junk,
@@ -16074,7 +16126,6 @@
 /area/engineering/cetus/meteor/atriumdeck1)
 "iGU" = (
 /obj/structure/bed/pillowpile/teal,
-/obj/structure/bed/pillowpilefront/teal,
 /turf/simulated/floor/carpet/geo,
 /area/maintenance/cetus/cozyobservatory)
 "iHt" = (
@@ -18100,9 +18151,6 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/maintenance/cetus/fishery)
 "jHG" = (
-/obj/machinery/atmospherics/pipe/manifold/visible/yellow{
-	dir = 1
-	},
 /obj/machinery/atmospherics/pipe/manifold/visible/yellow{
 	dir = 1
 	},
@@ -23102,6 +23150,17 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/maintenance/ab_StripBar)
+"mmB" = (
+/obj/machinery/atmospherics/pipe/simple/hidden,
+/obj/machinery/access_button{
+	dir = 4;
+	name = "interior access button";
+	req_one_access = list(11, 24, 47, 5);
+	pixel_x = -24
+	},
+/obj/effect/map_helper/airlock/button/int_button,
+/turf/simulated/floor/plating,
+/area/space)
 "mmF" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
@@ -24943,7 +25002,6 @@
 /turf/simulated/wall/r_wall,
 /area/crew_quarters/cetus/meteor/hallway2)
 "npF" = (
-/obj/machinery/portable_atmospherics/canister/nitrous_oxide,
 /obj/machinery/portable_atmospherics/canister/nitrous_oxide,
 /obj/effect/floor_decal/industrial/warning{
 	layer = 3;
@@ -27816,7 +27874,6 @@
 	pixel_y = 4;
 	pixel_x = 5
 	},
-/obj/structure/table/standard,
 /obj/item/storage/box/monkeycubes{
 	pixel_y = 2;
 	pixel_x = -12
@@ -28337,11 +28394,7 @@
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/meteor/pond)
 "oYU" = (
-/turf/simulated/shuttle/wall/no_join{
-	base_state = "orange";
-	icon = 'icons/turf/shuttle_orange.dmi';
-	icon_state = "orange"
-	},
+/turf/simulated/shuttle/wall/no_join/orange,
 /area/shuttle/cryo/station)
 "oZD" = (
 /obj/structure/sink{
@@ -29170,16 +29223,6 @@
 /area/crew_quarters/cetus/meteor/hallway2)
 "pBy" = (
 /obj/machinery/shield_diffuser,
-/obj/machinery/access_button{
-	command = "cycle_exterior";
-	frequency = 1379;
-	master_tag = "toxins_airlock";
-	name = "exterior access button";
-	pixel_x = 28;
-	pixel_y = -22;
-	req_one_access = list(8,13,65);
-	dir = 8
-	},
 /turf/simulated/floor/outdoors/rocks/cetus/edge,
 /area/space)
 "pCK" = (
@@ -35093,13 +35136,19 @@
 /area/engineering/cetus/meteor/atriumdeck1)
 "sxi" = (
 /obj/machinery/door/airlock/external{
-	frequency = 1379;
 	icon_state = "door_locked";
-	id_tag = "toxins_outer";
 	locked = 1;
-	name = "Toxins External Access";
-	req_access = list(8,10,13)
+	name = "External Airlock Access";
+	req_access = list(13)
 	},
+/obj/machinery/access_button{
+	dir = 8;
+	name = "exterior access button";
+	pixel_y = -30;
+	pixel_x = -6
+	},
+/obj/effect/map_helper/airlock/button/ext_button,
+/obj/effect/map_helper/airlock/door/ext_door,
 /turf/simulated/floor/tiled/dark,
 /area/rnd/cetus/meteor/toxtest)
 "sxP" = (
@@ -35247,19 +35296,20 @@
 /turf/simulated/floor/tiled/milspec/sterile,
 /area/medical/cetus/atriumd1)
 "szx" = (
-/obj/machinery/door/airlock/external{
-	frequency = 1379;
-	icon_state = "door_locked";
-	id_tag = "toxins_inner";
-	locked = 1;
-	name = "Toxins External Access"
-	},
 /obj/structure/sign/warning/airlock{
 	pixel_y = 32
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
 	},
+/obj/machinery/door/airlock/glass_external{
+	frequency = 1379;
+	icon_state = "door_locked";
+	locked = 1;
+	name = "Internal Airlock Access";
+	req_access = list(13)
+	},
+/obj/effect/map_helper/airlock/door/int_door,
 /turf/simulated/floor/tiled/dark,
 /area/rnd/cetus/meteor/toxtest)
 "szY" = (
@@ -35819,7 +35869,6 @@
 	pixel_y = -32
 	},
 /obj/item/material/twohanded/riding_crop,
-/obj/structure/table/standard,
 /turf/simulated/floor/carpet/retro,
 /area/crew_quarters/sleep/cetus/meteor/dorm2)
 "sNV" = (
@@ -36680,7 +36729,6 @@
 /obj/machinery/atmospherics/pipe/simple/visible/cyan{
 	dir = 4
 	},
-/obj/machinery/atmospherics/pipe/simple/visible/yellow,
 /obj/machinery/atmospherics/pipe/simple/visible/yellow,
 /obj/effect/floor_decal/borderfloorblack/corner,
 /obj/effect/floor_decal/industrial/danger/corner,
@@ -38410,9 +38458,6 @@
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
 	dir = 6
 	},
-/obj/machinery/atmospherics/pipe/simple/visible/yellow{
-	dir = 6
-	},
 /turf/simulated/floor/plating,
 /area/engineering/cetus/meteor/engineroom)
 "ufr" = (
@@ -39381,15 +39426,24 @@
 /turf/simulated/floor/tiled,
 /area/crew_quarters/cetus/meteor/atrium)
 "uDs" = (
-/obj/machinery/atmospherics/pipe/simple/heat_exchanging/junction{
-	dir = 8
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
 	},
-/obj/machinery/atmospherics/pipe/simple/heat_exchanging/junction{
-	dir = 8
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
 	},
-/obj/structure/lattice,
-/turf/simulated/floor/outdoors/rocks/cetus/edge,
-/area/asteroid/cetus/d1)
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 9
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/camera/network/engineering{
+	c_tag = "SUBS- Joint Research";
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/space)
 "uDH" = (
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 1
@@ -40685,25 +40739,24 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/security/cetus/meteor/armory)
 "viF" = (
-/obj/machinery/embedded_controller/radio/airlock/airlock_controller{
-	id_tag = "toxins_airlock";
-	tag_airpump = "toxins_pump";
-	tag_chamber_sensor = "toxins_sensor";
-	tag_exterior_door = "toxins_outer";
-	tag_interior_door = "toxins_inner";
-	pixel_y = -28;
-	dir = 1
-	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	frequency = 1379;
-	id_tag = "toxins_pump";
 	dir = 4
 	},
 /obj/machinery/airlock_sensor{
-	id_tag = "toxins_sensor";
-	pixel_y = 24;
-	pixel_x = -1
+	dir = 1;
+	pixel_y = -23;
+	pixel_x = 5;
+	req_access = list(13)
 	},
+/obj/machinery/embedded_controller/radio/airlock/airlock_controller{
+	id_tag = "tox_test_airlock";
+	dir = 1;
+	pixel_y = -24;
+	pixel_x = -6;
+	req_one_access = list(11, 24, 47, 5)
+	},
+/obj/effect/map_helper/airlock/sensor/chamber_sensor,
+/obj/effect/map_helper/airlock/atmos/chamber_pump,
 /turf/simulated/floor/tiled/dark,
 /area/rnd/cetus/meteor/toxtest)
 "viK" = (
@@ -41109,9 +41162,6 @@
 /turf/simulated/floor/plating,
 /area/engineering/cetus/meteor/atriumdeck1)
 "vqm" = (
-/obj/machinery/atmospherics/pipe/simple/visible/yellow{
-	dir = 4
-	},
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
 	dir = 4
 	},
@@ -44928,7 +44978,6 @@
 /area/crew_quarters/cetus/meteor/barrestrooms)
 "xlw" = (
 /obj/structure/bed/pillowpile/yellow,
-/obj/structure/bed/pillowpilefront/yellow,
 /turf/simulated/floor/carpet/geo,
 /area/maintenance/cetus/cozyobservatory)
 "xlG" = (
@@ -54237,9 +54286,9 @@ qFw
 qFw
 qFw
 qFw
-qFw
-qFw
-qFw
+aKY
+cqS
+dmn
 qFw
 qFw
 qFw
@@ -54495,9 +54544,9 @@ qFw
 qFw
 qFw
 qFw
-qFw
-qFw
-qFw
+gzz
+aIj
+dmn
 qFw
 qFw
 qFw
@@ -54753,9 +54802,9 @@ qFw
 qFw
 qFw
 qFw
-qFw
-qFw
-qFw
+aKY
+cen
+dmn
 qFw
 qFw
 qFw
@@ -55011,9 +55060,9 @@ qFw
 qFw
 qFw
 qFw
-qFw
-qFw
-qFw
+mmB
+uDs
+aKY
 qFw
 qFw
 qFw
@@ -63024,7 +63073,7 @@ tNM
 aKV
 xWm
 xWm
-cqS
+fbI
 fbI
 uyn
 npF
@@ -96088,7 +96137,7 @@ qFw
 qFw
 qFw
 hhG
-aKY
+kBV
 jKv
 hhG
 kBV
@@ -96872,7 +96921,7 @@ hSi
 bZI
 vhP
 hSi
-uDs
+bZI
 uAV
 uAV
 slB
@@ -98154,7 +98203,7 @@ qFw
 qFw
 qFw
 jOt
-gzz
+sKe
 vKe
 xnJ
 bje
