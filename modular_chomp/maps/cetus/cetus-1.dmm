@@ -1223,37 +1223,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/plating,
 /area/engineering/cetus/jointsubstation)
-"aIj" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	dir = 4
-	},
-/obj/effect/map_helper/airlock/atmos/chamber_pump,
-/obj/machinery/airlock_sensor{
-	dir = 1;
-	pixel_y = -23;
-	pixel_x = 5;
-	req_access = list(13)
-	},
-/obj/effect/map_helper/airlock/sensor/chamber_sensor,
-/obj/machinery/embedded_controller/radio/airlock/airlock_controller{
-	id_tag = "aux_support_meteor";
-	dir = 1;
-	pixel_y = -24;
-	pixel_x = -6;
-	req_one_access = list(11, 24, 47, 5)
-	},
-/obj/machinery/light/small/emergency,
-/turf/simulated/floor/plating,
-/area/space)
 "aIl" = (
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/tiled/hydro,
@@ -1364,9 +1333,6 @@
 	},
 /turf/simulated/floor/carpet/graycarpet,
 /area/crew_quarters/cetus/meteor/hallway2)
-"aKY" = (
-/turf/simulated/wall,
-/area/space)
 "aLa" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 4
@@ -1769,19 +1735,19 @@
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/d1port)
 "aUk" = (
+/obj/effect/floor_decal/industrial/warning/cee,
+/obj/effect/floor_decal/industrial/warning/color/red{
+	dir = 4
+	},
 /obj/machinery/atmospherics/unary/vent_pump/engine{
 	external_pressure_bound = 100;
 	external_pressure_bound_default = 0;
-	frequency = 1438;
+	frequency = 1433;
 	icon_state = "map_vent_in";
 	id_tag = "cooling_out";
 	initialize_directions = 1;
 	pump_direction = 0;
 	use_power = 1
-	},
-/obj/effect/floor_decal/industrial/warning/cee,
-/obj/effect/floor_decal/industrial/warning/color/red{
-	dir = 4
 	},
 /turf/simulated/floor/reinforced/nitrogen{
 	nitrogen = 82.1472
@@ -3977,29 +3943,6 @@
 /obj/item/champagne,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/meteor/star)
-"cen" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 4
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/obj/machinery/door/airlock/glass_external{
-	frequency = 1379;
-	icon_state = "door_locked";
-	locked = 1;
-	name = "Internal Airlock Access";
-	req_access = list(13)
-	},
-/obj/effect/map_helper/airlock/door/int_door,
-/turf/simulated/floor/plating,
-/area/space)
 "cez" = (
 /obj/machinery/atmospherics/pipe/simple/heat_exchanging{
 	dir = 5
@@ -4474,32 +4417,6 @@
 	},
 /turf/simulated/floor/carpet/graycarpet,
 /area/crew_quarters/cetus/meteor/hallway2)
-"cqS" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/obj/machinery/door/airlock/external{
-	icon_state = "door_locked";
-	locked = 1;
-	name = "External Airlock Access";
-	req_access = list(13)
-	},
-/obj/effect/map_helper/airlock/door/ext_door,
-/obj/machinery/access_button{
-	dir = 8;
-	name = "exterior access button";
-	pixel_y = -30;
-	pixel_x = -6
-	},
-/obj/effect/map_helper/airlock/button/ext_button,
-/turf/simulated/floor/plating,
-/area/space)
 "cqV" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 9
@@ -8278,7 +8195,7 @@
 /area/crew_quarters/sleep/cetus/meteor/dorm4)
 "ezp" = (
 /obj/machinery/air_sensor{
-	frequency = 1430;
+	frequency = 1431;
 	id_tag = "toxins_mixing_exterior";
 	output = 63
 	},
@@ -8712,13 +8629,13 @@
 /turf/simulated/floor/tiled,
 /area/crew_quarters/cetus/meteor/hallway2)
 "eLN" = (
+/obj/effect/floor_decal/industrial/warning/tile,
+/obj/effect/floor_decal/industrial/warning/color/tile/red,
 /obj/machinery/air_sensor{
-	frequency = 1438;
+	frequency = 1433;
 	id_tag = "engine_sensor";
 	output = 63
 	},
-/obj/effect/floor_decal/industrial/warning/tile,
-/obj/effect/floor_decal/industrial/warning/color/tile/red,
 /turf/simulated/floor/reinforced/nitrogen{
 	nitrogen = 82.1472
 	},
@@ -11930,10 +11847,6 @@
 /obj/effect/floor_decal/corner/yellow/border,
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/cetus/meteor/techstorage)
-"gzz" = (
-/obj/structure/closet/emcloset,
-/turf/simulated/floor/plating,
-/area/space)
 "gzS" = (
 /obj/structure/dancepole,
 /obj/random/junk,
@@ -13881,17 +13794,17 @@
 /turf/simulated/floor/tiled/old_tile/gray,
 /area/maintenance/cetus/construction)
 "hBK" = (
+/obj/effect/landmark{
+	name = "JoinLateCryo"
+	},
 /obj/machinery/embedded_controller/radio/simple_docking_controller/escape_pod{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "cryostorage_shuttle";
 	name = "cryostorage controller";
 	req_access = list(19);
 	tag_door = "cryostorage_shuttle_hatch";
-	pixel_y = -26;
-	dir = 1
-	},
-/obj/effect/landmark{
-	name = "JoinLateCryo"
+	dir = 1;
+	pixel_y = -25
 	},
 /turf/simulated/shuttle/floor,
 /area/shuttle/cryo/station)
@@ -23150,17 +23063,6 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/maintenance/ab_StripBar)
-"mmB" = (
-/obj/machinery/atmospherics/pipe/simple/hidden,
-/obj/machinery/access_button{
-	dir = 4;
-	name = "interior access button";
-	req_one_access = list(11, 24, 47, 5);
-	pixel_x = -24
-	},
-/obj/effect/map_helper/airlock/button/int_button,
-/turf/simulated/floor/plating,
-/area/space)
 "mmF" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
@@ -23807,14 +23709,14 @@
 /turf/simulated/floor/tiled,
 /area/crew_quarters/cetus/meteor/hallway2)
 "mDF" = (
-/obj/machinery/computer/general_air_control{
-	dir = 8;
-	frequency = 1430;
-	name = "Mixing Chamber Monitor";
-	sensors = list("toxins_mixing_exterior"="Mixing Chamber - Exterior","toxins_mixing_interior"="Mixing Chamber - Interior")
-	},
 /obj/machinery/atmospherics/pipe/simple/visible{
 	dir = 10
+	},
+/obj/machinery/computer/general_air_control{
+	dir = 8;
+	frequency = 1431;
+	name = "Mixing Chamber Monitor";
+	sensors = list("toxins_mixing_exterior"="Mixing Chamber - Exterior","toxins_mixing_interior"="Mixing Chamber - Interior")
 	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/cetus/meteor/toxins)
@@ -28438,12 +28340,12 @@
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/meteor/star)
 "pbe" = (
+/obj/structure/fans/tiny,
 /obj/machinery/door/airlock/external{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "cryostorage_shuttle_hatch";
 	name = "Cryogenic Storage Hatch"
 	},
-/obj/structure/fans/tiny,
 /turf/simulated/shuttle/floor,
 /area/shuttle/cryo/station)
 "pbg" = (
@@ -30723,7 +30625,7 @@
 	id = "tox_airlock_pump"
 	},
 /obj/machinery/air_sensor{
-	frequency = 1430;
+	frequency = 1431;
 	id_tag = "toxins_mixing_interior";
 	output = 63;
 	pixel_x = -8;
@@ -31979,15 +31881,15 @@
 /turf/simulated/floor/plating,
 /area/engineering/cetus/meteor/enginewaste)
 "qKf" = (
+/obj/machinery/sparker{
+	id = "mixingsparker";
+	pixel_y = -22
+	},
 /obj/machinery/atmospherics/unary/outlet_injector{
 	dir = 4;
 	frequency = 1443;
 	id = "air_in";
 	use_power = 1
-	},
-/obj/machinery/sparker{
-	id = "mixingsparker";
-	pixel_y = -22
 	},
 /turf/simulated/floor/reinforced/airless,
 /area/rnd/cetus/meteor/toxins)
@@ -36573,6 +36475,10 @@
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/cetus/meteor/pool)
 "thU" = (
+/obj/machinery/sparker{
+	id = "mixingsparker";
+	pixel_y = 22
+	},
 /obj/machinery/atmospherics/unary/vent_pump{
 	dir = 4;
 	external_pressure_bound = 0;
@@ -36585,10 +36491,6 @@
 	pressure_checks_default = 2;
 	pump_direction = 0;
 	use_power = 1
-	},
-/obj/machinery/sparker{
-	id = "mixingsparker";
-	pixel_y = 22
 	},
 /turf/simulated/floor/reinforced/airless,
 /area/rnd/cetus/meteor/toxins)
@@ -37730,18 +37632,18 @@
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/cetus/meteor/barrestrooms)
 "tOS" = (
+/obj/effect/floor_decal/industrial/warning/cee,
+/obj/effect/floor_decal/industrial/warning/color/red{
+	dir = 8
+	},
 /obj/machinery/atmospherics/unary/outlet_injector{
-	frequency = 1438;
+	frequency = 1433;
 	id = "cooling_in";
 	name = "Coolant Injector";
 	pixel_y = 1;
 	power_rating = 30000;
 	use_power = 1;
 	volume_rate = 700
-	},
-/obj/effect/floor_decal/industrial/warning/cee,
-/obj/effect/floor_decal/industrial/warning/color/red{
-	dir = 8
 	},
 /turf/simulated/floor/reinforced/nitrogen{
 	nitrogen = 82.1472
@@ -39425,25 +39327,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/cetus/meteor/atrium)
-"uDs" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 9
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/obj/machinery/camera/network/engineering{
-	c_tag = "SUBS- Joint Research";
-	dir = 1
-	},
-/turf/simulated/floor/plating,
-/area/space)
 "uDH" = (
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 1
@@ -54286,9 +54169,9 @@ qFw
 qFw
 qFw
 qFw
-aKY
-cqS
-dmn
+qFw
+qFw
+qFw
 qFw
 qFw
 qFw
@@ -54544,9 +54427,9 @@ qFw
 qFw
 qFw
 qFw
-gzz
-aIj
-dmn
+qFw
+qFw
+qFw
 qFw
 qFw
 qFw
@@ -54802,9 +54685,9 @@ qFw
 qFw
 qFw
 qFw
-aKY
-cen
-dmn
+qFw
+qFw
+qFw
 qFw
 qFw
 qFw
@@ -55060,9 +54943,9 @@ qFw
 qFw
 qFw
 qFw
-mmB
-uDs
-aKY
+qFw
+qFw
+qFw
 qFw
 qFw
 qFw
