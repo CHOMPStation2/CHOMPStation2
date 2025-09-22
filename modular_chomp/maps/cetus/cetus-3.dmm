@@ -2947,6 +2947,15 @@
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/Atmospherics_Chamber)
+"bVT" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/effect/floor_decal/cetus/andromeda2,
+/turf/simulated/floor/tiled/old_tile/gray,
+/area/maintenance/cetus/shallow/derilect/hallway)
 "bWd" = (
 /obj/structure/dummystairs/bronzeledge{
 	dir = 4
@@ -4188,7 +4197,6 @@
 /area/bridge/sleep/Secretary_Quarters)
 "cKy" = (
 /obj/structure/bed/pillowpile/black,
-/obj/structure/bed/pillowpilefront/black,
 /obj/random/plushie,
 /turf/simulated/floor/carpet/geo,
 /area/maintenance/cetus/arcade)
@@ -11184,7 +11192,6 @@
 	dir = 1
 	},
 /obj/structure/bed/pillowpile/yellow,
-/obj/structure/bed/pillowpilefront/white,
 /turf/simulated/floor/outdoors/rocks/cetus,
 /area/crew_quarters/cetus/lounge)
 "gVc" = (
@@ -12614,7 +12621,6 @@
 /area/maintenance/cetus/threefp)
 "hOo" = (
 /obj/structure/bed/pillowpile/black,
-/obj/structure/bed/pillowpilefront/black,
 /turf/simulated/floor/carpet/geo,
 /area/maintenance/cetus/arcade)
 "hOt" = (
@@ -23068,7 +23074,6 @@
 /area/quartermaster/mininglockerroom)
 "nLr" = (
 /obj/structure/bed/pillowpile/teal,
-/obj/structure/bed/pillowpilefront,
 /turf/simulated/floor/outdoors/rocks/cetus,
 /area/crew_quarters/cetus/lounge)
 "nLW" = (
@@ -27968,7 +27973,6 @@
 	dir = 1
 	},
 /obj/structure/bed/pillowpile/red,
-/obj/structure/bed/pillowpilefront/black,
 /obj/machinery/alarm{
 	dir = 4;
 	pixel_x = -22
@@ -28443,7 +28447,6 @@
 /area/maintenance/cetus/shallow/law)
 "qZO" = (
 /obj/structure/bed/pillowpile/teal,
-/obj/structure/bed/pillowpilefront/teal,
 /obj/random/plushie,
 /turf/simulated/floor/carpet/geo,
 /area/maintenance/cetus/arcade)
@@ -36581,7 +36584,6 @@
 	dir = 4
 	},
 /obj/structure/catwalk,
-/obj/structure/catwalk,
 /obj/item/inflatable/door/torn,
 /obj/random/mob/mouse,
 /turf/simulated/floor/plating,
@@ -39343,7 +39345,6 @@
 /area/bridge)
 "xCp" = (
 /obj/structure/bed/pillowpile/white,
-/obj/structure/bed/pillowpilefront/white,
 /obj/random/plushie,
 /turf/simulated/floor/carpet/geo,
 /area/maintenance/cetus/arcade)
@@ -40272,15 +40273,6 @@
 /obj/random/junk,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/threefs)
-"yfd" = (
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/effect/floor_decal/cetus/andromeda2,
-/turf/simulated/floor/tiled/old_tile/gray,
-/area/maintenance/cetus/shallow/derilect/hallway)
 "yfm" = (
 /obj/structure/transit_tube{
 	icon_state = "D-NE"
@@ -84704,7 +84696,7 @@ ejA
 wql
 oFq
 eTD
-yfd
+bVT
 uIz
 nIu
 rRw
