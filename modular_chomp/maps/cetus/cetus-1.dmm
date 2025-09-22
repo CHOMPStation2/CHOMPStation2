@@ -11984,9 +11984,10 @@
 /turf/simulated/floor/tiled,
 /area/crew_quarters/cetus/meteor/atrium)
 "gEQ" = (
+/obj/structure/lattice,
+/obj/structure/catwalk,
 /obj/machinery/pump_relay,
-/obj/effect/floor_decal/rust,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/water/indoors/station,
 /area/engineering/cetus/meteor/refinery)
 "gET" = (
 /obj/structure/table/reinforced,
@@ -12900,13 +12901,6 @@
 	specialfunctions = 4;
 	pixel_x = 4
 	},
-/obj/machinery/button/windowtint{
-	id = "observation";
-	range = 14;
-	name = "Observation Cell Tint";
-	pixel_x = -5;
-	pixel_y = -1
-	},
 /obj/machinery/button/flasher{
 	name = "Observation Cell Flasher";
 	id = "observation";
@@ -12919,6 +12913,11 @@
 	},
 /obj/machinery/light/fluorescent{
 	dir = 8
+	},
+/obj/machinery/button/windowtint/multitint{
+	id = "observation";
+	pixel_x = -5;
+	pixel_y = -1
 	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/cetus/meteor/carbonresearch)
@@ -23709,12 +23708,10 @@
 /obj/machinery/oxygen_pump/anesthetic{
 	pixel_x = -28
 	},
-/obj/machinery/button/windowtint{
+/obj/machinery/button/windowtint/multitint{
 	id = "expsurgery";
-	range = 14;
-	name = "Surgery Tint";
-	pixel_y = -24;
-	pixel_x = -22
+	pixel_y = -30;
+	pixel_x = -24
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/cetus/meteor/carbonresearch)
@@ -37383,13 +37380,6 @@
 	specialfunctions = 4;
 	pixel_x = 4
 	},
-/obj/machinery/button/windowtint{
-	id = "ward2";
-	range = 14;
-	name = "ward B tint";
-	pixel_x = -5;
-	pixel_y = -1
-	},
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
@@ -37398,6 +37388,11 @@
 	id = "ward2";
 	pixel_y = 8;
 	pixel_x = -5
+	},
+/obj/machinery/button/windowtint/multitint{
+	id = "ward2";
+	pixel_x = -5;
+	pixel_y = -1
 	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/cetus/meteor/carbonresearch)
@@ -43830,13 +43825,6 @@
 	dir = 8
 	},
 /obj/structure/table/standard,
-/obj/machinery/button/windowtint{
-	id = "ward1";
-	range = 14;
-	name = "ward A tint";
-	pixel_x = -5;
-	pixel_y = -1
-	},
 /obj/machinery/button/remote/airlock{
 	id = "ward1";
 	name = "Ward A Bolts";
@@ -43861,6 +43849,11 @@
 	pixel_x = -23;
 	pixel_y = -12;
 	dir = 8
+	},
+/obj/machinery/button/windowtint/multitint{
+	id = "ward1";
+	pixel_x = -5;
+	pixel_y = -1
 	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/cetus/meteor/carbonresearch)
@@ -98181,7 +98174,7 @@ mte
 lvM
 wZX
 lBf
-lCa
+gEQ
 lCa
 oPx
 dxk
@@ -98440,7 +98433,7 @@ lvM
 joK
 aJh
 aJh
-gEQ
+aJh
 hGq
 aJh
 eIp
