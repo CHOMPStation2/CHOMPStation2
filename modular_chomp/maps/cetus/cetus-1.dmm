@@ -1358,6 +1358,12 @@
 /obj/structure/cable/cyan{
 	icon_state = "1-4"
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 5
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 6
+	},
 /turf/simulated/floor/plating,
 /area/engineering/cetus/meteor/smes)
 "aLU" = (
@@ -2756,6 +2762,9 @@
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/meteor/star)
 "bAW" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 1
+	},
 /turf/simulated/floor/tiled,
 /area/engineering/cetus/meteor/refinery)
 "bBb" = (
@@ -7522,6 +7531,7 @@
 /obj/structure/cable/yellow{
 	icon_state = "6-9"
 	},
+/obj/machinery/atmospherics/unary/vent_scrubber/on,
 /turf/simulated/floor/plating,
 /area/engineering/cetus/meteor/smes)
 "egv" = (
@@ -9320,9 +9330,6 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/green{
 	dir = 4
-	},
-/obj/structure/cable/yellow{
-	icon_state = "0-8"
 	},
 /obj/structure/cable/yellow{
 	icon_state = "0-8"
@@ -13009,6 +13016,8 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled,
 /area/engineering/cetus/meteor/refinery)
 "hiY" = (
@@ -13549,6 +13558,8 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/techmaint,
 /area/engineering/cetus/meteor/refinery)
 "hvn" = (
@@ -13587,6 +13598,8 @@
 /obj/structure/cable/green{
 	icon_state = "2-4"
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled,
 /area/engineering/cetus/meteor/atriumdeck1)
 "hwf" = (
@@ -14102,6 +14115,12 @@
 	},
 /obj/structure/cable/yellow{
 	icon_state = "5-6"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/cetus/meteor/enginemonitor)
@@ -15790,12 +15809,6 @@
 /obj/fiftyspawner/floor,
 /turf/simulated/floor/plating,
 /area/engineering/cetus/meteor/refinery)
-"iyJ" = (
-/obj/structure/cable/cyan{
-	icon_state = "4-8"
-	},
-/turf/simulated/floor/tiled/techfloor,
-/area/engineering/cetus/meteor/enginemonitor)
 "izi" = (
 /obj/machinery/light/small{
 	dir = 8
@@ -18185,18 +18198,14 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/spline/plain/three_quarters,
-/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
-	dir = 8
-	},
 /obj/structure/cable/cyan{
 	icon_state = "4-8"
 	},
 /obj/structure/cable/cyan{
 	icon_state = "1-8"
 	},
+/obj/machinery/atmospherics/pipe/manifold4w/hidden/supply,
+/obj/machinery/atmospherics/pipe/manifold4w/visible/scrubbers,
 /turf/simulated/floor/tiled/milspec/raised,
 /area/engineering/cetus/meteor/enginemonitor)
 "jJk" = (
@@ -19403,14 +19412,6 @@
 /area/maintenance/abmedical)
 "klR" = (
 /obj/machinery/door/firedoor/glass/hidden/steel,
-/obj/machinery/power/apc{
-	dir = 1;
-	name = "north bump";
-	pixel_y = 24
-	},
-/obj/structure/cable/green{
-	icon_state = "0-2"
-	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/cetus/meteor/hallway2)
 "klZ" = (
@@ -25089,17 +25090,23 @@
 /turf/simulated/floor/tiled,
 /area/crew_quarters/cetus/meteor/hallway1)
 "ntp" = (
-/obj/machinery/atmospherics/pipe/simple/visible/green{
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/structure/cable/yellow{
-	icon_state = "6-9"
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 1
 	},
-/obj/structure/cable/yellow{
-	icon_state = "4-9"
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 1
+	},
+/obj/structure/catwalk{
+	pixel_x = -1
 	},
 /turf/simulated/floor/plating,
-/area/engineering/cetus/meteor/engineroom)
+/area/engineering/cetus/meteor/atriumdeck1)
 "ntB" = (
 /obj/item/radio/intercom{
 	name = "Station Intercom (General)";
@@ -26359,9 +26366,6 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
-	},
-/obj/structure/cable/green{
-	icon_state = "1-4"
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/crew_quarters/cetus/meteor/hallway2)
@@ -36530,6 +36534,10 @@
 	dir = 4;
 	pixel_y = -12
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 9
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled,
 /area/engineering/cetus/meteor/refinery)
 "tiR" = (
@@ -37048,6 +37056,12 @@
 /obj/machinery/door/airlock/maintenance_hatch{
 	name = "SMES Access";
 	req_access = list(11)
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/engineering/cetus/meteor/enginemonitor)
@@ -38615,16 +38629,6 @@
 /obj/machinery/door/airlock/maintenance,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/d1port)
-"uji" = (
-/obj/machinery/atmospherics/pipe/simple/visible/green{
-	dir = 4
-	},
-/obj/structure/cable/yellow{
-	icon_state = "0-8"
-	},
-/obj/machinery/power/rtg/fake_gen,
-/turf/simulated/floor/plating,
-/area/engineering/cetus/meteor/engineroom)
 "ujw" = (
 /obj/machinery/sleep_console,
 /obj/effect/floor_decal/spline/plain,
@@ -39327,6 +39331,12 @@
 	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/cetus/meteor/atrium)
+"uDs" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/engineering/cetus/meteor/refinery)
 "uDH" = (
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 1
@@ -41477,6 +41487,9 @@
 /obj/item/clothing/glasses/meson,
 /obj/item/reagent_scanner,
 /obj/item/reagent_scanner,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 6
+	},
 /turf/simulated/floor/tiled,
 /area/engineering/cetus/meteor/refinery)
 "vDi" = (
@@ -42600,6 +42613,9 @@
 	},
 /obj/structure/cable{
 	icon_state = "5-8"
+	},
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 1
 	},
 /turf/simulated/floor/plating,
 /area/engineering/cetus/meteor/smes)
@@ -99380,7 +99396,7 @@ lsN
 uHu
 kiR
 cOl
-ntp
+ntG
 aQE
 eQd
 vRJ
@@ -99389,12 +99405,12 @@ vRJ
 vRJ
 vRJ
 vRJ
-nxj
+ntp
 hvI
 huY
 hiV
 tiD
-bAW
+uDs
 lvM
 lvM
 qkf
@@ -99638,7 +99654,7 @@ sKe
 aQE
 cZe
 hTa
-uji
+hTa
 pbC
 eQd
 dmb
@@ -100676,7 +100692,7 @@ kNo
 sKa
 xBI
 muj
-iyJ
+qAi
 sRn
 fFm
 erj
