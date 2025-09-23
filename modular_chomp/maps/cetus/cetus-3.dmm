@@ -1207,6 +1207,7 @@
 	dir = 8;
 	icon_state = "pipe-c"
 	},
+/obj/structure/catwalk,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/shallow/ap)
 "aKm" = (
@@ -1702,13 +1703,11 @@
 /area/crew_quarters/cetus/theater)
 "bet" = (
 /obj/machinery/vending/loadout/costume,
-/obj/machinery/power/apc{
-	dir = 1;
-	name = "north bump";
-	pixel_y = 24
-	},
 /obj/structure/cable/green{
 	icon_state = "0-4"
+	},
+/obj/machinery/alarm{
+	pixel_y = 23
 	},
 /turf/simulated/floor/carpet,
 /area/crew_quarters/cetus/dressing)
@@ -2430,7 +2429,6 @@
 /area/maintenance/cetus/shallow/derilect/engine)
 "bCl" = (
 /obj/structure/bed/chair/office/light,
-/obj/structure/ghost_pod/ghost_activated/morphspawn/no_announce,
 /obj/effect/landmark/event_spawn/morphspawn,
 /turf/simulated/floor/carpet/graycarpet,
 /area/maintenance/cetus/shallow/fp)
@@ -3658,6 +3656,8 @@
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
+/obj/machinery/door/airlock/maintenance,
+/obj/structure/catwalk,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/shallow/ap)
 "cuE" = (
@@ -3918,6 +3918,8 @@
 	c_tag = "ENG - Atmospherics Stairwell D3";
 	dir = 1
 	},
+/obj/machinery/portable_atmospherics/powered/scrubber,
+/obj/machinery/portable_atmospherics/powered/scrubber,
 /turf/simulated/open,
 /area/engineering/Atmospherics_Chamber)
 "cCz" = (
@@ -4602,9 +4604,15 @@
 /turf/simulated/floor/carpet/graycarpet,
 /area/bridge/Deck3_Corridor)
 "cYb" = (
-/obj/machinery/power/apc,
-/turf/simulated/wall,
-/area/medical/cetus/jrfirstaid)
+/obj/machinery/button/remote/blast_door{
+	id = "Cell 3";
+	name = "Cell 3 Door";
+	pixel_x = -27;
+	req_one_access = list(2,4);
+	dir = 4
+	},
+/turf/simulated/floor/outdoors/rocks/cetus/edge,
+/area/thirddeck/roof)
 "cYp" = (
 /obj/machinery/exonet_node{
 	anchored = 1
@@ -5349,7 +5357,6 @@
 /turf/simulated/open,
 /area/maintenance/cetus/auxsupport)
 "dvj" = (
-/obj/machinery/door/airlock/maintenance,
 /turf/simulated/mineral/cetus,
 /area/hallway/primary/firstdeck/vaultlobby)
 "dvB" = (
@@ -6065,6 +6072,7 @@
 /obj/structure/disposalpipe/segment,
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/maintenance,
+/obj/structure/catwalk,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/d3docks)
 "dTP" = (
@@ -6521,6 +6529,7 @@
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
+/obj/structure/catwalk,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/shallow/ap)
 "egE" = (
@@ -6788,6 +6797,7 @@
 /obj/machinery/light{
 	dir = 8
 	},
+/obj/machinery/portable_atmospherics/powered/scrubber,
 /turf/simulated/open,
 /area/engineering/Atmospherics_Chamber)
 "eoS" = (
@@ -6824,6 +6834,11 @@
 	pixel_x = 12;
 	pixel_y = -25;
 	dir = 1
+	},
+/obj/machinery/power/apc{
+	name = "south bump";
+	pixel_y = -24;
+	pixel_x = 2
 	},
 /turf/simulated/floor/tiled/milspec/raised,
 /area/medical/cetus/jrfirstaid)
@@ -7098,6 +7113,7 @@
 /obj/structure/cable/green{
 	icon_state = "9-10"
 	},
+/obj/structure/catwalk,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/shallow/fp)
 "ewb" = (
@@ -7376,9 +7392,6 @@
 /turf/simulated/floor/plating,
 /area/engineering/Solar_Control_ForPort)
 "eEF" = (
-/obj/machinery/atmospherics/unary/vent_pump/on{
-	dir = 4
-	},
 /obj/structure/closet/radiation{
 	anchored = 1;
 	starts_with = list(/obj/item/clothing/suit/radiation=4,/obj/item/clothing/head/radiation=4,/obj/item/geiger=4)
@@ -8096,6 +8109,7 @@
 /obj/structure/micro_tunnel/random{
 	dir = 1
 	},
+/obj/structure/catwalk,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/shallow/ap)
 "fbe" = (
@@ -8598,6 +8612,7 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
+/obj/structure/catwalk,
 /turf/simulated/floor/plating,
 /area/crew_quarters/cetus/Galleryf2)
 "fpl" = (
@@ -8707,6 +8722,9 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
+	},
+/obj/structure/cable/green{
+	icon_state = "0-4"
 	},
 /turf/simulated/floor/wood,
 /area/bridge/sleep/CMO_Quarters)
@@ -9162,6 +9180,7 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/door/firedoor/multi_tile,
+/obj/structure/catwalk,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/threefs)
 "fHX" = (
@@ -9675,6 +9694,9 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 9
+	},
+/obj/structure/cable{
+	icon_state = "1-6"
 	},
 /turf/simulated/floor/tiled/old_tile/blue,
 /area/maintenance/cetus/shallow/derilect/medbay)
@@ -10777,6 +10799,10 @@
 /obj/structure/cable/green{
 	icon_state = "2-8"
 	},
+/obj/machinery/light_switch{
+	pixel_x = 12;
+	pixel_y = 25
+	},
 /turf/simulated/floor/carpet/gaycarpet,
 /area/crew_quarters/cetus/clown)
 "gHl" = (
@@ -10864,6 +10890,7 @@
 	dir = 4
 	},
 /obj/machinery/door/firedoor/glass,
+/obj/structure/catwalk,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/d3docks)
 "gJy" = (
@@ -11711,6 +11738,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/structure/catwalk,
 /turf/simulated/floor/plating,
 /area/crew_quarters/cetus/Galleryf2)
 "hiC" = (
@@ -11851,6 +11879,9 @@
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 1
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/wood,
 /area/bridge/sleep/HoP_Quarters)
@@ -12035,6 +12066,7 @@
 /obj/machinery/door/airlock/maintenance,
 /obj/machinery/door/firedoor/glass,
 /obj/structure/disposalpipe/segment,
+/obj/structure/catwalk,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/threeap)
 "htm" = (
@@ -12234,6 +12266,9 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 9
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/wood,
 /area/bridge/sleep/CE_Quarters)
@@ -12635,6 +12670,7 @@
 	},
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/maintenance,
+/obj/structure/catwalk,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/shallow/ap)
 "hOU" = (
@@ -12825,6 +12861,7 @@
 /obj/machinery/light/small/yellowed{
 	dir = 1
 	},
+/obj/structure/catwalk,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/threeap)
 "hTd" = (
@@ -13332,6 +13369,7 @@
 /obj/machinery/atmospherics/pipe/simple/visible/universal{
 	dir = 4
 	},
+/obj/structure/catwalk,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/threeas)
 "igq" = (
@@ -14089,6 +14127,9 @@
 /obj/structure/disposalpipe/segment{
 	dir = 8;
 	icon_state = "pipe-c"
+	},
+/obj/structure/cable/green{
+	icon_state = "1-8"
 	},
 /turf/simulated/floor/carpet/oracarpet,
 /area/bridge/sleep/CE_Quarters)
@@ -16484,6 +16525,7 @@
 /obj/machinery/door/airlock/maintenance{
 	req_access = list(7)
 	},
+/obj/structure/catwalk,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/threeas)
 "khc" = (
@@ -18515,6 +18557,7 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
+/obj/structure/catwalk,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/d3docks)
 "lnE" = (
@@ -19485,6 +19528,7 @@
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
+/obj/structure/catwalk,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/shallow/ap)
 "lMM" = (
@@ -20436,6 +20480,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/wood,
 /area/bridge/sleep/HoP_Quarters)
 "mlN" = (
@@ -21167,6 +21214,7 @@
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
+/obj/structure/catwalk,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/shallow/ap)
 "mHI" = (
@@ -21570,11 +21618,17 @@
 /obj/item/lipstick/purple{
 	pixel_x = 6
 	},
-/obj/machinery/alarm{
-	pixel_y = 23
-	},
 /obj/structure/cable/green{
 	icon_state = "4-8"
+	},
+/obj/machinery/light_switch{
+	pixel_x = 12;
+	pixel_y = 25
+	},
+/obj/machinery/power/apc{
+	dir = 1;
+	name = "north bump";
+	pixel_y = 24
 	},
 /turf/simulated/floor/carpet,
 /area/crew_quarters/cetus/dressing)
@@ -22813,6 +22867,10 @@
 	pixel_y = 1;
 	pixel_x = -4
 	},
+/obj/item/flashlight/lamp/clown{
+	pixel_y = -8;
+	pixel_x = -15
+	},
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/cetus/Libraryf2)
 "nFo" = (
@@ -22822,6 +22880,9 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/old_tile/gray,
 /area/maintenance/cetus/shallow/derilect/medbay)
 "nFu" = (
@@ -22908,6 +22969,16 @@
 /obj/machinery/light,
 /turf/simulated/floor/tiled/techfloor,
 /area/hallway/primary/firstdeck/vaultcheckpoint)
+"nHW" = (
+/obj/machinery/button/remote/blast_door{
+	id = "Cell 3";
+	name = "Cell 3 Door";
+	pixel_x = -27;
+	req_one_access = list(2,4);
+	dir = 4
+	},
+/turf/space,
+/area/space)
 "nIi" = (
 /obj/effect/floor_decal/spline/plain/corner{
 	dir = 4
@@ -23625,6 +23696,7 @@
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
+/obj/structure/catwalk,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/threeap)
 "ocp" = (
@@ -23698,11 +23770,12 @@
 /turf/simulated/wall,
 /area/maintenance/cetus/nanites)
 "odM" = (
-/obj/structure/cable/green{
-	icon_state = "1-2"
-	},
+/obj/structure/disposalpipe/segment,
+/obj/machinery/door/firedoor/glass,
+/obj/machinery/door/airlock/maintenance,
+/obj/structure/catwalk,
 /turf/simulated/floor/plating,
-/area/maintenance/cetus/threefs)
+/area/maintenance/cetus/threeap)
 "odX" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -24145,7 +24218,9 @@
 	},
 /obj/machinery/light_switch{
 	name = "light switch ";
-	pixel_x = 34
+	pixel_x = 22;
+	dir = 4;
+	pixel_y = -12
 	},
 /obj/item/clamp{
 	pixel_x = 9
@@ -24266,6 +24341,7 @@
 	icon_state = "1-2"
 	},
 /obj/structure/disposalpipe/segment,
+/obj/structure/catwalk,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/shallow/ap)
 "owR" = (
@@ -24472,6 +24548,9 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/wood,
 /area/bridge/sleep/CE_Quarters)
@@ -25152,6 +25231,7 @@
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
+/obj/structure/catwalk,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/shallow/ap)
 "oZU" = (
@@ -25642,6 +25722,9 @@
 "psb" = (
 /obj/structure/closet/walllocker/emerglocker/east,
 /obj/structure/bed/roller,
+/obj/structure/handrail{
+	dir = 8
+	},
 /turf/simulated/shuttle/floor/white,
 /area/shuttle/large_escape_pod1/centcom)
 "pse" = (
@@ -26376,9 +26459,6 @@
 	dir = 8
 	},
 /obj/structure/cable/green{
-	icon_state = "4-8"
-	},
-/obj/structure/cable/green{
 	icon_state = "1-8"
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
@@ -26997,6 +27077,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/disposalpipe/segment,
+/obj/machinery/portable_atmospherics/powered/pump/filled,
 /turf/simulated/open,
 /area/engineering/Atmospherics_Chamber)
 "qdo" = (
@@ -27284,6 +27365,9 @@
 	},
 /obj/structure/disposalpipe/junction{
 	dir = 8
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/carpet/oracarpet,
 /area/bridge/sleep/CE_Quarters)
@@ -27829,6 +27913,7 @@
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
+/obj/structure/catwalk,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/shallow/ap)
 "qHf" = (
@@ -28313,6 +28398,7 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/light/small/yellowed,
+/obj/structure/catwalk,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/shallow/ap)
 "qWG" = (
@@ -28370,6 +28456,9 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
+	},
+/obj/structure/cable/green{
+	icon_state = "0-2"
 	},
 /turf/simulated/floor/wood,
 /area/bridge/sleep/CE_Quarters)
@@ -30019,6 +30108,7 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
+/obj/structure/catwalk,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/threeap)
 "rWu" = (
@@ -30048,6 +30138,9 @@
 /obj/machinery/door/window/brigdoor/westleft{
 	name = "Containment Pen";
 	req_access = list(47)
+	},
+/obj/structure/handrail{
+	dir = 8
 	},
 /turf/simulated/shuttle/floor/purple,
 /area/shuttle/large_escape_pod1/centcom)
@@ -30563,6 +30656,7 @@
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
+/obj/structure/catwalk,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/shallow/ap)
 "sqs" = (
@@ -30628,6 +30722,7 @@
 	icon_state = "32-4"
 	},
 /obj/structure/lattice,
+/obj/machinery/portable_atmospherics/powered/pump/filled,
 /turf/simulated/open,
 /area/engineering/Atmospherics_Chamber)
 "stp" = (
@@ -31183,8 +31278,8 @@
 /area/bridge/sleep/CE_Quarters)
 "sOu" = (
 /obj/structure/table/bench/wooden,
-/obj/item/flashlight/lamp/clown{
-	pixel_y = 5
+/obj/item/flashlight/lamp/green{
+	pixel_y = 4
 	},
 /turf/simulated/floor/carpet,
 /area/crew_quarters/cetus/Libraryf2)
@@ -31211,6 +31306,10 @@
 	},
 /obj/structure/cable/green{
 	icon_state = "0-2"
+	},
+/obj/machinery/light_switch{
+	pixel_x = 12;
+	pixel_y = 25
 	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/cetus/mime)
@@ -32092,6 +32191,9 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 4
 	},
+/obj/structure/cable/green{
+	icon_state = "0-4"
+	},
 /turf/simulated/floor/wood,
 /area/bridge/sleep/HoP_Quarters)
 "tpK" = (
@@ -32332,6 +32434,9 @@
 /obj/machinery/power/apc{
 	name = "south bump";
 	pixel_y = -24
+	},
+/obj/structure/cable{
+	icon_state = "0-9"
 	},
 /turf/simulated/floor/tiled/old_tile,
 /area/maintenance/cetus/shallow/derilect/medbay)
@@ -32869,6 +32974,7 @@
 	name = "north bump";
 	pixel_y = 24
 	},
+/obj/structure/catwalk,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/shallow/ap)
 "tKk" = (
@@ -34333,6 +34439,7 @@
 /obj/machinery/door/airlock/maintenance{
 	req_access = list(7)
 	},
+/obj/structure/catwalk,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/threefs)
 "uCz" = (
@@ -35416,6 +35523,9 @@
 "vha" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/old_tile/blue,
 /area/maintenance/cetus/shallow/derilect/medbay)
 "vhn" = (
@@ -35893,6 +36003,9 @@
 	},
 /obj/effect/floor_decal/industrial/warning,
 /obj/effect/floor_decal/industrial/loading/blue,
+/obj/machinery/computer/cryopod/robot{
+	pixel_x = 30
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/ai_server_room)
 "vDr" = (
@@ -36360,7 +36473,6 @@
 /turf/simulated/floor/tiled,
 /area/bridge)
 "vPS" = (
-/obj/effect/wingrille_spawn/reinforced,
 /obj/structure/cable{
 	icon_state = "6-9"
 	},
@@ -36379,6 +36491,7 @@
 /obj/structure/cable/cyan{
 	icon_state = "0-4"
 	},
+/obj/effect/wingrille_spawn/reinforced_phoron,
 /turf/simulated/floor/plating,
 /area/ai_server_room)
 "vQC" = (
@@ -37518,16 +37631,15 @@
 	pixel_x = -21;
 	pixel_y = -10
 	},
-/obj/item/radio/intercom{
-	broadcasting = 1;
-	name = "Station Intercom (General)";
-	pixel_y = -21
-	},
 /obj/machinery/light_switch{
 	name = "light switch ";
 	pixel_x = 35
 	},
 /obj/machinery/light/small/fluorescent,
+/obj/item/radio/intercom{
+	name = "Station Intercom (General)";
+	pixel_y = -22
+	},
 /turf/simulated/floor/greengrid,
 /area/ai)
 "wwt" = (
@@ -37886,6 +37998,7 @@
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
+/obj/structure/catwalk,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/shallow/ap)
 "wFl" = (
@@ -39227,6 +39340,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
 	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/wood,
 /area/bridge/sleep/CE_Quarters)
 "xzV" = (
@@ -39589,12 +39705,14 @@
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
+/obj/structure/catwalk,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/shallow/ap)
 "xLa" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
+/obj/structure/catwalk,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/shallow/ap)
 "xLs" = (
@@ -39895,6 +40013,12 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/structure/cable/green{
+	icon_state = "0-4"
 	},
 /turf/simulated/floor/wood,
 /area/bridge/sleep/CMO_Quarters)
@@ -54156,7 +54280,7 @@ ibJ
 qHh
 tvD
 epA
-cYb
+sWA
 ely
 ely
 idF
@@ -60090,8 +60214,8 @@ xwa
 xwa
 xwa
 idF
-idF
-idF
+cYb
+cYb
 idF
 idF
 mHS
@@ -60348,8 +60472,8 @@ ely
 idF
 idF
 idF
-idF
-mco
+cYb
+nHW
 mco
 cfA
 hqj
@@ -66096,7 +66220,7 @@ aMA
 kwp
 uow
 edV
-pLD
+odM
 ieU
 gmY
 uow
@@ -72010,7 +72134,7 @@ rRw
 oGD
 fOZ
 fOZ
-aqE
+xdG
 aqE
 nki
 fOZ
@@ -98333,7 +98457,7 @@ cOa
 aFE
 hZi
 aFe
-odM
+cOa
 nOq
 xPg
 odX
