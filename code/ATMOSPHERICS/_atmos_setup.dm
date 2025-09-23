@@ -145,7 +145,7 @@ GLOBAL_LIST_INIT(pipe_colors, list("grey" = PIPE_COLOR_GREY, "red" = PIPE_COLOR_
 	for(var/state in device.IconStates())
 		if(!state || findtext(state, "map"))
 			continue
-		device_icons["vent" + state] = image('icons/atmos/vent_pump.dmi', icon_state = state)
+		device_icons["vent" + state] = image('icons/atmos/vent_pump.dmi', icon_state = "retro_" + state) //CHOMPEDIT - Retro vents
 
 	device = new('icons/atmos/vent_scrubber.dmi')
 	for(var/state in device.IconStates())
