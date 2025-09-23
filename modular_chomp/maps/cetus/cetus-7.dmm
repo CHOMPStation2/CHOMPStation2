@@ -1223,6 +1223,12 @@
 /obj/machinery/smartfridge/chemistry,
 /turf/unsimulated/wall,
 /area/centcom/medical)
+"aGR" = (
+/obj/structure/handrail{
+	dir = 4
+	},
+/turf/simulated/shuttle/floor,
+/area/shuttle/escape/centcom)
 "aGU" = (
 /obj/effect/decal/cleanable/cobweb2{
 	icon_state = "cobweb1"
@@ -2112,6 +2118,12 @@
 	icon_state = "vault"
 	},
 /area/centcom/terminal)
+"bsZ" = (
+/obj/structure/handrail{
+	dir = 1
+	},
+/turf/simulated/shuttle/floor,
+/area/shuttle/escape/centcom)
 "btc" = (
 /obj/item/radio/intercom{
 	broadcasting = 1;
@@ -7063,6 +7075,9 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
 	},
+/obj/structure/handrail{
+	dir = 1
+	},
 /turf/simulated/shuttle/floor/yellow,
 /area/shuttle/transport1/centcom)
 "gwC" = (
@@ -9109,6 +9124,7 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 10
 	},
+/obj/structure/handrail,
 /turf/simulated/shuttle/floor/yellow,
 /area/shuttle/transport1/centcom)
 "ijT" = (
@@ -11104,6 +11120,12 @@
 	icon_state = "dark"
 	},
 /area/syndicate_station)
+"jYD" = (
+/obj/structure/handrail{
+	dir = 8
+	},
+/turf/simulated/shuttle/floor,
+/area/shuttle/escape/centcom)
 "jYI" = (
 /turf/unsimulated/floor{
 	dir = 5;
@@ -12175,6 +12197,12 @@
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/steel_dirty,
 /area/shadekin)
+"kPe" = (
+/obj/structure/handrail{
+	dir = 8
+	},
+/turf/simulated/shuttle/floor/white,
+/area/shuttle/escape/centcom)
 "kPU" = (
 /obj/structure/table/rack,
 /obj/item/clothing/under/color/red,
@@ -12282,6 +12310,12 @@
 	icon_state = "steel"
 	},
 /area/centcom/bar)
+"kUQ" = (
+/obj/structure/handrail{
+	dir = 8
+	},
+/turf/simulated/shuttle/floor/yellow,
+/area/centcom/evac)
 "kVf" = (
 /obj/effect/floor_decal/techfloor/orange{
 	dir = 4
@@ -13058,6 +13092,7 @@
 /area/centcom/living)
 "lLZ" = (
 /obj/effect/floor_decal/industrial/warning,
+/obj/structure/handrail,
 /turf/simulated/shuttle/floor/yellow,
 /area/shuttle/transport1/centcom)
 "lMb" = (
@@ -16174,6 +16209,12 @@
 	},
 /turf/simulated/shuttle/floor/white,
 /area/centcom/evac)
+"pdQ" = (
+/obj/structure/handrail{
+	dir = 8
+	},
+/turf/simulated/shuttle/floor,
+/area/centcom/evac)
 "pdZ" = (
 /obj/machinery/atmospherics/pipe/tank/air{
 	start_pressure = 740.5
@@ -16363,6 +16404,9 @@
 	id_tag = "centcom_shuttle";
 	pixel_y = -27;
 	tag_door = "centcom_shuttle_hatch"
+	},
+/obj/structure/handrail{
+	dir = 1
 	},
 /turf/simulated/shuttle/floor,
 /area/shuttle/transport1/centcom)
@@ -18776,6 +18820,9 @@
 "rOR" = (
 /obj/machinery/atmospherics/pipe/simple/visible{
 	dir = 5
+	},
+/obj/structure/handrail{
+	dir = 4
 	},
 /turf/simulated/shuttle/floor/white,
 /area/shuttle/escape/centcom)
@@ -21610,6 +21657,9 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 9
 	},
+/obj/structure/handrail{
+	dir = 1
+	},
 /turf/simulated/shuttle/floor/yellow,
 /area/shuttle/transport1/centcom)
 "uvs" = (
@@ -21927,6 +21977,12 @@
 	},
 /turf/simulated/floor/reinforced,
 /area/shadekin)
+"uNQ" = (
+/obj/structure/handrail{
+	dir = 4
+	},
+/turf/simulated/shuttle/floor,
+/area/centcom/evac)
 "uNS" = (
 /obj/machinery/door/window/holowindoor{
 	base_state = "right";
@@ -24844,6 +24900,12 @@
 	icon_state = "vault"
 	},
 /area/centcom/specops)
+"xHX" = (
+/obj/structure/handrail{
+	dir = 4
+	},
+/turf/simulated/shuttle/floor/yellow,
+/area/centcom/evac)
 "xHY" = (
 /obj/structure/flora/ausbushes/sparsegrass,
 /turf/simulated/floor/holofloor/grass,
@@ -33676,7 +33738,7 @@ dmo
 azl
 jsR
 uEv
-uEv
+aGR
 kxV
 uEv
 uEv
@@ -34203,7 +34265,7 @@ tCw
 tCw
 tCw
 uEv
-uEv
+bsZ
 dmo
 dmo
 dmo
@@ -35224,7 +35286,7 @@ dmo
 azl
 neF
 uEv
-uEv
+jYD
 kxV
 uEv
 uEv
@@ -35496,7 +35558,7 @@ uEv
 uEv
 nPO
 ykB
-qLu
+kPe
 bjw
 vNF
 szr
@@ -58148,19 +58210,19 @@ hKM
 hNb
 hNb
 hKM
-hKM
+xHX
 hKM
 uxd
 hKM
-hKM
+xHX
 hKM
 kOt
 hKM
-hKM
+xHX
 hKM
 sqk
 hNb
-hNb
+uNQ
 hNb
 osg
 dJm
@@ -58664,19 +58726,19 @@ hKM
 hNb
 hNb
 hKM
-hKM
+kUQ
 hKM
 lFQ
 hKM
-hKM
-hKM
-hNb
-hKM
-hKM
+kUQ
 hKM
 hNb
+hKM
+kUQ
+hKM
 hNb
 hNb
+pdQ
 hNb
 osg
 dJm
