@@ -14056,11 +14056,12 @@
 /turf/simulated/floor/tiled,
 /area/engineering/CE_Office)
 "eVd" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
 /obj/effect/floor_decal/corner_steel_grid{
 	dir = 5
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/central_four)
@@ -14335,9 +14336,6 @@
 /obj/machinery/conveyor{
 	id = "disposalsorter";
 	dir = 10
-	},
-/obj/structure/window/reinforced{
-	dir = 1
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/quartermaster/Recycling)
@@ -15759,8 +15757,8 @@
 "fyZ" = (
 /obj/structure/disposalpipe/sortjunction/flipped{
 	dir = 2;
-	name = "Resleevers";
-	sortType = "Resleevers"
+	name = "Kitchen";
+	sortType = "Kitchen"
 	},
 /obj/effect/floor_decal/corner/green/bordercorner,
 /obj/effect/floor_decal/corner/green/bordercorner{
@@ -22134,7 +22132,7 @@
 /area/medical/cetus/atriumd2)
 "hEK" = (
 /obj/structure/railing/overhang/grey,
-/obj/structure/dummystairs{
+/obj/structure/railing/overhang/grey{
 	dir = 4
 	},
 /turf/simulated/floor/wood,
@@ -33287,9 +33285,6 @@
 /turf/simulated/mineral/cetus,
 /area/crew_quarters/cetus/arcadestorage)
 "lIu" = (
-/obj/structure/disposalpipe/trunk{
-	dir = 1
-	},
 /obj/machinery/alarm{
 	dir = 4;
 	pixel_x = -22
@@ -33299,6 +33294,9 @@
 	},
 /obj/structure/cable/green,
 /obj/machinery/light/small/yellowed,
+/obj/structure/disposalpipe/up{
+	dir = 1
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/twobar)
 "lIv" = (
@@ -33345,9 +33343,13 @@
 /turf/simulated/floor/tiled/hydro,
 /area/rnd/Xenobotany_Lab)
 "lJh" = (
-/obj/structure/dummystairs/greyledge{
+/obj/structure/railing/overhang/grey{
+	dir = 1
+	},
+/obj/structure/railing/overhang/grey{
 	dir = 4
 	},
+/obj/structure/bed/chair/sofa/left/black,
 /turf/simulated/floor/wood,
 /area/crew_quarters/cetus/atrium/primary)
 "lJN" = (
@@ -34979,10 +34981,6 @@
 /turf/simulated/floor/tiled/dark,
 /area/rnd/cetus/chem)
 "mio" = (
-/obj/structure/disposalpipe/segment{
-	dir = 8;
-	icon_state = "pipe-c"
-	},
 /obj/effect/floor_decal/borderfloorblack/corner,
 /obj/effect/floor_decal/corner/black/bordercorner,
 /obj/effect/floor_decal/corner_steel_grid{
@@ -39574,6 +39572,24 @@
 /obj/machinery/shield_diffuser,
 /turf/simulated/floor/tiled/techmaint,
 /area/hallway/secondary/entry/D1)
+"nTv" = (
+/obj/structure/catwalk,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/structure/disposalpipe/sortjunction/flipped{
+	dir = 8;
+	name = "Library";
+	sortType = "Library"
+	},
+/turf/simulated/floor/plating,
+/area/hallway/primary/central_four)
 "nTz" = (
 /obj/structure/railing/overhang/grey{
 	dir = 1
@@ -39954,12 +39970,12 @@
 /obj/item/mail/blank,
 /obj/item/mail/blank,
 /obj/item/mail/blank,
-/obj/structure/disposalpipe/junction{
-	dir = 8;
-	icon_state = "pipe-j2"
-	},
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
 	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/Recycling)
@@ -40094,11 +40110,6 @@
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
-	},
-/obj/structure/disposalpipe/sortjunction/flipped{
-	dir = 8;
-	name = "Library";
-	sortType = "Library"
 	},
 /obj/structure/catwalk,
 /turf/simulated/floor/plating,
@@ -40522,6 +40533,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/old_cargo/white,
 /area/medical/Chemistry)
 "ojh" = (
@@ -40607,16 +40619,16 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/obj/structure/disposalpipe/sortjunction{
-	dir = 8;
-	name = "HoP Office";
-	sortType = "HoP Office"
-	},
 /obj/structure/catwalk,
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /obj/structure/cable/green{
 	icon_state = "1-2"
+	},
+/obj/structure/disposalpipe/sortjunction/flipped{
+	dir = 4;
+	name = "HoP Office";
+	sortType = "HoP Office"
 	},
 /turf/simulated/floor/plating,
 /area/crew_quarters/cetus/atrium/primary)
@@ -44489,11 +44501,6 @@
 	pixel_x = -5;
 	pixel_y = 5
 	},
-/obj/structure/disposalpipe/sortjunction/flipped{
-	name = "Disposals Sorting";
-	sortType = "Disposal Sorting";
-	dir = 1
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
@@ -44502,6 +44509,7 @@
 /obj/machinery/light{
 	dir = 4
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled,
 /area/quartermaster/Recycling)
 "pyy" = (
@@ -51226,6 +51234,19 @@
 /obj/machinery/autolathe,
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/Engineering_Workshop)
+"rHP" = (
+/obj/structure/catwalk,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/structure/disposalpipe/segment,
+/obj/structure/railing/overhang/grey{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/crew_quarters/cetus/atrium/primary)
 "rIa" = (
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 1
@@ -56586,6 +56607,13 @@
 /obj/item/storage/toolbox/mechanical,
 /turf/simulated/floor/tiled/techmaint,
 /area/rnd/Xenobotany_Isolation_Chamber)
+"tvT" = (
+/obj/structure/railing/overhang/grey{
+	dir = 1
+	},
+/obj/structure/bed/chair/sofa/right/black,
+/turf/simulated/floor/wood,
+/area/crew_quarters/cetus/atrium/primary)
 "twA" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/airlock/glass_external{
@@ -58700,6 +58728,16 @@
 /obj/structure/catwalk,
 /turf/simulated/open,
 /area/maintenance/cetus/twosci)
+"uiB" = (
+/obj/machinery/door/firedoor/glass/hidden/steel,
+/obj/effect/floor_decal/borderfloor/corner{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/blue/bordercorner{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/crew_quarters/cetus/atrium/primary)
 "uja" = (
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 4
@@ -60070,6 +60108,16 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/central_two)
+"uHd" = (
+/obj/structure/disposalpipe/segment,
+/obj/effect/floor_decal/corner_steel_grid{
+	dir = 9
+	},
+/obj/structure/railing/overhang/grey{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/crew_quarters/cetus/atrium/primary)
 "uHi" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/blue/border,
@@ -60894,15 +60942,9 @@
 	id = "disposalsorter";
 	dir = 8
 	},
-/obj/structure/window/reinforced{
-	dir = 1
-	},
 /obj/structure/disposalpipe/segment{
 	dir = 4;
 	icon_state = "pipe-c"
-	},
-/obj/machinery/door/window/southleft{
-	req_access = list(50)
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/quartermaster/Recycling)
@@ -67733,10 +67775,7 @@
 /obj/structure/railing/overhang/grey{
 	dir = 8
 	},
-/obj/structure/railing/overhang/grey,
-/obj/structure/bed/chair/sofa/right/black{
-	dir = 1
-	},
+/obj/structure/dummystairs,
 /turf/simulated/floor/wood,
 /area/crew_quarters/cetus/atrium/primary)
 "xrE" = (
@@ -67834,10 +67873,7 @@
 /obj/structure/railing/overhang/grey{
 	dir = 4
 	},
-/obj/structure/railing/overhang/grey,
-/obj/structure/bed/chair/sofa/left/black{
-	dir = 1
-	},
+/obj/structure/dummystairs,
 /turf/simulated/floor/wood,
 /area/crew_quarters/cetus/atrium/primary)
 "xty" = (
@@ -69847,9 +69883,6 @@
 /obj/structure/cable{
 	icon_state = "1-4"
 	},
-/obj/structure/disposalpipe/junction/yjunction{
-	dir = 4
-	},
 /obj/machinery/hologram/holopad,
 /obj/effect/floor_decal/corner/red/bordercorner{
 	dir = 4
@@ -69864,6 +69897,10 @@
 /obj/effect/floor_decal/spline/plain/three_quarters,
 /obj/structure/cable{
 	icon_state = "2-4"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
 	},
 /turf/simulated/floor/tiled/milspec/raised,
 /area/crew_quarters/cetus/atrium/primary)
@@ -101436,7 +101473,7 @@ bMW
 cBU
 unr
 rOH
-dAC
+nTv
 eVd
 mje
 tiL
@@ -101695,7 +101732,7 @@ pIq
 djh
 gcr
 dAC
-eVd
+jKZ
 hco
 dzr
 dxd
@@ -104009,7 +104046,7 @@ olm
 wGZ
 mOJ
 ikE
-rLJ
+uiB
 rLJ
 rLJ
 rLJ
@@ -105549,7 +105586,7 @@ gqU
 rBN
 gnH
 qGT
-nTz
+tvT
 gar
 xtf
 plk
@@ -106323,7 +106360,7 @@ mNQ
 rQH
 pvG
 pvG
-pvG
+rHP
 dgQ
 pvG
 eQo
@@ -106581,7 +106618,7 @@ ciZ
 qwr
 gBO
 xdH
-wmN
+uHd
 xwl
 rzX
 eTx
@@ -106870,7 +106907,7 @@ agq
 jvg
 cTy
 wqp
-wqp
+obB
 wqp
 wqp
 sCf

@@ -14743,8 +14743,8 @@
 	},
 /obj/structure/disposalpipe/sortjunction/flipped{
 	dir = 8;
-	name = "Kitchen";
-	sortType = "Kitchen"
+	name = "Resleevers";
+	sortType = "Resleevers"
 	},
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -35730,8 +35730,7 @@
 /obj/structure/disposalpipe/sortjunction{
 	dir = 8;
 	name = "Research";
-	sortType = "Research";
-	pixel_y = -3
+	sortType = "Research"
 	},
 /obj/structure/lattice,
 /obj/structure/catwalk,
