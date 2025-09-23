@@ -151,7 +151,7 @@ GLOBAL_LIST_INIT(pipe_colors, list("grey" = PIPE_COLOR_GREY, "red" = PIPE_COLOR_
 	for(var/state in device.IconStates())
 		if(!state || findtext(state, "map"))
 			continue
-		device_icons["scrubber" + state] = image('icons/atmos/vent_scrubber.dmi', icon_state = state)
+		device_icons["scrubber" + state] = image('icons/atmos/vent_scrubber.dmi', icon_state = state + "_new") //CHOMPEdit - New Scrubbers
 
 /datum/pipe_icon_manager/proc/gen_omni_icons()
 	if(!omni_icons)
