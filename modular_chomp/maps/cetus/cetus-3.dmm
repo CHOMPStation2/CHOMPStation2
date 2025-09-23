@@ -1623,6 +1623,16 @@
 "bav" = (
 /turf/simulated/wall/r_wall,
 /area/engineering/Solar_Control_AftPort)
+"bbe" = (
+/obj/machinery/button/remote/blast_door{
+	id = "Cell 3";
+	name = "Cell 3 Door";
+	pixel_x = -27;
+	req_one_access = list(2,4);
+	dir = 4
+	},
+/turf/space,
+/area/space)
 "bbg" = (
 /obj/structure/disposalpipe/junction{
 	dir = 8;
@@ -1726,6 +1736,13 @@
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/Atmospherics_Chamber)
+"bff" = (
+/obj/structure/disposalpipe/segment,
+/obj/machinery/door/firedoor/glass,
+/obj/machinery/door/airlock/maintenance,
+/obj/structure/catwalk,
+/turf/simulated/floor/plating,
+/area/maintenance/cetus/threeap)
 "bfu" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -3040,10 +3057,6 @@
 /turf/simulated/floor/tiled/kafel_full,
 /area/bridge/sleep/HoP_Quarters)
 "bXU" = (
-/obj/machinery/atmospherics/binary/pump{
-	dir = 1;
-	name = "N2O to Connector"
-	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
 	},
@@ -3058,6 +3071,10 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/red{
 	dir = 4
+	},
+/obj/machinery/atmospherics/binary/pump{
+	dir = 1;
+	name = "Phoron to Connector"
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/Atmospherics_Chamber)
@@ -3918,7 +3935,6 @@
 	c_tag = "ENG - Atmospherics Stairwell D3";
 	dir = 1
 	},
-/obj/machinery/portable_atmospherics/powered/scrubber,
 /obj/machinery/portable_atmospherics/powered/scrubber,
 /turf/simulated/open,
 /area/engineering/Atmospherics_Chamber)
@@ -22969,16 +22985,6 @@
 /obj/machinery/light,
 /turf/simulated/floor/tiled/techfloor,
 /area/hallway/primary/firstdeck/vaultcheckpoint)
-"nHW" = (
-/obj/machinery/button/remote/blast_door{
-	id = "Cell 3";
-	name = "Cell 3 Door";
-	pixel_x = -27;
-	req_one_access = list(2,4);
-	dir = 4
-	},
-/turf/space,
-/area/space)
 "nIi" = (
 /obj/effect/floor_decal/spline/plain/corner{
 	dir = 4
@@ -23770,12 +23776,8 @@
 /turf/simulated/wall,
 /area/maintenance/cetus/nanites)
 "odM" = (
-/obj/structure/disposalpipe/segment,
-/obj/machinery/door/firedoor/glass,
-/obj/machinery/door/airlock/maintenance,
-/obj/structure/catwalk,
-/turf/simulated/floor/plating,
-/area/maintenance/cetus/threeap)
+/turf/simulated/floor/outdoors/rocks/cetus/edge,
+/area/engineering/Solar_Control_ForPort)
 "odX" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -30195,12 +30197,12 @@
 /turf/simulated/floor/carpet/graycarpet,
 /area/maintenance/cetus/shallow/backstage)
 "rYn" = (
+/obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/atmospherics/omni/atmos_filter{
 	tag_east = 2;
 	tag_north = 1;
 	tag_west = 6
 	},
-/obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled,
 /area/engineering/Atmospherics_Chamber)
 "rYL" = (
@@ -60473,7 +60475,7 @@ idF
 idF
 idF
 cYb
-nHW
+bbe
 mco
 cfA
 hqj
@@ -66220,7 +66222,7 @@ aMA
 kwp
 uow
 edV
-odM
+bff
 ieU
 gmY
 uow
@@ -70050,7 +70052,7 @@ rRw
 rRw
 jOC
 rRw
-aSw
+odM
 aSw
 aSw
 aSw
