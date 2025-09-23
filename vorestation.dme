@@ -369,11 +369,7 @@
 #include "code\_onclick\hud\robot.dm"
 #include "code\_onclick\hud\robot_vr.dm"
 #include "code\_onclick\hud\screen_objects.dm"
-<<<<<<< HEAD
 #include "code\_onclick\hud\screen_objects_ch.dm"
-#include "code\_onclick\hud\screen_objects_vr.dm"
-=======
->>>>>>> 12b13d6b24 (Modernizing doors (#18511))
 #include "code\_onclick\hud\skybox.dm"
 #include "code\_onclick\hud\soulcatcher_guest.dm"
 #include "code\_onclick\hud\spell_screen_objects.dm"
