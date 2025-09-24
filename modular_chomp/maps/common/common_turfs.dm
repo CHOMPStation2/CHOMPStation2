@@ -69,7 +69,6 @@
 	floor_name = "rocks"
 	outdoors = FALSE
 	ignore_cavegen = TRUE
-	ignore_mapgen = TRUE
 	sand_icon_path = 'icons/turf/outdoors.dmi'
 	sand_icon_state = "rock_brown"
 	oxygen		= MOLES_O2STANDARD
@@ -95,6 +94,7 @@
 	sand_icon_path = 'icons/turf/outdoors.dmi'
 	sand_icon_state = "rock_brown"
 	icon_state = "rock-dark"
+	ignore_mapgen = TRUE
 	oxygen = 0
 	nitrogen = 0
 	temperature = TCMB

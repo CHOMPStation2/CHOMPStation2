@@ -4678,9 +4678,7 @@
 	icon_state = "1-2"
 	},
 /obj/structure/disposalpipe/segment,
-/obj/machinery/atmospherics/unary/vent_scrubber/on{
-	dir = 1
-	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/techmaint,
 /area/medical/cetus/hall)
 "bFD" = (
@@ -11997,7 +11995,6 @@
 /turf/simulated/floor/plating,
 /area/hallway/primary/central_two)
 "efX" = (
-/obj/structure/closet/secure_closet/atmos_personal,
 /obj/item/gps/engineering,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/camera/network/engineering{
@@ -12006,6 +12003,7 @@
 	},
 /obj/item/pickaxe/drill,
 /obj/item/clothing/under/swimsuit/fluff/engineering,
+/obj/structure/closet/secure_closet/engineering_personal,
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/Locker_Room)
 "egc" = (
@@ -24121,6 +24119,9 @@
 	icon_state = "1-2"
 	},
 /obj/structure/disposalpipe/segment,
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/medical/cetus/hall)
 "inm" = (
@@ -37447,7 +37448,6 @@
 /turf/simulated/floor/grass,
 /area/hydroponics)
 "naa" = (
-/obj/structure/closet/secure_closet/atmos_personal,
 /obj/item/gps/engineering,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/effect/floor_decal/borderfloor/corner{
@@ -37458,6 +37458,7 @@
 	},
 /obj/item/pickaxe/drill,
 /obj/item/clothing/under/swimsuit/fluff/engineering,
+/obj/structure/closet/secure_closet/engineering_personal,
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/Locker_Room)
 "nay" = (
@@ -38301,9 +38302,7 @@
 /obj/effect/floor_decal/spline/plain{
 	dir = 4
 	},
-/obj/machinery/atmospherics/unary/vent_pump/on{
-	dir = 1
-	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/techmaint,
 /area/medical/cetus/hall)
 "nso" = (
@@ -41343,9 +41342,6 @@
 /obj/structure/railing/overhang/grey{
 	dir = 1
 	},
-/obj/machinery/alarm{
-	pixel_y = 22
-	},
 /obj/machinery/firealarm{
 	pixel_y = 36
 	},
@@ -43100,7 +43096,6 @@
 /turf/simulated/floor/tiled,
 /area/teleporter/arrivals)
 "oZE" = (
-/obj/structure/closet/secure_closet/atmos_personal,
 /obj/item/gps/engineering,
 /obj/item/radio/intercom{
 	dir = 8;
@@ -43110,6 +43105,7 @@
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/item/pickaxe/drill,
 /obj/item/clothing/under/swimsuit/fluff/engineering,
+/obj/structure/closet/secure_closet/engineering_personal,
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/Locker_Room)
 "oZH" = (
@@ -51384,19 +51380,6 @@
 /obj/machinery/autolathe,
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/Engineering_Workshop)
-"rHP" = (
-/obj/structure/catwalk,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
-/obj/structure/disposalpipe/segment,
-/obj/structure/railing/overhang/grey{
-	dir = 4
-	},
-/turf/simulated/floor/plating,
-/area/crew_quarters/cetus/atrium/primary)
 "rIa" = (
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 1
@@ -54458,7 +54441,6 @@
 /turf/simulated/floor/tiled/dark,
 /area/rnd/Circuitry_Den)
 "sLl" = (
-/obj/structure/closet/secure_closet/atmos_personal,
 /obj/item/gps/engineering,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/light{
@@ -54467,6 +54449,7 @@
 	},
 /obj/item/pickaxe/drill,
 /obj/item/clothing/under/swimsuit/fluff/engineering,
+/obj/structure/closet/secure_closet/engineering_personal,
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/Locker_Room)
 "sLo" = (
@@ -55777,6 +55760,9 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
+	},
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 1
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/medical/cetus/hall)
@@ -60298,16 +60284,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/central_two)
-"uHd" = (
-/obj/structure/disposalpipe/segment,
-/obj/effect/floor_decal/corner_steel_grid{
-	dir = 9
-	},
-/obj/structure/railing/overhang/grey{
-	dir = 4
-	},
-/turf/simulated/floor/tiled,
-/area/crew_quarters/cetus/atrium/primary)
 "uHi" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/blue/border,
@@ -63880,16 +63856,6 @@
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
 /turf/simulated/floor/tiled/techfloor,
 /area/hallway/secondary/entry/D3)
-"vYi" = (
-/obj/machinery/door/firedoor/glass,
-/obj/effect/wingrille_spawn/reinforced/polarized{
-	id = "tabletop_window_tint"
-	},
-/obj/effect/floor_decal/carpet{
-	dir = 6
-	},
-/turf/simulated/floor/plating,
-/area/crew_quarters/cetus/atrium/primary)
 "vYj" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -103224,7 +103190,7 @@ lhe
 eIk
 vDk
 eIk
-vYi
+eIk
 eIk
 sgp
 rXa
@@ -106567,7 +106533,7 @@ mNQ
 rQH
 pvG
 pvG
-rHP
+pvG
 dgQ
 pvG
 eQo
@@ -106825,7 +106791,7 @@ ciZ
 qwr
 gBO
 xdH
-uHd
+wmN
 xwl
 rzX
 eTx
