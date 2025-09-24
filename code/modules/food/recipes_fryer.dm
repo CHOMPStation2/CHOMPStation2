@@ -207,9 +207,7 @@
 *	)
 *	result = /obj/item/storage/box/wings //This is kinda like the donut box.
 //VOREStation Add End
-<<<<<<< HEAD
 Chomp remove end */
-=======
 
 /datum/recipe/churro
 	appliance = FRYER
@@ -217,4 +215,3 @@ Chomp remove end */
 		/obj/item/reagent_containers/food/snacks/doughslice
 		)
 	result = /obj/item/reagent_containers/food/snacks/churro
->>>>>>> dd25c2e177 (Upports Churros (#18553))
