@@ -31442,18 +31442,6 @@
 "qAm" = (
 /turf/simulated/floor/water/indoors/station,
 /area/maintenance/cetus/meteor/central)
-"qAt" = (
-/obj/effect/floor_decal/industrial/warning{
-	layer = 3;
-	dir = 1
-	},
-/obj/effect/floor_decal/spline/plain,
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/obj/structure/sink,
-/turf/simulated/floor/tiled/milspec/sterile,
-/area/medical/cetus/atriumd1)
 "qAA" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -74186,7 +74174,7 @@ qCB
 mgq
 rEv
 rvL
-qAt
+igG
 aGZ
 uMs
 wEb

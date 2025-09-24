@@ -637,6 +637,10 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
+/obj/structure/window/phoronreinforced/full,
+/obj/structure/cable{
+	icon_state = "0-8"
+	},
 /turf/simulated/floor/plating,
 /area/ai)
 "ary" = (
@@ -7086,11 +7090,10 @@
 	dir = 1
 	},
 /obj/structure/railing/overhang/hazard/nanite{
-	dir = 4;
-	icon_state = "active_railing0"
+	dir = 8
 	},
 /obj/structure/railing/overhang/hazard/nanite{
-	dir = 8
+	dir = 4
 	},
 /turf/simulated/floor/water/digestive_enzymes/nanites{
 	id = "aichambernanite"
@@ -12982,8 +12985,7 @@
 "hUN" = (
 /obj/structure/railing/overhang/hazard/nanite,
 /obj/structure/railing/overhang/hazard/nanite{
-	dir = 4;
-	icon_state = "active_railing0"
+	dir = 4
 	},
 /turf/simulated/floor/water/digestive_enzymes/nanites{
 	id = "maintnanites"
@@ -17550,6 +17552,10 @@
 	dir = 4
 	},
 /obj/effect/wingrille_spawn/reinforced_phoron,
+/obj/structure/window/phoronreinforced/full,
+/obj/structure/cable{
+	icon_state = "0-8"
+	},
 /turf/simulated/floor/plating,
 /area/ai)
 "kJY" = (
@@ -23615,8 +23621,7 @@
 	dir = 1
 	},
 /obj/structure/railing/overhang/hazard/nanite{
-	dir = 4;
-	icon_state = "active_railing0"
+	dir = 4
 	},
 /turf/simulated/floor/water/digestive_enzymes/nanites{
 	id = "maintnanites"
@@ -24105,6 +24110,10 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
+	},
+/obj/structure/window/phoronreinforced/full,
+/obj/structure/cable{
+	icon_state = "0-8"
 	},
 /turf/simulated/floor/plating,
 /area/ai)
@@ -25596,8 +25605,7 @@
 /area/crew_quarters/cetus/Libraryf2)
 "pnq" = (
 /obj/structure/railing/overhang/hazard/nanite{
-	dir = 4;
-	icon_state = "active_railing0"
+	dir = 4
 	},
 /turf/simulated/floor/water/digestive_enzymes/nanites{
 	id = "maintnanites"
@@ -27425,11 +27433,10 @@
 /turf/simulated/floor/tiled,
 /area/engineering/Atmospherics_Chamber)
 "qpa" = (
-/obj/structure/railing/overhang/hazard/nanite{
-	dir = 4;
-	icon_state = "active_railing0"
-	},
 /obj/machinery/light/small/fluorescent{
+	dir = 4
+	},
+/obj/structure/railing/overhang/hazard/nanite{
 	dir = 4
 	},
 /turf/simulated/floor/water/digestive_enzymes/nanites{
@@ -36473,6 +36480,7 @@
 	icon_state = "0-4"
 	},
 /obj/effect/wingrille_spawn/reinforced_phoron,
+/obj/structure/window/phoronreinforced/full,
 /turf/simulated/floor/plating,
 /area/ai_server_room)
 "vQC" = (
