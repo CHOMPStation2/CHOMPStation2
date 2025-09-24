@@ -136,6 +136,11 @@
 /obj/effect/recycler_vendor_beacon,
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/forestarboard)
+"aay" = (
+/obj/structure/table/marble,
+/obj/machinery/reagentgrinder,
+/turf/simulated/floor/plating,
+/area/maintenance/thirddeck/aftport)
 "aaM" = (
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 4
@@ -17513,11 +17518,6 @@
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/crew_quarters/seconddeck/gym)
-"oHV" = (
-/obj/structure/table/marble,
-/obj/machinery/reagentgrinder,
-/turf/simulated/floor/plating,
-/area/maintenance/thirddeck/aftport)
 "oIl" = (
 /obj/machinery/floodlight,
 /obj/structure/disposalpipe/segment,
@@ -54520,7 +54520,7 @@ tcw
 tcw
 tld
 lcO
-oHV
+aay
 dIo
 ppD
 ieB

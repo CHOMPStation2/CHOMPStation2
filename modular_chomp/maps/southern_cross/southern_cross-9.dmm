@@ -2,6 +2,26 @@
 "aa" = (
 /turf/space,
 /area/space)
+"ab" = (
+/obj/structure/closet/emcloset,
+/obj/item/radio/intercom{
+	dir = 8;
+	name = "Station Intercom (General)";
+	pixel_x = -21
+	},
+/obj/structure/handrail,
+/turf/simulated/shuttle/floor/white,
+/area/shuttle/arrival/pre_game)
+"ac" = (
+/obj/structure/closet/emcloset,
+/obj/item/radio/intercom{
+	dir = 4;
+	name = "Station Intercom (General)";
+	pixel_x = 21
+	},
+/obj/structure/handrail,
+/turf/simulated/shuttle/floor/white,
+/area/shuttle/arrival/pre_game)
 "ag" = (
 /turf/simulated/sky/moving/north/sif/planet_fall,
 /area/space)
@@ -378,7 +398,9 @@
 	name = "Station Intercom (General)";
 	pixel_x = 21
 	},
-/obj/structure/handrail,
+/obj/structure/handrail{
+	dir = 8
+	},
 /turf/simulated/shuttle/floor/white,
 /area/shuttle/arrival/pre_game)
 "iR" = (
@@ -445,36 +467,12 @@
 	},
 /turf/simulated/shuttle/floor/white,
 /area/shuttle/arrival/pre_game)
-"qx" = (
-/obj/structure/closet/emcloset,
-/obj/item/radio/intercom{
-	dir = 4;
-	name = "Station Intercom (General)";
-	pixel_x = 21
-	},
-/obj/structure/handrail{
-	dir = 8
-	},
-/turf/simulated/shuttle/floor/white,
-/area/shuttle/arrival/pre_game)
 "qU" = (
 /obj/effect/step_trigger/teleporter/landmark{
 	landmark_id = "fall_sif"
 	},
 /turf/simulated/sky/moving/south,
 /area/space)
-"rr" = (
-/obj/structure/closet/emcloset,
-/obj/item/radio/intercom{
-	dir = 8;
-	name = "Station Intercom (General)";
-	pixel_x = -21
-	},
-/obj/structure/handrail{
-	dir = 4
-	},
-/turf/simulated/shuttle/floor/white,
-/area/shuttle/arrival/pre_game)
 "ry" = (
 /turf/simulated/shuttle/wall/hard_corner,
 /area/shuttle/arrival/pre_game)
@@ -631,7 +629,9 @@
 	name = "Station Intercom (General)";
 	pixel_x = -21
 	},
-/obj/structure/handrail,
+/obj/structure/handrail{
+	dir = 4
+	},
 /turf/simulated/shuttle/floor/white,
 /area/shuttle/arrival/pre_game)
 "PA" = (
@@ -8731,7 +8731,7 @@ at
 Sc
 Sc
 Sc
-Nx
+ab
 Rs
 Hw
 dQ
@@ -8741,7 +8741,7 @@ tB
 jT
 Hw
 Hw
-rr
+Nx
 EG
 qb
 at
@@ -10279,7 +10279,7 @@ at
 Sc
 Sc
 Sc
-ij
+ac
 Hw
 Hw
 qg
@@ -10289,7 +10289,7 @@ tB
 qg
 Hw
 Hw
-qx
+ij
 So
 qb
 at

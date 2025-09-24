@@ -297,6 +297,24 @@
 	},
 /turf/simulated/shuttle/floor/black,
 /area/shuttle/merchant)
+"aaQ" = (
+/obj/structure/handrail{
+	dir = 8
+	},
+/turf/simulated/shuttle/floor/white,
+/area/shuttle/escape/centcom)
+"aaR" = (
+/obj/structure/handrail{
+	dir = 1
+	},
+/turf/simulated/shuttle/floor,
+/area/shuttle/escape/centcom)
+"aaS" = (
+/obj/structure/handrail{
+	dir = 4
+	},
+/turf/simulated/shuttle/floor,
+/area/shuttle/escape/centcom)
 "aaT" = (
 /obj/machinery/biogenerator,
 /turf/unsimulated/floor{
@@ -600,6 +618,52 @@
 	},
 /turf/simulated/shuttle/floor/black,
 /area/centcom/evac)
+"aby" = (
+/obj/structure/handrail{
+	dir = 8
+	},
+/turf/simulated/shuttle/floor,
+/area/shuttle/escape/centcom)
+"abz" = (
+/obj/structure/handrail{
+	dir = 1
+	},
+/turf/simulated/shuttle/floor/red,
+/area/shuttle/response_ship)
+"abA" = (
+/obj/structure/handrail,
+/turf/simulated/shuttle/floor/red,
+/area/shuttle/response_ship)
+"abB" = (
+/obj/structure/handrail{
+	dir = 4
+	},
+/turf/simulated/shuttle/floor/white,
+/area/shuttle/skipjack)
+"abC" = (
+/obj/structure/handrail{
+	dir = 8
+	},
+/turf/simulated/shuttle/floor/skipjack,
+/area/shuttle/syndicate_elite/mothership)
+"abD" = (
+/obj/effect/landmark{
+	name = "Syndicate-Commando-Bomb"
+	},
+/obj/structure/handrail{
+	dir = 4
+	},
+/turf/simulated/shuttle/floor/skipjack,
+/area/shuttle/syndicate_elite/mothership)
+"abE" = (
+/obj/effect/landmark{
+	name = "Syndicate-Commando-Bomb"
+	},
+/obj/structure/handrail{
+	dir = 8
+	},
+/turf/simulated/shuttle/floor/skipjack,
+/area/shuttle/syndicate_elite/mothership)
 "acE" = (
 /obj/structure/table/standard,
 /obj/effect/floor_decal/corner/paleblue{
@@ -2122,12 +2186,6 @@
 	icon_state = "steel"
 	},
 /area/centcom/bar)
-"buf" = (
-/obj/structure/handrail{
-	dir = 8
-	},
-/turf/simulated/shuttle/floor,
-/area/shuttle/escape/centcom)
 "bum" = (
 /obj/structure/table/woodentable,
 /turf/unsimulated/floor{
@@ -2323,12 +2381,6 @@
 	name = "plating"
 	},
 /area/shuttle/trade)
-"bGa" = (
-/obj/structure/handrail{
-	dir = 1
-	},
-/turf/simulated/shuttle/floor,
-/area/shuttle/escape/centcom)
 "bGq" = (
 /obj/structure/closet,
 /obj/item/clothing/shoes/sandal/marisa{
@@ -3120,12 +3172,6 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shadekin)
-"coU" = (
-/obj/structure/handrail{
-	dir = 1
-	},
-/turf/simulated/shuttle/floor/red,
-/area/shuttle/response_ship)
 "cpo" = (
 /obj/structure/bed/chair/comfy/black,
 /turf/simulated/shuttle/floor/black,
@@ -6581,15 +6627,6 @@
 	icon_state = "dark"
 	},
 /area/centcom/specops)
-"fQN" = (
-/obj/effect/landmark{
-	name = "Syndicate-Commando-Bomb"
-	},
-/obj/structure/handrail{
-	dir = 8
-	},
-/turf/simulated/shuttle/floor/skipjack,
-/area/shuttle/syndicate_elite/mothership)
 "fRb" = (
 /obj/structure/table/rack/shelf/steel,
 /turf/simulated/floor/carpet/green,
@@ -6637,12 +6674,6 @@
 	icon_state = "freezerfloor"
 	},
 /area/syndicate_station)
-"fSJ" = (
-/obj/structure/handrail{
-	dir = 8
-	},
-/turf/simulated/shuttle/floor/white,
-/area/shuttle/escape/centcom)
 "fSM" = (
 /obj/structure/sign/clock,
 /turf/simulated/wall/tgmc/darkwall,
@@ -7525,12 +7556,6 @@
 	name = "plating"
 	},
 /area/wizard_station)
-"gLP" = (
-/obj/structure/handrail{
-	dir = 8
-	},
-/turf/simulated/shuttle/floor/skipjack,
-/area/shuttle/syndicate_elite/mothership)
 "gMu" = (
 /obj/structure/table/reinforced,
 /obj/structure/window/reinforced{
@@ -12060,10 +12085,6 @@
 	icon_state = "vault"
 	},
 /area/centcom/specops)
-"kAq" = (
-/obj/structure/handrail,
-/turf/simulated/shuttle/floor/red,
-/area/shuttle/response_ship)
 "kAv" = (
 /obj/structure/sink{
 	dir = 8;
@@ -14645,15 +14666,6 @@
 /obj/machinery/computer/crew,
 /turf/simulated/shuttle/floor,
 /area/shuttle/escape/centcom)
-"neH" = (
-/obj/effect/landmark{
-	name = "Syndicate-Commando-Bomb"
-	},
-/obj/structure/handrail{
-	dir = 4
-	},
-/turf/simulated/shuttle/floor/skipjack,
-/area/shuttle/syndicate_elite/mothership)
 "neI" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 4
@@ -15552,12 +15564,6 @@
 "nZC" = (
 /turf/simulated/shuttle/wall/dark/hard_corner,
 /area/centcom/specops)
-"nZI" = (
-/obj/structure/handrail{
-	dir = 4
-	},
-/turf/simulated/shuttle/floor/white,
-/area/shuttle/skipjack)
 "oal" = (
 /obj/item/material/knife{
 	pixel_x = 8
@@ -17920,12 +17926,6 @@
 	},
 /turf/simulated/floor/carpet/turcarpet,
 /area/shadekin)
-"qKD" = (
-/obj/structure/handrail{
-	dir = 4
-	},
-/turf/simulated/shuttle/floor,
-/area/shuttle/escape/centcom)
 "qKM" = (
 /obj/structure/window/reinforced{
 	dir = 8
@@ -34092,8 +34092,8 @@ vFi
 dmo
 azl
 jsR
-qKD
-qKD
+aaS
+aaS
 kxV
 uEv
 uEv
@@ -34351,7 +34351,7 @@ boQ
 uiw
 lpt
 uEv
-buf
+aby
 kKV
 uEv
 uEv
@@ -34620,7 +34620,7 @@ tCw
 tCw
 tCw
 uEv
-bGa
+aaR
 dmo
 dmo
 dmo
@@ -35124,7 +35124,7 @@ vFi
 boQ
 eHc
 qPX
-bGa
+aaR
 azl
 azl
 tvl
@@ -35383,7 +35383,7 @@ boQ
 rBj
 uBb
 uEv
-qKD
+aaS
 kKV
 uEv
 uEv
@@ -35640,8 +35640,8 @@ vFi
 dmo
 azl
 neF
-buf
-buf
+aby
+aby
 kxV
 uEv
 uEv
@@ -35913,7 +35913,7 @@ uEv
 uEv
 nPO
 ykB
-fSJ
+aaQ
 bjw
 vNF
 szr
@@ -48198,7 +48198,7 @@ vHC
 vHC
 rJt
 mSP
-kAq
+abA
 oWN
 aMH
 mSP
@@ -48456,7 +48456,7 @@ vHC
 vHC
 rJt
 mSP
-kAq
+abA
 yfA
 gWd
 mSP
@@ -48714,7 +48714,7 @@ vHC
 vHC
 rJt
 mSP
-kAq
+abA
 wqS
 dcJ
 mSP
@@ -48972,7 +48972,7 @@ vHC
 vHC
 rJt
 mSP
-kAq
+abA
 wqS
 dcJ
 mSP
@@ -49232,7 +49232,7 @@ rJt
 mSP
 rMY
 wqS
-coU
+abz
 mSP
 jlo
 vFi
@@ -49490,7 +49490,7 @@ rJt
 mSP
 gCg
 wqS
-coU
+abz
 mSP
 jlo
 vFi
@@ -73628,7 +73628,7 @@ uUP
 vaG
 vaG
 wSS
-nZI
+abB
 xVZ
 muP
 muP
@@ -87785,7 +87785,7 @@ vFi
 dtV
 akj
 aUi
-neH
+abD
 cfK
 cfK
 dJx
@@ -88301,9 +88301,9 @@ vFi
 dtV
 apr
 aUi
-fQN
-gLP
-gLP
+abE
+abC
+abC
 dJA
 dJA
 fWi

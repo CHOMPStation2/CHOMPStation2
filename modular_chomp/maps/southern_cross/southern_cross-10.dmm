@@ -46,12 +46,31 @@
 "an" = (
 /turf/simulated/floor/water/deep,
 /area/surface/outside/river/svartan)
+"ao" = (
+/obj/effect/floor_decal/borderfloorwhite{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/paleblue/border{
+	dir = 1
+	},
+/obj/structure/curtain/medical{
+	name = "medical curtain"
+	},
+/turf/simulated/floor/tiled/white,
+/area/surface/outpost/shelter)
 "ap" = (
 /turf/simulated/floor/outdoors/dirt/sif/planetuse,
 /area/surface/outside/wilderness/normal)
 "aq" = (
 /turf/simulated/floor/plating/sif/planetuse,
 /area/surface/outside/path/wilderness)
+"ar" = (
+/obj/machinery/camera/network/carrier{
+	c_tag = "WILD - Shelter Exterior Dorms";
+	dir = 1
+	},
+/turf/simulated/floor/outdoors/grass/sif/planetuse,
+/area/surface/outpost/shelter/exterior)
 "as" = (
 /turf/simulated/wall/wood/turfpack/sif,
 /area/surface/outside/path/wilderness)
@@ -130,6 +149,13 @@
 /obj/effect/zone_divider,
 /turf/simulated/floor/outdoors/grass/sif/planetuse,
 /area/surface/outside/wilderness/normal)
+"aI" = (
+/obj/machinery/camera/network/carrier{
+	c_tag = "WILD - Shelter Exterior 2";
+	dir = 1
+	},
+/turf/simulated/floor/outdoors/dirt/sif/planetuse,
+/area/surface/outpost/shelter/exterior)
 "aJ" = (
 /turf/simulated/floor/outdoors/rocks/sif/planetuse,
 /area/surface/outside/wilderness/deep)
@@ -1044,18 +1070,6 @@
 	},
 /turf/simulated/floor/wood/sif,
 /area/surface/outpost/shelter/dorms)
-"vR" = (
-/obj/effect/floor_decal/borderfloorwhite{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/paleblue/border{
-	dir = 1
-	},
-/obj/structure/curtain/medical{
-	name = "medical curtain"
-	},
-/turf/simulated/floor/tiled/white,
-/area/surface/outpost/shelter)
 "wg" = (
 /obj/machinery/light,
 /turf/simulated/floor/outdoors/dirt/sif/planetuse,
@@ -1219,13 +1233,6 @@
 	},
 /turf/simulated/floor/wood/sif,
 /area/surface/outpost/shelter/dorms)
-"Dd" = (
-/obj/machinery/camera/network/carrier{
-	c_tag = "WILD - Shelter Exterior Dorms";
-	dir = 1
-	},
-/turf/simulated/floor/outdoors/grass/sif/planetuse,
-/area/surface/outpost/shelter/exterior)
 "Dk" = (
 /obj/structure/sign/department/medbay{
 	name = "FIRST AID"
@@ -1633,13 +1640,6 @@
 	icon_state = "2-4"
 	},
 /turf/simulated/floor/wood/sif,
-/area/surface/outpost/shelter/exterior)
-"Wn" = (
-/obj/machinery/camera/network/carrier{
-	c_tag = "WILD - Shelter Exterior 2";
-	dir = 1
-	},
-/turf/simulated/floor/outdoors/dirt/sif/planetuse,
 /area/surface/outpost/shelter/exterior)
 "Wo" = (
 /obj/effect/floor_decal/borderfloorwhite{
@@ -45428,7 +45428,7 @@ aT
 ba
 ba
 ba
-vR
+ao
 ba
 ba
 aU
@@ -46198,7 +46198,7 @@ iB
 aV
 aV
 aW
-Wn
+aI
 ba
 xj
 rv
@@ -49037,7 +49037,7 @@ aG
 aG
 aG
 aW
-Dd
+ar
 Ge
 Ge
 Ge
