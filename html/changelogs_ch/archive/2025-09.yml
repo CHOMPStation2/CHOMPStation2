@@ -445,3 +445,18 @@
   Will:
   - code_imp: Adds tethered item component for items that have a handheld subitem
       that can be removed from it while it is worn
+2025-09-24:
+  CHOMPStation2StaffMirrorBot:
+  - refactor: Huge door code cleanup
+  - refactor: attempt_vr() removal
+  - refactor: hook_vr() removal
+  - refactor: few remaining MinutesToTicks and SecondsToTicks updated to use defines
+      instead
+  - code_imp: Implements COMSIG_DOOR_CAN_OPEN
+  - code_imp: Implements COMSIG_DOOR_CAN_CLOSE
+  - code_imp: Implements COMSIG_DOOR_OPEN
+  - code_imp: Implements COMSIG_DOOR_CLOSE
+  - code_imp: Implements COMSIG_AIRLOCK_SET_BOLT
+  - code_imp: Implements COMSIG_MOB_BUMPED_DOOR_OPEN
+  Diana:
+  - image: Modified scrubbers to use the square sprites instead of the circular sprites

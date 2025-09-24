@@ -1,4 +1,0 @@
-author: "Diana"
-delete-after: True
-changes:
-  - image: "Modified scrubbers to use the square sprites instead of the circular sprites"
