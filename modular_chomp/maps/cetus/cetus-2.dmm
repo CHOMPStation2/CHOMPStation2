@@ -41609,11 +41609,10 @@
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume,
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
-/obj/machinery/embedded_controller/radio/airlock/docking_port_multi{
+/obj/machinery/embedded_controller/radio/airlock/docking_port{
 	dir = 1;
 	frequency = 1381;
-	id_tag = "escape_dock_ssouth_airlock";
-	master_tag = "escape_dock";
+	id_tag = "d2_w3_d_airlock";
 	pixel_y = -27;
 	req_one_access = list(13)
 	},
@@ -60199,10 +60198,9 @@
 	dir = 1
 	},
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
-/obj/machinery/embedded_controller/radio/airlock/docking_port_multi{
+/obj/machinery/embedded_controller/radio/airlock/docking_port{
 	frequency = 1381;
-	id_tag = "escape_dock_snorth_airlock";
-	master_tag = "escape_dock";
+	id_tag = "d2_w3_b_airlock";
 	pixel_y = 27;
 	req_one_access = list(13)
 	},

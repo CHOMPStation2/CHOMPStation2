@@ -21503,6 +21503,8 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 10
 	},
+/obj/item/cell/hyper/empty,
+/obj/item/cell/hyper/empty,
 /turf/simulated/floor/plating,
 /area/tcomm/tcomstorage)
 "mRM" = (
