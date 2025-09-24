@@ -4536,7 +4536,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 6
 	},
-/turf/simulated/floor/outdoors/rocks/cetus,
+/turf/simulated/floor/plating,
 /area/maintenance/cetus/twostar)
 "bDh" = (
 /obj/item/frame,
@@ -8362,7 +8362,7 @@
 /obj/structure/cable{
 	icon_state = "6-10"
 	},
-/turf/simulated/floor/outdoors/rocks/cetus,
+/turf/simulated/floor/plating,
 /area/maintenance/cetus/twostar)
 "cRy" = (
 /obj/structure/disposalpipe/segment{
@@ -14861,7 +14861,7 @@
 /obj/machinery/alarm{
 	pixel_y = 22
 	},
-/turf/simulated/floor/outdoors/rocks/cetus,
+/turf/simulated/floor/plating,
 /area/maintenance/cetus/twostar)
 "ffa" = (
 /obj/structure/railing/overhang/grey{
@@ -17183,7 +17183,7 @@
 /obj/structure/micro_tunnel/random{
 	dir = 4
 	},
-/turf/simulated/floor/outdoors/rocks/cetus,
+/turf/simulated/floor/plating,
 /area/maintenance/cetus/twostar)
 "fUm" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -17585,7 +17585,7 @@
 	icon_state = "1-2"
 	},
 /obj/random/trash,
-/turf/simulated/floor/outdoors/rocks/cetus,
+/turf/simulated/floor/plating,
 /area/maintenance/cetus/twostar)
 "gbM" = (
 /obj/effect/floor_decal/asteroid,
@@ -23025,7 +23025,6 @@
 	},
 /obj/structure/table/woodentable,
 /obj/item/flashlight/lamp/green,
-/obj/item/tvcamera,
 /turf/simulated/floor/wood,
 /area/crew_quarters/cetus/Libraryf1)
 "hTG" = (
@@ -27067,7 +27066,7 @@
 /obj/structure/cable/green{
 	icon_state = "1-8"
 	},
-/turf/simulated/floor/outdoors/rocks/cetus,
+/turf/simulated/floor/plating,
 /area/maintenance/cetus/twostar)
 "jsz" = (
 /obj/effect/floor_decal/industrial/warning{
@@ -29867,7 +29866,7 @@
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/outdoors/rocks/cetus,
+/turf/simulated/floor/plating,
 /area/maintenance/cetus/twostar)
 "kth" = (
 /obj/effect/wingrille_spawn/reinforced,
@@ -29989,7 +29988,7 @@
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/outdoors/rocks/cetus,
+/turf/simulated/floor/plating,
 /area/maintenance/cetus/twostar)
 "kvz" = (
 /obj/machinery/light{
@@ -33835,7 +33834,7 @@
 /obj/structure/cable/green{
 	icon_state = "2-4"
 	},
-/turf/simulated/floor/outdoors/rocks/cetus,
+/turf/simulated/floor/plating,
 /area/maintenance/cetus/twostar)
 "lRr" = (
 /obj/effect/floor_decal/borderfloorwhite/corner{
@@ -36813,15 +36812,6 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/crew_quarters/cetus/atrium/primary)
-"mOq" = (
-/obj/structure/railing/grey{
-	dir = 1
-	},
-/obj/structure/railing/grey{
-	dir = 8
-	},
-/turf/simulated/open,
-/area/medical/cetus/atriumd2)
 "mOw" = (
 /obj/effect/floor_decal/corner_steel_grid{
 	dir = 10
@@ -41811,7 +41801,7 @@
 	icon_state = "5-10"
 	},
 /obj/structure/reagent_dispensers/watertank,
-/turf/simulated/floor/outdoors/rocks/cetus,
+/turf/simulated/floor/plating,
 /area/maintenance/cetus/twostar)
 "oDw" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden,
@@ -44244,7 +44234,7 @@
 /obj/structure/cable{
 	icon_state = "5-10"
 	},
-/turf/simulated/floor/outdoors/rocks/cetus,
+/turf/simulated/floor/plating,
 /area/maintenance/cetus/twostar)
 "prA" = (
 /obj/machinery/light/small/emergency{
@@ -45378,15 +45368,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/central_two)
-"pJD" = (
-/obj/structure/railing/grey{
-	dir = 1
-	},
-/obj/structure/railing/grey{
-	dir = 4
-	},
-/turf/simulated/open,
-/area/medical/cetus/atriumd2)
 "pJG" = (
 /obj/structure/closet/acloset{
 	name = "Art supplies"
@@ -53341,7 +53322,7 @@
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/outdoors/rocks/cetus,
+/turf/simulated/floor/plating,
 /area/maintenance/cetus/twostar)
 "soU" = (
 /obj/machinery/power/apc{
@@ -60559,7 +60540,7 @@
 	icon_state = "4-8"
 	},
 /obj/random/mob/mouse,
-/turf/simulated/floor/outdoors/rocks/cetus,
+/turf/simulated/floor/plating,
 /area/maintenance/cetus/twostar)
 "uKm" = (
 /turf/simulated/floor/tiled/dark,
@@ -70279,7 +70260,7 @@
 	icon_state = "5-9"
 	},
 /obj/machinery/light/small/yellowed,
-/turf/simulated/floor/outdoors/rocks/cetus,
+/turf/simulated/floor/plating,
 /area/maintenance/cetus/twostar)
 "ymh" = (
 /obj/structure/disposalpipe/segment{
@@ -96759,7 +96740,7 @@ jSk
 hqU
 xVN
 jJd
-hEm
+ssp
 hEm
 hEm
 hEm
@@ -97017,7 +96998,7 @@ qHW
 qzU
 xVN
 pVV
-mOq
+klR
 hEm
 hEm
 hEm
@@ -98307,7 +98288,7 @@ qHW
 oaT
 npT
 pVV
-pJD
+klR
 hEm
 hEm
 hEm
@@ -98565,7 +98546,7 @@ jSk
 hqU
 npT
 hOa
-hEm
+fgI
 hEm
 hEm
 hEm
