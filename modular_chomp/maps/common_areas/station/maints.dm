@@ -1364,50 +1364,50 @@
 	lightswitch = FALSE
 
 
-/area/maintenance/cetus/shallow/derilect
+/area/maintenance/cetus/shallow/derelect
 	sound_env = STANDARD_STATION
 	ambience = AMBIENCE_FOREBODING
 
-/area/maintenance/cetus/shallow/derilect/hallway
-	name = "\improper Derilect Hallway"
+/area/maintenance/cetus/shallow/derelect/hallway
+	name = "\improper derelect Hallway"
 	icon_state = "hallC"
 
-/area/maintenance/cetus/shallow/derilect/eva
-	name = "\improper Derilect EVA"
+/area/maintenance/cetus/shallow/derelect/eva
+	name = "\improper derelect EVA"
 
-/area/maintenance/cetus/shallow/derilect/atmos
-	name = "\improper Derilect Atmospherics"
+/area/maintenance/cetus/shallow/derelect/atmos
+	name = "\improper derelect Atmospherics"
 	icon_state = "atmos"
 
-/area/maintenance/cetus/shallow/derilect/engine
-	name = "\improper Derilect Reactor"
+/area/maintenance/cetus/shallow/derelect/engine
+	name = "\improper derelect Reactor"
 	icon_state = "engine"
 
-/area/maintenance/cetus/shallow/derilect/dorms
-	name = "\improper Derilect Dormitory"
+/area/maintenance/cetus/shallow/derelect/dorms
+	name = "\improper derelect Dormitory"
 	icon_state = "maint_dormitory"
 
-/area/maintenance/cetus/shallow/derilect/medbay
-	name = "\improper Derilect Medbay"
+/area/maintenance/cetus/shallow/derelect/medbay
+	name = "\improper derelect Medbay"
 	icon_state = "maint_medbay"
 
-/area/maintenance/cetus/shallow/derilect/dock
-	name = "\improper Derilect Dock"
+/area/maintenance/cetus/shallow/derelect/dock
+	name = "\improper derelect Dock"
 	icon_state = "maint_arrivals"
 
-/area/maintenance/cetus/shallow/derilect/bridge
-	name = "\improper Derilect Bridge"
+/area/maintenance/cetus/shallow/derelect/bridge
+	name = "\improper derelect Bridge"
 
-/area/maintenance/cetus/shallow/derilect/kitchen
-	name = "\improper Derilect Cafeteria"
+/area/maintenance/cetus/shallow/derelect/kitchen
+	name = "\improper derelect Cafeteria"
 	icon_state = "maint_bar"
 
-/area/maintenance/cetus/shallow/derilect/locker
-	name = "\improper Derilect Locker Room"
+/area/maintenance/cetus/shallow/derelect/locker
+	name = "\improper derelect Locker Room"
 	icon_state = "maint_locker"
 
-/area/maintenance/cetus/shallow/derilect/bathroom
-	name = "\improper Derilect Bathroom"
+/area/maintenance/cetus/shallow/derelect/bathroom
+	name = "\improper derelect Bathroom"
 	icon_state = "restrooms"
 
 /area/maintenance/cetus/shallow/gamba

@@ -22727,6 +22727,10 @@
 /obj/machinery/power/supermatter{
 	layer = 4
 	},
+/obj/machinery/mass_driver{
+	dir = 1;
+	id = "enginecore"
+	},
 /turf/simulated/floor/reinforced/nitrogen{
 	nitrogen = 82.1472
 	},
@@ -100440,11 +100444,11 @@ yke
 lyH
 suH
 suH
-eNB
+vSb
 dmP
-uPi
+jOt
 dmP
-uPi
+jOt
 uPi
 uPi
 oEs
@@ -100698,7 +100702,7 @@ suH
 vBs
 qFw
 qFw
-uPi
+jOt
 pcU
 uFS
 aUk
@@ -101214,7 +101218,7 @@ suH
 vBs
 qFw
 gAm
-uPi
+jOt
 uTr
 tbT
 tOS
@@ -101472,11 +101476,11 @@ yke
 lyH
 suH
 suH
-eNB
+vSb
 dmP
-uPi
+jOt
 dmP
-uPi
+jOt
 uPi
 uPi
 ubX
