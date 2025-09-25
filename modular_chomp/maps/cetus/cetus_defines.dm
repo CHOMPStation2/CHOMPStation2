@@ -164,7 +164,7 @@
 
 
 // For making the 4-in-1 holomap, we calculate some offsets
-#define CETUS_MAP_SIZE 225 // Width and height of compiled in Cetus z levels.
+#define CETUS_MAP_SIZE 220 // Width and height of compiled in Cetus z levels.
 #define CETUS_HOLOMAP_CENTER_GUTTER 40 // 40px central gutter between columns
 #define CETUS_HOLOMAP_MARGIN_X ((HOLOMAP_ICON_SIZE - (2*CETUS_MAP_SIZE) - CETUS_HOLOMAP_CENTER_GUTTER) / 2)
 #define CETUS_HOLOMAP_MARGIN_Y ((HOLOMAP_ICON_SIZE - (2*CETUS_MAP_SIZE)) / 2)
@@ -173,31 +173,31 @@
 /datum/map_z_level/cetus/station
 	flags = MAP_LEVEL_STATION|MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER|MAP_LEVEL_CONSOLES|MAP_LEVEL_VORESPAWN
 	holomap_legend_x = 220
-	holomap_legend_y = 160
+	holomap_legend_y = 200
 
 /datum/map_z_level/cetus/station/station_one
 	z = Z_LEVEL_CETUS_STATION_ONE
 	name = "Deck 1"
 	base_turf = /turf/simulated/open
 	transit_chance = 15
-	holomap_offset_x = CETUS_HOLOMAP_MARGIN_X - 40
-	holomap_offset_y = CETUS_HOLOMAP_MARGIN_Y //+ SOUTHERN_CROSS_MAP_SIZE*0
+	holomap_offset_x = CETUS_HOLOMAP_MARGIN_X
+	holomap_offset_y = CETUS_HOLOMAP_MARGIN_Y - CETUS_HOLOMAP_CENTER_GUTTER / 2 //+ SOUTHERN_CROSS_MAP_SIZE*0
 
 /datum/map_z_level/cetus/station/station_two
 	z = Z_LEVEL_CETUS_STATION_TWO
 	name = "Deck 2"
 	base_turf = /turf/simulated/open
 	transit_chance = 15
-	holomap_offset_x = CETUS_HOLOMAP_MARGIN_X - 40
-	holomap_offset_y = CETUS_HOLOMAP_MARGIN_Y + CETUS_MAP_SIZE
+	holomap_offset_x = CETUS_HOLOMAP_MARGIN_X
+	holomap_offset_y = CETUS_HOLOMAP_MARGIN_Y - CETUS_HOLOMAP_CENTER_GUTTER / 2 + CETUS_MAP_SIZE
 
 /datum/map_z_level/cetus/station/station_three
 	z = Z_LEVEL_CETUS_STATION_THREE
 	name = "Deck 3"
 	base_turf = /turf/simulated/open
 	transit_chance = 15
-	holomap_offset_x = HOLOMAP_ICON_SIZE - CETUS_HOLOMAP_MARGIN_X - CETUS_MAP_SIZE - 40
-	holomap_offset_y = CETUS_HOLOMAP_MARGIN_Y + CETUS_MAP_SIZE
+	holomap_offset_x = CETUS_HOLOMAP_MARGIN_X + CETUS_MAP_SIZE
+	holomap_offset_y = CETUS_HOLOMAP_MARGIN_Y - CETUS_HOLOMAP_CENTER_GUTTER / 2 + CETUS_MAP_SIZE
 
 // Surface Z-Level
 /datum/map_z_level/cetus_lateload/surface
