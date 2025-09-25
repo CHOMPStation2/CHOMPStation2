@@ -460,3 +460,11 @@
   - code_imp: Implements COMSIG_MOB_BUMPED_DOOR_OPEN
   Diana:
   - image: Modified scrubbers to use the square sprites instead of the circular sprites
+2025-09-25:
+  Diana:
+  - image: Adjusts scrubbers to their circular state
+  - bugfix: Alraune and Gamma Replicant can be neuter or plural
+  Guti:
+  - rscadd: Added churros and churros recipe
+  Will:
+  - code_imp: Moves turf slip code to a component
