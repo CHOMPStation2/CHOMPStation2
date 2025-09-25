@@ -28,3 +28,10 @@
 /area/ai_monitored/aihall
 	name = "\improper AI Core Entry Hall"
 	icon_state = "ai_foyer"
+	holomap_color = HOLOMAP_AREACOLOR_COMMAND
+
+/area/ai_upload
+	holomap_color = HOLOMAP_AREACOLOR_COMMAND
+
+/area/ai_upload_foyer
+	holomap_color = HOLOMAP_AREACOLOR_COMMAND

@@ -365,3 +365,4 @@
 /area/tcomm/entrance/cetus
 	name = "\improper Teleporter"
 	icon_state = "teleporter"
+	holomap_color = HOLOMAP_AREACOLOR_COMMAND

@@ -41,21 +41,25 @@
 /area/hangar/cetus/two
 	name = "\improper Hangar Two"
 	base_turf = /turf/simulated/floor/outdoors/rocks/cetus
+	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
 
 /area/hangar/cetus/explofoyer
 	name = "\improper Exploration Foyer"
 	icon_state = "hangarcontrol"
+	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
 
 /area/hangar/cetus/explolocker
 	name = "\improper Exploration Locker Room"
 	icon_state = "hangarcontrol"
 	base_turf = /turf/simulated/floor/outdoors/rocks/cetus
+	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
 
 /area/teleporter/arrivals
 	name = "\improper Arrivals Teleporter"
 
 /area/teleporter/departure
 	name = "\improper Departure Teleporter"
+	holomap_color = HOLOMAP_AREACOLOR_CIV
 
 
 /area/asteroid/cetus

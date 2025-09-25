@@ -419,6 +419,7 @@
 /area/crew_quarters/cetus/meteor/stairwellf1
 	name = "\improper Primary Stairwell Deck One"
 	icon_state = "hallC"
+	holomap_color = HOLOMAP_AREACOLOR_HALLWAYS
 
 /area/hallway/cetus/stairwellf2
 	name = "\improper Primary Stairwell Deck Two"
@@ -431,29 +432,36 @@
 /area/crew_quarters/cetus/jrhallway
 	name = "Joint Research Dormitory Hallway"
 	icon_state = "hallC"
+	holomap_color = HOLOMAP_AREACOLOR_HALLWAYS
 
 /area/crew_quarters/cetus/atrium
 	icon_state = "hallC"
+	holomap_color = HOLOMAP_AREACOLOR_HALLWAYS
 
 /area/crew_quarters/cetus/escapepodjr
 	name = "\improper Joint Research Escape Pod Lounge"
 	icon_state = "docking_lounge"
+	holomap_color = HOLOMAP_AREACOLOR_HALLWAYS
 
 /area/crew_quarters/cetus/escapepodfore
 	name = "\improper Fore Escape Pod Lounge"
 	icon_state = "docking_lounge"
+	holomap_color = HOLOMAP_AREACOLOR_HALLWAYS
 
 /area/crew_quarters/cetus/escapepodaft
 	name = "\improper Aft Escape Pod Lounge"
 	icon_state = "docking_lounge"
+	holomap_color = HOLOMAP_AREACOLOR_HALLWAYS
 
 /area/crew_quarters/cetus/escapepodstar
 	name = "\improper Starboard Escape Pod Lounge"
 	icon_state = "docking_lounge"
+	holomap_color = HOLOMAP_AREACOLOR_HALLWAYS
 
 /area/crew_quarters/cetus/escapepodport
 	name = "\improper Port Escape Pod Lounge"
 	icon_state = "docking_lounge"
+	holomap_color = HOLOMAP_AREACOLOR_HALLWAYS
 
 /area/crew_quarters/cetus/atrium/primary
 	name = "\improper Primary Atrium"
@@ -461,6 +469,7 @@
 /area/crew_quarters/cetus/meteor/atrium
 	name = "\improper Secondary Atrium Deck One"
 	icon_state = "hallC"
+	holomap_color = HOLOMAP_AREACOLOR_HALLWAYS
 
 /area/crew_quarters/cetus/atrium/secondaryf2
 	name = "\improper Secondary Atrium Deck Two"
@@ -471,7 +480,9 @@
 /area/crew_quarters/cetus/meteor/hallway1
 	name = "\improper Pool Hallway"
 	icon_state = "recreation_area_hallway"
+	holomap_color = HOLOMAP_AREACOLOR_HALLWAYS
 
 /area/crew_quarters/cetus/meteor/hallway2
 	name = "\improper Dormitories Hallway"
 	icon_state = "recreation_area_hallway"
+	holomap_color = HOLOMAP_AREACOLOR_HALLWAYS
