@@ -2536,7 +2536,7 @@
 	tag_door = "exp_sling_hatch"
 	},
 /turf/simulated/shuttle/floor/darkred,
-/area/space)
+/area/shuttle/expoutpost/station)
 "aSW" = (
 /obj/structure/disposalpipe/segment,
 /obj/machinery/door/firedoor/glass,
@@ -9615,7 +9615,7 @@
 	dir = 1
 	},
 /turf/simulated/shuttle/floor/darkred,
-/area/space)
+/area/shuttle/expoutpost/station)
 "dkR" = (
 /obj/effect/floor_decal/techfloor{
 	dir = 8
@@ -22564,7 +22564,7 @@
 /area/crew_quarters/cetus/atrium/secondaryf2)
 "hJU" = (
 /turf/simulated/shuttle/wall/voidcraft/blue,
-/area/space)
+/area/shuttle/expoutpost/station)
 "hJY" = (
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 4
@@ -23699,7 +23699,7 @@
 	dir = 1
 	},
 /turf/simulated/shuttle/wall/voidcraft/blue,
-/area/space)
+/area/shuttle/expoutpost/station)
 "ien" = (
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 8
@@ -31482,7 +31482,7 @@
 "kXX" = (
 /obj/structure/bed/chair/shuttle,
 /turf/simulated/shuttle/floor/darkred,
-/area/space)
+/area/shuttle/expoutpost/station)
 "kYe" = (
 /obj/structure/railing/grey{
 	dir = 8
@@ -35824,7 +35824,7 @@
 	dir = 9
 	},
 /turf/simulated/shuttle/floor/darkred,
-/area/space)
+/area/shuttle/expoutpost/station)
 "muc" = (
 /obj/structure/table/reinforced,
 /obj/item/paper_bin{
@@ -39954,7 +39954,7 @@
 "nXo" = (
 /obj/structure/closet/emcloset/legacy,
 /turf/simulated/shuttle/floor/darkred,
-/area/space)
+/area/shuttle/expoutpost/station)
 "nXq" = (
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 4
@@ -49553,7 +49553,7 @@
 	},
 /obj/structure/bed/chair/shuttle,
 /turf/simulated/shuttle/floor/darkred,
-/area/space)
+/area/shuttle/expoutpost/station)
 "rdc" = (
 /obj/structure/table/reinforced,
 /obj/machinery/door/firedoor/glass,
@@ -51053,7 +51053,7 @@
 	req_one_access = list(5,43,67)
 	},
 /turf/simulated/shuttle/floor/darkred,
-/area/space)
+/area/shuttle/expoutpost/station)
 "rDJ" = (
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /obj/structure/cable/green{
@@ -52615,7 +52615,7 @@
 /area/crew_quarters/Custodial_Office)
 "sep" = (
 /turf/simulated/shuttle/floor/darkred,
-/area/space)
+/area/shuttle/expoutpost/station)
 "seW" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -56625,13 +56625,13 @@
 /turf/simulated/floor/tiled,
 /area/engineering/Breakroom)
 "tuj" = (
-/obj/structure/sign/directions/command{
-	pixel_y = -8
-	},
 /obj/structure/sign/directions/pool{
 	pixel_y = 8
 	},
 /obj/structure/sign/directions/bridge,
+/obj/structure/sign/directions/command{
+	pixel_y = -8
+	},
 /turf/simulated/wall,
 /area/crew_quarters/cetus/atrium/primary)
 "tuB" = (
@@ -61249,7 +61249,7 @@
 	},
 /obj/structure/window/reinforced,
 /turf/simulated/shuttle/wall/voidcraft/blue,
-/area/space)
+/area/shuttle/expoutpost/station)
 "uZa" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4;
@@ -68244,7 +68244,7 @@
 	dir = 8
 	},
 /turf/simulated/shuttle/wall/voidcraft/blue,
-/area/space)
+/area/shuttle/expoutpost/station)
 "xvt" = (
 /obj/effect/floor_decal/borderfloorblack/corner{
 	dir = 1
@@ -68910,7 +68910,7 @@
 "xKu" = (
 /obj/effect/shuttle_landmark/southern_cross/sling_station,
 /turf/simulated/shuttle/floor/darkred,
-/area/space)
+/area/shuttle/expoutpost/station)
 "xKA" = (
 /obj/structure/lattice,
 /obj/structure/railing,
@@ -106015,7 +106015,7 @@ cNy
 rtf
 kAQ
 kxL
-tuj
+lhe
 qWu
 qWu
 qWu
@@ -107047,7 +107047,7 @@ cNy
 pfv
 qWa
 kxL
-lhe
+tuj
 qWu
 qWu
 qWu
@@ -107135,7 +107135,7 @@ mkN
 jrj
 jrj
 aAh
-kmJ
+dRK
 oJw
 oJw
 oJw
@@ -107649,9 +107649,9 @@ oJw
 oJw
 oJw
 oJw
+dRK
 kmJ
-kmJ
-kmJ
+dRK
 oJw
 oJw
 oJw
