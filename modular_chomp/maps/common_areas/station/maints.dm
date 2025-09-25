@@ -1078,6 +1078,7 @@
 	turf_initializer = new /datum/turf_initializer/maintenance/shallow()
 	sound_env = SOUND_ENVIRONMENT_CARPETED_HALLWAY
 	ambience = AMBIENCE_RUINS
+	holomap_color = HOLOMAP_AREACOLOR_HALLWAYS
 
 /area/maintenance/cetus/meteor
 	base_turf = /turf/simulated/floor/outdoors/rocks/cetus
@@ -1168,6 +1169,7 @@
 /area/maintenance/cetus/hallway
 	name = "\improper Abandoned Primary Hallway"
 	icon_state = "maintcentral"
+	holomap_color = HOLOMAP_AREACOLOR_HALLWAYS
 
 /area/maintenance/cetus/janitorial
 	name = "\improper Abandoned Broom Closet"
@@ -1198,6 +1200,7 @@
 	ambience = AMBIENCE_SUBSTATION
 	sound_env = SOUND_ENVIRONMENT_CAVE
 	lightswitch = FALSE
+	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
 
 /area/maintenance/cetus/twojrport
 	name = "\improper Joint Research Deck Two Port Maintenance"
@@ -1310,6 +1313,7 @@
 	name = "\improper Flooded Maintenance"
 	icon_state = "maint_pool"
 	ambience = AMBIENCE_HOLY
+	holomap_color = null
 
 /area/maintenance/cetus/shallow/fp
 	name = "\improper Fore Port Corridors"
@@ -1326,6 +1330,7 @@
 /area/maintenance/cetus/shallow/backstage
 	name = "\improper Theater Corridors"
 	icon_state = "maint"
+	holomap_color = HOLOMAP_AREACOLOR_CIV
 
 /area/maintenance/cetus/d3bar
 	name = "\improper Deck 3 Bar Maintenance"
@@ -1349,76 +1354,92 @@
 /area/maintenance/cetus/shallow/bodyguard
 	name = "\improper Private Security"
 	lightswitch = FALSE
+	holomap_color = HOLOMAP_AREACOLOR_CIV
 
 /area/maintenance/cetus/shallow/detective
 	name = "\improper Private Investigations"
 	lightswitch = FALSE
+	holomap_color = HOLOMAP_AREACOLOR_CIV
 
 /area/maintenance/cetus/shallow/law
 	name = "\improper Private Legal Office"
 	lightswitch = FALSE
+	holomap_color = HOLOMAP_AREACOLOR_CIV
 
 /area/maintenance/cetus/shallow/quack
 	name = "\improper Alternative Visions"
 	ambience = AMBIENCE_OTHERWORLDLY
 	lightswitch = FALSE
+	holomap_color = HOLOMAP_AREACOLOR_CIV
 
 
-/area/maintenance/cetus/shallow/derelect
+/area/maintenance/cetus/shallow/derelict
 	sound_env = STANDARD_STATION
 	ambience = AMBIENCE_FOREBODING
 
-/area/maintenance/cetus/shallow/derelect/hallway
-	name = "\improper derelect Hallway"
+/area/maintenance/cetus/shallow/derelict/hallway
+	name = "\improper derelict Hallway"
 	icon_state = "hallC"
 
-/area/maintenance/cetus/shallow/derelect/eva
-	name = "\improper derelect EVA"
+/area/maintenance/cetus/shallow/derelict/eva
+	name = "\improper derelict EVA"
+	holomap_color = HOLOMAP_AREACOLOR_COMMAND
 
-/area/maintenance/cetus/shallow/derelect/atmos
-	name = "\improper derelect Atmospherics"
+/area/maintenance/cetus/shallow/derelict/atmos
+	name = "\improper derelict Atmospherics"
 	icon_state = "atmos"
+	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
 
-/area/maintenance/cetus/shallow/derelect/engine
-	name = "\improper derelect Reactor"
+/area/maintenance/cetus/shallow/derelict/engine
+	name = "\improper derelict Reactor"
 	icon_state = "engine"
+	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
 
-/area/maintenance/cetus/shallow/derelect/dorms
-	name = "\improper derelect Dormitory"
+/area/maintenance/cetus/shallow/derelict/dorms
+	name = "\improper derelict Dormitory"
 	icon_state = "maint_dormitory"
+	holomap_color = HOLOMAP_AREACOLOR_DORMS
 
-/area/maintenance/cetus/shallow/derelect/medbay
-	name = "\improper derelect Medbay"
+/area/maintenance/cetus/shallow/derelict/medbay
+	name = "\improper derelict Medbay"
 	icon_state = "maint_medbay"
+	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
 
-/area/maintenance/cetus/shallow/derelect/dock
-	name = "\improper derelect Dock"
+/area/maintenance/cetus/shallow/derelict/dock
+	name = "\improper derelict Dock"
 	icon_state = "maint_arrivals"
 
-/area/maintenance/cetus/shallow/derelect/bridge
-	name = "\improper derelect Bridge"
+/area/maintenance/cetus/shallow/derelict/bridge
+	name = "\improper derelict Bridge"
+	holomap_color = HOLOMAP_AREACOLOR_COMMAND
 
-/area/maintenance/cetus/shallow/derelect/kitchen
-	name = "\improper derelect Cafeteria"
+/area/maintenance/cetus/shallow/derelict/kitchen
+	name = "\improper derelict Cafeteria"
 	icon_state = "maint_bar"
+	holomap_color = HOLOMAP_AREACOLOR_CIV
 
-/area/maintenance/cetus/shallow/derelect/locker
-	name = "\improper derelect Locker Room"
+/area/maintenance/cetus/shallow/derelict/locker
+	name = "\improper derelict Locker Room"
 	icon_state = "maint_locker"
+	holomap_color = HOLOMAP_AREACOLOR_CIV
 
-/area/maintenance/cetus/shallow/derelect/bathroom
-	name = "\improper derelect Bathroom"
+/area/maintenance/cetus/shallow/derelict/bathroom
+	name = "\improper derelict Bathroom"
 	icon_state = "restrooms"
+	holomap_color = HOLOMAP_AREACOLOR_CIV
 
 /area/maintenance/cetus/shallow/gamba
 	name = "\improper Abandoned Gambling Den"
 	icon_state = "gaming"
 	lightswitch = FALSE
+	holomap_color = HOLOMAP_AREACOLOR_CIV
 
 /area/maintenance/cetus/fishery
 	name = "\improper Abandoned Bait and Tackle"
 	lightswitch = FALSE
+	holomap_color = HOLOMAP_AREACOLOR_CIV
 
 /area/maintenance/cetus/lobby
 	name = "\improper Commercial Hall Reception"
 	ambience = AMBIENCE_HIGHSEC
+	holomap_color = HOLOMAP_AREACOLOR_CIV
