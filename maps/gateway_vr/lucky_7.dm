@@ -13,14 +13,11 @@
 
 /area/awaymission/lucky7
 	icon_state = "away1"
-<<<<<<< HEAD
-=======
 	ambience = AMBIENCE_CASINO
 	flags = AREA_FLAG_IS_NOT_PERSISTENT | AREA_BLOCK_INSTANT_BUILDING
 	dynamic_lighting = TRUE
 	requires_power = FALSE
 	has_gravity = TRUE
->>>>>>> 887f7bcbb6 (Fixes Lucky 7 map needing power (oops) (#18566))
 
 /area/awaymission/lucky7/casinofloor
 	name = "\improper Gateway - Casino Floor"
