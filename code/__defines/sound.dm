@@ -242,9 +242,19 @@
 	'sound/ambience/atmospherics/atmospherics1.ogg'\
 	)
 
+<<<<<<< HEAD
 // CHOMPEdit: New Planet Ambience
 #define AMBIENCE_THOR list(\
 	'sound/ambience/thor/birds_stinger1.ogg',\
 	'sound/ambience/thor/birds_stinger2.ogg',\
 	'sound/ambience/thor/birds_stinger3.ogg'\
 )
+=======
+// Credits:
+// These are spliced audio extracts from "Casino - Las Vegas Slot Machines" by martialway47, on freesound.org.
+#define AMBIENCE_CASINO list(\
+	'sound/ambience/casino/casino_1.ogg',\
+	'sound/ambience/casino/casino_2.ogg',\
+	'sound/ambience/casino/casino_3.ogg'\
+	)
+>>>>>>> c0d15c69cd (Luckier 7 event map content + Card deck init improvement/bugfixing (#18561))
