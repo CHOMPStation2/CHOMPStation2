@@ -335,7 +335,7 @@
 	icon_state = "2-4"
 	},
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/maintenance/cetus/shallow/derelect/hallway)
+/area/maintenance/cetus/shallow/derelict/hallway)
 "ajp" = (
 /obj/machinery/vending/dinnerware,
 /turf/simulated/floor/lino,
@@ -369,7 +369,7 @@
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/old_tile,
-/area/maintenance/cetus/shallow/derelect/dock)
+/area/maintenance/cetus/shallow/derelict/dock)
 "akN" = (
 /obj/machinery/light/small/yellowed,
 /turf/simulated/wall/r_wall,
@@ -451,7 +451,7 @@
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/maintenance,
 /turf/simulated/floor/plating,
-/area/maintenance/cetus/shallow/derelect/kitchen)
+/area/maintenance/cetus/shallow/derelict/kitchen)
 "amE" = (
 /obj/structure/railing/grey{
 	dir = 1
@@ -539,7 +539,7 @@
 /obj/structure/table/reinforced,
 /obj/random/maintenance/engineering,
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/maintenance/cetus/shallow/derelect/bridge)
+/area/maintenance/cetus/shallow/derelict/bridge)
 "aoq" = (
 /obj/effect/wingrille_spawn/reinforced,
 /obj/machinery/door/firedoor/glass,
@@ -692,7 +692,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/maintenance/cetus/shallow/derelect/eva)
+/area/maintenance/cetus/shallow/derelict/eva)
 "asC" = (
 /obj/structure/railing/overhang/hazard/nanite,
 /obj/structure/railing/overhang/hazard/nanite{
@@ -716,7 +716,7 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/maintenance/cetus/shallow/derelect/hallway)
+/area/maintenance/cetus/shallow/derelict/hallway)
 "atr" = (
 /obj/structure/closet/crate,
 /obj/random/plushie,
@@ -841,7 +841,7 @@
 	icon_state = "0-8"
 	},
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/maintenance/cetus/shallow/derelect/bridge)
+/area/maintenance/cetus/shallow/derelict/bridge)
 "azp" = (
 /obj/structure/disposalpipe/segment{
 	dir = 2;
@@ -897,7 +897,7 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/maintenance/cetus/shallow/derelect/hallway)
+/area/maintenance/cetus/shallow/derelict/hallway)
 "aBV" = (
 /obj/machinery/alarm{
 	pixel_y = 22
@@ -1385,7 +1385,7 @@
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/maintenance/cetus/shallow/derelect/hallway)
+/area/maintenance/cetus/shallow/derelict/hallway)
 "aOR" = (
 /obj/machinery/access_button{
 	dir = 4;
@@ -1396,7 +1396,7 @@
 /obj/effect/floor_decal/industrial/warning,
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/tiled/old_tile,
-/area/maintenance/cetus/shallow/derelect/dock)
+/area/maintenance/cetus/shallow/derelict/dock)
 "aOU" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/cyan{
 	dir = 1
@@ -1784,7 +1784,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/maintenance/cetus/shallow/derelect/kitchen)
+/area/maintenance/cetus/shallow/derelict/kitchen)
 "bfO" = (
 /obj/structure/closet/walllocker/medical{
 	pixel_y = 30
@@ -1914,7 +1914,7 @@
 "bkn" = (
 /obj/random/obstruction,
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/maintenance/cetus/shallow/derelect/locker)
+/area/maintenance/cetus/shallow/derelict/locker)
 "bkv" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -1948,7 +1948,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
-/area/maintenance/cetus/shallow/derelect/kitchen)
+/area/maintenance/cetus/shallow/derelict/kitchen)
 "bkN" = (
 /obj/machinery/conveyor{
 	dir = 8;
@@ -1968,7 +1968,7 @@
 /area/crew_quarters/cetus/atrium/secondaryf3)
 "blw" = (
 /turf/simulated/floor/tiled/old_tile/yellow,
-/area/maintenance/cetus/shallow/derelect/dorms)
+/area/maintenance/cetus/shallow/derelict/dorms)
 "blQ" = (
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -2035,7 +2035,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/maintenance/cetus/shallow/derelect/hallway)
+/area/maintenance/cetus/shallow/derelict/hallway)
 "bnV" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -2125,7 +2125,7 @@
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/maintenance/cetus/shallow/derelect/hallway)
+/area/maintenance/cetus/shallow/derelict/hallway)
 "bqN" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /turf/simulated/floor/carpet/graycarpet,
@@ -2305,7 +2305,7 @@
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/white,
-/area/maintenance/cetus/shallow/derelect/kitchen)
+/area/maintenance/cetus/shallow/derelict/kitchen)
 "bxy" = (
 /obj/machinery/door/airlock/multi_tile/metal/mait{
 	dir = 8;
@@ -2313,10 +2313,10 @@
 	},
 /obj/machinery/door/firedoor/multi_tile,
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/maintenance/cetus/shallow/derelect/hallway)
+/area/maintenance/cetus/shallow/derelict/hallway)
 "bxM" = (
 /turf/simulated/wall/r_wall,
-/area/maintenance/cetus/shallow/derelect/engine)
+/area/maintenance/cetus/shallow/derelict/engine)
 "bxN" = (
 /obj/structure/bed/chair/office/light,
 /turf/simulated/floor/carpet/graycarpet,
@@ -2348,7 +2348,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/white,
-/area/maintenance/cetus/shallow/derelect/kitchen)
+/area/maintenance/cetus/shallow/derelict/kitchen)
 "byQ" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -2435,7 +2435,7 @@
 	},
 /obj/structure/railing/overhang/hazard,
 /turf/simulated/floor/tiled/old_tile/yellow,
-/area/maintenance/cetus/shallow/derelect/engine)
+/area/maintenance/cetus/shallow/derelict/engine)
 "bCl" = (
 /obj/structure/bed/chair/office/light,
 /obj/effect/landmark/event_spawn/morphspawn,
@@ -2505,7 +2505,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/maintenance/cetus/shallow/derelect/hallway)
+/area/maintenance/cetus/shallow/derelict/hallway)
 "bFl" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/catwalk,
@@ -2599,7 +2599,7 @@
 	name = "Unit 1"
 	},
 /turf/simulated/floor/tiled/kafel_full,
-/area/maintenance/cetus/shallow/derelect/bathroom)
+/area/maintenance/cetus/shallow/derelict/bathroom)
 "bIv" = (
 /obj/structure/transit_tube{
 	icon_state = "E-NW"
@@ -2624,7 +2624,7 @@
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/maintenance/cetus/shallow/derelect/locker)
+/area/maintenance/cetus/shallow/derelict/locker)
 "bKe" = (
 /obj/effect/floor_decal/corner/grey/diagonal{
 	dir = 4
@@ -2639,7 +2639,7 @@
 	icon_state = "0-2"
 	},
 /turf/simulated/floor/tiled/white,
-/area/maintenance/cetus/shallow/derelect/kitchen)
+/area/maintenance/cetus/shallow/derelict/kitchen)
 "bKh" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
@@ -2706,7 +2706,7 @@
 	},
 /obj/random/trash,
 /turf/simulated/floor/tiled/old_tile/yellow,
-/area/maintenance/cetus/shallow/derelect/dorms)
+/area/maintenance/cetus/shallow/derelict/dorms)
 "bMY" = (
 /obj/machinery/atmospherics/binary/pump/on{
 	target_pressure = 200
@@ -2755,7 +2755,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/maintenance/cetus/shallow/derelect/atmos)
+/area/maintenance/cetus/shallow/derelict/atmos)
 "bPf" = (
 /obj/random/trash_pile,
 /turf/simulated/floor/plating,
@@ -2772,7 +2772,7 @@
 	},
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/maintenance/cetus/shallow/derelect/hallway)
+/area/maintenance/cetus/shallow/derelict/hallway)
 "bQv" = (
 /obj/structure/lattice,
 /obj/structure/disposalpipe/trunk{
@@ -2851,7 +2851,7 @@
 	dir = 6
 	},
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/maintenance/cetus/shallow/derelect/hallway)
+/area/maintenance/cetus/shallow/derelict/hallway)
 "bRy" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -2934,7 +2934,7 @@
 	},
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /turf/simulated/floor/tiled/white,
-/area/maintenance/cetus/shallow/derelect/kitchen)
+/area/maintenance/cetus/shallow/derelict/kitchen)
 "bUf" = (
 /obj/random/trash_pile,
 /turf/simulated/floor/plating,
@@ -2969,7 +2969,7 @@
 /area/crew_quarters/cetus/theater)
 "bWs" = (
 /turf/simulated/floor/tiled/techfloor,
-/area/maintenance/cetus/shallow/derelect/atmos)
+/area/maintenance/cetus/shallow/derelict/atmos)
 "bWw" = (
 /obj/effect/floor_decal/industrial/warning,
 /obj/machinery/light/small/yellowed{
@@ -3033,7 +3033,7 @@
 	pixel_x = -1
 	},
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/maintenance/cetus/shallow/derelect/bridge)
+/area/maintenance/cetus/shallow/derelict/bridge)
 "bXJ" = (
 /obj/structure/sink{
 	dir = 1;
@@ -3292,7 +3292,7 @@
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/maintenance/cetus/shallow/derelect/hallway)
+/area/maintenance/cetus/shallow/derelict/hallway)
 "chf" = (
 /obj/structure/railing/overhang/hazard/nanite,
 /obj/structure/dummystairs/hazardledge{
@@ -3444,7 +3444,7 @@
 /turf/simulated/floor/plating{
 	icon_state = "dmg4"
 	},
-/area/maintenance/cetus/shallow/derelect/hallway)
+/area/maintenance/cetus/shallow/derelict/hallway)
 "cky" = (
 /obj/machinery/chemical_dispenser/bar_soft/full{
 	dir = 8;
@@ -3578,7 +3578,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/maintenance/cetus/shallow/derelect/hallway)
+/area/maintenance/cetus/shallow/derelict/hallway)
 "cqZ" = (
 /obj/structure/railing/grey{
 	dir = 1
@@ -3593,7 +3593,7 @@
 "crM" = (
 /obj/random/junk,
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/maintenance/cetus/shallow/derelect/locker)
+/area/maintenance/cetus/shallow/derelict/locker)
 "crV" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -3686,7 +3686,7 @@
 /area/maintenance/cetus/d3bar)
 "cuX" = (
 /turf/simulated/wall,
-/area/maintenance/cetus/shallow/derelect/engine)
+/area/maintenance/cetus/shallow/derelict/engine)
 "cvm" = (
 /obj/machinery/pipedispenser,
 /obj/machinery/light{
@@ -3789,7 +3789,7 @@
 "czW" = (
 /obj/machinery/transhuman/resleever,
 /turf/simulated/floor/tiled/old_tile,
-/area/maintenance/cetus/shallow/derelect/medbay)
+/area/maintenance/cetus/shallow/derelict/medbay)
 "cAg" = (
 /obj/machinery/door/airlock/maintenance,
 /obj/machinery/door/firedoor/glass,
@@ -4147,7 +4147,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/maintenance/cetus/shallow/derelect/atmos)
+/area/maintenance/cetus/shallow/derelict/atmos)
 "cJx" = (
 /obj/effect/floor_decal/spline/plain/corner{
 	dir = 1
@@ -4248,7 +4248,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/old_tile,
-/area/maintenance/cetus/shallow/derelect/dock)
+/area/maintenance/cetus/shallow/derelict/dock)
 "cMw" = (
 /obj/random/pottedplant,
 /turf/simulated/floor/plating,
@@ -4310,7 +4310,7 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/maintenance/cetus/shallow/derelect/hallway)
+/area/maintenance/cetus/shallow/derelict/hallway)
 "cOY" = (
 /obj/effect/wingrille_spawn/reinforced,
 /obj/structure/cable/green{
@@ -4341,7 +4341,7 @@
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /turf/simulated/floor/plating,
-/area/maintenance/cetus/shallow/derelect/hallway)
+/area/maintenance/cetus/shallow/derelict/hallway)
 "cQi" = (
 /obj/structure/cable/cyan{
 	icon_state = "1-4"
@@ -4399,7 +4399,7 @@
 /obj/structure/closet/secure_closet/personal,
 /obj/random/forgotten_tram,
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/maintenance/cetus/shallow/derelect/locker)
+/area/maintenance/cetus/shallow/derelict/locker)
 "cRt" = (
 /obj/structure/railing/overhang/hazard/nanite{
 	dir = 1
@@ -4428,7 +4428,7 @@
 	dir = 5
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/maintenance/cetus/shallow/derelect/engine)
+/area/maintenance/cetus/shallow/derelict/engine)
 "cRV" = (
 /obj/structure/railing/grey{
 	dir = 8
@@ -4482,7 +4482,7 @@
 /obj/random/contraband,
 /obj/random/maintenance,
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/maintenance/cetus/shallow/derelect/locker)
+/area/maintenance/cetus/shallow/derelict/locker)
 "cTR" = (
 /obj/machinery/chemical_dispenser/bar_alc{
 	dir = 8;
@@ -4741,7 +4741,7 @@
 	dir = 5
 	},
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/maintenance/cetus/shallow/derelect/hallway)
+/area/maintenance/cetus/shallow/derelict/hallway)
 "dbI" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -4779,7 +4779,7 @@
 	},
 /obj/effect/floor_decal/cetus/andromeda6,
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/maintenance/cetus/shallow/derelect/hallway)
+/area/maintenance/cetus/shallow/derelict/hallway)
 "ddK" = (
 /obj/machinery/vending/coffee{
 	dir = 4
@@ -4876,7 +4876,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/maintenance/cetus/shallow/derelect/hallway)
+/area/maintenance/cetus/shallow/derelict/hallway)
 "dhA" = (
 /obj/structure/cable{
 	icon_state = "2-5"
@@ -5123,7 +5123,7 @@
 	name = "Shower"
 	},
 /turf/simulated/floor/tiled/kafel_full,
-/area/maintenance/cetus/shallow/derelect/bathroom)
+/area/maintenance/cetus/shallow/derelict/bathroom)
 "dpX" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/red{
 	dir = 6
@@ -5145,7 +5145,7 @@
 	dir = 8
 	},
 /obj/machinery/embedded_controller/radio/airlock/airlock_controller{
-	id_tag = "derelect_aft_dock";
+	id_tag = "derelict_aft_dock";
 	tag_airpump = "eva_port_pump";
 	tag_chamber_sensor = "eva_port_sensor";
 	tag_exterior_door = "eva_port_outer";
@@ -5157,7 +5157,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/old_tile,
-/area/maintenance/cetus/shallow/derelect/dock)
+/area/maintenance/cetus/shallow/derelict/dock)
 "dqs" = (
 /obj/random/junk,
 /obj/random/mob/mouse,
@@ -5315,7 +5315,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/maintenance/cetus/shallow/derelect/hallway)
+/area/maintenance/cetus/shallow/derelict/hallway)
 "duw" = (
 /obj/machinery/light/broken{
 	dir = 8
@@ -5786,7 +5786,7 @@
 	},
 /obj/effect/map_helper/airlock/button/ext_button,
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/maintenance/cetus/shallow/derelect/dock)
+/area/maintenance/cetus/shallow/derelict/dock)
 "dHX" = (
 /obj/structure/table/rack/shelf,
 /obj/random/soap{
@@ -5874,7 +5874,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/lino,
-/area/maintenance/cetus/shallow/derelect/kitchen)
+/area/maintenance/cetus/shallow/derelict/kitchen)
 "dMN" = (
 /obj/structure/disposalpipe/segment{
 	dir = 1;
@@ -6015,7 +6015,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/maintenance/cetus/shallow/derelect/hallway)
+/area/maintenance/cetus/shallow/derelict/hallway)
 "dQy" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/red{
 	dir = 8;
@@ -6030,7 +6030,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
-/area/maintenance/cetus/shallow/derelect/kitchen)
+/area/maintenance/cetus/shallow/derelict/kitchen)
 "dRl" = (
 /obj/machinery/light/small/yellowed,
 /turf/simulated/floor/carpet/graycarpet,
@@ -6063,7 +6063,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/old_tile,
-/area/maintenance/cetus/shallow/derelect/dock)
+/area/maintenance/cetus/shallow/derelict/dock)
 "dTO" = (
 /obj/structure/disposalpipe/segment,
 /obj/machinery/door/firedoor/glass,
@@ -6165,10 +6165,10 @@
 	icon_state = "5-9"
 	},
 /turf/simulated/floor/plating,
-/area/maintenance/cetus/shallow/derelect/engine)
+/area/maintenance/cetus/shallow/derelict/engine)
 "dXJ" = (
 /turf/simulated/floor/tiled/old_tile/blue,
-/area/maintenance/cetus/shallow/derelect/medbay)
+/area/maintenance/cetus/shallow/derelict/medbay)
 "dXP" = (
 /obj/structure/table/marble,
 /obj/item/storage/box/glasses/coffeecup{
@@ -6452,7 +6452,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/maintenance/cetus/shallow/derelect/hallway)
+/area/maintenance/cetus/shallow/derelict/hallway)
 "efG" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/table/bench/standard,
@@ -6557,7 +6557,7 @@
 /area/maintenance/cetus/shallow/starboard)
 "ehF" = (
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/maintenance/cetus/shallow/derelect/hallway)
+/area/maintenance/cetus/shallow/derelict/hallway)
 "ehL" = (
 /obj/machinery/atmospherics/binary/pump,
 /turf/simulated/floor/tiled,
@@ -6590,7 +6590,7 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/maintenance/cetus/shallow/derelect/bridge)
+/area/maintenance/cetus/shallow/derelict/bridge)
 "ejB" = (
 /turf/simulated/open,
 /area/rnd/cetus/stairwelljr3)
@@ -6776,7 +6776,7 @@
 	},
 /obj/random/junk,
 /turf/simulated/floor/lino,
-/area/maintenance/cetus/shallow/derelect/kitchen)
+/area/maintenance/cetus/shallow/derelict/kitchen)
 "eoA" = (
 /obj/machinery/computer/shutoff_monitor{
 	dir = 1
@@ -6856,7 +6856,7 @@
 	pixel_y = 32
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/maintenance/cetus/shallow/derelect/dock)
+/area/maintenance/cetus/shallow/derelict/dock)
 "epG" = (
 /obj/structure/table/rack/shelf/wood,
 /obj/item/entrepreneur/crystal{
@@ -6932,7 +6932,7 @@
 	pixel_x = -23
 	},
 /turf/simulated/floor/tiled/kafel_full,
-/area/maintenance/cetus/shallow/derelect/bathroom)
+/area/maintenance/cetus/shallow/derelict/bathroom)
 "erj" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -6984,7 +6984,7 @@
 /obj/effect/map_helper/airlock/sensor/chamber_sensor,
 /obj/effect/floor_decal/industrial/warning/full,
 /obj/machinery/embedded_controller/radio/airlock/airlock_controller{
-	id_tag = "derelect_port_dock";
+	id_tag = "derelict_port_dock";
 	pixel_y = 21;
 	tag_airpump = "eva_port_pump";
 	tag_chamber_sensor = "eva_port_sensor";
@@ -6994,7 +6994,7 @@
 	},
 /obj/machinery/light/small/emergency,
 /turf/simulated/floor/tiled/old_tile,
-/area/maintenance/cetus/shallow/derelect/dock)
+/area/maintenance/cetus/shallow/derelict/dock)
 "etf" = (
 /turf/simulated/wall/r_wall,
 /area/maintenance/cetus/shallow/ap)
@@ -7061,7 +7061,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/old_tile/yellow,
-/area/maintenance/cetus/shallow/derelect/dorms)
+/area/maintenance/cetus/shallow/derelict/dorms)
 "evc" = (
 /turf/simulated/wall/r_wall,
 /area/ai_upload)
@@ -7137,7 +7137,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/old_tile,
-/area/maintenance/cetus/shallow/derelect/dock)
+/area/maintenance/cetus/shallow/derelict/dock)
 "ewp" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -7158,7 +7158,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/maintenance/cetus/shallow/derelect/hallway)
+/area/maintenance/cetus/shallow/derelict/hallway)
 "exB" = (
 /obj/structure/lattice,
 /turf/simulated/open,
@@ -7283,7 +7283,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/universal,
 /turf/simulated/floor/tiled/old_tile,
-/area/maintenance/cetus/shallow/derelect/dock)
+/area/maintenance/cetus/shallow/derelict/dock)
 "eBz" = (
 /obj/machinery/door/airlock/external{
 	name = "Large Escape Pod Hatch 1"
@@ -7553,11 +7553,11 @@
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/maintenance/cetus/shallow/derelect/hallway)
+/area/maintenance/cetus/shallow/derelict/hallway)
 "eHM" = (
 /obj/machinery/clonepod/transhuman/full,
 /turf/simulated/floor/tiled/old_tile,
-/area/maintenance/cetus/shallow/derelect/medbay)
+/area/maintenance/cetus/shallow/derelict/medbay)
 "eHS" = (
 /obj/structure/lattice,
 /obj/structure/window/basic{
@@ -7592,7 +7592,7 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/maintenance/cetus/shallow/derelect/hallway)
+/area/maintenance/cetus/shallow/derelict/hallway)
 "eIU" = (
 /obj/structure/lattice,
 /obj/structure/catwalk,
@@ -7718,7 +7718,7 @@
 	icon_state = "0-8"
 	},
 /turf/simulated/floor/plating,
-/area/maintenance/cetus/shallow/derelect/hallway)
+/area/maintenance/cetus/shallow/derelict/hallway)
 "eNn" = (
 /obj/machinery/shower{
 	dir = 4;
@@ -7742,7 +7742,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/old_tile,
-/area/maintenance/cetus/shallow/derelect/medbay)
+/area/maintenance/cetus/shallow/derelict/medbay)
 "eOA" = (
 /obj/effect/floor_decal/borderfloorblack/corner2{
 	dir = 9
@@ -7764,7 +7764,7 @@
 "eOE" = (
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /turf/simulated/floor/lino,
-/area/maintenance/cetus/shallow/derelect/kitchen)
+/area/maintenance/cetus/shallow/derelict/kitchen)
 "eOK" = (
 /obj/random/cutout,
 /turf/simulated/floor/carpet/graycarpet,
@@ -7774,7 +7774,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/old_tile,
-/area/maintenance/cetus/shallow/derelect/medbay)
+/area/maintenance/cetus/shallow/derelict/medbay)
 "ePs" = (
 /obj/structure/table/wooden_reinforced,
 /obj/item/deskbell{
@@ -7923,7 +7923,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/maintenance/cetus/shallow/derelect/hallway)
+/area/maintenance/cetus/shallow/derelict/hallway)
 "eTS" = (
 /obj/machinery/light/yellowed{
 	dir = 1
@@ -8068,7 +8068,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
-/area/maintenance/cetus/shallow/derelect/kitchen)
+/area/maintenance/cetus/shallow/derelict/kitchen)
 "eYK" = (
 /obj/structure/closet/lawcloset,
 /obj/item/gps/command{
@@ -8145,7 +8145,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/lino,
-/area/maintenance/cetus/shallow/derelect/kitchen)
+/area/maintenance/cetus/shallow/derelict/kitchen)
 "fcV" = (
 /turf/simulated/floor/tiled/techfloor,
 /area/tcomm/chamber)
@@ -8299,7 +8299,7 @@
 	dir = 10
 	},
 /turf/simulated/floor/tiled/kafel_full,
-/area/maintenance/cetus/shallow/derelect/bathroom)
+/area/maintenance/cetus/shallow/derelict/bathroom)
 "fiR" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -8351,7 +8351,7 @@
 "fjU" = (
 /obj/structure/closet/secure_closet/freezer/meat,
 /turf/simulated/floor/tiled/freezer,
-/area/maintenance/cetus/shallow/derelect/kitchen)
+/area/maintenance/cetus/shallow/derelict/kitchen)
 "fkr" = (
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -8430,7 +8430,7 @@
 /obj/random/junk,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/old_tile,
-/area/maintenance/cetus/shallow/derelect/dock)
+/area/maintenance/cetus/shallow/derelict/dock)
 "fmu" = (
 /obj/structure/cable/yellow{
 	icon_state = "0-4"
@@ -8679,7 +8679,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/lino,
-/area/maintenance/cetus/shallow/derelect/kitchen)
+/area/maintenance/cetus/shallow/derelict/kitchen)
 "fqW" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -8773,7 +8773,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/maintenance/cetus/shallow/derelect/atmos)
+/area/maintenance/cetus/shallow/derelict/atmos)
 "ftb" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	external_pressure_bound = 0;
@@ -8830,7 +8830,7 @@
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/maintenance/cetus/shallow/derelect/locker)
+/area/maintenance/cetus/shallow/derelict/locker)
 "ftW" = (
 /turf/simulated/floor/carpet/graycarpet,
 /area/hallway/primary/firstdeck/vaultlobby)
@@ -9072,7 +9072,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/tiled/old_tile,
-/area/maintenance/cetus/shallow/derelect/dock)
+/area/maintenance/cetus/shallow/derelict/dock)
 "fCA" = (
 /obj/structure/bed/roller/massage,
 /turf/simulated/floor/boxing,
@@ -9098,7 +9098,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/old_tile/yellow,
-/area/maintenance/cetus/shallow/derelect/dorms)
+/area/maintenance/cetus/shallow/derelict/dorms)
 "fDR" = (
 /obj/machinery/atmospherics/pipe/simple/visible/cyan,
 /turf/simulated/floor/tiled,
@@ -9120,7 +9120,7 @@
 	pixel_x = 9
 	},
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/maintenance/cetus/shallow/derelect/bridge)
+/area/maintenance/cetus/shallow/derelict/bridge)
 "fGp" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
@@ -9168,7 +9168,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/old_tile/yellow,
-/area/maintenance/cetus/shallow/derelect/engine)
+/area/maintenance/cetus/shallow/derelict/engine)
 "fHU" = (
 /obj/machinery/atmospherics/pipe/simple/visible/cyan,
 /obj/structure/cable{
@@ -9275,7 +9275,7 @@
 /area/engineering/Atmospherics_Chamber)
 "fKX" = (
 /turf/simulated/wall,
-/area/maintenance/cetus/shallow/derelect/eva)
+/area/maintenance/cetus/shallow/derelict/eva)
 "fLk" = (
 /obj/machinery/light{
 	dir = 1;
@@ -9375,7 +9375,7 @@
 "fNm" = (
 /obj/random/maintenance/medical,
 /turf/simulated/floor/tiled/old_tile/blue,
-/area/maintenance/cetus/shallow/derelect/medbay)
+/area/maintenance/cetus/shallow/derelict/medbay)
 "fNu" = (
 /obj/structure/bed/chair/bay/chair/padded/red/bignest,
 /turf/simulated/floor/outdoors/rocks/cetus,
@@ -9389,7 +9389,7 @@
 "fNF" = (
 /obj/structure/lattice,
 /turf/simulated/open,
-/area/maintenance/cetus/shallow/derelect/kitchen)
+/area/maintenance/cetus/shallow/derelict/kitchen)
 "fOf" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/green,
 /obj/machinery/meter,
@@ -9562,7 +9562,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/maintenance/cetus/shallow/derelect/atmos)
+/area/maintenance/cetus/shallow/derelict/atmos)
 "fWt" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
@@ -9694,7 +9694,7 @@
 	icon_state = "1-6"
 	},
 /turf/simulated/floor/tiled/old_tile/blue,
-/area/maintenance/cetus/shallow/derelect/medbay)
+/area/maintenance/cetus/shallow/derelict/medbay)
 "fZv" = (
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/command{
@@ -9753,7 +9753,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/old_tile,
-/area/maintenance/cetus/shallow/derelect/dock)
+/area/maintenance/cetus/shallow/derelict/dock)
 "gbY" = (
 /obj/structure/railing/grey{
 	dir = 8
@@ -9853,7 +9853,7 @@
 	pixel_x = 3
 	},
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/maintenance/cetus/shallow/derelect/bridge)
+/area/maintenance/cetus/shallow/derelict/bridge)
 "gfh" = (
 /obj/effect/floor_decal/spline/plain{
 	dir = 4
@@ -9932,7 +9932,7 @@
 /obj/effect/wingrille_spawn/reinforced,
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/plating,
-/area/maintenance/cetus/shallow/derelect/kitchen)
+/area/maintenance/cetus/shallow/derelict/kitchen)
 "giB" = (
 /obj/machinery/door/airlock{
 	name = "Restroom"
@@ -9991,7 +9991,7 @@
 	},
 /obj/random/forgotten_tram,
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/maintenance/cetus/shallow/derelect/bridge)
+/area/maintenance/cetus/shallow/derelict/bridge)
 "gjw" = (
 /obj/structure/railing/overhang/hazard/nanite{
 	dir = 1
@@ -10455,7 +10455,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/maintenance/cetus/shallow/derelect/atmos)
+/area/maintenance/cetus/shallow/derelict/atmos)
 "gxk" = (
 /obj/machinery/light/yellowed{
 	dir = 1
@@ -10550,7 +10550,7 @@
 	dir = 6
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/maintenance/cetus/shallow/derelect/atmos)
+/area/maintenance/cetus/shallow/derelict/atmos)
 "gAA" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4;
@@ -10612,7 +10612,7 @@
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/maintenance/cetus/shallow/derelect/hallway)
+/area/maintenance/cetus/shallow/derelict/hallway)
 "gCF" = (
 /obj/machinery/alarm{
 	pixel_y = 22
@@ -10708,11 +10708,11 @@
 	},
 /obj/random/junk,
 /turf/simulated/floor/tiled/white,
-/area/maintenance/cetus/shallow/derelect/kitchen)
+/area/maintenance/cetus/shallow/derelict/kitchen)
 "gFt" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /turf/simulated/floor/tiled/techfloor,
-/area/maintenance/cetus/shallow/derelect/atmos)
+/area/maintenance/cetus/shallow/derelict/atmos)
 "gFE" = (
 /obj/random/junk,
 /obj/machinery/light/broken{
@@ -10720,14 +10720,14 @@
 	},
 /obj/structure/loot_pile/maint/trash,
 /turf/simulated/floor/lino,
-/area/maintenance/cetus/shallow/derelect/kitchen)
+/area/maintenance/cetus/shallow/derelict/kitchen)
 "gFI" = (
 /obj/random/maintenance,
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
 	},
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/maintenance/cetus/shallow/derelect/locker)
+/area/maintenance/cetus/shallow/derelict/locker)
 "gFP" = (
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/blast/regular{
@@ -11120,7 +11120,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/maintenance/cetus/shallow/derelect/hallway)
+/area/maintenance/cetus/shallow/derelict/hallway)
 "gRS" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume,
 /obj/machinery/airlock_sensor{
@@ -11261,7 +11261,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/maintenance/cetus/shallow/derelect/locker)
+/area/maintenance/cetus/shallow/derelict/locker)
 "gXc" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -11516,7 +11516,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/maintenance/cetus/shallow/derelect/hallway)
+/area/maintenance/cetus/shallow/derelict/hallway)
 "hbL" = (
 /obj/structure/railing/overhang/hazard/nanite{
 	dir = 1
@@ -11533,7 +11533,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/old_tile/yellow,
-/area/maintenance/cetus/shallow/derelect/engine)
+/area/maintenance/cetus/shallow/derelict/engine)
 "hcj" = (
 /obj/structure/cable/green{
 	icon_state = "4-9"
@@ -11545,7 +11545,7 @@
 "hcu" = (
 /obj/random/trash,
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/maintenance/cetus/shallow/derelect/locker)
+/area/maintenance/cetus/shallow/derelict/locker)
 "hcE" = (
 /obj/machinery/light/floortube/flicker,
 /turf/simulated/floor/tiled,
@@ -11641,7 +11641,7 @@
 	pixel_x = -7
 	},
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/maintenance/cetus/shallow/derelect/bridge)
+/area/maintenance/cetus/shallow/derelict/bridge)
 "hfH" = (
 /obj/structure/table/bench/padded,
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
@@ -11806,7 +11806,7 @@
 	icon_state = "0-4"
 	},
 /turf/simulated/floor/plating,
-/area/maintenance/cetus/shallow/derelect/hallway)
+/area/maintenance/cetus/shallow/derelict/hallway)
 "hlt" = (
 /obj/structure/bed/chair/office/dark{
 	dir = 4
@@ -11844,7 +11844,7 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/maintenance/cetus/shallow/derelect/dock)
+/area/maintenance/cetus/shallow/derelict/dock)
 "hmC" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/red,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -11858,7 +11858,7 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/maintenance/cetus/shallow/derelect/atmos)
+/area/maintenance/cetus/shallow/derelict/atmos)
 "hmD" = (
 /obj/machinery/photocopier,
 /turf/simulated/floor/carpet/graycarpet,
@@ -11988,7 +11988,7 @@
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/maintenance/cetus/shallow/derelect/locker)
+/area/maintenance/cetus/shallow/derelict/locker)
 "hqH" = (
 /obj/machinery/door/airlock/glass_external{
 	frequency = 1379;
@@ -12014,7 +12014,7 @@
 	name = "Central Access"
 	},
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/maintenance/cetus/shallow/derelect/hallway)
+/area/maintenance/cetus/shallow/derelict/hallway)
 "hsn" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -12195,7 +12195,7 @@
 	name = "Kitchen"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/maintenance/cetus/shallow/derelect/kitchen)
+/area/maintenance/cetus/shallow/derelict/kitchen)
 "hxF" = (
 /obj/structure/salvageable/server_os{
 	pixel_x = 6
@@ -12204,7 +12204,7 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/maintenance/cetus/shallow/derelect/bridge)
+/area/maintenance/cetus/shallow/derelict/bridge)
 "hxV" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 9
@@ -12216,7 +12216,7 @@
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/maintenance/cetus/shallow/derelect/hallway)
+/area/maintenance/cetus/shallow/derelict/hallway)
 "hya" = (
 /obj/effect/floor_decal/industrial/warning/full,
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
@@ -12314,7 +12314,7 @@
 "hAe" = (
 /obj/machinery/suit_storage_unit/mining,
 /turf/simulated/floor/tiled/techfloor,
-/area/maintenance/cetus/shallow/derelect/eva)
+/area/maintenance/cetus/shallow/derelict/eva)
 "hAw" = (
 /obj/structure/railing/overhang/hazard/nanite{
 	dir = 1
@@ -12385,7 +12385,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/old_tile/yellow,
-/area/maintenance/cetus/shallow/derelect/dorms)
+/area/maintenance/cetus/shallow/derelict/dorms)
 "hFR" = (
 /turf/simulated/floor/tiled,
 /area/rnd/cetus/entry)
@@ -12445,7 +12445,7 @@
 /area/ai_upload)
 "hIo" = (
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/maintenance/cetus/shallow/derelect/bridge)
+/area/maintenance/cetus/shallow/derelict/bridge)
 "hIw" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -12548,7 +12548,7 @@
 	name = "Central Access"
 	},
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/maintenance/cetus/shallow/derelect/hallway)
+/area/maintenance/cetus/shallow/derelict/hallway)
 "hLN" = (
 /obj/machinery/light/small,
 /turf/simulated/floor/tiled,
@@ -12594,7 +12594,7 @@
 	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /turf/simulated/floor/tiled/techfloor,
-/area/maintenance/cetus/shallow/derelect/engine)
+/area/maintenance/cetus/shallow/derelict/engine)
 "hML" = (
 /turf/simulated/wall{
 	can_open = 1
@@ -12606,7 +12606,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/maintenance/cetus/shallow/derelect/hallway)
+/area/maintenance/cetus/shallow/derelict/hallway)
 "hNo" = (
 /obj/structure/transit_tube{
 	icon_state = "N-S";
@@ -12728,7 +12728,7 @@
 	icon_state = "0-8"
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/maintenance/cetus/shallow/derelect/atmos)
+/area/maintenance/cetus/shallow/derelict/atmos)
 "hQG" = (
 /obj/structure/table/reinforced,
 /obj/machinery/recharger,
@@ -12839,7 +12839,7 @@
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/kafel_full,
-/area/maintenance/cetus/shallow/derelect/bathroom)
+/area/maintenance/cetus/shallow/derelict/bathroom)
 "hSJ" = (
 /obj/structure/cable/yellow{
 	icon_state = "0-2"
@@ -13055,7 +13055,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/old_tile,
-/area/maintenance/cetus/shallow/derelect/dock)
+/area/maintenance/cetus/shallow/derelict/dock)
 "hWy" = (
 /obj/structure/bed/chair/comfy/purp{
 	dir = 1
@@ -13392,7 +13392,7 @@
 "iil" = (
 /obj/structure/loot_pile/maint/technical,
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/maintenance/cetus/shallow/derelect/bridge)
+/area/maintenance/cetus/shallow/derelict/bridge)
 "iiq" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -13421,7 +13421,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/old_tile/yellow,
-/area/maintenance/cetus/shallow/derelect/dorms)
+/area/maintenance/cetus/shallow/derelict/dorms)
 "ije" = (
 /obj/structure/lattice,
 /obj/structure/disposalpipe/segment{
@@ -13514,7 +13514,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/maintenance/cetus/shallow/derelect/engine)
+/area/maintenance/cetus/shallow/derelict/engine)
 "inO" = (
 /obj/structure/lattice,
 /turf/simulated/open,
@@ -13550,7 +13550,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/maintenance/cetus/shallow/derelect/atmos)
+/area/maintenance/cetus/shallow/derelict/atmos)
 "iqP" = (
 /obj/effect/floor_decal/spline/fancy/wood,
 /turf/simulated/floor/wood,
@@ -13598,7 +13598,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/maintenance/cetus/shallow/derelect/eva)
+/area/maintenance/cetus/shallow/derelict/eva)
 "irU" = (
 /obj/structure/disposalpipe/segment,
 /obj/effect/floor_decal/industrial/warning{
@@ -13817,7 +13817,7 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/maintenance/cetus/shallow/derelect/hallway)
+/area/maintenance/cetus/shallow/derelict/hallway)
 "iAG" = (
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 1
@@ -13859,14 +13859,14 @@
 /obj/effect/floor_decal/industrial/warning/corner,
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/tiled/old_tile,
-/area/maintenance/cetus/shallow/derelect/dock)
+/area/maintenance/cetus/shallow/derelict/dock)
 "iCI" = (
 /obj/machinery/alarm{
 	dir = 4;
 	pixel_x = -23
 	},
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/maintenance/cetus/shallow/derelect/hallway)
+/area/maintenance/cetus/shallow/derelict/hallway)
 "iCX" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /turf/simulated/floor/wood,
@@ -13977,7 +13977,7 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/white,
-/area/maintenance/cetus/shallow/derelect/kitchen)
+/area/maintenance/cetus/shallow/derelict/kitchen)
 "iFS" = (
 /obj/structure/cable/green{
 	icon_state = "6-9"
@@ -13997,7 +13997,7 @@
 /area/rnd/research/particleaccelerator)
 "iGI" = (
 /turf/simulated/wall/r_wall,
-/area/maintenance/cetus/shallow/derelect/hallway)
+/area/maintenance/cetus/shallow/derelict/hallway)
 "iGK" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 10
@@ -14177,7 +14177,7 @@
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/maintenance/cetus/shallow/derelect/locker)
+/area/maintenance/cetus/shallow/derelict/locker)
 "iLj" = (
 /obj/machinery/telecomms/server/presets/science,
 /turf/simulated/floor/bluegrid,
@@ -14212,7 +14212,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/maintenance/cetus/shallow/derelect/hallway)
+/area/maintenance/cetus/shallow/derelict/hallway)
 "iNl" = (
 /obj/structure/bed/chair/comfy/yellow{
 	dir = 4
@@ -14406,7 +14406,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/maintenance/cetus/shallow/derelect/atmos)
+/area/maintenance/cetus/shallow/derelict/atmos)
 "iSq" = (
 /obj/machinery/light/yellowed{
 	dir = 4
@@ -14419,7 +14419,7 @@
 "iSM" = (
 /obj/structure/loot_pile/maint/trash,
 /turf/simulated/floor/lino,
-/area/maintenance/cetus/shallow/derelect/kitchen)
+/area/maintenance/cetus/shallow/derelict/kitchen)
 "iSR" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -14766,7 +14766,7 @@
 	tag_west = 2
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/maintenance/cetus/shallow/derelect/atmos)
+/area/maintenance/cetus/shallow/derelict/atmos)
 "jbe" = (
 /obj/effect/floor_decal/industrial/warning,
 /obj/effect/floor_decal/industrial/warning{
@@ -14797,7 +14797,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/old_tile/yellow,
-/area/maintenance/cetus/shallow/derelect/engine)
+/area/maintenance/cetus/shallow/derelict/engine)
 "jbL" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -14854,7 +14854,7 @@
 	icon_state = "0-8"
 	},
 /turf/simulated/floor/plating,
-/area/maintenance/cetus/shallow/derelect/hallway)
+/area/maintenance/cetus/shallow/derelict/hallway)
 "jeF" = (
 /obj/effect/floor_decal/industrial/warning/tile,
 /obj/effect/floor_decal/industrial/warning/color/tile/red,
@@ -14865,7 +14865,7 @@
 /area/rnd/research/particleaccelerator)
 "jeR" = (
 /turf/simulated/wall,
-/area/maintenance/cetus/shallow/derelect/atmos)
+/area/maintenance/cetus/shallow/derelict/atmos)
 "jfb" = (
 /obj/structure/dispenser,
 /turf/simulated/floor/tiled,
@@ -15106,7 +15106,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/maintenance/cetus/shallow/derelect/atmos)
+/area/maintenance/cetus/shallow/derelict/atmos)
 "jnw" = (
 /turf/simulated/floor/water/digestive_enzymes/nanites{
 	id = "maintnanites"
@@ -15499,7 +15499,7 @@
 /obj/structure/table/standard,
 /obj/random/contraband,
 /turf/simulated/floor/tiled/old_tile/yellow,
-/area/maintenance/cetus/shallow/derelect/dorms)
+/area/maintenance/cetus/shallow/derelict/dorms)
 "jCi" = (
 /obj/machinery/atmospherics/pipe/zpipe/down/supply{
 	dir = 8
@@ -15584,7 +15584,7 @@
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/maintenance/cetus/shallow/derelect/bridge)
+/area/maintenance/cetus/shallow/derelict/bridge)
 "jEH" = (
 /obj/structure/cable/yellow{
 	icon_state = "1-8"
@@ -15636,7 +15636,7 @@
 	pixel_x = 7
 	},
 /turf/simulated/floor/tiled/old_tile,
-/area/maintenance/cetus/shallow/derelect/dock)
+/area/maintenance/cetus/shallow/derelict/dock)
 "jFa" = (
 /obj/structure/cable/cyan{
 	icon_state = "6-10"
@@ -15668,7 +15668,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/lino,
-/area/maintenance/cetus/shallow/derelect/kitchen)
+/area/maintenance/cetus/shallow/derelict/kitchen)
 "jGb" = (
 /obj/machinery/atmospherics/omni/atmos_filter{
 	tag_east = 1;
@@ -15677,7 +15677,7 @@
 	tag_west = 5
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/maintenance/cetus/shallow/derelect/atmos)
+/area/maintenance/cetus/shallow/derelict/atmos)
 "jGu" = (
 /obj/structure/lattice,
 /obj/machinery/atmospherics/pipe/simple/visible/green{
@@ -15701,7 +15701,7 @@
 /obj/random/junk,
 /obj/random/trash,
 /turf/simulated/floor/lino,
-/area/maintenance/cetus/shallow/derelect/kitchen)
+/area/maintenance/cetus/shallow/derelict/kitchen)
 "jHc" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -15836,7 +15836,7 @@
 /obj/structure/table/standard,
 /obj/random/junk,
 /turf/simulated/floor/tiled/old_tile/yellow,
-/area/maintenance/cetus/shallow/derelect/dorms)
+/area/maintenance/cetus/shallow/derelict/dorms)
 "jMe" = (
 /obj/structure/railing/grey,
 /obj/structure/railing/grey{
@@ -15894,7 +15894,7 @@
 /obj/random/maintenance,
 /obj/random/trash,
 /turf/simulated/floor/lino,
-/area/maintenance/cetus/shallow/derelect/kitchen)
+/area/maintenance/cetus/shallow/derelict/kitchen)
 "jNA" = (
 /obj/effect/floor_decal/borderfloorblack/corner{
 	dir = 4
@@ -15967,7 +15967,7 @@
 	dir = 9
 	},
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/maintenance/cetus/shallow/derelect/hallway)
+/area/maintenance/cetus/shallow/derelict/hallway)
 "jOC" = (
 /turf/simulated/wall/r_wall,
 /area/asteroid/cetus/d3)
@@ -16152,7 +16152,7 @@
 /area/solar/aftstarboardsolar)
 "jVJ" = (
 /turf/simulated/wall,
-/area/maintenance/cetus/shallow/derelect/bathroom)
+/area/maintenance/cetus/shallow/derelict/bathroom)
 "jVZ" = (
 /obj/structure/table/steel,
 /obj/item/storage/bag/sheetsnatcher,
@@ -16206,7 +16206,7 @@
 "jYo" = (
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/maintenance/cetus/shallow/derelect/hallway)
+/area/maintenance/cetus/shallow/derelict/hallway)
 "jYJ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -16229,7 +16229,7 @@
 	icon_state = "0-4"
 	},
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/maintenance/cetus/shallow/derelect/locker)
+/area/maintenance/cetus/shallow/derelict/locker)
 "jYM" = (
 /obj/machinery/atmospherics/pipe/simple/visible/red,
 /obj/machinery/atmospherics/pipe/simple/visible/green{
@@ -16409,7 +16409,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
-/area/maintenance/cetus/shallow/derelect/kitchen)
+/area/maintenance/cetus/shallow/derelict/kitchen)
 "kew" = (
 /obj/structure/railing/grey{
 	dir = 8
@@ -16437,7 +16437,7 @@
 /obj/structure/toilet/item,
 /obj/item/grenade/anti_photon/rubberducky/black,
 /turf/simulated/floor/tiled/kafel_full,
-/area/maintenance/cetus/shallow/derelect/bathroom)
+/area/maintenance/cetus/shallow/derelict/bathroom)
 "keW" = (
 /obj/structure/closet/secure_closet/security,
 /obj/effect/floor_decal/spline/plain/cee{
@@ -16569,7 +16569,7 @@
 /obj/effect/wingrille_spawn/reinforced,
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/plating,
-/area/maintenance/cetus/shallow/derelect/hallway)
+/area/maintenance/cetus/shallow/derelict/hallway)
 "kio" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -17104,7 +17104,7 @@
 /area/crew_quarters/cetus/Galleryf2)
 "kxA" = (
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/maintenance/cetus/shallow/derelect/locker)
+/area/maintenance/cetus/shallow/derelict/locker)
 "kxO" = (
 /obj/random/pottedplant,
 /turf/simulated/floor/wood,
@@ -17308,7 +17308,7 @@
 "kCi" = (
 /obj/structure/closet/secure_closet/personal,
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/maintenance/cetus/shallow/derelect/locker)
+/area/maintenance/cetus/shallow/derelict/locker)
 "kCk" = (
 /obj/random/obstruction,
 /turf/simulated/floor/plating,
@@ -17388,7 +17388,7 @@
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/maintenance/cetus/shallow/derelect/locker)
+/area/maintenance/cetus/shallow/derelict/locker)
 "kFa" = (
 /obj/effect/wingrille_spawn/reinforced,
 /obj/machinery/door/blast/regular{
@@ -17413,7 +17413,7 @@
 "kGG" = (
 /obj/machinery/suit_storage_unit/standard_unit,
 /turf/simulated/floor/tiled/techfloor,
-/area/maintenance/cetus/shallow/derelect/eva)
+/area/maintenance/cetus/shallow/derelict/eva)
 "kGS" = (
 /obj/structure/table/marble,
 /obj/machinery/microwave,
@@ -17432,7 +17432,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/lino,
-/area/maintenance/cetus/shallow/derelect/kitchen)
+/area/maintenance/cetus/shallow/derelict/kitchen)
 "kIp" = (
 /obj/structure/dummystairs/hazardledge{
 	dir = 4
@@ -17647,7 +17647,7 @@
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/maintenance/cetus/shallow/derelect/locker)
+/area/maintenance/cetus/shallow/derelict/locker)
 "kOQ" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
@@ -17684,7 +17684,7 @@
 /obj/structure/door_assembly,
 /obj/structure/firedoor_assembly,
 /turf/simulated/floor/tiled/white,
-/area/maintenance/cetus/shallow/derelect/kitchen)
+/area/maintenance/cetus/shallow/derelict/kitchen)
 "kPV" = (
 /obj/random/junk,
 /obj/structure/cable/cyan{
@@ -17695,7 +17695,7 @@
 /turf/simulated/floor/plating{
 	icon_state = "dmg4"
 	},
-/area/maintenance/cetus/shallow/derelect/hallway)
+/area/maintenance/cetus/shallow/derelict/hallway)
 "kQc" = (
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/maintenance,
@@ -17729,7 +17729,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/old_tile,
-/area/maintenance/cetus/shallow/derelect/medbay)
+/area/maintenance/cetus/shallow/derelict/medbay)
 "kQS" = (
 /obj/structure/sign/directions/bridge{
 	dir = 1
@@ -17934,7 +17934,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/maintenance/cetus/shallow/derelect/hallway)
+/area/maintenance/cetus/shallow/derelict/hallway)
 "kTR" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -18056,7 +18056,7 @@
 /obj/random/obstruction,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/old_tile,
-/area/maintenance/cetus/shallow/derelect/dock)
+/area/maintenance/cetus/shallow/derelict/dock)
 "kYY" = (
 /obj/structure/railing/overhang/bronze{
 	dir = 1
@@ -18645,7 +18645,7 @@
 /obj/random/junk,
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/maintenance/cetus/shallow/derelect/hallway)
+/area/maintenance/cetus/shallow/derelict/hallway)
 "lqX" = (
 /obj/structure/lattice,
 /obj/structure/catwalk{
@@ -18792,7 +18792,7 @@
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
 /turf/simulated/floor/lino,
-/area/maintenance/cetus/shallow/derelect/kitchen)
+/area/maintenance/cetus/shallow/derelict/kitchen)
 "ltl" = (
 /obj/structure/table/bench/steel,
 /obj/structure/cable/green{
@@ -19085,7 +19085,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/lino,
-/area/maintenance/cetus/shallow/derelect/kitchen)
+/area/maintenance/cetus/shallow/derelict/kitchen)
 "lAH" = (
 /obj/structure/closet/crate{
 	name = "Camera Assembly Crate"
@@ -19154,7 +19154,7 @@
 	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /turf/simulated/floor/tiled/techfloor,
-/area/maintenance/cetus/shallow/derelect/eva)
+/area/maintenance/cetus/shallow/derelict/eva)
 "lBl" = (
 /obj/random/vendorfood,
 /turf/simulated/floor/carpet/graycarpet,
@@ -19322,7 +19322,7 @@
 "lGa" = (
 /obj/random/junk,
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/maintenance/cetus/shallow/derelect/hallway)
+/area/maintenance/cetus/shallow/derelict/hallway)
 "lGe" = (
 /turf/simulated/floor/wood,
 /area/bridge/sleep/Captain_Quarters)
@@ -19412,7 +19412,7 @@
 /obj/structure/bed/pod,
 /obj/machinery/light/small/yellowed,
 /turf/simulated/floor/tiled/old_tile/yellow,
-/area/maintenance/cetus/shallow/derelect/dorms)
+/area/maintenance/cetus/shallow/derelict/dorms)
 "lJo" = (
 /obj/machinery/pda_multicaster/prebuilt,
 /obj/machinery/atmospherics/pipe/simple/hidden,
@@ -19453,7 +19453,7 @@
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/maintenance/cetus/shallow/derelect/locker)
+/area/maintenance/cetus/shallow/derelict/locker)
 "lKO" = (
 /obj/structure/cable/yellow{
 	icon_state = "0-4"
@@ -19487,7 +19487,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/maintenance/cetus/shallow/derelect/hallway)
+/area/maintenance/cetus/shallow/derelict/hallway)
 "lLo" = (
 /obj/structure/disposaloutlet,
 /obj/structure/disposalpipe/trunk{
@@ -19530,7 +19530,7 @@
 	dir = 6
 	},
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/maintenance/cetus/shallow/derelect/hallway)
+/area/maintenance/cetus/shallow/derelict/hallway)
 "lMR" = (
 /obj/structure/fireaxecabinet,
 /turf/simulated/wall/r_wall,
@@ -19572,7 +19572,7 @@
 	},
 /obj/effect/floor_decal/industrial/warning/full,
 /turf/simulated/floor/plating,
-/area/maintenance/cetus/shallow/derelect/dock)
+/area/maintenance/cetus/shallow/derelict/dock)
 "lOH" = (
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 8
@@ -19652,7 +19652,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/maintenance/cetus/shallow/derelect/hallway)
+/area/maintenance/cetus/shallow/derelict/hallway)
 "lQF" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/green{
 	dir = 4
@@ -19693,7 +19693,7 @@
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/maintenance/cetus/shallow/derelect/hallway)
+/area/maintenance/cetus/shallow/derelict/hallway)
 "lRl" = (
 /obj/structure/barricade/cutout/ian,
 /turf/simulated/floor/plating,
@@ -19756,7 +19756,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/maintenance/cetus/shallow/derelect/bridge)
+/area/maintenance/cetus/shallow/derelict/bridge)
 "lTo" = (
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/command{
@@ -19791,7 +19791,7 @@
 	icon_state = "2-4"
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/maintenance/cetus/shallow/derelect/atmos)
+/area/maintenance/cetus/shallow/derelict/atmos)
 "lTW" = (
 /turf/simulated/open,
 /area/maintenance/cetus/shallow/ap)
@@ -19904,7 +19904,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
-/area/maintenance/cetus/shallow/derelect/kitchen)
+/area/maintenance/cetus/shallow/derelict/kitchen)
 "lWy" = (
 /obj/machinery/atmospherics/binary/pump/on{
 	dir = 1;
@@ -20118,7 +20118,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/universal,
 /turf/simulated/floor/tiled/techfloor,
-/area/maintenance/cetus/shallow/derelect/atmos)
+/area/maintenance/cetus/shallow/derelict/atmos)
 "mcK" = (
 /obj/structure/lattice,
 /obj/structure/catwalk,
@@ -20201,7 +20201,7 @@
 	icon_state = "0-8"
 	},
 /turf/simulated/floor/tiled/kafel_full,
-/area/maintenance/cetus/shallow/derelect/bathroom)
+/area/maintenance/cetus/shallow/derelict/bathroom)
 "mdJ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/red{
 	dir = 4
@@ -20320,7 +20320,7 @@
 	icon_state = "0-2"
 	},
 /turf/simulated/floor/plating,
-/area/maintenance/cetus/shallow/derelect/hallway)
+/area/maintenance/cetus/shallow/derelict/hallway)
 "mhD" = (
 /obj/machinery/conveyor{
 	dir = 9;
@@ -20489,7 +20489,7 @@
 	},
 /obj/machinery/atmospherics/pipe/manifold4w/hidden,
 /turf/simulated/floor/tiled/old_tile,
-/area/maintenance/cetus/shallow/derelect/dock)
+/area/maintenance/cetus/shallow/derelict/dock)
 "mmb" = (
 /obj/structure/table/hardwoodtable,
 /obj/machinery/cash_register/civilian,
@@ -20799,7 +20799,7 @@
 "mxj" = (
 /obj/random/obstruction,
 /turf/simulated/floor/lino,
-/area/maintenance/cetus/shallow/derelect/kitchen)
+/area/maintenance/cetus/shallow/derelict/kitchen)
 "mxo" = (
 /turf/simulated/floor/wood,
 /area/maintenance/cetus/badsnuggles)
@@ -20919,7 +20919,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/maintenance/cetus/shallow/derelect/atmos)
+/area/maintenance/cetus/shallow/derelict/atmos)
 "myP" = (
 /obj/structure/railing/overhang/grey{
 	dir = 1
@@ -20943,7 +20943,7 @@
 	dir = 6
 	},
 /turf/simulated/floor/tiled/old_tile,
-/area/maintenance/cetus/shallow/derelect/dock)
+/area/maintenance/cetus/shallow/derelict/dock)
 "mzH" = (
 /obj/structure/barricade/cutout/cultist,
 /turf/simulated/floor/plating,
@@ -20957,7 +20957,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/maintenance/cetus/shallow/derelect/hallway)
+/area/maintenance/cetus/shallow/derelict/hallway)
 "mAe" = (
 /obj/machinery/atmospherics/pipe/simple/visible/cyan,
 /obj/structure/cable{
@@ -21042,7 +21042,7 @@
 	dir = 10
 	},
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/maintenance/cetus/shallow/derelect/hallway)
+/area/maintenance/cetus/shallow/derelict/hallway)
 "mCm" = (
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
@@ -21057,7 +21057,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/maintenance/cetus/shallow/derelect/engine)
+/area/maintenance/cetus/shallow/derelict/engine)
 "mCq" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
@@ -21366,7 +21366,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/maintenance/cetus/shallow/derelect/atmos)
+/area/maintenance/cetus/shallow/derelict/atmos)
 "mNQ" = (
 /obj/structure/closet/walllocker/medical{
 	pixel_y = -30
@@ -21442,7 +21442,7 @@
 	dir = 5
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/maintenance/cetus/shallow/derelect/engine)
+/area/maintenance/cetus/shallow/derelict/engine)
 "mRH" = (
 /obj/structure/table/rack,
 /obj/item/circuitboard/telecomms/processor,
@@ -21530,11 +21530,11 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/maintenance/cetus/shallow/derelect/atmos)
+/area/maintenance/cetus/shallow/derelict/atmos)
 "mSx" = (
 /obj/machinery/light/yellowed,
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/maintenance/cetus/shallow/derelect/locker)
+/area/maintenance/cetus/shallow/derelict/locker)
 "mST" = (
 /obj/effect/floor_decal/carpet,
 /turf/simulated/floor/carpet,
@@ -21678,7 +21678,7 @@
 	pixel_y = 8
 	},
 /turf/simulated/floor/tiled/kafel_full,
-/area/maintenance/cetus/shallow/derelect/bathroom)
+/area/maintenance/cetus/shallow/derelict/bathroom)
 "mXl" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -21718,7 +21718,7 @@
 /turf/simulated/floor/plating{
 	icon_state = "dmg1"
 	},
-/area/maintenance/cetus/shallow/derelect/hallway)
+/area/maintenance/cetus/shallow/derelict/hallway)
 "mXG" = (
 /obj/machinery/computer/general_air_control/large_tank_control{
 	input_tag = "n2_in";
@@ -21919,7 +21919,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/maintenance/cetus/shallow/derelect/atmos)
+/area/maintenance/cetus/shallow/derelict/atmos)
 "naN" = (
 /obj/structure/sign/deck/third,
 /turf/simulated/wall,
@@ -21972,7 +21972,7 @@
 	icon_state = "0-4"
 	},
 /turf/simulated/floor/plating,
-/area/maintenance/cetus/shallow/derelect/hallway)
+/area/maintenance/cetus/shallow/derelict/hallway)
 "neC" = (
 /obj/machinery/door/airlock/external{
 	icon_state = "door_locked";
@@ -21991,7 +21991,7 @@
 	},
 /obj/effect/map_helper/airlock/button/ext_button,
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/maintenance/cetus/shallow/derelect/dock)
+/area/maintenance/cetus/shallow/derelict/dock)
 "neL" = (
 /obj/structure/table/woodentable,
 /obj/item/reagent_containers/food/drinks/flask{
@@ -22030,7 +22030,7 @@
 	},
 /obj/structure/closet/secure_closet/atmos_personal,
 /turf/simulated/floor/tiled/techfloor,
-/area/maintenance/cetus/shallow/derelect/atmos)
+/area/maintenance/cetus/shallow/derelict/atmos)
 "ngu" = (
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/security{
@@ -22057,7 +22057,7 @@
 /area/hallway/primary/firstdeck/vaultcheckpoint)
 "ngw" = (
 /turf/simulated/wall,
-/area/maintenance/cetus/shallow/derelect/locker)
+/area/maintenance/cetus/shallow/derelict/locker)
 "ngN" = (
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 8
@@ -22143,7 +22143,7 @@
 	dir = 5
 	},
 /turf/simulated/floor/tiled/old_tile/yellow,
-/area/maintenance/cetus/shallow/derelect/dorms)
+/area/maintenance/cetus/shallow/derelict/dorms)
 "njd" = (
 /obj/machinery/light/small,
 /turf/simulated/open,
@@ -22459,7 +22459,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/maintenance/cetus/shallow/derelect/atmos)
+/area/maintenance/cetus/shallow/derelict/atmos)
 "nqZ" = (
 /obj/structure/railing/grey{
 	dir = 4
@@ -22502,7 +22502,7 @@
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/maintenance/cetus/shallow/derelect/hallway)
+/area/maintenance/cetus/shallow/derelict/hallway)
 "nsq" = (
 /obj/structure/bed/chair/sofa/left/blue,
 /obj/effect/floor_decal/spline/plain/corner{
@@ -22752,7 +22752,7 @@
 /turf/simulated/floor/plating{
 	icon_state = "dmg1"
 	},
-/area/maintenance/cetus/shallow/derelect/kitchen)
+/area/maintenance/cetus/shallow/derelict/kitchen)
 "nBs" = (
 /obj/structure/cable/cyan{
 	icon_state = "4-8"
@@ -22872,7 +22872,7 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/maintenance/cetus/shallow/derelect/medbay)
+/area/maintenance/cetus/shallow/derelict/medbay)
 "nFu" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/red{
 	dir = 10
@@ -22981,7 +22981,7 @@
 /area/hallway/primary/firstdeck/vaultcheckpoint)
 "nIu" = (
 /turf/simulated/wall,
-/area/maintenance/cetus/shallow/derelect/hallway)
+/area/maintenance/cetus/shallow/derelict/hallway)
 "nIG" = (
 /obj/structure/ladder,
 /obj/structure/lattice,
@@ -23015,7 +23015,7 @@
 /obj/structure/bed/chair,
 /obj/random/junk,
 /turf/simulated/floor/lino,
-/area/maintenance/cetus/shallow/derelect/kitchen)
+/area/maintenance/cetus/shallow/derelict/kitchen)
 "nJG" = (
 /obj/machinery/ai_status_display{
 	pixel_y = -32
@@ -23115,7 +23115,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/maintenance/cetus/shallow/derelect/hallway)
+/area/maintenance/cetus/shallow/derelict/hallway)
 "nLZ" = (
 /obj/machinery/atmospherics/pipe/simple/visible/red,
 /obj/machinery/atmospherics/pipe/simple/visible/green{
@@ -23125,7 +23125,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/maintenance/cetus/shallow/derelect/atmos)
+/area/maintenance/cetus/shallow/derelict/atmos)
 "nMr" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 4
@@ -23270,7 +23270,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/maintenance/cetus/shallow/derelect/hallway)
+/area/maintenance/cetus/shallow/derelict/hallway)
 "nTg" = (
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
@@ -23294,7 +23294,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/maintenance/cetus/shallow/derelect/dock)
+/area/maintenance/cetus/shallow/derelict/dock)
 "nTs" = (
 /obj/effect/wingrille_spawn/reinforced,
 /obj/machinery/meter,
@@ -23692,7 +23692,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/old_tile/yellow,
-/area/maintenance/cetus/shallow/derelect/dorms)
+/area/maintenance/cetus/shallow/derelict/dorms)
 "ocJ" = (
 /obj/structure/bookcase{
 	name = "bookcase (Fiction)"
@@ -23866,7 +23866,7 @@
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/maintenance/cetus/shallow/derelect/bathroom)
+/area/maintenance/cetus/shallow/derelict/bathroom)
 "ohb" = (
 /obj/structure/bed/chair/comfy/blue{
 	dir = 4
@@ -23941,7 +23941,7 @@
 	dir = 6
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/maintenance/cetus/shallow/derelect/atmos)
+/area/maintenance/cetus/shallow/derelict/atmos)
 "ojD" = (
 /obj/machinery/atmospherics/portables_connector,
 /obj/machinery/portable_atmospherics/canister/air/airlock,
@@ -24053,7 +24053,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/maintenance/cetus/shallow/derelect/bridge)
+/area/maintenance/cetus/shallow/derelict/bridge)
 "ooY" = (
 /turf/simulated/floor/carpet/graycarpet,
 /area/maintenance/cetus/shallow/ap)
@@ -24104,7 +24104,7 @@
 /area/maintenance/cetus/arcade)
 "oqn" = (
 /turf/simulated/floor/lino,
-/area/maintenance/cetus/shallow/derelect/kitchen)
+/area/maintenance/cetus/shallow/derelict/kitchen)
 "oqs" = (
 /obj/structure/toilet{
 	dir = 4
@@ -24300,7 +24300,7 @@
 "ovY" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/maintenance/cetus/shallow/derelect/hallway)
+/area/maintenance/cetus/shallow/derelict/hallway)
 "owe" = (
 /obj/effect/floor_decal/asteroid,
 /obj/structure/cable{
@@ -24387,7 +24387,7 @@
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/supply,
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/maintenance/cetus/shallow/derelect/hallway)
+/area/maintenance/cetus/shallow/derelict/hallway)
 "oxB" = (
 /obj/structure/lattice,
 /obj/machinery/atmospherics/pipe/simple/visible/red{
@@ -24421,7 +24421,7 @@
 	name = "Unit 2"
 	},
 /turf/simulated/floor/tiled/kafel_full,
-/area/maintenance/cetus/shallow/derelect/bathroom)
+/area/maintenance/cetus/shallow/derelict/bathroom)
 "oyj" = (
 /obj/machinery/space_heater,
 /turf/simulated/floor/tiled,
@@ -24502,13 +24502,13 @@
 /obj/random/junk,
 /obj/random/maintenance,
 /turf/simulated/floor/tiled/white,
-/area/maintenance/cetus/shallow/derelect/kitchen)
+/area/maintenance/cetus/shallow/derelict/kitchen)
 "oBe" = (
 /obj/machinery/light/yellowed{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/maintenance/cetus/shallow/derelect/hallway)
+/area/maintenance/cetus/shallow/derelict/hallway)
 "oBt" = (
 /obj/random/pottedplant,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -24535,7 +24535,7 @@
 /obj/structure/table/standard,
 /obj/item/storage/firstaid/adv,
 /turf/simulated/floor/tiled/old_tile,
-/area/maintenance/cetus/shallow/derelect/medbay)
+/area/maintenance/cetus/shallow/derelict/medbay)
 "oBH" = (
 /obj/machinery/telecomms/server/presets/medical,
 /obj/machinery/light/fluorescent{
@@ -24680,7 +24680,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/maintenance/cetus/shallow/derelect/bridge)
+/area/maintenance/cetus/shallow/derelict/bridge)
 "oFQ" = (
 /turf/simulated/open,
 /area/maintenance/cetus/shallow/flooded)
@@ -24734,7 +24734,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/maintenance/cetus/shallow/derelect/hallway)
+/area/maintenance/cetus/shallow/derelict/hallway)
 "oIv" = (
 /obj/machinery/light/yellowed{
 	dir = 8
@@ -24772,7 +24772,7 @@
 /obj/structure/bed/pod,
 /obj/random/trash,
 /turf/simulated/floor/tiled/old_tile/yellow,
-/area/maintenance/cetus/shallow/derelect/dorms)
+/area/maintenance/cetus/shallow/derelict/dorms)
 "oKn" = (
 /obj/machinery/disposal,
 /obj/machinery/light,
@@ -24901,7 +24901,7 @@
 /obj/structure/closet/secure_closet/personal,
 /obj/item/clothing/head/fishing,
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/maintenance/cetus/shallow/derelect/locker)
+/area/maintenance/cetus/shallow/derelict/locker)
 "oNM" = (
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/glass{
@@ -24967,7 +24967,7 @@
 /obj/item/stack/rods,
 /obj/structure/firedoor_assembly,
 /turf/simulated/floor/plating,
-/area/maintenance/cetus/shallow/derelect/kitchen)
+/area/maintenance/cetus/shallow/derelict/kitchen)
 "oQm" = (
 /obj/random/junk,
 /turf/simulated/floor/outdoors/rocks/cetus,
@@ -24988,7 +24988,7 @@
 	dir = 9
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/maintenance/cetus/shallow/derelect/atmos)
+/area/maintenance/cetus/shallow/derelict/atmos)
 "oRa" = (
 /obj/machinery/computer/rcon,
 /turf/simulated/floor/tiled/yellow,
@@ -25025,7 +25025,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/old_tile,
-/area/maintenance/cetus/shallow/derelect/dock)
+/area/maintenance/cetus/shallow/derelict/dock)
 "oSI" = (
 /obj/machinery/alarm{
 	dir = 1;
@@ -25222,7 +25222,7 @@
 	},
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/plating,
-/area/maintenance/cetus/shallow/derelect/dock)
+/area/maintenance/cetus/shallow/derelict/dock)
 "pat" = (
 /obj/structure/lattice,
 /obj/structure/disposalpipe/segment{
@@ -25357,7 +25357,7 @@
 /obj/effect/wingrille_spawn/reinforced,
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/plating,
-/area/maintenance/cetus/shallow/derelect/medbay)
+/area/maintenance/cetus/shallow/derelict/medbay)
 "pdN" = (
 /obj/structure/sign/directions/ai_core{
 	dir = 1
@@ -25674,7 +25674,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/maintenance/cetus/shallow/derelect/hallway)
+/area/maintenance/cetus/shallow/derelict/hallway)
 "pqk" = (
 /obj/structure/filingcabinet,
 /turf/simulated/floor/carpet/graycarpet,
@@ -25913,7 +25913,7 @@
 /obj/random/forgotten_tram,
 /obj/random/maintenance/security,
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/maintenance/cetus/shallow/derelect/bridge)
+/area/maintenance/cetus/shallow/derelict/bridge)
 "pyl" = (
 /obj/structure/lattice,
 /obj/machinery/atmospherics/pipe/simple/visible/red{
@@ -25952,7 +25952,7 @@
 /obj/effect/map_helper/airlock/door/ext_door,
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/maintenance/cetus/shallow/derelect/dock)
+/area/maintenance/cetus/shallow/derelict/dock)
 "pzJ" = (
 /turf/simulated/floor/wood,
 /area/crew_quarters/cetus/lounge)
@@ -25976,7 +25976,7 @@
 "pAL" = (
 /obj/structure/girder,
 /turf/simulated/floor/plating,
-/area/maintenance/cetus/shallow/derelect/kitchen)
+/area/maintenance/cetus/shallow/derelict/kitchen)
 "pAY" = (
 /obj/structure/disposalpipe/segment{
 	dir = 8;
@@ -26007,7 +26007,7 @@
 	},
 /obj/machinery/light/broken/small,
 /turf/simulated/floor/tiled/white,
-/area/maintenance/cetus/shallow/derelect/kitchen)
+/area/maintenance/cetus/shallow/derelict/kitchen)
 "pBT" = (
 /turf/simulated/wall/r_wall,
 /area/maintenance/cetus/threefp)
@@ -26361,7 +26361,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/old_tile,
-/area/maintenance/cetus/shallow/derelect/dock)
+/area/maintenance/cetus/shallow/derelict/dock)
 "pLU" = (
 /obj/structure/fireplace{
 	name = "decorative fireplace";
@@ -26638,7 +26638,7 @@
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/maintenance/cetus/shallow/derelect/hallway)
+/area/maintenance/cetus/shallow/derelict/hallway)
 "pSO" = (
 /obj/machinery/light/small{
 	dir = 1
@@ -26732,7 +26732,7 @@
 /area/crew_quarters/cetus/Galleryf2)
 "pWb" = (
 /turf/simulated/open,
-/area/maintenance/cetus/shallow/derelect/kitchen)
+/area/maintenance/cetus/shallow/derelict/kitchen)
 "pWn" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 5
@@ -26841,7 +26841,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/lino,
-/area/maintenance/cetus/shallow/derelect/kitchen)
+/area/maintenance/cetus/shallow/derelict/kitchen)
 "pXJ" = (
 /obj/structure/bed/pillowpile/teal,
 /obj/item/toy/plushie/robo_corgi,
@@ -26885,7 +26885,7 @@
 	icon_state = "1-8"
 	},
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/maintenance/cetus/shallow/derelect/hallway)
+/area/maintenance/cetus/shallow/derelict/hallway)
 "pYS" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
@@ -26968,7 +26968,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/maintenance/cetus/shallow/derelect/hallway)
+/area/maintenance/cetus/shallow/derelict/hallway)
 "qaA" = (
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 8
@@ -27023,7 +27023,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/white,
-/area/maintenance/cetus/shallow/derelect/kitchen)
+/area/maintenance/cetus/shallow/derelict/kitchen)
 "qbN" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/blue/border,
@@ -27118,7 +27118,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/lino,
-/area/maintenance/cetus/shallow/derelect/kitchen)
+/area/maintenance/cetus/shallow/derelict/kitchen)
 "qeQ" = (
 /obj/structure/transit_tube,
 /obj/structure/lattice,
@@ -27197,7 +27197,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/maintenance/cetus/shallow/derelect/atmos)
+/area/maintenance/cetus/shallow/derelict/atmos)
 "qhy" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -27262,7 +27262,7 @@
 	icon_state = "1-8"
 	},
 /turf/simulated/floor/tiled/white,
-/area/maintenance/cetus/shallow/derelect/kitchen)
+/area/maintenance/cetus/shallow/derelict/kitchen)
 "qju" = (
 /obj/structure/closet/emcloset{
 	anchored = 1
@@ -27667,7 +27667,7 @@
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/maintenance/cetus/shallow/derelect/hallway)
+/area/maintenance/cetus/shallow/derelict/hallway)
 "qxB" = (
 /obj/structure/micro_tunnel/random{
 	dir = 1
@@ -28008,7 +28008,7 @@
 	dir = 5
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/maintenance/cetus/shallow/derelect/eva)
+/area/maintenance/cetus/shallow/derelict/eva)
 "qLD" = (
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 1
@@ -28445,7 +28445,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/maintenance/cetus/shallow/derelect/hallway)
+/area/maintenance/cetus/shallow/derelict/hallway)
 "qXv" = (
 /obj/structure/cable{
 	icon_state = "2-8"
@@ -29012,7 +29012,7 @@
 	pixel_x = -26
 	},
 /turf/simulated/floor/tiled/old_tile,
-/area/maintenance/cetus/shallow/derelect/medbay)
+/area/maintenance/cetus/shallow/derelict/medbay)
 "rmY" = (
 /obj/structure/cable/cyan{
 	icon_state = "4-8"
@@ -29024,7 +29024,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/maintenance/cetus/shallow/derelect/hallway)
+/area/maintenance/cetus/shallow/derelict/hallway)
 "rnk" = (
 /obj/structure/disposalpipe/segment{
 	dir = 1;
@@ -29136,7 +29136,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/old_tile/yellow,
-/area/maintenance/cetus/shallow/derelect/engine)
+/area/maintenance/cetus/shallow/derelict/engine)
 "rqn" = (
 /obj/effect/floor_decal/spline/plain/corner{
 	dir = 1
@@ -29174,14 +29174,14 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/maintenance/cetus/shallow/derelect/hallway)
+/area/maintenance/cetus/shallow/derelict/hallway)
 "rsk" = (
 /obj/machinery/alarm{
 	dir = 4;
 	pixel_x = -23
 	},
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/maintenance/cetus/shallow/derelect/locker)
+/area/maintenance/cetus/shallow/derelict/locker)
 "rsw" = (
 /turf/simulated/wall,
 /area/crew_quarters/cetus/clown)
@@ -29286,7 +29286,7 @@
 	dir = 9
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/maintenance/cetus/shallow/derelect/atmos)
+/area/maintenance/cetus/shallow/derelict/atmos)
 "rvI" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -29450,13 +29450,13 @@
 "rzJ" = (
 /obj/structure/bed/roller,
 /turf/simulated/floor/tiled/old_tile,
-/area/maintenance/cetus/shallow/derelect/medbay)
+/area/maintenance/cetus/shallow/derelict/medbay)
 "rzO" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/red{
 	dir = 1
 	},
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/maintenance/cetus/shallow/derelect/hallway)
+/area/maintenance/cetus/shallow/derelict/hallway)
 "rAa" = (
 /obj/machinery/shower{
 	pixel_y = 16
@@ -29482,7 +29482,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/maintenance/cetus/shallow/derelect/dorms)
+/area/maintenance/cetus/shallow/derelict/dorms)
 "rAD" = (
 /turf/simulated/floor/smole,
 /area/maintenance/cetus/d3docks)
@@ -29527,7 +29527,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/maintenance/cetus/shallow/derelect/bridge)
+/area/maintenance/cetus/shallow/derelict/bridge)
 "rCT" = (
 /obj/machinery/meter,
 /obj/machinery/atmospherics/pipe/simple/visible/red,
@@ -29557,7 +29557,7 @@
 	},
 /obj/structure/railing/overhang/hazard,
 /turf/simulated/floor/tiled/old_tile/yellow,
-/area/maintenance/cetus/shallow/derelect/engine)
+/area/maintenance/cetus/shallow/derelict/engine)
 "rDJ" = (
 /obj/machinery/atmospherics/unary/outlet_injector{
 	dir = 4;
@@ -29595,7 +29595,7 @@
 	},
 /obj/structure/lattice,
 /turf/simulated/floor/plating,
-/area/maintenance/cetus/shallow/derelect/hallway)
+/area/maintenance/cetus/shallow/derelict/hallway)
 "rFx" = (
 /obj/structure/bed/chair/sofa/blue{
 	dir = 8
@@ -29756,7 +29756,7 @@
 /obj/structure/table/standard,
 /obj/item/storage/firstaid/surgery,
 /turf/simulated/floor/tiled/old_tile,
-/area/maintenance/cetus/shallow/derelect/medbay)
+/area/maintenance/cetus/shallow/derelict/medbay)
 "rMS" = (
 /obj/structure/cable{
 	icon_state = "4-10"
@@ -29992,7 +29992,7 @@
 	pixel_y = 22
 	},
 /turf/simulated/floor/tiled/white,
-/area/maintenance/cetus/shallow/derelect/kitchen)
+/area/maintenance/cetus/shallow/derelict/kitchen)
 "rUN" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -30147,7 +30147,7 @@
 "rXL" = (
 /obj/item/stool/padded,
 /turf/simulated/floor/lino,
-/area/maintenance/cetus/shallow/derelect/kitchen)
+/area/maintenance/cetus/shallow/derelict/kitchen)
 "rXO" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -30431,7 +30431,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/maintenance/cetus/shallow/derelect/atmos)
+/area/maintenance/cetus/shallow/derelict/atmos)
 "sgR" = (
 /obj/structure/lattice,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -30492,7 +30492,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/kafel_full,
-/area/maintenance/cetus/shallow/derelect/bathroom)
+/area/maintenance/cetus/shallow/derelict/bathroom)
 "sjj" = (
 /obj/machinery/atmospherics/pipe/simple/visible/green{
 	dir = 4
@@ -30507,7 +30507,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/old_tile,
-/area/maintenance/cetus/shallow/derelect/dock)
+/area/maintenance/cetus/shallow/derelict/dock)
 "sjq" = (
 /obj/machinery/light/yellowed{
 	dir = 4
@@ -30518,7 +30518,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/maintenance/cetus/shallow/derelect/hallway)
+/area/maintenance/cetus/shallow/derelict/hallway)
 "skq" = (
 /obj/effect/floor_decal/industrial/warning/corner,
 /obj/effect/floor_decal/industrial/warning/corner{
@@ -30704,7 +30704,7 @@
 /obj/random/junk,
 /obj/machinery/light/small,
 /turf/simulated/floor/tiled/kafel_full,
-/area/maintenance/cetus/shallow/derelect/bathroom)
+/area/maintenance/cetus/shallow/derelict/bathroom)
 "stX" = (
 /obj/structure/disposalpipe/junction/yjunction{
 	dir = 8
@@ -30932,7 +30932,7 @@
 /turf/simulated/floor/plating{
 	icon_state = "dmg4"
 	},
-/area/maintenance/cetus/shallow/derelect/hallway)
+/area/maintenance/cetus/shallow/derelict/hallway)
 "sBw" = (
 /obj/machinery/door/firedoor/glass,
 /obj/structure/cable/green{
@@ -30968,7 +30968,7 @@
 "sDo" = (
 /obj/random/obstruction,
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/maintenance/cetus/shallow/derelect/hallway)
+/area/maintenance/cetus/shallow/derelict/hallway)
 "sDp" = (
 /obj/machinery/floodlight,
 /turf/simulated/floor/plating,
@@ -31134,7 +31134,7 @@
 /obj/machinery/light/small/yellowed,
 /obj/random/forgotten_tram,
 /turf/simulated/floor/tiled/old_tile/yellow,
-/area/maintenance/cetus/shallow/derelect/dorms)
+/area/maintenance/cetus/shallow/derelict/dorms)
 "sLL" = (
 /obj/structure/bed/pillowpile/red,
 /obj/item/toy/plushie/otter,
@@ -31180,7 +31180,7 @@
 	dir = 6
 	},
 /turf/simulated/floor/tiled/old_tile/yellow,
-/area/maintenance/cetus/shallow/derelect/dorms)
+/area/maintenance/cetus/shallow/derelict/dorms)
 "sMD" = (
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/maintenance,
@@ -31348,7 +31348,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/maintenance/cetus/shallow/derelect/atmos)
+/area/maintenance/cetus/shallow/derelict/atmos)
 "sQQ" = (
 /turf/simulated/floor/outdoors/rocks/cetus,
 /area/maintenance/cetus/shallow/ap)
@@ -31362,7 +31362,7 @@
 	},
 /obj/structure/cable,
 /turf/simulated/floor/tiled/techfloor,
-/area/maintenance/cetus/shallow/derelect/engine)
+/area/maintenance/cetus/shallow/derelict/engine)
 "sSc" = (
 /obj/machinery/door/firedoor/glass,
 /obj/structure/cable/cyan{
@@ -31411,7 +31411,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/maintenance/cetus/shallow/derelect/hallway)
+/area/maintenance/cetus/shallow/derelict/hallway)
 "sSw" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -31590,7 +31590,7 @@
 /obj/effect/floor_decal/industrial/warning,
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/tiled/old_tile,
-/area/maintenance/cetus/shallow/derelect/dock)
+/area/maintenance/cetus/shallow/derelict/dock)
 "sZR" = (
 /obj/structure/bed/chair/comfy/orange,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -31639,7 +31639,7 @@
 /area/bridge/sleep/HoS_Quarters)
 "tbG" = (
 /turf/simulated/wall,
-/area/maintenance/cetus/shallow/derelect/dorms)
+/area/maintenance/cetus/shallow/derelict/dorms)
 "tbU" = (
 /obj/structure/cable/yellow{
 	icon_state = "2-4"
@@ -31719,7 +31719,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/old_tile,
-/area/maintenance/cetus/shallow/derelect/dock)
+/area/maintenance/cetus/shallow/derelict/dock)
 "tec" = (
 /obj/effect/weaversilk/wall,
 /turf/simulated/floor/carpet/happy,
@@ -31783,7 +31783,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/red,
 /turf/simulated/floor/tiled/techfloor,
-/area/maintenance/cetus/shallow/derelect/atmos)
+/area/maintenance/cetus/shallow/derelict/atmos)
 "tho" = (
 /obj/structure/bed/chair/comfy/red{
 	dir = 4
@@ -32091,7 +32091,7 @@
 	icon_state = "2-4"
 	},
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/maintenance/cetus/shallow/derelect/hallway)
+/area/maintenance/cetus/shallow/derelict/hallway)
 "toe" = (
 /obj/structure/cable/green,
 /obj/machinery/door/blast/regular{
@@ -32205,7 +32205,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/maintenance/cetus/shallow/derelect/hallway)
+/area/maintenance/cetus/shallow/derelict/hallway)
 "tqs" = (
 /obj/structure/disposalpipe/segment{
 	dir = 2;
@@ -32266,7 +32266,7 @@
 	},
 /obj/machinery/power/port_gen/pacman/super/potato,
 /turf/simulated/floor/tiled/old_tile/yellow,
-/area/maintenance/cetus/shallow/derelect/engine)
+/area/maintenance/cetus/shallow/derelict/engine)
 "trz" = (
 /obj/item/radio/intercom{
 	dir = 1;
@@ -32420,7 +32420,7 @@
 	icon_state = "0-9"
 	},
 /turf/simulated/floor/tiled/old_tile,
-/area/maintenance/cetus/shallow/derelect/medbay)
+/area/maintenance/cetus/shallow/derelict/medbay)
 "tvD" = (
 /obj/machinery/mech_recharger,
 /obj/machinery/vending/wallmed1{
@@ -32649,7 +32649,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/old_tile/yellow,
-/area/maintenance/cetus/shallow/derelect/dorms)
+/area/maintenance/cetus/shallow/derelict/dorms)
 "tzf" = (
 /turf/simulated/wall{
 	can_open = 1
@@ -32697,7 +32697,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/old_tile,
-/area/maintenance/cetus/shallow/derelect/medbay)
+/area/maintenance/cetus/shallow/derelict/medbay)
 "tBs" = (
 /obj/machinery/light/fluorescent{
 	dir = 1
@@ -32791,7 +32791,7 @@
 /obj/structure/bed/pod,
 /obj/random/forgotten_tram,
 /turf/simulated/floor/tiled/old_tile/yellow,
-/area/maintenance/cetus/shallow/derelect/dorms)
+/area/maintenance/cetus/shallow/derelict/dorms)
 "tEl" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/cyan{
 	dir = 10
@@ -32864,7 +32864,7 @@
 	name = "Maintenance Access"
 	},
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/maintenance/cetus/shallow/derelect/hallway)
+/area/maintenance/cetus/shallow/derelict/hallway)
 "tHf" = (
 /obj/structure/girder,
 /turf/simulated/floor/plating,
@@ -32963,7 +32963,7 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/old_tile/yellow,
-/area/maintenance/cetus/shallow/derelect/engine)
+/area/maintenance/cetus/shallow/derelict/engine)
 "tKx" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
@@ -33037,7 +33037,7 @@
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/kafel_full,
-/area/maintenance/cetus/shallow/derelect/bathroom)
+/area/maintenance/cetus/shallow/derelict/bathroom)
 "tLq" = (
 /obj/machinery/atmospherics/pipe/simple/visible/cyan,
 /obj/structure/cable{
@@ -33097,7 +33097,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/old_tile/yellow,
-/area/maintenance/cetus/shallow/derelect/engine)
+/area/maintenance/cetus/shallow/derelict/engine)
 "tNo" = (
 /obj/structure/closet/emcloset,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -33132,7 +33132,7 @@
 /obj/structure/table/reinforced,
 /obj/random/maintenance/engineering,
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/maintenance/cetus/shallow/derelect/bridge)
+/area/maintenance/cetus/shallow/derelict/bridge)
 "tPS" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/cable{
@@ -33215,7 +33215,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/visible/red,
 /turf/simulated/floor/tiled/techfloor,
-/area/maintenance/cetus/shallow/derelect/atmos)
+/area/maintenance/cetus/shallow/derelict/atmos)
 "tSn" = (
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/shallow/fp)
@@ -33301,7 +33301,7 @@
 "tVd" = (
 /obj/structure/closet/secure_closet/medical2,
 /turf/simulated/floor/tiled/old_tile,
-/area/maintenance/cetus/shallow/derelect/medbay)
+/area/maintenance/cetus/shallow/derelict/medbay)
 "tVI" = (
 /obj/machinery/power/apc{
 	dir = 1;
@@ -33344,7 +33344,7 @@
 "tXP" = (
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /turf/simulated/floor/tiled/techfloor,
-/area/maintenance/cetus/shallow/derelect/atmos)
+/area/maintenance/cetus/shallow/derelict/atmos)
 "tYi" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/catwalk,
@@ -33387,7 +33387,7 @@
 	},
 /obj/random/forgotten_tram,
 /turf/simulated/floor/tiled/old_tile/yellow,
-/area/maintenance/cetus/shallow/derelect/dorms)
+/area/maintenance/cetus/shallow/derelict/dorms)
 "uaz" = (
 /obj/structure/cable{
 	icon_state = "1-4"
@@ -33426,7 +33426,7 @@
 /area/maintenance/cetus/shallow/law)
 "ubU" = (
 /turf/simulated/wall,
-/area/maintenance/cetus/shallow/derelect/medbay)
+/area/maintenance/cetus/shallow/derelict/medbay)
 "ucj" = (
 /obj/effect/floor_decal/spline/plain{
 	dir = 8
@@ -33981,7 +33981,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/maintenance/cetus/shallow/derelect/engine)
+/area/maintenance/cetus/shallow/derelict/engine)
 "urh" = (
 /obj/structure/railing/grey{
 	dir = 1
@@ -34237,7 +34237,7 @@
 "uxq" = (
 /obj/effect/floor_decal/cetus/andromeda3,
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/maintenance/cetus/shallow/derelect/hallway)
+/area/maintenance/cetus/shallow/derelict/hallway)
 "uxy" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 5
@@ -34286,7 +34286,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/maintenance/cetus/shallow/derelect/atmos)
+/area/maintenance/cetus/shallow/derelict/atmos)
 "uzk" = (
 /obj/machinery/meter,
 /obj/machinery/atmospherics/pipe/manifold4w/visible/red,
@@ -34297,7 +34297,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/old_tile,
-/area/maintenance/cetus/shallow/derelect/dock)
+/area/maintenance/cetus/shallow/derelict/dock)
 "uzt" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 4
@@ -34597,7 +34597,7 @@
 /obj/effect/wingrille_spawn/reinforced,
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/plating,
-/area/maintenance/cetus/shallow/derelect/dock)
+/area/maintenance/cetus/shallow/derelict/dock)
 "uIr" = (
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 1
@@ -34623,7 +34623,7 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /obj/effect/floor_decal/cetus/andromeda5,
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/maintenance/cetus/shallow/derelect/hallway)
+/area/maintenance/cetus/shallow/derelict/hallway)
 "uIA" = (
 /obj/structure/table/woodentable,
 /obj/item/radio/subspace,
@@ -34754,7 +34754,7 @@
 	RCon_tag = "Unused Sector"
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/maintenance/cetus/shallow/derelect/engine)
+/area/maintenance/cetus/shallow/derelict/engine)
 "uMd" = (
 /obj/machinery/power/solar_control{
 	auto_start = 2;
@@ -34776,7 +34776,7 @@
 	},
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /turf/simulated/floor/tiled/techfloor,
-/area/maintenance/cetus/shallow/derelect/engine)
+/area/maintenance/cetus/shallow/derelict/engine)
 "uMR" = (
 /obj/structure/barricade/cutout/swarmer,
 /turf/simulated/floor/plating,
@@ -34897,7 +34897,7 @@
 /area/maintenance/cetus/threeap)
 "uQR" = (
 /turf/simulated/wall,
-/area/maintenance/cetus/shallow/derelect/kitchen)
+/area/maintenance/cetus/shallow/derelict/kitchen)
 "uQV" = (
 /obj/machinery/atmospherics/valve/digital{
 	dir = 4
@@ -34939,7 +34939,7 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/maintenance/cetus/shallow/derelect/hallway)
+/area/maintenance/cetus/shallow/derelict/hallway)
 "uSi" = (
 /obj/effect/floor_decal/borderfloor/corner,
 /obj/effect/floor_decal/corner/green/bordercorner,
@@ -35099,7 +35099,7 @@
 /obj/structure/table/marble,
 /obj/random/junk,
 /turf/simulated/floor/lino,
-/area/maintenance/cetus/shallow/derelect/kitchen)
+/area/maintenance/cetus/shallow/derelict/kitchen)
 "uWg" = (
 /obj/structure/table/wooden_reinforced,
 /obj/item/integrated_electronics/debugger,
@@ -35277,7 +35277,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/maintenance/cetus/shallow/derelect/hallway)
+/area/maintenance/cetus/shallow/derelict/hallway)
 "vcz" = (
 /obj/structure/lattice,
 /obj/structure/cable/green{
@@ -35317,7 +35317,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/maintenance/cetus/shallow/derelect/hallway)
+/area/maintenance/cetus/shallow/derelict/hallway)
 "vdJ" = (
 /obj/structure/table/reinforced,
 /obj/machinery/button/remote/blast_door{
@@ -35506,7 +35506,7 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/old_tile/blue,
-/area/maintenance/cetus/shallow/derelect/medbay)
+/area/maintenance/cetus/shallow/derelict/medbay)
 "vhn" = (
 /obj/machinery/camera/motion/command{
 	dir = 10;
@@ -35644,7 +35644,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/maintenance/cetus/shallow/derelect/hallway)
+/area/maintenance/cetus/shallow/derelict/hallway)
 "vnX" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/brown/border,
@@ -35898,7 +35898,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/lino,
-/area/maintenance/cetus/shallow/derelect/kitchen)
+/area/maintenance/cetus/shallow/derelict/kitchen)
 "vAH" = (
 /obj/random/drinkbottle,
 /turf/simulated/floor/wood,
@@ -35953,7 +35953,7 @@
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/maintenance/cetus/shallow/derelect/locker)
+/area/maintenance/cetus/shallow/derelict/locker)
 "vCw" = (
 /obj/structure/railing/grey{
 	dir = 4
@@ -35969,7 +35969,7 @@
 "vCR" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/old_tile,
-/area/maintenance/cetus/shallow/derelect/dock)
+/area/maintenance/cetus/shallow/derelict/dock)
 "vDi" = (
 /obj/machinery/telecomms/hub/preset/southerncross,
 /turf/simulated/floor/bluegrid,
@@ -36140,7 +36140,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/maintenance/cetus/shallow/derelect/hallway)
+/area/maintenance/cetus/shallow/derelict/hallway)
 "vHN" = (
 /obj/structure/railing,
 /obj/structure/railing,
@@ -36474,7 +36474,7 @@
 /area/ai_server_room)
 "vQC" = (
 /turf/simulated/floor/tiled/old_tile,
-/area/maintenance/cetus/shallow/derelect/dock)
+/area/maintenance/cetus/shallow/derelict/dock)
 "vQL" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/red{
 	dir = 4
@@ -36528,7 +36528,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/old_tile/yellow,
-/area/maintenance/cetus/shallow/derelect/dorms)
+/area/maintenance/cetus/shallow/derelict/dorms)
 "vRA" = (
 /obj/machinery/computer/arcade{
 	dir = 1
@@ -36563,7 +36563,7 @@
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/maintenance/cetus/shallow/derelect/hallway)
+/area/maintenance/cetus/shallow/derelict/hallway)
 "vSh" = (
 /obj/machinery/atmospherics/valve/digital/open{
 	name = "PA-Room passive supply valve";
@@ -36579,14 +36579,14 @@
 "vSm" = (
 /obj/structure/table,
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/maintenance/cetus/shallow/derelect/bridge)
+/area/maintenance/cetus/shallow/derelict/bridge)
 "vSo" = (
 /obj/structure/table,
 /obj/structure/bed/chair{
 	dir = 8
 	},
 /turf/simulated/floor/lino,
-/area/maintenance/cetus/shallow/derelect/kitchen)
+/area/maintenance/cetus/shallow/derelict/kitchen)
 "vSJ" = (
 /obj/structure/lattice,
 /obj/structure/catwalk,
@@ -36635,7 +36635,7 @@
 	dir = 5
 	},
 /turf/simulated/floor/tiled/old_tile,
-/area/maintenance/cetus/shallow/derelect/dock)
+/area/maintenance/cetus/shallow/derelict/dock)
 "vUr" = (
 /obj/structure/toilet,
 /turf/simulated/floor/tiled/kafel_full,
@@ -36676,7 +36676,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/old_tile,
-/area/maintenance/cetus/shallow/derelect/dock)
+/area/maintenance/cetus/shallow/derelict/dock)
 "vVx" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/red,
 /obj/machinery/light/yellowed{
@@ -36722,7 +36722,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/tiled/old_tile,
-/area/maintenance/cetus/shallow/derelect/dock)
+/area/maintenance/cetus/shallow/derelict/dock)
 "vWz" = (
 /obj/machinery/atmospherics/unary/vent_pump{
 	dir = 4;
@@ -37101,7 +37101,7 @@
 	dir = 6
 	},
 /turf/simulated/floor/tiled/white,
-/area/maintenance/cetus/shallow/derelect/kitchen)
+/area/maintenance/cetus/shallow/derelict/kitchen)
 "wir" = (
 /obj/structure/table/reinforced,
 /obj/random/drinkbottle,
@@ -37314,7 +37314,7 @@
 "woH" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/maintenance/cetus/shallow/derelect/dock)
+/area/maintenance/cetus/shallow/derelict/dock)
 "woM" = (
 /obj/effect/floor_decal/rust,
 /obj/machinery/light/small/yellowed{
@@ -37388,7 +37388,7 @@
 	dir = 6
 	},
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/maintenance/cetus/shallow/derelect/bridge)
+/area/maintenance/cetus/shallow/derelict/bridge)
 "wqw" = (
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -37404,7 +37404,7 @@
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/maintenance/cetus/shallow/derelect/hallway)
+/area/maintenance/cetus/shallow/derelict/hallway)
 "wqO" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 5
@@ -37669,7 +37669,7 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/maintenance/cetus/shallow/derelect/hallway)
+/area/maintenance/cetus/shallow/derelict/hallway)
 "wxY" = (
 /obj/structure/barricade/cutout/greytide,
 /turf/simulated/floor/plating,
@@ -37740,7 +37740,7 @@
 	},
 /obj/effect/floor_decal/cetus/andromeda1,
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/maintenance/cetus/shallow/derelect/hallway)
+/area/maintenance/cetus/shallow/derelict/hallway)
 "wAJ" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -37841,7 +37841,7 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/maintenance/cetus/shallow/derelect/hallway)
+/area/maintenance/cetus/shallow/derelict/hallway)
 "wCb" = (
 /obj/machinery/firealarm{
 	dir = 8;
@@ -37878,7 +37878,7 @@
 	icon_state = "0-2"
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/maintenance/cetus/shallow/derelect/eva)
+/area/maintenance/cetus/shallow/derelict/eva)
 "wCv" = (
 /obj/machinery/atmospherics/binary/pump{
 	name = "CO2 to Connector";
@@ -37980,7 +37980,7 @@
 /area/maintenance/cetus/shallow/ap)
 "wFl" = (
 /turf/simulated/wall/r_wall,
-/area/maintenance/cetus/shallow/derelect/locker)
+/area/maintenance/cetus/shallow/derelict/locker)
 "wFy" = (
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/command{
@@ -38068,7 +38068,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/maintenance/cetus/shallow/derelect/dock)
+/area/maintenance/cetus/shallow/derelict/dock)
 "wIX" = (
 /obj/structure/sign/painting/public{
 	pixel_x = 31
@@ -38177,7 +38177,7 @@
 	dir = 10
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/maintenance/cetus/shallow/derelect/eva)
+/area/maintenance/cetus/shallow/derelict/eva)
 "wMR" = (
 /obj/machinery/power/terminal{
 	dir = 4
@@ -38185,12 +38185,12 @@
 /obj/structure/cable/yellow,
 /obj/machinery/light/small/yellowed,
 /turf/simulated/floor/tiled/techfloor,
-/area/maintenance/cetus/shallow/derelect/engine)
+/area/maintenance/cetus/shallow/derelict/engine)
 "wNg" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/red,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/old_tile,
-/area/maintenance/cetus/shallow/derelect/dock)
+/area/maintenance/cetus/shallow/derelict/dock)
 "wNl" = (
 /obj/structure/railing/overhang/hazard/nanite,
 /turf/simulated/floor/water/digestive_enzymes/nanites{
@@ -38291,7 +38291,7 @@
 	dir = 6
 	},
 /turf/simulated/floor/tiled/kafel_full,
-/area/maintenance/cetus/shallow/derelect/bathroom)
+/area/maintenance/cetus/shallow/derelict/bathroom)
 "wPr" = (
 /obj/structure/cable/green{
 	icon_state = "1-10"
@@ -38313,10 +38313,10 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
-/area/maintenance/cetus/shallow/derelect/kitchen)
+/area/maintenance/cetus/shallow/derelict/kitchen)
 "wQd" = (
 /turf/simulated/wall/r_wall,
-/area/maintenance/cetus/shallow/derelect/eva)
+/area/maintenance/cetus/shallow/derelict/eva)
 "wQV" = (
 /obj/structure/inflatable,
 /turf/simulated/floor/outdoors/rocks/cetus,
@@ -38546,7 +38546,7 @@
 /area/maintenance/cetus/threefs)
 "wZf" = (
 /turf/simulated/wall/r_wall,
-/area/maintenance/cetus/shallow/derelect/dock)
+/area/maintenance/cetus/shallow/derelict/dock)
 "xau" = (
 /obj/effect/floor_decal/spline/fancy/wood/corner{
 	dir = 8
@@ -38582,7 +38582,7 @@
 	pixel_y = -22
 	},
 /turf/simulated/floor/tiled/old_tile,
-/area/maintenance/cetus/shallow/derelect/medbay)
+/area/maintenance/cetus/shallow/derelict/medbay)
 "xcU" = (
 /obj/structure/table/woodentable,
 /obj/item/trash/plate{
@@ -38986,7 +38986,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/old_tile,
-/area/maintenance/cetus/shallow/derelect/medbay)
+/area/maintenance/cetus/shallow/derelict/medbay)
 "xpJ" = (
 /obj/machinery/atmospherics/omni/mixer{
 	active_power_usage = 7500;
@@ -39078,7 +39078,7 @@
 /turf/simulated/floor/plating{
 	icon_state = "dmg4"
 	},
-/area/maintenance/cetus/shallow/derelect/kitchen)
+/area/maintenance/cetus/shallow/derelict/kitchen)
 "xsu" = (
 /obj/effect/floor_decal/corner/purple/bordercorner,
 /obj/effect/floor_decal/corner/purple/bordercorner{
@@ -39158,7 +39158,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/old_tile/yellow,
-/area/maintenance/cetus/shallow/derelect/dorms)
+/area/maintenance/cetus/shallow/derelict/dorms)
 "xuj" = (
 /obj/effect/weaversilk/wall,
 /obj/machinery/button/remote/airlock{
@@ -39359,7 +39359,7 @@
 	dir = 6
 	},
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/maintenance/cetus/shallow/derelect/hallway)
+/area/maintenance/cetus/shallow/derelict/hallway)
 "xAM" = (
 /turf/simulated/floor/boxing/gym{
 	name = "floor mat"
@@ -39494,7 +39494,7 @@
 	dir = 6
 	},
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/maintenance/cetus/shallow/derelect/hallway)
+/area/maintenance/cetus/shallow/derelict/hallway)
 "xGH" = (
 /obj/effect/floor_decal/asteroid,
 /turf/simulated/floor/outdoors/rocks/cetus,
@@ -39524,7 +39524,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/maintenance/cetus/shallow/derelect/hallway)
+/area/maintenance/cetus/shallow/derelict/hallway)
 "xHB" = (
 /obj/structure/railing/grey,
 /turf/simulated/open,
@@ -39587,7 +39587,7 @@
 /area/thirddeck/roof)
 "xIO" = (
 /turf/simulated/wall/r_wall,
-/area/maintenance/cetus/shallow/derelect/kitchen)
+/area/maintenance/cetus/shallow/derelict/kitchen)
 "xIT" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -39693,7 +39693,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/old_tile,
-/area/maintenance/cetus/shallow/derelect/dock)
+/area/maintenance/cetus/shallow/derelict/dock)
 "xMe" = (
 /obj/machinery/atmospherics/binary/pump{
 	name = "O2 to Mixing"
@@ -40124,7 +40124,7 @@
 	dir = 5
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/maintenance/cetus/shallow/derelect/atmos)
+/area/maintenance/cetus/shallow/derelict/atmos)
 "xZK" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
@@ -40191,7 +40191,7 @@
 	dir = 9
 	},
 /turf/simulated/floor/tiled/white,
-/area/maintenance/cetus/shallow/derelect/kitchen)
+/area/maintenance/cetus/shallow/derelict/kitchen)
 "ybY" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/red{
 	dir = 4
@@ -40214,7 +40214,7 @@
 	},
 /obj/effect/floor_decal/cetus/andromeda4,
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/maintenance/cetus/shallow/derelect/hallway)
+/area/maintenance/cetus/shallow/derelict/hallway)
 "ycS" = (
 /obj/machinery/access_button{
 	dir = 8;
@@ -40244,7 +40244,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/maintenance/cetus/shallow/derelect/atmos)
+/area/maintenance/cetus/shallow/derelict/atmos)
 "ydG" = (
 /obj/structure/cable/cyan{
 	icon_state = "2-9"
@@ -40298,7 +40298,7 @@
 "yed" = (
 /obj/item/material/shard,
 /turf/simulated/floor/lino,
-/area/maintenance/cetus/shallow/derelect/kitchen)
+/area/maintenance/cetus/shallow/derelict/kitchen)
 "yem" = (
 /obj/structure/curtain/open{
 	name = "stage curtain";
@@ -40344,7 +40344,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/effect/floor_decal/cetus/andromeda2,
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/maintenance/cetus/shallow/derelect/hallway)
+/area/maintenance/cetus/shallow/derelict/hallway)
 "yfm" = (
 /obj/structure/transit_tube{
 	icon_state = "D-NE"
@@ -40374,7 +40374,7 @@
 	name = "KEEP CLEAR: DOCKING AREA"
 	},
 /turf/simulated/floor/plating,
-/area/maintenance/cetus/shallow/derelect/dock)
+/area/maintenance/cetus/shallow/derelict/dock)
 "ygP" = (
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
 	dir = 6
@@ -40449,7 +40449,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/old_tile,
-/area/maintenance/cetus/shallow/derelect/medbay)
+/area/maintenance/cetus/shallow/derelict/medbay)
 "yis" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/brown/border,

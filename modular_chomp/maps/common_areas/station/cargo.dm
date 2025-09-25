@@ -93,3 +93,9 @@
 /area/quartermaster/lockerroom
 	name = "\improper Cargo Locker Room"
 	icon_state = "quart"
+
+/area/quartermaster/storage
+	holomap_color = HOLOMAP_AREACOLOR_CARGO
+
+/area/quartermaster/Recycling
+	holomap_color = HOLOMAP_AREACOLOR_CARGO
