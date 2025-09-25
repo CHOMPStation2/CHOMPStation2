@@ -48063,6 +48063,13 @@
 /obj/structure/noticeboard{
 	pixel_x = 32
 	},
+/obj/machinery/door/window/brigdoor/northleft{
+	req_access = list(57);
+	name = "Head of Personnel's Desk"
+	},
+/obj/machinery/door/window/southleft{
+	name = "Reception Window"
+	},
 /turf/simulated/floor/wood,
 /area/bridge/HoP_Office)
 "qBv" = (
@@ -57637,6 +57644,9 @@
 /obj/structure/sink/kitchen{
 	dir = 4;
 	pixel_x = 13
+	},
+/obj/structure/cable/green{
+	icon_state = "0-2"
 	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/kitchen)
