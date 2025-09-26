@@ -468,3 +468,12 @@
   - rscadd: Added churros and churros recipe
   Will:
   - code_imp: Moves turf slip code to a component
+2025-09-26:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: few runtimes and new vars
+  Ryumi:
+  - code_imp: Greatly cleaned up the initialization code of playing card decks.
+  - bugfix: Fixed triple card decks generating at quadruple size instead of triple,
+      as well as casino card decks spawning with jokers.
+  Will:
+  - code_imp: Tiny cleanup in gravgen UI code
