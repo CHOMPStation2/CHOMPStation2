@@ -486,9 +486,11 @@ var/global/datum/controller/occupations/job_master
 				else
 					spawn_in_storage += thing
 
+		/* CHOMPRemove Start
 		//Give new players a welcome guide!
 		if(H.client.player_age < 10)
 			H.equip_to_slot_or_del(new /obj/item/book/manual/virgo_pamphlet(H), slot_r_hand)
+		*/// CHOMPRemove End
 	else
 		to_chat(H, span_filter_notice("Your job is [rank] and the game just can't handle it! Please report this bug to an administrator."))
 
