@@ -1,0 +1,5 @@
+author: "CHOMPStation2StaffMirrorBot"
+delete-after: True
+changes:
+  - bugfix: "AI can now access the forever hidden vorepanel button"
+  - bugfix: "balloon alerts not centered for wide sprites"
