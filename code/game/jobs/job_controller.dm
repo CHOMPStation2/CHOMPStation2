@@ -488,7 +488,7 @@ var/global/datum/controller/occupations/job_master
 
 		/* CHOMPRemove Start
 		//Give new players a welcome guide!
-		if(H.client.player_age < 10)
+		if(isnum(H.client.player_age) && H.client.player_age < 10)
 			H.equip_to_slot_or_del(new /obj/item/book/manual/virgo_pamphlet(H), slot_r_hand)
 		*/// CHOMPRemove End
 	else
