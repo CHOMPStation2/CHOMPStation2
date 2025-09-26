@@ -29066,9 +29066,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 5
 	},
-/obj/machinery/power/smes/buildable{
-	RCon_tag = "Substation - Port"
-	},
 /obj/structure/cable/green{
 	icon_state = "0-4"
 	},
@@ -29082,6 +29079,9 @@
 	},
 /obj/structure/cable/green{
 	icon_state = "0-8"
+	},
+/obj/machinery/power/smes/buildable/max_charge{
+	RCon_tag = "Substation - Port"
 	},
 /turf/simulated/floor/plating,
 /area/engineering/cetus/portsubstation)
@@ -29685,14 +29685,14 @@
 /turf/simulated/open,
 /area/engineering/cetus/jointsubstation)
 "koZ" = (
-/obj/machinery/power/smes/buildable{
-	RCon_tag = "Substation - Aft"
-	},
 /obj/structure/cable/green{
 	icon_state = "0-9"
 	},
 /obj/structure/cable/green{
 	icon_state = "0-2"
+	},
+/obj/machinery/power/smes/buildable/max_charge{
+	RCon_tag = "Substation - Aft"
 	},
 /turf/simulated/floor/plating,
 /area/engineering/cetus/aftsubstation)
@@ -32600,9 +32600,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 5
 	},
-/obj/machinery/power/smes/buildable{
-	RCon_tag = "Substation - Central"
-	},
 /obj/structure/cable/green{
 	icon_state = "0-4"
 	},
@@ -32615,6 +32612,9 @@
 	},
 /obj/structure/cable/green{
 	icon_state = "0-8"
+	},
+/obj/machinery/power/smes/buildable/max_charge{
+	RCon_tag = "Substation - Central"
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/substation/central)
@@ -38079,9 +38079,6 @@
 /turf/simulated/floor/tiled,
 /area/security/detectives_office)
 "nlu" = (
-/obj/machinery/power/smes/buildable{
-	RCon_tag = "Substation - Asteroid"
-	},
 /obj/structure/cable/green,
 /obj/machinery/camera/network/engineering{
 	c_tag = "SUBS- Joint Research";
@@ -38089,6 +38086,9 @@
 	},
 /obj/structure/cable/green{
 	icon_state = "0-2"
+	},
+/obj/machinery/power/smes/buildable/max_charge{
+	RCon_tag = "Substation - Asteroid"
 	},
 /turf/simulated/floor/plating,
 /area/engineering/cetus/jointsubstation)
@@ -50531,14 +50531,14 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/hallway/secondary/entry/D1)
 "rtd" = (
-/obj/machinery/power/smes/buildable{
-	RCon_tag = "Substation - Fore"
-	},
 /obj/structure/cable/green{
 	icon_state = "0-9"
 	},
 /obj/structure/cable/green{
 	icon_state = "0-8"
+	},
+/obj/machinery/power/smes/buildable/max_charge{
+	RCon_tag = "Substation - Fore"
 	},
 /turf/simulated/floor/plating,
 /area/engineering/cetus/foresubstation)

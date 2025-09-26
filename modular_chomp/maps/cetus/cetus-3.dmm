@@ -13162,7 +13162,9 @@
 	dir = 1;
 	pixel_y = -25
 	},
-/obj/machinery/power/smes/buildable,
+/obj/machinery/power/smes/buildable{
+	RCon_tag = "AI - Entry Hall"
+	},
 /obj/structure/cable/cyan,
 /turf/simulated/floor/tiled/techfloor,
 /area/ai_monitored/aihall)
@@ -14377,6 +14379,9 @@
 	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
+	},
+/obj/machinery/power/terminal{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/ai_monitored/aihall)
@@ -38264,12 +38269,10 @@
 /obj/structure/cable/cyan{
 	icon_state = "0-5"
 	},
-/obj/machinery/power/smes/buildable{
-	charge = 5e+006;
-	input_attempt = 1;
-	input_level = 200000;
-	output_level = 200000
+/obj/machinery/power/smes/buildable/engine_default{
+	RCon_tag = "Telecommunications Satellite"
 	},
+/obj/item/smes_coil/super_capacity,
 /turf/simulated/floor/redgrid,
 /area/ai)
 "wOI" = (
@@ -38916,17 +38919,14 @@
 /turf/simulated/floor/tiled,
 /area/engineering/Atmospherics_Chamber)
 "xni" = (
-/obj/machinery/power/smes/buildable{
-	RCon_tag = "Telecommunications Satellite";
-	charge = 6e+006;
-	input_attempt = 1;
-	input_level = 250000;
-	inputting = 1;
-	output_level = 250000
-	},
 /obj/structure/cable/yellow{
 	icon_state = "0-4"
 	},
+/obj/machinery/power/smes/buildable/engine_default{
+	RCon_tag = "Telecommunications Satellite"
+	},
+/obj/item/smes_coil/super_capacity,
+/obj/item/smes_coil/super_io,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/ai_server_room)
 "xnR" = (

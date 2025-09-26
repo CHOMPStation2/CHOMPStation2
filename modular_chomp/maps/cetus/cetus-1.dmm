@@ -3064,15 +3064,11 @@
 /turf/simulated/mineral/cetus,
 /area/engineering/cetus/meteor/refinery)
 "bIp" = (
-/obj/machinery/power/smes/buildable{
-	charge = 5e+006;
-	input_attempt = 1;
-	input_level = 200000;
-	output_level = 200000;
-	RCon_tag = "Gravity Generator"
-	},
 /obj/structure/cable/cyan{
 	icon_state = "0-2"
+	},
+/obj/machinery/power/smes/buildable/engine_default{
+	RCon_tag = "Gravity Generator"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/cetus/meteor/gravsubstation)
@@ -6057,17 +6053,15 @@
 /turf/simulated/floor/plating,
 /area/engineering/cetus/meteor/shieldgen)
 "dmb" = (
-/obj/machinery/power/smes/buildable{
-	RCon_tag = "Engine - Core";
-	charge = 2e+006;
-	input_attempt = 1;
-	input_level = 100000;
-	output_level = 200000
-	},
 /obj/effect/engine_setup/smes,
 /obj/structure/cable/cyan{
 	icon_state = "0-4"
 	},
+/obj/machinery/power/smes/buildable/engine_default{
+	RCon_tag = "Engine - Main"
+	},
+/obj/item/smes_coil/super_io,
+/obj/item/smes_coil/super_capacity,
 /turf/simulated/floor/plating,
 /area/engineering/cetus/meteor/smes)
 "dmn" = (
@@ -12385,12 +12379,11 @@
 /turf/simulated/floor/tiled/milspec/sterile,
 /area/medical/cetus/atriumd1)
 "gSF" = (
-/obj/effect/engine_setup/smes/main,
-/obj/machinery/power/smes/buildable{
-	RCon_tag = "Substation - Starboard"
-	},
 /obj/structure/cable{
 	icon_state = "0-10"
+	},
+/obj/machinery/power/smes/buildable{
+	RCon_tag = "Aux Engine - Core"
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/engine)
@@ -15426,16 +15419,11 @@
 /turf/simulated/floor/plating,
 /area/engineering/cetus/meteor/atriumdeck1)
 "isu" = (
-/obj/machinery/power/smes/buildable{
-	RCon_tag = "Engine - Core";
-	charge = 2e+006;
-	input_attempt = 1;
-	input_level = 100000;
-	output_level = 200000
-	},
-/obj/effect/engine_setup/smes,
 /obj/structure/cable/cyan{
 	icon_state = "0-6"
+	},
+/obj/machinery/power/smes/buildable/engine_default{
+	RCon_tag = "Aux Engine - Main"
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/engine)
@@ -20368,12 +20356,12 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/cetus/mechbay)
 "kLw" = (
-/obj/machinery/power/smes/buildable{
-	RCon_tag = "Substation - Starboard"
-	},
 /obj/structure/cable/green,
 /obj/structure/cable/green{
 	icon_state = "0-8"
+	},
+/obj/machinery/power/smes/buildable/max_charge{
+	RCon_tag = "Substation - Starboard"
 	},
 /turf/simulated/floor/plating,
 /area/engineering/cetus/starsubstation)
@@ -30966,12 +30954,6 @@
 /turf/simulated/floor/lino,
 /area/crew_quarters/cetus/meteor/bar)
 "qoe" = (
-/obj/machinery/power/smes/buildable{
-	RCon_tag = "Engine - ShieldGen";
-	cur_coils = 4;
-	input_level = 750000;
-	output_level = 750000
-	},
 /obj/structure/cable/orange{
 	icon_state = "0-10"
 	},
@@ -30979,6 +30961,10 @@
 	c_tag = "ENG - Shield Gen";
 	dir = 6
 	},
+/obj/machinery/power/smes/buildable/engine_default{
+	RCon_tag = "Engine - Core"
+	},
+/obj/item/smes_coil/super_io/hyper,
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/cetus/meteor/shieldgen)
 "qou" = (
@@ -41562,18 +41548,15 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/cetus/meteor/techstorage)
 "vDn" = (
-/obj/machinery/power/smes/buildable{
-	RCon_tag = "Engine - Main";
-	charge = 2e+007;
-	cur_coils = 4;
-	input_attempt = 1;
-	input_level = 750000;
-	output_level = 750000
-	},
 /obj/effect/engine_setup/smes/main,
 /obj/structure/cable{
 	icon_state = "0-4"
 	},
+/obj/machinery/power/smes/buildable/engine_default{
+	RCon_tag = "Engine - Core"
+	},
+/obj/item/smes_coil/super_io,
+/obj/item/smes_coil/super_capacity,
 /turf/simulated/floor/plating,
 /area/engineering/cetus/meteor/smes)
 "vDp" = (
