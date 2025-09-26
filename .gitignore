@@ -32,6 +32,7 @@ cfg/
 !/.vscode/settings.json
 !/.vscode/tasks.json
 
+<<<<<<< HEAD
 #GitHub Atom
 .atom-build.json
 
@@ -42,6 +43,16 @@ cfg/
 #extra map stuff
 /_maps/**/backup/
 /_maps/templates.dm
+=======
+#Ignore IDE files we don't need in the repo.
+/.vs/**/*
+/v17/**/*
+/v18/**/*
+/v19/**/*
+/v20/**/*
+/v21/**/*
+/v22/**/*
+>>>>>>> 4cb5713256 (Gatorsnout (#18536))
 
 temp.dmi
 
