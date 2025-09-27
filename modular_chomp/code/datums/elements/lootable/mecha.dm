@@ -19,7 +19,7 @@
 		)
 
 	rare_loot = list(
-		/obj/item/weldingtool/silver,
+		/obj/item/weldingtool/alien,
 		/obj/item/cell/slime/jellyfish
 		)
 

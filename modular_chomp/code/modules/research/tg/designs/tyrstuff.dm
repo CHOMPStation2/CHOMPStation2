@@ -30,3 +30,15 @@
 		RND_CATEGORY_WEAPONS + RND_SUBCATEGORY_WEAPONS_RANGED
 	)
 	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE
+
+
+/datum/design_techweb/magnet_belt
+	name = "Magnet Belt"
+	id = "magnet_belt"
+	build_type = PROTOLATHE
+	materials = list(MAT_STEEL = 12000,MAT_DIAMOND = 700,MT_COPPER = 3000,MAT_MYDRO = 1000,MAT_QUARTZ = 5000,MAT_WEATHERED_AGATE = 8000)
+	build_path = /obj/item/personal_shield_generator/belt/magnetbelt
+	category = list(
+		RND_CATEGORY_EQUIPMENT
+	)
+	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE
