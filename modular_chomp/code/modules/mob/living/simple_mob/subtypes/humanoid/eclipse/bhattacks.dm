@@ -1107,7 +1107,8 @@
 
 /datum/modifier/mmo_drop/on_expire()
 	if(holder.stat != DEAD)
-		new puddleitem(src.loc)
+		var/turf/T = get_turf(target)
+		new puddleitem(T)
 
 /datum/modifier/mmo_drop/jelly_fish
 	puddleitem = /obj/effect/ant_structure/trap
