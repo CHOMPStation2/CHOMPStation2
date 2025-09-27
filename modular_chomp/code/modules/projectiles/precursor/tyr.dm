@@ -21,6 +21,7 @@
 	armor_penetration = 60 //damage and AP matching makes brain happy for some reason. No real logic here, just brain saying yes, this is right
 	range = 8
 	speed = 5
+	penetrating = 2
 	check_armour = "melee"
 	damage_type = BRUTE
 
@@ -40,13 +41,13 @@
 		L.throw_at(get_edge_target_turf(L, throwdir), 3, 10)
 		return 1
 
-//The blaster has 1 more range but lacks hitscan whilst the laser has 1 less range but has hitscan.
 /obj/item/projectile/energy/wp_blaster
 	name = "laser blast"
 	icon = 'modular_chomp/icons/obj/guns/precursor/tyr.dmi'
 	icon_state = "blaster_blast"
 	damage = 35
 	range = 5
+	penetrating = 2
 	check_armour = "laser"
 
 /obj/item/projectile/beam/precursor_tyr
@@ -54,7 +55,7 @@
 	icon_state = "laser"
 	damage = 8
 	armor_penetration = 30
-	penetrating = 20
+	penetrating = 2
 	damage_type = BURN
 	check_armour = "laser"
 	range = 5
@@ -132,7 +133,7 @@
 	wielded_item_state = "placeholder"
 	origin_tech = list(TECH_COMBAT = 6, TECH_POWER = 5, TECH_PRECURSOR = 3)
 
-	charge_cost = 625
+	charge_cost = 250
 	battery_lock = 1 //No changing
 
 	accept_cell_type = /obj/item/cell/device
@@ -156,3 +157,31 @@
 /obj/item/projectile/energy/spikeenergy_ball/slow
 	speed = 15
 	range = 20
+
+/obj/item/projectile/energy/eclipse/tyrjavelin //Five hits ought to end you
+	name = "energy javelin"
+	icon_state = "javelin"
+	damage_type = SEARING
+	check_armour = "melee"
+	damage = 23
+	armor_penetration = 30
+	speed = 10
+	color = "#FF6600"
+	modifier_type_to_apply = /datum/modifier/deep_wounds //reduced healing
+	modifier_duration = 1 MINUTE
+
+/obj/item/projectile/energy/eclipse/tyrjavelin/speed
+	speed = 7
+
+/obj/item/projectile/bullet/astral_blade
+	name = "bluespace slash"
+	icon_state = "astral_sea_blade"
+	icon = 'modular_chomp/icons/obj/guns/precursor/tyr.dmi'
+	damage = 40 //28 with intended armor
+	armor_penetration = 20
+	damage_type = BRUTE
+	check_armour = "melee"
+	embed_chance = 0
+	speed = 15
+	penetrating = 5
+	crawl_destroy = TRUE
