@@ -347,7 +347,7 @@ ANT STRUCTURES
 		return
 	if(anchored && isliving(source))
 		var/mob/living/L = source
-		if(L == /mob/living/simple_mob/animal/tyr/mineral_ants)
+		if(L.faction == FACTION_TYR_ANT)
 			return
 		else if(L.m_intent == I_RUN)
 			L.visible_message(
@@ -361,10 +361,6 @@ ANT STRUCTURES
 
 /obj/effect/ant_structure/trap/proc/attack_mob(mob/living/L)
 	L.add_modifier(modifiertype, 5 SECONDS)
-
-/obj/effect/ant_structure/trap/knockdown
-	icon_state = "knock_trap"
-	modifiertype = /datum/modifier/poisoned
 
 /obj/effect/ant_structure/trap/burn
 	icon_state = "burn_trap"
@@ -392,7 +388,6 @@ ANT STRUCTURES
 /obj/random/ant_building/item_to_spawn()
 	return pick(/obj/effect/ant_structure/wall,
 				/obj/effect/ant_structure/trap/burn,
-				/obj/effect/ant_structure/trap/knockdown,
 				/obj/effect/ant_structure/trap/slowdown)
 
 

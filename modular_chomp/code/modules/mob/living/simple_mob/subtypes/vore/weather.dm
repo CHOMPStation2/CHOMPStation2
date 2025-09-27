@@ -1,128 +1,11 @@
-/mob/living/simple_mob/vore/weatherbeast //Mostly so mappers don't have to scroll through even more things
-	icon = 'modular_chomp/icons/mob/starbeast.dmi'
-	melee_damage_lower = 25
-	melee_damage_upper = 25
-	attack_armor_pen = 30
-	heat_resist = 1
-	cold_resist = 1
-	melee_attack_delay = 1 SECOND
-	grab_resist = 100
-	devourable = 0
-	faction = "Weather_Boss"
-	var/weatherprojectile = /obj/item/projectile/energy/phase/bolt
-
-/mob/living/simple_mob/vore/weatherbeast/proc/up_up(atom/target)
-	var/obj/item/projectile/P = new weatherprojectile(get_turf(src))
-	var/turf = locate(src.x, src.y+2, src.z)
-	target = turf
-	P.launch_projectile(target, BP_TORSO, src)
-
-/mob/living/simple_mob/vore/weatherbeast/proc/up_up_left(atom/target)
-	var/obj/item/projectile/P = new weatherprojectile(get_turf(src))
-	var/turf = locate(src.x-1, src.y+2, src.z)
-	target = turf
-	P.launch_projectile(target, BP_TORSO, src)
-
-/mob/living/simple_mob/vore/weatherbeast/proc/up_up_left_left(atom/target)
-	var/obj/item/projectile/P = new weatherprojectile(get_turf(src))
-	var/turf = locate(src.x-2, src.y+2, src.z)
-	target = turf
-	P.launch_projectile(target, BP_TORSO, src)
-
-/mob/living/simple_mob/vore/weatherbeast/proc/up_up_right(atom/target)
-	var/obj/item/projectile/P = new weatherprojectile(get_turf(src))
-	var/turf = locate(src.x+1, src.y+2, src.z)
-	target = turf
-	P.launch_projectile(target, BP_TORSO, src)
-
-/mob/living/simple_mob/vore/weatherbeast/proc/up_up_right_right(atom/target)
-	var/obj/item/projectile/P = new weatherprojectile(get_turf(src))
-	var/turf = locate(src.x+2, src.y+2, src.z)
-	target = turf
-	P.launch_projectile(target, BP_TORSO, src)
-
-/mob/living/simple_mob/vore/weatherbeast/proc/up_right_right(atom/target)
-	var/obj/item/projectile/P = new weatherprojectile(get_turf(src))
-	var/turf = locate(src.x+2, src.y+1, src.z)
-	target = turf
-	P.launch_projectile(target, BP_TORSO, src)
-
-/mob/living/simple_mob/vore/weatherbeast/proc/up_left_left(atom/target)
-	var/obj/item/projectile/P = new weatherprojectile(get_turf(src))
-	var/turf = locate(src.x-2, src.y+1, src.z)
-	target = turf
-	P.launch_projectile(target, BP_TORSO, src)
-
-/mob/living/simple_mob/vore/weatherbeast/proc/left_left(atom/target)
-	var/obj/item/projectile/P = new weatherprojectile(get_turf(src))
-	var/turf = locate(src.x-2, src.y, src.z)
-	target = turf
-	P.launch_projectile(target, BP_TORSO, src)
-
-/mob/living/simple_mob/vore/weatherbeast/proc/right_right(atom/target)
-	var/obj/item/projectile/P = new weatherprojectile(get_turf(src))
-	var/turf = locate(src.x+2, src.y, src.z)
-	target = turf
-	P.launch_projectile(target, BP_TORSO, src)
-
-/mob/living/simple_mob/vore/weatherbeast/proc/down_down(atom/target)
-	var/obj/item/projectile/P = new weatherprojectile(get_turf(src))
-	var/turf = locate(src.x, src.y-2, src.z)
-	target = turf
-	P.launch_projectile(target, BP_TORSO, src)
-
-/mob/living/simple_mob/vore/weatherbeast/proc/down_down_left(atom/target)
-	var/obj/item/projectile/P = new weatherprojectile(get_turf(src))
-	var/turf = locate(src.x-1, src.y-2, src.z)
-	target = turf
-	P.launch_projectile(target, BP_TORSO, src)
-
-/mob/living/simple_mob/vore/weatherbeast/proc/down_down_left_left(atom/target)
-	var/obj/item/projectile/P = new weatherprojectile(get_turf(src))
-	var/turf = locate(src.x-2, src.y-2, src.z)
-	target = turf
-	P.launch_projectile(target, BP_TORSO, src)
-
-/mob/living/simple_mob/vore/weatherbeast/proc/down_down_right(atom/target)
-	var/obj/item/projectile/P = new weatherprojectile(get_turf(src))
-	var/turf = locate(src.x+1, src.y-2, src.z)
-	target = turf
-	P.launch_projectile(target, BP_TORSO, src)
-
-/mob/living/simple_mob/vore/weatherbeast/proc/down_down_right_right(atom/target)
-	var/obj/item/projectile/P = new weatherprojectile(get_turf(src))
-	var/turf = locate(src.x+2, src.y-2, src.z)
-	target = turf
-	P.launch_projectile(target, BP_TORSO, src)
-
-/mob/living/simple_mob/vore/weatherbeast/proc/down_right_right(atom/target)
-	var/obj/item/projectile/P = new weatherprojectile(get_turf(src))
-	var/turf = locate(src.x+2, src.y-1, src.z)
-	target = turf
-	P.launch_projectile(target, BP_TORSO, src)
-
-/mob/living/simple_mob/vore/weatherbeast/proc/down_left_left(atom/target)
-	var/obj/item/projectile/P = new weatherprojectile(get_turf(src))
-	var/turf = locate(src.x-2, src.y-1, src.z)
-	target = turf
-	P.launch_projectile(target, BP_TORSO, src)
-
-//Sup, trying to be better with commenting of my code and explain the oddities behind myself. Several may seem off
-//A bit ago I added rare anomalous weather with the intent to add some creatures to summon during them, and well here they are.
-//The device to summon them, and a potential anomalous weather summoner is a diffrent file/pr.
-//Now the design goals.
-//The dark mist boss, a strange cloaked furball. Bullet hellish with a fair bit of tell.
-//The star sky boss, a mechanical worm. Trying to alter the work on the old worm code to make it function. May need it's own file.
-//The sandstorm boss. Dinosaur.
-//The acidrain boss. Either summoner, or ranged.
-/mob/living/simple_mob/vore/weatherbeast/sandstorm //slow but endless hunter
-	name = "fossil tank"
+/mob/living/simple_mob/vore/fossiltank //slow but endless hunter
+	name = "rolling crematorium"
 	desc = "A large metal tank."
-	health = 800
-	maxHealth = 800
+	health = 500
+	maxHealth = 500
 	armor = list(melee = 40, bullet = 40, laser = 40, energy = 40, bomb = 50, bio = 100, rad = 100)  //No thematics but I like boss critters to take a bit
 	icon_state = "rex"
-	melee_attack_delay = 0.5 SECOND
+	melee_attack_delay = 0.5 SECONDS
 	melee_damage_lower = 40 //Will murder you if you get within melee.
 	melee_damage_upper = 40
 	attack_armor_pen = 40
@@ -134,9 +17,38 @@
 	taser_kill = FALSE
 	poison_resist = 1.0
 	shock_resist = -0.2
+	icon = 'modular_chomp/icons/mob/tyr.dmi'
 	special_attack_min_range = 1
 	special_attack_max_range = 14 //The special attacks are more meant to pin you down or provide a healing to this tank.
 	special_attack_cooldown = 10 SECONDS
+	swallowTime = 0.5 SECONDS
+	vore_active = 1
+	vore_capacity = 1
+	vore_bump_chance = 10
+	vore_pounce_chance = 50
+	vore_pounce_cooldown = 10
+	vore_pounce_successrate	= 75
+	vore_pounce_falloff = 0
+	vore_pounce_maxhealth = 100
+	vore_standing_too = TRUE
+	unacidable = TRUE
+	grab_resist = 100
+	devourable = FALSE
+	faction = FACTION_ECLIPSE
+
+	loot_list = list(/obj/item/personal_shield_generator/belt/fossiltank  = 100,
+		)
+
+/mob/living/simple_mob/vore/fossiltank/load_default_bellies()
+	. = ..()
+	var/obj/belly/B = vore_selected
+	B.name = "furnace"
+	B.desc = "Turns out the skull head opens, and you have been consumed into the beast's furnace! Sweltering heat rages around you as your metal confines rumble with the rurr of strange machinery. The chamber jostling you about as you may attempt to escape, or perhaps accept your fate"
+	B.digest_brute = 0
+	B.digest_burn = 3
+	B.digestchance = 0
+	B.absorbchance = 0
+	B.escapechance = 15
 
 /datum/ai_holder/simple_mob/fossiltank
 	use_astar = TRUE
@@ -144,12 +56,12 @@
 	retaliate = TRUE
 	mauling = TRUE
 	unconscious_vore = TRUE
-	vision_range = 100 //The entire gimmick of this thing is a slow moving, endless hunter. You shall not escape.
+	vision_range = 25 //The entire gimmick of this thing is a slow moving, endless hunter. You shall not escape.
 	respect_alpha = FALSE
 	destructive = TRUE
 	forgive_resting = FALSE
 
-/mob/living/simple_mob/vore/weatherbeast/sandstorm/updatehealth()
+/mob/living/simple_mob/vore/fossiltank/updatehealth()
 	. = ..()
 
 	if(health < maxHealth*0.25)
@@ -165,575 +77,250 @@
 		icon_state = "rex"
 		icon_living = "rex"
 
-/mob/living/simple_mob/vore/weatherbeast/sandstorm/do_special_attack(atom/A)
+/mob/living/simple_mob/vore/fossiltank/do_special_attack(atom/A)
 	if(health < maxHealth*0.25)
 		visible_message(span_bolddanger(span_orange("The fossil tank begins self repairs!.")))
-		sleep(30)
-		for(var/i =1 to 10)
-			adjustBruteLoss(-100)
-			adjustFireLoss(-100)
-			sleep(15)
-		adjustBruteLoss(-100)
-		adjustFireLoss(-100)
+		addtimer(CALLBACK(src, PROC_REF(cycle_heal), 8), 1 SECOND, TIMER_DELETE_ME)
 	else
-		Beam(A, icon_state = "sat_beam", time = 2.5 SECONDS, maxdistance = INFINITY)
-		sleep(30)
-		var/obj/item/projectile/P = new /obj/item/projectile/beam/lightning(get_turf(src))
-		P.launch_projectile(A, BP_TORSO, src)
+		Beam(A, icon_state = "sat_beam", time = 3.5 SECONDS, maxdistance = INFINITY)
+		addtimer(CALLBACK(src, PROC_REF(sniper_shot), A), 4 SECONDS, TIMER_DELETE_ME)
 
+/mob/living/simple_mob/vore/fossiltank/proc/cycle_heal(var/healamount)
+	adjustBruteLoss(-100)
+	adjustFireLoss(-100)
+	if(healamount > 0)
+		healamount -= 1
+		addtimer(CALLBACK(src, PROC_REF(cycle_heal), 8), 1 SECOND, TIMER_DELETE_ME)
 
-/mob/living/simple_mob/vore/weatherbeast/acidrain //acidrain
-	name = "toxic jellyfish"
+/mob/living/simple_mob/vore/fossiltank/proc/sniper_shot(atom/target)
+	if(!target)
+		return
+	var/obj/item/projectile/P = new /obj/item/projectile/beam/lightning(get_turf(src))
+	P.launch_projectile(target, BP_TORSO, src)
+
+/mob/living/simple_mob/vore/boss_jellyfish
+	name = "expirmental jellyfish"
 	desc = "A glowing green jellyfish"
-	health = 700 //15 laser shots
-	maxHealth = 700 //15 laser shots, assuming no armor
-	armor = list(melee = 60, bullet = 60, laser = 20, energy = 20, bomb = 50, bio = 100, rad = 100) //So, it's made of jelly. Bullets and melee bounces off of it. The 20 laser and energy are for a smidge extra tankny because I savour endurance fights
+	health = 600
+	maxHealth = 600
+	armor = list(melee = 30, bullet = 30, laser = 30, energy = 30, bomb = 50, bio = 100, rad = 100) //So, it's made of jelly. Bullets and melee bounces off of it. The 20 laser and energy are for a smidge extra tankny because I savour endurance fights
+	icon = 'modular_chomp/icons/mob/tyr.dmi'
 	icon_state = "jellyfish"
-	icon_state = "jellyfish_dead"
-	movement_cooldown = -2
+	icon_living = "jellyfish"
+	icon_dead = "jelltdish_dead"
+	movement_cooldown = 1
 	damage_fatigue_mult = 0 //It's a mutant jellyfish boss mob.
+	melee_attack_delay = 1.5 SECOND
+	melee_damage_lower = 17 //designed to deal 17ish damage when wearing explo voidsuit
+	melee_damage_upper = 17
+	attack_armor_pen = 20
 	glow_color = "#14ff20"
 	light_color = "#14ff20"
 	glow_range = 7
 	glow_intensity = 3
 	special_attack_min_range = 1
 	special_attack_max_range = 7
-	special_attack_cooldown = 30 SECONDS
+	special_attack_cooldown = 13 SECONDS
 
-	ai_holder_type = /datum/ai_holder/simple_mob/melee/evasive/jellyfish
-	//So this guy is gonna be funky. Their special attacks depend on their nutrition.
-	nutrition = 250
+	swallowTime = 1.5 SECONDS
+	vore_active = 1
+	vore_capacity = 1
+	vore_bump_chance = 10
+	vore_pounce_chance = 50
+	vore_pounce_cooldown = 10
+	vore_pounce_successrate	= 75
+	vore_pounce_falloff = 0
+	vore_pounce_maxhealth = 100
+	vore_standing_too = TRUE
+	unacidable = TRUE
+	grab_resist = 100
+	devourable = FALSE
 
-/mob/living/simple_mob/vore/weatherbeast/acidrain/apply_melee_effects(var/atom/A)
+	faction = FACTION_TYR_ANT
+
+	loot_list = list(/obj/item/melee/jellyfishwhip  = 100,
+		/obj/item/cell/slime/jellyfish  = 100,
+		)
+
+	var/leech = 50
+	var/chain_number = 0
+
+/mob/living/simple_mob/vore/boss_jellyfish/load_default_bellies()
+	. = ..()
+	var/obj/belly/B = vore_selected
+	B.name = "internal chamber"
+	B.desc = "It's smooth and translucent. You can see the world around you distort and wobble with the movement of the space jellyfish. It floats casually, while the delicate flesh seems to form to you. It's surprisingly cool, and flickers with its own light. You're on display for all to see, trapped within the confines of this strange space alien!"
+	B.digest_brute = 1
+	B.digest_burn = 1
+	B.digestchance = 0
+	B.absorbchance = 0
+	B.escapechance = 15
+
+
+/mob/living/simple_mob/vore/boss_jellyfish/apply_melee_effects(var/atom/A) //Not a real threat unless multiple hits. It acts a timer for special traits.
 	if(isliving(A))
 		var/mob/living/L = A
 		if(L.nutrition)
-			L.adjust_nutrition(-250)
-			adjust_nutrition(250)
-		if(prob(25))
-			L.adjustHalLoss(20)
+			L.adjust_nutrition(-leech)
+			adjust_nutrition(leech)
 
-/mob/living/simple_mob/vore/weatherbeast/acidrain/do_special_attack(atom/A)
-	if(nutrition > 1100)
-		visible_message(span_bolddanger(span_orange("The giant jellyfish begins to regenerate!.")))
-		adjustBruteLoss(-300)
-		adjustFireLoss(-300)
-		adjust_nutrition(-500)
-	else
+/mob/living/simple_mob/vore/boss_jellyfish/do_special_attack(atom/A)
+	if(nutrition > 500)
+		Beam(A, icon_state = "sat_beam", time = 3.5 SECONDS, maxdistance = INFINITY)
+		addtimer(CALLBACK(src, PROC_REF(sniper_shot), A), 4 SECONDS, TIMER_DELETE_ME)
+	else if(health < maxHealth*0.25) //phase 4 where it teleports then chains 3 attacks
+		chain_number = 3
+		addtimer(CALLBACK(src, PROC_REF(astral_sea_warp), A), 3 SECONDS, TIMER_DELETE_ME)
+		icon_state = "jellyfish_blue"
+		icon_living = "jellyfish_blue"
+	else if(health < maxHealth*0.5) //teleports then chains 2 attacks
+		chain_number = 2
+		addtimer(CALLBACK(src, PROC_REF(astral_sea_warp), A), 3 SECONDS, TIMER_DELETE_ME)
+		icon_state = "jellyfish_blue"
+		icon_living = "jellyfish_blue"
+	else if(health < maxHealth*0.75) //teleports then attacks
+		chain_number = 1
+		icon_state = "jellyfish_blue"
+		icon_living = "jellyfish_blue"
+		addtimer(CALLBACK(src, PROC_REF(astral_sea_warp), A), 3 SECONDS, TIMER_DELETE_ME)
+	else //attacks once
+		if(prob(50))
+			icon_state = "jellyfish_yellow"
+			icon_living = "jellyfish_yellow"
+			addtimer(CALLBACK(src, PROC_REF(dash_attack), A), 4 SECONDS, TIMER_DELETE_ME)
+		else
+			icon_state = "jellyfish_red"
+			icon_living = "jellyfish_red"
+			addtimer(CALLBACK(src, PROC_REF(summon_puddles), A), 4 SECONDS, TIMER_DELETE_ME)
+
+/mob/living/simple_mob/vore/boss_jellyfish/proc/dash_attack(atom/A) //spider dash attack
+	set waitfor = FALSE
+	set_AI_busy(TRUE)
+	if(!A)
 		return
 
-/mob/living/simple_mob/vore/weatherbeast/acidrain/bullet_act(obj/item/projectile/P)
-	..()
-	if(istype(P, /obj/item/projectile/energy))
-		projectiletype = /obj/item/projectile/energy/declone
-		adjust_nutrition(-50)
-	if(istype(P, /obj/item/projectile/bullet))
-		projectiletype = /obj/item/projectile/energy/bolt
-		adjust_nutrition(-50)
-	if(istype(P, /obj/item/projectile/beam))
-		projectiletype = /obj/item/projectile/beam/gamma
-		adjust_nutrition(-50)
+	status_flags |= LEAPING
+	visible_message(span_danger("\The [src] leaps at \the [A]!"))
+	throw_at(get_step(get_turf(A), get_turf(src)), special_attack_max_range+1, 1, src)
 
-/mob/living/simple_mob/vore/weatherbeast/acidrain/handle_special()
-	if(stat != DEAD)
-		acid_aura()
-	..()
+	sleep(5) // For the throw to complete. It won't hold up the AI ticker due to waitfor being false.
 
-/mob/living/simple_mob/vore/weatherbeast/acidrain/proc/acid_aura()
-	for(var/mob/living/L in view(7, src))
-		if(L.stat == DEAD)
+	if(status_flags & LEAPING)
+		status_flags &= ~LEAPING // Revert special passage ability.
+
+	var/turf/T = get_turf(src) // Where we landed. This might be different than A's turf.
+
+	. = FALSE
+
+	// Now for the stun.
+	var/mob/living/victim = null
+	for(var/mob/living/L in T) // So player-controlled spiders only need to click the tile to stun them.
+		if(L == src)
 			continue
-		if(IIsAlly(L))
-			continue
+
 		if(ishuman(L))
 			var/mob/living/carbon/human/H = L
-			if(H.isSynthetic())
-				continue
-			L.add_modifier(/datum/modifier/poisoned/weak/acid, 12, src)
+			if(H.check_shields(damage = 0, damage_source = src, attacker = src, def_zone = null, attack_text = "the leap"))
+				continue // We were blocked.
 
-/datum/modifier/poisoned/weak/acid //Getting multiple of this will destroy you swiftly.
-	incoming_tox_damage_percent = 1.5
+		victim = L
+		break
 
-/datum/ai_holder/simple_mob/intentional/dark_stranger
-	use_astar = TRUE
-	var/closest_desired_distance = 4
-	var/close_range_radius = 3
+	if(victim)
+		victim.Weaken(2)
+		victim.visible_message(span_danger("\The [src] knocks down \the [victim]!"))
+		to_chat(victim, span_critical("\The [src] jumps on you!"))
+		. = TRUE
 
-/datum/ai_holder/simple_mob/intentional/dark_stranger/on_engagement(atom/A)
-	if(get_dist(holder, A) > closest_desired_distance)
-		holder.IMove(get_step_towards(holder, A))
-
-/datum/ai_holder/simple_mob/intentional/dark_stranger/pre_special_attack(atom/A)
-	if(isliving(A))
-		var/mob/living/target = A
-		if(flee_when_dying && (holder.health / holder.getMaxHealth()) <= 0.4) //Phase two baby lets ago
-			holder.a_intent = I_GRAB
-
-		if(get_dist(target, holder) <= close_range_radius) //So doing a BH tradditonally when they're super close would feel a smidge unfair so get away attacks
-			holder.a_intent = I_DISARM
-
+	set_AI_busy(FALSE)
+	if(chain_number > 0)
+		chain_number -= 1
+		if(prob(50))
+			icon_state = "jellyfish_yellow"
+			icon_living = "jellyfish_yellow"
+			addtimer(CALLBACK(src, PROC_REF(dash_attack), A), 4 SECONDS, TIMER_DELETE_ME)
 		else
-			holder.a_intent = I_HURT
-
-
-/mob/living/simple_mob/vore/weatherbeast/darkmist //the dark mist
-	name = "strange figure"
-	desc = "A figure cloaked in purple."
-	health = 700
-	maxHealth = 700
-	armor = list(melee = 20, bullet = 20, laser = 60, energy = 60, bomb = 50, bio = 100, rad = 100) //Is use to manpulation of strange energies
-	icon_state = "stranger"
-	icon_dead = "stranger_dead"
-	ai_holder_type = /datum/ai_holder/simple_mob/intentional/dark_stranger
-	damage_fatigue_mult = 0
-	movement_cooldown = -1
-	special_attack_min_range = 1
-	special_attack_max_range = 7
-	special_attack_cooldown = 3.5 SECONDS
-	projectiletype = /obj/item/projectile/energy/mob/precursor
-	weatherprojectile = /obj/item/projectile/energy/mob/precursor
-	var/attack_cycle = 1
-
-/obj/item/projectile/bullet/precursorburst
-	use_submunitions = 1
-	only_submunitions = 1
-	range = 0
-	embed_chance = 0
-	submunition_spread_max = 1200
-	submunition_spread_min = 500
-	submunitions = list(/obj/item/projectile/energy/mob/precursor = 4)
-
-/obj/item/projectile/bullet/precursorburst/on_range()
-	qdel(src)
-
-/obj/item/projectile/bullet/precursorburst/shotgun
-	submunition_spread_max = 600
-	submunition_spread_min = 100
-
-/mob/living/simple_mob/vore/weatherbeast/darkmist/do_special_attack(atom/A)
-	. = TRUE
-	switch(a_intent)
-		if(I_DISARM)
-			close_range(A)
-		if(I_HURT) //
-			bullet_wave(A)
-		if(I_GRAB)
-			phase_two(A)
-
-
-//The way too many special attacks for one boss
-/mob/living/simple_mob/vore/weatherbeast/darkmist/proc/close_range(atom/target) //when things are close, going to do pure lasers
-	weatherprojectile = /obj/item/projectile/beam/precursor
-	if(attack_cycle == 1)
-		close_one(target)
-	else if(attack_cycle == 2)
-		close_two(target)
-	else if(attack_cycle == 3)
-		close_three(target)
-
-/mob/living/simple_mob/vore/weatherbeast/darkmist/proc/normal_one(atom/target) //we attempt to be a machine gun
-	icon_state = "stranger_one"
-	Beam(target, icon_state = "sat_beam", time = 5 SECONDS, maxdistance = INFINITY)
-	var/obj/item/projectile/P = new /obj/item/projectile/energy/mob/precursor(get_turf(src))
-	sleep(5)
-	for(var/i =1 to 5)
-		P.launch_projectile(target, BP_TORSO, src)
-		sleep(5)
-	P.launch_projectile(, BP_TORSO, src)
-	attack_cycle = 2
-
-/mob/living/simple_mob/vore/weatherbeast/darkmist/proc/normal_two(atom/target) //Get up/down or to the side
-	attack_cycle = 3
-	icon_state = "stranger_three"
-	sleep(10)
-	if(prob(50))
-		up_up(target)
-		up_up_left(target)
-		up_up_right(target)
-		down_down(target)
-		down_down_right(target)
-		down_down_left(target)
+			icon_state = "jellyfish_red"
+			icon_living = "jellyfish_red"
+			addtimer(CALLBACK(src, PROC_REF(summon_puddles), A), 4 SECONDS, TIMER_DELETE_ME)
 	else
-		up_left_left(target)
-		left_left(target)
-		down_left_left(target)
-		down_right_right(target)
-		up_right_right(target)
-		right_right(target)
+		icon_state = "jellyfish"
+		icon_living = "jellyfish"
 
-/mob/living/simple_mob/vore/weatherbeast/darkmist/proc/normal_three(atom/target) //Yes
-	icon_state = "stranger_five"
-	sleep(10)
-	up_left_left(target)
-	left_left(target)
-	down_left_left(target)
-	down_right_right(target)
-	up_right_right(target)
-	right_right(target)
-	up_up(target)
-	up_up_left(target)
-	up_up_right(target)
-	down_down(target)
-	down_down_right(target)
-	down_down_left(target)
-	down_down_left_left(target)
-	down_down_right_right(target)
-	up_up_right_right(target)
-	up_up_left_left(target)
-	attack_cycle = 1
-
-/mob/living/simple_mob/vore/weatherbeast/darkmist/proc/bullet_wave(atom/target) //when long away, projectiles.
-	weatherprojectile = /obj/item/projectile/energy/mob/precursor
-	if(attack_cycle == 1)
-		normal_one(target)
-	else if(attack_cycle == 2)
-		normal_two(target)
-	else if(attack_cycle == 3)
-		normal_three(target)
-
-/mob/living/simple_mob/vore/weatherbeast/darkmist/proc/close_one(atom/target) //Firing a laser
-	icon_state = "stranger_two"
-	Beam(target, icon_state = "sat_beam", time = 5 SECONDS, maxdistance = INFINITY)
-	var/obj/item/projectile/P = new /obj/item/projectile/beam/precursor(get_turf(src))
-	sleep(25)
+/mob/living/simple_mob/vore/boss_jellyfish/proc/sniper_shot(atom/target)
+	var/obj/item/projectile/P = new /obj/item/projectile/beam/nutrition_gigabeam(get_turf(src))
 	P.launch_projectile(target, BP_TORSO, src)
-	attack_cycle = 2
 
-/mob/living/simple_mob/vore/weatherbeast/darkmist/proc/close_two(atom/target) //Does either an X or a cross
-	attack_cycle = 3
-	icon_state = "stranger_four"
-	sleep(10)
-	if(prob(50))
-		up_up_left_left(target)
-		up_up_right_right(target)
-		down_down_left_left(target)
-		down_down_right_right(target)
-	else
-		up_up(target)
-		down_down(target)
-		left_left(target)
-		right_right(target)
+/mob/living/simple_mob/vore/boss_jellyfish/proc/summon_puddles(atom/A)
+	for(var/mob/living/L in view(src, 7))
+		if(L.stat != DEAD || !IIsAlly(L))
+			L.add_modifier(/datum/modifier/mmo_drop/jelly_fish, 3, src)
+		if(chain_number > 0)
+			chain_number -= 1
+			if(prob(50))
+				icon_state = "jellyfish_yellow"
+				icon_living = "jellyfish_yellow"
+				addtimer(CALLBACK(src, PROC_REF(dash_attack), A), 4 SECONDS, TIMER_DELETE_ME)
+			else
+				icon_state = "jellyfish_red"
+			icon_living = "jellyfish_red"
+				addtimer(CALLBACK(src, PROC_REF(summon_puddles), A), 4 SECONDS, TIMER_DELETE_ME)
+		else
+			icon_state = "jellyfish"
+			icon_living = "jellyfish"
 
-/mob/living/simple_mob/vore/weatherbeast/darkmist/proc/close_three(atom/target)
-	icon_state = "stranger_six"
-	sleep(10)
-	up_up_left_left(target)
-	down_down_right_right(target)
-	sleep(5)
-	up_left_left(target)
-	down_right_right(target)
-	sleep(5)
-	left_left(target)
-	right_right(target)
-	sleep(5)
-	down_left_left(target)
-	up_right_right(target)
-	sleep(5)
-	down_down_left_left(target)
-	up_up_right_right(target)
-	sleep(5)
-	down_down_left(target)
-	up_up_right(target)
-	sleep(5)
-	down_down(target)
-	up_up(target)
-	sleep(5)
-	down_down_left(target)
-	up_up_right(target)
-	attack_cycle = 1
+/obj/item/projectile/beam/nutrition_gigabeam
+	damage = 40
+	armor_penetration = 90
 
-/mob/living/simple_mob/vore/weatherbeast/darkmist/proc/phase_two(atom/target) //phase two we just mix and and match.
-	if(attack_cycle == 1)
-		phasetwo_one(target)
-	else if(attack_cycle == 2)
-		phasetwo_two(target)
-	else if(attack_cycle == 3)
-		phasetwo_three(target)
+/mob/living/simple_mob/vore/boss_jellyfish/proc/astral_sea_warp(atom/target)
+	if(!target)
+		to_chat(src, span_warning("There's nothing to teleport to."))
+		return FALSE
 
-/mob/living/simple_mob/vore/weatherbeast/darkmist/proc/phasetwo_one(atom/target) //Lighting
-	icon_state = "stranger_eight"
-	Beam(target, icon_state = "sat_beam", time = 5 SECONDS, maxdistance = INFINITY)
-	var/obj/item/projectile/P = new /obj/item/projectile/beam/chain_lightning(get_turf(src))
-	sleep(5)
-	P.launch_projectile(target, BP_TORSO, src)
-	attack_cycle = 2
+	var/list/nearby_things = range(3, target)
+	var/list/valid_turfs = list()
 
-/mob/living/simple_mob/vore/weatherbeast/darkmist/proc/phasetwo_two(atom/target) //four spinny lasers. However lesser damage projectile
-	weatherprojectile = /obj/item/projectile/beam/inversion
-	icon_state = "stranger_seven"
-	sleep(10)
-	up_up_left_left(target)
-	down_down_right_right(target)
-	down_down_left_left(target)
-	up_up_right_right(target)
-	sleep(5)
-	up_left_left(target)
-	down_right_right(target)
-	down_down_left_left(target)
-	up_up_right(target)
-	sleep(5)
-	down_down(target)
-	up_up(target)
-	left_left(target)
-	right_right(target)
-	sleep(5)
-	down_left_left(target) //test
-	up_right_right(target)
-	down_down_left(target)
-	up_up_right(target)
-	sleep(5)
-	up_up_left_left(target)
-	down_down_right_right(target)
-	down_down_left_left(target)
-	up_up_right_right(target)
-	sleep(5)
-	up_left_left(target)
-	down_right_right(target)
-	down_down_left_left(target)
-	up_up_right_right(target)
-	sleep(5)
-	down_down(target)
-	up_up(target)
-	left_left(target)
-	right_right(target)
-	sleep(5)
-	down_left_left(target)
-	up_right_right(target)
-	down_down_left(target)
-	up_up_right(target)
-	attack_cycle = 3
+	// All this work to just go to a non-dense tile.
+	for(var/turf/potential_turf in nearby_things)
+		var/valid_turf = TRUE
+		if(potential_turf.density)
+			continue
+		for(var/atom/movable/AM in potential_turf)
+			if(AM.density)
+				valid_turf = FALSE
+		if(valid_turf)
+			valid_turfs.Add(potential_turf)
 
-/mob/living/simple_mob/vore/weatherbeast/darkmist/proc/phasetwo_three(atom/target) //and reverse with a dangerous projectile
-	weatherprojectile = /obj/item/projectile/beam/crippling_beam
-	icon_state = "stranger_nine"
-	sleep(10)
-	down_left_left(target)
-	up_right_right(target)
-	down_down_left(target)
-	up_up_right(target)
-	sleep(5)
-	down_down(target)
-	up_up(target)
-	left_left(target)
-	right_right(target)
-	sleep(5)
-	up_left_left(target)
-	down_right_right(target)
-	down_down_left_left(target)
-	up_up_right_right(target)
-	sleep(5)
-	up_up_left_left(target)
-	down_down_right_right(target)
-	down_down_left_left(target)
-	up_up_right_right(target)
-	sleep(5)
-	down_left_left(target)
-	up_right_right(target)
-	down_down_left(target)
-	up_up_right(target)
-	sleep(5)
-	down_down(target)
-	up_up(target)
-	left_left(target)
-	right_right(target)
-	sleep(5)
-	up_left_left(target)
-	down_right_right(target)
-	down_down_left(target)
-	up_up_right(target)
-	sleep(5)
-	up_up_left_left(target)
-	down_down_right_right(target)
-	down_down_left_left(target)
-	up_up_right_right(target)
-	attack_cycle = 1
+	if(!(valid_turfs.len))
+		to_chat(src, span_warning("There wasn't an unoccupied spot to teleport to."))
+		return FALSE
 
-//Note to future self, alter this one later to match the one up above when energy returns.
-/mob/living/simple_mob/vore/weatherbeast/starsky //starry skies
-	name = "guardian unit"
-	desc = "A strange robotic being."
-	health = 300
-	maxHealth = 300
-	armor = list(melee = 40, bullet = 40, laser = 40, energy = 40, bomb = 50, bio = 100, rad = 100)
-	icon_state = "astral_sniper"
-	icon_dead = "astral_sniper_dead"
-	ai_holder_type = /datum/ai_holder/simple_mob/intentional/dark_stranger
-	damage_fatigue_mult = 0
-	movement_cooldown = -1
-	special_attack_min_range = 1
-	special_attack_max_range = 7
-	special_attack_cooldown = 10 SECONDS
-	projectiletype = /obj/item/projectile/energy/astralrail
-	weatherprojectile = /obj/item/projectile/energy/astralrail
+	var/turf/target_turf = pick(valid_turfs)
+	var/turf/T = get_turf(src)
+
+	var/datum/effect/effect/system/spark_spread/s1 = new /datum/effect/effect/system/smoke_spread
+	s1.set_up(5, 1, T)
+	var/datum/effect/effect/system/spark_spread/s2 = new /datum/effect/effect/system/smoke_spread
+	s2.set_up(5, 1, target_turf)
 
 
-/mob/living/simple_mob/vore/weatherbeast/starsky/do_special_attack(atom/A)
-	. = TRUE
-	switch(a_intent)
-		if(I_DISARM)
-			close_wave(A)
-		if(I_HURT) //
-			far_wave(A)
-		if(I_GRAB)
-			phase_two(A)
+	T.visible_message(span_notice("\The [src] vanishes!"))
+	s1.start()
 
+	forceMove(target_turf)
+	playsound(target_turf, 'sound/effects/phasein.ogg', 50, 1)
+	to_chat(src, span_notice("You teleport to \the [target_turf]."))
 
-/mob/living/simple_mob/vore/weatherbeast/starsky/proc/close_wave(atom/target) //bullet pattern when folks up close
-	down_down_right_right(target)
-	down_down_left_left(target)
-	up_up_left_left(target)
-	up_up_left_left(target)
-	sleep(20)
-	right_right(target)
-	left_left(target)
-	up_up(target)
-	down_down(target)
-	sleep(20)
-	down_down_left(target)
-	down_down_right(target)
-	down_left_left(target)
-	down_right_right(target)
-	up_up_right(target)
-	up_up_left(target)
-	up_left_left(target)
-	up_right_right(target)
-
-
-/mob/living/simple_mob/vore/weatherbeast/starsky/proc/far_wave(atom/target) //Bullet pattern when folks are far away
-	down_down_left_left(target)
-	down_down_left(target)
-	down_down(target)
-	down_down_right(target)
-	down_down_right_right(target)
-	up_up_left_left(target)
-	up_up_left(target)
-	up_up(target)
-	up_up_right(target)
-	up_up_right_right(target)
-	sleep(20)
-	up_up_right_right(target)
-	up_right_right(target)
-	right_right(target)
-	down_right_right(target)
-	down_down_right_right(target)
-	up_up_left_left(target)
-	up_left_left(target)
-	left_left(target)
-	down_left_left(target)
-	down_down_left_left(target)
-	sleep(20)
-	down_down_left_left(target)
-	down_down_left(target)
-	down_down(target)
-	down_down_right(target)
-	down_down_right_right(target)
-	up_up_left_left(target)
-	up_up_left(target)
-	up_up(target)
-	up_up_right(target)
-	up_up_right_right(target)
-	sleep(20)
-	up_up_right_right(target)
-	up_right_right(target)
-	right_right(target)
-	down_right_right(target)
-	down_down_right_right(target)
-	up_up_left_left(target)
-	up_left_left(target)
-	left_left(target)
-	down_left_left(target)
-	down_down_left_left(target)
-
-/mob/living/simple_mob/vore/weatherbeast/starsky/proc/phase_two(atom/target) //Phase two bullet pattern
-	up_up_left_left(target)
-	down_down_right_right(target)
-	sleep(10)
-	up_up_left(target)
-	down_down_right(target)
-	sleep(10)
-	up_up(target)
-	down_down(target)
-	sleep(10)
-	up_up_right(target)
-	down_down_left(target)
-	sleep(10)
-	up_up_right_right(target)
-	down_down_left_left(target)
-	sleep(10)
-	up_right_right(target)
-	down_left_left(target)
-	sleep(10)
-	right_right(target)
-	left_left(target)
-	sleep(10)
-	down_right_right(target)
-	up_left_left(target)
-	sleep(10)
-	down_down_right_right(target)
-	up_up_left_left(target)
-	sleep(30)
-	up_up_right(target)
-	up_up(target)
-	up_up_left(target)
-	down_down_right(target)
-	down_down(target)
-	down_down_left(target)
-	left_left(target)
-	up_left_left(target)
-	down_left_left(target)
-	right_right(target)
-	up_right_right(target)
-	down_right_right(target)
-	sleep(30)
-	up_up_left_left(target)
-	up_up_left(target)
-	up_up(target)
-	up_up_right(target)
-	up_up_right_right(target)
-	down_down_left_left(target)
-	down_down_left(target)
-	down_down(target)
-	down_down_right(target)
-	down_down_right_right(target)
-	sleep(30)
-	up_up_left_left(target)
-	up_up_right_right(target)
-	down_down_right_right(target)
-	down_down_left_left(target)
-	sleep(10)
-	up_left_left(target)
-	up_up_right(target)
-	down_down_left(target)
-	down_right_right(target)
-	sleep(10)
-	left_left(target)
-	up_up(target)
-	down_down(target)
-	right_right(target)
-	sleep(10)
-	down_left_left(target)
-	up_up_left(target)
-	down_down_right(target)
-	up_right_right(target)
-	sleep(10)
-	up_up_left_left(target)
-	up_up_right_right(target)
-	down_down_right_right(target)
-	down_down_left_left(target)
-	sleep(50) //False sense of security for the finale
-	up_up_left_left(target)
-	up_up_left(target)
-	up_up(target)
-	up_up_right(target)
-	up_up_right_right(target)
-	up_right_right(target)
-	up_left_left(target)
-	right_right(target)
-	left_left(target)
-	down_right_right(target)
-	down_left_left(target)
-	down_down_left_left(target)
-	down_down_left(target)
-	down_down(target)
-	down_down_right(target)
-	down_down_right_right(target)
+	target_turf.visible_message(span_warning("\The [src] appears!"))
+	s2.start()
+	if(chain_number > 0)
+		chain_number -= 1
+		if(prob(50))
+			icon_state = "jellyfish_yellow"
+			icon_living = "jellyfish_yellow"
+			addtimer(CALLBACK(src, PROC_REF(dash_attack), target), 4 SECONDS, TIMER_DELETE_ME)
+		else
+			icon_state = "jellyfish_red"
+			icon_living = "jellyfish_red"
+			addtimer(CALLBACK(src, PROC_REF(summon_puddles), target), 4 SECONDS, TIMER_DELETE_ME)

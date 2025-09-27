@@ -1098,3 +1098,16 @@
 		addtimer(CALLBACK(src, PROC_REF(cutoff_ulti), target, next_cycle, fire_delay, amount), fire_delay, TIMER_DELETE_ME)
 	else
 		attackcycle = next_cycle
+
+/datum/modifier/mmo_drop
+	name = "Targeted"
+	on_created_text = span_notice("You feel like you're being targeted.")
+	stacks = MODIFIER_STACK_FORBID
+	var/puddleitem = /obj/effect/spider/spiderling/antling
+
+/datum/modifier/mmo_drop/on_expire()
+	if(holder.stat != DEAD)
+		new puddleitem(src.loc)
+
+/datum/modifier/mmo_drop/jelly_fish
+	puddleitem = /obj/effect/ant_structure/trap
