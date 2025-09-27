@@ -43,7 +43,7 @@
 	. = ..()
 	var/obj/belly/B = vore_selected
 	B.name = "furnace"
-	B.desc = "Turns out the skull head opens, and you have been consumed into the beast's furnace! Sweltering heat rages around you as your metal confines rumble with the rurr of strange machinery. The chamber jostling you about as you may attempt to escape, or perhaps accept your fate"
+	B.desc = "Turns out the skull head opens, and you have been consumed into the beast's furnace! Sweltering heat rages around you as your metal confines rumble with the rurr of strange machinery. The chamber jostling you about as you may attempt to escape, or perhaps accept your fate."
 	B.digest_brute = 0
 	B.digest_burn = 3
 	B.digestchance = 0
@@ -263,7 +263,7 @@
 				addtimer(CALLBACK(src, PROC_REF(dash_attack), A), 4 SECONDS, TIMER_DELETE_ME)
 			else
 				icon_state = "jellyfish_red"
-			icon_living = "jellyfish_red"
+				icon_living = "jellyfish_red"
 				addtimer(CALLBACK(src, PROC_REF(summon_puddles), A), 4 SECONDS, TIMER_DELETE_ME)
 		else
 			icon_state = "jellyfish"
