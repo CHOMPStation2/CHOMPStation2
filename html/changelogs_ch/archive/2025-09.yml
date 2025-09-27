@@ -477,3 +477,28 @@
       as well as casino card decks spawning with jokers.
   Will:
   - code_imp: Tiny cleanup in gravgen UI code
+2025-09-27:
+  CHOMPStation2StaffMirrorBot:
+  - code_imp: adds keycombo input for later use
+  - bugfix: bad organ path deletion on alienanimals
+  - bugfix: runtime in case there was no DB initialized
+  - rscadd: Added a new Welcome to Virgo pamphlet that covers most vital lore IC.
+  - qol: Made it so that new players under 10 days old start with this lore document
+      in their hand. It is sized as tiny, making it easy to tuck away.
+  - bugfix: Fixed invisibility potions being able to spawn in fruit.
+  - code_imp: Cleaned up some missing reagent defines for glamour potions.
+  - bugfix: AI can now access the forever hidden vorepanel button
+  - bugfix: balloon alerts not centered for wide sprites
+  Ryumi:
+  - image: Casino chips use a new set of sprites that better represent their item
+      sizes.
+  Shy Bandit:
+  - rscadd: Gator Snout Head
+  Will:
+  - refactor: Improves smes mapped part upgrading
+  - refactor: Adds more smes subtypes so manually mapping smes vars is no longer needed
+  - server: Mapped smes should be updated to use prefabs, and a coil place on the
+      smes to meet the original charge capacity.
+  - bugfix: Wearing shoes no longer prevents map spawned blood from spreading with
+      footsteps
+  - code_imp: Cleans up uses of updateUsrDialog() on objects moved to tgui
