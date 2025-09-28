@@ -502,3 +502,7 @@
   - bugfix: Wearing shoes no longer prevents map spawned blood from spreading with
       footsteps
   - code_imp: Cleans up uses of updateUsrDialog() on objects moved to tgui
+2025-09-28:
+  FluffMedic:
+  - rscadd: New bosses on Tyr. Several bosses should now have basic vore bellies.
+      Tyr research has a new item
