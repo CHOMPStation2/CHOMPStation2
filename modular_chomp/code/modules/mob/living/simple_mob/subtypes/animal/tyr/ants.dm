@@ -27,6 +27,10 @@
 		/obj/item/stack/material/steel = 6\
 		)
 
+	tame_items = list(
+	/obj/item/reagent_containers/food/snacks/jellyfishcore = 70
+	)
+
 	//I know very little of this
 	swallowTime = 3 SECONDS
 	vore_active = 1

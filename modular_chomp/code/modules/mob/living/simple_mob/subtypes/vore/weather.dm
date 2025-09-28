@@ -121,6 +121,8 @@
 	special_attack_min_range = 1
 	special_attack_max_range = 7
 	special_attack_cooldown = 13 SECONDS
+	ai_holder_type = /datum/ai_holder/simple_mob/melee/evasive/jellyfish
+
 
 	swallowTime = 1.5 SECONDS
 	vore_active = 1
