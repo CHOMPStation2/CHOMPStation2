@@ -512,3 +512,7 @@
       stub horns, long/longer sharp snout, bony plates)
   Will:
   - bugfix: Forensics items work on doors and airlocks again
+2025-09-30:
+  FluffMedic:
+  - rscadd: Also added taming to Tyr Metal Ants, use jellyfish cores with a 70% chance
+  - bugfix: jellyfish boss regained it's brain
