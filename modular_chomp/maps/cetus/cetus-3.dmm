@@ -19334,10 +19334,10 @@
 /obj/machinery/embedded_controller/radio/simple_docking_controller/escape_pod_berth{
 	frequency = 1381;
 	id_tag = "escape_pod_3_berth";
-	pixel_x = 25;
-	pixel_y = 30;
 	tag_door = "escape_pod_3_berth_hatch";
-	dir = 8
+	dir = 8;
+	pixel_y = 33;
+	pixel_x = 26
 	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/cetus/escapepodstar)
