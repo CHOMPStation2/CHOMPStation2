@@ -74,7 +74,6 @@
 	oxygen		= MOLES_O2STANDARD
 	nitrogen	= MOLES_N2STANDARD
 	temperature = T20C
-	flags = TURF_UNSHIELDABLE
 
 /turf/simulated/floor/outdoors/rocks/cetus
 	name = "rocks"
@@ -84,7 +83,7 @@
 	nitrogen	= MOLES_N2STANDARD
 	temperature = T20C
 	initial_flooring = /decl/flooring/rock/cetus
-	flags = null
+	flags = TURF_UNSHIELDABLE
 
 /decl/flooring/rock/cetus
 	icon_base = "rock_brown"
@@ -107,6 +106,11 @@
 	oxygen = 0
 	nitrogen = 0
 	temperature = TCMB
+	flags = null
+
+/turf/simulated/floor/outdoors/mud/cetus
+	flags = TURF_UNSHIELDABLE
+	outdoors = FALSE
 
 /turf/simulated/floor/water/indoors/station
 	name = "shallow water"
