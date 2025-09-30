@@ -1355,12 +1355,6 @@
 /obj/structure/lattice,
 /turf/simulated/open,
 /area/maintenance/cetus/threeas)
-"aNY" = (
-/obj/structure/lattice,
-/obj/machinery/shield_diffuser,
-/obj/machinery/shield_diffuser,
-/turf/space,
-/area/space)
 "aOw" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -101088,7 +101082,7 @@ mco
 mco
 mco
 hRR
-aNY
+hRR
 hRR
 mco
 mco
