@@ -1,0 +1,5 @@
+author: "FluffMedic"
+delete-after: True
+changes:
+  - rscadd: "Also added taming to Tyr Metal Ants, use jellyfish cores with a 70% chance"
+  - bugfix: "jellyfish boss regained it's brain"
