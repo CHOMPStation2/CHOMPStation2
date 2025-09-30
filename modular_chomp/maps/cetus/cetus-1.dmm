@@ -9386,6 +9386,11 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/cetus/atriumd1)
+"fkY" = (
+/obj/structure/lattice,
+/obj/structure/grille,
+/turf/simulated/floor/plating/turfpack/airless,
+/area/space)
 "flE" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -98253,8 +98258,8 @@ suH
 suH
 suH
 suH
-lyH
-lyH
+fkY
+fkY
 qFw
 qFw
 qFw
@@ -98512,8 +98517,8 @@ qFw
 qFw
 qFw
 qFw
-lyH
-lyH
+fkY
+fkY
 qFw
 qFw
 qFw
@@ -98771,7 +98776,7 @@ fKl
 fKl
 qFw
 qFw
-lyH
+fkY
 qFw
 qFw
 qFw
@@ -102383,7 +102388,7 @@ kIb
 kIb
 qFw
 qFw
-lyH
+fkY
 qFw
 qFw
 qFw
@@ -102640,8 +102645,8 @@ qFw
 qFw
 qFw
 qFw
-lyH
-lyH
+fkY
+fkY
 qFw
 qFw
 qFw
@@ -102896,9 +102901,9 @@ vei
 qFw
 qFw
 suH
-lyH
-lyH
-lyH
+fkY
+fkY
+fkY
 qFw
 qFw
 qFw
@@ -103409,8 +103414,8 @@ qFw
 suH
 qFw
 qFw
-lyH
-lyH
+fkY
+fkY
 qFw
 qFw
 qFw
@@ -103666,8 +103671,8 @@ qFw
 qFw
 suH
 qFw
-lyH
-lyH
+fkY
+fkY
 suH
 wPj
 qFw
@@ -103924,7 +103929,7 @@ lyH
 lyH
 lyH
 suH
-lyH
+fkY
 suH
 yke
 vBs
