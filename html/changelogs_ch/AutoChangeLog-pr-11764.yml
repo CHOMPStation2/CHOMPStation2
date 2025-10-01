@@ -1,0 +1,4 @@
+author: "FluffMedic"
+delete-after: True
+changes:
+  - bugfix: "Events should no longer spawn spiders that self destruct"
