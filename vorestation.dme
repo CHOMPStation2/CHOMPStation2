@@ -594,11 +594,7 @@
 #include "code\datums\components\connect_containers_ch.dm"
 #include "code\datums\components\connect_loc_behalf.dm"
 #include "code\datums\components\connect_mob_behalf.dm"
-<<<<<<< HEAD
-#include "code\datums\components\connect_range_ch.dm"
-=======
 #include "code\datums\components\connect_range.dm"
->>>>>>> f71f0bc673 (Facing component (#18574))
 #include "code\datums\components\holographic_nature.dm"
 #include "code\datums\components\infective.dm"
 #include "code\datums\components\orbiter.dm"
