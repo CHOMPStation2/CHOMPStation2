@@ -1,0 +1,4 @@
+author: "Aroliacue"
+delete-after: True
+changes:
+  - maptweak: "Removed the supermatter shard from the deathden POI."
