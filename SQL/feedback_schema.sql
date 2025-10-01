@@ -295,7 +295,7 @@ LANGUAGE SQL
 NOT DETERMINISTIC
 CONTAINS SQL
 SQL SECURITY INVOKER
-COMMENT 'Inserts a new row into \'chatlogs_rounds\' and deletes the oldest entry, if the ckey already has 10 round id\'s stored.'
+COMMENT 'Inserts a new row into \'chatlogs_rounds\' and deletes the oldest entry, if the ckey already has 10 round ids stored.'
 BEGIN
 
 INSERT IGNORE INTO chatlogs_rounds(round_id, ckey) VALUES (p_round_id, p_ckey);
