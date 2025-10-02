@@ -40,7 +40,6 @@
 /obj/effect/step_trigger/teleporter/randomspawn //teleporter/random was taken. This version only teleports when stepped on *sometimes*, and you can give it a chance not to spawn
 	var/destroyprob = 99
 	var/teleprob = 1
-	invisibility = INVISIBILITY_NONE
 
 /obj/effect/step_trigger/teleporter/randomspawn/Initialize(mapload)
 	. = ..()
