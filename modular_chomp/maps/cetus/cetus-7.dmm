@@ -1755,15 +1755,6 @@
 	},
 /turf/simulated/floor/holofloor/tiled,
 /area/holodeck/source_basketball)
-"bmp" = (
-/obj/effect/step_trigger/teleporter/randomspawn{
-	teleport_x = 92;
-	teleport_z = 1;
-	teleport_y = 138;
-	destroyprob = 0
-	},
-/turf/simulated/floor/lino,
-/area/shadekin)
 "bmz" = (
 /obj/machinery/door/airlock/hatch,
 /turf/unsimulated/floor{
@@ -2791,6 +2782,10 @@
 	},
 /turf/simulated/shuttle/floor/black,
 /area/centcom/evac)
+"cmw" = (
+/obj/effect/landmark/darkspawn,
+/turf/simulated/floor/carpet/graycarpet,
+/area/shadekin)
 "cmS" = (
 /obj/machinery/door/airlock/external{
 	icon_state = "door_locked";
@@ -6115,10 +6110,13 @@
 /turf/simulated/floor/holofloor/beach/water,
 /area/holodeck/source_beach)
 "ggh" = (
-/obj/structure/girder,
-/obj/item/tape/engineering,
-/obj/structure/fans/tiny,
-/turf/simulated/floor/plating,
+/obj/effect/step_trigger/teleporter/randomspawn{
+	teleport_x = 92;
+	teleport_z = 1;
+	teleport_y = 138;
+	destroyprob = 0
+	},
+/turf/simulated/floor/lino,
 /area/shadekin)
 "ggj" = (
 /obj/structure/flora/ausbushes/sparsegrass,
@@ -10402,10 +10400,6 @@
 	},
 /turf/simulated/floor/holofloor/tiled/dark,
 /area/holodeck/source_emptycourt)
-"krx" = (
-/obj/effect/landmark/darkspawn,
-/turf/simulated/floor/carpet/graycarpet,
-/area/shadekin)
 "krD" = (
 /obj/machinery/door/window/holowindoor{
 	base_state = "right";
@@ -14323,6 +14317,16 @@
 	},
 /turf/simulated/floor/holofloor/tiled,
 /area/holodeck/source_emptycourt)
+"oIv" = (
+/obj/effect/step_trigger/teleporter/randomspawn{
+	teleport_x = 130;
+	teleport_z = 3;
+	teleprob = 5;
+	teleport_y = 146;
+	destroyprob = 0
+	},
+/turf/simulated/floor/carpet/graycarpet,
+/area/shadekin)
 "oJA" = (
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
 	dir = 8;
@@ -17204,16 +17208,6 @@
 /obj/item/aicard,
 /turf/simulated/shuttle/floor/voidcraft/dark,
 /area/shuttle/syndicate)
-"saM" = (
-/obj/effect/step_trigger/teleporter/randomspawn{
-	teleport_x = 130;
-	teleport_z = 3;
-	teleprob = 5;
-	teleport_y = 146;
-	destroyprob = 0
-	},
-/turf/simulated/floor/carpet/graycarpet,
-/area/shadekin)
 "saX" = (
 /obj/machinery/door/window/northright{
 	dir = 2
@@ -42830,7 +42824,7 @@ ovR
 yap
 hol
 ovR
-krx
+cmw
 hol
 gbO
 ioS
@@ -44116,7 +44110,7 @@ kTB
 tfg
 tfg
 ePc
-saM
+oIv
 ovR
 kIs
 bqs
@@ -45921,7 +45915,7 @@ ePc
 lRH
 lRH
 bMy
-bmp
+ggh
 hol
 iFK
 cwn
@@ -52362,7 +52356,7 @@ tfg
 tfg
 qXP
 fvv
-qaR
+hop
 hop
 hop
 qXP
@@ -52620,8 +52614,8 @@ tfg
 tfg
 tfg
 qaR
-ggh
-ggh
+qaR
+qaR
 qaR
 qaR
 tfg
@@ -52878,11 +52872,11 @@ tfg
 tfg
 tfg
 tfg
-ydh
-kTB
+tfg
+tfg
 tfg
 qaR
-sxT
+tfg
 niv
 tfg
 tfg
@@ -53136,12 +53130,12 @@ ydh
 tfg
 tfg
 tfg
-kTB
-ydh
-kTB
-kTB
-kTB
-kTB
+tfg
+tfg
+tfg
+tfg
+tfg
+tfg
 tfg
 tfg
 tfg
@@ -53394,12 +53388,12 @@ tfg
 tfg
 ydh
 kTB
-kTB
-kTB
-kTB
-kTB
-kTB
-kTB
+tfg
+tfg
+tfg
+tfg
+tfg
+tfg
 tfg
 tfg
 tfg
@@ -53655,9 +53649,9 @@ kTB
 ydh
 ydh
 kTB
-ydh
 tfg
-kTB
+tfg
+tfg
 tfg
 tfg
 tfg
@@ -53914,8 +53908,8 @@ ydh
 kTB
 kTB
 kTB
-kTB
-kTB
+tfg
+tfg
 tfg
 tfg
 tfg
