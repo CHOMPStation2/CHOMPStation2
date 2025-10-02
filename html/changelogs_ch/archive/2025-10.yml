@@ -1,0 +1,22 @@
+2025-10-02:
+  Aroliacue:
+  - maptweak: Removed the supermatter shard from the deathden POI.
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: mentors seeing some mod / admin messages
+  - bugfix: Pain from internal bleeding will no longer inform you that the pain is
+      coming from your character name.
+  Diana:
+  - qol: Weaver trait now has a TGUI panel
+  - qol: Weaver now has the ability to spin a cocoon
+  - code_imp: Cleans up some signals pertaining to Weaver.
+  - bugfix: Fixes grabs hard deleting when pushed over.
+  FluffMedic:
+  - bugfix: Events should no longer spawn spiders that self destruct
+  Ryumi:
+  - qol: Added an option to the Reflexive Biting and Personal Bubble traits that lets
+      you choose to start with them enabled or disabled.
+  VictorZisthus:
+  - bugfix: Actually made the Ward-Takahashi WT-98a 'Protector' have a DNA lock. No
+      more false advertising.
+  Will:
+  - bugfix: Charge blade no longer deletes itself on drop

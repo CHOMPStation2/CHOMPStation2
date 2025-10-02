@@ -1,4 +1,0 @@
-author: "VictorZisthus"
-delete-after: True
-changes:
-  - bugfix: "Actually made the Ward-Takahashi WT-98a 'Protector' have a DNA lock. No more false advertising."
