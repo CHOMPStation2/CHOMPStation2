@@ -598,7 +598,7 @@
 /obj/structure/railing/overhang/grey{
 	dir = 8
 	},
-/obj/structure/bed/chair/sofa/left/blue{
+/obj/structure/bed/chair/sofa/corp/left{
 	dir = 4
 	},
 /turf/simulated/floor/carpet/tealcarpet,
@@ -2401,11 +2401,11 @@
 /turf/simulated/floor/reinforced,
 /area/rnd/Xenobiology_Lab)
 "aPY" = (
-/obj/structure/bed/chair/sofa/right/lime{
-	dir = 1
-	},
 /obj/machinery/camera/network/civilian{
 	c_tag = "CIV -  JR Public Lounge";
+	dir = 1
+	},
+/obj/structure/bed/chair/sofa/right/brown{
 	dir = 1
 	},
 /turf/simulated/floor/wood,
@@ -3545,6 +3545,7 @@
 /obj/structure/cable/green{
 	icon_state = "1-6"
 	},
+/obj/effect/floor_decal/emblem/nt3,
 /turf/simulated/floor/tiled,
 /area/hallway/primary/seconddeck/dockhallway)
 "bjV" = (
@@ -3708,12 +3709,12 @@
 	layer = 3.3;
 	pixel_x = 26
 	},
-/obj/structure/bed/chair/sofa/lime{
-	dir = 8
-	},
 /obj/machinery/light{
 	dir = 4;
 	light_color = "#DDFFD3"
+	},
+/obj/structure/bed/chair/sofa/beige{
+	dir = 8
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/cetus/jrlounge)
@@ -4987,7 +4988,7 @@
 /obj/structure/railing/overhang/grey{
 	dir = 4
 	},
-/obj/structure/bed/chair/sofa/left/purp{
+/obj/structure/bed/chair/sofa/corp/left{
 	dir = 8
 	},
 /turf/simulated/floor/carpet/purcarpet,
@@ -5983,7 +5984,7 @@
 /turf/simulated/wall/r_wall,
 /area/maintenance/substation/central)
 "cdo" = (
-/obj/structure/bed/chair/comfy/lime{
+/obj/structure/bed/chair/comfy/blue{
 	dir = 8
 	},
 /turf/simulated/floor/wood,
@@ -6158,7 +6159,7 @@
 /turf/simulated/floor/plating,
 /area/engineering/cetus/atriumdeck2)
 "cfM" = (
-/obj/structure/bed/chair/comfy/lime{
+/obj/structure/bed/chair/comfy/purp{
 	dir = 4
 	},
 /turf/simulated/floor/carpet/tealcarpet,
@@ -10250,13 +10251,13 @@
 /turf/simulated/floor/tiled,
 /area/security/detectives_office)
 "dvI" = (
-/obj/structure/bed/chair/sofa/corner/lime{
-	dir = 8
-	},
 /obj/item/radio/intercom{
 	dir = 4;
 	name = "Station Intercom (General)";
 	pixel_x = 21
+	},
+/obj/structure/bed/chair/sofa/corner/brown{
+	dir = 8
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/cetus/jrlounge)
@@ -15634,6 +15635,7 @@
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/effect/floor_decal/emblem/nt2,
 /turf/simulated/floor/tiled,
 /area/hallway/primary/seconddeck/dockhallway)
 "fuW" = (
@@ -16667,7 +16669,7 @@
 	dir = 8;
 	pixel_x = 26
 	},
-/obj/structure/bed/chair/sofa/right/lime{
+/obj/structure/bed/chair/sofa/right/brown{
 	dir = 8
 	},
 /turf/simulated/floor/wood,
@@ -16998,9 +17000,6 @@
 	},
 /obj/effect/floor_decal/industrial/danger{
 	dir = 1
-	},
-/obj/structure/sign/flag/nt{
-	pixel_y = 25
 	},
 /obj/effect/floor_decal/corner/red/bordercorner{
 	dir = 1
@@ -33440,7 +33439,8 @@
 /area/rnd/Xenobotany_Lab)
 "lJh" = (
 /obj/structure/railing/overhang/grey{
-	dir = 1
+	dir = 1;
+	layer = 3
 	},
 /obj/structure/railing/overhang/grey{
 	dir = 4
@@ -42684,12 +42684,13 @@
 /area/crew_quarters/cetus/atrium/primary)
 "oTg" = (
 /obj/structure/railing/overhang/grey{
-	dir = 1
-	},
-/obj/structure/railing/overhang/grey{
 	dir = 8
 	},
 /obj/structure/table/bench/wooden,
+/obj/structure/railing/overhang/grey{
+	dir = 1;
+	layer = 3
+	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/cetus/atrium/primary)
 "oTo" = (
@@ -50258,6 +50259,7 @@
 /area/crew_quarters/cetus/atrium/secondaryf2)
 "rlt" = (
 /obj/structure/disposalpipe/segment,
+/obj/effect/floor_decal/emblem/nt1,
 /turf/simulated/floor/tiled,
 /area/hallway/primary/seconddeck/dockhallway)
 "rlE" = (
@@ -56804,7 +56806,8 @@
 /area/rnd/Xenobotany_Isolation_Chamber)
 "tvT" = (
 /obj/structure/railing/overhang/grey{
-	dir = 1
+	dir = 1;
+	layer = 3
 	},
 /obj/structure/bed/chair/sofa/right/black,
 /turf/simulated/floor/wood,
@@ -67687,7 +67690,7 @@
 /obj/structure/railing/overhang/grey{
 	dir = 8
 	},
-/obj/structure/bed/chair/sofa/right/blue{
+/obj/structure/bed/chair/sofa/corp/right{
 	dir = 4
 	},
 /turf/simulated/floor/carpet/tealcarpet,
@@ -69783,7 +69786,7 @@
 /obj/structure/railing/overhang/grey{
 	dir = 4
 	},
-/obj/structure/bed/chair/sofa/right/purp{
+/obj/structure/bed/chair/sofa/corp/right{
 	dir = 8
 	},
 /turf/simulated/floor/carpet/purcarpet,
