@@ -5,8 +5,8 @@
 	maxHealth = 500
 	armor = list(melee = 40, bullet = 40, laser = 40, energy = 40, bomb = 50, bio = 100, rad = 100)  //No thematics but I like boss critters to take a bit
 	icon_state = "rex"
-	melee_attack_delay = 0.5 SECONDS
-	melee_damage_lower = 40 //Will murder you if you get within melee.
+	melee_attack_delay = 2 SECONDS
+	melee_damage_lower = 40
 	melee_damage_upper = 40
 	attack_armor_pen = 40
 	damage_fatigue_mult = 1 //Does slowly pick up speed.
@@ -21,7 +21,7 @@
 	special_attack_min_range = 1
 	special_attack_max_range = 14 //The special attacks are more meant to pin you down or provide a healing to this tank.
 	special_attack_cooldown = 10 SECONDS
-	swallowTime = 0.5 SECONDS
+	swallowTime = 1.5 SECONDS
 	vore_active = 1
 	vore_capacity = 1
 	vore_bump_chance = 10
@@ -35,8 +35,10 @@
 	grab_resist = 100
 	devourable = FALSE
 	faction = FACTION_ECLIPSE
+	size_multiplier = 2
 
 	loot_list = list(/obj/item/personal_shield_generator/belt/fossiltank  = 100,
+		/obj/item/prop/tyrlore/fossiltank = 100,
 		)
 
 /mob/living/simple_mob/vore/fossiltank/load_default_bellies()
