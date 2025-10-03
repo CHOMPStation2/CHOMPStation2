@@ -1,0 +1,7 @@
+author: "FluffMedic"
+delete-after: True
+changes:
+  - rscadd: "Ant HP reduced, many have some thing a little special to be a little more dangerous"
+  - rscadd: "Fossil Tank now has lore, and guards a method to leap through space"
+  - rscadd: "Some more details for Tyr related things"
+  - maptweak: "Tyr caverns increased, Precursor base remapped, first boss can be fought solo"
