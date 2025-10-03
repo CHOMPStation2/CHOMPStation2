@@ -1,7 +1,7 @@
 /datum/techweb_node/tyr_loot
 	id = TECHWEB_NODE_TYRGOODS
-	display_name = "Explosives"
-	description = "For once, intentional explosions."
+	display_name = "Tyrian Tech"
+	description = "By utilizing advanced scanning technolgy, reverse enginer tyrian tech.."
 	prereq_ids = list(TECHWEB_NODE_MOD_ANOMALY_SUIT)
 	design_ids = list(
 		"tyr_rifle",

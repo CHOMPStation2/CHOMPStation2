@@ -599,10 +599,12 @@
 		/obj/item/stock_parts/capacitor/hyper = 80,
 		/obj/item/stock_parts/manipulator/hyper = 80,
 		/obj/item/stock_parts/matter_bin/hyper = 80,
+		/obj/item/reagent_containers/food/snacks/meat = 100
 		)
 
 /mob/living/simple_mob/mechanical/mecha/eclipse/tankyboss/chambera //poison boss
 	name = "experiment 20"
+	desc = "A strange furball fused with plant life."
 	icon_state = "poison_boss"
 	icon_living = "poison_boss"
 	wreckage = /obj/item/prop/tyrlore/basicflora
@@ -656,6 +658,7 @@
 
 /mob/living/simple_mob/mechanical/mecha/eclipse/tankyboss/chamberb //knock back boss
 	name = "experiment 3"
+	desc = "A strange furball, the air vibrating around it."
 	specialattackprojectile = /obj/item/projectile/knockback/slow
 	icon_state = "sonic_boss"
 	icon_living = "sonic_boss"
@@ -699,6 +702,7 @@
 
 /mob/living/simple_mob/mechanical/mecha/eclipse/tankyboss/chamberc //wierd shields
 	name = "experiment 7"
+	desc = "A strange furball gaurded by a transparent barrier."
 	specialattackprojectile = /obj/item/projectile/energy/eclipse/tyrjavelin
 	health = 400
 	maxHealth = 400 //shield mechanic
@@ -797,7 +801,7 @@
 
 /mob/living/simple_mob/mechanical/mecha/eclipse/tankyboss/chamberf
 	name = "engineering automaton"
-	desc = "A large, very important looking ai. Plating appears similiar to albative plating."
+	desc = "A large important looking robot, crackling with lighting."
 	icon = 'modular_chomp/icons/mob/hivebot.dmi'
 	icon_state = "yellow"
 	icon_living = "yellow"
@@ -805,27 +809,6 @@
 	wreckage = /obj/item/prop/tyrlore/basicpower
 	specialattackprojectile = /obj/item/projectile/energy/lightingspark/nanoweave
 	projectiletype = /obj/item/projectile/energy/lightingspark/nanoweave
-	loot_list = list(/obj/item/projectile/energy/wp_shotgun  = 30,
-		/obj/item/gun/energy/energyballchain  = 30,
-		/obj/item/tool/wirecutters/hybrid/alien  = 30,
-		/obj/item/tool/wrench/hybrid/alien  = 30,
-		/obj/item/tool/crowbar/hybrid/alien  = 30,
-		/obj/item/tool/screwdriver/hybrid/alien  = 30,
-		/obj/item/pickaxe/diamonddrill/alien = 30,
-		/obj/item/melee/energy/sword/dualsaber = 30,
-		/obj/item/shield_projector/rectangle/automatic/tyrvault = 0.01,
-		/obj/item/stock_parts/scanning_module/omni = 80,
-		/obj/item/stock_parts/micro_laser/omni = 80,
-		/obj/item/stock_parts/capacitor/omni = 80,
-		/obj/item/stock_parts/manipulator/omni = 80,
-		/obj/item/stock_parts/matter_bin/omni = 80,
-		/obj/item/stock_parts/scanning_module/hyper = 80,
-		/obj/item/stock_parts/micro_laser/hyper = 80,
-		/obj/item/stock_parts/capacitor/hyper = 80,
-		/obj/item/stock_parts/manipulator/hyper = 80,
-		/obj/item/stock_parts/matter_bin/hyper = 80,
-		/obj/item/melee/midnightblade = 100
-		)
 
 /mob/living/simple_mob/mechanical/mecha/eclipse/tankyboss/chamberf/do_special_attack(atom/A)
 	rng_cycle = rand(1,6)
@@ -853,6 +836,7 @@
 
 /mob/living/simple_mob/mechanical/mecha/eclipse/tankyboss/chamberg //wierd shields
 	name = "expirement 28"
+	desc = "A strange furball gaurded by a transparent barrier."
 	specialattackprojectile = /obj/item/projectile/energy/eclipse/tyrjavelin
 	resistance = 10
 	icon_state = "UPshield_boss"
@@ -903,6 +887,7 @@
 
 /mob/living/simple_mob/mechanical/mecha/eclipse/tankyboss/massswarm
 	name = "swarm controler"
+	desc = "A massive hivebot that has shifting bits of metal upon it's body."
 	health = 600
 	maxHealth = 600
 	icon_state = "bright_green"
@@ -929,7 +914,7 @@
 		new /mob/living/simple_mob/mechanical/hivebot/nanoevent/bright_green/tyr(src.loc)
 	..()
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/tankyboss/finale/do_special_attack(atom/A)
+/mob/living/simple_mob/mechanical/mecha/eclipse/tankyboss/massswarm/do_special_attack(atom/A)
 	rng_cycle = rand(1,2)
 	if(attackcycle == 1)
 		addtimer(CALLBACK(src, PROC_REF(bomb_chaos), A, rng_cycle), 2.5 SECONDS, TIMER_DELETE_ME)
