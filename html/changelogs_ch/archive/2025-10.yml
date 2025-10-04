@@ -24,3 +24,15 @@
   Drathek:
   - code_imp: Tweaked a few grep lints for balloon alerts and a check for de-optimization
       of o?range/o?view with as anything
+2025-10-04:
+  CHOMPStation2StaffMirrorBot:
+  - code_imp: react 19.2
+  - bugfix: some door buttons not triggering multiple doors
+  - qol: adds some basic color matrix solving
+  FluffMedic:
+  - rscadd: Ant HP reduced, many have some thing a little special to be a little more
+      dangerous
+  - rscadd: Fossil Tank now has lore, and guards a method to leap through space
+  - rscadd: Some more details for Tyr related things
+  - maptweak: Tyr caverns increased, Precursor base remapped, first boss can be fought
+      solo
