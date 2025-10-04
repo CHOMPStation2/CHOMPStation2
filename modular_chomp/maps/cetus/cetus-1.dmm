@@ -1825,9 +1825,9 @@
 /turf/simulated/floor/tiled/neutral,
 /area/maintenance/cetus/hallway)
 "aYk" = (
-/obj/random/mob/mouse,
-/turf/simulated/floor/tiled/neutral,
-/area/maintenance/cetus/construction)
+/obj/structure/closet/l3closet,
+/turf/simulated/floor/plating,
+/area/maintenance/cetus/aftmed)
 "aYn" = (
 /obj/machinery/appliance/cooker/grill,
 /turf/simulated/floor/tiled,
@@ -4447,7 +4447,6 @@
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/aftmed)
 "cte" = (
-/obj/random/mob/mouse,
 /obj/machinery/light/small/yellowed{
 	dir = 1
 	},
@@ -5158,10 +5157,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/cetus/meteor/atrium)
-"cPd" = (
-/obj/random/empty_or_lootable_crate,
-/turf/simulated/floor/plating,
-/area/maintenance/cetus/construction)
 "cPK" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -7239,7 +7234,6 @@
 /turf/simulated/floor/tiled/dark,
 /area/chapel/chapel_morgue/cetus/crypt)
 "ebM" = (
-/obj/machinery/disposal,
 /obj/machinery/firealarm{
 	dir = 1;
 	pixel_y = -26
@@ -9432,13 +9426,6 @@
 /obj/structure/closet/firecloset,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/meteor/foremed)
-"fmt" = (
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
-/obj/random/mob/mouse,
-/turf/simulated/floor/tiled/neutral,
-/area/maintenance/cetus/hallway)
 "fmy" = (
 /obj/machinery/atmospherics/pipe/cap/visible{
 	color = "#00ffff";
@@ -10819,10 +10806,6 @@
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /turf/simulated/floor/tiled/dark,
 /area/rnd/cetus/meteor/carbonresearch)
-"gcu" = (
-/obj/random/empty_or_lootable_crate,
-/turf/simulated/floor/plating,
-/area/maintenance/cetus/d1port)
 "gcG" = (
 /obj/effect/floor_decal/spline/plain{
 	dir = 1
@@ -11229,7 +11212,6 @@
 /obj/structure/cable{
 	icon_state = "1-10"
 	},
-/obj/random/mob/mouse,
 /turf/simulated/floor/outdoors/rocks/cetus,
 /area/maintenance/cetus/meteor/star)
 "gnS" = (
@@ -11717,7 +11699,6 @@
 /turf/simulated/floor/tiled/dark,
 /area/rnd/cetus/meteor/toxstorage)
 "gEn" = (
-/obj/random/mob/mouse,
 /obj/machinery/alarm{
 	pixel_y = 23
 	},
@@ -15691,7 +15672,6 @@
 /obj/structure/loot_pile/surface/medicine_cabinet/fresh{
 	pixel_y = 32
 	},
-/obj/structure/closet/emcloset,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/aftmed)
 "iBK" = (
@@ -19158,7 +19138,9 @@
 /obj/structure/cable/green{
 	icon_state = "2-9"
 	},
-/obj/random/empty_or_lootable_crate,
+/obj/machinery/floodlight{
+	dir = 8
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/meteor/central)
 "kml" = (
@@ -19699,14 +19681,6 @@
 /area/crew_quarters/cetus/meteor/hallway2)
 "kBq" = (
 /obj/structure/closet/secure_closet/freezer/meat,
-/obj/random/organ,
-/obj/random/organ,
-/obj/random/organ,
-/obj/random/organ,
-/obj/random/organ,
-/obj/random/mob/mouse,
-/obj/random/mob/mouse,
-/obj/random/mob/mouse,
 /turf/simulated/floor/tiled/freezer,
 /area/maintenance/ab_Kitchen)
 "kBV" = (
@@ -19805,6 +19779,7 @@
 /obj/structure/cable/green{
 	icon_state = "2-8"
 	},
+/obj/machinery/rnd/production/protolathe/department/security,
 /turf/simulated/floor/tiled/red,
 /area/security/cetus/meteor/hallway)
 "kEE" = (
@@ -20421,18 +20396,6 @@
 "kVz" = (
 /turf/simulated/wall,
 /area/crew_quarters/cetus/meteor/cafeteriaf1)
-"kVN" = (
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/structure/catwalk{
-	pixel_x = -1
-	},
-/obj/random/mob/mouse,
-/turf/simulated/floor/plating,
-/area/maintenance/cetus/meteor/star)
 "kVY" = (
 /obj/structure/sink/kitchen{
 	pixel_y = 17
@@ -23667,7 +23630,7 @@
 /turf/simulated/floor/tiled/kafel_full,
 /area/security/cetus/meteor/brig)
 "mKN" = (
-/obj/random/empty_or_lootable_crate,
+/obj/structure/closet/emcloset,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/aftmed)
 "mKQ" = (
@@ -31177,12 +31140,9 @@
 /turf/simulated/floor/plating,
 /area/engineering/cetus/starsubstation)
 "qDu" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/obj/random/mob/mouse,
+/obj/structure/closet/firecloset,
 /turf/simulated/floor/plating,
-/area/maintenance/cetus/d1port)
+/area/maintenance/cetus/aftmed)
 "qDB" = (
 /obj/structure/railing{
 	dir = 8
@@ -32454,10 +32414,6 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/cetus/meteor/toxins)
-"rmh" = (
-/obj/random/empty_or_lootable_crate,
-/turf/simulated/floor/plating,
-/area/maintenance/cetus/meteor/central)
 "rms" = (
 /obj/random/medical/pillbottle,
 /obj/random/medical/pillbottle,
@@ -34122,7 +34078,6 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
 	},
-/obj/random/mob/mouse,
 /turf/simulated/floor/tiled/old_tile/white,
 /area/maintenance/ab_Kitchen)
 "sih" = (
@@ -36776,7 +36731,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/random/trash,
-/obj/random/mob/mouse,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/meteor/central)
 "tAR" = (
@@ -37888,6 +37842,8 @@
 	pixel_y = -7
 	},
 /obj/item/radio_jammer,
+/obj/random/shibari,
+/obj/random/shibari,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/maintenance/cetus/tech)
 "uee" = (
@@ -40932,10 +40888,6 @@
 /obj/machinery/light/small/emergency,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/meteor/jraft)
-"vzZ" = (
-/obj/random/empty_or_lootable_crate,
-/turf/simulated/floor/outdoors/rocks/cetus,
-/area/maintenance/cetus/meteor/ragecage)
 "vAk" = (
 /obj/structure/closet{
 	name = "Evidence Closet"
@@ -42381,10 +42333,6 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/crew_quarters/cetus/meteor/vr)
-"wmQ" = (
-/obj/random/mob/mouse,
-/turf/simulated/floor/plating,
-/area/maintenance/cetus/construction)
 "wmU" = (
 /obj/machinery/atmospherics/tvalve/mirrored,
 /obj/effect/floor_decal/industrial/warning/full,
@@ -45679,10 +45627,6 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/cetus/meteor/carbonresearch)
-"xRd" = (
-/obj/random/mob/mouse,
-/turf/simulated/floor/plating,
-/area/maintenance/cetus/meteor/aftstar)
 "xRi" = (
 /obj/machinery/autolathe/armory,
 /obj/effect/floor_decal/spline/plain{
@@ -68302,9 +68246,9 @@ tXf
 sVh
 avt
 pnK
-cPd
 pnK
-aYk
+pnK
+avt
 lYK
 avt
 pnK
@@ -68556,7 +68500,7 @@ dBF
 iey
 quH
 tjM
-gcu
+tXf
 sVh
 cys
 oKc
@@ -68807,13 +68751,13 @@ mzI
 tXf
 hnf
 tXf
-dBF
+tXf
 cLp
 nDk
 cLp
 iey
 cLp
-qDu
+iwP
 htW
 sVh
 pnK
@@ -69059,7 +69003,7 @@ tXf
 tXf
 tXf
 pMs
-kJe
+tXf
 tXf
 hmX
 tXf
@@ -69597,7 +69541,7 @@ rPN
 qhR
 dyr
 pnK
-wmQ
+pnK
 avt
 hBG
 sVh
@@ -71132,7 +71076,7 @@ xaw
 jEy
 cUW
 rlJ
-fmt
+jxd
 egf
 niP
 uIX
@@ -74271,7 +74215,7 @@ qOt
 lHh
 fuS
 eEu
-mKN
+jgV
 mKN
 vYk
 qFw
@@ -74490,7 +74434,7 @@ wlk
 oSP
 wlk
 lxR
-vzZ
+dHN
 dHN
 dHN
 iTF
@@ -74530,7 +74474,7 @@ lHh
 ctd
 jgV
 jgV
-mKN
+aYk
 sUV
 qFw
 qFw
@@ -74788,7 +74732,7 @@ vYk
 vYk
 vYk
 jgV
-mKN
+qDu
 vYk
 qFw
 qFw
@@ -77570,7 +77514,7 @@ jrY
 tqS
 tqS
 cgs
-vcJ
+tqS
 knW
 gMI
 nLq
@@ -86892,7 +86836,7 @@ eOO
 vOz
 eOO
 vOz
-rmh
+eCn
 kmc
 crs
 lQw
@@ -92319,7 +92263,7 @@ slB
 slB
 slB
 idC
-xRd
+iGr
 idC
 slB
 uAV
@@ -93607,7 +93551,7 @@ ieM
 hyT
 iGr
 iGr
-xRd
+iGr
 iGr
 iGr
 iQm
@@ -104421,7 +104365,7 @@ bAC
 vlD
 euf
 uSY
-kVN
+qjq
 qjq
 jQs
 paX
