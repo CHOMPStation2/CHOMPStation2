@@ -1,55 +1,6 @@
-#define MAT_TYRWOOD			"petrified wood"
-#define MAT_WAGATE			"weathered agate"
 //Hello, welcome to the tyr outsider content.
 //We're going to have some oddities here.
-//Two-ish tiers. The first tier is made from natural stuff around the caverns.
-//Tier 2 armor is made from the hides and such from the dangerous wildlife.
-//Whilst weapons have parts from the wildlife, and the alien ruins.
-//tier 1
-//Agate and wood for weapons
-//cloth and something else is used for armor
-//tier 2
-//monster flesh for armor
-//agate, alien props, and monster bits for weapons.
-/datum/material/wood/tyr
-	name = MAT_TYRWOOD
-	stack_type = /obj/item/stack/material/wood/tyr
-	icon_colour = "#808080" // grey-ish
-	stack_origin_tech = list(TECH_MATERIAL = 8, TECH_BIO = 2)
-
-
-/obj/item/stack/material/wood/tyr
-	name = "petrified bark"
-	color = "#808080"
-	default_type = MAT_TYRWOOD
-
-
-/datum/material/weathered_agate
-	name = MAT_WAGATE
-	display_name = "weathered agate"
-	use_name = "weather agate"
-	icon_colour = "#FF3300"
-	stack_type = /obj/item/stack/material/weathered_agate
-	flags = MATERIAL_UNMELTABLE
-	cut_delay = 60
-	reflectivity = 0
-	conductivity = 1
-	shard_type = SHARD_SHARD
-	tableslam_noise = 'sound/effects/Glasshit.ogg'
-	stack_origin_tech = list(TECH_ARCANE = 1)
-	sheet_singular_name = "gem"
-	sheet_plural_name = "gems"
-	supply_conversion_value = 40	// These are hilariously rare.
-	icon_base = "stone"
-	table_icon_base = "stone"
-
-
-/obj/item/stack/material/weathered_agate
-	name = MAT_WAGATE
-	icon_state = "sheet-void_opal"
-	singular_name = "weathered agate"
-	default_type = MAT_WAGATE
-
+//Otherwise holds stuff meant for outsiders on tyr
 /obj/item/reagent_containers/food/snacks/weatherlily
 	name = "strange leaves"
 	desc = "A strange flower producing an odd substance."
@@ -95,7 +46,7 @@
 	name = "flora"
 	desc = "A strange plant."
 	icon_state = "stonetree"
-	harvest_loot = list(/obj/item/stack/material/wood/tyr = 1)
+	harvest_loot = list(/obj/item/stack/material/wood = 1)
 
 /obj/structure/flora/tyr/lilly
 	name = "flora"
