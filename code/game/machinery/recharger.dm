@@ -113,10 +113,8 @@
 		//CHOMPEdit Start - move checks into their own proc
 		if(!do_allowed_checks(G, user))
 			return
-<<<<<<< HEAD
 		//CHOMPEdit End
 
-=======
 		// Checks to make sure he's not in space doing it, and that the area got proper power.
 		if(!powered())
 			to_chat(user, span_warning("\The [src] blinks red as you try to insert [G]!"))
@@ -161,7 +159,6 @@
 			user.drop_item()
 			G.loc = get_turf(src)
 			return
->>>>>>> 7f4de78573 (Unlucky trait (#18463))
 		user.drop_item()
 		G.loc = src
 		charging = G
