@@ -347,3 +347,210 @@
 /area/crew_quarters/seconddeck/gameroom
 	name = "\improper Game Room"
 	icon_state = "gaming"
+
+/area/chapel/chapel_morgue/cetus/crypt
+	name = "\improper Chapel Crypt"
+	base_turf = /turf/simulated/floor/outdoors/rocks/cetus
+	ambience = AMBIENCE_GHOSTLY
+	lightswitch = FALSE
+	holomap_color = HOLOMAP_AREACOLOR_CIV
+
+/area/crew_quarters/cetus
+	flags = RAD_SHIELDED | AREA_FORBID_EVENTS | AREA_FORBID_SINGULO | AREA_ALLOW_CLOCKOUT
+
+/area/crew_quarters/cetus/theater
+	name = "\improper Theater"
+	icon_state = "Theatre"
+	lightswitch = FALSE
+	holomap_color = HOLOMAP_AREACOLOR_CIV
+
+/area/crew_quarters/cetus/dressing
+	name = "\improper Dressing Room"
+	icon_state = "Theatre"
+	lightswitch = FALSE
+	holomap_color = HOLOMAP_AREACOLOR_CIV
+
+/area/crew_quarters/cetus/clown
+	name = "\improper Clown Dressing Room"
+	icon_state = "Theatre"
+	lightswitch = FALSE
+	holomap_color = HOLOMAP_AREACOLOR_CIV
+
+/area/crew_quarters/cetus/mime
+	name = "\improper Mime Dressing Room"
+	icon_state = "Theatre"
+	lightswitch = FALSE
+	holomap_color = HOLOMAP_AREACOLOR_CIV
+
+/area/crew_quarters/cetus/lounge
+	name = "\improper Overlook Lounge"
+	icon_state = "lounge"
+	holomap_color = HOLOMAP_AREACOLOR_CIV
+
+/area/crew_quarters/cetus/jrlounge
+	name = "\improper Joint Research Lounge"
+	icon_state = "lounge"
+	holomap_color = HOLOMAP_AREACOLOR_CIV
+
+/area/crew_quarters/cetus/Libraryf1
+	name = "\improper Library Ground Floor"
+	icon_state = "library"
+	lightswitch = FALSE
+	holomap_color = HOLOMAP_AREACOLOR_CIV
+
+/area/crew_quarters/cetus/Libraryf2
+	name = "\improper Library Loft"
+	icon_state = "library"
+	lightswitch = FALSE
+	holomap_color = HOLOMAP_AREACOLOR_CIV
+
+/area/crew_quarters/cetus/Galleryf1
+	name = "\improper Art Gallery"
+	icon_state = "library"
+	holomap_color = HOLOMAP_AREACOLOR_CIV
+
+/area/crew_quarters/cetus/Galleryf2
+	name = "\improper Gallery Cafe"
+	icon_state = "coffee_shop"
+	holomap_color = HOLOMAP_AREACOLOR_CIV
+
+
+/area/crew_quarters/cetus/meteor
+	base_turf = /turf/simulated/floor/outdoors/rocks/cetus
+
+/area/crew_quarters/cetus/meteor/pool
+	name = "\improper Pool"
+	icon_state = "pool"
+	holomap_color = HOLOMAP_AREACOLOR_CIV
+
+/area/crew_quarters/cetus/meteor/showers
+	name = "\improper Pool Showers"
+	icon_state = "restrooms"
+	holomap_color = HOLOMAP_AREACOLOR_CIV
+
+/area/crew_quarters/cetus/meteor/restrooms
+	name = "\improper Dormitory Restrooms"
+	icon_state = "restrooms"
+	holomap_color = HOLOMAP_AREACOLOR_CIV
+
+/area/crew_quarters/cetus/meteor/barrestrooms
+	name = "\improper Bar Restrooms"
+	icon_state = "restrooms"
+	holomap_color = HOLOMAP_AREACOLOR_CIV
+
+/area/crew_quarters/cetus/meteor/laundry
+	name = "\improper Dorm Laundry Rooms"
+	icon_state = "laundry"
+	holomap_color = HOLOMAP_AREACOLOR_CIV
+
+/area/crew_quarters/cetus/meteor/vr
+	name = "\improper VR"
+	icon_state = "gaming"
+	holomap_color = HOLOMAP_AREACOLOR_CIV
+
+/area/crew_quarters/cetus/meteor/lounge
+	name = "\improper Cryo Lounge"
+	icon_state = "lounge"
+	holomap_color = HOLOMAP_AREACOLOR_CIV
+
+/area/crew_quarters/cetus/meteor/hallway1
+	name = "\improper Pool Hallway"
+	icon_state = "recreation_area_hallway"
+	holomap_color = HOLOMAP_AREACOLOR_HALLWAYS
+
+/area/crew_quarters/cetus/meteor/hallway2
+	name = "\improper Dormitories Hallway"
+	icon_state = "recreation_area_hallway"
+	holomap_color = HOLOMAP_AREACOLOR_HALLWAYS
+
+/area/crew_quarters/cetus/meteor/bar
+	name = "\improper Bar"
+	icon_state = "bar"
+	holomap_color = HOLOMAP_AREACOLOR_CIV
+
+/area/crew_quarters/cetus/meteor/cafeteriaf1
+	name = "\improper Cafeteria Ground Floor"
+	icon_state = "bar"
+	holomap_color = HOLOMAP_AREACOLOR_CIV
+
+/area/crew_quarters/cetus/cafeteriaf2
+	name = "\improper Cafeteria Deck Two"
+	icon_state = "bar"
+	holomap_color = HOLOMAP_AREACOLOR_CIV
+
+/area/crew_quarters/cetus/jrrestrooms
+	name = "\improper Joint Research Restrooms"
+	icon_state = "restrooms"
+	holomap_color = HOLOMAP_AREACOLOR_CIV
+
+/area/crew_quarters/cetus/dockrestrooms
+	name = "\improper Arrivals Restrooms"
+	icon_state = "restrooms"
+	holomap_color = HOLOMAP_AREACOLOR_CIV
+
+/area/crew_quarters/cetus/arcadestorage
+	name = "\improper Gaming Storage"
+	icon_state = "arcade"
+	holomap_color = HOLOMAP_AREACOLOR_CIV
+
+/area/crew_quarters/cetus/servicecloset
+	name = "\improper Service Closet"
+	icon_state = "storage"
+	lightswitch = FALSE
+	holomap_color = HOLOMAP_AREACOLOR_CIV
+
+/area/crew_quarters/cetus/docklock
+	name = "\improper Arrivals Locker Rooms"
+	icon_state = "crew_quarters"
+	holomap_color = HOLOMAP_AREACOLOR_CIV
+
+/area/crew_quarters/sleep/cetus
+	icon_state = "Sleep"
+
+/area/crew_quarters/sleep/cetus/jrdorm1
+	name = "\improper Joint Research Dormitory 01"
+
+/area/crew_quarters/sleep/cetus/jrdorm2
+	name = "\improper Joint Research Dormitory 02"
+
+/area/crew_quarters/sleep/cetus/jrdorm3
+	name = "\improper Joint Research Dormitory 03"
+
+/area/crew_quarters/sleep/cetus/jrdorm4
+	name = "\improper Joint Research Dormitory 04"
+
+/area/crew_quarters/sleep/cetus/quartermaster
+	name = "\improper Quartermaster Quarters"
+
+/area/crew_quarters/sleep/cetus/meteor
+	base_turf = /turf/simulated/floor/outdoors/rocks/cetus
+
+/area/crew_quarters/sleep/cetus/meteor/dorm1
+	name = "\improper Dormitory 01"
+
+/area/crew_quarters/sleep/cetus/meteor/dorm2
+	name = "\improper Dormitory 02"
+
+/area/crew_quarters/sleep/cetus/meteor/dorm3
+	name = "\improper Dormitory 03"
+
+/area/crew_quarters/sleep/cetus/meteor/dorm4
+	name = "\improper Dormitory 04"
+
+/area/crew_quarters/sleep/cetus/meteor/dorm5
+	name = "\improper Dormitory 05"
+
+/area/crew_quarters/sleep/cetus/meteor/dorm6
+	name = "\improper Dormitory 06"
+
+/area/crew_quarters/sleep/cetus/meteor/dorm7
+	name = "\improper Dormitory 07"
+
+/area/crew_quarters/sleep/cetus/meteor/dorm8
+	name = "\improper Dormitory 08"
+
+/area/crew_quarters/sleep/cetus/meteor/dorm9
+	name = "\improper Dormitory 09"
+
+/area/crew_quarters/sleep/cetus/meteor/dorm10
+	name = "\improper Dormitory 10"
