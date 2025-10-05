@@ -1286,6 +1286,14 @@
 	},
 /turf/simulated/floor/plating,
 /area/rnd/cetus/meteor/carbonresearch)
+"aKH" = (
+/obj/effect/floor_decal/industrial/warning{
+	layer = 3;
+	dir = 1
+	},
+/obj/effect/floor_decal/industrial/warning,
+/turf/simulated/floor/plating/turfpack/airless,
+/area/space)
 "aKK" = (
 /obj/random/obstruction,
 /obj/effect/floor_decal/spline/plain{
@@ -1549,6 +1557,18 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/cetus/engine)
+"aRF" = (
+/obj/effect/floor_decal/industrial/warning,
+/obj/effect/floor_decal/industrial/warning{
+	layer = 3;
+	dir = 1
+	},
+/obj/effect/floor_decal/industrial/warning/color/red,
+/obj/effect/floor_decal/industrial/warning/color/red{
+	dir = 1
+	},
+/turf/simulated/floor/plating/turfpack/airless,
+/area/space)
 "aRH" = (
 /obj/item/inflatable/door/torn,
 /obj/item/material/shard,
@@ -1825,23 +1845,11 @@
 /turf/simulated/floor/tiled/neutral,
 /area/maintenance/cetus/hallway)
 "aYk" = (
-/obj/structure/reflector/single{
-	dir = 5
+/obj/machinery/atmospherics/pipe/simple/visible/red{
+	dir = 9
 	},
-/obj/effect/floor_decal/industrial/warning{
-	dir = 10
-	},
-/obj/effect/floor_decal/industrial/warning/corner{
-	dir = 4
-	},
-/obj/effect/floor_decal/industrial/warning/color/corner/red{
-	dir = 4
-	},
-/obj/effect/floor_decal/industrial/warning/color/red{
-	dir = 10
-	},
-/turf/simulated/floor/plating/turfpack/airless,
-/area/space)
+/turf/simulated/floor/outdoors/rocks/cetus/edge,
+/area/asteroid/cetus/d1)
 "aYn" = (
 /obj/machinery/appliance/cooker/grill,
 /turf/simulated/floor/tiled,
@@ -2922,16 +2930,6 @@
 /obj/effect/floor_decal/industrial/warning/cee,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/security/cetus/meteor/brig)
-"bFU" = (
-/obj/machinery/field_generator,
-/obj/effect/floor_decal/industrial/warning{
-	dir = 6
-	},
-/obj/effect/floor_decal/industrial/warning/corner{
-	dir = 1
-	},
-/turf/simulated/floor/plating/turfpack/airless,
-/area/space)
 "bFX" = (
 /obj/machinery/computer/security/telescreen/entertainment{
 	pixel_x = -32
@@ -5182,13 +5180,15 @@
 /turf/simulated/floor/tiled,
 /area/crew_quarters/cetus/meteor/atrium)
 "cPd" = (
-/obj/effect/wingrille_spawn/reinforced,
-/obj/machinery/door/firedoor/glass,
-/obj/structure/cable/cyan{
-	icon_state = "9-10"
+/obj/machinery/field_generator,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 6
 	},
-/turf/simulated/floor/plating,
-/area/maintenance/cetus/engine)
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 1
+	},
+/turf/simulated/floor/plating/turfpack/airless,
+/area/space)
 "cPK" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -8888,6 +8888,24 @@
 	},
 /turf/simulated/floor/tiled/milspec/raised,
 /area/crew_quarters/cetus/meteor/hallway1)
+"eUj" = (
+/obj/structure/cable/yellow{
+	icon_state = "1-8"
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
+	},
+/obj/effect/floor_decal/industrial/warning/color/red{
+	dir = 8
+	},
+/obj/effect/floor_decal/industrial/warning/color/red{
+	dir = 4
+	},
+/turf/simulated/floor/plating/turfpack/airless,
+/area/space)
 "eUv" = (
 /obj/structure/table/reinforced,
 /obj/item/clipboard,
@@ -9458,10 +9476,12 @@
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/meteor/foremed)
 "fmt" = (
-/obj/effect/floor_decal/industrial/warning,
+/obj/machinery/field_generator,
 /obj/effect/floor_decal/industrial/warning{
-	layer = 3;
-	dir = 1
+	dir = 5
+	},
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 8
 	},
 /turf/simulated/floor/plating/turfpack/airless,
 /area/space)
@@ -9812,6 +9832,24 @@
 	},
 /turf/simulated/floor/outdoors/rocks/cetus/edge,
 /area/asteroid/cetus/d1)
+"fvQ" = (
+/obj/structure/cable/yellow{
+	icon_state = "1-2"
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4
+	},
+/obj/effect/floor_decal/industrial/warning/color/red{
+	dir = 8
+	},
+/obj/effect/floor_decal/industrial/warning/color/red{
+	dir = 4
+	},
+/turf/simulated/floor/plating/turfpack/airless,
+/area/space)
 "fwd" = (
 /obj/structure/disposalpipe/segment{
 	dir = 8;
@@ -9878,18 +9916,6 @@
 /obj/machinery/door/firedoor/multi_tile/glass,
 /turf/simulated/floor/tiled/techmaint,
 /area/engineering/cetus/meteor/atriumdeck1)
-"fyQ" = (
-/obj/effect/floor_decal/industrial/warning,
-/obj/effect/floor_decal/industrial/warning{
-	layer = 3;
-	dir = 1
-	},
-/obj/effect/floor_decal/industrial/warning/color/red,
-/obj/effect/floor_decal/industrial/warning/color/red{
-	dir = 1
-	},
-/turf/simulated/floor/plating/turfpack/airless,
-/area/space)
 "fzy" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -9903,24 +9929,6 @@
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/sleep/cetus/meteor/dorm7)
-"fzJ" = (
-/obj/structure/reflector/single{
-	dir = 9
-	},
-/obj/effect/floor_decal/industrial/warning{
-	dir = 6
-	},
-/obj/effect/floor_decal/industrial/warning/corner{
-	dir = 1
-	},
-/obj/effect/floor_decal/industrial/warning/color/corner/red{
-	dir = 1
-	},
-/obj/effect/floor_decal/industrial/warning/color/red{
-	dir = 6
-	},
-/turf/simulated/floor/plating/turfpack/airless,
-/area/space)
 "fzO" = (
 /obj/effect/floor_decal/borderfloor/corner,
 /obj/effect/floor_decal/corner/green/bordercorner,
@@ -10149,11 +10157,12 @@
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
-/obj/structure/disposalpipe/junction{
-	dir = 8
-	},
 /obj/structure/cable/green{
 	icon_state = "1-4"
+	},
+/obj/structure/disposalpipe/junction{
+	dir = 4;
+	icon_state = "pipe-j2"
 	},
 /turf/simulated/floor/tiled,
 /area/hangar/cetus/explolocker)
@@ -10866,13 +10875,14 @@
 /turf/simulated/floor/tiled/dark,
 /area/rnd/cetus/meteor/carbonresearch)
 "gcu" = (
-/obj/effect/wingrille_spawn/reinforced,
-/obj/machinery/door/firedoor/glass,
-/obj/structure/cable/cyan{
-	icon_state = "1-2"
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
 	},
 /turf/simulated/floor/plating/turfpack/airless,
-/area/maintenance/cetus/engine)
+/area/space)
 "gcG" = (
 /obj/effect/floor_decal/spline/plain{
 	dir = 1
@@ -11710,6 +11720,11 @@
 	},
 /turf/space,
 /area/space)
+"gAr" = (
+/obj/effect/floor_decal/industrial/warning/tile,
+/obj/effect/floor_decal/industrial/warning/color/tile/red,
+/turf/simulated/floor/plating/turfpack/airless,
+/area/space)
 "gAs" = (
 /obj/effect/floor_decal/steeldecal/steel_decals5{
 	dir = 4
@@ -12333,6 +12348,13 @@
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/cetus/meteor/atriumdeck1)
+"gXo" = (
+/obj/structure/cable/yellow{
+	icon_state = "0-8"
+	},
+/obj/machinery/power/tesla_coil/pre_mapped,
+/turf/simulated/floor/plating/turfpack/airless,
+/area/space)
 "gXD" = (
 /obj/effect/floor_decal/industrial/warning{
 	layer = 3;
@@ -13185,6 +13207,14 @@
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/sleep/cetus/meteor/dorm9)
+"hqS" = (
+/obj/effect/wingrille_spawn/reinforced,
+/obj/machinery/door/firedoor/glass,
+/obj/structure/cable/cyan{
+	icon_state = "1-6"
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/cetus/engine)
 "hra" = (
 /obj/structure/table/standard,
 /obj/machinery/light/small{
@@ -15076,6 +15106,18 @@
 /obj/item/destTagger,
 /turf/simulated/floor/tiled/neutral,
 /area/maintenance/cetus/construction)
+"ijG" = (
+/obj/effect/floor_decal/industrial/warning{
+	layer = 3;
+	dir = 1
+	},
+/obj/effect/floor_decal/industrial/warning,
+/obj/effect/floor_decal/industrial/warning/color/red,
+/obj/effect/floor_decal/industrial/warning/color/red{
+	dir = 1
+	},
+/turf/simulated/floor/plating/turfpack/airless,
+/area/space)
 "ijJ" = (
 /obj/structure/grille,
 /turf/simulated/floor/plating/turfpack/airless,
@@ -16715,26 +16757,9 @@
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/cetus/meteor/pool)
 "jfv" = (
-/obj/structure/cable/yellow{
-	icon_state = "1-2"
-	},
-/obj/structure/cable/yellow{
-	icon_state = "1-4"
-	},
-/obj/effect/floor_decal/industrial/warning{
-	dir = 8
-	},
-/obj/effect/floor_decal/industrial/warning{
-	dir = 4
-	},
-/obj/effect/floor_decal/industrial/warning/color/red{
-	dir = 8
-	},
-/obj/effect/floor_decal/industrial/warning/color/red{
-	dir = 4
-	},
-/turf/simulated/floor/plating/turfpack/airless,
-/area/space)
+/obj/machinery/floodlight,
+/turf/simulated/floor/tiled/techfloor,
+/area/maintenance/cetus/engine)
 "jfW" = (
 /obj/structure/cable/green{
 	icon_state = "1-4"
@@ -17857,6 +17882,18 @@
 /obj/structure/reagent_dispensers/fueltank,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/aftmed)
+"jGs" = (
+/obj/effect/floor_decal/spline/plain{
+	dir = 1
+	},
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/obj/structure/cable/yellow{
+	icon_state = "2-8"
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/cetus/engine)
 "jGA" = (
 /obj/structure/bed/double/padded,
 /obj/item/bedsheet/rddouble,
@@ -19253,12 +19290,6 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/crew_quarters/sleep/cetus/meteor/dorm9)
-"kmF" = (
-/obj/machinery/atmospherics/pipe/simple/visible/red{
-	dir = 6
-	},
-/turf/simulated/floor/outdoors/rocks/cetus/edge,
-/area/asteroid/cetus/d1)
 "knl" = (
 /obj/machinery/door/firedoor/glass,
 /obj/effect/wingrille_spawn/reinforced,
@@ -20488,9 +20519,7 @@
 /turf/simulated/wall,
 /area/crew_quarters/cetus/meteor/cafeteriaf1)
 "kVN" = (
-/obj/effect/floor_decal/industrial/warning/tile,
-/obj/effect/floor_decal/industrial/warning/color/tile/red,
-/turf/simulated/floor/plating/turfpack/airless,
+/turf/simulated/floor/reinforced/airless,
 /area/space)
 "kVY" = (
 /obj/structure/sink/kitchen{
@@ -20687,6 +20716,23 @@
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/crew_quarters/cetus/meteor/hallway2)
+"lcF" = (
+/obj/machinery/atmospherics/unary/outlet_injector{
+	frequency = 1445;
+	id = "engine_exhaust_output";
+	name = "Engine Exhaust";
+	power_rating = 30000;
+	use_power = 1;
+	volume_rate = 700;
+	dir = 8
+	},
+/obj/machinery/air_sensor{
+	frequency = 1445;
+	id_tag = "engine_exhaust_sensor"
+	},
+/obj/structure/lattice,
+/turf/space,
+/area/engineering/cetus/meteor/enginewaste)
 "lcT" = (
 /obj/effect/floor_decal/industrial/warning{
 	layer = 3;
@@ -22018,26 +22064,13 @@
 /turf/simulated/floor/water/indoors,
 /area/maintenance/cetus/meteor/central)
 "lLN" = (
-/obj/structure/cable/yellow{
+/obj/effect/wingrille_spawn/reinforced,
+/obj/machinery/door/firedoor/glass,
+/obj/structure/cable/cyan{
 	icon_state = "1-2"
 	},
-/obj/structure/cable/yellow{
-	icon_state = "1-8"
-	},
-/obj/effect/floor_decal/industrial/warning{
-	dir = 4
-	},
-/obj/effect/floor_decal/industrial/warning{
-	dir = 8
-	},
-/obj/effect/floor_decal/industrial/warning/color/red{
-	dir = 8
-	},
-/obj/effect/floor_decal/industrial/warning/color/red{
-	dir = 4
-	},
 /turf/simulated/floor/plating/turfpack/airless,
-/area/space)
+/area/maintenance/cetus/engine)
 "lMg" = (
 /turf/simulated/wall,
 /area/maintenance/cetus/engine)
@@ -22491,6 +22524,14 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/rnd/cetus/meteor/toxins)
+"mbA" = (
+/obj/machinery/door/firedoor/glass,
+/obj/effect/wingrille_spawn/reinforced,
+/obj/structure/cable/cyan{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/plating/turfpack/airless,
+/area/maintenance/cetus/engine)
 "mbD" = (
 /obj/effect/floor_decal/rust,
 /obj/machinery/portable_atmospherics/hydroponics,
@@ -22764,13 +22805,13 @@
 	icon_state = "1-2"
 	},
 /obj/structure/cable/cyan{
-	icon_state = "0-5"
-	},
-/obj/effect/floor_decal/industrial/warning{
-	dir = 4
+	icon_state = "0-9"
 	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4
 	},
 /obj/effect/floor_decal/industrial/warning/color/red{
 	dir = 8
@@ -22852,15 +22893,6 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/maintenance/ab_StripBar)
-"mlO" = (
-/obj/effect/floor_decal/industrial/warning{
-	dir = 8
-	},
-/obj/effect/floor_decal/industrial/warning{
-	dir = 4
-	},
-/turf/simulated/floor/plating/turfpack/airless,
-/area/space)
 "mml" = (
 /obj/machinery/atmospherics/binary/pump/on{
 	target_pressure = 200
@@ -23278,6 +23310,14 @@
 	},
 /turf/simulated/floor/carpet/green,
 /area/crew_quarters/cetus/meteor/stairwellf1)
+"mwn" = (
+/obj/effect/wingrille_spawn/reinforced,
+/obj/machinery/door/firedoor/glass,
+/obj/structure/cable/cyan{
+	icon_state = "9-10"
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/cetus/engine)
 "mwo" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -23766,7 +23806,7 @@
 /turf/simulated/floor/tiled/kafel_full,
 /area/security/cetus/meteor/brig)
 "mKN" = (
-/obj/structure/closet/emcloset,
+/obj/structure/closet/l3closet,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/aftmed)
 "mKQ" = (
@@ -24307,14 +24347,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/cetus/atriumd1)
-"ncZ" = (
-/obj/effect/wingrille_spawn/reinforced,
-/obj/machinery/door/firedoor/glass,
-/obj/structure/cable/cyan{
-	icon_state = "1-6"
-	},
-/turf/simulated/floor/plating,
-/area/maintenance/cetus/engine)
 "neb" = (
 /obj/machinery/door/firedoor/multi_tile/glass{
 	dir = 1
@@ -27746,10 +27778,6 @@
 "oOC" = (
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/cetus/meteor/engineroom)
-"oOG" = (
-/obj/structure/closet/l3closet,
-/turf/simulated/floor/plating,
-/area/maintenance/cetus/aftmed)
 "oOO" = (
 /obj/machinery/recharge_station,
 /turf/simulated/floor/tiled,
@@ -28454,6 +28482,27 @@
 /obj/random/maintenance/clean,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/meteor/jrfore)
+"pjY" = (
+/obj/structure/cable/yellow{
+	icon_state = "1-2"
+	},
+/obj/structure/cable/yellow{
+	icon_state = "1-4"
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4
+	},
+/obj/effect/floor_decal/industrial/warning/color/red{
+	dir = 8
+	},
+/obj/effect/floor_decal/industrial/warning/color/red{
+	dir = 4
+	},
+/turf/simulated/floor/plating/turfpack/airless,
+/area/space)
 "pke" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -29216,6 +29265,10 @@
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/sleep/cetus/meteor/dorm4)
+"pKo" = (
+/obj/structure/closet/firecloset,
+/turf/simulated/floor/plating,
+/area/maintenance/cetus/aftmed)
 "pKI" = (
 /turf/simulated/floor/tiled/white,
 /area/maintenance/cetus/ripperdock)
@@ -29914,9 +29967,23 @@
 /turf/space,
 /area/space)
 "pYK" = (
-/obj/machinery/floodlight,
-/turf/simulated/floor/tiled/techfloor,
-/area/maintenance/cetus/engine)
+/obj/structure/cable/yellow{
+	icon_state = "1-4"
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4
+	},
+/obj/effect/floor_decal/industrial/warning/color/red{
+	dir = 8
+	},
+/obj/effect/floor_decal/industrial/warning/color/red{
+	dir = 4
+	},
+/turf/simulated/floor/plating/turfpack/airless,
+/area/space)
 "pYS" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
@@ -31299,12 +31366,11 @@
 /turf/simulated/floor/plating,
 /area/engineering/cetus/starsubstation)
 "qDu" = (
-/obj/effect/floor_decal/industrial/warning{
-	layer = 3;
-	dir = 1
+/obj/structure/lattice,
+/obj/machinery/atmospherics/pipe/simple/visible/red{
+	dir = 4
 	},
-/obj/effect/floor_decal/industrial/warning,
-/turf/simulated/floor/plating/turfpack/airless,
+/turf/space,
 /area/space)
 "qDB" = (
 /obj/structure/railing{
@@ -32502,12 +32568,11 @@
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/meteor/jraft)
 "rkR" = (
+/obj/machinery/field_generator,
 /obj/effect/floor_decal/industrial/warning{
-	dir = 4
+	dir = 9
 	},
-/obj/effect/floor_decal/industrial/warning{
-	dir = 8
-	},
+/obj/effect/floor_decal/industrial/warning/corner,
 /turf/simulated/floor/plating/turfpack/airless,
 /area/space)
 "rla" = (
@@ -32580,23 +32645,11 @@
 /turf/simulated/floor/tiled/dark,
 /area/rnd/cetus/meteor/toxins)
 "rmh" = (
-/obj/structure/cable/yellow{
-	icon_state = "1-8"
+/obj/machinery/atmospherics/pipe/simple/visible/red{
+	dir = 6
 	},
-/obj/effect/floor_decal/industrial/warning{
-	dir = 4
-	},
-/obj/effect/floor_decal/industrial/warning{
-	dir = 8
-	},
-/obj/effect/floor_decal/industrial/warning/color/red{
-	dir = 8
-	},
-/obj/effect/floor_decal/industrial/warning/color/red{
-	dir = 4
-	},
-/turf/simulated/floor/plating/turfpack/airless,
-/area/space)
+/turf/simulated/floor/outdoors/rocks/cetus/edge,
+/area/asteroid/cetus/d1)
 "rms" = (
 /obj/random/medical/pillbottle,
 /obj/random/medical/pillbottle,
@@ -33852,11 +33905,24 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/security/cetus/meteor/hallway)
 "rVl" = (
-/obj/machinery/field_generator,
-/obj/effect/floor_decal/industrial/warning{
-	dir = 9
+/obj/structure/cable/yellow{
+	icon_state = "1-2"
 	},
-/obj/effect/floor_decal/industrial/warning/corner,
+/obj/structure/cable/cyan{
+	icon_state = "0-5"
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
+	},
+/obj/effect/floor_decal/industrial/warning/color/red{
+	dir = 8
+	},
+/obj/effect/floor_decal/industrial/warning/color/red{
+	dir = 4
+	},
 /turf/simulated/floor/plating/turfpack/airless,
 /area/space)
 "rVm" = (
@@ -33997,22 +34063,13 @@
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/meteor/portsec)
 "saw" = (
-/obj/machinery/atmospherics/unary/outlet_injector{
-	frequency = 1445;
-	id = "engine_exhaust_output";
-	name = "Engine Exhaust";
-	power_rating = 30000;
-	use_power = 1;
-	volume_rate = 700;
-	dir = 8
+/obj/effect/floor_decal/industrial/warning,
+/obj/effect/floor_decal/industrial/warning{
+	layer = 3;
+	dir = 1
 	},
-/obj/machinery/air_sensor{
-	frequency = 1445;
-	id_tag = "engine_exhaust_sensor"
-	},
-/obj/structure/lattice,
-/turf/space,
-/area/engineering/cetus/meteor/enginewaste)
+/turf/simulated/floor/plating/turfpack/airless,
+/area/space)
 "saF" = (
 /obj/structure/cable/cyan{
 	icon_state = "9-10"
@@ -34482,24 +34539,6 @@
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/cetus/meteor/barrestrooms)
-"snu" = (
-/obj/structure/cable/yellow{
-	icon_state = "1-4"
-	},
-/obj/effect/floor_decal/industrial/warning{
-	dir = 8
-	},
-/obj/effect/floor_decal/industrial/warning{
-	dir = 4
-	},
-/obj/effect/floor_decal/industrial/warning/color/red{
-	dir = 8
-	},
-/obj/effect/floor_decal/industrial/warning/color/red{
-	dir = 4
-	},
-/turf/simulated/floor/plating/turfpack/airless,
-/area/space)
 "snO" = (
 /obj/random/pottedplant,
 /obj/structure/disposalpipe/segment{
@@ -38698,6 +38737,16 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/cetus/atriumd1)
+"utA" = (
+/obj/machinery/field_generator,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 10
+	},
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 4
+	},
+/turf/simulated/floor/plating/turfpack/airless,
+/area/space)
 "utB" = (
 /obj/structure/extinguisher_cabinet{
 	pixel_y = 30
@@ -39301,13 +39350,6 @@
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /turf/simulated/floor/wood,
 /area/crew_quarters/sleep/cetus/meteor/dorm5)
-"uIr" = (
-/obj/structure/cable/yellow{
-	icon_state = "0-8"
-	},
-/obj/machinery/power/tesla_coil/pre_mapped,
-/turf/simulated/floor/plating/turfpack/airless,
-/area/space)
 "uIy" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -40456,11 +40498,6 @@
 	},
 /turf/simulated/floor/carpet/turcarpet,
 /area/crew_quarters/sleep/cetus/meteor/dorm3)
-"vkw" = (
-/obj/machinery/shield_diffuser,
-/obj/machinery/power/tesla_coil/pre_mapped,
-/turf/simulated/floor/plating/turfpack/airless,
-/area/space)
 "vkz" = (
 /obj/machinery/door/firedoor/glass,
 /obj/structure/disposalpipe/tagger{
@@ -40742,13 +40779,14 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/cetus/atriumd1)
 "vpb" = (
-/obj/machinery/door/firedoor/glass,
-/obj/effect/wingrille_spawn/reinforced,
-/obj/structure/cable/cyan{
-	icon_state = "1-2"
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4
 	},
 /turf/simulated/floor/plating/turfpack/airless,
-/area/maintenance/cetus/engine)
+/area/space)
 "vpe" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/cable/green{
@@ -41124,17 +41162,26 @@
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/meteor/jraft)
 "vzZ" = (
-/obj/effect/floor_decal/spline/plain{
-	dir = 1
+/obj/structure/cable/yellow{
+	icon_state = "1-2"
 	},
 /obj/structure/cable/yellow{
-	icon_state = "4-8"
+	icon_state = "1-8"
 	},
-/obj/structure/cable/yellow{
-	icon_state = "2-8"
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4
 	},
-/turf/simulated/floor/plating,
-/area/maintenance/cetus/engine)
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
+	},
+/obj/effect/floor_decal/industrial/warning/color/red{
+	dir = 8
+	},
+/obj/effect/floor_decal/industrial/warning/color/red{
+	dir = 4
+	},
+/turf/simulated/floor/plating/turfpack/airless,
+/area/space)
 "vAk" = (
 /obj/structure/closet{
 	name = "Evidence Closet"
@@ -41491,15 +41538,9 @@
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/meteor/foremed)
 "vHL" = (
-/obj/machinery/field_generator,
-/obj/effect/floor_decal/industrial/warning{
-	dir = 10
-	},
-/obj/effect/floor_decal/industrial/warning/corner{
-	dir = 4
-	},
-/turf/simulated/floor/plating/turfpack/airless,
-/area/space)
+/obj/structure/closet/emcloset,
+/turf/simulated/floor/plating,
+/area/maintenance/cetus/aftmed)
 "vHR" = (
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 4
@@ -41819,7 +41860,20 @@
 /turf/simulated/floor/plating,
 /area/engineering/cetus/meteor/engineroom)
 "vTr" = (
-/turf/simulated/floor/reinforced/airless,
+/obj/structure/cable/cyan,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4
+	},
+/obj/effect/floor_decal/industrial/warning/color/red{
+	dir = 8
+	},
+/obj/effect/floor_decal/industrial/warning/color/red{
+	dir = 4
+	},
+/turf/simulated/floor/plating/turfpack/airless,
 /area/space)
 "vTt" = (
 /obj/structure/railing/overhang/grey{
@@ -42577,23 +42631,20 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/crew_quarters/cetus/meteor/vr)
 "wmQ" = (
-/obj/structure/cable/yellow{
-	icon_state = "1-2"
-	},
-/obj/structure/cable/cyan{
-	icon_state = "0-9"
+/obj/structure/reflector/single{
+	dir = 9
 	},
 /obj/effect/floor_decal/industrial/warning{
-	dir = 8
+	dir = 6
 	},
-/obj/effect/floor_decal/industrial/warning{
-	dir = 4
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 1
+	},
+/obj/effect/floor_decal/industrial/warning/color/corner/red{
+	dir = 1
 	},
 /obj/effect/floor_decal/industrial/warning/color/red{
-	dir = 8
-	},
-/obj/effect/floor_decal/industrial/warning/color/red{
-	dir = 4
+	dir = 6
 	},
 /turf/simulated/floor/plating/turfpack/airless,
 /area/space)
@@ -42876,10 +42927,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay_primary_storage)
-"wvv" = (
-/obj/structure/closet/firecloset,
-/turf/simulated/floor/plating,
-/area/maintenance/cetus/aftmed)
 "wvC" = (
 /obj/structure/flora/ausbushes/fullgrass,
 /obj/structure/flora/ausbushes/leafybush,
@@ -43894,12 +43941,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/rnd/cetus/meteor/toxtest)
-"wRJ" = (
-/obj/machinery/atmospherics/pipe/simple/visible/red{
-	dir = 9
-	},
-/turf/simulated/floor/outdoors/rocks/cetus/edge,
-/area/asteroid/cetus/d1)
 "wRN" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 10
@@ -43913,13 +43954,6 @@
 /obj/machinery/atmospherics/pipe/simple/visible/cyan,
 /turf/simulated/floor/plating,
 /area/engineering/cetus/meteor/engineroom)
-"wSp" = (
-/obj/structure/lattice,
-/obj/machinery/atmospherics/pipe/simple/visible/red{
-	dir = 4
-	},
-/turf/space,
-/area/space)
 "wSz" = (
 /obj/structure/table/steel,
 /obj/item/sleevemate,
@@ -44581,18 +44615,6 @@
 /obj/effect/floor_decal/corner/yellow/bordercorner,
 /turf/simulated/floor/tiled,
 /area/engineering/cetus/meteor/atriumdeck1)
-"xjA" = (
-/obj/effect/floor_decal/industrial/warning{
-	layer = 3;
-	dir = 1
-	},
-/obj/effect/floor_decal/industrial/warning,
-/obj/effect/floor_decal/industrial/warning/color/red,
-/obj/effect/floor_decal/industrial/warning/color/red{
-	dir = 1
-	},
-/turf/simulated/floor/plating/turfpack/airless,
-/area/space)
 "xjI" = (
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/unary/vent_pump/on{
@@ -45933,19 +45955,8 @@
 /turf/simulated/floor/tiled/dark,
 /area/rnd/cetus/meteor/carbonresearch)
 "xRd" = (
-/obj/structure/cable/cyan,
-/obj/effect/floor_decal/industrial/warning{
-	dir = 8
-	},
-/obj/effect/floor_decal/industrial/warning{
-	dir = 4
-	},
-/obj/effect/floor_decal/industrial/warning/color/red{
-	dir = 8
-	},
-/obj/effect/floor_decal/industrial/warning/color/red{
-	dir = 4
-	},
+/obj/machinery/shield_diffuser,
+/obj/machinery/power/tesla_coil/pre_mapped,
 /turf/simulated/floor/plating/turfpack/airless,
 /area/space)
 "xRi" = (
@@ -46322,24 +46333,6 @@
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/sleep/cetus/meteor/dorm6)
-"ybM" = (
-/obj/structure/cable/yellow{
-	icon_state = "1-2"
-	},
-/obj/effect/floor_decal/industrial/warning{
-	dir = 8
-	},
-/obj/effect/floor_decal/industrial/warning{
-	dir = 4
-	},
-/obj/effect/floor_decal/industrial/warning/color/red{
-	dir = 8
-	},
-/obj/effect/floor_decal/industrial/warning/color/red{
-	dir = 4
-	},
-/turf/simulated/floor/plating/turfpack/airless,
-/area/space)
 "ybO" = (
 /obj/machinery/light/small/fluorescent{
 	dir = 4
@@ -46750,12 +46743,20 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/cetus/meteor/gravsubstation)
 "yli" = (
-/obj/machinery/field_generator,
-/obj/effect/floor_decal/industrial/warning{
+/obj/structure/reflector/single{
 	dir = 5
 	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 10
+	},
 /obj/effect/floor_decal/industrial/warning/corner{
-	dir = 8
+	dir = 4
+	},
+/obj/effect/floor_decal/industrial/warning/color/corner/red{
+	dir = 4
+	},
+/obj/effect/floor_decal/industrial/warning/color/red{
+	dir = 10
 	},
 /turf/simulated/floor/plating/turfpack/airless,
 /area/space)
@@ -74558,7 +74559,7 @@ lHh
 fuS
 eEu
 jgV
-mKN
+vHL
 vYk
 qFw
 qFw
@@ -74816,7 +74817,7 @@ lHh
 ctd
 jgV
 jgV
-oOG
+mKN
 sUV
 qFw
 qFw
@@ -75074,7 +75075,7 @@ vYk
 vYk
 vYk
 jgV
-wvv
+pKo
 vYk
 qFw
 qFw
@@ -91034,16 +91035,16 @@ slB
 slB
 slB
 slB
-slB
-slB
-slB
-slB
-slB
-slB
-slB
-slB
-slB
-slB
+eOO
+eOO
+eOO
+eOO
+eOO
+eOO
+eOO
+eOO
+eOO
+eOO
 slB
 slB
 slB
@@ -99568,7 +99569,7 @@ uwt
 mhA
 jhA
 pho
-ncZ
+hqS
 uXG
 aiQ
 aiQ
@@ -99824,15 +99825,15 @@ xYL
 saF
 lMg
 oOf
-vzZ
+jGs
 mCw
 hOF
-wmQ
-ybM
-jfv
-jfv
-snu
-aYk
+mji
+fvQ
+pjY
+pjY
+pYK
+yli
 wDM
 lDB
 lDB
@@ -100088,9 +100089,9 @@ skU
 vMF
 aiQ
 pXl
-uIr
+gXo
 pXl
-fyQ
+aRF
 hwg
 lDB
 lDB
@@ -100342,13 +100343,13 @@ crb
 cBX
 jqv
 tsm
+mbA
+vTr
+rkR
 vpb
-xRd
-rVl
-mlO
-mlO
-mlO
-vHL
+vpb
+vpb
+utA
 wDM
 lDB
 lDB
@@ -100601,12 +100602,12 @@ fQL
 tci
 xdp
 eYG
+gAr
+aKH
 kVN
-qDu
-vTr
-vTr
-vTr
-fmt
+kVN
+kVN
+saw
 wDM
 lDB
 lDB
@@ -100859,12 +100860,12 @@ muQ
 pbU
 xdp
 eYG
+gAr
+aKH
 kVN
-qDu
-vTr
-vTr
-vTr
-fmt
+kVN
+kVN
+saw
 wDM
 lDB
 lDB
@@ -101117,12 +101118,12 @@ eXk
 tci
 xdp
 eYG
+gAr
+aKH
 kVN
-qDu
-vTr
-vTr
-vTr
-fmt
+kVN
+kVN
+saw
 wDM
 lDB
 lDB
@@ -101374,14 +101375,14 @@ qQE
 sCN
 gnf
 pef
+lLN
+vTr
+fmt
 gcu
+gcu
+gcu
+cPd
 xRd
-yli
-rkR
-rkR
-rkR
-bFU
-vkw
 lDB
 lDB
 qFw
@@ -101638,7 +101639,7 @@ aiQ
 kLN
 kLN
 kLN
-xjA
+ijG
 wDM
 lDB
 lDB
@@ -101886,17 +101887,17 @@ iQm
 skU
 jqw
 haQ
-pYK
+jfv
 qQE
 uYz
 spF
 hOF
-mji
+rVl
 xNg
-lLN
-lLN
-rmh
-fzJ
+vzZ
+vzZ
+eUj
+wmQ
 wDM
 lDB
 lDB
@@ -102148,7 +102149,7 @@ qQE
 qQE
 pFO
 bzO
-cPd
+mwn
 mCD
 aiQ
 aiQ
@@ -106488,8 +106489,8 @@ qFw
 suH
 uAV
 uAV
-kmF
-wRJ
+rmh
+aYk
 jNq
 jhE
 vWK
@@ -107004,7 +107005,7 @@ lyH
 suH
 qFw
 qFw
-wSp
+qDu
 uAV
 uAV
 jhE
@@ -107262,7 +107263,7 @@ qFw
 suH
 qFw
 qFw
-saw
+lcF
 suH
 qFw
 qFw
