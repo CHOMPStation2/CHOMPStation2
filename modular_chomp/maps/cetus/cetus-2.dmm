@@ -247,7 +247,9 @@
 /turf/simulated/floor/plating,
 /area/engineering/cetus/foresubstation)
 "adY" = (
-/obj/structure/undies_wardrobe,
+/obj/structure/undies_wardrobe{
+	anchored = 1
+	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 5
 	},
@@ -2038,7 +2040,9 @@
 	dir = 6
 	},
 /obj/effect/mist,
-/turf/simulated/floor/water/hotspring,
+/turf/simulated/floor/water/hotspring{
+	depth = 1
+	},
 /area/crew_quarters/sauna)
 "aKz" = (
 /obj/machinery/door/firedoor/glass,
@@ -10468,7 +10472,9 @@
 	dir = 4
 	},
 /obj/effect/mist,
-/turf/simulated/floor/water/hotspring,
+/turf/simulated/floor/water/hotspring{
+	depth = 1
+	},
 /area/crew_quarters/sauna)
 "dAC" = (
 /obj/structure/catwalk,
@@ -12860,7 +12866,9 @@
 /turf/simulated/floor/plating,
 /area/hallway/primary/central_two)
 "ewD" = (
-/obj/structure/undies_wardrobe,
+/obj/structure/undies_wardrobe{
+	anchored = 1
+	},
 /obj/item/towel{
 	color = "#800080";
 	name = "purple towel";
@@ -13789,6 +13797,12 @@
 /obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/twosec)
+"eOo" = (
+/obj/structure/cable/cyan{
+	icon_state = "0-8"
+	},
+/turf/simulated/open,
+/area/maintenance/cetus/twocargo)
 "eOq" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 6
@@ -14051,7 +14065,9 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/reception)
 "eUB" = (
-/obj/structure/undies_wardrobe,
+/obj/structure/undies_wardrobe{
+	anchored = 1
+	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 5
 	},
@@ -16243,7 +16259,7 @@
 	pixel_y = -36;
 	name = "Morgue Delivery Chute";
 	color = "green";
-	pixel_x = 9
+	pixel_x = 14
 	},
 /obj/structure/disposalpipe/trunk{
 	dir = 1
@@ -17572,6 +17588,16 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/twostar)
+"gbM" = (
+/obj/machinery/conveyor{
+	id = "disposalsorter"
+	},
+/obj/machinery/door/window/southleft{
+	name = "Recycling Chute";
+	req_access = list(50)
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/quartermaster/Recycling)
 "gce" = (
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 1
@@ -22208,7 +22234,9 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/teleporter/arrivals)
 "hFL" = (
-/obj/structure/undies_wardrobe,
+/obj/structure/undies_wardrobe{
+	anchored = 1
+	},
 /obj/structure/window/basic{
 	dir = 4
 	},
@@ -23848,7 +23876,9 @@
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/cetus/jrrestrooms)
 "igJ" = (
-/obj/structure/undies_wardrobe,
+/obj/structure/undies_wardrobe{
+	anchored = 1
+	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/engineering/engi_restroom)
 "igL" = (
@@ -29731,7 +29761,9 @@
 /turf/simulated/floor/tiled,
 /area/security/Reception)
 "kqV" = (
-/obj/structure/undies_wardrobe,
+/obj/structure/undies_wardrobe{
+	anchored = 1
+	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
 	},
@@ -32724,7 +32756,9 @@
 /obj/effect/floor_decal/spline/fancy/wood/corner{
 	color = "White"
 	},
-/turf/simulated/floor/water/hotspring,
+/turf/simulated/floor/water/hotspring{
+	depth = 1
+	},
 /area/crew_quarters/sauna)
 "lwv" = (
 /obj/structure/closet/secure_closet/medical3,
@@ -36070,6 +36104,13 @@
 /obj/machinery/light{
 	dir = 4
 	},
+/obj/machinery/disposal/wall{
+	dir = 8;
+	pixel_x = 35
+	},
+/obj/structure/disposalpipe/trunk{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/Robotics_Lab)
 "mzO" = (
@@ -37702,7 +37743,8 @@
 	id = "mentaldoor";
 	name = "office door control";
 	pixel_y = 24;
-	pixel_x = -21
+	pixel_x = -21;
+	specialfunctions = 4
 	},
 /obj/structure/cable/green{
 	icon_state = "0-6"
@@ -39301,6 +39343,12 @@
 	},
 /turf/simulated/open,
 /area/crew_quarters/cetus/cafeteriaf2)
+"nNr" = (
+/obj/effect/mist,
+/turf/simulated/floor/water/hotspring{
+	depth = 1
+	},
+/area/crew_quarters/sauna)
 "nNE" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -41590,11 +41638,10 @@
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume,
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
-/obj/machinery/embedded_controller/radio/airlock/docking_port_multi{
+/obj/machinery/embedded_controller/radio/airlock/docking_port{
 	dir = 1;
 	frequency = 1381;
-	id_tag = "arrivals_dock_southeast_airlock";
-	master_tag = "arrivals_dock";
+	id_tag = "d2_w3_d_airlock";
 	pixel_y = -27;
 	req_one_access = list(13)
 	},
@@ -42336,7 +42383,9 @@
 	dir = 5
 	},
 /obj/effect/mist,
-/turf/simulated/floor/water/hotspring,
+/turf/simulated/floor/water/hotspring{
+	depth = 1
+	},
 /area/crew_quarters/sauna)
 "oNr" = (
 /obj/structure/cable/green{
@@ -43363,7 +43412,9 @@
 	color = "White";
 	dir = 1
 	},
-/turf/simulated/floor/water/hotspring,
+/turf/simulated/floor/water/hotspring{
+	depth = 1
+	},
 /area/crew_quarters/sauna)
 "peg" = (
 /obj/structure/closet/emcloset,
@@ -44169,7 +44220,9 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/ai_monitored/storage/eva)
 "prh" = (
-/obj/structure/undies_wardrobe,
+/obj/structure/undies_wardrobe{
+	anchored = 1
+	},
 /obj/item/towel{
 	color = "#3fc0ea";
 	name = "light blue towel";
@@ -44508,7 +44561,6 @@
 	dir = 8;
 	pixel_x = 35
 	},
-/obj/structure/disposalpipe/trunk,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/rnd/Robotics_Lab)
 "pwI" = (
@@ -53505,7 +53557,9 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/reception)
 "ssO" = (
-/obj/structure/undies_wardrobe,
+/obj/structure/undies_wardrobe{
+	anchored = 1
+	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/security/Restroom)
 "ssR" = (
@@ -56408,7 +56462,9 @@
 /turf/simulated/floor/tiled/milspec/raised,
 /area/medical/EMT_Bay)
 "trq" = (
-/obj/structure/undies_wardrobe,
+/obj/structure/undies_wardrobe{
+	anchored = 1
+	},
 /obj/item/towel/random{
 	pixel_y = 12
 	},
@@ -57685,6 +57741,7 @@
 /obj/machinery/light{
 	dir = 1
 	},
+/obj/item/storage/bag/sheetsnatcher,
 /turf/simulated/floor/tiled,
 /area/quartermaster/storage)
 "tOF" = (
@@ -60156,10 +60213,9 @@
 	dir = 1
 	},
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
-/obj/machinery/embedded_controller/radio/airlock/docking_port_multi{
+/obj/machinery/embedded_controller/radio/airlock/docking_port{
 	frequency = 1381;
-	id_tag = "arrivals_dock_northeast_airlock";
-	master_tag = "arrivals_dock";
+	id_tag = "d2_w3_b_airlock";
 	pixel_y = 27;
 	req_one_access = list(13)
 	},
@@ -66441,10 +66497,6 @@
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 4
 	},
-/obj/structure/disposalpipe/junction{
-	dir = 4;
-	icon_state = "pipe-j2"
-	},
 /obj/effect/floor_decal/corner/purple/border{
 	dir = 4
 	},
@@ -66456,6 +66508,9 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
+	},
+/obj/structure/disposalpipe/junction{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/Robotics_Lab)
@@ -66947,6 +67002,10 @@
 	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/cetus/atrium/secondaryf2)
+"wZn" = (
+/obj/structure/grille,
+/turf/simulated/wall/r_wall,
+/area/space)
 "wZS" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -67277,7 +67336,6 @@
 /obj/effect/floor_decal/industrial/danger{
 	dir = 1
 	},
-/obj/structure/disposalpipe/segment,
 /obj/effect/floor_decal/borderfloorwhite/corner,
 /obj/effect/floor_decal/corner/purple/bordercorner,
 /turf/simulated/floor/tiled/dark,
@@ -69301,7 +69359,8 @@
 	id = "hottub";
 	name = "Hot Tub Bolts";
 	pixel_y = 25;
-	pixel_x = 32
+	pixel_x = 32;
+	specialfunctions = 4
 	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/sauna)
@@ -108079,7 +108138,7 @@ mIo
 bNk
 bNk
 txC
-sdN
+nNr
 sdN
 sdN
 jwZ
@@ -108338,7 +108397,7 @@ bNk
 liR
 ovc
 pea
-sdN
+nNr
 lvX
 mKC
 snK
@@ -119707,7 +119766,7 @@ oow
 oow
 oow
 bMR
-bMR
+eOo
 oow
 vAf
 xdC
@@ -121509,7 +121568,7 @@ pYl
 sCZ
 pYl
 qTb
-pYl
+gbM
 tYk
 caI
 dvf
@@ -122298,13 +122357,13 @@ oJw
 oJw
 oJw
 oJw
+kmJ
 oJw
 oJw
 oJw
-oJw
-oJw
-oJw
-oJw
+tVZ
+dRK
+tVZ
 oJw
 oJw
 oJw
@@ -122551,18 +122610,18 @@ dGv
 cXj
 tHM
 rlV
-oJw
-oJw
-oJw
-oJw
-oJw
-oJw
-oJw
-oJw
-oJw
-oJw
-oJw
-oJw
+kmJ
+kmJ
+kmJ
+kmJ
+kmJ
+kmJ
+kmJ
+kmJ
+kmJ
+cLh
+lDx
+tVZ
 oJw
 oJw
 oJw
@@ -122814,13 +122873,13 @@ oJw
 oJw
 oJw
 oJw
+kmJ
 oJw
 oJw
 oJw
-oJw
-oJw
-oJw
-oJw
+cLh
+cLh
+tVZ
 oJw
 oJw
 oJw
@@ -123077,7 +123136,7 @@ oJw
 oJw
 oJw
 oJw
-oJw
+kmJ
 oJw
 oJw
 oJw
@@ -123335,7 +123394,7 @@ oJw
 oJw
 oJw
 oJw
-oJw
+kmJ
 oJw
 oJw
 oJw
@@ -123593,7 +123652,7 @@ oJw
 oJw
 oJw
 oJw
-oJw
+wZn
 oJw
 oJw
 oJw
@@ -123851,7 +123910,7 @@ oJw
 oJw
 oJw
 oJw
-oJw
+wZn
 oJw
 oJw
 oJw
@@ -124109,7 +124168,7 @@ oJw
 oJw
 oJw
 oJw
-oJw
+wZn
 oJw
 oJw
 oJw
@@ -124367,7 +124426,7 @@ oJw
 oJw
 oJw
 oJw
-oJw
+wZn
 oJw
 oJw
 oJw
@@ -124625,7 +124684,7 @@ oJw
 oJw
 oJw
 oJw
-oJw
+wZn
 oJw
 oJw
 oJw
@@ -124883,7 +124942,7 @@ oJw
 oJw
 oJw
 oJw
-oJw
+wZn
 oJw
 oJw
 oJw
@@ -125141,7 +125200,7 @@ oJw
 oJw
 oJw
 oJw
-oJw
+wZn
 oJw
 oJw
 oJw
@@ -125399,7 +125458,7 @@ oJw
 oJw
 oJw
 oJw
-oJw
+kmJ
 oJw
 oJw
 oJw
@@ -125657,7 +125716,7 @@ oJw
 oJw
 oJw
 oJw
-oJw
+kmJ
 oJw
 oJw
 oJw
@@ -125909,14 +125968,14 @@ oJw
 oJw
 oJw
 oJw
+kmJ
 oJw
 oJw
 oJw
 oJw
-oJw
-oJw
-oJw
-oJw
+cLh
+cLh
+tVZ
 oJw
 oJw
 oJw
@@ -126163,18 +126222,18 @@ oKR
 cXj
 bMY
 rlV
-oJw
-oJw
-oJw
-oJw
-oJw
-oJw
-oJw
-oJw
-oJw
-oJw
-oJw
-oJw
+kmJ
+kmJ
+kmJ
+kmJ
+kmJ
+kmJ
+kmJ
+kmJ
+kmJ
+cLh
+lDx
+tVZ
 oJw
 oJw
 oJw
@@ -126425,14 +126484,14 @@ oJw
 oJw
 oJw
 oJw
+kmJ
 oJw
 oJw
 oJw
 oJw
-oJw
-oJw
-oJw
-oJw
+tVZ
+dRK
+tVZ
 oJw
 oJw
 oJw

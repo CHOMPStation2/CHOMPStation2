@@ -827,10 +827,6 @@
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/cetus/theater)
-"ayc" = (
-/obj/machinery/telecomms/relay/preset/southerncross/centcomm,
-/turf/simulated/floor/bluegrid,
-/area/tcomm/chamber)
 "ayw" = (
 /obj/machinery/power/apc{
 	dir = 4;
@@ -932,9 +928,12 @@
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/threecp)
 "aCT" = (
-/obj/machinery/telecomms/relay/preset/southerncross/d2,
+/obj/machinery/light/fluorescent{
+	dir = 1
+	},
+/obj/machinery/telecomms/server/presets/supply,
 /turf/simulated/floor/bluegrid,
-/area/tcomm/chamber)
+/area/asteroid/cetus/d3)
 "aDF" = (
 /obj/machinery/firealarm{
 	dir = 8;
@@ -1236,11 +1235,9 @@
 /turf/simulated/floor/tiled,
 /area/rnd/cetus/entry)
 "aKJ" = (
-/obj/structure/cable/cyan{
-	icon_state = "6-10"
-	},
-/turf/simulated/floor/tiled/techfloor,
-/area/tcomm/chamber)
+/obj/machinery/telecomms/server/presets/service/southerncross,
+/turf/simulated/floor/bluegrid,
+/area/asteroid/cetus/d3)
 "aKM" = (
 /obj/structure/sign/warning/acid{
 	name = "\improper DANGEROUS NANITES";
@@ -1380,16 +1377,12 @@
 /turf/simulated/floor/tiled/neutral,
 /area/maintenance/cetus/shallow/derelict/hallway)
 "aOR" = (
-/obj/machinery/access_button{
-	dir = 4;
-	name = "interior access button";
-	pixel_x = -26
+/obj/machinery/light/fluorescent{
+	dir = 1
 	},
-/obj/effect/map_helper/airlock/button/int_button,
-/obj/effect/floor_decal/industrial/warning,
-/obj/machinery/atmospherics/pipe/simple/hidden,
-/turf/simulated/floor/tiled/old_tile,
-/area/maintenance/cetus/shallow/derelict/dock)
+/obj/machinery/telecomms/bus/preset_three,
+/turf/simulated/floor/bluegrid,
+/area/tcomm/chamber)
 "aOU" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/cyan{
 	dir = 1
@@ -2325,6 +2318,26 @@
 /obj/structure/table/standard,
 /turf/simulated/floor/carpet/graycarpet,
 /area/maintenance/cetus/shallow/ap)
+"byo" = (
+/obj/machinery/door/airlock/glass_external{
+	frequency = 1379;
+	icon_state = "door_locked";
+	locked = 1;
+	name = "Internal Airlock Access";
+	req_access = list(13)
+	},
+/obj/effect/map_helper/airlock/door/int_door,
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/machinery/atmospherics/pipe/simple/hidden,
+/obj/machinery/access_button{
+	dir = 4;
+	name = "interior access button";
+	pixel_x = -26;
+	pixel_y = 32
+	},
+/obj/effect/map_helper/airlock/button/int_button,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/maintenance/cetus/shallow/derelict/dock)
 "byN" = (
 /obj/effect/floor_decal/corner/grey/diagonal{
 	dir = 4
@@ -2941,22 +2954,12 @@
 /turf/simulated/floor/plating,
 /area/engineering/cetus/starsubstation)
 "bWd" = (
-/obj/structure/dummystairs/bronzeledge{
-	dir = 4
+/obj/machinery/light/fluorescent{
+	dir = 1
 	},
-/obj/structure/curtain/open{
-	name = "theater curtain";
-	color = "#701006";
-	anchored = 1
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/turf/simulated/floor/tiled,
-/area/crew_quarters/cetus/theater)
+/obj/machinery/telecomms/server/presets/engineering,
+/turf/simulated/floor/bluegrid,
+/area/tcomm/chamber)
 "bWs" = (
 /turf/simulated/floor/tiled/milspec,
 /area/maintenance/cetus/shallow/derelict/atmos)
@@ -4244,10 +4247,6 @@
 "cNE" = (
 /turf/simulated/wall,
 /area/maintenance/cetus/threefs)
-"cNO" = (
-/obj/machinery/telecomms/bus/preset_four,
-/turf/simulated/floor/bluegrid,
-/area/tcomm/chamber)
 "cNR" = (
 /obj/effect/floor_decal/industrial/warning/corner,
 /obj/effect/floor_decal/industrial/warning/corner{
@@ -4557,10 +4556,6 @@
 /obj/machinery/portable_atmospherics/powered/pump/filled,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/threeap)
-"cVB" = (
-/obj/machinery/telecomms/server/presets/service/southerncross,
-/turf/simulated/floor/bluegrid,
-/area/asteroid/cetus/d3)
 "cVN" = (
 /obj/machinery/disposal,
 /obj/structure/disposalpipe/trunk,
@@ -4591,10 +4586,7 @@
 /turf/simulated/floor/carpet/graycarpet,
 /area/bridge/Deck3_Corridor)
 "cYp" = (
-/obj/machinery/light/fluorescent{
-	dir = 1
-	},
-/obj/machinery/telecomms/server/presets/engineering,
+/obj/machinery/telecomms/bus/preset_four,
 /turf/simulated/floor/bluegrid,
 /area/tcomm/chamber)
 "cYU" = (
@@ -7109,12 +7101,6 @@
 /turf/simulated/floor/carpet/graycarpet,
 /area/bridge/Deck3_Corridor)
 "ewd" = (
-/obj/machinery/access_button{
-	dir = 4;
-	name = "interior access button";
-	pixel_x = -26
-	},
-/obj/effect/map_helper/airlock/button/int_button,
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 8
 	},
@@ -7856,10 +7842,6 @@
 /obj/machinery/door/airlock/maintenance,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/d3docks)
-"eSH" = (
-/obj/machinery/telecomms/bus/preset_two/southerncross,
-/turf/simulated/floor/bluegrid,
-/area/tcomm/chamber)
 "eSK" = (
 /obj/structure/railing/grey,
 /obj/structure/cable/cyan{
@@ -13484,6 +13466,10 @@
 "ilK" = (
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/jrthreeport)
+"ilL" = (
+/obj/machinery/telecomms/relay/preset/southerncross/d2,
+/turf/simulated/floor/bluegrid,
+/area/tcomm/chamber)
 "ilW" = (
 /obj/structure/sign/directions/ai_core,
 /turf/simulated/wall/r_wall,
@@ -15466,9 +15452,6 @@
 /turf/simulated/floor/carpet/graycarpet,
 /area/bridge/Deck3_Corridor)
 "jAR" = (
-/obj/structure/dummystairs/bronzeledge{
-	dir = 8
-	},
 /obj/structure/curtain/open{
 	name = "theater curtain";
 	color = "#701006";
@@ -15713,12 +15696,9 @@
 /turf/simulated/floor/lino,
 /area/maintenance/cetus/shallow/derelict/kitchen)
 "jHc" = (
-/obj/machinery/light/fluorescent{
-	dir = 1
-	},
-/obj/machinery/telecomms/relay/preset/southerncross/d1,
+/obj/machinery/telecomms/server/presets/common,
 /turf/simulated/floor/bluegrid,
-/area/tcomm/chamber)
+/area/ai)
 "jHs" = (
 /obj/structure/railing/overhang/hazard{
 	dir = 1
@@ -15993,8 +15973,27 @@
 /turf/simulated/floor/carpet/blucarpet,
 /area/bridge/sleep/Secretary_Quarters)
 "jOS" = (
-/turf/simulated/wall/r_wall,
-/area/space)
+/obj/machinery/door/airlock/glass_external{
+	frequency = 1379;
+	icon_state = "door_locked";
+	locked = 1;
+	name = "Internal Airlock Access";
+	req_access = list(13)
+	},
+/obj/effect/map_helper/airlock/door/int_door,
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
+/obj/machinery/access_button{
+	dir = 4;
+	name = "interior access button";
+	pixel_x = 6;
+	pixel_y = 32
+	},
+/obj/effect/map_helper/airlock/button/int_button,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/maintenance/cetus/shallow/derelict/dock)
 "jPj" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -16356,13 +16355,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/threecp)
-"kbP" = (
-/obj/machinery/light/fluorescent{
-	dir = 1
-	},
-/obj/machinery/telecomms/bus/preset_three,
-/turf/simulated/floor/bluegrid,
-/area/tcomm/chamber)
 "kcb" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -19351,6 +19343,10 @@
 /obj/structure/reagent_dispensers/water_cooler/full,
 /turf/simulated/floor/carpet/graycarpet,
 /area/maintenance/cetus/shallow/starboard)
+"lGN" = (
+/obj/machinery/telecomms/relay/preset/southerncross/centcomm,
+/turf/simulated/floor/bluegrid,
+/area/tcomm/chamber)
 "lHd" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/red{
 	dir = 1
@@ -24256,9 +24252,9 @@
 /turf/simulated/floor/carpet/graycarpet,
 /area/bridge/Deck3_Corridor)
 "otl" = (
-/obj/machinery/telecomms/server/presets/common,
+/obj/machinery/telecomms/bus/preset_one,
 /turf/simulated/floor/bluegrid,
-/area/ai)
+/area/tcomm/chamber)
 "otm" = (
 /obj/structure/cable/yellow{
 	icon_state = "1-4"
@@ -24603,6 +24599,10 @@
 /obj/machinery/photocopier,
 /turf/simulated/floor/tiled/dark,
 /area/maintenance/cetus/shallow/law)
+"oCR" = (
+/obj/machinery/telecomms/bus/preset_two/southerncross,
+/turf/simulated/floor/bluegrid,
+/area/tcomm/chamber)
 "oCX" = (
 /obj/structure/dummystairs/hazardledge{
 	dir = 8
@@ -25171,13 +25171,6 @@
 	},
 /turf/simulated/floor/reinforced,
 /area/rnd/research/particleaccelerator)
-"oXp" = (
-/obj/machinery/light/fluorescent{
-	dir = 1
-	},
-/obj/machinery/telecomms/server/presets/supply,
-/turf/simulated/floor/bluegrid,
-/area/asteroid/cetus/d3)
 "oYa" = (
 /obj/effect/floor_decal/industrial/warning/corner,
 /obj/machinery/light/small/yellowed{
@@ -26101,10 +26094,6 @@
 	},
 /turf/simulated/floor/carpet/graycarpet,
 /area/crew_quarters/cetus/escapepodfore)
-"pDS" = (
-/obj/machinery/telecomms/bus/preset_one,
-/turf/simulated/floor/bluegrid,
-/area/tcomm/chamber)
 "pEq" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -28271,6 +28260,13 @@
 /obj/random/trash,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/threeap)
+"qRu" = (
+/obj/machinery/light/fluorescent{
+	dir = 1
+	},
+/obj/machinery/telecomms/relay/preset/southerncross/d1,
+/turf/simulated/floor/bluegrid,
+/area/tcomm/chamber)
 "qSu" = (
 /obj/machinery/vending/loadout/accessory,
 /turf/simulated/floor/carpet/graycarpet,
@@ -31810,7 +31806,9 @@
 /turf/simulated/floor/tiled/dark,
 /area/rnd/research/particleaccelerator)
 "teE" = (
-/obj/structure/undies_wardrobe,
+/obj/structure/undies_wardrobe{
+	anchored = 1
+	},
 /obj/structure/curtain/open{
 	name = "dressing curtain";
 	color = "#701006";
@@ -39006,6 +39004,12 @@
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/heads/sc/restroom)
+"xlE" = (
+/obj/structure/cable/cyan{
+	icon_state = "6-10"
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/tcomm/chamber)
 "xmx" = (
 /obj/machinery/atmospherics/binary/pump{
 	dir = 8
@@ -52509,7 +52513,7 @@ vVV
 ljT
 exB
 exB
-exB
+jjz
 jjz
 exB
 vVV
@@ -57672,8 +57676,8 @@ kwh
 kwh
 jlZ
 dSN
-qcN
 idn
+qcN
 qcN
 qcN
 qcN
@@ -83364,11 +83368,11 @@ mco
 tgZ
 mco
 mco
-jOS
+kGV
 kGV
 jau
 kGV
-jOS
+kGV
 mco
 mco
 tgZ
@@ -84124,9 +84128,9 @@ myP
 cLX
 kxY
 hgI
-hgI
+hRR
 iGO
-hgI
+hRR
 hgI
 hgI
 dEo
@@ -84383,7 +84387,7 @@ rcu
 kxY
 mco
 hRR
-hgI
+hRR
 hRR
 mco
 mco
@@ -85343,10 +85347,10 @@ idF
 ifh
 ifh
 vHX
-jHc
-aCT
+qRu
+ilL
 oBH
-ayc
+lGN
 jWH
 lvg
 rjy
@@ -85859,10 +85863,10 @@ idF
 idF
 ifh
 vHX
-kbP
-cNO
-eSH
-pDS
+aOR
+cYp
+oCR
+otl
 wDL
 vHA
 fDa
@@ -85911,7 +85915,7 @@ uId
 wZf
 wZf
 wZf
-nTn
+jOS
 uId
 wZf
 wZf
@@ -86172,8 +86176,8 @@ ewd
 gbf
 mzx
 vWn
-aOR
-hma
+sZJ
+byo
 dqq
 dHF
 hgI
@@ -86375,7 +86379,7 @@ idF
 idF
 ifh
 vHX
-cYp
+bWd
 knU
 ecF
 xlo
@@ -86636,7 +86640,7 @@ vHX
 fcV
 fcV
 fcV
-aKJ
+xlE
 cUQ
 uzX
 jSG
@@ -86891,10 +86895,10 @@ idF
 idF
 ifh
 jOC
-oXp
-cVB
+aCT
+aKJ
 iLj
-otl
+jHc
 kJT
 jSG
 jSG
@@ -95419,7 +95423,7 @@ rdX
 red
 rdX
 lyB
-bWd
+jAR
 sUj
 sUj
 srB
