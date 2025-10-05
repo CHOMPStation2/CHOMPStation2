@@ -51,7 +51,7 @@
 		/obj/item/tool/screwdriver/hybrid/alien  = 10,
 		/obj/item/pickaxe/diamonddrill/alien = 10,
 		/obj/item/melee/energy/sword/dualsaber = 10,
-		/obj/item/shield_projector/rectangle/automatic/tyrvault = 0.01,
+		/obj/item/shield_projector/rectangle/automatic/tyrbarrier = 1,
 		/obj/item/stock_parts/scanning_module/omni = 80,
 		/obj/item/stock_parts/micro_laser/omni = 80,
 		/obj/item/stock_parts/capacitor/omni = 80,

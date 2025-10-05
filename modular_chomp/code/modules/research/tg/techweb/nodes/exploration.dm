@@ -8,6 +8,8 @@
 		"tyr_shotgun",
 		"tyr_meleegun",
 		"magnet_belt",
+		"tyr_sabre",
+		"tyr_barrier",
 	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_5_POINTS)
 	required_experiments = list(/datum/experiment/scanning/points/tyr_precursor_study)
