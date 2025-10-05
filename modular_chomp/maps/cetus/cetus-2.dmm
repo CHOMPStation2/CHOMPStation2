@@ -8144,6 +8144,10 @@
 "cNj" = (
 /turf/simulated/mineral/cetus,
 /area/engineering/engi_restroom)
+"cNt" = (
+/obj/structure/grille,
+/turf/simulated/wall/r_wall,
+/area/space)
 "cNy" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -12459,7 +12463,7 @@
 	frequency = 1381;
 	id_tag = "cargo_bay";
 	pixel_y = 27;
-	req_one_access = list(13)
+	req_one_access = list(31)
 	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/storage)
@@ -13797,12 +13801,6 @@
 /obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/twosec)
-"eOo" = (
-/obj/structure/cable/cyan{
-	icon_state = "0-8"
-	},
-/turf/simulated/open,
-/area/maintenance/cetus/twocargo)
 "eOq" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 6
@@ -17588,16 +17586,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/twostar)
-"gbM" = (
-/obj/machinery/conveyor{
-	id = "disposalsorter"
-	},
-/obj/machinery/door/window/southleft{
-	name = "Recycling Chute";
-	req_access = list(50)
-	},
-/turf/simulated/floor/tiled/techfloor,
-/area/quartermaster/Recycling)
 "gce" = (
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 1
@@ -46596,6 +46584,16 @@
 	},
 /turf/simulated/open,
 /area/medical/Virology)
+"qbs" = (
+/obj/machinery/conveyor{
+	id = "disposalsorter"
+	},
+/obj/machinery/door/window/southleft{
+	name = "Recycling Chute";
+	req_access = list(50)
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/quartermaster/Recycling)
 "qbt" = (
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -52229,6 +52227,12 @@
 	},
 /turf/simulated/floor/wood,
 /area/medical/psych)
+"rWR" = (
+/obj/structure/cable/cyan{
+	icon_state = "0-8"
+	},
+/turf/simulated/open,
+/area/maintenance/cetus/twocargo)
 "rXa" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -67002,10 +67006,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/cetus/atrium/secondaryf2)
-"wZn" = (
-/obj/structure/grille,
-/turf/simulated/wall/r_wall,
-/area/space)
 "wZS" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -119766,7 +119766,7 @@ oow
 oow
 oow
 bMR
-eOo
+rWR
 oow
 vAf
 xdC
@@ -121568,7 +121568,7 @@ pYl
 sCZ
 pYl
 qTb
-gbM
+qbs
 tYk
 caI
 dvf
@@ -123652,7 +123652,7 @@ oJw
 oJw
 oJw
 oJw
-wZn
+cNt
 oJw
 oJw
 oJw
@@ -123910,7 +123910,7 @@ oJw
 oJw
 oJw
 oJw
-wZn
+cNt
 oJw
 oJw
 oJw
@@ -124168,7 +124168,7 @@ oJw
 oJw
 oJw
 oJw
-wZn
+cNt
 oJw
 oJw
 oJw
@@ -124426,7 +124426,7 @@ oJw
 oJw
 oJw
 oJw
-wZn
+cNt
 oJw
 oJw
 oJw
@@ -124684,7 +124684,7 @@ oJw
 oJw
 oJw
 oJw
-wZn
+cNt
 oJw
 oJw
 oJw
@@ -124942,7 +124942,7 @@ oJw
 oJw
 oJw
 oJw
-wZn
+cNt
 oJw
 oJw
 oJw
@@ -125200,7 +125200,7 @@ oJw
 oJw
 oJw
 oJw
-wZn
+cNt
 oJw
 oJw
 oJw
