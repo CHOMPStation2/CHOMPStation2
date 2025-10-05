@@ -417,6 +417,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/storage)
 "ahb" = (
@@ -1666,6 +1669,7 @@
 	icon_state = "1-2"
 	},
 /obj/structure/catwalk,
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/twostar)
 "aDp" = (
@@ -6039,6 +6043,7 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/twostar)
 "ceO" = (
@@ -6938,6 +6943,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/storage)
 "crG" = (
@@ -6984,6 +6992,7 @@
 /obj/structure/cable/green{
 	icon_state = "1-6"
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/twostar)
 "crR" = (
@@ -8135,10 +8144,6 @@
 "cNj" = (
 /turf/simulated/mineral/cetus,
 /area/engineering/engi_restroom)
-"cNt" = (
-/obj/structure/grille,
-/turf/simulated/wall/r_wall,
-/area/space)
 "cNy" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -8449,6 +8454,9 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
@@ -10778,6 +10786,10 @@
 /area/quartermaster/storage)
 "dGY" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/universal,
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/twostar)
 "dHb" = (
@@ -10934,6 +10946,9 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
@@ -11312,11 +11327,9 @@
 /turf/simulated/wall/r_wall,
 /area/security/Wardens_Office)
 "dUe" = (
-/obj/effect/mist,
-/turf/simulated/floor/water/hotspring{
-	depth = 1
-	},
-/area/crew_quarters/sauna)
+/obj/structure/grille,
+/turf/simulated/wall/r_wall,
+/area/space)
 "dUn" = (
 /obj/machinery/power/apc{
 	dir = 1;
@@ -13348,6 +13361,7 @@
 	dir = 10
 	},
 /obj/structure/catwalk,
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/twostar)
 "eGG" = (
@@ -17595,10 +17609,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/twostar)
-"gbM" = (
-/obj/machinery/atmospherics/pipe/manifold/visible,
-/turf/simulated/floor/plating/turfpack/airless,
-/area/maintenance/cetus/auxsupport)
 "gce" = (
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 1
@@ -18332,6 +18342,9 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/industrial/warning/corner,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/twostar)
 "gmy" = (
@@ -20702,7 +20715,6 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/Resleeving)
 "hfw" = (
-/obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /obj/structure/cable/green{
@@ -20710,6 +20722,10 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
+	},
+/obj/structure/disposalpipe/junction{
+	dir = 2;
+	icon_state = "pipe-j2"
 	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/storage)
@@ -21068,6 +21084,10 @@
 	dir = 10
 	},
 /obj/effect/floor_decal/industrial/warning,
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/twostar)
 "hlb" = (
@@ -21345,6 +21365,7 @@
 	icon_state = "1-2"
 	},
 /obj/structure/catwalk,
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/twostar)
 "hqN" = (
@@ -22186,9 +22207,8 @@
 /turf/simulated/floor/wood,
 /area/crew_quarters/cetus/atrium/primary)
 "hEQ" = (
-/obj/machinery/atmospherics/binary/pump/on{
-	dir = 4;
-	target_pressure = 200
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 6
 	},
 /turf/simulated/floor/plating/turfpack/airless,
 /area/maintenance/cetus/auxsupport)
@@ -24063,11 +24083,11 @@
 /turf/simulated/floor/tiled,
 /area/hallway/cetus/stairwellf2)
 "ilT" = (
-/obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 6
+/obj/effect/mist,
+/turf/simulated/floor/water/hotspring{
+	depth = 1
 	},
-/turf/simulated/floor/plating/turfpack/airless,
-/area/maintenance/cetus/auxsupport)
+/area/crew_quarters/sauna)
 "imb" = (
 /obj/effect/wingrille_spawn/reinforced,
 /obj/machinery/door/firedoor/glass,
@@ -25680,6 +25700,7 @@
 	},
 /obj/structure/catwalk,
 /obj/effect/floor_decal/industrial/warning,
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/twostar)
 "iRA" = (
@@ -26496,6 +26517,7 @@
 	icon_state = "1-8"
 	},
 /obj/structure/catwalk,
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/twostar)
 "jil" = (
@@ -29814,6 +29836,7 @@
 	},
 /obj/structure/catwalk,
 /obj/random/trash,
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/twostar)
 "krs" = (
@@ -35571,6 +35594,7 @@
 	dir = 10
 	},
 /obj/structure/catwalk,
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/twostar)
 "moY" = (
@@ -36182,6 +36206,9 @@
 	},
 /obj/structure/cable/green{
 	icon_state = "4-8"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/engineering/cetus/starsubstation)
@@ -38711,6 +38738,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/storage)
 "nxZ" = (
@@ -39368,6 +39398,12 @@
 	},
 /turf/simulated/open,
 /area/crew_quarters/cetus/cafeteriaf2)
+"nNr" = (
+/obj/structure/cable/cyan{
+	icon_state = "0-8"
+	},
+/turf/simulated/open,
+/area/maintenance/cetus/twocargo)
 "nNE" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -44036,6 +44072,7 @@
 	icon_state = "1-2"
 	},
 /obj/structure/catwalk,
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/twostar)
 "pnt" = (
@@ -45790,6 +45827,9 @@
 	dir = 4
 	},
 /obj/machinery/door/airlock/maintenance/cargo,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/twostar)
 "pOt" = (
@@ -46611,6 +46651,13 @@
 	},
 /turf/simulated/open,
 /area/medical/Virology)
+"qbs" = (
+/obj/machinery/atmospherics/binary/pump/on{
+	dir = 4;
+	target_pressure = 200
+	},
+/turf/simulated/floor/plating/turfpack/airless,
+/area/maintenance/cetus/auxsupport)
 "qbt" = (
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -46704,6 +46751,7 @@
 	},
 /obj/structure/catwalk,
 /obj/random/mob/mouse,
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/twostar)
 "qcW" = (
@@ -52238,6 +52286,12 @@
 	},
 /turf/simulated/floor/wood,
 /area/medical/psych)
+"rWR" = (
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 10
+	},
+/turf/simulated/floor/plating/turfpack/airless,
+/area/maintenance/cetus/auxsupport)
 "rXa" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -54292,6 +54346,7 @@
 	dir = 8
 	},
 /obj/structure/catwalk,
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/twostar)
 "sGW" = (
@@ -56410,6 +56465,10 @@
 /obj/structure/cable{
 	icon_state = "4-9"
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
 /turf/simulated/floor/plating,
 /area/engineering/cetus/starsubstation)
 "tpI" = (
@@ -56874,6 +56933,7 @@
 	dir = 1
 	},
 /obj/structure/catwalk,
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/twostar)
 "txp" = (
@@ -60020,6 +60080,10 @@
 /obj/structure/cable/green{
 	icon_state = "0-2"
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
 /turf/simulated/floor/plating,
 /area/engineering/cetus/starsubstation)
 "uBB" = (
@@ -61745,6 +61809,9 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden{
 	dir = 4
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/twostar)
 "vhY" = (
@@ -62719,11 +62786,9 @@
 /turf/simulated/floor/outdoors/rocks/cetus,
 /area/asteroid/cetus/d2/jr)
 "vyN" = (
-/obj/structure/cable/cyan{
-	icon_state = "0-8"
-	},
-/turf/simulated/open,
-/area/maintenance/cetus/twocargo)
+/obj/machinery/atmospherics/pipe/manifold/visible,
+/turf/simulated/floor/plating/turfpack/airless,
+/area/maintenance/cetus/auxsupport)
 "vyS" = (
 /obj/structure/table/woodentable,
 /obj/machinery/light/small/yellowed{
@@ -63123,6 +63188,9 @@
 /obj/machinery/door/airlock/maintenance/engi{
 	name = "Starboard Substation";
 	req_one_access = list(11, 24)
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/engineering/cetus/starsubstation)
@@ -63926,6 +63994,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/twostar)
 "vYG" = (
@@ -64550,6 +64621,9 @@
 	icon_state = "32-8"
 	},
 /obj/structure/lattice,
+/obj/structure/disposalpipe/down{
+	dir = 8
+	},
 /turf/simulated/open,
 /area/engineering/cetus/starsubstation)
 "whv" = (
@@ -67013,12 +67087,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/cetus/atrium/secondaryf2)
-"wZn" = (
-/obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 10
-	},
-/turf/simulated/floor/plating/turfpack/airless,
-/area/maintenance/cetus/auxsupport)
 "wZS" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -67841,6 +67909,7 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/twostar)
 "xql" = (
@@ -68753,6 +68822,10 @@
 	dir = 4
 	},
 /obj/structure/catwalk,
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/twostar)
 "xEW" = (
@@ -69948,6 +70021,10 @@
 /obj/structure/catwalk,
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/twostar)
@@ -87770,8 +87847,8 @@ oJw
 oJw
 apx
 apx
-ilT
-gbM
+hEQ
+vyN
 hms
 apx
 apx
@@ -88028,7 +88105,7 @@ oJw
 oJw
 apx
 apx
-hEQ
+qbs
 efp
 hms
 apx
@@ -88286,7 +88363,7 @@ oJw
 oJw
 apx
 apx
-wZn
+rWR
 hZP
 qpv
 apx
@@ -108152,7 +108229,7 @@ mIo
 bNk
 bNk
 txC
-dUe
+ilT
 sdN
 sdN
 jwZ
@@ -108411,7 +108488,7 @@ bNk
 liR
 ovc
 pea
-dUe
+ilT
 lvX
 mKC
 snK
@@ -119780,7 +119857,7 @@ oow
 oow
 oow
 bMR
-vyN
+nNr
 oow
 vAf
 xdC
@@ -123666,7 +123743,7 @@ oJw
 oJw
 oJw
 oJw
-cNt
+dUe
 oJw
 oJw
 oJw
@@ -123924,7 +124001,7 @@ oJw
 oJw
 oJw
 oJw
-cNt
+dUe
 oJw
 oJw
 oJw
@@ -124182,7 +124259,7 @@ oJw
 oJw
 oJw
 oJw
-cNt
+dUe
 oJw
 oJw
 oJw
@@ -124440,7 +124517,7 @@ oJw
 oJw
 oJw
 oJw
-cNt
+dUe
 oJw
 oJw
 oJw
@@ -124698,7 +124775,7 @@ oJw
 oJw
 oJw
 oJw
-cNt
+dUe
 oJw
 oJw
 oJw
@@ -124956,7 +125033,7 @@ oJw
 oJw
 oJw
 oJw
-cNt
+dUe
 oJw
 oJw
 oJw
@@ -125214,7 +125291,7 @@ oJw
 oJw
 oJw
 oJw
-cNt
+dUe
 oJw
 oJw
 oJw
