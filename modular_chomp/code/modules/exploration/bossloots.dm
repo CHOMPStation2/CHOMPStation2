@@ -33,10 +33,10 @@
 	maxcharge = 10000
 	charge_amount = 1000
 
- //Reworking an old weapon into Tyr melee loot. Old Weapon was the Midnight Blade
- //E sword has 30 damage, 50 AP, and 65% projectile block
- //Midnightblade has less AP, and less projectile block chance
- //In exchange it has special charatisics on melee hits, and higher melee block
+//Reworking an old weapon into Tyr melee loot. Old Weapon was the Midnight Blade
+//E sword has 30 damage, 50 AP, and 65% projectile block
+//Midnightblade has less AP, and less projectile block chance
+//In exchange it has special charatisics on melee hits, and higher melee block
 /obj/item/melee/energy/tyr_sabre
 	name = "tyrian energy blade"
 	slot_flags = SLOT_BELT | SLOT_BACK //should make a proper sprite some time but spriting energy is hard
