@@ -599,7 +599,8 @@
 		/obj/item/stock_parts/capacitor/hyper = 80,
 		/obj/item/stock_parts/manipulator/hyper = 80,
 		/obj/item/stock_parts/matter_bin/hyper = 80,
-		/obj/item/reagent_containers/food/snacks/meat = 100
+		/obj/item/reagent_containers/food/snacks/meat = 100,
+		/obj/item/melee/energy/tyr_sabre = 30
 		)
 
 /mob/living/simple_mob/mechanical/mecha/eclipse/tankyboss/chambera //poison boss
