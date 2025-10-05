@@ -1181,6 +1181,26 @@
 	},
 /turf/simulated/floor/plating,
 /area/medical/virology)
+"acd" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/yellow/border{
+	dir = 8
+	},
+/obj/effect/spider/stickyweb,
+/turf/simulated/floor/tiled,
+/area/engineering/foyer)
+"ace" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/yellow/border{
+	dir = 4
+	},
+/obj/effect/spider/stickyweb,
+/turf/simulated/floor/tiled,
+/area/engineering/foyer)
 "ack" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 10
@@ -11827,6 +11847,7 @@
 /obj/effect/floor_decal/corner/yellow/bordercorner{
 	dir = 8
 	},
+/obj/item/toy/plushie/spider,
 /turf/simulated/floor/tiled,
 /area/engineering/foyer)
 "aLG" = (
@@ -20328,6 +20349,10 @@
 	dir = 4;
 	pixel_x = 24
 	},
+/obj/structure/table/woodentable,
+/obj/structure/candybowl{
+	pixel_y = 6
+	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/seconddeck/apcenter)
 "bne" = (
@@ -21083,7 +21108,10 @@
 /obj/effect/floor_decal/corner/paleblue/border{
 	dir = 8
 	},
-/obj/item/stool/padded,
+/obj/structure/table/woodentable,
+/obj/structure/candybowl/medical{
+	pixel_y = 6
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/foyer)
 "bpo" = (
@@ -21566,6 +21594,7 @@
 /obj/effect/floor_decal/corner/paleblue/bordercorner2{
 	dir = 10
 	},
+/obj/structure/flora/skeleton,
 /turf/simulated/floor/tiled/white,
 /area/medical/foyer)
 "brg" = (
@@ -28193,6 +28222,7 @@
 	c_tag = "CRG - Cargo Foyer";
 	name = "security camera"
 	},
+/obj/effect/landmark/carved_pumpkin_spawn,
 /turf/simulated/floor/tiled,
 /area/quartermaster/foyer)
 "bMx" = (
@@ -32153,6 +32183,10 @@
 /obj/effect/floor_decal/corner/red/bordercorner{
 	dir = 8
 	},
+/obj/structure/table/woodentable,
+/obj/structure/candybowl/security{
+	pixel_y = 6
+	},
 /turf/simulated/floor/tiled,
 /area/security/lobby)
 "cbo" = (
@@ -36048,11 +36082,13 @@
 /area/hallway/primary/seconddeck/aft)
 "cnF" = (
 /obj/structure/table/marble,
-/obj/item/reagent_containers/food/snacks/pie,
 /obj/effect/floor_decal/corner/grey/diagonal{
 	dir = 4
 	},
 /obj/structure/disposalpipe/segment,
+/obj/structure/candybowl{
+	pixel_y = 6
+	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/cafeteria)
 "cnI" = (
@@ -51486,6 +51522,14 @@
 /obj/effect/floor_decal/corner/brown/bordercorner{
 	dir = 1
 	},
+/obj/structure/table/woodentable,
+/obj/structure/candybowl/cargo{
+	pixel_y = 6
+	},
+/obj/item/flame/candle/candelabra/everburn{
+	pixel_x = -10;
+	pixel_y = 17
+	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/foyer)
 "hRr" = (
@@ -56509,6 +56553,7 @@
 /obj/effect/floor_decal/corner/yellow/bordercorner{
 	dir = 4
 	},
+/obj/effect/landmark/carved_pumpkin_spawn,
 /turf/simulated/floor/tiled,
 /area/engineering/foyer)
 "kEy" = (
@@ -59630,6 +59675,10 @@
 "muM" = (
 /obj/effect/floor_decal/borderfloor/corner,
 /obj/effect/floor_decal/corner/yellow/bordercorner,
+/obj/structure/table/woodentable,
+/obj/structure/candybowl/engineering{
+	pixel_y = 6
+	},
 /turf/simulated/floor/tiled,
 /area/engineering/foyer)
 "muO" = (
@@ -60275,6 +60324,11 @@
 /obj/structure/extinguisher_cabinet{
 	pixel_y = 30
 	},
+/obj/structure/table/woodentable,
+/obj/structure/candybowl/science{
+	pixel_y = 6
+	},
+/obj/effect/decal/cleanable/cobweb,
 /turf/simulated/floor/tiled/white,
 /area/rnd/research_foyer)
 "mSd" = (
@@ -60318,6 +60372,7 @@
 	pixel_x = 11;
 	pixel_y = 24
 	},
+/obj/effect/landmark/carved_pumpkin_spawn,
 /turf/simulated/floor/tiled/white,
 /area/rnd/research_foyer)
 "mSO" = (
@@ -61299,6 +61354,7 @@
 	pixel_x = 11;
 	pixel_y = 24
 	},
+/obj/item/toy/plushie/black_cat,
 /turf/simulated/floor/tiled/white,
 /area/medical/foyer)
 "nwl" = (
@@ -63484,6 +63540,7 @@
 /obj/effect/floor_decal/corner/purple/bordercorner2{
 	dir = 9
 	},
+/obj/effect/spider/stickyweb,
 /turf/simulated/floor/tiled/white,
 /area/rnd/research_foyer)
 "oKu" = (
@@ -63591,6 +63648,7 @@
 	},
 /obj/effect/floor_decal/borderfloorwhite/corner2,
 /obj/effect/floor_decal/corner/purple/bordercorner2,
+/obj/effect/spider/stickyweb,
 /turf/simulated/floor/tiled/white,
 /area/rnd/research_foyer)
 "oQX" = (
@@ -101221,7 +101279,7 @@ aGM
 aIo
 aJN
 aLF
-aGM
+acd
 aON
 aQh
 arb
@@ -102253,7 +102311,7 @@ aGQ
 kEp
 luY
 muM
-aGQ
+ace
 aoX
 aQh
 aSe

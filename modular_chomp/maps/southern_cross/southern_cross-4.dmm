@@ -136,6 +136,54 @@
 /obj/effect/recycler_vendor_beacon,
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/forestarboard)
+"aay" = (
+/obj/effect/floor_decal/corner/orange/diagonal,
+/obj/effect/landmark/carved_pumpkin_spawn,
+/turf/simulated/floor/tiled,
+/area/crew_quarters/cafeteria)
+"aaz" = (
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/machinery/floor_light{
+	anchored = 1
+	},
+/obj/structure/table/woodentable,
+/obj/structure/candybowl{
+	pixel_y = 8
+	},
+/turf/simulated/floor/tiled,
+/area/crew_quarters/cafeteria)
+"aaA" = (
+/obj/machinery/floor_light{
+	anchored = 1
+	},
+/obj/structure/boxpile{
+	pixel_x = 16
+	},
+/turf/simulated/floor/tiled,
+/area/crew_quarters/cafeteria)
+"aaB" = (
+/obj/machinery/floor_light{
+	anchored = 1
+	},
+/obj/item/toy/plushie/spider,
+/turf/simulated/floor/tiled,
+/area/crew_quarters/cafeteria)
+"aaC" = (
+/obj/effect/floor_decal/corner/orange/diagonal,
+/obj/effect/spider/stickyweb,
+/turf/simulated/floor/tiled,
+/area/crew_quarters/cafeteria)
+"aaD" = (
+/obj/effect/floor_decal/corner/orange/diagonal,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/effect/spider/stickyweb,
+/turf/simulated/floor/tiled,
+/area/crew_quarters/cafeteria)
 "aaM" = (
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 4
@@ -544,6 +592,10 @@
 	},
 /obj/machinery/floor_light{
 	anchored = 1
+	},
+/obj/structure/table/woodentable,
+/obj/item/flame/candle/candelabra/everburn{
+	pixel_y = 8
 	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/cafeteria)
@@ -12599,6 +12651,18 @@
 	dir = 4;
 	icon_state = "pipe-c"
 	},
+/obj/structure/table/woodentable,
+/obj/structure/candybowl{
+	pixel_y = 8
+	},
+/obj/item/flame/candle/everburn{
+	pixel_x = -9;
+	pixel_y = 9
+	},
+/obj/item/flame/candle/everburn{
+	pixel_x = 9;
+	pixel_y = 9
+	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/thirddeck/central)
 "kxT" = (
@@ -12616,6 +12680,7 @@
 	},
 /obj/effect/floor_decal/borderfloor/corner,
 /obj/effect/floor_decal/corner/blue/bordercorner,
+/obj/item/toy/plushie/spider,
 /turf/simulated/floor/tiled,
 /area/hallway/primary/thirddeck/central)
 "kAt" = (
@@ -15281,6 +15346,7 @@
 /obj/effect/floor_decal/corner_steel_grid{
 	dir = 6
 	},
+/obj/effect/spider/stickyweb,
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/cafeteria)
 "mXH" = (
@@ -16851,6 +16917,8 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/item/reagent_containers/blood/random_bloodsucker,
+/obj/item/toy/plushie/black_cat,
 /turf/simulated/floor/tiled,
 /area/crew_quarters/cafeteria)
 "oeX" = (
@@ -17570,6 +17638,8 @@
 	dir = 4;
 	pixel_x = -22
 	},
+/obj/effect/decal/cleanable/cobweb,
+/obj/effect/landmark/carved_pumpkin_spawn,
 /turf/simulated/floor/tiled/techfloor,
 /area/hallway/primary/thirddeck/stationgateway)
 "oKR" = (
@@ -17654,6 +17724,8 @@
 /obj/machinery/light_switch{
 	pixel_x = 36
 	},
+/obj/effect/decal/cleanable/cobweb2,
+/obj/effect/landmark/carved_pumpkin_spawn,
 /turf/simulated/floor/tiled/techfloor,
 /area/hallway/primary/thirddeck/stationgateway)
 "oOk" = (
@@ -18707,10 +18779,10 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
 	},
-/obj/structure/flora/pottedplant/tall{
-	pixel_y = 10
-	},
 /obj/structure/table/bench/wooden,
+/obj/item/flame/candle/candelabra/everburn{
+	pixel_y = 8
+	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/thirddeck/stationgateway)
 "pDX" = (
@@ -18800,11 +18872,10 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
 	},
-/obj/structure/flora/pottedplant/drooping{
-	pixel_x = 1;
-	pixel_y = 10
-	},
 /obj/structure/table/bench/wooden,
+/obj/item/flame/candle/candelabra/everburn{
+	pixel_y = 8
+	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/thirddeck/stationgateway)
 "pGW" = (
@@ -22751,6 +22822,7 @@
 	pixel_y = -6
 	},
 /obj/effect/floor_decal/corner/orange/diagonal,
+/obj/effect/spider/stickyweb,
 /turf/simulated/floor/tiled,
 /area/crew_quarters/cafeteria)
 "sWb" = (
@@ -24469,6 +24541,7 @@
 	name = "Station Intercom (General)";
 	pixel_y = -22
 	},
+/obj/effect/landmark/carved_pumpkin_spawn,
 /turf/simulated/floor/tiled,
 /area/crew_quarters/cafeteria)
 "usi" = (
@@ -28152,6 +28225,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 5
 	},
+/obj/effect/spider/stickyweb,
 /turf/simulated/floor/tiled,
 /area/crew_quarters/cafeteria)
 "wVM" = (
@@ -60467,7 +60541,7 @@ hiF
 pVY
 fDV
 wVH
-odE
+aaD
 thN
 odE
 tSO
@@ -60727,7 +60801,7 @@ rTI
 oYU
 dSS
 dSS
-dSS
+aaA
 asO
 urW
 wzy
@@ -60986,7 +61060,7 @@ bJT
 dSS
 dSS
 dSS
-asO
+aaz
 uqx
 wzy
 wxU
@@ -61242,10 +61316,10 @@ sxE
 xvg
 wTp
 dSS
-dSS
+aaB
 dSS
 asO
-rTI
+aay
 xVf
 wxU
 dQi
@@ -61500,7 +61574,7 @@ fKC
 xvg
 btH
 sVX
-rTI
+aaC
 ttw
 tTr
 usi
