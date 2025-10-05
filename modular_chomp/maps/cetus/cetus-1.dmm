@@ -9422,10 +9422,6 @@
 /obj/structure/closet/firecloset,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/meteor/foremed)
-"fmt" = (
-/obj/structure/closet/l3closet,
-/turf/simulated/floor/plating,
-/area/maintenance/cetus/aftmed)
 "fmy" = (
 /obj/machinery/atmospherics/pipe/cap/visible{
 	color = "#00ffff";
@@ -13516,7 +13512,7 @@
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/medical{
 	name = "Morgue";
-	req_one_access = list(27, 47)
+	req_one_access = list(27, 47, 5, 6)
 	},
 /obj/structure/cable/green{
 	icon_state = "5-8"
@@ -20402,10 +20398,6 @@
 "kVz" = (
 /turf/simulated/wall,
 /area/crew_quarters/cetus/meteor/cafeteriaf1)
-"kVN" = (
-/obj/structure/closet/firecloset,
-/turf/simulated/floor/plating,
-/area/maintenance/cetus/aftmed)
 "kVY" = (
 /obj/structure/sink/kitchen{
 	pixel_y = 17
@@ -23642,7 +23634,7 @@
 /turf/simulated/floor/tiled/kafel_full,
 /area/security/cetus/meteor/brig)
 "mKN" = (
-/obj/structure/closet/emcloset,
+/obj/structure/closet/l3closet,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/aftmed)
 "mKQ" = (
@@ -40914,6 +40906,10 @@
 /obj/machinery/light/small/emergency,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/meteor/jraft)
+"vzZ" = (
+/obj/structure/closet/firecloset,
+/turf/simulated/floor/plating,
+/area/maintenance/cetus/aftmed)
 "vAk" = (
 /obj/structure/closet{
 	name = "Evidence Closet"
@@ -42359,6 +42355,10 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/crew_quarters/cetus/meteor/vr)
+"wmQ" = (
+/obj/structure/closet/emcloset,
+/turf/simulated/floor/plating,
+/area/maintenance/cetus/aftmed)
 "wmU" = (
 /obj/machinery/atmospherics/tvalve/mirrored,
 /obj/effect/floor_decal/industrial/warning/full,
@@ -74242,7 +74242,7 @@ lHh
 fuS
 eEu
 jgV
-mKN
+wmQ
 vYk
 qFw
 qFw
@@ -74500,7 +74500,7 @@ lHh
 ctd
 jgV
 jgV
-fmt
+mKN
 sUV
 qFw
 qFw
@@ -74758,7 +74758,7 @@ vYk
 vYk
 vYk
 jgV
-kVN
+vzZ
 vYk
 qFw
 qFw
