@@ -579,6 +579,10 @@
 /obj/machinery/recharge_station,
 /turf/simulated/floor/tiled/milspec/raised,
 /area/ai_server_room)
+"apZ" = (
+/obj/machinery/telecomms/server/presets/service/southerncross,
+/turf/simulated/floor/bluegrid,
+/area/asteroid/cetus/d3)
 "aqC" = (
 /obj/effect/landmark/start{
 	name = "Shaft Miner"
@@ -896,12 +900,12 @@
 /turf/simulated/floor/tiled/neutral,
 /area/maintenance/cetus/shallow/derelict/hallway)
 "aBV" = (
-/obj/machinery/alarm{
-	pixel_y = 22
+/obj/machinery/light/fluorescent{
+	dir = 1
 	},
-/obj/random/trash_pile,
-/turf/simulated/floor/plating,
-/area/maintenance/cetus/threeas)
+/obj/machinery/telecomms/server/presets/supply,
+/turf/simulated/floor/bluegrid,
+/area/asteroid/cetus/d3)
 "aCw" = (
 /obj/structure/table/steel,
 /obj/random/maintenance/cargo,
@@ -928,12 +932,9 @@
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/threecp)
 "aCT" = (
-/obj/machinery/light/fluorescent{
-	dir = 1
-	},
-/obj/machinery/telecomms/server/presets/supply,
+/obj/machinery/telecomms/bus/preset_two/southerncross,
 /turf/simulated/floor/bluegrid,
-/area/asteroid/cetus/d3)
+/area/tcomm/chamber)
 "aDF" = (
 /obj/machinery/firealarm{
 	dir = 8;
@@ -1235,9 +1236,9 @@
 /turf/simulated/floor/tiled,
 /area/rnd/cetus/entry)
 "aKJ" = (
-/obj/machinery/telecomms/server/presets/service/southerncross,
+/obj/machinery/telecomms/bus/preset_four,
 /turf/simulated/floor/bluegrid,
-/area/asteroid/cetus/d3)
+/area/tcomm/chamber)
 "aKM" = (
 /obj/structure/sign/warning/acid{
 	name = "\improper DANGEROUS NANITES";
@@ -1377,10 +1378,7 @@
 /turf/simulated/floor/tiled/neutral,
 /area/maintenance/cetus/shallow/derelict/hallway)
 "aOR" = (
-/obj/machinery/light/fluorescent{
-	dir = 1
-	},
-/obj/machinery/telecomms/bus/preset_three,
+/obj/machinery/telecomms/relay/preset/southerncross/centcomm,
 /turf/simulated/floor/bluegrid,
 /area/tcomm/chamber)
 "aOU" = (
@@ -1834,6 +1832,13 @@
 /obj/random/trash_pile,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/threefs)
+"bjw" = (
+/obj/random/trash,
+/obj/machinery/alarm{
+	pixel_y = 22
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/cetus/threeas)
 "bjC" = (
 /obj/machinery/alarm{
 	pixel_y = 22
@@ -2318,26 +2323,6 @@
 /obj/structure/table/standard,
 /turf/simulated/floor/carpet/graycarpet,
 /area/maintenance/cetus/shallow/ap)
-"byo" = (
-/obj/machinery/door/airlock/glass_external{
-	frequency = 1379;
-	icon_state = "door_locked";
-	locked = 1;
-	name = "Internal Airlock Access";
-	req_access = list(13)
-	},
-/obj/effect/map_helper/airlock/door/int_door,
-/obj/effect/floor_decal/industrial/hatch/yellow,
-/obj/machinery/atmospherics/pipe/simple/hidden,
-/obj/machinery/access_button{
-	dir = 4;
-	name = "interior access button";
-	pixel_x = -26;
-	pixel_y = 32
-	},
-/obj/effect/map_helper/airlock/button/int_button,
-/turf/simulated/floor/tiled/techfloor/grid,
-/area/maintenance/cetus/shallow/derelict/dock)
 "byN" = (
 /obj/effect/floor_decal/corner/grey/diagonal{
 	dir = 4
@@ -2840,6 +2825,12 @@
 	},
 /turf/simulated/floor/carpet/graycarpet,
 /area/maintenance/cetus/shallow/starboard)
+"bRd" = (
+/obj/structure/cable/cyan{
+	icon_state = "6-10"
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/tcomm/chamber)
 "bRe" = (
 /turf/simulated/wall/durasteel,
 /area/ai)
@@ -3219,10 +3210,9 @@
 /turf/simulated/floor/tiled/neutral,
 /area/quartermaster/mininglockerroom)
 "ceQ" = (
-/obj/random/junk,
-/obj/random/junk,
-/turf/simulated/floor/plating,
-/area/maintenance/cetus/threeas)
+/obj/machinery/telecomms/relay/preset/southerncross/d2,
+/turf/simulated/floor/bluegrid,
+/area/tcomm/chamber)
 "cfA" = (
 /obj/structure/cable/yellow{
 	icon_state = "0-2"
@@ -4586,9 +4576,14 @@
 /turf/simulated/floor/carpet/graycarpet,
 /area/bridge/Deck3_Corridor)
 "cYp" = (
-/obj/machinery/telecomms/bus/preset_four,
-/turf/simulated/floor/bluegrid,
-/area/tcomm/chamber)
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/structure/dummystairs/greyledge{
+	dir = 4
+	},
+/turf/simulated/floor/carpet/graycarpet,
+/area/quartermaster/storage)
 "cYU" = (
 /obj/structure/outcrop/platinum,
 /turf/simulated/floor/outdoors/rocks/cetus,
@@ -6212,6 +6207,13 @@
 	},
 /turf/simulated/floor/outdoors/rocks/cetus/edge,
 /area/thirddeck/roof)
+"eaG" = (
+/obj/machinery/light/fluorescent{
+	dir = 1
+	},
+/obj/machinery/telecomms/relay/preset/southerncross/d1,
+/turf/simulated/floor/bluegrid,
+/area/tcomm/chamber)
 "eaM" = (
 /obj/machinery/door/airlock/glass_external{
 	frequency = 1379;
@@ -6668,6 +6670,14 @@
 	},
 /turf/simulated/floor/carpet/graycarpet,
 /area/crew_quarters/cetus/mime)
+"emz" = (
+/obj/structure/railing/overhang/grey{
+	dir = 8
+	},
+/obj/structure/railing/overhang/grey,
+/obj/structure/table/bench/steel,
+/turf/simulated/floor/carpet/graycarpet,
+/area/quartermaster/storage)
 "end" = (
 /obj/machinery/camera/motion/command{
 	dir = 8;
@@ -11685,7 +11695,7 @@
 	},
 /obj/structure/lattice,
 /turf/space,
-/area/space)
+/area/engineering/Atmospherics_Chamber)
 "hhN" = (
 /obj/structure/lattice,
 /obj/structure/cable/green{
@@ -12916,6 +12926,10 @@
 /obj/machinery/portable_atmospherics/powered/pump/filled,
 /turf/simulated/open,
 /area/engineering/Atmospherics_Chamber)
+"hUh" = (
+/obj/machinery/telecomms/bus/preset_one,
+/turf/simulated/floor/bluegrid,
+/area/tcomm/chamber)
 "hUj" = (
 /obj/machinery/light,
 /obj/structure/closet/medical_wall{
@@ -13466,10 +13480,6 @@
 "ilK" = (
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/jrthreeport)
-"ilL" = (
-/obj/machinery/telecomms/relay/preset/southerncross/d2,
-/turf/simulated/floor/bluegrid,
-/area/tcomm/chamber)
 "ilW" = (
 /obj/structure/sign/directions/ai_core,
 /turf/simulated/wall/r_wall,
@@ -14449,20 +14459,13 @@
 /turf/simulated/floor/redgrid,
 /area/ai_upload)
 "iUv" = (
-/obj/machinery/door/firedoor/glass,
-/obj/machinery/door/blast/regular{
-	density = 0;
-	icon_state = "pdoor0";
-	id = "crglockdown";
-	name = "Cargo Lockdown";
-	opacity = 0
-	},
-/obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
-/obj/machinery/door/airlock/maintenance/cargo,
-/turf/simulated/floor/plating,
+/obj/structure/dummystairs/greyledge{
+	dir = 8
+	},
+/turf/simulated/floor/carpet/graycarpet,
 /area/quartermaster/storage)
 "iUw" = (
 /obj/structure/table/rack/shelf,
@@ -14604,6 +14607,10 @@
 "iWR" = (
 /turf/simulated/wall/r_wall,
 /area/rnd/research/particleaccelerator)
+"iXt" = (
+/obj/machinery/telecomms/server/presets/common,
+/turf/simulated/floor/bluegrid,
+/area/ai)
 "iYE" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -15696,9 +15703,19 @@
 /turf/simulated/floor/lino,
 /area/maintenance/cetus/shallow/derelict/kitchen)
 "jHc" = (
-/obj/machinery/telecomms/server/presets/common,
-/turf/simulated/floor/bluegrid,
-/area/ai)
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/structure/railing/overhang/grey{
+	dir = 1
+	},
+/obj/item/radio/intercom{
+	dir = 1;
+	name = "Station Intercom (General)";
+	pixel_y = 22
+	},
+/turf/simulated/floor/carpet/graycarpet,
+/area/quartermaster/storage)
 "jHs" = (
 /obj/structure/railing/overhang/hazard{
 	dir = 1
@@ -16939,12 +16956,6 @@
 	dir = 4
 	},
 /obj/machinery/light/small/fluorescent,
-/obj/machinery/turretid/stun{
-	check_synth = 1;
-	name = "AI Entry Hall turret control";
-	pixel_x = -30;
-	control_area = "\improper AI Core Entry Hall"
-	},
 /turf/simulated/floor/tiled/techfloor,
 /area/ai_monitored/aihall)
 "krU" = (
@@ -18615,7 +18626,7 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 1
 	},
-/turf/simulated/floor/tiled/neutral,
+/turf/simulated/floor/tiled/milspec/raised,
 /area/quartermaster/mininglockerroom)
 "loe" = (
 /turf/simulated/floor/carpet/retro_red,
@@ -19343,10 +19354,6 @@
 /obj/structure/reagent_dispensers/water_cooler/full,
 /turf/simulated/floor/carpet/graycarpet,
 /area/maintenance/cetus/shallow/starboard)
-"lGN" = (
-/obj/machinery/telecomms/relay/preset/southerncross/centcomm,
-/turf/simulated/floor/bluegrid,
-/area/tcomm/chamber)
 "lHd" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/red{
 	dir = 1
@@ -24252,9 +24259,20 @@
 /turf/simulated/floor/carpet/graycarpet,
 /area/bridge/Deck3_Corridor)
 "otl" = (
-/obj/machinery/telecomms/bus/preset_one,
-/turf/simulated/floor/bluegrid,
-/area/tcomm/chamber)
+/obj/machinery/hologram/holopad,
+/obj/effect/floor_decal/corner/brown/bordercorner,
+/obj/effect/floor_decal/corner/brown/bordercorner{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/brown/bordercorner{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/brown/bordercorner{
+	dir = 4
+	},
+/obj/effect/floor_decal/spline/plain/three_quarters,
+/turf/simulated/floor/tiled/milspec/raised,
+/area/quartermaster/storage)
 "otm" = (
 /obj/structure/cable/yellow{
 	icon_state = "1-4"
@@ -24599,10 +24617,6 @@
 /obj/machinery/photocopier,
 /turf/simulated/floor/tiled/dark,
 /area/maintenance/cetus/shallow/law)
-"oCR" = (
-/obj/machinery/telecomms/bus/preset_two/southerncross,
-/turf/simulated/floor/bluegrid,
-/area/tcomm/chamber)
 "oCX" = (
 /obj/structure/dummystairs/hazardledge{
 	dir = 8
@@ -27484,6 +27498,13 @@
 /obj/effect/floor_decal/asteroid,
 /turf/simulated/floor/outdoors/rocks/cetus,
 /area/maintenance/cetus/jrthreestar)
+"qqb" = (
+/obj/structure/railing/overhang/grey{
+	dir = 8
+	},
+/obj/structure/table/bench/steel,
+/turf/simulated/floor/carpet/graycarpet,
+/area/quartermaster/storage)
 "qqj" = (
 /obj/structure/cable/cyan{
 	icon_state = "1-4"
@@ -27917,6 +27938,13 @@
 "qFp" = (
 /turf/simulated/wall,
 /area/asteroid/cetus/d3)
+"qFD" = (
+/obj/machinery/light/fluorescent{
+	dir = 1
+	},
+/obj/machinery/telecomms/bus/preset_three,
+/turf/simulated/floor/bluegrid,
+/area/tcomm/chamber)
 "qFN" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -28260,13 +28288,6 @@
 /obj/random/trash,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/threeap)
-"qRu" = (
-/obj/machinery/light/fluorescent{
-	dir = 1
-	},
-/obj/machinery/telecomms/relay/preset/southerncross/d1,
-/turf/simulated/floor/bluegrid,
-/area/tcomm/chamber)
 "qSu" = (
 /obj/machinery/vending/loadout/accessory,
 /turf/simulated/floor/carpet/graycarpet,
@@ -29762,6 +29783,22 @@
 	},
 /turf/simulated/floor/carpet,
 /area/crew_quarters/cetus/Libraryf2)
+"rJR" = (
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/machinery/door/airlock/maintenance/cargo,
+/obj/machinery/door/blast/regular{
+	density = 0;
+	icon_state = "pdoor0";
+	id = "crglockdown";
+	name = "Cargo Lockdown";
+	opacity = 0
+	},
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/machinery/door/firedoor/glass,
+/turf/simulated/floor/plating,
+/area/quartermaster/storage)
 "rKn" = (
 /obj/structure/bed/chair/comfy/brown{
 	dir = 4
@@ -29799,6 +29836,16 @@
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/Atmospherics_Chamber)
+"rLq" = (
+/obj/structure/railing/overhang/grey{
+	dir = 4
+	},
+/obj/structure/railing/overhang/grey,
+/obj/random/vendordrink{
+	dir = 4
+	},
+/turf/simulated/floor/carpet/graycarpet,
+/area/quartermaster/storage)
 "rLI" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
@@ -30767,6 +30814,10 @@
 	},
 /turf/simulated/open,
 /area/engineering/Atmospherics_Chamber)
+"stf" = (
+/obj/structure/railing/overhang/grey,
+/turf/simulated/floor/carpet/graycarpet,
+/area/quartermaster/storage)
 "stp" = (
 /obj/random/junk,
 /obj/machinery/light/small,
@@ -33710,7 +33761,7 @@
 	},
 /obj/machinery/door/airlock/maintenance_hatch{
 	name = "Telecoms Storage";
-	req_access = list(61)
+	req_one_access = list(12, 16, 19, 30)
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/tcomm/tcomstorage)
@@ -36040,6 +36091,26 @@
 	},
 /turf/simulated/floor/carpet/blucarpet,
 /area/bridge/sleep/Captain_Quarters)
+"vCg" = (
+/obj/machinery/door/airlock/glass_external{
+	frequency = 1379;
+	icon_state = "door_locked";
+	locked = 1;
+	name = "Internal Airlock Access";
+	req_access = list(13)
+	},
+/obj/effect/map_helper/airlock/door/int_door,
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/machinery/atmospherics/pipe/simple/hidden,
+/obj/machinery/access_button{
+	dir = 4;
+	name = "interior access button";
+	pixel_x = -26;
+	pixel_y = 32
+	},
+/obj/effect/map_helper/airlock/button/int_button,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/maintenance/cetus/shallow/derelict/dock)
 "vCn" = (
 /obj/random/contraband,
 /obj/random/maintenance,
@@ -38364,7 +38435,7 @@
 	RCon_tag = "Telecommunications Satellite"
 	},
 /obj/item/smes_coil/super_capacity,
-/obj/item/smes_coil/super_io/hyper,
+/obj/item/smes_coil/super_io,
 /turf/simulated/floor/redgrid,
 /area/ai)
 "wOI" = (
@@ -39004,12 +39075,6 @@
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/heads/sc/restroom)
-"xlE" = (
-/obj/structure/cable/cyan{
-	icon_state = "6-10"
-	},
-/turf/simulated/floor/tiled/techfloor,
-/area/tcomm/chamber)
 "xmx" = (
 /obj/machinery/atmospherics/binary/pump{
 	dir = 8
@@ -39027,6 +39092,15 @@
 /obj/item/smes_coil/super_io,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/ai_server_room)
+"xnp" = (
+/obj/structure/railing/overhang/grey{
+	dir = 4
+	},
+/obj/random/vendorfood{
+	dir = 8
+	},
+/turf/simulated/floor/carpet/graycarpet,
+/area/quartermaster/storage)
 "xnR" = (
 /obj/effect/floor_decal/spline/plain{
 	dir = 4
@@ -64479,7 +64553,7 @@ pLD
 ydc
 uBU
 mFy
-uow
+qvG
 vwJ
 hzH
 vwJ
@@ -65746,7 +65820,7 @@ cMw
 fnG
 xUa
 chR
-chR
+iHb
 chR
 tyT
 tNS
@@ -67816,7 +67890,7 @@ nGW
 tSn
 eUl
 chR
-mkH
+rzI
 mkH
 sJi
 sJi
@@ -72481,7 +72555,7 @@ ooY
 ooY
 byh
 byh
-aVY
+etf
 lTW
 mWU
 ffe
@@ -79977,7 +80051,7 @@ tFK
 tFK
 mdy
 pJE
-rRw
+jOC
 rRw
 rRw
 ifh
@@ -85347,10 +85421,10 @@ idF
 ifh
 ifh
 vHX
-qRu
-ilL
+eaG
+ceQ
 oBH
-lGN
+aOR
 jWH
 lvg
 rjy
@@ -85863,10 +85937,10 @@ idF
 idF
 ifh
 vHX
-aOR
-cYp
-oCR
-otl
+qFD
+aKJ
+aCT
+hUh
 wDL
 vHA
 fDa
@@ -86177,7 +86251,7 @@ gbf
 mzx
 vWn
 sZJ
-byo
+vCg
 dqq
 dHF
 hgI
@@ -86640,7 +86714,7 @@ vHX
 fcV
 fcV
 fcV
-xlE
+bRd
 cUQ
 uzX
 jSG
@@ -86895,10 +86969,10 @@ idF
 idF
 ifh
 jOC
-aCT
-aKJ
+aBV
+apZ
 iLj
-jHc
+iXt
 kJT
 jSG
 jSG
@@ -92607,8 +92681,8 @@ aqC
 lea
 vmv
 iUv
-jsD
-jsD
+qqb
+emz
 jsD
 vjW
 dwS
@@ -92864,10 +92938,10 @@ bgs
 fpH
 mJQ
 vmv
-tcI
-gxW
-bPf
-bPf
+jHc
+otl
+stf
+jsD
 vjW
 vjW
 xGr
@@ -93122,10 +93196,10 @@ pKn
 ieY
 nLo
 vmv
-tcI
-gxW
-bPf
-bPf
+cYp
+xnp
+rLq
+jsD
 hvS
 vjW
 xGr
@@ -93380,12 +93454,12 @@ uhA
 vmv
 gxW
 gxW
-tcI
-gxW
-aBV
-ceQ
+rJR
+jsD
+jsD
+jsD
 vjW
-vjW
+bPf
 xGr
 hgI
 hgI
@@ -93898,7 +93972,7 @@ dFF
 wqO
 eQB
 gxW
-hvS
+bjw
 vjW
 hPv
 vjW
@@ -101084,7 +101158,7 @@ cbQ
 ydZ
 unD
 unD
-ikT
+ydZ
 ydZ
 ifh
 ifh
