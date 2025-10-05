@@ -3746,6 +3746,7 @@
 	dir = 8
 	},
 /obj/effect/map_helper/airlock/button/ext_button,
+/obj/structure/fans/tiny,
 /turf/simulated/floor/tiled/techmaint,
 /area/hallway/secondary/entry/D2)
 "bny" = (
@@ -4078,18 +4079,6 @@
 /obj/structure/railing/grey,
 /turf/simulated/open,
 /area/medical/cetus/atriumd2)
-"buX" = (
-/obj/effect/floor_decal/borderfloorwhite/corner{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/purple/bordercorner{
-	dir = 1
-	},
-/obj/machinery/status_display{
-	pixel_y = 32
-	},
-/turf/simulated/floor/tiled/white,
-/area/medical/medsci)
 "bvy" = (
 /obj/machinery/hologram/holopad,
 /obj/effect/floor_decal/corner/paleblue/bordercorner,
@@ -5095,6 +5084,7 @@
 	dir = 8
 	},
 /obj/effect/map_helper/airlock/button/ext_button,
+/obj/structure/fans/tiny,
 /turf/simulated/floor/tiled/techmaint,
 /area/hallway/secondary/entry/D3)
 "bMP" = (
@@ -6171,6 +6161,7 @@
 	pixel_y = 32
 	},
 /obj/effect/map_helper/airlock/button/ext_button,
+/obj/structure/fans/tiny,
 /turf/simulated/floor/tiled/techmaint,
 /area/hallway/secondary/entry/D1)
 "cfU" = (
@@ -11320,6 +11311,12 @@
 "dTY" = (
 /turf/simulated/wall/r_wall,
 /area/security/Wardens_Office)
+"dUe" = (
+/obj/effect/mist,
+/turf/simulated/floor/water/hotspring{
+	depth = 1
+	},
+/area/crew_quarters/sauna)
 "dUn" = (
 /obj/machinery/power/apc{
 	dir = 1;
@@ -11749,7 +11746,8 @@
 	name = "Hot Tub Bolts";
 	pixel_y = -25;
 	pixel_x = 32;
-	dir = 1
+	dir = 1;
+	specialfunctions = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled,
@@ -13142,7 +13140,7 @@
 	dir = 4
 	},
 /turf/space,
-/area/space)
+/area/maintenance/cetus/twojrport)
 "eBk" = (
 /obj/effect/wingrille_spawn/reinforced,
 /obj/machinery/door/firedoor/glass,
@@ -13801,6 +13799,16 @@
 /obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/twosec)
+"eOo" = (
+/obj/machinery/conveyor{
+	id = "disposalsorter"
+	},
+/obj/machinery/door/window/southleft{
+	name = "Recycling Chute";
+	req_access = list(50)
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/quartermaster/Recycling)
 "eOq" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 6
@@ -15275,6 +15283,7 @@
 	pixel_y = 32
 	},
 /obj/effect/map_helper/airlock/button/ext_button,
+/obj/structure/fans/tiny,
 /turf/simulated/floor/tiled/techmaint,
 /area/hallway/secondary/entry/D2)
 "fnZ" = (
@@ -17586,6 +17595,10 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/twostar)
+"gbM" = (
+/obj/machinery/atmospherics/pipe/manifold/visible,
+/turf/simulated/floor/plating/turfpack/airless,
+/area/maintenance/cetus/auxsupport)
 "gce" = (
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 1
@@ -21430,6 +21443,13 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/effect/map_helper/airlock/door/int_door,
+/obj/machinery/access_button{
+	dir = 1;
+	name = "interior access button";
+	pixel_y = 8;
+	pixel_x = -32
+	},
+/obj/effect/map_helper/airlock/button/int_button,
 /turf/simulated/floor/tiled/techmaint,
 /area/hallway/secondary/entry/D3)
 "htb" = (
@@ -22165,6 +22185,13 @@
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/cetus/atrium/primary)
+"hEQ" = (
+/obj/machinery/atmospherics/binary/pump/on{
+	dir = 4;
+	target_pressure = 200
+	},
+/turf/simulated/floor/plating/turfpack/airless,
+/area/maintenance/cetus/auxsupport)
 "hES" = (
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -22367,6 +22394,10 @@
 	},
 /obj/machinery/light{
 	dir = 4
+	},
+/obj/machinery/button/garbosystem{
+	pixel_x = -8;
+	pixel_y = -3
 	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/Recycling)
@@ -23438,9 +23469,8 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 10
 	},
-/obj/machinery/atmospherics/binary/pump/on{
-	dir = 4;
-	target_pressure = 200
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 5
 	},
 /turf/simulated/floor/plating/turfpack/airless,
 /area/maintenance/cetus/auxsupport)
@@ -24032,6 +24062,12 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/cetus/stairwellf2)
+"ilT" = (
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 6
+	},
+/turf/simulated/floor/plating/turfpack/airless,
+/area/maintenance/cetus/auxsupport)
 "imb" = (
 /obj/effect/wingrille_spawn/reinforced,
 /obj/machinery/door/firedoor/glass,
@@ -27412,6 +27448,7 @@
 /obj/item/towel/random{
 	pixel_y = 2
 	},
+/obj/structure/fans/tiny,
 /turf/simulated/floor/outdoors/rocks/cetus,
 /area/crew_quarters/sauna)
 "jxh" = (
@@ -39331,12 +39368,6 @@
 	},
 /turf/simulated/open,
 /area/crew_quarters/cetus/cafeteriaf2)
-"nNr" = (
-/obj/effect/mist,
-/turf/simulated/floor/water/hotspring{
-	depth = 1
-	},
-/area/crew_quarters/sauna)
 "nNE" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -39693,6 +39724,7 @@
 	},
 /obj/effect/map_helper/airlock/door/ext_door,
 /obj/machinery/shield_diffuser,
+/obj/structure/fans/tiny,
 /turf/simulated/floor/tiled/techmaint,
 /area/hallway/secondary/entry/D1)
 "nTv" = (
@@ -40271,6 +40303,7 @@
 	pixel_y = 3
 	},
 /obj/effect/floor_decal/corner/black/diagonal,
+/obj/item/book/codex/chef_recipes,
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/kitchen)
 "ocl" = (
@@ -44734,13 +44767,6 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden,
 /turf/simulated/floor/plating,
 /area/hallway/secondary/entry/D1)
-"pzr" = (
-/obj/machinery/pointdefense{
-	id_tag = "PD Main"
-	},
-/obj/machinery/shield_diffuser,
-/turf/simulated/floor/plating/turfpack/airless,
-/area/space)
 "pzt" = (
 /obj/item/material/shard,
 /turf/simulated/floor/outdoors/rocks/cetus,
@@ -45654,6 +45680,7 @@
 	},
 /obj/effect/map_helper/airlock/door/ext_door,
 /obj/machinery/shield_diffuser,
+/obj/structure/fans/tiny,
 /turf/simulated/floor/tiled/techmaint,
 /area/hallway/secondary/entry/D3)
 "pMX" = (
@@ -46584,16 +46611,6 @@
 	},
 /turf/simulated/open,
 /area/medical/Virology)
-"qbs" = (
-/obj/machinery/conveyor{
-	id = "disposalsorter"
-	},
-/obj/machinery/door/window/southleft{
-	name = "Recycling Chute";
-	req_access = list(50)
-	},
-/turf/simulated/floor/tiled/techfloor,
-/area/quartermaster/Recycling)
 "qbt" = (
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -49301,12 +49318,6 @@
 /area/maintenance/cetus/twosci)
 "qWV" = (
 /obj/effect/floor_decal/industrial/warning/corner,
-/obj/machinery/access_button{
-	dir = 1;
-	name = "interior access button";
-	pixel_y = -24
-	},
-/obj/effect/map_helper/airlock/button/int_button,
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/entry/D3)
 "qXe" = (
@@ -52227,12 +52238,6 @@
 	},
 /turf/simulated/floor/wood,
 /area/medical/psych)
-"rWR" = (
-/obj/structure/cable/cyan{
-	icon_state = "0-8"
-	},
-/turf/simulated/open,
-/area/maintenance/cetus/twocargo)
 "rXa" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -55817,7 +55822,7 @@
 	},
 /obj/structure/lattice,
 /turf/space,
-/area/space)
+/area/maintenance/cetus/twojrport)
 "tfW" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -62714,9 +62719,11 @@
 /turf/simulated/floor/outdoors/rocks/cetus,
 /area/asteroid/cetus/d2/jr)
 "vyN" = (
-/obj/structure/fans/tiny,
-/turf/simulated/floor/outdoors/rocks/cetus,
-/area/crew_quarters/sauna)
+/obj/structure/cable/cyan{
+	icon_state = "0-8"
+	},
+/turf/simulated/open,
+/area/maintenance/cetus/twocargo)
 "vyS" = (
 /obj/structure/table/woodentable,
 /obj/machinery/light/small/yellowed{
@@ -67006,6 +67013,12 @@
 	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/cetus/atrium/secondaryf2)
+"wZn" = (
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 10
+	},
+/turf/simulated/floor/plating/turfpack/airless,
+/area/maintenance/cetus/auxsupport)
 "wZS" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -69659,6 +69672,7 @@
 	},
 /obj/effect/map_helper/airlock/door/ext_door,
 /obj/machinery/shield_diffuser,
+/obj/structure/fans/tiny,
 /turf/simulated/floor/tiled/techmaint,
 /area/hallway/secondary/entry/D2)
 "xZp" = (
@@ -84545,7 +84559,7 @@ oJw
 oJw
 oJw
 dRK
-kmJ
+dRK
 cLh
 oJw
 oJw
@@ -84802,8 +84816,8 @@ oJw
 oJw
 oJw
 oJw
-kmJ
-pzr
+dRK
+lDx
 cLh
 kmJ
 kmJ
@@ -85061,7 +85075,7 @@ oJw
 oJw
 oJw
 dRK
-kmJ
+dRK
 cLh
 oJw
 oJw
@@ -87499,7 +87513,7 @@ oJw
 apx
 apx
 wvH
-tpf
+dKq
 hms
 apx
 apx
@@ -87641,7 +87655,7 @@ oJw
 oJw
 oJw
 dRK
-kmJ
+dRK
 cLh
 oJw
 oJw
@@ -87756,8 +87770,8 @@ oJw
 oJw
 apx
 apx
-wvH
-dKq
+ilT
+gbM
 hms
 apx
 apx
@@ -87898,8 +87912,8 @@ oJw
 oJw
 oJw
 oJw
-kmJ
-pzr
+dRK
+lDx
 cLh
 kmJ
 kmJ
@@ -88014,7 +88028,7 @@ oJw
 oJw
 apx
 apx
-wvH
+hEQ
 efp
 hms
 apx
@@ -88157,7 +88171,7 @@ oJw
 oJw
 oJw
 dRK
-kmJ
+dRK
 cLh
 oJw
 oJw
@@ -88272,7 +88286,7 @@ oJw
 oJw
 apx
 apx
-wvH
+wZn
 hZP
 qpv
 apx
@@ -96525,7 +96539,7 @@ kuY
 sHM
 ljF
 hWF
-buX
+uGi
 nTU
 nQg
 bfa
@@ -105794,7 +105808,7 @@ iMO
 pPf
 dMW
 cRI
-lln
+gJH
 ivW
 rBN
 ybM
@@ -108138,11 +108152,11 @@ mIo
 bNk
 bNk
 txC
-nNr
+dUe
 sdN
 sdN
 jwZ
-vyN
+etb
 qWu
 qWu
 qWu
@@ -108397,7 +108411,7 @@ bNk
 liR
 ovc
 pea
-nNr
+dUe
 lvX
 mKC
 snK
@@ -119766,7 +119780,7 @@ oow
 oow
 oow
 bMR
-rWR
+vyN
 oow
 vAf
 xdC
@@ -121303,7 +121317,7 @@ mfj
 lvh
 dvf
 dvf
-dvf
+eHA
 dvf
 eHA
 cKR
@@ -121568,7 +121582,7 @@ pYl
 sCZ
 pYl
 qTb
-qbs
+eOo
 tYk
 caI
 dvf
