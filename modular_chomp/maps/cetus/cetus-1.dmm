@@ -1824,10 +1824,6 @@
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/neutral,
 /area/maintenance/cetus/hallway)
-"aYk" = (
-/obj/structure/closet/l3closet,
-/turf/simulated/floor/plating,
-/area/maintenance/cetus/aftmed)
 "aYn" = (
 /obj/machinery/appliance/cooker/grill,
 /turf/simulated/floor/tiled,
@@ -9426,6 +9422,10 @@
 /obj/structure/closet/firecloset,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/meteor/foremed)
+"fmt" = (
+/obj/structure/closet/l3closet,
+/turf/simulated/floor/plating,
+/area/maintenance/cetus/aftmed)
 "fmy" = (
 /obj/machinery/atmospherics/pipe/cap/visible{
 	color = "#00ffff";
@@ -13292,7 +13292,9 @@
 /area/engineering/cetus/meteor/atriumdeck1)
 "huB" = (
 /obj/machinery/atmospherics/unary/vent_pump/on,
-/obj/structure/undies_wardrobe,
+/obj/structure/undies_wardrobe{
+	anchored = 1
+	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/sleep/cetus/meteor/dorm9)
 "huI" = (
@@ -15897,7 +15899,9 @@
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/meteor/portsec)
 "iJy" = (
-/obj/structure/undies_wardrobe,
+/obj/structure/undies_wardrobe{
+	anchored = 1
+	},
 /obj/item/towel/random{
 	pixel_y = 11
 	},
@@ -17758,7 +17762,9 @@
 /turf/simulated/floor/lino,
 /area/maintenance/ab_GeneralStore)
 "jGe" = (
-/obj/structure/undies_wardrobe,
+/obj/structure/undies_wardrobe{
+	anchored = 1
+	},
 /obj/effect/floor_decal/corner/lightorange/diagonal,
 /turf/simulated/floor/tiled/old_tile/white,
 /area/maintenance/cetus/stylist)
@@ -20396,6 +20402,10 @@
 "kVz" = (
 /turf/simulated/wall,
 /area/crew_quarters/cetus/meteor/cafeteriaf1)
+"kVN" = (
+/obj/structure/closet/firecloset,
+/turf/simulated/floor/plating,
+/area/maintenance/cetus/aftmed)
 "kVY" = (
 /obj/structure/sink/kitchen{
 	pixel_y = 17
@@ -20634,7 +20644,9 @@
 /area/engineering/cetus/meteor/airlock)
 "ldm" = (
 /obj/machinery/atmospherics/unary/vent_pump/on,
-/obj/structure/undies_wardrobe,
+/obj/structure/undies_wardrobe{
+	anchored = 1
+	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/sleep/cetus/meteor/dorm7)
 "ldt" = (
@@ -24976,7 +24988,9 @@
 /area/maintenance/cetus/meteor/aftstar)
 "nzS" = (
 /obj/machinery/atmospherics/unary/vent_pump/on,
-/obj/structure/undies_wardrobe,
+/obj/structure/undies_wardrobe{
+	anchored = 1
+	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/sleep/cetus/meteor/dorm10)
 "nAi" = (
@@ -25933,12 +25947,16 @@
 	icon_state = "pipe-c"
 	},
 /obj/effect/floor_decal/spline/plain,
-/obj/structure/undies_wardrobe,
+/obj/structure/undies_wardrobe{
+	anchored = 1
+	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/sleep/cetus/meteor/dorm1)
 "nZz" = (
 /obj/machinery/atmospherics/unary/vent_pump/on,
-/obj/structure/undies_wardrobe,
+/obj/structure/undies_wardrobe{
+	anchored = 1
+	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/sleep/cetus/meteor/dorm6)
 "oaa" = (
@@ -28077,7 +28095,9 @@
 /area/medical/cetus/atriumd1)
 "pdl" = (
 /obj/machinery/atmospherics/unary/vent_pump/on,
-/obj/structure/undies_wardrobe,
+/obj/structure/undies_wardrobe{
+	anchored = 1
+	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/sleep/cetus/meteor/dorm8)
 "pdC" = (
@@ -29053,7 +29073,9 @@
 	icon_state = "pipe-c"
 	},
 /obj/effect/floor_decal/spline/plain,
-/obj/structure/undies_wardrobe,
+/obj/structure/undies_wardrobe{
+	anchored = 1
+	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/sleep/cetus/meteor/dorm4)
 "pKI" = (
@@ -29373,7 +29395,9 @@
 	icon_state = "pipe-c"
 	},
 /obj/effect/floor_decal/spline/plain,
-/obj/structure/undies_wardrobe,
+/obj/structure/undies_wardrobe{
+	anchored = 1
+	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/sleep/cetus/meteor/dorm3)
 "pQE" = (
@@ -31139,10 +31163,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/engineering/cetus/starsubstation)
-"qDu" = (
-/obj/structure/closet/firecloset,
-/turf/simulated/floor/plating,
-/area/maintenance/cetus/aftmed)
 "qDB" = (
 /obj/structure/railing{
 	dir = 8
@@ -32092,7 +32112,9 @@
 /turf/simulated/mineral/cetus,
 /area/chapel/chapel_morgue/cetus/crypt)
 "rex" = (
-/obj/structure/undies_wardrobe,
+/obj/structure/undies_wardrobe{
+	anchored = 1
+	},
 /obj/machinery/firealarm{
 	dir = 1;
 	pixel_y = -24
@@ -35886,7 +35908,6 @@
 /turf/simulated/floor/carpet/graycarpet,
 /area/crew_quarters/cetus/meteor/hallway2)
 "tge" = (
-/obj/machinery/computer/arcade,
 /obj/effect/floor_decal/spline/plain,
 /obj/effect/floor_decal/spline/plain{
 	dir = 1
@@ -35894,6 +35915,7 @@
 /obj/structure/cable/green{
 	icon_state = "5-10"
 	},
+/obj/machinery/gear_painter,
 /turf/simulated/floor/tiled/techmaint,
 /area/crew_quarters/cetus/meteor/hallway2)
 "tgq" = (
@@ -40577,7 +40599,9 @@
 	icon_state = "pipe-c"
 	},
 /obj/effect/floor_decal/spline/plain,
-/obj/structure/undies_wardrobe,
+/obj/structure/undies_wardrobe{
+	anchored = 1
+	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/sleep/cetus/meteor/dorm2)
 "vra" = (
@@ -40774,7 +40798,9 @@
 	icon_state = "pipe-c"
 	},
 /obj/effect/floor_decal/spline/plain,
-/obj/structure/undies_wardrobe,
+/obj/structure/undies_wardrobe{
+	anchored = 1
+	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/sleep/cetus/meteor/dorm5)
 "vwN" = (
@@ -59398,8 +59424,8 @@ deV
 ycR
 rwY
 nQy
-jqk
 kIe
+jqk
 vgf
 xat
 lox
@@ -74474,7 +74500,7 @@ lHh
 ctd
 jgV
 jgV
-aYk
+fmt
 sUV
 qFw
 qFw
@@ -74732,7 +74758,7 @@ vYk
 vYk
 vYk
 jgV
-qDu
+kVN
 vYk
 qFw
 qFw
