@@ -580,7 +580,7 @@
 	vore_standing_too = TRUE
 	unacidable = TRUE
 
-	loot_list = list(/obj/item/projectile/energy/wp_shotgun  = 30,
+	loot_list = list(/obj/item/gun/energy/curse_tyrshotgun  = 30,
 		/obj/item/gun/energy/energyballchain  = 30,
 		/obj/item/tool/wirecutters/hybrid/alien  = 30,
 		/obj/item/tool/wrench/hybrid/alien  = 30,
@@ -588,7 +588,7 @@
 		/obj/item/tool/screwdriver/hybrid/alien  = 30,
 		/obj/item/pickaxe/diamonddrill/alien = 30,
 		/obj/item/melee/energy/sword/dualsaber = 30,
-		/obj/item/shield_projector/rectangle/automatic/tyrvault = 0.01,
+		/obj/item/shield_projector/rectangle/automatic/tyrbarrier = 1,
 		/obj/item/stock_parts/scanning_module/omni = 80,
 		/obj/item/stock_parts/micro_laser/omni = 80,
 		/obj/item/stock_parts/capacitor/omni = 80,
@@ -915,13 +915,8 @@
 	..()
 
 /mob/living/simple_mob/mechanical/mecha/eclipse/tankyboss/massswarm/do_special_attack(atom/A)
-	rng_cycle = rand(1,2)
-	if(attackcycle == 1)
-		addtimer(CALLBACK(src, PROC_REF(bomb_chaos), A, rng_cycle), 2.5 SECONDS, TIMER_DELETE_ME)
-		attackcycle = 0
-	else if(attackcycle == 2)
-		addtimer(CALLBACK(src, PROC_REF(bomb_lines), A, rng_cycle), 2.5 SECONDS, TIMER_DELETE_ME)
-		attackcycle = 0
+	for(var/i =1 to 3)
+		new /mob/living/simple_mob/mechanical/hivebot/nanoevent/bright_green/tyr(src.loc)
 
 /*
 /mob/living/simple_mob/mechanical/mecha/eclipse/tankyboss/finale //finale
