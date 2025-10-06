@@ -12213,6 +12213,7 @@
 	dir = 1;
 	pixel_y = -22
 	},
+/obj/machinery/portable_atmospherics/canister/empty,
 /turf/simulated/floor/tiled,
 /area/engineering/Atmospherics_Chamber)
 "hxq" = (
@@ -14069,6 +14070,7 @@
 /obj/structure/window/reinforced{
 	dir = 4
 	},
+/obj/machinery/portable_atmospherics/canister/empty,
 /turf/simulated/floor/tiled,
 /area/engineering/Atmospherics_Chamber)
 "iGZ" = (
@@ -17937,7 +17939,6 @@
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/shallow/ap)
 "kSR" = (
-/obj/machinery/portable_atmospherics/canister/empty,
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
 	},
@@ -17950,6 +17951,7 @@
 /obj/effect/floor_decal/spline/plain{
 	dir = 8
 	},
+/obj/machinery/portable_atmospherics/canister/methane,
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/Atmospherics_Chamber)
 "kTb" = (
@@ -38006,6 +38008,7 @@
 	pixel_y = -30
 	},
 /obj/machinery/light,
+/obj/machinery/portable_atmospherics/canister/empty,
 /turf/simulated/floor/tiled,
 /area/engineering/Atmospherics_Chamber)
 "wBJ" = (

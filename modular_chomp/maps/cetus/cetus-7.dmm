@@ -10103,8 +10103,7 @@
 /area/shadekin)
 "ken" = (
 /obj/machinery/portable_atmospherics/hydroponics/soil,
-/obj/structure/flora/ausbushes/fullgrass,
-/turf/simulated/floor/outdoors/mud/cetus,
+/turf/simulated/floor/grass2,
 /area/shadekin)
 "ker" = (
 /obj/structure/sink{
@@ -50291,8 +50290,8 @@ ydh
 ydh
 sAG
 vvS
-wfq
 ken
+jMh
 qJf
 qJf
 knf
@@ -51070,7 +51069,7 @@ hop
 dCC
 eOs
 lSl
-fsD
+knf
 lRw
 jMh
 tfg
@@ -51584,7 +51583,7 @@ fvv
 hRE
 dCC
 jvF
-jMh
+knf
 dCC
 rVH
 qaR
@@ -52097,7 +52096,7 @@ tfg
 ydh
 tfg
 vfc
-jMh
+knf
 uoc
 dCC
 nku
@@ -52359,7 +52358,7 @@ fvv
 hop
 hop
 hop
-qXP
+knf
 ufm
 ufm
 xfJ
