@@ -332,40 +332,6 @@
 					src.anchored = TRUE
 					src.pinned += O
 
-<<<<<<< HEAD
-	//VORESTATION EDIT START - Allows for thrown vore! //CHOMPEdit Start
-	//Throwing a prey into a pred takes priority. After that it checks to see if the person being thrown is a pred.
-	if(isliving(source))
-		var/mob/living/thrown_mob = source
-
-		// PERSON BEING HIT: CAN BE DROP PRED, ALLOWS THROW VORE.
-		// PERSON BEING THROWN: DEVOURABLE, ALLOWS THROW VORE, CAN BE DROP PREY.
-		if((can_be_drop_pred && throw_vore) && (thrown_mob.devourable && thrown_mob.throw_vore && thrown_mob.can_be_drop_prey)) //Prey thrown into pred.
-			if(!thrown_mob.allowmobvore && isanimal(src) && !ckey || !vore_selected) //Does the person being thrown not allow mob vore and is the person being hit (us) a simple_mob?
-				return
-			vore_selected.nom_mob(thrown_mob) //Eat them!!!
-			visible_message(span_vwarning("[thrown_mob] is thrown right into [src]'s [lowertext(vore_selected.name)]!"))
-			if(thrown_mob.loc != vore_selected)
-				thrown_mob.forceMove(vore_selected) //Double check. Should never happen but...Weirder things have happened!
-			on_throw_vore_special(TRUE, thrown_mob)
-			add_attack_logs(thrown_mob.thrower,src,"Devoured [thrown_mob.name] via throw vore.")
-			return //We can stop here. We don't need to calculate damage or anything else. They're eaten.
-
-		// PERSON BEING HIT: CAN BE DROP PREY, ALLOWS THROW VORE, AND IS DEVOURABLE.
-		// PERSON BEING THROWN: CAN BE DROP PRED, ALLOWS THROW VORE.
-		else if((can_be_drop_prey && throw_vore && devourable) && (thrown_mob.can_be_drop_pred && thrown_mob.throw_vore)) //Pred thrown into prey.
-			if(!allowmobvore && isanimal(thrown_mob) && !thrown_mob.ckey || !thrown_mob.vore_selected) //Does the person being hit not allow mob vore and the perrson being thrown a simple_mob?
-				return
-			visible_message(span_vwarning("[src] suddenly slips inside of [thrown_mob]'s [lowertext(thrown_mob.vore_selected.name)] as [thrown_mob] flies into them!"))
-			thrown_mob.vore_selected.nom_mob(src) //Eat them!!!
-			if(src.loc != thrown_mob.vore_selected)
-				src.forceMove(thrown_mob.vore_selected) //Double check. Should never happen but...Weirder things have happened!
-			add_attack_logs(thrown_mob.LAssailant,src,"Was Devoured by [thrown_mob.name] via throw vore.")
-			return
-	//VORESTATION EDIT END - Allows for thrown vore! //CHOMPEdit End
-
-=======
->>>>>>> 44c6b2f707 (Spontaneous Vore Element (#18556))
 /mob/living/proc/on_throw_vore_special(var/pred = TRUE, var/mob/living/target)
 	return
 

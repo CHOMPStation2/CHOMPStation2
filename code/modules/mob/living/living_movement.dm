@@ -113,22 +113,14 @@ default behaviour is:
 					return
 
 			forceMove(tmob.loc)
-<<<<<<< HEAD
 			//CHOMPSTATION Edit - Making macro/micro step mechanics mandatory again for balance, but removing the fetish aspects if pref denied.
 			//There's nothing fetishistic about politely stepping past someone.
 			// In case of micros, we don't swap positions; instead occupying the same square!
 			if(handle_micro_bump_helping(tmob))
-				now_pushing = 0
+				now_pushing = FALSE
 				return
 			// TODO - Check if we need to do something about the slime.UpdateFeed() we are skipping below.
 			// CHOMPSTATION Edit - End
-=======
-			// In case of micros, we don't swap positions; instead occupying the same square!
-			if(step_mechanics_pref && tmob.step_mechanics_pref)
-				if(handle_micro_bump_helping(tmob))
-					now_pushing = FALSE
-					return
->>>>>>> 44c6b2f707 (Spontaneous Vore Element (#18556))
 			tmob.forceMove(oldloc)
 			now_pushing = FALSE
 			return
