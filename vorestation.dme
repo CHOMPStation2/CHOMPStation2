@@ -5020,7 +5020,6 @@
 #include "maps\tether\tether_shuttle_defs.dm"
 #include "maps\tether\tether_telecomm_defs.dm"
 #include "maps\virtual_reality\constructVR.dm"
-#include "modular_chomp\code\global.dm"
 #include "modular_chomp\code\__defines\_planes+layers.dm"
 #include "modular_chomp\code\_global_vars\list\names.dm"
 #include "modular_chomp\code\_onclick\hud\alert.dm"
