@@ -272,14 +272,10 @@
 /mob/living/hitby(atom/movable/source, var/speed = THROWFORCE_SPEED_DIVISOR)//Standardization and logging -Sieve
 	if(is_incorporeal())
 		return
+	if(SEND_SIGNAL(src, COMSIG_LIVING_HIT_BY_THROWN_ENTITY, source, speed) & COMSIG_CANCEL_HITBY)
+		return
 	if(isitem(source))
 		var/obj/item/O = source
-		if(stat != DEAD && trash_catching && vore_selected)
-			if(adminbus_trash || is_type_in_list(O, GLOB.edible_trash) && O.trash_eatable && !is_type_in_list(O, GLOB.item_vore_blacklist))
-				visible_message(span_vwarning("[O] is thrown directly into [src]'s [lowertext(vore_selected.name)]!"))
-				O.throwing = 0
-				O.forceMove(vore_selected)
-				return
 		var/dtype = O.damtype
 		var/throw_damage = O.throwforce*(speed/THROWFORCE_SPEED_DIVISOR)
 
@@ -336,6 +332,7 @@
 					src.anchored = TRUE
 					src.pinned += O
 
+<<<<<<< HEAD
 	//VORESTATION EDIT START - Allows for thrown vore! //CHOMPEdit Start
 	//Throwing a prey into a pred takes priority. After that it checks to see if the person being thrown is a pred.
 	if(isliving(source))
@@ -367,6 +364,8 @@
 			return
 	//VORESTATION EDIT END - Allows for thrown vore! //CHOMPEdit End
 
+=======
+>>>>>>> 44c6b2f707 (Spontaneous Vore Element (#18556))
 /mob/living/proc/on_throw_vore_special(var/pred = TRUE, var/mob/living/target)
 	return
 
