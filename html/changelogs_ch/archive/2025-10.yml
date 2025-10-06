@@ -51,3 +51,10 @@
   - code_imp: Swaps some strings in the bluespace cracker to defines
   FluffMedic:
   - bugfix: Tyr items weapons have proper materials now
+2025-10-06:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: last changelog state being inverted
+  Diana:
+  - bugfix: Multiple items can be stripped from someone at once, again.
+  FluffMedic:
+  - rscadd: New Tyr Weapon and Shield belt thing added
