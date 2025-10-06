@@ -7,10 +7,10 @@
 	pokephrase = "Weh!"
 	icon = 'icons/obj/toy_yw.dmi'
 	item_icons = list(
-		slot_l_hand_str = 'icons/mob/items/lefthand_toys_yw.dmi',
-		slot_r_hand_str = 'icons/mob/items/righthand_toys_yw.dmi',
-		slot_back_str = 'icons/mob/toy_worn_yw.dmi',
-		slot_head_str = 'icons/mob/toy_worn_yw.dmi')
+		slot_l_hand_str = 'icons/mob/items/lefthand_toys.dmi',
+		slot_r_hand_str = 'icons/mob/items/righthand_toys.dmi',
+		slot_back_str = 'icons/mob/toy_worn.dmi',
+		slot_head_str = 'icons/mob/toy_worn.dmi')
 
 /obj/item/toy/plushie/teshari/strix/rename_plushie()
 	set name = "Name Plushie"
