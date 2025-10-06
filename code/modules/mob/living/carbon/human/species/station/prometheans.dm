@@ -9,7 +9,7 @@ var/datum/species/shapeshifter/promethean/prometheans
 	mimic many forms of life. Derived from the Aetolian giant slime (Macrolimus vulgaris) inhabiting the warm, tropical planet \
 	of Aetolus, they are a relatively new lab-created sapient species, and as such many things about them have yet to be comprehensively studied. \
 	What has Science done?"
-	wikilink="https://wiki.vore-station.net/Promethean"
+	wikilink="https://wiki.chompstation13.net/index.php?title=Promethean" //CHOMPEdit
 	catalogue_data = list(/datum/category_item/catalogue/fauna/promethean)
 	show_ssd =         "totally quiescent"
 	death_message =    "rapidly loses cohesion, splattering across the ground..."

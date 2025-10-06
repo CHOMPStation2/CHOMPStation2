@@ -210,9 +210,9 @@
 		if(buckled)
 			to_chat(src,span_notice("You have to unbuckle \the [src] before you pick them up."))
 			return 0
-		holder_type = /obj/item/holder/micro
+		if(!holder_type)
+			holder_type = /obj/item/holder/micro
 		var/obj/item/holder/m_holder = get_scooped(M, G)
-		holder_type = holder_default
 		if (m_holder)
 			return 1
 		else
