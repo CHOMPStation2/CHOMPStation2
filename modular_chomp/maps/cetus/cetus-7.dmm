@@ -15130,10 +15130,6 @@
 /obj/item/storage/belt/security,
 /turf/simulated/shuttle/floor/voidcraft,
 /area/shuttle/syndicate)
-"pCs" = (
-/turf/unsimulated/floor/dark,
-/turf/simulated/floor/outdoors/rocks/cetus,
-/area/shadekin)
 "pDb" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
@@ -45992,7 +45988,7 @@ ydh
 ydh
 ydh
 ydh
-pCs
+kTB
 ydh
 kTB
 kTB
@@ -58731,7 +58727,7 @@ tfg
 tfg
 jsz
 jsz
-vuP
+jsz
 vFi
 vFi
 vFi
