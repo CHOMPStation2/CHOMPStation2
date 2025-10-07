@@ -78,3 +78,15 @@
 		STOP_PROCESSING(SSobj, src)
 		depleted = TRUE
 		return
+
+/obj/effect/map_effect/portal/master/side_a/retreat_west
+	portal_id = "retreat_west"
+
+/obj/effect/map_effect/portal/master/side_b/retreat_west
+	portal_id = "retreat_west"
+
+/obj/effect/map_effect/portal/master/side_a/retreat_east
+	portal_id = "retreat_east"
+
+/obj/effect/map_effect/portal/master/side_b/retreat_east
+	portal_id = "retreat_east"
