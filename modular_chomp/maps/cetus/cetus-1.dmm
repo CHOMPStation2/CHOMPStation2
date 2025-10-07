@@ -423,17 +423,16 @@
 /turf/simulated/floor/tiled/monotile,
 /area/crew_quarters/cetus/meteor/cafeteriaf1)
 "akN" = (
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	dir = 8;
-	frequency = 1379;
-	id_tag = "eng_port_pump"
-	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 6
 	},
 /obj/machinery/light/small/emergency{
 	dir = 4
 	},
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	dir = 8
+	},
+/obj/effect/map_helper/airlock/atmos/chamber_pump,
 /turf/simulated/floor/plating,
 /area/engineering/cetus/meteor/enginewaste)
 "akW" = (
@@ -1427,23 +1426,19 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/cetus/meteor/enginemonitor)
 "aOM" = (
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	dir = 4;
-	frequency = 1379;
-	id_tag = "eng_port_pump"
-	},
-/obj/machinery/embedded_controller/radio/airlock/airlock_controller{
-	id_tag = "eng_port_airlock";
-	pixel_x = -25;
-	req_access = list(13);
-	tag_airpump = "eng_port_pump";
-	tag_chamber_sensor = "eng_port_sensor";
-	tag_exterior_door = "eng_port_outer";
-	tag_interior_door = "eng_port_inner"
-	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 10
 	},
+/obj/machinery/embedded_controller/radio/airlock/airlock_controller{
+	id_tag = "eng_port_airlock";
+	dir = 4;
+	req_one_access = list(11, 24, 47, 5);
+	pixel_x = -20
+	},
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	dir = 4
+	},
+/obj/effect/map_helper/airlock/atmos/chamber_pump,
 /turf/simulated/floor/plating,
 /area/engineering/cetus/meteor/enginewaste)
 "aPc" = (
@@ -3028,6 +3023,10 @@
 /obj/machinery/power/smes/buildable/engine_default{
 	RCon_tag = "Gravity Generator"
 	},
+/obj/item/smes_coil,
+/obj/item/smes_coil,
+/obj/item/smes_coil,
+/obj/item/smes_coil,
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/cetus/meteor/gravsubstation)
 "bIv" = (
@@ -4177,11 +4176,11 @@
 /obj/machinery/door/airlock/glass_external{
 	frequency = 1379;
 	icon_state = "door_locked";
-	id_tag = "eng_port_inner";
 	locked = 1;
-	name = "Engineering Internal Access";
+	name = "Internal Airlock Access";
 	req_access = list(13)
 	},
+/obj/effect/map_helper/airlock/door/int_door,
 /turf/simulated/floor/plating,
 /area/engineering/cetus/meteor/enginewaste)
 "clN" = (
@@ -5154,6 +5153,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/engineering/cetus/meteor/enginewaste)
 "cOe" = (
@@ -5936,6 +5936,9 @@
 	RCon_tag = "Engine - Main"
 	},
 /obj/item/smes_coil,
+/obj/item/smes_coil,
+/obj/item/smes_coil,
+/obj/item/smes_coil,
 /turf/simulated/floor/plating,
 /area/engineering/cetus/meteor/smes)
 "dmn" = (
@@ -6391,9 +6394,6 @@
 	id = "toxinsdriver";
 	pixel_y = -26
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 5
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
 	},
@@ -6404,6 +6404,7 @@
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply,
 /turf/simulated/floor/tiled/dark,
 /area/rnd/cetus/meteor/toxtest)
 "dzr" = (
@@ -11266,8 +11267,8 @@
 	},
 /obj/effect/step_trigger/teleporter/randomspawn{
 	teleport_z = 8;
-	teleport_x = 90;
-	teleport_y = 224
+	teleport_x = 138;
+	teleport_y = 177
 	},
 /turf/simulated/floor/lino,
 /area/maintenance/ab_GeneralStore)
@@ -12670,14 +12671,6 @@
 /turf/simulated/floor/tiled/monotile,
 /area/crew_quarters/cetus/meteor/hallway1)
 "heq" = (
-/obj/machinery/access_button{
-	command = "cycle_interior";
-	frequency = 1379;
-	master_tag = "eng_port_airlock";
-	name = "interior access button";
-	req_one_access = list(11,24);
-	pixel_x = 26
-	},
 /obj/effect/floor_decal/industrial/warning{
 	layer = 3;
 	dir = 1
@@ -12687,6 +12680,13 @@
 	pixel_y = 32
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/universal,
+/obj/machinery/access_button{
+	dir = 8;
+	name = "interior access button";
+	req_one_access = list(11, 24, 47, 5);
+	pixel_x = 24
+	},
+/obj/effect/map_helper/airlock/button/int_button,
 /turf/simulated/floor/plating,
 /area/engineering/cetus/meteor/enginewaste)
 "hev" = (
@@ -13514,13 +13514,12 @@
 /area/rnd/cetus/meteor/toxins)
 "hyl" = (
 /obj/machinery/door/airlock/external{
-	frequency = 1379;
 	icon_state = "door_locked";
-	id_tag = "eng_port_outer";
 	locked = 1;
-	name = "Engineering External Access";
+	name = "External Airlock Access";
 	req_access = list(13)
 	},
+/obj/effect/map_helper/airlock/door/ext_door,
 /turf/simulated/floor/plating,
 /area/engineering/cetus/meteor/enginewaste)
 "hyp" = (
@@ -13662,6 +13661,9 @@
 "hBs" = (
 /obj/structure/bed/chair/office/dark{
 	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 6
 	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/cetus/meteor/toxtest)
@@ -14274,11 +14276,6 @@
 /turf/simulated/floor/tiled,
 /area/hangar/cetus/explolocker)
 "hRQ" = (
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	dir = 8;
-	frequency = 1379;
-	id_tag = "eng_port_pump"
-	},
 /obj/item/radio/intercom{
 	dir = 4;
 	name = "Station Intercom (General)";
@@ -14287,6 +14284,10 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 5
 	},
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	dir = 8
+	},
+/obj/effect/map_helper/airlock/atmos/chamber_pump,
 /turf/simulated/floor/plating,
 /area/engineering/cetus/meteor/enginewaste)
 "hSg" = (
@@ -17282,20 +17283,22 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/cetus/engine)
 "jqB" = (
+/obj/machinery/door/airlock/external{
+	icon_state = "door_locked";
+	locked = 1;
+	name = "External Airlock Access";
+	req_access = list(13)
+	},
+/obj/effect/map_helper/airlock/door/ext_door,
 /obj/machinery/access_button{
-	command = "cycle_exterior";
-	frequency = 1379;
-	master_tag = "eng_port_airlock";
+	dir = 1;
 	name = "exterior access button";
-	pixel_y = -25;
-	req_one_access = list(11,24)
+	pixel_y = 8;
+	pixel_x = 29
 	},
-/obj/machinery/shield_diffuser,
-/obj/effect/floor_decal/industrial/warning/corner{
-	dir = 8
-	},
-/turf/simulated/floor/airless,
-/area/space)
+/obj/effect/map_helper/airlock/button/ext_button,
+/turf/simulated/floor/plating,
+/area/engineering/cetus/meteor/enginewaste)
 "jqH" = (
 /obj/effect/floor_decal/corner/green/diagonal,
 /obj/effect/landmark{
@@ -20224,6 +20227,7 @@
 /obj/machinery/power/smes/buildable/max_charge{
 	RCon_tag = "Substation - Starboard"
 	},
+/obj/item/smes_coil,
 /turf/simulated/floor/plating,
 /area/engineering/cetus/starsubstation)
 "kLN" = (
@@ -29613,18 +29617,19 @@
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/cetus/meteor/pool)
 "pRA" = (
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	dir = 4;
-	frequency = 1379;
-	id_tag = "eng_port_pump"
-	},
-/obj/machinery/airlock_sensor{
-	id_tag = "eng_port_sensor";
-	pixel_x = -24
-	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 9
 	},
+/obj/machinery/airlock_sensor{
+	dir = 4;
+	pixel_x = -25;
+	req_access = list(13)
+	},
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	dir = 4
+	},
+/obj/effect/map_helper/airlock/sensor/chamber_sensor,
+/obj/effect/map_helper/airlock/atmos/chamber_pump,
 /turf/simulated/floor/plating,
 /area/engineering/cetus/meteor/enginewaste)
 "pRM" = (
@@ -30767,6 +30772,9 @@
 	RCon_tag = "Engine - Core"
 	},
 /obj/item/smes_coil,
+/obj/item/smes_coil,
+/obj/item/smes_coil,
+/obj/item/smes_coil,
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/cetus/meteor/shieldgen)
 "qou" = (
@@ -30829,15 +30837,15 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/crew_quarters/cetus/meteor/vr)
 "qrd" = (
+/obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/machinery/door/airlock/glass_external{
 	frequency = 1379;
 	icon_state = "door_locked";
-	id_tag = "eng_port_inner";
 	locked = 1;
-	name = "Engineering Internal Access";
+	name = "Internal Airlock Access";
 	req_access = list(13)
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden,
+/obj/effect/map_helper/airlock/door/int_door,
 /turf/simulated/floor/plating,
 /area/engineering/cetus/meteor/enginewaste)
 "qrF" = (
@@ -39167,6 +39175,9 @@
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/cetus/meteor/toxtest)
 "uEv" = (
@@ -40302,6 +40313,15 @@
 /obj/structure/cable/green,
 /turf/simulated/floor/tiled/yellow,
 /area/shuttle/spacebus)
+"vfv" = (
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/dark,
+/area/rnd/cetus/meteor/toxtest)
 "vfX" = (
 /obj/structure/lattice,
 /obj/machinery/camera/network/engine{
@@ -41354,6 +41374,9 @@
 /obj/machinery/power/smes/buildable/engine_default{
 	RCon_tag = "Engine - Core"
 	},
+/obj/item/smes_coil,
+/obj/item/smes_coil,
+/obj/item/smes_coil,
 /obj/item/smes_coil,
 /turf/simulated/floor/plating,
 /area/engineering/cetus/meteor/smes)
@@ -45182,6 +45205,9 @@
 /area/crew_quarters/cetus/meteor/hallway2)
 "xBf" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 9
+	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/cetus/meteor/toxtest)
 "xBz" = (
@@ -58469,7 +58495,7 @@ szx
 deV
 adz
 hBs
-lQC
+vfv
 wRH
 gil
 ycR
@@ -105475,7 +105501,7 @@ suH
 suH
 qFw
 eqX
-hyl
+jqB
 auO
 sKo
 qrd
@@ -105732,7 +105758,7 @@ qFw
 qFw
 suH
 qFw
-jqB
+fcC
 mZU
 hRQ
 akN

@@ -8964,9 +8964,9 @@
 	dir = 4
 	},
 /obj/effect/step_trigger/teleporter/randomspawn{
-	teleport_x = 83;
+	teleport_x = 131;
 	teleport_z = 8;
-	teleport_y = 221
+	teleport_y = 174
 	},
 /turf/simulated/floor/carpet/graycarpet,
 /area/maintenance/cetus/shallow/fp)
@@ -16507,8 +16507,8 @@
 /obj/item/grenade/anti_photon/rubberducky/black,
 /obj/effect/step_trigger/teleporter/randomspawn{
 	teleport_z = 8;
-	teleport_x = 135;
-	teleport_y = 220
+	teleport_x = 183;
+	teleport_y = 173
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/maintenance/cetus/shallow/derelict/bathroom)
@@ -38448,8 +38448,10 @@
 /obj/machinery/power/smes/buildable/engine_default{
 	RCon_tag = "Telecommunications Satellite"
 	},
-/obj/item/smes_coil/super_capacity,
-/obj/item/smes_coil/super_io,
+/obj/item/smes_coil,
+/obj/item/smes_coil,
+/obj/item/smes_coil,
+/obj/item/smes_coil,
 /turf/simulated/floor/redgrid,
 /area/ai)
 "wOI" = (
@@ -39102,8 +39104,10 @@
 /obj/machinery/power/smes/buildable/engine_default{
 	RCon_tag = "Telecommunications Satellite"
 	},
-/obj/item/smes_coil/super_capacity,
-/obj/item/smes_coil/super_io,
+/obj/item/smes_coil,
+/obj/item/smes_coil,
+/obj/item/smes_coil,
+/obj/item/smes_coil,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/ai_server_room)
 "xnR" = (
