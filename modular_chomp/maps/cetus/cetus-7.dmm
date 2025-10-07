@@ -20494,13 +20494,6 @@
 	icon_state = "vault"
 	},
 /area/centcom/main_hall)
-"vuP" = (
-/turf/unsimulated/wall/fake_dark{
-	block_tele = 1;
-	blocks_nonghost_incorporeal = 1
-	},
-/turf/space,
-/area/space)
 "vvv" = (
 /obj/structure/table/rack,
 /obj/item/shield/energy,
@@ -58985,7 +58978,7 @@ tfg
 jsz
 jsz
 jsz
-vuP
+vFi
 vFi
 vFi
 vFi
