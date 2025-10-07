@@ -1598,8 +1598,10 @@
 	dir = 8;
 	icon_state = "pipe-c"
 	},
-/obj/machinery/ai_status_display{
-	pixel_x = 32
+/obj/item/radio/intercom{
+	dir = 4;
+	name = "Station Intercom (General)";
+	pixel_x = 21
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/cetus/cafeteriaf2)
@@ -2663,8 +2665,13 @@
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/cetus/dockrestrooms)
 "aVu" = (
-/obj/machinery/alarm{
-	pixel_y = 23
+/obj/structure/bed/chair{
+	dir = 4
+	},
+/obj/item/radio/intercom{
+	dir = 8;
+	name = "Station Intercom (General)";
+	pixel_x = -21
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/Reception)
@@ -4648,11 +4655,6 @@
 /area/engineering/cetus/atriumdeck2)
 "bEU" = (
 /obj/machinery/media/jukebox,
-/obj/item/radio/intercom{
-	dir = 8;
-	name = "Station Intercom (General)";
-	pixel_x = -21
-	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/cetus/cafeteriaf2)
 "bFj" = (
@@ -6200,10 +6202,6 @@
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
-/obj/machinery/firealarm{
-	layer = 3.3;
-	pixel_y = 30
-	},
 /obj/machinery/light{
 	dir = 1;
 	layer = 3
@@ -6492,7 +6490,7 @@
 	dir = 4
 	},
 /obj/structure/disposalpipe/segment,
-/obj/machinery/computer/security/telescreen/entertainment{
+/obj/machinery/ai_status_display{
 	pixel_x = 32
 	},
 /turf/simulated/floor/wood,
@@ -7302,10 +7300,6 @@
 /turf/simulated/floor/tiled,
 /area/hallway/primary/central_two)
 "czE" = (
-/obj/item/radio/intercom{
-	name = "Station Intercom (General)";
-	pixel_y = -20
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
@@ -7656,22 +7650,6 @@
 	icon_state = "6-8"
 	},
 /turf/simulated/floor/tiled/techmaint,
-/area/medical/medsci)
-"cHi" = (
-/obj/effect/floor_decal/corner_steel_grid{
-	dir = 5
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/item/radio/intercom{
-	name = "Station Intercom (General)";
-	pixel_y = -20
-	},
-/turf/simulated/floor/tiled,
 /area/medical/medsci)
 "cHn" = (
 /obj/structure/table/woodentable,
@@ -11607,6 +11585,10 @@
 /obj/structure/curtain/open/shower/medical{
 	anchored = 1
 	},
+/obj/machinery/alarm{
+	dir = 1;
+	pixel_y = -25
+	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/medical/Autoresleeving)
 "dZZ" = (
@@ -13694,12 +13676,11 @@
 /turf/simulated/wall,
 /area/rnd/Research_Lab)
 "eMT" = (
-/obj/machinery/firealarm{
-	layer = 3.3;
-	pixel_y = 26
+/obj/machinery/alarm{
+	pixel_y = 25
 	},
-/turf/simulated/floor/tiled/white,
-/area/medical/medsci)
+/turf/simulated/floor/plating,
+/area/maintenance/cetus/twojrport)
 "eMW" = (
 /turf/simulated/wall/r_wall,
 /area/asteroid/cetus/d2/jr)
@@ -14980,10 +14961,6 @@
 /turf/simulated/floor/carpet,
 /area/chapel/main)
 "fhr" = (
-/obj/machinery/firealarm{
-	dir = 4;
-	pixel_x = 24
-	},
 /obj/machinery/light{
 	dir = 4;
 	layer = 3
@@ -15432,6 +15409,10 @@
 "frn" = (
 /obj/structure/bed/chair{
 	dir = 4
+	},
+/obj/machinery/alarm{
+	dir = 4;
+	pixel_x = -22
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/Reception)
@@ -18993,6 +18974,11 @@
 /obj/effect/floor_decal/carpet{
 	dir = 10
 	},
+/obj/machinery/firealarm{
+	dir = 8;
+	pixel_x = -24;
+	pixel_y = 4
+	},
 /turf/simulated/floor/carpet,
 /area/crew_quarters/cetus/Galleryf1)
 "gyB" = (
@@ -19351,10 +19337,6 @@
 	},
 /obj/effect/floor_decal/corner/purple/bordercorner{
 	dir = 1
-	},
-/obj/machinery/firealarm{
-	dir = 8;
-	pixel_x = -26
 	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/cetus/jrhallway)
@@ -23113,15 +23095,13 @@
 /turf/simulated/floor/tiled/white,
 /area/rnd/Xenobiology_Lab)
 "hUW" = (
-/obj/structure/table/bench/steel,
-/obj/structure/cable/green{
-	icon_state = "4-8"
+/obj/machinery/light/small,
+/obj/item/radio/intercom{
+	name = "Station Intercom (General)";
+	pixel_y = -20
 	},
-/obj/machinery/alarm{
-	pixel_y = 22
-	},
-/turf/simulated/floor/tiled,
-/area/hallway/primary/seconddeck/dockhallway)
+/turf/simulated/floor/tiled/dark,
+/area/crew_quarters/cetus/Galleryf1)
 "hUY" = (
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/glass_research{
@@ -23467,10 +23447,6 @@
 	},
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 4
-	},
-/obj/machinery/firealarm{
-	dir = 1;
-	pixel_y = -26
 	},
 /obj/machinery/camera/network/civilian{
 	c_tag = "CIV - D2 Cafeteria 1";
@@ -26438,9 +26414,6 @@
 /obj/random/tool,
 /obj/random/tool,
 /obj/random/tech_supply,
-/obj/machinery/alarm{
-	pixel_y = 23
-	},
 /turf/simulated/floor/tiled,
 /area/engineering/cetus/atriumdeck2)
 "jdW" = (
@@ -27136,15 +27109,15 @@
 /turf/simulated/floor/tiled/freezer/cold,
 /area/crew_quarters/kitchen)
 "jsG" = (
-/obj/structure/bed/chair{
-	dir = 1
+/obj/machinery/transhuman/autoresleever,
+/obj/machinery/light/fluorescent,
+/obj/machinery/firealarm{
+	dir = 4;
+	pixel_x = 26;
+	pixel_y = 32
 	},
-/obj/machinery/alarm{
-	dir = 8;
-	pixel_x = 26
-	},
-/turf/simulated/floor/lino,
-/area/maintenance/cetus/twojrport)
+/turf/simulated/floor/tiled/white,
+/area/medical/Autoresleeving)
 "jsI" = (
 /obj/structure/catwalk,
 /obj/structure/cable{
@@ -28963,10 +28936,6 @@
 /obj/effect/floor_decal/corner/green/bordercorner{
 	dir = 4
 	},
-/obj/machinery/firealarm{
-	dir = 4;
-	pixel_x = 26
-	},
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/cetus/Galleryf1)
 "jYN" = (
@@ -29049,22 +29018,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/central_three)
-"kaH" = (
-/obj/effect/floor_decal/corner_steel_grid{
-	dir = 5
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/machinery/firealarm{
-	dir = 1;
-	pixel_y = -32
-	},
-/turf/simulated/floor/tiled,
-/area/medical/medsci)
 "kbb" = (
 /obj/item/reagent_containers/glass/beaker/large,
 /obj/structure/reagent_dispensers/acid{
@@ -32992,11 +32945,6 @@
 /obj/random/pottedplant,
 /obj/machinery/light/fluorescent{
 	dir = 1
-	},
-/obj/item/radio/intercom{
-	dir = 1;
-	name = "Station Intercom (General)";
-	pixel_y = 22
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medsci)
@@ -38628,10 +38576,6 @@
 /obj/machinery/alarm{
 	dir = 8;
 	pixel_x = 22
-	},
-/obj/machinery/firealarm{
-	dir = 8;
-	pixel_x = 40
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/central_three)
@@ -44613,10 +44557,6 @@
 "pvZ" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/effect/floor_decal/industrial/stand_clear/yellow,
-/obj/machinery/disposal/wall{
-	dir = 8;
-	pixel_x = 35
-	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/rnd/Robotics_Lab)
 "pwI" = (
@@ -46296,9 +46236,6 @@
 /obj/structure/catwalk,
 /obj/structure/lattice,
 /obj/structure/ladder,
-/obj/machinery/alarm{
-	pixel_y = 23
-	},
 /turf/simulated/open,
 /area/engineering/cetus/portsubstation)
 "pUt" = (
@@ -46672,24 +46609,20 @@
 /turf/simulated/floor/tiled,
 /area/quartermaster/Reception)
 "qbx" = (
-/obj/effect/floor_decal/borderfloor{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/green/border{
-	dir = 1
+/obj/effect/floor_decal/borderfloorwhite/corner{
+	dir = 4
 	},
 /obj/effect/floor_decal/corner/purple/bordercorner{
 	dir = 4
 	},
-/obj/effect/floor_decal/corner/purple/bordercorner{
-	dir = 1
+/obj/item/radio/intercom{
+	dir = 1;
+	name = "Station Intercom (General)";
+	pixel_y = 22;
+	pixel_x = -32
 	},
-/obj/machinery/alarm{
-	dir = 8;
-	pixel_x = 26
-	},
-/turf/simulated/floor/tiled,
-/area/crew_quarters/cetus/jrhallway)
+/turf/simulated/floor/tiled/white,
+/area/medical/medsci)
 "qbL" = (
 /obj/structure/table/standard,
 /obj/item/radio/intercom/locked/ai_private{
@@ -46867,6 +46800,11 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
+	},
+/obj/item/radio/intercom{
+	name = "Station Intercom (General)";
+	pixel_y = -20;
+	pixel_x = -32
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/medical/medsci)
@@ -53902,6 +53840,10 @@
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 10
 	},
+/obj/machinery/alarm{
+	dir = 8;
+	pixel_x = 22
+	},
 /turf/simulated/floor/plating,
 /area/engineering/cetus/jointsubstation)
 "sxv" = (
@@ -56008,6 +55950,10 @@
 /obj/machinery/power/breakerbox/activated{
 	RCon_tag = "Port Substation Bypass"
 	},
+/obj/machinery/alarm{
+	dir = 1;
+	pixel_y = -25
+	},
 /turf/simulated/floor/plating,
 /area/engineering/cetus/portsubstation)
 "tim" = (
@@ -57895,21 +57841,13 @@
 /turf/simulated/floor/tiled/dark,
 /area/security/Evidence_Storage)
 "tPu" = (
-/obj/effect/floor_decal/corner_steel_grid{
-	dir = 5
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
+/obj/structure/bed/chair,
 /obj/machinery/alarm{
-	dir = 1;
-	pixel_y = -22
+	dir = 8;
+	pixel_x = 26
 	},
-/turf/simulated/floor/tiled,
-/area/medical/medsci)
+/turf/simulated/floor/lino,
+/area/maintenance/cetus/twojrport)
 "tPU" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -59671,10 +59609,6 @@
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/mainsupport)
 "uvR" = (
-/obj/machinery/alarm{
-	dir = 4;
-	pixel_x = -23
-	},
 /obj/machinery/camera/network/civilian{
 	c_tag = "CIV -  Dock 2 Hallway 1";
 	dir = 4
@@ -63290,14 +63224,6 @@
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/cetus/cafeteriaf2)
-"vHV" = (
-/obj/item/radio/intercom{
-	dir = 1;
-	name = "Station Intercom (General)";
-	pixel_y = 21
-	},
-/turf/simulated/floor/tiled,
-/area/engineering/Reception)
 "vHX" = (
 /turf/simulated/wall,
 /area/medical/Patient_2)
@@ -63423,9 +63349,6 @@
 	dir = 4
 	},
 /obj/structure/catwalk,
-/obj/machinery/light/small/yellowed{
-	dir = 4
-	},
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/twoap)
 "vLk" = (
@@ -67000,6 +66923,9 @@
 /obj/machinery/light/small{
 	dir = 1
 	},
+/obj/machinery/alarm{
+	pixel_y = 23
+	},
 /turf/simulated/floor/tiled,
 /area/engineering/cetus/atriumdeck2)
 "wXK" = (
@@ -67463,10 +67389,6 @@
 /area/security/Wardens_Office)
 "xgh" = (
 /obj/machinery/vending/loadout/uniform,
-/obj/machinery/alarm{
-	dir = 4;
-	pixel_x = -23
-	},
 /obj/machinery/light/fluorescent{
 	dir = 1
 	},
@@ -67863,12 +67785,14 @@
 /turf/simulated/floor/tiled,
 /area/security/Brig)
 "xpO" = (
-/obj/item/radio/intercom{
-	dir = 8;
-	pixel_x = -22
+/obj/item/stool/padded,
+/obj/machinery/firealarm{
+	dir = 1;
+	pixel_y = -26;
+	pixel_x = -32
 	},
-/turf/simulated/floor/tiled/techmaint,
-/area/medical/medsci)
+/turf/simulated/floor/wood,
+/area/crew_quarters/cetus/cafeteriaf2)
 "xpQ" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -68153,6 +68077,12 @@
 	},
 /obj/structure/cable/green{
 	icon_state = "4-8"
+	},
+/obj/item/radio/intercom{
+	dir = 1;
+	name = "Station Intercom (General)";
+	pixel_y = 22;
+	pixel_x = 32
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/crew_quarters/cetus/Galleryf1)
@@ -69089,25 +69019,6 @@
 	},
 /turf/simulated/open,
 /area/crew_quarters/cetus/atrium/primary)
-"xLo" = (
-/obj/machinery/hologram/holopad,
-/obj/effect/floor_decal/corner/paleblue/bordercorner,
-/obj/effect/floor_decal/corner/paleblue/bordercorner{
-	dir = 4
-	},
-/obj/effect/floor_decal/corner/paleblue/bordercorner{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/paleblue/bordercorner{
-	dir = 8
-	},
-/obj/effect/floor_decal/spline/plain/three_quarters,
-/obj/machinery/firealarm{
-	dir = 4;
-	pixel_x = 26
-	},
-/turf/simulated/floor/tiled/milspec/raised,
-/area/medical/Autoresleeving)
 "xLy" = (
 /obj/machinery/firealarm{
 	pixel_y = 27
@@ -81320,7 +81231,7 @@ nzo
 nzo
 nzo
 nzo
-ahb
+eMT
 rim
 nzo
 nzo
@@ -82603,9 +82514,9 @@ ufw
 bRa
 ufw
 nzo
-qzl
+tPu
 uRM
-jsG
+wQT
 qzl
 vCN
 wQT
@@ -86240,7 +86151,7 @@ fcM
 eTd
 gfG
 uiq
-qbx
+gDw
 mmF
 dPI
 xiH
@@ -91725,7 +91636,7 @@ pJG
 qeB
 rSX
 wpe
-ldB
+hUW
 hMC
 pLp
 nBP
@@ -94046,7 +93957,7 @@ clp
 ejN
 eJc
 qcc
-cHi
+oeK
 nPa
 wfY
 hJM
@@ -94304,7 +94215,7 @@ oTY
 aAD
 cQG
 qcc
-tPu
+oeK
 nPa
 gcK
 aMR
@@ -94820,7 +94731,7 @@ fFN
 sDA
 mOw
 heX
-kaH
+oeK
 nPa
 eYw
 wzn
@@ -95853,7 +95764,7 @@ gGu
 eNS
 kem
 rOy
-xpO
+eNS
 gAW
 hOO
 auc
@@ -97653,7 +97564,7 @@ gXQ
 jwx
 hHI
 olw
-eMT
+nTU
 nTU
 ckq
 jRQ
@@ -97911,7 +97822,7 @@ sSi
 ohO
 aPd
 nAd
-etH
+qbx
 nTU
 uen
 bfa
@@ -102578,8 +102489,8 @@ sMZ
 lQO
 mxf
 hwA
-xLo
-kXb
+jXs
+jsG
 fYs
 ksd
 ksd
@@ -104880,8 +104791,8 @@ kmF
 ikE
 iVK
 ikE
-qWu
-qWu
+iVK
+ikE
 qWu
 qWu
 msV
@@ -107744,7 +107655,7 @@ jQQ
 jQQ
 feC
 jQQ
-vAY
+xpO
 rVk
 nGq
 ede
@@ -110608,7 +110519,7 @@ xox
 cQJ
 jnl
 nRq
-hUW
+csk
 fBZ
 fMI
 qkN
@@ -123447,7 +123358,7 @@ uKS
 pIv
 alN
 eab
-frn
+aVu
 frn
 sTX
 glB
@@ -123962,7 +123873,7 @@ sTd
 liG
 bjV
 alN
-vHV
+sKf
 leQ
 pIW
 gjL
@@ -124220,7 +124131,7 @@ rkP
 skP
 iXa
 alN
-aVu
+sKf
 crT
 sKf
 jse

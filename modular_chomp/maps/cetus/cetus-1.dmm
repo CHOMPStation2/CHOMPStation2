@@ -1219,10 +1219,6 @@
 	color = "#00B8B2";
 	dir = 1
 	},
-/obj/machinery/alarm{
-	dir = 8;
-	pixel_x = 22
-	},
 /obj/structure/sign/nosmoking_2{
 	pixel_y = -32
 	},
@@ -1871,16 +1867,11 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/cetus/atriumd1)
 "aYV" = (
-/obj/structure/table/bench/standard,
-/obj/effect/floor_decal/steeldecal/steel_decals10{
+/obj/item/stool/padded{
 	dir = 8
 	},
-/obj/effect/floor_decal/steeldecal/steel_decals10{
-	dir = 1
-	},
 /obj/machinery/firealarm{
-	dir = 8;
-	pixel_x = -26
+	pixel_y = 30
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/cetus/meteor/pool)
@@ -2791,6 +2782,11 @@
 /obj/machinery/light{
 	dir = 1
 	},
+/obj/item/radio/intercom{
+	dir = 1;
+	name = "Station Intercom (General)";
+	pixel_y = 34
+	},
 /turf/simulated/floor/tiled,
 /area/engineering/cetus/meteor/atriumdeck1)
 "bDJ" = (
@@ -3144,10 +3140,13 @@
 /obj/machinery/light/fluorescent{
 	dir = 1
 	},
+/obj/machinery/alarm{
+	pixel_y = 25
+	},
 /obj/item/radio/intercom{
 	dir = 1;
 	name = "Station Intercom (General)";
-	pixel_y = 22
+	pixel_y = 34
 	},
 /turf/simulated/floor/outdoors/rocks/cetus,
 /area/crew_quarters/cetus/meteor/pool)
@@ -3425,6 +3424,23 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/cetus/engine)
+"bSq" = (
+/obj/machinery/door/airlock/external{
+	icon_state = "door_locked";
+	locked = 1;
+	name = "External Airlock Access";
+	req_access = list(13)
+	},
+/obj/effect/map_helper/airlock/door/ext_door,
+/obj/machinery/access_button{
+	dir = 1;
+	name = "exterior access button";
+	pixel_y = 8;
+	pixel_x = 29
+	},
+/obj/effect/map_helper/airlock/button/ext_button,
+/turf/simulated/floor/plating,
+/area/engineering/cetus/meteor/enginewaste)
 "bSr" = (
 /obj/effect/floor_decal/borderfloorwhite/corner,
 /obj/effect/floor_decal/industrial/danger/corner,
@@ -4411,11 +4427,6 @@
 /turf/simulated/shuttle/wall/hard_corner,
 /area/shuttle/cryo/station)
 "crN" = (
-/obj/item/radio/intercom{
-	dir = 1;
-	name = "Station Intercom (General)";
-	pixel_y = 21
-	},
 /obj/effect/floor_decal/borderfloorblack/corner{
 	dir = 1
 	},
@@ -6548,10 +6559,6 @@
 	},
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
-	},
-/obj/item/radio/intercom{
-	name = "Station Intercom (General)";
-	pixel_y = -20
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/cetus/meteor/pool)
@@ -8770,10 +8777,6 @@
 	color = "#00B8B2";
 	dir = 1
 	},
-/obj/item/radio/intercom{
-	name = "Station Intercom (General)";
-	pixel_y = -22
-	},
 /obj/machinery/camera/network/medbay{
 	c_tag = "MED - Operating Theatre 2";
 	dir = 1
@@ -8911,6 +8914,7 @@
 /obj/machinery/firealarm{
 	pixel_y = 24
 	},
+/obj/item/autopsy_scanner,
 /turf/simulated/floor/tiled/dark,
 /area/security/cetus/meteor/forensic)
 "eUG" = (
@@ -9279,6 +9283,10 @@
 	c_tag = "ENG - Hallway 2";
 	dir = 1
 	},
+/obj/item/radio/intercom{
+	name = "Station Intercom (General)";
+	pixel_y = -22
+	},
 /turf/simulated/floor/tiled,
 /area/engineering/cetus/meteor/atriumdeck1)
 "ffn" = (
@@ -9457,12 +9465,12 @@
 /turf/simulated/floor/tiled/neutral,
 /area/maintenance/cetus/hallway)
 "flI" = (
-/obj/random/obstruction,
 /obj/machinery/alarm{
-	pixel_y = 23
+	frequency = 1441;
+	pixel_y = 22
 	},
-/turf/simulated/floor/plating,
-/area/maintenance/cetus/d1port)
+/turf/simulated/floor/outdoors/rocks/cetus,
+/area/maintenance/cetus/meteor/aftstar)
 "flM" = (
 /obj/effect/floor_decal/spline/fancy{
 	dir = 9
@@ -9535,10 +9543,6 @@
 /obj/effect/floor_decal/industrial/warning/color/corner{
 	color = "#00B8B2";
 	dir = 1
-	},
-/obj/machinery/alarm{
-	dir = 8;
-	pixel_x = 22
 	},
 /obj/structure/sign/nosmoking_2{
 	pixel_y = -32
@@ -11762,10 +11766,6 @@
 /obj/effect/floor_decal/steeldecal/steel_decals10{
 	dir = 1
 	},
-/obj/machinery/alarm{
-	dir = 4;
-	pixel_x = -23
-	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/cetus/meteor/pool)
 "gBO" = (
@@ -11794,11 +11794,12 @@
 /turf/simulated/floor/tiled/dark,
 /area/rnd/cetus/meteor/toxstorage)
 "gEn" = (
-/obj/machinery/alarm{
-	pixel_y = 23
+/obj/machinery/firealarm{
+	dir = 8;
+	pixel_x = -26
 	},
-/turf/simulated/floor/plating,
-/area/maintenance/cetus/d1port)
+/turf/simulated/floor/tiled,
+/area/engineering/cetus/meteor/atriumdeck1)
 "gEw" = (
 /obj/structure/toilet{
 	dir = 1
@@ -13098,6 +13099,11 @@
 	dir = 1;
 	pixel_y = -25
 	},
+/obj/item/radio/intercom{
+	dir = 8;
+	name = "Station Intercom (General)";
+	pixel_x = -21
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/Surgery_Room_1)
 "hoE" = (
@@ -13755,6 +13761,11 @@
 /obj/machinery/alarm{
 	dir = 1;
 	pixel_y = -25
+	},
+/obj/item/radio/intercom{
+	dir = 8;
+	name = "Station Intercom (General)";
+	pixel_x = -21
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/Surgery_Room_2)
@@ -17283,22 +17294,12 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/cetus/engine)
 "jqB" = (
-/obj/machinery/door/airlock/external{
-	icon_state = "door_locked";
-	locked = 1;
-	name = "External Airlock Access";
-	req_access = list(13)
+/obj/machinery/alarm{
+	dir = 4;
+	pixel_x = -22
 	},
-/obj/effect/map_helper/airlock/door/ext_door,
-/obj/machinery/access_button{
-	dir = 1;
-	name = "exterior access button";
-	pixel_y = 8;
-	pixel_x = 29
-	},
-/obj/effect/map_helper/airlock/button/ext_button,
 /turf/simulated/floor/plating,
-/area/engineering/cetus/meteor/enginewaste)
+/area/maintenance/cetus/d1port)
 "jqH" = (
 /obj/effect/floor_decal/corner/green/diagonal,
 /obj/effect/landmark{
@@ -17757,10 +17758,6 @@
 	},
 /obj/effect/floor_decal/corner/white/bordercorner{
 	dir = 4
-	},
-/obj/machinery/alarm{
-	dir = 1;
-	pixel_y = -22
 	},
 /obj/machinery/light/fluorescent,
 /turf/simulated/floor/tiled/kafel_full,
@@ -20411,10 +20408,6 @@
 	color = "#00B8B2";
 	dir = 1
 	},
-/obj/item/radio/intercom{
-	name = "Station Intercom (General)";
-	pixel_y = -22
-	},
 /obj/machinery/camera/network/medbay{
 	c_tag = "MED - Operating Theatre 1";
 	dir = 1
@@ -21654,6 +21647,10 @@
 /area/engineering/cetus/meteor/engineroom)
 "lzd" = (
 /obj/machinery/atmospherics/pipe/simple/visible/universal,
+/obj/machinery/alarm{
+	dir = 8;
+	pixel_x = 25
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/d1port)
 "lzh" = (
@@ -24688,10 +24685,6 @@
 /turf/simulated/floor/tiled/neutral,
 /area/maintenance/cetus/d1port)
 "npk" = (
-/obj/machinery/alarm{
-	dir = 8;
-	pixel_x = 24
-	},
 /obj/machinery/camera/network/medbay{
 	c_tag = "MED - Treatment Center 4";
 	dir = 9
@@ -25385,6 +25378,11 @@
 	},
 /obj/effect/floor_decal/corner/purple/bordercorner{
 	dir = 8
+	},
+/obj/item/radio/intercom{
+	dir = 4;
+	name = "Station Intercom (General)";
+	pixel_x = 21
 	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/cetus/meteor/carbonresearch)
@@ -30139,6 +30137,11 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 4
 	},
+/obj/item/radio/intercom{
+	name = "Station Intercom (General)";
+	pixel_y = -20;
+	pixel_x = -32
+	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/cetus/meteor/pool)
 "qaJ" = (
@@ -30962,9 +30965,6 @@
 "quH" = (
 /obj/structure/disposalpipe/up,
 /obj/random/trash_pile,
-/obj/machinery/alarm{
-	pixel_y = 23
-	},
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/d1port)
 "qvl" = (
@@ -31002,6 +31002,10 @@
 /obj/effect/floor_decal/steeldecal/steel_decals_central5,
 /obj/structure/cable{
 	icon_state = "4-8"
+	},
+/obj/item/radio/intercom{
+	name = "Station Intercom (General)";
+	pixel_y = -22
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/cetus/meteor/atriumdeck1)
@@ -31272,10 +31276,6 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/surgery_hallway)
 "qBX" = (
-/obj/machinery/alarm{
-	frequency = 1441;
-	pixel_y = 22
-	},
 /obj/machinery/floodlight,
 /turf/simulated/floor/outdoors/rocks/cetus,
 /area/maintenance/cetus/meteor/aftstar)
@@ -32956,9 +32956,6 @@
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/meteor/jraft)
 "rva" = (
-/obj/machinery/firealarm{
-	pixel_y = 24
-	},
 /obj/effect/floor_decal/borderfloorblack/corner{
 	dir = 4
 	},
@@ -35425,19 +35422,14 @@
 /turf/simulated/floor/plating,
 /area/engineering/cetus/meteor/engineroom)
 "sLm" = (
-/obj/effect/floor_decal/industrial/warning{
-	layer = 3;
-	dir = 1
-	},
-/obj/structure/cable{
+/obj/structure/cable/green{
 	icon_state = "4-8"
 	},
-/obj/item/radio/intercom{
-	name = "Station Intercom (General)";
-	pixel_y = -22
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 5
 	},
-/turf/simulated/floor/tiled,
-/area/engineering/cetus/meteor/atriumdeck1)
+/turf/simulated/floor/tiled/dark,
+/area/rnd/cetus/meteor/toxtest)
 "sLn" = (
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/machinery/light/small/yellowed{
@@ -40313,15 +40305,6 @@
 /obj/structure/cable/green,
 /turf/simulated/floor/tiled/yellow,
 /area/shuttle/spacebus)
-"vfv" = (
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 5
-	},
-/turf/simulated/floor/tiled/dark,
-/area/rnd/cetus/meteor/toxtest)
 "vfX" = (
 /obj/structure/lattice,
 /obj/machinery/camera/network/engine{
@@ -41305,6 +41288,11 @@
 /obj/structure/disposalpipe/segment,
 /obj/machinery/light/small{
 	dir = 4
+	},
+/obj/machinery/alarm{
+	dir = 8;
+	pixel_x = 26;
+	pixel_y = -4
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/d1port)
@@ -43082,10 +43070,6 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/obj/item/radio/intercom{
-	name = "Station Intercom (General)";
-	pixel_y = -22
-	},
 /turf/simulated/floor/tiled,
 /area/engineering/cetus/meteor/atriumdeck1)
 "wyv" = (
@@ -43389,7 +43373,7 @@
 	},
 /obj/machinery/alarm{
 	dir = 1;
-	pixel_y = -22
+	pixel_y = -27
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/medical/cetus/atriumd1)
@@ -45998,11 +45982,6 @@
 	},
 /obj/effect/floor_decal/corner/purple/bordercorner{
 	dir = 8
-	},
-/obj/item/radio/intercom{
-	dir = 1;
-	name = "Station Intercom (General)";
-	pixel_y = 22
 	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/cetus/meteor/carbonresearch)
@@ -58495,7 +58474,7 @@ szx
 deV
 adz
 hBs
-vfv
+sLm
 wRH
 gil
 ycR
@@ -66560,11 +66539,11 @@ qFw
 qFw
 hnf
 tXf
-tXf
+jqB
 pMs
 cLp
 iey
-flI
+dBF
 dBF
 vtX
 vtX
@@ -67849,7 +67828,7 @@ qFw
 qFw
 qFw
 mzI
-gEn
+tXf
 dBF
 cLp
 pMs
@@ -80770,7 +80749,7 @@ tmW
 qiF
 wDL
 gBD
-aYV
+gBD
 gtq
 vuC
 eJw
@@ -81279,7 +81258,7 @@ brV
 brV
 aij
 qki
-nmd
+aYV
 nmd
 nmd
 lto
@@ -98020,7 +97999,7 @@ qFw
 qFw
 qFw
 jOt
-sKe
+vqm
 vKe
 xnJ
 bje
@@ -98536,7 +98515,7 @@ qFw
 uAV
 uAV
 jOt
-vqm
+sKe
 iYm
 xFC
 fcO
@@ -98831,7 +98810,7 @@ iOO
 dOt
 idC
 sRw
-tiw
+qBX
 tiw
 tiw
 tiw
@@ -99089,7 +99068,7 @@ caD
 bOb
 idC
 nzC
-qBX
+tiw
 tiw
 iQm
 tiw
@@ -99865,7 +99844,7 @@ pyx
 uEK
 ctD
 nzC
-tiw
+flI
 iQm
 lhG
 qtv
@@ -101388,7 +101367,7 @@ ush
 pDN
 fFm
 sov
-sLm
+bNO
 qkf
 qkf
 qkf
@@ -102673,7 +102652,7 @@ sLi
 xNW
 hHs
 aEr
-tym
+gEn
 tym
 hoR
 cRM
@@ -105501,7 +105480,7 @@ suH
 suH
 qFw
 eqX
-jqB
+bSq
 auO
 sKo
 qrd
