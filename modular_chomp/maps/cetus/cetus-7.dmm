@@ -54,7 +54,6 @@
 /obj/item/book/bundle/custom_library/fiction/raissue142,
 /obj/item/book/bundle/custom_library/fiction/manfromsnowyriver,
 /obj/machinery/door/firedoor/glass,
-/turf/space,
 /turf/simulated/floor/wood,
 /area/shadekin)
 "aal" = (
@@ -75,7 +74,6 @@
 /area/tdome/tdomeobserve)
 "aan" = (
 /obj/structure/disposalpipe/segment,
-/turf/space,
 /turf/simulated/floor/lino,
 /area/shadekin)
 "aao" = (
@@ -627,7 +625,6 @@
 "acI" = (
 /obj/structure/table/hardwoodtable,
 /obj/item/material/ashtray/bronze,
-/turf/space,
 /turf/simulated/floor/lino,
 /area/shadekin)
 "acK" = (
@@ -898,7 +895,6 @@
 /area/shadekin)
 "asI" = (
 /obj/structure/flora/ausbushes/fullgrass,
-/turf/space,
 /turf/simulated/floor/grass,
 /area/shadekin)
 "aup" = (
@@ -968,7 +964,6 @@
 "avb" = (
 /obj/effect/floor_decal/spline/fancy/wood,
 /obj/structure/disposalpipe/segment,
-/turf/space,
 /turf/simulated/floor/lino,
 /area/shadekin)
 "avh" = (
@@ -1078,7 +1073,6 @@
 /turf/simulated/shuttle/wall/hard_corner,
 /area/shuttle/escape/centcom)
 "azA" = (
-/turf/space,
 /turf/simulated/floor/wood,
 /area/shadekin)
 "azD" = (
@@ -1146,7 +1140,6 @@
 /obj/machinery/door/airlock{
 	name = "Restroom"
 	},
-/turf/space,
 /turf/simulated/floor/tiled/kafel_full,
 /area/shadekin)
 "aDx" = (
@@ -1307,7 +1300,6 @@
 /area/wizard_station)
 "aLm" = (
 /obj/structure/disposalpipe/segment,
-/turf/space,
 /turf/simulated/floor/tiled/old_tile/blue,
 /area/shadekin)
 "aMC" = (
@@ -1380,7 +1372,6 @@
 	dir = 4
 	},
 /obj/machinery/light/broken/small,
-/turf/space,
 /turf/simulated/floor/tiled/white,
 /area/shadekin)
 "aQu" = (
@@ -1409,7 +1400,6 @@
 /obj/machinery/light/yellowed{
 	dir = 8
 	},
-/turf/space,
 /turf/simulated/floor/wood,
 /area/shadekin)
 "aQM" = (
@@ -1487,7 +1477,6 @@
 "aUk" = (
 /obj/structure/flora/ausbushes/sparsegrass,
 /obj/structure/flora/ausbushes/sunnybush,
-/turf/space,
 /turf/simulated/floor/grass,
 /area/shadekin)
 "aUC" = (
@@ -1510,11 +1499,6 @@
 	color = "teal"
 	},
 /area/holodeck/source_chess)
-"aVy" = (
-/obj/effect/wingrille_spawn/reinforced,
-/turf/space,
-/turf/simulated/floor/plating,
-/area/shadekin)
 "aVA" = (
 /obj/structure/flora/ausbushes/leafybush,
 /obj/structure/flora/ausbushes/fullgrass,
@@ -1548,7 +1532,6 @@
 /obj/machinery/light/yellowed{
 	dir = 8
 	},
-/turf/space,
 /turf/simulated/floor/tiled/neutral,
 /area/shadekin)
 "aYN" = (
@@ -1594,7 +1577,6 @@
 	id_tag = "darkdorm1"
 	},
 /obj/structure/disposalpipe/segment,
-/turf/space,
 /turf/simulated/floor/wood,
 /area/shadekin)
 "baw" = (
@@ -1736,7 +1718,6 @@
 /obj/item/flashlight/lamp/green{
 	pixel_y = 5
 	},
-/turf/space,
 /turf/simulated/floor/wood,
 /area/shadekin)
 "bhL" = (
@@ -1903,7 +1884,6 @@
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 5
 	},
-/turf/space,
 /turf/simulated/floor/tiled,
 /area/shadekin)
 "bpv" = (
@@ -1933,7 +1913,6 @@
 	dir = 1;
 	pixel_y = -25
 	},
-/turf/space,
 /turf/simulated/floor/wood,
 /area/shadekin)
 "bqx" = (
@@ -2048,7 +2027,6 @@
 /area/shadekin)
 "bws" = (
 /obj/structure/loot_pile/maint/boxfort,
-/turf/space,
 /turf/simulated/floor/carpet/graycarpet,
 /area/shadekin)
 "byl" = (
@@ -2067,7 +2045,6 @@
 /obj/effect/floor_decal/spline/fancy/wood/corner{
 	dir = 1
 	},
-/turf/space,
 /turf/simulated/floor/tiled,
 /area/shadekin)
 "bzt" = (
@@ -2413,7 +2390,6 @@
 /obj/structure/disposalpipe/junction{
 	dir = 8
 	},
-/turf/space,
 /turf/simulated/floor/tiled/neutral,
 /area/shadekin)
 "bOS" = (
@@ -2429,7 +2405,6 @@
 /area/shuttle/administration)
 "bQc" = (
 /obj/structure/closet/secure_closet/freezer/fridge,
-/turf/space,
 /turf/simulated/floor/tiled/freezer,
 /area/shadekin)
 "bQw" = (
@@ -2605,7 +2580,6 @@
 /area/syndicate_mothership/elite_squad)
 "bYA" = (
 /obj/random/cutout,
-/turf/space,
 /turf/simulated/floor/carpet/graycarpet,
 /area/shadekin)
 "bYM" = (
@@ -2646,7 +2620,6 @@
 /obj/structure/disposalpipe/junction{
 	dir = 4
 	},
-/turf/space,
 /turf/simulated/floor/tiled/neutral,
 /area/shadekin)
 "bZU" = (
@@ -2732,7 +2705,6 @@
 "cfm" = (
 /obj/effect/landmark/darkspawn,
 /obj/structure/disposalpipe/segment,
-/turf/space,
 /turf/simulated/floor/tiled/old_tile/blue,
 /area/shadekin)
 "cfJ" = (
@@ -3052,7 +3024,6 @@
 	},
 /area/centcom/command)
 "cym" = (
-/turf/space,
 /turf/simulated/floor/carpet,
 /area/shadekin)
 "cyv" = (
@@ -3066,7 +3037,6 @@
 /area/holodeck/source_chess)
 "czr" = (
 /obj/structure/flora/ausbushes/sparsegrass,
-/turf/space,
 /turf/simulated/floor/grass,
 /area/shadekin)
 "czP" = (
@@ -3143,7 +3113,6 @@
 /obj/machinery/light/yellowed{
 	dir = 4
 	},
-/turf/space,
 /turf/simulated/floor/lino,
 /area/shadekin)
 "cDl" = (
@@ -3174,7 +3143,6 @@
 /area/shadekin)
 "cDB" = (
 /obj/structure/bed/chair,
-/turf/space,
 /turf/simulated/floor/lino,
 /area/shadekin)
 "cEh" = (
@@ -3453,7 +3421,6 @@
 /area/tdome/tdomeadmin)
 "cPT" = (
 /obj/structure/disposalpipe/segment,
-/turf/space,
 /turf/simulated/floor/carpet/graycarpet,
 /area/shadekin)
 "cQp" = (
@@ -3551,7 +3518,6 @@
 /obj/machinery/light/small/yellowed{
 	dir = 4
 	},
-/turf/space,
 /turf/simulated/floor/carpet/graycarpet,
 /area/shadekin)
 "cVU" = (
@@ -3653,7 +3619,6 @@
 /turf/simulated/shuttle/floor/black,
 /area/shuttle/merchant)
 "dbz" = (
-/turf/space,
 /turf/simulated/floor/plating,
 /area/shadekin)
 "dcc" = (
@@ -3762,7 +3727,6 @@
 /area/centcom/specops)
 "dhM" = (
 /obj/machinery/light/yellowed,
-/turf/space,
 /turf/simulated/floor/tiled/neutral,
 /area/shadekin)
 "dja" = (
@@ -3963,7 +3927,6 @@
 /obj/structure/toilet{
 	dir = 8
 	},
-/turf/space,
 /turf/simulated/floor/tiled/kafel_full,
 /area/shadekin)
 "dyT" = (
@@ -4395,10 +4358,6 @@
 	},
 /turf/simulated/floor/holofloor/wood,
 /area/holodeck/source_courtroom)
-"dSp" = (
-/turf/space,
-/turf/simulated/floor/carpet/graycarpet,
-/area/shadekin)
 "dTr" = (
 /obj/machinery/telecomms/relay/preset/southerncross/transit,
 /turf/unsimulated/floor{
@@ -4622,7 +4581,6 @@
 /obj/item/flashlight/lamp/green{
 	pixel_y = 5
 	},
-/turf/space,
 /turf/simulated/floor/wood,
 /area/shadekin)
 "ebI" = (
@@ -4734,7 +4692,6 @@
 /area/wizard_station)
 "ehg" = (
 /obj/structure/flora/ausbushes,
-/turf/space,
 /turf/simulated/floor/grass,
 /area/shadekin)
 "ehy" = (
@@ -4917,10 +4874,6 @@
 	name = "plating"
 	},
 /area/ninja_dojo/dojo)
-"erA" = (
-/turf/space,
-/turf/simulated/floor/outdoors/rocks/cetus,
-/area/shadekin)
 "erZ" = (
 /obj/structure/table/rack,
 /obj/item/storage/secure/briefcase,
@@ -4965,7 +4918,6 @@
 /area/shuttle/supply)
 "ewk" = (
 /obj/structure/prop/statue/phoron,
-/turf/space,
 /turf/simulated/floor/grass,
 /area/shadekin)
 "ewn" = (
@@ -5071,7 +5023,6 @@
 	dir = 4
 	},
 /obj/structure/closet/secure_closet/personal/cabinet,
-/turf/space,
 /turf/simulated/floor/wood,
 /area/shadekin)
 "eBX" = (
@@ -5114,7 +5065,6 @@
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 1
 	},
-/turf/space,
 /turf/simulated/floor/tiled,
 /area/shadekin)
 "eEZ" = (
@@ -5223,7 +5173,6 @@
 	dir = 2;
 	icon_state = "pipe-c"
 	},
-/turf/space,
 /turf/simulated/floor/wood,
 /area/shadekin)
 "eMB" = (
@@ -5281,7 +5230,6 @@
 /turf/simulated/floor/tiled/old_tile/yellow,
 /area/shadekin)
 "ePc" = (
-/turf/space,
 /turf/simulated/floor/tiled/neutral,
 /area/shadekin)
 "ePl" = (
@@ -5737,7 +5685,6 @@
 /obj/structure/table/standard,
 /obj/item/storage/firstaid/adv,
 /obj/random/tetheraid,
-/turf/space,
 /turf/simulated/floor/tiled/old_tile,
 /area/shadekin)
 "frQ" = (
@@ -5884,7 +5831,6 @@
 /area/wizard_station)
 "fBC" = (
 /obj/effect/floor_decal/spline/fancy/wood,
-/turf/space,
 /turf/simulated/floor/lino,
 /area/shadekin)
 "fDl" = (
@@ -5894,7 +5840,6 @@
 /obj/machinery/light/yellowed{
 	dir = 4
 	},
-/turf/space,
 /turf/simulated/floor/wood,
 /area/shadekin)
 "fDt" = (
@@ -5952,13 +5897,6 @@
 	},
 /turf/simulated/shuttle/floor/black,
 /area/shuttle/merchant)
-"fHP" = (
-/obj/machinery/light/yellowed{
-	dir = 4
-	},
-/turf/space,
-/turf/simulated/floor/carpet/graycarpet,
-/area/shadekin)
 "fIh" = (
 /obj/effect/floor_decal/corner/red{
 	dir = 5
@@ -5996,7 +5934,6 @@
 /area/shadekin)
 "fJh" = (
 /obj/structure/reagent_dispensers/watertank,
-/turf/space,
 /turf/simulated/floor/plating,
 /area/shadekin)
 "fJi" = (
@@ -6154,7 +6091,6 @@
 /obj/effect/floor_decal/corner/grey/diagonal{
 	dir = 4
 	},
-/turf/space,
 /turf/simulated/floor/tiled/white,
 /area/shadekin)
 "fSY" = (
@@ -6240,7 +6176,6 @@
 /obj/effect/floor_decal/spline/fancy/wood/corner{
 	dir = 8
 	},
-/turf/space,
 /turf/simulated/floor/tiled,
 /area/shadekin)
 "fZx" = (
@@ -6291,11 +6226,9 @@
 	dir = 4
 	},
 /obj/structure/disposalpipe/segment,
-/turf/space,
 /turf/simulated/floor/carpet/graycarpet,
 /area/shadekin)
 "gcg" = (
-/turf/space,
 /turf/simulated/floor/grass,
 /area/shadekin)
 "gcC" = (
@@ -6512,7 +6445,6 @@
 /obj/structure/salvageable/console{
 	dir = 8
 	},
-/turf/space,
 /turf/simulated/shuttle/floor/black,
 /area/shadekin)
 "gpo" = (
@@ -6533,14 +6465,12 @@
 "gsl" = (
 /obj/structure/table/hardwoodtable,
 /obj/random/drinkbottle,
-/turf/space,
 /turf/simulated/floor/lino,
 /area/shadekin)
 "gsq" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/turf/space,
 /turf/simulated/floor/tiled/neutral,
 /area/shadekin)
 "guJ" = (
@@ -6561,7 +6491,6 @@
 /obj/structure/disposalpipe/trunk{
 	dir = 8
 	},
-/turf/space,
 /turf/simulated/floor/tiled/old_tile,
 /area/shadekin)
 "gvn" = (
@@ -6631,7 +6560,6 @@
 	},
 /area/centcom/bar)
 "gxy" = (
-/turf/space,
 /turf/simulated/floor/tiled/techfloor,
 /area/shadekin)
 "gxT" = (
@@ -6674,7 +6602,6 @@
 	req_one_access = null
 	},
 /obj/structure/disposalpipe/segment,
-/turf/space,
 /turf/simulated/floor/tiled/neutral,
 /area/shadekin)
 "gAy" = (
@@ -6685,7 +6612,6 @@
 /obj/structure/disposalpipe/junction/yjunction{
 	dir = 4
 	},
-/turf/space,
 /turf/simulated/floor/tiled/neutral,
 /area/shadekin)
 "gBc" = (
@@ -6693,7 +6619,6 @@
 	dir = 8;
 	name = "Maintenance Access"
 	},
-/turf/space,
 /turf/simulated/floor/tiled/neutral,
 /area/shadekin)
 "gCg" = (
@@ -6719,7 +6644,6 @@
 /area/shadekin)
 "gCT" = (
 /obj/structure/bed/chair,
-/turf/space,
 /turf/simulated/floor/tiled/neutral,
 /area/shadekin)
 "gCY" = (
@@ -6863,7 +6787,6 @@
 /turf/simulated/floor/tiled/neutral,
 /area/shadekin)
 "gIw" = (
-/turf/space,
 /turf/simulated/wall/r_wall,
 /area/shadekin)
 "gIK" = (
@@ -6890,14 +6813,12 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/turf/space,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/shadekin)
 "gJV" = (
 /turf/unsimulated/wall/shuttle_bay,
 /area/skipjack_station)
 "gKE" = (
-/turf/space,
 /turf/simulated/floor/tiled/kafel_full,
 /area/shadekin)
 "gKZ" = (
@@ -6966,7 +6887,6 @@
 /area/syndicate_station)
 "gON" = (
 /obj/structure/bed/roller,
-/turf/space,
 /turf/simulated/floor/tiled/old_tile,
 /area/shadekin)
 "gPr" = (
@@ -7148,7 +7068,6 @@
 /area/shuttle/response_ship)
 "gWI" = (
 /obj/structure/table/standard,
-/turf/space,
 /turf/simulated/floor/lino,
 /area/shadekin)
 "gWP" = (
@@ -7215,12 +7134,7 @@
 	dir = 4;
 	pixel_x = -5
 	},
-/turf/space,
 /turf/simulated/floor/tiled/techmaint,
-/area/shadekin)
-"hah" = (
-/turf/space,
-/turf/simulated/mineral/cetus,
 /area/shadekin)
 "hbs" = (
 /obj/effect/floor_decal/carpet{
@@ -7286,7 +7200,6 @@
 /obj/machinery/door/airlock/maintenance/cargo{
 	req_one_access = null
 	},
-/turf/space,
 /turf/simulated/floor/tiled/neutral,
 /area/shadekin)
 "hdj" = (
@@ -7361,7 +7274,6 @@
 /obj/machinery/light/small{
 	dir = 1
 	},
-/turf/space,
 /turf/simulated/floor/tiled/kafel_full,
 /area/shadekin)
 "heQ" = (
@@ -7635,7 +7547,6 @@
 /area/skipjack_station)
 "hrS" = (
 /obj/effect/landmark/darkspawn,
-/turf/space,
 /turf/simulated/floor/carpet/graycarpet,
 /area/shadekin)
 "hst" = (
@@ -7846,7 +7757,6 @@
 /area/wizard_station)
 "hEP" = (
 /obj/effect/floor_decal/spline/fancy/wood,
-/turf/space,
 /turf/simulated/floor/tiled,
 /area/shadekin)
 "hEQ" = (
@@ -7874,7 +7784,6 @@
 /area/centcom/specops)
 "hGu" = (
 /obj/structure/flora/ausbushes/brflowers,
-/turf/space,
 /turf/simulated/floor/grass,
 /area/shadekin)
 "hGO" = (
@@ -7960,7 +7869,6 @@
 /turf/simulated/floor/holofloor/grass,
 /area/holodeck/source_picnicarea)
 "hLw" = (
-/turf/space,
 /turf/simulated/floor/tiled/techmaint,
 /area/shadekin)
 "hMe" = (
@@ -8093,7 +8001,6 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/turf/space,
 /turf/simulated/floor/lino,
 /area/shadekin)
 "hRJ" = (
@@ -8237,7 +8144,6 @@
 /area/centcom/specops)
 "hWB" = (
 /obj/structure/flora/ausbushes/leafybush,
-/turf/space,
 /turf/simulated/floor/grass,
 /area/shadekin)
 "hXb" = (
@@ -8247,7 +8153,6 @@
 /obj/structure/disposalpipe/trunk{
 	dir = 4
 	},
-/turf/space,
 /turf/simulated/floor/wood,
 /area/shadekin)
 "hXA" = (
@@ -8300,7 +8205,6 @@
 /obj/item/flashlight/lamp/green{
 	pixel_y = 12
 	},
-/turf/space,
 /turf/simulated/floor/wood,
 /area/shadekin)
 "iaB" = (
@@ -8556,7 +8460,6 @@
 /obj/structure/bed/chair{
 	dir = 4
 	},
-/turf/space,
 /turf/simulated/floor/lino,
 /area/shadekin)
 "ipT" = (
@@ -8608,7 +8511,6 @@
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 6
 	},
-/turf/space,
 /turf/simulated/floor/tiled,
 /area/shadekin)
 "iti" = (
@@ -8791,7 +8693,6 @@
 /obj/item/storage/box/donkpockets/teriyaki{
 	pixel_y = 13
 	},
-/turf/space,
 /turf/simulated/floor/tiled/freezer,
 /area/shadekin)
 "iwL" = (
@@ -8814,13 +8715,6 @@
 	icon_state = "freezerfloor"
 	},
 /area/centcom/bar)
-"ixI" = (
-/obj/machinery/light/yellowed{
-	dir = 8
-	},
-/turf/space,
-/turf/simulated/floor/carpet/graycarpet,
-/area/shadekin)
 "ixP" = (
 /obj/effect/floor_decal/carpet{
 	dir = 8
@@ -8913,7 +8807,6 @@
 	pixel_x = -9
 	},
 /obj/structure/disposalpipe/segment,
-/turf/space,
 /turf/simulated/floor/lino,
 /area/shadekin)
 "iBZ" = (
@@ -9027,7 +8920,6 @@
 /area/skipjack_station)
 "iGQ" = (
 /obj/effect/floor_decal/spline/fancy/wood/corner,
-/turf/space,
 /turf/simulated/floor/tiled,
 /area/shadekin)
 "iHc" = (
@@ -9087,7 +8979,6 @@
 /obj/effect/floor_decal/spline/fancy/wood/corner{
 	dir = 1
 	},
-/turf/space,
 /turf/simulated/floor/tiled,
 /area/shadekin)
 "iJS" = (
@@ -9351,7 +9242,6 @@
 "iXW" = (
 /obj/structure/flora/ausbushes/sparsegrass,
 /obj/structure/flora/ausbushes/fernybush,
-/turf/space,
 /turf/simulated/floor/grass,
 /area/shadekin)
 "iYC" = (
@@ -9399,7 +9289,6 @@
 /area/shuttle/merchant)
 "jcb" = (
 /obj/structure/undies_wardrobe,
-/turf/space,
 /turf/simulated/floor/wood,
 /area/shadekin)
 "jcs" = (
@@ -9497,7 +9386,6 @@
 	dir = 8;
 	pixel_x = 26
 	},
-/turf/space,
 /turf/simulated/floor/plating,
 /area/shadekin)
 "jhV" = (
@@ -9653,10 +9541,6 @@
 /obj/effect/overlay/coconut,
 /turf/simulated/floor/holofloor/beach/sand,
 /area/holodeck/source_beach)
-"jom" = (
-/turf/space,
-/turf/simulated/wall,
-/area/shadekin)
 "joq" = (
 /obj/effect/floor_decal/spline/plain{
 	dir = 4
@@ -9770,7 +9654,6 @@
 /obj/effect/floor_decal/spline/plain/corner{
 	dir = 4
 	},
-/turf/space,
 /turf/simulated/floor/carpet/graycarpet,
 /area/shadekin)
 "jvE" = (
@@ -9935,7 +9818,6 @@
 /obj/machinery/door/airlock/multi_tile/glass{
 	name = "Laundry"
 	},
-/turf/space,
 /turf/simulated/floor/tiled/old_tile,
 /area/shadekin)
 "jDB" = (
@@ -9947,7 +9829,6 @@
 	dir = 1;
 	layer = 3
 	},
-/turf/space,
 /turf/simulated/floor/reinforced,
 /area/shadekin)
 "jEg" = (
@@ -9994,7 +9875,6 @@
 /obj/structure/bed/chair{
 	dir = 8
 	},
-/turf/space,
 /turf/simulated/floor/tiled/neutral,
 /area/shadekin)
 "jGv" = (
@@ -10154,7 +10034,6 @@
 	dir = 1
 	},
 /obj/machinery/recharge_station,
-/turf/space,
 /turf/simulated/floor/tiled/techfloor,
 /area/shadekin)
 "jMM" = (
@@ -10209,7 +10088,6 @@
 "jPi" = (
 /obj/structure/catwalk,
 /obj/structure/bed/pillowpile/teal,
-/turf/space,
 /turf/simulated/floor/plating,
 /area/shadekin)
 "jPL" = (
@@ -10432,7 +10310,6 @@
 "jZY" = (
 /obj/structure/bed/double/padded,
 /obj/item/bedsheet/browndouble,
-/turf/space,
 /turf/simulated/floor/wood,
 /area/shadekin)
 "kaO" = (
@@ -10459,7 +10336,6 @@
 /area/syndicate_station)
 "kbL" = (
 /obj/effect/floor_decal/spline/fancy/wood,
-/turf/space,
 /turf/simulated/floor/wood,
 /area/shadekin)
 "kcu" = (
@@ -10500,7 +10376,6 @@
 	dir = 4;
 	icon_state = "pipe-j2"
 	},
-/turf/space,
 /turf/simulated/floor/lino,
 /area/shadekin)
 "ker" = (
@@ -10586,7 +10461,6 @@
 /obj/structure/window/plastitanium/full{
 	anchored = 0
 	},
-/turf/space,
 /turf/simulated/floor/plating,
 /area/shadekin)
 "kjC" = (
@@ -10722,7 +10596,6 @@
 	dir = 8
 	},
 /obj/effect/map_effect/perma_light/concentrated/incandescent,
-/turf/space,
 /turf/simulated/floor/carpet/graycarpet,
 /area/shadekin)
 "kob" = (
@@ -10861,7 +10734,6 @@
 	pixel_x = 10
 	},
 /obj/effect/floor_decal/spline/fancy/wood/corner,
-/turf/space,
 /turf/simulated/floor/lino,
 /area/shadekin)
 "krK" = (
@@ -11096,7 +10968,6 @@
 	dir = 8;
 	layer = 3
 	},
-/turf/space,
 /turf/simulated/floor/tiled/techmaint,
 /area/shadekin)
 "kzN" = (
@@ -11429,7 +11300,6 @@
 /area/shuttle/escape/centcom)
 "kRC" = (
 /obj/structure/disposalpipe/segment,
-/turf/space,
 /turf/simulated/floor/wood,
 /area/shadekin)
 "kSi" = (
@@ -11594,7 +11464,6 @@
 	dir = 1;
 	layer = 3
 	},
-/turf/space,
 /turf/simulated/floor/reinforced,
 /area/shadekin)
 "lbF" = (
@@ -11985,7 +11854,6 @@
 "lCt" = (
 /obj/structure/bed/double/padded,
 /obj/item/bedsheet/hosdouble,
-/turf/space,
 /turf/simulated/floor/wood,
 /area/shadekin)
 "lDa" = (
@@ -12101,7 +11969,6 @@
 "lHN" = (
 /obj/structure/bed/pod,
 /obj/item/bedsheet,
-/turf/space,
 /turf/simulated/floor/carpet/graycarpet,
 /area/shadekin)
 "lIl" = (
@@ -12122,7 +11989,6 @@
 /obj/item/book/custom_library/fiction/starsandsometimesfallingones,
 /obj/item/book/custom_library/fiction/truelovehathmyheart,
 /obj/machinery/door/firedoor/glass,
-/turf/space,
 /turf/simulated/floor/wood,
 /area/shadekin)
 "lIP" = (
@@ -12156,7 +12022,6 @@
 	dir = 4;
 	icon_state = "pipe-c"
 	},
-/turf/space,
 /turf/simulated/floor/carpet/graycarpet,
 /area/shadekin)
 "lJx" = (
@@ -12190,7 +12055,6 @@
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 4
 	},
-/turf/space,
 /turf/simulated/floor/tiled/techmaint,
 /area/shadekin)
 "lKL" = (
@@ -12353,7 +12217,6 @@
 /obj/effect/floor_decal/spline/fancy/wood/corner{
 	dir = 8
 	},
-/turf/space,
 /turf/simulated/floor/tiled,
 /area/shadekin)
 "lRR" = (
@@ -12498,7 +12361,6 @@
 	dir = 4
 	},
 /obj/structure/window/reinforced,
-/turf/space,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/shadekin)
 "mbq" = (
@@ -12667,7 +12529,6 @@
 /area/centcom/specops)
 "mjW" = (
 /obj/structure/catwalk,
-/turf/space,
 /turf/simulated/floor/plating,
 /area/shadekin)
 "mkh" = (
@@ -13226,7 +13087,6 @@
 	dir = 2;
 	name = "Maintenance Access"
 	},
-/turf/space,
 /turf/simulated/floor/tiled/techmaint,
 /area/shadekin)
 "mNv" = (
@@ -13437,7 +13297,6 @@
 	dir = 8
 	},
 /obj/effect/map_effect/portal/master/side_a/retreat_east,
-/turf/space,
 /turf/simulated/floor/carpet/graycarpet,
 /area/shadekin)
 "mYr" = (
@@ -13642,7 +13501,6 @@
 "njq" = (
 /obj/effect/wingrille_spawn/reinforced,
 /obj/structure/disposalpipe/segment,
-/turf/space,
 /turf/simulated/floor/plating,
 /area/shadekin)
 "njH" = (
@@ -13742,7 +13600,6 @@
 	dir = 1;
 	layer = 3
 	},
-/turf/space,
 /turf/simulated/floor/reinforced,
 /area/shadekin)
 "nqa" = (
@@ -13902,7 +13759,6 @@
 /obj/random/tetheraid,
 /obj/random/tetheraid,
 /obj/random/tetheraid,
-/turf/space,
 /turf/simulated/floor/tiled/old_tile,
 /area/shadekin)
 "nxE" = (
@@ -14127,7 +13983,6 @@
 /area/shuttle/supply)
 "nId" = (
 /obj/machinery/light/broken,
-/turf/space,
 /turf/simulated/floor/carpet/graycarpet,
 /area/shadekin)
 "nIu" = (
@@ -14143,7 +13998,6 @@
 	dir = 8;
 	icon_state = "pipe-c"
 	},
-/turf/space,
 /turf/simulated/floor/wood,
 /area/shadekin)
 "nIT" = (
@@ -14167,7 +14021,6 @@
 /obj/item/towel/random{
 	pixel_y = 17
 	},
-/turf/space,
 /turf/simulated/floor/tiled/kafel_full,
 /area/shadekin)
 "nJz" = (
@@ -14274,7 +14127,6 @@
 /turf/simulated/shuttle/plating,
 /area/shuttle/escape/centcom)
 "nQg" = (
-/turf/space,
 /turf/simulated/floor/lino,
 /area/shadekin)
 "nQx" = (
@@ -14282,7 +14134,6 @@
 /obj/machinery/light/small/yellowed{
 	dir = 4
 	},
-/turf/space,
 /turf/simulated/floor/plating,
 /area/shadekin)
 "nQF" = (
@@ -14315,7 +14166,6 @@
 /turf/simulated/shuttle/floor/voidcraft/dark,
 /area/shuttle/syndicate)
 "nRi" = (
-/turf/space,
 /turf/simulated/floor/tiled,
 /area/shadekin)
 "nRZ" = (
@@ -14422,7 +14272,6 @@
 	dir = 1;
 	layer = 3
 	},
-/turf/space,
 /turf/simulated/floor/reinforced,
 /area/shadekin)
 "oao" = (
@@ -14462,13 +14311,7 @@
 /area/centcom/specops)
 "oaz" = (
 /obj/structure/bed/pillowpile/red,
-/turf/space,
 /turf/simulated/floor/plating,
-/area/shadekin)
-"oba" = (
-/obj/machinery/light/yellowed,
-/turf/space,
-/turf/simulated/floor/carpet/graycarpet,
 /area/shadekin)
 "obC" = (
 /obj/structure/shuttle/engine/propulsion{
@@ -14696,7 +14539,6 @@
 /obj/item/book/bundle/custom_library/fiction/coldmountain,
 /obj/item/book/bundle/custom_library/fiction/chroniclesofmargatavol1,
 /obj/machinery/door/firedoor/glass,
-/turf/space,
 /turf/simulated/floor/wood,
 /area/shadekin)
 "omU" = (
@@ -14717,7 +14559,6 @@
 /area/shadekin)
 "ooP" = (
 /obj/effect/floor_decal/rust,
-/turf/space,
 /turf/simulated/floor/tiled/neutral,
 /area/shadekin)
 "ooQ" = (
@@ -14737,13 +14578,6 @@
 /obj/item/reagent_containers/glass/beaker/large,
 /turf/simulated/shuttle/floor/red,
 /area/shuttle/administration)
-"oqf" = (
-/obj/machinery/light/yellowed{
-	dir = 1
-	},
-/turf/space,
-/turf/simulated/floor/carpet/graycarpet,
-/area/shadekin)
 "orn" = (
 /obj/item/toy/chess/knight_black,
 /turf/simulated/floor/holofloor/bmarble{
@@ -14754,7 +14588,6 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/turf/space,
 /turf/simulated/floor/wood,
 /area/shadekin)
 "osb" = (
@@ -14778,7 +14611,6 @@
 /obj/effect/floor_decal/spline/plain/corner{
 	dir = 8
 	},
-/turf/space,
 /turf/simulated/floor/carpet/graycarpet,
 /area/shadekin)
 "osC" = (
@@ -15044,7 +14876,6 @@
 	dir = 1;
 	icon_state = "pipe-c"
 	},
-/turf/space,
 /turf/simulated/floor/tiled/old_tile,
 /area/shadekin)
 "oOc" = (
@@ -15075,7 +14906,6 @@
 /obj/effect/floor_decal/corner/yellow/bordercorner{
 	dir = 1
 	},
-/turf/space,
 /turf/simulated/floor/tiled,
 /area/shadekin)
 "oRM" = (
@@ -15091,7 +14921,6 @@
 	},
 /obj/structure/flora/ausbushes/sparsegrass,
 /obj/structure/flora/ausbushes/ywflowers,
-/turf/space,
 /turf/simulated/floor/grass,
 /area/shadekin)
 "oSH" = (
@@ -15202,7 +15031,6 @@
 /obj/structure/bed/chair/comfy/brown{
 	dir = 8
 	},
-/turf/space,
 /turf/simulated/floor/wood,
 /area/shadekin)
 "pbc" = (
@@ -15313,7 +15141,6 @@
 /obj/structure/disposalpipe/trunk{
 	dir = 4
 	},
-/turf/space,
 /turf/simulated/floor/tiled/neutral,
 /area/shadekin)
 "phO" = (
@@ -15655,7 +15482,6 @@
 /obj/effect/floor_decal/corner/yellow/border{
 	dir = 8
 	},
-/turf/space,
 /turf/simulated/floor/tiled,
 /area/shadekin)
 "pDk" = (
@@ -15743,7 +15569,6 @@
 	},
 /area/centcom/specops)
 "pGZ" = (
-/turf/space,
 /turf/simulated/wall{
 	can_open = 1
 	},
@@ -15785,7 +15610,6 @@
 /obj/structure/bed/chair{
 	dir = 8
 	},
-/turf/space,
 /turf/simulated/floor/lino,
 /area/shadekin)
 "pIs" = (
@@ -15987,7 +15811,6 @@
 	dir = 1
 	},
 /obj/effect/map_effect/perma_light/concentrated/incandescent,
-/turf/space,
 /turf/simulated/floor/carpet/graycarpet,
 /area/shadekin)
 "pRJ" = (
@@ -16071,7 +15894,6 @@
 	name = "Maintenance Dormitory";
 	id_tag = "darkdorm2"
 	},
-/turf/space,
 /turf/simulated/floor/plating,
 /area/shadekin)
 "qaR" = (
@@ -16113,7 +15935,6 @@
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 10
 	},
-/turf/space,
 /turf/simulated/floor/tiled,
 /area/shadekin)
 "qej" = (
@@ -16168,12 +15989,10 @@
 /area/shadekin)
 "qgG" = (
 /obj/item/stool/padded,
-/turf/space,
 /turf/simulated/floor/wood,
 /area/shadekin)
 "qhK" = (
 /obj/structure/disposalpipe/segment,
-/turf/space,
 /turf/simulated/floor/tiled/neutral,
 /area/shadekin)
 "qiJ" = (
@@ -16219,7 +16038,6 @@
 "qkX" = (
 /obj/machinery/disposal,
 /obj/structure/disposalpipe/trunk,
-/turf/space,
 /turf/simulated/floor/lino,
 /area/shadekin)
 "qlL" = (
@@ -16280,7 +16098,6 @@
 /obj/effect/floor_decal/corner/grey/diagonal{
 	dir = 4
 	},
-/turf/space,
 /turf/simulated/floor/tiled/white,
 /area/shadekin)
 "qoY" = (
@@ -16297,7 +16114,6 @@
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 8
 	},
-/turf/space,
 /turf/simulated/floor/tiled/techfloor,
 /area/shadekin)
 "qpG" = (
@@ -16388,7 +16204,6 @@
 /obj/machinery/disposal/wall{
 	pixel_y = 35
 	},
-/turf/space,
 /turf/simulated/floor/tiled/techmaint,
 /area/shadekin)
 "qsF" = (
@@ -16501,7 +16316,6 @@
 	},
 /obj/machinery/door/firedoor/glass,
 /obj/structure/disposalpipe/segment,
-/turf/space,
 /turf/simulated/floor/wood,
 /area/shadekin)
 "qAi" = (
@@ -16571,7 +16385,6 @@
 /area/shuttle/merchant)
 "qJf" = (
 /obj/machinery/portable_atmospherics/hydroponics/soil,
-/turf/space,
 /turf/simulated/floor/grass,
 /area/shadekin)
 "qJE" = (
@@ -16711,7 +16524,6 @@
 /area/holodeck/source_thunderdomecourt)
 "qUt" = (
 /obj/structure/prop/machine/tgmc_console2/starts_on,
-/turf/space,
 /turf/simulated/floor/tiled/old_tile,
 /area/shadekin)
 "qUI" = (
@@ -16760,11 +16572,9 @@
 	layer = 3
 	},
 /obj/item/toy/plushie/carp/void,
-/turf/space,
 /turf/simulated/floor/reinforced,
 /area/shadekin)
 "qXR" = (
-/turf/space,
 /turf/simulated/floor/carpet/bcarpet,
 /area/shadekin)
 "qYa" = (
@@ -16813,7 +16623,6 @@
 	name = "Station Intercom (General)";
 	pixel_y = 22
 	},
-/turf/space,
 /turf/simulated/floor/tiled/techmaint,
 /area/shadekin)
 "ras" = (
@@ -16828,7 +16637,6 @@
 /area/centcom/medical)
 "raJ" = (
 /obj/structure/lattice,
-/turf/space,
 /turf/simulated/floor/outdoors/rocks/cetus,
 /area/shadekin)
 "rbF" = (
@@ -16932,7 +16740,6 @@
 	pixel_x = 4;
 	layer = 2.7
 	},
-/turf/space,
 /turf/simulated/floor/wood,
 /area/shadekin)
 "rht" = (
@@ -16984,7 +16791,6 @@
 /area/centcom/evac)
 "rmR" = (
 /obj/structure/flora/ausbushes/stalkybush,
-/turf/space,
 /turf/simulated/floor/grass,
 /area/shadekin)
 "rmU" = (
@@ -17151,7 +16957,6 @@
 /obj/structure/disposalpipe/trunk{
 	dir = 4
 	},
-/turf/space,
 /turf/simulated/floor/wood,
 /area/shadekin)
 "rry" = (
@@ -17187,7 +16992,6 @@
 	pixel_x = -29;
 	pixel_y = 4
 	},
-/turf/space,
 /turf/simulated/floor/tiled/kafel_full,
 /area/shadekin)
 "rti" = (
@@ -17244,7 +17048,6 @@
 /area/centcom/specops)
 "rvp" = (
 /obj/structure/closet/secure_closet/personal/cabinet,
-/turf/space,
 /turf/simulated/floor/wood,
 /area/shadekin)
 "rvN" = (
@@ -17296,7 +17099,6 @@
 /area/shadekin)
 "rze" = (
 /obj/effect/floor_decal/industrial/warning/corner,
-/turf/space,
 /turf/simulated/floor/tiled/techfloor,
 /area/shadekin)
 "rzn" = (
@@ -17312,7 +17114,6 @@
 "rzz" = (
 /obj/effect/floor_decal/spline/fancy/wood,
 /obj/effect/floor_decal/spline/fancy/wood,
-/turf/space,
 /turf/simulated/floor/tiled,
 /area/shadekin)
 "rzA" = (
@@ -17384,7 +17185,6 @@
 "rCx" = (
 /obj/item/stool/padded,
 /obj/structure/disposalpipe/segment,
-/turf/space,
 /turf/simulated/floor/wood,
 /area/shadekin)
 "rCL" = (
@@ -17448,7 +17248,6 @@
 	dir = 2;
 	icon_state = "pipe-c"
 	},
-/turf/space,
 /turf/simulated/floor/wood,
 /area/shadekin)
 "rHh" = (
@@ -17589,7 +17388,6 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/turf/space,
 /turf/simulated/floor/lino,
 /area/shadekin)
 "rMY" = (
@@ -17647,7 +17445,6 @@
 /area/shuttle/escape/centcom)
 "rOX" = (
 /obj/structure/table/hardwoodtable,
-/turf/space,
 /turf/simulated/floor/lino,
 /area/shadekin)
 "rPA" = (
@@ -17682,7 +17479,6 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
-/turf/space,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/shadekin)
 "rSL" = (
@@ -17705,11 +17501,9 @@
 	pixel_x = -9;
 	pixel_y = 24
 	},
-/turf/space,
 /turf/simulated/floor/wood,
 /area/shadekin)
 "rTt" = (
-/turf/space,
 /turf/unsimulated/wall/dark,
 /area/shadekin)
 "rTw" = (
@@ -17764,7 +17558,6 @@
 /obj/effect/floor_decal/spline/fancy/wood/corner{
 	dir = 4
 	},
-/turf/space,
 /turf/simulated/floor/tiled/eris/bcircuit,
 /area/shadekin)
 "rXa" = (
@@ -17958,7 +17751,6 @@
 	layer = 3
 	},
 /obj/item/toy/plushie/borgplushie/drake/med,
-/turf/space,
 /turf/simulated/floor/reinforced,
 /area/shadekin)
 "scG" = (
@@ -17977,7 +17769,6 @@
 /obj/machinery/light/broken{
 	dir = 8
 	},
-/turf/space,
 /turf/simulated/floor/plating,
 /area/shadekin)
 "seQ" = (
@@ -18006,7 +17797,6 @@
 	dir = 4;
 	opacity = 1
 	},
-/turf/space,
 /turf/simulated/floor/plating,
 /area/shadekin)
 "sgn" = (
@@ -18142,7 +17932,6 @@
 	},
 /obj/structure/disposalpipe/segment,
 /obj/structure/disposalpipe/segment,
-/turf/space,
 /turf/simulated/floor/tiled/neutral,
 /area/shadekin)
 "slD" = (
@@ -18349,7 +18138,6 @@
 /area/wizard_station)
 "sxT" = (
 /obj/structure/flora/ausbushes/ywflowers,
-/turf/space,
 /turf/simulated/floor/grass,
 /area/shadekin)
 "syS" = (
@@ -18537,12 +18325,10 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 10
 	},
-/turf/space,
 /turf/simulated/floor/tiled/techfloor,
 /area/shadekin)
 "sFS" = (
 /obj/machinery/vending/cigarette,
-/turf/space,
 /turf/simulated/floor/wood,
 /area/shadekin)
 "sGE" = (
@@ -18618,7 +18404,6 @@
 /area/centcom/specops)
 "sLr" = (
 /obj/structure/bed/pillowpile/green,
-/turf/space,
 /turf/simulated/floor/plating,
 /area/shadekin)
 "sLw" = (
@@ -18658,7 +18443,6 @@
 /turf/simulated/shuttle/floor/black,
 /area/shuttle/merchant)
 "sMC" = (
-/turf/space,
 /turf/simulated/floor/tiled/old_tile,
 /area/shadekin)
 "sMH" = (
@@ -18773,7 +18557,6 @@
 /area/tdome)
 "sUX" = (
 /obj/structure/bed/chair/comfy/brown,
-/turf/space,
 /turf/simulated/floor/wood,
 /area/shadekin)
 "sVf" = (
@@ -18799,7 +18582,6 @@
 /obj/machinery/door/airlock/highsecurity{
 	req_one_access = null
 	},
-/turf/space,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/shadekin)
 "sXv" = (
@@ -19022,7 +18804,6 @@
 /obj/effect/wingrille_spawn/reinforced/polarized{
 	id = "darkdormtint"
 	},
-/turf/space,
 /turf/simulated/floor/plating,
 /area/shadekin)
 "thq" = (
@@ -19405,7 +19186,6 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/turf/space,
 /turf/simulated/floor/tiled/neutral,
 /area/shadekin)
 "tBo" = (
@@ -19425,7 +19205,6 @@
 	dir = 1;
 	icon_state = "pipe-c"
 	},
-/turf/space,
 /turf/simulated/floor/carpet/graycarpet,
 /area/shadekin)
 "tCw" = (
@@ -19526,7 +19305,6 @@
 	layer = 3
 	},
 /obj/item/toy/plushie/deer,
-/turf/space,
 /turf/simulated/floor/reinforced,
 /area/shadekin)
 "tIw" = (
@@ -19549,7 +19327,6 @@
 /area/centcom/specops)
 "tKH" = (
 /obj/machinery/light/small,
-/turf/space,
 /turf/simulated/floor/tiled/kafel_full,
 /area/shadekin)
 "tKV" = (
@@ -19611,7 +19388,6 @@
 	},
 /area/wizard_station)
 "tNx" = (
-/turf/space,
 /turf/simulated/floor/tiled/old_tile/blue,
 /area/shadekin)
 "tOU" = (
@@ -19697,7 +19473,6 @@
 /turf/simulated/shuttle/floor/voidcraft,
 /area/shuttle/syndicate)
 "tTY" = (
-/turf/space,
 /turf/simulated/shuttle/wall/voidcraft/green,
 /area/shadekin)
 "tUe" = (
@@ -19737,7 +19512,6 @@
 	dir = 4;
 	pixel_y = -5
 	},
-/turf/space,
 /turf/simulated/wall/r_wall,
 /area/shadekin)
 "tWr" = (
@@ -19944,7 +19718,6 @@
 	specialfunctions = 4;
 	pixel_y = 25
 	},
-/turf/space,
 /turf/simulated/floor/tiled/neutral,
 /area/shadekin)
 "uiY" = (
@@ -20091,7 +19864,6 @@
 "uoc" = (
 /obj/structure/table/steel,
 /obj/item/flashlight/lamp,
-/turf/space,
 /turf/simulated/floor/tiled/neutral,
 /area/shadekin)
 "uoS" = (
@@ -20232,7 +20004,6 @@
 "uxc" = (
 /obj/structure/undies_wardrobe,
 /obj/structure/disposalpipe/segment,
-/turf/space,
 /turf/simulated/floor/tiled/old_tile,
 /area/shadekin)
 "uxd" = (
@@ -20418,7 +20189,6 @@
 	dir = 1
 	},
 /obj/structure/curtain/open/shower,
-/turf/space,
 /turf/simulated/floor/tiled/kafel_full,
 /area/shadekin)
 "uLx" = (
@@ -20484,7 +20254,6 @@
 /area/holodeck/source_basketball)
 "uOk" = (
 /obj/structure/flora/ausbushes/genericbush,
-/turf/space,
 /turf/simulated/floor/grass,
 /area/shadekin)
 "uOw" = (
@@ -20494,7 +20263,6 @@
 /obj/machinery/light/small/yellowed{
 	dir = 1
 	},
-/turf/space,
 /turf/simulated/floor/tiled/techfloor,
 /area/shadekin)
 "uOy" = (
@@ -20657,7 +20425,6 @@
 	id_tag = "darkdorm3"
 	},
 /obj/structure/disposalpipe/segment,
-/turf/space,
 /turf/simulated/floor/wood,
 /area/shadekin)
 "uXa" = (
@@ -20871,7 +20638,6 @@
 "vfc" = (
 /obj/structure/flora/ausbushes/leafybush,
 /obj/structure/flora/ausbushes/sparsegrass,
-/turf/space,
 /turf/simulated/floor/grass,
 /area/shadekin)
 "vfs" = (
@@ -20947,7 +20713,6 @@
 	dir = 1;
 	layer = 3
 	},
-/turf/space,
 /turf/simulated/floor/reinforced,
 /area/shadekin)
 "viA" = (
@@ -21033,7 +20798,6 @@
 	teleport_y_offset = 201;
 	teleport_z_offset = 8
 	},
-/turf/space,
 /turf/simulated/floor/outdoors/rocks/cetus,
 /area/shadekin)
 "vny" = (
@@ -21108,7 +20872,6 @@
 /obj/effect/floor_decal/spline/plain{
 	dir = 4
 	},
-/turf/space,
 /turf/simulated/floor/wood,
 /area/shadekin)
 "vpZ" = (
@@ -21185,7 +20948,6 @@
 	dir = 4
 	},
 /obj/effect/map_effect/perma_light/concentrated/incandescent,
-/turf/space,
 /turf/simulated/floor/carpet/graycarpet,
 /area/shadekin)
 "vsI" = (
@@ -21576,7 +21338,6 @@
 "vRr" = (
 /obj/structure/flora/ausbushes/genericbush,
 /obj/structure/flora/ausbushes/sparsegrass,
-/turf/space,
 /turf/simulated/floor/grass,
 /area/shadekin)
 "vRu" = (
@@ -21652,7 +21413,6 @@
 /obj/machinery/light/small/yellowed{
 	dir = 1
 	},
-/turf/space,
 /turf/simulated/floor/plating,
 /area/shadekin)
 "vUq" = (
@@ -21660,7 +21420,6 @@
 /obj/effect/floor_decal/corner/grey/diagonal{
 	dir = 4
 	},
-/turf/space,
 /turf/simulated/floor/tiled/white,
 /area/shadekin)
 "vUT" = (
@@ -21861,7 +21620,6 @@
 	dir = 4;
 	icon_state = "pipe-j2"
 	},
-/turf/space,
 /turf/simulated/floor/wood,
 /area/shadekin)
 "wfz" = (
@@ -21976,7 +21734,6 @@
 /obj/effect/floor_decal/spline/plain{
 	dir = 8
 	},
-/turf/space,
 /turf/simulated/floor/carpet/graycarpet,
 /area/shadekin)
 "wmP" = (
@@ -21996,7 +21753,6 @@
 	layer = 3
 	},
 /obj/machinery/portable_atmospherics/hydroponics/soil,
-/turf/space,
 /turf/simulated/floor/grass,
 /area/shadekin)
 "woi" = (
@@ -22034,7 +21790,6 @@
 	layer = 3
 	},
 /obj/item/toy/plushie/borgplushie/scrubpuppy,
-/turf/space,
 /turf/simulated/floor/reinforced,
 /area/shadekin)
 "wrv" = (
@@ -22364,7 +22119,6 @@
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 4
 	},
-/turf/space,
 /turf/simulated/floor/tiled,
 /area/shadekin)
 "wKW" = (
@@ -22404,7 +22158,6 @@
 /obj/machinery/light{
 	dir = 8
 	},
-/turf/space,
 /turf/simulated/floor/tiled,
 /area/shadekin)
 "wLB" = (
@@ -22634,7 +22387,6 @@
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 1
 	},
-/turf/space,
 /turf/simulated/floor/wood,
 /area/shadekin)
 "wTX" = (
@@ -22726,7 +22478,6 @@
 /area/shadekin)
 "xbZ" = (
 /obj/structure/closet/secure_closet/personal,
-/turf/space,
 /turf/simulated/floor/tiled/old_tile,
 /area/shadekin)
 "xcM" = (
@@ -22794,7 +22545,6 @@
 /obj/structure/disposalpipe/trunk{
 	dir = 4
 	},
-/turf/space,
 /turf/simulated/floor/wood,
 /area/shadekin)
 "xgL" = (
@@ -22807,7 +22557,6 @@
 /obj/structure/salvageable/console{
 	dir = 8
 	},
-/turf/space,
 /turf/simulated/floor/tiled/old_tile,
 /area/shadekin)
 "xiw" = (
@@ -22854,7 +22603,6 @@
 /area/centcom/main_hall)
 "xnG" = (
 /obj/structure/bed/chair/sofa/corp/left,
-/turf/space,
 /turf/simulated/floor/carpet/graycarpet,
 /area/shadekin)
 "xoq" = (
@@ -23011,7 +22759,6 @@
 /obj/machinery/light/yellowed{
 	dir = 1
 	},
-/turf/space,
 /turf/simulated/floor/tiled/old_tile,
 /area/shadekin)
 "xxT" = (
@@ -23629,7 +23376,6 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/turf/space,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/shadekin)
 "yeg" = (
@@ -23735,7 +23481,6 @@
 	dir = 8;
 	icon_state = "pipe-c"
 	},
-/turf/space,
 /turf/simulated/floor/tiled/neutral,
 /area/shadekin)
 "yie" = (
@@ -23773,7 +23518,6 @@
 	pixel_y = -1;
 	pixel_x = 10
 	},
-/turf/space,
 /turf/simulated/floor/lino,
 /area/shadekin)
 "yku" = (
@@ -23836,7 +23580,6 @@
 	dir = 1
 	},
 /obj/effect/map_effect/perma_light/concentrated/incandescent,
-/turf/space,
 /turf/simulated/floor/carpet/graycarpet,
 /area/shadekin)
 "ykT" = (
@@ -41421,7 +41164,7 @@ ydh
 fvv
 ydh
 oHe
-jom
+hol
 ydh
 ydh
 ydh
@@ -41677,9 +41420,9 @@ ydh
 ydh
 ydh
 dbz
-dSp
-dSp
-jom
+ovR
+ovR
+hol
 ydh
 kTB
 kTB
@@ -41934,10 +41677,10 @@ kTB
 kTB
 ydh
 ydh
-jom
-oqf
-oba
-jom
+hol
+tLx
+yap
+hol
 tfg
 tfg
 kTB
@@ -42190,12 +41933,12 @@ ydh
 kTB
 kTB
 ydh
-hah
-hah
-jom
-dSp
-dSp
-jom
+tfg
+tfg
+hol
+ovR
+ovR
+hol
 tfg
 tfg
 tfg
@@ -42446,16 +42189,16 @@ ydh
 ydh
 kTB
 kTB
-hah
-hah
-hah
-hah
-jom
-dSp
+tfg
+tfg
+tfg
+tfg
+hol
 ovR
-jom
-hah
-hah
+ovR
+hol
+tfg
+tfg
 tfg
 tfg
 kTB
@@ -42703,18 +42446,18 @@ ydh
 ydh
 kTB
 ydh
-hah
-hah
-hah
-hah
+tfg
+tfg
+tfg
+tfg
 fvv
 rjH
 cDx
 knO
-jom
 hol
-jom
-jom
+hol
+hol
+hol
 tfg
 tfg
 tfg
@@ -42961,18 +42704,18 @@ kTB
 ydh
 kTB
 vVd
-hah
-hah
-hah
-hah
+tfg
+tfg
+tfg
+tfg
 fvv
 oHe
 oHe
-dSp
-dSp
-dSp
-dSp
-jom
+ovR
+ovR
+ovR
+ovR
+hol
 tfg
 tfg
 tfg
@@ -43219,18 +42962,18 @@ kTB
 kTB
 vVd
 vVd
-hah
+tfg
 tfg
 tfg
 tfg
 fvv
 oHe
 oHe
-dSp
-jom
-oqf
-dSp
-jom
+ovR
+hol
+tLx
+ovR
+hol
 tfg
 tfg
 tfg
@@ -43477,18 +43220,18 @@ ydh
 kTB
 vVd
 vVd
-hah
+tfg
 tfg
 tfg
 tfg
 hol
 nku
 oHe
-oba
-jom
-dSp
-dSp
-jom
+yap
+hol
+ovR
+ovR
+hol
 tfg
 tfg
 tfg
@@ -43735,21 +43478,21 @@ kTB
 kTB
 vVd
 vVd
-hah
+tfg
 hol
 hol
 hol
 fvv
 oHe
 oHe
-dSp
-jom
-dSp
-dSp
-jom
-jom
-jom
-jom
+ovR
+hol
+ovR
+ovR
+hol
+hol
+hol
+hol
 tfg
 kTB
 ydh
@@ -43993,22 +43736,22 @@ kTB
 vVd
 vVd
 vVd
-hah
+tfg
 hol
 ovR
 ovR
 fvv
 oHe
 oHe
-dSp
-jom
-oqf
-dSp
-dSp
-dSp
-dSp
+ovR
 hol
-hah
+tLx
+ovR
+ovR
+ovR
+ovR
+hol
+tfg
 tfg
 kTB
 kTB
@@ -44251,22 +43994,22 @@ kTB
 vVd
 vVd
 vVd
-hah
+tfg
 hol
 ovR
 ovR
 iQW
 oHe
 oHe
-dSp
-dSp
+ovR
+ovR
 oHe
 oHe
 ruE
 oHe
 oHe
 hol
-hah
+tfg
 tfg
 kTB
 kTB
@@ -44507,16 +44250,16 @@ ydh
 ydh
 ydh
 vVd
-hah
-hah
-hah
+tfg
+tfg
+tfg
 hol
 ovR
 hol
 hlq
 hlq
 oHe
-dSp
+ovR
 hol
 hol
 hol
@@ -44524,7 +44267,7 @@ fvv
 fvv
 fvv
 fvv
-hah
+tfg
 tfg
 ydh
 ydh
@@ -44764,7 +44507,7 @@ ydh
 ydh
 kTB
 ydh
-hah
+tfg
 tfg
 tfg
 tfg
@@ -45537,19 +45280,19 @@ ydh
 kTB
 ydh
 ydh
-hah
-hah
-hah
-hah
-hah
-jom
-jom
-jom
-jom
-jom
-jom
-jom
-jom
+tfg
+tfg
+tfg
+tfg
+tfg
+hol
+hol
+hol
+hol
+hol
+hol
+hol
+hol
 hol
 ovR
 hol
@@ -45557,7 +45300,7 @@ tfg
 tfg
 tfg
 tfg
-hah
+tfg
 tfg
 kTB
 ydh
@@ -45792,21 +45535,21 @@ ydh
 ydh
 ydh
 ydh
-erA
-erA
-hah
+kTB
+kTB
+tfg
 ydh
-hah
-hah
-hah
-jom
-jom
-dSp
-dSp
-ixI
+tfg
+tfg
+tfg
+hol
+hol
+ovR
+ovR
+fJc
 pQU
-dSp
-dSp
+ovR
+ovR
 gBc
 fJc
 ovR
@@ -45815,7 +45558,7 @@ tfg
 tfg
 tfg
 tfg
-hah
+tfg
 tfg
 kTB
 ydh
@@ -46049,31 +45792,31 @@ ydh
 ydh
 ydh
 ydh
-erA
-erA
-erA
+kTB
+kTB
+kTB
 ydh
-hah
-hah
-hah
-hah
-jom
+tfg
+tfg
+tfg
+tfg
+hol
 hrS
-dSp
-dSp
-fHP
+ovR
+ovR
+waY
 ykN
-dSp
-dSp
+ovR
+ovR
 ePc
 waY
 ovR
 hol
 tfg
 tfg
-hah
-hah
-hah
+tfg
+tfg
+tfg
 tfg
 ydh
 ydh
@@ -46309,29 +46052,29 @@ ydh
 ydh
 ydh
 ydh
-erA
-erA
-hah
-hah
-hah
-hah
-jom
-dSp
-dSp
-jom
-jom
-jom
+kTB
+kTB
+tfg
+tfg
+tfg
+tfg
+hol
+ovR
+ovR
+hol
+hol
+hol
 bYA
 bws
-jom
+hol
 hol
 hol
 hol
 tfg
 tfg
-hah
-hah
-hah
+tfg
+tfg
+tfg
 kTB
 kTB
 ydh
@@ -46568,28 +46311,28 @@ mFz
 raJ
 raJ
 raJ
-jom
-jom
-jom
-jom
-jom
-jom
-oqf
-dSp
-jom
-hah
-jom
-jom
-jom
-jom
-hah
-hah
-hah
+hol
+hol
+hol
+hol
+hol
+hol
+tLx
+ovR
+hol
+tfg
+hol
+hol
+hol
+hol
 tfg
 tfg
-hah
-hah
-hah
+tfg
+tfg
+tfg
+tfg
+tfg
+tfg
 kTB
 kTB
 ydh
@@ -46823,31 +46566,31 @@ ydh
 ydh
 pCs
 ydh
-erA
-erA
+kTB
+kTB
 xls
 xls
-dSp
-dSp
-dSp
-dSp
-ixI
-dSp
-dSp
-jom
+ovR
+ovR
+ovR
+ovR
+fJc
+ovR
+ovR
+hol
 tfg
 tfg
 tfg
-hah
-jom
-hah
-hah
-hah
-hah
+tfg
+hol
+tfg
+tfg
+tfg
+tfg
 ydh
-hah
-hah
-hah
+tfg
+tfg
+tfg
 kTB
 ydh
 ydh
@@ -47084,26 +46827,26 @@ ydh
 ydh
 ydh
 fny
-dSp
-dSp
-fHP
-dSp
-dSp
-dSp
-dSp
-dSp
-jom
-hah
-hah
+ovR
+ovR
+waY
+ovR
+ovR
+ovR
+ovR
+ovR
+hol
+tfg
+tfg
 rTt
 rTt
-jom
-hah
-hah
-hah
-hah
+hol
+tfg
+tfg
+tfg
+tfg
 ydh
-hah
+tfg
 kTB
 ydh
 kTB
@@ -47342,12 +47085,12 @@ ydh
 ydh
 ydh
 dbz
-dSp
+ovR
 nId
-jom
-jom
-jom
-jom
+hol
+hol
+hol
+hol
 hLw
 mNu
 gIw
@@ -47356,14 +47099,14 @@ gIw
 gIw
 gIw
 gIw
-jom
-jom
-hah
-hah
+hol
+hol
+tfg
+tfg
 ydh
 ydh
 ydh
-hah
+tfg
 ydh
 ydh
 ydh
@@ -47614,14 +47357,14 @@ nRi
 wLx
 hWB
 qJf
-jom
-jom
-hah
-hah
-hah
+hol
+hol
+tfg
+tfg
+tfg
 ydh
 vVd
-hah
+tfg
 ydh
 ydh
 ydh
@@ -47859,7 +47602,7 @@ ydh
 ydh
 mFz
 ydh
-dSp
+ovR
 gIw
 qrL
 hLw
@@ -47873,10 +47616,10 @@ lRH
 qcH
 hGu
 qJf
-jom
-hah
-hah
-hah
+hol
+tfg
+tfg
+tfg
 ydh
 vVd
 ydh
@@ -48117,7 +47860,7 @@ ydh
 ydh
 mFz
 dbz
-hah
+tfg
 gIw
 lKu
 iJR
@@ -48133,14 +47876,14 @@ qcH
 asI
 qJf
 eay
-hah
+tfg
 twG
-hah
-hah
-erA
+tfg
+tfg
+kTB
 ydh
-erA
-erA
+kTB
+kTB
 ydh
 ydh
 ydh
@@ -48375,7 +48118,7 @@ ydh
 ydh
 ydh
 ydh
-hah
+tfg
 gIw
 qJf
 eEM
@@ -48391,15 +48134,15 @@ fZr
 bST
 czr
 eay
-hah
+tfg
 ydh
-hah
-hah
-erA
+tfg
+tfg
+kTB
 ydh
-erA
+kTB
 ydh
-erA
+kTB
 ydh
 ydh
 ydh
@@ -48649,16 +48392,16 @@ eay
 qxH
 sEM
 cdV
-hah
+tfg
 ydh
 ydh
-hah
-erA
+tfg
+kTB
 ydh
-erA
-erA
+kTB
+kTB
 ydh
-erA
+kTB
 ydh
 ydh
 ydh
@@ -48909,14 +48652,14 @@ ydh
 ydh
 ydh
 ydh
-hah
+tfg
 ydh
 ydh
-erA
-erA
-erA
+kTB
+kTB
+kTB
 ydh
-erA
+kTB
 ydh
 ydh
 ydh
@@ -49148,7 +48891,7 @@ ydh
 ydh
 ydh
 ydh
-hah
+tfg
 kTB
 gIw
 iXW
@@ -49167,10 +48910,10 @@ ydh
 ydh
 ydh
 ydh
-hah
+tfg
 ydh
 ydh
-erA
+kTB
 ydh
 ydh
 ydh
@@ -49424,14 +49167,14 @@ ydh
 ydh
 ydh
 ydh
-hah
-hah
-hah
+tfg
+tfg
+tfg
 ydh
 ydh
 ydh
 ydh
-erA
+kTB
 ydh
 ydh
 ydh
@@ -49682,13 +49425,13 @@ qqh
 cSg
 wHJ
 ydh
-hah
-hah
+tfg
+tfg
 ydh
-erA
-erA
-erA
-erA
+kTB
+kTB
+kTB
+kTB
 ydh
 ydh
 ydh
@@ -49922,7 +49665,7 @@ ydh
 ydh
 ydh
 ydh
-hah
+tfg
 kTB
 gIw
 sxT
@@ -49939,11 +49682,11 @@ eBq
 kmt
 rmR
 eay
-hah
-hah
-hah
+tfg
+tfg
+tfg
 ydh
-erA
+kTB
 ydh
 ydh
 ydh
@@ -50180,8 +49923,8 @@ ydh
 ydh
 ydh
 ydh
-hah
-hah
+tfg
+tfg
 gIw
 qJf
 czr
@@ -50198,11 +49941,11 @@ sxT
 qJf
 eay
 ydh
-hah
-hah
-hah
-erA
-erA
+tfg
+tfg
+tfg
+kTB
+kTB
 ydh
 ydh
 ydh
@@ -50439,9 +50182,9 @@ ydh
 ydh
 ydh
 ydh
-hah
+tfg
 gIw
-jom
+hol
 qJf
 czr
 uEJ
@@ -50456,10 +50199,10 @@ qJf
 iSO
 cdV
 ydh
-hah
+tfg
 ydh
-hah
-erA
+tfg
+kTB
 ydh
 ydh
 ydh
@@ -50697,8 +50440,8 @@ ydh
 ydh
 ydh
 ydh
-hah
-hah
+tfg
+tfg
 fvv
 aYO
 hTV
@@ -50716,8 +50459,8 @@ ydh
 ydh
 ydh
 ydh
-hah
-erA
+tfg
+kTB
 ydh
 ydh
 ydh
@@ -52846,8 +52589,8 @@ ydh
 ydh
 ydh
 ydh
-erA
-erA
+kTB
+kTB
 ydh
 avh
 jsz
@@ -53359,10 +53102,10 @@ ydh
 ydh
 ydh
 ydh
-erA
-erA
+kTB
+kTB
 ydh
-erA
+kTB
 ydh
 ydh
 avh
@@ -53614,14 +53357,14 @@ ydh
 ydh
 ydh
 ydh
-erA
-erA
-erA
-erA
-erA
-erA
-erA
-erA
+kTB
+kTB
+kTB
+kTB
+kTB
+kTB
+kTB
+kTB
 ydh
 avh
 jsz
@@ -53856,13 +53599,13 @@ soR
 soR
 soR
 jsz
-jom
-jom
-jom
-jom
-jom
-jom
-jom
+hol
+hol
+hol
+hol
+hol
+hol
+hol
 avh
 ydh
 pof
@@ -53871,16 +53614,16 @@ ydh
 ydh
 ydh
 ydh
-erA
+kTB
 ydh
 ydh
-erA
-erA
-erA
-erA
-hah
-erA
-erA
+kTB
+kTB
+kTB
+kTB
+tfg
+kTB
+kTB
 avh
 jsz
 vFi
@@ -54114,31 +53857,31 @@ jsz
 jsz
 jsz
 jsz
-jom
+hol
 sFS
 aQJ
 acI
 yiO
 krF
-jom
-jom
-jom
-jom
-jom
-jom
-jom
-jom
-jom
+hol
+hol
+hol
+hol
+hol
+hol
+hol
+hol
+hol
 thj
 thj
-jom
-jom
-hah
-hah
-hah
-hah
-hah
-erA
+hol
+hol
+tfg
+tfg
+tfg
+tfg
+tfg
+kTB
 avh
 jsz
 vFi
@@ -54372,7 +54115,7 @@ jsz
 hol
 tLx
 yap
-jom
+hol
 hXb
 qgG
 rOX
@@ -54382,21 +54125,21 @@ omL
 rqY
 iai
 rgL
-jom
+hol
 ePc
 aXs
-jom
+hol
 xfW
 azA
 sUX
 bgS
-jom
-jom
-jom
-jom
-hah
-hah
-hah
+hol
+hol
+hol
+hol
+tfg
+tfg
+tfg
 vne
 jsz
 vFi
@@ -54630,7 +54373,7 @@ jsz
 hol
 ovR
 ovR
-jom
+hol
 rGM
 rCx
 iBk
@@ -54640,21 +54383,21 @@ qzw
 wfq
 azA
 paX
-jom
+hol
 ePc
 ePc
-jom
+hol
 orF
 cym
 cym
 paX
-jom
+hol
 rtb
 nIX
-jom
-hah
-hah
-hah
+hol
+tfg
+tfg
+tfg
 vne
 jsz
 jsz
@@ -54887,8 +54630,8 @@ ydh
 jsz
 fvv
 oHe
-dSp
-jom
+ovR
+hol
 azA
 qgG
 gsl
@@ -54909,12 +54652,12 @@ azA
 aDf
 gKE
 tKH
-jom
-hah
-hah
-hah
-hah
-hah
+hol
+tfg
+tfg
+tfg
+tfg
+tfg
 jsz
 vFi
 vFi
@@ -55093,7 +54836,7 @@ ydh
 ydh
 ydh
 ydh
-ydh
+soR
 ydh
 ydh
 ydh
@@ -55146,7 +54889,7 @@ jsz
 baw
 xRV
 vsC
-jom
+hol
 vpY
 fDl
 azA
@@ -55156,23 +54899,23 @@ lIN
 wTT
 azA
 bqs
-jom
+hol
 gsq
 ePc
-jom
+hol
 rSP
 cym
 cym
 azA
-jom
+hol
 dyy
 uLr
-jom
-hah
-hah
-hah
-hah
-hah
+hol
+tfg
+tfg
+tfg
+tfg
+tfg
 jsz
 vFi
 vFi
@@ -55403,34 +55146,34 @@ ydh
 fvv
 fvv
 oHe
-dSp
+ovR
 hol
 pGZ
-jom
-jom
+hol
+hol
 aDf
-jom
-jom
+hol
+hol
 eBr
 eaF
 jZY
-jom
+hol
 gsq
 ePc
-jom
+hol
 rvp
 eaF
 lCt
 jcb
-jom
-jom
-jom
-jom
-hah
-hah
-hah
-hah
-hah
+hol
+hol
+hol
+hol
+tfg
+tfg
+tfg
+tfg
+tfg
 jsz
 vFi
 vFi
@@ -55661,33 +55404,33 @@ ydh
 fvv
 oHe
 oHe
-dSp
+ovR
 osz
 wmy
 jvB
-jom
+hol
 gKE
 rtb
-jom
-jom
-jom
-jom
-jom
+hol
+hol
+hol
+hol
+hol
 gsq
 dhM
-jom
-jom
-jom
-jom
-jom
-jom
-hah
-hah
-hah
-hah
-hah
-hah
-hah
+hol
+hol
+hol
+hol
+hol
+hol
+tfg
+tfg
+tfg
+tfg
+tfg
+tfg
+tfg
 jsz
 jsz
 jsz
@@ -55919,36 +55662,36 @@ ydh
 fvv
 oHe
 oHe
-dSp
-jom
-oqf
-dSp
-jom
+ovR
+hol
+tLx
+ovR
+hol
 heO
 gKE
-jom
+hol
 oaz
 sLr
 fJh
-jom
+hol
 gsq
 ePc
-jom
+hol
 phB
 ePc
 gCT
 uoc
-jom
-jom
-jom
-jom
-hah
-hah
-hah
-hah
+hol
+hol
+hol
+hol
+tfg
+tfg
+tfg
+tfg
 jsz
 jsz
-hah
+tfg
 jsz
 vFi
 vFi
@@ -56177,36 +55920,36 @@ ydh
 fvv
 nku
 oHe
-oba
-jom
-dSp
+yap
+hol
+ovR
 hrS
-jom
+hol
 dyy
 nIX
-jom
+hol
 jPi
 jhH
 nQx
 qah
 gsq
 ePc
-jom
+hol
 gsq
 qXR
 qXR
 jGm
-jom
+hol
 rtb
 nIX
-jom
-hah
-hah
-hah
-hah
-hah
+hol
+tfg
+tfg
+tfg
+tfg
+tfg
 jsz
-hah
+tfg
 jsz
 vFi
 vFi
@@ -56435,18 +56178,18 @@ fvv
 fvv
 oHe
 oHe
-dSp
-jom
-dSp
-dSp
-jom
-jom
-jom
-jom
-jom
-jom
-jom
-jom
+ovR
+hol
+ovR
+ovR
+hol
+hol
+hol
+hol
+hol
+hol
+hol
+hol
 bZr
 qhK
 slw
@@ -56457,14 +56200,14 @@ ePc
 aDf
 gKE
 tKH
-jom
-hah
-hah
-hah
-hah
-hah
-hah
-hah
+hol
+tfg
+tfg
+tfg
+tfg
+tfg
+tfg
+tfg
 jsz
 jsz
 vFi
@@ -56693,37 +56436,37 @@ jNT
 fvv
 oHe
 oHe
-dSp
-jom
-oqf
-dSp
-dSp
-dSp
-dSp
+ovR
+hol
+tLx
+ovR
+ovR
+ovR
+ovR
 lJw
 gbO
 tCn
-dSp
-jom
+ovR
+hol
 gsq
 ePc
-jom
+hol
 uiU
 qXR
 qXR
 ePc
-jom
+hol
 dyy
 uLr
-jom
-hah
-hah
-hah
-hah
-hah
-hah
-hah
-hah
+hol
+tfg
+tfg
+tfg
+tfg
+tfg
+tfg
+tfg
+tfg
 jsz
 vFi
 vFi
@@ -57209,8 +56952,8 @@ hlq
 hlq
 hlq
 oHe
-dSp
-jom
+ovR
+hol
 fvv
 fvv
 fvv
@@ -57467,7 +57210,7 @@ vVd
 vVd
 hlq
 tcW
-dSp
+ovR
 cVL
 wQZ
 fvv
@@ -57725,8 +57468,8 @@ vVd
 vVd
 hlq
 fvv
-jom
-jom
+hol
+hol
 fvv
 fvv
 fvv
@@ -57752,7 +57495,7 @@ vVd
 vVd
 vVd
 vVd
-hah
+tfg
 vVd
 jsz
 jsz
@@ -57984,7 +57727,7 @@ hlq
 hlq
 ayP
 xbZ
-aVy
+xls
 wxh
 huK
 huK
@@ -58010,9 +57753,9 @@ vVd
 vVd
 vVd
 vVd
-hah
+tfg
 jsz
-hah
+tfg
 jsz
 vFi
 vFi
@@ -58228,7 +57971,7 @@ ydh
 ydh
 ydh
 ydh
-erA
+kTB
 ydh
 ydh
 ydh
@@ -58268,9 +58011,9 @@ vVd
 vVd
 vVd
 vVd
-hah
+tfg
 jsz
-hah
+tfg
 jsz
 vFi
 vFi
@@ -58507,27 +58250,27 @@ fvv
 nku
 oHe
 fvv
-jom
+hol
 ePc
 tBg
-jom
+hol
 gsq
 ePc
-jom
+hol
 xnG
-fHP
-dSp
+waY
+ovR
 lHN
-jom
-jom
-jom
-jom
-hah
-hah
-hah
-hah
-hah
-hah
+hol
+hol
+hol
+hol
+tfg
+tfg
+tfg
+tfg
+tfg
+tfg
 jsz
 jsz
 vFi
@@ -58783,7 +58526,7 @@ vVd
 vVd
 vVd
 vVd
-hah
+tfg
 jsz
 jsz
 jsz
@@ -59015,8 +58758,8 @@ fvv
 fvv
 fvv
 fvv
-jom
-jom
+hol
+hol
 rfz
 oHe
 gIe
@@ -59041,8 +58784,8 @@ vVd
 epg
 aid
 vVd
-hah
-hah
+tfg
+tfg
 jsz
 vFi
 vFi
@@ -59298,8 +59041,8 @@ pCs
 pCs
 pCs
 pCs
-hah
-hah
+tfg
+tfg
 jsz
 jsz
 vuP
@@ -59556,8 +59299,8 @@ pCs
 epg
 pCs
 vVd
-hah
-hah
+tfg
+tfg
 jsz
 jsz
 vuP
@@ -59814,7 +59557,7 @@ mFz
 pCs
 pCs
 vVd
-hah
+tfg
 jsz
 jsz
 jsz
@@ -60072,8 +59815,8 @@ ydh
 vVd
 vVd
 vVd
-hah
-hah
+tfg
+tfg
 jsz
 vFi
 vFi
@@ -60330,7 +60073,7 @@ vVd
 vVd
 vVd
 vVd
-hah
+tfg
 jsz
 jsz
 vFi
@@ -60587,7 +60330,7 @@ hlq
 vVd
 vVd
 vVd
-hah
+tfg
 jsz
 jsz
 vFi
@@ -60842,10 +60585,10 @@ iKH
 qJS
 fuU
 hlq
-hah
+tfg
 vVd
-hah
-hah
+tfg
+tfg
 jsz
 vFi
 vFi
@@ -61101,9 +60844,9 @@ qJS
 qJS
 hlq
 vVd
-hah
-hah
-hah
+tfg
+tfg
+tfg
 jsz
 jsz
 jsz
@@ -61358,10 +61101,10 @@ hlq
 acK
 hlq
 hlq
-jom
+hol
 fvv
-jom
-jom
+hol
+hol
 avh
 avh
 avh
@@ -61619,11 +61362,11 @@ wPf
 qUt
 rLA
 nxv
-jom
+hol
 ydh
-erA
-erA
-erA
+kTB
+kTB
+kTB
 ydh
 ydh
 ydh
@@ -61872,15 +61615,15 @@ gIe
 gIe
 gIe
 ePc
-jom
+hol
 xxL
 tNx
 ivs
 fro
-jom
-erA
-erA
-erA
+hol
+kTB
+kTB
+kTB
 ydh
 ydh
 ydh
@@ -62135,11 +61878,11 @@ aLm
 cfm
 aLm
 oMV
-jom
-erA
-erA
-erA
-erA
+hol
+kTB
+kTB
+kTB
+kTB
 ydh
 ydh
 ydh
@@ -62385,7 +62128,7 @@ puz
 gIe
 ydh
 gIe
-jom
+hol
 bGH
 bhL
 fvv
@@ -62393,11 +62136,11 @@ uNs
 rtJ
 ivs
 guK
-jom
-erA
-erA
+hol
+kTB
+kTB
 ydh
-erA
+kTB
 ydh
 ydh
 ydh
@@ -62651,8 +62394,8 @@ xgQ
 hXA
 xyF
 gON
-aVy
-erA
+xls
+kTB
 ydh
 ydh
 ydh
@@ -62907,9 +62650,9 @@ ykD
 fvv
 fvv
 fvv
-jom
-aVy
-aVy
+hol
+xls
+xls
 ydh
 ydh
 ydh
@@ -63168,7 +62911,7 @@ vVd
 pCs
 ydh
 ydh
-erA
+kTB
 ydh
 ydh
 ydh
@@ -63424,7 +63167,7 @@ fvv
 vVd
 ydh
 ydh
-erA
+kTB
 ydh
 ydh
 ydh
@@ -63682,8 +63425,8 @@ fvv
 ydh
 ydh
 ydh
-erA
-erA
+kTB
+kTB
 ydh
 ydh
 ydh
@@ -64199,9 +63942,9 @@ hlq
 hlq
 gIw
 gIw
-aVy
-aVy
-aVy
+xls
+xls
+xls
 ydh
 ydh
 mFz
@@ -64961,11 +64704,11 @@ fvv
 gIe
 lcA
 fvv
-jom
-aVy
+hol
+xls
 ydX
-aVy
-jom
+xls
+hol
 fvv
 fvv
 fvv
@@ -64975,7 +64718,7 @@ gIw
 gIw
 mFz
 mFz
-aVy
+xls
 gIw
 mFz
 mFz
@@ -65218,16 +64961,16 @@ vVd
 fvv
 gIe
 rfz
-jom
+hol
 qkX
 aan
 ken
 cDB
 gWI
-jom
-hah
-hah
-erA
+hol
+tfg
+tfg
+kTB
 ydh
 ydh
 ydh
@@ -65476,16 +65219,16 @@ vVd
 fvv
 gIe
 rfz
-jom
+hol
 nQg
 nQg
 hRE
 nQg
 pIn
 gIw
-hah
-hah
-erA
+tfg
+tfg
+kTB
 ydh
 ydh
 ydh
@@ -65734,16 +65477,16 @@ uXG
 fvv
 gIe
 rfz
-aVy
+xls
 cDB
 gWI
 rMD
 nQg
 nQg
 gIw
-hah
-hah
-erA
+tfg
+tfg
+kTB
 ydh
 ydh
 ydh
@@ -65967,19 +65710,19 @@ jsz
 jsz
 jsz
 jsz
-hah
-hah
+tfg
+tfg
 tTY
 tTY
 tTY
 tTY
 tTY
-hah
+tfg
 goW
 sfB
-hah
+tfg
 gIw
-hah
+tfg
 gIw
 gIw
 gxy
@@ -65992,18 +65735,18 @@ fvv
 fvv
 gIe
 rfz
-aVy
+xls
 cDB
 gWI
 rMD
 nQg
 ioS
-aVy
+xls
 ydh
-erA
+kTB
 ydh
 ydh
-erA
+kTB
 ydh
 ydh
 ydh
@@ -66223,21 +65966,21 @@ vFi
 vFi
 vFi
 jsz
-hah
-hah
-hah
-hah
-hah
-hah
-hah
-hah
+tfg
+tfg
+tfg
+tfg
+tfg
+tfg
+tfg
+tfg
 tTY
-hah
+tfg
 kiH
-hah
-hah
-hah
-hah
+tfg
+tfg
+tfg
+tfg
 gIw
 mas
 gxy
@@ -66250,18 +65993,18 @@ gIe
 gIe
 gIe
 rfz
-aVy
+xls
 cDB
 gWI
 rMD
 nQg
 gWI
-aVy
-erA
-erA
-erA
+xls
+kTB
+kTB
+kTB
 ydh
-erA
+kTB
 ydh
 ydh
 ydh
@@ -66481,21 +66224,21 @@ vFi
 vFi
 vFi
 jsz
-hah
+tfg
 jsz
-hah
-hah
-hah
-hah
-hah
-hah
-hah
-hah
-hah
-hah
-hah
-hah
-hah
+tfg
+tfg
+tfg
+tfg
+tfg
+tfg
+tfg
+tfg
+tfg
+tfg
+tfg
+tfg
+tfg
 gIw
 jMh
 gxy
@@ -66514,12 +66257,12 @@ nQg
 hRE
 nQg
 pIn
-aVy
-erA
-erA
-erA
+xls
+kTB
+kTB
+kTB
 ydh
-erA
+kTB
 ydh
 ydh
 ydh
@@ -66740,20 +66483,20 @@ vFi
 vFi
 jsz
 jsz
-hah
-hah
+tfg
+tfg
 jsz
 jsz
-hah
-hah
-hah
-hah
-hah
-hah
-hah
-hah
-hah
-hah
+tfg
+tfg
+tfg
+tfg
+tfg
+tfg
+tfg
+tfg
+tfg
+tfg
 gIw
 rSl
 gxy
@@ -66774,10 +66517,10 @@ cDg
 nQg
 gIw
 ydh
-erA
+kTB
 ydh
-erA
-erA
+kTB
+kTB
 ydh
 ydh
 ydh
@@ -66998,20 +66741,20 @@ vFi
 vFi
 vFi
 jsz
-hah
+tfg
 jsz
 jsz
 jsz
 jsz
 jsz
 jsz
-hah
-hah
-hah
-hah
-hah
-hah
-hah
+tfg
+tfg
+tfg
+tfg
+tfg
+tfg
+tfg
 gIw
 gIw
 gxy
@@ -67034,7 +66777,7 @@ gIw
 ydh
 ydh
 ydh
-erA
+kTB
 ydh
 ydh
 ydh
@@ -67264,13 +67007,13 @@ vFi
 vFi
 jsz
 jsz
-hah
-hah
-hah
-hah
-hah
-hah
-hah
+tfg
+tfg
+tfg
+tfg
+tfg
+tfg
+tfg
 gIw
 gIw
 hlq
@@ -67288,11 +67031,11 @@ knf
 mAM
 qoU
 gIw
-hah
-hah
-erA
+tfg
+tfg
+kTB
 ydh
-erA
+kTB
 ydh
 ydh
 ydh
@@ -67522,15 +67265,15 @@ vFi
 vFi
 vFi
 jsz
-hah
-hah
-hah
-hah
-hah
-hah
-hah
-hah
-hah
+tfg
+tfg
+tfg
+tfg
+tfg
+tfg
+tfg
+tfg
+tfg
 vVd
 vVd
 vVd
@@ -67548,7 +67291,7 @@ vUq
 gIw
 ydh
 ydh
-erA
+kTB
 ydh
 ydh
 ydh
@@ -67781,14 +67524,14 @@ vFi
 vFi
 jsz
 jsz
-hah
-hah
-hah
-hah
-hah
-hah
-hah
-hah
+tfg
+tfg
+tfg
+tfg
+tfg
+tfg
+tfg
+tfg
 vVd
 vVd
 vVd
@@ -67804,7 +67547,7 @@ tiU
 vDP
 aQp
 gIw
-hah
+tfg
 ydh
 ydh
 ydh
@@ -68040,13 +67783,13 @@ vFi
 jsz
 jsz
 jsz
-hah
-hah
-hah
-hah
-hah
-hah
-hah
+tfg
+tfg
+tfg
+tfg
+tfg
+tfg
+tfg
 vVd
 vVd
 vVd
@@ -68065,8 +67808,8 @@ gIw
 ydh
 ydh
 ydh
-erA
-erA
+kTB
+kTB
 ydh
 ydh
 ydh
@@ -68298,13 +68041,13 @@ vFi
 vFi
 vFi
 jsz
-hah
-hah
-hah
-hah
-hah
-hah
-hah
+tfg
+tfg
+tfg
+tfg
+tfg
+tfg
+tfg
 vVd
 vVd
 vVd
@@ -68318,7 +68061,7 @@ fvv
 fvv
 xfB
 fvv
-jom
+hol
 gIw
 ydh
 ydh
@@ -68556,13 +68299,13 @@ vFi
 vFi
 vFi
 jsz
-hah
-hah
-hah
-hah
-hah
-hah
-hah
+tfg
+tfg
+tfg
+tfg
+tfg
+tfg
+tfg
 vVd
 vVd
 vVd
@@ -68581,7 +68324,7 @@ ydh
 ydh
 ydh
 ydh
-erA
+kTB
 ydh
 ydh
 ydh
@@ -68814,13 +68557,13 @@ vFi
 jsz
 jsz
 jsz
-hah
-hah
-hah
-hah
-hah
-hah
-hah
+tfg
+tfg
+tfg
+tfg
+tfg
+tfg
+tfg
 vVd
 vVd
 vVd
@@ -68835,9 +68578,9 @@ hVi
 sou
 bQc
 gIw
-hah
-erA
-erA
+tfg
+kTB
+kTB
 ydh
 ydh
 ydh
@@ -69070,15 +68813,15 @@ vFi
 vFi
 vFi
 jsz
-hah
-hah
-hah
-hah
-hah
-hah
-hah
-hah
-hah
+tfg
+tfg
+tfg
+tfg
+tfg
+tfg
+tfg
+tfg
+tfg
 vVd
 vVd
 vVd
@@ -69093,7 +68836,7 @@ pIs
 sou
 iwo
 gIw
-hah
+tfg
 ydh
 ydh
 ydh
@@ -69328,15 +69071,15 @@ vFi
 vFi
 vFi
 jsz
-hah
-jom
-jom
-jom
-jom
-jom
-jom
-jom
-jom
+tfg
+hol
+hol
+hol
+hol
+hol
+hol
+hol
+hol
 fvv
 fvv
 fvv
@@ -69586,14 +69329,14 @@ vFi
 vFi
 vFi
 jsz
-jom
-jom
-dSp
-dSp
+hol
+hol
+ovR
+ovR
 mXH
 hrS
-dSp
-dSp
+ovR
+ovR
 gBc
 aap
 gIe
@@ -69605,7 +69348,7 @@ pNe
 pNe
 oIv
 gIe
-jom
+hol
 ydh
 vVd
 ydh
@@ -69844,14 +69587,14 @@ vFi
 vFi
 vFi
 jsz
-jom
-dSp
-dSp
-dSp
+hol
+ovR
+ovR
+ovR
 gCM
-dSp
-dSp
-dSp
+ovR
+ovR
+ovR
 ePc
 eOs
 gIe
@@ -69866,9 +69609,9 @@ ePc
 fvv
 ydh
 ydh
-erA
+kTB
 ydh
-erA
+kTB
 ydh
 ydh
 ydh
@@ -70102,29 +69845,29 @@ vFi
 vFi
 vFi
 jsz
-jom
-dSp
-dSp
-jom
-jom
-jom
+hol
+ovR
+ovR
+hol
+hol
+hol
 bYA
 bws
-jom
+hol
 fvv
-jom
-jom
+hol
+hol
 gIU
-jom
-jom
-aVy
+hol
+hol
+xls
 hcK
-aVy
-jom
-jom
+xls
+hol
+hol
 ydh
-hah
-erA
+tfg
+kTB
 ydh
 ydh
 ydh
@@ -70360,15 +70103,15 @@ vFi
 vFi
 vFi
 jsz
-jom
-oqf
-dSp
-jom
+hol
+tLx
+ovR
+hol
 jsz
-jom
-jom
-jom
-jom
+hol
+hol
+hol
+hol
 dBt
 ebI
 fzl
@@ -70382,7 +70125,7 @@ ydh
 mFz
 ydh
 ydh
-erA
+kTB
 ydh
 ydh
 ydh
@@ -70626,7 +70369,7 @@ jsz
 jsz
 jsz
 jsz
-jom
+hol
 fvv
 fvv
 xqV
@@ -70641,7 +70384,7 @@ ydh
 ydh
 ydh
 ydh
-erA
+kTB
 ydh
 ydh
 ydh
@@ -70884,7 +70627,7 @@ vFi
 vFi
 vFi
 jsz
-jom
+hol
 mui
 lnu
 fzl
@@ -70899,8 +70642,8 @@ dbz
 ydh
 ydh
 ydh
-erA
-erA
+kTB
+kTB
 ydh
 ydh
 ydh
@@ -71157,7 +70900,7 @@ ydh
 ydh
 ydh
 ydh
-erA
+kTB
 ydh
 ydh
 ydh

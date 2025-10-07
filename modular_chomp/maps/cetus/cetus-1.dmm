@@ -3424,23 +3424,6 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/cetus/engine)
-"bSq" = (
-/obj/machinery/door/airlock/external{
-	icon_state = "door_locked";
-	locked = 1;
-	name = "External Airlock Access";
-	req_access = list(13)
-	},
-/obj/effect/map_helper/airlock/door/ext_door,
-/obj/machinery/access_button{
-	dir = 1;
-	name = "exterior access button";
-	pixel_y = 8;
-	pixel_x = 29
-	},
-/obj/effect/map_helper/airlock/button/ext_button,
-/turf/simulated/floor/plating,
-/area/engineering/cetus/meteor/enginewaste)
 "bSr" = (
 /obj/effect/floor_decal/borderfloorwhite/corner,
 /obj/effect/floor_decal/industrial/danger/corner,
@@ -4569,6 +4552,10 @@
 	},
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 1
+	},
+/obj/machinery/camera/network/civilian{
+	c_tag = "TEST - Central Primary Hallway 1";
+	dir = 6
 	},
 /turf/simulated/floor/tiled/neutral,
 /area/maintenance/cetus/hallway)
@@ -8264,6 +8251,32 @@
 	pixel_x = 2;
 	pixel_y = 11
 	},
+/obj/item/circuitboard/circuit_imprinter{
+	pixel_x = 1;
+	pixel_y = 8
+	},
+/obj/item/circuitboard/machine/protolathe/department/cargo{
+	pixel_y = 1
+	},
+/obj/item/circuitboard/machine/protolathe/department/engineering{
+	pixel_y = 5
+	},
+/obj/item/circuitboard/machine/protolathe/department/medical{
+	pixel_x = -1;
+	pixel_y = 2
+	},
+/obj/item/circuitboard/machine/protolathe/department/science{
+	pixel_x = -2;
+	pixel_y = -1
+	},
+/obj/item/circuitboard/machine/protolathe/department/security{
+	pixel_x = -3;
+	pixel_y = -4
+	},
+/obj/item/circuitboard/machine/protolathe/department/service{
+	pixel_x = -4;
+	pixel_y = -7
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/cetus/meteor/techstorage)
 "eHF" = (
@@ -11794,12 +11807,15 @@
 /turf/simulated/floor/tiled/dark,
 /area/rnd/cetus/meteor/toxstorage)
 "gEn" = (
-/obj/machinery/firealarm{
-	dir = 8;
-	pixel_x = -26
+/obj/machinery/door/airlock/external{
+	icon_state = "door_locked";
+	locked = 1;
+	name = "External Airlock Access";
+	req_access = list(13)
 	},
-/turf/simulated/floor/tiled,
-/area/engineering/cetus/meteor/atriumdeck1)
+/obj/effect/map_helper/airlock/door/ext_door,
+/turf/simulated/floor/plating,
+/area/engineering/cetus/meteor/enginewaste)
 "gEw" = (
 /obj/structure/toilet{
 	dir = 1
@@ -13526,6 +13542,13 @@
 	req_access = list(13)
 	},
 /obj/effect/map_helper/airlock/door/ext_door,
+/obj/machinery/access_button{
+	dir = 1;
+	name = "exterior access button";
+	pixel_y = 8;
+	pixel_x = 29
+	},
+/obj/effect/map_helper/airlock/button/ext_button,
 /turf/simulated/floor/plating,
 /area/engineering/cetus/meteor/enginewaste)
 "hyp" = (
@@ -17294,12 +17317,9 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/cetus/engine)
 "jqB" = (
-/obj/machinery/alarm{
-	dir = 4;
-	pixel_x = -22
-	},
-/turf/simulated/floor/plating,
-/area/maintenance/cetus/d1port)
+/obj/machinery/floodlight,
+/turf/simulated/floor/outdoors/rocks/cetus,
+/area/maintenance/cetus/meteor/aftstar)
 "jqH" = (
 /obj/effect/floor_decal/corner/green/diagonal,
 /obj/effect/landmark{
@@ -22071,6 +22091,10 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
+	},
+/obj/machinery/camera/network/civilian{
+	c_tag = "TEST - Central Primary Hallway 4";
+	dir = 6
 	},
 /turf/simulated/floor/tiled/neutral,
 /area/maintenance/cetus/hallway)
@@ -31276,9 +31300,12 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/surgery_hallway)
 "qBX" = (
-/obj/machinery/floodlight,
-/turf/simulated/floor/outdoors/rocks/cetus,
-/area/maintenance/cetus/meteor/aftstar)
+/obj/machinery/alarm{
+	dir = 4;
+	pixel_x = -22
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/cetus/d1port)
 "qCa" = (
 /obj/structure/morgue{
 	dir = 2
@@ -32056,6 +32083,13 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/cetus/meteor/airlock)
+"qVN" = (
+/obj/machinery/firealarm{
+	dir = 8;
+	pixel_x = -26
+	},
+/turf/simulated/floor/tiled,
+/area/engineering/cetus/meteor/atriumdeck1)
 "qVU" = (
 /obj/structure/salvageable/computer,
 /turf/simulated/shuttle/floor/black,
@@ -41508,6 +41542,10 @@
 	icon_state = "2-9"
 	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 4
+	},
+/obj/machinery/camera/network/civilian{
+	c_tag = "TEST - Central Primary Hallway 3";
 	dir = 4
 	},
 /turf/simulated/floor/tiled/neutral,
@@ -66539,7 +66577,7 @@ qFw
 qFw
 hnf
 tXf
-jqB
+qBX
 pMs
 cLp
 iey
@@ -98810,7 +98848,7 @@ iOO
 dOt
 idC
 sRw
-qBX
+jqB
 tiw
 tiw
 tiw
@@ -102652,7 +102690,7 @@ sLi
 xNW
 hHs
 aEr
-gEn
+qVN
 tym
 hoR
 cRM
@@ -105222,7 +105260,7 @@ qFw
 suH
 qFw
 eqX
-hyl
+gEn
 pRA
 aOM
 clJ
@@ -105480,7 +105518,7 @@ suH
 suH
 qFw
 eqX
-bSq
+hyl
 auO
 sKo
 qrd
