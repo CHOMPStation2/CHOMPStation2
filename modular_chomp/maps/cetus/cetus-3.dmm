@@ -8994,7 +8994,7 @@
 	req_one_access = list(16)
 	},
 /obj/machinery/door/blast/regular{
-	id = "AICore";
+	id = "AIFoyer";
 	name = "AI core maintenance hatch"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -14505,6 +14505,10 @@
 "iTw" = (
 /obj/machinery/porta_turret/ai_defense{
 	req_one_access = list(16)
+	},
+/obj/machinery/camera/xray/command{
+	c_tag = "AI - Upload";
+	dir = 10
 	},
 /turf/simulated/floor/redgrid,
 /area/ai_upload)
@@ -20681,9 +20685,6 @@
 /turf/simulated/floor/carpet/tealcarpet,
 /area/bridge/sleep/CMO_Quarters)
 "moD" = (
-/obj/machinery/camera/network/command{
-	c_tag = "AI - Entry Hall"
-	},
 /obj/machinery/ai_status_display{
 	pixel_y = 32
 	},
@@ -23115,6 +23116,10 @@
 /obj/effect/floor_decal/spline/plain/three_quarters,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
+	},
+/obj/machinery/camera/xray/command{
+	c_tag = "AI - Entry Hall";
+	dir = 10
 	},
 /turf/simulated/floor/tiled/milspec/raised,
 /area/ai_monitored/aihall)
@@ -26797,13 +26802,6 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/tcomm/chamber)
-"pUI" = (
-/obj/machinery/light_switch{
-	name = "light switch ";
-	pixel_x = 32
-	},
-/turf/simulated/floor/tiled/techfloor,
-/area/ai_upload)
 "pUM" = (
 /obj/random/cutout,
 /turf/simulated/floor/plating,
@@ -35881,9 +35879,6 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/tcomm/chamber)
 "vpk" = (
-/obj/machinery/camera/network/command{
-	c_tag = "AI - Upload"
-	},
 /obj/machinery/power/apc{
 	dir = 1;
 	name = "north bump";
@@ -53141,7 +53136,7 @@ sZC
 vjb
 pfn
 vjb
-fuV
+fTw
 fuV
 mco
 mco
@@ -53657,7 +53652,7 @@ psb
 gws
 rWz
 gjY
-fuV
+fTw
 fuV
 mco
 mco
@@ -90358,7 +90353,7 @@ evc
 evc
 icT
 whC
-pUI
+eoq
 vcX
 wFl
 cRb
