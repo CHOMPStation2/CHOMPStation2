@@ -532,13 +532,8 @@
 					S.dragon_overlays[6] = choice
 					S.dragon_overlays[S.dragon_overlays[6]] = new_color
 			S.blob_appearance = "dragon"
-<<<<<<< HEAD
-		if("dullahan") //START OF DULLAHAN PORT.
-			var/list/options = list("Metalshell","Eyes","Decals","Import","Export")
-=======
 		if("Dullahan") //START OF DULLAHAN PORT.
 			var/list/options = list("Metalshell","Head","Eyes","Lights","Clothes","Import","Export")
->>>>>>> bc56378353 (Protean updates [could use code review] (#18309))
 			for(var/option in options)
 				LAZYSET(options, option, image('icons/mob/robot/dullahan/v1/dullahansigns.dmi', option))
 			var/choice = show_radial_menu(protie, protie, options, radius = 60)
