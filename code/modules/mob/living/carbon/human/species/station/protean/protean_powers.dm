@@ -410,7 +410,7 @@
 			"panther" = image(icon = 'icons/mob/species/protean/protean64x64.dmi', icon_state = "panther", pixel_x = -16),
 			"robodrgn" = image(icon = 'icons/mob/species/protean/protean128x64.dmi', icon_state = "robodrgn", pixel_x = -48),
 			"Dragon" = image(icon = 'icons/mob/bigdragon_small.dmi', icon_state = "dragon_small"),
-			"dullahan" = image(icon = 'icons/mob/robot/dullahan/v1/dullahanicon.dmi', icon_state = "proticon")
+			"Dullahan" = image(icon = 'icons/mob/robot/dullahan/v1/dullahanicon.dmi', icon_state = "proticon")
 			//CHOMPEnable End
 			)
 	var/blobstyle = show_radial_menu(protie, protie, icon_choices, require_near = TRUE, tooltips = FALSE)
