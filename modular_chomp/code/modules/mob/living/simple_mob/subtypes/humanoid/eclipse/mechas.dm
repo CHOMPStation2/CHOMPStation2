@@ -23,6 +23,12 @@
 /mob/living/simple_mob/mechanical/mecha/eclipse/do_special_attack(atom/A)
 	bullet_heck(A, 3, 3)
 
+/mob/living/simple_mob/mechanical/mecha/eclipse/bullet_act(obj/item/projectile/P) //removal of E net cheese
+	if(P == /obj/item/projectile/beam/energy_net)
+		return
+	else
+		..()
+
 /datum/ai_holder/simple_mob/intentional/three_phases
 	use_astar = TRUE
 	wander = FALSE
