@@ -335,7 +335,7 @@
 	#define JOB_ALT_SECURITY_DEPUTY "Security Deputy"
 	#define JOB_ALT_JUNIOR_OFFICER "Junior Officer"
 	#define JOB_ALT_SECURITY_CONTRACTOR "Security Contractor"
-<<<<<<< HEAD
+	#define JOB_ALT_LOSS_PREVENTION "Loss Prevention Officer"
 
 // CHOMPAdd
 #define JOB_BRIG_PHYSICIAN "Brig Physician"
@@ -346,9 +346,7 @@
 	#define JOB_ALT_JUNIOR_BRIGPHYS "Junior Brig Physician"
 	#define JOB_ALT_DETENTION_HEALTH_OFFICER "Detention Health Officer"
 // CHOMPAdd End
-=======
-	#define JOB_ALT_LOSS_PREVENTION "Loss Prevention Officer"
->>>>>>> 15fba57a2c (Some extra alt titles (#18591))
+
 //___________________________________________________________
 
 
