@@ -47,7 +47,7 @@
 	name = "Tyrian Energy Blade"
 	id = "tyr_sabre"
 	build_type = PROTOLATHE
-	materials = list(MAT_BRONZE = 10000,MAT_DIAMOND = 6000,MAT_COPPER = 8000,MAT_METALHYDROGEN = 2000,MAT_QUARTZ = 2000,MAT_WEATHERED_AGATE = 6000)
+	materials = list(MAT_BRONZE = 10000,MAT_DIAMOND = 6000,MAT_COPPER = 8000,MAT_METALHYDROGEN = 2000,MAT_QUARTZ = 2000,MAT_EAGATE = 6000)
 	build_path = /obj/item/melee/energy/tyr_sabre
 	category = list(
 		RND_CATEGORY_EQUIPMENT
@@ -58,7 +58,7 @@
 	name = "Tyrian Barrier Bubble"
 	id = "tyr_barrier"
 	build_type = PROTOLATHE
-	materials = list(MAT_BRONZE = 20000,MAT_DIAMOND = 15000,MAT_COPPER = 15000,MAT_METALHYDROGEN = 20000,MAT_QUARTZ = 50000,MAT_WEATHERED_AGATE = 60000)
+	materials = list(MAT_BRONZE = 20000,MAT_DIAMOND = 15000,MAT_COPPER = 15000,MAT_METALHYDROGEN = 20000,MAT_QUARTZ = 50000,MAT_EAGATE = 60000)
 	build_path = /obj/item/shield_projector/rectangle/automatic/tyrbarrier
 	category = list(
 		RND_CATEGORY_EQUIPMENT
