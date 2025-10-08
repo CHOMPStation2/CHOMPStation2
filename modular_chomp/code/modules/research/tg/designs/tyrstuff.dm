@@ -36,7 +36,7 @@
 	name = "Magnet Belt"
 	id = "magnet_belt"
 	build_type = PROTOLATHE
-	materials = list(MAT_BRONZE = 12000,MAT_DIAMOND = 700,MAT_COPPER = 3000,MAT_METALHYDROGEN = 1000,MAT_QUARTZ = 5000,MAT_WEATHERED_AGATE = 8000)
+	materials = list(MAT_BRONZE = 12000,MAT_DIAMOND = 700,MAT_COPPER = 3000,MAT_METALHYDROGEN = 1000,MAT_QUARTZ = 5000,MAT_EAGATE = 8000)
 	build_path = /obj/item/personal_shield_generator/belt/magnetbelt
 	category = list(
 		RND_CATEGORY_EQUIPMENT
