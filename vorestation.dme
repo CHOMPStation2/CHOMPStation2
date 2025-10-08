@@ -2274,6 +2274,13 @@
 #include "code\modules\asset_cache\iconforge\universal_icon.dm"
 #include "code\modules\asset_cache\transports\asset_transport.dm"
 #include "code\modules\asset_cache\transports\webroot_transport.dm"
+<<<<<<< HEAD
+=======
+#include "code\modules\autowiki\autowiki.dm"
+#include "code\modules\autowiki\page\base.dm"
+#include "code\modules\autowiki\page\symptom.dm"
+#include "code\modules\autowiki\page\techweb.dm"
+>>>>>>> 1ff0809a27 (Symptoms (#18546))
 #include "code\modules\awaymissions\bluespaceartillery.dm"
 #include "code\modules\awaymissions\corpse.dm"
 #include "code\modules\awaymissions\exile.dm"
