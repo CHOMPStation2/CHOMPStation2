@@ -112,6 +112,7 @@
 	#define JOB_ALT_SUPPLY_COURIER "Supply Courier"
 	#define JOB_ALT_DISPOSALS_SORTER "Disposals Sorter"
 	#define JOB_ALT_MAILMAN "Mailman"
+	#define JOB_ALT_DELIVERY_WORKER "Delivery Worker"
 
 #define JOB_SHAFT_MINER "Shaft Miner"
 	// Shaft Miner alt titles
@@ -194,6 +195,8 @@
 	#define JOB_ALT_FISHER "Fisher"
 	#define JOB_ALT_FORTUNE_TELLER "Fortune Teller"
 	#define JOB_ALT_SPIRIT_HEALER "Spirit Healer"
+	#define JOB_ALT_EDUCATOR "Educator"
+	#define JOB_ALT_INSTRUCTOR "Instructor"
 //___________________________________________________________
 
 
@@ -332,6 +335,7 @@
 	#define JOB_ALT_SECURITY_DEPUTY "Security Deputy"
 	#define JOB_ALT_JUNIOR_OFFICER "Junior Officer"
 	#define JOB_ALT_SECURITY_CONTRACTOR "Security Contractor"
+<<<<<<< HEAD
 
 // CHOMPAdd
 #define JOB_BRIG_PHYSICIAN "Brig Physician"
@@ -342,6 +346,9 @@
 	#define JOB_ALT_JUNIOR_BRIGPHYS "Junior Brig Physician"
 	#define JOB_ALT_DETENTION_HEALTH_OFFICER "Detention Health Officer"
 // CHOMPAdd End
+=======
+	#define JOB_ALT_LOSS_PREVENTION "Loss Prevention Officer"
+>>>>>>> 15fba57a2c (Some extra alt titles (#18591))
 //___________________________________________________________
 
 
