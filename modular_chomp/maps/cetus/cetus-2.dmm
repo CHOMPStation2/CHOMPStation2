@@ -5896,7 +5896,7 @@
 /obj/machinery/embedded_controller/radio/airlock/docking_port_multi{
 	dir = 1;
 	frequency = 1381;
-	id_tag = "arrivals_dock_southwest_airlock";
+	id_tag = "arrivals_dock_south_airlock";
 	master_tag = "arrivals_dock";
 	pixel_y = -27;
 	req_one_access = list(13)
@@ -46536,7 +46536,7 @@
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
 /obj/machinery/embedded_controller/radio/airlock/docking_port_multi{
 	frequency = 1381;
-	id_tag = "arrivals_dock_northwest_airlock";
+	id_tag = "arrivals_dock_north_airlock";
 	master_tag = "arrivals_dock";
 	pixel_y = 27;
 	req_one_access = list(13)
