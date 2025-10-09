@@ -28,7 +28,7 @@
 #include "../soluna_nexus/soluna_nexus.dm"
 #endif
 
-// Soluna Nexus
+// Cetus
 #ifdef USE_MAP_CETUS
 #include "../cetus/cetus.dm"
 #endif
