@@ -1,0 +1,6 @@
+author: "FluffMedic"
+delete-after: True
+changes:
+  - balance: "Tyr Shield boss will stay unshielded for longer, shield HP is less, true HP is more."
+  - bugfix: "Tyr Sabre uses the proper sprite now"
+  - bugfix: "Weathered Agate should be fully shifted to Energized Agate for science crafting"
