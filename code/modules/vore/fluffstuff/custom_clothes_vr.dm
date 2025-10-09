@@ -2407,9 +2407,7 @@ End CHOMP Removal*/
 	icon_state = "memorycrown"
 	default_worn_icon = 'icons/vore/custom_clothes_mob.dmi'
 	slot_flags = SLOT_HEAD
-<<<<<<< HEAD
 */ //Chomp REMOVE END
-=======
 
 //For general use
 /obj/item/clothing/suit/storage/hooded/purple_robes
@@ -2469,4 +2467,3 @@ End CHOMP Removal*/
 	icon = 'icons/vore/fluff_clothing/eyerobes/custom_clothes_robe_item.dmi'
 	icon_state = "hood"
 	default_worn_icon = 'icons/vore/fluff_clothing/eyerobes/custom_clothes_robe_mob.dmi'
->>>>>>> 16673ef23b (Adds a new loadout item - Cloak of Eyes (#18592))
