@@ -150,6 +150,7 @@
 	conductive = 0
 	hardness = 5
 	integrity = 10
+	stack_type = /obj/item/stack/material/cotton //CHOMPEdit
 
 /datum/material/fibers
 	name = MAT_FIBERS
