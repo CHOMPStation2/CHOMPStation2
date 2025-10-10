@@ -5335,6 +5335,7 @@
 #include "modular_chomp\code\modules\projectiles\precursor\tyr.dm"
 #include "modular_chomp\code\modules\reagents\machinery\dispenser\chem_synthesizer_ch.dm"
 #include "modular_chomp\code\modules\reagents\reactions\distilling\distilling.dm"
+#include "modular_chomp\code\modules\reagents\reactions\distilling\hot_drinks.dm"
 #include "modular_chomp\code\modules\reagents\reactions\instant\drinks.dm"
 #include "modular_chomp\code\modules\reagents\reactions\instant\instant.dm"
 #include "modular_chomp\code\modules\reagents\reagents\food_drinks.dm"
