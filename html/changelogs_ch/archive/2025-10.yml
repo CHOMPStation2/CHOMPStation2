@@ -102,3 +102,7 @@
 2025-10-11:
   Will:
   - code_imp: finished tea deconflict
+2025-10-12:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: Changed the description of Mochi Cakes as some people found the original
+      a bit offensive.
