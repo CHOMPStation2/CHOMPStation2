@@ -41,8 +41,7 @@
 			modules.Add(R.restrict_modules_to)
 		else if(R.shell)
 			modules.Add(GLOB.robot_module_types) // CHOMPEdit
-			// CHOMPAdd Start, shell blacklist and crisis mode for shells
-			modules.Remove(GLOB.shell_module_blacklist)
+			// CHOMPAdd Start, crisis mode for shells
 			if(R.crisis || GLOB.security_level == SEC_LEVEL_RED || R.crisis_override)
 				to_chat(src, span_red("Crisis mode active. Combat module available."))
 				modules |= GLOB.emergency_module_types
