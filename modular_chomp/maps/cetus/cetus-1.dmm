@@ -8631,9 +8631,18 @@
 /turf/simulated/floor/tiled/old_tile/white,
 /area/maintenance/ab_Kitchen)
 "eNB" = (
-/obj/structure/sign/warning/radioactive,
-/turf/simulated/wall/r_lead,
-/area/engineering/cetus/meteor/engineroom)
+/obj/machinery/door/firedoor/glass,
+/obj/machinery/door/airlock/glass_research{
+	autoclose = 0;
+	frequency = 1379;
+	icon_state = "door_locked";
+	id_tag = "tox_airlock_interior";
+	locked = 1;
+	name = "Mixing Room Interior Airlock";
+	req_access = list(7)
+	},
+/turf/simulated/floor/reinforced/airless,
+/area/rnd/cetus/meteor/toxins)
 "eNT" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
@@ -13633,19 +13642,6 @@
 /obj/effect/floor_decal/asteroid,
 /turf/simulated/floor/outdoors/rocks/cetus,
 /area/maintenance/cetus/meteor/aftstar)
-"hAe" = (
-/obj/machinery/door/firedoor/glass,
-/obj/machinery/door/airlock/glass_research{
-	autoclose = 0;
-	frequency = 1379;
-	icon_state = "door_locked";
-	id_tag = "tox_airlock_interior";
-	locked = 1;
-	name = "Mixing Room Interior Airlock";
-	req_access = list(7)
-	},
-/turf/simulated/floor/reinforced/airless,
-/area/rnd/cetus/meteor/toxins)
 "hAq" = (
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/medical{
@@ -59366,7 +59362,7 @@ hyW
 afH
 ycR
 xol
-hAe
+eNB
 rsH
 hSg
 rsm
@@ -99654,7 +99650,7 @@ yke
 lyH
 suH
 suH
-eNB
+vSb
 uPi
 uPi
 uPi
@@ -99912,7 +99908,7 @@ suH
 lyH
 qFw
 qFw
-uPi
+jOt
 aQE
 obe
 aEz
@@ -100170,7 +100166,7 @@ suH
 lyH
 qFw
 qFw
-uPi
+jOt
 ocx
 fXV
 qbT
@@ -101718,7 +101714,7 @@ suH
 lyH
 qFw
 qFw
-uPi
+jOt
 bOZ
 mPp
 exO
@@ -101976,7 +101972,7 @@ suH
 lyH
 qFw
 qFw
-uPi
+jOt
 aQE
 rfH
 aEz
@@ -102234,7 +102230,7 @@ yke
 lyH
 suH
 suH
-eNB
+vSb
 uPi
 uPi
 uPi
