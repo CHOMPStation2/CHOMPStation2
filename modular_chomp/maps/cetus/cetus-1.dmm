@@ -40304,6 +40304,9 @@
 	dir = 9
 	},
 /obj/machinery/light,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 5
+	},
 /turf/simulated/floor/tiled/milspec/raised,
 /area/crew_quarters/cetus/meteor/hallway2)
 "veg" = (
