@@ -1356,6 +1356,12 @@
 	},
 /turf/simulated/floor/plating,
 /area/crew_quarters/cetus/meteor/pool)
+"aLV" = (
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 10
+	},
+/turf/simulated/floor/outdoors/rocks/cetus/edge,
+/area/asteroid/cetus/d1)
 "aMd" = (
 /obj/machinery/atmospherics/unary/heat_exchanger{
 	dir = 1
@@ -1799,6 +1805,9 @@
 "aWB" = (
 /obj/machinery/mech_recharger,
 /obj/random/mech_toy,
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 9
+	},
 /turf/simulated/floor/redgrid,
 /area/engineering/cetus/meteor/atriumdeck1)
 "aXt" = (
@@ -4075,9 +4084,6 @@
 /obj/machinery/atmospherics/pipe/manifold/visible/black{
 	dir = 1
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 6
-	},
 /turf/simulated/floor/plating,
 /area/engineering/cetus/meteor/enginewaste)
 "ckd" = (
@@ -5109,9 +5115,6 @@
 /obj/machinery/atmospherics/pipe/simple/visible/red{
 	dir = 4
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 6
-	},
 /turf/simulated/floor/plating,
 /area/engineering/cetus/meteor/enginewaste)
 "cNj" = (
@@ -5151,7 +5154,6 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/engineering/cetus/meteor/enginewaste)
 "cOe" = (
@@ -8144,6 +8146,10 @@
 	name = "Engine Waste Viewport Shutter";
 	opacity = 0
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
+/obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/plating,
 /area/engineering/cetus/meteor/enginewaste)
 "eDh" = (
@@ -12362,20 +12368,13 @@
 /turf/simulated/floor/outdoors/rocks/cetus,
 /area/maintenance/cetus/meteor/central)
 "gXd" = (
-/obj/machinery/alarm{
-	pixel_y = 23
-	},
-/obj/item/radio/intercom{
-	dir = 1;
-	name = "Station Intercom (General)";
-	pixel_y = 21
-	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
 	},
 /obj/effect/floor_decal/corner/yellow/border{
 	dir = 8
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/tiled,
 /area/engineering/cetus/meteor/atriumdeck1)
 "gXD" = (
@@ -12696,7 +12695,6 @@
 	pixel_x = 32;
 	pixel_y = 32
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/universal,
 /obj/machinery/access_button{
 	dir = 8;
 	name = "interior access button";
@@ -12704,6 +12702,7 @@
 	pixel_x = 24
 	},
 /obj/effect/map_helper/airlock/button/int_button,
+/obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/plating,
 /area/engineering/cetus/meteor/enginewaste)
 "hev" = (
@@ -15596,7 +15595,6 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/techfloor,
@@ -15857,6 +15855,9 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4;
 	icon_state = "pipe-c"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/cetus/meteor/atriumdeck1)
@@ -19226,6 +19227,13 @@
 /obj/structure/sign/warning/radioactive,
 /turf/simulated/wall/r_wall,
 /area/engineering/cetus/meteor/gravsubstation)
+"kkR" = (
+/obj/machinery/alarm{
+	dir = 8;
+	pixel_x = 26
+	},
+/turf/simulated/floor/outdoors/rocks/cetus,
+/area/maintenance/cetus/meteor/starsec)
 "kkY" = (
 /obj/machinery/alarm{
 	dir = 8;
@@ -19441,6 +19449,9 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
@@ -21485,9 +21496,6 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 6
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 10
 	},
@@ -21868,11 +21876,11 @@
 /obj/structure/cable/green{
 	icon_state = "1-10"
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 9
-	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/engineering/cetus/meteor/atriumdeck1)
 "lEK" = (
@@ -22412,6 +22420,11 @@
 /obj/effect/floor_decal/spline/fancy/wood/three_quarters,
 /turf/simulated/floor/tiled/milspec/raised,
 /area/crew_quarters/cetus/meteor/lounge)
+"lXK" = (
+/obj/effect/floor_decal/rust,
+/obj/structure/fans/tiny,
+/turf/simulated/floor/plating,
+/area/maintenance/cetus/meteor/central)
 "lYv" = (
 /obj/machinery/light/small/yellowed{
 	dir = 8
@@ -22697,6 +22710,12 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/dark,
 /area/rnd/cetus/meteor/carbonresearch)
+"meR" = (
+/obj/machinery/atmospherics/pipe/simple/hidden,
+/obj/effect/wingrille_spawn/reinforced,
+/obj/machinery/door/firedoor/glass,
+/turf/simulated/floor/plating,
+/area/engineering/cetus/meteor/atriumdeck1)
 "mfm" = (
 /obj/item/radio/intercom{
 	dir = 1;
@@ -22927,6 +22946,12 @@
 /obj/structure/closet/firecloset,
 /turf/simulated/floor/tiled/dark,
 /area/chapel/chapel_morgue/cetus/crypt)
+"mmR" = (
+/obj/structure/lattice,
+/obj/structure/catwalk,
+/obj/structure/fans/tiny,
+/turf/simulated/floor/water/deep/indoors/station,
+/area/maintenance/cetus/meteor/central)
 "mmY" = (
 /turf/simulated/wall/r_wall,
 /area/maintenance/cetus/tech)
@@ -23629,6 +23654,13 @@
 	dir = 8;
 	icon_state = "pipe-c"
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
+/obj/item/radio/intercom{
+	name = "Station Intercom (General)";
+	pixel_y = -22
+	},
 /turf/simulated/floor/tiled,
 /area/engineering/cetus/meteor/atriumdeck1)
 "mFC" = (
@@ -24219,9 +24251,7 @@
 	target_pressure = 15000
 	},
 /obj/effect/floor_decal/industrial/outline/red,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 9
-	},
+/obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/plating,
 /area/engineering/cetus/meteor/enginewaste)
 "mXO" = (
@@ -24521,9 +24551,6 @@
 /obj/machinery/light/fluorescent,
 /obj/machinery/atmospherics/pipe/simple/visible/black{
 	dir = 5
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 9
 	},
 /turf/simulated/floor/plating,
 /area/engineering/cetus/meteor/enginewaste)
@@ -25909,6 +25936,9 @@
 	},
 /obj/machinery/door/airlock/glass_engineering{
 	name = "Engineering Hallway"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/engineering/cetus/meteor/atriumdeck1)
@@ -29215,6 +29245,7 @@
 	name = "Engine Waste Viewport Shutter";
 	opacity = 0
 	},
+/obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/plating,
 /area/engineering/cetus/meteor/enginewaste)
 "pJi" = (
@@ -30438,6 +30469,7 @@
 	name = "Engine Waste Viewport Shutter";
 	opacity = 0
 	},
+/obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/plating,
 /area/engineering/cetus/meteor/enginewaste)
 "qhR" = (
@@ -30477,6 +30509,10 @@
 "qiG" = (
 /obj/machinery/door/firedoor/multi_tile{
 	dir = 1
+	},
+/obj/machinery/door/airlock/multi_tile/metal/mait{
+	dir = 2;
+	name = "Maintenance Access"
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/meteor/starsec)
@@ -31646,6 +31682,7 @@
 	name = "Engine Waste Viewport Shutter";
 	opacity = 0
 	},
+/obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/plating,
 /area/engineering/cetus/meteor/enginewaste)
 "qKf" = (
@@ -33254,6 +33291,7 @@
 /obj/machinery/light/small/flicker{
 	dir = 4
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/tiled,
 /area/engineering/cetus/meteor/atriumdeck1)
 "rzd" = (
@@ -34130,9 +34168,6 @@
 /obj/effect/floor_decal/industrial/danger/corner{
 	dir = 1
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/universal{
-	dir = 4
-	},
 /turf/simulated/floor/plating,
 /area/engineering/cetus/meteor/enginewaste)
 "sdI" = (
@@ -34208,6 +34243,9 @@
 	},
 /obj/machinery/portable_atmospherics/canister/empty,
 /obj/effect/floor_decal/industrial/outline/yellow,
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 5
+	},
 /turf/simulated/floor/plating,
 /area/engineering/cetus/meteor/enginewaste)
 "sfm" = (
@@ -34417,6 +34455,9 @@
 	dir = 9
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
@@ -36828,6 +36869,7 @@
 /area/maintenance/cetus/meteor/starsec)
 "twV" = (
 /obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/maintenance,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/meteor/starsec)
 "txC" = (
@@ -38591,6 +38633,12 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/red,
 /area/security/cetus/meteor/armory)
+"uok" = (
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
+/turf/simulated/floor/outdoors/rocks/cetus/edge,
+/area/asteroid/cetus/d1)
 "uoD" = (
 /obj/structure/waterfall,
 /obj/effect/mist,
@@ -41755,6 +41803,10 @@
 /obj/machinery/door/firedoor/multi_tile{
 	dir = 1
 	},
+/obj/machinery/door/airlock/multi_tile/metal/mait{
+	dir = 2;
+	name = "Maintenance Access"
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/meteor/central)
 "vMq" = (
@@ -42078,9 +42130,6 @@
 /turf/simulated/floor/tiled,
 /area/security/cetus/meteor/brig)
 "vWK" = (
-/obj/machinery/firealarm{
-	pixel_y = 24
-	},
 /obj/structure/railing,
 /turf/simulated/floor/tiled,
 /area/engineering/cetus/meteor/atriumdeck1)
@@ -43590,6 +43639,13 @@
 	c_tag = "ENG - Hallway 1";
 	dir = 1
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
+/obj/machinery/firealarm{
+	dir = 1;
+	pixel_y = -25
+	},
 /turf/simulated/floor/tiled,
 /area/engineering/cetus/meteor/atriumdeck1)
 "wJJ" = (
@@ -44362,6 +44418,9 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/engineering/cetus/meteor/atriumdeck1)
 "xat" = (
@@ -45048,9 +45107,6 @@
 /obj/machinery/atmospherics/pipe/simple/visible/black{
 	dir = 4
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 9
-	},
 /turf/simulated/floor/plating,
 /area/engineering/cetus/meteor/enginewaste)
 "xve" = (
@@ -45141,6 +45197,9 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
@@ -86938,7 +86997,7 @@ hcE
 hcE
 xwY
 xwY
-xwY
+kkR
 hcE
 hcE
 hcE
@@ -89039,7 +89098,7 @@ slB
 slB
 eOO
 eOO
-yiM
+mmR
 sWg
 qAm
 qAm
@@ -89297,7 +89356,7 @@ slB
 eOO
 eOO
 vnr
-yiM
+mmR
 rsG
 qAm
 ePw
@@ -89538,7 +89597,7 @@ vZH
 kfl
 cTG
 wQS
-hcE
+cCA
 xwY
 xwY
 xwY
@@ -89555,8 +89614,8 @@ eOO
 eOO
 knr
 knr
-eAT
-ePw
+lXK
+sCy
 ePw
 ePw
 ePw
@@ -89813,8 +89872,8 @@ knr
 knr
 knr
 eOO
-ePw
-ePw
+lXK
+vAz
 ePw
 ePw
 ePw
@@ -90054,8 +90113,8 @@ bTZ
 wQS
 bTZ
 wQS
-hcE
-ePw
+cCA
+fwY
 eOO
 qAm
 qAm
@@ -106043,7 +106102,7 @@ mZU
 mZU
 uAV
 fvO
-jNq
+uok
 jhE
 jhE
 pmu
@@ -106301,7 +106360,7 @@ uAV
 uAV
 uAV
 fvO
-jNq
+uok
 jhE
 sIT
 ePM
@@ -106559,7 +106618,7 @@ uAV
 uAV
 fmt
 yli
-jNq
+uok
 jhE
 vWK
 iNi
@@ -106817,8 +106876,8 @@ qFw
 qFw
 fvO
 uAV
-uAV
-jhE
+aLV
+meR
 gXd
 ryS
 aWB

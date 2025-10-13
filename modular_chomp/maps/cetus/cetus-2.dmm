@@ -31818,9 +31818,6 @@
 	dir = 8
 	},
 /obj/effect/floor_decal/spline/plain/three_quarters,
-/obj/structure/bed/chair{
-	dir = 1
-	},
 /turf/simulated/floor/tiled/milspec/raised,
 /area/crew_quarters/cetus/atrium/primary)
 "leF" = (

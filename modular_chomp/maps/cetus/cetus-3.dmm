@@ -899,13 +899,13 @@
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
-/obj/structure/railing/overhang/grey{
-	dir = 1
-	},
 /obj/item/radio/intercom{
 	dir = 1;
 	name = "Station Intercom (General)";
 	pixel_y = 22
+	},
+/obj/effect/floor_decal/spline/plain{
+	dir = 1
 	},
 /turf/simulated/floor/carpet/graycarpet,
 /area/quartermaster/storage)
@@ -1384,10 +1384,10 @@
 /turf/simulated/floor/tiled/neutral,
 /area/maintenance/cetus/shallow/derelict/hallway)
 "aOR" = (
-/obj/structure/railing/overhang/grey{
+/obj/structure/table/bench/steel,
+/obj/effect/floor_decal/spline/plain{
 	dir = 8
 	},
-/obj/structure/table/bench/steel,
 /turf/simulated/floor/carpet/graycarpet,
 /area/quartermaster/storage)
 "aOU" = (
@@ -4439,6 +4439,10 @@
 /obj/item/mining_scanner,
 /obj/item/shovel{
 	pixel_x = -5
+	},
+/obj/structure/window/reinforced{
+	dir = 4;
+	health = 1e+006
 	},
 /turf/simulated/floor/tiled/neutral,
 /area/quartermaster/storage)
@@ -9494,11 +9498,11 @@
 /turf/simulated/floor/plating,
 /area/ai)
 "fTc" = (
-/obj/structure/railing/overhang/grey{
-	dir = 4
-	},
 /obj/random/vendorfood{
 	dir = 8
+	},
+/obj/effect/floor_decal/spline/plain{
+	dir = 4
 	},
 /turf/simulated/floor/carpet/graycarpet,
 /area/quartermaster/storage)
@@ -9795,13 +9799,13 @@
 /turf/simulated/wall/r_lead,
 /area/rnd/research/particleaccelerator)
 "gcP" = (
-/obj/machinery/atmospherics/unary/outlet_injector{
-	frequency = 1441;
-	id = "n2_in";
-	use_power = 1
-	},
 /obj/effect/floor_decal/corner/blue/full{
 	dir = 4
+	},
+/obj/machinery/atmospherics/unary/outlet_injector{
+	frequency = 1441;
+	id = "o2_in";
+	use_power = 1
 	},
 /turf/simulated/floor/reinforced/oxygen,
 /area/engineering/Atmospherics_Chamber)
@@ -10389,16 +10393,6 @@
 "gue" = (
 /turf/simulated/mineral/cetus,
 /area/bridge/sleep/Captain_Quarters)
-"gun" = (
-/obj/effect/floor_decal/spline/plain,
-/obj/effect/floor_decal/spline/plain/corner{
-	dir = 1
-	},
-/obj/effect/floor_decal/spline/plain/corner{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/milspec/raised,
-/area/rnd/research/particleaccelerator)
 "guC" = (
 /obj/structure/bed/chair/bay/comfy/red{
 	dir = 1
@@ -10947,6 +10941,13 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/purple{
 	dir = 6
+	},
+/obj/machinery/computer/security/telescreen{
+	desc = "Used for watching the Particle Accelerator chamber.";
+	layer = 4;
+	name = "Particle Accelerator Chamber Telescreen";
+	network = list("PA Room");
+	pixel_x = -31
 	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/research/particleaccelerator)
@@ -14035,15 +14036,7 @@
 /turf/simulated/floor/carpet/graycarpet,
 /area/maintenance/cetus/shallow/fp)
 "iFY" = (
-/obj/machinery/computer/general_air_control{
-	frequency = 1491;
-	name = "PA Chamber Monitor";
-	sensors = list("pa_room"="Particle Accelerator Chamber")
-	},
-/obj/effect/floor_decal/spline/plain/cee{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/milspec/raised,
+/turf/simulated/floor/tiled/dark,
 /area/rnd/research/particleaccelerator)
 "iGI" = (
 /turf/simulated/wall/r_wall,
@@ -14519,8 +14512,8 @@
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
-/obj/structure/dummystairs/greyledge{
-	dir = 8
+/obj/effect/floor_decal/spline/plain{
+	dir = 9
 	},
 /turf/simulated/floor/carpet/graycarpet,
 /area/quartermaster/storage)
@@ -15782,7 +15775,7 @@
 /turf/simulated/floor/redgrid,
 /area/security/nuke_storage)
 "jHG" = (
-/obj/structure/railing/overhang/grey,
+/obj/effect/floor_decal/spline/plain,
 /turf/simulated/floor/carpet/graycarpet,
 /area/quartermaster/storage)
 "jHU" = (
@@ -16050,12 +16043,11 @@
 /turf/simulated/floor/carpet/blucarpet,
 /area/bridge/sleep/Secretary_Quarters)
 "jOS" = (
-/obj/structure/railing/overhang/grey{
-	dir = 4
-	},
-/obj/structure/railing/overhang/grey,
 /obj/random/vendordrink{
 	dir = 4
+	},
+/obj/effect/floor_decal/spline/plain{
+	dir = 6
 	},
 /turf/simulated/floor/carpet/graycarpet,
 /area/quartermaster/storage)
@@ -22157,13 +22149,9 @@
 /turf/simulated/floor/carpet,
 /area/maintenance/cetus/shallow/quack)
 "ngR" = (
-/obj/machinery/computer/general_air_control/large_tank_control{
-	frequency = 1443;
-	input_tag = "air_in";
-	name = "Mixed Air Supply Control";
-	output_tag = "air_out";
-	pressure_setting = 2000;
-	sensors = list("air_sensor"="Tank")
+/obj/machinery/meter,
+/obj/machinery/atmospherics/pipe/simple/visible/cyan{
+	dir = 10
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/Atmospherics_Chamber)
@@ -25839,7 +25827,16 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
 	},
-/turf/simulated/floor/tiled/dark,
+/obj/machinery/computer/general_air_control{
+	frequency = 1491;
+	name = "PA Chamber Monitor";
+	sensors = list("pa_room"="Particle Accelerator Chamber");
+	dir = 1
+	},
+/obj/effect/floor_decal/spline/plain/cee{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/milspec/raised,
 /area/rnd/research/particleaccelerator)
 "psQ" = (
 /obj/structure/bed/chair/comfy/yellow{
@@ -27191,16 +27188,16 @@
 /turf/simulated/floor/tiled,
 /area/bridge)
 "qes" = (
-/obj/effect/floor_decal/spline/plain{
-	dir = 1
-	},
-/obj/effect/floor_decal/spline/plain/corner,
-/obj/effect/floor_decal/spline/plain/corner{
-	dir = 8
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/black{
 	dir = 9
 	},
+/obj/effect/floor_decal/spline/plain/corner{
+	dir = 4
+	},
+/obj/effect/floor_decal/spline/plain/corner{
+	dir = 1
+	},
+/obj/effect/floor_decal/spline/plain,
 /turf/simulated/floor/plating,
 /area/rnd/research/particleaccelerator)
 "qet" = (
@@ -29210,12 +29207,13 @@
 /turf/simulated/floor/carpet/graycarpet,
 /area/bridge/Deck3_Corridor)
 "rof" = (
+/obj/effect/floor_decal/corner/blue/full,
 /obj/machinery/atmospherics/unary/vent_pump{
 	external_pressure_bound = 0;
 	external_pressure_bound_default = 0;
 	frequency = 1441;
 	icon_state = "map_vent_in";
-	id_tag = "n2_out";
+	id_tag = "o2_out";
 	initialize_directions = 1;
 	internal_pressure_bound = 4000;
 	internal_pressure_bound_default = 4000;
@@ -29224,7 +29222,6 @@
 	pump_direction = 0;
 	use_power = 1
 	},
-/obj/effect/floor_decal/corner/blue/full,
 /turf/simulated/floor/reinforced/oxygen,
 /area/engineering/Atmospherics_Chamber)
 "roD" = (
@@ -29986,10 +29983,6 @@
 	},
 /area/ai)
 "rRp" = (
-/obj/machinery/atmospherics/pipe/manifold/visible/cyan{
-	dir = 4
-	},
-/obj/machinery/meter,
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
 	},
@@ -30001,6 +29994,15 @@
 	},
 /obj/effect/floor_decal/corner/white/bordercorner2{
 	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/manifold/visible/cyan,
+/obj/machinery/computer/general_air_control/large_tank_control{
+	frequency = 1443;
+	input_tag = "air_in";
+	name = "Mixed Air Supply Control";
+	output_tag = "air_out";
+	pressure_setting = 2000;
+	sensors = list("air_sensor"="Tank")
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/Atmospherics_Chamber)
@@ -30404,11 +30406,10 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/rnd/research/particleaccelerator)
 "saN" = (
-/obj/structure/railing/overhang/grey{
-	dir = 8
-	},
-/obj/structure/railing/overhang/grey,
 /obj/structure/table/bench/steel,
+/obj/effect/floor_decal/spline/plain{
+	dir = 10
+	},
 /turf/simulated/floor/carpet/graycarpet,
 /area/quartermaster/storage)
 "saV" = (
@@ -30473,8 +30474,8 @@
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
-/obj/structure/dummystairs/greyledge{
-	dir = 4
+/obj/effect/floor_decal/spline/plain{
+	dir = 5
 	},
 /turf/simulated/floor/carpet/graycarpet,
 /area/quartermaster/storage)
@@ -32391,9 +32392,6 @@
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/heads/sc/restroom)
 "trq" = (
-/obj/effect/floor_decal/industrial/warning{
-	dir = 8
-	},
 /obj/structure/cable/green{
 	icon_state = "4-9"
 	},
@@ -32406,7 +32404,25 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 5
 	},
-/turf/simulated/floor/tiled/dark,
+/obj/effect/floor_decal/spline/plain/cee{
+	dir = 8
+	},
+/obj/structure/table/reinforced,
+/obj/machinery/button/remote/emitter{
+	id = "PARoomEmitter";
+	name = "PA Room Emitter";
+	pixel_x = 5;
+	req_access = list(7);
+	dir = 1
+	},
+/obj/machinery/button/remote/blast_door{
+	id = "PAShroud";
+	name = "PA Shroud Blast Doors";
+	pixel_x = -4;
+	req_access = list(7);
+	dir = 1
+	},
+/turf/simulated/floor/tiled/milspec/raised,
 /area/rnd/research/particleaccelerator)
 "trx" = (
 /obj/structure/cable/yellow{
@@ -32948,13 +32964,6 @@
 /turf/simulated/floor/tiled,
 /area/crew_quarters/cetus/atrium/secondaryf3)
 "tEA" = (
-/obj/machinery/computer/security/telescreen{
-	desc = "Used for watching the Particle Accelerator chamber.";
-	layer = 4;
-	name = "Particle Accelerator Chamber Telescreen";
-	network = list("PA Room");
-	pixel_y = 36
-	},
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 1
 	},
@@ -33437,7 +33446,14 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
 	},
-/turf/simulated/floor/tiled/dark,
+/obj/effect/floor_decal/spline/plain{
+	dir = 1
+	},
+/obj/effect/floor_decal/spline/plain/corner,
+/obj/effect/floor_decal/spline/plain/corner{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/milspec/raised,
 /area/rnd/research/particleaccelerator)
 "tUb" = (
 /obj/machinery/floodlight{
@@ -35170,27 +35186,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/threecp)
-"uTf" = (
-/obj/structure/table/reinforced,
-/obj/machinery/button/remote/blast_door{
-	id = "PAShroud";
-	name = "PA Shroud Blast Doors";
-	pixel_x = -6;
-	pixel_y = -8;
-	req_access = list(7)
-	},
-/obj/machinery/button/remote/emitter{
-	id = "PARoomEmitter";
-	name = "PA Room Emitter";
-	pixel_x = 5;
-	pixel_y = -8;
-	req_access = list(7)
-	},
-/obj/effect/floor_decal/spline/plain/cee{
-	dir = 8
-	},
-/turf/simulated/floor/tiled/milspec/raised,
-/area/rnd/research/particleaccelerator)
 "uTi" = (
 /obj/structure/railing/overhang/hazard,
 /turf/simulated/floor/redgrid,
@@ -54673,7 +54668,7 @@ ulL
 mwc
 trq
 lWP
-uTf
+cwu
 tEA
 kcM
 iWR
@@ -54931,7 +54926,7 @@ rWu
 rVs
 tTY
 qes
-gun
+iFY
 xUp
 ekk
 iWR
@@ -95999,8 +95994,8 @@ nTs
 dSg
 dGd
 rRp
-cKr
-jDe
+yjs
+aOU
 eug
 fOf
 yjs
@@ -96257,8 +96252,8 @@ xwI
 oxB
 xwI
 ngR
-yjs
-aOU
+cKr
+jDe
 hXO
 evu
 mAe
