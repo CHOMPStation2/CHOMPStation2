@@ -22419,6 +22419,10 @@
 	dir = 4
 	},
 /obj/machinery/light,
+/obj/machinery/recharger/wallcharger{
+	pixel_y = -30;
+	pixel_x = 4
+	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/Research_Lab)
 "hIm" = (
@@ -39131,6 +39135,10 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
 	},
+/obj/machinery/recharger/wallcharger{
+	pixel_y = -30;
+	pixel_x = 4
+	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/cetus/hall)
 "nHm" = (
@@ -50105,6 +50113,10 @@
 /obj/structure/disposalpipe/trunk,
 /obj/machinery/camera/network/research{
 	c_tag = "SCI - R&D Lab"
+	},
+/obj/machinery/recharger/wallcharger{
+	pixel_y = 30;
+	pixel_x = 4
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/Research_Lab)
@@ -63915,6 +63927,10 @@
 /obj/effect/floor_decal/borderfloorwhite/corner,
 /obj/effect/floor_decal/corner/purple/bordercorner,
 /obj/machinery/light,
+/obj/machinery/recharger/wallcharger{
+	pixel_y = -30;
+	pixel_x = 4
+	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/Robotics_Lab)
 "vYH" = (

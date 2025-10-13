@@ -8997,7 +8997,7 @@
 	req_one_access = list(16)
 	},
 /obj/machinery/door/blast/regular{
-	id = "AIFoyer";
+	id = "AICore";
 	name = "AI core maintenance hatch"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
