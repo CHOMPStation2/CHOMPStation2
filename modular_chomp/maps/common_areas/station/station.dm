@@ -65,6 +65,7 @@
 /area/asteroid/cetus
 	flags = AREA_FORBID_EVENTS | AREA_FLAG_IS_NOT_PERSISTENT
 	icon_state = "away"
+	requires_power = TRUE
 
 /area/asteroid/cetus/d1
 	name = "\improper Primary Meteor Deck One"
