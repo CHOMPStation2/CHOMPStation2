@@ -318,7 +318,7 @@
 	icon_state = "fsmaint"
 
 /area/maintenance/ab_GeneralStore
-	name = "\improper abandoned GeneralStore"
+	name = "\improper Abandoned General Store"
 	icon_state = "fsmaint"
 
 /area/maintenance/ab_Kitchen
@@ -1378,53 +1378,53 @@
 	ambience = AMBIENCE_FOREBODING
 
 /area/maintenance/cetus/shallow/derelict/hallway
-	name = "\improper derelict Hallway"
+	name = "\improper Derelict Hallway"
 	icon_state = "hallC"
 
 /area/maintenance/cetus/shallow/derelict/eva
-	name = "\improper derelict EVA"
+	name = "\improper Derelict EVA"
 	holomap_color = HOLOMAP_AREACOLOR_COMMAND
 
 /area/maintenance/cetus/shallow/derelict/atmos
-	name = "\improper derelict Atmospherics"
+	name = "\improper Derelict Atmospherics"
 	icon_state = "atmos"
 	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
 
 /area/maintenance/cetus/shallow/derelict/engine
-	name = "\improper derelict Reactor"
+	name = "\improper Derelict Reactor"
 	icon_state = "engine"
 	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
 
 /area/maintenance/cetus/shallow/derelict/dorms
-	name = "\improper derelict Dormitory"
+	name = "\improper Derelict Dormitory"
 	icon_state = "maint_dormitory"
 	holomap_color = HOLOMAP_AREACOLOR_DORMS
 
 /area/maintenance/cetus/shallow/derelict/medbay
-	name = "\improper derelict Medbay"
+	name = "\improper Derelict Medbay"
 	icon_state = "maint_medbay"
 	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
 
 /area/maintenance/cetus/shallow/derelict/dock
-	name = "\improper derelict Dock"
+	name = "\improper Derelict Dock"
 	icon_state = "maint_arrivals"
 
 /area/maintenance/cetus/shallow/derelict/bridge
-	name = "\improper derelict Bridge"
+	name = "\improper Derelict Bridge"
 	holomap_color = HOLOMAP_AREACOLOR_COMMAND
 
 /area/maintenance/cetus/shallow/derelict/kitchen
-	name = "\improper derelict Cafeteria"
+	name = "\improper Derelict Cafeteria"
 	icon_state = "maint_bar"
 	holomap_color = HOLOMAP_AREACOLOR_CIV
 
 /area/maintenance/cetus/shallow/derelict/locker
-	name = "\improper derelict Locker Room"
+	name = "\improper Derelict Locker Room"
 	icon_state = "maint_locker"
 	holomap_color = HOLOMAP_AREACOLOR_CIV
 
 /area/maintenance/cetus/shallow/derelict/bathroom
-	name = "\improper derelict Bathroom"
+	name = "\improper Derelict Bathroom"
 	icon_state = "restrooms"
 	holomap_color = HOLOMAP_AREACOLOR_CIV
 
