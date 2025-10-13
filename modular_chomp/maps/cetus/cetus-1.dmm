@@ -1289,13 +1289,11 @@
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/meteor/portsec)
 "aKT" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 5
-	},
 /obj/machinery/alarm{
 	dir = 1;
 	pixel_y = -22
 	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/meteor/portsec)
 "aKV" = (
@@ -1763,6 +1761,13 @@
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/tiled/old_cargo/white,
 /area/medical/cetus/atriumd1)
+"aVJ" = (
+/obj/machinery/atmospherics/pipe/tank/air{
+	dir = 1;
+	start_pressure = 4559.63
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/cetus/meteor/jraft)
 "aVT" = (
 /obj/effect/floor_decal/corner/green/bordercorner,
 /obj/effect/floor_decal/corner/green/bordercorner{
@@ -2516,6 +2521,13 @@
 "buk" = (
 /turf/simulated/wall/r_wall,
 /area/engineering/cetus/starsubstation)
+"buO" = (
+/obj/effect/wingrille_spawn/reinforced,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/cetus/meteor/jraft)
 "bvI" = (
 /obj/effect/wingrille_spawn/reinforced,
 /obj/machinery/door/firedoor/glass,
@@ -7921,6 +7933,14 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/security/cetus/meteor/hallway)
+"ewl" = (
+/obj/random/trash,
+/obj/machinery/atmospherics/pipe/manifold/hidden/cyan{
+	dir = 8
+	},
+/obj/machinery/meter,
+/turf/simulated/floor/plating,
+/area/maintenance/cetus/meteor/portsec)
 "ewq" = (
 /obj/machinery/portable_atmospherics/canister/nitrogen,
 /obj/effect/floor_decal/industrial/warning{
@@ -8631,18 +8651,11 @@
 /turf/simulated/floor/tiled/old_tile/white,
 /area/maintenance/ab_Kitchen)
 "eNB" = (
-/obj/machinery/door/firedoor/glass,
-/obj/machinery/door/airlock/glass_research{
-	autoclose = 0;
-	frequency = 1379;
-	icon_state = "door_locked";
-	id_tag = "tox_airlock_interior";
-	locked = 1;
-	name = "Mixing Room Interior Airlock";
-	req_access = list(7)
+/obj/machinery/atmospherics/pipe/simple/hidden/cyan{
+	dir = 5
 	},
-/turf/simulated/floor/reinforced/airless,
-/area/rnd/cetus/meteor/toxins)
+/turf/simulated/floor/plating,
+/area/maintenance/cetus/meteor/portsec)
 "eNT" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
@@ -11987,6 +12000,13 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hangar/cetus/two)
+"gKm" = (
+/obj/machinery/atmospherics/pipe/tank/air{
+	dir = 8;
+	start_pressure = 4559.63
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/cetus/meteor/portsec)
 "gKo" = (
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/maintenance,
@@ -12281,6 +12301,22 @@
 	},
 /turf/simulated/floor/tiled/milspec/sterile,
 /area/medical/cetus/atriumd1)
+"gTF" = (
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/catwalk,
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/cetus/d1port)
 "gTK" = (
 /obj/structure/closet/emcloset,
 /turf/simulated/floor/tiled/dark,
@@ -19093,6 +19129,9 @@
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 8
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 10
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/meteor/jraft)
 "khF" = (
@@ -19250,6 +19289,12 @@
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/maintenance/ab_Kitchen)
+"kll" = (
+/obj/machinery/atmospherics/valve{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/cetus/meteor/jraft)
 "klu" = (
 /obj/item/stack/rods,
 /obj/random/junk,
@@ -20640,6 +20685,10 @@
 /obj/structure/lattice,
 /turf/space,
 /area/space)
+"kYn" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/cyan,
+/turf/simulated/floor/plating,
+/area/maintenance/cetus/meteor/portsec)
 "kYx" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /obj/machinery/disposal/wall{
@@ -21838,9 +21887,6 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
 	},
@@ -21848,6 +21894,7 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
 	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/meteor/jraft)
 "lDB" = (
@@ -23452,6 +23499,26 @@
 	},
 /turf/simulated/floor/tiled/neutral,
 /area/maintenance/cetus/cozyobservatory)
+"mzH" = (
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/obj/structure/catwalk,
+/obj/machinery/meter,
+/obj/machinery/atmospherics/pipe/manifold/hidden/cyan{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/cetus/meteor/jraft)
 "mzI" = (
 /turf/simulated/wall/r_wall,
 /area/maintenance/cetus/d1port)
@@ -24058,9 +24125,10 @@
 /turf/simulated/floor/tiled/neutral,
 /area/maintenance/cetus/hallway)
 "mRy" = (
-/obj/item/stack/rods,
-/obj/random/trash,
-/obj/item/storage/briefcase/inflatable,
+/obj/machinery/atmospherics/valve,
+/obj/machinery/light/small{
+	dir = 4
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/d1port)
 "mRG" = (
@@ -26199,6 +26267,13 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay_primary_storage)
+"oap" = (
+/obj/machinery/portable_atmospherics/powered/pump/filled,
+/obj/machinery/atmospherics/pipe/simple/hidden/cyan{
+	dir = 6
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/cetus/meteor/jraft)
 "oaO" = (
 /obj/structure/closet/emcloset,
 /turf/simulated/floor/plating,
@@ -26744,6 +26819,9 @@
 /area/maintenance/abmedical)
 "olE" = (
 /obj/effect/decal/cleanable/vomit/old,
+/obj/machinery/atmospherics/pipe/simple/hidden/cyan{
+	dir = 9
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/d1port)
 "olI" = (
@@ -28544,6 +28622,10 @@
 /obj/random/maintenance/clean,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/meteor/jrfore)
+"pjY" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/simulated/floor/plating,
+/area/maintenance/cetus/d1port)
 "pke" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -29616,6 +29698,12 @@
 	},
 /turf/simulated/floor/lino,
 /area/maintenance/ab_StripBar)
+"pPU" = (
+/obj/machinery/atmospherics/pipe/tank/air{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/cetus/d1port)
 "pQb" = (
 /obj/structure/bed/chair/bay/shuttle{
 	dir = 8
@@ -31048,6 +31136,9 @@
 "qvE" = (
 /obj/effect/floor_decal/industrial/warning/corner,
 /obj/random/trash,
+/obj/machinery/atmospherics/pipe/simple/visible/universal{
+	dir = 4
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/meteor/jraft)
 "qvK" = (
@@ -32057,6 +32148,13 @@
 "qTy" = (
 /turf/simulated/wall/r_wall,
 /area/maintenance/ab_Hydroponics)
+"qUo" = (
+/obj/random/trash,
+/obj/machinery/atmospherics/valve{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/cetus/meteor/portsec)
 "qUy" = (
 /turf/simulated/wall,
 /area/maintenance/cetus/tech)
@@ -34115,6 +34213,25 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/engine)
+"saI" = (
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/obj/structure/catwalk,
+/obj/machinery/atmospherics/pipe/simple/hidden/cyan{
+	dir = 10
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/cetus/meteor/jraft)
 "saO" = (
 /obj/structure/window/reinforced{
 	dir = 1
@@ -34386,6 +34503,12 @@
 	},
 /turf/simulated/floor/tiled/old_tile/white,
 /area/maintenance/ab_Kitchen)
+"sie" = (
+/obj/machinery/atmospherics/pipe/simple/visible/universal{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/cetus/meteor/portsec)
 "sih" = (
 /obj/effect/floor_decal/industrial/warning,
 /obj/machinery/atmospherics/binary/pump/on{
@@ -34410,6 +34533,13 @@
 /obj/structure/table/bench/standard,
 /turf/simulated/floor/wood,
 /area/maintenance/cetus/stylist)
+"sjE" = (
+/obj/item/storage/briefcase/inflatable,
+/obj/random/trash,
+/obj/item/stack/rods,
+/obj/machinery/atmospherics/pipe/simple/visible/universal,
+/turf/simulated/floor/plating,
+/area/maintenance/cetus/d1port)
 "skn" = (
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 1
@@ -36554,6 +36684,12 @@
 /obj/machinery/shipsensors,
 /turf/simulated/floor/plating,
 /area/shuttle/spacebus)
+"tmF" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/cetus/meteor/portsec)
 "tmO" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -37466,6 +37602,10 @@
 	pixel_y = -25
 	},
 /obj/machinery/light/small/yellowed,
+/obj/machinery/atmospherics/pipe/tank/air{
+	dir = 1;
+	start_pressure = 4559.63
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/meteor/jraft)
 "tNR" = (
@@ -40916,6 +41056,19 @@
 	},
 /turf/simulated/floor/plating,
 /area/engineering/cetus/meteor/atriumdeck1)
+"vpE" = (
+/obj/machinery/door/firedoor/glass,
+/obj/machinery/door/airlock/glass_research{
+	autoclose = 0;
+	frequency = 1379;
+	icon_state = "door_locked";
+	id_tag = "tox_airlock_interior";
+	locked = 1;
+	name = "Mixing Room Interior Airlock";
+	req_access = list(7)
+	},
+/turf/simulated/floor/reinforced/airless,
+/area/rnd/cetus/meteor/toxins)
 "vqm" = (
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
 	dir = 4
@@ -41083,6 +41236,13 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/plating,
 /area/engineering/cetus/meteor/enginemonitor)
+"vul" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/cyan{
+	dir = 4
+	},
+/obj/machinery/meter,
+/turf/simulated/floor/plating,
+/area/maintenance/cetus/d1port)
 "vum" = (
 /obj/effect/floor_decal/borderfloorwhite,
 /obj/effect/floor_decal/corner/lime/border,
@@ -43318,6 +43478,13 @@
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/cetus/meteor/cafeteriaf1)
+"wAP" = (
+/obj/random/junk,
+/obj/machinery/atmospherics/pipe/simple/hidden/cyan{
+	dir = 6
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/cetus/meteor/portsec)
 "wBA" = (
 /obj/structure/lattice,
 /obj/structure/closet/coffin,
@@ -59362,7 +59529,7 @@ hyW
 afH
 ycR
 xol
-eNB
+vpE
 rsH
 hSg
 rsm
@@ -62714,9 +62881,9 @@ bof
 iHy
 aKV
 bPE
-bPE
-lWQ
-lUQ
+oap
+mzH
+aVJ
 aKV
 tko
 cOe
@@ -62972,8 +63139,8 @@ cfV
 goP
 aKV
 utd
-ruU
-lWQ
+kll
+saI
 tNM
 aKV
 xWm
@@ -63488,7 +63655,7 @@ aKV
 aKV
 aKV
 ukd
-ukd
+buO
 xVm
 ukd
 aKV
@@ -68738,8 +68905,8 @@ qCm
 poB
 cLp
 imc
-dBF
-dBF
+pPU
+pPU
 cLp
 cLp
 mzI
@@ -68992,11 +69159,11 @@ bIJ
 pnK
 kbh
 sVh
-qCm
-tXf
-tXf
+gTF
+pjY
+sjE
 mRy
-tXf
+vul
 olE
 tXf
 htW
@@ -77989,11 +78156,11 @@ slB
 slB
 dif
 xPi
-jrY
-tqS
-tqS
-cgs
-tqS
+wAP
+kYn
+kYn
+ewl
+eNB
 knW
 gMI
 nLq
@@ -78247,11 +78414,11 @@ slB
 slB
 xPi
 qLs
-cgs
-tqS
+qUo
+tmF
 sPg
-dOg
-dOg
+gKm
+gKm
 eIz
 tBj
 qaJ
@@ -78505,7 +78672,7 @@ dif
 xPi
 dif
 dny
-tqS
+sie
 oLx
 oLx
 oLx
