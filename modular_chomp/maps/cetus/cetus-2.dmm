@@ -23940,6 +23940,13 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/effect/map_helper/airlock/door/int_door,
+/obj/machinery/access_button{
+	dir = 1;
+	name = "interior access button";
+	pixel_y = 11;
+	pixel_x = -32
+	},
+/obj/effect/map_helper/airlock/button/int_button,
 /turf/simulated/floor/tiled/techmaint,
 /area/hallway/secondary/entry/D1)
 "iig" = (
@@ -44983,12 +44990,6 @@
 "pDE" = (
 /obj/effect/floor_decal/industrial/warning/corner,
 /obj/machinery/light,
-/obj/machinery/access_button{
-	dir = 1;
-	name = "interior access button";
-	pixel_y = -24
-	},
-/obj/effect/map_helper/airlock/button/int_button,
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/entry/D2)
 "pDJ" = (
@@ -56825,6 +56826,13 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/effect/map_helper/airlock/door/int_door,
+/obj/machinery/access_button{
+	dir = 1;
+	name = "interior access button";
+	pixel_y = 11;
+	pixel_x = -32
+	},
+/obj/effect/map_helper/airlock/button/int_button,
 /turf/simulated/floor/tiled/techmaint,
 /area/hallway/secondary/entry/D2)
 "twE" = (
@@ -68255,12 +68263,6 @@
 /area/security/Brig)
 "xuT" = (
 /obj/effect/floor_decal/industrial/warning/corner,
-/obj/machinery/access_button{
-	dir = 1;
-	name = "interior access button";
-	pixel_y = -24
-	},
-/obj/effect/map_helper/airlock/button/int_button,
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/entry/D1)
 "xuU" = (
