@@ -13633,6 +13633,19 @@
 /obj/effect/floor_decal/asteroid,
 /turf/simulated/floor/outdoors/rocks/cetus,
 /area/maintenance/cetus/meteor/aftstar)
+"hAe" = (
+/obj/machinery/door/firedoor/glass,
+/obj/machinery/door/airlock/glass_research{
+	autoclose = 0;
+	frequency = 1379;
+	icon_state = "door_locked";
+	id_tag = "tox_airlock_interior";
+	locked = 1;
+	name = "Mixing Room Interior Airlock";
+	req_access = list(7)
+	},
+/turf/simulated/floor/reinforced/airless,
+/area/rnd/cetus/meteor/toxins)
 "hAq" = (
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/medical{
@@ -59353,7 +59366,7 @@ hyW
 afH
 ycR
 xol
-aSK
+hAe
 rsH
 hSg
 rsm
@@ -66150,9 +66163,9 @@ qFw
 qFw
 lyH
 lyH
-wPj
-vBs
-wPj
+qFw
+qFw
+qFw
 qFw
 qFw
 qFw
@@ -66409,8 +66422,8 @@ qFw
 qFw
 lyH
 lyH
-yke
-vBs
+qFw
+qFw
 qFw
 qFw
 qFw
@@ -66668,7 +66681,7 @@ qFw
 qFw
 lyH
 lyH
-wPj
+qFw
 qFw
 qFw
 qFw
@@ -68235,9 +68248,9 @@ suH
 suH
 lyH
 lyH
-wPj
-vBs
-wPj
+qFw
+qFw
+qFw
 qFw
 qFw
 qFw
@@ -68494,8 +68507,8 @@ qFw
 qFw
 lyH
 lyH
-yke
-vBs
+qFw
+qFw
 qFw
 qFw
 qFw
@@ -68753,7 +68766,7 @@ qFw
 qFw
 lyH
 lyH
-wPj
+qFw
 qFw
 qFw
 qFw
@@ -70437,11 +70450,6 @@ qFw
 qFw
 qFw
 qFw
-vBs
-yke
-vBs
-qFw
-qFw
 qFw
 qFw
 qFw
@@ -70449,6 +70457,11 @@ qFw
 vBs
 yke
 vBs
+qFw
+qFw
+qFw
+qFw
+qFw
 qFw
 qFw
 qFw
@@ -70695,11 +70708,6 @@ qFw
 qFw
 qFw
 qFw
-wPj
-vBs
-wPj
-qFw
-qFw
 qFw
 qFw
 qFw
@@ -70707,6 +70715,11 @@ qFw
 wPj
 vBs
 wPj
+qFw
+qFw
+qFw
+qFw
+qFw
 qFw
 qFw
 qFw
@@ -73145,8 +73158,8 @@ qFw
 suH
 qFw
 lyH
-vBs
-wPj
+qFw
+qFw
 qFw
 qFw
 qFw
@@ -73403,8 +73416,8 @@ suH
 suH
 suH
 lyH
-yke
-vBs
+qFw
+qFw
 qFw
 qFw
 qFw
@@ -73661,8 +73674,8 @@ qFw
 qFw
 qFw
 lyH
-vBs
-wPj
+qFw
+qFw
 qFw
 qFw
 qFw
@@ -78555,9 +78568,9 @@ qFw
 qFw
 suH
 qFw
-vBs
-yke
-vBs
+qFw
+qFw
+qFw
 qFw
 qFw
 qFw
@@ -78813,9 +78826,9 @@ suH
 suH
 lyH
 qFw
-wPj
-vBs
-wPj
+qFw
+qFw
+qFw
 qFw
 qFw
 qFw
@@ -91453,8 +91466,8 @@ qFw
 qFw
 qFw
 lyH
-vBs
-wPj
+qFw
+qFw
 qFw
 qFw
 qFw
@@ -91711,8 +91724,8 @@ suH
 suH
 suH
 lyH
-yke
-vBs
+qFw
+qFw
 qFw
 qFw
 qFw
@@ -91969,8 +91982,8 @@ qFw
 qFw
 qFw
 lyH
-vBs
-wPj
+qFw
+qFw
 qFw
 qFw
 qFw
@@ -97575,8 +97588,8 @@ qFw
 qFw
 qFw
 qFw
-wPj
-vBs
+qFw
+qFw
 lyH
 qFw
 qFw
@@ -97833,8 +97846,8 @@ qFw
 qFw
 qFw
 qFw
-vBs
-yke
+qFw
+qFw
 lyH
 suH
 suH
@@ -98091,8 +98104,8 @@ qFw
 qFw
 qFw
 qFw
-wPj
-vBs
+qFw
+qFw
 lyH
 qFw
 qFw
@@ -106392,9 +106405,9 @@ qFw
 qFw
 qFw
 qFw
-vBs
-yke
-vBs
+qFw
+qFw
+qFw
 qFw
 qFw
 qFw
@@ -106650,9 +106663,9 @@ qFw
 qFw
 qFw
 qFw
-wPj
-vBs
-wPj
+qFw
+qFw
+qFw
 qFw
 qFw
 qFw
@@ -107643,8 +107656,8 @@ qFw
 qFw
 qFw
 qFw
-wPj
-vBs
+qFw
+qFw
 lyH
 lyH
 lyH
@@ -107901,9 +107914,9 @@ qFw
 qFw
 qFw
 qFw
-vBs
-yke
-vBs
+qFw
+qFw
+qFw
 qFw
 qFw
 qFw
@@ -108159,9 +108172,9 @@ qFw
 qFw
 qFw
 qFw
-wPj
-vBs
-wPj
+qFw
+qFw
+qFw
 qFw
 qFw
 suH
