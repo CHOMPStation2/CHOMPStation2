@@ -4396,6 +4396,9 @@
 	},
 /obj/structure/catwalk,
 /obj/random/mob/mouse,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/twosec)
 "bBo" = (
@@ -5736,6 +5739,9 @@
 /obj/random/flashlight,
 /obj/random/flashlight,
 /obj/structure/table/rack,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 9
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/twostar)
 "bYi" = (
@@ -9726,6 +9732,9 @@
 /obj/structure/catwalk,
 /obj/machinery/light/small/yellowed{
 	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/cyan{
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/twosec)
@@ -16479,7 +16488,10 @@
 /turf/simulated/floor/carpet/blucarpet,
 /area/hallway/secondary/entry/docking_lounge)
 "fIr" = (
-/obj/structure/closet/crate,
+/obj/machinery/atmospherics/pipe/tank/air{
+	dir = 8;
+	start_pressure = 4559.63
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/twostar)
 "fIG" = (
@@ -17467,9 +17479,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 6
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
 /obj/structure/disposalpipe/segment{
 	dir = 4;
 	icon_state = "pipe-c"
@@ -17478,6 +17487,9 @@
 	icon_state = "2-4"
 	},
 /obj/structure/catwalk,
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 1
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/twosec)
 "fZE" = (
@@ -18376,6 +18388,9 @@
 	icon_state = "1-2"
 	},
 /obj/structure/catwalk,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 9
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/twosec)
 "gni" = (
@@ -18533,7 +18548,9 @@
 	dir = 8
 	},
 /obj/structure/catwalk,
-/obj/random/obstruction,
+/obj/machinery/atmospherics/pipe/simple/hidden/cyan{
+	dir = 5
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/twosec)
 "gom" = (
@@ -20090,15 +20107,19 @@
 /turf/simulated/floor/carpet/blucarpet,
 /area/hallway/secondary/entry/docking_lounge)
 "gUw" = (
-/obj/structure/closet/crate,
-/obj/random/tech_supply/component,
-/obj/random/tech_supply/component,
-/obj/random/tech_supply/component,
-/obj/random/tech_supply/component,
-/obj/random/tech_supply/component,
-/obj/random/tech_supply/component,
+/obj/effect/floor_decal/borderfloorblack/corner{
+	dir = 8
+	},
+/obj/effect/floor_decal/industrial/danger/corner{
+	dir = 1
+	},
+/obj/structure/catwalk,
+/obj/machinery/atmospherics/pipe/manifold/hidden/cyan{
+	dir = 1
+	},
+/obj/machinery/meter,
 /turf/simulated/floor/plating,
-/area/maintenance/cetus/twostar)
+/area/maintenance/cetus/twosec)
 "gUD" = (
 /obj/random/drinkbottle,
 /obj/random/drinkbottle,
@@ -23867,6 +23888,12 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled,
 /area/crew_quarters/cetus/jrlounge)
+"igs" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/cyan{
+	dir = 6
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/cetus/twostar)
 "igt" = (
 /obj/structure/dummystairs{
 	dir = 1
@@ -24186,6 +24213,7 @@
 /obj/machinery/light/small/yellowed{
 	dir = 4
 	},
+/obj/machinery/atmospherics/pipe/simple/visible/universal,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/twostar)
 "inS" = (
@@ -25966,6 +25994,7 @@
 /turf/simulated/wall,
 /area/medical/psych)
 "iWP" = (
+/obj/machinery/atmospherics/valve,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/twostar)
 "iXa" = (
@@ -28159,6 +28188,9 @@
 /obj/structure/catwalk,
 /obj/structure/bed/chair/wood{
 	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 6
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/twosec)
@@ -37916,6 +37948,9 @@
 /obj/structure/cable/green{
 	icon_state = "0-8"
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/cyan{
+	dir = 4
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/twosec)
 "nja" = (
@@ -39685,6 +39720,7 @@
 	icon_state = "5-10"
 	},
 /obj/structure/catwalk,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/twosec)
 "nSy" = (
@@ -41707,6 +41743,14 @@
 /obj/random/trash_pile,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/solars)
+"oAN" = (
+/obj/effect/floor_decal/borderfloorblack,
+/obj/effect/floor_decal/industrial/danger,
+/obj/machinery/atmospherics/valve{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/cetus/twosec)
 "oAQ" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -42232,6 +42276,13 @@
 /obj/structure/disposaloutlet,
 /turf/simulated/floor/reinforced,
 /area/rnd/Xenobiology_Lab)
+"oJB" = (
+/obj/machinery/atmospherics/pipe/tank/air{
+	dir = 8;
+	start_pressure = 4559.63
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/cetus/twosec)
 "oJQ" = (
 /obj/structure/table/standard,
 /obj/structure/sink/countertop{
@@ -42294,7 +42345,6 @@
 	dir = 10
 	},
 /obj/structure/catwalk,
-/obj/random/obstruction,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/twosec)
 "oLy" = (
@@ -48835,6 +48885,9 @@
 	dir = 4
 	},
 /obj/structure/catwalk,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/twosec)
 "qNk" = (
@@ -55674,6 +55727,8 @@
 /obj/random/maintenance/engineering,
 /obj/random/maintenance/engineering,
 /obj/random/drinkbottle,
+/obj/machinery/atmospherics/pipe/manifold/hidden/cyan,
+/obj/machinery/meter,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/twostar)
 "tdr" = (
@@ -56881,7 +56936,6 @@
 /turf/simulated/floor/tiled,
 /area/hallway/primary/central_three)
 "twY" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -56891,6 +56945,9 @@
 	},
 /obj/structure/catwalk,
 /obj/structure/disposalpipe/segment,
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 8
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/twostar)
 "txp" = (
@@ -57557,6 +57614,9 @@
 /obj/random/tech_supply,
 /obj/random/tech_supply,
 /obj/random/tech_supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/cyan{
+	dir = 6
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/twostar)
 "tLo" = (
@@ -61725,6 +61785,14 @@
 /obj/machinery/door/airlock/maintenance,
 /turf/simulated/floor/plating,
 /area/hallway/primary/seconddeck/dockhallway)
+"vfO" = (
+/obj/effect/floor_decal/borderfloorblack,
+/obj/effect/floor_decal/industrial/danger,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 5
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/cetus/twosec)
 "vfP" = (
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/glass_medical{
@@ -66942,6 +67010,9 @@
 "wXK" = (
 /obj/effect/floor_decal/borderfloorblack,
 /obj/effect/floor_decal/industrial/danger,
+/obj/machinery/atmospherics/pipe/simple/visible/universal{
+	dir = 4
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/twosec)
 "wXM" = (
@@ -111486,7 +111557,7 @@ uqu
 whc
 nCL
 jLe
-wXK
+vfO
 hXQ
 oNZ
 oNZ
@@ -112002,7 +112073,7 @@ ejt
 vRJ
 jmb
 bBf
-wXK
+oAN
 hXQ
 qWC
 qWC
@@ -113034,7 +113105,7 @@ wOy
 qPj
 ltO
 tEr
-jnR
+gUw
 goa
 oLk
 rZd
@@ -113292,8 +113363,8 @@ gom
 fuC
 ukq
 cdk
-tpO
-tZX
+oJB
+oJB
 jnR
 hfM
 uqu
@@ -128531,7 +128602,7 @@ vFd
 ygs
 ygs
 soU
-iWP
+igs
 iWP
 inL
 bXZ
@@ -129047,7 +129118,7 @@ tpH
 kEV
 ygs
 fIr
-gUw
+fIr
 mbj
 yeT
 oJw
