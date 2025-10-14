@@ -4288,8 +4288,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/rnd/cetus/meteor/toxins)
 "cnX" = (
-/obj/effect/wingrille_spawn/reinforced,
-/turf/simulated/floor/plating/turfpack/airless,
+/turf/unsimulated/wall,
 /area/rnd/test_area)
 "coA" = (
 /obj/machinery/power/breakerbox,
