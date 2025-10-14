@@ -11757,9 +11757,6 @@
 /obj/structure/transit_tube/station{
 	dir = 1
 	},
-/obj/structure/transit_tube_pod{
-	dir = 4
-	},
 /turf/simulated/floor/tiled,
 /area/rnd/cetus/entry)
 "hhf" = (
@@ -38396,6 +38393,7 @@
 	dir = 4;
 	pixel_x = -22
 	},
+/obj/structure/transit_tube_pod,
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/cetus/Galleryf2)
 "wMC" = (
