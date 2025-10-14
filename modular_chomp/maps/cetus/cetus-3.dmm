@@ -26017,7 +26017,7 @@
 "pzk" = (
 /obj/effect/shuttle_landmark{
 	base_area = /area/thirddeck/roof;
-	base_turf = /turf/simulated/reinforced/turfpack/airless;
+	base_turf = /turf/simulated/floor/reinforced/turfpack/airless;
 	docking_controller = "andromeda_airlock_2";
 	landmark_tag = "andromeda_2";
 	name = "HIS Andromeda Dock 2 DO NOT USE";
@@ -27871,6 +27871,17 @@
 "qBw" = (
 /turf/simulated/mineral/cetus,
 /area/maintenance/cetus/shallow/backstage)
+"qBy" = (
+/obj/effect/shuttle_landmark{
+	base_area = /area/thirddeck/roof;
+	base_turf = /turf/simulated/reinforced/turfpack/airless;
+	docking_controller = "andromeda_airlock_2";
+	landmark_tag = "andromeda_2";
+	name = "HIS Andromeda Dock 2 DO NOT USE";
+	use_docking_codes = 0
+	},
+/turf/space,
+/area/space)
 "qBU" = (
 /obj/structure/plasticflaps/mining,
 /obj/structure/window/reinforced{
@@ -88081,7 +88092,7 @@ mco
 mco
 mco
 mco
-mco
+qBy
 mco
 mco
 mco
