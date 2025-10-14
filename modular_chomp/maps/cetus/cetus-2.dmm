@@ -1991,9 +1991,7 @@
 /area/crew_quarters/cetus/Libraryf1)
 "aIP" = (
 /obj/machinery/door/firedoor/glass,
-/obj/machinery/door/airlock/maintenance{
-	req_access = list(7)
-	},
+/obj/machinery/door/airlock/maintenance,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/twojrport)
 "aIX" = (
@@ -6783,9 +6781,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/obj/machinery/door/airlock/maintenance{
-	req_access = list(7)
-	},
+/obj/machinery/door/airlock/maintenance,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/twojrstar)
 "coU" = (
@@ -52789,6 +52785,14 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/crew_quarters/cetus/jrhallway)
+"sfq" = (
+/obj/structure/sign/directions/science{
+	pixel_y = -11;
+	name = "Joint Research Public Entry";
+	dir = 8
+	},
+/turf/simulated/wall/r_wall,
+/area/crew_quarters/cetus/Galleryf1)
 "sfE" = (
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -58001,6 +58005,14 @@
 	},
 /turf/simulated/floor/greengrid,
 /area/rnd/cetus/hall)
+"tQb" = (
+/obj/structure/sign/directions/science{
+	pixel_y = -11;
+	name = "Joint Research Public Entry";
+	dir = 8
+	},
+/turf/simulated/wall/r_wall,
+/area/medical/medsci)
 "tQC" = (
 /obj/structure/railing/grey,
 /turf/simulated/open,
@@ -61037,6 +61049,11 @@
 /obj/machinery/camera/network/civilian{
 	c_tag = "CIV - D2 Art Cafe 2";
 	dir = 6
+	},
+/obj/structure/sign/directions/science{
+	pixel_y = 22;
+	name = "Joint Research Public Entry";
+	dir = 9
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/cetus/Galleryf1)
@@ -93372,7 +93389,7 @@ aAD
 nUw
 nUw
 nUw
-nUw
+sfq
 xsU
 jyQ
 eWD
@@ -95694,7 +95711,7 @@ qmw
 qCn
 qCn
 qCn
-qCn
+tQb
 cGU
 xnf
 qez
