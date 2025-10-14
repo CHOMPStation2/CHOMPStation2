@@ -14800,6 +14800,7 @@
 "jar" = (
 /obj/structure/bed/double,
 /obj/item/bedsheet/captaindouble,
+/obj/effect/landmark/start/captain,
 /turf/simulated/floor/carpet/blucarpet,
 /area/bridge/sleep/Captain_Quarters)
 "jau" = (
@@ -32755,6 +32756,7 @@
 /obj/structure/bed/chair/bay/comfy/captain{
 	dir = 1
 	},
+/obj/effect/landmark/start/captain,
 /turf/simulated/floor/carpet/blucarpet,
 /area/bridge)
 "tys" = (
@@ -36267,6 +36269,7 @@
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
+/obj/effect/landmark/start/captain,
 /turf/simulated/floor/wood,
 /area/bridge/Captain_Office)
 "vFm" = (

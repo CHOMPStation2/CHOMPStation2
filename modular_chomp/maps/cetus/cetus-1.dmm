@@ -9716,7 +9716,7 @@
 	},
 /obj/machinery/camera/network/research{
 	c_tag = "SCI - Toxins Gas Storage";
-	dir = 1
+	dir = 5
 	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/cetus/meteor/toxstorage)
