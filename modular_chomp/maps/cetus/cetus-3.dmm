@@ -676,6 +676,11 @@
 	dir = 1;
 	layer = 3
 	},
+/obj/structure/sign/directions/science{
+	pixel_y = 22;
+	name = "Joint Research Public Entry";
+	dir = 10
+	},
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/cetus/Galleryf2)
 "asv" = (
@@ -14033,6 +14038,14 @@
 "iFY" = (
 /turf/simulated/floor/tiled/dark,
 /area/rnd/research/particleaccelerator)
+"iGx" = (
+/obj/structure/sign/directions/science{
+	pixel_y = -11;
+	name = "Joint Research Public Entry";
+	dir = 8
+	},
+/turf/simulated/wall,
+/area/crew_quarters/cetus/Galleryf2)
 "iGI" = (
 /turf/simulated/wall/r_wall,
 /area/maintenance/cetus/shallow/derelict/hallway)
@@ -60155,7 +60168,7 @@ pIA
 lca
 lca
 pIA
-cjF
+iGx
 jac
 cjF
 jKw
