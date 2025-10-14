@@ -4806,7 +4806,7 @@
 "dfv" = (
 /obj/machinery/telecomms/server/presets/service/southerncross,
 /turf/simulated/floor/bluegrid,
-/area/asteroid/cetus/d3)
+/area/tcomm/chamber)
 "dfw" = (
 /obj/structure/closet/firecloset,
 /turf/simulated/floor/plating,
@@ -27871,17 +27871,6 @@
 "qBw" = (
 /turf/simulated/mineral/cetus,
 /area/maintenance/cetus/shallow/backstage)
-"qBy" = (
-/obj/effect/shuttle_landmark{
-	base_area = /area/thirddeck/roof;
-	base_turf = /turf/simulated/reinforced/turfpack/airless;
-	docking_controller = "andromeda_airlock_2";
-	landmark_tag = "andromeda_2";
-	name = "HIS Andromeda Dock 2 DO NOT USE";
-	use_docking_codes = 0
-	},
-/turf/space,
-/area/space)
 "qBU" = (
 /obj/structure/plasticflaps/mining,
 /obj/structure/window/reinforced{
@@ -32653,6 +32642,17 @@
 	},
 /turf/simulated/floor/carpet/graycarpet,
 /area/maintenance/cetus/shallow/fp)
+"twv" = (
+/obj/effect/shuttle_landmark{
+	base_area = /area/thirddeck/roof;
+	base_turf = /turf/simulated/reinforced/turfpack/airless;
+	docking_controller = "andromeda_airlock_2";
+	landmark_tag = "andromeda_2";
+	name = "HIS Andromeda Dock 2 DO NOT USE";
+	use_docking_codes = 0
+	},
+/turf/space,
+/area/space)
 "twL" = (
 /obj/effect/floor_decal/spline/plain/cee{
 	dir = 4
@@ -33433,7 +33433,7 @@
 	},
 /obj/machinery/telecomms/server/presets/supply,
 /turf/simulated/floor/bluegrid,
-/area/asteroid/cetus/d3)
+/area/tcomm/chamber)
 "tTo" = (
 /obj/structure/disposalpipe/junction{
 	dir = 4
@@ -86995,7 +86995,7 @@ idF
 idF
 idF
 ifh
-jOC
+vHX
 tTa
 dfv
 iLj
@@ -87253,10 +87253,10 @@ idF
 idF
 idF
 ifh
-jOC
-jOC
-jOC
-jOC
+vHX
+vHX
+vHX
+vHX
 jSG
 oqe
 jSG
@@ -88092,7 +88092,7 @@ mco
 mco
 mco
 mco
-qBy
+twv
 mco
 mco
 mco
