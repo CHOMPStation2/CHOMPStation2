@@ -333,7 +333,6 @@
 /obj/structure/cable{
 	icon_state = "2-4"
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/cyan,
 /turf/simulated/floor/tiled/neutral,
 /area/maintenance/cetus/shallow/derelict/hallway)
 "ajp" = (
@@ -2168,11 +2167,6 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/cetus/Galleryf2)
-"bsf" = (
-/obj/effect/floor_decal/industrial/warning,
-/obj/random/trash,
-/turf/simulated/floor/plating,
-/area/maintenance/cetus/d3docks)
 "btc" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /obj/structure/cable/green{
@@ -4416,14 +4410,11 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 5
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/cyan{
-	dir = 4
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 6
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/maintenance/cetus/shallow/derelict/engine)
@@ -5138,23 +5129,22 @@
 /area/crew_quarters/cetus/atrium/secondaryf3)
 "dqq" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	dir = 1
+	dir = 4
+	},
+/obj/machinery/airlock_sensor{
+	pixel_y = 20;
+	pixel_x = -7
 	},
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
-/obj/effect/floor_decal/industrial/warning/cee{
-	dir = 8
-	},
-/obj/machinery/embedded_controller/radio/airlock/airlock_controller{
-	id_tag = "derelict_aft_dock";
-	tag_airpump = "eva_port_pump";
-	tag_chamber_sensor = "eva_port_sensor";
-	tag_exterior_door = "eva_port_outer";
-	tag_interior_door = "eva_port_inner";
-	dir = 4;
-	pixel_x = -23
-	},
-/obj/machinery/light/small/emergency{
-	dir = 8
+/obj/effect/map_helper/airlock/sensor/chamber_sensor,
+/obj/effect/floor_decal/industrial/warning/full,
+/obj/machinery/light/small/emergency,
+/obj/machinery/embedded_controller/radio/airlock/docking_port{
+	frequency = 1381;
+	id_tag = "andromeda_airlock_2";
+	req_one_access = list(13);
+	pixel_y = 21;
+	pixel_x = 7
 	},
 /turf/simulated/floor/tiled/old_tile,
 /area/maintenance/cetus/shallow/derelict/dock)
@@ -6590,24 +6580,11 @@
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/threecp)
 "eju" = (
-/obj/machinery/door/airlock/glass_external{
-	frequency = 1379;
-	icon_state = "door_locked";
-	locked = 1;
-	name = "Internal Airlock Access";
-	req_access = list(13)
+/obj/structure/sign/securearea{
+	desc = "A warning sign which reads 'KEEP CLEAR OF DOCKING AREA'.";
+	name = "KEEP CLEAR: DOCKING AREA"
 	},
-/obj/effect/map_helper/airlock/door/int_door,
-/obj/effect/floor_decal/industrial/hatch/yellow,
-/obj/machinery/atmospherics/pipe/simple/hidden,
-/obj/machinery/access_button{
-	dir = 4;
-	name = "interior access button";
-	pixel_x = -26;
-	pixel_y = 32
-	},
-/obj/effect/map_helper/airlock/button/int_button,
-/turf/simulated/floor/tiled/techfloor/grid,
+/turf/simulated/wall/r_wall,
 /area/maintenance/cetus/shallow/derelict/dock)
 "ejA" = (
 /obj/structure/bed/chair/bay/comfy/captain{
@@ -6999,29 +6976,6 @@
 /obj/machinery/photocopier,
 /turf/simulated/floor/wood,
 /area/bridge/secretaryoffice)
-"esY" = (
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	dir = 4
-	},
-/obj/machinery/airlock_sensor{
-	pixel_y = 20;
-	pixel_x = -7
-	},
-/obj/effect/map_helper/airlock/atmos/chamber_pump,
-/obj/effect/map_helper/airlock/sensor/chamber_sensor,
-/obj/effect/floor_decal/industrial/warning/full,
-/obj/machinery/embedded_controller/radio/airlock/airlock_controller{
-	id_tag = "derelict_port_dock";
-	pixel_y = 21;
-	tag_airpump = "eva_port_pump";
-	tag_chamber_sensor = "eva_port_sensor";
-	tag_exterior_door = "eva_port_outer";
-	tag_interior_door = "eva_port_inner";
-	pixel_x = 6
-	},
-/obj/machinery/light/small/emergency,
-/turf/simulated/floor/tiled/old_tile,
-/area/maintenance/cetus/shallow/derelict/dock)
 "etf" = (
 /turf/simulated/wall/r_wall,
 /area/maintenance/cetus/shallow/ap)
@@ -7612,9 +7566,6 @@
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
-/obj/machinery/atmospherics/pipe/simple/hidden/cyan{
-	dir = 9
-	},
 /turf/simulated/floor/tiled/neutral,
 /area/maintenance/cetus/shallow/derelict/hallway)
 "eIU" = (
@@ -8049,12 +8000,16 @@
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/firstdeck/vaultcheckpoint)
 "eWA" = (
-/obj/effect/floor_decal/industrial/warning,
-/obj/machinery/light/small/yellowed{
-	dir = 1
+/obj/effect/shuttle_landmark{
+	base_area = /area/space;
+	base_turf = /turf/space;
+	docking_controller = "andromeda_airlock_1";
+	landmark_tag = "andromeda_1";
+	name = "HIS Andromeda Dock 1 DO NOT USE";
+	use_docking_codes = 0
 	},
-/turf/simulated/floor/plating,
-/area/maintenance/cetus/d3docks)
+/turf/space,
+/area/space)
 "eWJ" = (
 /obj/machinery/computer/atmos_alert,
 /turf/simulated/floor/tiled/yellow,
@@ -9114,10 +9069,11 @@
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/cetus/mime)
 "fCc" = (
-/obj/machinery/light/yellowed{
-	dir = 4
+/obj/effect/floor_decal/industrial/warning,
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 1
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden,
+/obj/structure/table/bench/padded,
 /turf/simulated/floor/tiled/old_tile,
 /area/maintenance/cetus/shallow/derelict/dock)
 "fCA" = (
@@ -11170,14 +11126,28 @@
 /turf/simulated/floor/carpet/graycarpet,
 /area/maintenance/cetus/shallow/detective)
 "gRM" = (
-/obj/random/obstruction,
-/obj/structure/cable{
-	icon_state = "1-2"
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	dir = 1
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/turf/simulated/floor/tiled/neutral,
-/area/maintenance/cetus/shallow/derelict/hallway)
+/obj/machinery/airlock_sensor{
+	dir = 8;
+	pixel_x = 21
+	},
+/obj/effect/map_helper/airlock/atmos/chamber_pump,
+/obj/effect/map_helper/airlock/sensor/chamber_sensor,
+/obj/machinery/light/small/emergency{
+	dir = 8
+	},
+/obj/effect/floor_decal/industrial/warning/full,
+/obj/machinery/embedded_controller/radio/airlock/docking_port{
+	frequency = 1381;
+	id_tag = "andromeda_airlock_1";
+	req_one_access = list(13);
+	dir = 4;
+	pixel_x = -21
+	},
+/turf/simulated/floor/tiled/old_tile,
+/area/maintenance/cetus/shallow/derelict/dock)
 "gRS" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume,
 /obj/machinery/airlock_sensor{
@@ -11887,18 +11857,16 @@
 /turf/unsimulated/floor/dark,
 /area/maintenance/cetus/jrthreeport)
 "hma" = (
-/obj/machinery/door/airlock/glass_external{
-	frequency = 1379;
-	icon_state = "door_locked";
-	locked = 1;
-	name = "Internal Airlock Access";
-	req_access = list(13)
+/obj/effect/shuttle_landmark{
+	base_area = /area/space;
+	base_turf = /turf/space;
+	docking_controller = "andromeda_airlock_3";
+	landmark_tag = "andromeda_3";
+	name = "HIS Andromeda Dock 3 DO NOT USE";
+	use_docking_codes = 0
 	},
-/obj/effect/map_helper/airlock/door/int_door,
-/obj/effect/floor_decal/industrial/hatch/yellow,
-/obj/machinery/atmospherics/pipe/simple/hidden,
-/turf/simulated/floor/tiled/techfloor/grid,
-/area/maintenance/cetus/shallow/derelict/dock)
+/turf/space,
+/area/space)
 "hmC" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/red,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -11911,7 +11879,6 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/cyan,
 /turf/simulated/floor/tiled/milspec,
 /area/maintenance/cetus/shallow/derelict/atmos)
 "hmD" = (
@@ -13888,7 +13855,6 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/cyan,
 /turf/simulated/floor/tiled/neutral,
 /area/maintenance/cetus/shallow/derelict/hallway)
 "iAG" = (
@@ -15693,24 +15659,7 @@
 /turf/simulated/floor/tiled,
 /area/engineering/Atmospherics_Chamber)
 "jEX" = (
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	dir = 8
-	},
-/obj/machinery/airlock_sensor{
-	pixel_y = 20;
-	pixel_x = -7
-	},
-/obj/effect/map_helper/airlock/atmos/chamber_pump,
-/obj/effect/map_helper/airlock/sensor/chamber_sensor,
-/obj/effect/floor_decal/industrial/warning/full,
-/obj/machinery/light/small/emergency,
-/obj/machinery/embedded_controller/radio/airlock/docking_port{
-	frequency = 1381;
-	id_tag = "andromeda_airlock";
-	req_one_access = list(13);
-	pixel_y = 21;
-	pixel_x = 7
-	},
+/obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/tiled/old_tile,
 /area/maintenance/cetus/shallow/derelict/dock)
 "jFa" = (
@@ -15770,14 +15719,11 @@
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/nanites)
 "jHa" = (
-/obj/structure/bed/chair{
-	dir = 1
+/obj/machinery/pointdefense{
+	id_tag = "PD Main"
 	},
-/obj/random/junk,
-/obj/random/trash,
-/obj/structure/table/standard,
-/turf/simulated/floor/lino,
-/area/maintenance/cetus/shallow/derelict/kitchen)
+/turf/simulated/floor/plating,
+/area/space)
 "jHc" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -16040,10 +15986,6 @@
 /turf/simulated/floor/carpet/graycarpet,
 /area/maintenance/cetus/shallow/fp)
 "jOq" = (
-/obj/structure/bed/chair{
-	dir = 1
-	},
-/obj/random/maintenance,
 /obj/structure/cable{
 	icon_state = "1-8"
 	},
@@ -16053,7 +15995,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 9
 	},
-/obj/structure/table/standard,
+/obj/random/obstruction,
 /turf/simulated/floor/tiled/neutral,
 /area/maintenance/cetus/shallow/derelict/hallway)
 "jOC" = (
@@ -18503,15 +18445,13 @@
 /turf/simulated/floor/tiled/milspec/raised,
 /area/bridge)
 "liF" = (
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	external_pressure_bound = 140;
-	external_pressure_bound_default = 140;
-	icon_state = "map_vent_out";
-	use_power = 1;
+/obj/effect/floor_decal/industrial/warning/corner{
 	dir = 4
 	},
-/turf/simulated/floor/outdoors/rocks/cetus/edge,
-/area/thirddeck/roof)
+/obj/effect/floor_decal/industrial/warning,
+/obj/machinery/atmospherics/pipe/simple/hidden,
+/turf/simulated/floor/tiled/old_tile,
+/area/maintenance/cetus/shallow/derelict/dock)
 "ljT" = (
 /obj/machinery/alarm{
 	pixel_y = 23
@@ -19765,7 +19705,6 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 4
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/cyan,
 /turf/simulated/floor/tiled/neutral,
 /area/maintenance/cetus/shallow/derelict/hallway)
 "lQF" = (
@@ -19905,7 +19844,6 @@
 /obj/structure/cable{
 	icon_state = "2-4"
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/cyan,
 /turf/simulated/floor/tiled/milspec,
 /area/maintenance/cetus/shallow/derelict/atmos)
 "lTW" = (
@@ -21048,13 +20986,15 @@
 /turf/simulated/floor/wood,
 /area/bridge/sleep/HoS_Quarters)
 "mzx" = (
-/obj/effect/floor_decal/industrial/warning/corner{
-	dir = 1
+/obj/structure/lattice,
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	external_pressure_bound = 140;
+	external_pressure_bound_default = 140;
+	icon_state = "map_vent_out";
+	use_power = 1;
+	dir = 4
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 6
-	},
-/turf/simulated/floor/tiled/old_tile,
+/turf/space,
 /area/maintenance/cetus/shallow/derelict/dock)
 "mzH" = (
 /obj/structure/barricade/cutout/cultist,
@@ -21166,9 +21106,6 @@
 	icon_state = "4-9"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/cyan{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/milspec,
@@ -21557,7 +21494,7 @@
 	dir = 5
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/cyan{
-	dir = 4
+	dir = 10
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/maintenance/cetus/shallow/derelict/engine)
@@ -23100,11 +23037,10 @@
 /turf/simulated/wall,
 /area/maintenance/cetus/shallow/derelict/hallway)
 "nIG" = (
-/obj/structure/ladder,
-/obj/structure/lattice,
-/obj/structure/catwalk,
-/turf/simulated/open,
-/area/maintenance/cetus/d3docks)
+/obj/structure/table/standard,
+/obj/random/maintenance,
+/turf/simulated/floor/tiled/neutral,
+/area/maintenance/cetus/shallow/derelict/hallway)
 "nIS" = (
 /obj/machinery/firealarm{
 	layer = 3.3;
@@ -24506,7 +24442,6 @@
 	},
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/supply,
-/obj/machinery/atmospherics/pipe/simple/hidden/cyan,
 /turf/simulated/floor/tiled/neutral,
 /area/maintenance/cetus/shallow/derelict/hallway)
 "oxB" = (
@@ -25129,21 +25064,6 @@
 /obj/machinery/atmospherics/pipe/simple/visible/red,
 /turf/simulated/floor/outdoors/rocks/cetus/edge,
 /area/thirddeck/roof)
-"oSF" = (
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	dir = 1
-	},
-/obj/machinery/airlock_sensor{
-	dir = 8;
-	pixel_x = 21
-	},
-/obj/effect/map_helper/airlock/atmos/chamber_pump,
-/obj/effect/map_helper/airlock/sensor/chamber_sensor,
-/obj/effect/floor_decal/industrial/warning/cee{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/old_tile,
-/area/maintenance/cetus/shallow/derelict/dock)
 "oSI" = (
 /obj/machinery/alarm{
 	dir = 1;
@@ -25803,7 +25723,6 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/atmospherics/pipe/simple/hidden/cyan,
 /turf/simulated/floor/tiled/neutral,
 /area/maintenance/cetus/shallow/derelict/hallway)
 "pqk" = (
@@ -26082,17 +26001,16 @@
 /turf/simulated/floor/wood,
 /area/bridge/sleep/HoP_Quarters)
 "pzk" = (
-/obj/machinery/door/airlock/external{
-	icon_state = "door_locked";
-	locked = 1;
-	name = "External Airlock Access";
-	req_access = list(13)
+/obj/effect/shuttle_landmark{
+	base_area = /area/thirddeck/roof;
+	base_turf = /turf/simulated/reinforced/turfpack/airless;
+	docking_controller = "andromeda_airlock_2";
+	landmark_tag = "andromeda_2";
+	name = "HIS Andromeda Dock 2 DO NOT USE";
+	use_docking_codes = 0
 	},
-/obj/machinery/shield_diffuser,
-/obj/effect/map_helper/airlock/door/ext_door,
-/obj/effect/floor_decal/industrial/hatch/yellow,
-/turf/simulated/floor/tiled/techfloor/grid,
-/area/maintenance/cetus/shallow/derelict/dock)
+/turf/simulated/floor/reinforced/turfpack/airless,
+/area/thirddeck/roof)
 "pzJ" = (
 /turf/simulated/floor/wood,
 /area/crew_quarters/cetus/lounge)
@@ -28692,16 +28610,26 @@
 	},
 /area/maintenance/cetus/jrthreestar)
 "raF" = (
-/obj/effect/shuttle_landmark{
-	base_area = /area/space;
-	base_turf = /turf/space;
-	docking_controller = "andromeda_airlock";
-	landmark_tag = "andromeda";
-	name = "HIS Andromeda Dock 3 DO NOT USE";
-	use_docking_codes = 0
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	dir = 8
 	},
-/turf/space,
-/area/space)
+/obj/machinery/airlock_sensor{
+	pixel_y = 20;
+	pixel_x = -7
+	},
+/obj/effect/map_helper/airlock/atmos/chamber_pump,
+/obj/effect/map_helper/airlock/sensor/chamber_sensor,
+/obj/effect/floor_decal/industrial/warning/full,
+/obj/machinery/light/small/emergency,
+/obj/machinery/embedded_controller/radio/airlock/docking_port{
+	frequency = 1381;
+	id_tag = "andromeda_airlock_3";
+	req_one_access = list(13);
+	pixel_y = 21;
+	pixel_x = 7
+	},
+/turf/simulated/floor/tiled/old_tile,
+/area/maintenance/cetus/shallow/derelict/dock)
 "raP" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -31551,6 +31479,9 @@
 	RCon_tag = "Unused Sector"
 	},
 /obj/structure/cable,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 9
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/maintenance/cetus/shallow/derelict/engine)
 "sSc" = (
@@ -31781,10 +31712,17 @@
 /turf/simulated/shuttle/floor,
 /area/shuttle/large_escape_pod1/centcom)
 "sZJ" = (
-/obj/effect/floor_decal/industrial/warning,
-/obj/machinery/atmospherics/pipe/simple/hidden,
-/turf/simulated/floor/tiled/old_tile,
-/area/maintenance/cetus/shallow/derelict/dock)
+/obj/machinery/atmospherics/pipe/simple/hidden/red,
+/obj/machinery/door/firedoor/multi_tile,
+/obj/machinery/door/airlock/multi_tile/glass{
+	name = "Dock"
+	},
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/tiled/neutral,
+/area/maintenance/cetus/shallow/derelict/hallway)
 "sZR" = (
 /obj/structure/bed/chair/comfy/orange,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -32380,7 +32318,10 @@
 /obj/structure/cable/green{
 	icon_state = "32-2"
 	},
-/obj/random/junk,
+/obj/structure/ladder,
+/obj/machinery/light/small/yellowed{
+	dir = 1
+	},
 /turf/simulated/open,
 /area/maintenance/cetus/d3docks)
 "tpU" = (
@@ -33436,9 +33377,6 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/visible/red,
-/obj/machinery/atmospherics/pipe/simple/hidden/cyan{
-	dir = 10
-	},
 /turf/simulated/floor/tiled/milspec,
 /area/maintenance/cetus/shallow/derelict/atmos)
 "tSn" = (
@@ -34995,6 +34933,9 @@
 /obj/machinery/power/breakerbox/activated{
 	RCon_tag = "Unused Sector"
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/cyan{
+	dir = 5
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/maintenance/cetus/shallow/derelict/engine)
 "uMd" = (
@@ -35180,7 +35121,6 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/cyan,
 /turf/simulated/floor/tiled/neutral,
 /area/maintenance/cetus/shallow/derelict/hallway)
 "uSi" = (
@@ -36900,14 +36840,9 @@
 /turf/simulated/floor/carpet/bcarpet,
 /area/bridge/Conference_Room)
 "vVe" = (
-/obj/effect/floor_decal/industrial/warning/corner{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/manifold/hidden{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/old_tile,
-/area/maintenance/cetus/shallow/derelict/dock)
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/simulated/floor/tiled/neutral,
+/area/maintenance/cetus/shallow/derelict/hallway)
 "vVx" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/red,
 /obj/machinery/light/yellowed{
@@ -36948,10 +36883,10 @@
 /turf/simulated/wall,
 /area/maintenance/cetus/jrthreeport)
 "vWn" = (
-/obj/machinery/light/yellowed{
-	dir = 8
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden,
+/obj/machinery/light/yellowed{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/old_tile,
 /area/maintenance/cetus/shallow/derelict/dock)
 "vWz" = (
@@ -37539,10 +37474,6 @@
 	name = "flooded tiles"
 	},
 /area/maintenance/cetus/shallow/flooded)
-"woH" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/turf/simulated/floor/tiled/neutral,
-/area/maintenance/cetus/shallow/derelict/dock)
 "woM" = (
 /obj/effect/floor_decal/rust,
 /obj/machinery/light/small/yellowed{
@@ -38069,7 +38000,6 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/cyan,
 /turf/simulated/floor/tiled/neutral,
 /area/maintenance/cetus/shallow/derelict/hallway)
 "wCb" = (
@@ -38287,16 +38217,24 @@
 /turf/simulated/floor/tiled/dark,
 /area/rnd/research/particleaccelerator)
 "wIR" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/red,
-/obj/machinery/door/firedoor/multi_tile,
-/obj/machinery/door/airlock/multi_tile/glass{
-	name = "Dock"
+/obj/machinery/door/airlock/glass_external{
+	frequency = 1379;
+	icon_state = "door_locked";
+	locked = 1;
+	name = "Internal Airlock Access";
+	req_access = list(13)
 	},
-/obj/structure/cable{
-	icon_state = "1-2"
+/obj/effect/map_helper/airlock/door/int_door,
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/machinery/atmospherics/pipe/simple/hidden,
+/obj/machinery/access_button{
+	dir = 1;
+	name = "interior access button";
+	pixel_x = -30;
+	pixel_y = 9
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/turf/simulated/floor/tiled/neutral,
+/obj/effect/map_helper/airlock/button/int_button,
+/turf/simulated/floor/tiled/techfloor/grid,
 /area/maintenance/cetus/shallow/derelict/dock)
 "wIX" = (
 /obj/structure/sign/painting/public{
@@ -38414,6 +38352,9 @@
 	},
 /obj/structure/cable/yellow,
 /obj/machinery/light/small/yellowed,
+/obj/machinery/atmospherics/pipe/simple/hidden/universal{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/maintenance/cetus/shallow/derelict/engine)
 "wNg" = (
@@ -82437,7 +82378,7 @@ ifh
 idF
 idF
 idF
-idF
+tgZ
 tgZ
 tgZ
 tgZ
@@ -82693,8 +82634,6 @@ ifh
 ifh
 idF
 idF
-idF
-idF
 tgZ
 tgZ
 tgZ
@@ -82702,7 +82641,9 @@ tgZ
 tgZ
 tgZ
 tgZ
-kxY
+tgZ
+tgZ
+tgZ
 kxY
 kxY
 kxY
@@ -82949,9 +82890,10 @@ rRw
 rRw
 ifh
 ifh
-idF
-idF
-idF
+tgZ
+tgZ
+tgZ
+tgZ
 tgZ
 tgZ
 tgZ
@@ -82961,7 +82903,6 @@ tgZ
 tgZ
 tgZ
 kxY
-eWA
 tpK
 lni
 vEe
@@ -83205,11 +83146,12 @@ ubU
 ubU
 ubU
 ubU
-ifh
-ifh
-idF
-idF
-idF
+tgZ
+tgZ
+tgZ
+tgZ
+tgZ
+tgZ
 tgZ
 tgZ
 tgZ
@@ -83219,8 +83161,7 @@ tgZ
 tgZ
 tgZ
 kxY
-bsf
-nIG
+kxY
 kxY
 aiH
 aiH
@@ -83463,11 +83404,6 @@ kQz
 rmX
 rMD
 ubU
-ifh
-ifh
-idF
-idF
-idF
 tgZ
 tgZ
 tgZ
@@ -83476,9 +83412,14 @@ tgZ
 tgZ
 tgZ
 tgZ
-kxY
-kxY
-kxY
+tgZ
+tgZ
+tgZ
+tgZ
+tgZ
+tgZ
+tgZ
+tgZ
 kxY
 rAY
 rAY
@@ -83721,22 +83662,22 @@ fNm
 eOR
 oBB
 ubU
-ifh
-ifh
-idF
-idF
-mco
-mco
-mco
-mco
-mco
-mco
-mco
-mco
-mco
-mco
-mco
-mco
+tgZ
+tgZ
+tgZ
+tgZ
+tgZ
+tgZ
+tgZ
+tgZ
+tgZ
+tgZ
+tgZ
+tgZ
+tgZ
+tgZ
+tgZ
+tgZ
 kxY
 rAD
 rAD
@@ -83979,22 +83920,22 @@ vha
 fYW
 xcL
 ubU
-ifh
-ifh
-idF
-idF
-mco
-mco
-mco
-mco
-mco
-mco
-mco
-mco
-mco
-mco
-mco
-mco
+tgZ
+tgZ
+tgZ
+tgZ
+tgZ
+tgZ
+tgZ
+tgZ
+tgZ
+tgZ
+tgZ
+tgZ
+tgZ
+tgZ
+tgZ
+tgZ
 kxY
 sVL
 uro
@@ -84237,22 +84178,22 @@ dXJ
 yin
 tuu
 ubU
-ifh
-idF
-idF
-mco
-mco
-mco
-mco
-mco
-mco
-mco
-mco
-mco
-mco
-mco
-mco
-mco
+tgZ
+tgZ
+tgZ
+tgZ
+tgZ
+tgZ
+tgZ
+tgZ
+tgZ
+tgZ
+tgZ
+tgZ
+tgZ
+tgZ
+tgZ
+tgZ
 kxY
 uag
 mMf
@@ -84495,22 +84436,22 @@ czW
 eHM
 rzJ
 pdq
-idF
-idF
-idF
-mco
-mco
-mco
-mco
-mco
-mco
-mco
-mco
-mco
-mco
-mco
-mco
-mco
+tgZ
+tgZ
+tgZ
+tgZ
+tgZ
+tgZ
+tgZ
+tgZ
+tgZ
+tgZ
+tgZ
+tgZ
+tgZ
+tgZ
+tgZ
+tgZ
 kxY
 fha
 uOI
@@ -84753,22 +84694,22 @@ ubU
 ubU
 pdq
 pdq
-idF
-idF
-mco
-mco
-mco
-mco
-mco
-mco
-mco
-mco
-mco
-mco
-mco
-mco
-mco
-mco
+tgZ
+tgZ
+tgZ
+tgZ
+tgZ
+tgZ
+tgZ
+tgZ
+tgZ
+tgZ
+tgZ
+tgZ
+tgZ
+tgZ
+tgZ
+tgZ
 kxY
 mFZ
 wYy
@@ -85011,22 +84952,22 @@ ifh
 ifh
 idF
 idF
-idF
-idF
-mco
-mco
-mco
-mco
-mco
-mco
-mco
-mco
-mco
-mco
-mco
-mco
-mco
-mco
+tgZ
+tgZ
+tgZ
+tgZ
+tgZ
+tgZ
+tgZ
+tgZ
+tgZ
+tgZ
+tgZ
+tgZ
+tgZ
+tgZ
+tgZ
+tgZ
 kxY
 sTe
 wYy
@@ -85269,22 +85210,22 @@ ifh
 ifh
 ifh
 idF
-idF
-idF
-mco
-mco
-mco
-mco
-mco
-mco
-mco
-mco
-mco
-mco
-mco
-mco
-mco
-mco
+tgZ
+tgZ
+tgZ
+tgZ
+tgZ
+tgZ
+tgZ
+tgZ
+tgZ
+tgZ
+tgZ
+tgZ
+tgZ
+tgZ
+tgZ
+tgZ
 kxY
 fUx
 gZm
@@ -85294,7 +85235,7 @@ bZy
 kxY
 mco
 mco
-hgI
+mco
 mco
 mco
 mco
@@ -85527,22 +85468,22 @@ ifh
 ifh
 idF
 idF
-idF
-idF
-mco
-mco
-wZf
-neC
-ygJ
-mco
-mco
-mco
-mco
-mco
-mco
-mco
-mco
-mco
+tgZ
+tgZ
+tgZ
+tgZ
+tgZ
+tgZ
+tgZ
+tgZ
+tgZ
+tgZ
+pzk
+tgZ
+tgZ
+tgZ
+tgZ
+tgZ
 kxY
 kxY
 kxY
@@ -85550,9 +85491,9 @@ kxY
 kxY
 kxY
 kxY
-hgI
-hgI
-irp
+mco
+mco
+mco
 mco
 mco
 mco
@@ -85785,32 +85726,32 @@ ifh
 ifh
 idF
 idF
-liF
-idF
-mco
-mco
-wZf
-esY
-uId
-mco
-mco
-mco
-mco
-mco
-mco
-mco
-mco
-mco
-hgI
-mco
-mco
+tgZ
+tgZ
+tgZ
+tgZ
+tgZ
+tgZ
+tgZ
+tgZ
+tgZ
+tgZ
+tgZ
+tgZ
+tgZ
+tgZ
+tgZ
+tgZ
 mco
 mco
 mco
-hgI
 mco
 mco
-irp
+mco
+mco
+mco
+mco
+mco
 mco
 mco
 mco
@@ -86038,37 +85979,37 @@ nIu
 sDo
 dgX
 nIu
-wZf
-wZf
-wZf
-wZf
-uId
-par
-uId
-wZf
-wZf
-wZf
-ceQ
-uId
-wZf
-wZf
-wZf
-wZf
-wZf
-hgI
-hgI
-mco
-mco
-hgI
+ifh
+ifh
+idF
+idF
+idF
 mco
 mco
 mco
 mco
 mco
-hgI
 mco
-irp
-irp
+mco
+mco
+mco
+wZf
+neC
+ygJ
+hRR
+hRR
+hRR
+mco
+mco
+mco
+mco
+mco
+mco
+mco
+mco
+mco
+mco
+mco
 mco
 mco
 mco
@@ -86295,37 +86236,37 @@ lGa
 ehF
 sDo
 kTk
-wIR
-hWp
-akz
-wNg
-xLt
-wNg
-vUj
-cMf
-tdv
-vQC
-ewd
-gbf
+nIu
+ifh
+ifh
+idF
+idF
+idF
 mzx
-vWn
-sZJ
-eju
+mco
+mco
+mco
+mco
+mco
+mco
+mco
+mco
+wZf
 dqq
-dHF
-hgI
-hgI
-mco
-mco
-hgI
-mco
+uId
+hRR
+jHa
+hRR
 mco
 mco
 mco
 mco
-hgI
 mco
-irp
+mco
+mco
+mco
+mco
+mco
 mco
 mco
 mco
@@ -86551,39 +86492,39 @@ tqp
 xGB
 sjq
 qXs
-gRM
+qXs
 jOq
-woH
-kYo
-pLH
-flV
-sjm
-vCR
-dTi
-uzq
-eAY
-lOC
-iAL
-mlR
-vVe
-fCc
-sZJ
-hma
-oSF
-pzk
-hgI
-hgI
-hgI
-hgI
-irp
-irp
-irp
-irp
-irp
-irp
-irp
-hgI
-irp
+nIu
+wZf
+wZf
+wZf
+wZf
+uId
+par
+uId
+wZf
+wZf
+wZf
+wZf
+wZf
+wZf
+wZf
+wZf
+ceQ
+uId
+wZf
+hRR
+hRR
+mco
+mco
+mco
+mco
+mco
+mco
+mco
+mco
+mco
+mco
 mco
 mco
 mco
@@ -86808,36 +86749,36 @@ uQR
 gid
 bfL
 gid
-uQR
-uQR
 nIu
-nIu
+ehF
+sDo
+sZJ
+hWp
+akz
+wNg
+xLt
+wNg
+vUj
+cMf
+tdv
+vQC
+vQC
+vQC
+vQC
+vQC
+tdv
+ewd
+gbf
+fCc
 wZf
 wZf
 wZf
-wZf
-uId
-uId
-uId
-wZf
-wZf
-wZf
-nTn
-uId
-wZf
-wZf
-wZf
-wZf
-wZf
-hgI
-irp
-irp
 mco
 mco
 mco
-hRR
-oKy
-hRR
+mco
+mco
+mco
 mco
 mco
 mco
@@ -87066,36 +87007,36 @@ vSo
 kIl
 qev
 gFE
-jHa
-uQR
-rRw
-rRw
-ifh
-ifh
-idF
-idF
-idF
-idF
-mco
-mco
-mco
-wZf
+nIu
+nIG
+nIG
+vVe
+kYo
+pLH
+flV
+sjm
+vCR
+dTi
+uzq
+eAY
+lOC
 jEX
-uId
+jEX
+jEX
+jEX
+vWn
+iAL
+mlR
+liF
+wIR
+gRM
+dHF
+mco
+eWA
 mco
 mco
 mco
 mco
-mco
-mco
-mco
-mco
-mco
-mco
-mco
-hRR
-hRR
-hRR
 mco
 mco
 mco
@@ -87324,30 +87265,30 @@ lAG
 dMj
 vzT
 oqn
-oqn
-xIO
-rRw
-ifh
-ifh
-idF
-idF
-idF
-idF
-mco
-mco
-mco
-mco
+nIu
+nIu
+nIu
+nIu
 wZf
-epC
-ygJ
-mco
-mco
-mco
-mco
-mco
-mco
-mco
-mco
+wZf
+wZf
+wZf
+uId
+uId
+uId
+wZf
+wZf
+wZf
+wZf
+wZf
+wZf
+wZf
+wZf
+nTn
+uId
+wZf
+wZf
+eju
 mco
 mco
 mco
@@ -87584,8 +87525,8 @@ fqM
 oqn
 oqn
 xIO
+vjW
 xGr
-xGr
 idF
 idF
 idF
@@ -87597,15 +87538,15 @@ mco
 mco
 mco
 mco
-mco
-mco
-mco
-mco
-mco
-mco
-mco
-mco
-mco
+hRR
+jHa
+hRR
+wZf
+raF
+uId
+hRR
+jHa
+hRR
 mco
 mco
 mco
@@ -87854,16 +87795,16 @@ mco
 mco
 mco
 mco
-raF
 mco
-mco
-mco
-mco
-mco
-mco
-mco
-mco
-mco
+hRR
+hRR
+hRR
+wZf
+epC
+ygJ
+hRR
+hRR
+hRR
 mco
 mco
 mco
@@ -88375,7 +88316,7 @@ mco
 mco
 mco
 mco
-mco
+hma
 mco
 mco
 mco

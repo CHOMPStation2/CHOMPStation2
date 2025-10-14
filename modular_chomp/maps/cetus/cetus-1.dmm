@@ -1873,11 +1873,6 @@
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/item/radio/intercom{
-	dir = 8;
-	name = "Station Intercom (General)";
-	pixel_x = -21
-	},
 /turf/simulated/floor/tiled/white,
 /area/medical/cetus/atriumd1)
 "aYV" = (
@@ -2246,11 +2241,6 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/ab_StripBar)
 "bkS" = (
-/obj/item/radio/intercom{
-	dir = 4;
-	name = "Station Intercom (General)";
-	pixel_x = 21
-	},
 /obj/machinery/camera/network/medbay{
 	c_tag = "MED - Treatment Center 3";
 	dir = 9
@@ -7428,7 +7418,7 @@
 	icon_state = "2-8"
 	},
 /obj/effect/shuttle_landmark{
-	base_area = /area/hangar/two;
+	base_area = /area/hangar/cetus/two;
 	base_turf = /turf/simulated/floor/reinforced;
 	landmark_tag = "hangar_2";
 	name = "Hangar 2";
@@ -16301,6 +16291,11 @@
 /obj/item/radio/intercom/department/medbay{
 	pixel_y = -24
 	},
+/obj/machinery/firealarm{
+	dir = 1;
+	pixel_y = -27;
+	pixel_x = 32
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/Surgery_Room_1)
 "iOm" = (
@@ -19182,6 +19177,11 @@
 /obj/structure/closet/secure_closet/medical1,
 /obj/effect/floor_decal/spline/fancy{
 	dir = 1
+	},
+/obj/item/radio/intercom{
+	dir = 4;
+	name = "Station Intercom (General)";
+	pixel_x = 21
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/medical/cetus/atriumd1)
@@ -29184,10 +29184,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
 	},
-/obj/item/radio/intercom/department/medbay{
-	dir = 8;
-	pixel_x = -21
-	},
 /turf/simulated/floor/tiled/white,
 /area/medical/cetus/atriumd1)
 "pEG" = (
@@ -29226,11 +29222,6 @@
 /area/crew_quarters/cetus/meteor/hallway2)
 "pEX" = (
 /obj/structure/stairs/spawner/north,
-/obj/item/radio/intercom{
-	dir = 4;
-	name = "Station Intercom (General)";
-	pixel_x = 21
-	},
 /turf/simulated/floor/tiled/white,
 /area/medical/cetus/atriumd1)
 "pFv" = (
@@ -32367,6 +32358,11 @@
 /obj/machinery/camera/network/medbay{
 	c_tag = "MED - Treatment Center 1";
 	dir = 5
+	},
+/obj/item/radio/intercom{
+	dir = 8;
+	name = "Station Intercom (General)";
+	pixel_x = -21
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/medical/cetus/atriumd1)
@@ -41028,10 +41024,6 @@
 /turf/simulated/floor/tiled,
 /area/hangar/cetus/explolocker)
 "voJ" = (
-/obj/machinery/firealarm{
-	dir = 8;
-	pixel_x = -27
-	},
 /obj/machinery/camera/network/medbay{
 	c_tag = "MED - Treatment Center 2";
 	dir = 5
@@ -41646,15 +41638,6 @@
 /obj/item/smes_coil,
 /turf/simulated/floor/plating,
 /area/engineering/cetus/meteor/smes)
-"vDp" = (
-/obj/structure/stairs/spawner/north,
-/obj/item/radio/intercom{
-	dir = 8;
-	name = "Station Intercom (General)";
-	pixel_x = -21
-	},
-/turf/simulated/floor/tiled/white,
-/area/medical/cetus/atriumd1)
 "vDw" = (
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/plating,
@@ -43330,10 +43313,6 @@
 /obj/effect/floor_decal/industrial/warning/color{
 	color = "#00B8B2";
 	dir = 1
-	},
-/obj/machinery/firealarm{
-	dir = 1;
-	pixel_y = -27
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/Surgery_Room_1)
@@ -73319,7 +73298,7 @@ xND
 uxH
 hyp
 aFD
-vDp
+pEX
 voJ
 pEh
 szw
