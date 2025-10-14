@@ -207,11 +207,11 @@ GLOBAL_LIST_EMPTY(station_waypoints) //Create global list for station waypoints,
 		"w3_a",
 		"w3_b",
 		"w3_c",
+		"hangar_2",
 		"andromeda",
 		"d1_near_jr",
 		"d1_near_se",
 		"d1_near_sw",
-		"hangar_2",
 		"d2_near_n",
 		"d2_near_se",
 		"d2_near_sw",
@@ -281,8 +281,9 @@ GLOBAL_LIST_EMPTY(station_waypoints) //Create global list for station waypoints,
 
 /obj/effect/overmap/visitable/ship/explo_carrier/Initialize(mapload)
 	. = ..()
-	for(var/obj/effect/overmap/visitable/sector/Southern_Cross/sc in GLOB.station_waypoints) //Scan the global list for our station, get docking codes so all other ships that spawn on it init with the correct ones.
-		src.docking_codes = sc.docking_codes
+	for(var/obj/effect/overmap/visitable/sector/sc in GLOB.station_waypoints) //Scan the global list for our station, get docking codes so all other ships that spawn on it init with the correct ones.
+		if(istype(sc, /obj/effect/overmap/visitable/sector/Soluna_Nexus) || istype(sc, /obj/effect/overmap/visitable/sector/Cetus) || istype(sc, /obj/effect/overmap/visitable/sector/Southern_Cross))
+			src.docking_codes = sc.docking_codes
 
 // Overmap object for Thor, hanging in the void of space
 /obj/effect/overmap/visitable/planet/Thor
