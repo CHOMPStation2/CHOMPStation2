@@ -21856,9 +21856,6 @@
 /obj/structure/transit_tube/station{
 	dir = 1
 	},
-/obj/structure/transit_tube_pod{
-	dir = 4
-	},
 /turf/simulated/floor/bluegrid,
 /area/crew_quarters/cetus/jrhallway)
 "hyM" = (
@@ -36173,6 +36170,9 @@
 	c_tag = "SCI - Transit Tube";
 	dir = 8
 	},
+/obj/structure/transit_tube_pod{
+	dir = 4
+	},
 /turf/simulated/floor/greengrid,
 /area/rnd/cetus/hall)
 "mAe" = (
@@ -49384,9 +49384,6 @@
 "qXF" = (
 /obj/structure/transit_tube/station{
 	dir = 1
-	},
-/obj/structure/transit_tube_pod{
-	dir = 4
 	},
 /turf/simulated/floor/greengrid,
 /area/crew_quarters/cetus/jrhallway)
@@ -63780,6 +63777,9 @@
 /obj/machinery/alarm{
 	dir = 8;
 	pixel_x = 26
+	},
+/obj/structure/transit_tube_pod{
+	dir = 4
 	},
 /turf/simulated/floor/bluegrid,
 /area/medical/cetus/hall)
