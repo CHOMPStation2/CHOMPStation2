@@ -17649,6 +17649,9 @@
 /obj/structure/cable/green{
 	icon_state = "0-5"
 	},
+/obj/machinery/light/broken{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/cetus/mechbay)
 "jzE" = (
@@ -20609,6 +20612,11 @@
 /obj/item/material/kitchen/utensil/fork,
 /turf/simulated/floor/wood,
 /area/crew_quarters/cetus/meteor/cafeteriaf1)
+"kUO" = (
+/obj/structure/table/bench/standard,
+/obj/machinery/light/broken,
+/turf/simulated/floor/wood,
+/area/maintenance/cetus/stylist)
 "kVj" = (
 /obj/structure/lattice,
 /turf/simulated/floor/water/indoors/station,
@@ -26200,6 +26208,12 @@
 /obj/machinery/atmospherics/pipe/manifold4w/visible/black,
 /turf/simulated/floor/plating,
 /area/engineering/cetus/meteor/enginewaste)
+"nYb" = (
+/obj/machinery/light/broken{
+	dir = 4
+	},
+/turf/simulated/floor/outdoors/rocks/cetus,
+/area/maintenance/cetus/meteor/ragecage)
 "nYe" = (
 /obj/structure/lattice,
 /obj/random/junk,
@@ -27208,6 +27222,12 @@
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/sleep/cetus/meteor/dorm2)
+"ovd" = (
+/obj/machinery/light/broken{
+	dir = 4
+	},
+/turf/simulated/wall,
+/area/maintenance/cetus/dentist)
 "ovL" = (
 /obj/machinery/floodlight{
 	dir = 8
@@ -36551,8 +36571,11 @@
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/d1port)
 "tjS" = (
-/obj/effect/decal/cleanable/blood,
-/turf/simulated/floor/outdoors/rocks/cetus,
+/obj/structure/flora/underwater/grass1,
+/obj/machinery/light/broken{
+	dir = 4
+	},
+/turf/simulated/floor/water/indoors/station,
 /area/maintenance/cetus/meteor/ragecage)
 "tka" = (
 /obj/structure/table/steel,
@@ -72512,7 +72535,7 @@ tJJ
 lit
 bNI
 bNI
-bNI
+ovd
 wKl
 klN
 wKl
@@ -72522,7 +72545,7 @@ tmp
 hra
 qYK
 wpD
-siV
+kUO
 bxe
 gaL
 gaJ
@@ -74568,7 +74591,7 @@ pwg
 dqU
 iTF
 iTF
-rEU
+tjS
 iTF
 lit
 lit
@@ -75083,7 +75106,7 @@ wlk
 lxR
 dHN
 dHN
-dHN
+nYb
 iTF
 iTF
 iTF
@@ -75597,7 +75620,7 @@ dHN
 dHN
 xft
 xft
-tjS
+dHN
 dHN
 dHN
 yez
@@ -76373,7 +76396,7 @@ wlk
 lxR
 cJZ
 bJT
-tjS
+dHN
 iTF
 rEU
 iTF

@@ -6463,6 +6463,7 @@
 	dir = 4
 	},
 /obj/effect/map_effect/portal/line/side_a,
+/obj/effect/map_effect/perma_light/concentrated/incandescent,
 /turf/simulated/floor/carpet/graycarpet,
 /area/shadekin)
 "gCT" = (
@@ -13006,6 +13007,7 @@
 	dir = 8
 	},
 /obj/effect/map_effect/portal/master/side_a/retreat_east,
+/obj/effect/map_effect/perma_light/concentrated/incandescent,
 /turf/simulated/floor/carpet/graycarpet,
 /area/shadekin)
 "mYr" = (
