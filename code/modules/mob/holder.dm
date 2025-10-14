@@ -384,7 +384,11 @@ var/list/holder_mob_icon_cache = list()
 	//end YW edit
 
 	var/obj/item/holder/H = new holder_type(get_turf(src), src)
+<<<<<<< HEAD
 	H.sync(src)	//CHOMPEdit - See modular_chomp/code/modules/mob/holder.dm for what this does
+=======
+	H.sync(src)
+>>>>>>> 85926d166e (Various species related fixes (#18600))
 	grabber.put_in_hands(H)
 
 	if(self_grab)
@@ -397,11 +401,6 @@ var/list/holder_mob_icon_cache = list()
 
 	add_attack_logs(grabber, H.held_mob, "Scooped up", FALSE) // Not important enough to notify admins, but still helpful.
 	return H
-
-/obj/item/holder/human
-	icon = 'icons/mob/holder_complex.dmi'
-	var/list/generate_for_slots = list(slot_l_hand_str, slot_r_hand_str, slot_back_str)
-	slot_flags = SLOT_BACK
 
 /obj/item/holder/proc/sync(var/mob/living/M)
 	dir = 2

@@ -900,6 +900,8 @@
 	min_age = 20
 	max_age = 80
 
+	species_sounds = "Vulpine"
+
 	blurb = "The fennec-like, blue-blooded Zorren are native to Virgo 4/Menhir and are descendants of a precursor species \
 			that is thought to be responsible for the near-collapse of the biosphere of the planet. \
 			With societies organised around hierarchal caste systems (such as the Royal Zorren) or freedom and strength (such as the Free Tribe Zorren), \
@@ -962,6 +964,11 @@
 	color_mult = 1
 	inherent_verbs = list(/mob/living/carbon/human/proc/lick_wounds,
 		/mob/living/carbon/human/proc/tie_hair)
+
+	pain_verb_1p = list("yelp", "growl")
+	pain_verb_3p = list("yelps", "growls")
+
+	species_sounds = "Canine"
 
 	wikilink="https://wiki.vore-station.net/Backstory#Vulpkanin"
 
@@ -1129,7 +1136,7 @@
 	burn_mod =  1.35
 	mob_size = MOB_MEDIUM
 	pass_flags = PASSTABLE
-	holder_type = /obj/item/holder/human
+	holder_type = /obj/item/holder/micro
 //	short_sighted = 1
 	has_vibration_sense = TRUE
 	blood_volume = 400
@@ -1406,6 +1413,8 @@
 	min_age = 18
 	max_age = 80
 
+	species_sounds = "Vulpine"
+
 	//primitive_form = "" //We don't have fennec-monkey sprites.
 	spawn_flags = SPECIES_IS_RESTRICTED
 	appearance_flags = HAS_HAIR_COLOR | HAS_LIPS | HAS_UNDERWEAR | HAS_SKIN_COLOR | HAS_EYE_COLOR
@@ -1475,6 +1484,8 @@
 
 	min_age = 18
 	max_age = 80
+
+	species_sounds = "Mouse"
 
 	blurb = "The Altevian are a species of tall, rodent humanoids that are akin to rats for their features. \
 	The Altevian, unlike most species, do not have a home planet, nor system, adopting a fully nomadic lifestyle \
