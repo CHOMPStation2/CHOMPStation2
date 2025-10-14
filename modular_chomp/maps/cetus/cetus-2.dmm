@@ -28315,9 +28315,9 @@
 	frequency = 1381;
 	id_tag = "hangar_3";
 	name = "shuttle bay controller";
-	dir = 8;
-	pixel_x = 26;
-	tag_door = "hangar_3_door"
+	pixel_y = -26;
+	tag_door = "hangar_3_door";
+	dir = 1
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/hangar/three)

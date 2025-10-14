@@ -31743,7 +31743,7 @@
 	id_tag = "hangar_2";
 	name = "shuttle bay controller";
 	dir = 8;
-	pixel_x = 26
+	pixel_x = 22
 	},
 /turf/simulated/floor/tiled,
 /area/hangar/cetus/two)
