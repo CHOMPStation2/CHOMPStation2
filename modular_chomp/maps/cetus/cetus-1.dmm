@@ -7556,6 +7556,7 @@
 	id = "toxinsdriver";
 	name = "Toxins Launcher Bay Door"
 	},
+/obj/machinery/shield_diffuser,
 /turf/simulated/floor/plating,
 /area/rnd/cetus/meteor/toxtest)
 "elM" = (
@@ -35006,6 +35007,7 @@
 	},
 /obj/effect/map_helper/airlock/button/ext_button,
 /obj/effect/map_helper/airlock/door/ext_door,
+/obj/machinery/shield_diffuser,
 /turf/simulated/floor/tiled/dark,
 /area/rnd/cetus/meteor/toxtest)
 "sxP" = (
