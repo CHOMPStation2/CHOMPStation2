@@ -38384,15 +38384,6 @@
 "nqy" = (
 /turf/space,
 /area/shuttle/escape/station)
-"nqJ" = (
-/obj/effect/wingrille_spawn/reinforced,
-/obj/machinery/door/firedoor/glass,
-/obj/structure/sign/securearea{
-	desc = "A warning sign which reads 'KEEP CLEAR OF DOCKING AREA'.";
-	name = "KEEP CLEAR: DOCKING AREA"
-	},
-/turf/space,
-/area/hallway/secondary/entry/D1)
 "nqW" = (
 /obj/structure/table/marble,
 /obj/machinery/microwave{
@@ -54788,11 +54779,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hangar/three)
-"sOV" = (
-/obj/effect/wingrille_spawn/reinforced,
-/obj/machinery/door/firedoor/glass,
-/turf/space,
-/area/hallway/secondary/entry/D1)
 "sPp" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 1
@@ -70011,7 +69997,8 @@
 	pixel_y = 30
 	},
 /obj/machinery/computer/guestpass{
-	pixel_x = 28
+	pixel_x = 28;
+	dir = 8
 	},
 /turf/simulated/floor/wood,
 /area/bridge/HoP_Office)
@@ -100170,9 +100157,9 @@ dRK
 oJw
 oJw
 oJw
-sOV
+pNA
 mYw
-nqJ
+nVh
 oJw
 oJw
 oJw
@@ -100428,9 +100415,9 @@ dRK
 oJw
 oJw
 oJw
-sOV
+pNA
 dmg
-sOV
+pNA
 oJw
 oJw
 oJw
@@ -100686,9 +100673,9 @@ dRK
 oJw
 oJw
 oJw
-sOV
+pNA
 myD
-sOV
+pNA
 oJw
 oJw
 oJw
