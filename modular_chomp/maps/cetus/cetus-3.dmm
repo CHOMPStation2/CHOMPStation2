@@ -15732,12 +15732,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/nanites)
-"jHa" = (
-/obj/machinery/pointdefense{
-	id_tag = "PD Main"
-	},
-/turf/simulated/floor/plating,
-/area/space)
 "jHc" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -86271,7 +86265,7 @@ wZf
 dqq
 uId
 hRR
-jHa
+oKy
 hRR
 mco
 mco
@@ -87555,13 +87549,13 @@ mco
 mco
 mco
 hRR
-jHa
+oKy
 hRR
 wZf
 raF
 uId
 hRR
-jHa
+oKy
 hRR
 mco
 mco
