@@ -23354,6 +23354,9 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/spline/plain,
+/obj/machinery/computer/id_restorer{
+	pixel_y = 26
+	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/cetus/atrium/primary)
 "hXv" = (
@@ -61561,7 +61564,8 @@
 /area/hangar/cetus/explofoyer)
 "vbc" = (
 /obj/structure/sign/directions/evac{
-	dir = 10
+	dir = 10;
+	pixel_y = 6
 	},
 /turf/simulated/wall/r_wall,
 /area/crew_quarters/cetus/atrium/primary)

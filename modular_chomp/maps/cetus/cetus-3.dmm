@@ -32642,17 +32642,6 @@
 	},
 /turf/simulated/floor/carpet/graycarpet,
 /area/maintenance/cetus/shallow/fp)
-"twv" = (
-/obj/effect/shuttle_landmark{
-	base_area = /area/thirddeck/roof;
-	base_turf = /turf/simulated/reinforced/turfpack/airless;
-	docking_controller = "andromeda_airlock_2";
-	landmark_tag = "andromeda_2";
-	name = "HIS Andromeda Dock 2 DO NOT USE";
-	use_docking_codes = 0
-	},
-/turf/space,
-/area/space)
 "twL" = (
 /obj/effect/floor_decal/spline/plain/cee{
 	dir = 4
@@ -88092,7 +88081,7 @@ mco
 mco
 mco
 mco
-twv
+mco
 mco
 mco
 mco
