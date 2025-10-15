@@ -152,3 +152,31 @@
       table would lock your view to the table
   - bugfix: pda breaking most types of remote views by never releasing it's mob machine
       state
+2025-10-15:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: ticket replies failing in admin to admin interaction
+  Diana:
+  - qol: WALKING (as in WALK INTENT) near disposals with unlucky will no longer make
+      you fall into them
+  - bugfix: Unlucky individuals being disposal'd can not crawl out if the unit is
+      prepared to dispose of them.
+  - bugfix: You can now longer eat yourself
+  - bugfix: You can no longer get eaten by people that are not physically present
+  - code_imp: Spont vore eating code is better
+  Will:
+  - bugfix: remote view crash if you try to use an overmap shuttle while blind
+  - bugfix: remote view crash if you start a remote view with a zooming item and disconnect
+  - bugfix: struggling out of most containers will respect being in a disposal packet
+  - bugfix: admin teleports and get_movable VV action clear remote views
+  - bugfix: attempting to remoteview a qdeleted object will force reset your view
+      to yourself
+  - bugfix: throwing micros inside food into the stardog mouth no longer results in
+      a black screen for the micro
+  Will, Diana:
+  - rscadd: Destructive analyzer returns
+  - rscadd: Destructive analyzer circuit board added to Fundamental Science techweb
+      node
+  - rscadd: Destructive analyzer can be linked to ore silo with multitool if built
+      in round
+  - rscadd: Research samples give research points when put through the destructive
+      analyzer.
