@@ -261,23 +261,13 @@
 /turf/simulated/floor/outdoors/rocks/cetus,
 /area/engineering/cetus/aftsubstation)
 "ahc" = (
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	dir = 1;
-	frequency = 1379;
-	id_tag = "eva_port_pump"
-	},
-/obj/machinery/embedded_controller/radio/airlock/airlock_controller{
-	id_tag = "eva_port_airlock";
-	pixel_y = -26;
-	tag_airpump = "eva_port_pump";
-	tag_chamber_sensor = "eva_port_sensor";
-	tag_exterior_door = "eva_port_outer";
-	tag_interior_door = "eva_port_inner";
-	dir = 1
-	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 10
 	},
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	dir = 1
+	},
+/obj/effect/map_helper/airlock/atmos/chamber_pump,
 /turf/simulated/floor/plating,
 /area/engineering/Atmospherics_Chamber)
 "ahL" = (
@@ -2142,15 +2132,14 @@
 /turf/simulated/floor/tiled/kafel_full,
 /area/bridge/sleep/CMO_Quarters)
 "brf" = (
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	dir = 1;
-	frequency = 1379;
-	id_tag = "eva_port_pump"
-	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 6
 	},
 /obj/machinery/light/small/emergency,
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	dir = 1
+	},
+/obj/effect/map_helper/airlock/atmos/chamber_pump,
 /turf/simulated/floor/plating,
 /area/engineering/Atmospherics_Chamber)
 "brI" = (
@@ -3152,19 +3141,17 @@
 /turf/simulated/floor/carpet/graycarpet,
 /area/bridge/Deck3_Corridor)
 "cbQ" = (
-/obj/machinery/access_button{
-	command = "cycle_exterior";
+/obj/machinery/door/airlock/external{
 	frequency = 1379;
-	master_tag = "eva_port_airlock";
-	name = "exterior access button";
-	pixel_y = -26
+	icon_state = "door_locked";
+	id_tag = "eva_port_outer";
+	locked = 1;
+	name = "External Airlock Access";
+	req_access = list(13)
 	},
-/obj/machinery/shield_diffuser,
-/obj/effect/floor_decal/industrial/warning{
-	dir = 8
-	},
+/obj/effect/map_helper/airlock/door/ext_door,
 /turf/simulated/floor/plating,
-/area/thirddeck/roof)
+/area/engineering/Atmospherics_Chamber)
 "cca" = (
 /obj/structure/closet/secure_closet/medical_wall{
 	name = "defibrillator closet";
@@ -9489,8 +9476,8 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/structure/catwalk,
+/obj/machinery/atmospherics/pipe/simple/visible/universal,
 /turf/simulated/open,
 /area/engineering/Atmospherics_Chamber)
 "fTw" = (
@@ -11154,14 +11141,15 @@
 /turf/simulated/floor/tiled/old_tile,
 /area/maintenance/cetus/shallow/derelict/dock)
 "gRS" = (
-/obj/machinery/atmospherics/unary/vent_pump/high_volume,
-/obj/machinery/airlock_sensor{
-	id_tag = "eva_port_sensor";
-	pixel_y = 25
-	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 9
 	},
+/obj/machinery/atmospherics/unary/vent_pump/high_volume,
+/obj/machinery/airlock_sensor{
+	pixel_y = 23
+	},
+/obj/effect/map_helper/airlock/atmos/chamber_pump,
+/obj/effect/map_helper/airlock/sensor/chamber_sensor,
 /turf/simulated/floor/plating,
 /area/engineering/Atmospherics_Chamber)
 "gSg" = (
@@ -12025,6 +12013,7 @@
 	name = "Internal Airlock Access";
 	req_access = list(13)
 	},
+/obj/effect/map_helper/airlock/door/int_door,
 /turf/simulated/floor/plating,
 /area/engineering/Atmospherics_Chamber)
 "hrV" = (
@@ -12803,7 +12792,7 @@
 /obj/effect/floor_decal/corner/yellow/border{
 	dir = 1
 	},
-/obj/machinery/atmospherics/pipe/simple/visible/universal,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled,
 /area/engineering/Atmospherics_Chamber)
 "hRN" = (
@@ -13159,11 +13148,11 @@
 	opacity = 0
 	},
 /obj/machinery/door/firedoor/glass,
-/obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/effect/floor_decal/industrial/warning{
 	layer = 3;
 	dir = 1
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/techmaint,
 /area/engineering/Atmospherics_Chamber)
 "hYt" = (
@@ -16367,10 +16356,15 @@
 	},
 /area/ai_monitored/aihall)
 "kbD" = (
-/obj/machinery/atmospherics/unary/vent_pump/high_volume,
 /obj/effect/floor_decal/industrial/warning{
 	dir = 5
 	},
+/obj/machinery/atmospherics/unary/vent_pump/high_volume,
+/obj/machinery/embedded_controller/radio/airlock/airlock_controller{
+	id_tag = "atmos_port_airlock";
+	pixel_y = 24
+	},
+/obj/effect/map_helper/airlock/atmos/chamber_pump,
 /turf/simulated/floor/plating,
 /area/engineering/Atmospherics_Chamber)
 "kbE" = (
@@ -18778,6 +18772,13 @@
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
 	},
+/obj/machinery/access_button{
+	name = "interior access button";
+	pixel_x = -32;
+	pixel_y = 23
+	},
+/obj/effect/map_helper/airlock/button/int_button,
+/obj/effect/map_helper/airlock/door/int_door,
 /turf/simulated/floor/plating,
 /area/engineering/Atmospherics_Chamber)
 "lrC" = (
@@ -32362,13 +32363,6 @@
 /obj/effect/floor_decal/corner/yellow/bordercorner{
 	dir = 1
 	},
-/obj/machinery/access_button{
-	command = "cycle_interior";
-	frequency = 1379;
-	master_tag = "eva_port_airlock";
-	name = "interior access button";
-	pixel_y = 26
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
 	},
@@ -38082,6 +38076,14 @@
 	name = "External Airlock Access";
 	req_access = list(13)
 	},
+/obj/machinery/access_button{
+	dir = 1;
+	name = "exterior access button";
+	pixel_x = 32;
+	pixel_y = -22
+	},
+/obj/effect/map_helper/airlock/button/ext_button,
+/obj/effect/map_helper/airlock/door/ext_door,
 /turf/simulated/floor/plating,
 /area/engineering/Atmospherics_Chamber)
 "wDj" = (
@@ -100905,7 +100907,7 @@ idF
 idF
 xwI
 xwI
-wCV
+cbQ
 wCV
 ydZ
 bwz
@@ -101164,7 +101166,7 @@ idF
 idF
 dSU
 uek
-cbQ
+uek
 ydZ
 unD
 unD
