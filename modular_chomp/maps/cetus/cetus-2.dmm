@@ -15529,10 +15529,7 @@
 /obj/effect/floor_decal/corner/purple/bordercorner{
 	dir = 8
 	},
-/obj/structure/table/standard,
-/obj/item/form_printer{
-	pixel_y = -2
-	},
+/obj/machinery/rnd/production/circuit_imprinter,
 /turf/simulated/floor/tiled/white,
 /area/rnd/Research_Lab)
 "fto" = (
@@ -25132,8 +25129,9 @@
 /obj/structure/table/standard,
 /obj/effect/floor_decal/borderfloorblack/corner,
 /obj/effect/floor_decal/corner/purple/bordercorner,
-/obj/item/stack/cable_coil,
-/obj/item/stack/cable_coil,
+/obj/item/form_printer{
+	pixel_y = -2
+	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/Research_Lab)
 "iGy" = (
@@ -25623,6 +25621,53 @@
 	},
 /obj/effect/floor_decal/corner/purple/bordercorner{
 	dir = 8
+	},
+/obj/structure/table/rack/shelf,
+/obj/item/stock_parts/capacitor{
+	pixel_y = -10;
+	pixel_x = 3
+	},
+/obj/item/stock_parts/capacitor{
+	pixel_y = -10;
+	pixel_x = 3
+	},
+/obj/item/stock_parts/manipulator{
+	pixel_y = -10;
+	pixel_x = -5
+	},
+/obj/item/stock_parts/manipulator{
+	pixel_y = -10;
+	pixel_x = -5
+	},
+/obj/item/clothing/glasses/welding{
+	pixel_y = 3
+	},
+/obj/item/clothing/glasses/welding{
+	pixel_y = 3
+	},
+/obj/item/stock_parts/console_screen{
+	pixel_y = 12
+	},
+/obj/item/stock_parts/console_screen{
+	pixel_y = 12
+	},
+/obj/item/stock_parts/console_screen{
+	pixel_y = 12
+	},
+/obj/item/stock_parts/console_screen{
+	pixel_y = 12
+	},
+/obj/item/stock_parts/matter_bin{
+	pixel_y = 13
+	},
+/obj/item/stock_parts/matter_bin{
+	pixel_y = 13
+	},
+/obj/item/stock_parts/matter_bin{
+	pixel_y = 13
+	},
+/obj/item/stock_parts/matter_bin{
+	pixel_y = 13
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/Research_Lab)
@@ -44857,12 +44902,12 @@
 /turf/simulated/floor/outdoors/rocks/cetus,
 /area/maintenance/cetus/twosec)
 "pzX" = (
-/obj/effect/floor_decal/spline/plain/cee{
-	dir = 8
-	},
-/obj/machinery/rnd/production/circuit_imprinter,
 /obj/structure/cable/green{
 	icon_state = "6-9"
+	},
+/obj/machinery/rnd/destructive_analyzer,
+/obj/effect/floor_decal/spline/plain/cee{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/milspec/raised,
 /area/rnd/Research_Lab)
@@ -53479,6 +53524,8 @@
 	amount = 50
 	},
 /obj/item/clothing/glasses/welding,
+/obj/item/stack/cable_coil,
+/obj/item/stack/cable_coil,
 /turf/simulated/floor/tiled/white,
 /area/rnd/Research_Lab)
 "soy" = (
@@ -54974,47 +55021,6 @@
 /turf/simulated/floor/plating,
 /area/maintenance/zerobar)
 "sSi" = (
-/obj/structure/table/rack/shelf,
-/obj/item/stock_parts/capacitor{
-	pixel_y = -10;
-	pixel_x = 3
-	},
-/obj/item/stock_parts/capacitor{
-	pixel_y = -10;
-	pixel_x = 3
-	},
-/obj/item/stock_parts/manipulator{
-	pixel_y = -10;
-	pixel_x = -5
-	},
-/obj/item/stock_parts/manipulator{
-	pixel_y = -10;
-	pixel_x = -5
-	},
-/obj/item/clothing/glasses/welding{
-	pixel_y = 3
-	},
-/obj/item/stock_parts/console_screen{
-	pixel_y = 12
-	},
-/obj/item/stock_parts/console_screen{
-	pixel_y = 12
-	},
-/obj/item/stock_parts/console_screen{
-	pixel_y = 12
-	},
-/obj/item/stock_parts/console_screen{
-	pixel_y = 12
-	},
-/obj/item/stock_parts/matter_bin{
-	pixel_y = 13
-	},
-/obj/item/stock_parts/matter_bin{
-	pixel_y = 13
-	},
-/obj/item/stock_parts/matter_bin{
-	pixel_y = 13
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/white,
@@ -56209,6 +56215,21 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 5
 	},
+/obj/structure/table/rack/shelf,
+/obj/item/stock_parts/micro_laser{
+	pixel_y = -8;
+	pixel_x = -5
+	},
+/obj/item/stock_parts/micro_laser{
+	pixel_y = -8;
+	pixel_x = -5
+	},
+/obj/item/stock_parts/micro_laser{
+	pixel_y = -8;
+	pixel_x = -5
+	},
+/obj/item/stock_parts/scanning_module,
+/obj/item/stock_parts/scanning_module,
 /turf/simulated/floor/tiled/white,
 /area/rnd/Research_Lab)
 "tkE" = (
@@ -65262,26 +65283,6 @@
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/medical/Restrooms)
-"wtl" = (
-/obj/effect/floor_decal/borderfloorblack{
-	dir = 4
-	},
-/obj/effect/floor_decal/corner/purple/border{
-	dir = 4
-	},
-/obj/structure/table/rack/shelf,
-/obj/item/stock_parts/micro_laser{
-	pixel_y = -8;
-	pixel_x = -1
-	},
-/obj/item/stock_parts/micro_laser{
-	pixel_y = -8;
-	pixel_x = -1
-	},
-/obj/item/stock_parts/scanning_module,
-/obj/item/stock_parts/scanning_module,
-/turf/simulated/floor/tiled/white,
-/area/rnd/Research_Lab)
 "wtp" = (
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 4
@@ -98276,7 +98277,7 @@ gCn
 iGd
 eQY
 hJl
-wtl
+eQY
 mQZ
 oqV
 wLa
