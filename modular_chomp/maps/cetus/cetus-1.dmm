@@ -30612,6 +30612,14 @@
 /obj/machinery/light/fluorescent{
 	dir = 8
 	},
+/obj/machinery/power/apc{
+	dir = 8;
+	name = "west bump";
+	pixel_x = -24
+	},
+/obj/structure/cable/green{
+	icon_state = "0-4"
+	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/cetus/meteor/pool)
 "qiG" = (
@@ -43043,13 +43051,8 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/security/cetus/meteor/armory)
 "wqG" = (
-/obj/machinery/power/apc{
-	dir = 1;
-	name = "north bump";
-	pixel_y = 24
-	},
 /obj/structure/cable/green{
-	icon_state = "0-2"
+	icon_state = "2-8"
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/cetus/meteor/pool)

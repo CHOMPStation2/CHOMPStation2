@@ -75,6 +75,12 @@
 	nitrogen	= MOLES_N2STANDARD
 	temperature = T20C
 
+/turf/simulated/mineral/cetus/Initialize(mapload)
+	if(!ignore_mapgen && prob(5))
+		turf_resource_types |= TURF_HAS_ORE
+	. = ..()
+
+
 /turf/simulated/floor/outdoors/rocks/cetus
 	name = "rocks"
 	outdoors = FALSE
