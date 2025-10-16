@@ -124,13 +124,6 @@
 	// Now for the tunnels. (This decides the load order of ore generation and cave generation. Check Random_Map to see % )
 	new /datum/random_map/automata/cave_system/(null, 1, 1, surface_mine_z, world.maxx, world.maxy) // Create the mining Z-level.
 	new /datum/random_map/noise/ore(null, 1, 1, surface_mine_z, 64, 64)         // Create the mining ore distribution map.
-	// Populate the asteroid itself with ore
-	var/cetusz1 = GLOB.map_templates_loaded[Z_LEVEL_CETUS_STATION_ONE]
-	var/cetusz2 = GLOB.map_templates_loaded[Z_LEVEL_CETUS_STATION_TWO]
-	var/cetusz3 = GLOB.map_templates_loaded[Z_LEVEL_CETUS_STATION_THREE]
-	new /datum/random_map/noise/ore(null, 1, 1, cetusz1, 64, 64)         // Create the asteroid ore distribution map.
-	new /datum/random_map/noise/ore(null, 1, 1, cetusz2, 64, 64)
-	new /datum/random_map/noise/ore(null, 1, 1, cetusz3, 64, 64)
 	return 1
 
 /datum/map/cetus/get_map_info()
@@ -171,14 +164,14 @@
 
 // Station Z-Levels
 /datum/map_z_level/cetus/station
-	flags = MAP_LEVEL_STATION|MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER|MAP_LEVEL_CONSOLES|MAP_LEVEL_VORESPAWN
+	flags = MAP_LEVEL_STATION|MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER|MAP_LEVEL_CONSOLES|MAP_LEVEL_VORESPAWN|MAP_LEVEL_XENOARCH_EXEMPT
 	holomap_legend_x = 220
 	holomap_legend_y = 200
 
 /datum/map_z_level/cetus/station/station_one
 	z = Z_LEVEL_CETUS_STATION_ONE
 	name = "Deck 1"
-	base_turf = /turf/simulated/open
+	base_turf = /turf/space
 	transit_chance = 15
 	holomap_offset_x = CETUS_HOLOMAP_MARGIN_X
 	holomap_offset_y = CETUS_HOLOMAP_MARGIN_Y - CETUS_HOLOMAP_CENTER_GUTTER / 2 //+ SOUTHERN_CROSS_MAP_SIZE*0

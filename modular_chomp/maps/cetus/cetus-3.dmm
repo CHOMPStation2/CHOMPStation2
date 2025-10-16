@@ -2111,6 +2111,24 @@
 	},
 /turf/simulated/floor/tiled/neutral,
 /area/maintenance/cetus/shallow/derelict/hallway)
+"bqI" = (
+/obj/structure/cable{
+	icon_state = "6-8"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "4-10"
+	},
+/turf/simulated/floor/carpet/graycarpet,
+/area/bridge/Deck3_Corridor)
 "bqN" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /turf/simulated/floor/carpet/graycarpet,
@@ -4586,28 +4604,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/Atmospherics_Chamber)
-"cXy" = (
-/obj/structure/cable{
-	icon_state = "6-9"
-	},
-/obj/structure/railing/grey{
-	dir = 8
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 1;
-	icon_state = "pipe-c"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 5
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 5
-	},
-/obj/structure/cable/green{
-	icon_state = "1-4"
-	},
-/turf/simulated/floor/carpet/graycarpet,
-/area/bridge/Deck3_Corridor)
 "cXI" = (
 /obj/structure/table/standard,
 /obj/structure/cable{
@@ -5850,24 +5846,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/plating,
 /area/engineering/cetus/jointsubstation)
-"dLQ" = (
-/obj/structure/cable{
-	icon_state = "6-8"
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/structure/cable/green{
-	icon_state = "4-10"
-	},
-/turf/simulated/floor/carpet/graycarpet,
-/area/bridge/Deck3_Corridor)
 "dLT" = (
 /obj/structure/bed/chair/office/dark{
 	dir = 1
@@ -18992,13 +18970,6 @@
 	},
 /turf/simulated/floor/carpet/graycarpet,
 /area/bridge/Deck3_Corridor)
-"lva" = (
-/obj/machinery/light{
-	dir = 1;
-	name = "1N-lighting fixture"
-	},
-/turf/simulated/floor/carpet/graycarpet,
-/area/bridge/Deck3_Corridor)
 "lvg" = (
 /obj/structure/cable{
 	icon_state = "4-10"
@@ -23884,8 +23855,12 @@
 /turf/simulated/wall,
 /area/maintenance/cetus/nanites)
 "odM" = (
-/turf/simulated/floor/outdoors/rocks/cetus/edge,
-/area/engineering/Solar_Control_ForPort)
+/obj/machinery/light{
+	dir = 1;
+	name = "1N-lighting fixture"
+	},
+/turf/simulated/floor/carpet/graycarpet,
+/area/bridge/Deck3_Corridor)
 "odX" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -40646,6 +40621,28 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/carpet/graycarpet,
 /area/maintenance/cetus/shallow/fp)
+"yhl" = (
+/obj/structure/cable{
+	icon_state = "6-9"
+	},
+/obj/structure/railing/grey{
+	dir = 8
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 5
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 5
+	},
+/obj/structure/cable/green{
+	icon_state = "1-4"
+	},
+/turf/simulated/floor/carpet/graycarpet,
+/area/bridge/Deck3_Corridor)
 "yhp" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -70273,7 +70270,7 @@ rRw
 rRw
 jOC
 rRw
-odM
+aSw
 aSw
 aSw
 aSw
@@ -75950,7 +75947,7 @@ lhN
 cST
 cST
 mrP
-dLQ
+bqI
 tRB
 ddV
 tHR
@@ -76209,7 +76206,7 @@ cST
 xGH
 mrP
 dYQ
-cXy
+yhl
 ddV
 abd
 hXw
@@ -76466,7 +76463,7 @@ eGf
 mrP
 mrP
 mrP
-lva
+odM
 wvE
 gQv
 tym
