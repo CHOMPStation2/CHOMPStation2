@@ -2787,6 +2787,9 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/central_three)
+"aXC" = (
+/turf/simulated/floor/tiled/techmaint,
+/area/hallway/primary/central_one)
 "aXD" = (
 /obj/structure/railing/grey{
 	dir = 8
@@ -2876,6 +2879,21 @@
 	},
 /turf/simulated/floor/glass/reinforced,
 /area/security/Brig)
+"aYR" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 4
+	},
+/obj/effect/floor_decal/borderfloor/corner{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/blue/bordercorner{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/blue/border{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/hallway/primary/central_one)
 "aZg" = (
 /obj/structure/disposalpipe/segment,
 /obj/effect/floor_decal/industrial/warning/corner{
@@ -5921,6 +5939,9 @@
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/effect/floor_decal/spline/plain{
 	dir = 6
+	},
+/obj/structure/railing/grey{
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/cetus/atrium/primary)
@@ -13232,6 +13253,15 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/crew_quarters/sleep/cetus/quartermaster)
+"eCs" = (
+/obj/structure/bed/chair/sofa/corp/right{
+	dir = 4
+	},
+/obj/effect/floor_decal/spline/plain{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/crew_quarters/cetus/atrium/primary)
 "eCM" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -16205,6 +16235,9 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/spline/plain{
+	dir = 4
+	},
+/obj/structure/railing/grey{
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
@@ -21065,6 +21098,18 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/teleporter/departure)
+"hky" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner_steel_grid{
+	dir = 10
+	},
+/obj/effect/floor_decal/spline/plain/corner{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/crew_quarters/cetus/atrium/primary)
 "hkF" = (
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -22200,11 +22245,17 @@
 /turf/simulated/open,
 /area/medical/cetus/atriumd2)
 "hEK" = (
-/obj/structure/railing/overhang/grey,
-/obj/structure/railing/overhang/grey{
-	dir = 4
+/obj/structure/table/bench/wooden,
+/obj/item/tabloid{
+	pixel_y = -1;
+	pixel_x = -9
 	},
-/turf/simulated/floor/wood,
+/obj/item/newspaper{
+	pixel_y = -6
+	},
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/corner/blue/border,
+/turf/simulated/floor/tiled,
 /area/crew_quarters/cetus/atrium/primary)
 "hES" = (
 /obj/structure/disposalpipe/segment,
@@ -23354,6 +23405,7 @@
 /obj/machinery/computer/id_restorer{
 	pixel_y = 26
 	},
+/obj/structure/railing/grey,
 /turf/simulated/floor/tiled,
 /area/crew_quarters/cetus/atrium/primary)
 "hXv" = (
@@ -24911,6 +24963,9 @@
 "iBT" = (
 /obj/effect/floor_decal/corner_steel_grid{
 	dir = 6
+	},
+/obj/effect/floor_decal/spline/plain/corner{
+	dir = 8
 	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/cetus/atrium/primary)
@@ -32841,6 +32896,9 @@
 /obj/structure/cable{
 	icon_state = "2-4"
 	},
+/obj/machinery/light{
+	dir = 1
+	},
 /turf/simulated/floor/plating,
 /area/hallway/primary/central_one)
 "lvX" = (
@@ -33084,7 +33142,8 @@
 	},
 /obj/machinery/light,
 /obj/machinery/computer/guestpass{
-	pixel_y = -30
+	pixel_y = -23;
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/security/Reception)
@@ -33521,15 +33580,11 @@
 /turf/simulated/floor/tiled/hydro,
 /area/rnd/Xenobotany_Lab)
 "lJh" = (
-/obj/structure/railing/overhang/grey{
-	dir = 1;
-	layer = 3
+/obj/structure/bed/chair/sofa/corp/left,
+/obj/effect/floor_decal/spline/plain{
+	dir = 1
 	},
-/obj/structure/railing/overhang/grey{
-	dir = 4
-	},
-/obj/structure/bed/chair/sofa/left/black,
-/turf/simulated/floor/wood,
+/turf/simulated/floor/tiled,
 /area/crew_quarters/cetus/atrium/primary)
 "lJN" = (
 /obj/machinery/disposal,
@@ -38198,6 +38253,12 @@
 /obj/effect/floor_decal/corner_steel_grid{
 	dir = 6
 	},
+/obj/effect/floor_decal/borderfloor/corner{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/blue/bordercorner{
+	dir = 1
+	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/central_one)
 "nkI" = (
@@ -42843,15 +42904,13 @@
 /turf/simulated/floor/tiled,
 /area/crew_quarters/cetus/atrium/primary)
 "oTg" = (
-/obj/structure/railing/overhang/grey{
-	dir = 8
+/obj/structure/bed/chair/sofa/corp/corner{
+	dir = 1
 	},
-/obj/structure/table/bench/wooden,
-/obj/structure/railing/overhang/grey{
-	dir = 1;
-	layer = 3
+/obj/effect/floor_decal/spline/plain{
+	dir = 9
 	},
-/turf/simulated/floor/wood,
+/turf/simulated/floor/tiled,
 /area/crew_quarters/cetus/atrium/primary)
 "oTo" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -45299,6 +45358,21 @@
 /obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/twocargo)
+"pGn" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 4
+	},
+/obj/effect/floor_decal/borderfloor{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/blue/border{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/blue/border{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/hallway/primary/central_one)
 "pGt" = (
 /obj/structure/window/reinforced{
 	dir = 8;
@@ -48623,6 +48697,7 @@
 /obj/effect/floor_decal/spline/plain{
 	dir = 10
 	},
+/obj/structure/railing/grey,
 /turf/simulated/floor/tiled,
 /area/crew_quarters/cetus/atrium/primary)
 "qHk" = (
@@ -51139,6 +51214,18 @@
 "rBN" = (
 /turf/simulated/wall/r_wall,
 /area/bridge/HoP_Office)
+"rBZ" = (
+/obj/effect/floor_decal/borderfloor/corner{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/blue/bordercorner{
+	dir = 4
+	},
+/obj/machinery/light{
+	layer = 3
+	},
+/turf/simulated/floor/tiled,
+/area/hallway/primary/central_one)
 "rCd" = (
 /obj/machinery/door/firedoor/glass,
 /obj/structure/disposalpipe/segment,
@@ -51978,6 +52065,14 @@
 	},
 /obj/effect/floor_decal/corner_steel_grid{
 	dir = 6
+	},
+/obj/machinery/power/apc{
+	dir = 8;
+	name = "west bump";
+	pixel_x = -24
+	},
+/obj/structure/cable/green{
+	icon_state = "0-2"
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/central_one)
@@ -53251,6 +53346,14 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/Xenobotany_Isolation_Chamber)
+"slA" = (
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/effect/floor_decal/spline/plain{
+	dir = 6
+	},
+/obj/structure/railing/grey,
+/turf/simulated/floor/tiled,
+/area/crew_quarters/cetus/atrium/primary)
 "slB" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
@@ -54594,6 +54697,15 @@
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/techmaint,
 /area/crew_quarters/cetus/atrium/primary)
+"sJY" = (
+/obj/effect/floor_decal/corner_steel_grid{
+	dir = 6
+	},
+/obj/effect/floor_decal/spline/plain/corner{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/crew_quarters/cetus/atrium/primary)
 "sKf" = (
 /turf/simulated/floor/tiled,
 /area/engineering/Reception)
@@ -54942,12 +55054,14 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
-/obj/machinery/firealarm{
-	dir = 8;
-	pixel_x = -27
-	},
 /obj/effect/floor_decal/corner_steel_grid{
 	dir = 6
+	},
+/obj/effect/floor_decal/borderfloor{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/blue/border{
+	dir = 8
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/central_one)
@@ -56817,6 +56931,11 @@
 	},
 /turf/simulated/wall,
 /area/crew_quarters/cetus/atrium/primary)
+"tuk" = (
+/obj/structure/stairs/spawner/west,
+/obj/structure/railing/grey,
+/turf/simulated/floor/tiled,
+/area/hallway/primary/central_one)
 "tuB" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -56938,12 +57057,11 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/rnd/Xenobotany_Isolation_Chamber)
 "tvT" = (
-/obj/structure/railing/overhang/grey{
-	dir = 1;
-	layer = 3
+/obj/structure/bed/chair/sofa/corp,
+/obj/effect/floor_decal/spline/plain{
+	dir = 1
 	},
-/obj/structure/bed/chair/sofa/right/black,
-/turf/simulated/floor/wood,
+/turf/simulated/floor/tiled,
 /area/crew_quarters/cetus/atrium/primary)
 "twA" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
@@ -57117,6 +57235,10 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/hallway/secondary/entry/D1)
+"tzv" = (
+/obj/structure/railing/grey,
+/turf/simulated/floor/tiled,
+/area/hallway/primary/central_one)
 "tzG" = (
 /obj/structure/table/marble,
 /obj/item/reagent_containers/food/snacks/mint,
@@ -57336,9 +57458,12 @@
 /turf/simulated/floor/tiled,
 /area/engineering/cetus/atriumdeck2)
 "tDi" = (
-/obj/structure/window/reinforced,
-/turf/simulated/mineral/cetus,
-/area/asteroid/cetus/d2/jr)
+/obj/structure/table/bench/wooden,
+/obj/item/starcaster_news,
+/obj/effect/floor_decal/borderfloor/corner,
+/obj/effect/floor_decal/corner/blue/bordercorner,
+/turf/simulated/floor/tiled,
+/area/crew_quarters/cetus/atrium/primary)
 "tEr" = (
 /turf/simulated/wall,
 /area/maintenance/substation/central)
@@ -62524,7 +62649,18 @@
 /turf/simulated/floor/plating,
 /area/crew_quarters/cetus/atrium/secondaryf2)
 "vsI" = (
-/turf/simulated/wall,
+/obj/structure/sign/directions/command{
+	pixel_y = -20;
+	dir = 9
+	},
+/obj/machinery/door/firedoor/multi_tile/glass{
+	dir = 1
+	},
+/obj/machinery/door/airlock/multi_tile/glass{
+	dir = 2;
+	name = "Central Access"
+	},
+/turf/simulated/floor/tiled/techmaint,
 /area/hallway/primary/central_one)
 "vsJ" = (
 /obj/item/cell/high{
@@ -62933,6 +63069,25 @@
 "vzC" = (
 /turf/simulated/wall,
 /area/maintenance/cetus/twostar)
+"vzH" = (
+/obj/machinery/firealarm{
+	dir = 8;
+	pixel_x = -27
+	},
+/obj/machinery/alarm{
+	dir = 1;
+	pixel_y = -27
+	},
+/obj/machinery/camera/network/civilian{
+	c_tag = "CIV -  Command Stairwell";
+	dir = 5
+	},
+/obj/effect/floor_decal/spline/plain{
+	dir = 4
+	},
+/obj/random/pottedplant,
+/turf/simulated/floor/carpet/graycarpet,
+/area/hallway/primary/central_one)
 "vzP" = (
 /obj/structure/railing/overhang/grey,
 /obj/structure/railing/overhang/grey{
@@ -64915,6 +65070,9 @@
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/cetus/Libraryf1)
+"wmF" = (
+/turf/simulated/wall,
+/area/security/Reception)
 "wmM" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 5
@@ -67470,27 +67628,18 @@
 	dir = 1;
 	icon_state = "pipe-c"
 	},
-/obj/effect/floor_decal/borderfloor{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/red/border{
-	dir = 1
-	},
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
-/obj/machinery/light{
-	dir = 8;
-	layer = 3
-	},
 /obj/effect/floor_decal/corner_steel_grid,
-/obj/machinery/power/apc{
-	dir = 8;
-	name = "west bump";
-	pixel_x = -24
+/obj/effect/floor_decal/borderfloor{
+	dir = 9
 	},
-/obj/structure/cable/green{
-	icon_state = "0-2"
+/obj/effect/floor_decal/corner/blue/border{
+	dir = 9
+	},
+/obj/effect/floor_decal/corner/red/border{
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/central_one)
@@ -68192,11 +68341,10 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/teleporter/departure)
 "xrA" = (
-/obj/structure/railing/overhang/grey{
+/obj/effect/floor_decal/spline/plain{
 	dir = 8
 	},
-/obj/structure/dummystairs,
-/turf/simulated/floor/wood,
+/turf/simulated/floor/tiled,
 /area/crew_quarters/cetus/atrium/primary)
 "xrE" = (
 /obj/structure/bed/chair/sofa/blue{
@@ -68296,12 +68444,8 @@
 /turf/simulated/floor/wood,
 /area/crew_quarters/cetus/jrlounge)
 "xtf" = (
-/obj/structure/railing/overhang/grey{
-	dir = 4
-	},
-/obj/structure/dummystairs,
-/turf/simulated/floor/wood,
-/area/crew_quarters/cetus/atrium/primary)
+/turf/simulated/wall,
+/area/security/detectives_office)
 "xty" = (
 /obj/effect/floor_decal/spline/plain/cee{
 	dir = 8
@@ -70125,6 +70269,18 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/Patient_3)
+"ydL" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner_steel_grid{
+	dir = 10
+	},
+/obj/effect/floor_decal/spline/plain/corner{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/crew_quarters/cetus/atrium/primary)
 "yeb" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -70459,6 +70615,9 @@
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/effect/floor_decal/spline/plain{
 	dir = 5
+	},
+/obj/structure/railing/grey{
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/cetus/atrium/primary)
@@ -104708,7 +104867,7 @@ jYN
 xFJ
 jXa
 eMW
-tDi
+iMO
 pPf
 pPf
 uEf
@@ -105222,10 +105381,10 @@ oIe
 kpc
 mfI
 cDB
-jXa
-eMW
-iMO
-pPf
+xtf
+tZZ
+tZZ
+lln
 seW
 xJG
 wWH
@@ -105481,9 +105640,9 @@ dbF
 iBj
 iqc
 sIu
-iMO
-iMO
-pPf
+tuk
+vzH
+lln
 duv
 jdh
 opL
@@ -105497,7 +105656,7 @@ pnH
 cbf
 ykT
 fEK
-wir
+ydL
 rtf
 qFE
 sqz
@@ -105738,10 +105897,10 @@ sIu
 fzY
 mrJ
 fzY
-jXa
-eMW
-iMO
-pPf
+xtf
+tzv
+rBZ
+lln
 jfv
 ebI
 cyT
@@ -105751,11 +105910,11 @@ cJu
 cRX
 qBl
 oCc
-cbf
+slA
 oTg
-uvf
+eCs
 xrA
-wir
+hky
 rtf
 qFE
 jcK
@@ -105996,10 +106155,10 @@ vuc
 rpD
 asy
 xuY
-mcy
-iMO
-iMO
-pPf
+wmF
+pGn
+aYR
+lln
 dMW
 cRI
 gJH
@@ -106011,8 +106170,8 @@ rBN
 gnH
 qGT
 tvT
-gar
-xtf
+tDi
+sBa
 plk
 rtf
 yfo
@@ -106255,7 +106414,7 @@ uJI
 pas
 xvH
 mcy
-vsI
+aXC
 vsI
 lln
 aEK
@@ -106526,7 +106685,7 @@ kjt
 qjy
 bVr
 iBT
-iBT
+sJY
 uZS
 qWa
 eaw

@@ -4586,6 +4586,28 @@
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/Atmospherics_Chamber)
+"cXy" = (
+/obj/structure/cable{
+	icon_state = "6-9"
+	},
+/obj/structure/railing/grey{
+	dir = 8
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 5
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 5
+	},
+/obj/structure/cable/green{
+	icon_state = "1-4"
+	},
+/turf/simulated/floor/carpet/graycarpet,
+/area/bridge/Deck3_Corridor)
 "cXI" = (
 /obj/structure/table/standard,
 /obj/structure/cable{
@@ -5828,6 +5850,24 @@
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/plating,
 /area/engineering/cetus/jointsubstation)
+"dLQ" = (
+/obj/structure/cable{
+	icon_state = "6-8"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "4-10"
+	},
+/turf/simulated/floor/carpet/graycarpet,
+/area/bridge/Deck3_Corridor)
 "dLT" = (
 /obj/structure/bed/chair/office/dark{
 	dir = 1
@@ -6194,8 +6234,18 @@
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/cetus/escapepodjr)
 "dYQ" = (
-/obj/structure/cable{
-	icon_state = "6-8"
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 10
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 10
+	},
+/obj/structure/cable/green{
+	icon_state = "2-8"
 	},
 /turf/simulated/floor/carpet/graycarpet,
 /area/bridge/Deck3_Corridor)
@@ -11283,11 +11333,11 @@
 /turf/simulated/floor/tiled/neutral,
 /area/maintenance/cetus/shallow/derelict/locker)
 "gXc" = (
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
 /obj/machinery/alarm{
 	pixel_y = 22
+	},
+/obj/structure/cable{
+	icon_state = "6-8"
 	},
 /turf/simulated/floor/carpet/graycarpet,
 /area/bridge/Deck3_Corridor)
@@ -17580,11 +17630,20 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/ai)
 "kJY" = (
-/obj/machinery/light/yellowed{
-	dir = 1
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
 	},
 /obj/structure/cable{
-	icon_state = "4-8"
+	icon_state = "4-10"
+	},
+/obj/structure/cable/green{
+	icon_state = "6-8"
 	},
 /turf/simulated/floor/carpet/graycarpet,
 /area/bridge/Deck3_Corridor)
@@ -18930,6 +18989,13 @@
 	},
 /obj/machinery/door/airlock/glass{
 	name = "Central Access"
+	},
+/turf/simulated/floor/carpet/graycarpet,
+/area/bridge/Deck3_Corridor)
+"lva" = (
+/obj/machinery/light{
+	dir = 1;
+	name = "1N-lighting fixture"
 	},
 /turf/simulated/floor/carpet/graycarpet,
 /area/bridge/Deck3_Corridor)
@@ -21822,19 +21888,23 @@
 /turf/simulated/floor/carpet/graycarpet,
 /area/maintenance/cetus/shallow/gamba)
 "mYa" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
+/obj/machinery/light/yellowed,
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
+	dir = 9
 	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 9
 	},
 /obj/structure/cable/green{
-	icon_state = "4-8"
+	icon_state = "1-8"
 	},
-/obj/item/pen/multi,
+/obj/structure/cable{
+	icon_state = "5-9"
+	},
 /turf/simulated/floor/carpet/graycarpet,
 /area/bridge/Deck3_Corridor)
 "mYd" = (
@@ -29622,6 +29692,7 @@
 /area/bridge/sleep/Captain_Quarters)
 "rCC" = (
 /obj/structure/dark_portal/minion,
+/obj/effect/map_effect/interval/effect_emitter/sparks,
 /turf/unsimulated/floor/dark,
 /area/maintenance/cetus/jrthreeport)
 "rCH" = (
@@ -33359,20 +33430,10 @@
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/threefs)
 "tRB" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
+/obj/structure/railing/grey{
+	dir = 1
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/machinery/light/yellowed,
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
-/turf/simulated/floor/carpet/graycarpet,
+/turf/simulated/open,
 /area/bridge/Deck3_Corridor)
 "tRQ" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
@@ -35048,6 +35109,10 @@
 	icon_state = "4-10"
 	},
 /obj/random/pottedplant,
+/obj/machinery/firealarm{
+	dir = 8;
+	pixel_x = -27
+	},
 /turf/simulated/floor/carpet/graycarpet,
 /area/bridge/Deck3_Corridor)
 "uOI" = (
@@ -37724,9 +37789,7 @@
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
-/obj/structure/cable{
-	icon_state = "6-9"
-	},
+/obj/machinery/light,
 /turf/simulated/floor/carpet/graycarpet,
 /area/bridge/Deck3_Corridor)
 "wvP" = (
@@ -38327,11 +38390,21 @@
 /turf/simulated/floor/wood,
 /area/crew_quarters/cetus/theater)
 "wLV" = (
-/obj/structure/cable{
-	icon_state = "4-8"
+/obj/machinery/light/yellowed{
+	dir = 1
 	},
-/obj/machinery/firealarm{
-	pixel_y = 24
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 6
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 6
+	},
+/obj/structure/cable/green{
+	icon_state = "2-4"
 	},
 /turf/simulated/floor/carpet/graycarpet,
 /area/bridge/Deck3_Corridor)
@@ -75877,8 +75950,8 @@ lhN
 cST
 cST
 mrP
-dzi
-hgC
+dLQ
+tRB
 ddV
 tHR
 kPk
@@ -76136,7 +76209,7 @@ cST
 xGH
 mrP
 dYQ
-hgC
+cXy
 ddV
 abd
 hXw
@@ -76393,7 +76466,7 @@ eGf
 mrP
 mrP
 mrP
-dhV
+lva
 wvE
 gQv
 tym
