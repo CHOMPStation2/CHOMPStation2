@@ -15566,7 +15566,7 @@
 /obj/effect/floor_decal/corner/purple/bordercorner{
 	dir = 8
 	},
-/obj/machinery/rnd/production/circuit_imprinter,
+/obj/machinery/autolathe,
 /turf/simulated/floor/tiled/white,
 /area/rnd/Research_Lab)
 "fto" = (
@@ -47717,7 +47717,7 @@
 /obj/effect/floor_decal/spline/plain/cee{
 	dir = 1
 	},
-/obj/machinery/autolathe,
+/obj/machinery/rnd/production/circuit_imprinter,
 /turf/simulated/floor/tiled/milspec/raised,
 /area/rnd/Research_Lab)
 "qoS" = (
