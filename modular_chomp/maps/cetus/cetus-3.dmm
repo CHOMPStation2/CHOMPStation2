@@ -1977,6 +1977,16 @@
 	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/cetus/escapepodstar)
+"bmi" = (
+/obj/structure/cable/yellow{
+	icon_state = "2-8"
+	},
+/obj/structure/cable/yellow{
+	icon_state = "2-4"
+	},
+/obj/machinery/shield_diffuser,
+/turf/simulated/floor/plating/turfpack/airless,
+/area/solar/aftportsolar)
 "bmQ" = (
 /obj/structure/railing/grey,
 /obj/structure/railing/grey,
@@ -3524,6 +3534,7 @@
 /obj/structure/cable/yellow{
 	icon_state = "1-4"
 	},
+/obj/machinery/shield_diffuser,
 /turf/simulated/floor/plating/turfpack/airless,
 /area/solar/foreportsolar)
 "cnW" = (
@@ -7206,6 +7217,16 @@
 	},
 /turf/simulated/floor/wood,
 /area/bridge/Conference_Room)
+"eyT" = (
+/obj/machinery/disposal/wall{
+	dir = 1;
+	pixel_y = -35
+	},
+/obj/structure/disposalpipe/trunk{
+	dir = 8
+	},
+/turf/simulated/floor/wood,
+/area/crew_quarters/cetus/Galleryf2)
 "eyX" = (
 /obj/structure/bed/chair/comfy/brown{
 	dir = 4
@@ -7601,6 +7622,13 @@
 /obj/structure/salvageable/shuttle_console,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/d3docks)
+"eJA" = (
+/obj/structure/cable/yellow{
+	icon_state = "1-2"
+	},
+/obj/machinery/shield_diffuser,
+/turf/simulated/floor/airless,
+/area/solar/forestarboardsolar)
 "eJJ" = (
 /obj/machinery/air_sensor{
 	frequency = 1441;
@@ -10279,6 +10307,16 @@
 /obj/machinery/door/airlock/maintenance,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/threefp)
+"grn" = (
+/obj/structure/cable/yellow{
+	icon_state = "1-8"
+	},
+/obj/structure/cable/yellow{
+	icon_state = "1-4"
+	},
+/obj/machinery/shield_diffuser,
+/turf/simulated/floor/plating/turfpack/airless,
+/area/solar/aftportsolar)
 "grE" = (
 /obj/structure/lattice,
 /obj/machinery/atmospherics/pipe/simple/visible/red{
@@ -10864,6 +10902,9 @@
 /obj/machinery/disposal,
 /obj/structure/disposalpipe/trunk{
 	dir = 8
+	},
+/obj/machinery/camera/network/command{
+	c_tag = "COM - Station Director's Office"
 	},
 /turf/simulated/floor/wood,
 /area/bridge/Captain_Office)
@@ -13088,6 +13129,13 @@
 	},
 /turf/simulated/floor/reinforced,
 /area/rnd/research/particleaccelerator)
+"hVN" = (
+/obj/random/obstruction,
+/obj/structure/cable{
+	icon_state = "2-8"
+	},
+/turf/simulated/floor/tiled/neutral,
+/area/maintenance/cetus/shallow/derelict/hallway)
 "hWb" = (
 /obj/machinery/door/airlock/maintenance{
 	req_one_access = list(72);
@@ -14660,11 +14708,11 @@
 /turf/simulated/floor/tiled,
 /area/rnd/cetus/entry)
 "iWC" = (
-/obj/structure/bed/chair/bay/chair,
 /obj/structure/disposalpipe/junction{
 	dir = 8;
 	icon_state = "pipe-j2"
 	},
+/obj/structure/bed/chair/bay/chair,
 /turf/simulated/floor/wood,
 /area/crew_quarters/cetus/Galleryf2)
 "iWN" = (
@@ -15146,6 +15194,16 @@
 	},
 /turf/simulated/floor/wood,
 /area/bridge/secretaryoffice)
+"jmv" = (
+/obj/structure/cable/yellow{
+	icon_state = "2-8"
+	},
+/obj/structure/cable/yellow{
+	icon_state = "1-8"
+	},
+/obj/machinery/shield_diffuser,
+/turf/simulated/floor/airless,
+/area/solar/forestarboardsolar)
 "jnd" = (
 /obj/machinery/alarm{
 	pixel_y = 22
@@ -15419,13 +15477,6 @@
 	id = "coffeeshop";
 	layer = 3.1;
 	name = "Cafe Shutters"
-	},
-/obj/machinery/disposal/wall{
-	dir = 8;
-	pixel_x = 35
-	},
-/obj/structure/disposalpipe/trunk{
-	dir = 1
 	},
 /obj/machinery/light/small/fairylights{
 	pixel_y = 10
@@ -16021,6 +16072,9 @@
 	dir = 9
 	},
 /obj/random/obstruction,
+/obj/structure/cable{
+	icon_state = "1-4"
+	},
 /turf/simulated/floor/tiled/neutral,
 /area/maintenance/cetus/shallow/derelict/hallway)
 "jOC" = (
@@ -19306,9 +19360,8 @@
 /turf/simulated/shuttle/wall/hard_corner,
 /area/shuttle/large_escape_pod1/centcom)
 "lDf" = (
-/obj/structure/disposalpipe/segment{
-	dir = 1;
-	icon_state = "pipe-c"
+/obj/structure/disposalpipe/junction{
+	dir = 1
 	},
 /turf/simulated/floor/lino,
 /area/crew_quarters/cetus/Galleryf2)
@@ -21042,6 +21095,16 @@
 	},
 /turf/space,
 /area/maintenance/cetus/shallow/derelict/dock)
+"mzG" = (
+/obj/structure/cable/yellow{
+	icon_state = "2-8"
+	},
+/obj/structure/cable/yellow{
+	icon_state = "2-4"
+	},
+/obj/machinery/shield_diffuser,
+/turf/simulated/floor/plating/turfpack/airless,
+/area/solar/aftstarboardsolar)
 "mzH" = (
 /obj/structure/barricade/cutout/cultist,
 /turf/simulated/floor/plating,
@@ -21287,6 +21350,7 @@
 /obj/random/maintenance/cargo,
 /obj/random/maintenance/cargo,
 /obj/structure/closet,
+/obj/fiftyspawner/plastic,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/threeap)
 "mHC" = (
@@ -23567,6 +23631,13 @@
 	pixel_y = 2
 	},
 /obj/machinery/light,
+/obj/machinery/disposal/wall{
+	dir = 1;
+	pixel_y = -35
+	},
+/obj/structure/disposalpipe/trunk{
+	dir = 1
+	},
 /turf/simulated/floor/lino,
 /area/crew_quarters/cetus/Galleryf2)
 "nWe" = (
@@ -24388,10 +24459,10 @@
 /turf/simulated/floor/carpet/graycarpet,
 /area/maintenance/cetus/shallow/starboard)
 "ovb" = (
-/obj/structure/bed/chair/bay/chair,
-/obj/structure/disposalpipe/junction/yjunction{
+/obj/structure/disposalpipe/junction{
 	dir = 8
 	},
+/obj/structure/bed/chair/bay/chair,
 /turf/simulated/floor/wood,
 /area/crew_quarters/cetus/Galleryf2)
 "ovf" = (
@@ -24750,6 +24821,7 @@
 /obj/structure/cable/yellow{
 	icon_state = "2-4"
 	},
+/obj/machinery/shield_diffuser,
 /turf/simulated/floor/airless,
 /area/solar/forestarboardsolar)
 "oEQ" = (
@@ -28010,6 +28082,13 @@
 	},
 /turf/simulated/floor/carpet/graycarpet,
 /area/bridge/Deck3_Corridor)
+"qGT" = (
+/obj/structure/railing/grey{
+	dir = 1
+	},
+/obj/structure/railing/grey,
+/turf/simulated/open,
+/area/bridge/Deck3_Corridor)
 "qGU" = (
 /obj/effect/floor_decal/industrial/warning{
 	layer = 3;
@@ -30902,6 +30981,7 @@
 /obj/structure/cable/yellow{
 	icon_state = "2-8"
 	},
+/obj/machinery/shield_diffuser,
 /turf/simulated/floor/plating/turfpack/airless,
 /area/solar/aftstarboardsolar)
 "suB" = (
@@ -31384,6 +31464,16 @@
 /obj/item/hand_tele,
 /turf/simulated/floor/carpet/blucarpet,
 /area/bridge/sleep/Captain_Quarters)
+"sNU" = (
+/obj/structure/cable/yellow{
+	icon_state = "2-8"
+	},
+/obj/structure/cable/yellow{
+	icon_state = "2-4"
+	},
+/obj/machinery/shield_diffuser,
+/turf/simulated/floor/plating/turfpack/airless,
+/area/solar/foreportsolar)
 "sNX" = (
 /obj/structure/cable{
 	icon_state = "5-10"
@@ -33408,6 +33498,10 @@
 /obj/structure/railing/grey{
 	dir = 1
 	},
+/obj/structure/railing/grey{
+	dir = 4
+	},
+/obj/structure/railing/grey,
 /turf/simulated/open,
 /area/bridge/Deck3_Corridor)
 "tRQ" = (
@@ -34393,6 +34487,7 @@
 /obj/structure/cable/yellow{
 	icon_state = "1-8"
 	},
+/obj/machinery/shield_diffuser,
 /turf/simulated/floor/plating/turfpack/airless,
 /area/solar/cetus/joint)
 "uwf" = (
@@ -36711,6 +36806,7 @@
 /obj/structure/cable/yellow{
 	icon_state = "2-4"
 	},
+/obj/machinery/shield_diffuser,
 /turf/simulated/floor/plating/turfpack/airless,
 /area/solar/cetus/joint)
 "vQO" = (
@@ -37321,6 +37417,7 @@
 /obj/structure/cable/yellow{
 	icon_state = "2-8"
 	},
+/obj/machinery/shield_diffuser,
 /turf/simulated/floor/plating/turfpack/airless,
 /area/solar/foreportsolar)
 "wjs" = (
@@ -38680,6 +38777,7 @@
 /obj/structure/cable/yellow{
 	icon_state = "1-4"
 	},
+/obj/machinery/shield_diffuser,
 /turf/simulated/floor/plating/turfpack/airless,
 /area/solar/aftstarboardsolar)
 "wWM" = (
@@ -40242,6 +40340,7 @@
 /obj/structure/cable/yellow{
 	icon_state = "1-8"
 	},
+/obj/machinery/shield_diffuser,
 /turf/simulated/floor/plating,
 /area/solar/cetus/joint)
 "xUx" = (
@@ -40426,6 +40525,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 9
 	},
+/obj/random/coin,
 /turf/simulated/floor/tiled/white,
 /area/maintenance/cetus/shallow/derelict/kitchen)
 "ybY" = (
@@ -40624,9 +40724,6 @@
 "yhl" = (
 /obj/structure/cable{
 	icon_state = "6-9"
-	},
-/obj/structure/railing/grey{
-	dir = 8
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 1;
@@ -59172,7 +59269,7 @@ mPO
 kOd
 mco
 mco
-etY
+sNU
 hGt
 hGt
 hGt
@@ -61236,7 +61333,7 @@ hqj
 kOd
 mco
 mco
-etY
+sNU
 hGt
 hGt
 hGt
@@ -61528,7 +61625,7 @@ efW
 yge
 cjN
 wfN
-bdj
+eyT
 cjF
 ajp
 fky
@@ -63300,7 +63397,7 @@ mco
 mco
 mco
 mco
-etY
+sNU
 hGt
 hGt
 hGt
@@ -64332,7 +64429,7 @@ mco
 mco
 mco
 mco
-etY
+sNU
 hGt
 hGt
 hGt
@@ -70367,9 +70464,9 @@ hRR
 hgI
 irp
 irp
-irp
-irp
-irp
+lzr
+lzr
+lzr
 irp
 irp
 hgI
@@ -70595,7 +70692,7 @@ tgZ
 tgZ
 tgZ
 mco
-tui
+bmi
 fXk
 fXk
 fXk
@@ -70607,7 +70704,7 @@ hbd
 hbd
 hbd
 hbd
-vON
+grn
 hgI
 hgI
 hgI
@@ -70625,9 +70722,9 @@ hRR
 mco
 mco
 mco
-mco
-hgI
-mco
+tgZ
+tgZ
+tgZ
 mco
 mco
 mco
@@ -70853,7 +70950,7 @@ tgZ
 tgZ
 tgZ
 mco
-vBI
+pEC
 vBI
 vBI
 vBI
@@ -70883,9 +70980,9 @@ hRR
 mco
 mco
 mco
-mco
-hgI
-mco
+tgZ
+tgZ
+tgZ
 mco
 mco
 mco
@@ -71145,7 +71242,7 @@ tgZ
 tgZ
 tgZ
 tgZ
-tgZ
+mco
 mco
 mco
 tgZ
@@ -72659,7 +72756,7 @@ mco
 mco
 mco
 mco
-tui
+bmi
 fXk
 fXk
 fXk
@@ -75690,7 +75787,7 @@ cST
 cST
 mrP
 kJY
-tRB
+qGT
 ddV
 oUQ
 gDF
@@ -84465,7 +84562,7 @@ muH
 muH
 muH
 muH
-muH
+eJA
 muH
 lyK
 iEh
@@ -85981,27 +86078,27 @@ mco
 irp
 mco
 nOU
-xkS
+jmv
 grW
 mco
 nOU
-xkS
+jmv
 grW
 mco
 nOU
-xkS
+jmv
 grW
 mco
 nOU
-xkS
+jmv
 grW
 mco
 nOU
-xkS
+jmv
 grW
 mco
 nOU
-xkS
+jmv
 grW
 mco
 mco
@@ -86833,7 +86930,7 @@ bfL
 gid
 nIu
 ehF
-sDo
+hVN
 sZJ
 hWp
 akz
@@ -99724,7 +99821,7 @@ mco
 hgI
 mco
 mco
-jte
+mzG
 qTa
 qTa
 qTa
@@ -100756,7 +100853,7 @@ mco
 irp
 hgI
 hgI
-jte
+mzG
 qTa
 qTa
 qTa
@@ -102820,7 +102917,7 @@ mco
 irp
 hgI
 hgI
-jte
+mzG
 qTa
 qTa
 qTa
@@ -103852,7 +103949,7 @@ mco
 irp
 hgI
 hgI
-jte
+mzG
 qTa
 qTa
 qTa
