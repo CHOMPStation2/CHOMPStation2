@@ -4582,6 +4582,10 @@
 /obj/random/toolbox,
 /obj/random/toolbox,
 /obj/random/tech_supply,
+/obj/item/clothing/head/welding{
+	pixel_x = -3;
+	pixel_y = 5
+	},
 /turf/simulated/floor/plating,
 /area/engineering/cetus/jointsubstation)
 "cvn" = (
@@ -4758,6 +4762,7 @@
 "cAb" = (
 /obj/structure/table/steel,
 /obj/item/clothing/head/hardhat/old,
+/obj/item/clothing/glasses/welding,
 /turf/simulated/floor/outdoors/rocks/cetus,
 /area/maintenance/cetus/meteor/aftstar)
 "cAg" = (
@@ -5929,17 +5934,16 @@
 /turf/simulated/floor/plating,
 /area/engineering/cetus/meteor/shieldgen)
 "dmb" = (
-/obj/effect/engine_setup/smes,
 /obj/structure/cable/cyan{
 	icon_state = "0-4"
 	},
 /obj/machinery/power/smes/buildable/engine_default{
-	RCon_tag = "Engine - Main"
+	RCon_tag = "Engine - Core"
 	},
 /obj/item/smes_coil,
 /obj/item/smes_coil,
 /obj/item/smes_coil,
-/obj/item/smes_coil,
+/obj/effect/engine_setup/smes,
 /turf/simulated/floor/plating,
 /area/engineering/cetus/meteor/smes)
 "dmn" = (
@@ -6293,6 +6297,11 @@
 	},
 /turf/simulated/floor/tiled/airless,
 /area/rnd/test_area)
+"dwv" = (
+/obj/structure/table/hardwoodtable,
+/obj/random/coin,
+/turf/simulated/floor/wood,
+/area/maintenance/cetus/meteor/starsec)
 "dwA" = (
 /obj/effect/wingrille_spawn/reinforced,
 /obj/machinery/door/firedoor/glass,
@@ -23281,6 +23290,14 @@
 	dir = 1;
 	pixel_y = -22
 	},
+/obj/machinery/light/broken{
+	dir = 8
+	},
+/obj/machinery/light_switch{
+	pixel_y = 12;
+	pixel_x = -22;
+	dir = 8
+	},
 /turf/simulated/floor/tiled/old_tile/white,
 /area/maintenance/cetus/dentist)
 "mte" = (
@@ -25530,6 +25547,10 @@
 /obj/item/material/minihoe,
 /obj/item/material/knife/machete/hatchet,
 /obj/item/shovel,
+/obj/item/seeds/ambrosiadeusseed,
+/obj/item/seeds/ambrosiadeusseed,
+/obj/item/seeds/ambrosiagaiaseed,
+/obj/item/seeds/ambrosiagaiaseed,
 /turf/simulated/floor/tiled/hydro,
 /area/maintenance/ab_Hydroponics)
 "nGz" = (
@@ -25655,6 +25676,7 @@
 /obj/effect/floor_decal/corner/pink/diagonal,
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /obj/random/maintenance/foodstuff,
+/obj/random/coin,
 /turf/simulated/floor/tiled/old_tile/white,
 /area/maintenance/ab_Kitchen)
 "nJV" = (
@@ -26209,11 +26231,9 @@
 /turf/simulated/floor/plating,
 /area/engineering/cetus/meteor/enginewaste)
 "nYb" = (
-/obj/machinery/light/broken{
-	dir = 4
-	},
-/turf/simulated/floor/outdoors/rocks/cetus,
-/area/maintenance/cetus/meteor/ragecage)
+/obj/random/coin,
+/turf/simulated/floor/tiled/eris/dark/violetcorener,
+/area/maintenance/ab_StripBar)
 "nYe" = (
 /obj/structure/lattice,
 /obj/random/junk,
@@ -27223,11 +27243,12 @@
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/sleep/cetus/meteor/dorm2)
 "ovd" = (
-/obj/machinery/light/broken{
-	dir = 4
+/obj/effect/floor_decal/rust,
+/obj/random/coin,
+/turf/simulated/floor/plating{
+	icon_state = "dmg1"
 	},
-/turf/simulated/wall,
-/area/maintenance/cetus/dentist)
+/area/maintenance/cetus/meteor/pond)
 "ovL" = (
 /obj/machinery/floodlight{
 	dir = 8
@@ -29114,6 +29135,10 @@
 /obj/effect/landmark{
 	name = "lightsout"
 	},
+/obj/item/clothing/head/welding{
+	pixel_x = -3;
+	pixel_y = 5
+	},
 /turf/simulated/floor/lino,
 /area/maintenance/ab_GeneralStore)
 "pDI" = (
@@ -29845,6 +29870,7 @@
 /obj/structure/disposalpipe/trunk{
 	dir = 4
 	},
+/obj/structure/railing/grey,
 /turf/simulated/floor/tiled/old_tile/white,
 /area/maintenance/abmedical)
 "pSF" = (
@@ -30947,13 +30973,13 @@
 	c_tag = "ENG - Shield Gen";
 	dir = 6
 	},
-/obj/machinery/power/smes/buildable/engine_default{
-	RCon_tag = "Engine - Core"
+/obj/item/smes_coil,
+/obj/item/smes_coil,
+/obj/item/smes_coil,
+/obj/item/smes_coil,
+/obj/machinery/power/smes/buildable{
+	RCon_tag = "Shield Generator"
 	},
-/obj/item/smes_coil,
-/obj/item/smes_coil,
-/obj/item/smes_coil,
-/obj/item/smes_coil,
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/cetus/meteor/shieldgen)
 "qou" = (
@@ -32201,6 +32227,7 @@
 /obj/fiftyspawner/floor_dark,
 /obj/fiftyspawner/wood/sif,
 /obj/fiftyspawner/brncarpet,
+/obj/fiftyspawner/plastic,
 /turf/simulated/floor/tiled/old_tile/yellow,
 /area/maintenance/cetus/workshop)
 "qVl" = (
@@ -34921,6 +34948,16 @@
 /area/maintenance/cetus/cozyobservatory)
 "sur" = (
 /turf/simulated/wall,
+/area/maintenance/cetus/meteor/portsec)
+"suy" = (
+/obj/item/seeds/ambrosiavulgarisseed,
+/obj/item/seeds/ambrosiavulgarisseed,
+/obj/item/seeds/ambrosiainfernusseed,
+/obj/item/seeds/ambrosiainfernusseed,
+/obj/item/seeds/random,
+/obj/item/seeds/random,
+/obj/structure/closet/crate,
+/turf/simulated/floor/outdoors/rocks/cetus,
 /area/maintenance/cetus/meteor/portsec)
 "suH" = (
 /obj/structure/lattice,
@@ -41633,17 +41670,16 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/cetus/meteor/techstorage)
 "vDn" = (
-/obj/effect/engine_setup/smes/main,
 /obj/structure/cable{
 	icon_state = "0-4"
 	},
 /obj/machinery/power/smes/buildable/engine_default{
-	RCon_tag = "Engine - Core"
+	RCon_tag = "Engine - Main"
 	},
 /obj/item/smes_coil,
 /obj/item/smes_coil,
 /obj/item/smes_coil,
-/obj/item/smes_coil,
+/obj/effect/engine_setup/smes,
 /turf/simulated/floor/plating,
 /area/engineering/cetus/meteor/smes)
 "vDw" = (
@@ -43303,10 +43339,17 @@
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/aftmed)
 "wwY" = (
-/obj/structure/closet/toolcloset,
 /obj/effect/floor_decal/rust,
-/obj/item/clothing/glasses/meson,
-/obj/item/pickaxe,
+/obj/structure/closet{
+	name = "welding equipment"
+	},
+/obj/item/weldingtool/largetank,
+/obj/item/clothing/head/welding,
+/obj/item/clothing/glasses/welding,
+/obj/item/clothing/glasses/welding,
+/obj/random/maintenance/engineering,
+/obj/random/maintenance/engineering,
+/obj/random/maintenance/engineering,
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/cetus/mechbay)
 "wxa" = (
@@ -72517,7 +72560,7 @@ tJJ
 lit
 bNI
 bNI
-ovd
+bNI
 wKl
 klN
 wKl
@@ -74348,7 +74391,7 @@ jPG
 uCA
 qPz
 lJt
-lbu
+nYb
 dOH
 hqA
 dhn
@@ -75088,7 +75131,7 @@ wlk
 lxR
 dHN
 dHN
-nYb
+dHN
 iTF
 iTF
 iTF
@@ -76876,7 +76919,7 @@ slB
 bNw
 pVv
 hue
-ddJ
+ovd
 bWR
 eOX
 kVj
@@ -77650,7 +77693,7 @@ slB
 slB
 slB
 dif
-iFy
+suy
 iFy
 dif
 pxX
@@ -85878,7 +85921,7 @@ suH
 suH
 cCA
 iQn
-hau
+dwv
 mxs
 rfO
 jNI
@@ -101909,7 +101952,7 @@ eTf
 uBZ
 bNO
 oPi
-slB
+kzW
 slB
 qkf
 eHu
@@ -102425,7 +102468,7 @@ fBw
 huA
 bNO
 oPi
-dba
+nng
 dba
 nng
 nng
@@ -102941,7 +102984,7 @@ cRM
 txF
 uPP
 oPi
-dba
+nng
 uTi
 hHK
 fXm
@@ -103457,7 +103500,7 @@ sih
 txF
 bNO
 oPi
-dba
+nng
 dba
 dba
 fXm
@@ -105005,7 +105048,7 @@ tym
 web
 cUt
 oPi
-slB
+kzW
 slB
 slB
 slB
@@ -105521,7 +105564,7 @@ oji
 vQe
 utn
 oPi
-slB
+kzW
 slB
 slB
 slB
@@ -106290,9 +106333,9 @@ jhE
 pmu
 mFv
 jhE
+kzW
 slB
-slB
-slB
+kzW
 slB
 slB
 slB

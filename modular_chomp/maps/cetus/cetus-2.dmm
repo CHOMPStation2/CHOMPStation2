@@ -532,9 +532,6 @@
 	name = "Station Intercom (General)";
 	pixel_x = 21
 	},
-/obj/machinery/light/small{
-	dir = 4
-	},
 /turf/simulated/floor/tiled/dark,
 /area/security/Internal_Affairs_Office)
 "aiZ" = (
@@ -2683,7 +2680,6 @@
 /turf/simulated/floor/tiled,
 /area/engineering/Reception)
 "aVC" = (
-/obj/machinery/door/firedoor/glass,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
 	},
@@ -6916,6 +6912,9 @@
 /obj/structure/sign/nosmoking_2{
 	pixel_y = 32
 	},
+/obj/machinery/light/small{
+	dir = 1
+	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/cetus/Galleryf1)
 "cqY" = (
@@ -8193,10 +8192,6 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/security/Processing_Room)
 "cOA" = (
-/obj/machinery/firealarm{
-	dir = 8;
-	pixel_x = -27
-	},
 /obj/machinery/alarm{
 	dir = 1;
 	pixel_y = -27
@@ -8208,7 +8203,9 @@
 /obj/effect/floor_decal/spline/plain{
 	dir = 4
 	},
-/obj/random/pottedplant,
+/obj/machinery/vending/snack{
+	dir = 4
+	},
 /turf/simulated/floor/carpet/graycarpet,
 /area/hallway/primary/central_one)
 "cOE" = (
@@ -9280,11 +9277,11 @@
 /turf/simulated/floor/plating,
 /area/maintenance/zerobar)
 "deV" = (
-/obj/random/vendorfood{
-	dir = 4
-	},
 /obj/machinery/light{
 	dir = 8
+	},
+/obj/machinery/vending/snack{
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/cetus/stairwellf2)
@@ -10072,7 +10069,9 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/machinery/door/firedoor/glass,
+/obj/machinery/door/firedoor/multi_tile{
+	dir = 1
+	},
 /obj/machinery/door/airlock/multi_tile/glass{
 	name = "Gym";
 	dir = 1
@@ -12436,6 +12435,9 @@
 /obj/machinery/newscaster{
 	pixel_y = 30
 	},
+/obj/machinery/light/small{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/dark,
 /area/security/Internal_Affairs_Office)
 "emX" = (
@@ -12690,7 +12692,9 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/crew_quarters/Holodeck)
 "erW" = (
-/obj/machinery/door/firedoor/glass,
+/obj/machinery/door/firedoor/multi_tile{
+	dir = 1
+	},
 /obj/machinery/door/airlock/multi_tile/glass{
 	name = "Recreation";
 	dir = 1
@@ -17543,9 +17547,6 @@
 	dir = 4;
 	icon_state = "pipe-c"
 	},
-/obj/machinery/light/small{
-	dir = 1
-	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/cetus/Galleryf1)
 "fZQ" = (
@@ -18108,7 +18109,6 @@
 /area/expoutpost/stationshuttle)
 "ghS" = (
 /obj/structure/disposalpipe/segment,
-/obj/machinery/door/firedoor/glass,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 9
@@ -20568,7 +20568,6 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/rnd/workshop)
 "hbC" = (
-/obj/machinery/door/firedoor/glass,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/cable/green{
@@ -22720,6 +22719,8 @@
 	pixel_x = -28;
 	dir = 4
 	},
+/obj/item/clothing/suit/armor/vest/wolftaur,
+/obj/item/clothing/suit/armor/vest/wolftaur,
 /turf/simulated/floor/tiled/dark,
 /area/security/Locker_Room)
 "hMg" = (
@@ -24871,6 +24872,8 @@
 	},
 /obj/item/clothing/glasses/meson,
 /obj/item/pickaxe,
+/obj/item/clothing/glasses/welding,
+/obj/random/flashlight,
 /turf/simulated/floor/tiled/techfloor,
 /area/storage/primary)
 "iAJ" = (
@@ -26714,6 +26717,10 @@
 /obj/random/tech_supply,
 /obj/random/tech_supply,
 /obj/random/tech_supply,
+/obj/item/clothing/head/welding{
+	pixel_x = -3;
+	pixel_y = 5
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/storage/primary)
 "jjK" = (
@@ -27550,9 +27557,6 @@
 /obj/random/trash_pile,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/twocargo)
-"jwQ" = (
-/turf/simulated/wall,
-/area/security/detectives_office)
 "jwW" = (
 /obj/random/drinkbottle,
 /obj/structure/closet/crate,
@@ -30478,7 +30482,7 @@
 /turf/simulated/floor/tiled,
 /area/crew_quarters/Gym)
 "kBu" = (
-/obj/machinery/clonepod/full,
+/obj/machinery/clonepod/transhuman/full,
 /turf/simulated/floor/bluegrid,
 /area/medical/Genetics_Lab)
 "kBP" = (
@@ -32433,7 +32437,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/security/briefing_room)
 "lmj" = (
-/obj/machinery/door/firedoor/glass,
+/obj/machinery/door/firedoor/multi_tile,
 /obj/machinery/door/airlock/multi_tile/glass{
 	name = "Recreation"
 	},
@@ -38546,10 +38550,10 @@
 /turf/simulated/floor/plating,
 /area/engineering/cetus/atriumdeck2)
 "nsc" = (
-/obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/multi_tile/glass{
 	name = "Recreation"
 	},
+/obj/machinery/door/firedoor/multi_tile,
 /turf/simulated/floor/tiled/techmaint,
 /area/crew_quarters/cetus/arcadestorage)
 "nsm" = (
@@ -39191,6 +39195,8 @@
 /obj/structure/cable/green{
 	icon_state = "0-4"
 	},
+/obj/item/weldingtool/largetank,
+/obj/item/weldingtool/largetank,
 /turf/simulated/floor/tiled/dark,
 /area/rnd/Robotics_Lab)
 "nDE" = (
@@ -43116,7 +43122,6 @@
 /turf/simulated/floor/tiled/kafel_full,
 /area/security/Restroom)
 "oVL" = (
-/obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/tiled/techmaint,
 /area/crew_quarters/Gym)
 "oVN" = (
@@ -45094,6 +45099,7 @@
 /obj/random/tech_supply,
 /obj/random/tech_supply,
 /obj/random/toolbox,
+/obj/fiftyspawner/plastic,
 /turf/simulated/floor/tiled/techmaint,
 /area/storage/primary)
 "pAI" = (
@@ -46278,9 +46284,6 @@
 	name = "Station Intercom (General)";
 	pixel_y = 22
 	},
-/obj/machinery/light/small{
-	dir = 1
-	},
 /turf/simulated/floor/tiled/dark,
 /area/security/Internal_Affairs_Office)
 "pRv" = (
@@ -46896,6 +46899,10 @@
 	},
 /obj/machinery/light{
 	layer = 3
+	},
+/obj/machinery/firealarm{
+	dir = 1;
+	pixel_y = -27
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/central_one)
@@ -47819,6 +47826,8 @@
 /obj/random/tech_supply,
 /obj/random/tech_supply,
 /obj/random/tech_supply,
+/obj/random/flashlight,
+/obj/random/flashlight,
 /turf/simulated/floor/tiled/techmaint,
 /area/storage/primary)
 "qsp" = (
@@ -51696,9 +51705,6 @@
 /obj/structure/bed/chair/sofa/blue,
 /turf/simulated/floor/carpet/blucarpet,
 /area/hallway/primary/seconddeck/dockhallway)
-"rIJ" = (
-/turf/simulated/wall,
-/area/security/Reception)
 "rIR" = (
 /obj/effect/floor_decal/borderfloor/corner,
 /obj/effect/floor_decal/corner/blue/bordercorner,
@@ -56273,10 +56279,10 @@
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/twoap)
 "tjq" = (
-/obj/machinery/door/firedoor/glass,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
 	},
+/obj/machinery/door/firedoor/multi_tile,
 /obj/machinery/door/airlock/multi_tile/glass{
 	name = "Recreation"
 	},
@@ -59887,7 +59893,6 @@
 /turf/simulated/floor/wood,
 /area/crew_quarters/cetus/atrium/primary)
 "uvA" = (
-/obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/tiled/techmaint,
 /area/crew_quarters/cetus/arcadestorage)
 "uvQ" = (
@@ -64593,6 +64598,8 @@
 /area/rnd/cetus/hall)
 "weu" = (
 /obj/structure/closet/emcloset/legacy,
+/obj/random/flashlight,
+/obj/random/flashlight,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/twobar)
 "weD" = (
@@ -68395,6 +68402,9 @@
 	},
 /obj/machinery/newscaster{
 	pixel_x = 30
+	},
+/obj/machinery/light/small{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/dark,
 /area/security/Internal_Affairs_Office)
@@ -105377,7 +105387,7 @@ oIe
 kpc
 mfI
 cDB
-jwQ
+sIu
 tZZ
 tZZ
 lln
@@ -105893,7 +105903,7 @@ sIu
 fzY
 mrJ
 fzY
-jwQ
+sIu
 tuK
 qbF
 lln
@@ -106151,7 +106161,7 @@ vuc
 rpD
 asy
 xuY
-rIJ
+mcy
 pnp
 bpG
 lln
@@ -130406,17 +130416,17 @@ yeT
 yeT
 gcP
 gcP
-gcP
+vVZ
 sEo
 hnD
 sEo
 pXd
 sEo
+vVZ
 gcP
+vVZ
 gcP
-gcP
-gcP
-gcP
+vVZ
 gcP
 gcP
 gcP
@@ -130665,7 +130675,7 @@ yeT
 yeT
 gcP
 gcP
-sEo
+alN
 sEo
 alN
 riI
@@ -130924,7 +130934,7 @@ yeT
 gcP
 gcP
 gcP
-gcP
+vVZ
 sEo
 alN
 sEo
