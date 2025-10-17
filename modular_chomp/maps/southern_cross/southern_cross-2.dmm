@@ -12708,13 +12708,13 @@
 /obj/structure/cable/yellow{
 	icon_state = "0-8"
 	},
-/obj/machinery/power/smes/buildable{
-	RCon_tag = "Auxiliary - Main";
-	charge = 2.4e+007;
-	cur_coils = 4;
-	input_level = 500000;
-	output_level = 500000
+/obj/machinery/power/smes/buildable/max_charge_max_output{
+	RCon_tag = "Auxiliary - Main"
 	},
+/obj/item/smes_coil,
+/obj/item/smes_coil,
+/obj/item/smes_coil,
+/obj/item/smes_coil,
 /turf/simulated/floor/plating,
 /area/engineering/auxiliary_engineering)
 "dWD" = (
