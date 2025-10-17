@@ -137,12 +137,8 @@
 /datum/trait/negative/hollow
 	name = "Hollow Bones/Aluminum Alloy"
 	desc = "Your bones and robot limbs are much easier to break."
-<<<<<<< HEAD
-	cost = -3 // increased due to medical intervention needed.
-=======
 	cost = -2 //I feel like this should be higher, but let's see where it goes
 	excludes = list(/datum/trait/negative/boneless)
->>>>>>> fe35d1fe84 (Boneless Trait (#18545))
 
 /datum/trait/negative/hollow/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..()
