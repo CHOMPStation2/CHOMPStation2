@@ -74,11 +74,7 @@
 						target.set_dir(GLOB.reverse_dir[target.dir])
 					target.apply_effect(attack_damage * 0.4, WEAKEN, armour)
 			if(BP_GROIN)
-<<<<<<< HEAD
-				target.visible_message(span_warning("[target] looks like [TT.he] [TT.is] in pain!"), span_warning("Oh god that hurt!")) // Chompstation edit
-=======
-				target.visible_message(span_warning("[target] looks like [target.p_theyre()] in pain!"), span_warning("[(target.gender=="female") ? "Oh god that hurt!" : "Oh no, not your[pick("testicles", "crown jewels", "clockweights", "family jewels", "marbles", "bean bags", "teabags", "sweetmeats", "goolies")]!"]")) // I see no easy way to fix this for non-organic or neuter characters.
->>>>>>> 8a1a482c2b (Removes Gender (#18628))
+				target.visible_message(span_warning("[target] looks like [target.p_theyre()] in pain!"), span_warning("Oh god that hurt!")) // Chompstation edit
 				target.apply_effects(stutter = attack_damage * 2, agony = attack_damage* 3, blocked = armour)
 			if(BP_L_LEG, BP_L_FOOT, BP_R_LEG, BP_R_FOOT)
 				if(!target.lying)
