@@ -12,11 +12,11 @@
 
 /obj/item/flame/candle/Initialize(mapload)
 	. = ..()
-	wax -= rand(800, 1000) // Enough for 27-33 minutes. 30 minutes on average.
+	wax -= 7200 //CHOMPEdit, FOUR HOUR burn time, taking into account process only calling once every two seconds or so. Originally was: rand(800, 1000) // Enough for 27-33 minutes. 30 minutes on average.
 
 /obj/item/flame/candle/update_icon()
 	var/i
-	if(wax > 1500)
+	if(wax > 3600) //CHOMPEdit Icon update to match 4 hour burn
 		i = 1
 	else if(wax > 800)
 		i = 2
