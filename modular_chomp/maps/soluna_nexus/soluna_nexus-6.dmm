@@ -1893,13 +1893,16 @@
 /turf/simulated/floor,
 /area/expoutpost/starfuelstorage)
 "bKJ" = (
-/obj/machinery/power/smes/buildable{
+/obj/machinery/power/smes/buildable/max_charge_max_input{
 	RCon_tag = "Reactor Input - Aegis";
-	charge = 2e+006;
-	cur_coils = 6;
-	input_attempt = 1;
 	name = "Reactor SMES - Input"
 	},
+/obj/item/smes_coil,
+/obj/item/smes_coil,
+/obj/item/smes_coil,
+/obj/item/smes_coil,
+/obj/item/smes_coil,
+/obj/item/smes_coil,
 /obj/structure/cable/cyan{
 	icon_state = "0-4"
 	},
@@ -15558,15 +15561,14 @@
 /turf/simulated/floor/tiled/white,
 /area/expoutpost/medbaylobby)
 "nFb" = (
-/obj/machinery/power/smes/buildable{
+/obj/machinery/power/smes/buildable/max_charge_max_input{
 	RCon_tag = "Reactor Primary - Aegis";
-	charge = 2e+006;
-	cur_coils = 4;
-	input_attempt = 1;
-	input_level = 750000;
-	name = "Reactor SMES - Main";
-	output_level = 750000
+	name = "Reactor SMES - Main"
 	},
+/obj/item/smes_coil,
+/obj/item/smes_coil,
+/obj/item/smes_coil,
+/obj/item/smes_coil,
 /obj/structure/cable/green,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/effect/engine_setup/smes,
@@ -28443,15 +28445,12 @@
 /turf/simulated/floor,
 /area/expoutpost/restrooms)
 "yjG" = (
-/obj/machinery/power/smes/buildable{
+/obj/machinery/power/smes/buildable/max_charge_max_input{
 	RCon_tag = "Auxiliary Reactor - Aegis";
-	charge = 2e+006;
-	cur_coils = 2;
-	input_attempt = 1;
-	input_level = 500000;
-	name = "Auxiliary Reactor SMES";
-	output_level = 350000
+	name = "Auxiliary Reactor SMES"
 	},
+/obj/item/smes_coil,
+/obj/item/smes_coil,
 /obj/effect/engine_setup/smes,
 /obj/structure/cable/green{
 	icon_state = "0-8"

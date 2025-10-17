@@ -3050,11 +3050,8 @@
 /turf/simulated/floor/plating,
 /area/engineering/Engine1_Chamber)
 "ahv" = (
-/obj/machinery/power/smes/buildable{
-	RCon_tag = "Solar - AftPort";
-	input_attempt = 1;
-	input_level = 150000;
-	output_level = 100000
+/obj/machinery/power/smes/buildable/max_charge_max_input{
+	RCon_tag = "Solar - AftPort"
 	},
 /obj/structure/cable,
 /obj/structure/sign/warning/high_voltage{
@@ -9198,14 +9195,13 @@
 /turf/simulated/floor/plating,
 /area/maintenance/Deck3_Bridge_ForStarCorridor1)
 "czb" = (
-/obj/machinery/power/smes/buildable{
-	RCon_tag = "Engine - Primary Core";
-	charge = 2e+006;
-	input_attempt = 1;
-	input_level = 100000;
-	output_level = 200000;
-	cur_coils = 4
+/obj/machinery/power/smes/buildable/engine_default{
+	RCon_tag = "Engine - Primary Core"
 	},
+/obj/item/smes_coil,
+/obj/item/smes_coil,
+/obj/item/smes_coil,
+/obj/item/smes_coil,
 /obj/effect/engine_setup/smes,
 /obj/structure/cable/cyan{
 	icon_state = "0-4"
@@ -19243,13 +19239,11 @@
 /turf/simulated/floor/plating,
 /area/engineering/Engine2_Waste_Handling)
 "fHB" = (
-/obj/machinery/power/smes/buildable{
-	RCon_tag = "Solar - ForStar";
-	input_attempt = 1;
-	input_level = 150000;
-	output_level = 100000;
-	cur_coils = 2
+/obj/machinery/power/smes/buildable/max_charge_max_input{
+	RCon_tag = "Solar - ForStar"
 	},
+/obj/item/smes_coil,
+/obj/item/smes_coil,
 /obj/structure/sign/warning/high_voltage{
 	pixel_y = 32
 	},
@@ -26235,12 +26229,7 @@
 /obj/structure/cable/white{
 	icon_state = "0-4"
 	},
-/obj/machinery/power/smes/buildable{
-	charge = 5e+006;
-	input_attempt = 1;
-	input_level = 200000;
-	output_level = 200000
-	},
+/obj/machinery/power/smes/buildable/engine_default,
 /turf/simulated/floor/plating,
 /area/bridge/AI_Core_Chamber)
 "iho" = (
@@ -29587,14 +29576,13 @@
 /turf/simulated/floor/plating,
 /area/maintenance/Deck3_Dorms_AftPortChamber1)
 "jqU" = (
-/obj/machinery/power/smes/buildable{
-	RCon_tag = "Engine - Primary Main";
-	charge = 2e+007;
-	cur_coils = 4;
-	input_attempt = 1;
-	input_level = 750000;
-	output_level = 750000
+/obj/machinery/power/smes/buildable/engine_default{
+	RCon_tag = "Engine - Primary Main"
 	},
+/obj/item/smes_coil,
+/obj/item/smes_coil,
+/obj/item/smes_coil,
+/obj/item/smes_coil,
 /obj/effect/engine_setup/smes/main,
 /obj/structure/cable{
 	icon_state = "0-2"
@@ -38192,13 +38180,11 @@
 /turf/simulated/floor/airless,
 /area/engineering/Solar_Array_ForStar)
 "mhS" = (
-/obj/machinery/power/smes/buildable{
-	RCon_tag = "Solar - AftStar";
-	input_attempt = 1;
-	input_level = 150000;
-	output_level = 100000;
-	cur_coils = 2
+/obj/machinery/power/smes/buildable/engine_default{
+	RCon_tag = "Solar - AftStar"
 	},
+/obj/item/smes_coil,
+/obj/item/smes_coil,
 /obj/structure/cable,
 /obj/structure/sign/warning/high_voltage{
 	pixel_y = -32
@@ -60572,11 +60558,8 @@
 /turf/simulated/floor/plating,
 /area/engineering/Atmospherics_Chamber)
 "tJr" = (
-/obj/machinery/power/smes/buildable{
-	RCon_tag = "Solar - ForPort";
-	input_attempt = 1;
-	input_level = 150000;
-	output_level = 100000
+/obj/machinery/power/smes/buildable/engine_default{
+	RCon_tag = "Solar - ForPort"
 	},
 /obj/structure/sign/warning/high_voltage{
 	pixel_y = 32
@@ -66996,15 +66979,13 @@
 /turf/simulated/floor/carpet/gaycarpet,
 /area/crew_quarters/sleep/Dormitory_05)
 "vJY" = (
-/obj/machinery/power/smes/buildable{
-	RCon_tag = "Engine - Secondary Core";
-	charge = 2e+006;
-	input_attempt = 1;
-	input_level = 100000;
-	output_level = 200000;
-	output_attempt = 0;
-	cur_coils = 4
+/obj/machinery/power/smes/buildable/max_charge_max_input{
+	RCon_tag = "Engine - Secondary Core"
 	},
+/obj/item/smes_coil,
+/obj/item/smes_coil,
+/obj/item/smes_coil,
+/obj/item/smes_coil,
 /obj/structure/cable/cyan{
 	icon_state = "0-4"
 	},
@@ -69996,14 +69977,13 @@
 /turf/simulated/floor/plating,
 /area/engineering/Construction_Area)
 "wLB" = (
-/obj/machinery/power/smes/buildable{
-	RCon_tag = "Engine - Secondary Main";
-	charge = 2e+007;
-	cur_coils = 4;
-	input_attempt = 1;
-	input_level = 750000;
-	output_level = 750000
+/obj/machinery/power/smes/buildable/max_charge_max_input{
+	RCon_tag = "Engine - Secondary Main"
 	},
+/obj/item/smes_coil,
+/obj/item/smes_coil,
+/obj/item/smes_coil,
+/obj/item/smes_coil,
 /obj/structure/cable{
 	icon_state = "0-2"
 	},
