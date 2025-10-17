@@ -23,6 +23,12 @@
 /mob/living/simple_mob/mechanical/mecha/eclipse/do_special_attack(atom/A)
 	bullet_heck(A, 3, 3)
 
+/mob/living/simple_mob/mechanical/mecha/eclipse/bullet_act(obj/item/projectile/P) //removal of E net cheese
+	if(P == /obj/item/projectile/beam/energy_net)
+		return
+	else
+		..()
+
 /datum/ai_holder/simple_mob/intentional/three_phases
 	use_astar = TRUE
 	wander = FALSE
@@ -705,14 +711,14 @@
 	name = "experiment 7"
 	desc = "A strange furball gaurded by a transparent barrier."
 	specialattackprojectile = /obj/item/projectile/energy/eclipse/tyrjavelin
-	health = 400
-	maxHealth = 400 //shield mechanic
+	health = 450
+	maxHealth = 450 //shield mechanic
 	icon_state = "UPshield_boss"
 	icon_living = "UPshield_boss"
 	projectiletype = /obj/item/projectile/energy/eclipse/tyrjavelin
 	wreckage = /obj/item/prop/tyrlore/basicshield
-	var/fullshield = 300
-	var/shieldrage = 3
+	var/fullshield = 200
+	var/shieldrage = 200
 
 /mob/living/simple_mob/mechanical/mecha/eclipse/tankyboss/chamberc/load_default_bellies()
 	. = ..()
@@ -729,7 +735,7 @@
 	if(fullshield > 0)
 		fullshield -= P.damage
 		if(P == /obj/item/projectile/ion)
-			fullshield = 0
+			fullshield -= 300
 			visible_message(span_boldwarning(span_orange("[P] breaks the shield!!.")))
 			icon_state = "shield_boss"
 		if(fullshield > 0)
@@ -739,10 +745,10 @@
 			icon_state = "shield_boss"
 	else
 		..()
-		shieldrage--
-		if(shieldrage == 0)
-			shieldrage = 3
-			fullshield = 300
+		shieldrage -= P.damage
+		if(shieldrage > 0)
+			shieldrage = 200
+			fullshield = 200
 			visible_message(span_boldwarning(span_orange("The shield reactivates!!.")))
 			icon_state = "UPshield_boss"
 
