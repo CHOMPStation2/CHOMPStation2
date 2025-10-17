@@ -58,13 +58,7 @@ var/list/be_special_flags = list(
 	"pAI"              = BE_PAI,
 	//VOREStation Add
 	"Lost Drone"       = BE_LOSTDRONE,
-<<<<<<< HEAD
-	"Maint Pred"       = BE_MAINTPRED,
-	"Stowaway"         = BE_MAINTLURKER, // CHOMPEdit
-	"Morph"            = BE_MORPH,
-=======
 	"Maint Critter"    = BE_MAINTCRITTER,
->>>>>>> 190119a88d (Unified Ghost Hole (#18608))
 	"Corgi"            = BE_CORGI,
 	"Cursed Sword"     = BE_CURSEDSWORD,
 	"Ship Survivor"	   = BE_SURVIVOR
