@@ -3050,7 +3050,7 @@
 /turf/simulated/floor/plating,
 /area/engineering/Engine1_Chamber)
 "ahv" = (
-/obj/machinery/power/smes/buildable/engine_default{
+/obj/machinery/power/smes/buildable/max_charge_max_input{
 	RCon_tag = "Solar - AftPort"
 	},
 /obj/structure/cable,
@@ -19239,7 +19239,7 @@
 /turf/simulated/floor/plating,
 /area/engineering/Engine2_Waste_Handling)
 "fHB" = (
-/obj/machinery/power/smes/buildable/engine_default{
+/obj/machinery/power/smes/buildable/max_charge_max_input{
 	RCon_tag = "Solar - ForStar"
 	},
 /obj/item/smes_coil,

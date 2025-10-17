@@ -23893,7 +23893,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/security/main)
 "uRR" = (
-/obj/machinery/power/smes/buildable/engine_default{
+/obj/machinery/power/smes/buildable/max_charge_max_input{
 	RCon_tag = "Outpost Solars"
 	},
 /obj/structure/cable{

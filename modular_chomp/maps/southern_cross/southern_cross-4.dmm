@@ -2747,7 +2747,7 @@
 /area/maintenance/solars/foreportsolar)
 "cpE" = (
 /obj/structure/cable,
-/obj/machinery/power/smes/buildable/engine_default{
+/obj/machinery/power/smes/buildable/max_charge_max_input{
 	RCon_tag = "Solar - Fore Port"
 	},
 /turf/simulated/floor/plating,
@@ -2892,7 +2892,7 @@
 /area/maintenance/thirddeck/forestarboard)
 "cxs" = (
 /obj/structure/cable,
-/obj/machinery/power/smes/buildable/engine_default{
+/obj/machinery/power/smes/buildable/max_charge_max_input{
 	RCon_tag = "Solar - Fore Starboard"
 	},
 /turf/simulated/floor/plating,
@@ -15688,7 +15688,7 @@
 /obj/structure/cable{
 	icon_state = "0-2"
 	},
-/obj/machinery/power/smes/buildable/engine_default{
+/obj/machinery/power/smes/buildable/max_charge_max_input{
 	RCon_tag = "Solar - Aft Port"
 	},
 /turf/simulated/floor/plating,

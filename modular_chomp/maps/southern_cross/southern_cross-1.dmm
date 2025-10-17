@@ -3333,7 +3333,7 @@
 /obj/structure/sign/warning/radioactive{
 	pixel_y = 32
 	},
-/obj/machinery/power/smes/buildable/engine_default{
+/obj/machinery/power/smes/buildable/max_charge_max_input{
 	RCon_tag = "Gravity Generator"
 	},
 /obj/structure/cable/cyan{

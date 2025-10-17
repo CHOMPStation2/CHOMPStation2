@@ -2916,7 +2916,7 @@
 /area/mothership/chemistry)
 "gh" = (
 /obj/structure/cable/cyan,
-/obj/machinery/power/smes/buildable/engine_default,
+/obj/machinery/power/smes/buildable/max_charge_max_input,
 /obj/item/smes_coil,
 /obj/item/smes_coil,
 /obj/item/smes_coil,

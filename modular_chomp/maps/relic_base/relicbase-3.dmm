@@ -38279,7 +38279,7 @@
 /turf/simulated/floor/tiled,
 /area/janitor)
 "qLB" = (
-/obj/machinery/power/smes/buildable/engine_default{
+/obj/machinery/power/smes/buildable/max_charge_max_input{
 	RCon_tag = "Engine - Main"
 	},
 /obj/item/smes_coil,
@@ -55164,7 +55164,7 @@
 /turf/simulated/floor/plating,
 /area/engineering/external_lights)
 "xBC" = (
-/obj/machinery/power/smes/buildable/engine_default{
+/obj/machinery/power/smes/buildable/max_charge_max_input{
 	RCon_tag = "Outpost Lighting SMES"
 	},
 /obj/item/smes_coil,

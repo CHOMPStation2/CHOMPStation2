@@ -1307,7 +1307,7 @@
 /turf/simulated/floor/plating,
 /area/expoutpost/hangarthree)
 "eY" = (
-/obj/machinery/power/smes/buildable/engine_default{
+/obj/machinery/power/smes/buildable/max_charge_max_input{
 	RCon_tag = "Expedition Outpost - Starboard Solars"
 	},
 /obj/structure/cable{
@@ -7740,7 +7740,7 @@
 /turf/simulated/wall/r_wall,
 /area/expoutpost/prep)
 "Fa" = (
-/obj/machinery/power/smes/buildable/engine_default{
+/obj/machinery/power/smes/buildable/max_charge_max_input{
 	RCon_tag = "Expedition Outpost - Port Solars"
 	},
 /obj/structure/cable{
