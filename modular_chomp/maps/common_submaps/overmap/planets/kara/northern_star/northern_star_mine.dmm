@@ -10161,12 +10161,8 @@
 /area/outpost/research/isolation_c)
 "uI" = (
 /obj/structure/cable/blue,
-/obj/machinery/power/smes/buildable/outpost_substation{
-	RCon_tag = "Outpost - Research";
-	charge = 500000;
-	input_attempt = 1;
-	input_level = 150000;
-	output_level = 150000
+/obj/machinery/power/smes/buildable/outpost_substation/max_charge_max_input{
+	RCon_tag = "Outpost - Research"
 	},
 /turf/simulated/floor/plating,
 /area/outpost/research/power)
@@ -11556,12 +11552,8 @@
 /obj/structure/cable/blue{
 	icon_state = "0-8"
 	},
-/obj/machinery/power/smes/buildable/outpost_substation{
-	RCon_tag = "Outpost - Mining";
-	charge = 500000;
-	input_attempt = 1;
-	input_level = 150000;
-	output_level = 150000
+/obj/machinery/power/smes/buildable/outpost_substation/max_charge_max_input{
+	RCon_tag = "Outpost - Mining"
 	},
 /turf/simulated/floor/plating,
 /area/outpost/mining_main/maintenance)
@@ -13031,12 +13023,8 @@
 /turf/simulated/floor/plating,
 /area/outpost/engineering/mining/power)
 "AZ" = (
-/obj/machinery/power/smes/buildable/outpost_substation{
-	RCon_tag = "Outpost - Mining Engineering";
-	charge = 500000;
-	input_attempt = 1;
-	input_level = 150000;
-	output_level = 150000
+/obj/machinery/power/smes/buildable/outpost_substation/max_charge_max_input{
+	RCon_tag = "Outpost - Mining Engineering"
 	},
 /obj/structure/cable/blue{
 	icon_state = "0-8"
@@ -16241,12 +16229,8 @@
 /turf/simulated/floor/tiled/white,
 /area/outpost/medical/power)
 "HH" = (
-/obj/machinery/power/smes/buildable/outpost_substation{
-	RCon_tag = "Outpost - Medical";
-	charge = 500000;
-	input_attempt = 1;
-	input_level = 150000;
-	output_level = 150000
+/obj/machinery/power/smes/buildable/outpost_substation/max_charge_max_input{
+	RCon_tag = "Outpost - Medical"
 	},
 /obj/structure/cable/green{
 	icon_state = "0-2"

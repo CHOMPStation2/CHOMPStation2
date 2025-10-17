@@ -18547,12 +18547,8 @@
 /obj/structure/cable/cyan{
 	icon_state = "0-4"
 	},
-/obj/machinery/power/smes/buildable{
-	RCon_tag = "Engine - Core";
-	charge = 2e+006;
-	input_attempt = 1;
-	input_level = 100000;
-	output_level = 200000
+/obj/machinery/power/smes/buildable/engine_default{
+	RCon_tag = "Engine - Core"
 	},
 /obj/effect/engine_setup/smes,
 /turf/simulated/floor/plating,

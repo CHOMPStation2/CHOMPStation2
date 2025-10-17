@@ -3770,12 +3770,8 @@
 /area/surface/outpost/civilian/smes)
 "hy" = (
 /obj/structure/cable/blue,
-/obj/machinery/power/smes/buildable/outpost_substation{
-	RCon_tag = "Outpost - Shuttle Landing";
-	charge = 5e+006;
-	input_attempt = 1;
-	input_level = 150000;
-	output_level = 150000
+/obj/machinery/power/smes/buildable/outpost_substation/max_charge_max_input{
+	RCon_tag = "Outpost - Shuttle Landing"
 	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/main/gen_room)
@@ -7190,12 +7186,8 @@
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/left_lower)
 "nR" = (
-/obj/machinery/power/smes/buildable/outpost_substation{
-	RCon_tag = "Outpost - Engineering Outpost";
-	charge = 5e+006;
-	input_attempt = 1;
-	input_level = 150000;
-	output_level = 150000
+/obj/machinery/power/smes/buildable/outpost_substation/max_charge_max_input{
+	RCon_tag = "Outpost - Engineering Outpost"
 	},
 /obj/structure/cable/blue,
 /turf/simulated/floor/plating,
@@ -8996,12 +8988,8 @@
 /obj/structure/cable/blue{
 	icon_state = "0-2"
 	},
-/obj/machinery/power/smes/buildable/outpost_substation{
-	RCon_tag = "Outpost - Civilian";
-	charge = 500000;
-	input_attempt = 1;
-	input_level = 150000;
-	output_level = 150000
+/obj/machinery/power/smes/buildable/outpost_substation/max_charge_max_input{
+	RCon_tag = "Outpost - Civilian"
 	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/civilian/smes)
@@ -16550,12 +16538,8 @@
 /obj/structure/cable/blue{
 	icon_state = "0-4"
 	},
-/obj/machinery/power/smes/buildable/outpost_substation{
-	RCon_tag = "Outpost - Left Wing";
-	charge = 5e+006;
-	input_attempt = 1;
-	input_level = 150000;
-	output_level = 150000
+/obj/machinery/power/smes/buildable/outpost_substation/max_charge_max_input{
+	RCon_tag = "Outpost - Left Wing"
 	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/main/gen_room/smes_left)
@@ -17640,12 +17624,8 @@
 /obj/structure/cable/blue{
 	icon_state = "0-4"
 	},
-/obj/machinery/power/smes/buildable/outpost_substation{
-	RCon_tag = "Outpost - Mining";
-	charge = 5e+006;
-	input_attempt = 1;
-	input_level = 150000;
-	output_level = 150000
+/obj/machinery/power/smes/buildable/outpost_substation/max_charge_max_input{
+	RCon_tag = "Outpost - Mining"
 	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/engineering/atmos_room)
@@ -24086,12 +24066,8 @@
 /area/surface/outpost/main/airlock/landing_north)
 "UL" = (
 /obj/structure/cable/blue,
-/obj/machinery/power/smes/buildable/outpost_substation{
-	RCon_tag = "Outpost - Security";
-	charge = 5e+006;
-	input_attempt = 1;
-	input_level = 150000;
-	output_level = 150000
+/obj/machinery/power/smes/buildable/outpost_substation/max_charge_max_input{
+	RCon_tag = "Outpost - Security"
 	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/security/smes)
@@ -26237,12 +26213,8 @@
 /obj/structure/cable/blue{
 	icon_state = "0-4"
 	},
-/obj/machinery/power/smes/buildable/outpost_substation{
-	RCon_tag = "Outpost - Right Wing";
-	charge = 5e+006;
-	input_attempt = 1;
-	input_level = 150000;
-	output_level = 150000
+/obj/machinery/power/smes/buildable/outpost_substation/max_charge_max_input{
+	RCon_tag = "Outpost - Right Wing"
 	},
 /turf/simulated/floor/plating,
 /area/surface/outpost/main/gen_room/smes_right)

@@ -3333,11 +3333,7 @@
 /obj/structure/sign/warning/radioactive{
 	pixel_y = 32
 	},
-/obj/machinery/power/smes/buildable{
-	charge = 5e+006;
-	input_attempt = 1;
-	input_level = 200000;
-	output_level = 200000;
+/obj/machinery/power/smes/buildable/engine_default{
 	RCon_tag = "Gravity Generator"
 	},
 /obj/structure/cable/cyan{

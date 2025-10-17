@@ -18426,13 +18426,8 @@
 /turf/simulated/floor/tiled,
 /area/medical/morgue)
 "iHD" = (
-/obj/machinery/power/smes/buildable{
-	RCon_tag = "Telecommunications Satellite";
-	charge = 6e+006;
-	input_attempt = 1;
-	input_level = 250000;
-	inputting = 1;
-	output_level = 250000
+/obj/machinery/power/smes/buildable/engine_default{
+	RCon_tag = "Telecommunications Satellite"
 	},
 /obj/structure/cable/cyan,
 /turf/simulated/floor/plating,

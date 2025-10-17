@@ -3050,11 +3050,8 @@
 /turf/simulated/floor/plating,
 /area/engineering/Engine1_Chamber)
 "ahv" = (
-/obj/machinery/power/smes/buildable{
-	RCon_tag = "Solar - AftPort";
-	input_attempt = 1;
-	input_level = 150000;
-	output_level = 100000
+/obj/machinery/power/smes/buildable/engine_default{
+	RCon_tag = "Solar - AftPort"
 	},
 /obj/structure/cable,
 /obj/structure/sign/warning/high_voltage{
@@ -26235,12 +26232,7 @@
 /obj/structure/cable/white{
 	icon_state = "0-4"
 	},
-/obj/machinery/power/smes/buildable{
-	charge = 5e+006;
-	input_attempt = 1;
-	input_level = 200000;
-	output_level = 200000
-	},
+/obj/machinery/power/smes/buildable/engine_default,
 /turf/simulated/floor/plating,
 /area/bridge/AI_Core_Chamber)
 "iho" = (
@@ -60572,11 +60564,8 @@
 /turf/simulated/floor/plating,
 /area/engineering/Atmospherics_Chamber)
 "tJr" = (
-/obj/machinery/power/smes/buildable{
-	RCon_tag = "Solar - ForPort";
-	input_attempt = 1;
-	input_level = 150000;
-	output_level = 100000
+/obj/machinery/power/smes/buildable/engine_default{
+	RCon_tag = "Solar - ForPort"
 	},
 /obj/structure/sign/warning/high_voltage{
 	pixel_y = 32
