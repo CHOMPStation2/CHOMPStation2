@@ -384,11 +384,7 @@ var/list/holder_mob_icon_cache = list()
 	//end YW edit
 
 	var/obj/item/holder/H = new holder_type(get_turf(src), src)
-<<<<<<< HEAD
-	H.sync(src)	//CHOMPEdit - See modular_chomp/code/modules/mob/holder.dm for what this does
-=======
 	H.sync(src)
->>>>>>> 85926d166e (Various species related fixes (#18600))
 	grabber.put_in_hands(H)
 
 	if(self_grab)
