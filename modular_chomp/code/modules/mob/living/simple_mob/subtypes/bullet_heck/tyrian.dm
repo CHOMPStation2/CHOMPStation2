@@ -76,19 +76,20 @@
 
 
 /mob/living/simple_mob/mechanical/mecha/eclipse/tankyboss/chambera/do_special_attack(atom/A)
-	var/rng_cycle = rand(1,4)
-	if(attackcycle == 1)
-		addtimer(CALLBACK(src, PROC_REF(quad_random_firing), A, 20, rng_cycle, 20), 0.5 SECONDS, TIMER_DELETE_ME)
-		attackcycle = 0
-	else if(attackcycle == 2)
-		addtimer(CALLBACK(src, PROC_REF(dual_spin), A, rng_cycle, 15), 0.5 SECONDS, TIMER_DELETE_ME)
-		attackcycle = 0
-	else if(attackcycle == 3)
-		attackcycle = 0
-		addtimer(CALLBACK(src, PROC_REF(summon_puddles), A, rng_cycle, /datum/modifier/mmo_drop/tyr_flora), 2.5 SECONDS, TIMER_DELETE_ME)
-	else if(attackcycle == 4)
-		addtimer(CALLBACK(src, PROC_REF(bullet_blossom), A, rng_cycle, 10), 0.5 SECONDS, TIMER_DELETE_ME)
-		attackcycle = 0
+	rng_cycle = rand(1,4)
+	switch(attackcycle)
+		if(1)
+			addtimer(CALLBACK(src, PROC_REF(quad_random_firing), A, 20, rng_cycle, 20), 0.5 SECONDS, TIMER_DELETE_ME)
+			attackcycle = 0
+		if(2)
+			addtimer(CALLBACK(src, PROC_REF(dual_spin), A, rng_cycle, 15), 0.5 SECONDS, TIMER_DELETE_ME)
+			attackcycle = 0
+		if(3)
+			attackcycle = 0
+			addtimer(CALLBACK(src, PROC_REF(summon_puddles), A, rng_cycle, /datum/modifier/mmo_drop/tyr_flora), 2.5 SECONDS, TIMER_DELETE_ME)
+		if(4)
+			addtimer(CALLBACK(src, PROC_REF(bullet_blossom), A, rng_cycle, 10), 0.5 SECONDS, TIMER_DELETE_ME)
+			attackcycle = 0
 
 /mob/living/simple_mob/mechanical/mecha/eclipse/tankyboss/chamberb //knock back boss
 	name = "experiment 3"
@@ -115,18 +116,19 @@
 
 /mob/living/simple_mob/mechanical/mecha/eclipse/tankyboss/chamberb/do_special_attack(atom/A)
 	rng_cycle = rand(1,4)
-	if(attackcycle == 1)
-		addtimer(CALLBACK(src, PROC_REF(quad_random_firing), A, 20, rng_cycle, 10), 0.5 SECONDS, TIMER_DELETE_ME)
-		attackcycle = 0
-	else if(attackcycle == 2)
-		addtimer(CALLBACK(src, PROC_REF(dual_spin), A, rng_cycle, 5), 0.5 SECONDS, TIMER_DELETE_ME)
-		attackcycle = 0
-	else if(attackcycle == 3)
-		addtimer(CALLBACK(src, PROC_REF(rising_star), A, rng_cycle, 10), 0.5 SECONDS, TIMER_DELETE_ME)
-		attackcycle = 0
-	else if(attackcycle == 4)
-		addtimer(CALLBACK(src, PROC_REF(hole_in_wall), A, rng_cycle, 10), 0.5 SECONDS, TIMER_DELETE_ME)
-		attackcycle = 0
+	switch(attackcycle)
+		if(1)
+			addtimer(CALLBACK(src, PROC_REF(quad_random_firing), A, 20, rng_cycle, 10), 0.5 SECONDS, TIMER_DELETE_ME)
+			attackcycle = 0
+		if(2)
+			addtimer(CALLBACK(src, PROC_REF(dual_spin), A, rng_cycle, 5), 0.5 SECONDS, TIMER_DELETE_ME)
+			attackcycle = 0
+		if(3)
+			addtimer(CALLBACK(src, PROC_REF(rising_star), A, rng_cycle, 10), 0.5 SECONDS, TIMER_DELETE_ME)
+			attackcycle = 0
+		if(4)
+			addtimer(CALLBACK(src, PROC_REF(hole_in_wall), A, rng_cycle, 10), 0.5 SECONDS, TIMER_DELETE_ME)
+			attackcycle = 0
 
 /mob/living/simple_mob/mechanical/mecha/eclipse/tankyboss/chamberc //wierd shields
 	name = "experiment 7"
@@ -175,18 +177,19 @@
 
 /mob/living/simple_mob/mechanical/mecha/eclipse/tankyboss/chamberc/do_special_attack(atom/A)
 	rng_cycle = rand(1,4)
-	if(attackcycle == 1)
-		addtimer(CALLBACK(src, PROC_REF(quad_random_firing), A, 20, rng_cycle, 20), 0.5 SECONDS, TIMER_DELETE_ME)
-		attackcycle = 0
-	else if(attackcycle == 2)
-		addtimer(CALLBACK(src, PROC_REF(hole_in_wall), A, rng_cycle, 15), 0.5 SECONDS, TIMER_DELETE_ME)
-		attackcycle = 0
-	else if(attackcycle == 3)
-		addtimer(CALLBACK(src, PROC_REF(rising_star), A, rng_cycle, 15), 0.5 SECONDS, TIMER_DELETE_ME)
-		attackcycle = 0
-	else if(attackcycle == 4)
-		attackcycle = 0
-		addtimer(CALLBACK(src, PROC_REF(gattlingfire), A, rng_cycle, 8, 7), 0.5 SECONDS, TIMER_DELETE_ME)
+	switch(attackcycle)
+		if(1)
+			addtimer(CALLBACK(src, PROC_REF(quad_random_firing), A, 20, rng_cycle, 20), 0.5 SECONDS, TIMER_DELETE_ME)
+			attackcycle = 0
+		if(2)
+			addtimer(CALLBACK(src, PROC_REF(hole_in_wall), A, rng_cycle, 15), 0.5 SECONDS, TIMER_DELETE_ME)
+			attackcycle = 0
+		if(3)
+			addtimer(CALLBACK(src, PROC_REF(rising_star), A, rng_cycle, 15), 0.5 SECONDS, TIMER_DELETE_ME)
+			attackcycle = 0
+		if(4)
+			addtimer(CALLBACK(src, PROC_REF(gattlingfire), A, rng_cycle, 8, 7), 0.5 SECONDS, TIMER_DELETE_ME)
+			attackcycle = 0
 
 /mob/living/simple_mob/mechanical/mecha/eclipse/tankyboss/chambere
 	name = "defense automaton"
@@ -200,18 +203,19 @@
 	specialattackprojectile = /obj/item/projectile/bullet/astral_blade
 
 /mob/living/simple_mob/mechanical/mecha/eclipse/tankyboss/chambere/do_special_attack(atom/A)
-	if(attackcycle == 1)
-		addtimer(CALLBACK(src, PROC_REF(bomb_lines), A, 3), 1.5 SECONDS, TIMER_DELETE_ME)
-		attackcycle = 0
-	else if(attackcycle == 2)
-		attackcycle = 0
-		addtimer(CALLBACK(src, PROC_REF(cutoff_ulti), A, 4, 5, 10), 0.5 SECONDS, TIMER_DELETE_ME)
-	else if(attackcycle == 3)
-		attackcycle = 0
-		addtimer(CALLBACK(src, PROC_REF(summon_puddles), A, 2, /datum/modifier/mmo_drop/blade_boss_long), 2.5 SECONDS, TIMER_DELETE_ME)
-	else if(attackcycle == 4)
-		attackcycle = 0
-		addtimer(CALLBACK(src, PROC_REF(summon_puddles), A, 1, /datum/modifier/mmo_drop/blade_boss_short), 2.5 SECONDS, TIMER_DELETE_ME)
+	switch(attackcycle)
+		if(1)
+			addtimer(CALLBACK(src, PROC_REF(bomb_lines), A, 3), 1.5 SECONDS, TIMER_DELETE_ME)
+			attackcycle = 0
+		if(2)
+			attackcycle = 0
+			addtimer(CALLBACK(src, PROC_REF(cutoff_ulti), A, 4, 5, 10), 0.5 SECONDS, TIMER_DELETE_ME)
+		if(3)
+			attackcycle = 0
+			addtimer(CALLBACK(src, PROC_REF(summon_puddles), A, 2, /datum/modifier/mmo_drop/blade_boss_long), 2.5 SECONDS, TIMER_DELETE_ME)
+		if(4)
+			attackcycle = 0
+			addtimer(CALLBACK(src, PROC_REF(summon_puddles), A, 1, /datum/modifier/mmo_drop/blade_boss_short), 2.5 SECONDS, TIMER_DELETE_ME)
 
 
 /mob/living/simple_mob/mechanical/mecha/eclipse/tankyboss/chamberf //the enginer robot's fighting style is quite simple, restrain your movement so it can hit you with it's main projectile
@@ -226,69 +230,19 @@
 	projectiletype = /obj/item/projectile/energy/lightingspark/nanoweave
 
 /mob/living/simple_mob/mechanical/mecha/eclipse/tankyboss/chamberf/do_special_attack(atom/A)
-	if(attackcycle == 1)
-		addtimer(CALLBACK(src, PROC_REF(dual_spin), A, 3, 10), 0.5 SECONDS, TIMER_DELETE_ME)
-		attackcycle = 0
-	else if(attackcycle == 2)
-		addtimer(CALLBACK(src, PROC_REF(bomb_chaos), A, 4), 1.5 SECONDS, TIMER_DELETE_ME)
-		attackcycle = 0
-	else if(attackcycle == 3)
-		attackcycle = 0
-		addtimer(CALLBACK(src, PROC_REF(cutoff), A, 2, 5, 15), 0.5 SECONDS, TIMER_DELETE_ME)
-	else if(attackcycle == 4)
-		attackcycle = 0
-		addtimer(CALLBACK(src, PROC_REF(cutoff_ulti), A, 1, 5, 15), 0.5 SECONDS, TIMER_DELETE_ME)
-
-/mob/living/simple_mob/mechanical/mecha/eclipse/tankyboss/chamberg //wierd shields, to be replaced later
-	name = "expirement 28"
-	desc = "A strange furball gaurded by a transparent barrier."
-	specialattackprojectile = /obj/item/projectile/energy/eclipse/tyrjavelin
-	resistance = 10
-	icon_state = "UPshield_boss"
-	icon_living = "UPshield_boss"
-	color = "#FF0000"
-	wreckage = /obj/item/prop/tyrlore/advanceshield
-	projectiletype = /obj/item/projectile/energy/eclipse/tyrjavelin
-
-/mob/living/simple_mob/mechanical/mecha/eclipse/tankyboss/chamberg/do_special_attack(atom/A)
-	rng_cycle = rand(1,6)
-	if(attackcycle == 1)
-		addtimer(CALLBACK(src, PROC_REF(quad_random_firing), A, 20, rng_cycle, 20), 0.5 SECONDS, TIMER_DELETE_ME)
-		attackcycle = 0
-	else if(attackcycle == 2)
-		addtimer(CALLBACK(src, PROC_REF(dual_spin), A, rng_cycle, 15), 0.5 SECONDS, TIMER_DELETE_ME)
-		attackcycle = 0
-	else if(attackcycle == 3)
-		addtimer(CALLBACK(src, PROC_REF(hole_in_wall), A, rng_cycle, 15), 0.5 SECONDS, TIMER_DELETE_ME)
-		attackcycle = 0
-	else if(attackcycle == 4)
-		addtimer(CALLBACK(src, PROC_REF(rising_star), A, rng_cycle, 15), 0.5 SECONDS, TIMER_DELETE_ME)
-		attackcycle = 0
-	else if(attackcycle == 4)
-		attackcycle = 0
-		addtimer(CALLBACK(src, PROC_REF(gattlingfire), A, rng_cycle, 8, 7), 0.5 SECONDS, TIMER_DELETE_ME)
-	else if(attackcycle == 5)
-		attackcycle = 0
-		addtimer(CALLBACK(src, PROC_REF(cutoff), A, rng_cycle, 5, 15), 0.5 SECONDS, TIMER_DELETE_ME)
-	else if(attackcycle == 6)
-		attackcycle = 0
-		addtimer(CALLBACK(src, PROC_REF(cutoff_ulti), A, rng_cycle, 5, 15), 0.5 SECONDS, TIMER_DELETE_ME)
-	else if(attackcycle == 7)
-		addtimer(CALLBACK(src, PROC_REF(bomb_chaos), A, rng_cycle), 2.5 SECONDS, TIMER_DELETE_ME)
-		attackcycle = 0
-	else if(attackcycle == 8)
-		addtimer(CALLBACK(src, PROC_REF(bomb_lines), A, rng_cycle), 2.5 SECONDS, TIMER_DELETE_ME)
-		attackcycle = 0
-
-/mob/living/simple_mob/mechanical/mecha/eclipse/tankyboss/chamberg/bullet_act(obj/item/projectile/P)
-	if((P == /obj/item/projectile/ion) && (resistance > 0))
-		resistance = 0
-		say("Shields destroyed, rerouting power")
-		specialattackprojectile = /obj/item/projectile/energy/eclipse/tyrjavelin/speed
-		projectiletype = /obj/item/projectile/energy/eclipse/tyrjavelin/speed
-		icon_state = "shield_boss"
-		icon_living = "shield_boss"
-	..()
+	switch(attackcycle)
+		if(1)
+			addtimer(CALLBACK(src, PROC_REF(dual_spin), A, 3, 10), 0.5 SECONDS, TIMER_DELETE_ME)
+			attackcycle = 0
+		if(2)
+			addtimer(CALLBACK(src, PROC_REF(bomb_chaos), A, 4), 1.5 SECONDS, TIMER_DELETE_ME)
+			attackcycle = 0
+		if(3)
+			attackcycle = 0
+			addtimer(CALLBACK(src, PROC_REF(cutoff), A, 2, 5, 15), 0.5 SECONDS, TIMER_DELETE_ME)
+		if(4)
+			attackcycle = 0
+			addtimer(CALLBACK(src, PROC_REF(cutoff_ulti), A, 1, 5, 15), 0.5 SECONDS, TIMER_DELETE_ME)
 
 /mob/living/simple_mob/mechanical/mecha/eclipse/tankyboss/massswarm
 	name = "swarm controler"
@@ -300,7 +254,7 @@
 	icon = 'modular_chomp/icons/mob/hivebot.dmi'
 	size_multiplier = 3
 	wreckage = /obj/item/prop/tyrlore/drones
-	special_attack_cooldown = 5 SECONDS
+	special_attack_cooldown = 8 SECONDS
 	melee_damage_lower = 20
 	melee_damage_upper = 20
 	attack_armor_pen = 50
