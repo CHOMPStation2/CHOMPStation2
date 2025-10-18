@@ -12,7 +12,7 @@
 
 /obj/item/flame/candle/Initialize(mapload)
 	. = ..()
-	wax -= 0 //CHOMPEdit Making candle burns consistent. Originally was: rand(800, 1000) // Enough for 27-33 minutes. 30 minutes on average.
+	//wax -= rand(800, 1000) // Enough for 27-33 minutes. 30 minutes on average. //CHOMPDisable - Consistent candle burn times.
 
 /obj/item/flame/candle/update_icon()
 	var/i
