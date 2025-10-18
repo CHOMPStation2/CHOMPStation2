@@ -52522,12 +52522,6 @@
 	},
 /turf/simulated/floor/wood,
 /area/medical/psych)
-"rWR" = (
-/obj/structure/cable/cyan{
-	icon_state = "0-8"
-	},
-/turf/simulated/open,
-/area/maintenance/cetus/twocargo)
 "rXa" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -120139,7 +120133,7 @@ oow
 oow
 oow
 bMR
-rWR
+bMR
 oow
 vAf
 xdC
