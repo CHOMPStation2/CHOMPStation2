@@ -899,6 +899,11 @@
 	dir = 4
 	},
 /obj/machinery/light,
+/obj/machinery/vending/wallmed1{
+	name = "NanoMed Wall";
+	pixel_y = -30;
+	dir = 1
+	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/cetus/meteor/hallway2)
 "aAu" = (
@@ -2403,6 +2408,9 @@
 /obj/machinery/atmospherics/pipe/simple/visible/black{
 	dir = 4
 	},
+/obj/structure/cable/cyan{
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/engineering/cetus/meteor/engineroom)
 "bqX" = (
@@ -3543,6 +3551,10 @@
 "bUG" = (
 /obj/structure/table/reinforced,
 /obj/item/reagent_containers/glass/bucket,
+/obj/machinery/vending/wallmed1{
+	name = "NanoMed Wall";
+	pixel_y = 28
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/crew_quarters/cetus/meteor/atrium)
 "bUN" = (
@@ -5151,9 +5163,6 @@
 /area/maintenance/cetus/mechbay)
 "cNZ" = (
 /obj/machinery/door/firedoor/glass,
-/obj/structure/cable/green{
-	icon_state = "1-2"
-	},
 /obj/machinery/door/airlock/maintenance{
 	name = "Engine Waste Handling";
 	req_one_access = list(10,24)
@@ -6280,6 +6289,9 @@
 /obj/machinery/atmospherics/pipe/simple/visible/black{
 	dir = 6
 	},
+/obj/structure/cable/cyan{
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/plating,
 /area/engineering/cetus/meteor/engineroom)
 "dvK" = (
@@ -6956,9 +6968,6 @@
 /turf/simulated/floor/wood,
 /area/crew_quarters/sleep/cetus/meteor/dorm4)
 "dUA" = (
-/obj/structure/cable/green{
-	icon_state = "2-5"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden{
@@ -9543,6 +9552,9 @@
 /obj/machinery/atmospherics/pipe/cap/visible{
 	color = "#00ffff";
 	dir = 8
+	},
+/obj/structure/cable/cyan{
+	icon_state = "4-10"
 	},
 /turf/simulated/floor/plating,
 /area/engineering/cetus/meteor/engineroom)
@@ -12368,6 +12380,11 @@
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals_central5{
 	dir = 4
+	},
+/obj/machinery/vending/wallmed1{
+	dir = 8;
+	name = "NanoMed Wall";
+	pixel_x = 24
 	},
 /turf/simulated/floor/tiled,
 /area/hangar/cetus/two)
@@ -15636,9 +15653,6 @@
 /obj/effect/floor_decal/corner/yellow/border{
 	dir = 1
 	},
-/obj/structure/cable/green{
-	icon_state = "1-2"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/techfloor,
@@ -15931,6 +15945,12 @@
 "iFy" = (
 /turf/simulated/floor/outdoors/rocks/cetus,
 /area/maintenance/cetus/meteor/portsec)
+"iGe" = (
+/obj/structure/cable/cyan{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/plating,
+/area/engineering/cetus/meteor/engineroom)
 "iGr" = (
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/meteor/aftstar)
@@ -16967,9 +16987,6 @@
 /obj/structure/catwalk{
 	pixel_x = -1
 	},
-/obj/structure/cable/green{
-	icon_state = "1-2"
-	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 4
 	},
@@ -17595,6 +17612,11 @@
 /obj/structure/bed/chair/sofa/corner/green,
 /obj/machinery/alarm{
 	pixel_y = 23
+	},
+/obj/machinery/vending/wallmed1{
+	dir = 8;
+	name = "NanoMed Wall";
+	pixel_x = 24
 	},
 /turf/simulated/floor/carpet/green,
 /area/crew_quarters/cetus/meteor/stairwellf1)
@@ -21568,9 +21590,6 @@
 "luv" = (
 /obj/effect/floor_decal/borderfloorblack,
 /obj/effect/floor_decal/corner/yellow/border,
-/obj/structure/cable/green{
-	icon_state = "1-2"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 10
 	},
@@ -21745,6 +21764,9 @@
 /obj/machinery/atmospherics/valve/digital{
 	name = "secondary TEG valve";
 	dir = 8
+	},
+/obj/structure/cable/cyan{
+	icon_state = "5-10"
 	},
 /turf/simulated/floor/plating,
 /area/engineering/cetus/meteor/engineroom)
@@ -21945,9 +21967,6 @@
 /obj/effect/floor_decal/industrial/warning{
 	layer = 3;
 	dir = 1
-	},
-/obj/structure/cable/green{
-	icon_state = "1-10"
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
@@ -22951,6 +22970,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 10
 	},
+/obj/structure/cable/cyan{
+	icon_state = "5-10"
+	},
 /turf/simulated/floor/plating,
 /area/engineering/cetus/meteor/engineroom)
 "mkY" = (
@@ -23224,6 +23246,9 @@
 /obj/machinery/door/window/eastleft{
 	name = "Engine Waste";
 	req_one_access = list(10,24)
+	},
+/obj/structure/cable/cyan{
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/engineering/cetus/meteor/enginewaste)
@@ -25768,6 +25793,9 @@
 /obj/machinery/atmospherics/pipe/simple/visible/black{
 	dir = 4
 	},
+/obj/structure/cable/cyan{
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/engineering/cetus/meteor/enginewaste)
 "nLq" = (
@@ -27089,9 +27117,6 @@
 /turf/simulated/floor/wood,
 /area/crew_quarters/sleep/cetus/meteor/dorm8)
 "osg" = (
-/obj/structure/cable/green{
-	icon_state = "1-2"
-	},
 /obj/machinery/atmospherics/pipe/simple/visible/black,
 /obj/machinery/atmospherics/pipe/simple/visible/cyan{
 	dir = 4
@@ -27211,9 +27236,6 @@
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 8
-	},
-/obj/structure/cable/green{
-	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/milspec/raised,
 /area/engineering/cetus/meteor/atriumdeck1)
@@ -28942,9 +28964,6 @@
 /turf/simulated/floor/tiled/neutral,
 /area/maintenance/ab_StripBar)
 "pvb" = (
-/obj/structure/cable/green{
-	icon_state = "1-2"
-	},
 /obj/machinery/atmospherics/pipe/simple/visible/black{
 	dir = 5
 	},
@@ -30277,9 +30296,6 @@
 /turf/simulated/floor/lino,
 /area/maintenance/ab_StripBar)
 "qao" = (
-/obj/structure/cable/green{
-	icon_state = "2-5"
-	},
 /obj/machinery/atmospherics/pipe/simple/visible/black,
 /turf/simulated/floor/plating,
 /area/engineering/cetus/meteor/enginewaste)
@@ -31467,6 +31483,9 @@
 	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/manifold/visible/black,
+/obj/structure/cable/cyan{
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/plating,
 /area/engineering/cetus/meteor/enginewaste)
 "qBW" = (
@@ -35998,9 +36017,6 @@
 	name = "east bump";
 	pixel_x = 24
 	},
-/obj/structure/cable/green{
-	icon_state = "0-10"
-	},
 /obj/machinery/camera/network/engine{
 	c_tag = "ENG - Waste Handling 1";
 	dir = 9
@@ -36013,6 +36029,9 @@
 	},
 /obj/machinery/atmospherics/pipe/manifold/visible/black{
 	dir = 4
+	},
+/obj/structure/cable/cyan{
+	icon_state = "0-8"
 	},
 /turf/simulated/floor/plating,
 /area/engineering/cetus/meteor/enginewaste)
@@ -36856,9 +36875,6 @@
 /area/medical/surgery_hallway)
 "tpE" = (
 /obj/effect/floor_decal/industrial/warning,
-/obj/structure/cable/green{
-	icon_state = "1-2"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled,
@@ -38324,6 +38340,9 @@
 	dir = 10
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/cable/cyan{
+	icon_state = "2-5"
+	},
 /turf/simulated/floor/plating,
 /area/engineering/cetus/meteor/engineroom)
 "uds" = (
@@ -44130,6 +44149,13 @@
 	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/cetus/meteor/hallway2)
+"wOQ" = (
+/obj/machinery/atmospherics/pipe/manifold4w/visible/black,
+/obj/structure/cable/cyan{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/plating,
+/area/engineering/cetus/meteor/enginewaste)
 "wPa" = (
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 4
@@ -102196,7 +102222,7 @@ oOC
 dEF
 dEc
 aQE
-aQE
+iGe
 aQE
 aQE
 trt
@@ -102454,7 +102480,7 @@ uPi
 mBr
 ewq
 uUT
-aQE
+iGe
 aQE
 aQE
 bsx
@@ -102712,7 +102738,7 @@ jOt
 hDT
 ntH
 uUT
-aQE
+iGe
 aQE
 aQE
 ixR
@@ -102970,7 +102996,7 @@ jOt
 ntH
 ntH
 uUT
-aQE
+iGe
 xLj
 ffn
 sLi
@@ -103228,7 +103254,7 @@ jOt
 jOt
 slk
 uUT
-aQE
+iGe
 cXA
 ttm
 wyI
@@ -104776,7 +104802,7 @@ nXT
 gBb
 blU
 nXT
-nXT
+wOQ
 qao
 osg
 pvb
