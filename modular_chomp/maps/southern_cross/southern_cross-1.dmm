@@ -122,7 +122,7 @@
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/zerocent)
 "as" = (
-/obj/machinery/light/floortube,
+/obj/machinery/light/floortube/flicker,
 /turf/simulated/floor/wood/turfpack/station,
 /area/maintenance/zerobar)
 "at" = (
@@ -510,6 +510,13 @@
 	},
 /turf/simulated/floor/reinforced,
 /area/maintenance/abchemistry)
+"bn" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/blood,
+/turf/simulated/floor/tiled/techfloor,
+/area/maintenance/zeroport)
 "bo" = (
 /obj/item/radio/subspace,
 /turf/simulated/floor/plating/turfpack/station,
@@ -561,6 +568,23 @@
 	},
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/thrift)
+"bu" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 4
+	},
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/effect/decal/cleanable/blood,
+/turf/simulated/floor/tiled/techfloor,
+/area/maintenance/zeroport)
+"bv" = (
+/obj/structure/curtain/bed,
+/obj/effect/decal/cleanable/blood/tracks/suspicious,
+/turf/simulated/floor/plating/turfpack/station,
+/area/maintenance/zerobar)
 "bw" = (
 /obj/effect/floor_decal/rust,
 /obj/machinery/light/small{
@@ -568,6 +592,18 @@
 	},
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/abhydroponicssupp)
+"bx" = (
+/obj/effect/spider/stickyweb,
+/turf/simulated/floor/wood/broken/turfpack/station,
+/area/maintenance/zerobar)
+"by" = (
+/obj/effect/decal/cleanable/blood/tracks/suspicious,
+/turf/simulated/floor/wood/broken/turfpack/station,
+/area/maintenance/zerobar)
+"bz" = (
+/obj/effect/spider/stickyweb,
+/turf/simulated/floor/wood/turfpack/station,
+/area/maintenance/zerobar)
 "bA" = (
 /obj/structure/cable{
 	icon_state = "2-8"
@@ -589,11 +625,24 @@
 /obj/machinery/door/airlock/maintenance/common,
 /turf/simulated/floor/tiled/techmaint,
 /area/maintenance/zerostarboard)
+"bC" = (
+/obj/effect/spider/stickyweb,
+/obj/effect/spider/stickyweb,
+/turf/simulated/floor/wood/turfpack/station,
+/area/maintenance/zerobar)
 "bD" = (
 /obj/effect/floor_decal/rust,
 /obj/random/flashlight,
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/zeroport)
+"bE" = (
+/obj/effect/decal/cleanable/blood,
+/turf/simulated/floor/wood/turfpack/station,
+/area/maintenance/zerobar)
+"bF" = (
+/obj/effect/decal/cleanable/blood,
+/turf/simulated/floor/wood/broken/turfpack/station,
+/area/maintenance/zerobar)
 "bG" = (
 /obj/effect/wingrille_spawn/reinforced,
 /obj/machinery/door/firedoor/border_only,
@@ -604,6 +653,29 @@
 /obj/structure/flora/pottedplant/fern,
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/zerocent)
+"bI" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/effect/decal/cleanable/blood/tracks/suspicious,
+/turf/simulated/floor/wood/turfpack/station,
+/area/maintenance/zerobar)
+"bJ" = (
+/obj/effect/spider/stickyweb,
+/obj/machinery/light/floortube/flicker,
+/turf/simulated/floor/wood/turfpack/station,
+/area/maintenance/zerobar)
+"bK" = (
+/obj/effect/rune,
+/obj/item/flame/candle/candelabra/everburn{
+	pixel_y = 11
+	},
+/turf/simulated/floor/wood/turfpack/station,
+/area/maintenance/zerobar)
+"bL" = (
+/obj/effect/decal/cleanable/blood/tracks/suspicious,
+/turf/simulated/floor/wood/turfpack/station,
+/area/maintenance/zerobar)
 "bM" = (
 /obj/effect/floor_decal/techfloor{
 	dir = 8
@@ -614,6 +686,16 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/engineering/gravgen)
+"bN" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/effect/rune,
+/obj/item/flame/candle/candelabra/everburn{
+	pixel_y = 11
+	},
+/turf/simulated/floor/wood/broken/turfpack/station,
+/area/maintenance/zerobar)
 "bO" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -622,6 +704,12 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/carpet/blue2/turfpack/station,
 /area/maintenance/thrift)
+"bP" = (
+/obj/effect/rune,
+/obj/structure/table/woodentable,
+/obj/item/dice/d20/cursed,
+/turf/simulated/floor/wood/turfpack/station,
+/area/maintenance/zerobar)
 "bQ" = (
 /obj/structure/table/rack/shelf,
 /obj/item/clothing/accessory/badge/sheriff,
@@ -640,6 +728,11 @@
 /obj/structure/mob_spawner/mouse_nest/mousehole,
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/fieldthrift)
+"bS" = (
+/obj/effect/spider/stickyweb,
+/obj/item/toy/plushie/spider,
+/turf/simulated/floor/wood/turfpack/station,
+/area/maintenance/zerobar)
 "bT" = (
 /obj/structure/catwalk,
 /obj/machinery/door/firedoor/glass,
@@ -663,11 +756,36 @@
 	},
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/ragecage)
+"bW" = (
+/obj/random/trash,
+/obj/effect/spider/stickyweb,
+/turf/simulated/floor/wood/turfpack/station,
+/area/maintenance/zerobar)
+"bX" = (
+/obj/effect/spider/stickyweb,
+/turf/simulated/floor/plating/turfpack/station,
+/area/maintenance/zerobar)
+"bY" = (
+/obj/random/trash,
+/obj/effect/spider/stickyweb,
+/turf/simulated/floor/plating/turfpack/station,
+/area/maintenance/zerobar)
+"bZ" = (
+/obj/effect/rune,
+/obj/item/flame/candle/candelabra/everburn{
+	pixel_y = 11
+	},
+/turf/simulated/floor/wood/broken/turfpack/station,
+/area/maintenance/zerobar)
 "ca" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/brown/border,
 /turf/simulated/floor/tiled,
 /area/maintenance/abcargo)
+"cb" = (
+/obj/effect/decal/remains,
+/turf/simulated/floor/wood/turfpack/station,
+/area/maintenance/zerobar)
 "ce" = (
 /obj/effect/landmark{
 	name = "maint_pred"
@@ -1338,7 +1456,7 @@
 /obj/effect/floor_decal/techfloor{
 	dir = 8
 	},
-/obj/random/obstruction,
+/obj/effect/spider/stickyweb,
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/zeroport)
 "eY" = (
@@ -3410,9 +3528,6 @@
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/engineering/gravgen)
 "nD" = (
-/obj/structure/bed/chair/wood{
-	dir = 1
-	},
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
@@ -3805,6 +3920,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
+/obj/effect/spider/stickyweb,
 /turf/simulated/floor/wood/broken/turfpack/station,
 /area/maintenance/zerobar)
 "pn" = (
@@ -4630,6 +4746,7 @@
 /area/maintenance/zerocent)
 "sH" = (
 /obj/effect/decal/cleanable/cobweb2,
+/obj/effect/spider/stickyweb,
 /turf/simulated/floor/wood/turfpack/station,
 /area/maintenance/zerobar)
 "sI" = (
@@ -7172,6 +7289,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 10
 	},
+/obj/effect/spider/stickyweb,
 /turf/simulated/floor/wood/turfpack/station,
 /area/maintenance/zerobar)
 "Ep" = (
@@ -7278,10 +7396,6 @@
 /obj/structure/catwalk,
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/fieldhallway)
-"EN" = (
-/obj/structure/table/marble,
-/turf/simulated/floor/plating/turfpack/station,
-/area/maintenance/zerobar)
 "EO" = (
 /obj/structure/table/rack/shelf,
 /obj/machinery/light/small,
@@ -7289,7 +7403,9 @@
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/field)
 "EP" = (
-/obj/machinery/light/small,
+/obj/machinery/light/small/flicker{
+	dir = 2
+	},
 /turf/simulated/floor/lino,
 /area/maintenance/zerobar)
 "ES" = (
@@ -7595,7 +7711,7 @@
 /obj/effect/floor_decal/techfloor{
 	dir = 9
 	},
-/obj/machinery/light/small{
+/obj/machinery/light/small/flicker{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -7738,6 +7854,7 @@
 /area/maintenance/abscience)
 "GH" = (
 /obj/effect/decal/cleanable/cobweb2,
+/obj/effect/spider/stickyweb,
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/zerobar)
 "GJ" = (
@@ -8069,7 +8186,7 @@
 /turf/simulated/floor/tiled/eris/steel/bar_dance,
 /area/maintenance/zerobar)
 "HT" = (
-/obj/machinery/light/small{
+/obj/machinery/light/small/flicker{
 	dir = 4
 	},
 /turf/simulated/floor/wood/turfpack/station,
@@ -9019,12 +9136,12 @@
 /obj/effect/floor_decal/techfloor{
 	dir = 4
 	},
-/obj/random/obstruction,
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/effect/spider/stickyweb,
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/zeroport)
 "MA" = (
@@ -9834,10 +9951,6 @@
 /obj/machinery/portable_atmospherics/canister/air,
 /turf/simulated/floor/plating,
 /area/maintenance/zeroaft)
-"PX" = (
-/obj/structure/bed/chair/wood,
-/turf/simulated/floor/plating/turfpack/station,
-/area/maintenance/zerobar)
 "PY" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /turf/simulated/floor/plating/turfpack/station,
@@ -9892,6 +10005,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 5
 	},
+/obj/effect/landmark/carved_pumpkin_spawn,
 /turf/simulated/floor/tiled/techmaint,
 /area/engineering/lowlobby)
 "Qn" = (
@@ -10208,6 +10322,7 @@
 "RR" = (
 /obj/structure/table/marble,
 /obj/structure/reagent_dispensers/beerkeg,
+/obj/item/toy/plushie/black_cat,
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/zerobar)
 "RU" = (
@@ -11107,11 +11222,6 @@
 /obj/item/clothing/under/fluff/latexmaid,
 /obj/structure/table/standard,
 /turf/simulated/floor/tiled/white,
-/area/maintenance/zerobar)
-"VR" = (
-/obj/structure/table/marble,
-/obj/random/maintenance/foodstuff,
-/turf/simulated/floor/wood/turfpack/station,
 /area/maintenance/zerobar)
 "VT" = (
 /obj/effect/wingrille_spawn/reinforced,
@@ -35549,7 +35659,7 @@ Yk
 Yk
 CU
 CU
-WI
+bX
 Vb
 Vz
 BF
@@ -35806,9 +35916,9 @@ wZ
 wZ
 wZ
 Fk
-WI
-SY
-In
+bX
+bY
+bx
 Kr
 Uq
 Xq
@@ -36324,7 +36434,7 @@ wZ
 gr
 aX
 ji
-Vb
+bE
 Vb
 In
 wH
@@ -36583,12 +36693,12 @@ gr
 na
 nZ
 mo
-vG
+bN
 mo
 FC
 vG
 jz
-Vb
+bz
 Vb
 ly
 gk
@@ -36839,15 +36949,15 @@ wZ
 wZ
 gr
 Yc
+bK
 Vb
 Vb
-Vb
-In
-PX
-EN
+bF
+WI
+WI
 nD
-Vb
-In
+bC
+bx
 ly
 gk
 gk
@@ -37099,14 +37209,14 @@ gr
 oj
 Vb
 Vb
+bP
 Vb
+bK
 Vb
-Ti
-VR
-nD
-Vb
-In
-dY
+bI
+bE
+by
+bv
 gk
 gk
 sf
@@ -37355,11 +37465,11 @@ wZ
 wZ
 gr
 tq
-In
+bZ
 as
 Vb
 hh
-Vb
+bL
 as
 BY
 Mj
@@ -37615,7 +37725,7 @@ CU
 Vb
 Vb
 Vb
-Vb
+bK
 Vb
 Vb
 In
@@ -37871,7 +37981,7 @@ wZ
 wZ
 CU
 Vb
-Vb
+bE
 Td
 Td
 wG
@@ -38136,18 +38246,18 @@ Td
 Td
 wG
 wI
-In
+bF
 Oo
 FW
 eX
-CJ
+bn
 CJ
 CJ
 eX
 CJ
 CJ
 RX
-CJ
+bn
 CJ
 sQ
 vE
@@ -38387,7 +38497,7 @@ wZ
 wZ
 CU
 pc
-Vb
+cb
 Td
 Ne
 Td
@@ -38401,7 +38511,7 @@ WF
 xH
 Aa
 WF
-WF
+bu
 WF
 Mw
 WF
@@ -38644,7 +38754,7 @@ wZ
 wZ
 wZ
 CU
-Vb
+bz
 Vb
 Td
 Td
@@ -38902,15 +39012,15 @@ wZ
 wZ
 wZ
 CU
-Vb
+bz
 In
 Vb
 In
-In
+bx
 Vb
 Vb
 pk
-Vb
+bz
 Vb
 Vb
 Vb
@@ -39166,7 +39276,7 @@ as
 Vb
 In
 In
-as
+bJ
 Eh
 uy
 WG
@@ -39935,7 +40045,7 @@ wZ
 wZ
 gr
 GH
-WI
+bX
 Vb
 Vb
 Ti
@@ -40193,8 +40303,8 @@ wZ
 wZ
 gr
 gr
-WI
-Vb
+bX
+bS
 In
 Vb
 Vb
@@ -40452,8 +40562,8 @@ wZ
 wZ
 gr
 sH
-Yc
-Vb
+bW
+bz
 In
 HT
 Vb

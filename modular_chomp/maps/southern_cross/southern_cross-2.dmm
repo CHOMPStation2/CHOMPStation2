@@ -191,6 +191,21 @@
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled,
 /area/teleporter/firstdeck)
+"aay" = (
+/obj/structure/closet,
+/obj/structure/flora/skeleton,
+/turf/simulated/floor/plating,
+/area/hallway/primary/firstdeck/elevator)
+"aaz" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/green/border{
+	dir = 4
+	},
+/obj/effect/spider/stickyweb,
+/turf/simulated/floor/tiled,
+/area/teleporter/firstdeck)
 "aaA" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/deployable/barrier,
@@ -1537,6 +1552,7 @@
 /obj/effect/floor_decal/corner/green/border{
 	dir = 8
 	},
+/obj/effect/spider/stickyweb,
 /turf/simulated/floor/tiled,
 /area/teleporter/firstdeck)
 "agy" = (
@@ -7350,6 +7366,7 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 9
 	},
+/obj/effect/spider/stickyweb,
 /turf/simulated/floor/holofloor/tiled/dark,
 /area/teleporter/firstdeck)
 "aMN" = (
@@ -8233,6 +8250,7 @@
 /obj/effect/floor_decal/corner/green/border{
 	dir = 8
 	},
+/obj/effect/spider/stickyweb,
 /turf/simulated/floor/tiled,
 /area/teleporter/firstdeck)
 "aSm" = (
@@ -9646,6 +9664,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
 	},
+/obj/effect/landmark/carved_pumpkin_spawn,
 /turf/simulated/floor/tiled,
 /area/teleporter/firstdeck)
 "btl" = (
@@ -59018,7 +59037,7 @@ aaa
 aaa
 aaa
 aiY
-aiX
+aaz
 aiX
 hga
 bBQ
@@ -64467,7 +64486,7 @@ ahq
 nsv
 eqC
 aoJ
-aur
+aay
 aur
 aiS
 kSE
