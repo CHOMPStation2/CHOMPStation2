@@ -167,7 +167,8 @@
 		"nsfw_cell_xray",
 		// "nsfw_cell_stripper", // CHOMPRemove
 	)
-	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_3_POINTS)
+	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_4_POINTS)
+	announce_channels = list(CHANNEL_SECURITY)
 
 /datum/techweb_node/phase_weapons //CHOMPEdit Start - Adds Phase Weaponry
 	id = TECHWEB_NODE_PHASE_WEAPONS
