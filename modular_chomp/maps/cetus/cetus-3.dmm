@@ -5263,6 +5263,9 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 9
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
 /turf/simulated/floor/plating,
 /area/engineering/Solar_Control_ForPort)
 "dsT" = (
@@ -19066,6 +19069,11 @@
 /obj/structure/cable,
 /turf/simulated/floor/plating,
 /area/engineering/Solar_Control_ForStar)
+"lwa" = (
+/obj/machinery/power/tracker,
+/obj/structure/cable/yellow,
+/turf/simulated/floor/plating/turfpack/airless,
+/area/solar/cetus/joint)
 "lwQ" = (
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 1
@@ -22860,13 +22868,6 @@
 "nyv" = (
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
-	},
-/obj/machinery/power/sensor{
-	long_range = 1;
-	name_tag = "Telecommunications"
-	},
-/obj/structure/cable/yellow{
-	icon_state = "0-2"
 	},
 /obj/machinery/recharge_station,
 /turf/simulated/floor/tiled/milspec/raised,
@@ -30841,8 +30842,6 @@
 /turf/simulated/floor/carpet/graycarpet,
 /area/maintenance/cetus/shallow/backstage)
 "snQ" = (
-/obj/structure/cable/yellow,
-/obj/machinery/power/tracker,
 /turf/simulated/floor/plating/turfpack/airless,
 /area/solar/cetus/joint)
 "snX" = (
@@ -60299,7 +60298,7 @@ eEU
 eEU
 bgz
 eEU
-eEU
+lwa
 snQ
 etY
 hGt

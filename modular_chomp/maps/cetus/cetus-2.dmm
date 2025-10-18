@@ -9283,6 +9283,11 @@
 /obj/machinery/vending/snack{
 	dir = 4
 	},
+/obj/machinery/vending/wallmed1{
+	dir = 4;
+	name = "NanoMed Wall";
+	pixel_x = -24
+	},
 /turf/simulated/floor/tiled,
 /area/hallway/cetus/stairwellf2)
 "dfn" = (
@@ -15721,6 +15726,10 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals_central5,
+/obj/machinery/vending/wallmed1{
+	dir = 1;
+	pixel_y = -27
+	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/Gym)
 "fwZ" = (
@@ -17284,6 +17293,9 @@
 /obj/machinery/power/sensor{
 	name = "Powernet Sensor - Fore Subgrid";
 	name_tag = "Fore Subgrid"
+	},
+/obj/structure/cable/green{
+	icon_state = "0-5"
 	},
 /turf/simulated/floor/plating,
 /area/engineering/cetus/foresubstation)
@@ -22082,6 +22094,10 @@
 	c_tag = "CIV -  Utility Stairwell";
 	dir = 10
 	},
+/obj/machinery/vending/wallmed1{
+	dir = 1;
+	pixel_y = -27
+	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/central_two)
 "hBE" = (
@@ -26027,6 +26043,16 @@
 /obj/random/medical,
 /turf/simulated/floor/tiled/white,
 /area/medical/medsci)
+"iUG" = (
+/obj/effect/floor_decal/corner_steel_grid{
+	dir = 5
+	},
+/obj/machinery/vending/wallmed1{
+	dir = 1;
+	pixel_y = -27
+	},
+/turf/simulated/floor/tiled,
+/area/crew_quarters/cetus/atrium/primary)
 "iUM" = (
 /obj/effect/wingrille_spawn/reinforced,
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
@@ -30756,8 +30782,9 @@
 /area/crew_quarters/cetus/atrium/primary)
 "kFz" = (
 /obj/machinery/vending/wallmed1{
+	dir = 4;
 	name = "NanoMed Wall";
-	pixel_x = -27
+	pixel_x = -24
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/entry/docking_lounge)
@@ -35938,6 +35965,10 @@
 /obj/machinery/camera/network/security{
 	c_tag = "SEC - Brig Hallway 1";
 	dir = 10
+	},
+/obj/machinery/vending/wallmed1{
+	dir = 1;
+	pixel_y = -27
 	},
 /turf/simulated/floor/tiled/dark,
 /area/security/Brig)
@@ -46126,6 +46157,23 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/Chemistry)
+"pPd" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/obj/machinery/vending/wallmed1{
+	name = "NanoMed Wall";
+	pixel_y = -30;
+	dir = 1
+	},
+/turf/simulated/floor/tiled/white,
+/area/rnd/cetus/hall)
 "pPf" = (
 /turf/simulated/mineral/cetus,
 /area/maintenance/cetus/twofp)
@@ -51640,6 +51688,9 @@
 /obj/machinery/power/sensor{
 	name = "Powernet Sensor - Joint Research Subgrid";
 	name_tag = "Joint Research Subgrid"
+	},
+/obj/structure/cable/green{
+	icon_state = "0-2"
 	},
 /turf/simulated/floor/plating,
 /area/engineering/cetus/jointsubstation)
@@ -64695,6 +64746,9 @@
 	name = "Powernet Sensor - Port Subgrid";
 	name_tag = "Port Subgrid"
 	},
+/obj/structure/cable/green{
+	icon_state = "0-2"
+	},
 /turf/simulated/floor/plating,
 /area/engineering/cetus/portsubstation)
 "wfV" = (
@@ -69927,6 +69981,11 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
+/obj/machinery/vending/wallmed1{
+	name = "NanoMed Wall";
+	pixel_y = -30;
+	dir = 1
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/cetus/hall)
 "xXH" = (
@@ -95841,7 +95900,7 @@ kth
 kth
 kwq
 dtj
-bqH
+pPd
 icM
 qsH
 icM
@@ -107980,7 +108039,7 @@ olJ
 lqv
 wir
 agq
-cnl
+iUG
 liR
 bNk
 bNk
