@@ -620,22 +620,17 @@
 					return
 				var/confirm = tgui_alert(user, "Are you sure you want to become a sentient prize?", "Confirm Sentient Prize", list("Yes", "No"))
 				//CHOMPEdit Start
-				if(confirm == "Yes")
-					to_chat(user, span_warning("You are now a prize!"))
 				if(!confirm)
 					return
-<<<<<<< HEAD
 				if(confirm == "No")
 					to_chat(user, span_warning("The SPASM beeps in a sad manner at your impolite decline..."))
 					return
 				//CHOMPEdit End
-=======
 				var/confirmitemtf = tgui_alert(user, "Would you like to allow others to turn you into an item upon claiming you if they choose to?", "Confirm Item TF Preference", list("Yes", "No"))
 				var/allowitemtf = FALSE
 				if(confirmitemtf != "No")
 					allowitemtf = TRUE
 				to_chat(user, span_warning("You are now a prize!"))
->>>>>>> 2d5701bba9 (Casino sentient prize item TF + Global item TF List (#18498))
 				if(safety_ckey in sentientprizes_ckeys_list)
 					to_chat(user, span_warning("The SPASM beeps in an upset manner, you already have a collar!"))
 					return
