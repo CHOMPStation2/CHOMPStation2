@@ -212,7 +212,6 @@
 			return FALSE
 		holder_type = /obj/item/holder/micro
 		var/obj/item/holder/m_holder = get_scooped(M, G)
-		holder_type = holder_default
 		if (m_holder)
 			return TRUE
 		else
