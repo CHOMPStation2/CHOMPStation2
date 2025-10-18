@@ -180,3 +180,34 @@
       in round
   - rscadd: Research samples give research points when put through the destructive
       analyzer.
+2025-10-18:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: shadekin nutrition gains
+  Diana:
+  - qol: Teshari now have a visible sprite when picked up! They can be held in your
+      hand, on your head, or on your back!
+  - bugfix: High Zorren now have the proper vulpine speech sound
+  - bugfix: Altevian now have the proper mouse speech sound
+  - bugfix: Vulpkanin now have the proper canine species sound
+  - qol: Being attacked in the groin gives a less wordy message
+  - bugfix: Dragging now will always warn you if it will damage the person you're
+      dragging
+  - bugfix: Dragging now properly tell you if the person being dragged is damaged.
+  - bugfix: Fixes issue where you would bleed via drag when you had no bleeding wounds
+      / broken bones
+  - qol: Dragging will provide a visual message on screen if the person is being injured,
+      as opposed to just chat.
+  - rscadd: Adds boneless trait
+  - bugfix: Brains no longer qdel() if the head is gibbed.
+  Guti:
+  - bugfix: Fixed FBP not being able to change eye colour
+  - refactor: Refactored pronouns handling
+  - rscdel: Removed /datum/gender
+  - code_imp: Added pronoun helper procs
+  - bugfix: Fixed examining others using the examiner's pronouns instead of the examined
+  TheCaramelion:
+  - maptweak: Added the Destructive Analyzer to Southern Cross
+  Will:
+  - bugfix: Borg charger rarely locking focus to the charger itself
+  Zizzi:
+  - rscadd: Added string padding circuit
