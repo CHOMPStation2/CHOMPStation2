@@ -1057,15 +1057,14 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/shuttle/tabiranth)
 "bl" = (
-/obj/machinery/power/smes/buildable/hybrid{
-	cur_coils = 4;
-	input_level = 500000;
-	output_level = 500000;
-	recharge_rate = 40000
-	},
 /obj/structure/cable/cyan{
 	icon_state = "0-4"
 	},
+/obj/machinery/power/smes/buildable/hybrid/max_charge,
+/obj/item/smes_coil,
+/obj/item/smes_coil,
+/obj/item/smes_coil,
+/obj/item/smes_coil,
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/tabiranth)
 "bm" = (

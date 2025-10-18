@@ -59709,13 +59709,8 @@
 /area/quartermaster/Deck1_Stairwell)
 "sAy" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
-/obj/machinery/power/smes/buildable{
-	RCon_tag = "Substation - Tcoms";
-	charge = 6e+006;
-	input_attempt = 1;
-	input_level = 250000;
-	inputting = 1;
-	output_level = 250000
+/obj/machinery/power/smes/buildable/engine_default{
+	RCon_tag = "Substation - Tcoms"
 	},
 /obj/structure/cable/green{
 	icon_state = "0-4"

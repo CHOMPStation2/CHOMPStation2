@@ -9792,14 +9792,13 @@
 /area/engineering/engine_room)
 "aEI" = (
 /obj/structure/cable,
-/obj/machinery/power/smes/buildable{
-	RCon_tag = "Engine - Main";
-	charge = 2e+007;
-	cur_coils = 4;
-	input_attempt = 1;
-	input_level = 750000;
-	output_level = 750000
+/obj/machinery/power/smes/buildable/engine_default{
+	RCon_tag = "Engine - Main"
 	},
+/obj/item/smes_coil,
+/obj/item/smes_coil,
+/obj/item/smes_coil,
+/obj/item/smes_coil,
 /obj/effect/engine_setup/smes/main,
 /turf/simulated/floor/plating,
 /area/engineering/engine_smes)
@@ -18547,12 +18546,8 @@
 /obj/structure/cable/cyan{
 	icon_state = "0-4"
 	},
-/obj/machinery/power/smes/buildable{
-	RCon_tag = "Engine - Core";
-	charge = 2e+006;
-	input_attempt = 1;
-	input_level = 100000;
-	output_level = 200000
+/obj/machinery/power/smes/buildable/engine_default{
+	RCon_tag = "Engine - Core"
 	},
 /obj/effect/engine_setup/smes,
 /turf/simulated/floor/plating,
@@ -47433,12 +47428,13 @@
 /turf/simulated/floor/plating,
 /area/engineering/drone_fabrication)
 "fJb" = (
-/obj/machinery/power/smes/buildable{
-	RCon_tag = "Engine - ShieldGen";
-	cur_coils = 4;
-	input_level = 750000;
-	output_level = 750000
+/obj/machinery/power/smes/buildable/engine_default{
+	RCon_tag = "Engine - ShieldGen"
 	},
+/obj/item/smes_coil,
+/obj/item/smes_coil,
+/obj/item/smes_coil,
+/obj/item/smes_coil,
 /obj/structure/cable/orange{
 	icon_state = "0-4"
 	},

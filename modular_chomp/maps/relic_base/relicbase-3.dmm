@@ -38279,14 +38279,13 @@
 /turf/simulated/floor/tiled,
 /area/janitor)
 "qLB" = (
-/obj/machinery/power/smes/buildable{
-	RCon_tag = "Engine - Main";
-	charge = 2e+007;
-	cur_coils = 4;
-	input_attempt = 1;
-	input_level = 750000;
-	output_level = 750000
+/obj/machinery/power/smes/buildable/max_charge_max_input{
+	RCon_tag = "Engine - Main"
 	},
+/obj/item/smes_coil,
+/obj/item/smes_coil,
+/obj/item/smes_coil,
+/obj/item/smes_coil,
 /obj/structure/cable{
 	icon_state = "0-4"
 	},
@@ -40976,14 +40975,13 @@
 /obj/structure/extinguisher_cabinet{
 	pixel_y = -32
 	},
-/obj/machinery/power/smes/buildable{
-	RCon_tag = "Engine - Input";
-	charge = 2e+007;
-	cur_coils = 4;
-	input_attempt = 1;
-	input_level = 750000;
-	output_level = 100
+/obj/machinery/power/smes/buildable/engine_default{
+	RCon_tag = "Engine - Input"
 	},
+/obj/item/smes_coil,
+/obj/item/smes_coil,
+/obj/item/smes_coil,
+/obj/item/smes_coil,
 /obj/structure/cable/cyan{
 	icon_state = "0-8"
 	},
@@ -55166,14 +55164,13 @@
 /turf/simulated/floor/plating,
 /area/engineering/external_lights)
 "xBC" = (
-/obj/machinery/power/smes/buildable{
-	RCon_tag = "Outpost Lighting SMES";
-	charge = 2e+007;
-	cur_coils = 4;
-	input_attempt = 1;
-	input_level = 750000;
-	output_level = 500000
+/obj/machinery/power/smes/buildable/max_charge_max_input{
+	RCon_tag = "Outpost Lighting SMES"
 	},
+/obj/item/smes_coil,
+/obj/item/smes_coil,
+/obj/item/smes_coil,
+/obj/item/smes_coil,
 /obj/machinery/light/small{
 	dir = 4
 	},
