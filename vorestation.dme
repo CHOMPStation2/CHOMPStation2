@@ -5176,6 +5176,7 @@
 #include "modular_chomp\code\modules\event\heavydangerinfestation.dm"
 #include "modular_chomp\code\modules\event\horde_infestation.dm"
 #include "modular_chomp\code\modules\event\infectedroom.dm"
+#include "modular_chomp\code\modules\event\landmarks.dm"
 #include "modular_chomp\code\modules\event\meatyores.dm"
 #include "modular_chomp\code\modules\event\metroid_infestation.dm"
 #include "modular_chomp\code\modules\event\mutants.dm"
