@@ -628,7 +628,7 @@
 				//CHOMPEdit End
 				var/confirmitemtf = tgui_alert(user, "Would you like to allow others to turn you into an item upon claiming you if they choose to?", "Confirm Item TF Preference", list("Yes", "No"))
 				var/allowitemtf = FALSE
-				if(confirmitemtf != "No")
+				if(confirmitemtf == "Yes")
 					allowitemtf = TRUE
 				to_chat(user, span_warning("You are now a prize!"))
 				if(safety_ckey in sentientprizes_ckeys_list)
