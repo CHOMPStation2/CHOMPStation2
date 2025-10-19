@@ -211,3 +211,37 @@
   - bugfix: Borg charger rarely locking focus to the charger itself
   Zizzi:
   - rscadd: Added string padding circuit
+2025-10-19:
+  CHOMPStation2StaffMirrorBot:
+  - refactor: unified the mob, morph, and lurker spawns into a single multipurpose
+      hole that can be used to spawn any one of them based on the interacting ghost's
+      choice. the associated seperate events have been replaced with a single event
+      that uses the new unified spawner, so that the events are no longer competing
+      for spawn chances. the new spawner also has a high-vis icon so that it won't
+      be difficult for ghosts to spot if they're just scrolling around with darkness
+      enabled.
+  - rscadd: Added item TF functionality to the casino's sentient prize handlers. People
+      who put themselves up as a sentient prize have the option to allow the person
+      who claims them to choose to turn them into an item!
+  - code_imp: Added a global list of item TF options, to make it easier for future
+      item mechanics to have a more uniform selection of things people would probably
+      prefer to get turned into.
+  Diana:
+  - balance: Makes Virus Immunity trait 3 points
+  FluffMedic:
+  - balance: Many Tyr Bosses have had adjustments to their movesets
+  VictorZisthus:
+  - qol: Candles now burn for FOUR hours! They appear slightly melted at the two hour
+      mark, and very melted with only a half hour burn time left. A single pack of
+      candles should last you a whole shift now!
+  - bugfix: Logcabin-19x9 no longer reports power alarms to the station.
+  Will:
+  - code_imp: Unit testing for techwebs
+  - bugfix: all techweb designs are accessible to science
+  - bugfix: '"hardsuit graviton scanners" now gives you the proper graviton rig item'
+  - bugfix: '"radioisotope TEG circuit" is no longer missing from techweb'
+  - bugfix: '"hardsuit mining scanners" is no longer missing from techweb'
+  - balance: '"Precursor Technology" points cost increased by 1 tier'
+  - balance: '"Precursor Engineering" points cost increased by 1 tier'
+  - balance: '"''NSFW'' Gun" points cost increased by 1 tier'
+  - balance: '"Confetti Cannon" points cost increased by 2 tiers'

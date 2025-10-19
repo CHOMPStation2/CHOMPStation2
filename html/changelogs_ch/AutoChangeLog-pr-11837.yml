@@ -1,4 +1,0 @@
-author: "VictorZisthus"
-delete-after: True
-changes:
-  - bugfix: "Logcabin-19x9 no longer reports power alarms to the station."
