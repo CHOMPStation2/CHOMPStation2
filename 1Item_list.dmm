@@ -8019,12 +8019,6 @@
 	icon_state = "vault"
 	},
 /area/survivalpod)
-"csh" = (
-/obj/structure/ghost_pod/ghost_activated/maintpred/no_announce,
-/turf/simulated/fitness{
-	icon_state = "vault"
-	},
-/area/survivalpod)
 "csn" = (
 /obj/item/bone/skull/unathi,
 /turf/simulated/fitness{
@@ -55785,12 +55779,6 @@
 	icon_state = "vault"
 	},
 /area/survivalpod)
-"qsi" = (
-/obj/structure/ghost_pod/ghost_activated/morphspawn/no_announce,
-/turf/simulated/fitness{
-	icon_state = "vault"
-	},
-/area/survivalpod)
 "qsm" = (
 /obj/machinery/abstract_grub_machine,
 /turf/simulated/fitness{
@@ -88812,7 +88800,7 @@ bCw
 eUy
 fxB
 bSW
-csh
+pDu
 bSW
 bSW
 bSW
@@ -89216,7 +89204,7 @@ ugJ
 qMm
 kZl
 bSW
-qsi
+ldZ
 bSW
 hVu
 bSW

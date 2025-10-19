@@ -224,7 +224,7 @@
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/zeroport)
 "aE" = (
-/obj/structure/ghost_pod/ghost_activated/maintpred/no_announce,
+/obj/structure/ghost_pod/ghost_activated/maintpred,
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/abcargo)
 "aF" = (
@@ -240,7 +240,7 @@
 /area/maintenance/engineering/gravgen)
 "aG" = (
 /obj/effect/decal/cleanable/flour,
-/obj/structure/ghost_pod/ghost_activated/morphspawn/no_announce,
+/obj/structure/ghost_pod/ghost_activated/morphspawn,
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/abchemistry)
 "aH" = (
@@ -250,7 +250,7 @@
 /turf/simulated/floor/wood/alt/parquet/turfpack/station,
 /area/maintenance/lookout)
 "aI" = (
-/obj/structure/ghost_pod/ghost_activated/maintpred/no_announce,
+/obj/structure/ghost_pod/ghost_activated/maintpred,
 /turf/simulated/floor/wood/turfpack/station,
 /area/maintenance/zerobar)
 "aJ" = (
@@ -261,7 +261,7 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/gravgen)
 "aK" = (
-/obj/structure/ghost_pod/ghost_activated/maintpred/no_announce,
+/obj/structure/ghost_pod/ghost_activated/maintpred,
 /turf/simulated/floor/tiled/white,
 /area/maintenance/abscience)
 "aL" = (
@@ -4460,7 +4460,7 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/obj/structure/ghost_pod/ghost_activated/morphspawn/no_announce,
+/obj/structure/ghost_pod/ghost_activated/morphspawn,
 /turf/simulated/floor/tiled/white,
 /area/maintenance/abfirstaid)
 "rZ" = (
