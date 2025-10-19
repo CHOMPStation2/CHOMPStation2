@@ -1,14 +1,14 @@
-/datum/event/morph_spawn
+/datum/event/maintenance_critter
 	startWhen = 1
 	endWhen = 30
 
-/datum/event/morph_spawn/start()
+/datum/event/maintenance_critter/start()
 
 	var/obj/effect/landmark/spawnspot = null
 	var/list/possibleSpawnspots = list()
-	for(var/obj/effect/landmark/newSpawnspot in GLOB.landmarks_list)
-		if(newSpawnspot.name == "morphspawn")
-			possibleSpawnspots += newSpawnspot
+	for(var/obj/effect/landmark/L in GLOB.landmarks_list)
+		if(L.name == "maint_pred")
+			possibleSpawnspots += L
 	if(possibleSpawnspots.len)
 		spawnspot = pick(possibleSpawnspots)
 	else
@@ -19,4 +19,4 @@
 		kill()		// To prevent fake announcements
 		return
 
-	new /obj/structure/ghost_pod/ghost_activated/morphspawn(get_turf(spawnspot))
+	new /obj/structure/ghost_pod/ghost_activated/unified_hole(get_turf(spawnspot))

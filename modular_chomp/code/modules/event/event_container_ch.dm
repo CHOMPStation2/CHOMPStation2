@@ -75,11 +75,9 @@
 		// Pure RP fun, no mechanical effects.
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Ion Storm",				/datum/event/ionstorm, 					-125,	list(JOB_AI = 80, JOB_CYBORG = 50, DEPARTMENT_ENGINEERING = 15, DEPARTMENT_RESEARCH = 5), min_jobs = list(JOB_CYBORG = 3)),
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Jellyfish School",			/datum/event/jellyfish_migration,		5,		list(DEPARTMENT_ANY = 1, DEPARTMENT_SECURITY = 5, DEPARTMENT_MEDICAL = 3), 1),
-		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Maintenance Predator",		/datum/event/maintenance_predator,		75,		list(DEPARTMENT_SECURITY = 25, DEPARTMENT_RESEARCH = 10), 1),
-		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Maintenance Lurker",		/datum/event/maintenance_lurker,		100,	list(DEPARTMENT_ANY = 5), 0),
+		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Maintenance Critter",		/datum/event/maintenance_critter,		175,	list(DEPARTMENT_ANY = 5), 0),
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Meaty Ore Shower",			/datum/event/meteor_wave/meatyores,		-50,	list(DEPARTMENT_ENGINEERING = 45), 1, min_jobs = list(DEPARTMENT_ENGINEERING = 2)),
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Meteor Shower",			/datum/event/meteor_wave,				-50,	list(DEPARTMENT_ENGINEERING = 45), 1, min_jobs = list(DEPARTMENT_ENGINEERING = 2)),
-		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Morph Spawn",				/datum/event/morph_spawn,				75,		list(DEPARTMENT_ANY = 5), 0),
 		//New CHOMPStation event. Mice and lizards grow into rats and lizardmen respectively.
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Mutants",					/datum/event/mutants,					20,		list(DEPARTMENT_ANY = 15, DEPARTMENT_SECURITY = 25), 1),
 		// Opens doors in brig.  So just RP fun
