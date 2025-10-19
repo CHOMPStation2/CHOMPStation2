@@ -186,7 +186,7 @@
 		"marksman_rifle_frontier_phaser",
 		"handbow_frontier_phaser",
 	)
-	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_2_POINTS) //They mostly work on mobs.
+	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_3_POINTS) //They mostly work on mobs.
 	announce_channels = list(CHANNEL_SECURITY) //CHOMPEdit End - Adds Phase Weaponry
 
 /datum/techweb_node/cryogun //CHOMPEdit Start
@@ -197,7 +197,7 @@
 	design_ids = list(
 		"cryogun",
 	)
-	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_2_POINTS) //It's actually laughably weak.
+	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_3_POINTS) //It's actually laughably weak.
 	announce_channels = list(CHANNEL_SECURITY)
 
 /datum/techweb_node/caseless_rifle
