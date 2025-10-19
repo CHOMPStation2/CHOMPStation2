@@ -5,12 +5,12 @@
 	deform = 'icons/mob/human_races/r_def_human_vr.dmi'
 	primitive_form = SPECIES_MONKEY
 	unarmed_types = list(/datum/unarmed_attack/stomp, /datum/unarmed_attack/kick, /datum/unarmed_attack/punch, /datum/unarmed_attack/bite)
-	blurb = "Humanity originated in the Sol system, and over the last three centuries has spread \
+	blurb = "Humanity originated in the Sol system, and over the last five centuries has spread \
 	colonies across a wide swathe of space. They hold a wide range of forms and creeds.<br/><br/> \
 	While the central Sol government maintains control of its far-flung people, powerful corporate \
 	interests, rampant cyber and bio-augmentation and secretive factions make life on most human \
-	worlds tumultous at best."
-	wikilink="https://wiki.vore-station.net/Human"
+	worlds tumultous at best." //CHOMPedit: blurb variable
+	wikilink="https://wiki.chompstation13.net/index.php?title=Humans" //CHOMPEdit
 	catalogue_data = list(/datum/category_item/catalogue/fauna/humans)
 	num_alternate_languages = 3
 	species_language = LANGUAGE_SOL_COMMON
@@ -91,7 +91,7 @@
 	throwforce_absorb_threshold = 10
 	genders = list(MALE, FEMALE, PLURAL, NEUTER)
 
-	min_age = 32
+	min_age = 40 //ChompEDIT - Unathi lore minimal adult age.
 	max_age = 260
 
 	economic_modifier = 10
@@ -199,7 +199,7 @@
 	footstep = FOOTSTEP_MOB_CLAW
 
 	inherent_verbs = list(/mob/living/carbon/human/proc/tie_hair)
-	wikilink="https://wiki.vore-station.net/Unathi"
+	wikilink="https://wiki.chompstation13.net/index.php?title=Unathi" //CHOMPSedit: link to our wiki
 
 /datum/species/unathi/equip_survival_gear(var/mob/living/carbon/human/H)
 	..()
@@ -245,7 +245,7 @@
 	and have accelerated the fledgling culture into the interstellar age. Their history is full of war and highly fractious \
 	governments, something that permeates even to today's times. They prefer colder, tundra-like climates, much like their \
 	home worlds and speak a variety of languages, especially Siik and Akhani."
-	wikilink="https://wiki.vore-station.net/Tajaran"
+	wikilink="https://wiki.chompstation13.net/index.php?title=Tajaran" //CHOMPEdit: links to our wiki
 	catalogue_data = list(/datum/category_item/catalogue/fauna/tajaran)
 
 	body_temperature = 280.15	//Even more cold resistant, even more flammable
@@ -337,7 +337,7 @@
 	of the Qerr'Katish, a caste within their society which keeps the empire of the Skrell running smoothly. Skrell are \
 	herbivores on the whole and tend to be co-operative with the other species of the galaxy, although they rarely reveal \
 	the secrets of their empire to their allies."
-	wikilink="https://wiki.vore-station.net/Skrell"
+	wikilink="https://wiki.chompstation13.net/index.php?title=Skrell" //CHOMPedit: link to our wiki
 	catalogue_data = list(/datum/category_item/catalogue/fauna/skrell)
 	num_alternate_languages = 3
 	secondary_langs = list(LANGUAGE_SKRELLIAN, LANGUAGE_SCHECHI)
@@ -349,7 +349,7 @@
 
 	water_movement = -3
 
-	min_age = 18
+	min_age = 19 //ChompEDIT Lore-based adulthood age for this species is greater than 18.
 	max_age = 130
 
 	economic_modifier = 10
@@ -464,14 +464,12 @@
 	min_age = 18
 	max_age = 90
 
-	// male_scream_sound = null //CHOMPedit
-	// female_scream_sound = null //CHOMPedit
-
 	blurb = "The Zaddat are an Unathi client race only recently introduced to SolGov space. Having evolved on \
 	the high-pressure and post-apocalyptic world of Xohok, Zaddat require an environmental suit called a Shroud \
 	to survive in usual planetary and station atmospheres. Despite these restrictions, worsening conditions on \
 	Xohok and the blessing of the Moghes Hegemony have lead the Zaddat to enter human space in search of work \
 	and living space."
+	wikilink="https://wiki.chompstation13.net/index.php?title=Zaddat" //CHOMPedit: link to our wiki
 	catalogue_data = list(/datum/category_item/catalogue/fauna/zaddat)
 
 	hazard_high_pressure = HAZARD_HIGH_PRESSURE + 500  // Dangerously high pressure.
@@ -576,7 +574,7 @@
 	all known species, especially the Skrell. Their communal mind makes them slow to react, and they have difficulty understanding \
 	even the simplest concepts of other minds. Their alien physiology allows them survive happily off a diet of nothing but light, \
 	water and other radiation."
-	wikilink="https://wiki.vore-station.net/Diona"
+	wikilink="https://wiki.chompstation13.net/index.php?title=Diona" //CHOMPedit
 	catalogue_data = list(/datum/category_item/catalogue/fauna/dionaea)
 
 	has_organ = list(
@@ -623,7 +621,7 @@
 	body_temperature = T0C + 15		//make the plant people have a bit lower body temperature, why not
 
 	flags = NO_DNA | NO_SLEEVE | IS_PLANT | NO_PAIN | NO_SLIP | NO_MINOR_CUT | NO_DEFIB
-	spawn_flags = SPECIES_CAN_JOIN // CHOMPEdit
+	spawn_flags = SPECIES_CAN_JOIN | SPECIES_IS_WHITELISTED | SPECIES_WHITELIST_SELECTABLE	//CHOMPStation Edit: restore whitelist requirement
 
 	blood_color = "#004400"
 	flesh_color = "#907E4A"
@@ -717,8 +715,8 @@
 /datum/species/sergal
 	name = SPECIES_SERGAL
 	name_plural = "Sergals"
-	icobase = 'icons/mob/human_races/r_sergal.dmi'
-	deform = 'icons/mob/human_races/r_def_sergal.dmi'
+	icobase = 'modular_chomp/icons/mob/human_races/r_sergal.dmi' //ChompEDIT - our icons
+	deform = 'modular_chomp/icons/mob/human_races/r_def_sergal.dmi' //ChompEDIT - our icons
 	tail = "tail"
 	icobase_tail = 1
 	unarmed_types = list(/datum/unarmed_attack/stomp, /datum/unarmed_attack/kick, /datum/unarmed_attack/claws, /datum/unarmed_attack/bite/sharp)
@@ -801,7 +799,7 @@
 	assisted_langs = list(LANGUAGE_EAL, LANGUAGE_ROOTLOCAL, LANGUAGE_ROOTGLOBAL, LANGUAGE_VOX, LANGUAGE_PROMETHEAN)
 	inherent_verbs = list(/mob/living/carbon/human/proc/tie_hair, /mob/living/carbon/human/proc/water_stealth, /mob/living/carbon/human/proc/underwater_devour)
 	min_age = 18
-	max_age = 80
+	max_age = 110 //CHOMPEdit
 
 	blurb = "The Akula are a species of amphibious humanoids like the Skrell, but have an appearance very similar to that of a shark. \
 	They were first discovered as a primitive race of underwater dwelling tribal creatures by the Skrell. At first they were not believed \
@@ -853,7 +851,7 @@
 		/mob/living/proc/start_wings_hovering,
 		/mob/living/carbon/human/proc/tie_hair)
 	min_age = 18
-	max_age = 80
+	max_age = 110 //CHOMPedit
 
 	blurb = "Nevreans are a race of avian and dinosaur-like creatures living on Tal. They belong to a group of races that hails from Eltus, \
 	in the Vilous system. Unlike sergals whom they share a star system with, their species is a very peaceful one. They possess remarkable \
@@ -900,13 +898,15 @@
 	min_age = 20
 	max_age = 80
 
+	species_sounds = "Vulpine"
+
 	blurb = "The fennec-like, blue-blooded Zorren are native to Virgo 4/Menhir and are descendants of a precursor species \
 			that is thought to be responsible for the near-collapse of the biosphere of the planet. \
 			With societies organised around hierarchal caste systems (such as the Royal Zorren) or freedom and strength (such as the Free Tribe Zorren), \
 			they now slowly recover from their previous hubris and aim to revitalize their planet. While many Zorren live in pre-industrial conditions by necessity, \
 			they are an interstellar species known for their pride and stubbornness and doggedly hold out on a Deathworld of their own creation. \
 			As local species, they hold moderate sway on local corporations and are hired by NT and other companies, although they find \"Outlander\" culture deeply weird."
-	wikilink="https://wiki.vore-station.net/Zorren"
+	wikilink="https://wiki.chompstation13.net/index.php?title=Zorren" //CHOMPEdit: link to our wiki
 
 	catalogue_data = list(/datum/category_item/catalogue/fauna/zorren)
 
@@ -944,10 +944,11 @@
 /datum/species/vulpkanin
 	name = SPECIES_VULPKANIN
 	name_plural = "Vulpkanin"
-	blurb = "Vulpkanin are a species of sapient canine bipeds, who are the descendants of a lost colony during the waning days of a Precursor species, \
-	from which their distant cousins, the Zorren, also originate from. Independent and iconoclast, they have abandoned the ideals of their forefathers \
-	largely and prefer to look outwards as explorers and scientists to forge their own identity. They speak a guttural language known as 'Canilunzt' \
-	which has a heavy emphasis on utilizing tail positioning and ear twitches to communicate intent."
+	blurb = "Vulpkanin are a species of sharp-witted canine-pideds residing on the planet Altam just barely within the \
+	dual-star Vazzend system. Their politically de-centralized society and independent natures have led them to become a species and \
+	culture both feared and respected for their scientific breakthroughs. Discovery, loyalty, and utilitarianism dominates their lifestyles \
+	to the degree it can cause conflict with more rigorous and strict authorities. They speak a guttural language known as 'Canilunzt' \
+	which has a heavy emphasis on utilizing tail positioning and ear twitches to communicate intent." //CHOMPedit
 	icobase = 'icons/mob/human_races/r_vulpkanin.dmi'
 	deform = 'icons/mob/human_races/r_vulpkanin.dmi'
 	secondary_langs = list(LANGUAGE_CANILUNZT)
@@ -962,6 +963,11 @@
 	color_mult = 1
 	inherent_verbs = list(/mob/living/carbon/human/proc/lick_wounds,
 		/mob/living/carbon/human/proc/tie_hair)
+
+	pain_verb_1p = list("yelp", "growl")
+	pain_verb_3p = list("yelps", "growls")
+
+	species_sounds = "Canine"
 
 	wikilink="https://wiki.vore-station.net/Backstory#Vulpkanin"
 
@@ -1124,12 +1130,12 @@
 	slowdown = -1
 	snow_movement = -2	// Ignores light snow
 	item_slowdown_mod = 2	// Tiny birds don't like heavy things
-	total_health = 50
-	brute_mod = 1.35
-	burn_mod =  1.35
+	total_health = 75 //CHOMPEdit
+	//brute_mod = 1.35 //CHOMPRemove
+	//burn_mod =  1.35 //CHOMPRemove
 	mob_size = MOB_MEDIUM
 	pass_flags = PASSTABLE
-	holder_type = /obj/item/holder/human
+	holder_type = /obj/item/holder/micro
 //	short_sighted = 1
 	has_vibration_sense = TRUE
 	blood_volume = 400
@@ -1335,8 +1341,7 @@
 	heat_level_3 = 1150
 
 	flags =  NO_DNA | NO_SLEEVE
-	spawn_flags = SPECIES_CAN_JOIN | SPECIES_IS_WHITELISTED | SPECIES_WHITELIST_SELECTABLE
-
+	spawn_flags = SPECIES_IS_RESTRICTED //SPECIES_CAN_JOIN | SPECIES_IS_WHITELISTED | SPECIES_WHITELIST_SELECTABLE CHOMPedit: disabled maybe forever
 	reagent_tag = IS_SHADEKIN		// for shadekin-unqiue chem interactions
 
 	flesh_color = "#FFC896"
@@ -1405,6 +1410,8 @@
 
 	min_age = 18
 	max_age = 80
+
+	species_sounds = "Vulpine"
 
 	//primitive_form = "" //We don't have fennec-monkey sprites.
 	spawn_flags = SPECIES_IS_RESTRICTED
@@ -1475,6 +1482,8 @@
 
 	min_age = 18
 	max_age = 80
+
+	species_sounds = "Mouse"
 
 	blurb = "The Altevian are a species of tall, rodent humanoids that are akin to rats for their features. \
 	The Altevian, unlike most species, do not have a home planet, nor system, adopting a fully nomadic lifestyle \

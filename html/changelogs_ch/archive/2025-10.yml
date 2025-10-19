@@ -79,3 +79,169 @@
       them on or off!
   Will:
   - bugfix: shadekin no longer slip on wet or icey turfs while phased
+2025-10-10:
+  Diana:
+  - rscadd: 'Adds a new loadout item: the Cloak of Eyes'
+  - code_imp: 'Adds a new reactive icon subtype: Clothing'
+  - image: Adds sprites for the Cloak of Eyes
+  - code_imp: Framework added for dephasing rounds
+  FluffMedic:
+  - balance: Tyr Shield boss will stay unshielded for longer, shield HP is less, true
+      HP is more.
+  - bugfix: Tyr Sabre uses the proper sprite now
+  - bugfix: Weathered Agate should be fully shifted to Energized Agate for science
+      crafting
+  Ryumi:
+  - qol: Rigsuits now use balloon alerts instead of logged messages when parts of
+      them are deployed and retracted. No more log spam for rigsuit users!
+  Will:
+  - rscadd: Tea, coffee, ramen, fruit teas, and hot chocolate recipes now require
+      boiling on a bunsen burner or other distilling machine. Does not apply to coffee/tea
+      dispensers that already contain coffee/tea.
+  - rscadd: Added a simple kettle that acts as a beaker for more thematic brewing
+2025-10-11:
+  Will:
+  - code_imp: finished tea deconflict
+2025-10-12:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: Changed the description of Mochi Cakes as some people found the original
+      a bit offensive.
+2025-10-13:
+  CHOMPStation2StaffMirrorBot:
+  - qol: added light replacers to engineering's protolathes
+  Ryumi:
+  - qol: When using a PDA, if you receive a messinging server error when trying to
+      send a PDA message to someone, your message will now be saved. Now you won't
+      have to retype everything because the servers got quirky!
+  Will:
+  - bugfix: noslip shoes and magboots are no longer ignored by slippery turfs
+  - bugfix: spacelube 2-3 turf slide after leaving the slippery turf restored
+  - balance: Distilling oxygen and hydrogen from water no longer uses a phoron catalyst,
+      and instead uses platinum and different atmospheres.
+  - bugfix: methane missing from gas scanner console in phoronics/toxins
+2025-10-14:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: Fixes Fat Feline 2 sprites from going invisible on loafing
+  - code_imp: update dependencies
+  Kashargul:
+  - qol: enables science shells for AI
+  TheCaramelion:
+  - rscadd: Pills digest when dropped in bellies
+  Will, Diana:
+  - code_imp: implements signal COMSIG_MOB_RESET_PERSPECTIVE
+  - code_imp: implements signal COMSIG_CLIENT_SET_EYE
+  - code_imp: implements signal COMSIG_MOB_DNA_MUTATION
+  - code_imp: implements signal COMSIG_MOB_DROPPED_ITEM
+  - code_imp: implements signal COMSIG_REMOTE_VIEW_CLEAR
+  - refactor: rebuilds client eye transfer code entirely
+  - refactor: cleaned up holder drop and destroy code
+  - rscadd: several small pai QOL, ejecting from pda, and escaping vore eggs
+  - code_imp: REMOTEVIEW_ON_ENTER flag for non-item objects
+  - bugfix: black screen or locked game view when dropped or moved between objects
+      or mob holders
+  - bugfix: pai hud being non functional
+  - bugfix: Some AI hud buttons being non functional
+  - bugfix: You can no longer use binoculars/scopes from inside a vore belly or sleeper
+  - bugfix: Forcewall spellbook recoil no longer makes you an invisible statue, it
+      just makes you a statue
+  - bugfix: dropping someone from a holder within a vore belly no longer breaks their
+      screen
+  - bugfix: dropping pais from a holder no longer breaks their screen
+  - bugfix: dropping mice from a holder no longer breaks their screen
+  - bugfix: rare situation where having remote view gene and being put on a surgery
+      table would lock your view to the table
+  - bugfix: pda breaking most types of remote views by never releasing it's mob machine
+      state
+2025-10-15:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: ticket replies failing in admin to admin interaction
+  Diana:
+  - qol: WALKING (as in WALK INTENT) near disposals with unlucky will no longer make
+      you fall into them
+  - bugfix: Unlucky individuals being disposal'd can not crawl out if the unit is
+      prepared to dispose of them.
+  - bugfix: You can now longer eat yourself
+  - bugfix: You can no longer get eaten by people that are not physically present
+  - code_imp: Spont vore eating code is better
+  Will:
+  - bugfix: remote view crash if you try to use an overmap shuttle while blind
+  - bugfix: remote view crash if you start a remote view with a zooming item and disconnect
+  - bugfix: struggling out of most containers will respect being in a disposal packet
+  - bugfix: admin teleports and get_movable VV action clear remote views
+  - bugfix: attempting to remoteview a qdeleted object will force reset your view
+      to yourself
+  - bugfix: throwing micros inside food into the stardog mouth no longer results in
+      a black screen for the micro
+  Will, Diana:
+  - rscadd: Destructive analyzer returns
+  - rscadd: Destructive analyzer circuit board added to Fundamental Science techweb
+      node
+  - rscadd: Destructive analyzer can be linked to ore silo with multitool if built
+      in round
+  - rscadd: Research samples give research points when put through the destructive
+      analyzer.
+2025-10-18:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: shadekin nutrition gains
+  Diana:
+  - qol: Teshari now have a visible sprite when picked up! They can be held in your
+      hand, on your head, or on your back!
+  - bugfix: High Zorren now have the proper vulpine speech sound
+  - bugfix: Altevian now have the proper mouse speech sound
+  - bugfix: Vulpkanin now have the proper canine species sound
+  - qol: Being attacked in the groin gives a less wordy message
+  - bugfix: Dragging now will always warn you if it will damage the person you're
+      dragging
+  - bugfix: Dragging now properly tell you if the person being dragged is damaged.
+  - bugfix: Fixes issue where you would bleed via drag when you had no bleeding wounds
+      / broken bones
+  - qol: Dragging will provide a visual message on screen if the person is being injured,
+      as opposed to just chat.
+  - rscadd: Adds boneless trait
+  - bugfix: Brains no longer qdel() if the head is gibbed.
+  Guti:
+  - bugfix: Fixed FBP not being able to change eye colour
+  - refactor: Refactored pronouns handling
+  - rscdel: Removed /datum/gender
+  - code_imp: Added pronoun helper procs
+  - bugfix: Fixed examining others using the examiner's pronouns instead of the examined
+  TheCaramelion:
+  - maptweak: Added the Destructive Analyzer to Southern Cross
+  Will:
+  - bugfix: Borg charger rarely locking focus to the charger itself
+  Zizzi:
+  - rscadd: Added string padding circuit
+2025-10-19:
+  CHOMPStation2StaffMirrorBot:
+  - refactor: unified the mob, morph, and lurker spawns into a single multipurpose
+      hole that can be used to spawn any one of them based on the interacting ghost's
+      choice. the associated seperate events have been replaced with a single event
+      that uses the new unified spawner, so that the events are no longer competing
+      for spawn chances. the new spawner also has a high-vis icon so that it won't
+      be difficult for ghosts to spot if they're just scrolling around with darkness
+      enabled.
+  - rscadd: Added item TF functionality to the casino's sentient prize handlers. People
+      who put themselves up as a sentient prize have the option to allow the person
+      who claims them to choose to turn them into an item!
+  - code_imp: Added a global list of item TF options, to make it easier for future
+      item mechanics to have a more uniform selection of things people would probably
+      prefer to get turned into.
+  Diana:
+  - balance: Makes Virus Immunity trait 3 points
+  FluffMedic:
+  - balance: Many Tyr Bosses have had adjustments to their movesets
+  VictorZisthus:
+  - qol: Candles now burn for FOUR hours! They appear slightly melted at the two hour
+      mark, and very melted with only a half hour burn time left. A single pack of
+      candles should last you a whole shift now!
+  - bugfix: Logcabin-19x9 no longer reports power alarms to the station.
+  Will:
+  - code_imp: Unit testing for techwebs
+  - bugfix: all techweb designs are accessible to science
+  - bugfix: '"hardsuit graviton scanners" now gives you the proper graviton rig item'
+  - bugfix: '"radioisotope TEG circuit" is no longer missing from techweb'
+  - bugfix: '"hardsuit mining scanners" is no longer missing from techweb'
+  - balance: '"Precursor Technology" points cost increased by 1 tier'
+  - balance: '"Precursor Engineering" points cost increased by 1 tier'
+  - balance: '"''NSFW'' Gun" points cost increased by 1 tier'
+  - balance: '"Confetti Cannon" points cost increased by 2 tiers'

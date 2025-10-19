@@ -1,10 +1,3 @@
-/datum/species/teshari
-	total_health = 75
-	brute_mod = 1
-	burn_mod = 1
-	mob_size = MOB_SMALL
-	holder_type = /obj/item/holder/micro
-
 // allow teshari to always be scooped, as long as pref is enabled
 /mob/living/MouseDrop(var/atom/over_object)
 	// make sure src (The dragged) is human
