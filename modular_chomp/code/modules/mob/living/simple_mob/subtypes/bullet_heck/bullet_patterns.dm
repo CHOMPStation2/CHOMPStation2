@@ -1,47 +1,3 @@
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/teleport_attack(atom/target, var/next_cycle, var/tele_miss)
-	// Teleport attack.
-	if(!target)
-		to_chat(src, span_warning("There's nothing to teleport to."))
-		return FALSE
-
-	var/list/nearby_things = range(tele_miss, target)
-	var/list/valid_turfs = list()
-
-	// All this work to just go to a non-dense tile.
-	for(var/turf/potential_turf in nearby_things)
-		var/valid_turf = TRUE
-		if(potential_turf.density)
-			continue
-		for(var/atom/movable/AM in potential_turf)
-			if(AM.density)
-				valid_turf = FALSE
-		if(valid_turf)
-			valid_turfs.Add(potential_turf)
-
-	if(!(valid_turfs.len))
-		to_chat(src, span_warning("There wasn't an unoccupied spot to teleport to."))
-		return FALSE
-
-	var/turf/target_turf = pick(valid_turfs)
-	var/turf/T = get_turf(src)
-
-	var/datum/effect/effect/system/spark_spread/s1 = new /datum/effect/effect/system/spark_spread
-	s1.set_up(5, 1, T)
-	var/datum/effect/effect/system/spark_spread/s2 = new /datum/effect/effect/system/spark_spread
-	s2.set_up(5, 1, target_turf)
-
-
-	T.visible_message(span_warning("\The [src] vanishes!"))
-	s1.start()
-
-	forceMove(target_turf)
-	playsound(target_turf, 'sound/effects/phasein.ogg', 50, 1)
-	to_chat(src, span_notice("You teleport to \the [target_turf]."))
-
-	target_turf.visible_message(span_warning("\The [src] appears!"))
-	s2.start()
-	attackcycle = next_cycle
-
 /mob/living/simple_mob/mechanical/mecha/eclipse/proc/singleproj/(atom/target, var/next_cycle)
 	if(!target)
 		return
@@ -1099,16 +1055,82 @@
 	else
 		attackcycle = next_cycle
 
-/datum/modifier/mmo_drop
-	name = "Targeted"
-	on_created_text = span_notice("You feel like you're being targeted.")
-	stacks = MODIFIER_STACK_FORBID
-	var/puddleitem = /obj/effect/spider/spiderling/antling
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/bullet_blossom(atom/target, var/next_cycle, var/fire_delay)
+	bullet_heck(target, 7, 7)
+	bullet_heck(target, -7, -7)
+	bullet_heck(target, -7, 7)
+	bullet_heck(target, 7, -7)
+	addtimer(CALLBACK(src, PROC_REF(bullet_blossomA), target, next_cycle, fire_delay), fire_delay, TIMER_DELETE_ME)
 
-/datum/modifier/mmo_drop/on_expire()
-	if(holder.stat != DEAD)
-		var/turf/T = get_turf(holder)
-		new puddleitem(T)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/bullet_blossomA(atom/target, var/next_cycle, var/fire_delay)
+	bullet_heck(target, 6, 7)
+	bullet_heck(target, 7, 6)
+	bullet_heck(target, -6, -7)
+	bullet_heck(target, -7, -6)
+	bullet_heck(target, -6, 7)
+	bullet_heck(target, -7, 6)
+	bullet_heck(target, 6, -7)
+	bullet_heck(target, 7, -6)
+	addtimer(CALLBACK(src, PROC_REF(bullet_blossomB), target, next_cycle, fire_delay), fire_delay, TIMER_DELETE_ME)
 
-/datum/modifier/mmo_drop/jelly_fish
-	puddleitem = /obj/effect/ant_structure/trap
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/bullet_blossomB(atom/target, var/next_cycle, var/fire_delay)
+	bullet_heck(target, 5, 7)
+	bullet_heck(target, 7, 5)
+	bullet_heck(target, -5, -7)
+	bullet_heck(target, -7, -5)
+	bullet_heck(target, -5, 7)
+	bullet_heck(target, -7, 5)
+	bullet_heck(target, 5, -7)
+	bullet_heck(target, 7, -5)
+	addtimer(CALLBACK(src, PROC_REF(bullet_blossomC), target, next_cycle, fire_delay), fire_delay, TIMER_DELETE_ME)
+
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/bullet_blossomC(atom/target, var/next_cycle, var/fire_delay)
+	bullet_heck(target, 4, 7)
+	bullet_heck(target, 7, 4)
+	bullet_heck(target, -4, -7)
+	bullet_heck(target, -7, -4)
+	bullet_heck(target, -4, 7)
+	bullet_heck(target, -7, 4)
+	bullet_heck(target, 4, -7)
+	bullet_heck(target, 7, -4)
+	addtimer(CALLBACK(src, PROC_REF(bullet_blossomD), target, next_cycle, fire_delay), fire_delay, TIMER_DELETE_ME)
+
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/bullet_blossomD(atom/target, var/next_cycle, var/fire_delay)
+	bullet_heck(target, 3, 7)
+	bullet_heck(target, 7, 3)
+	bullet_heck(target, -3, -7)
+	bullet_heck(target, -7, -3)
+	bullet_heck(target, -3, 7)
+	bullet_heck(target, -7, 3)
+	bullet_heck(target, 3, -7)
+	bullet_heck(target, 7, -3)
+	addtimer(CALLBACK(src, PROC_REF(bullet_blossomE), target, next_cycle, fire_delay), fire_delay, TIMER_DELETE_ME)
+
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/bullet_blossomE(atom/target, var/next_cycle, var/fire_delay)
+	bullet_heck(target, 2, 7)
+	bullet_heck(target, 7, 2)
+	bullet_heck(target, -2, -7)
+	bullet_heck(target, -7, -2)
+	bullet_heck(target, -2, 7)
+	bullet_heck(target, -7, 2)
+	bullet_heck(target, 2, -7)
+	bullet_heck(target, 7, -2)
+	addtimer(CALLBACK(src, PROC_REF(bullet_blossomF), target, next_cycle, fire_delay), fire_delay, TIMER_DELETE_ME)
+
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/bullet_blossomF(atom/target, var/next_cycle, var/fire_delay)
+	bullet_heck(target, 1, 7)
+	bullet_heck(target, 7, 1)
+	bullet_heck(target, -1, -7)
+	bullet_heck(target, -7, -1)
+	bullet_heck(target, -1, 7)
+	bullet_heck(target, -7, 1)
+	bullet_heck(target, 1, -7)
+	bullet_heck(target, 7, -1)
+	addtimer(CALLBACK(src, PROC_REF(bullet_blossomG), target, next_cycle, fire_delay), fire_delay, TIMER_DELETE_ME)
+
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/bullet_blossomG(atom/target, var/next_cycle, var/fire_delay)
+	bullet_heck(target, 0, 7)
+	bullet_heck(target, -7, 0)
+	bullet_heck(target, 0, -7)
+	bullet_heck(target, 7, 0)
+	attackcycle = next_cycle
