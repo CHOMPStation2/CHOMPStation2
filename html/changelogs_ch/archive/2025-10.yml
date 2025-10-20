@@ -245,3 +245,6 @@
   - balance: '"Precursor Engineering" points cost increased by 1 tier'
   - balance: '"''NSFW'' Gun" points cost increased by 1 tier'
   - balance: '"Confetti Cannon" points cost increased by 2 tiers'
+2025-10-20:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: free ghost role slot spawn
