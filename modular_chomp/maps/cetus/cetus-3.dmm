@@ -6813,6 +6813,7 @@
 	dir = 1
 	},
 /obj/random/junk,
+/obj/structure/ghost_pod/ghost_activated/unified_hole,
 /turf/simulated/floor/lino,
 /area/maintenance/cetus/shallow/derelict/kitchen)
 "eoA" = (
@@ -9974,6 +9975,13 @@
 	},
 /turf/simulated/floor/plating,
 /area/tcomm/computer)
+"ghv" = (
+/obj/machinery/light/fluorescent,
+/obj/structure/ghost_pod/ghost_activated/unified_hole,
+/turf/simulated/floor/water/pool/station{
+	name = "flooded tiles"
+	},
+/area/maintenance/cetus/shallow/flooded)
 "ghI" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
@@ -18165,7 +18173,6 @@
 /turf/simulated/floor/carpet/graycarpet,
 /area/maintenance/cetus/shallow/gamba)
 "kWH" = (
-/obj/structure/ghost_pod/ghost_activated/maintpred/no_announce,
 /obj/machinery/atm{
 	pixel_y = 30
 	},
@@ -26371,6 +26378,10 @@
 	},
 /turf/simulated/floor/tiled,
 /area/rnd/cetus/entry)
+"pGR" = (
+/obj/structure/ghost_pod/ghost_activated/unified_hole,
+/turf/unsimulated/floor/dark,
+/area/maintenance/cetus/jrthreeport)
 "pHc" = (
 /obj/effect/wingrille_spawn/reinforced,
 /obj/structure/transit_tube{
@@ -28540,6 +28551,7 @@
 /area/maintenance/cetus/d3docks)
 "qVP" = (
 /obj/machinery/light/small/yellowed,
+/obj/structure/ghost_pod/ghost_activated/unified_hole,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/threefp)
 "qVS" = (
@@ -39576,6 +39588,10 @@
 	},
 /turf/simulated/floor/tiled,
 /area/rnd/cetus/entry)
+"xvX" = (
+/obj/structure/ghost_pod/ghost_activated/unified_hole,
+/turf/simulated/floor/carpet/graycarpet,
+/area/maintenance/cetus/shallow/fp)
 "xwa" = (
 /turf/simulated/wall/r_wall,
 /area/engineering/cetus/jointsubstation)
@@ -57413,7 +57429,7 @@ kwh
 dSN
 qcN
 qcN
-qcN
+pGR
 dzq
 qcN
 kwh
@@ -64749,7 +64765,7 @@ amd
 amd
 gKy
 tps
-woC
+ghv
 noW
 tgZ
 tgZ
@@ -68316,7 +68332,7 @@ dIu
 chR
 dIu
 dIu
-dIu
+xvX
 dIu
 rgj
 chR

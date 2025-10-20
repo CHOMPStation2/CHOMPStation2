@@ -26901,9 +26901,9 @@
 /turf/simulated/floor/lino,
 /area/crew_quarters/cetus/meteor/bar)
 "olJ" = (
-/obj/structure/ghost_pod/ghost_activated/maintpred/no_announce,
+/obj/structure/ghost_pod/ghost_activated/unified_hole,
 /turf/simulated/floor/outdoors/rocks/cetus,
-/area/maintenance/cetus/meteor/ragecage)
+/area/maintenance/cetus/meteor/central)
 "omh" = (
 /obj/structure/disposalpipe/tagger{
 	name = "Joint Research";
@@ -28558,6 +28558,10 @@
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/cetus/meteor/cafeteriaf1)
+"pfP" = (
+/obj/structure/ghost_pod/ghost_activated/unified_hole,
+/turf/simulated/shuttle/floor/black,
+/area/maintenance/cetus/meteor/pond)
 "pgu" = (
 /obj/effect/floor_decal/spline/fancy/wood,
 /obj/machinery/disposal,
@@ -76706,7 +76710,7 @@ iTF
 rEU
 xRm
 lWC
-olJ
+dHN
 bsy
 bsy
 oTC
@@ -76946,7 +76950,7 @@ bWR
 eOX
 kVj
 bZx
-cpp
+pfP
 qVU
 fqX
 xPi
@@ -88839,7 +88843,7 @@ slB
 slB
 eOO
 eOO
-ePw
+olJ
 eAT
 ePw
 qrH
