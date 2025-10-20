@@ -13936,10 +13936,6 @@
 	},
 /turf/simulated/floor/carpet,
 /area/crew_quarters/cetus/Libraryf1)
-"ePO" = (
-/obj/structure/ghost_pod/ghost_activated/maintpred/no_announce,
-/turf/simulated/floor/outdoors/rocks/cetus,
-/area/maintenance/cetus/twojrport)
 "ePX" = (
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/Engineering_EVA)
@@ -81665,7 +81661,7 @@ iMO
 iMO
 iMO
 bRa
-ePO
+ufw
 bRa
 bRa
 bRa

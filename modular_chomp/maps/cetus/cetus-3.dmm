@@ -2304,6 +2304,10 @@
 /obj/random/junk,
 /turf/simulated/open,
 /area/maintenance/cetus/jrthreeport)
+"bxi" = (
+/obj/structure/ghost_pod/ghost_activated/unified_hole,
+/turf/unsimulated/floor/dark,
+/area/maintenance/cetus/jrthreeport)
 "bxl" = (
 /obj/effect/floor_decal/corner/grey/diagonal{
 	dir = 4
@@ -9975,13 +9979,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/tcomm/computer)
-"ghv" = (
-/obj/machinery/light/fluorescent,
-/obj/structure/ghost_pod/ghost_activated/unified_hole,
-/turf/simulated/floor/water/pool/station{
-	name = "flooded tiles"
-	},
-/area/maintenance/cetus/shallow/flooded)
 "ghI" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
@@ -20908,6 +20905,10 @@
 	},
 /turf/simulated/floor/carpet/graycarpet,
 /area/crew_quarters/cetus/escapepodfore)
+"mvw" = (
+/obj/structure/ghost_pod/ghost_activated/unified_hole,
+/turf/simulated/floor/carpet/graycarpet,
+/area/maintenance/cetus/shallow/fp)
 "mvV" = (
 /obj/machinery/shower{
 	dir = 1
@@ -21857,6 +21858,7 @@
 /obj/machinery/shower{
 	pixel_y = 8
 	},
+/obj/random/soap,
 /turf/simulated/floor/tiled/kafel_full,
 /area/maintenance/cetus/shallow/derelict/bathroom)
 "mXl" = (
@@ -26378,10 +26380,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/rnd/cetus/entry)
-"pGR" = (
-/obj/structure/ghost_pod/ghost_activated/unified_hole,
-/turf/unsimulated/floor/dark,
-/area/maintenance/cetus/jrthreeport)
 "pHc" = (
 /obj/effect/wingrille_spawn/reinforced,
 /obj/structure/transit_tube{
@@ -33954,6 +33952,13 @@
 /obj/random/trash_pile,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/jrthreeport)
+"ugA" = (
+/obj/machinery/light/fluorescent,
+/obj/structure/ghost_pod/ghost_activated/unified_hole,
+/turf/simulated/floor/water/pool/station{
+	name = "flooded tiles"
+	},
+/area/maintenance/cetus/shallow/flooded)
 "ugB" = (
 /obj/machinery/door/window/brigdoor/southright{
 	name = "Medical Staff Only";
@@ -39588,10 +39593,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/rnd/cetus/entry)
-"xvX" = (
-/obj/structure/ghost_pod/ghost_activated/unified_hole,
-/turf/simulated/floor/carpet/graycarpet,
-/area/maintenance/cetus/shallow/fp)
 "xwa" = (
 /turf/simulated/wall/r_wall,
 /area/engineering/cetus/jointsubstation)
@@ -57429,7 +57430,7 @@ kwh
 dSN
 qcN
 qcN
-pGR
+bxi
 dzq
 qcN
 kwh
@@ -64765,7 +64766,7 @@ amd
 amd
 gKy
 tps
-ghv
+ugA
 noW
 tgZ
 tgZ
@@ -68332,7 +68333,7 @@ dIu
 chR
 dIu
 dIu
-xvX
+mvw
 dIu
 rgj
 chR

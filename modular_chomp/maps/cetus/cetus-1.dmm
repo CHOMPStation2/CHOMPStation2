@@ -14814,6 +14814,12 @@
 /obj/effect/floor_decal/industrial/danger/corner{
 	dir = 4
 	},
+/obj/machinery/button/remote/blast_door{
+	id = "EngineVent";
+	name = "Reactor Ventillatory Control";
+	pixel_x = -32;
+	req_access = list(10)
+	},
 /turf/simulated/floor/plating,
 /area/engineering/cetus/meteor/engineroom)
 "hZR" = (
@@ -26812,6 +26818,11 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
 	},
+/obj/item/radio/intercom{
+	dir = 4;
+	name = "Station Intercom (General)";
+	pixel_x = 21
+	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/cetus/meteor/pool)
 "oks" = (
@@ -26902,8 +26913,8 @@
 /area/crew_quarters/cetus/meteor/bar)
 "olJ" = (
 /obj/structure/ghost_pod/ghost_activated/unified_hole,
-/turf/simulated/floor/outdoors/rocks/cetus,
-/area/maintenance/cetus/meteor/central)
+/turf/simulated/shuttle/floor/black,
+/area/maintenance/cetus/meteor/pond)
 "omh" = (
 /obj/structure/disposalpipe/tagger{
 	name = "Joint Research";
@@ -28558,10 +28569,6 @@
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/cetus/meteor/cafeteriaf1)
-"pfP" = (
-/obj/structure/ghost_pod/ghost_activated/unified_hole,
-/turf/simulated/shuttle/floor/black,
-/area/maintenance/cetus/meteor/pond)
 "pgu" = (
 /obj/effect/floor_decal/spline/fancy/wood,
 /obj/machinery/disposal,
@@ -30348,11 +30355,6 @@
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 4
-	},
-/obj/item/radio/intercom{
-	name = "Station Intercom (General)";
-	pixel_y = -20;
-	pixel_x = -32
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/cetus/meteor/pool)
@@ -38276,17 +38278,9 @@
 	req_access = list(10)
 	},
 /obj/machinery/button/remote/blast_door{
-	id = "EngineVent";
-	name = "Reactor Ventillatory Control";
-	pixel_x = -4;
-	req_access = list(10);
-	pixel_y = 38
-	},
-/obj/machinery/button/remote/blast_door{
 	desc = "A remote control-switch for the engine control room blast doors.";
 	id = "EngineBlast";
 	name = "Engine Monitoring Room Blast Doors";
-	pixel_x = 4;
 	pixel_y = 38;
 	req_access = list(10)
 	},
@@ -40661,6 +40655,10 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /turf/simulated/floor/tiled,
 /area/crew_quarters/cetus/meteor/hallway2)
+"vgM" = (
+/obj/structure/ghost_pod/ghost_activated/unified_hole,
+/turf/simulated/floor/outdoors/rocks/cetus,
+/area/maintenance/cetus/meteor/central)
 "vgZ" = (
 /turf/simulated/floor/tiled/dark,
 /area/medical/surgery_storage)
@@ -76950,7 +76948,7 @@ bWR
 eOX
 kVj
 bZx
-pfP
+olJ
 qVU
 fqX
 xPi
@@ -88843,7 +88841,7 @@ slB
 slB
 eOO
 eOO
-olJ
+vgM
 eAT
 ePw
 qrH
