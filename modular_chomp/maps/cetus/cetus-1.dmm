@@ -28031,6 +28031,9 @@
 /obj/machinery/light{
 	dir = 4
 	},
+/obj/structure/disposalpipe/trunk{
+	dir = 1
+	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/cetus/meteor/atrium)
 "oQE" = (
@@ -36630,13 +36633,6 @@
 /obj/random/junk,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/d1port)
-"tjS" = (
-/obj/structure/flora/underwater/grass1,
-/obj/machinery/light/broken{
-	dir = 4
-	},
-/turf/simulated/floor/water/indoors/station,
-/area/maintenance/cetus/meteor/ragecage)
 "tka" = (
 /obj/structure/table/steel,
 /obj/item/destTagger,
@@ -74642,7 +74638,7 @@ pwg
 dqU
 iTF
 iTF
-tjS
+rEU
 iTF
 lit
 lit
