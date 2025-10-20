@@ -849,7 +849,7 @@
 	cost = -5
 	tutorial = "You should avoid disposal bins."
 	is_genetrait = TRUE
-	hidden = TRUE //VOREStation Note: Disabled
+	hidden = FALSE //VOREStation Note: Disabled //CHOMPEdit - Enable
 	added_component_path = /datum/component/omen/trait/major
 	excludes = list(/datum/trait/negative/unlucky)
 	activation_message= span_cult(span_bold("What a terrible night to have a curse!"))
