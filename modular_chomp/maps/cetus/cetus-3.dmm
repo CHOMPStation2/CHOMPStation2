@@ -86,6 +86,21 @@
 /obj/random/maintenance/cargo,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/threeap)
+"abt" = (
+/obj/structure/sign/directions/cargo/mining{
+	pixel_y = -6;
+	dir = 4
+	},
+/obj/structure/sign/directions/teleporter{
+	dir = 10
+	},
+/obj/structure/sign/directions/engineering{
+	name = "\improper Engine";
+	pixel_y = 6;
+	dir = 8
+	},
+/turf/simulated/wall,
+/area/maintenance/cetus/shallow/derelict/kitchen)
 "acq" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -2923,12 +2938,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/bridge)
-"bTB" = (
-/obj/structure/sign/directions/kitchen{
-	dir = 4
-	},
-/turf/simulated/wall,
-/area/maintenance/cetus/shallow/derelict/kitchen)
 "bTE" = (
 /obj/structure/lattice,
 /obj/structure/catwalk,
@@ -3828,6 +3837,21 @@
 "cAj" = (
 /turf/simulated/wall/r_wall,
 /area/crew_quarters/cetus/atrium/secondaryf3)
+"cAJ" = (
+/obj/structure/sign/directions/medical{
+	dir = 8
+	},
+/obj/structure/sign/directions/engineering{
+	name = "\improper Engine";
+	pixel_y = 6;
+	dir = 8
+	},
+/obj/structure/sign/directions/cargo/mining{
+	pixel_y = -6;
+	dir = 1
+	},
+/turf/simulated/wall,
+/area/maintenance/cetus/shallow/derelict/hallway)
 "cAT" = (
 /obj/effect/floor_decal/industrial/warning{
 	layer = 3;
@@ -5278,22 +5302,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/engineering/Solar_Control_ForPort)
-"dsJ" = (
-/obj/structure/cable/cyan{
-	icon_state = "4-8"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/structure/sign/directions/engineering/atmospherics{
-	pixel_y = 32;
-	dir = 1
-	},
-/turf/simulated/floor/tiled/neutral,
-/area/maintenance/cetus/shallow/derelict/hallway)
 "dsT" = (
 /obj/machinery/atmospherics/pipe/simple/visible/green,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -5486,6 +5494,12 @@
 	},
 /turf/simulated/floor/reinforced,
 /area/rnd/research/particleaccelerator)
+"dxC" = (
+/obj/structure/sign/directions/dorms{
+	dir = 8
+	},
+/turf/simulated/wall/r_wall,
+/area/maintenance/cetus/shallow/derelict/hallway)
 "dxH" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 5
@@ -10323,6 +10337,12 @@
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/plating,
 /area/engineering/Atmospherics_Chamber)
+"gqb" = (
+/obj/structure/sign/directions/teleporter{
+	dir = 9
+	},
+/turf/simulated/wall,
+/area/maintenance/cetus/shallow/derelict/hallway)
 "gqS" = (
 /obj/effect/floor_decal/spline/plain,
 /obj/effect/floor_decal/spline/plain{
@@ -15020,17 +15040,6 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/research/particleaccelerator)
-"jeH" = (
-/obj/structure/sign/directions/cargo/mining,
-/obj/structure/sign/directions/teleporter{
-	pixel_y = -6
-	},
-/obj/structure/sign/directions/ai_core{
-	pixel_y = 6;
-	dir = 4
-	},
-/turf/simulated/wall,
-/area/maintenance/cetus/shallow/derelict/hallway)
 "jeR" = (
 /turf/simulated/wall,
 /area/maintenance/cetus/shallow/derelict/atmos)
@@ -16290,21 +16299,6 @@
 /obj/structure/cable/yellow,
 /turf/simulated/floor/plating,
 /area/tcomm/tcomstorage)
-"jUd" = (
-/obj/structure/sign/directions/cargo/mining{
-	pixel_y = -6;
-	dir = 4
-	},
-/obj/structure/sign/directions/teleporter{
-	dir = 10
-	},
-/obj/structure/sign/directions/engineering{
-	name = "\improper Engine";
-	pixel_y = 6;
-	dir = 8
-	},
-/turf/simulated/wall,
-/area/maintenance/cetus/shallow/derelict/kitchen)
 "jUo" = (
 /obj/structure/bed/chair,
 /turf/simulated/floor/plating,
@@ -16793,11 +16787,9 @@
 /turf/simulated/floor/carpet/graycarpet,
 /area/maintenance/cetus/shallow/gamba)
 "kjb" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/turf/simulated/wall/r_wall,
-/area/ai_monitored/aihall)
+/obj/structure/sign/directions/medical,
+/turf/simulated/wall,
+/area/maintenance/cetus/shallow/derelict/medbay)
 "kjj" = (
 /obj/structure/railing/grey,
 /obj/structure/railing/grey{
@@ -17283,12 +17275,6 @@
 /obj/random/contraband/nofail,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/threeap)
-"kwA" = (
-/obj/structure/sign/directions/dorms{
-	dir = 8
-	},
-/turf/simulated/wall/r_wall,
-/area/maintenance/cetus/shallow/derelict/hallway)
 "kwS" = (
 /obj/machinery/light/yellowed{
 	dir = 8
@@ -19077,6 +19063,22 @@
 /obj/random/fromList/sexy_costumes,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/threefs)
+"luy" = (
+/obj/structure/cable/cyan{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/sign/directions/engineering/atmospherics{
+	pixel_y = 32;
+	dir = 1
+	},
+/turf/simulated/floor/tiled/neutral,
+/area/maintenance/cetus/shallow/derelict/hallway)
 "luR" = (
 /obj/machinery/door/firedoor/glass,
 /obj/structure/cable/green{
@@ -21417,6 +21419,12 @@
 	},
 /turf/simulated/open,
 /area/crew_quarters/cetus/atrium/secondaryf3)
+"mGA" = (
+/obj/structure/sign/directions/kitchen{
+	dir = 4
+	},
+/turf/simulated/wall,
+/area/maintenance/cetus/shallow/derelict/kitchen)
 "mHn" = (
 /obj/random/maintenance/cargo,
 /obj/random/maintenance/cargo,
@@ -21470,6 +21478,13 @@
 "mIs" = (
 /turf/simulated/open,
 /area/engineering/cetus/jointsubstation)
+"mIW" = (
+/obj/effect/floor_decal/spline/plain/cee,
+/obj/machinery/computer/cryopod/gateway{
+	pixel_x = -32
+	},
+/turf/simulated/floor/tiled/milspec/raised,
+/area/maintenance/cetus/shallow/derelict/bridge)
 "mJq" = (
 /obj/machinery/atmospherics/pipe/simple/visible/red{
 	dir = 4
@@ -22706,12 +22721,6 @@
 	},
 /turf/simulated/open,
 /area/maintenance/cetus/threefp)
-"nrl" = (
-/obj/structure/sign/directions/teleporter{
-	dir = 9
-	},
-/turf/simulated/wall,
-/area/maintenance/cetus/shallow/derelict/hallway)
 "nrM" = (
 /obj/structure/bed/chair/sofa/purp,
 /turf/simulated/floor/wood,
@@ -22813,12 +22822,6 @@
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /turf/simulated/floor/wood,
 /area/bridge/sleep/HoS_Quarters)
-"ntY" = (
-/obj/effect/floor_decal/spline/plain/cee{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/milspec/raised,
-/area/maintenance/cetus/shallow/derelict/bridge)
 "nue" = (
 /obj/structure/table/steel,
 /obj/item/storage/bag/sheetsnatcher,
@@ -24223,12 +24226,6 @@
 "okA" = (
 /turf/simulated/wall/r_wall,
 /area/crew_quarters/cetus/theater)
-"ole" = (
-/obj/structure/sign/directions/eva{
-	dir = 1
-	},
-/turf/simulated/wall,
-/area/maintenance/cetus/shallow/derelict/hallway)
 "olx" = (
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 9
@@ -30547,6 +30544,18 @@
 "rZz" = (
 /turf/simulated/wall/r_wall,
 /area/maintenance/cetus/threefs)
+"rZH" = (
+/obj/structure/sign/directions/engineering{
+	name = "\improper Engine";
+	pixel_y = 6
+	},
+/obj/structure/sign/directions/kitchen{
+	pixel_y = -6;
+	dir = 4
+	},
+/obj/structure/sign/directions/medical,
+/turf/simulated/wall,
+/area/maintenance/cetus/shallow/derelict/hallway)
 "rZR" = (
 /obj/structure/table/reinforced,
 /obj/machinery/door/firedoor/glass,
@@ -35409,21 +35418,6 @@
 /obj/random/trash,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/threeap)
-"uSW" = (
-/obj/structure/sign/directions/medical{
-	dir = 8
-	},
-/obj/structure/sign/directions/engineering{
-	name = "\improper Engine";
-	pixel_y = 6;
-	dir = 8
-	},
-/obj/structure/sign/directions/cargo/mining{
-	pixel_y = -6;
-	dir = 1
-	},
-/turf/simulated/wall,
-/area/maintenance/cetus/shallow/derelict/hallway)
 "uSY" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 10
@@ -36166,10 +36160,6 @@
 "vpQ" = (
 /turf/simulated/wall/r_wall,
 /area/ai_server_room)
-"vre" = (
-/obj/structure/sign/directions/medical,
-/turf/simulated/wall,
-/area/maintenance/cetus/shallow/derelict/medbay)
 "vri" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/red{
 	dir = 1
@@ -36543,6 +36533,12 @@
 "vGU" = (
 /turf/simulated/wall,
 /area/crew_quarters/cetus/atrium/secondaryf3)
+"vHs" = (
+/obj/structure/sign/directions/eva{
+	dir = 1
+	},
+/turf/simulated/wall,
+/area/maintenance/cetus/shallow/derelict/hallway)
 "vHA" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -38088,13 +38084,6 @@
 /obj/structure/barricade/cutout/greytide,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/threefs)
-"wyE" = (
-/obj/effect/floor_decal/spline/plain/cee,
-/obj/machinery/computer/cryopod/gateway{
-	pixel_x = -32
-	},
-/turf/simulated/floor/tiled/milspec/raised,
-/area/maintenance/cetus/shallow/derelict/bridge)
 "wyF" = (
 /obj/machinery/light{
 	layer = 3
@@ -38655,6 +38644,12 @@
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/carpet/graycarpet,
 /area/bridge/Deck3_Corridor)
+"wNZ" = (
+/obj/effect/floor_decal/spline/plain/cee{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/milspec/raised,
+/area/maintenance/cetus/shallow/derelict/bridge)
 "wOa" = (
 /obj/structure/bed/pillowpile/yellow,
 /obj/random/junk,
@@ -38820,18 +38815,6 @@
 	},
 /turf/simulated/floor/carpet/graycarpet,
 /area/bridge/Deck3_Corridor)
-"wSR" = (
-/obj/structure/sign/directions/engineering{
-	name = "\improper Engine";
-	pixel_y = 6
-	},
-/obj/structure/sign/directions/kitchen{
-	pixel_y = -6;
-	dir = 4
-	},
-/obj/structure/sign/directions/medical,
-/turf/simulated/wall,
-/area/maintenance/cetus/shallow/derelict/hallway)
 "wTA" = (
 /obj/machinery/light/small{
 	brightness_color = "#DA0205";
@@ -39036,6 +39019,17 @@
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/bridge/sleep/Captain_Quarters)
+"xct" = (
+/obj/structure/sign/directions/cargo/mining,
+/obj/structure/sign/directions/teleporter{
+	pixel_y = -6
+	},
+/obj/structure/sign/directions/ai_core{
+	pixel_y = 6;
+	dir = 4
+	},
+/turf/simulated/wall,
+/area/maintenance/cetus/shallow/derelict/hallway)
 "xcw" = (
 /obj/machinery/papershredder,
 /turf/simulated/floor/wood,
@@ -83444,11 +83438,11 @@ bPb
 fsY
 fsY
 nIu
-dsJ
+luy
 hse
-wSR
+rZH
 rAh
-kwA
+dxC
 iGI
 iGI
 iGI
@@ -83970,7 +83964,7 @@ ehF
 ehF
 ehF
 eww
-vre
+kjb
 xpt
 fNm
 eOR
@@ -84220,7 +84214,7 @@ fKX
 nIu
 vHC
 bqw
-jeH
+xct
 nIu
 nIu
 nIu
@@ -84480,7 +84474,7 @@ xHx
 gCA
 ndt
 iil
-wyE
+mIW
 hIo
 vSm
 nIu
@@ -84737,7 +84731,7 @@ khX
 bEz
 nTe
 jew
-ntY
+wNZ
 rCH
 hIo
 vSm
@@ -85249,7 +85243,7 @@ sEA
 wQd
 hAe
 hAe
-ole
+vHs
 rmY
 rrW
 mgX
@@ -85515,7 +85509,7 @@ geY
 hIo
 lTd
 aol
-nrl
+gqb
 uxq
 dcB
 nIu
@@ -86536,7 +86530,7 @@ otY
 vaF
 cZX
 huR
-kjb
+vxT
 vxT
 rRw
 nIu
@@ -87058,12 +87052,12 @@ rRw
 nIu
 xHx
 chc
-jUd
-bTB
+abt
+mGA
 gid
 bfL
 gid
-uSW
+cAJ
 ehF
 hVN
 sZJ
