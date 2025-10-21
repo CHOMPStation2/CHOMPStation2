@@ -9,6 +9,7 @@
 	#include "../southern_cross/southern_cross_overrides.dm"
 	#include "cetus_shuttles.dm"
 	#include "../southern_cross/turfs/outdoors.dm"
+	#include "cetus_events.dm"
 
 
 	#ifndef AWAY_MISSION_TEST //Don't include these for just testing away missions if the flag is set to true in /code/_away_mission_tests.dm

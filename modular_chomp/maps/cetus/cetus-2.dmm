@@ -7668,9 +7668,6 @@
 /area/medical/medsci)
 "cHn" = (
 /obj/structure/table/woodentable,
-/obj/item/radio/intercom/locked/confessional{
-	pixel_y = -21
-	},
 /obj/item/reagent_containers/food/drinks/bottle/holywater,
 /turf/simulated/floor/carpet,
 /area/chapel/main)
@@ -19458,7 +19455,9 @@
 /area/quartermaster/Recycling)
 "gDM" = (
 /obj/machinery/door/firedoor/glass,
-/obj/machinery/door/airlock/maintenance/rnd,
+/obj/machinery/door/airlock/maintenance/rnd{
+	req_access = list(7)
+	},
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/blast/regular{
 	density = 0;
@@ -26239,6 +26238,11 @@
 	pixel_x = 3;
 	pixel_y = 6
 	},
+/obj/item/stamp{
+	pixel_x = -3;
+	pixel_y = 3
+	},
+/obj/item/stamp/cargo,
 /turf/simulated/floor/tiled,
 /area/quartermaster/storage)
 "iYZ" = (
@@ -70484,7 +70488,7 @@
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/research{
 	name = "Workshop";
-	req_access = list(47);
+	req_access = list(7);
 	req_one_access = list(47)
 	},
 /obj/structure/disposalpipe/segment{
