@@ -17,15 +17,6 @@
 	var_changes = list("minimum_breath_pressure" = 12)
 	excludes = list(/datum/trait/negative/deep_breather)
 
-
-/datum/trait/positive/virus_immune
-	name = "Virus Immune"
-	desc = "You are immune to viruses."
-	cost = 1
-
-	can_take = ORGANICS //no reason to clog up synth selection
-	var_changes = list("virus_immune" = 1)
-
 /datum/trait/positive/emp_resist
 	name = "EMP Resistance"
 	desc = "You are resistant to EMPs"
