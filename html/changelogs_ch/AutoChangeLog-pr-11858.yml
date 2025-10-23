@@ -1,4 +1,0 @@
-author: "Diana"
-delete-after: True
-changes:
-  - balance: "Virus immunity costs 3 points now, properly."
