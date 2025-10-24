@@ -586,9 +586,7 @@
 /obj/structure/cable{
 	icon_state = "0-8"
 	},
-/obj/machinery/power/smes/buildable{
-	input_level_max = 350000;
-	output_level_max = 300000;
+/obj/machinery/power/smes/buildable/max_input_max_output{
 	RCon_tag = "Belt_Mining_Outpost"
 	},
 /turf/simulated/floor/plating,
