@@ -1218,9 +1218,8 @@
 /turf/simulated/wall/rshull,
 /area/shuttle/echidna)
 "aHw" = (
-/obj/machinery/power/smes/buildable{
+/obj/machinery/power/smes/buildable/max_input{
 	RCon_tag = "Reactor Secondary - Aegis";
-	input_attempt = 1;
 	name = "Reactor SMES - Secondary"
 	},
 /obj/structure/cable/green{
@@ -2348,13 +2347,16 @@
 /turf/simulated/floor/tiled/yellow,
 /area/shuttle/baby_mammoth)
 "bKJ" = (
-/obj/machinery/power/smes/buildable{
+/obj/machinery/power/smes/buildable/max_charge_max_input{
 	RCon_tag = "Reactor Input - Aegis";
-	charge = 2e+006;
-	cur_coils = 6;
-	input_attempt = 1;
 	name = "Reactor SMES - Input"
 	},
+/obj/item/smes_coil,
+/obj/item/smes_coil,
+/obj/item/smes_coil,
+/obj/item/smes_coil,
+/obj/item/smes_coil,
+/obj/item/smes_coil,
 /obj/structure/cable/cyan{
 	icon_state = "0-4"
 	},
@@ -2664,12 +2666,7 @@
 	dir = 1;
 	opacity = 1
 	},
-/obj/machinery/power/smes/buildable/power_shuttle{
-	charge = 4e+006;
-	input_attempt = 1;
-	inputting = 1;
-	outputting = 1
-	},
+/obj/machinery/power/smes/buildable/power_shuttle/max_charge_max_input_base_output,
 /obj/structure/cable/green{
 	icon_state = "0-4"
 	},
@@ -9018,9 +9015,7 @@
 /area/expoutpost/staginghangar)
 "hsz" = (
 /obj/structure/closet/walllocker/emerglocker/south,
-/obj/machinery/power/smes/buildable/point_of_interest{
-	input_attempt = 1
-	},
+/obj/machinery/power/smes/buildable/point_of_interest/max_input,
 /obj/structure/cable/green{
 	icon_state = "0-4"
 	},
@@ -12626,9 +12621,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/expoutpost/staginghangar)
 "kwr" = (
-/obj/machinery/power/smes/buildable/point_of_interest{
-	input_attempt = 1
-	},
+/obj/machinery/power/smes/buildable/point_of_interest/max_input,
 /obj/structure/cable/green{
 	icon_state = "0-4"
 	},
@@ -14632,8 +14625,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/expoutpost/staginghangar)
 "lZt" = (
-/obj/machinery/power/smes/buildable{
-	input_attempt = 1;
+/obj/machinery/power/smes/buildable/engine_default{
 	name = "AI Core SMES"
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
@@ -14851,11 +14843,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/expoutpost/uppersternhallway)
 "mgQ" = (
-/obj/machinery/power/smes/buildable/power_shuttle{
-	charge = 2e+006;
-	input_attempt = 1;
-	inputting = 1
-	},
+/obj/machinery/power/smes/buildable/power_shuttle/max_charge_max_input_base_output,
 /obj/structure/cable/green,
 /turf/simulated/floor/tiled/milspec,
 /area/shuttle/echidna)
@@ -16244,9 +16232,7 @@
 /area/expoutpost/miningfoyer)
 "nlv" = (
 /obj/effect/floor_decal/industrial/warning/cee,
-/obj/machinery/power/smes/buildable/point_of_interest{
-	input_attempt = 1
-	},
+/obj/machinery/power/smes/buildable/point_of_interest/max_input,
 /obj/structure/cable/green{
 	icon_state = "0-8"
 	},
@@ -16879,15 +16865,14 @@
 /turf/simulated/floor/tiled/white,
 /area/expoutpost/medbaylobby)
 "nFb" = (
-/obj/machinery/power/smes/buildable{
+/obj/machinery/power/smes/buildable/engine_default{
 	RCon_tag = "Reactor Primary - Aegis";
-	charge = 2e+006;
-	cur_coils = 4;
-	input_attempt = 1;
-	input_level = 750000;
-	name = "Reactor SMES - Main";
-	output_level = 750000
+	name = "Reactor SMES - Main"
 	},
+/obj/item/smes_coil,
+/obj/item/smes_coil,
+/obj/item/smes_coil,
+/obj/item/smes_coil,
 /obj/structure/cable/green,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/effect/engine_setup/smes,
@@ -22582,8 +22567,7 @@
 /turf/simulated/floor/tiled,
 /area/expoutpost/hangarfive)
 "sky" = (
-/obj/machinery/power/smes/buildable{
-	input_attempt = 1;
+/obj/machinery/power/smes/buildable/engine_default{
 	name = "Telecomms SMES"
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
@@ -30296,15 +30280,12 @@
 /turf/simulated/floor,
 /area/expoutpost/restrooms)
 "yjG" = (
-/obj/machinery/power/smes/buildable{
+/obj/machinery/power/smes/buildable/max_charge_max_input{
 	RCon_tag = "Auxiliary Reactor - Aegis";
-	charge = 2e+006;
-	cur_coils = 2;
-	input_attempt = 1;
-	input_level = 500000;
-	name = "Auxiliary Reactor SMES";
-	output_level = 350000
+	name = "Auxiliary Reactor SMES"
 	},
+/obj/item/smes_coil,
+/obj/item/smes_coil,
 /obj/effect/engine_setup/smes,
 /obj/structure/cable/green{
 	icon_state = "0-8"
