@@ -1,0 +1,7 @@
+author: "Guti"
+delete-after: True
+changes:
+  - rscadd: "Added Hostile Runtime and Bluespace Lockers event"
+  - rscadd: "Added a major version of Electrical Storm"
+  - rscdel: "Removed Prison Breaks events from rotation"
+  - code_imp: "Changed the many 0/1s in the event_container to improve readability"
