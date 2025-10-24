@@ -23591,12 +23591,7 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
 	},
-/obj/machinery/power/smes/buildable/power_shuttle{
-	charge = 4e+006;
-	input_attempt = 1;
-	inputting = 1;
-	outputting = 1
-	},
+/obj/machinery/power/smes/buildable/power_shuttle/max_charge_max_input_base_output,
 /obj/structure/cable/green{
 	icon_state = "0-8"
 	},

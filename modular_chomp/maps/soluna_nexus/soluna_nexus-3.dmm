@@ -64336,10 +64336,8 @@
 /turf/simulated/floor/plating,
 /area/engineering/Engine2_Waste_Handling)
 "uVo" = (
-/obj/machinery/power/smes/buildable{
-	RCon_tag = "Substation - Atmospherics";
-	charge = 2e+006;
-	input_attempt = 1
+/obj/machinery/power/smes/buildable/max_charge_max_input{
+	RCon_tag = "Substation - Atmospherics"
 	},
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/structure/cable/green{

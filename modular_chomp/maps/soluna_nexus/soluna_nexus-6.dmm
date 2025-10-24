@@ -749,9 +749,8 @@
 /turf/simulated/floor,
 /area/expoutpost/starfuelstorage)
 "aHw" = (
-/obj/machinery/power/smes/buildable{
+/obj/machinery/power/smes/buildable/max_input{
 	RCon_tag = "Reactor Secondary - Aegis";
-	input_attempt = 1;
 	name = "Reactor SMES - Secondary"
 	},
 /obj/structure/cable/green{
@@ -8175,9 +8174,7 @@
 /area/expoutpost/staginghangar)
 "hsz" = (
 /obj/structure/closet/walllocker/emerglocker/south,
-/obj/machinery/power/smes/buildable/point_of_interest{
-	input_attempt = 1
-	},
+/obj/machinery/power/smes/buildable/point_of_interest/max_input,
 /obj/structure/cable/green{
 	icon_state = "0-4"
 	},
@@ -10648,9 +10645,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/expoutpost/lowersternhallway)
 "jBv" = (
-/obj/machinery/power/smes/buildable/point_of_interest{
-	input_attempt = 1
-	},
+/obj/machinery/power/smes/buildable/point_of_interest/max_input,
 /obj/structure/cable/green{
 	icon_state = "0-4"
 	},
@@ -13526,8 +13521,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/expoutpost/staginghangar)
 "lZt" = (
-/obj/machinery/power/smes/buildable{
-	input_attempt = 1;
+/obj/machinery/power/smes/buildable/engine_default{
 	name = "AI Core SMES"
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
@@ -20973,8 +20967,7 @@
 /turf/simulated/floor/tiled,
 /area/expoutpost/hangarfive)
 "sky" = (
-/obj/machinery/power/smes/buildable{
-	input_attempt = 1;
+/obj/machinery/power/smes/buildable/engine_default{
 	name = "Telecomms SMES"
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,

@@ -3411,7 +3411,7 @@
 /obj/structure/window/reinforced/survival_pod{
 	dir = 4
 	},
-/obj/machinery/power/smes/buildable/power_shuttle,
+/obj/machinery/power/smes/buildable/power_shuttle/max_charge_max_input_base_output,
 /obj/structure/cable/green,
 /turf/simulated/shuttle/plating,
 /area/shuttle/echidna)
