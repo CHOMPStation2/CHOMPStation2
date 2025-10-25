@@ -279,3 +279,23 @@
   - bugfix: Meson and other vision goggles work in mechs again
   - bugfix: canceling remote view while inside a cryopod or long distance teleporter
       no longer locks your view to it
+2025-10-25:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: chat replies failing as the passed ckey resulted to a null lookup
+  - code_imp: lints for bad smes mapedits
+  - bugfix: logging into qdelled ghosts
+  Guti:
+  - rscadd: Added Hostile Runtime and Bluespace Lockers event
+  - rscadd: Added a major version of Electrical Storm
+  - rscdel: Removed Prison Breaks events from rotation
+  - code_imp: Changed the many 0/1s in the event_container to improve readability
+  - code_imp: Added Bluespace Connection component
+  - code_imp: Implements COMSIG_ATOM_HITBY
+  - code_imp: Implements COMSIG_CLOSET_CLOSED
+  - image: Fixed welded crate icons
+  - bugfix: You can now struggle out of crates
+  - bugfix: Crates can be weld shut once again
+  Will:
+  - bugfix: vehicles fall through openspace again
+  stars:
+  - maptweak: remapped tether morgue
