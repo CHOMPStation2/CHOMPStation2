@@ -245,3 +245,57 @@
   - balance: '"Precursor Engineering" points cost increased by 1 tier'
   - balance: '"''NSFW'' Gun" points cost increased by 1 tier'
   - balance: '"Confetti Cannon" points cost increased by 2 tiers'
+2025-10-20:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: free ghost role slot spawn
+2025-10-22:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: casino sentient price item tf getting enabled when one closes the ui
+  - admin: fix log access for devs and mods
+  - bugfix: Exploit where console screens would count for all stock part benchmark
+      experiments.
+  - qol: Robot decals and animations now use a TGUI ui for easy toggling
+  - code_imp: rust g to 4.1.0
+  - qol: moves robot sleepers to tgui
+  Guti:
+  - bugfix: Fixed itch symptom making the infected to mlem instead
+2025-10-23:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: Feline 3-color (Taur, Fat vwag) loaf sprite
+  - rscadd: Added a new heavy landing trait (and hard fall var to other mobs) that
+      cause the mob to take more damage, get weakened for longer and create some damage
+      to the floor tiles (50% chance). Can not be taken with soft landing. Be the
+      fatty you always meant to be.
+  Diana:
+  - balance: Virus immunity costs 3 points now, properly.
+  Will:
+  - bugfix: photodegredation should not harm phased shadekin
+  - bugfix: Photosynthesis should not generation nutrition while its shadekin are
+      phased
+  - refactor: Moves lonely and agoraphobia trait code to a component
+  - bugfix: Releasing prey, that themselves contain prey, will correctly update their
+      remote view to follow the released mob
+  - bugfix: Fixes view release on the correct recharger
+  - bugfix: Meson and other vision goggles work in mechs again
+  - bugfix: canceling remote view while inside a cryopod or long distance teleporter
+      no longer locks your view to it
+2025-10-25:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: chat replies failing as the passed ckey resulted to a null lookup
+  - code_imp: lints for bad smes mapedits
+  - bugfix: logging into qdelled ghosts
+  Guti:
+  - rscadd: Added Hostile Runtime and Bluespace Lockers event
+  - rscadd: Added a major version of Electrical Storm
+  - rscdel: Removed Prison Breaks events from rotation
+  - code_imp: Changed the many 0/1s in the event_container to improve readability
+  - code_imp: Added Bluespace Connection component
+  - code_imp: Implements COMSIG_ATOM_HITBY
+  - code_imp: Implements COMSIG_CLOSET_CLOSED
+  - image: Fixed welded crate icons
+  - bugfix: You can now struggle out of crates
+  - bugfix: Crates can be weld shut once again
+  Will:
+  - bugfix: vehicles fall through openspace again
+  stars:
+  - maptweak: remapped tether morgue
