@@ -1,0 +1,5 @@
+author: "CHOMPStation2StaffMirrorBot"
+delete-after: True
+changes:
+  - bugfix: "Makes beds able to drop a material when having wirecutters used on them: Cloth"
+  - bugfix: "Makes the cotton material datum drop cotton"
