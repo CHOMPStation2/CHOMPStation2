@@ -119,13 +119,7 @@
 	transform = matrix()*0.75
 	animate(src, transform = matrix()*1.5, time = timetoburst)
 	// Queue the actual bursting
-<<<<<<< HEAD
 	addtimer(CALLBACK(src, PROC_REF(burst), creator), timetoburst)
-=======
-	spawn(timetoburst)
-		if(!QDELETED(src))
-			burst(creator)
->>>>>>> d3fe0135bb (Gets rid of old, unticked resonator file. (#18675))
 
 /obj/effect/resonance/proc/burst(var/creator = null)
 	var/turf/T = get_turf(src)
