@@ -616,7 +616,6 @@
 	health = 7
 	maxHealth = 7
 	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 100, rad = 100)
-	armor_soak = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0)
 	icon_state = "squishblob"
 	icon_living = "squishblob"
 	ai_holder_type = /datum/ai_holder/simple_mob/intentional/adv_dark_gygax
