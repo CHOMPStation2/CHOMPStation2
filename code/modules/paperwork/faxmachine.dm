@@ -35,19 +35,12 @@ GLOBAL_LIST_EMPTY(adminfaxes)	//cache for faxes that have been sent to admins
 	if( !(("[department]" in GLOB.alldepartments) || ("[department]" in admin_departments)) )
 		GLOB.alldepartments |= department
 
-<<<<<<< HEAD
-/obj/machinery/photocopier/faxmachine/attack_hand(mob/user as mob) // CH edit begins here; this allows borgs to use fax machines, meant for the Unity and Clerical modules.
-	user.set_machine(src)
-
-	if(issilicon(user))
+/obj/machinery/photocopier/faxmachine/attack_hand(mob/user as mob)
+	if(issilicon(user)) //CHOMPEdit Start this allows borgs to use fax machines, meant for the Unity and Clerical modules.
 		authenticated = user.name
 		tgui_interact(user)
 	else
-		tgui_interact(user)
-=======
-/obj/machinery/photocopier/faxmachine/attack_hand(mob/user as mob)
-	tgui_interact(user)
->>>>>>> 1dfae07494 (Machine var shim (#18644))
+		tgui_interact(user) //CHOMPEdit End
 
 /obj/machinery/photocopier/faxmachine/verb/remove_card()
 	set name = "Remove ID card"
