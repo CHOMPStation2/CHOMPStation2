@@ -559,7 +559,7 @@ var/list/intents = list(I_HELP,I_DISARM,I_GRAB,I_HURT)
 
 
 /mob/proc/switch_to_camera(var/obj/machinery/camera/C)
-	if (!C.can_use() || stat || (get_dist(C, src) > 1 || machine != src || blinded || !canmove))
+	if (!C.can_use() || stat || (get_dist(C, src) > 1 || !check_current_machine(src) || blinded || !canmove))
 		return 0
 	check_eye(src)
 	return 1
@@ -716,13 +716,18 @@ var/list/global/organ_rel_size = list(
 /mob/proc/recalculate_vis()
 	return
 
-//General HUD updates done regularly (health puppet things, etc)
+/// General HUD updates done regularly (health puppet things, etc). Returns true if the mob has a client.
 /mob/proc/handle_regular_hud_updates()
-	return
+	SHOULD_CALL_PARENT(TRUE)
+	if(!client)
+		return FALSE
+	SEND_SIGNAL(src,COMSIG_LIVING_HANDLE_HUD)
+	return TRUE
 
-//Handle eye things like the Byond SEE_TURFS, SEE_OBJS, etc.
+/// Handle eye things like the Byond SEE_TURFS, SEE_OBJS, etc.
 /mob/proc/handle_vision()
-	return
+	SHOULD_CALL_PARENT(TRUE)
+	SEND_SIGNAL(src,COMSIG_LIVING_HANDLE_VISION)
 
 //Icon is used to occlude things like huds from the faulty byond context menu.
 //   http://www.byond.com/forum/?post=2336679
