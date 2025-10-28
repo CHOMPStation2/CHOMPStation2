@@ -6853,6 +6853,8 @@
 /obj/item/pen{
 	pixel_y = 5
 	},
+/obj/item/clipboard,
+/obj/item/clipboard,
 /turf/simulated/floor/tiled/dark,
 /area/rnd/cetus/meteor/carbonresearch)
 "dPX" = (
@@ -45345,10 +45347,24 @@
 /area/maintenance/cetus/meteor/central)
 "xuz" = (
 /obj/structure/table/standard,
-/obj/item/clipboard,
-/obj/item/clipboard,
 /obj/structure/cable/green{
 	icon_state = "5-10"
+	},
+/obj/machinery/chemical_dispenser/full{
+	pixel_y = 10;
+	pixel_x = -5
+	},
+/obj/item/reagent_containers/glass/beaker{
+	pixel_y = 3;
+	pixel_x = -15
+	},
+/obj/item/reagent_containers/glass/beaker{
+	pixel_y = 3;
+	pixel_x = 5
+	},
+/obj/item/reagent_containers/glass/beaker{
+	pixel_y = 3;
+	pixel_x = -5
 	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/cetus/meteor/carbonresearch)

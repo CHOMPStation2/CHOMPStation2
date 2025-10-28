@@ -817,6 +817,7 @@
 	pixel_y = 3;
 	pixel_x = -3
 	},
+/obj/machinery/recharger,
 /turf/simulated/floor/tiled/white,
 /area/medical/medsci)
 "anP" = (
@@ -1327,6 +1328,7 @@
 	icon_state = "6-9"
 	},
 /obj/item/toy/plushie/lizardplushie/kobold,
+/obj/machinery/recharger,
 /turf/simulated/floor/tiled/dark,
 /area/rnd/workshop)
 "axk" = (
@@ -1833,6 +1835,9 @@
 	dir = 4
 	},
 /obj/structure/table/marble,
+/obj/item/newspaper{
+	pixel_y = 3
+	},
 /turf/simulated/floor/carpet/purcarpet,
 /area/rnd/cetus/jrhall)
 "aFt" = (
@@ -4921,6 +4926,13 @@
 /obj/structure/closet/emcloset,
 /turf/simulated/floor/tiled/techmaint,
 /area/crew_quarters/cetus/atrium/primary)
+"bIN" = (
+/obj/machinery/recharger/wallcharger{
+	pixel_y = 20;
+	pixel_x = 4
+	},
+/turf/simulated/floor/tiled,
+/area/quartermaster/storage)
 "bIX" = (
 /obj/machinery/vending/cola{
 	dir = 8;
@@ -7113,9 +7125,6 @@
 /area/engineering/Engineering_Workshop)
 "cuA" = (
 /obj/machinery/transhuman/resleever,
-/obj/item/radio/intercom/department/medbay{
-	pixel_y = -22
-	},
 /obj/effect/floor_decal/spline/fancy{
 	dir = 1
 	},
@@ -7647,6 +7656,9 @@
 /obj/effect/floor_decal/industrial/danger{
 	dir = 4
 	},
+/obj/item/storage/box/autoinjectors,
+/obj/item/storage/box/autoinjectors,
+/obj/item/storage/box/autoinjectors,
 /turf/simulated/floor/tiled/white,
 /area/medical/Chemistry)
 "cGo" = (
@@ -15612,6 +15624,10 @@
 	pixel_y = -26
 	},
 /obj/machinery/light,
+/obj/machinery/recharger/wallcharger{
+	pixel_y = -43;
+	pixel_x = 4
+	},
 /turf/simulated/floor/tiled,
 /area/hangar/three)
 "ftJ" = (
@@ -16331,8 +16347,7 @@
 	dir = 1;
 	pixel_y = -36;
 	name = "Morgue Delivery Chute";
-	color = "green";
-	pixel_x = 14
+	color = "green"
 	},
 /obj/structure/disposalpipe/trunk{
 	dir = 1
@@ -16342,8 +16357,11 @@
 	},
 /obj/machinery/oxygen_pump/anesthetic{
 	pixel_y = -29;
-	pixel_x = -7;
+	pixel_x = 19;
 	dir = 1
+	},
+/obj/item/radio/intercom/department/medbay{
+	pixel_y = -38
 	},
 /turf/simulated/floor/bluegrid,
 /area/rnd/Robotics_Lab)
@@ -26470,6 +26488,10 @@
 /obj/effect/floor_decal/corner_steel_grid{
 	dir = 10
 	},
+/obj/machinery/recharger/wallcharger{
+	pixel_y = 20;
+	pixel_x = 4
+	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/central_two)
 "jce" = (
@@ -31513,9 +31535,6 @@
 /turf/simulated/floor/tiled/white,
 /area/rnd/research_restroom_sc)
 "kVf" = (
-/obj/machinery/atmospherics/unary/vent_pump/on{
-	dir = 8
-	},
 /obj/machinery/firealarm{
 	dir = 4;
 	pixel_x = 24
@@ -31523,6 +31542,13 @@
 /obj/machinery/camera/network/civilian{
 	c_tag = "CIV -  Arrivals Lockers";
 	dir = 9
+	},
+/obj/structure/table/standard,
+/obj/machinery/recharger{
+	pixel_x = -5
+	},
+/obj/machinery/recharger{
+	pixel_x = 5
 	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/cetus/docklock)
@@ -33179,6 +33205,10 @@
 /obj/random/pottedplant,
 /obj/machinery/light/fluorescent{
 	dir = 1
+	},
+/obj/machinery/recharger/wallcharger{
+	pixel_y = 20;
+	pixel_x = 4
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medsci)
@@ -63090,6 +63120,8 @@
 	dir = 8
 	},
 /obj/structure/table/marble,
+/obj/item/tabloid,
+/obj/item/tabloid,
 /turf/simulated/floor/carpet/tealcarpet,
 /area/rnd/cetus/jrhall)
 "vxP" = (
@@ -63178,6 +63210,7 @@
 	dir = 4
 	},
 /obj/structure/table/marble,
+/obj/machinery/recharger,
 /turf/simulated/floor/carpet/purcarpet,
 /area/rnd/cetus/jrhall)
 "vzW" = (
@@ -68343,6 +68376,10 @@
 	pixel_y = -22
 	},
 /obj/machinery/light,
+/obj/machinery/recharger/wallcharger{
+	pixel_y = -43;
+	pixel_x = 4
+	},
 /turf/simulated/floor/tiled,
 /area/hangar/three)
 "xqA" = (
@@ -69896,12 +69933,10 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 6
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 10
 	},
+/obj/machinery/atmospherics/unary/vent_pump/on,
 /turf/simulated/floor/tiled,
 /area/crew_quarters/cetus/docklock)
 "xVM" = (
@@ -70168,7 +70203,7 @@
 /area/maintenance/cetus/twomed)
 "xZT" = (
 /obj/machinery/computer/guestpass{
-	pixel_y = -27;
+	pixel_y = -22;
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
@@ -124864,7 +124899,7 @@ hpd
 gUR
 xZT
 gix
-cXj
+bIN
 cXj
 dwv
 fZi
