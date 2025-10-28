@@ -90,16 +90,6 @@
 				"bio" = 100,
 				"rad" = 100
 				)
-	armor_soak = list(		// Values for getsoak() checks.
-				"melee" = 5,
-				"bullet" = 5,
-				"laser" = 5,
-				"energy" = 5,
-				"bomb" = 5,
-				"bio" = 0,
-				"rad" = 0
-				)
-
 
 /mob/living/simple_mob/vore/otie/syndicate/apply_bonus_melee_damage(atom/A, damage_amount)
 	if(isliving(A))
@@ -189,15 +179,6 @@
 				"bomb" = 0,
 				"bio" = 100,
 				"rad" = 100
-				)
-	armor_soak = list(		// Values for getsoak() checks.
-				"melee" = 5,
-				"bullet" = 5,
-				"laser" = 5,
-				"energy" = 5,
-				"bomb" = 5,
-				"bio" = 0,
-				"rad" = 0
 				)
 
 /mob/living/simple_mob/vore/wolf/direwolf/syndicate/black
