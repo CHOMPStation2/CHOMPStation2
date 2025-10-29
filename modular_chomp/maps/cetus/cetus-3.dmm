@@ -6354,14 +6354,11 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/ai)
 "ebr" = (
-/obj/machinery/power/smes/buildable{
-	RCon_tag = "Solar - Aft Starboard";
-	input_attempt = 1;
-	input_level = 150000;
-	output_level = 100000
-	},
 /obj/structure/cable{
 	icon_state = "0-2"
+	},
+/obj/machinery/power/smes/buildable/max_charge_max_input{
+	RCon_tag = "Solar - Aft Starboard"
 	},
 /turf/simulated/floor/plating,
 /area/engineering/Solar_Control_AftStar)
