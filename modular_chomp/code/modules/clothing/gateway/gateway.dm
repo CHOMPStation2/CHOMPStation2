@@ -164,7 +164,6 @@
 	slowdown = 0
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS|ARMS
 	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0)
-	armorsoak = list( melee = 12, bullet = 12,laser = 12, energy = 12 , bomb = 0, bio = 0, rad = 0)
 	block_chance = 12
 
 /obj/item/clothing/suit/armor/tesla/vistor
