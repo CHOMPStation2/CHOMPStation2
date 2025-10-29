@@ -1222,8 +1222,11 @@ GLOBAL_LIST_INIT(area_or_turf_fail_types, typecacheof(list(
 	/obj/item/circuitboard, \
 	/obj/item/smes_coil, \
 	/obj/item/fuel_assembly, \
-	/obj/item/stack/tile/floor, \
-	/obj/item/stack/hose
+	/obj/item/stack/tile, \ //CHOMPEdit All tiles!
+	/obj/item/stack/hose, \ //CHOMPAdd START: Tanning capabilities
+	/obj/item/stack/animalhide, \
+	/obj/item/stack/hairlesshide, \
+	/obj/item/stack/wetleather //CHOMPAdd END
 
 #define OMNI_GRIPPER \
 	/obj/item
@@ -1343,7 +1346,8 @@ GLOBAL_LIST_INIT(area_or_turf_fail_types, typecacheof(list(
 	/obj/item/mecha_parts/component
 
 #define SHEET_GRIPPER \
-	/obj/item/stack/material
+	/obj/item/stack/material, \ //CHOMPAdd START: To allow borgs to build reinforced floor
+	/obj/item/stack/rods //CHOMPAdd END
 
 GLOBAL_LIST_INIT(all_borg_multitool_options, list(
 	/obj/item/tool/screwdriver/cyborg,
