@@ -136,6 +136,11 @@
 /obj/effect/recycler_vendor_beacon,
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/forestarboard)
+"aay" = (
+/obj/structure/table/marble,
+/obj/machinery/reagentgrinder,
+/turf/simulated/floor/plating,
+/area/maintenance/thirddeck/aftport)
 "aaM" = (
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 4
@@ -15825,7 +15830,6 @@
 /obj/effect/floor_decal/corner/blue/border{
 	dir = 10
 	},
-/obj/item/toy/xmastree,
 /turf/simulated/floor/tiled,
 /area/bridge)
 "nst" = (
@@ -54499,7 +54503,7 @@ tcw
 tcw
 tld
 lcO
-qlf
+aay
 dIo
 ppD
 ieB

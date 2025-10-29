@@ -297,6 +297,24 @@
 	},
 /turf/simulated/shuttle/floor/black,
 /area/shuttle/merchant)
+"aaQ" = (
+/obj/structure/handrail{
+	dir = 8
+	},
+/turf/simulated/shuttle/floor/white,
+/area/shuttle/escape/centcom)
+"aaR" = (
+/obj/structure/handrail{
+	dir = 1
+	},
+/turf/simulated/shuttle/floor,
+/area/shuttle/escape/centcom)
+"aaS" = (
+/obj/structure/handrail{
+	dir = 4
+	},
+/turf/simulated/shuttle/floor,
+/area/shuttle/escape/centcom)
 "aaT" = (
 /obj/machinery/biogenerator,
 /turf/unsimulated/floor{
@@ -600,6 +618,52 @@
 	},
 /turf/simulated/shuttle/floor/black,
 /area/centcom/evac)
+"aby" = (
+/obj/structure/handrail{
+	dir = 8
+	},
+/turf/simulated/shuttle/floor,
+/area/shuttle/escape/centcom)
+"abz" = (
+/obj/structure/handrail{
+	dir = 1
+	},
+/turf/simulated/shuttle/floor/red,
+/area/shuttle/response_ship)
+"abA" = (
+/obj/structure/handrail,
+/turf/simulated/shuttle/floor/red,
+/area/shuttle/response_ship)
+"abB" = (
+/obj/structure/handrail{
+	dir = 4
+	},
+/turf/simulated/shuttle/floor/white,
+/area/shuttle/skipjack)
+"abC" = (
+/obj/structure/handrail{
+	dir = 8
+	},
+/turf/simulated/shuttle/floor/skipjack,
+/area/shuttle/syndicate_elite/mothership)
+"abD" = (
+/obj/effect/landmark{
+	name = "Syndicate-Commando-Bomb"
+	},
+/obj/structure/handrail{
+	dir = 4
+	},
+/turf/simulated/shuttle/floor/skipjack,
+/area/shuttle/syndicate_elite/mothership)
+"abE" = (
+/obj/effect/landmark{
+	name = "Syndicate-Commando-Bomb"
+	},
+/obj/structure/handrail{
+	dir = 8
+	},
+/turf/simulated/shuttle/floor/skipjack,
+/area/shuttle/syndicate_elite/mothership)
 "acE" = (
 /obj/structure/table/standard,
 /obj/effect/floor_decal/corner/paleblue{
@@ -670,7 +734,7 @@
 	},
 /area/syndicate_station)
 "aed" = (
-/obj/structure/bed/chair{
+/obj/structure/bed/chair/shuttle{
 	dir = 4
 	},
 /turf/simulated/shuttle/floor,
@@ -2235,9 +2299,10 @@
 /turf/simulated/shuttle/floor/skipjack,
 /area/shuttle/syndicate_elite/mothership)
 "bAn" = (
-/obj/machinery/light{
+/obj/machinery/light/floortube{
 	dir = 1
 	},
+/obj/structure/handrail,
 /turf/simulated/shuttle/floor,
 /area/shuttle/transport1/centcom)
 "bAD" = (
@@ -2316,10 +2381,6 @@
 	name = "plating"
 	},
 /area/shuttle/trade)
-"bGa" = (
-/obj/machinery/light,
-/turf/simulated/shuttle/floor,
-/area/shuttle/escape/centcom)
 "bGq" = (
 /obj/structure/closet,
 /obj/item/clothing/shoes/sandal/marisa{
@@ -2336,7 +2397,7 @@
 	},
 /area/wizard_station)
 "bGs" = (
-/obj/machinery/light{
+/obj/machinery/light/floortube{
 	dir = 4
 	},
 /obj/structure/bed/chair/shuttle{
@@ -3333,10 +3394,12 @@
 	},
 /area/skipjack_station)
 "cAw" = (
-/obj/structure/bed/chair{
+/obj/structure/bed/chair/shuttle{
 	dir = 1
 	},
-/obj/machinery/light,
+/obj/machinery/light/floortube{
+	pixel_y = 4
+	},
 /turf/simulated/shuttle/floor,
 /area/shuttle/transport1/centcom)
 "cAy" = (
@@ -4206,7 +4269,12 @@
 	},
 /area/skipjack_station)
 "dsO" = (
-/obj/machinery/light,
+/obj/machinery/light/floortube{
+	pixel_y = 4
+	},
+/obj/structure/handrail{
+	dir = 1
+	},
 /turf/simulated/shuttle/floor,
 /area/shuttle/transport1/centcom)
 "dsR" = (
@@ -4321,6 +4389,7 @@
 	network = list("NETWORK_ERT");
 	pixel_y = 26
 	},
+/obj/structure/handrail,
 /turf/simulated/shuttle/floor/red,
 /area/shuttle/response_ship)
 "dzR" = (
@@ -5592,6 +5661,9 @@
 /area/wizard_station)
 "eHc" = (
 /obj/machinery/computer/communications,
+/obj/machinery/light/floortube{
+	dir = 1
+	},
 /turf/simulated/shuttle/floor/white,
 /area/shuttle/escape/centcom)
 "eHg" = (
@@ -6100,7 +6172,7 @@
 /obj/structure/bed/chair{
 	dir = 4
 	},
-/obj/machinery/light{
+/obj/machinery/light/floortube{
 	dir = 8
 	},
 /turf/simulated/shuttle/floor/red,
@@ -7063,12 +7135,15 @@
 /turf/unsimulated/floor/dark,
 /area/shadekin)
 "guJ" = (
-/obj/machinery/light{
+/obj/machinery/light/floortube{
 	dir = 8
 	},
 /obj/structure/closet/emcloset,
 /obj/structure/window/reinforced{
 	dir = 1
+	},
+/obj/structure/handrail{
+	dir = 4
 	},
 /turf/simulated/shuttle/floor/white,
 /area/shuttle/escape/centcom)
@@ -7101,6 +7176,9 @@
 /area/centcom/bar)
 "gws" = (
 /obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/obj/structure/handrail{
 	dir = 1
 	},
 /turf/simulated/shuttle/floor/yellow,
@@ -7420,6 +7498,7 @@
 	},
 /obj/item/extinguisher,
 /obj/item/tool/crowbar,
+/obj/structure/handrail,
 /turf/simulated/shuttle/floor/white,
 /area/shuttle/escape/centcom)
 "gJV" = (
@@ -9170,6 +9249,7 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 10
 	},
+/obj/structure/handrail,
 /turf/simulated/shuttle/floor/yellow,
 /area/shuttle/transport1/centcom)
 "ijT" = (
@@ -9713,6 +9793,9 @@
 /area/shuttle/ninja)
 "iEF" = (
 /obj/machinery/computer/station_alert,
+/obj/machinery/light/floortube{
+	dir = 1
+	},
 /turf/simulated/shuttle/floor/white,
 /area/shuttle/escape/centcom)
 "iFp" = (
@@ -11855,7 +11938,7 @@
 	},
 /area/centcom/security)
 "kvT" = (
-/obj/machinery/light{
+/obj/machinery/light/floortube{
 	dir = 4
 	},
 /obj/machinery/status_display{
@@ -11865,6 +11948,9 @@
 /obj/structure/closet/emcloset,
 /obj/structure/window/reinforced{
 	dir = 1
+	},
+/obj/structure/handrail{
+	dir = 8
 	},
 /turf/simulated/shuttle/floor/white,
 /area/shuttle/escape/centcom)
@@ -13158,6 +13244,7 @@
 /area/centcom/living)
 "lLZ" = (
 /obj/effect/floor_decal/industrial/warning,
+/obj/structure/handrail,
 /turf/simulated/shuttle/floor/yellow,
 /area/shuttle/transport1/centcom)
 "lMb" = (
@@ -13277,7 +13364,7 @@
 	},
 /area/centcom/command)
 "lPM" = (
-/obj/machinery/light{
+/obj/machinery/light/floortube{
 	dir = 8
 	},
 /obj/structure/bed/chair/shuttle{
@@ -16527,6 +16614,9 @@
 	pixel_y = -27;
 	tag_door = "centcom_shuttle_hatch"
 	},
+/obj/structure/handrail{
+	dir = 1
+	},
 /turf/simulated/shuttle/floor,
 /area/shuttle/transport1/centcom)
 "pnA" = (
@@ -16723,7 +16813,7 @@
 	},
 /area/wizard_station)
 "pxp" = (
-/obj/structure/bed/chair{
+/obj/structure/bed/chair/shuttle{
 	dir = 1
 	},
 /turf/simulated/shuttle/floor,
@@ -17486,6 +17576,9 @@
 	pixel_y = -25;
 	req_one_access = list(13);
 	tag_door = "escape_shuttle_hatch"
+	},
+/obj/structure/handrail{
+	dir = 1
 	},
 /turf/simulated/shuttle/floor,
 /area/shuttle/escape/centcom)
@@ -18699,6 +18792,7 @@
 	layer = 4;
 	pixel_x = 32
 	},
+/obj/structure/handrail,
 /turf/simulated/shuttle/floor/white,
 /area/shuttle/escape/centcom)
 "rBp" = (
@@ -19007,6 +19101,9 @@
 "rOR" = (
 /obj/machinery/atmospherics/pipe/simple/visible{
 	dir = 5
+	},
+/obj/structure/handrail{
+	dir = 4
 	},
 /turf/simulated/shuttle/floor/white,
 /area/shuttle/escape/centcom)
@@ -20758,7 +20855,9 @@
 	},
 /area/ninja_dojo/dojo)
 "tuj" = (
-/obj/machinery/light,
+/obj/machinery/light/floortube{
+	pixel_y = 4
+	},
 /turf/simulated/shuttle/floor/red,
 /area/shuttle/escape/centcom)
 "tum" = (
@@ -20787,6 +20886,7 @@
 /area/shuttle/merchant)
 "tvl" = (
 /obj/structure/closet/emcloset,
+/obj/structure/handrail,
 /turf/simulated/shuttle/floor/white,
 /area/shuttle/escape/centcom)
 "two" = (
@@ -21338,7 +21438,7 @@
 	},
 /area/shuttle/trade)
 "tXH" = (
-/obj/structure/bed/chair,
+/obj/structure/bed/chair/shuttle,
 /turf/simulated/shuttle/floor,
 /area/shuttle/transport1/centcom)
 "tXK" = (
@@ -21569,11 +21669,15 @@
 	layer = 4;
 	pixel_x = -32
 	},
+/obj/structure/handrail,
 /turf/simulated/shuttle/floor/white,
 /area/shuttle/escape/centcom)
 "uiI" = (
-/obj/machinery/light{
+/obj/machinery/light/floortube{
 	dir = 4
+	},
+/obj/structure/handrail{
+	dir = 1
 	},
 /turf/simulated/shuttle/floor/red,
 /area/shuttle/response_ship)
@@ -21842,6 +21946,9 @@
 "uvq" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 9
+	},
+/obj/structure/handrail{
+	dir = 1
 	},
 /turf/simulated/shuttle/floor/yellow,
 /area/shuttle/transport1/centcom)
@@ -22574,6 +22681,9 @@
 /area/shadekin)
 "vfs" = (
 /obj/machinery/sleep_console,
+/obj/machinery/light/floortube{
+	pixel_y = 4
+	},
 /turf/simulated/shuttle/floor/white,
 /area/shuttle/escape/centcom)
 "vfE" = (
@@ -22944,6 +23054,7 @@
 /obj/machinery/ai_status_display{
 	pixel_y = 32
 	},
+/obj/structure/handrail,
 /turf/simulated/shuttle/floor/white,
 /area/shuttle/escape/centcom)
 "vut" = (
@@ -24859,7 +24970,7 @@
 	name = "Emergency NanoMed";
 	pixel_x = 28
 	},
-/obj/machinery/light{
+/obj/machinery/light/floortube{
 	dir = 4
 	},
 /obj/structure/bed/chair,
@@ -24879,7 +24990,9 @@
 /obj/machinery/sleep_console{
 	dir = 4
 	},
-/obj/machinery/light,
+/obj/machinery/light/floortube{
+	pixel_y = 4
+	},
 /turf/simulated/shuttle/floor/white,
 /area/shuttle/escape/centcom)
 "xxL" = (
@@ -25252,6 +25365,9 @@
 	subspace_transmission = 1;
 	syndie = 1
 	},
+/obj/structure/handrail{
+	dir = 1
+	},
 /turf/simulated/shuttle/floor/voidcraft/light,
 /area/shuttle/syndicate)
 "xNh" = (
@@ -25391,8 +25507,8 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/shadekin)
 "xST" = (
-/obj/structure/bed/chair,
-/obj/machinery/light{
+/obj/structure/bed/chair/shuttle,
+/obj/machinery/light/floortube{
 	dir = 1
 	},
 /turf/simulated/shuttle/floor,
@@ -25532,6 +25648,9 @@
 /area/shuttle/response_ship)
 "ycK" = (
 /obj/structure/AIcore/deactivated,
+/obj/machinery/light/floortube{
+	pixel_y = 4
+	},
 /turf/simulated/shuttle/floor,
 /area/shuttle/escape/centcom)
 "ydh" = (
@@ -25732,6 +25851,9 @@
 /obj/item/reagent_containers/blood/OMinus,
 /obj/item/reagent_containers/blood/OMinus,
 /obj/item/reagent_containers/blood/OMinus,
+/obj/structure/handrail{
+	dir = 8
+	},
 /turf/simulated/shuttle/floor/white,
 /area/shuttle/escape/centcom)
 "ykT" = (
@@ -33970,8 +34092,8 @@ vFi
 dmo
 azl
 jsR
-uEv
-uEv
+aaS
+aaS
 kxV
 uEv
 uEv
@@ -34229,7 +34351,7 @@ boQ
 uiw
 lpt
 uEv
-uEv
+aby
 kKV
 uEv
 uEv
@@ -34498,7 +34620,7 @@ tCw
 tCw
 tCw
 uEv
-uEv
+aaR
 dmo
 dmo
 dmo
@@ -35002,7 +35124,7 @@ vFi
 boQ
 eHc
 qPX
-bGa
+aaR
 azl
 azl
 tvl
@@ -35261,7 +35383,7 @@ boQ
 rBj
 uBb
 uEv
-uEv
+aaS
 kKV
 uEv
 uEv
@@ -35518,8 +35640,8 @@ vFi
 dmo
 azl
 neF
-uEv
-uEv
+aby
+aby
 kxV
 uEv
 uEv
@@ -35791,7 +35913,7 @@ uEv
 uEv
 nPO
 ykB
-qLu
+aaQ
 bjw
 vNF
 szr
@@ -48076,7 +48198,7 @@ vHC
 vHC
 rJt
 mSP
-wqS
+abA
 oWN
 aMH
 mSP
@@ -48334,7 +48456,7 @@ vHC
 vHC
 rJt
 mSP
-wqS
+abA
 yfA
 gWd
 mSP
@@ -48592,7 +48714,7 @@ vHC
 vHC
 rJt
 mSP
-wqS
+abA
 wqS
 dcJ
 mSP
@@ -48850,7 +48972,7 @@ vHC
 vHC
 rJt
 mSP
-wqS
+abA
 wqS
 dcJ
 mSP
@@ -49110,7 +49232,7 @@ rJt
 mSP
 rMY
 wqS
-wqS
+abz
 mSP
 jlo
 vFi
@@ -49368,7 +49490,7 @@ rJt
 mSP
 gCg
 wqS
-wqS
+abz
 mSP
 jlo
 vFi
@@ -73506,7 +73628,7 @@ uUP
 vaG
 vaG
 wSS
-vaG
+abB
 xVZ
 muP
 muP
@@ -87663,7 +87785,7 @@ vFi
 dtV
 akj
 aUi
-bzT
+abD
 cfK
 cfK
 dJx
@@ -88179,9 +88301,9 @@ vFi
 dtV
 apr
 aUi
-bzT
-cfK
-cfK
+abE
+abC
+abC
 dJA
 dJA
 fWi
