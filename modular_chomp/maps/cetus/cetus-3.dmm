@@ -10577,14 +10577,11 @@
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/d3bar)
 "gxB" = (
-/obj/machinery/power/smes/buildable{
-	RCon_tag = "Solar - Fore Starboard";
-	input_attempt = 1;
-	input_level = 150000;
-	output_level = 100000
-	},
 /obj/structure/cable{
 	icon_state = "0-8"
+	},
+/obj/machinery/power/smes/buildable/max_charge_max_input{
+	RCon_tag = "Solar - Fore Starboard"
 	},
 /turf/simulated/floor/plating,
 /area/engineering/Solar_Control_ForStar)
@@ -12641,14 +12638,11 @@
 /turf/simulated/floor/tiled,
 /area/engineering/Atmospherics_Chamber)
 "hKb" = (
-/obj/machinery/power/smes/buildable{
-	RCon_tag = "Solar - Fore Port";
-	input_attempt = 1;
-	input_level = 150000;
-	output_level = 100000
-	},
 /obj/structure/cable{
 	icon_state = "0-2"
+	},
+/obj/machinery/power/smes/buildable/max_charge_max_input{
+	RCon_tag = "Solar - Fore Port"
 	},
 /turf/simulated/floor/plating,
 /area/engineering/Solar_Control_ForPort)
@@ -13597,14 +13591,11 @@
 /turf/simulated/open,
 /area/maintenance/cetus/threeap)
 "ijr" = (
-/obj/machinery/power/smes/buildable{
-	RCon_tag = "Solar - Asteroid";
-	input_attempt = 1;
-	input_level = 150000;
-	output_level = 100000
-	},
 /obj/structure/cable{
 	icon_state = "0-2"
+	},
+/obj/machinery/power/smes/buildable/max_charge_max_input{
+	RCon_tag = "Solar - Asteroid"
 	},
 /turf/simulated/floor/plating,
 /area/engineering/cetus/jointsubstation)
@@ -28008,14 +27999,11 @@
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/cetus/mime)
 "qAb" = (
-/obj/machinery/power/smes/buildable{
-	RCon_tag = "Solar - Aft Port";
-	input_attempt = 1;
-	input_level = 150000;
-	output_level = 100000
-	},
 /obj/structure/cable{
 	icon_state = "0-6"
+	},
+/obj/machinery/power/smes/buildable/max_charge_max_input{
+	RCon_tag = "Solar - Aft Port"
 	},
 /turf/simulated/floor/plating,
 /area/engineering/Solar_Control_AftPort)
@@ -31719,12 +31707,12 @@
 /turf/simulated/floor/wood,
 /area/crew_quarters/heads/sc/sd)
 "sRO" = (
-/obj/machinery/power/smes/buildable{
-	RCon_tag = "Unused Sector"
-	},
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 9
+	},
+/obj/machinery/power/smes/buildable/max_charge_max_input{
+	RCon_tag = "Unused Sector"
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/maintenance/cetus/shallow/derelict/engine)
