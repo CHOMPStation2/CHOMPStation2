@@ -292,9 +292,8 @@
 	for(var/mob/living/L in loc)
 		var/target_zone = ran_zone()
 		var/blocked = L.run_armor_check(target_zone, "laser")
-		var/soaked = L.get_armor_soak(target_zone, "laser")
 
-		if(!L.apply_damage(40, BURN, target_zone, blocked, soaked))
+		if(!L.apply_damage(40, BURN, target_zone, blocked))
 			break
 	playsound(src, 'sound/effects/teleport.ogg', 50, 1)
 	addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(qdel), src), 0.25 SECONDS, TIMER_DELETE_ME)
@@ -759,4 +758,3 @@
 	if(!target)
 		return
 	explosion(src.loc, 30, 16, 8, 4)
-
