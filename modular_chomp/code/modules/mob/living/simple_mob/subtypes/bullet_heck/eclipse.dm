@@ -76,7 +76,6 @@
 				specialattackprojectile = /obj/item/projectile/energy/eclipse/lorgealien
 				addtimer(CALLBACK(src, PROC_REF(quad_random_firing), A, 12, 2, 10), 1 SECOND, TIMER_DELETE_ME)
 				armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 100, rad = 100)
-				armor_soak = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0)
 				icon_state = "mining_mecha"
 				attackcycle = 0
 			else if(attackcycle == 2)
@@ -98,7 +97,6 @@
 				specialattackprojectile = /obj/item/projectile/energy/eclipse/lorgealien
 				addtimer(CALLBACK(src, PROC_REF(random_firing), A, 6, 2, 10), 1 SECOND, TIMER_DELETE_ME)
 				armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 100, rad = 100)
-				armor_soak = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0)
 				icon_state = "mining_mecha"
 				attackcycle = 0
 			else if(attackcycle == 2)
@@ -120,7 +118,6 @@
 				specialattackprojectile = /obj/item/projectile/energy/eclipse/lorgealien
 				addtimer(CALLBACK(src, PROC_REF(random_firing), A, 8, 2, 10), 1 SECOND, TIMER_DELETE_ME)
 				armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 100, rad = 100)
-				armor_soak = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0)
 				icon_state = "mining_mecha"
 				attackcycle = 0
 			else if(attackcycle == 2)
@@ -147,7 +144,6 @@
 	desc = "A mecha made for enginering purposes, with several alterations to be an odd ball combat unit."
 	specialattackprojectile = /obj/item/projectile/energy/excavate/weak
 	armor = list(melee = 30, bullet = 30, laser = 30, energy = 40, bomb = 90, bio = 100, rad = 100)
-	armor_soak = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0)
 	icon_state = "engi_spider"
 	shock_resist = 1
 	projectiletype = /obj/item/projectile/beam/chain_lightning
