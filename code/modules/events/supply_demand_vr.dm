@@ -57,12 +57,8 @@
 		send_console_message(message, dpt);
 
 	// Also announce over main comms so people know to look
-<<<<<<< HEAD
-	command_announcement.Announce("An order for the station to deliver supplies to [command_name()] has been delivered to all supply Request Consoles", my_department)
-=======
 	command_announcement.Announce("An order for the [using_map.facility_type] to deliver supplies to [command_name()] has been delivered to all supply Request Consoles", my_department)
 	RegisterSignal(SSdcs, COMSIG_GLOB_SUPPLY_SHUTTLE_DEPART, PROC_REF(handle_supply_demand_sell_shuttle))
->>>>>>> bba55977a1 (Polaris Hook Removal Part 1 (#18672))
 
 /datum/event/supply_demand/tick()
 	if(required_items.len == 0)
