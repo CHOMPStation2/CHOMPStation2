@@ -72,6 +72,7 @@
 	if(stat == DEAD)
 		return 0
 	SEND_SIGNAL(src, COMSIG_MOB_DEATH, gibbed)
+<<<<<<< HEAD
 	if(src.loc && istype(loc,/obj/belly) || istype(loc,/obj/item/dogborg/sleeper) || istype(loc, /obj/item/clothing/shoes)) deathmessage = "no message" //VOREStation Add - Prevents death messages from inside mobs - CHOMPEdit: Added in-shoe as well
 	//CHOMPAdd Start - Muffle original body death on Mob TF death
 	if(src.loc && isliving(loc))
@@ -79,6 +80,11 @@
 		if(L.tf_mob_holder == src)
 			deathmessage = "no message"
 	//CHOMPAdd End
+=======
+	SEND_GLOBAL_SIGNAL(COMSIG_GLOB_MOB_DEATH, src, gibbed)
+
+	if(src.loc && istype(loc,/obj/belly) || istype(loc,/obj/item/dogborg/sleeper)) deathmessage = "no message" //VOREStation Add - Prevents death messages from inside mobs
+>>>>>>> bba55977a1 (Polaris Hook Removal Part 1 (#18672))
 	facing_dir = null
 
 	if(!gibbed && deathmessage != DEATHGASP_NO_MESSAGE)
