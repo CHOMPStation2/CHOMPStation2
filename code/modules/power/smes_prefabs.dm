@@ -6,7 +6,7 @@
 /// Defaults to 100% input and output settings, starts with maximum charge by default
 /obj/machinery/power/smes/buildable/engine_default/apply_mapped_settings()
 	// Set charge
-	charge = capacity // * 0.5 // Half charge is used by downstreams for coil upgrades early in shift, virgo wants fully charged from the start.
+	charge = capacity * 0.5 // Half charge is used by downstreams for coil upgrades early in shift, virgo wants fully charged from the start. //CHOMPEDIT - Start half charged.
 	// Set input and output to max
 	inputting(TRUE)
 	outputting(TRUE)
@@ -44,10 +44,6 @@
 	outputting(TRUE)
 	output_level = output_level_max
 
-<<<<<<< HEAD
-//CHOMPedit start - Upstream these post-haste
-=======
->>>>>>> af9ac534e2 (Smes Prefab Alterations (#18710))
 /// Max input, max output, default starting charge
 /obj/machinery/power/smes/buildable/max_input_max_output/apply_mapped_settings()
 	// Set input to max
@@ -57,11 +53,6 @@
 	outputting(TRUE)
 	output_level = output_level_max
 
-<<<<<<< HEAD
-// CHOMPEdit End
-
-=======
->>>>>>> af9ac534e2 (Smes Prefab Alterations (#18710))
 // Poi prop
 /obj/machinery/power/smes/buildable/alien_royal
 	name = "Alien Royal Capacitor"
@@ -146,10 +137,6 @@
 	// Standard level output
 	outputting(TRUE)
 
-<<<<<<< HEAD
-
-=======
->>>>>>> af9ac534e2 (Smes Prefab Alterations (#18710))
 /obj/machinery/power/smes/buildable/point_of_interest/max_charge/apply_mapped_settings()
 	// Set charge
 	charge = capacity
@@ -165,8 +152,3 @@
 	// Set input to max
 	inputting(TRUE)
 	input_level = input_level_max
-<<<<<<< HEAD
-
-// CHOMPEdit End
-=======
->>>>>>> af9ac534e2 (Smes Prefab Alterations (#18710))
