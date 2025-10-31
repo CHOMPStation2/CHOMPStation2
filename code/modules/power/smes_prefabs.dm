@@ -13,6 +13,7 @@
 	input_level = input_level_max
 	output_level = output_level_max
 
+
 /// Standard charge, but with 100% output by default
 /obj/machinery/power/smes/buildable/max_output/apply_mapped_settings()
 	outputting(TRUE)
@@ -110,10 +111,6 @@
 	mode = 3
 
 
-<<<<<<< HEAD
-//CHOMPedit start - Upstream these post-haste
-=======
->>>>>>> af9ac534e2 (Smes Prefab Alterations (#18710))
 ////////////////////////////////////////////////////////////////////////////////////
 // Shuttles and poi
 ////////////////////////////////////////////////////////////////////////////////////
