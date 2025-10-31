@@ -483,3 +483,264 @@
 	icon_state = "mushroom_head_spots"
 	body_parts = list(BP_HEAD)
 	color_blend_mode = ICON_MULTIPLY
+
+// OAK TREE TRUNK //
+
+/datum/sprite_accessory/marking/ch/treeoak_trunk
+	name = "Tree Trunk Body (Oak)"
+	icon_state = "tree_oak_trunk"
+	color_blend_mode = ICON_MULTIPLY
+	body_parts = list(BP_TORSO, BP_GROIN)
+	hide_body_parts = list(BP_TORSO, BP_GROIN)
+
+/datum/sprite_accessory/marking/ch/treeoak_leaves
+	name = "Tree Trunk Leaves (Oak)"
+	icon_state = "tree_oak_leaves"
+	color_blend_mode = ICON_MULTIPLY
+	body_parts = list(BP_HEAD)
+	hide_body_parts = list(BP_HEAD)
+
+/datum/sprite_accessory/marking/ch/treeoak_longroot
+	name = "Tree Trunk Long Root Arms (Oak)"
+	icon_state = "tree_oak_longroot"
+	color_blend_mode = ICON_MULTIPLY
+	body_parts = list(BP_R_ARM, BP_R_HAND, BP_L_ARM, BP_L_HAND)
+	hide_body_parts = list(BP_R_ARM, BP_R_HAND, BP_L_ARM, BP_L_HAND)
+
+// THIN BODY SHAPE //
+
+/datum/sprite_accessory/marking/ch/thin1
+	name = "Thin Bodytype"
+	icon_state = "thin1"
+	color_blend_mode = ICON_MULTIPLY
+	hide_body_parts = list(BP_L_LEG,BP_R_LEG,BP_L_ARM,BP_R_ARM,BP_GROIN,BP_TORSO)
+	body_parts = list(BP_L_LEG,BP_R_LEG,BP_L_ARM,BP_R_ARM,BP_GROIN,BP_TORSO)
+
+/datum/sprite_accessory/marking/ch/thin1_torso
+	name = "Thin Torso"
+	icon_state = "thin1"
+	color_blend_mode = ICON_MULTIPLY
+	hide_body_parts = list(BP_GROIN,BP_TORSO)
+	body_parts = list(BP_GROIN,BP_TORSO)
+
+/datum/sprite_accessory/marking/ch/thin1_larm
+	name = "Thin Left Arm"
+	icon_state = "thin1"
+	color_blend_mode = ICON_MULTIPLY
+	hide_body_parts = list(BP_L_ARM)
+	body_parts = list(BP_L_ARM)
+
+/datum/sprite_accessory/marking/ch/thin1_rarm
+	name = "Thin Right Arm"
+	icon_state = "thin1"
+	color_blend_mode = ICON_MULTIPLY
+	hide_body_parts = list(BP_R_ARM)
+	body_parts = list(BP_R_ARM)
+
+/datum/sprite_accessory/marking/ch/thin1_lleg
+	name = "Thin Left Leg"
+	icon_state = "thin1"
+	color_blend_mode = ICON_MULTIPLY
+	hide_body_parts = list(BP_L_LEG)
+	body_parts = list(BP_L_LEG)
+
+/datum/sprite_accessory/marking/ch/thin1_rleg
+	name = "Thin Right Leg"
+	icon_state = "thin1"
+	color_blend_mode = ICON_MULTIPLY
+	hide_body_parts = list(BP_R_LEG)
+	body_parts = list(BP_R_LEG)
+
+/datum/sprite_accessory/marking/ch/thin2
+	name = "Thiner Bodytype"
+	icon_state = "thin2"
+	color_blend_mode = ICON_MULTIPLY
+	hide_body_parts = list(BP_L_FOOT,BP_R_FOOT,BP_L_LEG,BP_R_LEG,BP_L_ARM,BP_R_ARM,BP_L_HAND,BP_R_HAND,BP_GROIN,BP_TORSO)
+	body_parts = list(BP_L_FOOT,BP_R_FOOT,BP_L_LEG,BP_R_LEG,BP_L_ARM,BP_R_ARM,BP_L_HAND,BP_R_HAND,BP_GROIN,BP_TORSO)
+
+/datum/sprite_accessory/marking/ch/thin2_torso
+	name = "Thiner Torso"
+	icon_state = "thin2"
+	color_blend_mode = ICON_MULTIPLY
+	hide_body_parts = list(BP_GROIN,BP_TORSO)
+	body_parts = list(BP_GROIN,BP_TORSO)
+
+/datum/sprite_accessory/marking/ch/thin2_larm
+	name = "Thiner Left Arm"
+	icon_state = "thin2"
+	color_blend_mode = ICON_MULTIPLY
+	hide_body_parts = list(BP_L_ARM,BP_L_HAND)
+	body_parts = list(BP_L_ARM,BP_L_HAND)
+
+/datum/sprite_accessory/marking/ch/thin2_rarm
+	name = "Thiner Right Arm"
+	icon_state = "thin2"
+	color_blend_mode = ICON_MULTIPLY
+	hide_body_parts = list(BP_R_ARM,BP_R_HAND)
+	body_parts = list(BP_R_ARM,BP_R_HAND)
+
+/datum/sprite_accessory/marking/ch/thin2_lleg
+	name = "Thiner Left Leg"
+	icon_state = "thin2"
+	color_blend_mode = ICON_MULTIPLY
+	hide_body_parts = list(BP_L_FOOT,BP_R_LEG)
+	body_parts = list(BP_L_FOOT,BP_R_LEG)
+
+/datum/sprite_accessory/marking/ch/thin2_rleg
+	name = "Thiner Right Leg"
+	icon_state = "thin2"
+	color_blend_mode = ICON_MULTIPLY
+	hide_body_parts = list(BP_R_FOOT,BP_R_LEG)
+	body_parts = list(BP_R_FOOT,BP_R_LEG)
+
+// THE SKELLYWAG //
+
+/datum/sprite_accessory/marking/ch/skeleton_full
+	name = "Skeleton (Neck Down)"
+	icon_state = "skeleton"
+	color_blend_mode = ICON_MULTIPLY
+	hide_body_parts = list(BP_L_FOOT,BP_R_FOOT,BP_L_LEG,BP_R_LEG,BP_L_ARM,BP_R_ARM,BP_L_HAND,BP_R_HAND,BP_GROIN,BP_TORSO)
+	body_parts = list(BP_L_FOOT,BP_R_FOOT,BP_L_LEG,BP_R_LEG,BP_L_ARM,BP_R_ARM,BP_L_HAND,BP_R_HAND,BP_GROIN,BP_TORSO)
+
+/datum/sprite_accessory/marking/ch/skeleton_full_nohide
+	name = "Skeleton (Neck Down, No Hide)"
+	icon_state = "skeleton"
+	color_blend_mode = ICON_MULTIPLY
+	body_parts = list(BP_L_FOOT,BP_R_FOOT,BP_L_LEG,BP_R_LEG,BP_L_ARM,BP_R_ARM,BP_L_HAND,BP_R_HAND,BP_GROIN,BP_TORSO)
+
+/datum/sprite_accessory/marking/ch/skeleton_torso
+	name = "Skeleton (Torso)"
+	icon_state = "skeleton"
+	color_blend_mode = ICON_MULTIPLY
+	hide_body_parts = list(BP_GROIN,BP_TORSO)
+	body_parts = list(BP_GROIN,BP_TORSO)
+
+/datum/sprite_accessory/marking/ch/skeleton_leftarm
+	name = "Skeleton (Left Arm)"
+	icon_state = "skeleton"
+	color_blend_mode = ICON_MULTIPLY
+	hide_body_parts = list(BP_L_ARM,BP_L_HAND)
+	body_parts = list(BP_L_ARM,BP_L_HAND)
+
+/datum/sprite_accessory/marking/ch/skeleton_rightarm
+	name = "Skeleton (Right Arm)"
+	icon_state = "skeleton"
+	color_blend_mode = ICON_MULTIPLY
+	hide_body_parts = list(BP_R_ARM,BP_R_HAND)
+	body_parts = list(BP_R_ARM,BP_R_HAND)
+
+/datum/sprite_accessory/marking/ch/skeleton_leftleg
+	name = "Skeleton (Left Leg)"
+	icon_state = "skeleton"
+	color_blend_mode = ICON_MULTIPLY
+	hide_body_parts = list(BP_L_FOOT,BP_L_LEG)
+	body_parts = list(BP_L_FOOT,BP_L_LEG)
+
+/datum/sprite_accessory/marking/ch/skeleton_rightleg
+	name = "Skeleton (Right Leg)"
+	icon_state = "skeleton"
+	color_blend_mode = ICON_MULTIPLY
+	hide_body_parts = list(BP_R_FOOT,BP_R_LEG)
+	body_parts = list(BP_R_FOOT,BP_R_LEG)
+
+/datum/sprite_accessory/marking/ch/skeleton_torso_nohide
+	name = "Skeleton (Torso, No Hide)"
+	icon_state = "skeleton"
+	color_blend_mode = ICON_MULTIPLY
+	body_parts = list(BP_GROIN,BP_TORSO)
+
+/datum/sprite_accessory/marking/ch/skeleton_leftarm_nohide
+	name = "Skeleton (Left Arm, No Hide)"
+	icon_state = "skeleton"
+	color_blend_mode = ICON_MULTIPLY
+	body_parts = list(BP_L_ARM,BP_L_HAND)
+
+/datum/sprite_accessory/marking/ch/skeleton_rightarm_nohide
+	name = "Skeleton (Right Arm, No Hide)"
+	icon_state = "skeleton"
+	color_blend_mode = ICON_MULTIPLY
+	body_parts = list(BP_R_ARM,BP_R_HAND)
+
+/datum/sprite_accessory/marking/ch/skeleton_leftleg_nohide
+	name = "Skeleton (Left Leg, No Hide)"
+	icon_state = "skeleton"
+	color_blend_mode = ICON_MULTIPLY
+	body_parts = list(BP_L_FOOT,BP_L_LEG)
+
+/datum/sprite_accessory/marking/ch/skeleton_rightleg_nohide
+	name = "Skeleton (Right Leg, No Hide)"
+	icon_state = "skeleton"
+	color_blend_mode = ICON_MULTIPLY
+	body_parts = list(BP_R_FOOT,BP_R_LEG)
+
+//HEAD PIECES
+
+/datum/sprite_accessory/marking/ch/protovisor
+	name = "Protogen Visor"
+	icon_state = "proto_visor"
+	body_parts = list(BP_HEAD)
+	color_blend_mode = ICON_MULTIPLY
+	hide_body_parts	= list(BP_HEAD)
+
+/datum/sprite_accessory/marking/ch/protovisor_gloss
+	name = "Protogen Visor (Gloss)"
+	icon_state = "proto_visor_gloss"
+	body_parts = list(BP_HEAD)
+	color_blend_mode = ICON_MULTIPLY
+	hide_body_parts	= list(BP_HEAD)
+
+/datum/sprite_accessory/marking/ch/protovisor_mouth
+	name = "Protogen Visor (Mouth)"
+	icon_state = "proto_visor_mouth"
+	body_parts = list(BP_HEAD)
+	color_blend_mode = ICON_MULTIPLY
+	hide_body_parts	= list(BP_HEAD)
+
+/datum/sprite_accessory/marking/ch/protovisor_eyes
+	name = "Protogen Visor (Eyes)"
+	icon_state = "proto_visor_eyes"
+	body_parts = list(BP_HEAD)
+	color_blend_mode = ICON_MULTIPLY
+	hide_body_parts	= list(BP_HEAD)
+
+/datum/sprite_accessory/marking/ch/protovisor_eyes_left
+	name = "Protogen Visor (Eye, Left)"
+	icon_state = "proto_visor_eyes_l"
+	body_parts = list(BP_HEAD)
+	color_blend_mode = ICON_MULTIPLY
+	hide_body_parts	= list(BP_HEAD)
+
+/datum/sprite_accessory/marking/ch/protovisor_eyes_right
+	name = "Protogen Visor (Eye, Right)"
+	icon_state = "proto_visor_eyes_r"
+	body_parts = list(BP_HEAD)
+	color_blend_mode = ICON_MULTIPLY
+	hide_body_parts	= list(BP_HEAD)
+
+/datum/sprite_accessory/marking/ch/protovisor_head
+	name = "Protogen Visor (Headpiece)"
+	icon_state = "proto_visor_band"
+	body_parts = list(BP_HEAD)
+	color_blend_mode = ICON_MULTIPLY
+	hide_body_parts	= list(BP_HEAD)
+
+/datum/sprite_accessory/marking/ch/protovisor_cheek
+	name = "Protogen Visor (Cheekpiece)"
+	icon_state = "proto_visor_cheek"
+	body_parts = list(BP_HEAD)
+	color_blend_mode = ICON_MULTIPLY
+	hide_body_parts	= list(BP_HEAD)
+
+/datum/sprite_accessory/marking/ch/skeleton_head_human
+	name = "Skeleton Head (Humanoid)"
+	icon_state = "skull_human"
+	body_parts = list(BP_HEAD)
+	color_blend_mode = ICON_MULTIPLY
+	hide_body_parts	= list(BP_HEAD)
+
+/datum/sprite_accessory/marking/ch/skeleton_head_snout
+	name = "Skeleton Head (Snouted)"
+	icon_state = "skull_snout"
+	body_parts = list(BP_HEAD)
+	color_blend_mode = ICON_MULTIPLY
+	hide_body_parts	= list(BP_HEAD)
