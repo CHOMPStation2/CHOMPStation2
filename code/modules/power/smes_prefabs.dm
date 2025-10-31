@@ -13,7 +13,6 @@
 	input_level = input_level_max
 	output_level = output_level_max
 
-
 /// Standard charge, but with 100% output by default
 /obj/machinery/power/smes/buildable/max_output/apply_mapped_settings()
 	outputting(TRUE)
