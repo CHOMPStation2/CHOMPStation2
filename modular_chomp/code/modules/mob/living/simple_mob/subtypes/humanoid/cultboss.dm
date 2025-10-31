@@ -26,16 +26,6 @@
 	damage_fatigue_mult = 0.5 // We don't want to give them a flat, huge boost to attack speed, but at the same time, make them fight harder the closer they are to dying.
 	injury_enrages = TRUE
 
-	armor_soak = list( //Combat refactor walk back. old 2 armor_soak
-		"melee" = 5,
-		"bullet" = 5,
-		"laser" = 5,
-		"energy" = 5,
-		"bomb" = 0,
-		"bio" = 0,
-		"rad" = 0
-		)
-
 	loot_list = list(/obj/item/clothing/head/culthood/void = 100,
 			/obj/item/clothing/suit/cultrobes/void = 100,
 			/obj/item/clothing/shoes/boots/cult/void = 100,
