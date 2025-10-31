@@ -16,6 +16,7 @@
 
 	station_name  = "NSS Cetus"
 	station_short = "Cetus Station"
+	facility_type = "station"
 	dock_name     = "NCS Northern Star"
 	boss_name     = "Central Command"
 	boss_short    = "Centcom"
