@@ -53,6 +53,7 @@
 	outputting(TRUE)
 	output_level = output_level_max
 
+
 // Poi prop
 /obj/machinery/power/smes/buildable/alien_royal
 	name = "Alien Royal Capacitor"
@@ -132,6 +133,7 @@
 	input_level = input_level_max
 	// Standard level output
 	outputting(TRUE)
+
 
 /obj/machinery/power/smes/buildable/point_of_interest/max_charge/apply_mapped_settings()
 	// Set charge
