@@ -150,3 +150,4 @@
 	// Set input to max
 	inputting(TRUE)
 	input_level = input_level_max
+
