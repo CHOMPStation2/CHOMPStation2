@@ -2,9 +2,4 @@
 /*
 !/*/
 #Also don't ignore these things because editing them manually on the server is a pain in the fucking ass.
-<<<<<<< HEAD
-=======
-!custom_items.txt
-!custom_sprites.txt
->>>>>>> 315fbb415f (Load alien/job whitelists from database, if enabled (#17952))
 !jukebox.json
