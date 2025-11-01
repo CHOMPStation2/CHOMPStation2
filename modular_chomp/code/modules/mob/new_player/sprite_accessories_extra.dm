@@ -551,6 +551,8 @@
 	hide_body_parts = list(BP_R_LEG)
 	body_parts = list(BP_R_LEG)
 
+//THINNER BODYTYPE//
+
 /datum/sprite_accessory/marking/ch/thin2
 	name = "Thiner Bodytype"
 	icon_state = "thin2"
@@ -730,6 +732,8 @@
 	body_parts = list(BP_HEAD)
 	color_blend_mode = ICON_MULTIPLY
 	hide_body_parts	= list(BP_HEAD)
+
+//SKULL
 
 /datum/sprite_accessory/marking/ch/skeleton_head_human
 	name = "Skeleton Head (Humanoid)"
