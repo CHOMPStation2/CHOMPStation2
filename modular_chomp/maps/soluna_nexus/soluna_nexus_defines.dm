@@ -17,6 +17,7 @@
 
 	station_name  = "NLS Soluna Nexus"
 	station_short = "Soluna Nexus"
+	facility_type = "station"
 	dock_name     = "NCS Northern Star" // Now we're the centcom!
 	boss_name     = "Central Command"
 	boss_short    = "Centcom"

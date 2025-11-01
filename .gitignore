@@ -32,18 +32,6 @@ cfg/
 !/.vscode/settings.json
 !/.vscode/tasks.json
 
-<<<<<<< HEAD
-#GitHub Atom
-.atom-build.json
-
-#KDevelop and Kate
-*.kdev4*
-*.kate-swp
-
-#extra map stuff
-/_maps/**/backup/
-/_maps/templates.dm
-=======
 #Ignore IDE files we don't need in the repo.
 /.vs/**/*
 /v17/**/*
@@ -52,22 +40,18 @@ cfg/
 /v20/**/*
 /v21/**/*
 /v22/**/*
->>>>>>> 4cb5713256 (Gatorsnout (#18536))
 
 temp.dmi
 
-# JavaScript tools
-**/node_modules
+node_modules/
 package-lock.json
 
 # CBT Things
 .cache
 
-# named byond versions config
-/tools/build/dm_versions.json
-
-config/jobwhitelist.txt
-
+#These get built by some automatic process
+tgui/public/tgui.bundle.css
+tgui/public/tgui.bundle.js
 #ignore tracy dll
 prof.dll
 

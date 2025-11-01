@@ -63,7 +63,10 @@
 	if(istype(M, /mob/living/voice)) return	// CHOMPAdd - Stops sentient food from astral projecting
 	if(food_inserted_micros)
 		food_inserted_micros -= M
-	M.forceMove(get_turf(src))
+	if(isdisposalpacket(loc))
+		M.forceMove(loc)
+	else
+		M.forceMove(get_turf(src))
 	to_chat(M, span_warning("You climb out of \the [src]."))
 
 #undef CELLS

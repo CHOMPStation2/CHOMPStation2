@@ -781,10 +781,8 @@
 /obj/structure/cable{
 	icon_state = "0-4"
 	},
-/obj/machinery/power/smes/buildable{
-	RCon_tag = "Substation - Atmospherics";
-	charge = 2e+006;
-	input_attempt = 1
+/obj/machinery/power/smes/buildable/max_charge_max_input{
+	RCon_tag = "Substation - Atmospherics"
 	},
 /obj/structure/cable/cyan{
 	icon_state = "0-8"
@@ -9792,14 +9790,13 @@
 /area/engineering/engine_room)
 "aEI" = (
 /obj/structure/cable,
-/obj/machinery/power/smes/buildable{
-	RCon_tag = "Engine - Main";
-	charge = 2e+007;
-	cur_coils = 4;
-	input_attempt = 1;
-	input_level = 750000;
-	output_level = 750000
+/obj/machinery/power/smes/buildable/engine_default{
+	RCon_tag = "Engine - Main"
 	},
+/obj/item/smes_coil,
+/obj/item/smes_coil,
+/obj/item/smes_coil,
+/obj/item/smes_coil,
 /obj/effect/engine_setup/smes/main,
 /turf/simulated/floor/plating,
 /area/engineering/engine_smes)
@@ -18547,12 +18544,8 @@
 /obj/structure/cable/cyan{
 	icon_state = "0-4"
 	},
-/obj/machinery/power/smes/buildable{
-	RCon_tag = "Engine - Core";
-	charge = 2e+006;
-	input_attempt = 1;
-	input_level = 100000;
-	output_level = 200000
+/obj/machinery/power/smes/buildable/engine_default{
+	RCon_tag = "Engine - Core"
 	},
 /obj/effect/engine_setup/smes,
 /turf/simulated/floor/plating,
@@ -47433,12 +47426,13 @@
 /turf/simulated/floor/plating,
 /area/engineering/drone_fabrication)
 "fJb" = (
-/obj/machinery/power/smes/buildable{
-	RCon_tag = "Engine - ShieldGen";
-	cur_coils = 4;
-	input_level = 750000;
-	output_level = 750000
+/obj/machinery/power/smes/buildable/engine_default{
+	RCon_tag = "Engine - ShieldGen"
 	},
+/obj/item/smes_coil,
+/obj/item/smes_coil,
+/obj/item/smes_coil,
+/obj/item/smes_coil,
 /obj/structure/cable/orange{
 	icon_state = "0-4"
 	},
@@ -52964,7 +52958,7 @@
 /obj/effect/floor_decal/corner/purple/border{
 	dir = 9
 	},
-/obj/machinery/photocopier,
+/obj/machinery/autolathe,
 /turf/simulated/floor/tiled/white,
 /area/rnd/lab)
 "iKA" = (
@@ -52978,6 +52972,11 @@
 /obj/item/cell/high,
 /obj/machinery/cell_charger,
 /obj/item/cell/high,
+/obj/item/radio/intercom{
+	dir = 1;
+	name = "Station Intercom (General)";
+	pixel_y = 21
+	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/lab)
 "iKC" = (
@@ -53156,17 +53155,13 @@
 /turf/simulated/floor/tiled/dark,
 /area/hallway/secondary/entry/D3)
 "iNs" = (
-/obj/item/radio/intercom{
-	dir = 1;
-	name = "Station Intercom (General)";
-	pixel_y = 21
-	},
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 1
 	},
 /obj/effect/floor_decal/corner/purple/border{
 	dir = 1
 	},
+/obj/machinery/photocopier,
 /turf/simulated/floor/tiled/white,
 /area/rnd/lab)
 "iOA" = (
@@ -57037,8 +57032,8 @@
 /turf/simulated/floor/tiled,
 /area/rnd/lab)
 "kRu" = (
-/obj/machinery/autolathe,
 /obj/effect/floor_decal/industrial/outline/yellow,
+/obj/machinery/rnd/destructive_analyzer,
 /turf/simulated/floor/tiled,
 /area/rnd/lab)
 "kRR" = (

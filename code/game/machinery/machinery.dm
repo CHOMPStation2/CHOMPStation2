@@ -153,9 +153,8 @@ Class Procs:
 		for(var/atom/A in contents)
 			if(ishuman(A))
 				var/mob/living/carbon/human/H = A
-				H.client.eye = H.client.mob
-				H.client.perspective = MOB_PERSPECTIVE
-				H.loc = src.loc
+				H.forceMove(loc)
+				H.reset_perspective()
 			else
 				qdel(A)
 	return ..()
@@ -226,20 +225,13 @@ Class Procs:
 		return STATUS_CLOSE
 	return ..()
 
-/obj/machinery/CouldUseTopic(var/mob/user)
-	..()
-	user.set_machine(src)
-
-/obj/machinery/CouldNotUseTopic(var/mob/user)
-	user.unset_machine()
-
 ////////////////////////////////////////////////////////////////////////////////////////////
 
 /obj/machinery/attack_ai(mob/user as mob)
 	if(isrobot(user))
 		// For some reason attack_robot doesn't work
 		// This is to stop robots from using cameras to remotely control machines.
-		if(user.client && user.client.eye == user)
+		if(user.client && !user.is_remote_viewing())
 			return attack_hand(user)
 	else
 		return attack_hand(user)

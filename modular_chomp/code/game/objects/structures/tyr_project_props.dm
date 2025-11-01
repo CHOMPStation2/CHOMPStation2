@@ -1,7 +1,7 @@
 //oooh, shiny
 /obj/structure/prop/tyr_elevator //This won't function for a while, if ever
 	name = "odd elevator"
-	desc = "A strange metal cylandir. Seems sealed shut."
+	desc = "A strange metal cylandir, a partially functioning elevator it seems."
 	icon = 'modular_chomp/icons/obj/tribal_gear.dmi'
 	icon_state = "elevator"
 	anchored = TRUE
@@ -476,6 +476,7 @@
 	icon_state = "barbedwire-out"
 
 /obj/item/prop/tyrlore/reddisc
+	name = "red tyrian data disc"
 	catalogue_data = list(/datum/category_item/catalogue/anomalous/tyr_red)
 	color = "#FFFFFF"
 
@@ -494,6 +495,7 @@
 	value = CATALOGUER_REWARD_HARD
 
 /obj/item/prop/tyrlore/purpledisc
+	name = "purple tyrian data disc"
 	catalogue_data = list(/datum/category_item/catalogue/anomalous/tyr_purple)
 	color = "#530E31"
 
@@ -512,6 +514,7 @@
 	value = CATALOGUER_REWARD_HARD
 
 /obj/item/prop/tyrlore/greendisc
+	name = "green tyrian data disc"
 	catalogue_data = list(/datum/category_item/catalogue/anomalous/tyr_green)
 	color = "#530E31"
 
@@ -525,6 +528,7 @@
 	value = CATALOGUER_REWARD_HARD
 
 /obj/item/prop/tyrlore/basicflora
+	name = "tyrian flora data disc"
 	color = "#FF66CC"
 	catalogue_data = list(/datum/category_item/catalogue/anomalous/tyre_basicflora)
 
@@ -538,6 +542,7 @@
 	value = CATALOGUER_REWARD_HARD
 
 /obj/item/prop/tyrlore/basicshield
+	name = "tyrian shield data disc"
 	color = "#530E31"
 	catalogue_data = list(/datum/category_item/catalogue/anomalous/tyre_basicshield)
 
@@ -551,6 +556,7 @@
 	value = CATALOGUER_REWARD_HARD
 
 /obj/item/prop/tyrlore/advanceshield
+	name = "tyrian shield 2 data disc"
 	color = "#FF0000"
 	catalogue_data = list(/datum/category_item/catalogue/anomalous/tyre_advanceshield)
 
@@ -565,6 +571,7 @@
 	value = CATALOGUER_REWARD_HARD
 
 /obj/item/prop/tyrlore/basicsonic
+	name = "tyrian sonic data disc"
 	color = "#CCCCFF"
 	catalogue_data = list(/datum/category_item/catalogue/anomalous/tyre_basicsonic)
 
@@ -578,6 +585,7 @@
 	value = CATALOGUER_REWARD_HARD
 
 /obj/item/prop/tyrlore/basicpower
+	name = "tyrian power data disc"
 	color = "#530E31"
 	catalogue_data = list(/datum/category_item/catalogue/anomalous/tyre_basicpower)
 
@@ -591,6 +599,7 @@
 	value = CATALOGUER_REWARD_HARD
 
 /obj/item/prop/tyrlore/ants
+	name = "tyrian ants data disc"
 	color = "#993300"
 	catalogue_data = list(/datum/category_item/catalogue/anomalous/tyre_ants)
 
@@ -604,6 +613,7 @@
 	value = CATALOGUER_REWARD_HARD
 
 /obj/item/prop/tyrlore/drones
+	name = "tyrian drone data disc"
 	catalogue_data = list(/datum/category_item/catalogue/anomalous/tyre_drones)
 
 /datum/category_item/catalogue/anomalous/tyre_drones
@@ -613,4 +623,18 @@
 	Allies none the wise\
 	Further data siphoning to contunie\
 	Remodel based off their blueprints."
+	value = CATALOGUER_REWARD_HARD
+
+/obj/item/prop/tyrlore/fossiltank
+	name = "final desgination"
+	icon_state = "old_disc_eclipse"
+	catalogue_data = list(/datum/category_item/catalogue/anomalous/fossil_tank)
+
+/datum/category_item/catalogue/anomalous/fossil_tank
+	name = "Rolling Crematorium"
+	desc = "Station Point - Lost\
+	Attackers - The Terrain\
+	Leader - Nonfunctional\
+	Objective - Eliminate all hostiles\
+	Awaiting further instruction."
 	value = CATALOGUER_REWARD_HARD

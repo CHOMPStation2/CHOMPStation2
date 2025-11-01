@@ -995,6 +995,20 @@ GLOBAL_LIST_EMPTY(json_cache)
 		UNTYPED_LIST_ADD(keys, key)
 	return keys
 
+///compare two lists, returns TRUE if they are the same
+/proc/compare_list(list/l,list/d)
+	if(!islist(l) || !islist(d))
+		return FALSE
+
+	if(l.len != d.len)
+		return FALSE
+
+	for(var/i in 1 to l.len)
+		if(l[i] != d[i])
+			return FALSE
+
+	return TRUE
+
 //TG sort_list
 ///uses sort_list() but uses the var's name specifically. This should probably be using mergeAtom() instead
 /proc/sort_names(list/list_to_sort, order=1)
@@ -1063,18 +1077,4 @@ GLOBAL_LIST_EMPTY(json_cache)
 				return_list += bit
 
 	return return_list
-
-///compare two lists, returns TRUE if they are the same
-/proc/compare_list(list/l,list/d)
-	if(!islist(l) || !islist(d))
-		return FALSE
-
-	if(l.len != d.len)
-		return FALSE
-
-	for(var/i in 1 to l.len)
-		if(l[i] != d[i])
-			return FALSE
-
-	return TRUE
 //CHOMPAdd end

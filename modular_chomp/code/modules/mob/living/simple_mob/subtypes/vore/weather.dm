@@ -5,13 +5,13 @@
 	maxHealth = 500
 	armor = list(melee = 40, bullet = 40, laser = 40, energy = 40, bomb = 50, bio = 100, rad = 100)  //No thematics but I like boss critters to take a bit
 	icon_state = "rex"
-	melee_attack_delay = 0.5 SECONDS
-	melee_damage_lower = 40 //Will murder you if you get within melee.
+	melee_attack_delay = 2 SECONDS
+	melee_damage_lower = 40
 	melee_damage_upper = 40
 	attack_armor_pen = 40
 	damage_fatigue_mult = 1 //Does slowly pick up speed.
 	injury_enrages = TRUE
-	movement_cooldown = 3 //Kind of slow.
+	movement_cooldown = 7 //Kind of slow.
 	ai_holder_type = /datum/ai_holder/simple_mob/fossiltank
 	movement_shake_radius = 8
 	taser_kill = FALSE
@@ -19,9 +19,9 @@
 	shock_resist = -0.2
 	icon = 'modular_chomp/icons/mob/tyr.dmi'
 	special_attack_min_range = 1
-	special_attack_max_range = 14 //The special attacks are more meant to pin you down or provide a healing to this tank.
+	special_attack_max_range = 20 //The special attacks are more meant to pin you down or provide a healing to this tank.
 	special_attack_cooldown = 10 SECONDS
-	swallowTime = 0.5 SECONDS
+	swallowTime = 1.5 SECONDS
 	vore_active = 1
 	vore_capacity = 1
 	vore_bump_chance = 10
@@ -35,8 +35,10 @@
 	grab_resist = 100
 	devourable = FALSE
 	faction = FACTION_ECLIPSE
+	size_multiplier = 2
 
 	loot_list = list(/obj/item/personal_shield_generator/belt/fossiltank  = 100,
+		/obj/item/prop/tyrlore/fossiltank = 100,
 		)
 
 /mob/living/simple_mob/vore/fossiltank/load_default_bellies()
@@ -95,8 +97,25 @@
 /mob/living/simple_mob/vore/fossiltank/proc/sniper_shot(atom/target)
 	if(!target)
 		return
-	var/obj/item/projectile/P = new /obj/item/projectile/beam/lightning(get_turf(src))
+	var/obj/item/projectile/P = new /obj/item/projectile/bullet/srmrocket(get_turf(src))
 	P.launch_projectile(target, BP_TORSO, src)
+
+/obj/item/projectile/bullet/fossilrockect
+	name ="Fossil Rocket"
+	desc = "Boom"
+	icon = 'icons/obj/grenade.dmi'
+	icon_state = "missile"
+	damage = 5 //damage is focused on the explosion
+	does_spin = 0
+
+/obj/item/projectile/bullet/fossilrockect/on_hit(atom/target, blocked=0)
+	explosion(target, 2, 3, 4, 5)
+	return 1
+
+/obj/item/projectile/bullet/fossilrockect/throw_impact(atom/target)
+	explosion(target, 2, 3, 4, 5)
+	qdel(src)
+
 
 /mob/living/simple_mob/vore/boss_jellyfish
 	name = "expirmental jellyfish"
@@ -121,6 +140,8 @@
 	special_attack_min_range = 1
 	special_attack_max_range = 7
 	special_attack_cooldown = 13 SECONDS
+	ai_holder_type = /datum/ai_holder/simple_mob/melee/evasive/jellyfish
+
 
 	swallowTime = 1.5 SECONDS
 	vore_active = 1

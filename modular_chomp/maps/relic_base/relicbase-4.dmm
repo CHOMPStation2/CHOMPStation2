@@ -14141,12 +14141,7 @@
 /area/surface/outpost/main/dorms/dorm_1/upstairs)
 "mVG" = (
 /obj/structure/cable/cyan,
-/obj/machinery/power/smes/buildable{
-	charge = 5e+006;
-	input_attempt = 1;
-	input_level = 200000;
-	output_level = 200000
-	},
+/obj/machinery/power/smes/buildable/engine_default,
 /obj/machinery/flasher{
 	id = "AI";
 	pixel_y = -24
@@ -18709,13 +18704,8 @@
 /turf/simulated/floor/carpet/geo,
 /area/surface/outpost/main/bar)
 "qxu" = (
-/obj/machinery/power/smes/buildable{
-	RCon_tag = "Telecommunications Satellite";
-	charge = 6e+006;
-	input_attempt = 1;
-	input_level = 250000;
-	inputting = 1;
-	output_level = 250000
+/obj/machinery/power/smes/buildable/engine_default{
+	RCon_tag = "Telecommunications Satellite"
 	},
 /obj/structure/cable/cyan,
 /turf/simulated/floor/plating,
@@ -18821,12 +18811,7 @@
 	dir = 1;
 	opacity = 1
 	},
-/obj/machinery/power/smes/buildable/power_shuttle{
-	charge = 4e+006;
-	input_attempt = 1;
-	inputting = 1;
-	outputting = 1
-	},
+/obj/machinery/power/smes/buildable/power_shuttle/max_charge_max_input_base_output,
 /obj/structure/cable/green{
 	icon_state = "0-4"
 	},
@@ -23903,12 +23888,8 @@
 /turf/simulated/floor/tiled/dark,
 /area/security/main)
 "uRR" = (
-/obj/machinery/power/smes/buildable{
-	RCon_tag = "Outpost Solars";
-	charge = 2.5e+006;
-	input_attempt = 1;
-	input_level = 150000;
-	output_level = 100000
+/obj/machinery/power/smes/buildable/max_charge_max_input{
+	RCon_tag = "Outpost Solars"
 	},
 /obj/structure/cable{
 	icon_state = "0-4"

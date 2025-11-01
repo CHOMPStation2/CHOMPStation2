@@ -316,3 +316,12 @@ CREATE TABLE `whitelist` (
 	PRIMARY KEY (`id`) USING BTREE,
 	UNIQUE INDEX `ckey_kind_entry` (`ckey`, `kind`, `entry`) USING BTREE
 ) ENGINE=InnoDB COLLATE='utf8mb4_uca1400_ai_ci';
+
+-- CHOMPedit Start
+CREATE TABLE IF NOT EXISTS `erro_mentor` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `ckey` varchar(32) NOT NULL,
+  `mentor` int(16) NOT NULL DEFAULT 0,
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE=InnoDB AUTO_INCREMENT=35 DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
+-- CHOMPedit End
