@@ -159,14 +159,8 @@
 		else
 			icon = 'icons/obj/pda_old.dmi'
 			log_runtime("Invalid switch for PDA, defaulting to old PDA icons. [pdachoice] chosen.")
-	//add_overlay("pda-pen") //ChompEDIT no icon ops on New
-	start_program(find_program(/datum/data/pda/app/main_menu))
-
-//ChompEDIT START - move icon ops to initialize
-/obj/item/pda/Initialize(mapload)
-	. = ..()
 	add_overlay("pda-pen")
-//ChompEDIT END
+	start_program(find_program(/datum/data/pda/app/main_menu))
 
 /obj/item/pda/proc/can_use(mob/user)
 	return (tgui_status(user, GLOB.tgui_inventory_state) == STATUS_INTERACTIVE)
