@@ -6,7 +6,7 @@
 /// Defaults to 100% input and output settings, starts with maximum charge by default
 /obj/machinery/power/smes/buildable/engine_default/apply_mapped_settings()
 	// Set charge
-	charge = capacity
+	charge = capacity * 0.5 // Half charge is used by downstreams for coil upgrades early in shift, virgo wants fully charged from the start. //CHOMPEDIT - Start half charged.
 	// Set input and output to max
 	inputting(TRUE)
 	outputting(TRUE)
@@ -44,7 +44,6 @@
 	outputting(TRUE)
 	output_level = output_level_max
 
-//CHOMPedit start - Upstream these post-haste
 /// Max input, max output, default starting charge
 /obj/machinery/power/smes/buildable/max_input_max_output/apply_mapped_settings()
 	// Set input to max
@@ -54,7 +53,6 @@
 	outputting(TRUE)
 	output_level = output_level_max
 
-// CHOMPEdit End
 
 // Poi prop
 /obj/machinery/power/smes/buildable/alien_royal
@@ -113,7 +111,6 @@
 	mode = 3
 
 
-//CHOMPedit start - Upstream these post-haste
 ////////////////////////////////////////////////////////////////////////////////////
 // Shuttles and poi
 ////////////////////////////////////////////////////////////////////////////////////
@@ -154,4 +151,3 @@
 	inputting(TRUE)
 	input_level = input_level_max
 
-// CHOMPEdit End
