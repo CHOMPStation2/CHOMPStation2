@@ -516,41 +516,6 @@
 	hide_body_parts = list(BP_L_LEG,BP_R_LEG,BP_L_ARM,BP_R_ARM,BP_GROIN,BP_TORSO)
 	body_parts = list(BP_L_LEG,BP_R_LEG,BP_L_ARM,BP_R_ARM,BP_GROIN,BP_TORSO)
 
-/datum/sprite_accessory/marking/ch/thin1_torso
-	name = "Thin Torso"
-	icon_state = "thin1"
-	color_blend_mode = ICON_MULTIPLY
-	hide_body_parts = list(BP_GROIN,BP_TORSO)
-	body_parts = list(BP_GROIN,BP_TORSO)
-
-/datum/sprite_accessory/marking/ch/thin1_larm
-	name = "Thin Left Arm"
-	icon_state = "thin1"
-	color_blend_mode = ICON_MULTIPLY
-	hide_body_parts = list(BP_L_ARM)
-	body_parts = list(BP_L_ARM)
-
-/datum/sprite_accessory/marking/ch/thin1_rarm
-	name = "Thin Right Arm"
-	icon_state = "thin1"
-	color_blend_mode = ICON_MULTIPLY
-	hide_body_parts = list(BP_R_ARM)
-	body_parts = list(BP_R_ARM)
-
-/datum/sprite_accessory/marking/ch/thin1_lleg
-	name = "Thin Left Leg"
-	icon_state = "thin1"
-	color_blend_mode = ICON_MULTIPLY
-	hide_body_parts = list(BP_L_LEG)
-	body_parts = list(BP_L_LEG)
-
-/datum/sprite_accessory/marking/ch/thin1_rleg
-	name = "Thin Right Leg"
-	icon_state = "thin1"
-	color_blend_mode = ICON_MULTIPLY
-	hide_body_parts = list(BP_R_LEG)
-	body_parts = list(BP_R_LEG)
-
 /datum/sprite_accessory/marking/ch/thin2
 	name = "Thiner Bodytype"
 	icon_state = "thin2"
@@ -558,84 +523,12 @@
 	hide_body_parts = list(BP_L_FOOT,BP_R_FOOT,BP_L_LEG,BP_R_LEG,BP_L_ARM,BP_R_ARM,BP_L_HAND,BP_R_HAND,BP_GROIN,BP_TORSO)
 	body_parts = list(BP_L_FOOT,BP_R_FOOT,BP_L_LEG,BP_R_LEG,BP_L_ARM,BP_R_ARM,BP_L_HAND,BP_R_HAND,BP_GROIN,BP_TORSO)
 
-/datum/sprite_accessory/marking/ch/thin2_torso
-	name = "Thiner Torso"
-	icon_state = "thin2"
-	color_blend_mode = ICON_MULTIPLY
-	hide_body_parts = list(BP_GROIN,BP_TORSO)
-	body_parts = list(BP_GROIN,BP_TORSO)
-
-/datum/sprite_accessory/marking/ch/thin2_larm
-	name = "Thiner Left Arm"
-	icon_state = "thin2"
-	color_blend_mode = ICON_MULTIPLY
-	hide_body_parts = list(BP_L_ARM,BP_L_HAND)
-	body_parts = list(BP_L_ARM,BP_L_HAND)
-
-/datum/sprite_accessory/marking/ch/thin2_rarm
-	name = "Thiner Right Arm"
-	icon_state = "thin2"
-	color_blend_mode = ICON_MULTIPLY
-	hide_body_parts = list(BP_R_ARM,BP_R_HAND)
-	body_parts = list(BP_R_ARM,BP_R_HAND)
-
-/datum/sprite_accessory/marking/ch/thin2_lleg
-	name = "Thiner Left Leg"
-	icon_state = "thin2"
-	color_blend_mode = ICON_MULTIPLY
-	hide_body_parts = list(BP_L_FOOT,BP_R_LEG)
-	body_parts = list(BP_L_FOOT,BP_R_LEG)
-
-/datum/sprite_accessory/marking/ch/thin2_rleg
-	name = "Thiner Right Leg"
-	icon_state = "thin2"
-	color_blend_mode = ICON_MULTIPLY
-	hide_body_parts = list(BP_R_FOOT,BP_R_LEG)
-	body_parts = list(BP_R_FOOT,BP_R_LEG)
-
-// THE SKELLYWAG //
-
 /datum/sprite_accessory/marking/ch/skeleton_full
 	name = "Skeleton (Neck Down)"
 	icon_state = "skeleton"
 	color_blend_mode = ICON_MULTIPLY
 	hide_body_parts = list(BP_L_FOOT,BP_R_FOOT,BP_L_LEG,BP_R_LEG,BP_L_ARM,BP_R_ARM,BP_L_HAND,BP_R_HAND,BP_GROIN,BP_TORSO)
 	body_parts = list(BP_L_FOOT,BP_R_FOOT,BP_L_LEG,BP_R_LEG,BP_L_ARM,BP_R_ARM,BP_L_HAND,BP_R_HAND,BP_GROIN,BP_TORSO)
-
-/datum/sprite_accessory/marking/ch/skeleton_torso
-	name = "Skeleton (Torso)"
-	icon_state = "skeleton"
-	color_blend_mode = ICON_MULTIPLY
-	hide_body_parts = list(BP_GROIN,BP_TORSO)
-	body_parts = list(BP_GROIN,BP_TORSO)
-
-/datum/sprite_accessory/marking/ch/skeleton_leftarm
-	name = "Skeleton (Left Arm)"
-	icon_state = "skeleton"
-	color_blend_mode = ICON_MULTIPLY
-	hide_body_parts = list(BP_L_ARM,BP_L_HAND)
-	body_parts = list(BP_L_ARM,BP_L_HAND)
-
-/datum/sprite_accessory/marking/ch/skeleton_rightarm
-	name = "Skeleton (Right Arm)"
-	icon_state = "skeleton"
-	color_blend_mode = ICON_MULTIPLY
-	hide_body_parts = list(BP_R_ARM,BP_R_HAND)
-	body_parts = list(BP_R_ARM,BP_R_HAND)
-
-/datum/sprite_accessory/marking/ch/skeleton_leftleg
-	name = "Skeleton (Left Leg)"
-	icon_state = "skeleton"
-	color_blend_mode = ICON_MULTIPLY
-	hide_body_parts = list(BP_L_FOOT,BP_L_LEG)
-	body_parts = list(BP_L_FOOT,BP_L_LEG)
-
-/datum/sprite_accessory/marking/ch/skeleton_rightleg
-	name = "Skeleton (Right Leg)"
-	icon_state = "skeleton"
-	color_blend_mode = ICON_MULTIPLY
-	hide_body_parts = list(BP_R_FOOT,BP_R_LEG)
-	body_parts = list(BP_R_FOOT,BP_R_LEG)
 
 //HEAD PIECES
 
