@@ -602,12 +602,6 @@
 	hide_body_parts = list(BP_L_FOOT,BP_R_FOOT,BP_L_LEG,BP_R_LEG,BP_L_ARM,BP_R_ARM,BP_L_HAND,BP_R_HAND,BP_GROIN,BP_TORSO)
 	body_parts = list(BP_L_FOOT,BP_R_FOOT,BP_L_LEG,BP_R_LEG,BP_L_ARM,BP_R_ARM,BP_L_HAND,BP_R_HAND,BP_GROIN,BP_TORSO)
 
-/datum/sprite_accessory/marking/ch/skeleton_full_nohide
-	name = "Skeleton (Neck Down, No Hide)"
-	icon_state = "skeleton"
-	color_blend_mode = ICON_MULTIPLY
-	body_parts = list(BP_L_FOOT,BP_R_FOOT,BP_L_LEG,BP_R_LEG,BP_L_ARM,BP_R_ARM,BP_L_HAND,BP_R_HAND,BP_GROIN,BP_TORSO)
-
 /datum/sprite_accessory/marking/ch/skeleton_torso
 	name = "Skeleton (Torso)"
 	icon_state = "skeleton"
@@ -641,36 +635,6 @@
 	icon_state = "skeleton"
 	color_blend_mode = ICON_MULTIPLY
 	hide_body_parts = list(BP_R_FOOT,BP_R_LEG)
-	body_parts = list(BP_R_FOOT,BP_R_LEG)
-
-/datum/sprite_accessory/marking/ch/skeleton_torso_nohide
-	name = "Skeleton (Torso, No Hide)"
-	icon_state = "skeleton"
-	color_blend_mode = ICON_MULTIPLY
-	body_parts = list(BP_GROIN,BP_TORSO)
-
-/datum/sprite_accessory/marking/ch/skeleton_leftarm_nohide
-	name = "Skeleton (Left Arm, No Hide)"
-	icon_state = "skeleton"
-	color_blend_mode = ICON_MULTIPLY
-	body_parts = list(BP_L_ARM,BP_L_HAND)
-
-/datum/sprite_accessory/marking/ch/skeleton_rightarm_nohide
-	name = "Skeleton (Right Arm, No Hide)"
-	icon_state = "skeleton"
-	color_blend_mode = ICON_MULTIPLY
-	body_parts = list(BP_R_ARM,BP_R_HAND)
-
-/datum/sprite_accessory/marking/ch/skeleton_leftleg_nohide
-	name = "Skeleton (Left Leg, No Hide)"
-	icon_state = "skeleton"
-	color_blend_mode = ICON_MULTIPLY
-	body_parts = list(BP_L_FOOT,BP_L_LEG)
-
-/datum/sprite_accessory/marking/ch/skeleton_rightleg_nohide
-	name = "Skeleton (Right Leg, No Hide)"
-	icon_state = "skeleton"
-	color_blend_mode = ICON_MULTIPLY
 	body_parts = list(BP_R_FOOT,BP_R_LEG)
 
 //HEAD PIECES
