@@ -52,9 +52,9 @@
 	coretype = /obj/item/slime_extract/metal
 	maxHealth = 250
 	armor = list(
-				"melee" = 25,
-				"bullet" = 25,
-				"laser" = 25,
+				"melee" = 35,
+				"bullet" = 35,
+				"laser" = 35,
 				"energy" = 50,
 				"bomb" = 80,
 				"bio" = 100,

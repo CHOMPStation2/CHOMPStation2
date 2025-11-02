@@ -2,6 +2,7 @@
 	name = "Rift Magus"
 	maxHealth = 450 //Boss Mobs should be tanky. //Old 225
 	health = 450
+	armor = list(melee = 70, bullet = 60, laser = 60, energy = 90, bomb = 30, bio = 100, rad = 100)
 
 	melee_damage_lower = 30 //Old 15
 	melee_damage_upper = 45 //Old 22

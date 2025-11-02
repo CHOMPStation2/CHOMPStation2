@@ -12,7 +12,7 @@
 	icon_state = "crystal"
 	icon_dead = "crystal_dead"
 
-	armor = list(melee = 60, bullet = 60, laser = 60, energy = 60, bomb = 0, bio = 100, rad = 100)
+	armor = list(melee = 80, bullet = 80, laser = 80, energy = 80, bomb = 0, bio = 100, rad = 100)
 
 	min_oxy = 0
 	max_oxy = 0

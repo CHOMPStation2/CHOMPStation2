@@ -82,10 +82,10 @@
 	special_attack_cooldown = 30 SECONDS
 
 	armor = list(			// Values for normal getarmor() checks
-				"melee" = 20,
-				"bullet" = 20,
-				"laser" = 20,
-				"energy" = 5,
+				"melee" = 30,
+				"bullet" = 30,
+				"laser" = 30,
+				"energy" = 15,
 				"bomb" = 0,
 				"bio" = 100,
 				"rad" = 100
@@ -172,10 +172,10 @@
 	buckle_lying = FALSE
 	vore_icons = SA_ICON_LIVING | SA_ICON_REST
 	armor = list(			// Values for normal getarmor() checks
-				"melee" = 30,
-				"bullet" = 10,
-				"laser" = 10,
-				"energy" = 5,
+				"melee" = 40,
+				"bullet" = 20,
+				"laser" = 20,
+				"energy" = 15,
 				"bomb" = 0,
 				"bio" = 100,
 				"rad" = 100

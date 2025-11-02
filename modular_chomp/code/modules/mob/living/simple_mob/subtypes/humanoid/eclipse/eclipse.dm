@@ -131,7 +131,7 @@
 	maxHealth = 100
 	projectiletype = /obj/item/projectile/energy/eclipse
 
-	armor = list(melee = -100, bullet = -100, laser = 40, energy = 40, bomb = 50, bio = 100, rad = 100) //Solar members are nigh immune to burns.
+	armor = list(melee = -100, bullet = -100, laser = 90, energy = 90, bomb = 50, bio = 100, rad = 100) //Solar members are nigh immune to burns.
 
 /mob/living/simple_mob/humanoid/eclipse/solar/bullet_act(obj/item/projectile/P)
 	..()
@@ -412,7 +412,7 @@
 	health = 100
 	maxHealth = 100
 	projectiletype = /obj/item/projectile/bullet/crystaline
-	armor = list(melee = 40, bullet = 40, laser = -100, energy = -100, bomb = 50, bio = 100, rad = 100) //Lunar members are nigh immune to burns.
+	armor = list(melee = 80, bullet = 80, laser = 90, energy = 90, bomb = 50, bio = 100, rad = 100) //Lunar members are nigh immune to burns.
 
 /mob/living/simple_mob/humanoid/eclipse/lunar/bullet_act(obj/item/projectile/P)
 	..()

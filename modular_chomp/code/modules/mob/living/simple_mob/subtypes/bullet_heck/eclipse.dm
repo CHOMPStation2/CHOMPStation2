@@ -62,7 +62,7 @@
 	name = "Eclipse Expirmental Mining Mecha"
 	desc = "You mecha guarded by a powerful shield. Perhaps it will drop at some point."
 	specialattackprojectile = /obj/item/projectile/energy/eclipse/lorgealien
-	armor = list(melee = 90, bullet = 90, laser = 90, energy = 90, bomb = 90, bio = 100, rad = 100)
+	armor = list(melee = 99, bullet = 99, laser = 99, energy = 99, bomb = 90, bio = 100, rad = 100)
 	icon_state = "shielded_mining_mecha"
 	shock_resist = 1
 	wreckage = /obj/structure/loot_pile/mecha/odd_ripley
@@ -80,13 +80,13 @@
 			else if(attackcycle == 2)
 				specialattackprojectile = /obj/item/projectile/energy/eclipse/lorgealien
 				addtimer(CALLBACK(src, PROC_REF(hole_in_wall), A, 3, 15), 0.5 SECONDS, TIMER_DELETE_ME)
-				armor = list(melee = 90, bullet = 90, laser = 90, energy = 90, bomb = 90, bio = 100, rad = 100)
+				armor = list(melee = 99, bullet = 99, laser = 99, energy = 99, bomb = 90, bio = 100, rad = 100)
 				icon_state = "shielded_mining_mecha"
 				attackcycle = 0
 			else if(attackcycle == 3)
 				specialattackprojectile = /obj/item/projectile/arc/blue_energy/precusor
 				addtimer(CALLBACK(src, PROC_REF(chain_burst), A, 1, 15), 0.5 SECONDS, TIMER_DELETE_ME)
-				armor = list(melee = 90, bullet = 90, laser = 90, energy = 90, bomb = 90, bio = 100, rad = 100)
+				armor = list(melee = 99, bullet = 99, laser = 99, energy = 99, bomb = 90, bio = 100, rad = 100)
 				icon_state = "shielded_mining_mecha"
 				attackcycle = 0
 		if(I_HURT) //phase1
@@ -99,13 +99,13 @@
 			else if(attackcycle == 2)
 				specialattackprojectile = /obj/item/projectile/energy/eclipse/lorgealien
 				addtimer(CALLBACK(src, PROC_REF(hole_in_wall), A, 3, 20), 0.5 SECONDS, TIMER_DELETE_ME)
-				armor = list(melee = 90, bullet = 90, laser = 90, energy = 90, bomb = 90, bio = 100, rad = 100)
+				armor = list(melee = 99, bullet = 99, laser = 99, energy = 99, bomb = 90, bio = 100, rad = 100)
 				icon_state = "shielded_mining_mecha"
 				attackcycle = 0
 			else if(attackcycle == 3)
 				specialattackprojectile = /obj/item/projectile/arc/blue_energy/precusor
 				addtimer(CALLBACK(src, PROC_REF(chain_burst), A, 1, 20), 0.5 SECONDS, TIMER_DELETE_ME)
-				armor = list(melee = 90, bullet = 90, laser = 90, energy = 90, bomb = 90, bio = 100, rad = 100)
+				armor = list(melee = 99, bullet = 99, laser = 99, energy = 99, bomb = 90, bio = 100, rad = 100)
 				icon_state = "shielded_mining_mecha"
 				attackcycle = 0
 		if(I_GRAB) // Phase 2
@@ -118,13 +118,13 @@
 			else if(attackcycle == 2)
 				specialattackprojectile = /obj/item/projectile/energy/eclipse/lorgealien
 				addtimer(CALLBACK(src, PROC_REF(hole_in_wall), A, 3, 15), 0.5 SECONDS, TIMER_DELETE_ME)
-				armor = list(melee = 90, bullet = 90, laser = 90, energy = 90, bomb = 90, bio = 100, rad = 100)
+				armor = list(melee = 99, bullet = 99, laser = 99, energy = 99, bomb = 90, bio = 100, rad = 100)
 				icon_state = "shielded_mining_mecha"
 				attackcycle = 0
 			else if(attackcycle == 3)
 				specialattackprojectile = /obj/item/projectile/arc/blue_energy/precusor
 				addtimer(CALLBACK(src, PROC_REF(chain_burst), A, 1, 15), 0.5 SECONDS, TIMER_DELETE_ME)
-				armor = list(melee = 90, bullet = 90, laser = 90, energy = 90, bomb = 90, bio = 100, rad = 100)
+				armor = list(melee = 99, bullet = 99, laser = 99, energy = 99, bomb = 90, bio = 100, rad = 100)
 				icon_state = "shielded_mining_mecha"
 				attackcycle = 0
 
@@ -232,7 +232,7 @@
 /mob/living/simple_mob/mechanical/mecha/eclipse/darkmatter_assualt/armored/bullet_act(obj/item/projectile/P)
 	.= ..()
 	if(istype(P, /obj/item/projectile/bullet))
-		armor = list(melee = 80, bullet = 80, laser = 30, energy = 30, bomb = 80, bio = 100, rad = 100)
+		armor = list(melee = 90, bullet = 90, laser = 30, energy = 30, bomb = 80, bio = 100, rad = 100)
 		icon_state = "eclipse_janus_red"
 		visible_message(span_cult("[P] has been adapted too!."))
 	else

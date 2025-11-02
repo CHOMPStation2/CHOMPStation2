@@ -46,6 +46,7 @@
 
 /mob/living/simple_mob/animal/space/alien/sentinel/praetorian/tank
 	name = "alien Tankerling"
+	armor = list(melee = -25, bullet = 20, laser = 20, energy = 0, bomb = 0, bio = 0, rad = 0)
 	base_attack_cooldown = 25
 	color = "#ff8214"
 	health = 700
@@ -68,6 +69,7 @@
 	color = "#38b9ff"
 	health = 500
 	maxHealth = 500
+	armor = list(melee = -20, bullet = 20, laser = 10, energy = 0, bomb = 0, bio = 0, rad = 0)
 	melee_damage_lower = 25
 	melee_damage_upper = 30
 	movement_cooldown = 12
@@ -85,6 +87,7 @@
 	color = "#4a4a4a"
 	health = 1250
 	maxHealth = 1250
+	armor = list(melee = -20, bullet = 20, laser = 10, energy = 0, bomb = 0, bio = 0, rad = 0)
 	melee_damage_lower = 25
 	melee_damage_upper = 30
 	movement_cooldown = 12
@@ -100,6 +103,7 @@
 	color = "#ccff4a"
 	health = 200
 	maxHealth = 200
+	armor = list(melee = 0, bullet = 10, laser = 10, energy = 0, bomb = 0, bio = 0, rad = 0)
 	needs_reload = 1
 	projectiletype = /obj/item/projectile/beam/stun/electric_spider
 	reload_max = 5

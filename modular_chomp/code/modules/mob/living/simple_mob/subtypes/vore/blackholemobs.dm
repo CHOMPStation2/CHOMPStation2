@@ -723,9 +723,9 @@ GLOBAL_LIST_INIT(obelisk_lure_messages, list(
 
 	armor = list(
 				"melee" = 100,
-				"bullet" = 70,
-				"laser" = 70,
-				"energy" = 90,
+				"bullet" = 80,
+				"laser" = 80,
+				"energy" = 97,
 				"bomb" = 0,
 				"bio" = 100,
 				"rad" = 100)

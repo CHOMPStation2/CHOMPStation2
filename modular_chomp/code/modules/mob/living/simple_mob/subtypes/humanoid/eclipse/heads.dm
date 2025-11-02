@@ -10,7 +10,7 @@
 
 	damage_fatigue_mult = 0
 
-	armor = list(melee = 20, bullet = 20, laser = 20, energy = 20, bomb = 100, bio = 100, rad = 100)
+	armor = list(melee = 34, bullet = 34, laser = 34, energy = 34, bomb = 100, bio = 100, rad = 100)
 	has_heal_droid = TRUE
 
 /mob/living/simple_mob/humanoid/eclipse/head/security
@@ -633,7 +633,7 @@
 	glow_override = TRUE
 	glow_color = "#FFA723"
 	glow_range = 16
-	armor = list(melee = 35, bullet = 35, laser = 35, energy = 35, bomb = 100, bio = 100, rad = 100)
+	armor = list(melee = 49, bullet = 49, laser = 49, energy = 49, bomb = 100, bio = 100, rad = 100)
 	projectiletype = /obj/item/projectile/energy/homing_bolt
 	ai_holder_type = /datum/ai_holder/simple_mob/intentional/adv_dark_gygax
 	loot_list = list(/obj/item/slime_extract/sepia  = 25,

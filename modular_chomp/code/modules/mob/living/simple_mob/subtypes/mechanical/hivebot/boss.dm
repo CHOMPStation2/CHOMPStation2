@@ -24,7 +24,7 @@
 	water_resist = 3
 	attack_armor_pen = -50
 
-	armor = list(melee = -150, bullet = 40, laser = 40, energy = 40, bomb = 40, bio = 100, rad = 100)
+	armor = list(melee = -150, bullet = 60, laser = 60, energy = 60, bomb = 40, bio = 100, rad = 100)
 
 	loot_list = list(/obj/item/clothing/suit/armor/alien = 30,
 			/obj/item/clothing/suit/armor/alien/tank = 30,
