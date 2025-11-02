@@ -124,3 +124,30 @@
 		/area/turbolift/port_deck_one,
 		/area/turbolift/port_deck_two
 		)
+
+/obj/turbolift_map_holder/cetus
+	icon = 'icons/obj/turbolift_preview_5x5.dmi'
+	depth = 3
+	lift_size_x = 4
+	lift_size_y = 4
+
+/obj/turbolift_map_holder/cetus/atrium
+	name = "Cetus turbolift map placeholder - Atrium"
+	dir = NORTH
+	wall_type = null
+
+	areas_to_use = list(
+		/area/turbolift/atrium_deck_one,
+		/area/turbolift/atrium_deck_two,
+		/area/turbolift/atrium_deck_three
+	)
+
+/obj/turbolift_map_holder/cetus/utility
+	name = "Cetus turbolift map placeholder - Utility Atrium"
+	dir = WEST
+
+	areas_to_use = list(
+		/area/turbolift/utility_atrium_deck_one,
+		/area/turbolift/utility_atrium_deck_two,
+		/area/turbolift/utility_atrium_deck_three
+	)

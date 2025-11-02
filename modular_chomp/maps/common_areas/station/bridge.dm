@@ -92,3 +92,6 @@
 /area/bridge/Vault
 	name = "\improper Vault"
 	icon_state = "bridge"
+
+/area/bridge/secretaryoffice
+	name = "\improper Command Secretary's Office"
