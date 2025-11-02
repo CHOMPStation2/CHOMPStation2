@@ -9,6 +9,7 @@
 		/area/solar
 	)
 	var/list/area/pickable_areas
+	var/area/announce_area
 
 /datum/event/bluespace_locker/setup()
 	pickable_areas = get_station_areas(excluded)
@@ -41,6 +42,7 @@
 		if(!closet.can_open() && sealed)
 			continue
 		valid_lockers.Add(closet)
+		announce_area = picked_area
 		pickable_areas.Remove(picked_area)
 
 	if(!isemptylist(valid_lockers))
@@ -57,4 +59,4 @@
 	log_and_message_admins("Bluespace lockers linked. Entry: [get_area(exit_point)] Exit: [get_area(entry_point)]")
 
 /datum/event/bluespace_locker/announce()
-	command_announcement.Announce("Bluespace anomaly detected near [station_name()]. Monitor sensitive equipment for malfunctions.", "Anomaly Alert")
+	command_announcement.Announce("Bluespace anomaly detected near [station_name()]. Possible location, [announce_area].", "Anomaly Alert")
