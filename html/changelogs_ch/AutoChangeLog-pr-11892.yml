@@ -1,5 +1,0 @@
-author: "Guti"
-delete-after: True
-changes:
-  - refactor: "Improved the bluespace lockers locker pick method"
-  - code_imp: "Bluespace Lockers event have a couple more attempts to pick a locker now"

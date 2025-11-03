@@ -1,3 +1,25 @@
 2025-11-01:
   Will:
   - bugfix: non-legacy instruments should now play music
+2025-11-03:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: genes being shown lower case due to a change in num2hex
+  - qol: makes some belly content interactions easier accessible
+  - rscdel: Removed Armorsoak. no more flat damage reduction after percentage damage
+      reduction
+  - qol: made a lot of basic simplemobs less tanky as a side effect, I guess? A lot
+      of mobs had armorsoak when they really shouldn't have.
+  - balance: probably affects combat a bit, atleast for exploration, some mobs will
+      be easier to kill, while padded exploration suits wont protect as much.
+  - qol: Basic borg grippers can now use any floor tiling, as well as grab any leather
+      product to enable tanning.
+  - qol: Borg Sheet Grippers can now grab rods to enable reinforced floor tile production.
+  - bugfix: Pointblank attacks will increase the agony damage just like normal damage.
+  Guti:
+  - code_imp: Added vore preference helpers
+  - refactor: Improved the bluespace lockers locker pick method
+  - code_imp: Bluespace Lockers event have a couple more attempts to pick a locker
+      now
+  Will:
+  - bugfix: Ice uses proper slipcode, no longer slips phased shadekin
+  - code_imp: Smes prefab tweaks
