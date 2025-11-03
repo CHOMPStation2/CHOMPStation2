@@ -412,7 +412,7 @@
 	health = 100
 	maxHealth = 100
 	projectiletype = /obj/item/projectile/bullet/crystaline
-	armor = list(melee = 80, bullet = 80, laser = 90, energy = 90, bomb = 50, bio = 100, rad = 100) //Lunar members are nigh immune to burns.
+	armor = list(melee = 80, bullet = 80, laser = -100, energy = -100, bomb = 50, bio = 100, rad = 100) //Lunar members take massive damage from to burns.
 
 /mob/living/simple_mob/humanoid/eclipse/lunar/bullet_act(obj/item/projectile/P)
 	..()
