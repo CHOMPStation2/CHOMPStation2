@@ -250,15 +250,7 @@
 	icon_living = "gravityshell"
 	icon_dead = "gravityshell-dead"
 	movement_cooldown = 5			// Lower is faster.
-	armor_soak = list(		// Values for getsoak() checks.
-				"melee" = 7,
-				"bullet" = 7,
-				"laser" = 7,
-				"energy" = 7,
-				"bomb" = 0,
-				"bio" = 0,
-				"rad" = 0
-				)
+	armor = list(melee = 14, bullet = 14, laser = 14, energy = 14, bomb = 0, bio = 100, rad = 100)
 	var/artifact_master = /datum/component/artifact_master/gravity
 
 	evolve = "/mob/living/simple_mob/vore/spacecritter/gravityshell/cleanse"

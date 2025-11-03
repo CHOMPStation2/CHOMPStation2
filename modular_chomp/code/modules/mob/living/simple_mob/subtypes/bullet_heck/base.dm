@@ -6,7 +6,6 @@
 	has_repair_droid = TRUE
 	ai_holder_type = /datum/ai_holder/simple_mob/intentional/three_phases
 	armor = list(melee = 50, bullet = 50, laser = 50, energy = 50, bomb = 50, bio = 100, rad = 100)
-	armor_soak = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0)
 	special_attack_min_range = 1
 	special_attack_max_range = 7
 	special_attack_cooldown = 10 //This things attack soley via speical attacks hence basically no cooldown
