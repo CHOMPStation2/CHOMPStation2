@@ -153,6 +153,10 @@
 	icon = 'modular_chomp/icons/inventory/head/item.dmi'
 	default_worn_icon = 'modular_chomp/icons/inventory/head/mob_halo.dmi'
 	icon_state = "halo"
+
+/obj/item/clothing/head/halo/alt
+	icon = 'icons/inventory/head/item.dmi'
+	default_worn_icon = 'icons/inventory/head/mob.dmi'
 // CHOMPEdit End
 
 //Replikant Hat
