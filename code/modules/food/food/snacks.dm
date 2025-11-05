@@ -94,9 +94,8 @@
 			NR.forceMove(M.vore_selected)
 		//CHOMPAdd End
 		if(trash)
-<<<<<<< HEAD
 			var/obj/item/TrashItem = new trash(M)
-			M.put_in_hands(TrashItem)
+			eater.put_in_hands(TrashItem)
 			//CHOMPAdd Start - Transfer item TF mobs to the trash if able
 			if(possessed_voice && possessed_voice.len)
 				for(var/mob/living/voice/V in possessed_voice)
@@ -110,10 +109,6 @@
 				possessed_voice -= V
 				qdel(V)
 		//CHOMPAdd End
-=======
-			var/obj/item/TrashItem = new trash(eater)
-			eater.put_in_hands(TrashItem)
->>>>>>> f8b05adc3b (Makes food/drink code easier to read (#18673))
 		qdel(src)
 
 /obj/item/reagent_containers/food/snacks/attack_self(mob/user as mob)
@@ -123,11 +118,7 @@
 	if(canned && !user.incapacitated())
 		uncan(user)
 
-<<<<<<< HEAD
-/obj/item/reagent_containers/food/snacks/attack(mob/living/M as mob, mob/living/user as mob, def_zone) //CHOMPEdit
-=======
 /obj/item/reagent_containers/food/snacks/attack(mob/living/eater as mob, mob/user as mob, def_zone)
->>>>>>> f8b05adc3b (Makes food/drink code easier to read (#18673))
 	if(reagents && !reagents.total_volume)
 		balloon_alert(user, "none of \the [src] left!")
 		user.drop_from_inventory(src)
@@ -267,56 +258,48 @@
 		else if(reagents)								//Handle ingestion of the reagent.
 			playsound(eater, eating_sound, rand(10,50), 1)
 			if(reagents.total_volume)
-<<<<<<< HEAD
 				//CHOMPStation Edit Begin
 				var/bite_mod = 1
-				var/mob/living/carbon/human/H = M
-				if(istype(H))
-					bite_mod = H.species.bite_mod
+				var/mob/living/carbon/human/human = eater
+				if(istype(human))
+					bite_mod = human.species.bite_mod
 				if(reagents.total_volume > bitesize*bite_mod)
 					reagents.trans_to_mob(M, bitesize*bite_mod, CHEM_INGEST)
 				//CHOMPStation Edit End
-=======
 				if(reagents.total_volume > bitesize)
 					reagents.trans_to_mob(eater, bitesize, CHEM_INGEST)
->>>>>>> f8b05adc3b (Makes food/drink code easier to read (#18673))
 				else
 					reagents.trans_to_mob(eater, reagents.total_volume, CHEM_INGEST)
 				bitecount++
-<<<<<<< HEAD
-				On_Consume(M)
-			return 1
-	else if(isliving(M) && user.stuffing_feeder) //CHOMPAdd Start
+				On_Consume(eater, user)
+			return TRUE
+	else if(isliving(eater) && user.stuffing_feeder) //CHOMPAdd Start
 		var/swallow_whole = user.stuffing_feeder
 		var/obj/belly/belly_target
 		if(swallow_whole)
-			belly_target = tgui_input_list(user, "Choose Belly", "Belly Choice", M.feedable_bellies())
-			if(!(M.feeding))
-				to_chat(user, "You can't feed [M] a whole [src] as they refuse to be fed whole things!")
+			belly_target = tgui_input_list(user, "Choose Belly", "Belly Choice", eater.feedable_bellies())
+			if(!(eater.feeding))
+				to_chat(user, "You can't feed [eater] a whole [src] as they refuse to be fed whole things!")
 				balloon_alert(user, "they refuse to be fed whole things!") // CHOMPEdit
 				return
 			if(!belly_target)
-				to_chat(user, "You can't feed [M] a whole [src] as they don't appear to have a belly to fit it!")
+				to_chat(user, "You can't feed [eater] a whole [src] as they don't appear to have a belly to fit it!")
 				balloon_alert(user, "they don't have a belly to fit it!")// CHOMPEdit
 				return
-			user.visible_message("[user] attempts to make [M] consume [src] whole into their [belly_target].")
-			user.balloon_alert_visible("attempts to make [M] consume [src] whole into their [belly_target].")// CHOMPEdit
+			user.visible_message("[user] attempts to make [eater] consume [src] whole into their [belly_target].")
+			user.balloon_alert_visible("attempts to make [eater] consume [src] whole into their [belly_target].")// CHOMPEdit
 			var/feed_duration = 3 SECONDS
 			user.setClickCooldown(user.get_attack_speed(src))
-			if(!do_mob(user, M, feed_duration))
+			if(!do_mob(user, eater, feed_duration))
 				return
 			if(!belly_target)
 				return
-			add_attack_logs(user,M,"Whole-fed with [src.name] containing [reagentlist(src)] into [belly_target]", admin_notify = FALSE)
-			user.visible_message("[user] successfully forces [src] into [M]'s [belly_target].") // CHOMPEdit
-			user.balloon_alert_visible("forces [src] into [M]'s [belly_target].") // CHOMPEdit
+			add_attack_logs(user,eater,"Whole-fed with [src.name] containing [reagentlist(src)] into [belly_target]", admin_notify = FALSE)
+			user.visible_message("[user] successfully forces [src] into [eater]'s [belly_target].") // CHOMPEdit
+			user.balloon_alert_visible("forces [src] into [eater]'s [belly_target].") // CHOMPEdit
 			user.drop_item()
 			forceMove(belly_target)
-			return 1 //CHOMPAdd End
-=======
-				On_Consume(eater, user)
-			return TRUE
->>>>>>> f8b05adc3b (Makes food/drink code easier to read (#18673))
+			return TRUE //CHOMPAdd End
 
 	return FALSE
 
