@@ -23,3 +23,7 @@
   Will:
   - bugfix: Ice uses proper slipcode, no longer slips phased shadekin
   - code_imp: Smes prefab tweaks
+2025-11-05:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: multiple vore issues
+  - qol: moves inside contents to its own tab
