@@ -85,7 +85,7 @@
 
 	if(!src.eyeobj)
 		return
-	if(client.eye)
+	if(client && client.eye)
 		reset_perspective(src)
 
 	for(var/datum/chunk/c in eyeobj.visibleChunks)
