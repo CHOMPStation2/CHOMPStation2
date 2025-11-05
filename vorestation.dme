@@ -316,6 +316,7 @@
 #include "code\_helpers\unsorted_vr.dm"
 #include "code\_helpers\verbs.dm"
 #include "code\_helpers\view.dm"
+#include "code\_helpers\vore.dm"
 #include "code\_helpers\weakref.dm"
 #include "code\_helpers\widelists_ch.dm"
 #include "code\_helpers\graphs\astar_ch.dm"
