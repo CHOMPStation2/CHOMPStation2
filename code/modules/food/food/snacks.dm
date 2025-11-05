@@ -83,7 +83,7 @@
 		eater.drop_from_inventory(src) // Drop food from inventory so it doesn't end up staying on the hud after qdel, and so inhands go away
 
 		//CHOMPAdd Start - Consume item TF mobs as raw nutrition if prefs align
-		if(possessed_voice && possessed_voice.len && M.can_be_drop_pred && M.food_vore && M.vore_selected)
+		if(possessed_voice && possessed_voice.len && eater.can_be_drop_pred && eater.food_vore && eater.vore_selected)
 			var/obj/item/reagent_containers/food/rawnutrition/NR = new /obj/item/reagent_containers/food/rawnutrition(usr)
 			NR.name = "piece of food"
 			NR.stored_nutrition = 1
@@ -91,7 +91,7 @@
 				NR.inhabit_item(V, null, V.tf_mob_holder, TRUE)
 				possessed_voice -= V
 				qdel(V)
-			NR.forceMove(M.vore_selected)
+			NR.forceMove(eater.vore_selected)
 		//CHOMPAdd End
 		if(trash)
 			var/obj/item/TrashItem = new trash(M)
@@ -118,7 +118,7 @@
 	if(canned && !user.incapacitated())
 		uncan(user)
 
-/obj/item/reagent_containers/food/snacks/attack(mob/living/eater as mob, mob/user as mob, def_zone)
+/obj/item/reagent_containers/food/snacks/attack(mob/living/eater as mob, mob/living/user as mob, def_zone) // CHOMPEdit
 	if(reagents && !reagents.total_volume)
 		balloon_alert(user, "none of \the [src] left!")
 		user.drop_from_inventory(src)
@@ -264,7 +264,7 @@
 				if(istype(human))
 					bite_mod = human.species.bite_mod
 				if(reagents.total_volume > bitesize*bite_mod)
-					reagents.trans_to_mob(M, bitesize*bite_mod, CHEM_INGEST)
+					reagents.trans_to_mob(eater, bitesize*bite_mod, CHEM_INGEST)
 				//CHOMPStation Edit End
 				if(reagents.total_volume > bitesize)
 					reagents.trans_to_mob(eater, bitesize, CHEM_INGEST)
