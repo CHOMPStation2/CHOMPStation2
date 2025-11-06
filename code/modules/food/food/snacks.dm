@@ -94,7 +94,7 @@
 			NR.forceMove(eater.vore_selected)
 		//CHOMPAdd End
 		if(trash)
-			var/obj/item/TrashItem = new trash(M)
+			var/obj/item/TrashItem = new trash(eater)
 			eater.put_in_hands(TrashItem)
 			//CHOMPAdd Start - Transfer item TF mobs to the trash if able
 			if(possessed_voice && possessed_voice.len)
