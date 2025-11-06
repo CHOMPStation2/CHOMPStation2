@@ -57,10 +57,14 @@
 		reagents.add_reagent(REAGENT_ID_NUTRIMENT,(nutriment_amt*2),nutriment_desc)
 
 //Placeholder for effect that trigger on eating that aren't tied to reagents.
-/obj/item/reagent_containers/food/snacks/proc/On_Consume(var/mob/living/M)
+/obj/item/reagent_containers/food/snacks/proc/On_Consume(var/mob/living/eater, var/mob/living/feeder)
+	SEND_SIGNAL(src, COMSIG_FOOD_EATEN, eater, feeder)
 	if(food_inserted_micros && food_inserted_micros.len)
-		for(var/mob/living/F in food_inserted_micros)
-			var/do_nom = FALSE
+		for(var/mob/living/micro in food_inserted_micros)
+			if(!can_food_vore(eater, micro))
+				continue
+
+			var/do_nom
 
 			if(!reagents.total_volume)
 				do_nom = TRUE
@@ -70,18 +74,16 @@
 					do_nom = TRUE
 
 			if(do_nom)
-				if(!can_food_vore(M, F))
-					continue
-				F.forceMove(M.vore_selected)
-				food_inserted_micros -= F
+				micro.forceMove(eater.vore_selected)
+				food_inserted_micros -= micro
 
 	if(!reagents.total_volume)
-		M.balloon_alert_visible("eats \the [src].","finishes eating \the [src].")
+		eater.balloon_alert_visible("eats \the [src].","finishes eating \the [src].")
 
-		M.drop_from_inventory(src) // Drop food from inventory so it doesn't end up staying on the hud after qdel, and so inhands go away
+		eater.drop_from_inventory(src) // Drop food from inventory so it doesn't end up staying on the hud after qdel, and so inhands go away
 
 		//CHOMPAdd Start - Consume item TF mobs as raw nutrition if prefs align
-		if(possessed_voice && possessed_voice.len && M.can_be_drop_pred && M.food_vore && M.vore_selected)
+		if(possessed_voice && possessed_voice.len && eater.can_be_drop_pred && eater.food_vore && eater.vore_selected)
 			var/obj/item/reagent_containers/food/rawnutrition/NR = new /obj/item/reagent_containers/food/rawnutrition(usr)
 			NR.name = "piece of food"
 			NR.stored_nutrition = 1
@@ -89,11 +91,11 @@
 				NR.inhabit_item(V, null, V.tf_mob_holder, TRUE)
 				possessed_voice -= V
 				qdel(V)
-			NR.forceMove(M.vore_selected)
+			NR.forceMove(eater.vore_selected)
 		//CHOMPAdd End
 		if(trash)
-			var/obj/item/TrashItem = new trash(M)
-			M.put_in_hands(TrashItem)
+			var/obj/item/TrashItem = new trash(eater)
+			eater.put_in_hands(TrashItem)
 			//CHOMPAdd Start - Transfer item TF mobs to the trash if able
 			if(possessed_voice && possessed_voice.len)
 				for(var/mob/living/voice/V in possessed_voice)
@@ -116,12 +118,12 @@
 	if(canned && !user.incapacitated())
 		uncan(user)
 
-/obj/item/reagent_containers/food/snacks/attack(mob/living/M as mob, mob/living/user as mob, def_zone) //CHOMPEdit
+/obj/item/reagent_containers/food/snacks/attack(mob/living/eater as mob, mob/living/user as mob, def_zone) // CHOMPEdit
 	if(reagents && !reagents.total_volume)
 		balloon_alert(user, "none of \the [src] left!")
 		user.drop_from_inventory(src)
 		qdel(src)
-		return 0
+		return FALSE
 
 	if(package)
 		balloon_alert(user, "the package is in the way!")
@@ -131,28 +133,28 @@
 		balloon_alert(user, "the can is closed!")
 		return FALSE
 
-	if(istype(M, /mob/living/carbon))
+	if(istype(eater, /mob/living/carbon))
 		//TODO: replace with standard_feed_mob() call.
 
-		if(!M.consume_liquid_belly)
+		if(!eater.consume_liquid_belly)
 			if(liquid_belly_check())
-				to_chat(user, span_infoplain("[user == M ? "You can't" : "\The [M] can't"] consume that, it contains something produced from a belly!"))
+				to_chat(user, span_infoplain("[user == eater ? "You can't" : "\The [eater] can't"] consume that, it contains something produced from a belly!"))
 				return FALSE
 		var/swallow_whole = FALSE
 		var/obj/belly/belly_target				// These are surprise tools that will help us later
 
-		var/fullness = M.nutrition + (M.reagents.get_reagent_amount(REAGENT_ID_NUTRIMENT) * 25)
-		if(M == user)								//If you're eating it yourself
-			if(ishuman(M))
-				var/mob/living/carbon/human/H = M
-				if(!H.check_has_mouth())
+		var/fullness = eater.nutrition + (eater.reagents.get_reagent_amount(REAGENT_ID_NUTRIMENT) * 25)
+		if(eater == user)								//If you're eating it yourself
+			if(ishuman(eater))
+				var/mob/living/carbon/human/human_eater = eater
+				if(!human_eater.check_has_mouth())
 					balloon_alert(user, "you don't have a mouth!")
 					return
 				var/obj/item/blocked = null
 				if(survivalfood)
-					blocked = H.check_mouth_coverage_survival()
+					blocked = human_eater.check_mouth_coverage_survival()
 				else
-					blocked = H.check_mouth_coverage()
+					blocked = human_eater.check_mouth_coverage()
 				if(blocked)
 					balloon_alert(user, "\the [blocked] is in the way!")
 					return
@@ -160,54 +162,53 @@
 			user.setClickCooldown(user.get_attack_speed(src)) //puts a limit on how fast people can eat/drink things
 			// CHOMPEdit Start - Changing a lot of the to_chat ahead
 			if (fullness <= 50)
-				to_chat(M, span_danger("You hungrily chew out a piece of [src] and gobble it!"))
+				to_chat(eater, span_danger("You hungrily chew out a piece of [src] and gobble it!"))
 			if (fullness > 50 && fullness <= 150)
-				to_chat(M, span_notice("You hungrily begin to eat [src]."))
+				to_chat(eater, span_notice("You hungrily begin to eat [src]."))
 			if (fullness > 150 && fullness <= 350)
-				to_chat(M, span_notice("You take a bite of [src]."))
+				to_chat(eater, span_notice("You take a bite of [src]."))
 			if (fullness > 350 && fullness <= 550)
-				to_chat(M, span_notice("You chew a bit of [src], despite feeling rather full."))
+				to_chat(eater, span_notice("You chew a bit of [src], despite feeling rather full."))
 			if (fullness > 550 && fullness <= 650)
-				to_chat(M, span_notice("You swallow some more of the [src], causing your belly to swell out a little."))
+				to_chat(eater, span_notice("You swallow some more of the [src], causing your belly to swell out a little."))
 			if (fullness > 650 && fullness <= 1000)
-				to_chat(M, span_notice("You stuff yourself with the [src]. Your stomach feels very heavy."))
+				to_chat(eater, span_notice("You stuff yourself with the [src]. Your stomach feels very heavy."))
 			if (fullness > 1000 && fullness <= 3000)
-				to_chat(M, span_notice("You swallow down the hunk of [src]. Surely you have to have some limits?"))
+				to_chat(eater, span_notice("You swallow down the hunk of [src]. Surely you have to have some limits?"))
 			if (fullness > 3000 && fullness <= 5500)
-				to_chat(M, span_danger("You force the piece of [src] down. You can feel your stomach getting firm as it reaches its limits."))
+				to_chat(eater, span_danger("You force the piece of [src] down. You can feel your stomach getting firm as it reaches its limits."))
 			if (fullness > 5500 && fullness <= 6000)
-				to_chat(M, span_danger("You glug down the bite of [src], you are reaching the very limits of what you can eat, but maybe a few more bites could be managed..."))
+				to_chat(eater, span_danger("You glug down the bite of [src], you are reaching the very limits of what you can eat, but maybe a few more bites could be managed..."))
 			if (fullness > 6000) // There has to be a limit eventually.
-				to_chat(M, span_danger("Nope. That's it. You literally cannot force any more of [src] to go down your throat. It's fair to say you're full."))
-				return 0
+				to_chat(eater, span_danger("Nope. That's it. You literally cannot force any more of [src] to go down your throat. It's fair to say you're full."))
+				return FALSE
 
 		else if(user.a_intent == I_HURT)
 			return ..()
 
 		else
-			if(ishuman(M))
-				var/mob/living/carbon/human/H = M
-				if(!H.check_has_mouth())
-					// to_chat(user, "Where do you intend to put \the [src]? \The [H] doesn't have a mouth!")
-					balloon_alert(user, "\the [H] doesn't have a mouth!")
+			if(ishuman(eater))
+				var/mob/living/carbon/human/human_eater = eater
+				if(!human_eater.check_has_mouth())
+					balloon_alert(user, "\the [human_eater] doesn't have a mouth!")
 					return
 				var/obj/item/blocked = null
 				var/unconcious = FALSE
-				blocked = H.check_mouth_coverage()
+				blocked = human_eater.check_mouth_coverage()
 				if(survivalfood)
-					blocked = H.check_mouth_coverage_survival()
-					if(H.stat && H.check_mouth_coverage())
+					blocked = human_eater.check_mouth_coverage_survival()
+					if(human_eater.stat && human_eater.check_mouth_coverage())
 						unconcious = TRUE
-						blocked = H.check_mouth_coverage()
+						blocked = human_eater.check_mouth_coverage()
 
 				if(isliving(user))	// We definitely are, but never hurts to check
-					var/mob/living/L = user
-					swallow_whole = L.stuffing_feeder
+					var/mob/living/feeder = user
+					swallow_whole = feeder.stuffing_feeder
 				if(swallow_whole)
-					belly_target = tgui_input_list(user, "Choose Belly", "Belly Choice", M.feedable_bellies())
+					belly_target = tgui_input_list(user, "Choose Belly", "Belly Choice", human_eater.feedable_bellies())
 
 				if(unconcious)
-					to_chat(user, span_warning("You can't feed [H] through \the [blocked] while they are unconcious!"))
+					to_chat(user, span_warning("You can't feed [human_eater] through \the [blocked] while they are unconcious!"))
 					return
 
 				if(blocked)
@@ -216,35 +217,35 @@
 					return
 
 				if(swallow_whole)
-					if(!(M.feeding))
-						balloon_alert(user, "you can't feed [H] a whole [src] as they refuse to be fed whole things!")
+					if(!(human_eater.feeding))
+						balloon_alert(user, "you can't feed [human_eater] a whole [src] as they refuse to be fed whole things!")
 						return
 					if(!belly_target)
-						balloon_alert(user, "you can't feed [H] a whole [src] as they don't appear to have a belly to fit it!")
+						balloon_alert(user, "you can't feed [human_eater] a whole [src] as they don't appear to have a belly to fit it!")
 						return
 
 				if(swallow_whole)
-					user.balloon_alert_visible("[user] attempts to make [M] consume [src] whole into their [belly_target].")
+					user.balloon_alert_visible("[user] attempts to make [human_eater] consume [src] whole into their [belly_target].")
 				else
-					user.balloon_alert_visible("[user] attempts to feed [M] [src].")
+					user.balloon_alert_visible("[user] attempts to feed [human_eater] [src].")
 
 				var/feed_duration = 3 SECONDS
 				if(swallow_whole)
 					feed_duration = 5 SECONDS
 
 				user.setClickCooldown(user.get_attack_speed(src))
-				if(!do_mob(user, M, feed_duration)) return
+				if(!do_mob(user, human_eater, feed_duration)) return
 
 				if(swallow_whole && !belly_target) return			// Just in case we lost belly mid-feed
 
 				if(swallow_whole)
-					add_attack_logs(user,M,"Whole-fed with [src.name] containing [reagentlist(src)] into [belly_target]", admin_notify = FALSE)
-					user.visible_message("[user] successfully forces [src] into [M]'s [belly_target].")
-					user.balloon_alert_visible("forces [src] into [M]'s [belly_target]")
+					add_attack_logs(user, human_eater,"Whole-fed with [src.name] containing [reagentlist(src)] into [belly_target]", admin_notify = FALSE)
+					user.visible_message("[user] successfully forces [src] into [human_eater]'s [belly_target].")
+					user.balloon_alert_visible("forces [src] into [human_eater]'s [belly_target]")
 				else
-					add_attack_logs(user,M,"Fed with [src.name] containing [reagentlist(src)]", admin_notify = FALSE)
-					user.visible_message("[user] feeds [M] [src].")
-					user.balloon_alert_visible("feeds [M] [src].")
+					add_attack_logs(user, human_eater,"Fed with [src.name] containing [reagentlist(src)]", admin_notify = FALSE)
+					user.visible_message("[user] feeds [human_eater] [src].")
+					user.balloon_alert_visible("feeds [human_eater] [src].")
 
 			else
 				balloon_alert(user, "this creature does not seem to have a mouth!")
@@ -253,52 +254,54 @@
 		if(swallow_whole)
 			user.drop_item()
 			forceMove(belly_target)
-			return 1
+			return TRUE
 		else if(reagents)								//Handle ingestion of the reagent.
-			playsound(M, eating_sound, rand(10,50), 1)
+			playsound(eater, eating_sound, rand(10,50), 1)
 			if(reagents.total_volume)
 				//CHOMPStation Edit Begin
 				var/bite_mod = 1
-				var/mob/living/carbon/human/H = M
-				if(istype(H))
-					bite_mod = H.species.bite_mod
+				var/mob/living/carbon/human/human = eater
+				if(istype(human))
+					bite_mod = human.species.bite_mod
 				if(reagents.total_volume > bitesize*bite_mod)
-					reagents.trans_to_mob(M, bitesize*bite_mod, CHEM_INGEST)
+					reagents.trans_to_mob(eater, bitesize*bite_mod, CHEM_INGEST)
 				//CHOMPStation Edit End
+				if(reagents.total_volume > bitesize)
+					reagents.trans_to_mob(eater, bitesize, CHEM_INGEST)
 				else
-					reagents.trans_to_mob(M, reagents.total_volume, CHEM_INGEST)
+					reagents.trans_to_mob(eater, reagents.total_volume, CHEM_INGEST)
 				bitecount++
-				On_Consume(M)
-			return 1
-	else if(isliving(M) && user.stuffing_feeder) //CHOMPAdd Start
+				On_Consume(eater, user)
+			return TRUE
+	else if(isliving(eater) && user.stuffing_feeder) //CHOMPAdd Start
 		var/swallow_whole = user.stuffing_feeder
 		var/obj/belly/belly_target
 		if(swallow_whole)
-			belly_target = tgui_input_list(user, "Choose Belly", "Belly Choice", M.feedable_bellies())
-			if(!(M.feeding))
-				to_chat(user, "You can't feed [M] a whole [src] as they refuse to be fed whole things!")
+			belly_target = tgui_input_list(user, "Choose Belly", "Belly Choice", eater.feedable_bellies())
+			if(!(eater.feeding))
+				to_chat(user, "You can't feed [eater] a whole [src] as they refuse to be fed whole things!")
 				balloon_alert(user, "they refuse to be fed whole things!") // CHOMPEdit
 				return
 			if(!belly_target)
-				to_chat(user, "You can't feed [M] a whole [src] as they don't appear to have a belly to fit it!")
+				to_chat(user, "You can't feed [eater] a whole [src] as they don't appear to have a belly to fit it!")
 				balloon_alert(user, "they don't have a belly to fit it!")// CHOMPEdit
 				return
-			user.visible_message("[user] attempts to make [M] consume [src] whole into their [belly_target].")
-			user.balloon_alert_visible("attempts to make [M] consume [src] whole into their [belly_target].")// CHOMPEdit
+			user.visible_message("[user] attempts to make [eater] consume [src] whole into their [belly_target].")
+			user.balloon_alert_visible("attempts to make [eater] consume [src] whole into their [belly_target].")// CHOMPEdit
 			var/feed_duration = 3 SECONDS
 			user.setClickCooldown(user.get_attack_speed(src))
-			if(!do_mob(user, M, feed_duration))
+			if(!do_mob(user, eater, feed_duration))
 				return
 			if(!belly_target)
 				return
-			add_attack_logs(user,M,"Whole-fed with [src.name] containing [reagentlist(src)] into [belly_target]", admin_notify = FALSE)
-			user.visible_message("[user] successfully forces [src] into [M]'s [belly_target].") // CHOMPEdit
-			user.balloon_alert_visible("forces [src] into [M]'s [belly_target].") // CHOMPEdit
+			add_attack_logs(user,eater,"Whole-fed with [src.name] containing [reagentlist(src)] into [belly_target]", admin_notify = FALSE)
+			user.visible_message("[user] successfully forces [src] into [eater]'s [belly_target].") // CHOMPEdit
+			user.balloon_alert_visible("forces [src] into [eater]'s [belly_target].") // CHOMPEdit
 			user.drop_item()
 			forceMove(belly_target)
-			return 1 //CHOMPAdd End
+			return TRUE //CHOMPAdd End
 
-	return 0
+	return FALSE
 
 /obj/item/reagent_containers/food/snacks/examine(mob/user)
 	. = ..()
@@ -323,8 +326,8 @@
 
 	// Eating with forks
 	if(istype(W,/obj/item/material/kitchen/utensil))
-		var/obj/item/material/kitchen/utensil/U = W
-		U.load_food(user, src)
+		var/obj/item/material/kitchen/utensil/utensil = W
+		utensil.load_food(user, src)
 		return
 
 	if(food_can_insert_micro && istype(W, /obj/item/holder))
@@ -337,23 +340,23 @@
 			balloon_alert(user, "open \the [src] first!")
 			return
 
-		var/obj/item/holder/H = W
+		var/obj/item/holder/holder = W
 
 		if(!food_inserted_micros)
 			food_inserted_micros = list()
 
-		var/mob/living/M = H.held_mob
+		var/mob/living/living_mob = holder.held_mob
 
-		M.forceMove(src)
-		H.held_mob = null
-		user.drop_from_inventory(H)
-		qdel(H)
+		living_mob.forceMove(src)
+		holder.held_mob = null
+		user.drop_from_inventory(holder)
+		qdel(holder)
 
-		food_inserted_micros += M
+		food_inserted_micros += living_mob
 
-		to_chat(user, "Stuffed [M] into \the [src].")
-		balloon_alert(user, "stuffs [M] into \the [src].")
-		to_chat(M, span_warning("[user] stuffs you into \the [src]."))
+		to_chat(user, "Stuffed [living_mob] into \the [src].")
+		balloon_alert(user, "stuffs [living_mob] into \the [src].")
+		to_chat(living_mob, span_warning("[user] stuffs you into \the [src]."))
 		return
 
 	if (is_sliceable())
