@@ -27,3 +27,32 @@
   CHOMPStation2StaffMirrorBot:
   - bugfix: multiple vore issues
   - qol: moves inside contents to its own tab
+2025-11-06:
+  CHOMPStation2StaffMirrorBot:
+  - admin: added 3 new tgs commands to manage whitelists
+  - refactor: The alienwhitelists and jobwhitelists are now loaded from the database,
+      if the database is enabled
+  - bugfix: 'Corrected a mistake in #18494. Circuit leading and trailing whitespace
+      is now actually no longer deleted.'
+  - bugfix: Fixed being able to conjure leather by crafting steel-based furniture.
+  Diana:
+  - bugfix: Equipping boxing gloves will make your unarmed blows nonlethal
+  - code_imp: Rechargers are now less memory intensive
+  - qol: Cell loaded guns (ml3m, nsfw) can be charged in rechargers now
+  - qol: cell magazines can be charged in rechargers now
+  Guti:
+  - code_imp: Makes food/drink code easier to read
+  - code_imp: Implements signals for food eaten/can drank
+  Will:
+  - bugfix: remote views with decorations and sight changing flags apply instantly
+  - bugfix: weird view behavior when cancelling remote view while using the spy-kit
+      pda with only a single camera linked
+  - bugfix: MMIs removed from borgs and fbps no longer have their view desync
+  - bugfix: remote view runtime from interrupted views in the machine var shim
+  - bugfix: prey views becoming locked to several medical machines if their pred left
+      them
+  - refactor: Moved relaymove() from machine var to remote_view component
+  - code_imp: Implements COMSIG_MOB_RELAY_MOVEMENT
+  - code_imp: COMSIG_LIVING_HANDLE_HUD_HEALTH_ICON
+  - code_imp: COMSIG_LIVING_HANDLE_HUD_DARKSIGHT
+  - maptweak: fixes plains farm poi atmos
