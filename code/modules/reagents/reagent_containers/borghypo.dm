@@ -11,12 +11,8 @@
 
 	/// The single chemical we have currently selected. Used to index `reagent_volumes`, `reagent_names`, and `reagent_ids`.
 	var/mode = 1
-<<<<<<< HEAD
-	var/charge_cost = 325
-=======
 	/// Amount of power this hypo will remove from the robot user's internal cell when a reagent's stores are replenished.
-	var/charge_cost = 50
->>>>>>> 4044b3d511 (Overhauls borg hypos to work like chem dispensers (#18662))
+	var/charge_cost = 325 // CHOMPEdit
 	var/charge_tick = 0
 	/// Time it takes for shots to recharge (in seconds)
 	var/recharge_time = 5
@@ -32,12 +28,7 @@
 	var/selected_recipe_id
 	var/hypo_sound = 'sound/effects/hypospray.ogg'	// What sound do we play on use?
 
-<<<<<<< HEAD
 	var/list/reagent_ids = list(REAGENT_ID_TRICORDRAZINE, REAGENT_ID_INAPROVALINE, REAGENT_ID_BICARIDINE, REAGENT_ID_ANTITOXIN, REAGENT_ID_KELOTANE, REAGENT_ID_TRAMADOL, REAGENT_ID_DEXALIN, REAGENT_ID_SPACEACILLIN) // CHOMPEdit
-=======
-	var/list/reagent_ids = list(REAGENT_ID_TRICORDRAZINE, REAGENT_ID_INAPROVALINE, REAGENT_ID_ANTITOXIN, REAGENT_ID_TRAMADOL, REAGENT_ID_DEXALIN ,REAGENT_ID_SPACEACILLIN)
-	/// Associated list of how many units of each reagent we have. Indexed via the reagent's ID.
->>>>>>> 4044b3d511 (Overhauls borg hypos to work like chem dispensers (#18662))
 	var/list/reagent_volumes = list()
 	/// Associated list of the names of each of our reagents. Indexed via `mode`.
 	var/list/reagent_names = list()
@@ -129,16 +120,10 @@
 		if(robot_user && robot_user.cell)
 			for(var/T in reagent_ids)
 				if(reagent_volumes[T] < volume)
-<<<<<<< HEAD
-					if(R.cell.charge - charge_cost < 800) //This is so borgs don't kill themselves with it.
+					if(!R.use_direct_power(charge_cost, 800))
 						return 0
-					else
-						R.cell.use(charge_cost)
-						reagent_volumes[T] = min(reagent_volumes[T] + 5, volume)
-=======
-					robot_user.cell.use(charge_cost)
+					R.cell.use(charge_cost)
 					reagent_volumes[T] = min(reagent_volumes[T] + 5, volume)
->>>>>>> 4044b3d511 (Overhauls borg hypos to work like chem dispensers (#18662))
 	return 1
 
 /obj/item/reagent_containers/borghypo/attack(var/mob/living/M, var/mob/user)
