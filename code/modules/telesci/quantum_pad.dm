@@ -259,30 +259,11 @@
 
 /obj/machinery/power/quantumpad/proc/transport_objects(turf/destination)
 	for(var/atom/movable/ROI in get_turf(src))
-<<<<<<< HEAD
-		// if is anchored, don't let through
-		if(ROI.anchored && !ismecha(ROI))
-			if(ismecha(ROI))
-				if(boosted)
-					continue
-			if(isliving(ROI))
-				var/mob/living/L = ROI
-				if(L.buckled)
-					// TP people on office chairs
-					if(L.buckled.anchored)
-						continue
-				else
-					continue
-			else if(!isobserver(ROI) && !isEye(ROI))
-				continue
-		do_teleport(ROI, destination, local = FALSE, asoundin = 'sound/weapons/emitter2.ogg', asoundout = 'sound/weapons/emitter2.ogg') //CHOMP Edit
-=======
 		if(ROI.anchored || (ismecha(ROI) && !boosted))
 			continue
 		else if(isobserver(ROI) && isEye(ROI))
 			continue
-		do_teleport(ROI, destination)
->>>>>>> 838bb093e8 (Refactors do_teleport (#18668))
+		do_teleport(ROI, destination, asoundin = 'sound/weapons/emitter2.ogg', asoundout = 'sound/weapons/emitter2.ogg') // CHOMPEdit - Noisy
 
 /obj/machinery/power/quantumpad/proc/can_traverse_gateway()
 	// Well, if there's no gateway map we're definitely not on it
