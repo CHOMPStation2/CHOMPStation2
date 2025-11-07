@@ -131,11 +131,7 @@
 #include "code\__defines\misc.dm"
 #include "code\__defines\misc_ch.dm"
 #include "code\__defines\mobs.dm"
-<<<<<<< HEAD
 #include "code\__defines\mobs_yw.dm"
-=======
-#include "code\__defines\movement.dm"
->>>>>>> 838bb093e8 (Refactors do_teleport (#18668))
 #include "code\__defines\nif.dm"
 #include "code\__defines\nifsoft.dm"
 #include "code\__defines\objects.dm"
