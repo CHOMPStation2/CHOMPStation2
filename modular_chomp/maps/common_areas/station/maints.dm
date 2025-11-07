@@ -318,7 +318,7 @@
 	icon_state = "fsmaint"
 
 /area/maintenance/ab_GeneralStore
-	name = "\improper abandoned GeneralStore"
+	name = "\improper Abandoned General Store"
 	icon_state = "fsmaint"
 
 /area/maintenance/ab_Kitchen
@@ -1069,3 +1069,377 @@
 	icon_state = "engineering"
 	ambience = AMBIENCE_SUBSTATION
 	lightswitch = 1
+
+/area/maintenance/cetus
+	icon_state = "maint"
+	flags = RAD_SHIELDED | AREA_ALLOW_CLOCKOUT
+
+/area/maintenance/cetus/shallow
+	turf_initializer = new /datum/turf_initializer/maintenance/shallow()
+	sound_env = SOUND_ENVIRONMENT_CARPETED_HALLWAY
+	ambience = AMBIENCE_RUINS
+	holomap_color = HOLOMAP_AREACOLOR_HALLWAYS
+
+/area/maintenance/cetus/meteor
+	base_turf = /turf/simulated/floor/outdoors/rocks/cetus
+
+/area/maintenance/cetus/meteor/jrfore
+	name = "\improper Joint Research Deck One Fore Maintenance"
+	icon_state = "fmaint"
+
+/area/maintenance/cetus/meteor/jraft
+	name = "\improper Joint Research Deck One Aft Maintenance"
+	icon_state = "amaint"
+	ambience = AMBIENCE_TECH_RUINS
+
+/area/maintenance/cetus/meteor/star
+	name = "\improper Deck One Starboard Maintenance"
+	icon_state = "smaint"
+
+/area/maintenance/cetus/meteor/aftstar
+	name = "\improper Deck One Aft Starboard Maintenance"
+	icon_state = "asmaint"
+	sound_env = SOUND_ENVIRONMENT_CAVE
+
+/area/maintenance/cetus/meteor/central
+	name = "\improper Deck One Central Maintenance"
+	icon_state = "maintcentral"
+	sound_env = SOUND_ENVIRONMENT_CAVE
+	flags = RAD_SHIELDED | AREA_FORBID_SINGULO | AREA_ALLOW_CLOCKOUT// no singulo here, meaning this section of maints protects dorms if tesla gets loose
+
+/area/maintenance/cetus/meteor/starsec
+	name = "\improper Deck One Starboard Security Maintenance"
+	icon_state = "maint_security_starboard"
+	sound_env = SOUND_ENVIRONMENT_CAVE
+
+/area/maintenance/cetus/meteor/portsec
+	name = "\improper Deck One Port Security Maintenance"
+	icon_state = "maint_security_port"
+	sound_env = SOUND_ENVIRONMENT_CAVE
+
+/area/maintenance/cetus/meteor/pond
+	name = "\improper Topsoil Storage"
+	sound_env = SOUND_ENVIRONMENT_CAVE
+
+/area/maintenance/cetus/meteor/ragecage
+	name = "\improper Underdome"
+	sound_env = SOUND_ENVIRONMENT_CAVE
+
+/area/maintenance/cetus/meteor/foremed
+	name = "\improper Deck One Fore Medbay Maintenance"
+	icon_state = "maint_medbay_fore"
+	sound_env = SOUND_ENVIRONMENT_CAVE
+
+/area/maintenance/cetus/aftmed
+	name = "\improper Deck One Aft Medbay Maintenance"
+	icon_state = "maint_medbay_aft"
+
+/area/maintenance/cetus/ripperdock
+	name = "\improper Abandoned Private Physiology"
+	icon_state = "maint_medbay"
+	ambience = AMBIENCE_FOREBODING
+	lightswitch = FALSE
+
+/area/maintenance/cetus/dentist
+	name = "\improper Abandoned Dental"
+	icon_state = "maint_medbay"
+	ambience = AMBIENCE_GHOSTLY
+	lightswitch = FALSE
+
+/area/maintenance/cetus/stylist
+	name = "\improper Abandoned Barbershop"
+	lightswitch = FALSE
+
+/area/maintenance/cetus/mechbay
+	name = "\improper Abandoned Mechbay"
+	icon_state = "maint_research"
+	lightswitch = FALSE
+
+/area/maintenance/cetus/tech
+	name = "\improper Abandoned Technological Workshop"
+	icon_state = "maint_research"
+	ambience = AMBIENCE_HIGHSEC
+	lightswitch = FALSE
+
+/area/maintenance/cetus/cozyobservatory
+	name = "\improper Abandoned Observatory"
+	icon_state = "maint_dormitory"
+	lightswitch = FALSE
+
+/area/maintenance/cetus/hallway
+	name = "\improper Abandoned Primary Hallway"
+	icon_state = "maintcentral"
+	holomap_color = HOLOMAP_AREACOLOR_HALLWAYS
+
+/area/maintenance/cetus/janitorial
+	name = "\improper Abandoned Broom Closet"
+	lightswitch = FALSE
+
+/area/maintenance/cetus/nanites
+	name = "\improper Nanite Storage"
+	ambience= AMBIENCE_HIGHSEC
+	lightswitch = FALSE
+
+/area/maintenance/cetus/workshop
+	name = "\improper Abandoned Workshop"
+	icon_state = "maint_engineering"
+	lightswitch = FALSE
+
+/area/maintenance/cetus/construction
+	name = "\improper Designation Not Set"
+	icon_state = "maint_engineering"
+	lightswitch = FALSE
+
+/area/maintenance/cetus/d1port
+	name = "\improper Deck One Port Maintenance"
+	icon_state = "pmaint"
+
+/area/maintenance/cetus/engine
+	name = "\improper Incomplete Engine Room"
+	icon_state = "maint_engineering"
+	ambience = AMBIENCE_SUBSTATION
+	sound_env = SOUND_ENVIRONMENT_CAVE
+	lightswitch = FALSE
+	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
+
+/area/maintenance/cetus/twojrport
+	name = "\improper Joint Research Deck Two Port Maintenance"
+	icon_state = "maint_research_port"
+	sound_env = SOUND_ENVIRONMENT_CAVE
+	ambience = AMBIENCE_OTHERWORLDLY
+
+/area/maintenance/cetus/twojrstar
+	name = "\improper Joint Research Deck Two Starboard Maintenance"
+	icon_state = "maint_research_starboard"
+
+/area/maintenance/cetus/mainsupport
+	name = "\improper Main Support Structure"
+	ambience = AMBIENCE_SPACE
+	turf_initializer = null
+
+/area/maintenance/cetus/auxsupport
+	name = "\improper Auxilliary Support Structure"
+	ambience = AMBIENCE_SPACE
+	turf_initializer = null
+
+/area/maintenance/cetus/solars
+	name = "\improper Solars Maintenance"
+	ambience = AMBIENCE_OTHERWORLDLY
+
+/area/maintenance/cetus/twosci
+	name = "\improper Deck Two Research Maintenance"
+	icon_state = "maint_research_port"
+
+/area/maintenance/cetus/twomed
+	name = "\improper Deck Two Medical Maintenance"
+	icon_state = "maint_medbay"
+
+/area/maintenance/cetus/twofp
+	name = "\improper Deck Two Fore Port Maintenance"
+	icon_state = "fpmaint"
+
+/area/maintenance/cetus/twoap
+	name = "\improper Deck Two aft Port Maintenance"
+	icon_state = "apmaint"
+
+/area/maintenance/cetus/comissary
+	name = "\improper Abandoned Comissary"
+
+/area/maintenance/cetus/twobar
+	name = "\improper Deck Two Bar Maintenance"
+	icon_state = "maint_bar"
+	sound_env = SOUND_ENVIRONMENT_CAVE
+
+/area/maintenance/cetus/twosec
+	name = "\improper Deck Two Security Maintenance"
+	icon_state = "maint_security_starboard"
+	sound_env = SOUND_ENVIRONMENT_CAVE
+
+/area/maintenance/cetus/twocave
+	name = "\improper Atrium Maintenance Shaft"
+	icon_state = "maintcentral"
+	sound_env = SOUND_ENVIRONMENT_CAVE
+
+/area/maintenance/cetus/twocargo
+	name = "\improper Deck Two Cargo Maintenance"
+	icon_state = "maint_cargo"
+	sound_env = SOUND_ENVIRONMENT_CAVE
+
+/area/maintenance/cetus/twostar
+	name = "\improper Deck Two Starboard Maintenance"
+	icon_state = "smaint"
+
+/area/maintenance/cetus/jrthreeport
+	name = "\improper Joint Research Deck Three Port Maintenance"
+	icon_state = "maint_research_port"
+	sound_env = SOUND_ENVIRONMENT_CAVE
+	ambience = AMBIENCE_OTHERWORLDLY
+
+/area/maintenance/cetus/jrthreestar
+	name = "\improper Joint Research Deck Three Starboard Maintenance"
+	icon_state = "maint_research_starboard"
+	sound_env = SOUND_ENVIRONMENT_CAVE
+
+/area/maintenance/cetus/sex
+	name = "\improper Accomodations Room"
+	icon_state = "maint_dormitory"
+	lightswitch = FALSE
+
+/area/maintenance/cetus/threefp
+	name = "\improper Deck Three Fore Port Maintenance"
+	icon_state = "fpmaint"
+
+/area/maintenance/cetus/threeap
+	name = "\improper Deck Three Aft Port Maintenance"
+	icon_state = "apmaint"
+
+/area/maintenance/cetus/threefs
+	name = "\improper Deck Three Fore Starboard Maintenance"
+	icon_state = "fsmaint"
+
+/area/maintenance/cetus/threeas
+	name = "\improper Deck Three Aft Starboard Maintenance"
+	icon_state = "asmaint"
+
+/area/maintenance/cetus/threecp
+	name = "\improper Deck Three Central Port Maintenance"
+	icon_state = "pmaint"
+
+/area/maintenance/cetus/disposals
+	name = "\improper Disposals"
+	icon_state = "disposal"
+
+/area/maintenance/cetus/shallow/flooded
+	name = "\improper Flooded Maintenance"
+	icon_state = "maint_pool"
+	ambience = AMBIENCE_HOLY
+	holomap_color = null
+
+/area/maintenance/cetus/shallow/fp
+	name = "\improper Fore Port Corridors"
+	icon_state = "fpmaint"
+
+/area/maintenance/cetus/shallow/ap
+	name = "\improper Aft Port Corridors"
+	icon_state = "apmaint"
+
+/area/maintenance/cetus/shallow/starboard
+	name = "\improper Starboard Corridors"
+	icon_state = "smaint"
+
+/area/maintenance/cetus/shallow/backstage
+	name = "\improper Theater Corridors"
+	icon_state = "maint"
+	holomap_color = HOLOMAP_AREACOLOR_CIV
+
+/area/maintenance/cetus/d3bar
+	name = "\improper Deck 3 Bar Maintenance"
+	icon_state = "maint_bar"
+
+/area/maintenance/cetus/d3docks
+	name = "\improper Deck 3 Arrivals Maintenance"
+	icon_state = "maint_arrivals"
+
+/area/maintenance/cetus/badsnuggles
+	name = "\improper Abandoned Lounge"
+	icon_state = "maint_dormitory"
+	ambience = AMBIENCE_GHOSTLY
+
+/area/maintenance/cetus/arcade
+	name = "\improper Abandoned arcade"
+	icon_state = "arcade2"
+	ambience = AMBIENCE_AESTHETIC
+
+
+/area/maintenance/cetus/shallow/bodyguard
+	name = "\improper Private Security"
+	lightswitch = FALSE
+	holomap_color = HOLOMAP_AREACOLOR_CIV
+
+/area/maintenance/cetus/shallow/detective
+	name = "\improper Private Investigations"
+	lightswitch = FALSE
+	holomap_color = HOLOMAP_AREACOLOR_CIV
+
+/area/maintenance/cetus/shallow/law
+	name = "\improper Private Legal Office"
+	lightswitch = FALSE
+	holomap_color = HOLOMAP_AREACOLOR_CIV
+
+/area/maintenance/cetus/shallow/quack
+	name = "\improper Alternative Visions"
+	ambience = AMBIENCE_OTHERWORLDLY
+	lightswitch = FALSE
+	holomap_color = HOLOMAP_AREACOLOR_CIV
+
+
+/area/maintenance/cetus/shallow/derelict
+	sound_env = STANDARD_STATION
+	ambience = AMBIENCE_FOREBODING
+
+/area/maintenance/cetus/shallow/derelict/hallway
+	name = "\improper Derelict Hallway"
+	icon_state = "hallC"
+
+/area/maintenance/cetus/shallow/derelict/eva
+	name = "\improper Derelict EVA"
+	holomap_color = HOLOMAP_AREACOLOR_COMMAND
+
+/area/maintenance/cetus/shallow/derelict/atmos
+	name = "\improper Derelict Atmospherics"
+	icon_state = "atmos"
+	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
+
+/area/maintenance/cetus/shallow/derelict/engine
+	name = "\improper Derelict Reactor"
+	icon_state = "engine"
+	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
+
+/area/maintenance/cetus/shallow/derelict/dorms
+	name = "\improper Derelict Dormitory"
+	icon_state = "maint_dormitory"
+	holomap_color = HOLOMAP_AREACOLOR_DORMS
+
+/area/maintenance/cetus/shallow/derelict/medbay
+	name = "\improper Derelict Medbay"
+	icon_state = "maint_medbay"
+	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
+
+/area/maintenance/cetus/shallow/derelict/dock
+	name = "\improper Derelict Dock"
+	icon_state = "maint_arrivals"
+
+/area/maintenance/cetus/shallow/derelict/bridge
+	name = "\improper Derelict Bridge"
+	holomap_color = HOLOMAP_AREACOLOR_COMMAND
+
+/area/maintenance/cetus/shallow/derelict/kitchen
+	name = "\improper Derelict Cafeteria"
+	icon_state = "maint_bar"
+	holomap_color = HOLOMAP_AREACOLOR_CIV
+
+/area/maintenance/cetus/shallow/derelict/locker
+	name = "\improper Derelict Locker Room"
+	icon_state = "maint_locker"
+	holomap_color = HOLOMAP_AREACOLOR_CIV
+
+/area/maintenance/cetus/shallow/derelict/bathroom
+	name = "\improper Derelict Bathroom"
+	icon_state = "restrooms"
+	holomap_color = HOLOMAP_AREACOLOR_CIV
+
+/area/maintenance/cetus/shallow/gamba
+	name = "\improper Abandoned Gambling Den"
+	icon_state = "gaming"
+	lightswitch = FALSE
+	holomap_color = HOLOMAP_AREACOLOR_CIV
+
+/area/maintenance/cetus/fishery
+	name = "\improper Abandoned Bait and Tackle"
+	lightswitch = FALSE
+	holomap_color = HOLOMAP_AREACOLOR_CIV
+
+/area/maintenance/cetus/lobby
+	name = "\improper Commercial Hall Reception"
+	ambience = AMBIENCE_HIGHSEC
+	holomap_color = HOLOMAP_AREACOLOR_CIV

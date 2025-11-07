@@ -10620,11 +10620,7 @@
 /turf/simulated/floor/plating,
 /area/maintenance/Deck1_Star_Corridor)
 "bAl" = (
-/obj/machinery/power/smes/buildable/power_shuttle{
-	charge = 2e+006;
-	input_attempt = 1;
-	inputting = 1
-	},
+/obj/machinery/power/smes/buildable/power_shuttle/max_charge_max_input_base_output,
 /obj/structure/cable/green,
 /turf/simulated/floor/tiled/milspec,
 /area/shuttle/echidna)
@@ -14815,12 +14811,7 @@
 	dir = 1;
 	opacity = 1
 	},
-/obj/machinery/power/smes/buildable/power_shuttle{
-	charge = 4e+006;
-	input_attempt = 1;
-	inputting = 1;
-	outputting = 1
-	},
+/obj/machinery/power/smes/buildable/power_shuttle/max_charge_max_input_base_output,
 /obj/structure/cable/green{
 	icon_state = "0-4"
 	},
@@ -59709,13 +59700,8 @@
 /area/quartermaster/Deck1_Stairwell)
 "sAy" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
-/obj/machinery/power/smes/buildable{
-	RCon_tag = "Substation - Tcoms";
-	charge = 6e+006;
-	input_attempt = 1;
-	input_level = 250000;
-	inputting = 1;
-	output_level = 250000
+/obj/machinery/power/smes/buildable/engine_default{
+	RCon_tag = "Substation - Tcoms"
 	},
 /obj/structure/cable/green{
 	icon_state = "0-4"
@@ -74406,9 +74392,7 @@
 /area/hallway/For_Locker_Room)
 "xRj" = (
 /obj/effect/floor_decal/industrial/warning/cee,
-/obj/machinery/power/smes/buildable/point_of_interest{
-	input_attempt = 1
-	},
+/obj/machinery/power/smes/buildable/point_of_interest/max_input,
 /obj/structure/cable/green{
 	icon_state = "0-8"
 	},

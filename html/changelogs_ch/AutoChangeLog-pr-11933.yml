@@ -1,0 +1,5 @@
+author: "ItsSelis"
+delete-after: True
+changes:
+  - rscadd: "Added gbp & labeling workflow"
+  - rscadd: "Added autowiki workflow"

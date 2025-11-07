@@ -28,39 +28,7 @@
 //CHOMPEdit changed for Southern Cross areas
 	location = rand(0,9)
 	var/list/turf/simulated/floor/turfs = list()
-	var/spawn_area_type
-	switch(location)
-		if(LOC_KITCHEN)
-			spawn_area_type = /area/crew_quarters/kitchen
-			locstring = "the kitchen"
-		if(LOC_ATMOS)
-			spawn_area_type = /area/engineering/atmos
-			locstring = "atmospherics"
-		if(LOC_CHAPEL)
-			spawn_area_type = /area/chapel/main
-			locstring = "the chapel"
-		if(LOC_LIBRARY)
-			spawn_area_type = /area/library
-			locstring = "the library"
-		if(LOC_HYDRO)
-			spawn_area_type = /area/hydroponics
-			locstring = "hydroponics"
-		if(LOC_TECH)
-			spawn_area_type = /area/storage/tech
-			locstring = "technical storage"
-		if(LOC_HANGAR1)
-			spawn_area_type = /area/hangar/one
-			locstring = "the hangar deck"
-		if(LOC_HANGAR2)
-			spawn_area_type = /area/hangar/two
-			locstring = "the hangar deck"
-		if(LOC_HANGAR3)
-			spawn_area_type = /area/hangar/three
-			locstring = "the hangar deck"
-		if(LOC_VAULT)
-			spawn_area_type = /area/security/nuke_storage
-			locstring = "the vault"
-
+	var/spawn_area_type = get_spawn_area()
 	for(var/areapath in typesof(spawn_area_type))
 		var/area/A = locate(areapath)
 		for(var/turf/simulated/floor/F in A.contents)
@@ -121,6 +89,41 @@
 			else
 				var/spawn_type = pick(spawn_types)
 				new spawn_type(T)
+
+/datum/event/infestation/proc/get_spawn_area() //adding this so maps can override areas if needed
+	var/spawn_area_type
+	switch(location)
+		if(LOC_KITCHEN)
+			spawn_area_type = /area/crew_quarters/kitchen
+			locstring = "the kitchen"
+		if(LOC_ATMOS)
+			spawn_area_type = /area/engineering/atmos
+			locstring = "atmospherics"
+		if(LOC_CHAPEL)
+			spawn_area_type = /area/chapel/main
+			locstring = "the chapel"
+		if(LOC_LIBRARY)
+			spawn_area_type = /area/library
+			locstring = "the library"
+		if(LOC_HYDRO)
+			spawn_area_type = /area/hydroponics
+			locstring = "hydroponics"
+		if(LOC_TECH)
+			spawn_area_type = /area/storage/tech
+			locstring = "technical storage"
+		if(LOC_HANGAR1)
+			spawn_area_type = /area/hangar/two //hangar one is no longer in use on the sc
+			locstring = "the hangar deck"
+		if(LOC_HANGAR2)
+			spawn_area_type = /area/hangar/two
+			locstring = "the hangar deck"
+		if(LOC_HANGAR3)
+			spawn_area_type = /area/hangar/three
+			locstring = "the hangar deck"
+		if(LOC_VAULT)
+			spawn_area_type = /area/security/nuke_storage
+			locstring = "the vault"
+	return spawn_area_type
 		// ChompEDIT End
 /* CHOMPedit - Upstream Code, not implmeneted here
 /datum/event/infestation/tick()

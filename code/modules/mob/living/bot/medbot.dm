@@ -270,7 +270,6 @@
 	if(..())
 		return TRUE
 
-	ui.user.set_machine(src)
 	add_fingerprint(ui.user)
 
 	. = TRUE

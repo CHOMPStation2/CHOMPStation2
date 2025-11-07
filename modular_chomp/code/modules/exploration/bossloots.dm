@@ -48,8 +48,8 @@
 	defend_chance = 20
 
 	icon = 'modular_chomp/icons/mob/tribal_gear.dmi'
-	icon_state = "topshield"
-	item_state = "topshield"
+	icon_state = "sabre"
+	item_state = "sabre"
 
 	item_icons = list(
 		slot_l_hand_str = 'modular_chomp/icons/obj/guns/precursor/lefthand.dmi',

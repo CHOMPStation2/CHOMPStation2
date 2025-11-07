@@ -219,9 +219,8 @@
 		if(P)
 			if(process_projectile(P, user, user, pick(BP_L_FOOT, BP_R_FOOT)))
 				handle_post_fire(user, user)
-				var/datum/gender/TU = GLOB.gender_datums[user.get_visible_gender()]
 				user.visible_message(
-					span_danger("\The [user] shoots [TU.himself] in the foot with \the [src]!"),
+					span_danger("\The [user] shoots [user.p_themselves()] in the foot with \the [src]!"),
 					span_danger("You shoot yourself in the foot with \the [src]!")
 					)
 				M.drop_item()
@@ -632,6 +631,7 @@
 				damage_mult = 2.5
 			else if(grabstate >= GRAB_AGGRESSIVE)
 				damage_mult = 1.5
+	P.agony *= damage_mult
 	P.damage *= damage_mult
 
 /obj/item/gun/proc/process_accuracy(obj/projectile, mob/living/user, atom/target, var/burst, var/held_twohanded)

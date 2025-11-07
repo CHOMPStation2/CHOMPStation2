@@ -201,10 +201,6 @@
 /mob/living/simple_mob/animal/tyr/mineral_ants/queen,
 /turf/simulated/floor/outdoors/desert_planet/deep_grass/tyr,
 /area/surface/tyr/south_caverns)
-"bd" = (
-/mob/living/simple_mob/mechanical/mecha/eclipse/tankyboss/chamberg,
-/turf/simulated/shuttle/floor/alienplating,
-/area/surface/tyr/precursorruins/finale)
 "be" = (
 /obj/structure/closet,
 /obj/item/circuitboard/quantumpad,
@@ -42282,7 +42278,7 @@ bF
 Th
 bF
 Th
-bd
+bF
 Th
 bF
 Th
