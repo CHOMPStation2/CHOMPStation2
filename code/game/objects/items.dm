@@ -320,7 +320,7 @@
 		else
 			to_chat(user, span_notice("This is anchored and you can't lift it."))
 		return // End CHOMPStation Edit
-	if (hasorgans(user))
+	if(ishuman(user))
 		var/mob/living/carbon/human/H = user
 		var/obj/item/organ/external/temp = H.organs_by_name[BP_R_HAND]
 		if (user.hand)
