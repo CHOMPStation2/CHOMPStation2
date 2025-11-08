@@ -15,6 +15,7 @@
 	containertype = /obj/structure/closet/crate/galaksi
 	containername = "Replacement lights"
 
+/* CHOMPRemove Start
 /datum/supply_pack/eng/fusion_coils
 	name = "Fusion Coils (SMES Recharge)"
 	desc = "A pair of single-use heavy-duty fusion coils, for recharging depleted SMES units."
@@ -22,6 +23,7 @@
 	cost = 150
 	containertype = /obj/structure/closet/crate/einstein
 	containername = "Fusion Coil crate"
+*/// CHOMPRemove End
 
 /datum/supply_pack/eng/smescoil
 	name = "Superconducting Magnetic Coil"
