@@ -186,7 +186,7 @@ You can also set the stat of a NIF to NIF_TEMPFAIL without any issues to disable
 /* CHOMPedit Remove: Disabling EMP effect on all Nifs. *
 
 //EMP adds wear and disables all nifsoft
-/obj/item/nif/emp_act(var/severity)
+/obj/item/nif/emp_act(severity, recursive)
 	notify("Danger! Significant electromagnetic interference!",TRUE)
 	for(var/nifsoft in nifsofts)
 		if(nifsoft)
