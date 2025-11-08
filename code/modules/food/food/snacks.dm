@@ -291,7 +291,7 @@
 			user.balloon_alert_visible("attempts to make [eater] consume [src] whole into their [belly_target].")// CHOMPEdit
 			var/feed_duration = 3 SECONDS
 			user.setClickCooldown(user.get_attack_speed(src))
-			if(!do_mob(user, eater, feed_duration))
+			if(!do_after(user, feed_duration, eater))
 				return
 			if(!belly_target)
 				return
