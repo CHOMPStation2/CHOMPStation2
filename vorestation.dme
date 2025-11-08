@@ -123,7 +123,6 @@
 #include "code\__defines\map.dm"
 #include "code\__defines\materials.dm"
 #include "code\__defines\math.dm"
-#include "code\__defines\math_ch.dm"
 #include "code\__defines\math_physics.dm"
 #include "code\__defines\matrices.dm"
 #include "code\__defines\MC.dm"

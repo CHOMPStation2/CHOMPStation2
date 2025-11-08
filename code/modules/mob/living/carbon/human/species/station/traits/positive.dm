@@ -141,11 +141,8 @@
 	var_changes = list("darksight" = 6)  //CHOMP Edit
 	custom_only = FALSE
 	banned_species = list(SPECIES_TAJARAN, SPECIES_SHADEKIN_CREW, SPECIES_SHADEKIN, SPECIES_XENOHYBRID, SPECIES_VULPKANIN, SPECIES_XENO, SPECIES_XENOCHIMERA, SPECIES_VASILISSAN, SPECIES_WEREBEAST) //These species already have strong darksight by default.
-<<<<<<< HEAD
-*/
-=======
 	excludes = list(/datum/trait/positive/darksight)
->>>>>>> c07054d463 (Trait Upports & Tweaks (#18677))
+*/
 
 /datum/trait/positive/melee_attack
 	name = "Special Attack: Sharp Melee" // Trait Organization for easier browsing. TODO: Proper categorization of 'health/ability/resist/etc'
@@ -176,7 +173,6 @@
 
 /datum/trait/positive/brute_resist
 	name = "Brute Resist"
-<<<<<<< HEAD
 	desc = "Adds 20% resistance to brute damage sources." //CHOMP Edit
 	cost = 2 //CHOMP Edit
 	var_changes = list("brute_mod" = 0.8) //CHOMP Edit
@@ -196,26 +192,6 @@
 	//excludes = list(/datum/trait/positive/minor_brute_resist,/datum/trait/positive/brute_resist) //CHOMP disable, this is already handled in positive_ch.dm
 
 
-=======
-	desc = "Adds 25% resistance to brute damage sources."
-	cost = 3
-	var_changes = list("brute_mod" = 0.75)
-	excludes = list(/datum/trait/positive/minor_brute_resist, /datum/trait/positive/brute_resist_plus)
-
-/datum/trait/positive/minor_burn_resist
-	name = "Burn Resist, Minor"
-	desc = "Adds 15% resistance to burn damage sources."
-	cost = 2
-	var_changes = list("burn_mod" = 0.85)
-	excludes = list(/datum/trait/positive/burn_resist, /datum/trait/positive/burn_resist_plus)
-
-/datum/trait/positive/burn_resist
-	name = "Burn Resist"
-	desc = "Adds 25% resistance to burn damage sources."
-	cost = 3
-	var_changes = list("burn_mod" = 0.75)
-	excludes = list(/datum/trait/positive/minor_burn_resist, /datum/trait/positive/burn_resist_plus)
->>>>>>> c07054d463 (Trait Upports & Tweaks (#18677))
 
 /datum/trait/positive/photoresistant
 	name = "Photoresistant"
@@ -244,20 +220,6 @@
 	custom_only = FALSE
 	excludes = list(/datum/trait/negative/heavy_landing)
 
-<<<<<<< HEAD
-/*
-/datum/trait/positive/hardfeet
-	name = "Hard Feet"
-	desc = "Makes your nice clawed, scaled, hooved, armored, or otherwise just awfully calloused feet immune to glass shards."
-	cost = 1 //CHOMP Edit
-	allowed_species = list(SPECIES_HANNER, SPECIES_CUSTOM) //So it only shows up for custom species and hanner
-	custom_only = FALSE
-	var_changes = list("flags" = NO_MINOR_CUT) //Checked the flag is only used by shard stepping.
-*/
-
-// CHOMPEdit: This has been removed for two years, since Jan 2020, pending "review". Uncommenting as per tankiness increase PR.
-=======
->>>>>>> c07054d463 (Trait Upports & Tweaks (#18677))
 /datum/trait/positive/antiseptic_saliva
 	name = "Antiseptic Saliva"
 	desc = "Your saliva has especially strong antiseptic properties that can be used to heal small wounds."
