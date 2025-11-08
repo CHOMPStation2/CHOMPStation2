@@ -129,14 +129,9 @@
 
 /obj/item/organ/external/emp_act(severity, recursive)
 	for(var/obj/O as anything in src.contents)
-<<<<<<< HEAD
-		O.emp_act(severity)
-	if(!(robotic >= ORGAN_ROBOT) || robotic == ORGAN_NANOFORM)	//CHOMPEdit - Proteans handle EMP's differently
-=======
 		O.emp_act(severity, recursive)
 
 	if(!(robotic >= ORGAN_ROBOT))
->>>>>>> a425f3e663 (EMP cleanup (#18682))
 		return
 	var/burn_damage = 0
 	switch (severity)
