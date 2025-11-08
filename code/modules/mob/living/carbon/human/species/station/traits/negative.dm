@@ -747,7 +747,7 @@
 	special_env = TRUE
 	can_take = ORGANICS
 	added_component_path = /datum/component/schizophrenia
-	hidden = TRUE //Disabled on Vorestation
+	hidden = FALSE //Disabled on Vorestation //CHOMPEnable
 
 /datum/trait/negative/synth_pain
 	name = "Obligate Pain Simulation"

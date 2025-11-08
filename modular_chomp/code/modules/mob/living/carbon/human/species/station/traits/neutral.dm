@@ -1,22 +1,3 @@
-/datum/trait/neutral/metabolism_up
-	can_take = ORGANICS|SYNTHETICS
-
-/datum/trait/neutral/metabolism_down
-	can_take = ORGANICS|SYNTHETICS
-
-/datum/trait/neutral/metabolism_apex
-	can_take = ORGANICS|SYNTHETICS
-
-/datum/trait/neutral/hide
-	name = "Hide"
-	desc = "You can hide beneath objects!"
-	cost = 0
-	custom_only = FALSE
-
-/datum/trait/neutral/hide/apply(var/datum/species/S,var/mob/living/carbon/human/H)
-	..()
-	add_verb(H,/mob/living/proc/hide) //CHOMPEdit TGPanel
-
 /datum/trait/neutral/xenochimera_YR3
 	sort = TRAIT_SORT_SPECIES
 	allowed_species = list(SPECIES_XENOCHIMERA)
@@ -51,3 +32,22 @@
 			QDEL_NULL(implant)
 			H.adjust_nutrition(100)
 			to_chat(H, span_critical("Your NIF lets out one last sputter as it finally gives out"))
+
+/datum/trait/neutral/mobegglaying
+	name = "Egg Laying"
+	desc = "You can lay eggs, much like an avian."
+	cost = 0
+
+/datum/trait/neutral/mobegglaying/apply(var/datum/species/S,var/mob/living/carbon/human/H)
+	..()
+	add_verb(H,/mob/living/proc/mobegglaying) //CHOMPEdit TGPanel
+
+/datum/trait/neutral/succubus_bite
+	name = "Succubus Bite"
+	desc = "Allows you to inject your prey with poison, much like a venemous snake."
+	cost = 0
+	custom_only = FALSE	//CHOMPEdit I hate custom only
+
+/datum/trait/neutral/succubus_bite/apply(var/datum/species/S,var/mob/living/carbon/human/H)
+	..()
+	add_verb(H,/mob/living/proc/succubus_bite) //CHOMPEdit TGPanel

@@ -246,11 +246,8 @@
 /datum/trait/positive/weaver
 	name = "Weaver"
 	desc = "You can produce silk and create various articles of clothing and objects."
-	// CHOMPEdit Start, making weaver a neutral trait instead, 2 -> 0 cost
-	category = 0
-	cost = 0
-	// CHOMPEdit End
-	// allowed_species = list(SPECIES_HANNER, SPECIES_CUSTOM) //So it only shows up for custom species and hanner // CHOMPRemove
+	cost = 2
+	// allowed_species = list(SPECIES_HANNER, SPECIES_CUSTOM) //So it only shows up for custom species and hanner // CHOMPEdit End
 
 	custom_only = FALSE
 	has_preferences = list("silk_production" = list(TRAIT_PREF_TYPE_BOOLEAN, "Silk production on spawn", TRAIT_NO_VAREDIT_TARGET), \
@@ -560,12 +557,12 @@
 	can_take = ORGANICS
 	var_changes = list("virus_immune" = TRUE)
 
-/datum/trait/positive/linguist/master
+/*/datum/trait/positive/linguist/master //CHOMPDisable Start: Disabled pending trait rework. Chomp Linguist does the same thing this one does.
 	name = "Master Linguist"
 	desc = "You are a master of languages! For whatever reason you might have, you are able to learn many more languages than others. Your language cap is 12 slots."
 	cost = 2
 	var_changes = list("num_alternate_languages" = 15)
-	var_changes_pref = list("extra_languages" = 12)
+	var_changes_pref = list("extra_languages" = 12)*/ //CHOMPDisable End: Disabled pending trait rework. Chomp Linguist does the same thing this one does.
 
 /datum/trait/positive/densebones
 	name = "Dense Bones"
