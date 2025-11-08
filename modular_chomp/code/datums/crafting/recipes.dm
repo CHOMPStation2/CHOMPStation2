@@ -9,18 +9,6 @@
 	time = 120
 	category = CAT_CLOTHING
 
-/datum/crafting_recipe/surgerytable
-	name = "surgery table"
-	result = /obj/machinery/optable
-	reqs = list(
-		list(/obj/item/stack/material/silver = 12),
-		list(/obj/item/stack/rods = 10),
-		list(/obj/item/stack/material/leather = 1)
-	)
-	time = 240
-	category = CAT_MISC
-
-
 /datum/crafting_recipe/solarcloak
 	name = "solar cloak"
 	result = /obj/item/clothing/suit/armor/firecloak

@@ -30,7 +30,7 @@
 	while((spawncount >= 1) && vents.len)
 		var/obj/vent = pick(vents)
 
-	//CHOMPEDIT START adding spider EGGS to the possible spawns instead of singular spiderling spawns.
+	//CHOMPEDIT START adding spider EGGS to the possible spawns instead of singular spiderling spawns. All spiders now space spiders
 		if(severity == 3)
 			var/spawn_spiderlings = pickweight(list(
 				/obj/effect/spider/spiderling/space = 95,
@@ -39,7 +39,7 @@
 				))
 			new spawn_spiderlings(vent.loc)
 		if(severity < 3) //If the severity is less than 3, only spawn regular spiderlings
-			new /obj/effect/spider/spiderling/broodling(vent.loc) //VOREStation Edit - No nurses //CHOMP Edit Oh my JESUS CHRIST, this slipped past me. Literally no nurses. Well guess what, nurses are back.
+			new /obj/effect/spider/spiderling/space(vent.loc) //VOREStation Edit - No nurses //CHOMP Edit Oh my JESUS CHRIST, this slipped past me. Literally no nurses. Well guess what, nurses are back.
 
 	//CHOMPEDIT END
 		vents -= vent

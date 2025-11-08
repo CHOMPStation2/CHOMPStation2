@@ -379,12 +379,7 @@
 /area/ai)
 "ajC" = (
 /obj/structure/cable/cyan,
-/obj/machinery/power/smes/buildable{
-	charge = 5e+006;
-	input_attempt = 1;
-	input_level = 200000;
-	output_level = 200000
-	},
+/obj/machinery/power/smes/buildable/engine_default,
 /obj/machinery/flasher{
 	id = "AI";
 	pixel_y = -24
@@ -2757,11 +2752,8 @@
 /area/maintenance/solars/foreportsolar)
 "cpE" = (
 /obj/structure/cable,
-/obj/machinery/power/smes/buildable{
-	RCon_tag = "Solar - Fore Port";
-	input_attempt = 1;
-	input_level = 150000;
-	output_level = 100000
+/obj/machinery/power/smes/buildable/max_charge_max_input{
+	RCon_tag = "Solar - Fore Port"
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/solars/foreportsolar)
@@ -2905,11 +2897,8 @@
 /area/maintenance/thirddeck/forestarboard)
 "cxs" = (
 /obj/structure/cable,
-/obj/machinery/power/smes/buildable{
-	RCon_tag = "Solar - Fore Starboard";
-	input_attempt = 1;
-	input_level = 150000;
-	output_level = 100000
+/obj/machinery/power/smes/buildable/max_charge_max_input{
+	RCon_tag = "Solar - Fore Starboard"
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/solars/forestarboardsolar)
@@ -15704,11 +15693,8 @@
 /obj/structure/cable{
 	icon_state = "0-2"
 	},
-/obj/machinery/power/smes/buildable{
-	RCon_tag = "Solar - Aft Port";
-	input_attempt = 1;
-	input_level = 150000;
-	output_level = 100000
+/obj/machinery/power/smes/buildable/max_charge_max_input{
+	RCon_tag = "Solar - Aft Port"
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/solars/aftportsolar)
@@ -16166,11 +16152,8 @@
 /obj/structure/cable{
 	icon_state = "0-2"
 	},
-/obj/machinery/power/smes/buildable{
-	RCon_tag = "Solar - Aft Starboard";
-	input_attempt = 1;
-	input_level = 150000;
-	output_level = 100000
+/obj/machinery/power/smes/buildable/engine_default{
+	RCon_tag = "Solar - Aft Starboard"
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/solars/aftstarboardsolar)

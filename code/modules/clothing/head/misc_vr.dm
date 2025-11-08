@@ -86,6 +86,12 @@
 	icon_state = "pizzadelivery"
 	item_state = "pizzadelivery"
 
+/obj/item/clothing/head/fluff/names_pizza
+	name = "pizza delivery hat"
+	desc = "A hat fit for delivering pizzas! Smells of pepperoni and unpaid student debt."
+	icon_state = "pizzadelivery_fluff"
+	item_state = "pizzadelivery_fluff"
+
 /obj/item/clothing/head/wedding
 	name = "wedding veil"
 	desc = "A lace veil worn over the face, typically by a bride during their wedding."
@@ -147,6 +153,10 @@
 	icon = 'modular_chomp/icons/inventory/head/item.dmi'
 	default_worn_icon = 'modular_chomp/icons/inventory/head/mob_halo.dmi'
 	icon_state = "halo"
+
+/obj/item/clothing/head/halo/alt
+	icon = 'icons/inventory/head/item.dmi'
+	default_worn_icon = 'icons/inventory/head/mob.dmi'
 // CHOMPEdit End
 
 //Replikant Hat

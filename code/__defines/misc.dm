@@ -532,6 +532,7 @@ GLOBAL_LIST_INIT(all_volume_channels, list(
 #define COLORMATE_TINT 1
 #define COLORMATE_HSV 2
 #define COLORMATE_MATRIX 3
+#define COLORMATE_MATRIX_AUTO 4
 
 #define DEFAULT_COLORMATRIX list(1, 0, 0, 0, 1, 0, 0, 0, 1,	0, 0, 0)
 
@@ -565,6 +566,12 @@ GLOBAL_LIST_INIT(all_volume_channels, list(
 #define SHELTER_DEPLOY_BAD_AREA "bad area"
 #define SHELTER_DEPLOY_ANCHORED_OBJECTS "anchored objects"
 #define SHELTER_DEPLOY_SHIP_SPACE "ship not in space"
+
+// Borg hypo injection checks
+#define BORGHYPO_STATUS_CONTAINERFULL "container full"
+#define BORGHYPO_STATUS_NOCHARGE "not enough charge"
+#define BORGHYPO_STATUS_NORECIPE "recipe not found"
+#define BORGHYPO_STATUS_SUCCESS "success"
 
 #define PTO_SECURITY		"Security"
 #define PTO_MEDICAL			"Medical"

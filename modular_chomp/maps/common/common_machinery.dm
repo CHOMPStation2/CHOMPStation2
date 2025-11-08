@@ -39,3 +39,50 @@
 	model_text = "Pilot"
 	req_access = null
 	req_one_access = list(ACCESS_PILOT,ACCESS_EXPLORER)
+
+/obj/machinery/light/fluorescent
+	name = "fluorescent light fixture"
+	nightshift_allowed = FALSE
+	overlay_color = LIGHT_COLOR_FLUORESCENT_TUBE
+	light_type = /obj/item/light/tube/fluorescent
+
+/obj/machinery/light/small/fluorescent
+	name = "fluorescent light fixture"
+	nightshift_allowed = FALSE
+	overlay_color = LIGHT_COLOR_FLUORESCENT_TUBE
+	light_type = /obj/item/light/bulb/fluorescent
+
+/obj/item/light/tube/fluorescent
+	desc = "A harsh, bright fluorescent light tube"
+	brightness_color = LIGHT_COLOR_FLUORESCENT_TUBE
+
+/obj/item/light/bulb/fluorescent
+	desc = "A harsh, bright fluorescent light tube"
+	brightness_color = LIGHT_COLOR_FLUORESCENT_TUBE
+
+/obj/machinery/light/yellowed
+	desc = "This light fixture displays a sickly yellow hue"
+	overlay_color = LIGHT_COLOR_YELLOW
+	nightshift_allowed = FALSE
+	light_type = /obj/item/light/tube/yellowed
+
+/obj/machinery/light/small/yellowed
+	desc = "This light fixture displays a sickly yellow hue"
+	overlay_color = LIGHT_COLOR_YELLOW
+	nightshift_allowed = FALSE
+	light_type = /obj/item/light/bulb/yellowed
+	brightness_power = 0.5
+
+/obj/item/light/tube/yellowed
+	desc = "An old, yellowed light tube."
+	color = COLOR_YELLOW
+	brightness_color = LIGHT_COLOR_YELLOW
+	brightness_power = 0.45
+	init_brightness_power = 0.45
+
+/obj/item/light/bulb/yellowed
+	desc = "An old, yellowed light bulb."
+	color = COLOR_YELLOW
+	brightness_color = LIGHT_COLOR_YELLOW
+	brightness_power = 0.5
+	init_brightness_power = 0.5

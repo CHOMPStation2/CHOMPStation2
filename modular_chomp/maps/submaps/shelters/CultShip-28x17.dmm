@@ -685,7 +685,7 @@
 /obj/effect/floor_decal/techfloor{
 	dir = 6
 	},
-/obj/machinery/power/smes/buildable/power_shuttle,
+/obj/machinery/power/smes/buildable/power_shuttle/max_charge_max_input_base_output,
 /obj/structure/cable/green,
 /turf/simulated/floor/cult,
 /area/survivalpod/superpose/CultShip)

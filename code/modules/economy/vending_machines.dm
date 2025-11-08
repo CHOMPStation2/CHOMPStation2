@@ -888,7 +888,7 @@
 					/obj/item/toy/plushie/teshari/y_yw = 1,
 					//YawnWider Add End
 					//CHOMPStation Add Start
-					/obj/item/toy/plushie/dragon/customizable = 10,
+					/obj/item/toy/plushie/customizable/dragon = 10,
 					/obj/item/toy/plushie/teppi = 1,
 					/obj/item/toy/plushie/teppi/alt = 1,
 					//CHOMPStation Add End
@@ -950,7 +950,7 @@
 					/obj/item/toy/plushie/teshari/y_yw = 150,
 					//YawnWider Add End
 					//CHOMPStation Add Start
-					/obj/item/toy/plushie/dragon/customizable = 50,
+					/obj/item/toy/plushie/customizable/dragon = 50,
 					/obj/item/toy/plushie/teppi = 50,
 					/obj/item/toy/plushie/teppi/alt = 50,
 					//CHOMPStation Add End

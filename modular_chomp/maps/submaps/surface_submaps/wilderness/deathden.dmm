@@ -449,7 +449,7 @@
 /turf/simulated/floor/wood/sif/turfpack/sif,
 /area/submap/DeathDen)
 "vC" = (
-/obj/machinery/power/supermatter/shard,
+/obj/item/flame/lighter/supermatter,
 /turf/simulated/floor/wood/sif/turfpack/sif,
 /area/submap/DeathDen)
 "vD" = (
