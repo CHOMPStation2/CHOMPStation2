@@ -132,6 +132,12 @@
 			to_chat(wearer, span_large(span_danger("You're out!"))) //People KEEP MISSING THAT THEY'RE OUT, SO NOW THEY WON'T.
 			wearer.Stun(5)
 			wearer.Weaken(5)
+			// CHOMPEdit Start - The thing just to drop the ball if hit
+			if(istype(wearer.l_hand, /obj/item/laserdome_hyperball))
+				wearer.unEquip(wearer.l_hand)
+			if(istype(wearer.r_hand, /obj/item/laserdome_hyperball))
+				wearer.unEquip(wearer.r_hand)
+			// CHOMPEdit End
 			if(emagged)
 				to_chat(wearer, span_bolddanger(span_massive("OH GOD! YOUR HEART!"))) //this is the last thing you see before you (presumably) die.
 				wearer.apply_damage(lasertag_max_health*50, BURN, BP_TORSO, used_weapon = "High-Voltage Electrical Shock")

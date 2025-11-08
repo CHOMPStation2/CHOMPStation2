@@ -216,8 +216,8 @@
 /obj/item/projectile/beam/lasertag
 	name = "lasertag beam"
 	damage = 0
-	excavation_amount = 0
 	eyeblur = 0
+	excavation_amount = 0
 	no_attack_log = 1
 	damage_type = BURN
 	check_armour = "laser"
@@ -242,77 +242,12 @@
 	impact_type = /obj/effect/projectile/impact/laser_blue
 	allowed_suits = list(/obj/item/clothing/suit/lasertag/redtag, /obj/item/clothing/suit/lasertag/omni)
 
-<<<<<<< HEAD
-/obj/item/projectile/beam/lasertag/blue/on_hit(var/atom/target, var/blocked = 0)
-	if(ishuman(target))
-		var/mob/living/carbon/human/M = target
-		if(istype(M.wear_suit, /obj/item/clothing/suit/redtag))
-			M.Weaken(5)
-			// CHOMPEdit Start - The thing just to drop the ball if hit
-			if(istype(M.l_hand, /obj/item/laserdome_hyperball))
-				M.unEquip(M.l_hand)
-			if(istype(M.r_hand, /obj/item/laserdome_hyperball))
-				M.unEquip(M.r_hand)
-			// CHOMPEdit End
-	return 1
-
-/obj/item/projectile/beam/lasertag/blue/multhit
-	name = "blue multi-hit lasertag beam"
-
-/obj/item/projectile/beam/lasertag/blue/multihit/on_hit(var/atom/target, var/blocked = 0)
-	if(ishuman(target))
-		var/mob/living/carbon/human/M = target
-		if(istype(M.wear_suit, /obj/item/clothing/suit/redtag))
-			var/obj/item/clothing/suit/redtag/S = M.wear_suit
-			if (S.lasertag_health <= 1)
-				M.Weaken(5)
-				to_chat(M,span_warning("You have been defeated!"))
-				S.lasertag_health = initial(S.lasertag_health)
-			else
-				S.lasertag_health--
-				to_chat(M,span_warning("Danger! You have [num2text(S.lasertag_health)] hits remaining!"))
-	return 1
-=======
->>>>>>> ee47237aa7 (The Great Lasertag Update (#18691))
 
 /obj/item/projectile/beam/lasertag/red
 	icon_state = "laser"
 	light_color = "#FF0D00"
 	hud_state = "monkey"
-<<<<<<< HEAD
-
-/obj/item/projectile/beam/lasertag/red/on_hit(var/atom/target, var/blocked = 0)
-	if(ishuman(target))
-		var/mob/living/carbon/human/M = target
-		if(istype(M.wear_suit, /obj/item/clothing/suit/bluetag))
-			M.Weaken(5)
-			// CHOMPEdit Start - The thing just to drop the ball if hit
-			if(istype(M.l_hand, /obj/item/laserdome_hyperball))
-				M.unEquip(M.l_hand)
-			if(istype(M.r_hand, /obj/item/laserdome_hyperball))
-				M.unEquip(M.r_hand)
-			// CHOMPEdit End
-	return 1
-
-/obj/item/projectile/beam/lasertag/red/multhit
-	name = "red multi-hit lasertag beam"
-
-/obj/item/projectile/beam/lasertag/red/multihit/on_hit(var/atom/target, var/blocked = 0)
-	if(ishuman(target))
-		var/mob/living/carbon/human/M = target
-		if(istype(M.wear_suit, /obj/item/clothing/suit/bluetag))
-			var/obj/item/clothing/suit/bluetag/S = M.wear_suit
-			if(S.lasertag_health <= 1)
-				M.Weaken(5)
-				to_chat(M,span_warning("You have been defeated!"))
-				S.lasertag_health = initial(S.lasertag_health)
-			else
-				S.lasertag_health--
-				to_chat(M,span_warning("Danger! You have [num2text(S.lasertag_health)] hits remaining!"))
-	return 1
-=======
 	allowed_suits = list(/obj/item/clothing/suit/lasertag/bluetag, /obj/item/clothing/suit/lasertag/omni)
->>>>>>> ee47237aa7 (The Great Lasertag Update (#18691))
 
 /obj/item/projectile/beam/lasertag/omni//A laser tag bolt that stuns EVERYONE
 	icon_state = "omnilaser"
