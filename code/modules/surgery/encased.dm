@@ -28,8 +28,15 @@
 		/obj/item/material/knife/machete/hatchet = 75
 	)
 
+<<<<<<< HEAD
 	min_duration = 50 //CHOMPedit
 	max_duration = 50 //CHOMPedit
+=======
+	allowed_procs = list(IS_CROWBAR = 50)
+
+	min_duration = 50
+	max_duration = 70
+>>>>>>> 4899465a23 (Various Surgery & Medical fixes, QoL, and adjustments (#18718))
 
 /datum/surgery_step/open_encased/saw/can_use(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	if(!ishuman(target))

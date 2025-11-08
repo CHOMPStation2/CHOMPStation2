@@ -171,10 +171,15 @@
 
 	priority = 3
 
+<<<<<<< HEAD
 	blood_level = 3
 
 	min_duration = 40 //CHOMPedit
 	max_duration = 40 //CHOMPedit
+=======
+	min_duration = 60
+	max_duration = 80
+>>>>>>> 4899465a23 (Various Surgery & Medical fixes, QoL, and adjustments (#18718))
 	excludes_steps = list(/datum/surgery_step/generic/cut_open)
 
 /datum/surgery_step/generic/ripper/rip_organ/can_use(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
