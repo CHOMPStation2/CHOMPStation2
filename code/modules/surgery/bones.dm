@@ -22,7 +22,7 @@
 	max_duration = 40 //CHOMPedit
 
 /datum/surgery_step/glue_bone/can_use(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
-	if (!hasorgans(target))
+	if(!ishuman(target))
 		return 0
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
 	if(coverage_check(user, target, affected, tool))
@@ -67,7 +67,7 @@
 	max_duration = 45 //CHOMPedit
 
 /datum/surgery_step/set_bone/can_use(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
-	if (!hasorgans(target))
+	if(!ishuman(target))
 		return 0
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
 	if(coverage_check(user, target, affected, tool))
@@ -118,7 +118,7 @@
 	max_duration = 50 //CHOMPedit
 
 /datum/surgery_step/mend_skull/can_use(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
-	if (!hasorgans(target))
+	if(!ishuman(target))
 		return 0
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
 	if(coverage_check(user, target, affected, tool))
@@ -166,7 +166,7 @@
 	max_duration = 30 //CHOMPedit
 
 /datum/surgery_step/finish_bone/can_use(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
-	if (!hasorgans(target))
+	if(!ishuman(target))
 		return 0
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
 	if(coverage_check(user, target, affected, tool))
@@ -211,7 +211,7 @@
 	max_duration = 55 //CHOMPedit
 
 /datum/surgery_step/clamp_bone/can_use(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
-	if (!hasorgans(target))
+	if(!ishuman(target))
 		return 0
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
 	if(coverage_check(user, target, affected, tool))

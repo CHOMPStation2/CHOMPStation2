@@ -314,6 +314,7 @@
 /obj/item/attack_hand(mob/living/user as mob)
 	if (!user) return
 	..()
+<<<<<<< HEAD
 	if(anchored) // Start CHOMPStation Edit
 		if(hascall(src, "attack_self"))
 			return src.attack_self(user)
@@ -321,6 +322,12 @@
 			to_chat(user, span_notice("This is anchored and you can't lift it."))
 		return // End CHOMPStation Edit
 	if (hasorgans(user))
+=======
+	if(anchored)
+		to_chat(user, span_notice("\The [src] won't budge, you can't pick it up!"))
+		return
+	if(ishuman(user))
+>>>>>>> c2b50ace33 (Gets rid of hasorgans() helper proc (#18692))
 		var/mob/living/carbon/human/H = user
 		var/obj/item/organ/external/temp = H.organs_by_name[BP_R_HAND]
 		if (user.hand)
