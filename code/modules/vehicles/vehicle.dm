@@ -170,7 +170,7 @@
 				return
 	return
 
-/obj/vehicle/emp_act(severity)
+/obj/vehicle/emp_act(severity, recursive)
 	if(!mechanical)
 		return
 
