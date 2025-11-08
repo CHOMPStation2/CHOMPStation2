@@ -266,6 +266,7 @@
 		to_chat(user, "The [src] vacuums in the darts!")
 	else
 		to_chat(user, "No Donk-Soft brand foam darts detected. Aborting.")
+<<<<<<< HEAD
 /*
  * Laser Tag
  */
@@ -328,3 +329,5 @@
 
 /obj/item/gun/energy/lasertag/omni
 	projectile_type = /obj/item/projectile/beam/lasertag/omni
+=======
+>>>>>>> ee47237aa7 (The Great Lasertag Update (#18691))
