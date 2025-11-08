@@ -1179,6 +1179,17 @@
 	},
 /turf/simulated/floor/plating,
 /area/medical/virology)
+"acd" = (
+/obj/structure/closet/emcloset,
+/obj/item/storage/toolbox/emergency,
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/structure/handrail{
+	dir = 8
+	},
+/turf/simulated/shuttle/floor,
+/area/shuttle/cryo/station)
 "ack" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 10
@@ -3905,6 +3916,7 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
+/obj/effect/engine_setup/pump_max,
 /turf/simulated/floor,
 /area/engineering/engine_waste)
 "ajX" = (
@@ -13587,9 +13599,8 @@
 /area/security/prison)
 "aRv" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/valve/digital{
-	dir = 4;
-	name = "Hot Loop Waste Gas Ejection Switch"
+/obj/machinery/atmospherics/valve/digital/open{
+	dir = 4
 	},
 /turf/simulated/floor,
 /area/engineering/engine_waste)
@@ -32729,6 +32740,7 @@
 /obj/machinery/status_display{
 	pixel_y = 32
 	},
+/obj/machinery/door/firedoor/glass/hidden,
 /turf/simulated/floor/tiled,
 /area/hallway/primary/seconddeck/aft)
 "ccQ" = (
@@ -33245,6 +33257,9 @@
 	dir = 1
 	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/seconddeck/aft)
 "cec" = (
@@ -33252,6 +33267,9 @@
 	icon_state = "4-8"
 	},
 /obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
@@ -33963,6 +33981,9 @@
 	dir = 8
 	},
 /obj/effect/floor_decal/corner/green/bordercorner{
+	dir = 8
+	},
+/obj/machinery/door/firedoor/glass/hidden{
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
@@ -40375,6 +40396,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 9
 	},
+/obj/structure/window/reinforced,
 /turf/simulated/floor/tiled,
 /area/hallway/primary/seconddeck/aft)
 "cCm" = (
@@ -40382,6 +40404,7 @@
 	dir = 8
 	},
 /obj/effect/floor_decal/industrial/warning,
+/obj/structure/window/reinforced,
 /turf/simulated/floor/tiled,
 /area/hallway/primary/seconddeck/aft)
 "cCo" = (
@@ -54278,11 +54301,11 @@
 	dir = 4
 	},
 /obj/item/geiger/wall/east,
-/obj/machinery/atmospherics/binary/passive_gate/on{
+/obj/machinery/atmospherics/binary/passive_gate{
 	dir = 1;
 	name = "Hot Loop Waste Gas pressure regulator";
-	regulate_mode = 1;
-	target_pressure = 2500
+	target_pressure = 1400;
+	regulate_mode = 1
 	},
 /turf/simulated/floor,
 /area/engineering/engine_waste)
@@ -71327,9 +71350,7 @@
 "tAj" = (
 /obj/structure/closet/emcloset,
 /obj/item/storage/toolbox/emergency,
-/obj/machinery/light/floortube{
-	dir = 4
-	},
+/obj/machinery/light,
 /obj/structure/handrail{
 	dir = 8
 	},
@@ -105413,7 +105434,7 @@ aaa
 sEx
 xgL
 rcp
-tAj
+acd
 vEq
 eTM
 tAj

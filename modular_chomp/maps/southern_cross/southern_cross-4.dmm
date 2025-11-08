@@ -3691,7 +3691,6 @@
 /obj/machinery/ai_status_display{
 	pixel_y = -32
 	},
-/obj/item/toy/xmastree,
 /turf/simulated/floor/bluegrid,
 /area/ai/ai_upload)
 "djL" = (
@@ -11092,7 +11091,7 @@
 /obj/item/flame/candle/candelabra/everburn{
 	pixel_y = 8
 	},
-/obj/structure/table,
+/obj/structure/table/fancyblack,
 /turf/simulated/floor/carpet,
 /area/maintenance/thirddeck/aftstarboard)
 "jgM" = (
@@ -23939,6 +23938,7 @@
 	icon_state = "4-8"
 	},
 /obj/effect/floor_decal/industrial/warning,
+/obj/structure/window/reinforced,
 /turf/simulated/floor/tiled,
 /area/hallway/primary/thirddeck/aft)
 "tWG" = (
@@ -23955,6 +23955,7 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
 	},
+/obj/structure/window/reinforced,
 /turf/simulated/floor/tiled,
 /area/hallway/primary/thirddeck/aft)
 "tWX" = (
@@ -24532,6 +24533,7 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
 	},
+/obj/machinery/door/firedoor/glass/hidden,
 /turf/simulated/floor/tiled,
 /area/hallway/primary/thirddeck/aft)
 "uxE" = (

@@ -4862,6 +4862,9 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
 	},
+/obj/structure/window/reinforced{
+	dir = 1
+	},
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/zeroaft)
 "tR" = (
@@ -7103,6 +7106,9 @@
 /obj/machinery/light/small{
 	dir = 1
 	},
+/obj/machinery/door/firedoor/glass/hidden{
+	dir = 8
+	},
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/zeroaft)
 "DW" = (
@@ -8534,6 +8540,9 @@
 /obj/random/trash,
 /obj/effect/floor_decal/rust,
 /obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
 	dir = 1
 	},
 /turf/simulated/floor/plating/turfpack/station,

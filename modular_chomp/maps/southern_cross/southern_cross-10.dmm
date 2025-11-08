@@ -162,6 +162,10 @@
 "aK" = (
 /turf/simulated/floor/water,
 /area/surface/outside/ocean)
+"aL" = (
+/obj/machinery/light,
+/turf/simulated/floor/outdoors/grass/sif/planetuse,
+/area/surface/outpost/shelter/exterior)
 "aM" = (
 /turf/simulated/floor/outdoors/rocks/sif/planetuse,
 /area/surface/outside/wilderness/normal)
@@ -203,6 +207,10 @@
 "aW" = (
 /turf/simulated/floor/outdoors/dirt/sif/planetuse,
 /area/surface/outside/path/wilderness)
+"aX" = (
+/obj/item/stack/marker_beacon,
+/turf/simulated/floor/outdoors/grass/sif/planetuse,
+/area/surface/outside/wilderness/normal)
 "aY" = (
 /obj/effect/map_effect/portal/master/side_b/wilderness_to_caves/river{
 	dir = 1
@@ -444,9 +452,19 @@
 "bE" = (
 /turf/simulated/wall/rsifwood,
 /area/surface/outpost/shelter/exterior)
+"bF" = (
+/obj/item/stack/marker_beacon,
+/turf/simulated/floor/outdoors/dirt/sif/planetuse,
+/area/surface/outside/wilderness/normal)
 "bG" = (
 /turf/simulated/floor/tiled/freezer,
 /area/surface/outpost/shelter/dorms)
+"bH" = (
+/obj/item/stack/marker_beacon,
+/turf/simulated/floor/outdoors/grass/sif/planetuse{
+	tree_chance = 0
+	},
+/area/surface/outside/wilderness/normal)
 "bR" = (
 /obj/machinery/hologram/holopad,
 /obj/effect/floor_decal/industrial/outline/grey,
@@ -580,13 +598,7 @@
 /area/surface/outpost/shelter/utilityroom)
 "gV" = (
 /obj/structure/cable{
-	icon_state = "16-0"
-	},
-/obj/structure/cable{
 	icon_state = "1-2"
-	},
-/obj/structure/cable{
-	icon_state = "0-2"
 	},
 /obj/machinery/button/remote/blast_door{
 	id = "wilderness_shelter_Utility";
@@ -1537,6 +1549,15 @@
 /obj/item/stack/tile/wood/sif{
 	amount = 60;
 	icon_state = "tile-sifwood_3"
+	},
+/obj/item/stack/tile/wood/sif{
+	amount = 60;
+	icon_state = "tile-sifwood_3"
+	},
+/obj/item/stack/material/wood/sif{
+	amount = 50;
+	icon_state = "sheet-wood_3";
+	pixel_y = 2
 	},
 /obj/item/stack/material/wood/sif{
 	amount = 50;
@@ -37666,14 +37687,14 @@ aG
 aG
 aH
 aG
-aG
+aX
 aV
 aV
 aV
 aV
 ap
 ap
-ap
+bF
 bA
 bA
 bA
@@ -37681,7 +37702,7 @@ bx
 bx
 bx
 bx
-aG
+aX
 aG
 aG
 aW
@@ -38698,7 +38719,7 @@ aG
 aG
 aH
 aG
-aG
+aX
 bA
 bx
 bA
@@ -38713,7 +38734,7 @@ bx
 bx
 aV
 ap
-ap
+bF
 aG
 aG
 aW
@@ -39730,14 +39751,14 @@ aG
 aG
 aH
 aG
+bH
 aV
 aV
 aV
 aV
 aV
 aV
-aV
-ap
+bF
 bA
 bA
 bA
@@ -39745,7 +39766,7 @@ bA
 bA
 bA
 bA
-aV
+bH
 aG
 aW
 aW
@@ -47489,7 +47510,7 @@ aG
 aG
 aW
 aG
-bz
+aL
 Ge
 Cb
 bG
@@ -48779,7 +48800,7 @@ aG
 aG
 aW
 aW
-bz
+aL
 Ge
 oU
 EF

@@ -664,6 +664,49 @@
 	},
 /turf/simulated/shuttle/floor/skipjack,
 /area/shuttle/syndicate_elite/mothership)
+"abF" = (
+/obj/structure/handrail{
+	dir = 4
+	},
+/obj/machinery/light/floortube{
+	dir = 8
+	},
+/turf/simulated/shuttle/floor,
+/area/shuttle/escape/centcom)
+"abG" = (
+/obj/structure/handrail{
+	dir = 8
+	},
+/obj/machinery/light/floortube{
+	dir = 4
+	},
+/turf/simulated/shuttle/floor,
+/area/shuttle/escape/centcom)
+"abH" = (
+/obj/structure/handrail{
+	dir = 8
+	},
+/turf/simulated/shuttle/floor/black,
+/area/shuttle/merchant)
+"abI" = (
+/obj/machinery/light/floortube{
+	dir = 4
+	},
+/obj/structure/handrail{
+	dir = 8
+	},
+/turf/simulated/shuttle/floor/black,
+/area/shuttle/merchant)
+"abJ" = (
+/obj/structure/handrail{
+	dir = 4
+	},
+/turf/simulated/shuttle/floor/red,
+/area/shuttle/administration)
+"abK" = (
+/obj/machinery/light/floortube,
+/turf/simulated/shuttle/floor/skipjack,
+/area/shuttle/syndicate_elite/mothership)
 "acE" = (
 /obj/structure/table/standard,
 /obj/effect/floor_decal/corner/paleblue{
@@ -2296,11 +2339,14 @@
 /obj/effect/landmark{
 	name = "Syndicate-Commando-Bomb"
 	},
+/obj/machinery/light{
+	dir = 1
+	},
 /turf/simulated/shuttle/floor/skipjack,
 /area/shuttle/syndicate_elite/mothership)
 "bAn" = (
-/obj/machinery/light/floortube{
-	dir = 1
+/obj/machinery/light{
+	dir = 4
 	},
 /obj/structure/handrail,
 /turf/simulated/shuttle/floor,
@@ -2397,7 +2443,7 @@
 	},
 /area/wizard_station)
 "bGs" = (
-/obj/machinery/light/floortube{
+/obj/machinery/light{
 	dir = 4
 	},
 /obj/structure/bed/chair/shuttle{
@@ -3397,9 +3443,7 @@
 /obj/structure/bed/chair/shuttle{
 	dir = 1
 	},
-/obj/machinery/light/floortube{
-	pixel_y = 4
-	},
+/obj/machinery/light,
 /turf/simulated/shuttle/floor,
 /area/shuttle/transport1/centcom)
 "cAy" = (
@@ -4269,8 +4313,8 @@
 	},
 /area/skipjack_station)
 "dsO" = (
-/obj/machinery/light/floortube{
-	pixel_y = 4
+/obj/machinery/light{
+	dir = 4
 	},
 /obj/structure/handrail{
 	dir = 1
@@ -5661,9 +5705,6 @@
 /area/wizard_station)
 "eHc" = (
 /obj/machinery/computer/communications,
-/obj/machinery/light/floortube{
-	dir = 1
-	},
 /turf/simulated/shuttle/floor/white,
 /area/shuttle/escape/centcom)
 "eHg" = (
@@ -9793,9 +9834,6 @@
 /area/shuttle/ninja)
 "iEF" = (
 /obj/machinery/computer/station_alert,
-/obj/machinery/light/floortube{
-	dir = 1
-	},
 /turf/simulated/shuttle/floor/white,
 /area/shuttle/escape/centcom)
 "iFp" = (
@@ -13364,7 +13402,7 @@
 	},
 /area/centcom/command)
 "lPM" = (
-/obj/machinery/light/floortube{
+/obj/machinery/light{
 	dir = 8
 	},
 /obj/structure/bed/chair/shuttle{
@@ -14074,7 +14112,7 @@
 /area/shuttle/syndicate)
 "mBJ" = (
 /mob/living/simple_mob/animal/passive/cat/space{
-	    armor = list("melee"=100,"bullet"=100,"laser"=100,"energy"=100,"bomb"=100,"bio"=100,"rad"=100);
+	armor = list("melee"=100,"bullet"=100,"laser"=100,"energy"=100,"bomb"=100,"bio"=100,"rad"=100);
 	desc = "They look well taken care of. There is a small scratch mark through the L of their collar that looks like it was made by a claw.";
 	description_antag = "That space suit looks like it can withstand just about any assault. You feel that you will regret hurting this one.";
 	description_fluff = "Back after a very long trip. Their suit smells of adventure!";
@@ -19354,8 +19392,11 @@
 /obj/machinery/door/window/northright{
 	dir = 2
 	},
-/obj/machinery/light{
+/obj/machinery/light/floortube{
 	dir = 8
+	},
+/obj/structure/handrail{
+	dir = 4
 	},
 /turf/simulated/shuttle/floor/red,
 /area/shuttle/administration)
@@ -20855,8 +20896,8 @@
 	},
 /area/ninja_dojo/dojo)
 "tuj" = (
-/obj/machinery/light/floortube{
-	pixel_y = 4
+/obj/machinery/light{
+	layer = 3
 	},
 /turf/simulated/shuttle/floor/red,
 /area/shuttle/escape/centcom)
@@ -22681,8 +22722,8 @@
 /area/shadekin)
 "vfs" = (
 /obj/machinery/sleep_console,
-/obj/machinery/light/floortube{
-	pixel_y = 4
+/obj/machinery/light{
+	layer = 3
 	},
 /turf/simulated/shuttle/floor/white,
 /area/shuttle/escape/centcom)
@@ -24990,8 +25031,8 @@
 /obj/machinery/sleep_console{
 	dir = 4
 	},
-/obj/machinery/light/floortube{
-	pixel_y = 4
+/obj/machinery/light{
+	layer = 3
 	},
 /turf/simulated/shuttle/floor/white,
 /area/shuttle/escape/centcom)
@@ -25267,6 +25308,9 @@
 	},
 /obj/structure/table/steel,
 /obj/item/storage/firstaid/surgery,
+/obj/structure/handrail{
+	dir = 1
+	},
 /turf/simulated/shuttle/floor/voidcraft/light,
 /area/shuttle/syndicate)
 "xJi" = (
@@ -25508,7 +25552,7 @@
 /area/shadekin)
 "xST" = (
 /obj/structure/bed/chair/shuttle,
-/obj/machinery/light/floortube{
+/obj/machinery/light{
 	dir = 1
 	},
 /turf/simulated/shuttle/floor,
@@ -25648,9 +25692,6 @@
 /area/shuttle/response_ship)
 "ycK" = (
 /obj/structure/AIcore/deactivated,
-/obj/machinery/light/floortube{
-	pixel_y = 4
-	},
 /turf/simulated/shuttle/floor,
 /area/shuttle/escape/centcom)
 "ydh" = (
@@ -34092,7 +34133,7 @@ vFi
 dmo
 azl
 jsR
-aaS
+abF
 aaS
 kxV
 uEv
@@ -35640,7 +35681,7 @@ vFi
 dmo
 azl
 neF
-aby
+abG
 aby
 kxV
 uEv
@@ -49797,7 +49838,7 @@ fKq
 fKq
 bcy
 nmH
-fKq
+abJ
 gnJ
 bcy
 bcy
@@ -71495,9 +71536,9 @@ vFi
 eVq
 eVq
 bbd
-vIs
+abI
 xlm
-iYC
+abH
 iLy
 eVq
 kyR
@@ -73626,7 +73667,7 @@ thC
 muP
 uUP
 vaG
-vaG
+abB
 wSS
 abB
 xVZ
@@ -88049,7 +88090,7 @@ cfK
 cfK
 cfK
 cfK
-cfK
+abK
 hKH
 iBf
 vFi

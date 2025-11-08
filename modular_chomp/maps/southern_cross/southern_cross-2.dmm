@@ -208,9 +208,6 @@
 /obj/item/roller{
 	pixel_y = 16
 	},
-/obj/machinery/light/floortube{
-	dir = 1
-	},
 /obj/structure/handrail,
 /turf/simulated/shuttle/floor/white,
 /area/shuttle/large_escape_pod2/station)
@@ -304,9 +301,7 @@
 /obj/structure/bed/chair{
 	dir = 1
 	},
-/obj/machinery/light/floortube{
-	pixel_y = 4
-	},
+/obj/machinery/light,
 /turf/simulated/shuttle/floor/white,
 /area/shuttle/large_escape_pod2/station)
 "aaY" = (
@@ -319,9 +314,6 @@
 /obj/item/extinguisher,
 /obj/item/tool/crowbar,
 /obj/random/medical/lite,
-/obj/machinery/light/floortube{
-	pixel_y = 4
-	},
 /obj/structure/handrail{
 	dir = 1
 	},
@@ -9578,6 +9570,7 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/industrial/warning,
+/obj/structure/window/reinforced,
 /turf/simulated/floor/tiled,
 /area/hallway/primary/firstdeck/aft)
 "bpR" = (
@@ -10339,7 +10332,7 @@
 /area/shuttle/spacebus)
 "bWN" = (
 /obj/structure/bed/chair,
-/obj/machinery/light/floortube{
+/obj/machinery/light{
 	dir = 1
 	},
 /turf/simulated/shuttle/floor/white,
@@ -12856,6 +12849,9 @@
 /area/hallway/primary/firstdeck/port)
 "dWX" = (
 /obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
@@ -16033,9 +16029,7 @@
 /obj/structure/bed/chair{
 	dir = 1
 	},
-/obj/machinery/light/floortube{
-	pixel_y = -3
-	},
+/obj/machinery/light,
 /turf/simulated/shuttle/floor/white,
 /area/shuttle/large_escape_pod1/station)
 "fRL" = (
@@ -16391,7 +16385,7 @@
 /area/shuttle/large_escape_pod1/station)
 "gia" = (
 /obj/structure/bed/chair,
-/obj/machinery/light/floortube{
+/obj/machinery/light{
 	dir = 1
 	},
 /turf/simulated/shuttle/floor/white,
@@ -16436,6 +16430,9 @@
 	health = 1e+006
 	},
 /obj/structure/bed/chair,
+/obj/machinery/light{
+	dir = 1
+	},
 /turf/simulated/shuttle/floor/white,
 /area/shuttle/large_escape_pod2/station)
 "glP" = (
@@ -18310,6 +18307,7 @@
 /obj/structure/bed/chair{
 	dir = 1
 	},
+/obj/machinery/light,
 /turf/simulated/shuttle/floor/white,
 /area/shuttle/large_escape_pod2/station)
 "iCi" = (
@@ -24252,6 +24250,9 @@
 	dir = 4;
 	pixel_x = -32
 	},
+/obj/machinery/door/firedoor/glass/hidden{
+	dir = 8
+	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/firstdeck/aft)
 "poy" = (
@@ -25027,6 +25028,9 @@
 	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/simple/visible,
+/obj/machinery/light/floortube{
+	dir = 8
+	},
 /turf/simulated/shuttle/floor,
 /area/shuttle/large_escape_pod1/station)
 "qbF" = (
@@ -25434,6 +25438,7 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/industrial/warning,
+/obj/structure/window/reinforced,
 /turf/simulated/floor/tiled,
 /area/hallway/primary/firstdeck/aft)
 "qyi" = (
@@ -27718,9 +27723,6 @@
 /area/hallway/primary/firstdeck/port)
 "tak" = (
 /obj/structure/bed/roller,
-/obj/machinery/light/floortube{
-	dir = 1
-	},
 /obj/structure/handrail,
 /turf/simulated/shuttle/floor/white,
 /area/shuttle/large_escape_pod1/station)
@@ -31105,9 +31107,6 @@
 /obj/item/reagent_containers/blood/empty,
 /obj/item/reagent_containers/blood/empty,
 /obj/item/reagent_containers/blood/empty,
-/obj/machinery/light/floortube{
-	pixel_y = -3
-	},
 /obj/structure/handrail{
 	dir = 1
 	},
@@ -31945,6 +31944,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
 	},
+/obj/machinery/door/firedoor/glass/hidden,
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/firstdeck/aft)
 "xgz" = (
