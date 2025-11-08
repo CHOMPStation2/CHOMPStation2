@@ -127,10 +127,11 @@
 
 	return ..()
 
-/obj/item/organ/external/emp_act(severity)
+/obj/item/organ/external/emp_act(severity, recursive)
 	for(var/obj/O as anything in src.contents)
-		O.emp_act(severity)
-	if(!(robotic >= ORGAN_ROBOT) || robotic == ORGAN_NANOFORM)	//CHOMPEdit - Proteans handle EMP's differently
+		O.emp_act(severity, recursive)
+
+	if(!(robotic >= ORGAN_ROBOT))
 		return
 	var/burn_damage = 0
 	switch (severity)
