@@ -309,13 +309,19 @@
 	if(stat != DEAD && toggled_sleeping)
 		Sleeping(2)
 	if(sleeping)
+<<<<<<< HEAD
 		//CHOMPEdit Start
+=======
+>>>>>>> c07054d463 (Trait Upports & Tweaks (#18677))
 		if(iscarbon(src))
 			var/mob/living/carbon/C = src
 			AdjustSleeping(-1 * C.species.waking_speed)
 		else
 			AdjustSleeping(-1)
+<<<<<<< HEAD
 		//CHOMPEdit End
+=======
+>>>>>>> c07054d463 (Trait Upports & Tweaks (#18677))
 		throw_alert("asleep", /atom/movable/screen/alert/asleep)
 	else
 		clear_alert("asleep")

@@ -145,6 +145,7 @@ default behaviour is:
 				H.Weaken(5)
 				now_pushing = FALSE
 				return
+<<<<<<< HEAD
 			//CHOMPSTATION edit Adding alternative to lightweight
 			if(H.species.lightweight_light == 1 && H.a_intent == I_HELP)
 				H.visible_message(span_warning("[src] bumps into [H], knocking them off balance!"))
@@ -152,6 +153,13 @@ default behaviour is:
 				now_pushing = 0
 				return
 		//CHOMPSTATION edit - bringing back mandatory step mechanics, fetish stuff removed if no prefs
+=======
+			if(H.species.lightweight_light == 1 && H.a_intent == I_HELP)
+				H.visible_message(span_warning("[src] bumps into [H], knocking them off balance!"))
+				H.Weaken(5)
+				now_pushing = FALSE
+				return
+>>>>>>> c07054d463 (Trait Upports & Tweaks (#18677))
 		// Handle grabbing, stomping, and such of micros!
 		if(step_mechanics_pref && tmob.step_mechanics_pref)
 			if(handle_micro_bump_other(tmob)) return
