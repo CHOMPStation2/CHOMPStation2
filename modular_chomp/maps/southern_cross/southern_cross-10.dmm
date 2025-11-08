@@ -65,10 +65,7 @@
 /turf/simulated/floor/plating/sif/planetuse,
 /area/surface/outside/path/wilderness)
 "ar" = (
-/obj/machinery/camera/network/carrier{
-	c_tag = "WILD - Shelter Exterior Dorms";
-	dir = 1
-	},
+/obj/machinery/light,
 /turf/simulated/floor/outdoors/grass/sif/planetuse,
 /area/surface/outpost/shelter/exterior)
 "as" = (
@@ -151,10 +148,10 @@
 /area/surface/outside/wilderness/normal)
 "aI" = (
 /obj/machinery/camera/network/carrier{
-	c_tag = "WILD - Shelter Exterior 2";
+	c_tag = "WILD - Shelter Exterior Dorms";
 	dir = 1
 	},
-/turf/simulated/floor/outdoors/dirt/sif/planetuse,
+/turf/simulated/floor/outdoors/grass/sif/planetuse,
 /area/surface/outpost/shelter/exterior)
 "aJ" = (
 /turf/simulated/floor/outdoors/rocks/sif/planetuse,
@@ -163,8 +160,11 @@
 /turf/simulated/floor/water,
 /area/surface/outside/ocean)
 "aL" = (
-/obj/machinery/light,
-/turf/simulated/floor/outdoors/grass/sif/planetuse,
+/obj/machinery/camera/network/carrier{
+	c_tag = "WILD - Shelter Exterior 2";
+	dir = 1
+	},
+/turf/simulated/floor/outdoors/dirt/sif/planetuse,
 /area/surface/outpost/shelter/exterior)
 "aM" = (
 /turf/simulated/floor/outdoors/rocks/sif/planetuse,
@@ -46219,7 +46219,7 @@ iB
 aV
 aV
 aW
-aI
+aL
 ba
 xj
 rv
@@ -47510,7 +47510,7 @@ aG
 aG
 aW
 aG
-aL
+ar
 Ge
 Cb
 bG
@@ -48800,7 +48800,7 @@ aG
 aG
 aW
 aW
-aL
+ar
 Ge
 oU
 EF
@@ -49058,7 +49058,7 @@ aG
 aG
 aG
 aW
-ar
+aI
 Ge
 Ge
 Ge

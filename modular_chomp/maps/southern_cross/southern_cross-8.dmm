@@ -626,85 +626,85 @@
 /area/shuttle/escape/centcom)
 "abz" = (
 /obj/structure/handrail{
-	dir = 1
+	dir = 4
 	},
-/turf/simulated/shuttle/floor/red,
-/area/shuttle/response_ship)
+/obj/machinery/light/floortube{
+	dir = 8
+	},
+/turf/simulated/shuttle/floor,
+/area/shuttle/escape/centcom)
 "abA" = (
-/obj/structure/handrail,
-/turf/simulated/shuttle/floor/red,
-/area/shuttle/response_ship)
+/obj/structure/handrail{
+	dir = 8
+	},
+/obj/machinery/light/floortube{
+	dir = 4
+	},
+/turf/simulated/shuttle/floor,
+/area/shuttle/escape/centcom)
 "abB" = (
 /obj/structure/handrail{
-	dir = 4
+	dir = 8
 	},
-/turf/simulated/shuttle/floor/white,
-/area/shuttle/skipjack)
+/turf/simulated/shuttle/floor/black,
+/area/shuttle/merchant)
 "abC" = (
+/obj/machinery/light/floortube{
+	dir = 4
+	},
 /obj/structure/handrail{
 	dir = 8
 	},
-/turf/simulated/shuttle/floor/skipjack,
-/area/shuttle/syndicate_elite/mothership)
+/turf/simulated/shuttle/floor/black,
+/area/shuttle/merchant)
 "abD" = (
-/obj/effect/landmark{
-	name = "Syndicate-Commando-Bomb"
-	},
-/obj/structure/handrail{
-	dir = 4
-	},
-/turf/simulated/shuttle/floor/skipjack,
-/area/shuttle/syndicate_elite/mothership)
-"abE" = (
-/obj/effect/landmark{
-	name = "Syndicate-Commando-Bomb"
-	},
-/obj/structure/handrail{
-	dir = 8
-	},
-/turf/simulated/shuttle/floor/skipjack,
-/area/shuttle/syndicate_elite/mothership)
-"abF" = (
-/obj/structure/handrail{
-	dir = 4
-	},
-/obj/machinery/light/floortube{
-	dir = 8
-	},
-/turf/simulated/shuttle/floor,
-/area/shuttle/escape/centcom)
-"abG" = (
-/obj/structure/handrail{
-	dir = 8
-	},
-/obj/machinery/light/floortube{
-	dir = 4
-	},
-/turf/simulated/shuttle/floor,
-/area/shuttle/escape/centcom)
-"abH" = (
-/obj/structure/handrail{
-	dir = 8
-	},
-/turf/simulated/shuttle/floor/black,
-/area/shuttle/merchant)
-"abI" = (
-/obj/machinery/light/floortube{
-	dir = 4
-	},
-/obj/structure/handrail{
-	dir = 8
-	},
-/turf/simulated/shuttle/floor/black,
-/area/shuttle/merchant)
-"abJ" = (
 /obj/structure/handrail{
 	dir = 4
 	},
 /turf/simulated/shuttle/floor/red,
 /area/shuttle/administration)
-"abK" = (
+"abE" = (
+/obj/structure/handrail{
+	dir = 1
+	},
+/turf/simulated/shuttle/floor/red,
+/area/shuttle/response_ship)
+"abF" = (
+/obj/structure/handrail,
+/turf/simulated/shuttle/floor/red,
+/area/shuttle/response_ship)
+"abG" = (
+/obj/structure/handrail{
+	dir = 4
+	},
+/turf/simulated/shuttle/floor/white,
+/area/shuttle/skipjack)
+"abH" = (
 /obj/machinery/light/floortube,
+/turf/simulated/shuttle/floor/skipjack,
+/area/shuttle/syndicate_elite/mothership)
+"abI" = (
+/obj/structure/handrail{
+	dir = 8
+	},
+/turf/simulated/shuttle/floor/skipjack,
+/area/shuttle/syndicate_elite/mothership)
+"abJ" = (
+/obj/effect/landmark{
+	name = "Syndicate-Commando-Bomb"
+	},
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/shuttle/floor/skipjack,
+/area/shuttle/syndicate_elite/mothership)
+"abK" = (
+/obj/effect/landmark{
+	name = "Syndicate-Commando-Bomb"
+	},
+/obj/structure/handrail{
+	dir = 8
+	},
 /turf/simulated/shuttle/floor/skipjack,
 /area/shuttle/syndicate_elite/mothership)
 "acE" = (
@@ -2339,8 +2339,8 @@
 /obj/effect/landmark{
 	name = "Syndicate-Commando-Bomb"
 	},
-/obj/machinery/light{
-	dir = 1
+/obj/structure/handrail{
+	dir = 4
 	},
 /turf/simulated/shuttle/floor/skipjack,
 /area/shuttle/syndicate_elite/mothership)
@@ -34133,7 +34133,7 @@ vFi
 dmo
 azl
 jsR
-abF
+abz
 aaS
 kxV
 uEv
@@ -35681,7 +35681,7 @@ vFi
 dmo
 azl
 neF
-abG
+abA
 aby
 kxV
 uEv
@@ -48239,7 +48239,7 @@ vHC
 vHC
 rJt
 mSP
-abA
+abF
 oWN
 aMH
 mSP
@@ -48497,7 +48497,7 @@ vHC
 vHC
 rJt
 mSP
-abA
+abF
 yfA
 gWd
 mSP
@@ -48755,7 +48755,7 @@ vHC
 vHC
 rJt
 mSP
-abA
+abF
 wqS
 dcJ
 mSP
@@ -49013,7 +49013,7 @@ vHC
 vHC
 rJt
 mSP
-abA
+abF
 wqS
 dcJ
 mSP
@@ -49273,7 +49273,7 @@ rJt
 mSP
 rMY
 wqS
-abz
+abE
 mSP
 jlo
 vFi
@@ -49531,7 +49531,7 @@ rJt
 mSP
 gCg
 wqS
-abz
+abE
 mSP
 jlo
 vFi
@@ -49838,7 +49838,7 @@ fKq
 fKq
 bcy
 nmH
-abJ
+abD
 gnJ
 bcy
 bcy
@@ -71536,9 +71536,9 @@ vFi
 eVq
 eVq
 bbd
-abI
+abC
 xlm
-abH
+abB
 iLy
 eVq
 kyR
@@ -73667,9 +73667,9 @@ thC
 muP
 uUP
 vaG
-abB
+abG
 wSS
-abB
+abG
 xVZ
 muP
 muP
@@ -87826,7 +87826,7 @@ vFi
 dtV
 akj
 aUi
-abD
+bzT
 cfK
 cfK
 dJx
@@ -88084,13 +88084,13 @@ vFi
 dtV
 ank
 aUi
-bzT
+abJ
 cfK
 cfK
 cfK
 cfK
 cfK
-abK
+abH
 hKH
 iBf
 vFi
@@ -88342,9 +88342,9 @@ vFi
 dtV
 apr
 aUi
-abE
-abC
-abC
+abK
+abI
+abI
 dJA
 dJA
 fWi
