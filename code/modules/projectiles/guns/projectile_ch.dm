@@ -68,7 +68,7 @@
 
 /obj/item/gun/projectile/attack_self(mob/user as mob)
 	if(manual_chamber)
-		if(do_after(user,4))
+		if(do_after(user, 0.4 SECONDS, src))
 			bolt_handle(user)
 	else if(firemodes.len > 1)
 		switch_firemodes(user)
