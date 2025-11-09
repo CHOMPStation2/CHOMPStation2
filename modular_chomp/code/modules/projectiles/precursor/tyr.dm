@@ -173,6 +173,10 @@
 /obj/item/projectile/energy/eclipse/tyrjavelin/speed
 	speed = 7
 
+/obj/item/projectile/energy/eclipse/tyrjavelin/super_slow
+	speed = 15
+	damage = 30
+
 /obj/item/projectile/bullet/astral_blade
 	name = "bluespace slash"
 	icon_state = "astral_sea_blade"
@@ -204,3 +208,12 @@
 	agony = 0
 	speed = 12
 	armor_penetration = 50
+
+/obj/item/projectile/arc/fragmentation/tyr_mortar
+	icon_state = "mortar"
+	fragment_amount = 10
+	spread_range = 3
+	fragment_types = list(
+		/obj/item/projectile/energy/eclipse/tyrjavelin, /obj/item/projectile/energy/eclipse/tyrjavelin, \
+		/obj/item/projectile/energy/eclipse/tyrjavelin, /obj/item/projectile/energy/eclipse/tyrjavelin/super_slow
+		)
