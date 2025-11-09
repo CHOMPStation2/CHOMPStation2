@@ -110,3 +110,49 @@
   - code_imp: Implements COMSIG_VENT_CRAWLER_EXITED
   zeskorion:
   - bugfix: alt halo loadout item works now
+2025-11-09:
+  CHOMPStation2StaffMirrorBot:
+  - rscadd: Added fusion coils, special single-use cells which can be used to kickstart
+      depleted SMES units
+  - bugfix: Fixed smelting prey who'd prefer to not be smelted
+  - bugfix: Running special atmos checks while phased or otherwise incorporeal
+  Diana:
+  - bugfix: Food no longer deletes weirdly
+  - code_imp: do_mob axed and replaced with the nicer, saner do_after
+  - bugfix: You can no longer shove a micro holding your guns into the microwave to
+      prevent your guns from being EMP'd while in a firefight.
+  - bugfix: Robotic eyes now get EMP'd.
+  - bugfix: Organic eyes no longer get EMP'd
+  - bugfix: MMIs will properly apply drain bamage to the brain within when EMP'd
+  - bugfix: Polychrome wallets no longer act as faraday cages for anything within
+  - bugfix: Chameleon equipment no longer makes anything attached to it EMP proof
+      (holster exploit)
+  - bugfix: You can no longer stick your gun into a disposal unit mid fight to protect
+      it against EMPs
+  - code_imp: EMP code is less scuffed now
+  - code_imp: removes deprecated organ check
+  - refactor: Lasertag code has been completely revamped.
+  - rscadd: A lot of lasertag additions from Outpost21. Laser Knives, Laser Mines,
+      Omni Vests! Get them all from cargo!
+  - qol: Lasertag 'instagib' and 'multkill' modes have been moved to the vests theirselves
+      via a HP toggle instead of on the gun.
+  - qol: Lasertag vests can set their HP to be between 1-10
+  - qol: Lasertag vests can now have a passive heal, set to not heal at all (0) all
+      the way up to heal once every 60 seconds
+  - qol: EMP strength actually matters when it comes to EMPing turrets.
+  - bugfix: Turrets will properly have a lethal projectile if set by the code.
+  - bugfix: Lasertag turrets properly target at players.
+  - rscadd: Lasertag turrets now have an emag effect
+  - rscadd: Lasertag vests now have an emag effect
+  - rscadd: Lasertag turrets can be purchased from Cargo
+  - bugfix: You can no longer shoot lasertag guns while downed
+  - bugfix: You can no longer crawl while downed in lasertag
+  - bugfix: Landmines will no longer 100% miss the person that steps on them
+  - bugfix: Training mines drop any attached assemblies upon 'explosion'
+  - bugfix: Mines drop any attached assemblies upon disarming.
+  - bugfix: Halloss and Succubus Drain now take your CURRENT max health into account
+      instead of SPECIES max health
+  Will:
+  - bugfix: View becoming stuck on bodyscanner if you sleep or get stunned inside
+      it, and other similar situations inside of machines or items.
+  - bugfix: ghosting will clear remote views
