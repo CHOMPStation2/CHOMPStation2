@@ -1121,17 +1121,10 @@ GLOBAL_LIST_INIT(common_tools, list(
 	return .
 
 // Returns an instance of a valid surgery surface.
-<<<<<<< HEAD
-/mob/living/proc/get_surgery_surface()
-	if(!lying)
-		return null // Not lying down means no surface.
-	var/obj/surface = null
-=======
 /mob/living/proc/get_surgery_cleanliness(mob/living/user)
 	if(!lying && user != src)
 		return null // Not lying down means no surface (blocks surgery)
 	var/cleanliness = 0
->>>>>>> 4899465a23 (Various Surgery & Medical fixes, QoL, and adjustments (#18718))
 	for(var/obj/O in loc) // Looks for the best surface.
 		if(O.surgery_cleanliness)
 			if(!cleanliness || cleanliness < O.surgery_cleanliness)

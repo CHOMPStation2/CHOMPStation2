@@ -248,22 +248,16 @@
 						//TORSO:
 						//ORGANS INVENTORY: Heart, Lungs, Spleen, Voicebox,
 						if(BP_TORSO)
-<<<<<<< HEAD
-							//Chompstation edit start
-							for(var/belly in M.vore_organs) //Pervy edit.
+							for(var/belly in M.vore_organs) //Pervy edit. //CHOMPEdit Start
 								var/obj/belly/B = belly
 								for(var/mob/living/carbon/human/H in B)
 									if(H.size_multiplier < 0.5)
 										beat_size = pick("quiet ", "hushed " ,"low " ,"hushed ")
 									message_holder = pick("You can hear disparate heartbeats as well.", "You can hear a different [beat_size]heartbeat too.", "It sounds like there is more than one heartbeat." ,"You can pick up a [beat_size]heatbeat along with everything else.")
 							if(M.nutrition > 900)	//dead
-								message_holder2 = pick("Your listening is troubled by the occasional deep groan of their body.", "There is some moderate bubbling in the background.", "They seem to have a healthy metabolism as well.")
-							//Chompstation edit end
+								message_holder2 = pick("Your listening is troubled by the occasional deep groan of their body.", "There is some moderate bubbling in the background.", "They seem to have a healthy metabolism as well.") //CHOMPEdit End
 
-
-=======
 							var/obj/item/organ/internal/heart/heart = M.internal_organs_by_name[O_HEART]
->>>>>>> 4899465a23 (Various Surgery & Medical fixes, QoL, and adjustments (#18718))
 							sound_strength = "hear"
 							sound = "no heartbeat"
 							if(heart)
@@ -277,9 +271,6 @@
 									else
 										sound = span_warning("no heartbeat")
 								else
-<<<<<<< HEAD
-									sound = "a healthy heartbeat" //Vorestation edit
-=======
 									switch(M.pulse)
 										if(PULSE_NONE)
 											sound = "no heartbeat"
@@ -293,7 +284,6 @@
 											sound = span_info("a very rapid heartbeat")
 										if(PULSE_THREADY)
 											sound = span_warning("an extremely rapid, thready, irregular heartbeat")
->>>>>>> 4899465a23 (Various Surgery & Medical fixes, QoL, and adjustments (#18718))
 
 							var/obj/item/organ/internal/lungs/L = M.internal_organs_by_name[O_LUNGS]
 							if(!L || M.losebreath)

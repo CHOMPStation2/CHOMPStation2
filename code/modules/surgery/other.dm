@@ -78,14 +78,10 @@
 	can_infect = 0 //It's already fully infected.
 	blood_level = 0 //Already gone.
 
-<<<<<<< HEAD
 	min_duration = 50 //CHOMPedit
 	max_duration = 50 //CHOMPedit
 
-/datum/surgery_step/fix_dead_tissue/can_use(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
-=======
 /datum/surgery_step/necrotic/can_use(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
->>>>>>> 4899465a23 (Various Surgery & Medical fixes, QoL, and adjustments (#18718))
 	if(!ishuman(target))
 		return 0
 
