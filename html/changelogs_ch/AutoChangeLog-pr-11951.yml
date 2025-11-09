@@ -1,0 +1,4 @@
+author: "Diana"
+delete-after: True
+changes:
+  - bugfix: "Fixes bug where you were unable to rack non-shotgun weapons."
