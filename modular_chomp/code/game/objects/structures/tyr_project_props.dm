@@ -5,6 +5,12 @@
 	icon = 'modular_chomp/icons/obj/tribal_gear.dmi'
 	icon_state = "elevator"
 	anchored = TRUE
+	var/descendx
+	var/descendy
+
+/obj/structure/prop/tyr_elevator/attackby(var/obj/item/W as obj, var/mob/user as mob)
+	if (do_after(user, 30, target = src))
+		do_teleport(user, locate(descendx,descendy,src.z), channel = TELEPORT_CHANNEL_QUANTUM)
 
 /obj/machinery/door/blast/puzzle/tyrdoor
 	name = "strange door"
