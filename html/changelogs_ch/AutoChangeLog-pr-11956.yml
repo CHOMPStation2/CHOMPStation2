@@ -1,0 +1,4 @@
+author: "Will"
+delete-after: True
+changes:
+  - qol: "Increased janihound water slurping amount from 50 to 250 when refilling"
