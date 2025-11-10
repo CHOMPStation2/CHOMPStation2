@@ -169,7 +169,7 @@
 		user.visible_message(span_filter_notice("[user] begins to lap up water from [target.name]."), span_notice("You begin to lap up water from [target.name]."))
 		busy = 1
 		if(do_after(user, 50))
-			water.add_charge(50)
+			water.add_charge(250)
 			to_chat(src, span_filter_notice("You refill some of your water reserves."))
 		busy = 0
 	else if(water.energy < 5)
