@@ -202,7 +202,12 @@
 	name = "Ambulant Blood"
 	desc = "Your blood reacts to hostile stimulation such as burning when seperated from your body, as if it was its own creature. You WILL be mistaken for a changeling, you may want to document this in your medical records."
 	var_changes = list("ambulant_blood" = TRUE)
+<<<<<<< HEAD
 	cost = -1 //CHOMPEdit - Keep original value
+=======
+	cost = 0
+	can_take = ORGANICS
+>>>>>>> 2b771904c5 (not on synths (#18763))
 
 	is_genetrait = TRUE
 	hidden = FALSE
