@@ -202,3 +202,31 @@
   - rscadd: You can now palpate the neck, chest, and abdomen to examine for internal
       injuries.
   - code_imp: Converts a few lists into managed global lists.
+2025-11-11:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: runtimes due to multiple signal registers on opacity changes
+  - bugfix: digest pain runtimes when stepping into digestive tiles
+  Diana:
+  - qol: Metabolism perks can be taken  by synths AND humans. Synths can now metabolize
+      beer faster!
+  - qol: Hard feet is now a neutral instead of a positive trait. It cost 0 points
+      and is so unimpactful that it made little sense to have it take a positive slot
+      when it's mostly just a fluff trait.
+  - bugfix: Brute resistance positives block you from taking other brute resistance
+      positives instead of fire resistance. The opposite is true.
+  - spellcheck: Darkvision note adjustments.
+  - rscadd: A LOT of new traits have been added from downstream.
+  - rscadd: Hide added as a neutral trait. AR huds make this irrelevant so eh. Could
+      lead to stealthy pred stuff.
+  - bugfix: Pipes can be wrenched again
+  FluffMedic:
+  - rscadd: Some new threats to Tyr and paths within the precursor base
+  Will:
+  - bugfix: Remoteview crashing during mob qdel
+  - qol: Increased janihound water slurping amount from 50 to 250 when refilling
+  - bugfix: Shoveling snow and other turf demotions respect the outdoor flags they
+      started with
+  - bugfix: 12guage emp ammo from the autolathe is now emp shells and not beanbag
+      shells
+  - bugfix: Fix runtime in machine var shim, removed balloon alert when using old
+      byond uis handled by it.

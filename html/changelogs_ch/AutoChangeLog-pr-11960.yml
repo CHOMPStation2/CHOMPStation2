@@ -1,4 +1,0 @@
-author: "CHOMPStation2StaffMirrorBot"
-delete-after: True
-changes:
-  - bugfix: "runtimes due to multiple signal registers on opacity changes"
