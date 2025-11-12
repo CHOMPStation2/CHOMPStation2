@@ -2170,18 +2170,18 @@
 	req_access = list(55);
 	pixel_x = 4
 	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/obj/effect/floor_decal/industrial/warning,
 /obj/machinery/button/remote/blast_door{
 	desc = "A remote control-switch for a door to space.";
-	id = "xenobiostationext3";
+	id = "xenobiostationext2";
 	name = "Containment Release Switch";
 	req_access = list(55);
 	pixel_x = -5;
 	pixel_y = 4
 	},
-/obj/effect/floor_decal/industrial/warning{
-	dir = 1
-	},
-/obj/effect/floor_decal/industrial/warning,
 /turf/simulated/floor/tiled/techfloor,
 /area/rnd/Xenobiology_Lab)
 "aMp" = (
@@ -64583,7 +64583,7 @@
 /obj/machinery/door/blast/regular{
 	density = 0;
 	icon_state = "pdoor0";
-	id = "xenobiopublic";
+	id = "xenobio1station";
 	name = "Containment Blast Doors";
 	opacity = 0;
 	dir = 8
@@ -64682,16 +64682,16 @@
 	req_access = list(55);
 	pixel_x = 4
 	},
+/obj/effect/floor_decal/industrial/warning/cee{
+	dir = 4
+	},
 /obj/machinery/button/remote/blast_door{
 	desc = "A remote control-switch for a door to space.";
-	id = "xenobiostationext2";
+	id = "xenobiostationext3";
 	name = "Containment Release Switch";
 	req_access = list(55);
 	pixel_x = -5;
 	pixel_y = 4
-	},
-/obj/effect/floor_decal/industrial/warning/cee{
-	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/rnd/Xenobiology_Lab)
