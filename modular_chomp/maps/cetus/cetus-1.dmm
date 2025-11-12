@@ -17902,11 +17902,6 @@
 /turf/simulated/floor/tiled/dark,
 /area/rnd/cetus/meteor/carbonresearch)
 "jER" = (
-/obj/machinery/button/windowtint{
-	id = "lounge_window_tint";
-	pixel_x = 23;
-	pixel_y = -8
-	},
 /obj/machinery/disposal,
 /obj/machinery/camera/network/civilian{
 	c_tag = "CIV - Cryo Lounge";
