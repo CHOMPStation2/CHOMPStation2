@@ -7489,10 +7489,6 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/security/cetus/meteor/hallway)
-"eiV" = (
-/obj/item/bikehorn/rubberducky/blue,
-/turf/simulated/floor/water/indoors,
-/area/maintenance/cetus/meteor/central)
 "ejr" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -17683,9 +17679,6 @@
 /obj/structure/cable/green{
 	icon_state = "0-5"
 	},
-/obj/machinery/light/broken{
-	dir = 4
-	},
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/cetus/mechbay)
 "jzE" = (
@@ -19209,7 +19202,6 @@
 	icon_state = "5-8"
 	},
 /obj/structure/catwalk,
-/obj/machinery/light/small/yellowed,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/meteor/starsec)
 "kiw" = (
@@ -28574,7 +28566,7 @@
 "pgu" = (
 /obj/effect/floor_decal/spline/fancy/wood,
 /obj/machinery/disposal,
-/obj/structure/disposalpipe/up{
+/obj/structure/disposalpipe/trunk{
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
@@ -29905,7 +29897,6 @@
 /obj/structure/disposalpipe/trunk{
 	dir = 4
 	},
-/obj/structure/railing/grey,
 /turf/simulated/floor/tiled/old_tile/white,
 /area/maintenance/abmedical)
 "pSF" = (
@@ -92705,7 +92696,7 @@ lLw
 knr
 knr
 lLw
-eiV
+lLw
 eOO
 slB
 slB
