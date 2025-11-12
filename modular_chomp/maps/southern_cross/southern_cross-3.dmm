@@ -1190,6 +1190,13 @@
 	},
 /turf/simulated/shuttle/floor,
 /area/shuttle/cryo/station)
+"ace" = (
+/obj/structure/railing,
+/obj/machinery/alarm{
+	pixel_y = 22
+	},
+/turf/simulated/open,
+/area/hallway/primary/seconddeck/aft)
 "ack" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 10
@@ -32724,10 +32731,6 @@
 /turf/simulated/wall,
 /area/crew_quarters/cafeteria)
 "ccP" = (
-/obj/machinery/alarm{
-	dir = 8;
-	pixel_x = 22
-	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
 	},
@@ -33981,9 +33984,6 @@
 	dir = 8
 	},
 /obj/effect/floor_decal/corner/green/bordercorner{
-	dir = 8
-	},
-/obj/machinery/door/firedoor/glass/hidden{
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
@@ -40396,7 +40396,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 9
 	},
-/obj/structure/window/reinforced,
 /turf/simulated/floor/tiled,
 /area/hallway/primary/seconddeck/aft)
 "cCm" = (
@@ -40404,7 +40403,6 @@
 	dir = 8
 	},
 /obj/effect/floor_decal/industrial/warning,
-/obj/structure/window/reinforced,
 /turf/simulated/floor/tiled,
 /area/hallway/primary/seconddeck/aft)
 "cCo" = (
@@ -55843,6 +55841,10 @@
 	},
 /obj/effect/floor_decal/borderfloor/corner,
 /obj/effect/floor_decal/corner/green/bordercorner,
+/obj/machinery/alarm{
+	dir = 8;
+	pixel_x = 22
+	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/seconddeck/aft)
 "kgG" = (
@@ -110835,7 +110837,7 @@ coe
 crq
 ctm
 cuU
-cxi
+ace
 cec
 cCm
 cgs

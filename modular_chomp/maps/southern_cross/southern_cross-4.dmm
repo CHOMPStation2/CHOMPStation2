@@ -141,6 +141,16 @@
 /obj/machinery/reagentgrinder,
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/aftport)
+"aaz" = (
+/obj/structure/railing{
+	dir = 1
+	},
+/obj/machinery/alarm{
+	dir = 1;
+	pixel_y = -22
+	},
+/turf/simulated/open,
+/area/hallway/primary/thirddeck/aft)
 "aaM" = (
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 4
@@ -62524,7 +62534,7 @@ wzy
 tkI
 twu
 tWU
-uuq
+aaz
 upp
 rNC
 aaj

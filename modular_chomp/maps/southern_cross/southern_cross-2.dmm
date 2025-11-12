@@ -9570,7 +9570,6 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/industrial/warning,
-/obj/structure/window/reinforced,
 /turf/simulated/floor/tiled,
 /area/hallway/primary/firstdeck/aft)
 "bpR" = (
@@ -24250,9 +24249,6 @@
 	dir = 4;
 	pixel_x = -32
 	},
-/obj/machinery/door/firedoor/glass/hidden{
-	dir = 8
-	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/firstdeck/aft)
 "poy" = (
@@ -25438,7 +25434,6 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/industrial/warning,
-/obj/structure/window/reinforced,
 /turf/simulated/floor/tiled,
 /area/hallway/primary/firstdeck/aft)
 "qyi" = (
@@ -32296,6 +32291,9 @@
 	dir = 4
 	},
 /obj/structure/flora/pottedplant/drooping,
+/obj/machinery/alarm{
+	pixel_y = 22
+	},
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/firstdeck/aft)
 "xGC" = (
