@@ -165,12 +165,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/shuttle/floor/voidcraft,
 /area/shuttle/militarycorvetteOM)
-"ki" = (
-/obj/machinery/porta_turret/poi{
-	req_one_access = null
-	},
-/turf/simulated/floor/plating/external,
-/area/shuttle/militarycorvetteOM)
 "kU" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -1246,7 +1240,7 @@ KW
 KW
 KW
 mh
-ki
+mh
 mh
 mC
 mh
