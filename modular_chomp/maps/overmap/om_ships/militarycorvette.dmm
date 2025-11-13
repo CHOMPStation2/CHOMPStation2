@@ -437,8 +437,6 @@
 	pixel_x = -2;
 	pixel_y = -2
 	},
-/obj/item/cell/device/hyper,
-/obj/item/cell/device/hyper,
 /obj/item/pda,
 /obj/item/pda,
 /obj/item/gps,
@@ -647,8 +645,6 @@
 /obj/item/gun/energy/locked/phasegun/rifle,
 /obj/item/cell/device/hyper,
 /obj/item/cell/device/hyper,
-/obj/item/cell/device/hyper,
-/obj/item/cell/device/hyper,
 /obj/item/gun/energy/netgun,
 /obj/item/taperoll/police,
 /obj/item/gun/energy/locked/phasegun/pistol,
@@ -666,6 +662,9 @@
 /obj/item/ammo_magazine/m762,
 /obj/item/melee/baton/loaded,
 /obj/item/melee/baton/loaded,
+/obj/item/cell/device/crap,
+/obj/item/cell/device/weapon/empproof,
+/obj/item/cell/device/weapon/empproof,
 /turf/simulated/shuttle/floor/voidcraft,
 /area/shuttle/militarycorvetteOM)
 "yw" = (
