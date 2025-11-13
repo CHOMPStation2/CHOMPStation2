@@ -143,7 +143,7 @@
 /obj/machinery/embedded_controller/radio/airlock/docking_port{
 	id_tag = "militarycorvette_docker";
 	pixel_y = 25;
-	frequency = 1380
+	frequency = 1381
 	},
 /turf/simulated/floor/plating,
 /area/shuttle/militarycorvetteOM)
@@ -464,12 +464,6 @@
 /obj/item/stack/flag/yellow,
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/militarycorvetteOM)
-"th" = (
-/obj/machinery/porta_turret/stationary{
-	req_one_access = null
-	},
-/turf/simulated/floor/plating/external,
-/area/shuttle/militarycorvetteOM)
 "tY" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/universal,
 /obj/effect/floor_decal/techfloor{
@@ -729,10 +723,6 @@
 	name = "Cockpit Blast Doors";
 	pixel_x = -25
 	},
-/obj/machinery/turretid{
-	pixel_y = 24;
-	locked = 0
-	},
 /turf/simulated/shuttle/floor/voidcraft,
 /area/shuttle/militarycorvetteOM)
 "Gb" = (
@@ -879,9 +869,6 @@
 	pixel_y = 32
 	},
 /turf/simulated/floor/plating,
-/area/shuttle/militarycorvetteOM)
-"Pi" = (
-/turf/template_noop,
 /area/shuttle/militarycorvetteOM)
 "PE" = (
 /obj/effect/floor_decal/techfloor{
@@ -1103,7 +1090,7 @@ KW
 KW
 "}
 (3,1,1) = {"
-ki
+KW
 mh
 uS
 Zm
@@ -1176,7 +1163,7 @@ qs
 HA
 mh
 mh
-th
+KW
 "}
 (7,1,1) = {"
 mh
@@ -1217,7 +1204,7 @@ KW
 KW
 "}
 (9,1,1) = {"
-ki
+KW
 mh
 Ge
 eo
@@ -1236,7 +1223,7 @@ KW
 KW
 "}
 (10,1,1) = {"
-Pi
+KW
 mh
 mh
 mh
