@@ -500,11 +500,11 @@
 	},
 /obj/structure/catwalk,
 /obj/structure/disposalpipe/segment,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/foreport)
 "acq" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/alarm{
 	dir = 8;
 	pixel_x = 22
@@ -643,7 +643,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 5
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/cable{
 	icon_state = "1-4"
 	},
@@ -653,6 +652,9 @@
 /obj/machinery/alarm{
 	dir = 4;
 	pixel_x = -22
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 5
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/foreport)
@@ -665,19 +667,18 @@
 	name = "Utility Up";
 	req_one_access = list(11,24)
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/universal{
+/obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/structure/disposalpipe/segment{
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/foreport)
 "acN" = (
-/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/cable{
 	icon_state = "2-8"
 	},
@@ -685,6 +686,9 @@
 	dir = 4
 	},
 /obj/structure/catwalk,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 10
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/foreport)
 "acP" = (
@@ -758,15 +762,9 @@
 /area/hallway/secondary/escape/firstdeck/ep_starboard)
 "adk" = (
 /obj/structure/disposalpipe/segment,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 5
-	},
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/foreport)
 "adl" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/universal{
-	dir = 4
-	},
 /obj/structure/cable{
 	icon_state = "1-8"
 	},
@@ -778,24 +776,20 @@
 	dir = 8;
 	icon_state = "pipe-c"
 	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/foreport)
 "adm" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
 /obj/machinery/light/small,
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/foreport)
 "adn" = (
-/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
-	dir = 4
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
 /obj/structure/catwalk,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/foreport)
 "adt" = (
@@ -2174,17 +2168,13 @@
 /turf/simulated/wall/r_wall,
 /area/teleporter/firstdeck)
 "aiZ" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 5
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 5
-	},
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
 /obj/random/junk,
 /obj/structure/disposalpipe/segment,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/foreport)
 "ajb" = (
@@ -2250,9 +2240,6 @@
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/foreport)
 "ajM" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
@@ -2262,6 +2249,12 @@
 /obj/structure/disposalpipe/segment{
 	dir = 1;
 	icon_state = "pipe-c"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/foreport)
@@ -2386,12 +2379,6 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/firstdeck/ascenter)
-"akm" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/universal{
-	dir = 4
-	},
-/turf/simulated/wall,
-/area/maintenance/firstdeck/foreport)
 "akp" = (
 /turf/simulated/shuttle/wall/no_join/orange,
 /area/shuttle/escape_pod1/station)
@@ -4335,9 +4322,6 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 6
-	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/firstdeck/fore)
 "aww" = (
@@ -4635,12 +4619,6 @@
 "ayg" = (
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/tiled,
-/area/hallway/primary/firstdeck/fore)
-"ayh" = (
-/obj/machinery/door/firedoor/border_only,
-/obj/effect/wingrille_spawn/reinforced,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/turf/simulated/floor/plating,
 /area/hallway/primary/firstdeck/fore)
 "ayj" = (
 /obj/effect/floor_decal/borderfloorblack{
@@ -5246,18 +5224,9 @@
 /obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/foreport)
-"aCm" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 6
-	},
-/turf/simulated/floor/plating,
-/area/maintenance/firstdeck/foreport)
 "aCp" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden{
 	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
 	},
 /obj/structure/cable{
 	icon_state = "2-4"
@@ -5267,6 +5236,9 @@
 	dir = 6
 	},
 /obj/random/trash,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 6
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/foreport)
 "aCq" = (
@@ -6188,7 +6160,6 @@
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 8
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/universal,
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/foreport)
 "aHt" = (
@@ -6247,6 +6218,7 @@
 	},
 /obj/structure/catwalk,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/foreport)
 "aIa" = (
@@ -6278,13 +6250,6 @@
 	},
 /turf/simulated/floor,
 /area/storage/tech)
-"aIp" = (
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/universal,
-/turf/simulated/floor/plating,
-/area/maintenance/firstdeck/aftport)
 "aIq" = (
 /turf/simulated/floor/tiled,
 /area/hallway/primary/firstdeck/apcenter)
@@ -6557,10 +6522,7 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/obj/machinery/atmospherics/binary/passive_gate{
-	regulate_mode = 0;
-	unlocked = 1
-	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/aftport)
 "aJU" = (
@@ -6951,9 +6913,6 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
 	},
-/obj/machinery/atmospherics/valve/shutoff{
-	name = "Deck 1 Fore Port automatic shutoff valve"
-	},
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/foreport)
 "aLl" = (
@@ -6968,6 +6927,7 @@
 /obj/random/maintenance/cargo,
 /obj/structure/catwalk,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/foreport)
 "aLm" = (
@@ -7360,11 +7320,6 @@
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 1
 	},
-/obj/machinery/atmospherics/binary/passive_gate{
-	dir = 1;
-	regulate_mode = 0;
-	unlocked = 1
-	},
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/foreport)
 "aNq" = (
@@ -7380,6 +7335,7 @@
 /obj/random/maintenance/cargo,
 /obj/random/maintenance/cargo,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/foreport)
 "aNr" = (
@@ -8285,7 +8241,6 @@
 	dir = 4;
 	target_pressure = 200
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/universal,
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/foreport)
 "aTE" = (
@@ -8306,6 +8261,7 @@
 /obj/random/maintenance/engineering,
 /obj/random/maintenance/clean,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/foreport)
 "aTG" = (
@@ -8882,6 +8838,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 6
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 6
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/aftstarboard)
 "aWb" = (
@@ -9085,13 +9044,13 @@
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/foreport)
 "aZQ" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 9
-	},
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
 /turf/simulated/floor/plating,
@@ -9109,6 +9068,9 @@
 	dir = 9
 	},
 /obj/random/contraband,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 9
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/foreport)
 "bab" = (
@@ -9127,11 +9089,6 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/industrial/warning/corner,
-/obj/machinery/atmospherics/binary/passive_gate{
-	regulate_mode = 0;
-	unlocked = 1;
-	dir = 1
-	},
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/aftstarboard)
 "baX" = (
@@ -9652,14 +9609,14 @@
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 9
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
 /obj/structure/cable{
 	icon_state = "1-8"
 	},
 /obj/structure/catwalk,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 9
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 9
 	},
 /turf/simulated/floor/plating,
@@ -10328,6 +10285,7 @@
 	},
 /obj/random/obstruction,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/aftstarboard)
 "ccf" = (
@@ -11545,6 +11503,7 @@
 	},
 /obj/machinery/portable_atmospherics/powered/scrubber,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/aftstarboard)
 "dpe" = (
@@ -12605,6 +12564,7 @@
 	},
 /obj/machinery/space_heater,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/aftstarboard)
 "dWG" = (
@@ -12931,7 +12891,6 @@
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 4
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/universal,
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/aftstarboard)
 "dXF" = (
@@ -14747,13 +14706,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/teleporter/firstdeck)
-"eDP" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 9
-	},
-/obj/structure/catwalk,
-/turf/simulated/floor/plating,
-/area/maintenance/firstdeck/aftstarboard)
 "eES" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -15227,9 +15179,6 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
 	},
-/obj/machinery/atmospherics/valve/shutoff{
-	name = "Deck 1 Aft Starboard automatic shutoff valve"
-	},
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/aftstarboard)
 "fjS" = (
@@ -15588,15 +15537,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/teleporter/firstdeck)
-"fDI" = (
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
-/obj/machinery/atmospherics/valve/shutoff{
-	name = "Deck 1 Aft Port automatic shutoff valve"
-	},
-/turf/simulated/floor/plating,
-/area/maintenance/firstdeck/aftport)
 "fEB" = (
 /obj/machinery/power/apc{
 	name = "south bump";
@@ -16482,7 +16422,6 @@
 	dir = 8;
 	target_pressure = 200
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/universal,
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/aftstarboard)
 "gDj" = (
@@ -17896,7 +17835,7 @@
 	icon_state = "1-2"
 	},
 /obj/structure/catwalk,
-/obj/machinery/atmospherics/pipe/simple/hidden/universal,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/aftport)
 "inC" = (
@@ -18087,9 +18026,6 @@
 /turf/simulated/shuttle/floor/white,
 /area/shuttle/large_escape_pod2/station)
 "iCi" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 6
-	},
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
@@ -18098,6 +18034,9 @@
 	},
 /obj/effect/landmark{
 	name = "maint_pred"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/aftstarboard)
@@ -20705,12 +20644,6 @@
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/aftstarboard)
 "lxM" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 10
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 10
-	},
 /obj/structure/closet/emcloset,
 /obj/structure/catwalk,
 /turf/simulated/floor/plating,
@@ -23371,6 +23304,7 @@
 	},
 /obj/structure/catwalk,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/aftstarboard)
 "owX" = (
@@ -23499,13 +23433,16 @@
 /turf/simulated/floor/tiled,
 /area/hangar/lockerroomone)
 "oEy" = (
-/obj/machinery/atmospherics/valve/digital/open{
-	dir = 4
-	},
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
 /obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
 /turf/simulated/floor/plating,
@@ -25164,19 +25101,6 @@
 /obj/item/cell/device/weapon,
 /turf/simulated/floor/tiled,
 /area/hangar/lockerroomone)
-"qrp" = (
-/obj/machinery/atmospherics/valve/digital/open{
-	dir = 4
-	},
-/turf/simulated/floor/plating,
-/area/maintenance/firstdeck/foreport)
-"qsN" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/universal{
-	dir = 4
-	},
-/obj/structure/catwalk,
-/turf/simulated/floor/plating,
-/area/maintenance/firstdeck/foreport)
 "qtc" = (
 /obj/machinery/newscaster,
 /turf/simulated/wall/r_wall,
@@ -60364,7 +60288,7 @@ jXQ
 tOo
 aFf
 acM
-akm
+aFf
 aFf
 dWW
 ulG
@@ -60622,7 +60546,7 @@ ajn
 ajn
 mNn
 oEy
-qrp
+ajn
 aFf
 vys
 umi
@@ -60880,7 +60804,7 @@ aiI
 aiZ
 acp
 adl
-qsN
+aVW
 aFf
 sTT
 unF
@@ -61889,7 +61813,7 @@ aoE
 atP
 axc
 aAX
-aCm
+ajn
 aHq
 aLk
 aNo
@@ -61937,8 +61861,8 @@ urQ
 jhG
 aPM
 aVE
-aIp
-fDI
+aJT
+aJT
 aJT
 ilU
 vBl
@@ -67305,7 +67229,7 @@ alM
 aap
 asl
 aww
-ayh
+dKj
 aJz
 aJz
 xVH
@@ -70197,7 +70121,7 @@ gCD
 baL
 fjy
 dXE
-eDP
+jCG
 aLu
 nhA
 jVV
