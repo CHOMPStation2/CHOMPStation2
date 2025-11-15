@@ -469,9 +469,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/zerostarboard)
 "bh" = (
@@ -965,9 +962,6 @@
 	dir = 4
 	},
 /obj/machinery/door/airlock/maintenance/common,
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
 /turf/simulated/floor/tiled/techmaint,
 /area/maintenance/zerostarboard)
 "do" = (
@@ -6763,27 +6757,6 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /turf/simulated/floor/wood/turfpack/station,
 /area/maintenance/bar/dorms/dorm_1)
-"Cr" = (
-/obj/effect/floor_decal/techfloor{
-	dir = 1
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
-/turf/simulated/floor/tiled/techfloor,
-/area/maintenance/engineering/gravgen)
 "Cs" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/floor_decal/industrial/arrows/yellow,
@@ -7097,9 +7070,6 @@
 	},
 /obj/machinery/door/firedoor/multi_tile/glass{
 	dir = 1
-	},
-/obj/structure/cable{
-	icon_state = "4-8"
 	},
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/zeroaft)
@@ -8035,24 +8005,6 @@
 "HE" = (
 /turf/simulated/wall/r_wall/turfpack/station,
 /area/maintenance/ragecage)
-"HG" = (
-/obj/effect/floor_decal/techfloor{
-	dir = 1
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
-/turf/simulated/floor/tiled/techfloor,
-/area/maintenance/engineering/gravgen)
 "HH" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -8986,6 +8938,7 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/door/airlock/maintenance/common,
 /turf/simulated/floor/tiled/techmaint,
 /area/maintenance/zerocent)
@@ -40733,7 +40686,7 @@ qK
 KR
 qK
 fR
-Cr
+FQ
 vE
 Pb
 PJ
@@ -40991,7 +40944,7 @@ lL
 lL
 lL
 lL
-HG
+FQ
 vE
 Pb
 PJ
@@ -41249,7 +41202,7 @@ wZ
 wZ
 wZ
 qW
-HG
+FQ
 vE
 Pb
 le
