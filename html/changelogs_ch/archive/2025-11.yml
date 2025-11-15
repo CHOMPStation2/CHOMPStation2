@@ -267,3 +267,7 @@
   - qol: Grippers show item icon held when in use, and make sounds when changing items
   zeskorion:
   - bugfix: small map fixes
+2025-11-15:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: tgui usage for robot multibelt items like the plant analyzer
+  - bugfix: robot grippers cell self installs
