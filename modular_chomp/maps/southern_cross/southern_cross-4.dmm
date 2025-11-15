@@ -826,6 +826,8 @@
 	name = "Dorms";
 	sortType = "Dorms"
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled,
 /area/hallway/primary/thirddeck/aftdoorm)
 "aEV" = (
@@ -8653,13 +8655,6 @@
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/tiled/steel_grid,
 /area/crew_quarters/heads/sc/restroom)
-"gPN" = (
-/obj/machinery/atmospherics/valve/shutoff{
-	dir = 4;
-	name = "Dorm Vents automatic shutoff valve"
-	},
-/turf/simulated/floor/plating,
-/area/maintenance/thirddeck/dormsatmos)
 "gQa" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/structure/cable/green{
@@ -21034,13 +21029,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/dormsstarboard/maintbar)
-"rxc" = (
-/obj/machinery/atmospherics/valve/shutoff{
-	dir = 8;
-	name = "Dorm Scrubbers automatic shutoff valve"
-	},
-/turf/simulated/floor/plating,
-/area/maintenance/thirddeck/dormsatmos)
 "rxq" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 9
@@ -24601,12 +24589,6 @@
 /turf/simulated/floor/tiled,
 /area/crew_quarters/seconddeck/gym)
 "uyY" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 5
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 5
-	},
 /obj/structure/disposalpipe/segment,
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -24618,6 +24600,12 @@
 	dir = 5
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
@@ -24897,6 +24885,8 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/door/firedoor/glass,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/steel_grid,
 /area/hallway/primary/thirddeck/aft)
 "uMq" = (
@@ -25236,6 +25226,9 @@
 /obj/effect/floor_decal/corner/brown/bordercorner{
 	dir = 1
 	},
+/obj/machinery/door/airlock/glass{
+	name = "Central Access"
+	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/thirddeck/aftdoorm)
 "uYr" = (
@@ -25245,6 +25238,8 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled,
 /area/hallway/primary/thirddeck/aftdoorm)
 "uYx" = (
@@ -25690,12 +25685,6 @@
 /area/solar/foreportsolar)
 "voq" = (
 /obj/structure/table/standard,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
 /obj/structure/disposalpipe/segment{
 	dir = 8;
 	icon_state = "pipe-c"
@@ -25711,6 +25700,8 @@
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/brown/border,
 /obj/effect/floor_decal/corner/beige/border,
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply,
 /turf/simulated/floor/tiled,
 /area/hallway/primary/thirddeck/aftdoorm)
 "voP" = (
@@ -63079,7 +63070,7 @@ tKY
 aRa
 ogb
 aaa
-gPN
+bbq
 aaa
 yhb
 aaa
@@ -64111,7 +64102,7 @@ eeU
 ava
 xnk
 aaa
-rxc
+tlF
 aaa
 yhb
 aaa
