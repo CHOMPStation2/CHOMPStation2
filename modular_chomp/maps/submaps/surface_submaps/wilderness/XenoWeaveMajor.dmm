@@ -109,9 +109,41 @@
 /obj/structure/foamedmetal,
 /turf/simulated/shuttle/floor/alienplating/blue,
 /area/submap/XenoWeaveMajor)
+"am" = (
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/shuttle/wall/alien/blue,
+/area/submap/XenoWeaveMajor)
 "an" = (
 /mob/living/simple_mob/mechanical/mecha/eclipse/hivebot/nanoweavetower,
 /turf/simulated/shuttle/floor/alien/blue,
+/area/submap/XenoWeaveMajor)
+"ao" = (
+/obj/structure/disposalpipe/segment,
+/turf/simulated/shuttle/wall/alien/blue,
+/area/submap/XenoWeaveMajor)
+"ap" = (
+/obj/machinery/disposal/deliveryChute,
+/obj/structure/disposalpipe/trunk{
+	dir = 1
+	},
+/turf/simulated/shuttle/wall/alien/blue,
+/area/submap/XenoWeaveMajor)
+"aq" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/shuttle/wall/alien/blue,
+/area/submap/XenoWeaveMajor)
+"ar" = (
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/shuttle/wall/alien/blue,
 /area/submap/XenoWeaveMajor)
 "bO" = (
 /obj/effect/floor_decal/techfloor{
@@ -275,7 +307,8 @@
 /area/submap/XenoWeaveMajor)
 "kg" = (
 /obj/structure/disposalpipe/segment{
-	dir = 4
+	dir = 8;
+	icon_state = "pipe-c"
 	},
 /turf/simulated/shuttle/wall/alien/blue,
 /area/submap/XenoWeaveMajor)
@@ -1120,10 +1153,10 @@ wC
 wC
 wC
 wC
-wC
-wC
-wC
-wC
+aq
+ao
+ao
+ao
 kg
 wC
 wC
@@ -1164,16 +1197,16 @@ Yg
 TP
 TP
 wC
+aa
 wC
 wC
 wC
 wC
-wC
-wC
-wC
-wC
-wC
-kg
+ar
+ap
+ab
+ab
+ab
 wC
 wC
 wC
@@ -1213,6 +1246,7 @@ TP
 TP
 wC
 wC
+aa
 wC
 wC
 wC
@@ -1221,8 +1255,7 @@ wC
 wC
 wC
 wC
-wC
-Xb
+ab
 wC
 wC
 wC
@@ -1422,7 +1455,7 @@ Wj
 dE
 Wj
 ab
-aa
+wC
 jV
 ed
 jV
@@ -1471,7 +1504,7 @@ Wj
 dE
 Wj
 ab
-aa
+wC
 jV
 ed
 hH
@@ -1520,7 +1553,7 @@ Wj
 dE
 Wj
 ab
-aa
+wC
 dE
 Wj
 Wj
@@ -1569,7 +1602,7 @@ Wj
 dE
 Wj
 ab
-aa
+wC
 Dz
 HW
 Rf
@@ -1618,7 +1651,7 @@ Wj
 dE
 Wj
 ab
-aa
+wC
 Dz
 HW
 Dz
@@ -1801,6 +1834,7 @@ ot
 ot
 wC
 wC
+aa
 wC
 wC
 wC
@@ -1809,8 +1843,7 @@ wC
 wC
 wC
 wC
-wC
-TN
+ab
 wC
 wC
 wC
@@ -1850,16 +1883,16 @@ ot
 ot
 ot
 wC
+aa
 wC
 wC
 wC
 wC
-wC
-wC
-wC
-wC
-wC
-kg
+aq
+ap
+ab
+ab
+ab
 wC
 wC
 wC
@@ -1904,11 +1937,11 @@ wC
 wC
 wC
 wC
-wC
-wC
-wC
-wC
-kg
+ar
+ao
+ao
+ao
+am
 wC
 wC
 wC
