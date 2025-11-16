@@ -271,3 +271,6 @@
   CHOMPStation2StaffMirrorBot:
   - bugfix: tgui usage for robot multibelt items like the plant analyzer
   - bugfix: robot grippers cell self installs
+2025-11-16:
+  Guti:
+  - bugfix: Fixed mechas not teleporting in quantum pads
