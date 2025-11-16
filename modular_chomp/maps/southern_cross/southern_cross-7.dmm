@@ -73,18 +73,14 @@
 /turf/space,
 /area/expoutpost/reactorroom)
 "aao" = (
-/obj/effect/floor_decal/borderfloorblack{
-	dir = 8
-	},
-/obj/effect/floor_decal/industrial/danger{
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/structure/cable/green{
+/obj/structure/cable/yellow{
 	icon_state = "1-2"
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
-/area/expoutpost/hangarone)
+/area/expoutpost/engstorage)
 "aap" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
 	dir = 6
@@ -343,15 +339,6 @@
 	},
 /turf/simulated/floor/tiled/milspec/raised,
 /area/expoutpost/cic)
-"aaV" = (
-/obj/structure/cable/yellow{
-	icon_state = "1-2"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/turf/simulated/floor/tiled,
-/area/expoutpost/engstorage)
 "aaW" = (
 /obj/effect/floor_decal/techfloor{
 	dir = 10
@@ -480,6 +467,181 @@
 /turf/simulated/wall/r_wall,
 /area/expoutpost/reactorroom)
 "abi" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/expoutpost/engstorage)
+"abj" = (
+/obj/structure/table/steel_reinforced,
+/obj/machinery/recharger,
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/expoutpost/engstorage)
+"abk" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/expoutpost/miningfoyer)
+"abl" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 10
+	},
+/turf/simulated/floor/tiled,
+/area/expoutpost/miningfoyer)
+"abm" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 6
+	},
+/turf/simulated/floor/tiled,
+/area/expoutpost/miningfoyer)
+"abn" = (
+/obj/machinery/atmospherics/binary/pump/high_power{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/visible/yellow{
+	dir = 4
+	},
+/turf/simulated/floor,
+/area/expoutpost/reactorroom)
+"abo" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/expoutpost/miningfoyer)
+"abp" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/expoutpost/gatewayeva)
+"abq" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 9
+	},
+/turf/simulated/floor/tiled,
+/area/expoutpost/gatewayeva)
+"abr" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/expoutpost/explobriefroom)
+"abs" = (
+/obj/structure/disposalpipe/segment,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 10
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/simulated/floor/tiled,
+/area/expoutpost/explobriefroom)
+"abt" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/dark,
+/area/expoutpost/breakroom)
+"abu" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/tiled,
+/area/expoutpost/gatewayeva)
+"abv" = (
+/obj/structure/disposalpipe/segment,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/simulated/floor/tiled,
+/area/expoutpost/explobriefroom)
+"abw" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/simulated/floor/tiled/dark,
+/area/expoutpost/breakroom)
+"abx" = (
+/obj/structure/bed/chair/wood{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/simulated/floor/carpet,
+/area/expoutpost/breakroom)
+"aby" = (
+/obj/structure/table/wooden_reinforced,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 6
+	},
+/turf/simulated/floor/carpet,
+/area/expoutpost/breakroom)
+"abz" = (
+/obj/structure/bed/chair/wood,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/carpet,
+/area/expoutpost/breakroom)
+"abA" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on,
+/turf/simulated/floor/tiled/dark,
+/area/expoutpost/breakroom)
+"abB" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/expoutpost/secoffice)
+"abC" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/expoutpost/secoffice)
+"abD" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/expoutpost/secoffice)
+"abE" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 6
+	},
+/turf/simulated/wall/r_wall,
+/area/expoutpost/cic)
+"abF" = (
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/structure/disposalpipe/segment,
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/simulated/floor/tiled/white,
+/area/expoutpost/medicalbay)
+"abG" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/white,
+/area/expoutpost/medicalbay)
+"abH" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/white,
+/area/expoutpost/medicalbay)
+"abI" = (
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 8
+	},
+/obj/effect/floor_decal/industrial/danger{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled,
+/area/expoutpost/hangarone)
+"abJ" = (
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 4
 	},
@@ -492,7 +654,7 @@
 	},
 /turf/simulated/floor/tiled,
 /area/expoutpost/hangartwo)
-"abj" = (
+"abK" = (
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 8
 	},
@@ -505,7 +667,13 @@
 	},
 /turf/simulated/floor/tiled,
 /area/expoutpost/hangarone)
-"abk" = (
+"abL" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/white,
+/area/expoutpost/medicalbay)
+"abM" = (
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 8
 	},
@@ -518,7 +686,7 @@
 	},
 /turf/simulated/floor/tiled,
 /area/expoutpost/hangarthree)
-"abl" = (
+"abN" = (
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 4
 	},
@@ -531,7 +699,7 @@
 	},
 /turf/simulated/floor/tiled,
 /area/expoutpost/hangarfour)
-"abm" = (
+"abO" = (
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 8
 	},
@@ -544,16 +712,7 @@
 	},
 /turf/simulated/floor/tiled,
 /area/expoutpost/hangarthree)
-"abn" = (
-/obj/machinery/atmospherics/binary/pump/high_power{
-	dir = 1
-	},
-/obj/machinery/atmospherics/pipe/simple/visible/yellow{
-	dir = 4
-	},
-/turf/simulated/floor,
-/area/expoutpost/reactorroom)
-"abo" = (
+"abP" = (
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 4
 	},
@@ -566,7 +725,7 @@
 	},
 /turf/simulated/floor/tiled/steel,
 /area/expoutpost/hangarfour)
-"abp" = (
+"abQ" = (
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 8
 	},
@@ -579,7 +738,7 @@
 	},
 /turf/simulated/floor/tiled,
 /area/expoutpost/hangarfive)
-"abq" = (
+"abR" = (
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 4
 	},
@@ -592,7 +751,7 @@
 	},
 /turf/simulated/floor/tiled,
 /area/expoutpost/hangarsix)
-"abr" = (
+"abS" = (
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 8
 	},
@@ -608,7 +767,7 @@
 	},
 /turf/simulated/floor/tiled,
 /area/expoutpost/hangarfive)
-"abs" = (
+"abT" = (
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 4
 	},
@@ -624,165 +783,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/expoutpost/hangarsix)
-"abt" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/turf/simulated/floor/tiled,
-/area/expoutpost/engstorage)
-"abu" = (
-/obj/structure/table/steel_reinforced,
-/obj/machinery/recharger,
-/obj/machinery/atmospherics/unary/vent_scrubber/on{
-	dir = 8
-	},
-/turf/simulated/floor/tiled,
-/area/expoutpost/engstorage)
-"abv" = (
-/obj/machinery/atmospherics/unary/vent_scrubber/on{
-	dir = 4
-	},
-/turf/simulated/floor/tiled,
-/area/expoutpost/miningfoyer)
-"abw" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 10
-	},
-/turf/simulated/floor/tiled,
-/area/expoutpost/miningfoyer)
-"abx" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 6
-	},
-/turf/simulated/floor/tiled,
-/area/expoutpost/miningfoyer)
-"aby" = (
-/obj/machinery/atmospherics/unary/vent_pump/on{
-	dir = 8
-	},
-/turf/simulated/floor/tiled,
-/area/expoutpost/miningfoyer)
-"abz" = (
-/obj/machinery/atmospherics/unary/vent_scrubber/on{
-	dir = 4
-	},
-/turf/simulated/floor/tiled,
-/area/expoutpost/gatewayeva)
-"abA" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 9
-	},
-/turf/simulated/floor/tiled,
-/area/expoutpost/gatewayeva)
-"abB" = (
-/obj/machinery/atmospherics/unary/vent_scrubber/on{
-	dir = 4
-	},
-/turf/simulated/floor/tiled,
-/area/expoutpost/explobriefroom)
-"abC" = (
-/obj/structure/disposalpipe/segment,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 10
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/turf/simulated/floor/tiled,
-/area/expoutpost/explobriefroom)
-"abD" = (
-/obj/machinery/atmospherics/unary/vent_pump/on{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/dark,
-/area/expoutpost/breakroom)
-"abE" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/turf/simulated/floor/tiled,
-/area/expoutpost/gatewayeva)
-"abF" = (
-/obj/structure/disposalpipe/segment,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/turf/simulated/floor/tiled,
-/area/expoutpost/explobriefroom)
-"abG" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/turf/simulated/floor/tiled/dark,
-/area/expoutpost/breakroom)
-"abH" = (
-/obj/structure/bed/chair/wood{
-	dir = 1
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/turf/simulated/floor/carpet,
-/area/expoutpost/breakroom)
-"abI" = (
-/obj/structure/table/wooden_reinforced,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 6
-	},
-/turf/simulated/floor/carpet,
-/area/expoutpost/breakroom)
-"abJ" = (
-/obj/structure/bed/chair/wood,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/turf/simulated/floor/carpet,
-/area/expoutpost/breakroom)
-"abK" = (
-/obj/machinery/atmospherics/unary/vent_scrubber/on,
-/turf/simulated/floor/tiled/dark,
-/area/expoutpost/breakroom)
-"abL" = (
-/obj/machinery/atmospherics/unary/vent_pump/on{
-	dir = 4
-	},
-/turf/simulated/floor/tiled,
-/area/expoutpost/secoffice)
-"abM" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/turf/simulated/floor/tiled,
-/area/expoutpost/secoffice)
-"abN" = (
-/obj/machinery/atmospherics/unary/vent_scrubber/on{
-	dir = 8
-	},
-/turf/simulated/floor/tiled,
-/area/expoutpost/secoffice)
-"abO" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 6
-	},
-/turf/simulated/wall/r_wall,
-/area/expoutpost/cic)
-"abP" = (
-/obj/structure/cable/green{
-	icon_state = "1-2"
-	},
-/obj/structure/disposalpipe/segment,
-/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/turf/simulated/floor/tiled/white,
-/area/expoutpost/medicalbay)
-"abQ" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/white,
-/area/expoutpost/medicalbay)
-"abR" = (
-/obj/machinery/atmospherics/unary/vent_scrubber/on{
-	dir = 8
-	},
-/turf/simulated/floor/tiled/white,
-/area/expoutpost/medicalbay)
-"abS" = (
-/obj/machinery/atmospherics/unary/vent_pump/on{
-	dir = 8
-	},
-/turf/simulated/floor/tiled/white,
-/area/expoutpost/medicalbay)
 "acl" = (
 /obj/machinery/atmospherics/pipe/tank/phoron/full,
 /obj/effect/floor_decal/industrial/outline/red,
@@ -57247,7 +57247,7 @@ cxh
 enL
 jwx
 enL
-abv
+abk
 kgn
 lTk
 isM
@@ -58007,7 +58007,7 @@ rUs
 tis
 jGJ
 liP
-abB
+abr
 liP
 lyU
 xfE
@@ -58021,7 +58021,7 @@ uKT
 enL
 enm
 mkF
-abw
+abl
 lTw
 nvl
 viN
@@ -58534,7 +58534,7 @@ vCa
 vCa
 vCa
 pQt
-abx
+abm
 uSL
 uSL
 uSL
@@ -58792,7 +58792,7 @@ aFp
 mmN
 vCa
 eMB
-aby
+abo
 enL
 enL
 enL
@@ -59038,8 +59038,8 @@ qng
 qng
 qng
 xMn
-abF
-abC
+abv
+abs
 lEO
 ejs
 xfE
@@ -59848,7 +59848,7 @@ dqy
 tEW
 xJS
 xJS
-aaV
+aao
 xJS
 xJS
 fgx
@@ -60055,9 +60055,9 @@ jnl
 jnl
 jZo
 jnl
-abj
-aao
-aao
+abK
+abI
+abI
 hlF
 bwS
 pEN
@@ -60068,10 +60068,10 @@ rEw
 wzH
 wzH
 kzZ
-abI
-abH
-abG
-abD
+aby
+abx
+abw
+abt
 wzH
 cCr
 wzH
@@ -60106,7 +60106,7 @@ jsl
 aPh
 iiF
 wZI
-abt
+abi
 wZI
 dEY
 jSQ
@@ -60324,8 +60324,8 @@ tAp
 rqt
 rrG
 upj
-abK
-abJ
+abA
+abz
 sps
 oFq
 wzH
@@ -60364,7 +60364,7 @@ rKs
 aPh
 roD
 vJh
-abu
+abj
 gQK
 eQR
 roD
@@ -61305,11 +61305,11 @@ uNn
 rUH
 rUH
 sjY
-abp
-abp
-abr
-abp
-abp
+abQ
+abQ
+abS
+abQ
+abQ
 bAg
 lGy
 tMo
@@ -61326,9 +61326,9 @@ vWD
 krs
 vWD
 vWD
-abm
-abk
-abk
+abO
+abM
+abM
 aFw
 tXN
 yjg
@@ -62386,7 +62386,7 @@ gqv
 cXC
 faz
 juR
-abO
+abE
 abd
 aaY
 azg
@@ -63670,7 +63670,7 @@ jYi
 qIR
 cWs
 dal
-abP
+abF
 wPQ
 iNT
 jIv
@@ -63928,7 +63928,7 @@ wzz
 iBp
 iBp
 iBp
-abQ
+abG
 fkF
 iNT
 rcx
@@ -64186,7 +64186,7 @@ oYU
 yck
 iBp
 wJJ
-abQ
+abG
 fkF
 iNT
 uxa
@@ -64444,7 +64444,7 @@ xwv
 rIW
 iBp
 ljK
-abR
+abH
 glR
 iNT
 iGn
@@ -64698,7 +64698,7 @@ uzW
 pnR
 pnR
 iBp
-abS
+abL
 iBp
 iBp
 iBp
@@ -65434,10 +65434,10 @@ xUc
 xUc
 gQk
 dya
-abq
-abs
-abq
-abq
+abR
+abT
+abR
+abR
 lAT
 wxi
 kKd
@@ -65454,9 +65454,9 @@ jEQ
 xoX
 qtv
 iOC
-abo
-abl
-abl
+abP
+abN
+abN
 dnG
 kLn
 gXs
@@ -66764,8 +66764,8 @@ lrz
 gEi
 rKg
 ezt
-abi
-abi
+abJ
+abJ
 pzJ
 gUm
 kdc
@@ -67032,13 +67032,13 @@ tAp
 juR
 bie
 hQz
-abL
+abB
 jfJ
 bie
 eYr
 rwb
 gKD
-abz
+abp
 owV
 tjn
 jSE
@@ -67290,7 +67290,7 @@ tAp
 juR
 bie
 fhE
-abM
+abC
 gei
 bie
 jsf
@@ -67553,8 +67553,8 @@ ajM
 bep
 fEs
 vei
-abE
-abA
+abu
+abq
 owV
 oKC
 jSE
@@ -68322,7 +68322,7 @@ tAp
 juR
 bie
 bQR
-abN
+abD
 jfJ
 bie
 lPb
