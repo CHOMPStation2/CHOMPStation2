@@ -8,10 +8,6 @@
 "ab" = (
 /turf/simulated/shuttle/floor/alienplating/blue,
 /area/submap/XenoWeaveMajor)
-"ac" = (
-/obj/machinery/door/blast/regular,
-/turf/simulated/shuttle/floor/alien/blue,
-/area/submap/XenoWeaveMajor)
 "ad" = (
 /obj/structure/table/darkglass,
 /obj/machinery/button/remote/blast_door{
@@ -1207,7 +1203,7 @@ ap
 ab
 ab
 ab
-wC
+ad
 wC
 wC
 wC
@@ -1255,7 +1251,7 @@ wC
 wC
 wC
 wC
-ab
+aa
 wC
 wC
 wC
@@ -1294,8 +1290,8 @@ ot
 TP
 wC
 wC
-ad
-Wj
+wC
+aa
 wC
 ab
 ab
@@ -1344,7 +1340,7 @@ TP
 wC
 wC
 wC
-Wj
+aa
 wC
 ab
 Wj
@@ -1443,7 +1439,7 @@ wC
 wC
 mZ
 Wj
-ac
+aa
 ab
 Wj
 dE
@@ -1639,7 +1635,7 @@ wC
 wC
 mZ
 Wj
-ac
+aa
 ab
 Wj
 dE
@@ -1736,7 +1732,7 @@ TP
 wC
 wC
 wC
-Wj
+aa
 wC
 ab
 Wj
@@ -1784,8 +1780,8 @@ ot
 TP
 wC
 wC
-ad
-Wj
+wC
+aa
 wC
 ab
 ab
@@ -1843,7 +1839,7 @@ wC
 wC
 wC
 wC
-ab
+aa
 wC
 wC
 wC
@@ -1893,7 +1889,7 @@ ap
 ab
 ab
 ab
-wC
+ad
 wC
 wC
 wC
