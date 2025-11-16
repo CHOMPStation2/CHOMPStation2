@@ -72,6 +72,19 @@
 	},
 /turf/space,
 /area/expoutpost/reactorroom)
+"aao" = (
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 8
+	},
+/obj/effect/floor_decal/industrial/danger{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled,
+/area/expoutpost/hangarone)
 "aap" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
 	dir = 6
@@ -330,19 +343,6 @@
 	},
 /turf/simulated/floor/tiled/milspec/raised,
 /area/expoutpost/cic)
-"aaV" = (
-/obj/effect/floor_decal/borderfloorblack{
-	dir = 4
-	},
-/obj/effect/floor_decal/industrial/danger{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/structure/cable/green{
-	icon_state = "1-2"
-	},
-/turf/simulated/floor/tiled,
-/area/expoutpost/hangarfour)
 "aaW" = (
 /obj/effect/floor_decal/techfloor{
 	dir = 10
@@ -470,6 +470,71 @@
 	},
 /turf/simulated/wall/r_wall,
 /area/expoutpost/reactorroom)
+"abi" = (
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 4
+	},
+/obj/effect/floor_decal/industrial/danger{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled,
+/area/expoutpost/hangartwo)
+"abj" = (
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 8
+	},
+/obj/effect/floor_decal/industrial/danger{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/cable/green{
+	icon_state = "2-4"
+	},
+/turf/simulated/floor/tiled,
+/area/expoutpost/hangarone)
+"abk" = (
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 8
+	},
+/obj/effect/floor_decal/industrial/danger{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled,
+/area/expoutpost/hangarthree)
+"abl" = (
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 4
+	},
+/obj/effect/floor_decal/industrial/danger{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled,
+/area/expoutpost/hangarfour)
+"abm" = (
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 8
+	},
+/obj/effect/floor_decal/industrial/danger{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/cable/green{
+	icon_state = "2-4"
+	},
+/turf/simulated/floor/tiled,
+/area/expoutpost/hangarthree)
 "abn" = (
 /obj/machinery/atmospherics/binary/pump/high_power{
 	dir = 1
@@ -479,6 +544,77 @@
 	},
 /turf/simulated/floor,
 /area/expoutpost/reactorroom)
+"abo" = (
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 4
+	},
+/obj/effect/floor_decal/industrial/danger{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/cable/green{
+	icon_state = "2-8"
+	},
+/turf/simulated/floor/tiled/steel,
+/area/expoutpost/hangarfour)
+"abp" = (
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 8
+	},
+/obj/effect/floor_decal/industrial/danger{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled,
+/area/expoutpost/hangarfive)
+"abq" = (
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 4
+	},
+/obj/effect/floor_decal/industrial/danger{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled,
+/area/expoutpost/hangarsix)
+"abr" = (
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 8
+	},
+/obj/effect/floor_decal/industrial/danger{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/structure/cable/green{
+	icon_state = "2-4"
+	},
+/turf/simulated/floor/tiled,
+/area/expoutpost/hangarfive)
+"abs" = (
+/obj/effect/floor_decal/borderfloorblack{
+	dir = 4
+	},
+/obj/effect/floor_decal/industrial/danger{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/cable/green{
+	icon_state = "2-8"
+	},
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled,
+/area/expoutpost/hangarsix)
 "acl" = (
 /obj/machinery/atmospherics/pipe/tank/phoron/full,
 /obj/effect/floor_decal/industrial/outline/red,
@@ -2306,19 +2442,6 @@
 	},
 /turf/simulated/floor,
 /area/expoutpost/starboardbowairlock)
-"bHp" = (
-/obj/effect/floor_decal/borderfloorblack{
-	dir = 4
-	},
-/obj/effect/floor_decal/industrial/danger{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/structure/cable/green{
-	icon_state = "1-2"
-	},
-/turf/simulated/floor/tiled,
-/area/expoutpost/hangartwo)
 "bIj" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -3349,19 +3472,6 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/expoutpost/secureaccess)
-"cxG" = (
-/obj/effect/floor_decal/borderfloorblack{
-	dir = 8
-	},
-/obj/effect/floor_decal/industrial/danger{
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/structure/cable/green{
-	icon_state = "2-4"
-	},
-/turf/simulated/floor/tiled,
-/area/expoutpost/hangarone)
 "cyf" = (
 /obj/machinery/atmospherics/pipe/simple/visible/cyan{
 	dir = 6
@@ -6271,19 +6381,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/expoutpost/gatewayeva)
-"eXM" = (
-/obj/effect/floor_decal/borderfloorblack{
-	dir = 8
-	},
-/obj/effect/floor_decal/industrial/danger{
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/structure/cable/green{
-	icon_state = "2-4"
-	},
-/turf/simulated/floor/tiled,
-/area/expoutpost/hangarthree)
 "eYq" = (
 /obj/effect/floor_decal/borderfloorwhite,
 /obj/effect/floor_decal/corner/purple/border,
@@ -7519,22 +7616,6 @@
 	},
 /turf/simulated/floor,
 /area/expoutpost/atmospherics)
-"gfq" = (
-/obj/effect/floor_decal/borderfloorblack{
-	dir = 4
-	},
-/obj/effect/floor_decal/industrial/danger{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/structure/cable/green{
-	icon_state = "2-8"
-	},
-/obj/structure/cable/green{
-	icon_state = "1-2"
-	},
-/turf/simulated/floor/tiled,
-/area/expoutpost/hangarsix)
 "gfQ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -11130,19 +11211,6 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/expoutpost/secoffice)
-"jjP" = (
-/obj/effect/floor_decal/borderfloorblack{
-	dir = 8
-	},
-/obj/effect/floor_decal/industrial/danger{
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/structure/cable/green{
-	icon_state = "1-2"
-	},
-/turf/simulated/floor/tiled,
-/area/expoutpost/hangarone)
 "jjT" = (
 /obj/effect/floor_decal/industrial/warning/cee,
 /obj/effect/map_helper/airlock/door/int_door,
@@ -15435,19 +15503,6 @@
 "mGP" = (
 /turf/simulated/floor/tiled/white,
 /area/shuttle/baby_mammoth)
-"mHR" = (
-/obj/effect/floor_decal/borderfloorblack{
-	dir = 8
-	},
-/obj/effect/floor_decal/industrial/danger{
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/structure/cable/green{
-	icon_state = "1-2"
-	},
-/turf/simulated/floor/tiled,
-/area/expoutpost/hangarfive)
 "mHS" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
@@ -21245,19 +21300,6 @@
 /obj/structure/closet,
 /turf/simulated/floor/carpet,
 /area/expoutpost/commanderroom)
-"rmk" = (
-/obj/effect/floor_decal/borderfloorblack{
-	dir = 4
-	},
-/obj/effect/floor_decal/industrial/danger{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/structure/cable/green{
-	icon_state = "1-2"
-	},
-/turf/simulated/floor/tiled,
-/area/expoutpost/hangarsix)
 "rnt" = (
 /obj/machinery/atmospherics/binary/pump/high_power/on{
 	target_pressure = 15000;
@@ -25011,22 +25053,6 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/expoutpost/cic)
-"uot" = (
-/obj/effect/floor_decal/borderfloorblack{
-	dir = 8
-	},
-/obj/effect/floor_decal/industrial/danger{
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/structure/cable/green{
-	icon_state = "1-2"
-	},
-/obj/structure/cable/green{
-	icon_state = "2-4"
-	},
-/turf/simulated/floor/tiled,
-/area/expoutpost/hangarfive)
 "uoE" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -25881,19 +25907,6 @@
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
 /turf/simulated/floor,
 /area/expoutpost/starboardbowairlock)
-"uUc" = (
-/obj/effect/floor_decal/borderfloorblack{
-	dir = 4
-	},
-/obj/effect/floor_decal/industrial/danger{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/structure/cable/green{
-	icon_state = "2-8"
-	},
-/turf/simulated/floor/tiled/steel,
-/area/expoutpost/hangarfour)
 "uUX" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 1
@@ -28066,19 +28079,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/expoutpost/hangarfive)
-"wFp" = (
-/obj/effect/floor_decal/borderfloorblack{
-	dir = 8
-	},
-/obj/effect/floor_decal/industrial/danger{
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/structure/cable/green{
-	icon_state = "1-2"
-	},
-/turf/simulated/floor/tiled,
-/area/expoutpost/hangarthree)
 "wFq" = (
 /obj/structure/handrail{
 	dir = 8
@@ -59923,9 +59923,9 @@ jnl
 jnl
 jZo
 jnl
-cxG
-jjP
-jjP
+abj
+aao
+aao
 hlF
 bwS
 pEN
@@ -61173,11 +61173,11 @@ uNn
 rUH
 rUH
 sjY
-mHR
-mHR
-uot
-mHR
-mHR
+abp
+abp
+abr
+abp
+abp
 bAg
 lGy
 tMo
@@ -61194,9 +61194,9 @@ vWD
 krs
 vWD
 vWD
-eXM
-wFp
-wFp
+abm
+abk
+abk
 aFw
 tXN
 yjg
@@ -65302,10 +65302,10 @@ xUc
 xUc
 gQk
 dya
-rmk
-gfq
-rmk
-rmk
+abq
+abs
+abq
+abq
 lAT
 wxi
 kKd
@@ -65322,9 +65322,9 @@ jEQ
 xoX
 qtv
 iOC
-uUc
-aaV
-aaV
+abo
+abl
+abl
 dnG
 kLn
 gXs
@@ -66632,8 +66632,8 @@ lrz
 gEi
 rKg
 ezt
-bHp
-bHp
+abi
+abi
 pzJ
 gUm
 kdc
