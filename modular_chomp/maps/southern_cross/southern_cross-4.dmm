@@ -13909,6 +13909,15 @@
 /obj/machinery/shield_diffuser,
 /turf/simulated/floor/reinforced/turfpack/airless,
 /area/thirddeck/roof)
+"lRi" = (
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/bridge)
 "lRx" = (
 /obj/structure/table/rack/shelf/steel,
 /obj/random/tool,
@@ -13975,15 +13984,6 @@
 	},
 /obj/structure/cable/green{
 	icon_state = "1-8"
-	},
-/turf/simulated/floor/tiled,
-/area/bridge)
-"lTP" = (
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/bridge)
@@ -14313,6 +14313,12 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/dormsatmos)
+"mhn" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/bridge)
 "mhC" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
@@ -14535,12 +14541,6 @@
 /area/bridge)
 "mmB" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
-	dir = 4
-	},
-/turf/simulated/floor/tiled,
-/area/bridge)
-"mmP" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
@@ -62161,8 +62161,8 @@ lAV
 ktn
 cPJ
 lzX
-lTP
-mmP
+lRi
+mhn
 mKs
 mZP
 nrx
@@ -64741,8 +64741,8 @@ jXa
 kAA
 jqO
 lzX
-lTP
-mmP
+lRi
+mhn
 mKs
 nfH
 nxp
