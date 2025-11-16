@@ -610,6 +610,13 @@
 /obj/structure/flora/pottedplant/fern,
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/zerocent)
+"bM" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 8
+	},
+/obj/random/trash,
+/turf/simulated/floor/tiled/techfloor,
+/area/maintenance/engineering/gravgen)
 "bO" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -8294,13 +8301,6 @@
 	},
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/zerocent)
-"IU" = (
-/obj/effect/floor_decal/techfloor{
-	dir = 8
-	},
-/obj/random/trash,
-/turf/simulated/floor/tiled/techfloor,
-/area/maintenance/engineering/gravgen)
 "IX" = (
 /obj/machinery/firealarm{
 	layer = 3.3;
@@ -36813,7 +36813,7 @@ pe
 gk
 wq
 jR
-IU
+bM
 pD
 Tc
 Cu
@@ -42232,7 +42232,7 @@ vY
 Mf
 eN
 YF
-IU
+bM
 pD
 SW
 we
