@@ -3871,10 +3871,6 @@
 	dir = 4;
 	pixel_x = 11
 	},
-/obj/machinery/alarm{
-	dir = 8;
-	pixel_x = 25
-	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/Robotics_Lab)
 "bpG" = (
@@ -27629,27 +27625,11 @@
 /turf/simulated/floor/tiled,
 /area/medical/medsci)
 "jwZ" = (
-/obj/structure/railing,
 /obj/structure/railing{
 	dir = 8
 	},
-/obj/structure/table/rack{
-	dir = 8;
-	layer = 2.6
-	},
-/obj/item/towel/random{
-	pixel_y = 9
-	},
-/obj/item/towel/random{
-	pixel_y = 7
-	},
-/obj/item/towel/random{
-	pixel_y = 5
-	},
-/obj/item/towel/random{
-	pixel_y = 2
-	},
 /obj/structure/fans/tiny,
+/obj/structure/railing/overhang/grey,
 /turf/simulated/floor/outdoors/rocks/cetus,
 /area/crew_quarters/sauna)
 "jxh" = (
@@ -36930,10 +36910,12 @@
 /obj/effect/floor_decal/spline/fancy{
 	dir = 4
 	},
-/obj/structure/railing,
-/obj/machinery/atmospherics/pipe/simple/hidden/black{
-	dir = 6
+/obj/machinery/atmospherics/unary/heater/sauna{
+	dir = 4;
+	icon_state = "heater_1";
+	use_power = 1
 	},
+/obj/structure/railing/overhang/grey,
 /turf/simulated/floor/outdoors/rocks/cetus,
 /area/crew_quarters/sauna)
 "mKJ" = (
@@ -40396,6 +40378,10 @@
 /obj/effect/floor_decal/corner/red/bordercorner{
 	dir = 8
 	},
+/obj/machinery/alarm{
+	dir = 4;
+	pixel_x = -22
+	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/Robotics_Lab)
 "nZq" = (
@@ -42404,6 +42390,25 @@
 	},
 /obj/machinery/light/floortube{
 	dir = 1
+	},
+/obj/structure/table/rack{
+	dir = 8;
+	layer = 2.6
+	},
+/obj/item/towel/random{
+	pixel_y = 9
+	},
+/obj/item/towel/random{
+	pixel_y = 7
+	},
+/obj/item/towel/random{
+	pixel_y = 5
+	},
+/obj/item/towel/random{
+	pixel_y = 3
+	},
+/obj/item/towel/random{
+	pixel_y = 1
 	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/sauna)
@@ -53682,19 +53687,7 @@
 /obj/effect/floor_decal/spline/plain/corner{
 	dir = 1
 	},
-/obj/structure/railing/overhang/grey{
-	dir = 4
-	},
-/obj/structure/railing/overhang/grey{
-	dir = 4
-	},
-/obj/structure/fans/tiny,
-/obj/machinery/atmospherics/unary/heater/sauna{
-	dir = 1;
-	icon_state = "heater_1";
-	use_power = 1
-	},
-/turf/simulated/floor/outdoors/rocks/cetus,
+/turf/simulated/mineral/cetus,
 /area/crew_quarters/sauna)
 "snN" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -70080,6 +70073,7 @@
 /obj/effect/floor_decal/steeldecal/steel_decals_central5{
 	dir = 8
 	},
+/obj/item/tool/wrench,
 /turf/simulated/floor/tiled,
 /area/crew_quarters/Gym)
 "xYE" = (
@@ -108634,7 +108628,7 @@ wZn
 sdN
 sdN
 jwZ
-etb
+nvC
 qWu
 qWu
 qWu
@@ -108893,7 +108887,7 @@ wZn
 lvX
 mKC
 snK
-tdd
+uQN
 iVK
 iVK
 iVK

@@ -1687,11 +1687,6 @@
 /obj/effect/floor_decal/steeldecal/steel_decals5{
 	dir = 4
 	},
-/obj/item/radio/intercom{
-	dir = 8;
-	name = "Station Intercom (General)";
-	pixel_x = -21
-	},
 /obj/machinery/ai_status_display{
 	pixel_x = -32
 	},
@@ -16399,8 +16394,7 @@
 /turf/simulated/floor/outdoors/rocks/cetus,
 /area/maintenance/cetus/meteor/aftstar)
 "iQh" = (
-/obj/machinery/atmospherics/binary/pump,
-/obj/effect/engine_setup/pump_max,
+/obj/machinery/atmospherics/pipe/simple/visible/cyan,
 /turf/simulated/floor/plating,
 /area/engineering/cetus/meteor/engineroom)
 "iQm" = (
@@ -19239,8 +19233,7 @@
 /obj/machinery/atmospherics/pipe/simple/visible/cyan{
 	dir = 4
 	},
-/obj/machinery/atmospherics/binary/pump,
-/obj/effect/engine_setup/pump_max,
+/obj/machinery/atmospherics/pipe/simple/visible/green,
 /turf/simulated/floor/plating,
 /area/engineering/cetus/meteor/engineroom)
 "kiZ" = (
@@ -21545,13 +21538,6 @@
 /obj/structure/flora/underwater/seaweed3,
 /turf/simulated/floor/water/indoors/station,
 /area/maintenance/ab_Hydroponics)
-"lsN" = (
-/obj/machinery/atmospherics/pipe/simple/visible/yellow{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/visible/green,
-/turf/simulated/floor/plating,
-/area/engineering/cetus/meteor/engineroom)
 "lto" = (
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/cetus/meteor/pool)
@@ -44297,7 +44283,8 @@
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
 	dir = 4
 	},
-/obj/machinery/atmospherics/pipe/simple/visible/cyan,
+/obj/machinery/atmospherics/binary/pump,
+/obj/effect/engine_setup/pump_max,
 /turf/simulated/floor/plating,
 /area/engineering/cetus/meteor/engineroom)
 "wSz" = (
@@ -99640,7 +99627,7 @@ uAV
 uAV
 jOt
 rRz
-lsN
+wSg
 uHu
 kiR
 cOl

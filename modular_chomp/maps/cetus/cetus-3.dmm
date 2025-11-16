@@ -24004,6 +24004,9 @@
 	dir = 1;
 	name = "1N-lighting fixture"
 	},
+/obj/structure/cable{
+	icon_state = "4-10"
+	},
 /turf/simulated/floor/carpet/graycarpet,
 /area/bridge/Deck3_Corridor)
 "odX" = (
@@ -37962,6 +37965,9 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/light,
+/obj/structure/cable{
+	icon_state = "5-6"
+	},
 /turf/simulated/floor/carpet/graycarpet,
 /area/bridge/Deck3_Corridor)
 "wvP" = (
@@ -39682,6 +39688,13 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/cetus/Galleryf2)
+"xuR" = (
+/obj/structure/disposalpipe/segment,
+/obj/structure/cable{
+	icon_state = "8-10"
+	},
+/turf/simulated/floor/carpet/graycarpet,
+/area/bridge/Deck3_Corridor)
 "xvm" = (
 /obj/structure/disposalpipe/junction/yjunction{
 	dir = 4
@@ -40839,9 +40852,6 @@
 /turf/simulated/floor/carpet/graycarpet,
 /area/maintenance/cetus/shallow/fp)
 "yhl" = (
-/obj/structure/cable{
-	icon_state = "6-9"
-	},
 /obj/structure/disposalpipe/segment{
 	dir = 1;
 	icon_state = "pipe-c"
@@ -40854,6 +40864,9 @@
 	},
 /obj/structure/cable/green{
 	icon_state = "1-4"
+	},
+/obj/structure/cable{
+	icon_state = "5-9"
 	},
 /turf/simulated/floor/carpet/graycarpet,
 /area/bridge/Deck3_Corridor)
@@ -72096,9 +72109,9 @@ hJd
 tgZ
 tgZ
 tgZ
-tgZ
-tgZ
-tgZ
+hJd
+hJd
+hJd
 pEC
 pEC
 pEC
@@ -72609,7 +72622,7 @@ sKL
 idF
 idF
 hJd
-hJd
+tgZ
 mco
 mco
 mco
@@ -72866,7 +72879,7 @@ fUS
 lLo
 idF
 idF
-idF
+hJd
 hJd
 mco
 mco
@@ -76935,7 +76948,7 @@ wNn
 jcp
 hjn
 otj
-hjn
+xuR
 bfE
 qsC
 lVe
