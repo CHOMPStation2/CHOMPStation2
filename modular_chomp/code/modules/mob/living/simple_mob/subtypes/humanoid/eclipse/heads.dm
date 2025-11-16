@@ -10,8 +10,7 @@
 
 	damage_fatigue_mult = 0
 
-	armor = list(melee = 20, bullet = 20, laser = 20, energy = 20, bomb = 100, bio = 100, rad = 100)
-	armor_soak = list(melee = 7, bullet = 7, laser = 7, energy = 7, bomb = 0, bio = 0, rad = 0)
+	armor = list(melee = 34, bullet = 34, laser = 34, energy = 34, bomb = 100, bio = 100, rad = 100)
 	has_heal_droid = TRUE
 
 /mob/living/simple_mob/humanoid/eclipse/head/security
@@ -500,9 +499,8 @@
 	for(var/mob/living/L in loc)
 		var/target_zone = ran_zone()
 		var/blocked = L.run_armor_check(target_zone, "laser")
-		var/soaked = L.get_armor_soak(target_zone, "laser")
 
-		if(!L.apply_damage(70, BURN, target_zone, blocked, soaked))
+		if(!L.apply_damage(70, BURN, target_zone, blocked))
 			break
 	playsound(src, 'sound/effects/clang2.ogg', 50, 1)
 	addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(qdel), src), 0.25 SECONDS, TIMER_DELETE_ME)
@@ -526,9 +524,8 @@
 	for(var/mob/living/L in loc)
 		var/target_zone = ran_zone()
 		var/blocked = L.run_armor_check(target_zone, "energy")
-		var/soaked = L.get_armor_soak(target_zone, "energy")
 
-		if(!L.apply_damage(50, BURN, target_zone, blocked, soaked))
+		if(!L.apply_damage(50, BURN, target_zone, blocked))
 			break
 	playsound(src, 'sound/effects/squelch1.ogg', 50, 1)
 	addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(qdel), src), 0.25 SECONDS, TIMER_DELETE_ME)
@@ -593,17 +590,13 @@
 /obj/effect/slimeattack/proc/attack_mob(mob/living/L)
 	var/target_zone = pick(BP_ALL)
 	var/amount_blocked = L.run_armor_check(target_zone, "bio")
-	var/amount_soaked = L.get_armor_soak(target_zone, "bio")
 
 	var/damage = rand(5,5)
 
 	if(amount_blocked >= 40)
 		return
 
-	if(amount_soaked >= damage)
-		return
-
-	L.apply_damage(damage, BURN, target_zone, amount_blocked, amount_soaked, used_weapon = "slime")
+	L.apply_damage(damage, BURN, target_zone, amount_blocked, used_weapon = "slime")
 	L.add_modifier(modifiertype, 5 SECONDS)
 
 /mob/living/simple_mob/humanoid/eclipse/minion
@@ -616,7 +609,6 @@
 	health = 7
 	maxHealth = 7
 	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 100, rad = 100)
-	armor_soak = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0)
 	icon_state = "squishblob"
 	icon_living = "squishblob"
 	ai_holder_type = /datum/ai_holder/simple_mob/intentional/adv_dark_gygax
@@ -641,8 +633,7 @@
 	glow_override = TRUE
 	glow_color = "#FFA723"
 	glow_range = 16
-	armor = list(melee = 35, bullet = 35, laser = 35, energy = 35, bomb = 100, bio = 100, rad = 100)
-	armor_soak = list(melee = 7, bullet = 7, laser = 7, energy = 7, bomb = 0, bio = 0, rad = 0)
+	armor = list(melee = 49, bullet = 49, laser = 49, energy = 49, bomb = 100, bio = 100, rad = 100)
 	projectiletype = /obj/item/projectile/energy/homing_bolt
 	ai_holder_type = /datum/ai_holder/simple_mob/intentional/adv_dark_gygax
 	loot_list = list(/obj/item/slime_extract/sepia  = 25,

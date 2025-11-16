@@ -3540,13 +3540,11 @@
 /turf/simulated/floor/cult,
 /area/awaymission/snowfield/command/gateway)
 "dtS" = (
-/obj/machinery/power/smes/buildable{
-	charge = null;
-	cur_coils = 4;
-	input_attempt = 1;
-	input_level = 1000000;
-	output_level = 750000
-	},
+/obj/machinery/power/smes/buildable/max_input,
+/obj/item/smes_coil,
+/obj/item/smes_coil,
+/obj/item/smes_coil,
+/obj/item/smes_coil,
 /obj/structure/cable/green{
 	icon_state = "0-2"
 	},
@@ -4301,13 +4299,10 @@
 /obj/structure/cable{
 	icon_state = "0-8"
 	},
-/obj/machinery/power/smes/buildable{
-	charge = null;
-	cur_coils = 3;
-	input_attempt = 1;
-	input_level = 500000;
-	output_level = 350000
-	},
+/obj/machinery/power/smes/buildable/max_input,
+/obj/item/smes_coil,
+/obj/item/smes_coil,
+/obj/item/smes_coil,
 /turf/simulated/floor,
 /area/awaymission/snowfield/solarshack)
 "dVK" = (
@@ -8906,8 +8901,7 @@
 	desc = "Clearly for combat, these tactical gloves are not only somewhat fire and impact resistant, but also has a thin layer of armor. Bulky, but better than having a papercut in combat while naked."
 	},
 /obj/item/clothing/gloves/combat{
-	armor = list("melee"=30,"bullet"=30,"laser"=10,"energy"=20,"bomb"=45,"bio"=5,"rad"=20);
-	armorsoak = list("melee"=5,"bullet"=0,"laser"=0,"energy"=5,"bomb"=5,"bio"=0,"rad"=0);
+	armor = list("melee"=40,"bullet"=30,"laser"=10,"energy"=30,"bomb"=55,"bio"=5,"rad"=20);
 	desc = "Clearly for combat, these tactical gloves are not only somewhat fire and impact resistant, but also has a thin layer of armor. Bulky, but better than having a papercut in combat while naked."
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -9006,14 +9000,12 @@
 /obj/item/ammo_magazine/pkm/ap,
 /obj/item/clothing/suit/bomb_suit/security{
 	armor = list("melee"=45,"bullet"=70,"laser"=35,"energy"=80,"bomb"=100,"bio"=0,"rad"=0);
-	armorsoak = list("melee"=0,"bullet"=2,"laser"=0,"energy"=0,"bomb"=20,"bio"=0,"rad"=0);
 	desc = "You're up against the wall AND I AM THE FUCKING WALL!";
 	name = "EOD-Bullet proof suit";
 	slowdown = 4
 	},
 /obj/item/clothing/head/bomb_hood/security{
 	armor = list("melee"=40,"bullet"=80,"laser"=30,"energy"=80,"bomb"=100,"bio"=0,"rad"=0);
-	armorsoak = list("melee"=0,"bullet"=2,"laser"=0,"energy"=0,"bomb"=0,"bio"=0,"rad"=0);
 	desc = "I'll kill you, with or without my visor!";
 	name = "EOD-Bullet proof hood"
 	},
@@ -9760,13 +9752,11 @@
 /turf/simulated/floor/cult,
 /area/awaymission/snowfield/command/gateway)
 "iQR" = (
-/obj/machinery/power/smes/buildable{
-	charge = null;
-	cur_coils = 4;
-	input_attempt = 1;
-	input_level = 1000000;
-	output_level = 750000
-	},
+/obj/machinery/power/smes/buildable/max_input,
+/obj/item/smes_coil,
+/obj/item/smes_coil,
+/obj/item/smes_coil,
+/obj/item/smes_coil,
 /obj/structure/cable/yellow{
 	icon_state = "0-2"
 	},
@@ -19207,13 +19197,11 @@
 /obj/structure/cable/yellow{
 	icon_state = "0-2"
 	},
-/obj/machinery/power/smes/buildable{
-	charge = null;
-	cur_coils = 4;
-	input_attempt = 1;
-	input_level = 1000000;
-	output_level = 750000
-	},
+/obj/machinery/power/smes/buildable/max_input,
+/obj/item/smes_coil,
+/obj/item/smes_coil,
+/obj/item/smes_coil,
+/obj/item/smes_coil,
 /turf/simulated/floor,
 /area/awaymission/snowfield/hallway/frontgate_substation)
 "rlj" = (
@@ -21535,28 +21523,24 @@
 /obj/item/clothing/mask/gas/half,
 /obj/item/clothing/under/tactical{
 	armor = list("melee"=40,"bullet"=35,"laser"=10,"energy"=10,"bomb"=10,"bio"=10,"rad"=35);
-	armorsoak = list("melee"=2,"bullet"=1,"laser"=1,"energy"=1,"bomb"=1,"bio"=1,"rad"=1);
 	desc = "It's covered with  sturdier material than standard jumpsuits, to allow for robust protection. With additional protection, however, it has sacraficed the speed.";
 	name = "tactical armored jumpsuit";
 	slowdown = 0.5
 	},
 /obj/item/clothing/under/tactical{
 	armor = list("melee"=40,"bullet"=35,"laser"=10,"energy"=10,"bomb"=10,"bio"=10,"rad"=35);
-	armorsoak = list("melee"=2,"bullet"=1,"laser"=1,"energy"=1,"bomb"=1,"bio"=1,"rad"=1);
 	desc = "It's covered with  sturdier material than standard jumpsuits, to allow for robust protection. With additional protection, however, it has sacraficed the speed.";
 	name = "tactical armored jumpsuit";
 	slowdown = 0.5
 	},
 /obj/item/clothing/under/tactical{
 	armor = list("melee"=40,"bullet"=35,"laser"=10,"energy"=10,"bomb"=10,"bio"=10,"rad"=35);
-	armorsoak = list("melee"=2,"bullet"=1,"laser"=1,"energy"=1,"bomb"=1,"bio"=1,"rad"=1);
 	desc = "It's covered with  sturdier material than standard jumpsuits, to allow for robust protection. With additional protection, however, it has sacraficed the speed.";
 	name = "tactical armored jumpsuit";
 	slowdown = 0.5
 	},
 /obj/item/clothing/under/tactical{
 	armor = list("melee"=40,"bullet"=35,"laser"=10,"energy"=10,"bomb"=10,"bio"=10,"rad"=35);
-	armorsoak = list("melee"=2,"bullet"=1,"laser"=1,"energy"=1,"bomb"=1,"bio"=1,"rad"=1);
 	desc = "It's covered with  sturdier material than standard jumpsuits, to allow for robust protection. With additional protection, however, it has sacraficed the speed.";
 	name = "tactical armored jumpsuit";
 	slowdown = 0.5
@@ -23649,13 +23633,10 @@
 /obj/structure/cable{
 	icon_state = "0-4"
 	},
-/obj/machinery/power/smes/buildable{
-	charge = null;
-	cur_coils = 3;
-	input_attempt = 1;
-	input_level = 500000;
-	output_level = 350000
-	},
+/obj/machinery/power/smes/buildable/max_input,
+/obj/item/smes_coil,
+/obj/item/smes_coil,
+/obj/item/smes_coil,
 /turf/simulated/floor/tiled/dark,
 /area/awaymission/snowfield/solarshack)
 "vGX" = (

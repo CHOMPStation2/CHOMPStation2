@@ -68,3 +68,5 @@
 					M.active_genes -= gene.name // Traitgenes Use name instead, cannot use type with dynamically setup traitgenes
 					M.update_icon = 1
 	M.update_mutations()
+	// Inform anything attached of our mutation
+	SEND_SIGNAL(M, COMSIG_MOB_DNA_MUTATION)

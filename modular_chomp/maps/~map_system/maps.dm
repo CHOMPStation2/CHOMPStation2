@@ -84,6 +84,7 @@ var/list/all_maps = list()
 
 	var/station_name  = "BAD Station"
 	var/station_short = "Baddy"
+	var/facility_type = "station" //CHOMPEdit - Default to station instead of "facility"
 	var/dock_name	 = "THE PirateBay"
 	var/dock_type	 = "station"	//VOREStation Edit - for a list of valid types see the switch block in air_traffic.dm at line 148
 	var/boss_name	 = "Captain Roger"

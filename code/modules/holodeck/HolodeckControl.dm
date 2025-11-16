@@ -75,8 +75,6 @@
 /obj/machinery/computer/HolodeckControl/attack_hand(var/mob/user as mob)
 	if(..())
 		return
-	user.set_machine(src)
-
 	tgui_interact(user)
 
 /**
