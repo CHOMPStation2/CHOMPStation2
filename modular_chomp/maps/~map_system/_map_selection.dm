@@ -6,6 +6,7 @@
 /*********************/
 
 #define USE_MAP_SOUTHERN_CROSS
+// #define USE_MAP_CETUS
 // #define USE_MAP_SOLUNA_NEXUS
 // #define USE_MAP_RELIC_BASE
 
@@ -26,6 +27,11 @@
 // Soluna Nexus
 #ifdef USE_MAP_SOLUNA_NEXUS
 #include "../soluna_nexus/soluna_nexus.dm"
+#endif
+
+// Cetus
+#ifdef USE_MAP_CETUS
+#include "../cetus/cetus.dm"
 #endif
 
 // Relic Base

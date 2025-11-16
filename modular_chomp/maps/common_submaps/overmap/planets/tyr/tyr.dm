@@ -1,6 +1,6 @@
 //Atmosphere properties //CHOMP Comment: Tyr. A toasty planet. More so in lore but with the purpose of this project lessing it. Also something something anomalous site
 #define TYR_ONE_ATMOSPHERE	101.5 //kPa
-#define TYR_AVG_TEMP			323 //kelvin
+#define TYR_AVG_TEMP			303 //kelvin
 
 #define TYR_PER_N2		0.65 //percent
 #define TYR_PER_O2		0.35
@@ -33,9 +33,9 @@
 	skybox_offset_x = 128
 	skybox_offset_y = 128
 	surface_color = "#E5A76E"
-	mountain_color = "#C48C65"
-	water_color = "#51323E"
-	ice_color = "#E5A76E"
+	mountain_color = "#E5A76E"
+	water_color = "#C48C65"
+	ice_color = "#C48C65"
 	atmosphere_color = "#54c0ce"
 	icon_state = "desert"
 
@@ -196,7 +196,7 @@
 	outdoors = OUTDOORS_NO
 
 /area/surface/tyr/precursorruins/finale
-	name = "Advanced Mass Production"
+	name = "Facility Final Ark"
 	flags = RAD_SHIELDED | AREA_FLAG_IS_NOT_PERSISTENT | AREA_SECRET_NAME | AREA_FORBID_EVENTS | PHASE_SHIELDED
 
 /area/surface/tyr/precursorruins/southeast

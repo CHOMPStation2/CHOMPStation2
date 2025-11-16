@@ -173,11 +173,15 @@
 /obj/item/projectile/energy/eclipse/tyrjavelin/speed
 	speed = 7
 
+/obj/item/projectile/energy/eclipse/tyrjavelin/super_slow
+	speed = 15
+	damage = 30
+
 /obj/item/projectile/bullet/astral_blade
 	name = "bluespace slash"
 	icon_state = "astral_sea_blade"
 	icon = 'modular_chomp/icons/obj/guns/precursor/tyr.dmi'
-	damage = 40 //28 with intended armor
+	damage = 30 //21 with intended armor
 	armor_penetration = 20
 	damage_type = BRUTE
 	check_armour = "melee"
@@ -185,3 +189,31 @@
 	speed = 15
 	penetrating = 5
 	crawl_destroy = TRUE
+
+/obj/item/projectile/bullet/astral_blade/short
+	speed = 0.3
+	range = 4
+
+/obj/item/projectile/bullet/tyr_bladeburst
+	use_submunitions = 1
+	range = 0
+	embed_chance = 0
+	spread_submunition_damage = FALSE
+	submunition_spread_max = 200
+	submunition_spread_min = 120
+	submunitions = list(/obj/item/projectile/bullet/astral_blade = 3)
+
+/obj/item/projectile/energy/neurotoxin/toxic/tyr_flora
+	damage = 20 //deals 10 damage with the armor I am balancing for
+	agony = 0
+	speed = 12
+	armor_penetration = 50
+
+/obj/item/projectile/arc/fragmentation/tyr_mortar
+	icon_state = "mortar"
+	fragment_amount = 10
+	spread_range = 3
+	fragment_types = list(
+		/obj/item/projectile/energy/eclipse/tyrjavelin, /obj/item/projectile/energy/eclipse/tyrjavelin, \
+		/obj/item/projectile/energy/eclipse/tyrjavelin, /obj/item/projectile/energy/eclipse/tyrjavelin/super_slow
+		)

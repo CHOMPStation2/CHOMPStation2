@@ -14,18 +14,14 @@
 
 	//armour
 	var/blocked = L.run_armor_check(target_zone, "melee")
-	var/soaked = L.get_armor_soak(target_zone, "melee")
 
 	if(blocked >= 100)
-		return
-
-	if(soaked >= 30)
 		return
 
 	if(L.buckled) //wheelchairs, office chairs, rollerbeds
 		return
 
-	if(!L.apply_damage(30, BURN, target_zone, blocked, soaked, used_weapon=src))
+	if(!L.apply_damage(30, BURN, target_zone, blocked, used_weapon=src))
 		return 0
 
 	shock(L, 100, target_zone)

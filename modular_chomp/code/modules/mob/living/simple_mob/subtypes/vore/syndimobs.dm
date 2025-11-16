@@ -48,15 +48,6 @@
 				"bio" = 100,
 				"rad" = 100
 				)
-	armor_soak = list(		// Values for getsoak() checks.
-				"melee" = 0,
-				"bullet" = 0,
-				"laser" = 0,
-				"energy" = 0,
-				"bomb" = 0,
-				"bio" = 0,
-				"rad" = 0
-				)
 
 	// Leaping is a special attack, so these values determine when leap can happen.
 	// Leaping won't occur if its on cooldown.
@@ -91,24 +82,14 @@
 	special_attack_cooldown = 30 SECONDS
 
 	armor = list(			// Values for normal getarmor() checks
-				"melee" = 20,
-				"bullet" = 20,
-				"laser" = 20,
-				"energy" = 5,
+				"melee" = 30,
+				"bullet" = 30,
+				"laser" = 30,
+				"energy" = 15,
 				"bomb" = 0,
 				"bio" = 100,
 				"rad" = 100
 				)
-	armor_soak = list(		// Values for getsoak() checks.
-				"melee" = 5,
-				"bullet" = 5,
-				"laser" = 5,
-				"energy" = 5,
-				"bomb" = 5,
-				"bio" = 0,
-				"rad" = 0
-				)
-
 
 /mob/living/simple_mob/vore/otie/syndicate/apply_bonus_melee_damage(atom/A, damage_amount)
 	if(isliving(A))
@@ -191,22 +172,13 @@
 	buckle_lying = FALSE
 	vore_icons = SA_ICON_LIVING | SA_ICON_REST
 	armor = list(			// Values for normal getarmor() checks
-				"melee" = 30,
-				"bullet" = 10,
-				"laser" = 10,
-				"energy" = 5,
+				"melee" = 40,
+				"bullet" = 20,
+				"laser" = 20,
+				"energy" = 15,
 				"bomb" = 0,
 				"bio" = 100,
 				"rad" = 100
-				)
-	armor_soak = list(		// Values for getsoak() checks.
-				"melee" = 5,
-				"bullet" = 5,
-				"laser" = 5,
-				"energy" = 5,
-				"bomb" = 5,
-				"bio" = 0,
-				"rad" = 0
 				)
 
 /mob/living/simple_mob/vore/wolf/direwolf/syndicate/black
