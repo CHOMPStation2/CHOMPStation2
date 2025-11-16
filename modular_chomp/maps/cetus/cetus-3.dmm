@@ -1,4 +1,11 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aaa" = (
+/obj/structure/disposalpipe/segment,
+/obj/structure/cable{
+	icon_state = "8-10"
+	},
+/turf/simulated/floor/carpet/graycarpet,
+/area/bridge/Deck3_Corridor)
 "aam" = (
 /obj/machinery/door/firedoor/glass,
 /obj/structure/cable/green{
@@ -33627,13 +33634,6 @@
 	},
 /turf/simulated/open,
 /area/engineering/cetus/jointsubstation)
-"tSG" = (
-/obj/structure/disposalpipe/segment,
-/obj/structure/cable{
-	icon_state = "8-10"
-	},
-/turf/simulated/floor/carpet/graycarpet,
-/area/bridge/Deck3_Corridor)
 "tTa" = (
 /obj/machinery/light/fluorescent{
 	dir = 1
@@ -76951,7 +76951,7 @@ wNn
 jcp
 hjn
 otj
-tSG
+aaa
 bfE
 qsC
 lVe
