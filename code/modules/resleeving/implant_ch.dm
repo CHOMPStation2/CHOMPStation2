@@ -20,7 +20,7 @@
 
 		user.setClickCooldown(DEFAULT_QUICK_COOLDOWN)
 
-		if(do_after(user, 2.5 SECONDS))
+		if(do_after(user, 2.5 SECONDS, src))
 
 			if(user && src)
 
@@ -45,7 +45,7 @@
 			to_chat(user, span_notice("You start to unwrench the implanter."))
 			playsound(src, O.usesound, 50, 1)
 
-			if(do_after(user, 15 * O.toolspeed))
+			if(do_after(user, 15 * O.toolspeed, src))
 				to_chat(user, span_notice("You unwrench the implanter."))
 				anchored = FALSE
 				return
@@ -56,7 +56,7 @@
 			to_chat(user, span_notice("You start to wrench the implanter into place."))
 			playsound(src, O.usesound, 50, 1)
 
-			if(do_after(user, 15 * O.toolspeed))
+			if(do_after(user, 15 * O.toolspeed, src))
 
 				to_chat(user, span_notice("You wrench the implanter into place."))
 				anchored = TRUE
