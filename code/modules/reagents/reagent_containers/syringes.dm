@@ -188,6 +188,7 @@
 			if(istype(target, /obj/item/implantcase/chem))
 				return
 
+<<<<<<< HEAD
 			// CHOMPedit begin - Engineered organ training
 			if(istype(target, /obj/item/organ/internal/malignant/engineered/lattice))
 				var/datum/reagent/R = pick(reagents.reagent_list)
@@ -202,6 +203,9 @@
 			// CHOMPedit end
 
 			if(!target.is_open_container() && !ismob(target) && !istype(target, /obj/item/reagent_containers/food) && !istype(target, /obj/item/slime_extract) && !istype(target, /obj/item/clothing/mask/smokable/cigarette) && !istype(target, /obj/item/storage/fancy/cigarettes) && !istype(target, /obj/item/clothing/mask/chewable)) // CHOMPEdit
+=======
+			if(!target.is_injectable_container() && !ismob(target))
+>>>>>>> 32b2f30e68 (Fix hypo injector being unable to inject common injectables. (#18685))
 				to_chat(user, span_notice("You cannot directly fill this object."))
 				return
 			if(!target.reagents.get_free_space())
