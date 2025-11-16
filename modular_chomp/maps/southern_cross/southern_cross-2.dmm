@@ -434,9 +434,6 @@
 /turf/simulated/floor/tiled,
 /area/teleporter/firstdeck)
 "aaU" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/teleporter/firstdeck)
 "aaV" = (
@@ -523,6 +520,24 @@
 	},
 /turf/simulated/floor/tiled,
 /area/teleporter/firstdeck)
+"abf" = (
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/hallway/primary/firstdeck/fore)
 "abg" = (
 /turf/simulated/shuttle/wall/no_join,
 /area/shuttle/large_escape_pod2/station)
@@ -2067,7 +2082,7 @@
 /area/hallway/primary/firstdeck/auxdockfore)
 "ahV" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 10
+	dir = 4
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/hallway/primary/firstdeck/auxdockfore)
@@ -2109,6 +2124,9 @@
 	},
 /obj/structure/cable{
 	icon_state = "2-4"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 10
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/hallway/primary/firstdeck/auxdockfore)
@@ -2683,7 +2701,6 @@
 /turf/simulated/floor/tiled,
 /area/hallway/primary/firstdeck/auxdockfore)
 "alh" = (
-/obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
 	},
@@ -2701,6 +2718,7 @@
 	dir = 4
 	},
 /obj/structure/disposalpipe/segment,
+/obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/tiled/monotile,
 /area/hallway/primary/firstdeck/auxdockfore)
 "alk" = (
@@ -3217,10 +3235,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/firstdeck/ascenter)
-"aom" = (
-/obj/machinery/atmospherics/pipe/simple/hidden,
-/turf/simulated/floor/tiled,
-/area/hallway/primary/firstdeck/auxdockfore)
 "aon" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
@@ -3265,6 +3279,7 @@
 	icon_state = "1-2"
 	},
 /obj/structure/disposalpipe/segment,
+/obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/tiled,
 /area/hallway/primary/firstdeck/auxdockfore)
 "aos" = (
@@ -3644,14 +3659,6 @@
 /obj/machinery/door/firedoor/border_only,
 /turf/simulated/floor/plating,
 /area/quartermaster/hallway)
-"aqW" = (
-/obj/machinery/door/firedoor/border_only,
-/obj/machinery/atmospherics/pipe/simple/hidden,
-/obj/machinery/door/airlock/glass{
-	name = "Auxiliary Dock"
-	},
-/turf/simulated/floor/tiled/steel_grid,
-/area/hallway/primary/firstdeck/auxdockfore)
 "aqX" = (
 /obj/effect/wingrille_spawn/reinforced,
 /obj/machinery/door/firedoor/glass,
@@ -3661,6 +3668,7 @@
 	icon_state = "1-2"
 	},
 /obj/structure/disposalpipe/segment,
+/obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/plating,
 /area/hallway/primary/firstdeck/auxdockfore)
 "arc" = (
@@ -4415,10 +4423,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/storage/emergency_storage/firstdeck/fore_emergency)
-"avJ" = (
-/obj/machinery/atmospherics/pipe/simple/hidden,
-/turf/simulated/floor/tiled,
-/area/hallway/primary/firstdeck/fore)
 "avP" = (
 /obj/random/obstruction,
 /turf/simulated/floor/plating,
@@ -4439,6 +4443,7 @@
 	icon_state = "1-2"
 	},
 /obj/structure/disposalpipe/segment,
+/obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/tiled,
 /area/hallway/primary/firstdeck/fore)
 "awj" = (
@@ -4722,7 +4727,6 @@
 /turf/simulated/wall/r_wall,
 /area/storage/emergency_storage/firstdeck/fore_emergency)
 "axQ" = (
-/obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/machinery/camera/network/first_deck{
 	c_tag = "First Deck - Fore Hallway 3";
 	dir = 4
@@ -4738,6 +4742,7 @@
 	icon_state = "1-2"
 	},
 /obj/structure/disposalpipe/segment,
+/obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/tiled/monotile,
 /area/hallway/primary/firstdeck/fore)
 "axS" = (
@@ -5261,6 +5266,7 @@
 	},
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/tiled/monotile,
 /area/hallway/primary/firstdeck/fore)
 "aBl" = (
@@ -5793,10 +5799,10 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 9
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
@@ -5857,6 +5863,9 @@
 	},
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 9
+	},
 /turf/simulated/floor/tiled/monotile,
 /area/hallway/primary/firstdeck/fore)
 "aDT" = (
@@ -17596,6 +17605,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 9
+	},
 /turf/simulated/floor/tiled,
 /area/teleporter/firstdeck)
 "hMY" = (
@@ -23220,10 +23232,10 @@
 /area/rnd/xenobiology)
 "olL" = (
 /obj/effect/floor_decal/steeldecal/steel_decals4,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 9
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
@@ -26489,6 +26501,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/teleporter/firstdeck)
 "rVv" = (
@@ -29531,7 +29546,7 @@
 	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
+	dir = 6
 	},
 /turf/simulated/floor/tiled,
 /area/teleporter/firstdeck)
@@ -31769,9 +31784,6 @@
 "xrz" = (
 /obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 10
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 6
 	},
 /turf/simulated/floor/tiled,
 /area/teleporter/firstdeck)
@@ -65453,7 +65465,7 @@ aqM
 aqM
 axP
 aJz
-aCL
+abf
 aJA
 aLY
 aLI
@@ -65706,11 +65718,11 @@ act
 aft
 ahV
 alh
-aom
-aqW
-avJ
+agi
+arc
+aJz
 axQ
-avJ
+aJz
 aDr
 aJP
 aLZ

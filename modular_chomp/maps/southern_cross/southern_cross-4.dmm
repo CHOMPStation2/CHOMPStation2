@@ -378,7 +378,6 @@
 /obj/effect/floor_decal/steeldecal/steel_decals9{
 	dir = 4
 	},
-/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled,
 /area/crew_quarters/seconddeck/gym)
 "ahp" = (
@@ -427,6 +426,10 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 5
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
 	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/seconddeck/gym)
@@ -10230,7 +10233,6 @@
 	dir = 8
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals9,
-/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled,
 /area/crew_quarters/seconddeck/gym)
 "imm" = (
@@ -18858,6 +18860,10 @@
 /obj/structure/cable/green{
 	icon_state = "2-4"
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/seconddeck/gym)
 "pLh" = (
@@ -20431,6 +20437,7 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/scrubbers,
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/seconddeck/gym)
 "rdH" = (
@@ -21190,7 +21197,6 @@
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/dormsaft)
 "rLC" = (
-/obj/structure/disposalpipe/segment,
 /obj/structure/cable/green{
 	icon_state = "2-8"
 	},
@@ -21199,6 +21205,10 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 10
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
 	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/seconddeck/gym)
@@ -21486,6 +21496,7 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled,
 /area/crew_quarters/seconddeck/gym)
 "rYu" = (
@@ -22345,10 +22356,6 @@
 /obj/effect/floor_decal/steeldecal/steel_decals7{
 	dir = 1
 	},
-/obj/structure/disposalpipe/segment{
-	dir = 4;
-	icon_state = "pipe-c"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
@@ -22357,6 +22364,9 @@
 	},
 /obj/structure/cable/green{
 	icon_state = "4-8"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/seconddeck/gym)
@@ -27755,7 +27765,6 @@
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/forestarboard)
 "wLU" = (
-/obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
 	},
