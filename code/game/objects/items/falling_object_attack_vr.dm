@@ -34,8 +34,9 @@
 	for(var/mob/living/L in loc)
 		var/target_zone = ran_zone()
 		var/blocked = L.run_armor_check(target_zone, "melee")
+		var/soaked = L.get_armor_soak(target_zone, "melee")
 
-		if(!L.apply_damage(35, BRUTE, target_zone, blocked))
+		if(!L.apply_damage(35, BRUTE, target_zone, blocked, soaked))
 			break
 	playsound(src, 'sound/effects/clang2.ogg', 50, 1)
 	qdel(src)

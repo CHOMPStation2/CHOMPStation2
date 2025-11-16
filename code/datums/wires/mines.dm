@@ -36,8 +36,6 @@
 				MI.trap = C.trap
 				C.trap = null
 				MI.trap.forceMove(MI)
-				for(var/wire_color in colors)
-					detach_assembly(wire_color) //Kick all the signallers off!
 
 			spawn(0)
 				qdel(C)

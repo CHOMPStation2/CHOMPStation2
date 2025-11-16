@@ -36,8 +36,6 @@
 				GG.charge_count = 10
 	else
 		for(var/area/A in world)
-			if(A.flags & AREA_ALWAYS_HAS_GRAVITY)
-				continue
 			if(A.z in zLevels)
 				A.gravitychange(GLOB.gravity_is_on)
 
@@ -56,8 +54,6 @@
 					did_anything = TRUE
 		else
 			for(var/area/A in world)
-				if(A.flags & AREA_ALWAYS_HAS_GRAVITY)
-					continue
 				if(A.z in zLevels)
 					A.gravitychange(GLOB.gravity_is_on)
 					did_anything = TRUE

@@ -190,32 +190,33 @@
  */
 /mob/living/proc/attempt_to_scoop(mob/living/M, mob/living/G, ignore_size = FALSE) //second one is for the Grabber, only exists for animals to self-grab
 	if(src == M)
-		return FALSE
+		return 0
 	if(!(pickup_pref && M.pickup_pref && M.pickup_active))
-		return FALSE
+		return 0
 	if(!(M.a_intent == I_HELP))
-		return FALSE
+		return 0
 	var/size_diff = M.get_effective_size(FALSE) - get_effective_size(TRUE)
 	if(!holder_default && holder_type)
 		holder_default = holder_type
 	if(!istype(M))
-		return FALSE
+		return 0
 	if(isanimal(M))
 		var/mob/living/simple_mob/SA = M
 		if(!SA.has_hands)
-			return FALSE
+			return 0
 		if(mob_size < MOB_SMALL && src == M)
-			return FALSE
+			return 0
 	if(size_diff >= 0.50 || mob_size < MOB_SMALL || size_diff >= get_effective_size() || ignore_size)
 		if(buckled)
 			to_chat(src,span_notice("You have to unbuckle \the [src] before you pick them up."))
-			return FALSE
+			return 0
 		holder_type = /obj/item/holder/micro
 		var/obj/item/holder/m_holder = get_scooped(M, G)
+		holder_type = holder_default
 		if (m_holder)
-			return TRUE
+			return 1
 		else
-			return FALSE; // Unable to scoop, let other code run
+			return 0; // Unable to scoop, let other code run
 
 #define STEP_TEXT_OWNER(x) "[replacetext(x,"%prey",tmob)]"
 #define STEP_TEXT_PREY(x) "[replacetext(x,"%owner",src)]"

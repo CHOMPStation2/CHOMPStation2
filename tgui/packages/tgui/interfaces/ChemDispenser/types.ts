@@ -9,12 +9,12 @@ export type Data = {
   amount: number;
   isBeakerLoaded: BooleanLike;
   glass: BooleanLike;
-  beakerContents: Reagent[];
+  beakerContents: reagent[];
   beakerCurrentVolume: number | null;
   beakerMaxVolume: number | null;
-  chemicals: Reagent[];
+  chemicals: reagent[];
   recipes: Record<string, Recipe[]>;
   recordingRecipe: Recipe[];
 };
 
-export type Reagent = { name: string; id: string; volume: number };
+type reagent = { name: string; id: string; volume: number };

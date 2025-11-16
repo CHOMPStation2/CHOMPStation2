@@ -35,7 +35,7 @@ export const PlantAnalyzer = (props) => {
   // Resizable just in case the calculatedHeight fails
   return (
     <Window width={400} height={calculatedHeight}>
-      <Window.Content>
+      <Window.Content scrollable>
         <PlantAnalyzerContent />
       </Window.Content>
     </Window>
@@ -57,8 +57,6 @@ const PlantAnalyzerContent = (props) => {
 
   return (
     <Section
-      fill
-      scrollable
       title="Plant Information"
       buttons={
         <Stack>

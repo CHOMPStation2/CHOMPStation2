@@ -221,7 +221,7 @@
 				cell_component.installed = 1
 
 			feedback_inc("cyborg_birth",1)
-			SEND_GLOBAL_SIGNAL(COMSIG_GLOB_BORGIFY, O)
+			callHook("borgify", list(O))
 
 			qdel(src)
 		else

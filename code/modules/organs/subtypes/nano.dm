@@ -185,7 +185,7 @@
 	stored_mmi.icon_state = "posi1"
 	stored_mmi.brainmob.languages = owner.languages
 
-/obj/item/organ/internal/mmi_holder/posibrain/nano/emp_act(severity, recursive)
+/obj/item/organ/internal/mmi_holder/posibrain/nano/emp_act()
 	return	//Proteans handle EMP's differently
 
 // The 'out on the ground' object, not the organ holder

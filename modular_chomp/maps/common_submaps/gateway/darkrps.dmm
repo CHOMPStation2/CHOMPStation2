@@ -13158,7 +13158,11 @@
 /obj/structure/cable/green{
 	icon_state = "0-4"
 	},
-/obj/machinery/power/smes/buildable/max_input_max_output,
+/obj/machinery/power/smes/buildable{
+	input_attempt = 1;
+	inputting = 1;
+	outputting = 1
+	},
 /turf/simulated/floor/outdoors/sidewalk/slab{
 	movement_cost = 0;
 	temperature = 293.15

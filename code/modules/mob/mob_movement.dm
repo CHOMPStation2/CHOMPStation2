@@ -205,6 +205,13 @@
 		if(L.is_incorporeal())//Move though walls
 			Process_Incorpmove(direct)
 			return
+		/* TODO observer unzoom
+		if(view != world.view) // If mob moves while zoomed in with device, unzoom them.
+			for(var/obj/item/item in mob.contents)
+				if(item.zoom)
+					item.zoom()
+					break
+		*/
 
 	if(Process_Grab())
 		return
@@ -214,8 +221,10 @@
 		return
 
 	// Relaymove could handle it
-	if(SEND_SIGNAL(my_mob, COMSIG_MOB_RELAY_MOVEMENT, direct))
-		return TRUE
+	if(my_mob.machine)
+		var/result = my_mob.machine.relaymove(my_mob, direct)
+		if(result)
+			return result
 
 	// Can't control ourselves when drifting
 	if((isspace(loc) || my_mob.lastarea?.get_gravity() == 0) && isturf(loc))

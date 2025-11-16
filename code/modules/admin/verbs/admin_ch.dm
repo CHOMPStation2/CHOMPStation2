@@ -30,4 +30,6 @@
 			if(!value["class"] || !value["value"])
 				return
 			destination = value["value"]
-	do_teleport(target, destination, channel = TELEPORT_CHANNEL_QUANTUM)
+	new /datum/teleport/instant/admin(target,destination)
+/datum/teleport/instant/admin
+	local=FALSE

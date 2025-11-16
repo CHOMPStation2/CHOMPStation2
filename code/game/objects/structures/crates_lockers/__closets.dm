@@ -128,6 +128,9 @@
 
 	for(var/mob/M in src)
 		M.forceMove(loc)
+		if(M.client)
+			M.client.eye = M.client.mob
+			M.client.perspective = MOB_PERSPECTIVE
 
 /obj/structure/closet/proc/open()
 	if(opened)
@@ -168,7 +171,6 @@
 	if(initial(density))
 		density = !density
 	animate_door(TRUE)
-	SEND_SIGNAL(src, COMSIG_CLOSET_CLOSED, contents)
 	return 1
 
 //Cham Projector Exception
@@ -199,6 +201,9 @@
 			continue
 		if(stored_units + added_units + M.mob_size > storage_capacity)
 			break
+		if(M.client)
+			M.client.perspective = EYE_PERSPECTIVE
+			M.client.eye = src
 		M.forceMove(src)
 		added_units += M.mob_size
 	return added_units
@@ -586,7 +591,3 @@
 	var/mob/living/M = usr
 	if(isliving(M))
 		M.begin_instant_nom(M,target,M,M.vore_selected)
-
-/obj/structure/closet/bluespace/Initialize(mapload)
-	. = ..()
-	AddComponent(/datum/component/bluespace_connection/permanent_network, GLOB.bslockers)

@@ -297,9 +297,9 @@
 	else
 		return ..()
 
-/mob/living/simple_mob/protean_blob/emp_act(severity, recursive)
+/mob/living/simple_mob/protean_blob/emp_act(severity)
 	if(humanform)
-		return humanform.emp_act(severity, recursive)
+		return humanform.emp_act(severity)
 	else
 		return ..()
 
@@ -385,7 +385,7 @@
 			var/list/potentials = living_mobs(0)
 			if(potentials.len)
 				var/mob/living/target = pick(potentials)
-				if(can_spontaneous_vore(src, target))
+				if(istype(target) && target.devourable && target.can_be_drop_prey && vore_selected)
 					if(target.buckled)
 						target.buckled.unbuckle_mob(target, force = TRUE)
 					target.forceMove(vore_selected)
@@ -659,14 +659,13 @@
 			return 1
 	return 0
 
-/mob/living/simple_mob/protean_blob/handle_radiation()
-	..()
+/mob/living/simple_mob/protean_blob/handle_mutations_and_radiation()
 	if(!humanform)
 		to_chat(src, span_giant(span_boldwarning("You are currently a blob without a humanform and should be deleted shortly Please report what you were doing when this error occurred to the admins.")))
 		stack_trace("URGENT, SERVER-CRASHING ISSUE: A protean blob does not have a humanform! src = [src] ckey = [ckey]! The blob has been deleted.")
 		qdel(src)
 		return
-	humanform.handle_radiation()
+	humanform.handle_mutations_and_radiation()
 
 /mob/living/simple_mob/protean_blob/update_icon()
 	..()

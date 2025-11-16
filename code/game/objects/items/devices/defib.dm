@@ -395,10 +395,8 @@
 		return
 
 	//set oxyloss so that the patient is just barely in crit, if possible
-	var/barely_in_crit = -(H.get_crit_point() - 1) //Assume get_crit_point will return -50, so we take the inverse of it.
+	var/barely_in_crit = H.get_crit_point() - 1
 	var/adjust_health = barely_in_crit - H.health //need to increase health by this much
-	if(adjust_health < 0) //We got a negative value. Safety in case of weird fuckery.
-		adjust_health *= -1
 	H.adjustOxyLoss(-adjust_health)
 
 	if(H.isSynthetic())
@@ -515,7 +513,7 @@
 		update_icon()
 		return 1
 
-/obj/item/shockpaddles/emp_act(severity, recursive)
+/obj/item/shockpaddles/emp_act(severity)
 	var/new_safety = rand(0, 1)
 	if(safety != new_safety)
 		safety = new_safety
@@ -595,7 +593,7 @@
 	else
 		STOP_PROCESSING(SSobj, src)
 
-/obj/item/shockpaddles/standalone/emp_act(severity, recursive)
+/obj/item/shockpaddles/standalone/emp_act(severity)
 	..()
 	var/new_fail = 0
 	switch(severity)

@@ -25,8 +25,7 @@
 		handle_breathing()
 
 		//Mutations and radiation
-		handle_mutations()
-		handle_radiation()
+		handle_mutations_and_radiation()
 
 
 
@@ -90,15 +89,8 @@
 /mob/living/proc/handle_breathing()
 	return
 
-/mob/living/proc/handle_mutations()
-	SHOULD_CALL_PARENT(TRUE)
-	if(SEND_SIGNAL(src, COMSIG_HANDLE_MUTATIONS) & COMPONENT_BLOCK_LIVING_MUTATIONS)
-		return COMPONENT_BLOCK_LIVING_MUTATIONS
-
-/mob/living/proc/handle_radiation()
-	SHOULD_CALL_PARENT(TRUE)
-	if(SEND_SIGNAL(src, COMSIG_HANDLE_RADIATION) & COMPONENT_BLOCK_LIVING_RADIATION)
-		return COMPONENT_BLOCK_LIVING_RADIATION
+/mob/living/proc/handle_mutations_and_radiation()
+	return
 
 /mob/living/proc/handle_chemicals_in_body()
 	return
@@ -232,11 +224,14 @@
 			adjustEarDamage(-0.05,-1)
 
 /mob/living/handle_regular_hud_updates()
-	. = ..()
-	if(!.)
-		return
+	if(!client)
+		return 0
+	..()
+
 	handle_darksight()
-	handle_hud_icons_health()
+	handle_hud_icons()
+
+	return 1
 
 /mob/living/proc/update_sight()
 	if(!seedarkness)
@@ -252,11 +247,12 @@
 
 	return
 
+/mob/living/proc/handle_hud_icons()
+	handle_hud_icons_health()
+	return
+
 /mob/living/proc/handle_hud_icons_health()
-	SHOULD_CALL_PARENT(TRUE)
-	if(SEND_SIGNAL(src,COMSIG_LIVING_HANDLE_HUD_HEALTH_ICON) & COMSIG_COMPONENT_HANDLED_HEALTH_ICON)
-		return FALSE
-	return TRUE
+	return
 
 /mob/living/proc/handle_light()
 	if(glow_override)
@@ -276,7 +272,6 @@
 		return FALSE
 
 /mob/living/proc/handle_darksight()
-	SEND_SIGNAL(src,COMSIG_LIVING_HANDLE_HUD_DARKSIGHT)
 	if(!seedarkness) //Cheap 'always darksight' var
 		dsoverlay.alpha = 255
 		return
@@ -309,11 +304,13 @@
 	if(stat != DEAD && toggled_sleeping)
 		Sleeping(2)
 	if(sleeping)
+		//CHOMPEdit Start
 		if(iscarbon(src))
 			var/mob/living/carbon/C = src
 			AdjustSleeping(-1 * C.species.waking_speed)
 		else
 			AdjustSleeping(-1)
+		//CHOMPEdit End
 		throw_alert("asleep", /atom/movable/screen/alert/asleep)
 	else
 		clear_alert("asleep")

@@ -80,6 +80,7 @@
 /obj/machinery/chem_master/attack_hand(mob/user as mob)
 	if(stat & BROKEN)
 		return
+	user.set_machine(src)
 	tgui_interact(user)
 
 /obj/machinery/chem_master/ui_assets(mob/user)
@@ -400,6 +401,7 @@
 		return TRUE
 
 	add_fingerprint(ui.user)
+	ui.user.set_machine(src)
 
 	. = TRUE
 	switch(action)

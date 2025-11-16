@@ -62,7 +62,7 @@
 
 /obj/structure/toilet/attack_ai(mob/user as mob)
 	if(isrobot(user))
-		if(user.client && !user.is_remote_viewing())
+		if(user.client && user.client.eye == user)
 			return attack_hand(user)
 	else
 		return attack_hand(user)

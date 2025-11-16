@@ -216,9 +216,6 @@
 	throw_range = 20
 
 /obj/item/camera_bug/attack_self(mob/user as mob)
-	if(in_use)
-		return
-
 	var/list/cameras = new/list()
 	for (var/obj/machinery/camera/C in cameranet.cameras)
 		if (C.bugged && C.status)
@@ -232,10 +229,7 @@
 	for (var/obj/machinery/camera/C in cameras)
 		friendly_cameras.Add(C.c_tag)
 
-	in_use = TRUE
 	var/target = tgui_input_list(user, "Select the camera to observe", "Select Camera", friendly_cameras)
-	in_use = FALSE
-
 	if (!target)
 		return
 	for (var/obj/machinery/camera/C in cameras)
@@ -244,7 +238,7 @@
 			break
 	if (user.stat == 2) return
 
-	user.AddComponent(/datum/component/remote_view/item_zoom, focused_on = target, vconfig_path = /datum/remote_view_config/camera_standard, our_item = src, viewsize = null, tileoffset = 0, show_visible_messages = FALSE)
+	user.client.eye = target
 
 /*
 /obj/item/cigarpacket
@@ -298,6 +292,7 @@
 	desc = "Used in the construction of computers and other devices with a interactive console."
 	icon_state = "screen"
 	origin_tech = list(TECH_MATERIAL = 1)
+	rating = 5 // these are actually Really Important for some things??
 	matter = list(MAT_GLASS = 200)
 
 /obj/item/stock_parts/capacitor

@@ -95,6 +95,14 @@
 		return 1
 	return 0
 
+/obj/machinery/space_heater/emp_act(severity)
+	if(stat & (BROKEN|NOPOWER))
+		..(severity)
+		return
+	if(cell)
+		cell.emp_act(severity)
+	..(severity)
+
 /obj/machinery/space_heater/attackby(obj/item/I, mob/user)
 	if(istype(I, /obj/item/cell))
 		if(panel_open)
@@ -122,7 +130,7 @@
 		playsound(src, I.usesound, 50, 1)
 		user.visible_message(span_notice("[user] [panel_open ? "opens" : "closes"] the hatch on the [src]."), span_notice("You [panel_open ? "open" : "close"] the hatch on the [src]."))
 		update_icon()
-		if(!panel_open && user.check_current_machine(src))
+		if(!panel_open && user.machine == src)
 			user << browse(null, "window=spaceheater")
 			user.unset_machine()
 	else

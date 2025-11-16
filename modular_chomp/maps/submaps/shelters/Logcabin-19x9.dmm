@@ -431,8 +431,7 @@
 /area/survivalpod/superpose/logcabin)
 "Mp" = (
 /obj/machinery/power/apc{
-	pixel_y = -26;
-	alarms_hidden = 1
+	pixel_y = -26
 	},
 /obj/structure/cable/green{
 	icon_state = "0-8"

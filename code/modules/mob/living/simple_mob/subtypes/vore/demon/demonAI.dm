@@ -74,12 +74,14 @@
 /mob/living/simple_mob/vore/demonAI/UnarmedAttack()
 	if(shifted_out)
 		return FALSE
+
 	. = ..()
 
 /mob/living/simple_mob/vore/demonAI/can_fall()
 	if(shifted_out)
 		return FALSE
-	. = ..()
+
+	return ..()
 
 /mob/living/simple_mob/vore/demonAI/zMove(direction)
 	if(shifted_out)
@@ -87,17 +89,19 @@
 		if(destination)
 			forceMove(destination)
 		return TRUE
-	. = ..()
+
+	return ..()
 
 /mob/living/simple_mob/vore/demonAI/Life()
 	. = ..()
 	if(shifted_out)
 		density = FALSE
 
-/mob/living/simple_mob/vore/demonAI/handle_environment(datum/gas_mixture/environment) // TODO - Refactor demons to use is_incorporeal()
+/mob/living/simple_mob/vore/demonAI/handle_atmos()
 	if(shifted_out)
 		return
-	. = ..()
+	else
+		return .=..()
 
 /mob/living/simple_mob/vore/demonAI/update_canmove()
 	if(is_shifting)

@@ -188,7 +188,7 @@
 	if(!HELMET)
 		return //Do I even need this sanity check? Nyoro~n
 	else
-		HELMET.forceMove(get_turf(src))
+		HELMET.loc = src.loc
 		HELMET = null
 		return
 
@@ -197,7 +197,7 @@
 	if(!SUIT)
 		return
 	else
-		SUIT.forceMove(get_turf(src))
+		SUIT.loc = src.loc
 		SUIT = null
 		return
 
@@ -206,7 +206,7 @@
 	if(!MASK)
 		return
 	else
-		MASK.forceMove(get_turf(src))
+		MASK.loc = src.loc
 		MASK = null
 		return
 
@@ -214,13 +214,13 @@
 /obj/machinery/suit_storage_unit/proc/dump_everything()
 	islocked = 0 //locks go free
 	if(SUIT)
-		SUIT.forceMove(get_turf(src))
+		SUIT.loc = src.loc
 		SUIT = null
 	if(HELMET)
-		HELMET.forceMove(get_turf(src))
+		HELMET.loc = src.loc
 		HELMET = null
 	if(MASK)
-		MASK.forceMove(get_turf(src))
+		MASK.loc = src.loc
 		MASK = null
 	if(OCCUPANT)
 		eject_occupant(OCCUPANT)
@@ -321,7 +321,10 @@
 			to_chat(OCCUPANT, span_notice("The machine kicks you out!"))
 		if(user.loc != src.loc)
 			to_chat(OCCUPANT, span_notice("You leave the not-so-cozy confines of the SSU."))
-	OCCUPANT.forceMove(get_turf(src))
+
+		OCCUPANT.client.eye = OCCUPANT.client.mob
+		OCCUPANT.client.perspective = MOB_PERSPECTIVE
+	OCCUPANT.loc = src.loc
 	OCCUPANT = null
 	if(!isopen)
 		isopen = 1
@@ -361,7 +364,9 @@
 	visible_message(span_info("[usr] starts squeezing into the suit storage unit!"), 3)
 	if(do_after(usr, 1 SECOND, target = src))
 		usr.stop_pulling()
-		usr.forceMove(src)
+		usr.client.perspective = EYE_PERSPECTIVE
+		usr.client.eye = src
+		usr.loc = src
 		OCCUPANT = usr
 		isopen = 0 //Close the thing after the guy gets inside
 		update_icon()
@@ -398,7 +403,10 @@
 		if(do_after(user, 2 SECONDS, target = src))
 			if(!G || !G.affecting) return //derpcheck
 			var/mob/M = G.affecting
-			M.forceMove(src)
+			if(M.client)
+				M.client.perspective = EYE_PERSPECTIVE
+				M.client.eye = src
+			M.loc = src
 			OCCUPANT = M
 			isopen = 0 //close ittt
 
@@ -416,7 +424,7 @@
 			return
 		to_chat(user, span_info("You load the [S.name] into the storage compartment."))
 		user.drop_item()
-		S.forceMove(src)
+		S.loc = src
 		SUIT = S
 		update_icon()
 		return
@@ -429,7 +437,7 @@
 			return
 		to_chat(user, span_info("You load the [H.name] into the storage compartment."))
 		user.drop_item()
-		H.forceMove(src)
+		H.loc = src
 		HELMET = H
 		update_icon()
 		return
@@ -442,7 +450,7 @@
 			return
 		to_chat(user, span_info("You load the [M.name] into the storage compartment."))
 		user.drop_item()
-		M.forceMove(src)
+		M.loc = src
 		MASK = M
 		update_icon()
 		return

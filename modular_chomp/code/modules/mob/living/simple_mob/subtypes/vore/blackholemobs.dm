@@ -53,6 +53,15 @@
 				"bio" = 100,
 				"rad" = 100
 				)
+	armor_soak = list(		// Values for getsoak() checks.
+				"melee" = 0,
+				"bullet" = 0,
+				"laser" = 0,
+				"energy" = 0,
+				"bomb" = 0,
+				"bio" = 0,
+				"rad" = 0
+				)
 	var/exploded = FALSE
 	var/explosion_dev_range		= 0
 	var/explosion_heavy_range	= 0
@@ -723,12 +732,21 @@ GLOBAL_LIST_INIT(obelisk_lure_messages, list(
 
 	armor = list(
 				"melee" = 100,
-				"bullet" = 80,
-				"laser" = 80,
-				"energy" = 97,
+				"bullet" = 70,
+				"laser" = 70,
+				"energy" = 90,
 				"bomb" = 0,
 				"bio" = 100,
 				"rad" = 100)
+	armor_soak = list(
+				"melee" = 15,
+				"bullet" = 5,
+				"laser" = 5,
+				"energy" = 5,
+				"bomb" = 0,
+				"bio" = 100,
+				"rad" = 100
+				)
 	var/datum/looping_sound/obelisk/loopy = 1
 
 /mob/living/simple_mob/vore/blackhole_obelisk/monolith

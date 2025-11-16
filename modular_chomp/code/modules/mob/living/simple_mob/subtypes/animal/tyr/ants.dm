@@ -223,7 +223,7 @@
 	// Get our AI to stay still.
 	set_AI_busy(TRUE)
 
-	if(!do_after(src, 5 SECONDS, T))
+	if(!do_mob(src, T, 5 SECONDS))
 		set_AI_busy(FALSE)
 		to_chat(src, span_warning("You need to stay still to spin a web on \the [T]."))
 		return FALSE
@@ -269,7 +269,7 @@
 	// Get our AI to stay still.
 	set_AI_busy(TRUE)
 
-	if(!do_after(src, 5 SECONDS, T))
+	if(!do_mob(src, T, 5 SECONDS))
 		set_AI_busy(FALSE)
 		to_chat(src, span_warning("You need to stay still to spin a web on \the [T]."))
 		return FALSE

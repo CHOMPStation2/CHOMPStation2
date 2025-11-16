@@ -151,17 +151,19 @@
 /decl/emote/proc/replace_target_tokens(var/msg, var/atom/target)
 	. = msg
 	if(istype(target))
-		. = replacetext(., "TARGET_THEM",  target.p_them())
-		. = replacetext(., "TARGET_THEIR", target.p_their())
-		. = replacetext(., "TARGET_SELF",  target.p_themselves())
+		var/datum/gender/target_gender = GLOB.gender_datums[target.get_visible_gender()]
+		. = replacetext(., "TARGET_THEM",  target_gender.him)
+		. = replacetext(., "TARGET_THEIR", target_gender.his)
+		. = replacetext(., "TARGET_SELF",  target_gender.himself)
 		. = replacetext(., "TARGET",       span_bold("\the [target]"))
 
 /decl/emote/proc/replace_user_tokens(var/msg, var/atom/user)
 	. = msg
 	if(istype(user))
-		. = replacetext(., "USER_THEM",  user.p_them())
-		. = replacetext(., "USER_THEIR", user.p_their())
-		. = replacetext(., "USER_SELF",  user.p_themselves())
+		var/datum/gender/user_gender = GLOB.gender_datums[user.get_visible_gender()]
+		. = replacetext(., "USER_THEM",  user_gender.him)
+		. = replacetext(., "USER_THEIR", user_gender.his)
+		. = replacetext(., "USER_SELF",  user_gender.himself)
 		. = replacetext(., "USER",       span_bold("\the [user]"))
 
 /decl/emote/proc/get_radio_message(var/atom/user)

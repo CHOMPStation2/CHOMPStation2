@@ -1,3 +1,4 @@
+import { useBackend } from 'tgui/backend';
 import {
   Button,
   LabeledList,
@@ -6,35 +7,28 @@ import {
   Stack,
 } from 'tgui-core/components';
 
-export const ChemDispenserSettings = (props: {
-  /** The dispense amount the user has currently selected. */
-  selectedAmount: number;
-  /** Available amounts for this dispenser to use. */
-  availableAmounts: number[];
-  /** The minimum allowed selectable amount. Used for the slider UI element. */
-  minAmount: number;
-  /** The maximum allowed selectable amount. Used for the slider UI element. */
-  maxAmount: number;
-  /** Called when the user tries to change the dispensed amount. Arg is the amount the user is trying to set it to. */
-  amountAct: (amount: number) => void;
-}) => {
-  const { selectedAmount, availableAmounts, minAmount, maxAmount, amountAct } =
-    props;
+import { dispenseAmounts } from './constants';
+import type { Data } from './types';
+
+export const ChemDispenserSettings = (props) => {
+  const { act, data } = useBackend<Data>();
+  const { amount } = data;
   return (
-    <Section
-      title="Settings"
-      fill
-    >
+    <Section title="Settings" fill>
       <LabeledList>
         <LabeledList.Item label="Dispense" verticalAlign="middle">
           <Stack g={0.1}>
-            {availableAmounts.map((a, i) => (
+            {dispenseAmounts.map((a, i) => (
               <Stack.Item key={i}>
                 <Button
                   textAlign="center"
-                  selected={selectedAmount === a}
+                  selected={amount === a}
                   m="0"
-                  onClick={() => amountAct(a)}
+                  onClick={() =>
+                    act('amount', {
+                      amount: a,
+                    })
+                  }
                 >
                   {`${a}u`}
                 </Button>
@@ -46,10 +40,14 @@ export const ChemDispenserSettings = (props: {
           <Slider
             step={1}
             stepPixelSize={5}
-            value={selectedAmount}
-            minValue={minAmount}
-            maxValue={maxAmount}
-            onChange={(e, value) => amountAct(value)}
+            value={amount}
+            minValue={1}
+            maxValue={120}
+            onChange={(e, value) =>
+              act('amount', {
+                amount: value,
+              })
+            }
           />
         </LabeledList.Item>
       </LabeledList>

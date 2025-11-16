@@ -152,8 +152,15 @@
 /obj/machinery/computer/shuttle_control/ex_act()
 	return
 
-/obj/machinery/computer/shuttle_control/emp_act(severity, recursive)
+/obj/machinery/computer/shuttle_control/emp_act()
 	return
+
+
+GLOBAL_LIST_BOILERPLATE(papers_dockingcode, /obj/item/paper/dockingcodes)
+/hook/roundstart/proc/populate_dockingcodes()
+	for(var/obj/item/paper/dockingcodes/dcp as anything in GLOB.papers_dockingcode)
+		dcp.populate_info()
+	return TRUE
 
 /obj/item/paper/dockingcodes
 	name = "Docking Codes"

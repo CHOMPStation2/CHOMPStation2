@@ -72,7 +72,7 @@
 		spark_system.start()
 		playsound(src, "sparks", 50, 1)
 		user.visible_message(span_danger("[user] is abruptly flung somewhere else in response to the damage!"))
-		do_teleport(user, locate(telex,teley,telez), channel = TELEPORT_CHANNEL_QUANTUM)
+		do_teleport(user, locate(telex,teley,telez), local = 0, bohsafe = 1)
 		tele_threshold = initial(tele_threshold)
 	return TRUE
 

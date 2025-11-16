@@ -209,7 +209,7 @@
 	if(traffic > 0)
 		traffic -= netspeed
 
-/obj/machinery/telecomms/emp_act(severity, recursive)
+/obj/machinery/telecomms/emp_act(severity)
 	if(prob(100/severity))
 		if(!(stat & EMPED))
 			stat |= EMPED

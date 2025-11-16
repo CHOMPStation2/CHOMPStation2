@@ -98,12 +98,13 @@
 		. += "\n " + span_notice("The HUD indicator reads OFF.")
 
 
-/obj/item/clothing/glasses/omnihud/emp_act(severity, recursive)
+/obj/item/clothing/glasses/omnihud/emp_act(var/severity)
 	if(tgarscreen)
 		SStgui.close_uis(src)
 	var/disconnect_tgar = tgarscreen
 	tgarscreen = null
-	VARSET_IN(src, tgarscreen, disconnect_tgar, 20 SECONDS)
+	spawn(20 SECONDS)
+		tgarscreen = disconnect_tgar
 
 	//extra fun for non-sci variants; a small chance flip the state to the dumb 3d glasses when EMP'd
 	if(icon_state == "glasses" || icon_state == "sun")

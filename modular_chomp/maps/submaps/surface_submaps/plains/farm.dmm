@@ -3,28 +3,28 @@
 /turf/template_noop,
 /area/template_noop)
 "b" = (
-/turf/simulated/floor/outdoors/dirt/sif/planetuse,
+/turf/simulated/floor/outdoors/dirt,
 /area/submap/farm)
 "c" = (
 /obj/structure/railing,
-/turf/simulated/floor/outdoors/dirt/sif/planetuse,
+/turf/simulated/floor/outdoors/dirt,
 /area/submap/farm)
 "d" = (
 /obj/structure/railing{
 	dir = 4;
 	icon_state = "railing0"
 	},
-/turf/simulated/floor/outdoors/dirt/sif/planetuse,
+/turf/simulated/floor/outdoors/dirt,
 /area/submap/farm)
 "e" = (
-/turf/simulated/floor/outdoors/grass/sif/planetuse,
+/turf/simulated/floor/outdoors/grass/sif,
 /area/submap/farm)
 "f" = (
 /obj/structure/railing{
 	dir = 8;
 	icon_state = "railing0"
 	},
-/turf/simulated/floor/outdoors/dirt/sif/planetuse,
+/turf/simulated/floor/outdoors/dirt,
 /area/submap/farm)
 "g" = (
 /turf/simulated/wall/wood,
@@ -32,38 +32,45 @@
 "h" = (
 /obj/structure/grille/rustic,
 /obj/structure/window/reinforced/full,
-/turf/simulated/floor/plating/sif/planetuse,
+/turf/simulated/floor/plating,
 /area/submap/farm)
 "i" = (
 /obj/structure/window/reinforced/full,
 /obj/structure/grille/rustic,
-/turf/simulated/floor/plating/sif/planetuse,
+/turf/simulated/floor/plating,
 /area/submap/farm)
 "j" = (
 /obj/structure/closet/secure_closet/freezer/fridge,
-/turf/simulated/floor/wood/turfpack/sif,
+/turf/simulated/floor/wood,
 /area/submap/farm)
 "k" = (
-/turf/simulated/floor/wood/turfpack/sif,
+/turf/simulated/floor/wood,
 /area/submap/farm)
 "l" = (
 /obj/structure/table/marble,
-/turf/simulated/floor/wood/turfpack/sif,
+/turf/simulated/floor/wood,
 /area/submap/farm)
 "m" = (
 /obj/structure/table/marble,
 /obj/item/material/kitchen/rollingpin,
-/turf/simulated/floor/wood/turfpack/sif,
+/turf/simulated/floor/wood,
 /area/submap/farm)
 "n" = (
 /obj/machinery/portable_atmospherics/hydroponics/soil,
 /obj/item/seeds/cornseed,
-/turf/simulated/floor/outdoors/dirt/sif/planetuse,
+/turf/simulated/floor/outdoors/dirt{
+	outdoors = 0
+	},
+/area/submap/farm)
+"o" = (
+/turf/simulated/floor/outdoors/dirt{
+	outdoors = 0
+	},
 /area/submap/farm)
 "p" = (
 /obj/structure/table/marble,
 /obj/item/material/knife,
-/turf/simulated/floor/wood/turfpack/sif,
+/turf/simulated/floor/wood,
 /area/submap/farm)
 "q" = (
 /obj/structure/window/reinforced/full{
@@ -73,137 +80,151 @@
 	dir = 4
 	},
 /obj/machinery/portable_atmospherics/powered/scrubber/huge/stationary,
-/turf/simulated/floor/plating/sif/planetuse,
+/turf/simulated/floor/plating,
 /area/submap/farm)
 "r" = (
 /obj/machinery/portable_atmospherics/hydroponics/soil,
 /obj/item/seeds/bluetomatoseed,
-/turf/simulated/floor/outdoors/dirt/sif/planetuse,
+/turf/simulated/floor/outdoors/dirt{
+	outdoors = 0
+	},
 /area/submap/farm)
 "s" = (
-/turf/simulated/floor/outdoors/mud/sif/planetuse,
+/turf/simulated/floor/outdoors/mud{
+	outdoors = 0
+	},
 /area/submap/farm)
 "t" = (
 /obj/machinery/portable_atmospherics/hydroponics/soil,
 /obj/item/seeds/icepepperseed,
-/turf/simulated/floor/outdoors/dirt/sif/planetuse,
+/turf/simulated/floor/outdoors/dirt{
+	outdoors = 0
+	},
 /area/submap/farm)
 "u" = (
 /obj/structure/simple_door/wood,
-/turf/simulated/floor/wood/turfpack/sif,
+/turf/simulated/floor/wood,
 /area/submap/farm)
 "v" = (
 /obj/machinery/door/window/eastleft,
 /obj/machinery/door/window/westleft,
-/turf/simulated/floor/outdoors/dirt/sif/planetuse,
+/turf/simulated/floor/outdoors/dirt,
 /area/submap/farm)
 "w" = (
 /mob/living/bot/farmbot,
-/turf/simulated/floor/outdoors/dirt/sif/planetuse,
+/turf/simulated/floor/outdoors/dirt{
+	outdoors = 0
+	},
 /area/submap/farm)
 "x" = (
 /obj/structure/sink/puddle,
-/turf/simulated/floor/outdoors/mud/sif/planetuse,
+/turf/simulated/floor/outdoors/mud{
+	outdoors = 0
+	},
 /area/submap/farm)
 "y" = (
 /obj/item/material/knife/machete/hatchet,
-/turf/simulated/floor/outdoors/mud/sif/planetuse,
+/turf/simulated/floor/outdoors/mud{
+	outdoors = 0
+	},
 /area/submap/farm)
 "z" = (
 /obj/structure/table/woodentable,
 /obj/item/storage/box/matches,
 /obj/item/flame/match,
-/turf/simulated/floor/wood/turfpack/sif,
+/turf/simulated/floor/wood,
 /area/submap/farm)
 "A" = (
 /obj/structure/table/woodentable,
-/turf/simulated/floor/wood/turfpack/sif,
+/turf/simulated/floor/wood,
 /area/submap/farm)
 "B" = (
 /obj/item/clothing/shoes/boots/winter/hydro,
 /obj/item/clothing/suit/storage/hooded/wintercoat/hydro,
-/turf/simulated/floor/wood/turfpack/sif,
+/turf/simulated/floor/wood,
 /area/submap/farm)
 "C" = (
 /obj/structure/bed/chair/wood{
 	dir = 8;
 	icon_state = "wooden_chair"
 	},
-/turf/simulated/floor/wood/turfpack/sif,
+/turf/simulated/floor/wood,
 /area/submap/farm)
 "D" = (
 /obj/machinery/portable_atmospherics/powered/scrubber/huge/stationary,
-/turf/simulated/floor/wood/turfpack/sif,
+/turf/simulated/floor/wood,
 /area/submap/farm)
 "E" = (
 /obj/structure/table/woodentable,
 /obj/item/storage/fancy/candle_box,
-/turf/simulated/floor/wood/turfpack/sif,
+/turf/simulated/floor/wood,
 /area/submap/farm)
 "F" = (
 /obj/machinery/portable_atmospherics/hydroponics/soil,
 /obj/item/seeds/wheatseed,
-/turf/simulated/floor/outdoors/dirt/sif/planetuse,
+/turf/simulated/floor/outdoors/dirt{
+	outdoors = 0
+	},
 /area/submap/farm)
 "G" = (
 /obj/structure/closet/crate/bin,
-/turf/simulated/floor/wood/turfpack/sif,
+/turf/simulated/floor/wood,
 /area/submap/farm)
 "H" = (
 /obj/machinery/space_heater,
-/turf/simulated/floor/wood/turfpack/sif,
+/turf/simulated/floor/wood,
 /area/submap/farm)
 "I" = (
 /obj/structure/bookcase,
 /obj/item/book/manual/hydroponics_pod_people,
-/turf/simulated/floor/wood/turfpack/sif,
+/turf/simulated/floor/wood,
 /area/submap/farm)
 "J" = (
 /obj/structure/bed/padded,
 /obj/item/bedsheet/blue,
-/turf/simulated/floor/wood/turfpack/sif,
+/turf/simulated/floor/wood,
 /area/submap/farm)
 "K" = (
 /obj/structure/table/woodentable,
 /obj/item/trash/candle,
-/turf/simulated/floor/wood/turfpack/sif,
+/turf/simulated/floor/wood,
 /area/submap/farm)
 "L" = (
-/turf/simulated/floor/outdoors/rocks/sif/planetuse,
+/turf/simulated/floor/outdoors/rocks,
 /area/submap/farm)
 "M" = (
-/turf/simulated/floor/plating/sif/planetuse,
+/turf/simulated/floor/plating,
 /area/submap/farm)
 "N" = (
-/turf/simulated/floor/water/turfpack/sif,
+/turf/simulated/floor/water,
 /area/submap/farm)
 "O" = (
 /obj/structure/loot_pile/maint/technical,
-/turf/simulated/floor/plating/sif/planetuse,
+/turf/simulated/floor/plating,
 /area/submap/farm)
 "P" = (
 /obj/machinery/power/port_gen/pacman,
-/turf/simulated/floor/plating/sif/planetuse,
+/turf/simulated/floor/plating,
 /area/submap/farm)
 "Q" = (
 /obj/structure/closet/crate/hydroponics/prespawned,
-/turf/simulated/floor/plating/sif/planetuse,
+/turf/simulated/floor/plating,
 /area/submap/farm)
 "R" = (
 /obj/structure/table/steel,
 /obj/machinery/cell_charger,
-/turf/simulated/floor/plating/sif/planetuse,
+/turf/simulated/floor/plating,
 /area/submap/farm)
 "S" = (
 /obj/structure/table/steel,
-/turf/simulated/floor/plating/sif/planetuse,
+/turf/simulated/floor/plating,
 /area/submap/farm)
 "T" = (
 /obj/structure/railing{
 	dir = 1;
 	icon_state = "railing0"
 	},
-/turf/simulated/floor/outdoors/dirt/sif/planetuse,
+/turf/simulated/floor/outdoors/dirt,
 /area/submap/farm)
 
 (1,1,1) = {"
@@ -724,11 +745,11 @@ e
 e
 i
 n
-b
+o
 r
 w
 r
-b
+o
 F
 i
 e
@@ -758,11 +779,11 @@ e
 e
 i
 n
-b
+o
 r
-b
+o
 r
-b
+o
 F
 i
 e
@@ -792,11 +813,11 @@ e
 e
 i
 n
-b
+o
 r
-b
+o
 r
-b
+o
 F
 i
 e
@@ -826,11 +847,11 @@ e
 e
 i
 n
-b
+o
 s
 s
 s
-b
+o
 F
 i
 e
@@ -860,11 +881,11 @@ e
 e
 i
 n
-b
+o
 s
 x
 s
-b
+o
 F
 i
 e
@@ -894,11 +915,11 @@ e
 e
 i
 n
-b
+o
 s
 y
 s
-b
+o
 F
 i
 e
@@ -928,11 +949,11 @@ e
 e
 i
 n
-b
+o
 t
-b
+o
 t
-b
+o
 F
 i
 e
@@ -962,11 +983,11 @@ e
 e
 i
 n
-b
+o
 t
-b
+o
 t
-b
+o
 F
 i
 e
@@ -996,11 +1017,11 @@ e
 e
 i
 n
-b
+o
 t
-b
+o
 t
-b
+o
 F
 i
 e

@@ -207,8 +207,8 @@
 		add_fingerprint(user)
 	return
 
-/obj/item/clothing/suit/armor/reactive/emp_act(severity, recursive)
-	active = FALSE
+/obj/item/clothing/suit/armor/reactive/emp_act(severity)
+	active = 0
 	icon_state = "reactiveoff"
 	..()
 

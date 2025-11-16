@@ -2848,8 +2848,12 @@
 /turf/simulated/floor/reinforced,
 /area/surface/outpost/research/xenoarcheology/isolation_c)
 "fV" = (
-/obj/machinery/power/smes/buildable/outpost_substation/max_charge_max_input{
-	RCon_tag = "Outpost - Chemical Refinery"
+/obj/machinery/power/smes/buildable/outpost_substation{
+	RCon_tag = "Outpost - Chemical Refinery";
+	charge = 500000;
+	input_attempt = 1;
+	input_level = 150000;
+	output_level = 150000
 	},
 /obj/structure/cable/blue{
 	icon_state = "0-4"
@@ -4739,8 +4743,12 @@
 /turf/simulated/floor/plating,
 /area/surface/outpost/engineering/refinery/smes)
 "kd" = (
-/obj/machinery/power/smes/buildable/outpost_substation/max_charge_max_input{
-	RCon_tag = "Outpost - Xenoarch"
+/obj/machinery/power/smes/buildable/outpost_substation{
+	RCon_tag = "Outpost - Xenoarch";
+	charge = 500000;
+	input_attempt = 1;
+	input_level = 150000;
+	output_level = 150000
 	},
 /obj/structure/cable/blue{
 	icon_state = "0-2"

@@ -85,6 +85,10 @@ var/next_duration_update = 0
 var/last_round_duration = 0
 GLOBAL_VAR_INIT(round_start_time, 0)
 
+/hook/roundstart/proc/start_timer()
+	GLOB.round_start_time = REALTIMEOFDAY
+	return 1
+
 /proc/roundduration2text()
 	if(!GLOB.round_start_time)
 		return "00:00"

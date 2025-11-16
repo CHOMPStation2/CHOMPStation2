@@ -153,7 +153,10 @@
 	src.add_fingerprint(user)
 	if(do_after(user, 3 SECONDS, target = src) && victim.Adjacent(src) && user.Adjacent(src) && victim.Adjacent(user) && !occupant)
 		user.visible_message(span_danger("[user] stuffs [victim] into the gibber!"))
-		victim.forceMove(src)
+		if(victim.client)
+			victim.client.perspective = EYE_PERSPECTIVE
+			victim.client.eye = src
+		victim.loc = src
 		src.occupant = victim
 		update_icon()
 
@@ -173,7 +176,10 @@
 		return
 	for(var/obj/O in src)
 		O.loc = src.loc
-	src.occupant.forceMove(get_turf(src))
+	if (src.occupant.client)
+		src.occupant.client.eye = src.occupant.client.mob
+		src.occupant.client.perspective = MOB_PERSPECTIVE
+	src.occupant.loc = src.loc
 	src.occupant = null
 	update_icon()
 	return

@@ -88,6 +88,7 @@ var/list/admin_verbs_admin = list(
 	/client/proc/toggle_spawning_with_recolour,
 	/client/proc/start_vote,
 	/client/proc/hide_motion_tracker_feedback,
+	/client/proc/reload_jobwhitelist, //ChompADD
 	/client/proc/reload_alienwhitelist //ChompADD
 	)
 
@@ -223,6 +224,7 @@ var/list/admin_verbs_debug = list(
 	/client/proc/stop_sounds,
 	/client/proc/spawn_reagent,
 	/datum/admins/proc/quick_authentic_nif, //CHOMPStation add
+	/client/proc/reload_jobwhitelist, //ChompADD
 	/client/proc/reload_alienwhitelist, //ChompADD
 	/client/proc/reload_configuration //CHOMPAdd
 	)
@@ -315,6 +317,7 @@ var/list/admin_verbs_mod = list(
 	/datum/admins/proc/sendFax,
 	/datum/admins/proc/view_persistent_data,
 	/client/proc/start_vote,
+	/client/proc/reload_jobwhitelist, //ChompADD
 	/client/proc/reload_alienwhitelist //ChompADD
 )
 
@@ -448,5 +451,6 @@ var/list/admin_verbs_event_manager = list(
 	/client/proc/modify_event_collector,
 	/client/proc/induce_malfunction,
 	/datum/admins/proc/quick_authentic_nif, //CHOMPStation add
+	/client/proc/reload_jobwhitelist, //ChompADD
 	/client/proc/reload_alienwhitelist //ChompADD
 )

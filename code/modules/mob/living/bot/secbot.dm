@@ -337,7 +337,7 @@
 			playsound(src, 'sound/weapons/handcuffs.ogg', 30, 1, -2)
 			visible_message(span_warning("\The [src] is trying to put handcuffs on \the [H]!"))
 			busy = TRUE
-			if(do_after(src, 6 SECONDS, H))
+			if(do_mob(src, H, 60))
 				if(!H.handcuffed)
 					if(istype(H.back, /obj/item/rig) && istype(H.gloves,/obj/item/clothing/gloves/gauntlets/rig))
 						H.handcuffed = new /obj/item/handcuffs/cable(H) // Better to be cable cuffed than stun-locked

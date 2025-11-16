@@ -68,7 +68,7 @@
 
 /obj/item/gun/projectile/attack_self(mob/user as mob)
 	if(manual_chamber)
-		if(do_after(user, 0.4 SECONDS, src))
+		if(do_after(user,4))
 			bolt_handle(user)
 	else if(firemodes.len > 1)
 		switch_firemodes(user)
@@ -322,14 +322,14 @@
 				if(!CHECK_BITFIELD(auto_loading_type,OPEN_BOLT))
 					if(!chambered)
 						if(bolt_open)
-							if(do_after(user, 0.5 SECONDS, src))
+							if(do_after(user,5))
 								user.visible_message(span_notice("[user] slides \the [C] into the [src]'s chamber."),span_notice("You slide \the [C] into the [src]'s chamber."))
 								chambered = C
 								user.hud_used.update_ammo_hud(user, src)
 							else
 								return
 						else if(!(CHECK_BITFIELD(auto_loading_type,LOCK_OPEN_EMPTY) || (CHECK_BITFIELD(auto_loading_type,LOCK_MANUAL_LOCK))))
-							if(do_after(user, 1.5 SECONDS, src))
+							if(do_after(user,15))
 								user.visible_message(span_notice("[user] holds open \the [src]'s [bolt_name] and slides [C] into the chamber before letting the bolt close again."),span_notice("You slide \the [C] into the [src]'s chamber."))
 
 								chambered = C

@@ -214,7 +214,7 @@
 
 
 // EMP. It may seem weak but keep in mind that multiple shield segments are likely to be affected.
-/obj/effect/shield/emp_act(severity, recursive)
+/obj/effect/shield/emp_act(var/severity)
 	if(!disabled_for)
 		take_damage(rand(30,60) / severity, SHIELD_DAMTYPE_EM)
 

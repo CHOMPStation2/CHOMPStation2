@@ -165,7 +165,10 @@ GLOBAL_LIST_EMPTY(suit_cycler_typecache)
 		if(do_after(user, 2 SECONDS, target = src))
 			if(!G || !G.affecting) return
 			var/mob/M = G.affecting
-			M.forceMove(src)
+			if(M.client)
+				M.client.perspective = EYE_PERSPECTIVE
+				M.client.eye = src
+			M.loc = src
 			occupant = M
 
 			add_fingerprint(user)
@@ -210,7 +213,7 @@ GLOBAL_LIST_EMPTY(suit_cycler_typecache)
 
 		to_chat(user, "You fit \the [I] into the suit cycler.")
 		user.drop_item()
-		I.forceMove(src)
+		I.loc = src
 		helmet = I
 
 		update_icon()
@@ -249,7 +252,7 @@ GLOBAL_LIST_EMPTY(suit_cycler_typecache)
 
 		to_chat(user, "You fit \the [I] into the suit cycler.")
 		user.drop_item()
-		I.forceMove(src)
+		I.loc = src
 		suit = I
 
 		update_icon()
@@ -499,7 +502,11 @@ GLOBAL_LIST_EMPTY(suit_cycler_typecache)
 	if(!occupant)
 		return
 
-	occupant.forceMove(get_turf(src))
+	if(occupant.client)
+		occupant.client.eye = occupant.client.mob
+		occupant.client.perspective = MOB_PERSPECTIVE
+
+	occupant.loc = get_turf(occupant)
 	occupant = null
 
 	add_fingerprint(user)

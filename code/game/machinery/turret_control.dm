@@ -224,7 +224,7 @@
 		icon_state = "control_standby"
 		set_light(1.5, 1,"#003300")
 
-/obj/machinery/turretid/emp_act(severity, recursive)
+/obj/machinery/turretid/emp_act(severity)
 	if(enabled)
 		//if the turret is on, the EMP no matter how severe disables the turret for a while
 		//and scrambles its settings, with a slight chance of having an emag effect
@@ -235,12 +235,12 @@
 		check_access = pick(0, 0, 0, 0, 1)	// check_access is a pretty big deal, so it's least likely to get turned on
 		check_anomalies = pick(0, 1)
 
-		enabled = FALSE
+		enabled=0
 		updateTurrets()
 
 		spawn(rand(60,600))
 			if(!enabled)
-				enabled = TRUE
+				enabled=1
 				updateTurrets()
 
 	..()

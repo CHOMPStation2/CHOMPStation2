@@ -399,10 +399,7 @@
 	return
 
 /obj/item/bikehorn/rubberducky/pink/container_resist(var/mob/living/escapee)
-	if(isdisposalpacket(loc))
-		escapee.forceMove(loc)
-	else
-		escapee.forceMove(get_turf(src))
+	escapee.forceMove(get_turf(src))
 	to_chat(escapee, span_vnotice("You managed to crawl out of the rubber ducky!"))
 
 /obj/item/bikehorn/rubberducky/grey
@@ -593,7 +590,7 @@
 	thing.update_icon()
 
 /obj/structure/sink/attack_hand(mob/user as mob)
-	if(ishuman(user))
+	if (ishuman(user))
 		var/mob/living/carbon/human/H = user
 		var/obj/item/organ/external/temp = H.organs_by_name[BP_R_HAND]
 		if (H.hand)
@@ -668,9 +665,10 @@
 					R.cell.charge -= 20
 				else
 					B.deductcharge(B.hitcost)
+				var/datum/gender/TU = GLOB.gender_datums[user.get_visible_gender()]
 				user.visible_message( \
-					span_danger("[user] was stunned by [user.p_their()] wet [O]!"), \
-					span_userdanger("[user] was stunned by [user.p_their()] wet [O]!"))
+					span_danger("[user] was stunned by [TU.his] wet [O]!"), \
+					span_userdanger("[user] was stunned by [TU.his] wet [O]!"))
 				return 1
 	else if(istype(O, /obj/item/mop))
 		O.reagents.add_reagent(REAGENT_ID_WATER, 5)

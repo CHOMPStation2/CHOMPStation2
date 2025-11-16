@@ -18,12 +18,12 @@
 	. = ..()
 	add_overlay("working")
 
-/obj/item/gps/advanced/emp_act(severity, recursive)
-	emped = TRUE
+/obj/item/gps/advanced/emp_act(severity)
+	emped = 1
 	cut_overlay("working")
 	add_overlay("emp")
 	spawn(300)
-		emped = FALSE
+		emped = 0
 		cut_overlay("emp")
 		add_overlay("working")
 

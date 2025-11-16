@@ -52,9 +52,12 @@
 	..()
 	SEND_SIGNAL(src, COMSIG_MOB_LOGIN)
 
-	client.perspective = MOB_PERSPECTIVE
-	client.eye = src
-
+	if(loc && !isturf(loc))
+		client.eye = loc
+		client.perspective = EYE_PERSPECTIVE
+	else
+		client.eye = src
+		client.perspective = MOB_PERSPECTIVE
 	add_click_catcher()
 	update_client_color()
 

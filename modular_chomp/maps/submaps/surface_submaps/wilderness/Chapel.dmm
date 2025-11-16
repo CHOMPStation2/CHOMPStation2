@@ -613,7 +613,12 @@
 /obj/effect/floor_decal/industrial/warning/dust{
 	dir = 5
 	},
-/obj/machinery/power/smes/buildable/max_charge_max_input,
+/obj/machinery/power/smes/buildable{
+	charge = 2e+006;
+	input_attempt = 1;
+	input_level = 250000;
+	input_level_max = 250000
+	},
 /obj/structure/cable/cyan{
 	icon_state = "0-2"
 	},

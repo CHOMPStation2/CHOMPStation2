@@ -153,8 +153,9 @@ Class Procs:
 		for(var/atom/A in contents)
 			if(ishuman(A))
 				var/mob/living/carbon/human/H = A
-				H.forceMove(loc)
-				H.reset_perspective()
+				H.client.eye = H.client.mob
+				H.client.perspective = MOB_PERSPECTIVE
+				H.loc = src.loc
 			else
 				qdel(A)
 	return ..()
@@ -162,7 +163,7 @@ Class Procs:
 /obj/machinery/process() // Steady power usage is handled separately. If you dont use process why are you here?
 	return PROCESS_KILL
 
-/obj/machinery/emp_act(severity, recursive)
+/obj/machinery/emp_act(severity)
 	if(use_power && stat == 0)
 		use_power(7500/severity)
 
@@ -172,7 +173,9 @@ Class Procs:
 		pulse2.name = "emp sparks"
 		pulse2.anchored = TRUE
 		pulse2.set_dir(pick(GLOB.cardinal))
-		QDEL_IN(pulse2, 1 SECOND)
+
+		spawn(10)
+			qdel(pulse2)
 	..()
 
 /obj/machinery/ex_act(severity)
@@ -223,13 +226,20 @@ Class Procs:
 		return STATUS_CLOSE
 	return ..()
 
+/obj/machinery/CouldUseTopic(var/mob/user)
+	..()
+	user.set_machine(src)
+
+/obj/machinery/CouldNotUseTopic(var/mob/user)
+	user.unset_machine()
+
 ////////////////////////////////////////////////////////////////////////////////////////////
 
 /obj/machinery/attack_ai(mob/user as mob)
 	if(isrobot(user))
 		// For some reason attack_robot doesn't work
 		// This is to stop robots from using cameras to remotely control machines.
-		if(user.client && !user.is_remote_viewing())
+		if(user.client && user.client.eye == user)
 			return attack_hand(user)
 	else
 		return attack_hand(user)
@@ -552,3 +562,10 @@ Class Procs:
 	spark_system.start()
 	qdel(spark_system)
 	qdel(src)
+
+/datum/proc/apply_visual(mob/M)
+	M.sight = 0 //Just reset their mesons and stuff so they can't use them, by default.
+	return
+
+/datum/proc/remove_visual(mob/M)
+	return

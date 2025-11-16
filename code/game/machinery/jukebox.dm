@@ -374,7 +374,7 @@
 	return
 /obj/machinery/media/jukebox/ghost/power_change()
 	return
-/obj/machinery/media/jukebox/ghost/emp_act(severity, recursive)
+/obj/machinery/media/jukebox/ghost/emp_act(severity)
 	return
 /obj/machinery/media/jukebox/ghost/emag_act(remaining_charges, mob/user)
 	return

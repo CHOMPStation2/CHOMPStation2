@@ -45,7 +45,7 @@
 		if(cmptext(copytext(whom,1,2),"@"))
 			whom = findStealthKey(whom)
 		C = GLOB.directory[whom]
-	else if(isclient(whom))
+	else if(istype(whom,/client))
 		C = whom
 	if(!C)
 		if(holder)
@@ -56,7 +56,7 @@
 
 	if(T)
 		message_admins(span_pm("[key_name_admin(src)] has started replying to [key_name(C, 0, 0)]'s admin help."))
-	var/msg = tgui_input_text(src,"Message:", "Private message to [key_name(C, 0, 0)]", multiline = TRUE, encode = FALSE)
+	var/msg = tgui_input_text(src,"Message:", "Private message to [key_name(C, 0, 0)]", multiline = TRUE)
 	if (!msg)
 		message_admins(span_pm("[key_name_admin(src)] has cancelled their reply to [key_name(C, 0, 0)]'s admin help."))
 		return
@@ -71,8 +71,6 @@
 
 	if(!holder && !current_ticket)	//no ticket? https://www.youtube.com/watch?v=iHSPf6x1Fdo
 		to_chat(src, span_admin_pm_warning("You can no longer reply to this ticket, please open another one by using the Adminhelp verb if need be."))
-		if(!holder)
-			msg = trim(sanitize(copytext(msg,1,MAX_MESSAGE_LEN)))
 		to_chat(src, span_admin_pm_notice("Message: [msg]"))
 		return
 
@@ -121,12 +119,11 @@
 			return
 
 		if(!recipient)
-			if(!current_ticket)
+			if(holder)
 				to_chat(src, span_admin_pm_warning("Error: Admin-PM: Client not found."))
 				to_chat(src, msg)
-				return
-			log_admin("Adminhelp: [key_name(src)]: [msg]")
-			current_ticket.MessageNoRecipient(msg)
+			else
+				current_ticket.MessageNoRecipient(msg)
 			return
 
 	var/rawmsg = msg

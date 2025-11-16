@@ -224,7 +224,7 @@
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/zeroport)
 "aE" = (
-/obj/structure/ghost_pod/ghost_activated/maintpred,
+/obj/structure/ghost_pod/ghost_activated/maintpred/no_announce,
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/abcargo)
 "aF" = (
@@ -243,7 +243,7 @@
 /area/maintenance/engineering/gravgen)
 "aG" = (
 /obj/effect/decal/cleanable/flour,
-/obj/structure/ghost_pod/ghost_activated/morphspawn,
+/obj/structure/ghost_pod/ghost_activated/morphspawn/no_announce,
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/abchemistry)
 "aH" = (
@@ -253,7 +253,7 @@
 /turf/simulated/floor/wood/alt/parquet/turfpack/station,
 /area/maintenance/lookout)
 "aI" = (
-/obj/structure/ghost_pod/ghost_activated/maintpred,
+/obj/structure/ghost_pod/ghost_activated/maintpred/no_announce,
 /turf/simulated/floor/wood/turfpack/station,
 /area/maintenance/zerobar)
 "aJ" = (
@@ -264,7 +264,7 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/gravgen)
 "aK" = (
-/obj/structure/ghost_pod/ghost_activated/maintpred,
+/obj/structure/ghost_pod/ghost_activated/maintpred/no_announce,
 /turf/simulated/floor/tiled/white,
 /area/maintenance/abscience)
 "aL" = (
@@ -610,13 +610,6 @@
 /obj/structure/flora/pottedplant/fern,
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/zerocent)
-"bM" = (
-/obj/effect/floor_decal/techfloor{
-	dir = 8
-	},
-/obj/random/trash,
-/turf/simulated/floor/tiled/techfloor,
-/area/maintenance/engineering/gravgen)
 "bO" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -3345,7 +3338,11 @@
 /obj/structure/sign/warning/radioactive{
 	pixel_y = 32
 	},
-/obj/machinery/power/smes/buildable/max_charge_max_input{
+/obj/machinery/power/smes/buildable{
+	charge = 5e+006;
+	input_attempt = 1;
+	input_level = 200000;
+	output_level = 200000;
 	RCon_tag = "Gravity Generator"
 	},
 /obj/structure/cable/cyan{
@@ -4461,7 +4458,7 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/obj/structure/ghost_pod/ghost_activated/morphspawn,
+/obj/structure/ghost_pod/ghost_activated/morphspawn/no_announce,
 /turf/simulated/floor/tiled/white,
 /area/maintenance/abfirstaid)
 "rZ" = (
@@ -8301,6 +8298,13 @@
 	},
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/zerocent)
+"IU" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 8
+	},
+/obj/random/trash,
+/turf/simulated/floor/tiled/techfloor,
+/area/maintenance/engineering/gravgen)
 "IX" = (
 /obj/machinery/firealarm{
 	layer = 3.3;
@@ -36813,7 +36817,7 @@ pe
 gk
 wq
 jR
-bM
+IU
 pD
 Tc
 Cu
@@ -42232,7 +42236,7 @@ vY
 Mf
 eN
 YF
-bM
+IU
 pD
 SW
 we

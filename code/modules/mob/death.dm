@@ -72,8 +72,6 @@
 	if(stat == DEAD)
 		return 0
 	SEND_SIGNAL(src, COMSIG_MOB_DEATH, gibbed)
-	SEND_GLOBAL_SIGNAL(COMSIG_GLOB_MOB_DEATH, src, gibbed)
-
 	if(src.loc && istype(loc,/obj/belly) || istype(loc,/obj/item/dogborg/sleeper) || istype(loc, /obj/item/clothing/shoes)) deathmessage = "no message" //VOREStation Add - Prevents death messages from inside mobs - CHOMPEdit: Added in-shoe as well
 	//CHOMPAdd Start - Muffle original body death on Mob TF death
 	if(src.loc && isliving(loc))

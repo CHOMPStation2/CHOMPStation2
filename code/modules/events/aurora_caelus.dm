@@ -5,7 +5,7 @@
 	endWhen = 126
 
 /datum/event/aurora_caelus/announce()
-	command_announcement.Announce("[station_name()]: A harmless cloud of ions is approaching your [using_map.facility_type], and will exhaust their energy battering the hull. \
+	command_announcement.Announce("[station_name()]: A harmless cloud of ions is approaching your station, and will exhaust their energy battering the hull. \
 	Nanotrasen has approved a short break for all employees to relax and observe this very rare event. \
 	During this time, starlight will be bright but gentle, shifting between quiet green and blue colors. \
 	Any staff who would like to view these lights for themselves may proceed to the area nearest to them with viewing ports to open space. \

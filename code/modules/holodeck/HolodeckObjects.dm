@@ -172,6 +172,7 @@
 		return TRUE
 	var/obj/item/organ/external/affecting = target.get_organ(ran_zone(user.zone_sel.selecting))
 	var/armor_block = target.run_armor_check(affecting, "melee")
+	var/armor_soak = target.get_armor_soak(affecting, "melee")
 
 	if(HULK in user.mutations)
 		damage += 5
@@ -180,7 +181,10 @@
 
 	target.visible_message(span_bolddanger("[user] has punched [target]!"))
 
-	target.apply_damage(damage, HALLOSS, affecting, armor_block)
+	if(armor_soak >= damage)
+		return TRUE
+
+	target.apply_damage(damage, HALLOSS, affecting, armor_block, armor_soak)
 	if(damage >= 9)
 		target.visible_message(span_bolddanger("[user] has weakened [target]!"))
 		target.apply_effect(4, WEAKEN, armor_block)

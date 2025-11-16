@@ -53,7 +53,7 @@
 						if(target.forceMove(T))
 							break
 			target.canmove = 1
-			target.reset_perspective() // Fixes a blackscreen
+			target.client.eye = target
 			qdel(animation)
 			qdel(holder)
 

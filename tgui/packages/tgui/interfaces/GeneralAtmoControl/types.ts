@@ -24,7 +24,6 @@ export type sensor = {
     nitrogen: number;
     carbon_dioxide: number;
     phoron: number;
-    methane: number;
     other: number;
   };
 };

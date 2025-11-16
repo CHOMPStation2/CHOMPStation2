@@ -2642,7 +2642,9 @@
 	},
 /area/groundbase/medical/patio)
 "Pf" = (
-/obj/machinery/power/smes/buildable/max_charge,
+/obj/machinery/power/smes/buildable{
+	charge = 500000
+	},
 /obj/structure/cable/cyan{
 	icon_state = "0-4"
 	},

@@ -146,7 +146,7 @@ function getReactionComponents(
         )}
         {(typeof reactionTypes.xgm_min === 'number' ||
           typeof reactionTypes.xgm_max === 'number') && (
-          <LabeledList.Item label="Gas Pressure">
+          <LabeledList.Item label="XGM">
             <MinMaxBox
               min={reactionTypes.xgm_min || null}
               max={reactionTypes.xgm_max || null}
@@ -160,12 +160,12 @@ function getReactionComponents(
           typeof reactionTypes.xgm_min === 'number' ||
           typeof reactionTypes.xgm_max === 'number') && <LabeledList.Divider />}
         {!!reactionTypes.require_xgm_gas && (
-          <LabeledList.Item label="Requires Gas">
+          <LabeledList.Item label="Requires XGM Gas">
             {reactionTypes.require_xgm_gas}
           </LabeledList.Item>
         )}
         {!!reactionTypes.rejects_xgm_gas && (
-          <LabeledList.Item label="Rejects Gas">
+          <LabeledList.Item label="Rejects XGM Gas">
             {reactionTypes.rejects_xgm_gas}
           </LabeledList.Item>
         )}

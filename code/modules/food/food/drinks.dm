@@ -22,22 +22,22 @@
 /obj/item/reagent_containers/food/drinks/Initialize(mapload)
 	. = ..()
 	if (prob(cant_chance))
-		cant_open = TRUE
+		cant_open = 1
 
 /obj/item/reagent_containers/food/drinks/on_reagent_change()
 	if (reagents.reagent_list.len > 0)
-		var/datum/reagent/reagent = reagents.get_master_reagent()
-		if(reagent.price_tag)
-			price_tag = reagent.price_tag
+		var/datum/reagent/R = reagents.get_master_reagent()
+		if(R.price_tag)
+			price_tag = R.price_tag
 		else
 			price_tag = null
 	return
 
 /obj/item/reagent_containers/food/drinks/Destroy()
 	if(food_inserted_micros)
-		for(var/mob/mob in food_inserted_micros)
-			mob.dropInto(loc)
-			food_inserted_micros -= mob
+		for(var/mob/M in food_inserted_micros)
+			M.dropInto(loc)
+			food_inserted_micros -= M
 	. = ..()
 
 	return
@@ -52,22 +52,22 @@
 			to_chat(user, span_warning("You cannot drop anything into \the [src] without opening it first."))
 			return
 
-		var/obj/item/holder/holder = W
+		var/obj/item/holder/H = W
 
 		if(!food_inserted_micros)
 			food_inserted_micros = list()
 
-		var/mob/living/living_mob = holder.held_mob
+		var/mob/living/M = H.held_mob
 
-		living_mob.forceMove(src)
-		holder.held_mob = null
-		user.drop_from_inventory(holder)
-		qdel(holder)
+		M.forceMove(src)
+		H.held_mob = null
+		user.drop_from_inventory(H)
+		qdel(H)
 
-		food_inserted_micros += living_mob
+		food_inserted_micros += M
 
-		to_chat(user, span_warning("You drop [living_mob] into \the [src]."))
-		to_chat(living_mob, span_warning("[user] drops you into \the [src]."))
+		to_chat(user, span_warning("You drop [M] into \the [src]."))
+		to_chat(M, span_warning("[user] drops you into \the [src]."))
 		return
 
 	return ..()
@@ -86,41 +86,41 @@
 
 	return ..()
 
-/obj/item/reagent_containers/food/drinks/proc/On_Consume(var/mob/living/eater, var/mob/feeder, var/changed = FALSE)
-	SEND_SIGNAL(src, COMSIG_CONTAINER_DRANK, eater, feeder)
-	if(!feeder)
-		feeder = eater
+/obj/item/reagent_containers/food/drinks/proc/On_Consume(var/mob/living/M, var/mob/user, var/changed = FALSE)
+	if(!user)
+		user = M
 
 	if(food_inserted_micros && food_inserted_micros.len)
-		for(var/mob/living/micro in food_inserted_micros)
-			if(!can_food_vore(eater, micro))
-				continue
+		if(M.can_be_drop_pred && M.food_vore && M.vore_selected)
+			for(var/mob/living/F in food_inserted_micros)
+				if(!F.can_be_drop_prey || !F.food_vore)
+					continue
 
-			if(!can_animal_vore(eater, micro)) //If the one doing the eating is a simple mob controlled by AI, check mob vore prefs
-				continue
+				if(isanimal(M) && !F.allowmobvore && !M.ckey) //If the one doing the eating is a simple mob controlled by AI, check mob vore prefs
+					continue
 
-			var/do_nom = FALSE
+				var/do_nom = FALSE
 
-			if(!reagents.total_volume)
-				do_nom = TRUE
-			else
-				var/nom_chance = (1 - (reagents.total_volume / volume))*100
-				if(prob(nom_chance))
+				if(!reagents.total_volume)
 					do_nom = TRUE
+				else
+					var/nom_chance = (1 - (reagents.total_volume / volume))*100
+					if(prob(nom_chance))
+						do_nom = TRUE
 
-			if(do_nom)
-				micro.forceMove(eater.vore_selected)
-				food_inserted_micros -= micro
+				if(do_nom)
+					F.forceMove(M.vore_selected)
+					food_inserted_micros -= F
 
 	if(!reagents.total_volume && changed)
-		eater.visible_message(span_notice("[eater] finishes drinking from \the [src]."),span_notice("You finish drinking from \the [src]."))
+		M.visible_message(span_notice("[M] finishes drinking from \the [src]."),span_notice("You finish drinking from \the [src]."))
 		if(trash)
-			feeder.drop_from_inventory(src)	//so icons update :[
+			user.drop_from_inventory(src)	//so icons update :[
 			if(ispath(trash,/obj/item))
-				var/obj/item/TrashItem = new trash(feeder)
-				feeder.put_in_hands(TrashItem)
+				var/obj/item/TrashItem = new trash(user)
+				user.put_in_hands(TrashItem)
 			else if(istype(trash,/obj/item))
-				feeder.put_in_hands(trash)
+				user.put_in_hands(trash)
 			qdel(src)
 	return
 
@@ -148,7 +148,7 @@
 	if(standard_feed_mob(user, M))
 		return
 
-	return FALSE
+	return 0
 
 /obj/item/reagent_containers/food/drinks/afterattack(obj/target, mob/user, proximity)
 	if(!proximity) return
@@ -162,23 +162,23 @@
 /obj/item/reagent_containers/food/drinks/standard_feed_mob(var/mob/user, var/mob/target)
 	if(!is_open_container())
 		to_chat(user, span_notice("You need to open [src]!"))
-		return TRUE
+		return 1
 	var/original_volume = reagents.total_volume
 	.=..()
 	var/changed = !(reagents.total_volume == original_volume)
-	On_Consume(target, user, changed)
+	On_Consume(target,user,changed)
 	return
 
 /obj/item/reagent_containers/food/drinks/standard_dispenser_refill(var/mob/user, var/obj/structure/reagent_dispensers/target)
 	if(!is_open_container())
 		to_chat(user, span_notice("You need to open [src]!"))
-		return TRUE
+		return 1
 	return ..()
 
 /obj/item/reagent_containers/food/drinks/standard_pour_into(var/mob/user, var/atom/target)
 	if(!is_open_container())
 		to_chat(user, span_notice("You need to open [src]!"))
-		return TRUE
+		return 1
 	return ..()
 
 /obj/item/reagent_containers/food/drinks/self_feed_message(var/mob/user)
@@ -198,7 +198,7 @@
 		to_chat(user, span_notice("You swallow a gulp from \the [src]."))
 
 /obj/item/reagent_containers/food/drinks/feed_sound(var/mob/user)
-	playsound(src, 'sound/items/drink.ogg', rand(10, 50), TRUE)
+	playsound(src, 'sound/items/drink.ogg', rand(10, 50), 1)
 
 /obj/item/reagent_containers/food/drinks/examine(mob/user)
 	. = ..()

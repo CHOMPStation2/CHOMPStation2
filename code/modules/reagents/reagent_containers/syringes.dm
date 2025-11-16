@@ -30,7 +30,7 @@
 	var/image/filling //holds a reference to the current filling overlay
 	var/visible_name = "a syringe"
 	var/time = 30
-	var/drawing = FALSE
+	var/drawing = 0
 	var/used = FALSE
 	var/dirtiness = 0
 	var/list/targets
@@ -134,24 +134,24 @@
 						return
 
 					var/datum/reagent/B
-					drawing = TRUE
+					drawing = 1
 					if(ishuman(T))
 						var/mob/living/carbon/human/H = T
 						if(H.species && !H.should_have_organ(O_HEART))
 							H.reagents.trans_to_obj(src, amount)
 						else
 							if(ismob(H) && H != user)
-								if(!do_after(user, time, target))
-									drawing = FALSE
+								if(!do_mob(user, target, time))
+									drawing = 0
 									return
 							B = T.take_blood(src, amount)
-							drawing = FALSE
+							drawing = 0
 					else
-						if(!do_after(user, time, target))
-							drawing = FALSE
+						if(!do_mob(user, target, time))
+							drawing = 0
 							return
 						B = T.take_blood(src,amount)
-						drawing = FALSE
+						drawing = 0
 
 					if (B)
 						reagents.reagent_list += B
@@ -284,7 +284,7 @@
 
 		var/mob/living/carbon/human/H = target
 
-		var/target_zone = get_zone_with_miss_chance(check_zone(user.zone_sel.selecting, target))
+		var/target_zone = ran_zone(check_zone(user.zone_sel.selecting, target))
 		var/obj/item/organ/external/affecting = H.get_organ(target_zone)
 
 		if (!affecting || affecting.is_stump())
@@ -296,8 +296,7 @@
 		if((user != target) && H.check_shields(7, src, user, "\the [src]"))
 			return
 
-		var/armor_val = H.getarmor(target_zone, "melee")
-		if(target != user && armor_val >= 5 && prob(50+armor_val)) // High armor can deflect syringe stabs
+		if (target != user && H.getarmor(target_zone, "melee") > 5 && prob(50))
 			for(var/mob/O in viewers(world.view, user))
 				O.show_message(span_bolddanger("[user] tries to stab [target] in \the [hit_area] with [src.name], but the attack is deflected by armor!"), 1)
 			user.remove_from_mob(src)

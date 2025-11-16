@@ -14362,8 +14362,9 @@
 /obj/structure/cable/yellow{
 	icon_state = "0-2"
 	},
-/obj/machinery/power/smes/buildable/disable_output{
-	RCon_tag = "Substation - Command"
+/obj/machinery/power/smes/buildable{
+	RCon_tag = "Substation - Command";
+	output_attempt = 0
 	},
 /turf/simulated/floor,
 /area/maintenance/groundbase/substation/command)

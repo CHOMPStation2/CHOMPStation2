@@ -20,7 +20,11 @@
 /obj/structure/cable{
 	icon_state = "0-4"
 	},
-/obj/machinery/power/smes/batteryrack/mapped/input_and_output_on,
+/obj/machinery/power/smes/batteryrack/mapped{
+	input_attempt = 1;
+	mode = 3;
+	output_attempt = 1
+	},
 /turf/simulated/floor/tiled/airless,
 /area/submap/debrisfield/mining_outpost)
 "f" = (

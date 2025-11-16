@@ -170,13 +170,17 @@ var/datum/planet/tyr/planet_tyr = null
 
 		var/target_zone = pick(BP_ALL)
 		var/amount_blocked = H.run_armor_check(target_zone, "bio")
+		var/amount_soaked = H.get_armor_soak(target_zone, "bio")
 
 		var/damage = rand(1,1)
 
 		if(amount_blocked >= 40)
 			return
 
-		H.apply_damage(damage, BURN, target_zone, amount_blocked, used_weapon = "burning ash")
+		if(amount_soaked >= damage)
+			return // No need to apply damage.
+
+		H.apply_damage(damage, BURN, target_zone, amount_blocked, amount_soaked, used_weapon = "burning ash")
 		if(show_message)
 			to_chat(H, effect_message)
 
@@ -203,13 +207,17 @@ var/datum/planet/tyr/planet_tyr = null
 
 		var/target_zone = pick(BP_ALL)
 		var/amount_blocked = H.run_armor_check(target_zone, "melee")
+		var/amount_soaked = H.get_armor_soak(target_zone, "melee")
 
 		var/damage = rand(2,2)
 
 		if(amount_blocked >= 10)
 			return
 
-		H.apply_damage(damage, BRUTE, target_zone, amount_blocked, used_weapon = "sand")
+		if(amount_soaked >= damage)
+			return // No need to apply damage.
+
+		H.apply_damage(damage, BRUTE, target_zone, amount_blocked, amount_soaked, used_weapon = "sand")
 		if(show_message)
 			to_chat(H, effect_message)
 
@@ -239,13 +247,17 @@ var/datum/planet/tyr/planet_tyr = null
 
 		var/target_zone = pick(BP_ALL)
 		var/amount_blocked = H.run_armor_check(target_zone, "melee")
+		var/amount_soaked = H.get_armor_soak(target_zone, "melee")
 
 		var/damage = rand(5,5)
 
 		if(amount_blocked >= 40)
 			return
 
-		H.apply_damage(damage, BRUTE, target_zone, amount_blocked, used_weapon = "sand")
+		if(amount_soaked >= damage)
+			return // No need to apply damage.
+
+		H.apply_damage(damage, BRUTE, target_zone, amount_blocked, amount_soaked, used_weapon = "sand")
 		if(show_message)
 			to_chat(H, effect_message)
 

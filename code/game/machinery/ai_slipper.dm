@@ -43,11 +43,11 @@
 			locked = !locked
 			to_chat(user, "You [ locked ? "lock" : "unlock"] the device.")
 			if(locked)
-				if(user.check_current_machine(src))
+				if(user.machine==src)
 					user.unset_machine()
 					user << browse(null, "window=ai_slipper")
 			else
-				if(user.check_current_machine(src))
+				if(user.machine==src)
 					attack_hand(user)
 		else
 			to_chat(user, span_warning("Access denied."))

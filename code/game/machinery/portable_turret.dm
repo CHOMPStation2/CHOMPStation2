@@ -214,8 +214,6 @@
 	turret_type = "normal"
 	req_one_access = list()
 	installation = /obj/item/gun/energy/lasertag/omni
-	projectile = /obj/item/projectile/beam/lasertag/omni
-	lethal_projectile = /obj/item/projectile/beam/rainbow/non_lethal //Did you know that lasertag vests have 3x weakness to shock?
 
 	targetting_is_configurable = FALSE
 	lethal_is_configurable = FALSE
@@ -223,12 +221,9 @@
 	locked = FALSE
 	enabled = FALSE
 	anchored = FALSE
-	///What vests we will target.
-	var/list/vests_to_target = list(
-		/obj/item/clothing/suit/lasertag/redtag,
-		/obj/item/clothing/suit/lasertag/bluetag,
-		/obj/item/clothing/suit/lasertag/omni
-	)
+	//These two are used for lasertag
+	check_synth	 = FALSE
+	check_weapons = FALSE
 	//These vars aren't used
 	check_access = FALSE
 	check_arrest = FALSE
@@ -237,32 +232,17 @@
 	check_all = FALSE
 	check_down = FALSE
 
-
 /obj/machinery/porta_turret/lasertag/red
 	turret_type = "red"
 	installation = /obj/item/gun/energy/lasertag/red
-	projectile = /obj/item/projectile/beam/lasertag/red
-	vests_to_target = list(
-		/obj/item/clothing/suit/lasertag/bluetag,
-		/obj/item/clothing/suit/lasertag/omni
-	)
+	check_weapons = TRUE // Used to target blue players
 
 /obj/machinery/porta_turret/lasertag/blue
 	turret_type = "blue"
 	installation = /obj/item/gun/energy/lasertag/blue
-	projectile = /obj/item/projectile/beam/lasertag/blue
-	vests_to_target = list(
-		/obj/item/clothing/suit/lasertag/redtag,
-		/obj/item/clothing/suit/lasertag/omni
-	)
-
-/obj/machinery/porta_turret/lasertag/omni
-	turret_type = "industrial"
+	check_synth = TRUE // Used to target red players
 
 /obj/machinery/porta_turret/lasertag/assess_living(var/mob/living/L)
-	if(emagged)	// FUCK YOU, PERISH
-		return L.stat ? TURRET_NOT_TARGET : TURRET_PRIORITY_TARGET //we won't be uber evil though. If you're KO'd, let's let you get back up.
-
 	if(!ishuman(L))
 		return TURRET_NOT_TARGET
 
@@ -272,13 +252,16 @@
 	if(get_dist(src, L) > 7)	//if it's too far away, why bother?
 		return TURRET_NOT_TARGET
 
+	if(L.lying)		//Don't need to stun-lock the players
+		return TURRET_NOT_TARGET
+
 	if(ishuman(L))
 		var/mob/living/carbon/human/M = L
-		if(is_type_in_list(M.wear_suit, vests_to_target)) // Checks if they are a red player
-			var/obj/item/clothing/suit/lasertag/tag_suit = M.wear_suit
-			if(tag_suit.lasertag_health > 0)
-				return TURRET_PRIORITY_TARGET
-		return TURRET_NOT_TARGET
+		if(istype(M.wear_suit, /obj/item/clothing/suit/redtag) && check_synth) // Checks if they are a red player
+			return TURRET_PRIORITY_TARGET
+
+		if(istype(M.wear_suit, /obj/item/clothing/suit/bluetag) && check_weapons) // Checks if they are a blue player
+			return TURRET_PRIORITY_TARGET
 
 /obj/machinery/porta_turret/lasertag/tgui_data(mob/user)
 	var/list/data = list(
@@ -335,11 +318,9 @@
 	//var/obj/item/ammo_casing/shottype = E.projectile_type
 
 	projectile = P
-	if(!lethal_projectile)
-		lethal_projectile = projectile
+	lethal_projectile = projectile
 	shot_sound = initial(P.fire_sound)
-	if(!lethal_shot_sound)
-		lethal_shot_sound = shot_sound
+	lethal_shot_sound = shot_sound
 
 	if(istype(P, /obj/item/projectile/energy))
 		icon_color = "orange"
@@ -624,7 +605,7 @@
 
 	take_damage(damage)
 
-/obj/machinery/porta_turret/emp_act(severity, recursive)
+/obj/machinery/porta_turret/emp_act(severity)
 	if(enabled)
 		//if the turret is on, the EMP no matter how severe disables the turret for a while
 		//and scrambles its settings, with a slight chance of having an emag effect
@@ -633,7 +614,7 @@
 		check_weapons = prob(50)
 		check_access = prob(20)	// check_access is a pretty big deal, so it's least likely to get turned on
 		check_anomalies = prob(50)
-		if(prob(20 * (1/severity))) //sev 1  = 20% chance sev 2 = 10% sev 3 = ~6 sev 4 = 5%
+		if(prob(5))
 			emagged = TRUE
 
 		enabled=0
@@ -643,12 +624,12 @@
 
 	..()
 
-/obj/machinery/porta_turret/ai_defense/emp_act(severity, recursive)
+/obj/machinery/porta_turret/ai_defense/emp_act(severity)
 	if(prob(33)) // One in three chance to resist an EMP.  This is significant if an AoE EMP is involved against multiple turrets.
 		return
 	..()
 
-/obj/machinery/porta_turret/alien/emp_act(severity, recursive) // This is overrided to give an EMP resistance as well as avoid scambling the turret settings.
+/obj/machinery/porta_turret/alien/emp_act(severity) // This is overrided to give an EMP resistance as well as avoid scambling the turret settings.
 	if(prob(75)) // Superior alien technology, I guess.
 		return
 	enabled = FALSE

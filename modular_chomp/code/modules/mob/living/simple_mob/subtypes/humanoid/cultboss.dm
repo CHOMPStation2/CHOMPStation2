@@ -2,7 +2,6 @@
 	name = "Rift Magus"
 	maxHealth = 450 //Boss Mobs should be tanky. //Old 225
 	health = 450
-	armor = list(melee = 70, bullet = 60, laser = 60, energy = 90, bomb = 30, bio = 100, rad = 100)
 
 	melee_damage_lower = 30 //Old 15
 	melee_damage_upper = 45 //Old 22
@@ -26,6 +25,16 @@
 	faction = "demon"
 	damage_fatigue_mult = 0.5 // We don't want to give them a flat, huge boost to attack speed, but at the same time, make them fight harder the closer they are to dying.
 	injury_enrages = TRUE
+
+	armor_soak = list( //Combat refactor walk back. old 2 armor_soak
+		"melee" = 5,
+		"bullet" = 5,
+		"laser" = 5,
+		"energy" = 5,
+		"bomb" = 0,
+		"bio" = 0,
+		"rad" = 0
+		)
 
 	loot_list = list(/obj/item/clothing/head/culthood/void = 100,
 			/obj/item/clothing/suit/cultrobes/void = 100,

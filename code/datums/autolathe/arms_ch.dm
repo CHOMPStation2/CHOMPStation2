@@ -212,7 +212,7 @@
 
 /datum/category_item/autolathe/arms/b12g/emp
 	name = "ammo box (12 gauge EMP)"
-	path = /obj/item/ammo_magazine/ammo_box/b12g/emp
+	path = /obj/item/ammo_magazine/ammo_box/b12g/beanbag
 	hidden = 1
 
 /datum/category_item/autolathe/arms/b12g/flechette

@@ -3,8 +3,8 @@ import { NtosWindow } from 'tgui/layouts';
 import { Button, ByondUi } from 'tgui-core/components';
 
 import {
-  CameraConsoleContent,
   type camera,
+  CameraConsoleContent,
   type Data,
   prevNextCamera,
   selectCameras,

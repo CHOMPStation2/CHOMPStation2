@@ -133,7 +133,9 @@ var/last_chew = 0
 	var/obj/item/organ/external/O = H.organs_by_name[(H.hand ? BP_L_HAND : BP_R_HAND)]
 	if (!O) return
 
-	var/s = span_warning("[H.name] chews on [H.p_their()] [O.name]!")
+	var/datum/gender/T = GLOB.gender_datums[H.get_visible_gender()]
+
+	var/s = span_warning("[H.name] chews on [T.his] [O.name]!")
 	H.visible_message(s, span_warning("You chew on your [O.name]!"))
 	add_attack_logs(H,H,"chewed own [O.name]")
 

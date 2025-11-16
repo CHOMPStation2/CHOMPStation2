@@ -1,4 +1,5 @@
 import { Section } from 'tgui-core/components';
+import type { BooleanLike } from 'tgui-core/react';
 
 import { digestModeToColor } from '../constants';
 import type { localPrefs, prefData } from '../types';
@@ -9,8 +10,12 @@ import { VoreUserPreferencesSoulcatcher } from '../VoreUserPreferencesTabs/VoreU
 import { VoreUserPreferencesSpawn } from '../VoreUserPreferencesTabs/VoreUserPreferencesSpawn';
 import { VoreUserPreferencesSpontaneous } from '../VoreUserPreferencesTabs/VoreUserPreferencesSpontaneous';
 
-export const VoreUserPreferences = (props: { prefs: prefData }) => {
-  const { prefs } = props;
+export const VoreUserPreferences = (props: {
+  prefs: prefData;
+  show_pictures: BooleanLike;
+  icon_overflow: BooleanLike;
+}) => {
+  const { prefs, show_pictures, icon_overflow } = props;
   const {
     digestable,
     absorbable,
@@ -710,7 +715,11 @@ export const VoreUserPreferences = (props: { prefs: prefData }) => {
 
   return (
     <Section scrollable fill>
-      <VoreUserPreferencesMechanical preferences={preferences} />
+      <VoreUserPreferencesMechanical
+        show_pictures={show_pictures}
+        icon_overflow={icon_overflow}
+        preferences={preferences}
+      />
       <VoreUserPreferencesDevouring
         devourable={devourable}
         digestModeToColor={digestModeToColor}

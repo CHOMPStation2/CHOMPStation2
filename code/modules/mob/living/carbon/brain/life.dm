@@ -1,10 +1,7 @@
 /mob/living/carbon/brain/handle_breathing()
 	return
 
-/mob/living/carbon/brain/handle_radiation()
-	. = ..()
-	if(.)
-		return
+/mob/living/carbon/brain/handle_mutations_and_radiation()
 	if (radiation)
 		if (radiation > 100)
 			radiation = 100
@@ -155,31 +152,56 @@
 
 	return 1
 
-/mob/living/carbon/brain/handle_vision()
-	if (stat == DEAD || (XRAY in src.mutations))
+/mob/living/carbon/brain/handle_regular_hud_updates()
+	if (stat == 2 || (XRAY in src.mutations))
 		sight |= SEE_TURFS
 		sight |= SEE_MOBS
 		sight |= SEE_OBJS
 		see_in_dark = 8
 		see_invisible = SEE_INVISIBLE_LEVEL_TWO
-	else if (stat != DEAD)
+	else if (stat != 2)
 		sight &= ~SEE_TURFS
 		sight &= ~SEE_MOBS
 		sight &= ~SEE_OBJS
 		see_in_dark = 2
 		see_invisible = SEE_INVISIBLE_LIVING
 
-	// Call parent to handle signals
-	..()
+	if (healths)
+		if (stat != 2)
+			switch(health)
+				if(100 to INFINITY)
+					healths.icon_state = "health0"
+				if(80 to 100)
+					healths.icon_state = "health1"
+				if(60 to 80)
+					healths.icon_state = "health2"
+				if(40 to 60)
+					healths.icon_state = "health3"
+				if(20 to 40)
+					healths.icon_state = "health4"
+				if(0 to 20)
+					healths.icon_state = "health5"
+				else
+					healths.icon_state = "health6"
+		else
+			healths.icon_state = "health7"
 
-/mob/living/carbon/brain/handle_regular_hud_updates()
-	. = ..()
-	if(!.)
-		return
+		if (stat == 2 || (XRAY in src.mutations))
+			sight |= SEE_TURFS
+			sight |= SEE_MOBS
+			sight |= SEE_OBJS
+			see_in_dark = 8
+			see_invisible = SEE_INVISIBLE_LEVEL_TWO
+		else if (stat != 2)
+			sight &= ~SEE_TURFS
+			sight &= ~SEE_MOBS
+			sight &= ~SEE_OBJS
+			see_in_dark = 2
+			see_invisible = SEE_INVISIBLE_LIVING
+	if (client)
+		client.screen.Remove(GLOB.global_hud.blurry,GLOB.global_hud.druggy,GLOB.global_hud.vimpaired)
 
-	client.screen.Remove(GLOB.global_hud.blurry,GLOB.global_hud.druggy,GLOB.global_hud.vimpaired)
-
-	if (stat != DEAD)
+	if (stat != 2)
 		if ((blinded))
 			overlay_fullscreen("blind", /atom/movable/screen/fullscreen/blind)
 		else
@@ -188,27 +210,11 @@
 			set_fullscreen(eye_blurry, "blurry", /atom/movable/screen/fullscreen/blurry)
 			set_fullscreen(druggy, "high", /atom/movable/screen/fullscreen/high)
 
-/mob/living/carbon/brain/handle_hud_icons_health()
-	. = ..()
-	if(!. || !healths)
-		return
-
-	if (stat == DEAD)
-		healths.icon_state = "health7"
-		return
-
-	switch(health)
-		if(100 to INFINITY)
-			healths.icon_state = "health0"
-		if(80 to 100)
-			healths.icon_state = "health1"
-		if(60 to 80)
-			healths.icon_state = "health2"
-		if(40 to 60)
-			healths.icon_state = "health3"
-		if(20 to 40)
-			healths.icon_state = "health4"
-		if(0 to 20)
-			healths.icon_state = "health5"
+		if (machine)
+			if (!( machine.check_eye(src) ))
+				reset_view(null)
 		else
-			healths.icon_state = "health6"
+			if(client && !client.adminobs)
+				reset_view(null)
+
+	return 1

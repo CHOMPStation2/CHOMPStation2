@@ -57,6 +57,9 @@
 /mob/proc/is_cloaked()
 	return FALSE
 
+/proc/hasorgans(A) // Fucking really??
+	return ishuman(A)
+
 /proc/iscuffed(A)
 	if(istype(A, /mob/living/carbon))
 		var/mob/living/carbon/C = A
@@ -388,6 +391,7 @@ It's fairly easy to fix if dealing with single letters but not so much with comp
 	return 0
 
 //converts intent-strings into numbers and back
+var/list/intents = list(I_HELP,I_DISARM,I_GRAB,I_HURT)
 /proc/intent_numeric(argument)
 	if(istext(argument))
 		switch(argument)
@@ -555,8 +559,9 @@ It's fairly easy to fix if dealing with single letters but not so much with comp
 
 
 /mob/proc/switch_to_camera(var/obj/machinery/camera/C)
-	if (!C.can_use() || stat || (get_dist(C, src) > 1 || !check_current_machine(src) || blinded || !canmove))
+	if (!C.can_use() || stat || (get_dist(C, src) > 1 || machine != src || blinded || !canmove))
 		return 0
+	check_eye(src)
 	return 1
 
 /mob/living/silicon/ai/switch_to_camera(var/obj/machinery/camera/C)
@@ -711,19 +716,13 @@ var/list/global/organ_rel_size = list(
 /mob/proc/recalculate_vis()
 	return
 
-/// General HUD updates done regularly (health puppet things, etc). Returns true if the mob has a client and is allowed to update its hud.
+//General HUD updates done regularly (health puppet things, etc)
 /mob/proc/handle_regular_hud_updates()
-	SHOULD_CALL_PARENT(TRUE)
-	if(!client)
-		return FALSE
-	if(SEND_SIGNAL(src,COMSIG_LIVING_HANDLE_HUD) & COMSIG_COMPONENT_HANDLED_HUD)
-		return FALSE
-	return TRUE
+	return
 
-/// Handle eye things like the Byond SEE_TURFS, SEE_OBJS, etc.
+//Handle eye things like the Byond SEE_TURFS, SEE_OBJS, etc.
 /mob/proc/handle_vision()
-	SHOULD_CALL_PARENT(TRUE)
-	SEND_SIGNAL(src,COMSIG_LIVING_HANDLE_VISION)
+	return
 
 //Icon is used to occlude things like huds from the faulty byond context menu.
 //   http://www.byond.com/forum/?post=2336679

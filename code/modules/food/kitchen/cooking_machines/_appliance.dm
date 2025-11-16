@@ -282,7 +282,7 @@
 				return
 
 			if(QDELETED(wrap))
-				GR.update_ref(null)
+				GR.WR = null
 
 			if(wrap.loc != src)
 				GR.drop_item_nm()

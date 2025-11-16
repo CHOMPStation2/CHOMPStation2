@@ -142,6 +142,7 @@
 /obj/machinery/petrification/attack_hand(var/mob/user as mob)
 	if(..())
 		return
+	user.set_machine(src)
 	tgui_interact(user)
 
 /obj/machinery/petrification/tgui_interact(mob/user, datum/tgui/ui = null)

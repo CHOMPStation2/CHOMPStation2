@@ -232,10 +232,10 @@
 		else
 			. += span_notice("The device doesn't appear to be transmitting any data.")
 
-// Proc: emp_act(severity, recursive)
+// Proc: emp_act()
 // Parameters: None
 // Description: Drops all calls when EMPed, so the holder can then get murdered by the antagonist.
-/obj/item/communicator/emp_act(severity, recursive)
+/obj/item/communicator/emp_act()
 	close_connection(reason = "Hardware error de%#_^@%-BZZZZZZZT")
 
 // Proc: add_to_EPv2()

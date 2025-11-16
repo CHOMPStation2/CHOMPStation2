@@ -12,7 +12,7 @@ import {
   Tabs,
 } from 'tgui-core/components';
 
-import { LawManagerLawSets, LawManagerLaws } from '../LawManager';
+import { LawManagerLaws, LawManagerLawSets } from '../LawManager';
 import { ModifyRobotNoModule } from './ModifyRobotNoModule';
 import { ModifyRobotAccess } from './ModifyRobotTabs/ModifyRobotAccess';
 import { ModifyRobotComponent } from './ModifyRobotTabs/ModifyRobotComponent';
@@ -63,7 +63,6 @@ export const ModifyRobot = (props) => {
     comms_options,
     armour_options,
     current_gear,
-    theme,
   } = data;
 
   const [tab, setTab] = useState<number>(0);
@@ -147,11 +146,7 @@ export const ModifyRobot = (props) => {
   );
 
   return (
-    <Window
-      width={target?.module ? 900 : 400}
-      height={700}
-      theme={theme || 'ntos'}
-    >
+    <Window width={target?.module ? 900 : 400} height={700}>
       <Window.Content>
         <Stack fill vertical>
           <Stack.Item>

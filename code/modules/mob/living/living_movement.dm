@@ -145,11 +145,13 @@ default behaviour is:
 				H.Weaken(5)
 				now_pushing = FALSE
 				return
+			//CHOMPSTATION edit Adding alternative to lightweight
 			if(H.species.lightweight_light == 1 && H.a_intent == I_HELP)
 				H.visible_message(span_warning("[src] bumps into [H], knocking them off balance!"))
 				H.Weaken(5)
-				now_pushing = FALSE
+				now_pushing = 0
 				return
+		//CHOMPSTATION edit - bringing back mandatory step mechanics, fetish stuff removed if no prefs
 		// Handle grabbing, stomping, and such of micros!
 		if(step_mechanics_pref && tmob.step_mechanics_pref)
 			if(handle_micro_bump_other(tmob)) return
@@ -258,12 +260,11 @@ default behaviour is:
 	if(s_active && !(s_active in contents) && get_turf(s_active) != get_turf(src))	//check !( s_active in contents ) first so we hopefully don't have to call get_turf() so much.
 		s_active.close(src)
 
-/mob/living/proc/dragged(var/mob/living/dragger, var/oldloc, forced)
+/mob/living/proc/dragged(var/mob/living/dragger, var/oldloc)
 	var/area/A = get_area(src)
-	if(forced || (lying && !buckled && pull_damage() && A.get_gravity() && (prob(getBruteLoss() * 200 / maxHealth))))
+	if(lying && !buckled && pull_damage() && A.get_gravity() && (prob(getBruteLoss() * 200 / maxHealth)))
 		adjustBruteLoss(2)
-		visible_message(span_danger("\The [src]'s [isSynthetic() ? "state" : "wounds"] worsen terribly from being dragged!"), runemessage = "is dragged, wounds worsening!")
-		return TRUE
+		visible_message(span_danger("\The [src]'s [isSynthetic() ? "state" : "wounds"] worsen terribly from being dragged!"))
 
 /mob/living/Moved(var/atom/oldloc, direct, forced, movetime)
 	. = ..()

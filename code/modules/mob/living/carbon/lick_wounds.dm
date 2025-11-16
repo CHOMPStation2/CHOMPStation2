@@ -70,7 +70,7 @@
 				if(W.bandaged && W.salved && W.disinfected)
 					continue
 
-				if(!do_after(src, W.damage/5, W))
+				if(!do_mob(src, M, W.damage/5))
 					to_chat(src, span_notice("You must stand still to clean wounds."))
 					break
 

@@ -133,7 +133,7 @@ FIRE ALARM
 /obj/machinery/firealarm/bullet_act()
 	return alarm()
 
-/obj/machinery/firealarm/emp_act(severity, recursive)
+/obj/machinery/firealarm/emp_act(severity)
 	if(prob(50 / severity))
 		alarm(rand(30 / severity, 60 / severity))
 	..()
@@ -275,7 +275,7 @@ Just a object used in constructing fire alarms
 	if(user.stat || stat & (NOPOWER|BROKEN))
 		return
 
-	user.set_machine(src)
+	user.machine = src
 	var/area/A = get_area(src)
 	ASSERT(isarea(A))
 	var/d1
@@ -332,7 +332,7 @@ Just a object used in constructing fire alarms
 	if(usr.stat || stat & (BROKEN|NOPOWER))
 		return
 	if((usr.contents.Find(src) || ((get_dist(src, usr) <= 1) && istype(loc, /turf))) || (isAI(usr)))
-		usr.set_machine(src)
+		usr.machine = src
 		if(href_list["reset"])
 			reset()
 		else if(href_list["alarm"])

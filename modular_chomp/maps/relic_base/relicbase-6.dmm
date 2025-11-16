@@ -1500,8 +1500,12 @@
 /turf/simulated/floor/plating,
 /area/surface/outpost/mining_main/crew_area)
 "pg" = (
-/obj/machinery/power/smes/buildable/outpost_substation/max_charge_max_input{
-	RCon_tag = "Outpost - Xenoarch"
+/obj/machinery/power/smes/buildable/outpost_substation{
+	RCon_tag = "Outpost - Xenoarch";
+	charge = 500000;
+	input_attempt = 1;
+	input_level = 150000;
+	output_level = 150000
 	},
 /obj/structure/cable/green{
 	icon_state = "0-4"
@@ -4052,8 +4056,12 @@
 /turf/simulated/floor/tiled/white,
 /area/surface/outpost/research/xenoarcheology/anomaly)
 "Tf" = (
-/obj/machinery/power/smes/buildable/outpost_substation/max_charge_max_input{
-	RCon_tag = "Outpost - Mining"
+/obj/machinery/power/smes/buildable/outpost_substation{
+	RCon_tag = "Outpost - Mining";
+	charge = 500000;
+	input_attempt = 1;
+	input_level = 150000;
+	output_level = 150000
 	},
 /obj/structure/cable/green{
 	icon_state = "0-4"

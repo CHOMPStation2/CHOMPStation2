@@ -1,15 +1,41 @@
-import { Section, Stack } from 'tgui-core/components';
+import { useBackend } from 'tgui/backend';
+import { Button, Section, Stack } from 'tgui-core/components';
+import type { BooleanLike } from 'tgui-core/react';
 
 import type { localPrefs } from '../types';
 import { VoreUserPreferenceItem } from '../VorePanelElements/VoreUserPreferenceItem';
 
 export const VoreUserPreferencesMechanical = (props: {
+  show_pictures: BooleanLike;
+  icon_overflow: BooleanLike;
   preferences: localPrefs;
 }) => {
-  const { preferences } = props;
+  const { act } = useBackend();
+  const { show_pictures, icon_overflow, preferences } = props;
 
   return (
-    <Section title="Mechanical Preferences">
+    <Section
+      title="Mechanical Preferences"
+      buttons={
+        <Button
+          icon="eye"
+          selected={show_pictures}
+          tooltip={
+            'Allows to toggle if belly contents are shown as icons or in list format. ' +
+            (show_pictures
+              ? 'Contents shown as pictures.'
+              : 'Contents shown as lists.') +
+            (show_pictures && icon_overflow
+              ? 'Temporarily disabled. Stomach contents above limits.'
+              : '')
+          }
+          backgroundColor={show_pictures && icon_overflow ? 'orange' : ''}
+          onClick={() => act('show_pictures')}
+        >
+          Contents Preference: {show_pictures ? 'Show Pictures' : 'Show List'}
+        </Button>
+      }
+    >
       <Stack wrap="wrap" justify="center">
         <Stack.Item basis="32%">
           <VoreUserPreferenceItem

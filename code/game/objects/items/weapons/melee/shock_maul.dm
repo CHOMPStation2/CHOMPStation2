@@ -267,9 +267,11 @@
 		update_held_icon()
 	powercheck(hitcost)
 
-/obj/item/melee/shock_maul/emp_act(severity, recursive)
+/obj/item/melee/shock_maul/emp_act(severity)
+	if(bcell)
+		bcell.emp_act(severity)	//let's not duplicate code everywhere if we don't have to please.
 	if(status)
-		status = FALSE
+		status = 0
 		visible_message(span_warning("\The [src]'s power field hisses and sputters out."))
 		update_held_icon()
 	..()

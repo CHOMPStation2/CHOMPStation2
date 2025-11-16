@@ -204,7 +204,6 @@ export type contentData = {
   ref: string;
   outside: BooleanLike;
   icon: string;
-  our_type: string;
 };
 
 export type bellyLiquidData = {
@@ -467,12 +466,4 @@ export type preferenceData = {
   content: { enabled: string; disabled: string };
   fluid?: boolean;
   back_color?: { enabled: string; disabled: string };
-};
-
-export type ActionButtonData = {
-  name: string;
-  tooltip: string;
-  disabled?: boolean;
-  color?: string;
-  needsConfirm?: boolean;
 };

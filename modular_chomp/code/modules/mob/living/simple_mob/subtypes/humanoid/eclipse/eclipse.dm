@@ -131,7 +131,8 @@
 	maxHealth = 100
 	projectiletype = /obj/item/projectile/energy/eclipse
 
-	armor = list(melee = -100, bullet = -100, laser = 90, energy = 90, bomb = 50, bio = 100, rad = 100) //Solar members are nigh immune to burns.
+	armor = list(melee = -100, bullet = -100, laser = 40, energy = 40, bomb = 50, bio = 100, rad = 100) //Solar members are nigh immune to burns.
+	armor_soak = list(melee = 0, bullet = 0, laser = 20, energy = 20, bomb = 0, bio = 0, rad = 0)
 
 /mob/living/simple_mob/humanoid/eclipse/solar/bullet_act(obj/item/projectile/P)
 	..()
@@ -412,7 +413,8 @@
 	health = 100
 	maxHealth = 100
 	projectiletype = /obj/item/projectile/bullet/crystaline
-	armor = list(melee = 80, bullet = 80, laser = -100, energy = -100, bomb = 50, bio = 100, rad = 100) //Lunar members take massive damage from to burns.
+	armor = list(melee = 40, bullet = 40, laser = -100, energy = -100, bomb = 50, bio = 100, rad = 100) //Lunar members are nigh immune to burns.
+	armor_soak = list(melee = 20, bullet = 20, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0) //15 because every melee weapon has dumb amount of AP
 
 /mob/living/simple_mob/humanoid/eclipse/lunar/bullet_act(obj/item/projectile/P)
 	..()
@@ -1017,3 +1019,6 @@
 			to_chat(M, span_critical("The skin on your [parse_zone(target)] feels like it's ripping apart, and a stream of blood flies out."))
 			var/blood_to_remove = (rand(10,30))
 			M.remove_blood(blood_to_remove)
+
+
+

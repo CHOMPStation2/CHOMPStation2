@@ -52,14 +52,25 @@
 	coretype = /obj/item/slime_extract/metal
 	maxHealth = 250
 	armor = list(
-				"melee" = 35,
-				"bullet" = 35,
-				"laser" = 35,
+				"melee" = 25,
+				"bullet" = 25,
+				"laser" = 25,
 				"energy" = 50,
 				"bomb" = 80,
 				"bio" = 100,
 				"rad" = 100
 				)
+
+	armor_soak = list(
+				"melee" = 5,
+				"bullet" = 5,
+				"laser" = 5,
+				"energy" = 0,
+				"bomb" = 0,
+				"bio" = 0,
+				"rad" = 0
+				)
+
 
 /mob/living/simple_mob/slime/feral/yellow
 	desc = "This slime is very conductive, and is known to use electricity as a means of defense moreso than usual for slimes."

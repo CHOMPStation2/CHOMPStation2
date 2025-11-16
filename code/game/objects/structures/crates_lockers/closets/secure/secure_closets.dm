@@ -19,7 +19,9 @@
 		return 0
 	return ..()
 
-/obj/structure/closet/secure_closet/emp_act(severity, recursive)
+/obj/structure/closet/secure_closet/emp_act(severity)
+	for(var/obj/O in src)
+		O.emp_act(severity)
 	if(!broken)
 		if(prob(50/severity))
 			locked = !locked

@@ -10,8 +10,7 @@
 		"anobattery-advanced",
 		"anobattery-exotic",
 	)
-	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_3_POINTS)
-	announce_channels = list(CHANNEL_SCIENCE)
+	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_2_POINTS)
 
 /datum/techweb_node/alien_engi
 	id = TECHWEB_NODE_ALIEN_ENGI
@@ -25,5 +24,5 @@
 		"hybridwirecutters",
 		"hybridwelder",
 	)
-	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_3_POINTS)
+	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_2_POINTS)
 	announce_channels = list(CHANNEL_ENGINEERING)

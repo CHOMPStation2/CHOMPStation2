@@ -1597,7 +1597,9 @@
 /turf/simulated/floor/wood/broken,
 /area/submap/debrisfield/luxury_boat/crew)
 "Xr" = (
-/obj/machinery/power/smes/buildable/max_charge,
+/obj/machinery/power/smes/buildable{
+	charge = 500000
+	},
 /obj/structure/cable/green{
 	icon_state = "0-4"
 	},

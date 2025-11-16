@@ -7,7 +7,6 @@
 	anchored = TRUE
 	health = 0 //destroying the statue kills the mob within
 	blocks_emissive = EMISSIVE_BLOCK_UNIQUE
-	closet_appearance = null
 	var/intialTox = 0 	//these are here to keep the mob from taking damage from things that logically wouldn't affect a rock
 	var/intialFire = 0	//it's a little sloppy I know but it was this or the GODMODE flag. Lesser of two evils.
 	var/intialBrute = 0
@@ -20,7 +19,10 @@
 		if(L.buckled)
 			L.buckled = 0
 			L.anchored = FALSE
-		L.forceMove(src)
+		if(L.client)
+			L.client.perspective = EYE_PERSPECTIVE
+			L.client.eye = src
+		L.loc = src
 		L.sdisabilities |= MUTE
 		health = L.health + 100 //stoning damaged mobs will result in easier to shatter statues
 		intialTox = L.getToxLoss()
@@ -59,13 +61,15 @@
 /obj/structure/closet/statue/dump_contents()
 
 	for(var/obj/O in src)
-		O.forceMove(get_turf(src))
+		O.loc = src.loc
 
 	for(var/mob/living/M in src)
-		M.forceMove(loc) // Might be in a belly
+		M.loc = src.loc
 		M.sdisabilities &= ~MUTE
 		M.take_overall_damage((M.health - health - 100),0) //any new damage the statue incurred is transfered to the mob
-		M.reset_perspective() // Fixes a blackscreen flicker
+		if(M.client)
+			M.client.eye = M.client.mob
+			M.client.perspective = MOB_PERSPECTIVE
 
 /obj/structure/closet/statue/open()
 	return

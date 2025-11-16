@@ -169,7 +169,6 @@
 	prereq_ids = list(TECHWEB_NODE_AUGMENTATION)
 	design_ids = list(
 		"implant_backup",
-		"health_scan_implant",
 		// "skill_station",
 		// "implant_trombone",
 		// "implant_chem",

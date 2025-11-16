@@ -120,7 +120,7 @@
 				add_overlay("lasergen-cool")
 
 /obj/machinery/power/thermoregulator/proc/turn_off()
-	on = FALSE
+	on = 0
 	change_mode(MODE_IDLE)
 	update_icon()
 
@@ -130,12 +130,12 @@
 	mode = new_mode
 	update_icon()
 
-/obj/machinery/power/thermoregulator/emp_act(severity, recursive)
+/obj/machinery/power/thermoregulator/emp_act(severity)
 	if(!on)
-		on = TRUE
+		on = 1
 	target_temp += rand(0, 1000)
 	update_icon()
-	..(severity, recursive)
+	..(severity)
 
 /obj/machinery/power/thermoregulator/overload(var/obj/machinery/power/source)
 	if(!anchored || !powernet)

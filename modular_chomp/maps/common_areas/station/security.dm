@@ -139,24 +139,3 @@
 
 /area/security/tactical/simulated_caves
 	base_turf = /turf/simulated/floor/outdoors/rocks/caves
-
-/area/security/cetus/meteor
-	base_turf = /turf/simulated/floor/outdoors/rocks/cetus
-
-/area/security/cetus/meteor/armory
-	name = "\improper Armory"
-	icon_state = "armory"
-	ambience = AMBIENCE_HIGHSEC
-
-/area/security/cetus/meteor/brig
-	name = "\improper Prison General Population"
-	icon_state = "brig"
-	flags = RAD_SHIELDED
-
-/area/security/cetus/meteor/forensic
-	name = "\improper Forensic Lab"
-	icon_state = "detective"
-
-/area/security/cetus/meteor/hallway
-	name = "\improper Lower Security"
-	icon_state = "security"

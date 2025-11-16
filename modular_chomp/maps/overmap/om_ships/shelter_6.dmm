@@ -1063,7 +1063,10 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/shuttle/tabiranth)
 "bl" = (
-/obj/machinery/power/smes/buildable/hybrid/engine_default,
+/obj/machinery/power/smes/buildable/hybrid{
+	input_level = 200000;
+	output_level = 200000
+	},
 /obj/structure/cable/cyan{
 	icon_state = "0-4"
 	},

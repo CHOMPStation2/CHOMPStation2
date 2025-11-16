@@ -153,7 +153,8 @@
 	if(owner.on_fire)
 		return
 
-	return "[owner.p_They()] [owner.p_are()] covered in something flammable."
+	var/datum/gender/T = GLOB.gender_datums[owner.get_visible_gender()]
+	return "[T.He] [T.is] covered in something flammable."
 
 // /datum/status_effect/fire_handler/fire_stacks/proc/owner_touched_sparks()
 // 	SIGNAL_HANDLER
@@ -373,7 +374,8 @@
 	REMOVE_TRAIT(owner, TRAIT_NO_SLIP_WATER, TRAIT_STATUS_EFFECT(id))
 
 /datum/status_effect/fire_handler/wet_stacks/get_examine_text()
-	return "[owner.p_They()] look[owner.p_s()] a little soaked."
+	var/datum/gender/T = GLOB.gender_datums[owner.get_visible_gender()]
+	return "[T.He] look[T.s] a little soaked."
 
 /datum/status_effect/fire_handler/wet_stacks/tick(seconds_between_ticks)
 	var/decay = HAS_TRAIT(owner, TRAIT_WET_FOR_LONGER) ? -0.035 : -0.5

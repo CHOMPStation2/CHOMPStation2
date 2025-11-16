@@ -91,7 +91,7 @@ export const DNAModifierOccupant = (props: { isDNAInvalid: BooleanLike }) => {
               </LabeledList.Item>
               <LabeledList.Item label="Unique Enzymes">
                 {data.occupant.uniqueEnzymes ? (
-                  data.occupant.uniqueEnzymes.toUpperCase()
+                  data.occupant.uniqueEnzymes
                 ) : (
                   <Box color="bad">
                     <Icon name="exclamation-circle" />

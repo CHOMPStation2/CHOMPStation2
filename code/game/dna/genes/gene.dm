@@ -101,11 +101,23 @@
 			continue
 
 		// check trait if not. CONFLICT-O-TRON ENGAGE
-		if(check_trait_conflict(linked_trait, GLOB.all_traits[P]))
+		var/datum/trait/instance_test = GLOB.all_traits[P]
+		if(path in instance_test.excludes)
 			conflict_traits |= P
 			has_conflict = TRUE
 			continue
-
+		for(var/V in linked_trait.var_changes)
+			if(V == "flags")
+				continue
+			if(V in instance_test.var_changes)
+				conflict_traits |= P
+				has_conflict = TRUE
+				continue
+		for(var/V in linked_trait.var_changes_pref)
+			if(V in instance_test.var_changes_pref)
+				conflict_traits |= P
+				has_conflict = TRUE
+				continue
 	return has_conflict
 
 /datum/gene/trait/activate(var/mob/M, var/connected, var/mut_flags)

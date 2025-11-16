@@ -10,6 +10,7 @@ import { Section, Stack, Tabs } from 'tgui-core/components';
 import { ChatPageSettings } from '../chat';
 import { changeSettingsTab } from './actions';
 import { SETTINGS_TABS } from './constants';
+import { selectActiveTab } from './selectors';
 import { SettingsStatPanel } from './SettingsStatPanel';
 import { AdminSettings } from './SettingTabs/AdminSettings';
 import { ExportTab } from './SettingTabs/ExportTab';
@@ -17,7 +18,6 @@ import { MessageLimits } from './SettingTabs/MessageLimits';
 import { SettingsGeneral } from './SettingTabs/SettingsGeneral';
 import { TextHighlightSettings } from './SettingTabs/TextHighlightSettings';
 import { TTSSettings } from './SettingTabs/TTSSettings';
-import { selectActiveTab } from './selectors';
 
 export const SettingsPanel = (props) => {
   const activeTab = useSelector(selectActiveTab);

@@ -342,7 +342,7 @@
 		return 1
 
 	if (!usr || (!(usr in range(1, src)) && iscarbon(usr)))
-		usr.set_machine(src)
+		usr.machine = src
 
 	src.add_fingerprint(usr)
 	src.updateUsrDialog(usr)

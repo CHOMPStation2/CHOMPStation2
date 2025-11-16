@@ -9,7 +9,6 @@ import './styles/main.scss';
 import './styles/themes/abductor.scss';
 import './styles/themes/cardtable.scss';
 import './styles/themes/spookyconsole.scss';
-import './styles/themes/nuclear.scss';
 import './styles/themes/hackerman.scss';
 import './styles/themes/crtsoul.scss';
 import './styles/themes/malfunction.scss';

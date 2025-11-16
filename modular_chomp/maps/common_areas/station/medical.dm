@@ -201,30 +201,3 @@
 	name ="\improper Patient B"
 	icon_state = "medbay_patient_room_b"
 	flags = RAD_SHIELDED
-
-/area/medical/cetus/atriumd1
-	name = "\improper Medical Atrium Deck One"
-	base_turf = /turf/simulated/floor/outdoors/rocks/cetus
-
-/area/medical/cetus/atriumd2
-	name = "\improper Medical Atrium Deck Two"
-
-/area/medical/cetus/hall
-	name = "\improper Medical Port Hallway"
-
-/area/medical/cetus/jrfirstaid
-	name = "\improper Joint Research Medical Station"
-
-/area/medical/cetus/dormfirstaid
-	name = "\improper Recreation Medical Station"
-	base_turf = /turf/simulated/floor/outdoors/rocks/cetus
-	flags = RAD_SHIELDED | AREA_FORBID_EVENTS | AREA_FORBID_SINGULO
-
-/area/medical/cetus/sleevelobby
-	name = "\improper EMT Lobby"
-	icon_state = "medbay_emt_bay"
-
-/area/medical/morgue/cetus
-	base_turf = /turf/simulated/floor/outdoors/rocks/cetus
-	ambience = AMBIENCE_GHOSTLY
-	lightswitch = FALSE

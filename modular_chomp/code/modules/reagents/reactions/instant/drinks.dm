@@ -1,3 +1,64 @@
+/decl/chemical_reaction/instant/drinks/minttea
+	name = REAGENT_MINTTEA
+	id = REAGENT_ID_MINTTEA
+	result = REAGENT_ID_MINTTEA
+	required_reagents = list(REAGENT_ID_TEA = 5, REAGENT_ID_MINT = 1)
+	result_amount = 6
+
+/decl/chemical_reaction/instant/drinks/lemontea
+	name = REAGENT_LEMONTEA
+	id = REAGENT_ID_LEMONTEA
+	result = REAGENT_ID_LEMONTEA
+	required_reagents = list(REAGENT_ID_TEA = 5, REAGENT_ID_LEMONJUICE = 1)
+	result_amount = 6
+
+/decl/chemical_reaction/instant/drinks/limetea
+	name = REAGENT_LIMETEA
+	id = REAGENT_ID_LIMETEA
+	result = REAGENT_ID_LIMETEA
+	required_reagents = list(REAGENT_ID_TEA = 5, REAGENT_ID_LIMEJUICE = 1)
+	result_amount = 6
+
+/decl/chemical_reaction/instant/drinks/orangetea
+	name = REAGENT_ORANGETEA
+	id = REAGENT_ID_ORANGETEA
+	result = REAGENT_ID_ORANGETEA
+	required_reagents = list(REAGENT_ID_TEA = 5, REAGENT_ID_ORANGEJUICE = 1)
+	result_amount = 6
+
+/decl/chemical_reaction/instant/drinks/berrytea
+	name = REAGENT_BERRYTEA
+	id = REAGENT_ID_BERRYTEA
+	result = REAGENT_ID_BERRYTEA
+	required_reagents = list(REAGENT_ID_TEA = 5, REAGENT_ID_BERRYJUICE = 1)
+	result_amount = 6
+
+/decl/chemical_reaction/instant/drinks/cherrytea
+	name = REAGENT_CHERRYTEA
+	id = REAGENT_ID_CHERRYTEA
+	result = REAGENT_ID_CHERRYTEA
+	required_reagents = list(REAGENT_ID_TEA = 5, REAGENT_ID_CHERRYJELLY = 1)
+	result_amount = 6
+
+/decl/chemical_reaction/instant/drinks/watermelontea
+	name = REAGENT_WATERMELONTEA
+	id = REAGENT_ID_WATERMELONTEA
+	result = REAGENT_ID_WATERMELONTEA
+	required_reagents = list(REAGENT_ID_TEA = 5, REAGENT_ID_WATERMELONJUICE = 1)
+	result_amount = 6
+
+/decl/chemical_reaction/instant/tea/matcha_latte
+	id = REAGENT_ID_MATCHALATTE
+	result = REAGENT_ID_MATCHALATTE
+	required_reagents = list (REAGENT_ID_MATCHAPOWDER = 1, REAGENT_ID_MILK = 5)
+	result_amount = 5
+
+/decl/chemical_reaction/instant/freshtea/green
+	id = REAGENT_ID_FRESHTEAGREEN
+	result = REAGENT_ID_FRESHTEAGREEN
+	required_reagents = list (REAGENT_ID_TEALEAVESGREEN = 1, REAGENT_ID_WATER = 9)
+	result_amount = 10
+
 /decl/chemical_reaction/instant/instantteapowder/green
 	id = REAGENT_ID_INSTANTTEAPOWDERGREEN
 	result = REAGENT_ID_INSTANTTEAPOWDERGREEN
@@ -9,6 +70,12 @@
 	result = REAGENT_ID_INSTANTTEAGREEN
 	required_reagents = list (REAGENT_ID_INSTANTTEAPOWDERGREEN = 1, REAGENT_ID_WATER = 9)
 	result_amount = 10
+
+/decl/chemical_reaction/instant/matcha
+	id = REAGENT_ID_MATCHA
+	result = REAGENT_ID_MATCHA
+	required_reagents = list (REAGENT_ID_MATCHAPOWDER = 1, REAGENT_ID_WATER = 2)
+	result_amount = 2
 
 /decl/chemical_reaction/instant/drinks/spiderdrink
 	name = REAGENT_SPIDERDRINK

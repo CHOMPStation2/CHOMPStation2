@@ -10,6 +10,3 @@
 
 /// from base of [/atom/proc/extinguish]
 #define COMSIG_ATOM_EXTINGUISH "atom_extinguish"
-
-/// From base atom/hitby(atom/movable/AM)
-#define COMSIG_ATOM_HITBY "atom_hitby"

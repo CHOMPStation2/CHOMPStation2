@@ -242,6 +242,8 @@
 		qdel(src)
 		return
 
+	var/datum/gender/TU = GLOB.gender_datums[assailant.get_visible_gender()]
+
 	last_action = world.time
 
 	if(state < GRAB_AGGRESSIVE)
@@ -262,7 +264,7 @@
 			to_chat(assailant, span_notice("You squeeze [affecting], but nothing interesting happens."))
 			return
 
-		assailant.visible_message(span_warning("[assailant] has reinforced [assailant.p_their()] grip on [affecting] (now neck)!"))
+		assailant.visible_message(span_warning("[assailant] has reinforced [TU.his] grip on [affecting] (now neck)!"))
 		state = GRAB_NECK
 		icon_state = "grabbed+1"
 		assailant.set_dir(get_dir(assailant, affecting))
@@ -271,11 +273,11 @@
 		hud.name = "kill"
 		affecting.Stun(10) //10 ticks of ensured grab
 	else if(state < GRAB_UPGRADING)
-		assailant.visible_message(span_danger("[assailant] starts to tighten [assailant.p_their()] grip on [affecting]'s neck!"))
+		assailant.visible_message(span_danger("[assailant] starts to tighten [TU.his] grip on [affecting]'s neck!"))
 		hud.icon_state = "kill1"
 
 		state = GRAB_KILL
-		assailant.visible_message(span_danger("[assailant] has tightened [assailant.p_their()] grip on [affecting]'s neck!"))
+		assailant.visible_message(span_danger("[assailant] has tightened [TU.his] grip on [affecting]'s neck!"))
 		add_attack_logs(assailant,affecting,"Strangled")
 		affecting.setClickCooldown(10)
 		affecting.AdjustLosebreath(1)
@@ -339,7 +341,8 @@
 
 /obj/item/grab/proc/reset_kill_state()
 	if(state == GRAB_KILL)
-		assailant.visible_message(span_warning("[assailant] lost [assailant.p_their()] tight grip on [affecting]'s neck!"))
+		var/datum/gender/T = GLOB.gender_datums[assailant.get_visible_gender()]
+		assailant.visible_message(span_warning("[assailant] lost [T.his] tight grip on [affecting]'s neck!"))
 		hud.icon_state = "kill"
 		state = GRAB_NECK
 
@@ -371,6 +374,7 @@
 
 	//It's easier to break out of a grab by a smaller mob
 	break_strength += max(size_difference(affecting, assailant), 0)
+	//CHOMPEdit Begin
 	var/prob_mult = 1
 	var/mob/living/carbon/human/grabbee = affecting
 	var/mob/living/carbon/human/grabber = assailant
@@ -382,6 +386,7 @@
 		break_strength += grabber.species.grab_power_victims
 
 	var/break_chance = CLAMP(prob_mult*break_chance_table[CLAMP(break_strength, 1, break_chance_table.len)],0,100)
+	//CHOMPEdit End
 	if(prob(break_chance))
 		if(state == GRAB_KILL)
 			reset_kill_state()

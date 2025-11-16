@@ -111,6 +111,6 @@ GLOBAL_LIST_EMPTY(holoposters)
 	if(wasUnpowered != (stat & NOPOWER))
 		update_icon()
 
-/obj/machinery/holoposter/emp_act(severity, recursive)
+/obj/machinery/holoposter/emp_act()
 	stat |= BROKEN
 	update_icon()

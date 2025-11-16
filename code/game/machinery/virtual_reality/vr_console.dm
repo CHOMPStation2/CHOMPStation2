@@ -3,7 +3,6 @@
 	desc = "A fancy bed with built-in sensory I/O ports and connectors to interface users' minds with their bodies in virtual reality."
 	icon = 'icons/obj/Cryogenic2.dmi'
 	icon_state = "body_scanner_0"
-	flags = REMOTEVIEW_ON_ENTER
 
 	var/base_state = "body_scanner_"
 
@@ -118,9 +117,9 @@
 
 
 
-/obj/machinery/vr_sleeper/emp_act(severity, recursive)
+/obj/machinery/vr_sleeper/emp_act(var/severity)
 	if(stat & (BROKEN|NOPOWER))
-		..(severity, recursive)
+		..(severity)
 		return
 
 	if(occupant)
@@ -134,7 +133,7 @@
 			smoke.start("#202020")
 		perform_exit()
 
-	..(severity, recursive)
+	..(severity)
 
 /obj/machinery/vr_sleeper/verb/eject()
 	set src in view(1)
@@ -187,7 +186,10 @@
 			to_chat(user, span_warning("\The [src] is already occupied."))
 			return
 		M.stop_pulling()
-		M.forceMove(src)
+		if(M.client)
+			M.client.perspective = EYE_PERSPECTIVE
+			M.client.eye = src
+		M.loc = src
 		occupant = M
 
 		update_icon()
@@ -219,7 +221,9 @@
 	if(occupant.vr_link)
 		occupant.vr_link.exit_vr(FALSE)
 
-	occupant.reset_perspective() // Needed for returning from VR
+	if(occupant.client)
+		occupant.client.eye = occupant.client.mob
+		occupant.client.perspective = MOB_PERSPECTIVE
 	occupant.forceMove(get_turf(src))
 	occupant = null
 	for(var/atom/movable/A in src) // In case an object was dropped inside or something
@@ -227,7 +231,7 @@
 			continue
 		if(A in component_parts)
 			continue
-		A.forceMove(get_turf(src))
+		A.loc = src.loc
 	update_use_power(USE_POWER_IDLE)
 	update_icon()
 

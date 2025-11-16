@@ -215,10 +215,6 @@
 	icon_state = "monotile"
 	initial_flooring = /decl/flooring/tiling/new_tile/monotile
 
-/turf/simulated/floor/tiled/monotile/purple
-	icon_state = "monotile-purple"
-	initial_flooring = /decl/flooring/tiling/new_tile/monotile/purple
-
 /turf/simulated/floor/tiled/steel_grid
 	name = "floor"
 	icon = 'icons/turf/flooring/tiles_vr.dmi'
@@ -409,11 +405,6 @@
 	color = COLOR_BROWN
 	icon_state = "white"
 	initial_flooring = /decl/flooring/tiling/yellow
-
-/turf/simulated/floor/tiled/purple
-	name = "purple floor"
-	icon_state = "purple"
-	initial_flooring = /decl/flooring/tiling/purple
 
 /turf/simulated/floor/tiled/freezer
 	name = "tiles"

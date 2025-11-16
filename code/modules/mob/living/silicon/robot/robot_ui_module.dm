@@ -14,7 +14,6 @@
 	if(isrobot(user))
 		var/mob/living/silicon/robot/R = user
 		R.selecting_module = FALSE
-	qdel(src)
 
 /datum/tgui_module/robot_ui_module/tgui_interact(mob/user, datum/tgui/ui, datum/tgui/parent_ui)
 	. = ..()
@@ -42,7 +41,8 @@
 			modules.Add(R.restrict_modules_to)
 		else if(R.shell)
 			modules.Add(GLOB.robot_module_types) // CHOMPEdit
-			// CHOMPAdd Start, crisis mode for shells
+			// CHOMPAdd Start, shell blacklist and crisis mode for shells
+			modules.Remove(GLOB.shell_module_blacklist)
 			if(R.crisis || GLOB.security_level == SEC_LEVEL_RED || R.crisis_override)
 				to_chat(src, span_red("Crisis mode active. Combat module available."))
 				modules |= GLOB.emergency_module_types
@@ -57,7 +57,10 @@
 					modules |= module_name
 	data["possible_modules"] = modules
 	data["mind_name"] = R.mind.name
-	data["theme"] = R.get_ui_theme()
+	if(R.emagged)
+		data["theme"] = "syndicate"
+	else if (R.ui_theme)
+		data["theme"] = R.ui_theme
 
 	return data
 

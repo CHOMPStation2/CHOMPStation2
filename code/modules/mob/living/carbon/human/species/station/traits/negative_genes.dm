@@ -203,7 +203,6 @@
 	desc = "Your blood reacts to hostile stimulation such as burning when seperated from your body, as if it was its own creature. You WILL be mistaken for a changeling, you may want to document this in your medical records."
 	var_changes = list("ambulant_blood" = TRUE)
 	cost = -1 //CHOMPEdit - Keep original value
-	can_take = ORGANICS
 
 	is_genetrait = TRUE
 	hidden = FALSE

@@ -109,7 +109,7 @@
 		disable_field()
 		update_icon()
 
-/obj/machinery/atmospheric_field_generator/emp_act(severity, recursive)
+/obj/machinery/atmospheric_field_generator/emp_act()
 	if(!(stat & EMPED))
 		stat |= EMPED
 		disable_field() //shutting dowwwwwwn

@@ -188,7 +188,7 @@
 
 	fry_loop.start(src)
 
-	if(!do_after(user, 2 SECONDS, victim))
+	if(!do_mob(user, victim, 20))
 		cooking = FALSE
 		icon_state = off_icon
 		fry_loop.stop(src)

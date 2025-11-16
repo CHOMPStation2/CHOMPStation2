@@ -25,15 +25,6 @@
 #define Z_NAME_SN_CENTCOM					"Soluna Nexus - Central Command" // Aliased to Z_NAME_ALIAS_CENTCOM
 #define Z_NAME_SN_TRANSIT					"Soluna Nexus - Transit"
 
-// Cetus
-#define Z_LEVEL_CETUS_STATION_ONE				1
-#define Z_LEVEL_CETUS_STATION_TWO				2
-#define Z_LEVEL_CETUS_STATION_THREE				3
-
-#define Z_NAME_CETUS_MISC						"Cetus - Misc" // Aliased to Z_NAME_ALIAS_MISC
-#define Z_NAME_CETUS_CENTCOM					"Cetus - Central Command" // Aliased to Z_NAME_ALIAS_CENTCOM
-#define Z_NAME_CETUS_TRANSIT					"Cetus - Transit"
-
 // Relic Base
 #define Z_LEVEL_RB_CATACOMBS				1
 #define Z_LEVEL_RB_UNDERGROUND				2

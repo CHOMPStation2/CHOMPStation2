@@ -1191,23 +1191,24 @@ GLOBAL_LIST_EMPTY(apcs)
 
 
 // damage and destruction acts
-/obj/machinery/power/apc/emp_act(severity, recursive)
+/obj/machinery/power/apc/emp_act(severity)
 	// Fail for 8-12 minutes (divided by severity)
 	// Division by 2 is required, because machinery ticks are every two seconds. Without it we would fail for 16-24 minutes.
-
 	if(is_critical)
 		// Critical APCs are considered EMP shielded and will be offline only for about half minute. Prevents AIs being one-shot disabled by EMP strike.
 		// Critical APCs are also more resilient to cell corruption/power drain.
 		energy_fail(rand(240, 360) / severity / CRITICAL_APC_EMP_PROTECTION)
-		severity = severity+2 //Anything inside the APC is also shielded.
+		if(cell)
+			cell.emp_act(severity+2)
 	else
 		// Regular APCs fail for normal time.
 		energy_fail(rand(240, 360) / severity)
-		//Cells (or anything else within) is partially shielded by the APC frame.
-		severity = severity+1
+		//Cells are partially shielded by the APC frame.
+		if(cell)
+			cell.emp_act(severity+1)
 
 	update_icon()
-	..(severity, recursive)
+	..()
 
 /obj/machinery/power/apc/ex_act(severity)
 

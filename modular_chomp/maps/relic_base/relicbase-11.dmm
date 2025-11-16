@@ -1307,8 +1307,12 @@
 /turf/simulated/floor/plating,
 /area/expoutpost/hangarthree)
 "eY" = (
-/obj/machinery/power/smes/buildable/max_charge_max_input{
-	RCon_tag = "Expedition Outpost - Starboard Solars"
+/obj/machinery/power/smes/buildable{
+	RCon_tag = "Expedition Outpost - Starboard Solars";
+	charge = 2.5e+006;
+	input_attempt = 1;
+	input_level = 150000;
+	output_level = 100000
 	},
 /obj/structure/cable{
 	icon_state = "0-2"
@@ -3411,7 +3415,7 @@
 /obj/structure/window/reinforced/survival_pod{
 	dir = 4
 	},
-/obj/machinery/power/smes/buildable/power_shuttle/max_charge_max_input_base_output,
+/obj/machinery/power/smes/buildable/power_shuttle,
 /obj/structure/cable/green,
 /turf/simulated/shuttle/plating,
 /area/shuttle/echidna)
@@ -7740,8 +7744,12 @@
 /turf/simulated/wall/r_wall,
 /area/expoutpost/prep)
 "Fa" = (
-/obj/machinery/power/smes/buildable/max_charge_max_input{
-	RCon_tag = "Expedition Outpost - Port Solars"
+/obj/machinery/power/smes/buildable{
+	RCon_tag = "Expedition Outpost - Port Solars";
+	charge = 2.5e+006;
+	input_attempt = 1;
+	input_level = 150000;
+	output_level = 100000
 	},
 /obj/structure/cable{
 	icon_state = "0-2"

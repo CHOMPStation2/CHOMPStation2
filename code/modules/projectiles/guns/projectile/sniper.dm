@@ -20,6 +20,7 @@
 	projectile_type = /obj/item/projectile/bullet/rifle/a145
 	accuracy = -75
 	scoped_accuracy = 75
+	ignore_visor_zoom_restriction = TRUE	// Ignore the restriction on vision modifiers when using this gun's scope.
 	one_handed_penalty = 90
 	bolt_open = 0 //CHOMP Edit
 

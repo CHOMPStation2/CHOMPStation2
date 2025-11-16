@@ -7,10 +7,10 @@
 	pokephrase = "Weh!"
 	icon = 'icons/obj/toy_yw.dmi'
 	item_icons = list(
-		slot_l_hand_str = 'icons/mob/items/lefthand_toys.dmi',
-		slot_r_hand_str = 'icons/mob/items/righthand_toys.dmi',
-		slot_back_str = 'icons/mob/toy_worn.dmi',
-		slot_head_str = 'icons/mob/toy_worn.dmi')
+		slot_l_hand_str = 'icons/mob/items/lefthand_toys_yw.dmi',
+		slot_r_hand_str = 'icons/mob/items/righthand_toys_yw.dmi',
+		slot_back_str = 'icons/mob/toy_worn_yw.dmi',
+		slot_head_str = 'icons/mob/toy_worn_yw.dmi')
 
 /obj/item/toy/plushie/teshari/strix/rename_plushie()
 	set name = "Name Plushie"
@@ -60,10 +60,10 @@
 	slot_flags = SLOT_BACK | SLOT_HEAD
 	icon = 'icons/obj/toy_yw.dmi'
 	item_icons = list(
-		slot_l_hand_str = 'icons/mob/items/lefthand_toys.dmi',
-		slot_r_hand_str = 'icons/mob/items/righthand_toys.dmi',
-		slot_back_str = 'icons/mob/toy_worn.dmi',
-		slot_head_str = 'icons/mob/toy_worn.dmi')
+		slot_l_hand_str = 'icons/mob/items/lefthand_toys_yw.dmi',
+		slot_r_hand_str = 'icons/mob/items/righthand_toys_yw.dmi',
+		slot_back_str = 'icons/mob/toy_worn_yw.dmi',
+		slot_head_str = 'icons/mob/toy_worn_yw.dmi')
 
 /obj/item/toy/plushie/teshari/w_yw
 	name = "lifelike teshari plush"
@@ -74,10 +74,10 @@
 	slot_flags = SLOT_BACK | SLOT_HEAD
 	icon = 'icons/obj/toy_yw.dmi'
 	item_icons = list(
-		slot_l_hand_str = 'icons/mob/items/lefthand_toys.dmi',
-		slot_r_hand_str = 'icons/mob/items/righthand_toys.dmi',
-		slot_back_str = 'icons/mob/toy_worn.dmi',
-		slot_head_str = 'icons/mob/toy_worn.dmi')
+		slot_l_hand_str = 'icons/mob/items/lefthand_toys_yw.dmi',
+		slot_r_hand_str = 'icons/mob/items/righthand_toys_yw.dmi',
+		slot_back_str = 'icons/mob/toy_worn_yw.dmi',
+		slot_head_str = 'icons/mob/toy_worn_yw.dmi')
 
 /obj/item/toy/plushie/teshari/b_yw
 	name = "lifelike teshari plush"
@@ -88,11 +88,11 @@
 	slot_flags = SLOT_BACK | SLOT_HEAD
 	icon = 'icons/obj/toy_yw.dmi'
 	item_icons = list(
-		slot_l_hand_str = 'icons/mob/items/lefthand_toys.dmi',
-		slot_r_hand_str = 'icons/mob/items/righthand_toys.dmi',
-		slot_back_str = 'icons/mob/toy_worn.dmi',
-		slot_head_str = 'icons/mob/toy_worn.dmi',
-		slot_ear_str = 'icons/mob/toy_worn.dmi')
+		slot_l_hand_str = 'icons/mob/items/lefthand_toys_yw.dmi',
+		slot_r_hand_str = 'icons/mob/items/righthand_toys_yw.dmi',
+		slot_back_str = 'icons/mob/toy_worn_yw.dmi',
+		slot_head_str = 'icons/mob/toy_worn_yw.dmi',
+		slot_ear_str = 'icons/mob/toy_worn_yw.dmi')
 
 /obj/item/toy/plushie/teshari/y_yw
 	name = "lifelike teshari plush"
@@ -103,7 +103,7 @@
 	slot_flags = SLOT_BACK | SLOT_HEAD
 	icon = 'icons/obj/toy_yw.dmi'
 	item_icons = list(
-		slot_l_hand_str = 'icons/mob/items/lefthand_toys.dmi',
-		slot_r_hand_str = 'icons/mob/items/righthand_toys.dmi',
-		slot_back_str = 'icons/mob/toy_worn.dmi',
-		slot_head_str = 'icons/mob/toy_worn.dmi')
+		slot_l_hand_str = 'icons/mob/items/lefthand_toys_yw.dmi',
+		slot_r_hand_str = 'icons/mob/items/righthand_toys_yw.dmi',
+		slot_back_str = 'icons/mob/toy_worn_yw.dmi',
+		slot_head_str = 'icons/mob/toy_worn_yw.dmi')

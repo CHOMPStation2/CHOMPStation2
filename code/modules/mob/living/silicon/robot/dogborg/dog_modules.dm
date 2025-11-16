@@ -168,8 +168,8 @@
 			return
 		user.visible_message(span_filter_notice("[user] begins to lap up water from [target.name]."), span_notice("You begin to lap up water from [target.name]."))
 		busy = 1
-		if(do_after(user, 5 SECONDS, target))
-			water.add_charge(250)
+		if(do_after(user, 50))
+			water.add_charge(50)
 			to_chat(src, span_filter_notice("You refill some of your water reserves."))
 		busy = 0
 	else if(water.energy < 5)
@@ -180,7 +180,7 @@
 	else if(istype(target,/obj/effect/decal/cleanable))
 		user.visible_message(span_filter_notice("[user] begins to lick off \the [target.name]."), span_notice("You begin to lick off \the [target.name]..."))
 		busy = 1
-		if(do_after(user, 5 SECONDS, target))
+		if(do_after(user, 50))
 			to_chat(user, span_notice("You finish licking off \the [target.name]."))
 			water.use_charge(5)
 			qdel(target)
@@ -192,7 +192,7 @@
 		if(istype(target,/obj/item/trash))
 			user.visible_message(span_filter_notice("[user] nibbles away at \the [target.name]."), span_notice("You begin to nibble away at \the [target.name]..."))
 			busy = 1
-			if(do_after (user, 5 SECONDS, target))
+			if(do_after (user, 50))
 				user.visible_message(span_filter_notice("[user] finishes eating \the [target.name]."), span_notice("You finish eating \the [target.name]."))
 				to_chat(user, span_notice("You finish off \the [target.name]."))
 				qdel(target)
@@ -204,7 +204,7 @@
 		if(istype(target,/obj/item/reagent_containers/food))
 			user.visible_message("[user] nibbles away at \the [target.name].", span_notice("You begin to nibble away at \the [target.name]..."))
 			busy = 1 //CHOMPAdd prevents abuse
-			if(do_after (user, 5 SECONDS, target))
+			if(do_after (user, 50))
 				user.visible_message("[user] finishes eating \the [target.name].", span_notice("You finish eating \the [target.name]."))
 				user << span_notice("You finish off \the [target.name].")
 				del(target)
@@ -215,7 +215,7 @@
 		if(istype(target,/obj/item/cell))
 			user.visible_message(span_filter_notice("[user] begins cramming \the [target.name] down its throat."), span_notice("You begin cramming \the [target.name] down your throat..."))
 			busy = 1
-			if(do_after (user, 5 SECONDS, target))
+			if(do_after (user, 50))
 				user.visible_message(span_filter_notice("[user] finishes gulping down \the [target.name]."), span_notice("You finish swallowing \the [target.name]."))
 				to_chat(user, span_notice("You finish off \the [target.name], and gain some charge!"))
 				var/mob/living/silicon/robot/R = user
@@ -228,7 +228,7 @@
 		//CHOMPAdd Start
 		user.visible_message(span_filter_notice("[user] begins to lick \the [target.name] clean..."), span_notice("You begin to lick \the [target.name] clean..."))
 		busy = 1
-		if(do_after(user, 5 SECONDS, target))
+		if(do_after(user, 50))
 			to_chat(user, span_notice("You clean \the [target.name]."))
 			water.use_charge(5)
 			var/obj/effect/decal/cleanable/C = locate() in target
@@ -260,7 +260,7 @@
 	else
 		user.visible_message(span_filter_notice("[user] begins to lick \the [target.name] clean..."), span_notice("You begin to lick \the [target.name] clean..."))
 		busy = 1
-		if(do_after(user, 5 SECONDS, target))
+		if(do_after(user, 50))
 			to_chat(user, span_notice("You clean \the [target.name]."))
 			var/obj/effect/decal/cleanable/C = locate() in target
 			qdel(C)
@@ -468,7 +468,8 @@
 			return
 
 	var/armor_block = run_armor_check(T, "melee")
-	T.apply_damage(20, HALLOSS, null, armor_block)
+	var/armor_soak = get_armor_soak(T, "melee")
+	T.apply_damage(20, HALLOSS,, armor_block, armor_soak)
 	if(prob(75)) //75% chance to stun for 5 seconds, really only going to be 4 bcus click cooldown+animation.
 		T.apply_effect(5, STUN, armor_block)
 		T.drop_both_hands() //CHOMPEdit Stuns no longer drop items

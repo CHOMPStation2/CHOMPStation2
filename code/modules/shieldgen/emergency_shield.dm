@@ -76,7 +76,7 @@
 				qdel(src)
 	return
 
-/obj/machinery/shield/emp_act(severity, recursive)
+/obj/machinery/shield/emp_act(severity)
 	switch(severity)
 		if(1)
 			qdel(src)
@@ -243,7 +243,7 @@
 			src.checkhp()
 	return
 
-/obj/machinery/shieldgen/emp_act(severity, recursive)
+/obj/machinery/shieldgen/emp_act(severity)
 	switch(severity)
 		if(1)
 			src.health /= 2 //cut health in half

@@ -55,8 +55,8 @@
 	flick("mass_driver1", src)
 	return
 
-/obj/machinery/mass_driver/emp_act(severity, recursive)
+/obj/machinery/mass_driver/emp_act(severity)
 	if(stat & (BROKEN|NOPOWER))
 		return
 	drive()
-	..(severity, recursive)
+	..(severity)

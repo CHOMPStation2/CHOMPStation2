@@ -155,7 +155,7 @@
 			var/datum/effect/effect/system/teleport_greyscale/tele2 = new /datum/effect/effect/system/teleport_greyscale()
 			tele2.set_up(linked_pad.newcolor, locate((linked_pad.x - xadjust), (linked_pad.y - yadjust), linked_pad.z))
 			limit += 1
-			do_teleport(ROI, locate((linked_pad.x - xadjust), (linked_pad.y - yadjust), linked_pad.z), effectin = tele1, effectout = tele2, asoundin = 'sound/weapons/emitter2.ogg', asoundout = 'sound/weapons/emitter2.ogg', channel = TELEPORT_CHANNEL_QUANTUM)
+			do_teleport(ROI, locate((linked_pad.x - xadjust), (linked_pad.y - yadjust), linked_pad.z), local = FALSE, bohsafe = TRUE, asoundin = 'sound/weapons/emitter2.ogg', asoundout = 'sound/weapons/emitter2.ogg', aeffectin = tele1, aeffectout = tele2)
 
 	cut_overlays()
 	for(var/obj/machinery/hyperpad/P in linked)

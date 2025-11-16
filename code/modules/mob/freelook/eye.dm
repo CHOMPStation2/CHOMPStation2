@@ -64,7 +64,9 @@
 		if(T != loc)
 			loc = T
 
-			owner.reset_perspective(src)
+			if(owner.client)
+				owner.client.eye = src
+
 			if(owner_follows_eye)
 				visualnet.updateVisibility(owner, 0)
 				owner.loc = loc

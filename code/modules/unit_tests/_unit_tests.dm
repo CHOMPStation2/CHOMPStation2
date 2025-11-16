@@ -88,7 +88,6 @@
 
 // BEGIN_INCLUDE
 #include "asset_smart_cache.dm"
-#include "autowiki.dm"
 //#include "clothing_tests.dm" // FIXME
 #include "component_tests.dm"
 #include "cosmetic_tests.dm"
@@ -114,7 +113,6 @@
 #include "spritesheets.dm"
 #include "sqlite_tests.dm"
 #include "subsystem_init.dm"
-#include "techwebs.dm"
 #include "tgui_create_message.dm"
 #include "timer_sanity.dm"
 #include "trait_tests.dm"

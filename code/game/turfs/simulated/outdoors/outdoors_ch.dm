@@ -18,7 +18,7 @@
 	if(!demote_to)
 		return // Cannot demote further.
 
-	ChangeTurf(demote_to, preserve_outdoors = TRUE)
+	ChangeTurf(demote_to)
 
 /turf/simulated/floor/outdoors/grass
 	demote_to = /turf/simulated/floor/outdoors/dirt

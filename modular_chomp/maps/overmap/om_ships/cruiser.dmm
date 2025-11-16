@@ -2914,11 +2914,14 @@
 /turf/simulated/floor/tiled/white,
 /area/mothership/chemistry)
 "gh" = (
-/obj/machinery/power/smes/buildable/max_charge_max_input,
-/obj/item/smes_coil,
-/obj/item/smes_coil,
-/obj/item/smes_coil,
-/obj/item/smes_coil,
+/obj/machinery/power/smes/buildable{
+	capacity = 2e+007;
+	charge = 2e+007;
+	cur_coils = 4;
+	input_attempt = 1;
+	input_level = 1e+006;
+	output_level = 1e+006
+	},
 /obj/structure/cable/cyan,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/mothership/vault)
