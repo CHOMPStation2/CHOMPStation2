@@ -24831,6 +24831,9 @@
 /obj/structure/cable{
 	icon_state = "5-8"
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
 /turf/simulated/floor/plating,
 /area/engineering/cetus/aftsubstation)
 "oCJ" = (
@@ -33624,6 +33627,13 @@
 	},
 /turf/simulated/open,
 /area/engineering/cetus/jointsubstation)
+"tSG" = (
+/obj/structure/disposalpipe/segment,
+/obj/structure/cable{
+	icon_state = "8-10"
+	},
+/turf/simulated/floor/carpet/graycarpet,
+/area/bridge/Deck3_Corridor)
 "tTa" = (
 /obj/machinery/light/fluorescent{
 	dir = 1
@@ -39688,13 +39698,6 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/cetus/Galleryf2)
-"xuR" = (
-/obj/structure/disposalpipe/segment,
-/obj/structure/cable{
-	icon_state = "8-10"
-	},
-/turf/simulated/floor/carpet/graycarpet,
-/area/bridge/Deck3_Corridor)
 "xvm" = (
 /obj/structure/disposalpipe/junction/yjunction{
 	dir = 4
@@ -76948,7 +76951,7 @@ wNn
 jcp
 hjn
 otj
-xuR
+tSG
 bfE
 qsC
 lVe

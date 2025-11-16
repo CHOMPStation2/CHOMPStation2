@@ -37430,6 +37430,9 @@
 /obj/effect/floor_decal/industrial/danger,
 /obj/structure/catwalk,
 /obj/random/trash,
+/obj/machinery/atmospherics/pipe/simple/hidden/cyan{
+	dir = 4
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/twosec)
 "mUG" = (
