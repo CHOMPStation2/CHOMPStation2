@@ -1,6 +1,6 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "aaa" = (
-/turf/space,
+/turf/simulated/floor/water/deep,
 /area/space)
 "aab" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
@@ -37,7 +37,7 @@
 /area/rnd/Research_Ship_Bay)
 "aaf" = (
 /obj/structure/lattice,
-/turf/space,
+/turf/simulated/floor/water/deep,
 /area/space)
 "aag" = (
 /turf/simulated/wall,
@@ -2607,7 +2607,7 @@
 /turf/simulated/floor/plating,
 /area/maintenance/Deck1_Security_PortChamber1)
 "afo" = (
-/turf/space,
+/turf/simulated/floor/water/deep,
 /area/shuttle/arrival/station)
 "afp" = (
 /obj/structure/cable/green{
@@ -3637,7 +3637,7 @@
 /obj/machinery/light/small/emergency{
 	dir = 1
 	},
-/turf/space,
+/turf/simulated/floor/water/deep,
 /area/space)
 "ake" = (
 /obj/structure/extinguisher_cabinet{
@@ -5387,7 +5387,7 @@
 	dir = 8
 	},
 /obj/structure/lattice,
-/turf/space,
+/turf/simulated/floor/water/deep,
 /area/space)
 "avn" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
@@ -6829,7 +6829,7 @@
 	landmark_tag = "sc-D1_L4A6";
 	name = "Docking Lane 4 Airlock 6"
 	},
-/turf/space,
+/turf/simulated/floor/water/deep,
 /area/space)
 "aIA" = (
 /turf/simulated/wall/rthull,
@@ -8748,7 +8748,7 @@
 	landmark_tag = "sc-D1_L1A2";
 	name = "Docking Lane 1 Airlock 2"
 	},
-/turf/space,
+/turf/simulated/floor/water/deep,
 /area/space)
 "aVy" = (
 /obj/machinery/newscaster{
@@ -11931,7 +11931,7 @@
 	landmark_tag = "sc-D1_L4A2";
 	name = "Docking Lane 4 Airlock 2"
 	},
-/turf/space,
+/turf/simulated/floor/water/deep,
 /area/space)
 "bWz" = (
 /obj/structure/disposalpipe/segment,
@@ -15481,7 +15481,7 @@
 /area/hallway/Star_1Deck_Central_Corridor_1)
 "dix" = (
 /obj/effect/overmap/visitable/sector/Soluna_Nexus,
-/turf/space,
+/turf/simulated/floor/water/deep,
 /area/space)
 "diy" = (
 /obj/machinery/atmospherics/pipe/simple/visible,
@@ -21511,7 +21511,7 @@
 	landmark_tag = "sc-D1_L4A4";
 	name = "Docking Lane 4 Airlock 4"
 	},
-/turf/space,
+/turf/simulated/floor/water/deep,
 /area/space)
 "ePx" = (
 /obj/random/obstruction,
@@ -26686,7 +26686,7 @@
 /area/maintenance/Deck1_Cargo_Corridor1)
 "gGm" = (
 /obj/structure/railing/grey,
-/turf/space,
+/turf/simulated/floor/water/deep,
 /area/space)
 "gGZ" = (
 /obj/machinery/door/firedoor/glass/hidden/steel,
@@ -27541,7 +27541,7 @@
 /area/maintenance/ab_Hydroponics)
 "gXl" = (
 /obj/effect/shuttle_landmark/southern_cross/arrivals_station,
-/turf/space,
+/turf/simulated/floor/water/deep,
 /area/shuttle/arrival/station)
 "gXp" = (
 /obj/machinery/door/firedoor/border_only,
@@ -29089,7 +29089,7 @@
 	landmark_tag = "sc-D1_L1A4";
 	name = "Docking Lane 1 Airlock 4"
 	},
-/turf/space,
+/turf/simulated/floor/water/deep,
 /area/space)
 "hBF" = (
 /obj/structure/window/reinforced/survival_pod,
@@ -29193,7 +29193,7 @@
 /obj/structure/railing/grey{
 	dir = 8
 	},
-/turf/space,
+/turf/simulated/floor/water/deep,
 /area/space)
 "hDE" = (
 /obj/structure/cable/green{
@@ -30300,7 +30300,7 @@
 	landmark_tag = "sc-D1_L2A1";
 	name = "Docking Lane 2 Airlock 1"
 	},
-/turf/space,
+/turf/simulated/floor/water/deep,
 /area/space)
 "iaf" = (
 /obj/structure/closet/secure_closet/personal,
@@ -31725,7 +31725,7 @@
 "ixO" = (
 /obj/structure/lattice,
 /obj/structure/grille,
-/turf/space,
+/turf/simulated/floor/water/deep,
 /area/space)
 "iyh" = (
 /obj/structure/cable/green{
@@ -31957,7 +31957,7 @@
 /area/quartermaster/Mining_Ship_Bay)
 "iDD" = (
 /obj/structure/lattice,
-/turf/space,
+/turf/simulated/floor/water/deep,
 /area/harbor/Dock5)
 "iDI" = (
 /obj/machinery/door/firedoor/border_only,
@@ -32061,7 +32061,7 @@
 "iFw" = (
 /obj/structure/lattice,
 /obj/machinery/shield_diffuser,
-/turf/space,
+/turf/simulated/floor/water/deep,
 /area/space)
 "iFL" = (
 /obj/effect/catwalk_plated/techmaint,
@@ -32202,7 +32202,7 @@
 "iKg" = (
 /obj/machinery/shield_diffuser,
 /obj/structure/lattice,
-/turf/space,
+/turf/simulated/floor/water/deep,
 /area/space)
 "iKE" = (
 /obj/structure/janitorialcart{
@@ -32869,7 +32869,7 @@
 /obj/machinery/light/small/emergency{
 	dir = 1
 	},
-/turf/space,
+/turf/simulated/floor/water/deep,
 /area/space)
 "jbI" = (
 /obj/machinery/door/firedoor/glass/hidden/steel,
@@ -34196,7 +34196,7 @@
 /obj/structure/railing/grey{
 	dir = 1
 	},
-/turf/space,
+/turf/simulated/floor/water/deep,
 /area/space)
 "jCD" = (
 /obj/effect/floor_decal/industrial/arrows/blue{
@@ -34334,7 +34334,7 @@
 "jEu" = (
 /obj/structure/lattice,
 /obj/machinery/shield_diffuser,
-/turf/space,
+/turf/simulated/floor/water/deep,
 /area/harbor/Dock5)
 "jEw" = (
 /obj/structure/closet/walllocker_double/kitchen/east{
@@ -34601,7 +34601,7 @@
 /obj/effect/landmark{
 	name = "carpspawn"
 	},
-/turf/space,
+/turf/simulated/floor/water/deep,
 /area/shuttle/escape/station)
 "jHy" = (
 /obj/machinery/lapvend,
@@ -39178,7 +39178,7 @@
 	landmark_tag = "sc-D1_L4A3";
 	name = "Docking Lane 4 Airlock 3"
 	},
-/turf/space,
+/turf/simulated/floor/water/deep,
 /area/space)
 "ltp" = (
 /obj/random/mainttoyloot,
@@ -39976,7 +39976,7 @@
 	landmark_tag = "sc-D1_L4A1";
 	name = "Docking Lane 4 Airlock 1"
 	},
-/turf/space,
+/turf/simulated/floor/water/deep,
 /area/space)
 "lJD" = (
 /obj/machinery/door/firedoor/border_only,
@@ -40964,7 +40964,7 @@
 	landmark_tag = "sc-D1_L3A1";
 	name = "Docking Lane 3 Airlock 1"
 	},
-/turf/space,
+/turf/simulated/floor/water/deep,
 /area/space)
 "lYo" = (
 /obj/structure/cable/green{
@@ -42427,7 +42427,7 @@
 	dir = 1
 	},
 /obj/structure/lattice,
-/turf/space,
+/turf/simulated/floor/water/deep,
 /area/space)
 "myr" = (
 /obj/machinery/light,
@@ -43039,7 +43039,7 @@
 /obj/machinery/light/small/emergency{
 	dir = 4
 	},
-/turf/space,
+/turf/simulated/floor/water/deep,
 /area/space)
 "mJa" = (
 /obj/random/trash_pile,
@@ -48584,7 +48584,7 @@
 	landmark_tag = "sc-D1_L1A3";
 	name = "Docking Lane 1 Airlock 3"
 	},
-/turf/space,
+/turf/simulated/floor/water/deep,
 /area/space)
 "oHU" = (
 /obj/effect/decal/cleanable/filth,
@@ -51574,7 +51574,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/engineering/Telecomms_Control_Room)
 "pFU" = (
-/turf/space,
+/turf/simulated/floor/water/deep,
 /area/shuttle/escape/station)
 "pFW" = (
 /obj/effect/floor_decal/borderfloorblack/corner{
@@ -53566,7 +53566,7 @@
 /obj/effect/landmark{
 	name = "carpspawn"
 	},
-/turf/space,
+/turf/simulated/floor/water/deep,
 /area/shuttle/arrival/station)
 "qps" = (
 /obj/structure/sink{
@@ -55045,7 +55045,7 @@
 /obj/structure/railing/grey{
 	dir = 4
 	},
-/turf/space,
+/turf/simulated/floor/water/deep,
 /area/space)
 "qSB" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
@@ -58101,7 +58101,7 @@
 	landmark_tag = "sc-D1_L1A5";
 	name = "Docking Lane 1 Airlock 5"
 	},
-/turf/space,
+/turf/simulated/floor/water/deep,
 /area/space)
 "rWn" = (
 /obj/machinery/alarm{
@@ -59642,7 +59642,7 @@
 /area/hallway/AftPort_1_Deck_Observatory)
 "szS" = (
 /obj/machinery/light/small/emergency,
-/turf/space,
+/turf/simulated/floor/water/deep,
 /area/space)
 "sAo" = (
 /obj/structure/disposalpipe/segment,
@@ -60354,7 +60354,7 @@
 /obj/machinery/light/small/emergency{
 	dir = 8
 	},
-/turf/space,
+/turf/simulated/floor/water/deep,
 /area/space)
 "sLJ" = (
 /obj/machinery/holoposter,
@@ -60749,7 +60749,7 @@
 /obj/machinery/light/small/emergency{
 	dir = 4
 	},
-/turf/space,
+/turf/simulated/floor/water/deep,
 /area/space)
 "sTq" = (
 /obj/structure/cable{
@@ -61968,7 +61968,7 @@
 /obj/machinery/light/small/emergency{
 	dir = 8
 	},
-/turf/space,
+/turf/simulated/floor/water/deep,
 /area/space)
 "ttQ" = (
 /turf/simulated/floor/plating,
@@ -62785,7 +62785,7 @@
 	landmark_tag = "sc-D1_near_ne";
 	name = "Near SC - Deck 1 North East"
 	},
-/turf/space,
+/turf/simulated/floor/water/deep,
 /area/space)
 "tHE" = (
 /obj/effect/catwalk_plated/techmaint,
@@ -63060,7 +63060,7 @@
 	landmark_tag = "sc-D1_L1A6";
 	name = "Docking Lane 1 Airlock 6"
 	},
-/turf/space,
+/turf/simulated/floor/water/deep,
 /area/space)
 "tOk" = (
 /obj/random/junk,
@@ -67742,7 +67742,7 @@
 /obj/effect/landmark{
 	name = "carpspawn"
 	},
-/turf/space,
+/turf/simulated/floor/water/deep,
 /area/space)
 "vuR" = (
 /obj/machinery/atmospherics/pipe/simple/hidden,
@@ -68773,7 +68773,7 @@
 	landmark_tag = "sc-D1_L4A5";
 	name = "Docking Lane 4 Airlock 5"
 	},
-/turf/space,
+/turf/simulated/floor/water/deep,
 /area/space)
 "vLQ" = (
 /obj/machinery/door/airlock/voidcraft/vertical{
@@ -69407,7 +69407,7 @@
 /area/hallway/Aft_Transit_Lobby)
 "vXj" = (
 /obj/effect/shuttle_landmark/southern_cross/escape/station,
-/turf/space,
+/turf/simulated/floor/water/deep,
 /area/shuttle/escape/station)
 "vXn" = (
 /obj/effect/floor_decal/borderfloor{
@@ -74465,7 +74465,7 @@
 	landmark_tag = "sc-D1_near_nw";
 	name = "Near SC - Deck 1 North West"
 	},
-/turf/space,
+/turf/simulated/floor/water/deep,
 /area/space)
 "xSn" = (
 /obj/machinery/camera/network/security{
@@ -75249,7 +75249,7 @@
 	landmark_tag = "sc-D1_L1A1";
 	name = "Docking Lane 1 Airlock 1"
 	},
-/turf/space,
+/turf/simulated/floor/water/deep,
 /area/space)
 "yet" = (
 /obj/effect/catwalk_plated/techmaint,
@@ -75380,7 +75380,7 @@
 "yhq" = (
 /obj/machinery/light/small/emergency,
 /obj/structure/lattice,
-/turf/space,
+/turf/simulated/floor/water/deep,
 /area/space)
 "yhx" = (
 /obj/structure/cable/white{

@@ -1990,7 +1990,7 @@
 /obj/structure/transit_tube{
 	icon_state = "N-S-Pass"
 	},
-/turf/space,
+/turf/simulated/open,
 /area/space)
 "aek" = (
 /obj/effect/floor_decal/steeldecal/steel_decals6{
@@ -2338,7 +2338,7 @@
 	dir = 8
 	},
 /obj/structure/railing/grey,
-/turf/space,
+/turf/simulated/open,
 /area/space)
 "afd" = (
 /obj/machinery/atmospherics/portables_connector{
@@ -2667,7 +2667,7 @@
 	dir = 8
 	},
 /obj/structure/lattice,
-/turf/space,
+/turf/simulated/open,
 /area/space)
 "afR" = (
 /obj/structure/cable/white{
@@ -2849,7 +2849,7 @@
 /obj/structure/railing/grey{
 	dir = 4
 	},
-/turf/space,
+/turf/simulated/open,
 /area/space)
 "agk" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -2893,7 +2893,7 @@
 	network = list("engineering","Engine");
 	dir = 2
 	},
-/turf/space,
+/turf/simulated/open,
 /area/space)
 "ago" = (
 /obj/structure/railing/grey{
@@ -2904,7 +2904,7 @@
 	network = list("engineering","Engine");
 	dir = 2
 	},
-/turf/space,
+/turf/simulated/open,
 /area/space)
 "agp" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/cyan{
@@ -3323,7 +3323,7 @@
 /obj/structure/transit_tube{
 	icon_state = "E-W-Pass"
 	},
-/turf/space,
+/turf/simulated/open,
 /area/space)
 "aoy" = (
 /obj/structure/bed/double/padded{
@@ -3367,7 +3367,7 @@
 /turf/simulated/floor/plating,
 /area/engineering/Engine2_Chamber)
 "apc" = (
-/turf/space,
+/turf/simulated/open,
 /area/space)
 "api" = (
 /obj/machinery/washing_machine,
@@ -3440,7 +3440,7 @@
 /area/harbor/For_3_Deck_Airlock_Access_1)
 "aqj" = (
 /obj/structure/lattice,
-/turf/space,
+/turf/simulated/open,
 /area/space)
 "aqs" = (
 /obj/structure/disposalpipe/segment{
@@ -4767,7 +4767,7 @@
 	dir = 4
 	},
 /obj/structure/lattice,
-/turf/space,
+/turf/simulated/open,
 /area/space)
 "aRP" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -5432,7 +5432,7 @@
 /obj/structure/railing/grey{
 	dir = 4
 	},
-/turf/space,
+/turf/simulated/open,
 /area/space)
 "bdn" = (
 /obj/effect/floor_decal/borderfloorblack,
@@ -9382,7 +9382,7 @@
 "cDl" = (
 /obj/structure/lattice,
 /obj/machinery/shield_diffuser,
-/turf/space,
+/turf/simulated/open,
 /area/space)
 "cDq" = (
 /obj/machinery/vending/donksoft,
@@ -11365,7 +11365,7 @@
 "dog" = (
 /obj/structure/lattice,
 /obj/machinery/atmospherics/pipe/simple/visible/green,
-/turf/space,
+/turf/simulated/open,
 /area/space)
 "dom" = (
 /obj/structure/table/standard,
@@ -11595,7 +11595,7 @@
 /obj/effect/landmark{
 	name = "carpspawn"
 	},
-/turf/space,
+/turf/simulated/open,
 /area/space)
 "dvD" = (
 /obj/structure/sink{
@@ -11734,7 +11734,7 @@
 /obj/effect/landmark/map_data{
 	height = 3
 	},
-/turf/space,
+/turf/simulated/open,
 /area/space)
 "dyt" = (
 /obj/machinery/light/small,
@@ -13572,7 +13572,7 @@
 	},
 /obj/structure/lattice,
 /obj/machinery/shield_diffuser,
-/turf/space,
+/turf/simulated/open,
 /area/space)
 "dZU" = (
 /obj/structure/table/bench/sifwooden,
@@ -14481,7 +14481,7 @@
 /obj/structure/transit_tube{
 	icon_state = "E-NW"
 	},
-/turf/space,
+/turf/simulated/open,
 /area/space)
 "eow" = (
 /turf/simulated/wall/r_wall,
@@ -17992,7 +17992,7 @@
 /obj/structure/transit_tube{
 	icon_state = "D-NW"
 	},
-/turf/space,
+/turf/simulated/open,
 /area/space)
 "fnZ" = (
 /obj/machinery/light/small{
@@ -18011,7 +18011,7 @@
 /obj/structure/lattice,
 /obj/structure/railing/grey,
 /obj/machinery/atmospherics/pipe/simple/visible/red,
-/turf/space,
+/turf/simulated/open,
 /area/space)
 "foz" = (
 /turf/simulated/open,
@@ -19302,7 +19302,7 @@
 /obj/machinery/atmospherics/pipe/simple/heat_exchanging{
 	dir = 10
 	},
-/turf/space,
+/turf/simulated/open,
 /area/space)
 "fIA" = (
 /obj/effect/floor_decal/borderfloor{
@@ -25329,7 +25329,7 @@
 /obj/structure/transit_tube{
 	icon_state = "D-NE"
 	},
-/turf/space,
+/turf/simulated/open,
 /area/space)
 "hSo" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -25560,7 +25560,7 @@
 /obj/structure/railing/grey{
 	dir = 1
 	},
-/turf/space,
+/turf/simulated/open,
 /area/space)
 "hXB" = (
 /obj/machinery/door/firedoor/border_only,
@@ -27335,7 +27335,7 @@
 "iBn" = (
 /obj/structure/lattice,
 /obj/machinery/atmospherics/pipe/simple/visible/yellow,
-/turf/space,
+/turf/simulated/open,
 /area/space)
 "iBv" = (
 /obj/machinery/door/firedoor/border_only,
@@ -28739,7 +28739,7 @@
 /obj/structure/railing/grey{
 	dir = 4
 	},
-/turf/space,
+/turf/simulated/open,
 /area/space)
 "jce" = (
 /obj/machinery/door/firedoor/border_only,
@@ -29743,7 +29743,7 @@
 /obj/structure/railing/grey{
 	dir = 4
 	},
-/turf/space,
+/turf/simulated/open,
 /area/space)
 "jul" = (
 /obj/structure/dogbed{
@@ -30205,7 +30205,7 @@
 	landmark_tag = "sc-D3_near_ne";
 	name = "Near SC - Deck 3 North East"
 	},
-/turf/space,
+/turf/simulated/open,
 /area/space)
 "jCT" = (
 /obj/machinery/button/remote/airlock{
@@ -32364,7 +32364,7 @@
 "kqq" = (
 /obj/structure/lattice,
 /obj/structure/railing/grey,
-/turf/space,
+/turf/simulated/open,
 /area/space)
 "kqs" = (
 /obj/structure/cable/green{
@@ -33463,7 +33463,7 @@
 /obj/structure/transit_tube{
 	icon_state = "E-W-Pass"
 	},
-/turf/space,
+/turf/simulated/open,
 /area/space)
 "kLn" = (
 /obj/random/trash_pile,
@@ -35341,7 +35341,7 @@
 /obj/structure/transit_tube{
 	icon_state = "N-SE"
 	},
-/turf/space,
+/turf/simulated/open,
 /area/space)
 "lsL" = (
 /obj/machinery/disposal,
@@ -35453,7 +35453,7 @@
 /obj/structure/railing/grey,
 /obj/structure/lattice,
 /obj/machinery/atmospherics/pipe/simple/visible/red,
-/turf/space,
+/turf/simulated/open,
 /area/space)
 "lvr" = (
 /obj/structure/railing/grey,
@@ -35548,7 +35548,7 @@
 "lwY" = (
 /obj/structure/railing/grey,
 /obj/structure/lattice,
-/turf/space,
+/turf/simulated/open,
 /area/space)
 "lxh" = (
 /obj/structure/bed/chair/sofa/left/sif_ora,
@@ -36603,7 +36603,7 @@
 /area/maintenance/Deck3_Engineering_AftStarChamber2)
 "lMs" = (
 /obj/machinery/atmospherics/pipe/simple/heat_exchanging,
-/turf/space,
+/turf/simulated/open,
 /area/space)
 "lME" = (
 /obj/effect/floor_decal/carpet/blue{
@@ -37132,7 +37132,7 @@
 	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/simple/heat_exchanging/junction,
-/turf/space,
+/turf/simulated/open,
 /area/space)
 "lTP" = (
 /obj/machinery/floodlight,
@@ -37903,7 +37903,7 @@
 /obj/structure/transit_tube{
 	icon_state = "S-NE"
 	},
-/turf/space,
+/turf/simulated/open,
 /area/space)
 "mdC" = (
 /obj/structure/table/standard,
@@ -39978,7 +39978,7 @@
 /obj/structure/railing/grey{
 	dir = 8
 	},
-/turf/space,
+/turf/simulated/open,
 /area/space)
 "mMo" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -40186,7 +40186,7 @@
 "mQo" = (
 /obj/machinery/atmospherics/pipe/simple/visible/red,
 /obj/structure/lattice,
-/turf/space,
+/turf/simulated/open,
 /area/space)
 "mQs" = (
 /obj/item/geiger/wall/south,
@@ -41109,7 +41109,7 @@
 /obj/structure/railing/grey{
 	dir = 8
 	},
-/turf/space,
+/turf/simulated/open,
 /area/space)
 "nhC" = (
 /obj/machinery/power/apc{
@@ -46314,7 +46314,7 @@
 /obj/structure/railing/grey{
 	dir = 8
 	},
-/turf/space,
+/turf/simulated/open,
 /area/space)
 "oRW" = (
 /obj/random/trash,
@@ -47167,7 +47167,7 @@
 	health = 25;
 	name = "reinforced grille"
 	},
-/turf/space,
+/turf/simulated/open,
 /area/space)
 "phe" = (
 /obj/structure/table/bench/wooden,
@@ -47506,7 +47506,7 @@
 /obj/structure/railing/grey{
 	dir = 4
 	},
-/turf/space,
+/turf/simulated/open,
 /area/space)
 "poo" = (
 /obj/structure/table/glass,
@@ -48535,7 +48535,7 @@
 /obj/machinery/atmospherics/pipe/simple/heat_exchanging{
 	dir = 9
 	},
-/turf/space,
+/turf/simulated/open,
 /area/space)
 "pEX" = (
 /obj/machinery/atmospherics/unary/vent_pump/on,
@@ -48879,7 +48879,7 @@
 "pKH" = (
 /obj/structure/lattice,
 /obj/machinery/atmospherics/pipe/simple/visible/red,
-/turf/space,
+/turf/simulated/open,
 /area/space)
 "pKJ" = (
 /obj/effect/catwalk_plated/techmaint,
@@ -50685,7 +50685,7 @@
 /area/bridge/Conference_Room)
 "qpl" = (
 /obj/structure/railing/grey,
-/turf/space,
+/turf/simulated/open,
 /area/space)
 "qpo" = (
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
@@ -51353,7 +51353,7 @@
 	dir = 4
 	},
 /obj/structure/railing/grey,
-/turf/space,
+/turf/simulated/open,
 /area/space)
 "qAK" = (
 /obj/machinery/door/firedoor/border_only,
@@ -51450,7 +51450,7 @@
 /obj/structure/transit_tube{
 	icon_state = "D-SW"
 	},
-/turf/space,
+/turf/simulated/open,
 /area/space)
 "qCO" = (
 /obj/structure/disposalpipe/segment,
@@ -52331,7 +52331,7 @@
 /obj/structure/transit_tube{
 	icon_state = "E-SW"
 	},
-/turf/space,
+/turf/simulated/open,
 /area/space)
 "qSo" = (
 /obj/machinery/shower{
@@ -52413,7 +52413,7 @@
 /obj/structure/railing/grey{
 	dir = 1
 	},
-/turf/space,
+/turf/simulated/open,
 /area/space)
 "qTG" = (
 /obj/structure/railing/grey{
@@ -52668,7 +52668,7 @@
 /obj/machinery/atmospherics/pipe/simple/heat_exchanging{
 	dir = 5
 	},
-/turf/space,
+/turf/simulated/open,
 /area/space)
 "qYw" = (
 /obj/machinery/vending/loadout/clothing,
@@ -54558,7 +54558,7 @@
 	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/simple/heat_exchanging/junction,
-/turf/space,
+/turf/simulated/open,
 /area/space)
 "rEX" = (
 /obj/random/junk,
@@ -54627,7 +54627,7 @@
 	dir = 8
 	},
 /obj/structure/lattice,
-/turf/space,
+/turf/simulated/open,
 /area/space)
 "rGW" = (
 /obj/machinery/door/firedoor/border_only,
@@ -55682,7 +55682,7 @@
 	dir = 4
 	},
 /obj/structure/lattice,
-/turf/space,
+/turf/simulated/open,
 /area/space)
 "sbf" = (
 /obj/random/trash,
@@ -56015,7 +56015,7 @@
 	dir = 1
 	},
 /obj/structure/lattice,
-/turf/space,
+/turf/simulated/open,
 /area/space)
 "sgN" = (
 /obj/machinery/atmospherics/pipe/simple/visible/red,
@@ -56182,7 +56182,7 @@
 /obj/machinery/atmospherics/pipe/simple/heat_exchanging{
 	dir = 4
 	},
-/turf/space,
+/turf/simulated/open,
 /area/space)
 "sjL" = (
 /obj/structure/railing/grey{
@@ -58928,7 +58928,7 @@
 /obj/structure/lattice,
 /obj/structure/railing/grey,
 /obj/machinery/atmospherics/pipe/simple/visible/yellow,
-/turf/space,
+/turf/simulated/open,
 /area/space)
 "teM" = (
 /obj/structure/cable/green{
@@ -60644,7 +60644,7 @@
 /obj/structure/lattice,
 /obj/structure/railing/grey,
 /obj/machinery/atmospherics/pipe/simple/visible/green,
-/turf/space,
+/turf/simulated/open,
 /area/space)
 "tKz" = (
 /obj/effect/catwalk_plated/techmaint,
@@ -60661,7 +60661,7 @@
 	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/cyan,
-/turf/space,
+/turf/simulated/open,
 /area/space)
 "tKY" = (
 /obj/structure/bed/chair/sofa/purp{
@@ -63045,7 +63045,7 @@
 	landmark_tag = "sc-D3_near_se";
 	name = "Near SC - Deck 3 South East"
 	},
-/turf/space,
+/turf/simulated/open,
 /area/space)
 "uyY" = (
 /obj/item/radio/intercom{
@@ -63889,7 +63889,7 @@
 /obj/structure/railing/grey{
 	dir = 1
 	},
-/turf/space,
+/turf/simulated/open,
 /area/space)
 "uOq" = (
 /obj/structure/cable/green{
@@ -67795,7 +67795,7 @@
 /obj/structure/transit_tube{
 	icon_state = "E-W-Pass"
 	},
-/turf/space,
+/turf/simulated/open,
 /area/space)
 "vYj" = (
 /obj/effect/catwalk_plated/techmaint,
@@ -68826,7 +68826,7 @@
 /obj/structure/railing/grey{
 	dir = 8
 	},
-/turf/space,
+/turf/simulated/open,
 /area/space)
 "wqH" = (
 /obj/machinery/door/firedoor/border_only,
@@ -71555,7 +71555,7 @@
 /obj/structure/transit_tube{
 	icon_state = "N-S-Pass"
 	},
-/turf/space,
+/turf/simulated/open,
 /area/space)
 "xhC" = (
 /obj/machinery/atmospherics/pipe/simple/visible/purple{
@@ -74825,7 +74825,7 @@
 /obj/structure/transit_tube{
 	icon_state = "D-SE"
 	},
-/turf/space,
+/turf/simulated/open,
 /area/space)
 "yhu" = (
 /obj/random/crate,
@@ -75088,7 +75088,7 @@
 /obj/machinery/atmospherics/pipe/simple/heat_exchanging{
 	dir = 6
 	},
-/turf/space,
+/turf/simulated/open,
 /area/space)
 "ykC" = (
 /turf/simulated/floor/plating,

@@ -1,6 +1,6 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "aaa" = (
-/turf/space,
+/turf/simulated/open,
 /area/space)
 "aab" = (
 /obj/machinery/atmospherics/pipe/simple/visible/black{
@@ -63,7 +63,7 @@
 /area/hallway/Aft_2_Deck_Stairwell)
 "aaf" = (
 /obj/structure/lattice,
-/turf/space,
+/turf/simulated/open,
 /area/space)
 "aag" = (
 /obj/structure/closet{
@@ -1439,7 +1439,7 @@
 /obj/structure/lattice,
 /obj/machinery/shield_diffuser,
 /obj/effect/catwalk_plated/white,
-/turf/space,
+/turf/simulated/open,
 /area/harbor/For_Shuttlebay)
 "aco" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -2427,7 +2427,7 @@
 	landmark_tag = "sc-D2_near_nw";
 	name = "Near SC - Deck 2 North West"
 	},
-/turf/space,
+/turf/simulated/open,
 /area/space)
 "aed" = (
 /obj/machinery/light{
@@ -2802,7 +2802,7 @@
 /obj/mecha/combat/fighter/pinnace{
 	dir = 8
 	},
-/turf/space,
+/turf/simulated/open,
 /area/harbor/Aft_Shuttlebay)
 "aeL" = (
 /obj/machinery/optable{
@@ -3530,7 +3530,7 @@
 /obj/mecha/combat/fighter/gunpod{
 	dir = 4
 	},
-/turf/space,
+/turf/simulated/open,
 /area/harbor/For_Shuttlebay)
 "afW" = (
 /obj/structure/disposalpipe/trunk,
@@ -5802,7 +5802,7 @@
 /area/crew_quarters/Library)
 "ajt" = (
 /obj/structure/railing/grey,
-/turf/space,
+/turf/simulated/open,
 /area/space)
 "aju" = (
 /obj/effect/catwalk_plated/white,
@@ -7333,7 +7333,7 @@
 /obj/effect/landmark{
 	name = "carpspawn"
 	},
-/turf/space,
+/turf/simulated/open,
 /area/space)
 "alX" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
@@ -8605,7 +8605,7 @@
 /obj/structure/lattice,
 /obj/machinery/light/small/neon/police,
 /obj/machinery/shield_diffuser,
-/turf/space,
+/turf/simulated/open,
 /area/harbor/For_Shuttlebay)
 "aox" = (
 /obj/machinery/door/firedoor/border_only,
@@ -11724,7 +11724,7 @@
 "awo" = (
 /obj/structure/lattice,
 /obj/effect/catwalk_plated/white,
-/turf/space,
+/turf/simulated/open,
 /area/harbor/For_Shuttlebay)
 "awq" = (
 /obj/structure/table/standard,
@@ -15626,7 +15626,7 @@
 /obj/structure/railing/grey{
 	dir = 1
 	},
-/turf/space,
+/turf/simulated/open,
 /area/space)
 "aKu" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
@@ -15655,7 +15655,7 @@
 	layer = 10.1;
 	dir = 1
 	},
-/turf/space,
+/turf/simulated/open,
 /area/harbor/For_Shuttlebay)
 "aKF" = (
 /obj/structure/table/steel,
@@ -16162,7 +16162,7 @@
 /obj/structure/railing/grey{
 	dir = 1
 	},
-/turf/space,
+/turf/simulated/open,
 /area/space)
 "aLS" = (
 /obj/machinery/light/small/neon/booze2{
@@ -16715,7 +16715,7 @@
 /obj/mecha/combat/fighter/baron{
 	dir = 1
 	},
-/turf/space,
+/turf/simulated/open,
 /area/harbor/Port_Shuttlebay)
 "aNM" = (
 /obj/effect/floor_decal/industrial/hatch/red,
@@ -19334,7 +19334,7 @@
 /obj/structure/railing/grey{
 	dir = 4
 	},
-/turf/space,
+/turf/simulated/open,
 /area/space)
 "aWv" = (
 /obj/machinery/door/firedoor/border_only,
@@ -22418,7 +22418,7 @@
 /area/maintenance/Deck2_Security_AftStarCorridor2)
 "bhp" = (
 /obj/structure/lattice,
-/turf/space,
+/turf/simulated/open,
 /area/harbor/Port_Shuttlebay)
 "bhq" = (
 /obj/machinery/sleep_console{
@@ -23707,7 +23707,7 @@
 	layer = 10.1;
 	dir = 8
 	},
-/turf/space,
+/turf/simulated/open,
 /area/harbor/Port_Shuttlebay)
 "blD" = (
 /obj/machinery/hologram/holopad,
@@ -27357,7 +27357,7 @@
 /area/quartermaster/Warehouse)
 "bzc" = (
 /obj/structure/lattice,
-/turf/space,
+/turf/simulated/open,
 /area/harbor/Star_Shuttlebay)
 "bzd" = (
 /obj/structure/table/rack{
@@ -27674,7 +27674,7 @@
 /obj/mecha/combat/fighter/allure{
 	dir = 1
 	},
-/turf/space,
+/turf/simulated/open,
 /area/harbor/Star_Shuttlebay)
 "bAm" = (
 /obj/machinery/door/blast/regular/open{
@@ -28471,7 +28471,7 @@
 /area/maintenance/Deck2_Security_AftStarCorridor2)
 "bEg" = (
 /obj/effect/catwalk_plated/white,
-/turf/space,
+/turf/simulated/open,
 /area/harbor/Port_Shuttlebay)
 "bEh" = (
 /obj/item/radio/intercom{
@@ -28853,7 +28853,7 @@
 /area/crew_quarters/Library)
 "bFW" = (
 /obj/structure/lattice,
-/turf/space,
+/turf/simulated/open,
 /area/harbor/Aft_Shuttlebay)
 "bGe" = (
 /obj/machinery/space_heater,
@@ -29358,7 +29358,7 @@
 /area/hallway/Port_2_Deck_Corridor_1)
 "bHR" = (
 /obj/structure/lattice,
-/turf/space,
+/turf/simulated/open,
 /area/harbor/For_Shuttlebay)
 "bHV" = (
 /obj/machinery/computer/security/telescreen/entertainment{
@@ -30884,7 +30884,7 @@
 	layer = 10.1;
 	dir = 4
 	},
-/turf/space,
+/turf/simulated/open,
 /area/harbor/Star_Shuttlebay)
 "bOb" = (
 /obj/structure/window/basic{
@@ -31034,7 +31034,7 @@
 /obj/structure/lattice,
 /obj/effect/catwalk_plated/white,
 /obj/machinery/mech_recharger/alien,
-/turf/space,
+/turf/simulated/open,
 /area/harbor/Aft_Shuttlebay)
 "bOK" = (
 /obj/structure/bed/chair/sofa/corner/black{
@@ -33579,7 +33579,7 @@
 "bYh" = (
 /obj/structure/lattice,
 /obj/structure/railing/grey,
-/turf/space,
+/turf/simulated/open,
 /area/space)
 "bYi" = (
 /obj/machinery/alarm{
@@ -39801,7 +39801,7 @@
 /obj/machinery/atmospherics/portables_connector{
 	layer = 10.1
 	},
-/turf/space,
+/turf/simulated/open,
 /area/harbor/Aft_Shuttlebay)
 "cug" = (
 /obj/machinery/door/firedoor/border_only,
@@ -40314,7 +40314,7 @@
 	layer = 10.1;
 	dir = 4
 	},
-/turf/space,
+/turf/simulated/open,
 /area/harbor/Port_Shuttlebay)
 "cvU" = (
 /obj/structure/sign/warning/airlock,
@@ -40578,7 +40578,7 @@
 /obj/structure/lattice,
 /obj/machinery/shield_diffuser,
 /obj/effect/catwalk_plated/white,
-/turf/space,
+/turf/simulated/open,
 /area/harbor/Aft_Shuttlebay)
 "cwN" = (
 /obj/machinery/portable_atmospherics/canister/phoron,
@@ -42455,7 +42455,7 @@
 /area/medical/Chemistry)
 "cDW" = (
 /obj/effect/catwalk_plated/white,
-/turf/space,
+/turf/simulated/open,
 /area/harbor/For_Shuttlebay)
 "cDX" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
@@ -43089,7 +43089,7 @@
 "cFG" = (
 /obj/structure/lattice,
 /obj/structure/grille,
-/turf/space,
+/turf/simulated/open,
 /area/space)
 "cFH" = (
 /turf/simulated/wall/r_wall,
@@ -46256,7 +46256,7 @@
 	landmark_tag = "sc-D2_near_sw";
 	name = "Near SC - Deck 2 South West"
 	},
-/turf/space,
+/turf/simulated/open,
 /area/space)
 "dyx" = (
 /obj/machinery/shield_diffuser,
@@ -49480,7 +49480,7 @@
 	layer = 3;
 	id = "sc-GCnorthshuttlebay"
 	},
-/turf/space,
+/turf/simulated/open,
 /area/harbor/For_Shuttlebay)
 "epJ" = (
 /obj/machinery/door/window/southright{
@@ -52874,7 +52874,7 @@
 /area/rnd/Mech_Bay)
 "fjz" = (
 /obj/effect/catwalk_plated/white,
-/turf/space,
+/turf/simulated/open,
 /area/harbor/Aft_Shuttlebay)
 "fjA" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/red{
@@ -54427,7 +54427,7 @@
 /obj/structure/railing/grey{
 	dir = 8
 	},
-/turf/space,
+/turf/simulated/open,
 /area/space)
 "fEl" = (
 /obj/machinery/light/small{
@@ -60106,7 +60106,7 @@
 "gWp" = (
 /obj/machinery/shield_diffuser,
 /obj/structure/lattice,
-/turf/space,
+/turf/simulated/open,
 /area/space)
 "gWq" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
@@ -60883,7 +60883,7 @@
 "hgu" = (
 /obj/structure/lattice,
 /obj/machinery/light/small/neon/nif2,
-/turf/space,
+/turf/simulated/open,
 /area/harbor/Star_Shuttlebay)
 "hgv" = (
 /obj/machinery/atmospherics/portables_connector{
@@ -61448,7 +61448,7 @@
 /obj/structure/lattice,
 /obj/effect/catwalk_plated/white,
 /obj/machinery/mech_recharger/alien,
-/turf/space,
+/turf/simulated/open,
 /area/harbor/Star_Shuttlebay)
 "hnd" = (
 /obj/structure/cable/green{
@@ -61800,7 +61800,7 @@
 /obj/structure/railing/grey{
 	dir = 1
 	},
-/turf/space,
+/turf/simulated/open,
 /area/space)
 "hsM" = (
 /obj/structure/cable/green{
@@ -65269,7 +65269,7 @@
 	layer = 10.1;
 	dir = 1
 	},
-/turf/space,
+/turf/simulated/open,
 /area/harbor/Aft_Shuttlebay)
 "ipX" = (
 /obj/effect/floor_decal/borderfloorblack{
@@ -65363,7 +65363,7 @@
 /obj/structure/railing/grey{
 	dir = 1
 	},
-/turf/space,
+/turf/simulated/open,
 /area/space)
 "irc" = (
 /obj/machinery/camera/network/security{
@@ -70529,7 +70529,7 @@
 "jOR" = (
 /obj/structure/lattice,
 /obj/machinery/light/small/neon/nif2,
-/turf/space,
+/turf/simulated/open,
 /area/harbor/Port_Shuttlebay)
 "jPa" = (
 /obj/structure/cable{
@@ -70871,7 +70871,7 @@
 /obj/structure/lattice,
 /obj/effect/catwalk_plated/white,
 /obj/machinery/mech_recharger/alien,
-/turf/space,
+/turf/simulated/open,
 /area/harbor/For_Shuttlebay)
 "jUU" = (
 /obj/effect/floor_decal/borderfloor{
@@ -73976,7 +73976,7 @@
 "kNS" = (
 /obj/structure/lattice,
 /obj/effect/catwalk_plated/white,
-/turf/space,
+/turf/simulated/open,
 /area/harbor/Aft_Shuttlebay)
 "kOd" = (
 /obj/effect/floor_decal/industrial/loading/blue,
@@ -76075,7 +76075,7 @@
 "luv" = (
 /obj/structure/lattice,
 /obj/effect/catwalk_plated/white,
-/turf/space,
+/turf/simulated/open,
 /area/harbor/Port_Shuttlebay)
 "lux" = (
 /obj/structure/table/woodentable,
@@ -78418,7 +78418,7 @@
 /obj/structure/lattice,
 /obj/machinery/shield_diffuser,
 /obj/effect/catwalk_plated/white,
-/turf/space,
+/turf/simulated/open,
 /area/harbor/Port_Shuttlebay)
 "mcw" = (
 /obj/machinery/ai_status_display,
@@ -79566,7 +79566,7 @@
 	density = 0;
 	id = "sc-GCwestshuttlebay"
 	},
-/turf/space,
+/turf/simulated/open,
 /area/harbor/Port_Shuttlebay)
 "mza" = (
 /obj/machinery/vr_sleeper{
@@ -80544,7 +80544,7 @@
 /obj/structure/lattice,
 /obj/machinery/light/small/neon/generic_blue,
 /obj/machinery/shield_diffuser,
-/turf/space,
+/turf/simulated/open,
 /area/harbor/Aft_Shuttlebay)
 "mMc" = (
 /obj/structure/cable/green{
@@ -84810,7 +84810,7 @@
 	id = "sc-GCeastshuttlebay"
 	},
 /obj/machinery/shield_diffuser,
-/turf/space,
+/turf/simulated/open,
 /area/harbor/Star_Shuttlebay)
 "nZo" = (
 /obj/structure/railing{
@@ -85881,7 +85881,7 @@
 "onO" = (
 /obj/structure/lattice,
 /obj/machinery/shield_diffuser,
-/turf/space,
+/turf/simulated/open,
 /area/space)
 "oos" = (
 /obj/structure/reagent_dispensers/foam,
@@ -89916,7 +89916,7 @@
 "pxs" = (
 /obj/structure/lattice,
 /obj/effect/catwalk_plated/white,
-/turf/space,
+/turf/simulated/open,
 /area/harbor/Star_Shuttlebay)
 "pxu" = (
 /obj/effect/catwalk_plated/techmaint,
@@ -93489,7 +93489,7 @@
 	density = 0;
 	id = "sc-GCsouthshuttlebay"
 	},
-/turf/space,
+/turf/simulated/open,
 /area/harbor/Aft_Shuttlebay)
 "quL" = (
 /obj/structure/extinguisher_cabinet{
@@ -100328,7 +100328,7 @@
 /area/crew_quarters/Chapel_Lobby)
 "slm" = (
 /obj/effect/catwalk_plated/white,
-/turf/space,
+/turf/simulated/open,
 /area/harbor/Star_Shuttlebay)
 "slB" = (
 /obj/effect/floor_decal/industrial/hatch/blue,
@@ -100863,7 +100863,7 @@
 	landmark_tag = "sc-D2_near_se";
 	name = "Near SC - Deck 2 South East"
 	},
-/turf/space,
+/turf/simulated/open,
 /area/space)
 "ssK" = (
 /obj/structure/disposalpipe/segment{
@@ -107294,7 +107294,7 @@
 /obj/structure/railing/grey{
 	dir = 1
 	},
-/turf/space,
+/turf/simulated/open,
 /area/space)
 "uiJ" = (
 /obj/effect/floor_decal/borderfloorwhite/corner,
@@ -110160,7 +110160,7 @@
 /obj/structure/lattice,
 /obj/machinery/light/small/neon/generic_green,
 /obj/machinery/shield_diffuser,
-/turf/space,
+/turf/simulated/open,
 /area/harbor/Aft_Shuttlebay)
 "vbI" = (
 /obj/structure/cable/green{
@@ -113385,7 +113385,7 @@
 	landmark_tag = "sc-D2_near_ne";
 	name = "Near SC - Deck 2 North East"
 	},
-/turf/space,
+/turf/simulated/open,
 /area/space)
 "wdI" = (
 /obj/machinery/atmospherics/unary/vent_pump/on,
@@ -119162,7 +119162,7 @@
 /obj/structure/lattice,
 /obj/effect/catwalk_plated/white,
 /obj/machinery/mech_recharger/alien,
-/turf/space,
+/turf/simulated/open,
 /area/harbor/Port_Shuttlebay)
 "xHq" = (
 /turf/simulated/shuttle/floor,
@@ -119888,7 +119888,7 @@
 /obj/structure/lattice,
 /obj/effect/catwalk_plated/white,
 /obj/machinery/shield_diffuser,
-/turf/space,
+/turf/simulated/open,
 /area/harbor/Star_Shuttlebay)
 "xSl" = (
 /obj/machinery/door/firedoor/glass,
