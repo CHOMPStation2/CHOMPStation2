@@ -520,24 +520,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/teleporter/firstdeck)
-"abf" = (
-/obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 4
-	},
-/turf/simulated/floor/tiled,
-/area/hallway/primary/firstdeck/fore)
 "abg" = (
 /turf/simulated/shuttle/wall/no_join,
 /area/shuttle/large_escape_pod2/station)
@@ -65465,7 +65447,7 @@ aqM
 aqM
 axP
 aJz
-abf
+aDr
 aJA
 aLY
 aLI
