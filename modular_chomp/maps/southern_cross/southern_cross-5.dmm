@@ -5237,7 +5237,7 @@
 	icon_state = "2-8"
 	},
 /obj/structure/cable/blue{
-	icon_state = "4-8"
+	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/exploration/containment)
@@ -11463,6 +11463,9 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
 	},
+/obj/structure/cable/blue{
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/exploration/containment)
 "wa" = (
@@ -12074,12 +12077,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/security/maa)
-"xp" = (
-/obj/structure/cable/blue{
-	icon_state = "4-8"
-	},
-/turf/simulated/floor/tiled,
-/area/surface/outpost/main/exploration/containment)
 "xq" = (
 /turf/simulated/floor/wood{
 	nitrogen = 93.7835;
@@ -14274,15 +14271,6 @@
 	},
 /turf/simulated/floor/boxing,
 /area/surface/outpost/main/gym)
-"Bx" = (
-/obj/effect/floor_decal/steeldecal/steel_decals5{
-	dir = 4
-	},
-/obj/structure/cable/blue{
-	icon_state = "2-4"
-	},
-/turf/simulated/floor/tiled,
-/area/surface/outpost/main/exploration/containment)
 "BA" = (
 /obj/structure/cable/blue{
 	icon_state = "4-8"
@@ -20838,6 +20826,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
 	},
+/obj/structure/cable/blue{
+	icon_state = "2-4"
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/exploration/containment)
 "OV" = (
@@ -26102,15 +26093,6 @@
 	},
 /turf/simulated/floor/boxing,
 /area/surface/outpost/main/gym)
-"ZD" = (
-/obj/effect/floor_decal/steeldecal/steel_decals5{
-	dir = 4
-	},
-/obj/structure/cable/blue{
-	icon_state = "1-8"
-	},
-/turf/simulated/floor/tiled,
-/area/surface/outpost/main/exploration/containment)
 "ZE" = (
 /obj/effect/overlay/snow/floor,
 /obj/structure/cable/heavyduty{
@@ -67644,7 +67626,7 @@ ha
 WM
 bK
 vZ
-xp
+Mz
 JD
 Mz
 dj
@@ -67901,8 +67883,8 @@ ha
 ha
 mJ
 AP
-Bx
-ZD
+qF
+nx
 nx
 nx
 Qk
