@@ -274,3 +274,21 @@
 2025-11-16:
   Guti:
   - bugfix: Fixed mechas not teleporting in quantum pads
+2025-11-17:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: Fixed cans not stopping processing when destroyed
+  Diana:
+  - bugfix: Items now use the proper species fallback
+  - bugfix: Backup implanter works again
+  - bugfix: The one pizza can be cut again
+  - bugfix: Lick wounds works again
+  FluffMedic:
+  - bugfix: Alters the Assimilated Engine POI to prevent softlocks
+  Will:
+  - bugfix: noticeboards properly save the title of their pinned pages
+  Zizzi:
+  - bugfix: Circuitry injector can now inject common injectables.
+  sunofang:
+  - rscadd: Adds a new outsider ship! Comes with free sandbags
+  zeskorion:
+  - bugfix: fixes a few misc issues with cetus

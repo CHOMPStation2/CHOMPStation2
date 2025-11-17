@@ -1,4 +1,0 @@
-author: "FluffMedic"
-delete-after: True
-changes:
-  - bugfix: "Alters the Assimilated Engine POI to prevent softlocks"
