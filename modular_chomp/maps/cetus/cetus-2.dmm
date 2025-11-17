@@ -94,6 +94,14 @@
 	},
 /turf/simulated/floor/plating,
 /area/security/briefing_room)
+"aaj" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	color = "#aa5f61";
+	dir = 10
+	},
+/obj/structure/filingcabinet/chestdrawer,
+/turf/simulated/floor/glass/reinforced,
+/area/security/Wardens_Office)
 "aak" = (
 /obj/structure/disposalpipe/segment{
 	dir = 1;
@@ -69473,7 +69481,7 @@
 "xFJ" = (
 /obj/structure/filingcabinet/chestdrawer,
 /obj/item/storage/photo_album{
-	pixel_y = -10
+	pixel_y = 6
 	},
 /turf/simulated/floor/wood,
 /area/security/detectives_office)
@@ -107005,7 +107013,7 @@ jbi
 cBq
 cfU
 dkk
-rXD
+aaj
 jbO
 dkk
 rXD
