@@ -5428,6 +5428,7 @@
 #include "modular_chomp\maps\common_submaps\thor\thor_defines.dm"
 #include "modular_chomp\maps\common_submaps\tyr\tyr_defines.dm"
 #include "modular_chomp\maps\overmap\aegis_carrier\aegis_objs.dm"
+#include "modular_chomp\maps\overmap\om_ships\militarycorvette.dm"
 #include "modular_chomp\maps\overmap\om_ships\offmap.dm"
 #include "modular_chomp\maps\overmap\sectors\common_overmap.dm"
 #include "modular_chomp\maps\overmap\sectors\sectors.dm"
