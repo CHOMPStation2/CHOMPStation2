@@ -20362,6 +20362,7 @@
 	RCon_tag = "Substation - Starboard"
 	},
 /obj/item/smes_coil,
+/obj/item/smes_coil,
 /turf/simulated/floor/plating,
 /area/engineering/cetus/starsubstation)
 "kLN" = (

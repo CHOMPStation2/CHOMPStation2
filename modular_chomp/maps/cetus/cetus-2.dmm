@@ -29405,6 +29405,7 @@
 	RCon_tag = "Substation - Port"
 	},
 /obj/item/smes_coil,
+/obj/item/smes_coil,
 /turf/simulated/floor/plating,
 /area/engineering/cetus/portsubstation)
 "kcG" = (
@@ -30023,6 +30024,7 @@
 /obj/machinery/power/smes/buildable/max_charge{
 	RCon_tag = "Substation - Aft"
 	},
+/obj/item/smes_coil,
 /obj/item/smes_coil,
 /turf/simulated/floor/plating,
 /area/engineering/cetus/aftsubstation)
@@ -33006,6 +33008,7 @@
 /obj/machinery/power/smes/buildable/max_charge{
 	RCon_tag = "Substation - Central"
 	},
+/obj/item/smes_coil,
 /obj/item/smes_coil,
 /turf/simulated/floor/plating,
 /area/maintenance/substation/central)
@@ -38583,6 +38586,7 @@
 /obj/machinery/power/smes/buildable/max_charge{
 	RCon_tag = "Substation - Asteroid"
 	},
+/obj/item/smes_coil,
 /obj/item/smes_coil,
 /turf/simulated/floor/plating,
 /area/engineering/cetus/jointsubstation)
@@ -51158,6 +51162,7 @@
 /obj/machinery/power/smes/buildable/max_charge{
 	RCon_tag = "Substation - Fore"
 	},
+/obj/item/smes_coil,
 /obj/item/smes_coil,
 /turf/simulated/floor/plating,
 /area/engineering/cetus/foresubstation)
