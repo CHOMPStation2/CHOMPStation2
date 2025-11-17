@@ -1,4 +1,52 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aaa" = (
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/unary/vent_scrubber/on,
+/turf/simulated/floor/tiled,
+/area/crew_quarters/cetus/docklock)
+"aab" = (
+/obj/structure/disposalpipe/segment,
+/obj/effect/floor_decal/corner_steel_grid{
+	dir = 9
+	},
+/obj/machinery/recharger/wallcharger{
+	pixel_y = -9;
+	pixel_x = 34
+	},
+/obj/machinery/recharger/wallcharger{
+	pixel_y = 3;
+	pixel_x = 34
+	},
+/turf/simulated/floor/tiled,
+/area/hallway/primary/central_one)
+"aac" = (
+/obj/machinery/door/firedoor/glass,
+/obj/effect/wingrille_spawn/reinforced/polarized{
+	id = "detoffice"
+	},
+/obj/structure/cable/green{
+	icon_state = "0-6"
+	},
+/turf/simulated/floor/plating/turfpack/airless,
+/area/security/detectives_office)
+"aad" = (
+/obj/effect/wingrille_spawn/reinforced,
+/obj/machinery/door/firedoor/glass,
+/obj/structure/cable/green{
+	icon_state = "0-10"
+	},
+/turf/simulated/floor/tiled,
+/area/security/Reception)
+"aae" = (
+/obj/effect/wingrille_spawn/reinforced,
+/obj/machinery/door/firedoor/glass,
+/obj/structure/cable/green{
+	icon_state = "0-2"
+	},
+/turf/simulated/floor/plating,
+/area/security/Reception)
 "aaf" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
@@ -13,6 +61,39 @@
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/sleep/cetus/jrdorm1)
+"aag" = (
+/obj/effect/wingrille_spawn/reinforced,
+/obj/machinery/door/firedoor/glass,
+/obj/structure/cable/green{
+	icon_state = "0-10"
+	},
+/turf/simulated/floor/plating,
+/area/security/Reception)
+"aah" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "2-5"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/security/Brig)
+"aai" = (
+/obj/machinery/door/firedoor/glass,
+/obj/effect/wingrille_spawn/reinforced/polarized{
+	id = "secbriefing"
+	},
+/obj/structure/cable/green{
+	icon_state = "0-9"
+	},
+/turf/simulated/floor/plating,
+/area/security/briefing_room)
 "aak" = (
 /obj/structure/disposalpipe/segment{
 	dir = 1;
@@ -1024,6 +1105,9 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 4
 	},
+/obj/structure/cable/green{
+	icon_state = "6-9"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/security/Brig)
 "asg" = (
@@ -1056,6 +1140,12 @@
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "4-10"
+	},
+/obj/structure/cable/green{
+	icon_state = "4-9"
 	},
 /turf/simulated/floor/tiled,
 /area/security/Reception)
@@ -1721,6 +1811,12 @@
 	},
 /obj/structure/cable/green{
 	icon_state = "5-8"
+	},
+/obj/structure/cable/green{
+	icon_state = "2-8"
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/red,
 /area/security/Brig)
@@ -3602,6 +3698,15 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
+	},
+/obj/structure/cable/green{
+	icon_state = "6-8"
+	},
+/obj/structure/cable/green{
+	icon_state = "1-6"
+	},
+/obj/structure/cable/green{
+	icon_state = "5-6"
 	},
 /turf/simulated/floor/tiled,
 /area/security/Reception)
@@ -12489,6 +12594,7 @@
 "eoq" = (
 /obj/effect/wingrille_spawn/reinforced,
 /obj/machinery/door/firedoor/glass,
+/obj/structure/cable/green,
 /turf/simulated/floor/plating,
 /area/security/Reception)
 "eoG" = (
@@ -14822,6 +14928,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/dark,
 /area/security/Brig)
 "fdW" = (
@@ -15968,6 +16077,9 @@
 /obj/machinery/door/firedoor/glass,
 /obj/effect/wingrille_spawn/reinforced/polarized{
 	id = "detoffice"
+	},
+/obj/structure/cable/green{
+	icon_state = "0-5"
 	},
 /turf/simulated/floor/plating/turfpack/airless,
 /area/security/detectives_office)
@@ -18558,6 +18670,12 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 8
 	},
+/obj/structure/cable/green{
+	icon_state = "6-8"
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled/milspec/raised,
 /area/security/Brig)
 "gnK" = (
@@ -19807,6 +19925,10 @@
 /obj/effect/floor_decal/industrial/stand_clear/yellow{
 	pixel_y = -3
 	},
+/obj/machinery/disposal/wall{
+	pixel_y = 35
+	},
+/obj/structure/disposalpipe/trunk,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/security/briefing_room)
 "gMM" = (
@@ -21959,6 +22081,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled,
 /area/hallway/primary/seconddeck/dockhallway)
 "hzc" = (
@@ -26705,6 +26828,12 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
 	},
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/security/Reception)
 "jio" = (
@@ -29643,6 +29772,13 @@
 /obj/machinery/light{
 	dir = 4
 	},
+/obj/machinery/disposal{
+	color = "red";
+	name = "amnesty chute"
+	},
+/obj/structure/disposalpipe/trunk{
+	dir = 8
+	},
 /turf/simulated/floor/tiled,
 /area/security/Reception)
 "kll" = (
@@ -29933,7 +30069,6 @@
 /turf/simulated/floor/tiled/dark,
 /area/hallway/secondary/entry/D3)
 "kqN" = (
-/obj/structure/disposalpipe/segment,
 /obj/effect/floor_decal/borderfloorblack/corner{
 	dir = 4
 	},
@@ -29948,6 +30083,9 @@
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 4
+	},
+/obj/structure/disposalpipe/junction{
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/security/Reception)
@@ -31165,6 +31303,9 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/structure/cable/green{
+	icon_state = "2-8"
+	},
 /turf/simulated/floor/tiled,
 /area/security/Reception)
 "kOt" = (
@@ -31529,6 +31670,10 @@
 	},
 /obj/machinery/recharger{
 	pixel_x = 5
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
 	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/cetus/docklock)
@@ -32291,6 +32436,9 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/security/Brig)
@@ -33472,6 +33620,9 @@
 	dir = 8
 	},
 /obj/random/trash,
+/obj/structure/cable{
+	icon_state = "16-0"
+	},
 /turf/simulated/floor/plating,
 /area/engineering/cetus/jointsubstation)
 "lEI" = (
@@ -33603,6 +33754,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/techmaint,
 /area/crew_quarters/cetus/docklock)
 "lHV" = (
@@ -39111,6 +39263,9 @@
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
+/obj/structure/cable/green{
+	icon_state = "4-10"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/security/Brig)
 "nAt" = (
@@ -40712,6 +40867,9 @@
 /obj/effect/wingrille_spawn/reinforced/polarized{
 	id = "secbriefing"
 	},
+/obj/structure/cable/green{
+	icon_state = "0-9"
+	},
 /turf/simulated/floor/plating,
 /area/security/briefing_room)
 "oeh" = (
@@ -41225,6 +41383,9 @@
 	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "1-6"
 	},
 /turf/simulated/floor/tiled,
 /area/security/Reception)
@@ -42215,6 +42376,10 @@
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
 	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/cetus/docklock)
@@ -43584,6 +43749,9 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled,
 /area/security/Reception)
 "paY" = (
@@ -44336,6 +44504,7 @@
 /obj/effect/wingrille_spawn/reinforced/polarized{
 	id = "secbriefing"
 	},
+/obj/structure/cable/green,
 /turf/simulated/floor/plating,
 /area/security/briefing_room)
 "pnd" = (
@@ -46303,6 +46472,9 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
+	},
+/obj/structure/cable/green{
+	icon_state = "6-8"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/security/Brig)
@@ -49072,6 +49244,14 @@
 /obj/effect/floor_decal/corner/red/bordercorner{
 	dir = 1
 	},
+/obj/structure/cable/green{
+	icon_state = "5-10"
+	},
+/obj/structure/disposalpipe/tagger{
+	name = "Security";
+	sort_tag = "Security";
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/security/Reception)
 "qKR" = (
@@ -50777,6 +50957,10 @@
 	},
 /obj/machinery/light{
 	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
 	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/cetus/docklock)
@@ -55680,6 +55864,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/old_cargo/white,
 /area/security/Restroom)
 "sYV" = (
@@ -56104,6 +56291,9 @@
 /obj/effect/wingrille_spawn/reinforced/polarized{
 	id = "secbriefing"
 	},
+/obj/structure/cable/green{
+	icon_state = "0-9"
+	},
 /turf/simulated/floor/plating,
 /area/security/Brig)
 "ted" = (
@@ -56406,7 +56596,11 @@
 /turf/simulated/floor/tiled,
 /area/security/Internal_Affairs_Office)
 "tjI" = (
-/obj/machinery/atmospherics/unary/vent_scrubber/on{
+/obj/machinery/disposal{
+	color = "red";
+	name = "amnesty chute"
+	},
+/obj/structure/disposalpipe/trunk{
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
@@ -60882,6 +61076,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 5
 	},
+/obj/structure/cable/green{
+	icon_state = "4-9"
+	},
 /turf/simulated/floor/tiled,
 /area/security/Reception)
 "uIL" = (
@@ -61268,6 +61465,14 @@
 	},
 /obj/effect/floor_decal/corner_steel_grid{
 	dir = 6
+	},
+/obj/machinery/recharger/wallcharger{
+	pixel_y = 3;
+	pixel_x = -25
+	},
+/obj/machinery/recharger/wallcharger{
+	pixel_y = -9;
+	pixel_x = -25
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/central_one)
@@ -61977,6 +62182,9 @@
 /obj/effect/floor_decal/corner/red/bordercorner,
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/security/Brig)
@@ -62981,6 +63189,12 @@
 	},
 /obj/structure/cable/green{
 	icon_state = "0-6"
+	},
+/obj/structure/cable/green{
+	icon_state = "1-6"
+	},
+/obj/structure/cable/green{
+	icon_state = "5-6"
 	},
 /turf/simulated/floor/tiled,
 /area/security/Reception)
@@ -64170,6 +64384,9 @@
 "vSR" = (
 /obj/effect/wingrille_spawn/reinforced,
 /obj/machinery/door/firedoor/glass,
+/obj/structure/cable/green{
+	icon_state = "0-2"
+	},
 /turf/simulated/floor/tiled,
 /area/security/Reception)
 "vTC" = (
@@ -65395,6 +65612,9 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 8
 	},
+/obj/structure/cable/green{
+	icon_state = "4-10"
+	},
 /turf/simulated/floor/tiled/red,
 /area/security/Brig)
 "wpW" = (
@@ -66494,13 +66714,13 @@
 /turf/simulated/floor/tiled/dark,
 /area/rnd/cetus/chem)
 "wIN" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
+	},
+/obj/structure/disposalpipe/junction{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/hallway/primary/seconddeck/dockhallway)
@@ -68588,6 +68808,9 @@
 	id = "secbriefing"
 	},
 /obj/machinery/door/firedoor/glass,
+/obj/structure/cable/green{
+	icon_state = "0-8"
+	},
 /turf/simulated/floor/plating,
 /area/security/briefing_room)
 "xtB" = (
@@ -69026,10 +69249,6 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/crew_quarters/Custodial_Office)
 "xzo" = (
-/obj/structure/disposalpipe/segment{
-	dir = 2;
-	icon_state = "pipe-c"
-	},
 /obj/structure/railing/overhang/hazard{
 	dir = 8
 	},
@@ -69041,6 +69260,7 @@
 	name = "Secure Door";
 	req_access = list(63)
 	},
+/obj/structure/disposalpipe/junction,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/security/briefing_room)
 "xzv" = (
@@ -69929,10 +70149,13 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 10
-	},
 /obj/machinery/atmospherics/unary/vent_pump/on,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/disposalpipe/tagger{
+	name = "Security";
+	sort_tag = "Security";
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/cetus/docklock)
 "xVM" = (
@@ -105752,7 +105975,7 @@ vOk
 vza
 naF
 lbF
-bcN
+aah
 eoq
 iTB
 fzz
@@ -106016,7 +106239,7 @@ nuR
 nay
 mcy
 sIu
-fzY
+aac
 mrJ
 fzY
 sIu
@@ -106268,7 +106491,7 @@ dTY
 dTY
 dTY
 qGs
-bcN
+aah
 eoq
 wiH
 iMP
@@ -106530,7 +106753,7 @@ msI
 mcy
 rdc
 mds
-vSR
+aad
 ygJ
 uJI
 pas
@@ -106785,7 +107008,7 @@ plZ
 iHn
 gkm
 jEr
-eoq
+aae
 oox
 qLN
 bJK
@@ -107301,7 +107524,7 @@ pBP
 dTY
 rhH
 yfc
-eoq
+aae
 jil
 bkb
 iYc
@@ -107315,7 +107538,7 @@ upC
 aqk
 aqk
 nWz
-aqk
+aab
 qDi
 aqk
 aqk
@@ -107817,7 +108040,7 @@ dTY
 qBU
 pQk
 bcN
-eoq
+aag
 kkz
 nDE
 lnC
@@ -110654,7 +110877,7 @@ dac
 dac
 xtA
 pNv
-pnb
+aai
 mZC
 bUA
 dYn
@@ -111771,7 +111994,7 @@ cvg
 lEi
 tjR
 tjR
-tjR
+aaa
 xVI
 oEI
 lHO
