@@ -8,7 +8,7 @@
 	return TRUE
 
 // Helper for anything checking if it can inject a container like a syringe.
-/obj/proc/is_injectable_container()
+/atom/movable/proc/is_injectable_container()
 	return is_open_container() || \
 		istype(src, /obj/item/reagent_containers/food) || \
 		istype(src, /obj/item/slime_extract) || \
