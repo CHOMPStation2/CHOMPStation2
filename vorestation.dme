@@ -5085,6 +5085,7 @@
 #include "modular_chomp\code\game\machinery\traptiles.dm"
 #include "modular_chomp\code\game\machinery\turrets.dm"
 #include "modular_chomp\code\game\machinery\vending.dm"
+#include "modular_chomp\code\game\machinery\computer\bodycamera.dm"
 #include "modular_chomp\code\game\mecha\mecha_construction_paths.dm"
 #include "modular_chomp\code\game\mecha\mecha_parts.dm"
 #include "modular_chomp\code\game\mecha\secert\hades.dm"
