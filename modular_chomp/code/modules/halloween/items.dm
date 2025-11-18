@@ -83,7 +83,7 @@
 
 	searching = TRUE
 
-	if(!do_after(user, 5 SECONDS))
+	if(!do_after(user, 5 SECONDS, src))
 		searching = FALSE
 		return
 
@@ -104,6 +104,7 @@
 		thegoods = pick(candy)
 		treated[user.ckey] = TRUE
 
+	add_fingerprint(user)
 	var/goodie = new thegoods(src)
 	user.put_in_hands(goodie)
 
