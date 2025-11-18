@@ -4120,7 +4120,6 @@
 "brS" = (
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/command{
-	id_tag = "HoSdoor";
 	name = "Head of Security Quarters";
 	req_access = list(58);
 	req_one_access = null
@@ -13184,7 +13183,7 @@
 	},
 /obj/item/reagent_containers/glass/beaker/large{
 	pixel_y = 1;
-	pixel_x = -1
+	pixel_x = -13
 	},
 /turf/simulated/floor/tiled/dark,
 /area/medical/Chemistry)
@@ -22780,10 +22779,10 @@
 "hJM" = (
 /obj/structure/table/reinforced,
 /obj/item/clothing/glasses/science{
-	pixel_y = 6
+	pixel_y = 12
 	},
 /obj/item/clothing/glasses/science{
-	pixel_y = 6
+	pixel_y = 17
 	},
 /obj/machinery/disposal/wall{
 	dir = 4;
@@ -25351,7 +25350,7 @@
 /obj/effect/floor_decal/borderfloorblack/corner,
 /obj/effect/floor_decal/corner/purple/bordercorner,
 /obj/item/form_printer{
-	pixel_y = -2
+	pixel_x = 8
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/Research_Lab)
@@ -26181,7 +26180,8 @@
 	},
 /obj/structure/table/glass,
 /obj/item/newspaper{
-	pixel_y = 3
+	pixel_y = 3;
+	pixel_x = 12
 	},
 /obj/random/medical,
 /turf/simulated/floor/tiled/white,
@@ -30537,6 +30537,11 @@
 /obj/machinery/camera/network/medbay{
 	c_tag = "MED - Chemistry";
 	dir = 9
+	},
+/obj/item/reagent_containers/spray/cleaner{
+	desc = "Someone has crossed out the 'Space' from Space Cleaner and written in Chemistry. Scrawled on the back is, 'Okay, whoever filled this with polytrinic acid, it was only funny the first time. It was hard enough replacing the CMO's first cat!'";
+	name = "Chemistry Cleaner";
+	pixel_y = 17
 	},
 /turf/simulated/floor/tiled/dark,
 /area/medical/Chemistry)
@@ -50908,7 +50913,10 @@
 	amount = 50
 	},
 /obj/item/stack/cable_coil/random,
-/obj/item/stack/cable_coil/random,
+/obj/item/stack/cable_coil/random{
+	pixel_y = -3;
+	pixel_x = 16
+	},
 /obj/random/tech_supply,
 /obj/random/tech_supply,
 /obj/random/tech_supply,
@@ -53962,15 +53970,20 @@
 	},
 /obj/item/stack/material/glass{
 	amount = 50;
-	pixel_x = 3;
+	pixel_x = 12;
 	pixel_y = 3
 	},
 /obj/item/stack/material/steel{
-	amount = 50
+	amount = 50;
+	pixel_x = 8
 	},
 /obj/item/clothing/glasses/welding,
-/obj/item/stack/cable_coil,
-/obj/item/stack/cable_coil,
+/obj/item/stack/cable_coil{
+	pixel_x = -6
+	},
+/obj/item/stack/cable_coil{
+	pixel_x = -12
+	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/Research_Lab)
 "soy" = (
@@ -54816,8 +54829,8 @@
 /obj/random/tech_supply,
 /obj/item/stack/material/glass{
 	amount = 50;
-	pixel_x = 3;
-	pixel_y = 3
+	pixel_x = 15;
+	pixel_y = -1
 	},
 /turf/simulated/floor/tiled,
 /area/storage/tools)
@@ -56746,8 +56759,12 @@
 /area/maintenance/cetus/twosci)
 "tlA" = (
 /obj/structure/table/steel,
-/obj/item/storage/box,
-/obj/item/storage/box,
+/obj/item/storage/box{
+	pixel_x = -10
+	},
+/obj/item/storage/box{
+	pixel_x = 14
+	},
 /obj/random/tech_supply,
 /obj/random/tech_supply,
 /obj/random/tech_supply,
