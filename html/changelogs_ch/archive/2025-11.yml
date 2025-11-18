@@ -292,3 +292,6 @@
   - rscadd: Adds a new outsider ship! Comes with free sandbags
   zeskorion:
   - bugfix: fixes a few misc issues with cetus
+2025-11-18:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: bad typing and runtimes if RnD devices were used before round start
