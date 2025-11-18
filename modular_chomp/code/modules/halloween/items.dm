@@ -48,7 +48,6 @@
 	var/has_candy = TRUE
 
 	var/list/candy = list(
-		/obj/item/reagent_containers/food/snacks/chocolatebar,
 		/obj/item/reagent_containers/food/snacks/cb01,
 		/obj/item/reagent_containers/food/snacks/cb02,
 		/obj/item/reagent_containers/food/snacks/cb03,
@@ -59,12 +58,20 @@
 		/obj/item/reagent_containers/food/snacks/cb08,
 		/obj/item/reagent_containers/food/snacks/cb09,
 		/obj/item/reagent_containers/food/snacks/cb10,
+		/obj/item/reagent_containers/food/snacks/candy_corn,
+		/obj/item/reagent_containers/food/snacks/triton,
+		/obj/item/reagent_containers/food/snacks/saturn,
+		/obj/item/reagent_containers/food/snacks/jupiter,
+		/obj/item/reagent_containers/food/snacks/pluto,
+		/obj/item/reagent_containers/food/snacks/mars,
+		/obj/item/reagent_containers/food/snacks/venus,
+		/obj/item/reagent_containers/food/snacks/oort
 	)
 
 	var/list/badcandy = list(
 		/obj/item/reagent_containers/food/snacks/no_raisin,
 		/obj/item/reagent_containers/food/snacks/egg/rotten,
-		/obj/item/reagent_containers/food/snacks/candy_corn
+		/obj/item/reagent_containers/food/snacks/hakarl
 	)
 
 	var/list/treated = list()
