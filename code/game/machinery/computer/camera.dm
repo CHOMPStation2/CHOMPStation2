@@ -160,11 +160,13 @@ GLOBAL_LIST_EMPTY(bodycamera_screens) // CHOMPEdit
 	if(stat & NOPOWER)
 		return
 	showing = WEAKREF(thing)
-	pinboard.vis_contents = list(thing)
+	if(pinboard)
+		pinboard.vis_contents = list(thing)
 
 /obj/machinery/computer/security/telescreen/entertainment/proc/stop_showing()
 	// Reverse of the above
-	pinboard.vis_contents = null
+	if(pinboard)
+		pinboard.vis_contents = null
 	showing = null
 
 /obj/machinery/computer/security/telescreen/entertainment/proc/maybe_stop_showing(datum/weakref/thingref)
