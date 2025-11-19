@@ -7,6 +7,29 @@
 /turf/simulated/floor/tiled,
 /area/crew_quarters/cetus/docklock)
 "aab" = (
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 5
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/cetus/twofp)
+"aac" = (
+/obj/machinery/door/firedoor/glass,
+/obj/effect/wingrille_spawn/reinforced,
+/obj/machinery/atmospherics/pipe/simple/visible/universal,
+/turf/simulated/floor/plating,
+/area/maintenance/cetus/twofp)
+"aad" = (
+/obj/machinery/door/firedoor/glass,
+/obj/machinery/atmospherics/binary/pump/on{
+	dir = 1;
+	target_pressure = 200
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/cetus/twofp)
+"aae" = (
 /obj/structure/disposalpipe/segment,
 /obj/effect/floor_decal/corner_steel_grid{
 	dir = 9
@@ -21,32 +44,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/central_one)
-"aac" = (
-/obj/machinery/door/firedoor/glass,
-/obj/effect/wingrille_spawn/reinforced/polarized{
-	id = "detoffice"
-	},
-/obj/structure/cable/green{
-	icon_state = "0-6"
-	},
-/turf/simulated/floor/plating/turfpack/airless,
-/area/security/detectives_office)
-"aad" = (
-/obj/effect/wingrille_spawn/reinforced,
-/obj/machinery/door/firedoor/glass,
-/obj/structure/cable/green{
-	icon_state = "0-10"
-	},
-/turf/simulated/floor/tiled,
-/area/security/Reception)
-"aae" = (
-/obj/effect/wingrille_spawn/reinforced,
-/obj/machinery/door/firedoor/glass,
-/obj/structure/cable/green{
-	icon_state = "0-2"
-	},
-/turf/simulated/floor/plating,
-/area/security/Reception)
 "aaf" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
@@ -62,6 +59,32 @@
 /turf/simulated/floor/wood,
 /area/crew_quarters/sleep/cetus/jrdorm1)
 "aag" = (
+/obj/machinery/door/firedoor/glass,
+/obj/effect/wingrille_spawn/reinforced/polarized{
+	id = "detoffice"
+	},
+/obj/structure/cable/green{
+	icon_state = "0-6"
+	},
+/turf/simulated/floor/plating/turfpack/airless,
+/area/security/detectives_office)
+"aah" = (
+/obj/effect/wingrille_spawn/reinforced,
+/obj/machinery/door/firedoor/glass,
+/obj/structure/cable/green{
+	icon_state = "0-10"
+	},
+/turf/simulated/floor/tiled,
+/area/security/Reception)
+"aai" = (
+/obj/effect/wingrille_spawn/reinforced,
+/obj/machinery/door/firedoor/glass,
+/obj/structure/cable/green{
+	icon_state = "0-2"
+	},
+/turf/simulated/floor/plating,
+/area/security/Reception)
+"aaj" = (
 /obj/effect/wingrille_spawn/reinforced,
 /obj/machinery/door/firedoor/glass,
 /obj/structure/cable/green{
@@ -69,7 +92,18 @@
 	},
 /turf/simulated/floor/plating,
 /area/security/Reception)
-"aah" = (
+"aak" = (
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
+/obj/machinery/door/firedoor/glass,
+/obj/effect/wingrille_spawn/reinforced/polarized{
+	id = "hottubtint"
+	},
+/turf/simulated/floor/plating,
+/area/crew_quarters/sauna)
+"aal" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
@@ -84,7 +118,7 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/security/Brig)
-"aai" = (
+"aam" = (
 /obj/machinery/door/firedoor/glass,
 /obj/effect/wingrille_spawn/reinforced/polarized{
 	id = "secbriefing"
@@ -94,7 +128,7 @@
 	},
 /turf/simulated/floor/plating,
 /area/security/briefing_room)
-"aaj" = (
+"aan" = (
 /obj/effect/floor_decal/spline/fancy/wood{
 	color = "#aa5f61";
 	dir = 10
@@ -102,40 +136,6 @@
 /obj/structure/filingcabinet/chestdrawer,
 /turf/simulated/floor/glass/reinforced,
 /area/security/Wardens_Office)
-"aak" = (
-/obj/structure/disposalpipe/segment{
-	dir = 1;
-	icon_state = "pipe-c"
-	},
-/obj/machinery/door/firedoor/glass,
-/obj/effect/wingrille_spawn/reinforced/polarized{
-	id = "hottubtint"
-	},
-/turf/simulated/floor/plating,
-/area/crew_quarters/sauna)
-"aal" = (
-/obj/effect/floor_decal/industrial/warning/corner{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 5
-	},
-/turf/simulated/floor/plating,
-/area/maintenance/cetus/twofp)
-"aam" = (
-/obj/machinery/door/firedoor/glass,
-/obj/effect/wingrille_spawn/reinforced,
-/obj/machinery/atmospherics/pipe/simple/visible/universal,
-/turf/simulated/floor/plating,
-/area/maintenance/cetus/twofp)
-"aan" = (
-/obj/machinery/door/firedoor/glass,
-/obj/machinery/atmospherics/binary/pump/on{
-	dir = 1;
-	target_pressure = 200
-	},
-/turf/simulated/floor/plating,
-/area/maintenance/cetus/twofp)
 "aaq" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -103978,8 +103978,8 @@ pTs
 sty
 sty
 eZn
-aam
-aal
+aac
+aab
 txP
 txP
 pjM
@@ -104236,7 +104236,7 @@ eCM
 eGG
 oGg
 mhD
-aan
+aad
 gvb
 txP
 tgu
@@ -106026,7 +106026,7 @@ vOk
 vza
 naF
 lbF
-aah
+aal
 eoq
 iTB
 fzz
@@ -106290,7 +106290,7 @@ nuR
 nay
 mcy
 sIu
-aac
+aag
 mrJ
 fzY
 sIu
@@ -106542,7 +106542,7 @@ dTY
 dTY
 dTY
 qGs
-aah
+aal
 eoq
 wiH
 iMP
@@ -106804,7 +106804,7 @@ msI
 mcy
 rdc
 mds
-aad
+aah
 ygJ
 uJI
 pas
@@ -107051,7 +107051,7 @@ jbi
 cBq
 cfU
 dkk
-aaj
+aan
 jbO
 dkk
 rXD
@@ -107059,7 +107059,7 @@ plZ
 iHn
 gkm
 jEr
-aae
+aai
 oox
 qLN
 bJK
@@ -107575,7 +107575,7 @@ pBP
 dTY
 rhH
 yfc
-aae
+aai
 jil
 bkb
 iYc
@@ -107589,7 +107589,7 @@ upC
 aqk
 aqk
 nWz
-aab
+aae
 qDi
 aqk
 aqk
@@ -108091,7 +108091,7 @@ dTY
 qBU
 pQk
 bcN
-aag
+aaj
 kkz
 nDE
 lnC
@@ -110928,7 +110928,7 @@ dac
 dac
 xtA
 pNv
-aai
+aam
 mZC
 bUA
 dYn
