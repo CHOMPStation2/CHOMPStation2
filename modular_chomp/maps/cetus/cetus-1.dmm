@@ -6301,7 +6301,7 @@
 	desc = "A remote control-switch for the engine control room blast doors.";
 	id = "EngineEmitterPortWest";
 	name = "Engine Room Blast Doors";
-	pixel_x = 28;
+	pixel_x = 25;
 	pixel_y = 25;
 	req_one_access = list(11,24);
 	dir = 8
@@ -25812,6 +25812,15 @@
 	},
 /obj/structure/cable/cyan{
 	icon_state = "4-8"
+	},
+/obj/machinery/button/remote/blast_door{
+	desc = "A remote control-switch for the engine control room blast doors.";
+	id = "EngineEmitterPortWest";
+	name = "Engine Room Blast Doors";
+	pixel_x = -25;
+	pixel_y = 24;
+	req_one_access = list(11,24);
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/engineering/cetus/meteor/enginewaste)

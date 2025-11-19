@@ -113,6 +113,29 @@
 	},
 /turf/simulated/floor/plating,
 /area/crew_quarters/sauna)
+"aal" = (
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 5
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/cetus/twofp)
+"aam" = (
+/obj/machinery/door/firedoor/glass,
+/obj/effect/wingrille_spawn/reinforced,
+/obj/machinery/atmospherics/pipe/simple/visible/universal,
+/turf/simulated/floor/plating,
+/area/maintenance/cetus/twofp)
+"aan" = (
+/obj/machinery/door/firedoor/glass,
+/obj/machinery/atmospherics/binary/pump/on{
+	dir = 1;
+	target_pressure = 200
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/cetus/twofp)
 "aaq" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -14655,13 +14678,16 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 4
-	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
 /obj/effect/floor_decal/industrial/warning/corner,
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 6
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/twofp)
 "eZM" = (
@@ -19018,6 +19044,9 @@
 "gvb" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 9
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/twofp)
@@ -35427,14 +35456,8 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 5
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 5
-	},
 /obj/structure/cable{
 	icon_state = "1-8"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 9
 	},
 /obj/structure/disposalpipe/junction{
 	dir = 4;
@@ -35442,6 +35465,10 @@
 	},
 /obj/effect/floor_decal/industrial/warning,
 /obj/structure/catwalk,
+/obj/machinery/atmospherics/pipe/manifold/hidden{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/twofp)
 "mhE" = (
@@ -42519,12 +42546,10 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/obj/machinery/atmospherics/pipe/manifold/hidden{
-	dir = 8
-	},
 /obj/machinery/meter,
 /obj/structure/disposalpipe/segment,
 /obj/structure/catwalk,
+/obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/twofp)
 "oGE" = (
@@ -68517,10 +68542,6 @@
 	},
 /obj/structure/cable{
 	icon_state = "4-8"
-	},
-/obj/machinery/atmospherics/binary/pump/on{
-	dir = 8;
-	target_pressure = 200
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/twofp)
@@ -103957,8 +103978,8 @@ pTs
 sty
 sty
 eZn
-iue
-qKR
+aam
+aal
 txP
 txP
 pjM
@@ -104215,7 +104236,7 @@ eCM
 eGG
 oGg
 mhD
-cUn
+aan
 gvb
 txP
 tgu
