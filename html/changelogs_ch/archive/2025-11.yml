@@ -295,3 +295,14 @@
 2025-11-18:
   CHOMPStation2StaffMirrorBot:
   - bugfix: bad typing and runtimes if RnD devices were used before round start
+2025-11-19:
+  CHOMPStation2StaffMirrorBot:
+  - rscadd: 'Added new HOS gear, available from clothing locker: New red cap, new
+      suit jacket, new cloak (attachable to suit and uniform)'
+  - rscadd: Added a new colorable cloak, selectable from the loadout ("flowing cloak")
+      and purchasable from Big D's Best. The greyscaling is simple at best, apologies.
+  - image: Added icons for new clothing options, including mob, inhands and obj icons.
+  Will:
+  - code_imp: Cleaned up effect grenades
+  - bugfix: bodycamera console runtime fix
+  - bugfix: Fixes an entertainment monitor runtime
