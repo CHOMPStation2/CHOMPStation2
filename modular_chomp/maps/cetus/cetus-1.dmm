@@ -7299,8 +7299,7 @@
 /turf/simulated/floor/tiled/milspec/sterile,
 /area/medical/Surgery_Room_1)
 "ebr" = (
-/obj/machinery/flasher/portable,
-/obj/effect/floor_decal/industrial/outline/red,
+/obj/machinery/vending/security,
 /turf/simulated/floor/tiled/dark,
 /area/security/cetus/meteor/hallway)
 "ebu" = (
@@ -44739,7 +44738,6 @@
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/cetus/meteor/pool)
 "xcJ" = (
-/obj/machinery/deployable/barrier,
 /obj/machinery/alarm{
 	dir = 8;
 	pixel_x = 25
@@ -44749,6 +44747,7 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/industrial/outline/red,
+/obj/machinery/flasher/portable,
 /turf/simulated/floor/tiled/techfloor,
 /area/security/cetus/meteor/hallway)
 "xdj" = (
