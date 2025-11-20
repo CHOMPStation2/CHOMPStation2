@@ -1,0 +1,6 @@
+author: "Guti"
+delete-after: True
+changes:
+  - bugfix: "Fixed candy bowl not working"
+  - qol: "Candy bowls can now have fingerprints"
+  - balance: "Changed rotten egg reagent from toxin to salmonella"
