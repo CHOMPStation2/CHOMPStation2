@@ -1,4 +1,11 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aa" = (
+/obj/structure/prop/tyr_elevator{
+	descendx = 92;
+	descendy = 200
+	},
+/turf/simulated/shuttle/floor/black,
+/area/surface/tyr/precursorruins)
 "ac" = (
 /turf/simulated/shuttle/wall/alien/orange,
 /area/surface/tyr/precursorruins/engine)
@@ -1280,7 +1287,11 @@
 /turf/simulated/tyracid/supernova,
 /area/surface/tyr/precursorruins)
 "eQ" = (
-/turf/simulated/shuttle/floor/white,
+/obj/structure/prop/tyr_elevator{
+	descendx = 119;
+	descendy = 253
+	},
+/turf/simulated/shuttle/floor/black,
 /area/surface/tyr/precursorruins)
 "eR" = (
 /obj/structure/catwalk,
@@ -32392,7 +32403,7 @@ dT
 (119,1,1) = {"
 Mz
 Mz
-eQ
+aa
 Th
 Th
 db
@@ -33428,7 +33439,7 @@ Mz
 db
 Th
 db
-eL
+db
 db
 Th
 db
@@ -33686,7 +33697,7 @@ Mz
 db
 Th
 Th
-bs
+Th
 Th
 dA
 db
@@ -33944,7 +33955,7 @@ Mz
 db
 db
 db
-eL
+db
 db
 db
 db
