@@ -1,11 +1,4 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
-"aa" = (
-/obj/structure/prop/tyr_elevator{
-	descendx = 92;
-	descendy = 200
-	},
-/turf/simulated/shuttle/floor/black,
-/area/surface/tyr/precursorruins)
 "ac" = (
 /turf/simulated/shuttle/wall/alien/orange,
 /area/surface/tyr/precursorruins/engine)
@@ -273,6 +266,13 @@
 /mob/living/simple_mob/animal/tyr/mineral_ants/queen,
 /turf/simulated/floor/outdoors/desert_planet/deep_grass/tyr,
 /area/surface/tyr/south_caverns)
+"bb" = (
+/obj/structure/prop/tyr_elevator{
+	descendx = 92;
+	descendy = 200
+	},
+/turf/simulated/shuttle/floor/black,
+/area/surface/tyr/precursorruins)
 "bd" = (
 /obj/structure/prop/tyr_elevator{
 	descendx = 148;
@@ -32403,7 +32403,7 @@ dT
 (119,1,1) = {"
 Mz
 Mz
-aa
+bb
 Th
 Th
 db
