@@ -195,9 +195,24 @@
 	requires_power = FALSE
 	outdoors = OUTDOORS_NO
 
-/area/surface/tyr/precursorruins/finale
-	name = "Facility Final Ark"
+/area/surface/tyr/precursorruins
+	name = "Ark Facility - General Area"
 	flags = RAD_SHIELDED | AREA_FLAG_IS_NOT_PERSISTENT | AREA_SECRET_NAME | AREA_FORBID_EVENTS | PHASE_SHIELDED
+
+/area/surface/tyr/precursorruins/weather_office
+	 name = "Ark Facility - Weather Report"
+
+/area/surface/tyr/precursorruins/swarm_storage
+	 name = "Ark Facility - Replicator Storage"
+
+/area/surface/tyr/precursorruins/engine
+	 name = "Ark Facility - Engine Monitoring"
+
+/area/surface/tyr/precursorruins/lookout
+	 name = "Ark Facility - Observation Center"
+
+/area/surface/tyr/precursorruins/expirment_zone
+	 name = "Ark Facility - Expirment Containment"
 
 /area/surface/tyr/precursorruins/southeast
 	name = "Relax Training Chamber"

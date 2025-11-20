@@ -1,7 +1,8 @@
 //oooh, shiny
 /obj/structure/prop/tyr_elevator //This won't function for a while, if ever
 	name = "odd elevator"
-	desc = "A strange metal cylandir, a partially functioning elevator it seems."
+	desc = "A strange metal cylandir, a partially functioning elevator it seems. However the doors need to be pried open."
+	description_info = "Utlize a weapon or tool to get warped somewhere else."
 	icon = 'modular_chomp/icons/obj/tribal_gear.dmi'
 	icon_state = "elevator"
 	anchored = TRUE
