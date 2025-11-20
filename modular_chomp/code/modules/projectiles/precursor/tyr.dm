@@ -217,3 +217,16 @@
 		/obj/item/projectile/energy/eclipse/tyrjavelin, /obj/item/projectile/energy/eclipse/tyrjavelin, \
 		/obj/item/projectile/energy/eclipse/tyrjavelin, /obj/item/projectile/energy/eclipse/tyrjavelin/super_slow
 		)
+
+/obj/item/projectile/energy/agate_lighting
+	damage = 18
+	damage_type = ELECTROCUTE
+	icon_state = "tesla_projectile"
+	armor_penetration = 30
+	speed = 15
+	penetrating = 5
+	crawl_destroy = TRUE
+
+/obj/item/projectile/energy/agate_lighting/fast
+	damage = 30
+	speed = 2

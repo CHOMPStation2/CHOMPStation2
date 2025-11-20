@@ -36,7 +36,10 @@
 	icon_living = "bright_green"
 
 /mob/living/simple_mob/mechanical/hivebot/tyr/meteor
-	projectiletype = /obj/item/projectile/arc/blue_energy/precusor
+	maxHealth = 2 LASERS_TO_KILL // 80 hp
+	health = 2 LASERS_TO_KILL
+	ai_holder_type = /datum/ai_holder/hostile/ranged/robust
+	projectiletype = /obj/item/projectile/energy/agate_lighting/fast
 
 /mob/living/simple_mob/mechanical/mecha/eclipse/hivebot/tyr
 	name = "ai control center"

@@ -52,7 +52,8 @@
 	icon_state = "poison_boss"
 	icon_living = "poison_boss"
 	wreckage = /obj/item/prop/tyrlore/basicflora
-	projectiletype = /obj/item/projectile/energy/neurotoxin/toxic/tyr_flora
+	projectiletype = /obj/item/projectile/bullet/astral_blade
+	specialattackprojectile = /obj/item/projectile/energy/neurotoxin/toxic/tyr_flora
 	var/regeneration_strength = -30
 
 /mob/living/simple_mob/mechanical/mecha/eclipse/tankyboss/acid_boss/load_default_bellies()
@@ -265,8 +266,8 @@
 	icon_living = "yellow"
 	size_multiplier = 3
 	wreckage = /obj/item/prop/tyrlore/basicpower
-	specialattackprojectile = /obj/item/projectile/energy/lightingspark/nanoweave
-	projectiletype = /obj/item/projectile/energy/lightingspark/nanoweave
+	specialattackprojectile = /obj/item/projectile/energy/agate_lighting
+	projectiletype = /obj/item/projectile/energy/agate_lighting
 
 /mob/living/simple_mob/mechanical/mecha/eclipse/tankyboss/engi_ai/do_special_attack(atom/A)
 	switch(attackcycle)
