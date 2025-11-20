@@ -1201,6 +1201,13 @@
 	sound_env = SOUND_ENVIRONMENT_CAVE
 	lightswitch = FALSE
 	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
+	flags = RAD_SHIELDED | AREA_FORBID_EVENTS | AREA_ALLOW_CLOCKOUT
+
+/area/maintenance/cetus/engine/space
+	name = "\improper Incomplete Engine Platform"
+	dynamic_lighting = 0
+	has_gravity = 0
+	ambience = AMBIENCE_SPACE
 
 /area/maintenance/cetus/twojrport
 	name = "\improper Joint Research Deck Two Port Maintenance"

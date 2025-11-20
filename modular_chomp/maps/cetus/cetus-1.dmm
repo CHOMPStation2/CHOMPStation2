@@ -1,10 +1,47 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aaa" = (
+/obj/machinery/shield_diffuser,
+/turf/simulated/floor/plating/turfpack/airless,
+/area/maintenance/cetus/engine/space)
+"aab" = (
+/turf/simulated/wall/r_wall,
+/area/maintenance/cetus/engine/space)
+"aac" = (
+/turf/simulated/floor/plating/turfpack/airless,
+/area/maintenance/cetus/engine/space)
+"aad" = (
+/obj/machinery/power/apc{
+	dir = 4;
+	name = "east bump";
+	pixel_x = 24;
+	pixel_y = -1
+	},
+/obj/structure/cable/cyan,
+/turf/simulated/floor/plating/turfpack/airless,
+/area/maintenance/cetus/engine/space)
+"aae" = (
+/obj/effect/floor_decal/asteroid,
+/obj/structure/lattice,
+/turf/simulated/floor/outdoors/rocks/cetus,
+/area/maintenance/cetus/meteor/aftstar)
+"aaf" = (
+/obj/structure/lattice,
+/turf/simulated/floor/outdoors/rocks/cetus,
+/area/maintenance/cetus/meteor/aftstar)
 "aag" = (
 /obj/structure/toilet{
 	dir = 1
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/sleep/cetus/meteor/dorm7)
+"aah" = (
+/obj/structure/flora/ausbushes/sparsegrass,
+/obj/machinery/alarm{
+	dir = 1;
+	pixel_y = -22
+	},
+/turf/simulated/floor/grass,
+/area/crew_quarters/cetus/meteor/atrium)
 "aaj" = (
 /obj/machinery/atmospherics/pipe/simple/visible/black{
 	dir = 5
@@ -1836,7 +1873,7 @@
 	},
 /obj/effect/floor_decal/industrial/warning/corner,
 /turf/simulated/floor/plating/turfpack/airless,
-/area/space)
+/area/maintenance/cetus/engine/space)
 "aYn" = (
 /obj/machinery/appliance/cooker/grill,
 /turf/simulated/floor/tiled,
@@ -3486,7 +3523,7 @@
 	},
 /obj/effect/floor_decal/industrial/warning,
 /turf/simulated/floor/plating/turfpack/airless,
-/area/space)
+/area/maintenance/cetus/engine/space)
 "bSX" = (
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
@@ -4473,7 +4510,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/plating/turfpack/airless,
-/area/space)
+/area/maintenance/cetus/engine/space)
 "csJ" = (
 /obj/structure/stairs/spawner/west,
 /obj/structure/railing/grey,
@@ -5212,7 +5249,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/plating/turfpack/airless,
-/area/space)
+/area/maintenance/cetus/engine/space)
 "cPK" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -6264,7 +6301,7 @@
 	desc = "A remote control-switch for the engine control room blast doors.";
 	id = "EngineEmitterPortWest";
 	name = "Engine Room Blast Doors";
-	pixel_x = 28;
+	pixel_x = 25;
 	pixel_y = 25;
 	req_one_access = list(11,24);
 	dir = 8
@@ -7262,8 +7299,7 @@
 /turf/simulated/floor/tiled/milspec/sterile,
 /area/medical/Surgery_Room_1)
 "ebr" = (
-/obj/machinery/flasher/portable,
-/obj/effect/floor_decal/industrial/outline/red,
+/obj/machinery/vending/security,
 /turf/simulated/floor/tiled/dark,
 /area/security/cetus/meteor/hallway)
 "ebu" = (
@@ -9506,13 +9542,6 @@
 /obj/effect/floor_decal/industrial/warning,
 /turf/simulated/floor/tiled/neutral,
 /area/maintenance/cetus/hallway)
-"flI" = (
-/obj/machinery/alarm{
-	frequency = 1441;
-	pixel_y = 22
-	},
-/turf/simulated/floor/outdoors/rocks/cetus,
-/area/maintenance/cetus/meteor/aftstar)
 "flM" = (
 /obj/effect/floor_decal/spline/fancy{
 	dir = 9
@@ -9861,7 +9890,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/plating/turfpack/airless,
-/area/space)
+/area/maintenance/cetus/engine/space)
 "fuP" = (
 /obj/structure/stairs/spawner/east,
 /obj/structure/railing,
@@ -10307,7 +10336,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/plating/turfpack/airless,
-/area/space)
+/area/maintenance/cetus/engine/space)
 "fGl" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -13538,7 +13567,7 @@
 /obj/machinery/shield_diffuser,
 /obj/machinery/power/grounding_rod,
 /turf/simulated/floor/plating/turfpack/airless,
-/area/space)
+/area/maintenance/cetus/engine/space)
 "hwp" = (
 /obj/structure/cable/green{
 	icon_state = "6-8"
@@ -16828,7 +16857,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/plating/turfpack/airless,
-/area/space)
+/area/maintenance/cetus/engine/space)
 "jec" = (
 /obj/structure/sign/directions/dorms{
 	dir = 1
@@ -17508,7 +17537,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/plating/turfpack/airless,
-/area/space)
+/area/maintenance/cetus/engine/space)
 "jvn" = (
 /obj/effect/floor_decal/borderfloorblack/corner{
 	dir = 4
@@ -18907,7 +18936,7 @@
 /obj/machinery/shield_diffuser,
 /obj/machinery/power/tesla_coil/pre_mapped,
 /turf/simulated/floor/plating/turfpack/airless,
-/area/space)
+/area/maintenance/cetus/engine/space)
 "kbt" = (
 /obj/effect/floor_decal/steeldecal/steel_decals_central5,
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
@@ -20332,6 +20361,7 @@
 	RCon_tag = "Substation - Starboard"
 	},
 /obj/item/smes_coil,
+/obj/item/smes_coil,
 /turf/simulated/floor/plating,
 /area/engineering/cetus/starsubstation)
 "kLN" = (
@@ -20339,7 +20369,7 @@
 	icon_state = "0-4"
 	},
 /turf/simulated/floor/plating/turfpack/airless,
-/area/space)
+/area/maintenance/cetus/engine/space)
 "kLS" = (
 /obj/structure/table/standard,
 /obj/item/storage/firstaid/toxin{
@@ -20649,7 +20679,7 @@
 	},
 /obj/machinery/power/tesla_coil/pre_mapped,
 /turf/simulated/floor/plating/turfpack/airless,
-/area/space)
+/area/maintenance/cetus/engine/space)
 "kVY" = (
 /obj/structure/sink/kitchen{
 	pixel_y = 17
@@ -21632,7 +21662,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/plating/turfpack/airless,
-/area/space)
+/area/maintenance/cetus/engine/space)
 "lxw" = (
 /obj/effect/wingrille_spawn/reinforced,
 /obj/machinery/door/firedoor/glass,
@@ -21923,7 +21953,7 @@
 	pixel_x = -1
 	},
 /turf/space,
-/area/space)
+/area/maintenance/cetus/engine/space)
 "lDQ" = (
 /obj/structure/shuttle/engine/heater,
 /obj/machinery/atmospherics/pipe/manifold/hidden/yellow{
@@ -22184,7 +22214,7 @@
 /area/maintenance/cetus/meteor/central)
 "lLN" = (
 /turf/simulated/floor/reinforced/airless,
-/area/space)
+/area/maintenance/cetus/engine/space)
 "lMg" = (
 /turf/simulated/wall,
 /area/maintenance/cetus/engine)
@@ -23686,8 +23716,11 @@
 	c_tag = "ENG - Incomplete Engine 5";
 	dir = 9
 	},
+/obj/structure/cable/cyan{
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/plating/turfpack/airless,
-/area/space)
+/area/maintenance/cetus/engine/space)
 "mDs" = (
 /obj/structure/disposalpipe/segment,
 /obj/effect/floor_decal/borderfloor{
@@ -25675,6 +25708,9 @@
 /obj/structure/cable/cyan{
 	icon_state = "9-10"
 	},
+/obj/structure/cable/cyan{
+	icon_state = "2-9"
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/engine)
 "nJN" = (
@@ -25776,6 +25812,15 @@
 	},
 /obj/structure/cable/cyan{
 	icon_state = "4-8"
+	},
+/obj/machinery/button/remote/blast_door{
+	desc = "A remote control-switch for the engine control room blast doors.";
+	id = "EngineEmitterPortWest";
+	name = "Engine Room Blast Doors";
+	pixel_x = -25;
+	pixel_y = 24;
+	req_one_access = list(11,24);
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/engineering/cetus/meteor/enginewaste)
@@ -26851,7 +26896,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/plating/turfpack/airless,
-/area/space)
+/area/maintenance/cetus/engine/space)
 "olB" = (
 /obj/structure/table/standard,
 /obj/item/paper_bin,
@@ -30072,7 +30117,7 @@
 	icon_state = "0-8"
 	},
 /turf/simulated/floor/plating/turfpack/airless,
-/area/space)
+/area/maintenance/cetus/engine/space)
 "pXt" = (
 /obj/structure/bed/chair/comfy/brown{
 	dir = 8
@@ -30156,7 +30201,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/plating/turfpack/airless,
-/area/space)
+/area/maintenance/cetus/engine/space)
 "pYS" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
@@ -31564,7 +31609,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/plating/turfpack/airless,
-/area/space)
+/area/maintenance/cetus/engine/space)
 "qDB" = (
 /obj/structure/railing{
 	dir = 8
@@ -34122,7 +34167,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/plating/turfpack/airless,
-/area/space)
+/area/maintenance/cetus/engine/space)
 "rVm" = (
 /obj/machinery/atmospherics/pipe/zpipe/up/supply{
 	dir = 8
@@ -34379,7 +34424,7 @@
 	dir = 6
 	},
 /turf/simulated/floor/plating/turfpack/airless,
-/area/space)
+/area/maintenance/cetus/engine/space)
 "sev" = (
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 8
@@ -35751,7 +35796,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/plating/turfpack/airless,
-/area/space)
+/area/maintenance/cetus/engine/space)
 "sMj" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/cyan{
 	dir = 1
@@ -37285,7 +37330,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/plating/turfpack/airless,
-/area/space)
+/area/maintenance/cetus/engine/space)
 "tBS" = (
 /obj/machinery/alarm{
 	pixel_y = 22
@@ -40325,7 +40370,7 @@
 	dir = 5
 	},
 /turf/simulated/floor/plating/turfpack/airless,
-/area/space)
+/area/maintenance/cetus/engine/space)
 "uYf" = (
 /obj/machinery/power/generator{
 	anchored = 1
@@ -41483,7 +41528,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/plating/turfpack/airless,
-/area/space)
+/area/maintenance/cetus/engine/space)
 "vAk" = (
 /obj/structure/closet{
 	name = "Evidence Closet"
@@ -41675,6 +41720,7 @@
 /area/engineering/cetus/meteor/smes)
 "vDw" = (
 /obj/machinery/door/firedoor/glass,
+/obj/machinery/door/airlock/maintenance,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/meteor/star)
 "vDL" = (
@@ -41858,7 +41904,7 @@
 	dir = 10
 	},
 /turf/simulated/floor/plating/turfpack/airless,
-/area/space)
+/area/maintenance/cetus/engine/space)
 "vHR" = (
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 4
@@ -42002,13 +42048,6 @@
 	},
 /turf/simulated/floor/tiled/neutral,
 /area/maintenance/cetus/hallway)
-"vLt" = (
-/obj/machinery/alarm{
-	dir = 1;
-	pixel_y = -22
-	},
-/turf/simulated/floor/tiled,
-/area/crew_quarters/cetus/meteor/atrium)
 "vMo" = (
 /obj/effect/floor_decal/rust,
 /obj/machinery/door/firedoor/multi_tile{
@@ -42032,7 +42071,7 @@
 "vMF" = (
 /obj/machinery/power/grounding_rod,
 /turf/simulated/floor/plating/turfpack/airless,
-/area/space)
+/area/maintenance/cetus/engine/space)
 "vMX" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -42206,7 +42245,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/plating/turfpack/airless,
-/area/space)
+/area/maintenance/cetus/engine/space)
 "vTt" = (
 /obj/structure/railing/overhang/grey{
 	dir = 1
@@ -42964,7 +43003,7 @@
 /obj/effect/floor_decal/industrial/warning/tile,
 /obj/effect/floor_decal/industrial/warning/color/tile/red,
 /turf/simulated/floor/plating/turfpack/airless,
-/area/space)
+/area/maintenance/cetus/engine/space)
 "wmU" = (
 /obj/machinery/atmospherics/tvalve/mirrored,
 /obj/effect/floor_decal/industrial/warning/full,
@@ -44708,7 +44747,6 @@
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/cetus/meteor/pool)
 "xcJ" = (
-/obj/machinery/deployable/barrier,
 /obj/machinery/alarm{
 	dir = 8;
 	pixel_x = 25
@@ -44718,6 +44756,7 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/industrial/outline/red,
+/obj/machinery/flasher/portable,
 /turf/simulated/floor/tiled/techfloor,
 /area/security/cetus/meteor/hallway)
 "xdj" = (
@@ -44978,7 +45017,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/plating/turfpack/airless,
-/area/space)
+/area/maintenance/cetus/engine/space)
 "xjN" = (
 /obj/structure/lattice,
 /obj/structure/flora/lily1,
@@ -46137,7 +46176,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/plating/turfpack/airless,
-/area/space)
+/area/maintenance/cetus/engine/space)
 "xND" = (
 /obj/structure/dummystairs,
 /obj/structure/barricade,
@@ -99153,11 +99192,11 @@ tiw
 tiw
 tiw
 iQm
+idC
 iQm
-tiw
-tiw
+idC
 iQm
-iQm
+idC
 iQm
 slB
 slB
@@ -99409,7 +99448,7 @@ nzC
 tiw
 tiw
 iQm
-tiw
+iQm
 skU
 lhG
 skU
@@ -99666,8 +99705,8 @@ ctD
 nzC
 nzC
 tiw
-tiw
 hzd
+idC
 lhG
 oaa
 faP
@@ -99677,10 +99716,10 @@ lyK
 jLZ
 edn
 skU
-dmn
-dmn
-dmn
-dmn
+aab
+aab
+aab
+aab
 lDB
 lDB
 lDB
@@ -99925,7 +99964,7 @@ jRM
 nzC
 nzC
 tiw
-tiw
+iQm
 skU
 bzO
 gFO
@@ -99936,12 +99975,12 @@ jhA
 pho
 mji
 uXG
-aiQ
-aiQ
-aiQ
-wDM
-wDM
-wDM
+aac
+aac
+aac
+aaa
+aaa
+aaa
 lDB
 lDB
 vei
@@ -100182,8 +100221,8 @@ pyx
 uEK
 ctD
 nzC
-flI
-iQm
+axU
+idC
 lhG
 qtv
 xYL
@@ -100199,7 +100238,7 @@ juO
 juO
 csG
 vHL
-wDM
+aaa
 lDB
 lDB
 suH
@@ -100438,9 +100477,9 @@ vvH
 jzE
 acg
 pyx
-vvH
+aah
 nzC
-hzd
+aae
 iQm
 skU
 lMg
@@ -100452,7 +100491,7 @@ sCh
 tBn
 skU
 vMF
-aiQ
+aac
 pXl
 kVN
 pXl
@@ -100698,8 +100737,8 @@ moc
 vom
 jUQ
 nzC
-tiw
-iQm
+aaf
+idC
 lhG
 lhG
 eIW
@@ -100715,7 +100754,7 @@ rVl
 rVl
 rVl
 okG
-wDM
+aaa
 lDB
 lDB
 qFw
@@ -100954,9 +100993,9 @@ vvH
 rur
 moc
 cOW
-vLt
-nzC
-tiw
+rqw
+dkx
+iGr
 iQm
 idC
 qQE
@@ -100973,7 +101012,7 @@ lLN
 lLN
 lLN
 qDu
-wDM
+aaa
 lDB
 lDB
 qFw
@@ -101214,8 +101253,8 @@ moc
 cOW
 oMk
 nzC
-tiw
-iQm
+iGr
+idC
 iQm
 dTH
 aHH
@@ -101231,7 +101270,7 @@ lLN
 lLN
 lLN
 qDu
-wDM
+aaa
 lDB
 lDB
 qFw
@@ -101472,7 +101511,7 @@ moc
 cOW
 uQq
 nzC
-tiw
+iGr
 iQm
 idC
 qQE
@@ -101489,7 +101528,7 @@ lLN
 lLN
 lLN
 qDu
-wDM
+aaa
 lDB
 lDB
 qFw
@@ -101730,7 +101769,7 @@ moc
 toI
 iuA
 idC
-tiw
+iGr
 idC
 iQm
 qQE
@@ -101988,7 +102027,7 @@ jWo
 lWi
 cbC
 iQm
-tiw
+aaf
 iQm
 idC
 lhG
@@ -101999,13 +102038,13 @@ dTH
 tci
 tBn
 skU
-aiQ
-aiQ
+aac
+aac
 kLN
 kLN
 kLN
 pYK
-wDM
+aaa
 lDB
 lDB
 qFw
@@ -102263,7 +102302,7 @@ tBv
 tBv
 jdZ
 sdU
-wDM
+aaa
 lDB
 lDB
 suH
@@ -102506,7 +102545,7 @@ idC
 iQm
 iQm
 tiw
-iQm
+idC
 lhG
 uwK
 miE
@@ -102516,12 +102555,12 @@ pFO
 bzO
 nJs
 mCD
-aiQ
-aiQ
-wDM
-wDM
-wDM
-wDM
+aad
+aac
+aaa
+aaa
+aaa
+aaa
 lDB
 lDB
 vei
@@ -102763,8 +102802,8 @@ nng
 nng
 nng
 iQm
-tiw
-hzd
+iGr
+aae
 skU
 pHI
 qQE
@@ -102775,8 +102814,8 @@ fRh
 skU
 skU
 skU
-aiQ
-wDM
+aac
+aaa
 lDB
 lDB
 lDB
@@ -103033,8 +103072,8 @@ wiv
 fzZ
 wRh
 xDA
-aiQ
-wDM
+aac
+aaa
 wet
 kIb
 kIb
@@ -103291,8 +103330,8 @@ vzo
 skU
 sNe
 skU
-aiQ
-wDM
+aac
+aaa
 vei
 qFw
 qFw
@@ -103549,8 +103588,8 @@ skU
 skU
 skU
 skU
-wDM
-wDM
+aaa
+aaa
 vei
 qFw
 qFw
