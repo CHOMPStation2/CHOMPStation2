@@ -1,0 +1,5 @@
+author: "zeskorion"
+delete-after: True
+changes:
+  - maptweak: "few cetus fixes"
+  - maptweak: "cetus tesla engine should no longer spawn events that might cause it to teleport to the wrong location"
