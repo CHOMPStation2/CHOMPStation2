@@ -69,6 +69,7 @@
 #define MAT_FLOKIUM			"flockium"
 #define MAT_SMOLEBRICKS		"smolebricks"
 #define MAT_WAX				"wax"
+#define MAT_EAGATE			"energized agate"
 
 //ChompEdit Begin Tyr exclusive material
 #define MAT_EAGATE			"energized agate"
