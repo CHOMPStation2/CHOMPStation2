@@ -490,12 +490,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled,
 /area/teleporter/firstdeck)
-"abc" = (
-/obj/machinery/atmospherics/unary/vent_scrubber/on{
-	dir = 4
-	},
-/turf/space,
-/area/space)
 "abd" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
@@ -538,6 +532,22 @@
 "abg" = (
 /turf/simulated/shuttle/wall/no_join,
 /area/shuttle/large_escape_pod2/station)
+"abh" = (
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/effect/floor_decal/borderfloorwhite{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/purple/border{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/white,
+/area/rnd/research/firstdeck/hallway)
 "abi" = (
 /obj/machinery/door/airlock/external{
 	name = "Large Escape Pod Hatch 2"
@@ -5207,9 +5217,6 @@
 /area/maintenance/firstdeck/foreport)
 "aAZ" = (
 /obj/structure/closet/emcloset,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 6
-	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/firstdeck/fore)
 "aBc" = (
@@ -17748,18 +17755,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/research/firstdeck/hallway)
-"hVG" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/effect/floor_decal/borderfloorwhite{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/purple/border{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/white,
-/area/rnd/research/firstdeck/hallway)
 "hWP" = (
 /obj/machinery/alarm{
 	pixel_y = 22
@@ -17909,9 +17904,6 @@
 /obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 9
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 6
-	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/research/firstdeck/hallway)
 "ihM" = (
@@ -17949,7 +17941,6 @@
 /turf/simulated/floor/tiled/white,
 /area/hallway/secondary/escape/firstdeck/ep_starboard)
 "ije" = (
-/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/floor_decal/borderfloorwhite/corner2{
 	dir = 1
@@ -17963,13 +17954,11 @@
 /obj/effect/floor_decal/corner/purple/bordercorner2{
 	dir = 1
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/white,
 /area/rnd/research/firstdeck/hallway)
 "ijJ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
 /obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 4
 	},
@@ -18000,16 +17989,10 @@
 /area/maintenance/firstdeck/aftport)
 "inC" = (
 /obj/structure/disposalpipe/segment,
-/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
-	dir = 1
-	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/research/firstdeck/hallway)
 "iov" = (
 /obj/machinery/atmospherics/unary/vent_pump/on,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
 /obj/effect/floor_decal/borderfloorwhite/corner{
 	dir = 4
 	},
@@ -18052,9 +18035,6 @@
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/aftstarboard)
 "isr" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 10
-	},
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 1
 	},
@@ -19188,7 +19168,7 @@
 /obj/effect/floor_decal/borderfloorwhite,
 /obj/effect/floor_decal/corner/purple/border,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 9
+	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/research/firstdeck/hallway)
@@ -19205,6 +19185,7 @@
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/floor_decal/borderfloorwhite,
 /obj/effect/floor_decal/corner/purple/border,
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /turf/simulated/floor/tiled/white,
 /area/rnd/research/firstdeck/hallway)
 "jDV" = (
@@ -19240,6 +19221,9 @@
 	},
 /obj/effect/floor_decal/borderfloorwhite,
 /obj/effect/floor_decal/corner/purple/border,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/research/firstdeck/hallway)
 "jFA" = (
@@ -19253,9 +19237,11 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 1
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/effect/floor_decal/borderfloorwhite,
 /obj/effect/floor_decal/corner/purple/border,
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/research/firstdeck/hallway)
 "jFE" = (
@@ -19286,6 +19272,9 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
 /obj/effect/floor_decal/borderfloorwhite,
 /obj/effect/floor_decal/corner/purple/border,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/research/firstdeck/hallway)
 "jGu" = (
@@ -19297,6 +19286,9 @@
 	},
 /obj/effect/floor_decal/borderfloorwhite,
 /obj/effect/floor_decal/corner/purple/border,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/research/firstdeck/hallway)
 "jIi" = (
@@ -19306,14 +19298,14 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 10
 	},
-/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
-	dir = 8
-	},
 /obj/effect/floor_decal/borderfloorwhite/corner{
 	dir = 8
 	},
 /obj/effect/floor_decal/corner/purple/bordercorner{
 	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 10
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/research/firstdeck/hallway)
@@ -80161,7 +80153,7 @@ aaa
 aaa
 vYi
 aaa
-abc
+aaa
 dVJ
 dWP
 dXM
@@ -80686,7 +80678,7 @@ eaO
 eTN
 fQn
 dVK
-hVG
+isy
 jGu
 dWk
 moQ
@@ -80946,7 +80938,7 @@ fXf
 gIx
 isr
 jIi
-ljU
+abh
 ljU
 odG
 pLG
@@ -81204,7 +81196,7 @@ fXY
 dVK
 isy
 jJe
-lkw
+jJe
 mse
 ofL
 pOI
