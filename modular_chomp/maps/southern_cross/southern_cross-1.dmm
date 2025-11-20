@@ -516,6 +516,10 @@
 	},
 /turf/simulated/floor/reinforced,
 /area/maintenance/abchemistry)
+"bn" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/space,
+/area/space)
 "bo" = (
 /obj/item/radio/subspace,
 /turf/simulated/floor/plating/turfpack/station,
@@ -42244,7 +42248,7 @@ zx
 zx
 wZ
 wZ
-wZ
+bn
 wZ
 wZ
 Mq
