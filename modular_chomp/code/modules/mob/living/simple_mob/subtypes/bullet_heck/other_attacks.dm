@@ -41,3 +41,10 @@
 	target_turf.visible_message(span_warning("\The [src] appears!"))
 	s2.start()
 	attackcycle = next_cycle
+
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/gravity_surge(atom/target, var/next_cycle, var/pull_radius, var/pull_strength)
+	if(!target)
+		return
+	for(target in range(pull_radius, src))
+		target.singularity_pull(src, pull_strength)
+	attackcycle = next_cycle
