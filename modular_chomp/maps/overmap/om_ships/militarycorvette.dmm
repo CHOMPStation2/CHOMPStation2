@@ -1,0 +1,1255 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"an" = (
+/obj/machinery/shipsensors{
+	dir = 4
+	},
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/machinery/light/small{
+	dir = 1
+	},
+/turf/simulated/floor/plating/turfpack/airless,
+/area/shuttle/militarycorvetteOM)
+"aR" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/yellow,
+/obj/structure/closet/walllocker/emerglocker/south,
+/obj/effect/floor_decal/steeldecal/steel_decals_central7{
+	pixel_x = 8
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/shuttle/militarycorvetteOM)
+"aT" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/yellow{
+	dir = 10
+	},
+/obj/effect/floor_decal/techfloor/orange{
+	dir = 8
+	},
+/obj/machinery/light{
+	dir = 4;
+	light_color = "#DDFFD3"
+	},
+/obj/machinery/computer/ship/engines{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/militarycorvetteOM)
+"eo" = (
+/obj/machinery/door/airlock{
+	name = "Charge Station"
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/shuttle/militarycorvetteOM)
+"ep" = (
+/obj/structure/bed/padded,
+/obj/structure/curtain/open/bed,
+/obj/item/bedsheet/hos,
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
+	},
+/turf/simulated/shuttle/floor/voidcraft,
+/area/shuttle/militarycorvetteOM)
+"er" = (
+/obj/effect/floor_decal/techfloor,
+/obj/structure/closet/walllocker/emerglocker/east,
+/obj/machinery/portable_atmospherics/canister/oxygen,
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/militarycorvetteOM)
+"eY" = (
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/machinery/door/blast/regular{
+	name = "Sensor Shroud";
+	id = "outsidersenshroud"
+	},
+/turf/simulated/floor/plating/turfpack/airless,
+/area/shuttle/militarycorvetteOM)
+"fv" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/handrail{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/militarycorvetteOM)
+"gM" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 8
+	},
+/obj/machinery/button/remote/blast_door{
+	id = "outsiderlockdown";
+	name = "Emergency Lockdown";
+	pixel_x = 25;
+	pixel_y = 4
+	},
+/obj/machinery/alarm/alarms_hidden{
+	pixel_y = 27
+	},
+/obj/machinery/computer/shuttle_control/explore/militarycorvette,
+/turf/simulated/shuttle/floor/voidcraft,
+/area/shuttle/militarycorvetteOM)
+"hW" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 6
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/turf/simulated/shuttle/floor/voidcraft,
+/area/shuttle/militarycorvetteOM)
+"hX" = (
+/obj/machinery/power/smes/buildable/point_of_interest,
+/obj/effect/floor_decal/techfloor/orange,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/cable/yellow{
+	icon_state = "0-4"
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/militarycorvetteOM)
+"hY" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/yellow{
+	dir = 6
+	},
+/obj/machinery/power/port_gen/pacman/super{
+	anchored = 1
+	},
+/obj/structure/cable,
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/effect/floor_decal/techfloor/orange{
+	dir = 4
+	},
+/obj/machinery/light{
+	dir = 8;
+	overlay_color = "#FFFEB8"
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/militarycorvetteOM)
+"iU" = (
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	dir = 8
+	},
+/obj/effect/map_helper/airlock/atmos/chamber_pump,
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/effect/shuttle_landmark/shuttle_initializer/militarycorvette,
+/obj/effect/overmap/visitable/ship/landable/militarycorvette,
+/obj/structure/handrail{
+	dir = 1
+	},
+/obj/machinery/embedded_controller/radio/airlock/docking_port{
+	id_tag = "militarycorvette_docker";
+	pixel_y = 25;
+	frequency = 1381
+	},
+/turf/simulated/floor/plating,
+/area/shuttle/militarycorvetteOM)
+"jl" = (
+/obj/machinery/door/firedoor/glass,
+/obj/structure/grille,
+/obj/structure/window/phoronreinforced/full,
+/obj/structure/window/phoronreinforced,
+/obj/structure/window/phoronreinforced{
+	dir = 1
+	},
+/obj/machinery/door/blast/regular/open{
+	id = "outsidercockshroud";
+	name = "Cockpit Shroud"
+	},
+/turf/simulated/floor/plating,
+/area/shuttle/militarycorvetteOM)
+"jU" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/shuttle/floor/voidcraft,
+/area/shuttle/militarycorvetteOM)
+"kU" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/door/airlock/hatch{
+	req_one_access = null;
+	name = "Engineering Compartment";
+	id_tag = "outsidercockbolt"
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/shuttle/militarycorvetteOM)
+"lj" = (
+/obj/effect/floor_decal/techfloor/corner{
+	dir = 6
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/militarycorvetteOM)
+"lw" = (
+/obj/effect/floor_decal/techfloor/corner{
+	dir = 5
+	},
+/obj/machinery/light,
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/militarycorvetteOM)
+"lZ" = (
+/obj/structure/bed/padded,
+/obj/structure/curtain/open/bed,
+/obj/item/bedsheet/hos,
+/turf/simulated/shuttle/floor/voidcraft,
+/area/shuttle/militarycorvetteOM)
+"mh" = (
+/turf/simulated/wall/rplastihull,
+/area/shuttle/militarycorvetteOM)
+"mC" = (
+/obj/machinery/door/blast/regular/open{
+	id = "outsiderlockdown";
+	name = "Emergency Lockdown";
+	dir = 4
+	},
+/obj/machinery/access_button{
+	pixel_y = 27
+	},
+/obj/effect/map_helper/airlock/button/ext_button,
+/obj/effect/map_helper/airlock/door/ext_door,
+/obj/machinery/door/airlock/external,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/shuttle/militarycorvetteOM)
+"mI" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 1
+	},
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/machinery/atmospherics/unary/vent_scrubber/on,
+/obj/machinery/alarm/alarms_hidden{
+	pixel_y = 27
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/militarycorvetteOM)
+"nQ" = (
+/obj/machinery/door/firedoor/glass,
+/obj/structure/grille,
+/obj/structure/window/phoronreinforced/full,
+/obj/structure/window/phoronreinforced{
+	dir = 8
+	},
+/obj/structure/window/phoronreinforced{
+	dir = 4
+	},
+/obj/machinery/door/blast/regular/open{
+	id = "outsidersenshroud";
+	name = "Sensor Shroud"
+	},
+/turf/simulated/floor/plating,
+/area/shuttle/militarycorvetteOM)
+"pu" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 1
+	},
+/obj/effect/floor_decal/techfloor/hole/right{
+	pixel_y = -5
+	},
+/obj/machinery/button/remote/blast_door{
+	pixel_y = 26;
+	id = "outsidersenshroud";
+	name = "Sensor Shroud"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 10
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/militarycorvetteOM)
+"pK" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/yellow{
+	dir = 4
+	},
+/obj/structure/handrail{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/shuttle/militarycorvetteOM)
+"qs" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/yellow,
+/obj/effect/floor_decal/steeldecal/steel_decals_central6{
+	pixel_y = -1
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/shuttle/militarycorvetteOM)
+"rs" = (
+/obj/effect/floor_decal/techfloor/orange,
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/machinery/atmospherics/portables_connector,
+/obj/machinery/portable_atmospherics/canister/phoron,
+/obj/structure/fuel_port{
+	pixel_y = 28
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/militarycorvetteOM)
+"rN" = (
+/obj/machinery/computer/ship/sensors,
+/turf/simulated/floor/tiled/techmaint,
+/area/shuttle/militarycorvetteOM)
+"rZ" = (
+/obj/structure/table/steel_reinforced,
+/obj/machinery/light{
+	dir = 8;
+	layer = 3
+	},
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 4
+	},
+/obj/structure/closet/walllocker_double/kitchen/west{
+	name = "Ration Cabinet";
+	desc = "A wall mounted storage cabinet, contains all the food you could ever need!"
+	},
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/random,
+/obj/item/storage/mre/menu12,
+/obj/item/radio{
+	pixel_x = -5;
+	pixel_y = 5
+	},
+/obj/item/radio{
+	pixel_x = -5;
+	pixel_y = 5
+	},
+/obj/item/radio{
+	pixel_x = 5;
+	pixel_y = 5
+	},
+/obj/item/radio{
+	pixel_x = 5;
+	pixel_y = 5
+	},
+/obj/item/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/reagent_containers/food/drinks/cans/waterbottle,
+/obj/item/reagent_containers/food/drinks/cans/waterbottle,
+/turf/simulated/shuttle/floor/voidcraft,
+/area/shuttle/militarycorvetteOM)
+"sx" = (
+/obj/structure/shuttle/engine/heater,
+/obj/machinery/atmospherics/pipe/simple/hidden/yellow{
+	dir = 6
+	},
+/turf/simulated/wall/rplastihull,
+/area/shuttle/militarycorvetteOM)
+"sy" = (
+/obj/effect/floor_decal/techfloor,
+/obj/structure/table/rack/shelf/steel,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 9
+	},
+/obj/item/stack/emptysandbag{
+	amount = 30
+	},
+/obj/item/stack/emptysandbag{
+	amount = 30;
+	pixel_y = 6
+	},
+/obj/item/stack/emptysandbag{
+	amount = 30;
+	pixel_y = 14
+	},
+/obj/item/stack/emptysandbag{
+	amount = 30;
+	pixel_y = 6
+	},
+/obj/item/stack/emptysandbag{
+	amount = 30;
+	pixel_y = 6
+	},
+/obj/item/stack/emptysandbag{
+	amount = 30;
+	pixel_y = 6
+	},
+/obj/item/shovel,
+/obj/item/pickaxe,
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/militarycorvetteOM)
+"sH" = (
+/obj/structure/railing/grey{
+	dir = 1
+	},
+/obj/structure/table/steel_reinforced,
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 4
+	},
+/obj/structure/closet/walllocker_double/west,
+/obj/item/tape_roll,
+/obj/item/sticky_pad/random,
+/obj/item/pen/blue,
+/obj/item/pen,
+/obj/item/fulton_core,
+/obj/item/fulton_core,
+/obj/item/extraction_pack,
+/obj/item/extraction_pack,
+/obj/item/modular_computer/laptop/preset/custom_loadout/rugged,
+/obj/item/pickaxe/hand,
+/obj/item/flashlight/color/yellow,
+/obj/item/flashlight/color/orange,
+/obj/item/threadneedle,
+/obj/item/radio,
+/obj/item/radio,
+/obj/item/extinguisher,
+/obj/item/extinguisher,
+/obj/item/flame/lighter/zippo,
+/obj/item/flame/lighter/zippo,
+/obj/item/flashlight/lantern,
+/obj/item/fbp_backup_cell,
+/obj/item/fbp_backup_cell,
+/obj/item/stack/nanopaste,
+/obj/item/storage/belt,
+/obj/item/clothing/accessory/storage/black_drop_pouches,
+/obj/item/clothing/accessory/storage/black_drop_pouches,
+/obj/item/storage/backpack/sport,
+/obj/item/storage/backpack/sport,
+/obj/item/material/fishing_net,
+/obj/item/material/knife/machete,
+/obj/item/cell/device/weapon{
+	pixel_x = -2;
+	pixel_y = -2
+	},
+/obj/item/cell/device/weapon{
+	pixel_x = -2;
+	pixel_y = -2
+	},
+/obj/item/pda,
+/obj/item/pda,
+/obj/item/gps,
+/obj/item/gps,
+/obj/item/storage/box/dosimeter,
+/obj/item/mapping_unit,
+/obj/item/mapping_unit,
+/obj/item/starcaster_news,
+/obj/item/stack/marker_beacon/hundred,
+/obj/item/stack/marker_beacon/hundred,
+/obj/item/storage/box/khcrystal,
+/obj/item/storage/box/khcrystal,
+/obj/item/storage/pill_bottle/dice_nerd,
+/obj/item/clothing/accessory/poncho/thermal,
+/obj/item/clothing/accessory/poncho/thermal,
+/obj/item/spaceflare,
+/obj/item/spaceflare,
+/obj/item/spaceflare,
+/obj/item/spaceflare,
+/obj/item/stack/flag/blue,
+/obj/item/stack/flag/green,
+/obj/item/stack/flag/red,
+/obj/item/stack/flag/yellow,
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/militarycorvetteOM)
+"tY" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/universal,
+/obj/effect/floor_decal/techfloor{
+	dir = 1
+	},
+/obj/structure/curtain/bed,
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/militarycorvetteOM)
+"um" = (
+/obj/effect/floor_decal/techfloor/orange,
+/obj/machinery/atmospherics/pipe/tank/phoron/full,
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/alarm/alarms_hidden{
+	pixel_y = 27
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/militarycorvetteOM)
+"up" = (
+/obj/machinery/mech_recharger,
+/obj/machinery/light{
+	dir = 8;
+	layer = 3
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/militarycorvetteOM)
+"uA" = (
+/obj/structure/shuttle/engine/heater,
+/obj/machinery/atmospherics/pipe/simple/hidden/yellow{
+	dir = 10
+	},
+/turf/simulated/wall/rplastihull,
+/area/shuttle/militarycorvetteOM)
+"uS" = (
+/obj/structure/toilet{
+	dir = 4
+	},
+/obj/structure/sink{
+	dir = 4;
+	pixel_x = 12;
+	pixel_y = -6
+	},
+/obj/structure/mirror{
+	pixel_x = 28
+	},
+/obj/machinery/light/small{
+	dir = 8
+	},
+/obj/machinery/shower{
+	pixel_y = 14
+	},
+/obj/item/clothing/accessory/pride/vore{
+	desc = "A pin displaying that you either eat people whole and alive, or get eaten whole and alive."
+	},
+/obj/structure/closet/walllocker_double/generic_civ/west{
+	name = "Toiletries"
+	},
+/obj/item/clothing/under/fluff/latexmaid{
+	pixel_y = 5
+	},
+/obj/random/soap,
+/obj/random/soap,
+/obj/item/towel/random,
+/obj/item/towel/random,
+/obj/item/roller/massage,
+/obj/item/reagent_containers/spray/cleaner,
+/obj/item/handcuffs/legcuffs/fuzzy,
+/obj/item/handcuffs/fuzzy,
+/turf/simulated/shuttle/floor{
+	icon_state = "floor_white"
+	},
+/area/shuttle/militarycorvetteOM)
+"vG" = (
+/obj/effect/floor_decal/techfloor/orange{
+	dir = 8
+	},
+/obj/structure/closet/walllocker_double/emergency_engi/east,
+/obj/fiftyspawner/glass,
+/obj/fiftyspawner/glass,
+/obj/fiftyspawner/glass,
+/obj/fiftyspawner/glass,
+/obj/fiftyspawner/glass,
+/obj/fiftyspawner/steel,
+/obj/fiftyspawner/steel,
+/obj/fiftyspawner/steel,
+/obj/fiftyspawner/steel,
+/obj/fiftyspawner/steel,
+/obj/fiftyspawner/plastic,
+/obj/fiftyspawner/plastic,
+/obj/fiftyspawner/plastic,
+/obj/fiftyspawner/plastic,
+/obj/fiftyspawner/plastic,
+/obj/item/extinguisher,
+/obj/item/stack/nanopaste,
+/obj/item/storage/box/flare,
+/obj/item/material/knife/tacknife/survival,
+/obj/structure/table/steel_reinforced,
+/obj/item/tank/phoron,
+/obj/item/tank/phoron,
+/obj/item/tank/phoron,
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 8
+	},
+/obj/item/storage/briefcase/inflatable,
+/obj/item/storage/box/flare,
+/obj/fiftyspawner/plastitanium_hull,
+/obj/fiftyspawner/plastitanium_hull,
+/obj/fiftyspawner/uranium,
+/obj/fiftyspawner/uranium,
+/obj/item/tank/oxygen,
+/obj/item/tank/oxygen,
+/obj/item/tank/oxygen,
+/obj/item/tank/oxygen,
+/obj/item/storage/box/lights/mixed,
+/obj/item/storage/toolbox/syndicate,
+/obj/item/storage/belt/utility/full,
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/militarycorvetteOM)
+"wB" = (
+/obj/effect/floor_decal/techfloor/corner{
+	dir = 5
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/recharger/wallcharger{
+	pixel_x = -24;
+	pixel_y = -8
+	},
+/obj/machinery/recharger/wallcharger{
+	pixel_x = -24;
+	pixel_y = 2
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/militarycorvetteOM)
+"xi" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 1
+	},
+/obj/machinery/light_switch/breaker{
+	pixel_y = 25
+	},
+/obj/machinery/atmospherics/unary/vent_pump/on,
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/militarycorvetteOM)
+"xC" = (
+/obj/structure/table/steel_reinforced,
+/obj/machinery/microwave{
+	pixel_y = 6
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/simulated/shuttle/floor/voidcraft,
+/area/shuttle/militarycorvetteOM)
+"yh" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 4
+	},
+/obj/effect/floor_decal/industrial/stand_clear/yellow{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/militarycorvetteOM)
+"yp" = (
+/obj/structure/closet/secure_closet/guncabinet{
+	req_one_access = null
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/item/clothing/suit/armor/pcarrier/bulletproof/full,
+/obj/item/clothing/suit/armor/pcarrier/bulletproof/full,
+/obj/item/clothing/head/helmet/combat,
+/obj/item/clothing/head/helmet/combat,
+/obj/item/storage/pouch/ammo,
+/obj/item/storage/pouch/ammo,
+/obj/item/storage/pouch/holster/full_taser,
+/obj/item/storage/pouch/holster/full_taser,
+/obj/item/gun/energy/locked/phasegun/rifle,
+/obj/item/cell/device/hyper,
+/obj/item/cell/device/hyper,
+/obj/item/gun/energy/netgun,
+/obj/item/taperoll/police,
+/obj/item/gun/energy/locked/phasegun/pistol,
+/obj/item/clothing/suit/space/void/refurb/marine,
+/obj/item/clothing/suit/space/void/refurb/marine,
+/obj/item/clothing/head/helmet/space/void/refurb/marine,
+/obj/item/clothing/head/helmet/space/void/refurb/marine,
+/obj/item/gun/projectile/automatic/z8,
+/obj/item/gun/projectile/automatic/z8,
+/obj/item/ammo_magazine/m762,
+/obj/item/ammo_magazine/m762,
+/obj/item/ammo_magazine/m762,
+/obj/item/ammo_magazine/m762,
+/obj/item/ammo_magazine/m762,
+/obj/item/ammo_magazine/m762,
+/obj/item/melee/baton/loaded,
+/obj/item/melee/baton/loaded,
+/obj/item/cell/device/crap,
+/obj/item/cell/device/weapon/empproof,
+/obj/item/cell/device/weapon/empproof,
+/turf/simulated/shuttle/floor/voidcraft,
+/area/shuttle/militarycorvetteOM)
+"yw" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 4
+	},
+/turf/simulated/shuttle/floor/voidcraft,
+/area/shuttle/militarycorvetteOM)
+"zc" = (
+/obj/effect/floor_decal/techfloor/orange,
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/machinery/atmospherics/unary/heater{
+	name = "fuel heating system";
+	desc = "Heats gas when connected to a pipe network. This one is designed to heat starship fuel. Remember to turn it on!"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/power/apc/alarms_hidden{
+	dir = 1;
+	pixel_y = 20
+	},
+/obj/structure/cable/yellow{
+	icon_state = "0-8"
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/militarycorvetteOM)
+"zV" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply,
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/militarycorvetteOM)
+"Dq" = (
+/obj/effect/floor_decal/techfloor/hole{
+	pixel_y = -5
+	},
+/obj/machinery/autolathe{
+	hacked = 1
+	},
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/militarycorvetteOM)
+"FL" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 4
+	},
+/obj/machinery/computer/ship/helm{
+	req_one_access = list()
+	},
+/obj/machinery/button/remote/blast_door{
+	pixel_y = 4;
+	id = "outsidercockshroud";
+	name = "Cockpit Blast Doors";
+	pixel_x = -25
+	},
+/turf/simulated/shuttle/floor/voidcraft,
+/area/shuttle/militarycorvetteOM)
+"Gb" = (
+/obj/effect/floor_decal/techfloor/corner{
+	dir = 9
+	},
+/obj/structure/closet/walllocker_double/hydrant/east,
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/militarycorvetteOM)
+"Ge" = (
+/obj/machinery/recharge_station,
+/obj/machinery/light/small{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/milspec/raised,
+/area/shuttle/militarycorvetteOM)
+"HA" = (
+/obj/structure/prop/machine/core/starts_on{
+	name = "Bluespace Drive";
+	desc = "A hyper-compact military bluespace drive. The technology needed to fabricate one of these is nigh-incomprehensible to anyone but the most trained experts. It looks to be charging.";
+	pixel_y = -6
+	},
+/obj/machinery/door/window/survival_pod{
+	dir = 1;
+	name = "Bluespace Drive"
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/obj/machinery/light/small,
+/turf/simulated/shuttle/plating,
+/area/shuttle/militarycorvetteOM)
+"HB" = (
+/obj/effect/floor_decal/steeldecal/steel_decals_central6,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 10
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 6
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/shuttle/militarycorvetteOM)
+"KJ" = (
+/obj/machinery/alarm/alarms_hidden{
+	dir = 4;
+	pixel_x = -22
+	},
+/turf/simulated/shuttle/floor/voidcraft,
+/area/shuttle/militarycorvetteOM)
+"KR" = (
+/obj/machinery/power/terminal{
+	dir = 4
+	},
+/obj/structure/cable{
+	icon_state = "0-2"
+	},
+/obj/effect/floor_decal/techfloor/corner{
+	dir = 6
+	},
+/obj/effect/floor_decal/techfloor/orange/corner,
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 4
+	},
+/obj/structure/closet/crate/secure/gear{
+	name = "Surplus Landmines";
+	desc = "A secure gear crate. A small label on it says 'use responsibly.' As if that'd ever happen."
+	},
+/obj/item/mine/stun,
+/obj/item/mine/stun,
+/obj/item/mine/stun,
+/obj/item/mine/stun,
+/obj/item/mine/stun,
+/obj/item/mine/frag,
+/obj/item/mine/frag,
+/obj/item/mine/frag,
+/obj/item/mine/frag,
+/obj/item/mine/frag,
+/obj/item/mine/frag,
+/obj/item/mine/frag,
+/obj/item/mine/frag,
+/obj/item/mine/frag,
+/obj/item/mine/frag,
+/obj/item/mine/frag,
+/obj/item/mine/frag,
+/obj/item/mine/frag,
+/obj/item/mine/frag,
+/obj/item/mine/frag,
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/militarycorvetteOM)
+"KW" = (
+/turf/template_noop,
+/area/template_noop)
+"Ln" = (
+/obj/item/gps/computer{
+	pixel_y = -16
+	},
+/turf/simulated/shuttle/floor/voidcraft,
+/area/shuttle/militarycorvetteOM)
+"Lq" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 5
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/shuttle/militarycorvetteOM)
+"LH" = (
+/obj/structure/shuttle/engine/heater,
+/obj/machinery/atmospherics/pipe/manifold/hidden/yellow{
+	dir = 4
+	},
+/turf/simulated/wall/rplastihull,
+/area/shuttle/militarycorvetteOM)
+"MK" = (
+/obj/machinery/atmospherics/pipe/tank/air/full{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/militarycorvetteOM)
+"MV" = (
+/obj/structure/shuttle/engine/heater,
+/obj/machinery/atmospherics/pipe/manifold/hidden/yellow{
+	dir = 8
+	},
+/turf/simulated/wall/rplastihull,
+/area/shuttle/militarycorvetteOM)
+"NP" = (
+/obj/machinery/atmospherics/unary/engine{
+	dir = 1
+	},
+/turf/simulated/floor/plating/turfpack/airless,
+/area/shuttle/militarycorvetteOM)
+"OY" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/universal{
+	dir = 4
+	},
+/obj/machinery/airlock_sensor{
+	dir = 1;
+	pixel_y = -27
+	},
+/obj/effect/map_helper/airlock/sensor/chamber_sensor,
+/obj/machinery/oxygen_pump{
+	pixel_y = 32
+	},
+/turf/simulated/floor/plating,
+/area/shuttle/militarycorvetteOM)
+"PE" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 4
+	},
+/obj/structure/bed/chair/bay/shuttle{
+	dir = 1
+	},
+/obj/machinery/light/small{
+	dir = 8
+	},
+/obj/machinery/button/remote/airlock{
+	name = "Cockpit Bolt";
+	pixel_x = 8;
+	pixel_y = -24;
+	dir = 1;
+	id = "outsidercockbolt";
+	specialfunctions = 4
+	},
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
+	},
+/turf/simulated/shuttle/floor/voidcraft,
+/area/shuttle/militarycorvetteOM)
+"SM" = (
+/obj/machinery/portable_atmospherics/canister/empty,
+/obj/machinery/atmospherics/portables_connector{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/militarycorvetteOM)
+"TG" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 8
+	},
+/obj/structure/bed/chair/bay/shuttle{
+	dir = 1
+	},
+/obj/machinery/light/small{
+	dir = 4
+	},
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
+	},
+/turf/simulated/shuttle/floor/voidcraft,
+/area/shuttle/militarycorvetteOM)
+"TJ" = (
+/obj/structure/railing/grey,
+/obj/structure/reagent_dispensers/fueltank/high,
+/obj/structure/closet/walllocker_double/medical/west,
+/obj/item/bodybag/cryobag,
+/obj/item/bodybag/cryobag,
+/obj/item/storage/pill_bottle/spaceacillin,
+/obj/item/storage/pill_bottle/antitox,
+/obj/item/storage/firstaid/regular,
+/obj/item/storage/firstaid/o2,
+/obj/item/reagent_containers/hypospray/autoinjector/biginjector/clotting,
+/obj/item/reagent_containers/hypospray/autoinjector/biginjector/clotting,
+/obj/item/stack/nanopaste,
+/obj/item/storage/firstaid/adv,
+/obj/item/roller,
+/obj/item/roller,
+/obj/item/defib_kit/loaded,
+/obj/item/healthanalyzer/guide,
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/militarycorvetteOM)
+"Vl" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/yellow,
+/obj/structure/closet/walllocker_double/survival/south,
+/obj/effect/floor_decal/steeldecal/steel_decals_central7{
+	pixel_x = -8
+	},
+/obj/item/tape_roll,
+/obj/item/tape_roll,
+/obj/item/tank/oxygen,
+/obj/item/tank/oxygen,
+/obj/item/suit_cooling_unit/emergency,
+/obj/item/suit_cooling_unit/emergency,
+/obj/item/storage/box/survival/space,
+/obj/item/storage/box/survival/space,
+/obj/item/pickaxe/hand{
+	desc = "Use only in case of crash.";
+	name = "emergency disembarkation tool"
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/shuttle/militarycorvetteOM)
+"Vs" = (
+/obj/machinery/door/airlock/hatch{
+	req_one_access = null;
+	name = "Bridge";
+	id_tag = "outsidercockbolt"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/shuttle/militarycorvetteOM)
+"Xi" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 1
+	},
+/turf/simulated/shuttle/floor/voidcraft,
+/area/shuttle/militarycorvetteOM)
+"Xz" = (
+/obj/machinery/door/airlock/hatch{
+	req_one_access = null;
+	name = "Crew Quarters"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/shuttle/militarycorvetteOM)
+"XS" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/red{
+	dir = 9
+	},
+/obj/machinery/light/small,
+/obj/item/ammo_magazine/m762/ext/empty{
+	pixel_x = -3
+	},
+/obj/item/ammo_magazine/m762/ext/empty{
+	pixel_x = 1;
+	pixel_y = -7
+	},
+/obj/item/ammo_magazine/ammo_box/b762,
+/obj/item/ammo_magazine/ammo_box/b762/ap,
+/obj/item/ammo_magazine/ammo_box/b762/hp,
+/obj/item/ammo_magazine/ammo_box/b762/hunter,
+/obj/structure/closet/crate/secure/weapon{
+	name = "Ammunition Crate"
+	},
+/obj/item/ammo_magazine/ammo_box/b762/practice,
+/obj/item/ammo_magazine/ammo_box/b762/practice,
+/obj/item/ammo_magazine/ammo_box/b762/practice,
+/obj/item/ammo_magazine/ammo_box/b762/practice,
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/militarycorvetteOM)
+"Yq" = (
+/obj/machinery/door/airlock/glass_external{
+	req_one_access = null
+	},
+/obj/machinery/door/blast/regular/open{
+	id = "outsiderlockdown";
+	name = "Emergency Lockdown";
+	dir = 4
+	},
+/obj/machinery/access_button{
+	pixel_y = 27
+	},
+/obj/effect/map_helper/airlock/button/int_button,
+/obj/effect/map_helper/airlock/door/int_door,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/shuttle/militarycorvetteOM)
+"Zm" = (
+/obj/machinery/door/airlock{
+	name = "Head"
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/shuttle/militarycorvetteOM)
+"Zq" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/handrail{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/militarycorvetteOM)
+
+(1,1,1) = {"
+KW
+KW
+KW
+KW
+mh
+mh
+mh
+mh
+mh
+mh
+mh
+KW
+KW
+KW
+KW
+KW
+KW
+"}
+(2,1,1) = {"
+KW
+mh
+mh
+mh
+mh
+ep
+rZ
+lZ
+mh
+SM
+mh
+mh
+mh
+mh
+mh
+KW
+KW
+"}
+(3,1,1) = {"
+KW
+mh
+uS
+Zm
+KJ
+hW
+yw
+jU
+tY
+XS
+mh
+KR
+hY
+MV
+NP
+KW
+KW
+"}
+(4,1,1) = {"
+mh
+mh
+mh
+mh
+Ln
+Xi
+xC
+yp
+tY
+MK
+mh
+hX
+pK
+uA
+NP
+KW
+KW
+"}
+(5,1,1) = {"
+mh
+FL
+PE
+mh
+mh
+Xz
+mh
+mh
+mh
+mh
+mh
+zc
+Vl
+mh
+mh
+KW
+KW
+"}
+(6,1,1) = {"
+jl
+rN
+HB
+Vs
+wB
+zV
+TJ
+up
+sH
+Dq
+mh
+rs
+qs
+HA
+mh
+mh
+KW
+"}
+(7,1,1) = {"
+mh
+gM
+TG
+mh
+mI
+lj
+fv
+yh
+Zq
+lw
+mh
+um
+aR
+mh
+mh
+KW
+KW
+"}
+(8,1,1) = {"
+mh
+mh
+mh
+mh
+xi
+sy
+mh
+Yq
+mh
+pu
+kU
+Lq
+pK
+sx
+NP
+KW
+KW
+"}
+(9,1,1) = {"
+KW
+mh
+Ge
+eo
+Gb
+er
+mh
+OY
+mh
+nQ
+mh
+vG
+aT
+LH
+NP
+KW
+KW
+"}
+(10,1,1) = {"
+KW
+mh
+mh
+mh
+mh
+mh
+mh
+iU
+mh
+an
+mh
+mh
+mh
+mh
+mh
+KW
+KW
+"}
+(11,1,1) = {"
+KW
+KW
+KW
+KW
+mh
+mh
+mh
+mC
+mh
+eY
+mh
+KW
+KW
+KW
+KW
+KW
+KW
+"}

@@ -16,19 +16,30 @@
 	projectiletype = /obj/item/projectile/arc //Polaris, don't make the same mob twice.
 
 /mob/living/simple_mob/mechanical/hivebot/tyr
-	name = "terraforming hivebot"
+	name = "tyrian hivebot"
 	maxHealth = 0.5 LASERS_TO_KILL // 20 hp
 	health = 0.5 LASERS_TO_KILL
 	icon = 'modular_chomp/icons/mob/hivebot.dmi'
-	desc = "A robot with strange gardening looking gear."
-	loot_list = list(/obj/structure/foamedmetal = 100
-			)
 	pass_flags = PASSTABLE
 	hovering = TRUE
 	movement_cooldown = -3
-	icon_state = "janitor"
-	icon_living = "janitor"
 	faction = FACTION_TYR
+	melee_damage_lower = 12
+	melee_damage_upper = 12
+	icon_state = "orange"
+	icon_living = "orange"
+
+/mob/living/simple_mob/mechanical/hivebot/tyr/swarm
+	maxHealth = 1
+	health = 1
+	icon_state = "bright_green"
+	icon_living = "bright_green"
+
+/mob/living/simple_mob/mechanical/hivebot/tyr/meteor
+	maxHealth = 2 LASERS_TO_KILL // 80 hp
+	health = 2 LASERS_TO_KILL
+	ai_holder_type = /datum/ai_holder/hostile/ranged/robust
+	projectiletype = /obj/item/projectile/energy/agate_lighting/fast
 
 /mob/living/simple_mob/mechanical/mecha/eclipse/hivebot/tyr
 	name = "ai control center"
@@ -81,17 +92,6 @@
 		specialattackprojectile = /obj/item/projectile/energy/eclipse/tyrjavelin
 		addtimer(CALLBACK(src, PROC_REF(quad_random_firing), A, 12, 1, 0.5 SECONDS), 1 SECOND, TIMER_DELETE_ME)
 		attackcycle = 0
-
-
-/mob/living/simple_mob/mechanical/mecha/eclipse/hivebot/tyr/proc/summon_janitor(atom/target, var/amount, var/next_cycle)
-	if(!target)
-		return
-	new /mob/living/simple_mob/mechanical/hivebot/tyr(src.loc)
-	amount--
-	if(amount > 0)
-		addtimer(CALLBACK(src, PROC_REF(summon_janitor), target, amount, next_cycle), 0.5 SECONDS, TIMER_DELETE_ME)
-	else
-		attackcycle = next_cycle
 
 /obj/item/projectile/energy/spikeenergy_ball/boss
 	damage = 40

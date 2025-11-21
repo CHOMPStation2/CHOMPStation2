@@ -41,8 +41,6 @@
 #define REAGENT_ID_EDEN "eden"
 #define REAGENT_EDENSNAKE "Tainted Eden"
 #define REAGENT_ID_EDENSNAKE "eden_snake"
-#define REAGENT_TERCOZOLAM "Tercozolam"
-#define REAGENT_ID_TERCOZOLAM "tercozolam"
 #define REAGENT_HANNOA "Hannoa"
 #define REAGENT_ID_HANNOA "hannoa"
 #define REAGENT_BULLVALENE "bullvalene"

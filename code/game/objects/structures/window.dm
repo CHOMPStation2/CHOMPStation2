@@ -199,7 +199,7 @@
 
 	else if (user.a_intent == I_HURT)
 
-		if (ishuman(user))
+		if(ishuman(user))
 			var/mob/living/carbon/human/H = user
 			if(H.species.can_shred(H))
 				attack_generic(H,25)
@@ -623,11 +623,9 @@
 	if(opacity)
 		animate(src, color="#FFFFFF", time=5)
 		set_opacity(0)
-		AddElement(/datum/element/light_blocking)
 	else
 		animate(src, color="#222222", time=5)
 		set_opacity(1)
-		RemoveElement(/datum/element/light_blocking)
 	var/turf/T = get_turf(src)
 	T.recalculate_directional_opacity()
 

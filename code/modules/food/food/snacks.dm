@@ -234,7 +234,8 @@
 					feed_duration = 5 SECONDS
 
 				user.setClickCooldown(user.get_attack_speed(src))
-				if(!do_mob(user, human_eater, feed_duration)) return
+				if(!do_after(user, feed_duration, human_eater)) return
+				if(!reagents || (reagents && !reagents.total_volume)) return
 
 				if(swallow_whole && !belly_target) return			// Just in case we lost belly mid-feed
 
@@ -258,16 +259,12 @@
 		else if(reagents)								//Handle ingestion of the reagent.
 			playsound(eater, eating_sound, rand(10,50), 1)
 			if(reagents.total_volume)
-				//CHOMPStation Edit Begin
 				var/bite_mod = 1
-				var/mob/living/carbon/human/human = eater
-				if(istype(human))
-					bite_mod = human.species.bite_mod
-				if(reagents.total_volume > bitesize*bite_mod)
-					reagents.trans_to_mob(eater, bitesize*bite_mod, CHEM_INGEST)
-				//CHOMPStation Edit End
-				if(reagents.total_volume > bitesize)
-					reagents.trans_to_mob(eater, bitesize, CHEM_INGEST)
+				var/mob/living/carbon/human/human_eater = eater
+				if(istype(human_eater))
+					bite_mod = human_eater.species.bite_mod
+				if(reagents.total_volume > bitesize * bite_mod)
+					reagents.trans_to_mob(eater, bitesize * bite_mod, CHEM_INGEST)
 				else
 					reagents.trans_to_mob(eater, reagents.total_volume, CHEM_INGEST)
 				bitecount++
@@ -290,7 +287,7 @@
 			user.balloon_alert_visible("attempts to make [eater] consume [src] whole into their [belly_target].")// CHOMPEdit
 			var/feed_duration = 3 SECONDS
 			user.setClickCooldown(user.get_attack_speed(src))
-			if(!do_mob(user, eater, feed_duration))
+			if(!do_after(user, feed_duration, eater))
 				return
 			if(!belly_target)
 				return
