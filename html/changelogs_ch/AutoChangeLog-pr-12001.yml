@@ -1,6 +1,0 @@
-author: "FluffMedic"
-delete-after: True
-changes:
-  - rscadd: "Added a new maze section to Tyr. Doesn't lead anywhere yet but another area to explore and get a sneak peek of what's to come"
-  - balance: "Some tyr bosses retuned a bit"
-  - bugfix: "Tyr elevators now tell you how they work"

@@ -306,3 +306,32 @@
   - code_imp: Cleaned up effect grenades
   - bugfix: bodycamera console runtime fix
   - bugfix: Fixes an entertainment monitor runtime
+2025-11-21:
+  CHOMPStation2StaffMirrorBot:
+  - code_imp: update dependencies
+  - maptweak: deleted mapped-in resleeving sickness pill packages from CMO lockers
+  - spellcheck: '"Kitsuhanan Cure" reagent name genericized to the more immediately-understandable
+      "Resleeving Sickness Cure"'
+  - qol: the resize ability is a bit easier to use and less likely to be used by accident
+  - bugfix: Fixes zeras labcloak
+  Diana:
+  - bugfix: You can no longer accidentally go to step 1 of necrosis surgery and undo
+      all your work.
+  FluffMedic:
+  - rscadd: Added a new maze section to Tyr. Doesn't lead anywhere yet but another
+      area to explore and get a sneak peek of what's to come
+  - balance: Some tyr bosses retuned a bit
+  - bugfix: Tyr elevators now tell you how they work
+  Guti:
+  - bugfix: Fixed candy bowl not working
+  - qol: Candy bowls can now have fingerprints
+  - balance: Changed rotten egg reagent from toxin to salmonella
+  Will:
+  - code_imp: topturfcrossed component for when you need to check for Crossed() actions
+      from within nested items
+  - bugfix: recursive move component properly rebuild it's hierarchy when picked up
+      by a mob from a turf
+  zeskorion:
+  - maptweak: few cetus fixes
+  - maptweak: cetus tesla engine should no longer spawn events that might cause it
+      to teleport to the wrong location
