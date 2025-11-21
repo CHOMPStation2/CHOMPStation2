@@ -93,10 +93,13 @@
 	meat_amount = 3
 	meat_type = /obj/item/reagent_containers/food/snacks/copperant
 
-/mob/living/simple_mob/animal/tyr/mineral_ants/copper/apply_melee_effects(var/atom/A)
-	if(isliving(A))
-		A.emp_act(4) //The weakest strength of EMP
-		playsound(src, 'sound/weapons/Egloves.ogg', 75, 1)
+	special_attack_min_range = 0
+	special_attack_max_range = 2
+	special_attack_cooldown = 10 SECONDS
+
+/mob/living/simple_mob/animal/tyr/mineral_ants/copper/do_special_attack(atom/A)
+	empulse(src.loc, 1, 2, 3, 4)
+	playsound(src, 'sound/weapons/Egloves.ogg', 75, 1)
 
 /mob/living/simple_mob/animal/tyr/mineral_ants/agate //rushes at you and explodes
 	name = "agate metal ant"
@@ -109,7 +112,7 @@
 	meat_amount = 3
 	meat_type = /obj/item/reagent_containers/food/snacks/agateant
 
-	special_attack_min_range = 1
+	special_attack_min_range = 0
 	special_attack_max_range = 2
 	special_attack_cooldown = 10 SECONDS
 
@@ -223,7 +226,7 @@
 	// Get our AI to stay still.
 	set_AI_busy(TRUE)
 
-	if(!do_mob(src, T, 5 SECONDS))
+	if(!do_after(src, 5 SECONDS, T))
 		set_AI_busy(FALSE)
 		to_chat(src, span_warning("You need to stay still to spin a web on \the [T]."))
 		return FALSE
@@ -269,7 +272,7 @@
 	// Get our AI to stay still.
 	set_AI_busy(TRUE)
 
-	if(!do_mob(src, T, 5 SECONDS))
+	if(!do_after(src, 5 SECONDS, T))
 		set_AI_busy(FALSE)
 		to_chat(src, span_warning("You need to stay still to spin a web on \the [T]."))
 		return FALSE

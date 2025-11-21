@@ -371,7 +371,6 @@
 
 	//It's easier to break out of a grab by a smaller mob
 	break_strength += max(size_difference(affecting, assailant), 0)
-	//CHOMPEdit Begin
 	var/prob_mult = 1
 	var/mob/living/carbon/human/grabbee = affecting
 	var/mob/living/carbon/human/grabber = assailant
@@ -383,7 +382,6 @@
 		break_strength += grabber.species.grab_power_victims
 
 	var/break_chance = CLAMP(prob_mult*break_chance_table[CLAMP(break_strength, 1, break_chance_table.len)],0,100)
-	//CHOMPEdit End
 	if(prob(break_chance))
 		if(state == GRAB_KILL)
 			reset_kill_state()

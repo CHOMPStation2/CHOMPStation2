@@ -85,10 +85,10 @@
 		noisy = TRUE // CHOMPStation Add: Hummy noises
 	update_icon()
 
-// Proc: emp_act()
+// Proc: emp_act(severity, recursive)
 // Parameters: 1 (severity - how strong the EMP is, with lower numbers being stronger)
 // Description: Shuts off the machine for awhile if an EMP hits it.  Ion anomalies also call this to turn it off.
-/obj/machinery/exonet_node/emp_act(severity)
+/obj/machinery/exonet_node/emp_act(severity, recursive)
 	if(!(stat & EMPED))
 		stat |= EMPED
 		var/duration = (300 * 10)/severity

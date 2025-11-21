@@ -171,8 +171,6 @@
 
 	priority = 3
 
-	blood_level = 3
-
 	min_duration = 40 //CHOMPedit
 	max_duration = 40 //CHOMPedit
 	excludes_steps = list(/datum/surgery_step/generic/cut_open)

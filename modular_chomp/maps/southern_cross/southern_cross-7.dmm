@@ -30280,10 +30280,6 @@
 /turf/simulated/floor,
 /area/expoutpost/restrooms)
 "yjG" = (
-/obj/machinery/power/smes/buildable/max_charge_max_input{
-	RCon_tag = "Auxiliary Reactor - Aegis";
-	name = "Auxiliary Reactor SMES"
-	},
 /obj/item/smes_coil,
 /obj/item/smes_coil,
 /obj/effect/engine_setup/smes,
@@ -30291,6 +30287,10 @@
 	icon_state = "0-8"
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
+/obj/machinery/power/smes/buildable/engine_default{
+	name = "Auxiliary Reactor SMES";
+	RCon_tag = "Auxiliary Reactor - Aegis"
+	},
 /turf/simulated/floor,
 /area/expoutpost/engoffice)
 "ykl" = (

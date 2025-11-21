@@ -110,3 +110,228 @@
   - code_imp: Implements COMSIG_VENT_CRAWLER_EXITED
   zeskorion:
   - bugfix: alt halo loadout item works now
+2025-11-09:
+  CHOMPStation2StaffMirrorBot:
+  - rscadd: Added fusion coils, special single-use cells which can be used to kickstart
+      depleted SMES units
+  - bugfix: Fixed smelting prey who'd prefer to not be smelted
+  - bugfix: Running special atmos checks while phased or otherwise incorporeal
+  Diana:
+  - bugfix: Food no longer deletes weirdly
+  - code_imp: do_mob axed and replaced with the nicer, saner do_after
+  - bugfix: You can no longer shove a micro holding your guns into the microwave to
+      prevent your guns from being EMP'd while in a firefight.
+  - bugfix: Robotic eyes now get EMP'd.
+  - bugfix: Organic eyes no longer get EMP'd
+  - bugfix: MMIs will properly apply drain bamage to the brain within when EMP'd
+  - bugfix: Polychrome wallets no longer act as faraday cages for anything within
+  - bugfix: Chameleon equipment no longer makes anything attached to it EMP proof
+      (holster exploit)
+  - bugfix: You can no longer stick your gun into a disposal unit mid fight to protect
+      it against EMPs
+  - code_imp: EMP code is less scuffed now
+  - code_imp: removes deprecated organ check
+  - refactor: Lasertag code has been completely revamped.
+  - rscadd: A lot of lasertag additions from Outpost21. Laser Knives, Laser Mines,
+      Omni Vests! Get them all from cargo!
+  - qol: Lasertag 'instagib' and 'multkill' modes have been moved to the vests theirselves
+      via a HP toggle instead of on the gun.
+  - qol: Lasertag vests can set their HP to be between 1-10
+  - qol: Lasertag vests can now have a passive heal, set to not heal at all (0) all
+      the way up to heal once every 60 seconds
+  - qol: EMP strength actually matters when it comes to EMPing turrets.
+  - bugfix: Turrets will properly have a lethal projectile if set by the code.
+  - bugfix: Lasertag turrets properly target at players.
+  - rscadd: Lasertag turrets now have an emag effect
+  - rscadd: Lasertag vests now have an emag effect
+  - rscadd: Lasertag turrets can be purchased from Cargo
+  - bugfix: You can no longer shoot lasertag guns while downed
+  - bugfix: You can no longer crawl while downed in lasertag
+  - bugfix: Landmines will no longer 100% miss the person that steps on them
+  - bugfix: Training mines drop any attached assemblies upon 'explosion'
+  - bugfix: Mines drop any attached assemblies upon disarming.
+  - bugfix: Halloss and Succubus Drain now take your CURRENT max health into account
+      instead of SPECIES max health
+  Will:
+  - bugfix: View becoming stuck on bodyscanner if you sleep or get stunned inside
+      it, and other similar situations inside of machines or items.
+  - bugfix: ghosting will clear remote views
+2025-11-10:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: Fireaxe no longer can be used as a pair of bleeders to stop bleeding.
+  - bugfix: Fireaxe can now properly be used to amputate limbs.
+  - bugfix: Makes volume pumps and vent scrubbers work with the proper do_after
+  Diana:
+  - bugfix: Fixes bug where you were unable to rack non-shotgun weapons.
+  - bugfix: fixes a 10 year old bug where your lungs were assigned to your heart
+  - qol: Surgery can be done ANYWHERE now. However, 'dirty'/non-sterile surfaces (floors
+      and tables) risk infection and make you MUCH slower. OPtables are still the
+      fastest.
+  - qol: Infection is less aggressive short term, more lethal long term. This means
+      no more 'sudden death from infection'
+  - qol: Infection can be seen when examining yourself/others (Others can detect infection
+      on you MUCH sooner than yourself)
+  - qol: Internal bleeding can be seen when examining yourself/others via a grab-examine
+  - qol: Sterilizine is cleans 10x more effectively now.
+  - qol: Stethoscopes can now be used to examine for internal injury or missing internal
+      organs.
+  - qol: Fixovein now has a 100% chance of success during dehusking surgery instead
+      of a 30%
+  - qol: Surgery RNG % chance of failure depending on surface removed. Instead replaced
+      with a RNG % chance of increasing the germ level if you use an unsanitary surface
+      to do surgery on.
+  - qol: Syringe stabbing now takes higher armors into account. No longer a pure 50/50%
+      chance
+  - qol: Some ghetto surgery tools have been increased in chance.
+  - spellcheck: Some typos in surgery have been fixed.
+  - bugfix: Grab-examining boneless crew will no longer tell you they have bones
+  - bugfix: Tachycardics and bradycardics now affect heartrate (Drink coffee while
+      smoking after having downed some Nuka Cola and ask medical to take your pulse.
+      It'll be funny.)
+  - bugfix: Stethoscope now properly detects your heartrate.
+  - bugfix: Defib no longer does massive oxyloss and brain damage to those it revives.
+  - bugfix: Medical kiosks no longer infinitely give you blood pills
+  - bugfix: Examining someone that is not breathing will inform you that they are
+      - in fact - not breathing
+  - bugfix: Brain surgery now works properly if the user is ghosted when the brain
+      is removed
+  - bugfix: You no longer lose your languages after brain surgery
+  - qol: Detoxify surgery no longer requires you to raise your patient's toxins or
+      oxyloss above 25 to use it.
+  - rscadd: Necrosis surgery now has a separate pathtree similar to dehusking surgery.
+  - rscadd: You can now palpate the neck, chest, and abdomen to examine for internal
+      injuries.
+  - code_imp: Converts a few lists into managed global lists.
+2025-11-11:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: runtimes due to multiple signal registers on opacity changes
+  - bugfix: digest pain runtimes when stepping into digestive tiles
+  Diana:
+  - qol: Metabolism perks can be taken  by synths AND humans. Synths can now metabolize
+      beer faster!
+  - qol: Hard feet is now a neutral instead of a positive trait. It cost 0 points
+      and is so unimpactful that it made little sense to have it take a positive slot
+      when it's mostly just a fluff trait.
+  - bugfix: Brute resistance positives block you from taking other brute resistance
+      positives instead of fire resistance. The opposite is true.
+  - spellcheck: Darkvision note adjustments.
+  - rscadd: A LOT of new traits have been added from downstream.
+  - rscadd: Hide added as a neutral trait. AR huds make this irrelevant so eh. Could
+      lead to stealthy pred stuff.
+  - bugfix: Pipes can be wrenched again
+  FluffMedic:
+  - rscadd: Some new threats to Tyr and paths within the precursor base
+  Will:
+  - bugfix: Remoteview crashing during mob qdel
+  - qol: Increased janihound water slurping amount from 50 to 250 when refilling
+  - bugfix: Shoveling snow and other turf demotions respect the outdoor flags they
+      started with
+  - bugfix: 12guage emp ammo from the autolathe is now emp shells and not beanbag
+      shells
+  - bugfix: Fix runtime in machine var shim, removed balloon alert when using old
+      byond uis handled by it.
+2025-11-12:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: Fixes some chemical duplication exploits.
+  - bugfix: Fixed shelter capsules being affected by gravity surge events on maps
+      that don't have gravity generators.
+  Guti:
+  - qol: Teleporting while buckled will place you closer to the destination point
+  - bugfix: Fixes teleporting while in chairs or taurs to lose your comfy seat
+  Meek:
+  - rscadd: Adds several new butts to the photocopier. Teshari, nevrean, sergal, and
+      altevian
+  Will:
+  - bugfix: Stunned borgs no longer have their items vanish temporarily from their
+      inventory list. They are still unequipped however.
+  - bugfix: Modify robot's remove module updates the inventory instantly like add
+      module does.
+  - bugfix: Air canisters can be marked green for methane
+  - maptweak: Fixed Cetus and SC Carrier aux reactor smes not being maxed output on
+      roundstart
+  - maptweak: Ursula carrier shuttle missing smes on Cetus map
+  - bugfix: forbids synths from taking ambulant blood
+  - bugfix: Welded vents hibernate when they attempt to process air now
+  - rscadd: Large lightbulb types now have unique icons
+  - qol: Lightbulb boxes have some large lightbulbs and tubes for floor lamps and
+      floodlight replacements.
+2025-11-13:
+  Diana:
+  - bugfix: Fixing flashes no longer cause compile errors, meaning they can be fixed
+      again.
+  - bugfix: Flashes no longer do 2x the amount of halloss when affecting species that
+      are weak to flashes. Instead multiplies the halloss by the appropriate amount.
+  - code_imp: Makes the flash code a little higher quality.
+  - bugfix: External wounds will no longer show up as internal
+  Will:
+  - qol: Grippers show item icon held when in use, and make sounds when changing items
+  zeskorion:
+  - bugfix: small map fixes
+2025-11-15:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: tgui usage for robot multibelt items like the plant analyzer
+  - bugfix: robot grippers cell self installs
+2025-11-16:
+  Guti:
+  - bugfix: Fixed mechas not teleporting in quantum pads
+2025-11-17:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: Fixed cans not stopping processing when destroyed
+  Diana:
+  - bugfix: Items now use the proper species fallback
+  - bugfix: Backup implanter works again
+  - bugfix: The one pizza can be cut again
+  - bugfix: Lick wounds works again
+  FluffMedic:
+  - bugfix: Alters the Assimilated Engine POI to prevent softlocks
+  Will:
+  - bugfix: noticeboards properly save the title of their pinned pages
+  Zizzi:
+  - bugfix: Circuitry injector can now inject common injectables.
+  sunofang:
+  - rscadd: Adds a new outsider ship! Comes with free sandbags
+  zeskorion:
+  - bugfix: fixes a few misc issues with cetus
+2025-11-18:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: bad typing and runtimes if RnD devices were used before round start
+2025-11-19:
+  CHOMPStation2StaffMirrorBot:
+  - rscadd: 'Added new HOS gear, available from clothing locker: New red cap, new
+      suit jacket, new cloak (attachable to suit and uniform)'
+  - rscadd: Added a new colorable cloak, selectable from the loadout ("flowing cloak")
+      and purchasable from Big D's Best. The greyscaling is simple at best, apologies.
+  - image: Added icons for new clothing options, including mob, inhands and obj icons.
+  Will:
+  - code_imp: Cleaned up effect grenades
+  - bugfix: bodycamera console runtime fix
+  - bugfix: Fixes an entertainment monitor runtime
+2025-11-21:
+  CHOMPStation2StaffMirrorBot:
+  - code_imp: update dependencies
+  - maptweak: deleted mapped-in resleeving sickness pill packages from CMO lockers
+  - spellcheck: '"Kitsuhanan Cure" reagent name genericized to the more immediately-understandable
+      "Resleeving Sickness Cure"'
+  - qol: the resize ability is a bit easier to use and less likely to be used by accident
+  - bugfix: Fixes zeras labcloak
+  Diana:
+  - bugfix: You can no longer accidentally go to step 1 of necrosis surgery and undo
+      all your work.
+  FluffMedic:
+  - rscadd: Added a new maze section to Tyr. Doesn't lead anywhere yet but another
+      area to explore and get a sneak peek of what's to come
+  - balance: Some tyr bosses retuned a bit
+  - bugfix: Tyr elevators now tell you how they work
+  Guti:
+  - bugfix: Fixed candy bowl not working
+  - qol: Candy bowls can now have fingerprints
+  - balance: Changed rotten egg reagent from toxin to salmonella
+  Will:
+  - code_imp: topturfcrossed component for when you need to check for Crossed() actions
+      from within nested items
+  - bugfix: recursive move component properly rebuild it's hierarchy when picked up
+      by a mob from a turf
+  zeskorion:
+  - maptweak: few cetus fixes
+  - maptweak: cetus tesla engine should no longer spawn events that might cause it
+      to teleport to the wrong location

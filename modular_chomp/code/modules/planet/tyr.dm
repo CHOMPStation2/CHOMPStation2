@@ -397,6 +397,14 @@ var/datum/planet/tyr/planet_tyr = null
 		if(acidlevel > 0)
 			L.adjustFireLoss(acidlevel)
 
+/turf/simulated/tyracid/quantum
+	acidlevel = 20
+	color = "#0059c6"
+
+
+/turf/simulated/tyracid/supernova
+	acidlevel = 10
+	color = "#b10101"
 
 /*
 WEATHER_BLIZZARD	= new (),

@@ -20,14 +20,6 @@
 	pass_flags = PASSTABLE
 	movement_cooldown = -1
 
-/mob/living/simple_mob/mechanical/hivebot/nanoevent/bright_green/tyr
-	faction = FACTION_TYR
-	movement_cooldown = 0
-	maxHealth = 0.2 LASERS_TO_KILL // 10 HP
-	health = 0.2 LASERS_TO_KILL
-	melee_damage_lower = 12
-	melee_damage_upper = 12
-
 /mob/living/simple_mob/mechanical/hivebot/nanoevent/cyan //cracks the shell
 	name = "nanoweave cracker hivebot"
 	icon_state = "cyan"

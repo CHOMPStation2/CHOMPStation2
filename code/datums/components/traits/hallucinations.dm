@@ -1,57 +1,64 @@
-/datum/trait/negative/hollow
-	excludes = list(/datum/trait/positive/densebones)
-
-/datum/trait/negative/scrawny
-	name = "Scrawny"
-	desc = "You have a much harder time breaking free of grabs as well as creating and holding onto grabs on other people."
-	cost = -2
-	var_changes = list("grab_resist_divisor_victims" = 0.5, "grab_resist_divisor_self" = 3, "grab_power_victims" = 1, "grab_power_self" = -1)
-
-/datum/trait/negative/deep_sleeper
-	name = "Deep Sleeper"
-	desc = "When you fall asleep, it takes you four times as long to wake up."
-	cost = -1
-	var_changes = list("waking_speed" = 0.25)
-
-/datum/trait/negative/schizophrenia
-	name = "Episodic hallucinations."
-	desc = "You have a condition which causes you to spontaneously have hallucinations! Luckily for you, in the modern space age, our doctors have solutions for you, just make sure you don't forget to take your pills."
-	cost = -3
-	special_env = TRUE
-	can_take = ORGANICS
+///The schizophrenia / 'episodic hallucinations' trait, but componentized.
+///There is a lot of math that I don't even want to try to fathom in this.
+///There was also almost 0 commentation.
+/datum/component/schizophrenia
+	///The maximum amount of hallucinations we can have.
 	var/hallucination_max = 60
+	///The amount of hallucinations to increase by each tick during an episode.
 	var/hallucination_increase = 3
+
 	var/episode_length_nomeds_avg = 4000
 	var/episode_length_nomeds_dev = 100
+
 	var/episode_length_meds_avg = 2000
 	var/episode_length_meds_dev = 500
+
 	var/break_length_nomeds_avg = 3000
 	var/break_length_nomeds_dev = 600
+
 	var/break_length_meds_avg = 30000
 	var/break_length_meds_dev = 7000
+
+	//Holds the info if we're in an episode, when then next one will begin, and when it will end.
 	var/list/episode = list("in_episode" = FALSE)
 
-/datum/trait/negative/schizophrenia/apply(var/datum/species/S,var/mob/living/carbon/human/H)
-	..()
+/datum/component/schizophrenia/Initialize()
+	if(!ishuman(parent))
+		return COMPONENT_INCOMPATIBLE
 	episode["next_episode_begin"] = world.time + 6000
 	episode["next_episode_end"] = world.time + 9000
 
-/datum/trait/negative/schizophrenia/handle_environment_special(var/mob/living/carbon/human/H)
-	var/med_vol = get_med_volume(H)
+/datum/component/schizophrenia/RegisterWithParent()
+	RegisterSignal(parent, COMSIG_LIVING_LIFE, PROC_REF(process_component))
+
+/datum/component/schizophrenia/UnregisterFromParent()
+	UnregisterSignal(parent, list(COMSIG_LIVING_LIFE))
+
+/datum/component/schizophrenia/proc/process_component()
+	SIGNAL_HANDLER
+	var/mob/living/carbon/human/human_guy = parent
+	if(QDELETED(parent))
+		return
+	///How much medication we currently have in our system.
+	var/med_vol = get_med_volume(human_guy)
+
 	if(!episode["in_episode"])
 		if(world.time > episode["next_episode_begin"])
 			episode["meds_at_beginning"] = med_vol
 			episode["in_episode"] = TRUE
+
 		else if(episode["meds_at_end"] && !med_vol)	//Meds ran out
 			var/new_episode_begin = world.time + (episode["next_episode_begin"] - world.time)/10
 			episode["next_episode_end"] = new_episode_begin + (episode["next_episode_end"] - episode["next_episode_begin"])
 			episode["next_episode_begin"] = new_episode_begin
 			episode["meds_at_end"] = FALSE
+
 		else if(!episode["meds_at_end"] && med_vol) //Meds were taken between episodes
 			var/new_episode_begin = world.time + (episode["next_episode_begin"] - world.time)*10
 			episode["next_episode_end"] = new_episode_begin + (episode["next_episode_end"] - episode["next_episode_begin"])
 			episode["next_episode_begin"] = new_episode_begin
 			episode["meds_at_end"] = TRUE
+
 	else
 		if(world.time > episode["next_episode_end"])
 			episode["meds_at_end"] = med_vol
@@ -65,14 +72,15 @@
 		else
 			if(!episode["meds_at_beginning"] && med_vol)
 				episode["next_episode_end"] = world.time + (episode["next_episode_end"] - world.time)/8
-			H.hallucination = min(hallucination_max,H.hallucination + hallucination_increase)
+			human_guy.hallucination = min(hallucination_max,human_guy.hallucination + hallucination_increase)
 
-/datum/trait/negative/schizophrenia/proc/get_med_volume(var/mob/living/carbon/human/H)
+///Checks to see if we have tercozolam in our systeem and returns how much if so.
+/datum/component/schizophrenia/proc/get_med_volume(mob/living/carbon/human/human_guy)
 	var/total_vol = 0
-	for(var/datum/reagent/reagent in H.bloodstr.reagent_list)
+	for(var/datum/reagent/reagent in human_guy.bloodstr.reagent_list)
 		if(istype(reagent,/datum/reagent/tercozolam))
 			total_vol += reagent.volume
-	for(var/datum/reagent/reagent in H.ingested.reagent_list)
+	for(var/datum/reagent/reagent in human_guy.ingested.reagent_list)
 		if(istype(reagent,/datum/reagent/tercozolam))
 			total_vol += reagent.volume
 	return total_vol
