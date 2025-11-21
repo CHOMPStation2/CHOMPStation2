@@ -25627,12 +25627,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/research/firstdeck/hallway)
-"qTV" = (
-/obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 4
-	},
-/turf/space,
-/area/space)
 "qUq" = (
 /obj/machinery/door/blast/regular{
 	density = 0;
@@ -74779,7 +74773,7 @@ deM
 dOZ
 dWL
 aaa
-qTV
+aaa
 aaa
 vYi
 aaa

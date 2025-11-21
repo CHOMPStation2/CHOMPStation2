@@ -1105,12 +1105,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/medical/virology)
-"acd" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 6
-	},
-/turf/space,
-/area/space)
 "ace" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/effect/floor_decal/borderfloor{
@@ -118704,7 +118698,7 @@ aaf
 aaa
 aaa
 aaa
-acd
+aaa
 aaa
 aaa
 aaa
