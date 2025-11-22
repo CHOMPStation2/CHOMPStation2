@@ -1,0 +1,5 @@
+author: "Fluffyzack21"
+delete-after: True
+changes:
+  - maptweak: "Moves the cables, waste, and supply to make it flush with everything else on sif outpost and on carrier on Southern Cross"
+  - maptweak: "Moved around the scrubbers and pumps in the carrier"
