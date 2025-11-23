@@ -81,6 +81,8 @@ GLOBAL_PROTECT(protected_ranks)
 				flag = R_MOD
 			if("EVENT")
 				flag = R_EVENT
+			if("MENTOR")
+				flag = R_MENTOR
 			if("@")
 				if(previous_rank)
 					switch(group_count)
@@ -211,7 +213,11 @@ GLOBAL_PROTECT(protected_ranks)
 
 /// (Re)Loads the admin list.
 /// returns TRUE if database admins had to be loaded from the backup json
-/proc/load_admins(no_update)
+/proc/load_admins(no_update, initial = FALSE)
+	if(!initial)
+		if(!global.config.PreConfigReload())
+			return
+
 	var/dbfail
 	if(!CONFIG_GET(flag/admin_legacy_system) && !SSdbcore.Connect())
 		message_admins("Failed to connect to database while loading admins. Loading from backup.")

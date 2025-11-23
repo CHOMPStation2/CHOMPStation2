@@ -17,7 +17,7 @@
 	var/static/list/locked = list()
 
 
-/datum/datacore/proc/get_manifest(monochrome, OOC,var/snowflake = FALSE) //CHOMPStation Edit
+/datum/datacore/proc/get_manifest(monochrome, OOC,var/snowflake = FALSE)
 	var/list/heads = new()
 	var/list/sec = new()
 	var/list/eng = new()
@@ -52,7 +52,7 @@
 
 		if(OOC)
 			var/active = 0
-			for(var/mob/M in player_list)
+			for(var/mob/M in GLOB.player_list)
 				if(M.real_name == name && M.client && M.client.inactivity <= 10 MINUTES)
 					active = 1
 					break
@@ -99,7 +99,7 @@
 			var/real_rank = make_list_rank(t.fields["real_rank"])
 
 			var/active = 0
-			for(var/mob/M in player_list)
+			for(var/mob/M in GLOB.player_list)
 				if(M.real_name == name && M.client && M.client.inactivity <= 10 MINUTES)
 					active = 1
 					break
@@ -110,10 +110,10 @@
 				off[name] = rank
 
 	// Synthetics don't have actual records, so we will pull them from here.
-	for(var/mob/living/silicon/ai/ai in mob_list)
+	for(var/mob/living/silicon/ai/ai in GLOB.mob_list)
 		bot[ai.name] = "Artificial Intelligence"
 
-	for(var/mob/living/silicon/robot/robot in mob_list)
+	for(var/mob/living/silicon/robot/robot in GLOB.mob_list)
 		// No combat/syndicate cyborgs, no drones, and no AI shells.
 		if(!robot.scrambledcodes && !robot.shell && !(robot.module && robot.module.hide_on_manifest()))
 			bot[robot.name] = "[robot.modtype] [robot.braintype]"
@@ -271,10 +271,10 @@ GLOBAL_LIST_EMPTY(PDA_Manifest)
 
 	// Synthetics don't have actual records, so we will pull them from here.
 	// Synths don't have records, which is the means by which isactive is retrieved, so I'm hardcoding it to active, don't really have any better means
-	for(var/mob/living/silicon/ai/ai in mob_list)
+	for(var/mob/living/silicon/ai/ai in GLOB.mob_list)
 		bot[++bot.len] = list("name" = ai.real_name, "rank" = "Artificial Intelligence", "active" = "Active")
 
-	for(var/mob/living/silicon/robot/robot in mob_list)
+	for(var/mob/living/silicon/robot/robot in GLOB.mob_list)
 		// No combat/syndicate cyborgs, no drones, and no AI shells.
 		if(robot.scrambledcodes || robot.shell || (robot.module && robot.module.hide_on_manifest()))
 			continue
@@ -298,7 +298,7 @@ GLOBAL_LIST_EMPTY(PDA_Manifest)
 
 /datum/datacore/proc/manifest()
 	spawn()
-		for(var/mob/living/carbon/human/H in player_list)
+		for(var/mob/living/carbon/human/H in GLOB.player_list)
 			manifest_inject(H)
 		return
 
@@ -375,7 +375,7 @@ GLOBAL_LIST_EMPTY(PDA_Manifest)
 			M.fields["species"] = "[H.custom_species ? "[H.custom_species]" : H.species.name]"
 		else
 			M.fields["species"]		= "[H.custom_species ? "[H.custom_species] ([H.species.name])" : H.species.name]"
-		M.fields["b_type"]		= H.b_type
+		M.fields["b_type"]		= H.dna ? H.dna.b_type : DEFAULT_BLOOD_TYPE
 		M.fields["blood_reagent"]	= H.dna.blood_reagents
 		M.fields["blood_color"]	= H.dna.blood_color
 		M.fields["b_dna"]		= H.dna.unique_enzymes
@@ -414,7 +414,7 @@ GLOBAL_LIST_EMPTY(PDA_Manifest)
 			L.fields["brain_type"] = H.get_FBP_type()
 		else
 			L.fields["brain_type"] = "Organic"
-		L.fields["b_type"]		= H.b_type
+		L.fields["b_type"]		= H.dna ? H.dna.b_type : DEFAULT_BLOOD_TYPE
 		L.fields["b_dna"]		= H.dna.unique_enzymes
 		L.fields["enzymes"]		= H.dna.SE // Used in respawning
 		L.fields["identity"]	= H.dna.UI // "
@@ -439,7 +439,7 @@ GLOBAL_LIST_EMPTY(PDA_Manifest)
 	return
 
 /proc/generate_record_id()
-	return add_zero(num2hex(rand(1, 65535)), 4)	//no point generating higher numbers because of the limitations of num2hex
+	return add_zero(num2hex(rand(1, 65535), 5), 4)	//no point generating higher numbers because of the limitations of num2hex
 
 /datum/datacore/proc/CreateGeneralRecord(var/mob/living/carbon/human/H, var/id, var/hidden)
 	ResetPDAManifest()
@@ -454,7 +454,7 @@ GLOBAL_LIST_EMPTY(PDA_Manifest)
 		side = icon('html/images/no_image32.png')
 
 	if(!id)
-		id = text("[]", add_zero(num2hex(rand(1, 65536)), 4))
+		id = text("[]", add_zero(num2hex(rand(1, 65536), 5), 4))
 	var/datum/data/record/G = new /datum/data/record()
 	G.name = "Employee Record #[id]"
 	G.fields["name"] = "New Record"

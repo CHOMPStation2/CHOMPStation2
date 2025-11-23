@@ -1,23 +1,3 @@
-var/global/list/radio_channels_by_freq = list(
-	num2text(PUB_FREQ) = CHANNEL_COMMON,
-	num2text(AI_FREQ)  = CHANNEL_AI_PRIVATE,
-	num2text(ENT_FREQ) = CHANNEL_ENTERTAINMENT,
-	num2text(ERT_FREQ) = CHANNEL_RESPONSE_TEAM,
-	num2text(COMM_FREQ)= CHANNEL_COMMAND,
-	num2text(ENG_FREQ) = CHANNEL_ENGINEERING,
-	num2text(MED_FREQ) = CHANNEL_MEDICAL,
-	num2text(MED_I_FREQ)=CHANNEL_MEDICAL_1,
-	num2text(BDCM_FREQ) =CHANNEL_BODYCAM, // CHOMPEdit
-	num2text(SEC_FREQ) = CHANNEL_SECURITY,
-	num2text(SEC_I_FREQ)=CHANNEL_SECURITY_1,
-	num2text(SCI_FREQ) = CHANNEL_SCIENCE,
-	num2text(SUP_FREQ) = CHANNEL_SUPPLY,
-	num2text(SRV_FREQ) = CHANNEL_SERVICE,
-	num2text(EXP_FREQ) = CHANNEL_EXPLORATION
-	)
-
-GLOBAL_LIST_BOILERPLATE(all_pai_cards, /obj/item/paicard)
-
 /obj/item/paicard
 	name = "personal AI device"
 	icon = 'icons/obj/pda.dmi'
@@ -74,7 +54,7 @@ GLOBAL_LIST_BOILERPLATE(all_pai_cards, /obj/item/paicard)
 		to_chat(user,span_warning("You cannot join a pAI card when you are banned from playing as a pAI."))
 		return
 
-	for(var/ourkey in paikeys)
+	for(var/ourkey in GLOB.paikeys)
 		if(ourkey == user.ckey)
 			to_chat(user, span_warning("You can't just rejoin any old pAI card!!! Your card still exists."))
 			return
@@ -97,14 +77,14 @@ GLOBAL_LIST_BOILERPLATE(all_pai_cards, /obj/item/paicard)
 			var/obj/item/paicard/typeb/card = new(location)
 			var/mob/living/silicon/pai/new_pai = new(card)
 			new_pai.key = user.key
-			paikeys |= new_pai.ckey
+			GLOB.paikeys |= new_pai.ckey
 			card.setPersonality(new_pai)
 			new_pai.SetName(actual_pai_name)
 		else
 			var/obj/item/paicard/card = new(location)
 			var/mob/living/silicon/pai/new_pai = new(card)
 			new_pai.key = user.key
-			paikeys |= new_pai.ckey
+			GLOB.paikeys |= new_pai.ckey
 			card.setPersonality(new_pai)
 			new_pai.SetName(actual_pai_name)
 
@@ -113,7 +93,7 @@ GLOBAL_LIST_BOILERPLATE(all_pai_cards, /obj/item/paicard)
 			var/obj/item/paicard/typeb/card = new(location)
 			var/mob/living/silicon/pai/new_pai = new(card)
 			new_pai.key = user.key
-			paikeys |= new_pai.ckey
+			GLOB.paikeys |= new_pai.ckey
 			card.setPersonality(new_pai)
 			if(!new_pai.savefile_load(new_pai))
 				var/pai_name = tgui_input_text(new_pai, "Choose your character's name", "Character Name")
@@ -125,7 +105,7 @@ GLOBAL_LIST_BOILERPLATE(all_pai_cards, /obj/item/paicard)
 			var/obj/item/paicard/card = new(location)
 			var/mob/living/silicon/pai/new_pai = new(card)
 			new_pai.key = user.key
-			paikeys |= new_pai.ckey
+			GLOB.paikeys |= new_pai.ckey
 			card.setPersonality(new_pai)
 			if(!new_pai.savefile_load(new_pai))
 				var/pai_name = tgui_input_text(new_pai, "Choose your character's name", "Character Name")
@@ -382,7 +362,7 @@ GLOBAL_LIST_BOILERPLATE(all_pai_cards, /obj/item/paicard)
 			if(2)
 				radio.ToggleReception()
 	if(href_list["setlaws"])
-		var/newlaws = sanitize(tgui_input_text(usr, "Enter any additional directives you would like your pAI personality to follow. Note that these directives will not override the personality's allegiance to its imprinted master. Conflicting directives will be ignored.", "pAI Directive Configuration", pai.pai_laws, multiline = TRUE, prevent_enter = TRUE))
+		var/newlaws = sanitize(tgui_input_text(usr, "Enter any additional directives you would like your pAI personality to follow. Note that these directives will not override the personality's allegiance to its imprinted master. Conflicting directives will be ignored.", "pAI Directive Configuration", pai.pai_laws, MAX_MESSAGE_LEN, encode = FALSE, multiline = TRUE, prevent_enter = TRUE), MAX_MESSAGE_LEN, FALSE, FALSE, TRUE)
 		if(newlaws)
 			pai.pai_laws = newlaws
 			to_chat(pai, "Your supplemental directives have been updated. Your new directives are:")
@@ -439,9 +419,9 @@ GLOBAL_LIST_BOILERPLATE(all_pai_cards, /obj/item/paicard)
 		audible_message(span_notice("\The [src] flashes a message across its screen, \"Additional personalities available for download.\""), hearing_distance = world.view, runemessage = "bleeps!")
 		last_notify = world.time
 
-/obj/item/paicard/emp_act(severity)
+/obj/item/paicard/emp_act(severity, recursive)
 	for(var/mob/M in src)
-		M.emp_act(severity)
+		M.emp_act(severity, recursive)
 
 /obj/item/paicard/ex_act(severity)
 	if(pai)
@@ -482,16 +462,16 @@ GLOBAL_LIST_BOILERPLATE(all_pai_cards, /obj/item/paicard)
 	paicard = card
 	user.unEquip(card)
 	card.forceMove(src)
-	AI.client.eye = src
+	AI.reset_perspective(src) // focus this machine
 	to_chat(AI, span_notice("Your location is [card.loc].")) // DEBUG. TODO: Make unfolding the chassis trigger an eject.
 	name = AI.name
 	to_chat(AI, span_notice("You feel a tingle in your circuits as your systems interface with \the [initial(src.name)]."))
 
 /obj/machinery/proc/ejectpai(mob/user)
 	if(paicard)
+		paicard.forceMove(get_turf(src))
 		var/mob/living/silicon/pai/AI = paicard.pai
-		paicard.forceMove(src.loc)
-		AI.client.eye = AI
+		AI.reset_perspective() // return to the card
 		paicard = null
 		name = initial(src.name)
 		to_chat(AI, span_notice("You feel a tad claustrophobic as your mind closes back into your card, ejecting from \the [initial(src.name)]."))
@@ -520,11 +500,11 @@ GLOBAL_LIST_BOILERPLATE(all_pai_cards, /obj/item/paicard)
 	channels = list()
 
 	for(var/internal_chan in internal_channels)
-		var/ch_name = radio_channels_by_freq[internal_chan]
+		var/ch_name = GLOB.radio_channels_by_freq[internal_chan]
 		if(has_channel_access(card.pai, internal_chan))
 			channels += ch_name
 			channels[ch_name] = 1
-			secure_radio_connections[ch_name] = radio_controller.add_object(src, radiochannels[ch_name],  RADIO_CHAT)
+			secure_radio_connections[ch_name] = SSradio.add_object(src, GLOB.radiochannels[ch_name],  RADIO_CHAT)
 
 /obj/item/paicard/typeb
 	name = "personal AI device"

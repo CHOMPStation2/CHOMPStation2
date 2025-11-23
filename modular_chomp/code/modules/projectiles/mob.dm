@@ -42,17 +42,6 @@
 	damage_type = BURN
 	check_armour = "laser"
 
-/obj/item/projectile/energy/inversion
-	name = "inversion blast"
-	icon = 'icons/obj/projectiles_impact.dmi'
-	icon_state = "impact_invert"
-	damage = 30 //old 15
-	armor_penetration = 60
-	damage_type = BURN
-	check_armour = "laser"
-	color = "#ffffff"
-	fire_sound = 'sound/weapons/spiderlunge.ogg'
-
 /obj/item/projectile/energy/mob/electric_spider
 	name = "stun beam"
 	icon_state = "impact_stun"
@@ -85,10 +74,15 @@
 	armor_penetration = 15
 	my_chems = list(REAGENT_ID_FUEL, REAGENT_ID_MOLD)
 	flammability = 0.25
-	modifier_type_to_apply = /datum/modifier/fire
-	modifier_duration = 6 SECONDS
 	color = "#38b9ff"
 	speed = 3.2
+
+/obj/item/projectile/energy/blob/moth/on_hit(atom/target, blocked = 0, def_zone)
+	. = ..()
+	if(isliving(target))
+		var/mob/living/L = target
+		L.adjust_fire_stacks(10)
+		L.ignite_mob()
 
 /obj/item/projectile/bullet/pistol/medium/ap/eclipse
 	ricochets = 1

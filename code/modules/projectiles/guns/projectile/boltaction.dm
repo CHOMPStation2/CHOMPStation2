@@ -13,6 +13,7 @@
 	the Tajaran homeworld due to their excellent build quality, precision, and \
 	stopping power. Thier bolt-action rifles and brushguns are a staple amongst \
 	the rural communities that dot this infinite frontier."
+	icon = 'icons/obj/gun.dmi'
 	icon_state = "boltaction"
 	item_state = "boltaction"
 	fire_sound = 'sound/weapons/gunshot_generic_rifle.ogg'
@@ -78,7 +79,7 @@
 			playsound(src, fire_sound, 50, 1)
 			user.visible_message(span_danger("[src] goes off!"), span_danger("The rifle goes off in your face!"))
 			return
-		if(do_after(user, 30))
+		if(do_after(user, 3 SECONDS, target = src))
 			if(sawn_off)
 				return
 			icon_state = "sawn_rifle"

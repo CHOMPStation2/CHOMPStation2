@@ -33,7 +33,7 @@
 	},
 /area/survivalpod/superpose/SurvivalScience)
 "eX" = (
-/obj/machinery/r_n_d/server/robotics,
+/obj/machinery/rnd/server,
 /obj/structure/window/reinforced/survival_pod{
 	dir = 8
 	},
@@ -86,10 +86,6 @@
 	},
 /turf/simulated/shuttle/plating,
 /area/survivalpod/superpose/SurvivalScience)
-"gW" = (
-/obj/machinery/r_n_d/destructive_analyzer,
-/turf/simulated/shuttle/floor/voidcraft/light,
-/area/survivalpod/superpose/SurvivalScience)
 "gY" = (
 /obj/structure/fans/tiny,
 /obj/effect/floor_decal/industrial/danger/full,
@@ -97,9 +93,6 @@
 /turf/simulated/shuttle/floor/voidcraft/dark,
 /area/survivalpod/superpose/SurvivalScience)
 "hp" = (
-/obj/machinery/computer/rdconsole/public{
-	dir = 4
-	},
 /obj/machinery/light{
 	dir = 8;
 	layer = 3
@@ -107,7 +100,7 @@
 /turf/simulated/shuttle/floor/voidcraft/light,
 /area/survivalpod/superpose/SurvivalScience)
 "hW" = (
-/obj/machinery/r_n_d/protolathe,
+/obj/machinery/rnd/production/protolathe/department/science,
 /obj/structure/sign/periodic{
 	pixel_y = 29
 	},
@@ -167,7 +160,7 @@
 /turf/simulated/shuttle/plating,
 /area/survivalpod/superpose/SurvivalScience)
 "uq" = (
-/obj/machinery/mecha_part_fabricator,
+/obj/machinery/mecha_part_fabricator_tg,
 /obj/structure/window/reinforced/survival_pod{
 	dir = 1
 	},
@@ -243,7 +236,7 @@
 /obj/structure/window/reinforced/survival_pod{
 	opacity = 1
 	},
-/obj/machinery/r_n_d/circuit_imprinter,
+/obj/machinery/rnd/production/circuit_imprinter,
 /obj/item/reagent_containers/glass/beaker{
 	pixel_x = 9;
 	pixel_y = 8
@@ -273,12 +266,7 @@
 /obj/structure/window/reinforced/survival_pod{
 	opacity = 1
 	},
-/obj/machinery/smartfridge/survival_pod{
-	icon = 'icons/obj/vending.dmi';
-	icon_base = "smartfridge";
-	icon_contents = "boxes";
-	icon_state = "smartfridge";
-	name = "Advanced storage";
+/obj/machinery/smartfridge/survival_pod/boxes{
 	pixel_y = -1
 	},
 /obj/item/stock_parts/micro_laser,
@@ -349,7 +337,7 @@
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/SurvivalScience)
 "Gt" = (
-/obj/machinery/r_n_d/server/core,
+/obj/machinery/rnd/server/master,
 /obj/structure/window/reinforced/survival_pod{
 	dir = 8
 	},
@@ -373,12 +361,7 @@
 /turf/simulated/shuttle/wall/voidcraft/lightblue,
 /area/survivalpod/superpose/SurvivalScience)
 "HB" = (
-/obj/machinery/smartfridge/survival_pod{
-	icon = 'icons/obj/vending.dmi';
-	icon_base = "smartfridge";
-	icon_contents = "boxes";
-	icon_state = "smartfridge";
-	name = "Advanced storage";
+/obj/machinery/smartfridge/survival_pod/boxes{
 	pixel_y = -1
 	},
 /obj/item/storage/toolbox/mechanical{
@@ -566,7 +549,7 @@
 /turf/simulated/shuttle/floor/voidcraft/dark,
 /area/survivalpod/superpose/SurvivalScience)
 "Qx" = (
-/obj/machinery/mecha_part_fabricator/pros,
+/obj/machinery/mecha_part_fabricator_tg/prosthetics,
 /obj/structure/window/reinforced/survival_pod{
 	dir = 1
 	},
@@ -682,7 +665,7 @@ zR
 "}
 (4,1,1) = {"
 ku
-gW
+Ct
 Ct
 xx
 gN

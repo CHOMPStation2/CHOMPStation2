@@ -1,3 +1,82 @@
+var/list/engineering_positions = list(
+	JOB_CHIEF_ENGINEER,
+	JOB_ENGINEER,
+	JOB_ATMOSPHERIC_TECHNICIAN
+)
+
+
+var/list/medical_positions = list(
+	JOB_CHIEF_MEDICAL_OFFICER,
+	JOB_MEDICAL_DOCTOR,
+	JOB_GENETICIST,
+	JOB_PSYCHIATRIST,
+	JOB_CHEMIST,
+	JOB_PARAMEDIC
+)
+
+
+var/list/science_positions = list(
+	JOB_RESEARCH_DIRECTOR,
+	JOB_SCIENTIST,
+	JOB_GENETICIST,	//Part of both medical and science
+	JOB_ROBOTICIST,
+	JOB_XENOBIOLOGIST
+)
+
+//BS12 EDIT
+var/list/cargo_positions = list(
+	JOB_QUARTERMASTER,
+	JOB_CARGO_TECHNICIAN,
+	JOB_SHAFT_MINER
+)
+
+var/list/civilian_positions = list(
+	JOB_HEAD_OF_PERSONNEL,
+	JOB_BARTENDER,
+	JOB_BOTANIST,
+	JOB_CHEF,
+	JOB_JANITOR,
+	JOB_LIBRARIAN,
+	JOB_ENTREPRENEUR,
+	JOB_CHAPLAIN,
+	JOB_ALT_VISITOR, //VOREStation Edit - Visitor not Assistant
+	JOB_INTERN //VOREStation Edit - Intern
+)
+
+
+var/list/security_positions = list(
+	JOB_HEAD_OF_SECURITY,
+	JOB_WARDEN,
+	JOB_DETECTIVE,
+	JOB_SECURITY_OFFICER
+)
+
+
+var/list/planet_positions = list(
+	JOB_PATHFINDER, // VOREStation Edit - Added Pathfinder
+	JOB_EXPLORER,
+	JOB_PILOT,
+	JOB_FIELD_MEDIC // VOREStation Edit - Field Medic
+)
+
+
+var/list/nonhuman_positions = list(
+	JOB_AI,
+	JOB_CYBORG,
+	JOB_PAI
+)
+
+var/list/whitelisted_positions = list(
+	JOB_SITE_MANAGER,
+	JOB_HEAD_OF_PERSONNEL,
+	JOB_HEAD_OF_SECURITY,
+	JOB_CHIEF_ENGINEER,
+	JOB_RESEARCH_DIRECTOR,
+	JOB_CHIEF_MEDICAL_OFFICER,
+	JOB_INTERNAL_AFFAIRS_AGENT,
+	JOB_AI
+)
+
 /obj/machinery/computer3/card
 	default_prog = /datum/file/program/card_comp
 	spawn_parts = list(/obj/item/part/computer/storage/hdd,/obj/item/part/computer/cardslot/dual)
@@ -189,7 +268,7 @@
 
 // These are here partly in order to be overwritten by the centcom card computer code
 /datum/file/program/card_comp/proc/authenticate()
-	if(access_change_ids in reader.GetAccess())
+	if(ACCESS_CHANGE_IDS in reader.GetAccess())
 		return 1
 	if(isAI(usr))
 		return 1
@@ -305,7 +384,7 @@
 		if(auth)
 			var/t1 = href_list["assign"]
 			if(t1 == "Custom")
-				var/temp_t = sanitize(tgui_input_text(usr, "Enter a custom job assignment.","Assignment"))
+				var/temp_t = tgui_input_text(usr, "Enter a custom job assignment.","Assignment", "", MAX_MESSAGE_LEN)
 				if(temp_t)
 					t1 = temp_t
 			set_default_access(t1)
@@ -313,14 +392,14 @@
 			writer.assignment = t1
 			writer.name = text("[writer.registered_name]'s ID Card ([writer.assignment])")
 			data_core.manifest_modify(writer.registered_name, writer.assignment, writer.rank)
-			callHook("reassign_employee", list(writer))
+			SEND_GLOBAL_SIGNAL(COMSIG_GLOB_REASSIGN_EMPLOYEE_IDCARD, writer)
 
 	if("reg" in href_list)
 		if(auth)
 			writer.registered_name = href_list["reg"]
 			writer.name = text("[writer.registered_name]'s ID Card ([writer.assignment])")
 			data_core.manifest_modify(writer.registered_name, writer.assignment, writer.rank)
-			callHook("reassign_employee", list(writer))
+			SEND_GLOBAL_SIGNAL(COMSIG_GLOB_REASSIGN_EMPLOYEE_IDCARD, writer)
 
 	computer.updateUsrDialog(usr)
 	return
@@ -342,6 +421,6 @@
 	return accesses
 
 /datum/file/program/card_comp/centcom/authenticate()
-	if(access_cent_captain in reader.GetAccess())
+	if(ACCESS_CENT_CAPTAIN in reader.GetAccess())
 		return 1
 	return 0

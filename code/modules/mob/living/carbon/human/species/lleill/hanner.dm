@@ -20,8 +20,6 @@
 	min_age = 18
 	max_age = 200
 
-	digi_allowed = TRUE
-
 	//Specific abilities
 
 	burn_mod = 0.8 //Slightly resistant to fire
@@ -114,9 +112,9 @@
 		lleill_ability_datums.Add(LP)
 
 /datum/species/shapeshifter/hanner/proc/add_lleill_abilities(var/mob/living/carbon/human/H)
-	if(!H.ability_master || !istype(H.ability_master, /obj/screen/movable/ability_master/lleill))
+	if(!H.ability_master || !istype(H.ability_master, /atom/movable/screen/movable/ability_master/lleill))
 		H.ability_master = null
-		H.ability_master = new /obj/screen/movable/ability_master/lleill(H)
+		H.ability_master = new /atom/movable/screen/movable/ability_master/lleill(H)
 	for(var/datum/power/lleill/P in lleill_ability_datums)
 		if(!(P.verbpath in H.verbs))
 			add_verb(H, P.verbpath)

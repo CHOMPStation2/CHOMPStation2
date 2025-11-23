@@ -44,7 +44,7 @@
 	for(var/Rp in subtypesof(/datum/recipe))
 		var/datum/recipe/R = new Rp() // Datums must be initialized to read list vars
 		if(!istype(R))
-			log_debug("Recipe generation failed, recipe datum is [R].")
+			log_runtime("Recipe generation failed, recipe datum is [R].")
 			qdel(R)
 			continue
 
@@ -91,10 +91,10 @@
 
 		if(LAZYLEN(R.items))
 			var/i = 0
-			for(var/atom/movable/AM as anything in R.items) // Atom typepath
+			for(var/atom/movable/source in R.items) // Atom typepath
 				if(i)
 					text += ", "
-				text += "[capitalize(initial(AM.name))]"
+				text += "[capitalize(initial(source.name))]"
 				i++
 		D.data += span_bold("Material Objects") + ": [text ? text : "none"]<br>"
 		text = ""

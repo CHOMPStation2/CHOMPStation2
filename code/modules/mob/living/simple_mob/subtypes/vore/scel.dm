@@ -94,11 +94,7 @@
 	add_verb(src, /mob/living/proc/target_lunge)
 	movement_cooldown = -1
 
-/mob/living/simple_mob/vore/scel/init_vore()
-	if(!voremob_loaded)
-		return
-	if(LAZYLEN(vore_organs))
-		return
+/mob/living/simple_mob/vore/scel/load_default_bellies()
 	. = ..()
 	var/obj/belly/B = vore_selected
 	B.name = "stomach"
@@ -211,7 +207,7 @@
 	Both their flesh and 'goo' dissipate into a fine black mist within hours of being seperated from its host, or the death of the subject. \
 	Scel are sapient, and are therefore hard to predict, many have been immediately hostile, while a rare few have even taught themselves our language. Contact has been sparse though. What has been discovered is that most Scel seem to act independantly, with no formal governance. \
 	Their alien mindset seems to have difficulty adapting to our world, further causing contact attempts to degrade into misunderstandings. \
-	Scel, once breached into realspace, seem incredibly hesitant to return to their own reality, and are likely to be found in places with little to no natural light, as it seems to confuse their senses."
+	Scel, once breached into realspace, seem incredibly hesitant to return to their own reality, and are likely to be found in places with little to no natural light, as it seems to confuse their senses." // CHOMPEdit
 	value = CATALOGUER_REWARD_HARD
 
 /mob/living/simple_mob/vore/scel/orange

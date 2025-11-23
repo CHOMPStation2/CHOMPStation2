@@ -78,7 +78,7 @@ GLOBAL_LIST_BOILERPLATE(all_debugging_effects, /obj/effect/debugging)
 	for(var/obj/machinery/camera/C in cameranet.cameras)
 		CL += C
 
-	var/output = {""} + span_bold("CAMERA ANNOMALITIES REPORT") + {"<HR>
+	var/output = span_bold("CAMERA ANNOMALITIES REPORT") + {"<HR>
 "} + span_bold("The following annomalities have been detected. The ones in red need immediate attention: Some of those in black may be intentional.") + {"<BR><ul>"}
 
 	for(var/obj/machinery/camera/C1 in CL)
@@ -102,7 +102,10 @@ GLOBAL_LIST_BOILERPLATE(all_debugging_effects, /obj/effect/debugging)
 					output += "<li>" + span_red("Camera not connected to wall at \[[C1.x], [C1.y], [C1.z]\] ([C1.loc.loc]) Network: [C1.network]") + "</li>"
 
 	output += "</ul>"
-	usr << browse("<html>[output]</html>","window=airreport;size=1000x500")
+
+	var/datum/browser/popup = new(src, "airreport", "Airreport", 1000, 500)
+	popup.set_content(output)
+	popup.open()
 	feedback_add_details("admin_verb","mCRP") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/proc/intercom_view()
@@ -135,10 +138,8 @@ var/list/debug_verbs = list (
 		,/client/proc/powerdebug
 		,/client/proc/count_objects_on_z_level
 		,/client/proc/count_objects_all
-		,/client/proc/cmd_assume_direct_control
 		,/client/proc/jump_to_dead_group
 		,/client/proc/startSinglo
-		,/client/proc/set_server_fps
 		,/client/proc/cmd_admin_grantfullaccess
 		,/client/proc/kaboom
 		,/client/proc/cmd_admin_areatest
@@ -309,9 +310,9 @@ var/list/debug_verbs = list (
 			if(i*10+j <= atom_list.len)
 				temp_atom = atom_list[i*10+j]
 				line += " no.[i+10+j]@\[[temp_atom.x], [temp_atom.y], [temp_atom.z]\]; "
-		to_world(line)*/
+		to_chat(world, line)*/
 
-	to_world("There are [count] objects of type [type_path] on z-level [num_level]")
+	to_chat(world, "There are [count] objects of type [type_path] on z-level [num_level]")
 	feedback_add_details("admin_verb","mOBJZ") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/proc/count_objects_all()
@@ -336,7 +337,7 @@ var/list/debug_verbs = list (
 			if(i*10+j <= atom_list.len)
 				temp_atom = atom_list[i*10+j]
 				line += " no.[i+10+j]@\[[temp_atom.x], [temp_atom.y], [temp_atom.z]\]; "
-		to_world(line)*/
+		to_chat(world, line)*/
 
-	to_world("There are [count] objects of type [type_path] in the game world")
+	to_chat(world, "There are [count] objects of type [type_path] in the game world")
 	feedback_add_details("admin_verb","mOBJ") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!

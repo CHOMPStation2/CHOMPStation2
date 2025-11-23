@@ -1,7 +1,7 @@
 /obj/structure/bed/chair	//YES, chairs are a type of bed, which are a type of stool. This works, believe me.	-Pete
 	name = "chair"
 	desc = "You sit in this. Either by will or force."
-	icon = 'icons/obj/furniture_vr.dmi' //VOREStation Edit - Using Eris furniture
+	icon = 'icons/obj/furniture.dmi'
 	icon_state = "chair_preview"
 	color = "#666666"
 	base_icon = "chair"
@@ -43,14 +43,14 @@
 	..()
 	if(has_buckled_mobs())
 		var/cache_key = "[base_icon]-armrest-[padding_material ? padding_material.name : "no_material"]"
-		if(isnull(stool_cache[cache_key]))
+		if(isnull(GLOB.stool_cache[cache_key]))
 			var/image/I = image(icon, "[base_icon]_armrest")
 			I.plane = MOB_PLANE
 			I.layer = ABOVE_MOB_LAYER
 			if(padding_material)
 				I.color = padding_material.icon_colour
-			stool_cache[cache_key] = I
-		add_overlay(stool_cache[cache_key])
+			GLOB.stool_cache[cache_key] = I
+		add_overlay(GLOB.stool_cache[cache_key])
 
 /obj/structure/bed/chair/proc/update_layer()
 	if(src.dir == NORTH)
@@ -65,34 +65,6 @@
 	if(has_buckled_mobs())
 		for(var/mob/living/L as anything in buckled_mobs)
 			L.set_dir(dir)
-
-/obj/structure/bed/chair/verb/rotate_clockwise()
-	set name = "Rotate Chair Clockwise"
-	set category = "Object"
-	set src in oview(1)
-
-	if(!usr || !isturf(usr.loc))
-		return
-	if(usr.stat || usr.restrained())
-		return
-	if(ismouse(usr) || (isobserver(usr) && !CONFIG_GET(flag/ghost_interaction)))
-		return
-
-	src.set_dir(turn(src.dir, 270))
-
-/obj/structure/bed/chair/verb/rotate_counterclockwise()
-	set name = "Rotate Chair Counter-Clockwise"
-	set category = "Object"
-	set src in oview(1)
-
-	if(!usr || !isturf(usr.loc))
-		return
-	if(usr.stat || usr.restrained())
-		return
-	if(ismouse(usr) || (isobserver(usr) && !CONFIG_GET(flag/ghost_interaction)))
-		return
-
-	src.set_dir(turn(src.dir, 90))
 
 /obj/structure/bed/chair/shuttle
 	name = "chair"
@@ -128,7 +100,7 @@
 		add_overlay(I)
 
 /obj/structure/bed/chair/comfy/brown/Initialize(mapload, var/new_material, var/new_padding_material)
-	. = ..(mapload, MAT_STEEL, MAT_LEATHER)
+	. = ..(mapload, MAT_STEEL, MAT_CLOTH_BROWN)
 
 /obj/structure/bed/chair/comfy/red/Initialize(mapload, var/new_material, var/new_padding_material)
 	. = ..(mapload, MAT_STEEL, MAT_CARPET)
@@ -164,10 +136,11 @@
 	name = "rounded chair"
 	desc = "It's a rounded chair. It looks comfy."
 	icon_state = "roundedchair"
+	icon = 'icons/obj/furniture.dmi' //CHOMP Edit - These need to be base dmi, chomp's does not have them.
 	base_icon = "roundedchair"
 
 /obj/structure/bed/chair/comfy/rounded/brown/Initialize(mapload, var/new_material, var/new_padding_material)
-	. = ..(mapload, MAT_STEEL, MAT_LEATHER)
+	. = ..(mapload, MAT_STEEL, MAT_CLOTH_BROWN)
 
 /obj/structure/bed/chair/comfy/rounded/red/Initialize(mapload, var/new_material, var/new_padding_material)
 	. = ..(mapload, MAT_STEEL, MAT_CARPET)
@@ -226,8 +199,6 @@
 				for (var/mob/O in src.loc)
 					if (O != occupant)
 						Bump(O)
-			else
-				unbuckle_mob()
 
 /obj/structure/bed/chair/office/Bump(atom/A)
 	..()
@@ -239,22 +210,20 @@
 
 			var/def_zone = ran_zone()
 			var/blocked = occupant.run_armor_check(def_zone, "melee")
-			var/soaked = occupant.get_armor_soak(def_zone, "melee")
 			occupant.throw_at(A, 3, propelled)
 			occupant.apply_effect(6, STUN, blocked)
 			occupant.apply_effect(6, WEAKEN, blocked)
 			occupant.apply_effect(6, STUTTER, blocked)
-			occupant.apply_damage(10, BRUTE, def_zone, blocked, soaked)
+			occupant.apply_damage(10, BRUTE, def_zone, blocked)
 			playsound(src, 'sound/weapons/punch1.ogg', 50, 1, -1)
 			if(isliving(A))
 				var/mob/living/victim = A
 				def_zone = ran_zone()
 				blocked = victim.run_armor_check(def_zone, "melee")
-				soaked = victim.get_armor_soak(def_zone, "melee")
 				victim.apply_effect(6, STUN, blocked)
 				victim.apply_effect(6, WEAKEN, blocked)
 				victim.apply_effect(6, STUTTER, blocked)
-				victim.apply_damage(10, BRUTE, def_zone, blocked, soaked)
+				victim.apply_damage(10, BRUTE, def_zone, blocked)
 			occupant.visible_message(span_danger("[occupant] crashed into \the [A]!"))
 
 /obj/structure/bed/chair/office/light
@@ -288,7 +257,6 @@
 /obj/structure/bed/chair/sofa
 	name = "sofa"
 	desc = "It's a sofa. You sit on it. Possibly with someone else."
-	icon = 'icons/obj/sofas.dmi'
 	base_icon = "sofamiddle"
 	icon_state = "sofamiddle"
 	applies_material_colour = 1
@@ -329,14 +297,14 @@
 /obj/structure/bed/chair/sofa/corner/update_icon()
 	..()
 	var/cache_key = "[base_icon]-armrest-[padding_material ? padding_material.name : "no_material"]-permanent"
-	if(isnull(stool_cache[cache_key]))
+	if(isnull(GLOB.stool_cache[cache_key]))
 		var/image/I = image(icon, "[base_icon]_armrest")
 		I.plane = MOB_PLANE
 		I.layer = ABOVE_MOB_LAYER
 		if(padding_material)
 			I.color = padding_material.icon_colour
-		stool_cache[cache_key] = I
-	add_overlay(stool_cache[cache_key])
+		GLOB.stool_cache[cache_key] = I
+	add_overlay(GLOB.stool_cache[cache_key])
 
 // Wooden nonsofa - no corners
 /obj/structure/bed/chair/sofa/pew
@@ -344,6 +312,7 @@
 	desc = "If they want you to go to church, why do they make these so uncomfortable?"
 	base_icon = "pewmiddle"
 	icon_state = "pewmiddle"
+	icon = 'icons/obj/furniture.dmi' //CHOMP Edit - These need to be base dmi, chomp's does not have them.
 	applies_material_colour = FALSE
 
 /obj/structure/bed/chair/sofa/pew/left
@@ -360,6 +329,7 @@
 	desc = "Almost as comfortable as waiting at a bus station for hours on end."
 	base_icon = "benchmiddle"
 	icon_state = "benchmiddle"
+	icon = 'icons/obj/furniture.dmi' //CHOMP Edit - These need to be base dmi, chomp's does not have them.
 	applies_material_colour = FALSE
 	color = null
 	var/padding_color = "#CC0000"
@@ -397,6 +367,7 @@
 	desc = "How corporate!"
 	base_icon = "corp_sofamiddle"
 	icon_state = "corp_sofamiddle"
+	icon = 'icons/obj/furniture.dmi' //CHOMP Edit - These need to be base dmi, chomp's does not have them.
 	applies_material_colour = FALSE
 
 /obj/structure/bed/chair/sofa/corp/left
@@ -418,7 +389,7 @@
 	sofa_material = MAT_CARPET
 
 /obj/structure/bed/chair/sofa/brown
-	sofa_material = MAT_LEATHER
+	sofa_material = MAT_CLOTH_BROWN
 
 /obj/structure/bed/chair/sofa/teal
 	sofa_material = MAT_CLOTH_TEAL
@@ -459,13 +430,13 @@
 	icon_state = "sofacorner"
 
 /obj/structure/bed/chair/sofa/left/brown
-	sofa_material = MAT_LEATHER
+	sofa_material = MAT_CLOTH_BROWN
 
 /obj/structure/bed/chair/sofa/right/brown
-	sofa_material = MAT_LEATHER
+	sofa_material = MAT_CLOTH_BROWN
 
 /obj/structure/bed/chair/sofa/corner/brown
-	sofa_material = MAT_LEATHER
+	sofa_material = MAT_CLOTH_BROWN
 
 /obj/structure/bed/chair/sofa/left/teal
 	sofa_material = MAT_CLOTH_TEAL

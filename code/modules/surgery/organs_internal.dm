@@ -6,7 +6,7 @@
 
 /datum/surgery_step/internal/can_use(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 
-	if (!hasorgans(target))
+	if(!ishuman(target))
 		return 0
 
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
@@ -27,11 +27,11 @@
 	/obj/item/stack/medical/bruise_pack = 20
 	)
 
-	min_duration = 60 //CHOMPedit
-	max_duration = 60 //CHOMPedit
+	min_duration = 60
+	max_duration = 60
 
 /datum/surgery_step/internal/fix_organ/can_use(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
-	if (!hasorgans(target))
+	if(!ishuman(target))
 		return
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
 	if(!affected)
@@ -50,7 +50,7 @@
 	else if (istype(tool, /obj/item/stack/medical/bruise_pack))
 		tool_name = "the bandaid"
 
-	if (!hasorgans(target))
+	if(!ishuman(target))
 		return
 
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
@@ -72,7 +72,7 @@
 	if (istype(tool, /obj/item/stack/medical/bruise_pack))
 		tool_name = "the bandaid"
 
-	if (!hasorgans(target))
+	if(!ishuman(target))
 		return
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
 
@@ -93,13 +93,13 @@
 					target.SetLosebreath(0)
 
 /datum/surgery_step/internal/fix_organ/fail_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
-	if (!hasorgans(target))
+	if(!ishuman(target))
 		return
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
 
-	user.visible_message(span_warning("[user]'s hand slips, getting mess and tearing the inside of [target]'s [affected.name] with \the [tool]!"), \
-	span_warning("Your hand slips, getting mess and tearing the inside of [target]'s [affected.name] with \the [tool]!"))
-	user.balloon_alert_visible("slips, gettng mess and tearing the inside of [target]'s [affected.name]", "your hand slips, getting mess and tearng the [affected.name]'s insides")
+	user.visible_message(span_warning("[user]'s hand slips, getting messy and tearing the inside of [target]'s [affected.name] with \the [tool]!"), \
+	span_warning("Your hand slips, getting messy and tearing the inside of [target]'s [affected.name] with \the [tool]!"))
+	user.balloon_alert_visible("slips, getting messy and tearing the inside of [target]'s [affected.name]", "your hand slips, getting mess and tearing the [affected.name]'s insides")
 	var/dam_amt = 2
 
 	if (istype(tool, /obj/item/stack/medical/advanced/bruise_pack))
@@ -129,11 +129,11 @@
 	/obj/item/storage/toolbox = 10 	//Percussive Maintenance
 	)
 
-	min_duration = 60 //CHOMPedit
-	max_duration = 60 //CHOMPedit
+	min_duration = 60
+	max_duration = 60
 
 /datum/surgery_step/fix_organic_organ_robotic/can_use(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
-	if (!hasorgans(target))
+	if(!ishuman(target))
 		return
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
 	if(!affected) return
@@ -145,7 +145,7 @@
 	return affected.open != 3 && is_organ_damaged //Robots have their own code.
 
 /datum/surgery_step/fix_organic_organ_robotic/begin_step(mob/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
-	if (!hasorgans(target))
+	if(!ishuman(target))
 		return
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
 
@@ -160,7 +160,7 @@
 	..()
 
 /datum/surgery_step/fix_organic_organ_robotic/end_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
-	if (!hasorgans(target))
+	if(!ishuman(target))
 		return
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
 
@@ -175,7 +175,7 @@
 					target.sdisabilities &= ~BLIND
 
 /datum/surgery_step/fix_organic_organ_robotic/fail_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
-	if (!hasorgans(target))
+	if(!ishuman(target))
 		return
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
 
@@ -206,8 +206,8 @@
 	/obj/item/material/shard = 50, 		\
 	)
 
-	min_duration = 60 //CHOMPedit
-	max_duration = 60 //CHOMPedit
+	min_duration = 60
+	max_duration = 60
 
 /datum/surgery_step/internal/detatch_organ/can_use(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	if (!..())
@@ -227,15 +227,17 @@
 	for(var/organ in target.internal_organs_by_name)
 		var/obj/item/organ/I = target.internal_organs_by_name[organ]
 		if(I && !(I.status & ORGAN_CUT_AWAY) && I.parent_organ == target_zone)
-			attached_organs |= organ
+			attached_organs[I.name] = organ
 
 	var/organ_to_remove = tgui_input_list(user, "Which organ do you want to prepare for removal?", "Organ Choice", attached_organs)
 	if(!organ_to_remove)
 		return 0
+	if(!attached_organs[organ_to_remove])
+		return 0
 
-	target.op_stage.current_organ = organ_to_remove
+	target.op_stage.current_organ = attached_organs[organ_to_remove]
 
-	return ..() && organ_to_remove
+	return ..() && attached_organs[organ_to_remove]
 
 /datum/surgery_step/internal/detatch_organ/begin_step(mob/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
@@ -271,13 +273,13 @@
 
 	allowed_tools = list(
 	/obj/item/surgical/hemostat = 100,	\
-	/obj/item/material/kitchen/utensil/fork = 20
+	/obj/item/material/kitchen/utensil/fork = 50
 	)
 
 	allowed_procs = list(IS_WIRECUTTER = 100) //FBP code also uses this, so let's be nice. Roboticists won't know to use hemostats.
 
 	min_duration = 60
-	max_duration = 60 //CHOMPedit
+	max_duration = 60
 
 /datum/surgery_step/internal/remove_organ/can_use(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	if (!..())
@@ -303,7 +305,7 @@
 	for(var/organ in target.internal_organs_by_name)
 		var/obj/item/organ/internal/I = target.internal_organs_by_name[organ]
 		if(istype(I) && (I.status & ORGAN_CUT_AWAY) && I.parent_organ == target_zone)
-			removable_organs |= organ
+			removable_organs[I.name] = organ
 
 	var/organ_to_remove = tgui_input_list(user, "Which organ do you want to remove?", "Organ Choice", removable_organs)
 	if(!organ_to_remove) //They chose cancel!
@@ -311,9 +313,10 @@
 		user.visible_message(span_filter_notice("[user] starts pulling \the [tool] from [target]'s [affected]."), \
 		span_filter_notice("You start pulling \the [tool] from [target]'s [affected]."))
 		user.balloon_alert_visible("starts pulling \the [tool] from [target]'s [affected]", "pulling \the [tool] from \the [affected]")
+	if(!removable_organs[organ_to_remove])
 		return
 
-	target.op_stage.current_organ = organ_to_remove
+	target.op_stage.current_organ = removable_organs[organ_to_remove]
 
 	user.visible_message(span_filter_notice("[user] starts removing [target]'s [target.op_stage.current_organ] with \the [tool]."), \
 	span_filter_notice("You start removing [target]'s [target.op_stage.current_organ] with \the [tool]."))
@@ -355,8 +358,8 @@
 	/obj/item/organ = 100
 	)
 
-	min_duration = 40 //CHOMPedit
-	max_duration = 40 //CHOMPedit
+	min_duration = 40
+	max_duration = 40
 
 /datum/surgery_step/internal/replace_organ/can_use(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/internal/O = tool
@@ -380,15 +383,9 @@
 		to_chat(user, span_danger("You have no idea what species this person is. Report this on the bug tracker."))
 		return SURGERY_FAILURE
 
-	//var/o_is = (O.gender == PLURAL) ? "are" : "is"
 	var/o_a =  (O.gender == PLURAL) ? "" : "a "
 	var/o_do = (O.gender == PLURAL) ? "don't" : "doesn't"
 
-/* CHOMPedit begin, allow rotten/damaged organs to be inserted again to allow for organ repair in the case of worst-case-scenerio gib situation. Also to make a funny if lets say, a doctor didnt examine a damaged organ and inserted it anyway.
-	if(O.damage > (O.max_damage * 0.75))
-		to_chat(user, span_warning("\The [O.organ_tag] [o_is] in no state to be transplanted."))
-		return SURGERY_FAILURE
-*/
 	if(!target.internal_organs_by_name[O.organ_tag])
 		organ_missing = 1
 	else
@@ -434,7 +431,7 @@
 	var/obj/item/organ/O = tool
 	if(istype(O))
 		user.remove_from_mob(O)
-		O.replaced(target,affected)
+		O.replaced(target, affected)
 
 /datum/surgery_step/internal/replace_organ/fail_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	user.visible_message(span_warning("[user]'s hand slips, damaging \the [tool]!"), \
@@ -471,13 +468,13 @@
 	for(var/organ in target.internal_organs_by_name)
 		var/obj/item/organ/I = target.internal_organs_by_name[organ]
 		if(istype(I) && (I.status & ORGAN_CUT_AWAY) && !(I.robotic >= ORGAN_ROBOT) && I.parent_organ == target_zone)
-			removable_organs |= organ
+			removable_organs[I.name] = organ
 
 	var/organ_to_replace = tgui_input_list(user, "Which organ do you want to reattach?", "Organ Choice", removable_organs)
 	if(!organ_to_replace)
 		return 0
 
-	target.op_stage.current_organ = organ_to_replace
+	target.op_stage.current_organ = removable_organs[organ_to_replace]
 	return ..()
 
 /datum/surgery_step/internal/attach_organ/begin_step(mob/user, mob/living/carbon/human/target, target_zone, obj/item/tool)

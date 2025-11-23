@@ -27,7 +27,7 @@ Possible to do for anyone motivated enough:
 #define RANGE_BASED 4
 #define AREA_BASED 6
 
-var/const/HOLOPAD_MODE = RANGE_BASED
+#define IS_RANGE_BASED
 
 /obj/machinery/hologram/holopad
 	name = "\improper AI holopad"
@@ -59,7 +59,7 @@ var/const/HOLOPAD_MODE = RANGE_BASED
 			last_request = world.time
 			to_chat(user, span_notice("You request an AI's presence."))
 			var/area/area = get_area(src)
-			for(var/mob/living/silicon/ai/AI in living_mob_list)
+			for(var/mob/living/silicon/ai/AI in GLOB.living_mob_list)
 				if(!AI.client)	continue
 				to_chat(AI, span_info("Your presence is requested at <a href='byond://?src=\ref[AI];jumptoholopad=\ref[src]'>\the [area]</a>."))
 		else
@@ -133,6 +133,9 @@ For the other part of the code, check silicon say.dm. Particularly robot talk.*/
 	else
 		hologram.set_light(2)
 
+	for(var/obj/belly/B as anything in A.vore_organs)
+		B.forceMove(hologram)
+
 	masters[A] = hologram
 	set_light(2)			//pad lighting
 	icon_state = "holopad1"
@@ -140,6 +143,7 @@ For the other part of the code, check silicon say.dm. Particularly robot talk.*/
 	A.holo = src
 	if(LAZYLEN(masters))
 		START_MACHINE_PROCESSING(src)
+
 	return 1
 
 /obj/machinery/hologram/holopad/proc/clear_holo(mob/living/silicon/ai/user)
@@ -165,31 +169,22 @@ For the other part of the code, check silicon say.dm. Particularly robot talk.*/
 
 /obj/machinery/hologram/holopad/proc/move_hologram(mob/living/silicon/ai/user)
 	if(masters[user])
-		/*VOREStation Removal, using our own code
-		step_to(masters[user], user.eyeobj) // So it turns.
-		var/obj/effect/overlay/H = masters[user]
-		H.loc = get_turf(user.eyeobj)
-		masters[user] = H
-		*/
-		//VOREStation Add - Solid mass holovore tracking stuff
 		var/obj/effect/overlay/aiholo/H = masters[user]
-		if(H.bellied)
-			walk_to(H, user.eyeobj) //Walk-to respects obstacles
-		else
-			walk_towards(H, user.eyeobj) //Walk-towards does not
+		walk_towards(H, user.eyeobj)
 		//Hologram left the screen (got stuck on a wall or something)
 		if(get_dist(H, user.eyeobj) > world.view)
 			clear_holo(user)
 		//VOREStation Add End
-		if((HOLOPAD_MODE == RANGE_BASED && (get_dist(H, src) > holo_range)))
+		#ifdef IS_RANGE_BASED
+		if((get_dist(H, src) > holo_range))
 			clear_holo(user)
+		#else
+		var/area/holopad_area = get_area(src)
+		var/area/hologram_area = get_area(H)
 
-		if(HOLOPAD_MODE == AREA_BASED)
-			var/area/holopad_area = get_area(src)
-			var/area/hologram_area = get_area(H)
-
-			if(!(hologram_area in holopad_area))
-				clear_holo(user)
+		if(!(hologram_area in holopad_area))
+			clear_holo(user)
+		#endif
 
 	return 1
 
@@ -198,7 +193,7 @@ For the other part of the code, check silicon say.dm. Particularly robot talk.*/
  */
 
 /obj/machinery/hologram
-	icon = 'icons/obj/stationobjs_vr.dmi' //VOREStation Edit
+	icon = 'icons/obj/stationobjs.dmi'
 	anchored = TRUE
 	use_power = USE_POWER_IDLE
 	idle_power_usage = 5
@@ -249,7 +244,7 @@ Holographic project of everything else.
 /obj/machinery/hologram/projector
 	name = "hologram projector"
 	desc = "It makes a hologram appear...with magnets or something..."
-	icon = 'icons/obj/stationobjs_vr.dmi' //VOREStation Edit
+	icon = 'icons/obj/stationobjs.dmi'
 	icon_state = "hologram0"
 
 
@@ -257,3 +252,4 @@ Holographic project of everything else.
 #undef AREA_BASED
 #undef HOLOPAD_PASSIVE_POWER_USAGE
 #undef HOLOGRAM_POWER_USAGE
+#undef IS_RANGE_BASED

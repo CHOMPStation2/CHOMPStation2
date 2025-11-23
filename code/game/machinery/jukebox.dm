@@ -36,6 +36,7 @@
 	update_icon()
 	if(!LAZYLEN(getTracksList()))
 		stat |= BROKEN
+	AddElement(/datum/element/climbable)
 
 /obj/machinery/media/jukebox/Destroy()
 	qdel(wires)
@@ -373,7 +374,7 @@
 	return
 /obj/machinery/media/jukebox/ghost/power_change()
 	return
-/obj/machinery/media/jukebox/ghost/emp_act(severity)
+/obj/machinery/media/jukebox/ghost/emp_act(severity, recursive)
 	return
 /obj/machinery/media/jukebox/ghost/emag_act(remaining_charges, mob/user)
 	return
@@ -455,7 +456,7 @@
 	. = ..()
 	IF_VV_OPTION("add_track")
 		manual_track_add()
-		href_list["datumrefresh"] = "\ref[src]"
+		href_list[VV_HK_DATUM_REFRESH] = "\ref[src]"
 	IF_VV_OPTION("remove_track")
 		manual_track_remove()
-		href_list["datumrefresh"] = "\ref[src]"
+		href_list[VV_HK_DATUM_REFRESH] = "\ref[src]"

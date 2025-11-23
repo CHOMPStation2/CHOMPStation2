@@ -11,7 +11,8 @@
 	icon_state = "null"
 	item_state = "null"
 	amount_per_transfer_from_this = 10
-	possible_transfer_amounts = list(5,10,15,25,30,60)
+	min_transfer_amount = 1
+	max_transfer_amount = 60
 	volume = 60
 	w_class = ITEMSIZE_SMALL
 	flags = OPENCONTAINER | NOCONDUCT
@@ -152,7 +153,7 @@
 
 /obj/item/reagent_containers/glass/attackby(obj/item/W as obj, mob/user as mob)
 	if(istype(W, /obj/item/pen) || istype(W, /obj/item/flashlight/pen))
-		var/tmp_label = sanitizeSafe(tgui_input_text(user, "Enter a label for [name]", "Label", label_text, MAX_NAME_LEN), MAX_NAME_LEN)
+		var/tmp_label = sanitizeSafe(tgui_input_text(user, "Enter a label for [name]", "Label", label_text, MAX_NAME_LEN, encode = FALSE), MAX_NAME_LEN)
 		if(length(tmp_label) > 50)
 			to_chat(user, span_notice("The label can be at most 50 characters long."))
 		else if(length(tmp_label) > 10)
@@ -168,6 +169,7 @@
 	if(W && W.w_class <= w_class && (flags & OPENCONTAINER) && user.a_intent != I_HELP)
 		balloon_alert(user, "[W] dipped into \the [src].")
 		reagents.touch_obj(W, reagents.total_volume)
+	attempt_changeling_test(W,user)
 
 /obj/item/reagent_containers/glass/proc/update_name_label()
 	if(label_text == "")
@@ -248,7 +250,7 @@
 	matter = list(MAT_GLASS = 5000)
 	volume = 120
 	amount_per_transfer_from_this = 10
-	possible_transfer_amounts = list(5,10,15,25,30,60,120)
+	max_transfer_amount = 120
 	flags = OPENCONTAINER
 	rating = 3
 
@@ -272,7 +274,7 @@
 	matter = list(MAT_GLASS = 5000)
 	volume = 300
 	amount_per_transfer_from_this = 10
-	possible_transfer_amounts = list(5,10,15,25,30,60,120,300)
+	max_transfer_amount = 300
 	flags = OPENCONTAINER
 	rating = 5
 
@@ -286,7 +288,7 @@
 	volume = 30
 	w_class = ITEMSIZE_TINY
 	amount_per_transfer_from_this = 10
-	possible_transfer_amounts = list(5,10,15,30)
+	max_transfer_amount = 30
 	flags = OPENCONTAINER
 
 /obj/item/reagent_containers/glass/beaker/cryoxadone
@@ -304,7 +306,7 @@
 	center_of_mass_y = 13
 	volume = 120
 	amount_per_transfer_from_this = 10
-	possible_transfer_amounts = list(5,10,15,25,30,60,120)
+	max_transfer_amount = 120
 	flags = OPENCONTAINER
 
 /obj/item/reagent_containers/glass/bucket
@@ -318,7 +320,7 @@
 	matter = list(MAT_STEEL = 200)
 	w_class = ITEMSIZE_NORMAL
 	amount_per_transfer_from_this = 20
-	possible_transfer_amounts = list(10,20,30,60,120)
+	max_transfer_amount = 120
 	volume = 120
 	flags = OPENCONTAINER
 	unacidable = FALSE
@@ -377,7 +379,7 @@
 	matter = list(MAT_WOOD = 50)
 	w_class = ITEMSIZE_LARGE
 	amount_per_transfer_from_this = 20
-	possible_transfer_amounts = list(10,20,30,60,120)
+	max_transfer_amount = 120
 	volume = 120
 	flags = OPENCONTAINER
 	unacidable = FALSE
@@ -413,7 +415,7 @@
 	matter = list(MAT_PLASTIC = 2000)
 	w_class = ITEMSIZE_NO_CONTAINER
 	amount_per_transfer_from_this = 20
-	possible_transfer_amounts = list(10,20,30,60,120)
+	max_transfer_amount = 120
 	volume = 2000
 	slowdown = 2
 
@@ -431,3 +433,20 @@
 	matter = list(MAT_WOOD = 50)
 	drop_sound = 'sound/items/drop/wooden.ogg'
 	pickup_sound = 'sound/items/pickup/wooden.ogg'
+
+/obj/item/reagent_containers/glass/beaker/vial/sustenance
+	name = "vial (artificial sustenance)"
+	prefill = list(REAGENT_ID_ASUSTENANCE = 30)
+
+/obj/item/reagent_containers/glass/kettle
+	name = "kettle"
+	desc = "A simple kettle for brewing drinks."
+	icon_state = "kettle"
+	amount_per_transfer_from_this = 10
+	max_transfer_amount = 20
+	volume = 60
+	w_class = ITEMSIZE_SMALL
+	flags = OPENCONTAINER
+	matter = list(MAT_STEEL = 50)
+	drop_sound = 'sound/items/drop/crowbar.ogg'
+	pickup_sound = 'sound/items/pickup/drinkglass.ogg'

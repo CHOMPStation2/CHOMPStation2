@@ -1,6 +1,3 @@
-
-
-
 /datum/reagent
 	var/name = REAGENT_DEVELOPER_WARNING
 	var/id = REAGENT_ID_DEVELOPER_WARNING
@@ -45,7 +42,12 @@
 	var/list/glass_special = null // null equivalent to list()
 
 	var/from_belly = FALSE
+	var/dialysis_returnable = TRUE
 	var/wiki_flag = 0 // Bitflags for secret/food/drink reagent sorting
+	var/supply_conversion_value = null
+	var/industrial_use = null // unique description for export off station
+
+	var/coolant_modifier = -0.5 // this is multiplied by the volume of the reagent. Most things are not good coolant. EX: Water is 1, coolant is 2. -1 would be a bad reagent for cooling.
 
 /datum/reagent/proc/remove_self(var/amount) // Shortcut
 	if(holder)
@@ -171,7 +173,7 @@
 			if(CHEM_BLOOD)
 				affect_blood(M, alien, removed)
 			if(CHEM_INGEST)
-				if(istype(src, /datum/reagent/toxin) && M.toxin_gut) //CHOMPAdd
+				if(istype(src, /datum/reagent/toxin) && HAS_TRAIT(M, INGESTED_TOXIN_IMMUNE))
 					remove_self(removed)
 					return
 				affect_ingest(M, alien, removed * ingest_abs_mult)

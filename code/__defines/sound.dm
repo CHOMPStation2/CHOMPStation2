@@ -207,7 +207,7 @@
 	)
 
 //CHOMPedit: Exploration outpost ambience. Current tracks taken from Rainworld and Natural Selection 2.
-#define AMBIENCE_EXPOUTPOST list(\
+#define AMBIENCE_OUTPOST list(\
 	'sound/ambience/expoutpost/expoutpost1.ogg',\
 	'sound/ambience/expoutpost/expoutpost2.ogg',\
 	'sound/ambience/expoutpost/expoutpost3.ogg',\
@@ -248,3 +248,11 @@
 	'sound/ambience/thor/birds_stinger2.ogg',\
 	'sound/ambience/thor/birds_stinger3.ogg'\
 )
+
+// Credits:
+// These are spliced audio extracts from "Casino - Las Vegas Slot Machines" by martialway47, on freesound.org.
+#define AMBIENCE_CASINO list(\
+	'sound/ambience/casino/casino_1.ogg',\
+	'sound/ambience/casino/casino_2.ogg',\
+	'sound/ambience/casino/casino_3.ogg'\
+	)

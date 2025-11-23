@@ -165,7 +165,7 @@
 /obj/item/reagent_containers/food/snacks/steamtealeaf/attackby(obj/item/W as obj, mob/user as mob)
 	if(istype(W,/obj/item/material/kitchen/rollingpin))
 		new /obj/item/reagent_containers/food/snacks/steamrolltealeaf(src)
-		user << "You roll the steamed tea leaf."
+		to_chat(user, span_notice("You roll the steamed tea leaf."))
 		qdel(src)
 
 /obj/item/reagent_containers/food/snacks/steamrolltealeaf
@@ -324,18 +324,3 @@
 /obj/item/reagent_containers/food/snacks/blondiesslice/filled/Initialize(mapload)
 	. = ..()
 	reagents.add_reagent(REAGENT_ID_PROTEIN, 1)
-
-/obj/item/reagent_containers/food/snacks/churro
-	name = "churro"
-	desc = "Dough, deep fried in olive oil. No toppings on it!"
-	icon = 'icons/obj/food_ch.dmi'
-	icon_state = "churro"
-	trash = /obj/item/paper/crumpled
-	filling_color = "#F5B951"
-	bitesize = 2
-	nutriment_desc = list("deep fried dough" = 2)
-	nutriment_amt = 2
-
-/obj/item/reagent_containers/food/snacks/churro/Initialize(mapload)
-	. = ..()
-	reagents.add_reagent(REAGENT_ID_COOKINGOIL, 1)

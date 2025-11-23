@@ -54,7 +54,8 @@
 
 /obj/effect/overmap/visitable/simplemob/Destroy()
 	UnregisterSignal(parent, COMSIG_MOVABLE_MOVED)
-	qdel_null(parent)
+	if(!QDELETED(parent))
+		QDEL_NULL(parent)
 	return ..()
 
 /obj/effect/overmap/visitable/simplemob/get_scan_data(mob/user)
@@ -121,16 +122,6 @@
 		"bio" = 1000,
 		"rad" = 1000)
 
-	armor_soak = list(
-		"melee" = 1000,
-		"bullet" = 1000,
-		"laser" = 1000,
-		"energy" = 1000,
-		"bomb" = 1000,
-		"bio" = 1000,
-		"rad" = 1000
-		)
-
 	var/scanner_desc
 	var/obj/effect/overmap/visitable/simplemob/child_om_marker
 	var/om_child_type
@@ -147,7 +138,8 @@
 		child_om_marker = C
 
 /mob/living/simple_mob/vore/overmap/Destroy()
-	qdel_null(child_om_marker)
+	if(!QDELETED(child_om_marker))
+		QDEL_NULL(child_om_marker)
 	return ..()
 
 //SHIP
@@ -189,7 +181,7 @@
 
 /obj/effect/overmap/visitable/ship/simplemob/Destroy()
 	UnregisterSignal(parent, COMSIG_MOVABLE_MOVED)
-	qdel_null(parent)
+	QDEL_NULL(parent)
 	return ..()
 
 /obj/effect/overmap/visitable/ship/simplemob/get_scan_data(mob/user)

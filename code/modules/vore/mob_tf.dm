@@ -1,5 +1,19 @@
 // Procs for living mobs based around mob transformation. Initially made for the mouseray, they are now used in various other places and the main procs are now called from here.
 
+/mob/living/proc/tf_into(var/A, var/allow_emotes = FALSE, var/object_name)
+	if(!object_name)
+		object_name = name
+	if(isliving(A))
+		var/mob/living/M = A
+		M.mob_tf(src)
+		return
+	if(isitem(A))
+		var/obj/item/I = A
+		I.inhabit_item(src, object_name, src, allow_emotes)
+		var/mob/living/possessed_voice = I.possessed_voice
+		I.trash_eatable = devourable
+		I.unacidable = !digestable
+		forceMove(possessed_voice)
 
 /mob/living/proc/mob_tf(var/mob/living/M)
 	if(!istype(M))
@@ -9,8 +23,7 @@
 		if(istype(src, /mob/living/simple_mob))
 			var/mob/living/simple_mob/S = src
 			if(!S.voremob_loaded)
-				S.voremob_loaded = TRUE
-				S.init_vore()
+				S.init_vore(TRUE)
 		new /obj/effect/effect/teleport_greyscale(M.loc)
 		for(var/obj/belly/B as anything in src.vore_organs)
 			src.vore_organs -= B
@@ -154,7 +167,6 @@
 	new_mob.ooc_notes_dislikes = ooc_notes_dislikes
 	new_mob.appendage_color = appendage_color
 	new_mob.appendage_alt_setting = appendage_alt_setting
-	new_mob.text_warnings = text_warnings
 
 	VORE_PREF_TRANSFER(new_mob, src)
 
@@ -193,8 +205,7 @@
 			if(istype(new_mob, /mob/living/simple_mob))
 				var/mob/living/simple_mob/S = new_mob
 				if(!S.voremob_loaded)
-					S.voremob_loaded = TRUE
-					S.init_vore()
+					S.init_vore(TRUE)
 			new /obj/effect/effect/teleport_greyscale(src.loc)
 			if(!new_mob.ckey)
 				for(var/obj/belly/B as anything in new_mob.vore_organs)

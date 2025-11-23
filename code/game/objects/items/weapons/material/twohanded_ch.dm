@@ -77,20 +77,21 @@
 	force_wielded = 75
 	slowdown = 0
 
-/obj/item/material/twohanded/sledgehammer/mjollnir/afterattack(mob/living/G, mob/user)
+/obj/item/material/twohanded/sledgehammer/mjollnir/afterattack(atom/A as mob|obj|turf|area, mob/user as mob, proximity)
 	..()
 
-	if(wielded)
+	if(proximity && wielded && isliving(A))
+		var/mob/living/target = A
 		if(prob(10))
-			G.electrocute_act(500, src, def_zone = BP_TORSO)
+			target.electrocute_act(500, src, def_zone = BP_TORSO)
 			return
 		if(prob(10))
-			G.dust()
+			target.dust()
 			return
 		else
-			G.stun_effect_act(10 , 50, BP_TORSO, src)
-			G.take_organ_damage(10)
-			G.Paralyse(20)
+			target.stun_effect_act(10 , 50, BP_TORSO, src)
+			target.take_organ_damage(10)
+			target.Paralyse(20)
 			playsound(src.loc, "sparks", 50, 1)
 			return
 

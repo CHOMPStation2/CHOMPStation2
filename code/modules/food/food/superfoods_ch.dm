@@ -499,10 +499,10 @@
 		if(edible == 1)
 			HasSliceMissing()
 			if(slices <= 0)
-				user << "The cake hums away quietly as the chaos powered goodness slowly recovers the large amount of lost mass, best to give it a moment before cutting another slice."
+				to_chat(user, span_notice("The cake hums away quietly as the chaos powered goodness slowly recovers the large amount of lost mass, best to give it a moment before cutting another slice."))
 				return
 			else
-				user << "You cut a slice of the cake. The slice looks like the cake was just baked, and you can see before your eyes as the spot where you cut the slice slowly regenerates!"
+				to_chat(user, span_notice("You cut a slice of the cake. The slice looks like the cake was just baked, and you can see before your eyes as the spot where you cut the slice slowly regenerates!"))
 				slices = slices - 1
 				icon_state = "chaoscake-[slices]"
 				new /obj/item/reagent_containers/food/snacks/chaoscakeslice(src.loc)
@@ -513,7 +513,7 @@
 	if(istype(W,/obj/item/chaoscake_layer))
 		var/obj/item/chaoscake_layer/C = W
 		if(C.layer_stage == 8)
-			user << "Finally! The coin on the top, the almighty chaos cake is complete!"
+			to_chat(user, span_notice("Finally! The coin on the top, the almighty chaos cake is complete!"))
 			qdel(W)
 			stage++
 			desc = desclist2[stage]
@@ -521,17 +521,15 @@
 			edible = 1
 			name = "The Chaos Cake!"
 		else if(stage == maxstages)
-			user << "The cake is already done!"
+			to_chat(user, span_warning("The cake is already done!"))
 		else if(stage == C.layer_stage)
-			user << "You add another layer to the cake, nice."
+			to_chat(user, span_notice("You add another layer to the cake, nice."))
 			qdel(W)
 			stage++
 			desc = desclist2[stage]
 			icon_state = "chaoscake_stage-[stage]"
 		else
-			user << "Hmm, doesnt seem like this layer is supposed to be added there?"
-
-
+			to_chat(user, span_warning("Hmm, doesnt seem like this layer is supposed to be added there?"))
 
 // The One Pizza
 
@@ -555,7 +553,7 @@
 /obj/structure/theonepizza/attackby(var/obj/item/W, var/mob/living/user)
 	if(istype(W,/obj/item/material/knife))
 		user.visible_message(span_bold("\The [user]") + " starts to slowly cut through The One Pizza.", span_notice("You start to slowly cut through The One Pizza."))
-		if(do_after(user, slicetime, exclusive = TASK_USER_EXCLUSIVE))
+		if(do_after(user, slicetime, src))
 			if(!src)
 				return		// We got disappeared already
 			user.visible_message(span_infoplain(span_bold("\The [user]") + " successfully cuts The One Pizza."), span_notice("You successfully cut The One Pizza."))

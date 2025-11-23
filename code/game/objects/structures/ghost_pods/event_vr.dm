@@ -1,5 +1,5 @@
 /obj/structure/ghost_pod/proc/reset_ghostpod()	//Makes the ghost pod usable again and re-adds it to the active ghost pod list if it is not on it.
-	active_ghost_pods |= src
+	GLOB.active_ghost_pods |= src
 	used = FALSE
 	busy = FALSE
 
@@ -10,83 +10,9 @@
 	icon_state = "tunnel_hole"
 	icon_state_opened = "tunnel_hole"
 	density = FALSE
-	ghost_query_type = /datum/ghost_query/maints_pred
 	anchored = TRUE
 	invisibility = INVISIBILITY_OBSERVER
 	spawn_active = TRUE
-	var/announce_prob = 35
-	var/list/possible_mobs = list("Rabbit" = /mob/living/simple_mob/vore/rabbit,
-								  "Red Panda" = /mob/living/simple_mob/vore/redpanda,
-								  "Fennec" = /mob/living/simple_mob/vore/fennec,
-								  "Fennix" = /mob/living/simple_mob/vore/fennix,
-								  "Fox" = /mob/living/simple_mob/animal/passive/fox,//CHOMPedit: more mobs
-								  "Syndi-Fox" = /mob/living/simple_mob/animal/passive/fox/syndicate,//CHOMPedit: more mobs
-								  "Raccoon" = /mob/living/simple_mob/animal/passive/raccoon_ch,//CHOMPedit: more mobs
-								  "Cat" = /mob/living/simple_mob/animal/passive/cat,//CHOMPedit: more mobs
-								  "Space Bumblebee" = /mob/living/simple_mob/vore/bee,
-								  "Space Bear" = /mob/living/simple_mob/animal/space/bear,
-								  "Voracious Lizard" = /mob/living/simple_mob/vore/aggressive/dino,
-								  "Lizardman" = /mob/living/simple_mob/vore/aggressive/lizardman,//CHOMPedit: more mobs
-								  "Giant Frog" = /mob/living/simple_mob/vore/aggressive/frog,
-								  "Giant Rat" = /mob/living/simple_mob/vore/aggressive/rat,
-								  "Giant Lab Rat" = /mob/living/simple_mob/vore/aggressive/rat/labrat,//CHOMPedit: more mobs
-								  "Jelly Blob" = /mob/living/simple_mob/vore/jelly,
-								  "Wolf" = /mob/living/simple_mob/vore/wolf,
-								  "Dire Wolf" = /mob/living/simple_mob/vore/wolf/direwolf,//CHOMPedit: more mobs
-								  "Large Dog" = /mob/living/simple_mob/vore/wolf/direwolf/dog,//CHOMPedit: more mobs
-								  "Hyena" = /mob/living/simple_mob/animal/hyena,//CHOMPedit: more mobs
-								  "Juvenile Solargrub" = /mob/living/simple_mob/vore/solargrub,
-								  "Sect Queen" = /mob/living/simple_mob/vore/sect_queen,
-								  "Sect Drone" = /mob/living/simple_mob/vore/sect_drone,
-								  "Defanged Xenomorph" = /mob/living/simple_mob/vore/xeno_defanged,
-								  "Panther" = /mob/living/simple_mob/vore/aggressive/panther,
-								  "Giant Snake" = /mob/living/simple_mob/vore/aggressive/giant_snake,
-								  "Deathclaw" = /mob/living/simple_mob/vore/aggressive/deathclaw,
-								  "Otie" = /mob/living/simple_mob/vore/otie,
-								  "Chubby Otie" = /mob/living/simple_mob/vore/otie/friendly/chubby,//CHOMPedit: more mobs
-								  "Mutated Otie" =/mob/living/simple_mob/vore/otie/feral,
-								  "Chubby Mutated Otie" = /mob/living/simple_mob/vore/otie/feral/chubby,//CHOMPedit: more mobs
-								  "Red Otie" = /mob/living/simple_mob/vore/otie/red,
-								  "Chubby Red Otie" = /mob/living/simple_mob/vore/otie/red/chubby,//CHOMPedit: more mobs
-								  "Zorgoia" = /mob/living/simple_mob/vore/zorgoia,//CHOMPedit: more mobs
-								  "Corrupt Hound" = /mob/living/simple_mob/vore/aggressive/corrupthound,
-								  "Corrupt Corrupt Hound" = /mob/living/simple_mob/vore/aggressive/corrupthound/prettyboi,
-								  "Hunter Giant Spider" = /mob/living/simple_mob/animal/giant_spider/hunter,
-								  "Lurker Giant Spider" = /mob/living/simple_mob/animal/giant_spider/lurker,
-								  "Pepper Giant Spider" = /mob/living/simple_mob/animal/giant_spider/pepper,
-								  "Thermic Giant Spider" = /mob/living/simple_mob/animal/giant_spider/thermic,
-								  "Webslinger Giant Spider" = /mob/living/simple_mob/animal/giant_spider/webslinger,
-								  "Frost Giant Spider" = /mob/living/simple_mob/animal/giant_spider/frost,
-								  "Nurse Giant Spider" = /mob/living/simple_mob/animal/giant_spider/nurse/eggless,
-								  "Giant Spider Queen" = /mob/living/simple_mob/animal/giant_spider/nurse/queen/eggless,
-								  "Red Dragon" = /mob/living/simple_mob/vore/aggressive/dragon,
-								  "Phoron Dragon" = /mob/living/simple_mob/vore/aggressive/dragon/virgo3b,
-								  "Space Dragon" = /mob/living/simple_mob/vore/aggressive/dragon/space,
-								  "Crypt Drake" = /mob/living/simple_mob/vore/cryptdrake,
-								  //"Gryphon" = /mob/living/simple_mob/vore/gryphon,//CHOMPedit: more mobs
-								  "Weretiger" = /mob/living/simple_mob/vore/weretiger,
-								  "Lesser Large Dragon" = /mob/living/simple_mob/vore/bigdragon/friendly/maintpred,	//CHOMPStation add.
-								  "Catslug" = /mob/living/simple_mob/vore/alienanimals/catslug,
-								  "Squirrel" = /mob/living/simple_mob/vore/squirrel/big,
-								  "Pakkun" =/mob/living/simple_mob/vore/pakkun,
-								  "Snapdragon" =/mob/living/simple_mob/vore/pakkun/snapdragon,
-								  "Sand pakkun" = /mob/living/simple_mob/vore/pakkun/sand,
-								  "Fire pakkun" = /mob/living/simple_mob/vore/pakkun/fire,
-								  "Amethyst pakkun" = /mob/living/simple_mob/vore/pakkun/purple,
-								  "Raptor" = /mob/living/simple_mob/vore/raptor,
-								  "Giant Bat" = /mob/living/simple_mob/vore/bat,
-								  "Scel (Orange)" = /mob/living/simple_mob/vore/scel/orange,
-								  "Scel (Blue)" = /mob/living/simple_mob/vore/scel/blue,
-								  "Scel (Purple)" = /mob/living/simple_mob/vore/scel/purple,
-								  "Scel (Red)" = /mob/living/simple_mob/vore/scel/red,
-								  "Scel (Green)" = /mob/living/simple_mob/vore/scel/green,
-								  "Cave Stalker" = /mob/living/simple_mob/vore/stalker,
-								  "Kelpie" = /mob/living/simple_mob/vore/horse/kelpie,
-								  "Scrubble" = /mob/living/simple_mob/vore/scrubble,
-								  "Sonadile" = /mob/living/simple_mob/vore/sonadile,
-								  "kururak" = /mob/living/simple_mob/animal/sif/kururak,
-								  "Statue of Temptation" = /mob/living/simple_mob/vore/devil
-								  )
 
 /obj/structure/ghost_pod/ghost_activated/maintpred/create_occupant(var/mob/M)
 	..()
@@ -99,11 +25,11 @@
 		return
 
 	//No OOC notes
-	if (not_has_ooc_text(M))
+	if(not_has_ooc_text(M))
 		return
 
 	while(finalized != "Yes" && M.client)
-		choice = tgui_input_list(M, "What type of predator do you want to play as?", "Maintpred Choice", possible_mobs)
+		choice = tgui_input_list(M, "What type of predator do you want to play as?", "Maintpred Choice", GLOB.maint_mob_pred_options)
 		if(!choice)	//We probably pushed the cancel button on the mob selection. Let's just put the ghost pod back in the list.
 			to_chat(M, span_notice("No mob selected, cancelling."))
 			reset_ghostpod()
@@ -116,13 +42,12 @@
 		reset_ghostpod()
 		return
 
-	var/mobtype = possible_mobs[choice]
+	var/mobtype = GLOB.maint_mob_pred_options[choice]
 	var/mob/living/simple_mob/newPred = new mobtype(get_turf(src))
 	qdel(newPred.ai_holder)
 	newPred.ai_holder = null
-	newPred.voremob_loaded = TRUE // On-demand belly loading.
-	newPred.init_vore() // On-demand belly loading.
 	//newPred.movement_cooldown = 0			// The "needless artificial speed cap" exists for a reason
+	// R.has_hands = TRUE // Downstream
 	if(M.mind)
 		M.mind.transfer_to(newPred)
 	to_chat(M, span_notice("You are " + span_bold("[newPred]") + ", somehow having gotten aboard the station in search of food. \
@@ -133,10 +58,11 @@
 	newPred.ckey = M.ckey
 	newPred.visible_message(span_warning("[newPred] emerges from somewhere!"))
 	log_and_message_admins("successfully entered \a [src] and became a [newPred].")
+	if(tgui_alert(newPred, "Do you want to load the vore bellies from your current slot?", "Load Bellies", list("Yes", "No")) == "Yes")
+		newPred.copy_from_prefs_vr()
+		if(LAZYLEN(newPred.vore_organs))
+			newPred.vore_selected = newPred.vore_organs[1]
 	qdel(src)
-
-/obj/structure/ghost_pod/ghost_activated/maintpred/no_announce
-	announce_prob = 0
 
 /obj/structure/ghost_pod/ghost_activated/morphspawn
 	name = "weird goo"
@@ -145,11 +71,9 @@
 	icon_state = "morph"
 	icon_state_opened = "morph_dead"
 	density = FALSE
-	ghost_query_type = /datum/ghost_query/morph
 	anchored = TRUE
 	invisibility = INVISIBILITY_OBSERVER
 	spawn_active = TRUE
-	var/announce_prob = 50
 
 /obj/structure/ghost_pod/ghost_activated/morphspawn/create_occupant(var/mob/M)
 	..()
@@ -160,7 +84,6 @@
 
 	var/mob/living/simple_mob/vore/morph/newMorph = new /mob/living/simple_mob/vore/morph(get_turf(src))
 	newMorph.voremob_loaded = TRUE // On-demand belly loading.
-	newMorph.init_vore() // On-demand belly loading.
 	if(M.mind)
 		M.mind.transfer_to(newMorph)
 	to_chat(M, span_notice("You are a " + span_bold("Morph") + ", somehow having gotten aboard the station in your wandering. \
@@ -175,22 +98,21 @@
 	newMorph.ckey = M.ckey
 	newMorph.visible_message(span_warning("A morph appears to crawl out of somewhere."))
 	log_and_message_admins("successfully entered \a [src] and became a Morph.")
+	if(tgui_alert(newMorph, "Do you want to load the vore bellies from your current slot?", "Load Bellies", list("Yes", "No")) == "Yes")
+		newMorph.copy_from_prefs_vr()
+		if(LAZYLEN(newMorph.vore_organs))
+			newMorph.vore_selected = newMorph.vore_organs[1]
 	qdel(src)
-
-/obj/structure/ghost_pod/ghost_activated/morphspawn/no_announce
-	announce_prob = 0
 
 /obj/structure/ghost_pod/ghost_activated/maintpred/redgate //For ghostpods placed in the redgate that aren't spawned via an event
 	name = "creature hole"
 	desc = "Looks like some creature dug is hiding in the redgate..."
-	announce_prob = 0
 	icon_state = "redgate_hole"
 	icon_state_opened = "redgate_hole"
 
 /obj/structure/ghost_pod/ghost_activated/maintpred/redgate/Initialize(mapload)
 	. = ..()
-	if(!(src in active_ghost_pods))
-		active_ghost_pods += src
+	GLOB.active_ghost_pods += src
 
 /obj/structure/ghost_pod/ghost_activated/maint_lurker
 	name = "strange maintenance hole"
@@ -199,7 +121,6 @@
 	icon_state = "tunnel_hole"
 	icon_state_opened = "tunnel_hole"
 	density = FALSE
-	ghost_query_type = /datum/ghost_query/maints_lurker
 	anchored = TRUE
 	invisibility = INVISIBILITY_OBSERVER
 	spawn_active = TRUE
@@ -244,6 +165,7 @@
 	M.client.prefs.copy_to(new_character)
 	new_character.dna.ResetUIFrom(new_character)
 	new_character.sync_organ_dna()
+	new_character.sync_addictions()
 	new_character.key = M.key
 	new_character.mind.loaded_from_ckey = picked_ckey
 	new_character.mind.loaded_from_slot = picked_slot
@@ -253,8 +175,10 @@
 	for(var/lang in new_character.client.prefs.alternate_languages)
 		var/datum/language/chosen_language = GLOB.all_languages[lang]
 		if(chosen_language)
-			if(is_lang_whitelisted(src,chosen_language) || (new_character.species && (chosen_language.name in new_character.species.secondary_langs)))
+			if(is_lang_whitelisted(M, chosen_language) || (new_character.species && (chosen_language.name in new_character.species.secondary_langs)))
 				new_character.add_language(lang)
+
+	SEND_SIGNAL(new_character, COMSIG_HUMAN_DNA_FINALIZED)
 
 	new_character.regenerate_icons()
 
@@ -272,8 +196,7 @@
 
 /obj/structure/ghost_pod/ghost_activated/maint_lurker/Initialize(mapload)
 	. = ..()
-	if(!(src in active_ghost_pods))
-		active_ghost_pods += src
+	GLOB.active_ghost_pods += src
 
 /// redspace variant
 

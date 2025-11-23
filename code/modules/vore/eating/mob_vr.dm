@@ -6,6 +6,7 @@
 	var/resizable = TRUE				// Can other people resize you? (Usually ignored for self-resizes)
 	var/digest_leave_remains = FALSE	// Will this mob leave bones/skull/etc after the melty demise?
 	var/allowmobvore = TRUE				// Will simplemobs attempt to eat the mob?
+	var/allowtemp = TRUE				// Can they be affected by belly temperature?
 	var/obj/belly/vore_selected			// Default to no vore capability.
 	var/list/vore_organs = list()		// List of vore containers inside a mob
 	var/absorbed = FALSE				// If a mob is absorbed into another
@@ -13,11 +14,11 @@
 	var/vore_smell = null				// What the character smells like
 	var/noisy = FALSE					// Toggle audible hunger.
 	var/permit_healbelly = TRUE
-	var/stumble_vore = TRUE				//Enabled by default since you have to enable drop pred/prey to do this anyway
-	var/slip_vore = TRUE				//Enabled by default since you have to enable drop pred/prey to do this anyway
-	var/drop_vore = TRUE				//Enabled by default since you have to enable drop pred/prey to do this anyway
-	var/throw_vore = TRUE				//Enabled by default since you have to enable drop pred/prey to do this anyway
-	var/food_vore = TRUE				//Enabled by default since you have to enable drop pred/prey to do this anyway
+	var/stumble_vore = TRUE
+	var/slip_vore = TRUE
+	var/drop_vore = TRUE
+	var/throw_vore = TRUE
+	var/food_vore = TRUE
 	var/consume_liquid_belly = FALSE	//starting off because if someone is into that, they'll toggle it first time they get the error. Otherway around would be more pref breaky.
 	var/digest_pain = TRUE
 	var/can_be_drop_prey = FALSE
@@ -25,8 +26,8 @@
 	var/allow_spontaneous_tf = FALSE	// Obviously.
 	var/show_vore_fx = TRUE				// Show belly fullscreens
 	var/selective_preference = DM_DEFAULT	// Preference for selective bellymode
-	var/text_warnings = TRUE 			// Allows us to dismiss the text limit warning messages after viewing it once per round
 	var/eating_privacy_global = FALSE 	// Makes eating attempt/success messages only reach for subtle range if true, overwritten by belly-specific var
+	var/vore_death_privacy = FALSE		// Chooses whether to announce prey death when digested to ghosts.
 	var/allow_mimicry = TRUE 	// Allows mimicking their character
 	var/allow_mind_transfer = FALSE			//Allows ones mind to be taken over or swapped
 	var/nutrition_message_visible = TRUE
@@ -87,9 +88,13 @@
 	var/no_latejoin_prey_warning_persists = FALSE	//Do we save it?
 	var/belly_rub_target = null
 	var/soulcatcher_pref_flags = 0			//Default disabled
+	var/persistend_edit_mode = FALSE
 
 	var/voice_freq = 42500	// Preference for character voice frequency
+	var/emote_sound_mode = EMOTE_SOUND_VOICE_FREQ
 	var/list/voice_sounds_list = list()	// The sound list containing our voice sounds!
 	var/enabled = TRUE //Pauses a mob if disabled (Prevents life ticks from happening)
 	var/died_in_vr = FALSE //For virtual reality sleepers
 	var/last_move_time = 0 //For movement smoothing
+
+	var/max_voreoverlay_alpha = 255

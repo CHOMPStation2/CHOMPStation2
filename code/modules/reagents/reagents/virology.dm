@@ -4,6 +4,8 @@
 	description = "Liquid vaccine against some type of virus."
 	color = "#C81040"
 	taste_description = "antibodies"
+	supply_conversion_value = REFINERYEXPORT_VALUE_COMMON
+	industrial_use = REFINERYEXPORT_REASON_MEDSCI
 
 /datum/reagent/vaccine/affect_blood(mob/living/carbon/M, alien, removed)
 	if(islist(data))
@@ -47,6 +49,23 @@
 	id = REAGENT_ID_WEAKPHORONVIRUSFOOD
 	description = "Mutates viruses when mixed in blood. This one seems to have been weakened, but still strong."
 	color = "#CEC3C6"
+
+/datum/reagent/uranium/uraniumvirusfood
+	name = REAGENT_URANIUMVIRUSFOOD
+	id = REAGENT_ID_URANIUMVIRUSFOOD
+	description = "Mutates viruses when mixed in blood. This one seems to glow lightly."
+	color = "#D18AA5"
+
+/datum/reagent/uranium/uraniumvirusfood/unstable
+	name = REAGENT_UNSTABLEURANIUMVIRUSFOOD
+	id = REAGENT_ID_UNSTABLEURANIUMVIRUSFOOD
+	description = "Mutates viruses when mixed in blood. This one seems be lightly warm."
+	color = "#D18AA5"
+
+/datum/reagent/uranium/uraniumvirusfood/stable
+	name = REAGENT_STABLEURANIUMVIRUSFOOD
+	id = REAGENT_ID_STABLEURANIUMVIRUSFOOD
+	description = "Mutates viruses when mixed in blood. This one seems to be stable."
 
 /datum/reagent/toxin/phoron/phoronvirusfood/sizevirusfood
 	name = REAGENT_SIZEVIRUSFOOD

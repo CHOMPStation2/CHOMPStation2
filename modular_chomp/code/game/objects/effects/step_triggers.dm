@@ -5,7 +5,7 @@
 /obj/effect/step_trigger/teleporter/deathfall/Trigger(var/atom/movable/A)
 	var/turf/simulated/T = locate(teleport_x, teleport_y, teleport_z)
 	if(!istype(T))
-		log_debug("[src] failed to find destination turf.")
+		log_mapping("[src] failed to find destination turf.")
 		return
 	if(A.hovering)//Flying people dont fall
 		return
@@ -36,3 +36,17 @@
 /obj/effect/step_trigger/teleporter/poi/Initialize(mapload) //This is for placing teleporters in gateways/POIS, where Z levels can be different and I cant be assed to make fake teleporter stairs
 	. = ..()
 	teleport_z = src.z
+
+/obj/effect/step_trigger/teleporter/randomspawn //teleporter/random was taken. This version only teleports when stepped on *sometimes*, and you can give it a chance not to spawn
+	var/destroyprob = 99
+	var/teleprob = 1
+
+/obj/effect/step_trigger/teleporter/randomspawn/Initialize(mapload)
+	. = ..()
+	if(destroyprob && prob(destroyprob))
+		qdel(src)
+
+/obj/effect/step_trigger/teleporter/randomspawn/Trigger()
+	if(teleprob && !prob(teleprob))
+		return FALSE
+	return ..()

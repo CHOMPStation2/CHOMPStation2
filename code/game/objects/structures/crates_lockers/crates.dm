@@ -5,7 +5,6 @@
 	desc = "A rectangular steel crate."
 	icon = 'icons/obj/closets/bases/crate.dmi'
 	closet_appearance = /decl/closet_appearance/crate
-	climbable = TRUE
 	dir = 4 //Spawn facing 'forward' by default.
 	var/points_per_crate = 5
 	var/rigged = 0
@@ -13,8 +12,10 @@
 	open_sound = 'sound/effects/crate_open.ogg'
 	close_sound = 'sound/effects/crate_close.ogg'
 
-/obj/structure/closet/crate/can_open()
-	return 1
+/obj/structure/closet/crate/Initialize(mapload)
+	. = ..()
+	AddElement(/datum/element/climbable)
+	AddElement(/datum/element/rotatable)
 
 /obj/structure/closet/crate/can_close()
 	return 1
@@ -38,10 +39,11 @@
 	playsound(src, open_sound, 50, 1, -3)
 	for(var/obj/O in src)
 		O.forceMove(get_turf(src))
+	for(var/mob/M in src)
+		M.forceMove(get_turf(src))
 	src.opened = 1
 
-	if(climbable)
-		structure_shaken()
+	SEND_SIGNAL(src, COMSIG_CLIMBABLE_SHAKE_CLIMBERS, null)
 	update_icon()
 	return 1
 
@@ -56,7 +58,7 @@
 	for(var/obj/O in get_turf(src))
 		if(itemcount >= storage_capacity)
 			break
-		if(O.density || O.anchored || istype(O,/obj/structure/closet))
+		if(O.density || O.anchored || istype(O,/obj/structure/closet) || istype(O,/obj/effect/abstract))
 			continue
 		if(istype(O, /obj/structure/bed)) //This is only necessary because of rollerbeds and swivel chairs.
 			var/obj/structure/bed/B = O
@@ -69,36 +71,10 @@
 	update_icon()
 	return 1
 
-/obj/structure/closet/crate/MouseDrop_T(mob/target, mob/user)
-	// Adds climbing from drag, You can't put yourself in crates with a drag anyway... Nore anyone else actually.
-	var/mob/living/H = user
-	if(istype(H) && can_climb(H) && target == user)
-		do_climb(target)
-	else
-		return ..()
-
-/obj/structure/closet/crate/verb/rotate_clockwise()
-	set name = "Rotate Crate Clockwise"
-	set category = "Object"
-	set src in oview(1)
-
-	if (usr.stat || usr.restrained()  || anchored)
-		return
-
-	src.set_dir(turn(src.dir, 270))
-
-/obj/structure/closet/crate/verb/rotate_counterclockwise()
-	set category = "Object"
-	set name = "Rotate Crate Counterclockwise"
-	set src in view(1)
-
-	if (usr.stat || usr.restrained()  || anchored)
-		return
-
-	src.set_dir(turn(src.dir, 90))
-
 /obj/structure/closet/crate/attackby(obj/item/W as obj, mob/user as mob)
 	if(W.has_tool_quality(TOOL_WRENCH) && istype(src,/obj/structure/closet/crate/bin))
+		return ..()
+	else if(W.has_tool_quality(TOOL_WELDER))
 		return ..()
 	else if(opened)
 		if(isrobot(user))
@@ -154,12 +130,22 @@
 			return
 	return
 
+/obj/structure/closet/req_breakout()
+	if(opened || !sealed)
+		return FALSE
+	return TRUE
+
 /obj/structure/closet/crate/secure
 	desc = "A secure crate."
 	name = "Secure crate"
 	closet_appearance = /decl/closet_appearance/crate/secure
 	var/broken = 0
 	var/locked = 1
+
+/obj/structure/closet/crate/secure/req_breakout()
+	if(opened || !locked || !sealed)
+		return FALSE
+	return TRUE
 
 /obj/structure/closet/crate/secure/can_open()
 	return !locked
@@ -237,15 +223,13 @@
 		update_icon()
 		return 1
 
-/obj/structure/closet/crate/secure/emp_act(severity)
-	for(var/obj/O in src)
-		O.emp_act(severity)
+/obj/structure/closet/crate/secure/emp_act(severity, recursive)
 	if(!broken && !opened  && prob(50/severity))
 		if(!locked)
-			locked = 1
+			locked = TRUE
 		else
 			playsound(src, 'sound/effects/sparks4.ogg', 75, 1)
-			locked = 0
+			locked = FALSE
 	if(!opened && prob(20/severity))
 		if(!locked)
 			open()

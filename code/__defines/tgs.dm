@@ -164,7 +164,7 @@
  * * minimum_required_security_level: The minimum required security level to run the game in which the DMAPI is integrated. Can be one of [TGS_SECURITY_ULTRASAFE], [TGS_SECURITY_SAFE], or [TGS_SECURITY_TRUSTED].
  * * http_handler - Optional user defined [/datum/tgs_http_handler].
  */
-/world/proc/TgsNew(datum/tgs_event_handler/event_handler, minimum_required_security_level = TGS_SECURITY_TRUSTED, datum/tgs_http_handler/http_handler) //CHOMPEdit we need trusted
+/world/proc/TgsNew(datum/tgs_event_handler/event_handler, minimum_required_security_level = TGS_SECURITY_ULTRASAFE, datum/tgs_http_handler/http_handler)
 	CAN_BE_REDEFINED(TRUE)
 	return
 
@@ -181,7 +181,6 @@
 
 /// Consumers MUST run this macro at the start of [/world/proc/Topic].
 #define TGS_TOPIC var/tgs_topic_return = TgsTopic(args[1]); if(tgs_topic_return) return tgs_topic_return
-#define VGS_TOPIC var/vgs_topic_return = VgsTopic(args[1]); if(vgs_topic_return) return vgs_topic_return // VOREStation Edit - VGS
 
 /// Consumers MUST call this as late as possible in [world/proc/Reboot] (BEFORE ..()).
 /world/proc/TgsReboot()

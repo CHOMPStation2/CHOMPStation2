@@ -1,490 +1,576 @@
 2025-02-01:
   CHOMPStation2StaffMirrorBot:
-  - rscadd: Bodybags now show a visible tag when written on
-  - bugfix: Bodybags show properly again
-  - bugfix: Crew monitor now filters and shows vitals properly
-  - code_imp: converts more usr to user / src
-  - bugfix: Tritium no longer acts as slime jelly
+    - rscadd: Bodybags now show a visible tag when written on
+    - bugfix: Bodybags show properly again
+    - bugfix: Crew monitor now filters and shows vitals properly
+    - code_imp: converts more usr to user / src
+    - bugfix: Tritium no longer acts as slime jelly
 2025-02-02:
   CHOMPStation2StaffMirrorBot:
-  - rscadd: Adds a new sneptail from Skyrat
-  - bugfix: Fixed inventory missing sprites for some overcoats
-  - bugfix: Fixed missing longsword and sabre sprites.
-  - rscadd: Adds some currently unused weather effects (starry_night, midnight, sandstorm,
-      toxic_rain, downpour, downpourfatal, and acidfog)
-  - rscadd: Added a new stable glamour crafting material that can be used to craft
-      various items.
-  - rscadd: Added a new unstable glamour item, that has a few risky effects when used
-      and picked up without protection.
-  - rscadd: Added a new particle smasher recipe to turn unstable glamour into stable
-      glamour.
-  - rscadd: Added new items to the lleill transmute ability.
-  - rscadd: Added new glamour bow and arrow items.
-  - rscadd: Added a variable for particle smasher recipes to have a chance not to
-      consume an item.
-  - rscadd: Added new glamour turfs for whitespace maps.
-  - code_imp: Changed TF procs to be called from one centralised location, rather
-      than repeated across the code multiple times.
-  - rscadd: Added warnings for people on clients 516.1652 to 1654 that they should
-      use another version.
-  - bugfix: Fixes compact shotguns not being able to rack the gun
-  - bugfix: Fixes computers not facing the right way
-  - bugfix: Fixes a bunch of taur sprites. They no longer make all your items go invisible.
-  - bugfix: Fixed taurs being unable to be ridden.
-  - qol: Robots can now use their mining points to upgrade their scanner
-  - bugfix: All the numerous zaddat players can now rejoice as they can now choose
-      sprite accessories!
-  - code_imp: add cable dir maptest
-  - bugfix: Fixes spontaneous rupture of lungs when breathing otherwise adequate amounts
-      of air
-  - bugfix: The proper alert will now show up when you're suffocating in space.
-  - balance: Massively lowers chance of the virgo beacon spawning
-  - balance: Massively lowers chance of both guns and laser guns spawning in war digsites
-      (The chances you would find a fully functioning gun is pretty low, honestly.
-      This reflects that.)
-  - balance: Lowers chance of finding the cult blade
-  - balance: Adds human corpses to temple digsites, war digsites, and garden digsites
-  - balance: Adds alien corpses to garden digsites and war digsites
-  - balance: Adds robot corpses to war digsites and technical digsites
-  - bugfix: Xenoarch guns can no longer erroneously choose a firemode and swap their
-      projectile type
-  - bugfix: Xenoarch guns no longer become laser rifles when battery is swapped
-  - bugfix: Xenoarch guns have proper names now
-  - balance: Xenoarch guns can no longer have pulse destroyer beams
-  - balance: You can no longer accidentally nuke yourself with the cult sword
-  - balance: The electric field artifact can no longer be rapidly turned on and off
-      to nuke people
-  - bugfix: The cult sword checks to make sure it has the proper lifeforce
-  - balance: Actually properly gets rid of radiation+damage when you destroy an artifact.
-      You instead now become jittery.
-  - bugfix: nearby computers merge their icons
-  - code_imp: crash on guns with 0 fire delay, let us find out what guntype is doing
-      this
-  - bugfix: Fixed Teshari pattern ears being missing from the ears selection.
-  - rscadd: Adds a Deluxe bluespace bracelet that allows a variable toggle.
-  - balance: Lowered cost of base bluespace bracelet to 1 loadout point
-  - bugfix: another case where alarms could get stuck
-  - bugfix: fixes some runtimes pertaining to guns dividing by 0
+    - rscadd: Adds a new sneptail from Skyrat
+    - bugfix: Fixed inventory missing sprites for some overcoats
+    - bugfix: Fixed missing longsword and sabre sprites.
+    - rscadd:
+        Adds some currently unused weather effects (starry_night, midnight, sandstorm,
+        toxic_rain, downpour, downpourfatal, and acidfog)
+    - rscadd:
+        Added a new stable glamour crafting material that can be used to craft
+        various items.
+    - rscadd:
+        Added a new unstable glamour item, that has a few risky effects when used
+        and picked up without protection.
+    - rscadd:
+        Added a new particle smasher recipe to turn unstable glamour into stable
+        glamour.
+    - rscadd: Added new items to the lleill transmute ability.
+    - rscadd: Added new glamour bow and arrow items.
+    - rscadd:
+        Added a variable for particle smasher recipes to have a chance not to
+        consume an item.
+    - rscadd: Added new glamour turfs for whitespace maps.
+    - code_imp:
+        Changed TF procs to be called from one centralised location, rather
+        than repeated across the code multiple times.
+    - rscadd:
+        Added warnings for people on clients 516.1652 to 1654 that they should
+        use another version.
+    - bugfix: Fixes compact shotguns not being able to rack the gun
+    - bugfix: Fixes computers not facing the right way
+    - bugfix: Fixes a bunch of taur sprites. They no longer make all your items go invisible.
+    - bugfix: Fixed taurs being unable to be ridden.
+    - qol: Robots can now use their mining points to upgrade their scanner
+    - bugfix:
+        All the numerous zaddat players can now rejoice as they can now choose
+        sprite accessories!
+    - code_imp: add cable dir maptest
+    - bugfix:
+        Fixes spontaneous rupture of lungs when breathing otherwise adequate amounts
+        of air
+    - bugfix: The proper alert will now show up when you're suffocating in space.
+    - balance: Massively lowers chance of the virgo beacon spawning
+    - balance:
+        Massively lowers chance of both guns and laser guns spawning in war digsites
+        (The chances you would find a fully functioning gun is pretty low, honestly.
+        This reflects that.)
+    - balance: Lowers chance of finding the cult blade
+    - balance: Adds human corpses to temple digsites, war digsites, and garden digsites
+    - balance: Adds alien corpses to garden digsites and war digsites
+    - balance: Adds robot corpses to war digsites and technical digsites
+    - bugfix:
+        Xenoarch guns can no longer erroneously choose a firemode and swap their
+        projectile type
+    - bugfix: Xenoarch guns no longer become laser rifles when battery is swapped
+    - bugfix: Xenoarch guns have proper names now
+    - balance: Xenoarch guns can no longer have pulse destroyer beams
+    - balance: You can no longer accidentally nuke yourself with the cult sword
+    - balance:
+        The electric field artifact can no longer be rapidly turned on and off
+        to nuke people
+    - bugfix: The cult sword checks to make sure it has the proper lifeforce
+    - balance:
+        Actually properly gets rid of radiation+damage when you destroy an artifact.
+        You instead now become jittery.
+    - bugfix: nearby computers merge their icons
+    - code_imp:
+        crash on guns with 0 fire delay, let us find out what guntype is doing
+        this
+    - bugfix: Fixed Teshari pattern ears being missing from the ears selection.
+    - rscadd: Adds a Deluxe bluespace bracelet that allows a variable toggle.
+    - balance: Lowered cost of base bluespace bracelet to 1 loadout point
+    - bugfix: another case where alarms could get stuck
+    - bugfix: fixes some runtimes pertaining to guns dividing by 0
   Cameron-The-Raven:
-  - bugfix: _yw taur sprites properly show now
-  - bugfix: low blood sugar will no longer give you infinitely stacking drowsyness
+    - bugfix: _yw taur sprites properly show now
+    - bugfix: low blood sugar will no longer give you infinitely stacking drowsyness
 2025-02-03:
   CHOMPStation2StaffMirrorBot:
-  - qol: removes all old inputs
-  - rscadd: Additional checks added to mob tf
-  - code_imp: Makes deluxe bluespace bracelets and hyper jumpsuit code not as bad
-  - bugfix: Fixes a bug where projectiles could go into nullspace and runtime
-  - bugfix: Fixes a bug where tcomms would runtime trying to get their temperature
-      after being destroyed
-  - bugfix: Fixes a bug where circuit boards would not del their datums properly
-  - rscadd: Deluxe bluespace bracelets respect dorms
-  - code_imp: removes old alert
-  - bugfix: building camera consoles runtiming
+    - qol: removes all old inputs
+    - rscadd: Additional checks added to mob tf
+    - code_imp: Makes deluxe bluespace bracelets and hyper jumpsuit code not as bad
+    - bugfix: Fixes a bug where projectiles could go into nullspace and runtime
+    - bugfix:
+        Fixes a bug where tcomms would runtime trying to get their temperature
+        after being destroyed
+    - bugfix: Fixes a bug where circuit boards would not del their datums properly
+    - rscadd: Deluxe bluespace bracelets respect dorms
+    - code_imp: removes old alert
+    - bugfix: building camera consoles runtiming
   Hunter-Dovetail:
-  - rscadd: crocodile_neck-head
-  - code_imp: hide_body_parts to scaled_belly-torso, six_pack-torso
-  - image: modified and improved horse_head-head, horse_fringe-head, dragon_upperjaw-head,
-      dragon_lowerjaw-head, six_pack-torso, scaled_belly-torso
+    - rscadd: crocodile_neck-head
+    - code_imp: hide_body_parts to scaled_belly-torso, six_pack-torso
+    - image:
+        modified and improved horse_head-head, horse_fringe-head, dragon_upperjaw-head,
+        dragon_lowerjaw-head, six_pack-torso, scaled_belly-torso
 2025-02-04:
   CHOMPStation2StaffMirrorBot:
-  - code_imp: removes sleeps in robot module selection
-  - refactor: TGUI collections usage reduced
-  - bugfix: fixed the teshari foot sprites
-  - bugfix: fixed teshi_fluff
-  - image: added foot states for teshi_fluff to make the fix actually work. It's just
-      the leg sprites but I chopped em to fit
+    - code_imp: removes sleeps in robot module selection
+    - refactor: TGUI collections usage reduced
+    - bugfix: fixed the teshari foot sprites
+    - bugfix: fixed teshi_fluff
+    - image:
+        added foot states for teshi_fluff to make the fix actually work. It's just
+        the leg sprites but I chopped em to fit
 2025-02-05:
   CHOMPStation2StaffMirrorBot:
-  - qol: robot gun sprites will only show if any of the guns is actually in the activated
-      slot
-  - bugfix: rdconsole static data updates for all users again
+    - qol:
+        robot gun sprites will only show if any of the guns is actually in the activated
+        slot
+    - bugfix: rdconsole static data updates for all users again
   Cameron-The-Raven:
-  - image: adjusts some icons to equal their virgo equivalent. Nothing front-facing,
-      all backend.
+    - image:
+        adjusts some icons to equal their virgo equivalent. Nothing front-facing,
+        all backend.
 2025-02-06:
   Kashargul:
-  - bugfix: buttons not properly aligned in the vorepanel settings
+    - bugfix: buttons not properly aligned in the vorepanel settings
 2025-02-07:
   Diana:
-  - code_imp: fixes taur sprites from breaking. Made from _vr and _ch files into just
-      normal .dmi files
-  - code_imp: Clears some duplicate code up
+    - code_imp:
+        fixes taur sprites from breaking. Made from _vr and _ch files into just
+        normal .dmi files
+    - code_imp: Clears some duplicate code up
   Missile597:
-  - maptweak: Moves the xenobotany hydroponics crate so it doesn't block the fridge
-      at round start
-  - maptweak: Adds an air alarm to the distillery room which was either missed or
-      got lost again
-  - maptweak: Deleted some redundant supply piping that had been accidentally placed
-      in medical at some point
-  - maptweak: Fixed the wires for the electrified grilles in the HoP's office
+    - maptweak:
+        Moves the xenobotany hydroponics crate so it doesn't block the fridge
+        at round start
+    - maptweak:
+        Adds an air alarm to the distillery room which was either missed or
+        got lost again
+    - maptweak:
+        Deleted some redundant supply piping that had been accidentally placed
+        in medical at some point
+    - maptweak: Fixed the wires for the electrified grilles in the HoP's office
   tacoguy7765093:
-  - bugfix: Oversight research datum added to outsider console to prevent core RND
-      being printed from it.
+    - bugfix:
+        Oversight research datum added to outsider console to prevent core RND
+        being printed from it.
 2025-02-08:
   CHOMPStation2StaffMirrorBot:
-  - rscdel: Removed old things that should have been removed a long time ago
-  - code_imp: Non-Contagious GBS now has CAN_NOT_SPREAD
-  - rscadd: Adds a new spont vore interaction to buckling to an already occupied seat
-  - code_imp: repalces center of mass list with x and y vars
-  - code_imp: fixes a general destroy issue and some init hints
-  - code_imp: Adjusts the way guns fire on the backend
-  - bugfix: Fixes a massive memory leak.
-  - bugfix: Deadringer now properly does deathgasp on the right mob
-  - bugfix: Wounds now properly delete when limbs are Destroy()'d
-  - rscadd: Mining vendor now contains the Kinetic Gauntlets
-  - rscadd: Mining vendor now contains the Diamond Pickaxe
-  - rscadd: Radio code is now more efficient on the backend.
-  - code_imp: Doors are less resource intensive
-  - code_imp: Robots will now scream if you touch them wrong in the code
-  - rscadd: Doors close faster if it's freezing or a raging fire is on the other side.
-      (Less fire spreading and less heat lost)
-  - code_imp: Makes the artifact gas trigger, artifact heat, and artifact cold activation
-      temps defines
-  - code_imp: Artifacts now properly remove their signals.
-  - balance: Artifacts now take more moles in the air to activate
-  - balance: Artifacts break if they get WAY too hot.
-  - bugfix: Fixes an error where it said % to activate artifacts. Now properly tells
-      you it is in moles.
-  - balance: Telecubes no longer start mated in xenoarch. This means you'll have to
-      find two of them (and be sad the game won't let you pair them). This means you
-      will no longer get gibbed if you're unlucky
-  - bugfix: Fixes a bug where augments could not be inserted into robotic limbs. The
-      step is now screwdriver->multitool to insert them
-  - bugfix: Melee augments can no longer embed inside someone
-  - rscadd: A lot of the augments are now craftable in science, requiring high tech
-      levels and lots of resources for them.
+    - rscdel: Removed old things that should have been removed a long time ago
+    - code_imp: Non-Contagious GBS now has CAN_NOT_SPREAD
+    - rscadd: Adds a new spont vore interaction to buckling to an already occupied seat
+    - code_imp: repalces center of mass list with x and y vars
+    - code_imp: fixes a general destroy issue and some init hints
+    - code_imp: Adjusts the way guns fire on the backend
+    - bugfix: Fixes a massive memory leak.
+    - bugfix: Deadringer now properly does deathgasp on the right mob
+    - bugfix: Wounds now properly delete when limbs are Destroy()'d
+    - rscadd: Mining vendor now contains the Kinetic Gauntlets
+    - rscadd: Mining vendor now contains the Diamond Pickaxe
+    - rscadd: Radio code is now more efficient on the backend.
+    - code_imp: Doors are less resource intensive
+    - code_imp: Robots will now scream if you touch them wrong in the code
+    - rscadd:
+        Doors close faster if it's freezing or a raging fire is on the other side.
+        (Less fire spreading and less heat lost)
+    - code_imp:
+        Makes the artifact gas trigger, artifact heat, and artifact cold activation
+        temps defines
+    - code_imp: Artifacts now properly remove their signals.
+    - balance: Artifacts now take more moles in the air to activate
+    - balance: Artifacts break if they get WAY too hot.
+    - bugfix:
+        Fixes an error where it said % to activate artifacts. Now properly tells
+        you it is in moles.
+    - balance:
+        Telecubes no longer start mated in xenoarch. This means you'll have to
+        find two of them (and be sad the game won't let you pair them). This means you
+        will no longer get gibbed if you're unlucky
+    - bugfix:
+        Fixes a bug where augments could not be inserted into robotic limbs. The
+        step is now screwdriver->multitool to insert them
+    - bugfix: Melee augments can no longer embed inside someone
+    - rscadd:
+        A lot of the augments are now craftable in science, requiring high tech
+        levels and lots of resources for them.
   Diana:
-  - rscadd: 'Adds a bunch of new taur sprites that were in the icon files but never
-      had the code written for them.
+    - rscadd:
+        "Adds a bunch of new taur sprites that were in the icon files but never
+        had the code written for them.
 
-      code; Gets the _ch and _vr files in sync'
+        code; Gets the _ch and _vr files in sync"
 2025-02-09:
   CHOMPStation2StaffMirrorBot:
-  - rscadd: Adds 'Dirtking' a trait that lets you dirty tiles up quicker (Sorry janitors!)
-  - rscadd: Adds 'Mudslip' a trait that makes you slip over dirt tiles (Blame the
-      dirtkings!)
-  - code_imp: more backend stuff
-  - code_imp: forwards usr refs from topic for usrDialog
-  - qol: atmos alarms can now be scrolled through
-  - rscadd: Makes medical kiosks now detect viruses and infections
-  - qol: Makes medical kiosks have varying text severity's depending on how bad the
-      thing is
-  - qol: Makes medical kiosks tell you to put pressure on the wound
-  - rscadd: Makes medical kiosks detect chronic radiation (but only if done with the
-      acute phase)
-  - code_imp: moves organs from new to init
-  - bugfix: rhubarb using the wrong define
+    - rscadd: Adds 'Dirtking' a trait that lets you dirty tiles up quicker (Sorry janitors!)
+    - rscadd:
+        Adds 'Mudslip' a trait that makes you slip over dirt tiles (Blame the
+        dirtkings!)
+    - code_imp: more backend stuff
+    - code_imp: forwards usr refs from topic for usrDialog
+    - qol: atmos alarms can now be scrolled through
+    - rscadd: Makes medical kiosks now detect viruses and infections
+    - qol:
+        Makes medical kiosks have varying text severity's depending on how bad the
+        thing is
+    - qol: Makes medical kiosks tell you to put pressure on the wound
+    - rscadd:
+        Makes medical kiosks detect chronic radiation (but only if done with the
+        acute phase)
+    - code_imp: moves organs from new to init
+    - bugfix: rhubarb using the wrong define
   Diana:
-  - bugfix: You are prevented from stomping while buckled now.
-  - bugfix: You are prevented from kicking while buckled now.
-  - bugfix: You are prevented from biting while buckled now.
-  - bugfix: Fixes gloves increasing damage on anything other than punches.
-  - bugfix: Fixes it so the click code can properly get to unarmed attack code now,
-      allowing it to run it's proper checks to see if you can attack or not instead
-      of just always returning false.
-  - code_imp: Changes some vars from 0 to FALSE where indicated.
-  - code_imp: Gets rid of some needless = FALSE when it was already on the parent
-  - bugfix: Artifacts will no longer activate via touch if their effect(strength)
-      is set to 'touch strength' but their trigger(method of activation) is set to
-      anything but 'touch'
-  - bugfix: Touching a touch artifact to turn it off will no longer hit you with the
-      activation effects
-  - bugfix: Touching a touch artifact will now properly make it turn on
-  - qol: Gets rid of anomalies that require gas to activate
-  - qol: The analyzer now tells you you can dump lead (among others) to activate an
-      artifact
-  - qol: Artifacts will not longer activate through gloves. Small artifacts are safe
-      to pick up now!
-  - rscadd: Adds more anomaly battery types craftable in science
-  - rscadd: Artifact harvesters and its scanpad can now be crafted and deconstructed
-  - rscadd: Harvester can now be upgraded, giving increased charge rate.
-  - bugfix: your sponge will no longer look for its nonexistent species when emp'd
-      when outside your body
-  - bugfix: NPCs are no longer opportunistic and will not maul their sleeping allies
+    - bugfix: You are prevented from stomping while buckled now.
+    - bugfix: You are prevented from kicking while buckled now.
+    - bugfix: You are prevented from biting while buckled now.
+    - bugfix: Fixes gloves increasing damage on anything other than punches.
+    - bugfix:
+        Fixes it so the click code can properly get to unarmed attack code now,
+        allowing it to run it's proper checks to see if you can attack or not instead
+        of just always returning false.
+    - code_imp: Changes some vars from 0 to FALSE where indicated.
+    - code_imp: Gets rid of some needless = FALSE when it was already on the parent
+    - bugfix:
+        Artifacts will no longer activate via touch if their effect(strength)
+        is set to 'touch strength' but their trigger(method of activation) is set to
+        anything but 'touch'
+    - bugfix:
+        Touching a touch artifact to turn it off will no longer hit you with the
+        activation effects
+    - bugfix: Touching a touch artifact will now properly make it turn on
+    - qol: Gets rid of anomalies that require gas to activate
+    - qol:
+        The analyzer now tells you you can dump lead (among others) to activate an
+        artifact
+    - qol:
+        Artifacts will not longer activate through gloves. Small artifacts are safe
+        to pick up now!
+    - rscadd: Adds more anomaly battery types craftable in science
+    - rscadd: Artifact harvesters and its scanpad can now be crafted and deconstructed
+    - rscadd: Harvester can now be upgraded, giving increased charge rate.
+    - bugfix:
+        your sponge will no longer look for its nonexistent species when emp'd
+        when outside your body
+    - bugfix: NPCs are no longer opportunistic and will not maul their sleeping allies
   Diana, Kash, Will:
-  - bugfix: Fixes the body designer and changes it to use appearance changer
-  - code_imp: Adds a unit test that will POLITELY tell you to to FIX YOUR DUPLICATE
-      / UNNAMED / UN-ICONED sprite_accessory in the  code. It's for your own good.
-      Promise.
-  - code_imp: Adds another unit test that will POLITELY check your markings in the
-      FILE to let you know you if you add a marking without a proper sprite. (This
-      is for your own good.)
-  - bugfix: Fixes a bug with the color picker would let you upload photos to it and
-      accept that as a color input
-  - bugfix: Fixes some things having duplicate names / duplicate paths meaning they
-      could never be selected
-  - bugfix: Fixes a LOT of broken sprites
-  - bugfix: Fixes Shadekin Snoot marking
-  - bugfix: Adds Double Unathi Horns
-  - bugfix: Skrell Very Short Tentacles never existed.
-  - bugfix: Wrist Fluff not having the correct body_parts
-  - bugfix: Replikant Paneling - SynthFlesh (body) now shows up properly
-  - bugfix: Rosette's Groin now shows up properly when viewed.
-  - bugfix: Augment (Backside Left, Head) now shows up properly
-  - bugfix: Augment (Backside Left Diode, Head) now shows up properly
-  - bugfix: Hands,Feet,Belly Color (Major, Female) now shows their groin properly.
+    - bugfix: Fixes the body designer and changes it to use appearance changer
+    - code_imp:
+        Adds a unit test that will POLITELY tell you to to FIX YOUR DUPLICATE
+        / UNNAMED / UN-ICONED sprite_accessory in the  code. It's for your own good.
+        Promise.
+    - code_imp:
+        Adds another unit test that will POLITELY check your markings in the
+        FILE to let you know you if you add a marking without a proper sprite. (This
+        is for your own good.)
+    - bugfix:
+        Fixes a bug with the color picker would let you upload photos to it and
+        accept that as a color input
+    - bugfix:
+        Fixes some things having duplicate names / duplicate paths meaning they
+        could never be selected
+    - bugfix: Fixes a LOT of broken sprites
+    - bugfix: Fixes Shadekin Snoot marking
+    - bugfix: Adds Double Unathi Horns
+    - bugfix: Skrell Very Short Tentacles never existed.
+    - bugfix: Wrist Fluff not having the correct body_parts
+    - bugfix: Replikant Paneling - SynthFlesh (body) now shows up properly
+    - bugfix: Rosette's Groin now shows up properly when viewed.
+    - bugfix: Augment (Backside Left, Head) now shows up properly
+    - bugfix: Augment (Backside Left Diode, Head) now shows up properly
+    - bugfix: Hands,Feet,Belly Color (Major, Female) now shows their groin properly.
   ItsSelis:
-  - bugfix: makes the dialog/attacklog tables clear again after each round
+    - bugfix: makes the dialog/attacklog tables clear again after each round
   UPPORT:
-  - qol: Doorbells can now be used on doors via ctrl-click instead of alt-click, allowing
-      you to examine doors properly.
+    - qol:
+        Doorbells can now be used on doors via ctrl-click instead of alt-click, allowing
+        you to examine doors properly.
   gameaddict07:
-  - bugfix: The food replicator now costs nutriment based on how many units of reagents
-      are in the replicated dish.
+    - bugfix:
+        The food replicator now costs nutriment based on how many units of reagents
+        are in the replicated dish.
 2025-02-10:
   CHOMPStation2StaffMirrorBot:
-  - bugfix: firedoors checking the processing before being closed
-  - rscadd: Footstep Element
-  - code_imp: Upated DCS
+    - bugfix: firedoors checking the processing before being closed
+    - rscadd: Footstep Element
+    - code_imp: Upated DCS
 2025-02-11:
   Diana:
-  - bugfix: signalers will now signal
+    - bugfix: signalers will now signal
   TheCaramelion:
-  - balance: Disabled Random virus event
+    - balance: Disabled Random virus event
 2025-02-12:
   CHOMPStation2StaffMirrorBot:
-  - bugfix: some ui issues on shield gen, gyro control and rust control
-  - bugfix: a 6 year old issue where any modifier could set your pulse to 0
-  - bugfix: door tag id inputs being too short
-  - bugfix: removed an extra overlay that shouldn't have been on the dual-colour thin
-      vulp ears
-  - code_imp: You can no longer place markings on your lungs (Unit test checks for
-      improper bodypart areas)
+    - bugfix: some ui issues on shield gen, gyro control and rust control
+    - bugfix: a 6 year old issue where any modifier could set your pulse to 0
+    - bugfix: door tag id inputs being too short
+    - bugfix:
+        removed an extra overlay that shouldn't have been on the dual-colour thin
+        vulp ears
+    - code_imp:
+        You can no longer place markings on your lungs (Unit test checks for
+        improper bodypart areas)
   Diana:
-  - bugfix: Xenoarch gas effects will no longer have a 1/3 chance of not working when
-      spawned in.
-  - bugfix: Gas artifacts no longer overpopulate the artifact pool
-  - qol: Gas artifacts and temperature artifacts can no longer be 'spam-toggled' and
-      will instead only be aura artifacts.
-  - code_imp: Made a global blacklist for artifacts that should not spawn in global_lists.dm
+    - bugfix:
+        Xenoarch gas effects will no longer have a 1/3 chance of not working when
+        spawned in.
+    - bugfix: Gas artifacts no longer overpopulate the artifact pool
+    - qol:
+        Gas artifacts and temperature artifacts can no longer be 'spam-toggled' and
+        will instead only be aura artifacts.
+    - code_imp: Made a global blacklist for artifacts that should not spawn in global_lists.dm
   Kashargul:
-  - bugfix: swoopies being unable to use the soulcatcher
+    - bugfix: swoopies being unable to use the soulcatcher
 2025-02-13:
   tacoguy7765093:
-  - maptweak: Map stability fixes.
+    - maptweak: Map stability fixes.
 2025-02-14:
   CHOMPStation2StaffMirrorBot:
-  - bugfix: You can no longer choose multiple autohisses at once
-  - rscadd: dynamic light system for planets
-  - qol: updates diagonal movement calculations
-  - bugfix: belly sprites not properly working in some cases
-  - bugfix: Micro cameras will now properly reset when micros are dropped
+    - bugfix: You can no longer choose multiple autohisses at once
+    - rscadd: dynamic light system for planets
+    - qol: updates diagonal movement calculations
+    - bugfix: belly sprites not properly working in some cases
+    - bugfix: Micro cameras will now properly reset when micros are dropped
   Will:
-  - bugfix: Injectors can now properly spawn on maps now.
-  - bugfix: Some issues with blood were fixed
-  - bugfix: Fixes various issues with genetics
-  - rscadd: The resleever will now talk to you with a cute medical speech bubble when
-      it makes a dna resequencer.
+    - bugfix: Injectors can now properly spawn on maps now.
+    - bugfix: Some issues with blood were fixed
+    - bugfix: Fixes various issues with genetics
+    - rscadd:
+        The resleever will now talk to you with a cute medical speech bubble when
+        it makes a dna resequencer.
   Will, Kash, Diana:
-  - bugfix: Fixes a server crashing issue with flip emote
-  - bugfix: Fixes Genetics and all the powers that came with it
-  - rscadd: Adds Trait Genetics to the game. (Genetics can activate/deactivate traits)
-  - rscadd: Various new traits up-ported (drippy, rad-resistance/immunity, Photosynthesis,
-      Rotting Genetics, Incomprehensible, Less blood volume, slowdown EXTREME, low
-      blood sugar, Agoraphobia, Loneliness, Glass Endurance, reduced biocompat, photosensitivity,
-      haemophillia, pain intolerance, sensitive biochem, table passer,)
-  - rscadd: Health analyzers tell you if someone is  suffering from a genetic side
-      effect and what to give to cure them.
-  - rscadd: Allows cocoon weaver to change eye and skin color
-  - bugfix: Various small bugfixes up-ported from Chomp
-  - sound: Added some founds from Chomp for space inhale/exhale sounds
-  - refactor: Refactors how radiation code works to work with rad resistance/immunity.
-  - refactor: Genetic side effects edited NOT to be shitcode with spawns & sleeps.
-      Made to use timers instead.
-  - code_imp: Updated a LOT of files to be equivalent to their chomp versions.
-  - balance: Adjusted  laser eyes  to do 10 damage instead of 40 per shot, due to
-      being spammable and nutrition being extremely high.
-  - balance: Chems that formerly fixed genetic damage now heal cloneloss instead of
-      genetics, since the new system is incomparable with old genetic healing.
-  - rscadd: People can be reset to their default with the resleever console, as it
-      can print out a genetic injector that does NO radiation or genetic damage, just
-      purely fixing them back to their default.
-  - code_imp: A lot of the below were added because while updating the files to be
-      1:1 where traitgene changes occured, there were massive changes codewise.
-  - code_imp: Autostrip steptriggers added
-  - code_imp: Flare box now contains 14 instead of just 4 flares.
-  - code_imp: Mind secure closets added
-  - code_imp: Persistence doesn't do to_world anymore
-  - code_imp: Removes a LOT OF VORESTATION EDIT COMMENTS as we are no longer a downstream.
-  - code_imp: '''DO NOT USE'' sprite_accessories will no longer appear.'
-  - code_imp: disk/data was removed and replaced with disk/body_record. Fluff item
-      fixed with this in mind.
-  - code_imp: Gets rid of RS comments that slipped into our code somehow.
-  - code_imp: Save_character will now tell you you saved your character.
-  - code_imp: Abandoned crates given dna injectors as possible loot. Teppi ray added.
-      Alien junk prop added.
-  - bugfix: When an observer/dead is destroyed, it now properly gets rid of the visualnet
-      blocked turfs.
-  - bugfix: choosing high blood volume no longer kills you on spawn
-  - bugfix: AI eye no longer hard deletes
-  - rscadd: Last_breath_sounds added from CS. Touched human/human.dm
-  - bugfix: Rest-left Rest-right works properly
-  - code_imp: Moving with broken limbs checks to see if you can feel pain before doing
-      a pain emote
-  - code_imp: Radiation cap increased to 5000 to account for rad resistant peoples.
-  - code_imp: Radiation now is decreased by a rad_removal_mod.
-  - code_imp: Shrinks & grows vars added. Not used here, but used downstream. Crit_mod
-      as well.
-  - code_imp: Monkeys no longer process if there is nobody on their Z level
-  - bugfix: Protean rig no longer hard deletes
-  - bugfix: PAI no longer gets stuck outside disposals
-  - code_imp: new censor_swears proc.
-  - code_imp: Polls now have the 'NEW' under them instead of next to them
-  - code_imp: Brain moved from /new to /init
-  - code_imp: Droplimb acid added
-  - balance: Immunorejection chems last much longer
-  - code_imp: Adds a debug log if someone spawns with no DNA
-  - code_imp: Resleeve designer can now add flavortext per limb
-  - bugfix: Resleever properly applys digi legs now.
-  - balance: Resleeve sickness is no longer a thing (you also do not get genetic mutations
-      from the sleever)
-  - code_imp: Psionic and wingdings fonts added
-  - code_imp: 'Makes the SD MAP_OVERRIDE warning note that it is the SD not the tether
+    - bugfix: Fixes a server crashing issue with flip emote
+    - bugfix: Fixes Genetics and all the powers that came with it
+    - rscadd: Adds Trait Genetics to the game. (Genetics can activate/deactivate traits)
+    - rscadd:
+        Various new traits up-ported (drippy, rad-resistance/immunity, Photosynthesis,
+        Rotting Genetics, Incomprehensible, Less blood volume, slowdown EXTREME, low
+        blood sugar, Agoraphobia, Loneliness, Glass Endurance, reduced biocompat, photosensitivity,
+        haemophillia, pain intolerance, sensitive biochem, table passer,)
+    - rscadd:
+        Health analyzers tell you if someone is  suffering from a genetic side
+        effect and what to give to cure them.
+    - rscadd: Allows cocoon weaver to change eye and skin color
+    - bugfix: Various small bugfixes up-ported from Chomp
+    - sound: Added some founds from Chomp for space inhale/exhale sounds
+    - refactor: Refactors how radiation code works to work with rad resistance/immunity.
+    - refactor:
+        Genetic side effects edited NOT to be shitcode with spawns & sleeps.
+        Made to use timers instead.
+    - code_imp: Updated a LOT of files to be equivalent to their chomp versions.
+    - balance:
+        Adjusted  laser eyes  to do 10 damage instead of 40 per shot, due to
+        being spammable and nutrition being extremely high.
+    - balance:
+        Chems that formerly fixed genetic damage now heal cloneloss instead of
+        genetics, since the new system is incomparable with old genetic healing.
+    - rscadd:
+        People can be reset to their default with the resleever console, as it
+        can print out a genetic injector that does NO radiation or genetic damage, just
+        purely fixing them back to their default.
+    - code_imp:
+        A lot of the below were added because while updating the files to be
+        1:1 where traitgene changes occured, there were massive changes codewise.
+    - code_imp: Autostrip steptriggers added
+    - code_imp: Flare box now contains 14 instead of just 4 flares.
+    - code_imp: Mind secure closets added
+    - code_imp: Persistence doesn't do to_world anymore
+    - code_imp: Removes a LOT OF VORESTATION EDIT COMMENTS as we are no longer a downstream.
+    - code_imp: "'DO NOT USE' sprite_accessories will no longer appear."
+    - code_imp:
+        disk/data was removed and replaced with disk/body_record. Fluff item
+        fixed with this in mind.
+    - code_imp: Gets rid of RS comments that slipped into our code somehow.
+    - code_imp: Save_character will now tell you you saved your character.
+    - code_imp:
+        Abandoned crates given dna injectors as possible loot. Teppi ray added.
+        Alien junk prop added.
+    - bugfix:
+        When an observer/dead is destroyed, it now properly gets rid of the visualnet
+        blocked turfs.
+    - bugfix: choosing high blood volume no longer kills you on spawn
+    - bugfix: AI eye no longer hard deletes
+    - rscadd: Last_breath_sounds added from CS. Touched human/human.dm
+    - bugfix: Rest-left Rest-right works properly
+    - code_imp:
+        Moving with broken limbs checks to see if you can feel pain before doing
+        a pain emote
+    - code_imp: Radiation cap increased to 5000 to account for rad resistant peoples.
+    - code_imp: Radiation now is decreased by a rad_removal_mod.
+    - code_imp:
+        Shrinks & grows vars added. Not used here, but used downstream. Crit_mod
+        as well.
+    - code_imp: Monkeys no longer process if there is nobody on their Z level
+    - bugfix: Protean rig no longer hard deletes
+    - bugfix: PAI no longer gets stuck outside disposals
+    - code_imp: new censor_swears proc.
+    - code_imp: Polls now have the 'NEW' under them instead of next to them
+    - code_imp: Brain moved from /new to /init
+    - code_imp: Droplimb acid added
+    - balance: Immunorejection chems last much longer
+    - code_imp: Adds a debug log if someone spawns with no DNA
+    - code_imp: Resleeve designer can now add flavortext per limb
+    - bugfix: Resleever properly applys digi legs now.
+    - balance:
+        Resleeve sickness is no longer a thing (you also do not get genetic mutations
+        from the sleever)
+    - code_imp: Psionic and wingdings fonts added
+    - code_imp:
+        "Makes the SD MAP_OVERRIDE warning note that it is the SD not the tether
 
-      code:'
-  - code_imp: Xenomorph references changed to Genaprawn like downstream, was included
-      in a few files that were being changed.
-  - code_imp: span_major_announcement, ooc_announcement and subheader_announcement
-      addeed
-  - code_imp: send_ooc_announcement proc added
-  - code_imp: Gets rid of a spawn(0) in species generation
+        code:"
+    - code_imp:
+        Xenomorph references changed to Genaprawn like downstream, was included
+        in a few files that were being changed.
+    - code_imp:
+        span_major_announcement, ooc_announcement and subheader_announcement
+        addeed
+    - code_imp: send_ooc_announcement proc added
+    - code_imp: Gets rid of a spawn(0) in species generation
 2025-02-15:
   CHOMPStation2StaffMirrorBot:
-  - code_imp: moves the dependencies to 516.1655
-  - code_imp: tgui 516
+    - code_imp: moves the dependencies to 516.1655
+    - code_imp: tgui 516
 2025-02-16:
   CHOMPStation2StaffMirrorBot:
-  - code_imp: cleans up a lot of badly converted News
-  - bugfix: The chemmaster will no longer have ethanol turn into wine like Jesus touched
-      it
-  - bugfix: fixes picking a hair style properly instead of just a simple null check
-      (passing the user properly)
-  - code_imp: Adjusts the temp cap to be higher for  engineers trying to make hellmixes.
-  - bugfix: Gases will no longer linger as microscopic values in pipes.
-  - bugfix: IRC comms are disabled without a password set
-  - refactor: up-ports ghost orbiting refactor
-  - bugfix: runechat size multiplier offset
-  - code_imp: Anything in the /mob to /human pathline qdels properly
-  - code_imp: There is now a Unit Test to make sure reagents are valid.
-  - bugfix: Tequila is no longer spelt TequiLLa. Update your maps if they have it
-      placed there manually!
-  - code_imp: removes no longer needed spawns
-  - bugfix: meteor gone projectile
-  - bugfix: muzzle flash lasting forever
-  - bugfix: body record disks being spawned in every box
-  - code_imp: move runechat to a subsystem
+    - code_imp: cleans up a lot of badly converted News
+    - bugfix:
+        The chemmaster will no longer have ethanol turn into wine like Jesus touched
+        it
+    - bugfix:
+        fixes picking a hair style properly instead of just a simple null check
+        (passing the user properly)
+    - code_imp: Adjusts the temp cap to be higher for  engineers trying to make hellmixes.
+    - bugfix: Gases will no longer linger as microscopic values in pipes.
+    - bugfix: IRC comms are disabled without a password set
+    - refactor: up-ports ghost orbiting refactor
+    - bugfix: runechat size multiplier offset
+    - code_imp: Anything in the /mob to /human pathline qdels properly
+    - code_imp: There is now a Unit Test to make sure reagents are valid.
+    - bugfix:
+        Tequila is no longer spelt TequiLLa. Update your maps if they have it
+        placed there manually!
+    - code_imp: removes no longer needed spawns
+    - bugfix: meteor gone projectile
+    - bugfix: muzzle flash lasting forever
+    - bugfix: body record disks being spawned in every box
+    - code_imp: move runechat to a subsystem
   Diana:
-  - rscadd: Adds a bunch of wings to the server from Chompstation
-  - code_imp: Radiation now works differently on the backend.
-  - bugfix: Enabling and disabling the radiation immunity trait no longer breaks things.
-  - bugfix: Fixes a 10 year bug where you wouldn't get your cult spells when turned
-      into a construct.
-  - code_imp: Makes spells less garbage.
+    - rscadd: Adds a bunch of wings to the server from Chompstation
+    - code_imp: Radiation now works differently on the backend.
+    - bugfix: Enabling and disabling the radiation immunity trait no longer breaks things.
+    - bugfix:
+        Fixes a 10 year bug where you wouldn't get your cult spells when turned
+        into a construct.
+    - code_imp: Makes spells less garbage.
   Guti:
-  - image: Added a few icon effects
+    - image: Added a few icon effects
   TheGreatKitsune:
-  - bugfix: removes an unintended way to break into/out of VR
+    - bugfix: removes an unintended way to break into/out of VR
   Will:
-  - bugfix: Vents now properly hibernate instead of running 24/7
-  - code_imp: Gets rid of more sleeps
-  - code_imp: Showers are more efficient on the backend
+    - bugfix: Vents now properly hibernate instead of running 24/7
+    - code_imp: Gets rid of more sleeps
+    - code_imp: Showers are more efficient on the backend
 2025-02-17:
   CHOMPStation2StaffMirrorBot:
-  - code_imp: next part of the new to init
-  - bugfix: tgui say boarder color not updating on larger sizes
-  - bugfix: tgui say not reverting to say channel on radio channel prefix
-  - bugfix: channel swap on button click drag
-  - bugfix: cyborg mats will never show up now
-  - rscadd: You can now use storage containers that is in another storage container
+    - code_imp: next part of the new to init
+    - bugfix: tgui say boarder color not updating on larger sizes
+    - bugfix: tgui say not reverting to say channel on radio channel prefix
+    - bugfix: channel swap on button click drag
+    - bugfix: cyborg mats will never show up now
+    - rscadd: You can now use storage containers that is in another storage container
   tacoguy7765093:
-  - bugfix: Map fixes
+    - bugfix: Map fixes
 2025-02-19:
   ItsSelis:
-  - code_imp: changelog hash is now a global var
-  - code_imp: last viewed changelog is now a tg pref
+    - code_imp: changelog hash is now a global var
+    - code_imp: last viewed changelog is now a tg pref
   TheCaramelion:
-  - qol: Engineering will get an alarm whenever a fire alarm triggers
-  - balance: Makes fire less spreadable
+    - qol: Engineering will get an alarm whenever a fire alarm triggers
+    - balance: Makes fire less spreadable
 2025-02-21:
   CHOMPStation2StaffMirrorBot:
-  - bugfix: build mode  dropped items will no longer always gib
-  - rscadd: lockpick sets can now be found as part of the contraband pool in maint
-      items (useless on station though)
-  - rscadd: lockpick sets can now be used to pick fence gates as well
-  - image: resprited the basic lockpick set
+    - bugfix: build mode  dropped items will no longer always gib
+    - rscadd:
+        lockpick sets can now be found as part of the contraband pool in maint
+        items (useless on station though)
+    - rscadd: lockpick sets can now be used to pick fence gates as well
+    - image: resprited the basic lockpick set
   Kashargul:
-  - qol: prevents too long messages from being sent in tgui say
+    - qol: prevents too long messages from being sent in tgui say
   tacoguy7765093:
-  - bugfix: Mapping errors on relic_base and NS_mines
+    - bugfix: Mapping errors on relic_base and NS_mines
 2025-02-22:
   Cameron-The-Raven:
-  - bugfix: Shooting a ghost with firefighting foam will no longer make the server
-      explode
-  - bugfix: Proteans will no longer runtime under certain circumstances
-  - image: The splash screen now is more vibrant and higher quality!
+    - bugfix:
+        Shooting a ghost with firefighting foam will no longer make the server
+        explode
+    - bugfix: Proteans will no longer runtime under certain circumstances
+    - image: The splash screen now is more vibrant and higher quality!
   Drulikar:
-  - maptweak: Corrections in most chomp maps for the new lints
-  - code_imp: Ported maplints
-  - code_imp: Enabled dmi testing lint
-  - code_imp: DMM test now lints against maps not in TGM format (in modular_chomp/maps)
-      and lints against maps pending a mapmerge
-  - code_imp: Updated pillow dependency (Reinstall hooks to update bootstrap)
-  - code_imp: /turf/simulated/shuttle will now perform an underlay_update if it takes_underlays
-      (instead of only walls doing this)
-  - rscdel: Removed a corrupt dmi file
-  - rscdel: Removed duplicate dreamchecker lint in CI
-  - rscdel: Removed relic base map backups (just use github history)
+    - maptweak: Corrections in most chomp maps for the new lints
+    - code_imp: Ported maplints
+    - code_imp: Enabled dmi testing lint
+    - code_imp:
+        DMM test now lints against maps not in TGM format (in modular_chomp/maps)
+        and lints against maps pending a mapmerge
+    - code_imp: Updated pillow dependency (Reinstall hooks to update bootstrap)
+    - code_imp:
+        /turf/simulated/shuttle will now perform an underlay_update if it takes_underlays
+        (instead of only walls doing this)
+    - rscdel: Removed a corrupt dmi file
+    - rscdel: Removed duplicate dreamchecker lint in CI
+    - rscdel: Removed relic base map backups (just use github history)
   Hunter-Dovetail:
-  - rscadd: scaled_belly-torso
-  - code_imp: adjusted code for scaled_belly to allow for digi-legs
+    - rscadd: scaled_belly-torso
+    - code_imp: adjusted code for scaled_belly to allow for digi-legs
 2025-02-23:
   CHOMPStation2StaffMirrorBot:
-  - rscadd: Reagent-removing 'Pruning mode' to the floral somatoray
-  - bugfix: no more crashing as a ghost
+    - rscadd: Reagent-removing 'Pruning mode' to the floral somatoray
+    - bugfix: no more crashing as a ghost
   Drathek:
-  - code_imp: Cleanup CI and add chomp edit comments to tooling edits
+    - code_imp: Cleanup CI and add chomp edit comments to tooling edits
   Tost:
-  - qol: Changed nail polish's size to small
-  - code_imp: Added w_class = ITEMSIZE_SMALL to nail polish, which was missing originally.
+    - qol: Changed nail polish's size to small
+    - code_imp: Added w_class = ITEMSIZE_SMALL to nail polish, which was missing originally.
 2025-02-24:
   CHOMPStation2StaffMirrorBot:
-  - refactor: moved one global var to a managed global (to test the workflow change)
-  - bugfix: Snake tail no longer has a stray white void pixel following you 24/7 when
-      facing south
-  - bugfix: pizza vouchers will no longer land with such speed that they gib any user,
-      even if not emagged.
+    - refactor: moved one global var to a managed global (to test the workflow change)
+    - bugfix:
+        Snake tail no longer has a stray white void pixel following you 24/7 when
+        facing south
+    - bugfix:
+        pizza vouchers will no longer land with such speed that they gib any user,
+        even if not emagged.
 2025-02-25:
   CHOMPStation2StaffMirrorBot:
-  - rscadd: Add a button to set gender of simplemobs
-  - qol: Adds text to art canvas descriptions indicating their size
+    - rscadd: Add a button to set gender of simplemobs
+    - qol: Adds text to art canvas descriptions indicating their size
   Kashargul:
-  - bugfix: ooc style not being toggle able in character editor
+    - bugfix: ooc style not being toggle able in character editor
   Missile597:
-  - maptweak: Removed access requirement to main part of space disposals to muffin
-      monster can be accessed without ID to enable retrieval of flushed items
-  - maptweak: Chemical dispensers returned to xenobotany and to xenoarchaeology
-  - maptweak: Sif outpost and xenoarchaology outpost scrubber loops updated to filter
-      properly and also filter volatile fuel
-  - maptweak: Removed access requirement to the central maints tunnel. Any secure
-      exits to this tunnel are still access protected
-  - maptweak: Fixed medical bathrooms not being attached to station atmos. Removed
-      some excess piping and wiring going to no destination in maints
-  - maptweak: Added a bit more power and some lights to the starhunter base. The vending
-      machines should hopefully have enough power now
-  - maptweak: Fixes the heavy duty wire by the outpost R-UST that wasn't properly
-      oriented. Power should flow now
-  - maptweak: Tweaked security doors to have correct access levels. Main areas will
-      now be Security instead of Security equipment.
+    - maptweak:
+        Removed access requirement to main part of space disposals to muffin
+        monster can be accessed without ID to enable retrieval of flushed items
+    - maptweak: Chemical dispensers returned to xenobotany and to xenoarchaeology
+    - maptweak:
+        Sif outpost and xenoarchaology outpost scrubber loops updated to filter
+        properly and also filter volatile fuel
+    - maptweak:
+        Removed access requirement to the central maints tunnel. Any secure
+        exits to this tunnel are still access protected
+    - maptweak:
+        Fixed medical bathrooms not being attached to station atmos. Removed
+        some excess piping and wiring going to no destination in maints
+    - maptweak:
+        Added a bit more power and some lights to the starhunter base. The vending
+        machines should hopefully have enough power now
+    - maptweak:
+        Fixes the heavy duty wire by the outpost R-UST that wasn't properly
+        oriented. Power should flow now
+    - maptweak:
+        Tweaked security doors to have correct access levels. Main areas will
+        now be Security instead of Security equipment.
 2025-02-26:
   CHOMPStation2StaffMirrorBot:
-  - code_imp: disabled some testing logs by default (now require -DTESTING to be set
-      while compiling)
-  - rscadd: Vampiric crew now have a source of nutrition in the loadout under the
-      Utility tab!
+    - code_imp:
+        disabled some testing logs by default (now require -DTESTING to be set
+        while compiling)
+    - rscadd:
+        Vampiric crew now have a source of nutrition in the loadout under the
+        Utility tab!
 2025-02-27:
   CHOMPStation2StaffMirrorBot:
-  - bugfix: fixed a few lines of code so that the code is compileable in OpenDream
+    - bugfix: fixed a few lines of code so that the code is compileable in OpenDream
   FluffMedic:
-  - maptweak: portal puzzle is a bit better, wierd plants are back, other minor things
+    - maptweak: portal puzzle is a bit better, wierd plants are back, other minor things
   Kashargul:
-  - bugfix: soul captured mobs can now use subtle and whisper
+    - bugfix: soul captured mobs can now use subtle and whisper

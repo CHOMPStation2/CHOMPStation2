@@ -52,7 +52,7 @@
 /obj/machinery/computer/pod/attackby(I as obj, user as mob)
 	if(I.has_tool_quality(TOOL_SCREWDRIVER))
 		playsound(src, W.usesound, 50, 1)
-		if(do_after(user, 20))
+		if(do_after(user, 2 SECONDS, target = src))
 			if(stat & BROKEN)
 				to_chat(user, span_notice("The broken glass falls out."))
 				var/obj/structure/computerframe/A = new /obj/structure/computerframe( loc )
@@ -113,7 +113,7 @@
 	if(..())
 		return
 
-	var/dat = "<HTML><BODY><TT><B>[title]</B>"
+	var/dat = "<TT><B>[title]</B>"
 	user.set_machine(src)
 	if(connected)
 		var/d2
@@ -134,11 +134,11 @@
 		dat += "<HR>\nPower Level: [temp]<BR>\n<A href = 'byond://?src=\ref[src];alarm=1'>Firing Sequence</A><BR>\n<A href = 'byond://?src=\ref[src];drive=1'>Test Fire Driver</A><BR>\n<A href = 'byond://?src=\ref[src];door=1'>Toggle Outer Door</A><BR>"
 	else
 		dat += "<BR>\n<A href = 'byond://?src=\ref[src];door=1'>Toggle Outer Door</A><BR>"
-	dat += "<BR><BR><A href='byond://?src=\ref[user];mach_close=computer'>Close</A></TT></BODY></HTML>"
-	user << browse(dat, "window=computer;size=400x500")
+	dat += "<BR><BR><A href='byond://?src=\ref[user];mach_close=computer'>Close</A></TT>"
 	add_fingerprint(user)
-	onclose(user, "computer")
-	return
+	var/datum/browser/popup = new(user, "pod_computer", "Pod Computer", 400, 500)
+	popup.set_content(dat)
+	popup.open()
 
 
 /obj/machinery/computer/pod/process()
@@ -204,7 +204,7 @@
 	name = "ProComp Executive IIc"
 	desc = "Criminals often operate on a tight budget. Operates external airlocks."
 	title = "External Airlock Controls"
-	req_access = list(access_syndicate)
+	req_access = list(ACCESS_SYNDICATE)
 
 /obj/machinery/computer/pod/old/syndicate/attack_hand(var/mob/user as mob)
 	if(!allowed(user))

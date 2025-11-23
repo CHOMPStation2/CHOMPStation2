@@ -1,58 +1,39 @@
-/datum/trait/neutral/hardfeet
-	custom_only = FALSE
-
-/datum/trait/positive/linguist
-	custom_only = FALSE
-
-/datum/trait/positive/toxin_gut
-	custom_only = FALSE
-
-/datum/trait/positive/light_breather
-	name ="Light Breather"
-	desc = "You need less air for your lungs to properly work.."
-	cost = 1
-
-	custom_only = FALSE
-	can_take = ORGANICS
-	var_changes = list("minimum_breath_pressure" = 12)
-	excludes = list(/datum/trait/negative/deep_breather)
-
-
-/datum/trait/positive/virus_immune
-	name = "Virus Immune"
-	desc = "You are immune to viruses."
-	cost = 1
-
-	can_take = ORGANICS //no reason to clog up synth selection
-	var_changes = list("virus_immune" = 1)
-
-/datum/trait/positive/emp_resist
-	name = "EMP Resistance"
-	desc = "You are resistant to EMPs"
-	cost = 3
-
-	can_take = SYNTHETICS
-	custom_only = FALSE
-	var_changes = list("emp_dmg_mod" = 0.7)
-	excludes = list(/datum/trait/negative/faultwires, /datum/trait/negative/poorconstruction, /datum/trait/positive/emp_resist_major)
-
-/datum/trait/positive/emp_resist/apply(var/datum/species/S,var/mob/living/carbon/human/H)
-	..()
-	H.add_modifier(/datum/modifier/trait/empresist)
-
-/datum/trait/positive/emp_resist_major
-	name = "Major EMP Resistance"
-	desc = "You are very resistant to EMPs"
-	cost = 5
-
-	can_take = SYNTHETICS
-	custom_only = FALSE
-	var_changes = list("emp_dmg_mod" = 0.5)
-	excludes = list(/datum/trait/negative/faultwires, /datum/trait/negative/poorconstruction, /datum/trait/positive/emp_resist)
-
-/datum/trait/positive/emp_resist_major/apply(var/datum/species/S,var/mob/living/carbon/human/H)
-	..()
-	H.add_modifier(/datum/modifier/trait/empresistb)
-
 /datum/trait/positive/weaver
-	custom_only = FALSE //Let species use the webs for wierd stuff like metal webs, slime creations, etc.
+	category = 0
+	cost = 0
+
+/datum/trait/positive/linguist //THIS HOOKING INTO THE ORIGINAL LINGUIST FUCKS THINGS HARD. DURING TRAIT REWORK, DELETE THIS AND REENABLE LINGUIST/MASTER
+	name = "Master Linguist"
+	desc = "You are a master of languages! For whatever reason you might have, you are able to learn many more languages than others. Your language cap is 12 slots."
+	cost = 2
+	var_changes = list("num_alternate_languages" = 15)
+	var_changes_pref = list("extra_languages" = 12)
+	custom_only = FALSE
+
+/datum/trait/positive/darksight
+	name = "Darksight"
+	desc = "Allows you to see a short distance in the dark. (Half the screen)."
+	cost = 1
+	var_changes = list("darksight" = 4)  //CHOMP Edit
+	custom_only = FALSE
+	banned_species = list(SPECIES_TAJARAN, SPECIES_SHADEKIN_CREW, SPECIES_SHADEKIN, SPECIES_XENOHYBRID, SPECIES_VULPKANIN, SPECIES_XENO, SPECIES_XENOCHIMERA, SPECIES_VASILISSAN, SPECIES_WEREBEAST) //These species already have strong darksight by default.
+
+/datum/trait/positive/darksight_plus
+	name = "Darksight, Major"
+	desc = "Allows you to see in the dark for the whole screen."
+	cost = 2
+	var_changes = list("darksight" = 8)
+	custom_only = FALSE
+	banned_species = list(SPECIES_TAJARAN, SPECIES_SHADEKIN_CREW, SPECIES_SHADEKIN, SPECIES_XENOHYBRID, SPECIES_VULPKANIN, SPECIES_XENO, SPECIES_XENOCHIMERA, SPECIES_VASILISSAN, SPECIES_WEREBEAST) //These species already have strong darksight by default.
+
+/datum/trait/positive/endurance_high
+	cost = 3
+	excludes = list(/datum/trait/positive/endurance_very_high, /datum/trait/positive/endurance_extremely_high) // CHOMPEdit: Increased Endurance.
+	// excludes = list(/datum/trait/positive/brute_resist, /datum/trait/positive/minor_brute_resist, /datum/trait/positive/minor_burn_resist, /datum/trait/positive/burn_resist)
+	// Tankiness at the cost of severe downsides should be allowed - we have a large number of negatives that hurt hard, but you can't take many positives.
+
+/datum/trait/positive/burn_resist_plus
+	cost = 3 // Exact Opposite of Burn Weakness Major, except Weakness Major is 50% incoming, this is -40% incoming.
+
+/datum/trait/positive/brute_resist_plus // Equivalent to Brute Weakness Major, cannot be taken at the same time.
+	cost = 3 // Exact Opposite of Brute Weakness Major, except Weakness Major is 50% incoming, this is -40% incoming.

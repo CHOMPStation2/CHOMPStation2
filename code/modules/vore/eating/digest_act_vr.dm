@@ -70,7 +70,7 @@
 				if(!oldname)
 					oldname = cleanname ? cleanname : name
 				cleanname = "[d_stage_name] [oldname]"
-				decontaminate()
+				wash(CLEAN_ALL)
 				if(istype(B))
 					gurgled_color = B.contamination_color //Apply the correct color setting so uncontaminable things can still have the right overlay.
 					gurgle_contaminate(B, B.contamination_flavor, B.contamination_color)
@@ -129,7 +129,7 @@
 				S.use(1)
 				digest_stage = w_class
 		else
-			if(istype(src, /obj/item/reagent_containers/food))
+			if(istype(B) && istype(src, /obj/item/reagent_containers/food))
 				if(ishuman(B.owner) && reagents)
 					var/mob/living/carbon/human/H = B.owner
 					reagents.trans_to_holder(H.ingested, (reagents.total_volume), B.nutrition_percent / 100, 0)
@@ -178,7 +178,7 @@
 /obj/item/card/id/digest_act(atom/movable/item_storage = null)
 	desc = "A partially digested card that has seen better days. The damage appears to be only cosmetic."
 	if(!sprite_stack || !istype(sprite_stack) || !(sprite_stack.len))
-		icon = 'icons/obj/card_vr.dmi'
+		icon = 'icons/obj/card.dmi'
 		icon_state = "[initial(icon_state)]_digested"
 	else
 		if(!sprite_stack.Find("digested"))
@@ -241,10 +241,3 @@
 	return FALSE
 
 //moved prot organ digest to their appropriate file
-
-// Gradual damage measurement
-/obj/item
-	var/digest_stage = null
-	var/d_mult_old = 1 //digest stage descriptions
-	var/d_mult = 1 //digest stage descriptions
-	var/d_stage_overlay //digest stage effects

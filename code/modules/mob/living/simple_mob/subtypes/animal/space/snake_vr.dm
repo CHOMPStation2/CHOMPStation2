@@ -23,9 +23,10 @@
 	tt_desc = "E Reptilia Serpentes"
 	catalogue_data = list(/datum/category_item/catalogue/fauna/snake)
 
-	icon_state = "green"
-	icon_living = "green"
-	icon_dead = "green_dead"
+	icon_state = "snek"
+	icon_living = "snek"
+	icon_dead = "snek_dead"
+	icon_rest = "snek_rest"
 	icon = 'icons/mob/snake_vr.dmi'
 
 	maxHealth = 15
@@ -47,24 +48,11 @@
 	say_list_type = /datum/say_list/snake
 	ai_holder_type = /datum/ai_holder/simple_mob/passive
 
-	// CHOMPEdit Start - New sprites & Added vore
-	/*
-	icon_state = "python"
-	icon_living = "python"
-	icon_dead = "python_dead"
-	icon = 'icons/mob/snake_vr.dmi'
-	*/
-	icon_state = "snek"
-	icon_living = "snek"
-	icon_dead = "snek_dead"
-	icon_rest = "snek_rest"
-	icon = 'modular_chomp/icons/mob/animal_ch.dmi'
-	// CHOMPEdit End
 
 	vore_active = 1
 	vore_capacity = 1
 	vore_default_mode = DM_DIGEST
-	vore_icons = SA_ICON_LIVING | SA_ICON_REST // CHOMPEdit
+	vore_icons = SA_ICON_LIVING | SA_ICON_REST
 	vore_escape_chance = 20
 	swallowTime = 50
 	vore_bump_chance = 10
@@ -74,11 +62,7 @@
 	can_be_drop_prey = FALSE
 
 // Adds vore belly
-/mob/living/simple_mob/animal/passive/snake/init_vore()
-	if(!voremob_loaded)
-		return
-	if(LAZYLEN(vore_organs))
-		return
+/mob/living/simple_mob/animal/passive/snake/load_default_bellies()
 	. = ..()
 	var/obj/belly/B = vore_selected
 	B.name = "stomach"
@@ -124,7 +108,7 @@
 	icon_state = "red"
 	icon_living = "red"
 	icon_dead = "red_dead"
-	icon = 'icons/mob/snake_vr.dmi' // CHOMP Comment: Whenever the red snake sprites, this needs to be changed. I swear someone made sprites for this.
+	icon = 'icons/mob/snake_vr.dmi'
 
 /*
  * Python
@@ -133,6 +117,11 @@
 	name = "python"
 	desc = "A big, thick snake."
 	tt_desc = "E Reptilia Pythonidae"
+
+	icon_state = "python"
+	icon_living = "python"
+	icon_dead = "python_dead"
+	icon = 'icons/mob/snake_vr.dmi'
 
 /*
  * NOODLE IS HERE! SQUEEEEEEEE~

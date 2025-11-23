@@ -84,14 +84,6 @@
 	else
 		expire(silent = FALSE)
 
-
-
-
-
-
-
-
-
 /datum/modifier/shield_projection
 	name = "Shield Projection"
 	desc = "You are currently protected by a shield, rendering nigh impossible to hit you through conventional means."

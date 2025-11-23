@@ -1,10 +1,5 @@
 /var/global/running_demand_events = list()
 
-/hook/sell_shuttle/proc/supply_demand_sell_shuttle(var/area/area_shuttle)
-	for(var/datum/event/supply_demand/E in running_demand_events)
-		E.handle_sold_shuttle(area_shuttle)
-	return 1 // All hooks must return one to show success.
-
 //
 // The Supply Demand Event - CentCom asks for us to put some stuff on the shuttle
 //
@@ -32,7 +27,6 @@
 			if(DEPARTMENT_MEDICAL)
 				choose_chemistry_items(roll(severity, 2))
 			if(DEPARTMENT_RESEARCH) // Would be nice to differentiate between research diciplines
-				choose_research_items(roll(severity, 2))
 				choose_robotics_items(roll(1, severity))
 			if(DEPARTMENT_CARGO)
 				choose_alloy_items(rand(1, severity))
@@ -63,7 +57,8 @@
 		send_console_message(message, dpt);
 
 	// Also announce over main comms so people know to look
-	command_announcement.Announce("An order for the station to deliver supplies to [command_name()] has been delivered to all supply Request Consoles", my_department)
+	command_announcement.Announce("An order for the [using_map.facility_type] to deliver supplies to [command_name()] has been delivered to all supply Request Consoles", my_department)
+	RegisterSignal(SSdcs, COMSIG_GLOB_SUPPLY_SHUTTLE_DEPART, PROC_REF(handle_supply_demand_sell_shuttle))
 
 /datum/event/supply_demand/tick()
 	if(required_items.len == 0)
@@ -71,12 +66,13 @@
 
 /datum/event/supply_demand/end()
 	running_demand_events -= src
+	UnregisterSignal(SSdcs, COMSIG_GLOB_SUPPLY_SHUTTLE_DEPART)
 	// Check if the crew succeeded or failed!
 	if(required_items.len == 0)
 		// Success!
 		SSsupply.points += 100 * severity
 		var/msg = "Great work! With those items you delivered our inventory levels all match up. "
-		msg += "[capitalize(pick(first_names_female))] from accounting will have nothing to complain about. "
+		msg += "[capitalize(pick(GLOB.first_names_female))] from accounting will have nothing to complain about. "
 		msg += "I think you'll find a little something in your supply account."
 		command_announcement.Announce(msg, my_department)
 	else
@@ -87,6 +83,16 @@
 		for(var/datum/supply_demand_order/req in required_items)
 			message += req.describe() + "<br>"
 		post_comm_message("'[my_department] Mission Summary'", message)
+
+/**
+ * Signal Handler for when the shuttle fires COMSIG_GLOB_SUPPLY_SHUTTLE_DEPART
+ */
+/datum/event/supply_demand/proc/handle_supply_demand_sell_shuttle(datum/source, list/area/supply_shuttle_areas)
+	SIGNAL_HANDLER
+	for(var/datum/event/supply_demand/E in running_demand_events)
+		// I don't think multiple supply shuttles have ever been used, but retaining support regardless...
+		for(var/area/sub_area in supply_shuttle_areas)
+			E.handle_sold_shuttle(sub_area)
 /**
  * Event Handler for responding to the supply shuttle arriving at centcom.
  */
@@ -167,7 +173,7 @@
 	src.type_path = type_path
 	src.name = initial(type_path.name)
 	if(!name)
-		log_debug("supply_demand event: Order for thing [type_path] has no name.")
+		log_game("supply_demand event: Order for thing [type_path] has no name.")
 
 /datum/supply_demand_order/thing/match_item(var/atom/I)
 	if(istype(I, type_path))
@@ -208,7 +214,7 @@
 		qty_need = CEILING((qty_need - amount_to_take), 1)
 		return 1
 	else
-		log_debug("supply_demand event: not taking reagent '[reagent_id]': [amount_to_take]")
+		log_game("supply_demand event: not taking reagent '[reagent_id]': [amount_to_take]")
 	return
 
 //
@@ -224,7 +230,7 @@
 	var/total_moles = mixture.total_moles
 	var desc = "Canister filled to [round(pressure,0.1)] kPa with gas mixture:\n"
 	for(var/gas in mixture.gas)
-		desc += "<br>- [gas_data.name[gas]]: [round((mixture.gas[gas] / total_moles) * 100)]%\n"
+		desc += "<br>- [GLOB.gas_data.name[gas]]: [round((mixture.gas[gas] / total_moles) * 100)]%\n"
 	return desc
 
 /datum/supply_demand_order/gas/match_item(var/obj/machinery/portable_atmospherics/canister)
@@ -234,14 +240,14 @@
 	if(!canmix || canmix.total_moles <= 0)
 		return
 	if(canmix.return_pressure() < mixture.return_pressure())
-		log_debug("supply_demand event: canister fails to match [canmix.return_pressure()] kPa < [mixture.return_pressure()] kPa")
+		log_game("supply_demand event: canister fails to match [canmix.return_pressure()] kPa < [mixture.return_pressure()] kPa")
 		return
 	// Make sure ratios are equal
 	for(var/gas in mixture.gas)
 		var/targetPercent = round((mixture.gas[gas] / mixture.total_moles) * 100)
 		var/canPercent = round((canmix.gas[gas] / canmix.total_moles) * 100)
 		if(abs(targetPercent-canPercent) > 1)
-			log_debug("supply_demand event: canister fails to match because '[gas]': [canPercent] != [targetPercent]")
+			log_game("supply_demand event: canister fails to match because '[gas]': [canPercent] != [targetPercent]")
 			return // Fail!
 	// Huh, it actually matches!
 	qty_need -= 1
@@ -258,16 +264,6 @@
 		types -= R // Don't pick the same thing twice
 		var/chosen_path = initial(R.result)
 		var/chosen_qty = rand(1, 5)
-		required_items += new /datum/supply_demand_order/thing(chosen_qty, chosen_path)
-	return
-
-/datum/event/supply_demand/proc/choose_research_items(var/differentTypes)
-	var/list/types = subtypesof(/datum/design)
-	for(var/i in 1 to differentTypes)
-		var/datum/design/D = pick(types)
-		types -= D // Don't pick the same thing twice
-		var/chosen_path = initial(D.build_path)
-		var/chosen_qty = rand(1, 3)
 		required_items += new /datum/supply_demand_order/thing(chosen_qty, chosen_path)
 	return
 
@@ -314,7 +310,7 @@
 /datum/event/supply_demand/proc/choose_atmos_items(var/differentTypes)
 	var/datum/gas_mixture/mixture = new
 	mixture.temperature = T20C
-	var/unpickedTypes = gas_data.gases.Copy()
+	var/unpickedTypes = GLOB.gas_data.gases.Copy()
 	unpickedTypes -= GAS_VOLATILE_FUEL // Don't do that one
 	for(var/i in 1 to differentTypes)
 		var/gasId = pick(unpickedTypes)

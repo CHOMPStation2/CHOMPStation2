@@ -1,0 +1,419 @@
+2025-06-01:
+  CHOMPStation2StaffMirrorBot:
+    - qol:
+        Crew Monitor & Alarm Map UIs now use a derivative of the Holomap instead
+        of a weird custom mix of handmade icons.
+    - admin: VV now has a dark mode (toggleable in game prefs)
+    - admin:
+        VV now uses getFlatIcon to get a better preview (also toggleable in game
+        prefs)
+    - admin: VV now supports previews for /images
+  Diana:
+    - bugfix: Markings will no longer make your limbs invisible if toggled off
+  Guti:
+    - rscadd: Added the ability for virologists to falter their diseases
+    - rscadd: Added dormant diseases, that some crewmembers might carry.
+    - rscadd: Added three new chemicals for higher level symptoms.
+    - rscadd: Old syringes and old syringe boxes, which may include include diseases.
+    - balance: Buffed the chance of mice having diseases on them.
+2025-06-03:
+  CHOMPStation2StaffMirrorBot:
+    - bugfix: genescanner tool now has a proper description
+    - bugfix: Holomaps/Nanomaps no longer show POI walls
+    - bugfix: lights do not ignore light switch state when a bulb is inserted
+    - image: Fixed taj belly markings missing their groins.
+    - bugfix: macrophages escape chance is now properly set to 20%
+    - balance: Unathi no longer pass out from sugar, they just get knocked over.
+  Diana:
+    - code_imp: Less random lagspikes during the middle of the round.
+  FluffMedic:
+    - qol: Cyber shuttle has full glass walls
+  Guti:
+    - refactor: Refactored soap
+    - refactor: Refactored washing machine code to get rid of sleeps
+    - rscadd: You can eat soap now
+    - rscadd: Clean component
+    - code_imp: Replaced clean(), clean_blood(), and clean_contamination() with wash()
+  Verkister:
+    - bugfix: Fixed unlinked digestive juice turfs not damaging humanmobs.
+2025-06-04:
+  CHOMPStation2StaffMirrorBot:
+    - bugfix: Fixed showers not washing atoms in it's space
+    - rscadd:
+        Added a small amount of weaken to spider warning bites to knock people
+        over.
+    - rscadd:
+        Added a new variable to mobs that can prevent them from being pulled when
+        alive, currently only applies to the spiders.
+    - bugfix:
+        Fixed an issue where spiders would sometimes try to inject poison where
+        they couldn't and runtime.
+    - rscadd: Multishock integration
+    - rscadd: Photodegeneration genetrait, cannot be selected from round start
+    - bugfix:
+        Drippy trait will no longer drop drips into the cryopod when a human with
+        it is in the pod
+    - refactor:
+        inStasisNow() has a base proc on mob, for ease of component compatibility
+        between simple and human mobs
+    - refactor: Moved species/shadow and zaddat light-based damage code to a component
+  Diana:
+    - bugfix: You now lose nutrition passively again
+2025-06-05:
+  Diana:
+    - rscadd:
+        Your spleen has been rescued from the Skrell. (Everyone now has a spleen,
+        not JUST skrell)
+    - bugfix: Worm meat can now properly be cut into
+    - bugfix:
+        Organs now properly show their names when you're interacting with them
+        surgically.
+    - qol: Surgery steps don't have randomness anymore. Surgery steps also lowered
+    - qol:
+        You can shove dead organs in bodies. Still a bad idea, but can be combined
+        with the patient stabilizer to some success.
+    - code_imp:
+        Adds a spooky modifier with some special stuff to go along with it.
+        Not obtainable outside of admins.
+    - bugfix:
+        Puking with a broken liver now properly makes you vomit the correct blood
+        color
+  Guti:
+    - bugfix: Fixed wash() proc to delete cleanable decals
+    - bugfix: Fixed mops and soaps not making the floor wet
+2025-06-06:
+  Diana:
+    - bugfix: Artifact range logic fixed
+    - bugfix: Lightning artifact now respects protection
+    - balance: DNA mutation artifact no longer mutates genes as often
+    - qol: DNA mutation artifact no longer spams your chat.
+2025-06-07:
+  CHOMPStation2StaffMirrorBot:
+    - admin:
+        Admin verb subsystem is now integrated and a small amount of verbs have
+        been converted into the new format (categories or verb names are still the same
+        of course).
+    - maptweak:
+        Tether tweaks. Added a swimwear locker to the locker room, a wall locker
+        with towels near the spa, and polarisable windows to the massage room.
+    - code_imp:
+        removed duplicate b_type var from human mobs, they use their dna one
+        only now
+    - bugfix: bloodtype not being assigned to organs and limbs
+    - rscadd: Fingerprints can now be washed off in washing machines and showers.
+    - refactor:
+        Reworked all bloodsplatter, fingerprint, gunshot residue, and clothing
+        fiber code into a single datum
+    - bugfix: cult ritual runes missing wash proc
+    - bugfix: vehicles no longer run you over going down stairs if you are driving them
+    - refactor: janicart updated to use vehicle code
+    - bugfix: a crash with the General Tab in the vorepanel if used by robots
+    - rscadd:
+        Implements digi sprite markings for hooves, fox legs, tiger stripes, and
+        a gloss for toning.
+    - maptweak:
+        Added janicart and keys for it to each station map. This is just in
+        the existing room on SD and RP. On the tether, there is a small garage on the
+        side of the janitors office now, because I thought that would be cute!
+2025-06-08:
+  CHOMPStation2StaffMirrorBot:
+    - rscadd: Added custom links to the character directory.
+    - bugfix: Fake attackers crashing MC with invalid turfs
+    - bugfix: cleaning applies description to desc, not to name!
+    - bugfix: Circuit boards no longer bad-del
+    - rscadd:
+        AIs can now open their multicam views in completely separate windows and
+        maintain them while switching back to main view.
+    - bugfix: Camera consoles work more consistently.
+    - rscadd: Glitch-out effect to AI holograms when stuff passes through them
+    - bugfix:
+        fixed mobs that qdel on death, causing crashes when crushed by doors and
+        dying.
+    - bugfix: Phased shadekin can no longer be lit on fire by atmofires
+    - bugfix: Phased shadekin can no longer be run over by vehicles
+    - bugfix: maintenance drone HP calculations
+    - bugfix: borgs don't try to leave suit fibres on fingerprint checks
+    - qol:
+        The chat now supports TTS for chosen message types, filtered the same way
+        that chat tabs are filtered. This is an accessibility feature.
+    - bugfix: Fixed runtime on vampire xenoartifact's blood sucking effect
+2025-06-09:
+  CHOMPStation2StaffMirrorBot:
+    - bugfix: phased shadekin no longer prevent airlocks from closing
+    - bugfix: phased shadekin are no longer crushed by dangerous airlocks closing
+    - rscadd: Dormant diseases may now be acquired via blood samples
+    - qol:
+        Allowed virus immune species to get dormant diseases, as well as access to
+        Disease Carrier trait
+    - balance: The extrapolator may find any disease with no regards of it's stealth
+    - code_imp: added GetDormantDiseases proc
+  Diana:
+    - bugfix: Plat and gold can be put in prosfabs again
+    - balance: Spooky modifier was tested and had some balance adjustments
+  FluffMedic:
+    - bugfix: properly removes a nonfunctioning attack from the E-janus
+    - bugfix: The hivebot tower summoning the wrong mobs
+    - bugfix: wrong pilot for E-janus
+    - qol: Added more feedback to the E-Janus's armor gimmick.
+2025-06-11:
+  CHOMPStation2StaffMirrorBot:
+    - bugfix: fixed dormant diseases showing up in Medical scanners
+    - bugfix: some vorepanel message toggles in the general tab
+    - bugfix: game panel inaccessible to devs / event managers
+  FluffMedic:
+    - rscadd: 2 new sif POIs based off a past event
+2025-06-12:
+  Diana, Will, Kash:
+    - qol: Prometheans now use an appearance changer instead of 100 specialty verbs!
+    - qol: Cocoon trait can now change more things about you!
+    - qol: TF methods using the apperance changer allow you to load slots.
+    - bugfix: missing ooc notes added to body record for transfer
+    - bugfix: clonepods do not break listener code when releasing occupants
+    - bugfix: clonepod computer does not spin right around baby when interacted with
+    - bugfix: body redesign UI preview aligned correctly and no longer tiny
+    - bugfix: species/copy_vars no longer takes centuries validating known good data
+    - qol:
+        anyone adding new dna vars no longer needs to worry about the dna cloning
+        proc.
+    - balance: FBP Xenochimera regenerate their robolimbs back
+    - balance:
+        Organic Xenochimera drop their robolimbs, allowing them to slap them
+        back on post-revival
+    - code_imp:
+        added BLACKLISTED_COPY_VARS macro, for safely iterating or filtering
+        atom.vars
+    - code_imp:
+        added COMSIG_HUMAN_DNA_FINALIZED signal. Sent when a human mob is fully
+        init with all dna and species vars applied.
+    - code_imp: hair gradients use dnaUIs instead of separate vars
+    - refactor:
+        massive rework to dna, bodyrecords and dna2record datums to handle copying
+        vars, and applying them to their owner mob more gracefully
+    - refactor:
+        all dna related machines that resleeve humans, except the autosleever,
+        use a unified proc to ensure no loss of data.
+    - refactor:
+        Xenochimera no longer use admin procs to heal, and use an internal body
+        record datum.
+  FluffMedic:
+    - bugfix: carrier being disconnected from medical sensors
+2025-06-13:
+  CHOMPStation2StaffMirrorBot:
+    - rscadd: Improved AI holonoms, they use real bellies now
+    - rscadd: "Succubi care about consent and have a safeword~ :heart:"
+    - sound: SMESes now make a big contactor noise when switched on and off.
+    - admin: Added a new smite that forces the skyrim intro meme onto someone.
+    - qol: The stripping menu is more intuitive now
+    - bugfix: Emote sound mode should now apply to things like *meow.
+    - rscadd: The cooking machines now have unique UIs.
+    - qol:
+        The cooking machines like the grill and deep fryer now attempt to predict
+        what they will produce.
+    - rscadd: Character Directory now shows profile pictures.
+    - code_imp: added primitive color grading for areas and weather
+    - qol:
+        You can configure whether or not you want the runechat "Balloon Messages"
+        to appear to you or not
+  Will:
+    - qol: dna modification console takes 5 seconds instead of 30 to make a new injector
+    - qol:
+        gene scanner provides the current value of an active gene, but not it's block
+        ID
+    - qol:
+        gene scanner can now scan dna injectors to find out what unmarked injectors
+        do
+2025-06-14:
+  CHOMPStation2StaffMirrorBot:
+    - code_imp: fixed colorgrading issues
+    - qol: Paint bucket no longer tries to preview, it's too confusing to look at
+    - qol: Added a new vore pref to force belly visuals to be capped at a certain alpha.
+    - rscadd:
+        Real Bluespace RPED that works at range. Locked behind prototype brped
+        requirements + anomalous 1.
+  FluffMedic:
+    - bugfix: hivebot disks are named disks instead of disc.
+    - qol: reduced softlock chances
+    - balance: blue tower hivebot has more wiggle room, and is a bit more worthwhile
+2025-06-15:
+  CHOMPStation2StaffMirrorBot:
+    - bugfix: airflow thrown objects don't hit phased shadekin now
+    - bugfix:
+        fixed a crash when updating a player record from the employment records
+        computer
+    - rscadd:
+        Added new hackable wires to disposal pipe junctions. Divert the flow of
+        junk as you desire.
+    - bugfix: Fixed disposal pipe deconstruction
+  Diana:
+    - balance: Dogborg blade can be turned on/off. Glows when on.
+    - rscadd: Dogborg blade can be recolored.
+    - rscadd: Ninja blade (more damage) and Syndicate blade (starts red)
+2025-06-16:
+  CHOMPStation2StaffMirrorBot:
+    - rscadd: makes the switch tail layer verb let you choose from three layers
+    - maptweak:
+        Added another 8 space heaters to the SD. Three of them in general maint,
+        5 of them specifically in a totally forgotten maint corner attached only to
+        atmos. Also generally spruced up that little room so it's not just blank.
+  Diana:
+    - rscadd: Kinetic Crusher and Kinetic Glaive now in mining vending machine
+    - balance:
+        Kinetic weapon damage variables shifted around. Gaunelts stronger, Dagger
+        hits harder when thrown, Machete does more when backstabbing.
+    - bugfix: Kinetic crusher now does 25 damage, up from 0
+    - rscadd: Miners now start with a kinetic crusher in their starting locker
+  Will:
+    - refactor: Hose connectors are a component now
+    - bugfix: Reagent hoses are now stack-able
+    - bugfix:
+        It is no longer possible to plug a reagent hose into the same object,
+        making it impossible to retrieve
+    - bugfix:
+        Reagent hoses no longer become unusable after clicking on an object that
+        already has all its connections used
+    - bugfix: Reagent hoses update on object move instead of lagging behind
+    - bugfix: He3 tank always spawning empty, and with a broken name
+    - bugfix: Reagent hoses are no longer a memory leak
+    - qol: Objects with reagent hose connections now show those connections when examined
+    - qol: Reagent hoses have feedback on connection and disconnection
+    - qol: Reagent hoses drop on disconnection instead of being destroyed
+    - qol: Reagent hoses change colors as reagents are pumped through them
+2025-06-17:
+  CHOMPStation2StaffMirrorBot:
+    - rscadd: Xenoarch's Radiocarbon Spectrometer has been rewritten to be more engaging.
+  Will:
+    - rscadd:
+        reagent hoses can be used to inflate and drain other human mobs in various
+        ways
+    - rscadd: borgs now have hose connectors that go to their current vore belly
+    - qol:
+        Show belly fluid verb now shows composition of belly fluids and not just
+        amount
+    - code_imp:
+        reagents that enter someone's belly become belly reagents to respect
+        prefs
+2025-06-19:
+  CHOMPStation2StaffMirrorBot:
+    - rscadd: New process option, "Break Bone".
+    - qol:
+        If you have digestion pain turned on, you will receive broken bone notifications
+        even inside a stomach.
+    - bugfix:
+        Forensics data merging on objects without data but with data on the merging
+        object, no longer crash on merge
+    - bugfix:
+        reagent dispenser tanks no longer perform alchemy, turning all reagents
+        into fuel spills
+    - rscadd: Voodoo dolls now render things all scrungly
+    - rscadd: Remote scene tools have some new utility verbs
+    - qol: Remote scene tools now show the status of their counterpart's wearer on examine
+    - bugfix: Various typos have been fixed for the recycler and recycling vendor
+    - bugfix:
+        The maint recycler doesn't nuke your points after getting to 999 anymore.
+        whoops.
+    - rscadd:
+        Viruses now spawn with random names, depending on the symptoms, source,
+        and random factors.
+    - rscadd: Added medical names to all the common diseases
+    - rscadd:
+        Examines now embed extra information that used to be examine tab exclusive.
+        This is a preference, so can be configured to remain as the old behavior.
+    - rscdel: Removed the old verb for setting examine mode
+    - refactor: Examine Mode is now a TG preference
+    - bugfix: Fixed janitor shutter buttons on the tether.
+    - code_imp: more browse to datum browser
+    - code_imp: tgui-core 4.3.1
+    - bugfix:
+        blood without dna from simple mobs will track onto shoes, floors and hands
+        again
+  Diana:
+    - bugfix: arglasses can be properly selected in the loadout
+2025-06-20:
+  CHOMPStation2StaffMirrorBot:
+    - code_imp: gene conflict list uses much less memory
+2025-06-21:
+  Diana, Kash:
+    - rscadd: Borgs now have toolbelts instead of various misc tools in their inventory.
+    - rscadd:
+        Borgs now have a Material Dispenser that holds all the various materials
+        they can make, instead of being scattered throughout your inventory
+    - rscadd:
+        Grippers are now consolidated and have 5 inventory slots each. No more
+        guessing 'What gripper is used for what'
+    - rscdel: tool bloat
+  Kash Guti Will:
+    - rscadd:
+        Adds genes and diseases to bingle's database so symptoms and genetics
+        stuff can be looked up ingame
+    - code_imp: added unit test for virus names and trait names to prevent tgui issues
+2025-06-22:
+  CHOMPStation2StaffMirrorBot:
+    - balance:
+        Changed the level that you can use backup batteries as a synth to 150
+        nutrition, and it also gives you 150 nutrition back. This means you can use
+        it as soon as you reach slowdown levels of hunger and it fills you up a decent
+        amount.
+  Will:
+    - code_imp: moves sql death reporting to SSmobs as a single massinsert
+    - refactor: turns object climbing code into a component
+    - qol:
+        many more objects are climbable, preventing softlocks, especially for engineers
+        and miners
+2025-06-23:
+  CHOMPStation2StaffMirrorBot:
+    - spellcheck: removed all strucutres from the game
+    - rscadd: Hoses can connect to sinks for endless water, or as an endless drain
+2025-06-24:
+  CHOMPStation2StaffMirrorBot:
+    - qol: climbable objects being pulled up or down stairs no longer knock you around
+  Diana:
+    - rscadd:
+        Miners now start with a voucher that can be redeemed for various loadouts
+        at the ore vendor.
+  Will:
+    - qol: Borgs can now examine items to know if any of their grippers can hold it.
+2025-06-29:
+  CHOMPStation2StaffMirrorBot:
+    - code_imp: Reagent unit-test is more strict about duplicated reagent names
+    - qol: You can extract blood from blood bags using a syringe
+    - bugfix:
+        dna block injectors no longer show their entire genome, and instead just
+        the relevant block. Doesn't affect full sequence injectors.
+    - bugfix:
+        dna resequencers from the body record console should not do radiation
+        damage
+  Diana:
+    - bugfix: Xenochimera, spider, diona, shadekin, and alraune now process traits properly.
+  FluffMedic:
+    - rscadd: 4 new tyr ants. Diamond, Uranium, Tritium, Verd
+    - rscadd: New Tyr boss, and reworked tyr boss code
+    - balance: altered several experimental chems
+  zeskorion:
+    - rscadd: two new traits, one for synthetics, one for xenochimerae
+    - rscadd: xenochimera can now break free of cuffs,damage borgs, etc when feral
+    - rscadd: new YR3 monitor icons
+    - rscdel: removed some bad monitor icon sprites
+2025-06-30:
+  CHOMPStation2StaffMirrorBot:
+    - rscdel: tgui-sonar
+    - bugfix: bunch of right issues with the new ticket system and mentors
+    - admin: More verbs moved to the new subsystem
+    - admin: Secrets panel overhauled
+  Diana:
+    - rscadd: Starlight will come through windows and illuminate areas exposed to space!
+    - rscadd: borgs now have a basic melee weapon (puppy jaws/knife)
+    - rscadd: Light fixtures can now directly be interfaced via multitool.
+    - bugfix: Fixes a bunch of bugs with the multibelt and borg gripper
+    - qol: Borg material dispenser can now pick up materials
+    - qol: Borg multibelt & Gripper can now open the radial menu via Ctrl-Z
+    - qol: Borg default crowbar changed to borg jaws
+    - bugfix: Borg welder no longer passively drains battery
+    - qol:
+        Borg gripper will now select the final slot when first spawned, allowing
+        you to pick up until the gripper is full.
+    - bugfix: Gargoyle statues now regenerate energy properly
+    - balance: Gargoyle statues now burn under extreme temperatures (>1600C)
+    - balance:
+        Gargoyle statues now regenerate health VERY slowly when in statue state
+        (150 hp will take 50 minutes)
+    - code_imp: Gargoyle code quality increased in general.

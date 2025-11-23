@@ -2,7 +2,7 @@
 	name = "bluespace tear"
 	desc = "An erratic portal of bluespace energies, its tear seems quite unstable but seems to endlessly create crystals. . ."
 	anchored = 1
-	icon = 'icons/obj/stationobjs_vr.dmi'
+	icon = 'icons/obj/stationobjs.dmi'
 	icon_state = "portalgateway"
 	var/obj/item_to_spawn = /obj/item/stack/telecrystal
 	var/item_arg = 8

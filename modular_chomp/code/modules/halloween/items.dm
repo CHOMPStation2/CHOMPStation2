@@ -48,7 +48,6 @@
 	var/has_candy = TRUE
 
 	var/list/candy = list(
-		/obj/item/reagent_containers/food/snacks/chocolatebar,
 		/obj/item/reagent_containers/food/snacks/cb01,
 		/obj/item/reagent_containers/food/snacks/cb02,
 		/obj/item/reagent_containers/food/snacks/cb03,
@@ -59,12 +58,20 @@
 		/obj/item/reagent_containers/food/snacks/cb08,
 		/obj/item/reagent_containers/food/snacks/cb09,
 		/obj/item/reagent_containers/food/snacks/cb10,
+		/obj/item/reagent_containers/food/snacks/candy_corn,
+		/obj/item/reagent_containers/food/snacks/triton,
+		/obj/item/reagent_containers/food/snacks/saturn,
+		/obj/item/reagent_containers/food/snacks/jupiter,
+		/obj/item/reagent_containers/food/snacks/pluto,
+		/obj/item/reagent_containers/food/snacks/mars,
+		/obj/item/reagent_containers/food/snacks/venus,
+		/obj/item/reagent_containers/food/snacks/oort
 	)
 
 	var/list/badcandy = list(
 		/obj/item/reagent_containers/food/snacks/no_raisin,
 		/obj/item/reagent_containers/food/snacks/egg/rotten,
-		/obj/item/reagent_containers/food/snacks/candy_corn
+		/obj/item/reagent_containers/food/snacks/hakarl
 	)
 
 	var/list/treated = list()
@@ -83,7 +90,7 @@
 
 	searching = TRUE
 
-	if(!do_after(user, 5 SECONDS))
+	if(!do_after(user, 5 SECONDS, src))
 		searching = FALSE
 		return
 
@@ -104,6 +111,7 @@
 		thegoods = pick(candy)
 		treated[user.ckey] = TRUE
 
+	add_fingerprint(user)
 	var/goodie = new thegoods(src)
 	user.put_in_hands(goodie)
 
@@ -206,7 +214,7 @@
 	costumes = typesof(/obj/item/storage/box/halloween/)
 
 /obj/structure/boxpile/attack_hand(mob/living/user)
-	if(!do_after(user, 5 SECONDS, exclusive = TASK_USER_EXCLUSIVE))
+	if(!do_after(user, 5 SECONDS))
 		return
 	if(!user.ckey)
 		return

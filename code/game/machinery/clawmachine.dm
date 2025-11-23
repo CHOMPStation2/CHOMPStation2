@@ -70,16 +70,18 @@
 						/obj/item/toy/plushie/tinytin,
 						/obj/item/toy/plushie/tinytin_sec
 						//CHOMPStation Add Start
+						/obj/item/toy/plushie/teppi,
+						/obj/item/toy/plushie/teppi/alt,
+						//CHOMPStation Add End
+						/obj/item/toy/plushie/tinytin_sec,
 						/obj/item/toy/plushie/dragon,
 						/obj/item/toy/plushie/dragon/green,
 						/obj/item/toy/plushie/dragon/purple,
-						/obj/item/toy/plushie/dragon/white_east,
 						/obj/item/toy/plushie/dragon/red_east,
 						/obj/item/toy/plushie/dragon/green_east,
-						/obj/item/toy/plushie/dragon/gold_east,
-						/obj/item/toy/plushie/teppi,
-						/obj/item/toy/plushie/teppi/alt
-						)//CHOMPStation Add End
+						/obj/item/toy/plushie/dragon/white_east,
+						/obj/item/toy/plushie/dragon/gold_east
+						)
 
 /obj/machinery/clawmachine/update_icon()
 	cut_overlays()
@@ -119,7 +121,7 @@
 		else
 			user.visible_message("[user] begins securing \the [src] to the floor.", "You start securing \the [src] to the floor.")
 
-		if(do_after(user, 20 * W.toolspeed))
+		if(do_after(user, 2 SECONDS * W.toolspeed, target = src))
 			if(!src) return
 			to_chat(user, span_notice("You [anchored? "un" : ""]secured \the [src]!"))
 			anchored = !anchored

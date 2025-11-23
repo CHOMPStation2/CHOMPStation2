@@ -8,6 +8,8 @@
 	taste_description = "this shouldn't be here" //unobtainable ingame
 	color = "#7F0000"
 	var/gender_change = null //set the gender variable here so we can set it to others in varients
+	supply_conversion_value = REFINERYEXPORT_VALUE_COMMON
+	industrial_use = REFINERYEXPORT_REASON_MEDSCI
 
 /datum/reagent/change_drug/male //inherits base chemical properties listed above
 	name = REAGENT_ANDROROVIR
@@ -61,7 +63,7 @@
 			if (alert(M,"This chemical will change your gender, proceed?", "Warning", "Yes", "No") == "Yes")
 				M.change_gender_identity(gender_change)
 				M.change_gender(gender_change)
-				M << span_warning("You feel like a new person.") //success
+				to_chat(M, span_warning("You feel like a new person."))
 
 //Chemist expansion
 //deathblood
@@ -74,6 +76,8 @@
 	scannable = 1
 	overdose = REAGENTS_OVERDOSE
 	overdose_mod = 0
+	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
+	industrial_use = REFINERYEXPORT_REASON_MEDSCI
 
 /datum/reagent/cleansingagent/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	var/chem_effective = 1 * M.species.chem_strength_heal
@@ -94,6 +98,8 @@
 	scannable = 1
 	overdose = REAGENTS_OVERDOSE
 	overdose_mod = 0
+	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
+	industrial_use = REFINERYEXPORT_REASON_MEDSCI
 
 /datum/reagent/purifyingagent/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	var/chem_effective = 1 * M.species.chem_strength_heal
@@ -113,16 +119,19 @@
 	taste_mult = 3
 	reagent_state = LIQUID
 	color = "#BF0000"
-	overdose = REAGENTS_OVERDOSE
+	overdose = REAGENTS_OVERDOSE * 0.2
 	overdose_mod = 1.25
 	scannable = 1
+	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
+	industrial_use = REFINERYEXPORT_REASON_MEDSCI
 
 /datum/reagent/burncard/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	var/chem_effective = 1 * M.species.chem_strength_heal
 	if(alien == IS_SLIME)
 		chem_effective = 0.75
 	if(alien != IS_DIONA)
-		M.heal_organ_damage(6 * removed * chem_effective * chem_effective, -1 * removed)
+		M.heal_organ_damage(13 * removed * chem_effective, 0)
+		M.adjustFireLoss(1 * removed)
 
 /datum/reagent/burncard/overdose(var/mob/living/carbon/M, var/alien, var/removed)
 	..()
@@ -150,6 +159,8 @@
 	overdose = REAGENTS_OVERDOSE * 0.5
 	scannable = 1
 	var/repair_strength = 9
+	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
+	industrial_use = REFINERYEXPORT_REASON_MEDSCI
 
 /datum/reagent/flamecure/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(alien == IS_DIONA)
@@ -179,8 +190,10 @@
 	taste_description = "bitterness"
 	reagent_state = LIQUID
 	color = "#FF6600"
-	overdose = REAGENTS_OVERDOSE
+	overdose = REAGENTS_OVERDOSE * 0.2
 	scannable = 1
+	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
+	industrial_use = REFINERYEXPORT_REASON_MEDSCI
 
 /datum/reagent/neotane/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	var/chem_effective = 1 * M.species.chem_strength_heal
@@ -188,7 +201,8 @@
 		chem_effective = 0.5
 		M.adjustBruteLoss(3 * removed)
 	if(alien != IS_DIONA)
-		M.heal_organ_damage(-1 * removed, 6 * removed * chem_effective * chem_effective)
+		M.heal_organ_damage(0, 13 * removed * chem_effective)
+		M.adjustBruteLoss(1 * removed)
 
 /datum/reagent/bloodsealer
 	name = REAGENT_BLOODSEALER
@@ -199,6 +213,8 @@
 	color = "#00BFFF"
 	overdose = REAGENTS_OVERDOSE
 	scannable = 1
+	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
+	industrial_use = REFINERYEXPORT_REASON_MEDSCI
 
 /datum/reagent/bloodsealer/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(alien != IS_DIONA)
@@ -215,6 +231,8 @@
 	color = "#8040FF"
 	scannable = 1
 	overdose = REAGENTS_OVERDOSE * 3
+	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
+	industrial_use = REFINERYEXPORT_REASON_MEDSCI
 
 /datum/reagent/livingagent/overdose(var/mob/living/carbon/M, var/alien)
 	..()
@@ -241,6 +259,8 @@
 	color = "#006666"
 	scannable = 1
 	overdose = REAGENTS_OVERDOSE * 0.5
+	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
+	industrial_use = REFINERYEXPORT_REASON_MEDSCI
 
 /datum/reagent/performancepeaker/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	M.add_chemical_effect(CE_SPEEDBOOST, 0.5)
@@ -264,6 +284,8 @@
 	affects_dead = TRUE
 	mrate_static = TRUE
 	metabolism = 0.5
+	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
+	industrial_use = REFINERYEXPORT_REASON_MEDSCI
 
 /datum/reagent/souldew/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	var/chem_effective = 1 * M.species.chem_strength_heal
@@ -281,6 +303,8 @@
 	color = "#FF3399"
 	scannable = 1
 	overdose = REAGENTS_OVERDOSE * 2
+	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
+	industrial_use = REFINERYEXPORT_REASON_MEDSCI
 /datum/reagent/quadcord/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(alien != IS_DIONA)
 		var/chem_effective = 1 * M.species.chem_strength_heal
@@ -292,20 +316,7 @@
 		M.adjustBrainLoss(-1 * removed * chem_effective)
 
 //tier 2
-/datum/reagent/juggernog
-	name = REAGENT_JUGGERNOG
-	id = REAGENT_ID_JUGGERNOG
-	description = "An experimental drug that toughens the body to blows and knockdown"
-	taste_description = "bitterness"
-	reagent_state = LIQUID
-	color = "#660066"
-	scannable = 1
-	overdose = REAGENTS_OVERDOSE * 0.25
 
-/datum/reagent/juggernog/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
-	M.AdjustParalysis(-1)
-	M.AdjustStunned(-1)
-	M.AdjustWeakened(-1)
 
 /datum/reagent/curea
 	name = REAGENT_CUREA
@@ -316,6 +327,8 @@
 	color = "#660066"
 	scannable = 1
 	overdose = REAGENTS_OVERDOSE * 0.5
+	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
+	industrial_use = REFINERYEXPORT_REASON_MEDSCI
 
 /datum/reagent/curea/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	M.remove_a_modifier_of_type(/datum/modifier/poisoned)
@@ -326,7 +339,11 @@
 	M.remove_a_modifier_of_type(/datum/modifier/grievous_wounds)
 	M.remove_a_modifier_of_type(/datum/modifier/deep_wounds)
 	M.remove_a_modifier_of_type(/datum/modifier/hivebot_weaken)
-	M.remove_a_modifier_of_type(/datum/modifier/fire)
+	M.extinguish_mob()
+	M.remove_a_modifier_of_type(/datum/modifier/berserk_exhaustion)
+	M.remove_a_modifier_of_type(/datum/modifier/entangled)
+	M.remove_a_modifier_of_type(/datum/modifier/wizfire)
+	M.remove_a_modifier_of_type(/datum/modifier/wizpoison)
 
 //tier 3
 /datum/reagent/modapplying/liquidhealer
@@ -340,6 +357,8 @@
 	overdose = REAGENTS_OVERDOSE * 0.5
 	modifier_to_add = /datum/modifier/liquidhealer
 	modifier_duration = 3 SECONDS
+	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
+	industrial_use = REFINERYEXPORT_REASON_MEDSCI
 
 /datum/modifier/liquidhealer
 	name = REAGENT_ID_LIQUIDHEALER
@@ -380,6 +399,8 @@
 	affects_dead = TRUE
 	mrate_static = TRUE
 	metabolism = 0.5
+	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
+	industrial_use = REFINERYEXPORT_REASON_MEDSCI
 
 /datum/reagent/phoenixbreath/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	var/chem_effective = 1 * M.species.chem_strength_heal
@@ -401,6 +422,8 @@
 	color = "#A70FFF"
 	scannable = 1
 	overdose = REAGENTS_OVERDOSE
+	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
+	industrial_use = REFINERYEXPORT_REASON_INDUSTRY
 
 /datum/reagent/dryagent/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	var/chem_effective = 1 * M.species.chem_strength_heal

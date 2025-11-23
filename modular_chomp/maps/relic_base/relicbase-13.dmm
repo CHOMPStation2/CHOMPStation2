@@ -253,12 +253,7 @@
 /obj/effect/floor_decal/corner/white/border{
 	dir = 1
 	},
-/obj/structure/showcase{
-	desc = "So that's how the shuttle moves on its own.";
-	icon = 'icons/mob/AI.dmi';
-	icon_state = "ai-red";
-	name = "Arrivals Announcement Computer"
-	},
+/obj/structure/showcase/ai,
 /turf/simulated/shuttle/floor/white,
 /area/shuttle/arrival/pre_game/simulated_grid)
 "qR" = (
@@ -645,7 +640,7 @@
 /area/space)
 "Pk" = (
 /obj/machinery/door/airlock/angled_tgmc/wide/generic{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "arrivals_shuttle_hatch";
 	locked = 1;
 	name = "Arrivals Tram"
@@ -794,7 +789,7 @@
 	dir = 9
 	},
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "arrivals_shuttle";
 	pixel_y = 25;
 	req_one_access = list(13);

@@ -105,9 +105,9 @@
 	},
 /obj/effect/map_helper/airlock/door/int_door,
 /obj/machinery/airlock_sensor{
+	dir = 4;
 	pixel_x = -11;
-	pixel_y = -23;
-	dir = 4
+	pixel_y = -23
 	},
 /obj/effect/map_helper/airlock/sensor/int_sensor,
 /turf/simulated/floor/tiled/techfloor,
@@ -128,30 +128,30 @@
 	},
 /obj/machinery/power/apc/alarms_hidden{
 	dir = 4;
-	pixel_x = 24;
-	locked = 0
+	locked = 0;
+	pixel_x = 24
 	},
 /turf/simulated/floor/plating,
 /area/shuttle/cybershuttle)
 "C" = (
 /obj/structure/table/survival_pod,
 /obj/item/glass_jar{
-	pixel_y = 13;
-	pixel_x = 6
-	},
-/obj/random/action_figure{
-	pixel_y = -4;
-	pixel_x = -9
+	pixel_x = 6;
+	pixel_y = 13
 	},
 /obj/item/dice/d20,
 /obj/item/deck/tarot,
 /obj/item/material/sword/katana{
-	pixel_y = -4;
-	pixel_x = 5
+	pixel_x = 5;
+	pixel_y = -4
 	},
 /obj/item/clothing/head/fedora{
 	pixel_x = -4;
 	pixel_y = 10
+	},
+/obj/random/action_figure{
+	pixel_x = -9;
+	pixel_y = -4
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/cybershuttle)
@@ -209,29 +209,31 @@
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 1;
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "expshuttle_vent"
 	},
 /obj/machinery/embedded_controller/radio/airlock/docking_port{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "cybershuttle_docker";
-	pixel_y = 28;
-	pixel_x = -5
+	pixel_x = -5;
+	pixel_y = 28
 	},
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
 /obj/effect/map_helper/airlock/sensor/chamber_sensor,
 /obj/machinery/airlock_sensor{
-	pixel_y = 27;
-	pixel_x = 7
+	pixel_x = 7;
+	pixel_y = 27
 	},
 /obj/effect/overmap/visitable/ship/landable/cybershuttle,
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/cybershuttle)
 "S" = (
-/obj/structure/window/plastitanium{
-	dir = 4
+/obj/structure/grille/rustic{
+	health = 25;
+	name = "reinforced grille"
 	},
-/turf/simulated/floor/tiled/techfloor,
+/obj/structure/window/plastitanium/full,
+/turf/simulated/floor/plating,
 /area/shuttle/cybershuttle)
 "T" = (
 /obj/machinery/shipsensors/weak{
@@ -246,17 +248,17 @@
 "W" = (
 /obj/machinery/door/airlock/voidcraft/vertical{
 	icon_state = "door_locked";
+	id_tag = "cybershuttle_hatch";
 	locked = 1;
-	name = "shuttle side hatch";
-	id_tag = "cybershuttle_hatch"
+	name = "shuttle side hatch"
 	},
 /obj/machinery/button/remote/airlock{
 	desiredstate = 1;
 	dir = 4;
 	id = "cybershuttle_hatch";
 	name = "Side Hatch Control";
-	specialfunctions = 4;
-	pixel_y = 26
+	pixel_y = 26;
+	specialfunctions = 4
 	},
 /turf/simulated/floor/plating,
 /area/shuttle/cybershuttle)

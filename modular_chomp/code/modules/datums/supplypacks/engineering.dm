@@ -3,4 +3,4 @@
 	name = "c-type rotary electric generator board"
 	containertype = /obj/structure/closet/crate/focalpoint
 	containername = "c-type rotary board crate"
-	access = access_engine
+	access = ACCESS_ENGINE

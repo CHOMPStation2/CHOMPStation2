@@ -538,11 +538,6 @@
 /obj/effect/spider/stickyweb,
 /turf/simulated/floor/holofloor/wood,
 /area/submap/Manor1)
-"si" = (
-/obj/effect/map_helper/no_phaseshift,
-/obj/effect/map_helper/no_phaseshift,
-/turf/simulated/floor/holofloor/wood,
-/area/submap/Manor1)
 "sl" = (
 /obj/random/humanoidremains,
 /turf/simulated/floor/holofloor/wood,
@@ -2118,7 +2113,7 @@ CY
 CY
 CY
 CY
-si
+rh
 rh
 CY
 CY

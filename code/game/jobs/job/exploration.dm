@@ -45,8 +45,8 @@
 	pto_type = PTO_EXPLORATION
 	dept_time_required = 20
 
-	access = list(access_eva, access_maint_tunnels, access_external_airlocks, access_pilot, access_explorer, access_gateway, access_pathfinder, access_RC_announce)
-	minimal_access = list(access_eva, access_maint_tunnels, access_external_airlocks, access_pilot, access_explorer, access_gateway, access_pathfinder, access_RC_announce)
+	access = list(ACCESS_EVA, ACCESS_MAINT_TUNNELS, ACCESS_EXTERNAL_AIRLOCKS, ACCESS_PILOT, ACCESS_EXPLORER, ACCESS_GATEWAY, ACCESS_PATHFINDER, ACCESS_RC_ANNOUNCE)
+	minimal_access = list(ACCESS_EVA, ACCESS_MAINT_TUNNELS, ACCESS_EXTERNAL_AIRLOCKS, ACCESS_PILOT, ACCESS_EXPLORER, ACCESS_GATEWAY, ACCESS_PATHFINDER, ACCESS_RC_ANNOUNCE)
 	outfit_type = /decl/hierarchy/outfit/job/pathfinder
 	job_description = "The " + JOB_PATHFINDER + "'s job is to lead and manage expeditions, and is the primary authority on all off-station expeditions."
 	alt_titles = list(JOB_ALT_EXPEDITION_LEAD = /datum/alt_title/expedition_lead, JOB_ALT_EXPLORATION_MANAGER = /datum/alt_title/exploration_manager)
@@ -74,8 +74,8 @@
 	economic_modifier = 5
 	minimal_player_age = 3
 	pto_type = PTO_EXPLORATION
-	access = list(access_pilot, access_external_airlocks, access_eva,access_explorer) //CHOMPedit gave pilot a little more access
-	minimal_access = list(access_pilot, access_external_airlocks, access_eva,access_explorer) //CHOMPedit gave pilot a little more access
+	access = list(ACCESS_PILOT, ACCESS_EXTERNAL_AIRLOCKS, ACCESS_EVA, ACCESS_EXPLORER) //CHOMPedit gave pilot a little more access
+	minimal_access = list(ACCESS_PILOT, ACCESS_EXTERNAL_AIRLOCKS, ACCESS_EVA, ACCESS_EXPLORER) //CHOMPedit gave pilot a little more access
 	outfit_type = /decl/hierarchy/outfit/job/pilot
 	job_description = "A Pilot flies the various shuttles in the Vir System." //CHOMPedit: Replaces Virgo reference with Vir.
 	alt_titles = list("Co-Pilot" = /datum/alt_title/co_pilot, "Navigator" = /datum/alt_title/navigator, "Helmsman" = /datum/alt_title/helmsman)
@@ -103,8 +103,8 @@
 	selection_color = "#999440"
 	economic_modifier = 6
 	pto_type = PTO_EXPLORATION
-	access = list(access_explorer, access_external_airlocks, access_eva)
-	minimal_access = list(access_explorer, access_external_airlocks, access_eva)
+	access = list(ACCESS_EXPLORER, ACCESS_EXTERNAL_AIRLOCKS, ACCESS_EVA)
+	minimal_access = list(ACCESS_EXPLORER, ACCESS_EXTERNAL_AIRLOCKS, ACCESS_EVA)
 	outfit_type = /decl/hierarchy/outfit/job/explorer2
 	job_description = "An " + JOB_EXPLORER + " searches for interesting things, and returns them to the station."
 	alt_titles = list(JOB_ALT_SURVEYOR = /datum/alt_title/surveyor, JOB_ALT_OFFSITE_SCOUT = /datum/alt_title/offsite_scout)
@@ -131,8 +131,8 @@
 	economic_modifier = 6
 	minimal_player_age = 3
 	pto_type = PTO_EXPLORATION
-	access = list(access_medical, access_medical_equip, access_morgue, access_eva, access_maint_tunnels, access_external_airlocks,access_explorer) // CHOMPedit: No more pilot, surgery or chemistry access.
-	minimal_access = list(access_medical, access_medical_equip, access_morgue,access_explorer) // CHOMPedit: No more pilot access.
+	access = list(ACCESS_MEDICAL, ACCESS_MEDICAL_EQUIP, ACCESS_MORGUE, ACCESS_EVA, ACCESS_MAINT_TUNNELS, ACCESS_EXTERNAL_AIRLOCKS,ACCESS_EXPLORER) // CHOMPedit: No more pilot, surgery or chemistry access.
+	minimal_access = list(ACCESS_MEDICAL, ACCESS_MEDICAL_EQUIP, ACCESS_MORGUE,ACCESS_EXPLORER) // CHOMPedit: No more pilot access.
 	outfit_type = /decl/hierarchy/outfit/job/medical/sar
 	job_description = "A " + JOB_FIELD_MEDIC + " works as the field doctor of expedition teams."
 	alt_titles = list(JOB_ALT_EXPEDITION_MEDIC = /datum/alt_title/expedition_medic, JOB_ALT_OFFSITE_MEDIC = /datum/alt_title/offsite_medic)

@@ -4,13 +4,13 @@
 	endWhen = 3
 
 /datum/event/ianstorm/announce()
-	command_announcement.Announce("It has come to our attention that the station passed through an ion storm.  Please monitor all electronic equipment for malfunctions.", "Anomaly Alert") //CHOMPedit: removes announcement .ogg
+	command_announcement.Announce("It has come to our attention that the [using_map.facility_type] passed through an ion storm.  Please monitor all electronic equipment for malfunctions.", "Anomaly Alert") //CHOMPedit: removes announcement .ogg
 	spawn(7 SECONDS)
-		command_announcement.Announce("Wait. No, that's wrong.  The station passed through an IAN storm!.", "Ian Alert")
+		command_announcement.Announce("Wait. No, that's wrong. The [using_map.facility_type] passed through an IAN storm!.", "Ian Alert")
 
 /datum/event/ianstorm/start()
 	spawn()
-		for(var/mob/living/carbon/human/C in living_mob_list)
+		for(var/mob/living/carbon/human/C in GLOB.living_mob_list)
 			var/turf/T = get_turf(C)
 			if(!T)
 				continue

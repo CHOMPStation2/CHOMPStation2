@@ -173,13 +173,14 @@
 
 /obj/item/material/sword/rapier/solar/apply_hit_effect(mob/living/target, mob/living/user, var/hit_zone)
 	. = ..()
-	target.add_modifier(/datum/modifier/fire/weak, 12 SECONDS) //should be 12 damage?
+	target.adjust_fire_stacks(10)
+	target.ignite_mob()
 
 //Icicle
 /obj/item/gun/energy/icelauncher
 	name = "Strange Pistol"
 	desc = "A homemade and somehow functional icicle launcher."
-	icon = 'icons/obj/gun_ch.dmi'
+	icon = 'icons/obj/gun.dmi'
 	icon_state = "ziplas"
 	item_state = "ziplas"
 	color = "#0000CC"

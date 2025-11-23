@@ -20,9 +20,7 @@
 #define FACTION_VIRGO3B "virgo3b"
 
 #define FACTION_ALTEVIAN "altevian"
-#define FACTION_BLACKHOLE "blackhole" //CHOMPAdd
 #define FACTION_CULT "cult"
-#define FACTION_ECLIPSE "eclipse" //CHOMPAdd
 #define FACTION_GLAMOUR "glamour"
 #define FACTION_PIRATE "pirate"
 #define FACTION_SHADEKIN "shadekin"
@@ -73,6 +71,7 @@
 #define FACTION_MEOWL "meowl"
 #define FACTION_MIMIC "mimic"
 #define FACTION_MOUSE "mouse"
+#define FACTION_MOTHROACH "mothroach"
 #define FACTION_NANOMACHINES "nanomachines"
 #define FACTION_NEUTRAL "neutral"
 #define FACTION_OTIE "otie"
@@ -107,8 +106,6 @@
 #define FACTION_SUCCUBUS "succubus"
 #define FACTION_SWARMER "swarmer"
 #define FACTION_TEPPI "teppi"
-#define FACTION_TYR "tyr" //CHOMPAdd
-#define FACTION_TYR_ANT "tyr_ants" //CHOMPAdd
 #define FACTION_TUNNELCLOWN "tunnelclown"
 #define FACTION_TURKEY "turkey"
 #define FACTION_WILD_ANIMAL "wild animal"
@@ -117,12 +114,16 @@
 #define FACTION_WORM "worm"
 #define FACTION_XENO "xeno"
 #define FACTION_CORGI "corgi"
-#define FACTION_ZORGOIA "zorgoia" // CHOMPAdd
+#define FACTION_ZORGOIA "zorgoia"
 
 #define FACTION_PLANTS "plants"
 
 #define FACTION_MATH "MATH"
 
 //CHOMPAdd Start factions
+#define FACTION_TYR "tyr" //CHOMPAdd
+#define FACTION_TYR_ANT "tyr_ants" //CHOMPAdd
 #define FACTION_AWAYMISSION "awaymission"
+#define FACTION_BLACKHOLE "blackhole" //CHOMPAdd
+#define FACTION_ECLIPSE "eclipse" //CHOMPAdd
 //CHOMPAdd End

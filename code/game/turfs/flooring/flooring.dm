@@ -138,7 +138,7 @@ var/list/flooring_types
 /decl/flooring/grass/sif // Subtype for Sif's grass.
 	name = "growth"
 	desc = "A natural moss that has adapted to the sheer cold climate."
-	flags = 0
+	flags = NONE
 	icon = 'icons/turf/outdoors.dmi'
 	icon_base = "grass_sif"
 	build_type = null
@@ -148,7 +148,7 @@ var/list/flooring_types
 /decl/flooring/grass/sif/forest
 	name = "thick growth"
 	desc = "A natural moss that has adapted to the sheer cold climate."
-	flags = 0
+	flags = NONE
 	icon = 'icons/turf/outdoors.dmi'
 	icon_base = "grass_sif_dark"
 	build_type = /obj/item/stack/tile/grass/sif/forest
@@ -228,7 +228,7 @@ var/list/flooring_types
 	name = "snowy plating"
 	desc = "Steel plating coated with a light layer of snow."
 	icon_base = "snowyplating"
-	flags = null
+	flags = NONE
 
 /decl/flooring/snow/ice
 	name = "ice"
@@ -379,6 +379,10 @@ var/list/flooring_types
 /decl/flooring/tiling/new_tile/monotile
 	icon_base = "monotile"
 
+/decl/flooring/tiling/new_tile/monotile/purple
+	icon_base = "monotile-purple"
+	build_type = /obj/item/stack/tile/floor/purple
+
 /decl/flooring/tiling/new_tile/steel_grid
 	icon_base = "steel_grid"
 	build_type = /obj/item/stack/tile/floor/steelgrip
@@ -430,6 +434,12 @@ var/list/flooring_types
 	icon_base = "white"
 	has_damage_range = null
 	build_type = /obj/item/stack/tile/floor/yellow
+
+/decl/flooring/tiling/purple
+	name = "floor"
+	icon_base = "purple"
+	has_damage_range = null
+	build_type = /obj/item/stack/tile/floor/purple
 
 /decl/flooring/tiling/dark
 	name = "floor"

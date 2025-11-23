@@ -736,7 +736,7 @@
 /area/shuttle/escape_pod12/transit)
 "TB" = (
 /obj/machinery/door/airlock/external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	id_tag = "arrivals_shuttle_hatch";
 	locked = 1;
@@ -748,7 +748,7 @@
 /area/shuttle/arrival/pre_game)
 "Uh" = (
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "arrivals_shuttle";
 	pixel_y = 25;
 	req_one_access = list(13);
@@ -807,12 +807,7 @@
 /turf/simulated/shuttle/wall,
 /area/shuttle/arrival/pre_game)
 "Xz" = (
-/obj/structure/showcase{
-	desc = "So that's how the shuttle moves on its own.";
-	icon = 'icons/mob/AI.dmi';
-	icon_state = "ai-red";
-	name = "Arrivals Announcement Computer"
-	},
+/obj/structure/showcase/AI,
 /turf/simulated/shuttle/floor{
 	icon_state = "floor_red"
 	},

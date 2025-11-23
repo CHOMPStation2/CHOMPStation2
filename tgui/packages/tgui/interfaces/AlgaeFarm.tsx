@@ -52,7 +52,7 @@ export const AlgaeFarm = (props) => {
         <Stack fill vertical>
           {errorText && (
             <Stack.Item>
-              <NoticeBox warning>
+              <NoticeBox>
                 <Box inline verticalAlign="middle">
                   {errorText}
                 </Box>
@@ -109,7 +109,7 @@ export const AlgaeFarm = (props) => {
               <Table mt={1}>
                 <Table.Row>
                   <Table.Cell>
-                    <Section title={'Gas Input (' + inputDir + ')'}>
+                    <Section title={`Gas Input (${inputDir})`}>
                       {input ? (
                         <LabeledList>
                           <LabeledList.Item label="Total Pressure">
@@ -125,7 +125,7 @@ export const AlgaeFarm = (props) => {
                     </Section>
                   </Table.Cell>
                   <Table.Cell>
-                    <Section title={'Gas Output (' + outputDir + ')'}>
+                    <Section title={`Gas Output (${outputDir})`}>
                       {output ? (
                         <LabeledList>
                           <LabeledList.Item label="Total Pressure">

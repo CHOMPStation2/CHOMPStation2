@@ -103,7 +103,6 @@
 	max_age = 150
 
 	move_trail = /obj/effect/decal/cleanable/blood/tracks/claw
-	digi_allowed = TRUE
 	icodigi = 'icons/mob/human_races/r_digi_xeno.dmi'
 
 	species_sounds = "Xeno"

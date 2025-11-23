@@ -608,7 +608,7 @@
 "bG" = (
 /obj/machinery/door/airlock{
 	name = "Unisex Restrooms";
-	req_access_txt = "0"
+	req_access = null
 	},
 /turf/simulated/floor,
 /area/awaymission/example)

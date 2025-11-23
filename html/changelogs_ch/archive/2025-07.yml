@@ -1,0 +1,342 @@
+2025-07-02:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: Fixed virus databases breaking in Medical Computers
+  TheCaramelion:
+  - bugfix: Fixed Teshari being too healthy
+  - bugfix: Fixed Teshari being too brittle/flammable
+  - bugfix: Fixed Teshari holder sprites
+2025-07-03:
+  Reo:
+  - qol: soap can be wetted to instantly clean tiles as it used to work.
+  - balance: Balances soap so that it's not terrible again. (removed the durability
+      mechanic)
+  Tost:
+  - bugfix: Emergency lights no longer blow up on activation.
+2025-07-04:
+  Tost:
+  - balance: Emergency lights now last longer
+2025-07-06:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: distillery target temperature can no longer be set to null
+  - bugfix: maint lurkers not spawning with their languages
+  - bugfix: protean rigs can no longer get stripped in bellies
+  - bugfix: contractor IDs now take over mining and survey points
+  - bugfix: show and jacket spawn selection being inverted
+  - bugfix: paper icons for 516
+  - bugfix: food tray should update properly on item removal
+  - bugfix: transfer fluids from target
+  - qol: vore bellies now load instantly
+  - admin: fix server log rights
+  - admin: fix deadmin verb
+  - admin: adds missing space to some atom narrate messages
+  - code_imp: clean up some mob hooks
+  Diana:
+  - bugfix: 3 color wolf (Fat vwag) fixed. No longer has broken sprites.
+  - qol: Cyborg gripper will now smartly stack material stacks.
+  - qol: Cyborg gripper will no longer unselect stacks when used
+  - bugfix: Cyborg surgical and botany multibelt no longer have offset
+  - bugfix: Antags will now properly get antag-only text when examining things.
+  Diana, Kash:
+  - rscadd: Changelings can now absorb via VORE.
+  - refactor: Changeling is now a component
+  - balance: Changelings now get a genetic point upon absorbing someone
+  - balance: Changelings don't mc-die from epi
+  - balance: Changeling spacesuit is now free
+  - balance: A lot of changeling perks adjusted in minor ways. More to come.
+  - rscdel: Changeling death sting deleted.
+  - balance: Changeling unfat sting now reduces nutrition by 85% or 100 nutrition,
+      whatever's higher.
+  - qol: Changeling evolution menu is now TGUI
+  - code_imp: General code cleanup in Changeling code. Now runs smoother.
+2025-07-07:
+  CHOMPStation2StaffMirrorBot:
+  - rscadd: Added subsystem for handling admin verbs
+  - rscadd: Added particle editor
+  - rscadd: Added filter editor
+  - rscadd: Added matrix editor
+  - rscadd: Added new vv dropdown options for atoms
+  - admin: '''modify transform'' dropdown option'
+  - admin: '''spin animation'' dropdown option'
+  - admin: '''stop all animations'' dropdown option'
+  - admin: '''edit filters'' dropdown option'
+  - admin: '''test matrices'' dropdown option'
+  - refactor: The tgui admin state can now take one or multiple permissions that are
+      allowed to view said state
+  - refactor: Updated vv code
+  - refactor: Moved a few verbs from the old admin verb system to the new one
+  - qol: moves robot sprite setting to the visual tab
+2025-07-08:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: Virologists can change the name of their viruses now
+  FluffMedic:
+  - balance: voidsuits should no longer breach
+2025-07-09:
+  CHOMPStation2StaffMirrorBot:
+  - rscadd: You can now write messages on people with a pen~ A shower cleans them
+      off.
+  - bugfix: mining voucher can no longer be redeemed multiple times
+2025-07-10:
+  CHOMPStation2StaffMirrorBot:
+  - maptweak: floors losing icon state on turf change
+  - bugfix: Copy slot should work better
+  Diana:
+  - bugfix: Borg claymore and borg jaws do proper damage values
+  - refactor: Shadekin component fully fleshed out. Can now be applied to any /mob/living.
+      No longer locked to species.
+  - rscadd: 'Crossports Adjust Light Flicker, which allows you to adjust your: Duration
+      of light flicker, color of light flicker, and light break chance.'
+  - rscadd: Flashlights will now flicker when shadekin phase in.
+  - bugfix: Flashlights no longer leave a lingering overlay when the user is eaten
+      by a shadekin
+  - qol: 'BESK, OESK, and RESK generate energy quicker. Note: D = Darkness gain/loss
+      L = Light gain/loss: (BESK: 0.5both->0.75both) (OESK:-0.5L, 0.5D -> -0.25L,
+      0.75D) (RESK: -1D -> -0.5D)'
+  - bugfix: Fixes mobs dying from no-atmos
+  - bugfix: 8 year bug that causes ability master to disappear upon aghost/relog
+2025-07-11:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: Set Voice verb uses correct list of voices
+  - bugfix: Spyndrome symptom can be found again
+  Diana:
+  - bugfix: Xenochimera component can be applied midround
+  - bugfix: Grippers can insert items into protolathes
+  Diana, Kash:
+  - rscadd: Shadekin light toggle now has a TGUI.
+  - bugfix: Borg grippers don't delete items
+  - bugfix: A lot of borg gripper exploits/bugs fixed
+  - qol: Borgs can reinforce girders at a speed of 1.5 seconds instead of the normal
+      4
+  - code_imp: Two hours spent to optimize shadekin phase code and save an average
+      of ~4 ms of CPU time per phase in extreme conditions!
+2025-07-12:
+  CHOMPStation2StaffMirrorBot:
+  - code_imp: improve tg chat performance
+  - bugfix: removed 2 pixels on the veymed female torso sprite to make it actually
+      fit into any clothes at all that aren't skirts.
+  - qol: Replaced the funky alt-click turf examine menu with a separate TGUI window
+      called the Lootpanel
+2025-07-13:
+  FluffMedic:
+  - bugfix: sif hivebot bosses regained delay for their spinny attack
+2025-07-14:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: Alt click menu now lets you middle click
+  - code_imp: font awesome update
+  - bugfix: bellymode absorb messages not being editable
+  - qol: reduces the chance of the chat resizing badly
+  - admin: entity narrate works again
+  - admin: tickets can be answered from discord
+  - bugfix: Proteans can no longer get stuck in a death loop because their posibrain
+      fell out.
+  Diana:
+  - bugfix: Changeling stings fixed, can be used multiple times again.
+  - bugfix: Transformation sting works properly now
+  - bugfix: Extraction sting works properly now
+  - bugfix: Whitelisted items can be selected if you're the shape of that species
+      if not that species exactly.
+  - bugfix: Normal labcoats become teshari sprites when worn by a teshari
+2025-07-15:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: a server crash on high deflect mobs
+  FluffMedic:
+  - rscadd: New environmental hazard to replace lava and zappy clouds, 4 new mobs
+      for tyr, and
+  - balance: Eclipse cryo top has been reworked
+  Guti:
+  - maptweak: Added the maintenance recycler and vendor all around Southern Cross
+  TheGreatKitsune:
+  - bugfix: fixed the admin size gun
+2025-07-16:
+  CHOMPStation2StaffMirrorBot:
+  - qol: active belly settings tabs are now static and no longer scroll out of view
+  - rscadd: Hanner no longer get outed by medical scanners.
+  - bugfix: Removed copying of bloodtype from vanity TF procs, as if the user actually
+      has blood it will cause organ failure.
+  - bugfix: Added secondary ears to copy form ability.
+  - bugfix: fixed the recycler deciding plebeians weren't allowed to use it after
+      someone tried to buy an access locked item.
+2025-07-21:
+  CHOMPStation2StaffMirrorBot:
+  - qol: default browser background follows light / dark mode
+  - rscadd: maplint for bad frequencies
+  - balance: rng of trashpiles altered
+  - code_imp: trash piles and loot piles now use a unified looting element for handling
+      drops and rarity. Not limited to just loot piles.
+  - rscadd: Adds three more admin duckies.
+  - rscadd: new traits that increase unarmed damage. Traits have been added that combine
+      with respective tiers of Hardy, to simulate high strength for species that should
+      be inhumanly strong
+  - bugfix: simplemobs should now take extra damage from hulk/knuckles
+  - code_imp: tgui dependency update
+  - qol: moves find ghost pod, vorespawn and some other join options from tgui list
+      to a tgui datum
+  - rscadd: additional ghost spawn options (2 slots), requires multiple /obj/effect/landmark/start/ghost_roles
+      to be mapped in
+  - maptweak: Replaced telecomms machines in the facility redgate map with props that
+      look like them instead.
+  Diana:
+  - qol: Proteans are less squishy to EMPs
+  - qol: Veymed limbs are less squishy to EMPs.
+  UniquaSa:
+  - rscadd: Added new maintenance preds mobs
+  - maptweak: Added some Maint Pred Spawns in deck 0
+2025-07-22:
+  Kashargul:
+  - code_imp: replace eslint with biome
+2025-07-23:
+  CHOMPStation2StaffMirrorBot:
+  - code_imp: Gamma loot global list moved to proper file
+  Diana:
+  - bugfix: Bunny taur will no longer hide all worn clothing
+  - bugfix: Empty Contents no longer shows up on ore satchels
+  - bugfix: feline 3color taur fat vwag is fixed
+  - bugfix: Emotes now can be used the first time someone emotes instead of *help
+      having to be used
+2025-07-24:
+  CHOMPStation2StaffMirrorBot:
+  - admin: refactors the banning panel as tgui interface
+  Diana:
+  - bugfix: You can no longer noclip your hands through oven doors
+  - rscadd: Auto floortile placement if crowbarring floor tiles up with a floor tile
+      in your offhand
+  - bugfix: Changeling fleshmend gives you activation text now
+  - bugfix: Makes the resurrection artifact respect anomaly clothing.
+  - bugfix: Fixes a xenoarch exploit pertaining to item stacking.
+  - qol: Changeling lesserform informs you of its failstates
+  Diana, Asher:
+  - rscadd: Ninja syndicate borgs (Comes with a cloaking module and special esword)
+  - balance: Syndicate borgs now spawn with AI trackers
+  - qol: AI Tracker now tells you info about what the states mean if you're an antag
+  - code_imp: being hit now screams the information into the void
+2025-07-25:
+  CHOMPStation2StaffMirrorBot:
+  - rscadd: Added a new GM tool that allows them to create custom medical issues on
+      the fly for setting up medical based events.
+  - rscadd: Added "Choreomania", "Tissue Hydration", and "Biometallic Replication"
+      symptoms
+  - rscadd: Added Roanoake Syndrome as a disease.
+  - rscadd: Added a dormant version of Roanoake Syndrome that xenochimeras spawn with.
+  - rscadd: Added infective component
+  - balance: Lowered the damage done by macrophages when they emerge
+  - balance: Lowered the damage output of macrophages
+  - balance: Bio suits now cover hands and feet
+  - bugfix: Fixed Macrophages symptom acting too fast
+  - qol: Added "Chicken Noodle Soup" to possible cures for Cold, Flu, and Food Poisoning
+  - qol: Changed the text in the advanced medical scanner to diferentiate better between
+      diseases or viruses
+  - bugfix: Stuttering text is no longer suppressed by jittering.
+  - spellcheck: fixed bite pref text
+  - bugfix: Fixed Calcium Carbonate not preventing vomiting
+  - bugfix: Fixed an exploit that allowed dense objects to be pushed in front of the
+      containment field when it was already active. It now instantly shuts off when
+      a dense object crosses over it.
+  - rscadd: Added the ability to export research samples to earn extra supply points,
+      both loose and in sample containers
+  - bugfix: admin spawned simple mobs not getting their vore verbs if they weren't
+      vore mobs
+  Zizzi:
+  - rscadd: Advanced Locator and Examiner can now ignore dead mobs.
+  - qol: Advanced locator can now find mob by type from string ref. For example /mob/living/carbon
+  - rscadd: Slightly improved Advanced locator description to signify changes.
+  - rscadd: Examiner now outputs if mob is alive.
+  - rscdel: Removed video camera circuit due to excessive server load, and not functioning
+      correctly.
+  - qol: EQUAL and NOT EQUAL gate now compare strings correctly.
+  - qol: Textpad can now write messages longer than 58 characters.
+  - bugfix: Textpad now supports special characters.
+2025-07-26:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: Hose connectors that force pump no longer pump if no hose is connected
+  - bugfix: Fixed some symptoms doing doing nothing and added a couple more options.
+  Diana:
+  - bugfix: Removing a shadekin's shadekin properties properly removes their shadekin
+      UI elements.
+  - rscadd: Shadekin can toggle if they wish to return to the Retreat upon death.
+      This is round persistent.
+  - qol: Adjust Tail Layer now persists per character between rounds.
+  - qol: Shadekin nutrition adjustment is now in the Shadekin Control Panel instead
+      of it's own separate proc. This is also round persistent as well.
+  - code_imp: The shadekin component now has framework to have abilities added/removed
+      from it at will.
+2025-07-27:
+  CHOMPStation2StaffMirrorBot:
+  - rscadd: Added the ability to use alt-clicks in advanced build mode to open VV
+      or call proc.
+  - rscadd: Added the ability to spawn someone with a custom job title from Spawn
+      Character.
+  - rscadd: Added the ability to give ColorMate to Simple Mobs or Borgs through player
+      effects.
+  - rscadd: Added the ability to health scan any living mobs from player effects.
+  - balance: Proteans can now use some implants.
+  Diana:
+  - qol: Damage now updates immediately, instead of waiting for the next life tick.
+  - code_imp: Godmode works better now
+  FluffMedic:
+  - balance: Some tyr things are altered. Mostly ants are a smidge more deadly
+  Zizzi:
+  - rscadd: Targeted pathfinding circuit
+  - rscadd: Pathfinding locomotion circuit
+  - rscadd: Ability to ID lock circuit assemblies
+  - rscadd: ID access circuit
+  - rscadd: Added a new circuitry assembly.
+  - rscadd: Added two new circuits
+  - rscadd: Added unique speaker to electronic earpiece.
+  - bugfix: Fixed reagent circuitry not supporting reagent storage circuits.
+  - bugfix: Fixed text pad input buffer size
+2025-07-28:
+  CHOMPStation2StaffMirrorBot:
+  - rscadd: Added a new "Poison Fruit" ability to Alraune. It applies any poison that
+      can be used by the injecting venom ability to fruit grown from the Alraune.
+      There is a notice attached to the selection that states this is intended for
+      scenes and to not leave the poisoned fruit out for people who do not OOC consent,
+      as well as admin logging when this fruit is produced.
+  - rscadd: Added a new thorns ability for alraune that will cause anyone touching
+      them, or simple mobs attacking them, to take a small amount of brute damage.
+      This starts off and can be toggled off and on at will.
+  - code_imp: Added variables to seed harvesting so that code can force them to spawn
+      with specific reagents inside.
+  - balance: Allowed alraune to change the type of fruit they spawn more than once.
+  - bugfix: Fixed vore hostile mobs (those that eat people unprompted) not being able
+      to target players with mob vore enabled.
+  - bugfix: tiny memory leak on capture crystal animations
+  - code_imp: capture crystals use timers instead of sleeps to animate
+  - bugfix: manual rendered prefs in the wrong category
+  - rscadd: Baton lanyards can now be acquired from sec wardrobe vendors
+  Guti:
+  - qol: Extrapolator shows if normal diseases are dormant as well
+  - bugfix: Fixed blob spores acting on death regardless of dormant or not
+  - bugfix: Fixed common diseases losing their dormant flag when applied
+  - spellcheck: Roanoake to Roanoke
+  - qol: Geneticist now spawn with a gene scanner
+2025-07-29:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: fixed circuit assemblies printing empty lines on examine.
+  - bugfix: Dev disabled styles removed from randomized rolls.
+  UniquaSa:
+  - rscadd: Added a few new mobs to the maintenance predator list
+  - bugfix: Fixed a issue with space carp turning invisible when eating someone
+  - maptweak: Replaced two of the maintenance predator spawners into morphs spawners
+      in deck 0
+  WIll:
+  - rscadd: Items that can be sold by cargo now state it at the end of their description
+  - rscadd: Multiple stamped manifests can be sent in the same crate
+  - code_imp: Moved cargo item selling code to an element
+2025-07-30:
+  CHOMPStation2StaffMirrorBot:
+  - qol: rust-g updated to 4.0.0
+  Diana:
+  - rscadd: Purple Robes in the loadout now has a teshari variant!
+  - rscadd: Purple robes can now be unbuttoned!
+  ItsSelis:
+  - code_imp: Removes sleep() in modular computer uis
+2025-07-31:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: Fixed vaccines not giving vaccine bottles
+  - rscadd: Added a variant of neck fur that doesn't have a north-facing sprite.
+  Will:
+  - rscadd: New particle smasher recipes
+  - code_imp: Moves dizzy and jitter code to components.
+  - bugfix: Fixed a major runtime in the resleeving computer when a bodyrecord becomes
+      outdated
+  - bugfix: Synthfab not being able to spawn bodies properly
+  - bugfix: Teshari can no longer pass through deployed security barriers

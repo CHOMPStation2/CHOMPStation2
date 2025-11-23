@@ -14,6 +14,7 @@
 	if(isrobot(user))
 		var/mob/living/silicon/robot/R = user
 		R.selecting_module = FALSE
+	qdel(src)
 
 /datum/tgui_module/robot_ui_module/tgui_interact(mob/user, datum/tgui/ui, datum/tgui/parent_ui)
 	. = ..()
@@ -22,9 +23,10 @@
 		R.selecting_module = TRUE
 
 /datum/tgui_module/robot_ui_module/ui_assets(mob/user)
-	return list(
-		get_asset_datum(/datum/asset/spritesheet_batched/robot_icons)
-	)
+	var/list/our_assets = list()
+	for(var/entry in GLOB.robot_sprite_sheets)
+		our_assets += GLOB.robot_sprite_sheets[entry]
+	return our_assets
 
 /datum/tgui_module/robot_ui_module/tgui_static_data()
 	var/list/data = ..()
@@ -40,8 +42,7 @@
 			modules.Add(R.restrict_modules_to)
 		else if(R.shell)
 			modules.Add(GLOB.robot_module_types) // CHOMPEdit
-			// CHOMPAdd Start, shell blacklist and crisis mode for shells
-			modules.Remove(GLOB.shell_module_blacklist)
+			// CHOMPAdd Start, crisis mode for shells
 			if(R.crisis || GLOB.security_level == SEC_LEVEL_RED || R.crisis_override)
 				to_chat(src, span_red("Crisis mode active. Combat module available."))
 				modules |= GLOB.emergency_module_types
@@ -56,10 +57,7 @@
 					modules |= module_name
 	data["possible_modules"] = modules
 	data["mind_name"] = R.mind.name
-	if(R.emagged)
-		data["theme"] = "syndicate"
-	else if (R.ui_theme)
-		data["theme"] = R.ui_theme
+	data["theme"] = R.get_ui_theme()
 
 	return data
 
@@ -67,7 +65,6 @@
 	var/list/data = ..()
 
 	var/mob/living/silicon/robot/R = host
-	var/datum/asset/spritesheet_batched/robot_icons/spritesheet = get_asset_datum(/datum/asset/spritesheet_batched/robot_icons)
 
 	data["currentName"] = new_name ? new_name : R.name
 	data["isDefaultName"] = !new_name
@@ -98,6 +95,7 @@
 		data["sprite_datum_class"] = null
 		data["sprite_datum_size"] = null
 		if(sprite_datum)
+			var/datum/asset/spritesheet_batched/robot_icons/spritesheet = GLOB.robot_sprite_sheets[selected_module]
 			data["sprite_datum_class"] = sanitize_css_class_name("[sprite_datum.type]")
 			data["sprite_datum_size"] = spritesheet.icon_size_id(data["sprite_datum_class"] + "S") // just get the south icon's size, the rest will be the same
 
@@ -115,7 +113,7 @@
 			if(R.module)
 				return
 			var/new_module = params["value"]
-			if(!(new_module in robot_modules))
+			if(!(new_module in GLOB.robot_modules))
 				return
 			if(!is_borg_whitelisted(R, new_module))
 				return
@@ -161,7 +159,7 @@
 
 /mob/living/silicon/robot/proc/apply_module(var/datum/robot_sprite/new_datum, var/new_module)
 	icon_selected = TRUE
-	var/module_type = robot_modules[new_module]
+	var/module_type = GLOB.robot_modules[new_module]
 	if(modtype != new_module || !module)
 		if(module)
 			qdel(module)

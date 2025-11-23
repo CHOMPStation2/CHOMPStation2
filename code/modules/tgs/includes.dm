@@ -14,12 +14,9 @@
 
 #include "v5\_defines.dm"
 #include "v5\api.dm"
-#include "v5\api_vgs.dm" //VOREStation Edit - Vgs
 #include "v5\bridge.dm"
 #include "v5\chunking.dm"
 #include "v5\commands.dm"
-#include "v5\chat_commands.dm" //CHOMPEdit
-#include "v5\chat_commands_zz_ch.dm" //CHOMPEdit
 #include "v5\serializers.dm"
 #include "v5\topic.dm"
 #include "v5\undefs.dm"

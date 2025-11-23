@@ -14,6 +14,8 @@
 	var/datum/surgery_status/op_stage = new/datum/surgery_status
 	//Active emote/pose
 	var/pose = null
+	var/pose_move = FALSE
+	var/image/pose_indicator
 	var/list/chem_effects = list()
 	var/datum/reagents/metabolism/bloodstream/bloodstr = null
 	var/datum/reagents/metabolism/ingested/ingested = null
@@ -23,6 +25,9 @@
 	var/pulse = PULSE_NORM	//current pulse level
 
 	var/does_not_breathe = 0 //Used for specific mobs that can't take advantage of the species flags (changelings)
+
+	VAR_PROTECTED/list/addictions = null // contains currently addicted chem reagent IDs
+	VAR_PROTECTED/list/addiction_counters = null // contains counters by reagent ID
 
 	//these two help govern taste. The first is the last time a taste message was shown to the plaer.
 	//the second is the message in question.

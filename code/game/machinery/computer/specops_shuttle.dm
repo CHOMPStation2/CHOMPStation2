@@ -16,7 +16,7 @@ var/specops_shuttle_timeleft = 0
 	icon_keyboard = "security_key"
 	icon_screen = "syndishuttle"
 	light_color = "#00ffff"
-	req_access = list(access_cent_specops)
+	req_access = list(ACCESS_CENT_SPECOPS)
 //	req_access = list(ACCESS_CENT_SPECOPS)
 	var/temp = null
 	var/hacked = 0
@@ -159,10 +159,10 @@ var/specops_shuttle_timeleft = 0
 		sleep(10)
 
 		var/spawn_marauder[] = new()
-		for(var/obj/effect/landmark/L in landmarks_list)
+		for(var/obj/effect/landmark/L in GLOB.landmarks_list)
 			if(L.name == "Marauder Entry")
 				spawn_marauder.Add(L)
-		for(var/obj/effect/landmark/L in landmarks_list)
+		for(var/obj/effect/landmark/L in GLOB.landmarks_list)
 			if(L.name == "Marauder Exit")
 				var/obj/effect/portal/P = new(L.loc)
 				P.invisibility = INVISIBILITY_ABSTRACT//So it is not seen by anyone.
@@ -260,7 +260,7 @@ var/specops_shuttle_timeleft = 0
 	if(..())
 		return
 
-	user.machine = src
+	user.set_machine(src)
 	var/dat
 	if (temp)
 		dat = temp
@@ -270,16 +270,16 @@ var/specops_shuttle_timeleft = 0
 		[specops_shuttle_moving_to_station || specops_shuttle_moving_to_centcom ? "\n*The Special Ops. shuttle is already leaving.*<BR>\n<BR>":specops_shuttle_at_station ? "\n<A href='byond://?src=\ref[src];sendtodock=1'>Shuttle standing by...</A><BR>\n<BR>":"\n<A href='byond://?src=\ref[src];sendtostation=1'>Depart to [station_name()]</A><BR>\n<BR>"]
 		\n<A href='byond://?src=\ref[user];mach_close=computer'>Close</A>"}
 
-	user << browse("<html>[dat]</html>", "window=computer;size=575x450")
-	onclose(user, "computer")
-	return
+	var/datum/browser/popup = new(usr, "computer", "Computer", 575, 450)
+	popup.set_content(dat)
+	popup.open()
 
 /obj/machinery/computer/specops_shuttle/Topic(href, href_list)
 	if(..())
 		return 1
 
 	if ((usr.contents.Find(src) || (in_range(src, usr) && istype(loc, /turf))) || (istype(usr, /mob/living/silicon)))
-		usr.machine = src
+		usr.set_machine(src)
 
 	if (href_list["sendtodock"])
 		if(!specops_shuttle_at_station|| specops_shuttle_moving_to_station || specops_shuttle_moving_to_centcom) return

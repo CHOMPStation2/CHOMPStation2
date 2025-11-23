@@ -12,8 +12,8 @@
 	icon_living = "chungus"
 	icon_dead = "chungus-dead"
 	icon_rest = "chungus_rest"
-	faction = "mouse"
-	icon = 'modular_chomp/icons/mob/vore64x32_ch.dmi'
+	faction = FACTION_MOUSE
+	icon = 'icons/mob/vore64x32.dmi'
 
 	maxHealth = 200
 	health = 200
@@ -44,7 +44,7 @@
 
 	say_list_type = /datum/say_list/chungus
 	ai_holder_type = /datum/ai_holder/simple_mob/melee
-	can_be_drop_prey = FALSE //CHOMP Add
+	can_be_drop_prey = FALSE
 
 /mob/living/simple_mob/vore/aggressive/chungus/death()
 	var/death = list('sound/effects/mob_effects/m_scream_1.ogg','sound/effects/mob_effects/m_scream_2.ogg','sound/effects/mob_effects/m_scream_3.ogg','sound/effects/mob_effects/m_scream_4.ogg')

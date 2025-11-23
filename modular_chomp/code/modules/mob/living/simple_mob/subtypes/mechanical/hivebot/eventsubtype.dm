@@ -39,11 +39,11 @@
 	armor = list(melee = 80, bullet = 80, laser = 80, energy = 80, bomb = 0, bio = 100, rad = 100)
 
 
-/mob/living/simple_mob/mechanical/hivebot/nanoevent/orange //missiles!
+/mob/living/simple_mob/mechanical/hivebot/nanoevent/orange //knockback
 	name = "nanoweave artillery hivebot"
 	icon_state = "orange"
 	icon_living = "orange"
-	projectiletype = /obj/item/projectile/energy/burninglaser
+	projectiletype = /obj/item/projectile/knockback
 	movement_cooldown = 1
 
 
@@ -59,6 +59,7 @@
 	damage = 25
 	armor_penetration = 60
 	speed = 10
+	crawl_destroy = TRUE
 
 /obj/item/projectile/bullet/alterhivebot
 	damage = 25
@@ -69,28 +70,26 @@
 /obj/item/projectile/bullet/alterhivebot/boss
 	damage = 35
 	speed = 10
+	crawl_destroy = TRUE
 
 /obj/item/projectile/beam/midlaser/shortrange
 	range = 3
+	crawl_destroy = TRUE
 
 /obj/item/projectile/beam/midlaser/veryshortrange
 	range = 2
+	crawl_destroy = TRUE
 
-/obj/item/projectile/energy/burninglaser
-	name = "energy bolt"
-	icon_state = "heavylaser"
-	damage = 25
-	armor_penetration = 20
-	penetrating = 5
-	speed = 3
 
-/obj/item/projectile/energy/burninglaser/Move()
-	. = ..()
-	new /obj/fire(src.loc)
-
-/obj/item/projectile/energy/burninglaser/boss
-	armor_penetration = 50
-	speed = 10
+/obj/item/projectile/energy/lightingspark/nanoweave
+	damage = 15
+	armor_penetration = 40
+	damage_type = BURN
+	nodamage = 0
+	penetrating = 10
+	icon_state = "tesla_projectile"
+	speed = 15
+	crawl_destroy = TRUE
 
 /obj/item/projectile/knockback
 	name = "sonic blast"
@@ -146,136 +145,64 @@
 	maxHealth = 5000
 	health = 5000
 
+/mob/living/simple_mob/mechanical/mecha/eclipse/hivebot/boss/sifpoi
+	maxHealth = 600
+	health = 600
+	loot_list = list(/obj/item/prop/alien/junk = 100,
+		/obj/item/multitool/alien = 60,
+		/obj/item/stack/cable_coil/alien = 60,
+		/obj/item/tool/crowbar/alien = 60,
+		/obj/item/tool/screwdriver/alien = 60,
+		/obj/item/weldingtool/alien = 60,
+		/obj/item/tool/wirecutters/alien = 60,
+		/obj/item/tool/wrench/alien = 60,
+		/obj/item/cell/device/weapon/recharge/alien = 30,
+		/obj/item/perfect_tele/alien = 100
+			)
+
 /mob/living/simple_mob/mechanical/mecha/eclipse/hivebot/boss/do_special_attack(atom/A)
 	. = TRUE // So we don't fire a bolt as well.
-	switch(a_intent)
-		if(I_DISARM) // Phase 3
-			if(attackcycle == 1)
-				say("PROTOCOL: RESTRAIN.")
-				Beam(A, icon_state = "solar_beam", time = 2.5 SECONDS, maxdistance = INFINITY)
-				specialattackprojectile = /obj/item/projectile/metalball
-				addtimer(CALLBACK(src, PROC_REF(singleproj), A, 2), 3 SECONDS, TIMER_DELETE_ME)
-				attackcycle = 0
-			else if(attackcycle == 2)
-				say("PROTOCOL: DESTORY.")
-				Beam(A, icon_state = "solar_beam", time = 2.5 SECONDS, maxdistance = INFINITY)
-				specialattackprojectile = /obj/item/projectile/beam/midlaser
-				addtimer(CALLBACK(src, PROC_REF(singleproj), A, 3), 3 SECONDS, TIMER_DELETE_ME)
-				attackcycle = 0
-			else if(attackcycle == 3)
-				say("PROTOCOL: BARRIER WIPE")
-				specialattackprojectile = /obj/item/projectile/energy/wallbreaker/boss
-				addtimer(CALLBACK(src, PROC_REF(spin_to_win), A, 4), 1 SECONDS, TIMER_DELETE_ME)
-				attackcycle = 0
-			else if(attackcycle == 4)
-				say("PROTOCOL: SPRAY FIRE")
-				specialattackprojectile = /obj/item/projectile/bullet/alterhivebot/boss
-				addtimer(CALLBACK(src, PROC_REF(random_firing), A, 12, 5, 0.5 SECONDS), 0.5 SECONDS, TIMER_DELETE_ME)
-				attackcycle = 0
-			else if(attackcycle == 5)
-				say("PROTOCOL: SHOCKWAVE.")
-				specialattackprojectile = /obj/item/projectile/knockback
-				addtimer(CALLBACK(src, PROC_REF(burst), A, 6), 3 SECONDS, TIMER_DELETE_ME)
-				attackcycle = 0
-			else if(attackcycle == 6)
-				say("PROTOCOL: MICROWAVE.")
-				Beam(A, icon_state = "solar_beam", time = 2.5 SECONDS, maxdistance = INFINITY)
-				specialattackprojectile = /obj/item/projectile/temp/hot
-				addtimer(CALLBACK(src, PROC_REF(singleproj), A, 7), 3 SECONDS, TIMER_DELETE_ME)
-				attackcycle = 0
-			else if(attackcycle == 7)
-				say("PROTOCOL: MACROWAVE.")
-				specialattackprojectile = /obj/item/projectile/temp/hot
-				addtimer(CALLBACK(src, PROC_REF(beglaser), A, 8), 2 SECOND, TIMER_DELETE_ME)
-				attackcycle = 0
-			else if(attackcycle == 8)
-				say("PROTOCOL: LASERBLADE.")
-				specialattackprojectile = /obj/item/projectile/beam/midlaser/shortrange
-				addtimer(CALLBACK(src, PROC_REF(burst), A, 9), 3 SECONDS, TIMER_DELETE_ME)
-				attackcycle = 0
-			else if(attackcycle == 9)
-				say("PROTOCOL: WORMHOLE.")
-				specialattackprojectile = /obj/item/projectile/arc/microsingulo
-				attackcycle = 0
-				if(prob(50))
-					addtimer(CALLBACK(src, PROC_REF(miniburst_a), A, 10), 2 SECONDS, TIMER_DELETE_ME)
-				else
-					addtimer(CALLBACK(src, PROC_REF(miniburst_b), A, 10), 2 SECONDS, TIMER_DELETE_ME)
-			else if(attackcycle == 10)
-				say("PROTOCOL: FIREWALL.")
-				specialattackprojectile = /obj/item/projectile/energy/burninglaser/boss
-				attackcycle = 0
-				if(prob(50))
-					addtimer(CALLBACK(src, PROC_REF(miniburst_a), A, 1), 2 SECONDS, TIMER_DELETE_ME)
-				else
-					addtimer(CALLBACK(src, PROC_REF(miniburst_b), A, 1), 2 SECONDS, TIMER_DELETE_ME)
+	var/rng_cycle
+	if(attackcycle == 1)
+		specialattackprojectile = /obj/item/projectile/beam/midlaser/shortrange
+		rng_cycle = rand(1,5)
+		say("PROTOCOL: LASER. BLADE.")
+		addtimer(CALLBACK(src, PROC_REF(giant_burst), A, rng_cycle), 2 SECONDS, TIMER_DELETE_ME)
+		attackcycle = 0
+	else if(attackcycle == 2)
+		specialattackprojectile = /obj/item/projectile/energy/wallbreaker/boss
+		rng_cycle = rand(1,5)
+		say("PROTOCOL: RANDOM. SWEEP")
+		addtimer(CALLBACK(src, PROC_REF(quad_random_firing), A, 12, 1, 0.5 SECONDS), 1 SECOND, TIMER_DELETE_ME)
+		attackcycle = 0
+	else if(attackcycle == 3)
+		specialattackprojectile = /obj/item/projectile/energy/lightingspark/nanoweave
+		rng_cycle = rand(1,5)
+		say("PROTOCOL: WARP. DRIVE.")
+		addtimer(CALLBACK(src, PROC_REF(teleport_attack), A, rng_cycle, 3), 2 SECONDS, TIMER_DELETE_ME)
+		attackcycle = 0
+	else if(attackcycle == 4)
+		specialattackprojectile = /obj/item/projectile/knockback
+		rng_cycle = rand(1,5)
+		say("PROTOCOL: SHOCKWAVE.")
+		addtimer(CALLBACK(src, PROC_REF(giant_burst), A, rng_cycle), 2 SECONDS, TIMER_DELETE_ME)
+		attackcycle = 0
+	else if(attackcycle == 5)
+		specialattackprojectile = /obj/item/projectile/metalball
+		Beam(A, icon_state = "solar_beam", time = 0.5 SECONDS, maxdistance = INFINITY)
+		say("PROTOCOL: RESTRAIN.")
+		addtimer(CALLBACK(src, PROC_REF(singleproj), A, 6), 1 SECOND, TIMER_DELETE_ME)
+		attackcycle = 0
+	else if(attackcycle == 6)
+		specialattackprojectile = /obj/item/projectile/beam/heavylaser
+		Beam(A, icon_state = "solar_beam", time = 0.5 SECONDS, maxdistance = INFINITY)
+		rng_cycle = rand(1,5)
+		say("PROTOCOL: DESTROY.")
+		addtimer(CALLBACK(src, PROC_REF(singleproj), A, rng_cycle), 2 SECONDS, TIMER_DELETE_ME)
+		attackcycle = 0
 
-		if(I_HURT) // Phase 1. Teaching the player the three funny attacks
-			if(attackcycle == 1) //metal ball
-				say("PROTOCOL: RESTRAIN.")
-				Beam(A, icon_state = "solar_beam", time = 2.5 SECONDS, maxdistance = INFINITY)
-				specialattackprojectile = /obj/item/projectile/metalball
-				addtimer(CALLBACK(src, PROC_REF(singleproj), A, 2), 3 SECONDS, TIMER_DELETE_ME)
-				attackcycle = 0
-			else if(attackcycle == 2) //laser to be blocked by the foam we set up.
-				say("PROTOCOL: DESTORY.")
-				Beam(A, icon_state = "solar_beam", time = 2.5 SECONDS, maxdistance = INFINITY)
-				specialattackprojectile = /obj/item/projectile/beam/midlaser
-				addtimer(CALLBACK(src, PROC_REF(singleproj), A, 3), 3 SECONDS, TIMER_DELETE_ME)
-				attackcycle = 0
-			else if(attackcycle == 3) //The knock back AoE.
-				say("PROTOCOL: SHOCKWAVE.")
-				specialattackprojectile = /obj/item/projectile/knockback
-				addtimer(CALLBACK(src, PROC_REF(burst), A, 4), 3 SECONDS, TIMER_DELETE_ME)
-				attackcycle = 0
-			else if(attackcycle == 4) //The Get away from me AoE.
-				say("PROTOCOL: LASERBLADE.")
-				specialattackprojectile = /obj/item/projectile/beam/midlaser/shortrange
-				addtimer(CALLBACK(src, PROC_REF(burst), A, 1), 3 SECONDS, TIMER_DELETE_ME)
-				attackcycle = 0
-		if(I_GRAB) // Phase 2
-			if(attackcycle == 1)
-				say("PROTOCOL: RESTRAIN.")
-				Beam(A, icon_state = "solar_beam", time = 2.5 SECONDS, maxdistance = INFINITY)
-				specialattackprojectile = /obj/item/projectile/metalball
-				addtimer(CALLBACK(src, PROC_REF(singleproj), A, 2), 3 SECONDS, TIMER_DELETE_ME)
-				attackcycle = 0
-			else if(attackcycle == 2)
-				say("PROTOCOL: DESTORY.")
-				Beam(A, icon_state = "solar_beam", time = 2.5 SECONDS, maxdistance = INFINITY)
-				specialattackprojectile = /obj/item/projectile/beam/midlaser
-				addtimer(CALLBACK(src, PROC_REF(singleproj), A, 3), 3 SECONDS, TIMER_DELETE_ME)
-				attackcycle = 0
-			else if(attackcycle == 3)
-				say("PROTOCOL: BARRIER WIPE")
-				specialattackprojectile = /obj/item/projectile/energy/wallbreaker/boss
-				addtimer(CALLBACK(src, PROC_REF(spin_to_win), A, 4), 1 SECONDS, TIMER_DELETE_ME)
-				attackcycle = 0
-			else if(attackcycle == 4)
-				say("PROTOCOL: SHOCKWAVE.")
-				specialattackprojectile = /obj/item/projectile/knockback
-				addtimer(CALLBACK(src, PROC_REF(burst), A, 5), 3 SECONDS, TIMER_DELETE_ME)
-				attackcycle = 0
-			else if(attackcycle == 5)
-				say("PROTOCOL: MICROWAVE.")
-				Beam(A, icon_state = "solar_beam", time = 2.5 SECONDS, maxdistance = INFINITY)
-				specialattackprojectile = /obj/item/projectile/temp/hot
-				addtimer(CALLBACK(src, PROC_REF(singleproj), A, 6), 3 SECONDS, TIMER_DELETE_ME)
-				attackcycle = 0
-			else if(attackcycle == 6)
-				say("PROTOCOL: LASERBLADE.")
-				specialattackprojectile = /obj/item/projectile/beam/midlaser/shortrange
-				addtimer(CALLBACK(src, PROC_REF(burst), A, 7), 3 SECONDS, TIMER_DELETE_ME)
-				attackcycle = 0
-			else if(attackcycle == 7)
-				say("PROTOCOL: FIREWALL.")
-				specialattackprojectile = /obj/item/projectile/energy/burninglaser/boss
-				attackcycle = 0
-				if(prob(50))
-					addtimer(CALLBACK(src, PROC_REF(miniburst_a), A, 1), 3 SECONDS, TIMER_DELETE_ME)
-				else
-					addtimer(CALLBACK(src, PROC_REF(miniburst_b), A, 1), 3 SECONDS, TIMER_DELETE_ME)
 
+/*
 /mob/living/simple_mob/mechanical/mecha/eclipse/hivebot/cyan
 	name = "command hivebot"
 	desc = "A large, very important looking robot."
@@ -396,7 +323,7 @@
 				say("PROTOCOL: TELEPORT.")
 				addtimer(CALLBACK(src, PROC_REF(teleport_attack), A, 1), 1 SECOND, TIMER_DELETE_ME)
 				attackcycle = 0
-
+*/
 
 
 
@@ -409,19 +336,19 @@
 
 /obj/item/prop/nanoweave/lime
 	catalogue_data = list(/datum/category_item/catalogue/anomalous/limedisc)
-	icon_state = "limedisc"
+	icon_state = "limedisk"
 
 /obj/item/prop/nanoweave/cyan
 	catalogue_data = list(/datum/category_item/catalogue/anomalous/cyandisc)
-	icon_state = "cyandisc"
+	icon_state = "cyandisk"
 
 /obj/item/prop/nanoweave/orange
 	catalogue_data = list(/datum/category_item/catalogue/anomalous/orangedisc)
-	icon_state = "orangedisc"
+	icon_state = "orangedisk"
 
 /obj/item/prop/nanoweave/terraformers
-	catalogue_data = list(/datum/category_item/catalogue/anomalous/orangedisc)
-	icon_state = "orangedisc"
+	catalogue_data = list(/datum/category_item/catalogue/anomalous/terraformers)
+	icon_state = "reddisk"
 
 
 /datum/category_item/catalogue/anomalous/cyandisc

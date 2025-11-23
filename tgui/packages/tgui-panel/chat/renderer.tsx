@@ -5,11 +5,13 @@
  */
 
 import { createRoot } from 'react-dom/client';
+import { useSelector } from 'tgui/backend';
 import { createLogger } from 'tgui/logging';
 import { Tooltip } from 'tgui-core/components';
 import { EventEmitter } from 'tgui-core/events';
 import { classes } from 'tgui-core/react';
 
+import { selectSettings } from '../settings/selectors';
 import { exportToDisk } from './chatExport';
 import {
   IMAGE_RETRY_DELAY,
@@ -68,7 +70,7 @@ const findNearestScrollableParent = (startingNode: HTMLElement) => {
 const createHighlightNode = (text: string, color: string): HTMLElement => {
   const node = document.createElement('span');
   node.className = 'Chat__highlight';
-  node.setAttribute('style', 'background-color:' + color);
+  node.setAttribute('style', `background-color:${color}`);
   node.textContent = text;
   return node;
 };
@@ -85,7 +87,7 @@ const interleaveMessage = (
   color: string,
 ): HTMLElement => {
   if (interleave) {
-    node.setAttribute('style', 'background-color:' + color);
+    node.setAttribute('style', `background-color:${color}`);
     node.setAttribute('display', 'block');
   } else {
     node.removeAttribute('style');
@@ -135,7 +137,7 @@ const handleImageError = (e: ErrorEvent) => {
     }
     const src = node.src;
     node.src = '';
-    node.src = src + '#' + attempts;
+    node.src = `${src}#${attempts}`;
     node.setAttribute('data-reload-n', (attempts + 1).toString());
   }, IMAGE_RETRY_DELAY);
 };
@@ -189,16 +191,19 @@ class ChatRenderer {
   ensureScrollTracking: () => void;
   highlightParsers:
     | {
-        highlightWords: string;
+        highlightWords: string[];
         highlightRegex: RegExp;
         highlightColor: string;
         highlightWholeMessage: boolean;
-        highlightBlacklist: string;
+        highlightBlacklist: boolean;
         blacklistregex: RegExp;
       }[]
     | null;
   databaseBackendEnabled: boolean;
   lastScrollHeight: number;
+  ttsVoice: string;
+  ttsCategories: Record<string, boolean>;
+
   constructor() {
     /** @type {HTMLElement} */
     this.loaded = false;
@@ -314,6 +319,8 @@ class ChatRenderer {
       const matchCase = setting.matchCase;
       const allowedRegex = /^[a-zа-яё0-9_\-$/^[\s\]\\]+$/gi;
       const regexEscapeCharacters = /[!#$%^&*)(+=.<>{}[\]:;'"|~`_\-\\/]/g;
+      // Reset lastIndex so it does not mess up the next word
+      allowedRegex.lastIndex = 0;
       const lines = String(text)
         .split(',')
         .map((str) => str.trim())
@@ -323,16 +330,16 @@ class ChatRenderer {
             str &&
             str.length > 1 &&
             // Must be alphanumeric (with some punctuation)
-            allowedRegex.test(str) &&
-            // Reset lastIndex so it does not mess up the next word
-            ((allowedRegex.lastIndex = 0) || true),
+            allowedRegex.test(str),
         );
       let highlightWords;
       let highlightRegex;
       // Nothing to match, reset highlighting
       if (lines.length === 0) {
-        return;
+        return undefined;
       }
+      // Reset lastIndex so it does not mess up the next word
+      allowedRegex.lastIndex = 0;
       const blacklistLines = String(blacklist)
         .split(',')
         .map((str) => str.trim())
@@ -342,11 +349,8 @@ class ChatRenderer {
             str &&
             str.length > 1 &&
             // Must be alphanumeric (with some punctuation)
-            allowedRegex.test(str) &&
-            // Reset lastIndex so it does not mess up the next word
-            ((allowedRegex.lastIndex = 0) || true),
+            allowedRegex.test(str),
         );
-      let blacklistWords;
       let blacklistregex;
       if (highlightBlacklist && blacklistLines.length > 0) {
         const blacklistRegexExpressions: string[] = [];
@@ -363,7 +367,7 @@ class ChatRenderer {
             // We're not going to let regex characters fuck up our RegEx operation.
             line = line.replace(regexEscapeCharacters, '\\$&');
 
-            blacklistRegexExpressions.push('^' + line);
+            blacklistRegexExpressions.push(`^${line}`);
           }
         }
         const regexStrBL = blacklistRegexExpressions.join('|');
@@ -371,7 +375,7 @@ class ChatRenderer {
         // We wrap this in a try-catch to ensure that broken regex doesn't break
         // the entire chat.
         try {
-          blacklistregex = new RegExp('(' + regexStrBL + ')', flagsBL);
+          blacklistregex = new RegExp(`(${regexStrBL})`, flagsBL);
         } catch {
           // We just reset it if it's invalid.
           blacklistregex = null;
@@ -400,13 +404,13 @@ class ChatRenderer {
         }
       }
       const regexStr = regexExpressions.join('|');
-      const flags = 'g' + (matchCase ? '' : 'i');
+      const flags = `g${matchCase ? '' : 'i'}`;
       // We wrap this in a try-catch to ensure that broken regex doesn't break
       // the entire chat.
       try {
         // setting regex overrides matchword
         if (regexStr) {
-          highlightRegex = new RegExp('(' + regexStr + ')', flags);
+          highlightRegex = new RegExp(`(${regexStr})`, flags);
         } else {
           const pattern = `${matchWord ? '\\b' : ''}(${highlightWords.join(
             '|',
@@ -429,6 +433,7 @@ class ChatRenderer {
         highlightBlacklist,
         blacklistregex,
       });
+      return undefined;
     });
   }
 
@@ -467,6 +472,8 @@ class ChatRenderer {
     interleaveEnabled: boolean,
     interleaveColor: string,
     databaseBackendEnabled: boolean,
+    ttsVoice: string,
+    ttsCategories: Record<string, boolean>,
   ) {
     this.visibleMessageLimit = visibleMessageLimit;
     this.combineMessageLimit = combineMessageLimit;
@@ -480,6 +487,8 @@ class ChatRenderer {
     this.interleaveEnabled = interleaveEnabled;
     this.interleaveColor = interleaveColor;
     this.databaseBackendEnabled = databaseBackendEnabled;
+    this.ttsVoice = ttsVoice;
+    this.ttsCategories = ttsCategories;
   }
 
   changePage(page: Page) {
@@ -545,6 +554,20 @@ class ChatRenderer {
     return null;
   }
 
+  tryTTS(message: message, node: HTMLElement) {
+    if (this.ttsCategories[message.type]) {
+      const utterance = new SpeechSynthesisUtterance(node.innerText);
+
+      const voice = window.speechSynthesis
+        .getVoices()
+        .find((val) => val.name === this.ttsVoice);
+      utterance.voice = voice || null;
+
+      window.speechSynthesis.speak(utterance);
+    }
+  }
+
+  // eslint-disable-next-line complexity
   processBatch(
     batch: message[],
     options: {
@@ -553,6 +576,7 @@ class ChatRenderer {
       doArchive?: boolean;
     } = {},
   ) {
+    const settings = useSelector(selectSettings);
     const { prepend, notifyListeners = true, doArchive = false } = options;
     const now = Date.now();
     // Queue up messages until chat is ready
@@ -625,9 +649,9 @@ class ChatRenderer {
               working_value = true;
             } else if (working_value === '$false') {
               working_value = false;
-            } else if (!isNaN(working_value)) {
+            } else if (!Number.isNaN(working_value)) {
               const parsed_float = parseFloat(working_value);
-              if (!isNaN(parsed_float)) {
+              if (!Number.isNaN(parsed_float)) {
                 working_value = parsed_float;
               }
             }
@@ -645,16 +669,15 @@ class ChatRenderer {
 
           const reactRoot = createRoot(childNode);
 
-          /* eslint-disable react/no-danger */
           reactRoot.render(
             <>
               <Element {...outputProps}>
+                {/** biome-ignore lint/security/noDangerouslySetInnerHtml: Chat rendere */}
                 <span dangerouslySetInnerHTML={oldHtml} />
               </Element>
               {childNode}
             </>,
           );
-          /* eslint-enable react/no-danger */
         }
 
         // Highlight text
@@ -682,6 +705,7 @@ class ChatRenderer {
                 node.className += ' ChatMessage--highlighted';
               }
             }
+            return undefined;
           });
         }
         // Linkify text
@@ -714,6 +738,13 @@ class ChatRenderer {
       countByType[message.type] += 1;
       // TODO: Detect duplicates
       this.messages.push(message);
+
+      // TTS
+      // Only TTS on new messages
+      if (doArchive) {
+        this.tryTTS(message, node);
+      }
+
       if (
         doArchive &&
         this.logEnable &&
@@ -881,7 +912,7 @@ class ChatRenderer {
       for (let i = 0; i < cssRules.length; i++) {
         const rule = cssRules[i];
         if (rule && typeof rule.cssText === 'string') {
-          cssText += rule.cssText + '\n';
+          cssText += `${rule.cssText}\n`;
         }
       }
     }
@@ -919,7 +950,7 @@ class ChatRenderer {
       for (const message of tmpMsgArray) {
         // Filter messages according to active tab for export
         if (this.page && canPageAcceptType(this.page, message.type)) {
-          messagesHtml += message.html + '\n';
+          messagesHtml += `${message.html}\n`;
         }
         // if (message.node) {
         //  messagesHtml += message.node.outerHTML + '\n';

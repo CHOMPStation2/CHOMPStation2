@@ -1500,12 +1500,8 @@
 /turf/simulated/floor/plating,
 /area/surface/outpost/mining_main/crew_area)
 "pg" = (
-/obj/machinery/power/smes/buildable/outpost_substation{
-	RCon_tag = "Outpost - Xenoarch";
-	charge = 500000;
-	input_attempt = 1;
-	input_level = 150000;
-	output_level = 150000
+/obj/machinery/power/smes/buildable/outpost_substation/max_charge_max_input{
+	RCon_tag = "Outpost - Xenoarch"
 	},
 /obj/structure/cable/green{
 	icon_state = "0-4"
@@ -1793,7 +1789,7 @@
 "st" = (
 /obj/effect/floor_decal/industrial/warning,
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "car_mining_undermines";
 	name = "shuttle bay controller";
 	pixel_y = -32;
@@ -2329,7 +2325,7 @@
 "wZ" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/airlock/external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	id_tag = "car_mining_undermines_door";
 	locked = 1;
@@ -2708,7 +2704,7 @@
 /area/surface/outpost/research/xenoarcheology/medical)
 "CM" = (
 /obj/machinery/door/airlock/external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	id_tag = "rsr_undermines_door";
 	locked = 1;
@@ -3906,7 +3902,7 @@
 	dir = 4
 	},
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "rsr_undermines";
 	name = "shuttle bay controller";
 	pixel_y = -32;
@@ -4056,12 +4052,8 @@
 /turf/simulated/floor/tiled/white,
 /area/surface/outpost/research/xenoarcheology/anomaly)
 "Tf" = (
-/obj/machinery/power/smes/buildable/outpost_substation{
-	RCon_tag = "Outpost - Mining";
-	charge = 500000;
-	input_attempt = 1;
-	input_level = 150000;
-	output_level = 150000
+/obj/machinery/power/smes/buildable/outpost_substation/max_charge_max_input{
+	RCon_tag = "Outpost - Mining"
 	},
 /obj/structure/cable/green{
 	icon_state = "0-4"

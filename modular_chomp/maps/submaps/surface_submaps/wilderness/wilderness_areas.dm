@@ -2,7 +2,7 @@
 /area/submap
 	name = "Submap Area"
 	icon_state = "submap"
-	flags = RAD_SHIELDED | AREA_FLAG_IS_NOT_PERSISTENT | AREA_SECRET_NAME | AREA_FORBID_EVENTS
+	flags = RAD_SHIELDED | AREA_FLAG_IS_NOT_PERSISTENT | AREA_SECRET_NAME | AREA_FORBID_EVENTS | PHASE_SHIELDED
 	ambience = AMBIENCE_RUINS
 
 /area/submap/event //To be used for Events not for regular PoIs
@@ -234,6 +234,16 @@
 /area/submap/XenoHive
 	name = "POI Wilderness - Xeno Hive"
 	ambience = AMBIENCE_RUINS
+
+/area/submap/XenoWeaveMajor
+	name = "POI Wilderness - Assimilated Engine"
+	ambience = AMBIENCE_HOLY
+	requires_power = FALSE
+
+/area/submap/XenoWeaveMinour
+	name = "POI Wilderness - Assimilated Building"
+	ambience = AMBIENCE_HOLY
+	requires_power = FALSE
 
 /area/submap/VolcanicFissure
 	name = "POI Wilderness - Volcanic Fissure"

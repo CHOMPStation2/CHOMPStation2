@@ -238,7 +238,7 @@ SUBSYSTEM_DEF(vote)
 				if(!question)
 					return 0
 				for(var/i = 1 to 10)
-					var/option = capitalize(sanitize(tgui_input_text(usr, "Please enter an option or hit cancel to finish"))
+					var/option = capitalize(tgui_input_text(usr, "Please enter an option or hit cancel to finish", max_length = MAX_MESSAGE_LEN)
 					if(!option || mode || !usr.client)
 						break
 					choices.Add(option)

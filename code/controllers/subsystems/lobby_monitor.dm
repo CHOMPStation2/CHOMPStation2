@@ -1,9 +1,8 @@
 SUBSYSTEM_DEF(lobby_monitor)
 	name = "Lobby Art"
-	init_order = INIT_ORDER_LOBBY
-	// init_stage = INITSTAGE_EARLY
+	init_stage = INITSTAGE_EARLY
 	flags = SS_NO_INIT
-	wait = 1 SECOND
+	wait = 2 SECONDS
 	runlevels = ALL
 
 	/// The clients who we've waited a [wait] duration to start working. If they haven't, we reboot them
@@ -21,7 +20,7 @@ SUBSYSTEM_DEF(lobby_monitor)
 			continue
 
 		log_tgui(player, "Reinitialized [player.client.ckey]'s lobby window: [ui ? "ui" : "no ui"], status: [player.lobby_window?.status].", "lobby_monitor/Fire")
-		INVOKE_ASYNC(player, TYPE_PROC_REF(/mob/new_player, initialize_lobby_screen))
+		do_reinit(player)
 
 	var/initialize_queue = list()
 	for(var/mob/new_player/player as anything in new_players)
@@ -38,6 +37,12 @@ SUBSYSTEM_DEF(lobby_monitor)
 		initialize_queue += player
 
 	to_reinitialize = initialize_queue
+
+/datum/controller/subsystem/lobby_monitor/proc/do_reinit(var/mob/new_player/player)
+	var/datum/tgui/ui = SStgui.get_open_ui(player, player)
+	if(ui && player.lobby_window && player.lobby_window.status > TGUI_WINDOW_CLOSED)
+		return
+	player.initialize_lobby_screen()
 
 /datum/controller/subsystem/lobby_monitor/Shutdown()
 	var/datum/asset/our_asset = get_asset_datum(/datum/asset/simple/restart_animation)

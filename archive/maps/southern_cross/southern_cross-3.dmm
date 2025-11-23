@@ -6944,13 +6944,6 @@
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/surface/outpost/main/restroom)
-"pm" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/overlay/snow/floor,
-/turf/simulated/floor/tiled/steel_dirty{
-	outdoors = 1
-	},
-/area/surface/outpost/main/dorms)
 "pn" = (
 /obj/machinery/door/airlock/mining{
 	autoclose = 0;
@@ -7579,11 +7572,7 @@
 	dir = 1;
 	icon_state = "spline_plain_full"
 	},
-/obj/structure/showcase{
-	desc = "It looks almost lifelike.";
-	icon = 'icons/obj/statue.dmi';
-	icon_state = "hos";
-	name = "Statue";
+/obj/structure/showcase/hos{
 	pixel_y = 2
 	},
 /obj/item/gps/internal/base,
@@ -9286,7 +9275,7 @@
 "ud" = (
 /obj/effect/overlay/snow/floor,
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "surface_dock_1";
 	name = "shuttle bay controller";
 	pixel_x = -26;
@@ -9302,7 +9291,7 @@
 "uf" = (
 /obj/effect/overlay/snow/floor,
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "surface_dock_2";
 	name = "shuttle bay controller";
 	pixel_x = 26;
@@ -13041,11 +13030,6 @@
 /obj/effect/overlay/snow/floor,
 /turf/simulated/floor/tiled/steel/sif/planetuse,
 /area/surface/outpost/research/xenoresearch/xenobiology)
-"Cl" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/overlay/snow/floor,
-/turf/simulated/floor/tiled/steel/sif/planetuse,
-/area/surface/outside/plains/outpost)
 "Cm" = (
 /obj/machinery/portable_atmospherics/canister/nitrogen,
 /obj/effect/floor_decal/industrial/warning{
@@ -13579,11 +13563,7 @@
 /turf/simulated/shuttle/wall/voidcraft/hard_corner,
 /area/surface/outpost/wall)
 "DS" = (
-/turf/simulated/wall/dungeon{
-	icon = 'icons/obj/doors/shuttledoors.dmi';
-	icon_state = "door_locked";
-	name = "Wall Gate"
-	},
+/turf/simulated/wall/dungeon/gate,
 /area/surface/outpost/wall)
 "DT" = (
 /obj/structure/sign/warning/caution{
@@ -37712,7 +37692,7 @@ al
 aI
 al
 ov
-pm
+ov
 pX
 al
 aI
@@ -51636,7 +51616,7 @@ zz
 BA
 xe
 Ck
-Cl
+ff
 bm
 CQ
 al
@@ -51892,8 +51872,8 @@ xo
 xo
 xo
 xo
-Cl
-Cl
+ff
+ff
 bm
 CQ
 al
@@ -52149,7 +52129,7 @@ AO
 Bi
 Ds
 xo
-Cl
+ff
 ue
 ue
 CQ

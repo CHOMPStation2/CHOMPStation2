@@ -87,7 +87,7 @@ const virusModalBodyOverride = (modal: modalData) => {
           <LabeledList.Item label="Symptoms">
             <LabeledList>
               {virus.symptoms.map((s) => (
-                <LabeledList.Item key={s.stage} label={s.stage + '. ' + s.name}>
+                <LabeledList.Item key={s.stage} label={`${s.stage}. ${s.name}`}>
                   <Box inline>
                     <Box inline color="label">
                       Strength:
@@ -127,7 +127,7 @@ export const PathogenicIsolator = (props) => {
       <ComplexModal maxHeight="100%" maxWidth="95%" />
       <Window.Content scrollable>
         {(isolating && (
-          <NoticeBox warning>The Isolator is currently isolating...</NoticeBox>
+          <NoticeBox>The Isolator is currently isolating...</NoticeBox>
         )) ||
           ''}
         <Tabs>

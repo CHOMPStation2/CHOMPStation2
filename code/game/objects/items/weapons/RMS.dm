@@ -69,8 +69,8 @@ var/list/RMS_random_malfunction = list(/obj/item/fbp_backup_cell,
 	spark_system.attach(src)
 	add_overlay("rms_charge[charge_stage]")
 
-/obj/item/pipe_dispenser/Destroy()
-	qdel_null(spark_system)
+/obj/item/rms/Destroy()
+	QDEL_NULL(spark_system)
 	return ..()
 
 /obj/item/rms/update_icon()
@@ -96,7 +96,7 @@ var/list/RMS_random_malfunction = list(/obj/item/fbp_backup_cell,
 		to_chat(user, span_notice("The battery has no charge."))
 	else
 		playsound(get_turf(src), 'sound/machines/click.ogg', 50, 1)
-		if(do_after(user, 2,target = C))
+		if(do_after(user, 2, target = C))
 			stored_charge += C.charge
 			if(C.charge > charge_needed) //We only drain what we need!
 				C.use(charge_needed)
@@ -191,10 +191,14 @@ var/list/RMS_random_malfunction = list(/obj/item/fbp_backup_cell,
 		/obj/item/stack/material/morphium
 		// Include if you enable in the .dme /obj/item/stack/material/debug
 		)
+	possible_object_paths -= banned_sheet_materials
 	var/obj/item/stack/new_metal = /obj/item/stack/material/supermatter
 	for(var/x=1;x<=10;x++) //You got 10 chances to hit a metal that is NOT banned.
-		var/picked_metal = pick(possible_object_paths) //We select
+		var/obj/item/stack/material/picked_metal = pick(possible_object_paths) //We select
 		if(picked_metal in banned_sheet_materials)
+			continue
+		var/datum/material/M = get_material_by_name(initial(picked_metal.default_type))
+		if(M.flags & MATERIAL_NO_SYNTH)
 			continue
 		else
 			new_metal = picked_metal

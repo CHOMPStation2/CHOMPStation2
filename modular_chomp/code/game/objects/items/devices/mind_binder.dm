@@ -34,7 +34,7 @@
 /obj/item/mindbinder/pre_attack(atom/A)
 	if(istype(A, /obj/structure/gargoyle))
 		var/obj/structure/gargoyle/G = A
-		A = G.gargoyle
+		A = G.WR_gargoyle?.resolve()
 	if(istype(A, /obj/item/holder))
 		var/obj/item/holder/H = A
 		A = H.held_mob
@@ -116,7 +116,7 @@
 		to_chat(usr,span_warning("The device beeps a warning that the target is already sentient!"))
 		return
 
-	if(is_type_in_list(item, item_vore_blacklist))
+	if(is_type_in_list(item, GLOB.item_vore_blacklist))
 		to_chat(usr,span_danger("The item resists your transfer attempt!"))
 		return
 

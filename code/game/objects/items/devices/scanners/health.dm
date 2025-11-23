@@ -308,6 +308,29 @@
 					dat += span_warning("Anatomical irregularities detected in subject.")
 					dat += "<br>"
 		//CHOMPedit end
+		// Addictions
+		if(H.get_addiction_to_reagent(REAGENT_ID_ASUSTENANCE) > 0)
+			dat += span_warning("Biologically unstable, requires [REAGENT_ASUSTENANCE] to function properly.")
+			dat += "<br>"
+		for(var/addic in H.get_all_addictions())
+			if(H.get_addiction_to_reagent(addic) > 0 && (advscan >= 2 || H.get_addiction_to_reagent(addic) <= 120)) // high enough scanner upgrade detects addiction even if not almost withdrawling
+				var/datum/reagent/R = SSchemistry.chemical_reagents[addic]
+				if(R.id == REAGENT_ID_ASUSTENANCE)
+					continue
+				if(advscan >= 1)
+					// Shows multiple
+					if(advscan >= 2 && H.get_addiction_to_reagent(addic) <= 80)
+						dat += span_warning("Experiencing withdrawls from [R.name], [REAGENT_INAPROVALINE] treatment recomended.")
+						dat += "<br>"
+					else
+						dat += span_warning("Chemical dependance detected: [R.name].")
+						dat += "<br>"
+				else
+					// Shows single
+					dat += span_warning("Chemical dependance detected.")
+					dat += "<br>"
+					break
+		// Appendix
 		for(var/obj/item/organ/internal/appendix/a in H.internal_organs)
 			var/severity = ""
 			if(a.inflamed > 3)
@@ -418,6 +441,31 @@
 				dat+= span_danger("WARNING: Defib will cause extreme pain and set subject feral. Sedation recommended prior to defibrillation.")
 			else // If they bop them and they're not dead or reviving, give 'em a little notice.
 				dat += span_notice("Subject is a Xenochimera. Treat accordingly.")
+
+		// Custom medical issues
+		for(var/obj/item/organ/I in H.internal_organs)
+			for(var/datum/medical_issue/MI in I.medical_issues)
+				if(advscan >= MI.advscan)
+					dat += span_danger("Warning: [MI.name] detected in [MI.affectedorgan].<br>")
+					if(advscan >= MI.advscan_cure)
+						if(MI.cure_reagent)
+							dat += span_notice("Suggested treatment: Prescription of [MI.cure_reagent].<br>")
+						else if(MI.cure_surgery)
+							dat += span_notice("Required surgery: [MI.cure_surgery].<br>")
+						else
+							dat += span_notice("[MI.affectedorgan] may require surgical removal or transplantation.<br>")
+		for(var/obj/item/organ/E in H.organs)
+			for(var/datum/medical_issue/MI in E.medical_issues)
+				if(advscan >= MI.advscan)
+					dat += span_danger("Warning: [MI.name] detected in [MI.affectedorgan].<br>")
+					if(advscan >= MI.advscan_cure)
+						if(MI.cure_reagent)
+							dat += span_notice("Suggested treatment: Prescription of [MI.cure_reagent].<br>")
+						else if(MI.cure_surgery)
+							dat += span_notice("Required surgery: [MI.cure_surgery].<br>")
+						else
+							dat += span_notice("[MI.affectedorgan] may require surgical removal or transplantation.<br>")
+
 	user.show_message(dat, 1)
 	if(guide)
 		guide(M, user)

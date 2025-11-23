@@ -18,6 +18,17 @@
 
 	selected_image = image(icon = GLOB.buildmode_hud, loc = src, icon_state = "ai_sel")
 
+	AddElement(/datum/element/spontaneous_vore)
+
+/mob/living/proc/get_visible_name()
+	var/datum/component/shadekin/SK = get_shadekin_component()
+	if(SK && SK.in_phase)
+		return "Something"
+	if(real_name)
+		return real_name
+	else
+		return name
+
 /mob/living/Destroy()
 	SSradiation.listeners -= src
 	remove_all_modifiers(TRUE)
@@ -86,12 +97,13 @@
 			organs -= OR
 			qdel(OR)
 
-	if(LAZYLEN(internal_organs) && !istype(src, /mob/living/simple_mob/animal))
+	if(LAZYLEN(internal_organs))
 		internal_organs_by_name.Cut()
 		while(internal_organs.len)
 			var/obj/item/OR = internal_organs[1]
 			internal_organs -= OR
-			qdel(OR)
+			if(isobj(OR))
+				qdel(OR)
 
 	cultnet.updateVisibility(src, 0)
 
@@ -161,8 +173,8 @@
 		manual_afk = TRUE
 
 /mob/living/proc/updatehealth()
-	if(status_flags & GODMODE)
-		health = 100
+	if(SEND_SIGNAL(src, COMSIG_UPDATE_HEALTH) & COMSIG_UPDATE_HEALTH_GOD_MODE)
+		health = getMaxHealth()
 		set_stat(CONSCIOUS)
 	else
 		// Pain/etc calculations, but more efficient:tm: - this should work for literally anything that applies to health. Far better than slapping emote("pain") everywhere like scream does.
@@ -187,6 +199,9 @@
 					if(51 to INFINITY)
 						if(prob(pain_noise * 3)  && !isbelly(loc)) // More likely, most severe damage. No pain noises inside bellies.
 							emote("pain")
+		if(health <= -getMaxHealth()) //die only once
+			death()
+			return
 
 //This proc is used for mobs which are affected by pressure to calculate the amount of pressure that actually
 //affects them once clothing is factored in. ~Errorage
@@ -250,7 +265,8 @@
 
 //'include_robo' only applies to healing, for legacy purposes, as all damage typically hurts both types of organs
 /mob/living/proc/adjustBruteLoss(var/amount,var/include_robo)
-	if(status_flags & GODMODE)	return 0	//godmode
+	if(SEND_SIGNAL(src, COMSIG_TAKING_BRUTE_DAMAGE, amount) & COMSIG_CANCEL_BRUTE_DAMAGE)
+		return 0	// Cancelled by a component
 
 	if(amount > 0)
 		for(var/datum/modifier/M in modifiers)
@@ -279,7 +295,8 @@
 	return oxyloss
 
 /mob/living/proc/adjustOxyLoss(var/amount)
-	if(status_flags & GODMODE)	return 0	//godmode
+	if(SEND_SIGNAL(src, COMSIG_TAKING_OXY_DAMAGE, amount) & COMSIG_CANCEL_OXY_DAMAGE)
+		return 0	// Cancelled by a component
 
 	if(amount > 0)
 		for(var/datum/modifier/M in modifiers)
@@ -300,14 +317,16 @@
 	updatehealth()
 
 /mob/living/proc/setOxyLoss(var/amount)
-	if(status_flags & GODMODE)	return 0	//godmode
+	if(SEND_SIGNAL(src, COMSIG_TAKING_OXY_DAMAGE, amount) & COMSIG_CANCEL_OXY_DAMAGE)
+		return 0	// Cancelled by a component
 	oxyloss = amount
 
 /mob/living/proc/getToxLoss()
 	return toxloss
 
 /mob/living/proc/adjustToxLoss(var/amount)
-	if(status_flags & GODMODE)	return 0	//godmode
+	if(SEND_SIGNAL(src, COMSIG_TAKING_TOX_DAMAGE, amount) & COMSIG_CANCEL_TOX_DAMAGE)
+		return 0	// Cancelled by a component
 
 	if(amount > 0)
 		for(var/datum/modifier/M in modifiers)
@@ -328,7 +347,8 @@
 	updatehealth()
 
 /mob/living/proc/setToxLoss(var/amount)
-	if(status_flags & GODMODE)	return 0	//godmode
+	if(SEND_SIGNAL(src, COMSIG_TAKING_TOX_DAMAGE, amount) & COMSIG_CANCEL_TOX_DAMAGE)
+		return 0	// Cancelled by a component
 	toxloss = amount
 
 /mob/living/proc/getFireLoss()
@@ -342,7 +362,8 @@
 
 //'include_robo' only applies to healing, for legacy purposes, as all damage typically hurts both types of organs
 /mob/living/proc/adjustFireLoss(var/amount,var/include_robo)
-	if(status_flags & GODMODE)	return 0	//godmode
+	if(SEND_SIGNAL(src, COMSIG_TAKING_FIRE_DAMAGE, amount) & COMSIG_CANCEL_FIRE_DAMAGE)
+		return 0	// Cancelled by a component
 	if(amount > 0)
 		for(var/datum/modifier/M in modifiers)
 			if(!isnull(M.incoming_damage_percent))
@@ -368,7 +389,8 @@
 	return cloneloss
 
 /mob/living/proc/adjustCloneLoss(var/amount)
-	if(status_flags & GODMODE)	return 0	//godmode
+	if(SEND_SIGNAL(src, COMSIG_TAKING_CLONE_DAMAGE, amount) & COMSIG_CANCEL_CLONE_DAMAGE)
+		return 0	// Cancelled by a component
 
 	if(amount > 0)
 		for(var/datum/modifier/M in modifiers)
@@ -389,25 +411,29 @@
 	updatehealth()
 
 /mob/living/proc/setCloneLoss(var/amount)
-	if(status_flags & GODMODE)	return 0	//godmode
+	if(SEND_SIGNAL(src, COMSIG_TAKING_CLONE_DAMAGE, amount) & COMSIG_CANCEL_CLONE_DAMAGE)
+		return 0	// Cancelled by a component
 	cloneloss = amount
 
 /mob/living/proc/getBrainLoss()
 	return brainloss
 
 /mob/living/proc/adjustBrainLoss(var/amount)
-	if(status_flags & GODMODE)	return 0	//godmode
+	if(SEND_SIGNAL(src, COMSIG_TAKING_BRAIN_DAMAGE, amount) & COMSIG_CANCEL_BRAIN_DAMAGE)
+		return 0	// Cancelled by a component
 	brainloss = min(max(brainloss + amount, 0),(getMaxHealth()*2))
 
 /mob/living/proc/setBrainLoss(var/amount)
-	if(status_flags & GODMODE)	return 0	//godmode
+	if(SEND_SIGNAL(src, COMSIG_TAKING_BRAIN_DAMAGE, amount) & COMSIG_CANCEL_BRAIN_DAMAGE)
+		return 0	// Cancelled by a component
 	brainloss = amount
 
 /mob/living/proc/getHalLoss()
 	return halloss
 
 /mob/living/proc/adjustHalLoss(var/amount)
-	if(status_flags & GODMODE)	return 0	//godmode
+	if(SEND_SIGNAL(src, COMSIG_TAKING_HALO_DAMAGE, amount) & COMSIG_CANCEL_HALO_DAMAGE)
+		return 0	// Cancelled by a component
 	if(amount > 0)
 		for(var/datum/modifier/M in modifiers)
 			if(M.energy_based && (!isnull(M.incoming_hal_damage_percent) || !isnull(M.disable_duration_percent)))
@@ -427,7 +453,8 @@
 	updatehealth()
 
 /mob/living/proc/setHalLoss(var/amount)
-	if(status_flags & GODMODE)	return 0	//godmode
+	if(SEND_SIGNAL(src, COMSIG_TAKING_HALO_DAMAGE, amount) & COMSIG_CANCEL_HALO_DAMAGE)
+		return 0	// Cancelled by a component
 	halloss = amount
 
 // Use this to get a mob's max health whenever possible.  Reading maxHealth directly will give inaccurate results if any modifiers exist.
@@ -443,6 +470,7 @@
 	return result
 
 ///Use this proc to get the damage in which the mob will be put into critical condition (hardcrit)
+///Will return a NEGATIVE value. Ex: MaxHealth of 100 returns -50
 /mob/living/proc/get_crit_point()
 	return -(getMaxHealth()*0.5)
 
@@ -466,7 +494,7 @@
 		cloneloss = round(cloneloss / h_mult)
 	maxHealth = newMaxHealth
 
-/mob/living/Stun(amount)
+/mob/living/Stun(amount, ignore_canstun = FALSE)
 	for(var/datum/modifier/M in modifiers)
 		if(!isnull(M.disable_duration_percent))
 			amount = round(amount * M.disable_duration_percent)
@@ -474,14 +502,14 @@
 	if(stunned > 0)
 		add_status_indicator("stunned")
 
-/mob/living/SetStunned(amount)
+/mob/living/SetStunned(amount, ignore_canstun = FALSE)
 	..()
 	if(stunned <= 0)
 		remove_status_indicator("stunned")
 	else
 		add_status_indicator("stunned")
 
-/mob/living/AdjustStunned(amount)
+/mob/living/AdjustStunned(amount, ignore_canstun = FALSE)
 	if(amount > 0)
 		for(var/datum/modifier/M in modifiers)
 			if(!isnull(M.disable_duration_percent))
@@ -492,7 +520,7 @@
 	else
 		add_status_indicator("stunned")
 
-/mob/living/Weaken(amount)
+/mob/living/Weaken(amount, ignore_canstun = FALSE)
 	for(var/datum/modifier/M in modifiers)
 		if(!isnull(M.disable_duration_percent))
 			amount = round(amount * M.disable_duration_percent)
@@ -500,14 +528,14 @@
 	if(weakened > 0)
 		add_status_indicator("weakened")
 
-/mob/living/SetWeakened(amount)
+/mob/living/SetWeakened(amount, ignore_canstun = FALSE)
 	..()
 	if(weakened <= 0)
 		remove_status_indicator("weakened")
 	else
 		add_status_indicator("weakened")
 
-/mob/living/AdjustWeakened(amount)
+/mob/living/AdjustWeakened(amount, ignore_canstun = FALSE)
 	if(amount > 0)
 		for(var/datum/modifier/M in modifiers)
 			if(!isnull(M.disable_duration_percent))
@@ -518,7 +546,7 @@
 	else
 		add_status_indicator("weakened")
 
-/mob/living/Paralyse(amount)
+/mob/living/Paralyse(amount, ignore_canstun = FALSE)
 	for(var/datum/modifier/M in modifiers)
 		if(!isnull(M.disable_duration_percent))
 			amount = round(amount * M.disable_duration_percent)
@@ -526,14 +554,14 @@
 	if(paralysis > 0)
 		add_status_indicator("paralysis")
 
-/mob/living/SetParalysis(amount)
+/mob/living/SetParalysis(amount, ignore_canstun = FALSE)
 	..()
 	if(paralysis <= 0)
 		remove_status_indicator("paralysis")
 	else
 		add_status_indicator("paralysis")
 
-/mob/living/AdjustParalysis(amount)
+/mob/living/AdjustParalysis(amount, ignore_canstun = FALSE)
 	if(amount > 0)
 		for(var/datum/modifier/M in modifiers)
 			if(!isnull(M.disable_duration_percent))
@@ -544,7 +572,7 @@
 	else
 		add_status_indicator("paralysis")
 
-/mob/living/Sleeping(amount)
+/mob/living/Sleeping(amount, ignore_canstun = FALSE)
 	for(var/datum/modifier/M in modifiers)
 		if(!isnull(M.disable_duration_percent))
 			amount = round(amount * M.disable_duration_percent)
@@ -552,14 +580,14 @@
 	if(sleeping > 0)
 		add_status_indicator("sleeping")
 
-/mob/living/SetSleeping(amount)
+/mob/living/SetSleeping(amount, ignore_canstun = FALSE)
 	..()
 	if(sleeping <= 0)
 		remove_status_indicator("sleeping")
 	else
 		add_status_indicator("sleeping")
 
-/mob/living/AdjustSleeping(amount)
+/mob/living/AdjustSleeping(amount, ignore_canstun = FALSE)
 	if(amount > 0)
 		for(var/datum/modifier/M in modifiers)
 			if(!isnull(M.disable_duration_percent))
@@ -570,7 +598,7 @@
 	else
 		add_status_indicator("sleeping")
 
-/mob/living/Confuse(amount)
+/mob/living/Confuse(amount, ignore_canstun = FALSE)
 	for(var/datum/modifier/M in modifiers)
 		if(!isnull(M.disable_duration_percent))
 			amount = round(amount * M.disable_duration_percent)
@@ -578,14 +606,14 @@
 	if(confused > 0)
 		add_status_indicator("confused")
 
-/mob/living/SetConfused(amount)
+/mob/living/SetConfused(amount, ignore_canstun = FALSE)
 	..()
 	if(confused <= 0)
 		remove_status_indicator("confused")
 	else
 		add_status_indicator("confused")
 
-/mob/living/AdjustConfused(amount)
+/mob/living/AdjustConfused(amount, ignore_canstun = FALSE)
 	if(amount > 0)
 		for(var/datum/modifier/M in modifiers)
 			if(!isnull(M.disable_duration_percent))
@@ -596,7 +624,7 @@
 	else
 		add_status_indicator("confused")
 
-/mob/living/Blind(amount)
+/mob/living/Blind(amount, ignore_canstun = FALSE)
 	for(var/datum/modifier/M in modifiers)
 		if(!isnull(M.disable_duration_percent))
 			amount = round(amount * M.disable_duration_percent)
@@ -604,14 +632,14 @@
 	if(eye_blind > 0)
 		add_status_indicator("blinded")
 
-/mob/living/SetBlinded(amount)
+/mob/living/SetBlinded(amount, ignore_canstun = FALSE)
 	..()
 	if(eye_blind <= 0)
 		remove_status_indicator("blinded")
 	else
 		add_status_indicator("blinded")
 
-/mob/living/AdjustBlinded(amount)
+/mob/living/AdjustBlinded(amount, ignore_canstun = FALSE)
 	if(amount > 0)
 		for(var/datum/modifier/M in modifiers)
 			if(!isnull(M.disable_duration_percent))
@@ -679,7 +707,12 @@
 			return 1
 	return 0
 
+/// Revives a body using the client's preferences if human
 /mob/living/proc/revive()
+	revival_healing_action()
+
+/// Performs the actual healing of Aheal, seperate from revive() because it does not use client prefs. Will not heal everything, and expects to be called through revive() or with a bodyrecord doing a respawn/revive.
+/mob/living/proc/revival_healing_action()
 	rejuvenate()
 	if(buckled)
 		buckled.unbuckle_mob()
@@ -696,10 +729,11 @@
 	BITSET(hud_updateflag, HEALTH_HUD)
 	BITSET(hud_updateflag, STATUS_HUD)
 	BITSET(hud_updateflag, LIFE_HUD)
-	ExtinguishMob()
-	fire_stacks = 0
 	if(ai_holder) // AI gets told to sleep when killed. Since they're not dead anymore, wake it up.
 		ai_holder.go_wake()
+
+	SEND_SIGNAL(src, COMSIG_HUMAN_DNA_FINALIZED)
+	SEND_SIGNAL(src, COMSIG_LIVING_AHEAL)
 
 /mob/living/proc/rejuvenate()
 	if(reagents)
@@ -743,8 +777,8 @@
 
 	// remove the character from the list of the dead
 	if(stat == DEAD)
-		dead_mob_list -= src
-		living_mob_list += src
+		GLOB.dead_mob_list -= src
+		GLOB.living_mob_list += src
 		tod = null
 		timeofdeath = 0
 
@@ -824,8 +858,6 @@
 		else
 			resist_restraints()
 
-	if(attempt_vr(src,"vore_process_resist",args)) return TRUE
-
 /mob/living/proc/resist_buckle()
 	if(buckled)
 		if(istype(buckled, /obj/vehicle))
@@ -857,7 +889,7 @@
 	update_canmove()
 
 //called when the mob receives a bright flash
-/mob/living/flash_eyes(intensity = FLASH_PROTECTION_MODERATE, override_blindness_check = FALSE, affect_silicon = FALSE, visual = FALSE, type = /obj/screen/fullscreen/flash)
+/mob/living/flash_eyes(intensity = FLASH_PROTECTION_MODERATE, override_blindness_check = FALSE, affect_silicon = FALSE, visual = FALSE, type = /atom/movable/screen/fullscreen/flash)
 	if(override_blindness_check || !(disabilities & BLIND))
 		overlay_fullscreen("flash", type)
 		spawn(25)
@@ -901,8 +933,8 @@
 
 	//check for nuke disks
 	if(client && stat != DEAD) //if they are clientless and dead don't bother, the parent will treat them as any other container
-		if(ticker && istype(ticker.mode, /datum/game_mode/nuclear)) //only really care if the game mode is nuclear
-			var/datum/game_mode/nuclear/G = ticker.mode
+		if(SSticker && istype(SSticker.mode, /datum/game_mode/nuclear)) //only really care if the game mode is nuclear
+			var/datum/game_mode/nuclear/G = SSticker.mode
 			if(G.check_mob(src))
 				if(x <= TRANSITIONEDGE)
 					inertia_dir = 4
@@ -946,6 +978,13 @@
 	if(!check_has_mouth())
 		return TRUE
 
+	if(ishuman(src))
+		var/mob/living/carbon/human/H = src
+		if(CE_ANTACID in H.chem_effects)
+			if(prob(min(90, H.chem_effects[CE_ANTACID] * 15)))
+				VARSET_IN(src, lastpuke, FALSE, rand(30 SECONDS, 2 MINUTES))
+			return FALSE
+
 	if(nutrition < 100 && !blood)
 		if(message)
 			visible_message(span_warning("[src] dry heaves!"), span_userdanger("You try to throw up, but there's nothing in your stomach!"))
@@ -975,6 +1014,11 @@
 				puke_bucket.reagents.add_reagent(REAGENT_BLOOD, rand(3, 6))
 			else
 				puke_bucket.reagents.add_reagent(REAGENT_ID_TOXIN, rand(3, 6))
+		distance = 0
+	else if(isbelly(loc))
+		var/obj/belly/belly = loc
+		if(message)
+			to_chat(src, span_bolddanger("You throw up inside [belly.owner]'s [belly]!"))
 		distance = 0
 	else
 		if(message)
@@ -1011,7 +1055,7 @@
 		for(var/i=0 to distance)
 			if(blood)
 				if(T)
-					blood_splatter(T, large = TRUE)
+					blood_splatter(T, src, large = TRUE)
 				if(stun)
 					adjustBruteLoss(2)
 			else if(T)
@@ -1133,10 +1177,6 @@
 		return FALSE
 	return TRUE
 
-// Gets the correct icon_state for being on fire. See OnFire.dmi for the icons.
-/mob/living/proc/get_fire_icon_state()
-	return "generic"
-
 // Called by job_controller.
 /mob/living/proc/equip_post_job()
 	return
@@ -1186,6 +1226,11 @@
 				return
 			colors_to_blend += M.client_color
 
+	if(!colors_to_blend.len) // Modifiers take priority over passive area blending, to prevent changes on every area entered
+		var/location_grade = get_location_color_tint() // Area or weather!
+		if(location_grade)
+			colors_to_blend += location_grade
+
 	if(colors_to_blend.len)
 		var/final_color
 		if(colors_to_blend.len == 1) // If it's just one color we can skip all of this work.
@@ -1224,8 +1269,6 @@
 	// We just swapped hands, so the thing in our inactive hand will notice it's not the focus
 	var/obj/item/I = get_inactive_hand()
 	if(I)
-		if(I.zoom)
-			I.zoom()
 		I.in_inactive_hand(src)	//This'll do specific things, determined by the item
 	return
 
@@ -1243,7 +1286,7 @@
 		swap_hand()
 
 /mob/living/throw_item(atom/target)
-	if(incapacitated() || !target || istype(target, /obj/screen))
+	if(incapacitated() || !target || istype(target, /atom/movable/screen) || is_incorporeal())
 		return FALSE
 
 	var/atom/movable/item = src.get_active_hand()
@@ -1371,25 +1414,25 @@
 
 /mob/living/vv_get_header()
 	. = ..()
+	var/refid = REF(src)
 	. += {"
-		<a href='byond://?_src_=vars;[HrefToken()];rename=\ref[src]'>"} + span_bold("[src]") + {"</a>
-		"} + span_small("<br><a href='byond://?_src_=vars;[HrefToken()];datumedit=\ref[src];varnameedit=ckey'>[ckey ? ckey : "No ckey"]</a> / <a href='byond://?_src_=vars;[HrefToken()];datumedit=\ref[src];varnameedit=real_name'>[real_name ? real_name : "No real name"]</a>") + {"
-		"} + span_small("<br>") + {"
-		"} + span_small("BRUTE:<a href='byond://?_src_=vars;[HrefToken()];mobToDamage=\ref[src];adjustDamage=brute'>[getBruteLoss()]</a>") + {"
-		"} + span_small("FIRE:<a href='byond://?_src_=vars;[HrefToken()];mobToDamage=\ref[src];adjustDamage=fire'>[getFireLoss()]</a>") + {"
-		"} + span_small("TOXIN:<a href='byond://?_src_=vars;[HrefToken()];mobToDamage=\ref[src];adjustDamage=toxin'>[getToxLoss()]</a>") + {"
-		"} + span_small("OXY:<a href='byond://?_src_=vars;[HrefToken()];mobToDamage=\ref[src];adjustDamage=oxygen'>[getOxyLoss()]</a>") + {"
-		"} + span_small("CLONE:<a href='byond://?_src_=vars;[HrefToken()];mobToDamage=\ref[src];adjustDamage=clone'>[getCloneLoss()]</a>") + {"
-		"} + span_small("BRAIN:<a href='byond://?_src_=vars;[HrefToken()];mobToDamage=\ref[src];adjustDamage=brain'>[getBrainLoss()]</a>") + {"
-		"}
+		<br>"} + span_small("[VV_HREF_TARGETREF(refid, VV_HK_GIVE_DIRECT_CONTROL, "[ckey || "no ckey"]")] / [VV_HREF_TARGETREF_1V(refid, VV_HK_BASIC_EDIT, "[real_name || "no real name"]", NAMEOF(src, real_name))]") + {"
+		<br>"} + span_small({"
+			BRUTE:"} + span_small("<a href='byond://?_src_=vars;[HrefToken()];mobToDamage=[refid];adjustDamage=brute' id='brute'>[getBruteLoss()]</a>") + {"
+			FIRE:"} + span_small("<a href='byond://?_src_=vars;[HrefToken()];mobToDamage=[refid];adjustDamage=fire' id='fire'>[getFireLoss()]</a>") + {"
+			TOXIN:"} + span_small("<a href='byond://?_src_=vars;[HrefToken()];mobToDamage=[refid];adjustDamage=toxin' id='toxin'>[getToxLoss()]</a>") + {"
+			OXY:"} + span_small("<a href='byond://?_src_=vars;[HrefToken()];mobToDamage=[refid];adjustDamage=oxygen' id='oxygen'>[getOxyLoss()]</a>") + {"
+			BRAIN:"} + span_small("<a href='byond://?_src_=vars;[HrefToken()];mobToDamage=[refid];adjustDamage=brain' id='brain'>[getBrainLoss()]</a>") + {"
+			CLONE:"} + span_small("<a href='byond://?_src_=vars;[HrefToken()];mobToDamage=[refid];adjustDamage=clone' id='clone'>[getCloneLoss()]</a>") + {"
+		"})
 
 /mob/living/update_gravity(has_gravity)
-	if(!ticker)
+	if(!SSticker)
 		return
 	if(has_gravity)
 		clear_alert("weightless")
 	else
-		throw_alert("weightless", /obj/screen/alert/weightless)
+		throw_alert("weightless", /atom/movable/screen/alert/weightless)
 
 // Tries to turn off things that let you see through walls, like mesons.
 // Each mob does vision a bit differently so this is just for inheritence and also so overrided procs can make the vision apply instantly if they call `..()`.
@@ -1400,7 +1443,7 @@
  * Small helper component to manage the character setup HUD icon
  */
 /datum/component/character_setup
-	var/obj/screen/character_setup/screen_icon
+	var/atom/movable/screen/character_setup/screen_icon
 
 /datum/component/character_setup/Initialize()
 	if(!ismob(parent))
@@ -1421,7 +1464,7 @@
 	if(screen_icon)
 		owner?.client?.screen -= screen_icon
 		UnregisterSignal(screen_icon, COMSIG_CLICK)
-		qdel_null(screen_icon)
+		QDEL_NULL(screen_icon)
 
 /datum/component/character_setup/proc/create_mob_button(mob/user)
 	SIGNAL_HANDLER
@@ -1436,6 +1479,8 @@
 		screen_icon.icon = HUD.ui_style
 		screen_icon.color = HUD.ui_color
 		screen_icon.alpha = HUD.ui_alpha
+	if(isAI(user))
+		screen_icon.screen_loc = ui_ai_pda_send
 	LAZYADD(HUD.other_important, screen_icon)
 	user.client?.screen += screen_icon
 
@@ -1448,7 +1493,7 @@
 /**
  * Screen object for vore panel
  */
-/obj/screen/character_setup
+/atom/movable/screen/character_setup
 	name = "character setup"
 	icon = 'icons/mob/screen/midnight.dmi'
 	icon_state = "character"

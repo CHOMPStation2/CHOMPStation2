@@ -151,7 +151,8 @@ If it gains pressure too slowly, it may leak or just rupture instead of explodin
 		set_light(3, 1)
 
 	for(var/mob/living/L in loc)
-		L.FireBurn(firelevel, air_contents.temperature, air_contents.return_pressure())  //Burn the mobs!
+		if(!L.is_incorporeal())
+			L.FireBurn(firelevel, air_contents.temperature, air_contents.return_pressure())  //Burn the mobs!
 
 	loc.fire_act(air_contents, air_contents.temperature, air_contents.volume)
 	for(var/atom/A in loc)
@@ -236,8 +237,8 @@ If it gains pressure too slowly, it may leak or just rupture instead of explodin
 	if((temperature > PHORON_MINIMUM_BURN_TEMPERATURE || force_burn) && (no_check ||check_recombustability(zone? zone.fuel_objs : null)))
 
 		#ifdef FIREDBG
-		log_debug("***************** FIREDBG *****************")
-		log_debug("Burning [zone? zone.name : "zoneless gas_mixture"]!")
+		log_world("***************** FIREDBG *****************")
+		log_world("Burning [zone? zone.name : "zoneless gas_mixture"]!")
 		#endif
 
 		var/gas_fuel = 0
@@ -247,9 +248,9 @@ If it gains pressure too slowly, it may leak or just rupture instead of explodin
 
 		//*** Get the fuel and oxidizer amounts
 		for(var/g in gas)
-			if(gas_data.flags[g] & XGM_GAS_FUEL)
+			if(GLOB.gas_data.flags[g] & XGM_GAS_FUEL)
 				gas_fuel += gas[g]
-			if(gas_data.flags[g] & XGM_GAS_OXIDIZER)
+			if(GLOB.gas_data.flags[g] & XGM_GAS_OXIDIZER)
 				total_oxidizers += gas[g]
 		gas_fuel *= group_multiplier
 		total_oxidizers *= group_multiplier
@@ -290,13 +291,13 @@ If it gains pressure too slowly, it may leak or just rupture instead of explodin
 		var/used_oxidizers = used_fuel*(FIRE_REACTION_OXIDIZER_AMOUNT/FIRE_REACTION_FUEL_AMOUNT)
 
 		#ifdef FIREDBG
-		log_debug("gas_fuel = [gas_fuel], liquid_fuel = [liquid_fuel], total_oxidizers = [total_oxidizers]")
-		log_debug("fuel_area = [fuel_area], total_fuel = [total_fuel], reaction_limit = [reaction_limit]")
-		log_debug("firelevel -> [firelevel] (gas: [gas_firelevel], liquid: [liquid_firelevel])")
-		log_debug("liquid_reaction_progress = [liquid_reaction_progress]")
-		log_debug("gas_reaction_progress = [gas_reaction_progress]")
-		log_debug("total_reaction_progress = [total_reaction_progress]")
-		log_debug("used_fuel = [used_fuel], used_oxidizers = [used_oxidizers]; ")
+		log_world("gas_fuel = [gas_fuel], liquid_fuel = [liquid_fuel], total_oxidizers = [total_oxidizers]")
+		log_world("fuel_area = [fuel_area], total_fuel = [total_fuel], reaction_limit = [reaction_limit]")
+		log_world("firelevel -> [firelevel] (gas: [gas_firelevel], liquid: [liquid_firelevel])")
+		log_world("liquid_reaction_progress = [liquid_reaction_progress]")
+		log_world("gas_reaction_progress = [gas_reaction_progress]")
+		log_world("total_reaction_progress = [total_reaction_progress]")
+		log_world("used_fuel = [used_fuel], used_oxidizers = [used_oxidizers]; ")
 		#endif
 
 		//if the reaction is progressing too slow then it isn't self-sustaining anymore and burns out
@@ -325,8 +326,8 @@ If it gains pressure too slowly, it may leak or just rupture instead of explodin
 		update_values()
 
 		#ifdef FIREDBG
-		log_debug("used_gas_fuel = [used_gas_fuel]; used_liquid_fuel = [used_liquid_fuel]; total = [used_fuel]")
-		log_debug("new temperature = [temperature]; new pressure = [return_pressure()]")
+		log_world("used_gas_fuel = [used_gas_fuel]; used_liquid_fuel = [used_liquid_fuel]; total = [used_fuel]")
+		log_world("new temperature = [temperature]; new pressure = [return_pressure()]")
 		#endif
 
 		return firelevel
@@ -334,7 +335,7 @@ If it gains pressure too slowly, it may leak or just rupture instead of explodin
 /datum/gas_mixture/proc/check_recombustability(list/fuel_objs)
 	. = 0
 	for(var/g in gas)
-		if(gas_data.flags[g] & XGM_GAS_OXIDIZER && gas[g] >= 0.1)
+		if(GLOB.gas_data.flags[g] & XGM_GAS_OXIDIZER && gas[g] >= 0.1)
 			. = 1
 			break
 
@@ -346,14 +347,14 @@ If it gains pressure too slowly, it may leak or just rupture instead of explodin
 
 	. = 0
 	for(var/g in gas)
-		if(gas_data.flags[g] & XGM_GAS_FUEL && gas[g] >= 0.1)
+		if(GLOB.gas_data.flags[g] & XGM_GAS_FUEL && gas[g] >= 0.1)
 			. = 1
 			break
 
 /datum/gas_mixture/proc/check_combustability(obj/effect/decal/cleanable/liquid_fuel/liquid=null)
 	. = 0
 	for(var/g in gas)
-		if(gas_data.flags[g] & XGM_GAS_OXIDIZER && QUANTIZE(gas[g] * vsc.fire_consuption_rate) >= 0.1)
+		if(GLOB.gas_data.flags[g] & XGM_GAS_OXIDIZER && QUANTIZE(gas[g] * vsc.fire_consuption_rate) >= 0.1)
 			. = 1
 			break
 
@@ -365,7 +366,7 @@ If it gains pressure too slowly, it may leak or just rupture instead of explodin
 
 	. = 0
 	for(var/g in gas)
-		if(gas_data.flags[g] & XGM_GAS_FUEL && QUANTIZE(gas[g] * vsc.fire_consuption_rate) >= 0.005)
+		if(GLOB.gas_data.flags[g] & XGM_GAS_FUEL && QUANTIZE(gas[g] * vsc.fire_consuption_rate) >= 0.005)
 			. = 1
 			break
 
@@ -436,10 +437,10 @@ If it gains pressure too slowly, it may leak or just rupture instead of explodin
 
 	//Always check these damage procs first if fire damage isn't working. They're probably what's wrong.
 
-	apply_damage(2.5*mx*head_exposure,  BURN, BP_HEAD,  0, 0)
-	apply_damage(2.5*mx*chest_exposure, BURN, BP_TORSO, 0, 0)
-	apply_damage(2.0*mx*groin_exposure, BURN, BP_GROIN, 0, 0)
-	apply_damage(0.6*mx*legs_exposure,  BURN, BP_L_LEG, 0, 0)
-	apply_damage(0.6*mx*legs_exposure,  BURN, BP_R_LEG, 0, 0)
-	apply_damage(0.4*mx*arms_exposure,  BURN, BP_L_ARM, 0, 0)
-	apply_damage(0.4*mx*arms_exposure,  BURN, BP_R_ARM, 0, 0)
+	apply_damage(2.5*mx*head_exposure,  BURN, BP_HEAD,  0)
+	apply_damage(2.5*mx*chest_exposure, BURN, BP_TORSO, 0)
+	apply_damage(2.0*mx*groin_exposure, BURN, BP_GROIN, 0)
+	apply_damage(0.6*mx*legs_exposure,  BURN, BP_L_LEG, 0)
+	apply_damage(0.6*mx*legs_exposure,  BURN, BP_R_LEG, 0)
+	apply_damage(0.4*mx*arms_exposure,  BURN, BP_L_ARM, 0)
+	apply_damage(0.4*mx*arms_exposure,  BURN, BP_R_ARM, 0)

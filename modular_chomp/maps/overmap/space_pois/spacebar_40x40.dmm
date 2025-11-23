@@ -470,7 +470,7 @@
 /area/submap/spacebar)
 "mw" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "spacebar_pump"
 	},
 /obj/effect/floor_decal/rust,
@@ -754,7 +754,7 @@
 "NI" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 1;
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "spacebar_pump"
 	},
 /obj/machinery/embedded_controller/radio/airlock/access_controller{
@@ -886,7 +886,7 @@
 /area/submap/spacebar)
 "Xe" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "spacebar_pump"
 	},
 /turf/simulated/floor/plating,
@@ -903,7 +903,7 @@
 "Yx" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 1;
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "spacebar_pump"
 	},
 /turf/simulated/floor/plating,

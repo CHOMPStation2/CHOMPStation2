@@ -9,6 +9,7 @@ import './styles/main.scss';
 import './styles/themes/abductor.scss';
 import './styles/themes/cardtable.scss';
 import './styles/themes/spookyconsole.scss';
+import './styles/themes/nuclear.scss';
 import './styles/themes/hackerman.scss';
 import './styles/themes/crtsoul.scss';
 import './styles/themes/malfunction.scss';
@@ -33,11 +34,11 @@ import './styles/themes/algae.scss';
 
 import { perf } from 'common/perf';
 import { setupGlobalEvents } from 'tgui-core/events';
-import { setupHotKeys } from 'tgui-core/hotkeys';
-import { setupHotReloading } from 'tgui-dev-server/link/client.mjs';
+import { setupHotReloading } from 'tgui-dev-server/link/client';
 
 import { App } from './App';
 import { setGlobalStore } from './backend';
+import { setupHotKeys } from './hotkeys';
 import { captureExternalLinks } from './links';
 import { render } from './renderer';
 import { configureStore } from './store';

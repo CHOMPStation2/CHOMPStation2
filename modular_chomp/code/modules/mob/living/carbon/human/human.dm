@@ -1,17 +1,3 @@
-/mob/living/carbon/human/verb/hide_headset()
-	set name = "Show/Hide Headset"
-	set category = "IC.Settings"
-	set desc = "Toggle headset worn icon visibility."
-	hide_headset = !hide_headset
-	update_inv_ears()
-
-/mob/living/carbon/human/verb/hide_glasses()
-	set name = "Show/Hide Glasses"
-	set category = "IC.Settings"
-	set desc = "Toggle glasses worn icon visibility."
-	hide_glasses = !hide_glasses
-	update_inv_glasses()
-
 /mob/living/carbon/human/proc/synth_reag_toggle()
 	set name = "Toggle Reagent Processing"
 	set category = "Abilities.Vore"

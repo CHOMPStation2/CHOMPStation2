@@ -259,22 +259,13 @@
 
 /obj/machinery/power/quantumpad/proc/transport_objects(turf/destination)
 	for(var/atom/movable/ROI in get_turf(src))
-		// if is anchored, don't let through
+		if(ismecha(ROI) && !boosted)
+			continue
 		if(ROI.anchored && !ismecha(ROI))
-			if(ismecha(ROI))
-				if(boosted)
-					continue
-			if(isliving(ROI))
-				var/mob/living/L = ROI
-				if(L.buckled)
-					// TP people on office chairs
-					if(L.buckled.anchored)
-						continue
-				else
-					continue
-			else if(!isobserver(ROI) && !isEye(ROI))
-				continue
-		do_teleport(ROI, destination, local = FALSE, asoundin = 'sound/weapons/emitter2.ogg', asoundout = 'sound/weapons/emitter2.ogg') //CHOMP Edit
+			continue
+		else if(isobserver(ROI) && isEye(ROI))
+			continue
+		do_teleport(ROI, destination, asoundin = 'sound/weapons/emitter2.ogg', asoundout = 'sound/weapons/emitter2.ogg') // CHOMPEdit - Noisy
 
 /obj/machinery/power/quantumpad/proc/can_traverse_gateway()
 	// Well, if there's no gateway map we're definitely not on it
@@ -307,7 +298,7 @@
 	transport_objects(get_turf(dest))
 
 /obj/item/quantum_pad_booster
-	icon = 'icons/obj/device_vr.dmi'
+	icon = 'icons/obj/device.dmi'
 	name = "quantum pad particle booster"
 	desc = "A deceptively simple interface for increasing the mass of objects a quantum pad is capable of teleporting, at the cost of increased power draw."
 	description_info = "The three prongs at the base of the tool are not, in fact, for show."

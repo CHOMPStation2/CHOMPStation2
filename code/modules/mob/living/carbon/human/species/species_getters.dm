@@ -26,6 +26,13 @@
 	return name
 
 /datum/species/proc/get_icobase(var/mob/living/carbon/human/H, var/get_deform)
+	if(base_species == name) //We don't have a custom base_species? Return the normal icobase.
+		return (get_deform ? deform : icobase)
+	else
+		var/datum/species/S = GLOB.all_species[base_species]
+		if(S) //So species can have multiple iconbases.
+			return S.get_icobase(H, get_deform)
+	//fallback
 	return (get_deform ? deform : icobase)
 
 /datum/species/proc/get_station_variant()
@@ -110,11 +117,11 @@
 /datum/species/proc/get_random_name(var/gender)
 	if(!name_language)
 		if(gender == FEMALE)
-			return capitalize(pick(first_names_female)) + " " + capitalize(pick(last_names))
+			return capitalize(pick(GLOB.first_names_female)) + " " + capitalize(pick(GLOB.last_names))
 		else if(gender == MALE)
-			return capitalize(pick(first_names_male)) + " " + capitalize(pick(last_names))
+			return capitalize(pick(GLOB.first_names_male)) + " " + capitalize(pick(GLOB.last_names))
 		else
-			return capitalize(prob(50) ? pick(first_names_male) : pick(first_names_female)) + " " + capitalize(pick(last_names))
+			return capitalize(prob(50) ? pick(GLOB.first_names_male) : pick(GLOB.first_names_female)) + " " + capitalize(pick(GLOB.last_names))
 
 	var/datum/language/species_language = GLOB.all_languages[name_language]
 	if(!species_language)

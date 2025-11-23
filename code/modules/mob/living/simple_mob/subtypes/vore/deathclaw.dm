@@ -5,7 +5,7 @@
 	Originally the deathclaw was a top secret genetics project that was run by ancestral zorren. \
 	While it is not immediately evident in their body structure, these creatures bare a \
 	subtle genetic connection to Zorren, however, this connection is marred by the other genes that \
-	have been grafted onto the DNA strucutre of the Deathclaw. The creatures are known to attack humans \
+	have been grafted onto the DNA structure of the Deathclaw. The creatures are known to attack humans \
 	and other animals regularly to protect their territory or to hunt for food. It is speculated that \
 	they escaped roughly around the time as whatever calamity befell the zorren many centuries ago \
 	as sighting of these beasts in the wild began around that time according to recovered zorren texts. \
@@ -15,7 +15,7 @@
 	female deathclaws will lay eggs in clusters, sired by the strongest male deathclaws in the pack, typically the alpha male.\
 	<br>\
 	These creatures are considered an invasive species, and thus hunters are encouraged to hunt them \
-	although they are cautioned when doing so due to the danger that the creature poses." //CHOMPedit
+	although they are cautioned when doing so due to the danger that the creature poses."
 	value = CATALOGUER_REWARD_HARD
 
 /mob/living/simple_mob/vore/aggressive/deathclaw
@@ -24,15 +24,15 @@
 	tt_desc = "Trioceros dominus"
 	catalogue_data = list(/datum/category_item/catalogue/fauna/deathclaw)
 
-	icon_dead = "deathclaw-dead"
-	icon_living = "deathclaw"
-	icon_state = "deathclaw"
-	icon = 'modular_chomp/icons/mob/vore64x64_ch.dmi' //CHOMPEdit changed filepath
+	icon_dead = "deathclaw_new-dead"
+	icon_living = "deathclaw_new"
+	icon_state = "deathclaw_new"
+	icon = 'icons/mob/vore64x64.dmi'
 	vis_height = 64
 
 	attacktext = list("mauled")
 
-	faction = FACTION_AWAYMISSION //makes away mobs fuckin' be on the same side.
+	faction = FACTION_AWAYMISSION // CHOMPEdit
 
 	maxHealth = 200
 	health = 200
@@ -70,7 +70,7 @@
 	vore_pounce_chance = 0 // Beat them into crit before eating.
 	vore_icons = SA_ICON_LIVING
 
-	can_be_drop_prey = FALSE //CHOMP Add
+	can_be_drop_prey = FALSE
 
 /mob/living/simple_mob/vore/aggressive/deathclaw/Login()
 	. = ..()
@@ -83,11 +83,7 @@
 /mob/living/simple_mob/vore/aggressive/deathclaw/MouseDrop_T(mob/living/M, mob/living/user)
 	return
 
-/mob/living/simple_mob/vore/aggressive/deathclaw/init_vore()
-	if(!voremob_loaded)
-		return
-	if(LAZYLEN(vore_organs))
-		return
+/mob/living/simple_mob/vore/aggressive/deathclaw/load_default_bellies()
 	. = ..()
 	var/obj/belly/B = vore_selected
 	B.name = "stomach"
@@ -113,7 +109,6 @@
 	can_breakthrough = TRUE
 	violent_breakthrough = TRUE
 
-//YW Addition
 /mob/living/simple_mob/vore/aggressive/deathclaw/den
 
 	maxHealth = 400

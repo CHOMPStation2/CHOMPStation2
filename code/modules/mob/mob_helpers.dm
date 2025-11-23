@@ -57,9 +57,6 @@
 /mob/proc/is_cloaked()
 	return FALSE
 
-/proc/hasorgans(A) // Fucking really??
-	return ishuman(A)
-
 /proc/iscuffed(A)
 	if(istype(A, /mob/living/carbon))
 		var/mob/living/carbon/C = A
@@ -381,7 +378,7 @@ It's fairly easy to fix if dealing with single letters but not so much with comp
 	animate(pixel_x = oldx, pixel_y = oldy, time = 1)
 
 /proc/findname(msg)
-	for(var/mob/M in mob_list)
+	for(var/mob/M in GLOB.mob_list)
 		if (M.real_name == text("[msg]"))
 			return 1
 	return 0
@@ -391,7 +388,6 @@ It's fairly easy to fix if dealing with single letters but not so much with comp
 	return 0
 
 //converts intent-strings into numbers and back
-var/list/intents = list(I_HELP,I_DISARM,I_GRAB,I_HURT)
 /proc/intent_numeric(argument)
 	if(istext(argument))
 		switch(argument)
@@ -445,7 +441,7 @@ var/list/intents = list(I_HELP,I_DISARM,I_GRAB,I_HURT)
 
 /proc/mobs_in_area(var/area/A)
 	var/list/mobs = list()
-	for(var/M in mob_list)
+	for(var/M in GLOB.mob_list)
 		if(get_area(M) == A)
 			mobs += M
 	return mobs
@@ -464,21 +460,22 @@ var/list/intents = list(I_HELP,I_DISARM,I_GRAB,I_HURT)
 			var/realname = C.mob.real_name
 			if(C.mob.mind)
 				mindname = C.mob.mind.name
-				if(C.mob.mind.original && C.mob.mind.original.real_name)
-					realname = C.mob.mind.original.real_name
+				var/mob/living/original = C.mob.mind.original_character?.resolve()
+				if(original && original.real_name)
+					realname = original.real_name
 			if(mindname && mindname != realname)
 				name = "[realname] died as [mindname]"
 			else
 				name = realname
 
-	if(subject && subject.forbid_seeing_deadchat && !subject.client.holder)
+	if(subject && subject.forbid_seeing_deadchat && !check_rights_for(subject.client, R_HOLDER))
 		return // Can't talk in deadchat if you can't see it.
 
-	for(var/mob/M in player_list)
-		if(M.client && ((!isnewplayer(M) && M.stat == DEAD) || (M.client.holder && check_rights_for(M.client, R_NONE) && M.client?.prefs?.read_preference(/datum/preference/toggle/holder/show_staff_dsay))) && M.client?.prefs?.read_preference(/datum/preference/toggle/show_dsay))
+	for(var/mob/M in GLOB.player_list)
+		if(M.client && ((!isnewplayer(M) && M.stat == DEAD) || (check_rights_for(M.client, R_HOLDER) && M.client?.prefs?.read_preference(/datum/preference/toggle/holder/show_staff_dsay))) && M.client?.prefs?.read_preference(/datum/preference/toggle/show_dsay))
 			var/follow
 			var/lname
-			if(M.forbid_seeing_deadchat && !M.client.holder)
+			if(M.forbid_seeing_deadchat && !check_rights_for(M.client, R_HOLDER))
 				continue
 
 			if(subject)
@@ -486,12 +483,12 @@ var/list/intents = list(I_HELP,I_DISARM,I_GRAB,I_HURT)
 					continue
 				if(subject != M)
 					follow = "([ghost_follow_link(subject, M)]) "
-				if(M.stat != DEAD && M.client.holder)
-					follow = "([admin_jump_link(subject, M.client.holder)]) "
+				if(M.stat != DEAD && check_rights_for(M.client, R_HOLDER))
+					follow = "([admin_jump_link(subject, check_rights_for(M.client, R_HOLDER))]) "
 				var/mob/observer/dead/DM
 				if(isobserver(subject))
 					DM = subject
-				if(M.client.holder) 							// What admins see
+				if(check_rights_for(M.client, R_HOLDER)) 							// What admins see
 					lname = "[keyname][(DM && DM.anonsay) ? "*" : (DM ? "" : "^")] ([name])"
 				else
 					if(DM && DM.anonsay)						// If the person is actually observer they have the option to be anonymous
@@ -504,18 +501,18 @@ var/list/intents = list(I_HELP,I_DISARM,I_GRAB,I_HURT)
 			to_chat(M, span_deadsay("" + create_text_tag("dead", "DEAD:", M.client) + " [lname][follow][message]"))
 
 /proc/say_dead_object(var/message, var/obj/subject = null)
-	for(var/mob/M in player_list)
-		if(M.client && ((!isnewplayer(M) && M.stat == DEAD) || (M.client.holder && check_rights_for(M.client, R_NONE) && M.client?.prefs?.read_preference(/datum/preference/toggle/holder/show_staff_dsay))) && M.client?.prefs?.read_preference(/datum/preference/toggle/show_dsay))
+	for(var/mob/M in GLOB.player_list)
+		if(M.client && ((!isnewplayer(M) && M.stat == DEAD) || (check_rights_for(M.client, R_HOLDER) && M.client?.prefs?.read_preference(/datum/preference/toggle/holder/show_staff_dsay))) && M.client?.prefs?.read_preference(/datum/preference/toggle/show_dsay))
 			var/follow
 			var/lname = "Game Master"
-			if(M.forbid_seeing_deadchat && !M.client.holder)
+			if(M.forbid_seeing_deadchat && !check_rights_for(M.client, R_HOLDER))
 				continue
 
 			if(subject)
 				lname = "[subject.name] ([subject.x],[subject.y],[subject.z])"
 
 			lname = span_name("[lname]") + " "
-			to_chat(M, span_deadsay("" + create_text_tag("event_dead", "EVENT:", M.client) + " [lname][follow][message]"))
+			to_chat(M, span_deadsay(create_text_tag("event_dead", "EVENT:", M.client) + " [lname][follow][message]"))
 
 //Announces that a ghost has joined/left, mainly for use with wizards
 /proc/announce_ghost_joinleave(O, var/joined_ghosts = 1, var/message = "")
@@ -529,10 +526,11 @@ var/list/intents = list(I_HELP,I_DISARM,I_GRAB,I_HURT)
 		C = O
 	else if(istype(O, /datum/mind))
 		var/datum/mind/M = O
+		var/mob/living/original = M.original_character?.resolve()
 		if(M.current && M.current.client)
 			C = M.current.client
-		else if(M.original && M.original.client)
-			C = M.original.client
+		else if(original && original.client)
+			C = original.client
 
 	if(C)
 		var/name
@@ -557,9 +555,8 @@ var/list/intents = list(I_HELP,I_DISARM,I_GRAB,I_HURT)
 
 
 /mob/proc/switch_to_camera(var/obj/machinery/camera/C)
-	if (!C.can_use() || stat || (get_dist(C, src) > 1 || machine != src || blinded || !canmove))
+	if (!C.can_use() || stat || (get_dist(C, src) > 1 || !check_current_machine(src) || blinded || !canmove))
 		return 0
-	check_eye(src)
 	return 1
 
 /mob/living/silicon/ai/switch_to_camera(var/obj/machinery/camera/C)
@@ -707,20 +704,26 @@ var/list/global/organ_rel_size = list(
 	BP_R_FOOT = 10,
 )
 
-/mob/proc/flash_eyes(intensity = FLASH_PROTECTION_MODERATE, override_blindness_check = FALSE, affect_silicon = FALSE, visual = FALSE, type = /obj/screen/fullscreen/flash)
+/mob/proc/flash_eyes(intensity = FLASH_PROTECTION_MODERATE, override_blindness_check = FALSE, affect_silicon = FALSE, visual = FALSE, type = /atom/movable/screen/fullscreen/flash)
 	return
 
 //Recalculates what planes this mob can see using their plane_holder, for humans this is checking slots, for others, could be whatever.
 /mob/proc/recalculate_vis()
 	return
 
-//General HUD updates done regularly (health puppet things, etc)
+/// General HUD updates done regularly (health puppet things, etc). Returns true if the mob has a client and is allowed to update its hud.
 /mob/proc/handle_regular_hud_updates()
-	return
+	SHOULD_CALL_PARENT(TRUE)
+	if(!client)
+		return FALSE
+	if(SEND_SIGNAL(src,COMSIG_LIVING_HANDLE_HUD) & COMSIG_COMPONENT_HANDLED_HUD)
+		return FALSE
+	return TRUE
 
-//Handle eye things like the Byond SEE_TURFS, SEE_OBJS, etc.
+/// Handle eye things like the Byond SEE_TURFS, SEE_OBJS, etc.
 /mob/proc/handle_vision()
-	return
+	SHOULD_CALL_PARENT(TRUE)
+	SEND_SIGNAL(src,COMSIG_LIVING_HANDLE_VISION)
 
 //Icon is used to occlude things like huds from the faulty byond context menu.
 //   http://www.byond.com/forum/?post=2336679

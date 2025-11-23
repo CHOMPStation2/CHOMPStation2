@@ -1,7 +1,7 @@
 /obj/item/emergency_beacon
 	name = "personal emergency beacon"
 	desc = "The hardy PersonaL Emergency Beacon, or PLEB, is a simple device that, once activated, sends out a wideband distress signal that can punch through almost all forms of interference. They are commonly issued to miners and remote exploration teams who may find themselves in need of means to call for assistance whilst being out of conventional communications range."
-	icon = 'icons/obj/device_vr.dmi'
+	icon = 'icons/obj/device.dmi'
 	icon_state = "e_beacon_off"
 	var/beacon_active = FALSE
 	var/list/levels_for_distress
@@ -10,8 +10,15 @@
 	drop_sound = 'sound/items/drop/device.ogg'
 
 /obj/item/emergency_beacon/Initialize(mapload)
-	. = ..()
 	gps = new/obj/item/gps/emergency_beacon(src)
+	for(var/i in 1 to length(levels_for_distress))
+		var/current = levels_for_distress[i]
+		if(isnum(current))
+			continue
+		levels_for_distress[i] = GLOB.map_templates_loaded[current]
+	if(!levels_for_distress)
+		levels_for_distress = list(1)
+	return ..()
 
 /obj/item/gps/emergency_beacon
 	gps_tag = "EMERGENCY BEACON"
@@ -29,7 +36,7 @@
 			var/answer = tgui_alert(user, "Would you like to activate this personal emergency beacon?","\The [src]", list("Yes", "No"))
 			if(answer != "Yes")
 				return
-			else if(do_after(user, (3 SECONDS)))	//short delay, so they can still abort if they want to
+			else if(do_after(user, 3 SECONDS, target = src))	//short delay, so they can still abort if they want to
 				user.visible_message(span_warning("[user] activates \the [src]!"),span_warning("You activate \the [src], spiking it into the ground!"))
 				beacon_active = TRUE
 				icon_state = "e_beacon_active"
@@ -42,8 +49,6 @@
 				Per the Interplanetary Convention on Space SAR, those receiving this message must attempt rescue, \
 				or relay the message to those who can."
 
-				if(!levels_for_distress)
-					levels_for_distress = list(1)
 				for(var/zlevel in levels_for_distress)
 					priority_announcement.Announce(message, new_title = "Automated Personal Distress Signal", new_sound = 'sound/AI/sos.ogg', zlevel = zlevel)
 	else

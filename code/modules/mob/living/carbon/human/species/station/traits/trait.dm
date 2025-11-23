@@ -34,6 +34,7 @@
 	var/mutation = 0 	// Mutation to give (or 0)
 	var/disability = 0 	// Disability to give (or 0)
 	var/sdisability = 0 // SDisability to give (or 0)
+	var/addiction = null // Addiction reagent, null otherwise
 	var/activation_message = null // If not null, shows a message when activated as a gene
 	var/deactivation_message = null // If not null, shows a message when deactivated as a gene
 	var/list/primitive_expression_messages=list() // Monkey's custom emote when they have this gene!
@@ -72,7 +73,7 @@
 	add_verb(H, /mob/living/carbon/human/proc/trait_tutorial)
 	if(special_env)
 		S.env_traits += src
-	if(added_component_path)
+	if(added_component_path && !H.GetComponent(added_component_path))
 		H.AddComponent(added_component_path)
 	return
 
@@ -106,6 +107,15 @@
 	if(added_component_path)
 		var/datum/component/C = H.GetComponent(added_component_path)
 		if(C)
+			if(LAZYLEN(S.species_component))
+				//Species_component is a list of paths.
+				for(var/checked_species_component in S.species_component)
+					//Ex: ACP = /datum/component/radioactive/type2 CSC = /datum/component/radioactive. This returns.
+					if(ispath(added_component_path, checked_species_component))
+						return
+					//Ex: ACP = /datum/component/radioactive CSC = /datum/component/radioactive/shadekin. This passes.
+					if(ispath(checked_species_component, added_component_path))
+						return
 			qdel(C)
 	return
 

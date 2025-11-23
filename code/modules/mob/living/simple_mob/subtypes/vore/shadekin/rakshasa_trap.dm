@@ -8,9 +8,7 @@
 	icon_state = "mfloor1"
 	var/basecolor="#030303"
 	desc = ""
-	throwforce = 0
 	w_class = ITEMSIZE_NORMAL
-	matter = list(DEFAULT_WALL_MATERIAL = 18750)
 	var/deployed = 1
 	anchored = 1
 
@@ -32,7 +30,7 @@
 			span_notice("[user] begins freeing [victim] from \the [src]."),
 			span_notice("You carefully begin to free [victim] from \the [src]."),
 			)
-		if(do_after(user, 5))
+		if(do_after(user, 5, target = src))
 			user.visible_message(span_notice("[victim] has been freed from \the [src] by [user]."))
 			for(var/A in buckled_mobs)
 				unbuckle_mob(A)

@@ -165,12 +165,7 @@
 /turf/simulated/shuttle/wall/voidcraft/survival,
 /area/survivalpod/superpose/SurvivalHydro)
 "r" = (
-/obj/machinery/smartfridge/survival_pod{
-	icon = 'icons/obj/vending.dmi';
-	icon_base = "smartfridge";
-	icon_contents = "boxes";
-	icon_state = "smartfridge";
-	name = "Advanced storage";
+/obj/machinery/smartfridge/survival_pod/boxes{
 	pixel_y = -1
 	},
 /obj/item/multitool,

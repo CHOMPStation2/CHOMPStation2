@@ -12,7 +12,7 @@ var/datum/planet/tyr/planet_tyr = null
 
 /datum/planet/tyr/New()
 	..()
-	planet_thor = src
+	planet_tyr = src
 	weather_holder = new /datum/weather_holder/tyr(src)
 
 /datum/planet/tyr/update_sun()
@@ -170,17 +170,13 @@ var/datum/planet/tyr/planet_tyr = null
 
 		var/target_zone = pick(BP_ALL)
 		var/amount_blocked = H.run_armor_check(target_zone, "bio")
-		var/amount_soaked = H.get_armor_soak(target_zone, "bio")
 
 		var/damage = rand(1,1)
 
 		if(amount_blocked >= 40)
 			return
 
-		if(amount_soaked >= damage)
-			return // No need to apply damage.
-
-		H.apply_damage(damage, BURN, target_zone, amount_blocked, amount_soaked, used_weapon = "burning ash")
+		H.apply_damage(damage, BURN, target_zone, amount_blocked, used_weapon = "burning ash")
 		if(show_message)
 			to_chat(H, effect_message)
 
@@ -207,17 +203,13 @@ var/datum/planet/tyr/planet_tyr = null
 
 		var/target_zone = pick(BP_ALL)
 		var/amount_blocked = H.run_armor_check(target_zone, "melee")
-		var/amount_soaked = H.get_armor_soak(target_zone, "melee")
 
 		var/damage = rand(2,2)
 
 		if(amount_blocked >= 10)
 			return
 
-		if(amount_soaked >= damage)
-			return // No need to apply damage.
-
-		H.apply_damage(damage, BRUTE, target_zone, amount_blocked, amount_soaked, used_weapon = "sand")
+		H.apply_damage(damage, BRUTE, target_zone, amount_blocked, used_weapon = "sand")
 		if(show_message)
 			to_chat(H, effect_message)
 
@@ -247,17 +239,13 @@ var/datum/planet/tyr/planet_tyr = null
 
 		var/target_zone = pick(BP_ALL)
 		var/amount_blocked = H.run_armor_check(target_zone, "melee")
-		var/amount_soaked = H.get_armor_soak(target_zone, "melee")
 
 		var/damage = rand(5,5)
 
 		if(amount_blocked >= 40)
 			return
 
-		if(amount_soaked >= damage)
-			return // No need to apply damage.
-
-		H.apply_damage(damage, BRUTE, target_zone, amount_blocked, amount_soaked, used_weapon = "sand")
+		H.apply_damage(damage, BRUTE, target_zone, amount_blocked, used_weapon = "sand")
 		if(show_message)
 			to_chat(H, effect_message)
 
@@ -392,6 +380,31 @@ var/datum/planet/tyr/planet_tyr = null
 /turf/unsimulated/wall/planetary/normal/tyr
 	name = "vast desert"
 	alpha = 0
+
+/turf/simulated/tyracid
+	name = "fuel"
+	icon = 'icons/goonstation/turf/timeholefull.dmi'
+	icon_state = "timehole"
+	color = "#FF3100"
+	var/acidlevel = 1
+
+/turf/simulated/tyracid/Entered(atom/movable/AM, atom/oldloc)
+	if(isliving(AM))
+		var/mob/living/L = AM
+		if(L.hovering || L.flying || L.throwing || L.is_incorporeal())
+			return 0
+		acidlevel *= 1 - L.get_water_protection()
+		if(acidlevel > 0)
+			L.adjustFireLoss(acidlevel)
+
+/turf/simulated/tyracid/quantum
+	acidlevel = 20
+	color = "#0059c6"
+
+
+/turf/simulated/tyracid/supernova
+	acidlevel = 10
+	color = "#b10101"
 
 /*
 WEATHER_BLIZZARD	= new (),

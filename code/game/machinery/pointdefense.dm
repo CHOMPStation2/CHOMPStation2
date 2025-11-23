@@ -1,4 +1,3 @@
-// CHOMPStation Edits over this entire file.
 //
 // Control computer for point defense batteries.
 // Handles control UI, but also coordinates their fire to avoid overkill.
@@ -13,9 +12,9 @@ GLOBAL_LIST_BOILERPLATE(pointdefense_turrets, /obj/machinery/pointdefense)
 	description_info = "To connect the mainframe to turrets, use a multitool to set the ident tag to that of the turrets."
 	icon = 'icons/obj/pointdefense.dmi'
 	icon_state = "control"
-	power_channel = EQUIP // CHOMPStation Edit Starts
+	power_channel = EQUIP
 	use_power = USE_POWER_ACTIVE
-	active_power_usage = 5 KILOWATTS // CHOMPStation Edit Ends
+	active_power_usage = 5 KILOWATTS
 	density = TRUE
 	anchored = TRUE
 	circuit = /obj/item/circuitboard/pointdefense_control
@@ -28,7 +27,7 @@ GLOBAL_LIST_BOILERPLATE(pointdefense_turrets, /obj/machinery/pointdefense)
 		//No more than 1 controller please.
 		for(var/obj/machinery/pointdefense_control/PC as anything in GLOB.pointdefense_controllers)
 			if(PC != src && PC.id_tag == id_tag)
-				warning("Two [src] with the same id_tag of [id_tag]")
+				WARNING("Two [src] with the same id_tag of [id_tag]")
 				id_tag = null
 	default_apply_parts()
 
@@ -77,7 +76,7 @@ GLOBAL_LIST_BOILERPLATE(pointdefense_turrets, /obj/machinery/pointdefense)
 	if(id_tag)
 		var/list/connected_z_levels = GetConnectedZlevels(get_z(src))
 		for(var/i = 1 to LAZYLEN(GLOB.pointdefense_turrets))
-			var/obj/machinery/pointdefense/PD = GLOB.pointdefense_turrets[i] //CHOMPEDIT - Whatever this is, needs to be sent upstream. I stumbled upon this deconflicting and it was uncommented. Bad.
+			var/obj/machinery/pointdefense/PD = GLOB.pointdefense_turrets[i]
 			if(!(PD.id_tag == id_tag && (get_z(PD) in connected_z_levels)))
 				continue
 			var/list/turret = list()
@@ -96,7 +95,6 @@ GLOBAL_LIST_BOILERPLATE(pointdefense_turrets, /obj/machinery/pointdefense)
 /obj/machinery/pointdefense_control/attackby(var/obj/item/W, var/mob/user)
 	if(W?.has_tool_quality(TOOL_MULTITOOL))
 		var/new_ident = tgui_input_text(user, "Enter a new ident tag.", "[src]", id_tag, MAX_NAME_LEN)
-		new_ident = sanitize(new_ident,MAX_NAME_LEN)
 		if(new_ident && new_ident != id_tag && user.Adjacent(src) && CanInteract(user, GLOB.tgui_physical_state))
 			// Check for duplicate controllers with this ID
 			for(var/obj/machinery/pointdefense_control/PC as anything in GLOB.pointdefense_controllers)
@@ -118,7 +116,6 @@ GLOBAL_LIST_BOILERPLATE(pointdefense_turrets, /obj/machinery/pointdefense)
 // The acutal point defense battery
 //
 
-// CHOMPStation Edits Begin: PD Turrets won't use power now, only the PD Control Mainframe. These edits go to the end of the file.
 /obj/machinery/pointdefense
 	name = "\improper point defense battery"
 	icon = 'icons/obj/pointdefense.dmi'
@@ -128,8 +125,6 @@ GLOBAL_LIST_BOILERPLATE(pointdefense_turrets, /obj/machinery/pointdefense)
 	density = TRUE
 	anchored = TRUE
 	circuit = /obj/item/circuitboard/pointdefense
-	//idle_power_usage = 0.1 KILOWATTS // CHOMPStation Edit
-	//active_power_usage = 1 KILOWATTS // CHOMPStation Edit
 	appearance_flags = PIXEL_SCALE
 	var/active = TRUE
 	var/charge_cooldown = 1 SECOND  //time between it can fire at different targets
@@ -138,7 +133,7 @@ GLOBAL_LIST_BOILERPLATE(pointdefense_turrets, /obj/machinery/pointdefense)
 	var/rotation_speed = 4.5 SECONDS  //How quickly we turn to face threats
 	var/datum/weakref/engaging = null // The meteor we're shooting at
 	var/id_tag = null
-	var/fire_sounds = list('sound/weapons/frigate_turret/frigate_turret_fire1.ogg', 'sound/weapons/frigate_turret/frigate_turret_fire2.ogg', 'sound/weapons/frigate_turret/frigate_turret_fire3.ogg', 'sound/weapons/frigate_turret/frigate_turret_fire4.ogg') // CHOMPEdit: Pew
+	var/fire_sounds = list('sound/weapons/frigate_turret/frigate_turret_fire1.ogg', 'sound/weapons/frigate_turret/frigate_turret_fire2.ogg', 'sound/weapons/frigate_turret/frigate_turret_fire3.ogg', 'sound/weapons/frigate_turret/frigate_turret_fire4.ogg')
 
 /obj/machinery/pointdefense/Initialize(mapload)
 	. = ..()
@@ -174,8 +169,7 @@ GLOBAL_LIST_BOILERPLATE(pointdefense_turrets, /obj/machinery/pointdefense)
 /obj/machinery/pointdefense/attackby(var/obj/item/W, var/mob/user)
 	if(W?.has_tool_quality(TOOL_MULTITOOL))
 		var/new_ident = tgui_input_text(user, "Enter a new ident tag.", "[src]", id_tag, MAX_NAME_LEN)
-		new_ident = sanitize(new_ident,MAX_NAME_LEN)
-		if(new_ident && new_ident != id_tag && user.Adjacent(src) && CanInteract(user, GLOB.tgui_physical_state))
+		if(new_ident && new_ident != id_tag && user.Adjacent(src))
 			to_chat(user, span_notice("You register [src] with the [new_ident] network."))
 			id_tag = new_ident
 		return
@@ -220,11 +214,11 @@ GLOBAL_LIST_BOILERPLATE(pointdefense_turrets, /obj/machinery/pointdefense)
 		return
 	//We throw a laser but it doesnt have to hit for meteor to explode
 	var/obj/item/projectile/beam/coildefense/coil = new(get_turf(src))
-	playsound(src, fire_sounds, 75, 1, 40, pressure_affected = FALSE, ignore_walls = TRUE) // CHOMPEdit: Pew
+	playsound(src, fire_sounds, 75, 1, 40, pressure_affected = FALSE, ignore_walls = TRUE)
 	use_power_oneoff(idle_power_usage * 10)
-	coil.launch_projectile(target = M.loc, user = src) // CHOMPEdit: Changing "beam" var to "coil" for the new coilgun type point defense turrets (to match the coilgun sprite and sfx names)
+	coil.launch_projectile(target = M.loc, user = src)
 	spawn(10)
-		playsound(src, fire_sounds, 75, 1, 40, pressure_affected = FALSE, ignore_walls = TRUE) // CHOMPEdit: Pew
+		playsound(src, fire_sounds, 75, 1, 40, pressure_affected = FALSE, ignore_walls = TRUE)
 
 /obj/machinery/pointdefense/process()
 	..()
@@ -309,7 +303,6 @@ GLOBAL_LIST_BOILERPLATE(pointdefense_turrets, /obj/machinery/pointdefense)
 		return FALSE
 
 	playsound(src, 'sound/weapons/flash.ogg', 100, 0)
-	//update_use_power(USE_POWER_IDLE)
 	active = TRUE
 	update_icon()
 	return TRUE
@@ -318,7 +311,6 @@ GLOBAL_LIST_BOILERPLATE(pointdefense_turrets, /obj/machinery/pointdefense)
 	if(!active)
 		return FALSE
 	playsound(src, 'sound/machines/apc_nopower.ogg', 50, 0)
-	//update_use_power(USE_POWER_OFF)
 	active = FALSE
 	update_icon()
 	return TRUE

@@ -8,7 +8,7 @@
 
 	var/input
 	if(!message)
-		input = sanitize(tgui_input_text(src,"Choose an emote to display."))
+		input = tgui_input_text(src,"Choose an emote to display.", max_length = MAX_MESSAGE_LEN)
 	else
 		input = message
 	process_normal_emote(m_type, message, input, range)
@@ -59,12 +59,20 @@
 	build_the_emote(m_type, message, input, range, runemessage)
 
 /mob/proc/log_the_emote(m_type, message, input, range, runemessage)
-	log_emote(message,src) //Log before we add junk
+	log_message(message, LOG_EMOTE) //Log before we add junk
 	build_the_emote(m_type, message, input, range, runemessage)
 
 /mob/proc/build_the_emote(m_type, message, input, range, runemessage)
 	if(client)
 		message = span_emote(span_bold("[src]") + " [input]")
+		if(src.absorbed && isbelly(src.loc))
+			var/obj/belly/B = src.loc
+			if(B.absorbedrename_enabled)
+				var/formatted_name = B.absorbedrename_name
+				formatted_name = replacetext(formatted_name,"%pred", B.owner)
+				formatted_name = replacetext(formatted_name,"%belly", B.get_belly_name())
+				formatted_name = replacetext(formatted_name,"%prey", name)
+				message = span_emote(span_bold("[formatted_name]") + " [input]")
 	else
 		message = span_npc_emote(span_bold("[src]") + " [input]")
 
@@ -79,7 +87,13 @@
 	if(!T) return
 
 	if(client)
-		playsound(T, pick(voice_sounds_list), 75, TRUE, falloff = 1 , is_global = TRUE, frequency = voice_freq, ignore_walls = TRUE, preference = /datum/preference/toggle/emote_sounds) //CHOMPEdit - use say prefs instead
+		switch(emote_sound_mode)
+			if(EMOTE_SOUND_NO_FREQ)
+				playsound(T, pick(GLOB.emote_sound), 75, TRUE, falloff = 1 , is_global = TRUE, frequency = 0, ignore_walls = TRUE, preference = /datum/preference/toggle/emote_sounds)
+			if(EMOTE_SOUND_VOICE_FREQ)
+				playsound(T, pick(GLOB.emote_sound), 75, TRUE, falloff = 1 , is_global = TRUE, frequency = voice_freq, ignore_walls = TRUE, preference = /datum/preference/toggle/emote_sounds)
+			if(EMOTE_SOUND_VOICE_LIST)
+				playsound(T, pick(voice_sounds_list), 75, TRUE, falloff = 1 , is_global = TRUE, frequency = voice_freq, ignore_walls = TRUE, preference = /datum/preference/toggle/emote_sounds)
 
 	var/list/in_range = get_mobs_and_objs_in_view_fast(T,range,2,remote_ghosts = client ? TRUE : FALSE)
 	var/list/m_viewers = in_range["mobs"]

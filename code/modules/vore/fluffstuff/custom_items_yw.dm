@@ -1,6 +1,7 @@
 // **************
 // Unleashed_Mana
 // **************
+/*
 /obj/item/fluff/zekewatch
 	name = "Zeke's pocketwatch"
 	desc = "Looks like it's broken... or is it?"
@@ -87,7 +88,7 @@
 
 /obj/item/toy/bosunwhistle/fluff/strix/attack_self(mob/user as mob)
 	if(cooldown < world.time - 15)
-		user << span_notice("You blow on [src], creating an ear-splitting noise!")
+		to_chat(user, span_notice("You blow on [src], creating an ear-splitting noise!"))
 		playsound(user, 'sound/misc/boatswain.ogg', 25, 1)
 		cooldown = world.time
 
@@ -408,7 +409,7 @@
 	random_emote = list("supresses a moan", "gasps sharply", "bites her lower lip")
 	verb_name = "Milk"
 	verb_desc = "Grab Ysaline's breasts and milk her, storing her fresh, warm milk in a container. This will undoubtedly turn her on."
-
+*/
 // **************
 // Trash
 // **************
@@ -490,7 +491,7 @@
 // **************
 // SASOperative
 // **************
-
+/*
 // These seem to have been deprecated from loadouts? -KK
 /obj/item/modkit_conversion/fluff/skinner/a
 	name = "Joseph's modkit Mk1"
@@ -521,15 +522,15 @@
 
 	from_suit = /obj/item/clothing/head/helmet
 	to_suit = /obj/item/clothing/head/helmet/fluff/skinner
-
+*/
 // **************
 // DeepIndigo
 // **************
-
+/*
 /obj/item/storage/bible/fluff/amina
 	name = "New Space Pioneer's Bible"
 	desc = "This one says it was printed in 2492. The name \"Eric Hayvers\" is written on the inside of the cover, crossed out. Under it is written \"Kouri, Amina, Marine Unit 14, Fifth Echelon. Service number NTN-5528928522372\""
-
+*/
 // **************
 // DameonOwen
 // **************
@@ -554,18 +555,18 @@
 // **************
 // NESgamer190
 // **************
-
+/*
 //Lucy Price
 /obj/item/reagent_containers/food/drinks/flask/vacuumflask/fluff/lucyprice
 	name = "Cryostasis Thermos"
 	desc = " A thermos that has been designed to look something akin to a mix between a cryostasis beaker and a thermos.  Does NOT keep the drinks cold, surprisingly enough."
 	icon_state = "cryothermos"
 	icon = 'icons/vore/custom_items_yw.dmi'
-
+*/
 // **************
 // Moca_The_Porg1
 // **************
-
+/*
 //Mocha
 /obj/item/modkit_conversion/fluff/mocha_suit_kit
 	name = "Mocha's modkit"
@@ -577,7 +578,7 @@
 
 	from_suit = /obj/item/clothing/suit/storage/hooded/explorer
 	to_suit = /obj/item/clothing/suit/storage/hooded/fluff/mocha_suit
-
+*/
 // *************
 // Foxicide
 // *************
@@ -602,6 +603,7 @@
 // *************
 // Coda_Vanistok
 // *************
+/*
 /obj/item/implanter/fluff/coda
 	imp = new /obj/item/implant/fluff/coda
 	icon_state = "implanter1_1"
@@ -651,7 +653,7 @@
 			H.resize(1)
 		if("Large")
 			H.resize(1.22)
-
+*/
 // *************
 // Dopiotl
 // *************

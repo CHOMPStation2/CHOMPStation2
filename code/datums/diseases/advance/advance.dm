@@ -17,7 +17,7 @@ GLOBAL_LIST_INIT(advance_cures, list(
 ))
 
 /datum/disease/advance
-	name = "Unknown"
+	name = DEVELOPER_WARNING_NAME
 	desc = "An engineered disease which can contain a multitude of symptoms."
 	form = "Advance Disease"
 	agent = "advance microbes"
@@ -92,6 +92,8 @@ GLOBAL_LIST_INIT(advance_cures, list(
 	QDEL_LIST(A.symptoms)
 	for(var/datum/symptom/S as anything in symptoms)
 		A.symptoms += S.Copy()
+	A.virus_modifiers = virus_modifiers
+	A.spread_flags = spread_flags
 	A.disease_flags = disease_flags
 	A.resistance = resistance
 	A.stealth = stealth
@@ -174,7 +176,7 @@ GLOBAL_LIST_INIT(advance_cures, list(
 	else
 		var/datum/disease/advance/A = GLOB.archive_diseases[GetDiseaseID()]
 		var/actual_name = A.name
-		if(actual_name != "Unknown")
+		if(actual_name != DEVELOPER_WARNING_NAME)
 			name = actual_name
 
 
@@ -213,7 +215,7 @@ GLOBAL_LIST_INIT(advance_cures, list(
 
 /datum/disease/advance/proc/AssignProperties()
 
-	if(stealth >= 2)
+	if(global_flag_check(virus_modifiers, DORMANT) || stealth >= 2)
 		visibility_flags |= HIDDEN_SCANNER
 	else
 		visibility_flags &= ~HIDDEN_SCANNER
@@ -226,16 +228,23 @@ GLOBAL_LIST_INIT(advance_cures, list(
 	GenerateCure()
 
 /datum/disease/advance/proc/SetSpread()
-	switch(transmission)
-		if(-INFINITY to 5)
-			spread_flags = DISEASE_SPREAD_BLOOD
-			spread_text = "Blood"
-		if(6 to 10)
-			spread_flags = DISEASE_SPREAD_BLOOD | DISEASE_SPREAD_FLUIDS
-			spread_text = "Fluids"
-		if(11 to INFINITY)
-			spread_flags = DISEASE_SPREAD_BLOOD | DISEASE_SPREAD_FLUIDS | DISEASE_SPREAD_CONTACT
-			spread_text = "On Contact"
+	if(global_flag_check(virus_modifiers, FALTERED))
+		spread_flags = DISEASE_SPREAD_FALTERED
+		spread_text = "Intentional Injection"
+	if(global_flag_check(virus_modifiers, DORMANT))
+		spread_flags = DISEASE_SPREAD_NON_CONTAGIOUS
+		spread_text = "None"
+	else
+		switch(transmission)
+			if(-INFINITY to 5)
+				spread_flags = DISEASE_SPREAD_BLOOD
+				spread_text = "Blood"
+			if(6 to 10)
+				spread_flags = DISEASE_SPREAD_BLOOD | DISEASE_SPREAD_FLUIDS
+				spread_text = "Fluids"
+			if(11 to INFINITY)
+				spread_flags = DISEASE_SPREAD_BLOOD | DISEASE_SPREAD_FLUIDS | DISEASE_SPREAD_CONTACT
+				spread_text = "On Contact"
 
 /datum/disease/advance/proc/SetSeverity(level_sev)
 
@@ -255,8 +264,10 @@ GLOBAL_LIST_INIT(advance_cures, list(
 			severity = DISEASE_HARMFUL
 		if(4)
 			severity = DISEASE_DANGEROUS
-		if(5 to INFINITY)
+		if(5)
 			severity = DISEASE_BIOHAZARD
+		if(6 to INFINITY)
+			severity = DISEASE_PANDEMIC
 		else
 			severity = "Unknown"
 
@@ -297,7 +308,15 @@ GLOBAL_LIST_INIT(advance_cures, list(
 		var/s = safepick(symptoms)
 		if(s)
 			NeuterSymptom(s)
-			Refresh(TRUE)
+
+// Falter the disease, making it non-spreadable.
+/datum/disease/advance/proc/Falter()
+	if(global_flag_check(virus_modifiers, FALTERED))
+		return
+	else
+		virus_modifiers |= FALTERED
+		spread_flags = DISEASE_SPREAD_BLOOD
+		spread_text = "Intentional Injection"
 
 // Name the disease.
 /datum/disease/advance/proc/AssignName(new_name = "Unknown")
@@ -378,6 +397,7 @@ GLOBAL_LIST_INIT(advance_cures, list(
 
 	// Should be only 1 entry left, but if not let's only return a single entry
 	var/datum/disease/advance/to_return = pick(diseases)
+	to_return.disease_flags &= ~DORMANT
 	to_return.Refresh(new_name = TRUE)
 	return to_return
 
@@ -433,7 +453,7 @@ GLOBAL_LIST_INIT(advance_cures, list(
 		for(var/datum/disease/advance/AD in GLOB.active_diseases)
 			AD.Refresh()
 
-		H = tgui_input_list(src, "Choose infectee", "Infectees", human_mob_list)
+		H = tgui_input_list(src, "Choose infectee", "Infectees", GLOB.human_mob_list)
 
 		if(isnull(H))
 			return FALSE
@@ -448,3 +468,111 @@ GLOBAL_LIST_INIT(advance_cures, list(
 		log_admin("[key_name_admin(src)] infected [key_name_admin(H)] with [D.name]. It has these symptoms: [english_list(name_symptoms)]")
 
 		return TRUE
+
+/datum/disease/advance/infect(var/mob/living/infectee, make_copy = TRUE)
+	var/datum/disease/advance/A = make_copy ? Copy() : src
+	infectee.addDisease(A)
+	A.affected_mob = infectee
+	GLOB.active_diseases += A
+
+	log_admin("[key_name(src)] has contracted the virus \"[A]\"")
+
+/*
+*	Generates a random name for a disease, depending on where it comes from
+*/
+/datum/disease/advance/proc/random_disease_name(var/atom/diseasesource)
+
+	if(length(symptoms) == 1)
+		var/datum/symptom/main_symptom = symptoms[1]
+		if(istype(main_symptom) && length(main_symptom.name))
+			return main_symptom.name
+
+	// Prefixes. These need a space right after.
+	var/list/prefixes = list("Spacer's ", "Space ", "Infectious ","Viral ", "The ", "[capitalize(prob(50) ? pick(GLOB.first_names_male) : pick(GLOB.first_names_female))]'s ", "[capitalize(pick(GLOB.last_names))]'s ", "Acute ")
+	var/list/bodies = list(pick("[capitalize(prob(50) ? pick(GLOB.first_names_male) : pick(GLOB.first_names_female))]", "[pick(GLOB.last_names)]"), "Space", "Disease", "Noun", "Cold", "Germ", "Virus")
+	// These might need some space before the word, depends on what you want to add.
+	var/list/suffixes = list("ism", "itis", "osis", "itosis", " #[rand(1,10000)]", "-[rand(1,100)]", "s", "y", " Virus", " Bug", " Infection", " Disease", " Complex", " Syndrome", " Sickness")
+
+	if(stealth >=2)
+		prefixes += "Crypto "
+	switch(max(resistance - (symptoms.len / 2), 1))
+		if(1)
+			suffixes += "-alpha"
+		if(2)
+			suffixes += "-beta"
+		if(3)
+			suffixes += "-gamma"
+		if(4)
+			suffixes += "-delta"
+		if(5)
+			suffixes += "-epsilon"
+		if(6)
+			suffixes += pick("-zeta", "-eta", "-theta", "-iota")
+		if(7)
+			suffixes += pick("-kappa", "-lambda")
+		if(8)
+			suffixes += pick("-mu", "-nu", "-xi", "-omicron")
+		if(9)
+			suffixes += pick("-pi", "-rho", "-sigma", "-tau")
+		if(10)
+			suffixes += pick("-upsilon", "-phi", "-chi", "-psi")
+		if(11 to INFINITY)
+			suffixes += "-omega"
+			prefixes += "Robust "
+	switch(transmission - symptoms.len)
+		if(-INFINITY to 2)
+			prefixes += "Bloodborne "
+		if(3)
+			prefixes += list("Mucous ", "Kissing ")
+		if(4)
+			prefixes += "Contact "
+			suffixes += " Flu"
+		if(5 to INFINITY)
+			prefixes += "Airborne "
+			suffixes += " Plague"
+	switch(severity)
+		if(-INFINITY to 0)
+			prefixes += "Altruistic "
+		if(1 to 2)
+			prefixes += "Benign "
+		if(3 to 4)
+			prefixes += "Malignant "
+		if(5)
+			prefixes += "Deadly "
+			bodies += "Death"
+		if(6 to INFINITY)
+			prefixes += "Morbid "
+			bodies += "Death"
+	if(diseasesource)
+		if(ishuman(diseasesource))
+			var/mob/living/carbon/human/H = diseasesource
+			prefixes += pick("[H.name]'s ", "[H.job]'s ", "[H.get_species()]'s ")
+			bodies += pick("[H.name]", "[H.job]", "[H.get_species()]")
+			if(H.get_species() == SPECIES_UNATHI || H.get_species() == SPECIES_TAJARAN)
+				prefixes += list("Vermin ", "Zoo", "Maintenance ")
+				bodies += list("Rat", "Maint")
+		if(ismouse(diseasesource) && !istype(diseasesource, /mob/living/simple_mob/animal/passive/mouse/white/virology))
+			prefixes += list("Vermin ", "Zoo", "Maintenance ")
+			bodies += list("Rat", "Maint")
+		else switch(diseasesource.type)
+			if(/mob/living/simple_mob/animal/passive/mouse/white/virology)
+				prefixes += list("Fleming's ", "Standard ")
+				bodies += list("Freebie")
+			if(/obj/effect/decal/cleanable/blood, /obj/effect/decal/cleanable/vomit/old)
+				prefixes += list("Bloody ", "Maintenance ")
+				bodies += list("Maint")
+			if(/obj/item/reagent_containers/syringe/old)
+				prefixes += list("Junkie ", "Maintenance ")
+				bodies += list("Needle", "Maint")
+	for(var/datum/symptom/S in symptoms)
+		if(!S.neutered)
+			prefixes += S.prefixes
+			bodies += S.bodies
+			suffixes += S.suffixes
+	switch(rand(1, 3))
+		if(1)
+			return "[pick(prefixes)][pick(bodies)]"
+		if(2)
+			return "[pick(prefixes)][pick(bodies)][pick(suffixes)]"
+		if(3)
+			return "[pick(bodies)][pick(suffixes)]"

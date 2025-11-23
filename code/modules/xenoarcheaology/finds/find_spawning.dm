@@ -49,6 +49,8 @@
 		/datum/material/durasteel/hull,
 		/datum/material/titanium/hull,
 		/datum/material/morphium/hull,
+		/datum/material/plastitanium/hull,
+		/datum/material/gold/hull,
 		/datum/material/steel/holographic,
 		/datum/material/plastic/holographic,
 		/datum/material/wood/holographic,
@@ -443,7 +445,13 @@
 			possible_object_paths += subtypesof(/obj/item/organ/internal)
 
 			//BLACKLIST BELOW
-			possible_object_paths -= list(/obj/item/organ/internal/mmi_holder, /obj/item/organ/internal/stack/vox)
+			possible_object_paths -= list(	/obj/item/organ/internal/mmi_holder,
+											/obj/item/organ/internal/stack/vox,
+											/obj/item/organ/internal/malignant,
+											/obj/item/organ/internal/malignant/tumor,
+											/obj/item/organ/internal/malignant/parasite,
+											/obj/item/organ/internal/malignant/engineered,
+											/obj/item/organ/internal/malignant/engineered/chemorgan) // //CHOMP Edit: Add malignant organ basetypes to exclusions.
 			//BLACKLIST ABOVE
 
 			var/obj/item/organ/internal/new_organ = pick(possible_object_paths)

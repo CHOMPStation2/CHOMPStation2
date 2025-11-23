@@ -130,12 +130,7 @@
 /obj/effect/floor_decal/techfloor{
 	dir = 4
 	},
-/obj/machinery/smartfridge/survival_pod{
-	icon = 'icons/obj/vending.dmi';
-	icon_base = "fridge_sci";
-	icon_contents = "chem";
-	icon_state = "fridge_sci";
-	name = "Advanced storage";
+/obj/machinery/smartfridge/survival_pod/scifridge{
 	pixel_y = 0
 	},
 /obj/item/organ/internal/augment/armmounted,
@@ -349,7 +344,7 @@
 /turf/simulated/floor/tiled/steel_dirty,
 /area/survivalpod/superpose/ripperdocpod)
 "M" = (
-/obj/machinery/mecha_part_fabricator/pros,
+/obj/machinery/mecha_part_fabricator_tg/prosthetics,
 /obj/fiftyspawner/steel,
 /obj/fiftyspawner/glass,
 /obj/structure/sign/poster/custom{

@@ -22,6 +22,7 @@
 
 	origin_tech = list(TECH_COMBAT = 5, TECH_MATERIAL = 3, TECH_MAGNET = 2)
 
+	dna_lock = TRUE // CHOMPEdit
 	charge_sections = 3 //For the icon
 	ammo_x_offset = 2
 	ammo_y_offset = 0
@@ -134,7 +135,7 @@
 		list(mode_name="electrode", projectile_type=/obj/item/projectile/energy/electrode/strong, modifystate="zap", charge_cost = 800),
 		)
 
-	req_access = list(access_armory) //for toggling safety
+	req_access = list(ACCESS_ARMORY) //for toggling safety
 	var/locked = 1
 	var/lockable = 1
 

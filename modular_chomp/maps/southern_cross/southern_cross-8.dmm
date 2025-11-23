@@ -819,9 +819,7 @@
 /turf/simulated/shuttle/plating/airless/carry,
 /area/shuttle/syndicate_elite/mothership)
 "akO" = (
-/obj/effect/floor_decal/sign/small_7{
-	icon = 'icons/turf/flooring/decals.dmi'
-	},
+/obj/effect/floor_decal/sign/small_7/decal,
 /turf/simulated/floor/holofloor/wood,
 /area/holodeck/source_chess)
 "ala" = (
@@ -894,9 +892,7 @@
 /turf/simulated/floor/carpet/turcarpet,
 /area/shadekin)
 "arj" = (
-/obj/effect/floor_decal/sign/small_5{
-	icon = 'icons/turf/flooring/decals.dmi'
-	},
+/obj/effect/floor_decal/sign/small_5/decal,
 /turf/simulated/floor/holofloor/wood,
 /area/holodeck/source_chess)
 "asc" = (
@@ -998,11 +994,7 @@
 /turf/simulated/floor/holofloor/carpet,
 /area/holodeck/source_courtroom)
 "auX" = (
-/turf/unsimulated/floor{
-	icon = 'icons/turf/snow_new.dmi';
-	icon_state = "snow";
-	name = "snow"
-	},
+/turf/unsimulated/floor/snow_new,
 /area/ninja_dojo/dojo)
 "avb" = (
 /obj/effect/floor_decal/milspec/color/black,
@@ -1024,11 +1016,7 @@
 /area/centcom/specops)
 "awz" = (
 /obj/effect/floor_decal/asteroid,
-/turf/unsimulated/floor{
-	icon = 'icons/turf/snow_new.dmi';
-	icon_state = "snow";
-	name = "snow"
-	},
+/turf/unsimulated/floor/snow_new,
 /area/ninja_dojo/dojo)
 "awC" = (
 /turf/unsimulated/beach/sand,
@@ -1081,9 +1069,7 @@
 /turf/simulated/mineral,
 /area/skipjack_station)
 "ayE" = (
-/obj/effect/floor_decal/sign/small_4{
-	icon = 'icons/turf/flooring/decals.dmi'
-	},
+/obj/effect/floor_decal/sign/small_4/decal,
 /turf/simulated/floor/holofloor/wood,
 /area/holodeck/source_chess)
 "ayP" = (
@@ -1185,9 +1171,7 @@
 	},
 /area/skipjack_station)
 "aFt" = (
-/obj/effect/floor_decal/sign/small_3{
-	icon = 'icons/turf/flooring/decals.dmi'
-	},
+/obj/effect/floor_decal/sign/small_3/decal,
 /turf/simulated/floor/holofloor/wood,
 /area/holodeck/source_chess)
 "aFz" = (
@@ -1207,7 +1191,7 @@
 /area/wizard_station)
 "aFI" = (
 /obj/machinery/door/airlock/external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	id_tag = "escape_shuttle_hatch";
 	locked = 1;
@@ -1438,9 +1422,7 @@
 /turf/simulated/shuttle/floor/white,
 /area/centcom/evac)
 "aQI" = (
-/obj/effect/floor_decal/sign/small_2{
-	icon = 'icons/turf/flooring/decals.dmi'
-	},
+/obj/effect/floor_decal/sign/small_2/decal,
 /turf/simulated/floor/holofloor/wood,
 /area/holodeck/source_chess)
 "aQJ" = (
@@ -1592,13 +1574,6 @@
 /obj/effect/overlay/palmtree_l,
 /turf/unsimulated/beach/sand,
 /area/beach)
-"aWV" = (
-/obj/machinery/r_n_d/server/centcom,
-/turf/unsimulated/floor{
-	dir = 5;
-	icon_state = "vault"
-	},
-/area/centcom/main_hall)
 "aWW" = (
 /obj/structure/table/steel_reinforced,
 /obj/item/organ/internal/stack,
@@ -1640,9 +1615,7 @@
 	},
 /area/skipjack_station)
 "aZo" = (
-/obj/effect/floor_decal/sign/small_1{
-	icon = 'icons/turf/flooring/decals.dmi'
-	},
+/obj/effect/floor_decal/sign/small_1/decal,
 /turf/simulated/floor/holofloor/wood,
 /area/holodeck/source_chess)
 "aZH" = (
@@ -1754,12 +1727,7 @@
 	},
 /area/centcom/medical)
 "bew" = (
-/turf/unsimulated/wall{
-	desc = "That looks like it doesn't open easily.";
-	icon = 'icons/obj/doors/rapid_pdoor.dmi';
-	icon_state = "pdoor1";
-	name = "Shuttle Bay Blast Door"
-	},
+/turf/unsimulated/wall/shuttle_bay,
 /area/centcom/evac)
 "beU" = (
 /obj/effect/floor_decal/milspec/color/black,
@@ -1905,7 +1873,7 @@
 /area/shuttle/trade)
 "bkF" = (
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "trade_shuttle_bay";
 	name = "shuttle bay controller";
 	pixel_x = 25;
@@ -2332,11 +2300,7 @@
 	},
 /area/centcom/bar)
 "bFy" = (
-/turf/unsimulated/wall{
-	icon = 'icons/obj/doors/Doormaint.dmi';
-	icon_state = "door_closed";
-	name = "Sealed Door"
-	},
+/turf/unsimulated/wall/door_maint,
 /area/centcom/main_hall)
 "bFJ" = (
 /obj/structure/bed/chair/oldsofa/right{
@@ -2596,7 +2560,7 @@
 /area/shuttle/administration)
 "bPF" = (
 /obj/machinery/door/airlock/external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	id_tag = "escape_pod_4_recovery_hatch";
 	locked = 1;
@@ -2829,7 +2793,7 @@
 	id = "QMLoad"
 	},
 /obj/machinery/door/airlock/external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	id_tag = "supply_shuttle_hatch";
 	locked = 1;
@@ -3028,8 +2992,7 @@
 /area/centcom/specops)
 "cgL" = (
 /obj/item/target/alien,
-/turf/unsimulated/floor{
-	icon = 'icons/turf/flooring/wood.dmi';
+/turf/unsimulated/floor/wood{
 	icon_state = "wood-broken2"
 	},
 /area/ninja_dojo/dojo)
@@ -3283,7 +3246,7 @@
 /obj/machinery/embedded_controller/radio/docking_port_multi{
 	child_names_txt = "Airlock One;Airlock Two";
 	child_tags_txt = "arrivals_dock_north_airlock;arrivals_dock_south_airlock";
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "arrivals_dock";
 	pixel_y = -32
 	},
@@ -3347,9 +3310,7 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/shadekin)
 "cyR" = (
-/obj/effect/floor_decal/sign/small_a{
-	icon = 'icons/turf/flooring/decals.dmi'
-	},
+/obj/effect/floor_decal/sign/small_a/decal,
 /turf/simulated/floor/holofloor/wood,
 /area/holodeck/source_chess)
 "czr" = (
@@ -3584,12 +3545,7 @@
 /turf/simulated/shuttle/floor/red,
 /area/shuttle/administration)
 "cIR" = (
-/turf/unsimulated/wall{
-	desc = "That looks like it doesn't open easily.";
-	icon = 'icons/obj/doors/rapid_pdoor.dmi';
-	icon_state = "pdoor1";
-	name = "Shuttle Bay Blast Door"
-	},
+/turf/unsimulated/wall/shuttle_bay,
 /area/syndicate_mothership/elite_squad)
 "cJi" = (
 /obj/machinery/atmospherics/pipe/vent{
@@ -3649,9 +3605,7 @@
 	},
 /area/ninja_dojo/dojo)
 "cJI" = (
-/obj/effect/floor_decal/sign/small_8{
-	icon = 'icons/turf/flooring/decals.dmi'
-	},
+/obj/effect/floor_decal/sign/small_8/decal,
 /turf/simulated/floor/holofloor/wood,
 /area/holodeck/source_chess)
 "cJV" = (
@@ -3722,9 +3676,7 @@
 /turf/simulated/floor/wood/alt,
 /area/shadekin)
 "cNE" = (
-/obj/effect/floor_decal/sign/small_b{
-	icon = 'icons/turf/flooring/decals.dmi'
-	},
+/obj/effect/floor_decal/sign/small_b/decal,
 /turf/simulated/floor/holofloor/wood,
 /area/holodeck/source_chess)
 "cNG" = (
@@ -3736,9 +3688,7 @@
 	},
 /area/shuttle/trade)
 "cOx" = (
-/obj/effect/floor_decal/sign/small_c{
-	icon = 'icons/turf/flooring/decals.dmi'
-	},
+/obj/effect/floor_decal/sign/small_c/decal,
 /turf/simulated/floor/holofloor/wood,
 /area/holodeck/source_chess)
 "cOL" = (
@@ -4076,9 +4026,7 @@
 	},
 /area/centcom/living)
 "dgc" = (
-/obj/effect/floor_decal/sign/small_d{
-	icon = 'icons/turf/flooring/decals.dmi'
-	},
+/obj/effect/floor_decal/sign/small_d/decal,
 /turf/simulated/floor/holofloor/wood,
 /area/holodeck/source_chess)
 "dgU" = (
@@ -4143,9 +4091,7 @@
 /turf/simulated/shuttle/wall,
 /area/shuttle/escape/centcom)
 "dmw" = (
-/obj/effect/floor_decal/sign/small_e{
-	icon = 'icons/turf/flooring/decals.dmi'
-	},
+/obj/effect/floor_decal/sign/small_e/decal,
 /turf/simulated/floor/holofloor/wood,
 /area/holodeck/source_chess)
 "dmB" = (
@@ -4379,7 +4325,7 @@
 /area/shuttle/response_ship)
 "dzR" = (
 /obj/machinery/door/airlock/external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	id_tag = "centcom_dock_airlock";
 	locked = 1;
@@ -4533,9 +4479,7 @@
 /turf/simulated/shuttle/floor/black,
 /area/shuttle/merchant)
 "dFq" = (
-/obj/effect/floor_decal/sign/small_f{
-	icon = 'icons/turf/flooring/decals.dmi'
-	},
+/obj/effect/floor_decal/sign/small_f/decal,
 /turf/simulated/floor/holofloor/wood,
 /area/holodeck/source_chess)
 "dFB" = (
@@ -4632,7 +4576,7 @@
 /area/shadekin)
 "dHC" = (
 /obj/machinery/door/airlock/external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	id_tag = "escape_pod_8_recovery_hatch";
 	locked = 1;
@@ -4642,9 +4586,7 @@
 /turf/simulated/shuttle/floor/black,
 /area/centcom/evac)
 "dIk" = (
-/obj/effect/floor_decal/sign/small_g{
-	icon = 'icons/turf/flooring/decals.dmi'
-	},
+/obj/effect/floor_decal/sign/small_g/decal,
 /turf/simulated/floor/holofloor/wood,
 /area/holodeck/source_chess)
 "dIK" = (
@@ -5422,7 +5364,7 @@
 /area/ninja_dojo/dojo)
 "evT" = (
 /obj/machinery/door/airlock/external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	id_tag = "large_escape_pod_1_recovery_hatch";
 	locked = 1;
@@ -5564,7 +5506,7 @@
 /area/shadekin)
 "eBX" = (
 /obj/machinery/door/airlock/external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	id_tag = "admin_shuttle_bay_door";
 	locked = 1
@@ -5624,7 +5566,7 @@
 /area/shadekin)
 "eGl" = (
 /obj/machinery/door/airlock/external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	id_tag = "escape_pod_7_recovery_hatch";
 	locked = 1;
@@ -5779,8 +5721,7 @@
 "ePs" = (
 /obj/structure/bed/padded,
 /obj/item/bedsheet/orange,
-/turf/unsimulated/floor{
-	icon = 'icons/turf/flooring/wood.dmi';
+/turf/unsimulated/floor/wood{
 	icon_state = "wood-broken1"
 	},
 /area/skipjack_station)
@@ -5791,11 +5732,7 @@
 	},
 /area/skipjack_station)
 "ePR" = (
-/obj/effect/forcefield{
-	desc = "You can't get in. Heh.";
-	layer = 1;
-	name = "Blocker"
-	},
+/obj/effect/blocker,
 /obj/effect/wingrille_spawn/reinforced/crescent,
 /turf/unsimulated/floor{
 	icon_state = "dark"
@@ -5851,11 +5788,7 @@
 /turf/simulated/floor/carpet/retro_red,
 /area/shadekin)
 "eRa" = (
-/obj/effect/forcefield{
-	desc = "You can't get in. Heh.";
-	layer = 1;
-	name = "Blocker"
-	},
+/obj/effect/blocker,
 /obj/effect/wingrille_spawn/reinforced/crescent,
 /obj/machinery/atmospherics/pipe/simple/visible{
 	dir = 4
@@ -5875,9 +5808,7 @@
 	},
 /area/wizard_station)
 "eRl" = (
-/obj/effect/floor_decal/sign/small_h{
-	icon = 'icons/turf/flooring/decals.dmi'
-	},
+/obj/effect/floor_decal/sign/small_h/decal,
 /turf/simulated/floor/holofloor/wood,
 /area/holodeck/source_chess)
 "eRT" = (
@@ -6200,7 +6131,7 @@
 "fqC" = (
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
 	dir = 4;
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "trade_shuttle";
 	pixel_x = -25;
 	req_one_access = list(101);
@@ -6703,11 +6634,7 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/shadekin)
 "fVX" = (
-/turf/unsimulated/wall{
-	icon = 'icons/obj/doors/Doormaint.dmi';
-	icon_state = "door_closed";
-	name = "Sealed Door"
-	},
+/turf/unsimulated/wall/door_maint,
 /area/centcom/terminal)
 "fWi" = (
 /obj/structure/bed/chair,
@@ -6805,9 +6732,7 @@
 	},
 /area/tdome/tdomeobserve)
 "gav" = (
-/obj/machinery/door/airlock{
-	icon = 'icons/obj/doors/Dooruranium.dmi'
-	},
+/obj/machinery/door/airlock/uranium_appearance,
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
@@ -6830,9 +6755,7 @@
 /turf/simulated/shuttle/floor/black,
 /area/shuttle/merchant)
 "gbB" = (
-/obj/machinery/door/airlock{
-	icon = 'icons/obj/doors/Dooruranium.dmi'
-	},
+/obj/machinery/door/airlock/uranium_appearance,
 /turf/unsimulated/floor{
 	icon_state = "plating";
 	name = "plating"
@@ -7500,12 +7423,7 @@
 /turf/simulated/shuttle/floor/white,
 /area/shuttle/escape/centcom)
 "gJV" = (
-/turf/unsimulated/wall{
-	desc = "That looks like it doesn't open easily.";
-	icon = 'icons/obj/doors/rapid_pdoor.dmi';
-	icon_state = "pdoor1";
-	name = "Shuttle Bay Blast Door"
-	},
+/turf/unsimulated/wall/shuttle_bay,
 /area/skipjack_station)
 "gKE" = (
 /obj/effect/floor_decal/spline/fancy{
@@ -7576,7 +7494,7 @@
 /area/centcom/main_hall)
 "gOa" = (
 /obj/machinery/door/airlock/external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	id_tag = "admin_shuttle_hatch";
 	locked = 1;
@@ -8117,7 +8035,7 @@
 "hkz" = (
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
 	dir = 4;
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "admin_shuttle";
 	pixel_x = -25;
 	req_one_access = list(101);
@@ -8367,8 +8285,7 @@
 /turf/simulated/shuttle/wall/dark/hard_corner,
 /area/wizard_station)
 "hrC" = (
-/turf/unsimulated/floor{
-	icon = 'icons/turf/flooring/wood.dmi';
+/turf/unsimulated/floor/wood{
 	icon_state = "wood-broken3"
 	},
 /area/skipjack_station)
@@ -8842,7 +8759,7 @@
 /area/shuttle/administration)
 "hQH" = (
 /obj/machinery/door/airlock/external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	id_tag = "escape_pod_1_recovery_hatch";
 	locked = 1;
@@ -8872,7 +8789,7 @@
 /area/ninja_dojo/dojo)
 "hRf" = (
 /obj/machinery/door/airlock/external{
-	frequency = 1380;
+	frequency = 1381;
 	glass = 1380;
 	icon_state = "door_locked";
 	id_tag = "centcom_shuttle_bay_door";
@@ -8965,8 +8882,7 @@
 /obj/effect/landmark{
 	name = "voxstart"
 	},
-/turf/unsimulated/floor{
-	icon = 'icons/turf/flooring/wood.dmi';
+/turf/unsimulated/floor/wood{
 	icon_state = "wood-broken2"
 	},
 /area/skipjack_station)
@@ -9730,8 +9646,7 @@
 /turf/simulated/shuttle/floor/red,
 /area/shuttle/skipjack)
 "iCl" = (
-/turf/unsimulated/floor{
-	icon = 'icons/turf/flooring/wood.dmi';
+/turf/unsimulated/floor/wood{
 	icon_state = "wood-broken1"
 	},
 /area/ninja_dojo/dojo)
@@ -9900,11 +9815,7 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/shadekin)
 "iJS" = (
-/turf/simulated/shuttle/wall/no_join{
-	base_state = "orange";
-	icon = 'icons/turf/shuttle_orange.dmi';
-	icon_state = "orange"
-	},
+/turf/simulated/shuttle/wall/no_join/orange,
 /area/centcom/evac)
 "iKj" = (
 /obj/structure/morgue,
@@ -9988,13 +9899,9 @@
 	},
 /area/skipjack_station)
 "iQW" = (
-/turf/unsimulated/wall{
+/turf/unsimulated/wall/fake_dark{
 	block_tele = 1;
-	blocks_nonghost_incorporeal = 1;
-	desc = "It's a strange, impenetrable darkness.";
-	icon = 'icons/turf/flooring/weird_vr.dmi';
-	icon_state = "dark";
-	name = "dark"
+	blocks_nonghost_incorporeal = 1
 	},
 /area/shadekin)
 "iQX" = (
@@ -10030,7 +9937,7 @@
 "iSl" = (
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
 	dir = 1;
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "response_base";
 	name = "docking port controller";
 	pixel_y = -27;
@@ -10116,7 +10023,7 @@
 /area/shadekin)
 "iVs" = (
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "large_escape_pod_1_recovery";
 	pixel_x = -25;
 	pixel_y = -25;
@@ -10351,11 +10258,7 @@
 	},
 /area/wizard_station)
 "jgt" = (
-/turf/unsimulated/wall{
-	icon = 'icons/obj/doors/Doormaint.dmi';
-	icon_state = "door_closed";
-	name = "Sealed Door"
-	},
+/turf/unsimulated/wall/door_maint,
 /area/centcom/bar)
 "jgC" = (
 /obj/machinery/power/emitter,
@@ -10454,12 +10357,8 @@
 /turf/simulated/floor/holofloor/carpet,
 /area/holodeck/source_theatre)
 "jlo" = (
-/turf/unsimulated/wall{
-	desc = "That looks like it doesn't open easily.";
-	dir = 8;
-	icon = 'icons/obj/doors/rapid_pdoor.dmi';
-	icon_state = "pdoor1";
-	name = "Shuttle Bay Blast Door"
+/turf/unsimulated/wall/shuttle_bay{
+	dir = 8
 	},
 /area/centcom/specops)
 "jlq" = (
@@ -10594,13 +10493,9 @@
 	},
 /area/syndicate_station)
 "jsz" = (
-/turf/unsimulated/wall{
+/turf/unsimulated/wall/fake_dark{
 	block_tele = 1;
-	blocks_nonghost_incorporeal = 1;
-	desc = "It's a strange, impenetrable darkness.";
-	icon = 'icons/turf/flooring/weird_vr.dmi';
-	icon_state = "dark";
-	name = "dark"
+	blocks_nonghost_incorporeal = 1
 	},
 /area/space)
 "jsR" = (
@@ -10637,7 +10532,7 @@
 /area/shuttle/merchant)
 "jvA" = (
 /obj/machinery/door/airlock/external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	id_tag = "response_shuttle_door";
 	locked = 1;
@@ -10982,9 +10877,7 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/shadekin)
 "jKl" = (
-/obj/machinery/door/airlock{
-	icon = 'icons/obj/doors/Dooruranium.dmi'
-	},
+/obj/machinery/door/airlock/uranium_appearance,
 /turf/unsimulated/floor{
 	dir = 8;
 	icon_state = "wood"
@@ -11523,9 +11416,7 @@
 	},
 /area/centcom/medical)
 "kkH" = (
-/obj/effect/floor_decal/sign/small_6{
-	icon = 'icons/turf/flooring/decals.dmi'
-	},
+/obj/effect/floor_decal/sign/small_6/decal,
 /turf/simulated/floor/holofloor/wood,
 /area/holodeck/source_chess)
 "kkP" = (
@@ -11568,11 +11459,7 @@
 /area/shuttle/merchant)
 "klw" = (
 /obj/structure/flora/tree/pine,
-/turf/unsimulated/floor{
-	icon = 'icons/turf/snow_new.dmi';
-	icon_state = "snow";
-	name = "snow"
-	},
+/turf/unsimulated/floor/snow_new,
 /area/ninja_dojo/dojo)
 "klP" = (
 /obj/structure/table/standard{
@@ -11707,11 +11594,7 @@
 /area/centcom/specops)
 "kog" = (
 /obj/structure/flora/ausbushes/palebush,
-/turf/unsimulated/floor{
-	icon = 'icons/turf/snow_new.dmi';
-	icon_state = "snow";
-	name = "snow"
-	},
+/turf/unsimulated/floor/snow_new,
 /area/ninja_dojo/dojo)
 "koh" = (
 /obj/structure/window/reinforced{
@@ -11775,11 +11658,7 @@
 	dir = 4;
 	health = 1e+006
 	},
-/turf/unsimulated/floor{
-	icon = 'icons/turf/snow_new.dmi';
-	icon_state = "snow";
-	name = "snow"
-	},
+/turf/unsimulated/floor/snow_new,
 /area/ninja_dojo/dojo)
 "krw" = (
 /obj/machinery/door/window/holowindoor{
@@ -12005,11 +11884,7 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
-/turf/unsimulated/floor{
-	icon = 'icons/turf/snow_new.dmi';
-	icon_state = "snow";
-	name = "snow"
-	},
+/turf/unsimulated/floor/snow_new,
 /area/ninja_dojo/dojo)
 "kwC" = (
 /turf/unsimulated/floor,
@@ -12248,7 +12123,7 @@
 /area/syndicate_station)
 "kJS" = (
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "escape_pod_8_recovery";
 	pixel_x = 26;
 	pixel_y = -26;
@@ -12386,7 +12261,7 @@
 /area/syndicate_station)
 "kOV" = (
 /obj/machinery/door/airlock/external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	id_tag = "trade_shuttle_bay_door";
 	locked = 1
@@ -13468,7 +13343,7 @@
 /area/centcom/terminal)
 "lTi" = (
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "escape_pod_4_recovery";
 	pixel_x = -26;
 	pixel_y = 26;
@@ -14034,11 +13909,7 @@
 	icon_state = "door_locked";
 	locked = 1
 	},
-/obj/effect/forcefield{
-	desc = "You can't get in. Heh.";
-	layer = 1;
-	name = "Blocker"
-	},
+/obj/effect/blocker,
 /turf/unsimulated/floor{
 	dir = 5;
 	icon_state = "vault"
@@ -14116,7 +13987,7 @@
 /area/shuttle/syndicate)
 "mBJ" = (
 /mob/living/simple_mob/animal/passive/cat/space{
-	armor_soak = list("melee"=100,"bullet"=100,"laser"=100,"energy"=100,"bomb"=100,"bio"=100,"rad"=100);
+	    armor = list("melee"=100,"bullet"=100,"laser"=100,"energy"=100,"bomb"=100,"bio"=100,"rad"=100);
 	desc = "They look well taken care of. There is a small scratch mark through the L of their collar that looks like it was made by a claw.";
 	description_antag = "That space suit looks like it can withstand just about any assault. You feel that you will regret hurting this one.";
 	description_fluff = "Back after a very long trip. Their suit smells of adventure!";
@@ -14248,7 +14119,7 @@
 /area/shuttle/merchant)
 "mHg" = (
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "escape_pod_2_recovery";
 	pixel_x = -25;
 	pixel_y = 25;
@@ -14793,7 +14664,7 @@
 /turf/simulated/shuttle/wall/voidcraft/red,
 /area/shuttle/syndicate)
 "nhS" = (
-/obj/machinery/mecha_part_fabricator,
+/obj/machinery/mecha_part_fabricator_tg,
 /obj/machinery/status_display{
 	layer = 4;
 	pixel_y = 32
@@ -15199,7 +15070,7 @@
 /area/shuttle/merchant)
 "nCN" = (
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "escape_pod_5_recovery";
 	pixel_x = 26;
 	pixel_y = -26;
@@ -15507,7 +15378,7 @@
 /area/centcom/bar)
 "nSo" = (
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "centcom_dock";
 	name = "docking port controller";
 	pixel_x = 25;
@@ -16011,7 +15882,7 @@
 /area/shadekin)
 "ouF" = (
 /obj/machinery/door/airlock/external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	id_tag = "escape_pod_3_recovery_hatch";
 	locked = 1;
@@ -16225,7 +16096,7 @@
 "oJA" = (
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
 	dir = 8;
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "centcom_shuttle_bay";
 	name = "shuttle bay controller";
 	pixel_x = 27;
@@ -16257,11 +16128,7 @@
 /turf/simulated/shuttle/floor,
 /area/shuttle/escape/centcom)
 "oLs" = (
-/turf/unsimulated/wall{
-	icon = 'icons/obj/doors/Dooruranium.dmi';
-	icon_state = "door_closed";
-	name = "Sealed Door"
-	},
+/turf/unsimulated/wall/fake_uranium,
 /area/ninja_dojo/dojo)
 "oLA" = (
 /obj/structure/table/glass,
@@ -16655,7 +16522,7 @@
 "pnb" = (
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
 	dir = 1;
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "centcom_shuttle";
 	pixel_y = -27;
 	tag_door = "centcom_shuttle_hatch"
@@ -16673,7 +16540,7 @@
 	id = "QMLoad2"
 	},
 /obj/machinery/door/airlock/external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	id_tag = "supply_shuttle_hatch";
 	locked = 1;
@@ -16718,7 +16585,7 @@
 /area/shuttle/skipjack)
 "ppL" = (
 /obj/machinery/door/airlock/external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	id_tag = "supply_shuttle_hatch";
 	locked = 1;
@@ -16918,7 +16785,7 @@
 /area/centcom/medical)
 "pAY" = (
 /obj/machinery/door/airlock/external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	id_tag = "large_escape_pod_2_recovery_hatch";
 	locked = 1;
@@ -17044,7 +16911,7 @@
 /area/shuttle/syndicate)
 "pGT" = (
 /obj/machinery/door/airlock/external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	id_tag = "response_base_door";
 	locked = 1
@@ -17186,7 +17053,7 @@
 /area/centcom/command)
 "pMJ" = (
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "escape_pod_6_recovery";
 	pixel_x = 26;
 	pixel_y = -26;
@@ -17516,7 +17383,7 @@
 /area/shuttle/skipjack)
 "qiW" = (
 /obj/machinery/door/airlock/external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	id_tag = "escape_pod_2_recovery_hatch";
 	locked = 1;
@@ -17614,7 +17481,7 @@
 /area/shadekin)
 "qoh" = (
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "escape_shuttle";
 	pixel_y = -25;
 	req_one_access = list(13);
@@ -18045,7 +17912,7 @@
 /area/centcom/evac)
 "qRp" = (
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "escape_pod_3_recovery";
 	pixel_x = -26;
 	pixel_y = 26;
@@ -18450,12 +18317,8 @@
 /turf/simulated/floor/wood/sif,
 /area/shadekin)
 "rkG" = (
-/turf/unsimulated/wall{
-	desc = "That looks like it doesn't open easily.";
-	dir = 8;
-	icon = 'icons/obj/doors/rapid_pdoor.dmi';
-	icon_state = "pdoor1";
-	name = "Shuttle Bay Blast Door"
+/turf/unsimulated/wall/shuttle_bay{
+	dir = 8
 	},
 /area/centcom/evac)
 "rlg" = (
@@ -18529,7 +18392,7 @@
 /area/shuttle/merchant)
 "rnQ" = (
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "supply_shuttle";
 	pixel_x = 25;
 	req_one_access = list(13,31);
@@ -18985,7 +18848,7 @@
 "rIX" = (
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
 	dir = 1;
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "response_shuttle";
 	pixel_y = -27;
 	tag_door = "response_shuttle_door"
@@ -19316,7 +19179,7 @@
 /obj/machinery/embedded_controller/radio/docking_port_multi{
 	child_names_txt = "Airlock One;Airlock Two;Airlock Three;Airlock Four";
 	child_tags_txt = "escape_dock_north_airlock;escape_dock_south_airlock;escape_dock_snorth_airlock;escape_dock_ssouth_airlock";
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "escape_dock";
 	pixel_y = -32;
 	req_one_access = list(13)
@@ -19537,9 +19400,7 @@
 	},
 /area/wizard_station)
 "shJ" = (
-/obj/machinery/door/airlock{
-	icon = 'icons/obj/doors/Dooruranium.dmi'
-	},
+/obj/machinery/door/airlock/uranium_appearance,
 /turf/unsimulated/floor{
 	icon_state = "white"
 	},
@@ -19668,7 +19529,7 @@
 /area/shadekin)
 "slD" = (
 /obj/machinery/door/airlock/external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	id_tag = "escape_pod_6_recovery_hatch";
 	locked = 1;
@@ -19917,7 +19778,7 @@
 "syY" = (
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
 	dir = 1;
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "admin_shuttle_bay";
 	name = "shuttle bay controller";
 	pixel_y = -27;
@@ -20566,7 +20427,7 @@
 /area/shadekin)
 "tfp" = (
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "escape_pod_7_recovery";
 	pixel_x = -26;
 	pixel_y = 26;
@@ -21118,7 +20979,7 @@
 /area/shuttle/skipjack)
 "tDo" = (
 /obj/machinery/door/airlock/external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	id_tag = "trade_shuttle_hatch";
 	locked = 1;
@@ -21307,12 +21168,7 @@
 /turf/simulated/floor/tiled/steel_dirty,
 /area/shadekin)
 "tMa" = (
-/obj/effect/forcefield{
-	desc = "You can't get in. Heh.";
-	invisibility = 60;
-	layer = 1;
-	name = "Blocker"
-	},
+/obj/effect/blocker,
 /turf/simulated/shuttle/floor/white,
 /area/centcom/main_hall)
 "tMh" = (
@@ -22038,8 +21894,7 @@
 /area/centcom/bar)
 "uwo" = (
 /obj/machinery/space_heater,
-/turf/unsimulated/floor{
-	icon = 'icons/turf/flooring/wood.dmi';
+/turf/unsimulated/floor/wood{
 	icon_state = "wood-broken3"
 	},
 /area/ninja_dojo/dojo)
@@ -22144,12 +21999,7 @@
 /turf/simulated/shuttle/floor,
 /area/shuttle/escape/centcom)
 "uEH" = (
-/obj/effect/forcefield{
-	desc = "You can't get in. Heh.";
-	invisibility = 60;
-	layer = 1;
-	name = "Blocker"
-	},
+/obj/effect/blocker,
 /obj/machinery/light,
 /turf/simulated/shuttle/floor/white,
 /area/centcom/main_hall)
@@ -22204,7 +22054,7 @@
 /area/centcom/evac)
 "uIK" = (
 /obj/machinery/door/airlock/external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	id_tag = "escape_pod_5_recovery_hatch";
 	locked = 1;
@@ -22635,7 +22485,7 @@
 /area/holodeck/source_meetinghall)
 "vcN" = (
 /obj/machinery/door/airlock/external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	id_tag = "cryostorage_shuttle_recovery_hatch";
 	locked = 1;
@@ -22686,7 +22536,7 @@
 /area/shuttle/skipjack)
 "vej" = (
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "large_escape_pod_2_recovery";
 	pixel_x = -25;
 	pixel_y = 25;
@@ -23452,7 +23302,7 @@
 /area/shadekin)
 "vRu" = (
 /obj/machinery/door/airlock/external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	id_tag = "centcom_shuttle_hatch";
 	locked = 1;
@@ -24733,7 +24583,7 @@
 /area/holodeck/source_chess)
 "xfd" = (
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "escape_pod_1_recovery";
 	pixel_x = -25;
 	pixel_y = 25;
@@ -25331,11 +25181,8 @@
 /turf/simulated/floor/outdoors/grass/heavy,
 /area/shadekin)
 "xJr" = (
-/turf/unsimulated/wall{
-	desc = "That looks like it doesn't open easily.";
+/turf/unsimulated/wall/shuttle_bay{
 	dir = 8;
-	icon = 'icons/obj/doors/rapid_pdoor.dmi';
-	icon_state = "pdoor1";
 	name = "Blast Door"
 	},
 /area/centcom/main_hall)
@@ -25460,12 +25307,8 @@
 /turf/simulated/shuttle/floor/black,
 /area/shuttle/merchant)
 "xOR" = (
-/turf/unsimulated/wall{
-	desc = "That looks like it doesn't open easily.";
-	dir = 8;
-	icon = 'icons/obj/doors/rapid_pdoor.dmi';
-	icon_state = "pdoor1";
-	name = "Shuttle Bay Blast Door"
+/turf/unsimulated/wall/shuttle_bay{
+	dir = 8
 	},
 /area/centcom/command)
 "xPh" = (
@@ -25556,7 +25399,7 @@
 /area/shuttle/transport1/centcom)
 "xSX" = (
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "cryostorage_shuttle_recovery";
 	pixel_x = -26;
 	pixel_y = 26;
@@ -44149,7 +43992,7 @@ wcp
 hsZ
 bWp
 tkj
-aWV
+vut
 lFl
 vFi
 vFi

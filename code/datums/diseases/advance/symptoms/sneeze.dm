@@ -35,6 +35,9 @@ Bonus
 		"Trasmission 12" = "The host may spread the disease through sneezing."
 	)
 
+	prefixes = list("Nasal ")
+	bodies = list("Cold")
+
 /datum/symptom/sneeze/Start(datum/disease/advance/A)
 	if(!..())
 		return
@@ -53,7 +56,7 @@ Bonus
 				M.emote("sniff")
 		else
 			M.emote("sneeze")
-			if(infective)
+			if(infective && !(A.spread_flags & DISEASE_SPREAD_FALTERED))
 				addtimer(CALLBACK(A, TYPE_PROC_REF(/datum/disease, spread), 4), 20)
 
 /*
@@ -86,6 +89,9 @@ Bonus
 	level = 4
 	severity = 3
 
+	prefixes = list("Nasal ", "Displacing ")
+	bodies = list("Cold", "Bluespace")
+
 /datum/symptom/bsneeze/Activate(datum/disease/advance/A)
 	if(!..())
 		return
@@ -102,7 +108,7 @@ Bonus
 	var/place
 
 	for(var/mob/living/carbon/human/B in range(A.stage, mob))
-		if(B.can_be_drop_pred && mob.can_be_drop_prey && mob.devourable)
+		if(can_spontaneous_vore(B, mob))
 			destination += B.vore_selected
 
 	for(var/turf/T in range(A.stage, mob))
@@ -118,10 +124,10 @@ Bonus
 
 	var/mob/living/unlucky = locate() in place
 
-	if(unlucky && !unlucky.is_incorporeal())
-		if(unlucky.can_be_drop_pred && mob.can_be_drop_prey && mob.devourable)
+	if(unlucky)
+		if(can_spontaneous_vore(unlucky, mob))
 			place = unlucky.vore_selected
-		else if(unlucky.devourable && unlucky.can_be_drop_prey && mob.can_be_drop_pred)
+		else if(can_spontaneous_vore(mob, unlucky))
 			unlucky.forceMove(mob.vore_selected)
 
 	mob.emote("sneeze")

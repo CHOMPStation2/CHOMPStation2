@@ -8,11 +8,9 @@
 	min_n2 = 0 //breathe N2
 	max_n2 = 0
 
-	// CHOMPAdd: Pain sounds
 	species_sounds = "Vox"
 	pain_emote_1p = list("shriek")
 	pain_emote_3p = list("shrieks")
-	// CHOMPAdd End
 
 /mob/living/simple_mob/vox/armalis
 	name = "serpentine alien"
@@ -29,7 +27,6 @@
 	melee_damage_upper = 40
 	attacktext = "slammed its enormous claws into"
 	movement_cooldown = 2
-//	environment_smash_flags = SMASH_LIGHT_STRUCTURES | SMASH_CONTAINERS | SMASH_WALLS // WALLS Temporary commenting, YW - Hv3
 	attack_sound = 'sound/weapons/bladeslice.ogg'
 	status_flags = 0
 	max_oxy = 0
@@ -83,7 +80,7 @@
 			to_chat(O, span_warning("[src] launches a razor-sharp quill at [target]!"))
 
 	var/obj/item/arrow/quill/Q = new(loc)
-	Q.fingerprintslast = src.ckey
+	Q.add_fingerprint(ckey)
 	Q.throw_at(target,10,30)
 	quills--
 

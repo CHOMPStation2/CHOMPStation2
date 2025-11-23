@@ -1,6 +1,11 @@
 	////////////
 	//SECURITY//
 	////////////
+
+GLOBAL_LIST_INIT(blacklisted_builds, list(
+	"1622" = "Bug breaking rendering can lead to wallhacks.",
+	))
+
 #define UPLOAD_LIMIT		10485760	//Restricts client uploads to the server to 10MB //Boosted this thing. What's the worst that can happen?
 #define MIN_CLIENT_VERSION	0		//Just an ambiguously low version for now, I don't want to suddenly stop people playing.
 									//I would just like the code ready should it ever need to be used.
@@ -55,7 +60,7 @@
 
 	// Rate limiting
 	var/mtl = CONFIG_GET(number/minute_topic_limit)
-	if (!holder && mtl)
+	if (!check_rights_for(src, R_HOLDER) && mtl)
 		var/minute = round(world.time, 600)
 		if (!topiclimiter)
 			topiclimiter = new(LIMITER_SIZE)
@@ -68,12 +73,13 @@
 			if (minute != topiclimiter[ADMINSWARNED_AT]) //only one admin message per-minute. (if they spam the admins can just boot/ban them)
 				topiclimiter[ADMINSWARNED_AT] = minute
 				msg += " Administrators have been informed."
-				log_and_message_admins("[key_name(src)] Has hit the per-minute topic limit of [mtl] topic calls in a given game minute", src)
+				log_game("[key_name(src)] Has hit the per-minute topic limit of [mtl] topic calls in a given game minute")
+				message_admins("[ADMIN_LOOKUPFLW(usr)] [ADMIN_KICK(usr)] Has hit the per-minute topic limit of [mtl] topic calls in a given game minute")
 			to_chat(src, span_danger("[msg]"))
 			return
 
 	var/stl = CONFIG_GET(number/second_topic_limit)
-	if (!holder && stl && href_list["window_id"] != "statbrowser")
+	if (!check_rights_for(src, R_HOLDER) && stl && href_list["window_id"] != "statbrowser")
 		var/second = round(world.time, 10)
 		if (!topiclimiter)
 			topiclimiter = new(LIMITER_SIZE)
@@ -87,7 +93,7 @@
 
 	//search the href for script injection
 	if( findtext(href,"<script",1,0) )
-		to_world_log("Attempted use of scripts within a topic call, by [src]")
+		log_world("Attempted use of scripts within a topic call, by [src]")
 		message_admins("Attempted use of scripts within a topic call, by [src]")
 		return
 
@@ -97,10 +103,13 @@
 
 	//Admin PM
 	if(href_list["priv_msg"])
-		var/client/C = locate(href_list["priv_msg"])
+		var/passed_key = href_list["priv_msg"]
+		var/client/C = locate(passed_key)
 		if(ismob(C)) 		//Old stuff can feed-in mobs instead ofGLOB.clients
 			var/mob/M = C
 			C = M.client
+		if(!C && istext(passed_key))
+			C = passed_key
 		cmd_admin_pm(C,null)
 		return
 
@@ -110,16 +119,6 @@
 			var/mob/M = C
 			C = M.client
 		cmd_mentor_pm(C, null)
-		return
-
-	if(href_list["irc_msg"])
-		if(!holder && received_irc_pm < world.time - 6000) //Worse they can do is spam IRC for 10 minutes
-			to_chat(src, span_warning("You are no longer able to use this, it's been more than 10 minutes since an admin on IRC has responded to you"))
-			return
-		if(mute_irc)
-			to_chat(usr, span_warning("You cannot use this as your client has been muted from sending messages to the admins on IRC"))
-			return
-		send2adminirc(href_list["irc_msg"])
 		return
 
 	//VOREStation Add
@@ -151,7 +150,10 @@
 			log_and_message_admins("[ckey] has registered their Discord ID. Their Discord snowflake ID is: [their_id]", src) //YW EDIT
 			admin_chat_message(message = "[ckey] has registered their Discord ID. Their Discord is: <@[their_id]>", color = "#4eff22") //YW EDIT
 			notes_add(ckey, "Discord ID: [their_id]")
-			world.VgsAddMemberRole(their_id)
+			var/port = CONFIG_GET(number/register_server_port)
+			if(port)
+				// Designed to be used with `tools/registration`
+				world.Export("http://127.0.0.1:[port]?member=[url_encode(json_encode(their_id))]")
 		else
 			to_chat(src, span_warning("There was an error registering your Discord ID in the database. Contact an administrator."))
 			log_and_message_admins("[ckey] failed to register their Discord ID. Their Discord snowflake ID is: [their_id]. Is the database connected?", src)
@@ -165,8 +167,7 @@
 		stat_panel.reinitialize() //CHOMPEdit
 
 	//Logs all hrefs
-	if(config && CONFIG_GET(flag/log_hrefs) && GLOB.href_logfile)
-		WRITE_LOG(GLOB.href_logfile, "[src] (usr:[usr])</small> || [hsrc ? "[hsrc] " : ""][href]")
+	log_href("[src] (usr:[usr]\[[COORD(usr)]\]) : [hsrc ? "[hsrc] " : ""][href]")
 
 	//byond bug ID:2256651
 	if (asset_cache_job && (asset_cache_job in completed_asset_jobs))
@@ -182,7 +183,6 @@
 
 	switch(href_list["_src_"])
 		if("holder")	hsrc = holder
-		if("mentorholder")	hsrc = (check_rights(R_ADMIN, 0) ? holder : mentorholder)
 		if("usr")		hsrc = mob
 		if("prefs")		return prefs.process_link(usr,href_list)
 		if("vars")		return view_var_Topic(href,href_list,hsrc)
@@ -207,6 +207,14 @@
 /client/proc/_Topic(datum/hsrc, href, list/href_list)
 	return hsrc.Topic(href, href_list)
 
+/client/proc/is_localhost()
+	var/static/localhost_addresses = list(
+		"127.0.0.1",
+		"::1",
+		null,
+	)
+	return address in localhost_addresses
+
 //This stops files larger than UPLOAD_LIMIT being sent from client to server via input(), client.Import() etc.
 /client/AllowUpload(filename, filelength)
 	if(filelength > UPLOAD_LIMIT)
@@ -226,9 +234,12 @@
 	//CONNECT//
 	///////////
 /client/New(TopicData)
-	winset(src, null, "browser-options=[DEFAULT_CLIENT_BROWSER_OPTIONS]")
+	TopicData = null //Prevent calls to client.Topic from connect
 
-	TopicData = null							//Prevent calls to client.Topic from connect
+	if(connection != "seeker" && connection != "web")//Invalid connection type.
+		return null
+
+	winset(src, null, "browser-options=[DEFAULT_CLIENT_BROWSER_OPTIONS]")
 
 	if(!(connection in list("seeker", "web")))					//Invalid connection type.
 		return null
@@ -247,8 +258,16 @@
 	GLOB.clients += src
 	GLOB.directory[ckey] = src
 
+	//var/reconnecting = FALSE we are not using this var yet
+	if(GLOB.persistent_clients_by_ckey[ckey])
+		//reconnecting = TRUE
+		persistent_client = GLOB.persistent_clients_by_ckey[ckey]
+	else
+		persistent_client = new(ckey)
+	persistent_client.set_client(src)
+
 	if (CONFIG_GET(flag/chatlog_database_backend))
-		chatlog_token = vchatlog_generate_token(ckey)
+		chatlog_token = vchatlog_generate_token(ckey, GLOB.round_id)
 
 	// Instantiate stat panel
 	stat_panel = new(src, "statbrowser")
@@ -256,20 +275,11 @@
 
 	// Instantiate tgui panel
 	tgui_say = new(src, "tgui_say")
+	tgui_shocker = new(src, "tgui_shock")
 	initialize_commandbar_spy()
 	tgui_panel = new(src, "browseroutput")
 
-	GLOB.tickets.ClientLogin(src) // CHOMPedit - Tickets System
-
-	//Admin Authorisation
-	holder = GLOB.admin_datums[ckey]
-	if(holder)
-		GLOB.admins += src
-		holder.owner = src
-
-	mentorholder = mentor_datums[ckey]
-	if (mentorholder)
-		mentorholder.associate(GLOB.directory[ckey])
+	GLOB.tickets.ClientLogin(src)
 
 	//preferences datum - also holds some persistant data for the client (because we may as well keep these datums to a minimum)
 	prefs = preferences_datums[ckey]
@@ -283,9 +293,42 @@
 	prefs.last_ip = address				//these are gonna be used for banning
 	prefs.last_id = computer_id			//these are gonna be used for banning
 
-	hook_vr("client_new",list(src)) //VOREStation Code. For now this only loads vore prefs, so better put before mob.Login() call but after normal prefs are loaded.
+	var/full_version = "[byond_version].[byond_build ? byond_build : "xxx"]"
+	log_access("Login: [key_name(src)] from [address ? address : "localhost"]-[computer_id] || BYOND v[full_version]")
+
+	prefs_vr = new/datum/vore_preferences(src)
 
 	. = ..()	//calls mob.Login()
+
+	// Admin Verbs need the client's mob to exist. Must be after ..()
+	var/connecting_admin = FALSE //because de-admined admins connecting should be treated like admins.
+	//Admin Authorisation
+	var/datum/admins/admin_datum = GLOB.admin_datums[ckey]
+	if (!isnull(admin_datum))
+		admin_datum.associate(src)
+		connecting_admin = TRUE
+	else if(GLOB.deadmins[ckey])
+		add_verb(src, /client/proc/readmin)
+		connecting_admin = TRUE
+
+	if (byond_version >= 512)
+		if (!byond_build || byond_build < 1386)
+			message_admins(span_adminnotice("[key_name(src)] has been detected as spoofing their byond version. Connection rejected."))
+			//add_system_note("Spoofed-Byond-Version", "Detected as using a spoofed byond version.")
+			log_suspicious_login("Failed Login: [key] - Spoofed byond version")
+			qdel(src)
+
+		if (num2text(byond_build) in GLOB.blacklisted_builds)
+			log_access("Failed login: [key] - blacklisted byond version")
+			to_chat_immediate(src, span_userdanger("Your version of byond is blacklisted."))
+			to_chat_immediate(src, span_danger("Byond build [byond_build] ([byond_version].[byond_build]) has been blacklisted for the following reason: [GLOB.blacklisted_builds[num2text(byond_build)]]."))
+			to_chat_immediate(src, span_danger("Please download a new version of byond. If [byond_build] is the latest, you can go to <a href=\"https://secure.byond.com/download/build\">BYOND's website</a> to download other versions."))
+			if(connecting_admin)
+				to_chat_immediate(src, "As an admin, you are being allowed to continue using this version, but please consider changing byond versions")
+			else
+				qdel(src)
+				return
+
 	prefs.sanitize_preferences()
 	if(prefs)
 		prefs.selecting_slots = FALSE
@@ -304,6 +347,9 @@
 
 	// Initialize tgui panel
 	tgui_say.initialize()
+	tgui_shocker.initialize()
+
+	loot_panel = new(src)
 
 	connection_time = world.time
 	connection_realtime = world.realtime
@@ -323,13 +369,7 @@
 		admin_memo_show()
 		message_admins("Staff login: [key_name(src)]") // CHOMPEdit: Admin Login Notice //Edit2: This logs more than just admins so why not change it
 
-	// Forcibly enable hardware-accelerated graphics, as we need them for the lighting overlays.
-	// (but turn them off first, since sometimes BYOND doesn't turn them on properly otherwise)
-	spawn(5) // And wait a half-second, since it sounds like you can do this too fast.
-		if(src)
-			winset(src, null, "command=\".configure graphics-hwmode off\"")
-			sleep(2) // wait a bit more, possibly fixes hardware mode not re-activating right
-			winset(src, null, "command=\".configure graphics-hwmode on\"")
+	winset(src, null, "command=\".configure graphics-hwmode on\"")
 
 	log_client_to_db()
 
@@ -355,12 +395,14 @@
 			alert = TRUE
 		if(alert)
 			for(var/client/X in GLOB.admins)
+				if(!check_rights_for(X, R_HOLDER))
+					continue
 				if(X.prefs?.read_preference(/datum/preference/toggle/holder/play_adminhelp_ping))
 					X << 'sound/voice/bcriminal.ogg' //ChompEDIT - back to beepsky
 				window_flash(X)
 		//VOREStation Edit end.
-	fully_created = TRUE
 	attempt_auto_fit_viewport()
+	fully_created = TRUE
 
 	// Now that we're fully initialized, use our prefs
 	if(prefs?.read_preference(/datum/preference/toggle/browser_dev_tools))
@@ -374,23 +416,25 @@
 		gc_destroyed = world.time
 		if (!QDELING(src))
 			stack_trace("Client does not purport to be QDELING, this is going to cause bugs in other places!")
-		GLOB.tickets.ClientLogout(src) // CHOMPedit - Tickets System
+
 		// Yes this is the same as what's found in qdel(). Yes it does need to be here
 		// Get off my back
-		SEND_SIGNAL(src, COMSIG_PARENT_QDELETING, TRUE)
+		SEND_SIGNAL(src, COMSIG_QDELETING, TRUE)
 		Destroy() //Clean up signals and timers.
 	return ..()
 
 /client/Destroy()
+	GLOB.directory -= ckey
+	GLOB.clients -= src
+	persistent_client.set_client(null)
+
+	log_access("Logout: [key_name(src)]")
+	GLOB.tickets.ClientLogout(src)
 	if(holder)
 		holder.owner = null
 		GLOB.admins -= src
-	if (mentorholder)
-		mentorholder.owner = null
-		GLOB.mentors -= src
-	GLOB.directory -= ckey
-	GLOB.clients -= src
 
+	QDEL_NULL(loot_panel)
 	..()
 	return QDEL_HINT_HARDDEL_NOW
 
@@ -479,7 +523,7 @@
 	//Panic bunker code
 	if (isnum(player_age) && player_age == 0) //first connection
 		if (CONFIG_GET(flag/panic_bunker) && !holder && !GLOB.deadmins[key])
-			log_adminwarn("Failed Login: [key] - New account attempting to connect during panic bunker")
+			log_admin_private("Failed Login: [key] - New account attempting to connect during panic bunker")
 			message_admins(span_adminnotice("Failed Login: [key] - New account attempting to connect during panic bunker"))
 			disconnect_with_message("Sorry but the server is currently not accepting connections from never before seen players.")
 			return 0
@@ -507,7 +551,6 @@
 		else
 			log_admin("Couldn't perform IP check on [key] with [address]")
 
-	// VOREStation Edit Start - Department Hours
 	var/datum/db_query/query_hours = SSdbcore.NewQuery("SELECT department, hours, total_hours FROM vr_player_hours WHERE ckey = '[sql_ckey]'")
 	if(query_hours.Execute())
 		while(query_hours.NextRow())
@@ -515,9 +558,8 @@
 			play_hours[query_hours.item[1]] = text2num(query_hours.item[3])
 	else
 		var/error_message = query_hours.ErrorMsg() // Need this out here since the spawn below will split the stack and who knows what'll happen by the time it runs
-		log_debug("Error loading play hours for [ckey]: [error_message]")
+		log_sql("Error loading play hours for [ckey]: [error_message]")
 		tgui_alert_async(src, "The query to load your existing playtime failed. Screenshot this, give the screenshot to a developer, and reconnect, otherwise you may lose any recorded play hours (which may limit access to jobs). ERROR: [error_message]", "PROBLEMS!!")
-	// VOREStation Edit End - Department Hours
 	qdel(query_hours)
 	if(sql_id)
 		//Player already identified previously, we need to just update the 'lastseen', 'ip' and 'computer_id' variables
@@ -579,14 +621,18 @@
 /client/verb/character_setup()
 	set name = "Character Setup"
 	set category = "Preferences.Character"
-	if(prefs)
-		prefs.ShowChoices(usr)
+
+	prefs.current_window = PREFERENCE_TAB_CHARACTER_PREFERENCES
+	prefs.update_tgui_static_data(mob)
+	prefs.tgui_interact(mob)
 
 /client/verb/game_options()
 	set name = "Game Options"
 	set category = "Preferences.Game"
-	if(prefs)
-		prefs.tgui_interact(usr)
+
+	prefs.current_window = PREFERENCE_TAB_GAME_PREFERENCES
+	prefs.update_tgui_static_data(mob)
+	prefs.tgui_interact(mob)
 
 /client/proc/findJoinDate()
 	var/list/http = world.Export("http://byond.com/members/[ckey]?format=text")
@@ -777,7 +823,7 @@
 // Mouse stuff
 /client/Click(atom/object, atom/location, control, params)
 	var/mcl = CONFIG_GET(number/minute_click_limit)
-	if (!holder && mcl)
+	if (!check_rights_for(src, R_HOLDER) && mcl)
 		var/minute = round(world.time, 600)
 
 		if (!clicklimiter)
@@ -800,7 +846,7 @@
 			return
 
 	var/scl = CONFIG_GET(number/second_click_limit)
-	if (!holder && scl)
+	if (!check_rights_for(src, R_HOLDER) && scl)
 		var/second = round(world.time, 10)
 		if (!clicklimiter)
 			clicklimiter = new(LIMITER_SIZE)
@@ -820,6 +866,33 @@
 /// This grabs the DPI of the user per their skin
 /client/proc/acquire_dpi()
 	window_scaling = text2num(winget(src, null, "dpi"))
+
+/client/proc/open_filter_editor(atom/in_atom)
+	if(check_rights_for(src, R_HOLDER))
+		holder.filteriffic = new /datum/filter_editor(in_atom)
+		holder.filteriffic.tgui_interact(mob)
+
+///opens the particle editor UI for the in_atom object for this client
+/client/proc/open_particle_editor(atom/movable/in_atom)
+	if(check_rights_for(src, R_HOLDER))
+		holder.particle_test = new /datum/particle_editor(in_atom)
+		holder.particle_test.tgui_interact(mob)
+
+/client/proc/set_eye(new_eye)
+	if(new_eye == eye)
+		return
+	var/atom/old_eye = eye
+	eye = new_eye
+	SEND_SIGNAL(src, COMSIG_CLIENT_SET_EYE, old_eye, new_eye)
+
+/mob/proc/is_remote_viewing()
+	if(!client || !client.mob || !client.eye)
+		return FALSE
+	if(isturf(client.mob.loc) && get_turf(client.eye) == get_turf(client.mob))
+		return FALSE
+	if(ismecha(client.mob.loc) && client.eye == client.mob.loc)
+		return FALSE
+	return (client.eye != client.mob)
 
 #undef ADMINSWARNED_AT
 #undef CURRENT_MINUTE

@@ -109,7 +109,7 @@
 /area/submap/whiteship)
 "fw" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "white_ship_pump";
 	dir = 8
 	},

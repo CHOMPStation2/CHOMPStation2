@@ -18,8 +18,8 @@
 	name = "grab"
 	icon = 'icons/mob/screen1.dmi'
 	icon_state = "reinforce"
-	flags = 0
-	var/obj/screen/grab/hud = null
+	item_flags = DROPDEL | NOSTRIP
+	var/atom/movable/screen/grab/hud = null
 	var/mob/living/affecting = null
 	var/mob/living/carbon/human/assailant = null
 	var/state = GRAB_PASSIVE
@@ -33,7 +33,6 @@
 	abstract = 1
 	item_state = "nothing"
 	w_class = ITEMSIZE_HUGE
-	destroy_on_drop = TRUE	//VOREStation Edit
 
 
 /obj/item/grab/Initialize(mapload, mob/victim)
@@ -48,7 +47,7 @@
 	affecting.reveal(span_warning("You are revealed as [assailant] grabs you."))
 	assailant.reveal(span_warning("You reveal yourself as you grab [affecting]."))
 
-	hud = new /obj/screen/grab(src)
+	hud = new /atom/movable/screen/grab(src)
 	hud.icon_state = "reinforce"
 	icon_state = "grabbed"
 	hud.name = "reinforce grab"
@@ -230,7 +229,7 @@
 		if(EAST)
 			animate(affecting, pixel_x =-shift, pixel_y = initial(affecting.pixel_y), 5, 1, LINEAR_EASING)
 
-/obj/item/grab/proc/s_click(obj/screen/S)
+/obj/item/grab/proc/s_click(atom/movable/screen/S)
 	if(QDELETED(src))
 		return
 	if(!affecting)
@@ -242,8 +241,6 @@
 	if(!assailant.canmove || assailant.lying)
 		qdel(src)
 		return
-
-	var/datum/gender/TU = GLOB.gender_datums[assailant.get_visible_gender()]
 
 	last_action = world.time
 
@@ -265,7 +262,7 @@
 			to_chat(assailant, span_notice("You squeeze [affecting], but nothing interesting happens."))
 			return
 
-		assailant.visible_message(span_warning("[assailant] has reinforced [TU.his] grip on [affecting] (now neck)!"))
+		assailant.visible_message(span_warning("[assailant] has reinforced [assailant.p_their()] grip on [affecting] (now neck)!"))
 		state = GRAB_NECK
 		icon_state = "grabbed+1"
 		assailant.set_dir(get_dir(assailant, affecting))
@@ -274,11 +271,11 @@
 		hud.name = "kill"
 		affecting.Stun(10) //10 ticks of ensured grab
 	else if(state < GRAB_UPGRADING)
-		assailant.visible_message(span_danger("[assailant] starts to tighten [TU.his] grip on [affecting]'s neck!"))
+		assailant.visible_message(span_danger("[assailant] starts to tighten [assailant.p_their()] grip on [affecting]'s neck!"))
 		hud.icon_state = "kill1"
 
 		state = GRAB_KILL
-		assailant.visible_message(span_danger("[assailant] has tightened [TU.his] grip on [affecting]'s neck!"))
+		assailant.visible_message(span_danger("[assailant] has tightened [assailant.p_their()] grip on [affecting]'s neck!"))
 		add_attack_logs(assailant,affecting,"Strangled")
 		affecting.setClickCooldown(10)
 		affecting.AdjustLosebreath(1)
@@ -340,16 +337,9 @@
 				if(I_DISARM)
 					pin_down(affecting, assailant)
 
-/obj/item/grab/dropped(mob/user)
-	..()
-	loc = null
-	if(!QDELETED(src))
-		qdel(src)
-
 /obj/item/grab/proc/reset_kill_state()
 	if(state == GRAB_KILL)
-		var/datum/gender/T = GLOB.gender_datums[assailant.get_visible_gender()]
-		assailant.visible_message(span_warning("[assailant] lost [T.his] tight grip on [affecting]'s neck!"))
+		assailant.visible_message(span_warning("[assailant] lost [assailant.p_their()] tight grip on [affecting]'s neck!"))
 		hud.icon_state = "kill"
 		state = GRAB_NECK
 
@@ -381,7 +371,6 @@
 
 	//It's easier to break out of a grab by a smaller mob
 	break_strength += max(size_difference(affecting, assailant), 0)
-	//CHOMPEdit Begin
 	var/prob_mult = 1
 	var/mob/living/carbon/human/grabbee = affecting
 	var/mob/living/carbon/human/grabber = assailant
@@ -393,7 +382,6 @@
 		break_strength += grabber.species.grab_power_victims
 
 	var/break_chance = CLAMP(prob_mult*break_chance_table[CLAMP(break_strength, 1, break_chance_table.len)],0,100)
-	//CHOMPEdit End
 	if(prob(break_chance))
 		if(state == GRAB_KILL)
 			reset_kill_state()

@@ -21,6 +21,16 @@
 	object_type_to_spawn = /obj/item/stack/material/wood/hard{amount = 20}
 
 
+/datum/maint_recycler_vendor_entry/cardboard
+	vendor_category = MAINTVENDOR_CONSTRUCTION
+	name = "C.A.R.D.B.O.A.R.D"
+	ad_message = "5 sheets!"
+	desc = "Not an acronym (maybe?), we just asked the person in charge of designating stationbounds to make this listing, we have no idea what it means!"
+	object_type_to_spawn = /obj/item/stack/material/cardboard{amount = 5}
+	item_cost = 10 //not too pricy
+	per_person_cap = 1
+	per_round_cap = 3 //limited supply!
+
 /datum/maint_recycler_vendor_entry/DIY_Steel
 	vendor_category = MAINTVENDOR_CONSTRUCTION
 	name = "steel!"
@@ -231,5 +241,14 @@
 	ad_message = "MON3Y IN 3XC3SS!"
 	object_type_to_spawn = /obj/item/stack/material/marble{amount = 20}
 	per_person_cap = 1
+	per_round_cap = 3 //limited supply!
+	vendor_category = MAINTVENDOR_CONSTRUCTION
+
+/datum/maint_recycler_vendor_entry/redspace_capsule
+	name = "REDSPACE SHELTER CAPSULE!!!1!"
+	desc = "They dumped some capsule surfluid into the REDGATE and it got all FUNKY!! Different interiors EVERY USE! INFINITE POSSIBLITIES! INFINITE VIBES!! INFINITE!!!!!"
+	object_type_to_spawn = /obj/item/survivalcapsule/randomized
+	item_cost = 30 //pricy to discourage spamming
+	ad_message = "ROGUE LIKE SPACE HOUSE?! 😱"
 	per_round_cap = 3 //limited supply!
 	vendor_category = MAINTVENDOR_CONSTRUCTION

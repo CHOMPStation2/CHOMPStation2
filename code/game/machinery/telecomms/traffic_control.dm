@@ -16,7 +16,7 @@
 	var/list/viewingcode = list()
 	var/obj/machinery/telecomms/server/SelectedServer
 	circuit = /obj/item/circuitboard/comm_traffic
-	req_access = list(access_tcomsat)
+	req_access = list(ACCESS_TCOMSAT)
 
 	var/network = "NULL"		// the network to probe
 	var/temp = ""				// temporary feedback messages
@@ -39,7 +39,7 @@
 			winset(editingcode, "tcscode", "is-disabled=false")
 
 		// If the player's not manning the keyboard anymore, adjust everything
-		if( (!(editingcode in range(1, src)) && !issilicon(editingcode)) || (editingcode.machine != src && !issilicon(editingcode)))
+		if( (!(editingcode in range(1, src)) && !issilicon(editingcode)) || (!editingcode.check_current_machine(src) && !issilicon(editingcode)))
 			if(editingcode)
 				winshow(editingcode, "Telecomms IDE", 0) // hide the window!
 			editingcode = null
@@ -55,7 +55,7 @@
 
 			for(var/mob/M in viewingcode)
 
-				if( (M.machine == src && (M in view(1, src)) ) || issilicon(M))
+				if( (M.check_current_machine(src) && (M in view(1, src)) ) || issilicon(M))
 					winset(M, "tcscode", "is-disabled=true")
 					winset(M, "tcscode", "text=\"[showcode]\"")
 				else
@@ -111,13 +111,11 @@
 			else
 				dat += "<a href='byond://?src=\ref[src];operation=togglerun'>NEVER</a>"
 
-
-	user << browse("<html>[dat]</html>", "window=traffic_control;size=575x400")
-	onclose(user, "server_control")
+	var/datum/browser/popup = new(user, "traffic_control", "Traffic Control", 575, 400)
+	popup.set_content(dat)
+	popup.open()
 
 	temp = ""
-	return
-
 
 /obj/machinery/computer/telecomms/traffic/Topic(href, href_list)
 	if(..())
@@ -193,7 +191,6 @@
 	if(href_list["network"])
 
 		var/newnet = tgui_input_text(usr, "Which network do you want to view?", "Comm Monitor", network, 15)
-		newnet = sanitize(newnet,15)
 
 		if(newnet && ((usr in range(1, src)) || issilicon(usr)))
 			if(length(newnet) > 15)

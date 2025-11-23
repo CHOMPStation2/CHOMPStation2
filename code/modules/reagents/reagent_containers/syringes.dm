@@ -20,7 +20,7 @@
 	center_of_mass_y = 14
 	matter = list(MAT_GLASS = 150)
 	amount_per_transfer_from_this = 5
-	possible_transfer_amounts = null
+	max_transfer_amount = null
 	volume = 15
 	w_class = ITEMSIZE_TINY
 	slot_flags = SLOT_EARS
@@ -30,14 +30,13 @@
 	var/image/filling //holds a reference to the current filling overlay
 	var/visible_name = "a syringe"
 	var/time = 30
-	var/drawing = 0
+	var/drawing = FALSE
 	var/used = FALSE
 	var/dirtiness = 0
 	var/list/targets
 	var/list/datum/disease/viruses
 	drop_sound = 'sound/items/drop/glass.ogg'
 	pickup_sound = 'sound/items/pickup/glass.ogg'
-
 
 /obj/item/reagent_containers/syringe/Initialize(mapload)
 	. = ..()
@@ -135,24 +134,24 @@
 						return
 
 					var/datum/reagent/B
-					drawing = 1
+					drawing = TRUE
 					if(ishuman(T))
 						var/mob/living/carbon/human/H = T
 						if(H.species && !H.should_have_organ(O_HEART))
 							H.reagents.trans_to_obj(src, amount)
 						else
 							if(ismob(H) && H != user)
-								if(!do_mob(user, target, time))
-									drawing = 0
+								if(!do_after(user, time, target))
+									drawing = FALSE
 									return
 							B = T.take_blood(src, amount)
-							drawing = 0
+							drawing = FALSE
 					else
-						if(!do_mob(user, target, time))
-							drawing = 0
+						if(!do_after(user, time, target))
+							drawing = FALSE
 							return
 						B = T.take_blood(src,amount)
-						drawing = 0
+						drawing = FALSE
 
 					if (B)
 						reagents.reagent_list += B
@@ -168,7 +167,7 @@
 					to_chat(user, span_notice("[target] is empty."))
 					return
 
-				if(!target.is_open_container() && !istype(target, /obj/structure/reagent_dispensers) && !istype(target, /obj/item/slime_extract) && !istype(target, /obj/item/reagent_containers/food))
+				if(!target.is_open_container() && !istype(target, /obj/structure/reagent_dispensers) && !istype(target, /obj/item/slime_extract) && !istype(target, /obj/item/reagent_containers/food) && !istype(target, /obj/item/reagent_containers/blood))
 					to_chat(user, span_notice("You cannot directly remove reagents from this object."))
 					return
 
@@ -202,7 +201,7 @@
 				return
 			// CHOMPedit end
 
-			if(!target.is_open_container() && !ismob(target) && !istype(target, /obj/item/reagent_containers/food) && !istype(target, /obj/item/slime_extract) && !istype(target, /obj/item/clothing/mask/smokable/cigarette) && !istype(target, /obj/item/storage/fancy/cigarettes) && !istype(target, /obj/item/clothing/mask/chewable)) // CHOMPEdit
+			if(!target.is_injectable_container() && !ismob(target))
 				to_chat(user, span_notice("You cannot directly fill this object."))
 				return
 			if(!target.reagents.get_free_space())
@@ -252,7 +251,7 @@
 
 			//The warmup
 			user.setClickCooldown(DEFAULT_QUICK_COOLDOWN)
-			if(!do_after(user,warmup_time,target))
+			if(!do_after(user, warmup_time, target))
 				return
 
 			var/trans = 0
@@ -261,7 +260,7 @@
 				while(reagents.total_volume)
 					trans += reagents.trans_to_mob(target, amount_per_transfer_from_this, CHEM_BLOOD)
 					update_icon()
-					if(!reagents.total_volume || !do_after(user,cycle_time,target))
+					if(!reagents.total_volume || !do_after(user, cycle_time, target))
 						break
 			else
 				trans += reagents.trans_to_obj(target, amount_per_transfer_from_this)
@@ -285,11 +284,11 @@
 
 		var/mob/living/carbon/human/H = target
 
-		var/target_zone = ran_zone(check_zone(user.zone_sel.selecting, target))
+		var/target_zone = get_zone_with_miss_chance(check_zone(user.zone_sel.selecting, target))
 		var/obj/item/organ/external/affecting = H.get_organ(target_zone)
 
 		if (!affecting || affecting.is_stump())
-			balloon_alert(user, "they are missing that limb!") // CHOMPEdit - Changed to balloon_alert
+			balloon_alert(user, "they are missing that limb!")
 			return
 
 		var/hit_area = affecting.name
@@ -297,7 +296,8 @@
 		if((user != target) && H.check_shields(7, src, user, "\the [src]"))
 			return
 
-		if (target != user && H.getarmor(target_zone, "melee") > 5 && prob(50))
+		var/armor_val = H.getarmor(target_zone, "melee")
+		if(target != user && armor_val >= 5 && prob(50+armor_val)) // High armor can deflect syringe stabs
 			for(var/mob/O in viewers(world.view, user))
 				O.show_message(span_bolddanger("[user] tries to stab [target] in \the [hit_area] with [src.name], but the attack is deflected by armor!"), 1)
 			user.remove_from_mob(src)
@@ -495,6 +495,17 @@
 
 	icon_state = "[rounded_vol]"
 	item_state = "syringe_[rounded_vol]"
+
+/obj/item/reagent_containers/syringe/old
+	name = "old syringe"
+	desc = "An old, broken syringe. Are you sure it's a good idea to pick it up without gloves?"
+	mode = SYRINGE_BROKEN
+
+/obj/item/reagent_containers/syringe/old/Initialize(mapload)
+	. = ..()
+	if(prob(75))
+		var/datum/disease/advance/new_disease = new /datum/disease/advance/random(rand(1, 3), rand(7, 9), 2, infected = src)
+		src.viruses += new_disease
 
 #undef SYRINGE_DRAW
 #undef SYRINGE_INJECT

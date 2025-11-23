@@ -5,7 +5,7 @@
 /datum/event/rogue_drone/start()
 	//spawn them at the same place as carp
 	var/list/possible_spawns = list()
-	for(var/obj/effect/landmark/C in landmarks_list)
+	for(var/obj/effect/landmark/C in GLOB.landmarks_list)
 		if(C.name == "carpspawn")
 			possible_spawns.Add(C)
 
@@ -35,7 +35,7 @@
 		if(4)
 			msg = "A passing derelict ship's drone defense systems have just activated. If any are sighted in the area, use caution." //CHOMPStation Edit: Restored original message.
 		if(5)
-			msg = "We're detecting a swarm of small objects approaching your station.  Most likely a bunch of drones.  Please exercise caution if you see any."
+			msg = "We're detecting a swarm of small objects approaching your [using_map.facility_type].  Most likely a bunch of drones.  Please exercise caution if you see any."
 	//CHOMPStation Edit End
 	command_announcement.Announce(msg, "Rogue drone alert")
 

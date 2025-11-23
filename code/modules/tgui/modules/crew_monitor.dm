@@ -3,8 +3,9 @@
 	tgui_id = "CrewMonitor"
 
 /datum/tgui_module/crew_monitor/ui_assets(mob/user)
-	. = ..()
-	. += get_asset_datum(/datum/asset/simple/nanomaps)
+	return list(
+		get_asset_datum(/datum/asset/simple/holo_nanomap),
+	)
 
 /datum/tgui_module/crew_monitor/tgui_act(action, params, datum/tgui/ui)
 	if(..())
@@ -22,7 +23,7 @@
 		if("track")
 			if(isAI(ui.user))
 				var/mob/living/silicon/ai/AI = ui.user
-				var/mob/living/carbon/human/H = locate(params["track"]) in mob_list
+				var/mob/living/carbon/human/H = locate(params["track"]) in GLOB.mob_list
 				if(hassensorlevel(H, SUIT_SENSOR_TRACKING))
 					AI.ai_actual_track(H)
 			return TRUE
@@ -45,10 +46,6 @@
 		ui = new(user, src, tgui_id, name)
 		ui.autoupdate = TRUE
 		ui.open()
-
-/datum/tgui_module/crew_monitor/tgui_static_data(mob/user)
-	. = ..()
-	.["zoomScale"] = world.maxx + world.maxy
 
 /datum/tgui_module/crew_monitor/tgui_data(mob/user)
 	var/data[0]

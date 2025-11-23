@@ -3,13 +3,15 @@
  * @copyright 2020 Aleksej Komarov
  * @license MIT
  */
-
 import { useState } from 'react';
 import { Section, Stack, Tabs } from 'tgui-core/components';
 
 import { Pane, Window } from '../layouts';
 
-const r = require.context('../stories', false, /\.stories\.tsx$/);
+const r = import.meta.webpackContext('../stories', {
+  recursive: false,
+  regExp: /\.stories\.tsx$/,
+});
 
 /**
  * @returns {{
@@ -25,15 +27,19 @@ function getStories() {
 
 export function KitchenSink(props) {
   const { panel } = props;
-
+  const [theme, setTheme] = useState(undefined);
   const [pageIndex, setPageIndex] = useState(0);
 
   const stories = getStories();
+  if (stories.length === 0) {
+    return <div>Loading stories...</div>;
+  }
+
   const story = stories[pageIndex];
   const Layout = panel ? Pane : Window;
 
   return (
-    <Layout title="Kitchen Sink" width={600} height={500}>
+    <Layout title="Kitchen Sink" width={600} height={500} theme={theme}>
       <Layout.Content>
         <Stack fill>
           <Stack.Item>
@@ -52,7 +58,7 @@ export function KitchenSink(props) {
               </Tabs>
             </Section>
           </Stack.Item>
-          <Stack.Item grow>{story.meta.render()}</Stack.Item>
+          <Stack.Item grow>{story.meta.render(theme, setTheme)}</Stack.Item>
         </Stack>
       </Layout.Content>
     </Layout>

@@ -64,7 +64,7 @@
 		if(LAZYLEN(SS.breaches))
 			to_chat(user, span_warning("You should probably repair that before you start tinkering with it."))
 			return
-	if(O.blood_DNA || O.contaminated) //check if we're bloody or gooey or whatever, so modkits can't be used to hide crimes easily.
+	if(O.forensic_data?.has_blooddna() || O.contaminated) //check if we're bloody or gooey or whatever, so modkits can't be used to hide crimes easily.
 		to_chat(user, span_warning("You should probably clean that up before you start tinkering with it."))
 		return
 	//we have to check that it's not the original type first, because otherwise it might convert wrong based on pathing; the subtype can still count as the basetype
@@ -107,11 +107,9 @@
 	var/obj/N = new to_type(O.loc)
 	user.visible_message(span_notice("[user] opens \the [src] and modifies \the [O] into \the [N]."),span_notice("You open \the [src] and modify \the [O] into \the [N]."))
 
-	//crude, but transfer prints and fibers to avoid forensics abuse, same as the bloody/gooey check above
-	N.fingerprints = O.fingerprints
-	N.fingerprintshidden = O.fingerprintshidden
-	N.fingerprintslast = O.fingerprintslast
-	N.suit_fibers = O.suit_fibers
+	// Transfer forensics to, lets avoid CRIME exploits
+	O.transfer_fingerprints_to(N)
+	O.transfer_fibres_to(N)
 
 	//transfer logic could technically be made more thorough and handle stuff like helmet/boots/tank vars for suits, but in those cases you should be removing the items first anyway
 	if(skip_content_check && transfer_contents)
@@ -353,7 +351,7 @@
 	icon = 'icons/vore/custom_items_vr.dmi'
 	icon_state = "nehiphones"
 
-	icon_override = 'icons/vore/custom_onmob_vr.dmi'
+	default_worn_icon = 'icons/vore/custom_clothes_mob.dmi'
 	item_state = "nehiphones"
 
 //zodiacshadow: Nehi Maximus
@@ -474,7 +472,6 @@
 	flags = THICKMATERIAL
 	armor = list(melee = 40, bullet = 30, laser = 30, energy = 10, bomb = 10, bio = 0, rad = 0)
 	icon_override = 'icons/vore/custom_clothes_vr.dmi'
-	item_state = "serdyhelm_mob"
 	min_cold_protection_temperature = HELMET_MIN_COLD_PROTECTION_TEMPERATURE
 	max_heat_protection_temperature = HELMET_MAX_HEAT_PROTECTION_TEMPERATURE
 	siemens_coefficient = 0.7
@@ -503,6 +500,26 @@
 	desc = "Heavy, royal purple robes threaded with silver lining."
 	icon_state = "psyamp"
 	flags_inv = HIDEJUMPSUIT|HIDETIE|HIDEHOLSTER
+	var/unbuttoned = 0
+
+/obj/item/clothing/suit/fluff/purp_robes/verb/toggle()
+	set name = "Toggle coat buttons"
+	set category = "Object"
+	set src in usr
+
+	if(!usr.canmove || usr.stat || usr.restrained())
+		return 0
+
+	switch(unbuttoned)
+		if(0)
+			icon_state = "[initial(icon_state)]_open"
+			unbuttoned = TRUE
+			to_chat(usr, "You unbutton the coat.")
+		if(1)
+			icon_state = "[initial(icon_state)]"
+			unbuttoned = FALSE
+			to_chat(usr, "You button up the coat.")
+	usr.update_inv_wear_suit()
 
 /obj/item/clothing/head/fluff/pink_tiara
 	name = "pink tourmaline tiara"
@@ -560,13 +577,17 @@
 	if((state == 1) && owner && (owner.stat == DEAD))
 		update_state(2)
 		visible_message(span_warning("The [name] begins flashing red."))
-		sleep(30)
-		visible_message(span_warning("The [name] shatters into dust!"))
-		if(owner_c)
-			to_chat(owner_c, span_notice("A signal is sent notifying of your demise by \the [name]."))
-		update_state(3)
-		name = "broken [initial(name)]"
-		desc = "This seems like a necklace, but the actual pendant is missing."
+		addtimer(CALLBACK(src, PROC_REF(shatter_into_dust)), 3 SECONDS, TIMER_DELETE_ME)
+
+/obj/item/clothing/accessory/collar/khcrystal/proc/shatter_into_dust()
+	SHOULD_NOT_OVERRIDE(TRUE)
+	PRIVATE_PROC(TRUE)
+	visible_message(span_warning("The [name] shatters into dust!"))
+	if(owner_c)
+		to_chat(owner_c, span_notice("A signal is sent notifying of your demise by \the [name].")) // CHOMPEdit
+	update_state(3)
+	name = "broken [initial(name)]"
+	desc = "This seems like a necklace, but the actual pendant is missing."
 
 /obj/item/clothing/accessory/collar/khcrystal/proc/update_state(var/tostate)
 	state = tostate
@@ -627,7 +648,7 @@
 	icon = 'icons/vore/custom_items_vr.dmi'
 	icon_state = "browncane"
 	item_icons = list (slot_r_hand_str = 'icons/vore/custom_items_vr.dmi', slot_l_hand_str = 'icons/vore/custom_items_vr.dmi')
-	item_state_slots = list(slot_r_hand_str = "browncanemob_r", slot_l_hand_str = "browncanemob_l")
+	item_state_slots = list(slot_r_hand_str = "browncane_r", slot_l_hand_str = "browncane_l")
 	force = 5.0
 	throwforce = 7.0
 	w_class = ITEMSIZE_SMALL
@@ -854,7 +875,7 @@
 	icon_state = "centcom"
 	registered_name = "Amy Lessen"
 	assignment = "Xenobiology Director"
-	access = list(access_cent_general,access_cent_thunder,access_cent_medical,access_cent_living,access_cent_storage,access_cent_teleporter,access_research,access_xenobiology,access_maint_tunnels,access_xenoarch,access_robotics,access_tox_storage,access_tox) //Yes, this looks awful. I tried calling both central and resarch access but it didn't work.
+	access = list(ACCESS_CENT_GENERAL,ACCESS_CENT_THUNDER,ACCESS_CENT_MEDICAL,ACCESS_CENT_LIVING,ACCESS_CENT_STORAGE,ACCESS_CENT_TELEPORTER,ACCESS_RESEARCH,ACCESS_XENOBIOLOGY,ACCESS_MAINT_TUNNELS,ACCESS_XENOARCH,ACCESS_ROBOTICS,ACCESS_TOX_STORAGE,ACCESS_TOX) //Yes, this looks awful. I tried calling both central and resarch access but it didn't work.
 	age = 39
 	blood_type = "O-"
 	sex = "Female"
@@ -988,7 +1009,7 @@
 	icon_state = "holster_stunstaff"
 	desc = "A sturdy synthetic leather sheath with matching belt and rubberized interior."
 	slot_flags = SLOT_BACK
-	item_icons = list(slot_back_str = 'icons/vore/custom_onmob_vr.dmi', slot_l_hand_str = 'icons/vore/custom_items_left_hand_vr.dmi', slot_r_hand_str = 'icons/vore/custom_items_right_hand_vr.dmi')
+	item_icons = list(slot_back_str = 'icons/vore/custom_clothes_mob.dmi', slot_l_hand_str = 'icons/vore/custom_items_left_hand_vr.dmi', slot_r_hand_str = 'icons/vore/custom_items_right_hand_vr.dmi')
 
 	can_hold = list(/obj/item/melee/baton/fluff/stunstaff)
 
@@ -1183,7 +1204,7 @@
 	name = "weird necklace"
 	desc = "A necklace with a brilliantly blue crystal encased in protective glass."
 	icon = 'icons/vore/custom_clothes_vr.dmi'
-	icon_override = 'icons/vore/custom_onmob_vr.dmi'
+	default_worn_icon = 'icons/vore/custom_clothes_mob.dmi'
 	suit_type = "probably not magical"
 	icon_state = "nikkicape"
 	w_class = ITEMSIZE_SMALL // It is after all only a necklace
@@ -1237,7 +1258,6 @@
 	icon_state = "blindshades"
 
 	icon_override = 'icons/vore/custom_clothes_vr.dmi'
-	item_state = "blindshades_mob"
 
 //Storesund97 - Aurora
 /obj/item/clothing/accessory/solgov/department/security/aurora
@@ -1515,7 +1535,7 @@ End CHOMP Removal*/
 /obj/item/toy/plushie/fluff/seona_mofuorb/attack_self(mob/user as mob)
 	if(stored_item && opened && !searching)
 		searching = TRUE
-		if(do_after(user, 10))
+		if(do_after(user, 1 SECOND, target = src))
 			to_chat(user, "You find [icon2html(stored_item, user.client)] [stored_item] in [src]!")
 			stored_item.forceMove(get_turf(src))
 			stored_item = null
@@ -1581,4 +1601,33 @@ End CHOMP Removal*/
 	icon = 'icons/vore/custom_clothes_vr.dmi'
 	icon_override = 'icons/vore/custom_clothes_vr.dmi'
 	icon_state = "kintacts"
-	item_state = "kintacts_mob"
+
+//Bricker98: Talenya Lapushkina
+/obj/item/remote_scene_tool/tally_necklace  //A reskinned sticker for the collar, using a modified golden collar sprite
+	name = "link bell collar"
+	desc = "A collar with a seemingly simple golden bell that contains advanced bluespace tech inside, allowing it to link to, and even recall, a matching doll."
+	icon = 'icons/vore/custom_remote_scene_tools.dmi'
+	icon_override = 'icons/vore/custom_remote_scene_tools.dmi'
+	icon_state = "collar_inactive"
+	icon_root = "collar"
+	item_state = "on_mob_collar"
+	slot_flags = SLOT_MASK | SLOT_OCLOTHING
+	replacementType = /obj/item/remote_scene_tool/tally_doll
+
+/obj/item/remote_scene_tool/tally_necklace/mob_can_equip(var/mob/living/carbon/human/H, slot, disable_warning = 0)
+	if(..())
+		if(H.ckey != "bricker98")
+			if(!disable_warning)
+				to_chat(H, span_warning("The collar doesn't fit you!"))
+			return FALSE
+		return TRUE
+
+/obj/item/remote_scene_tool/tally_doll  //A reskinned sticker for the doll, using a custom sprite
+	name = "Talenya's voodoo doll"
+	desc = "A cute custom plushie made to look like Talenya! With her bell and glassy beads for eyes, all the clothing articles are removable, it is incredibly detailed!"
+	icon = 'icons/vore/custom_remote_scene_tools.dmi'
+	icon_state = "doll_inactive"
+	icon_root = "doll"
+	slot_flags = NONE
+	can_summon = FALSE
+	can_replace = FALSE

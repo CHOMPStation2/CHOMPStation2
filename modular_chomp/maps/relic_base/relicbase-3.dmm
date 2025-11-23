@@ -1,4 +1,12 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aaa" = (
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/machinery/rnd/production/protolathe/department/engineering,
+/turf/simulated/floor/tiled/techmaint,
+/area/engineering/workshop)
 "aab" = (
 /obj/effect/map_effect/portal/master/side_a/caves_to_wilderness,
 /turf/unsimulated/wall/planetary/normal/thor,
@@ -2230,7 +2238,7 @@
 /turf/simulated/wall/r_wall,
 /area/surface/outpost/main/landing/one)
 "ble" = (
-/obj/machinery/computer/rdconsole/core{
+/obj/machinery/computer/rdconsole_tg{
 	dir = 8
 	},
 /obj/machinery/light{
@@ -2430,7 +2438,7 @@
 /area/library)
 "bow" = (
 /obj/machinery/door/airlock/glass_external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	id_tag = "rsr_ele_door";
 	locked = 1;
@@ -4056,9 +4064,6 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/maintenance/substation/engineering)
 "ceG" = (
-/obj/structure/table/steel_reinforced,
-/obj/item/hand_labeler,
-/obj/item/hand_labeler,
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 5
 	},
@@ -4069,6 +4074,9 @@
 	c_tag = "CRG - Cargo Office North";
 	name = "security camera"
 	},
+/obj/machinery/autolathe,
+/obj/fiftyspawner/glass,
+/obj/fiftyspawner/steel,
 /turf/simulated/floor/tiled,
 /area/quartermaster/foyer)
 "ceN" = (
@@ -4448,7 +4456,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/security/security_hallway)
 "cml" = (
-/obj/machinery/r_n_d/protolathe,
+/obj/machinery/rnd/production/protolathe/department/science,
 /turf/simulated/floor/tiled,
 /area/rnd/lab)
 "cmx" = (
@@ -6861,13 +6869,11 @@
 /area/surface/outpost/mining_main/refinery)
 "dgc" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
-/obj/effect/decal/cleanable/blood/oil/streak{
-	amount = 0
-	},
-/obj/machinery/autolathe,
 /obj/structure/window/reinforced{
 	dir = 4
 	},
+/obj/structure/closet/toolcloset,
+/obj/item/flashlight,
 /turf/simulated/floor/tiled/techmaint,
 /area/engineering/workshop)
 "dgk" = (
@@ -10335,7 +10341,7 @@
 /turf/simulated/wall/r_wall,
 /area/quartermaster/hallway)
 "evZ" = (
-/obj/machinery/r_n_d/destructive_analyzer,
+/obj/machinery/autolathe,
 /turf/simulated/floor/tiled,
 /area/rnd/lab)
 "ewo" = (
@@ -11638,11 +11644,11 @@
 /area/shuttle/needle)
 "faQ" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "needle_pump"
 	},
 /obj/machinery/embedded_controller/radio/airlock/docking_port{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "needle";
 	pixel_y = 26;
 	tag_airpump = "needle_pump";
@@ -12720,10 +12726,6 @@
 	},
 /turf/simulated/floor/reinforced,
 /area/surface/outpost/main/landing/one)
-"fwx" = (
-/obj/machinery/computer/rdconsole/robotics,
-/turf/simulated/floor/tiled/white,
-/area/assembly/robotics)
 "fxb" = (
 /obj/structure/window/reinforced{
 	dir = 4
@@ -16342,7 +16344,7 @@
 /area/engineering/engi_restroom)
 "hbc" = (
 /obj/machinery/door/airlock/glass_external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	id_tag = "rsr_base_door";
 	locked = 1;
@@ -17818,7 +17820,7 @@
 	dir = 10
 	},
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "car_mining_base";
 	name = "shuttle bay controller";
 	pixel_x = -2;
@@ -18591,7 +18593,7 @@
 /turf/simulated/floor/outdoors/grass/heavy,
 /area/engineering/external_lights)
 "hYx" = (
-/obj/machinery/r_n_d/circuit_imprinter,
+/obj/machinery/rnd/production/circuit_imprinter,
 /obj/item/reagent_containers/glass/beaker/sulphuric,
 /turf/simulated/floor/tiled,
 /area/rnd/lab)
@@ -19109,7 +19111,7 @@
 /turf/simulated/floor/wood,
 /area/crew_quarters/bar)
 "iiF" = (
-/mob/living/simple_mob/animal/passive/raccoon_ch,
+/mob/living/simple_mob/animal/passive/raccoon,
 /obj/structure/railing,
 /obj/structure/flora/ausbushes/grassybush{
 	opacity = 1
@@ -19373,7 +19375,7 @@
 /area/rnd/misc_lab)
 "ipw" = (
 /obj/machinery/door/airlock/external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	id_tag = "car_mining_door";
 	locked = 1;
@@ -19495,7 +19497,6 @@
 	anchored = 1;
 	canhear_range = 1;
 	frequency = 1487;
-	icon = 'icons/obj/items.dmi';
 	icon_state = "red_phone";
 	name = "Reception Emergency Phone";
 	pixel_x = -5
@@ -20839,16 +20840,8 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
-/obj/structure/table/steel,
 /obj/effect/floor_decal/industrial/outline/yellow,
-/obj/item/floor_painter,
-/obj/item/multitool{
-	pixel_x = 5
-	},
-/obj/item/t_scanner,
-/obj/item/reagent_containers/spray/cleaner,
-/obj/random/tech_supply,
-/obj/random/tech_supply,
+/obj/machinery/autolathe,
 /turf/simulated/floor/tiled/techmaint,
 /area/engineering/workshop)
 "iUT" = (
@@ -23598,12 +23591,7 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
 	},
-/obj/machinery/power/smes/buildable/power_shuttle{
-	charge = 4e+006;
-	input_attempt = 1;
-	inputting = 1;
-	outputting = 1
-	},
+/obj/machinery/power/smes/buildable/power_shuttle/max_charge_max_input_base_output,
 /obj/structure/cable/green{
 	icon_state = "0-8"
 	},
@@ -24586,7 +24574,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/security/lobby)
 "kEH" = (
-/obj/machinery/mecha_part_fabricator,
+/obj/machinery/mecha_part_fabricator_tg,
 /turf/simulated/floor/tiled,
 /area/assembly/robotics)
 "kEK" = (
@@ -28103,7 +28091,7 @@
 /turf/simulated/floor/tiled/steel_dirty,
 /area/surface/outpost/wall/checkpoint)
 "mkY" = (
-/obj/structure/closet/secure_closet/RD,
+/obj/structure/closet/secure_closet/research_director,
 /obj/machinery/firealarm{
 	pixel_y = 24
 	},
@@ -30252,7 +30240,7 @@
 "nfe" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/airlock/external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	id_tag = "car_mining_base_door";
 	locked = 1;
@@ -31418,6 +31406,8 @@
 /obj/effect/floor_decal/corner/beige/border{
 	dir = 4
 	},
+/obj/item/hand_labeler,
+/obj/item/hand_labeler,
 /turf/simulated/floor/tiled,
 /area/quartermaster/foyer)
 "nJv" = (
@@ -32119,7 +32109,7 @@
 /turf/simulated/floor/outdoors/grass/heavy,
 /area/surface/outside/plains/outpost)
 "nWX" = (
-/obj/turbolift_map_holder/southern_cross/port,
+/obj/turbolift_map_holder/relic_base/port,
 /turf/simulated/wall/elevator,
 /area/quartermaster/delivery)
 "nXu" = (
@@ -32434,6 +32424,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/machinery/rnd/production/protolathe/department/security,
 /turf/simulated/floor/tiled/dark,
 /area/security/security_hallway)
 "ogk" = (
@@ -32724,17 +32715,13 @@
 /turf/simulated/floor/tiled/white,
 /area/assembly/robotics)
 "oqR" = (
-/obj/structure/table/standard,
 /obj/machinery/light{
 	dir = 1
 	},
 /obj/structure/cable/green{
 	icon_state = "1-8"
 	},
-/obj/item/fulton_core,
-/obj/item/extraction_pack,
-/obj/item/extraction_pack,
-/obj/item/extraction_pack,
+/obj/machinery/rnd/production/protolathe/department/medical,
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay_primary_storage)
 "orh" = (
@@ -32805,6 +32792,10 @@
 	dir = 1;
 	pixel_y = 21
 	},
+/obj/item/extraction_pack,
+/obj/item/extraction_pack,
+/obj/item/extraction_pack,
+/obj/item/fulton_core,
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay_primary_storage)
 "otg" = (
@@ -32812,7 +32803,7 @@
 /turf/simulated/floor/water/contaminated,
 /area/surface/outpost/civilian/emergency_storage)
 "otk" = (
-/obj/machinery/r_n_d/server/core,
+/obj/machinery/rnd/server/master,
 /turf/simulated/floor/bluegrid{
 	name = "Server Base";
 	nitrogen = 500;
@@ -32821,7 +32812,7 @@
 	},
 /area/server)
 "otx" = (
-/mob/living/simple_mob/animal/passive/raccoon_ch,
+/mob/living/simple_mob/animal/passive/raccoon,
 /turf/simulated/floor/outdoors/dirt,
 /area/surface/outside/path/plains)
 "otF" = (
@@ -34239,7 +34230,7 @@
 /turf/simulated/floor/outdoors/grass/heavy,
 /area/surface/outside/plains/outpost)
 "paK" = (
-/obj/structure/closet/secure_closet/CMO,
+/obj/structure/closet/secure_closet/chief_medical_officer,
 /obj/structure/extinguisher_cabinet{
 	pixel_y = -30
 	},
@@ -34292,7 +34283,6 @@
 /turf/simulated/floor/wood,
 /area/surface/outpost/main/dorms/dorm_8)
 "pcj" = (
-/obj/machinery/autolathe,
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 5
 	},
@@ -34501,14 +34491,14 @@
 /area/surface/outpost/main/garage)
 "phY" = (
 /obj/machinery/door/airlock/voidcraft/vertical{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "needle_inner";
 	locked = 1;
 	name = "Internal Access"
 	},
 /obj/machinery/access_button{
 	command = "cycle_interior";
-	frequency = 1380;
+	frequency = 1381;
 	master_tag = "needle";
 	name = "interior access button";
 	pixel_y = 26
@@ -34544,7 +34534,7 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/medical/cryo/autoresleeve)
 "piU" = (
-/mob/living/simple_mob/animal/passive/raccoon_ch,
+/mob/living/simple_mob/animal/passive/raccoon,
 /turf/simulated/floor/outdoors/dirt,
 /area/surface/outside/plains/outpost)
 "pjq" = (
@@ -35406,7 +35396,7 @@
 	layer = 3
 	},
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "rsr_base";
 	pixel_y = -32;
 	req_one_access = list(47);
@@ -35483,14 +35473,14 @@
 /area/medical/cryo/autoresleeve)
 "pAU" = (
 /obj/machinery/door/airlock/voidcraft/vertical{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "needle_outer";
 	locked = 1;
 	name = "External Access"
 	},
 /obj/machinery/access_button{
 	command = "cycle_exterior";
-	frequency = 1380;
+	frequency = 1381;
 	master_tag = "needle";
 	name = "exterior access button";
 	pixel_y = 26
@@ -38284,14 +38274,13 @@
 /turf/simulated/floor/tiled,
 /area/janitor)
 "qLB" = (
-/obj/machinery/power/smes/buildable{
-	RCon_tag = "Engine - Main";
-	charge = 2e+007;
-	cur_coils = 4;
-	input_attempt = 1;
-	input_level = 750000;
-	output_level = 750000
+/obj/machinery/power/smes/buildable/max_charge_max_input{
+	RCon_tag = "Engine - Main"
 	},
+/obj/item/smes_coil,
+/obj/item/smes_coil,
+/obj/item/smes_coil,
+/obj/item/smes_coil,
 /obj/structure/cable{
 	icon_state = "0-4"
 	},
@@ -38636,7 +38625,6 @@
 /turf/simulated/floor/plating,
 /area/engineering/hallway/atmos_hallway)
 "qUJ" = (
-/obj/machinery/autolathe,
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 1
 	},
@@ -38652,8 +38640,7 @@
 /obj/machinery/firealarm{
 	pixel_y = 24
 	},
-/obj/fiftyspawner/steel,
-/obj/fiftyspawner/glass,
+/obj/machinery/rnd/production/protolathe/department/cargo,
 /turf/simulated/floor/tiled,
 /area/quartermaster/foyer)
 "qUN" = (
@@ -39784,7 +39771,7 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/surface/outpost/mining_main)
 "rrk" = (
-/mob/living/simple_mob/animal/passive/raccoon_ch,
+/mob/living/simple_mob/animal/passive/raccoon,
 /obj/structure/flora/ausbushes/lavendergrass,
 /turf/simulated/floor/outdoors/grass/heavy,
 /area/surface/outside/plains/outpost)
@@ -40983,14 +40970,13 @@
 /obj/structure/extinguisher_cabinet{
 	pixel_y = -32
 	},
-/obj/machinery/power/smes/buildable{
-	RCon_tag = "Engine - Input";
-	charge = 2e+007;
-	cur_coils = 4;
-	input_attempt = 1;
-	input_level = 750000;
-	output_level = 100
+/obj/machinery/power/smes/buildable/engine_default{
+	RCon_tag = "Engine - Input"
 	},
+/obj/item/smes_coil,
+/obj/item/smes_coil,
+/obj/item/smes_coil,
+/obj/item/smes_coil,
 /obj/structure/cable/cyan{
 	icon_state = "0-8"
 	},
@@ -41082,7 +41068,7 @@
 	},
 /area/surface/outside/plains/outpost)
 "rVb" = (
-/obj/machinery/mecha_part_fabricator/pros,
+/obj/machinery/mecha_part_fabricator_tg/prosthetics,
 /obj/machinery/camera/network/research{
 	c_tag = "SCI - Robotics Fore"
 	},
@@ -41117,7 +41103,7 @@
 /obj/effect/floor_decal/industrial/warning/cee,
 /obj/machinery/light,
 /obj/machinery/airlock_sensor{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "needle_sensor";
 	pixel_x = -28;
 	pixel_y = -1
@@ -41397,7 +41383,7 @@
 /obj/effect/floor_decal/corner/green/bordercorner{
 	dir = 1
 	},
-/obj/machinery/r_n_d/circuit_imprinter,
+/obj/machinery/rnd/production/circuit_imprinter,
 /obj/item/reagent_containers/glass/beaker/sulphuric,
 /turf/simulated/floor/tiled/dark,
 /area/rnd/workshop)
@@ -45194,7 +45180,7 @@
 	dir = 4
 	},
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "needle_dock";
 	pixel_x = -26
 	},
@@ -46320,13 +46306,13 @@
 /turf/simulated/floor/tiled/hydro,
 /area/hydroponics)
 "uhQ" = (
-/obj/machinery/portable_atmospherics/hydroponics,
 /obj/machinery/alarm{
 	dir = 1;
 	pixel_y = -25
 	},
 /obj/effect/floor_decal/borderfloorblack,
 /obj/effect/floor_decal/corner/lime/border,
+/obj/machinery/rnd/production/protolathe/department/service,
 /turf/simulated/floor/tiled/hydro,
 /area/hydroponics)
 "uhR" = (
@@ -49104,7 +49090,7 @@
 	layer = 3
 	},
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "rsr_elevator";
 	pixel_x = 25;
 	pixel_y = -8;
@@ -50422,7 +50408,7 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/engineering/foyer)
 "vHD" = (
-/obj/machinery/r_n_d/server/robotics,
+/obj/machinery/rnd/server,
 /turf/simulated/floor/bluegrid{
 	name = "Server Base";
 	nitrogen = 500;
@@ -50500,7 +50486,7 @@
 /turf/simulated/floor/outdoors/dirt,
 /area/engineering/foyer)
 "vJP" = (
-/obj/machinery/r_n_d/circuit_imprinter,
+/obj/machinery/rnd/production/circuit_imprinter,
 /obj/item/reagent_containers/glass/beaker/large,
 /turf/simulated/floor/tiled/white,
 /area/assembly/robotics)
@@ -52190,7 +52176,7 @@
 	dir = 1
 	},
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "car_mining";
 	pixel_x = 25;
 	pixel_y = -8;
@@ -54462,7 +54448,7 @@
 /turf/simulated/floor/wood,
 /area/crew_quarters/bar)
 "xsk" = (
-/obj/machinery/computer/rdconsole/core,
+/obj/machinery/computer/rdconsole_tg,
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 9
 	},
@@ -55173,14 +55159,13 @@
 /turf/simulated/floor/plating,
 /area/engineering/external_lights)
 "xBC" = (
-/obj/machinery/power/smes/buildable{
-	RCon_tag = "Outpost Lighting SMES";
-	charge = 2e+007;
-	cur_coils = 4;
-	input_attempt = 1;
-	input_level = 750000;
-	output_level = 500000
+/obj/machinery/power/smes/buildable/max_charge_max_input{
+	RCon_tag = "Outpost Lighting SMES"
 	},
+/obj/item/smes_coil,
+/obj/item/smes_coil,
+/obj/item/smes_coil,
+/obj/item/smes_coil,
 /obj/machinery/light/small{
 	dir = 4
 	},
@@ -76365,7 +76350,7 @@ qiX
 tWF
 lNx
 iUy
-wru
+aaa
 wru
 kxf
 tiw
@@ -98493,7 +98478,7 @@ odJ
 oAi
 edc
 sQk
-fwx
+bhC
 bhC
 oEs
 pBN

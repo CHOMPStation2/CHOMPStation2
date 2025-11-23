@@ -4,12 +4,10 @@
 //   gender-appropriate version of the same.
 // - Impaired messages do not do any substitutions.
 
-var/global/list/emotes_by_key
-
 /proc/get_emote_by_key(var/key)
-	if(!global.emotes_by_key)
-		decls_repository.get_decls_of_type(/decl/emote) // emotes_by_key will be updated in emote Initialize()
-	return global.emotes_by_key[key]
+	if(!LAZYLEN(GLOB.emotes_by_key))
+		decls_repository.get_decls_of_type(/decl/emote) // GLOB.emotes_by_key will be updated in emote Initialize()
+	return GLOB.emotes_by_key[key]
 
 /decl/emote
 	var/key                                             // Command to use emote ie. '*[key]'
@@ -49,7 +47,7 @@ var/global/list/emotes_by_key
 /decl/emote/Initialize(mapload)
 	. = ..()
 	if(key)
-		LAZYSET(global.emotes_by_key, key, src)
+		LAZYSET(GLOB.emotes_by_key, key, src)
 
 /decl/emote/proc/get_emote_message_1p(var/atom/user, var/atom/target, var/extra_params)
 	if(target)
@@ -153,19 +151,17 @@ var/global/list/emotes_by_key
 /decl/emote/proc/replace_target_tokens(var/msg, var/atom/target)
 	. = msg
 	if(istype(target))
-		var/datum/gender/target_gender = GLOB.gender_datums[target.get_visible_gender()]
-		. = replacetext(., "TARGET_THEM",  target_gender.him)
-		. = replacetext(., "TARGET_THEIR", target_gender.his)
-		. = replacetext(., "TARGET_SELF",  target_gender.himself)
+		. = replacetext(., "TARGET_THEM",  target.p_them())
+		. = replacetext(., "TARGET_THEIR", target.p_their())
+		. = replacetext(., "TARGET_SELF",  target.p_themselves())
 		. = replacetext(., "TARGET",       span_bold("\the [target]"))
 
 /decl/emote/proc/replace_user_tokens(var/msg, var/atom/user)
 	. = msg
 	if(istype(user))
-		var/datum/gender/user_gender = GLOB.gender_datums[user.get_visible_gender()]
-		. = replacetext(., "USER_THEM",  user_gender.him)
-		. = replacetext(., "USER_THEIR", user_gender.his)
-		. = replacetext(., "USER_SELF",  user_gender.himself)
+		. = replacetext(., "USER_THEM",  user.p_them())
+		. = replacetext(., "USER_THEIR", user.p_their())
+		. = replacetext(., "USER_SELF",  user.p_themselves())
 		. = replacetext(., "USER",       span_bold("\the [user]"))
 
 /decl/emote/proc/get_radio_message(var/atom/user)
@@ -191,7 +187,10 @@ var/global/list/emotes_by_key
 	if(sound_to_play)
 		if(istype(user, /mob))
 			var/mob/u = user
-			playsound(user.loc, sound_to_play, use_sound["vol"], u.read_preference(/datum/preference/toggle/random_emote_pitch) && sound_vary, extrarange = use_sound["exr"], frequency = u.voice_freq, preference = sound_preferences, volume_channel = use_sound["volchannel"])
+			var/freq_to_use = u.voice_freq
+			if(u.emote_sound_mode == EMOTE_SOUND_NO_FREQ)
+				freq_to_use = 0
+			playsound(user.loc, sound_to_play, use_sound["vol"], u.read_preference(/datum/preference/toggle/random_emote_pitch) && sound_vary, extrarange = use_sound["exr"], frequency = freq_to_use, preference = sound_preferences, volume_channel = use_sound["volchannel"])
 		else
 			playsound(user.loc, sound_to_play, use_sound["vol"], sound_vary, extrarange = use_sound["exr"], frequency = null, preference = sound_preferences, volume_channel = use_sound["volchannel"])
 

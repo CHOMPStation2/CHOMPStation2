@@ -25,7 +25,7 @@
 	use_power = USE_POWER_OFF	//doesn't use APC power
 	interact_offline = TRUE // don't check stat & NOPOWER|BROKEN for our UI. We check BROKEN ourselves.
 	var/id //for button usage
-	var/datum/looping_sound/shield_generator/shield_hum
+	var/datum/looping_sound/shield_generator/shield_hum // CHOMPAdd
 
 /obj/machinery/shield_gen/advanced
 	name = "advanced bubble shield generator"
@@ -42,12 +42,13 @@
 			if(get_dir(cap, src) == cap.dir)
 				capacitors |= cap
 				cap.owned_gen = src
-	shield_hum = new(list(src), FALSE)
-	return ..()
+	shield_hum = new(list(src), FALSE) // CHOMPAdd
+	. = ..()
+	AddElement(/datum/element/climbable)
 
 /obj/machinery/shield_gen/Destroy()
 	QDEL_LIST_NULL(field)
-	QDEL_NULL(shield_hum)
+	QDEL_NULL(shield_hum) // CHOMPAdd
 	return ..()
 
 /obj/machinery/shield_gen/emag_act(var/remaining_charges, var/mob/user)
@@ -63,7 +64,7 @@
 /obj/machinery/shield_gen/attackby(obj/item/W, mob/user)
 	if(istype(W, /obj/item/card/id))
 		var/obj/item/card/id/C = W
-		if((access_captain in C.GetAccess()) || (access_security in C.GetAccess()) || (access_engine in C.GetAccess()))
+		if((ACCESS_CAPTAIN in C.GetAccess()) || (ACCESS_SECURITY in C.GetAccess()) || (ACCESS_ENGINE in C.GetAccess()))
 			src.locked = !src.locked
 			to_chat(user, "Controls are now [src.locked ? "locked." : "unlocked."]")
 			updateDialog()
@@ -248,7 +249,7 @@
 			to_chat(M, "[icon2html(src, M.client)] You hear heavy droning start up.")
 		for(var/obj/effect/energy_field/E in field) // Update the icons here to ensure all the shields have been made already.
 			E.update_icon()
-		shield_hum.start()
+		shield_hum.start() // CHOMPAdd
 	else
 		for(var/obj/effect/energy_field/D in field)
 			field.Remove(D)
@@ -257,7 +258,7 @@
 
 		for(var/mob/M in view(5,src))
 			to_chat(M, "[icon2html(src, M.client)] You hear heavy droning fade out.")
-		shield_hum.stop()
+		shield_hum.stop() // CHOMPAdd
 // CHOMPAdd Start - Fills gaps when meteors happen
 /obj/machinery/shield_gen/proc/fill_diffused()
 	if(active)
@@ -277,7 +278,7 @@
 	if(stat & BROKEN)
 		icon_state = "broke"
 		set_light(0)
-		shield_hum.stop()
+		shield_hum.stop() // CHOMPAdd
 	else
 		if (src.active)
 			icon_state = "generator1"

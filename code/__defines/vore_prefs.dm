@@ -5,6 +5,7 @@
 	target.absorbable = source.absorbable;												\
 	target.allowmobvore = source.allowmobvore;											\
 	target.permit_healbelly = source.permit_healbelly;									\
+	target.allowtemp = source.allowtemp;												\
 																						\
 	target.vore_taste = source.vore_taste;												\
 	target.vore_smell = source.vore_smell;												\
@@ -15,6 +16,7 @@
 	target.digest_pain = source.digest_pain;											\
 	target.noisy_full = source.noisy_full;												\
 	target.eating_privacy_global = source.eating_privacy_global;						\
+	target.vore_death_privacy = source.vore_death_privacy;								\
 																						\
 	target.can_be_drop_prey = source.can_be_drop_prey;									\
 	target.can_be_drop_pred = source.can_be_drop_pred;									\
@@ -50,6 +52,7 @@
 	target.no_latejoin_prey_warning_time = source.no_latejoin_prey_warning_time;		\
 	target.no_latejoin_vore_warning_persists = source.no_latejoin_vore_warning_persists;\
 	target.no_latejoin_prey_warning_persists = source.no_latejoin_prey_warning_persists;\
+	target.max_voreoverlay_alpha = source.max_voreoverlay_alpha;						\
 																						\
 	target.autotransferable = source.autotransferable;									\
 	target.strip_pref = source.strip_pref;												\
@@ -57,4 +60,5 @@
 	target.vore_sprite_color = source.vore_sprite_color;								\
 	target.belly_rub_target = source.belly_rub_target;									\
 																						\
-	target.soulcatcher_pref_flags = source.soulcatcher_pref_flags;
+	target.soulcatcher_pref_flags = source.soulcatcher_pref_flags;						\
+	target.persistend_edit_mode = source.persistend_edit_mode;

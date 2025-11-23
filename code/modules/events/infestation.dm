@@ -13,7 +13,8 @@
 
 #define VERM_MICE 0
 #define VERM_LIZARDS 1
-#define VERM_SPIDERS 2
+#define VERM_MOTHROACH 2
+#define VERM_SPIDERS 3 //CHOMPEdit - This edit wasn't commented >:(
 
 /datum/event/infestation
 	announceWhen = 10
@@ -24,42 +25,10 @@
 	var/vermstring
 
 /datum/event/infestation/start()
-//CHOMP Edit changed for Southern Cross areas
+//CHOMPEdit changed for Southern Cross areas
 	location = rand(0,9)
 	var/list/turf/simulated/floor/turfs = list()
-	var/spawn_area_type
-	switch(location)
-		if(LOC_KITCHEN)
-			spawn_area_type = /area/crew_quarters/kitchen
-			locstring = "the kitchen"
-		if(LOC_ATMOS)
-			spawn_area_type = /area/engineering/atmos
-			locstring = "atmospherics"
-		if(LOC_CHAPEL)
-			spawn_area_type = /area/chapel/main
-			locstring = "the chapel"
-		if(LOC_LIBRARY)
-			spawn_area_type = /area/library
-			locstring = "the library"
-		if(LOC_HYDRO)
-			spawn_area_type = /area/hydroponics
-			locstring = "hydroponics"
-		if(LOC_TECH)
-			spawn_area_type = /area/storage/tech
-			locstring = "technical storage"
-		if(LOC_HANGAR1)
-			spawn_area_type = /area/hangar/one
-			locstring = "the hangar deck"
-		if(LOC_HANGAR2)
-			spawn_area_type = /area/hangar/two
-			locstring = "the hangar deck"
-		if(LOC_HANGAR3)
-			spawn_area_type = /area/hangar/three
-			locstring = "the hangar deck"
-		if(LOC_VAULT)
-			spawn_area_type = /area/security/nuke_storage
-			locstring = "the vault"
-
+	var/spawn_area_type = get_spawn_area()
 	for(var/areapath in typesof(spawn_area_type))
 		var/area/A = locate(areapath)
 		for(var/turf/simulated/floor/F in A.contents)
@@ -95,9 +64,14 @@
 			max_number = 8 //CHOMP edit
 			vermstring = "spiders"
 
-	/* //Chomp REMOVE - in upstream file, not used here
+		if(VERM_MOTHROACH)
+			spawn_types = /mob/living/simple_mob/animal/passive/mothroach
+			min_number = 1 //CHOMP edit
+			max_number = 3 //CHOMP edit
+			vermstring = "mothroaches"
 	// Check if any landmarks exist!
-	for(var/obj/effect/landmark/C in landmarks_list)
+	/* //Chomp REMOVE - in upstream file, not used here
+	for(var/obj/effect/landmark/C in GLOB.landmarks_list)
 		if(C.name == "verminstart")
 			spawn_locations.Add(C.loc)
 	*/ //Chomp REMOVE END
@@ -115,6 +89,41 @@
 			else
 				var/spawn_type = pick(spawn_types)
 				new spawn_type(T)
+
+/datum/event/infestation/proc/get_spawn_area() //adding this so maps can override areas if needed
+	var/spawn_area_type
+	switch(location)
+		if(LOC_KITCHEN)
+			spawn_area_type = /area/crew_quarters/kitchen
+			locstring = "the kitchen"
+		if(LOC_ATMOS)
+			spawn_area_type = /area/engineering/atmos
+			locstring = "atmospherics"
+		if(LOC_CHAPEL)
+			spawn_area_type = /area/chapel/main
+			locstring = "the chapel"
+		if(LOC_LIBRARY)
+			spawn_area_type = /area/library
+			locstring = "the library"
+		if(LOC_HYDRO)
+			spawn_area_type = /area/hydroponics
+			locstring = "hydroponics"
+		if(LOC_TECH)
+			spawn_area_type = /area/storage/tech
+			locstring = "technical storage"
+		if(LOC_HANGAR1)
+			spawn_area_type = /area/hangar/two //hangar one is no longer in use on the sc
+			locstring = "the hangar deck"
+		if(LOC_HANGAR2)
+			spawn_area_type = /area/hangar/two
+			locstring = "the hangar deck"
+		if(LOC_HANGAR3)
+			spawn_area_type = /area/hangar/three
+			locstring = "the hangar deck"
+		if(LOC_VAULT)
+			spawn_area_type = /area/security/nuke_storage
+			locstring = "the vault"
+	return spawn_area_type
 		// ChompEDIT End
 /* CHOMPedit - Upstream Code, not implmeneted here
 /datum/event/infestation/tick()
@@ -172,3 +181,4 @@
 #undef VERM_MICE
 #undef VERM_LIZARDS
 #undef VERM_SPIDERS // Chomp EDIT
+#undef VERM_MOTHROACH

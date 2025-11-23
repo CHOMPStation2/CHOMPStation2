@@ -156,7 +156,7 @@ What Borgs are available is sadly handled in the above file in the proc
 		icontype = options[choice]
 		var/active_sound = 'sound/effects/bubbles.ogg'
 		playsound(src.loc, "[active_sound]", 100, 0, 4)
-		M << "Your Tank now displays [choice]. Drink up and enjoy!"
+		to_chat(M, span_notice("Your Tank now displays [choice]. Drink up and enjoy!"))
 		updateicon()
 		return 1
 

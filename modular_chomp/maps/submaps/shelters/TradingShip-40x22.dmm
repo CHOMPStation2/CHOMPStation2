@@ -75,11 +75,7 @@
 /obj/item/coin/phoron,
 /obj/item/coin/phoron,
 /obj/item/coin/phoron,
-/obj/machinery/smartfridge/survival_pod{
-	icon = 'icons/obj/vending.dmi';
-	icon_base = "fridge_sci";
-	icon_contents = "chem";
-	icon_state = "fridge_sci";
+/obj/machinery/smartfridge/survival_pod/scifridge{
 	name = "Phoron storage";
 	pixel_y = 0
 	},
@@ -337,7 +333,7 @@
 "kw" = (
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
 	dir = 4;
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "trade_shuttle";
 	pixel_x = -25;
 	req_one_access = list(101);

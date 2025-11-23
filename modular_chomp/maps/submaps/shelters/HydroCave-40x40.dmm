@@ -165,7 +165,7 @@
 	icon_state = "hydrosecure";
 	locked = 0;
 	name = "botanist's locker";
-	req_access_txt = "201"
+	req_access = list(201)
 	},
 /obj/item/clothing/mask/bandana,
 /turf/simulated/floor/tiled/hydro,
@@ -190,7 +190,7 @@
 	dir = 8;
 	icon_state = "right";
 	name = "Security Checkpoint";
-	req_access_txt = "201"
+	req_access = list(201)
 	},
 /turf/simulated/floor/tiled,
 /area/survivalpod/superpose/HydroCave)
@@ -227,7 +227,7 @@
 /obj/machinery/door/window/southleft{
 	dir = 8;
 	name = "Security Checkpoint";
-	req_access_txt = "201"
+	req_access = list(201)
 	},
 /turf/simulated/floor/tiled,
 /area/survivalpod/superpose/HydroCave)
@@ -276,7 +276,7 @@
 "iY" = (
 /obj/machinery/door/airlock/security{
 	name = "Security Checkpoint";
-	req_access_txt = "201"
+	req_access = list(201)
 	},
 /obj/machinery/door/firedoor,
 /turf/simulated/floor/tiled,
@@ -426,7 +426,7 @@
 	},
 /obj/machinery/door/airlock/maintenance{
 	name = "Security Checkpoint Maintenance";
-	req_access_txt = "201";
+	req_access = list(201);
 	req_one_access_txt = "0"
 	},
 /turf/simulated/floor/plating,
@@ -621,7 +621,7 @@
 	dir = 4;
 	icon_state = "right";
 	name = "Hydroponics Desk";
-	req_access_txt = "201"
+	req_access = list(201)
 	},
 /turf/simulated/floor/tiled,
 /area/survivalpod/superpose/HydroCave)
@@ -673,7 +673,7 @@
 	icon_opened = "secopen";
 	icon_state = "sec1";
 	name = "security officer's locker";
-	req_access_txt = "201"
+	req_access = list(201)
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/red,
@@ -808,7 +808,7 @@
 	icon_state = "cabinetdetective";
 	locked = 0;
 	name = "personal closet";
-	req_access_txt = "201"
+	req_access = list(201)
 	},
 /obj/item/clothing/under/suit_jacket/female,
 /turf/simulated/floor/carpet,
@@ -1132,12 +1132,7 @@
 /turf/simulated/floor/carpet,
 /area/survivalpod/superpose/HydroCave)
 "Fn" = (
-/obj/effect/decal/cleanable/blood/tracks{
-	color = "red";
-	desc = "Your instincts say you shouldn't be following these.";
-	icon = 'icons/effects/blood.dmi';
-	icon_state = "tracks"
-	},
+/obj/effect/decal/cleanable/blood/tracks/suspicious,
 /turf/template_noop,
 /area/template_noop)
 "FB" = (
@@ -1222,7 +1217,7 @@
 	icon_state = "cabinetdetective";
 	locked = 0;
 	name = "personal closet";
-	req_access_txt = "201"
+	req_access = list(201)
 	},
 /obj/item/clothing/under/pj/blue,
 /turf/simulated/floor/carpet,
@@ -1256,12 +1251,7 @@
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/HydroCave)
 "Im" = (
-/obj/effect/decal/cleanable/blood/tracks{
-	color = "red";
-	desc = "Your instincts say you shouldn't be following these.";
-	icon = 'icons/effects/blood.dmi';
-	icon_state = "tracks"
-	},
+/obj/effect/decal/cleanable/blood/tracks/suspicious,
 /turf/simulated/mineral/floor/ignore_mapgen/cave,
 /area/template_noop)
 "In" = (
@@ -1463,7 +1453,7 @@
 	},
 /obj/machinery/door/airlock/maintenance{
 	name = "Hydroponics Maintenance";
-	req_access_txt = "201"
+	req_access = list(201)
 	},
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/HydroCave)
@@ -1728,7 +1718,7 @@
 "Sv" = (
 /obj/machinery/door/airlock{
 	name = "Unisex Restrooms";
-	req_access_txt = "0"
+	req_access = null
 	},
 /obj/machinery/door/firedoor,
 /turf/simulated/floor/tiled/steel_grid,
@@ -1813,7 +1803,7 @@
 /area/template_noop)
 "VF" = (
 /obj/machinery/door/airlock/maintenance{
-	req_access_txt = "0";
+	req_access = null;
 	req_one_access_txt = "0"
 	},
 /obj/machinery/door/firedoor,
@@ -1831,7 +1821,7 @@
 /area/survivalpod/superpose/HydroCave)
 "Wt" = (
 /obj/machinery/door/airlock/maintenance{
-	req_access_txt = "0";
+	req_access = null;
 	req_one_access_txt = "0"
 	},
 /obj/machinery/door/firedoor,
@@ -1853,7 +1843,7 @@
 /obj/machinery/door/window/southleft{
 	dir = 4;
 	name = "Hydroponics Desk";
-	req_access_txt = "201"
+	req_access = list(201)
 	},
 /turf/simulated/floor/tiled,
 /area/survivalpod/superpose/HydroCave)
@@ -1925,12 +1915,8 @@
 /turf/simulated/floor/tiled,
 /area/survivalpod/superpose/HydroCave)
 "YE" = (
-/obj/effect/decal/cleanable/blood/tracks{
-	color = "red";
-	desc = "Your instincts say you shouldn't be following these.";
-	dir = 4;
-	icon = 'icons/effects/blood.dmi';
-	icon_state = "tracks"
+/obj/effect/decal/cleanable/blood/tracks/suspicious{
+	dir = 4
 	},
 /turf/simulated/mineral/floor/ignore_mapgen/cave,
 /area/template_noop)
@@ -1945,7 +1931,7 @@
 	dir = 4
 	},
 /obj/machinery/door/airlock/maintenance{
-	req_access_txt = "0";
+	req_access = null;
 	req_one_access_txt = "0"
 	},
 /obj/machinery/door/firedoor,

@@ -15,20 +15,20 @@
 	selection_color = "#8E2929"
 	req_admin_notify = 1
 	economic_modifier = 10
-	access = list(access_security, access_eva, access_sec_doors, access_brig, access_armory,
-						access_forensics_lockers, access_morgue, access_maint_tunnels, access_all_personal_lockers,
-						access_research, access_engine, access_mining, access_medical, access_construction, access_mailsorting,
-						access_heads, access_hos, access_RC_announce, access_keycard_auth, access_gateway, access_external_airlocks, access_teleporter) //CHOMP Edit: Restores what access is given in security.dm.
-	minimal_access = list(access_security, access_eva, access_sec_doors, access_brig, access_armory,
-						access_forensics_lockers, access_morgue, access_maint_tunnels, access_all_personal_lockers,
-						access_research, access_engine, access_mining, access_medical, access_construction, access_mailsorting,
-						access_heads, access_hos, access_RC_announce, access_keycard_auth, access_gateway, access_external_airlocks, access_teleporter) //CHOMP Edit: Restores what access is given in security.dm.
+	access = list(ACCESS_SECURITY, ACCESS_EVA, ACCESS_SEC_DOORS, ACCESS_BRIG, ACCESS_ARMORY,
+							ACCESS_FORENSICS_LOCKERS, ACCESS_MORGUE, ACCESS_MAINT_TUNNELS, ACCESS_ALL_PERSONAL_LOCKERS,
+							ACCESS_RESEARCH, ACCESS_ENGINE, ACCESS_MINING, ACCESS_MEDICAL, ACCESS_CONSTRUCTION, ACCESS_MAILSORTING,
+							ACCESS_HEADS, ACCESS_HOS, ACCESS_RC_ANNOUNCE, ACCESS_KEYCARD_AUTH, ACCESS_GATEWAY, ACCESS_EXTERNAL_AIRLOCKS, ACCESS_TELEPORTER) // CHOMPEdit Restores what access is given in security.dm.
+	minimal_access = list(ACCESS_SECURITY, ACCESS_EVA, ACCESS_SEC_DOORS, ACCESS_BRIG, ACCESS_ARMORY,
+							ACCESS_FORENSICS_LOCKERS, ACCESS_MORGUE, ACCESS_MAINT_TUNNELS, ACCESS_ALL_PERSONAL_LOCKERS,
+							ACCESS_RESEARCH, ACCESS_ENGINE, ACCESS_MINING, ACCESS_MEDICAL, ACCESS_CONSTRUCTION, ACCESS_MAILSORTING,
+						ACCESS_HEADS, ACCESS_HOS, ACCESS_RC_ANNOUNCE, ACCESS_KEYCARD_AUTH, ACCESS_GATEWAY, ACCESS_EXTERNAL_AIRLOCKS, ACCESS_TELEPORTER) // CHOMPEdit Restores what access is given in security.dm.
 	minimum_character_age = 25
 	min_age_by_species = list(SPECIES_HUMAN_VATBORN = 14)
 	minimal_player_age = 31 //ChompEDIT
 	ideal_character_age = 50
 	ideal_age_by_species = list(SPECIES_HUMAN_VATBORN = 20)
-	banned_job_species = list(SPECIES_TESHARI, SPECIES_DIONA, SPECIES_PROMETHEAN, SPECIES_ZADDAT, "digital", SPECIES_UNATHI, "mechanical")
+	banned_job_species = list(SPECIES_TESHARI, SPECIES_DIONA, SPECIES_PROMETHEAN, SPECIES_ZADDAT, FBP_DIGITAL, SPECIES_UNATHI, FBP_MECHANICAL)
 	disallow_jobhop = TRUE
 	pto_type = PTO_SECURITY
 	dept_time_required = 60
@@ -56,7 +56,7 @@
 /datum/job/hos/equip(var/mob/living/carbon/human/H)
 	. = ..()
 	if(.)
-		H.implant_loyalty(src)
+		H.implant_loyalty()
 //YW ADDITION END
 
 //////////////////////////////////
@@ -76,8 +76,8 @@
 	economic_modifier = 5
 	pto_type = PTO_SECURITY
 	dept_time_required = 20
-	access = list(access_security, access_eva, access_sec_doors, access_brig, access_armory, access_maint_tunnels, access_morgue, access_external_airlocks)
-	minimal_access = list(access_security, access_eva, access_sec_doors, access_brig, access_armory, access_maint_tunnels, access_external_airlocks)
+	access = list(ACCESS_SECURITY, ACCESS_EVA, ACCESS_SEC_DOORS, ACCESS_BRIG, ACCESS_ARMORY, ACCESS_MAINT_TUNNELS, ACCESS_MORGUE, ACCESS_EXTERNAL_AIRLOCKS)
+	minimal_access = list(ACCESS_SECURITY, ACCESS_EVA, ACCESS_SEC_DOORS, ACCESS_BRIG, ACCESS_ARMORY, ACCESS_MAINT_TUNNELS, ACCESS_EXTERNAL_AIRLOCKS)
 	minimal_player_age = 5
 	banned_job_species = list(SPECIES_ZADDAT, SPECIES_PROMETHEAN, SPECIES_TESHARI, SPECIES_DIONA)
 	alt_titles = list(JOB_ALT_BRIG_SENTRY = /datum/alt_title/brig_sentry, JOB_ALT_ARMORY_SUPERINTENDENT = /datum/alt_title/armory_superintendent, JOB_ALT_MASTERATARMS = /datum/alt_title/master_at_arms)
@@ -114,8 +114,8 @@
 	pto_type = PTO_SECURITY
 	supervisors = "the " + JOB_HEAD_OF_SECURITY
 	selection_color = "#601C1C"
-	access = list(access_security, access_sec_doors, access_forensics_lockers, access_morgue, access_maint_tunnels, access_eva, access_external_airlocks, access_brig) //Vorestation edit - access_brig
-	minimal_access = list(access_security, access_sec_doors, access_forensics_lockers, access_morgue, access_maint_tunnels, access_eva, access_external_airlocks)
+	access = list(ACCESS_SECURITY, ACCESS_SEC_DOORS, ACCESS_FORENSICS_LOCKERS, ACCESS_MORGUE, ACCESS_MAINT_TUNNELS, ACCESS_EVA, ACCESS_EXTERNAL_AIRLOCKS, ACCESS_BRIG) //Vorestation edit - ACCESS_BRIG
+	minimal_access = list(ACCESS_SECURITY, ACCESS_SEC_DOORS, ACCESS_FORENSICS_LOCKERS, ACCESS_MORGUE, ACCESS_MAINT_TUNNELS, ACCESS_EVA, ACCESS_EXTERNAL_AIRLOCKS)
 	economic_modifier = 5
 	minimal_player_age = 3
 	banned_job_species = list(SPECIES_ZADDAT, SPECIES_PROMETHEAN, SPECIES_DIONA)
@@ -154,9 +154,9 @@
 	pto_type = PTO_SECURITY
 	supervisors = "the " + JOB_HEAD_OF_SECURITY
 	selection_color = "#601C1C"
-	economic_modifier = 5	//CHOMPstation edit - "Offduty officers make more than working, and this brings it in line with the rest of the jobs in sec barring HOS"
-	access = list(access_security, access_eva, access_sec_doors, access_brig, access_maint_tunnels, access_morgue, access_external_airlocks)
-	minimal_access = list(access_security, access_eva, access_sec_doors, access_brig, access_maint_tunnels, access_external_airlocks)
+	economic_modifier = 5	// CHOMPAdd - "Offduty officers make more than working, and this brings it in line with the rest of the jobs in sec barring HOS"
+	access = list(ACCESS_SECURITY, ACCESS_EVA, ACCESS_SEC_DOORS, ACCESS_BRIG, ACCESS_MAINT_TUNNELS, ACCESS_MORGUE, ACCESS_EXTERNAL_AIRLOCKS)
+	minimal_access = list(ACCESS_SECURITY, ACCESS_EVA, ACCESS_SEC_DOORS, ACCESS_BRIG, ACCESS_MAINT_TUNNELS, ACCESS_EXTERNAL_AIRLOCKS)
 	minimal_player_age = 3
 	banned_job_species = list(SPECIES_ZADDAT, SPECIES_TESHARI, SPECIES_DIONA)
 
@@ -165,7 +165,8 @@
 						apprehending criminals. A " + JOB_SECURITY_OFFICER + " is responsible for the health, safety, and processing of any prisoner they arrest. \
 						No one is above the Law, not Security or Command."
 	alt_titles = list(JOB_ALT_PATROL_OFFICER = /datum/alt_title/patrol_officer, JOB_ALT_SECURITY_GUARD = /datum/alt_title/security_guard,
-						JOB_ALT_SECURITY_DEPUTY = /datum/alt_title/security_guard, JOB_ALT_JUNIOR_OFFICER = /datum/alt_title/junior_officer, JOB_ALT_SECURITY_CONTRACTOR = /datum/alt_title/security_contractor)
+						JOB_ALT_SECURITY_DEPUTY = /datum/alt_title/security_guard, JOB_ALT_JUNIOR_OFFICER = /datum/alt_title/junior_officer,
+						JOB_ALT_SECURITY_CONTRACTOR = /datum/alt_title/security_contractor, JOB_ALT_LOSS_PREVENTION = /datum/alt_title/loss_prevention)
 
 	min_age_by_species = list(SPECIES_PROMETHEAN = 3)
 
@@ -190,3 +191,6 @@
 
 /datum/alt_title/security_contractor
 	title = JOB_ALT_SECURITY_CONTRACTOR
+
+/datum/alt_title/loss_prevention
+	title = JOB_ALT_LOSS_PREVENTION

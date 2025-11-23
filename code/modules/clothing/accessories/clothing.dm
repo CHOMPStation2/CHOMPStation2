@@ -191,15 +191,7 @@
 		SPECIES_TESHARI = 'icons/inventory/suit/mob_teshari.dmi'
 	)
 
-//YWEdit Start, Makes ponchos use teshari sprite
-/obj/item/clothing/accessory/poncho/get_worn_icon_file(var/body_type,var/slot_name,var/default_icon,var/inhands)
-	if(body_type == SPECIES_TESHARI)
-		if(!inhands)
-			return 'icons/inventory/suit/mob_teshari.dmi'
-	else
-		return ..()
-//YWEdit end
-
+//This is really scuffed and needs fixing sometime.
 /obj/item/clothing/accessory/poncho/equipped() //Solution for race-specific sprites for an accessory which is also a suit. Suit icons break if you don't use icon override which then also overrides race-specific sprites.
 	..()
 	var/mob/living/carbon/human/H = loc

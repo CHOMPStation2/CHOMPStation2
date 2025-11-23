@@ -157,7 +157,7 @@
 	var/obj/item/organ/external/E = get_active_hand()
 	if(!check_can_attach_modular_limb(E))
 		return FALSE
-	if(!do_after(src, 2 SECONDS, src))
+	if(!do_after(src, 2 SECONDS, target = src))
 		return FALSE
 	if(!check_can_attach_modular_limb(E))
 		return FALSE
@@ -171,9 +171,8 @@
 	for(var/obj/item/organ/external/child in E.children)
 		child.status &= ~ORGAN_CUT_AWAY
 
-	var/datum/gender/G = GLOB.gender_datums[gender]
 	visible_message(
-		span_notice("\The [src] attaches \the [E] to [G.his] body!"),
+		span_notice("\The [src] attaches \the [E] to [p_their()] body!"),
 		span_notice("You attach \the [E] to your body!"))
 	regenerate_icons() // Not sure why this isn't called by removed(), but without it we don't update our limb appearance.
 	return TRUE
@@ -190,7 +189,7 @@
 	var/obj/item/organ/external/E = tgui_input_list(src, "Which limb do you wish to detach?", "Limb Removal", detachable_limbs)
 	if(!check_can_detach_modular_limb(E))
 		return FALSE
-	if(!do_after(src, 2 SECONDS, src))
+	if(!do_after(src, 2 SECONDS, target = src))
 		return FALSE
 	if(!check_can_detach_modular_limb(E))
 		return FALSE
@@ -199,8 +198,7 @@
 	E.removed(src)
 	E.dropInto(loc)
 	put_in_hands(E)
-	var/datum/gender/G = GLOB.gender_datums[gender]
 	visible_message(
-		span_notice("\The [src] detaches [G.his] [E.name]!"),
+		span_notice("\The [src] detaches [p_their()] [E.name]!"),
 		span_notice("You detach your [E.name]!"))
 	return TRUE

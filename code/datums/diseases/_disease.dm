@@ -44,12 +44,23 @@ GLOBAL_LIST_INIT(diseases, subtypesof(/datum/disease))
 		End()
 	return ..()
 
+/datum/disease/proc/infect(var/mob/living/infectee, make_copy = TRUE)
+	var/datum/disease/D = make_copy ? Copy() : src
+	infectee.addDisease(D)
+	D.affected_mob = infectee
+	GLOB.active_diseases += D
+
+	log_admin("[key_name(src)] has contracted the virus \"[D]\"")
+
 /datum/disease/proc/stage_act()
 	if(!affected_mob)
 		return FALSE
 	var/cure = has_cure()
 
 	if(global_flag_check(virus_modifiers, CARRIER) && !cure)
+		return FALSE
+
+	if(global_flag_check(virus_modifiers, DORMANT))
 		return FALSE
 
 	if(!global_flag_check(virus_modifiers, PROCESSING))
@@ -176,6 +187,7 @@ GLOBAL_LIST_INIT(diseases, subtypesof(/datum/disease))
 /datum/disease/proc/Copy()
 	var/datum/disease/D = new type()
 	D.strain_data = strain_data.Copy()
+	D.virus_modifiers = virus_modifiers
 	return D
 
 /datum/disease/proc/GetDiseaseID()
@@ -215,3 +227,23 @@ GLOBAL_LIST_INIT(diseases, subtypesof(/datum/disease))
 // Called when the mob dies
 /datum/disease/proc/OnDeath()
 	return
+
+// Adds a virus to the virus DB
+// Currently it won't show on the Medical Computers because OLD interface, which needs to be updated
+/datum/disease/proc/addToDB()
+	if(GetDiseaseID() in GLOB.virusDB)
+		return FALSE
+
+	var/datum/data/record/v = new()
+
+	v.fields["id"] = GetDiseaseID()
+	v.fields["name"] = name
+	v.fields["description"] = desc
+	v.fields["form"] = form
+	v.fields["agent"] = agent
+	v.fields["cure"] = cure_text
+	v.fields["spread"] = spread_text
+
+	GLOB.virusDB["[GetDiseaseID()]"] = v
+
+	return TRUE

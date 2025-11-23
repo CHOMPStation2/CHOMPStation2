@@ -78,8 +78,7 @@
 	if(P.lit && !user.restrained())
 		if(istype(P, /obj/item/flame/lighter/zippo))
 			class = "rose>"
-		var/datum/gender/TU = GLOB.gender_datums[user.get_visible_gender()]
-		user.visible_message("<span class='[class]'>[user] holds \the [P] up to \the [src], it looks like [TU.he] [TU.is] trying to burn it!</span>", \
+		user.visible_message("<span class='[class]'>[user] holds \the [P] up to \the [src], it looks like [user.p_theyre()] trying to burn it!</span>", \
 		"<span class='[class]'>You hold \the [P] up to \the [src], burning it slowly.</span>")
 
 		spawn(20)
@@ -194,7 +193,7 @@
 	set category = "Object"
 	set src in usr
 
-	var/n_name = sanitizeSafe(tgui_input_text(usr, "What would you like to label the bundle?", "Bundle Labelling", null, MAX_NAME_LEN), MAX_NAME_LEN)
+	var/n_name = sanitizeSafe(tgui_input_text(usr, "What would you like to label the bundle?", "Bundle Labelling", null, MAX_NAME_LEN, encode = FALSE), MAX_NAME_LEN)
 	if((loc == usr || loc.loc && loc.loc == usr) && usr.stat == 0)
 		name = "[(n_name ? text("[n_name]") : "paper")]"
 	add_fingerprint(usr)

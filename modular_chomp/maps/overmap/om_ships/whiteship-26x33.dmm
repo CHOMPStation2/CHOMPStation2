@@ -147,10 +147,6 @@
 /obj/structure/shuttle/engine/router,
 /turf/simulated/wall/thull,
 /area/shuttle/whiteshipOM2)
-"fg" = (
-/obj/screen/alert/highpressure,
-/turf/simulated/wall/thull,
-/area/shuttle/whiteshipOM2)
 "fs" = (
 /obj/machinery/door/airlock/maintenance/common,
 /obj/machinery/atmospherics/pipe/simple/hidden{
@@ -193,7 +189,7 @@
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 1;
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "estrella_pump"
 	},
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
@@ -287,13 +283,13 @@
 /area/shuttle/whiteshipOM2)
 "ll" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "estrella_pump"
 	},
 /obj/machinery/embedded_controller/radio/airlock/docking_port{
 	id_tag = "whiteship_docker2";
 	pixel_y = 25;
-	frequency = 1380
+	frequency = 1381
 	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 5
@@ -728,7 +724,6 @@
 /obj/item/clothing/shoes/footwraps,
 /obj/item/clothing/shoes/footwraps,
 /obj/item/clothing/shoes/footwraps,
-/obj/item/toy/bosunwhistle/fluff/strix,
 /obj/item/blobcore_chunk,
 /obj/item/towel/random,
 /obj/item/towel/random,
@@ -847,7 +842,7 @@
 /obj/item/reagent_containers/food/snacks/tocino,
 /obj/item/reagent_containers/food/snacks/tocino,
 /obj/machinery/access_button{
-	frequency = 1380;
+	frequency = 1381;
 	name = "interior access button";
 	pixel_y = 26
 	},
@@ -1266,7 +1261,7 @@
 	dir = 9
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "estrella_pump"
 	},
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
@@ -1465,10 +1460,6 @@
 /obj/random/soap,
 /turf/simulated/floor/plating,
 /area/shuttle/whiteshipOM2)
-"Kx" = (
-/obj/screen/alert/highpressure,
-/turf/template_noop,
-/area/template_noop)
 "KD" = (
 /obj/machinery/atmospherics/unary/vent_pump{
 	dir = 1;
@@ -1946,14 +1937,14 @@
 "UZ" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 1;
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "estrella_pump"
 	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 6
 	},
 /obj/machinery/airlock_sensor{
-	frequency = 1380;
+	frequency = 1381;
 	pixel_y = -28;
 	dir = 1
 	},
@@ -2127,7 +2118,6 @@
 /obj/item/ore/marble,
 /obj/item/ore/osmium,
 /obj/item/ore/rutile,
-/obj/item/toy/bosunwhistle/fluff/strix,
 /obj/item/toy/character/wizard,
 /obj/item/reagent_containers/hypospray/autoinjector/biginjector/mindbreaker/unidentified,
 /obj/item/reagent_containers/hypospray/autoinjector/biginjector/mindbreaker/unidentified,
@@ -2254,14 +2244,14 @@ Eq
 Eq
 Eq
 Eq
-Kx
-fg
+Eq
+sH
 Bn
 Bn
 Bn
-fg
-Kx
-Kx
+sH
+Eq
+Eq
 Eq
 Eq
 Eq
@@ -2290,14 +2280,14 @@ Eq
 Eq
 sH
 Bn
-fg
+sH
 hb
 Cz
 TF
-fg
+sH
 Bn
-fg
-Kx
+sH
+Eq
 Eq
 Eq
 Eq
@@ -2332,7 +2322,7 @@ ez
 JG
 lu
 sH
-Kx
+Eq
 Eq
 Eq
 Eq

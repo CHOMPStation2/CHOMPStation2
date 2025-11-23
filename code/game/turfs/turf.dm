@@ -11,6 +11,8 @@
 	var/carbon_dioxide = 0
 	var/nitrogen = 0
 	var/phoron = 0
+	var/nitrous_oxide = 0
+	var/methane = 0
 
 	//CHOMPEdit Begin
 	//* Movement / Pathfinding
@@ -124,7 +126,7 @@
 	if (!changing_turf)
 		stack_trace("Improper turf qdel. Do not qdel turfs directly.")
 	changing_turf = FALSE
-	cleanbot_reserved_turfs -= src
+	GLOB.cleanbot_reserved_turfs -= src
 	if(connections)
 		connections.erase_all()
 	..()
@@ -211,7 +213,7 @@
 	var/area/A = T.loc
 	if((istype(A) && !(A.get_gravity())) || (istype(T,/turf/space)))
 		return
-	if(istype(O, /obj/screen))
+	if(istype(O, /atom/movable/screen))
 		return
 	if(user.restrained() || user.stat || user.stunned || user.paralysis || (!user.lying && !isrobot(user)) || LAZYLEN(user.grabbed_by))
 		return
@@ -221,7 +223,7 @@
 		return
 	if(isanimal(user) && O != user)
 		return
-	if (do_after(user, 25 + (5 * user.weakened)) && !(user.stat))
+	if (do_after(user, 25 + (5 * user.weakened), target = O) && !(user.stat))
 		step_towards(O, src)
 		if(ismob(O))
 			animate(O, transform = turn(O.transform, 20), time = 2)
@@ -341,32 +343,20 @@
 			return 1
 	return 0
 
-//expects an atom containing the reagents used to clean the turf
-/turf/proc/clean(atom/source, mob/user)
-	if(source.reagents.has_reagent(REAGENT_ID_WATER, 1) || source.reagents.has_reagent(REAGENT_ID_CLEANER, 1))
-		clean_blood()
-		if(istype(src, /turf/simulated))
-			var/turf/simulated/T = src
-			T.dirt = 0
-		for(var/obj/effect/O in src)
-			if(istype(O,/obj/effect/rune) || istype(O,/obj/effect/decal/cleanable) || istype(O,/obj/effect/overlay))
-				qdel(O)
-	else
-		to_chat(user, span_warning("\The [source] is too dry to wash that."))
-	source.reagents.trans_to_turf(src, 1, 10)	//10 is the multiplier for the reaction effect. probably needed to wet the floor properly.
-
 /turf/proc/update_blood_overlays()
 	return
 
 // Called when turf is hit by a thrown object
-/turf/hitby(atom/movable/AM as mob|obj, var/speed)
-	if(density)
-		if(!get_gravity(AM)) //Checked a different codebase for reference. Turns out it's only supposed to happen in no-gravity
-			spawn(2)
-				step(AM, turn(AM.last_move, 180)) //This makes it float away after hitting a wall in 0G
-		if(isliving(AM))
-			var/mob/living/M = AM
-			M.turf_collision(src, speed)
+/turf/hitby(atom/movable/source, var/speed)
+	if(!density)
+		return
+
+	if(!get_gravity(source)) //Checked a different codebase for reference. Turns out it's only supposed to happen in no-gravity
+		spawn(2)
+			step(source, turn(source.last_move, 180)) //This makes it float away after hitting a wall in 0G
+	if(isliving(source))
+		var/mob/living/M = source
+		M.turf_collision(src, speed)
 
 /turf/AllowDrop()
 	return TRUE
@@ -390,7 +380,7 @@
 		to_chat(vandal, span_warning("There's too much graffiti here to add more."))
 		return FALSE
 
-	var/message = sanitize(tgui_input_text(vandal, "Enter a message to engrave.", "Graffiti"), trim = TRUE)
+	var/message = tgui_input_text(vandal, "Enter a message to engrave.", "Graffiti", "", MAX_MESSAGE_LEN)
 	if(!message)
 		return FALSE
 
@@ -399,7 +389,7 @@
 
 	vandal.visible_message(span_warning("\The [vandal] begins carving something into \the [src]."))
 
-	if(!do_after(vandal, max(20, length(message)), src))
+	if(!do_after(vandal, max(2 SECONDS, length(message)), target = src))
 		return FALSE
 
 	vandal.visible_message(span_danger("\The [vandal] carves some graffiti into \the [src]."))
@@ -521,3 +511,21 @@
 	H.ingested.trans_to(V, H.ingested.total_volume / 10)
 	for(var/datum/reagent/R in H.ingested.reagent_list)
 		H.ingested.remove_reagent(R, min(R.volume, 10))
+
+/**
+* 	Called when this turf is being washed. Washing a turf will also wash any mopable floor decals
+*/
+/turf/wash(clean_types)
+	. = ..()
+
+	if(istype(src, /turf/simulated))
+		var/turf/simulated/T = src
+		T.dirt = 0
+
+	for(var/am in src)
+		if(am == src)
+			continue
+		var/atom/movable/movable_content = am
+		if(!ismopable(movable_content))
+			continue
+		movable_content.wash(clean_types)

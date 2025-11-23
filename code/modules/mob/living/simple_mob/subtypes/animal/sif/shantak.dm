@@ -33,19 +33,10 @@
 	icon = 'icons/jungle.dmi'
 
 	maxHealth = 75
-	armor_soak = list(
-				"melee" = 5,
-				"bullet" = 0,
-				"laser" = 0,
-				"energy" = 0,
-				"bomb" = 0,
-				"bio" = 0,
-				"rad" = 0
-				)
 	heat_resist = -0.50
 	cold_resist = 0.75
 	movement_cooldown = -1
-	minbodytemp = 175 //yw edit, Makes mobs survive cryogaia temps
+	minbodytemp = 175
 	melee_damage_lower = 6
 	melee_damage_upper = 14
 	base_attack_cooldown = 1 SECOND
@@ -58,7 +49,6 @@
 	organ_names = /decl/mob_organ_names/shantak
 
 	say_list_type = /datum/say_list/shantak
-
 
 /datum/say_list/shantak
 	speak = list("Shuhn.","Shrunnph?","Shunpf.")

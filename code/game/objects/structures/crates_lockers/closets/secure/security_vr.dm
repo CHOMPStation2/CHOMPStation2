@@ -1,6 +1,6 @@
 /obj/structure/closet/secure_closet/hos
 	name = "head of security's attire"
-	req_access = list(access_hos)
+	req_access = list(ACCESS_HOS)
 	closet_appearance = /decl/closet_appearance/secure_closet/security/hos
 	storage_capacity = 2.5 * MOB_MEDIUM
 
@@ -39,14 +39,16 @@
 		/obj/item/clothing/head/beret/sec/corporate/hos,
 //		/obj/item/clothing/suit/storage/hooded/wintercoat/security, //CHOMP Remove
 		/obj/item/clothing/suit/storage/hooded/wintercoat/security/hos,
-		/obj/item/clothing/shoes/boots/winter/security,
-//CHOMP Add ^
-		/obj/item/clothing/mask/gas/half, // CHOMPADD
-		/obj/item/clothing/mask/gas/sechailer/swat/hos) // CHOMPADD
+		/obj/item/clothing/shoes/boots/winter/security, //CHOMPADD
+		/obj/item/clothing/mask/gas/sechailer/swat/hos, //CHOMPADD
+		/obj/item/clothing/mask/gas/half,
+		/obj/item/clothing/head/helmet/HoS/hat/red,
+		/obj/item/clothing/suit/storage/vest/hoscoat/neo_hos_parade_jacket,
+		/obj/item/clothing/accessory/poncho/roles/cloak/neo_pcloak)
 
 /obj/structure/closet/secure_closet/hos2
 	name = "head of security's gear"
-	req_access = list(access_hos)
+	req_access = list(ACCESS_HOS)
 	closet_appearance = /decl/closet_appearance/secure_closet/security/hos
 	storage_capacity = 2.5 * MOB_MEDIUM
 
@@ -79,7 +81,7 @@
 //Custom NT Security Lockers, Only found at central command
 /obj/structure/closet/secure_closet/nanotrasen_security
 	name = "NanoTrasen security officer's locker"
-	req_access = list(access_brig)
+	req_access = list(ACCESS_BRIG)
 	closet_appearance = /decl/closet_appearance/secure_closet/nanotrasen/security
 	storage_capacity = 3.5 * MOB_MEDIUM
 
@@ -121,7 +123,7 @@
 
 /obj/structure/closet/secure_closet/nanotrasen_commander
 	name = "NanoTrasen commander's locker"
-	req_access = list(access_brig)
+	req_access = list(ACCESS_BRIG)
 	closet_appearance = /decl/closet_appearance/secure_closet/nanotrasen/commander
 	storage_capacity = 3.5 * MOB_MEDIUM
 
@@ -171,7 +173,7 @@
 
 /obj/structure/closet/secure_closet/nanotrasen_warden
 	name = "NanoTrasen warden's locker"
-	req_access = list(access_brig)
+	req_access = list(ACCESS_BRIG)
 	closet_appearance = /decl/closet_appearance/secure_closet/nanotrasen/warden
 	storage_capacity = 3.5 * MOB_MEDIUM
 

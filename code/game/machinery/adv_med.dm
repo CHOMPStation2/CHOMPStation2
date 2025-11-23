@@ -9,6 +9,7 @@
 	density = TRUE
 	anchored = TRUE
 	unacidable = TRUE
+	flags = REMOTEVIEW_ON_ENTER
 	circuit = /obj/item/circuitboard/body_scanner
 	use_power = USE_POWER_IDLE
 	idle_power_usage = 60
@@ -124,10 +125,7 @@
 /obj/machinery/bodyscanner/proc/go_out()
 	if ((!(occupant) || src.locked))
 		return
-	if (occupant.client)
-		occupant.client.eye = occupant.client.mob
-		occupant.client.perspective = MOB_PERSPECTIVE
-	occupant.forceMove(src.loc) // was occupant.loc = src.loc, but that doesn't trigger exit(), and thus recursive radio listeners forwarded messages to the occupant as if they were still inside it for the rest of the round! OP21 #5f88307 Port
+	occupant.forceMove(get_turf(src))
 	occupant = null
 	update_icon() //icon_state = "body_scanner_1" //VOREStation Edit - Health display for consoles with light and such.
 	SStgui.update_uis(src)
@@ -137,7 +135,7 @@
 	switch(severity)
 		if(1.0)
 			for(var/atom/movable/A as mob|obj in src)
-				A.loc = src.loc
+				A.forceMove(get_turf(src))
 				ex_act(severity)
 				//Foreach goto(35)
 			//SN src = null
@@ -146,7 +144,7 @@
 		if(2.0)
 			if (prob(50))
 				for(var/atom/movable/A as mob|obj in src)
-					A.loc = src.loc
+					A.forceMove(get_turf(src))
 					ex_act(severity)
 					//Foreach goto(108)
 				//SN src = null
@@ -155,7 +153,7 @@
 		if(3.0)
 			if (prob(25))
 				for(var/atom/movable/A as mob|obj in src)
-					A.loc = src.loc
+					A.forceMove(get_turf(src))
 					ex_act(severity)
 					//Foreach goto(181)
 				//SN src = null
@@ -186,17 +184,24 @@
 		occupantData["name"] = H.name
 		occupantData["species"] = H.species.name
 		if(H.custom_species)
-			if( H.species.name == SPECIES_CUSTOM )
+			if( H.species.name == SPECIES_CUSTOM || H.species.name == SPECIES_HANNER )
 				// Fully custom species
 				occupantData["species"] = "[H.custom_species]"
 			else
 				// Using another species as base, doctors should know this to avoid some meds
 				occupantData["species"] = "[H.custom_species] \[Similar biology to [H.species.name]\]"
+
+		var/has_withdrawl = FALSE
+		for(var/addic in H.get_all_addictions())
+			if(H.get_addiction_to_reagent(addic) > 0 && H.get_addiction_to_reagent(addic) < 80)
+				has_withdrawl = TRUE
+				break
+
 		occupantData["stat"] = H.stat
 		occupantData["health"] = H.health
 		occupantData["maxHealth"] = H.getMaxHealth()
 
-		occupantData["hasVirus"] = H.IsInfected()
+		occupantData["hasVirus"] = H.isInfective()
 
 		occupantData["bruteLoss"] = H.getBruteLoss()
 		occupantData["oxyLoss"] = H.getOxyLoss()
@@ -212,6 +217,8 @@
 		occupantData["bodyTempF"] = (((H.bodytemperature-T0C) * 1.8) + 32)
 
 		occupantData["hasBorer"] = H.has_brain_worms()
+		occupantData["hasWithdrawl"] = has_withdrawl
+
 		occupantData["colourblind"] = null
 		for(var/datum/modifier/M in H.modifiers)
 			if(!isnull(M.wire_colors_replace))
@@ -265,6 +272,13 @@
 			organData["maxHealth"] = E.max_damage
 			organData["bruised"] = E.min_bruised_damage
 			organData["broken"] = E.min_broken_damage
+
+			var/list/medical_issueDataE = list()
+			for(var/datum/medical_issue/MI in E.medical_issues)
+				if(MI.showscanner)
+					medical_issueDataE += MI.name
+
+			organData["medical_issues_E"] = medical_issueDataE
 
 			var/implantData[0]
 			for(var/obj/thing in E.implants)
@@ -345,13 +359,20 @@
 
 			intOrganData.Add(list(organData))
 
+			var/list/medical_issueDataI = list()
+			for(var/datum/medical_issue/MI in I.medical_issues)
+				if(MI.showscanner)
+					medical_issueDataI += MI.name
+
+			organData["medical_issues_I"] = medical_issueDataI
+
 		occupantData["intOrgan"] = intOrganData
 
 		occupantData["blind"] = (H.sdisabilities & BLIND)
 		occupantData["nearsighted"] = (H.disabilities & NEARSIGHTED)
 		occupantData["brokenspine"] = (H.disabilities & SPINE)
 		occupantData["husked"] = (HUSK in H.mutations)
-		occupantData = attempt_vr(src, "get_occupant_data_vr", list(occupantData, H))
+		occupantData = get_vored_occupant_data(occupantData, H)
 	data["occupant"] = occupantData
 
 	return data
@@ -383,6 +404,7 @@
 
 	dat = span_blue(span_bold("Occupant Statistics:")) + "<br>" //Blah obvious
 	if(istype(occupant)) //is there REALLY someone in there?
+		var/has_withdrawl = ""
 		if(ishuman(occupant))
 			var/mob/living/carbon/human/H = occupant
 			var/speciestext = H.species.name
@@ -394,6 +416,11 @@
 				else
 					speciestext = "[H.custom_species] \[Similar biology to [H.species.name]\]"
 					dat += span_blue("Sapient Species: [speciestext]") + "<BR>"
+			for(var/addic in H.get_all_addictions())
+				if(H.get_addiction_to_reagent(addic) > 0 && H.get_addiction_to_reagent(addic) < 80)
+					var/datum/reagent/R = SSchemistry.chemical_reagents[addic]
+					has_withdrawl = R.name
+					break
 		var/t1
 		switch(occupant.stat) // obvious, see what their status is
 			if(0)
@@ -411,7 +438,7 @@
 				if(D.visibility_flags & HIDDEN_SCANNER)
 					continue
 				else
-					dat += span_red("Viral pathogen detected in blood stream.") + "<BR>"
+					dat += span_red("Disease detected in blood stream.") + "<BR>"
 
 		var/damage_string = null
 		damage_string = "\t-Brute Damage %: [occupant.getBruteLoss()]"
@@ -479,6 +506,7 @@
 			var/internal_bleeding = ""
 			var/lung_ruptured = ""
 			var/o_dead = ""
+			var/mi = ""
 			for(var/datum/wound/W in e.wounds) if(W.internal)
 				internal_bleeding = "<br>Internal bleeding"
 				break
@@ -522,12 +550,15 @@
 				else
 					unknown_body++
 
+			for(var/datum/medical_issue/MI in e.medical_issues)
+				mi += "[MI.name] detected:"
+
 			if(unknown_body)
 				imp += "Unknown body present:"
-			if(!AN && !open && !infected && !imp)
+			if(!AN && !open && !infected && !imp && !mi)
 				AN = "None:"
 			if(!(e.status & ORGAN_DESTROYED))
-				dat += "<td>[e.name]</td><td>[e.burn_dam]</td><td>[e.brute_dam]</td><td>[robot][bled][AN][splint][open][infected][imp][internal_bleeding][lung_ruptured][o_dead]</td>"
+				dat += "<td>[e.name]</td><td>[e.burn_dam]</td><td>[e.brute_dam]</td><td>[robot][bled][AN][splint][open][infected][imp][mi][internal_bleeding][lung_ruptured][o_dead]</td>"
 			else
 				dat += "<td>[e.name]</td><td>-</td><td>-</td><td>Not Found</td>"
 			dat += "</tr>"
@@ -535,6 +566,7 @@
 		for(var/obj/item/organ/i in occupant.internal_organs)
 			var/mech = ""
 			var/i_dead = ""
+			var/mi = ""
 			if(i.status & ORGAN_ASSISTED)
 				mech = "Assisted:"
 			if(i.robotic >= ORGAN_ROBOT)
@@ -562,6 +594,8 @@
 				var/obj/item/organ/internal/appendix/A = i
 				if(A.inflamed)
 					infection = "Inflammation detected!"
+			for(var/datum/medical_issue/MI in i.medical_issues)
+				mi += "[MI.name] detected:"
 
 			// CHOMPedit begin - malignant organs
 			if(istype(i, /obj/item/organ/internal/malignant))
@@ -570,7 +604,7 @@
 			// CHOMPedit end
 
 			dat += "<tr>"
-			dat += "<td>[i.name]</td><td>N/A</td><td>[i.damage]</td><td>[infection]:[mech][i_dead]</td><td></td>"
+			dat += "<td>[i.name]</td><td>N/A</td><td>[i.damage]</td><td>[infection]:[mi][mech][i_dead]</td><td></td>"
 			dat += "</tr>"
 		for(var/organ_tag in occupant.species.has_organ) //Check to see if we are missing any organs
 			var/organData[0]
@@ -591,6 +625,8 @@
 		if(hasMalignants != "")
 			dat += span_red("Unknown anatomy detected!") + "<BR>[hasMalignants]"
 		//CHOMPedit end
+		if(has_withdrawl != "")
+			dat += span_red("Experiencing withdrawal symptoms!") + "<BR>[has_withdrawl]"
 		if(HUSK in occupant.mutations) // VOREstation edit
 			dat += span_red("Anatomical structure lost, resuscitation not possible!") + "<BR>"
 	else

@@ -45,6 +45,7 @@ var/list/organ_cache = list()
 
 	var/butcherable = TRUE
 	var/meat_type	// What does butchering, if possible, make?
+	var/list/medical_issues = list()
 
 /obj/item/organ/Destroy()
 
@@ -95,7 +96,7 @@ var/list/organ_cache = list()
 			data.setup_from_dna(C.dna)
 			data.setup_from_species(C.species)
 		else
-			log_debug("[src] at [loc] spawned without a proper DNA.")
+			log_runtime("[src] at [loc] spawned without a proper DNA.")
 		var/mob/living/carbon/human/H = C
 		if(istype(H))
 			if(internal)
@@ -105,9 +106,7 @@ var/list/organ_cache = list()
 						E.internal_organs = list()
 					E.internal_organs |= src
 			if(data)
-				if(!blood_DNA)
-					blood_DNA = list()
-				blood_DNA[data.unique_enzymes] = data.b_type
+				add_blooddna_organ(data)
 	else
 		data.setup_from_species(GLOB.all_species["Human"])
 
@@ -131,9 +130,8 @@ var/list/organ_cache = list()
 /obj/item/organ/proc/set_dna(var/datum/dna/new_dna)
 	if(new_dna)
 		data.setup_from_dna(new_dna)
-		if(blood_DNA)
-			blood_DNA.Cut()
-			blood_DNA[data.unique_enzymes] = data.b_type
+		forensic_data?.clear_blooddna()
+		add_blooddna_organ(data)
 
 /obj/item/organ/proc/die()
 	if(robotic < ORGAN_ROBOT)
@@ -167,6 +165,9 @@ var/list/organ_cache = list()
 		die()
 
 	handle_organ_proc_special()
+
+	for(var/datum/medical_issue/I in medical_issues)
+		I.handle_effects()
 
 	//Process infections
 	if(robotic >= ORGAN_ROBOT || (istype(owner) && (owner.species && (owner.species.flags & (IS_PLANT | NO_INFECT)))))
@@ -211,12 +212,20 @@ var/list/organ_cache = list()
 
 	/// Infection damage
 
-	//If the organ is dead, for the sake of organs that may have died due to non-infection, we'll only do damage if they have at least L1 infection (built up below)
-	if((status & ORGAN_DEAD) && antibiotics < ANTIBIO_OD && germ_level >= INFECTION_LEVEL_ONE)
-		infection_damage = max(1, 1 + round((germ_level - INFECTION_LEVEL_THREE)/200,0.25)) //1 Tox plus a little based on germ level
+	//If the organ is dead, for the sake of organs that may have died due to non-infection, we'll only do damage if they have at least L2 infection (built up below)
+	//A dead organ is bad, so you start getting flooded with toxins faster.
+	if((status & ORGAN_DEAD) && antibiotics < ANTIBIO_OD && germ_level >= INFECTION_LEVEL_TWO)
+		infection_damage = CLAMP(round((germ_level - INFECTION_LEVEL_TWO)/1000), 0.25, 1) //Between 0.25 to 1 tox per tick.
 
+
+	//Ideally, we want them to either: A. Reach Medical or B. have their organ die. Dying to toxins is lame.
+	//With this math: Toxins goes up by 0.001 per 2 seconds, up to 0.1. This means 200 seconds to reach 0.1 toxins per tick (germ level is now 700).
+	//Limb death happens at germ level 1000. This means another 600 seconds to reach there if untreated.
+	//Your kidneys helps purge toxins if you have 10% or less of your maxhealth in toxins damage. This is RNG though. (See kidneys/handle_organ_proc_special)
+	//So you COULD get really lucky and keep healing your toxins away until your limb dies, or you could get unlucky die to toxins first.
+	//Nonetheless, this should give a much more reasonable window for treatment.
 	else if(germ_level > INFECTION_LEVEL_TWO && antibiotics < ANTIBIO_OD)
-		infection_damage = max(0.25, 0.25 + round((germ_level - INFECTION_LEVEL_TWO)/200,0.25))
+		infection_damage = CLAMP(round((germ_level - INFECTION_LEVEL_TWO)/1000), 0, 0.1)
 
 	if(infection_damage)
 		owner.adjustToxLoss(infection_damage)
@@ -290,9 +299,9 @@ var/list/organ_cache = list()
 		handle_organ_mod_special()
 	if(!ignore_prosthetic_prefs && owner && owner.client && owner.client.prefs && owner.client.prefs.real_name == owner.real_name)
 		var/status = owner.client.prefs.organ_data[organ_tag]
-		if(status == "assisted")
+		if(status == FBP_ASSISTED)
 			mechassist()
-		else if(status == "mechanical")
+		else if(status == FBP_MECHANICAL)
 			robotize()
 
 /obj/item/organ/proc/is_damaged()
@@ -335,6 +344,9 @@ var/list/organ_cache = list()
 
 //Note: external organs have their own version of this proc
 /obj/item/organ/take_damage(amount, var/silent=0)
+	if(owner)
+		if(SEND_SIGNAL(owner, COMSIG_INTERNAL_ORGAN_PRE_DAMAGE_APPLICATION, amount, silent) & COMPONENT_CANCEL_INTERNAL_ORGAN_DAMAGE)
+			return 0
 	if(src.robotic >= ORGAN_ROBOT)
 		src.damage = between(0, src.damage + (amount * 0.8), max_damage)
 	else
@@ -345,9 +357,13 @@ var/list/organ_cache = list()
 			var/obj/item/organ/external/parent = owner?.get_organ(parent_organ)
 			if(parent && !silent)
 				owner.custom_pain("Something inside your [parent.name] hurts a lot.", amount)
-
+	if(owner)
+		SEND_SIGNAL(owner, COMSIG_INTERNAL_ORGAN_PRE_DAMAGE_APPLICATION, amount, silent)
 /obj/item/organ/proc/bruise()
 	damage = max(damage, min_bruised_damage)
+
+/obj/item/organ/proc/break_organ() //can't name this break because it's a reserved word
+	damage = max(damage, min_broken_damage)
 
 /obj/item/organ/proc/robotize() //Being used to make robutt hearts, etc
 	robotic = ORGAN_ROBOT
@@ -365,9 +381,9 @@ var/list/organ_cache = list()
 /obj/item/organ/proc/digitize() //Used to make the circuit-brain. On this level in the event more circuit-organs are added/tweaks are wanted.
 	robotize()
 
-/obj/item/organ/emp_act(severity)
+/obj/item/organ/emp_act(severity, recursive)
 	for(var/obj/O as anything in src.contents)
-		O.emp_act(severity)
+		O.emp_act(severity, recursive)
 
 	if(!(robotic >= ORGAN_ASSISTED))
 		return
@@ -421,11 +437,9 @@ var/list/organ_cache = list()
 
 	if(!istype(target)) return
 
-	// VOREstation edit begin - Posibrains don't have blood reagents, so they crash this
 	var/datum/reagent/blood/transplant_blood = null
 	if(reagents)
 		transplant_blood = locate(/datum/reagent/blood) in reagents.reagent_list
-	// VOREstation edit end
 	transplant_data = list()
 	if(!transplant_blood)
 		transplant_data["species"] =    target?.species.name
@@ -462,10 +476,8 @@ var/list/organ_cache = list()
 
 	// Pass over the blood.
 	reagents.trans_to(O, reagents.total_volume)
-
-	if(fingerprints) O.fingerprints = fingerprints.Copy()
-	if(fingerprintshidden) O.fingerprintshidden = fingerprintshidden.Copy()
-	if(fingerprintslast) O.fingerprintslast = fingerprintslast
+	transfer_fingerprints_to(O)
+	transfer_blooddna_to(O)
 
 	user.put_in_active_hand(O)
 	qdel(src)

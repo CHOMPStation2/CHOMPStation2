@@ -23,7 +23,7 @@
 	if(user.get_active_hand() == src || user.get_inactive_hand() == src)
 		return TRUE // Skip delay
 
-	if(insert_delay && !do_after(user, insert_delay, src, needhand = TRUE, exclusive = TASK_USER_EXCLUSIVE))
+	if(insert_delay && !do_after(user, insert_delay, target = src))
 		return FALSE // Moved while there is a delay
 
 	return TRUE //Now we're allowed to put the item in the pouch
@@ -33,7 +33,7 @@
 	if(user.get_active_hand() == src || user.get_inactive_hand() == src)
 		return TRUE // Skip delay
 
-	if(remove_delay && !do_after(user, remove_delay, src, needhand = TRUE, exclusive = TASK_USER_EXCLUSIVE))
+	if(remove_delay && !do_after(user, remove_delay, target = src))
 		return FALSE // Moved while there is a delay
 
 	if(W in src)
@@ -130,6 +130,16 @@
 		/obj/item/stack/cable_coil,
 		/obj/item/circuitboard
 	)
+	// Because you deal with so many parts, and the borg needs this anyway...
+	use_to_pickup = TRUE
+	allow_quick_gather = TRUE
+	allow_quick_empty = TRUE
+	collection_mode = TRUE
+
+/obj/item/storage/pouch/eng_parts/borg
+	name = "parts storage unit"
+	desc = "Can only hold machinery components."
+	max_storage_space = INVENTORY_POUCH_SPACE*5 // Borgs need some love here, so very expanded space
 
 /obj/item/storage/pouch/medical
 	name = "storage pouch (medical)"
@@ -159,6 +169,8 @@
 		/obj/item/taperoll/medical,
 		/obj/item/storage/box/freezer,
 		/obj/item/clothing/mask/chewable/candy/lolli,
+		/obj/item/extrapolator,
+		/obj/item/gene_scanner,
 	) //Vorestation add - added a bunch of misc medical stuff
 	max_storage_space = ITEMSIZE_COST_SMALL*3 //Vorestation Add - makes it slightly smaller since its a lot of stuff with pocket access
 	remove_delay = 5 //Vorestation Add - .5 second delay, get the medical things faster because there is no reason to use this otherwise. still gotta stop moving to take things out.

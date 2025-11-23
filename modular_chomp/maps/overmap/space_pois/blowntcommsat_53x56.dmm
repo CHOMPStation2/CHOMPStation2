@@ -572,8 +572,6 @@
 	dir = 4
 	},
 /obj/structure/table/rack/shelf/steel,
-/obj/item/circuitboard/protolathe,
-/obj/item/circuitboard/destructive_analyzer,
 /obj/item/circuitboard/circuit_imprinter,
 /turf/simulated/floor/tiled,
 /area/submap/blowntcommsat)

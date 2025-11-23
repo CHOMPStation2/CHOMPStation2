@@ -101,9 +101,10 @@
 	var/colors = list("black","blue","red")
 
 /obj/item/pen/AltClick(mob/user)
+	if(!Adjacent(user))
+		return
 	to_chat(user, span_notice("Click."))
 	playsound(src, 'sound/items/penclick.ogg', 50, 1)
-	return
 
 /obj/item/pen/multi/attack_self(mob/user)
 	if(++selectedColor > 3)
@@ -282,7 +283,7 @@
 	if(new_signature)
 		signature = new_signature
 	*/
-	signature = sanitize(tgui_input_text(user, "Enter new signature. Leave blank for 'Anonymous'", "New Signature", signature))
+	signature = tgui_input_text(user, "Enter new signature. Leave blank for 'Anonymous'", "New Signature", signature, MAX_MESSAGE_LEN)
 
 /obj/item/pen/proc/get_signature(var/mob/user)
 	return (user && user.real_name) ? user.real_name : "Anonymous"

@@ -10,6 +10,8 @@
 	overdose = REAGENTS_OVERDOSE * 2
 	metabolism = REM * 0.2
 	scannable = 1
+	supply_conversion_value = REFINERYEXPORT_VALUE_COMMON
+	industrial_use = REFINERYEXPORT_REASON_DRUG
 
 /datum/reagent/inaprovaline/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(alien != IS_DIONA)
@@ -29,6 +31,8 @@
 	scannable = 1
 	touch_met = REM * 0.3
 	can_overdose_touch = TRUE
+	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
+	industrial_use = REFINERYEXPORT_REASON_SPECIALDRUG
 
 /datum/reagent/inaprovaline/topical/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(alien != IS_DIONA)
@@ -51,6 +55,8 @@
 	overdose = REAGENTS_OVERDOSE
 	overdose_mod = 0.25
 	scannable = 1
+	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
+	industrial_use = REFINERYEXPORT_REASON_DRUG
 
 /datum/reagent/bicaridine/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	var/chem_effective = 1 * M.species.chem_strength_heal
@@ -65,7 +71,7 @@
 	M.eye_blurry = min(M.eye_blurry + wound_heal, 250)
 	if(ishuman(M))
 		var/mob/living/carbon/human/H = M
-		for(var/obj/item/organ/external/O in H.bad_external_organs)
+		for(var/obj/item/organ/external/O in H.organs)
 			for(var/datum/wound/W in O.wounds)
 				if(W.bleeding())
 					W.damage = max(W.damage - wound_heal, 0)
@@ -88,6 +94,8 @@
 	scannable = 1
 	touch_met = REM * 0.75
 	can_overdose_touch = TRUE
+	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
+	industrial_use = REFINERYEXPORT_REASON_SPECIALDRUG
 
 /datum/reagent/bicaridine/topical/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	var/chem_effective = 1 * M.species.chem_strength_heal
@@ -114,6 +122,8 @@
 	overdose = REAGENTS_OVERDOSE * 0.8
 	metabolism = REM * 0.4
 	scannable = 1
+	supply_conversion_value = REFINERYEXPORT_VALUE_COMMON
+	industrial_use = REFINERYEXPORT_REASON_DRUG
 
 /datum/reagent/calciumcarbonate/affect_blood(var/mob/living/carbon/M, var/alien, var/removed) // Why would you inject this.
 	if(alien != IS_DIONA)
@@ -132,6 +142,8 @@
 	color = "#FFA800"
 	overdose = REAGENTS_OVERDOSE
 	scannable = 1
+	supply_conversion_value = REFINERYEXPORT_VALUE_COMMON
+	industrial_use = REFINERYEXPORT_REASON_DRUG
 
 /datum/reagent/kelotane/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	var/chem_effective = 1 * M.species.chem_strength_heal
@@ -152,6 +164,8 @@
 	color = "#FF8000"
 	overdose = REAGENTS_OVERDOSE * 0.5
 	scannable = 1
+	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
+	industrial_use = REFINERYEXPORT_REASON_DRUG
 
 /datum/reagent/dermaline/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	var/chem_effective = 1 * M.species.chem_strength_heal
@@ -172,6 +186,8 @@
 	scannable = 1
 	touch_met = REM * 0.75
 	can_overdose_touch = TRUE
+	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
+	industrial_use = REFINERYEXPORT_REASON_SPECIALDRUG
 
 /datum/reagent/dermaline/topical/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	var/chem_effective = 1 * M.species.chem_strength_heal
@@ -196,6 +212,8 @@
 	reagent_state = LIQUID
 	color = "#00A000"
 	scannable = 1
+	supply_conversion_value = REFINERYEXPORT_VALUE_COMMON
+	industrial_use = REFINERYEXPORT_REASON_DRUG
 
 /datum/reagent/dylovene/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	var/chem_effective = 1 * M.species.chem_strength_heal
@@ -219,6 +237,8 @@
 	scannable = 1
 	overdose = REAGENTS_OVERDOSE * 0.5
 	overdose_mod = 0 // Not used, but it shouldn't deal toxin damage anyways. Carth heals toxins!
+	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
+	industrial_use = REFINERYEXPORT_REASON_SPECIALDRUG
 
 /datum/reagent/carthatoline/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(alien == IS_DIONA)
@@ -255,6 +275,8 @@
 	overdose = REAGENTS_OVERDOSE
 	scannable = 1
 	metabolism = REM * 0.25
+	supply_conversion_value = REFINERYEXPORT_VALUE_COMMON
+	industrial_use = REFINERYEXPORT_REASON_DRUG
 
 /datum/reagent/dexalin/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(alien == IS_VOX)
@@ -280,6 +302,8 @@
 	overdose = REAGENTS_OVERDOSE * 0.5
 	overdose_mod = 1.25
 	scannable = 1
+	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
+	industrial_use = REFINERYEXPORT_REASON_SPECIALDRUG
 
 /datum/reagent/dexalinp/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(alien == IS_VOX)
@@ -303,13 +327,14 @@
 	reagent_state = LIQUID
 	color = "#8040FF"
 	scannable = 1
-	//YW ADDITIONS START
-	overdose = REAGENTS_OVERDOSE * 4 //120 overdose
-/datum/reagent/tricordrazine/overdose(var/mob/living/carbon/M, var/alien)
+	overdose = REAGENTS_OVERDOSE * 4 //YW EDIT - TRICORD FUCKING KILLS YOU
+	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
+	industrial_use = REFINERYEXPORT_REASON_DRUG
+
+/datum/reagent/tricordrazine/overdose(var/mob/living/carbon/M, var/alien) //YW EDIT START
 	..()
 	M.druggy = max(M.druggy, 5)
-	M.Confuse(5)
-	//YW ADDITIONS END
+	M.Confuse(5) //YW EDIT END
 
 /datum/reagent/tricordrazine/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(alien != IS_DIONA)
@@ -333,6 +358,8 @@
 	color = "#B060FF"
 	scannable = 1
 	can_overdose_touch = TRUE
+	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
+	industrial_use = REFINERYEXPORT_REASON_SPECIALDRUG
 
 /datum/reagent/tricorlidaze/affect_touch(var/mob/living/carbon/M, var/alien, var/removed)
 	if(alien != IS_DIONA)
@@ -370,6 +397,8 @@
 	metabolism = REM * 0.5
 	mrate_static = TRUE
 	scannable = 1
+	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
+	industrial_use = REFINERYEXPORT_REASON_CLONEDRUG
 
 /datum/reagent/cryoxadone/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(M.bodytemperature < 170)
@@ -395,6 +424,8 @@
 	metabolism = REM * 0.5
 	mrate_static = TRUE
 	scannable = 1
+	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
+	industrial_use = REFINERYEXPORT_REASON_CLONEDRUG
 
 /datum/reagent/clonexadone/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(M.bodytemperature < 170)
@@ -422,6 +453,8 @@
 	mrate_static = TRUE
 	affects_dead = FALSE //Clarifying this here since the original intent was this ONLY works on people that have the bloodpump_corpse modifier.
 	scannable = 1
+	supply_conversion_value = REFINERYEXPORT_VALUE_MASSINDUSTRY
+	industrial_use = REFINERYEXPORT_REASON_CLONEDRUG
 
 /datum/reagent/mortiferin/on_mob_life(var/mob/living/carbon/M, var/alien, var/datum/reagents/metabolism/location)
 	. = ..(M, alien, location)
@@ -461,6 +494,8 @@
 	mrate_static = TRUE
 	scannable = 1
 	affects_dead = TRUE
+	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
+	industrial_use = REFINERYEXPORT_REASON_CLONEDRUG
 
 /datum/reagent/necroxadone/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	var/chem_effective = 1 * M.species.chem_strength_heal
@@ -497,6 +532,8 @@
 	scannable = 1
 	metabolism = 0.02
 	mrate_static = TRUE
+	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
+	industrial_use = REFINERYEXPORT_REASON_DRUG
 
 /datum/reagent/paracetamol/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	var/chem_effective = 1 * M.species.chem_strength_pain
@@ -522,6 +559,8 @@
 	scannable = 1
 	metabolism = 0.02
 	mrate_static = TRUE
+	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
+	industrial_use = REFINERYEXPORT_REASON_DRUG
 
 /datum/reagent/tramadol/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	var/chem_effective = 1 * M.species.chem_strength_pain
@@ -546,6 +585,8 @@
 	scannable = 1
 	metabolism = 0.02
 	mrate_static = TRUE
+	supply_conversion_value = REFINERYEXPORT_VALUE_MASSINDUSTRY
+	industrial_use = REFINERYEXPORT_REASON_SPECIALDRUG
 
 /datum/reagent/oxycodone/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	var/chem_effective = 1 * M.species.chem_strength_pain
@@ -573,6 +614,8 @@
 	metabolism = REM * 0.05
 	overdose = REAGENTS_OVERDOSE
 	scannable = 1
+	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
+	industrial_use = REFINERYEXPORT_REASON_DRUG
 
 /datum/reagent/synaptizine/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	var/chem_effective = 1 * M.species.chem_strength_heal
@@ -602,6 +645,8 @@
 	color = "#FF3300"
 	overdose = REAGENTS_OVERDOSE * 0.5
 	overdose_mod = 0.25
+	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
+	industrial_use = REFINERYEXPORT_REASON_COMSTIM
 
 /datum/reagent/hyperzine/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(alien == IS_TAJARA)
@@ -633,6 +678,8 @@
 	metabolism = REM * 0.25
 	overdose = REAGENTS_OVERDOSE
 	scannable = 1
+	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
+	industrial_use = REFINERYEXPORT_REASON_SPECIALDRUG
 
 /datum/reagent/alkysine/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(alien == IS_DIONA)
@@ -656,6 +703,8 @@
 	color = "#C8A5DC"
 	overdose = REAGENTS_OVERDOSE
 	scannable = 1
+	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
+	industrial_use = REFINERYEXPORT_REASON_SPECIALDRUG
 
 /datum/reagent/imidazoline/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	M.eye_blurry = max(M.eye_blurry - 5, 0)
@@ -681,6 +730,8 @@
 	overdose = 10
 	overdose_mod = 1.5
 	scannable = 1
+	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
+	industrial_use = REFINERYEXPORT_REASON_SPECIALDRUG
 
 /datum/reagent/peridaxon/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(ishuman(M))
@@ -714,6 +765,8 @@
 	overdose = REAGENTS_OVERDOSE * 0.5
 	overdose_mod = 1.5
 	scannable = 1
+	supply_conversion_value = REFINERYEXPORT_VALUE_MASSINDUSTRY
+	industrial_use = REFINERYEXPORT_REASON_SPECIALDRUG
 
 /datum/reagent/osteodaxon/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(alien == IS_DIONA)
@@ -747,6 +800,8 @@
 	overdose_mod = 1.5
 	scannable = 1
 	var/repair_strength = 6
+	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
+	industrial_use = REFINERYEXPORT_REASON_SPECIALDRUG
 
 /datum/reagent/myelamine/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(alien == IS_DIONA)
@@ -755,7 +810,7 @@
 	if(ishuman(M))
 		var/mob/living/carbon/human/H = M
 		var/wound_heal = removed * repair_strength
-		for(var/obj/item/organ/external/O in H.bad_external_organs)
+		for(var/obj/item/organ/external/O in H.organs)
 			for(var/datum/wound/W in O.wounds)
 				if(W.bleeding())
 					W.bandage() //This is the ACTUAL clotting being performed.
@@ -794,6 +849,8 @@
 	overdose = 10
 	overdose_mod = 1.75
 	scannable = 1
+	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
+	industrial_use = REFINERYEXPORT_REASON_SPECIALDRUG
 
 /datum/reagent/respirodaxon/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	var/repair_strength = 1 * M.species.chem_strength_heal
@@ -826,6 +883,8 @@
 	overdose = 10
 	overdose_mod = 1.75
 	scannable = 1
+	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
+	industrial_use = REFINERYEXPORT_REASON_SPECIALDRUG
 
 /datum/reagent/gastirodaxon/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	var/repair_strength = 1 * M.species.chem_strength_heal
@@ -858,6 +917,8 @@
 	overdose = 10
 	overdose_mod = 1.75
 	scannable = 1
+	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
+	industrial_use = REFINERYEXPORT_REASON_SPECIALDRUG
 
 /datum/reagent/hepanephrodaxon/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	var/repair_strength = 1 * M.species.chem_strength_heal
@@ -892,6 +953,8 @@
 	overdose = 10
 	overdose_mod = 1.75
 	scannable = 1
+	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
+	industrial_use = REFINERYEXPORT_REASON_SPECIALDRUG
 
 /datum/reagent/cordradaxon/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	var/repair_strength = 1 * M.species.chem_strength_heal
@@ -921,6 +984,8 @@
 	overdose_mod = 1.5
 	scannable = 1
 	metabolism = REM * 0.06
+	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
+	industrial_use = REFINERYEXPORT_REASON_SPECIALDRUG
 
 /datum/reagent/immunosuprizine/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	var/strength_mod = 1 // * M.species.chem_strength_heal //Just removing the chem strength adjustment. It'd require division, which is best avoided.
@@ -976,6 +1041,8 @@
 	overdose = 20
 	overdose_mod = 1.5
 	scannable = 1
+	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
+	industrial_use = REFINERYEXPORT_REASON_SPECIALDRUG
 
 /datum/reagent/skrellimmuno/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	var/strength_mod = 0.5 * M.species.chem_strength_heal
@@ -1016,6 +1083,8 @@
 	reagent_state = SOLID
 	color = "#004000"
 	overdose = REAGENTS_OVERDOSE
+	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
+	industrial_use = REFINERYEXPORT_REASON_CLONEDRUG
 
 /datum/reagent/ryetalyn/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	//Ryetalyn is for genetics damage curing not resetting mutations, breaks traitgenes
@@ -1049,11 +1118,13 @@
 	reagent_state = SOLID
 	color = "#605048"
 	overdose = REAGENTS_OVERDOSE
+	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
+	industrial_use = REFINERYEXPORT_REASON_RECDRUG
 
 /datum/reagent/ethylredoxrazine/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
 	if(alien == IS_DIONA)
 		return
-	M.dizziness = 0
+	M.clear_dizzy()
 	M.drowsyness = 0
 	M.stuttering = 0
 	M.SetConfused(0)
@@ -1065,7 +1136,7 @@
 /datum/reagent/ethylredoxrazine/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(alien == IS_DIONA)
 		return
-	M.dizziness = 0
+	M.clear_dizzy()
 	M.drowsyness = 0
 	M.stuttering = 0
 	M.SetConfused(0)
@@ -1084,6 +1155,8 @@
 	metabolism = REM * 0.25
 	overdose = REAGENTS_OVERDOSE
 	scannable = 1
+	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
+	industrial_use = REFINERYEXPORT_REASON_SPECIALDRUG
 
 /datum/reagent/hyronalin/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(alien == IS_DIONA)
@@ -1102,6 +1175,8 @@
 	overdose = REAGENTS_OVERDOSE
 	overdose_mod = 1.25
 	scannable = 1
+	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
+	industrial_use = REFINERYEXPORT_REASON_CLONEDRUG
 
 /datum/reagent/arithrazine/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(alien == IS_DIONA)
@@ -1124,6 +1199,8 @@
 	overdose = REAGENTS_OVERDOSE
 	scannable = 1
 	data = 0
+	supply_conversion_value = REFINERYEXPORT_VALUE_COMMON
+	industrial_use = REFINERYEXPORT_REASON_DRUG
 
 /datum/reagent/spaceacillin/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	..()
@@ -1153,6 +1230,8 @@
 	overdose_mod = 1.5
 	scannable = 1
 	data = 0
+	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
+	industrial_use = REFINERYEXPORT_REASON_DRUG
 
 /datum/reagent/corophizine/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	..()
@@ -1222,6 +1301,8 @@
 	scannable = 1
 	data = 0
 	can_overdose_touch = TRUE
+	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
+	industrial_use = REFINERYEXPORT_REASON_DRUG
 
 /datum/reagent/spacomycaze/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	M.add_chemical_effect(CE_PAINKILLER, 10 * M.species.chem_strength_pain)
@@ -1261,11 +1342,13 @@
 /datum/reagent/sterilizine
 	name = REAGENT_STERILIZINE
 	id = REAGENT_ID_STERILIZINE
-	description = "Sterilizes wounds in preparation for surgery and thoroughly removes blood."
+	description = "Sterilizes wounds in preparation for surgery and thoroughly removes blood. Can additionally be used to prepare a surface for surgery to lower risk of infection."
 	taste_description = "bitterness"
 	reagent_state = LIQUID
 	color = "#C8A5DC"
 	touch_met = 5
+	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
+	industrial_use = REFINERYEXPORT_REASON_CLEAN
 
 /datum/reagent/sterilizine/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(alien == IS_SLIME)
@@ -1284,12 +1367,12 @@
 
 /datum/reagent/sterilizine/touch_obj(var/obj/O)
 	..()
-	O.germ_level -= min(volume*20, O.germ_level)
+	O.germ_level -= min(volume*200, O.germ_level)
 	O.was_bloodied = null
 
 /datum/reagent/sterilizine/touch_turf(var/turf/T)
 	..()
-	T.germ_level -= min(volume*20, T.germ_level)
+	T.germ_level -= min(volume*200, T.germ_level)
 	for(var/obj/item/I in T.contents)
 		I.was_bloodied = null
 	for(var/obj/effect/decal/cleanable/blood/B in T)
@@ -1317,6 +1400,9 @@
 	color = "#C8A5DC"
 	overdose = REAGENTS_OVERDOSE
 	scannable = 1
+	supply_conversion_value = REFINERYEXPORT_VALUE_COMMON
+	industrial_use = REFINERYEXPORT_REASON_CLONEDRUG
+	coolant_modifier = 0.5 // Okay substitute coolant
 
 /datum/reagent/leporazine/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(alien == IS_DIONA)
@@ -1340,10 +1426,13 @@
 	overdose = REAGENTS_OVERDOSE
 	overdose_mod = 2
 	scannable = 1
+	supply_conversion_value = REFINERYEXPORT_VALUE_MASSINDUSTRY
+	industrial_use = REFINERYEXPORT_REASON_CLONEDRUG
 
 /datum/reagent/rezadone/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(alien == IS_DIONA)
 		return
+	var/strength_mod = 1 * M.species.chem_strength_heal
 	var/mob/living/carbon/human/H = M
 	if(alien == IS_SLIME && istype(H))
 		if(prob(50))
@@ -1367,10 +1456,10 @@
 				H.b_hair = round((H.b_hair + 50)/2)
 			if(H.b_facial)
 				H.b_facial = round((H.b_facial + 50)/2)
-	M.adjustCloneLoss(-20 * removed)
-	M.adjustOxyLoss(-2 * removed)
-	M.heal_organ_damage(20 * removed, 20 * removed)
-	M.adjustToxLoss(-20 * removed)
+	M.adjustCloneLoss(-20 * removed * strength_mod)
+	M.adjustOxyLoss(-2 * removed * strength_mod)
+	M.heal_organ_damage(20 * removed, 20 * removed * strength_mod)
+	M.adjustToxLoss(-20 * removed * strength_mod)
 	if(dose > 3)
 		M.status_flags &= ~DISFIGURED
 	if(dose > 10)
@@ -1389,6 +1478,8 @@
 	scannable = 1
 	affects_robots = TRUE
 	wiki_flag = WIKI_SPOILER
+	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
+	industrial_use = REFINERYEXPORT_REASON_DRUG
 
 /datum/reagent/healing_nanites/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	M.heal_organ_damage(2 * removed, 2 * removed)
@@ -1406,6 +1497,8 @@
 	metabolism = REM * 0.002
 	overdose = REAGENTS_OVERDOSE
 	scannable = 1
+	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
+	industrial_use = REFINERYEXPORT_REASON_FOOD
 
 /datum/reagent/earthsblood
 	name = REAGENT_EARTHSBLOOD
@@ -1415,6 +1508,8 @@
 	reagent_state = LIQUID
 	color = "#ffb500"
 	overdose = REAGENTS_OVERDOSE * 0.50
+	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
+	industrial_use = REFINERYEXPORT_REASON_DRUG
 
 
 /datum/reagent/earthsblood/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
@@ -1425,3 +1520,76 @@
 	M.druggy = max(M.druggy, 20)
 	M.hallucination = max(M.hallucination, 3)
 	M.adjustBrainLoss(1 * removed) //your life for your mind. The Earthmother's Tithe.
+
+
+// Vat clone stablizer
+/datum/reagent/acid/artificial_sustenance
+	name = REAGENT_ASUSTENANCE
+	id = REAGENT_ID_ASUSTENANCE
+	description = "A drug used to stablize vat grown bodies. Often used to control the lifespan of biological experiments." // Who else remembers Cybersix?
+	taste_description = "burning metal"
+	reagent_state = LIQUID
+	color = "#31d422"
+	overdose = 15
+	overdose_mod = 1.2
+	scannable = 1
+	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
+	industrial_use = REFINERYEXPORT_REASON_DRUG
+
+/datum/reagent/acid/artificial_sustenance/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
+	// You need me...
+	if(M.get_addiction_to_reagent(REAGENT_ID_ASUSTENANCE))
+		return
+	// Continue to acid damage, no changes on injection or splashing, as this is meant to be edible only to those pre-addicted to it! Not a snowflake acid that doesn't hurt you!
+	. = ..()
+
+/datum/reagent/acid/artificial_sustenance/handle_addiction(var/mob/living/carbon/M, var/alien)
+	// A copy of the base with withdrawl, but with death, and different messages
+	var/current_addiction = M.get_addiction_to_reagent(id)
+	// slow degrade
+	if(prob(2))
+		current_addiction  -= 1
+	// withdrawl mechanics
+	if(prob(2))
+		if(current_addiction <= 40)
+			to_chat(M, span_danger("You're dying for some [name]!"))
+		else if(current_addiction <= 60)
+			to_chat(M, span_warning("You're really craving some [name]."))
+		else if(current_addiction <= 100)
+			to_chat(M, span_notice("You're feeling the need for some [name]."))
+		// effects
+		if(current_addiction < 60 && prob(20))
+			M.emote(pick("pale","shiver","twitch"))
+	// Agony and death!
+	if(current_addiction <= 20)
+		if(prob(12))
+			M.adjustToxLoss( rand(1,4) )
+			M.adjustBruteLoss( rand(1,4) )
+			M.adjustOxyLoss( rand(1,4) )
+	// proc side effect
+	if(current_addiction <= 30)
+		if(prob(3))
+			M.Weaken(2)
+			M.emote("vomit")
+			M.add_chemical_effect(CE_WITHDRAWL, rand(9,14) * REM)
+	else if(current_addiction <= 40)
+		if(prob(3))
+			M.emote("vomit")
+			M.add_chemical_effect(CE_WITHDRAWL, rand(5,9) * REM)
+	else if(current_addiction <= 50)
+		if(prob(2))
+			M.emote("vomit")
+	// Sustenance requirements cannot be escaped!
+	if(current_addiction <= 0)
+		current_addiction = 40
+	return current_addiction
+
+/datum/reagent/tercozolam
+	name = REAGENT_TERCOZOLAM
+	id = REAGENT_ID_TERCOZOLAM
+	color = "#afeb17"
+	metabolism = 0.05
+	description = "A well respected drug used for treatment of schizophrenia in specific."
+	overdose = REAGENTS_OVERDOSE * 2
+	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
+	industrial_use = REFINERYEXPORT_REASON_DRUG

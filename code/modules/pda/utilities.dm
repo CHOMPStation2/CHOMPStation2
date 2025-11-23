@@ -49,7 +49,7 @@
 
 	user.show_message(span_notice("Analyzing Results for [C]:"))
 	user.show_message(span_notice("    Overall Status: [C.stat > 1 ? "dead" : "[C.health - C.halloss]% healthy"]"), 1)
-	user.show_message(span_notice("    Damage Specifics:") + " [(C.getOxyLoss() > 50) ? span_warning(C.getOxyLoss()) : C.getOxyLoss()]-\
+	user.show_message(span_notice("    Damage Specifics:") + " [(C.getOxyLoss() > 50) ? span_warning("[C.getOxyLoss()]") : C.getOxyLoss()]-\
 									[(C.getToxLoss() > 50) ? span_warning("[C.getToxLoss()]") : C.getToxLoss()]-\
 									[(C.getFireLoss() > 50) ? span_warning("[C.getFireLoss()]") : C.getFireLoss()]-\
 									[(C.getBruteLoss() > 50) ? span_warning("[C.getBruteLoss()]") : C.getBruteLoss()]", 1)
@@ -85,15 +85,14 @@
 	scan_blood(A, user)
 
 /datum/data/pda/utility/scanmode/dna/proc/scan_blood(atom/A, mob/user)
-	if(!A.blood_DNA)
+	var/list/blood_dna = A.forensic_data?.get_blooddna()
+	if(!blood_dna)
 		to_chat(user, span_notice("No blood found on [A]"))
-		if(A.blood_DNA)
-			qdel(A.blood_DNA)
 	else
 		to_chat(user, span_notice("Blood found on [A]. Analysing..."))
 		spawn(15)
-			for(var/blood in A.blood_DNA)
-				to_chat(user, span_notice("Blood type: [A.blood_DNA[blood]]\nDNA: [blood]"))
+			for(var/blood in blood_dna)
+				to_chat(user, span_notice("Blood type: [blood_dna[blood]]\nDNA: [blood]"))
 
 /datum/data/pda/utility/scanmode/halogen
 	base_name = "Halogen Counter"

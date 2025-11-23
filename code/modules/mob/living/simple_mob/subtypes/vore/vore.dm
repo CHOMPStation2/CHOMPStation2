@@ -43,6 +43,7 @@
 	selective_preference = client.prefs_vr.selective_preference
 	eating_privacy_global = client.prefs_vr.eating_privacy_global
 	allow_mimicry = client.prefs_vr.allow_mimicry
+	allowtemp = client.prefs_vr.allowtemp
 
 	drop_vore = client.prefs_vr.drop_vore
 	stumble_vore = client.prefs_vr.stumble_vore
@@ -72,8 +73,10 @@
 	no_latejoin_prey_warning_time = client.prefs_vr.no_latejoin_prey_warning_time
 	no_latejoin_vore_warning_persists = client.prefs_vr.no_latejoin_vore_warning_persists
 	no_latejoin_prey_warning_persists = client.prefs_vr.no_latejoin_prey_warning_persists
+	max_voreoverlay_alpha = client.prefs_vr.max_voreoverlay_alpha
 	belly_rub_target = client.prefs_vr.belly_rub_target
 	soulcatcher_pref_flags = client.prefs_vr.soulcatcher_pref_flags
+	persistend_edit_mode = client.prefs_vr.persistend_edit_mode
 
 /mob/living/simple_mob/proc/set_name()
 	set name = "Set Name"
@@ -83,7 +86,7 @@
 		to_chat(src, span_userdanger("You've already set your name. Ask an admin to toggle \"nameset\" to 0 if you really must."))
 		return
 	var/newname
-	newname = sanitizeSafe(tgui_input_text(src,"Set your name. You only get to do this once. Max 52 chars.", "Name set","", MAX_NAME_LEN), MAX_NAME_LEN)
+	newname = sanitizeSafe(tgui_input_text(src,"Set your name. You only get to do this once. Max 52 chars.", "Name set","", MAX_NAME_LEN, encode = FALSE), MAX_NAME_LEN)
 	if (newname)
 		name = newname
 		voice_name = newname
@@ -94,7 +97,7 @@
 	set desc = "Set your description."
 	set category = "Abilities.Settings"
 	var/newdesc
-	newdesc = sanitizeSafe(tgui_input_text(src,"Set your description. Max 4096 chars.", "Description set","", prevent_enter = TRUE), MAX_MESSAGE_LEN)
+	newdesc = sanitizeSafe(tgui_input_text(src,"Set your description. Max 4096 chars.", "Description set","", prevent_enter = TRUE, encode = FALSE), MAX_MESSAGE_LEN)
 	if(newdesc)
 		desc = newdesc
 

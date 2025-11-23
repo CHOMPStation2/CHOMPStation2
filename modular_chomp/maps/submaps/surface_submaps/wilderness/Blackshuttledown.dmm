@@ -762,10 +762,6 @@
 /obj/effect/floor_decal/borderfloor/full,
 /turf/simulated/floor/tiled/steel,
 /area/submap/Blackshuttledown)
-"Zy" = (
-/obj/effect/map_helper/no_phaseshift/area,
-/turf/simulated/floor/tiled/steel,
-/area/submap/Blackshuttledown)
 
 (1,1,1) = {"
 aa
@@ -1303,7 +1299,7 @@ ay
 bh
 bl
 bl
-Zy
+bl
 bl
 bF
 ay

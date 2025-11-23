@@ -292,9 +292,8 @@
 	for(var/mob/living/L in loc)
 		var/target_zone = ran_zone()
 		var/blocked = L.run_armor_check(target_zone, "laser")
-		var/soaked = L.get_armor_soak(target_zone, "laser")
 
-		if(!L.apply_damage(40, BURN, target_zone, blocked, soaked))
+		if(!L.apply_damage(40, BURN, target_zone, blocked))
 			break
 	playsound(src, 'sound/effects/teleport.ogg', 50, 1)
 	addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(qdel), src), 0.25 SECONDS, TIMER_DELETE_ME)
@@ -331,7 +330,7 @@
 	submunition_spread_max = 900
 	submunition_spread_min = 150
 	spread_submunition_damage = FALSE
-	submunitions = list(/obj/item/projectile/energy/hazardmover/omni = 1, /obj/item/projectile/energy/wallbreaker/boss = 1, /obj/item/projectile/energy/burninglaser/boss = 1)
+	submunitions = list(/obj/item/projectile/energy/hazardmover/omni = 1, /obj/item/projectile/energy/wallbreaker/boss = 1)
 
 /obj/item/projectile/bullet/nanodyson/on_range()
 	qdel(src)
@@ -369,7 +368,6 @@
 				addtimer(CALLBACK(src, PROC_REF(omega), A, 3), 1 SECOND, TIMER_DELETE_ME)
 				attackcycle = 0
 			else if(attackcycle == 3)
-				projectiletype = /obj/item/projectile/energy/burninglaser/boss
 				addtimer(CALLBACK(src, PROC_REF(alpha_slash), A, 4), 1 SECOND, TIMER_DELETE_ME)
 				attackcycle = 0
 			else if(attackcycle == 4)
@@ -760,4 +758,3 @@
 	if(!target)
 		return
 	explosion(src.loc, 30, 16, 8, 4)
-

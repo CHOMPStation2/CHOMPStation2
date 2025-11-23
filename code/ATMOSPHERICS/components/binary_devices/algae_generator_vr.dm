@@ -92,7 +92,7 @@
 	// STEP 3 - Convert CO2 to O2  (Note: We know our internal group multipier is 1, so just be cool)
 	var/co2_moles = internal.gas[input_gas]
 	if(co2_moles < MINIMUM_MOLES_TO_FILTER)
-		ui_error = "Insufficient [gas_data.name[input_gas]] to process."
+		ui_error = "Insufficient [GLOB.gas_data.name[input_gas]] to process."
 		update_icon()
 		return
 
@@ -172,10 +172,10 @@
 		ui.open()
 
 /obj/machinery/atmospherics/binary/algae_farm/tgui_data(mob/user)
-	var/data[0]
+	var/list/data = list()
 	data["panelOpen"] = panel_open
 
-	var/materials_ui[0]
+	var/list/materials_ui = list()
 	for(var/M in stored_material)
 		materials_ui[++materials_ui.len] = list(
 				"name" = M,
@@ -194,13 +194,13 @@
 	if(air1 && network1 && node1)
 		data["input"] = list(
 			"pressure" = air1.return_pressure(),
-			"name" = gas_data.name[input_gas],
+			"name" = GLOB.gas_data.name[input_gas],
 			"percent" = air1.total_moles > 0 ? round((air1.gas[input_gas] / air1.total_moles) * 100) : 0,
 			"moles" = round(air1.gas[input_gas], 0.01))
 	if(air2 && network2 && node2)
 		data["output"] = list(
 			"pressure" = air2.return_pressure(),
-			"name" = gas_data.name[output_gas],
+			"name" = GLOB.gas_data.name[output_gas],
 			"percent" = air2.total_moles ? round((air2.gas[output_gas] / air2.total_moles) * 100) : 0,
 			"moles" = round(air2.gas[output_gas], 0.01))
 
@@ -234,9 +234,7 @@
 	var/recursive = amount == -1 ? 1 : 0
 	var/datum/material/matdata = get_material_by_name(material_name)
 	var/stack_type = matdata.stack_type
-	var/obj/item/stack/material/S = new stack_type(loc)
-	if(amount <= 0)
-		amount = S.max_amount
+	var/obj/item/stack/material/S = new stack_type(loc, -1)
 	var/ejected = min(round(stored_material[material_name] / S.perunit), amount)
 	if(!S.set_amount(min(ejected, amount)))
 		return
@@ -259,7 +257,6 @@
 			S.use(1)
 			count++
 		user.visible_message("\The [user] inserts [S.name] into \the [src].", span_notice("You insert [count] [S.name] into \the [src]."))
-		updateUsrDialog(user)
 	else
 		to_chat(user, span_warning("\The [src] cannot hold more [S.name]."))
 	return 1

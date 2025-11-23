@@ -106,6 +106,9 @@
 	qdel(src)
 	return
 
+/obj/structure/window/proc/can_glasspassers_pass()
+	PROTECTED_PROC(TRUE)
+	return TRUE
 
 /obj/structure/window/bullet_act(var/obj/item/projectile/Proj)
 
@@ -141,7 +144,7 @@
 
 /obj/structure/window/CanPass(atom/movable/mover, turf/target)
 	if(istype(mover) && mover.checkpass(PASSGLASS))
-		return TRUE
+		return can_glasspassers_pass()
 	if(is_fulltile())
 		return FALSE	//full tile window, you can't move into it!
 	if(get_dir(mover, target) == GLOB.reverse_dir[dir]) // From elsewhere to here, can't move against our dir
@@ -162,21 +165,24 @@
 		return !anchored // If it's anchored, it'll block air.
 	return TRUE // Don't stop airflow from the other sides.
 
-/obj/structure/window/hitby(AM as mob|obj)
+/obj/structure/window/hitby(atom/movable/source)
 	..()
-	visible_message(span_danger("[src] was hit by [AM]."))
+	visible_message(span_danger("[src] was hit by [source]."))
 	var/tforce = 0
-	if(ismob(AM))
+	if(ismob(source))
 		tforce = 40
-	else if(isobj(AM))
-		var/obj/item/I = AM
+	else if(isitem(source))
+		var/obj/item/I = source
 		tforce = I.throwforce
+	else if(isobj(source))
+		var/obj/hitting_object = source
+		tforce = hitting_object.w_class * 5
 	if(reinf) tforce *= 0.25
 	if(health - tforce <= 7 && !reinf)
 		anchored = FALSE
 		update_verbs()
 		update_nearby_icons()
-		step(src, get_dir(AM, src))
+		step(src, get_dir(source, src))
 	take_damage(tforce)
 
 /obj/structure/window/attack_tk(mob/user as mob)
@@ -193,7 +199,7 @@
 
 	else if (user.a_intent == I_HURT)
 
-		if (ishuman(user))
+		if(ishuman(user))
 			var/mob/living/carbon/human/H = user
 			if(H.species.can_shred(H))
 				attack_generic(H,25)
@@ -235,7 +241,7 @@
 			if(WT.remove_fuel(1 ,user))
 				to_chat(user, span_notice("You begin repairing [src]..."))
 				playsound(src, WT.usesound, 50, 1)
-				if(do_after(user, 40 * WT.toolspeed, target = src))
+				if(do_after(user, 4 SECONDS * WT.toolspeed, target = src))
 					health = maxhealth
 			//		playsound(src, 'sound/items/Welder.ogg', 50, 1)
 					update_icon()
@@ -313,7 +319,7 @@
 				span_infoplain(span_bold("\The [user]") + " begins to wire \the [src] for electrochromic tinting."), \
 				span_notice("You begin to wire \the [src] for electrochromic tinting."), \
 				"You hear sparks.")
-			if(do_after(user, 20 * C.toolspeed, src) && state == 0)
+			if(do_after(user, 2 SECONDS * C.toolspeed, src) && state == 0)
 				playsound(src, 'sound/items/Deconstruct.ogg', 50, 1)
 				var/obj/structure/window/reinforced/polarized/P = new(loc, dir)
 				if(is_fulltile())
@@ -348,49 +354,14 @@
 	take_damage(damage)
 	return
 
-
-/obj/structure/window/verb/rotate_counterclockwise()
-	set name = "Rotate Window Counterclockwise"
-	set category = "Object"
-	set src in oview(1)
-
-	if(usr.incapacitated())
-		return 0
-
+/obj/structure/window/handle_rotation_verbs(angle)
 	if(is_fulltile())
-		return 0
-
-	if(anchored)
-		to_chat(usr, "It is fastened to the floor therefore you can't rotate it!")
-		return 0
-
+		return FALSE
 	update_nearby_tiles(need_rebuild=1) //Compel updates before
-	src.set_dir(turn(src.dir, 90))
-	updateSilicate()
-	update_nearby_tiles(need_rebuild=1)
-	return
-
-
-/obj/structure/window/verb/rotate_clockwise()
-	set name = "Rotate Window Clockwise"
-	set category = "Object"
-	set src in oview(1)
-
-	if(usr.incapacitated())
-		return 0
-
-	if(is_fulltile())
-		return 0
-
-	if(anchored)
-		to_chat(usr, "It is fastened to the floor therefore you can't rotate it!")
-		return 0
-
-	update_nearby_tiles(need_rebuild=1) //Compel updates before
-	src.set_dir(turn(src.dir, 270))
-	updateSilicate()
-	update_nearby_tiles(need_rebuild=1)
-	return
+	. = ..()
+	if(.)
+		updateSilicate()
+		update_nearby_tiles(need_rebuild=1)
 
 /obj/structure/window/Initialize(mapload, start_dir=null, constructed=0)
 	. = ..()
@@ -402,7 +373,10 @@
 	if (constructed)
 		anchored = FALSE
 		state = 0
-		update_verbs()
+
+	// If we started anchored we'll need to disable rotation
+	AddElement(/datum/element/rotatable)
+	update_verbs()
 
 	health = maxhealth
 
@@ -411,6 +385,9 @@
 	update_nearby_tiles(need_rebuild=1)
 	update_nearby_icons()
 
+	for(var/obj/structure/table/T in view(src, 1))
+		T.update_connections()
+		T.update_icon()
 
 /obj/structure/window/Destroy()
 	density = FALSE
@@ -419,13 +396,21 @@
 	. = ..()
 	for(var/obj/structure/window/W in orange(location, 1))
 		W.update_icon()
+	for(var/obj/structure/table/T in view(location, 1))
+		T.update_connections()
+		T.update_icon()
 
 /obj/structure/window/Move()
 	var/ini_dir = dir
+	var/turf/location = loc
 	update_nearby_tiles(need_rebuild=1)
 	. = ..()
 	set_dir(ini_dir)
 	update_nearby_tiles(need_rebuild=1)
+	if(loc != location)
+		for(var/obj/structure/table/T in view(location, 1) | view(loc, 1))
+			T.update_connections()
+			T.update_icon()
 
 //checks if this window is full-tile one
 /obj/structure/window/proc/is_fulltile()
@@ -445,11 +430,13 @@
 //Updates the availabiliy of the rotation verbs
 /obj/structure/window/proc/update_verbs()
 	if(anchored || is_fulltile())
-		verbs -= /obj/structure/window/verb/rotate_counterclockwise
-		verbs -= /obj/structure/window/verb/rotate_clockwise
+		verbs -= /atom/movable/proc/rotate_counterclockwise
+		verbs -= /atom/movable/proc/rotate_clockwise
+		verbs -= /atom/movable/proc/turn_around
 	else if(!is_fulltile())
-		verbs += /obj/structure/window/verb/rotate_counterclockwise
-		verbs += /obj/structure/window/verb/rotate_clockwise
+		verbs |= /atom/movable/proc/rotate_counterclockwise
+		verbs |= /atom/movable/proc/rotate_clockwise
+		verbs |= /atom/movable/proc/turn_around
 
 //merges adjacent full-tile windows into one (blatant ripoff from game/smoothwall.dm)
 /obj/structure/window/update_icon()
@@ -467,7 +454,7 @@
 		icon_state = "[basestate]"
 		return
 	else
-		flags = 0 // Removes ON_BORDER and OPPOSITE_OPACITY
+		flags = NONE // Removes ON_BORDER and OPPOSITE_OPACITY
 	var/list/dirs = list()
 	if(anchored)
 		for(var/obj/structure/window/W in orange(src,1))
@@ -513,7 +500,7 @@
 	icon_state = "window-full"
 	maxhealth = 24
 	fulltile = TRUE
-	flags = 0
+	flags = NONE
 
 /obj/structure/window/phoronbasic
 	name = "phoron window"
@@ -531,7 +518,7 @@
 	icon_state = "phoronwindow-full"
 	maxhealth = 80
 	fulltile = TRUE
-	flags = 0
+	flags = NONE
 
 /obj/structure/window/phoronreinforced
 	name = "reinforced borosilicate window"
@@ -550,7 +537,7 @@
 	icon_state = "phoronrwindow-full"
 	maxhealth = 160
 	fulltile = TRUE
-	flags = 0
+	flags = NONE
 
 /obj/structure/window/reinforced
 	name = "reinforced window"
@@ -568,7 +555,7 @@
 	icon_state = "rwindow-full"
 	maxhealth = 80
 	fulltile = TRUE
-	flags = 0
+	flags = NONE
 
 /obj/structure/window/reinforced/tinted
 	name = "tinted window"
@@ -606,7 +593,12 @@
 	icon_state = "rwindow-full"
 	maxhealth = 80
 	fulltile = TRUE
-	flags = 0
+	flags = NONE
+
+/obj/structure/window/reinforced/polarized/can_glasspassers_pass()
+	// If the windows are currently tinted, they're blocking light from passing.
+	// So, they should block stuff like lasers at that time.
+	return opacity
 
 /obj/structure/window/reinforced/polarized/attackby(obj/item/W as obj, mob/user as mob)
 	if(istype(W, /obj/item/multitool) && !anchored) // Only allow programming if unanchored!
@@ -620,7 +612,7 @@
 		// Otherwise fall back to asking them... and remind them what the current ID is.
 		if(id)
 			to_chat(user, "The window's current ID is [id].")
-		var/t = sanitizeSafe(tgui_input_text(user, "Enter the new ID for the window.", src.name, id), MAX_NAME_LEN)
+		var/t = sanitizeSafe(tgui_input_text(user, "Enter the new ID for the window.", src.name, id, encode = FALSE), MAX_NAME_LEN)
 		if(t && in_range(src, user))
 			src.id = t
 			to_chat(user, span_notice("The new ID of \the [src] is '[id]'."))
@@ -639,7 +631,7 @@
 
 /obj/machinery/button/windowtint
 	name = "window tint control"
-	icon = 'icons/obj/stationobjs_vr.dmi' // VOREStation Edit - New icons
+	icon = 'icons/obj/stationobjs.dmi'
 	icon_state = "light0"
 	desc = "A remote control switch for polarized windows."
 	var/range = 7
@@ -659,9 +651,7 @@
 
 	for(var/obj/structure/window/reinforced/polarized/W in range(src,range))
 		if (W.id == src.id || !W.id)
-			spawn(0)
-				W.toggle()
-				return
+			W.toggle()
 
 /obj/machinery/button/windowtint/power_change()
 	..()
@@ -680,7 +670,7 @@
 		var/obj/item/multitool/MT = W
 		if(!id)
 			// If no ID is set yet (newly built button?) let them select an ID for first-time use!
-			var/t = sanitizeSafe(tgui_input_text(user, "Enter an ID for \the [src].", src.name, null, MAX_NAME_LEN), MAX_NAME_LEN)
+			var/t = sanitizeSafe(tgui_input_text(user, "Enter an ID for \the [src].", src.name, null, MAX_NAME_LEN, encode = FALSE), MAX_NAME_LEN)
 			if (t && in_range(src, user))
 				src.id = t
 				to_chat(user, span_notice("The new ID of \the [src] is '[id]'. To reset this, rebuild the control."))

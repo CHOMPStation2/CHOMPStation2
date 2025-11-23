@@ -32,7 +32,7 @@
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 1;
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "turretpost_pump"
 	},
 /obj/machinery/embedded_controller/radio/airlock/airlock_controller{
@@ -133,7 +133,7 @@
 /area/submap/turretedoutpost)
 "jc" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "turretpost_pump"
 	},
 /turf/simulated/floor/plating,
@@ -514,7 +514,7 @@
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 1;
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "turretpost_pump"
 	},
 /turf/simulated/floor/plating,

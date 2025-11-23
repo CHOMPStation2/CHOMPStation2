@@ -161,7 +161,7 @@
 	name = "\improper Research Outpost Gas Heating"
 	icon_state = "toxmix"
 
-/area/rnd/outpost/testing
+/area/rnd/outpost/toxtest
 	name = "\improper Research Outpost Testing"
 	icon_state = "toxtest"
 

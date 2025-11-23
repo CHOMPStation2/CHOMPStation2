@@ -71,6 +71,7 @@ GLOBAL_LIST_INIT(digest_modes, list())
 	L.adjustOxyLoss(B.digest_oxy)
 	L.adjustToxLoss(B.digest_tox)
 	L.adjustCloneLoss(B.digest_clone)
+	L.attempt_multishock(SHOCKFLAG_DIGESTION)
 	// Send a message when a prey-thing enters hard crit.
 	if(iscarbon(L) && old_health > 0 && L.health <= 0)
 		to_chat(B.owner, span_notice("You feel [L] go still within your [lowertext(B.name)]."))
@@ -124,10 +125,16 @@ GLOBAL_LIST_INIT(digest_modes, list())
 	id = DM_UNABSORB
 
 /datum/digest_mode/unabsorb/process_mob(obj/belly/B, mob/living/L)
-	if(L.absorbed && B.owner.nutrition >= 100)
-		B.owner.adjust_nutrition(-100)
-		B.unabsorb_living(L)
-		return list("to_update" = TRUE)
+	if(L.absorbed)
+		if(B.owner.nutrition >= 100)
+			B.owner.adjust_nutrition(-100)
+			B.unabsorb_living(L)
+			return list("to_update" = TRUE)
+		else if(isrobot(B.owner))
+			var/mob/living/silicon/robot/robot_owner = B.owner
+			if(robot_owner.cell_use_power(100))
+				B.unabsorb_living(L)
+				return list("to_update" = TRUE)
 
 /datum/digest_mode/drain
 	id = DM_DRAIN
@@ -252,8 +259,8 @@ GLOBAL_LIST_INIT(digest_modes, list())
 			egg_contents += E
 	if(egg_contents.len)
 		if(!B.ownegg)
-			if(B.egg_type in tf_vore_egg_types)
-				B.egg_path = tf_vore_egg_types[B.egg_type]
+			if(B.egg_type in GLOB.tf_vore_egg_types)
+				B.egg_path = GLOB.tf_vore_egg_types[B.egg_type]
 			B.ownegg = new B.egg_path(B)
 			if(B.ownegg && B.egg_name)
 				B.ownegg.egg_name = B.egg_name

@@ -1,6 +1,6 @@
 /datum/material/resin
 	name = MAT_RESIN
-//	icon_colour = "#353C40" // CHOMPedit: No longer needed
+	icon_colour = "#ffffff" // CHOMPedit: No longer needed
 	icon_base = "resin"
 	integrity = 50 // CHOMPedit: Same as wood.
 	hardness = 15 // CHOMPedit: Same as wood.
@@ -30,7 +30,7 @@
 	if(istype(M) && locate(/obj/item/organ/internal/xenos/hivenode) in M.internal_organs)
 		to_chat(M, "\The [W] shudders under your touch, starting to become porous.")
 		playsound(W, 'sound/effects/attackblob.ogg', 50, 1)
-		if(!do_after(L, 5 SECONDS))
+		if(!do_after(L, 5 SECONDS, target = W))
 			return FALSE
 		playsound(W, 'sound/effects/attackblob.ogg', 100, 1)
 		W.dismantle_wall()
@@ -38,7 +38,7 @@
 	if(istype(M) && locate(/obj/item/organ/internal/xenos/resinspinner/replicant) in M.internal_organs)
 		to_chat(M, "\The [W] shudders under your touch, starting to become porous.")
 		playsound(W, 'sound/effects/attackblob.ogg', 50, 1)
-		if(!do_after(L, 5 SECONDS))
+		if(!do_after(L, 5 SECONDS, target = W))
 			return FALSE
 		playsound(W, 'sound/effects/attackblob.ogg', 100, 1)
 		W.dismantle_wall()

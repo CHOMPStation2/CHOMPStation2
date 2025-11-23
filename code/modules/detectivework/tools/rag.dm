@@ -1,6 +1,5 @@
 /mob
 	var/bloody_hands = 0
-	var/mob/living/carbon/human/bloody_hands_mob
 	var/track_blood = 0
 	var/list/feet_blood_DNA
 	var/track_blood_type
@@ -8,7 +7,6 @@
 
 /obj/item/clothing/gloves
 	var/transfer_blood = 0
-	var/mob/living/carbon/human/bloody_hands_mob
 
 /obj/item/clothing/shoes/
 	var/track_blood = 0
@@ -20,7 +18,7 @@
 	icon = 'icons/obj/toy.dmi'
 	icon_state = "rag"
 	amount_per_transfer_from_this = 5
-	possible_transfer_amounts = list(5)
+	max_transfer_amount = 5
 	volume = 10
 	can_be_placed_into = null
 	flags = OPENCONTAINER | NOBLUDGEON
@@ -86,7 +84,7 @@
 		var/target_text = trans_dest? "\the [trans_dest]" : "\the [user.loc]"
 		user.visible_message(span_danger("\The [user] begins to wring out [src] over [target_text]."), span_notice("You begin to wring out [src] over [target_text]."))
 
-		if(do_after(user, reagents.total_volume*5)) //50 for a fully soaked rag
+		if(do_after(user, reagents.total_volume*5, target = src)) //50 for a fully soaked rag
 			if(trans_dest)
 				reagents.trans_to(trans_dest, reagents.total_volume)
 			else
@@ -100,7 +98,7 @@
 	else
 		user.visible_message("[user] starts to wipe [A] with [src].")
 		update_name()
-		if(do_after(user,30))
+		if(do_after(user, 3 SECONDS, target = src))
 			user.visible_message("[user] finishes wiping [A]!")
 			A.on_rag_wipe(src)
 
@@ -110,7 +108,7 @@
 		if(on_fire) //Check if rag is on fire, if so igniting them and stopping.
 			user.visible_message(span_danger("\The [user] hits [target] with [src]!"),)
 			user.do_attack_animation(src)
-			M.IgniteMob()
+			M.ignite_mob()
 		else if(user.zone_sel.selecting == O_MOUTH) //Check player target location, provided the rag is not on fire. Then check if mouth is exposed.
 			if(ishuman(target)) //Added this since player species process reagents in majority of cases.
 				var/mob/living/carbon/human/H = target
@@ -200,7 +198,8 @@
 	update_name()
 	update_icon()
 
-/obj/item/reagent_containers/glass/rag/proc/extinguish()
+/obj/item/reagent_containers/glass/rag/extinguish()
+	. = ..()
 	STOP_PROCESSING(SSobj, src)
 	set_light(0)
 	on_fire = 0
@@ -222,7 +221,7 @@
 	//copied from matches
 	if(isliving(loc))
 		var/mob/living/M = loc
-		M.IgniteMob()
+		M.ignite_mob()
 	var/turf/location = get_turf(src)
 	if(location)
 		location.hotspot_expose(700, 5)

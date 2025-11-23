@@ -1,32 +1,7 @@
 #define CANBROADCAST_INNERBOX 0.7071067811865476	//This is sqrt(2)/2
-// Access check is of the type requires one. These have been carefully selected to avoid allowing the janitor to see channels he shouldn't
-var/global/list/default_internal_channels = list(
-	num2text(PUB_FREQ) = list(),
-	num2text(AI_FREQ)  = list(access_synth),
-	num2text(ENT_FREQ) = list(),
-	num2text(ERT_FREQ) = list(access_cent_specops),
-	num2text(COMM_FREQ)= list(access_heads),
-	num2text(ENG_FREQ) = list(access_engine_equip, access_atmospherics),
-	num2text(MED_FREQ) = list(access_medical_equip),
-	num2text(MED_I_FREQ)=list(access_medical_equip),
-	num2text(BDCM_FREQ) =list(access_security), // CHOMPEdit
-
-	num2text(SEC_FREQ) = list(access_security),
-	num2text(SEC_I_FREQ)=list(access_security),
-	num2text(SCI_FREQ) = list(access_tox, access_robotics, access_xenobiology),
-	num2text(SUP_FREQ) = list(access_cargo, access_mining_station),
-	num2text(SRV_FREQ) = list(access_janitor, access_library, access_hydroponics, access_bar, access_kitchen),
-	num2text(EXP_FREQ) = list(access_explorer, access_pilot) //CHOMP explo keep
-)
-
-var/global/list/default_medbay_channels = list(
-	num2text(PUB_FREQ) = list(),
-	num2text(MED_FREQ) = list(),
-	num2text(MED_I_FREQ) = list()
-)
 
 /obj/item/radio
-	icon = 'icons/obj/radio_vr.dmi'
+	icon = 'icons/obj/radio.dmi'
 	name = "shortwave radio"
 	desc = "Used to talk to people when headsets don't function. Range is limited."
 	suffix = "\[3\]"
@@ -67,25 +42,26 @@ var/global/list/default_medbay_channels = list(
 	var/list/internal_channels
 
 	var/datum/radio_frequency/radio_connection
-	var/list/datum/radio_frequency/secure_radio_connections = new
+	var/list/datum/radio_frequency/secure_radio_connections
 
 /obj/item/radio/proc/set_frequency(new_frequency)
-	radio_controller.remove_object(src, frequency)
+	SSradio.remove_object(src, frequency)
 	frequency = new_frequency
-	radio_connection = radio_controller.add_object(src, frequency, RADIO_CHAT)
+	radio_connection = SSradio.add_object(src, frequency, RADIO_CHAT)
 
 /obj/item/radio/Initialize(mapload)
 	. = ..()
+	secure_radio_connections = new
 	if(frequency < RADIO_LOW_FREQ || frequency > RADIO_HIGH_FREQ)
 		frequency = sanitize_frequency(frequency, RADIO_LOW_FREQ, RADIO_HIGH_FREQ)
 	set_frequency(frequency)
 
 	for (var/ch_name in channels)
-		secure_radio_connections[ch_name] = radio_controller.add_object(src, radiochannels[ch_name],  RADIO_CHAT)
+		secure_radio_connections[ch_name] = SSradio.add_object(src, GLOB.radiochannels[ch_name],  RADIO_CHAT)
 
 	wires = new(src)
-	internal_channels = default_internal_channels.Copy()
-	listening_objects += src
+	internal_channels = GLOB.default_internal_channels.Copy()
+	GLOB.listening_objects += src
 
 	if(bluespace_radio && (bs_tx_preload_id || bs_rx_preload_id))
 		return INITIALIZE_HINT_LATELOAD
@@ -106,7 +82,7 @@ var/global/list/default_medbay_channels = list(
 					AIO.link_radio(src)
 					break
 		if(!bs_tx_weakref)
-			testing("A radio [src] at [x],[y],[z] specified bluespace prelink IDs, but the machines with corresponding IDs ([bs_tx_preload_id], [bs_rx_preload_id]) couldn't be found.")
+			log_mapping("A radio [src] at [x],[y],[z] specified bluespace prelink IDs, but the machines with corresponding IDs ([bs_tx_preload_id], [bs_rx_preload_id]) couldn't be found.")
 
 	if(bs_rx_preload_id)
 		var/found = 0
@@ -124,23 +100,22 @@ var/global/list/default_medbay_channels = list(
 					found = 1
 					break
 		if(!found)
-			testing("A radio [src] at [x],[y],[z] specified bluespace prelink IDs, but the machines with corresponding IDs ([bs_tx_preload_id], [bs_rx_preload_id]) couldn't be found.")
+			log_mapping("A radio [src] at [x],[y],[z] specified bluespace prelink IDs, but the machines with corresponding IDs ([bs_tx_preload_id], [bs_rx_preload_id]) couldn't be found.")
 
 /obj/item/radio/Destroy()
 	qdel(wires)
 	wires = null
-	listening_objects -= src
-	if(radio_controller)
-		radio_controller.remove_object(src, frequency)
+	GLOB.listening_objects -= src
+	if(SSradio)
+		SSradio.remove_object(src, frequency)
 		for (var/ch_name in channels)
-			radio_controller.remove_object(src, radiochannels[ch_name])
+			SSradio.remove_object(src, GLOB.radiochannels[ch_name])
 	return ..()
 
 /obj/item/radio/proc/recalculateChannels()
 	return
 
 /obj/item/radio/attack_self(mob/user as mob)
-	user.set_machine(src)
 	interact(user)
 
 /obj/item/radio/interact(mob/user)
@@ -195,7 +170,7 @@ var/global/list/default_medbay_channels = list(
 		var/chan_stat = channels[ch_name]
 		var/listening = !!(chan_stat & FREQ_LISTENING) != 0
 
-		dat.Add(list(list("chan" = ch_name, "display_name" = ch_name, "secure_channel" = 1, "sec_channel_listen" = !listening, "freq" = radiochannels[ch_name])))
+		dat.Add(list(list("chan" = ch_name, "display_name" = ch_name, "secure_channel" = 1, "sec_channel_listen" = !listening, "freq" = GLOB.radiochannels[ch_name])))
 
 	return dat
 
@@ -612,7 +587,6 @@ GLOBAL_DATUM(autospeaker, /mob/living/silicon/ai/announcer)
 
 /obj/item/radio/attackby(obj/item/W as obj, mob/user as mob)
 	..()
-	user.set_machine(src)
 	if (!W.has_tool_quality(TOOL_SCREWDRIVER))
 		return
 	b_stat = !( b_stat )
@@ -627,12 +601,15 @@ GLOBAL_DATUM(autospeaker, /mob/living/silicon/ai/announcer)
 		return
 	else return
 
-/obj/item/radio/emp_act(severity)
-	broadcasting = 0
-	listening = 0
+/obj/item/radio/emp_act(severity, recursive)
+	broadcasting = FALSE
+	listening = FALSE
 	for (var/ch_name in channels)
 		channels[ch_name] = 0
 	..()
+
+/obj/item/radio/start_off
+	listening = FALSE
 
 ///////////////////////////////
 //////////Borg Radios//////////
@@ -664,7 +641,6 @@ GLOBAL_DATUM(autospeaker, /mob/living/silicon/ai/announcer)
 
 /obj/item/radio/borg/attackby(obj/item/W as obj, mob/user as mob)
 //	..()
-	user.set_machine(src)
 	if (!(W.has_tool_quality(TOOL_SCREWDRIVER) || istype(W, /obj/item/encryptionkey)))
 		return
 
@@ -673,7 +649,7 @@ GLOBAL_DATUM(autospeaker, /mob/living/silicon/ai/announcer)
 
 
 			for(var/ch_name in channels)
-				radio_controller.remove_object(src, radiochannels[ch_name])
+				SSradio.remove_object(src, GLOB.radiochannels[ch_name])
 				secure_radio_connections[ch_name] = null
 
 
@@ -731,24 +707,24 @@ GLOBAL_DATUM(autospeaker, /mob/living/silicon/ai/announcer)
 /obj/item/radio/borg/proc/controller_check(var/initial_run = FALSE)
 	PRIVATE_PROC(TRUE)
 	SHOULD_NOT_OVERRIDE(TRUE)
-	if(!radio_controller && initial_run)
+	if(!SSradio && initial_run)
 		addtimer(CALLBACK(src,PROC_REF(controller_check), FALSE),3 SECONDS)
 		return
-	if(!radio_controller && !initial_run)
+	if(!SSradio && !initial_run)
 		name = "broken radio headset"
 		return
 	for (var/ch_name in channels)
-		secure_radio_connections[ch_name] = radio_controller.add_object(src, radiochannels[ch_name],  RADIO_CHAT)
+		secure_radio_connections[ch_name] = SSradio.add_object(src, GLOB.radiochannels[ch_name],  RADIO_CHAT)
 
 /obj/item/radio/proc/config(op)
-	if(radio_controller)
+	if(SSradio)
 		for (var/ch_name in channels)
-			radio_controller.remove_object(src, radiochannels[ch_name])
+			SSradio.remove_object(src, GLOB.radiochannels[ch_name])
 	secure_radio_connections = new
 	channels = op
-	if(radio_controller)
+	if(SSradio)
 		for (var/ch_name in op)
-			secure_radio_connections[ch_name] = radio_controller.add_object(src, radiochannels[ch_name],  RADIO_CHAT)
+			secure_radio_connections[ch_name] = SSradio.add_object(src, GLOB.radiochannels[ch_name],  RADIO_CHAT)
 	return
 
 /obj/item/radio/off
@@ -756,7 +732,6 @@ GLOBAL_DATUM(autospeaker, /mob/living/silicon/ai/announcer)
 
 /obj/item/radio/phone
 	broadcasting = 0
-	icon = 'icons/obj/items.dmi'
 	icon_state = "red_phone"
 	listening = 1
 	name = "phone"
@@ -767,7 +742,7 @@ GLOBAL_DATUM(autospeaker, /mob/living/silicon/ai/announcer)
 
 /obj/item/radio/phone/medbay/Initialize(mapload)
 	. = ..()
-	internal_channels = default_medbay_channels.Copy()
+	internal_channels = GLOB.default_medbay_channels.Copy()
 
 /obj/item/radio/proc/can_broadcast_to()
 	var/list/output = list()
@@ -836,10 +811,42 @@ GLOBAL_DATUM(autospeaker, /mob/living/silicon/ai/announcer)
 //* Bluespace Radio *//
 /obj/item/bluespaceradio/southerncross_prelinked
 	name = "bluespace radio (southerncross)"
-	handset = /obj/item/radio/bluespacehandset/linked/southerncross_prelinked
+	handset_path = /obj/item/radio/bluespacehandset/linked/southerncross_prelinked
 
 /obj/item/radio/bluespacehandset/linked/southerncross_prelinked
 	bs_tx_preload_id = "Receiver A" //Transmit to a receiver
 	bs_rx_preload_id = "Broadcaster A" //Recveive from a transmitter
 
 #undef CANBROADCAST_INNERBOX
+
+/obj/item/radio/phone
+	subspace_transmission = TRUE
+	canhear_range = 0
+	adhoc_fallback = TRUE
+
+/obj/item/radio/emergency
+	name = "Medbay Emergency Radio Link"
+	icon_state = "med_walkietalkie"
+	frequency = MED_I_FREQ
+	subspace_transmission = TRUE
+	adhoc_fallback = TRUE
+
+/obj/item/radio/emergency/Initialize(mapload)
+	. = ..()
+	internal_channels = GLOB.default_medbay_channels.Copy()
+
+/obj/item/bluespaceradio/tether_prelinked
+	name = "bluespace radio (tether)"
+	handset_path = /obj/item/radio/bluespacehandset/linked/tether_prelinked
+
+/obj/item/radio/bluespacehandset/linked/tether_prelinked
+	bs_tx_preload_id = "tether_rx" //Transmit to a receiver
+	bs_rx_preload_id = "tether_tx" //Recveive from a transmitter
+
+/obj/item/bluespaceradio/talon_prelinked
+	name = "bluespace radio (talon)"
+	handset_path = /obj/item/radio/bluespacehandset/linked/talon_prelinked
+
+/obj/item/radio/bluespacehandset/linked/talon_prelinked
+	bs_tx_preload_id = "talon_aio" //Transmit to a receiver
+	bs_rx_preload_id = "talon_aio" //Recveive from a transmitter

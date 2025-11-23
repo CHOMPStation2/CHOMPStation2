@@ -80,7 +80,6 @@
 /obj/machinery/chem_master/attack_hand(mob/user as mob)
 	if(stat & BROKEN)
 		return
-	user.set_machine(src)
 	tgui_interact(user)
 
 /obj/machinery/chem_master/ui_assets(mob/user)
@@ -159,6 +158,7 @@
 						var/datum/reagent/blood/B = R
 						result["blood_type"] = B.data["blood_type"]
 						result["blood_dna"] = B.data["blood_DNA"]
+						result["changeling"] = B.data["changeling"]
 
 					arguments["analysis"] = result
 					tgui_modal_message(src, id, "", null, arguments)
@@ -400,7 +400,6 @@
 		return TRUE
 
 	add_fingerprint(ui.user)
-	ui.user.set_machine(src)
 
 	. = TRUE
 	switch(action)

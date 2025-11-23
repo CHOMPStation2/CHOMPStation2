@@ -32,7 +32,8 @@
 /mob/living/simple_mob/slime/feral/orange/apply_melee_effects(var/atom/A)
 	if(isliving(A))
 		var/mob/living/L = A
-		L.add_modifier(/datum/modifier/fire, 5 SECONDS)
+		L.adjust_fire_stacks(5)
+		L.ignite_mob()
 
 
 /mob/living/simple_mob/slime/feral/blue
@@ -51,25 +52,14 @@
 	coretype = /obj/item/slime_extract/metal
 	maxHealth = 250
 	armor = list(
-				"melee" = 25,
-				"bullet" = 25,
-				"laser" = 25,
+				"melee" = 35,
+				"bullet" = 35,
+				"laser" = 35,
 				"energy" = 50,
 				"bomb" = 80,
 				"bio" = 100,
 				"rad" = 100
 				)
-
-	armor_soak = list(
-				"melee" = 5,
-				"bullet" = 5,
-				"laser" = 5,
-				"energy" = 0,
-				"bomb" = 0,
-				"bio" = 0,
-				"rad" = 0
-				)
-
 
 /mob/living/simple_mob/slime/feral/yellow
 	desc = "This slime is very conductive, and is known to use electricity as a means of defense moreso than usual for slimes."

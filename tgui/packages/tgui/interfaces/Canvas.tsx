@@ -175,8 +175,6 @@ class PaintCanvas extends Component<PaintCanvasProps> {
 
     if (this.mouseIsDown && propSource.tool === Tool.Line) {
       this.drawLine(grid);
-    } else if (propSource.tool === Tool.Fill) {
-      this.areaFill(grid);
     }
 
     for (let x = 0; x < grid.length; x++) {
@@ -264,7 +262,7 @@ class PaintCanvas extends Component<PaintCanvasProps> {
 
     this.lastHovered = coord;
 
-    const time = new Date().getTime();
+    const time = Date.now();
 
     if (this.lastSuccessfulPaint + 50 > time) {
       return;

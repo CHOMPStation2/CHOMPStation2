@@ -29,7 +29,7 @@
 		to_chat(user, span_warning("Pressure: [round(pressure,0.1)] kPa"))
 	if(total_moles)
 		for(var/g in environment.gas)
-			to_chat(user, span_notice("[gas_data.name[g]]: [round((environment.gas[g] / total_moles) * 100)]%"))
+			to_chat(user, span_notice("[GLOB.gas_data.name[g]]: [round((environment.gas[g] / total_moles) * 100)]%"))
 		to_chat(user, span_notice("Temperature: [round(environment.temperature-T0C,0.1)]&deg;C ([round(environment.temperature,0.1)]K)"))
 
 /obj/item/boop_module/afterattack(obj/O, mob/user as mob, proximity)
@@ -168,8 +168,8 @@
 			return
 		user.visible_message(span_filter_notice("[user] begins to lap up water from [target.name]."), span_notice("You begin to lap up water from [target.name]."))
 		busy = 1
-		if(do_after(user, 50))
-			water.add_charge(50)
+		if(do_after(user, 5 SECONDS, target))
+			water.add_charge(250)
 			to_chat(src, span_filter_notice("You refill some of your water reserves."))
 		busy = 0
 	else if(water.energy < 5)
@@ -180,7 +180,7 @@
 	else if(istype(target,/obj/effect/decal/cleanable))
 		user.visible_message(span_filter_notice("[user] begins to lick off \the [target.name]."), span_notice("You begin to lick off \the [target.name]..."))
 		busy = 1
-		if(do_after(user, 50))
+		if(do_after(user, 5 SECONDS, target))
 			to_chat(user, span_notice("You finish licking off \the [target.name]."))
 			water.use_charge(5)
 			qdel(target)
@@ -192,7 +192,7 @@
 		if(istype(target,/obj/item/trash))
 			user.visible_message(span_filter_notice("[user] nibbles away at \the [target.name]."), span_notice("You begin to nibble away at \the [target.name]..."))
 			busy = 1
-			if(do_after (user, 50))
+			if(do_after (user, 5 SECONDS, target))
 				user.visible_message(span_filter_notice("[user] finishes eating \the [target.name]."), span_notice("You finish eating \the [target.name]."))
 				to_chat(user, span_notice("You finish off \the [target.name]."))
 				qdel(target)
@@ -204,7 +204,7 @@
 		if(istype(target,/obj/item/reagent_containers/food))
 			user.visible_message("[user] nibbles away at \the [target.name].", span_notice("You begin to nibble away at \the [target.name]..."))
 			busy = 1 //CHOMPAdd prevents abuse
-			if(do_after (user, 50))
+			if(do_after (user, 5 SECONDS, target))
 				user.visible_message("[user] finishes eating \the [target.name].", span_notice("You finish eating \the [target.name]."))
 				user << span_notice("You finish off \the [target.name].")
 				del(target)
@@ -215,7 +215,7 @@
 		if(istype(target,/obj/item/cell))
 			user.visible_message(span_filter_notice("[user] begins cramming \the [target.name] down its throat."), span_notice("You begin cramming \the [target.name] down your throat..."))
 			busy = 1
-			if(do_after (user, 50))
+			if(do_after (user, 5 SECONDS, target))
 				user.visible_message(span_filter_notice("[user] finishes gulping down \the [target.name]."), span_notice("You finish swallowing \the [target.name]."))
 				to_chat(user, span_notice("You finish off \the [target.name], and gain some charge!"))
 				var/mob/living/silicon/robot/R = user
@@ -228,12 +228,12 @@
 		//CHOMPAdd Start
 		user.visible_message(span_filter_notice("[user] begins to lick \the [target.name] clean..."), span_notice("You begin to lick \the [target.name] clean..."))
 		busy = 1
-		if(do_after(user, 50, exclusive = TRUE))
+		if(do_after(user, 5 SECONDS, target))
 			to_chat(user, span_notice("You clean \the [target.name]."))
 			water.use_charge(5)
 			var/obj/effect/decal/cleanable/C = locate() in target
 			qdel(C)
-			target.clean_blood()
+			target.wash(CLEAN_WASH)
 		busy = 0
 		//CHOMPADD End
 	else if(ishuman(target))
@@ -260,11 +260,11 @@
 	else
 		user.visible_message(span_filter_notice("[user] begins to lick \the [target.name] clean..."), span_notice("You begin to lick \the [target.name] clean..."))
 		busy = 1
-		if(do_after(user, 50))
+		if(do_after(user, 5 SECONDS, target))
 			to_chat(user, span_notice("You clean \the [target.name]."))
 			var/obj/effect/decal/cleanable/C = locate() in target
 			qdel(C)
-			target.clean_blood()
+			target.wash(CLEAN_WASH)
 			water.use_charge(5)
 			if(istype(target, /turf/simulated))
 				var/turf/simulated/T = target
@@ -321,7 +321,7 @@
 				return
 			to_chat(user, span_filter_notice("It has [uses] lights remaining. Attempting to fabricate a replacement. Please stand still."))
 			cooldown = 1
-			if(do_after(user, 50))
+			if(do_after(user, 5 SECONDS, target = src))
 				glass.use_charge(125)
 				add_uses(1)
 				cooldown = 0
@@ -354,7 +354,7 @@
 				return
 			busy = TRUE
 			to_chat(user, span_notice("You begin to attach \the [C] to \the [A]..."))
-			if(do_after(user, 30))
+			if(do_after(user, 3 SECONDS, target = src))
 				to_chat(user, span_notice("You have attached \the [src] to \the [A]."))
 				var/obj/machinery/clamp/clamp = new/obj/machinery/clamp(A.loc, A)
 				clamps.Add(clamp)
@@ -364,7 +364,7 @@
 		else
 			busy = TRUE
 			to_chat(user, span_notice("You begin to remove \the [C] from \the [A]..."))
-			if(do_after(user, 30))
+			if(do_after(user, 3 SECONDS, target = src))
 				to_chat(user, span_notice("You have removed \the [src] from \the [A]."))
 				clamps.Remove(C)
 				qdel(C)
@@ -417,9 +417,10 @@
 
 	if(get_dist(get_turf(T), get_turf(src)) > leap_distance) return
 
-	if(ishuman(T))
-		var/mob/living/carbon/human/H = T
-		if(H.get_species() == SPECIES_SHADEKIN && (H.ability_flags & AB_PHASE_SHIFTED))
+	if(isliving(T))
+		var/mob/living/M = T
+		var/datum/component/shadekin/SK = M.get_shadekin_component()
+		if(SK && SK.in_phase)
 			power_cost *= 2
 
 	if(!use_direct_power(power_cost, minimum_power - power_cost))
@@ -467,8 +468,7 @@
 			return
 
 	var/armor_block = run_armor_check(T, "melee")
-	var/armor_soak = get_armor_soak(T, "melee")
-	T.apply_damage(20, HALLOSS,, armor_block, armor_soak)
+	T.apply_damage(20, HALLOSS, null, armor_block)
 	if(prob(75)) //75% chance to stun for 5 seconds, really only going to be 4 bcus click cooldown+animation.
 		T.apply_effect(5, STUN, armor_block)
 		T.drop_both_hands() //CHOMPEdit Stuns no longer drop items

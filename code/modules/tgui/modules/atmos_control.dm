@@ -36,7 +36,7 @@
 
 /datum/tgui_module/atmos_control/ui_assets(mob/user)
 	. = ..()
-	. += get_asset_datum(/datum/asset/simple/nanomaps)
+	. += get_asset_datum(/datum/asset/simple/holo_nanomap)
 
 /datum/tgui_module/atmos_control/tgui_interact(mob/user, datum/tgui/ui = null)
 	ui = SStgui.try_update_ui(user, src, ui)
@@ -67,7 +67,6 @@
 			"y" = alarm.y,
 			"z" = alarm.z)
 	.["alarms"] = alarms
-	.["zoomScale"] = world.maxx + world.maxy
 
 /datum/tgui_module/atmos_control/tgui_data(mob/user)
 	var/list/data = list()
@@ -101,7 +100,7 @@
 	return STATUS_UPDATE
 
 /datum/tgui_state/air_alarm_remote/proc/has_access(var/mob/user)
-	return user && (isAI(user) || atmos_control.access.allowed(user) || atmos_control.emagged || air_alarm.rcon_setting == RCON_YES || (air_alarm.alarm_area.atmosalm && air_alarm.rcon_setting == RCON_AUTO) || (access_ce in user.GetAccess()))
+	return user && (isAI(user) || atmos_control.access.allowed(user) || atmos_control.emagged || air_alarm.rcon_setting == RCON_YES || (air_alarm.alarm_area.atmosalm && air_alarm.rcon_setting == RCON_AUTO) || (ACCESS_CE in user.GetAccess()))
 
 /datum/tgui_state/air_alarm_remote/Destroy()
 	atmos_control = null

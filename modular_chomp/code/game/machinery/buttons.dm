@@ -5,11 +5,11 @@
 	var/link = "MOBSPAWN"
 
 /obj/machinery/button/mob_spawner_button/attack_hand(mob/living/user)
-	var/mob_wanted = tgui_input_list(user, "Which Mob do you want to spawn?", "Mob spawn", vr_mob_spawner_options)
+	var/mob_wanted = tgui_input_list(user, "Which Mob do you want to spawn?", "Mob spawn", GLOB.vr_mob_spawner_options)
 	if(!mob_wanted)
 		return
 	var/neutral = FALSE
-	var/mobtype = vr_mob_spawner_options[mob_wanted]
+	var/mobtype = GLOB.vr_mob_spawner_options[mob_wanted]
 	var/faction = tgui_alert(user, "Do you want the mob's faction to remain the same or be passive?","Faction",list("Normal","Neutral"))
 	if(!faction)
 		return
@@ -24,7 +24,7 @@
 	mobspawned.init_vore()
 	if(neutral == TRUE)
 		mobspawned.faction = "neutral"
-	RegisterSignal(mobspawned, COMSIG_PARENT_QDELETING, PROC_REF(clean_mob))
+	RegisterSignal(mobspawned, COMSIG_QDELETING, PROC_REF(clean_mob))
 
 /obj/machinery/button/mob_spawner_button/proc/clean_mob()
 	SIGNAL_HANDLER

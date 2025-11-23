@@ -6,11 +6,13 @@
 	var/msg = !auth ? "no" : "a bad"
 	message_admins("[key_name_admin(usr)] clicked an href with [msg] authorization key!")
 
+	/* Debug code in case one needs to dig missing token HREFS
 	var/debug_admin_hrefs = TRUE // Remove once everything is converted over
 	if(debug_admin_hrefs)
 		message_admins("Debug mode enabled, call not blocked. Please ask your coders to review this round's logs.")
 		log_world("UAH: [href]")
 		return TRUE
+	*/
 
 	log_admin("[key_name(usr)] clicked an href with [msg] authorization key! [href]")
 
@@ -25,13 +27,12 @@
 	if(!CheckAdminHref(href, href_list))
 		return
 
-	if(ticker.mode && ticker.mode.check_antagonists_topic(href, href_list))
+	if(SSticker.mode && SSticker.mode.check_antagonists_topic(href, href_list))
 		check_antagonists()
 		return
 
-	// CHOMPedit Start - Tickets System
 	if(href_list["ticket"])
-		if(!check_rights(R_ADMIN|R_MOD|R_DEBUG|R_EVENT))
+		if(!check_rights(R_ADMIN|R_MOD|R_DEBUG|R_EVENT|R_MENTOR))
 			return
 
 		var/ticket_ref = href_list["ticket"]
@@ -44,90 +45,7 @@
 	else if(href_list["tickets"])
 		GLOB.tickets.BrowseTickets(text2num(href_list["tickets"]))
 
-	// CHOMPedit End
-
-	// mentor_commands(href, href_list, src) // CHOMPedit - Skip this because client is already admin & contents already handled of code above
-
-	if(href_list["dbsearchckey"] || href_list["dbsearchadmin"])
-
-		var/adminckey = href_list["dbsearchadmin"]
-		var/playerckey = href_list["dbsearchckey"]
-		var/playerip = href_list["dbsearchip"]
-		var/playercid = href_list["dbsearchcid"]
-		var/dbbantype = text2num(href_list["dbsearchbantype"])
-		var/match = 0
-
-		if("dbmatch" in href_list)
-			match = 1
-
-		DB_ban_panel(playerckey, adminckey, playerip, playercid, dbbantype, match)
-		return
-
-	else if(href_list["dbbanedit"])
-		var/banedit = href_list["dbbanedit"]
-		var/banid = text2num(href_list["dbbanid"])
-		if(!banedit || !banid)
-			return
-
-		DB_ban_edit(banid, banedit)
-		return
-
-	else if(href_list["dbbanaddtype"])
-
-		var/bantype = text2num(href_list["dbbanaddtype"])
-		var/banckey = href_list["dbbanaddckey"]
-		var/banip = href_list["dbbanaddip"]
-		var/bancid = href_list["dbbanaddcid"]
-		var/banduration = text2num(href_list["dbbaddduration"])
-		var/banjob = href_list["dbbanaddjob"]
-		var/banreason = href_list["dbbanreason"]
-
-		banckey = ckey(banckey)
-
-		switch(bantype)
-			if(BANTYPE_PERMA)
-				if(!banckey || !banreason)
-					to_chat(usr, span_filter_adminlog("Not enough parameters (Requires ckey and reason)"))
-					return
-				banduration = null
-				banjob = null
-			if(BANTYPE_TEMP)
-				if(!banckey || !banreason || !banduration)
-					to_chat(usr, span_filter_adminlog("Not enough parameters (Requires ckey, reason and duration)"))
-					return
-				banjob = null
-			if(BANTYPE_JOB_PERMA)
-				if(!banckey || !banreason || !banjob)
-					to_chat(usr, span_filter_adminlog("Not enough parameters (Requires ckey, reason and job)"))
-					return
-				banduration = null
-			if(BANTYPE_JOB_TEMP)
-				if(!banckey || !banreason || !banjob || !banduration)
-					to_chat(usr, span_filter_adminlog("Not enough parameters (Requires ckey, reason and job)"))
-					return
-
-		var/mob/playermob
-
-		for(var/mob/M in player_list)
-			if(M.ckey == banckey)
-				playermob = M
-				break
-
-
-		banreason = "(MANUAL BAN) "+banreason
-
-		if(!playermob)
-			if(banip)
-				banreason = "[banreason] (CUSTOM IP)"
-			if(bancid)
-				banreason = "[banreason] (CUSTOM CID)"
-		else
-			message_admins("Ban process: A mob matching [playermob.ckey] was found at location [playermob.x], [playermob.y], [playermob.z]. Custom ip and computer id fields replaced with the ip and computer id from the located mob")
-		notes_add(banckey,banreason,usr)
-
-		DB_ban_record(bantype, playermob, banduration, banreason, banjob, null, banckey, banip, bancid )
-		if((bantype == BANTYPE_PERMA || bantype == BANTYPE_TEMP) && playermob.client)
-			qdel(playermob.client)
+	// mentor_commands(href, href_list, src) - Skip because client is already admin & contents handled above
 
 	else if(href_list["editrightsbrowser"])
 		edit_admin_permissions(0)
@@ -150,13 +68,13 @@
 	else if(href_list["call_shuttle"])
 		if(!check_rights(R_ADMIN|R_EVENT))	return
 
-		if( ticker.mode.name == "blob" )
+		if( SSticker.mode.name == "blob" )
 			tgui_alert_async(usr, "You can't call the shuttle during blob!")
 			return
 
 		switch(href_list["call_shuttle"])
 			if("1")
-				if ((!( ticker ) || !emergency_shuttle.location()))
+				if ((!( SSticker ) || !emergency_shuttle.location()))
 					return
 				if (emergency_shuttle.can_call())
 					emergency_shuttle.call_evac()
@@ -164,7 +82,7 @@
 					message_admins(span_blue("[key_name_admin(usr)] called the Emergency Shuttle to the station."), 1)
 
 			if("2")
-				if (!( ticker ) || !emergency_shuttle.location())
+				if (!( SSticker ) || !emergency_shuttle.location())
 					return
 				if (emergency_shuttle.can_call())
 					emergency_shuttle.call_evac()
@@ -201,11 +119,11 @@
 		href_list["secretsadmin"] = "check_antagonist"
 
 	else if(href_list["delay_round_end"])
-		if(!check_rights(R_SERVER))	return //VOREStation Edit
+		if(!check_rights(R_SERVER))	return
 
-		ticker.delay_end = !ticker.delay_end
-		log_admin("[key_name(usr)] [ticker.delay_end ? "delayed the round end" : "has made the round end normally"].")
-		message_admins(span_blue("[key_name(usr)] [ticker.delay_end ? "delayed the round end" : "has made the round end normally"]."), 1)
+		SSticker.delay_end = !SSticker.delay_end
+		log_admin("[key_name(usr)] [SSticker.delay_end ? "delayed the round end" : "has made the round end normally"].")
+		message_admins(span_blue("[key_name(usr)] [SSticker.delay_end ? "delayed the round end" : "has made the round end normally"]."), 1)
 		href_list["secretsadmin"] = "check_antagonist"
 
 	else if(href_list["simplemake"])
@@ -295,12 +213,12 @@
 				mins = min(525599,mins)
 				minutes = CMinutes + mins
 				duration = GetExp(minutes)
-				reason = sanitize(tgui_input_text(usr,"Reason?","reason",reason2))
+				reason = tgui_input_text(usr,"Reason?","reason",reason2, MAX_MESSAGE_LEN)
 				if(!reason)	return
 			if("No")
 				temp = 0
 				duration = "Perma"
-				reason = sanitize(tgui_input_text(usr,"Reason?","reason",reason2))
+				reason = tgui_input_text(usr,"Reason?","reason",reason2, MAX_MESSAGE_LEN)
 				if(!reason)	return
 
 		log_admin("[key_name(usr)] edited [banned_key]'s ban. Reason: [reason] Duration: [duration]")
@@ -463,7 +381,6 @@
 
 		jobs += "</tr></table>"
 
-	//VOREStation Edit Start
 	//Exploration (Purple)
 		counter = 0
 		jobs += "<table cellpadding='1' cellspacing='0' width='100%'>"
@@ -508,7 +425,6 @@
 
 		jobs += "</tr></table>"
 
-	//VOREstation Edit End
 	//Civilian (Grey)
 		counter = 0
 		jobs += "<table cellpadding='1' cellspacing='0' width='100%'>"
@@ -663,7 +579,6 @@
 					var/datum/job/temp = job_master.GetJob(jobPos)
 					if(!temp) continue
 					joblist += temp.title
-			//VOREStation Edit Start
 			if("explorationdept")
 				for(var/jobPos in SSjob.get_job_titles_in_department(DEPARTMENT_PLANET))
 					if(!jobPos)	continue
@@ -677,7 +592,6 @@
 						var/datum/job/temp = job_master.GetJob(jobPos)
 						if(!temp) continue
 						joblist += temp.title
-			//VOREStation Edit End
 			if("civiliandept")
 				for(var/jobPos in SSjob.get_job_titles_in_department(DEPARTMENT_CIVILIAN))
 					if(!jobPos)	continue
@@ -718,7 +632,7 @@
 					if(check_rights(R_MOD, 0) && !check_rights(R_BAN, 0) && mins > CONFIG_GET(number/mod_job_tempban_max))
 						to_chat(usr, span_filter_adminlog(span_warning("Moderators can only job tempban up to [CONFIG_GET(number/mod_job_tempban_max)] minutes!")))
 						return
-					var/reason = sanitize(tgui_input_text(usr,"Reason?","Please State Reason",""))
+					var/reason = tgui_input_text(usr,"Reason?","Please State Reason","", MAX_MESSAGE_LEN)
 					if(!reason)
 						return
 
@@ -743,7 +657,7 @@
 					return 1
 				if("No")
 					if(!check_rights(R_BAN))  return
-					var/reason = sanitize(tgui_input_text(usr,"Reason?","Please State Reason",""))
+					var/reason = tgui_input_text(usr,"Reason?","Please State Reason","", MAX_MESSAGE_LEN)
 					if(reason)
 						var/msg
 						for(var/job in notbannedlist)
@@ -770,7 +684,7 @@
 		if(joblist.len) //at least 1 banned job exists in joblist so we have stuff to unban.
 			if(!CONFIG_GET(flag/ban_legacy_system))
 				to_chat(usr, span_filter_adminlog("Unfortunately, database based unbanning cannot be done through this panel"))
-				DB_ban_panel(M.ckey)
+				DB_ban_panel(usr.client, M.ckey)
 				return
 			var/msg
 			for(var/job in joblist)
@@ -800,7 +714,7 @@
 		if (ismob(M))
 			if(!check_if_greater_rights_than(M.client))
 				return
-			var/reason = sanitize(tgui_input_text(usr, "Please enter reason.", multiline = TRUE, prevent_enter = TRUE))
+			var/reason = tgui_input_text(usr, "Please enter reason.", "", "", MAX_MESSAGE_LEN, TRUE, prevent_enter = TRUE)
 			if(!reason)
 				return
 
@@ -808,7 +722,7 @@
 			log_admin("[key_name(usr)] booted [key_name(M)] for reason: '[reason]'.")
 			message_admins(span_blue("[key_name_admin(usr)] booted [key_name_admin(M)] for reason '[reason]'."), 1)
 			//M.client = null
-			admin_action_message(usr.key, M.key, "kicked", reason, 0) //VOREStation Add
+			admin_action_message(usr.key, M.key, "kicked", reason, 0)
 			qdel(M.client)
 
 	else if(href_list["removejobban"])
@@ -838,7 +752,7 @@
 		var/mob/M = locate(href_list["newban"])
 		if(!ismob(M)) return
 
-		if(M.client && M.client.holder)	return	//admins cannot be banned. Even if they could, the ban doesn't affect them anyway
+		if(M.client && check_rights_for(M.client, R_HOLDER))	return	//admins cannot be banned. Even if they could, the ban doesn't affect them anyway
 
 		switch(tgui_alert(usr, "Temporary Ban?","Temporary Ban",list("Yes","No","Cancel")))
 			if(null)
@@ -851,7 +765,7 @@
 					to_chat(usr, span_warning("Moderators can only job tempban up to [CONFIG_GET(number/mod_tempban_max)] minutes!"))
 					return
 				if(mins >= 525600) mins = 525599
-				var/reason = sanitize(tgui_input_text(usr,"Reason?","reason","Griefer"))
+				var/reason = tgui_input_text(usr,"Reason?","reason","Griefer", MAX_MESSAGE_LEN)
 				if(!reason)
 					return
 				AddBan(M.ckey, M.computer_id, reason, usr.ckey, 1, mins)
@@ -868,16 +782,15 @@
 					to_chat(M, span_filter_system(span_warning("No ban appeals URL has been set.")))
 				log_admin("[usr.client.ckey] has banned [M.ckey].\nReason: [reason]\nThis will be removed in [mins] minutes.")
 				message_admins(span_blue("[usr.client.ckey] has banned [M.ckey].\nReason: [reason]\nThis will be removed in [mins] minutes."))
-				// CHOMPedit Start - Tickets System
 				var/datum/ticket/T = M.client ? M.client.current_ticket : null
 				if(T)
-					T.Resolve()
+					T.Resolve(usr)
 				qdel(M.client)
 				// CHOMPedit End
 				//qdel(M)	// See no reason why to delete mob. Important stuff can be lost. And ban can be lifted before round ends.
 			if("No")
 				if(!check_rights(R_BAN))   return
-				var/reason = sanitize(tgui_input_text(usr,"Reason?","reason","Griefer"))
+				var/reason = tgui_input_text(usr,"Reason?","reason","Griefer", MAX_MESSAGE_LEN)
 				if(!reason)
 					return
 				switch(tgui_alert(usr,"IP ban?","IP Ban",list("Yes","No","Cancel")))
@@ -898,11 +811,9 @@
 				message_admins(span_blue("[usr.client.ckey] has banned [M.ckey].\nReason: [reason]\nThis is a permanent ban."))
 				feedback_inc("ban_perma",1)
 				DB_ban_record(BANTYPE_PERMA, M, -1, reason)
-				// CHOMPedit Start - Tickets System
 				var/datum/ticket/T = M.client ? M.client.current_ticket : null
 				if(T)
-					T.Resolve()
-				// CHOMPedit End
+					T.Resolve(usr)
 				qdel(M.client)
 				//qdel(M)
 			if("Cancel")
@@ -924,7 +835,7 @@
 	else if(href_list["c_mode"])
 		if(!check_rights(R_ADMIN|R_EVENT))	return
 
-		if(ticker && ticker.mode)
+		if(SSticker && SSticker.mode)
 			return tgui_alert_async(usr, "The game has already started.")
 		var/dat = {"<B>What mode do you wish to play?</B><HR>"}
 		for(var/mode in config.modes)
@@ -937,7 +848,7 @@
 	else if(href_list["f_secret"])
 		if(!check_rights(R_ADMIN|R_EVENT))	return
 
-		if(ticker && ticker.mode)
+		if(SSticker && SSticker.mode)
 			return tgui_alert_async(usr, "The game has already started.")
 		if(GLOB.master_mode != "secret")
 			return tgui_alert_async(usr, "The game mode has to be secret!")
@@ -951,12 +862,12 @@
 	else if(href_list["c_mode2"])
 		if(!check_rights(R_ADMIN|R_SERVER|R_EVENT))	return
 
-		if (ticker && ticker.mode)
+		if (SSticker && SSticker.mode)
 			return tgui_alert_async(usr, "The game has already started.")
 		GLOB.master_mode = href_list["c_mode2"]
 		log_admin("[key_name(usr)] set the mode as [config.mode_names[GLOB.master_mode]].")
 		message_admins(span_blue("[key_name_admin(usr)] set the mode as [config.mode_names[GLOB.master_mode]]."), 1)
-		to_world(span_world(span_blue("The mode is now: [config.mode_names[GLOB.master_mode]]")))
+		to_chat(world, span_world(span_blue("The mode is now: [config.mode_names[GLOB.master_mode]]")))
 		Game() // updates the main game menu
 		world.save_mode(GLOB.master_mode)
 		.(href, list("c_mode"=1))
@@ -964,7 +875,7 @@
 	else if(href_list["f_secret2"])
 		if(!check_rights(R_ADMIN|R_SERVER|R_EVENT))	return
 
-		if(ticker && ticker.mode)
+		if(SSticker && SSticker.mode)
 			return tgui_alert_async(usr, "The game has already started.")
 		if(GLOB.master_mode != "secret")
 			return tgui_alert_async(usr, "The game mode has to be secret!")
@@ -974,10 +885,10 @@
 		Game() // updates the main game menu
 		.(href, list("f_secret"=1))
 
-	else if(href_list["monkeyone"])
+	else if(href_list[VV_HK_TURN_MONKEY])
 		if(!check_rights(R_SPAWN))	return
 
-		var/mob/living/carbon/human/H = locate(href_list["monkeyone"])
+		var/mob/living/carbon/human/H = locate(href_list[VV_HK_TURN_MONKEY])
 		if(!istype(H))
 			to_chat(usr, span_filter_adminlog("This can only be used on instances of type /mob/living/carbon/human"))
 			return
@@ -1191,10 +1102,10 @@
 		else
 			to_chat(usr, span_filter_adminlog(span_filter_warning("Admin Rejuvinates have been disabled")))
 
-	else if(href_list["makeai"])
+	else if(href_list[VK_HK_TURN_AI])
 		if(!check_rights(R_SPAWN))	return
 
-		var/mob/living/carbon/human/H = locate(href_list["makeai"])
+		var/mob/living/carbon/human/H = locate(href_list[VK_HK_TURN_AI])
 		if(!istype(H))
 			to_chat(usr, span_filter_adminlog("This can only be used on instances of type /mob/living/carbon/human"))
 			return
@@ -1203,20 +1114,20 @@
 		log_admin("[key_name(usr)] AIized [key_name(H)]")
 		H.AIize()
 
-	else if(href_list["makealien"])
+	else if(href_list[VV_HK_TURN_ALIEN])
 		if(!check_rights(R_SPAWN))	return
 
-		var/mob/living/carbon/human/H = locate(href_list["makealien"])
+		var/mob/living/carbon/human/H = locate(href_list[VV_HK_TURN_ALIEN])
 		if(!istype(H))
 			to_chat(usr, span_filter_adminlog("This can only be used on instances of type /mob/living/carbon/human"))
 			return
 
 		usr.client.cmd_admin_alienize(H)
 
-	else if(href_list["makerobot"])
+	else if(href_list[VK_HK_TURN_ROBOT])
 		if(!check_rights(R_SPAWN))	return
 
-		var/mob/living/carbon/human/H = locate(href_list["makerobot"])
+		var/mob/living/carbon/human/H = locate(href_list[VK_HK_TURN_ROBOT])
 		if(!istype(H))
 			to_chat(usr, span_filter_adminlog("This can only be used on instances of type /mob/living/carbon/human"))
 			return
@@ -1251,14 +1162,14 @@
 			return
 		var/block=text2num(href_list["block"])
 		usr.client.cmd_admin_toggle_block(H,block)
-		show_player_panel(H)
+		SSadmin_verbs.dynamic_invoke_verb(usr.client, /datum/admin_verb/show_player_panel, H)
 
 	else if(href_list["adminplayeropts"])
 		var/mob/M = locate(href_list["adminplayeropts"])
-		show_player_panel(M)
+		SSadmin_verbs.dynamic_invoke_verb(usr.client, /datum/admin_verb/show_player_panel, M)
 
 	else if(href_list["adminplayerobservejump"])
-		if(!check_rights(R_MOD|R_ADMIN|R_SERVER))	return //VOREStation Edit
+		if(!check_rights(R_MOD|R_ADMIN|R_SERVER))	return
 
 		var/mob/M = locate(href_list["adminplayerobservejump"])
 
@@ -1268,7 +1179,7 @@
 		C.do_jumptomob(M)
 
 	else if(href_list["adminplayerobservefollow"])
-		if(!check_rights(R_MOD|R_ADMIN|R_SERVER)) //VOREStation Edit
+		if(!check_rights(R_MOD|R_ADMIN|R_SERVER))
 			return
 
 		var/mob/M = locate(href_list["adminplayerobservefollow"])
@@ -1291,7 +1202,6 @@
 				if(check_rights_for(X, (R_ADMIN|R_MOD|R_SERVER)))
 					to_chat(X, take_msg)
 			to_chat(M, span_filter_pm(span_boldnotice("Your adminhelp is being attended to by [usr.client]. Thanks for your patience!")))
-			// VoreStation Edit Start
 			if (CONFIG_GET(string/chat_webhook_url))
 				spawn(0)
 					var/query_string = "type=admintake"
@@ -1299,12 +1209,11 @@
 					query_string += "&admin=[url_encode(key_name(usr.client))]"
 					query_string += "&user=[url_encode(key_name(M))]"
 					world.Export("[CONFIG_GET(string/chat_webhook_url)]?[query_string]")
-			// VoreStation Edit End
 		else
 			to_chat(usr, span_warning("Unable to locate mob."))
 
 	else if(href_list["adminplayerobservecoodjump"])
-		if(!check_rights(R_ADMIN|R_SERVER|R_MOD))	return //VOREStation Edit
+		if(!check_rights(R_ADMIN|R_SERVER|R_MOD))	return
 
 		var/x = text2num(href_list["X"])
 		var/y = text2num(href_list["Y"])
@@ -1314,6 +1223,17 @@
 		if(!isobserver(usr))	C.admin_ghost()
 		sleep(2)
 		C.jumptocoord(x,y,z)
+
+	else if(href_list["viewruntime"])
+		var/datum/error_viewer/error_viewer = locate(href_list["viewruntime"])
+		if(!istype(error_viewer))
+			to_chat(usr, span_warning("That runtime viewer no longer exists."), confidential = TRUE)
+			return
+
+		if(href_list["viewruntime_backto"])
+			error_viewer.show_to(owner, locate(href_list["viewruntime_backto"]), href_list["viewruntime_linear"])
+		else
+			error_viewer.show_to(owner, null, href_list["viewruntime_linear"])
 
 	else if(href_list["adminchecklaws"])
 		output_ai_laws()
@@ -1423,7 +1343,7 @@
 			return
 
 		if(L.can_centcom_reply())
-			var/input = sanitize(tgui_input_text(src.owner, "Please enter a message to reply to [key_name(L)] via their headset.","Outgoing message from CentCom", ""))
+			var/input = tgui_input_text(src.owner, "Please enter a message to reply to [key_name(L)] via their headset.","Outgoing message from CentCom", "", MAX_MESSAGE_LEN)
 			if(!input)		return
 
 			to_chat(src.owner, span_filter_adminlog("You sent [input] to [L] via a secure channel."))
@@ -1448,7 +1368,7 @@
 			to_chat(usr, span_filter_adminlog("The person you are trying to contact is not wearing a headset"))
 			return
 
-		var/input = sanitize(tgui_input_text(src.owner, "Please enter a message to reply to [key_name(H)] via their headset.","Outgoing message from a shadowy figure...", ""))
+		var/input = tgui_input_text(src.owner, "Please enter a message to reply to [key_name(H)] via their headset.","Outgoing message from a shadowy figure...", "", MAX_MESSAGE_LEN)
 		if(!input)	return
 
 		to_chat(src.owner, span_filter_adminlog("You sent [input] to [H] via a secure channel."))
@@ -1589,7 +1509,7 @@
 	else if(href_list["traitor"])
 		if(!check_rights(R_ADMIN|R_MOD|R_EVENT))	return
 
-		if(!ticker || !ticker.mode)
+		if(!SSticker|| !SSticker.mode)
 			tgui_alert_async(usr, "The game hasn't started yet!")
 			return
 
@@ -1732,20 +1652,20 @@
 		log_and_message_admins("created [number] [english_list(paths)]")
 		return
 
-	else if(href_list["admin_secrets_panel"])
-		var/datum/admin_secret_category/AC = locate(href_list["admin_secrets_panel"]) in admin_secrets.categories
-		src.Secrets(AC)
+	//else if(href_list["admin_secrets_panel"])
+		//var/datum/admin_secret_category/AC = locate(href_list["admin_secrets_panel"]) in admin_secrets.categories
+		//src.Secrets(AC)
 
-	else if(href_list["admin_secrets"])
-		var/datum/admin_secret_item/item = locate(href_list["admin_secrets"]) in admin_secrets.items
-		item.execute(usr)
+	//else if(href_list["admin_secrets"])
+		//var/datum/admin_secret_item/item = locate(href_list["admin_secrets"]) in admin_secrets.items
+		//item.execute(usr)
 
 	else if(href_list["ac_view_wanted"])            //Admin newscaster Topic() stuff be here
 		src.admincaster_screen = 18                 //The ac_ prefix before the hrefs stands for AdminCaster.
 		src.access_news_network()
 
 	else if(href_list["ac_set_channel_name"])
-		src.admincaster_feed_channel.channel_name = sanitizeSafe(tgui_input_text(usr, "Provide a Feed Channel Name", "Network Channel Handler", ""))
+		src.admincaster_feed_channel.channel_name = sanitizeSafe(tgui_input_text(usr, "Provide a Feed Channel Name", "Network Channel Handler", "", encode = FALSE))
 		src.access_news_network()
 
 	else if(href_list["ac_set_channel_lock"])
@@ -1773,15 +1693,15 @@
 		var/list/available_channels = list()
 		for(var/datum/feed_channel/F in news_network.network_channels)
 			available_channels += F.channel_name
-		src.admincaster_feed_channel.channel_name = sanitizeSafe(tgui_input_list(usr, "Choose receiving Feed Channel", "Network Channel Handler", available_channels ))
+		src.admincaster_feed_channel.channel_name = tgui_input_list(usr, "Choose receiving Feed Channel", "Network Channel Handler", available_channels)
 		src.access_news_network()
 
 	else if(href_list["ac_set_new_title"])
-		src.admincaster_feed_message.title = sanitize(tgui_input_text(usr, "Enter the Feed title", "Network Channel Handler", ""))
+		src.admincaster_feed_message.title = tgui_input_text(usr, "Enter the Feed title", "Network Channel Handler", "", MAX_MESSAGE_LEN)
 		src.access_news_network()
 
 	else if(href_list["ac_set_new_message"])
-		src.admincaster_feed_message.body = sanitize(tgui_input_text(usr, "Write your Feed story", "Network Channel Handler", "", multiline = TRUE, prevent_enter = TRUE))
+		src.admincaster_feed_message.body = tgui_input_text(usr, "Write your Feed story", "Network Channel Handler", "", MAX_MESSAGE_LEN, TRUE, prevent_enter = TRUE)
 		src.access_news_network()
 
 	else if(href_list["ac_submit_new_message"])
@@ -1823,11 +1743,11 @@
 		src.access_news_network()
 
 	else if(href_list["ac_set_wanted_name"])
-		src.admincaster_feed_message.author = sanitize(tgui_input_text(usr, "Provide the name of the Wanted person", "Network Security Handler", ""))
+		src.admincaster_feed_message.author = tgui_input_text(usr, "Provide the name of the Wanted person", "Network Security Handler", "", MAX_MESSAGE_LEN)
 		src.access_news_network()
 
 	else if(href_list["ac_set_wanted_desc"])
-		src.admincaster_feed_message.body = sanitize(tgui_input_text(usr, "Provide the a description of the Wanted person and any other details you deem important", "Network Security Handler", ""))
+		src.admincaster_feed_message.body = tgui_input_text(usr, "Provide the a description of the Wanted person and any other details you deem important", "Network Security Handler", "", MAX_MESSAGE_LEN)
 		src.access_news_network()
 
 	else if(href_list["ac_submit_wanted"])
@@ -1932,7 +1852,7 @@
 		src.access_news_network()
 
 	else if(href_list["ac_set_signature"])
-		src.admincaster_signature = sanitize(tgui_input_text(usr, "Provide your desired signature", "Network Identity Handler", ""))
+		src.admincaster_signature = tgui_input_text(usr, "Provide your desired signature", "Network Identity Handler", "", MAX_MESSAGE_LEN)
 		src.access_news_network()
 
 	else if(href_list["populate_inactive_customitems"])
@@ -1949,7 +1869,7 @@
 				vsc.SetDefault(usr)
 
 	else if(href_list["toglang"])
-		if(check_rights(R_SPAWN)) //VOREStation Edit
+		if(check_rights(R_SPAWN))
 			var/mob/M = locate(href_list["toglang"])
 			if(!istype(M))
 				to_chat(usr, span_filter_adminlog("[M] is illegal type, must be /mob!"))
@@ -1962,14 +1882,14 @@
 					to_chat(usr, span_filter_adminlog("Failed to remove language '[lang2toggle]' from \the [M]!"))
 			else
 				if(!M.add_language(lang2toggle))
-					to_chat(usr, span_filter_adminlog("Failed to add language '[lang2toggle]' from \the [M]!"))
+					to_chat(usr, span_filter_adminlog("Failed to add language '[lang2toggle]' to \the [M]!"))
 
-			show_player_panel(M)
+			SSadmin_verbs.dynamic_invoke_verb(usr.client, /datum/admin_verb/show_player_panel, M)
 
 	else if(href_list["cryoplayer"])
 		if(!check_rights(R_ADMIN|R_EVENT))	return
 
-		var/mob/living/carbon/M = locate(href_list["cryoplayer"]) //VOREStation edit from just an all mob check to mob/living/carbon
+		var/mob/living/carbon/M = locate(href_list["cryoplayer"])
 		if(!istype(M))
 			to_chat(usr, span_warning("Mob doesn't exist!"))
 			return

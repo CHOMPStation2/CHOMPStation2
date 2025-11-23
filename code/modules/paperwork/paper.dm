@@ -163,7 +163,7 @@
 	if((CLUMSY in usr.mutations) && prob(50))
 		to_chat(usr, span_warning("You cut yourself on the paper."))
 		return
-	var/n_name = sanitizeSafe(tgui_input_text(usr, "What would you like to label the paper?", "Paper Labelling", null, MAX_NAME_LEN), MAX_NAME_LEN)
+	var/n_name = sanitizeSafe(tgui_input_text(usr, "What would you like to label the paper?", "Paper Labelling", null, MAX_NAME_LEN, encode = FALSE), MAX_NAME_LEN)
 
 	// We check loc one level up, so we can rename in clipboards and such. See also: /obj/item/photo/rename()
 	if((loc == usr || loc.loc && loc.loc == usr) && usr.stat == 0 && n_name)
@@ -186,7 +186,7 @@
 		icon_state = "scrap"
 		return
 	user.examinate(src)
-	if(rigged && (Holiday == "April Fool's Day"))
+	if(rigged && (GLOB.Holiday == "April Fool's Day"))
 		if(spam_flag == 0)
 			spam_flag = 1
 			playsound(src, 'sound/items/bikehorn.ogg', 50, 1)
@@ -214,39 +214,21 @@
 			span_notice(" [user] holds up a paper and shows it to [M]. "))
 		M.examinate(src)
 
-	else if(user.zone_sel.selecting == O_MOUTH) // lipstick wiping and paper eating
+	else if(user.zone_sel.selecting == O_MOUTH) // lipstick wiping
 		if(ishuman(M))
 			var/mob/living/carbon/human/H = M
 			if(H == user)
-				if(icon_state == "scrap" && H.check_has_mouth()) //YW Edit Start
-					user << span_warning("You begin to stuff \the [src] into your mouth!")
-					if(do_after(user, 30))
-						user << span_warning("You stuff \the [src] into your mouth!")
-						H.ingested.add_reagent("paper", 10)
-						H.adjustOxyLoss(10)
-						qdel(src)
-				else
-					user << span_notice("You wipe off the lipstick with [src].")
+				to_chat(user, span_notice("You wipe off the lipstick with [src]."))
+				H.lip_style = null
+				H.update_icons_body()
+			else
+				user.visible_message(span_warning("[user] begins to wipe [H]'s lipstick off with \the [src]."), \
+										span_notice("You begin to wipe off [H]'s lipstick."))
+				if(do_after(user, 1 SECOND, target = H) && do_after(H, 1 SECONDS, target = user))	//user needs to keep their active hand, H does not.
+					user.visible_message(span_notice("[user] wipes [H]'s lipstick off with \the [src]."), \
+											span_notice("You wipe off [H]'s lipstick."))
 					H.lip_style = null
 					H.update_icons_body()
-			else
-				if(icon_state == "scrap" && H.check_has_mouth())
-					user.visible_message(span_warning("[user] begins to stuff \the [src] into [H]'s mouth!"), \
-											span_warning("You begin to stuff \the [src] into [H]'s mouth!"),)
-					if(do_after(user, 30, H))
-						user.visible_message(span_warning("[user] stuffs \the [src] into [H]'s mouth!"),\
-												span_warning("You stuff \the [src] into [H]'s mouth!"))
-						H.ingested.add_reagent("paper", 10)
-						H.adjustOxyLoss(10)
-						qdel(src)
-				else
-					user.visible_message(span_warning("[user] begins to wipe [H]'s lipstick off with \the [src]."), \
-											span_notice("You begin to wipe off [H]'s lipstick."))
-					if(do_after(user, 10, H))
-						user.visible_message(span_notice("[user] wipes [H]'s lipstick off with \the [src]."), \
-												span_notice("You wipe off [H]'s lipstick."))
-						H.lip_style = null
-						H.update_icons_body() //YW Edit End
 
 /obj/item/paper/proc/set_content(text,title)
 	if(title)
@@ -357,15 +339,13 @@
 		t = replacetext(t, "\[grid\]", "<table>")
 		t = replacetext(t, "\[/grid\]", "</td></tr></table>")
 		t = replacetext(t, "\[row\]", "</td><tr>")
-		t = replacetext(t, "\[/row\]", "") //CHOMPEDIT: nuking closing statements for rows.
+		t = replacetext(t, "\[/row\]", "")
 		t = replacetext(t, "\[cell\]", "<td>")
-		t = replacetext(t, "\[/cell\]", "") //CHOMPEDIT: nuking closing statements for cells.
-		//CHOMPEdit Start
-		t = replacetext(t, "\[logo\]", "<img src = https://raw.githubusercontent.com/CHOMPStation2/CHOMPStation2/master/html/images/ntlogo.png>")
-		t = replacetext(t, "\[sglogo\]", "<img src = https://raw.githubusercontent.com/CHOMPStation2/CHOMPStation2/master/html/images/sglogo.png>")
-		t = replacetext(t, "\[trlogo\]", "<img src = https://raw.githubusercontent.com/CHOMPStation2/CHOMPStation2/master/html/images/trader.png>")
-		t = replacetext(t, "\[pclogo\]", "<img src = https://raw.githubusercontent.com/CHOMPStation2/CHOMPStation2/master/html/images/pclogo.png>")
-		//CHOMPEdit End
+		t = replacetext(t, "\[/cell\]", "")
+		t = replacetext(t, "\[logo\]", "<img src=\ref['html/images/ntlogo.png']>")
+		t = replacetext(t, "\[sglogo\]", "<img src=\ref['html/images/sglogo.png']>")
+		t = replacetext(t, "\[trlogo\]", "<img src=\ref['html/images/trader.png']>")
+		t = replacetext(t, "\[pclogo\]", "<img src=\ref['html/images/pclogo.png']>") // Not available on virgo // CHOMPEnable
 
 		t = "<font face=\"[deffont]\" color=[P ? P.colour : "black"]>[t]</font>"
 	else // If it is a crayon, and he still tries to use these, make them empty!
@@ -379,8 +359,8 @@
 		t = replacetext(t, "\[/table\]", "")
 		t = replacetext(t, "\[row\]", "")
 		t = replacetext(t, "\[cell\]", "")
-		t = replacetext(t, "\[/cell\]", "") //CHOMPEDIT: nuking closing statements for cells.
-		t = replacetext(t, "\[/row\]", "") //CHOMPEDIT: nuking closing statements for rows.
+		t = replacetext(t, "\[/cell\]", "")
+		t = replacetext(t, "\[/row\]", "")
 		t = replacetext(t, "\[logo\]", "")
 		t = replacetext(t, "\[sglogo\]", "")
 
@@ -402,13 +382,12 @@
 
 /obj/item/paper/proc/burnpaper(obj/item/flame/P, mob/user)
 	var/class = "warning"
-	var/datum/gender/TU = GLOB.gender_datums[user.get_visible_gender()]
 
 	if(P.lit && !user.restrained())
 		if(istype(P, /obj/item/flame/lighter/zippo))
 			class = "rose"
 
-		user.visible_message("<span class='[class]'>[user] holds \the [P] up to \the [src], it looks like [TU.hes] trying to burn it!</span>", \
+		user.visible_message("<span class='[class]'>[user] holds \the [P] up to \the [src], it looks like [user.p_theyre()] trying to burn it!</span>", \
 		"<span class='[class]'>You hold \the [P] up to \the [src], burning it slowly.</span>")
 		playsound(src, 'sound/bureaucracy/paperburn.ogg', 50, 1)
 
@@ -440,11 +419,7 @@
 			to_chat(usr, span_info("There isn't enough space left on \the [src] to write anything."))
 			return
 
-		var/raw = tgui_input_text(usr, "Enter what you want to write:", "Write", multiline = TRUE, prevent_enter = TRUE)
-		if(!raw)
-			return
-
-		var/t =  sanitize(raw, MAX_PAPER_MESSAGE_LEN, extra = 0)
+		var/t = tgui_input_text(usr, "Enter what you want to write:", "Write", "", MAX_PAPER_MESSAGE_LEN, TRUE, prevent_enter = TRUE)
 		if(!t)
 			return
 
@@ -563,7 +538,7 @@
 		else if (P.name != initial(P.name))
 			B.name = P.name
 		user.drop_from_inventory(P)
-		if (ishuman(user))
+		if(ishuman(user))
 			var/mob/living/carbon/human/h_user = user
 			if (h_user.r_hand == src)
 				h_user.drop_from_inventory(src)
@@ -722,3 +697,21 @@
 /obj/item/paper/manifest
 	name = "supply manifest"
 	var/is_copy = 1
+
+/obj/item/paper/manifest/Initialize(mapload, text, title)
+	. = ..()
+	AddElement(/datum/element/sellable/manifest)
+
+/obj/item/paper/crumpled/sampatti
+	info = "Sampatti Relay Sif-833 <BR> Decryption Key for 12-04-2488: <BR> 849B0022FBA920C244 <BR> Eyes Only.  <BR> The insider who knows all the secrets can bring down Lanka.";
+	name = "Dusty Note"
+
+/obj/item/paper/alchemy
+	info = span_bold("Apprentice, I have written out these instructions so that you may operate the alembic in your own time without me needing to watch over your every step.<br><br>The alembic is simple to operate, simply activate the spontaneous heating stone beneath it to begin boiling the contents. However, the contents that you choose are critical in creating a potion of any merit, and mixing the wrong materials may create something completely useless, wasting our resources!<br><br>You must mix two materials, and only ever two. One primary ingredient, this can be one of many materials with valuable alchemical properties. The other is a potion base, this will be essential to properly break down and transmute the ingredient into a potent potion. Once you have added the two, boil as above, and collect the distilate in a bottle. As for choosing your base, here is a short guide, but be aware that the properties of an ingredient are not always immediately apparent and some experimentation may be required:<br><br>Alkahest is a potent solvent and particularly useful for dissolving metals.<br><br>Aqua Regia is a heavily corrosive mixture of acids that readily dissolve most organic materials.<br><br>Ichor is a rich ferrous fluid that binds well to minerals, it can often break down gemstones.")
+	name = "alchemy instructions"
+
+/obj/item/paper/alien/message
+	info = span_bold("Thus far the mission has been a success, we've managed to integrate ourselves into the local community without arousing suspicion.<br><br>We had initially overestimated the technological level of the locals, and their initial encounters with our equipment did cause a concern. However, we were able to latch onto their superstitious beliefs in magic to explain away the abilities that we possess. To enhance this perception, we've taken to hiding our technology in more mundane looking materials, and the townsfolk appear to be content with this.")
+
+/obj/item/paper/alien/source
+	info = span_bold("Our search for the source has brought us to this planet, and we were quickly able to locate a seepage of the anomaly in the area. We set up this base immediately beside it, so that we can best study it. However, we are growing concerned as the material continues to spread beyond it's initial sprouting point and has begun to encroach directly on our buildings.<br><br>Our plan was to move our base further back from the site and study from a distance, but we have begun to detect lifeforms traversing the void. Yellow eyes have been seen watching from beyond the safety of the cave, disappearing and reappearing seemingly at random. We weren't aware that anything could survive this, they could hold the key to our scenario and we are requesting immediate support to research this further.")

@@ -340,12 +340,7 @@
 /obj/item/clothing/accessory/storage/black_drop_pouches,
 /obj/item/storage/belt,
 /obj/item/clothing/accessory/poncho/thermal,
-/obj/machinery/smartfridge/survival_pod{
-	icon = 'icons/obj/vending.dmi';
-	icon_base = "fridge_sci";
-	icon_contents = "chem";
-	icon_state = "fridge_sci";
-	name = "Advanced storage";
+/obj/machinery/smartfridge/survival_pod/scifridge{
 	pixel_y = 0
 	},
 /turf/simulated/floor/plating,

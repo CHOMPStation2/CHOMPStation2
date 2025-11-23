@@ -13,6 +13,9 @@
 	integer = FALSE
 	default = 1.0
 
+/datum/config_entry/flag/can_addict_during_round
+	default = FALSE
+
 // FIXME: Unused
 ///datum/config_entry/flag/revival_pod_plants
 //	default = TRUE
@@ -30,6 +33,8 @@
 
 /datum/config_entry/number/walk_speed
 	default = 0
+
+/datum/config_entry/flag/force_random_names
 
 ///Mob specific modifiers. NOTE: These will affect different mob types in different ways
 /datum/config_entry/number/human_delay

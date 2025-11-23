@@ -29,86 +29,9 @@
 	remove_biomass(CLONE_BIOMASS)
 
 	//Get the DNA and generate a new mob
-	var/datum/dna2/record/R = current_project.mydna
-	var/mob/living/carbon/human/H = new /mob/living/carbon/human(src, R.dna.species)
-	if(current_project.locked)
-		H.resleeve_lock = current_project.ckey //CHOMPAdd, keep the lock
-		/*CHOMPRemove Start
-		if(current_project.ckey)
-			H.resleeve_lock = current_project.ckey
-		else
-			// Ensure even body scans without an attached ckey respect locking
-			H.resleeve_lock = "@badckey"
-		*///CHOMPRemove End
+	var/mob/living/carbon/human/H = current_project.produce_human_mob(src,FALSE,FALSE,"clone ([rand(0,999)])")
+	SEND_SIGNAL(H, COMSIG_HUMAN_DNA_FINALIZED)
 
-	//Fix the external organs
-	for(var/part in current_project.limb_data)
-
-		var/status = current_project.limb_data[part]
-		if(status == null) continue //Species doesn't have limb? Child of amputated limb?
-
-		var/obj/item/organ/external/O = H.organs_by_name[part]
-		if(!O) continue //Not an organ. Perhaps another amputation removed it already.
-
-		if(status == 1) //Normal limbs
-			continue
-		else if(status == 0) //Missing limbs
-			O.remove_rejuv()
-		else if(status) //Anything else is a manufacturer
-			O.remove_rejuv() //Don't robotize them, leave them removed so robotics can attach a part.
-
-	//Look, this machine can do this because [reasons] okay?!
-	for(var/part in current_project.organ_data)
-
-		var/status = current_project.organ_data[part]
-		if(status == null) continue //Species doesn't have organ? Child of missing part?
-
-		var/obj/item/organ/I = H.internal_organs_by_name[part]
-		if(!I) continue//Not an organ. Perhaps external conversion changed it already?
-
-		if(status == 0) //Normal organ
-			continue
-		else if(status == 1) //Assisted organ
-			I.mechassist()
-		else if(status == 2) //Mechanical organ
-			I.robotize()
-		else if(status == 3) //Digital organ
-			I.digitize()
-
-
-	occupant = H
-
-	//Set the name or generate one
-	if(!R.dna.real_name)
-		R.dna.real_name = "clone ([rand(0,999)])"
-	H.real_name = R.dna.real_name
-
-	//Apply DNA
-	qdel_swap(H.dna, R.dna.Clone())
-	H.original_player = current_project.ckey
-
-	//Apply genetic modifiers
-	for(var/modifier_type in R.genetic_modifiers)
-		H.add_modifier(modifier_type)
-
-	//Apply legs
-	H.digitigrade = R.dna.digitigrade // ensure clone mob has digitigrade var set appropriately
-	if(H.dna.digitigrade <> R.dna.digitigrade)
-		H.dna.digitigrade = R.dna.digitigrade // ensure cloned DNA is set appropriately from record??? for some reason it doesn't get set right despite the override to datum/dna/Clone()
-
-	//Apply damage
-	H.adjustCloneLoss((H.getMaxHealth() - (H.getMaxHealth()))*-0.75)
-	H.Paralyse(4)
-	H.updatehealth()
-
-	//Update appearance, remake icons
-	H.UpdateAppearance()
-	H.sync_dna_traits(FALSE) // Traitgenes Sync traits to genetics if needed
-	H.sync_organ_dna()
-	H.regenerate_icons()
-	H.initialize_vessel()
-
-	// Traitgenes Moved breathing equipment to AFTER the genes set it
 	//Give breathing equipment if needed
 	if(current_project.breath_type != null && current_project.breath_type != GAS_O2)
 		H.equip_to_slot_or_del(new /obj/item/clothing/mask/breath(H), slot_wear_mask)
@@ -124,25 +47,11 @@
 			if(istype(H.internal,/obj/item/tank) && H.internals)
 				H.internals.icon_state = "internal1"
 
-	//Basically all the VORE stuff
-	H.ooc_notes = current_project.body_oocnotes
-	H.ooc_notes_likes = current_project.body_ooclikes
-	H.ooc_notes_dislikes = current_project.body_oocdislikes
-	H.ooc_notes_favs = current_project.body_oocfavs
-	H.ooc_notes_maybes = current_project.body_oocmaybes
-	H.ooc_notes_style = current_project.body_oocstyle
-	H.flavor_texts = current_project.mydna.flavor.Copy()
-	H.resize(current_project.sizemult, FALSE)
-	H.appearance_flags = current_project.aflags
-	H.weight = current_project.weight
-	if(current_project.speciesname)
-		H.custom_species = current_project.speciesname
-
-	//Suiciding var
-	H.suiciding = 0
-
-	//Making double-sure this is not set
-	H.mind = null
+	//Apply damage
+	set_occupant(H)
+	H.adjustCloneLoss((H.getMaxHealth() - (H.getMaxHealth()))*-0.75)
+	H.Paralyse(4)
+	H.updatehealth()
 
 	//Machine specific stuff at the end
 	update_icon()
@@ -150,6 +59,7 @@
 	return 1
 
 /obj/machinery/clonepod/transhuman/process()
+	var/mob/living/occupant = get_occupant()
 	if(stat & NOPOWER)
 		if(occupant)
 			locked = 0
@@ -190,7 +100,7 @@
 			return
 
 	else if((!occupant) || (occupant.loc != src))
-		occupant = null
+		set_occupant(null)
 		if(locked)
 			locked = 0
 		update_icon()
@@ -199,13 +109,14 @@
 	return
 
 /obj/machinery/clonepod/transhuman/get_completion()
+	var/mob/living/occupant = get_occupant()
 	if(occupant)
 		return 100 * ((occupant.health + (occupant.getMaxHealth()))) / (occupant.getMaxHealth() + abs(occupant.getMaxHealth()))
 	return 0
 
 /obj/machinery/clonepod/transhuman/examine(mob/user, infix, suffix)
 	. = ..()
-	if(occupant)
+	if(get_occupant())
 		var/completion = get_completion()
 		. += "Progress: [round(completion)]% [chat_progress_bar(round(completion), TRUE)]"
 
@@ -225,7 +136,8 @@
 	var/busy = 0       //Busy cloning
 	var/body_cost = 15000  //Cost of a cloned body (metal and glass ea.)
 	var/max_res_amount = 30000 //Max the thing can hold
-	var/datum/transhuman/body_record/current_project
+	var/datum/weakref/current_br
+
 	var/broken = 0
 	var/burn_value = 0 //Setting these to 0, if resleeving as organic with unupgraded sleevers gives them no damage, resleeving synths with unupgraded synthfabs should not give them potentially 105 damage.
 	var/brute_value = 0
@@ -265,7 +177,7 @@
 	if(stat & NOPOWER)
 		if(busy)
 			busy = 0
-			current_project = null
+			current_br = null
 		update_icon()
 		return
 
@@ -277,14 +189,14 @@
 
 	return
 
-/obj/machinery/transhuman/synthprinter/proc/print(var/datum/transhuman/body_record/BR)
-	if(!istype(BR) || busy)
+/obj/machinery/transhuman/synthprinter/proc/print(var/datum/weakref/BR)
+	if(!BR?.resolve() || busy)
 		return 0
 
 	if(stored_material[MAT_STEEL] < body_cost || stored_material[MAT_GLASS] < body_cost)
 		return 0
 
-	current_project = BR
+	current_br = BR
 	busy = 5
 	update_icon()
 
@@ -292,109 +204,25 @@
 
 /obj/machinery/transhuman/synthprinter/proc/make_body()
 	//Manage machine-specific stuff
+
+	var/datum/transhuman/body_record/current_project = current_br?.resolve()
 	if(!current_project)
 		busy = 0
+		current_br = null
 		update_icon()
 		return
 
 	//Get the DNA and generate a new mob
-	var/datum/dna2/record/R = current_project.mydna
-	var/mob/living/carbon/human/H = new /mob/living/carbon/human(src, R.dna.species)
-	if(current_project.locked)
-		H.resleeve_lock = current_project.ckey //CHOMPAdd, keep the lock
-		/*CHOMPRemove Start
-		if(current_project.ckey)
-			H.resleeve_lock = current_project.ckey
-		else
-			// Ensure even body scans without an attached ckey respect locking
-			H.resleeve_lock = "@badckey"
-		*///CHOMPRemove End
-
-	//Fix the external organs
-	for(var/part in current_project.limb_data)
-
-		var/status = current_project.limb_data[part]
-		if(status == null) continue //Species doesn't have limb? Child of amputated limb?
-
-		var/obj/item/organ/external/O = H.organs_by_name[part]
-		if(!O) continue //Not an organ. Perhaps another amputation removed it already.
-
-		if(status == 1) //Normal limbs
-			continue
-		else if(status == 0) //Missing limbs
-			O.remove_rejuv()
-		else if(status) //Anything else is a manufacturer
-			O.robotize(status)
-
-	//Then the internal organs
-	for(var/part in current_project.organ_data)
-
-		var/status = current_project.organ_data[part]
-		if(status == null) continue //Species doesn't have organ? Child of missing part?
-
-		var/obj/item/organ/I = H.internal_organs_by_name[part]
-		if(!I) continue//Not an organ. Perhaps external conversion changed it already?
-
-		if(status == 0) //Normal organ
-			continue
-		else if(status == 1) //Assisted organ
-			I.mechassist()
-		else if(status == 2) //Mechanical organ
-			I.robotize()
-		else if(status == 3) //Digital organ
-			I.digitize()
-
-	//Set the name or generate one
-	if(!R.dna.real_name)
-		R.dna.real_name = "synth ([rand(0,999)])"
-	H.real_name = R.dna.real_name
-
-	//Apply DNA
-	qdel_swap(H.dna, R.dna.Clone())
-	H.original_player = current_project.ckey
-
-	//Apply legs
-	H.digitigrade = R.dna.digitigrade // ensure clone mob has digitigrade var set appropriately
-	if(H.dna.digitigrade <> R.dna.digitigrade)
-		H.dna.digitigrade = R.dna.digitigrade // ensure cloned DNA is set appropriately from record??? for some reason it doesn't get set right despite the override to datum/dna/Clone()
+	var/mob/living/carbon/human/H = current_project.produce_human_mob(src,TRUE,FALSE,"synth ([rand(0,999)])")
+	SEND_SIGNAL(H, COMSIG_HUMAN_DNA_FINALIZED)
 
 	//Apply damage
 	H.adjustBruteLoss(brute_value)
 	H.adjustFireLoss(burn_value)
 	H.updatehealth()
 
-	//Update appearance, remake icons
-	H.UpdateAppearance()
-	H.sync_dna_traits(FALSE) // Traitgenes Sync traits to genetics if needed
-	H.sync_organ_dna()
-	H.regenerate_icons()
-	H.initialize_vessel()
-
-	//Basically all the VORE stuff
-	H.ooc_notes = current_project.body_oocnotes
-	H.ooc_notes_likes = current_project.body_ooclikes
-	H.ooc_notes_dislikes = current_project.body_oocdislikes
-	//CHOMPEdit Start
-	H.ooc_notes_favs = current_project.body_oocfavs
-	H.ooc_notes_maybes = current_project.body_oocmaybes
-	H.ooc_notes_style = current_project.body_oocstyle
-	//CHOMPEdit End
-	H.flavor_texts = current_project.mydna.flavor.Copy()
-	H.resize(current_project.sizemult)
-	H.appearance_flags = current_project.aflags
-	H.weight = current_project.weight
-	if(current_project.speciesname)
-		H.custom_species = current_project.speciesname
-
-	//Suiciding var
-	H.suiciding = 0
-
-	//Making double-sure this is not set
-	H.mind = null
-
 	//Plonk them here.
-	H.regenerate_icons()
-	H.loc = get_turf(src)
+	H.forceMove(get_turf(src))
 
 	//Machine specific stuff at the end
 	stored_material[MAT_STEEL] -= body_cost
@@ -430,7 +258,7 @@
 
 	var/obj/item/stack/material/S = W
 	if(!(S.material.name in stored_material))
-		to_chat(user, span_warning("\The [src] doesn't accept [S.material]!"))
+		to_chat(user, span_warning("\The [src] doesn't accept [material_display_name(S.material)]!"))
 		return
 
 	var/amnt = S.perunit
@@ -445,7 +273,6 @@
 	else
 		to_chat(user, "\the [src] cannot hold more [S.name].")
 
-	updateUsrDialog(user)
 	return
 
 /obj/machinery/transhuman/synthprinter/update_icon()
@@ -470,7 +297,7 @@
 	var/blur_amount
 	var/confuse_amount
 
-	var/mob/living/carbon/human/occupant = null
+	VAR_PRIVATE/datum/weakref/weakref_occupant = null
 	var/connected = null
 
 	var/sleevecards = 2
@@ -486,6 +313,18 @@
 	component_parts += new /obj/item/stack/cable_coil(src, 2)
 	RefreshParts()
 	update_icon()
+
+/obj/machinery/transhuman/resleever/proc/set_occupant(var/mob/living/carbon/human/H)
+	SHOULD_NOT_OVERRIDE(TRUE)
+	if(!H)
+		weakref_occupant = null
+		return
+	weakref_occupant = WEAKREF(H)
+
+/obj/machinery/transhuman/resleever/proc/get_occupant()
+	RETURN_TYPE(/mob/living/carbon/human)
+	SHOULD_NOT_OVERRIDE(TRUE)
+	return weakref_occupant?.resolve()
 
 /obj/machinery/transhuman/resleever/RefreshParts()
 	var/scan_rating = 0
@@ -513,14 +352,15 @@
 /obj/machinery/transhuman/resleever/tgui_data(mob/user)
 	var/list/data = list()
 
-	data["occupied"] = !!occupant
-	if(occupant)
-		data["name"] = occupant.name
-		data["health"] = occupant.health
-		data["maxHealth"] = occupant.getMaxHealth()
-		data["stat"] = occupant.stat
-		data["mindStatus"] = !!occupant.mind
-		data["mindName"] = occupant.mind?.name
+	var/mob/living/carbon/human/H = get_occupant()
+	data["occupied"] = !!H
+	if(H)
+		data["name"] = H.name
+		data["health"] = H.health
+		data["maxHealth"] = H.getMaxHealth()
+		data["stat"] = H.stat
+		data["mindStatus"] = !!H.mind
+		data["mindName"] = H.mind?.name
 	return data
 
 /obj/machinery/transhuman/resleever/attackby(obj/item/W, mob/user)
@@ -538,7 +378,6 @@
 		var/mob/M = G.affecting
 		if(put_mob(M))
 			qdel(G)
-			src.updateUsrDialog(user)
 			return //Don't call up else we'll get attack messsages
 	if(istype(W, /obj/item/paicard/sleevecard))
 		var/obj/item/paicard/sleevecard/C = W
@@ -574,15 +413,14 @@
 
 	if(put_mob(O))
 		if(O == user)
-			updateUsrDialog(user)
 			visible_message("[user] climbs into \the [src].")
 		else
-			updateUsrDialog(user)
 			visible_message("[user] puts [O] into \the [src].")
 
 	add_fingerprint(user)
 
 /obj/machinery/transhuman/resleever/proc/putmind(var/datum/transhuman/mind_record/MR, mode = 1, var/mob/living/carbon/human/override = null, var/db_key)
+	var/mob/living/carbon/human/occupant = get_occupant()
 	if((!occupant || !istype(occupant) || occupant.stat >= DEAD) && mode == 1)
 		return 0
 
@@ -642,21 +480,30 @@
 	if(new_imp.handle_implant(occupant, BP_HEAD))
 		new_imp.post_implant(occupant)
 
+	SEND_GLOBAL_SIGNAL(COMSIG_GLOB_RESLEEVED_MIND, occupant, MR.mind_ref)
+
 	//Inform them and make them a little dizzy.
 	if(confuse_amount + blur_amount <= 16)
 		to_chat(occupant, span_notice("You feel a small pain in your head as you're given a new backup implant. Your new body feels comfortable already, however."))
 	else
 		to_chat(occupant, span_warning("You feel a small pain in your head as you're given a new backup implant. Oh, and a new body. It's disorienting, to say the least."))
 
-	occupant.confused = max(occupant.confused, confuse_amount)
+	occupant.SetConfused(max(occupant.confused, confuse_amount))								// Apply immedeate effects
 	occupant.eye_blurry = max(occupant.eye_blurry, blur_amount)
 
 	// Vore deaths get a fake modifier labeled as such
 	if(!occupant.mind)
-		log_debug("[occupant] didn't have a mind to check for vore_death, which may be problematic.")
+		log_runtime("[occupant] didn't have a mind to check for vore_death, which may be problematic.")
 
-	if(occupant.mind && occupant.original_player && ckey(occupant.mind.key) != occupant.original_player)
-		log_and_message_admins("is now a cross-sleeved character. Body originally belonged to [occupant.real_name]. Mind is now [occupant.mind.name].",occupant)
+	if(occupant.mind)
+		if(occupant.original_player && ckey(occupant.mind.key) != occupant.original_player)
+			log_and_message_admins("is now a cross-sleeved character. Body originally belonged to [occupant.real_name]. Mind is now [occupant.mind.name].",occupant)
+		var/datum/antagonist/antag_data = get_antag_data(occupant.mind.special_role)
+		if(antag_data)
+			antag_data.add_antagonist(occupant.mind)
+			antag_data.place_mob(occupant)
+		if(occupant.mind.antag_holder)
+			occupant.mind.antag_holder.apply_antags(occupant)
 
 	if(original_occupant)
 		occupant = original_occupant
@@ -665,13 +512,11 @@
 	return 1
 
 /obj/machinery/transhuman/resleever/proc/go_out(var/mob/M)
-	if(!( src.occupant ))
+	var/mob/living/carbon/human/occupant = get_occupant()
+	if(!occupant)
 		return
-	if (src.occupant.client)
-		src.occupant.client.eye = src.occupant.client.mob
-		src.occupant.client.perspective = MOB_PERSPECTIVE
-	src.occupant.loc = src.loc
-	src.occupant = null
+	occupant.forceMove(get_turf(src))
+	set_occupant(null)
 	icon_state = "implantchair"
 	return
 
@@ -679,15 +524,12 @@
 	if(!ishuman(M))
 		to_chat(usr, span_warning("\The [src] cannot hold this!"))
 		return
-	if(src.occupant)
+	if(get_occupant())
 		to_chat(usr, span_warning("\The [src] is already occupied!"))
 		return
-	if(M.client)
-		M.client.perspective = EYE_PERSPECTIVE
-		M.client.eye = src
 	M.stop_pulling()
-	M.loc = src
-	src.occupant = M
+	M.forceMove(src)
+	set_occupant(M)
 	src.add_fingerprint(usr)
 	icon_state = "implantchair_on"
 	return 1

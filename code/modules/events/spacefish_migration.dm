@@ -20,7 +20,7 @@
 /datum/event/spacefish_migration/setup()
 //CHOMP Add start
 	if(prob(15) || fired == TRUE)
-		log_debug("Random spacefish migration failed successfully.")
+		log_game("random spacefish migration: event setup prob() failed, killing")
 		kill()
 		return
 	fired = TRUE
@@ -57,7 +57,7 @@
 
 	// Check if any landmarks exist!
 	var/list/spawn_locations = list()
-	for(var/obj/effect/landmark/C in landmarks_list)
+	for(var/obj/effect/landmark/C in GLOB.landmarks_list)
 		if(C.name == "carpspawn" && (C.z in affecting_z))
 			spawn_locations.Add(C.loc)
 	if(spawn_locations.len) // Okay we've got landmarks, lets use those!

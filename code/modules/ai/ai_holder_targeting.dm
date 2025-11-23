@@ -89,7 +89,7 @@
 
 	target = new_target
 
-	RegisterSignal(target, COMSIG_PARENT_QDELETING, PROC_REF(remove_target))
+	RegisterSignal(target, COMSIG_QDELETING, PROC_REF(remove_target))
 
 	if(target != null)
 		lose_target_time = 0
@@ -207,7 +207,7 @@
 	ai_log("lose_target() : Entering.", AI_LOG_TRACE)
 	if(target)
 		ai_log("lose_target() : Had a target, setting to null and LTT.", AI_LOG_DEBUG)
-		UnregisterSignal(target, COMSIG_PARENT_QDELETING, PROC_REF(remove_target))
+		UnregisterSignal(target, COMSIG_QDELETING, PROC_REF(remove_target))
 		target = null
 		lose_target_time = world.time
 
@@ -224,7 +224,7 @@
 	SIGNAL_HANDLER
 	ai_log("remove_target() : Entering.", AI_LOG_TRACE)
 	if(target)
-		UnregisterSignal(target, COMSIG_PARENT_QDELETING, PROC_REF(remove_target))
+		UnregisterSignal(target, COMSIG_QDELETING, PROC_REF(remove_target))
 		target = null
 
 	lose_target_time = 0
@@ -347,14 +347,12 @@
 	preferred_target = null
 
 /datum/ai_holder/proc/vore_check(mob/living/L)
-	//CHOMPEdit Start
-	var/mob/living/simple_mob/simple = holder
-	if(istype(simple))	//We probably don't have a belly so don't even try
-		if (!simple.vore_active)
-			return FALSE
-	else if (holder.vore_selected == null)
+	if(isanimal(holder))
+		var/mob/living/simple_mob/M = holder
+		if(!M.voremob_loaded)	//init vore if it's not already
+			M.init_vore(TRUE)
+	if(!holder.vore_selected)	//We probably don't have a belly so don't even try
 		return FALSE
-	// CHOMPEdit End
 	if(!isliving(L))	//We only want mob/living
 		return FALSE
 	if(!L.devourable || !L.allowmobvore)	//Check their prefs

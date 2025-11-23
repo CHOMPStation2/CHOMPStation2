@@ -42,17 +42,9 @@
 	offline_vision_restriction = 1
 	siemens_coefficient= 0.7
 	helm_type = /obj/item/clothing/head/helmet/space/rig/ch/pursuit
+	allowed = list(POCKET_GENERIC, POCKET_EMERGENCY, POCKET_ALL_TANKS, POCKET_SUIT_REGULATORS, POCKET_STORAGE, POCKET_EXPLO)
 
-	allowed = list(
-		/obj/item/gun,
-		/obj/item/flashlight,
-		/obj/item/tank,
-		/obj/item/suit_cooling_unit,
-		/obj/item/melee/baton,
-		/obj/item/storage/backpack,
-		)
-
-	req_access = list(access_hos)
+	req_access = list(ACCESS_HOS)
 	req_one_access = list()
 
 /obj/item/rig/ch/pursuit/equipped

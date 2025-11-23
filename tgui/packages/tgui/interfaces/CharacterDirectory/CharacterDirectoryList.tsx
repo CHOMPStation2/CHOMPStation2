@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useBackend } from 'tgui/backend';
-import { Button, Section, Table } from 'tgui-core/components';
+import { Button, Image, Section, Stack, Table } from 'tgui-core/components';
 
 import { SortButton } from './CharacterDirectorySortButton';
 import { getTagColor } from './constants';
@@ -8,22 +8,14 @@ import type { mobEntry } from './types';
 
 export const CharacterDirectoryList = (props: {
   directory: mobEntry[];
-  onOverlay: Function;
+  onOverlay: React.Dispatch<React.SetStateAction<mobEntry | null>>;
 }) => {
   const { act } = useBackend();
 
   const { onOverlay, directory } = props;
 
   const [sortId, setSortId] = useState<string>('name');
-  const [sortOrder, setSortOrder] = useState<string>('name');
-
-  function handleSortId(value: string) {
-    setSortId(value);
-  }
-
-  function handleSortOrder(value: string) {
-    setSortOrder(value);
-  }
+  const [sortOrder, setSortOrder] = useState<boolean>(true);
 
   return (
     <Section
@@ -36,66 +28,67 @@ export const CharacterDirectoryList = (props: {
     >
       <Table>
         <Table.Row bold>
+          <Table.Cell collapsing>Photo</Table.Cell>
           <SortButton
-            id="name"
+            ourId="name"
             sortId={sortId}
             sortOrder={sortOrder}
-            onSortId={handleSortId}
-            onSortOrder={handleSortOrder}
+            onSortId={setSortId}
+            onSortOrder={setSortOrder}
           >
             Name
           </SortButton>
           <SortButton
-            id="species"
+            ourId="species"
             sortId={sortId}
             sortOrder={sortOrder}
-            onSortId={handleSortId}
-            onSortOrder={handleSortOrder}
+            onSortId={setSortId}
+            onSortOrder={setSortOrder}
           >
             Species
           </SortButton>
           <SortButton
-            id="tag"
+            ourId="tag"
             sortId={sortId}
             sortOrder={sortOrder}
-            onSortId={handleSortId}
-            onSortOrder={handleSortOrder}
+            onSortId={setSortId}
+            onSortOrder={setSortOrder}
           >
             Vore Tag
           </SortButton>
           <SortButton
-            id="gendertag"
+            ourId="gendertag"
             sortId={sortId}
             sortOrder={sortOrder}
-            onSortId={handleSortId}
-            onSortOrder={handleSortOrder}
+            onSortId={setSortId}
+            onSortOrder={setSortOrder}
           >
             Gender
           </SortButton>
           <SortButton
-            id="sexualitytag"
+            ourId="sexualitytag"
             sortId={sortId}
             sortOrder={sortOrder}
-            onSortId={handleSortId}
-            onSortOrder={handleSortOrder}
+            onSortId={setSortId}
+            onSortOrder={setSortOrder}
           >
             Sexuality
           </SortButton>
           <SortButton
-            id="erptag"
+            ourId="erptag"
             sortId={sortId}
             sortOrder={sortOrder}
-            onSortId={handleSortId}
-            onSortOrder={handleSortOrder}
+            onSortId={setSortId}
+            onSortOrder={setSortOrder}
           >
             ERP Tag
           </SortButton>
           <SortButton
-            id="eventtag"
+            ourId="eventtag"
             sortId={sortId}
             sortOrder={sortOrder}
-            onSortId={handleSortId}
-            onSortOrder={handleSortOrder}
+            onSortId={setSortId}
+            onSortOrder={setSortOrder}
           >
             Event Pref
           </SortButton>
@@ -110,14 +103,45 @@ export const CharacterDirectoryList = (props: {
           })
           .map((character, i) => (
             <Table.Row key={i} backgroundColor={getTagColor(character.tag)}>
-              <Table.Cell p={1}>{character.name}</Table.Cell>
-              <Table.Cell>{character.species}</Table.Cell>
-              <Table.Cell>{character.tag}</Table.Cell>
-              <Table.Cell>{character.gendertag}</Table.Cell>
-              <Table.Cell>{character.sexualitytag}</Table.Cell>
-              <Table.Cell>{character.erptag}</Table.Cell>
-              <Table.Cell>{character.eventtag}</Table.Cell>
-              <Table.Cell collapsing textAlign="right">
+              <Table.Cell verticalAlign="middle">
+                {character.photo ? (
+                  <Stack
+                    align="center"
+                    justify="center"
+                    backgroundColor="black"
+                    overflow="hidden"
+                  >
+                    <Stack.Item>
+                      <Image
+                        fixErrors
+                        src={character.photo.substring(
+                          1,
+                          character.photo.length - 1,
+                        )}
+                        height="64px"
+                      />
+                    </Stack.Item>
+                  </Stack>
+                ) : null}
+              </Table.Cell>
+              <Table.Cell p={1} verticalAlign="middle">
+                {character.name}
+              </Table.Cell>
+              <Table.Cell verticalAlign="middle">
+                {character.species}
+              </Table.Cell>
+              <Table.Cell verticalAlign="middle">{character.tag}</Table.Cell>
+              <Table.Cell verticalAlign="middle">
+                {character.gendertag}
+              </Table.Cell>
+              <Table.Cell verticalAlign="middle">
+                {character.sexualitytag}
+              </Table.Cell>
+              <Table.Cell verticalAlign="middle">{character.erptag}</Table.Cell>
+              <Table.Cell verticalAlign="middle">
+                {character.eventtag}
+              </Table.Cell>
+              <Table.Cell verticalAlign="middle" collapsing textAlign="right">
                 <Button
                   onClick={() => onOverlay(character)}
                   color="transparent"

@@ -89,7 +89,7 @@
 /obj/machinery/atmospherics/pipe/simple/visible,
 /obj/machinery/access_button{
 	command = "cycle_interior";
-	frequency = 1380;
+	frequency = 1381;
 	master_tag = "estrella";
 	name = "interior access button";
 	pixel_y = 26
@@ -154,10 +154,6 @@
 /obj/structure/shuttle/engine/router,
 /turf/simulated/shuttle/wall,
 /area/survivalpod/superpose/ScienceShip)
-"fg" = (
-/obj/screen/alert/highpressure,
-/turf/simulated/shuttle/wall,
-/area/survivalpod/superpose/ScienceShip)
 "fs" = (
 /obj/machinery/door/airlock/maintenance/common,
 /obj/machinery/atmospherics/pipe/simple/hidden{
@@ -190,18 +186,13 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/survivalpod/superpose/ScienceShip)
-"hb" = (
-/obj/machinery/r_n_d/protolathe,
-/obj/screen/alert/highpressure,
-/turf/simulated/shuttle/floor/purple,
-/area/survivalpod/superpose/ScienceShip)
 "hB" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 10
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 1;
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "estrella_pump"
 	},
 /turf/simulated/shuttle/plating,
@@ -293,11 +284,11 @@
 /area/survivalpod/superpose/ScienceShip)
 "ll" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "estrella_pump"
 	},
 /obj/machinery/embedded_controller/radio/airlock/docking_port{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "estrella";
 	pixel_y = 26;
 	tag_airpump = "estrella_pump";
@@ -311,7 +302,7 @@
 /turf/simulated/shuttle/plating,
 /area/survivalpod/superpose/ScienceShip)
 "lu" = (
-/obj/machinery/r_n_d/circuit_imprinter,
+/obj/machinery/rnd/production/circuit_imprinter,
 /obj/item/reagent_containers/glass/beaker{
 	pixel_x = 9;
 	pixel_y = 8
@@ -571,11 +562,7 @@
 /turf/simulated/floor/tiled/steel_grid,
 /area/survivalpod/superpose/ScienceShip)
 "sH" = (
-/turf/simulated/shuttle/wall/no_join{
-	base_state = "orange";
-	icon = 'icons/turf/shuttle_orange.dmi';
-	icon_state = "orange"
-	},
+/turf/simulated/shuttle/wall/no_join/orange,
 /area/survivalpod/superpose/ScienceShip)
 "sI" = (
 /obj/structure/salvageable/console_os{
@@ -747,7 +734,6 @@
 /obj/item/clothing/shoes/footwraps,
 /obj/item/clothing/shoes/footwraps,
 /obj/item/clothing/shoes/footwraps,
-/obj/item/toy/bosunwhistle/fluff/strix,
 /obj/item/blobcore_chunk,
 /obj/item/towel/random,
 /obj/item/towel/random,
@@ -1003,8 +989,7 @@
 /turf/simulated/shuttle/plating,
 /area/survivalpod/superpose/ScienceShip)
 "Cz" = (
-/obj/screen/alert/highpressure,
-/obj/machinery/r_n_d/destructive_analyzer,
+/obj/machinery/rnd/production/protolathe/department/science,
 /turf/simulated/shuttle/floor/purple,
 /area/survivalpod/superpose/ScienceShip)
 "CW" = (
@@ -1027,10 +1012,6 @@
 	dir = 1
 	},
 /turf/simulated/shuttle/plating,
-/area/survivalpod/superpose/ScienceShip)
-"Dp" = (
-/obj/screen/alert/highpressure,
-/turf/simulated/shuttle/wall/hard_corner,
 /area/survivalpod/superpose/ScienceShip)
 "Ds" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
@@ -1212,7 +1193,7 @@
 "Ft" = (
 /obj/machinery/access_button{
 	command = "cycle_exterior";
-	frequency = 1380;
+	frequency = 1381;
 	master_tag = "estrella";
 	name = "exterior access button";
 	pixel_y = 26
@@ -1280,7 +1261,7 @@
 	dir = 9
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "estrella_pump"
 	},
 /turf/simulated/shuttle/plating,
@@ -1421,7 +1402,7 @@
 "Jm" = (
 /obj/machinery/door/airlock/multi_tile/metal/mait{
 	dir = 1;
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	id_tag = "estrella_outer";
 	locked = 1;
@@ -1471,10 +1452,6 @@
 /obj/random/soap,
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/ScienceShip)
-"Kx" = (
-/obj/screen/alert/highpressure,
-/turf/template_noop,
-/area/template_noop)
 "KD" = (
 /obj/machinery/atmospherics/unary/vent_pump{
 	dir = 1;
@@ -1842,13 +1819,6 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/survivalpod/superpose/ScienceShip)
-"TF" = (
-/obj/screen/alert/highpressure,
-/obj/machinery/computer/rdconsole/public{
-	dir = 4
-	},
-/turf/simulated/shuttle/floor/purple,
-/area/survivalpod/superpose/ScienceShip)
 "Ug" = (
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/structure/extinguisher_cabinet{
@@ -1903,14 +1873,14 @@
 "UZ" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 1;
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "estrella_pump"
 	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 6
 	},
 /obj/machinery/airlock_sensor{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "estrella_sensor";
 	pixel_y = -28
 	},
@@ -1974,7 +1944,7 @@
 "VT" = (
 /obj/machinery/door/airlock/multi_tile/metal/mait{
 	dir = 1;
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	id_tag = "estrella_inner";
 	locked = 1;
@@ -2087,12 +2057,10 @@
 /obj/item/ore/marble,
 /obj/item/ore/osmium,
 /obj/item/ore/rutile,
-/obj/item/toy/bosunwhistle/fluff/strix,
 /obj/item/toy/character/wizard,
 /obj/item/reagent_containers/hypospray/autoinjector/biginjector/mindbreaker/unidentified,
 /obj/item/reagent_containers/hypospray/autoinjector/biginjector/mindbreaker/unidentified,
 /obj/item/fluff/squeezetoy,
-/obj/item/fluff/zekewatch,
 /obj/item/fluff/fidgetspinner/red,
 /obj/item/storage/pill_bottle/dice_nerd,
 /turf/simulated/floor/wood,
@@ -2223,14 +2191,14 @@ Eq
 Eq
 Eq
 Eq
-Kx
-fg
+Eq
+oX
 Bn
 Bn
 Bn
-fg
-Kx
-Kx
+oX
+Eq
+Eq
 Eq
 Eq
 Eq
@@ -2259,14 +2227,14 @@ Eq
 Eq
 oX
 Bn
-Dp
-hb
+Ul
+ez
 Cz
-TF
-Dp
+ez
+Ul
 Bn
-fg
-Kx
+oX
+Eq
 Eq
 Eq
 Eq
@@ -2301,7 +2269,7 @@ ez
 JG
 lu
 oX
-Kx
+Eq
 Eq
 Eq
 Eq

@@ -33,10 +33,10 @@
 		src.anchored = !src.anchored
 		if(!src.anchored)
 			word = "undo"
-		user << "You [word] the telepad anchor bolts."
+		to_chat(user, span_notice("You [word] the telepad anchor bolts."))
 		playsound(src.loc, 'sound/items/Ratchet.ogg', 75, 1)
 	else if(istype(W, /obj/item/tool/screwdriver) && !src.anchored)
-		user << "You fold the telepad."
+		to_chat(user, span_notice("You fold the telepad."))
 		new /obj/item/phoronics_telepad(src.loc)
 		del(src)
 	else
@@ -49,7 +49,7 @@
 	icon_state = "pad-folded"
 
 	attack_self(mob/user as mob)
-		user << "You unfold the pad."
+		to_chat(user, span_notice("You unfold the pad."))
 		var/obj/machinery/telepad_phoronics/T = new /obj/machinery/telepad_phoronics(user.loc)
 		T.anchored = 0
 		del(src)

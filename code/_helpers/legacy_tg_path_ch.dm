@@ -91,7 +91,7 @@ GLOBAL_LIST_INIT(legacy_tg_space_type_cache, typecacheof(/turf/space))
  * Note that this can only be used inside the [datum/tg_jps_pathfind][pathfind datum] since it uses variables from said datum.
  * If you really want to optimize things, optimize this, cuz this gets called a lot.
  */
-#define CAN_STEP(cur_turf, next) (next && !next.density && !(simulated_only && GLOB.legacy_tg_space_type_cache[next.type]) && !cur_turf.LinkBlockedWithAccess(next,caller, id) && (next != avoid))
+#define CAN_STEP(cur_turf, next) (next && !next.density && !(simulated_only && GLOB.legacy_tg_space_type_cache[next.type]) && !cur_turf.LinkBlockedWithAccess(next,proc_caller, id) && (next != avoid))
 /// Another helper macro for JPS, for telling when a node has forced neighbors that need expanding
 #define STEP_NOT_HERE_BUT_THERE(cur_turf, dirA, dirB) ((!CAN_STEP(cur_turf, get_step(cur_turf, dirA)) && CAN_STEP(cur_turf, get_step(cur_turf, dirB))))
 
@@ -146,7 +146,7 @@ GLOBAL_LIST_INIT(legacy_tg_space_type_cache, typecacheof(/turf/space))
  */
 /datum/tg_jps_pathfind
 	/// The thing that we're actually trying to path for
-	var/atom/movable/caller
+	var/atom/movable/proc_caller
 	/// The turf where we started at
 	var/turf/start
 	/// The turf we're trying to path to (note that this won't track a moving target)
@@ -170,8 +170,8 @@ GLOBAL_LIST_INIT(legacy_tg_space_type_cache, typecacheof(/turf/space))
 	/// A specific turf we're avoiding, like if a mulebot is being blocked by someone t-posing in a doorway we're trying to get through
 	var/turf/avoid
 
-/datum/tg_jps_pathfind/New(atom/movable/caller, atom/goal, id, max_distance, mintargetdist, simulated_only, avoid)
-	src.caller = caller
+/datum/tg_jps_pathfind/New(atom/movable/proc_caller, atom/goal, id, max_distance, mintargetdist, simulated_only, avoid)
+	src.proc_caller = proc_caller
 	end = get_turf(goal)
 	open = new /datum/tg_heap(GLOBAL_PROC_REF(TGHeapPathWeightCompare))
 	sources = new()
@@ -188,7 +188,7 @@ GLOBAL_LIST_INIT(legacy_tg_space_type_cache, typecacheof(/turf/space))
  * return null, which [/proc/get_path_to] translates to an empty list (notable for simple bots, who need empty lists)
  */
 /datum/tg_jps_pathfind/proc/search()
-	start = get_turf(caller)
+	start = get_turf(proc_caller)
 	if(!start || !end)
 		stack_trace("Invalid A* start or destination")
 		return
@@ -204,7 +204,7 @@ GLOBAL_LIST_INIT(legacy_tg_space_type_cache, typecacheof(/turf/space))
 
 	//then run the main loop
 	while(!open.is_empty() && !path)
-		if(!caller)
+		if(!proc_caller)
 			return
 		current_processed_node = open.pop() //get the lower f_value turf in the open list
 		if(max_distance && (current_processed_node.number_tiles > max_distance))//if too many steps, don't process that path
@@ -382,14 +382,14 @@ GLOBAL_LIST_INIT(legacy_tg_space_type_cache, typecacheof(/turf/space))
 			return
 
 /**
- * For seeing if we can actually move between 2 given turfs while accounting for our access and the caller's pass_flags
+ * For seeing if we can actually move between 2 given turfs while accounting for our access and the proc_caller's pass_flags
  *
  * Arguments:
- * * caller: The movable, if one exists, being used for mobility checks to see what tiles it can reach
+ * * proc_caller: The movable, if one exists, being used for mobility checks to see what tiles it can reach
  * * ID: An ID card that decides if we can gain access to doors that would otherwise block a turf
  * * simulated_only: Do we only worry about turfs with simulated atmos, most notably things that aren't space?
 */
-/turf/proc/LinkBlockedWithAccess(turf/destination_turf, caller, ID)
+/turf/proc/LinkBlockedWithAccess(turf/destination_turf, proc_caller, ID)
 	var/static/datum/pathfinding/whatever = new
 	return !global.default_pathfinding_adjacency(src, destination_turf, GLOB.generic_pathfinding_actor, whatever)
 

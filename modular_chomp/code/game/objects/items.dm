@@ -3,8 +3,6 @@
 	var/user_vars_remembered //not needed for manual editing, just stores the original vars from the above list to make sure they go back to normal later
 
 /obj/item/Destroy(force, ...)
-	if(item_tf_spawn_allowed)
-		item_tf_spawnpoints -= src
 	user_vars_remembered = null
 	return ..()
 

@@ -40,59 +40,6 @@
 		girder_material = newgmaterial
 	update_material()
 
-/turf/simulated/wall/update_icon()
-	if(!material)
-		return
-
-	if(!damage_overlays[1]) //list hasn't been populated
-		generate_overlays()
-
-	cut_overlays()
-	var/image/I
-
-	if(!density)
-		I = image(wall_masks, "[material.icon_base]fwall_open")
-		I.color = material.icon_colour
-		add_overlay(I)
-		return
-
-	for(var/i = 1 to 4)
-		I = image(wall_masks, "[material.icon_base][wall_connections[i]]", dir = 1<<(i-1))
-		I.color = material.icon_colour
-		add_overlay(I)
-
-	if(reinf_material)
-		if(construction_stage != null && construction_stage < 6)
-			I = image(wall_masks, "reinf_construct-[construction_stage]")
-			I.color = reinf_material.icon_colour
-			add_overlay(I)
-		else
-			if("[reinf_material.icon_reinf]0" in cached_icon_states(wall_masks))
-				// Directional icon
-				for(var/i = 1 to 4)
-					I = image(wall_masks, "[reinf_material.icon_reinf][wall_connections[i]]", dir = 1<<(i-1))
-					I.color = reinf_material.icon_colour
-					add_overlay(I)
-			else if("[reinf_material.icon_reinf]" in cached_icon_states(wall_masks))
-				I = image(wall_masks, reinf_material.icon_reinf)
-				I.color = reinf_material.icon_colour
-				add_overlay(I)
-	var/image/texture = material.get_wall_texture()
-	if(texture)
-		add_overlay(texture)
-
-	if(damage != 0)
-		var/integrity = material.integrity
-		if(reinf_material)
-			integrity += reinf_material.integrity
-
-		var/overlay = round(damage / integrity * damage_overlays.len) + 1
-		if(overlay > damage_overlays.len)
-			overlay = damage_overlays.len
-
-		add_overlay(damage_overlays[overlay])
-	return
-
 /turf/simulated/shuttlewalls/proc/generate_overlays()
 	var/alpha_inc = 256 / damage_overlays.len
 

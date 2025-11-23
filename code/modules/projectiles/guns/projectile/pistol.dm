@@ -45,7 +45,7 @@
 		to_chat(M, span_notice("You don't feel cool enough to name this gun, chump."))
 		return 0
 
-	var/input = sanitizeSafe(tgui_input_text(M, "What do you want to name the gun?","Rename Gun" ,"",MAX_NAME_LEN))
+	var/input = sanitizeSafe(tgui_input_text(M, "What do you want to name the gun?","Rename Gun" ,"",MAX_NAME_LEN, encode = FALSE))
 
 	if(src && input && !M.stat && in_range(M,src))
 		name = input
@@ -81,7 +81,6 @@
 	desc = "The MT Mk58 is a cheap, ubiquitous sidearm, produced by MarsTech. Found pretty much everywhere humans are. Uses .45 rounds."
 	description_fluff = "The leading civilian-sector high-quality small arms brand of Hephaestus Industries, \
 	MarsTech has been the provider of choice for law enforcement and security forces for over 300 years."
-	icon = 'icons/obj/gun_ch.dmi'
 	icon_state = "secguncomp"
 	magazine_type = /obj/item/ammo_magazine/m45/rubber
 	allowed_magazines = list(/obj/item/ammo_magazine/m45)
@@ -341,26 +340,9 @@
 	load_method = SINGLE_CASING
 	max_shells = 1 //literally just a barrel
 
-	var/list/ammo_types = list(    //CHOMPEdit why is this global?
-		/obj/item/ammo_casing/a357              = ".357",
-		/obj/item/ammo_casing/a9mm		        = "9mm",
-		/obj/item/ammo_casing/a45				= ".45",
-		/obj/item/ammo_casing/a10mm             = "10mm",
-		/obj/item/ammo_casing/a12g              = "12g",
-		/obj/item/ammo_casing/a12g              = "12g",
-		/obj/item/ammo_casing/a12g/pellet       = "12g",
-		/obj/item/ammo_casing/a12g/pellet       = "12g",
-		/obj/item/ammo_casing/a12g/pellet       = "12g",
-		/obj/item/ammo_casing/a12g/beanbag      = "12g",
-		/obj/item/ammo_casing/a12g/stunshell    = "12g",
-		/obj/item/ammo_casing/a12g/flash        = "12g",
-		/obj/item/ammo_casing/a762              = "7.62mm",
-		/obj/item/ammo_casing/a545              = "5.45mm"
-		)
-
 /obj/item/gun/projectile/pirate/Initialize(mapload)
-	ammo_type = pick(ammo_types)
-	desc += " Uses [ammo_types[ammo_type]] rounds."
+	ammo_type = pick(GLOB.global_ammo_types)
+	desc += " Uses [GLOB.global_ammo_types[ammo_type]] rounds."
 
 	var/obj/item/ammo_casing/ammo = ammo_type
 	caliber = initial(ammo.caliber)

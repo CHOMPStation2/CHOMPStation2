@@ -1,10 +1,3 @@
-// Ticker game states, turns out these are  equivilent to runlevels1
-#define GAME_STATE_INIT			0	// RUNLEVEL_INIT
-#define GAME_STATE_PREGAME		1	// RUNLEVEL_LOBBY
-#define GAME_STATE_SETTING_UP	2	// RUNLEVEL_SETUP
-#define GAME_STATE_PLAYING		3	// RUNLEVEL_GAME
-#define GAME_STATE_FINISHED		4	// RUNLEVEL_POSTGAME
-
 //End game state, to manage round end.
 #define END_GAME_NOT_OVER		1	// Still playing normally
 #define END_GAME_MODE_FINISHED	2	// Mode has finished but game has not, wait for game to end too.
@@ -39,13 +32,11 @@
 #define BE_PAI        0x8000
 //VOREStation Add
 #define BE_LOSTDRONE	0x10000
-#define BE_MAINTPRED	0x20000
-#define BE_MAINTLURKER	0x40000
-#define BE_MORPH		0x80000
-#define BE_CORGI		0x100000
-#define BE_CURSEDSWORD	0x200000
-#define BE_SURVIVOR		0x400000
-#define BE_EVENT		0x800000
+#define BE_MAINTCRITTER 0x20000
+#define BE_CORGI		0x40000
+#define BE_CURSEDSWORD	0x80000
+#define BE_SURVIVOR		0x100000
+#define BE_EVENT		0x200000
 //VOREStation Add End
 
 var/list/be_special_flags = list(
@@ -67,9 +58,7 @@ var/list/be_special_flags = list(
 	"pAI"              = BE_PAI,
 	//VOREStation Add
 	"Lost Drone"       = BE_LOSTDRONE,
-	"Maint Pred"       = BE_MAINTPRED,
-	"Stowaway"         = BE_MAINTLURKER, // CHOMPEdit
-	"Morph"            = BE_MORPH,
+	"Maint Critter"    = BE_MAINTCRITTER,
 	"Corgi"            = BE_CORGI,
 	"Cursed Sword"     = BE_CURSEDSWORD,
 	"Ship Survivor"	   = BE_SURVIVOR

@@ -5,12 +5,11 @@
 //Blood levels. These are percentages based on the species blood_volume var.
 //Retained for archival/reference purposes - KK
 /*
-var/const/BLOOD_VOLUME_SAFE =    85
-var/const/BLOOD_VOLUME_OKAY =    75
-var/const/BLOOD_VOLUME_BAD =     60
-var/const/BLOOD_VOLUME_SURVIVE = 40
+BLOOD_VOLUME_SAFE =    85
+BLOOD_VOLUME_OKAY =    75
+BLOOD_VOLUME_BAD =     60
+BLOOD_VOLUME_SURVIVE = 40
 */
-var/const/CE_STABLE_THRESHOLD = 0.5
 
 /mob/living/carbon/human/var/datum/reagents/vessel // Container for blood and BLOOD ONLY. Do not transfer other chems here.
 /mob/living/carbon/human/var/var/pale = 0          // Should affect how mob sprite is drawn, but currently doesn't.
@@ -50,6 +49,7 @@ var/const/CE_STABLE_THRESHOLD = 0.5
 			if(isSynthetic())
 				B.data["species"] = "synthetic"
 
+			B.data["changeling"] = (!isnull(mind) && is_changeling(mind)) || species?.ambulant_blood
 			B.color = B.data["blood_colour"]
 			B.name = B.data["blood_name"]
 
@@ -110,9 +110,6 @@ var/const/CE_STABLE_THRESHOLD = 0.5
 		if(CE_STABLE in chem_effects)
 			dmg_coef = 0.5
 			threshold_coef = 0.75
-//	These are Bay bits, do some sort of calculation.
-//			dmg_coef = min(1, 10/chem_effects[CE_STABLE]) //TODO: add effect for increased damage
-//			threshold_coef = min(dmg_coef / CE_STABLE_THRESHOLD, 1)
 
 		if(blood_volume_raw >= species.blood_volume*species.blood_level_safe)
 			if(pale)
@@ -195,7 +192,7 @@ var/const/CE_STABLE_THRESHOLD = 0.5
 				if(!(W.can_autoheal() || (bicardose && inaprovaline) || myeldose))	//bicaridine and inaprovaline stop internal wounds from growing bigger with time, unless it is so small that it is already healing
 					W.open_wound(0.1)
 				if(prob(1))
-					custom_pain("You feel a stabbing pain in your [name]!", 50)
+					custom_pain("You feel a stabbing pain in your [temp.name]!", 50)
 				if(CE_STABLE in chem_effects)
 					blood_loss_divisor = max(blood_loss_divisor + 30, 1) //Inaprovaline is great on internal wounds.
 				if(temp.applied_pressure) //Putting pressure on the afflicted wound helps stop the arterial bleeding.
@@ -285,6 +282,9 @@ var/const/CE_STABLE_THRESHOLD = 0.5
 	for(var/datum/disease/D in GetSpreadableViruses())
 		B.data["viruses"] |= D.Copy()
 
+	for(var/datum/disease/D in GetDormantDiseases())
+		B.data["viruses"] |= D.Copy()
+
 	if(!B.data["resistances"])
 		B.data["resistances"] = list()
 
@@ -292,6 +292,7 @@ var/const/CE_STABLE_THRESHOLD = 0.5
 		B.data["resistances"] |= GetResistances()
 	B.data["blood_DNA"] = copytext(src.dna.unique_enzymes,1,0)
 	B.data["blood_type"] = copytext(src.dna.b_type,1,0)
+	B.data["changeling"] = (!isnull(mind) && is_changeling(mind)) || species?.ambulant_blood
 
 	// Putting this here due to return shenanigans.
 	if(ishuman(src))
@@ -351,13 +352,13 @@ var/const/CE_STABLE_THRESHOLD = 0.5
 	if (!injected)
 		return
 	if(!our)
-		log_debug("[src] has no blood reagent, proceeding with fallback reinitialization.")
+		log_runtime("[src] has no blood reagent, proceeding with fallback reinitialization.")
 		var/vessel_old = vessel
 		vessel = null
 		qdel(vessel_old)
 		make_blood(amount)
 		if(!vessel)
-			log_debug("Failed to re-initialize blood datums on [src]!")
+			log_runtime("Failed to re-initialize blood datums on [src]!")
 			return
 		if(vessel.total_volume < species.blood_volume)
 			vessel.add_reagent(REAGENT_ID_BLOOD, species.blood_volume - vessel.total_volume)
@@ -366,11 +367,12 @@ var/const/CE_STABLE_THRESHOLD = 0.5
 		fixblood()
 		our = get_blood(vessel)
 		if(!our)
-			log_debug("Failed to re-initialize blood datums on [src]!")
+			log_runtime("Failed to re-initialize blood datums on [src]!")
 			return
-
-
-	if(blood_incompatible(injected.data["blood_type"],our.data["blood_type"],injected.data["species"],our.data["species"]) )
+	if(is_changeling(src)) //Changelings don't reject blood!
+		vessel.add_reagent(REAGENT_ID_BLOOD, amount, injected.data)
+		vessel.update_total()
+	else if(blood_incompatible(injected.data["blood_type"],our.data["blood_type"],injected.data["species"],our.data["species"]) )
 		reagents.add_reagent(REAGENT_ID_TOXIN,amount * 0.5)
 		reagents.update_total()
 	else
@@ -429,6 +431,11 @@ var/const/CE_STABLE_THRESHOLD = 0.5
 		if(M.isSynthetic()) synth = 1
 		source = M.get_blood(M.vessel)
 
+	//Someone fed us a weird source. Let's log it.
+	if(source && !istype(source, /datum/reagent/blood))
+		log_runtime("A blood splatter was made using non-blood datum [source]!")
+		source = null //Clear the source since it's invalid. Fallback to non-source behavior.
+
 	// Are we dripping or splattering?
 	var/list/drips = list()
 	// Only a certain number of drips (or one large splatter) can be on a given turf.
@@ -463,11 +470,12 @@ var/const/CE_STABLE_THRESHOLD = 0.5
 
 	// Update blood information.
 	if(source.data["blood_DNA"])
-		B.blood_DNA = list()
+		var/list/new_data = list()
 		if(source.data["blood_type"])
-			B.blood_DNA[source.data["blood_DNA"]] = source.data["blood_type"]
+			new_data[source.data["blood_DNA"]] = source.data["blood_type"]
 		else
-			B.blood_DNA[source.data["blood_DNA"]] = "O+"
+			new_data[source.data["blood_DNA"]] = "O+"
+		B.init_forensic_data().merge_blooddna(null,new_data)
 
 	// Update virus information.
 	if(source.data["viruses"])

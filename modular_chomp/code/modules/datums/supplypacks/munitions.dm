@@ -11,5 +11,5 @@
 	cost = 134 // yee haw, also damn you serdy for making me want to add this.
 	containertype = /obj/structure/closet/crate/secure
 	containername = "Cowboy Crate"
-	access = access_armory
+	access = ACCESS_ARMORY
 	contraband = 1

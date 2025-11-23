@@ -105,7 +105,6 @@ var/list/admin_verbs_admin = list(
 	/client/proc/toggle_attack_logs,
 	/datum/admins/proc/paralyze_mob,
 	/client/proc/fixatmos,
-	/datum/admins/proc/quick_nif, //VOREStation Add,
 	/datum/admins/proc/quick_authentic_nif, //CHOMPStation add
 	/datum/admins/proc/sendFax,
 	/client/proc/despawn_player,
@@ -376,7 +375,6 @@ var/list/admin_verbs_mod = list(
 	/client/proc/getserverlog,			//allows us to fetch server logs (GLOB.diary) for other days,
 	/datum/admins/proc/view_persistent_data,
 	/datum/admins/proc/view_txt_log,	//shows the server log (diary) for today,
-	/datum/admins/proc/quick_nif, //CHOMPEdit
 	/datum/admins/proc/quick_authentic_nif, //CHOMPEdit
 	/client/proc/admin_teleport,		//CHOMPEdit
 	/datum/admins/proc/view_atk_log		//shows the server combat-log, doesn't do anything presently,

@@ -44,42 +44,6 @@
 #define MUTE  0x2
 #define DEAF  0x4
 #define SPINE 0x8
-
-/* Traitgenes (Blocks have finally been retired, huzzah!
-// The way blocks are handled badly needs a rewrite, this is horrible.
-// Too much of a project to handle at the moment, TODO for later.)
-var/BLINDBLOCK    = 0
-var/DEAFBLOCK     = 0
-var/HULKBLOCK     = 0
-var/TELEBLOCK     = 0
-var/FIREBLOCK     = 0
-var/XRAYBLOCK     = 0
-var/CLUMSYBLOCK   = 0
-var/FAKEBLOCK     = 0
-var/COUGHBLOCK    = 0
-var/GLASSESBLOCK  = 0
-var/EPILEPSYBLOCK = 0
-var/TWITCHBLOCK   = 0
-var/NERVOUSBLOCK  = 0
-var/MONKEYBLOCK   = STRUCDNASIZE
-
-var/BLOCKADD = 0
-var/DIFFMUT  = 0
-
-var/HEADACHEBLOCK      = 0
-var/NOBREATHBLOCK      = 0
-var/REMOTEVIEWBLOCK    = 0
-var/REGENERATEBLOCK    = 0
-var/INCREASERUNBLOCK   = 0
-var/REMOTETALKBLOCK    = 0
-var/MORPHBLOCK         = 0
-var/BLENDBLOCK         = 0
-var/HALLUCINATIONBLOCK = 0
-var/NOPRINTSBLOCK      = 0
-var/SHOCKIMMUNITYBLOCK = 0
-var/SMALLSIZEBLOCK     = 0
-*/
-
 // Define block bounds (off-low,off-high,on-low,on-high)
 // Used in setupgame.dm
 #define DNA_DEFAULT_BOUNDS list(1,2049,2050,4095)
@@ -103,8 +67,8 @@ var/SMALLSIZEBLOCK     = 0
 #define DNA_UI_GENDER      14
 #define DNA_UI_BEARD_STYLE 15
 #define DNA_UI_HAIR_STYLE  16
-#define DNA_UI_EAR_STYLE   17 // VOREStation snippet.
-#define DNA_UI_EAR_SECONDARY_STYLE   18 // VOREStation snippet.
+#define DNA_UI_EAR_STYLE   17
+#define DNA_UI_EAR_SECONDARY_STYLE   18
 #define DNA_UI_TAIL_STYLE  19
 #define DNA_UI_PLAYERSCALE 20
 #define DNA_UI_TAIL_R      21
@@ -152,11 +116,16 @@ var/SMALLSIZEBLOCK     = 0
 #define DNA_UI_WING2_B     57
 #define DNA_UI_WING3_R     58
 #define DNA_UI_WING3_G     59
-#define DNA_UI_WING3_B     60 // VOREStation snippet end.
+#define DNA_UI_WING3_B     60
 #define DNA_UI_WING_ALPHA  61
-#define DNA_UI_LENGTH      61 // VOREStation Edit - Needs to match the highest number above.
+#define DNA_UI_GRAD_STYLE  62
+#define DNA_UI_GRAD_R      63
+#define DNA_UI_GRAD_G      64
+#define DNA_UI_GRAD_B      65
+// Needs to match the highest number above.
+#define DNA_UI_LENGTH      65
 
-#define DNA_SE_LENGTH 90 // Traitgenes (Expanded from 49 to 84, there have been a considerable expansion of genes.
+#define DNA_SE_LENGTH 93 // Traitgenes (Expanded from 49 to 84, there have been a considerable expansion of genes. //CHOMPEdit: Upped to 93. NOTE: Ensure it's increased when there is a conflict here! Thanks!
 // This leaves room for future expansion. This can be arbitrarily raised without worry if genes start to get crowded.
 // Should have more than 10 empty genes after setup. - Willbird)
 
@@ -172,3 +141,7 @@ var/SMALLSIZEBLOCK     = 0
 // Gene flags
 #define GENE_ALWAYS_ACTIVATE 1
 #define MUTCHK_HIDEMSG       2 // Traitgenes (Hide gene activation/deactivation messages, mostly for resleeving so you don't get spammed)
+
+// Misc
+#define TK_DENIED_MESSAGE span_warning("You are too distracted to focus your telekinesis.")
+#define TK_OUTRANGED_MESSAGE span_notice("Your telekinesis won't reach that far.")

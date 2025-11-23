@@ -11,7 +11,6 @@
 	handle_weakened()
 	handle_paralysed()
 	handle_supernatural()
-	handle_atmos()
 
 	handle_special()
 
@@ -23,6 +22,11 @@
 
 //Should we be dead?
 /mob/living/simple_mob/updatehealth()
+	if(SEND_SIGNAL(src, COMSIG_UPDATE_HEALTH) & COMSIG_UPDATE_HEALTH_GOD_MODE)
+		health = getMaxHealth()
+		set_stat(CONSCIOUS)
+		return
+	get_injury_level()
 	health = getMaxHealth() - getFireLoss() - getBruteLoss() - getToxLoss() - getOxyLoss() - getCloneLoss()
 
 	//Alive, becoming dead
@@ -61,9 +65,9 @@
 		if(90 to INFINITY)
 			clear_alert("nutrition")
 		if(50 to 90)
-			throw_alert("nutrition", /obj/screen/alert/hungry)
+			throw_alert("nutrition", /atom/movable/screen/alert/hungry)
 		if(-INFINITY to 50)
-			throw_alert("nutrition", /obj/screen/alert/starving)
+			throw_alert("nutrition", /atom/movable/screen/alert/starving)
 
 //VOREStation ADD START - I made this for catslugs but tbh it's probably cool to give to everything.
 //Gives all simplemobs passive healing as long as they can find food.
@@ -97,70 +101,70 @@
 /mob/living/simple_mob/proc/handle_special()
 	return
 
-
 // Handle interacting with and taking damage from atmos
-// TODO - Refactor this to use handle_environment() like a good /mob/living
-/mob/living/simple_mob/proc/handle_atmos()
-	var/atmos_unsuitable = 0
+/mob/living/simple_mob/handle_environment(datum/gas_mixture/environment)
 
 	if(in_stasis)
 		return 1 // return early to skip atmos checks
+	if(is_incorporeal())
+		return 1
 
-	var/atom/A = src.loc
+	if( abs(environment.temperature - bodytemperature) > temperature_range )
+		bodytemperature += ((environment.temperature - bodytemperature) / 5)
 
-	if(istype(A,/turf))
-		var/turf/T = A
+	var/atmos_unsuitable = 0
+	if(min_oxy && environment.gas[GAS_O2] < min_oxy)
+		atmos_unsuitable = 1
+		throw_alert("oxy", /atom/movable/screen/alert/not_enough_oxy)
+	else if(max_oxy && environment.gas[GAS_O2] > max_oxy)
+		atmos_unsuitable = 1
+		throw_alert("oxy", /atom/movable/screen/alert/too_much_oxy)
+	else
+		clear_alert("oxy")
 
-		var/datum/gas_mixture/Environment = T.return_air()
+	if(min_tox && environment.gas[GAS_PHORON] < min_tox)
+		atmos_unsuitable = 2
+		throw_alert("tox_in_air", /atom/movable/screen/alert/not_enough_tox)
+	else if(max_tox && environment.gas[GAS_PHORON] > max_tox)
+		atmos_unsuitable = 2
+		throw_alert("tox_in_air", /atom/movable/screen/alert/tox_in_air)
+	else
+		clear_alert("tox_in_air")
 
-		if(Environment)
+	if(min_n2 && environment.gas[GAS_N2] < min_n2)
+		atmos_unsuitable = 1
+		throw_alert("n2o", /atom/movable/screen/alert/not_enough_nitro)
+	else if(max_n2 && environment.gas[GAS_N2] > max_n2)
+		atmos_unsuitable = 1
+		throw_alert("n2o", /atom/movable/screen/alert/too_much_nitro)
+	else
+		clear_alert("n2o")
 
-			if( abs(Environment.temperature - bodytemperature) > temperature_range )	//VOREStation Edit: heating adjustments
-				bodytemperature += ((Environment.temperature - bodytemperature) / 5)
+	if(min_co2 && environment.gas[GAS_CO2] < min_co2)
+		atmos_unsuitable = 1
+		throw_alert("co2", /atom/movable/screen/alert/not_enough_co2)
+	else if(max_co2 && environment.gas[GAS_CO2] > max_co2)
+		atmos_unsuitable = 1
+		throw_alert("co2", /atom/movable/screen/alert/too_much_co2)
+	else
+		clear_alert("co2")
 
-			if(min_oxy && Environment.gas[GAS_O2] < min_oxy)
-				atmos_unsuitable = 1
-				throw_alert("oxy", /obj/screen/alert/not_enough_oxy)
-			else if(max_oxy && Environment.gas[GAS_O2] > max_oxy)
-				atmos_unsuitable = 1
-				throw_alert("oxy", /obj/screen/alert/too_much_oxy)
-			else
-				clear_alert("oxy")
-
-			if(min_tox && Environment.gas[GAS_PHORON] < min_tox)
-				atmos_unsuitable = 2
-				throw_alert("tox_in_air", /obj/screen/alert/not_enough_tox)
-			else if(max_tox && Environment.gas[GAS_PHORON] > max_tox)
-				atmos_unsuitable = 2
-				throw_alert("tox_in_air", /obj/screen/alert/tox_in_air)
-			else
-				clear_alert("tox_in_air")
-
-			if(min_n2 && Environment.gas[GAS_N2] < min_n2)
-				atmos_unsuitable = 1
-				throw_alert("n2o", /obj/screen/alert/not_enough_nitro)
-			else if(max_n2 && Environment.gas[GAS_N2] > max_n2)
-				atmos_unsuitable = 1
-				throw_alert("n2o", /obj/screen/alert/too_much_nitro)
-			else
-				clear_alert("n2o")
-
-			if(min_co2 && Environment.gas[GAS_CO2] < min_co2)
-				atmos_unsuitable = 1
-				throw_alert("co2", /obj/screen/alert/not_enough_co2)
-			else if(max_co2 && Environment.gas[GAS_CO2] > max_co2)
-				atmos_unsuitable = 1
-				throw_alert("co2", /obj/screen/alert/too_much_co2)
-			else
-				clear_alert("co2")
+	if(min_ch4 && environment.gas[GAS_CH4] < min_ch4)
+		atmos_unsuitable = 2
+		throw_alert("methane_in_air", /atom/movable/screen/alert/not_enough_methane)
+	else if(max_tox && environment.gas[GAS_CH4] > max_ch4)
+		atmos_unsuitable = 2
+		throw_alert("methane_in_air", /atom/movable/screen/alert/methane_in_air)
+	else
+		clear_alert("methane_in_air")
 
 	//Atmos effect
 	if(bodytemperature < minbodytemp)
 		adjustFireLoss(cold_damage_per_tick)
-		throw_alert("temp", /obj/screen/alert/cold, COLD_ALERT_SEVERITY_MAX)
+		throw_alert("temp", /atom/movable/screen/alert/cold, COLD_ALERT_SEVERITY_MAX)
 	else if(bodytemperature > maxbodytemp)
 		adjustFireLoss(heat_damage_per_tick)
-		throw_alert("temp", /obj/screen/alert/hot, HOT_ALERT_SEVERITY_MAX)
+		throw_alert("temp", /atom/movable/screen/alert/hot, HOT_ALERT_SEVERITY_MAX)
 	else
 		clear_alert("temp")
 

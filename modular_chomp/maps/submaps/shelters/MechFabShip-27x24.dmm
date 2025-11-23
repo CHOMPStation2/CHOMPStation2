@@ -247,12 +247,7 @@
 /turf/template_noop,
 /area/template_noop)
 "iD" = (
-/obj/machinery/smartfridge/survival_pod{
-	icon = 'icons/obj/vending.dmi';
-	icon_base = "fridge_sci";
-	icon_contents = "chem";
-	icon_state = "fridge_sci";
-	name = "Advanced storage";
+/obj/machinery/smartfridge/survival_pod/scifridge{
 	pixel_y = 0
 	},
 /obj/item/stock_parts/micro_laser/ultra,
@@ -641,18 +636,16 @@
 /obj/effect/floor_decal/techfloor{
 	dir = 4
 	},
-/obj/machinery/mecha_part_fabricator{
-	req_access = null
-	},
 /obj/effect/floor_decal/industrial/outline/yellow,
+/obj/machinery/mecha_part_fabricator_tg,
 /turf/simulated/floor/tiled/yellow,
 /area/survivalpod/superpose/MechFabShip)
 "qY" = (
-/obj/machinery/computer/rdconsole/public,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/light/poi{
 	dir = 1
 	},
+/obj/machinery/rnd/production/protolathe/department/science,
 /turf/simulated/floor/tiled/techmaint,
 /area/survivalpod/superpose/MechFabShip)
 "rr" = (
@@ -1079,7 +1072,7 @@
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/MechFabShip)
 "HC" = (
-/obj/machinery/mecha_part_fabricator/pros,
+/obj/machinery/mecha_part_fabricator_tg/prosthetics,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/effect/floor_decal/techfloor{
 	dir = 8
@@ -1125,12 +1118,8 @@
 /obj/structure/sign/electricshock{
 	pixel_y = 32
 	},
-/obj/machinery/cryopod/robot{
-	base_icon_state = "borg_pod_closed";
-	dir = 4;
-	icon = 'icons/obj/structures.dmi';
-	icon_state = "borg_pod_closed";
-	occupied_icon_state = "borg_pod_opened"
+/obj/machinery/cryopod/robot/borg_pod{
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/MechFabShip)
@@ -1335,7 +1324,6 @@
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/MechFabShip)
 "Nr" = (
-/obj/machinery/r_n_d/destructive_analyzer,
 /obj/effect/floor_decal/techfloor{
 	dir = 4
 	},
@@ -1361,12 +1349,7 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/survivalpod/superpose/MechFabShip)
 "Py" = (
-/obj/machinery/smartfridge/survival_pod{
-	icon = 'icons/obj/vending.dmi';
-	icon_base = "fridge_sci";
-	icon_contents = "chem";
-	icon_state = "fridge_sci";
-	name = "Advanced storage";
+/obj/machinery/smartfridge/survival_pod/scifridge{
 	pixel_y = 0
 	},
 /obj/item/stack/material/durasteel{
@@ -1576,7 +1559,7 @@
 /area/survivalpod/superpose/MechFabShip)
 "SW" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
-/obj/machinery/r_n_d/circuit_imprinter,
+/obj/machinery/rnd/production/circuit_imprinter,
 /obj/item/reagent_containers/glass/beaker/large,
 /obj/structure/sign/department/robo{
 	pixel_y = 32

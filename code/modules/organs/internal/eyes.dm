@@ -5,6 +5,7 @@
 	organ_tag = O_EYES
 	parent_organ = BP_HEAD
 	var/list/eye_colour = list(0,0,0)
+	var/innate_flash_protection = FLASH_PROTECTION_NONE
 
 /obj/item/organ/internal/eyes/robotize()
 	..()
@@ -39,7 +40,7 @@
 	set src in usr
 
 	var/current_color = rgb(eye_colour[1],eye_colour[2],eye_colour[3])
-	var/new_color = tgui_color_picker(src, "Pick a new color for your eyes.","Eye Color", current_color)
+	var/new_color = tgui_color_picker(owner, "Pick a new color for your eyes.","Eye Color", current_color)
 	if(new_color && owner)
 		// input() supplies us with a hex color, which we can't use, so we convert it to rbg values.
 		var/list/new_color_rgb_list = hex2rgb(new_color)
@@ -100,12 +101,12 @@
 			owner.eye_blurry += 10
 
 /obj/item/organ/internal/eyes/proc/get_total_protection(var/flash_protection = FLASH_PROTECTION_NONE)
-	return (flash_protection)
+	return (flash_protection + innate_flash_protection)
 
 /obj/item/organ/internal/eyes/proc/additional_flash_effects(var/intensity)
 	return -1
 
-/obj/item/organ/internal/eyes/emp_act(severity)
-	if(robotic >= ORGAN_ASSISTED)
-		return
-	owner.eye_blurry += (4/severity)
+/obj/item/organ/internal/eyes/emp_act(severity, recursive)
+	..()
+	if(owner && robotic)
+		owner.eye_blurry += (4/severity)

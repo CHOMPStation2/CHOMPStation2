@@ -5,7 +5,7 @@
 	icon_state = "retail_idle"
 	flags = NOBLUDGEON
 	slot_flags = SLOT_BELT
-	req_access = list(access_heads)
+	req_access = list(ACCESS_HEADS)
 	w_class = ITEMSIZE_SMALL
 	origin_tech = list(TECH_MATERIAL = 1)
 
@@ -88,11 +88,10 @@
 		dat += "<br>"
 	dat += "<i>Device ID:</i> [machine_id]"
 
-	dat = "<html><head><title>Retail Scanner</title></head><body>[dat]</body></html>"
-
-	user << browse(dat, "window=retail;size=350x500")
-	onclose(user, "retail")
-
+	var/datum/browser/popup = new(user, "retail", "Retail", 350, 500)
+	popup.add_head_content("<title>Retail Scanner</title>")
+	popup.set_content(dat)
+	popup.open()
 
 /obj/item/retail_scanner/Topic(var/href, var/href_list)
 	if(..())
@@ -119,7 +118,7 @@
 				else
 					to_chat(usr, "[icon2html(src, usr.client)]" + span_warning("Account not found."))
 			if("custom_order")
-				var/t_purpose = sanitize(tgui_input_text(usr, "Enter purpose", "New purpose"))
+				var/t_purpose = tgui_input_text(usr, "Enter purpose", "New purpose", "", MAX_MESSAGE_LEN)
 				if (!t_purpose || !Adjacent(usr)) return
 				transaction_purpose = t_purpose
 				item_list += t_purpose

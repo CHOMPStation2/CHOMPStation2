@@ -203,12 +203,7 @@
 /turf/simulated/floor/reinforced,
 /area/shuttle/tabiranth)
 "af" = (
-/obj/machinery/portable_atmospherics/powered/scrubber/huge/stationary{
-	desc = "A large machine releasing a constant gust of air.";
-	icon = 'icons/obj/survival_pod.dmi';
-	icon_state = "fans";
-	name = "enviornmental regulation system"
-	},
+/obj/machinery/portable_atmospherics/powered/scrubber/huge/stationary/fluff_fan,
 /turf/simulated/floor/reinforced,
 /area/shuttle/tabiranth)
 "ag" = (
@@ -596,7 +591,7 @@
 	},
 /obj/machinery/access_button{
 	command = "cycle_exterior";
-	frequency = 1380;
+	frequency = 1381;
 	master_tag = "tabiranth_airlock";
 	name = "exterior access button";
 	pixel_x = -5;
@@ -658,16 +653,16 @@
 "aK" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 4;
-	frequency = 1380
+	frequency = 1381
 	},
 /obj/machinery/embedded_controller/radio/airlock/docking_port{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "tabiranth_airlock";
 	pixel_y = -32;
 	req_one_access = list(101)
 	},
 /obj/machinery/airlock_sensor{
-	frequency = 1380;
+	frequency = 1381;
 	pixel_y = 25
 	},
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
@@ -694,7 +689,7 @@
 	},
 /obj/machinery/access_button{
 	command = "cycle_interior";
-	frequency = 1380;
+	frequency = 1381;
 	master_tag = "tabiranth_airlock";
 	pixel_x = 5;
 	pixel_y = 26
@@ -716,7 +711,7 @@
 	},
 /obj/machinery/access_button{
 	command = "cycle_interior";
-	frequency = 1380;
+	frequency = 1381;
 	master_tag = "tabiranth_docker";
 	pixel_x = -5;
 	pixel_y = 26
@@ -732,18 +727,18 @@
 "aO" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 8;
-	frequency = 1380
+	frequency = 1381
 	},
 /obj/machinery/light/small{
 	icon_state = "bulb1";
 	dir = 1
 	},
 /obj/machinery/airlock_sensor{
-	frequency = 1380;
+	frequency = 1381;
 	pixel_y = 25
 	},
 /obj/machinery/embedded_controller/radio/airlock/docking_port{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "tabiranth_docker";
 	pixel_y = -32;
 	req_one_access = list(101)
@@ -922,7 +917,7 @@
 /obj/effect/map_helper/airlock/door/ext_door,
 /obj/machinery/access_button{
 	command = "cycle_exterior";
-	frequency = 1380;
+	frequency = 1381;
 	master_tag = "tabiranth_docker";
 	name = "exterior access button";
 	pixel_x = 5;
@@ -1062,15 +1057,14 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/shuttle/tabiranth)
 "bl" = (
-/obj/machinery/power/smes/buildable/hybrid{
-	cur_coils = 4;
-	input_level = 500000;
-	output_level = 500000;
-	recharge_rate = 40000
-	},
 /obj/structure/cable/cyan{
 	icon_state = "0-4"
 	},
+/obj/machinery/power/smes/buildable/hybrid/max_charge,
+/obj/item/smes_coil,
+/obj/item/smes_coil,
+/obj/item/smes_coil,
+/obj/item/smes_coil,
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/tabiranth)
 "bm" = (
@@ -1546,9 +1540,7 @@
 /turf/simulated/floor/tiled/steel_ridged,
 /area/shuttle/tabiranth)
 "bO" = (
-/obj/machinery/mech_recharger{
-	icon = 'icons/turf/shuttle_alien_blue.dmi'
-	},
+/obj/machinery/mech_recharger/alien,
 /obj/mecha/combat/fighter/baron/loaded,
 /turf/simulated/floor/reinforced,
 /area/shuttle/tabiranth)
@@ -1630,34 +1622,10 @@
 /obj/item/storage/secure/briefcase/nsfw_pack_hybrid,
 /obj/item/ammo_casing/microbattery/medical/corpse_mend,
 /obj/item/ammo_casing/microbattery/medical/corpse_mend,
-/obj/item/cell/slime{
-	description_info = "This 'cell' holds a max charge of 20k and self recharges over time.";
-	icon = 'icons/obj/power.dmi';
-	icon_state = "icell";
-	maxcharge = 20000;
-	name = "slime core cell"
-	},
-/obj/item/cell/slime{
-	description_info = "This 'cell' holds a max charge of 20k and self recharges over time.";
-	icon = 'icons/obj/power.dmi';
-	icon_state = "icell";
-	maxcharge = 20000;
-	name = "slime core cell"
-	},
-/obj/item/cell/slime{
-	description_info = "This 'cell' holds a max charge of 20k and self recharges over time.";
-	icon = 'icons/obj/power.dmi';
-	icon_state = "icell";
-	maxcharge = 20000;
-	name = "slime core cell"
-	},
-/obj/item/cell/slime{
-	description_info = "This 'cell' holds a max charge of 20k and self recharges over time.";
-	icon = 'icons/obj/power.dmi';
-	icon_state = "icell";
-	maxcharge = 20000;
-	name = "slime core cell"
-	},
+/obj/item/cell/slime,
+/obj/item/cell/slime,
+/obj/item/cell/slime,
+/obj/item/cell/slime,
 /obj/item/slime_extract/pink,
 /obj/item/slime_extract/pink,
 /obj/item/slime_extract/pink,

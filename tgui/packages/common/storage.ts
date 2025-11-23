@@ -11,12 +11,7 @@ export const IMPL_HUB_STORAGE = 1;
 
 type StorageImplementation = typeof IMPL_MEMORY | typeof IMPL_HUB_STORAGE;
 
-const INDEXED_DB_VERSION = 1;
-const INDEXED_DB_NAME = 'chomp'; // CHOMPEdit - CHOMPStation Localstore
-const INDEXED_DB_STORE_NAME = 'storage-v1';
-
-const READ_ONLY = 'readonly';
-const READ_WRITE = 'readwrite';
+const KEY_NAME = 'chomp'; // CHOMPEdit - CHOMPStation Localstore
 
 type StorageBackend = {
   impl: StorageImplementation;
@@ -46,7 +41,7 @@ class HubStorageBackend implements StorageBackend {
   }
 
   async get(key: string): Promise<any> {
-    const value = await window.hubStorage.getItem('chomp-' + key); // CHOMPEdit
+    const value = await window.hubStorage.getItem(`${KEY_NAME}-${key}`);
     if (typeof value === 'string') {
       return JSON.parse(value);
     }
@@ -54,11 +49,11 @@ class HubStorageBackend implements StorageBackend {
   }
 
   async set(key: string, value: any): Promise<void> {
-    window.hubStorage.setItem('chomp-' + key, JSON.stringify(value)); // CHOMPEdit
+    window.hubStorage.setItem(`${KEY_NAME}-${key}`, JSON.stringify(value));
   }
 
   async remove(key: string): Promise<void> {
-    window.hubStorage.removeItem('chomp-' + key); // CHOMPEdit
+    window.hubStorage.removeItem(`${KEY_NAME}-${key}`);
   }
 
   async clear(): Promise<void> {
@@ -76,19 +71,17 @@ class StorageProxy implements StorageBackend {
 
   constructor() {
     this.backendPromise = (async () => {
-      if (!Byond.TRIDENT) {
-        if (!testHubStorage()) {
-          return new Promise((resolve) => {
-            const listener = () => {
-              document.removeEventListener('byondstorageupdated', listener);
-              resolve(new HubStorageBackend());
-            };
+      if (!testHubStorage()) {
+        return new Promise((resolve) => {
+          const listener = () => {
+            document.removeEventListener('byondstorageupdated', listener);
+            resolve(new HubStorageBackend());
+          };
 
-            document.addEventListener('byondstorageupdated', listener);
-          });
-        }
-        return new HubStorageBackend();
+          document.addEventListener('byondstorageupdated', listener);
+        });
       }
+      return new HubStorageBackend();
     })() as Promise<StorageBackend>;
   }
 

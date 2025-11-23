@@ -1,10 +1,3 @@
-/decl/chemical_reaction/instant/aphrodisiac
-	name = REAGENT_APHRODISIAC
-	id = REAGENT_ID_APHRODISIAC
-	result = REAGENT_ID_APHRODISIAC
-	required_reagents = list(REAGENT_ID_CARBON = 2, REAGENT_ID_HYDROGEN = 2, REAGENT_ID_OXYGEN = 2, REAGENT_ID_WATER = 1)
-	result_amount = 6
-
 /decl/chemical_reaction/instant/claridyl
 	name = REAGENT_CLARIDYL
 	id = REAGENT_ID_CLARIDYL
@@ -151,9 +144,9 @@
 					if(comp.revive_ready >= 1) // if it's not reviving, start doing so
 						comp.revive_ready = REVIVING_READY // overrides the normal cooldown
 						H.visible_message(span_info("[H] shudders briefly, then relaxes, faint movements stirring within."))
-						H.chimera_regenerate()
+						comp.chimera_regenerate()
 					else if(comp.revive_ready == REVIVING_DONE)// already reviving, check if they're ready to hatch
-						H.chimera_hatch()
+						comp.chimera_hatch()
 						H.visible_message(span_danger(span_huge("[H] violently convulses and then bursts open, revealing a new, intact copy in the pool of viscera."))) // Hope you were wearing waterproofs, doc...
 						H.adjustBrainLoss(10) // they're reviving from dead, so take 10 brainloss
 					else //they're already reviving but haven't hatched. Give a little message to tell them to wait.

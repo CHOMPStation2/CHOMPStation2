@@ -565,13 +565,7 @@
 /turf/simulated/shuttle/floor/voidcraft/light,
 /area/survivalpod/superpose/CultShip)
 "NH" = (
-/obj/machinery/power/smes/buildable{
-	icon = 'icons/obj/alien_smes.dmi';
-	icon_state = "unit";
-	input_level = 950000;
-	name = "Alien Royal Capacitor";
-	output_level = 950000
-	},
+/obj/machinery/power/smes/buildable/alien_royal,
 /obj/effect/floor_decal/techfloor{
 	dir = 5
 	},
@@ -691,7 +685,7 @@
 /obj/effect/floor_decal/techfloor{
 	dir = 6
 	},
-/obj/machinery/power/smes/buildable/power_shuttle,
+/obj/machinery/power/smes/buildable/power_shuttle/max_charge_max_input_base_output,
 /obj/structure/cable/green,
 /turf/simulated/floor/cult,
 /area/survivalpod/superpose/CultShip)

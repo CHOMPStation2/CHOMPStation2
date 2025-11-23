@@ -1142,13 +1142,7 @@
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/LargeAlienShip)
 "xs" = (
-/obj/machinery/power/smes/buildable{
-	icon = 'icons/obj/alien_smes.dmi';
-	icon_state = "unit";
-	input_level = 950000;
-	name = "Alien Royal Capacitor";
-	output_level = 950000
-	},
+/obj/machinery/power/smes/buildable/alien_royal,
 /obj/structure/cable,
 /turf/simulated/floor/tiled/techmaint,
 /area/survivalpod/superpose/LargeAlienShip)
@@ -1536,12 +1530,8 @@
 /obj/item/clothing/accessory/storage/black_drop_pouches,
 /obj/item/storage/belt,
 /obj/item/clothing/accessory/poncho/thermal,
-/obj/machinery/smartfridge/survival_pod{
-	desc = "A mysterious machine which can fabricate many tools for acquiring test subjects.";
-	icon = 'icons/obj/abductor_vr.dmi';
-	icon_base = "dispenser_2way";
-	icon_state = "dispenser_2way";
-	name = "Implant-Co"
+/obj/machinery/smartfridge/survival_pod/abductor{
+	dir = 2
 	},
 /turf/simulated/floor/plating,
 /area/survivalpod/superpose/LargeAlienShip)
@@ -1897,11 +1887,7 @@
 /turf/simulated/shuttle/floor/voidcraft,
 /area/survivalpod/superpose/LargeAlienShip)
 "PT" = (
-/obj/machinery/computer/crew{
-	icon = 'icons/obj/abductor_vr.dmi';
-	icon_screen = null;
-	icon_state = "console-c"
-	},
+/obj/machinery/computer/crew/abductor,
 /obj/effect/floor_decal/techfloor{
 	dir = 1
 	},

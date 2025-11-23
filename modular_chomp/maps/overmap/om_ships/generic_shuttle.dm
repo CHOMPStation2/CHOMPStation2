@@ -27,7 +27,7 @@
 /obj/machinery/computer/shuttle_control/explore/generic_shuttle
 	name = "short jump console"
 	shuttle_tag = "Private Vessel" //These names must match
-	req_one_access = list(access_pilot)
+	req_one_access = list(ACCESS_PILOT)
 
 // A shuttle lateloader landmark
 /obj/effect/shuttle_landmark/shuttle_initializer/generic_shuttle

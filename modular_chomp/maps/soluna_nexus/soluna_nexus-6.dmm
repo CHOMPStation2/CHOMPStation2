@@ -749,9 +749,8 @@
 /turf/simulated/floor,
 /area/expoutpost/starfuelstorage)
 "aHw" = (
-/obj/machinery/power/smes/buildable{
+/obj/machinery/power/smes/buildable/max_input{
 	RCon_tag = "Reactor Secondary - Aegis";
-	input_attempt = 1;
 	name = "Reactor SMES - Secondary"
 	},
 /obj/structure/cable/green{
@@ -1389,7 +1388,7 @@
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 1;
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "baby_mammoth_pump"
 	},
 /obj/structure/closet/emcloset,
@@ -1893,13 +1892,16 @@
 /turf/simulated/floor,
 /area/expoutpost/starfuelstorage)
 "bKJ" = (
-/obj/machinery/power/smes/buildable{
+/obj/machinery/power/smes/buildable/max_charge_max_input{
 	RCon_tag = "Reactor Input - Aegis";
-	charge = 2e+006;
-	cur_coils = 6;
-	input_attempt = 1;
 	name = "Reactor SMES - Input"
 	},
+/obj/item/smes_coil,
+/obj/item/smes_coil,
+/obj/item/smes_coil,
+/obj/item/smes_coil,
+/obj/item/smes_coil,
+/obj/item/smes_coil,
 /obj/structure/cable/cyan{
 	icon_state = "0-4"
 	},
@@ -4011,7 +4013,7 @@
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 1;
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "shuttle3_pump"
 	},
 /obj/structure/closet/emcloset,
@@ -6134,7 +6136,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/expoutpost/eva)
 "fyp" = (
-/obj/machinery/r_n_d/protolathe,
+/obj/machinery/rnd/production/protolathe/department/science,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled,
 /area/expoutpost/rnd)
@@ -6839,13 +6841,13 @@
 /area/expoutpost/reactorcr)
 "giI" = (
 /obj/machinery/door/airlock/voidcraft/vertical{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "shuttle3_inner";
 	name = "Internal Access"
 	},
 /obj/machinery/access_button{
 	command = "cycle_interior";
-	frequency = 1380;
+	frequency = 1381;
 	master_tag = "shuttle3_shuttle";
 	name = "interior access button";
 	pixel_y = -26
@@ -7497,13 +7499,13 @@
 /area/expoutpost/explobriefroom)
 "gPg" = (
 /obj/machinery/door/airlock/voidcraft/vertical{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "stargazer_outer";
 	name = "External Access"
 	},
 /obj/machinery/access_button{
 	command = "cycle_exterior";
-	frequency = 1380;
+	frequency = 1381;
 	master_tag = "stargazer";
 	name = "exterior access button";
 	pixel_y = 26
@@ -8172,9 +8174,7 @@
 /area/expoutpost/staginghangar)
 "hsz" = (
 /obj/structure/closet/walllocker/emerglocker/south,
-/obj/machinery/power/smes/buildable/point_of_interest{
-	input_attempt = 1
-	},
+/obj/machinery/power/smes/buildable/point_of_interest/max_input,
 /obj/structure/cable/green{
 	icon_state = "0-4"
 	},
@@ -8248,7 +8248,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/expoutpost/engoffice)
 "hwZ" = (
-/obj/machinery/r_n_d/circuit_imprinter,
+/obj/machinery/rnd/production/circuit_imprinter,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/item/reagent_containers/glass/beaker/large,
 /turf/simulated/floor/tiled,
@@ -8421,16 +8421,12 @@
 /turf/simulated/floor/tiled,
 /area/expoutpost/explobriefroom)
 "hEI" = (
-/obj/machinery/computer/rdconsole/robotics{
-	dir = 8
-	},
 /obj/structure/reagent_dispensers/acid{
 	pixel_x = 30
 	},
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 4
 	},
-/obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled/milspec/raised,
 /area/expoutpost/rnd)
 "hEM" = (
@@ -8801,7 +8797,7 @@
 	},
 /obj/machinery/atmospherics/unary/outlet_injector{
 	dir = 1;
-	frequency = 1438;
+	frequency = 1433;
 	id = "aegrust_cooling_in";
 	name = "Coolant Injector";
 	pixel_y = 1;
@@ -9436,7 +9432,7 @@
 	dir = 1
 	},
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "carrier_echidna_dock";
 	name = "shuttle bay controller";
 	pixel_x = -29
@@ -10649,9 +10645,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/expoutpost/lowersternhallway)
 "jBv" = (
-/obj/machinery/power/smes/buildable/point_of_interest{
-	input_attempt = 1
-	},
+/obj/machinery/power/smes/buildable/point_of_interest/max_input,
 /obj/structure/cable/green{
 	icon_state = "0-4"
 	},
@@ -11210,7 +11204,7 @@
 /obj/structure/closet/emcloset,
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 1;
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "stargazer_pump"
 	},
 /turf/simulated/floor,
@@ -11435,14 +11429,14 @@
 /area/expoutpost/staginghangar)
 "kjV" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "baby_mammoth_pump"
 	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 9
 	},
 /obj/machinery/embedded_controller/radio/airlock/docking_port{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "baby_mammoth";
 	pixel_y = 26;
 	tag_airpump = "baby_mammoth_pump";
@@ -12586,7 +12580,7 @@
 	dir = 9
 	},
 /obj/machinery/embedded_controller/radio/airlock/docking_port{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "shuttle3_shuttle";
 	pixel_y = 26;
 	tag_airpump = "shuttle3_pump";
@@ -12595,7 +12589,7 @@
 	tag_interior_door = "shuttle3_inner"
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "shuttle3_pump"
 	},
 /turf/simulated/shuttle/floor/black,
@@ -12607,7 +12601,7 @@
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 1;
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "shuttle3_pump"
 	},
 /turf/simulated/shuttle/floor/black,
@@ -12941,7 +12935,7 @@
 	dir = 9
 	},
 /obj/machinery/embedded_controller/radio/airlock/docking_port{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "stargazer";
 	pixel_y = 26;
 	tag_airpump = "stargazer_pump";
@@ -12950,7 +12944,7 @@
 	tag_interior_door = "stargazer_inner"
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "stargazer_pump"
 	},
 /turf/simulated/floor,
@@ -13527,8 +13521,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/expoutpost/staginghangar)
 "lZt" = (
-/obj/machinery/power/smes/buildable{
-	input_attempt = 1;
+/obj/machinery/power/smes/buildable/engine_default{
 	name = "AI Core SMES"
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
@@ -14040,7 +14033,7 @@
 	dir = 4
 	},
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "exphangar_1";
 	name = "shuttle bay controller";
 	pixel_x = 24;
@@ -15194,7 +15187,7 @@
 	dir = 1
 	},
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "stargazer_dock";
 	name = "shuttle bay controller";
 	pixel_x = -29
@@ -15562,15 +15555,14 @@
 /turf/simulated/floor/tiled/white,
 /area/expoutpost/medbaylobby)
 "nFb" = (
-/obj/machinery/power/smes/buildable{
+/obj/machinery/power/smes/buildable/max_charge_max_input{
 	RCon_tag = "Reactor Primary - Aegis";
-	charge = 2e+006;
-	cur_coils = 4;
-	input_attempt = 1;
-	input_level = 750000;
-	name = "Reactor SMES - Main";
-	output_level = 750000
+	name = "Reactor SMES - Main"
 	},
+/obj/item/smes_coil,
+/obj/item/smes_coil,
+/obj/item/smes_coil,
+/obj/item/smes_coil,
 /obj/structure/cable/green,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/effect/engine_setup/smes,
@@ -15766,7 +15758,7 @@
 /area/expoutpost/reactorroom)
 "nLN" = (
 /obj/machinery/door/airlock/glass_external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	id_tag = "exp_sling_outpost_door";
 	locked = 1;
@@ -15994,13 +15986,13 @@
 	},
 /obj/machinery/access_button{
 	command = "cycle_interior";
-	frequency = 1380;
+	frequency = 1381;
 	master_tag = "baby_mammoth";
 	name = "interior access button";
 	pixel_y = 26
 	},
 /obj/machinery/door/airlock/voidcraft/vertical{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "baby_mammoth_inner";
 	locked = 1;
 	name = "Internal Access"
@@ -16060,7 +16052,7 @@
 	dir = 4
 	},
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "carrier_ursula_dock";
 	name = "shuttle bay controller";
 	pixel_x = 29
@@ -16929,7 +16921,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/expoutpost/lowersternhallway)
 "oMc" = (
-/obj/machinery/mecha_part_fabricator,
+/obj/machinery/mecha_part_fabricator_tg,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled,
 /area/expoutpost/rnd)
@@ -17608,11 +17600,11 @@
 	dir = 5
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "shuttle3_pump"
 	},
 /obj/machinery/airlock_sensor{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "shuttle3_sensor";
 	pixel_y = 28
 	},
@@ -18626,13 +18618,13 @@
 /area/shuttle/stargazer)
 "qtA" = (
 /obj/machinery/door/airlock/voidcraft/vertical{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "shuttle3_outer";
 	name = "External Access"
 	},
 /obj/machinery/access_button{
 	command = "cycle_exterior";
-	frequency = 1380;
+	frequency = 1381;
 	master_tag = "shuttle3_shuttle";
 	name = "exterior access button";
 	pixel_y = 26
@@ -19292,11 +19284,6 @@
 /obj/structure/railing,
 /turf/simulated/floor,
 /area/expoutpost/portuppermaint)
-"qWZ" = (
-/obj/machinery/r_n_d/destructive_analyzer,
-/obj/effect/floor_decal/industrial/outline/yellow,
-/turf/simulated/floor/tiled,
-/area/expoutpost/rnd)
 "qXk" = (
 /obj/effect/wingrille_spawn/reinforced/polarized{
 	id = "aeg_surgery_tint"
@@ -20980,8 +20967,7 @@
 /turf/simulated/floor/tiled,
 /area/expoutpost/hangarfive)
 "sky" = (
-/obj/machinery/power/smes/buildable{
-	input_attempt = 1;
+/obj/machinery/power/smes/buildable/engine_default{
 	name = "Telecomms SMES"
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
@@ -21439,7 +21425,7 @@
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 1;
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "stargazer_pump"
 	},
 /turf/simulated/floor,
@@ -22453,7 +22439,7 @@
 	dir = 4;
 	external_pressure_bound = 100;
 	external_pressure_bound_default = 0;
-	frequency = 1438;
+	frequency = 1433;
 	icon_state = "map_vent_in";
 	id_tag = "aegrust_cooling_out";
 	initialize_directions = 1;
@@ -22588,7 +22574,7 @@
 /area/expoutpost/reactorcr)
 "tHw" = (
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "exp_sling_outpost";
 	name = "shuttle bay controller";
 	pixel_x = 30;
@@ -24086,7 +24072,7 @@
 	icon_state = "2-8"
 	},
 /obj/machinery/air_sensor{
-	frequency = 1438;
+	frequency = 1433;
 	id_tag = "aegrustengine_sensor";
 	output = 63
 	},
@@ -24267,12 +24253,12 @@
 	dir = 5
 	},
 /obj/machinery/airlock_sensor{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "stargazer_sensor";
 	pixel_y = 28
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "stargazer_pump"
 	},
 /turf/simulated/floor,
@@ -24318,7 +24304,7 @@
 	dir = 1
 	},
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "baby_mammoth_dock";
 	name = "shuttle bay controller";
 	pixel_x = -29
@@ -24747,7 +24733,7 @@
 	dir = 4
 	},
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1380;
+	frequency = 1381;
 	name = "shuttle bay controller";
 	pixel_x = 29;
 	id_tag = "carrier_needle_dock"
@@ -25185,13 +25171,13 @@
 /area/expoutpost/bar)
 "vMu" = (
 /obj/machinery/door/airlock/voidcraft/vertical{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "stargazer_inner";
 	name = "Internal Access"
 	},
 /obj/machinery/access_button{
 	command = "cycle_interior";
-	frequency = 1380;
+	frequency = 1381;
 	master_tag = "stargazer";
 	name = "interior access button";
 	pixel_y = -26
@@ -25629,7 +25615,7 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
-/obj/machinery/computer/rdconsole/core{
+/obj/machinery/computer/rdconsole_tg{
 	dir = 4
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
@@ -25887,7 +25873,7 @@
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 1;
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "baby_mammoth_pump"
 	},
 /obj/machinery/light,
@@ -26380,14 +26366,14 @@
 /area/expoutpost/suite1)
 "wKW" = (
 /obj/machinery/door/airlock/voidcraft/vertical{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "baby_mammoth_outer";
 	locked = 1;
 	name = "External Access"
 	},
 /obj/machinery/access_button{
 	command = "cycle_exterior";
-	frequency = 1380;
+	frequency = 1381;
 	master_tag = "baby_mammoth";
 	name = "exterior access button";
 	pixel_y = 26
@@ -27125,14 +27111,14 @@
 /area/shuttle/shuttle3/start)
 "xor" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "baby_mammoth_pump"
 	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 5
 	},
 /obj/machinery/airlock_sensor{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "baby_mammoth_sensor";
 	pixel_y = 28
 	},
@@ -27695,7 +27681,7 @@
 /turf/simulated/floor,
 /area/expoutpost/portexplomaint)
 "xKO" = (
-/obj/machinery/mecha_part_fabricator/pros,
+/obj/machinery/mecha_part_fabricator_tg/prosthetics,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled,
 /area/expoutpost/rnd)
@@ -28452,15 +28438,12 @@
 /turf/simulated/floor,
 /area/expoutpost/restrooms)
 "yjG" = (
-/obj/machinery/power/smes/buildable{
+/obj/machinery/power/smes/buildable/max_charge_max_input{
 	RCon_tag = "Auxiliary Reactor - Aegis";
-	charge = 2e+006;
-	cur_coils = 2;
-	input_attempt = 1;
-	input_level = 500000;
-	name = "Auxiliary Reactor SMES";
-	output_level = 350000
+	name = "Auxiliary Reactor SMES"
 	},
+/obj/item/smes_coil,
+/obj/item/smes_coil,
 /obj/effect/engine_setup/smes,
 /obj/structure/cable/green{
 	icon_state = "0-8"
@@ -66390,7 +66373,7 @@ iNm
 gWG
 fyp
 kMk
-qWZ
+kMk
 sUH
 pcO
 uki

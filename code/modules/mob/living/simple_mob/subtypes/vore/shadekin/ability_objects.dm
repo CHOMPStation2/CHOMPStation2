@@ -20,10 +20,9 @@
 
 /obj/effect/shadekin_ability/proc/atom_button_text()
 	var/shift_denial
-
-	if(shift_mode == NOT_WHILE_SHIFTED && (my_kin.ability_flags & AB_PHASE_SHIFTED))
+	if(shift_mode == NOT_WHILE_SHIFTED && my_kin.comp.in_phase)
 		shift_denial = "Physical Only"
-	else if(shift_mode == ONLY_WHILE_SHIFTED && !(my_kin.ability_flags & AB_PHASE_SHIFTED))
+	else if(shift_mode == ONLY_WHILE_SHIFTED && !(my_kin.comp.in_phase))
 		shift_denial = "Shifted Only"
 
 	if(shift_denial)
@@ -47,15 +46,10 @@
 	if(my_kin.stat)
 		to_chat(my_kin,span_warning("Can't use that ability in your state!"))
 		return FALSE
-	//CHOMPEdit Begin - Dark Respite
-	if(my_kin.ability_flags & AB_DARK_RESPITE)
-		to_chat(src, span_warning("You can't use that so soon after an emergency warp!"))
-		return FALSE
-	//CHOMPEdit End
-	if(shift_mode == NOT_WHILE_SHIFTED && (my_kin.ability_flags & AB_PHASE_SHIFTED))
+	if(shift_mode == NOT_WHILE_SHIFTED && (my_kin.comp.in_phase))
 		to_chat(my_kin,span_warning("Can't use that ability while phase shifted!"))
 		return FALSE
-	else if(shift_mode == ONLY_WHILE_SHIFTED && !(my_kin.ability_flags & AB_PHASE_SHIFTED))
+	else if(shift_mode == ONLY_WHILE_SHIFTED && !(my_kin.comp.in_phase))
 		to_chat(my_kin,span_warning("Can only use that ability while phase shifted!"))
 		return FALSE
 	else if(my_kin.comp.dark_energy < cost)
@@ -80,7 +74,7 @@
 	if(!..())
 		return
 	my_kin.phase_shift()
-	if(my_kin.ability_flags & AB_PHASE_SHIFTED)
+	if(my_kin.comp.in_phase)
 		cost = 0 //Shifting back is free (but harmful in light)
 	else
 		cost = initial(cost)
@@ -141,7 +135,7 @@
 	var/mob/living/simple_mob/shadekin/my_kin
 
 /datum/modifier/shadekin/create_shade/tick()
-	if(my_kin.ability_flags & AB_PHASE_SHIFTED)
+	if(my_kin.comp.in_phase)
 		expire()
 
 /datum/modifier/shadekin/create_shade/on_applied()
@@ -172,38 +166,3 @@
 	if(!..())
 		return
 */
-
-//CHOMPEdit start - Add dark tunneling ability
-/obj/effect/shadekin_ability/dark_tunneling
-	ability_name = "Dark Tunneling"
-	desc = "Make a passage to the dark. (Once)"
-	icon_state = "minion0"
-	cost = 100
-	shift_mode = NOT_WHILE_SHIFTED
-	ab_sound = 'sound/effects/stealthoff.ogg'
-/obj/effect/shadekin_ability/dark_tunneling/do_ability()
-	if(my_kin.ability_flags & AB_DARK_TUNNEL)
-		to_chat(src, span_warning("You have already made a tunnel to the Dark!"))
-		return FALSE
-	if(!..())
-		return
-	if(!my_kin.dark_tunneling())
-		my_kin.comp.dark_energy += cost //Refund due to abort
-	else
-		my_kin.comp.dark_energy += 10 //Refund enough to open the dark portal
-//CHOMPEdit End
-
-//CHOMPEdit start - Add Dark Maw ability
-/obj/effect/shadekin_ability/dark_maw
-	ability_name = "Dark Maw"
-	desc = "Create a trap to capture others, or steal people from phase"
-	icon_state = "ling_absorb_dna"
-	cost = 20
-	shift_mode = SHIFTED_OR_NOT
-	ab_sound = 'sound/effects/stealthoff.ogg'
-/obj/effect/shadekin_ability/dark_maw/do_ability()
-	if(!..())
-		return
-	if(!my_kin.dark_maw())
-		my_kin.comp.dark_energy += cost //Refund due to abort
-//CHOMPEdit End

@@ -51,7 +51,10 @@
 
 /obj/item/mail/container_resist(mob/living/M)
 	if(istype(M, /mob/living/voice)) return
-	M.forceMove(get_turf(src))
+	if(isdisposalpacket(loc))
+		M.forceMove(loc)
+	else
+		M.forceMove(get_turf(src))
 	to_chat(M, span_warning("You climb out of \the [src]."))
 
 /obj/item/mail/envelope
@@ -104,7 +107,7 @@
 /obj/item/mail/proc/setRecipient(mob/user)
 	var/list/recipients = list()
 	var/mob/living/recipient_mob
-	for(var/mob/living/player in player_list)
+	for(var/mob/living/player in GLOB.player_list)
 		if(!player_is_antag(player.mind) && player.mind.show_in_directory)
 			recipients += player
 
@@ -216,6 +219,13 @@
 			user.put_in_hands(stuff)
 		else
 			stuff.forceMove(drop_location())
+	//Now here's the kicker
+	if(HAS_TRAIT(user, TRAIT_UNLUCKY) && prob(5)) //1 in 20 chance for your mail to be rigged with a glitter bomb
+		to_chat(user, span_bolddanger("You open the mail and - OH SHIT IS THAT A BOMB!"))
+		var/obj/item/grenade/confetti/confetti_nade = new /obj/item/grenade/confetti()
+		confetti_nade.name = "Pipebomb"
+		confetti_nade.desc = span_bolddanger("What the hell are you looking at it for?! RUN!!")
+		confetti_nade.activate()
 	playsound(loc, 'sound/items/poster_ripped.ogg', 100, TRUE)
 	qdel(src)
 
@@ -278,7 +288,7 @@
 		if(!chosen)
 			return
 
-	for(var/mob/living/player in player_list)
+	for(var/mob/living/player in GLOB.player_list)
 		recipients += player
 
 	var/mob/living/chosen_player = tgui_input_list(usr, "Choose recipient", "Recipients", recipients, recipients)
@@ -315,7 +325,7 @@
 /obj/structure/closet/crate/mail/full/Initialize(mapload)
 	. = ..()
 	var/list/mail_recipients = list()
-	for(var/mob/living/carbon/human/alive in player_list)
+	for(var/mob/living/carbon/human/alive in GLOB.player_list)
 		if(alive.stat != DEAD && alive.client && alive.client.inactivity <= 10 MINUTES)
 			mail_recipients += alive
 	for(var/iterator in 1 to storage_capacity)

@@ -4,7 +4,7 @@
 /mob/living/carbon/human/proc/get_unarmed_attack(var/mob/living/carbon/human/target, var/hit_zone)
 	if(nif && nif.flag_check(NIF_C_HARDCLAWS,NIF_FLAGS_COMBAT)){return unarmed_hardclaws}
 	if(src.default_attack && src.default_attack.is_usable(src, target, hit_zone))
-		if(pulling_punches)
+		if(HAS_TRAIT(src, TRAIT_NONLETHAL_BLOWS))
 			var/datum/unarmed_attack/soft_type = src.default_attack.get_sparring_variant()
 			if(soft_type)
 				return soft_type
@@ -12,20 +12,20 @@
 	if(src.gloves)
 		var/obj/item/clothing/gloves/G = src.gloves
 		if(istype(G) && G.special_attack && G.special_attack.is_usable(src, target, hit_zone))
-			if(pulling_punches)
+			if(HAS_TRAIT(src, TRAIT_NONLETHAL_BLOWS))
 				var/datum/unarmed_attack/soft_type = G.special_attack.get_sparring_variant()
 				if(soft_type)
 					return soft_type
 			return G.special_attack
 	if(src.default_attack && src.default_attack.is_usable(src, target, hit_zone))
-		if(pulling_punches)
+		if(HAS_TRAIT(src, TRAIT_NONLETHAL_BLOWS))
 			var/datum/unarmed_attack/soft_type = src.default_attack.get_sparring_variant()
 			if(soft_type)
 				return soft_type
 		return src.default_attack
 	for(var/datum/unarmed_attack/u_attack in species.unarmed_attacks)
 		if(u_attack.is_usable(src, target, hit_zone))
-			if(pulling_punches)
+			if(HAS_TRAIT(src, TRAIT_NONLETHAL_BLOWS))
 				var/datum/unarmed_attack/soft_variant = u_attack.get_sparring_variant()
 				if(soft_variant)
 					return soft_variant
@@ -33,7 +33,6 @@
 	return null
 
 /mob/living/carbon/human/attack_hand(mob/living/M as mob)
-	var/datum/gender/TT = GLOB.gender_datums[M.get_visible_gender()]
 	var/mob/living/carbon/human/H = M
 
 	if(is_incorporeal())
@@ -84,19 +83,18 @@
 		// H = THE PERSON DOING THE ATTACK, BUT DEFINED AS A HUMAN. (This is for human specific interactions, such as CPR.)
 		// M = THE PERSON DOING THE ATTACK, AGAIN, DEFINED AS A MOB
 		// src = THE PERSON BEING ATTACKED
-		// TT = GENDER OF THE TARGET
 		// has_hands = Local variable. If the attacker has hands or not.
 		if(I_HELP)
-			attack_hand_help_intent(H, M, TT, has_hands)
+			attack_hand_help_intent(H, M, M, has_hands)
 
 		if(I_GRAB)
-			attack_hand_grab_intent(H, M, TT, has_hands)
+			attack_hand_grab_intent(H, M, has_hands)
 
 		if(I_HURT)
-			attack_hand_harm_intent(H, M, TT, has_hands)
+			attack_hand_harm_intent(H, M, has_hands)
 
 		if(I_DISARM)
-			attack_hand_disarm_intent(H, M, TT, has_hands)
+			attack_hand_disarm_intent(H, M, has_hands)
 	return
 
 
@@ -105,7 +103,7 @@
 /// This condenses them and makes it less of a cluster.
 
 ///Help Intent
-/mob/living/carbon/human/proc/attack_hand_help_intent(var/mob/living/carbon/human/H, var/mob/living/M as mob, var/datum/gender/TT, var/has_hands)
+/mob/living/carbon/human/proc/attack_hand_help_intent(var/mob/living/carbon/human/H, var/mob/living/M as mob, var/has_hands)
 	PRIVATE_PROC(TRUE)
 	SHOULD_NOT_OVERRIDE(TRUE)
 	if(M.restrained()) //If we're restrained, we can't help them. If you want to add snowflake stuff that you can do while restrained, add it here.
@@ -138,7 +136,7 @@
 
 		H.visible_message(span_danger("\The [H] is trying to perform CPR on \the [src]!"))
 
-		if(!do_after(H, 30))
+		if(!do_after(H, 3 SECONDS, target = src))
 			return FALSE
 
 		H.visible_message(span_danger("\The [H] performs CPR on \the [src]!"))
@@ -151,7 +149,7 @@
 	return TRUE
 
 //Disarm Intent
-/mob/living/carbon/human/proc/attack_hand_disarm_intent(var/mob/living/carbon/human/H, var/mob/living/M as mob, var/datum/gender/TT, var/has_hands)
+/mob/living/carbon/human/proc/attack_hand_disarm_intent(var/mob/living/carbon/human/H, var/mob/living/M as mob, var/has_hands)
 	PRIVATE_PROC(TRUE)
 	SHOULD_NOT_OVERRIDE(TRUE)
 	if(M.restrained()) //If we're restrained, we can't disarm them. If you want to add snowflake stuff that you can do while restrained, add it here.
@@ -211,8 +209,6 @@
 			else
 				visible_message(span_danger("[M] has pushed [src]!"))
 			break_all_grabs(M)
-			for(var/obj/item/I in holding)
-				drop_from_inventory(I)
 		else
 			visible_message(span_warning("[M] attempted to push [src]!"))
 		return
@@ -237,7 +233,7 @@
 	else
 		visible_message(span_filter_combat("[span_red(span_bold("[M] attempted to disarm [src]!"))]"))
 //Grab Intent
-/mob/living/carbon/human/proc/attack_hand_grab_intent(var/mob/living/carbon/human/H, var/mob/living/M as mob, var/datum/gender/TT, var/has_hands)
+/mob/living/carbon/human/proc/attack_hand_grab_intent(var/mob/living/carbon/human/H, var/mob/living/M as mob, var/has_hands)
 	PRIVATE_PROC(TRUE)
 	SHOULD_NOT_OVERRIDE(TRUE)
 	if(M.restrained()) //If we're restrained, we can't grab them. If you want to add snowflake stuff that you can do while restrained, add it here.
@@ -254,7 +250,7 @@
 		w_uniform.add_fingerprint(M)
 
 	if(buckled)
-		to_chat(M, span_notice("You cannot grab [src], [TT.he] is buckled in!"))
+		to_chat(M, span_notice("You cannot grab [src], [M.p_theyre()] buckled in!"))
 		return
 	var/obj/item/grab/G = new /obj/item/grab(M, src) //If this is put before the buckled check, the user will be perma-slowed due to a grab existing in nullspace.
 	if(!G)	//the grab will delete itself in New if affecting is anchored
@@ -267,7 +263,7 @@
 	playsound(src, 'sound/weapons/thudswoosh.ogg', 50, 1, -1)
 	visible_message(span_warning("[M] has grabbed [src] [(M.zone_sel.selecting == BP_L_HAND || M.zone_sel.selecting == BP_R_HAND)? "by [(gender==FEMALE)? "her" : ((gender==MALE)? "his": "their")] hands": "passively"]!"))
 //Harm Intent
-/mob/living/carbon/human/proc/attack_hand_harm_intent(var/mob/living/carbon/human/H, var/mob/living/M as mob, var/datum/gender/TT, var/has_hands)
+/mob/living/carbon/human/proc/attack_hand_harm_intent(var/mob/living/carbon/human/H, var/mob/living/M as mob, var/has_hands)
 	PRIVATE_PROC(TRUE)
 	SHOULD_NOT_OVERRIDE(TRUE)
 	//As a note: This intentionally doesn't immediately return if has_hands is false. This is because you can attack with kicks/bites!
@@ -352,7 +348,7 @@
 			if(!src.lying)
 				attack_message = "[H] attempted to strike [src], but missed!"
 			else
-				attack_message = "[H] attempted to strike [src], but [TT.he] rolled out of the way!"
+				attack_message = "[H] attempted to strike [src], but [M.p_they()] rolled out of the way!"
 				src.set_dir(pick(GLOB.cardinal))
 			miss_type = 1
 
@@ -393,7 +389,7 @@
 			var/obj/item/clothing/accessory/G = H.gloves
 			real_damage += G.punch_force
 			hit_dam_type = G.punch_damtype
-		if(H.pulling_punches && !attack.sharp && !attack.edge)	//SO IT IS DECREED: PULLING PUNCHES WILL PREVENT THE ACTUAL DAMAGE FROM RINGS AND KNUCKLES, BUT NOT THE ADDED PAIN, BUT YOU CAN'T "PULL" A KNIFE
+		if(HAS_TRAIT(H, TRAIT_NONLETHAL_BLOWS) && !attack.sharp && !attack.edge)	//SO IT IS DECREED: PULLING PUNCHES WILL PREVENT THE ACTUAL DAMAGE FROM RINGS AND KNUCKLES, BUT NOT THE ADDED PAIN, BUT YOU CAN'T "PULL" A KNIFE
 			hit_dam_type = HALLOSS
 	real_damage *= damage_multiplier
 	rand_damage *= damage_multiplier
@@ -403,12 +399,11 @@
 	real_damage = max(1, real_damage)
 
 	var/armour = run_armor_check(hit_zone, "melee")
-	var/soaked = get_armor_soak(hit_zone, "melee")
 	// Apply additional unarmed effects.
 	attack.apply_effects(H, src, armour, rand_damage, hit_zone)
 
 	// Finally, apply damage to target
-	apply_damage(real_damage, hit_dam_type, hit_zone, armour, soaked, sharp=attack.sharp, edge=attack.edge)
+	apply_damage(real_damage, hit_dam_type, hit_zone, armour, attack.sharp, attack.edge)
 
 /// INTENTS END
 
@@ -417,6 +412,14 @@
 	return
 
 /mob/living/carbon/human/attack_generic(var/mob/user, var/damage, var/attack_message, var/armor_type = "melee", var/armor_pen = 0, var/a_sharp = 0, var/a_edge = 0)
+	if(istype(user,/mob/living))
+		var/mob/living/L = user
+		if(touch_reaction_flags & SPECIES_TRAIT_THORNS)
+			if((src != L))
+				L.apply_damage(3, BRUTE)
+				L.visible_message( \
+					span_warning("[L] is hurt by sharp body parts when touching [src]!"), \
+					span_warning("[src] is covered in sharp bits and it hurt when you touched them!"), )
 
 	if(!damage)
 		return
@@ -428,8 +431,7 @@
 	var/dam_zone = pick(organs_by_name)
 	var/obj/item/organ/external/affecting = get_organ(ran_zone(dam_zone))
 	var/armor_block = run_armor_check(affecting, armor_type, armor_pen)
-	var/armor_soak = get_armor_soak(affecting, armor_type, armor_pen)
-	apply_damage(damage, BRUTE, affecting, armor_block, armor_soak, sharp = a_sharp, edge = a_edge)
+	apply_damage(damage, BRUTE, affecting, armor_block, a_sharp, a_edge)
 	updatehealth()
 	return TRUE
 
@@ -453,7 +455,7 @@
 		return FALSE
 
 	user.visible_message(span_warning("[user] begins to dislocate [src]'s [organ.joint]!"))
-	if(do_after(user, 100))
+	if(do_after(user, 10 SECONDS, target = src))
 		organ.dislocate(1)
 		src.visible_message(span_danger("[src]'s [organ.joint] [pick("gives way","caves in","crumbles","collapses")]!"))
 		return TRUE
@@ -472,15 +474,13 @@
 		if(lgrab.affecting)
 			visible_message(span_danger("[user] has broken [src]'s grip on [lgrab.affecting]!"))
 			success = TRUE
-		spawn(1)
-			qdel(lgrab)
+		drop_from_inventory(lgrab)
 	if(istype(r_hand, /obj/item/grab))
 		var/obj/item/grab/rgrab = r_hand
 		if(rgrab.affecting)
 			visible_message(span_danger("[user] has broken [src]'s grip on [rgrab.affecting]!"))
 			success = TRUE
-		spawn(1)
-			qdel(rgrab)
+		drop_from_inventory(rgrab)
 	return success
 
 /*
@@ -500,22 +500,23 @@
 		to_chat(user,message)
 		return FALSE
 
-	var/datum/gender/TU = GLOB.gender_datums[user.get_visible_gender()]
-
 	if(user == src)
-		user.visible_message(span_filter_notice("\The [user] starts applying pressure to [TU.his] [organ.name]!"), span_filter_notice("You start applying pressure to your [organ.name]!"))
+		user.visible_message(span_filter_notice("\The [user] starts applying pressure to [user.p_their()] [organ.name]!"), span_filter_notice("You start applying pressure to your [organ.name]!"))
 	else
 		user.visible_message(span_filter_notice("\The [user] starts applying pressure to [src]'s [organ.name]!"), span_filter_notice("You start applying pressure to [src]'s [organ.name]!"))
 	spawn(0)
 		organ.applied_pressure = user
 
 		//apply pressure as long as they stay still and keep grabbing
-		do_mob(user, src, INFINITY, target_zone, progress = 0)
+		//This USED to have a 'target_zone' check that never actually worked so whatever.
+		//Let it be said that it's a feature you can apply pressure to all sites on you all at once.
+		//You're already locking yourself down when you do so.
+		do_after(user, INFINITY, organ, hidden = TRUE)
 
 		organ.applied_pressure = null
 
 		if(user == src)
-			user.visible_message(span_filter_notice("\The [user] stops applying pressure to [TU.his] [organ.name]!"), span_filter_notice("You stop applying pressure to your [organ]!"))
+			user.visible_message(span_filter_notice("\The [user] stops applying pressure to [user.p_their()] [organ.name]!"), span_filter_notice("You stop applying pressure to your [organ]!"))
 		else
 			user.visible_message(span_filter_notice("\The [user] stops applying pressure to [src]'s [organ.name]!"), span_filter_notice("You stop applying pressure to [src]'s [organ.name]!"))
 
@@ -537,7 +538,9 @@
 		else
 			dat += span_bold("Primarily [u_attack.attack_name]") + " - <a href='byond://?src=\ref[src];default_attk=\ref[u_attack]'>set default</a><br/><br/><br/>"
 
-	src << browse("<html>[dat]</html>", "window=checkattack")
+	var/datum/browser/popup = new(src, "checkattack")
+	popup.set_content(dat)
+	popup.open()
 
 /mob/living/carbon/human/Topic(href, href_list)
 	if(href_list["default_attk"])
@@ -554,7 +557,6 @@
 
 /mob/living/carbon/human/proc/set_default_attack(var/datum/unarmed_attack/u_attack)
 	default_attack = u_attack
-
 
 /mob/living/carbon/human/proc/perform_cpr(var/mob/living/carbon/human/reviver)
 	// Check for sanity
@@ -602,10 +604,10 @@
 		visible_message(span_warning("\The [src]'s body convulses a bit."))
 
 		// REVIVE TIME, basically stolen from defib.dm
-		dead_mob_list.Remove(src)
-		if((src in living_mob_list) || (src in dead_mob_list))
+		GLOB.dead_mob_list.Remove(src)
+		if((src in GLOB.living_mob_list) || (src in GLOB.dead_mob_list))
 			WARNING("Mob [src] was cpr revived by [reviver], but already in the living or dead list still!")
-		living_mob_list += src
+		GLOB.living_mob_list += src
 
 		timeofdeath = 0
 		set_stat(UNCONSCIOUS) //Life() can bring them back to consciousness if it needs to.

@@ -128,9 +128,9 @@
 /area/submap/AbandonedLab)
 "gP" = (
 /mob/living/simple_mob/mechanical/hivebot/ranged_damage/strong{
-	size_multiplier = 1.2;
 	health = 240;
-	loot_list = list(/obj/item/gun/energy/laser = 5, /obj/item/gun/energy/laser/sleek = 5, /obj/item/gun/energy/gun = 5, /obj/item/gun/energy/sniperrifle = 5)
+	loot_list = list(/obj/item/gun/energy/laser = 5, /obj/item/gun/energy/laser/sleek = 5, /obj/item/gun/energy/gun = 5, /obj/item/gun/energy/sniperrifle = 5);
+	size_multiplier = 1.2
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/submap/AbandonedLab)
@@ -196,12 +196,8 @@
 /turf/simulated/shuttle/floor/voidcraft,
 /area/submap/AbandonedLab)
 "iv" = (
-/obj/effect/decal/cleanable/blood/tracks{
-	color = "red";
-	desc = "Your instincts say you shouldn't be following these.";
-	dir = 1;
-	icon = 'icons/effects/blood.dmi';
-	icon_state = "tracks"
+/obj/effect/decal/cleanable/blood/tracks/suspicious{
+	dir = 1
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/floor_decal/industrial/warning,
@@ -213,12 +209,8 @@
 /turf/simulated/floor/reinforced,
 /area/submap/AbandonedLab)
 "iL" = (
-/obj/effect/decal/cleanable/blood/tracks{
-	color = "red";
-	desc = "Your instincts say you shouldn't be following these.";
-	dir = 5;
-	icon = 'icons/effects/blood.dmi';
-	icon_state = "tracks"
+/obj/effect/decal/cleanable/blood/tracks/suspicious{
+	dir = 5
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/floor_decal/borderfloorblack{
@@ -956,10 +948,6 @@
 /obj/effect/decal/cleanable/generic,
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/submap/AbandonedLab)
-"Sd" = (
-/obj/effect/map_helper/no_phaseshift/area,
-/turf/simulated/mineral/ignore_mapgen,
-/area/submap/AbandonedLab)
 "Sx" = (
 /obj/effect/wingrille_spawn,
 /turf/simulated/floor/plating,
@@ -1157,7 +1145,7 @@ Dh
 ku
 ku
 ku
-Sd
+ku
 ku
 Dh
 "}

@@ -6,7 +6,7 @@
 
 	var/obj/effect/landmark/spawnspot = null
 	var/list/possibleSpawnspots = list()
-	for(var/obj/effect/landmark/newSpawnspot in landmarks_list)
+	for(var/obj/effect/landmark/newSpawnspot in GLOB.landmarks_list)
 		if(newSpawnspot.name == "morphspawn")
 			possibleSpawnspots += newSpawnspot
 	if(possibleSpawnspots.len)
@@ -20,7 +20,3 @@
 		return
 
 	new /obj/structure/ghost_pod/ghost_activated/morphspawn(get_turf(spawnspot))
-
-//YW Addition: Adding named landmark for events
-/obj/effect/landmark/event_spawn/morphspawn
-	name = "morphspawn"

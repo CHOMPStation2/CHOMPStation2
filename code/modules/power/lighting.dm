@@ -5,15 +5,15 @@
 
 // status values shared between lighting fixtures and items
 #define LIGHT_BULB_TEMPERATURE 400 //K - used value for a 60W bulb
-#define LIGHTING_POWER_FACTOR 2		//5W per luminosity * range		//VOREStation Edit: why the fuck are lights eating so much power, 2W per thing
+#define LIGHTING_POWER_FACTOR 2		//2W per luminosity * range
 #define LIGHT_EMERGENCY_POWER_USE 0.2 //How much power emergency lights will consume per tick
 
-var/global/list/light_type_cache = list()
+GLOBAL_LIST_EMPTY(light_type_cache)
 /proc/get_light_type_instance(var/light_type)
-	. = light_type_cache[light_type]
+	. = GLOB.light_type_cache[light_type]
 	if(!.)
 		. = new light_type
-		light_type_cache[light_type] = .
+		GLOB.light_type_cache[light_type] = .
 
 /obj/machinery/light_construct
 	name = "light fixture frame"
@@ -103,7 +103,7 @@ var/global/list/light_type_cache = list()
 		if (src.stage == 1)
 			playsound(src, W.usesound, 75, 1)
 			to_chat(user, "You begin deconstructing [src].")
-			if (!do_after(user, 30 * W.toolspeed))
+			if (!do_after(user, 3 SECONDS * W.toolspeed, target = src))
 				return
 			new /obj/item/stack/material/steel( get_turf(src.loc), sheets_refunded )
 			user.visible_message("[user.name] deconstructs [src].", \
@@ -200,7 +200,7 @@ var/global/list/light_type_cache = list()
 // the standard tube light fixture
 /obj/machinery/light
 	name = "light fixture"
-	icon = 'icons/obj/lighting_vr.dmi' //VOREStation Edit
+	icon = 'icons/obj/lighting.dmi'
 	var/base_state = "tube"		// base description and icon_state
 	icon_state = "tube1"
 	desc = "A lighting fixture."
@@ -224,11 +224,9 @@ var/global/list/light_type_cache = list()
 								// this is used to calc the probability the light burns out
 
 	var/rigged = 0				// true if rigged to explode
-	//VOREStation Edit Start
 	var/needsound = FALSE		// Flag to prevent playing turn-on sound multiple times, and from playing at roundstart
 	var/shows_alerts = TRUE		// Flag for if this fixture should show alerts.  Make sure icon states exist!
 	var/current_alert = null	// Which alert are we showing right now?
-	//VOREStation Edit End
 
 	var/auto_flicker = FALSE // If true, will constantly flicker, so long as someone is around to see it (otherwise its a waste of CPU).
 
@@ -265,7 +263,7 @@ var/global/list/light_type_cache = list()
 	desc = "A small lighting fixture."
 	light_type = /obj/item/light/bulb
 	construct_type = /obj/machinery/light_construct/small
-	shows_alerts = FALSE	//VOREStation Edit
+	shows_alerts = FALSE
 	overlay_color = LIGHT_COLOR_INCANDESCENT_BULB
 
 /obj/machinery/light/small/flicker
@@ -278,7 +276,7 @@ var/global/list/light_type_cache = list()
 	start_with_cell = FALSE
 
 /obj/machinery/light/flamp
-	icon = 'icons/obj/lighting.dmi' //VOREStation Edit
+	icon = 'icons/obj/lighting.dmi'
 	icon_state = "flamp1"
 	base_state = "flamp"
 	plane = OBJ_PLANE
@@ -286,7 +284,7 @@ var/global/list/light_type_cache = list()
 	desc = "A floor lamp."
 	light_type = /obj/item/light/bulb/large
 	construct_type = /obj/machinery/light_construct/flamp
-	shows_alerts = FALSE	//VOREStation Edit
+	shows_alerts = FALSE
 	var/lamp_shade = 1
 	overlay_color = LIGHT_COLOR_INCANDESCENT_BULB
 
@@ -306,6 +304,7 @@ var/global/list/light_type_cache = list()
 
 /obj/machinery/light/small/emergency
 	light_type = /obj/item/light/bulb/red
+	nightshift_allowed = FALSE
 
 /obj/machinery/light/small/emergency/flicker
 	auto_flicker = TRUE
@@ -313,7 +312,7 @@ var/global/list/light_type_cache = list()
 /obj/machinery/light/spot
 	name = "spotlight"
 	light_type = /obj/item/light/tube/large
-	shows_alerts = FALSE	//VOREStation Edit
+	shows_alerts = FALSE
 
 //YW ADDITION START
 /obj/machinery/light/spot/no_nightshift
@@ -323,10 +322,8 @@ var/global/list/light_type_cache = list()
 /obj/machinery/light/spot/flicker
 	auto_flicker = TRUE
 
-//VOREStation Add - Shadeless!
 /obj/machinery/light/flamp/noshade
 	lamp_shade = 0
-//VOREStation Add End
 
 // create a new lighting fixture
 /obj/machinery/light/Initialize(mapload, obj/machinery/light_construct/construct = null)
@@ -364,7 +361,6 @@ var/global/list/light_type_cache = list()
 
 	switch(status)		// set icon_states
 		if(LIGHT_OK)
-			//VOREStation Edit Start
 			if(shows_alerts && current_alert && on)
 				icon_state = "[base_state]-alert-[current_alert]"
 				add_light_overlay(FALSE, icon_state)
@@ -374,19 +370,18 @@ var/global/list/light_type_cache = list()
 					add_light_overlay()
 				else
 					remove_light_overlay()
-			//VOREStation Edit End
 		if(LIGHT_EMPTY)
 			icon_state = "[base_state]-empty"
 			on = 0
-			remove_light_overlay()	//VOREStation add
+			remove_light_overlay()
 		if(LIGHT_BURNED)
 			icon_state = "[base_state]-burned"
 			on = 0
-			remove_light_overlay()	//VOREStation add
+			remove_light_overlay()
 		if(LIGHT_BROKEN)
 			icon_state = "[base_state]-broken"
 			on = 0
-			remove_light_overlay()	//VOREStation add
+			remove_light_overlay()
 	return
 
 /obj/machinery/light/flamp/update_icon()
@@ -395,27 +390,27 @@ var/global/list/light_type_cache = list()
 		switch(status)		// set icon_states
 			if(LIGHT_OK)
 				icon_state = "[base_state][on]"
-				if(on)	//VOREStation add
-					add_light_overlay()	//VOREStation add
-				else	//VOREStation add
-					remove_light_overlay()	//VOREStation add
+				if(on)
+					add_light_overlay()
+				else
+					remove_light_overlay()
 			if(LIGHT_EMPTY)
 				on = 0
 				icon_state = "[base_state][on]"
-				remove_light_overlay()	//VOREStation add
+				remove_light_overlay()
 			if(LIGHT_BURNED)
 				on = 0
 				icon_state = "[base_state][on]"
-				remove_light_overlay()	//VOREStation add
+				remove_light_overlay()
 			if(LIGHT_BROKEN)
 				on = 0
 				icon_state = "[base_state][on]"
-				remove_light_overlay()	//VOREStation add
+				remove_light_overlay()
 		return
 	else
 		base_state = "flamp"
 		..()
-//VOREStation Edit Start
+
 /obj/machinery/light/proc/set_alert_atmos()
 	if(!shows_alerts)
 		return
@@ -446,8 +441,6 @@ var/global/list/light_type_cache = list()
 
 	update()
 
-//VOREstation Edit End
-
 //CHOMPStation Edit Start
 /obj/machinery/light/proc/set_alert_engineering()
 	if(!shows_alerts)
@@ -456,19 +449,16 @@ var/global/list/light_type_cache = list()
 	light_color = "#ff9900"
 	brightness_color = "#ff9900"
 	update()
-
 // CHOMPStation Edit End
 
 // update lighting
 /obj/machinery/light/proc/update(var/trigger = 1)
 	update_icon()
-	//VOREStation Edit Start
 	if(!on)
 		needsound = TRUE // Play sound next time we turn on
 	else if(needsound)
 		playsound(src, 'sound/effects/lighton.ogg', 65, 1)
 		needsound = FALSE // Don't play sound again until we've been turned off
-	//VOREStation Edit End
 
 	if(on)
 		var/correct_range = nightshift_enabled ? brightness_range_ns : brightness_range
@@ -485,8 +475,8 @@ var/global/list/light_type_cache = list()
 			if(rigged)
 				if(status == LIGHT_OK && trigger)
 
-					log_admin("LOG: Rigged light explosion, last touched by [fingerprintslast]")
-					message_admins("LOG: Rigged light explosion, last touched by [fingerprintslast]")
+					log_admin("LOG: Rigged light explosion, last touched by [forensic_data?.get_lastprint()]")
+					message_admins("LOG: Rigged light explosion, last touched by [forensic_data?.get_lastprint()]")
 
 					explode()
 			else if( prob( min(60, switchcount*switchcount*0.01) ) )
@@ -508,7 +498,7 @@ var/global/list/light_type_cache = list()
 	else
 		update_use_power(USE_POWER_IDLE)
 		set_light(0)
-	update_light() //VOREStation Edit - Makes lights update when their color is changed.
+	update_light()
 	update_active_power_usage((light_range * light_power) * LIGHTING_POWER_FACTOR)
 
 /obj/machinery/light/proc/nightshift_mode(var/state)
@@ -595,13 +585,13 @@ var/global/list/light_type_cache = list()
 	installed_light = L
 	L.loc = src //Move it into the socket!
 
-	on = powered()
+	on = powered() && !turned_off() // Do not instantly turn on lights if the area lightswitch is off
 	update()
 
 	if(on && rigged)
 
-		log_admin("LOG: Rigged light explosion, last touched by [fingerprintslast]")
-		message_admins("LOG: Rigged light explosion, last touched by [fingerprintslast]")
+		log_admin("LOG: Rigged light explosion, last touched by [forensic_data?.get_lastprint()]")
+		message_admins("LOG: Rigged light explosion, last touched by [forensic_data?.get_lastprint()]")
 
 		explode()
 
@@ -642,9 +632,11 @@ var/global/list/light_type_cache = list()
 		//If xenos decide they want to smash a light bulb with a toolbox, who am I to stop them? /N
 
 	else if(status != LIGHT_BROKEN && status != LIGHT_EMPTY)
+		if(istype(W, /obj/item/multitool)) //Allow us to swap  the light color.
+			installed_light.attackby(W, user)
+			return
 
-
-		if(prob(1+W.force * 5))
+		else if(prob(1+W.force * 5))
 
 			to_chat(user, "You hit the light, and it smashes!")
 			for(var/mob/M in viewers(src))
@@ -666,7 +658,7 @@ var/global/list/light_type_cache = list()
 			playsound(src, W.usesound, 75, 1)
 			user.visible_message("[user.name] opens [src]'s casing.", \
 				"You open [src]'s casing.", "You hear a noise.")
-			new construct_type(src.loc, fixture = src)
+			new construct_type(src.loc, src)
 			qdel(src)
 			return
 
@@ -737,7 +729,7 @@ var/global/list/light_type_cache = list()
 		return FALSE
 	if(!has_emergency_power(pwr))
 		return FALSE
-	if(cell.charge > 300) //it's meant to handle 120 W, ya doofus
+	if(cell.charge > 750) //it's meant to handle 120 W, ya doofus. Not Anymore!!
 		visible_message(span_warning("[src] short-circuits from too powerful of a power cell!"))
 		status = LIGHT_BURNED
 		installed_light.status = status
@@ -746,27 +738,35 @@ var/global/list/light_type_cache = list()
 	set_light(brightness_range * bulb_emergency_brightness_mul, max(bulb_emergency_pow_min, bulb_emergency_pow_mul * (cell.charge / cell.maxcharge)), bulb_emergency_colour)
 	return TRUE
 
-/obj/machinery/light/proc/flicker(var/amount = rand(10, 20))
+/obj/machinery/light/proc/flicker(var/amount = rand(10, 20), var/flicker_color)
 	if(flickering) return
 	if(on && status == LIGHT_OK)
 		flickering = 1
-		do_flicker(amount)
+		do_flicker(amount, flicker_color, brightness_color, brightness_color_ns)
 
-/obj/machinery/light/proc/do_flicker(remaining_flicks)
+/obj/machinery/light/proc/do_flicker(remaining_flicks, flicker_color, original_color, original_color_ns)
 	SHOULD_NOT_OVERRIDE(TRUE)
 	PRIVATE_PROC(TRUE)
 	if(status != LIGHT_OK)
 		flickering = 0
 		return
 	on = !on
+	if(flicker_color && brightness_color != flicker_color)
+		brightness_color = flicker_color
+		brightness_color_ns = flicker_color
+		update(0) //Yes. This is done here and then immediately followed up with another update(0). Why does it need that? I have no clue. But a single update(0) does not work.
 	update(0)
 	if(!on) // Only play when the light turns off.
 		playsound(src, 'sound/effects/light_flicker.ogg', 50, 1)
 	if(remaining_flicks > 0)
 		remaining_flicks--
-		addtimer(CALLBACK(src, PROC_REF(do_flicker), remaining_flicks), rand(5, 15), TIMER_DELETE_ME)
+		addtimer(CALLBACK(src, PROC_REF(do_flicker), remaining_flicks, flicker_color, original_color, original_color_ns), rand(5, 15), TIMER_DELETE_ME)
 		return
+	//All this happens after our final flicker.
 	on = (status == LIGHT_OK)
+	brightness_color = original_color
+	brightness_color_ns = original_color_ns
+	update(0)
 	update(0)
 	flickering = 0
 
@@ -869,7 +869,7 @@ var/global/list/light_type_cache = list()
 
 // break the light and make sparks if was on
 
-/obj/machinery/light/proc/broken(var/skip_sound_and_sparks = 0)
+/obj/machinery/light/proc/broken(var/skip_sound_and_sparks = FALSE)
 	if(status == LIGHT_EMPTY)
 		return
 
@@ -997,12 +997,10 @@ var/global/list/light_type_cache = list()
 	drop_sound = 'sound/items/drop/glass.ogg'
 	pickup_sound = 'sound/items/pickup/glass.ogg'
 
-	//VOREStation Edit Start - Modifiable Lighting
 	var/init_brightness_range = 8
 	var/init_brightness_power = 1
 	var/init_nightshift_range = 8
 	var/init_nightshift_power = 0.45
-	//VOREStation Edit End - Modifiable Lighting
 
 /obj/item/light/tube
 	name = "light tube"
@@ -1019,6 +1017,8 @@ var/global/list/light_type_cache = list()
 /obj/item/light/tube/large
 	w_class = ITEMSIZE_SMALL
 	name = "large light tube"
+	icon_state = "ltube_large"
+	base_state = "ltube_large"
 	brightness_range = 15
 	brightness_power = 4
 
@@ -1052,6 +1052,8 @@ var/global/list/light_type_cache = list()
 // For 'floor lamps' in outdoor use and such
 /obj/item/light/bulb/large
 	name = "large light bulb"
+	icon_state = "lbulb_large"
+	base_state = "lbulb_large"
 	brightness_range = 7
 	brightness_power = 1.5
 
@@ -1071,6 +1073,12 @@ var/global/list/light_type_cache = list()
 	brightness_range = 4
 	color = "#da0205"
 	brightness_color = "#da0205"
+	init_brightness_range = 4
+
+/obj/item/light/bulb/blue
+	brightness_range = 4
+	color = "#028bda"
+	brightness_color = "#028bda"
 	init_brightness_range = 4
 
 /obj/item/light/bulb/fire
@@ -1114,8 +1122,9 @@ var/global/list/light_type_cache = list()
 // if a syringe, can inject phoron to make it explode
 /obj/item/light/attackby(var/obj/item/I, var/mob/user)
 	..()
+	if(isrobot(user))
+		I = user.get_active_hand()
 
-	//VOREStation Edit Start - Multitool Lighting!
 	if(istype(I,/obj/item/multitool))
 		var/list/menu_list = list(
 		"Normal Range",
@@ -1162,6 +1171,11 @@ var/global/list/light_type_cache = list()
 
 			else //Should never happen.
 				return
+		if(istype(src.loc, /obj/machinery/light))
+			var/obj/machinery/light/L = src.loc
+			L.update_from_bulb(src)
+			L.update()
+			L.update() //Yes it has to double update...Don't ask me why. I think it's stupid.
 
 	else if(istype(I, /obj/item/reagent_containers/syringe))
 		var/obj/item/reagent_containers/syringe/S = I

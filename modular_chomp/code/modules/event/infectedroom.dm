@@ -13,7 +13,8 @@
 		/area/engineering/gravgen,
 		/area/maintenance,
 		/area/medical,
-		/area/rnd/test_area
+		/area/rnd/test_area,
+		/area/solar
 		)
 
 /datum/event/disease_outbreak/floor/setup()
@@ -32,7 +33,7 @@
 	for(var/i in 1 to 10)
 		var/area/A = pick(affected_area)
 		if(is_area_occupied(A))
-			log_debug("infectedroom event: Rejected [A] because it is occupied.")
+			log_game("infectedroom event: Rejected [A] because it is occupied.")
 			continue
 
 		var/list/turfs = list()
@@ -40,17 +41,17 @@
 			if(!F.check_density())
 				turfs += F
 		if(turfs.len == 0)
-			log_debug("infectedroom event: Rejected [A] because it has no clear turfs.")
+			log_game("infectedroom event: Rejected [A] because it has no clear turfs.")
 			continue
 		target_area = A
 		target_turfs = turfs
 
 	if(!target_area)
-		log_debug("infectedroom event: Giving up after too many failures to pick target area")
+		log_game("infectedroom event: Giving up after too many failures to pick target area")
 		kill()
 		return
 	else
-		log_debug("infectedroom event: [target_area] was chosen. Infecting...")
+		log_game("infectedroom event: [target_area] was chosen. Infecting...")
 		log_admin("Infected room event started; Virus: [chosen_disease.name]")
 		message_admins("Infected room event started; Virus: [chosen_disease.name]")
 
@@ -73,6 +74,6 @@
 			V = new(pick_n_take(target_turfs))
 			V.viruses |= chosen_disease
 		else
-			var/obj/effect/decal/cleanable/mucus/M
+			var/mob/living/simple_mob/vore/aggressive/macrophage/M
 			M = new(pick_n_take(target_turfs))
-			M.viruses |= chosen_disease
+			M.infections |= chosen_disease

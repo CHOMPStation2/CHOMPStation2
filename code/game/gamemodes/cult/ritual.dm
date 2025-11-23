@@ -69,18 +69,18 @@ GLOBAL_LIST_INIT(rnwords, list("ire","ego","nahlizet","certum","veri","jatkaa","
 	. = ..()
 	blood_image = image(loc = src)
 	blood_image.override = 1
-	for(var/mob/living/silicon/ai/AI in player_list)
-		if(AI.client)
-			AI.client.images += blood_image
-	rune_list.Add(src)
+	for(var/mob/living/silicon/ai/our_ai in GLOB.player_list)
+		if(our_ai.client)
+			our_ai.client.images += blood_image
+	GLOB.rune_list.Add(src)
 
 /obj/effect/rune/Destroy()
-	for(var/mob/living/silicon/ai/AI in player_list)
-		if(AI.client)
-			AI.client.images -= blood_image
+	for(var/mob/living/silicon/ai/our_ai in GLOB.player_list)
+		if(our_ai.client)
+			our_ai.client.images -= blood_image
 	qdel(blood_image)
 	blood_image = null
-	rune_list.Remove(src)
+	GLOB.rune_list.Remove(src)
 	. = ..()
 
 /obj/effect/rune/examine(mob/user)
@@ -322,7 +322,7 @@ GLOBAL_LIST_INIT(rnwords, list("ire","ego","nahlizet","certum","veri","jatkaa","
 		runerandom()
 	if(iscultist(user))
 		var/C = 0
-		for(var/obj/effect/rune/N in rune_list)
+		for(var/obj/effect/rune/N in GLOB.rune_list)
 			C++
 		if (!istype(user.loc,/turf))
 			to_chat(user, span_warning("You do not have enough space to write a proper rune."))
@@ -404,7 +404,7 @@ GLOBAL_LIST_INIT(rnwords, list("ire","ego","nahlizet","certum","veri","jatkaa","
 			V.show_message(span_danger("\The [user] slices open a finger and begins to chant and paint symbols on the floor."), 3, span_danger("You hear chanting."), 2)
 		to_chat(user, span_danger("You slice open one of your fingers and begin drawing a rune on the floor whilst chanting the ritual that binds your life essence with the dark arcane energies flowing through the surrounding world."))
 		user.take_overall_damage((rand(9)+1)/10) // 0.1 to 1.0 damage
-		if(do_after(user, 50))
+		if(do_after(user, 5 SECONDS, target = src))
 			var/area/A = get_area(user)
 			log_and_message_admins("created \an [chosen_rune] rune at \the [A.name] - [user.loc.x]-[user.loc.y]-[user.loc.z].")
 			if(user.get_active_hand() != src)
@@ -417,8 +417,7 @@ GLOBAL_LIST_INIT(rnwords, list("ire","ego","nahlizet","certum","veri","jatkaa","
 			R.word2 = english[required[2]]
 			R.word3 = english[required[3]]
 			R.check_icon()
-			R.blood_DNA = list()
-			R.blood_DNA[H.dna.unique_enzymes] = H.dna.b_type
+			R.add_blooddna(H.dna,H)
 		return
 	else
 		to_chat(user, "The book seems full of illegible scribbles. Is this a joke?")
@@ -451,8 +450,7 @@ GLOBAL_LIST_INIT(rnwords, list("ire","ego","nahlizet","certum","veri","jatkaa","
 		var/obj/effect/rune/R = new /obj/effect/rune
 		if(ishuman(user))
 			var/mob/living/carbon/human/H = user
-			R.blood_DNA = list()
-			R.blood_DNA[H.dna.unique_enzymes] = H.dna.b_type
+			R.add_blooddna(H.dna,H)
 		var/area/A = get_area(user)
 		log_and_message_admins("created \an [r] rune at \the [A.name] - [user.loc.x]-[user.loc.y]-[user.loc.z].")
 		switch(r)
@@ -608,3 +606,9 @@ GLOBAL_LIST_INIT(rnwords, list("ire","ego","nahlizet","certum","veri","jatkaa","
 				R.word3=GLOB.cultwords["technology"]
 				R.loc = user.loc
 				R.check_icon()
+
+/obj/effect/rune/wash(clean_types)
+	. = ..()
+	if (. || (clean_types & CLEAN_TYPE_RUNES))
+		qdel(src)
+		return TRUE

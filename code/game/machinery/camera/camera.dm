@@ -54,9 +54,9 @@
 	*/
 	if(!src.network || src.network.len < 1)
 		if(loc)
-			error("[src.name] in [get_area(src)] (x:[src.x] y:[src.y] z:[src.z] has errored. [src.network?"Empty network list":"Null network list"]")
+			log_world("## ERROR [src.name] in [get_area(src)] (x:[src.x] y:[src.y] z:[src.z] has errored. [src.network?"Empty network list":"Null network list"]")
 		else
-			error("[src.name] in [get_area(src)]has errored. [src.network?"Empty network list":"Null network list"]")
+			log_world("## ERROR [src.name] in [get_area(src)]has errored. [src.network?"Empty network list":"Null network list"]")
 		ASSERT(src.network)
 		ASSERT(src.network.len > 0)
 	// VOREStation Edit Start - Make mapping with cameras easier
@@ -92,7 +92,7 @@
 /obj/machinery/camera/proc/internal_process()
 	return
 
-/obj/machinery/camera/emp_act(severity)
+/obj/machinery/camera/emp_act(severity, recursive)
 	if(!isEmpProof() && prob(100/severity))
 		if(!affected_by_emp_until || (world.time > affected_by_emp_until))
 			affected_by_emp_until = max(affected_by_emp_until, world.time + (90 SECONDS / severity))
@@ -121,13 +121,14 @@
 		return
 	destroy()
 
-/obj/machinery/camera/hitby(AM as mob|obj)
+/obj/machinery/camera/hitby(atom/movable/source)
 	..()
-	if (istype(AM, /obj))
-		var/obj/O = AM
-		if (O.throwforce >= src.toughness)
-			visible_message(span_boldwarning("[src] was hit by [O]."))
-		take_damage(O.throwforce)
+	if (!isobj(source))
+		return
+	var/obj/item/O = source
+	if(O.throwforce >= src.toughness)
+		visible_message(span_boldwarning("[src] was hit by [O]."))
+	take_damage(O.throwforce)
 
 /obj/machinery/camera/proc/setViewRange(var/num = 7)
 	src.view_range = num
@@ -210,14 +211,18 @@
 			if(N)
 				info = N.notehtml
 		to_chat(U, "You hold \a [itemname] up to the camera ...")
-		for(var/mob/living/silicon/ai/O in living_mob_list)
+		for(var/mob/living/silicon/ai/O in GLOB.living_mob_list)
 			if(!O.client)
 				continue
 			if(U.name == "Unknown")
 				to_chat(O, span_infoplain(span_bold("[U]") + " holds \a [itemname] up to one of your cameras ..."))
 			else
 				to_chat(O, span_infoplain(span_bold("<a href='byond://?src=\ref[O];track2=\ref[O];track=\ref[U];trackname=[U.name]'>[U]</a>") + " holds \a [itemname] up to one of your cameras ..."))
-			O << browse(text("<HTML><HEAD><TITLE>[]</TITLE></HEAD><BODY><TT>[]</TT></BODY></HTML>", itemname, info), text("window=[]", itemname))
+
+			var/datum/browser/popup = new(O, itemname, itemname)
+			popup.add_head_content("<TITLE>[itemname]</TITLE>")
+			popup.set_content("<TT>[info]</TT>")
+			popup.open()
 
 	else if (istype(W, /obj/item/camera_bug))
 		if (!src.can_use())
@@ -295,11 +300,6 @@
 		status = newstatus
 		update_coverage()
 
-/obj/machinery/camera/check_eye(mob/user)
-	if(!can_use()) return -1
-	if(isXRay()) return SEE_TURFS|SEE_MOBS|SEE_OBJS
-	return 0
-
 /obj/machinery/camera/update_icon()
 	if (!status || (stat & BROKEN))
 		icon_state = "[initial(icon_state)]1"
@@ -342,7 +342,7 @@
 /atom/proc/auto_turn()
 	//Automatically turns based on nearby walls.
 	var/turf/simulated/wall/T = null
-	for(var/i = 1, i <= 8; i += i)
+	for(var/i = 1, i <= 8, i += i)
 		T = get_ranged_target_turf(src, i, 1)
 		if(istype(T))
 			//If someone knows a better way to do this, let me know. -Giacom
@@ -386,7 +386,7 @@
 	playsound(src, WT.usesound, 50, 1)
 	WT.eyecheck(user)
 	busy = 1
-	if(do_after(user, 100 * WT.toolspeed))
+	if(do_after(user, 10 SECONDS * WT.toolspeed, target = src))
 		busy = 0
 		if(!WT.isOn())
 			return 0
@@ -402,7 +402,6 @@
 		to_chat(user, span_warning("\The [src] is broken."))
 		return
 
-	user.set_machine(src)
 	wires.Interact(user)
 
 /obj/machinery/camera/proc/add_network(var/network_name)

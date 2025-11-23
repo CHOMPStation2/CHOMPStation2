@@ -4,11 +4,17 @@
 	cycle_sloshed = FALSE
 
 	if(loc != owner)
-		if(istype(owner))
-			loc = owner
+		if(isAI(owner))
+			var/mob/living/silicon/ai/AI = owner
+			if(AI.holo && AI.holo.masters[AI])
+				if(loc != AI.holo.masters[AI])
+					loc = owner
 		else
-			qdel(src)
-			return
+			if(istype(owner))
+				loc = owner
+			else
+				qdel(src)
+				return
 
 	HandleBellyReagents()	// reagent belly stuff, here to jam it into subsystems and avoid too much cpu usage
 	update_belly_surrounding() // Updates belly_surrounding list for indirect vore usage
@@ -46,7 +52,7 @@
 		touchable_atoms -= G
 	var/datum/digest_mode/DM = GLOB.digest_modes["[digest_mode]"]
 	if(!DM)
-		log_debug("Digest mode [digest_mode] didn't exist in the digest_modes list!!")
+		log_runtime("Digest mode [digest_mode] didn't exist in the digest_modes list!!")
 		return FALSE
 	if(digest_mode == DM_EGG)
 		prey_loop() //Apparently on Egg mode the sound loop never played before? Just slapping this here to fix that
@@ -214,7 +220,9 @@
 				if((mode_flags & DM_FLAG_STRIPPING) && H.strip_pref) //Stripping pref check
 					for(var/slot in slots)
 						var/obj/item/I = H.get_equipped_item(slot = slot)
-						if(I && H.unEquip(I, force = FALSE))
+						if(!I || I.flags & NOSTRIP)
+							continue
+						if(H.unEquip(I, force = FALSE))
 							handle_digesting_item(I)
 							digestion_noise_chance = 25
 							to_update = TRUE

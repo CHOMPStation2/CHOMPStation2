@@ -144,7 +144,7 @@
 	cost = 10
 	containertype = /obj/structure/closet/crate/secure/xion
 	containername = "Shaft miner equipment"
-	access = access_mining
+	access = ACCESS_MINING
 
 /* //No longer supported on our current maps, as it requires specialized dropoff beacons and the pathfinding doesn't work well on multi-z
 //plus we have the destination tagger
@@ -168,6 +168,20 @@
 	desc = "A cargo train trolley. Useless without a tug."
 	contains = list(/obj/vehicle/train/trolley)
 	cost = 15
+
+/datum/supply_pack/supply/cargotank
+	name = "Cargo Train Tanker"
+	desc = "A cargo train tanker. For selling large volumes of a reagent."
+	contains = list(/obj/vehicle/train/trolley_tank)
+	cost = 15
+
+/datum/supply_pack/supply/freezer
+	name = "Freezer crate"
+	desc = "An empty freezer for storing perishable items."
+	contains = list()
+	cost = 20
+	containertype = /obj/structure/closet/crate/freezer
+	containername = "Freezer crate"
 
 /datum/supply_pack/explorergear
 	name= JOB_EXPLORER + " gear"
@@ -194,7 +208,7 @@
 	cost=25
 	containertype = /obj/structure/closet/crate/secure/xion
 	containername = JOB_EXPLORER + " equipment"
-	access = access_explorer //CHOMP explo keep
+	access = ACCESS_EXPLORER //CHOMP explo keep
 
 /datum/supply_pack/pilotgear
 	name= JOB_PILOT + " gear"
@@ -221,7 +235,7 @@
 	cost=20
 	containertype = /obj/structure/closet/crate/secure/xion
 	containername =  JOB_PILOT + " equipment"
-	access = access_pilot
+	access = ACCESS_PILOT
 
 /datum/supply_pack/supply/foodcubes
 	name = "Emergency food cubes"
@@ -260,7 +274,7 @@
 	cost = 75
 	containertype = /obj/structure/closet/crate/secure/xion
 	containername = JOB_PATHFINDER + " equipment"
-	access = list(access_explorer)
+	access = list(ACCESS_EXPLORER)
 
 /datum/supply_pack/supply/postal_service
 	name = "Postal Service Supplies"

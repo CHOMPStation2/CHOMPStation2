@@ -10,8 +10,7 @@
 
 	damage_fatigue_mult = 0
 
-	armor = list(melee = 20, bullet = 20, laser = 20, energy = 20, bomb = 100, bio = 100, rad = 100)
-	armor_soak = list(melee = 7, bullet = 7, laser = 7, energy = 7, bomb = 0, bio = 0, rad = 0)
+	armor = list(melee = 34, bullet = 34, laser = 34, energy = 34, bomb = 100, bio = 100, rad = 100)
 	has_heal_droid = TRUE
 
 /mob/living/simple_mob/humanoid/eclipse/head/security
@@ -53,10 +52,15 @@
 	armor_penetration = 40 //Large pointy crystal
 	damage_type = BRUTE
 	check_armour = "bullet"
-	modifier_type_to_apply = /datum/modifier/fire/weak
-	modifier_duration = 0.05 MINUTE
 	range = 12
 	hud_state = "laser_sniper"
+
+/obj/item/projectile/energy/flamecrystal/on_hit(atom/target, blocked = 0, def_zone)
+	. = ..()
+	if(isliving(target))
+		var/mob/living/L = target
+		L.adjust_fire_stacks(5)
+		L.ignite_mob()
 
 /obj/item/projectile/bullet/flamegun
 	use_submunitions = 1
@@ -147,12 +151,12 @@
 		/obj/item/hand_tele = 10,
 		/obj/item/bone/skull = 100
 			)
-	var/fullshield = 4
-	var/shieldrage = 4
+	var/fullshield = 140
+	var/shieldrage = 3
 
 /mob/living/simple_mob/humanoid/eclipse/head/tyrlead/bullet_act(obj/item/projectile/P) //Projectiles will be absorbed by the shield. Note to self do funky sprite. 4 hits to remove
 	if(fullshield > 0)
-		fullshield--
+		fullshield -= P.damage
 		if(P == /obj/item/projectile/ion)
 			fullshield = 0
 			visible_message(span_boldwarning(span_orange("[P] breaks the shield!!.")))
@@ -166,8 +170,8 @@
 		..()
 		shieldrage--
 		if(shieldrage == 0)
-			shieldrage = 4
-			fullshield = 4
+			shieldrage = 3
+			fullshield = 140
 			visible_message(span_boldwarning(span_orange("The shield reactivates!!.")))
 			icon_state = "overseer_shield"
 
@@ -295,11 +299,11 @@
 	var/deathdir = rand(1,3)
 	switch(deathdir)
 		if(1)
-			new /mob/living/simple_mob/mechanical/mining_drone/scavenger/eclipse (src.loc)
+			new /mob/living/simple_mob/mechanical/mining_drone/scavenger/eclipse(src.loc)
 		if(2)
-			new /mob/living/simple_mob/mechanical/hivebot/swarm/eclipse (src.loc)
+			new /mob/living/simple_mob/mechanical/hivebot/swarm/eclipse(src.loc)
 		if(3)
-			new /mob/living/simple_mob/mechanical/combat_drone/artillery
+			new /mob/living/simple_mob/mechanical/combat_drone/artillery(src.loc)
 	amount--
 	if(amount > 0)
 		addtimer(CALLBACK(src, PROC_REF(summon_drones), target, amount, fire_delay), fire_delay, TIMER_DELETE_ME)
@@ -495,9 +499,8 @@
 	for(var/mob/living/L in loc)
 		var/target_zone = ran_zone()
 		var/blocked = L.run_armor_check(target_zone, "laser")
-		var/soaked = L.get_armor_soak(target_zone, "laser")
 
-		if(!L.apply_damage(70, BURN, target_zone, blocked, soaked))
+		if(!L.apply_damage(70, BURN, target_zone, blocked))
 			break
 	playsound(src, 'sound/effects/clang2.ogg', 50, 1)
 	addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(qdel), src), 0.25 SECONDS, TIMER_DELETE_ME)
@@ -521,9 +524,8 @@
 	for(var/mob/living/L in loc)
 		var/target_zone = ran_zone()
 		var/blocked = L.run_armor_check(target_zone, "energy")
-		var/soaked = L.get_armor_soak(target_zone, "energy")
 
-		if(!L.apply_damage(50, BURN, target_zone, blocked, soaked))
+		if(!L.apply_damage(50, BURN, target_zone, blocked))
 			break
 	playsound(src, 'sound/effects/squelch1.ogg', 50, 1)
 	addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(qdel), src), 0.25 SECONDS, TIMER_DELETE_ME)
@@ -544,10 +546,10 @@
 	var/health = 5
 	var/modifiertype = /datum/modifier/poisoned/weak
 
-/obj/effect/slimeattack/Crossed(atom/movable/AM as mob|obj)
-	if(AM.is_incorporeal())
+/obj/effect/slimeattack/Crossed(atom/movable/source)
+	if(source.is_incorporeal())
 		return
-	Bumped(AM)
+	Bumped(source)
 
 /obj/effect/slimeattack/attackby(var/obj/item/W, var/mob/user)
 	user.setClickCooldown(user.get_attack_speed(W))
@@ -588,17 +590,13 @@
 /obj/effect/slimeattack/proc/attack_mob(mob/living/L)
 	var/target_zone = pick(BP_ALL)
 	var/amount_blocked = L.run_armor_check(target_zone, "bio")
-	var/amount_soaked = L.get_armor_soak(target_zone, "bio")
 
 	var/damage = rand(5,5)
 
 	if(amount_blocked >= 40)
 		return
 
-	if(amount_soaked >= damage)
-		return
-
-	L.apply_damage(damage, BURN, target_zone, amount_blocked, amount_soaked, used_weapon = "slime")
+	L.apply_damage(damage, BURN, target_zone, amount_blocked, used_weapon = "slime")
 	L.add_modifier(modifiertype, 5 SECONDS)
 
 /mob/living/simple_mob/humanoid/eclipse/minion
@@ -611,7 +609,6 @@
 	health = 7
 	maxHealth = 7
 	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 100, rad = 100)
-	armor_soak = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0)
 	icon_state = "squishblob"
 	icon_living = "squishblob"
 	ai_holder_type = /datum/ai_holder/simple_mob/intentional/adv_dark_gygax
@@ -636,8 +633,7 @@
 	glow_override = TRUE
 	glow_color = "#FFA723"
 	glow_range = 16
-	armor = list(melee = 35, bullet = 35, laser = 35, energy = 35, bomb = 100, bio = 100, rad = 100)
-	armor_soak = list(melee = 7, bullet = 7, laser = 7, energy = 7, bomb = 0, bio = 0, rad = 0)
+	armor = list(melee = 49, bullet = 49, laser = 49, energy = 49, bomb = 100, bio = 100, rad = 100)
 	projectiletype = /obj/item/projectile/energy/homing_bolt
 	ai_holder_type = /datum/ai_holder/simple_mob/intentional/adv_dark_gygax
 	loot_list = list(/obj/item/slime_extract/sepia  = 25,

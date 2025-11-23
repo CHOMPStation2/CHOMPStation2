@@ -7,20 +7,20 @@
 	var/desc = null						// Ditto.
 	var/icon_state = null				// See above.
 	var/mob/living/holder = null		// The mob that this datum is affecting.
-	var/datum/weakref/origin = null			// A weak reference to whatever caused the modifier to appear.  THIS NEEDS TO BE A MOB/LIVING.  It's a weakref to not interfere with qdel().
+	var/datum/weakref/origin = null		// A weak reference to whatever caused the modifier to appear.  THIS NEEDS TO BE A MOB/LIVING.  It's a weakref to not interfere with qdel().
 	var/expire_at = null				// world.time when holder's Life() will remove the datum.  If null, it lasts forever or until it gets deleted by something else.
 	var/on_created_text = null			// Text to show to holder upon being created.
 	var/on_expired_text = null			// Text to show to holder when it expires.
 	var/hidden = FALSE					// If true, it will not show up on the HUD in the Future(tm)
 	var/stacks = MODIFIER_STACK_FORBID	// If true, attempts to add a second instance of this type will refresh expire_at instead.
-	var/flags = 0						// Flags for the modifier, see mobs.dm defines for more details.
+	var/flags = NONE						// Flags for the modifier, see mobs.dm defines for more details.
 
 	var/light_color = null				// If set, the mob possessing the modifier will glow in this color.  Not implemented yet.
 	var/light_range = null				// How far the light for the above var goes. Not implemented yet.
 	var/light_intensity = null			// Ditto. Not implemented yet.
 	var/mob_overlay_state = null		// Icon_state for an overlay to apply to a (human) mob while this exists.  This is actually implemented.
 	var/client_color = null				// If set, the client will have the world be shown in this color, from their perspective.
-	var/wire_colors_replace = null		// If set, the client will have wires replaced by the given replacement list. For colorblindness. //VOREStation Add
+	var/wire_colors_replace = null		// If set, the client will have wires replaced by the given replacement list. For colorblindness.
 	var/list/filter_parameters = null	// If set, will add a filter to the holder with the parameters in this var. Must be a list.
 	var/filter_priority = 1				// Used to make filters be applied in a specific order, if that is important.
 	var/filter_instance = null			// Instance of a filter created with the `filter_parameters` list. This exists to make `animate()` calls easier. Don't set manually.
@@ -57,7 +57,6 @@
 
 	// Note that these are combined with the mob's real armor values additatively. You can also omit specific armor types.
 	var/list/armor_percent = null		// List of armor values to add to the holder when doing armor calculations. This is for percentage based armor. E.g. 50 = half damage.
-	var/list/armor_flat = null			// Same as above but only for flat armor calculations. E.g. 5 = 5 less damage (this comes after percentage).
 	// Unlike armor, this is multiplicative. Two 50% protection modifiers will be combined into 75% protection (assuming no base protection on the mob).
 	var/heat_protection = null			// Modifies how 'heat' protection is calculated, like wearing a firesuit. 1 = full protection.
 	var/cold_protection = null			// Ditto, but for cold, like wearing a winter coat.

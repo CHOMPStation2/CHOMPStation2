@@ -1,7 +1,7 @@
 /turf/simulated/floor
 	name = "plating"
 	desc = "Unfinished flooring."
-	icon = 'icons/turf/flooring/plating_vr.dmi'
+	icon = 'icons/turf/flooring/plating.dmi'
 	icon_state = "plating"
 
 	// Damage to flooring.
@@ -11,7 +11,7 @@
 	// Plating data.
 	var/base_name = "plating"
 	var/base_desc = "The naked hull."
-	var/base_icon = 'icons/turf/flooring/plating_vr.dmi'
+	var/base_icon = 'icons/turf/flooring/plating.dmi'
 	var/base_icon_state = "plating"
 
 	var/list/old_decals = null
@@ -43,7 +43,7 @@
 
 /turf/simulated/floor/LateInitialize()
 	. = ..()
-	update_icon(1)
+	update_icon()
 
 /turf/simulated/floor/proc/swap_decals()
 	var/current_decals = decals

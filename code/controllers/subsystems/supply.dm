@@ -67,8 +67,8 @@ SUBSYSTEM_DEF(supply)
 //Selling
 /datum/controller/subsystem/supply/proc/sell()
 	// Loop over each area in the supply shuttle
+	SEND_GLOBAL_SIGNAL(COMSIG_GLOB_SUPPLY_SHUTTLE_DEPART, shuttle.shuttle_area)
 	for(var/area/subarea in shuttle.shuttle_area)
-		callHook("sell_shuttle", list(subarea));
 		for(var/atom/movable/MA in subarea)
 			if(MA.anchored)
 				continue
@@ -79,90 +79,23 @@ SUBSYSTEM_DEF(supply)
 			EC.contents = list()
 			var/base_value = 0
 
-			// Must be in a crate!
+			// Most items must be in a crate!
+			var/sold_successfully = FALSE
 			if(istype(MA,/obj/structure/closet/crate))
 				var/obj/structure/closet/crate/CR = MA
-				callHook("sell_crate", list(CR, subarea))
 
 				points += CR.points_per_crate
 				if(CR.points_per_crate)
 					base_value = CR.points_per_crate
-				var/find_slip = 1
 
+				// For each thing in the crate, get the value and quantity
 				for(var/atom/A in CR)
-					EC.contents[++EC.contents.len] = list(
-							"object" = "\proper[A.name]",
-							"value" = 0,
-							"quantity" = 1
-						)
-
-					// Sell manifests
-					if(find_slip && istype(A,/obj/item/paper/manifest))
-						var/obj/item/paper/manifest/slip = A
-						if(!slip.is_copy && slip.stamped && slip.stamped.len) //yes, the clown stamp will work. clown is the highest authority on the station, it makes sense
-							points += points_per_slip
-							EC.contents[EC.contents.len]["value"] = points_per_slip
-							find_slip = 0
-						continue
-
-					// Sell phoron and platinum
-					if(istype(A, /obj/item/stack))
-						var/obj/item/stack/P = A
-						var/datum/material/mat = P.get_material()
-						if(mat?.supply_conversion_value)
-							EC.contents[EC.contents.len]["value"] = P.get_amount() * mat.supply_conversion_value
-						EC.contents[EC.contents.len]["quantity"] = P.get_amount()
-						EC.value += EC.contents[EC.contents.len]["value"]
-
-					//Sell spacebucks
-					if(istype(A, /obj/item/spacecash))
-						var/obj/item/spacecash/cashmoney = A
-						EC.contents[EC.contents.len]["value"] = cashmoney.worth * points_per_money
-						EC.contents[EC.contents.len]["quantity"] = cashmoney.worth
-						EC.value += EC.contents[EC.contents.len]["value"]
-
-					if(istype(A, /obj/item/reagent_containers/glass/beaker/vial/vaccine))
-						var/obj/item/reagent_containers/glass/beaker/vial/vaccine/sale_bottle = A
-						if(!istype(CR, /obj/structure/closet/crate/freezer))
-							EC.contents = list(
-								"error" = "Error: Product was improperly packaged. Send conents in freezer crate to preserve contents for transport."
-							)
-						else if(sale_bottle.reagents.reagent_list.len != 1 || sale_bottle.reagents.get_reagent_amount(REAGENT_ID_VACCINE) < sale_bottle.volume)
-							EC.contents = list(
-								"error" = "Error: Tainted product in batch. Was opened, contaminated, or was full. Payment rendered null under terms of agreement."
-							)
-						else
-							EC.contents[EC.contents.len]["value"] = 5
-							EC.value += EC.contents[EC.contents.len]["value"]
-
-					// CHOMPAdd Start - Sell salvage
-					if(istype(A, /obj/item/salvage))
-						var/obj/item/salvage/salvagedStuff = A
-						EC.contents[EC.contents.len]["value"] = salvagedStuff.worth
-					// CHOMPAdd End
-
-				// CHOMPedit begin - Selling engineered organs
-					if(istype(A, /obj/item/organ/internal))
-						var/obj/item/organ/internal/organ_stuff = A
-						if(!istype(CR,/obj/structure/closet/crate/freezer))
-							EC.contents = list(
-								"error" = "Error: Product was improperly packaged. Send contents in freezer crate to preserve contents for transport."
-							)
-						else if(organ_stuff.health != initial(organ_stuff.health) )
-							EC.contents = list(
-								"error" = "Error: Product was damaged on arrival."
-							)
-						else
-							EC.contents[EC.contents.len]["value"] = organ_stuff.supply_conversion_value
-							EC.value += EC.contents[EC.contents.len]["value"]
-					// CHOMPedit end
-
-
-			// Make a log of it, but it wasn't shipped properly, and so isn't worth anything
+					sold_successfully = SEND_SIGNAL(A,COMSIG_ITEM_SOLD,EC,TRUE)
 			else
-				EC.contents = list(
-						"error" = "Error: Product was improperly packaged. Payment rendered null under terms of agreement."
-					)
+				// Selling things that are not in crates.
+				// Usually it just makes a log that it wasn't shipped properly, and so isn't worth anything
+				sold_successfully = SEND_SIGNAL(MA,COMSIG_ITEM_SOLD,EC,FALSE)
+			SEND_GLOBAL_SIGNAL(COMSIG_GLOB_SUPPLY_SHUTTLE_SELL_ITEM, MA, sold_successfully, EC, subarea)
 
 			exported_crates += EC
 			points += EC.value
@@ -238,7 +171,7 @@ SUBSYSTEM_DEF(supply)
 					A.req_access = L.Copy()
 					LAZYCLEARLIST(A.req_one_access)
 				else
-					log_debug(span_danger("Supply pack with invalid access restriction [SP.access] encountered!"))
+					log_runtime(span_danger("Supply pack with invalid access restriction [SP.access] encountered!"))
 
 		//supply manifest generation begin
 		var/obj/item/paper/manifest/slip

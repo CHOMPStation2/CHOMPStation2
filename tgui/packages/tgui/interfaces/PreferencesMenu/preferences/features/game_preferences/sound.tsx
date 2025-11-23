@@ -1,7 +1,9 @@
 import {
   CheckboxInput,
+  type Feature,
   FeatureNumberInput,
   type FeatureNumeric,
+  FeatureSliderInput,
   type FeatureToggle,
 } from '../base';
 
@@ -24,6 +26,13 @@ export const SOUND_AMBIENCE: FeatureToggle = {
   category: 'SOUNDS',
   description: 'Enable hearing ambient sounds and music.',
   component: CheckboxInput,
+};
+
+export const sound_instruments: Feature<number> = {
+  name: 'Instruments volume',
+  category: 'SOUND',
+  description: 'Volume of instruments.',
+  component: FeatureSliderInput,
 };
 
 export const SOUND_JUKEBOX: FeatureToggle = {
@@ -58,6 +67,14 @@ export const SAY_SOUNDS: FeatureToggle = {
   name: 'Say Sounds',
   category: 'SOUNDS',
   description: 'Enable hearing a sound when somebody speaks using say.',
+  component: CheckboxInput,
+};
+
+export const BLOOP_SOUNDS: FeatureToggle = {
+  name: 'Multiple Say Sounds',
+  category: 'SOUNDS',
+  description:
+    'Enable hearing a say sound play multiple times for longer messages.',
   component: CheckboxInput,
 };
 
@@ -151,5 +168,12 @@ export const ambience_chance: FeatureNumeric = {
   category: 'SOUNDS',
   description:
     "The chance you'd like to hear ambience played to you (On area change, or by random ambience). 35 means a 35% chance to play ambience. This is a range from 0-100. 0 disables ambience playing entirely. This is also affected by Ambience Frequency.",
+  component: FeatureNumberInput,
+};
+
+export const media_volume: FeatureNumeric = {
+  name: 'Jukebox Volume',
+  category: 'SOUNDS',
+  description: 'The percentage volume of the Jukebox from 0% to 100%.',
   component: FeatureNumberInput,
 };

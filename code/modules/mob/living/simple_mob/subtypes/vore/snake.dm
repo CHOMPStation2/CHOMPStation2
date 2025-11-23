@@ -54,7 +54,7 @@
 
 	ai_holder_type = /datum/ai_holder/simple_mob/melee
 
-	can_be_drop_prey = FALSE //CHOMP Add
+	can_be_drop_prey = FALSE
 	allow_mind_transfer = TRUE
 
 // Activate Noms!
@@ -64,11 +64,7 @@
 	vore_icons = SA_ICON_LIVING
 	swallowTime = 2 SECONDS // Hungry little bastards.
 
-/mob/living/simple_mob/vore/aggressive/giant_snake/init_vore()
-	if(!voremob_loaded)
-		return
-	if(LAZYLEN(vore_organs))
-		return
+/mob/living/simple_mob/vore/aggressive/giant_snake/load_default_bellies()
 	. = ..()
 	var/obj/belly/B = vore_selected
 	B.name = "stomach"
