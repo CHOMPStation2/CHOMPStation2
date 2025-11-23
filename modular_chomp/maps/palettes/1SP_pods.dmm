@@ -30455,7 +30455,7 @@
 /area/template_noop)
 "tcF" = (
 /obj/structure/closet/walllocker_double/south{
-	name = s
+	name = "Survival Cabinet"
 	},
 /obj/item/storage/backpack/messenger,
 /obj/item/reagent_containers/food/drinks/cans/waterbottle,
