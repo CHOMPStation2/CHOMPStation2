@@ -3776,11 +3776,6 @@
 	temperature = 293.15
 	},
 /area/casino/wilderness)
-"dAi" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/wood/sif/broken,
-/area/casino/lodge)
 "dBp" = (
 /obj/machinery/floor_light/prebuilt,
 /turf/simulated/floor/glass{
@@ -6296,14 +6291,6 @@
 /obj/structure/event/present,
 /turf/simulated/floor/carpet/turcarpet,
 /area/casino/north_foyer)
-"giq" = (
-/obj/structure/bed/chair/wood{
-	dir = 8
-	},
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/carpet,
-/area/casino/lodge)
 "giO" = (
 /turf/simulated/floor/wood/alt/parquet,
 /area/casino/dorm6)
@@ -17676,12 +17663,6 @@
 	},
 /turf/simulated/floor/wood/sif,
 /area/casino/lodge)
-"qXR" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/random/junk,
-/turf/simulated/floor/wood/sif,
-/area/casino/lodge)
 "qYn" = (
 /obj/machinery/media/jukebox/casinojukebox,
 /turf/simulated/wall/golddiamond,
@@ -21618,11 +21599,6 @@
 /mob/living/simple_mob/vore/horse/big,
 /turf/simulated/floor/wood/sif,
 /area/casino/lodge)
-"uyV" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/carpet/turcarpet,
-/area/casino/lodge)
 "uzx" = (
 /obj/structure/undies_wardrobe,
 /obj/item/towel/random{
@@ -22205,11 +22181,6 @@
 	temperature = 300
 	},
 /area/casino/mountains)
-"vbG" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/wood/sif,
-/area/casino/lodge)
 "vce" = (
 /obj/structure/table/reinforced,
 /obj/item/grenade/spawnergrenade/casino/tindalos,
@@ -35460,7 +35431,7 @@ dsE
 bZB
 dsY
 iFS
-vbG
+iFS
 cNU
 jAE
 sLu
@@ -36494,7 +36465,7 @@ dPY
 dsX
 iFS
 iFS
-vbG
+iFS
 dsY
 dsY
 dsY
@@ -37008,7 +36979,7 @@ xvQ
 rAC
 miE
 lJQ
-vbG
+iFS
 iFS
 spx
 mVV
@@ -37777,7 +37748,7 @@ rVW
 aDR
 dsY
 lcv
-giq
+aat
 iFS
 vah
 dsY
@@ -39329,7 +39300,7 @@ rAh
 sLu
 dsX
 iFS
-dAi
+kFr
 xmi
 vah
 dsY
@@ -39587,7 +39558,7 @@ xvQ
 dsY
 nch
 iFS
-vbG
+iFS
 dsY
 dsX
 miE
@@ -39845,7 +39816,7 @@ dsX
 dsX
 dsX
 axV
-qXR
+hVj
 rAV
 dsX
 dsX
@@ -40619,7 +40590,7 @@ eiK
 iFS
 vah
 kFr
-vbG
+iFS
 dsY
 dsX
 iFS
@@ -40877,7 +40848,7 @@ jkS
 mRD
 dsX
 iFS
-vbG
+iFS
 dsY
 mQZ
 iFS
@@ -41646,9 +41617,9 @@ oOt
 oOt
 aDR
 pMH
-uyV
+krT
 mvn
-qXR
+hVj
 vah
 dsY
 kFr
@@ -41915,7 +41886,7 @@ vah
 dsY
 lcv
 lcv
-vbG
+iFS
 dsX
 xxr
 oOt
