@@ -3022,7 +3022,7 @@
 /area/survivalpod/superpose/CultShip)
 "aBE" = (
 /obj/machinery/door/airlock/maintenance{
-	req_access = nullreq_one_access_txt = "0"
+	req_access = null
 	},
 /obj/machinery/door/firedoor,
 /turf/simulated/floor/tiled/steel_grid,
