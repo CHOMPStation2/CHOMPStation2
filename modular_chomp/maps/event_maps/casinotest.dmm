@@ -6356,12 +6356,7 @@
 /obj/item/storage/box/fluff/swimsuit,
 /obj/item/storage/box/fluff/swimsuit,
 /obj/item/storage/box/fluff/swimsuit,
-/obj/machinery/smartfridge/survival_pod{
-	icon = 'icons/obj/vending.dmi';
-	icon_base = "smartfridge";
-	icon_contents = "boxes";
-	icon_state = "smartfridge";
-	name = "Advanced storage";
+/obj/machinery/smartfridge/survival_pod/casino{
 	pixel_x = -3;
 	pixel_y = -1
 	},
@@ -8341,12 +8336,7 @@
 /obj/effect/floor_decal/corner/paleblue/border{
 	dir = 1
 	},
-/obj/machinery/smartfridge/survival_pod{
-	icon = 'icons/obj/vending.dmi';
-	icon_base = "smartfridge";
-	icon_contents = "boxes";
-	icon_state = "smartfridge";
-	name = "Advanced storage";
+/obj/machinery/smartfridge/survival_pod/casino{
 	pixel_y = -1
 	},
 /turf/simulated/floor/tiled/white,
