@@ -348,3 +348,28 @@
   - code_imp: Implements COMSIG_GLOB_ITEM_TRASH_EATEN
   - bugfix: default trash eating message being sent to the item's chat and not the
       mob's
+2025-11-23:
+  AnymousUnknow & Diana:
+  - rscadd: Adds protogen visor markings
+  - rscadd: Adds Oak Tree markings
+  - rscadd: Adds Admin-only Skeleton markings
+  - rscadd: Adds a thin and thinner body marking
+  - code_imp: Adds backend code to allow markings to be admin-selectable only
+  CHOMPStation2StaffMirrorBot:
+  - code_imp: dependency update
+  Diana:
+  - bugfix: PAI parts now give the proper parts when screwdrivered and having them
+      removed
+  Fluffyzack21:
+  - maptweak: Moves the cables, waste, and supply to make it flush with everything
+      else on sif outpost and on carrier on Southern Cross
+  - maptweak: Moved around the scrubbers and pumps in the carrier
+  - maptweak: Moves the cables, waste, and supply to make it flush with everything
+      else on deck 0 &1 & 2 & 3 on Southern Cross
+  - maptweak: Removed most of all the regulators and shut off valves found in Southern
+      Cross
+  Will, Reo:
+  - bugfix: Fixed several distance issues with slipcode
+  - bugfix: You cannot change direction while slipping
+  - bugfix: Simple mobs no longer slip by default
+  - bugfix: Species flag NO_SLIP is respected by slipcode again

@@ -1,5 +1,0 @@
-author: "Fluffyzack21"
-delete-after: True
-changes:
-  - maptweak: "Moves the cables, waste, and supply to make it flush with everything else on deck 0 &1 & 2 & 3 on Southern Cross"
-  - maptweak: "Removed most of all the regulators and shut off valves found in Southern Cross"
