@@ -14022,6 +14022,9 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 8
 	},
+/obj/structure/cable/blue{
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled,
 /area/surface/outpost/main/corridor/left_upper)
 "Bb" = (

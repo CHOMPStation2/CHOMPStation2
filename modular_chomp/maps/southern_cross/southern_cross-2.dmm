@@ -4783,6 +4783,9 @@
 /obj/effect/floor_decal/corner/green/border{
 	dir = 4
 	},
+/obj/structure/cable{
+	icon_state = "0-8"
+	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/firstdeck/ascenter)
 "ayf" = (
@@ -81189,7 +81192,7 @@ eTN
 fXY
 dVK
 isy
-jJe
+lkw
 jJe
 mse
 ofL
