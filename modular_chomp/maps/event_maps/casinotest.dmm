@@ -1924,14 +1924,9 @@
 /area/casino/dorm4)
 "bNr" = (
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 4;
-	dir = 4;
 	icon_state = "2-4"
 	},
 /obj/machinery/light{
@@ -2111,8 +2106,6 @@
 /area/casino/dorm_north_foyer)
 "bUE" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /turf/simulated/floor/plating,
@@ -5181,8 +5174,6 @@
 /area/casino/dorm8)
 "eXM" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/manifold/visible/yellow{
@@ -6442,17 +6433,6 @@
 	outdoors = 0
 	},
 /area/casino/dragon_vault)
-"gmi" = (
-/obj/structure/cable{
-	d1 = 2;
-	d2 = 4;
-	icon_state = "2-4"
-	},
-/obj/machinery/light{
-	dir = 8
-	},
-/turf/simulated/floor/plating,
-/area/casino/engineering)
 "gmB" = (
 /turf/simulated/floor/outdoors/dirt{
 	can_atmos_pass = 0;
@@ -7604,7 +7584,7 @@
 "hsL" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 8;
-	frequency = 1380;
+	frequency = 1383;
 	id_tag = "casino2_pump"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -8775,13 +8755,9 @@
 /area/casino/helm)
 "iod" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/plating,
@@ -8970,12 +8946,6 @@
 /obj/structure/curtain/open/shower/engineering,
 /turf/simulated/floor/tiled/kafel_full,
 /area/casino/dorm1)
-"izw" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/closet/crate/bin,
-/turf/simulated/floor/wood/sif,
-/area/casino/lodge)
 "izD" = (
 /turf/simulated/floor/water/deep,
 /area/casino/wilderness)
@@ -9260,13 +9230,9 @@
 /area/casino/north_foyer)
 "iTR" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
@@ -9848,9 +9814,6 @@
 /area/casino/sand_maze)
 "jzP" = (
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 4;
-	dir = 4;
 	icon_state = "2-4"
 	},
 /obj/machinery/light{
@@ -10843,7 +10806,7 @@
 "kza" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 8;
-	frequency = 1380;
+	frequency = 1383;
 	id_tag = "casino2_pump"
 	},
 /obj/machinery/light/small{
@@ -11902,13 +11865,9 @@
 /area/casino/mountains)
 "lBs" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/yellow,
@@ -12772,8 +12731,6 @@
 /area/casino/dorm5)
 "mrW" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/yellow,
@@ -13557,8 +13514,6 @@
 /area/casino/lodge)
 "ncn" = (
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/plating,
@@ -14848,14 +14803,10 @@
 /area/casino/north_foyer)
 "okF" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/yellow,
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /turf/simulated/floor/plating,
@@ -15732,8 +15683,6 @@
 /area/casino/north_foyer)
 "pdv" = (
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/machinery/power/terminal{
@@ -16523,16 +16472,12 @@
 /area/casino/dorm9)
 "pOL" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
 	dir = 5
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /turf/simulated/floor/plating,
@@ -16799,14 +16744,6 @@
 	dir = 4
 	},
 /turf/simulated/wall/r_lead,
-/area/casino/engineering)
-"pYc" = (
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/turf/simulated/floor/plating,
 /area/casino/engineering)
 "pYZ" = (
 /obj/effect/zone_divider,
@@ -18757,19 +18694,6 @@
 	},
 /turf/simulated/floor/carpet/blucarpet,
 /area/casino/dorm5)
-"rTQ" = (
-/obj/structure/cable{
-	d1 = 2;
-	d2 = 4;
-	icon_state = "2-4"
-	},
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/turf/simulated/floor/plating,
-/area/casino/engineering)
 "rUe" = (
 /obj/structure/table/glass,
 /obj/item/storage/box/donkpockets{
@@ -18925,7 +18849,7 @@
 "rXP" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 8;
-	frequency = 1380;
+	frequency = 1383;
 	id_tag = "casino1_pump"
 	},
 /obj/machinery/light/small{
@@ -18952,19 +18876,12 @@
 /area/casino/security)
 "rYC" = (
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 4;
-	dir = 4;
 	icon_state = "2-4"
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/plating,
@@ -20439,7 +20356,7 @@
 "tmk" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 8;
-	frequency = 1380;
+	frequency = 1383;
 	id_tag = "casino1_pump"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -20473,8 +20390,6 @@
 /area/casino/wilderness)
 "tpa" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/plating,
@@ -22657,14 +22572,9 @@
 /area/casino/engineering)
 "vqH" = (
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 4;
-	dir = 4;
 	icon_state = "2-4"
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/plating,
@@ -23500,14 +23410,10 @@
 /area/casino/south_foyer)
 "wfR" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/yellow,
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/plating,
@@ -35339,7 +35245,7 @@ bFc
 bFc
 kHr
 kHr
-gmi
+jzP
 eCh
 tIw
 uwi
@@ -35597,7 +35503,7 @@ rqi
 rqi
 kHr
 fKI
-rTQ
+vqH
 eCh
 tIw
 oJA
@@ -35855,7 +35761,7 @@ pra
 pra
 pra
 fKI
-rTQ
+vqH
 eCh
 tIw
 rXa
@@ -36113,7 +36019,7 @@ lvR
 pra
 ptt
 fKI
-rTQ
+vqH
 eCh
 hXF
 jiV
@@ -36889,7 +36795,7 @@ ptt
 awo
 gJR
 xtx
-pYc
+pNS
 pSW
 jPr
 gZX
@@ -39693,7 +39599,7 @@ vbG
 dsY
 dsX
 miE
-izw
+gJS
 iFS
 krx
 dsX
