@@ -373,3 +373,10 @@
   - bugfix: You cannot change direction while slipping
   - bugfix: Simple mobs no longer slip by default
   - bugfix: Species flag NO_SLIP is respected by slipcode again
+2025-11-24:
+  Fluffyzack21:
+  - maptweak: Added some more pissing pipes on deck 0 and deck 2 on southern cross
+  Nova:
+  - bugfix: Fixed body writing being silent in chat, and instant
+  - bugfix: Fixed body writing having no message notifications.
+  - rscadd: Added ability to resist / move away from being body written.
