@@ -5,9 +5,15 @@
 	name = REAGENT_SIZEOXADONE
 	id = REAGENT_ID_SIZEOXADONE
 	result = REAGENT_ID_SIZEOXADONE
+<<<<<<< HEAD
 	required_reagents = list(REAGENT_ID_CRYPTOBIOLIN = 1, REAGENT_ID_TRAMADOL = 3) //CHOMPEdit: Replaced cloneadex with cryptobiolin, removed phoron
 	//catalysts = list(REAGENT_ID_PHORON = 5) CHOMPedit: Please no locking my scene tool behind phoron, please and thank you.
 	result_amount = 5
+=======
+	required_reagents = list(REAGENT_ID_SODIUM = 1, REAGENT_ID_TRAMADOL = 1)
+	catalysts = list(REAGENT_ID_PHORON = 5)
+	result_amount = 2
+>>>>>>> 02bc689eaa (Makes sizeoxadone more affordable (#18809))
 
 /decl/chemical_reaction/instant/macrocillin
 	name = REAGENT_MACROCILLIN
