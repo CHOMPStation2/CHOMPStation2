@@ -255,7 +255,7 @@
 		return
 
 	if(multiplier)
-		amount = max(0, min(amount, total_volume, target.get_free_space() / multiplier))
+		amount = max(0, min(amount, total_volume, target.get_free_space() / multiplier)) * multiplier //CHOMPEdit
 	else
 		amount = max(0, min(amount, total_volume))
 
@@ -269,7 +269,7 @@
 	for(var/datum/reagent/current in reagent_list)
 		var/amount_to_transfer = current.volume * part
 		if(current.dialysis_returnable || (!current.dialysis_returnable && ismob(target))) //Prevents duplication of reagents.
-			target.add_reagent(current.id, amount_to_transfer * multiplier, current.get_data(), safety = 1, was_from_belly = (current.from_belly || target_is_belly), can_dialysis = can_dialysis) // We don't react until everything is in place
+			target.add_reagent(current.id, amount_to_transfer, current.get_data(), safety = 1, was_from_belly = (current.from_belly || target_is_belly), can_dialysis = can_dialysis) // We don't react until everything is in place //CHOMPEdit
 		if(!copy)
 			remove_reagent(current.id, amount_to_transfer, 1)
 
