@@ -380,3 +380,8 @@
   - bugfix: Fixed body writing being silent in chat, and instant
   - bugfix: Fixed body writing having no message notifications.
   - rscadd: Added ability to resist / move away from being body written.
+2025-11-26:
+  Nova:
+  - code_imp: Optimized some of the older circuitry code.
+  Will:
+  - rscadd: Maintenance panels
