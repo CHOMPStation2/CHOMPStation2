@@ -97,9 +97,11 @@
 	special_attack_max_range = 2
 	special_attack_cooldown = 10 SECONDS
 
-/mob/living/simple_mob/animal/tyr/mineral_ants/copper/do_special_attack(atom/A)
-	empulse(src.loc, 1, 2, 3, 4)
-	playsound(src, 'sound/weapons/Egloves.ogg', 75, 1)
+/mob/living/simple_mob/animal/tyr/mineral_ants/copper/bullet_act(obj/item/projectile/P)
+	if(istype(P, /obj/item/projectile/energy) || istype(P, /obj/item/projectile/beam))
+		visible_message(span_cult("[P] seems ineffective!."))
+	else
+		..()
 
 /mob/living/simple_mob/animal/tyr/mineral_ants/agate //rushes at you and explodes
 	name = "agate metal ant"
