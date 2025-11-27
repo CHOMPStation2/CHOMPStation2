@@ -21,7 +21,7 @@
 	unacidable = TRUE
 	special_attack_min_range = 0
 	special_attack_max_range = 7
-	wreckage = /obj/item/prop/tyrlore/drones
+	wreckage = /obj/item/prop/tyrlore/gatekeeper
 
 	loot_list = list(/obj/item/gun/energy/tyr_rifle  = 30,
 		/obj/item/tool/wirecutters/hybrid/alien  = 30,
