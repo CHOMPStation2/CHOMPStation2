@@ -393,11 +393,7 @@ var/list/flooring_types
 
 /decl/flooring/linoleum
 	name = "linoleum"
-<<<<<<< HEAD
-	desc = "It's like the 2390's all over again."
-=======
-	desc = "It's like the 2090's all over again."
->>>>>>> d871b645fa (Woodstravaganza (#18814))
+	desc = "It's like the 2390's all over again." //CHOMPEDIT - Age
 	icon = 'icons/turf/flooring/linoleum.dmi'
 	icon_base = "lino"
 	can_paint = 1
