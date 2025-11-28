@@ -98,13 +98,9 @@
 #define MAT_LEATHER			"leather"
 #define MAT_CLOTH			"cloth"
 #define MAT_SYNCLOTH		"syncloth"
-<<<<<<< HEAD
 // # define MAT_CARPET			"carpet" // CHOMPRemove
-=======
-#define MAT_CARPET			"carpet"
 #define MAT_COTTON			"cotton"
 
->>>>>>> d871b645fa (Woodstravaganza (#18814))
 // colours
 #define MAT_CLOTH_TEAL		"teal"
 #define MAT_CLOTH_BLACK		"black"
