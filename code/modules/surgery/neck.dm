@@ -84,11 +84,7 @@
 	allowed_procs = list(IS_SCREWDRIVER = 75)
 
 	min_duration = 200 //Very. Very. Carefully.
-<<<<<<< HEAD
-	max_duration = 200 //CHOMPedit
-=======
 	max_duration = 200
->>>>>>> 9a2fa8b1cf (More surgery tweaks and fixes (#18823))
 
 /datum/surgery_step/brainstem/drill_vertebrae/can_use(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	return ..() && target.op_stage.brainstem == 1
@@ -174,11 +170,7 @@
 		/obj/item/assembly/mousetrap = 25)
 
 	min_duration = 100
-<<<<<<< HEAD
 	max_duration = 100 //CHOMPedit
-=======
-	max_duration = 100
->>>>>>> 9a2fa8b1cf (More surgery tweaks and fixes (#18823))
 
 /datum/surgery_step/brainstem/mend_cord/can_use(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	return ..() && target.op_stage.brainstem == 3
@@ -219,11 +211,7 @@
 		/obj/item/tape_roll = 50)
 
 	min_duration = 100
-<<<<<<< HEAD
-	max_duration = 100 //CHOMPedit
-=======
 	max_duration = 100
->>>>>>> 9a2fa8b1cf (More surgery tweaks and fixes (#18823))
 
 /datum/surgery_step/brainstem/mend_vertebrae/can_use(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	return ..() && target.op_stage.brainstem == 4

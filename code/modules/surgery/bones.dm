@@ -75,13 +75,8 @@
 
 	allowed_procs = list(IS_WRENCH = 75)
 
-<<<<<<< HEAD
 	min_duration = 30 //CHOMPedit
 	max_duration = 45 //CHOMPedit
-=======
-	min_duration = 60
-	max_duration = 60
->>>>>>> 9a2fa8b1cf (More surgery tweaks and fixes (#18823))
 
 /datum/surgery_step/bones/set_bone/can_use(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
@@ -121,13 +116,8 @@
 
 	allowed_procs = list(IS_WRENCH = 75)
 
-<<<<<<< HEAD
 	min_duration = 40 //CHOMPedit
 	max_duration = 50 //CHOMPedit
-=======
-	min_duration = 60
-	max_duration = 60
->>>>>>> 9a2fa8b1cf (More surgery tweaks and fixes (#18823))
 
 /datum/surgery_step/bones/mend_skull/can_use(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
@@ -170,13 +160,8 @@
 	can_infect = 1
 	blood_level = 1
 
-<<<<<<< HEAD
 	min_duration = 30 //CHOMPedit
 	max_duration = 30 //CHOMPedit
-=======
-	min_duration = 50
-	max_duration = 50
->>>>>>> 9a2fa8b1cf (More surgery tweaks and fixes (#18823))
 
 /datum/surgery_step/bones/finish_bone/can_use(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
@@ -216,13 +201,8 @@
 	can_infect = 1
 	blood_level = 1
 
-<<<<<<< HEAD
 	min_duration = 45 //CHOMPedit
 	max_duration = 55 //CHOMPedit
-=======
-	min_duration = 70
-	max_duration = 70
->>>>>>> 9a2fa8b1cf (More surgery tweaks and fixes (#18823))
 
 /datum/surgery_step/bones/clamp_bone/can_use(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)

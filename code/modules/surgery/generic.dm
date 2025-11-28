@@ -37,13 +37,8 @@
 	)
 	req_open = 0
 
-<<<<<<< HEAD
 	min_duration = 40 //CHOMPedit
 	max_duration = 50 //CHOMPedit
-=======
-	min_duration = 90
-	max_duration = 90
->>>>>>> 9a2fa8b1cf (More surgery tweaks and fixes (#18823))
 
 /datum/surgery_step/generic/cut_open/can_use(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	if(..())
@@ -91,13 +86,8 @@
 	)
 	priority = 2
 	req_open = 0
-<<<<<<< HEAD
 	min_duration = 40 //CHOMPedit
 	max_duration = 50 //CHOMPedit
-=======
-	min_duration = 90
-	max_duration = 90
->>>>>>> 9a2fa8b1cf (More surgery tweaks and fixes (#18823))
 	excludes_steps = list(/datum/surgery_step/generic/cut_open)
 
 /datum/surgery_step/generic/cut_with_laser/can_use(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
@@ -152,13 +142,8 @@
 
 	priority = 2
 	req_open = 0
-<<<<<<< HEAD
 	min_duration = 60 //Chompedit
 	max_duration = 70 //CHOMPedit
-=======
-	min_duration = 80
-	max_duration = 80
->>>>>>> 9a2fa8b1cf (More surgery tweaks and fixes (#18823))
 	excludes_steps = list(/datum/surgery_step/generic/cut_open)
 
 /datum/surgery_step/generic/incision_manager/can_use(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
@@ -208,13 +193,8 @@
 		/obj/item/assembly/mousetrap = 25
 	)
 
-<<<<<<< HEAD
 	min_duration = 30 //CHOMPedit
 	max_duration = 30 //CHOMPedit
-=======
-	min_duration = 40
-	max_duration = 40
->>>>>>> 9a2fa8b1cf (More surgery tweaks and fixes (#18823))
 
 /datum/surgery_step/generic/clamp_bleeders/can_use(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	if(..())
@@ -265,11 +245,7 @@
 	allowed_procs = list(IS_CROWBAR = 75)
 
 	min_duration = 30
-<<<<<<< HEAD
-	max_duration = 30 //CHOMPedit
-=======
 	max_duration = 30
->>>>>>> 9a2fa8b1cf (More surgery tweaks and fixes (#18823))
 
 /datum/surgery_step/generic/retract_skin/can_use(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	if(..())
@@ -349,13 +325,8 @@
 		/obj/item/weldingtool = 25
 	)
 
-<<<<<<< HEAD
 	min_duration = 30 //CHOMPedit
 	max_duration = 50 //CHOMPedit
-=======
-	min_duration = 70
-	max_duration = 70
->>>>>>> 9a2fa8b1cf (More surgery tweaks and fixes (#18823))
 
 /datum/surgery_step/generic/cauterize/can_use(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	if(..())
@@ -399,13 +370,8 @@
 	)
 	req_open = 0
 
-<<<<<<< HEAD
 	min_duration = 100 //CHOMPedit
 	max_duration = 120 //CHOMPedit
-=======
-	min_duration = 110
-	max_duration = 110
->>>>>>> 9a2fa8b1cf (More surgery tweaks and fixes (#18823))
 
 /datum/surgery_step/generic/amputate/can_use(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	if (target_zone == O_EYES)	//there are specific steps for eye surgery
