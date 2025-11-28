@@ -118,10 +118,27 @@
 /turf/simulated/wall/sifwood/Initialize(mapload)
 	. = ..(mapload,  MAT_SIFWOOD)
 
+<<<<<<< HEAD
 // CHOMPEdit Start
 /turf/simulated/wall/rsifwood/Initialize(mapload)
 	. = ..(mapload,  MAT_SIFWOOD, MAT_SIFWOOD, MAT_SIFWOOD)
 // CHOMPEdit End
+=======
+/turf/simulated/wall/birchwood/Initialize(mapload)
+	. = ..(mapload,  MAT_BIRCHWOOD)
+
+/turf/simulated/wall/pinewood/Initialize(mapload)
+	. = ..(mapload,  MAT_PINEWOOD)
+
+/turf/simulated/wall/oakwood/Initialize(mapload)
+	. = ..(mapload,  MAT_OAKWOOD)
+
+/turf/simulated/wall/acaciawood/Initialize(mapload)
+	. = ..(mapload,  MAT_ACACIAWOOD)
+
+/turf/simulated/wall/redwood/Initialize(mapload)
+	. = ..(mapload,  MAT_REDWOOD)
+>>>>>>> d871b645fa (Woodstravaganza (#18814))
 
 /turf/simulated/wall/log/Initialize(mapload)
 	. = ..(mapload,  MAT_LOG)
