@@ -51,10 +51,17 @@
 
 /obj/item/organ/external/head/unbreakable/slime	//They don't need this anymore.
 	nonsolid = 1
+<<<<<<< HEAD
 	cannot_gib = 0
 	vital = 0
 	max_damage = 45 //ChompEdit matching our changes to broken bones for less squishy people.
 	encased = 0
+=======
+	cannot_gib = FALSE
+	vital = FALSE
+	max_damage = 30
+	encased = FALSE
+>>>>>>> 9a2fa8b1cf (More surgery tweaks and fixes (#18823))
 	spread_dam = 1
 
 /*

@@ -3,7 +3,7 @@
 //						COMMON STEPS							//
 //////////////////////////////////////////////////////////////////
 
-/datum/surgery_step/generic/
+/datum/surgery_step/generic
 	can_infect = 1
 
 /datum/surgery_step/generic/can_use(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
@@ -37,13 +37,18 @@
 	)
 	req_open = 0
 
+<<<<<<< HEAD
 	min_duration = 40 //CHOMPedit
 	max_duration = 50 //CHOMPedit
+=======
+	min_duration = 90
+	max_duration = 90
+>>>>>>> 9a2fa8b1cf (More surgery tweaks and fixes (#18823))
 
 /datum/surgery_step/generic/cut_open/can_use(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	if(..())
 		var/obj/item/organ/external/affected = target.get_organ(target_zone)
-		return affected && affected.open == 0 && target_zone != O_MOUTH
+		return affected && !affected.open && target_zone != O_MOUTH
 
 /datum/surgery_step/generic/cut_open/begin_step(mob/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
@@ -58,7 +63,7 @@
 	user.visible_message(span_notice("[user] has made an incision on [target]'s [affected.name] with \the [tool]."), \
 	span_notice("You have made an incision on [target]'s [affected.name] with \the [tool]."),)
 	user.balloon_alert_visible("opens an incision on [target]'s [affected.name]", "incision open on \the [affected.name]")
-	affected.open = 1
+	affected.open = INCISION_MADE
 
 	if(istype(target) && target.should_have_organ(O_HEART))
 		affected.status |= ORGAN_BLEEDING
@@ -86,14 +91,19 @@
 	)
 	priority = 2
 	req_open = 0
+<<<<<<< HEAD
 	min_duration = 40 //CHOMPedit
 	max_duration = 50 //CHOMPedit
+=======
+	min_duration = 90
+	max_duration = 90
+>>>>>>> 9a2fa8b1cf (More surgery tweaks and fixes (#18823))
 	excludes_steps = list(/datum/surgery_step/generic/cut_open)
 
 /datum/surgery_step/generic/cut_with_laser/can_use(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	if(..())
 		var/obj/item/organ/external/affected = target.get_organ(target_zone)
-		return affected && affected.open == 0 && target_zone != O_MOUTH
+		return affected && !affected.open && target_zone != O_MOUTH
 
 /datum/surgery_step/generic/cut_with_laser/begin_step(mob/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
@@ -105,7 +115,7 @@
 
 /datum/surgery_step/generic/cut_with_laser/end_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
-	affected.open = 1
+	affected.open = INCISION_MADE
 
 	affected.createwound(CUT, 1)
 	var/clamp_chance = 0
@@ -121,9 +131,6 @@
 		user.visible_message(span_notice("[user] has made an incision on [target]'s [affected.name] with \the [tool], but blood is still escaping from the wound."), \
 		span_notice("You have made an incision on [target]'s [affected.name] with \the [tool], but blood is still coming from the wound.."),)
 		user.balloon_alert_visible("opens an incision on [target]'s [affected.name], blood still flowing", "incision open on \the [affected.name], but blood still flows")
-		//Could be cleaner ...
-
-	spread_germs_to_organ(affected, user)
 
 /datum/surgery_step/generic/cut_with_laser/fail_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
@@ -145,14 +152,19 @@
 
 	priority = 2
 	req_open = 0
+<<<<<<< HEAD
 	min_duration = 60 //Chompedit
 	max_duration = 70 //CHOMPedit
+=======
+	min_duration = 80
+	max_duration = 80
+>>>>>>> 9a2fa8b1cf (More surgery tweaks and fixes (#18823))
 	excludes_steps = list(/datum/surgery_step/generic/cut_open)
 
 /datum/surgery_step/generic/incision_manager/can_use(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	if(..())
 		var/obj/item/organ/external/affected = target.get_organ(target_zone)
-		return affected && affected.open == 0 && target_zone != O_MOUTH
+		return affected && !affected.open && target_zone != O_MOUTH
 
 /datum/surgery_step/generic/incision_manager/begin_step(mob/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
@@ -167,14 +179,14 @@
 	user.visible_message(span_notice("[user] has constructed a prepared incision on and within [target]'s [affected.name] with \the [tool]."), \
 	span_notice("You have constructed a prepared incision on and within [target]'s [affected.name] with \the [tool]."),)
 	user.balloon_alert_visible("constructs a prepared incision", "constructed prepared incision")
-	affected.open = 1
+	affected.open = INCISION_MADE
 
 	if(istype(target) && target.should_have_organ(O_HEART))
 		affected.status |= ORGAN_BLEEDING
 
 	affected.createwound(CUT, 1)
 	affected.organ_clamp()
-	affected.open = 2
+	affected.open = FLESH_RETRACTED
 
 /datum/surgery_step/generic/incision_manager/fail_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
@@ -196,13 +208,26 @@
 		/obj/item/assembly/mousetrap = 25
 	)
 
+<<<<<<< HEAD
 	min_duration = 30 //CHOMPedit
 	max_duration = 30 //CHOMPedit
+=======
+	min_duration = 40
+	max_duration = 40
+>>>>>>> 9a2fa8b1cf (More surgery tweaks and fixes (#18823))
 
 /datum/surgery_step/generic/clamp_bleeders/can_use(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	if(..())
 		var/obj/item/organ/external/affected = target.get_organ(target_zone)
-		return affected && affected.open && (affected.status & ORGAN_BLEEDING)
+		if(!affected)
+			return FALSE
+		var/internally_bleeding = FALSE
+		for(var/datum/wound/internal_bleeding/W in affected.wounds)
+			if(W.clamped)
+				continue
+			internally_bleeding = TRUE
+			break
+		return affected && affected.open && ((affected.status & ORGAN_BLEEDING) || internally_bleeding)
 
 /datum/surgery_step/generic/clamp_bleeders/begin_step(mob/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
@@ -218,7 +243,6 @@
 	span_notice("You clamp bleeders in [target]'s [affected.name] with \the [tool]."))
 	user.balloon_alert_visible("clamps bleeders", "clamped bleeders")
 	affected.organ_clamp()
-	spread_germs_to_organ(affected, user)
 
 /datum/surgery_step/generic/clamp_bleeders/fail_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
@@ -241,12 +265,16 @@
 	allowed_procs = list(IS_CROWBAR = 75)
 
 	min_duration = 30
+<<<<<<< HEAD
 	max_duration = 30 //CHOMPedit
+=======
+	max_duration = 30
+>>>>>>> 9a2fa8b1cf (More surgery tweaks and fixes (#18823))
 
 /datum/surgery_step/generic/retract_skin/can_use(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	if(..())
 		var/obj/item/organ/external/affected = target.get_organ(target_zone)
-		return affected && affected.open == 1 //&& !(affected.status & ORGAN_BLEEDING)
+		return affected && affected.open == INCISION_MADE
 
 /datum/surgery_step/generic/retract_skin/begin_step(mob/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
@@ -286,7 +314,7 @@
 		self_msgBall = "keeping the incision open on the lower abdomen."
 	user.visible_message(msg, self_msg)
 	user.balloon_alert_visible(msgBall, self_msgBall)
-	affected.open = 2
+	affected.open = FLESH_RETRACTED
 
 /datum/surgery_step/generic/retract_skin/fail_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
@@ -321,8 +349,13 @@
 		/obj/item/weldingtool = 25
 	)
 
+<<<<<<< HEAD
 	min_duration = 30 //CHOMPedit
 	max_duration = 50 //CHOMPedit
+=======
+	min_duration = 70
+	max_duration = 70
+>>>>>>> 9a2fa8b1cf (More surgery tweaks and fixes (#18823))
 
 /datum/surgery_step/generic/cauterize/can_use(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	if(..())
@@ -366,8 +399,13 @@
 	)
 	req_open = 0
 
+<<<<<<< HEAD
 	min_duration = 100 //CHOMPedit
 	max_duration = 120 //CHOMPedit
+=======
+	min_duration = 110
+	max_duration = 110
+>>>>>>> 9a2fa8b1cf (More surgery tweaks and fixes (#18823))
 
 /datum/surgery_step/generic/amputate/can_use(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	if (target_zone == O_EYES)	//there are specific steps for eye surgery
