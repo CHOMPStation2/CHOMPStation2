@@ -1181,6 +1181,15 @@
 	},
 /turf/simulated/floor/plating,
 /area/medical/virology)
+"acd" = (
+/obj/structure/closet/emcloset,
+/obj/item/storage/toolbox/emergency,
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/structure/handrail,
+/turf/simulated/shuttle/floor,
+/area/shuttle/cryo/station)
 "ace" = (
 /obj/structure/railing,
 /obj/machinery/alarm{
@@ -43312,6 +43321,9 @@
 /obj/effect/landmark{
 	name = "JoinLateCryo"
 	},
+/obj/structure/handrail{
+	dir = 4
+	},
 /turf/simulated/shuttle/floor,
 /area/shuttle/cryo/station)
 "dwx" = (
@@ -68014,6 +68026,9 @@
 /obj/effect/landmark{
 	name = "JoinLateCryo"
 	},
+/obj/structure/handrail{
+	dir = 4
+	},
 /turf/simulated/shuttle/floor,
 /area/shuttle/cryo/station)
 "rxD" = (
@@ -71360,6 +71375,9 @@
 /obj/item/storage/toolbox/emergency,
 /obj/machinery/light{
 	dir = 4
+	},
+/obj/structure/handrail{
+	dir = 1
 	},
 /turf/simulated/shuttle/floor,
 /area/shuttle/cryo/station)
@@ -105441,7 +105459,7 @@ aaa
 sEx
 xgL
 rcp
-tAj
+acd
 vEq
 eTM
 tAj
