@@ -147,10 +147,14 @@
 	},
 /obj/machinery/alarm{
 	dir = 1;
-	pixel_y = -22
+	pixel_y = -25
 	},
 /turf/simulated/open,
 /area/hallway/primary/thirddeck/aft)
+"aaA" = (
+/obj/effect/landmark/free_ai_shell,
+/turf/simulated/floor/bluegrid,
+/area/ai/ai_upload)
 "aaM" = (
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 4
@@ -389,7 +393,12 @@
 /area/ai)
 "ajC" = (
 /obj/structure/cable/cyan,
-/obj/machinery/power/smes/buildable/engine_default,
+/obj/machinery/power/smes/buildable{
+	charge = 5e+006;
+	input_attempt = 1;
+	input_level = 200000;
+	output_level = 200000
+	},
 /obj/machinery/flasher{
 	id = "AI";
 	pixel_y = -24
@@ -1530,7 +1539,6 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 1
 	},
-/obj/effect/landmark/free_ai_shell,
 /turf/simulated/floor/tiled/techfloor,
 /area/ai)
 "bng" = (
@@ -2762,8 +2770,11 @@
 /area/maintenance/solars/foreportsolar)
 "cpE" = (
 /obj/structure/cable,
-/obj/machinery/power/smes/buildable/max_charge_max_input{
-	RCon_tag = "Solar - Fore Port"
+/obj/machinery/power/smes/buildable{
+	RCon_tag = "Solar - Fore Port";
+	input_attempt = 1;
+	input_level = 150000;
+	output_level = 100000
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/solars/foreportsolar)
@@ -2907,8 +2918,11 @@
 /area/maintenance/thirddeck/forestarboard)
 "cxs" = (
 /obj/structure/cable,
-/obj/machinery/power/smes/buildable/max_charge_max_input{
-	RCon_tag = "Solar - Fore Starboard"
+/obj/machinery/power/smes/buildable{
+	RCon_tag = "Solar - Fore Starboard";
+	input_attempt = 1;
+	input_level = 150000;
+	output_level = 100000
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/solars/forestarboardsolar)
@@ -3774,6 +3788,7 @@
 /obj/structure/extinguisher_cabinet{
 	pixel_x = -28
 	},
+/obj/effect/landmark/free_ai_shell,
 /turf/simulated/floor/bluegrid,
 /area/ai/ai_upload)
 "dnd" = (
@@ -4329,9 +4344,6 @@
 /obj/structure/disposalpipe/segment,
 /obj/structure/cable{
 	icon_state = "1-2"
-	},
-/obj/structure/cable{
-	icon_state = "0-2"
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/forestarboard)
@@ -13244,7 +13256,7 @@
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/forestarboard)
 "lfV" = (
-/obj/item/clothing/under/swimsuit/stripper,
+/obj/item/clothing/under/swimsuit/stripper/stripper_green,
 /turf/simulated/floor/tiled,
 /area/maintenance/thirddeck/aftport)
 "lhc" = (
@@ -15702,8 +15714,11 @@
 /obj/structure/cable{
 	icon_state = "0-2"
 	},
-/obj/machinery/power/smes/buildable/max_charge_max_input{
-	RCon_tag = "Solar - Aft Port"
+/obj/machinery/power/smes/buildable{
+	RCon_tag = "Solar - Aft Port";
+	input_attempt = 1;
+	input_level = 150000;
+	output_level = 100000
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/solars/aftportsolar)
@@ -16161,8 +16176,11 @@
 /obj/structure/cable{
 	icon_state = "0-2"
 	},
-/obj/machinery/power/smes/buildable/engine_default{
-	RCon_tag = "Solar - Aft Starboard"
+/obj/machinery/power/smes/buildable{
+	RCon_tag = "Solar - Aft Starboard";
+	input_attempt = 1;
+	input_level = 150000;
+	output_level = 100000
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/solars/aftstarboardsolar)
@@ -24543,7 +24561,9 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
 	},
-/obj/machinery/door/firedoor/glass/hidden,
+/obj/machinery/door/firedoor/glass/hidden/steel{
+	dir = 1
+	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/thirddeck/aft)
 "uxE" = (
@@ -62277,7 +62297,7 @@ tja
 nGl
 tVT
 uuq
-upp
+kqE
 rNC
 uYk
 vmB
@@ -62535,7 +62555,7 @@ tkI
 twu
 tWU
 aaz
-upp
+kqE
 rNC
 aaj
 vlA
@@ -62743,7 +62763,7 @@ cEX
 cJI
 cSS
 cZQ
-cZQ
+aaA
 dsu
 dBh
 dNq

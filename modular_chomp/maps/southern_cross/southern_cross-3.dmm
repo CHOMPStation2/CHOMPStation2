@@ -781,8 +781,10 @@
 /obj/structure/cable{
 	icon_state = "0-4"
 	},
-/obj/machinery/power/smes/buildable/max_charge_max_input{
-	RCon_tag = "Substation - Atmospherics"
+/obj/machinery/power/smes/buildable{
+	RCon_tag = "Substation - Atmospherics";
+	charge = 2e+006;
+	input_attempt = 1
 	},
 /obj/structure/cable/cyan{
 	icon_state = "0-8"
@@ -1179,24 +1181,26 @@
 	},
 /turf/simulated/floor/plating,
 /area/medical/virology)
-"acd" = (
-/obj/structure/closet/emcloset,
-/obj/item/storage/toolbox/emergency,
-/obj/machinery/light{
-	dir = 1
-	},
-/obj/structure/handrail{
-	dir = 8
-	},
-/turf/simulated/shuttle/floor,
-/area/shuttle/cryo/station)
 "ace" = (
 /obj/structure/railing,
 /obj/machinery/alarm{
-	pixel_y = 22
+	pixel_y = 25
 	},
 /turf/simulated/open,
 /area/hallway/primary/seconddeck/aft)
+"acf" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/machinery/smartfridge/sheets{
+	desc = "An industrial sized storage unit for materials. B-Shift's agreement to retain materials doesn't extend to this storage device, so you should probably only stock this with sheets you need.";
+	name = "\improper Non-Persistent Industrial Sheet Storage"
+	},
+/obj/structure/fans/tiny,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/rnd/lab)
 "ack" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 10
@@ -3907,8 +3911,9 @@
 	name = "Engine Waste";
 	req_one_access = list(10,24)
 	},
-/obj/machinery/atmospherics/binary/pump{
+/obj/machinery/atmospherics/binary/pump/on{
 	dir = 1;
+	target_pressure = 15000;
 	name = "Hot Loop Waste Gas pump"
 	},
 /obj/machinery/button/remote/blast_door{
@@ -3923,7 +3928,6 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
-/obj/effect/engine_setup/pump_max,
 /turf/simulated/floor,
 /area/engineering/engine_waste)
 "ajX" = (
@@ -9809,13 +9813,14 @@
 /area/engineering/engine_room)
 "aEI" = (
 /obj/structure/cable,
-/obj/machinery/power/smes/buildable/engine_default{
-	RCon_tag = "Engine - Main"
+/obj/machinery/power/smes/buildable{
+	RCon_tag = "Engine - Main";
+	charge = 2e+007;
+	cur_coils = 4;
+	input_attempt = 1;
+	input_level = 750000;
+	output_level = 750000
 	},
-/obj/item/smes_coil,
-/obj/item/smes_coil,
-/obj/item/smes_coil,
-/obj/item/smes_coil,
 /obj/effect/engine_setup/smes/main,
 /turf/simulated/floor/plating,
 /area/engineering/engine_smes)
@@ -12196,6 +12201,7 @@
 /area/storage/emergency_storage/seconddeck/port_emergency)
 "aMP" = (
 /obj/structure/disposaloutlet{
+	launch_dist = 1;
 	pixel_y = -6
 	},
 /obj/structure/disposalpipe/trunk{
@@ -13607,7 +13613,8 @@
 "aRv" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/valve/digital/open{
-	dir = 4
+	dir = 4;
+	name = "Hot Loop Waste Gas Ejection Switch"
 	},
 /turf/simulated/floor,
 /area/engineering/engine_waste)
@@ -18562,8 +18569,12 @@
 /obj/structure/cable/cyan{
 	icon_state = "0-4"
 	},
-/obj/machinery/power/smes/buildable/engine_default{
-	RCon_tag = "Engine - Core"
+/obj/machinery/power/smes/buildable{
+	RCon_tag = "Engine - Core";
+	charge = 2e+006;
+	input_attempt = 1;
+	input_level = 100000;
+	output_level = 200000
 	},
 /obj/effect/engine_setup/smes,
 /turf/simulated/floor/plating,
@@ -25001,8 +25012,10 @@
 "bBc" = (
 /obj/machinery/atmospherics/binary/passive_gate{
 	dir = 1;
-	regulate_mode = 0;
-	unlocked = 1
+	regulate_mode = 1;
+	unlocked = 1;
+	name = "Hot Loop Waste Gas pressure regulator";
+	target_pressure = 1400
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/bar)
@@ -32743,7 +32756,9 @@
 /obj/machinery/status_display{
 	pixel_y = 32
 	},
-/obj/machinery/door/firedoor/glass/hidden,
+/obj/machinery/door/firedoor/glass/hidden/steel{
+	dir = 2
+	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/seconddeck/aft)
 "ccQ" = (
@@ -33852,8 +33867,10 @@
 	},
 /obj/machinery/atmospherics/binary/passive_gate{
 	dir = 1;
-	regulate_mode = 0;
-	unlocked = 1
+	regulate_mode = 1;
+	unlocked = 1;
+	name = "Hot Loop Waste Gas pressure regulator";
+	target_pressure = 1400
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/security_starboard)
@@ -36466,10 +36483,6 @@
 	},
 /obj/structure/cable/green{
 	icon_state = "1-8"
-	},
-/obj/machinery/alarm{
-	dir = 1;
-	pixel_y = -25
 	},
 /turf/simulated/floor/tiled/hydro,
 /area/hydroponics)
@@ -43299,9 +43312,6 @@
 /obj/effect/landmark{
 	name = "JoinLateCryo"
 	},
-/obj/structure/handrail{
-	dir = 4
-	},
 /turf/simulated/shuttle/floor,
 /area/shuttle/cryo/station)
 "dwx" = (
@@ -43461,7 +43471,7 @@
 /turf/simulated/floor/wood,
 /area/rnd/research)
 "dzl" = (
-/obj/machinery/libraryscanner,
+/obj/machinery/photocopier,
 /obj/machinery/camera/network/civilian{
 	c_tag = "CIV - Arrivals Lounge";
 	dir = 1
@@ -47451,13 +47461,12 @@
 /turf/simulated/floor/plating,
 /area/engineering/drone_fabrication)
 "fJb" = (
-/obj/machinery/power/smes/buildable/engine_default{
-	RCon_tag = "Engine - ShieldGen"
+/obj/machinery/power/smes/buildable{
+	RCon_tag = "Engine - ShieldGen";
+	cur_coils = 4;
+	input_level = 750000;
+	output_level = 750000
 	},
-/obj/item/smes_coil,
-/obj/item/smes_coil,
-/obj/item/smes_coil,
-/obj/item/smes_coil,
 /obj/structure/cable/orange{
 	icon_state = "0-4"
 	},
@@ -52065,7 +52074,7 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
 	},
-/obj/machinery/light/floortube{
+/obj/machinery/light{
 	dir = 8
 	},
 /turf/simulated/shuttle/floor,
@@ -52983,7 +52992,7 @@
 /obj/effect/floor_decal/corner/purple/border{
 	dir = 9
 	},
-/obj/machinery/autolathe,
+/obj/machinery/photocopier,
 /turf/simulated/floor/tiled/white,
 /area/rnd/lab)
 "iKA" = (
@@ -52997,11 +53006,6 @@
 /obj/item/cell/high,
 /obj/machinery/cell_charger,
 /obj/item/cell/high,
-/obj/item/radio/intercom{
-	dir = 1;
-	name = "Station Intercom (General)";
-	pixel_y = 21
-	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/lab)
 "iKC" = (
@@ -53180,13 +53184,17 @@
 /turf/simulated/floor/tiled/dark,
 /area/hallway/secondary/entry/D3)
 "iNs" = (
+/obj/item/radio/intercom{
+	dir = 1;
+	name = "Station Intercom (General)";
+	pixel_y = 21
+	},
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 1
 	},
 /obj/effect/floor_decal/corner/purple/border{
 	dir = 1
 	},
-/obj/machinery/photocopier,
 /turf/simulated/floor/tiled/white,
 /area/rnd/lab)
 "iOA" = (
@@ -54301,9 +54309,10 @@
 /obj/item/geiger/wall/east,
 /obj/machinery/atmospherics/binary/passive_gate{
 	dir = 1;
+	regulate_mode = 1;
+	unlocked = 1;
 	name = "Hot Loop Waste Gas pressure regulator";
-	target_pressure = 1400;
-	regulate_mode = 1
+	target_pressure = 1450
 	},
 /turf/simulated/floor,
 /area/engineering/engine_waste)
@@ -55587,7 +55596,7 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
 	},
-/obj/machinery/light/floortube{
+/obj/machinery/light{
 	dir = 8
 	},
 /turf/simulated/shuttle/floor,
@@ -57061,8 +57070,8 @@
 /turf/simulated/floor/tiled,
 /area/rnd/lab)
 "kRu" = (
+/obj/machinery/autolathe,
 /obj/effect/floor_decal/industrial/outline/yellow,
-/obj/machinery/rnd/destructive_analyzer,
 /turf/simulated/floor/tiled,
 /area/rnd/lab)
 "kRR" = (
@@ -68005,9 +68014,6 @@
 /obj/effect/landmark{
 	name = "JoinLateCryo"
 	},
-/obj/structure/handrail{
-	dir = 4
-	},
 /turf/simulated/shuttle/floor,
 /area/shuttle/cryo/station)
 "rxD" = (
@@ -71352,9 +71358,8 @@
 "tAj" = (
 /obj/structure/closet/emcloset,
 /obj/item/storage/toolbox/emergency,
-/obj/machinery/light,
-/obj/structure/handrail{
-	dir = 8
+/obj/machinery/light{
+	dir = 4
 	},
 /turf/simulated/shuttle/floor,
 /area/shuttle/cryo/station)
@@ -105436,7 +105441,7 @@ aaa
 sEx
 xgL
 rcp
-acd
+tAj
 vEq
 eTM
 tAj
@@ -110578,7 +110583,7 @@ bWQ
 cod
 crq
 caC
-cuU
+ccN
 cxi
 ceb
 cCl
@@ -110836,7 +110841,7 @@ chY
 coe
 crq
 ctm
-cuU
+ccN
 ace
 cec
 cCm
@@ -119050,7 +119055,7 @@ iOI
 jUw
 kSM
 aGg
-kTh
+acf
 nRd
 kTh
 aGg
