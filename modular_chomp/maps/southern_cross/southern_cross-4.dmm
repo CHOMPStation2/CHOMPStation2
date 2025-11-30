@@ -136,25 +136,6 @@
 /obj/effect/recycler_vendor_beacon,
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/forestarboard)
-"aay" = (
-/obj/structure/table/marble,
-/obj/machinery/reagentgrinder,
-/turf/simulated/floor/plating,
-/area/maintenance/thirddeck/aftport)
-"aaz" = (
-/obj/structure/railing{
-	dir = 1
-	},
-/obj/machinery/alarm{
-	dir = 1;
-	pixel_y = -25
-	},
-/turf/simulated/open,
-/area/hallway/primary/thirddeck/aft)
-"aaA" = (
-/obj/effect/landmark/free_ai_shell,
-/turf/simulated/floor/bluegrid,
-/area/ai/ai_upload)
 "aaM" = (
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 4
@@ -1539,6 +1520,7 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 1
 	},
+/obj/effect/landmark/free_ai_shell,
 /turf/simulated/floor/tiled/techfloor,
 /area/ai)
 "bng" = (
@@ -3715,6 +3697,7 @@
 /obj/machinery/ai_status_display{
 	pixel_y = -32
 	},
+/obj/item/toy/xmastree,
 /turf/simulated/floor/bluegrid,
 /area/ai/ai_upload)
 "djL" = (
@@ -3788,7 +3771,6 @@
 /obj/structure/extinguisher_cabinet{
 	pixel_x = -28
 	},
-/obj/effect/landmark/free_ai_shell,
 /turf/simulated/floor/bluegrid,
 /area/ai/ai_upload)
 "dnd" = (
@@ -11113,7 +11095,7 @@
 /obj/item/flame/candle/candelabra/everburn{
 	pixel_y = 8
 	},
-/obj/structure/table/fancyblack,
+/obj/structure/table,
 /turf/simulated/floor/carpet,
 /area/maintenance/thirddeck/aftstarboard)
 "jgM" = (
@@ -13256,7 +13238,7 @@
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/forestarboard)
 "lfV" = (
-/obj/item/clothing/under/swimsuit/stripper/stripper_green,
+/obj/item/clothing/under/swimsuit/stripper,
 /turf/simulated/floor/tiled,
 /area/maintenance/thirddeck/aftport)
 "lhc" = (
@@ -15854,6 +15836,7 @@
 /obj/effect/floor_decal/corner/blue/border{
 	dir = 10
 	},
+/obj/item/toy/xmastree,
 /turf/simulated/floor/tiled,
 /area/bridge)
 "nst" = (
@@ -23966,7 +23949,6 @@
 	icon_state = "4-8"
 	},
 /obj/effect/floor_decal/industrial/warning,
-/obj/structure/window/reinforced,
 /turf/simulated/floor/tiled,
 /area/hallway/primary/thirddeck/aft)
 "tWG" = (
@@ -23983,7 +23965,6 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
 	},
-/obj/structure/window/reinforced,
 /turf/simulated/floor/tiled,
 /area/hallway/primary/thirddeck/aft)
 "tWX" = (
@@ -24560,9 +24541,6 @@
 /obj/effect/floor_decal/corner/blue/bordercorner,
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
-	},
-/obj/machinery/door/firedoor/glass/hidden/steel{
-	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/thirddeck/aft)
@@ -54535,7 +54513,7 @@ tcw
 tcw
 tld
 lcO
-aay
+qlf
 dIo
 ppD
 ieB
@@ -62297,7 +62275,7 @@ tja
 nGl
 tVT
 uuq
-kqE
+upp
 rNC
 uYk
 vmB
@@ -62554,8 +62532,8 @@ wzy
 tkI
 twu
 tWU
-aaz
-kqE
+uuq
+upp
 rNC
 aaj
 vlA
@@ -62763,7 +62741,7 @@ cEX
 cJI
 cSS
 cZQ
-aaA
+cZQ
 dsu
 dBh
 dNq

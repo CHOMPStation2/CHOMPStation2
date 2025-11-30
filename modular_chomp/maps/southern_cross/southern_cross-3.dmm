@@ -1181,22 +1181,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/medical/virology)
-"acd" = (
-/obj/structure/closet/emcloset,
-/obj/item/storage/toolbox/emergency,
-/obj/machinery/light{
-	dir = 4
-	},
-/obj/structure/handrail,
-/turf/simulated/shuttle/floor,
-/area/shuttle/cryo/station)
-"ace" = (
-/obj/structure/railing,
-/obj/machinery/alarm{
-	pixel_y = 25
-	},
-/turf/simulated/open,
-/area/hallway/primary/seconddeck/aft)
 "acf" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/machinery/smartfridge/sheets{
@@ -3920,9 +3904,8 @@
 	name = "Engine Waste";
 	req_one_access = list(10,24)
 	},
-/obj/machinery/atmospherics/binary/pump/on{
+/obj/machinery/atmospherics/binary/pump{
 	dir = 1;
-	target_pressure = 15000;
 	name = "Hot Loop Waste Gas pump"
 	},
 /obj/machinery/button/remote/blast_door{
@@ -13621,7 +13604,7 @@
 /area/security/prison)
 "aRv" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/valve/digital/open{
+/obj/machinery/atmospherics/valve/digital{
 	dir = 4;
 	name = "Hot Loop Waste Gas Ejection Switch"
 	},
@@ -25021,10 +25004,8 @@
 "bBc" = (
 /obj/machinery/atmospherics/binary/passive_gate{
 	dir = 1;
-	regulate_mode = 1;
-	unlocked = 1;
-	name = "Hot Loop Waste Gas pressure regulator";
-	target_pressure = 1400
+	regulate_mode = 0;
+	unlocked = 1
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/bar)
@@ -32753,6 +32734,10 @@
 /turf/simulated/wall,
 /area/crew_quarters/cafeteria)
 "ccP" = (
+/obj/machinery/alarm{
+	dir = 8;
+	pixel_x = 22
+	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
 	},
@@ -32764,9 +32749,6 @@
 	},
 /obj/machinery/status_display{
 	pixel_y = 32
-	},
-/obj/machinery/door/firedoor/glass/hidden/steel{
-	dir = 2
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/seconddeck/aft)
@@ -33284,9 +33266,6 @@
 	dir = 1
 	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
-/obj/structure/window/reinforced{
-	dir = 1
-	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/seconddeck/aft)
 "cec" = (
@@ -33294,9 +33273,6 @@
 	icon_state = "4-8"
 	},
 /obj/effect/floor_decal/industrial/warning{
-	dir = 1
-	},
-/obj/structure/window/reinforced{
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
@@ -33876,10 +33852,8 @@
 	},
 /obj/machinery/atmospherics/binary/passive_gate{
 	dir = 1;
-	regulate_mode = 1;
-	unlocked = 1;
-	name = "Hot Loop Waste Gas pressure regulator";
-	target_pressure = 1400
+	regulate_mode = 0;
+	unlocked = 1
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/security_starboard)
@@ -33986,7 +33960,6 @@
 	c_tag = "CIV - Hydroponics Starboard";
 	dir = 8
 	},
-/obj/item/multitool,
 /turf/simulated/floor/tiled/hydro,
 /area/hydroponics)
 "cgn" = (
@@ -43321,9 +43294,6 @@
 /obj/effect/landmark{
 	name = "JoinLateCryo"
 	},
-/obj/structure/handrail{
-	dir = 4
-	},
 /turf/simulated/shuttle/floor,
 /area/shuttle/cryo/station)
 "dwx" = (
@@ -43483,7 +43453,7 @@
 /turf/simulated/floor/wood,
 /area/rnd/research)
 "dzl" = (
-/obj/machinery/photocopier,
+/obj/machinery/libraryscanner,
 /obj/machinery/camera/network/civilian{
 	c_tag = "CIV - Arrivals Lounge";
 	dir = 1
@@ -43539,7 +43509,7 @@
 	},
 /obj/structure/table/woodentable,
 /obj/item/starcaster_news,
-/obj/item/clothing/accessory/scarf,
+/obj/item/clothing/accessory/scarf/christmas,
 /obj/effect/floor_decal/spline/plain{
 	dir = 1
 	},
@@ -54319,12 +54289,11 @@
 	dir = 4
 	},
 /obj/item/geiger/wall/east,
-/obj/machinery/atmospherics/binary/passive_gate{
+/obj/machinery/atmospherics/binary/passive_gate/on{
 	dir = 1;
-	regulate_mode = 1;
-	unlocked = 1;
 	name = "Hot Loop Waste Gas pressure regulator";
-	target_pressure = 1450
+	regulate_mode = 1;
+	target_pressure = 2500
 	},
 /turf/simulated/floor,
 /area/engineering/engine_waste)
@@ -55862,10 +55831,6 @@
 	},
 /obj/effect/floor_decal/borderfloor/corner,
 /obj/effect/floor_decal/corner/green/bordercorner,
-/obj/machinery/alarm{
-	dir = 8;
-	pixel_x = 22
-	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/seconddeck/aft)
 "kgG" = (
@@ -68026,9 +67991,6 @@
 /obj/effect/landmark{
 	name = "JoinLateCryo"
 	},
-/obj/structure/handrail{
-	dir = 4
-	},
 /turf/simulated/shuttle/floor,
 /area/shuttle/cryo/station)
 "rxD" = (
@@ -71375,9 +71337,6 @@
 /obj/item/storage/toolbox/emergency,
 /obj/machinery/light{
 	dir = 4
-	},
-/obj/structure/handrail{
-	dir = 1
 	},
 /turf/simulated/shuttle/floor,
 /area/shuttle/cryo/station)
@@ -105459,7 +105418,7 @@ aaa
 sEx
 xgL
 rcp
-acd
+tAj
 vEq
 eTM
 tAj
@@ -110601,7 +110560,7 @@ bWQ
 cod
 crq
 caC
-ccN
+cuU
 cxi
 ceb
 cCl
@@ -110859,8 +110818,8 @@ chY
 coe
 crq
 ctm
-ccN
-ace
+cuU
+cxi
 cec
 cCm
 cgs
