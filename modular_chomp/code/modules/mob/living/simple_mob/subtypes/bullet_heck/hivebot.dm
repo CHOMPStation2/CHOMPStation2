@@ -82,25 +82,25 @@
 		if(1)
 			specialattackprojectile = /obj/item/projectile/beam/midlaser/shortrange
 			rng_cycle = rand(1,4)
-			say("PROTOCOL: CROSS X.")
+			direct_say("PROTOCOL: CROSS X.")
 			addtimer(CALLBACK(src, PROC_REF(star_burst), A, rng_cycle), 2 SECONDS, TIMER_DELETE_ME)
 			attackcycle = 0
 		if(2)
 			specialattackprojectile = /obj/item/projectile/energy/wallbreaker/boss
 			rng_cycle = rand(1,4)
-			say("PROTOCOL: PRECISION. SWEEP.")
+			direct_say("PROTOCOL: PRECISION. SWEEP.")
 			addtimer(CALLBACK(src, PROC_REF(dual_spin), A, rng_cycle, 25), 2 SECONDS, TIMER_DELETE_ME)
 			attackcycle = 0
 		if(3)
 			specialattackprojectile = /obj/item/projectile/energy/lightingspark/nanoweave
 			rng_cycle = rand(1,4)
-			say("PROTOCOL: DISCHARGE.")
+			direct_say("PROTOCOL: DISCHARGE.")
 			addtimer(CALLBACK(src, PROC_REF(quad_random_firing), A, 12, rng_cycle, 15), 1 SECOND, TIMER_DELETE_ME)
 			attackcycle = 0
 		if(4)
 			specialattackprojectile = /obj/item/projectile/arc/explosive_rocket/big
 			rng_cycle = rand(1,4)
 			Beam(A, icon_state = "r_beam", time = 1 SECOND, maxdistance = INFINITY)
-			say("PROTOCOL: MISSILE.")
+			direct_say("PROTOCOL: MISSILE.")
 			addtimer(CALLBACK(src, PROC_REF(singleproj), A, rng_cycle), 2 SECONDS, TIMER_DELETE_ME)
 			attackcycle = 0
