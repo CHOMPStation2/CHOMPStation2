@@ -46,7 +46,9 @@
 			continue
 		if(S.name == DEVELOPER_WARNING_NAME)
 			continue
-		if( !(species in S.species_allowed))
+		if(!(species in S.species_allowed))
+			continue
+		if(!S.can_be_selected)
 			continue
 		valid_hairstyles[hairstyle] = GLOB.hair_styles_list[hairstyle]
 
@@ -67,7 +69,9 @@
 			continue
 		if(S.name == DEVELOPER_WARNING_NAME)
 			continue
-		if( !(species in S.species_allowed))
+		if(!(species in S.species_allowed))
+			continue
+		if(!S.can_be_selected)
 			continue
 
 		valid_facialhairstyles[facialhairstyle] = GLOB.facial_hair_styles_list[facialhairstyle]

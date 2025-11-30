@@ -231,11 +231,14 @@
 /obj/effect/floor_decal/techfloor/corner{
 	dir = 5
 	},
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/structure/cable{
+	icon_state = "1-8"
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/engineering/gravgen)
 "aG" = (
@@ -432,6 +435,9 @@
 /obj/machinery/light/small{
 	dir = 4
 	},
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/engineering/gravgen)
 "bd" = (
@@ -609,9 +615,6 @@
 	dir = 8
 	},
 /obj/random/trash,
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/engineering/gravgen)
 "bO" = (
@@ -1297,11 +1300,14 @@
 /obj/effect/floor_decal/techfloor{
 	dir = 1
 	},
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
+/obj/structure/cable{
+	icon_state = "1-8"
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/engineering/gravgen)
 "eO" = (
@@ -2024,6 +2030,9 @@
 /obj/machinery/light/small{
 	dir = 1
 	},
+/obj/structure/cable{
+	icon_state = "2-8"
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/engineering/gravgen)
 "hU" = (
@@ -2512,11 +2521,11 @@
 /obj/effect/floor_decal/techfloor{
 	dir = 9
 	},
-/obj/structure/cable{
-	icon_state = "2-8"
-	},
 /obj/machinery/light/small{
 	dir = 1
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/engineering/gravgen)
@@ -2841,11 +2850,11 @@
 /obj/effect/floor_decal/techfloor/corner{
 	dir = 6
 	},
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/engineering/gravgen)
 "ls" = (
@@ -3364,6 +3373,9 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/engineering/gravgen)
 "nr" = (
@@ -3526,9 +3538,6 @@
 	name = "north bump";
 	pixel_y = 24
 	},
-/obj/structure/cable{
-	icon_state = "0-2"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
@@ -3539,6 +3548,9 @@
 	pixel_x = 11;
 	pixel_y = 24;
 	on = 0
+	},
+/obj/structure/cable{
+	icon_state = "0-4"
 	},
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/zerostarboard)
@@ -3657,6 +3669,9 @@
 /obj/machinery/firealarm{
 	layer = 3.3;
 	pixel_y = 26
+	},
+/obj/structure/cable{
+	icon_state = "2-8"
 	},
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/zerostarboard)
@@ -3808,6 +3823,9 @@
 /obj/structure/catwalk,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/zeroaft)
 "pp" = (
@@ -3896,9 +3914,6 @@
 /obj/effect/floor_decal/techfloor{
 	dir = 8
 	},
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/engineering/gravgen)
 "pE" = (
@@ -3974,9 +3989,6 @@
 /area/maintenance/fieldhallway)
 "pW" = (
 /obj/structure/catwalk,
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
 /obj/machinery/floodlight,
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/zeroaft)
@@ -4051,16 +4063,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/techmaint,
 /area/maintenance/gravlobby)
-"qs" = (
-/obj/effect/floor_decal/techfloor,
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
-/obj/structure/cable{
-	icon_state = "1-4"
-	},
-/turf/simulated/floor/tiled/techfloor,
-/area/maintenance/engineering/gravgen)
 "qt" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -4661,6 +4663,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/engineering/gravgen)
 "sS" = (
@@ -4702,17 +4707,17 @@
 /area/engineering/gravgen)
 "tg" = (
 /obj/effect/floor_decal/techfloor,
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
-/obj/structure/cable{
-	icon_state = "2-8"
-	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 8
+	},
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/structure/cable{
+	icon_state = "1-4"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/engineering/gravgen)
@@ -5234,6 +5239,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 9
 	},
+/obj/structure/cable{
+	icon_state = "1-8"
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/engineering/gravgen)
 "vC" = (
@@ -5245,9 +5253,6 @@
 /area/maintenance/zeroport)
 "vE" = (
 /obj/effect/floor_decal/techfloor,
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/engineering/gravgen)
 "vF" = (
@@ -5356,12 +5361,6 @@
 /obj/random/tool/powermaint,
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/zerocent)
-"wd" = (
-/obj/structure/cable{
-	icon_state = "1-4"
-	},
-/turf/simulated/floor/plating/turfpack/station,
-/area/maintenance/zerostarboard)
 "we" = (
 /turf/simulated/wall,
 /area/maintenance/zerocent)
@@ -5541,6 +5540,9 @@
 	pixel_x = -36;
 	pixel_y = -6;
 	on = 0
+	},
+/obj/structure/cable{
+	icon_state = "1-2"
 	},
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/zeroaft)
@@ -6605,6 +6607,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/engineering/gravgen)
 "BL" = (
@@ -6752,13 +6757,6 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /turf/simulated/floor/wood/turfpack/station,
 /area/maintenance/bar/dorms/dorm_1)
-"Cr" = (
-/obj/random/junk,
-/obj/structure/cable{
-	icon_state = "1-8"
-	},
-/turf/simulated/floor/plating/turfpack/station,
-/area/maintenance/zeroaft)
 "Cs" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/floor_decal/industrial/arrows/yellow,
@@ -6775,14 +6773,14 @@
 /area/maintenance/substation/gravgen)
 "Cu" = (
 /obj/effect/floor_decal/techfloor,
-/obj/structure/cable{
-	icon_state = "1-8"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/engineering/gravgen)
@@ -6899,13 +6897,6 @@
 /obj/structure/flora/pottedplant/decorative,
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/zerocent)
-"CT" = (
-/obj/structure/catwalk,
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
-/turf/simulated/floor/plating/turfpack/station,
-/area/maintenance/zeroaft)
 "CU" = (
 /obj/effect/wingrille_spawn/reinforced,
 /obj/machinery/door/firedoor/border_only,
@@ -7453,6 +7444,9 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/zeroaft)
 "Ft" = (
@@ -7568,6 +7562,9 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/engineering/gravgen)
@@ -7896,6 +7893,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 10
 	},
+/obj/structure/cable{
+	icon_state = "2-8"
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/engineering/gravgen)
 "Hk" = (
@@ -7913,14 +7913,14 @@
 /area/maintenance/zerocent)
 "Hm" = (
 /obj/structure/catwalk,
-/obj/structure/cable{
-	icon_state = "2-4"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/zeroaft)
@@ -8005,12 +8005,6 @@
 "HE" = (
 /turf/simulated/wall/r_wall/turfpack/station,
 /area/maintenance/ragecage)
-"HG" = (
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
-/turf/simulated/floor/plating/turfpack/station,
-/area/maintenance/zeroaft)
 "HH" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -8304,19 +8298,6 @@
 	},
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/zerocent)
-"IU" = (
-/obj/effect/floor_decal/techfloor{
-	dir = 8
-	},
-/obj/random/trash,
-/obj/structure/cable{
-	icon_state = "2-4"
-	},
-/obj/structure/cable{
-	icon_state = "1-4"
-	},
-/turf/simulated/floor/tiled/techfloor,
-/area/maintenance/engineering/gravgen)
 "IX" = (
 /obj/machinery/firealarm{
 	layer = 3.3;
@@ -8951,13 +8932,11 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/door/airlock/maintenance/common,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/techmaint,
 /area/maintenance/zerocent)
 "Mi" = (
 /obj/effect/floor_decal/techfloor,
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
 /obj/machinery/door/firedoor/multi_tile/glass{
 	dir = 1
 	},
@@ -8980,13 +8959,6 @@
 /area/maintenance/zerocent)
 "Mq" = (
 /turf/simulated/wall/r_wall/turfpack/station,
-/area/maintenance/zeroaft)
-"Mr" = (
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
-/obj/structure/catwalk,
-/turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/zeroaft)
 "Ms" = (
 /obj/structure/table/reinforced,
@@ -9025,14 +8997,14 @@
 /area/maintenance/zeroport)
 "MA" = (
 /obj/effect/floor_decal/techfloor,
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 5
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 5
+	},
+/obj/structure/cable{
+	icon_state = "1-4"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/engineering/gravgen)
@@ -9086,14 +9058,14 @@
 /obj/effect/floor_decal/techfloor/corner{
 	dir = 10
 	},
-/obj/structure/cable{
-	icon_state = "2-8"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/engineering/gravgen)
@@ -9134,11 +9106,11 @@
 /area/maintenance/zerostarboard)
 "Na" = (
 /obj/structure/catwalk,
-/obj/structure/cable{
-	icon_state = "2-4"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/zeroaft)
 "Nc" = (
@@ -9184,9 +9156,6 @@
 "Nk" = (
 /obj/effect/floor_decal/techfloor,
 /obj/random/trash,
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/engineering/gravgen)
 "Nl" = (
@@ -9441,6 +9410,9 @@
 	pixel_x = -24
 	},
 /obj/structure/mob_spawner/mouse_nest/mousehole,
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/zeroaft)
 "Om" = (
@@ -9872,6 +9844,9 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/engineering/gravgen)
 "Qh" = (
@@ -10261,13 +10236,6 @@
 /obj/structure/catwalk,
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/zeroaft)
-"Sl" = (
-/obj/random/mouseremains,
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
-/turf/simulated/floor/plating/turfpack/station,
-/area/maintenance/zeroaft)
 "Sm" = (
 /obj/random/crate,
 /turf/simulated/floor/tiled,
@@ -10282,17 +10250,6 @@
 /obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/ragecage)
-"Sq" = (
-/obj/structure/cable{
-	icon_state = "2-8"
-	},
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/turf/simulated/floor/plating/turfpack/station,
-/area/maintenance/zerostarboard)
 "Sr" = (
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 4
@@ -10417,9 +10374,6 @@
 /obj/effect/floor_decal/techfloor{
 	dir = 10
 	},
-/obj/structure/cable{
-	icon_state = "1-4"
-	},
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/engineering/gravgen)
 "SX" = (
@@ -10444,9 +10398,6 @@
 "Tc" = (
 /obj/effect/floor_decal/techfloor/corner{
 	dir = 9
-	},
-/obj/structure/cable{
-	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/engineering/gravgen)
@@ -10675,6 +10626,9 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 6
+	},
+/obj/structure/cable{
+	icon_state = "2-4"
 	},
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/zeroaft)
@@ -11071,6 +11025,7 @@
 /obj/structure/cable{
 	icon_state = "1-4"
 	},
+/obj/machinery/atmospherics/pipe/manifold4w/hidden/scrubbers,
 /turf/simulated/floor/plating/turfpack/station,
 /area/maintenance/zeroaft)
 "VI" = (
@@ -11685,6 +11640,12 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 6
 	},
+/obj/structure/cable{
+	icon_state = "2-4"
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/engineering/gravgen)
 "Yh" = (
@@ -11797,12 +11758,6 @@
 "YF" = (
 /obj/effect/floor_decal/techfloor/corner{
 	dir = 10
-	},
-/obj/structure/cable{
-	icon_state = "1-8"
-	},
-/obj/structure/cable{
-	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/engineering/gravgen)
@@ -36856,7 +36811,7 @@ pe
 gk
 wq
 jR
-IU
+bM
 pD
 Tc
 Cu
@@ -38404,7 +38359,7 @@ WF
 WF
 WF
 aF
-qs
+vE
 Pb
 PK
 Fo
@@ -50510,7 +50465,7 @@ wZ
 Ky
 Ky
 oc
-wd
+jC
 LV
 sI
 jC
@@ -50768,7 +50723,7 @@ wZ
 wZ
 Ky
 ow
-Sq
+BI
 BI
 BI
 EC
@@ -52869,9 +52824,9 @@ Fs
 wQ
 Ok
 pn
-Vg
-Vg
-Vg
+Na
+Na
+Na
 pn
 Na
 dR
@@ -53123,15 +53078,15 @@ kt
 Wl
 Sk
 Hm
-Mr
-Mr
-CT
-CT
-HG
-Sl
+Sk
+Sk
+Sk
+Sk
+Bh
+qf
 pW
-CT
-Cr
+Sk
+Fz
 Mq
 Mq
 wZ
