@@ -1,6 +1,6 @@
 //Hades Construction//
 /datum/construction/mecha/hades_chassis
-	result = "/obj/mecha/combat/hades"
+	result = /obj/mecha/combat/hades
 	steps = list(list("key"=/obj/item/mecha_parts/part/hades_torso),//1
 					list("key"=/obj/item/mecha_parts/part/hades_left_arm),//2
 					list("key"=/obj/item/mecha_parts/part/hades_right_arm),//3
@@ -29,7 +29,7 @@
 	return
 
 /datum/construction/reversible/mecha/hades
-	result = "/obj/mecha/combat/phazon"
+	result = /obj/mecha/combat/phazon
 	steps = list(
 					//1
 					list("key"=IS_WELDER,
