@@ -546,7 +546,7 @@
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 1
 	},
-/obj/machinery/firealarm{
+/obj/machinery/firealarm/alarms_hidden{
 	pixel_y = 24
 	},
 /turf/simulated/floor/tiled/dark,

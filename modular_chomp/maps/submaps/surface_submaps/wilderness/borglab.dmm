@@ -231,7 +231,7 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
 	},
-/obj/machinery/firealarm{
+/obj/machinery/firealarm/alarms_hidden{
 	pixel_y = 24
 	},
 /obj/effect/floor_decal/rust,
@@ -477,8 +477,7 @@
 /turf/simulated/floor/tiled,
 /area/submap/BorgLab)
 "rP" = (
-/obj/machinery/firealarm{
-	alarms_hidden = 1;
+/obj/machinery/firealarm/alarms_hidden{
 	dir = 8;
 	pixel_x = -24
 	},
@@ -1017,8 +1016,7 @@
 /area/submap/BorgLab)
 "Oz" = (
 /obj/item/pickaxe/plasmacutter,
-/obj/machinery/firealarm{
-	alarms_hidden = 1;
+/obj/machinery/firealarm/alarms_hidden{
 	pixel_y = 24
 	},
 /obj/effect/floor_decal/rust,
