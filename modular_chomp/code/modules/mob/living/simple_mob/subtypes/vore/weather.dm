@@ -80,19 +80,8 @@
 		icon_living = "rex"
 
 /mob/living/simple_mob/vore/fossiltank/do_special_attack(atom/A)
-	if(health < maxHealth*0.25)
-		visible_message(span_bolddanger(span_orange("The fossil tank begins self repairs!.")))
-		addtimer(CALLBACK(src, PROC_REF(cycle_heal), 8), 1 SECOND, TIMER_DELETE_ME)
-	else
-		Beam(A, icon_state = "sat_beam", time = 3.5 SECONDS, maxdistance = INFINITY)
-		addtimer(CALLBACK(src, PROC_REF(sniper_shot), A), 4 SECONDS, TIMER_DELETE_ME)
-
-/mob/living/simple_mob/vore/fossiltank/proc/cycle_heal(var/healamount)
-	adjustBruteLoss(-100)
-	adjustFireLoss(-100)
-	if(healamount > 0)
-		healamount -= 1
-		addtimer(CALLBACK(src, PROC_REF(cycle_heal), 8), 1 SECOND, TIMER_DELETE_ME)
+	Beam(A, icon_state = "sat_beam", time = 3.5 SECONDS, maxdistance = INFINITY)
+	addtimer(CALLBACK(src, PROC_REF(sniper_shot), A), 4 SECONDS, TIMER_DELETE_ME)
 
 /mob/living/simple_mob/vore/fossiltank/proc/sniper_shot(atom/target)
 	if(!target)
@@ -126,7 +115,7 @@
 	icon = 'modular_chomp/icons/mob/tyr.dmi'
 	icon_state = "jellyfish"
 	icon_living = "jellyfish"
-	icon_dead = "jelltdish_dead"
+	icon_dead = "jellyfish_dead"
 	movement_cooldown = 1
 	damage_fatigue_mult = 0 //It's a mutant jellyfish boss mob.
 	melee_attack_delay = 1.5 SECOND

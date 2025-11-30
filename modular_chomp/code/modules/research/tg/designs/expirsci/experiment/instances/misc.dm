@@ -3,14 +3,15 @@
 	description = "A scientist or explorer will need to obtain data discs from Tyr!"
 	required_points = 3
 	required_atoms = list(
-		/obj/item/prop/tyrlore/reddisc = 1,
-		/obj/item/prop/tyrlore/purpledisc = 1,
-		/obj/item/prop/tyrlore/greendisc = 1,
-		/obj/item/prop/tyrlore/basicflora = 1,
-		/obj/item/prop/tyrlore/basicshield = 1,
-		/obj/item/prop/tyrlore/advanceshield = 1,
-		/obj/item/prop/tyrlore/basicsonic = 1,
-		/obj/item/prop/tyrlore/basicpower = 1,
-		/obj/item/prop/tyrlore/ants = 1,
-		/obj/item/prop/tyrlore/drones = 1,
+		/obj/item/prop/tyrlore/acid_boss = 1,
+		/obj/item/prop/tyrlore/sonic_boss = 1,
+		/obj/item/prop/tyrlore/shield_boss = 1,
+		/obj/item/prop/tyrlore/crystal_boss = 1,
+		/obj/item/prop/tyrlore/gravity_boss = 1,
+		/obj/item/prop/tyrlore/gatekeeper = 1,
+		/obj/item/prop/tyrlore/shotgun = 1,
+		/obj/item/prop/tyrlore/engi_boss = 1,
+		/obj/item/prop/tyrlore/meteor_boss = 1,
+		/obj/item/prop/tyrlore/swarm_boss = 1,
+		/obj/item/prop/tyrlore/medical_boss = 1.
 	)
