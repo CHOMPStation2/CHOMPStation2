@@ -147,15 +147,6 @@
 /turf/simulated/open,
 /area/hallway/primary/thirddeck/aft)
 "aaC" = (
-/obj/structure/table/marble,
-/obj/machinery/reagentgrinder,
-/turf/simulated/floor/plating,
-/area/maintenance/thirddeck/aftport)
-"aaD" = (
-/obj/effect/landmark/free_ai_shell,
-/turf/simulated/floor/bluegrid,
-/area/ai/ai_upload)
-"aaE" = (
 /obj/effect/wingrille_spawn/reinforced,
 /obj/machinery/door/firedoor/border_only,
 /obj/structure/disposalpipe/segment{
@@ -163,14 +154,19 @@
 	},
 /turf/simulated/floor/plating,
 /area/hallway/primary/thirddeck/stationgateway)
-"aaF" = (
+"aaD" = (
+/obj/structure/table/marble,
+/obj/machinery/reagentgrinder,
+/turf/simulated/floor/plating,
+/area/maintenance/thirddeck/aftport)
+"aaE" = (
 /obj/structure/disposalpipe/segment,
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/bridge)
-"aaG" = (
+"aaF" = (
 /obj/machinery/door/blast/regular{
 	density = 0;
 	icon_state = "pdoor0";
@@ -182,8 +178,14 @@
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled,
 /area/bridge)
-"aaH" = (
+"aaG" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/hallway/primary/thirddeck/central)
+"aaH" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
@@ -192,22 +194,16 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/turf/simulated/floor/tiled,
-/area/hallway/primary/thirddeck/central)
-"aaJ" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
 /obj/effect/floor_decal/industrial/warning,
 /turf/simulated/floor/tiled,
 /area/hallway/primary/thirddeck/central)
-"aaK" = (
+"aaJ" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/thirddeck/central)
-"aaL" = (
+"aaK" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
@@ -217,6 +213,16 @@
 /obj/effect/floor_decal/steeldecal/steel_decals4,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled,
+/area/hallway/primary/thirddeck/port)
+"aaL" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/door/airlock/glass{
+	name = "Central Access"
+	},
+/obj/machinery/door/firedoor/border_only,
+/turf/simulated/floor/tiled/steel_grid,
 /area/hallway/primary/thirddeck/port)
 "aaM" = (
 /obj/effect/floor_decal/borderfloor/corner{
@@ -228,19 +234,13 @@
 /turf/simulated/floor/tiled,
 /area/hallway/primary/thirddeck/aftdoorm)
 "aaN" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/obj/machinery/door/airlock/glass{
-	name = "Central Access"
-	},
-/obj/machinery/door/firedoor/border_only,
-/turf/simulated/floor/tiled/steel_grid,
-/area/hallway/primary/thirddeck/port)
-"aaO" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/wall,
 /area/maintenance/substation/command)
+"aaO" = (
+/obj/effect/landmark/free_ai_shell,
+/turf/simulated/floor/bluegrid,
+/area/ai/ai_upload)
 "abm" = (
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /obj/machinery/alarm{
@@ -54535,7 +54535,7 @@ tcw
 tcw
 tld
 lcO
-aaC
+aaD
 dIo
 ppD
 ieB
@@ -61481,8 +61481,8 @@ nSN
 emm
 ewJ
 eJK
-aaO
-aaL
+aaN
+aaK
 fTe
 gkF
 gQA
@@ -61740,7 +61740,7 @@ nSN
 nSN
 nSN
 nSN
-aaN
+aaL
 fTw
 fmC
 xrz
@@ -62264,12 +62264,12 @@ hwu
 hQu
 ihC
 iJc
-aaG
+aaF
 cPJ
 lAV
 ktn
 cPJ
-aaF
+aaE
 lRi
 mhn
 mKs
@@ -62763,7 +62763,7 @@ cEX
 cJI
 cSS
 cZQ
-aaD
+aaO
 dsu
 dBh
 dNq
@@ -62797,7 +62797,7 @@ oCE
 oCE
 oCE
 pkC
-aaE
+aaC
 edc
 dfh
 qIj
@@ -63037,7 +63037,7 @@ oXg
 oXg
 hTf
 ios
-aaH
+aaG
 lzK
 joC
 jSS
@@ -63294,8 +63294,8 @@ oXg
 oXg
 oXg
 hVq
-aaK
-aaH
+aaJ
+aaG
 hCW
 ueN
 jUf
@@ -63552,7 +63552,7 @@ oXg
 oXg
 oXg
 hVB
-aaK
+aaJ
 iMo
 itj
 eMl
@@ -63810,8 +63810,8 @@ oXg
 oXg
 oXg
 hVL
-aaK
-aaI
+aaJ
+aaH
 hCW
 ueN
 hsN
@@ -64842,8 +64842,8 @@ gud
 fWg
 hyk
 hWk
-aaK
 aaJ
+aaI
 iYl
 jqO
 jXa
