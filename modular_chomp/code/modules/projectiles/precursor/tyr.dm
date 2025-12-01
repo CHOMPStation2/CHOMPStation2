@@ -25,28 +25,12 @@
 	check_armour = "melee"
 	damage_type = BRUTE
 
-/obj/item/projectile/energy/wp_shotgun
-	name = "laser blast"
-	icon = 'modular_chomp/icons/obj/guns/precursor/tyr.dmi'
-	icon_state = "shotgun_blast"
-	damage = 25
-	range = 5
-	check_armour = "bullet"
-	damage_type = BRUTE
-
-/obj/item/projectile/energy/wp_shotgun/on_hit(var/atom/movable/target, var/blocked = 0)
-	if(isliving(target))
-		var/mob/living/L = target
-		var/throwdir = get_dir(firer,L)
-		L.throw_at(get_edge_target_turf(L, throwdir), 3, 10)
-		return 1
-
-/obj/item/projectile/energy/wp_blaster
+/obj/item/projectile/energy/tyr_rifle
 	name = "laser blast"
 	icon = 'modular_chomp/icons/obj/guns/precursor/tyr.dmi'
 	icon_state = "blaster_blast"
 	damage = 35
-	range = 5
+	range = 6
 	penetrating = 2
 	check_armour = "laser"
 
@@ -58,7 +42,7 @@
 	penetrating = 2
 	damage_type = BURN
 	check_armour = "laser"
-	range = 5
+	range = 4
 	eyeblur = 0 //no no no no no
 	hitscan = 1
 	hud_state = "laser"
@@ -69,36 +53,12 @@
 	range = 0
 	embed_chance = 0
 	spread_submunition_damage = FALSE
-	submunition_spread_max = 150
-	submunition_spread_min = 60
-	submunitions = list(/obj/item/projectile/beam/precursor_tyr = 5)
+	submunition_spread_max = 180
+	submunition_spread_min = 80
+	submunitions = list(/obj/item/projectile/beam/precursor_tyr = 7)
 
-/obj/item/gun/energy/energyballchain
-	name = "tyrian energy club"
-	desc = "A strange alien weapon from tyr."
-	icon = 'modular_chomp/icons/obj/guns/precursor/tyr.dmi'
-	icon_state = "violence"
-	item_state = "violence"
-	wielded_item_state = "placeholder"
-	origin_tech = list(TECH_COMBAT = 6, TECH_POWER = 5, TECH_PRECURSOR = 3)
-
-	charge_cost = 625 //Uses all it's charge in a single shot.
-	battery_lock = 1 //No changing
-
-	accept_cell_type = /obj/item/cell/device
-	cell_type = /obj/item/cell/device/weapon/recharge/alien/tyr
-	projectile_type = /obj/item/projectile/energy/spikeenergy_ball
-
-	force = 45 //functions as a melee weapon too! Ain't great, but still works.
-
-	recoil_mode = 0
-	charge_meter = 1
-
-	move_delay = 0
-	one_handed_penalty = 50
-
-/obj/item/gun/energy/curse_tyrshotgun
-	name = "tyrian enforcer firearm"
+/obj/item/gun/energy/tyr_rifle
+	name = "tyrian longarm"
 	desc = "A strange alien weapon from tyr."
 	icon = 'modular_chomp/icons/obj/guns/precursor/tyr.dmi'
 	icon_state = "shotgun"
@@ -111,37 +71,17 @@
 
 	accept_cell_type = /obj/item/cell/device
 	cell_type = /obj/item/cell/device/weapon/recharge/alien/tyr
-	projectile_type = /obj/item/projectile/energy/wp_shotgun
+	projectile_type = /obj/item/projectile/energy/tyr_rifle
+
+	force = 35
 
 	recoil_mode = 0
 	charge_meter = 1
 
 	firemodes = list(
-		list(mode_name="explosive", projectile_type=/obj/item/projectile/energy/wp_shotgun, charge_cost = 625),
-		list(mode_name="spray", projectile_type=/obj/item/projectile/bullet/tyrshotburst, charge_cost = 625),
+		list(mode_name="single", projectile_type=/obj/item/projectile/energy/tyr_rifle, charge_cost = 250),
+		list(mode_name="area", projectile_type=/obj/item/projectile/bullet/tyrshotburst, charge_cost = 500),
 		)
-
-	move_delay = 0
-	one_handed_penalty = 50
-
-/obj/item/gun/energy/curse_blaster
-	name = "tyrian infantry firearm"
-	desc = "A strange alien weapon from tyr."
-	icon = 'modular_chomp/icons/obj/guns/precursor/tyr.dmi'
-	icon_state = "solider_blaster"
-	item_state = "solider_blaster"
-	wielded_item_state = "placeholder"
-	origin_tech = list(TECH_COMBAT = 6, TECH_POWER = 5, TECH_PRECURSOR = 3)
-
-	charge_cost = 250
-	battery_lock = 1 //No changing
-
-	accept_cell_type = /obj/item/cell/device
-	cell_type = /obj/item/cell/device/weapon/recharge/alien/tyr
-	projectile_type = /obj/item/projectile/energy/wp_blaster
-
-	recoil_mode = 0
-	charge_meter = 1
 
 	move_delay = 0
 	one_handed_penalty = 50
@@ -182,7 +122,7 @@
 	icon_state = "astral_sea_blade"
 	icon = 'modular_chomp/icons/obj/guns/precursor/tyr.dmi'
 	damage = 30 //21 with intended armor
-	armor_penetration = 20
+	armor_penetration = 10
 	damage_type = BRUTE
 	check_armour = "melee"
 	embed_chance = 0
@@ -191,8 +131,9 @@
 	crawl_destroy = TRUE
 
 /obj/item/projectile/bullet/astral_blade/short
+	damage = 20
 	speed = 0.3
-	range = 4
+	range = 2
 
 /obj/item/projectile/bullet/tyr_bladeburst
 	use_submunitions = 1

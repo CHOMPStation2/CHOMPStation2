@@ -21,17 +21,15 @@
 	unacidable = TRUE
 	special_attack_min_range = 0
 	special_attack_max_range = 7
-	wreckage = /obj/item/prop/tyrlore/drones
+	wreckage = /obj/item/prop/tyrlore/gatekeeper
 
-	loot_list = list(/obj/item/gun/energy/curse_tyrshotgun  = 30,
-		/obj/item/gun/energy/energyballchain  = 30,
+	loot_list = list(/obj/item/gun/energy/tyr_rifle  = 30,
 		/obj/item/tool/wirecutters/hybrid/alien  = 30,
 		/obj/item/tool/wrench/hybrid/alien  = 30,
 		/obj/item/tool/crowbar/hybrid/alien  = 30,
 		/obj/item/tool/screwdriver/hybrid/alien  = 30,
 		/obj/item/pickaxe/diamonddrill/alien = 30,
-		/obj/item/melee/energy/sword/dualsaber = 30,
-		/obj/item/shield_projector/rectangle/automatic/tyrbarrier = 1,
+		/obj/item/shield_projector/rectangle/automatic/tyrbarrier = 0.1,
 		/obj/item/stock_parts/scanning_module/omni = 80,
 		/obj/item/stock_parts/micro_laser/omni = 80,
 		/obj/item/stock_parts/capacitor/omni = 80,
@@ -51,7 +49,7 @@
 	desc = "A strange furball fused with plant life."
 	icon_state = "poison_boss"
 	icon_living = "poison_boss"
-	wreckage = /obj/item/prop/tyrlore/basicflora
+	wreckage = /obj/item/prop/tyrlore/acid_boss
 	projectiletype = /obj/item/projectile/bullet/astral_blade
 	specialattackprojectile = /obj/item/projectile/energy/neurotoxin/toxic/tyr_flora
 	var/regeneration_strength = -30
@@ -100,7 +98,7 @@
 	icon_state = "sonic_boss"
 	icon_living = "sonic_boss"
 	projectiletype = /obj/item/projectile/knockback/slow
-	wreckage = /obj/item/prop/tyrlore/basicsonic
+	wreckage = /obj/item/prop/tyrlore/sonic_boss
 
 /mob/living/simple_mob/mechanical/mecha/eclipse/tankyboss/sonic_boss/load_default_bellies()
 	. = ..()
@@ -141,7 +139,7 @@
 	icon_state = "UPshield_boss"
 	icon_living = "UPshield_boss"
 	projectiletype = /obj/item/projectile/energy/eclipse/tyrjavelin
-	wreckage = /obj/item/prop/tyrlore/basicshield
+	wreckage = /obj/item/prop/tyrlore/shield_boss
 	var/fullshield = 200
 	var/shieldrage = 200
 
@@ -198,6 +196,7 @@
 	icon_state = "crystalized"
 	icon_living = "crystalized"
 	specialattackprojectile = /obj/item/projectile/arc/fragmentation/tyr_mortar
+	wreckage = /obj/item/prop/tyrlore/crystal_boss
 
 /mob/living/simple_mob/mechanical/mecha/eclipse/tankyboss/crystal_boss/do_special_attack(atom/A)
 	rng_cycle = rand(1,3)
@@ -216,6 +215,7 @@
 	name = "experiment 25"
 	icon_state = "naga_boss"
 	icon_living = "naga_boss"
+	wreckage = /obj/item/prop/tyrlore/gravity_boss
 
 /mob/living/simple_mob/mechanical/mecha/eclipse/tankyboss/naga_boss/do_special_attack(atom/A)
 	rng_cycle = rand(1,3)
@@ -239,7 +239,7 @@
 	icon_living = "cyan"
 	size_multiplier = 3
 	projectiletype = /obj/item/projectile/bullet/tyr_bladeburst
-	wreckage = /obj/item/prop/tyrlore/ants
+	wreckage = /obj/item/prop/tyrlore/shotgun
 	specialattackprojectile = /obj/item/projectile/bullet/astral_blade
 
 /mob/living/simple_mob/mechanical/mecha/eclipse/tankyboss/defense_ai/do_special_attack(atom/A)
@@ -265,7 +265,7 @@
 	icon_state = "yellow"
 	icon_living = "yellow"
 	size_multiplier = 3
-	wreckage = /obj/item/prop/tyrlore/basicpower
+	wreckage = /obj/item/prop/tyrlore/engi_boss
 	specialattackprojectile = /obj/item/projectile/energy/agate_lighting
 	projectiletype = /obj/item/projectile/energy/agate_lighting
 
@@ -293,7 +293,7 @@
 	icon_living = "bright_green"
 	icon = 'modular_chomp/icons/mob/hivebot.dmi'
 	size_multiplier = 3
-	wreckage = /obj/item/prop/tyrlore/drones
+	wreckage = /obj/item/prop/tyrlore/swarm_boss
 	special_attack_cooldown = 8 SECONDS
 	melee_damage_lower = 20
 	melee_damage_upper = 20
@@ -323,8 +323,66 @@
 	size_multiplier = 3
 	specialattackprojectile = /obj/item/projectile/arc/blue_energy/precusor
 	projectiletype = /obj/item/projectile/arc/blue_energy/precusor
+	wreckage = /obj/item/prop/tyrlore/meteor_boss
 
 /mob/living/simple_mob/mechanical/mecha/eclipse/tankyboss/meteor_ai/do_special_attack(atom/A, var/strike_downx, var/strikedowny)
 	strike_downx = rand(-7,7)
 	strikedowny = rand(-7,7)
-	bullet_heck(A, strike_downx, strikedowny)
+	wreckage = bullet_heck(A, strike_downx, strikedowny)
+
+//the add tutortial
+/mob/living/simple_mob/mechanical/mecha/eclipse/tankyboss/medical_bot
+	name = "medical robot"
+	desc = "A massive hivebot with medical equipment."
+	health = 600
+	maxHealth = 600
+	icon_state = "white"
+	icon_living = "wite"
+	icon = 'icons/mob/hivebot.dmi'
+	size_multiplier = 3
+	wreckage = /obj/item/prop/tyrlore/medical_boss
+	special_attack_cooldown = 8 SECONDS
+	melee_damage_lower = 20
+	melee_damage_upper = 20
+	attack_armor_pen = 50
+	movement_cooldown = 4
+
+	special_attack_cooldown = 10 SECONDS
+
+	var/datum/disease/base_disease = /datum/disease/advance/agate_rot
+
+/mob/living/simple_mob/mechanical/mecha/eclipse/tankyboss/medical_bot/apply_melee_effects(atom/A)
+	if(ishuman(A) && prob(25))
+		var/mob/living/carbon/human/H = A
+		H.ContractDisease(base_disease)
+
+/mob/living/simple_mob/mechanical/mecha/eclipse/tankyboss/swarm_ai/do_special_attack(atom/A)
+	for(var/i =1 to 3)
+		new /mob/living/simple_mob/mechanical/hivebot/tyr/heart(src.loc)
+
+/mob/living/simple_mob/mechanical/hivebot/tyr/heart
+	name = "barrier unit"
+	icon = 'modular_chomp/icons/mob/tyr.dmi'
+	icon_state = "guardian"
+	icon_living = "guardian"
+	maxHealth = 2.5 LASERS_TO_KILL // 100 hp
+	health = 2.5 LASERS_TO_KILL
+	melee_damage_lower = 10
+	melee_damage_upper = 10
+	attack_armor_pen = 80
+
+/mob/living/simple_mob/mechanical/hivebot/tyr/heart/handle_special()
+	if(stat != DEAD)
+		untouchable_aura()
+	..()
+
+/mob/living/simple_mob/mechanical/hivebot/tyr/heart/proc/untouchable_aura()
+	for(var/mob/living/L in orange(src, 3))
+		if(L.stat == DEAD || !IIsAlly(L))
+			continue
+		L.add_modifier(/datum/modifier/aura/heart_barrier, null, src)
+
+/datum/modifier/aura/heart_barrier
+	mob_overlay_state = "deflect"
+	incoming_damage_percent = 0
+	aura_max_distance = 3

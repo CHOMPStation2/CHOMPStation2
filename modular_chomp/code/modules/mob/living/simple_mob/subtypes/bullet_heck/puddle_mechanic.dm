@@ -32,7 +32,7 @@
 	icon_state = "drop_marker"
 	mouse_opacity = 0 //no touching the attack
 	spread_range = 3
-	var/fuse_time = 2 SECONDS
+	var/fuse_time = 3.5 SECONDS
 
 /obj/item/grenade/shooter/auto_explode/Initialize(mapload)
 	..()

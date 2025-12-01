@@ -629,7 +629,7 @@
 	special_attack_min_range = 1
 	special_attack_max_range = 7
 
-	projectiletype = /obj/item/projectile/energy/wp_shotgun //using the weapon found upon tyr
+	projectiletype = /obj/item/projectile/energy/tyr_rifle //using the weapon found upon tyr
 	specialattackprojectile = /obj/item/projectile/arc/microsingulo
 
 	loot_list = list(/obj/item/slime_extract/sepia  = 1,
