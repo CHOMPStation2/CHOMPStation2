@@ -341,13 +341,12 @@
 	icon = 'icons/mob/hivebot.dmi'
 	size_multiplier = 3
 	wreckage = /obj/item/prop/tyrlore/medical_boss
-	special_attack_cooldown = 8 SECONDS
 	melee_damage_lower = 20
 	melee_damage_upper = 20
 	attack_armor_pen = 50
 	movement_cooldown = 4
 
-	special_attack_cooldown = 10 SECONDS
+	special_attack_cooldown = 12 SECONDS
 
 	var/datum/disease/base_disease = /datum/disease/advance/agate_rot
 
@@ -356,8 +355,8 @@
 		var/mob/living/carbon/human/H = A
 		H.ContractDisease(base_disease)
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/tankyboss/swarm_ai/do_special_attack(atom/A)
-	for(var/i =1 to 3)
+/mob/living/simple_mob/mechanical/mecha/eclipse/tankyboss/medical_bot/do_special_attack(atom/A)
+	for(var/i =1 to 2)
 		new /mob/living/simple_mob/mechanical/hivebot/tyr/heart(src.loc)
 
 /mob/living/simple_mob/mechanical/hivebot/tyr/heart
