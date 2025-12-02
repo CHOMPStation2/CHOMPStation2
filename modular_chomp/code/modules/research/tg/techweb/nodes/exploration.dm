@@ -5,8 +5,6 @@
 	prereq_ids = list(TECHWEB_NODE_MOD_ANOMALY_SUIT)
 	design_ids = list(
 		"tyr_rifle",
-		"tyr_shotgun",
-		"tyr_meleegun",
 		"magnet_belt",
 		"tyr_sabre",
 		"tyr_barrier",
