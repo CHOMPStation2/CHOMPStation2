@@ -1,6 +1,0 @@
-author: "FluffMedic"
-delete-after: True
-changes:
-  - rscadd: "More areas to explore on Tyr. New mini-boss, encrypted lore, and some other weird stuff."
-  - balance: "Several Tyr mobs nerfed. Tyr firearms condensed into one"
-  - bugfix: "Improves some code bits, and some unintended effects"

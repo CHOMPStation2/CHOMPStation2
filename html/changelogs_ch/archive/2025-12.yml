@@ -3,3 +3,16 @@
   - bugfix: mechs no longer vanish when attempting to construct them
   - bugfix: slimecores not being produced during grinding
   - code_imp: Unittest for mech construction datums
+2025-12-02:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: species whitelist commands for the bot now properly work and do not throw
+      an invalid species error
+  FluffMedic:
+  - rscadd: More areas to explore on Tyr. New mini-boss, encrypted lore, and some
+      other weird stuff.
+  - balance: Several Tyr mobs nerfed. Tyr firearms condensed into one
+  - bugfix: Improves some code bits, and some unintended effects
+  Guti:
+  - bugfix: Fixed snow not being able to be scooped up
+  VictorZisthus:
+  - maptweak: Fixes fire alarms in some POI's reporting to the station when triggered.

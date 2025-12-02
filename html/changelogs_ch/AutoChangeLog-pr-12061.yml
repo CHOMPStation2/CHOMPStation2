@@ -1,4 +1,0 @@
-author: "VictorZisthus"
-delete-after: True
-changes:
-  - maptweak: "Fixes fire alarms in some POI's reporting to the station when triggered."
