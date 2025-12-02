@@ -136,6 +136,11 @@
 /obj/effect/recycler_vendor_beacon,
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/forestarboard)
+"aay" = (
+/obj/machinery/door/firedoor/glass,
+/obj/effect/wingrille_spawn/reinforced,
+/turf/simulated/floor/plating,
+/area/hallway/primary/thirddeck/aft)
 "aaB" = (
 /obj/structure/railing{
 	dir = 1
@@ -23222,6 +23227,11 @@
 /obj/effect/floor_decal/corner/blue/border{
 	dir = 1
 	},
+/obj/item/radio/intercom{
+	dir = 1;
+	name = "Station Intercom (General)";
+	pixel_y = 21
+	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/thirddeck/aft)
 "tld" = (
@@ -24508,10 +24518,6 @@
 /turf/simulated/floor/carpet/bcarpet,
 /area/crew_quarters/sleep/vistor_room_9)
 "utQ" = (
-/obj/item/radio/intercom{
-	name = "Station Intercom (General)";
-	pixel_y = -21
-	},
 /obj/machinery/light{
 	dir = 8
 	},
@@ -62039,7 +62045,7 @@ tiC
 twr
 tVe
 utQ
-kqE
+aay
 kle
 aaj
 vlA
@@ -62297,7 +62303,7 @@ tja
 nGl
 tVT
 uuq
-kqE
+aay
 rNC
 uYk
 vmB
