@@ -16,3 +16,14 @@
   - bugfix: Fixed snow not being able to be scooped up
   VictorZisthus:
   - maptweak: Fixes fire alarms in some POI's reporting to the station when triggered.
+2025-12-03:
+  CHOMPStation2StaffMirrorBot:
+  - rscadd: fusion coils can explode if shot by damaging guns; one hit is fine, two
+      will make them detonate. damaged coils have their charge cap halved. unstable
+      coils can still be safely discharged, which will also mean they won't explode
+      if hit again.
+  - qol: fusion coils glow in the dark to make them easier to find
+  - balance: fusion coils are heavier and incur more slowdown
+  - image: fusion coil sprite tweaks
+  Guti:
+  - refactor: Improved filling cabinet UI and makes use of span_bold
