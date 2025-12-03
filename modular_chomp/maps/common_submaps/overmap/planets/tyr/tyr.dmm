@@ -725,6 +725,26 @@
 	},
 /turf/simulated/shuttle/floor/alien,
 /area/surface/tyr/south_caverns)
+"cJ" = (
+/obj/item/material/shard{
+	pixel_x = 5;
+	pixel_y = 3
+	},
+/turf/simulated/floor/outdoors/desert_planet/sand/tyr,
+/area/surface/tyr/northern_wilderness)
+"cK" = (
+/obj/item/material/shard{
+	pixel_x = 5;
+	pixel_y = 3
+	},
+/obj/item/stack/rods,
+/turf/simulated/shuttle/floor/voidcraft/tyr,
+/area/surface/tyr/wrecked_shipD)
+"cL" = (
+/mob/living/simple_mob/animal/space/carp,
+/obj/item/stack/rods,
+/turf/simulated/shuttle/floor/voidcraft/tyr,
+/area/surface/tyr/wrecked_shipD)
 "cM" = (
 /obj/random/tyroutcrop,
 /turf/simulated/floor/outdoors/desert_planet/gravel/tyr,
@@ -907,6 +927,10 @@
 	},
 /turf/simulated/shuttle/floor/black,
 /area/surface/tyr/precursorruins)
+"dp" = (
+/obj/item/stack/rods,
+/turf/simulated/shuttle/floor/voidcraft/tyr,
+/area/surface/tyr/wrecked_shipD)
 "dq" = (
 /obj/machinery/door/airlock/hatch{
 	req_one_access = null
@@ -2079,6 +2103,14 @@
 "hn" = (
 /turf/simulated/shuttle/wall/alien/orange,
 /area/surface/tyr/precursorruins/northwest)
+"ho" = (
+/obj/structure/table/steel,
+/obj/item/material/shard{
+	pixel_x = 5;
+	pixel_y = 3
+	},
+/turf/simulated/shuttle/floor/voidcraft/tyr,
+/area/surface/tyr/wrecked_shipD)
 "hp" = (
 /obj/structure/closet,
 /obj/item/borg/upgrade/modkit/cooldown/repeater,
@@ -35149,7 +35181,7 @@ Uo
 Uo
 Uo
 Uo
-Uo
+cJ
 Uo
 Uo
 Uo
@@ -35408,9 +35440,9 @@ Uo
 Uo
 Uo
 Uo
+cJ
 Uo
-Uo
-Uo
+cJ
 Uo
 Uo
 Uo
@@ -35665,7 +35697,7 @@ Uo
 Uo
 Uo
 co
-ia
+cK
 vc
 ia
 ia
@@ -35923,10 +35955,10 @@ Uo
 Uo
 co
 co
-cq
-cq
-cq
-cq
+ia
+dp
+ia
+ia
 co
 co
 Uo
@@ -36180,11 +36212,11 @@ Uo
 Uo
 co
 co
-cr
+ho
 cq
-cq
-cq
-cq
+ia
+ia
+cK
 cr
 co
 co
@@ -36440,9 +36472,9 @@ co
 co
 cr
 cq
-cq
-uW
-cq
+ia
+cL
+ia
 cr
 co
 co
