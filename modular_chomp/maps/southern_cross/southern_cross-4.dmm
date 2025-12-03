@@ -136,12 +136,12 @@
 /obj/effect/recycler_vendor_beacon,
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/forestarboard)
-"aay" = (
+"aaB" = (
 /obj/machinery/door/firedoor/glass,
 /obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/floor/plating,
 /area/hallway/primary/thirddeck/aft)
-"aaB" = (
+"aaC" = (
 /obj/structure/railing{
 	dir = 1
 	},
@@ -151,7 +151,7 @@
 	},
 /turf/simulated/open,
 /area/hallway/primary/thirddeck/aft)
-"aaC" = (
+"aaD" = (
 /obj/effect/wingrille_spawn/reinforced,
 /obj/machinery/door/firedoor/border_only,
 /obj/structure/disposalpipe/segment{
@@ -159,19 +159,19 @@
 	},
 /turf/simulated/floor/plating,
 /area/hallway/primary/thirddeck/stationgateway)
-"aaD" = (
+"aaE" = (
 /obj/structure/table/marble,
 /obj/machinery/reagentgrinder,
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/aftport)
-"aaE" = (
+"aaF" = (
 /obj/structure/disposalpipe/segment,
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/bridge)
-"aaF" = (
+"aaG" = (
 /obj/machinery/door/blast/regular{
 	density = 0;
 	icon_state = "pdoor0";
@@ -183,14 +183,8 @@
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled,
 /area/bridge)
-"aaG" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/turf/simulated/floor/tiled,
-/area/hallway/primary/thirddeck/central)
 "aaH" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
@@ -199,16 +193,22 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/obj/effect/floor_decal/industrial/warning,
 /turf/simulated/floor/tiled,
 /area/hallway/primary/thirddeck/central)
 "aaJ" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/effect/floor_decal/industrial/warning,
+/turf/simulated/floor/tiled,
+/area/hallway/primary/thirddeck/central)
+"aaK" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/thirddeck/central)
-"aaK" = (
+"aaL" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
@@ -218,16 +218,6 @@
 /obj/effect/floor_decal/steeldecal/steel_decals4,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled,
-/area/hallway/primary/thirddeck/port)
-"aaL" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/obj/machinery/door/airlock/glass{
-	name = "Central Access"
-	},
-/obj/machinery/door/firedoor/border_only,
-/turf/simulated/floor/tiled/steel_grid,
 /area/hallway/primary/thirddeck/port)
 "aaM" = (
 /obj/effect/floor_decal/borderfloor/corner{
@@ -239,10 +229,20 @@
 /turf/simulated/floor/tiled,
 /area/hallway/primary/thirddeck/aftdoorm)
 "aaN" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/door/airlock/glass{
+	name = "Central Access"
+	},
+/obj/machinery/door/firedoor/border_only,
+/turf/simulated/floor/tiled/steel_grid,
+/area/hallway/primary/thirddeck/port)
+"aaO" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/wall,
 /area/maintenance/substation/command)
-"aaO" = (
+"aaP" = (
 /obj/effect/landmark/free_ai_shell,
 /turf/simulated/floor/bluegrid,
 /area/ai/ai_upload)
@@ -54541,7 +54541,7 @@ tcw
 tcw
 tld
 lcO
-aaD
+aaE
 dIo
 ppD
 ieB
@@ -61487,8 +61487,8 @@ nSN
 emm
 ewJ
 eJK
-aaN
-aaK
+aaO
+aaL
 fTe
 gkF
 gQA
@@ -61746,7 +61746,7 @@ nSN
 nSN
 nSN
 nSN
-aaL
+aaN
 fTw
 fmC
 xrz
@@ -62045,7 +62045,7 @@ tiC
 twr
 tVe
 utQ
-aay
+aaB
 kle
 aaj
 vlA
@@ -62270,12 +62270,12 @@ hwu
 hQu
 ihC
 iJc
-aaF
+aaG
 cPJ
 lAV
 ktn
 cPJ
-aaE
+aaF
 lRi
 mhn
 mKs
@@ -62303,7 +62303,7 @@ tja
 nGl
 tVT
 uuq
-aay
+aaB
 rNC
 uYk
 vmB
@@ -62560,7 +62560,7 @@ wzy
 tkI
 twu
 tWU
-aaB
+aaC
 kqE
 rNC
 aaj
@@ -62769,7 +62769,7 @@ cEX
 cJI
 cSS
 cZQ
-aaO
+aaP
 dsu
 dBh
 dNq
@@ -62803,7 +62803,7 @@ oCE
 oCE
 oCE
 pkC
-aaC
+aaD
 edc
 dfh
 qIj
@@ -63043,7 +63043,7 @@ oXg
 oXg
 hTf
 ios
-aaG
+aaH
 lzK
 joC
 jSS
@@ -63300,8 +63300,8 @@ oXg
 oXg
 oXg
 hVq
-aaJ
-aaG
+aaK
+aaH
 hCW
 ueN
 jUf
@@ -63558,7 +63558,7 @@ oXg
 oXg
 oXg
 hVB
-aaJ
+aaK
 iMo
 itj
 eMl
@@ -63816,8 +63816,8 @@ oXg
 oXg
 oXg
 hVL
-aaJ
-aaH
+aaK
+aaI
 hCW
 ueN
 hsN
@@ -64848,8 +64848,8 @@ gud
 fWg
 hyk
 hWk
+aaK
 aaJ
-aaI
 iYl
 jqO
 jXa
