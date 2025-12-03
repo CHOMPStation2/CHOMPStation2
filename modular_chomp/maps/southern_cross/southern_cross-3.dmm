@@ -764,10 +764,8 @@
 /obj/structure/cable{
 	icon_state = "0-4"
 	},
-/obj/machinery/power/smes/buildable{
-	RCon_tag = "Substation - Atmospherics";
-	charge = 2e+006;
-	input_attempt = 1
+/obj/machinery/power/smes/buildable/engine_default{
+	RCon_tag = "Substation - Atmospherics"
 	},
 /obj/structure/cable/cyan{
 	icon_state = "0-8"
@@ -775,7 +773,7 @@
 /turf/simulated/floor,
 /area/maintenance/substation/atmospherics)
 "abs" = (
-/obj/machinery/power/breakerbox/activated{
+/obj/machinery/power/breakerbox{
 	RCon_tag = "Atmos Substation Bypass"
 	},
 /turf/simulated/floor,
@@ -10781,15 +10779,12 @@
 /area/engineering/engine_room)
 "aEI" = (
 /obj/structure/cable,
-/obj/machinery/power/smes/buildable{
-	RCon_tag = "Engine - Main";
-	charge = 2e+007;
-	cur_coils = 4;
-	input_attempt = 1;
-	input_level = 750000;
-	output_level = 750000
+/obj/machinery/power/smes/buildable/engine_default{
+	RCon_tag = "Engine - Main"
 	},
 /obj/effect/engine_setup/smes/main,
+/obj/item/smes_coil,
+/obj/item/smes_coil,
 /turf/simulated/floor/plating,
 /area/engineering/engine_smes)
 "aEJ" = (
@@ -19420,12 +19415,8 @@
 /obj/structure/cable/cyan{
 	icon_state = "0-4"
 	},
-/obj/machinery/power/smes/buildable{
-	RCon_tag = "Engine - Core";
-	charge = 2e+006;
-	input_attempt = 1;
-	input_level = 100000;
-	output_level = 200000
+/obj/machinery/power/smes/buildable/engine_default{
+	RCon_tag = "Engine - Core"
 	},
 /obj/effect/engine_setup/smes,
 /turf/simulated/floor/plating,
@@ -47841,15 +47832,14 @@
 /turf/simulated/floor/plating,
 /area/engineering/drone_fabrication)
 "fJb" = (
-/obj/machinery/power/smes/buildable{
-	RCon_tag = "Engine - ShieldGen";
-	cur_coils = 4;
-	input_level = 750000;
-	output_level = 750000
+/obj/machinery/power/smes/buildable/engine_default{
+	RCon_tag = "Engine - ShieldGen"
 	},
 /obj/structure/cable/orange{
 	icon_state = "0-4"
 	},
+/obj/item/smes_coil,
+/obj/item/smes_coil,
 /turf/simulated/floor/plating,
 /area/engineering/hallway/engineer_hallway)
 "fJl" = (
