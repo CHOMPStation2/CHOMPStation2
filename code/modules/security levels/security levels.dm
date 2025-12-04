@@ -86,11 +86,7 @@ GLOBAL_VAR_INIT(security_level, 0)
 			SSatc.reroute_traffic(yes = 0)
 
 		spawn()
-<<<<<<< HEAD
-			//SSnightshift.check_nightshift() //CHOMPedit: disabling this for now as we do not use the nightshift currently.
-=======
-			SSnightshift.check_nightshift(TRUE)
->>>>>>> 646d1faa11 (Subsystem overruns (#18744))
+			//SSnightshift.check_nightshift(TRUE) //CHOMPedit: disabling this for now as we do not use the nightshift currently.
 
 		admin_chat_message(message = "Security level is now: [uppertext(get_security_level())]", color = "#CC2222") //VOREStation Add
 

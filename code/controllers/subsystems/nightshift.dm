@@ -29,25 +29,18 @@ SUBSYSTEM_DEF(nightshift)
 	var/announce_z
 	if(using_map.station_levels.len)
 		announce_z = pick(using_map.station_levels)
-<<<<<<< HEAD
 	/* CHOMPEdit - TTSless
 	//VOREStation Edit - TTS
-=======
->>>>>>> 646d1faa11 (Subsystem overruns (#18744))
 	var/pickedsound
 	if(!high_security_mode)
 		if(nightshift_active)
 			pickedsound = 'sound/AI/dim_lights.ogg'
 		else
 			pickedsound = 'sound/AI/bright_lights.ogg'
-<<<<<<< HEAD
 	*/
 	priority_announcement.Announce(message, new_title = "Automated Lighting System Announcement", /* new_sound = pickedsound,*/ zlevel = announce_z)
 	// CHOMPEdit End
 	//VOREStation Edit End
-=======
-	priority_announcement.Announce(message, new_title = "Automated Lighting System Announcement", new_sound = pickedsound, zlevel = announce_z)
->>>>>>> 646d1faa11 (Subsystem overruns (#18744))
 
 /datum/controller/subsystem/nightshift/proc/check_nightshift(forced) //This is called from elsewhere, like setting the alert levels, sadly
 	var/emergency = GLOB.security_level > SEC_LEVEL_GREEN
